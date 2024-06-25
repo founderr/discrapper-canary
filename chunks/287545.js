@@ -43,7 +43,7 @@ var r = n(512722),
   w = n(981631),
   B = n(689938);
 
-function k(e, t, n) {
+function x(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -51,7 +51,7 @@ function k(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let x = {},
+let k = {},
   V = {};
 
 function Z(e) {
@@ -81,7 +81,7 @@ async function H(e) {
     T = await (0, I.Z)();
   V[n] = e => {
     var t, s, a;
-    x[n] = e, m.default.track(w.rMx.ACTIVITY_SESSION_JOINED, {
+    k[n] = e, m.default.track(w.rMx.ACTIVITY_SESSION_JOINED, {
       channel_id: r.id,
       guild_id: r.getGuildId(),
       media_session_id: e.mediaSessionIds[0],
@@ -122,7 +122,7 @@ async function F(e) {
     applicationId: r,
     locationId: s,
     instanceId: o
-  } = e, l = x[r], u = S.Z.getChannel(i), _ = C.ZP.getEmbeddedActivityDurationMs(i, r), c = A.default.getCurrentUser(), d = null == u ? void 0 : u.getGuildId(), E = h.default.getSessionId();
+  } = e, l = k[r], u = S.Z.getChannel(i), _ = C.ZP.getEmbeddedActivityDurationMs(i, r), c = A.default.getCurrentUser(), d = null == u ? void 0 : u.getGuildId(), E = h.default.getSessionId();
   if (null != s && null != o && null != E && await a.tn.post({
       url: w.ANM.ACTIVITY_LEAVE(r, s, o),
       body: {
@@ -162,7 +162,7 @@ async function F(e) {
     activity_user_session_id: l.activityUserSessionId,
     raw_thermal_state: O,
     duration_ms: _
-  }), delete V[r], delete x[r]
+  }), delete V[r], delete k[r]
 }
 
 function Y(e) {
@@ -207,7 +207,7 @@ function K(e) {
     mediaSessionId: t
   } = e;
   if (null == t) return;
-  for (let e in x) x[e].mediaSessionIds.push(t);
+  for (let e in k) k[e].mediaSessionIds.push(t);
   let n = f.Z.getChannelId();
   if (null != n) {
     let e = C.ZP.getSelfEmbeddedActivityForChannel(n),
@@ -215,7 +215,7 @@ function K(e) {
       r = null == e ? void 0 : e.launchId,
       a = (0, P.Z)(e);
     if (null != i && null != t && null != a && null != r) {
-      let e = x[i],
+      let e = k[i],
         n = V[i];
       s()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
         activitySessionId: a,
@@ -228,7 +228,7 @@ function K(e) {
 }
 
 function z(e) {
-  return x[e]
+  return k[e]
 }
 class q extends _.Z {
   _initialize() {
@@ -238,7 +238,7 @@ class q extends _.Z {
     N.Z.removeChangeListener(this.handleSelectedChannelUpdate), O.S.unsubscribe(w.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), l.Z.unsubscribe("EMBEDDED_ACTIVITY_OPEN", H), l.Z.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), l.Z.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", Y), l.Z.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", j), l.Z.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), l.Z.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), l.Z.unsubscribe("MEDIA_SESSION_JOINED", K), l.Z.unsubscribe("CALL_DELETE", this.handleCallDelete), l.Z.unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState)
   }
   constructor(...e) {
-    super(...e), k(this, "handleSelectedChannelUpdate", () => {
+    super(...e), x(this, "handleSelectedChannelUpdate", () => {
       let e = N.Z.getVoiceChannelId();
       for (let {
           channelId: t,
@@ -262,9 +262,9 @@ class q extends _.Z {
         })
       }
       i = null != e ? e : void 0
-    }), k(this, "handleActivityWebViewRelease", () => {
+    }), x(this, "handleActivityWebViewRelease", () => {
       this.releaseWebView()
-    }), k(this, "handleActivityLaunchFail", e => {
+    }), x(this, "handleActivityLaunchFail", e => {
       let {
         error: t,
         applicationId: n
@@ -294,7 +294,7 @@ class q extends _.Z {
           i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
       }
       this.showLaunchErrorModal(i)
-    }), k(this, "superHandleRPCDisconnect", e => {
+    }), x(this, "superHandleRPCDisconnect", e => {
       let {
         reason: t,
         application: n
@@ -310,22 +310,22 @@ class q extends _.Z {
         });
         t.code !== w.$VG.CLOSE_NORMAL && this.showErrorModal(t, i)
       }
-    }), k(this, "handleCallDelete", e => {
+    }), x(this, "handleCallDelete", e => {
       let {
         channelId: t
       } = e, n = N.Z.getVoiceChannelId();
       null != n && n === t && this.handleCallEnded(t)
-    }), k(this, "handleRTCConnectionState", e => {
+    }), x(this, "handleRTCConnectionState", e => {
       if (e.state !== w.hes.DISCONNECTED) return;
       let t = e.channelId;
       this.handleCallEnded(t)
-    }), k(this, "handleCallEnded", e => {
+    }), x(this, "handleCallEnded", e => {
       let t = C.ZP.getSelfEmbeddedActivityForChannel(e);
       null != t && this.leaveActivity({
         channelId: e,
         applicationId: t.applicationId
       })
-    }), k(this, "handleDeferredOpen", async e => {
+    }), x(this, "handleDeferredOpen", async e => {
       var t, n, i;
       let r;
       let {

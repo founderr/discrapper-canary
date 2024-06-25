@@ -85,8 +85,8 @@ var i, r, s = n(735250),
   G = n(626135),
   w = n(823379),
   B = n(589530),
-  k = n(709054),
-  x = n(981631),
+  x = n(709054),
+  k = n(981631),
   V = n(420212),
   Z = n(814249),
   H = n(768760),
@@ -208,7 +208,7 @@ function Q(e) {
       children: [(0, s.jsx)(h.Z, {
         ...e,
         renderLinkComponent: J,
-        renderForwardComponent: null != d ? d : x.VqG
+        renderForwardComponent: null != d ? d : k.VqG
       }), null != i && i()]
     }), I && T && (0, s.jsx)("div", {
       className: Y.mediaMosaicAltTextContainer,
@@ -356,7 +356,7 @@ function ei(e) {
       context: "Mark As Read"
     }) : I.Z.jumpToMessage({
       channelId: n,
-      messageId: k.default.castChannelIdAsMessageId(n),
+      messageId: x.default.castChannelIdAsMessageId(n),
       offset: 1,
       context: "Mark As Read"
     })
@@ -412,7 +412,7 @@ function er(e) {
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), y = (0, N.Z)(P);
   o.useEffect(() => {
-    !_().isEqual(y, P) && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !_().isEqual(y, P) && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: P.length,
       message_counts: P.map(e => e.count),
       start_message_ids: P.map(e => e.startId),
@@ -450,7 +450,7 @@ function er(e) {
     }, [j, W]),
     [z, q] = o.useState(!1),
     X = o.useCallback(() => {
-      G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !z,
         num_summaries: P.length,
         message_counts: P.map(e => e.count),
@@ -472,7 +472,7 @@ function er(e) {
           u.addAutomaticAnchorCallback(K, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(K), u.addScrollCompleteCallback(i), G.default.track(x.rMx.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(K), u.addScrollCompleteCallback(i), G.default.track(k.rMx.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -503,7 +503,7 @@ function er(e) {
   }, [L, z]);
   let $ = o.useCallback(e => {
     var t;
-    if (!((0, c.k)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target)))) z && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    if (!((0, c.k)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target)))) z && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: P.length,
       message_counts: P.map(e => e.count),
@@ -538,7 +538,7 @@ function er(e) {
         context: "Mark As Read"
       }) : I.Z.jumpToMessage({
         channelId: r.id,
-        messageId: k.default.castChannelIdAsMessageId(r.id),
+        messageId: x.default.castChannelIdAsMessageId(r.id),
         offset: 1,
         context: "Mark As Read"
       })
@@ -650,7 +650,7 @@ function eo(e) {
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), D = (0, N.Z)(L);
   o.useEffect(() => {
-    !_().isEqual(D, L) && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !_().isEqual(D, L) && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: L.length,
       message_counts: L.map(e => e.count),
       start_message_ids: L.map(e => e.startId),
@@ -675,7 +675,7 @@ function eo(e) {
     y = null == L ? void 0 : null === (t = L[P]) || void 0 === t ? void 0 : t.topic;
   null == y && null == T && (null == L ? void 0 : L.length) >= 1 && (y = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
   let B = o.useMemo(() => _().get(L, P - 1), [P, L]),
-    k = o.useMemo(() => _().get(L, P + 1), [P, L]),
+    x = o.useMemo(() => _().get(L, P + 1), [P, L]),
     V = o.useMemo(() => _().debounce(e => {
       var t;
       h(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -690,7 +690,7 @@ function eo(e) {
     }, [V, H]),
     [W, K] = o.useState(!1),
     z = o.useCallback(() => {
-      G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !W,
         num_summaries: L.length,
         message_counts: L.map(e => e.count),
@@ -712,7 +712,7 @@ function eo(e) {
           a.addAutomaticAnchorCallback(j, !1)
         }, 100)
       };
-      a.removeAutomaticAnchorCallback(j), a.addScrollCompleteCallback(i), G.default.track(x.rMx.SUMMARIES_TOPIC_CLICKED, {
+      a.removeAutomaticAnchorCallback(j), a.addScrollCompleteCallback(i), G.default.track(k.rMx.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -749,7 +749,7 @@ function eo(e) {
   }, [p, W]);
   let $ = o.useCallback(e => {
     var t;
-    if (!((0, c.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target)))) W && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    if (!((0, c.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target)))) W && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: L.length,
       message_counts: L.map(e => e.count),
@@ -812,7 +812,7 @@ function eo(e) {
           "aria-label": F.Z.Messages.SUMMARY_PILL_NEXT,
           onClick: Q,
           className: l()(Y.topicsPillCaret, Y.topicsCaretLeft, {
-            [Y.topicsPillCaretDisabled]: null == k
+            [Y.topicsPillCaretDisabled]: null == x
           }),
           children: (0, s.jsx)(b.Z, {
             width: 16,

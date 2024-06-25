@@ -43,8 +43,8 @@ function B(e) {
   var t, n, s;
   let {
     activity: B,
-    customStatusActivity: k,
-    user: x,
+    customStatusActivity: x,
+    user: k,
     displayProfile: V,
     guild: Z,
     guildMember: H,
@@ -57,7 +57,7 @@ function B(e) {
     analyticsParams: q
   } = e, X = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation), Q = (0, a.e7)([S.Z], () => {
     var e;
-    return null === (e = S.Z.getUserProfile(x.id)) || void 0 === e ? void 0 : e.application
+    return null === (e = S.Z.getUserProfile(k.id)) || void 0 === e ? void 0 : e.application
   }), J = (0, a.e7)([d.Z], () => d.Z.getChannel(F)), {
     theme: $
   } = (0, f.z)(), ee = r.useRef(null), [et, en] = r.useState(!0), ei = r.useCallback(() => {
@@ -76,8 +76,8 @@ function B(e) {
     }))
   }, []);
   let er = (0, a.e7)([c.default], () => c.default.getId()),
-    es = x.id === er,
-    eo = x.bot || es,
+    es = k.id === er,
+    eo = k.bot || es,
     {
       enabled: ea
     } = (0, h.qI)({
@@ -85,11 +85,11 @@ function B(e) {
       location: u.Z.PROFILE_POPOUT,
       disable: eo
     });
-  if ((0, _.Z)(x.id)) return (0, i.jsxs)(i.Fragment, {
+  if ((0, _.Z)(k.id)) return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(b.Z, {
       className: w.usernameSection,
-      user: x,
-      nickname: T.ZP.getName(x),
+      user: k,
+      nickname: T.ZP.getName(k),
       pronouns: null
     }), (0, i.jsxs)(l.HeadingLevel, {
       children: [(0, i.jsx)(A.Z, {
@@ -103,27 +103,27 @@ function B(e) {
         children: (0, i.jsx)(p.Z, {
           bio: null,
           hidePersonalInformation: !1,
-          userId: x.id,
+          userId: k.id,
           lastSection: !0
         })
       })]
     })]
   });
-  if (x.isSystemUser()) return (0, i.jsx)(b.Z, {
-    user: x,
-    nickname: T.ZP.getName(x),
+  if (k.isSystemUser()) return (0, i.jsx)(b.Z, {
+    user: k,
+    nickname: T.ZP.getName(k),
     pronouns: null,
     className: w.usernameSection,
     lastSection: !0
   });
-  if (x.isNonUserBot()) return (0, i.jsx)(b.Z, {
-    user: x,
+  if (k.isNonUserBot()) return (0, i.jsx)(b.Z, {
+    user: k,
     nickname: null,
     pronouns: null,
     className: w.usernameSection,
     lastSection: !0
   });
-  let el = null !== (t = I.ZP.getNickname(null == Z ? void 0 : Z.id, F, x)) && void 0 !== t ? t : T.ZP.getName(x),
+  let el = null !== (t = I.ZP.getNickname(null == Z ? void 0 : Z.id, F, k)) && void 0 !== t ? t : T.ZP.getName(k),
     eu = {
       location: {
         page: G.ZY5.USER_POPOUT,
@@ -133,18 +133,18 @@ function B(e) {
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(b.Z, {
       className: w.usernameSection,
-      user: x,
+      user: k,
       nickname: el,
       pronouns: null == V ? void 0 : V.pronouns,
-      usernameIcon: x.hasAvatarForGuild(null == Z ? void 0 : Z.id) && (0, i.jsx)(m.Z, {
-        user: x,
+      usernameIcon: k.hasAvatarForGuild(null == Z ? void 0 : Z.id) && (0, i.jsx)(m.Z, {
+        user: k,
         nickname: el
       }),
       shouldCopyOnClick: z
     }), (0, i.jsxs)(l.HeadingLevel, {
       children: [(0, i.jsx)(v.Z, {
         className: w.customStatusSection,
-        customStatusActivity: k
+        customStatusActivity: x
       }), (0, i.jsx)(A.Z, {
         className: w.divider
       }), (0, i.jsxs)(l.AdvancedScroller, {
@@ -154,7 +154,7 @@ function B(e) {
         onScroll: ei,
         ref: ee,
         children: [(0, i.jsx)(g.Z, {
-          user: x,
+          user: k,
           guildId: null == Z ? void 0 : Z.id
         }), (0, i.jsx)(p.Z, {
           isUsingGuildBio: null !== (n = null == V ? void 0 : V.isUsingGuildMemberBio()) && void 0 !== n && n,
@@ -163,14 +163,14 @@ function B(e) {
           hidePersonalInformation: X
         }), ea && (0, i.jsx)(N.ZP, {
           className: w.profileMutuals,
-          user: x,
+          user: k,
           onClose: Y
         }), (0, i.jsx)(D.Z, {
-          userId: x.id,
+          userId: k.id,
           guildId: null == Z ? void 0 : Z.id
         }), (0, i.jsx)(O.Z, {
           activity: B,
-          user: x,
+          user: k,
           guild: Z,
           channelId: F,
           onClose: Y,
@@ -182,15 +182,15 @@ function B(e) {
           guildId: null == Z ? void 0 : Z.id,
           onClick: Y
         }) : null, (0, i.jsx)(R.Z, {
-          user: x,
+          user: k,
           guildId: null == Z ? void 0 : Z.id
         }), (0, i.jsx)(U.Z, {
-          user: x,
+          user: k,
           guild: Z,
           guildMember: H,
           showBorder: null !== (s = null == V ? void 0 : V.canEditThemes) && void 0 !== s && s
         }), (0, i.jsx)(C.Z, {
-          userId: x.id,
+          userId: k.id,
           channelId: F,
           guild: Z,
           onClose: Y,
@@ -199,12 +199,12 @@ function B(e) {
           channelId: F,
           applicationId: Q.id
         }), !X && !K && (0, i.jsx)(M.Z, {
-          user: x,
+          user: k,
           setNote: j,
           autoFocus: !W,
           lastSection: !W
-        }), !x.isNonUserBot() && W && (0, i.jsx)(L.Z, {
-          user: x,
+        }), !k.isNonUserBot() && W && (0, i.jsx)(L.Z, {
+          user: k,
           setNote: j,
           canDM: W,
           onClose: Y

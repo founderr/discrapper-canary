@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   ZP: function() {
-    return x
+    return k
   },
   dz: function() {
     return G
@@ -209,7 +209,7 @@ function B(e) {
   })
 }
 
-function k(e) {
+function x(e) {
   let {
     headingText: t,
     context: n,
@@ -234,7 +234,7 @@ function k(e) {
   })
 }
 
-function x(e) {
+function k(e) {
   let {
     headingText: t,
     context: r,
@@ -486,7 +486,7 @@ function x(e) {
     case v.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
     case v.cd.EMOJI_PICKER_EMOJI_CLICKED:
     case v.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
-      return (0, i.jsx)(k, {
+      return (0, i.jsx)(x, {
         trialOffer: A,
         discountOffer: R,
         headingText: t,
@@ -494,7 +494,7 @@ function x(e) {
         children: s
       });
     default:
-      return O.Z.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(k, {
+      return O.Z.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(x, {
         headingText: t,
         context: r,
         children: s,

@@ -47,11 +47,11 @@ let u = r.memo(r.forwardRef((e, t) => {
       let t = "function" == typeof N ? N(e) : N;
       return null == t ? 0 : t
     }, [N]),
-    k = r.useCallback(e => {
+    x = r.useCallback(e => {
       let t = "function" == typeof A ? A(e) : A;
       return null == t ? 0 : t
     }, [A]),
-    x = r.useCallback(e => {
+    k = r.useCallback(e => {
       let t = "function" == typeof f ? f(e) : f;
       return null == t ? 0 : t
     }, [f]),
@@ -90,14 +90,14 @@ let u = r.memo(r.forwardRef((e, t) => {
             offset: s
           }, i = n, e++
         }
-        i += k(o) + x(o), s[o].offset.bottom = i
+        i += x(o) + k(o), s[o].offset.bottom = i
       }
       return {
         totalHeight: i += u[2],
         rowDescriptors: r,
         sectionDescriptors: s
       }
-    }, [w, k, B, x, u, T, h, G]);
+    }, [w, x, B, k, u, T, h, G]);
   V.current = Y, Z.current = F;
   let j = r.useCallback(() => {
     var e;
@@ -233,8 +233,8 @@ let u = r.memo(r.forwardRef((e, t) => {
       } = Y[r], l = a - o;
       if (0 === l) continue;
       let u = B(r),
-        I = k(r),
-        T = x(r);
+        I = x(r),
+        T = k(r);
       if (a <= L) n = a;
       else if (a > L && o < e) {
         t = s;
@@ -263,7 +263,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, k, B, x, u, _, c, E, d, L, Y, O, I, G, M]), q = r.useMemo(() => {
+  }, [w, x, B, k, u, _, c, E, d, L, Y, O, I, G, M]), q = r.useMemo(() => {
     var e, t, n;
     return {
       top: z,

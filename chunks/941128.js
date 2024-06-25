@@ -37,7 +37,7 @@ function B() {
   I.K.set(v, e)
 }
 
-function k() {
+function x() {
   let e = L[0];
   if (null != e) {
     var t, n;
@@ -57,7 +57,7 @@ function k() {
   }
 }
 
-function x(e, t) {
+function k(e, t) {
   let n = (0, A.Tu)(e, t);
   return L.findIndex(e => e.comboId === n)
 }
@@ -69,14 +69,14 @@ function V(e, t, n, i) {
       action: i
     },
     o = D.indexOf(r); - 1 !== o && D.splice(o, 1);
-  let a = x(e, t);
-  0 !== a && (n ? -1 === a && (L.push(s), k()) : (a > 0 && L.splice(a, 1), L.unshift(s), k())), !n && M && m.Z.resume(), B()
+  let a = k(e, t);
+  0 !== a && (n ? -1 === a && (L.push(s), x()) : (a > 0 && L.splice(a, 1), L.unshift(s), x())), !n && M && m.Z.resume(), B()
 }
 
 function Z(e, t) {
   let n = (0, A.Tu)(e, t),
     i = D.indexOf(n); - 1 !== i && D.splice(i, 1);
-  let r = x(e, t); - 1 !== r && (L.splice(r, 1), B()), k()
+  let r = k(e, t); - 1 !== r && (L.splice(r, 1), B()), x()
 }
 
 function H(e) {
@@ -134,7 +134,7 @@ class W extends(s = E.ZP.Store) {
     return M
   }
   getQueuePosition(e, t) {
-    return x(e, t)
+    return k(e, t)
   }
   isCorruptInstallation() {
     return G
@@ -176,16 +176,16 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
     let {
       applicationId: t,
       branchId: n
-    } = e, i = x(t, n);
+    } = e, i = k(t, n);
     if (i < 1) return !1;
-    L.splice(0, 0, L.splice(i, 1)[0]), k(), M && m.Z.resume(), B()
+    L.splice(0, 0, L.splice(i, 1)[0]), x(), M && m.Z.resume(), B()
   },
   DISPATCH_APPLICATION_REMOVE_FINISHED: F,
   DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
     let {
       state: t
     } = e;
-    !U && (U = !0, k(), !M && m.Z.resume());
+    !U && (U = !0, x(), !M && m.Z.resume());
     let n = M;
     M = t.paused, P = t.currentTask, y = t.nextTask;
     let i = !1;
@@ -210,7 +210,7 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
         return i = !0, !1
       }
       return !0
-    }), k(), (i || n !== M) && B()
+    }), x(), (i || n !== M) && B()
   },
   DISPATCH_APPLICATION_ERROR: function(e) {
     let {

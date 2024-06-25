@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return k
+    return x
   }
 }), n(47120);
 var i = n(735250),
@@ -43,12 +43,12 @@ function B(e) {
   e.stopPropagation()
 }
 
-function k(e) {
+function x(e) {
   let {
     user: t,
     guildId: n,
-    channelId: k,
-    messageId: x,
+    channelId: x,
+    messageId: k,
     roleId: V,
     setNote: Z,
     closePopout: H,
@@ -122,7 +122,7 @@ function k(e) {
         O.default.track(b.rMx.OPEN_POPOUT, {
           type: "Profile Popout",
           guild_id: n,
-          channel_id: k,
+          channel_id: x,
           other_user_id: t.id,
           application_id: null != et ? et.application_id : void 0,
           application_name: null != et ? et.name : void 0,
@@ -153,8 +153,8 @@ function k(e) {
       layout: "POPOUT",
       userId: t.id,
       guildId: n,
-      channelId: k,
-      messageId: x,
+      channelId: x,
+      messageId: k,
       roleId: V,
       shouldTrackViewOnMount: null == $ || null != $.fullProfileLoadedTimestamp,
       children: (0, i.jsx)(a.Z, {
@@ -177,7 +177,7 @@ function k(e) {
               user: t,
               displayProfile: q,
               guildId: n,
-              channelId: k,
+              channelId: x,
               onClose: () => null == H ? void 0 : H(),
               isMobile: er,
               isStreaming: (0, d.Z)(et),
@@ -199,7 +199,7 @@ function k(e) {
                 user: t,
                 guild: J,
                 guildMember: $,
-                channelId: k,
+                channelId: x,
                 onClose: H,
                 setNote: Z,
                 canDM: eu,

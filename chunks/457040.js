@@ -35,8 +35,8 @@ var i = n(735250),
   G = n(15350),
   w = n(611480),
   B = n(981631),
-  k = n(642631);
-let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+  x = n(642631);
+let k = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   V = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
   Z = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
   H = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
@@ -87,7 +87,7 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       ef = r.useCallback(e => {
         "" === en ? (0, g.On)(e) : (0, g.Yk)(e, en, eS), O(e.sticker, L.V0.STICKER_PICKER)
       }, [O, en, eS]),
-      eN = null != ea && ea > x,
+      eN = null != ea && ea > k,
       {
         rowCount: eA,
         rowCountBySection: em,
@@ -176,7 +176,7 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     return (0, i.jsxs)(E.Gt, {
       value: W,
       children: [!(Q && eo) && (0, i.jsx)("div", {
-        className: k.header,
+        className: x.header,
         children: (0, i.jsx)(U.Z, {
           ref: ee,
           onKeyDown: eD,
@@ -184,12 +184,12 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           channel: u
         })
       }), eo ? (0, i.jsx)(P.Z, {
-        className: k.emptyState,
+        className: x.emptyState,
         onClose: Y
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           ref: J,
-          className: k.listWrapper,
+          className: x.listWrapper,
           id: w.Vr,
           ...eL,
           children: null != ea ? (0, i.jsx)(y.Z, {
@@ -218,12 +218,12 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     })
   });
 t.Z = r.forwardRef((e, t) => ((0, C.fP)(), (0, i.jsx)("div", {
-  className: k.wrapper,
+  className: x.wrapper,
   id: w.nZ,
   "aria-labelledby": w.ED,
   role: "tabpanel",
   children: e.isLoading ? (0, i.jsx)(_.Spinner, {
-    className: k.loadingIndicator
+    className: x.loadingIndicator
   }) : (0, i.jsx)(Q, {
     ...e,
     ref: t

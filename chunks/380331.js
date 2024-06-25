@@ -35,9 +35,9 @@ let M = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
   G = (0, A.Mg)(D.__invalid_unicodeCategoryShortcutHeight),
   w = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
   B = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-  k = y + P + 2 * b,
-  x = M + P,
-  V = x + (w + 2 * B),
+  x = y + P + 2 * b,
+  k = M + P,
+  V = k + (w + 2 * B),
   Z = y + U + 2 * b;
 
 function H(e) {
@@ -115,10 +115,10 @@ t.Z = e => {
     }, t)
   }), [c, N, A, S, R, C]), M = r.useMemo(() => [8, 8, 0, 8], []), b = r.useCallback((e, t) => {
     let n = A[t];
-    if (n.type === g.En.RECENT) return k;
+    if (n.type === g.En.RECENT) return x;
     if (n.type === g.En.GUILD) {
       let e = A[t + 1];
-      return null != e && e.type !== g.En.GUILD ? V : x
+      return null != e && e.type !== g.En.GUILD ? V : k
     }
     return Z
   }, [A]), {
@@ -134,7 +134,7 @@ t.Z = e => {
     A.forEach(r => {
       r.type === g.En.GUILD ? (t += 1, n += 1) : r.type === g.En.UNICODE ? i += 1 : (e += 1, t += 1)
     });
-    let r = k + t * x + V;
+    let r = x + t * k + V;
     return {
       nonUnicodeCategoryCount: t,
       firstUnicodeCategoryIndex: t,

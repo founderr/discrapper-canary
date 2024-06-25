@@ -55,8 +55,8 @@ let G = e => {
     emojiSpriteSize: l
   } = e, _ = (0, E.e7)([T.Z], () => T.Z.categories), I = (0, E.e7)([O.Z], () => O.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]), f = null == t ? null : t.getGuildId(), N = (0, E.e7)([T.Z], () => T.Z.getDisambiguatedEmojiContext(f), [f]), G = (0, D.NJ)(f), w = (0, D.wC)(f), {
     topEmojis: B,
-    newlyAddedEmojis: k
-  } = (0, P.Z)(f, r), x = (0, E.Wu)([p.ZP], () => p.ZP.getFlattenedGuildIds(), []), {
+    newlyAddedEmojis: x
+  } = (0, P.Z)(f, r), k = (0, E.Wu)([p.ZP], () => p.ZP.getFlattenedGuildIds(), []), {
     canCreateExpressions: V
   } = (0, A.XJ)(I), Z = (0, E.e7)([g.default], () => g.default.getCurrentUser()), H = (0, v.I5)(Z), F = N.getCustomEmoji(), Y = e => {
     if (e.type === h.B.GUILD) return e.guildId
@@ -116,7 +116,7 @@ let G = e => {
                   columnIndex: P && t ? n + 1 : n,
                   visibleRowIndex: h,
                   category: o.type,
-                  subCategory: o.sectionId === y.En.TOP_GUILD_EMOJI ? (0, D.IP)(B, k, null !== (r = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== r ? r : e.name) : y.t0.NONE
+                  subCategory: o.sectionId === y.En.TOP_GUILD_EMOJI ? (0, D.IP)(B, x, null !== (r = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== r ? r : e.name) : y.t0.NONE
                 }
               });
             if (P && t && !_ && (r = [{
@@ -190,14 +190,14 @@ let G = e => {
               })
             };
             if (null != I && n(I.id), (0, U.Gt)(r))
-              for (let e of x)(null == I || I.id !== e) && n(e)
+              for (let e of k)(null == I || I.id !== e) && n(e)
           } else if (e === y.UX.TOP_GUILD_EMOJI) {
         if (null != I) {
           let {
             allEmojis: t
           } = (0, M.J)({
             topEmojis: B,
-            newlyAddedEmojis: k
+            newlyAddedEmojis: x
           });
           t.length > 0 && A(t, {
             categoryId: e,
@@ -251,7 +251,7 @@ let G = e => {
       rowCountBySection: e,
       sectionDescriptors: u
     }
-  }, [N, o, l, a, s, n, t, r, _, I, j, x, k, B, w, G, V, i, H, W, K])
+  }, [N, o, l, a, s, n, t, r, _, I, j, k, x, B, w, G, V, i, H, W, K])
 };
 (l = s || (s = {}))[l.PREMIUM = 0] = "PREMIUM", l[l.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
 let w = e => {

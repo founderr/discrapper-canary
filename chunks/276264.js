@@ -47,8 +47,8 @@ t.Z = function(e) {
     user: G,
     currentUser: w,
     activities: B,
-    applicationStream: k,
-    status: x,
+    applicationStream: x,
+    status: k,
     shouldAnimateStatus: V = !1,
     isMobile: Z,
     premiumSince: H,
@@ -111,7 +111,7 @@ t.Z = function(e) {
         textClassName: M.activityText,
         emojiClassName: M.activityEmoji,
         activities: B,
-        applicationStream: k,
+        applicationStream: x,
         animate: e_,
         hideEmoji: !t,
         hideTooltip: !0,
@@ -154,7 +154,7 @@ t.Z = function(e) {
     }),
     eM = (e, t) => {
       let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.Z)(B) ? C.Skl.STREAMING : x;
+        r = (0, u.Z)(B) ? C.Skl.STREAMING : k;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eh,
@@ -189,7 +189,7 @@ t.Z = function(e) {
         profileViewedAnalytics: eS
       })]
     }),
-    ey = x === C.Skl.OFFLINE,
+    ey = k === C.Skl.OFFLINE,
     eU = null != j;
   return null == G ? (0, i.jsx)(A.Z, {
     avatarSize: l.AvatarSizes.SIZE_32,
@@ -198,7 +198,7 @@ t.Z = function(e) {
     renderPopout: e => (0, i.jsx)(T.Z, {
       quest: eA,
       memberListItemRef: eu,
-      applicationStream: k,
+      applicationStream: x,
       ...e,
       closePopout: () => eN(!0)
     }),

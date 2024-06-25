@@ -60,7 +60,7 @@ function B(e) {
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let k = e => {
+let x = e => {
   let {
     current: t,
     duration: n
@@ -79,7 +79,7 @@ let k = e => {
     })]
   })
 };
-class x extends(i = o.Component) {
+class k extends(i = o.Component) {
   componentDidMount() {
     this.state.translateY.setValue(this.props.autoPlay ? 1 : 0)
   }
@@ -181,7 +181,7 @@ class x extends(i = o.Component) {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(k, {
+      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(x, {
         current: n,
         duration: i
       }) : null, (0, s.jsx)(C.Z, {
@@ -253,7 +253,7 @@ function V(e) {
     })]
   })
 }
-y(x, "defaultProps", {
+y(k, "defaultProps", {
   disabled: !1
 });
 class Z extends o.Component {
@@ -684,7 +684,7 @@ class Y extends(r = o.PureComponent) {
         dragging: A
       }
     } = this, m = this.getWidth();
-    return d || n || t === G.AUDIO ? (0, s.jsx)(x, {
+    return d || n || t === G.AUDIO ? (0, s.jsx)(k, {
       buffers: u,
       currentTime: _,
       duration: c,

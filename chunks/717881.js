@@ -83,9 +83,9 @@ t.Z = function(e) {
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), w = (0, a.e7)([m.Z], () => s ? m.Z.getAnyStreamForUser(n.id) : null), B = G && p.Z.can(D.Plq.CONNECT, b), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B ? b : null, x = (0, a.e7)([R.Z, g.Z, O.Z], () => {
+  }), w = (0, a.e7)([m.Z], () => s ? m.Z.getAnyStreamForUser(n.id) : null), B = G && p.Z.can(D.Plq.CONNECT, b), x = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B ? b : null, k = (0, a.e7)([R.Z, g.Z, O.Z], () => {
     var e, i;
-    return (0, u.Z)(t, D.xjy.EMBEDDED) ? R.Z.getGuild(null === (e = O.Z.getChannel(null === (i = g.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? R.Z.getGuild(k.getGuildId()) : null
+    return (0, u.Z)(t, D.xjy.EMBEDDED) ? R.Z.getGuild(null === (e = O.Z.getChannel(null === (i = g.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != x ? R.Z.getGuild(x.getGuildId()) : null
   }), V = (0, a.e7)([R.Z], () => null != w ? R.Z.getGuild(w.guildId) : null), Z = (0, a.e7)([d.Z], () => {
     if (null != t) return null != t.application_id ? d.Z.getApplication(t.application_id) : d.Z.getApplicationByName(t.name);
     return null
@@ -93,16 +93,16 @@ t.Z = function(e) {
   return (r.useEffect(() => {
     (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B && v.default.track(D.rMx.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
-      guild_id: null == k ? void 0 : k.guild_id,
-      channel_id: null == k ? void 0 : k.id
+      guild_id: null == x ? void 0 : x.guild_id,
+      channel_id: null == x ? void 0 : x.id
     })
-  }, [null == t ? void 0 : t.type, B, k]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || B) ? (0, i.jsx)(C.Z, {
+  }, [null == t ? void 0 : t.type, B, x]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || B) ? (0, i.jsx)(C.Z, {
     ...U,
     activity: t,
     user: n,
     application: Z,
     hideHeader: _,
-    activityGuild: null != x ? x : V,
+    activityGuild: null != k ? k : V,
     showReactions: Y,
     showChannelDetails: c,
     channel: c ? b : void 0,

@@ -31,9 +31,9 @@ var i, r, s, o, a = n(392711),
   G = n(981631);
 let w = new Set,
   B = new E.Z("MessageStore"),
-  k = !1;
+  x = !1;
 
-function x() {
+function k() {
   c.Z.forEach(e => {
     c.Z.commit(e.mutate({
       ready: !1,
@@ -142,7 +142,7 @@ class Y extends(i = u.ZP.Store) {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
-    return k
+    return x
   }
 }
 o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, {
@@ -163,8 +163,8 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
       }
     }
   },
-  CONNECTION_OPEN: x,
-  OVERLAY_INITIALIZE: x,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
   CACHE_LOADED: function(e) {
     for (let [t, n] of R.default.entries(e.messages)) {
       let e = c.Z.getOrCreate(t).addCachedMessages(n, !0);
@@ -405,6 +405,6 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
     let {
       message: t
     } = e, n = b.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0)
+    null != t && null != t.author && null != n && t.author.id === n.id && (x = !0)
   }
 })

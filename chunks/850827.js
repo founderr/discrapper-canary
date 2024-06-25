@@ -42,8 +42,8 @@ t.Z = (0, _.Z)(e => {
     color: G = u.Button.Colors.WHITE,
     look: w = u.Button.Looks.OUTLINED,
     type: B,
-    onAction: k,
-    isEmbedded: x = !1
+    onAction: x,
+    isEmbedded: k = !1
   } = e, V = (0, l.e7)([I.default], () => {
     let e = I.default.getCurrentUser();
     return a()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
@@ -62,13 +62,13 @@ t.Z = (0, _.Z)(e => {
         platform: c.Z.get(M.ABu.XBOX),
         look: w,
         color: G,
-        onAction: k
+        onAction: x
       }, "ConnectPlatformActivityButton");
       if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5) return (0, i.jsx)(A.Z, {
         look: w,
         color: G,
         platform: c.Z.get(M.ABu.PLAYSTATION),
-        onAction: k
+        onAction: x
       }, "ConnectPlatformActivityButton");
       if (Y) {
         let e = (0, i.jsx)(v.Z, {
@@ -79,7 +79,7 @@ t.Z = (0, _.Z)(e => {
             source: b,
             look: w,
             color: G,
-            onAction: k
+            onAction: x
           }, "spotify-activity-sync-button"),
           n = (0, i.jsx)(C.Z, {
             activity: t,
@@ -87,7 +87,7 @@ t.Z = (0, _.Z)(e => {
             source: b,
             look: w,
             color: G,
-            onAction: k
+            onAction: x
           }, "spotify-activity-play-button");
         return F ? (0, i.jsxs)(i.Fragment, {
           children: [e, n]
@@ -103,7 +103,7 @@ t.Z = (0, _.Z)(e => {
           color: G,
           look: w,
           isProfile: Z,
-          onAction: k
+          onAction: x
         }, e.channelId)
       }
       return H ? (0, i.jsx)(D.Z, {
@@ -111,38 +111,38 @@ t.Z = (0, _.Z)(e => {
         color: G,
         look: w,
         applicationStream: o,
-        onAction: k
+        onAction: x
       }, "watch-button") : K && null != z ? (0, i.jsx)(R.Z, {
         color: G,
         look: w,
         hangStatusChannel: z,
-        onAction: k
+        onAction: x
       }, "hang-status-button") : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(L.Z, {
           activity: t,
           color: G,
           look: w,
-          onAction: k
+          onAction: x
         }, "watch-button"), (0, i.jsx)(O.Z, {
           activity: t,
           embeddedActivity: n,
           user: r,
           color: G,
           look: w,
-          isEmbedded: x,
-          onAction: k
+          isEmbedded: k,
+          onAction: x
         }, "join-activity-button"), (0, i.jsx)(g.Z, {
           activity: t,
           user: r,
           color: G,
           look: w,
-          onAction: k
+          onAction: x
         }, "notify-button"), (0, i.jsx)(m.Z, {
           user: r,
           color: G,
           look: w,
           activity: t,
-          onAction: k
+          onAction: x
         }, "custom-activity-button")]
       })
     })()

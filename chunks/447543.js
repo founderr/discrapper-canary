@@ -39,8 +39,8 @@ var i = n(525654),
   G = n(607744),
   w = n(341165),
   B = n(496675),
-  k = n(594174),
-  x = n(626135),
+  x = n(594174),
+  k = n(626135),
   V = n(70956),
   Z = n(573261),
   H = n(954824),
@@ -105,7 +105,7 @@ function $(e) {
           channelId: l
         }), _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent))
       };
-      (0, f.n)(t, [b.Z, G.Z, k.default, U.ZP]) ? (0, S.hk)(t, o) : o()
+      (0, f.n)(t, [b.Z, G.Z, x.default, U.ZP]) ? (0, S.hk)(t, o) : o()
     })
   }) : (0, E.l5)(a) && _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent)), (function(e, t) {
     let {
@@ -125,7 +125,7 @@ let ee = function(e, t) {
     P.Z.addConditionalChangeListener(() => {
       var i;
       let r = P.Z.getChannel(e),
-        s = k.default.getCurrentUser();
+        s = x.default.getCurrentUser();
       return null == r || null == s || (!r.nsfw || !!s.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
         let {
           guildScheduledEvent: t,
@@ -323,7 +323,7 @@ t.Z = {
         ...i,
         invite_guild_scheduled_event_id: r.guildScheduledEventId
       }),
-      h = k.default.getCurrentUser();
+      h = x.default.getCurrentUser();
     return null !== (t = null == h ? void 0 : h.hasFlag(j.xW$.QUARANTINED)) && void 0 !== t && t ? ((0, g.default)(), new Promise((e, t) => t(Error()))) : (_.Z.dispatch({
       type: "INVITE_ACCEPT",
       code: E
@@ -449,7 +449,7 @@ t.Z = {
         attemptId: t,
         event: null == E ? void 0 : E.guildScheduledEventId,
         iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(I)
-      }), x.default.track(j.rMx.DEEP_LINK_CLICKED, {
+      }), k.default.track(j.rMx.DEEP_LINK_CLICKED, {
         fingerprint: (0, l.K)(n),
         attempt_id: t,
         source: X,

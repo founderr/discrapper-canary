@@ -34,7 +34,7 @@ let b = (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   w = 2 * G + (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
   B = () => Promise.resolve();
 
-function k(e) {
+function x(e) {
   let {
     isFocused: t,
     isHidden: n,
@@ -85,7 +85,7 @@ t.Z = o.memo(function(e) {
     onSelectSticker: a,
     stickerIconVisible: d = !1,
     submitButtonVisible: E = !1
-  } = e, R = o.useContext(S.ZP), [p, v] = o.useState(null), [b, G] = o.useState(!1), [x, V] = o.useState(null), Z = (0, f.Iu)(e => null != e.activeView), H = o.useRef(null), [F, Y] = o.useState(""), [j, W] = o.useState(""), [K, z] = o.useState(!1), [q, X] = o.useState(!1), Q = (0, D.Z)(F, b, i), {
+  } = e, R = o.useContext(S.ZP), [p, v] = o.useState(null), [b, G] = o.useState(!1), [k, V] = o.useState(null), Z = (0, f.Iu)(e => null != e.activeView), H = o.useRef(null), [F, Y] = o.useState(""), [j, W] = o.useState(""), [K, z] = o.useState(!1), [q, X] = o.useState(!1), Q = (0, D.Z)(F, b, i), {
     analyticsLocations: J
   } = (0, h.ZP)(T.Z.EXPRESSION_SUGGESTIONS), {
     handleTextChange: $,
@@ -246,8 +246,8 @@ t.Z = o.memo(function(e) {
                     sticker: n,
                     sendability: i
                   } = e;
-                  return (0, s.jsx)(k, {
-                    isFocused: x === "".concat(t),
+                  return (0, s.jsx)(x, {
+                    isFocused: k === "".concat(t),
                     isHidden: eu,
                     sendability: i,
                     listIndex: t,
@@ -273,8 +273,8 @@ t.Z = o.memo(function(e) {
                 maxWidth: w
               },
               variant: "text-sm/normal",
-              children: null != x ? y.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
-                stickerName: null === (t = Q[+x]) || void 0 === t ? void 0 : t.sticker.name
+              children: null != k ? y.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
+                stickerName: null === (t = Q[+k]) || void 0 === t ? void 0 : t.sticker.name
               }) : y.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
                 upHook: (e, t) => (0, s.jsx)(I.KeyCombo, {
                   shortcut: "up",

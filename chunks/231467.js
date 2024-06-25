@@ -176,7 +176,7 @@ function G(e) {
       secondaryColor: G
     },
     bannerHash: w
-  } = n, B = (0, _.Z)(n.games), k = (0, T.Z)("clan_discovery_card"), [x, V] = r.useState(!1), Z = r.useRef(null), [H, F] = r.useState(!1), Y = r.useCallback(() => {
+  } = n, B = (0, _.Z)(n.games), x = (0, T.Z)("clan_discovery_card"), [k, V] = r.useState(!1), Z = r.useRef(null), [H, F] = r.useState(!1), Y = r.useCallback(() => {
     V(!0)
   }, []), j = r.useCallback(() => {
     V(!1)
@@ -224,7 +224,7 @@ function G(e) {
                 guildName: n.name,
                 guildIcon: n.icon,
                 iconSize: 64,
-                animate: !A || x
+                animate: !A || k
               })
             })
           }), (0, i.jsx)("div", {
@@ -232,7 +232,7 @@ function G(e) {
             children: (0, i.jsx)(a.Tooltip, {
               text: D.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !u && k,
+              shouldShow: !u && x,
               children: e => (0, i.jsxs)("div", {
                 ...e,
                 className: M.clanTagChiplet,

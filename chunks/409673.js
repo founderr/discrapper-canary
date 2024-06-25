@@ -90,8 +90,8 @@ t.ZP = r.forwardRef(function(e, t) {
     suppressPlaySound: G,
     onMouseEnter: w,
     onSelectItem: B,
-    analyticsLocations: k,
-    buttonOverlay: x = f.Pb.PLAY,
+    analyticsLocations: x,
+    buttonOverlay: k = f.Pb.PLAY,
     ...V
   } = e, {
     soundId: Z,
@@ -206,7 +206,7 @@ t.ZP = r.forwardRef(function(e, t) {
           B();
           return
         }
-        G || K(k)
+        G || K(x)
       },
       onContextMenu: b && !ea ? W : void 0,
       children: [(0, i.jsxs)("div", {
@@ -226,7 +226,7 @@ t.ZP = r.forwardRef(function(e, t) {
           children: H
         })]
       }), function() {
-        switch (x) {
+        switch (k) {
           case f.Pb.ADD:
             return (0, i.jsxs)("div", {
               className: p.addButtonOverlay,

@@ -43,7 +43,7 @@ function m(e) {
     pendingBanner: R,
     size: (0, N.e7)(O),
     canAnimate: g || !y ? D : P
-  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), B = (0, a._i)((0, c.ZP)(n.getAvatarURL(m, w), G, !1)), k = (0, d.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : B).hsl;
+  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), B = (0, a._i)((0, c.ZP)(n.getAvatarURL(m, w), G, !1)), x = (0, d.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : B).hsl;
   return (0, i.jsx)(f.Z, {
     isPremium: L,
     hasThemeColors: L,
@@ -63,7 +63,7 @@ function m(e) {
       onMouseLeave: () => M(!1),
       style: {
         backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
-        backgroundColor: b !== S.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : k
+        backgroundColor: b !== S.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : x
       },
       children: [!y && (0, h.F8)(U) && (0, i.jsx)(T.Z, {
         className: A.gifTag

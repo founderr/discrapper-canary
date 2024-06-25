@@ -101,8 +101,8 @@ function S(e) {
     focusProps: G,
     "aria-label": w,
     submittingStartedLabel: B,
-    submittingFinishedLabel: k,
-    ...x
+    submittingFinishedLabel: x,
+    ...k
   } = e, V = f || N, Z = V && (null != D || null != M), H = function(e, t) {
     var n, i, r, s;
     let o = null == e ? void 0 : e.offset;
@@ -117,13 +117,13 @@ function S(e) {
     }
   }(G, t), F = r.useRef(!1);
   r.useEffect(() => {
-    !0 === N && (F.current = !0, l.u.announce(null != B ? B : c.Z.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === F.current && l.u.announce(null != k ? k : c.Z.Messages.A11Y_LOADING_FINISHED)
-  }, [N, B, k]);
+    !0 === N && (F.current = !0, l.u.announce(null != B ? B : c.Z.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === F.current && l.u.announce(null != x ? x : c.Z.Messages.A11Y_LOADING_FINISHED)
+  }, [N, B, x]);
   let Y = (0, i.jsx)(u.t, {
     ...G,
     offset: H,
     children: (0, i.jsxs)("button", {
-      ...V ? null : x,
+      ...V ? null : k,
       "aria-label": w,
       "aria-busy": !!N || void 0,
       ref: b,

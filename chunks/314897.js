@@ -30,8 +30,8 @@ let P = n(952265).nf,
   G = "user_id_cache",
   w = null,
   B = null,
-  k = null,
   x = null,
+  k = null,
   V = null,
   Z = null,
   H = null,
@@ -177,10 +177,10 @@ class ef extends(s = E.ZP.Store) {
     return w
   }
   getSessionId() {
-    return k
+    return x
   }
   getAuthSessionIdHash() {
-    return x
+    return k
   }
   getStaticAuthSessionId() {
     return V
@@ -280,7 +280,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       auth: o,
       staticAuthSessionId: a
     } = e;
-    e_("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), k = i, x = r, V = a, F = s, w = n.id, B = n.email, void 0 !== o && (K = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
+    e_("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), x = i, k = r, V = a, F = s, w = n.id, B = n.email, void 0 !== o && (K = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -290,7 +290,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       analyticsToken: r,
       token: s
     } = e;
-    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), k = i, F = r, eI(s), eE(), w = n.id, T.K.set(G, n.id)
+    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), x = i, F = r, eI(s), eE(), w = n.id, T.K.set(G, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -310,7 +310,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
     let {
       authSessionIdHash: t
     } = e;
-    null != t && (x = t)
+    null != t && (k = t)
   },
   LOGIN: function(e) {
     ei = {}, Y = D.u34.LOGGING_IN, $ = "", r = null, null != e.login && (eo = e.login)

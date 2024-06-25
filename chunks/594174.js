@@ -214,14 +214,14 @@ function B(e) {
   return t.forEach(e => L(e, !0)), !1
 }
 
-function k(e) {
+function x(e) {
   let {
     mostRecentMessages: t
   } = e;
   return null == t || t.forEach(e => L(e, !1)), !1
 }
 
-function x(e) {
+function k(e) {
   let {
     messages: t
   } = e;
@@ -670,13 +670,13 @@ class eC extends I.Z {
       USER_UPDATE: b,
       CURRENT_USER_UPDATE: G,
       PRESENCE_UPDATES: X,
-      SEARCH_FINISH: x,
-      MOD_VIEW_SEARCH_FINISH: x,
+      SEARCH_FINISH: k,
+      MOD_VIEW_SEARCH_FINISH: k,
       LOAD_MESSAGES_SUCCESS: B,
       LOAD_MESSAGES_AROUND_SUCCESS: B,
       LOAD_PINNED_MESSAGES_SUCCESS: B,
       LOAD_RECENT_MENTIONS_SUCCESS: B,
-      THREAD_LIST_SYNC: k,
+      THREAD_LIST_SYNC: x,
       MESSAGE_CREATE: W,
       MESSAGE_UPDATE: W,
       GUILD_SETTINGS_LOADED_BANS: Q,

@@ -66,17 +66,17 @@ function B(e) {
     let i = G(n);
     return e(i) ? (! function(e, t) {
       let n = S.Z.getChannel(e);
-      null != n && n.isGuildStageVoice() ? 0 === t.size() ? x(n.id) : null == D.get(n.id) && D.set(n.id, n) : x(e)
+      null != n && n.isGuildStageVoice() ? 0 === t.size() ? k(n.id) : null == D.get(n.id) && D.set(n.id, n) : k(e)
     }(n, i), !0) : t
   }, !1)
 }
 
-function k(e) {
+function x(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y();
   return B(t => t.updateParticipant(e), t)
 }
 
-function x(e) {
+function k(e) {
   return null != e && (delete P[e], D.delete(e), !0)
 }
 
@@ -94,14 +94,14 @@ function H(e) {
   let {
     user: t
   } = e;
-  return k(t.id)
+  return x(t.id)
 }
 
 function F(e) {
   let {
     relationship: t
   } = e;
-  return k(t.id)
+  return x(t.id)
 }
 
 function Y(e) {
@@ -122,7 +122,7 @@ function j(e) {
     guildId: i,
     ownerId: r
   } = (0, I.my)(t);
-  return !!(null != i && M.has(i)) && k(r, [n])
+  return !!(null != i && M.has(i)) && x(r, [n])
 }
 let W = [];
 class K extends(i = c.ZP.Store) {
@@ -175,7 +175,7 @@ o = "StageChannelParticipantStore", (s = "displayName") in(r = K) ? Object.defin
     return t.reduce((e, t) => {
       if (null == t.guildId || !M.has(t.guildId)) return e;
       let i = new Set;
-      return (Z(n, i, t.oldChannelId), Z(n, i, t.channelId), 0 === i.size) ? e : k(t.userId, Array.from(i)) || e
+      return (Z(n, i, t.oldChannelId), Z(n, i, t.channelId), 0 === i.size) ? e : x(t.userId, Array.from(i)) || e
     }, !1)
   },
   CHANNEL_DELETE: function(e) {
@@ -184,14 +184,14 @@ o = "StageChannelParticipantStore", (s = "displayName") in(r = K) ? Object.defin
         id: t
       }
     } = e;
-    return x(t)
+    return k(t)
   },
   GUILD_MEMBERS_CHUNK_BATCH: function(e) {
     let {
       chunks: t
     } = e, n = !1;
     for (let e of t)
-      for (let t of e.members) n = k(t.user.id) || n;
+      for (let t of e.members) n = x(t.user.id) || n;
     return n
   },
   USER_UPDATE: H,
@@ -219,7 +219,7 @@ o = "StageChannelParticipantStore", (s = "displayName") in(r = K) ? Object.defin
       guildId: n,
       userId: i
     } = e;
-    return !!(null != n && M.has(n)) && k(i, [t])
+    return !!(null != n && M.has(n)) && x(i, [t])
   },
   STREAM_CLOSE: j,
   STREAM_DELETE: j,

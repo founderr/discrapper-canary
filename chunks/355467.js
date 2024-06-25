@@ -22,7 +22,7 @@ n.d(t, {
     return eO
   },
   GV: function() {
-    return k
+    return x
   },
   K2: function() {
     return em
@@ -115,7 +115,7 @@ n.d(t, {
     return ef
   },
   sF: function() {
-    return x
+    return k
   },
   sk: function() {
     return J
@@ -600,7 +600,7 @@ function B(e, t, n) {
     analyticsLocation: n
   })
 }
-async function k(e, t, n, i) {
+async function x(e, t, n, i) {
   if (null == e) throw D("Stripe not loaded");
   let r = await v(t),
     {
@@ -638,7 +638,7 @@ async function k(e, t, n, i) {
     analyticsLocation: i
   })
 }
-async function x(e, t, n) {
+async function k(e, t, n) {
   let i = await v(e),
     r = {
       type: A.QL.get(t)

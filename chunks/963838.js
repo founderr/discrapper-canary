@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Iu: function() {
-    return x
+    return k
   },
   Jw: function() {
     return B
@@ -13,7 +13,7 @@ n.d(t, {
     return H
   },
   lv: function() {
-    return k
+    return x
   },
   v: function() {
     return b
@@ -60,7 +60,7 @@ let b = {
     [y.q.BASIC]: G,
     [y.q.PREMIUM]: w
   },
-  k = r().memoize(e => new Promise(t => {
+  x = r().memoize(e => new Promise(t => {
     let n = new Image;
     n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
       let i = y.v * (0, L.x_)();
@@ -72,7 +72,7 @@ let b = {
       }
     }
   })),
-  x = (e, t) => {
+  k = (e, t) => {
     let n = B[e];
     if (null != t && e === y.q.PREMIUM) {
       let e = t.end + 1;

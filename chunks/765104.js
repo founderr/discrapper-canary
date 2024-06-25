@@ -31,9 +31,9 @@ let P = {},
     lastResponse: null
   },
   B = [],
-  k = [];
+  x = [];
 
-function x() {
+function k() {
   B = A.Z.getProps().results.filter(e => e.type === f.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
 class V extends(l = T.ZP.PersistedStore) {
@@ -44,7 +44,7 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   initialize(e) {
     var t;
-    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, p.Z, O.Z, N.Z), this.syncWith([A.Z], x)
+    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, p.Z, O.Z, N.Z), this.syncWith([A.Z], k)
   }
   allSummaries() {
     return P
@@ -54,7 +54,7 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   summaries(e) {
     var t;
-    return null !== (t = P[e]) && void 0 !== t ? t : k
+    return null !== (t = P[e]) && void 0 !== t ? t : x
   }
   shouldShowTopicsBar() {
     return i

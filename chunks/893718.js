@@ -35,8 +35,8 @@ var i = n(735250),
   G = n(268350),
   w = n(378233),
   B = n(665906),
-  k = n(695346),
-  x = n(271383),
+  x = n(695346),
+  k = n(271383),
   V = n(496675),
   Z = n(944486),
   H = n(398327),
@@ -80,8 +80,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     renderAppLauncherButton: eG,
     renderApplicationCommandIcon: ew,
     pendingReply: eB,
-    onChange: ek,
-    onResize: ex,
+    onChange: ex,
+    onResize: ek,
     onBlur: eV,
     onFocus: eZ,
     onKeyDown: eH,
@@ -133,10 +133,10 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     } = function(e, t, n, i) {
       let r = e.getGuildId(),
         s = (0, E.e7)([P.Z], () => null != r && P.Z.isLurking(r), [r]),
-        o = (0, E.e7)([x.ZP, Y.default], () => {
+        o = (0, E.e7)([k.ZP, Y.default], () => {
           var e, t;
           let n = Y.default.getCurrentUser();
-          return null !== (t = null != r && null != n ? null === (e = x.ZP.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+          return null !== (t = null != r && null != n ? null === (e = k.ZP.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
         }),
         a = (0, E.cj)([V.Z], () => {
           var r, s;
@@ -161,7 +161,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       }
     }(eP, ey, ti, eL),
     tc = ey.toolbarType === q.O.STATIC,
-    td = !k.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
+    td = !x.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
     tE = !td || !(null === (s = ey.commands) || void 0 === s ? void 0 : s.enabled) || !eU || em !== eo.GI,
     tI = (0, y.Z)(),
     {
@@ -343,7 +343,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           n(null != t ? t : 0), null == e || e(t)
         }, [e])
       }
-    }(ex),
+    }(ek),
     {
       handleTab: tU,
       handleEnter: tb,
@@ -369,8 +369,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     {
       expressionPickerView: tw,
       shouldHideExpressionPicker: tB,
-      handleAutocompleteVisibilityChange: tk,
-      handleOuterClick: tx
+      handleAutocompleteVisibilityChange: tx,
+      handleOuterClick: tk
     } = function(e, t, n) {
       let [i, s] = (0, v.Iu)(e => [e.activeView, e.activeViewType], _.Z);
       r.useEffect(() => () => {
@@ -409,7 +409,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     tK = td && !__OVERLAY__ && null != eO && null == ti && ey.toolbarType !== q.O.NONE,
     tz = function(e, t, n, i) {
       var r, s;
-      let o = k.up.useSetting(),
+      let o = x.up.useSetting(),
         a = (0, E.e7)([b.Z], () => b.Z.getStickerPreview(e.id, t.drafts.type)),
         l = null != a && a.length > 0;
       return o && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
@@ -440,7 +440,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             [el.highlighted]: ej,
             [el.textAreaMobileThemed]: c.tq
           }),
-          onMouseDown: tx,
+          onMouseDown: tk,
           children: [(0, i.jsx)($.Z, {
             type: ey,
             channel: eP,
@@ -490,7 +490,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
                   maxCharacterCount: null != ez ? ez : tI,
                   allowNewLines: eX,
                   "aria-describedby": eJ,
-                  onChange: ek,
+                  onChange: ex,
                   onResize: ty,
                   onBlur: eV,
                   onFocus: eZ,
@@ -540,9 +540,9 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             editorRef: e9,
             onSendMessage: tm,
             onSendSticker: tL,
-            onVisibilityChange: tk,
+            onVisibilityChange: tx,
             editorHeight: tP,
-            setValue: (e, t) => null == ek ? void 0 : ek(null, e, t),
+            setValue: (e, t) => null == ex ? void 0 : ex(null, e, t),
             position: e1
           }), (0, i.jsx)(U.Z, {
             textValue: em,

@@ -189,22 +189,22 @@ class b extends r.Component {
       allowNewLines: G,
       "aria-describedby": w,
       "aria-labelledby": B,
-      accessibilityLabel: k
+      accessibilityLabel: x
     } = this.props, {
-      submitting: x,
+      submitting: k,
       popup: V
     } = this.state, Z = {
       channel: h,
       className: o()(D, M.textArea, {
         [M.textAreaSlate]: N,
-        [M.textAreaDisabled]: _ || x
+        [M.textAreaDisabled]: _ || k
       }),
       id: P,
       placeholder: this.getPlaceholder(),
       required: y,
-      accessibilityLabel: k,
+      accessibilityLabel: x,
       disabled: _ || !1,
-      submitting: x,
+      submitting: k,
       isEdit: S === O.I.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,

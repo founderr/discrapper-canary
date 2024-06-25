@@ -55,7 +55,7 @@ n.d(t, {
     return g
   },
   ks: function() {
-    return x
+    return k
   },
   lX: function() {
     return S
@@ -101,7 +101,7 @@ class c extends o.Z {
       try {
         let n = _[t.premiumType];
         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let i = k[n];
+        let i = x[n];
         if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
         return i.skuFeatures.includes(e)
       } catch (e) {
@@ -139,12 +139,12 @@ let b = new c(i.q.INCREASED_GUILD_LIMIT),
   G = new c(i.q.INCREASED_MESSAGE_LENGTH),
   w = new c("increasedVideoUploadQuality"),
   B = new c("uploadLargeFiles"),
-  k = Object.freeze({
+  x = Object.freeze({
     [l.Si.TIER_0]: new a.Z(l.Si.TIER_0, [d, E, I, A, U, w, B, R]),
     [l.Si.TIER_1]: new a.Z(l.Si.TIER_1, [d, E, S, f, A, g, v, M, w, B, R]),
     [l.Si.TIER_2]: new a.Z(l.Si.TIER_2, [d, E, I, T, h, S, f, N, A, m, p, g, C, v, L, M, P, y, U, b, G, w, B, R, O, D])
   });
 
-function x(e, t) {
+function k(e, t) {
   return e.getFeatureValue(t)
 }

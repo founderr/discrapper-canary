@@ -43,8 +43,8 @@ function v(e) {
     modalClassName: G,
     artContainerClassName: w,
     headerClassName: B,
-    bodyClassName: k,
-    transitionState: x,
+    bodyClassName: x,
+    transitionState: k,
     onClose: V,
     onSubscribeClick: Z,
     onSecondaryClick: H,
@@ -92,7 +92,7 @@ function v(e) {
   }) : $.artElement, (0, i.jsxs)(l.ModalRoot, {
     className: o()(g.root, G),
     "aria-label": v,
-    transitionState: x,
+    transitionState: k,
     children: [(0, i.jsxs)("div", {
       className: el,
       children: [eu, j ? (0, i.jsx)("img", {
@@ -130,7 +130,7 @@ function v(e) {
             affinities: es
           }) : void 0, J, (0, i.jsx)(l.Text, {
             variant: "text-md/normal",
-            className: o()(k, g.subHeader),
+            className: o()(x, g.subHeader),
             children: y
           })]
         })

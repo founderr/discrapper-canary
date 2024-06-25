@@ -185,8 +185,8 @@ let w = {
     PAYMENT_SOURCE_MANAGEMENT: "https://play.google.com/store/paymentmethods",
     BILLING_HISTORY: "https://play.google.com/store/account/orderhistory"
   },
-  k = new E.Z("PremiumUtils.tsx"),
-  x = {
+  x = new E.Z("PremiumUtils.tsx"),
+  k = {
     [U.Xh.NONE_MONTH]: [U.Xh.NONE_YEAR, U.Xh.PREMIUM_YEAR_TIER_2, U.Xh.PREMIUM_MONTH_TIER_2, U.Xh.PREMIUM_YEAR_TIER_1, U.Xh.PREMIUM_MONTH_TIER_1],
     [U.Xh.NONE_YEAR]: [U.Xh.PREMIUM_YEAR_TIER_2, U.Xh.PREMIUM_MONTH_TIER_2, U.Xh.PREMIUM_YEAR_TIER_1, U.Xh.PREMIUM_MONTH_TIER_1],
     [U.Xh.PREMIUM_MONTH_TIER_0]: [U.Xh.PREMIUM_YEAR_TIER_2, U.Xh.PREMIUM_MONTH_TIER_2, U.Xh.PREMIUM_YEAR_TIER_1, U.Xh.PREMIUM_MONTH_TIER_1, U.Xh.PREMIUM_YEAR_TIER_0],
@@ -235,7 +235,7 @@ function H(e) {
         paymentSourceId: t,
         purchaseType: n
       });
-      return (0 === r.length && k.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
+      return (0 === r.length && x.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
     }(e, {
       paymentSourceId: r,
       purchaseType: i,
@@ -288,13 +288,13 @@ function F(e) {
     }
     if (null == n.prices) throw Error("No prices returned for ".concat(e, ", is your user in the experiment?"));
     let i = n.prices[t];
-    if (null == i) throw k.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
+    if (null == i) throw x.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
     return i
   }(e, n);
   if (null != t) {
     let r = i.paymentSourcePrices[t];
     if (null == r) {
-      k.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), k.info("prices: ".concat(r));
+      x.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), x.info("prices: ".concat(r));
       let s = Error("Missing prices for payment source on subscription plan");
       (0, R.q2)(s, {
         extra: {
@@ -308,7 +308,7 @@ function F(e) {
     } else if (0 !== r.length) return r
   }
   if (null == i.countryPrices.prices) {
-    k.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
+    x.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
     let t = Error("Missing prices for country");
     throw (0, R.q2)(t, {
       tags: {
@@ -803,7 +803,7 @@ function ei(e) {
 
 function er(e) {
   var t;
-  return null == e ? x.ALL : null !== (t = x[e]) && void 0 !== t ? t : []
+  return null == e ? k.ALL : null !== (t = k[e]) && void 0 !== t ? t : []
 }
 
 function es(e) {

@@ -42,8 +42,8 @@ let y = "seenQSTutorial",
   G = !1,
   w = !1,
   B = null,
-  k = [],
-  x = null,
+  x = [],
+  k = null,
   V = 0,
   Z = [],
   H = [];
@@ -66,7 +66,7 @@ function j(e) {
   null != s && o.add("guild:".concat(s)), i = null != i ? i : new _.ZP(W, U, null != r ? 100 : 5, {
     frecencyBoosters: !0,
     blacklist: o
-  }), x = null, V = n.length, B = r, i.search(n)
+  }), k = null, V = n.length, B = r, i.search(n)
 }
 
 function W(e, t) {
@@ -160,35 +160,35 @@ function W(e, t) {
         let t = m.Z.getGuild(g.Z.getGuildId());
         e.unshift((0, _.o6)(null != t ? M.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({
           name: t.name
-        }) : M.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), k = e;
+        }) : M.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), x = e;
         break
       }
       case _.h8.TEXT_CHANNEL:
-        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), k = e;
+        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), x = e;
         break;
       case _.h8.VOICE_CHANNEL:
-        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), k = e;
+        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), x = e;
         break;
       case _.h8.GUILD:
-        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), k = e;
+        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), x = e;
         break;
       case _.h8.APPLICATION:
-        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), k = e;
+        e.unshift((0, _.o6)(M.Z.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), x = e;
         break;
       default:
-        k = e
+        x = e
     }
-    if (t !== x) x = t, V = Math.max(t.length, V), b = (0, _.gJ)(_.a8.DOWN, -1, k);
+    if (t !== k) k = t, V = Math.max(t.length, V), b = (0, _.gJ)(_.a8.DOWN, -1, x);
     else {
-      let e = k[b];
-      null != e && e.type === _.h8.HEADER && (b = (0, _.gJ)(_.a8.DOWN, b, k))
+      let e = x[b];
+      null != e && e.type === _.h8.HEADER && (b = (0, _.gJ)(_.a8.DOWN, b, x))
     }
     q.emitChange()
   }(e, t)
 }
 
 function K() {
-  x = null, V = 0, Z = [], null != i && (i.destroy(), i = null)
+  k = null, V = 0, Z = [], null != i && (i.destroy(), i = null)
 }
 class z extends(r = a.ZP.PersistedStore) {
   initialize(e) {
@@ -224,7 +224,7 @@ class z extends(r = a.ZP.PersistedStore) {
       theme: T.Z.theme,
       query: null != i ? i.query : "",
       queryMode: B,
-      results: k,
+      results: x,
       selectedIndex: b,
       seenTutorial: G,
       maxQueryLength: V

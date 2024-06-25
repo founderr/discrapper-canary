@@ -71,8 +71,8 @@ let C = e => {
       G = (0, s.e7)([I.Z], () => null !== b && b.type === l.B.GUILD ? I.Z.getGuild(b.guildId) : null, [b]),
       w = (0, s.e7)([T.Z], () => T.Z.isFocused()),
       B = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
-      k = E.Yk.useSetting(),
-      x = (0, f.C1)(L, g(b) ? b : null),
+      x = E.Yk.useSetting(),
+      k = (0, f.C1)(L, g(b) ? b : null),
       {
         newlyAddedEmojis: V
       } = (0, N.Z)(L, D),
@@ -93,7 +93,7 @@ let C = e => {
       var F;
       let e = null != b.id ? h.ZP.getEmojiURL({
         id: b.id,
-        animated: k && b.animated,
+        animated: x && b.animated,
         size: 28
       }) : b.url;
       t = "" === e ? (0, i.jsx)(o.Text, {
@@ -130,7 +130,7 @@ let C = e => {
       graphicSecondary: Y,
       titlePrimary: j,
       titleSecondary: W,
-      isFavorite: x,
+      isFavorite: k,
       emojiSubCategory: H
     })
   })

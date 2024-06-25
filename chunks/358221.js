@@ -31,8 +31,8 @@ let D = new I.Z("ChannelRTCStore"),
   G = {},
   w = {},
   B = {},
-  k = {},
   x = {},
+  k = {},
   V = {},
   Z = {};
 
@@ -171,7 +171,7 @@ function en(e) {
       id: t
     }
   } = e;
-  return delete x[t], delete V[t], X(t)
+  return delete k[t], delete V[t], X(t)
 }
 
 function ei(e) {
@@ -204,7 +204,7 @@ class es extends(i = c.ZP.Store) {
     return null !== (t = H(e).toArray(C.sI.SPEAKING)) && void 0 !== t ? t : M
   }
   getFilteredParticipants(e) {
-    return k[e] ? H(e).toArray(C.sI.FILTERED) : H(e).toArray()
+    return x[e] ? H(e).toArray(C.sI.FILTERED) : H(e).toArray()
   }
   getVideoParticipants(e) {
     var t;
@@ -231,7 +231,7 @@ class es extends(i = c.ZP.Store) {
   }
   getVoiceParticipantsHidden(e) {
     var t;
-    return null !== (t = k[e]) && void 0 !== t && t
+    return null !== (t = x[e]) && void 0 !== t && t
   }
   getSelectedParticipantId(e) {
     let [t, n] = j(e);
@@ -263,7 +263,7 @@ class es extends(i = c.ZP.Store) {
   }
   getChatOpen(e) {
     var t;
-    return null !== (t = x[e]) && void 0 !== t && t
+    return null !== (t = k[e]) && void 0 !== t && t
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L.IlC.APP;
@@ -291,14 +291,14 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       currentVoiceChannelId: n
     } = e;
-    return null != t ? delete b[t] : null != n && (delete x[n], delete V[n], K(n)), Q()
+    return null != t ? delete b[t] : null != n && (delete k[n], delete V[n], K(n)), Q()
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
       messageId: n
     } = e, i = Q(), r = A.Z.getChannel(t);
-    return null == t || null == n || (null == r ? void 0 : r.type) !== L.d4z.GUILD_VOICE && (null == r ? void 0 : r.type) !== L.d4z.GUILD_STAGE_VOICE || x[t] ? i : (x[t] = !0, !0)
+    return null == t || null == n || (null == r ? void 0 : r.type) !== L.d4z.GUILD_VOICE && (null == r ? void 0 : r.type) !== L.d4z.GUILD_STAGE_VOICE || k[t] ? i : (k[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: Q,
   VOICE_STATE_UPDATES: function(e) {
@@ -385,7 +385,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       voiceParticipantsHidden: n
     } = e;
-    k[t] = n
+    x[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
     let {
@@ -417,7 +417,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       chatOpen: n
     } = e;
-    x[t] = n
+    k[t] = n
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {

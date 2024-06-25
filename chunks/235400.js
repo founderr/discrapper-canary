@@ -56,9 +56,9 @@ function v(e) {
   }), {
     product: y,
     purchase: U
-  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), B = (0, A.sr)(M, void 0 === v ? D : v), k = () => {
+  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), B = (0, A.sr)(M, void 0 === v ? D : v), x = () => {
     L(M), u()
-  }, x = r.useCallback(e => {
+  }, k = r.useCallback(e => {
     u(), (0, _.mK)({
       analyticsLocations: o,
       analyticsSource: l.Z.EDIT_AVATAR_DECORATION_MODAL,
@@ -87,7 +87,7 @@ function v(e) {
         onSelect: e => {
           P(e), null != e && w(e)
         },
-        onOpenShop: x
+        onOpenShop: k
       }), (0, i.jsx)(m.Z, {
         className: C.modalPreview,
         user: t,
@@ -97,12 +97,12 @@ function v(e) {
     }), (0, i.jsxs)(a.ModalFooter, {
       className: C.modalFooter,
       children: [null != U && (!(0, c.qS)(U) || b) || null === M ? (0, i.jsx)(a.Button, {
-        onClick: k,
+        onClick: x,
         disabled: B,
         children: g.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
       }) : null == U && (b || !(0, c.G1)(y)) ? (0, i.jsx)(a.Button, {
         className: C.modalFooterShopButton,
-        onClick: () => x(null == y ? void 0 : y.skuId),
+        onClick: () => k(null == y ? void 0 : y.skuId),
         children: g.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, i.jsx)(T.Z, {
         subscriptionTier: p.Si.TIER_2,

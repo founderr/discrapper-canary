@@ -118,8 +118,8 @@ let b = new S.Z("RunningGameStore"),
     name: h.Z.get(y.ABu.SPOTIFY).name
   }],
   B = !0,
-  k = new Set,
-  x = [],
+  x = new Set,
+  k = [],
   V = [],
   Z = [],
   H = null,
@@ -245,12 +245,12 @@ function el(e) {
 
 function eu() {
   let e = !1;
-  return x = u().values(O.Z.libraryApplications).reduce((t, n) => {
+  return k = u().values(O.Z.libraryApplications).reduce((t, n) => {
     let i = m.Z.getDetectableGame(n.id);
     if (null == i) return t;
     for (let r of R.Z.getLaunchOptions(n.id, n.branchId)) {
       let s = "".concat(n.id, ":").concat(n.branchId);
-      !k.has(s) && (e = !0, k.add(s));
+      !x.has(s) && (e = !0, x.add(s));
       let {
         fullExecutablePath: o
       } = r, a = o.replace(/\\/g, "/").toLowerCase();
@@ -269,7 +269,7 @@ function eu() {
 
 function e_() {
   if (!__OVERLAY__ && L.isPlatformEmbedded) {
-    let e = [...x, ...u().values(W.gameOverrides)];
+    let e = [...k, ...u().values(W.gameOverrides)];
     D.ZP.setGameCandidateOverrides(e)
   }
 }

@@ -437,7 +437,7 @@ function v(e) {
       isMobile: t,
       isTyping: !1
     })
-  })), k = r.useMemo(() => ({
+  })), x = r.useMemo(() => ({
     fill: b,
     ...R({
       size: S,
@@ -446,7 +446,7 @@ function v(e) {
       isTyping: d
     })
   }), [b, S, C, l, d]), {
-    avatarCutoutX: x,
+    avatarCutoutX: k,
     avatarCutoutY: V,
     avatarCutoutWidth: Z,
     avatarCutoutHeight: H,
@@ -457,7 +457,7 @@ function v(e) {
     immediate: !document.hasFocus(),
     config: N,
     from: B,
-    to: k
+    to: x
   }), W = (0, I.px)(S), K = (0, I.UC)(S), z = K.status * I.D6, q = K.status * I.EW, X = null != C ? (K.status * I.D6 - K.status) / 2 : 0, Q = K.size - K.status - X - K.offset, J = K.size - q - K.offset, $ = K.size + Math.ceil(X);
   return (0, i.jsx)(p, {
     ...e,
@@ -482,7 +482,7 @@ function v(e) {
           fill: "white"
         }), (0, i.jsx)(a.animated.rect, {
           color: "black",
-          x: x,
+          x: k,
           y: V,
           width: Z,
           height: H,

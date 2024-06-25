@@ -162,8 +162,8 @@ function L(e) {
     serialize: G,
     clear: w,
     hideIcon: B = !1,
-    "aria-label": k,
-    "aria-labelledby": x
+    "aria-label": x,
+    "aria-labelledby": k
   } = e, [V, Z] = r.useState(!1), {
     ref: H,
     width: F,
@@ -252,8 +252,8 @@ function L(e) {
         }),
         "aria-haspopup": "listbox",
         "aria-expanded": c,
-        "aria-label": k,
-        "aria-labelledby": x,
+        "aria-label": x,
+        "aria-labelledby": k,
         children: [X.length > 0 ? (0, i.jsx)("span", {
           className: N.value,
           children: p(X)

@@ -47,7 +47,7 @@ let S = () => i.Z.Messages.LIMITED_TIME,
       label: Z,
       categorySkuId: n.T.TIDE
     },
-    start: new Date("2024-06-25T00:31:00Z"),
+    start: new Date("2024-06-26T18:00:00Z"),
     end: new Date("2024-07-27T03:59:00Z")
   }, {
     id: "category_anime",

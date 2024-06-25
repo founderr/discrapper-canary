@@ -35,8 +35,8 @@ var i = n(735250),
   G = n(611480),
   w = n(689938),
   B = n(401867);
-let k = P.Om + U.Su.MEDIUM,
-  x = r.memo(function(e) {
+let x = P.Om + U.Su.MEDIUM,
+  k = r.memo(function(e) {
     let {
       isActive: t,
       className: n,
@@ -218,14 +218,14 @@ t.Z = r.memo(function(e) {
                   className: B.navList,
                   role: "tablist",
                   "aria-label": w.Z.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
-                  children: [eE ? (0, i.jsx)(x, {
+                  children: [eE ? (0, i.jsx)(k, {
                     id: U._3,
                     "aria-controls": U.vO,
                     "aria-selected": ei === P.X1.GIF,
                     isActive: ei === P.X1.GIF,
                     viewType: P.X1.GIF,
                     children: w.Z.Messages.EXPRESSION_PICKER_GIF
-                  }) : null, eI ? (0, i.jsx)(x, {
+                  }) : null, eI ? (0, i.jsx)(k, {
                     id: G.ED,
                     "aria-controls": G.nZ,
                     "aria-selected": ei === P.X1.STICKER,
@@ -236,14 +236,14 @@ t.Z = r.memo(function(e) {
                       className: B.stickersNavItem,
                       children: w.Z.Messages.EXPRESSION_PICKER_STICKER
                     })
-                  }) : null, (0, i.jsx)(x, {
+                  }) : null, (0, i.jsx)(k, {
                     id: U.td,
                     "aria-controls": U.cZ,
                     "aria-selected": ei === P.X1.EMOJI,
                     isActive: ei === P.X1.EMOJI,
                     viewType: P.X1.EMOJI,
                     children: w.Z.Messages.EXPRESSION_PICKER_EMOJI
-                  }), el && null != F && (0, i.jsx)(x, {
+                  }), el && null != F && (0, i.jsx)(k, {
                     id: U.Hr,
                     "aria-controls": U.gV,
                     "aria-selected": ei === P.X1.SOUNDBOARD,
@@ -271,7 +271,7 @@ t.Z = r.memo(function(e) {
                 channel: Y,
                 containerWidth: et,
                 includeCreateEmojiButton: I,
-                emojiSize: null != et && et < k ? U.Su.MEDIUM : U.Su.LARGE,
+                emojiSize: null != et && et < x ? U.Su.MEDIUM : U.Su.LARGE,
                 pickerIntention: b.Hz.CHAT,
                 closePopout: ed,
                 onSelectEmoji: Z,

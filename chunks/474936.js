@@ -4,7 +4,7 @@ n.d(t, {
     return eo
   },
   $8: function() {
-    return ek
+    return ex
   },
   $e: function() {
     return Y
@@ -130,7 +130,7 @@ n.d(t, {
     return H
   },
   _k: function() {
-    return ex
+    return ek
   },
   a1: function() {
     return ej
@@ -253,7 +253,7 @@ n.d(t, {
     return el
   }
 }), n(47120);
-var i, r, s, o, a, l, u, _, c, d, E, I, T, h, S, f, N, A, m, O, R, p, g, C, v, L, D, M, P, y, U, b, G, w, B, k, x = n(981631),
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h, S, f, N, A, m, O, R, p, g, C, v, L, D, M, P, y, U, b, G, w, B, x, k = n(981631),
   V = n(185923);
 (m = i || (i = {}))[m.TIER_1 = 1] = "TIER_1", m[m.TIER_2 = 2] = "TIER_2", m[m.TIER_0 = 3] = "TIER_0";
 let Z = void 0,
@@ -530,78 +530,78 @@ let eG = Object.freeze({
   }),
   ew = 52428800,
   eB = {
-    [x.Eu4.NONE]: 5,
-    [x.Eu4.TIER_1]: 10,
-    [x.Eu4.TIER_2]: 15,
-    [x.Eu4.TIER_3]: 30
-  },
-  ek = {
-    [x.Eu4.NONE]: eB[x.Eu4.NONE],
-    [x.Eu4.TIER_1]: eB[x.Eu4.NONE] + eB[x.Eu4.TIER_1],
-    [x.Eu4.TIER_2]: eB[x.Eu4.NONE] + eB[x.Eu4.TIER_1] + eB[x.Eu4.TIER_2],
-    [x.Eu4.TIER_3]: eB[x.Eu4.NONE] + eB[x.Eu4.TIER_1] + eB[x.Eu4.TIER_2] + eB[x.Eu4.TIER_3]
+    [k.Eu4.NONE]: 5,
+    [k.Eu4.TIER_1]: 10,
+    [k.Eu4.TIER_2]: 15,
+    [k.Eu4.TIER_3]: 30
   },
   ex = {
-    [x.Eu4.NONE]: 8,
-    [x.Eu4.TIER_1]: 24,
-    [x.Eu4.TIER_2]: 36,
-    [x.Eu4.TIER_3]: 48
+    [k.Eu4.NONE]: eB[k.Eu4.NONE],
+    [k.Eu4.TIER_1]: eB[k.Eu4.NONE] + eB[k.Eu4.TIER_1],
+    [k.Eu4.TIER_2]: eB[k.Eu4.NONE] + eB[k.Eu4.TIER_1] + eB[k.Eu4.TIER_2],
+    [k.Eu4.TIER_3]: eB[k.Eu4.NONE] + eB[k.Eu4.TIER_1] + eB[k.Eu4.TIER_2] + eB[k.Eu4.TIER_3]
+  },
+  ek = {
+    [k.Eu4.NONE]: 8,
+    [k.Eu4.TIER_1]: 24,
+    [k.Eu4.TIER_2]: 36,
+    [k.Eu4.TIER_3]: 48
   },
   eV = Object.freeze({
-    [x.Eu4.NONE]: {
+    [k.Eu4.NONE]: {
       features: [],
       limits: {
         emoji: V.jZ,
-        bitrate: x.eWB,
-        fileSize: x.mBz,
+        bitrate: k.eWB,
+        fileSize: k.mBz,
         screenShareQualityFramerate: 30,
         screenShareQualityResolution: "720p",
-        soundboardSounds: ex[x.Eu4.NONE],
+        soundboardSounds: ek[k.Eu4.NONE],
         maxConcurrentActivities: 2,
-        stickers: ek[x.Eu4.NONE],
-        stageVideoUsers: x.B9o
+        stickers: ex[k.Eu4.NONE],
+        stageVideoUsers: k.B9o
       }
     },
-    [x.Eu4.TIER_1]: {
-      features: [x.oNc.INVITE_SPLASH, x.oNc.ANIMATED_ICON],
+    [k.Eu4.TIER_1]: {
+      features: [k.oNc.INVITE_SPLASH, k.oNc.ANIMATED_ICON],
       limits: {
         emoji: 100,
         bitrate: 128e3,
-        fileSize: x.mBz,
+        fileSize: k.mBz,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "720p",
-        soundboardSounds: ex[x.Eu4.TIER_1],
+        soundboardSounds: ek[k.Eu4.TIER_1],
         maxConcurrentActivities: 3,
-        stickers: ek[x.Eu4.TIER_1],
-        stageVideoUsers: x.B9o
+        stickers: ex[k.Eu4.TIER_1],
+        stageVideoUsers: k.B9o
       }
     },
-    [x.Eu4.TIER_2]: {
-      features: [x.oNc.INVITE_SPLASH, x.oNc.ANIMATED_ICON, x.oNc.BANNER, x.oNc.ROLE_ICONS],
+    [k.Eu4.TIER_2]: {
+      features: [k.oNc.INVITE_SPLASH, k.oNc.ANIMATED_ICON, k.oNc.BANNER, k.oNc.ROLE_ICONS],
       limits: {
         emoji: 150,
         bitrate: 256e3,
         fileSize: 52428800,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "1080p",
-        soundboardSounds: ex[x.Eu4.TIER_2],
+        soundboardSounds: ek[k.Eu4.TIER_2],
         maxConcurrentActivities: 5,
-        stickers: ek[x.Eu4.TIER_2],
-        stageVideoUsers: x.eez
+        stickers: ex[k.Eu4.TIER_2],
+        stageVideoUsers: k.eez
       }
     },
-    [x.Eu4.TIER_3]: {
-      features: [x.oNc.INVITE_SPLASH, x.oNc.ANIMATED_ICON, x.oNc.BANNER, x.oNc.ANIMATED_BANNER, x.oNc.VANITY_URL, x.oNc.ROLE_ICONS],
+    [k.Eu4.TIER_3]: {
+      features: [k.oNc.INVITE_SPLASH, k.oNc.ANIMATED_ICON, k.oNc.BANNER, k.oNc.ANIMATED_BANNER, k.oNc.VANITY_URL, k.oNc.ROLE_ICONS],
       limits: {
         emoji: 250,
         bitrate: 384e3,
         fileSize: 104857600,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "1080p",
-        soundboardSounds: ex[x.Eu4.TIER_3],
+        soundboardSounds: ek[k.Eu4.TIER_3],
         maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-        stickers: ek[x.Eu4.TIER_3],
-        stageVideoUsers: x.RcX
+        stickers: ex[k.Eu4.TIER_3],
+        stageVideoUsers: k.RcX
       }
     }
   }),
@@ -636,7 +636,7 @@ let eY = Object.freeze({
       fileSize: 524288e3
     }
   });
-(G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = f || (f = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = N || (N = {})).BOOST = "boost", B.DISMISS = "dismiss", (k = A || (A = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", k.BADGE_CLICKED = "share_nitro_badge_clicked", k.FLOW_STARTED = "share_nitro_flow_started", k.FLOW_COMPLETED = "share_nitro_flow_completed";
+(G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = f || (f = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = N || (N = {})).BOOST = "boost", B.DISMISS = "dismiss", (x = A || (A = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", x.BADGE_CLICKED = "share_nitro_badge_clicked", x.FLOW_STARTED = "share_nitro_flow_started", x.FLOW_COMPLETED = "share_nitro_flow_completed";
 let eW = new Set(["PL", "TR"]),
   eK = [1, 2, 3],
   ez = [4, 5, 7, 6],

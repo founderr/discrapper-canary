@@ -4,7 +4,7 @@ n.d(t, {
     return Y
   },
   DK: function() {
-    return k
+    return x
   },
   G3: function() {
     return E
@@ -22,7 +22,7 @@ n.d(t, {
     return B
   },
   Rp: function() {
-    return x
+    return k
   },
   Uq: function() {
     return b
@@ -223,14 +223,14 @@ function B(e, t, n) {
   return r
 }
 
-function k(e) {
+function x(e) {
   var t;
   if (null == e) return null;
   let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
   return null != n ? u.default.fromTimestamp(Math.floor(n.getTime() / l.Z.Millis.SECOND) * l.Z.Millis.SECOND) : null
 }
 
-function x(e, t) {
+function k(e, t) {
   if (null == t || null == e) return !1;
   let n = new Date(e.start),
     i = new Date(u.default.extractTimestamp(t));

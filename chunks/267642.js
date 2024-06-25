@@ -10,7 +10,7 @@ n.d(t, {
     return m
   },
   KK: function() {
-    return x
+    return k
   },
   Qi: function() {
     return B
@@ -70,7 +70,7 @@ n.d(t, {
     return M
   },
   yw: function() {
-    return k
+    return x
   }
 }), n(411104), n(47120), n(724458);
 var i, r, s = n(392711),
@@ -401,11 +401,11 @@ function B(e, t) {
   return Math.max(0, n - e.slice(s, o).length)
 }
 
-function k(e, t, n) {
+function x(e, t, n) {
   return -1 === h.indexOf(n) ? 0 : Math.max(0, A(n, e) - t.length)
 }
 
-function x(e, t) {
+function k(e, t) {
   let n = e.premiumSubscriberCount;
   return Math.max(0, b(e.id)[t] - n)
 }

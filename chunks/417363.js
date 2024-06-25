@@ -40,13 +40,13 @@ function w(e) {
 function B(e) {
   return e.type === R.vxO.INSTALLING || e.type === R.vxO.UPDATING || e.type === R.vxO.REPAIRING ? e.readerProgress : null
 }
-let k = u().throttle(function(e) {
+let x = u().throttle(function(e) {
     y = (y = [{
       bytes: e,
       timestamp: Date.now()
     }, ...y]).slice(0, 200)
   }, 200),
-  x = u().throttle(function(e) {
+  k = u().throttle(function(e) {
     let t = Date.now(),
       n = t - p;
     P = (P = [{
@@ -264,11 +264,11 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != g[o]) {
           let e = Z(n, o, G);
-          e > 0 && k(L += e);
+          e > 0 && x(L += e);
           let i = Z(n, o, w);
           i > 0 && V(D += i);
           let a = Z(n, o, B);
-          if (a > 0 && x(M += a), r === t) {
+          if (a > 0 && k(M += a), r === t) {
             let e = n[o];
             if (!0 !== e.paused && (e.type === R.vxO.UNINSTALLING || e.type === R.vxO.INSTALLING || e.type === R.vxO.UPDATING)) switch (e.stage) {
               case R.f07.PATCHING:

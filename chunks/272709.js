@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return x
+    return k
   }
 }), n(47120);
 var i = n(735250),
@@ -47,7 +47,7 @@ function B(e) {
   return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : (n === y.L.GAMING || n === y.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0 || n === y.L.HANGOUT && e.streamUserIds.length > 0 ? u.ScreenArrowIcon : n === y.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && m.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon
 }
 
-function k(e) {
+function x(e) {
   let {
     users: t,
     othersCount: n,
@@ -80,7 +80,7 @@ function k(e) {
   })
 }
 
-function x(e) {
+function k(e) {
   var t, n;
   let {
     cardData: s,
@@ -88,7 +88,7 @@ function x(e) {
     cardIndex: R
   } = e, {
     category: L
-  } = s, [M, P] = r.useState(!1), x = L === y.L.HANGOUT && s.streamUserIds.length > 0, V = (0, l.e7)([S.Z], () => x ? S.Z.getPreviewURL(_, s.channelId, s.streamUserIds[0]) : null), Z = (0, l.e7)([S.Z], () => L === y.L.HANGOUT ? S.Z.getIsPreviewLoading(_, s.channelId, s.streamUserIds[0]) : null), H = L === y.L.HANGOUT && s.streamUserIds.length > 0 && null == V && !Z, F = (0, l.e7)([f.Z], () => {
+  } = s, [M, P] = r.useState(!1), k = L === y.L.HANGOUT && s.streamUserIds.length > 0, V = (0, l.e7)([S.Z], () => k ? S.Z.getPreviewURL(_, s.channelId, s.streamUserIds[0]) : null), Z = (0, l.e7)([S.Z], () => L === y.L.HANGOUT ? S.Z.getIsPreviewLoading(_, s.channelId, s.streamUserIds[0]) : null), H = L === y.L.HANGOUT && s.streamUserIds.length > 0 && null == V && !Z, F = (0, l.e7)([f.Z], () => {
     let e = L === y.L.HANGOUT || L === y.L.GAMING ? s.channelId : L === y.L.EVENT ? s.event.channel_id : L === y.L.EMBEDDED_ACTIVITY ? s.embeddedActivities[0].channelId : null;
     return f.Z.getChannel(e)
   }), Y = (0, l.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(null == F ? void 0 : F.id)), {
@@ -468,7 +468,7 @@ function x(e) {
     onMouseLeave: () => P(!1),
     children: [(0, i.jsx)("div", {
       className: o()(w.image, {
-        [w.streamContainer]: x && !H && !(null == F ? void 0 : F.isGuildStageVoice())
+        [w.streamContainer]: k && !H && !(null == F ? void 0 : F.isGuildStageVoice())
       }),
       children: q
     }), (0, i.jsxs)("div", {
@@ -483,7 +483,7 @@ function x(e) {
         color: "text-secondary",
         className: w.subtitle,
         children: Q
-      }), !(er || es) && !(null == F ? void 0 : F.isGuildStageVoice()) && j.length > 0 && (0, i.jsx)(k, {
+      }), !(er || es) && !(null == F ? void 0 : F.isGuildStageVoice()) && j.length > 0 && (0, i.jsx)(x, {
         users: j,
         othersCount: W,
         extraPill: eo

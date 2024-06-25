@@ -69,8 +69,8 @@ let b = {},
   G = {},
   w = {},
   B = {},
-  k = 10 * I.Z.Seconds.MINUTE;
-class x extends(i = u.ZP.Store) {
+  x = 10 * I.Z.Seconds.MINUTE;
+class k extends(i = u.ZP.Store) {
   getRequest(e) {
     return B[e]
   }
@@ -87,7 +87,7 @@ class x extends(i = u.ZP.Store) {
   hasFetched(e) {
     if (!N.has(e)) return !1;
     let t = N.get(e);
-    return null != t && l()().diff(t, "seconds") < k
+    return null != t && l()().diff(t, "seconds") < x
   }
   getSelectedApplicationTab(e) {
     var t;
@@ -105,12 +105,12 @@ class x extends(i = u.ZP.Store) {
     return null != n ? (t = n.joinRequestId, L.get(t)) : null
   }
 }
-o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = x) ? Object.defineProperty(r, s, {
+o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = k) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new x(c.Z, {
+}) : r[s] = o, t.Z = new k(c.Z, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t

@@ -61,11 +61,11 @@ t.Z = e => {
     history: G,
     onSelectChild: w,
     onModalClose: B,
-    onSubmit: k,
-    multiSelect: x,
+    onSubmit: x,
+    multiSelect: k,
     reportId: V,
     textInput: Z
-  } = e, H = U(t, "checkbox"), F = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [q, X] = r.useState(!1), [Q, J] = r.useState(""), [$, ee] = r.useState(() => ({})), [et, en] = r.useState(() => ({})), [ei, er] = r.useState((0, a.VP)(j, W, H, Z, x)), es = function(e, t) {
+  } = e, H = U(t, "checkbox"), F = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [q, X] = r.useState(!1), [Q, J] = r.useState(""), [$, ee] = r.useState(() => ({})), [et, en] = r.useState(() => ({})), [ei, er] = r.useState((0, a.VP)(j, W, H, Z, k)), es = function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       i = {
         ...et
@@ -86,13 +86,13 @@ t.Z = e => {
     })
   }, [t, w, H, $, et, j, W]);
   r.useEffect(() => {
-    null != x && ee(x), null != Z && en(Z)
-  }, [x, Z]);
+    null != k && ee(k), null != Z && en(Z)
+  }, [k, Z]);
   let ea = e => {
       if (e === M.evJ.INVALID_FORM_BODY) J(P.Z.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
       else J(P.Z.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
     },
-    el = () => k({
+    el = () => x({
       nodeRef: t.id,
       destination: ["", e.successNodeId]
     }).then(() => {
@@ -104,11 +104,11 @@ t.Z = e => {
       z(!1)
     });
   return r.useEffect(() => {
-    t.is_auto_submit && !q && (X(!0), k({
+    t.is_auto_submit && !q && (X(!0), x({
       nodeRef: t.id,
       destination: ["", t.id]
     }))
-  }, [t.is_auto_submit, q, k, t.id]), (0, i.jsxs)("div", {
+  }, [t.is_auto_submit, q, x, t.id]), (0, i.jsxs)("div", {
     className: y.container,
     children: [(0, i.jsxs)(s.ModalHeader, {
       separator: !1,

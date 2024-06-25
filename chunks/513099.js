@@ -66,7 +66,7 @@ function C(e) {
     guildId: s,
     size: p,
     animateOnHover: C
-  }), k = (0, i.jsx)(g, {
+  }), x = (0, i.jsx)(g, {
     src: w,
     avatarDecoration: G,
     size: p,
@@ -81,7 +81,7 @@ function C(e) {
   return null == v ? (0, i.jsx)("div", {
     ...B,
     className: R.avatar,
-    children: k
+    children: x
   }) : (0, i.jsx)(l.Clickable, {
     ...B,
     className: o()(R.avatar, R.clickable),
@@ -91,6 +91,6 @@ function C(e) {
         analyticsLocations: D
       }), null == v || v()
     },
-    children: k
+    children: x
   })
 }

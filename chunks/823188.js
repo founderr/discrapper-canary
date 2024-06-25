@@ -53,8 +53,8 @@ var d = n(120356),
   G = n(650032),
   w = n(104494),
   B = n(639119),
-  k = n(230916),
-  x = n(248042),
+  x = n(230916),
+  k = n(248042),
   V = n(504865),
   Z = n(63802),
   H = n(318990),
@@ -183,7 +183,7 @@ function J(e) {
     defaultPriceString: n,
     subscriptionPlan: i,
     discountOffer: r
-  } = e, s = (0, k.A)(i);
+  } = e, s = (0, x.A)(i);
   return (0, c.jsx)(c.Fragment, {
     children: j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC.format({
       numMonths: null !== (t = r.discount.user_usage_limit) && void 0 !== t ? t : F.rt,
@@ -522,7 +522,7 @@ function ei(e) {
     isModal: u = !1,
     priceOptions: _,
     variant: d
-  } = e, I = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), T = (0, h.e7)([g.default], () => g.default.getCurrentUser()), S = (0, B.N)(), m = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id, O = (null == I ? void 0 : I.trialId) != null ? null == T ? void 0 : T.premiumType : null, R = (0, b.Nx)(), p = (0, w.Ng)(), v = (0, b.t7)(), D = null != m || null != O ? 0 : null != p || v ? 1 : null, M = (0, x.Vi)(), P = !l && R, y = (0, x.W1)(), U = (0, f.ap)((0, A.ZP)()), k = U ? 5 : 2, {
+  } = e, I = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), T = (0, h.e7)([g.default], () => g.default.getCurrentUser()), S = (0, B.N)(), m = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id, O = (null == I ? void 0 : I.trialId) != null ? null == T ? void 0 : T.premiumType : null, R = (0, b.Nx)(), p = (0, w.Ng)(), v = (0, b.t7)(), D = null != m || null != O ? 0 : null != p || v ? 1 : null, M = (0, k.Vi)(), P = !l && R, y = (0, k.W1)(), U = (0, f.ap)((0, A.ZP)()), x = U ? 5 : 2, {
     enabled: V
   } = G._.useExperiment({
     location: "Tier2Card"
@@ -542,7 +542,7 @@ function ei(e) {
           percent: p.discount.amount
         }),
         className: W.topRimPill,
-        colorOptions: k
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -550,7 +550,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: H,
         className: W.topRimPill,
-        colorOptions: k
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -558,7 +558,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: j.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: W.topRimPill,
-        colorOptions: k
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -566,7 +566,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
         className: W.topRimPill,
-        colorOptions: k
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]

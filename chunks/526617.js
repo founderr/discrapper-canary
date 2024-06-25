@@ -43,7 +43,7 @@ function B(e) {
   return 0 === e ? 16 : 32
 }
 
-function k(e) {
+function x(e) {
   let {
     categoryInfo: t,
     collapsed: n,
@@ -130,7 +130,7 @@ function k(e) {
   })
 }
 
-function x() {
+function k() {
   return (0, i.jsx)(_.Z, {
     message: b.Z.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY
   })
@@ -242,7 +242,7 @@ function Z(e) {
     buttonOverlay: Z
   }, "row-".concat(t["aria-rowindex"])), [eu, s, X, A, j, es, eo, Z]), ec = r.useCallback((e, t) => {
     let n = "".concat(e.key);
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(x, {
       categoryInfo: e.categoryInfo,
       toggleCollapsed: () => ea(n),
       collapsed: er.has(n),
@@ -305,7 +305,7 @@ function Z(e) {
       listPadding: w,
       itemNodeWidth: 150,
       gridNavigatorId: J,
-      renderEmptySearchState: x,
+      renderEmptySearchState: k,
       renderInspector: eh,
       gridNotice: L,
       renderHeader: F

@@ -145,7 +145,7 @@ function b() {
         guildId: n.getGuildId(),
         channelId: n.id,
         messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-      }), k(n.getGuildId(), n.id)
+      }), x(n.getGuildId(), n.id)
     }
   }
 }
@@ -164,7 +164,7 @@ function G() {
       isPreload: e,
       skipLocalFetch: t,
       logFailures: n
-    }) : n && M.log("Skipping fetch because the selected channel is not a text channel"), k(r.getGuildId(), r.id)) : n && M.log("Skipping fetch because channel is null")
+    }) : n && M.log("Skipping fetch because the selected channel is not a text channel"), x(r.getGuildId(), r.id)) : n && M.log("Skipping fetch because channel is null")
   } else n && M.log("Skipping fetch because there is no selected channel")
 }
 
@@ -180,7 +180,7 @@ function w(e) {
     channelId: n,
     messageId: i,
     jumpType: r
-  }), k(t, n)
+  }), x(t, n)
 }
 
 function B(e) {
@@ -194,7 +194,7 @@ function B(e) {
   })
 }
 
-function k(e, t) {
+function x(e, t) {
   let n = S.ZP.getCurrentSidebarChannelId(t);
   if (null != n) P({
     guildId: e,
@@ -203,12 +203,12 @@ function k(e, t) {
   })
 }
 
-function x() {
+function k() {
   let e = m.Z.getChannelId(),
     t = O.Z.getGuildId();
   if (null == t || null == e) return;
   let n = S.ZP.getSidebarState(e);
-  if ((null == n ? void 0 : n.type) !== T.tI.VIEW_CHANNEL) k(t, e)
+  if ((null == n ? void 0 : n.type) !== T.tI.VIEW_CHANNEL) x(t, e)
 }
 
 function V(e) {
@@ -220,7 +220,7 @@ function V(e) {
   i === C.e3s && (P({
     guildId: t,
     channelId: n
-  }), k(t, n))
+  }), x(t, n))
 }
 
 function Z(e) {
@@ -315,7 +315,7 @@ class z extends c.Z {
     a.Z.unsubscribe("CONNECTION_OPEN", b)
   }
   constructor(...e) {
-    super(...e), D(this, "fetchMessages", P), D(this, "loadSelectedChannelIfNecessary", G), D(this, "stores", new Map().set(S.ZP, x)), D(this, "actions", {
+    super(...e), D(this, "fetchMessages", P), D(this, "loadSelectedChannelIfNecessary", G), D(this, "stores", new Map().set(S.ZP, k)), D(this, "actions", {
       APP_STATE_UPDATE: K,
       OVERLAY_INITIALIZE: b,
       CHANNEL_SELECT: w,

@@ -42,8 +42,8 @@ var i = n(735250),
   G = n(624138),
   w = n(510601),
   B = n(59688),
-  k = n(456774),
-  x = n(718582),
+  x = n(456774),
+  k = n(718582),
   V = n(981631),
   Z = n(689938),
   H = n(907934),
@@ -179,8 +179,8 @@ function z(e) {
     G = W(c.ScreenArrowIcon, h, _),
     B = W(c.ActivitiesIcon, S, _),
     {
-      isMuted: k,
-      muteConfig: x
+      isMuted: x,
+      muteConfig: k
     } = (0, u.cj)([D.ZP], () => ({
       isMuted: D.ZP.isMuted(_),
       muteConfig: D.ZP.getMuteConfig(_)
@@ -188,8 +188,8 @@ function z(e) {
   return null != v && w.ZP.trackExposure({
     location: "Guild Tooltip"
   }), (0, i.jsxs)(i.Fragment, {
-    children: [U, y, G, N && v, B, k ? (0, i.jsx)(K, {
-      muteConfig: x,
+    children: [U, y, G, N && v, B, x ? (0, i.jsx)(K, {
+      muteConfig: k,
       className: o()(H.muteText, {
         [H.muteTextWithActivity]: null != y || null != G
       })
@@ -268,7 +268,7 @@ function Q(e) {
     children: o,
     includeActivity: a = !0,
     isDragging: l
-  } = e, _ = (0, B.o)("guilds_bar", !1), [d, E] = r.useState(!1), I = (0, x.V1)(t), {
+  } = e, _ = (0, B.o)("guilds_bar", !1), [d, E] = r.useState(!1), I = (0, k.V1)(t), {
     isUserLurking: T,
     isUnverifiedAccount: h
   } = (0, u.cj)([f.Z, v.Z], () => {
@@ -293,7 +293,7 @@ function Q(e) {
       position: "right",
       renderPopout: e => {
         var n;
-        return (0, i.jsx)(k.Z, {
+        return (0, i.jsx)(x.Z, {
           guild: t,
           closePopout: () => E(!1),
           nudge: null !== (n = e.nudge) && void 0 !== n ? n : 0

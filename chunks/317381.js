@@ -52,11 +52,11 @@ let O = {
 let w = N.Ez.DISCONNECTED,
   B = N.MI.RESIZABLE;
 
-function k(e) {
+function x(e) {
   return null != e ? e : "0"
 }
 
-function x(e) {
+function k(e) {
   var t, n, i;
   let {
     guildId: r,
@@ -101,7 +101,7 @@ function x(e) {
     channelId: s
   }));
   let P = (null !== (n = C.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== a),
-    y = k(r),
+    y = x(r),
     U = (null !== (i = g.get(y)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === a && e.channelId === s));
   f.length > 0 && (P.push(M), U.push(M)), C.set(s, P), g.set(y, U)
 }
@@ -113,7 +113,7 @@ function V(e) {
       embedded_activity: i,
       connections: r
     } = t;
-    x({
+    k({
       guildId: e.id,
       channelId: n,
       applicationId: i.application_id,
@@ -203,16 +203,16 @@ class Y extends(r = s.ZP.PersistedStore) {
   }
   getShelfActivities(e) {
     var t;
-    let n = k(e);
+    let n = x(e);
     return null !== (t = D.get(n)) && void 0 !== t ? t : []
   }
   getShelfFetchStatus(e) {
-    let t = k(e);
+    let t = x(e);
     return M.get(t)
   }
   shouldFetchShelf(e) {
     var t, n;
-    let i = k(e),
+    let i = x(e),
       r = null !== (t = M.get(i)) && void 0 !== t ? t : {
         isFetching: !1
       },
@@ -319,7 +319,7 @@ let j = new Y(o.Z, {
           embedded_activity: n,
           connections: i
         } = e;
-        x({
+        k({
           guildId: null,
           channelId: t,
           applicationId: n.application_id,
@@ -341,7 +341,7 @@ let j = new Y(o.Z, {
     let n = t.guild_id;
     if (null != n) {
       var i;
-      let e = k(n),
+      let e = x(n),
         r = (null !== (i = g.get(e)) && void 0 !== i ? i : []).filter(e => e.channelId !== t.id);
       g.set(e, r)
     }
@@ -386,7 +386,7 @@ let j = new Y(o.Z, {
       embeddedActivity: i,
       connections: r
     } = e;
-    x({
+    k({
       guildId: t,
       channelId: n,
       applicationId: i.application_id,
@@ -406,7 +406,7 @@ let j = new Y(o.Z, {
       location: r,
       participants: s
     } = e;
-    null != u.Z.getChannel(r.channel_id) && x({
+    null != u.Z.getChannel(r.channel_id) && k({
       guildId: r.guild_id,
       channelId: r.channel_id,
       location: r,
@@ -444,7 +444,7 @@ let j = new Y(o.Z, {
   EMBEDDED_ACTIVITY_FETCH_SHELF: function(e) {
     let {
       guildId: t
-    } = e, n = k(t), i = M.get(n);
+    } = e, n = x(t), i = M.get(n);
     M.set(n, {
       isFetching: !0,
       lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
@@ -454,7 +454,7 @@ let j = new Y(o.Z, {
     let {
       guildId: t,
       activities: n
-    } = e, i = k(t);
+    } = e, i = x(t);
     D.set(i, n);
     let r = Date.now();
     ! function(e) {
@@ -488,7 +488,7 @@ let j = new Y(o.Z, {
   EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function(e) {
     let {
       guildId: t
-    } = e, n = k(t), i = M.get(n);
+    } = e, n = x(t), i = M.get(n);
     M.set(n, {
       isFetching: !1,
       lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs

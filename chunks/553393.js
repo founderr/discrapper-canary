@@ -44,8 +44,8 @@ t.Z = function(e) {
     applicationStream: O,
     position: w,
     closePopout: B,
-    updatePosition: k
-  } = e, x = (0, a.e7)([N.Z], () => {
+    updatePosition: x
+  } = e, k = (0, a.e7)([N.Z], () => {
     var e;
     return null !== (e = N.Z.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
   }), V = (0, D.hf)({
@@ -64,14 +64,14 @@ t.Z = function(e) {
     let e = $.current,
       t = m.current;
     if (null == e || null == t) return;
-    let n = new MutationObserver(() => k());
+    let n = new MutationObserver(() => x());
     return n.observe(e, {
       childList: !0,
       subtree: !0
     }), () => {
       n.disconnect()
     }
-  }, [m, $, k]);
+  }, [m, $, x]);
   let ee = (0, s.useSpring)({
       from: {
         height: 0
@@ -98,7 +98,7 @@ t.Z = function(e) {
       J.dispatch(M.CkL.POPOUT_CLOSE)
     },
     ei = "top" === w ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
-  if (null == A || Z || H && !G(O, x)) return null;
+  if (null == A || Z || H && !G(O, k)) return null;
   let er = () => {
       (0, R._3)({
         questId: A.id,
@@ -128,12 +128,12 @@ t.Z = function(e) {
       e.stopPropagation(), er()
     },
     ea = () => {
-      if (G(O, x) && null != x) return (0, R._3)({
+      if (G(O, k) && null != k) return (0, R._3)({
         questId: A.id,
         questContent: g.jn.MEMBERS_LIST,
         questContentCTA: R.jZ.WATCH_STREAM,
         trackGuildAndChannelMetadata: !0
-      }), _.default.selectVoiceChannel(x.id), (0, c.iV)(O);
+      }), _.default.selectVoiceChannel(k.id), (0, c.iV)(O);
       es()
     },
     el = Y && !H ? {
@@ -146,7 +146,7 @@ t.Z = function(e) {
       ctaText: y.Z.Messages.QUESTS_CHECK_PROGRESS,
       handleClickCta: es,
       tileAssetType: "reward"
-    } : G(O, x) ? {
+    } : G(O, k) ? {
       headerText: y.Z.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: y.Z.Messages.QUESTS_JOIN_ME,
       handleClickCta: ea,

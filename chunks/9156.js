@@ -74,7 +74,7 @@ let R = {},
   w = {},
   B = {};
 
-function k(e, t) {
+function x(e, t) {
   var n;
   let i = R[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
@@ -87,7 +87,7 @@ function k(e, t) {
     };
   L.clearTimer(e), s().forEach(r, e => {
     D.clearTimer(e.channel_id)
-  }), x(e, a), R[e] = a, y[e] = q(R[e]);
+  }), k(e, a), R[e] = a, y[e] = q(R[e]);
   let l = s().filter(a.channel_overrides, e => {
     var t;
     return E.yE(null !== (t = e.flags) && void 0 !== t ? t : 0, m.ic.OPT_IN_ENABLED)
@@ -106,7 +106,7 @@ function k(e, t) {
     }(e), delete p[e]
 }
 
-function x(e, t) {
+function k(e, t) {
   !0 === t.muted && L.setTimer(e, t.mute_config, () => {
     V(e, {
       muted: !1
@@ -130,7 +130,7 @@ function x(e, t) {
 function V(e, t) {
   var n;
   let i = R[e];
-  k(e, {
+  x(e, {
     channel_overrides: null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
     ...t
   })
@@ -163,7 +163,7 @@ function F(e, t) {
   var n;
   let i = R[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {};
-  k(e, {
+  x(e, {
     channel_overrides: null == i ? t : {
       ...r,
       ...t
@@ -436,7 +436,7 @@ let $ = new J(a.Z, {
       userGuildSettings: t
     } = e;
     t.forEach(e => {
-      k(e.guild_id, {
+      x(e.guild_id, {
         channel_overrides: {},
         ...e
       })
@@ -480,8 +480,8 @@ let $ = new J(a.Z, {
     z(e.notificationSettings), L.reset(), D.reset(), !e.userGuildSettings.partial && (R = {}, y = {}, U = {});
     let t = new Set;
     for (let n in e.userGuildSettings.entries.forEach(e => {
-        !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
-      }), R) !t.has(n) && x(n, R[n])
+        !("channel_overrides" in e) && (e.channel_overrides = {}), x(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
+      }), R) !t.has(n) && k(n, R[n])
   },
   CACHE_LOADED: function(e) {
     null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (R = {}, y = {}, U = {}, e.userGuildSettings.forEach(e => {

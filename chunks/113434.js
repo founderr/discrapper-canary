@@ -31,7 +31,7 @@ n.d(t, {
     return G
   },
   kJ: function() {
-    return k
+    return x
   },
   t5: function() {
     return U
@@ -40,7 +40,7 @@ n.d(t, {
     return M
   },
   z6: function() {
-    return x
+    return k
   }
 }), n(47120), n(653041);
 var i, r, s, o, a = n(470079),
@@ -287,7 +287,7 @@ function B(e) {
   }
 }
 
-function k(e) {
+function x(e) {
   return {
     handleComplete: () => (0, I.Wf)(e),
     handleResetStatusClick: () => (0, I.eT)(e),
@@ -296,7 +296,7 @@ function k(e) {
   }
 }
 
-function x() {
+function k() {
   let {
     fetching: e,
     accounts: t

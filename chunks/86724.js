@@ -81,14 +81,14 @@ function v(e, t, n, c) {
   };
   let w = null,
     B = null,
-    k = null,
     x = null,
+    k = null,
     V = null;
   return e.onChange = () => {
     if (null != t) {
       let o = l.Z.getState(t.id),
         _ = a.Hf(t);
-      if (A.bN.richValue(e) !== w || !A.Ew.equals(e.selection, B) || o.activeCommand !== k || null == V || _.some((e, t) => V[t] !== e)) {
+      if (A.bN.richValue(e) !== w || !A.Ew.equals(e.selection, B) || o.activeCommand !== x || null == V || _.some((e, t) => V[t] !== e)) {
         let l = S.T.withMergedEntry(e, () => {
           var l;
           return function(e) {
@@ -309,15 +309,15 @@ function v(e, t, n, c) {
             channel: t,
             canUseCommands: n,
             canOnlyUseTextCommands: c,
-            commandChanged: (null === (l = o.activeCommand) || void 0 === l ? void 0 : l.id) !== (null == k ? void 0 : k.id),
-            previousOptionValues: x
+            commandChanged: (null === (l = o.activeCommand) || void 0 === l ? void 0 : l.id) !== (null == x ? void 0 : x.id),
+            previousOptionValues: k
           })
         });
         if (null != l) {
           let t = S.T.currentEntry(e);
-          null != t && (t.commandId = l.commandId), x = l.optionValues
-        } else x = null;
-        w = A.bN.richValue(e), B = e.selection, k = o.activeCommand, V = _
+          null != t && (t.commandId = l.commandId), k = l.optionValues
+        } else k = null;
+        w = A.bN.richValue(e), B = e.selection, x = o.activeCommand, V = _
       }
     }
     O()

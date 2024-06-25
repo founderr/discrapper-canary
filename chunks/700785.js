@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   BT: function() {
-    return x
+    return k
   },
   Hn: function() {
     return A
@@ -96,7 +96,7 @@ n.d(t, {
     return P
   },
   we: function() {
-    return k
+    return x
   },
   ym: function() {
     return v
@@ -247,7 +247,7 @@ function U(e, t) {
     r = {
       ...t.permissionOverwrites
     };
-  return null == i[n] && (i[n] = k(n)), null == r[n] && (r[n] = k(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
+  return null == i[n] && (i[n] = x(n)), null == r[n] && (r[n] = x(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
     let t = i[e],
       n = r[e];
     return !(null != n && s.fS(n.deny, t.deny) && s.fS(n.allow, t.allow)) && !0
@@ -275,7 +275,7 @@ function B(e, t) {
   return null == t.hoistRoleId ? null : h.Z.getRole(e.id, t.hoistRoleId)
 }
 
-function k(e) {
+function x(e) {
   return {
     id: e,
     type: o.BN.ROLE,
@@ -284,7 +284,7 @@ function k(e) {
   }
 }
 
-function x(e) {
+function k(e) {
   let {
     permission: t,
     user: n,

@@ -34,12 +34,12 @@ t.Z = r.forwardRef(function(e, t) {
   }, [v.guild_id]), U = r.useRef(), [b, G, w] = (0, m.Z)({
     ...e,
     guild: y
-  }, t, U), B = (null === (n = L.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, k = (0, I.DJ)(b.selectedIndex);
-  (0, d.KR)(P, b.isVisible, k), f.Z.trackExposure({
+  }, t, U), B = (null === (n = L.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, x = (0, I.DJ)(b.selectedIndex);
+  (0, d.KR)(P, b.isVisible, x), f.Z.trackExposure({
     location: "6e9811_1"
   });
   let {
-    usePopoutAutocomplete: x
+    usePopoutAutocomplete: k
   } = f.Z.useExperiment({
     location: "6e9811_2"
   }, {
@@ -48,7 +48,7 @@ t.Z = r.forwardRef(function(e, t) {
     editorHeight: D,
     type: L,
     state: b,
-    isInPopoutExperiment: x
+    isInPopoutExperiment: k
   }), Z = (0, l.e7)([c.ZP], () => {
     let e = c.ZP.getSelfEmbeddedActivityForChannel(v.id),
       t = c.ZP.getActivityPanelMode();

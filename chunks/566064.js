@@ -181,17 +181,17 @@ function _(e) {
             R(!1)
           }
         }, []),
-        k = i.useMemo(() => Math.max(...n), [n]),
-        x = i.useCallback(() => ({
+        x = i.useMemo(() => Math.max(...n), [n]),
+        k = i.useCallback(() => ({
           role: "grid",
           "aria-rowcount": n.length,
-          "aria-colcount": k,
+          "aria-colcount": x,
           tabIndex: O && h ? -1 : 0,
           "data-ref-id": t,
           onKeyDown: G,
           onFocus: w,
           onBlur: B
-        }), [n.length, k, O, h, t, G, w, B]),
+        }), [n.length, x, O, h, t, G, w, B]),
         V = i.useCallback((e, n) => {
           let i = {
             role: "gridcell",
@@ -209,10 +209,10 @@ function _(e) {
         }), []);
       return i.useMemo(() => ({
         dispatch: T,
-        getContainerProps: x,
+        getContainerProps: k,
         getItemProps: V,
         getRowProps: Z
-      }), [T, x, V, Z])
+      }), [T, k, V, Z])
     }({
       navId: t,
       columnCounts: R,

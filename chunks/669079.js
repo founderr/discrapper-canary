@@ -19,10 +19,10 @@ n.d(t, {
     return y
   },
   Nz: function() {
-    return x
+    return k
   },
   Q_: function() {
-    return k
+    return x
   },
   TO: function() {
     return H
@@ -105,7 +105,7 @@ function w(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
 let B = e => (null == e ? void 0 : e.type) === f.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === f.hBH.GIFT,
-  k = e => {
+  x = e => {
     let t;
     if (null == e) return [];
     let n = new Set;
@@ -114,7 +114,7 @@ let B = e => (null == e ? void 0 : e.type) === f.uaV.CUSTOM_GIFT && (null == e ?
     return Array.from(n)
   };
 
-function x() {
+function k() {
   let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     n = window.GLOBAL_ENV.GIFT_CODE_HOST;
   return null == n || (0, I.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)

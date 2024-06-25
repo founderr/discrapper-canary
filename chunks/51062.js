@@ -48,14 +48,14 @@ function N(e, t, n) {
   } = (0, s.cj)([a.Z], () => ({
     activeCommand: a.Z.getActiveCommand(C.id),
     activeCommandOption: a.Z.getActiveOption(C.id)
-  })), k = (0, T.Z)({
+  })), x = (0, T.Z)({
     navId: "channel-autocomplete",
     scrollerRef: n,
     state: L,
     onFocus: e => Z.setSelectedIndex(e)
-  }), x = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentWord(), V = {
+  }), k = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentWord(), V = {
     ...e,
-    navigator: k,
+    navigator: x,
     activeCommand: w,
     activeCommandOption: B,
     canMentionUsers: null !== (R = null === (A = v.users) || void 0 === A ? void 0 : A.allowMentioning) && void 0 !== R && R,
@@ -64,8 +64,8 @@ function N(e, t, n) {
     hidePersonalInformation: G,
     hideMentionDescription: v === l.I.RULES_INPUT,
     emojiIntention: v === l.I.RULES_INPUT ? f.Hz.COMMUNITY_CONTENT : f.Hz.CHAT,
-    currentWord: null !== (p = null == x ? void 0 : x.word) && void 0 !== p ? p : "",
-    currentWordIsAtStart: (null == x ? void 0 : x.isAtStart) === !0,
+    currentWord: null !== (p = null == k ? void 0 : k.word) && void 0 !== p ? p : "",
+    currentWordIsAtStart: (null == k ? void 0 : k.isAtStart) === !0,
     optionText: null != B ? (0, o.KF)({
       [B.name]: null !== (g = null === (m = e.editorRef.current) || void 0 === m ? void 0 : m.getCurrentCommandOptionValue()) && void 0 !== g ? g : []
     }, B.name) : ""
@@ -87,5 +87,5 @@ function N(e, t, n) {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [Z, null === (O = L.query) || void 0 === O ? void 0 : O.typeInfo]), [L, Z, k]
+  }, [Z, null === (O = L.query) || void 0 === O ? void 0 : O.typeInfo]), [L, Z, x]
 }

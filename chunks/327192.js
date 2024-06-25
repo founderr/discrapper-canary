@@ -39,8 +39,8 @@ var i = n(735250),
   G = n(205266),
   w = n(216153),
   B = n(981631),
-  k = n(856651),
-  x = n(921944),
+  x = n(856651),
+  k = n(921944),
   V = n(689938),
   Z = n(417276),
   H = n(331651);
@@ -112,7 +112,7 @@ function Y(e) {
     [g, C] = r.useState(I.visibility),
     [v, D] = r.useState(I.metadataVisibility),
     [M, y] = r.useState(I.showActivity),
-    [x, H] = r.useState(null),
+    [k, H] = r.useState(null),
     [Y, j] = r.useState(null),
     [W, K] = r.useState(!1),
     [z, q] = r.useState([]),
@@ -121,7 +121,7 @@ function Y(e) {
   r.useEffect(() => {
     p(I.friendSync), C(I.visibility), D(I.metadataVisibility), y(I.showActivity)
   }, [I]), r.useEffect(() => {
-    if (!1 !== I.verified) null != x && (C(x), E.Z.setVisibility(I.type, I.id, x), H(null)), null != Y && (D(Y), E.Z.setMetadataVisibility(I.type, I.id, Y), j(null))
+    if (!1 !== I.verified) null != k && (C(k), E.Z.setVisibility(I.type, I.id, k), H(null)), null != Y && (D(Y), E.Z.setMetadataVisibility(I.type, I.id, Y), j(null))
   }, [I]);
 
   function J() {
@@ -194,7 +194,7 @@ function Y(e) {
       var t;
       let n = f.Z.get(e.type),
         r = f.Z.get(X),
-        s = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[k.PC.TWITTER_VERIFIED],
+        s = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[x.PC.TWITTER_VERIFIED],
         o = null;
       return n.type === B.ABu.TWITTER && s && (o = (0, i.jsx)(c.Tooltip, {
         text: V.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
@@ -255,7 +255,7 @@ function Y(e) {
       var t;
       let n = null !== (t = e.metadata) && void 0 !== t ? t : {},
         r = null,
-        s = (0, A.FI)(n[k.PC.CREATED_AT], S);
+        s = (0, A.FI)(n[x.PC.CREATED_AT], S);
       switch (e.type) {
         case B.ABu.REDDIT:
           r = (0, O.oP)(n, Z.metadataItem);
@@ -393,7 +393,7 @@ function Y(e) {
 function j() {
   return r.useEffect(() => () => {
     (0, R.EW)(l.z.NEW_CRUNCHYROLL_CONNECTION, {
-      dismissAction: x.L.AUTO
+      dismissAction: k.L.AUTO
     })
   }, []), (0, i.jsxs)("div", {
     className: Z.connectContainer,

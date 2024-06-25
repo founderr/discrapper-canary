@@ -45,8 +45,8 @@ var i = n(735250),
   G = n(750858),
   w = n(981631),
   B = n(689938),
-  k = n(250050),
-  x = n(255963);
+  x = n(250050),
+  k = n(255963);
 
 function V(e) {
   let {
@@ -72,14 +72,14 @@ function V(e) {
       onMouseLeave: _,
       src: t,
       "aria-hidden": !0,
-      className: o()(E, k.avatar, {
-        [k.compact]: r,
-        [k.clickable]: null != s,
-        [k.communicationDisabledOpacity]: d
+      className: o()(E, x.avatar, {
+        [x.compact]: r,
+        [x.clickable]: null != s,
+        [x.communicationDisabledOpacity]: d
       }),
       alt: " "
     }), null == n || r ? null : (0, i.jsx)("img", {
-      className: k.avatarDecoration,
+      className: x.avatarDecoration,
       src: n,
       alt: " ",
       "aria-hidden": !0
@@ -115,7 +115,7 @@ function Z(e, t, n) {
       renderRemixTag: !0
     }), a && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("i", {
-        className: k.separator,
+        className: x.separator,
         children: ":"
       }), " "]
     })]
@@ -140,7 +140,7 @@ function H(e) {
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [!l && n, (0, i.jsxs)(u.H, {
-      className: o()(k.header, I),
+      className: o()(x.header, I),
       "aria-describedby": E,
       "aria-labelledby": d,
       children: [_ && l && (0, i.jsx)(U.Z, {
@@ -159,7 +159,7 @@ function H(e) {
         timestamp: t.timestamp,
         className: T
       }), null != S && S.length > 0 ? (0, i.jsx)("div", {
-        className: k.badgesContainer,
+        className: x.badgesContainer,
         children: S
       }) : null]
     })]
@@ -178,22 +178,22 @@ function Y(e) {
     return null === (e = m.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince
   });
   return (0, i.jsx)(u.Tooltip, {
-    tooltipClassName: k.nitroAuthorBadgeTootip,
+    tooltipClassName: x.nitroAuthorBadgeTootip,
     shouldShow: null != r,
     text: B.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: r
     }),
     onTooltipShow: () => (0, O.Z)(n.id),
     children: e => (0, i.jsx)(u.Clickable, {
-      className: k.nitroAuthorBadgeContainer,
+      className: x.nitroAuthorBadgeContainer,
       onClick: () => F(t),
       "aria-label": B.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
         date: r
       }),
       children: (0, i.jsx)("img", {
         alt: "",
-        className: k.nitroBadgeSvg,
-        src: x,
+        className: x.nitroBadgeSvg,
+        src: k,
         ...e
       })
     })
@@ -208,7 +208,7 @@ function j(e) {
     renderPopout: f,
     showTimestampOnHover: m,
     roleIcon: U,
-    subscribeToGroupId: x,
+    subscribeToGroupId: k,
     hideTimestamp: F,
     className: j,
     channel: W
@@ -238,8 +238,8 @@ function j(e) {
     }), U = null != T.messageReference && null != T.webhookId && T.hasFlag(w.iLy.IS_CROSSPOST), b = T.author, {
       id: G
     } = b, B = S ? 32 : 80, {
-      avatarSrc: k,
-      avatarDecorationSrc: x,
+      avatarSrc: x,
+      avatarDecorationSrc: k,
       eventHandlers: Z
     } = (0, R.Z)({
       user: b,
@@ -254,8 +254,8 @@ function j(e) {
         icon: T.application.icon,
         size: B,
         fallbackAvatar: !1
-      })) && void 0 !== t ? t : k : k
-    }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, B, k]);
+      })) && void 0 !== t ? t : x : x
+    }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, B, x]);
     return (r.useEffect(() => {
       if (null != f) return M.S.subscribeKeyed(w.LPv.ANIMATE_CHAT_AVATAR, "".concat(f, ":").concat(G), L), () => void M.S.unsubscribeKeyed(w.LPv.ANIMATE_CHAT_AVATAR, "".concat(f, ":").concat(G), L)
     }, [G, f]), S && !y) ? void 0 : null != d && null != C ? (0, i.jsx)(c.Gt, {
@@ -279,7 +279,7 @@ function j(e) {
         children: e => V({
           ...Z,
           avatarSrc: F,
-          avatarDecorationSrc: x,
+          avatarDecorationSrc: k,
           compact: S,
           onClick: m,
           onContextMenu: A,
@@ -294,7 +294,7 @@ function j(e) {
       children: V({
         ...Z,
         avatarSrc: F,
-        avatarDecorationSrc: x,
+        avatarDecorationSrc: k,
         compact: S,
         onClick: m,
         onContextMenu: A,
@@ -328,13 +328,13 @@ function j(e) {
       } = e;
       return (0, i.jsx)(L.Z, {
         ...U,
-        className: k.roleIcon,
+        className: x.roleIcon,
         onClick: t
       })
     }
   }, "role-icon-children") : (!s || $) && null != U ? (0, i.jsx)(L.Z, {
     ...U,
-    className: k.roleIcon
+    className: x.roleIcon
   }, "role-icon-children") : null, et = (0, b.x)({
     message: t,
     channel: W,
@@ -359,7 +359,7 @@ function j(e) {
   let el = {};
   el[G.a.SYSTEM_TAG] = et, el[G.a.BADGES] = en;
   let eu = Z(e, K, el),
-    e_ = (0, h.XX)(t, x),
+    e_ = (0, h.XX)(t, k),
     ec = (0, h.Dv)(t),
     ed = F ? "".concat(e_) : "".concat(e_, " ").concat(ec),
     eE = (null == n ? void 0 : n.state) === N.Y.LOADED ? (0, h.Gq)(t) : void 0;
@@ -374,17 +374,17 @@ function j(e) {
             size: "xxs",
             color: "currentColor",
             ...e,
-            className: s ? k.compactCommunicationDisabled : k.communicationDisabled
+            className: s ? x.compactCommunicationDisabled : x.communicationDisabled
           }), (0, i.jsx)(u.HiddenVisually, {
             children: B.Z.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
           })]
         })
       }), eu]
     }),
-    usernameSpanId: (0, h.XX)(t, x),
-    usernameClassName: o()(k.headerText, {
-      [k.hasRoleIcon]: null != ee,
-      [k.hasBadges]: null != et || ea.length > 0
+    usernameSpanId: (0, h.XX)(t, k),
+    usernameClassName: o()(x.headerText, {
+      [x.hasRoleIcon]: null != ee,
+      [x.hasBadges]: null != et || ea.length > 0
     }),
     compact: s,
     showTimestamp: !0 !== F,

@@ -41,7 +41,7 @@ t.Z = r.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: s
-  } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [k, x] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
+  } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [x, k] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, c.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -86,8 +86,8 @@ t.Z = r.forwardRef(function(e, t) {
   let Q = r.useCallback(e => e !== H.length - 1 || Y ? 16 : 0, [H.length, Y]),
     J = F.map(e => e.data.length);
   r.useEffect(() => {
-    null != B.current && k && null != G && B.current.scrollRowIntoView(G)
-  }, [k, G]), r.useLayoutEffect(() => {
+    null != B.current && x && null != G && B.current.scrollRowIntoView(G)
+  }, [x, G]), r.useLayoutEffect(() => {
     if (null != W) {
       var e;
       null === (e = B.current) || void 0 === e || e.scrollToSectionTop(0)
@@ -127,7 +127,7 @@ t.Z = r.forwardRef(function(e, t) {
       let t = Y ? 7 : 0,
         n = j.length + t,
         i = null == G ? 0 : G + e;
-      return i >= n ? i = n - 1 : i < 0 && (i = 0), w(i), x(!0), !0
+      return i >= n ? i = n - 1 : i < 0 && (i = 0), w(i), k(!0), !0
     }
   }), [j.length, F, Y, Z, ee, G]);
   let et = r.useCallback(e => {
@@ -185,7 +185,7 @@ t.Z = r.forwardRef(function(e, t) {
         section: l,
         onClick: () => ee(o, l, (0, R.tI)(s.section)),
         onHover: () => {
-          w(null), x(!1)
+          w(null), k(!1)
         }
       }, a)
     }, [n, F, ee, Z, G]),

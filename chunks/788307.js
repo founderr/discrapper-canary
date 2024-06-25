@@ -108,11 +108,11 @@ t.Z = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), B = (0, d.Sl)(p.Ilk.BRAND_345), k = null, x = w && null != b && A.Z.can(p.Plq.CONNECT, G);
-  x ? k = (0, i.jsx)(h.Z, {
+  }), B = (0, d.Sl)(p.Ilk.BRAND_345), x = null, k = w && null != b && A.Z.can(p.Plq.CONNECT, G);
+  k ? x = (0, i.jsx)(h.Z, {
     className: u,
     hangStatusActivity: b
-  }) : null != y && null != y.emoji && !D && (k = (0, i.jsx)(v, {
+  }) : null != y && null != y.emoji && !D && (x = (0, i.jsx)(v, {
     emoji: y.emoji,
     animate: E,
     hideTooltip: S,
@@ -120,11 +120,11 @@ t.Z = e => {
   }));
   let V = (0, a.e7)([m.Z], () => null != M ? m.Z.getStatus(M.id) : null),
     Z = null !== V && [p.Skl.OFFLINE, p.Skl.INVISIBLE].includes(V),
-    H = null === (t = (0, c.Z)(n, r, void 0, x)) || void 0 === t ? void 0 : t.activityText,
+    H = null === (t = (0, c.Z)(n, r, void 0, k)) || void 0 === t ? void 0 : t.activityText,
     F = null != H && H.length > 0;
-  return Z || null == k && !F ? null : (0, i.jsxs)("div", {
+  return Z || null == x && !F ? null : (0, i.jsxs)("div", {
     className: s,
-    children: [k, (0, i.jsx)(L, {
+    children: [x, (0, i.jsx)(L, {
       text: H,
       className: o
     }), P && (0, i.jsx)(l.QuestsIcon, {
@@ -133,7 +133,7 @@ t.Z = e => {
       height: C,
       width: C,
       color: B.hex
-    }), null != n && n.some(e => (0, _.Z)(e, x)) ? (0, i.jsx)(R.Z, {
+    }), null != n && n.some(e => (0, _.Z)(e, k)) ? (0, i.jsx)(R.Z, {
       width: 16,
       height: 16,
       className: g.icon

@@ -68,15 +68,15 @@ t.Z = e => {
     C(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), L(null == r ? void 0 : r.textInput), p(s), M(i), null == T || T("..")
   }, w = [], B = [];
   for (let e in N) {
-    var k, x;
+    var x, k;
     let t = N[e];
     if (t.id !== m && t.id !== O && t.id !== A) {
       if (t.key.endsWith("_SUBMIT")) {
         B.push(t);
         continue
       }
-      if (w.push(t), (null === (k = t.button) || void 0 === k ? void 0 : k.type) === "next") {
-        let e = null === (x = t.button) || void 0 === x ? void 0 : x.target,
+      if (w.push(t), (null === (x = t.button) || void 0 === x ? void 0 : x.type) === "next") {
+        let e = null === (k = t.button) || void 0 === k ? void 0 : k.target,
           n = w.indexOf(N[e]); - 1 !== n && (w.splice(n, 1), w.push(N[e]))
       }
     }

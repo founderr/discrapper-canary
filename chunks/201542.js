@@ -48,8 +48,8 @@ t.Z = r.memo(function(e) {
       onError: G
     } = e,
     w = r.useRef(null),
-    [B, k] = r.useState(0),
-    [x, V] = r.useState(M),
+    [B, x] = r.useState(0),
+    [k, V] = r.useState(M),
     [Z, H] = r.useState(!1),
     [F, Y] = r.useState(!1),
     [j, W] = r.useState(!1),
@@ -92,14 +92,14 @@ t.Z = r.memo(function(e) {
       W(!0)
     }, []),
     eu = r.useCallback(() => {
-      W(!1), B === x && ei()
-    }, [B, x, ei]),
+      W(!1), B === k && ei()
+    }, [B, k, ei]),
     e_ = r.useCallback(e => {
       let t = w.current;
-      if (null == x || null == t) return;
-      let n = e * x;
-      k(n), t.currentTime = n, z(!0), clearTimeout($.current), $.current = void 0
-    }, [x]);
+      if (null == k || null == t) return;
+      let n = e * k;
+      x(n), t.currentTime = n, z(!0), clearTimeout($.current), $.current = void 0
+    }, [k]);
   r.useEffect(() => {
     !K && F && z(!0)
   }, [F, K]);
@@ -115,7 +115,7 @@ t.Z = r.memo(function(e) {
         null == b || b(B, null != t ? (e - t) / 1e3 : 0), ec.current = null
       }
     }
-  }, [F]), t = w, n = F, s = k, r.useEffect(() => {
+  }, [F]), t = w, n = F, s = x, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -201,7 +201,7 @@ t.Z = r.memo(function(e) {
       className: N.waveform,
       waveform: D,
       currentTime: B,
-      duration: null != x ? x : 1,
+      duration: null != k ? k : 1,
       playing: F,
       played: K,
       onDrag: e_,
@@ -210,7 +210,7 @@ t.Z = r.memo(function(e) {
     }), (0, i.jsx)(m, {
       played: K,
       currentTime: B,
-      duration: x
+      duration: k
     }), (0, i.jsx)(d.Z, {
       className: N.volumeButton,
       iconClassName: N.volumeButtonIcon,

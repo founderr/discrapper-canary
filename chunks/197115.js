@@ -39,8 +39,8 @@ t.Z = function(e) {
     applicationId: G,
     giftMessage: w,
     overrideDisabledButtonText: B,
-    shinyButtonClassName: k,
-    onClickOverride: x,
+    shinyButtonClassName: x,
+    onClickOverride: k,
     showGradient: V = !1,
     ...Z
   } = e, H = (0, o.e7)([I.default], () => I.default.getCurrentUser()), F = (0, o.e7)([h.Z], () => h.Z.isFocused()), Y = (0, o.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()), {
@@ -139,7 +139,7 @@ t.Z = function(e) {
     className: p,
     innerClassName: m.premiumSubscribeButton,
     color: a.Button.Colors.BRAND_INVERTED,
-    onClick: null != x ? x : W,
+    onClick: null != k ? k : W,
     ...Z,
     children: [U && (0, i.jsx)(a.NitroWheelIcon, {
       size: "md",
@@ -155,7 +155,7 @@ t.Z = function(e) {
     className: p,
     innerClassName: m.giftButton,
     color: a.Button.Colors.PRIMARY,
-    onClick: null != x ? x : W,
+    onClick: null != k ? k : W,
     ...Z,
     children: [(0, i.jsx)(a.GiftIcon, {
       size: "md",
@@ -197,11 +197,11 @@ t.Z = function(e) {
     var t, n;
     return (0, i.jsxs)(a.ShinyButton, {
       disabled: Q,
-      onClick: null != x ? x : W,
+      onClick: null != k ? k : W,
       innerClassName: m.premiumSubscribeButton,
       color: r === f.Si.TIER_1 ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
       size: R,
-      className: k,
+      className: x,
       wrapperClassName: s()({
         [m.tier2Gradient]: V && r === f.Si.TIER_2,
         [m.tier1Gradient]: V && r === f.Si.TIER_1

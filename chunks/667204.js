@@ -42,17 +42,17 @@ var i = n(512722),
   G = n(981631),
   w = n(959517),
   B = n(689938);
-let k = (e, t) => {
+let x = (e, t) => {
     var n;
     return null == e ? void 0 : null === (n = e.find(e => e.displayName === t)) || void 0 === n ? void 0 : n.value
   },
-  x = function(e, t, n) {
+  k = function(e, t, n) {
     var i, r;
     let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e => e;
     if (e.name === (null === (i = n.autocomplete) || void 0 === i ? void 0 : i.name)) return n.autocomplete.query;
     if ("" === t) return null;
     let o = D.Z.getAutocompleteLastChoices(n.channel.id, e.name);
-    return null != o ? null !== (r = k(o, t)) && void 0 !== r ? r : s(t) : s(t)
+    return null != o ? null !== (r = x(o, t)) && void 0 !== r ? r : s(t) : s(t)
   },
   V = e => {
     let t = e.toLowerCase() === b.WO.toLowerCase(),
@@ -86,7 +86,7 @@ async function Z(e) {
         n = null;
       if (e.type === u.jw.STRING) {
         let i = null !== (l = null === (o = M.li(C, e.name)) || void 0 === o ? void 0 : o.trim()) && void 0 !== l ? l : "";
-        n = null != e.choices ? k(e.choices, i) : e.autocomplete ? x(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && B.push({
+        n = null != e.choices ? x(e.choices, i) : e.autocomplete ? k(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && B.push({
           type: e.type,
           name: e.name,
           value: n,
@@ -166,13 +166,13 @@ async function Z(e) {
         case u.jw.INTEGER:
           if ("text" === a.type) {
             let t = a.text.trim();
-            n = null != e.choices ? Number(k(e.choices, t)) : e.autocomplete ? x(e, t, v, Number) : Number(M.AS(m.default.locale, t))
+            n = null != e.choices ? Number(x(e.choices, t)) : e.autocomplete ? k(e, t, v, Number) : Number(M.AS(m.default.locale, t))
           }
           break;
         case u.jw.NUMBER:
           if ("text" === a.type) {
             let t = a.text.trim();
-            n = null != e.choices ? Number(k(e.choices, t)) : e.autocomplete ? x(e, t, v, Number) : Number(M.AS(m.default.locale, t))
+            n = null != e.choices ? Number(x(e.choices, t)) : e.autocomplete ? k(e, t, v, Number) : Number(M.AS(m.default.locale, t))
           }
           break;
         default:

@@ -111,9 +111,9 @@ function S(e) {
       n === p && null != m.onSlideReady && m.onSlideReady(n)
     }
   }), B = (0, E.Z)(C), {
-    width: k,
-    centered: x = !0
-  } = m, V = a.tq ? "100%" : G.width.to(e => Math.round(e)), Z = a.tq ? "100%" : G.height.to(e => Math.round(e)), H = a.tq ? {} : x ? {
+    width: x,
+    centered: k = !0
+  } = m, V = a.tq ? "100%" : G.width.to(e => Math.round(e)), Z = a.tq ? "100%" : G.height.to(e => Math.round(e)), H = a.tq ? {} : k ? {
     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
     top: "50%"
   } : {
@@ -141,7 +141,7 @@ function S(e) {
           display: N,
           flexDirection: "column",
           backfaceVisibility: "hidden",
-          width: a.tq ? "100%" : k,
+          width: a.tq ? "100%" : x,
           ...H,
           ...v.enabled ? o : {
             left: e.value.to(T("left", B)),

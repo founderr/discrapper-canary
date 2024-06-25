@@ -173,7 +173,7 @@ function G(e) {
     {
       items: _,
       handleViewMore: d
-    } = k(L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, R.U4.NO_BANNER, u, 8);
+    } = x(L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, R.U4.NO_BANNER, u, 8);
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(p.Z, {
       title: L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
@@ -257,7 +257,7 @@ function B(e) {
   } = e, o = n.section_title, a = n.type === l.i.BANNER_CARDS ? R.U4.LARGE_BANNER : R.U4.NO_BANNER, {
     items: u,
     handleViewMore: _
-  } = k(o, a, r.useMemo(() => {
+  } = x(o, a, r.useMemo(() => {
     let e = n.items.map(e => {
       let {
         application: t,
@@ -300,7 +300,7 @@ function B(e) {
   })
 }
 
-function k(e, t, n, i) {
+function x(e, t, n, i) {
   let {
     pushHistory: s
   } = (0, O.hH)();

@@ -37,10 +37,10 @@ t.Z = r.memo(function(e) {
     isLoading: P,
     onClose: y,
     profileViewedAnalytics: U
-  } = e, b = null == n ? void 0 : n.identityGuildId, G = (0, A.Cc)(null != b ? b : null), w = null == n ? void 0 : n.tag, B = (0, p.Z)("clan_guild_profile"), k = (0, R.Z)("base_clan_tag_chiplet"), x = (0, a.e7)([T.default], () => T.default.getId()), V = (0, a.e7)([h.ZP], () => null != b ? h.ZP.getMember(b, x) : null, [b, x]), Z = (0, a.e7)([d.Z], () => {
+  } = e, b = null == n ? void 0 : n.identityGuildId, G = (0, A.Cc)(null != b ? b : null), w = null == n ? void 0 : n.tag, B = (0, p.Z)("clan_guild_profile"), x = (0, R.Z)("base_clan_tag_chiplet"), k = (0, a.e7)([T.default], () => T.default.getId()), V = (0, a.e7)([h.ZP], () => null != b ? h.ZP.getMember(b, k) : null, [b, k]), Z = (0, a.e7)([d.Z], () => {
     var e;
     return (null == G ? void 0 : G.id) != null && (null === (e = d.Z.getRequest(G.id)) || void 0 === e ? void 0 : e.applicationStatus) === c.wB.SUBMITTED
-  }), H = null != G && G.memberCount >= C.Du, F = (0, _.wE)(s.z.CLAN_TAG_WAITLIST), Y = (0, a.e7)([S.default], () => S.default.getUser(x), [x]), j = (null == V ? void 0 : V.joinedAt) != null, W = (0, O.Z4)(b, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(b);
+  }), H = null != G && G.memberCount >= C.Du, F = (0, _.wE)(s.z.CLAN_TAG_WAITLIST), Y = (0, a.e7)([S.default], () => S.default.getUser(k), [k]), j = (null == V ? void 0 : V.joinedAt) != null, W = (0, O.Z4)(b, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(b);
   r.useEffect(() => {
     null != b && (0, N.u0)({
       guildId: b,
@@ -91,7 +91,7 @@ t.Z = r.memo(function(e) {
     }, [null == G ? void 0 : null === (t = G.branding) || void 0 === t ? void 0 : t.primaryColor]),
     et = r.useMemo(() => {
       switch (!0) {
-        case !k:
+        case !x:
           return null;
         case !j && !B && !F:
           return (0, i.jsx)(o.Button, {
@@ -140,7 +140,7 @@ t.Z = r.memo(function(e) {
         default:
           return null
       }
-    }, [ee, q, X, J, $, K, W, B, F, z, Q, k, j]),
+    }, [ee, q, X, J, $, K, W, B, F, z, Q, x, j]),
     en = r.useMemo(() => ({
       className: D.container,
       onClick: M

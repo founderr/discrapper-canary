@@ -39,8 +39,8 @@ var i = n(735250),
   G = n(228168),
   w = n(981631),
   B = n(474936),
-  k = n(689938),
-  x = n(300388);
+  x = n(689938),
+  k = n(300388);
 let V = {
     [G.y0.POPOUT]: 18,
     [G.y0.MODAL]: 24,
@@ -80,8 +80,8 @@ function H(e) {
       location_stack: T
     }))
   }, [T, s, t]), (0, i.jsx)(_.Tooltip, {
-    tooltipContentClassName: x.premiumIconTooltipContent,
-    text: u ? k.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : k.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
+    tooltipContentClassName: k.premiumIconTooltipContent,
+    text: u ? x.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : x.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
     children: e => (0, i.jsx)(_.Clickable, {
       ...e,
       onClick: u ? void 0 : () => {
@@ -97,8 +97,8 @@ function H(e) {
             } = n;
             return (0, i.jsx)(t, {
               analyticsLocations: e,
-              title: k.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-              description: k.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
+              title: x.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
+              description: x.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                 onAndMoreWithPremiumClick: () => {
                   r(), c.Z.open(w.oAB.PREMIUM, null, {
                     analyticsLocations: e
@@ -111,16 +111,16 @@ function H(e) {
           }
         }), null == a || a()
       },
-      className: o()(x.premiumIconWrapper, {
-        [x.visible]: s,
-        [x.clickable]: !u
+      className: o()(k.premiumIconWrapper, {
+        [k.visible]: s,
+        [k.clickable]: !u
       }),
       children: (0, i.jsx)(_.TextBadge, {
         color: "rgba(32, 34, 37, 0.8)",
         text: (0, i.jsx)(_.NitroWheelIcon, {
           size: "xs",
           color: "currentColor",
-          className: x.premiumIcon
+          className: k.premiumIcon
         })
       })
     })
@@ -138,7 +138,7 @@ function F(e) {
   return (0, i.jsx)(_.Clickable, {
     ...o,
     "aria-label": r,
-    className: t ? x.pencilContainerDark : x.pencilContainer,
+    className: t ? k.pencilContainerDark : k.pencilContainer,
     children: (0, i.jsx)(_.Tooltip, {
       text: r,
       children: e => (0, i.jsx)(l, {
@@ -147,7 +147,7 @@ function F(e) {
         size: "custom",
         width: a,
         height: a,
-        className: x.editIcon
+        className: k.editIcon
       })
     })
   })
@@ -193,7 +193,7 @@ function Y(e) {
     hasBanner: null != et,
     hasProfileEffect: W,
     children: (0, i.jsxs)("div", {
-      className: o()(x.banner, (0, U.Ae)({
+      className: o()(k.banner, (0, U.Ae)({
         profileType: C,
         user: {
           hasBanner: null != et,
@@ -201,7 +201,7 @@ function Y(e) {
           hasProfileEffect: W
         }
       }), {
-        [x.reducedMotion]: !ee
+        [k.reducedMotion]: !ee
       }),
       onMouseMove: () => J(!0),
       onMouseLeave: () => J(!1),
@@ -212,7 +212,7 @@ function Y(e) {
       children: [z ? null == K ? (0, i.jsx)(F, {
         darkenOnHover: W && V,
         profileType: C,
-        profileLabel: k.Z.Messages.EDIT_PROFILE,
+        profileLabel: x.Z.Messages.EDIT_PROFILE,
         icon: "pencil",
         onClick: () => {
           X({
@@ -234,7 +234,7 @@ function Y(e) {
         },
         children: e => (0, i.jsx)(F, {
           darkenOnHover: W && V,
-          profileLabel: k.Z.Messages.EDIT_PROFILE,
+          profileLabel: x.Z.Messages.EDIT_PROFILE,
           icon: "pencil",
           ...e,
           profileType: C
@@ -249,19 +249,19 @@ function Y(e) {
         }
       }) : null, ed ? C !== G.y0.MODAL ? null : (0, i.jsx)(_.Clickable, {
         onClick: E,
-        "aria-label": k.Z.Messages.BACK,
-        className: x.pencilContainer,
+        "aria-label": x.Z.Messages.BACK,
+        className: k.pencilContainer,
         children: (0, i.jsx)(_.Tooltip, {
-          text: k.Z.Messages.BACK,
+          text: x.Z.Messages.BACK,
           children: e => (0, i.jsx)(_.CloseSmallIcon, {
             size: "md",
             ...e,
-            className: x.closeIcon,
+            className: k.closeIcon,
             color: "white"
           })
         })
       }) : null, !ee && (0, v.F8)(et) && (0, i.jsx)(g.Z, {
-        className: x.gifTag
+        className: k.gifTag
       })]
     })
   })

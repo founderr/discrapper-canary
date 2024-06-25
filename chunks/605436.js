@@ -4,7 +4,7 @@ n.d(t, {
     return Y
   },
   $e: function() {
-    return x
+    return k
   },
   GJ: function() {
     return f
@@ -37,7 +37,7 @@ n.d(t, {
     return Z
   },
   _A: function() {
-    return k
+    return x
   },
   aq: function() {
     return m
@@ -242,7 +242,7 @@ function B(e) {
   }
 }
 
-function k(e, t, n) {
+function x(e, t, n) {
   let r = e.permissionOverwrites[e.guild_id];
   null == r && (r = d.we(e.guild_id));
   let s = {
@@ -251,8 +251,8 @@ function k(e, t, n) {
   return s.deny = i.Od(s.deny, t), s.allow = i.Od(s.allow, t), !n && (s.deny = i.IH(s.deny, t)), s
 }
 
-function x(e, t, n) {
-  let i = k(e, t, n);
+function k(e, t, n) {
+  let i = x(e, t, n);
   (0, s.kY)(e, i.id, i.allow, i.deny)
 }
 

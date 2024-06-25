@@ -118,9 +118,9 @@ function B(e) {
   return !!(null != t && S.Z.isActive(e.guildId, t.parent_id, e.id)) && G(t.guild_id, t.parent_id, t.id)
 }
 
-function k(e) {
+function x(e) {
   let t = d.Z.getChannel(e.channelId);
-  if (null == t) x();
+  if (null == t) k();
   else {
     let {
       guild_id: e,
@@ -154,7 +154,7 @@ function k(e) {
   }
 }
 
-function x() {
+function k() {
   for (let e in O = {}, g = {}, m)
     for (let t in m[e])
       for (let n in m[e][t]) {
@@ -376,22 +376,22 @@ o = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.definePro
   },
   THREAD_MEMBER_UPDATE: B,
   THREAD_MEMBERS_UPDATE: B,
-  LOAD_MESSAGES_SUCCESS: k,
-  MESSAGE_CREATE: k,
-  MESSAGE_DELETE: k,
-  MESSAGE_DELETE_BULK: k,
-  MESSAGE_ACK: k,
-  CHANNEL_ACK: k,
-  CHANNEL_LOCAL_ACK: k,
+  LOAD_MESSAGES_SUCCESS: x,
+  MESSAGE_CREATE: x,
+  MESSAGE_DELETE: x,
+  MESSAGE_DELETE_BULK: x,
+  MESSAGE_ACK: x,
+  CHANNEL_ACK: x,
+  CHANNEL_LOCAL_ACK: x,
   CHANNEL_SELECT: function(e) {
-    k(e), V()
+    x(e), V()
   },
   PASSIVE_UPDATE_V2: function(e) {
     if (e.channels.length > 0) return M(e.guildId)
   },
-  WINDOW_FOCUS: x,
-  UPDATE_CHANNEL_DIMENSIONS: x,
-  DRAWER_OPEN: x,
-  DRAWER_CLOSE: x,
-  BULK_ACK: x
+  WINDOW_FOCUS: k,
+  UPDATE_CHANNEL_DIMENSIONS: k,
+  DRAWER_OPEN: k,
+  DRAWER_CLOSE: k,
+  BULK_ACK: k
 })

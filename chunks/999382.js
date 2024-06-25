@@ -24,8 +24,8 @@ var c, d, E, I, T = n(392711),
   G = n(135899);
 let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "clan"],
   B = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-  k = !1,
-  x = U.QZA.CLOSED,
+  x = !1,
+  k = U.QZA.CLOSED,
   V = {},
   Z = !1,
   H = null,
@@ -69,7 +69,7 @@ function ei(e) {
     location: u
   } = e, c = L.Z.getGuild(n);
   if (null == c) return er();
-  o = a = c, x = U.QZA.OPEN, V = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), j = a.mfaLevel, X = q, _ = null, W = u;
+  o = a = c, k = U.QZA.OPEN, V = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), j = a.mfaLevel, X = q, _ = null, W = u;
   es({
     section: null !== (t = null != r ? r : i) && void 0 !== t ? t : U.pNK.OVERVIEW,
     subsection: null != s ? s : null
@@ -77,7 +77,7 @@ function ei(e) {
 }
 
 function er() {
-  k = !1, x = U.QZA.CLOSED, o = a = null, Z = !1, H = null, F = null, Y = 0, Q = null, ee = null, et = null, i = null, r = null, s = null, j = U.BpS.NONE, u = void 0
+  x = !1, k = U.QZA.CLOSED, o = a = null, Z = !1, H = null, F = null, Y = 0, Q = null, ee = null, et = null, i = null, r = null, s = null, j = U.BpS.NONE, u = void 0
 }
 
 function es(e) {
@@ -152,7 +152,7 @@ function eo(e) {
 }
 
 function ea(e) {
-  if (null == a || x !== U.QZA.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== a.id) return !1;
+  if (null == a || k !== U.QZA.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== a.id) return !1;
   (0, y.i)(a.id)
 }
 class el extends(c = N.ZP.Store) {
@@ -166,7 +166,7 @@ class el extends(c = N.ZP.Store) {
     return !h().isEqual(a, o) || !h().isEqual(X, q)
   }
   isOpen() {
-    return k
+    return x
   }
   getSavedRouteState() {
     return u
@@ -187,7 +187,7 @@ class el extends(c = N.ZP.Store) {
     return a
   }
   isSubmitting() {
-    return x === U.QZA.SUBMITTING
+    return k === U.QZA.SUBMITTING
   }
   isGuildMetadataLoaded() {
     return z
@@ -238,7 +238,7 @@ I = "GuildSettingsStore", (E = "displayName") in(d = el) ? Object.defineProperty
 }) : d[E] = I, t.Z = new el(O.Z, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_INIT: ei,
   GUILD_SETTINGS_OPEN: function(e) {
-    k = !0, ei(e)
+    x = !0, ei(e)
   },
   GUILD_SETTINGS_CLOSE: er,
   GUILD_SETTINGS_UPDATE: function(e) {
@@ -267,14 +267,14 @@ I = "GuildSettingsStore", (E = "displayName") in(d = el) ? Object.defineProperty
     return u = t, !1
   },
   GUILD_SETTINGS_SUBMIT: function() {
-    x = U.QZA.SUBMITTING, V = {}
+    k = U.QZA.SUBMITTING, V = {}
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function() {
-    x = U.QZA.OPEN
+    k = U.QZA.OPEN
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function(e) {
     var t;
-    x = U.QZA.OPEN, i = null != i ? i : U.pNK.OVERVIEW, r = null, V = null !== (t = e.errors) && void 0 !== t ? t : {}
+    k = U.QZA.OPEN, i = null != i ? i : U.pNK.OVERVIEW, r = null, V = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   GUILD_SETTINGS_SET_SECTION: es,
   GUILD_SETTINGS_SET_SEARCH_QUERY: function(e) {

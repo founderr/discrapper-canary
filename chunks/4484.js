@@ -39,8 +39,8 @@ t.Z = r.forwardRef(function(e, t) {
     submitting: G,
     placeholder: w,
     required: B,
-    textAreaPaddingClassName: k,
-    onChange: x,
+    textAreaPaddingClassName: x,
+    onChange: k,
     onPaste: V,
     onResize: Z,
     onFocus: H,
@@ -178,10 +178,10 @@ t.Z = r.forwardRef(function(e, t) {
   } = (0, R.Z)(em, eS, V), eL = r.useCallback(e => {
     null == q || q()
   }, [q]), eD = r.useCallback(e => {
-    e !== eI.current ? eh.current && (null == x || x(null, (0, h.sk)(e, {
+    e !== eI.current ? eh.current && (null == k || k(null, (0, h.sk)(e, {
       mode: "raw"
     }), e)) : eh.current && q()
-  }, [q, x]);
+  }, [q, k]);
   r.useLayoutEffect(() => {
     eT.current && (eI.current = n, ef(em, "parent", {
       value: n
@@ -209,7 +209,7 @@ t.Z = r.forwardRef(function(e, t) {
         editor: em,
         channelId: P.id,
         guildId: P.guild_id,
-        className: o()(M.slateTextArea, k),
+        className: o()(M.slateTextArea, x),
         placeholder: w,
         readOnly: eS,
         spellCheck: J,

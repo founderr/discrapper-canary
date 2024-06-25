@@ -34,8 +34,8 @@ var i, r = n(392711),
   G = n(396352),
   w = n(347374),
   B = n(185923),
-  k = n(981631),
-  x = n(149203),
+  x = n(981631),
+  k = n(149203),
   V = n(526761);
 
 function Z(e, t, n) {
@@ -46,7 +46,7 @@ function Z(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let H = [x.UX.TOP_GUILD_EMOJI.toString(), x.UX.FAVORITES.toString(), x.UX.RECENT.toString(), x.UX.CUSTOM.toString()].concat(U.ZP.getCategories()),
+let H = [k.UX.TOP_GUILD_EMOJI.toString(), k.UX.FAVORITES.toString(), k.UX.RECENT.toString(), k.UX.CUSTOM.toString()].concat(U.ZP.getCategories()),
   F = {
     pendingUsages: []
   };
@@ -257,7 +257,7 @@ class en {
       };
     U.ZP.forEach(n);
     let r = e => {
-      let t = q[null == e ? k.kod : e];
+      let t = q[null == e ? x.kod : e];
       null != t && (s().each(t.usableEmojis, n), s().each(t.emoticons, i))
     };
     for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => P.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
@@ -290,7 +290,7 @@ let ei = new c.Z({
     return null !== (t = U.ZP.getByName(e)) && void 0 !== t ? t : $(e)
   },
   afterCompute: () => {
-    en.resetFrequentlyUsed(), z = H.slice(0), !s().some(q, e => e.usableEmojis.length > 0) && z.splice(H.indexOf(x.UX.CUSTOM), 1)
+    en.resetFrequentlyUsed(), z = H.slice(0), !s().some(q, e => e.usableEmojis.length > 0) && z.splice(H.indexOf(k.UX.CUSTOM), 1)
   },
   numFrequentlyItems: 42
 });

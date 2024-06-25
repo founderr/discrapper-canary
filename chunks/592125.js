@@ -35,8 +35,8 @@ let C = new S.Z("ChannelStore"),
   G = {},
   w = {},
   B = new Set,
-  k = {},
-  x = 0,
+  x = {},
+  k = 0,
   V = {},
   Z = 0,
   H = 0;
@@ -54,16 +54,16 @@ class F {
     if (0 === t.length) return null;
     let n = d.Z.database();
     if (null == n || !t.some(e => !B.has(e))) return null;
-    let i = x;
+    let i = k;
     return (0, E.gs)("loadChannels", async () => {
       let e = t.map(e => {
           if (B.has(e)) return null;
-          if (null != k[e]) return C.fileOnly("Skipping loading ".concat(e, " because a load is pending")), null;
+          if (null != x[e]) return C.fileOnly("Skipping loading ".concat(e, " because a load is pending")), null;
           let t = I.Z.getAsync(n, e).then(t => (C.fileOnly("Lazy loaded channels for ".concat(e, " #:").concat(t.length)), {
             guildId: e,
             channels: t
           }));
-          return k[e] = t, {
+          return x[e] = t, {
             guildId: e,
             promise: t
           }
@@ -71,14 +71,14 @@ class F {
         r = e.map(e => e.promise);
       try {
         let t = await Promise.all(r);
-        if (x !== i) return C.fileOnly("lastResetTime has changed, skipping loads for " + e.map(e => e.guildId)), null;
+        if (k !== i) return C.fileOnly("lastResetTime has changed, skipping loads for " + e.map(e => e.guildId)), null;
         let n = t.filter(e => !B.has(e.guildId));
         await c.Z.dispatch({
           type: "LOAD_CHANNELS",
           channels: n
         })
       } catch (t) {
-        for (let n of (C.error("Failed to load channels from disk for " + e.map(e => e.guildId), t), e)) delete k[n.guildId];
+        for (let n of (C.error("Failed to load channels from disk for " + e.map(e => e.guildId), t), e)) delete x[n.guildId];
         throw t
       }
       return null
@@ -315,7 +315,7 @@ class el extends(i = _.ZP.Store) {
   getDebugInfo() {
     return {
       loadedGuildIds: Array.from(B).sort(m.default.compare),
-      pendingGuildLoads: Object.keys(k).sort(m.default.compare),
+      pendingGuildLoads: Object.keys(x).sort(m.default.compare),
       guildSizes: Object.keys(D).sort(m.default.compare).map(e => "".concat(e, ": ").concat(eu(e)))
     }
   }
@@ -389,7 +389,7 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
   },
   CONNECTION_OPEN: function(e) {
     let t = D;
-    for (let n of (U = {}, L = {}, D = {}, y = {}, G = {}, V = {}, k = {}, x = Date.now(), P = e.initialPrivateChannels, e.initialPrivateChannels.forEach(X), e.guilds)) "partial" === n.dataMode && (l().forEach(t[n.id], J), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eu(n.id)))), $(n);
+    for (let n of (U = {}, L = {}, D = {}, y = {}, G = {}, V = {}, x = {}, k = Date.now(), P = e.initialPrivateChannels, e.initialPrivateChannels.forEach(X), e.guilds)) "partial" === n.dataMode && (l().forEach(t[n.id], J), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eu(n.id)))), $(n);
     ea()
   },
   GUILD_CREATE: function(e) {
@@ -412,7 +412,7 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
   LOAD_MESSAGES_SUCCESS: er,
   LOAD_THREADS_SUCCESS: et,
   LOGOUT: function() {
-    C.fileOnly("initializeClear()"), U = {}, L = {}, D = {}, G = {}, M = {}, V = {}, y = {}, B = new Set, k = {}, x = Date.now()
+    C.fileOnly("initializeClear()"), U = {}, L = {}, D = {}, G = {}, M = {}, V = {}, y = {}, B = new Set, x = {}, k = Date.now()
   },
   OVERLAY_INITIALIZE: function(e) {
     for (let t of (e.guilds.length, e.channels)) q((0, h.d7)((0, N._H)(t)))

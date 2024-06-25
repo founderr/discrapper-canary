@@ -60,10 +60,10 @@ function C(e) {
     w = o.useContext(h.Z),
     B = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : w,
     {
-      analyticsLocations: k
+      analyticsLocations: x
     } = (0, I.ZP)(E.Z.USERNAME),
     {
-      nick: x,
+      nick: k,
       colorString: V,
       colorRoleName: Z
     } = i,
@@ -83,7 +83,7 @@ function C(e) {
       onClick: M,
       onContextMenu: P,
       children: (0, s.jsx)(s.Fragment, {
-        children: (v ? "@" : "") + x
+        children: (v ? "@" : "") + k
       })
     },
     K = o.useMemo(() => C ? (0, s.jsx)(T.ZP, {
@@ -133,7 +133,7 @@ function C(e) {
   let z = null != G ? G[0] : null,
     q = null != G ? G[1] : null;
   return (0, s.jsxs)(I.Gt, {
-    value: k,
+    value: x,
     children: [null != z && C ? (0, s.jsxs)(s.Fragment, {
       children: [" ", z, " "]
     }) : null, "dot" === F ? (0, s.jsx)(c.RoleDot, {

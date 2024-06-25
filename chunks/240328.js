@@ -90,9 +90,9 @@ t.ZP = e => {
   } = (0, E.ZP)(d.Z.COLLECTIBLES_USER_POPOUT_UPSELL), G = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
     ref: w,
     height: B
-  } = (0, _.Z)(), k = r.useMemo(() => ({
+  } = (0, _.Z)(), x = r.useMemo(() => ({
     top: "-".concat((null != B ? B : L) + 6, "px")
-  }), [B]), x = (0, l.e7)([A.default], () => A.default.getCurrentUser()), V = m.ZP.canUseCollectibles(x), {
+  }), [B]), k = (0, l.e7)([A.default], () => A.default.getCurrentUser()), V = m.ZP.canUseCollectibles(k), {
     setUpsellSource: Z,
     reset: H
   } = (0, O.k)();
@@ -134,7 +134,7 @@ t.ZP = e => {
     openShop: D
   }))).otherwise(() => null);
   return (0, i.jsx)("div", {
-    style: k,
+    style: x,
     className: o()(g.containerWrapper, {
       [g.animation]: !G,
       [g.inSidebar]: C

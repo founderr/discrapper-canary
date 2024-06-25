@@ -454,11 +454,11 @@ function B(e) {
   p.verbose("MESSAGE_ACKED", e), D.desktopMessageEvent("ack")
 }
 
-function k(e) {
+function x(e) {
   e.message.state === m.yb.SENDING && D.desktopMessageEvent("created")
 }
 
-function x(e) {
+function k(e) {
   null != (0, N.Z)() && (p.verbose("AUDIO_TOGGLE_SELF_MUTE", e), D.handleMuteToggled())
 }
 
@@ -548,10 +548,10 @@ class Y extends u.Z {
       RUNNING_GAMES_CHANGE: M,
       SOUNDBOARD_SET_OVERLAY_ENABLED: G,
       MESSAGE_ACKED: B,
-      MESSAGE_CREATE: k,
+      MESSAGE_CREATE: x,
       WINDOW_FOCUS: V,
       RTC_CONNECTION_STATE: H.handleRTCConnectionState,
-      AUDIO_TOGGLE_SELF_MUTE: x,
+      AUDIO_TOGGLE_SELF_MUTE: k,
       OVERLAY_SUCCESSFULLY_SHOWN: Z
     })
   }

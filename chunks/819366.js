@@ -80,22 +80,22 @@ function v(e) {
         guildId: U
       })
     })
-  }, G = p.ZP.useName(P), w = (0, l.e7)([f.Z, N.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), B = A.Z.getGuild(U), k = (0, E.Ib)(B, y) && r === g.fL ? g.jM : null;
+  }, G = p.ZP.useName(P), w = (0, l.e7)([f.Z, N.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), B = A.Z.getGuild(U), x = (0, E.Ib)(B, y) && r === g.fL ? g.jM : null;
   if (null == P) return (0, i.jsx)(C, {
     userId: I,
     className: t,
     children: v
   });
-  let x = e => (0, i.jsx)(T.Z, {
+  let k = e => (0, i.jsx)(T.Z, {
     className: t,
     onContextMenu: b,
-    color: k,
+    color: x,
     ...e,
     children: "@".concat(null != w ? w : G)
   });
   return L ? (0, i.jsx)(d.Gt, {
     value: M,
-    children: x()
+    children: k()
   }) : (0, i.jsx)(d.Gt, {
     value: M,
     children: (0, i.jsx)(u.Popout, {
@@ -111,7 +111,7 @@ function v(e) {
         ...e
       })),
       position: a.tq ? "top" : "right",
-      children: e => x(e)
+      children: e => k(e)
     })
   })
 }

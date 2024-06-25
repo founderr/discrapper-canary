@@ -13,7 +13,7 @@ n.d(t, {
     return y
   },
   HR: function() {
-    return k
+    return x
   },
   Hr: function() {
     return p
@@ -422,7 +422,7 @@ function B() {
   })
 }
 
-function k(e) {
+function x(e) {
   let {
     guildId: t,
     channelId: n

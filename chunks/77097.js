@@ -46,9 +46,9 @@ function g(e) {
     } = (0, T.KZ)(),
     G = (0, c.Z)(L, C, v),
     [w, B] = r.useState(new Set),
-    k = (0, a.e7)([h.Z], () => h.Z.getUserProfile(C)),
-    x = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
-    V = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
+    x = (0, a.e7)([h.Z], () => h.Z.getUserProfile(C)),
+    k = null !== (t = null == x ? void 0 : x.connectedAccounts) && void 0 !== t ? t : [],
+    V = null !== (n = null == x ? void 0 : x.applicationRoleConnections) && void 0 !== n ? n : [],
     Z = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation),
     H = (0, a.e7)([d.default], () => d.default.locale);
   if (r.useEffect(() => {
@@ -63,7 +63,7 @@ function g(e) {
       })
     }, [null == L ? void 0 : L.id, null == G ? void 0 : G.id]), Z || null == G) return null;
   let F = Array.from(w).map(e => {
-    let t = x.find(t => t.type === e);
+    let t = k.find(t => t.type === e);
     return null == t ? null : (0, i.jsx)(S.E3, {
       connectedAccount: t,
       theme: D,

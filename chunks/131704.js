@@ -13,7 +13,7 @@ n.d(t, {
     return eT
   },
   Ec: function() {
-    return x
+    return k
   },
   Em: function() {
     return F
@@ -106,7 +106,7 @@ n.d(t, {
     return V
   },
   vc: function() {
-    return k
+    return x
   },
   vd: function() {
     return w
@@ -193,14 +193,14 @@ function w(e) {
 }
 let B = new Set([T.d4z.GUILD_TEXT, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD, T.d4z.GUILD_DIRECTORY, T.d4z.GUILD_FORUM, T.d4z.GUILD_MEDIA, T.d4z.DM, T.d4z.GROUP_DM]);
 
-function k(e) {
+function x(e) {
   return B.has(e)
 }
-let x = new Set([T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD]),
+let k = new Set([T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD]),
   V = new Set([T.d4z.GUILD_TEXT, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.GUILD_FORUM, T.d4z.GUILD_MEDIA]);
 
 function Z(e) {
-  return x.has(e)
+  return k.has(e)
 }
 let H = new Set([T.d4z.DM, T.d4z.GROUP_DM, T.d4z.GUILD_TEXT, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD, T.d4z.GUILD_FORUM, T.d4z.GUILD_MEDIA, T.d4z.GUILD_DIRECTORY, T.d4z.GUILD_VOICE, T.d4z.GUILD_STAGE_VOICE]);
 
@@ -363,7 +363,7 @@ class ed extends eu {
   }
   isArchivedLockedThread() {
     var e, t;
-    return x.has(this.type) && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0 && (null === (t = this.threadMetadata) || void 0 === t ? void 0 : t.locked) === !0
+    return k.has(this.type) && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0 && (null === (t = this.threadMetadata) || void 0 === t ? void 0 : t.locked) === !0
   }
   isForumPost() {
     return this.type === T.d4z.PUBLIC_THREAD && null != this.parentChannelThreadType && T.TPd.GUILD_THREADS_ONLY.has(this.parentChannelThreadType)

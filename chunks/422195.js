@@ -93,16 +93,16 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         G = null != b && U.type === N.Ih.GUILD && b.type !== N.Ih.GUILD,
         w = U.type === N.Ih.PACK,
         B = "",
-        k = null;
+        x = null;
       if (U.type === N.Ih.GUILD || U.type === N.Ih.EMPTY_GUILD_UPSELL) {
         let e = I.Z.getGuild(U.id);
-        null != e && (d = e.id, B = e.name, k = (0, i.jsx)(_.Z, {
+        null != e && (d = e.id, B = e.name, x = (0, i.jsx)(_.Z, {
           guild: e,
           isSelected: y
         }))
       } else if (w) {
         let e = f.Z.getStickerPack(U.id);
-        null != e && (B = e.name, k = (0, i.jsx)(m.ZP, {
+        null != e && (B = e.name, x = (0, i.jsx)(m.ZP, {
           disableAnimation: !y || h,
           size: v,
           sticker: (0, A.Zt)(e)
@@ -132,7 +132,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                   guild_id: d
                 }), a()
               },
-              children: k
+              children: x
             })
           })
         }), G ? (0, i.jsx)("hr", {

@@ -81,8 +81,8 @@ let y = _.Z.RULES,
   G = /^<@&(\d+)>/,
   w = /^<#(\d+)>/,
   B = /^<a?:(\w+):(\d+)>/,
-  k = /(@everyone|@here|@Clyde)\b/,
-  x = {
+  x = /(@everyone|@here|@Clyde)\b/,
+  k = {
     link: M(o().defaultRules.link),
     autolink: M(o().defaultRules.autolink),
     url: M(o().defaultRules.url),
@@ -102,7 +102,7 @@ let y = _.Z.RULES,
             ...e,
             text: e.text.split("#")[0]
           })), "mention"))) return null;
-        let s = k.exec(e);
+        let s = x.exec(e);
         if (null != s && r[0].length <= s[0].length) return null;
         if ("" === n && (0, d.BH)()) {
           let t = d.vD.exec(e);
@@ -309,12 +309,12 @@ let y = _.Z.RULES,
       ...U
     }
   };
-[x, V].forEach(e => {
+[k, V].forEach(e => {
   Object.keys(e).forEach((t, n) => {
     e[t].order = n
   })
 });
-let Z = o().parserFor(x),
+let Z = o().parserFor(k),
   H = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 
 function F(e, t, n, i) {

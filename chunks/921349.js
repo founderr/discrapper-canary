@@ -160,14 +160,14 @@ let P = r.forwardRef(function(e, t) {
       eG(!1)
     }
   }));
-  let ek = r.useCallback((e, t) => {
+  let ex = r.useCallback((e, t) => {
       let n = document.querySelector(e),
         i = eR.current;
       eh(t), null != i && null != n && i.scrollIntoViewNode({
         node: n
       })
     }, []),
-    ex = r.useCallback(() => new Promise(e => {
+    ek = r.useCallback(() => new Promise(e => {
       let t = eR.current;
       if (null == t) return e();
       t.scrollToTop({
@@ -184,12 +184,12 @@ let P = r.forwardRef(function(e, t) {
     eZ = (0, u.ZP)({
       id: eU,
       defaultFocused: null != eM ? String(eM.value) : void 0,
-      scrollToStart: ex,
+      scrollToStart: ek,
       scrollToEnd: eV,
       isEnabled: eS,
       wrap: !0,
       useVirtualFocus: !0,
-      setFocus: ek,
+      setFocus: ex,
       disableClickOnSpace: !0
     }),
     eH = (0, g.Z)(eZ),
@@ -271,7 +271,7 @@ let P = r.forwardRef(function(e, t) {
   }, [eN]), r.useEffect(() => {
     !eC && em && null !== eN && requestAnimationFrame(() => eZ.focusFirstVisibleItem())
   }, [eC, em, eN]);
-  let ez = d ? x : k,
+  let ez = d ? k : x,
     eq = r.useRef(null),
     {
       focusPreviousItem: eX,
@@ -734,7 +734,7 @@ function B(e) {
   }) : null
 }
 
-function k(e) {
+function x(e) {
   let {
     selectedOptions: t,
     renderOptionPrefix: n,
@@ -761,7 +761,7 @@ function k(e) {
   })
 }
 
-function x(e) {
+function k(e) {
   let {
     query: t,
     placeholder: n,

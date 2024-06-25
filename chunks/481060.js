@@ -733,13 +733,13 @@ n.r(t), n.d(t, {
     return B.h
   },
   FormSwitch: function() {
-    return k.j
+    return x.j
   },
   FormText: function() {
-    return x.R
+    return k.R
   },
   FormTextTypes: function() {
-    return x.g
+    return k.g
   },
   FormTitle: function() {
     return V.v
@@ -1579,16 +1579,16 @@ n.r(t), n.d(t, {
     return tN._II
   },
   Slide: function() {
-    return ek.M
+    return ex.M
   },
   SlideIn: function() {
     return ts.o
   },
   Slider: function() {
-    return ex.i
+    return ek.i
   },
   Slides: function() {
-    return ek.H
+    return ex.H
   },
   SoundboardIcon: function() {
     return tN.KY1
@@ -2205,8 +2205,8 @@ var i = n(680732),
   G = n(722187),
   w = n(383838),
   B = n(789164),
-  k = n(471141),
-  x = n(534542),
+  x = n(471141),
+  k = n(534542),
   V = n(512983),
   Z = n(652334),
   H = n(260034),
@@ -2259,8 +2259,8 @@ var i = n(680732),
   eG = n(263953),
   ew = n(503145),
   eB = n(936621),
-  ek = n(718580),
-  ex = n(561779),
+  ex = n(718580),
+  ek = n(561779),
   eV = n(922770),
   eZ = n(696826),
   eH = n(437337),

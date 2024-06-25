@@ -134,7 +134,7 @@ function _(e) {
         t = null == e ? void 0 : e.getAttribute(l.ie);
       null != t ? M(t) : null == e && null != E && E()
     }, [P, G, E, M]),
-    k = i.useCallback(e => {
+    x = i.useCallback(e => {
       if (!g.current || !f && !b.current) return;
       let n = A === a.hy.HORIZONTAL ? a.R8.RIGHT : a.R8.DOWN,
         i = A === a.hy.HORIZONTAL ? a.R8.LEFT : a.R8.UP;
@@ -174,19 +174,19 @@ function _(e) {
         }
       }
     }, [w, B, t, A, d, c, M, f]),
-    x = i.useCallback(e => {
+    k = i.useCallback(e => {
       let n = null != e ? (0, l.jb)(t, e) : null;
       O.current = n
     }, [t]);
   return i.useMemo(() => ({
     id: t,
     containerProps: {
-      onKeyDown: k,
+      onKeyDown: x,
       ref: p,
       tabIndex: y && S ? -1 : 0
     },
     orientation: A,
-    setFocus: x,
+    setFocus: k,
     async focusLastVisibleItem() {
       var e;
       let n = await (0, o.jo)(null !== (e = p.current) && void 0 !== e ? e : document.body, u(t, p));
@@ -203,5 +203,5 @@ function _(e) {
       let e = O.current;
       return e ? (0, l.x3)(e) : null
     }
-  }), [t, k, A, y, S, x, B, w, M])
+  }), [t, x, A, y, S, k, B, w, M])
 }

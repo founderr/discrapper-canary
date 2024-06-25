@@ -51,8 +51,8 @@ function d(e, t, n, s) {
       fade: G = !1,
       customTheme: w = !1,
       chunkSize: B,
-      style: k,
-      innerId: x,
+      style: x,
+      innerId: k,
       innerRole: V,
       innerAriaLabel: Z,
       innerAriaMultiselectable: H,
@@ -169,10 +169,10 @@ function d(e, t, n, s) {
         [n]: w,
         [c.scrolling]: q
       }),
-      style: (0, _.uT)(k),
+      style: (0, _.uT)(x),
       ...W,
       children: [r.useMemo(() => (0, i.jsx)(j, {
-        id: x,
+        id: k,
         role: V,
         "aria-label": Z,
         "aria-multiselectable": H,
@@ -229,7 +229,7 @@ function d(e, t, n, s) {
             spacerTop: ee
           })
         })
-      }), [x, V, Z, H, F, Y, j, et, en, C, v, L, M, P, ee]), r.useMemo(() => (function(e) {
+      }), [k, V, Z, H, F, Y, j, et, en, C, v, L, M, P, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,

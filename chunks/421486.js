@@ -78,12 +78,12 @@ let p = o.memo(function(e) {
   o.useEffect(() => {
     w()
   }, [w, D]);
-  let k = v.length > 0,
-    x = L.length > 0;
+  let x = v.length > 0,
+    k = L.length > 0;
   return (0, s.jsxs)("div", {
     className: l()(R.compactItemContainer, !y && R.hideElement),
     ref: P,
-    children: [k && (() => {
+    children: [x && (() => {
       let e = (0, s.jsxs)(_.Clickable, {
         onClick: B(m.oh.MUTUAL_FRIENDS),
         className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
@@ -107,10 +107,10 @@ let p = o.memo(function(e) {
         text: O.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
         children: e
       }) : e
-    })(), k && x && (0, s.jsx)("div", {
+    })(), x && k && (0, s.jsx)("div", {
       "aria-hidden": "true",
       className: R.dotSpacer
-    }), x && (() => {
+    }), k && (() => {
       let e = (0, s.jsxs)(_.Clickable, {
         onClick: B(m.oh.MUTUAL_GUILDS),
         className: l()(R.avatarAndTextContainer, R.serverContainer),

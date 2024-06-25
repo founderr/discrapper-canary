@@ -62,22 +62,22 @@ function b(e, t, n) {
 let G = new u.Y("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
   B = Symbol("stale"),
-  k = Symbol("current"),
-  x = Object.freeze({
+  x = Symbol("current"),
+  k = Object.freeze({
     descriptors: [],
     commands: [],
     sectionedCommands: [],
     loading: !0
   }),
   V = Object.freeze({
-    serverVersion: k,
+    serverVersion: x,
     fetchState: {
       fetching: !1
     },
     result: {
       sections: {},
       sectionIdsByBotId: {},
-      version: k
+      version: x
     }
   }),
   Z = Object.freeze({
@@ -179,7 +179,7 @@ class z extends(i = _.ZP.Store) {
     return e in this.indices
   }
   query(e, t, n) {
-    if (null == A.default.getCurrentUser()) return x;
+    if (null == A.default.getCurrentUser()) return k;
     let i = this.getContextState(e),
       r = this.getUserState(),
       s = this.getApplicationState(n.applicationId),
@@ -319,7 +319,7 @@ let q = new z(c.Z, {
       }
       t.commands[e.id] = e
     }
-    let u = null !== (n = r.version) && void 0 !== n ? n : k;
+    let u = null !== (n = r.version) && void 0 !== n ? n : x;
     Y(i, {
       serverVersion: u,
       result: {

@@ -68,7 +68,7 @@ class O extends(i = s.PureComponent) {
         minWidth: O,
         minHeight: g
       }),
-      k = 0 !== B.width ? B.width / B.height : 1;
+      x = 0 !== B.width ? B.width / B.height : 1;
     "" !== s && i !== T.zo9.ERROR ? e = P({
       src: s,
       size: B,
@@ -81,14 +81,14 @@ class O extends(i = s.PureComponent) {
       alt: _
     })), e = (0, r.jsx)(I.N, {
       readyState: i,
-      aspectRatio: k,
+      aspectRatio: x,
       placeholder: o,
       placeholderVersion: l,
       placeholderStyle: p(B, C),
       children: e
     });
-    let x = null != y ? y() : null;
-    return x = null != x ? x : L, (0, r.jsx)(u.FocusRing, {
+    let k = null != y ? y() : null;
+    return k = null != k ? k : L, (0, r.jsx)(u.FocusRing, {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
@@ -131,9 +131,9 @@ class O extends(i = s.PureComponent) {
             enabled: !1
           },
           children: e
-        }) : e, null != x ? (0, r.jsx)("div", {
+        }) : e, null != k ? (0, r.jsx)("div", {
           className: f.imageAccessory,
-          children: x
+          children: k
         }) : null]
       })
     })

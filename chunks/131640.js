@@ -4,10 +4,10 @@ n.d(t, {
     return w
   },
   ZP: function() {
-    return x
+    return k
   },
   tZ: function() {
-    return k
+    return x
   }
 }), n(627341);
 var i = n(735250),
@@ -76,7 +76,7 @@ function w(e) {
 }
 let B = A.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
-function k(e) {
+function x(e) {
   let {
     user: t,
     displayProfile: n,
@@ -93,8 +93,8 @@ function k(e) {
     hasProfileEffect: C,
     statusTooltipDelay: w
   } = e, {
-    theme: k
-  } = (0, v.z)(), x = r.useContext(f.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = N.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
+    theme: x
+  } = (0, v.z)(), k = r.useContext(f.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = N.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
     analyticsLocations: F
   } = (0, c.ZP)(), {
     trackUserProfileAction: Y,
@@ -118,7 +118,7 @@ function k(e) {
       size: b,
       "aria-label": t.username,
       status: H ? M.Skl.UNKNOWN : u,
-      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(k) : void 0,
+      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(x) : void 0,
       isMobile: d,
       statusTooltip: !0,
       statusTooltipDelay: w
@@ -149,7 +149,7 @@ function k(e) {
           messageId: j,
           roleId: W,
           sourceAnalyticsLocations: F,
-          analyticsLocation: x.location
+          analyticsLocation: k.location
         }), null == h || h()
       },
       children: [Q, !K && function() {
@@ -173,7 +173,7 @@ function k(e) {
   })
 }
 
-function x(e) {
+function k(e) {
   let {
     user: t,
     displayProfile: n,
@@ -202,7 +202,7 @@ function x(e) {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: c
-    }), (0, i.jsx)(k, {
+    }), (0, i.jsx)(x, {
       user: t,
       displayProfile: n,
       status: l ? M.Skl.STREAMING : u,

@@ -74,7 +74,7 @@ n.d(t, {
     return eA
   },
   j8: function() {
-    return k
+    return x
   },
   lQ: function() {
     return L
@@ -95,7 +95,7 @@ n.d(t, {
     return ed
   },
   ph: function() {
-    return x
+    return k
   },
   t2: function() {
     return j
@@ -340,8 +340,8 @@ let B = e => {
       url: w(s, "".concat(g).concat(e.id, "/").concat(s))
     }
   },
-  k = e => w(e.config.assets.hero, "".concat(g).concat(e.id, "/").concat(e.config.assets.hero)),
-  x = e => w(e.config.assets.questBarHero, "".concat(g).concat(e.id, "/").concat(e.config.assets.questBarHero)),
+  x = e => w(e.config.assets.hero, "".concat(g).concat(e.id, "/").concat(e.config.assets.hero)),
+  k = e => w(e.config.assets.questBarHero, "".concat(g).concat(e.id, "/").concat(e.config.assets.questBarHero)),
   V = (e, t) => w(e.config.assets.gameTile, "".concat(g).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
   Z = (e, t) => w(e.config.assets.logotype, "".concat(g).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),
   H = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);

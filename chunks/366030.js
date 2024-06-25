@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return k
+    return x
   }
 }), n(536091), n(47120);
 var i = n(735250),
@@ -192,7 +192,7 @@ function B(e) {
   })
 }
 
-function k(e) {
+function x(e) {
   let {
     userId: t,
     messageId: n,

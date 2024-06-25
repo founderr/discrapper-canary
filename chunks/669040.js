@@ -35,8 +35,8 @@ var i = n(735250),
   G = n(880949),
   w = n(784222),
   B = n(172800),
-  k = n(149203),
-  x = n(981631),
+  x = n(149203),
+  k = n(981631),
   V = n(957825),
   Z = n(474936),
   H = n(689938),
@@ -70,7 +70,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
       listHeaderClassName: D,
       activeSectionIndex: P,
       upsellGlowOpacity: y
-    } = e, Z = (0, h.O)(), H = r.useRef(x.xAR), X = r.useMemo(() => "" !== n ? d.Z.convert.toCodePoint(n) : "", [n]), Q = r.useCallback(e => {
+    } = e, Z = (0, h.O)(), H = r.useRef(k.xAR), X = r.useMemo(() => "" !== n ? d.Z.convert.toCodePoint(n) : "", [n]), Q = r.useCallback(e => {
       let t = E[e],
         n = E[e + 1];
       return e >= E.length - 1 ? t.isNitroLocked : t.isNitroLocked && !n.isNitroLocked
@@ -83,7 +83,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         i = new Set(t),
         r = t.has(e);
-      r ? i.delete(e) : i.add(e), null != n && M.default.track(x.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+      r ? i.delete(e) : i.add(e), null != n && M.default.track(k.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
         location: Z.location,
         tab: V.X1.EMOJI,
         collapsed: !r,
@@ -94,8 +94,8 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
         columnIndex: t,
         visibleRowIndex: n
       } = e, i = e.type === w.ld.EMOJI ? e.emoji.allNamesString : e.name;
-      H.current !== x.xAR && window.cancelAnimationFrame(H.current), H.current = window.requestAnimationFrame(() => {
-        N.kJ.setInspectedExpressionPosition(t, n, m.u.MOUSE_EVENT), N.kJ.setSearchPlaceholder(i), H.current = x.xAR
+      H.current !== k.xAR && window.cancelAnimationFrame(H.current), H.current = window.requestAnimationFrame(() => {
+        N.kJ.setInspectedExpressionPosition(t, n, m.u.MOUSE_EVENT), N.kJ.setSearchPlaceholder(i), H.current = k.xAR
       })
     }, []), et = (0, c.e7)([p.qc], () => p.qc.hasHotspot(p.v6.FAVORITE_EMOJI_TOOLTIP), []), en = r.useMemo(() => l().memoize((e, t) => {
       let n = s[e],
@@ -134,8 +134,8 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
           type: a,
           sectionId: l
         } = n;
-        if (a === k.En.SEARCH_RESULTS) return;
-        let u = a === k.En.GUILD ? null != r ? (0, i.jsx)(G.Z, {
+        if (a === x.En.SEARCH_RESULTS) return;
+        let u = a === x.En.GUILD ? null != r ? (0, i.jsx)(G.Z, {
             guild: r,
             height: 16,
             width: 16
@@ -194,7 +194,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
       renderSectionHeader: ei,
       renderSectionFooter: es,
       sectionMarginBottom: ea,
-      sectionHeaderHeight: r.useCallback(e => E[e].type === k.En.SEARCH_RESULTS ? 0 : z, [E]),
+      sectionHeaderHeight: r.useCallback(e => E[e].type === x.En.SEARCH_RESULTS ? 0 : z, [E]),
       sectionFooterHeight: eo
     }
   },
@@ -217,7 +217,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
       messageId: b,
       isBurstReaction: G,
       listHeaderClassName: w
-    } = e, B = r.useRef(!1), k = N.kJ.useStore(e => e.activeCategoryIndex), V = (0, A.Iu)(e => e.searchQuery), Y = v.Yk.useSetting(), j = (0, c.e7)([L.default], () => L.default.getCurrentUser()), W = (0, P.I5)(j), {
+    } = e, B = r.useRef(!1), x = N.kJ.useStore(e => e.activeCategoryIndex), V = (0, A.Iu)(e => e.searchQuery), Y = v.Yk.useSetting(), j = (0, c.e7)([L.default], () => L.default.getCurrentUser()), W = (0, P.I5)(j), {
       location: K
     } = (0, h.O)(), {
       analyticsLocations: z
@@ -265,7 +265,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
       setUpsellGlowOpacity: en,
       emojiSectionDescriptors: l
     }), eI = (0, O.Qs)({
-      activeCategoryIndex: k,
+      activeCategoryIndex: x,
       isScrolling: B,
       listRef: s,
       onActiveCategoryIndexChange: e => {
@@ -277,7 +277,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     });
     (0, O.Xs)({
       searchQuery: V,
-      activeCategoryIndex: k,
+      activeCategoryIndex: x,
       listRef: s
     });
     let eT = r.useCallback(e => {
@@ -285,7 +285,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
       }, [eE, eI]),
       eh = l.length > 0;
     return r.useEffect(() => {
-      $ && M.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+      $ && M.default.track(k.rMx.PREMIUM_UPSELL_VIEWED, {
         type: Z.cd.EMOJI_PICKER_FLOATING_UPSELL,
         location: K,
         location_stack: z
@@ -336,7 +336,7 @@ let Y = (0, y.Mg)(E.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
           subscriptionTier: Z.Si.TIER_2,
           buttonText: H.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
           premiumModalAnalyticsLocation: {
-            section: x.jXE.EMOJI_PICKER_FLOATING_UPSELL
+            section: k.jXE.EMOJI_PICKER_FLOATING_UPSELL
           },
           tabIndex: $ ? 0 : -1
         })]

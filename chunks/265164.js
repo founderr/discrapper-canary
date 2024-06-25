@@ -43,11 +43,11 @@ let R = [],
   w = !1,
   B = 0;
 
-function k() {
-  R = g, g = [], G++, x(R)
+function x() {
+  R = g, g = [], G++, k(R)
 }
 
-function x(e) {
+function k(e) {
   let t = [],
     n = [];
   if (e.forEach(e => {
@@ -279,7 +279,7 @@ O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = n
       load_id: n,
       load_time_millis: Date.now() - i,
       feed_item_ids: g.map(e => e.id)
-    }, 0 === G && (g.length > 0 && (0 === R.length || R[0].id !== g[0].id) ? (w = !0, x(R), x(g)) : k())
+    }, 0 === G && (g.length > 0 && (0 === R.length || R[0].id !== g[0].id) ? (w = !0, k(R), k(g)) : x())
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
     let {
@@ -354,10 +354,10 @@ O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = n
       return
     }
     if (0 === g.length) return !1;
-    k()
+    x()
   },
   GRAVITY_TAB_OPENED: function() {
-    w && (k(), w = !1), B < 5 && B++
+    w && (x(), w = !1), B < 5 && B++
   },
   GRAVITY_FEEDBACK_GIVEN: function() {
     B = 6

@@ -54,7 +54,7 @@ let D = new h.Z("KeybindsStore"),
   w = !1,
   B = [p.kg4.PUSH_TO_TALK, p.kg4.TOGGLE_OVERLAY_INPUT_LOCK, p.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 
-function k() {
+function x() {
   let {
     showKeybindIndicators: e
   } = S.Z.getCurrentConfig({
@@ -63,7 +63,7 @@ function k() {
   null == d().find(y, e => M.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !w && b && e && (H(M), w = !0)
 }
 
-function x() {
+function k() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   (w || e) && (Z(M.id), w = !1)
 }
@@ -72,7 +72,7 @@ function V(e) {
   let {
     showKeybindIndicators: t
   } = e;
-  t ? k() : x(!0)
+  t ? x() : k(!0)
 }
 
 function Z(e) {
@@ -98,7 +98,7 @@ function H(e) {
   }
   let r = e.id,
     s = G[n].keyEvents;
-  e.action === p.kg4.TOGGLE_MUTE && x(), ! function(e, t, n, i) {
+  e.action === p.kg4.TOGGLE_MUTE && k(), ! function(e, t, n, i) {
     if (A.isPlatformEmbedded) m.ZP.inputEventRegister(parseInt(e), t, n, i);
     else {
       Z(e);
@@ -136,7 +136,7 @@ function F(e) {
 function Y(e) {
   Z(e.id), y = {
     ...y
-  }, delete y[e.id], e.action === p.kg4.TOGGLE_MUTE && k()
+  }, delete y[e.id], e.action === p.kg4.TOGGLE_MUTE && x()
 }
 
 function j(e) {
@@ -204,7 +204,7 @@ let K = [function() {
 }];
 
 function z() {
-  return k(), K.reduce((e, t) => t() || e, !1)
+  return x(), K.reduce((e, t) => t() || e, !1)
 }
 T.Z.setGetKeybindList(() => {
   let e = [];
@@ -325,7 +325,7 @@ L(q, "displayName", "KeybindsStore"), L(q, "persistKey", "keybinds"), L(q, "migr
     let {
       enable: t
     } = e;
-    b = t, t ? (T.Z.enable(), d().forEach(y, H), k()) : (T.Z.disable(), d().forEach(y, e => Z(e.id)), x())
+    b = t, t ? (T.Z.enable(), d().forEach(y, H), x()) : (T.Z.disable(), d().forEach(y, e => Z(e.id)), k())
   },
   KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
     let {

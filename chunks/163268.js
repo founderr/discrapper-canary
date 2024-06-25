@@ -13,7 +13,7 @@ n.d(t, {
     return W
   },
   KP: function() {
-    return x
+    return k
   },
   OP: function() {
     return Y
@@ -58,7 +58,7 @@ n.d(t, {
     return K
   },
   zj: function() {
-    return k
+    return x
   }
 }), n(789020);
 var i, r, s, o, a, l, u, _, c = n(286379),
@@ -169,7 +169,7 @@ function B(e) {
   if (o.isDM() || o.isGroupDM()) return null != e.author && N.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
-let k = e => {
+let x = e => {
   let t = G();
   S.Sh.updateSetting({
     ...t,
@@ -177,7 +177,7 @@ let k = e => {
   })
 };
 
-function x(e, t) {
+function k(e, t) {
   var n, i, r, s;
   if (!t) return !1;
   if (E.ZP.get("obscure_blur_effect_enabled")) return !0;
@@ -195,11 +195,11 @@ function x(e, t) {
 
 function V(e) {
   return B(e) ? {
-    obscuredAttachments: e.attachments.filter(e => x({
+    obscuredAttachments: e.attachments.filter(e => k({
       type: 0,
       media: e
     }, !0)),
-    obscuredEmbeds: e.embeds.filter(e => x({
+    obscuredEmbeds: e.embeds.filter(e => k({
       type: 1,
       media: e
     }, !0))

@@ -110,7 +110,7 @@ function B(e) {
   return null != s && (e.setData("channel", s), !0)
 }
 
-function k(e) {
+function x(e) {
   let t = {
     [R.Z.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [R.Z.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -125,16 +125,16 @@ function k(e) {
   return null != t && "" !== t && (e.setData("has", t), !0)
 }
 
-function x() {
+function k() {
   return [...Array.from(p()), ...Array.from(g()), ...Array.from(C()), ...Object.keys(M())]
 }
 
 function V() {
-  return l().sample(x())
+  return l().sample(k())
 }
 
 function Z(e, t, n) {
-  return H(e, t, x()).map(e => ({
+  return H(e, t, k()).map(e => ({
     ...e,
     group: n,
     key: "".concat(n, "-").concat(e.text)
@@ -255,7 +255,7 @@ function z() {
       [O.dCx.ANSWER_HAS]: {
         regex: RegExp("(?:\\s*-?(".concat(n.map(e => A.Z.escape(e)).join("|"), "))"), "i"),
         follows: [O.dCx.FILTER_HAS],
-        validator: k,
+        validator: x,
         componentType: "ANSWER",
         queryKey: "has"
       },

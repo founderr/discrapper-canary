@@ -76,8 +76,8 @@ var i, r, s = n(470079),
   G = n(158776),
   w = n(699516),
   B = n(594174),
-  k = n(979651),
-  x = n(938475),
+  x = n(979651),
+  k = n(938475),
   V = n(626135),
   Z = n(823379),
   H = n(5192),
@@ -96,7 +96,7 @@ let q = 7,
   et = 1;
 
 function en(e, t) {
-  let n = x.ZP.getVoiceStatesForChannelAlt(e, t).map(e => {
+  let n = k.ZP.getVoiceStatesForChannelAlt(e, t).map(e => {
       let {
         user: t
       } = e;
@@ -140,7 +140,7 @@ function ei(e, t) {
       othersCount: u,
       usersText: r
     }
-  }((0, l.e7)([x.ZP], () => x.ZP.getVoiceStatesForChannelAlt(e, t), [e, t]).map(e => {
+  }((0, l.e7)([k.ZP], () => k.ZP.getVoiceStatesForChannelAlt(e, t), [e, t]).map(e => {
     let {
       user: t
     } = e;
@@ -177,7 +177,7 @@ function er(e) {
     }),
     T = (0, l.e7)([w.Z], () => w.Z.getRelationships()),
     h = s.useMemo(() => Object.keys(T).filter(e => T[e] === W.OGo.BLOCKED), [T]),
-    S = (0, l.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
+    S = (0, l.e7)([k.ZP], () => k.ZP.getVoiceStates(t), [t]),
     f = s.useMemo(() => {
       let t = Object.keys(S);
       return 0 === t.length ? [] : t.filter(t => {
@@ -190,7 +190,7 @@ function er(e) {
         }) && t !== e.afkChannelId && _.includes(t)
       })
     }, [S, I, _, h, e.afkChannelId]),
-    N = (0, l.e7)([c.ZP, k.Z, D.Z, G.Z, M.Z], () => f.map(e => {
+    N = (0, l.e7)([c.ZP, x.Z, D.Z, G.Z, M.Z], () => f.map(e => {
       var t;
       let n = D.Z.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
         i = S[e].filter(Z.lm),
@@ -203,7 +203,7 @@ function er(e) {
           } = e;
           return t.id
         }),
-        l = k.Z.hasVideo(e),
+        l = x.Z.hasVideo(e),
         u = [],
         _ = [];
       for (let e of (r.length > 0 && (s = j.L.EMBEDDED_ACTIVITY), i)) {
@@ -357,7 +357,7 @@ function el(e) {
       } = e;
       return t
     })),
-    i = (0, l.Wu)([x.ZP], () => null == e ? [] : x.ZP.getVoiceStatesForChannel(e).filter(Z.lm).map(e => {
+    i = (0, l.Wu)([k.ZP], () => null == e ? [] : k.ZP.getVoiceStatesForChannel(e).filter(Z.lm).map(e => {
       let {
         user: t
       } = e;
@@ -460,7 +460,7 @@ let ed = async (e, t) => {
 }, eE = (e, t) => {
   h.Z.handleVoiceConnect({
     channel: t,
-    connected: k.Z.isInChannel(t.id),
+    connected: x.Z.isInChannel(t.id),
     needSubscriptionToAccess: (0, f.$)(t.id).needSubscriptionToAccess,
     locked: !1
   }), (0, O.XU)(e, t.id)

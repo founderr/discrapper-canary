@@ -198,7 +198,7 @@ function B(e) {
   })
 }
 
-function k(e) {
+function x(e) {
   var t, n;
   let {
     channelId: i,
@@ -219,7 +219,7 @@ function k(e) {
   })
 }
 
-function x(e) {
+function k(e) {
   let {
     channelId: t,
     messages: n
@@ -321,11 +321,11 @@ class K extends u.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      LOAD_MESSAGES_SUCCESS: x,
+      LOAD_MESSAGES_SUCCESS: k,
       LOAD_FORUM_POSTS: Z,
       LOAD_THREADS_SUCCESS: H,
       LOAD_ARCHIVED_THREADS_SUCCESS: H,
-      MESSAGE_CREATE: k,
+      MESSAGE_CREATE: x,
       MESSAGE_UPDATE: B,
       LOGOUT: P,
       SEARCH_FINISH: V,

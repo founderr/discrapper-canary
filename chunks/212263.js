@@ -36,7 +36,7 @@ t.Z = e => {
     analyticsLocation: U
   } = e, b = (0, u.ZP)(), [G, w] = r.useState(!1), B = () => {
     (0, m.A3)(M), (0, E.z)(), L()
-  }, k = (0, a.ap)(b) ? n(537381) : n(341048), x = (0, T.N)(), V = (0, I.Ng)(), Z = null != x || null != V, H = (0, d.Iu)(e => e.searchQuery), {
+  }, x = (0, a.ap)(b) ? n(537381) : n(341048), k = (0, T.N)(), V = (0, I.Ng)(), Z = null != k || null != V, H = (0, d.Iu)(e => e.searchQuery), {
     analyticsLocations: F
   } = (0, c.ZP)(_.Z.EMOJI_PICKER);
   return r.useEffect(() => {
@@ -66,9 +66,9 @@ t.Z = e => {
     }), (0, i.jsxs)(i.Fragment, {
       children: [Z ? (0, i.jsx)(h.ZP, {
         type: g.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-        subscriptionTier: null !== (s = null == x ? void 0 : null === (t = x.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== s ? s : g.Si.TIER_2,
+        subscriptionTier: null !== (s = null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== s ? s : g.Si.TIER_2,
         onClose: D,
-        trialOffer: x,
+        trialOffer: k,
         discountOffer: V,
         children: C.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
           onClick: B
@@ -77,7 +77,7 @@ t.Z = e => {
         children: [(0, i.jsx)("img", {
           alt: "",
           className: v.premiumPromoImage,
-          src: k
+          src: x
         }), (0, i.jsx)("div", {
           className: v.premiumPromoTitle,
           children: C.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL

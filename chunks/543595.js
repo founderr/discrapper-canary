@@ -36,8 +36,8 @@ var i, r, s, o = n(735250),
   G = n(514342),
   w = n(366966),
   B = n(936195),
-  k = n(806519),
-  x = n(981631),
+  x = n(806519),
+  k = n(981631),
   V = n(701488),
   Z = n(689938),
   H = n(717132);
@@ -77,7 +77,7 @@ function K(e) {
   let {
     activity: t
   } = e, n = null;
-  return (0, A.Z)(t) && (n = x.ABu.SPOTIFY), null != t.platform && [x.M7m.PS4, x.M7m.PS5].includes(t.platform) && (n = x.ABu.PLAYSTATION), n
+  return (0, A.Z)(t) && (n = k.ABu.SPOTIFY), null != t.platform && [k.M7m.PS4, k.M7m.PS5].includes(t.platform) && (n = k.ABu.PLAYSTATION), n
 }
 
 function z(e) {
@@ -100,8 +100,8 @@ class q extends(r = a.PureComponent) {
       activity: e,
       activityGuild: t
     } = this.props;
-    return null != t && (null == e ? void 0 : e.type) !== x.IIU.PLAYING && (null == e ? void 0 : e.type) !== x.IIU.WATCHING && (null == e ? void 0 : e.type) !== x.IIU.LISTENING && (null == e ? void 0 : e.type) !== x.IIU.HANG_STATUS ? {
-      type: x.IIU.PLAYING,
+    return null != t && (null == e ? void 0 : e.type) !== k.IIU.PLAYING && (null == e ? void 0 : e.type) !== k.IIU.WATCHING && (null == e ? void 0 : e.type) !== k.IIU.LISTENING && (null == e ? void 0 : e.type) !== k.IIU.HANG_STATUS ? {
+      type: k.IIU.PLAYING,
       name: Z.Z.Messages.SHARING_SCREEN
     } : e
   }
@@ -128,32 +128,32 @@ class q extends(r = a.PureComponent) {
       name: _
     } = l;
     switch (l.type) {
-      case x.IIU.STREAMING:
+      case k.IIU.STREAMING:
         t = Z.Z.Messages.USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM.format({
-          platform: [x.ABu.TWITCH, x.ABu.YOUTUBE].includes(_.toLowerCase()) ? _ : h.Z.get(x.ABu.TWITCH).name
+          platform: [k.ABu.TWITCH, k.ABu.YOUTUBE].includes(_.toLowerCase()) ? _ : h.Z.get(k.ABu.TWITCH).name
         });
         break;
-      case x.IIU.LISTENING:
+      case k.IIU.LISTENING:
         t = Z.Z.Messages.USER_ACTIVITY_HEADER_LISTENING.format({
           name: _
         });
         break;
-      case x.IIU.WATCHING:
+      case k.IIU.WATCHING:
         t = Z.Z.Messages.USER_ACTIVITY_HEADER_WATCHING.format({
           name: _
         });
         break;
-      case x.IIU.PLAYING:
+      case k.IIU.PLAYING:
         t = (0, S.Z)(l);
         break;
-      case x.IIU.COMPETING:
+      case k.IIU.COMPETING:
         t = Z.Z.Messages.USER_ACTIVITY_HEADER_COMPETING.format({
           name: _
         })
     }
     if (null != i) {
       var c;
-      t = (0, D.yE)(null !== (c = null == l ? void 0 : l.flags) && void 0 !== c ? c : 0, x.xjy.EMBEDDED) ? l.type === x.IIU.WATCHING ? Z.Z.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
+      t = (0, D.yE)(null !== (c = null == l ? void 0 : l.flags) && void 0 !== c ? c : 0, k.xjy.EMBEDDED) ? l.type === k.IIU.WATCHING ? Z.Z.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
         guildName: i.name
       }) : Z.Z.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
         guildName: i.name
@@ -161,7 +161,7 @@ class q extends(r = a.PureComponent) {
         server: i.name
       })
     }
-    return (null == l ? void 0 : l.type) === x.IIU.HANG_STATUS && (t = Z.Z.Messages.STATUS_LEAD_IN_JUST), (0, o.jsxs)("div", {
+    return (null == l ? void 0 : l.type) === k.IIU.HANG_STATUS && (t = Z.Z.Messages.STATUS_LEAD_IN_JUST), (0, o.jsxs)("div", {
       className: H.headerContainer,
       children: [(0, o.jsx)(E.Heading, {
         className: u()((0, M.l)(H, "headerText", e ? "EmptyBody" : "Normal")),
@@ -178,7 +178,7 @@ class q extends(r = a.PureComponent) {
       className: H.assets,
       children: (0, o.jsx)("img", {
         alt: "",
-        src: h.Z.get(x.ABu.XBOX).icon.customPNG,
+        src: h.Z.get(k.ABu.XBOX).icon.customPNG,
         className: u()(this.getTypeClass("assetsLargeImage", "Xbox"))
       })
     })
@@ -186,7 +186,7 @@ class q extends(r = a.PureComponent) {
   renderImage(e) {
     var t, n, i;
     let r, s;
-    if (e.type === x.IIU.HANG_STATUS) return (0, o.jsx)("div", {
+    if (e.type === k.IIU.HANG_STATUS) return (0, o.jsx)("div", {
       className: H.assets,
       children: (0, o.jsx)(g.Z, {
         hangStatusActivity: e,
@@ -205,7 +205,7 @@ class q extends(r = a.PureComponent) {
       I = null != _.large_image ? (0, o.jsx)("img", {
         alt: null !== (t = _.large_text) && void 0 !== t ? t : "",
         src: j(c, _.large_image, null != r ? r : [V.Si.LARGE, V.Si.LARGE]),
-        className: u()(this.getTypeClass("assetsLargeImage", this.isStreamerOnTypeProfile() || this.isStreamerOnTypeActivityFeed() ? x.ABu.TWITCH : ""), {
+        className: u()(this.getTypeClass("assetsLargeImage", this.isStreamerOnTypeProfile() || this.isStreamerOnTypeActivityFeed() ? k.ABu.TWITCH : ""), {
           [null !== (n = this.getTypeClass("assetsLargeMask")) && void 0 !== n ? n : ""]: null != _.small_image
         }, {
           [H.assetsLargeImageSpotify]: d
@@ -218,8 +218,8 @@ class q extends(r = a.PureComponent) {
     else if ((0, v.dS)(e)) {
       let t = (0, v.rq)(e);
       if (null == t) return null;
-      I = (0, o.jsx)(k.ZP, {
-        mask: k.ZP.Masks.SQUIRCLE,
+      I = (0, o.jsx)(x.ZP, {
+        mask: x.ZP.Masks.SQUIRCLE,
         width: V.Si.SMALL,
         height: V.Si.SMALL,
         children: (0, o.jsx)("img", {
@@ -291,7 +291,7 @@ class q extends(r = a.PureComponent) {
       application: i,
       activityGuild: r
     } = this.props;
-    return null != e.assets || (0, f.Z)(e) || e.type !== x.IIU.PLAYING || "ActivityFeed" === n || t.bot ? null : null == i && null != r ? (0, o.jsx)("div", {
+    return null != e.assets || (0, f.Z)(e) || e.type !== k.IIU.PLAYING || "ActivityFeed" === n || t.bot ? null : null == i && null != r ? (0, o.jsx)("div", {
       className: u()(H.gameIcon, H.screenshareIcon)
     }) : (0, o.jsx)(U.Z, {
       className: H.gameIcon,
@@ -309,11 +309,11 @@ class q extends(r = a.PureComponent) {
       details: r,
       type: s
     } = e;
-    if (s === x.IIU.CUSTOM_STATUS) return null;
+    if (s === k.IIU.CUSTOM_STATUS) return null;
     let a = (0, N.Z)(e),
       l = e.name,
       _ = l;
-    if (s === x.IIU.HANG_STATUS ? _ = (0, p.O8)(e) : a && null != n ? _ = (0, o.jsx)("span", {
+    if (s === k.IIU.HANG_STATUS ? _ = (0, p.O8)(e) : a && null != n ? _ = (0, o.jsx)("span", {
         className: H.activityName,
         children: _
       }) : !a && (l = r, _ = r, (0, A.Z)(e) && null != e.sync_id && null != r ? _ = (0, o.jsx)(E.Anchor, {
@@ -339,8 +339,8 @@ class q extends(r = a.PureComponent) {
     } = e, {
       activityGuild: r
     } = this.props, s = n, a = n;
-    if (e.type === x.IIU.CUSTOM_STATUS) s = i;
-    else if (e.type === x.IIU.HANG_STATUS) s = null != r ? Z.Z.Messages.HANG_STATUS_LOCATION.format({
+    if (e.type === k.IIU.CUSTOM_STATUS) s = i;
+    else if (e.type === k.IIU.HANG_STATUS) s = null != r ? Z.Z.Messages.HANG_STATUS_LOCATION.format({
       guildName: r.name
     }) : null, t = null != r ? () => {
       (0, C.X)(r.id)
@@ -454,7 +454,7 @@ class q extends(r = a.PureComponent) {
         onClick: this.handleOpenSpotifyAlbum,
         children: _
       }, n) : _
-    }))), null != u && 0 !== u.length && e.type !== x.IIU.CUSTOM_STATUS || (0, v.dS)(e)) ? ((null == a ? void 0 : a.size) == null && [V.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : "") ? r = Z.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+    }))), null != u && 0 !== u.length && e.type !== k.IIU.CUSTOM_STATUS || (0, v.dS)(e)) ? ((null == a ? void 0 : a.size) == null && [V.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : "") ? r = Z.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
       count: "0",
       max: null !== (i = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== i ? i : 0
     }) : (0, v.dS)(e) && (null == a ? void 0 : a.size) != null ? r = Z.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
@@ -484,7 +484,7 @@ class q extends(r = a.PureComponent) {
       onOpenGameProfile: l,
       shouldOpenGameProfile: _
     } = this.props, c = this.activity;
-    if (null == c || c.type === x.IIU.CUSTOM_STATUS) return null;
+    if (null == c || c.type === k.IIU.CUSTOM_STATUS) return null;
     let d = "UserPopout" === t || "UserPopoutV2" === t || "BiteSizePopout" === t,
       I = "Profile" === t || "ProfileV2" === t || "SimplifiedProfile" === t,
       T = "ActivityFeed" === t,

@@ -55,7 +55,7 @@ n.d(t, {
     return U
   },
   p5: function() {
-    return x
+    return k
   },
   sf: function() {
     return ei
@@ -415,7 +415,7 @@ class b extends p.C {
           r.dismissedGuildContent = e.bytes();
           break;
         case 6:
-          r.joinSound = ex.internalBinaryRead(e, e.uint32(), n, r.joinSound);
+          r.joinSound = ek.internalBinaryRead(e, e.uint32(), n, r.joinSound);
           break;
         case 7:
           r.mobileRedesignChannelListSettings = eS.internalBinaryRead(e, e.uint32(), n, r.mobileRedesignChannelListSettings);
@@ -449,17 +449,17 @@ class b extends p.C {
           s = t.fixed64().toString();
           break;
         case 2:
-          o = x.internalBinaryRead(t, t.uint32(), n);
+          o = k.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.GuildSettings.channels")
       }
     }
-    e[null != s ? s : "0"] = null != o ? o : x.create()
+    e[null != s ? s : "0"] = null != o ? o : k.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.channels)) t.tag(1, m.TD.LengthDelimited).fork().tag(1, m.TD.Bit64).fixed64(i), t.tag(2, m.TD.LengthDelimited).fork(), x.internalBinaryWrite(e.channels[i], t, n), t.join().join();
-    0 !== e.hubProgress && t.tag(2, m.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, m.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && C.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, m.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, m.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && ex.internalBinaryWrite(e.joinSound, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eS.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, m.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, m.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, m.TD.LengthDelimited).fork(), n).join();
+    for (let i of Object.keys(e.channels)) t.tag(1, m.TD.LengthDelimited).fork().tag(1, m.TD.Bit64).fixed64(i), t.tag(2, m.TD.LengthDelimited).fork(), k.internalBinaryWrite(e.channels[i], t, n), t.join().join();
+    0 !== e.hubProgress && t.tag(2, m.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, m.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && C.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, m.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, m.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && ek.internalBinaryWrite(e.joinSound, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eS.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, m.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, m.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -471,7 +471,7 @@ class b extends p.C {
       K: 6,
       V: {
         kind: "message",
-        T: () => x
+        T: () => k
       }
     }, {
       no: 2,
@@ -497,7 +497,7 @@ class b extends p.C {
       no: 6,
       name: "join_sound",
       kind: "message",
-      T: () => ex
+      T: () => ek
     }, {
       no: 7,
       name: "mobile_redesign_channel_list_settings",
@@ -579,7 +579,7 @@ class w extends p.C {
   }
 }
 let B = new w;
-class k extends p.C {
+class x extends p.C {
   create(e) {
     let t = {
       collapsedInInbox: !1
@@ -637,7 +637,7 @@ class k extends p.C {
     }])
   }
 }
-let x = new k;
+let k = new x;
 class V extends p.C {
   create(e) {
     let t = {};
@@ -2684,7 +2684,7 @@ class ew extends p.C {
   }
 }
 let eB = new ew;
-class ek extends p.C {
+class ex extends p.C {
   create(e) {
     let t = {
       soundId: "0",
@@ -2735,7 +2735,7 @@ class ek extends p.C {
     }])
   }
 }
-let ex = new ek;
+let ek = new ex;
 class eV extends p.C {
   create(e) {
     let t = {

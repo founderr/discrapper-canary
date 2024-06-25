@@ -136,7 +136,7 @@ function w() {
       flags: e
     }
   }
-  x(t), A.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+  k(t), A.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
     auto_migrated: !0,
     num_unread_guids_after: e.filter(e => h.default.hasUnread(e.id)).length
   })
@@ -147,7 +147,7 @@ function B(e) {
     if (r) throw Error("Already submitted notifications migration");
     n(!0);
     try {
-      await k(t, e), s(!0)
+      await x(t, e), s(!0)
     } finally {
       n(!1)
     }
@@ -158,7 +158,7 @@ function B(e) {
     saveSettings: o
   }
 }
-async function k(e, t) {
+async function x(e, t) {
   if (N.ZP.useNewNotifications) {
     u.Z.show({
       title: "Info",
@@ -208,7 +208,7 @@ async function k(e, t) {
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
     }
-    await x(t);
+    await k(t);
     let s = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
     if (s.length > 0) {
       let e = setTimeout(n, 5e3);
@@ -226,7 +226,7 @@ async function k(e, t) {
     })
   }
 }
-async function x(e) {
+async function k(e) {
   await V(() => Z()), await V(() => _.Z.setAccountFlag(L.c.USE_NEW_NOTIFICATIONS, !0));
   let t = await V(() => d.Z.saveUserGuildSettingsBulk(e));
   l.Z.dispatch({

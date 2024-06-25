@@ -30,9 +30,9 @@ let M = !1,
   G = !1,
   w = !0,
   B = Object.freeze([]),
-  k = [];
+  x = [];
 
-function x(e) {
+function k(e) {
   return (0, m.OT)(e, g.Z)
 }
 
@@ -40,17 +40,17 @@ function V(e) {
   switch (e.type) {
     case D.IIU.LISTENING:
       if ((0, T.Z)(e)) return S.Z.shouldShowActivity();
-      if (null != e.application_id) return x(e.application_id);
+      if (null != e.application_id) return k(e.application_id);
       return !1;
     case D.IIU.PLAYING:
-      return null != e.application_id ? x(e.application_id) : function(e) {
+      return null != e.application_id ? k(e.application_id) : function(e) {
         let t = R.Z.getGameByName(e);
-        return null != t ? x(t.id) : f.G6.getSetting()
+        return null != t ? k(t.id) : f.G6.getSetting()
       }(e.name);
     case D.IIU.STREAMING:
     case D.IIU.WATCHING:
     default:
-      return null == e.application_id || x(e.application_id)
+      return null == e.application_id || k(e.application_id)
   }
 }
 
@@ -69,7 +69,7 @@ function Z() {
   let i = L.Z.getRemoteActivities();
   if (B !== i && (B = i, t = !0), t) {
     let e = b.find(e => e.type === D.IIU.CUSTOM_STATUS);
-    k = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...d()(B).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    x = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...d()(B).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -78,7 +78,7 @@ function H() {
 }
 
 function F() {
-  w = !1, y = D.Skl.UNKNOWN, Z(), v.Z.setCurrentUserOnConnectionOpen(P, k)
+  w = !1, y = D.Skl.UNKNOWN, Z(), v.Z.setCurrentUserOnConnectionOpen(P, x)
 }
 class Y extends(s = E.ZP.Store) {
   initialize() {
@@ -98,11 +98,11 @@ class Y extends(s = E.ZP.Store) {
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? k : b
+    return e ? x : b
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? k[0] : b[0]
+    return e ? x[0] : b[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

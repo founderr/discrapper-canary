@@ -35,8 +35,8 @@ var i = n(735250),
   G = n(624138),
   w = n(543241),
   B = n(253696),
-  k = n(199257),
-  x = n(636411),
+  x = n(199257),
+  k = n(636411),
   V = n(380331),
   Z = n(170762),
   H = n(22363),
@@ -207,16 +207,16 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     onPickerOpen: e3
   }));
   let {
-    location: ek
+    location: ex
   } = (0, h.O)(), {
-    page: ex,
+    page: ek,
     section: eV,
     object: eZ,
     openPopoutType: eH
   } = eI, eF = r.useMemo(() => ({
-    ...ek,
+    ...ex,
     section: null != eV ? eV : q.jXE.EMOJI_PICKER_POPOUT
-  }), [ek, eV]), {
+  }), [ex, eV]), {
     analyticsLocations: eY
   } = (0, f.ZP)(S.Z.EMOJI_PICKER), {
     diversitySurrogate: ej
@@ -245,7 +245,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     emojiSpriteSize: g
   }), {
     newlyAddedEmojis: e2
-  } = (0, k.Z)(eU, l);
+  } = (0, x.Z)(eU, l);
   (0, B.b)({
     intention: l,
     isBurstReaction: eb,
@@ -279,8 +279,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           location: {
             ...eF,
             object: null != eZ ? eZ : q.qAy.EMOJI,
-            ...null != ex && {
-              page: ex
+            ...null != ek && {
+              page: ek
             }
           },
           pickerIntention: l,
@@ -353,7 +353,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     onClose: () => ev(null),
     guildId: eC.guildId,
     emojiId: eC.emojiId
-  }) : eb && !eB && (a = (0, i.jsx)(x.Z, {
+  }) : eb && !eB && (a = (0, i.jsx)(k.Z, {
     onDismiss: () => eG(!1)
   }));
   let ti = (0, i.jsx)(H.Z, {

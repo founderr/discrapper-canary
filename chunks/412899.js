@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   UB: function() {
-    return k
+    return x
   },
   ZP: function() {
     return F
@@ -80,7 +80,7 @@ function B(e) {
     })]
   })
 }
-let k = r.forwardRef(function(e, t) {
+let x = r.forwardRef(function(e, t) {
   var s, a, l;
   let u;
   let {
@@ -109,8 +109,8 @@ let k = r.forwardRef(function(e, t) {
         label: b.Z.Messages.COPY_ID_ROLE
       })
     })
-  }, [f.id]), U = (0, T.useToken)(I.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (a = f.colorString) && void 0 !== a ? a : U, B = null !== (l = (0, d.wK)(w, .6)) && void 0 !== l ? l : void 0, k = I.Z.unsafe_rawColors.WHITE_500.css, x = (0, d._i)(w);
-  null != x && .3 > (0, d.Bd)(x) && (k = I.Z.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, i.jsx)(m.Z, {
+  }, [f.id]), U = (0, T.useToken)(I.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (a = f.colorString) && void 0 !== a ? a : U, B = null !== (l = (0, d.wK)(w, .6)) && void 0 !== l ? l : void 0, x = I.Z.unsafe_rawColors.WHITE_500.css, k = (0, d._i)(w);
+  null != k && .3 > (0, d.Bd)(k) && (x = I.Z.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, i.jsx)(m.Z, {
     className: G.roleFlowerStar,
     iconClassName: c ? G.roleVerifiedIcon : void 0,
     color: w,
@@ -153,7 +153,7 @@ let k = r.forwardRef(function(e, t) {
         }),
         children: [u, c ? (0, i.jsx)(T.CloseSmallIcon, {
           size: "md",
-          color: k,
+          color: x,
           className: G.roleRemoveIcon,
           "aria-hidden": !0
         }) : null]
@@ -174,7 +174,7 @@ let k = r.forwardRef(function(e, t) {
   })
 });
 
-function x(e) {
+function k(e) {
   let {
     user: t,
     numRolesHidden: n,
@@ -302,7 +302,7 @@ function Z(e) {
     }),
     j = M.map(e => {
       var t;
-      return (0, i.jsx)(k, {
+      return (0, i.jsx)(x, {
         className: f,
         role: e,
         canRemove: Z && P.r6(s, B.id, H, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === B.id,
@@ -315,7 +315,7 @@ function Z(e) {
         disableBorderColor: N
       }, e.id)
     });
-  return null != p && 0 !== y ? t = (0, i.jsx)(x, {
+  return null != p && 0 !== y ? t = (0, i.jsx)(k, {
     ...e,
     numRolesHidden: y
   }) : Z && (t = (0, i.jsx)(V, {

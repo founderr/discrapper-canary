@@ -43,11 +43,11 @@ let v = "SELECTABLE",
       name: C.Z.Messages.UNCATEGORIZED
     })
   },
-  w = x(g.kod),
+  w = k(g.kod),
   B = [],
-  k = {};
+  x = {};
 
-function x(e) {
+function k(e) {
   return {
     id: e,
     [v]: [],
@@ -72,7 +72,7 @@ function Z() {
 
 function H(e) {
   var t;
-  let n = x(e);
+  let n = k(e);
   return M[e] = n, b[e] = [], ! function(e) {
       let {
         id: t
@@ -264,7 +264,7 @@ class q extends(i = _.ZP.Store) {
   }
   getTextChannelNameDisambiguations(e) {
     var t;
-    return null != e && null !== (t = P[e]) && void 0 !== t ? t : k
+    return null != e && null !== (t = P[e]) && void 0 !== t ? t : x
   }
 }
 o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {

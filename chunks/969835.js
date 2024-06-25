@@ -54,7 +54,7 @@ function v(e) {
     channelId: L,
     messageId: D,
     roleId: M
-  }), k = (0, s.e7)([d.Z], () => null != v ? d.Z.getGuild(v) : null), x = (0, s.e7)([c.ZP], () => null != v ? c.ZP.getMember(v, t.id) : null), V = r.useRef(null), Z = (0, T.ZP)(t.id, v), H = (0, a.Z)(V);
+  }), x = (0, s.e7)([d.Z], () => null != v ? d.Z.getGuild(v) : null), k = (0, s.e7)([c.ZP], () => null != v ? c.ZP.getMember(v, t.id) : null), V = r.useRef(null), Z = (0, T.ZP)(t.id, v), H = (0, a.Z)(V);
   r.useEffect(() => {
     null == y || y(null == V ? void 0 : V.current)
   }, [V, y]);
@@ -78,7 +78,7 @@ function v(e) {
       channelId: L,
       messageId: D,
       roleId: M,
-      shouldTrackViewOnMount: null == x || null != x.fullProfileLoadedTimestamp,
+      shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
       children: (0, i.jsxs)(o.Dialog, {
         ref: V,
         "aria-label": t.username,
@@ -123,7 +123,7 @@ function v(e) {
             user: t,
             currentUser: n,
             displayProfile: Z,
-            guild: k,
+            guild: x,
             isHovering: H,
             onOpenProfile: F,
             channelId: L,

@@ -40,8 +40,8 @@ var i, r, s = n(735250),
   G = n(474936),
   w = n(874893),
   B = n(526761),
-  k = n(231338),
-  x = n(689938),
+  x = n(231338),
+  k = n(689938),
   V = n(758219);
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
 let Z = Object.freeze({
@@ -75,10 +75,10 @@ let Z = Object.freeze({
       type: "EDITOR",
       isCoachmark: !0,
       isPreview: !0
-    }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
+    }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
       type: "EDITOR",
       isCoachmark: !0
-    }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => x.Z.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
+    }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => k.Z.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
     return (0, s.jsxs)("div", {
       className: V.title,
       children: [(0, s.jsx)(d.Heading, {
@@ -105,19 +105,19 @@ let Z = Object.freeze({
     }).with({
       type: "EDITOR",
       isPreview: !0
-    }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+    }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
       onPremiumClick: A.z
     })).with({
       type: "EDITOR",
       isCoachmark: !0
-    }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
+    }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
       type: "EDITOR",
       isPreview: !1
-    }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
+    }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
       isPreview: !0
-    }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
+    }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
       onPremiumClick: A.z
-    })).otherwise(() => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
+    })).otherwise(() => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
     return (0, s.jsx)(d.Heading, {
       variant: "text-sm/normal",
       children: a
@@ -162,22 +162,22 @@ W.Basic = e => {
   return (0, s.jsxs)("section", {
     className: l()(V.presets, t),
     children: [(0, s.jsx)(P.bD, {
-      theme: k.BR.LIGHT,
-      isSelected: a && !u && r === k.BR.LIGHT,
-      onSelect: () => c(k.BR.LIGHT)
+      theme: x.BR.LIGHT,
+      isSelected: a && !u && r === x.BR.LIGHT,
+      onSelect: () => c(x.BR.LIGHT)
     }), (0, s.jsx)(P.bD, {
-      theme: k.BR.DARK,
-      isSelected: a && !u && r === k.BR.DARK,
-      onSelect: () => c(k.BR.DARK)
+      theme: x.BR.DARK,
+      isSelected: a && !u && r === x.BR.DARK,
+      onSelect: () => c(x.BR.DARK)
     }), d && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(P.bD, {
-        theme: k.BR.DARKER,
-        isSelected: a && !u && r === k.BR.DARKER,
-        onSelect: () => c(k.BR.DARKER)
+        theme: x.BR.DARKER,
+        isSelected: a && !u && r === x.BR.DARKER,
+        onSelect: () => c(x.BR.DARKER)
       }), (0, s.jsx)(P.bD, {
-        theme: k.BR.MIDNIGHT,
-        isSelected: a && !u && r === k.BR.MIDNIGHT,
-        onSelect: () => c(k.BR.MIDNIGHT)
+        theme: x.BR.MIDNIGHT,
+        isSelected: a && !u && r === x.BR.MIDNIGHT,
+        onSelect: () => c(x.BR.MIDNIGHT)
       })]
     }), (0, s.jsx)(P.bD, {
       theme: "system",
@@ -199,7 +199,7 @@ W.Basic = e => {
   } = (0, h.ZP)(T.Z.CLIENT_THEMES_THEME_SELECTOR), [g, C, v] = (0, _.Wu)([M.Z], () => {
     var e;
     return [M.Z.isPreview, M.Z.isCoachmark, null === (e = M.Z.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [L, U] = o.useState(!1), [B, k] = o.useState(-1), Z = (0, _.e7)([I.Z], () => I.Z.useReducedMotion), {
+  }), [L, U] = o.useState(!1), [B, x] = o.useState(-1), Z = (0, _.e7)([I.Z], () => I.Z.useReducedMotion), {
     enabled: W
   } = (0, N.J)({
     location: "GradientSelectors"
@@ -231,10 +231,10 @@ W.Basic = e => {
         theme: e.theme
       }, S), null != t) {
       if (L && U(!1), t <= B || 0 === t) {
-        k(0);
+        x(0);
         return
       }
-      k(e => e + 1)
+      x(e => e + 1)
     }
   };
   return (0, s.jsxs)("section", {
@@ -242,7 +242,7 @@ W.Basic = e => {
     children: ["EDITOR" === u && g && K ? (0, s.jsx)(O.ZP, {
       type: G.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       subscriptionTier: G.Si.TIER_2,
-      children: x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+      children: k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
         onPremiumClick: A.z
       })
     }) : (0, s.jsxs)("div", {

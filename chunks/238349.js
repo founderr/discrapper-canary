@@ -2,7 +2,7 @@
 let i;
 n.d(t, {
   U: function() {
-    return x
+    return k
   }
 }), n(47120);
 var r, s, o, a, l = n(392711),
@@ -51,7 +51,7 @@ function B() {
   L = [], i = null, p = null, g = new Set, C = _.z.LATEST_ACTIVITY, v = 0, M = [], P = u().chain(O), y = u().chain(O), b.clear(), U.clear()
 }
 
-function k() {
+function x() {
   var e;
   let t = f.Z.getChannelId();
   if (null == t || !(null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
@@ -60,7 +60,7 @@ function k() {
   })
 }
 
-function x(e) {
+function k(e) {
   let t = h.Z.getChannel(e);
   return null == t ? [] : Object.values(E.Z.getThreadsForParent(t.guild_id, t.id)).map(e => {
     let {
@@ -128,10 +128,10 @@ a = "ForumActivePostStore", (o = "displayName") in(s = Z) ? Object.definePropert
   configurable: !0,
   writable: !0
 }) : s[o] = a, t.Z = new Z(d.Z, {
-  CONNECTION_OPEN: k,
-  OVERLAY_INITIALIZE: k,
-  GUILD_CREATE: k,
-  CHANNEL_SELECT: k,
+  CONNECTION_OPEN: x,
+  OVERLAY_INITIALIZE: x,
+  GUILD_CREATE: x,
+  CHANNEL_SELECT: x,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t

@@ -48,13 +48,13 @@ function _(e, t, n) {
       style: y,
       maxContentWidth: U,
       ...b
-    } = n, G = r.useRef(null), w = r.useRef(null), [B, k] = r.useState(!1), {
-      scrollerRef: x,
+    } = n, G = r.useRef(null), w = r.useRef(null), [B, x] = r.useState(!1), {
+      scrollerRef: k,
       scrollerState: V,
       getScrollerState: Z
     } = (0, l.T4)();
     (0, l.tT)({
-      scrollerRef: x,
+      scrollerRef: k,
       className: P,
       specs: s,
       orientation: "vertical",
@@ -87,27 +87,27 @@ function _(e, t, n) {
     }), q = (0, r.useCallback)(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
       e > V.current.dirty && (V.current.dirty = e, 2 === e ? K() : H(1))
-    }, [H, V, K]), X = (0, l.t2)(x), Q = (0, r.useCallback)(() => z.itemGrid, [z]), J = (0, r.useCallback)(() => z.coordsMap, [z]), $ = r.useCallback(() => q(), [q]);
+    }, [H, V, K]), X = (0, l.t2)(k), Q = (0, r.useCallback)(() => z.itemGrid, [z]), J = (0, r.useCallback)(() => z.coordsMap, [z]), $ = r.useCallback(() => q(), [q]);
     (0, l.zn)({
-      ref: x,
+      ref: k,
       key: "container",
       onUpdate: $,
       resizeObserver: c,
       listenerMap: _
     }), (0, r.useImperativeHandle)(d, () => ({
-      getScrollerNode: () => x.current,
+      getScrollerNode: () => k.current,
       getItemGrid: Q,
       getCoordsMap: J,
       getScrollerState: Z,
-      ...(0, l.Ue)(x, Z, X)
-    }), [x, Z, Q, X, J]);
+      ...(0, l.Ue)(k, Z, X)
+    }), [k, Z, Q, X, J]);
     let ee = (0, r.useCallback)(e => {
-      q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
-        G.current = null, k(!1)
+      q(1), null == G.current ? x(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+        G.current = null, x(!1)
       }, 200), null != E && E(e)
     }, [E, q]);
     return (0, i.jsx)("div", {
-      ref: x,
+      ref: k,
       onScroll: ee,
       className: o()(P, {
         [e]: !0,

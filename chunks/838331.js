@@ -94,14 +94,14 @@ function p(e) {
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    k = r.useCallback(() => new Promise(e => {
+    x = r.useCallback(() => new Promise(e => {
       let t = U.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    x = r.useCallback((e, t) => {
+    k = r.useCallback((e, t) => {
       P(t);
       let n = document.querySelector(e),
         i = U.current;
@@ -114,8 +114,8 @@ function p(e) {
       isEnabled: !0,
       useVirtualFocus: !0,
       scrollToStart: B,
-      scrollToEnd: k,
-      setFocus: x
+      scrollToEnd: x,
+      setFocus: k
     }),
     Z = C ? d.Tv : d.lW;
   return (0, i.jsx)(l.bG, {

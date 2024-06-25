@@ -39,27 +39,27 @@ let g = new I.Z("GuildMemberStore"),
 
 function G(e, t) {
   if (null == t.communicationDisabledUntil || !(0, T.b)(t)) return w(e, t.userId);
-  let n = x(e, t.userId);
+  let n = k(e, t.userId);
   L[n] !== t.communicationDisabledUntil && (0, T.b)(t) && (L[n] = t.communicationDisabledUntil, B(n))
 }
 
 function w(e, t) {
   if (null != t) {
-    let n = x(e, t);
-    null != L[n] && B(n), k(x(e, t))
+    let n = k(e, t);
+    null != L[n] && B(n), x(k(e, t))
   } else
-    for (let t in L) Z(t) === e && (B(t), k(t))
+    for (let t in L) Z(t) === e && (B(t), x(t))
 }
 
 function B(e) {
   M += 1, y[e] = M
 }
 
-function k(e) {
+function x(e) {
   V(e) === m.default.getId() && (0, h.l)(Z(e)), delete L[e]
 }
 
-function x(e, t) {
+function k(e, t) {
   let n = [];
   return n[0] = e, n[1] = t, n.join("-")
 }

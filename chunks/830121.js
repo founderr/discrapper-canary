@@ -4,7 +4,7 @@ n.d(t, {
     return F
   },
   Sq: function() {
-    return x
+    return k
   },
   ZP: function() {
     return Z
@@ -68,7 +68,7 @@ function B(e) {
   }
 }
 
-function k(e, t) {
+function x(e, t) {
   var n, i, r;
   if ((null === (n = t.host) || void 0 === n ? void 0 : n.replace(/^www[.]/i, "")) !== e.host) return null;
   let s = null !== (i = t.pathname) && void 0 !== i ? i : "",
@@ -78,9 +78,9 @@ function k(e, t) {
   return "" === a ? null : a
 }
 
-function x(e) {
+function k(e) {
   var t, n, i, r;
-  return null !== (r = null !== (i = null !== (n = null !== (t = k(M, e)) && void 0 !== t ? t : k(P, e)) && void 0 !== n ? n : k(y, e)) && void 0 !== i ? i : k(U, e)) && void 0 !== r ? r : k(b, e)
+  return null !== (r = null !== (i = null !== (n = null !== (t = x(M, e)) && void 0 !== t ? t : x(P, e)) && void 0 !== n ? n : x(y, e)) && void 0 !== i ? i : x(U, e)) && void 0 !== r ? r : x(b, e)
 }
 
 function V(e) {
@@ -92,9 +92,9 @@ function V(e) {
     templateHostRemainingPath: null,
     primaryHostRemainingPath: null
   };
-  let o = k(L, s),
-    a = k(D, s),
-    l = null !== (r = null !== (i = null !== (n = null !== (t = k(M, s)) && void 0 !== t ? t : k(P, s)) && void 0 !== n ? n : k(y, s)) && void 0 !== i ? i : k(U, s)) && void 0 !== r ? r : k(b, s);
+  let o = x(L, s),
+    a = x(D, s),
+    l = null !== (r = null !== (i = null !== (n = null !== (t = x(M, s)) && void 0 !== t ? t : x(P, s)) && void 0 !== n ? n : x(y, s)) && void 0 !== i ? i : x(U, s)) && void 0 !== r ? r : x(b, s);
   return {
     url: s,
     inviteHostRemainingPath: o,

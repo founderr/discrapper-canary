@@ -272,7 +272,7 @@ function w() {
 }
 let B = [];
 
-function k() {
+function x() {
   let e = S.Z.getAllApplicationStreams(),
     t = B.concat(e);
   B = e, t.forEach(e => {
@@ -280,13 +280,13 @@ function k() {
   })
 }
 
-function x() {
+function k() {
   let e = f.default.getId();
   G.forEach(null, t => t.rebuildMember(e, !0))
 }
 class V extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(g.default, O.Z, N.Z, m.ZP, R.Z, p.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([p.Z], x), this.syncWith([S.Z], k)
+    this.waitFor(g.default, O.Z, N.Z, m.ZP, R.Z, p.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([p.Z], k), this.syncWith([S.Z], x)
   }
   getProps(e, t) {
     let n = G.get(e, U(t));

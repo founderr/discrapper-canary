@@ -51,8 +51,8 @@ var i = n(735250),
   G = n(626135),
   w = n(768581),
   B = n(900849),
-  k = n(74538),
-  x = n(886132),
+  x = n(74538),
+  k = n(886132),
   V = n(524444),
   Z = n(981631),
   H = n(176505),
@@ -238,7 +238,7 @@ let W = () => ({
       guildEmoji: P,
       demoMode: y = !1,
       nonce: b
-    } = e, w = (0, l.e7)([D.default], () => D.default.getCurrentUser()), B = (0, l.e7)([L.Z], () => L.Z.getGuildId()), K = k.ZP.isPremium(w), q = null != B && (B === (null == S ? void 0 : S.id) || B === (null == R ? void 0 : R.id)), X = null != R, J = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    } = e, w = (0, l.e7)([D.default], () => D.default.getCurrentUser()), B = (0, l.e7)([L.Z], () => L.Z.getGuildId()), K = x.ZP.isPremium(w), q = null != B && (B === (null == S ? void 0 : S.id) || B === (null == R ? void 0 : R.id)), X = null != R, J = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
     y && (K = !0, J = !0, X = !1, q = !1);
     let $ = W(),
       {
@@ -270,7 +270,7 @@ let W = () => ({
       disableTrack: !ee
     });
     let es = L.Z.getGuildId(),
-      eo = (0, x.a)({
+      eo = (0, k.a)({
         isPremium: K,
         hasJoinedEmojiSourceGuild: X,
         isRoleSubscriptionEmoji: ee,
@@ -296,8 +296,8 @@ let W = () => ({
         nonce: b,
         demoMode: y
       }),
-      e_ = eo.type === x.$.JOIN_GUILD,
-      ec = eo.type === x.$.GET_PREMIUM,
+      e_ = eo.type === k.$.JOIN_GUILD,
+      ec = eo.type === k.$.GET_PREMIUM,
       [ed, eE] = r.useState(!1),
       eI = J || X && !q || null != S;
     return (0, i.jsxs)(V.W_, {
@@ -436,7 +436,7 @@ let W = () => ({
           animated: e.animated,
           ...t
         })
-      }, e.id)), !l && (c === x.$.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
+      }, e.id)), !l && (c === k.$.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(g.Z, {
           subscriptionTier: F.Si.TIER_2,
           buttonText: o.text,
@@ -451,7 +451,7 @@ let W = () => ({
             children: E
           })
         })]
-      }) : c === x.$.JOIN_GUILD ? (0, i.jsx)(_.Button, {
+      }) : c === k.$.JOIN_GUILD ? (0, i.jsx)(_.Button, {
         size: _.Button.Sizes.SMALL,
         className: j.ctaButton,
         color: _.ButtonColors.BRAND,

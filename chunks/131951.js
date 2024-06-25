@@ -29,8 +29,8 @@ var a, l, u, _ = n(512722),
   G = n(294473),
   w = n(706629),
   B = n(926951),
-  k = n(836157),
-  x = n(498600),
+  x = n(836157),
+  k = n(498600),
   V = n(631610),
   Z = n(951958),
   H = n(529558),
@@ -150,8 +150,8 @@ let ep = (0, S.Mt)((0, S.jj)()),
   eG = !1,
   ew = !1,
   eB = !1,
-  ek = eh.Av,
-  ex = !1,
+  ex = eh.Av,
+  ek = !1,
   eV = !1,
   eZ = !1,
   eH = !1,
@@ -214,7 +214,7 @@ function te() {
   let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB,
     o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,
     a = s;
-  if ((null == a ? void 0 : a.desktopSource) != null && a.desktopSource.id !== (null == o ? void 0 : null === (e = o.desktopSource) || void 0 === e ? void 0 : e.id) && (null != a.desktopSource.soundshareId && (0, ee.isWindows)() && O.pn(a.desktopSource.soundshareId), ep.setGoLiveSource(null, eD)), (null == a ? void 0 : a.cameraSource) != null && (a.cameraSource.videoDeviceGuid !== (null == o ? void 0 : null === (t = o.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || a.cameraSource.audioDeviceGuid !== (null == o ? void 0 : null === (n = o.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && ep.setGoLiveSource(null, eD), (eB || r) && (ek = (eB = r) ? tc(ey, e5().videoDeviceId) : eh.Av, ep.setVideoInputDevice(ek)), s = o, null != o) {
+  if ((null == a ? void 0 : a.desktopSource) != null && a.desktopSource.id !== (null == o ? void 0 : null === (e = o.desktopSource) || void 0 === e ? void 0 : e.id) && (null != a.desktopSource.soundshareId && (0, ee.isWindows)() && O.pn(a.desktopSource.soundshareId), ep.setGoLiveSource(null, eD)), (null == a ? void 0 : a.cameraSource) != null && (a.cameraSource.videoDeviceGuid !== (null == o ? void 0 : null === (t = o.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || a.cameraSource.audioDeviceGuid !== (null == o ? void 0 : null === (n = o.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && ep.setGoLiveSource(null, eD), (eB || r) && (ex = (eB = r) ? tc(ey, e5().videoDeviceId) : eh.Av, ep.setVideoInputDevice(ex)), s = o, null != o) {
     let e = {
       resolution: o.quality.resolution,
       frameRate: o.quality.frameRate
@@ -222,7 +222,7 @@ function te() {
     if (null != o.desktopSource) {
       let {
         hdrCaptureMode: t
-      } = x.Z.getCurrentConfig({
+      } = k.Z.getCurrentConfig({
         location: "f627ab_2"
       }, {
         autoTrackExposure: !1
@@ -842,10 +842,10 @@ class tm extends(l = h.ZP.Store) {
     }, {
       autoTrackExposure: !0
     });
-    return !!e && ex
+    return !!e && ek
   }
   notifyMuteUnmuteSoundWasSkipped() {
-    ex = !1
+    ek = !1
   }
   isHardwareMute() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eh.Yn.DEFAULT;
@@ -1174,7 +1174,7 @@ ef(tm, "displayName", "MediaEngineStore"), i = new tm(A.Z, {
       deaf: r
     } = e5(t);
     if (t === eh.Yn.DEFAULT && (K.Z.requestPermission(eI.Eu.AUDIO), eG)) return !1;
-    !(i = !r && !i) && (r = !1), n && (ex = !0), ta({
+    !(i = !r && !i) && (r = !1), n && (ek = !0), ta({
       mute: i,
       deaf: r
     }, t), ep.eachConnection(e9)
@@ -1415,8 +1415,8 @@ ef(tm, "displayName", "MediaEngineStore"), i = new tm(A.Z, {
       let t = ey;
       if (ey = t_(e, eS.Z.Messages.NO_VIDEO_DEVICES), eB && !E().isEqual(ey, t)) {
         var n;
-        let e = void 0 !== ey[ek],
-          i = ek === eh.w5 && (null === (n = t[eh.w5]) || void 0 === n ? void 0 : n.disabled);
+        let e = void 0 !== ey[ex],
+          i = ex === eh.w5 && (null === (n = t[eh.w5]) || void 0 === n ? void 0 : n.disabled);
         te(e || i)
       }
     }(i)
@@ -1676,7 +1676,7 @@ ef(tm, "displayName", "MediaEngineStore"), i = new tm(A.Z, {
       quality: r
     } = e, {
       enableDecoupledGameClipping: s
-    } = k.Z.getCurrentConfig({
+    } = x.Z.getCurrentConfig({
       location: "handleClipsInit"
     }, {
       autoTrackExposure: !0
@@ -1701,7 +1701,7 @@ ef(tm, "displayName", "MediaEngineStore"), i = new tm(A.Z, {
     null != o && o.desktopSource.id !== c.desktopSource.id && (ep.setClipsSource(null), (0, ee.isWindows)() && null != o.desktopSource.soundshareId && O.pn(o.desktopSource.soundshareId)), null != l && tI(l, u), o = c;
     let {
       hdrCaptureMode: d
-    } = x.Z.getCurrentConfig({
+    } = k.Z.getCurrentConfig({
       location: "f627ab_12"
     }, {
       autoTrackExposure: !1

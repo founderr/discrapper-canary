@@ -208,8 +208,8 @@ function M(e) {
     }, [G.premium, U, P, s.id]);
   if (w === E.Q.NONE) return null;
   if (w === E.Q.CLAN) {
-    var k;
-    let e = (0, c.ky)(s.id, null === (k = s.clan) || void 0 === k ? void 0 : k.badge, M);
+    var x;
+    let e = (0, c.ky)(s.id, null === (x = s.clan) || void 0 === x ? void 0 : x.badge, M);
     return (0, i.jsx)(_.Tooltip, {
       color: l,
       position: N,
@@ -231,7 +231,7 @@ function M(e) {
     })
   }
   let {
-    IconComponent: x,
+    IconComponent: k,
     backgroundDarkColor: V,
     backgroundLightColor: Z,
     foregroundDarkColor: H,
@@ -239,7 +239,7 @@ function M(e) {
     premiumBackgroundColor: Y,
     premiumForegroundColor: j
   } = v[w];
-  if (null == x) return null;
+  if (null == k) return null;
   G.premium && (t = j, n = Y);
   let W = (0, u.wj)(b) ? H : F,
     K = (0, u.wj)(b) ? V : Z;
@@ -261,7 +261,7 @@ function M(e) {
         color: null != n ? n : L,
         stroke: g,
         size: M,
-        children: (0, i.jsx)(x, {
+        children: (0, i.jsx)(k, {
           className: R,
           color: null != t ? t : "currentColor"
         })

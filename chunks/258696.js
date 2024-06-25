@@ -56,8 +56,8 @@ t.Z = r.memo(function(e) {
     channel: y,
     handleSubmit: U,
     isEmpty: b
-  } = e, G = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled), w = (0, o.e7)([I.Z], () => I.Z.getStickerPreview(y.id, M.drafts.type)), B = null != w && w.length > 0, k = (0, o.e7)([T.Z], () => T.Z.getUploads(y.id, M.drafts.type)), {
-    activeCommand: x,
+  } = e, G = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled), w = (0, o.e7)([I.Z], () => I.Z.getStickerPreview(y.id, M.drafts.type)), B = null != w && w.length > 0, x = (0, o.e7)([T.Z], () => T.Z.getUploads(y.id, M.drafts.type)), {
+    activeCommand: k,
     activeCommandOption: V
   } = (0, o.cj)([u.Z], () => ({
     activeCommand: u.Z.getActiveCommand(y.id),
@@ -88,28 +88,28 @@ t.Z = r.memo(function(e) {
       r = c.Z.getRecipientEligibility(t);
     return [F && i && r, r]
   });
-  return (!s.tq && (y.isDM() && (null === (A = M.gifts) || void 0 === A ? void 0 : A.button) != null && null == x && (S.ZP.isPremiumExactly(Y, g.p9.TIER_2) && z && E.Z.trackExposure({
+  return (!s.tq && (y.isDM() && (null === (A = M.gifts) || void 0 === A ? void 0 : A.button) != null && null == k && (S.ZP.isPremiumExactly(Y, g.p9.TIER_2) && z && E.Z.trackExposure({
     location: "dc120b_5"
   }), K && H.push((0, i.jsx)(m.Z, {
     disabled: P,
     referralsRemaining: j,
     channel: y,
     isResending: W
-  }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == x && !Z && H.push((0, i.jsx)(v, {
+  }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == k && !Z && H.push((0, i.jsx)(v, {
     disabled: P,
     channel: y
-  }, "gift")), (null === (L = M.gifs) || void 0 === L ? void 0 : L.button) != null && null == x && H.push((0, i.jsx)(N.Z, {
+  }, "gift")), (null === (L = M.gifs) || void 0 === L ? void 0 : L.button) != null && null == k && H.push((0, i.jsx)(N.Z, {
     disabled: P,
     type: M
-  }, "gif")), (null === (D = M.stickers) || void 0 === D ? void 0 : D.button) != null && null == x && H.push((0, i.jsx)(p.Z, {
+  }, "gif")), (null === (D = M.stickers) || void 0 === D ? void 0 : D.button) != null && null == k && H.push((0, i.jsx)(p.Z, {
     disabled: P,
     type: M
-  }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == x || null != V && V.type !== a.jw.ATTACHMENT) && H.push((0, i.jsx)(f.Z, {
+  }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == k || null != V && V.type !== a.jw.ATTACHMENT) && H.push((0, i.jsx)(f.Z, {
     disabled: P,
     type: M
   }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(R.Z, {
     onClick: U,
-    disabled: P || 0 === k.length && b && !B
+    disabled: P || 0 === x.length && b && !B
   }, "submit")), 0 === H.length) ? null : (0, i.jsx)("div", {
     className: C.buttons,
     children: H

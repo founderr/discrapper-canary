@@ -45,7 +45,7 @@ t.Z = e => {
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), k = c.kJ.getState(), [x, V] = r.useState(k.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
+  }), x = c.kJ.getState(), [k, V] = r.useState(x.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
   r.useEffect(() => c.kJ.useStore.subscribe(e => V(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.DZ.loadIfNecessary()
   }, []);
@@ -58,7 +58,7 @@ t.Z = e => {
           let {
             visibleRowIndex: n,
             columnIndex: l
-          } = e, u = x.rowIndex === n && x.columnIndex === l, _ = t => {
+          } = e, u = k.rowIndex === n && k.columnIndex === l, _ = t => {
             t.stopPropagation(), !C.current && !v.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
@@ -112,7 +112,7 @@ t.Z = e => {
           let {
             columnIndex: r,
             visibleRowIndex: o
-          } = e, a = x.rowIndex === o && x.columnIndex === r;
+          } = e, a = k.rowIndex === o && k.columnIndex === r;
           return (0, i.jsx)(S.Z, {
             rowIndex: L,
             descriptor: e,

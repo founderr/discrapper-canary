@@ -35,8 +35,8 @@ var i = n(735250),
   G = n(210887),
   w = n(819640),
   B = n(594174),
-  k = n(451478),
-  x = n(672752),
+  x = n(451478),
+  k = n(672752),
   V = n(812663),
   Z = n(153850),
   H = n(725568),
@@ -68,7 +68,7 @@ let et = (0, K.Un)({
     webpackId: 177741
   }),
   en = r.memo(function(e) {
-    let t = (0, _.e7)([k.Z], () => k.Z.isFocused());
+    let t = (0, _.e7)([x.Z], () => x.Z.isFocused());
     return (0, i.jsx)(Q.Z, {
       ...e,
       focused: t
@@ -80,7 +80,7 @@ t.Z = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, l.TH)(), d = (0, j.getPlatform)(), f = u.tq || u.Em, k = (0, _.e7)([G.Z], () => G.Z.darkSidebar ? J.BRd.DARK : void 0), K = (0, _.e7)([A.Z], () => A.Z.useForcedColors ? "yes" : "no"), [Q, ei] = (0, _.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark]), er = (0, _.e7)([p.Z], () => p.Z.isEditorOpen), es = (0, _.e7)([w.Z], () => w.Z.getLayers().includes(J.S9g.USER_SETTINGS)), eo = (0, _.e7)([B.default], () => W.ZP.canUseClientThemes(B.default.getCurrentUser())), ea = Q && !es, el = [];
+  } = (0, l.TH)(), d = (0, j.getPlatform)(), f = u.tq || u.Em, x = (0, _.e7)([G.Z], () => G.Z.darkSidebar ? J.BRd.DARK : void 0), K = (0, _.e7)([A.Z], () => A.Z.useForcedColors ? "yes" : "no"), [Q, ei] = (0, _.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark]), er = (0, _.e7)([p.Z], () => p.Z.isEditorOpen), es = (0, _.e7)([w.Z], () => w.Z.getLayers().includes(J.S9g.USER_SETTINGS)), eo = (0, _.e7)([B.default], () => W.ZP.canUseClientThemes(B.default.getCurrentUser())), ea = Q && !es, el = [];
   ea && ei && !eo && el.push(c.z.CLIENT_THEMES_COACHMARK);
   let [eu, e_] = (0, y.U)(el, $.R.SIDEBAR, !0);
   el.push(c.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -108,9 +108,9 @@ t.Z = function(e) {
           children: (0, i.jsx)(q.Z, {
             children: (0, i.jsxs)(E.FocusRingScope, {
               containerRef: eE,
-              children: [(0, i.jsx)(Y.Co, {}), (0, i.jsx)(x.ZP, {}), (0, i.jsx)(a.OU, {}), null != d ? (0, i.jsx)(en, {
+              children: [(0, i.jsx)(Y.Co, {}), (0, i.jsx)(k.ZP, {}), (0, i.jsx)(a.OU, {}), null != d ? (0, i.jsx)(en, {
                 type: d,
-                themeOverride: k
+                themeOverride: x
               }) : null, (0, i.jsx)(N.Wu, {
                 appContext: J.IlC.APP,
                 renderWindow: window,

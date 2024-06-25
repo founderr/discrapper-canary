@@ -4,7 +4,7 @@ n.d(t, {
     return V
   },
   Rc: function() {
-    return k
+    return x
   },
   W1: function() {
     return H
@@ -16,7 +16,7 @@ n.d(t, {
     return G
   },
   dV: function() {
-    return x
+    return k
   },
   g: function() {
     return b
@@ -197,14 +197,14 @@ async function B(e) {
   } catch (e) {}
 }
 
-function k(e) {
+function x(e) {
   (0, A.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })
 }
 
-function x(e, t) {
+function k(e, t) {
   o.tn.patch({
     url: C.ANM.STREAM(e),
     body: {

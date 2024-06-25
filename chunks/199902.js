@@ -68,7 +68,7 @@ function B(e) {
   let t = A.Z.getBasicChannel(e.channelId);
   return null != t && (0, h.p9)(t, C.Z, m.Z, R.Z, E.Z)[0]
 }
-class k extends(a = c.ZP.Store) {
+class x extends(a = c.ZP.Store) {
   initialize() {
     this.syncWith([R.Z], () => !0), this.waitFor(I.ZP, R.Z)
   }
@@ -163,12 +163,12 @@ class k extends(a = c.ZP.Store) {
     }
   }
 }
-_ = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.defineProperty(l, u, {
+_ = "ApplicationStreamingStore", (u = "displayName") in(l = x) ? Object.defineProperty(l, u, {
   value: _,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[u] = _, t.Z = new k(d.Z, {
+}) : l[u] = _, t.Z = new x(d.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       applicationStreamState: t

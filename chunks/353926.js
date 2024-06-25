@@ -63,7 +63,7 @@ function B(e) {
   return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & T.xW$.STAFF) === T.xW$.STAFF || null != e.personal_connection_id || !1
 }
 
-function k(e, t, n, i) {
+function x(e, t, n, i) {
   let r = "".concat(t.type, "|").concat(e),
     s = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
   if (t.type === I.xY.USER) return s && (r += "|".concat(n), i && (r += "|triggerDebugging")), r;
@@ -71,7 +71,7 @@ function k(e, t, n, i) {
   throw Error()
 }
 
-function x(e) {
+function k(e) {
   if (e.type === I.xY.USER) return b("".concat(e.bucket, "|").concat(e.revision));
   if (e.type === I.xY.GUILD) return b("".concat(e.bucket, "|").concat(e.revision, "|").concat(e.guildId));
   throw Error()
@@ -79,8 +79,8 @@ function x(e) {
 let V = Date.now();
 
 function Z(e, t, n, i) {
-  let r = R[k(e, t, n, i)];
-  return !(null == r || Date.now() - r.time > 6048e5) && r.hash === x(t)
+  let r = R[x(e, t, n, i)];
+  return !(null == r || Date.now() - r.time > 6048e5) && r.hash === k(t)
 }
 
 function H(e) {
@@ -132,9 +132,9 @@ function H(e) {
       fingerprint: o
     })
   }
-  R[k(t, n, i, u)] = {
+  R[x(t, n, i, u)] = {
     time: Date.now(),
-    hash: x(n)
+    hash: k(n)
   }, ee(R)
 }
 

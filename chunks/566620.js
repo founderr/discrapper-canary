@@ -22,13 +22,13 @@ n.d(t, {
     return P
   },
   pu: function() {
-    return x
+    return k
   },
   rp: function() {
     return U
   },
   sN: function() {
-    return k
+    return x
   },
   tg: function() {
     return H
@@ -300,7 +300,7 @@ async function B(e) {
     }
   }
 }
-async function k(e) {
+async function x(e) {
   let {
     activityChannelId: t,
     invitedChannelId: n,
@@ -312,7 +312,7 @@ async function k(e) {
   }, r);
   null != S.Z.getChannel(n) && u.Z.sendInvite(n, s.code, r, null)
 }
-async function x(e) {
+async function k(e) {
   let {
     channelId: t,
     applicationId: n,

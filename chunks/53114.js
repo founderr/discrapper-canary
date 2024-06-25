@@ -331,7 +331,7 @@ class h extends o.Z {
         qualityDecoderReboots: G,
         qualityScoreErrors: w,
         qualityFrameDrops: B,
-        qualitySizeMismatches: k
+        qualitySizeMismatches: x
       } = e.aggregatedProperties;
     return {
       ..._,
@@ -362,7 +362,7 @@ class h extends o.Z {
       encoder_quality_decoder_reboots: G,
       encoder_quality_score_errors: w,
       encoder_quality_frame_drops: B,
-      encoder_quality_size_mismatches: k
+      encoder_quality_size_mismatches: x
     }
   }
   receivedStats(e, t, n) {

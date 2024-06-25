@@ -75,11 +75,11 @@ function B() {
   y += 1
 }
 
-function k() {
+function x() {
   B()
 }
 
-function x() {
+function k() {
   B()
 }
 
@@ -252,17 +252,17 @@ o = "PermissionStore", (s = "displayName") in(r = K) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[s] = o, t.Z = new K(c.Z, {
-  BACKGROUND_SYNC: k,
-  CONNECTION_OPEN: k,
-  OVERLAY_INITIALIZE: k,
-  CACHE_LOADED: k,
-  CACHE_LOADED_LAZY: k,
+  BACKGROUND_SYNC: x,
+  CONNECTION_OPEN: x,
+  OVERLAY_INITIALIZE: x,
+  CACHE_LOADED: x,
+  CACHE_LOADED_LAZY: x,
   CONNECTION_CLOSED: function() {
     z()
   },
-  GUILD_CREATE: x,
-  GUILD_UPDATE: x,
-  GUILD_DELETE: x,
+  GUILD_CREATE: k,
+  GUILD_UPDATE: k,
+  GUILD_DELETE: k,
   GUILD_MEMBER_ADD: V,
   GUILD_MEMBER_UPDATE: V,
   CURRENT_USER_UPDATE: V,

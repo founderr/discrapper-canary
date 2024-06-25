@@ -20,7 +20,7 @@ n.d(t, {
     return g
   },
   ay: function() {
-    return x
+    return k
   },
   gT: function() {
     return N
@@ -38,7 +38,7 @@ n.d(t, {
     return v
   },
   xR: function() {
-    return k
+    return x
   }
 }), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
 var r = n(654861),
@@ -69,8 +69,8 @@ function f(e) {
     format: c = null
   } = e;
   if (null == r || null == s) return;
-  let d = null != c ? c : u && k(s) ? "gif" : "jpg";
-  u && x(s) && (d = "mp4");
+  let d = null != c ? c : u && x(s) ? "gif" : "jpg";
+  u && k(s) && (d = "mp4");
   let E = window.GLOBAL_ENV.CDN_HOST;
   if (null != E ? ("jpg" === d && (d = h ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(E, "/").concat(i, "/").concat(r, "/").concat(s, ".").concat(d)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, d), "mp4" === d) return t;
   let I = {};
@@ -132,7 +132,7 @@ function R(e) {
       canAnimate: s = !1,
       size: a = d.IXf
     } = e,
-    u = s && k(r) ? "gif" : "jpg",
+    u = s && x(r) ? "gif" : "jpg",
     {
       CDN_HOST: _
     } = window.GLOBAL_ENV;
@@ -164,7 +164,7 @@ function g(e) {
   } = e;
   if (null == i) return;
   let o = window.GLOBAL_ENV.CDN_HOST,
-    a = r && k(i) ? "gif" : "png";
+    a = r && x(i) ? "gif" : "png";
   return t = (null != o ? "".concat(location.protocol, "//").concat(o, "/banners/").concat(n, "/").concat(i, ".").concat(a) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d.ANM.USER_BANNER(n, i, a)) + "?size=".concat((0, l.oO)(s * (0, l.x_)()))
 }
 
@@ -193,7 +193,7 @@ function v(e) {
   } = e;
   if (null == r || null == i) return;
   let a = window.GLOBAL_ENV.CDN_HOST,
-    u = s && k(r) ? "gif" : "png",
+    u = s && x(r) ? "gif" : "png",
     _ = d.ANM.GUILD_MEMBER_BANNER(i, n, r, u);
   return t = (null != a ? "".concat(location.protocol, "//").concat(a).concat(_) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _) + "?size=".concat((0, l.oO)(o * (0, l.x_)()))
 }
@@ -218,7 +218,7 @@ function D(e) {
     r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (null == i) return null;
   let s = (0, l.oO)(240 * (0, l.x_)()),
-    o = r && k(i) ? "gif" : h ? "webp" : "jpg",
+    o = r && x(i) ? "gif" : h ? "webp" : "jpg",
     a = window.GLOBAL_ENV.CDN_HOST;
   return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d.ANM.GUILD_BANNER(n, i, o)) + "?size=".concat(s), "jpg" === o && (t += "&quality=lossless"), t
 }
@@ -369,16 +369,16 @@ function B(e) {
   })) && void 0 !== n ? n : (r = s, i.DEFAULT_GROUP_DM_AVATARS[c.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length])
 }
 
-function k(e) {
+function x(e) {
   return null != e && e.startsWith("a_")
 }
 
-function x(e) {
+function k(e) {
   return null != e && e.startsWith("v_")
 }
 
 function V(e) {
-  return null != e && k(function(e) {
+  return null != e && x(function(e) {
     let t;
     try {
       return (t = new URL(e).pathname).split("/").pop()
@@ -407,9 +407,9 @@ t.ZP = {
   getUserBannerURL: g,
   getAvatarDecorationURL: C,
   hasAnimatedGuildIcon: function(e) {
-    return k(null == e ? void 0 : e.icon)
+    return x(null == e ? void 0 : e.icon)
   },
-  isAnimatedIconHash: k,
+  isAnimatedIconHash: x,
   getUserAvatarSource: (e, t, n) => Z(O(e, t, n)),
   getGuildIconURL: y,
   getGuildSplashURL: L,

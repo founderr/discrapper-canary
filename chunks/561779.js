@@ -133,8 +133,8 @@ class A extends(r = a.PureComponent) {
       "aria-describedby": w
     } = this.props, B = 0;
     S ? null != s && (null != l ? B = s[l] : null != a && (B = s[a])) : B = this.scaleValue(t);
-    let k = "".concat(B, "%"),
-      x = null != s && null != r ? s.map((e, t) => {
+    let x = "".concat(B, "%"),
+      k = null != s && null != r ? s.map((e, t) => {
         let n = r[t],
           i = null != p && p === n,
           s = this.renderMark(n);
@@ -186,7 +186,7 @@ class A extends(r = a.PureComponent) {
         ref: this.containerRef,
         children: [(0, o.jsx)("div", {
           className: h.track,
-          children: x
+          children: k
         }), (0, o.jsx)("div", {
           className: u()(h.bar, D),
           style: A,
@@ -194,7 +194,7 @@ class A extends(r = a.PureComponent) {
             className: h.barFill,
             style: {
               ...m,
-              width: k
+              width: x
             }
           })
         }), N, (0, o.jsx)("div", {
@@ -209,7 +209,7 @@ class A extends(r = a.PureComponent) {
               className: u()(h.grabber, M),
               style: {
                 ...P,
-                left: k
+                left: x
               },
               onMouseDown: this.handleMouseDown,
               ref: this.grabberRef

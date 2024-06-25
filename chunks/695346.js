@@ -142,10 +142,10 @@ n.d(t, {
     return ey
   },
   h2: function() {
-    return x
+    return k
   },
   iG: function() {
-    return k
+    return x
   },
   iH: function() {
     return eC
@@ -331,8 +331,8 @@ let f = (0, a.Zc)("notifications", "quietMode", e => {
 }, e => s.D5.create({
   value: e
 }));
-let k = (0, a.Zc)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
-  x = (0, a.Zc)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
+let x = (0, a.Zc)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+  k = (0, a.Zc)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, a.Zc)("privacy", "friendDiscoveryFlags", e => {
   var t;
   return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0

@@ -39,8 +39,8 @@ var i = n(735250),
   G = n(275920),
   w = n(952561),
   B = n(513202),
-  k = n(915863),
-  x = n(701488),
+  x = n(915863),
+  k = n(701488),
   V = n(981631),
   Z = n(689938);
 
@@ -52,7 +52,7 @@ function H(e) {
     user: Y,
     onAction: j,
     isEmbedded: W = !1,
-    ButtonComponent: K = k.Z,
+    ButtonComponent: K = x.Z,
     ...z
   } = e, {
     analyticsLocations: q
@@ -108,7 +108,7 @@ function H(e) {
         applicationId: ee,
         channelId: m.Z.getVoiceChannelId(),
         messageId: null,
-        intent: x.Ws.PLAY,
+        intent: k.Ws.PLAY,
         embedded: (0, b.Z)(t, V.xjy.EMBEDDED)
       }), (0, G.Z)({
         type: V.q5t.JOIN,
