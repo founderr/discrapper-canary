@@ -19,13 +19,13 @@ t.Z = function(e) {
     onContentHeightChange: h,
     quest: S,
     useReducedMotion: E
-  } = e, f = o.useRef(null), N = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
+  } = e, f = o.useRef(null), v = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
   return (0, s.jsxs)(r.p, {
     expandedContentRef: n,
     collapsedContentRef: f,
     expansionSpring: d,
     isExpansionAnimationComplete: x,
-    children: [!N && (0, s.jsx)(a.Z, {
+    children: [!v && (0, s.jsx)(a.Z, {
       quest: S,
       expansionSpring: d,
       useReducedMotion: E,

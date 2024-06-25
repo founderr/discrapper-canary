@@ -29,8 +29,8 @@ var n = t(735250),
   P = t(669079),
   Z = t(74538),
   f = t(695346),
-  j = t(317941),
-  v = t(622474),
+  v = t(317941),
+  j = t(622474),
   U = t(981631),
   B = t(474936),
   b = t(689938),
@@ -166,7 +166,7 @@ s.Z = function() {
     S.Z.open(U.oAB.PREMIUM)
   }
   return u && y && V ? (0, n.jsxs)(n.Fragment, {
-    children: [h ? (0, n.jsx)(v.Z, {
+    children: [h ? (0, n.jsx)(j.Z, {
       dropsOptedOut: R,
       dropsStatuses: m
     }) : null, function() {
@@ -231,19 +231,19 @@ s.Z = function() {
             code: k[e.id],
             addClaimedOutboundPromotionCode: w,
             disabled: !a
-          }, e.id)), null != s ? (0, n.jsx)(j.Z, {
+          }, e.id)), null != s ? (0, n.jsx)(v.Z, {
             className: G.skuCard,
             skuId: s.skuId,
             subscriptionPlanId: s.subscriptionPlanId,
             entitlements: [s],
             giftCodeBatchId: B.m8
-          }, (0, P.Bg)(s.skuId, s.subscriptionPlanId)) : null, r.length > 0 ? (0, n.jsx)(j.Z, {
+          }, (0, P.Bg)(s.skuId, s.subscriptionPlanId)) : null, r.length > 0 ? (0, n.jsx)(v.Z, {
             className: G.skuCard,
             skuId: r[0].skuId,
             subscriptionPlanId: r[0].subscriptionPlanId,
             entitlements: r,
             giftCodeBatchId: B.rX
-          }, (0, P.Bg)(r[0].skuId, r[0].subscriptionPlanId)) : null, c.length > 0 ? (0, n.jsx)(j.Z, {
+          }, (0, P.Bg)(r[0].skuId, r[0].subscriptionPlanId)) : null, c.length > 0 ? (0, n.jsx)(v.Z, {
             className: G.skuCard,
             skuId: c[0].skuId,
             subscriptionPlanId: c[0].subscriptionPlanId,
@@ -280,7 +280,7 @@ s.Z = function() {
             subscriptionPlanId: t,
             giftStyle: i
           } = (0, P.Z0)(e);
-          return (0, n.jsx)(j.Z, {
+          return (0, n.jsx)(v.Z, {
             className: G.skuCard,
             skuId: s,
             subscriptionPlanId: t,

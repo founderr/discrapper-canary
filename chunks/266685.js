@@ -16,9 +16,9 @@ var s = n(735250),
   S = n(918701),
   E = n(865364),
   f = n(566078),
-  N = n(340100),
+  v = n(340100),
   T = n(611855),
-  v = n(644646),
+  N = n(644646),
   j = n(78826),
   _ = n(670638),
   A = n(667105),
@@ -31,31 +31,31 @@ let y = o.forwardRef(function(e, t) {
     className: E,
     isExpanded: y,
     isExpansionAnimationComplete: U,
-    onCtxMenuOpen: Z,
-    onCtxMenuClose: b,
+    onCtxMenuOpen: b,
+    onCtxMenuClose: Z,
     onCtxMenuSelect: Q,
     quest: I,
-    useReducedMotion: P
-  } = e, k = (0, l.e7)([C.Z], () => C.Z.isEnrolling(I.id), [I]), L = (0, g.B6)(I.config.expiresAt), q = f.r.build(I.config), w = (0, g.B6)(q.rewardsExpireAt), V = o.useMemo(() => (0, S.nP)(I.config.assets.questBarHero), [I]), H = (0, A.tP)(q.application.id), D = o.useCallback(() => {
+    useReducedMotion: k
+  } = e, P = (0, l.e7)([C.Z], () => C.Z.isEnrolling(I.id), [I]), L = (0, g.B6)(I.config.expiresAt), q = f.r.build(I.config), w = (0, g.B6)(q.rewardsExpireAt), H = o.useMemo(() => (0, S.nP)(I.config.assets.questBarHero), [I]), V = (0, A.tP)(q.application.id), D = o.useCallback(() => {
     (0, m.AH)(I.id, {
       questContent: h.jn.QUEST_BAR,
       questContentCTA: x.jZ.ACCEPT_QUEST
     })
-  }, [I]), z = (0, A.hf)({
+  }, [I]), W = (0, A.hf)({
     quest: I,
     location: h.jn.QUEST_BAR
-  }), W = o.useCallback(() => {
+  }), z = o.useCallback(() => {
     (0, S.FE)(I, {
       content: h.jn.QUEST_BAR,
       ctaContent: x.jZ.OPEN_GAME_LINK
     })
-  }, [I]), G = q.features.has(B.S7.POST_ENROLLMENT_CTA), K = (0, g.Rf)({
+  }, [I]), G = q.features.has(B.S7.POST_ENROLLMENT_CTA), F = (0, g.Rf)({
     quest: I,
     location: B.dr.QUESTS_BAR
-  }), Y = K.progressSeconds > 0, F = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (a = I.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, $ = o.useMemo(() => (0, S.Xv)(I.config), [I.config]), J = y && U, ee = (0, S.ph)(I), et = (0, S.pG)({
+  }), K = F.progressSeconds > 0, Y = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (a = I.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, $ = o.useMemo(() => (0, S.Xv)(I.config), [I.config]), J = y && U, ee = (0, S.ph)(I), et = (0, S.pG)({
     quest: I,
     location: B.dr.QUESTS_BAR,
-    taskDetails: K
+    taskDetails: F
   }), en = (0, p.isWeb)(), es = o.useMemo(() => {
     let e = (0, c.Qg)(I.config.colors.primary, {
       base: "#ffffff",
@@ -72,14 +72,14 @@ let y = o.forwardRef(function(e, t) {
     className: r()(E, M.contentExpanded, {
       [M.contentInteractable]: J
     }),
-    children: F ? (0, s.jsxs)("div", {
+    children: Y ? (0, s.jsxs)("div", {
       className: M.questAcceptedContent,
       ref: t,
       children: [(0, s.jsxs)("div", {
         className: M.utils,
         children: [(0, s.jsxs)("div", {
           className: M.questAcceptedContentHeading,
-          children: [(0, s.jsx)(v.Z, {
+          children: [(0, s.jsx)(N.Z, {
             className: M.questProgressRewardTile,
             learnMoreStyle: "icon",
             quest: I,
@@ -90,7 +90,7 @@ let y = o.forwardRef(function(e, t) {
               variant: "heading-sm/semibold",
               children: (0, S.AV)({
                 quest: I,
-                taskDetails: K
+                taskDetails: F
               })
             }), (0, s.jsx)(u.Text, {
               className: M.questAcceptedContentCopySubheading,
@@ -104,8 +104,8 @@ let y = o.forwardRef(function(e, t) {
             })]
           })]
         }), (0, s.jsx)(_.r, {
-          onOpen: Z,
-          onClose: b,
+          onOpen: b,
+          onClose: Z,
           onSelect: Q,
           questContent: h.jn.QUEST_BAR,
           quest: I,
@@ -127,7 +127,7 @@ let y = o.forwardRef(function(e, t) {
         style: $ ? es : void 0,
         color: u.Button.Colors.CUSTOM,
         fullWidth: !0,
-        onClick: z,
+        onClick: W,
         size: u.Button.Sizes.NONE,
         children: R.Z.Messages.QUESTS_CLAIM_REWARD
       }) : (0, s.jsx)(u.Text, {
@@ -135,10 +135,10 @@ let y = o.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: et
-      }), (0, s.jsx)(N.Z, {
+      }), (0, s.jsx)(v.Z, {
         quest: I
-      }), !en && !Y && !H && G && (0, s.jsx)(O, {
-        onClick: J ? W : void 0
+      }), !en && !K && !V && G && (0, s.jsx)(O, {
+        onClick: J ? z : void 0
       })]
     }) : (0, s.jsxs)("div", {
       children: [(0, s.jsxs)("div", {
@@ -149,8 +149,8 @@ let y = o.forwardRef(function(e, t) {
           children: [(0, s.jsx)(T.Z, {
             color: "always-white"
           }), (0, s.jsx)(_.r, {
-            onOpen: Z,
-            onClose: b,
+            onOpen: b,
+            onClose: Z,
             onSelect: Q,
             questContent: h.jn.QUEST_BAR,
             quest: I,
@@ -169,7 +169,7 @@ let y = o.forwardRef(function(e, t) {
           })]
         }), (0, s.jsxs)("div", {
           className: M.details,
-          children: [(0, s.jsx)(v.Z, {
+          children: [(0, s.jsx)(N.Z, {
             className: M.rewardTile,
             learnMoreStyle: "text",
             quest: I,
@@ -194,7 +194,7 @@ let y = o.forwardRef(function(e, t) {
           fullWidth: !0,
           onClick: J ? D : void 0,
           size: u.Button.Sizes.NONE,
-          submitting: k,
+          submitting: P,
           children: R.Z.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, s.jsx)("div", {
@@ -202,11 +202,11 @@ let y = o.forwardRef(function(e, t) {
         style: {
           color: I.config.colors.secondary
         },
-        children: V ? (0, s.jsx)(j.Fl, {
+        children: H ? (0, s.jsx)(j.Fl, {
           id: "QuestBarContentExpanded_heroAnimated",
           children: e => (0, s.jsx)(d.Z, {
             ref: e,
-            autoPlay: !P,
+            autoPlay: !k,
             loop: !0,
             muted: !0,
             playsInline: !0,

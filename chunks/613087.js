@@ -48,8 +48,8 @@ let c = o.createContext({
       }
     }, [i, u, m, g]);
     let f = document.getElementById(E ? "quest-bar-v2-preview-" + i : "quest-bar-v2-" + i),
-      N = null;
-    return null == f ? N = null : d && null != C ? N = (0, s.jsxs)(s.Fragment, {
+      v = null;
+    return null == f ? v = null : d && null != C ? v = (0, s.jsxs)(s.Fragment, {
       children: ["collapsed" === u && (0, a.createPortal)((0, s.jsx)(r.animated.div, {
         style: {
           position: "absolute",
@@ -69,12 +69,12 @@ let c = o.createContext({
         },
         children: n(S)
       }), f)]
-    }) : "collapsed" === u && (N = (0, a.createPortal)(n(S), f)), (0, s.jsxs)("div", {
+    }) : "collapsed" === u && (v = (0, a.createPortal)(n(S), f)), (0, s.jsxs)("div", {
       style: {
         opacity: null == f || p ? 1 : 0
       },
       ref: t,
-      children: [n(h), !p && N]
+      children: [n(h), !p && v]
     })
   }),
   d = e => {

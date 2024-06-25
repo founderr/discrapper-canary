@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return j
+    return v
   }
 });
 var n = t(735250),
@@ -54,7 +54,7 @@ function f(e) {
   })
 }
 
-function j(e) {
+function v(e) {
   let {
     selectedGuild: s
   } = e, {
@@ -63,8 +63,8 @@ function j(e) {
     let e = O.default.getCurrentUser();
     return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
   }), E = (0, r.e7)([A.Z], () => !A.Z.isFetchingProfile(a.id)), m = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
-    pendingAvatar: j,
-    pendingAvatarDecoration: v,
+    pendingAvatar: v,
+    pendingAvatarDecoration: j,
     pendingProfileEffectId: U,
     pendingNickname: B,
     pendingBanner: b,
@@ -92,8 +92,8 @@ function j(e) {
       onAvatarChange: R.I5,
       onBannerChange: R.g_,
       onUpsellClick: f,
-      pendingAvatar: j,
-      pendingAvatarDecoration: v,
+      pendingAvatar: v,
+      pendingAvatarDecoration: j,
       pendingProfileEffectId: U,
       pendingBanner: b,
       pendingBio: G,

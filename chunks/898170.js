@@ -51,15 +51,15 @@ function h(e) {
       },
       n = m.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
     return C(l.id, n)
-  }, [l]), N = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !i && g;
+  }, [l]), v = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !i && g;
   o.useEffect(() => {
     var e, t, n, s;
     g ? T && (null === (s = h.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [T, g]);
-  let v = o.useCallback(() => {
+  let N = o.useCallback(() => {
     E(!0)
   }, []);
-  return null == f || N ? (0, s.jsx)("div", {
+  return null == f || v ? (0, s.jsx)("div", {
     className: x.backgroundFallback,
     style: {
       backgroundImage: "linear-gradient(90deg, ".concat(l.config.colors.primary, ", ").concat(l.config.colors.secondary, ")")
@@ -68,7 +68,7 @@ function h(e) {
     className: r()(x.lottieAnimationBackgroundWrapper, a),
     children: (0, s.jsx)(u.LottieAnimation, {
       ref: h,
-      onComplete: v,
+      onComplete: N,
       importData: () => f,
       shouldAnimate: !S && T,
       className: r()(x.lottieAnimation, x.lottieAnimationBackground, n),

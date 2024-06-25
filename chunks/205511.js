@@ -116,7 +116,7 @@ function f(e) {
   })
 }
 
-function N(e) {
+function v(e) {
   let {
     text: t
   } = e;
@@ -136,7 +136,7 @@ t.Z = function(e) {
     steps: u,
     hasConnectedAccounts: m,
     isProgressingQuestForLaunchedGame: T,
-    isQuestComplete: v
+    isQuestComplete: N
   } = o.useMemo(() => {
     var e;
     let n = r.xboxAndPlaystationAccounts.length > 0,
@@ -151,14 +151,14 @@ t.Z = function(e) {
         }),
         isComplete: n || o || c
       }, {
-        renderContent: () => (0, s.jsx)(N, {
+        renderContent: () => (0, s.jsx)(v, {
           text: l ? h.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : h.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({
             gameTitle: i
           })
         }),
         isComplete: o || c
       }, {
-        renderContent: () => (0, s.jsx)(N, {
+        renderContent: () => (0, s.jsx)(v, {
           text: h.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
             numMinutes: a.targetMinutes
           })
@@ -187,7 +187,7 @@ t.Z = function(e) {
           hasNextStep: t < u.length - 1,
           children: e.renderContent()
         }, t))
-      }), m && !T && !v && (0, s.jsx)(f, {
+      }), m && !T && !N && (0, s.jsx)(f, {
         useReducedMotion: n,
         quest: t
       })]

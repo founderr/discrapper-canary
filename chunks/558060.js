@@ -23,20 +23,20 @@ function f(e) {
     discount: r,
     className: f,
     nitroUpsell: p = !1
-  } = e, E = (0, l.ql)(t, u.tuJ.DEFAULT);
-  if (null == E) return null;
-  if (E.amount <= 0) return (0, n.jsx)("div", {
+  } = e, g = (0, l.ql)(t, u.tuJ.DEFAULT);
+  if (null == g) return null;
+  if (g.amount <= 0) return (0, n.jsx)("div", {
     className: a()(C.priceTagsContainer, f),
     children: (0, n.jsx)(o.F, {
-      price: E
+      price: g
     })
   });
-  let g = (0, l.ql)(t, u.tuJ.PREMIUM_TIER_2),
+  let E = (0, l.ql)(t, u.tuJ.PREMIUM_TIER_2),
     m = !s && !(0, l.x6)(t),
     h = (0, l.x6)(t) && s ? {
-      ...E,
+      ...g,
       amount: r.original
-    } : E;
+    } : g;
   return (0, n.jsxs)("div", {
     className: a()(C.priceTagsContainer, f),
     children: [(0, n.jsx)(o.F, {
@@ -47,8 +47,8 @@ function f(e) {
         [C.dimmed]: s,
         [C.fullPrice]: m
       })
-    }), null != g && (0, n.jsx)(o.F, {
-      price: g,
+    }), null != E && (0, n.jsx)(o.F, {
+      price: E,
       discount: s ? r : l.f_,
       renderPrice: p ? e => (0, n.jsx)(i.Text, {
         variant: "text-xs/medium",

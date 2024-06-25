@@ -46,8 +46,8 @@ function D() {
       pendingGlobalName: P,
       pendingAccentColor: Z,
       pendingAvatarDecoration: f,
-      pendingThemeColors: j,
-      pendingProfileEffectId: v
+      pendingThemeColors: v,
+      pendingProfileEffectId: j
     } = (0, r.cj)([h.Z], () => {
       let e = h.Z.getAllPending(),
         s = h.Z.getErrors();
@@ -73,7 +73,7 @@ function D() {
       pendingAvatar: t,
       pendingGlobalName: P,
       pendingAvatarDecoration: f,
-      pendingProfileEffectId: v
+      pendingProfileEffectId: j
     };
   i.useEffect(() => () => o.Z.wait(E.W3), []);
   let F = "UserSettingsProfileCustomization";
@@ -90,7 +90,7 @@ function D() {
         profilePreview: (0, n.jsx)(N.Z, {
           ...G,
           location: "UserSettingsProfileCustomization",
-          pendingThemeColors: j,
+          pendingThemeColors: v,
           pendingAccentColor: Z
         }),
         children: (0, n.jsx)(p.Z, {})

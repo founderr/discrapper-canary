@@ -90,11 +90,11 @@ function f(e) {
     C.name !== M && E.Z.editName(C, M)
   }
 
-  function j(e) {
+  function v(e) {
     13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault())
   }
 
-  function v() {
+  function j() {
     E.Z.toggleDetection(C)
   }
 
@@ -138,7 +138,7 @@ function f(e) {
         maxLength: 128,
         value: M,
         onBlur: f,
-        onKeyDown: j,
+        onKeyDown: v,
         onChange: e => D(e.target.value)
       }), function() {
         let e;
@@ -206,7 +206,7 @@ function f(e) {
             return (0, n.jsx)(c.Clickable, {
               "aria-label": g.Z.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
               className: R.toggleIcon,
-              onClick: v,
+              onClick: j,
               onMouseEnter: t,
               onMouseLeave: i,
               children: s
@@ -266,7 +266,7 @@ function f(e) {
   })
 }
 
-function j() {
+function v() {
   return (0, n.jsx)("div", {
     className: l()(x.flexCenter, R.notDetected, R.activeGame),
     children: (0, n.jsxs)("div", {
@@ -282,7 +282,7 @@ function j() {
   })
 }
 
-function v(e) {
+function j(e) {
   let {
     children: s
   } = e;
@@ -319,7 +319,7 @@ s.Z = function(e) {
       rawGame: o,
       isOverride: E.has(o.exePath),
       nowPlaying: !0
-    }, (0, _.rH)(o)) : (0, n.jsx)(j, {}), (0, n.jsxs)("div", {
+    }, (0, _.rH)(o)) : (0, n.jsx)(v, {}), (0, n.jsxs)("div", {
       className: l()(R.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
       children: [(0, n.jsx)("span", {
         children: g.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
@@ -342,7 +342,7 @@ s.Z = function(e) {
           children: g.Z.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
-    }), 0 === a.length ? (0, n.jsx)(v, {
+    }), 0 === a.length ? (0, n.jsx)(j, {
       children: (0, n.jsx)(c.EmptyStateText, {
         children: g.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })

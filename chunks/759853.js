@@ -21,13 +21,13 @@ t.Z = e => {
   } = e, {
     completionSpring: S,
     startCompletionAnimation: E
-  } = (0, d.GX)(), f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), v = o.useRef(null), j = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(j), [A, B] = o.useState(null), [R, M] = o.useState(null), y = o.useRef(new a.qA({
+  } = (0, d.GX)(), f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), j = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(j), [A, B] = o.useState(null), [R, M] = o.useState(null), y = o.useRef(new a.qA({
     gravity: 0,
     wind: 0
   })), O = (0, a.uR)(A, R), U = o.useCallback(() => {
     if (T) return;
     let e = C.current,
-      t = v.current;
+      t = N.current;
     if (null != t && null != e && O.isReady) {
       var n, s, o, a;
       let {
@@ -77,19 +77,19 @@ t.Z = e => {
         }
       }), 100)
     }
-  }, [C, v, O, T]), Z = (0, i.Z)(h);
+  }, [C, N, O, T]), b = (0, i.Z)(h);
   return (o.useEffect(() => {
-    f && h && !Z && (E(), U())
-  }, [h, f, E, U, Z]), o.useEffect(() => {
+    f && h && !b && (E(), U())
+  }, [h, f, E, U, b]), o.useEffect(() => {
     f && !j && _ && setTimeout(() => {
       E(), U()
     }, 200)
   }, [f, _, j, E, U]), o.useEffect(() => {
-    if (!!O.isReady) !N.current && f && (E(), U()), N.current = f
-  }, [f, N, U, E, O]), T) ? null : (0, s.jsxs)("div", {
+    if (!!O.isReady) !v.current && f && (E(), U()), v.current = f
+  }, [f, v, U, E, O]), T) ? null : (0, s.jsxs)("div", {
     className: x.wrapper,
     "aria-hidden": "true",
-    ref: v,
+    ref: N,
     children: [(0, s.jsx)(r.animated.div, {
       className: x.background,
       style: {

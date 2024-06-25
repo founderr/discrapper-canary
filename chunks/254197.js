@@ -16,9 +16,9 @@ var s = n(735250),
   S = n(644646),
   E = n(78826),
   f = n(670638),
-  N = n(330039),
+  v = n(330039),
   T = n(489459),
-  v = n(524824),
+  N = n(524824),
   j = n(164495),
   _ = n(759853),
   A = n(205511),
@@ -32,42 +32,42 @@ let U = o.forwardRef(function(e, t) {
   let {
     className: a,
     isExpanded: U,
-    isExpansionAnimationComplete: Z,
-    expansionSpring: b,
+    isExpansionAnimationComplete: b,
+    expansionSpring: Z,
     onCtxMenuOpen: Q,
     onCtxMenuClose: I,
-    onCtxMenuSelect: P,
-    onContentHeightChange: k,
+    onCtxMenuSelect: k,
+    onContentHeightChange: P,
     quest: L,
     useReducedMotion: q
-  } = e, w = o.useRef(null), V = (0, i.e7)([m.Z], () => m.Z.isEnrolling(L.id), [L]), H = (0, x.B6)(L.config.expiresAt), D = o.useMemo(() => (0, C.nP)(L.config.assets.questBarHero), [L]), z = o.useCallback(() => {
+  } = e, w = o.useRef(null), H = (0, i.e7)([m.Z], () => m.Z.isEnrolling(L.id), [L]), V = (0, x.B6)(L.config.expiresAt), D = o.useMemo(() => (0, C.nP)(L.config.assets.questBarHero), [L]), W = o.useCallback(() => {
     (0, p.AH)(L.id, {
       questContent: g.jn.QUEST_BAR_V2,
       questContentCTA: d.jZ.ACCEPT_QUEST
     })
   }, [L]), {
-    primaryVariant: W
+    primaryVariant: z
   } = h.u.useExperiment({
     location: M.dr.QUESTS_BAR
   }, {
     autoTrackExposure: !1
-  }), G = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, K = (0, x.Rf)({
+  }), G = (null === (n = L.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (0, x.Rf)({
     quest: L,
     location: M.dr.QUESTS_BAR
-  }), Y = K.percentComplete > 0, F = U && Z, X = o.useMemo(() => (0, C.$J)(L), [L]), $ = (0, C.ph)(L), J = (0, C.pG)({
+  }), K = F.percentComplete > 0, Y = U && b, X = o.useMemo(() => (0, C.$J)(L), [L]), $ = (0, C.ph)(L), J = (0, C.pG)({
     quest: L,
     location: M.dr.QUESTS_BAR,
-    useV2Variants: W === h.P.V2 || (0, R.a)(L),
-    taskDetails: K
+    useV2Variants: z === h.P.V2 || (0, R.a)(L),
+    taskDetails: F
   });
   return (0, s.jsx)("div", {
-    "aria-hidden": !F,
+    "aria-hidden": !Y,
     className: r()(a, O.contentExpanded, {
-      [O.contentInteractable]: F,
+      [O.contentInteractable]: Y,
       [O.contentExpandedAccepted]: G
     }),
     children: G ? (0, s.jsx)(T.m, {
-      onContentHeightChange: k,
+      onContentHeightChange: P,
       children: (0, s.jsxs)("div", {
         className: O.questAcceptedContent,
         ref: t,
@@ -77,12 +77,12 @@ let U = o.forwardRef(function(e, t) {
             variant: "text-xxs/medium",
             className: r()(O.flex, O.headerText),
             children: y.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
-              expirationDate: H
+              expirationDate: V
             })
           }), (0, s.jsx)(f.r, {
             onOpen: Q,
             onClose: I,
-            onSelect: P,
+            onSelect: k,
             questContent: g.jn.QUEST_BAR_V2,
             quest: L,
             shouldShowDisclosure: !1,
@@ -108,7 +108,7 @@ let U = o.forwardRef(function(e, t) {
           quest: L,
           progressBarRef: w,
           isExpanded: !0
-        }), (0, v.r)(L) && (0, s.jsx)(N.Z, {
+        }), (0, N.r)(L) && (0, s.jsx)(v.Z, {
           style: {
             marginTop: 8
           }
@@ -118,7 +118,7 @@ let U = o.forwardRef(function(e, t) {
           quest: L,
           useReducedMotion: q,
           isExpanded: U,
-          hasMadeProgress: Y
+          hasMadeProgress: K
         })]
       })
     }) : (0, s.jsxs)("div", {
@@ -147,27 +147,27 @@ let U = o.forwardRef(function(e, t) {
           className: O.cta,
           color: c.Button.Colors.BRAND,
           fullWidth: !0,
-          onClick: F ? z : void 0,
+          onClick: Y ? W : void 0,
           size: c.Button.Sizes.SMALL,
-          submitting: V,
+          submitting: H,
           children: y.Z.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, s.jsxs)(l.animated.div, {
         className: O.heroAssetWrapper,
         style: {
-          backdropFilter: b.to([0, 1], [5, 0]).to(e => "blur(".concat(e, "px)")),
-          filter: b.to([0, 1], [.8, 1]).to(e => "brightness(".concat(e, ")"))
+          backdropFilter: Z.to([0, 1], [5, 0]).to(e => "blur(".concat(e, "px)")),
+          filter: Z.to([0, 1], [.8, 1]).to(e => "brightness(".concat(e, ")"))
         },
         children: [(0, s.jsx)(l.animated.div, {
           className: O.heroAssetDarken,
           style: {
-            opacity: b.to([0, 1], [1, 0])
+            opacity: Z.to([0, 1], [1, 0])
           }
         }), (0, s.jsx)(l.animated.div, {
           className: O.heroAssetTint,
           style: {
             backgroundColor: L.config.colors.primary,
-            opacity: b.to([0, 1], [1, 0])
+            opacity: Z.to([0, 1], [1, 0])
           }
         }), D ? (0, s.jsx)(E.Fl, {
           id: "QuestBarV2ContentExpanded_heroAnimated",
@@ -195,7 +195,7 @@ let U = o.forwardRef(function(e, t) {
         }), (0, s.jsx)(l.animated.div, {
           className: O.legibilityGradient,
           style: {
-            opacity: b.to({
+            opacity: Z.to({
               range: [0, 1],
               output: [0, 1]
             })

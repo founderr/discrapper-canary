@@ -104,7 +104,7 @@ let p = {
 
 function D() {
   var e, s, t;
-  let [h, D] = i.useState(p), [L, P] = i.useState(O.a.UNENROLLED), [Z, f] = i.useState([]), [j, v] = i.useState(!1), [U, B] = i.useState(null);
+  let [h, D] = i.useState(p), [L, P] = i.useState(O.a.UNENROLLED), [Z, f] = i.useState([]), [v, j] = i.useState(!1), [U, B] = i.useState(null);
   let b = (t = h.config, (0, a.EQ)(t).with({
     configVersion: 1
   }, e => ({
@@ -504,7 +504,7 @@ function D() {
               children: (0, n.jsx)(T.Z, {
                 channelId: "123",
                 previewQuest: h,
-                isParticipatingOverride: j
+                isParticipatingOverride: v
               })
             })
           })
@@ -513,9 +513,9 @@ function D() {
         className: m.channelCallParticipationToggle,
         children: (0, n.jsx)(l.FormItem, {
           children: (0, n.jsx)(l.FormSwitch, {
-            value: j,
+            value: v,
             onChange: function(e) {
-              v(e)
+              j(e)
             },
             hideBorder: !0,
             children: "Is Participating:"

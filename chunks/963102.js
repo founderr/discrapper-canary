@@ -16,8 +16,8 @@ var n = s(735250),
   C = s(792125),
   f = s(335131),
   p = s(994896),
-  E = s(689938),
-  g = s(313858);
+  g = s(689938),
+  E = s(313858);
 
 function m(e) {
   let {
@@ -26,15 +26,15 @@ function m(e) {
     isFullScreen: a = !1
   } = e;
   return (0, n.jsxs)(c.Z, {
-    className: i()(g.headerBar, {
-      [g.fullscreenHeaderBar]: a
+    className: i()(E.headerBar, {
+      [E.fullscreenHeaderBar]: a
     }),
-    innerClassname: g.shopLogoContainer,
+    innerClassname: E.shopLogoContainer,
     toolbar: a ? null : (0, n.jsx)(r.Fragment, {}),
     children: [(0, n.jsx)(d.Z, {
-      className: g.shopLogo
+      className: E.shopLogo
     }), a && (0, n.jsx)(l.Z, {
-      className: g.closeIcon,
+      className: E.closeIcon,
       closeAction: t ? f.DR : s,
       keybind: "ESC"
     })]
@@ -56,16 +56,16 @@ function h(e) {
     onClose: a,
     isFullScreen: t
   }) : (0, n.jsxs)(c.Z, {
-    className: i()((0, C.Q)(h), g.headerBar, {
-      [g.fullscreenHeaderBar]: t
+    className: i()((0, C.Q)(h), E.headerBar, {
+      [E.fullscreenHeaderBar]: t
     }),
     toolbar: t ? null : (0, n.jsx)(r.Fragment, {}),
     children: [(0, n.jsx)(u.Z, {
-      className: g.discordLogo
+      className: E.discordLogo
     }), (0, n.jsx)(c.Z.Title, {
-      children: E.Z.Messages.COLLECTIBLES_SHOP
+      children: g.Z.Messages.COLLECTIBLES_SHOP
     }), t && (0, n.jsx)(l.Z, {
-      className: g.closeIcon,
+      className: E.closeIcon,
       closeAction: s ? f.DR : a,
       keybind: "ESC"
     })]

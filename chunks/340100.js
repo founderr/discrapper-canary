@@ -23,8 +23,8 @@ t.Z = function(e) {
   } = (0, d.Rf)({
     quest: o,
     location: E.dr.QUEST_PROGRESS_BAR
-  }), q = 100 * T, h = (0, C.r)(o);
-  return h && !x ? (0, s.jsx)(m.Z, {}) : (0, s.jsxs)("div", {
+  }), q = 100 * T, S = (0, C.r)(o);
+  return S && !x ? (0, s.jsx)(m.Z, {}) : (0, s.jsxs)("div", {
     className: i()(p.wrapper, t),
     style: {
       color: n.css
@@ -54,7 +54,7 @@ t.Z = function(e) {
           width: "".concat(q, "%")
         }
       })
-    }), h && (0, s.jsx)(m.Z, {
+    }), S && (0, s.jsx)(m.Z, {
       isInventory: x
     })]
   })

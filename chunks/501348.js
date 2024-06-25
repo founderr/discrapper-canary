@@ -33,8 +33,8 @@ var n = t(735250),
   P = t(210887),
   Z = t(740492),
   f = t(695346),
-  j = t(329013),
-  v = t(333859),
+  v = t(329013),
+  j = t(333859),
   U = t(726985),
   B = t(981631),
   b = t(921944),
@@ -230,11 +230,11 @@ class Q extends i.Component {
         children: [(0, n.jsx)("div", {
           className: V.title,
           children: F.Z.Messages.THEME
-        }), (0, n.jsx)(j.g, {})]
+        }), (0, n.jsx)(v.g, {})]
       }),
-      children: [(0, n.jsx)(j.i, {}), (0, n.jsx)(M.F, {
+      children: [(0, n.jsx)(v.i, {}), (0, n.jsx)(M.F, {
         setting: U.s6.APPEARANCE_ICON,
-        children: (0, n.jsx)(v.c, {})
+        children: (0, n.jsx)(j.c, {})
       }), (0, n.jsx)(E.FormSwitch, {
         value: t && (0, c.ap)(e) && !s,
         disabled: e !== B.BRd.LIGHT || s || null != i,

@@ -60,8 +60,8 @@ t.Z = e => {
   let {
     product: t,
     returnRef: s,
-    onSuccess: E,
-    tooltipDelay: g,
+    onSuccess: g,
+    tooltipDelay: E,
     isGiftEasterEggEnabled: m,
     disableCustomColor: h = !1
   } = e, {
@@ -69,7 +69,7 @@ t.Z = e => {
   } = (0, l.ZP)(), I = r.useRef(null), _ = (0, i.Z)(I), T = h ? d.BR.DARK : d.BR.LIGHT;
   return (0, u.x6)(t) ? null : (0, n.jsx)(a.Tooltip, {
     text: C.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: g,
+    delay: E,
     children: e => (0, n.jsx)(a.Button, {
       ...e,
       buttonRef: I,
@@ -85,8 +85,8 @@ t.Z = e => {
           isGift: !0,
           analyticsLocations: x,
           returnRef: s,
-          onClose: null != E ? e => {
-            e && E()
+          onClose: null != g ? e => {
+            e && g()
           } : void 0
         })
       },

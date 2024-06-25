@@ -42,7 +42,7 @@ t.Z = () => {
     children: [(0, s.jsx)(E.Z, {
       className: _.icon
     }), h.Z.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "304699"
+      buildNumber: "304738"
     }), (0, s.jsx)(T, {})]
   }) : null
 }

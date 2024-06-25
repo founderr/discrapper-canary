@@ -26,16 +26,16 @@ function p(e) {
     onHeaderTitleClick: h,
     children: I,
     footer: x
-  } = e, T = (0, l.e7)([o.Z, s.Z], () => {
+  } = e, v = (0, l.e7)([o.Z, s.Z], () => {
     var e;
     return null !== (e = o.Z.getApplication(n)) && void 0 !== e ? e : s.Z.getApplicationRecord(n)
   }, [n]);
-  if (null == T) return null;
-  let v = (0, c.y)(T, 25),
+  if (null == v) return null;
+  let T = (0, c.y)(v, 25),
     {
       termsOfServiceUrl: E,
       privacyPolicyUrl: N
-    } = T;
+    } = v;
   return (0, i.jsxs)(r.ModalRoot, {
     transitionState: p,
     size: r.ModalSize.DYNAMIC,
@@ -45,13 +45,13 @@ function p(e) {
       children: [(0, i.jsxs)(r.Clickable, {
         className: S.modalTitle,
         onClick: h,
-        children: [null != v && (0, i.jsx)("img", {
-          src: v.href,
+        children: [null != T && (0, i.jsx)("img", {
+          src: T.href,
           alt: "",
           className: _.appIcon
         }), (0, i.jsx)(r.Heading, {
           variant: "heading-md/semibold",
-          children: T.name
+          children: v.name
         })]
       }), (0, i.jsx)(r.ModalCloseButton, {
         onClick: f,

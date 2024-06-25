@@ -15,9 +15,9 @@ var n, r = s(735250),
   C = s(813197),
   f = s(981631),
   p = s(689938),
-  E = s(974695);
+  g = s(974695);
 
-function g(e, t, s) {
+function E(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -32,7 +32,7 @@ function m(e) {
     icon: s = null
   } = e;
   return (0, r.jsx)("div", {
-    className: l()(E.imageUploaderIcon, t),
+    className: l()(g.imageUploaderIcon, t),
     children: s
   })
 }
@@ -47,15 +47,15 @@ class h extends(n = a.PureComponent) {
       image: i,
       hint: o,
       name: c,
-      makeURL: g,
+      makeURL: E,
       disabled: h,
       onChange: x,
       showIcon: I,
       showIconDisabled: _,
       className: T,
-      imageClassName: S,
-      iconClassName: L,
-      iconWrapperClassName: N,
+      imageClassName: L,
+      iconClassName: N,
+      iconWrapperClassName: S,
       icon: b,
       hideSize: v,
       imageStyle: O,
@@ -65,42 +65,42 @@ class h extends(n = a.PureComponent) {
       onOpenImageSelectModal: j,
       "aria-label": P
     } = this.props;
-    if (null != (t = null != i && /^data:/.test(i) ? i : g(i)) ? s = 'url("'.concat(t, '")') : null != c && (n = (0, r.jsx)("div", {
-        className: E.imageUploaderAcronym,
+    if (null != (t = null != i && /^data:/.test(i) ? i : E(i)) ? s = 'url("'.concat(t, '")') : null != c && (n = (0, r.jsx)("div", {
+        className: g.imageUploaderAcronym,
         children: (0, d.Zg)(c)
       })), h) return (0, r.jsx)("div", {
-      className: l()(E.imageUploader, E.disabled, T),
+      className: l()(g.imageUploader, g.disabled, T),
       children: (0, r.jsxs)("div", {
-        className: l()(E.imageUploaderInner, S),
+        className: l()(g.imageUploaderInner, L),
         style: {
           ...O,
           backgroundImage: s
         },
         children: [n, _ && (0, r.jsx)("div", {
-          className: l()(E.imageUploaderIcon, E.imageUploaderIconDisabled, L),
+          className: l()(g.imageUploaderIcon, g.imageUploaderIconDisabled, N),
           children: b
         })]
       })
     });
     null != i ? a = (0, r.jsx)(u.Anchor, {
-      className: E.removeButton,
+      className: g.removeButton,
       onClick: this.handleRemove,
       children: p.Z.Messages.REMOVE
     }) : !v && (a = (0, r.jsx)("small", {
-      className: E.sizeInfo,
+      className: g.sizeInfo,
       children: p.Z.Messages.MINIMUM_SIZE.format({
         size: f.IXf
       })
     }));
     let M = null !== (e = null != P ? P : o) && void 0 !== e ? e : p.Z.Messages.CHANGE_AVATAR;
     return (0, r.jsxs)("div", {
-      className: l()(E.imageUploader, T),
+      className: l()(g.imageUploader, T),
       children: [(0, r.jsx)(u.FocusRing, {
         within: !0,
         children: (0, r.jsxs)("div", {
-          className: I ? l()(E.imageUploaderIconWrapper, N) : void 0,
+          className: I ? l()(g.imageUploaderIconWrapper, S) : void 0,
           children: [(0, r.jsxs)("div", {
-            className: l()(E.imageUploaderInner, S),
+            className: l()(g.imageUploaderInner, L),
             style: {
               ...O,
               backgroundImage: s
@@ -109,24 +109,24 @@ class h extends(n = a.PureComponent) {
               "aria-hidden": !0,
               children: n
             }), null != j ? (0, r.jsx)(u.Clickable, {
-              className: E.imageUploaderFileInput,
+              className: g.imageUploaderFileInput,
               "aria-label": M,
               onClick: j
             }) : (0, r.jsx)(C.ZP, {
               ref: this.inputRef,
               onChange: x,
-              className: E.imageUploaderFileInput,
+              className: g.imageUploaderFileInput,
               "aria-label": M,
               tabIndex: 0,
               maxFileSizeBytes: A,
               onFileSizeError: R
             })]
           }), null != o && (0, r.jsx)("div", {
-            className: E.imageUploaderHint,
+            className: g.imageUploaderHint,
             "aria-hidden": "true",
             children: o
           }), I && (0, r.jsx)(m, {
-            className: L,
+            className: N,
             icon: b
           })]
         })
@@ -134,12 +134,12 @@ class h extends(n = a.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), g(this, "inputRef", a.createRef()), g(this, "handleRemove", () => {
+    super(...e), E(this, "inputRef", a.createRef()), E(this, "handleRemove", () => {
       this.props.onChange(null)
     })
   }
 }
-g(h, "defaultProps", {
+E(h, "defaultProps", {
   name: "",
   makeURL: e => e,
   disabled: !1,

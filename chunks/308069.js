@@ -20,9 +20,9 @@ t.Z = e => {
     onCtxMenuSelect: S,
     onCtxMenuOpen: E,
     onCtxMenuClose: f,
-    useReducedMotion: N,
+    useReducedMotion: v,
     isExpanded: T,
-    isExpansionAnimationComplete: v
+    isExpansionAnimationComplete: N
   } = e, j = o.useCallback(() => {
     (0, m.az)(t, {
       content: u.jn.QUEST_BAR_V2,
@@ -33,7 +33,7 @@ t.Z = e => {
       content: u.jn.QUEST_BAR_V2,
       ctaContent: c.jZ.OPEN_GAME_LINK
     })
-  }, [t]), A = T && v;
+  }, [t]), A = T && N;
   return (0, s.jsxs)(l.animated.div, {
     className: r()(h.wrapper, {
       [h.interactable]: A
@@ -89,7 +89,7 @@ t.Z = e => {
         className: h.background,
         animationClassName: h.backgroundAnimation,
         quest: t,
-        useReducedMotion: N
+        useReducedMotion: v
       })
     }), (0, s.jsx)(l.animated.img, {
       alt: "",

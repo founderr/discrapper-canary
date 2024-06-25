@@ -12,17 +12,17 @@ var n = s(735250),
   C = s(692547),
   f = s(663002),
   p = s(481060),
-  E = s(37234),
-  g = s(727637),
+  g = s(37234),
+  E = s(727637),
   m = s(607070),
   h = s(100527),
   x = s(906732),
   I = s(1585),
   _ = s(333867),
   T = s(197115),
-  S = s(300284),
-  L = s(876917),
-  N = s(642619),
+  L = s(300284),
+  N = s(876917),
+  S = s(642619),
   b = s(210887),
   v = s(74538),
   O = s(335131),
@@ -85,7 +85,7 @@ t.Z = function(e) {
     isGiftEasterEggEnabled: Y
   } = e, {
     analyticsLocations: z
-  } = (0, x.ZP)(h.Z.COLLECTIBLES_SHOP_CARD), K = r.useRef(null), X = (0, g.Z)(K), [q, Q] = r.useState(!1), $ = X || q, [J] = t.items, ee = (0, d.e7)([m.Z], () => m.Z.useReducedMotion), {
+  } = (0, x.ZP)(h.Z.COLLECTIBLES_SHOP_CARD), K = r.useRef(null), X = (0, E.Z)(K), [q, Q] = r.useState(!1), $ = X || q, [J] = t.items, ee = (0, d.e7)([m.Z], () => m.Z.useReducedMotion), {
     backgroundColors: et
   } = (0, j.Z)(t.styles), es = v.ZP.canUseCollectibles(s), en = (0, A.XM)(t, es, !1), er = r.useMemo(() => (0, A.BH)(t, es), [t, es]), ea = (0, A.G1)(t), ei = (0, A.rN)(t), {
     isPurchased: el,
@@ -103,24 +103,24 @@ t.Z = function(e) {
   }, []), r.useEffect(() => {
     null == l || l(K)
   }, [l]);
-  let ef = (0, S.Z)({
+  let ef = (0, L.Z)({
       analyticsLocations: z
     }),
     ep = r.useRef(null),
-    eE = () => {
-      if ((0, E.xf)(), ef(), t.type === u.Z.AVATAR_DECORATION && null != J) {
+    eg = () => {
+      if ((0, g.xf)(), ef(), t.type === u.Z.AVATAR_DECORATION && null != J) {
         o()(J.type === t.type, "product type is equivlant to first item's check for avatar deco"), (0, I.ps)({
           initialSelectedDecoration: J,
           analyticsLocations: z
         });
         return
       }
-      t.type === u.Z.PROFILE_EFFECT && (0, N.H)({
+      t.type === u.Z.PROFILE_EFFECT && (0, S.H)({
         initialSelectedEffectId: J.id,
         analyticsLocations: z
       })
     },
-    eg = e => s => {
+    eE = e => s => {
       ep.current = s.currentTarget, (0, B.T)({
         product: t,
         category: a,
@@ -129,8 +129,8 @@ t.Z = function(e) {
         returnRef: ep
       })
     },
-    em = eg(h.Z.COLLECTIBLES_SHOP_CARD),
-    eh = eg(h.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    em = eE(h.Z.COLLECTIBLES_SHOP_CARD),
+    eh = eE(h.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     ex = () => (0, n.jsx)("div", {
       className: G.hoverUpsellContainer,
       children: (0, n.jsx)(T.Z, {
@@ -187,7 +187,7 @@ t.Z = function(e) {
         className: G.buttonsContainer,
         children: [eo ? null : el ? (0, n.jsx)(W, {
           disabled: eu,
-          onClick: eE,
+          onClick: eg,
           children: w.Z.Messages.COLLECTIBLES_USE_NOW
         }) : (0, n.jsx)(W, {
           disabled: eu,
@@ -199,7 +199,7 @@ t.Z = function(e) {
         }), e_()]
       })
     },
-    eS = ed ? "0 0 15px 1px ".concat(C.Z.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
+    eL = ed ? "0 0 15px 1px ".concat(C.Z.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
   return (0, A.x6)(t) && null != er && er.discountPercentage < 0 ? null : (0, n.jsx)(p.FocusRing, {
     children: (0, n.jsxs)(p.Clickable, {
       innerRef: K,
@@ -212,7 +212,7 @@ t.Z = function(e) {
       style: null != et ? {
         backgroundColor: ed ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
-        boxShadow: $ ? eS : "none"
+        boxShadow: $ ? eL : "none"
       } : void 0,
       id: "shop-item-".concat(t.skuId),
       children: [ea && (0, n.jsx)(p.Tooltip, {
@@ -232,7 +232,7 @@ t.Z = function(e) {
         className: G.preview,
         children: (0, c.EQ)(t.type).with(u.Z.PROFILE_EFFECT, () => (0, n.jsx)("div", {
           className: G.profileEffectShopPreview,
-          children: (0, n.jsx)(L.Z, {
+          children: (0, n.jsx)(N.Z, {
             isHovering: $,
             profileEffectId: J.id,
             isPurchased: el,

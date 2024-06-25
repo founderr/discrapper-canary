@@ -1,7 +1,7 @@
 "use strict";
 s.d(t, {
   $: function() {
-    return g
+    return E
   }
 }), s(653041);
 var n = s(735250),
@@ -17,7 +17,7 @@ var n = s(735250),
   f = s(689938),
   p = s(698032);
 
-function E(e) {
+function g(e) {
   let {
     endDate: t
   } = e, {
@@ -41,7 +41,7 @@ function E(e) {
     })
   })
 }
-let g = r.memo(function(e) {
+let E = r.memo(function(e) {
   let {
     unpublishedAt: t,
     isVisible: s,
@@ -78,7 +78,7 @@ let g = r.memo(function(e) {
       variant: "heading-md/medium",
       className: p.countdown,
       children: "—"
-    }), (0, n.jsx)(E, {
+    }), (0, n.jsx)(g, {
       endDate: t
     })]
   })

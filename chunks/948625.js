@@ -19,29 +19,29 @@ var n = s(180650),
   C = s(737140),
   f = s(194349),
   p = s(523569),
-  E = s(55817),
-  g = s(696228),
+  g = s(55817),
+  E = s(696228),
   m = s(202796),
   h = s(570593),
   x = s(199546),
   I = s(613540),
   _ = s(769411),
   T = s(125257),
-  S = s(6412),
-  L = s(238286);
-let N = () => i.Z.Messages.LIMITED_TIME,
+  L = s(6412),
+  N = s(238286);
+let S = () => i.Z.Messages.LIMITED_TIME,
   b = () => i.Z.Messages.MOST_POPULAR,
   v = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
   O = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
   Z = () => i.Z.Messages.TAKE_ME_THERE,
   A = [{
     id: "category_tide",
-    backgroundStaticSrc: L,
-    overflowSrcStatic: S,
+    backgroundStaticSrc: N,
+    overflowSrcStatic: L,
     logoSrc: T,
     textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: N
+      label: S
     },
     cta: {
       label: Z,
@@ -82,7 +82,7 @@ let N = () => i.Z.Messages.LIMITED_TIME,
     id: "category_disxcore",
     backgroundStaticSrc: h,
     overflowSrcStatic: m,
-    logoSrc: g,
+    logoSrc: E,
     textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
       label: O
@@ -93,7 +93,7 @@ let N = () => i.Z.Messages.LIMITED_TIME,
     }
   }, {
     id: "category_cyberpunk",
-    backgroundStaticSrc: E,
+    backgroundStaticSrc: g,
     backgroundVideoSrc: f,
     logoSrc: p,
     textColor: (0, r.Lq)(a.Ilk.WHITE_100),

@@ -29,8 +29,8 @@ var n = t(735250),
   P = t(998502),
   Z = t(210887),
   f = t(601948),
-  j = t(726985),
-  v = t(981631),
+  v = t(726985),
+  j = t(981631),
   U = t(908442),
   B = t(309406),
   b = t(5973),
@@ -271,7 +271,7 @@ class w extends i.Component {
         children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
       }) : null;
     return (0, n.jsx)(R.F, {
-      setting: j.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+      setting: v.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
       children: (0, n.jsxs)(_.FormSection, {
         className: G.marginTop60,
         children: [(0, n.jsxs)(D.Z, {
@@ -662,7 +662,7 @@ class W extends i.Component {
         allowedVersionEntry: e
       })
     }), V(this, "handleAllowedVersionEnter", e => {
-      e.charCode === v.yXg.ENTER && this.handleAddAllowedVersion()
+      e.charCode === j.yXg.ENTER && this.handleAddAllowedVersion()
     }), V(this, "handleAddAllowedVersion", () => {
       let {
         allowedVersions: e,
@@ -764,14 +764,14 @@ function z() {
     children: [(0, n.jsxs)("div", {
       className: [B.buttonsContainer, G.marginBottom20].join(" "),
       children: [(0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+        setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
         children: (0, n.jsx)(_.Button, {
           onClick: () => window.open(t, "_blank"),
           disabled: "" === t,
           children: "Open Overlay"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
+        setting: v.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
         children: (0, n.jsx)(_.Button, {
           onClick: () => {
             g.Z.getSocket().close(), g.Z.getSocket().connect()
@@ -779,7 +779,7 @@ function z() {
           children: "Reset Socket"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
+        setting: v.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
         children: (0, n.jsx)(_.Button, {
           onClick: () => {
             T.Z.dispatch({
@@ -793,7 +793,7 @@ function z() {
         })
       })]
     }), (0, n.jsx)(R.F, {
-      setting: j.s6.DEVELOPER_OPTIONS_CRASHES,
+      setting: v.s6.DEVELOPER_OPTIONS_CRASHES,
       children: (0, n.jsx)(_.FormSection, {
         title: "Crashes",
         tag: _.FormTitleTags.H1,
@@ -877,12 +877,12 @@ let Q = E.ZP.connectStores([M.default], () => ({
     appDirectoryIncludesInactiveCollections: d
   } = e;
   return (0, n.jsx)(R.F, {
-    setting: j.s6.DEVELOPER_OPTIONS_FLAGS,
+    setting: v.s6.DEVELOPER_OPTIONS_FLAGS,
     children: (0, n.jsxs)(_.FormSection, {
       title: "Developer Flags",
       tag: _.FormTitleTags.H1,
       children: [(0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+        setting: v.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
         children: (0, n.jsx)(_.FormSwitch, {
           value: s,
           note: "Force trace all client requests with APM",
@@ -892,7 +892,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable Tracing Requests"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
+        setting: v.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
         children: (0, n.jsx)(_.FormSwitch, {
           value: t,
           note: "Force all API requests to canary instances",
@@ -902,7 +902,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable Forced Canary"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+        setting: v.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
         children: (0, n.jsx)(_.FormSwitch, {
           value: i,
           note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
@@ -912,7 +912,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable Logging of Gateway Events to Console"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+        setting: v.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
         children: (0, n.jsx)(_.FormSwitch, {
           value: a,
           note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
@@ -922,7 +922,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable Logging of Overlay RPC Events & Commands"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+        setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
         children: (0, n.jsx)(_.FormSwitch, {
           value: l,
           note: "Logs all analytics events to the developer console",
@@ -932,7 +932,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable Logging of Analytics Events"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
+        setting: v.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
         children: (0, n.jsx)(_.FormSwitch, {
           value: o,
           note: "Only enable on devices you trust.",
@@ -942,7 +942,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable source maps to be loaded on this client"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+        setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
         children: (0, n.jsx)(_.FormSwitch, {
           value: c,
           note: "Displays a floating debugger with viewed impressions",
@@ -952,7 +952,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable standard analytics debugger view"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+        setting: v.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
         children: (0, n.jsx)(_.FormSwitch, {
           value: E,
           note: "Displays a floating idle status indicator",
@@ -962,7 +962,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable idle status indicator"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+        setting: v.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
         children: (0, n.jsx)(_.FormSwitch, {
           value: r,
           note: "Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development",
@@ -972,7 +972,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Enable Accessibility Auditing"
         })
       }), (0, n.jsx)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+        setting: v.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
         children: (0, n.jsx)(_.FormSwitch, {
           value: d,
           note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
@@ -982,7 +982,7 @@ let Q = E.ZP.connectStores([M.default], () => ({
           children: "Preview Unpublished Collections on App Directory Homepage"
         })
       }), (0, n.jsxs)(R.F, {
-        setting: j.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         children: [(0, n.jsx)("div", {
           className: [B.buttonsContainer, G.marginBottom20].join(" "),
           children: (0, n.jsx)(f.S, {})
@@ -998,7 +998,7 @@ function X() {
   let e = (0, E.e7)([x.Z], () => x.Z.getSurveyOverride()),
     [s, t] = i.useState(null != e ? e : "");
   return (0, n.jsx)(R.F, {
-    setting: j.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+    setting: v.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
     children: (0, n.jsxs)(_.FormSection, {
       tag: _.FormTitleTags.H1,
       title: "Survey Override",
@@ -1028,7 +1028,7 @@ function q() {
   let s = (0, E.e7)([m.Z], () => m.Z.overrideId()),
     [t, a] = i.useState(null !== (e = m.Z.overrideId()) && void 0 !== e ? e : "");
   return (0, n.jsx)(R.F, {
-    setting: j.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+    setting: v.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
     children: (0, n.jsxs)(_.FormSection, {
       tag: _.FormTitleTags.H1,
       title: "Changelog Override",

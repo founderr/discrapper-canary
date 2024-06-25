@@ -97,8 +97,8 @@ s.Z = function(e) {
   } = e, _ = (0, r.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), T = (null == _ ? void 0 : _.isPausedOrPausePending) === !0, m = (0, r.e7)([c.Z], () => c.Z.useReducedMotion), h = (0, r.e7)([I.default], () => I.default.getCurrentUser()), P = (0, u.Vp)(), {
     appliedGuildBoostSlots: Z,
     unappliedGuildBoostSlots: f,
-    numActiveGuildBoostSlots: j,
-    hasCooldownBoosts: v
+    numActiveGuildBoostSlots: v,
+    hasCooldownBoosts: j
   } = i.useMemo(() => {
     let e = [],
       s = [],
@@ -112,7 +112,7 @@ s.Z = function(e) {
       numActiveGuildBoostSlots: t,
       hasCooldownBoosts: n
     }
-  }, [a]), U = null != _ ? (0, E.G)(_, P) : 0, B = Math.max(0, U - Z.length), b = j > U, G = U === a.length, F = G ? B : 1, V = i.useMemo(() => {
+  }, [a]), U = null != _ ? (0, E.G)(_, P) : 0, B = Math.max(0, U - Z.length), b = v > U, G = U === a.length, F = G ? B : 1, V = i.useMemo(() => {
     let e = [];
     for (let s = 0; s < F; s++) e.push((0, n.jsx)(O.Z, {
       className: x.headerBoostGem,
@@ -196,7 +196,7 @@ s.Z = function(e) {
             })
           })
         })]
-      }), (!G || v) && (0, n.jsx)("ul", {
+      }), (!G || j) && (0, n.jsx)("ul", {
         className: x.unappliedBoostSlots,
         children: f.map(e => (0, n.jsx)(p, {
           guildBoostSlot: e,

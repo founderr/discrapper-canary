@@ -22,7 +22,7 @@ t.Z = function(e) {
     isExpansionAnimationComplete: S,
     quest: E,
     useReducedMotion: f
-  } = e, N = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
+  } = e, v = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
     percentComplete: T
   } = (0, i.Rf)({
     quest: E,
@@ -32,7 +32,7 @@ t.Z = function(e) {
     "aria-hidden": h && S,
     className: a()(n, C.contentCollapsed, {
       [C.contentCollapsedExpanded]: h,
-      [C.contentCollapsedAccepted]: N
+      [C.contentCollapsedAccepted]: v
     }),
     style: {
       opacity: o.to({
@@ -45,7 +45,7 @@ t.Z = function(e) {
       useReducedMotion: f
     }), (0, s.jsx)("div", {
       className: C.contentCollapsedWrapper,
-      children: N ? (0, s.jsxs)("div", {
+      children: v ? (0, s.jsxs)("div", {
         className: C.questProgressWrapper,
         children: [(0, s.jsx)(p.Z, {
           className: C.questProgressRewardTile,

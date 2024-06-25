@@ -28,8 +28,8 @@ var n = t(735250),
   P = t(366695),
   Z = t(626135),
   f = t(74538),
-  j = t(639056),
-  v = t(52164),
+  v = t(639056),
+  j = t(52164),
   U = t(91430),
   B = t(474936),
   b = t(981631),
@@ -69,7 +69,7 @@ function H() {
     }), (0, n.jsx)("p", {
       className: y.accountCreditDescription,
       children: V.Z.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
-    }), null != e && f.ZP.hasAccountCredit(e) ? (0, n.jsx)(j.Z, {
+    }), null != e && f.ZP.hasAccountCredit(e) ? (0, n.jsx)(v.Z, {
       className: y.accountCredit,
       entitlements: e
     }) : (0, n.jsx)(Y, {})]
@@ -115,7 +115,7 @@ s.Z = function() {
       }), (0, n.jsx)(h.F, {
         setting: F.s6.SUBSCRIPTIONS_CREDITS,
         children: (0, n.jsx)(H, {})
-      }), null != e ? (0, n.jsx)(v.Z, {
+      }), null != e ? (0, n.jsx)(j.Z, {
         subscription: e,
         withOverheadSeparator: !1
       }) : null]

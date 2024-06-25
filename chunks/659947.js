@@ -166,8 +166,8 @@ function x(e) {
       row: Z
     })
   }, [Z]);
-  let j = null != P ? P.length : L.length,
-    v = (() => {
+  let v = null != P ? P.length : L.length,
+    j = (() => {
       if (null != P) {
         var e;
         return null === (e = P[Z]) || void 0 === e ? void 0 : e.id
@@ -204,26 +204,26 @@ function x(e) {
                 break
               }
               case "arrowup":
-                0 === Z ? f(j - 1) : f(Z - 1);
+                0 === Z ? f(v - 1) : f(Z - 1);
                 break;
               case "arrowdown":
-                Z >= j - 1 ? f(0) : f(Z + 1)
+                Z >= v - 1 ? f(0) : f(Z + 1)
             }
           },
           placeholder: I.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
           role: "combobox",
           "aria-controls": T,
-          "aria-expanded": j > 0,
-          "aria-activedescendant": j > 0 && null != v ? v : void 0,
+          "aria-expanded": v > 0,
+          "aria-activedescendant": v > 0 && null != j ? j : void 0,
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === j && "" !== p && (0, n.jsx)(R, {}), (j > 0 || "" === p) && (0, n.jsx)(l.ListThin, {
+      }), 0 === v && "" !== p && (0, n.jsx)(R, {}), (v > 0 || "" === p) && (0, n.jsx)(l.ListThin, {
         innerId: T,
         innerRole: "listbox",
         "aria-label": I.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
         ref: A,
-        sections: [j],
+        sections: [v],
         renderRow: function(e) {
           let {
             row: s

@@ -1,6 +1,6 @@
 t.d(n, {
   Y: function() {
-    return T
+    return v
   },
   p: function() {
     return x
@@ -44,11 +44,11 @@ function x(e) {
     showBenefitsFirst: !1,
     analyticsLocation: p.Sbl.APP_STOREFRONT,
     skuId: c
-  }), T = (0, _.M)(c);
-  return "guild" !== r && ("user" !== r || T) ? (0, i.jsx)(E, {
+  }), v = (0, _.M)(c);
+  return "guild" !== r && ("user" !== r || v) ? (0, i.jsx)(E, {
     className: t,
     children: h.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
-  }) : (0, i.jsx)(v, {
+  }) : (0, i.jsx)(T, {
     appId: n,
     skuId: c,
     onClick: e => {
@@ -64,7 +64,7 @@ function x(e) {
   })
 }
 
-function T(e) {
+function v(e) {
   let {
     appId: n,
     className: t,
@@ -81,12 +81,12 @@ function T(e) {
       analyticsLocations: u
     })
   }, f = (0, _.M)(a.id), x = a.type === p.epS.DURABLE && f, {
-    price: T
+    price: v
   } = a;
-  return null == T ? null : x ? (0, i.jsx)(E, {
+  return null == v ? null : x ? (0, i.jsx)(E, {
     className: t,
     children: h.Z.Messages.COLLECTIBLES_ALREADY_OWNED
-  }) : (0, i.jsx)(v, {
+  }) : (0, i.jsx)(T, {
     appId: n,
     skuId: a.id,
     onClick: e => {
@@ -96,13 +96,13 @@ function T(e) {
     children: (0, i.jsxs)("div", {
       className: I.btnContent,
       children: [d, h.Z.Messages.STOREFRONT_PURCHASE_FOR.format({
-        price: (0, S.T4)(T.amount, T.currency)
+        price: (0, S.T4)(v.amount, v.currency)
       })]
     })
   })
 }
 
-function v(e) {
+function T(e) {
   let {
     appId: n,
     skuId: t,
