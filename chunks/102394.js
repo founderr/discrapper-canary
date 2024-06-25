@@ -1,1 +1,0 @@
-e.exports = n.p + "2344f2aa7271048724fe.png"

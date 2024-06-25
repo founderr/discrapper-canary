@@ -1,20 +1,20 @@
 n.d(t, {
-  d: function() {
+  u: function() {
     return l
   }
 });
 let l = (0, n(818083).B)({
   kind: "user",
-  id: "2024-06_activity_bopz_io_mini_shelf_banner",
-  label: "Actvity BOPZ.io Mini-Shelf Banner",
+  id: "2024-06_activity_rythm_mini_shelf_banner",
+  label: "Activity Rythm Mini-Shelf Banner",
   defaultConfig: {
-    enableBOPZioMiniShelfBanner: !1
+    enableRythmMiniShelfBanner: !1
   },
   treatments: [{
     id: 1,
     label: "Enable mini-shelf banner",
     config: {
-      enableBOPZioMiniShelfBanner: !0
+      enableRythmMiniShelfBanner: !0
     }
   }]
 })

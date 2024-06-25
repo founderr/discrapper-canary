@@ -42,6 +42,9 @@ n.d(t, {
   N4: function() {
     return K
   },
+  NC: function() {
+    return $
+  },
   OF: function() {
     return eu
   },
@@ -50,9 +53,6 @@ n.d(t, {
   },
   Pc: function() {
     return er
-  },
-  QJ: function() {
-    return $
   },
   S4: function() {
     return s
@@ -166,7 +166,7 @@ let g = 160,
   X = "1011683823555199066",
   Q = "1234546995360694434",
   J = "1214629548377768066",
-  $ = "1199817737728442569",
+  $ = "235088799074484224",
   ee = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
   et = {
     SMALL: 64,

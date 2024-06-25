@@ -22,7 +22,7 @@ var l = n(735250),
   _ = n(626135),
   I = n(348600),
   x = n(566620),
-  T = n(763203),
+  T = n(138138),
   N = n(127255),
   Z = n(5200),
   S = n(558317),
@@ -33,7 +33,7 @@ var l = n(735250),
   j = n(496),
   L = n(587952),
   O = n(736733),
-  P = n(102394);
+  P = n(463738);
 let y = "vc-activities-".concat((0, o.Z)()),
   b = i.forwardRef(function(e, t) {
     let {
@@ -49,8 +49,8 @@ let y = "vc-activities-".concat((0, o.Z)()),
     } = I.Z.useExperiment({
       location: "8009ca_3"
     }), {
-      enableBOPZioMiniShelfBanner: H
-    } = T.d.useExperiment({
+      enableRythmMiniShelfBanner: H
+    } = T.u.useExperiment({
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
@@ -114,10 +114,10 @@ let y = "vc-activities-".concat((0, o.Z)()),
       }) : H ? (0, l.jsxs)(u.Clickable, {
         className: a()(j.clickableBanner),
         onClick: () => {
-          U(), o(), (0, g.uL)(M.Z5c.ACTIVITY_DETAILS(A.QJ), void 0, void 0, Y)
+          U(), o(), (0, g.uL)(M.Z5c.ACTIVITY_DETAILS(A.NC), void 0, void 0, Y)
         },
         children: [(0, l.jsx)("img", {
-          alt: R.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_BOPZ_IO_POSTER_ALT,
+          alt: R.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_RYTHM_POSTER_ALT,
           src: P,
           className: j.poster
         }), (0, l.jsx)("div", {
