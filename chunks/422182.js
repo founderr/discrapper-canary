@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
   root: "root_c25b34",
   noScroll: "noScroll_c25b34",
   content: "content_c25b34",

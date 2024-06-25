@@ -1,17 +1,17 @@
 t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(442837),
-  l = t(481060),
-  r = t(153867),
-  o = t(706454),
+  a = t(470079),
+  i = t(442837),
+  r = t(481060),
+  o = t(153867),
+  l = t(706454),
   c = t(689938),
-  E = t(968910),
-  d = t(444675);
-s.Z = a.ZP.connectStores([o.default], () => ({
-  currentLocale: o.default.locale
+  d = t(968910),
+  _ = t(444675);
+s.Z = i.ZP.connectStores([l.default], () => ({
+  currentLocale: l.default.locale
 }))(function(e) {
-  let [s, a] = i.useState(e.currentLocale), [o] = i.useState(() => c.Z.getAvailableLocales().map(e => {
+  let [s, i] = a.useState(e.currentLocale), [l] = a.useState(() => c.Z.getAvailableLocales().map(e => {
     let s;
     try {
       s = t(621287)("./".concat(e.value, ".png"))
@@ -21,39 +21,39 @@ s.Z = a.ZP.connectStores([o.default], () => ({
     return {
       ...e,
       name: (0, n.jsxs)("div", {
-        className: E.option,
+        className: d.option,
         children: [(0, n.jsx)("span", {
-          className: E.localeName,
+          className: d.localeName,
           children: e.name
         }), (0, n.jsx)("span", {
-          className: E.localizedName,
+          className: d.localizedName,
           children: e.localizedName
         }), (0, n.jsx)("div", {
-          className: E.flag,
+          className: d.flag,
           "aria-hidden": !0,
           children: (0, n.jsx)("img", {
             alt: "",
             src: s,
-            className: E.flagImage
+            className: d.flagImage
           })
         })]
       })
     }
-  })), _ = i.useCallback(e => {
+  })), E = a.useCallback(e => {
     let {
       value: s
     } = e;
-    a(s), d.nextTick(() => r.ZP.updateLocale(s))
+    i(s), _.nextTick(() => o.ZP.updateLocale(s))
   }, []);
-  return (0, n.jsx)(l.FormSection, {
-    tag: l.FormTitleTags.H1,
+  return (0, n.jsx)(r.FormSection, {
+    tag: r.FormTitleTags.H1,
     title: c.Z.Messages.LANGUAGE,
-    children: (0, n.jsx)(l.FormSection, {
-      children: (0, n.jsx)(l.FormItem, {
+    children: (0, n.jsx)(r.FormSection, {
+      children: (0, n.jsx)(r.FormItem, {
         title: c.Z.Messages.LANGUAGE_SELECT,
-        children: (0, n.jsx)(l.RadioGroup, {
-          onChange: _,
-          options: o,
+        children: (0, n.jsx)(r.RadioGroup, {
+          onChange: E,
+          options: l,
           value: s
         })
       })

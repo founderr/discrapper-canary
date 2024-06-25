@@ -1,4 +1,4 @@
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-12_marketing_automation_experiment",
   label: "Marketing Automation",
@@ -13,4 +13,4 @@ let s = (0, n(818083).B)({
     }
   }]
 });
-t.Z = s
+t.Z = i

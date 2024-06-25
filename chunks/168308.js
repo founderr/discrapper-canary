@@ -1,19 +1,19 @@
 t.d(s, {
   Jw: function() {
-    return l
+    return r
   },
   bC: function() {
-    return r
+    return o
   }
 });
 var n = t(442837),
-  i = t(808506),
-  a = t(358085);
-
-function l() {
-  return a.isPlatformEmbedded
-}
+  a = t(808506),
+  i = t(358085);
 
 function r() {
-  return (0, n.e7)([i.Z], () => i.Z.isSupported()) || !1
+  return i.isPlatformEmbedded
+}
+
+function o() {
+  return (0, n.e7)([a.Z], () => a.Z.isSupported()) || !1
 }

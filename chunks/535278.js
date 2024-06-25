@@ -1,53 +1,53 @@
-a.r(t), a.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return l
+    return d
   }
 });
-var s = a(735250);
-a(470079);
-var r = a(481060),
-  n = a(153124),
-  i = a(689938),
-  o = a(424485),
-  d = a(365627);
+var a = n(735250);
+n(470079);
+var i = n(481060),
+  s = n(153124),
+  r = n(689938),
+  o = n(424485),
+  l = n(365627);
 
-function l(e) {
+function d(t) {
   let {
-    transitionState: t,
-    onClose: a,
-    listing: l,
+    transitionState: e,
+    onClose: n,
+    listing: d,
     subscription: c
-  } = e, I = (0, n.Dt)();
-  return (0, s.jsxs)(r.ModalRoot, {
-    transitionState: t,
+  } = t, I = (0, s.Dt)();
+  return (0, a.jsxs)(i.ModalRoot, {
+    transitionState: e,
     "aria-labelledby": I,
-    children: [(0, s.jsxs)(r.ModalContent, {
+    children: [(0, a.jsxs)(i.ModalContent, {
       className: o.contentContainer,
-      children: [(0, s.jsx)("img", {
-        src: d,
+      children: [(0, a.jsx)("img", {
+        src: l,
         alt: ""
-      }), (0, s.jsx)(r.Heading, {
+      }), (0, a.jsx)(i.Heading, {
         className: o.title,
         variant: "heading-xl/bold",
         color: "header-primary",
         id: I,
-        children: i.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
-          tier: l.name
+        children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
+          tier: d.name
         })
-      }), (0, s.jsx)(r.Text, {
+      }), (0, a.jsx)(i.Text, {
         className: o.subtitle,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: i.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
+        children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
           timestamp: null == c ? void 0 : c.currentPeriodEnd
         })
       })]
-    }), (0, s.jsx)(r.ModalFooter, {
-      children: (0, s.jsx)(r.Button, {
-        size: r.Button.Sizes.MEDIUM,
+    }), (0, a.jsx)(i.ModalFooter, {
+      children: (0, a.jsx)(i.Button, {
+        size: i.Button.Sizes.MEDIUM,
         grow: !1,
-        onClick: a,
-        children: i.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
+        onClick: n,
+        children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
       })
     })]
   })

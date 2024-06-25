@@ -13,11 +13,11 @@ var i, r, s, o, a, l, u, _, c = n(512722),
   I = n(47770),
   T = n(710845),
   h = n(857192),
-  S = n(70956),
-  f = n(358085),
-  N = n(65154);
+  f = n(70956),
+  S = n(358085),
+  A = n(65154);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,10 +27,10 @@ function A(e, t, n) {
 }
 
 function m() {}(a = i || (i = {}))[a.IDENTIFY = 0] = "IDENTIFY", a[a.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", a[a.READY = 2] = "READY", a[a.HEARTBEAT = 3] = "HEARTBEAT", a[a.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", a[a.SPEAKING = 5] = "SPEAKING", a[a.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", a[a.RESUME = 7] = "RESUME", a[a.HELLO = 8] = "HELLO", a[a.RESUMED = 9] = "RESUMED", a[a.CLIENT_CONNECT = 11] = "CLIENT_CONNECT", a[a.VIDEO = 12] = "VIDEO", a[a.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", a[a.SESSION_UPDATE = 14] = "SESSION_UPDATE", a[a.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", a[a.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", a[a.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", a[a.FLAGS = 18] = "FLAGS", a[a.SPEED_TEST = 19] = "SPEED_TEST", a[a.PLATFORM = 20] = "PLATFORM", a[a.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", a[a.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", a[a.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", a[a.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", a[a.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", a[a.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", a[a.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", a[a.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", a[a.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", a[a.MLS_WELCOME = 30] = "MLS_WELCOME", a[a.MLS_INVALID_COMMIT_WELCOME = 31] = "MLS_INVALID_COMMIT_WELCOME", (l = r || (r = {}))[l.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", l[l.INVALID_SESSION = 4006] = "INVALID_SESSION", l[l.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", l[l.SERVER_CRASH = 4015] = "SERVER_CRASH", l[l.CANCELED = 4016] = "CANCELED", l[l.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", l[l.UNRESUMABLE = 4801] = "UNRESUMABLE", l[l.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (u = s || (s = {}))[u.DISCONNECTED = 0] = "DISCONNECTED", u[u.CONNECTING = 1] = "CONNECTING", u[u.IDENTIFYING = 2] = "IDENTIFYING", u[u.RESUMING = 3] = "RESUMING", u[u.CONNECTED = 4] = "CONNECTED", u[u.RECONNECTING = 5] = "RECONNECTING";
-let O = 20 * S.Z.Millis.SECOND,
-  R = 1 * S.Z.Millis.MINUTE,
-  p = 5 * S.Z.Millis.SECOND,
-  g = 5 * S.Z.Millis.SECOND;
+let O = 20 * f.Z.Millis.SECOND,
+  p = 1 * f.Z.Millis.MINUTE,
+  R = 5 * f.Z.Millis.SECOND,
+  g = 5 * f.Z.Millis.SECOND;
 
 function C(e) {
   return e.map(e => ({
@@ -66,10 +66,10 @@ function L(e) {
   var t;
   return null !== (t = null == e ? void 0 : e.map(e => ({
     type: function(e) {
-      if ("audio" === e) return N.Tr.AUDIO;
-      if ("test" === e) return N.Tr.TEST;
-      if ("screen" === e) return N.Tr.SCREEN;
-      else return N.Tr.VIDEO
+      if ("audio" === e) return A.Tr.AUDIO;
+      if ("test" === e) return A.Tr.TEST;
+      if ("screen" === e) return A.Tr.SCREEN;
+      else return A.Tr.VIDEO
     }(e.type),
     rid: e.rid,
     ssrc: e.ssrc,
@@ -122,7 +122,7 @@ class D extends I.Z {
           break;
         case 5:
           let i = n.speaking;
-          "boolean" == typeof i && (i = i ? N.Dg.VOICE : N.Dg.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
+          "boolean" == typeof i && (i = i ? A.Dg.VOICE : A.Dg.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
           break;
         case 3:
           this.sendHeartbeat();
@@ -223,7 +223,7 @@ class D extends I.Z {
   }
   doResumeOrClose() {
     let e = Date.now();
-    null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= R) ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
+    null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= p) ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
   }
   doResume() {
     var e, t;
@@ -236,9 +236,9 @@ class D extends I.Z {
   handleHello(e) {
     var t, n, i;
     if (this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3, this.serverVersion <= 3) {
-      let t = f.isPlatformEmbedded ? .25 : .1;
+      let t = S.isPlatformEmbedded ? .25 : .1;
       this.heartbeatInterval = e.heartbeat_interval * t
-    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !f.isPlatformEmbedded && (this.heartbeatInterval = Math.min(g, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !S.isPlatformEmbedded && (this.heartbeatInterval = Math.min(g, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
     let r = Date.now() - this.connectionStartTime;
     this.logger.info("[HELLO] heartbeat interval: ".concat(null !== (i = this.heartbeatInterval) && void 0 !== i ? i : "??", ", version: ").concat(this.serverVersion, ", took ").concat(r, " ms")), this.startHeartbeater()
   }
@@ -422,9 +422,9 @@ class D extends I.Z {
     this.heartbeatIntervalModifier = e
   }
   sendHeartbeatIfOverdue() {
-    if (null != this.heartbeatInterval && null != this.heartbeater && null != this.lastHeartbeatTime) performance.now() - this.lastHeartbeatTime > this.heartbeatInterval + p && (this.logger.info("Forcing heartbeat"), this.sendHeartbeat())
+    if (null != this.heartbeatInterval && null != this.heartbeater && null != this.lastHeartbeatTime) performance.now() - this.lastHeartbeatTime > this.heartbeatInterval + R && (this.logger.info("Forcing heartbeat"), this.sendHeartbeat())
   }
   constructor(e) {
-    super(), A(this, "url", void 0), A(this, "logger", new T.Z("RTCControlSocket")), A(this, "backoff", new E.Z(1e3, 5e3)), A(this, "webSocket", void 0), A(this, "connectionState", void 0), A(this, "heartbeatInterval", void 0), A(this, "helloTimeout", void 0), A(this, "heartbeater", void 0), A(this, "lastHeartbeatTime", void 0), A(this, "lastHeartbeatAckTime", void 0), A(this, "expeditedHeartbeatTimeout", void 0), A(this, "heartbeatAck", void 0), A(this, "heartbeatIntervalModifier", void 0), A(this, "connectionStartTime", void 0), A(this, "sessionId", void 0), A(this, "serverId", void 0), A(this, "token", void 0), A(this, "resumable", void 0), A(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
+    super(), N(this, "url", void 0), N(this, "logger", new T.Z("RTCControlSocket")), N(this, "backoff", new E.Z(1e3, 5e3)), N(this, "webSocket", void 0), N(this, "connectionState", void 0), N(this, "heartbeatInterval", void 0), N(this, "helloTimeout", void 0), N(this, "heartbeater", void 0), N(this, "lastHeartbeatTime", void 0), N(this, "lastHeartbeatAckTime", void 0), N(this, "expeditedHeartbeatTimeout", void 0), N(this, "heartbeatAck", void 0), N(this, "heartbeatIntervalModifier", void 0), N(this, "connectionStartTime", void 0), N(this, "sessionId", void 0), N(this, "serverId", void 0), N(this, "token", void 0), N(this, "resumable", void 0), N(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
   }
 }

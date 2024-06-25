@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   A3: function() {
-    return f
+    return S
   },
   FZ: function() {
-    return S
+    return f
   },
   Je: function() {
     return m
@@ -13,13 +13,13 @@ n.d(t, {
     return k
   },
   Qi: function() {
-    return B
+    return x
   },
   Ro: function() {
     return i
   },
   U2: function() {
-    return A
+    return N
   },
   Vx: function() {
     return y
@@ -37,7 +37,7 @@ n.d(t, {
     return O
   },
   e9: function() {
-    return p
+    return R
   },
   f2: function() {
     return D
@@ -49,10 +49,10 @@ n.d(t, {
     return C
   },
   ig: function() {
-    return N
+    return A
   },
   nW: function() {
-    return R
+    return p
   },
   rF: function() {
     return v
@@ -70,7 +70,7 @@ n.d(t, {
     return M
   },
   yw: function() {
-    return x
+    return B
   }
 }), n(411104), n(47120), n(724458);
 var i, r, s = n(392711),
@@ -98,13 +98,13 @@ Object.freeze({
 });
 (r = i || (i = {}))[r.EMOJI = 1] = "EMOJI", r[r.AUDIO = 2] = "AUDIO", r[r.ANIMATED = 3] = "ANIMATED", r[r.CUSTOMIZATION = 4] = "CUSTOMIZATION", r[r.UPLOAD = 5] = "UPLOAD", r[r.VANITY = 6] = "VANITY", r[r.STREAM = 7] = "STREAM", r[r.STICKER = 8] = "STICKER", r[r.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", r[r.STAGE_VIDEO = 12] = "STAGE_VIDEO", r[r.SOUNDBOARD = 13] = "SOUNDBOARD";
 let h = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
-  S = (e, t) => {
+  f = (e, t) => {
     var n;
     return e === E.Eu4.NONE ? E.Eu4.TIER_1 : null === (n = G(t).find(t => t.tier === e)) || void 0 === n ? void 0 : n.nextTier
   },
-  f = e => I.$8[e],
-  N = e => I.pH[e],
-  A = (e, t) => null != t && t.hasFeature(E.oNc.MORE_SOUNDBOARD) ? 96 : I._k[e],
+  S = e => I.$8[e],
+  A = e => I.pH[e],
+  N = (e, t) => null != t && t.hasFeature(E.oNc.MORE_SOUNDBOARD) ? 96 : I._k[e],
   m = e => {
     if (e === E.Eu4.NONE) return I._k[e];
     let t = h[h.indexOf(e) - 1];
@@ -122,15 +122,15 @@ let h = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
       icon: 1
     }, {
       title: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: N(E.Eu4.TIER_1),
-        total: f(E.Eu4.TIER_1)
+        adding: A(E.Eu4.TIER_1),
+        total: S(E.Eu4.TIER_1)
       }),
       description: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
       icon: 8
     }, {
       title: T.Z.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
         soundCount: m(E.Eu4.TIER_1),
-        totalSoundCount: A(E.Eu4.TIER_1)
+        totalSoundCount: N(E.Eu4.TIER_1)
       }),
       description: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SOUNDBOARD,
       icon: 13
@@ -165,15 +165,15 @@ let h = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
       icon: 1
     }, {
       title: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: N(E.Eu4.TIER_2),
-        total: f(E.Eu4.TIER_2)
+        adding: A(E.Eu4.TIER_2),
+        total: S(E.Eu4.TIER_2)
       }),
       description: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
       icon: 8
     }, {
       title: T.Z.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
         soundCount: m(E.Eu4.TIER_2),
-        totalSoundCount: A(E.Eu4.TIER_2)
+        totalSoundCount: N(E.Eu4.TIER_2)
       }),
       description: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_SOUNDBOARD,
       icon: 13
@@ -224,15 +224,15 @@ let h = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
       icon: 1
     }, {
       title: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: N(E.Eu4.TIER_3),
-        total: f(E.Eu4.TIER_3)
+        adding: A(E.Eu4.TIER_3),
+        total: S(E.Eu4.TIER_3)
       }),
       description: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
       icon: 8
     }, {
       title: T.Z.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
         soundCount: m(E.Eu4.TIER_3),
-        totalSoundCount: A(E.Eu4.TIER_3)
+        totalSoundCount: N(E.Eu4.TIER_3)
       }),
       description: T.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_SOUNDBOARD,
       icon: 13
@@ -271,7 +271,7 @@ let h = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
     } : null].filter(_.lm)
   }];
 
-function R(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       useLevels: n = !0
@@ -290,7 +290,7 @@ function R(e) {
   }
 }
 
-function p(e) {
+function R(e) {
   switch (e) {
     case E.Eu4.NONE:
       return T.Z.Messages.PREMIUM_GUILD_TIER_0;
@@ -391,18 +391,18 @@ function w(e, t) {
   return null
 }
 
-function B(e, t) {
-  let n = N(t),
+function x(e, t) {
+  let n = A(t),
     i = h.indexOf(t);
   if (-1 === i) return 0;
   let r = h[i - 1],
-    s = null != r ? f(r) : 0,
-    o = f(t);
+    s = null != r ? S(r) : 0,
+    o = S(t);
   return Math.max(0, n - e.slice(s, o).length)
 }
 
-function x(e, t, n) {
-  return -1 === h.indexOf(n) ? 0 : Math.max(0, A(n, e) - t.length)
+function B(e, t, n) {
+  return -1 === h.indexOf(n) ? 0 : Math.max(0, N(n, e) - t.length)
 }
 
 function k(e, t) {

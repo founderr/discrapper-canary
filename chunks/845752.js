@@ -3,40 +3,40 @@ n.d(t, {
     return o
   }
 });
-var s = n(392711),
-  i = n.n(s),
-  l = n(243814),
-  a = n(186901),
-  r = n(981631);
+var i = n(392711),
+  s = n.n(i),
+  a = n(243814),
+  r = n(186901),
+  l = n(981631);
 
 function o(e, t) {
   return {
-    [r.zMe.VOICE_SETTINGS_UPDATE]: {
+    [l.zMe.VOICE_SETTINGS_UPDATE]: {
       scope: {
-        [a.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
+        [r.Gp.ANY]: [a.x.RPC, a.x.RPC_VOICE_READ]
       },
       handler: () => t => {
         let {
           prevState: n,
-          dispatch: s
-        } = t, l = e();
-        return !i().isEqual(l, n) && s(l), l
+          dispatch: i
+        } = t, a = e();
+        return !s().isEqual(a, n) && i(a), a
       }
     },
-    [r.zMe.VOICE_SETTINGS_UPDATE_2]: {
-      scope: a.lH,
+    [l.zMe.VOICE_SETTINGS_UPDATE_2]: {
+      scope: r.lH,
       handler(e) {
         let {
           socket: n
         } = e;
         return e => {
           let {
-            prevState: s,
-            dispatch: l
+            prevState: i,
+            dispatch: a
           } = e;
-          if (null == n.application.id) return s;
-          let a = t(n.application.id);
-          return !i().isEqual(a, s) && l(a), a
+          if (null == n.application.id) return i;
+          let r = t(n.application.id);
+          return !s().isEqual(r, i) && a(r), r
         }
       }
     }

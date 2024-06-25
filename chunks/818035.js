@@ -1,41 +1,41 @@
-t(653041), t(47120);
-var n, a, i, l, r = t(442837),
-  o = t(570140),
-  c = t(461655);
-let u = [];
+n(653041), n(47120);
+var s, a, i, o, r = n(442837),
+  l = n(570140),
+  c = n(461655);
+let d = [];
 
-function d(e) {
+function u(e) {
   let {
-    payment: s
-  } = e, t = c.Z.createFromServer(s), n = u.findIndex(e => e.id === s.id); - 1 === n ? (u.push(t), u.sort((e, s) => s.createdAt.getTime() - e.createdAt.getTime())) : u[n] = t, u = [...u]
+    payment: t
+  } = e, n = c.Z.createFromServer(t), s = d.findIndex(e => e.id === t.id); - 1 === s ? (d.push(n), d.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : d[s] = n, d = [...d]
 }
-class E extends(n = r.ZP.Store) {
+class _ extends(s = r.ZP.Store) {
   getPayment(e) {
-    return u.find(s => s.id === e)
+    return d.find(t => t.id === e)
   }
   getPayments() {
-    return u
+    return d
   }
 }
-l = "PaymentStore", (i = "displayName") in(a = E) ? Object.defineProperty(a, i, {
-  value: l,
+o = "PaymentStore", (i = "displayName") in(a = _) ? Object.defineProperty(a, i, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = l, s.Z = new E(o.Z, {
+}) : a[i] = o, t.Z = new _(l.Z, {
   BILLING_PAYMENTS_FETCH_SUCCESS: function(e) {
     let {
-      payments: s
+      payments: t
     } = e;
-    for (let e of s) {
-      let s = c.Z.createFromServer(e),
-        t = u.findIndex(s => s.id === e.id); - 1 !== t ? u[t] = s : u.push(s)
+    for (let e of t) {
+      let t = c.Z.createFromServer(e),
+        n = d.findIndex(t => t.id === e.id); - 1 !== n ? d[n] = t : d.push(t)
     }
-    u.sort((e, s) => s.createdAt.getTime() - e.createdAt.getTime()), u = [...u]
+    d.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), d = [...d]
   },
-  PAYMENT_UPDATE: d,
-  BILLING_PAYMENT_FETCH_SUCCESS: d,
+  PAYMENT_UPDATE: u,
+  BILLING_PAYMENT_FETCH_SUCCESS: u,
   LOGOUT: function() {
-    u = []
+    d = []
   }
 })

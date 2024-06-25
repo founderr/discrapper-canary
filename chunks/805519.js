@@ -3,10 +3,10 @@ n.d(t, {
     return h
   }
 }), n(47120), n(773603);
-var l = n(470079),
-  i = n(442837),
-  s = n(693546),
-  a = n(826581),
+var i = n(470079),
+  a = n(442837),
+  l = n(693546),
+  s = n(826581),
   r = n(937111),
   o = n(430824),
   c = n(496675),
@@ -14,12 +14,12 @@ var l = n(470079),
   d = n(981631);
 
 function h(e) {
-  let [t, n] = l.useState(!1), [h, m] = l.useState(!1), E = u.default.cast(e), {
-    joinRequest: p,
-    guild: g
-  } = (0, i.cj)([a.Z, r.Z, o.Z, c.Z], () => {
+  let [t, n] = i.useState(!1), [h, p] = i.useState(!1), m = u.default.cast(e), {
+    joinRequest: _,
+    guild: f
+  } = (0, a.cj)([s.Z, r.Z, o.Z, c.Z], () => {
     var e;
-    let t = a.Z.getRequest(E);
+    let t = s.Z.getRequest(m);
     if (null == t) return {
       joinRequest: null,
       isModmin: !1,
@@ -32,15 +32,15 @@ function h(e) {
       guild: n
     }
   });
-  return l.useEffect(() => {
-    null == g && !h && (m(!0), s.Z.fetchRequestToJoinGuilds())
-  }, [g, h]), l.useEffect(() => {
-    null == p && (n(!0), s.Z.fetchGuildJoinRequest(E).finally(() => {
+  return i.useEffect(() => {
+    null == f && !h && (p(!0), l.Z.fetchRequestToJoinGuilds())
+  }, [f, h]), i.useEffect(() => {
+    null == _ && (n(!0), l.Z.fetchGuildJoinRequest(m).finally(() => {
       n(!1)
     }))
-  }, [p, E]), {
+  }, [_, m]), {
     loading: t,
-    joinRequest: p,
-    joinRequestGuild: g
+    joinRequest: _,
+    joinRequestGuild: f
   }
 }

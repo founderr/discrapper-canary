@@ -10,7 +10,7 @@ n.d(t, {
     return T
   },
   WC: function() {
-    return S
+    return f
   },
   aW: function() {
     return d
@@ -22,13 +22,13 @@ n.d(t, {
     return m
   },
   km: function() {
-    return A
+    return N
   },
   no: function() {
     return I
   },
   o6: function() {
-    return N
+    return A
   },
   tI: function() {
     return s
@@ -37,7 +37,7 @@ n.d(t, {
     return r
   },
   z8: function() {
-    return f
+    return S
   }
 }), n(411104);
 var i, r, s, o, a, l, u = n(981631),
@@ -182,12 +182,12 @@ function h(e, t) {
     }
   }
 }
-let S = [h(720), h(1080), h(1440), h(0, () => c.Z.Messages.SCREENSHARE_SOURCE)],
-  f = [h(720), h(1080), h(1440)],
-  N = e => 0 === e ? c.Z.Messages.SCREENSHARE_SOURCE : c.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+let f = [h(720), h(1080), h(1440), h(0, () => c.Z.Messages.SCREENSHARE_SOURCE)],
+  S = [h(720), h(1080), h(1440)],
+  A = e => 0 === e ? c.Z.Messages.SCREENSHARE_SOURCE : c.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
     resolution: e
   }),
-  A = [h(480, () => N(480)), h(720, () => N(720)), h(1080, () => N(1080)), h(1440, () => N(1440)), h(0, () => N(0))],
+  N = [h(480, () => A(480)), h(720, () => A(720)), h(1080, () => A(1080)), h(1440, () => A(1440)), h(0, () => A(0))],
   m = [h(15), h(30), h(60)],
   O = [h(15, () => c.Z.Messages.STREAM_FPS_OPTION.format({
     value: 15

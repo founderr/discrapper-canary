@@ -3,38 +3,38 @@ n.d(t, {
     return o
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(481060),
-  r = n(689938),
-  a = n(995794);
+var i = n(735250),
+  l = n(470079),
+  r = n(481060),
+  a = n(689938),
+  s = n(995794);
 
 function o(e) {
   let {
     header: t,
     body: n,
     onSubmit: o,
-    ...u
-  } = e, [c, d] = i.useState(!1);
-  return (0, l.jsxs)(s.ConfirmModal, {
+    ...c
+  } = e, [u, d] = l.useState(!1);
+  return (0, i.jsxs)(r.ConfirmModal, {
     header: t,
-    confirmText: r.Z.Messages.LEAVE_GROUP_DM,
-    cancelText: r.Z.Messages.CANCEL,
+    confirmText: a.Z.Messages.LEAVE_GROUP_DM,
+    cancelText: a.Z.Messages.CANCEL,
     onConfirm: () => {
-      o(null, c)
+      o(null, u)
     },
-    ...u,
-    children: [(0, l.jsx)(s.Text, {
+    ...c,
+    children: [(0, i.jsx)(r.Text, {
       variant: "text-md/normal",
       children: n
-    }), (0, l.jsx)(s.Checkbox, {
-      type: s.Checkbox.Types.INVERTED,
-      value: c,
+    }), (0, i.jsx)(r.Checkbox, {
+      type: r.Checkbox.Types.INVERTED,
+      value: u,
       onChange: () => d(e => !e),
-      className: a.checkbox,
-      children: (0, l.jsx)(s.Text, {
+      className: s.checkbox,
+      children: (0, i.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: r.Z.Messages.LEAVE_GROUP_DM_SILENTLY
+        children: a.Z.Messages.LEAVE_GROUP_DM_SILENTLY
       })
     })]
   })

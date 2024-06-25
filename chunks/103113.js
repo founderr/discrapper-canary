@@ -18,10 +18,10 @@ var i = n(735250),
   I = n(741308),
   T = n(588822),
   h = n(502762),
-  S = n(530),
-  f = n(513099),
-  N = n(228168),
-  A = n(472375);
+  f = n(530),
+  S = n(513099),
+  A = n(228168),
+  N = n(472375);
 
 function m(e) {
   let {
@@ -29,16 +29,16 @@ function m(e) {
     guildId: n,
     channelId: m,
     messageId: O,
-    roleId: R,
-    setPopoutRef: p,
+    roleId: p,
+    setPopoutRef: R,
     closePopout: g,
     newAnalyticsLocations: C = []
   } = e, v = (0, d.ZP)(t.id, n), {
     analyticsLocations: L
   } = (0, l.ZP)([...C, a.Z.BITE_SIZE_PROFILE_POPOUT]), D = r.useRef(null), M = (0, o.Z)(D);
   return r.useEffect(() => {
-    null == p || p(null == D ? void 0 : D.current)
-  }, [D, p]), (0, i.jsx)(l.Gt, {
+    null == R || R(null == D ? void 0 : D.current)
+  }, [D, R]), (0, i.jsx)(l.Gt, {
     value: L,
     children: (0, i.jsx)(c.Mt, {
       layout: "BITE_SIZE_POPOUT",
@@ -46,37 +46,37 @@ function m(e) {
       guildId: n,
       channelId: m,
       messageId: O,
-      roleId: R,
+      roleId: p,
       children: (0, i.jsxs)(s.Dialog, {
         ref: D,
         "aria-label": t.username,
         children: [(0, i.jsxs)(h.Z, {
           user: t,
           displayProfile: v,
-          profileType: N.y0.BITE_SIZE,
+          profileType: A.y0.BITE_SIZE,
           children: [(0, i.jsxs)("header", {
-            className: A.header,
+            className: N.header,
             children: [(0, i.jsx)(E.Z, {
               user: t,
               displayProfile: v,
               guildId: n,
-              profileType: N.y0.BITE_SIZE,
+              profileType: A.y0.BITE_SIZE,
               hasProfileEffect: (null == v ? void 0 : v.profileEffectId) != null
-            }), (0, i.jsx)(f.Z, {
+            }), (0, i.jsx)(S.Z, {
               user: t,
               displayProfile: v,
               guildId: n,
               channelId: m
             })]
           }), (0, i.jsxs)("div", {
-            className: A.body,
-            children: [(0, i.jsx)(S.Z, {
+            className: N.body,
+            children: [(0, i.jsx)(f.Z, {
               user: t,
-              profileType: N.y0.BITE_SIZE,
+              profileType: A.y0.BITE_SIZE,
               nickname: _.ZP.getName(n, m, t),
               tags: (0, i.jsx)(I.Z, {
                 displayProfile: v,
-                profileType: N.y0.BITE_SIZE,
+                profileType: A.y0.BITE_SIZE,
                 onClose: g
               })
             }), (0, i.jsx)(T.Z, {
@@ -86,7 +86,7 @@ function m(e) {
               textColor: "header-primary"
             })]
           }), (0, i.jsx)("footer", {
-            className: A.footer
+            className: N.footer
           })]
         }), (null == v ? void 0 : v.profileEffectId) != null && (0, i.jsx)(u.Z, {
           profileEffectId: null == v ? void 0 : v.profileEffectId,

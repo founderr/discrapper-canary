@@ -1,49 +1,49 @@
 a.r(s);
 var r = a(735250);
 a(470079);
-var l = a(481060),
-  t = a(153124),
-  o = a(426642),
-  n = a(689938),
-  c = a(296277);
+var t = a(481060),
+  o = a(153124),
+  l = a(426642),
+  c = a(689938),
+  n = a(296277);
 s.default = e => {
   let {
     transitionState: s,
     errors: a,
     onClose: d
-  } = e, i = (0, t.Dt)();
-  return (0, r.jsxs)(l.ModalRoot, {
+  } = e, i = (0, o.Dt)();
+  return (0, r.jsxs)(t.ModalRoot, {
     transitionState: s,
     "aria-labelledby": i,
-    children: [(0, r.jsx)(l.ModalHeader, {
+    children: [(0, r.jsx)(t.ModalHeader, {
       separator: !1,
-      className: c.modalHeader,
-      children: (0, r.jsx)(l.ModalCloseButton, {
+      className: n.modalHeader,
+      children: (0, r.jsx)(t.ModalCloseButton, {
         onClick: d,
-        className: c.closeButton
+        className: n.closeButton
       })
-    }), (0, r.jsxs)(l.ModalContent, {
-      className: c.modalContent,
-      children: [(0, r.jsxs)(l.FormSection, {
-        className: c.header,
-        children: [(0, r.jsx)(l.FormTitle, {
+    }), (0, r.jsxs)(t.ModalContent, {
+      className: n.modalContent,
+      children: [(0, r.jsxs)(t.FormSection, {
+        className: n.header,
+        children: [(0, r.jsx)(t.FormTitle, {
           id: i,
-          className: c.title,
-          children: n.Z.Messages.UPLOAD_ERROR_TITLE
-        }), (0, r.jsx)(l.FormText, {
-          type: l.FormTextTypes.DESCRIPTION,
-          children: n.Z.Messages.UPLOAD_ERROR_DESCRIPTION
+          className: n.title,
+          children: c.Z.Messages.UPLOAD_ERROR_TITLE
+        }), (0, r.jsx)(t.FormText, {
+          type: t.FormTextTypes.DESCRIPTION,
+          children: c.Z.Messages.UPLOAD_ERROR_DESCRIPTION
         })]
       }), (0, r.jsx)("div", {
-        className: c.errors,
-        children: (0, r.jsx)(l.Scroller, {
-          children: a.map(e => (0, r.jsx)(o.Z, {
+        className: n.errors,
+        children: (0, r.jsx)(t.Scroller, {
+          children: a.map(e => (0, r.jsx)(l.Z, {
             error: e
           }, e.filename))
         })
-      }), (0, r.jsx)(l.Button, {
+      }), (0, r.jsx)(t.Button, {
         onClick: d,
-        children: n.Z.Messages.GOT_IT
+        children: c.Z.Messages.GOT_IT
       })]
     })]
   })

@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   AC: function() {
-    return S
+    return f
   },
   Cq: function() {
-    return N
-  },
-  R5: function() {
     return A
   },
+  R5: function() {
+    return N
+  },
   TM: function() {
-    return f
+    return S
   }
 });
 var i = n(749210),
@@ -28,25 +28,25 @@ var i = n(749210),
   T = n(146085),
   h = n(96150);
 
-function S(e, t) {
+function f(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return new Promise(async r => {
     let s = u.Z.getChannel(t);
-    if (null != s) return f(s, n), r(s);
+    if (null != s) return S(s, n), r(s);
     await (0, a.O)([e]), await i.Z.joinGuild(e, {
       lurker: !0
     }), _.Z.addConditionalChangeListener(() => {
       let e = u.Z.getChannel(t);
-      return null == e || (f(e), h.Z.initialize(), r(e), !1)
+      return null == e || (S(e), h.Z.initialize(), r(e), !1)
     })
   })
 }
 
-function f(e) {
+function S(e) {
   var t, n;
   let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     o = d.Z.getVoiceChannelId();
-  if (!i && (t = e, n = o, !c.Z.can(T.gl, t) || E.Zl(t.id) && n !== t.id && (E.vu(t, () => N(t, !0)), 1))) return !1;
+  if (!i && (t = e, n = o, !c.Z.can(T.gl, t) || E.Zl(t.id) && n !== t.id && (E.vu(t, () => A(t, !0)), 1))) return !1;
   if (I.Z.initialize(), r.default.selectVoiceChannel(e.id), (o = d.Z.getVoiceChannelId()) !== e.id) return !1;
   let a = l.Z.getAllApplicationStreamsForChannel(e.id);
   return a.length > 0 && (0, s.rn)(a[0], {
@@ -54,15 +54,15 @@ function f(e) {
   }), !0
 }
 
-function N(e) {
+function A(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     r = d.Z.getVoiceChannelId();
-  if (!(!i && r !== e.id && (0, o._)(e) && E.Gy(e, () => N(e, t, n, !0)))) f(e, t) && A(e, r, n)
+  if (!(!i && r !== e.id && (0, o._)(e) && E.Gy(e, () => A(e, t, n, !0)))) S(e, t) && N(e, r, n)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   E.R5(e, t, n)
 }

@@ -89,21 +89,21 @@ let _ = () => ({
       })
     }
   },
-  S = () => ({
+  f = () => ({
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
     icon: r.StarIcon,
     description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
   }),
-  f = () => ({
+  S = () => ({
     icon: s.Z,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
-  N = () => ({
+  A = () => ({
     icon: o.Z,
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
   }),
-  A = () => ({
+  N = () => ({
     icon: r.ShieldUserIcon,
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
@@ -121,12 +121,12 @@ let _ = () => ({
       description: e
     }
   },
-  R = () => ({
+  p = () => ({
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
     icon: a.Z,
     description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
   }),
-  p = function() {
+  R = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
     return {
       color: e,
@@ -140,15 +140,15 @@ function g() {
 }
 
 function C() {
-  return [I(), h(l.Eu4.TIER_2), p(), O()]
+  return [I(), h(l.Eu4.TIER_2), R(), O()]
 }
 
 function v() {
-  return [h(l.Eu4.TIER_3, i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), R(), S(), O()]
+  return [h(l.Eu4.TIER_3, i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), p(), f(), O()]
 }
 
 function L() {
-  return [S(), E(), h(l.Eu4.TIER_3), O()]
+  return [f(), E(), h(l.Eu4.TIER_3), O()]
 }
 
 function D() {
@@ -160,5 +160,5 @@ function M() {
 }
 
 function P() {
-  return [N(), A(), f(), m()]
+  return [A(), N(), S(), m()]
 }

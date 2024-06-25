@@ -1,21 +1,21 @@
-C.d(e, {
+a.d(L, {
   o: function() {
-    return i
+    return r
   }
 });
-var a = C(735250);
-C(470079);
-var s = C(613828),
-  t = C(481060);
+var C = a(735250);
+a(470079);
+var t = a(613828),
+  i = a(481060);
 
-function i(L) {
+function r(e) {
   let {
-    children: e,
-    ...C
-  } = L;
-  return (0, a.jsx)(t.Clickable, {
-    tag: s.rU,
-    ...C,
-    children: e
+    children: L,
+    ...a
+  } = e;
+  return (0, C.jsx)(i.Clickable, {
+    tag: t.rU,
+    ...a,
+    children: L
   })
 }

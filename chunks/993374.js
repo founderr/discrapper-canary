@@ -102,8 +102,8 @@ class E {
         return !1
       }(e, t)) return !1;
     if (_.size > 0) {
-      var h, S;
-      if (h = e, !(0 !== (S = _).size && Array.from(S).every(e => h.roles.includes(e)))) return !1
+      var h, f;
+      if (h = e, !(0 !== (f = _).size && Array.from(f).every(e => h.roles.includes(e)))) return !1
     }
     if (null != c.afterDate && e.joinedAtTimestamp < c.afterDate || null != c.beforeDate && e.joinedAtTimestamp > c.beforeDate || null != E.afterDate && a.default.extractTimestamp(e.userId) < E.afterDate || null != E.beforeDate && a.default.extractTimestamp(e.userId) > E.beforeDate || null != I && e.sourceInviteCode !== I || null != T && e.joinSourceType !== T) return !1;
     if (n || i || r || u) return !!(n && e.hasUnusualDmActivity || i && (0, o.b)(e) || r && e.hasUnusualAccountActivity || u && (0, s.EY)(e)) || !1;

@@ -1,87 +1,87 @@
 t(47120);
-var a, r, s, i, l = t(392711),
-  o = t.n(l),
+var a, r, i, s, o = t(392711),
+  l = t.n(o),
   c = t(906280),
   d = t.n(c),
   u = t(442837),
   m = t(570140),
-  h = t(944163),
+  f = t(944163),
   C = t(116175),
-  x = t(308083);
-let f = () => ({
+  _ = t(308083);
+let h = () => ({
     gameApplicationIds: new Set,
-    playstyle: x.zv.NONE,
+    playstyle: _.zv.NONE,
     interests: new Set,
     description: "",
-    wildcardDescriptors: [x.U6, x.U6, x.U6],
+    wildcardDescriptors: [_.U6, _.U6, _.U6],
     tag: "",
     verificationForm: {
-      ...h.t
+      ...f.t
     },
     badgeKind: C.ZD.SWORD,
     badgePrimaryColor: C.sg["0"].primary,
     badgeSecondaryColor: C.sg["0"].secondary,
-    banner: x.qC.NIGHT_SKY,
-    brandPrimaryColor: x.ym["0"].primary,
-    brandSecondaryColor: x.ym["0"].secondary
+    banner: _.qC.NIGHT_SKY,
+    brandPrimaryColor: _.ym["0"].primary,
+    brandSecondaryColor: _.ym["0"].secondary
   }),
-  E = f(),
-  T = d()(E),
-  _ = !1,
-  I = !1,
-  g = {};
-class p extends(a = u.ZP.Store) {
+  x = h(),
+  g = d()(x),
+  p = !1,
+  T = !1,
+  I = {};
+class E extends(a = u.ZP.Store) {
   getState() {
     return {
-      initialSettings: E,
-      settings: T,
-      dirty: _,
-      errors: g,
-      submitting: I
+      initialSettings: x,
+      settings: g,
+      dirty: p,
+      errors: I,
+      submitting: T
     }
   }
 }
-i = "ClanSettingsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
-  value: i,
+s = "ClanSettingsStore", (i = "displayName") in(r = E) ? Object.defineProperty(r, i, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, n.Z = new p(m.Z, {
+}) : r[i] = s, n.Z = new E(m.Z, {
   CLAN_SETTINGS_FETCH_START: function() {
-    I = !1, E = f(), T = d()(E), _ = !1, g = {}
+    T = !1, x = h(), g = d()(x), p = !1, I = {}
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
       settings: n
     } = e;
-    E = {
-      ...f(),
+    x = {
+      ...h(),
       ...n
-    }, T = d()(E), _ = !1
+    }, g = d()(x), p = !1
   },
   CLAN_SETTINGS_UPDATE: function(e) {
     let {
       updates: n
     } = e;
-    for (let e in T = {
-        ...T,
+    for (let e in g = {
+        ...g,
         ...d()(n)
-      }, n) delete g[e], g = {
-      ...g
+      }, n) delete I[e], I = {
+      ...I
     };
-    _ = !o().isEqual(o().omit(T, "verificationForm"), o().omit(E, "verificationForm"))
+    p = !l().isEqual(l().omit(g, "verificationForm"), l().omit(x, "verificationForm"))
   },
   CLAN_SETTINGS_SUBMIT: function() {
-    I = !0, g = {}
+    T = !0, I = {}
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-    I = !1, E = d()(T), _ = !1, g = {}
+    T = !1, x = d()(g), p = !1, I = {}
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     let {
       error: n
     } = e;
-    I = !1, g = {
+    T = !1, I = {
       gameApplicationIds: n.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: n.getFirstFieldErrorMessage("play_style"),
       description: n.getFirstFieldErrorMessage("description"),
@@ -96,16 +96,16 @@ i = "ClanSettingsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r
       form: n,
       isLocalUpdate: t
     } = e;
-    if (null == T.verificationForm) return !1;
-    if (T = {
-        ...T,
+    if (null == g.verificationForm) return !1;
+    if (g = {
+        ...g,
         verificationForm: {
-          ...T.verificationForm,
+          ...g.verificationForm,
           ...n
         }
       }, t) {
       var a;
-      _ = !o().isEqual(T.verificationForm.formFields, null === (a = E.verificationForm) || void 0 === a ? void 0 : a.formFields)
-    } else _ = !1
+      p = !l().isEqual(g.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields)
+    } else p = !1
   }
 })

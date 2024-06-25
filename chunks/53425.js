@@ -1,47 +1,47 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  r = n.n(s),
-  a = n(442837),
+var i = n(735250),
+  l = n(470079),
+  r = n(120356),
+  a = n.n(r),
+  s = n(442837),
   o = n(592125),
-  u = n(938475),
-  c = n(823379),
+  c = n(938475),
+  u = n(823379),
   d = n(734190),
   h = n(689938),
   p = n(205546);
-t.Z = i.memo(function(e) {
+t.Z = l.memo(function(e) {
   let {
     channel: t,
     selectedChannel: n,
-    selectedVoiceChannelId: i,
-    sortedThreadIds: s,
-    withGuildIcon: g
-  } = e, m = (0, a.Wu)([o.Z], () => s.map(e => o.Z.getChannel(e)).filter(c.lm), [s]), C = (0, a.e7)([u.ZP], () => {
-    let e = m[m.length - 1];
+    selectedVoiceChannelId: l,
+    sortedThreadIds: r,
+    withGuildIcon: f
+  } = e, _ = (0, s.Wu)([o.Z], () => r.map(e => o.Z.getChannel(e)).filter(u.lm), [r]), g = (0, s.e7)([c.ZP], () => {
+    let e = _[_.length - 1];
     if (null == e) return 0;
-    let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
-    return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8
+    let t = c.ZP.getVoiceStates(e.guild_id)[e.id];
+    return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8
   });
-  return (0, l.jsx)("li", {
+  return (0, i.jsx)("li", {
     className: p.container,
-    children: (0, l.jsxs)("ul", {
+    children: (0, i.jsxs)("ul", {
       role: "group",
       "aria-label": h.Z.Messages.THREAD_GROUP_A11Y_LABEL.format({
         channelName: t.name
       }),
-      children: [(0, l.jsx)("div", {
-        className: r()(p.spineBorder, {
-          [p.spineBorderWithGuildIcon]: g
+      children: [(0, i.jsx)("div", {
+        className: a()(p.spineBorder, {
+          [p.spineBorderWithGuildIcon]: f
         }),
         style: {
-          bottom: 24 + C
+          bottom: 24 + g
         }
-      }), m.map((e, t) => (0, l.jsx)(d.Z, {
+      }), _.map((e, t) => (0, i.jsx)(d.Z, {
         thread: e,
         isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
-        isSelectedVoice: i === e.id,
-        isLast: t === m.length - 1,
-        withGuildIcon: g
+        isSelectedVoice: l === e.id,
+        isLast: t === _.length - 1,
+        withGuildIcon: f
       }, e.id))]
     })
   })

@@ -5,17 +5,17 @@ n.d(t, {
   }
 }), n(47120);
 var i, s = n(470079),
-  l = n(392711),
-  o = n.n(l),
-  a = n(699581),
-  r = n(374470),
+  a = n(392711),
+  o = n.n(a),
+  r = n(699581),
+  l = n(374470),
   c = n(902704),
   d = n(846519),
   u = n(13245),
   h = n(671999),
   p = n(358085),
   f = n(998502),
-  E = n(145597);
+  _ = n(145597);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -29,25 +29,25 @@ let m = {
     x: 0,
     y: 0
   },
-  Z = !1;
+  E = !1;
 
-function I(e) {
+function Z(e) {
   let {
     clientX: t,
     clientY: n
   } = e;
-  Z = !0, m.x = t, m.y = n
+  E = !0, m.x = t, m.y = n
 }
-let S = new Map;
+let I = new Map;
 
-function _(e, t) {
-  if (null == t) S.delete(e), 0 === S.size && (window.removeEventListener("mousemove", I), Z = !1);
+function S(e, t) {
+  if (null == t) I.delete(e), 0 === I.size && (window.removeEventListener("mousemove", Z), E = !1);
   else {
-    let n = S.get(e);
+    let n = I.get(e);
     if (null != n && (0, c.Z)(n.zone, t.zone)) return;
-    0 === S.size && window.addEventListener("mousemove", I), S.set(e, t)
+    0 === I.size && window.addEventListener("mousemove", Z), I.set(e, t)
   }
-  p.isPlatformEmbedded && ((0, E.W2)() ? u.Z.setClickZones(Array.from(S.values()).map(e => {
+  p.isPlatformEmbedded && ((0, _.W2)() ? u.Z.setClickZones(Array.from(I.values()).map(e => {
     let {
       zone: t
     } = e;
@@ -60,7 +60,7 @@ function _(e, t) {
     }
   })) : (f.ZP.requireModule("discord_overlay2").broadcastCommand({
     message: "set_click_zones",
-    zones: Array.from(S.values()).map(e => {
+    zones: Array.from(I.values()).map(e => {
       let {
         zone: t
       } = e;
@@ -68,8 +68,8 @@ function _(e, t) {
     })
   }), function() {
     if (!C) f.ZP.requireModule("discord_overlay2").setClickZoneCallback((e, t, n) => {
-      let i = S.get(e);
-      null != i && (!Z && (m.x = t, m.y = n), i.instance.click())
+      let i = I.get(e);
+      null != i && (!E && (m.x = t, m.y = n), i.instance.click())
     }), C = !0
   }()))
 }
@@ -79,7 +79,7 @@ class v extends(i = s.PureComponent) {
     this.props.observe ? this.observeZone() : this.updateZone()
   }
   componentWillUnmount() {
-    this.interval.stop(), _(this.zone, null)
+    this.interval.stop(), S(this.zone, null)
   }
   componentDidUpdate(e) {
     let {
@@ -99,15 +99,15 @@ class v extends(i = s.PureComponent) {
   }
   constructor(...e) {
     super(...e), g(this, "zone", o().uniqueId("ClickArea")), g(this, "interval", new d.Xp), g(this, "updateZone", () => {
-      let e = (0, a.findDOMNode)(this);
-      if ((0, r.k)(e)) {
+      let e = (0, r.findDOMNode)(this);
+      if ((0, l.k)(e)) {
         let {
           left: t,
           top: n,
           right: i,
           bottom: s
         } = e.getBoundingClientRect();
-        _(this.zone, {
+        S(this.zone, {
           instance: this,
           zone: {
             name: this.zone,

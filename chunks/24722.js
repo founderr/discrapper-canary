@@ -1,91 +1,91 @@
-s.r(t), s.d(t, {
+o.r(t), o.d(t, {
   AddRoleMembersModalContent: function() {
-    return B
+    return S
   },
   default: function() {
-    return S
+    return g
   }
-}), s(47120);
-var o = s(735250),
-  a = s(470079),
-  l = s(866442),
-  r = s(442837),
-  n = s(481060),
-  i = s(461745),
-  d = s(185413),
-  c = s(971628),
-  u = s(285952),
-  m = s(892880),
-  M = s(51144),
-  R = s(480608),
-  E = s(434404),
-  C = s(946724),
-  h = s(130341),
-  x = s(981631),
-  b = s(71080),
-  g = s(377668),
-  L = s(689938),
-  k = s(486839);
+}), o(47120);
+var a = o(735250),
+  r = o(470079),
+  s = o(866442),
+  l = o(442837),
+  n = o(481060),
+  c = o(461745),
+  i = o(185413),
+  d = o(971628),
+  u = o(285952),
+  b = o(892880),
+  _ = o(51144),
+  m = o(480608),
+  R = o(434404),
+  h = o(946724),
+  M = o(130341),
+  x = o(981631),
+  C = o(71080),
+  f = o(377668),
+  L = o(689938),
+  B = o(486839);
 
-function B(e) {
+function S(e) {
   var t;
   let {
-    onClose: s,
-    roleId: B,
-    guildId: S,
-    onBack: v,
-    isCreateRoleFlow: A,
-    focusSearchAfterReady: j,
-    isReady: _
-  } = e, f = (0, r.e7)([C.Z], () => C.Z.getRole(B), [B]), [p, T] = a.useState(""), [I, N] = a.useState({}), [Z, y] = a.useState(!1);
-  a.useEffect(() => {
-    m.Z.requestMembers(S, p.trim().toLowerCase(), h._4)
-  }, [S, p]);
-  let D = a.useCallback(e => !e.roles.includes(B), [B]),
-    O = (0, h.lJ)(S, D),
-    w = a.useMemo(() => O.filter(e => (0, h.eg)(p, e)), [p, O]);
-  w = w.filter(e => e.id !== g.fL);
-  let z = a.useCallback(async () => {
-      let e = Object.values(I).map(e => e.row.id);
+    onClose: o,
+    roleId: S,
+    guildId: g,
+    onBack: E,
+    isCreateRoleFlow: k,
+    focusSearchAfterReady: p,
+    isReady: v
+  } = e, w = (0, l.e7)([h.Z], () => h.Z.getRole(S), [S]), [A, T] = r.useState(""), [j, I] = r.useState({}), [N, y] = r.useState(!1);
+  r.useEffect(() => {
+    b.Z.requestMembers(g, A.trim().toLowerCase(), M._4)
+  }, [g, A]);
+  let Z = r.useCallback(e => !e.roles.includes(S), [S]),
+    D = (0, M.lJ)(g, Z),
+    O = r.useMemo(() => D.filter(e => (0, M.eg)(A, e)), [A, D]);
+  O = O.filter(e => e.id !== f.fL);
+  let z = r.useCallback(async () => {
+      let e = Object.values(j).map(e => e.row.id);
       y(!0);
       try {
-        await E.Z.bulkAddMemberRoles(S, B, e), (0, R.H)(S, B, !1), s()
+        await R.Z.bulkAddMemberRoles(g, S, e), (0, m.H)(g, S, !1), o()
       } catch (e) {
         y(!1)
       }
-    }, [S, B, I, s]),
-    U = a.useCallback(e => {
-      N(t => {
-        let s = {
+    }, [g, S, j, o]),
+    U = r.useCallback(e => {
+      I(t => {
+        let o = {
             ...t
           },
-          o = (0, c.G)(e);
-        return o in s ? (delete s[o], s) : (s[o] = {
+          a = (0, d.G)(e);
+        return a in o ? (delete o[a], o) : (o[a] = {
           display: {
-            type: i.Fj.MEMBER,
+            type: c.Fj.MEMBER,
             label: e.name,
             avatar: e.avatarURL
           },
           row: e
-        }, s)
+        }, o)
       })
     }, []),
-    P = a.useCallback(e => {
-      N(t => {
+    H = r.useCallback(e => {
+      I(t => {
         let {
-          [e]: s, ...o
+          [e]: o, ...a
         } = t;
-        return o
+        return a
       })
     }, []),
-    H = a.useMemo(() => w.map(e => {
+    P = r.useMemo(() => O.map(e => {
       var t;
-      let s = M.ZP.getUserTag(e.user);
+      let o = _.ZP.getUserTag(e.user);
       return {
-        rowType: b.aC.MEMBER,
-        name: null !== (t = e.name) && void 0 !== t ? t : s,
+        rowType: C.aC.MEMBER,
+        name: null !== (t = e.name) && void 0 !== t ? t : o,
         nickname: e.name,
-        username: s,
+        username: o,
         id: e.id,
         avatarURL: e.avatarURL,
         bot: e.bot,
@@ -93,92 +93,92 @@ function B(e) {
         disabled: !1,
         key: e.id
       }
-    }), [w]);
-  return (0, o.jsxs)(o.Fragment, {
-    children: [(0, o.jsxs)(n.ModalHeader, {
-      className: k.header,
+    }), [O]);
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsxs)(n.ModalHeader, {
+      className: B.header,
       separator: !1,
       direction: u.Z.Direction.VERTICAL,
-      children: [(0, o.jsx)(n.Heading, {
+      children: [(0, a.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
         children: L.Z.Messages.ROLE_ADD_MEMBERS_TITLE
-      }), A ? (0, o.jsx)(n.Text, {
-        className: k.subtitle,
+      }), k ? (0, a.jsx)(n.Text, {
+        className: B.subtitle,
         color: "text-normal",
         variant: "text-md/normal",
         children: L.Z.Messages.ROLE_CREATE_ADD_MEMBERS_SUBTITLE
-      }) : (0, o.jsxs)("div", {
-        className: k.roleContainer,
-        children: [(0, o.jsx)(n.ShieldUserIcon, {
+      }) : (0, a.jsxs)("div", {
+        className: B.roleContainer,
+        children: [(0, a.jsx)(n.ShieldUserIcon, {
           size: "xs",
-          color: null !== (t = null == f ? void 0 : f.colorString) && void 0 !== t ? t : (0, l.Rf)(x.p6O)
-        }), (0, o.jsx)(n.Text, {
-          className: k.roleName,
+          color: null !== (t = null == w ? void 0 : w.colorString) && void 0 !== t ? t : (0, s.Rf)(x.p6O)
+        }), (0, a.jsx)(n.Text, {
+          className: B.roleName,
           color: "text-normal",
           variant: "text-md/normal",
-          children: null == f ? void 0 : f.name
+          children: null == w ? void 0 : w.name
         })]
       })]
-    }), (0, o.jsx)(d.MemberRoleSelector, {
-      listClassName: k.list,
-      pendingAdditions: I,
-      query: p,
+    }), (0, a.jsx)(i.MemberRoleSelector, {
+      listClassName: B.list,
+      pendingAdditions: j,
+      query: A,
       onQueryChange: T,
       onClickRow: U,
-      onRemovePendingAddition: P,
+      onRemovePendingAddition: H,
       roles: [],
-      members: H,
+      members: P,
       placeholderText: L.Z.Messages.ROLE_ADD_MEMBERS_SEARCH,
       renderEmptyText: e => L.Z.Messages.ROLE_EDIT_MEMBERS_NO_RESULTS.format({
         query: e
       }),
-      focusSearchAfterReady: j,
-      isReady: _
-    }), (0, o.jsxs)(n.ModalFooter, {
-      className: k.footer,
-      children: [(0, o.jsxs)("div", {
-        className: k.buttonsRight,
-        children: [A && 0 === Object.keys(I).length ? (0, o.jsx)(n.Button, {
-          onClick: s,
+      focusSearchAfterReady: p,
+      isReady: v
+    }), (0, a.jsxs)(n.ModalFooter, {
+      className: B.footer,
+      children: [(0, a.jsxs)("div", {
+        className: B.buttonsRight,
+        children: [k && 0 === Object.keys(j).length ? (0, a.jsx)(n.Button, {
+          onClick: o,
           color: n.Button.Colors.PRIMARY,
           children: L.Z.Messages.ROLE_CREATION_SKIP
-        }) : (0, o.jsx)(n.Button, {
+        }) : (0, a.jsx)(n.Button, {
           onClick: z,
-          submitting: Z,
+          submitting: N,
           children: L.Z.Messages.ADD
-        }), !A && (0, o.jsx)(n.Button, {
+        }), !k && (0, a.jsx)(n.Button, {
           look: n.Button.Looks.LINK,
           color: n.Button.Colors.PRIMARY,
           size: n.Button.Sizes.SMALL,
-          onClick: s,
+          onClick: o,
           children: L.Z.Messages.CANCEL
         })]
-      }), null != v && (0, o.jsx)(n.Button, {
+      }), null != E && (0, a.jsx)(n.Button, {
         color: n.Button.Colors.PRIMARY,
         look: n.Button.Looks.LINK,
         size: n.Button.Sizes.TINY,
-        onClick: v,
-        className: k.backButton,
+        onClick: E,
+        className: B.backButton,
         children: L.Z.Messages.BACK
       })]
     })]
   })
 }
 
-function S(e) {
+function g(e) {
   let {
     transitionState: t,
-    onClose: s,
-    roleId: a,
-    guildId: l
+    onClose: o,
+    roleId: r,
+    guildId: s
   } = e;
-  return (0, o.jsx)(n.ModalRoot, {
+  return (0, a.jsx)(n.ModalRoot, {
     transitionState: t,
     size: n.ModalSize.SMALL,
-    children: (0, o.jsx)(B, {
-      onClose: s,
-      roleId: a,
-      guildId: l
+    children: (0, a.jsx)(S, {
+      onClose: o,
+      roleId: r,
+      guildId: s
     })
   })
 }

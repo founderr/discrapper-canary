@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $_: function() {
-    return S
+    return f
   },
   KQ: function() {
     return T
@@ -13,7 +13,7 @@ n.d(t, {
     return I
   },
   rf: function() {
-    return f
+    return S
   },
   tu: function() {
     return h
@@ -64,7 +64,7 @@ function h(e) {
   return s.AsteriskIcon
 }
 
-function S(e) {
+function f(e) {
   let {
     itemId: t,
     hash: n
@@ -74,7 +74,7 @@ function S(e) {
   return null != E ? "".concat(location.protocol, "//").concat(E, "/app-assets/application-directory/collection-items/").concat(t, "/").concat(n, ".").concat(s, "?").concat(i) : "".concat(location.protocol).concat(d).concat(u.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, s), "?").concat(i)
 }
 
-function f() {
+function S() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     t = new URL(location.href);
   for (let n in e) {

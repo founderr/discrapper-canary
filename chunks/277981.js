@@ -13,10 +13,10 @@ var i = n(735250),
   I = n(285952),
   T = n(590921),
   h = n(665692),
-  S = n(981631),
-  f = n(689938),
-  N = n(827838);
-let A = {
+  f = n(981631),
+  S = n(689938),
+  A = n(827838);
+let N = {
   results: {
     command: null,
     integrations: [],
@@ -36,18 +36,18 @@ let O = {
   stores: [_.Z, d.Z],
   matches(e, t, n, i, r) {
     var s;
-    return r.commands !== T.L8.DISABLED && (r.commands === T.L8.OLD_BUILT_INS ? n.startsWith(h.GI + "gif") || n.startsWith(h.GI + "tenor") : (null === (s = _.Z.getActiveCommand(e.id)) || void 0 === s ? void 0 : s.integrationType) === S.q9n.GIF && _.Z.getOptionStates(e.id).query.hasValue)
+    return r.commands !== T.L8.DISABLED && (r.commands === T.L8.OLD_BUILT_INS ? n.startsWith(h.GI + "gif") || n.startsWith(h.GI + "tenor") : (null === (s = _.Z.getActiveCommand(e.id)) || void 0 === s ? void 0 : s.integrationType) === f.q9n.GIF && _.Z.getOptionStates(e.id).query.hasValue)
   },
   queryResults(e, t, n, i, r) {
     let {
       command: s,
       query: a
     } = m(e, n, i);
-    if (null == s) return A;
-    let u = o().findKey(S.nkL, e => e.command === s);
+    if (null == s) return N;
+    let u = o().findKey(f.nkL, e => e.command === s);
     r && null != u && a.length > 0 && l.Z.search(u, a);
     let _ = d.Z.getResults(u, a);
-    return null == _ ? A : {
+    return null == _ ? N : {
       results: {
         command: s,
         integrations: _.results,
@@ -69,21 +69,21 @@ let O = {
       onClick: d
     } = e, {
       command: h,
-      query: A
+      query: N
     } = m(o, l, u);
-    if (null == h || 0 === A.length) return null;
+    if (null == h || 0 === N.length) return null;
     if (n) return (0, i.jsx)(a.Spinner, {
-      className: N.spinner,
+      className: A.spinner,
       type: a.Spinner.Type.SPINNING_CIRCLE
     });
     if (null != t) {
-      var O, R;
+      var O, p;
       let e = !1,
         n = t.map((t, n) => {
-          if (t.type === S.q9n.GIF) {
+          if (t.type === f.q9n.GIF) {
             var r, o, a;
             return e = !0, (0, i.jsx)(E.ZP.GIFIntegration, {
-              className: N.horizontalAutocomplete,
+              className: A.horizontalAutocomplete,
               onClick: d,
               onHover: c,
               selected: s === n,
@@ -95,16 +95,16 @@ let O = {
             }, "".concat(t.meta.url).concat(t.meta.src))
           }
         }),
-        a = u.commands === T.L8.OLD_BUILT_INS ? h : null !== (R = null === (O = _.Z.getActiveCommand(o.id)) || void 0 === O ? void 0 : O.integrationTitle) && void 0 !== R ? R : h,
-        l = A.length > 0 && null != a ? f.Z.Messages.CONTENT_MATCHING.format({
-          query: A,
+        a = u.commands === T.L8.OLD_BUILT_INS ? h : null !== (p = null === (O = _.Z.getActiveCommand(o.id)) || void 0 === O ? void 0 : O.integrationTitle) && void 0 !== p ? p : h,
+        l = N.length > 0 && null != a ? S.Z.Messages.CONTENT_MATCHING.format({
+          query: N,
           command: a
         }) : null != a ? a : h;
       return (0, i.jsxs)(r.Fragment, {
         children: [(0, i.jsx)(E.ZP.Title, {
           title: l
         }), e ? (0, i.jsx)(I.Z, {
-          className: N.horizontalAutocompletes,
+          className: A.horizontalAutocompletes,
           children: n
         }) : n]
       }, "gifs")
@@ -129,13 +129,13 @@ let O = {
         return e.meta.url
       }(a)) : s.sendMessage(function(e) {
         return e.meta.url
-      }(a)), u.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_SELECTED, {
-        search_type: S.aib.GIF,
+      }(a)), u.ZP.trackWithMetadata(f.rMx.SEARCH_RESULT_SELECTED, {
+        search_type: f.aib.GIF,
         index_num: i,
         source_object: "/".concat(t)
       }), s.commands !== T.L8.OLD_BUILT_INS) {
       let e = _.Z.getActiveCommand(o.id);
-      (null == e ? void 0 : e.inputType) === c.iw.BUILT_IN_INTEGRATION && u.ZP.trackWithMetadata(S.rMx.APPLICATION_COMMAND_USED, {
+      (null == e ? void 0 : e.inputType) === c.iw.BUILT_IN_INTEGRATION && u.ZP.trackWithMetadata(f.rMx.APPLICATION_COMMAND_USED, {
         command_id: e.id,
         application_id: e.applicationId,
         command_type: e.type
@@ -147,7 +147,7 @@ let O = {
   }
 };
 
-function R(e) {
+function p(e) {
   return e.meta.url
 }
 t.Z = O

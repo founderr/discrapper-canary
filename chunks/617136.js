@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   _3: function() {
-    return f
+    return S
   },
   _b: function() {
     return E
   },
   dA: function() {
-    return S
+    return f
   },
   jZ: function() {
     return r
@@ -55,7 +55,7 @@ function h(e, t) {
   }
 }
 
-function S(e) {
+function f(e) {
   let {
     questId: t,
     event: n,
@@ -78,7 +78,7 @@ function S(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     questId: t,
     questContent: n,
@@ -86,7 +86,7 @@ function f(e) {
     questContentPosition: r,
     trackGuildAndChannelMetadata: s = !1
   } = e;
-  S({
+  f({
     questId: t,
     event: c.rMx.QUEST_CONTENT_CLICKED,
     properties: {

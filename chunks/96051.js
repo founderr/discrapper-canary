@@ -1,21 +1,21 @@
-var s = n(570140),
-  i = n(317770),
-  l = n(117984);
+var i = n(570140),
+  s = n(317770),
+  a = n(117984);
 
-function a(e) {
+function r(e) {
   let {
     channel: {
       id: t
     }
   } = e;
-  (0, l.oC)(t)
+  (0, a.oC)(t)
 }
-class r extends i.Z {
+class l extends s.Z {
   _initialize() {
-    s.Z.subscribe("CHANNEL_DELETE", a)
+    i.Z.subscribe("CHANNEL_DELETE", r)
   }
   _terminate() {
-    s.Z.unsubscribe("CHANNEL_DELETE", a)
+    i.Z.unsubscribe("CHANNEL_DELETE", r)
   }
 }
-t.Z = new r
+t.Z = new l

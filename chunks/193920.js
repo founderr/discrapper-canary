@@ -1,7 +1,7 @@
 e.exports = {
   settingCard: "settingCard_dd864e",
   active: "active_dd864e",
-  shield: "shield_dd864e " + n("788546").desaturateUserColors,
+  shield: "shield_dd864e " + s("788546").desaturateUserColors,
   cardIcon: "cardIcon_dd864e",
   cardFolder: "cardFolder_dd864e",
   adminWarning: "adminWarning_dd864e",

@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
   modalHeader: "modalHeader_c3153d",
   headingContainer: "headingContainer_c3153d",
   modalContent: "modalContent_c3153d",

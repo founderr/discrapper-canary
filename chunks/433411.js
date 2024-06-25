@@ -4,81 +4,81 @@ t.d(s, {
   }
 });
 var n = t(735250),
-  i = t(470079),
-  a = t(120356),
-  l = t.n(a),
-  r = t(481060),
-  o = t(906732),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(481060),
+  l = t(906732),
   c = t(864106),
-  E = t(1585),
-  d = t(580747),
-  _ = t(345861),
-  T = t(150039),
-  S = t(993413),
-  u = t(689938),
+  d = t(1585),
+  _ = t(580747),
+  E = t(345861),
+  u = t(150039),
+  T = t(993413),
+  S = t(689938),
   I = t(688898);
 
 function N(e) {
   let {
     user: s,
     guild: t,
-    className: a,
-    sectionTitle: _,
+    className: i,
+    sectionTitle: E,
     forcedDivider: N = !1,
-    withTutorial: C = !1,
-    isTryItOutFlow: O = !1
+    withTutorial: A = !1,
+    isTryItOutFlow: m = !1
   } = e, {
-    analyticsLocations: m
-  } = (0, o.ZP)(), h = null != t, {
-    userAvatarDecoration: g,
+    analyticsLocations: O
+  } = (0, l.ZP)(), g = null != t, {
+    userAvatarDecoration: h,
     guildAvatarDecoration: R,
-    pendingAvatarDecoration: M,
+    pendingAvatarDecoration: p,
     pendingErrors: x
-  } = (0, T.$U)(s, t), D = (0, d.Z)("enable_avatar_decoration_uploads"), p = i.useCallback(() => (0, E.ps)({
-    analyticsLocations: m,
-    isTryItOutFlow: O,
+  } = (0, u.$U)(s, t), M = (0, _.Z)("enable_avatar_decoration_uploads"), D = a.useCallback(() => (0, d.ps)({
+    analyticsLocations: O,
+    isTryItOutFlow: m,
     guild: t
-  }), [m, O, t]), L = O || void 0 !== M ? null != M : (h ? R : g) != null, P = C ? r.ShinyButton : r.Button;
-  return (0, n.jsxs)(S.Z, {
-    className: a,
+  }), [O, m, t]), f = m || void 0 !== p ? null != p : (g ? R : h) != null, L = A ? o.ShinyButton : o.Button;
+  return (0, n.jsxs)(T.Z, {
+    className: i,
     forcedDivider: N,
     hasBackground: !0,
-    title: _,
+    title: E,
     errors: x,
     children: [(0, n.jsxs)("div", {
       className: I.buttonsContainer,
-      children: [(0, n.jsx)(P, {
-        size: r.Button.Sizes.SMALL,
-        onClick: p,
-        className: l()({
-          [I.buttonHighlighted]: C
+      children: [(0, n.jsx)(L, {
+        size: o.Button.Sizes.SMALL,
+        onClick: D,
+        className: r()({
+          [I.buttonHighlighted]: A
         }),
-        children: u.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
-      }), L && (0, n.jsx)(r.Button, {
+        children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+      }), f && (0, n.jsx)(o.Button, {
         className: I.removeButton,
-        color: r.Button.Colors.PRIMARY,
-        look: r.Button.Looks.LINK,
-        size: r.Button.Sizes.SMALL,
+        color: o.Button.Colors.PRIMARY,
+        look: o.Button.Looks.LINK,
+        size: o.Button.Sizes.SMALL,
         onClick: function() {
-          (0, T.PO)(null == t ? void 0 : t.id, null)
+          (0, u.PO)(null == t ? void 0 : t.id, null)
         },
-        children: (0, c.ad)(s, t) ? u.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : u.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+        children: (0, c.ad)(s, t) ? S.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : S.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), s.isStaff() && D && (0, n.jsx)(A, {
+    }), s.isStaff() && M && (0, n.jsx)(C, {
       user: s
     })]
   })
 }
-let A = e => {
+let C = e => {
   let {
     user: s
   } = e;
   return (0, n.jsxs)("div", {
     className: I.overrideButtonsContainer,
-    children: [(0, n.jsx)(r.Text, {
+    children: [(0, n.jsx)(o.Text, {
       variant: "text-xs/bold",
       children: "STAFF ONLY and Experimental. Upload a decoration to view throughout the app."
-    }), (0, n.jsx)(_.Z, {
+    }), (0, n.jsx)(E.Z, {
       onChange: e => {
         null != e && (s.avatarDecoration = {
           asset: e,

@@ -20,15 +20,15 @@ function u(e) {
     isGift: d = !1,
     planGroup: E,
     activeSubscription: I
-  } = e, T = (0, a.z1)(), h = (0, i.e7)([r.Z], () => r.Z.get(l.Xh.PREMIUM_YEAR_TIER_2)), S = null == T ? void 0 : null === (t = T.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => l.GP[e].skuId === c), f = null != I && null != h ? (0, s.al)(I, h.id, 1, new Set(E)) : null, N = !d && null != T && null != c && S, [A, m] = (0, o.ED)({
+  } = e, T = (0, a.z1)(), h = (0, i.e7)([r.Z], () => r.Z.get(l.Xh.PREMIUM_YEAR_TIER_2)), f = null == T ? void 0 : null === (t = T.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => l.GP[e].skuId === c), S = null != I && null != h ? (0, s.al)(I, h.id, 1, new Set(E)) : null, A = !d && null != T && null != c && f, [N, m] = (0, o.ED)({
     subscriptionId: null !== (n = null == I ? void 0 : I.id) && void 0 !== n ? n : "null",
-    items: f,
+    items: S,
     renewal: !1,
     applyEntitlements: !0,
     paymentSourceId: u.paymentSourceId,
     currency: u.currency,
-    preventFetch: !N || null == I || _
-  }), [O, R] = (0, o.ED)({
+    preventFetch: !A || null == I || _
+  }), [O, p] = (0, o.ED)({
     items: [{
       planId: l.Xh.PREMIUM_YEAR_TIER_2,
       quantity: 1
@@ -37,19 +37,19 @@ function u(e) {
     applyEntitlements: !0,
     paymentSourceId: u.paymentSourceId,
     currency: u.currency,
-    preventFetch: !N || null != I || _
+    preventFetch: !A || null != I || _
   });
-  return null != A ? {
-    annualInvoicePreview: A,
+  return null != N ? {
+    annualInvoicePreview: N,
     annualInvoicePreviewError: m,
-    isEligibleForAnnualDiscount: N
+    isEligibleForAnnualDiscount: A
   } : null != O ? {
     annualInvoicePreview: O,
-    annualInvoicePreviewError: R,
-    isEligibleForAnnualDiscount: N
+    annualInvoicePreviewError: p,
+    isEligibleForAnnualDiscount: A
   } : {
     annualInvoicePreview: null,
     annualInvoicePreviewError: null,
-    isEligibleForAnnualDiscount: N
+    isEligibleForAnnualDiscount: A
   }
 }

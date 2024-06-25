@@ -51,28 +51,28 @@ function h(e) {
   return d(t)
 }
 
-function S(e) {
+function f(e) {
   let {
     channels: t
   } = e;
   for (let e of t) d(e)
 }
 
-function f(e) {
+function S(e) {
   let {
     channel: t
   } = e;
   return !!a.has(t.id) && (a.delete(t.id), !0)
 }
 
-function N(e) {
+function A(e) {
   let {
     messageRequestChannelIds: t
   } = e;
   t.forEach(e => a.add(e))
 }
 
-function A(e) {
+function N(e) {
   let {
     countryCode: t
   } = e;
@@ -115,11 +115,11 @@ class m extends s.Z {
       CONNECTION_OPEN: I,
       CONNECTION_OPEN_SUPPLEMENTAL: I,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      OVERLAY_INITIALIZE: N,
+      OVERLAY_INITIALIZE: A,
       CHANNEL_CREATE: h,
-      CHANNEL_UPDATES: S,
-      CHANNEL_DELETE: f,
-      SET_LOCATION_METADATA: A,
+      CHANNEL_UPDATES: f,
+      CHANNEL_DELETE: S,
+      SET_LOCATION_METADATA: N,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: T
     })
   }

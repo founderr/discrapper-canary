@@ -24,21 +24,21 @@ function T(e) {
     guildId: n,
     profileType: T,
     onClose: h
-  } = e, S = (0, r.e7)([a.default], () => a.default.getId() === t.id), f = (0, r.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
-    originalFriendingEnabled: N
+  } = e, f = (0, r.e7)([a.default], () => a.default.getId() === t.id), S = (0, r.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
+    originalFriendingEnabled: A
   } = (0, u.V)({
     location: "UserProfileEditMenuButton"
   }), {
-    trackUserProfileAction: A
-  } = (0, _.KZ)(), m = (0, o.Z)(), O = N && T === E.y0.FULL_SIZE ? void 0 : s.PencilIcon;
-  return S ? null == f ? (0, i.jsx)(d.Z, {
+    trackUserProfileAction: N
+  } = (0, _.KZ)(), m = (0, o.Z)(), O = A && T === E.y0.FULL_SIZE ? void 0 : s.PencilIcon;
+  return f ? null == S ? (0, i.jsx)(d.Z, {
     variant: "text",
     icon: O,
     text: I.Z.Messages.EDIT_PROFILE,
     autoFocus: !0,
     fullWidth: !0,
     onClick: () => {
-      A({
+      N({
         action: "EDIT_PROFILE"
       }), null == h || h(), m()
     }
@@ -48,7 +48,7 @@ function T(e) {
         closePopout: t
       } = e;
       return (0, i.jsx)(c.Z, {
-        guild: f,
+        guild: S,
         onClose: () => {
           t(), null == h || h()
         }

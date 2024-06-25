@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   CM: function() {
-    return f
+    return S
   },
   Cf: function() {
     return h
   },
   ID: function() {
-    return S
+    return f
   },
   Xz: function() {
     return m
@@ -16,7 +16,7 @@ n.d(t, {
     return E
   },
   c_: function() {
-    return A
+    return N
   },
   f4: function() {
     return O
@@ -28,10 +28,10 @@ n.d(t, {
     return I
   },
   rf: function() {
-    return R
+    return p
   },
   z5: function() {
-    return N
+    return A
   }
 });
 var i = n(544891),
@@ -112,28 +112,28 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function f(e) {
+function S(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e
   })
 }
 
-function N(e) {
+function A(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function A(e) {
+function N(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
@@ -154,7 +154,7 @@ function O(e) {
   }), d(c.QP.PROFILE_BANNER)
 }
 
-function R(e) {
+function p(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e

@@ -1,23 +1,23 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return a
+    return r
   }
 });
-var n = t(149765),
-  i = t(700785),
-  l = t(981631);
+var s = n(149765),
+  a = n(700785),
+  i = n(981631);
 
-function a(e, s) {
-  let t = {
-    [s.id]: s
+function r(e, t) {
+  let n = {
+    [t.id]: t
   };
   return e.filter(e => {
-    let s = i.I0({
-        forceRoles: t,
+    let t = a.I0({
+        forceRoles: n,
         context: e
       }),
-      a = l.Plq.VIEW_CHANNEL;
-    return e.isGuildVocal() && (a = n.IH(a, l.Plq.CONNECT)), n.e$(s, a) && !i.Uu(a, e)
+      r = i.Plq.VIEW_CHANNEL;
+    return e.isGuildVocal() && (r = s.IH(r, i.Plq.CONNECT)), s.e$(t, r) && !a.Uu(r, e)
   })
 }

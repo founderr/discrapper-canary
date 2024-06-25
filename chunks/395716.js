@@ -1,42 +1,42 @@
-a.d(s, {
+n.d(s, {
   Z: function() {
-    return d
+    return u
   }
-}), a(47120);
-var n = a(735250),
-  t = a(470079),
-  l = a(442837),
-  r = a(481060),
-  i = a(287734),
-  o = a(592125),
-  c = a(693546),
-  I = a(689938);
+}), n(47120);
+var a = n(735250),
+  t = n(470079),
+  r = n(442837),
+  l = n(481060),
+  i = n(287734),
+  o = n(592125),
+  c = n(693546),
+  d = n(689938);
 
-function d(e) {
+function u(e) {
   let {
     joinRequest: s
-  } = e, [a, d] = t.useState(!1), u = (0, l.e7)([o.Z], () => o.Z.getChannel(s.interviewChannelId)), E = t.useCallback(() => {
-    (0, r.showToast)((0, r.createToast)(I.Z.Messages.ERROR_GENERIC_TITLE, r.ToastType.FAILURE))
-  }, []), T = t.useCallback(async () => {
-    if (null != u) {
-      i.default.selectPrivateChannel(u.id);
+  } = e, [n, u] = t.useState(!1), I = (0, r.e7)([o.Z], () => o.Z.getChannel(s.interviewChannelId)), E = t.useCallback(() => {
+    (0, l.showToast)((0, l.createToast)(d.Z.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
+  }, []), _ = t.useCallback(async () => {
+    if (null != I) {
+      i.default.selectPrivateChannel(I.id);
       return
     }
-    if (!a) {
-      d(!0);
+    if (!n) {
+      u(!0);
       try {
         await c.Z.createOrEnterJoinRequestInterview(s.joinRequestId)
       } catch {
         E()
       } finally {
-        d(!1)
+        u(!1)
       }
     }
-  }, [u, s.joinRequestId, E, a]);
-  return (0, n.jsx)(r.Button, {
-    color: r.Button.Colors.BRAND,
-    submitting: a,
-    onClick: T,
-    children: I.Z.Messages.CLAN_DM_APPLICANT
+  }, [I, s.joinRequestId, E, n]);
+  return (0, a.jsx)(l.Button, {
+    color: l.Button.Colors.BRAND,
+    submitting: n,
+    onClick: _,
+    children: d.Z.Messages.CLAN_DM_APPLICANT
   })
 }

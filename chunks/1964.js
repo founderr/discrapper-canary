@@ -1,23 +1,23 @@
 "use strict";
-var r = n(392711),
-  o = n.n(r),
+var o = n(392711),
+  r = n.n(o),
   s = n(981631),
   a = n(689938);
 let {
   CAPTCHA: i,
   EMAIL: l,
   PHONE: d,
-  REVERIFY_EMAIL: E,
-  REVERIFY_PHONE: c
+  REVERIFY_EMAIL: c,
+  REVERIFY_PHONE: E
 } = s.PUi, u = {
   [s.c2C.REQUIRE_VERIFIED_EMAIL]: [l],
   [s.c2C.REQUIRE_VERIFIED_PHONE]: [d],
-  [s.c2C.REQUIRE_REVERIFIED_EMAIL]: [E],
-  [s.c2C.REQUIRE_REVERIFIED_PHONE]: [c],
+  [s.c2C.REQUIRE_REVERIFIED_EMAIL]: [c],
+  [s.c2C.REQUIRE_REVERIFIED_PHONE]: [E],
   [s.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [l, d],
-  [s.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [d, E],
-  [s.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [l, c],
-  [s.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [E, c],
+  [s.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [d, c],
+  [s.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [l, E],
+  [s.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [c, E],
   [s.c2C.REQUIRE_CAPTCHA]: [i],
   [s.c2C.AGREEMENTS]: []
 };
@@ -39,5 +39,5 @@ t.Z = {
         return a.Z.Messages.START_VERIFICATION_BUTTON
     }
   },
-  areVerificationTypesEqual: (e, t) => o().isEqual(e, t)
+  areVerificationTypesEqual: (e, t) => r().isEqual(e, t)
 }

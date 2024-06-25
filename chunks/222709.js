@@ -1,58 +1,58 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  s = n(442837),
+  l = n(481060),
   r = n(528963),
   o = n(143740),
   c = n(727218),
-  u = n(212342),
-  d = n(689938),
-  E = n(969297);
+  d = n(212342),
+  u = n(689938),
+  _ = n(969297);
 t.Z = e => {
   let {
     channelId: t,
     messageId: n
-  } = e, _ = (0, l.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]), I = i.useCallback(() => {
+  } = e, E = (0, s.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]), I = a.useCallback(() => {
     r.Z.dismissPublishBump(n), (0, o.Z)(t, n)
-  }, [t, n]), T = i.useCallback(() => {
+  }, [t, n]), m = a.useCallback(() => {
     r.Z.dismissPublishBump(n)
-  }, [n]), m = i.useCallback(() => {
+  }, [n]), T = a.useCallback(() => {
     r.Z.permanentlyHidePublishBump(t)
   }, [t]);
-  return _ ? (0, s.jsxs)("div", {
-    className: E.container,
-    children: [(0, s.jsxs)("div", {
-      className: E.bumpBox,
-      children: [(0, s.jsx)(a.AnnouncementsIcon, {
+  return E ? (0, i.jsxs)("div", {
+    className: _.container,
+    children: [(0, i.jsxs)("div", {
+      className: _.bumpBox,
+      children: [(0, i.jsx)(l.AnnouncementsIcon, {
         size: "xs",
         color: "currentColor",
-        className: E.icon
-      }), (0, s.jsx)(c.Z, {
-        className: E.tagline,
+        className: _.icon
+      }), (0, i.jsx)(c.Z, {
+        className: _.tagline,
         size: c.Z.Sizes.SIZE_14,
-        children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
-      }), (0, s.jsx)(a.Button, {
-        color: a.Button.Colors.LINK,
-        look: a.Button.Looks.LINK,
-        size: a.Button.Sizes.MIN,
-        className: E.publish,
+        children: u.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
+      }), (0, i.jsx)(l.Button, {
+        color: l.Button.Colors.LINK,
+        look: l.Button.Looks.LINK,
+        size: l.Button.Sizes.MIN,
+        className: _.publish,
         onClick: I,
-        children: d.Z.Messages.NEWS_CHANNEL_PUBLISH
-      }), (0, s.jsx)(a.Clickable, {
-        onClick: T,
-        children: (0, s.jsx)(a.CircleXIcon, {
+        children: u.Z.Messages.NEWS_CHANNEL_PUBLISH
+      }), (0, i.jsx)(l.Clickable, {
+        onClick: m,
+        children: (0, i.jsx)(l.CircleXIcon, {
           size: "xs",
           color: "currentColor",
-          className: E.closeIcon
+          className: _.closeIcon
         })
       })]
-    }), (0, s.jsx)(a.Text, {
+    }), (0, i.jsx)(l.Text, {
       color: "text-muted",
-      className: E.hidePermanently,
+      className: _.hidePermanently,
       variant: "text-sm/normal",
-      children: (0, s.jsx)(a.Clickable, {
-        onClick: m,
-        children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
+      children: (0, i.jsx)(l.Clickable, {
+        onClick: T,
+        children: u.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
       })
     })]
   }) : null

@@ -1,6 +1,6 @@
 a.r(t), a.d(t, {
   default: function() {
-    return b
+    return D
   }
 });
 var r = a(735250);
@@ -8,103 +8,103 @@ a(470079);
 var n = a(442837),
   s = a(704215),
   o = a(481060),
-  l = a(2052),
-  c = a(100527),
-  d = a(906732),
-  i = a(963249),
-  u = a(706454),
+  d = a(2052),
+  l = a(100527),
+  c = a(906732),
+  u = a(963249),
+  i = a(706454),
   _ = a(594174),
-  N = a(626135),
-  E = a(63063),
-  h = a(74538),
+  h = a(626135),
+  N = a(63063),
+  f = a(74538),
   g = a(290347),
-  m = a(474936),
-  O = a(981631),
-  M = a(689938),
-  C = a(870108),
-  A = a(913907),
-  p = a(82341),
-  f = a(309539),
+  E = a(474936),
+  m = a(981631),
+  C = a(689938),
+  p = a(870108),
+  O = a(913907),
+  A = a(82341),
+  M = a(309539),
   x = a(74316);
-let D = "2023_summer_bogo",
-  T = "DnkvLW5052Y";
+let T = "2023_summer_bogo",
+  b = "DnkvLW5052Y";
 
-function b(e) {
+function D(e) {
   let {
     renderModalProps: t
   } = e, {
     onClose: a
-  } = t, b = (0, n.e7)([u.default], () => u.default.locale), R = b.split("-")[0], G = "zh-CN" === b ? "zh-Hans" : "zh-TW" === b ? "zh-Hant" : R, L = {
-    url: "".concat((0, O.ivE)(T), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === R ? "0" : "1", "&cc_lang_pref=").concat(G),
+  } = t, D = (0, n.e7)([i.default], () => i.default.locale), y = D.split("-")[0], R = "zh-CN" === D ? "zh-Hans" : "zh-TW" === D ? "zh-Hant" : y, B = {
+    url: "".concat((0, m.ivE)(b), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === y ? "0" : "1", "&cc_lang_pref=").concat(R),
     width: 498,
     height: 280
   }, {
-    location: v
-  } = (0, l.O)(), {
-    analyticsLocations: y
-  } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), B = (0, n.e7)([_.default], () => _.default.getCurrentUser()), S = (0, h.M5)(B, m.p9.TIER_2), j = (0, h.I5)(B) && !S;
+    location: G
+  } = (0, d.O)(), {
+    analyticsLocations: S
+  } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), v = (0, n.e7)([_.default], () => _.default.getCurrentUser()), L = (0, f.M5)(v, E.p9.TIER_2), H = (0, f.I5)(v) && !L;
   return (0, r.jsx)(g.Z, {
     renderModalProps: t,
     heroArt: {
       type: "embed",
-      embed: L,
+      embed: B,
       thumbnail: {
-        url: "https://i.ytimg.com/vi/".concat(T, "/maxresdefault.jpg"),
+        url: "https://i.ytimg.com/vi/".concat(b, "/maxresdefault.jpg"),
         width: 498,
         height: 280
       },
-      href: "https://youtu.be/".concat(T)
+      href: "https://youtu.be/".concat(b)
     },
     modalDismissibleContent: s.z.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
-    header: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
-    subHeader: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
+    header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
+    subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
     subHeaderExtra: () => (0, r.jsx)(o.Anchor, {
-      className: C.termsApplyAnchor,
-      href: E.Z.getArticleURL(O.BhN.SUMMER_2023_BOGO),
+      className: p.termsApplyAnchor,
+      href: N.Z.getArticleURL(m.BhN.SUMMER_2023_BOGO),
       children: (0, r.jsx)(o.Heading, {
         variant: "heading-md/normal",
-        className: C.termsApplyBodyText,
-        children: M.Z.Messages.BOGO_TERMS_APPLY
+        className: p.termsApplyBodyText,
+        children: C.Z.Messages.BOGO_TERMS_APPLY
       })
     }),
     featureCards: [{
-      header: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
-      subHeader: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
-        helpCenterLink: E.Z.getArticleURL(O.BhN.REMIXING)
+      header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
+      subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
+        helpCenterLink: N.Z.getArticleURL(m.BhN.REMIXING)
       }),
-      imageSrc: A,
-      tagText: M.Z.Messages.EARLY_ACCESS
+      imageSrc: O,
+      tagText: C.Z.Messages.EARLY_ACCESS
     }, {
-      header: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
-      subHeader: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_BODY,
-      imageSrc: f
+      header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
+      subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_BODY,
+      imageSrc: M
     }, {
-      header: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_HEADER,
-      subHeader: M.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_BODY_FORMATTED,
-      imageSrc: p
+      header: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_HEADER,
+      subHeader: C.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_SOUNDBOARD_CARD_BODY_FORMATTED,
+      imageSrc: A
     }],
-    changeLogId: D,
+    changeLogId: T,
     button: () => {
-      let e = j ? "upgrade_plan_button" : "get_nitro_button",
+      let e = H ? "upgrade_plan_button" : "get_nitro_button",
         t = Date.now();
       return (0, r.jsxs)(o.ShinyButton, {
-        className: C.buttonWide,
-        innerClassName: C.innerButton,
+        className: p.buttonWide,
+        innerClassName: p.innerButton,
         color: o.Button.Colors.GREEN,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          N.default.track(O.rMx.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: D,
+          h.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
+            change_log_id: T,
             cta_type: e,
             seconds_open: Math.round((Date.now() - t) / 1e3),
             target: "bogo_payment_model"
-          }), (0, i.Z)({
-            subscriptionTier: m.Si.TIER_2,
-            analyticsLocations: y,
+          }), (0, u.Z)({
+            subscriptionTier: E.Si.TIER_2,
+            analyticsLocations: S,
             analyticsObject: {
-              ...v,
-              object: O.qAy.BUTTON_CTA,
-              objectType: O.Qqv.TIER_2
+              ...G,
+              object: m.qAy.BUTTON_CTA,
+              objectType: m.Qqv.TIER_2
             },
             onClose: e => {
               e && a()
@@ -113,9 +113,9 @@ function b(e) {
         },
         children: [(0, r.jsx)("img", {
           alt: "",
-          className: C.nitroIconSubHeader,
+          className: p.nitroIconSubHeader,
           src: x
-        }), M.Z.Messages.BOGO_CLAIM_OFFER]
+        }), C.Z.Messages.BOGO_CLAIM_OFFER]
       })
     }
   })

@@ -20,7 +20,7 @@ let I = [c.Eu4.NONE, c.Eu4.TIER_1, c.Eu4.TIER_2, c.Eu4.TIER_3];
 function T(e) {
   let {
     guild: t
-  } = e, n = (0, o.e7)([a.Z], () => a.Z.useReducedMotion), [T, h] = r.useState(!1), [S, f] = r.useState(0), N = r.useRef(null), A = Math.min(c.Eu4.TIER_3, t.premiumTier + 1), m = c.oCV[t.premiumTier], O = c.oCV[A], R = (t.premiumSubscriberCount - m) / (O - m), p = _.P[t.premiumTier], g = _.P[A], C = t.premiumTier === c.Eu4.TIER_3, {
+  } = e, n = (0, o.e7)([a.Z], () => a.Z.useReducedMotion), [T, h] = r.useState(!1), [f, S] = r.useState(0), A = r.useRef(null), N = Math.min(c.Eu4.TIER_3, t.premiumTier + 1), m = c.oCV[t.premiumTier], O = c.oCV[N], p = (t.premiumSubscriberCount - m) / (O - m), R = _.P[t.premiumTier], g = _.P[N], C = t.premiumTier === c.Eu4.TIER_3, {
     progressBarFillWidthFactor: v,
     isProgressBarAnimationComplete: L,
     setShouldFireConfetti: D,
@@ -34,7 +34,7 @@ function T(e) {
       isRevealed: o,
       useReducedMotion: a
     } = e, [l, u] = r.useState(a ? i : -1), [d, E] = r.useState(0 === n), [I, T] = r.useState(!1), h = r.useRef(!0), {
-      widthFactor: S
+      widthFactor: f
     } = (0, s.useSpring)({
       from: {
         widthFactor: 0
@@ -71,13 +71,13 @@ function T(e) {
       h.current = !1
     }, []), {
       isProgressBarAnimationComplete: d,
-      progressBarFillWidthFactor: S,
+      progressBarFillWidthFactor: f,
       setShouldFireConfetti: T,
       shouldFireConfetti: I,
       tierMarkerAnimationPosition: l
     }
   }({
-    fillFactor: C ? 1 : R * (g - p) + p,
+    fillFactor: C ? 1 : p * (g - R) + R,
     isRevealed: T || n,
     useReducedMotion: n,
     premiumTier: t.premiumTier,
@@ -116,17 +116,17 @@ function T(e) {
         className: E.progressBarTrack
       })]
     }), I.map(e => (0, i.jsx)(_.Z, {
-      confettiTriggerRef: N,
+      confettiTriggerRef: A,
       guild: t,
       isProgressBarAnimationComplete: L,
-      setConfettiCount: f,
+      setConfettiCount: S,
       setShouldFireConfetti: D,
       tier: e,
       tierMarkerAnimationPosition: P,
       children: (0, l.nW)(e)
     }, e)), (0, i.jsx)(u.Z, {
-      confettiCount: S,
-      confettiTriggerRef: N,
+      confettiCount: f,
+      confettiTriggerRef: A,
       isFiring: M
     })]
   })

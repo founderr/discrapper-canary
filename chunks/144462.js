@@ -1,61 +1,61 @@
-a.r(s), a.d(s, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return l
   }
-}), a(47120);
-var o = a(735250),
-  t = a(470079),
-  n = a(481060),
-  r = a(153124),
-  i = a(273504),
-  l = a(689938),
-  c = a(930198);
+}), s(47120);
+var a = s(735250),
+  o = s(470079),
+  n = s(481060),
+  r = s(153124),
+  i = s(273504),
+  c = s(689938),
+  d = s(930198);
 
-function d(e) {
+function l(e) {
   let {
-    initialCustomMessage: s,
-    onSubmit: a,
-    onClose: d,
-    transitionState: M
-  } = e, _ = (0, r.Dt)(), [A, C] = t.useState(s);
-  return (0, o.jsxs)(n.ModalRoot, {
-    transitionState: M,
-    "aria-labelledby": _,
+    initialCustomMessage: t,
+    onSubmit: s,
+    onClose: l,
+    transitionState: _
+  } = e, C = (0, r.Dt)(), [M, A] = o.useState(t);
+  return (0, a.jsxs)(n.ModalRoot, {
+    transitionState: _,
+    "aria-labelledby": C,
     size: n.ModalSize.SMALL,
-    children: [(0, o.jsxs)(n.ModalContent, {
-      className: c.actionContentContainer,
-      children: [(0, o.jsx)(n.Heading, {
-        id: _,
+    children: [(0, a.jsxs)(n.ModalContent, {
+      className: d.actionContentContainer,
+      children: [(0, a.jsx)(n.Heading, {
+        id: C,
         color: "header-primary",
         variant: "heading-md/semibold",
-        className: c.header,
-        children: l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_TITLE
-      }), (0, o.jsx)(n.Text, {
+        className: d.header,
+        children: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_TITLE
+      }), (0, a.jsx)(n.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_DESCRIPTION
-      }), (0, o.jsx)(n.TextArea, {
-        className: c.customMessageTextArea,
-        placeholder: l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_CUSTOM_MESSAGE_PLACEHOLDER,
-        value: A,
-        onChange: C,
+        children: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_DESCRIPTION
+      }), (0, a.jsx)(n.TextArea, {
+        className: d.customMessageTextArea,
+        placeholder: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_CUSTOM_MESSAGE_PLACEHOLDER,
+        value: M,
+        onChange: A,
         maxLength: i._6
       })]
-    }), (0, o.jsxs)(n.ModalFooter, {
-      children: [(0, o.jsx)(n.Button, {
+    }), (0, a.jsxs)(n.ModalFooter, {
+      children: [(0, a.jsx)(n.Button, {
         onClick: () => {
-          a(A)
+          s(M)
         },
         color: n.Button.Colors.BRAND,
         size: n.Button.Sizes.SMALL,
-        children: l.Z.Messages.EDIT
-      }), (0, o.jsx)(n.Button, {
+        children: c.Z.Messages.EDIT
+      }), (0, a.jsx)(n.Button, {
         onClick: () => {
-          d()
+          l()
         },
         color: n.Button.Colors.TRANSPARENT,
         look: n.Button.Looks.LINK,
-        children: l.Z.Messages.CANCEL
+        children: c.Z.Messages.CANCEL
       })]
     })]
   })

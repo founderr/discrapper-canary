@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i = n(735250),
@@ -18,20 +18,20 @@ var i = n(735250),
   I = n(898463),
   T = n(981631),
   h = n(701921),
-  S = n(451328);
+  f = n(451328);
 
-function f(e) {
+function S(e) {
   let {
     channelId: t,
     option: n,
     keyboardModeEnabled: s
-  } = e, f = r.useRef(null), [N, A] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), R = r.useCallback(() => {
-    A(!0)
-  }, []), p = r.useCallback(() => {
-    A(!1)
+  } = e, S = r.useRef(null), [A, N] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
+    N(!0)
+  }, []), R = r.useCallback(() => {
+    N(!1)
   }, []), g = r.useCallback(e => {
     var i;
-    A(!1);
+    N(!1);
     let r = {
       id: n.name,
       file: null === (i = e.dataTransfer) || void 0 === i ? void 0 : i.files[0],
@@ -46,10 +46,10 @@ function f(e) {
   }, [t, n]);
   return (r.useEffect(() => {
     let e = O.current;
-    return null == m && (null == e || e.addEventListener("dragover", R, !1), null == e || e.addEventListener("dragleave", p, !1), null == e || e.addEventListener("drop", g, !1)), () => {
-      null == e || e.removeEventListener("dragover", R, !1), null == e || e.removeEventListener("dragleave", p, !1), null == e || e.removeEventListener("drop", g, !1)
+    return null == m && (null == e || e.addEventListener("dragover", p, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", g, !1)), () => {
+      null == e || e.removeEventListener("dragover", p, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", g, !1)
     }
-  }, [m, R, p, g]), null != m) ? (0, i.jsx)(I.Z, {
+  }, [m, p, R, g]), null != m) ? (0, i.jsx)(I.Z, {
     channelId: t,
     upload: m,
     keyboardModeEnabled: s,
@@ -74,29 +74,29 @@ function f(e) {
     onKeyDown: e => {
       if (e.which === T.yXg.ENTER) {
         var t;
-        e.preventDefault(), null === (t = f.current) || void 0 === t || t.activateUploadDialogue()
+        e.preventDefault(), null === (t = S.current) || void 0 === t || t.activateUploadDialogue()
       }
     },
     className: o()(h.emptyOption, {
-      [h.emptyOptionActive]: N
+      [h.emptyOptionActive]: A
     }),
     draftType: c.d.SlashCommand,
     ref: O,
     children: [(0, i.jsx)("span", {
       className: o()(h.optionName, {
-        [h.optionNameActive]: N
+        [h.optionNameActive]: A
       }),
       children: n.name
     }), (0, i.jsx)(a.Clickable, {
       className: h.clickContainer,
       onClick: () => {
         var e;
-        return null === (e = f.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = S.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       },
       children: (0, i.jsxs)("div", {
         className: h.commandOptionContainer,
         children: [(0, i.jsx)("img", {
-          src: S,
+          src: f,
           className: h.optionIcon,
           alt: ""
         }), (0, i.jsx)(a.Text, {
@@ -104,7 +104,7 @@ function f(e) {
           variant: "text-sm/normal",
           children: "Drag and drop or click to upload file"
         }), (0, i.jsx)(u.Z, {
-          ref: f,
+          ref: S,
           onChange: e => {
             var i, r;
             if (null != t && (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (i = r.files) || void 0 === i ? void 0 : i[0]) != null) {

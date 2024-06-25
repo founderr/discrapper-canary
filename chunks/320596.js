@@ -20,21 +20,21 @@ let c = e => {
     },
     onChange: T,
     initialText: h,
-    isRequired: S
-  } = e, f = r.useRef(o.Z.reactParserFor({
+    isRequired: f
+  } = e, S = r.useRef(o.Z.reactParserFor({
     ...o.Z.defaultRules,
     link: a.s
-  })), [N, A] = r.useState(""), [m, O] = r.useState("");
+  })), [A, N] = r.useState(""), [m, O] = r.useState("");
   r.useEffect(() => {
     var e;
-    A(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
+    N(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
   }, [h]);
-  let R = r.useCallback(e => {
+  let p = r.useCallback(e => {
     let t = null != I ? new RegExp(I) : null;
     null != t && null == t.exec(e) ? (O(l.Z.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), T({
       value: e,
       isValid: !1
-    })) : null != e && (O(""), A(e), T({
+    })) : null != e && (O(""), N(e), T({
       value: e,
       isValid: !0
     }))
@@ -45,15 +45,15 @@ let c = e => {
       className: _.marginBottom8,
       children: (0, i.jsxs)(s.Text, {
         variant: "text-sm/bold",
-        children: [t, S && (0, i.jsx)("span", {
+        children: [t, f && (0, i.jsx)("span", {
           className: u.required,
           children: "*"
         })]
       })
     }), (0, i.jsx)(s.TextArea, {
       maxLength: E,
-      onChange: R,
-      value: N,
+      onChange: p,
+      value: A,
       error: m,
       rows: d,
       placeholder: c,
@@ -61,7 +61,7 @@ let c = e => {
     }), null != n && (0, i.jsx)("div", {
       children: (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
-        children: f.current(n)
+        children: S.current(n)
       })
     })]
   })

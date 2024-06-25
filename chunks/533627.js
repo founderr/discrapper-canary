@@ -1,6 +1,6 @@
 n.d(t, {
   K: function() {
-    return s.K
+    return o.K
   }
 });
-var s = n(987675)
+var o = n(987675)

@@ -1,10 +1,10 @@
 "use strict";
-var n, i, l, a;
-t.d(s, {
+var s, a, i, r;
+n.d(t, {
   X: function() {
-    return n
+    return s
   },
   q: function() {
-    return i
+    return a
   }
-}), (l = n || (n = {})).OPEN = "OPEN", l.REJECTED = "REJECTED", l.APPROVED = "APPROVED", l.ACTION_REQUIRED = "ACTION_REQUIRED", (a = i || (i = {})).HOW_IT_WORKS = "HOW_IT_WORKS", a.BENEFITS = "BENEFITS", a.OTHER_CREATORS = "OTHER_CREATORS"
+}), (i = s || (s = {})).OPEN = "OPEN", i.REJECTED = "REJECTED", i.APPROVED = "APPROVED", i.ACTION_REQUIRED = "ACTION_REQUIRED", (r = a || (a = {})).HOW_IT_WORKS = "HOW_IT_WORKS", r.BENEFITS = "BENEFITS", r.OTHER_CREATORS = "OTHER_CREATORS"

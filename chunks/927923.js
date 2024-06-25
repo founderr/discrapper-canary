@@ -7,7 +7,7 @@ n.d(t, {
     return T
   },
   Lw: function() {
-    return f
+    return S
   },
   Ry: function() {
     return r
@@ -25,7 +25,7 @@ n.d(t, {
     return u
   },
   e8: function() {
-    return S
+    return f
   },
   tA: function() {
     return d
@@ -67,5 +67,5 @@ let u = "xbox://communitylinking/donut/audio",
 (s = i || (i = {})).PLAYSTATION = "playstation", s.XBOX = "xbox";
 let h = new Set(["xbox", "playstation"]);
 l.M7m.XBOX, l.M7m.PS5, (o = r || (r = {}))[o.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", o[o.CONSOLE_DEVICE_UNAVAILABLE = 270001] = "CONSOLE_DEVICE_UNAVAILABLE", o[o.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", o[o.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", o[o.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = "CONSOLE_DEVICE_INVALID_POWER_MODE", o[o.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", o[o.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", o[o.CONSOLE_DEVICE_BAD_COMMAND = 270007] = "CONSOLE_DEVICE_BAD_COMMAND";
-let S = new Set([27e4]),
-  f = "console error alert"
+let f = new Set([27e4]),
+  S = "console error alert"

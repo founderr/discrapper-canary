@@ -25,7 +25,7 @@ n.d(t, {
     return h
   },
   k8: function() {
-    return A
+    return N
   },
   ox: function() {
     return _
@@ -44,7 +44,7 @@ var i = n(544891),
   a = n(981631);
 async function l(e, t) {
   var n;
-  let r = f(e),
+  let r = S(e),
     s = await i.tn.get({
       url: a.ANM.GET_REPORT_MENU(r),
       query: (null == t ? void 0 : t.variant) != null ? {
@@ -55,7 +55,7 @@ async function l(e, t) {
 }
 async function u(e, t) {
   var n;
-  let r = S(e),
+  let r = f(e),
     s = await i.tn.get({
       url: a.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
       query: (null == t ? void 0 : t.variant) != null ? {
@@ -65,11 +65,11 @@ async function u(e, t) {
   return null !== (n = s.body) && void 0 !== n ? n : JSON.parse(s.text)
 }
 async function _(e, t) {
-  let n = f(e),
+  let n = S(e),
     r = await l(e, t);
   await i.tn.post({
     url: a.ANM.SUBMIT_REPORT_MENU(n),
-    body: N(r, e, [{
+    body: A(r, e, [{
       nodeRef: r.root_node_id,
       destination: ["", r.success_node_id]
     }])
@@ -78,16 +78,16 @@ async function _(e, t) {
 
 function c(e, t, n) {
   return i.tn.post({
-    url: a.ANM.SUBMIT_REPORT_MENU(f(t)),
-    body: N(e, t, n)
+    url: a.ANM.SUBMIT_REPORT_MENU(S(t)),
+    body: A(e, t, n)
   })
 }
 
 function d(e, t, n, r) {
-  let s = S(t);
+  let s = f(t);
   return i.tn.post({
     url: a.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(s),
-    body: N(e, t, n, r)
+    body: A(e, t, n, r)
   })
 }
 
@@ -124,18 +124,18 @@ async function h(e) {
   })).body
 }
 
-function S(e) {
+function f(e) {
   let t = e.name;
   if (!Object.values(o.B).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
 }
 
-function f(e) {
+function S(e) {
   let t = e.name;
   if (!Object.values(o.b).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
 }
-let N = (e, t, n, i) => {
+let A = (e, t, n, i) => {
   let {
     version: r,
     variant: s,
@@ -259,7 +259,7 @@ let N = (e, t, n, i) => {
   return null
 };
 
-function A(e, t, n) {
+function N(e, t, n) {
   s.ZP.trackWithMetadata(a.rMx.IAR_MODAL_CLOSE, {
     report_type: e.name,
     report_id: n,

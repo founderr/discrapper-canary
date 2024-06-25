@@ -27,9 +27,9 @@ l.Z = e => {
     channel: n,
     style: a = {},
     onClose: r
-  } = e, O = (0, c.e7)([p.default], () => p.default.getUser(l.author_id)), [T, f] = t.useState(null), [L, P] = t.useState(!1), {
-    nick: S,
-    avatar: C
+  } = e, O = (0, c.e7)([p.default], () => p.default.getUser(l.author_id)), [T, f] = t.useState(null), [L, S] = t.useState(!1), {
+    nick: C,
+    avatar: P
   } = t.useMemo(() => {
     let e = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, O);
     return {
@@ -44,7 +44,7 @@ l.Z = e => {
     style: a,
     children: [(0, s.jsx)("img", {
       className: A.avatar,
-      src: C,
+      src: P,
       alt: "TODO"
     }), (0, s.jsx)("div", {
       className: i()(A.collapsableRow, A.playerInfo, {
@@ -57,7 +57,7 @@ l.Z = e => {
           variant: "text-sm/bold",
           color: "text-normal",
           lineClamp: 1,
-          children: [S.slice(0, 18), " ", S.length > 18 ? "..." : ""]
+          children: [C.slice(0, 18), " ", C.length > 18 ? "..." : ""]
         }), (0, s.jsx)(E.Gk, {
           location: E.Gt.CARD,
           children: g.W.slice(0, 2).map((e, n) => (0, s.jsx)(e, {
@@ -94,7 +94,7 @@ l.Z = e => {
         className: A.actionButton,
         tooltip: M.Z.Messages.CLOSE,
         onClick: () => {
-          P(!1)
+          S(!1)
         },
         icon: (0, s.jsx)(d.CloseSmallIcon, {}),
         focusProps: {
@@ -115,7 +115,7 @@ l.Z = e => {
         className: i()(A.actionButton, A.messageButton),
         tooltip: M.Z.Messages.COMMAND_MSG_DESCRIPTION,
         onClick: () => {
-          !L && (null == T || T.focus(), P(!0))
+          !L && (null == T || T.focus(), S(!0))
         },
         icon: (0, s.jsx)(d.ChatIcon, {})
       })

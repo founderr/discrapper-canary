@@ -1,20 +1,20 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 });
-var n = t(2070);
+var s = n(2070);
 
-function i() {
+function a() {
   let {
     createGuildApplication: e,
-    submitting: s,
-    error: t
-  } = (0, n.Z)();
+    submitting: t,
+    error: n
+  } = (0, s.Z)();
   return {
-    enableGuildMonetizationForTeam: (s, t, n) => e(s, t, n, "guildcr".concat(s.id)),
-    submitting: s,
-    error: t
+    enableGuildMonetizationForTeam: (t, n, s) => e(t, n, s, "guildcr".concat(t.id)),
+    submitting: t,
+    error: n
   }
 }

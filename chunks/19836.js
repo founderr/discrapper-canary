@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -19,51 +19,51 @@ var r = n(120356),
   I = n(659101),
   T = n(981631),
   h = n(689938),
-  S = n(820499),
-  f = n(546136);
+  f = n(820499),
+  S = n(546136);
 
-function N(e) {
+function A(e) {
   let {
     guildName: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: S.guildMemberProfileTooltip,
+    className: f.guildMemberProfileTooltip,
     children: [(0, i.jsx)(a.NitroWheelIcon, {
       size: "md",
       color: "currentColor",
-      className: S.guildMemberProfileTooltipNitroWheel
+      className: f.guildMemberProfileTooltipNitroWheel
     }), h.Z.Messages.GUILD_IDENTITY_BIO_TOAST.format({
       guildName: t
     })]
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     guild: t,
     bio: r,
-    hidePersonalInformation: A,
+    hidePersonalInformation: N,
     isUsingGuildBio: m,
     lastSection: O = !1,
-    animateOnHover: R = !1,
-    isHovering: p = !1,
+    animateOnHover: p = !1,
+    isHovering: R = !1,
     lineClamp: g,
     userId: C
   } = e, {
     location: v
   } = (0, l.O)(), L = (0, o.e7)([_.default], () => _.default.getCurrentUser()), D = d.ZP.canUsePremiumGuildMemberProfile(L), M = (0, u.Z)(C);
-  return (A || null == r || "" === r) && !M ? null : (0, i.jsxs)(I.Z, {
+  return (N || null == r || "" === r) && !M ? null : (0, i.jsxs)(I.Z, {
     lastSection: O,
     children: [(0, i.jsxs)(a.Heading, {
       variant: "eyebrow",
-      className: f.title,
+      className: S.title,
       children: [h.Z.Messages.USER_POPOUT_ABOUT_ME, null != t && m && (0, i.jsx)(a.Tooltip, {
         color: a.Tooltip.Colors.NESTED,
-        tooltipClassName: S.aboutMeGuildIconTooltip,
+        tooltipClassName: f.aboutMeGuildIconTooltip,
         "aria-label": h.Z.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, i.jsx)(N, {
+        text: (0, i.jsx)(A, {
           guildName: t.name
         }),
         children: e => (0, i.jsx)(c.Z, {
@@ -85,15 +85,15 @@ function A(e) {
           },
           guild: t,
           size: c.Z.Sizes.SMOL,
-          className: s()(S.aboutMeGuildIcon, {
-            [S.nonPremiumHoverState]: !D
+          className: s()(f.aboutMeGuildIcon, {
+            [f.nonPremiumHoverState]: !D
           })
         })
       })]
     }), (0, i.jsx)(E.Z, {
       userBio: r,
-      animateOnHover: R,
-      isHovering: p,
+      animateOnHover: p,
+      isHovering: R,
       lineClamp: g,
       userId: C
     })]

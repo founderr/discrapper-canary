@@ -1,18 +1,18 @@
-t.d(r, {
+r.d(t, {
   Z: function() {
     return p
   }
-}), t(47120);
-var a = t(735250),
-  n = t(470079),
-  i = t(848246),
-  l = t(442837),
-  o = t(481060),
-  c = t(570140),
-  s = t(485731),
-  d = t(594174),
-  u = t(246992),
-  h = t(31348);
+}), r(47120);
+var a = r(735250),
+  n = r(470079),
+  i = r(848246),
+  o = r(442837),
+  l = r(481060),
+  c = r(570140),
+  s = r(485731),
+  d = r(594174),
+  u = r(246992),
+  h = r(31348);
 let m = [{
     label: "No Override",
     value: !1
@@ -29,28 +29,28 @@ let m = [{
   }];
 
 function p() {
-  let e = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-    [r, t] = n.useState(!1),
+  let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+    [t, r] = n.useState(!1),
     [p, b] = n.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
-    children: [(0, a.jsx)(o.FormSection, {
+    children: [(0, a.jsx)(l.FormSection, {
       title: "Override HQ Streaming: Available",
       className: h.formElement,
-      tag: o.FormTitleTags.H3,
-      children: (0, a.jsx)(o.SingleSelect, {
+      tag: l.FormTitleTags.H3,
+      children: (0, a.jsx)(l.SingleSelect, {
         options: m,
-        value: r,
+        value: t,
         onChange: e => {
-          t(e)
+          r(e)
         },
         popoutLayerContext: u.O$
       })
-    }), (0, a.jsx)(o.FormSection, {
+    }), (0, a.jsx)(l.FormSection, {
       title: "Override HQ Streaming: Activate",
       className: h.formElement,
-      tag: o.FormTitleTags.H3,
-      children: (0, a.jsx)(o.SingleSelect, {
+      tag: l.FormTitleTags.H3,
+      children: (0, a.jsx)(l.SingleSelect, {
         options: g,
         value: p,
         onChange: e => {
@@ -58,12 +58,12 @@ function p() {
         },
         popoutLayerContext: u.O$
       })
-    }), (0, a.jsx)(o.Button, {
+    }), (0, a.jsx)(l.Button, {
       onClick: () => void(c.Z.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
         perkType: i.q.STREAM_HIGH_QUALITY,
         user: e,
-        available: r,
+        available: t,
         activateSuccess: p
       }), (0, s.J1)(!1), (0, s.pM)(!1), (0, s.qA)(!1), (0, s.hP)(!1)),
       children: "Update"

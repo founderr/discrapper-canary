@@ -13,16 +13,16 @@ var i = n(735250),
   I = n(474873),
   T = n(292959),
   h = n(944486),
-  S = n(246946),
-  f = n(340895),
-  N = n(557177),
-  A = n(918559),
+  f = n(246946),
+  S = n(340895),
+  A = n(557177),
+  N = n(918559),
   m = n(871465);
 let O = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  R = {
+  p = {
     transform: "scale(1)",
     opacity: 1
   };
@@ -39,14 +39,14 @@ t.Z = () => {
   } = (0, u.cj)([h.Z], () => ({
     currentChannelId: h.Z.getChannelId(),
     selectedVoiceChannelId: h.Z.getVoiceChannelId()
-  })), p = (0, u.Wu)([f.Z], () => f.Z.getIncomingCalls().filter(i => {
+  })), R = (0, u.Wu)([S.Z], () => S.Z.getIncomingCalls().filter(i => {
     let {
       channel: r
-    } = i, o = e === r.id && s !== r.id && t === A.Ez.PANEL;
+    } = i, o = e === r.id && s !== r.id && t === N.Ez.PANEL;
     return n !== r.id || o
-  })), g = (0, u.e7)([f.Z], () => f.Z.hasIncomingCalls()), C = (0, u.e7)([T.Z], () => T.Z.isSoundDisabled("call_ringing")), v = E.Z.useIsRingtoneEligible(), L = E.Z.useIsRingtoneDisabled(), D = (0, u.e7)([S.Z], () => S.Z.disableSounds), M = (0, u.e7)([I.Z], () => I.Z.getSoundpack()), P = r.useRef(!1), y = (0, a.Z)(() => {
+  })), g = (0, u.e7)([S.Z], () => S.Z.hasIncomingCalls()), C = (0, u.e7)([T.Z], () => T.Z.isSoundDisabled("call_ringing")), v = E.Z.useIsRingtoneEligible(), L = E.Z.useIsRingtoneDisabled(), D = (0, u.e7)([f.Z], () => f.Z.disableSounds), M = (0, u.e7)([I.Z], () => I.Z.getSoundpack()), P = r.useRef(!1), y = (0, a.Z)(() => {
     let e = "call_ringing";
-    return v && !L ? (0, N.tu)(d.Z.ringtone, e) : M === m.YC.CLASSIC ? (0, N.tu)(500 !== o().random(1, 1e3) ? "call_ringing" : o().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, N.uk)("call_ringing", M)
+    return v && !L ? (0, A.tu)(d.Z.ringtone, e) : M === m.YC.CLASSIC ? (0, A.tu)(500 !== o().random(1, 1e3) ? "call_ringing" : o().sample(["call_ringing_beat", "call_ringing_snow_halation"]), e) : (0, A.uk)("call_ringing", M)
   }, [M, L, v]);
   return r.useEffect(() => () => {
     y.stop()
@@ -56,14 +56,14 @@ t.Z = () => {
       return
     }
     g && !P.current ? (y.loop(), P.current = !0) : !g && P.current && (y.stop(), P.current = !1)
-  }, [C, D, g, y]), (0, l.useTransition)(p, {
+  }, [C, D, g, y]), (0, l.useTransition)(R, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
       from: O,
-      to: R
+      to: p
     },
     leave: O,
     config: {

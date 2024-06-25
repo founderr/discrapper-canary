@@ -1,61 +1,61 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return d
   }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060),
-  a = t(457414),
-  r = t(311173),
-  o = t(689938),
-  c = t(463930);
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(481060),
+  r = n(457414),
+  l = n(311173),
+  o = n(689938),
+  c = n(463930);
 
 function d(e) {
-  var s;
+  var t;
   let {
-    rule: t,
+    rule: n,
     onChangeRule: d,
     collapsed: u = !1
-  } = e, [E, _] = i.useState(!u), I = i.useCallback(() => {
-    _(!E)
-  }, [E, _]), T = i.useCallback(e => {
+  } = e, [_, E] = a.useState(!u), I = a.useCallback(() => {
+    E(!_)
+  }, [_, E]), T = a.useCallback(e => {
     d({
-      ...t,
+      ...n,
       triggerMetadata: {
-        ...t.triggerMetadata,
+        ...n.triggerMetadata,
         regexPatterns: e
       }
     })
-  }, [d, t]);
-  return (0, a.S)(t.triggerType) ? (0, n.jsx)(l.Collapsible, {
-    isExpanded: E,
-    collapsibleContent: (0, n.jsx)(r.Z, {
-      rule: t,
+  }, [d, n]);
+  return (0, r.S)(n.triggerType) ? (0, s.jsx)(i.Collapsible, {
+    isExpanded: _,
+    collapsibleContent: (0, s.jsx)(l.Z, {
+      rule: n,
       onChangeText: T,
       className: c.textAreaContainer,
-      initialValue: null === (s = t.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns
+      initialValue: null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns
     }),
     className: c.collapseable,
     children: e => {
       let {
-        onClick: s
+        onClick: t
       } = e;
-      return (0, n.jsx)(l.Clickable, {
+      return (0, s.jsx)(i.Clickable, {
         onClick: e => {
-          I(), s(e)
+          I(), t(e)
         },
-        children: (0, n.jsxs)("div", {
+        children: (0, s.jsxs)("div", {
           className: c.header,
-          children: [(0, n.jsx)(l.Heading, {
+          children: [(0, s.jsx)(i.Heading, {
             variant: "text-sm/medium",
             children: o.Z.Messages.GUILD_AUTOMOD_REGEX_TEXTAREA_TITLE
-          }), E ? (0, n.jsx)(l.ChevronSmallUpIcon, {
+          }), _ ? (0, s.jsx)(i.ChevronSmallUpIcon, {
             size: "md",
             color: "currentColor",
             className: c.arrow
-          }) : (0, n.jsx)(l.ChevronSmallDownIcon, {
+          }) : (0, s.jsx)(i.ChevronSmallDownIcon, {
             size: "md",
             color: "currentColor",
             className: c.arrow

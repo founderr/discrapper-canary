@@ -30,14 +30,14 @@ function d(e, t, n, s) {
     let {
       className: T,
       onScroll: h,
-      onResize: S = null,
-      onContentResize: f = null,
-      dir: N = "ltr",
-      sections: A,
+      onResize: f = null,
+      onContentResize: S = null,
+      dir: A = "ltr",
+      sections: N,
       sectionHeight: m,
       rowHeight: O,
-      footerHeight: R = 0,
-      sidebarHeight: p,
+      footerHeight: p = 0,
+      sidebarHeight: R,
       listHeaderHeight: g = 0,
       renderSection: C,
       renderRow: v,
@@ -50,8 +50,8 @@ function d(e, t, n, s) {
       paddingBottom: b,
       fade: G = !1,
       customTheme: w = !1,
-      chunkSize: B,
-      style: x,
+      chunkSize: x,
+      style: B,
       innerId: k,
       innerRole: V,
       innerAriaLabel: Z,
@@ -70,7 +70,7 @@ function d(e, t, n, s) {
       className: T,
       specs: a,
       orientation: "vertical",
-      dir: N
+      dir: A
     });
     let {
       spacerTop: ee,
@@ -81,20 +81,20 @@ function d(e, t, n, s) {
       forceUpdateOnChunkChange: es,
       anchor: eo
     } = (0, _.aU)({
-      sections: A,
+      sections: N,
       sectionHeight: m,
       rowHeight: O,
-      footerHeight: R,
-      sidebarHeight: p,
+      footerHeight: p,
+      sidebarHeight: R,
       listHeaderHeight: g,
       paddingTop: U,
       paddingBottom: b,
-      chunkSize: B,
+      chunkSize: x,
       getScrollerState: $,
       getAnchorId: y
-    }), ea = (0, _.t2)(Q), el = r.useRef(S), eu = r.useRef(f);
+    }), ea = (0, _.t2)(Q), el = r.useRef(f), eu = r.useRef(S);
     r.useLayoutEffect(() => {
-      el.current = S, eu.current = f
+      el.current = f, eu.current = S
     });
     let e_ = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
@@ -138,7 +138,7 @@ function d(e, t, n, s) {
           }
           return [0, 0]
         }, [])
-      }(A);
+      }(N);
     r.useImperativeHandle(I, () => ({
       getScrollerNode: () => Q.current,
       getScrollerState: $,
@@ -169,7 +169,7 @@ function d(e, t, n, s) {
         [n]: w,
         [c.scrolling]: q
       }),
-      style: (0, _.uT)(x),
+      style: (0, _.uT)(B),
       ...W,
       children: [r.useMemo(() => (0, i.jsx)(j, {
         id: k,
@@ -240,9 +240,9 @@ function d(e, t, n, s) {
       })({
         isSidebarVisible: ei,
         renderSidebar: D,
-        sidebarHeight: p,
+        sidebarHeight: R,
         isListVisible: 0 !== en.length
-      }), [ei, D, p, en.length])]
+      }), [ei, D, R, en.length])]
     })
   })
 }

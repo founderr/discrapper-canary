@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $p: function() {
-    return A
+    return N
   },
   FQ: function() {
-    return N
+    return A
   },
   Il: function() {
     return m
@@ -16,7 +16,7 @@ n.d(t, {
     return D
   },
   Um: function() {
-    return R
+    return p
   },
   eu: function() {
     return C
@@ -25,7 +25,7 @@ n.d(t, {
     return M
   },
   lY: function() {
-    return p
+    return R
   },
   pk: function() {
     return O
@@ -48,9 +48,9 @@ var i = n(392711),
   I = n(73346),
   T = n(926491),
   h = n(981631),
-  S = n(526761),
-  f = n(689938);
-let N = async (e, t) => {
+  f = n(526761),
+  S = n(689938);
+let A = async (e, t) => {
   let {
     body: n
   } = await (0, I.Kb)(h.ANM.STICKER_PACK(e));
@@ -60,7 +60,7 @@ let N = async (e, t) => {
     pack: n,
     ingestStickers: t
   }), n
-}, A = async function() {
+}, N = async function() {
   let {
     locale: e = u.default.locale
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -108,11 +108,11 @@ let N = async (e, t) => {
       user: new c.Z(e.user)
     } : e)
   })
-}, R = async e => {
+}, p = async e => {
   await s.tn.del({
     url: h.ANM.GUILD_STICKER(e.guild_id, e.id)
   })
-}, p = async (e, t) => {
+}, R = async (e, t) => {
   let n = await s.tn.post({
     url: h.ANM.GUILD_STICKER_PACKS(e),
     body: t
@@ -152,16 +152,16 @@ function L(e) {
 }
 
 function D(e) {
-  _.DZ.updateAsync("favoriteStickers", t => (t.stickerIds = L(t.stickerIds), r().size(t.stickerIds) >= S.oX) ? (a.Z.show({
-    title: f.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-    body: f.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-      count: S.oX
+  _.DZ.updateAsync("favoriteStickers", t => (t.stickerIds = L(t.stickerIds), r().size(t.stickerIds) >= f.oX) ? (a.Z.show({
+    title: S.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: S.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+      count: f.oX
     })
-  }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), S.fy.INFREQUENT_USER_ACTION)
+  }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), f.fy.INFREQUENT_USER_ACTION)
 }
 
 function M(e) {
   _.DZ.updateAsync("favoriteStickers", t => {
     t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = L(t.stickerIds)
-  }, S.fy.INFREQUENT_USER_ACTION)
+  }, f.fy.INFREQUENT_USER_ACTION)
 }

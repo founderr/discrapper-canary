@@ -25,47 +25,47 @@ function c(e) {
       className: I,
       onConfirm: T,
       onCancel: h,
-      onClose: S,
-      onCloseCallback: f,
-      bodyClassName: N,
-      transitionState: A,
+      onClose: f,
+      onCloseCallback: S,
+      bodyClassName: A,
+      transitionState: N,
       loading: m = !1,
       confirmButtonColor: O = a.zx.Colors.RED,
-      focusCancel: R = !1
+      focusCancel: p = !1
     } = e,
-    p = r.useRef(null);
+    R = r.useRef(null);
   return r.useEffect(() => {
-    !R && setTimeout(() => {
+    !p && setTimeout(() => {
       var e;
-      return null === (e = p.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = R.current) || void 0 === e ? void 0 : e.focus()
     }, 0)
-  }, [R]), r.useLayoutEffect(() => () => null == f ? void 0 : f()), null != E && (t = (0, i.jsx)(a.zx, {
+  }, [p]), r.useLayoutEffect(() => () => null == S ? void 0 : S()), null != E && (t = (0, i.jsx)(a.zx, {
     type: "button",
     look: a.zx.Looks.LINK,
     color: a.zx.Colors.PRIMARY,
     disabled: m,
     onClick: () => {
-      null == h || h(), S()
+      null == h || h(), f()
     },
-    autoFocus: R,
+    autoFocus: p,
     children: E
   })), null != d && (n = (0, i.jsx)(a.zx, {
-    buttonRef: p,
+    buttonRef: R,
     type: "submit",
     color: O,
     submitting: m,
     onClick: async () => {
       try {
-        await (null == T ? void 0 : T()), S()
+        await (null == T ? void 0 : T()), f()
       } catch (e) {
         throw e
       }
     },
-    autoFocus: !R,
+    autoFocus: !p,
     children: d
   })), (0, i.jsxs)(u.Y0, {
     className: I,
-    transitionState: A,
+    transitionState: N,
     children: [null != s ? (0, i.jsx)(u.xB, {
       separator: !1,
       children: (0, i.jsx)(l.X, {
@@ -73,7 +73,7 @@ function c(e) {
         children: s
       })
     }) : null, (0, i.jsx)(u.hz, {
-      className: o()(_.content, N),
+      className: o()(_.content, A),
       children: c
     }), (0, i.jsxs)(u.mz, {
       children: [n, t]

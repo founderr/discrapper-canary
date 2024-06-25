@@ -1,56 +1,56 @@
 n.d(t, {
   Z: function() {
-    return f
+    return E
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(194359),
+var a = n(442837),
+  l = n(481060),
+  s = n(194359),
   r = n(631937),
   o = n(702321),
   c = n(377171),
   u = n(699516),
   d = n(626135),
   h = n(63063),
-  m = n(862679),
-  E = n(981631),
-  p = n(596401),
-  g = n(689938);
+  p = n(862679),
+  m = n(981631),
+  _ = n(596401),
+  f = n(689938);
 
-function f(e) {
+function E(e) {
   let {
     channel: t,
-    children: f
-  } = e, C = (0, i.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
+    children: E
+  } = e, g = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
   (0, r.Z)(t.id);
-  let _ = (0, o.Z)(t.id),
+  let C = (0, o.Z)(t.id),
     I = t.isSystemDM(),
-    x = C && !I && !t.isMultiUserDM(),
+    x = g && !I && !t.isMultiUserDM(),
     T = {};
   if (I) {
-    let e = _ ? (0, l.jsxs)(l.Fragment, {
-      children: [g.Z.Messages.SYSTEM_DM_OPEN_BLOG, (0, l.jsx)(s.WindowLaunchIcon, {
+    let e = C ? (0, i.jsxs)(i.Fragment, {
+      children: [f.Z.Messages.SYSTEM_DM_OPEN_BLOG, (0, i.jsx)(l.WindowLaunchIcon, {
         size: "xs",
         color: c.Z.HEADER_PRIMARY
       })]
-    }) : g.Z.Messages.LEARN_MORE;
-    T.message = g.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION, T.subtitle = g.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT, T.buttonText = e, T.onButtonClick = () => {
-      if (_) {
-        open(p.D2), d.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
+    }) : f.Z.Messages.LEARN_MORE;
+    T.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION, T.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT, T.buttonText = e, T.onButtonClick = () => {
+      if (C) {
+        open(_.D2), d.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
           cta_type: "chat_blocker",
-          target: p.D2
+          target: _.D2
         });
         return
       }
-      open(h.Z.getArticleURL(E.BhN.SYSTEM_DMS))
+      open(h.Z.getArticleURL(m.BhN.SYSTEM_DMS))
     }, T.imageSrc = n(780961)
-  } else x && (T.message = g.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED, T.buttonText = g.Z.Messages.UNBLOCK, T.onButtonClick = () => {
-    a.Z.unblockUser(t.getRecipientId())
+  } else x && (T.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED, T.buttonText = f.Z.Messages.UNBLOCK, T.onButtonClick = () => {
+    s.Z.unblockUser(t.getRecipientId())
   });
-  return (0, l.jsx)(m.Z, {
+  return (0, i.jsx)(p.Z, {
     ...T,
-    children: f
+    children: E
   })
 }

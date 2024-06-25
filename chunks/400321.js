@@ -1,17 +1,17 @@
 n.d(t, {
   Z: function() {
-    return a
+    return s
   }
 }), n(653041);
-var l = n(88315),
-  i = n(199766),
-  s = n(813900);
+var i = n(88315),
+  a = n(199766),
+  l = n(813900);
 
-function a(e) {
+function s(e) {
   let {
     line: t,
     context: n,
-    canvasWidth: a,
+    canvasWidth: s,
     canvasHeight: r,
     fallbackColor: o,
     outlineColorDark: c,
@@ -20,30 +20,30 @@ function a(e) {
     deadDrawables: h
   } = e;
   null == d.current[t.id] && (d.current[t.id] = Date.now()), n.lineCap = "round", n.lineJoin = "round";
-  let m = t.points.map(e => (0, l.RR)(e, a, r)),
-    E = d.current[t.id],
-    p = e => E + e.deltaTime,
-    g = e => p(e) + 1500 >= Date.now(),
-    f = e => p(e) <= Date.now() && g(e),
-    C = m.find(f);
-  if (null == C) {
-    !g(t.points[t.points.length - 1]) && h.push(t);
+  let p = t.points.map(e => (0, i.RR)(e, s, r)),
+    m = d.current[t.id],
+    _ = e => m + e.deltaTime,
+    f = e => _(e) + 1500 >= Date.now(),
+    E = e => _(e) <= Date.now() && f(e),
+    g = p.find(E);
+  if (null == g) {
+    !f(t.points[t.points.length - 1]) && h.push(t);
     return
   }
-  let _ = (e, t) => {
-      let l = null;
-      n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(C.x, C.y);
-      for (let e = 1; e < m.length; e++) {
-        let t = m[e];
-        f(t) && (n.lineTo(t.x, t.y), l = t)
+  let C = (e, t) => {
+      let i = null;
+      n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(g.x, g.y);
+      for (let e = 1; e < p.length; e++) {
+        let t = p[e];
+        E(t) && (n.lineTo(t.x, t.y), i = t)
       }
-      return n.stroke(), l
+      return n.stroke(), i
     },
     {
       fillColor: I,
       outlineColor: x
-    } = (0, l.bg)(t.userId, c, u, o),
-    T = _(x, 6 + s.q2),
-    N = null != T && f(T);
-  N && (0, i.I)(n, T.x, T.y, x, s.q2), _(I, 6), N && (0, i.T)(n, T.x, T.y, t.userId)
+    } = (0, i.bg)(t.userId, c, u, o),
+    T = C(x, 6 + l.q2),
+    N = null != T && E(T);
+  N && (0, a.I)(n, T.x, T.y, x, l.q2), C(I, 6), N && (0, a.T)(n, T.x, T.y, t.userId)
 }

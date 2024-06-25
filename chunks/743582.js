@@ -1,103 +1,103 @@
-_.r(s), _.d(s, {
+s.r(a), s.d(a, {
   default: function() {
-    return c
+    return S
   }
-}), _(47120);
-var a = _(735250),
-  l = _(470079),
-  E = _(512722),
-  n = _.n(E),
-  i = _(481060),
-  T = _(935369),
-  t = _(728345),
-  o = _(577275),
-  r = _(153124),
-  I = _(829857),
-  S = _(689938),
-  d = _(857674);
+}), s(47120);
+var n = s(735250),
+  _ = s(470079),
+  l = s(512722),
+  i = s.n(l),
+  t = s(481060),
+  E = s(935369),
+  o = s(728345),
+  T = s(577275),
+  c = s(153124),
+  r = s(829857),
+  I = s(689938),
+  d = s(857674);
 
-function c(e) {
-  var s, _;
+function S(e) {
+  var a, s;
   let {
-    transitionState: E,
-    application: c,
+    transitionState: l,
+    application: S,
     onClose: N
-  } = e, M = (0, r.Dt)(), [A, L] = l.useState(null == c ? void 0 : null === (s = c.team) || void 0 === s ? void 0 : s.id), {
+  } = e, M = (0, c.Dt)(), [A, L] = _.useState(null == S ? void 0 : null === (a = S.team) || void 0 === a ? void 0 : a.id), {
     teams: C
-  } = (0, o.Z)(), O = l.useMemo(() => C.filter(e => e.payout_account_status === I.C.ACTIVE).map(e => ({
+  } = (0, T.Z)(), O = _.useMemo(() => C.filter(e => e.payout_account_status === r.C.ACTIVE).map(e => ({
     label: e.name,
     value: e.id
-  })), [C]), u = (null == c ? void 0 : null === (_ = c.team) || void 0 === _ ? void 0 : _.id) !== A, [m, {
-    loading: R,
-    error: x
-  }] = (0, T.Z)(t.Z.transferApplication), g = async () => {
-    n()(null != c, "no application"), n()(null != A, "no team selected"), null != await m({
-      applicationId: c.id,
+  })), [C]), u = (null == S ? void 0 : null === (s = S.team) || void 0 === s ? void 0 : s.id) !== A, [g, {
+    loading: m,
+    error: R
+  }] = (0, E.Z)(o.Z.transferApplication), x = async () => {
+    i()(null != S, "no application"), i()(null != A, "no team selected"), null != await g({
+      applicationId: S.id,
       teamId: A
     }) && N()
-  }, D = (null == c ? void 0 : c.team) != null;
-  return (0, a.jsxs)(i.ModalRoot, {
-    transitionState: E,
+  }, D = (null == S ? void 0 : S.team) != null;
+  return (0, n.jsxs)(t.ModalRoot, {
+    transitionState: l,
     "aria-labelledby": M,
-    children: [(0, a.jsxs)(i.ModalHeader, {
-      children: [(0, a.jsx)(i.Heading, {
+    children: [(0, n.jsxs)(t.ModalHeader, {
+      children: [(0, n.jsx)(t.Heading, {
         id: M,
         variant: "heading-md/semibold",
-        children: D ? S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_TITLE : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE
-      }), (0, a.jsx)(i.ModalCloseButton, {
+        children: D ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_TITLE : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE
+      }), (0, n.jsx)(t.ModalCloseButton, {
         className: d.closeButton,
         onClick: N
       })]
-    }), (0, a.jsxs)(i.ModalContent, {
+    }), (0, n.jsxs)(t.ModalContent, {
       className: d.content,
-      children: [D ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(i.FormText, {
-          children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION
-        }), (0, a.jsx)(i.Spacer, {
+      children: [D ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(t.FormText, {
+          children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION
+        }), (0, n.jsx)(t.Spacer, {
           size: 8
-        }), (0, a.jsxs)(i.Heading, {
+        }), (0, n.jsxs)(t.Heading, {
           className: d.warningHeading,
           variant: "text-sm/semibold",
           color: "text-danger",
-          children: [(0, a.jsx)(i.CircleExclamationPointIcon, {
+          children: [(0, n.jsx)(t.CircleExclamationPointIcon, {
             size: "xs",
             color: "currentColor",
             className: d.warningIcon
-          }), S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING]
-        }), (0, a.jsx)(i.Spacer, {
+          }), I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING]
+        }), (0, n.jsx)(t.Spacer, {
           size: 4
-        }), (0, a.jsx)(i.FormText, {
-          type: i.FormText.Types.ERROR,
-          children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING
+        }), (0, n.jsx)(t.FormText, {
+          type: t.FormText.Types.ERROR,
+          children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING
         })]
-      }) : (0, a.jsx)(i.FormText, {
-        children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_DESCRIPTION
-      }), null != x ? (0, a.jsx)(i.FormErrorBlock, {
-        children: x.message
-      }) : null, (0, a.jsx)(i.Spacer, {
+      }) : (0, n.jsx)(t.FormText, {
+        children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_DESCRIPTION
+      }), null != R ? (0, n.jsx)(t.FormErrorBlock, {
+        children: R.message
+      }) : null, (0, n.jsx)(t.Spacer, {
         size: 16
-      }), (0, a.jsx)(i.FormItem, {
-        title: D ? S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TO_TRANSFER_LABEL : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_LABEL,
+      }), (0, n.jsx)(t.FormItem, {
+        title: D ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TO_TRANSFER_LABEL : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_LABEL,
         required: !0,
-        children: (0, a.jsx)(i.SingleSelect, {
+        children: (0, n.jsx)(t.SingleSelect, {
           className: d.__invalid_teamSelect,
           options: O,
-          placeholder: S.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
+          placeholder: I.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
           value: A,
           isDisabled: 0 === O.length,
           onChange: e => L(e),
-          "aria-label": S.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
+          "aria-label": I.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
         })
       })]
-    }), (0, a.jsx)(i.ModalFooter, {
+    }), (0, n.jsx)(t.ModalFooter, {
       className: d.__invalid_footer,
-      children: (0, a.jsx)(i.Button, {
-        color: i.Button.Colors.RED,
+      children: (0, n.jsx)(t.Button, {
+        color: t.Button.Colors.RED,
         className: d.__invalid_goBackButton,
-        submitting: R,
+        submitting: m,
         disabled: !u,
-        onClick: g,
-        children: S.Z.Messages.SAVE
+        onClick: x,
+        children: I.Z.Messages.SAVE
       })
     })]
   })

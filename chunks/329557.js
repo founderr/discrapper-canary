@@ -1,30 +1,30 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(570140),
-  r = n(317770),
-  a = n(51596),
+var l = n(481060),
+  r = n(570140),
+  a = n(317770),
+  s = n(51596),
   o = n(823385),
-  u = n(900085);
-let c = "QUICK_SWITCHER_MODAL_KEY";
-class d extends r.Z {
+  c = n(900085);
+let u = "QUICK_SWITCHER_MODAL_KEY";
+class d extends a.Z {
   _initialize() {
-    s.Z.subscribe("QUICKSWITCHER_SHOW", this.handleShow), s.Z.subscribe("QUICKSWITCHER_HIDE", this.handleHide)
+    r.Z.subscribe("QUICKSWITCHER_SHOW", this.handleShow), r.Z.subscribe("QUICKSWITCHER_HIDE", this.handleHide)
   }
   _terminate() {
-    s.Z.unsubscribe("QUICKSWITCHER_SHOW", this.handleShow), s.Z.unsubscribe("QUICKSWITCHER_HIDE", this.handleHide)
+    r.Z.unsubscribe("QUICKSWITCHER_SHOW", this.handleShow), r.Z.unsubscribe("QUICKSWITCHER_HIDE", this.handleHide)
   }
   handleShow() {
-    o.Z.isOpen() && !(0, i.hasModalOpen)(c) && (0, i.openModal)(e => (0, l.jsx)(u.Z, {
+    o.Z.isOpen() && !(0, l.hasModalOpen)(u) && (0, l.openModal)(e => (0, i.jsx)(c.Z, {
       ...e
     }), {
-      modalKey: c,
+      modalKey: u,
       instant: !0,
-      onCloseCallback: a.Cp
+      onCloseCallback: s.Cp
     })
   }
   handleHide() {
-    (0, i.closeModal)(c)
+    (0, l.closeModal)(u)
   }
 }
 t.Z = new d

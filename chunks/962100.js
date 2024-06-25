@@ -1,14 +1,14 @@
 t.d(s, {
   y: function() {
-    return a
+    return i
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(481060);
+var a = t(481060);
 
-function a(e) {
-  (0, i.openModalLazy)(async () => {
+function i(e) {
+  (0, a.openModalLazy)(async () => {
     let {
       default: s
     } = await Promise.resolve().then(t.bind(t, 431583));

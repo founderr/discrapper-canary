@@ -34,7 +34,7 @@ let u = null,
   I = {},
   T = {},
   h = {};
-class S extends i.ZP.Store {
+class f extends i.ZP.Store {
   getGlobalStats() {
     let e = e => null == e ? null : Math.floor((Date.now() - e) / 1e3);
     return {
@@ -58,7 +58,7 @@ class S extends i.ZP.Store {
     }
   }
 }
-t.Z = new S(r.Z, {
+t.Z = new f(r.Z, {
   CONNECTION_OPEN: function() {
     let e = e => null != e && Date.now() - e < 6e4;
     for (let t in !e(u) && (u = null), !e(_) && (_ = null), !e(c) && (c = null), !e(d) && (d = null), E) !e(E[t]) && delete E[t];

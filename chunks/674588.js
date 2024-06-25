@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   CP: function() {
-    return f
+    return S
   },
   T4: function() {
-    return N
+    return A
   },
   bG: function() {
     return m
@@ -16,10 +16,10 @@ n.d(t, {
     return h
   },
   i6: function() {
-    return S
+    return f
   },
   yC: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(261470),
@@ -67,7 +67,7 @@ async function h(e) {
     })
   }
 }
-async function S(e) {
+async function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     n = Date.now(),
     i = a.Z.getApplicationFetchState(e),
@@ -100,7 +100,7 @@ async function S(e) {
     }
   }
 }
-async function f() {
+async function S() {
   let e = Date.now(),
     t = l.Z.getLastFetchTimeMs();
   if (null != t && t + 6e5 > e) return;
@@ -115,7 +115,7 @@ async function f() {
     categories: n.body
   })
 }
-async function N(e) {
+async function A(e) {
   var t;
   let {
     applicationId: n,
@@ -167,7 +167,7 @@ async function N(e) {
     }
   }
 }
-async function A(e) {
+async function N(e) {
   var t;
   let {
     query: n,
@@ -180,14 +180,14 @@ async function A(e) {
     integrationType: d,
     minUserInstallCommandCount: I,
     excludeAppsWithCustomInstallUrl: T
-  } = null != a ? a : {}, h = Date.now(), S = _.Z.getFetchState({
+  } = null != a ? a : {}, h = Date.now(), f = _.Z.getFetchState({
     query: n,
     guildId: i,
     page: u,
     categoryId: c,
     integrationType: d
   }), {
-    lastFetchTimeMs: f
+    lastFetchTimeMs: S
   } = null !== (t = _.Z.getSearchResults({
     query: n,
     guildId: i,
@@ -195,7 +195,7 @@ async function A(e) {
     categoryId: c,
     integrationType: d
   })) && void 0 !== t ? t : {};
-  if (S !== _.M.FETCHING && (null == f || !(f + 6e5 > h))) {
+  if (f !== _.M.FETCHING && (null == S || !(S + 6e5 > h))) {
     s.Z.dispatch({
       type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
       query: n,

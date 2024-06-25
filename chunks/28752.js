@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 });
 var i = n(735250),
@@ -18,17 +18,17 @@ var i = n(735250),
   I = n(182294),
   T = n(689079),
   h = n(689938),
-  S = n(82849);
+  f = n(82849);
 
-function f(e) {
+function S(e) {
   let {
     inApp: t,
     application: n,
     onSelect: s
-  } = e, f = r.useMemo(() => c.ZP.getApplicationIconURL({
+  } = e, S = r.useMemo(() => c.ZP.getApplicationIconURL({
     id: n.id,
     icon: n.icon
-  }), [n.icon, n.id]), N = r.useMemo(() => [{
+  }), [n.icon, n.id]), A = r.useMemo(() => [{
     type: a.Y.USER_INSTALL,
     icon: u.UserPlusIcon,
     title: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
@@ -45,11 +45,11 @@ function f(e) {
     return (null === (i = n.integrationTypesConfig) || void 0 === i ? void 0 : null === (t = i[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null
   }), [n.integrationTypesConfig]);
   return (0, i.jsxs)("div", {
-    className: S.container,
+    className: f.container,
     children: [(0, i.jsxs)("div", {
-      className: S.header,
+      className: f.header,
       children: [(0, i.jsx)(l.qE, {
-        src: f,
+        src: S,
         size: I.EF.SIZE_80,
         "aria-label": n.name
       }), (0, i.jsx)(u.Heading, {
@@ -58,21 +58,21 @@ function f(e) {
         children: n.name
       })]
     }), (0, i.jsx)("ul", {
-      className: S.rows,
-      children: N.map(e => (0, i.jsxs)(u.Clickable, {
+      className: f.rows,
+      children: A.map(e => (0, i.jsxs)(u.Clickable, {
         tag: "li",
-        className: o()(S.row, {
-          [S.inApp]: t
+        className: o()(f.row, {
+          [f.inApp]: t
         }),
         onClick: () => s(e.type),
         children: [(0, i.jsx)(e.icon, {
           size: "md",
           color: "currentColor",
-          className: S.leftIcon
+          className: f.leftIcon
         }), (0, i.jsxs)("div", {
-          className: S.rowInner,
+          className: f.rowInner,
           children: [(0, i.jsxs)("div", {
-            className: S.rowDetails,
+            className: f.rowDetails,
             children: [(0, i.jsx)(u.Text, {
               variant: "text-md/medium",
               color: "interactive-active",
@@ -85,14 +85,14 @@ function f(e) {
           }), e.beta && (0, i.jsx)(_.Z, {}), (0, i.jsx)(u.ChevronSmallRightIcon, {
             size: "md",
             color: "currentColor",
-            className: S.rightIcon
+            className: f.rightIcon
           })]
         })]
       }, e.type))
     }), (0, i.jsx)(u.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      className: S.learnMore,
+      className: f.learnMore,
       children: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
         betaUserLimit: T.um,
         learnMoreUrl: d.Z.getArticleURL(E.BhN.USING_APPS_FAQ)

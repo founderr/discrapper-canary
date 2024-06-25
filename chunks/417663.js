@@ -1,47 +1,47 @@
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   AccountConnectionResult: function() {
-    return h
+    return C
   },
   LinkPlatformLogo: function() {
     return g
   }
-}), n(47120);
-var s = n(735250),
-  a = n(470079),
-  r = n(120356),
-  i = n.n(r),
-  o = n(593473),
-  l = n(481060),
-  c = n(457330),
-  d = n(726542),
-  u = n(536285),
-  N = n(981631),
-  m = n(689938),
-  C = n(613803);
+}), s(47120);
+var n = s(735250),
+  r = s(470079),
+  o = s(120356),
+  a = s.n(o),
+  i = s(593473),
+  l = s(481060),
+  c = s(457330),
+  d = s(726542),
+  u = s(536285),
+  N = s(981631),
+  m = s(689938),
+  p = s(613803);
 
-function p(e, t, n) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
-let f = null != window.opener;
+let _ = null != window.opener;
 
 function g(e) {
   let {
     platform: t,
-    className: n
+    className: s
   } = e;
-  return (0, s.jsxs)("div", {
-    className: i()(C.logos, n),
-    children: [(0, s.jsx)("div", {
-      className: i()(C.logo, C.logoDiscord)
-    }), (0, s.jsx)("div", {
-      className: C.logosDivider
-    }), (0, s.jsx)("div", {
-      className: C.logo,
+  return (0, n.jsxs)("div", {
+    className: a()(p.logos, s),
+    children: [(0, n.jsx)("div", {
+      className: a()(p.logo, p.logoDiscord)
+    }), (0, n.jsx)("div", {
+      className: p.logosDivider
+    }), (0, n.jsx)("div", {
+      className: p.logo,
       style: {
         backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")')
       }
@@ -49,114 +49,114 @@ function g(e) {
   })
 }
 
-function h(e) {
-  let t, n, {
-      verifying: r,
-      verified: o,
+function C(e) {
+  let t, s, {
+      verifying: o,
+      verified: i,
       platformType: c
     } = e,
     u = d.Z.get(c),
-    N = a.useCallback(() => {
+    N = r.useCallback(() => {
       window.close()
     }, []);
-  return t = r ? (0, s.jsx)("div", {
-    className: C.message,
+  return t = o ? (0, n.jsx)("div", {
+    className: p.message,
     children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({
       name: u.name
     })
-  }) : o ? (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)("div", {
-      className: C.message,
+  }) : i ? (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)("div", {
+      className: p.message,
       children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS.format({
         name: u.name
       })
-    }), (0, s.jsx)("div", {
-      className: i()(C.message, C.details),
+    }), (0, n.jsx)("div", {
+      className: a()(p.message, p.details),
       children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS_DETAILS
     })]
-  }) : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)("div", {
-      className: i()(C.message, C.error),
+  }) : (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)("div", {
+      className: a()(p.message, p.error),
       children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({
         name: u.name
       })
-    }), (0, s.jsx)("div", {
-      className: i()(C.message, C.details),
+    }), (0, n.jsx)("div", {
+      className: a()(p.message, p.details),
       children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
     })]
-  }), (f || r) && (n = (0, s.jsx)(l.Button, {
-    className: C.btn,
-    disabled: r,
+  }), (_ || o) && (s = (0, n.jsx)(l.Button, {
+    className: p.btn,
+    disabled: o,
     onClick: N,
-    children: r ? (0, s.jsx)(l.Spinner, {
-      itemClassName: C.spinnerItem
+    children: o ? (0, n.jsx)(l.Spinner, {
+      itemClassName: p.spinnerItem
     }) : m.Z.Messages.DONE
-  })), (0, s.jsx)("div", {
-    className: C.verifyConnectedAccount,
-    children: (0, s.jsxs)("div", {
-      children: [(0, s.jsx)(g, {
+  })), (0, n.jsx)("div", {
+    className: p.verifyConnectedAccount,
+    children: (0, n.jsxs)("div", {
+      children: [(0, n.jsx)(g, {
         platform: u
-      }), t, n]
+      }), t, s]
     })
   })
 }
-class v extends a.Component {
+class v extends r.Component {
   componentDidMount() {
     let e;
-    let t = (0, o.parse)(this.props.location.search),
+    let t = (0, i.parse)(this.props.location.search),
       {
-        code: n,
-        state: s,
-        oauth_verifier: a,
-        loading: r
+        code: s,
+        state: n,
+        oauth_verifier: r,
+        loading: o
       } = t;
-    if (null != r) return;
-    null != a && (n = a), Object.keys(t).forEach(n => {
-      if (!!n.startsWith("openid.")) null == e && (e = {}), e[n] = t[n]
+    if (null != o) return;
+    null != r && (s = r), Object.keys(t).forEach(s => {
+      if (!!s.startsWith("openid.")) null == e && (e = {}), e[s] = t[s]
     });
-    let i = e => {
+    let a = e => {
         let {
           status: t,
-          body: n
+          body: s
         } = e;
         this.setState({
           verifying: !1,
           verified: 204 === t || 200 === t
         }, () => {
-          this.state.verified && f && window.close()
-        }), (null == n ? void 0 : n.redirect) != null && (window.location = n.redirect)
+          this.state.verified && _ && window.close()
+        }), (null == s ? void 0 : s.redirect) != null && (window.location = s.redirect)
       },
       l = {
-        code: n,
+        code: s,
         openid_params: e,
-        state: s
+        state: n
       },
-      d = e => c.Z.callback(this.getType(), l, e).then(i, i);
-    if (f) {
+      d = e => c.Z.callback(this.getType(), l, e).then(a, a);
+    if (_) {
       d(!1);
       return
     }
     u.default.request(N.Etm.CONNECTIONS_CALLBACK, {
       ...l,
       providerType: this.getType()
-    }).then(i, e => d("RPCError" !== e.name)).then(() => u.default.disconnect())
+    }).then(a, e => d("RPCError" !== e.name)).then(() => u.default.disconnect())
   }
   render() {
     let {
       verifying: e,
       verified: t
-    } = this.state, n = this.getType();
-    return d.Z.isSupported(n) ? (0, s.jsx)(h, {
+    } = this.state, s = this.getType();
+    return d.Z.isSupported(s) ? (0, n.jsx)(C, {
       platformType: this.getType(),
       verifying: e,
       verified: t
     }) : null
   }
   constructor(...e) {
-    super(...e), p(this, "state", {
+    super(...e), f(this, "state", {
       verifying: !0,
       verified: !1
-    }), p(this, "getType", () => this.props.match.params.type)
+    }), f(this, "getType", () => this.props.match.params.type)
   }
 }
 t.default = v

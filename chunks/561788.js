@@ -1,25 +1,25 @@
 n.d(t, {
   Z: function() {
-    return u
+    return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  r = n(471445),
-  a = n(430824),
+var l = n(442837),
+  r = n(481060),
+  a = n(471445),
+  s = n(430824),
   o = n(777443);
 
-function u(e) {
+function c(e) {
   let {
     channel: t
-  } = e, n = (0, i.e7)([a.Z], () => a.Z.getGuild(t.guild_id)), u = (0, r.KS)(t, n);
-  return null == u ? null : (0, l.jsxs)("div", {
+  } = e, n = (0, l.e7)([s.Z], () => s.Z.getGuild(t.guild_id)), c = (0, a.KS)(t, n);
+  return null == c ? null : (0, i.jsxs)("div", {
     className: o.popoutHeader,
-    children: [(0, l.jsx)(u, {
+    children: [(0, i.jsx)(c, {
       className: o.channelIcon
-    }), (0, l.jsx)(s.Text, {
+    }), (0, i.jsx)(r.Text, {
       variant: "text-md/semibold",
       color: "interactive-normal",
       className: o.channelName,

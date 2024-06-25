@@ -1,22 +1,22 @@
-var l = r(735250),
-  t = r(470079),
-  s = r(120356),
-  i = r.n(s),
-  o = r(481060),
-  a = r(378233),
-  c = r(689938),
-  d = r(930044);
+var t = n(735250),
+  l = n(470079),
+  o = n(120356),
+  s = n.n(o),
+  i = n(481060),
+  a = n(378233),
+  c = n(689938),
+  d = n(930044);
 let u = e => {
   let {
-    stickerPack: n
+    stickerPack: r
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, t.jsx)("div", {
     className: d.features,
-    children: (0, a.X_)(n) ? (0, l.jsx)(o.Tooltip, {
+    children: (0, a.X_)(r) ? (0, t.jsx)(i.Tooltip, {
       tooltipClassName: d.featuresTooltip,
       position: "top",
       text: c.Z.Messages.STICKER_PICKER_PACK_DETAILS_ANIMATED,
-      children: e => (0, l.jsx)(o.PlayIcon, {
+      children: e => (0, t.jsx)(i.PlayIcon, {
         size: "xs",
         color: "currentColor",
         ...e,
@@ -25,31 +25,31 @@ let u = e => {
     }) : null
   })
 };
-n.Z = t.memo(e => {
+r.Z = l.memo(e => {
   let {
-    className: n,
-    stickerPack: r,
-    withDescription: t = !1
+    className: r,
+    stickerPack: n,
+    withDescription: l = !1
   } = e;
-  return (0, l.jsxs)("div", {
-    className: i()(d.header, n),
-    children: [(0, l.jsxs)("div", {
+  return (0, t.jsxs)("div", {
+    className: s()(d.header, r),
+    children: [(0, t.jsxs)("div", {
       className: d.title,
-      children: [(0, l.jsx)(o.Heading, {
+      children: [(0, t.jsx)(i.Heading, {
         className: d.heading,
         variant: "heading-sm/semibold",
-        children: r.name
-      }), (0, l.jsx)(u, {
-        stickerPack: r
+        children: n.name
+      }), (0, t.jsx)(u, {
+        stickerPack: n
       })]
-    }), t && null != r.description && (0, l.jsx)(o.Text, {
+    }), l && null != n.description && (0, t.jsx)(i.Text, {
       className: d.description,
       variant: "text-sm/normal",
-      children: r.description
-    }), (0, l.jsx)("div", {
+      children: n.description
+    }), (0, t.jsx)("div", {
       className: d.count,
       children: c.Z.Messages.STICKER_PACK_STICKER_COUNT.format({
-        numStickers: r.stickers.length
+        numStickers: n.stickers.length
       })
     })]
   })

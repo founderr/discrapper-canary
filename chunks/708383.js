@@ -1,10 +1,10 @@
 "use strict";
 var i = n(735250),
   s = n(470079),
-  l = n(266067),
+  a = n(266067),
   o = n(749210),
-  a = n(287734),
-  r = n(765717),
+  r = n(287734),
+  l = n(765717),
   c = n(893607),
   d = n(703656),
   u = n(981631);
@@ -36,7 +36,7 @@ class h extends s.Component {
         messageId: i
       }
     }(e);
-    (0, c.S)(t) && (0, c.c)(n) ? (o.Z.selectGuild(t), a.default.selectChannel({
+    (0, c.S)(t) && (0, c.c)(n) ? (o.Z.selectGuild(t), r.default.selectChannel({
       guildId: t,
       channelId: n,
       messageId: i
@@ -46,11 +46,11 @@ class h extends s.Component {
     return null
   }
 }
-t.Z = () => (0, i.jsxs)(l.rs, {
-  children: [(0, i.jsx)(r.Z, {
+t.Z = () => (0, i.jsxs)(a.rs, {
+  children: [(0, i.jsx)(l.Z, {
     path: u.Z5c.CHANNEL(":guildId", ":channelId?", ":messageId?"),
     component: h
-  }), (0, i.jsx)(r.Z, {
+  }), (0, i.jsx)(l.Z, {
     component: h
   })]
 })

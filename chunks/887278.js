@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   $1: function() {
-    return S
+    return f
   },
   YT: function() {
-    return N
+    return A
   },
   pn: function() {
-    return A
+    return N
   }
 }), n(411104);
 var i, r, s = n(570140),
@@ -28,13 +28,13 @@ let h = {
   stable: [1, 0, 9001, 2]
 };
 
-function S() {
+function f() {
   var e;
   return !(null === E.ZP || void 0 === E.ZP ? void 0 : null === (e = E.ZP.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.ZP, "discord_hook", h))
 }
-async function f() {
+async function S() {
   if (!(0, d.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
-  if (S()) return Promise.reject(Error("Hook module is too old"));
+  if (f()) return Promise.reject(Error("Hook module is too old"));
   await E.ZP.ensureModule("discord_hook");
   let e = await E.ZP.requireModule("discord_hook");
   return function(e) {
@@ -51,8 +51,8 @@ async function f() {
   }(e), e
 }(r = i || (i = {}))[r.None = 0] = "None", r[r.EnableCrashReporting = 1] = "EnableCrashReporting", r[r.EnableCrashTrigger = 2] = "EnableCrashTrigger";
 
-function N(e, t) {
-  return f().then(n => {
+function A(e, t) {
+  return S().then(n => {
     var i;
     let r = null === (i = l.ZP.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
       _ = u.Z.getGameByName(r),
@@ -80,8 +80,8 @@ function N(e, t) {
   })
 }
 
-function A(e) {
-  return f().then(t => {
+function N(e) {
+  return S().then(t => {
     t.cancelAttachToProcess(e)
   })
 }

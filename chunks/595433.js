@@ -1,18 +1,18 @@
 "use strict";
 n.d(t, {
   H: function() {
-    return a
+    return r
   }
 }), n(47120);
-var s = n(470079),
-  l = n(920906);
+var a = n(470079),
+  s = n(920906);
 
-function a(e) {
-  let [t, n] = s.useState(!0);
+function r(e) {
+  let [t, n] = a.useState(!0);
   return {
-    transitions: (0, l.useTransition)(t, {
+    transitions: (0, s.useTransition)(t, {
       keys: e => e ? "shown" : "hidden",
-      config: r,
+      config: l,
       from: {
         opacity: 0
       },
@@ -28,7 +28,7 @@ function a(e) {
     setVisible: n
   }
 }
-let r = {
+let l = {
   mass: 1,
   tension: 250,
   friction: 18,

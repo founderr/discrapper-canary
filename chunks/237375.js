@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 });
 var i = n(735250),
@@ -63,7 +63,7 @@ function h(e) {
       variant: "heading-deprecated-12/semibold",
       children: E.Z.Messages.COMMANDS_OPTIONAL_HEADER
     }), l.map(e => T(e, null == n ? void 0 : n[e.name], s))]
-  }) : null, S = _.length > 0 ? (0, i.jsx)(a.Tooltip, {
+  }) : null, f = _.length > 0 ? (0, i.jsx)(a.Tooltip, {
     text: c,
     "aria-label": !1,
     delay: 200,
@@ -79,39 +79,39 @@ function h(e) {
     })
   }) : null;
   return (0, i.jsxs)(i.Fragment, {
-    children: [d, null != h || null != S ? (0, i.jsxs)("div", {
+    children: [d, null != h || null != f ? (0, i.jsxs)("div", {
       className: I.optionals,
-      children: [h, S]
+      children: [h, f]
     }) : null]
   })
 }
 
-function S(e) {
+function f(e) {
   var t, n, s;
   let a, {
       command: u,
       activeOptionName: _,
       channel: E,
       showOptions: T,
-      showImage: S,
-      optionStates: f,
-      onOptionClick: N,
-      section: A,
+      showImage: f,
+      optionStates: S,
+      onOptionClick: A,
+      section: N,
       isSelectable: m = !0
     } = e,
     O = r.useMemo(() => {
       var e;
       return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === _)
     }, [_, u]),
-    R = null != _ ? null == f ? void 0 : f[_] : null;
-  a = null != R && (null === (t = R.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = R.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-  let p = S && null != A ? (0, c.ky)(A) : null;
+    p = null != _ ? null == S ? void 0 : S[_] : null;
+  a = null != p && (null === (t = p.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = p.lastValidationResult.error) && void 0 !== n ? n : "" : null;
+  let R = f && null != N ? (0, c.ky)(N) : null;
   return (0, i.jsxs)("div", {
     className: o()(I.wrapper, m ? null : I.disabled),
-    children: [null != p ? (0, i.jsx)(p, {
+    children: [null != R ? (0, i.jsx)(R, {
       className: I.image,
       channel: E,
-      section: A,
+      section: N,
       width: 32,
       height: 32
     }) : null, (0, i.jsxs)("div", {
@@ -123,8 +123,8 @@ function S(e) {
           children: d.GI + u.displayName
         }), T ? (0, i.jsx)(h, {
           command: u,
-          optionStates: f,
-          onOptionClick: N
+          optionStates: S,
+          onOptionClick: A
         }) : null]
       }), (0, i.jsx)(l.wL, {
         className: o()(I.description, null != a ? I.error : null),
@@ -132,7 +132,7 @@ function S(e) {
       })]
     }), (0, i.jsx)(l.dY, {
       className: I.source,
-      children: null == A ? void 0 : A.name
+      children: null == N ? void 0 : N.name
     })]
   })
 }

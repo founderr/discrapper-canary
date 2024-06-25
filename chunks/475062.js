@@ -1,20 +1,20 @@
-var r = t(735250);
-t(470079);
-var n = t(703656),
-  a = t(153069),
-  o = t(153925);
-s.Z = e => {
+var r = s(735250);
+s(470079);
+var n = s(703656),
+  o = s(153069),
+  a = s(153925);
+t.Z = e => {
   let {
-    onClose: s
+    onClose: t
   } = e;
-  return (0, r.jsx)(a.Z, {
+  return (0, r.jsx)(o.Z, {
     transitionTo: e => {
       (0, n.uL)(e)
     },
     replaceWith: e => {
       (0, n.dL)(e)
     },
-    authBoxClassName: o.card,
-    closeLogin: s
+    authBoxClassName: a.card,
+    closeLogin: t
   })
 }

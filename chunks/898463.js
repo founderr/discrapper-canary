@@ -21,15 +21,15 @@ var i = n(735250),
   I = n(592125),
   T = n(68588),
   h = n(810090),
-  S = n(956664),
-  f = n(709054),
-  N = n(273031),
-  A = n(859235),
+  f = n(956664),
+  S = n(709054),
+  A = n(273031),
+  N = n(859235),
   m = n(689938),
   O = n(886939);
-let R = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
+let p = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-function p(e) {
+function R(e) {
   let {
     alt: t,
     spoiler: n,
@@ -39,7 +39,7 @@ function p(e) {
   return (0, i.jsx)(T.a.Provider, {
     value: !n,
     children: (0, i.jsx)(T.Z, {
-      containerStyles: o === A.q.CLIP ? {
+      containerStyles: o === N.q.CLIP ? {
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
         boxShadow: "none"
@@ -69,14 +69,14 @@ function g(e) {
     file: t,
     alt: n,
     spoiler: s,
-    size: a = A.q.MEDIUM,
+    size: a = N.q.MEDIUM,
     onMouseEnter: u
   } = e, [_, c] = r.useState(), [d, E] = r.useState({
     width: 0,
     height: 0
-  }), I = a === A.q.SMALL;
+  }), I = a === N.q.SMALL;
   r.useEffect(() => {
-    if (null == t || !1 === R.includes(t.type)) return;
+    if (null == t || !1 === p.includes(t.type)) return;
     let e = URL.createObjectURL(t);
     c(e);
     let n = new Image;
@@ -84,7 +84,7 @@ function g(e) {
       let {
         width: e,
         height: t
-      } = (0, S.zp)(n.width, n.height);
+      } = (0, f.zp)(n.width, n.height);
       E({
         width: e,
         height: t
@@ -126,7 +126,7 @@ function g(e) {
     children: (0, i.jsx)(l.Clickable, {
       onClick: h,
       className: O.clickableMedia,
-      children: (0, i.jsx)(p, {
+      children: (0, i.jsx)(R, {
         size: a,
         alt: n,
         spoiler: s,
@@ -141,7 +141,7 @@ function C(e) {
     file: t,
     alt: n,
     spoiler: s,
-    size: a = A.q.MEDIUM,
+    size: a = N.q.MEDIUM,
     onMouseEnter: l,
     onVideoLoadError: u
   } = e, [_, c] = r.useState(), d = r.useRef(null);
@@ -154,7 +154,7 @@ function C(e) {
   }, [t]), (0, i.jsx)("div", {
     onMouseEnter: l,
     className: O.mediaContainer,
-    children: (0, i.jsx)(p, {
+    children: (0, i.jsx)(R, {
       size: a,
       alt: n,
       spoiler: s,
@@ -163,7 +163,7 @@ function C(e) {
         src: _,
         className: o()(O.media, {
           [O.spoiler]: e,
-          [O.sizeClip]: a === A.q.CLIP
+          [O.sizeClip]: a === N.q.CLIP
         }),
         onError: u,
         preload: "none",
@@ -177,9 +177,9 @@ function v(e) {
   var t;
   let {
     upload: n,
-    size: s = A.q.MEDIUM,
+    size: s = N.q.MEDIUM,
     onMouseEnter: a
-  } = e, [l, u] = r.useState(!1), _ = s === A.q.SMALL;
+  } = e, [l, u] = r.useState(!1), _ = s === N.q.SMALL;
   return n.isImage && n.item.platform === c.ow.WEB ? (0, i.jsx)(g, {
     file: n.item.file,
     alt: n.description,
@@ -216,11 +216,11 @@ function L(e) {
     upload: s,
     keyboardModeEnabled: c,
     label: T,
-    size: h = A.q.MEDIUM,
-    canEdit: S = !0,
-    hideFileName: R = !1,
-    clip: p
-  } = e, g = null != p, C = (h = g ? A.q.CLIP : h) === A.q.SMALL, L = (0, a.e7)([I.Z], () => {
+    size: h = N.q.MEDIUM,
+    canEdit: f = !0,
+    hideFileName: p = !1,
+    clip: R
+  } = e, g = null != R, C = (h = g ? N.q.CLIP : h) === N.q.SMALL, L = (0, a.e7)([I.Z], () => {
     var e;
     return null === (e = I.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
   }), D = e => {
@@ -243,9 +243,9 @@ function L(e) {
       }
     }))
   };
-  return (0, i.jsxs)(A.Z, {
+  return (0, i.jsxs)(N.Z, {
     actions: (0, i.jsxs)(r.Fragment, {
-      children: [S ? (0, i.jsx)(N.Z, {
+      children: [f ? (0, i.jsx)(A.Z, {
         className: o()({
           [O.action]: C
         }),
@@ -266,7 +266,7 @@ function L(e) {
             [O.actionBarIcon]: C
           })
         })
-      }) : null, S && !g ? (0, i.jsx)(N.Z, {
+      }) : null, f && !g ? (0, i.jsx)(A.Z, {
         className: o()({
           [O.action]: C
         }),
@@ -279,7 +279,7 @@ function L(e) {
             [O.actionBarIcon]: C
           })
         })
-      }) : null, (0, i.jsx)(N.Z, {
+      }) : null, (0, i.jsx)(A.Z, {
         className: o()({
           [O.action]: C
         }),
@@ -307,7 +307,7 @@ function L(e) {
     children: [(0, i.jsx)(v, {
       upload: s,
       size: h
-    }), !R && !g && (0, i.jsx)("div", {
+    }), !p && !g && (0, i.jsx)("div", {
       className: O.filenameContainer,
       children: (0, i.jsx)(l.Text, {
         className: O.filename,
@@ -317,10 +317,10 @@ function L(e) {
     }), g && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(d.Z, {
         className: O.clipsFooter,
-        createdAt: f.default.extractTimestamp(p.id),
-        participantIds: p.users,
-        applicationId: p.applicationId,
-        title: p.name,
+        createdAt: S.default.extractTimestamp(R.id),
+        participantIds: R.users,
+        applicationId: R.applicationId,
+        title: R.name,
         guildId: L
       }), (0, i.jsx)(l.TextBadge, {
         color: E.Z.BG_BRAND,

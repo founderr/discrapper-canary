@@ -1,74 +1,74 @@
-var t, l, a = n(735250);
-n(470079);
-var o = n(481060),
-  r = n(285952),
-  c = n(83171);
-(t = l || (l = {})).UPGRADE = "UPGRADE", t.CANCEL = "CANCEL", t.UNVERIFIED = "UNVERIFIED", t.UNCLAIMED = "UNCLAIMED", t.GRANDFATHERED = "GRANDFATHERED";
-let i = {
+var a, c, t = s(735250);
+s(470079);
+var i = s(481060),
+  l = s(285952),
+  o = s(83171);
+(a = c || (c = {})).UPGRADE = "UPGRADE", a.CANCEL = "CANCEL", a.UNVERIFIED = "UNVERIFIED", a.UNCLAIMED = "UNCLAIMED", a.GRANDFATHERED = "GRANDFATHERED";
+let r = {
     UPGRADE: "imageUpgrade",
     CANCEL: "imageCancel",
     UNVERIFIED: "imageUnverified",
     UNCLAIMED: "imageUnclaimed",
     GRANDFATHERED: "imageCancel"
   },
-  u = e => {
+  d = e => {
     let {
-      children: s,
-      ...n
+      children: n,
+      ...s
     } = e;
-    return (0, a.jsx)(o.ModalRoot, {
-      ...n,
-      children: s
+    return (0, t.jsx)(i.ModalRoot, {
+      ...s,
+      children: n
     })
   };
-u.Header = e => {
+d.Header = e => {
   let {
-    children: s,
-    onClose: n
+    children: n,
+    onClose: s
   } = e;
-  return (0, a.jsxs)(o.ModalHeader, {
-    justify: r.Z.Justify.BETWEEN,
+  return (0, t.jsxs)(i.ModalHeader, {
+    justify: l.Z.Justify.BETWEEN,
     separator: !1,
-    children: [(0, a.jsx)(o.FormTitle, {
-      tag: o.FormTitleTags.H4,
-      children: s
-    }), null != n ? (0, a.jsx)(o.ModalCloseButton, {
-      className: c.__invalid_closeIcon,
-      onClick: n
+    children: [(0, t.jsx)(i.FormTitle, {
+      tag: i.FormTitleTags.H4,
+      children: n
+    }), null != s ? (0, t.jsx)(i.ModalCloseButton, {
+      className: o.__invalid_closeIcon,
+      onClick: s
     }) : null]
   })
-}, u.Content = e => {
+}, d.Content = e => {
   let {
-    children: s,
-    type: n
+    children: n,
+    type: s
   } = e;
-  return (0, a.jsxs)(o.ModalContent, {
-    children: [(0, a.jsx)("div", {
-      className: c[i[n]]
-    }), (0, a.jsx)("div", {
-      className: c.message,
-      children: s
+  return (0, t.jsxs)(i.ModalContent, {
+    children: [(0, t.jsx)("div", {
+      className: o[r[s]]
+    }), (0, t.jsx)("div", {
+      className: o.message,
+      children: n
     })]
   })
-}, u.Footer = e => {
+}, d.Footer = e => {
   let {
-    primary: s,
-    primaryRenderer: n,
-    secondary: t
+    primary: n,
+    primaryRenderer: s,
+    secondary: a
   } = e;
-  return (0, a.jsx)(o.ModalFooter, {
-    children: (0, a.jsxs)(r.Z, {
-      justify: r.Z.Justify.END,
-      children: [null != t ? (0, a.jsx)(o.Button, {
-        onClick: t.onClick,
-        look: o.Button.Looks.LINK,
-        innerClassName: c.secondaryButton,
-        children: t.label
-      }) : null, null != s ? (0, a.jsx)(o.Button, {
-        onClick: s.onClick,
-        color: o.Button.Colors.BRAND,
-        children: s.label
-      }) : n]
+  return (0, t.jsx)(i.ModalFooter, {
+    children: (0, t.jsxs)(l.Z, {
+      justify: l.Z.Justify.END,
+      children: [null != a ? (0, t.jsx)(i.Button, {
+        onClick: a.onClick,
+        look: i.Button.Looks.LINK,
+        innerClassName: o.secondaryButton,
+        children: a.label
+      }) : null, null != n ? (0, t.jsx)(i.Button, {
+        onClick: n.onClick,
+        color: i.Button.Colors.BRAND,
+        children: n.label
+      }) : s]
     })
   })
-}, u.Types = l, s.Z = u
+}, d.Types = c, n.Z = d

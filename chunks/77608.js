@@ -1,67 +1,67 @@
 n.d(t, {
   Z: function() {
-    return h
+    return E
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(481060),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(481060),
   o = n(63063),
   c = n(113434),
-  u = n(981631),
-  d = n(689938),
-  E = n(770884);
+  d = n(981631),
+  u = n(689938),
+  _ = n(770884);
 
-function h(e) {
+function E(e) {
   let {
     setSelectedFilter: t,
     selectedFilter: n
-  } = e, l = [{
+  } = e, a = [{
     id: c.W6.UNCLAIMED,
-    label: d.Z.Messages.QUESTS_ALL
+    label: u.Z.Messages.QUESTS_ALL
   }, {
     id: c.W6.CLAIMED,
-    label: d.Z.Messages.QUESTS_CLAIMED
-  }], h = i.useCallback(() => {
-    window.open(o.Z.getArticleURL(u.BhN.QUESTS_LEARN_MORE))
-  }, []), _ = i.useCallback(e => {
+    label: u.Z.Messages.QUESTS_CLAIMED
+  }], E = s.useCallback(() => {
+    window.open(o.Z.getArticleURL(d.BhN.QUESTS_LEARN_MORE))
+  }, []), h = s.useCallback(e => {
     t(e)
   }, [t]);
-  return (0, s.jsxs)(r.TabBar, {
-    className: a()(E.container),
+  return (0, i.jsxs)(l.TabBar, {
+    className: r()(_.container),
     selectedItem: n,
-    onItemSelect: e => _(e),
+    onItemSelect: e => h(e),
     type: "top",
-    "aria-label": d.Z.Messages.QUESTS,
+    "aria-label": u.Z.Messages.QUESTS,
     orientation: "horizontal",
-    children: [l.map(e => {
+    children: [a.map(e => {
       let t = e.id === n;
-      return (0, s.jsx)(r.TabBar.Item, {
+      return (0, i.jsx)(l.TabBar.Item, {
         id: e.id,
-        className: a()(E.tab, {
-          [E.selected]: t
+        className: r()(_.tab, {
+          [_.selected]: t
         }),
         "aria-label": e.label,
         disableItemStyles: !0,
-        children: (0, s.jsx)(r.Text, {
+        children: (0, i.jsx)(l.Text, {
           variant: "text-md/semibold",
           color: t ? "text-brand" : "text-primary",
           children: e.label
         })
       }, e.id)
-    }), (0, s.jsxs)(r.Button, {
-      onClick: h,
-      className: E.button,
-      innerClassName: E.innerButton,
-      children: [(0, s.jsx)(r.Text, {
+    }), (0, i.jsxs)(l.Button, {
+      onClick: E,
+      className: _.button,
+      innerClassName: _.innerButton,
+      children: [(0, i.jsx)(l.Text, {
         variant: "text-md/semibold",
         color: "text-muted",
-        className: E.externalLinkText,
-        children: d.Z.Messages.LEARN_MORE
-      }), (0, s.jsx)(r.LinkExternalSmallIcon, {
-        className: E.icon,
+        className: _.externalLinkText,
+        children: u.Z.Messages.LEARN_MORE
+      }), (0, i.jsx)(l.LinkExternalSmallIcon, {
+        className: _.icon,
         color: "var(--text-muted)"
       })]
     })]

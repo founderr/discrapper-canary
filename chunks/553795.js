@@ -10,19 +10,19 @@ var i, r, s, o, a = n(442837),
 let I = new Set([E.ABu.CONTACTS]),
   T = !0,
   h = [],
-  S = [],
-  f = {},
-  N = {},
+  f = [],
+  S = {},
   A = {},
+  N = {},
   m = e => {
-    h = e.filter(e => !I.has(e.type) && _.Z.isSupported(e.type)), S = e.filter(e => I.has(e.type)), T = !1
+    h = e.filter(e => !I.has(e.type) && _.Z.isSupported(e.type)), f = e.filter(e => I.has(e.type)), T = !1
   };
 class O extends(i = a.ZP.Store) {
   isJoining(e) {
-    return f[e] || !1
+    return S[e] || !1
   }
   joinErrorMessage(e) {
-    return A[e]
+    return N[e]
   }
   isFetching() {
     return T
@@ -31,16 +31,16 @@ class O extends(i = a.ZP.Store) {
     return h
   }
   getLocalAccounts() {
-    return S
+    return f
   }
   getAccount(e, t) {
     return h.find(n => (null == e || n.id === e) && n.type === t)
   }
   getLocalAccount(e) {
-    return S.find(t => t.type === e)
+    return f.find(t => t.type === e)
   }
   isSuggestedAccountType(e) {
-    return N[e] || !1
+    return A[e] || !1
   }
 }
 o = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -62,7 +62,7 @@ o = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.definePrope
     }))) : u.Z.fetch()
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function(e) {
-    f[e.integrationId] = e.joining
+    S[e.integrationId] = e.joining
   },
   USER_CONNECTION_UPDATE: function(e) {
     let {
@@ -75,6 +75,6 @@ o = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.definePrope
     null != i && (s.revoked = i), null != r && (s.accessToken = r)
   },
   USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function(e) {
-    A[e.integrationId] = void 0 !== e.error ? e.error : ""
+    N[e.integrationId] = void 0 !== e.error ? e.error : ""
   }
 })

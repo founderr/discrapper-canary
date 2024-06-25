@@ -1,100 +1,100 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return T
   }
-}), t(47120), t(390547);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(920906),
-  o = t(442837),
-  c = t(692547),
-  d = t(481060),
-  u = t(607070),
-  E = t(259580),
-  _ = t(133857);
+}), n(47120), n(390547);
+var s = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(920906),
+  o = n(442837),
+  c = n(692547),
+  d = n(481060),
+  u = n(607070),
+  _ = n(259580),
+  E = n(133857);
 
 function I(e) {
   let {
-    checked: s,
-    children: t
+    checked: t,
+    children: n
   } = e;
-  return (0, n.jsxs)("div", {
-    className: _.row,
-    children: [(0, n.jsx)(d.Text, {
+  return (0, s.jsxs)("div", {
+    className: E.row,
+    children: [(0, s.jsx)(d.Text, {
       variant: "text-md/normal",
       color: "interactive-active",
-      className: _.rowText,
-      children: t
-    }), s ? (0, n.jsx)(d.CircleCheckIcon, {
+      className: E.rowText,
+      children: n
+    }), t ? (0, s.jsx)(d.CircleCheckIcon, {
       size: "md",
       color: "currentColor",
       secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css,
-      className: a()(_.rowIcon, _.rowIconChecked)
-    }) : (0, n.jsx)("div", {
-      className: a()(_.rowIcon, _.rowIconEmpty)
+      className: r()(E.rowIcon, E.rowIconChecked)
+    }) : (0, s.jsx)("div", {
+      className: r()(E.rowIcon, E.rowIconEmpty)
     })]
   })
 }
 
 function T(e) {
   let {
-    title: s,
-    children: t,
-    buttonLabel: l,
-    buttonCallback: a,
+    title: t,
+    children: n,
+    buttonLabel: i,
+    buttonCallback: r,
     disabled: c
-  } = e, [T, N] = i.useState(!1), m = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), S = t.flatMap(e => e.items.map(e => e.completed)), h = S.filter(e => e).length / S.length, g = (0, r.useSpring)({
+  } = e, [T, m] = a.useState(!1), N = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), S = n.flatMap(e => e.items.map(e => e.completed)), h = S.filter(e => e).length / S.length, g = (0, l.useSpring)({
     width: "".concat(100 * h, "%"),
-    immediate: m
+    immediate: N
   });
-  return (0, n.jsxs)("div", {
-    className: _.container,
-    children: [(0, n.jsxs)(d.Clickable, {
-      className: _.headerBar,
-      onClick: () => N(e => !e),
-      children: [(0, n.jsx)(d.Heading, {
+  return (0, s.jsxs)("div", {
+    className: E.container,
+    children: [(0, s.jsxs)(d.Clickable, {
+      className: E.headerBar,
+      onClick: () => m(e => !e),
+      children: [(0, s.jsx)(d.Heading, {
         variant: "heading-md/semibold",
-        className: _.headerText,
-        children: s
-      }), (0, n.jsx)(E.Z, {
-        direction: T ? E.Z.Directions.DOWN : E.Z.Directions.UP,
-        className: _.headerCaret
+        className: E.headerText,
+        children: t
+      }), (0, s.jsx)(_.Z, {
+        direction: T ? _.Z.Directions.DOWN : _.Z.Directions.UP,
+        className: E.headerCaret
       })]
-    }), (0, n.jsx)("div", {
-      className: _.progressBarOuter,
-      children: (0, n.jsx)(r.animated.div, {
-        className: _.progressBarInner,
+    }), (0, s.jsx)("div", {
+      className: E.progressBarOuter,
+      children: (0, s.jsx)(l.animated.div, {
+        className: E.progressBarInner,
         style: g
       })
-    }), !T && t.map((e, s) => {
+    }), !T && n.map((e, t) => {
       let {
-        title: t,
-        items: l
+        title: n,
+        items: i
       } = e;
-      return (0, n.jsxs)(i.Fragment, {
-        children: [s > 0 && (0, n.jsx)(d.FormDivider, {
-          className: _.divider
-        }), (0, n.jsx)(d.FormTitle, {
-          className: _.categoryTitle,
-          children: t
-        }), l.map((e, s) => (0, n.jsx)(I, {
+      return (0, s.jsxs)(a.Fragment, {
+        children: [t > 0 && (0, s.jsx)(d.FormDivider, {
+          className: E.divider
+        }), (0, s.jsx)(d.FormTitle, {
+          className: E.categoryTitle,
+          children: n
+        }), i.map((e, t) => (0, s.jsx)(I, {
           children: e.description,
           checked: e.completed
-        }, s))]
-      }, s)
-    }), null !== l && "" !== l && null !== a && (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(d.FormDivider, {
-        className: _.divider
-      }), (0, n.jsx)(d.Button, {
-        className: _.button,
+        }, t))]
+      }, t)
+    }), null !== i && "" !== i && null !== r && (0, s.jsxs)("div", {
+      children: [(0, s.jsx)(d.FormDivider, {
+        className: E.divider
+      }), (0, s.jsx)(d.Button, {
+        className: E.button,
         size: d.Button.Sizes.SMALL,
         color: d.Button.Colors.BRAND,
-        onClick: a,
+        onClick: r,
         disabled: 1 !== h || c,
-        children: l
+        children: i
       })]
     })]
   })

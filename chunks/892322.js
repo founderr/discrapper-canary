@@ -1,36 +1,36 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-    return C
+    return m
   }
 });
-var a = t(735250);
-t(470079);
-var l = t(512722),
-  n = t.n(l),
-  i = t(481060),
-  o = t(703656),
-  r = t(285952),
-  c = t(346656),
-  d = t(689938),
-  u = t(420606);
+var a = s(735250);
+s(470079);
+var n = s(512722),
+  l = s.n(n),
+  i = s(481060),
+  o = s(703656),
+  r = s(285952),
+  c = s(346656),
+  d = s(689938),
+  u = s(420606);
 
-function C(e) {
+function m(e) {
   let {
-    directoryGuildName: s,
-    guildToAdd: t,
-    isExistingGuildFlow: l,
-    onClose: C
+    directoryGuildName: t,
+    guildToAdd: s,
+    isExistingGuildFlow: n,
+    onClose: m
   } = e;
-  return n()(null != t, "Missing guild in Hub add guild confirmation"), (0, a.jsxs)(a.Fragment, {
+  return l()(null != s, "Missing guild in Hub add guild confirmation"), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(i.ModalHeader, {
       direction: r.Z.Direction.VERTICAL,
       className: u.header,
       separator: !1,
-      children: [null != C && (0, a.jsx)(i.ModalCloseButton, {
+      children: [null != m && (0, a.jsx)(i.ModalCloseButton, {
         className: u.closeButton,
-        onClick: C
+        onClick: m
       }), (0, a.jsx)(c.Z, {
-        guild: t,
+        guild: s,
         size: c.Z.Sizes.XLARGE,
         active: !0
       }), (0, a.jsx)(i.Heading, {
@@ -41,30 +41,30 @@ function C(e) {
         className: u.__invalid_subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: l ? d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_SUBTITLE.format({
-          guildName: s
+        children: n ? d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_SUBTITLE.format({
+          guildName: t
         }) : d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_SUBTITLE.format({
-          guildName: s
+          guildName: t
         })
       })]
     }), (0, a.jsx)(i.ModalFooter, {
       className: u.buttonRow,
-      children: l ? (0, a.jsx)(i.Button, {
+      children: n ? (0, a.jsx)(i.Button, {
         className: u.addConfirmButton,
         color: i.Button.Colors.BRAND,
-        onClick: C,
+        onClick: m,
         children: d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_BUTTON
       }) : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Button, {
           className: u.createSecondaryButton,
           color: i.Button.Colors.PRIMARY,
-          onClick: C,
+          onClick: m,
           children: d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_STAY
         }), (0, a.jsx)(i.Button, {
           className: u.createConfirmButton,
           color: i.Button.Colors.BRAND,
           onClick: () => {
-            (0, o.XU)(t.id), null == C || C()
+            (0, o.XU)(s.id), null == m || m()
           },
           children: d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_GO
         })]

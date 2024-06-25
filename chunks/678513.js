@@ -1,21 +1,21 @@
 n(47120);
-var l, i, s, r, a = n(442837),
+var i, l, r, a, s = n(442837),
   o = n(570140),
-  u = n(445507);
-let c = {
-    "valorant-user": u.qJ,
-    "valorant-admin": u.xQ,
-    "genshin-user": u.Zl,
-    "genshin-admin": u.Q3
+  c = n(445507);
+let u = {
+    "valorant-user": c.qJ,
+    "valorant-admin": c.xQ,
+    "genshin-user": c.Zl,
+    "genshin-admin": c.Q3
   },
   d = null,
   h = {},
   p = new Set;
 
-function g() {
+function f() {
   for (let e in d = null, h) delete h[e]
 }
-class m extends(l = a.ZP.Store) {
+class _ extends(i = s.ZP.Store) {
   getActiveUserSignUp() {
     return d
   }
@@ -27,30 +27,30 @@ class m extends(l = a.ZP.Store) {
     return p.has(e)
   }
 }
-r = "SignUpStore", (s = "displayName") in(i = m) ? Object.defineProperty(i, s, {
-  value: r,
+a = "SignUpStore", (r = "displayName") in(l = _) ? Object.defineProperty(l, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = r, t.Z = new m(o.Z, {
+}) : l[r] = a, t.Z = new _(o.Z, {
   ENABLE_USER_SIGN_UP: function(e) {
     let {
       key: t
-    } = e, n = c[t];
-    (0, u.u9)(n) && 0 === Object.keys(h).length && (d = n)
+    } = e, n = u[t];
+    (0, c.u9)(n) && 0 === Object.keys(h).length && (d = n)
   },
   ENABLE_GUILD_SIGN_UP: function(e) {
     let {
       key: t,
       guildId: n
-    } = e, l = c[t];
-    (0, u.mC)(l) && (h[n] = l, d = null)
+    } = e, i = u[t];
+    (0, c.mC)(i) && (h[n] = i, d = null)
   },
   COMPLETE_SIGN_UP: function(e) {
     let {
       targetKey: t
     } = e;
-    p.add(t), g()
+    p.add(t), f()
   },
-  DISMISS_SIGN_UP: g
+  DISMISS_SIGN_UP: f
 })

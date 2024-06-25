@@ -1,96 +1,96 @@
-l.d(n, {
+n.d(r, {
   C3: function() {
-    return N
+    return m
   },
   O3: function() {
-    return p
+    return f
   },
   ZP: function() {
-    return E
+    return _
   }
 });
-var r = l(735250),
-  s = l(470079),
-  t = l(120356),
-  o = l.n(t),
-  a = l(512722),
-  i = l.n(a),
-  c = l(699581),
-  d = l(481060),
-  u = l(598),
-  m = l(229828);
+var l = n(735250),
+  o = n(470079),
+  t = n(120356),
+  s = n.n(t),
+  a = n(512722),
+  c = n.n(a),
+  i = n(699581),
+  d = n(481060),
+  u = n(598),
+  p = n(229828);
 
-function E(e) {
-  var n, l, t, a, c, E;
+function _(e) {
+  var r, n, t, a, i, _;
   let {
-    header: N,
-    isLargeModal: p,
-    stepProps: h
+    header: m,
+    isLargeModal: f,
+    stepProps: N
   } = function(e) {
     let {
-      header: n,
-      isLargeModal: l,
-      ...r
+      header: r,
+      isLargeModal: n,
+      ...l
     } = e;
     return {
-      header: n,
-      isLargeModal: l,
-      stepProps: r
+      header: r,
+      isLargeModal: n,
+      stepProps: l
     }
   }(e), {
-    step: x,
-    stepConfigs: _,
-    setBodyNode: I,
-    setFooterNode: C,
+    step: h,
+    stepConfigs: E,
+    setBodyNode: x,
+    setFooterNode: I,
     setModalOverlayNode: S,
-    setReadySlideId: f
-  } = (0, u.usePaymentContext)(), j = _.find(e => e.key === x);
-  s.useEffect(() => {
+    setReadySlideId: C
+  } = (0, u.usePaymentContext)(), T = E.find(e => e.key === h);
+  o.useEffect(() => {
     S(null)
-  }, [x, S]), i()(null != j, "Unknown step for current payment flow.");
-  let v = null !== (c = null == j ? void 0 : null === (n = j.options) || void 0 === n ? void 0 : n.hideSlider) && void 0 !== c && c,
-    T = null == j ? void 0 : null === (l = j.options) || void 0 === l ? void 0 : l.bodyClassName,
-    M = void 0 !== p && p ? m.sliderBodyLarge : null == j ? void 0 : null === (t = j.options) || void 0 === t ? void 0 : t.sliderBodyClassName;
-  return (0, r.jsxs)(r.Fragment, {
-    children: [null === (E = null == j ? void 0 : null === (a = j.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === E || E ? N : null, j.renderStep(h), null == x || v ? null : (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsx)(d.ModalContent, {
-        className: o()(m.body, T),
-        children: (0, r.jsx)(d.Slides, {
-          activeSlide: x,
+  }, [h, S]), c()(null != T, "Unknown step for current payment flow.");
+  let b = null !== (i = null == T ? void 0 : null === (r = T.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
+    j = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.bodyClassName,
+    v = void 0 !== f && f ? p.sliderBodyLarge : null == T ? void 0 : null === (t = T.options) || void 0 === t ? void 0 : t.sliderBodyClassName;
+  return (0, l.jsxs)(l.Fragment, {
+    children: [null === (_ = null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === _ || _ ? m : null, T.renderStep(N), null == h || b ? null : (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)(d.ModalContent, {
+        className: s()(p.body, j),
+        children: (0, l.jsx)(d.Slides, {
+          activeSlide: h,
           centered: !1,
-          onSlideReady: e => f(e),
-          children: _.filter(e => null != e.key).map(e => (0, r.jsx)(d.Slide, {
+          onSlideReady: e => C(e),
+          children: E.filter(e => null != e.key).map(e => (0, l.jsx)(d.Slide, {
             id: e.key,
-            children: (0, r.jsx)("form", {
-              className: o()(m.sliderBody, M),
-              ref: e => I(e),
+            children: (0, l.jsx)("form", {
+              className: s()(p.sliderBody, v),
+              ref: e => x(e),
               onSubmit: e => e.preventDefault()
             })
           }, e.key))
         })
-      }), (0, r.jsx)("div", {
-        ref: e => C(e)
-      }), (0, r.jsx)("div", {
+      }), (0, l.jsx)("div", {
+        ref: e => I(e)
+      }), (0, l.jsx)("div", {
         ref: e => S(e)
       })]
     })]
   })
 }
 
-function N(e) {
+function m(e) {
   let {
-    children: n
+    children: r
   } = e, {
-    bodyNode: l
+    bodyNode: n
   } = (0, u.usePaymentContext)();
-  return null == l ? null : c.createPortal(n, l)
+  return null == n ? null : i.createPortal(r, n)
 }
 
-function p(e) {
+function f(e) {
   let {
-    children: n
+    children: r
   } = e, {
-    footerNode: l
+    footerNode: n
   } = (0, u.usePaymentContext)();
-  return null == l ? null : c.createPortal(n, l)
+  return null == n ? null : i.createPortal(r, n)
 }

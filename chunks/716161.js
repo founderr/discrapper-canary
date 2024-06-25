@@ -4,13 +4,13 @@ n.d(t, {
     return E
   },
   GS: function() {
-    return S
+    return f
   },
   KH: function() {
     return I
   },
   Nm: function() {
-    return f
+    return S
   },
   RI: function() {
     return h
@@ -86,13 +86,13 @@ function h(e) {
   })
 }
 
-function S() {
+function f() {
   if (!!o.Z.isSupported()) r.Z.dispatch({
     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START"
   })
 }
 
-function f() {
+function S() {
   r.Z.dispatch({
     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
   })

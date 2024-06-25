@@ -3,23 +3,23 @@ n.d(t, {
     return o
   },
   s: function() {
-    return u
+    return c
   }
 });
 var s = n(536285),
-  r = n(703656),
-  i = n(314897),
-  l = n(358085),
-  a = n(981631);
-let o = l.isPlatformEmbedded ? a.dG4 : (e, t) => {
-    if (!(0, r.DB)()) return s.default.request(a.Etm.DEEP_LINK, {
+  i = n(703656),
+  r = n(314897),
+  a = n(358085),
+  l = n(981631);
+let o = a.isPlatformEmbedded ? l.dG4 : (e, t) => {
+    if (!(0, i.DB)()) return s.default.request(l.Etm.DEEP_LINK, {
       type: e,
       params: t
     })
   },
-  u = l.isPlatformEmbedded ? a.dG4 : (e, t) => {
-    if (!i.default.isAuthenticated()) return o(e, {
+  c = a.isPlatformEmbedded ? l.dG4 : (e, t) => {
+    if (!r.default.isAuthenticated()) return o(e, {
       ...t || {},
-      fingerprint: i.default.getFingerprint()
+      fingerprint: r.default.getFingerprint()
     })
   }

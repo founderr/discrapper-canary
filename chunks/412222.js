@@ -1,14 +1,14 @@
-a.d(s, {
+n.d(s, {
   C: function() {
-    return l
+    return r
   }
 });
-var n = a(442837),
-  t = a(826581);
+var a = n(442837),
+  t = n(826581);
 
-function l(e) {
+function r(e) {
   let {
     guildId: s
   } = e;
-  return (0, n.e7)([t.Z], () => t.Z.getSelectedSortOrder(s), [s])
+  return (0, a.e7)([t.Z], () => t.Z.getSelectedSortOrder(s), [s])
 }

@@ -3,17 +3,17 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(979696),
+var a = n(442837),
+  l = n(481060),
+  s = n(979696),
   r = n(963876),
   o = n(689938);
 
 function c(e) {
-  let t = (0, i.e7)([a.Z], () => a.Z.getToastsEnabled(e));
-  return (0, l.jsx)(s.MenuCheckboxItem, {
+  let t = (0, a.e7)([s.Z], () => s.Z.getToastsEnabled(e));
+  return (0, i.jsx)(l.MenuCheckboxItem, {
     id: "show-call-chat-toasts",
     label: o.Z.Messages.SHOW_NEW_MESSAGE_PREVIEWS,
     checked: t,

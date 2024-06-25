@@ -1,63 +1,63 @@
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(468194),
-  l = s(399606),
-  o = s(481060),
-  c = s(940627),
-  E = s(914788),
-  _ = s(981631),
-  u = s(689938),
-  d = s(57283);
+var s = n(735250);
+n(470079);
+var a = n(120356),
+  r = n.n(a),
+  i = n(468194),
+  l = n(399606),
+  o = n(481060),
+  c = n(940627),
+  d = n(914788),
+  _ = n(981631),
+  E = n(689938),
+  u = n(57283);
 let T = [18, 18, 16, 16, 14, 12, 10];
 t.Z = e => {
   let {
     guildId: t
-  } = e, s = (0, l.e7)([E.Z], () => E.Z.getGuild(t));
-  if (void 0 === s) return null;
-  let a = s.hasFeature(_.oNc.VERIFIED) || s.hasFeature(_.oNc.PARTNERED),
-    I = s.toString(),
-    R = s.getIconURL(40, !0),
-    A = null,
-    N = T[T.length - 1];
-  if (null == s.icon && null != I) {
-    var C;
-    N = null !== (C = T[(A = (0, r.Zg)(I)).length - 1]) && void 0 !== C ? C : T[T.length - 1]
+  } = e, n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
+  if (void 0 === n) return null;
+  let a = n.hasFeature(_.oNc.VERIFIED) || n.hasFeature(_.oNc.PARTNERED),
+    I = n.toString(),
+    R = n.getIconURL(40, !0),
+    C = null,
+    g = T[T.length - 1];
+  if (null == n.icon && null != I) {
+    var p;
+    g = null !== (p = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== p ? p : T[T.length - 1]
   }
-  return (0, n.jsxs)("div", {
-    className: d.container,
-    children: [(0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
+    className: u.container,
+    children: [(0, s.jsxs)("div", {
       style: {
-        fontSize: N
+        fontSize: g
       },
-      children: [null != A ? (0, n.jsx)("div", {
-        className: i()(d.childWrapper, d.acronym),
+      children: [null != C ? (0, s.jsx)("div", {
+        className: r()(u.childWrapper, u.acronym),
         "aria-hidden": !0,
-        children: A
-      }) : null, null != R ? (0, n.jsx)(o.Avatar, {
-        src: s.getIconURL(40, !0),
+        children: C
+      }) : null, null != R ? (0, s.jsx)(o.Avatar, {
+        src: n.getIconURL(40, !0),
         size: o.AvatarSizes.SIZE_40,
         "aria-hidden": !0
       }) : null]
-    }), (0, n.jsxs)("div", {
-      className: d.descriptors,
-      children: [(0, n.jsxs)("div", {
-        className: d.header,
-        children: [a ? (0, n.jsx)(c.Z, {
-          guild: s,
+    }), (0, s.jsxs)("div", {
+      className: u.descriptors,
+      children: [(0, s.jsxs)("div", {
+        className: u.header,
+        children: [a ? (0, s.jsx)(c.Z, {
+          guild: n,
           tooltipPosition: "bottom",
           tooltipColor: o.Tooltip.Colors.PRIMARY,
-          className: d.guildBadge
-        }) : null, (0, n.jsx)(o.Text, {
+          className: u.guildBadge
+        }) : null, (0, s.jsx)(o.Text, {
           variant: "text-md/semibold",
-          children: s.toString()
+          children: n.toString()
         })]
-      }), void 0 !== s.approximateMemberCount ? (0, n.jsx)(o.Text, {
+      }), void 0 !== n.approximateMemberCount ? (0, s.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "text-muted",
-        children: u.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({
-          members: s.approximateMemberCount
+        children: E.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({
+          members: n.approximateMemberCount
         })
       }) : null]
     })]

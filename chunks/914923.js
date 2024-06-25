@@ -1,15 +1,15 @@
 n.d(t, {
   Z: function() {
-    return s
+    return r
   }
 }), n(757143);
-var l = n(689938);
-let i = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+var i = n(689938);
+let l = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 
-function s(e) {
-  let t = l.Z.Messages.ACTIVITY_PANEL_GO_LIVE;
+function r(e) {
+  let t = i.Z.Messages.ACTIVITY_PANEL_GO_LIVE;
   return null != e && null != e.sourceName && e.sourceName.length > 0 && (t = e.sourceName), {
-    sanitizedTitle: t.replace(i, ""),
+    sanitizedTitle: t.replace(l, ""),
     title: t
   }
 }

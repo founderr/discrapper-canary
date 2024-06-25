@@ -4,11 +4,11 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(481060),
-  a = t(153124),
-  r = t(63063),
-  o = t(981631),
+  l = t(153124),
+  o = t(63063),
+  r = t(981631),
   c = t(689938);
 
 function d(e) {
@@ -16,7 +16,7 @@ function d(e) {
     transitionState: n,
     onConfirm: t,
     onClose: d
-  } = e, u = (0, a.Dt)(), I = l.useCallback(() => {
+  } = e, u = (0, l.Dt)(), I = a.useCallback(() => {
     t(), d()
   }, [t, d]);
   return (0, i.jsxs)(s.ModalRoot, {
@@ -36,7 +36,7 @@ function d(e) {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: c.Z.Messages.INVITES_DISABLED_DESCRIPTION.format({
-          helpArticleUrl: r.Z.getArticleURL(o.BhN.INVITE_DISABLED)
+          helpArticleUrl: o.Z.getArticleURL(r.BhN.INVITE_DISABLED)
         })
       })
     }), (0, i.jsxs)(s.ModalFooter, {

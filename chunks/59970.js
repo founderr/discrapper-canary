@@ -1,29 +1,29 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   k: function() {
-    return a
+    return r
   }
 });
-var n = t(544891),
-  i = t(570140),
-  l = t(981631);
-async function a(e) {
-  i.Z.dispatch({
+var s = n(544891),
+  a = n(570140),
+  i = n(981631);
+async function r(e) {
+  a.Z.dispatch({
     type: "DISCOVER_CHECKLIST_FETCH_START",
     guildId: e
   });
   try {
-    let s = await n.tn.get({
-      url: l.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
+    let t = await s.tn.get({
+      url: i.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
       oldFormErrors: !0
     });
-    i.Z.dispatch({
+    a.Z.dispatch({
       type: "DISCOVER_CHECKLIST_FETCH_SUCCESS",
       guildId: e,
-      checklist: s.body
+      checklist: t.body
     })
-  } catch (s) {
-    i.Z.dispatch({
+  } catch (t) {
+    a.Z.dispatch({
       type: "DISCOVER_CHECKLIST_FETCH_FAILURE",
       guildId: e
     })

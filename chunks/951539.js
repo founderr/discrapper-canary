@@ -1,12 +1,12 @@
-i.d(e, {
+i.d(n, {
   ZP: function() {
-    return N
+    return Z
   },
   so: function() {
-    return C
+    return v
   },
   wg: function() {
-    return x
+    return h
   }
 }), i(47120);
 var l = i(442837),
@@ -14,38 +14,38 @@ var l = i(442837),
   a = i(427679),
   r = i(592125),
   s = i(984933),
-  c = i(430824),
-  o = i(496675),
+  o = i(430824),
+  c = i(496675),
   u = i(700785),
   d = i(924301),
-  h = i(765305),
-  v = i(981631);
+  E = i(765305),
+  g = i(981631);
 
-function x(n) {
-  var e;
+function h(e) {
+  var n;
   let [i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Z];
   let {
     entityType: l,
     channelId: t
-  } = "entity_type" in (e = n) ? {
-    entityType: e.entity_type,
-    channelId: e.channel_id
-  } : e;
-  if (l === h.WX.EXTERNAL) return !0;
+  } = "entity_type" in (n = e) ? {
+    entityType: n.entity_type,
+    channelId: n.channel_id
+  } : n;
+  if (l === E.WX.EXTERNAL) return !0;
   let a = i.getChannel(t);
-  return null != a && u.Uu(v.Plq.VIEW_CHANNEL, a)
+  return null != a && u.Uu(g.Plq.VIEW_CHANNEL, a)
 }
 
-function C(n) {
-  let [e, i, l, u] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.ZP, r.Z, c.Z, a.Z];
-  if ((0, d.Z2)(n)) return !1;
+function v(e) {
+  let [n, i, l, u] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.ZP, r.Z, o.Z, a.Z];
+  if ((0, d.Z2)(e)) return !1;
   let {
-    guild_id: v,
-    channel_id: C
-  } = n, N = n.entity_type === h.WX.EXTERNAL ? e.getDefaultChannel(n.guild_id) : i.getChannel(C), m = l.getGuild(v), g = u.getStageInstanceByChannel(C);
-  return !!(0, t.b)(o.Z, m, N, g) && null != N && x(n, [i])
+    guild_id: g,
+    channel_id: v
+  } = e, Z = e.entity_type === E.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : i.getChannel(v), C = l.getGuild(g), m = u.getStageInstanceByChannel(v);
+  return !!(0, t.b)(c.Z, C, Z, m) && null != Z && h(e, [i])
 }
 
-function N(n) {
-  return (0, l.e7)([s.ZP, r.Z, c.Z, a.Z], () => C(n, [s.ZP, r.Z, c.Z, a.Z]), [n])
+function Z(e) {
+  return (0, l.e7)([s.ZP, r.Z, o.Z, a.Z], () => v(e, [s.ZP, r.Z, o.Z, a.Z]), [e])
 }

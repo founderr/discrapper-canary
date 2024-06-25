@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   C: function() {
-    return S
+    return f
   }
 }), n(653041);
 var i, r = n(392711),
@@ -25,8 +25,8 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = 100,
-  f = new l.Z({
+let f = 100,
+  S = new l.Z({
     computeBonus: () => 100,
     computeWeight: e => {
       let t = 1;
@@ -37,21 +37,21 @@ let S = 100,
       return null !== (n = null !== (t = c.Z.getGuild(e)) && void 0 !== t ? t : _.Z.getChannel(e)) && void 0 !== n ? n : _.Z.getChannel(_.Z.getDMFromUserId(e))
     },
     afterCompute: () => {},
-    numFrequentlyItems: S,
+    numFrequentlyItems: f,
     maxSamples: 10
   }),
-  N = null,
-  A = null;
+  A = null,
+  N = null;
 
 function m(e) {
   let {
     guildId: t,
     channelId: n
   } = e, i = !1;
-  return n !== N && (N = null != n ? n : null, null != n && I.Xyh.test(n) && (i = !0, f.track(n), R.pendingUsages.push({
+  return n !== A && (A = null != n ? n : null, null != n && I.Xyh.test(n) && (i = !0, S.track(n), p.pendingUsages.push({
     key: n,
     timestamp: Date.now()
-  }))), t !== A && (A = null != t ? t : null, null != t && I.Xyh.test(t) && (i = !0, f.track(t), R.pendingUsages.push({
+  }))), t !== N && (N = null != t ? t : null, null != t && I.Xyh.test(t) && (i = !0, S.track(t), p.pendingUsages.push({
     key: t,
     timestamp: Date.now()
   }))), i
@@ -61,46 +61,46 @@ function O() {
   var e;
   let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
   if (null == t) return !1;
-  f.overwriteHistory(s().mapValues(t, e => ({
+  S.overwriteHistory(s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  })), R.pendingUsages)
+  })), p.pendingUsages)
 }
-let R = {
+let p = {
   pendingUsages: []
 };
-class p extends(i = o.ZP.PersistedStore) {
+class R extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(E.Z, d.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.Xyh.test(e.key)), R = e), this.syncWith([u.Z], O)
+    this.waitFor(E.Z, d.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.Xyh.test(e.key)), p = e), this.syncWith([u.Z], O)
   }
   getState() {
-    return R
+    return p
   }
   hasPendingUsage() {
-    return R.pendingUsages.length > 0
+    return p.pendingUsages.length > 0
   }
   get frecencyWithoutFetchingLatest() {
-    return f
+    return S
   }
   getFrequentlyWithoutFetchingLatest() {
-    return f.frequently
+    return S.frequently
   }
   getScoreWithoutFetchingLatest(e) {
     var t;
-    return null !== (t = f.getFrecency(e)) && void 0 !== t ? t : 0
+    return null !== (t = S.getFrecency(e)) && void 0 !== t ? t : 0
   }
   getScoreForDMWithoutFetchingLatest(e) {
     let t = _.Z.getDMFromUserId(e);
     return null != t ? this.getScoreWithoutFetchingLatest(t) : 0
   }
   getMaxScore() {
-    return 10 * S
+    return 10 * f
   }
   getBonusScore() {
     return 100
   }
 }
-h(p, "displayName", "FrecencyStore"), h(p, "persistKey", "FrecencyStore"), t.Z = new p(a.Z, {
+h(R, "displayName", "FrecencyStore"), h(R, "persistKey", "FrecencyStore"), t.Z = new R(a.Z, {
   CHANNEL_SELECT: m,
   VOICE_CHANNEL_SELECT: m,
   USER_SETTINGS_PROTO_UPDATE: function(e) {
@@ -110,6 +110,6 @@ h(p, "displayName", "FrecencyStore"), h(p, "persistKey", "FrecencyStore"), t.Z =
       },
       wasSaved: n
     } = e;
-    return t === T.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && (R.pendingUsages = [], !0)
+    return t === T.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && (p.pendingUsages = [], !0)
   }
 })

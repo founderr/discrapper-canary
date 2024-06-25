@@ -43,8 +43,8 @@ function m(e, n) {
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
     g = (0, a.e7)([Z.Z], () => Z.Z.getGuild(n)),
     m = (0, a.e7)([Z.Z], () => Z.Z.getRoles(n)),
-    N = (0, a.e7)([u.Z], () => u.Z.roleStyle),
-    R = (0, d.sE)(n, {
+    R = (0, a.e7)([u.Z], () => u.Z.roleStyle),
+    N = (0, d.sE)(n, {
       location: i,
       targetUserId: e
     }),
@@ -63,28 +63,28 @@ function m(e, n) {
   if (__OVERLAY__ || null == C || null == g || !T) return null;
   let A = E.Z.getHighestRole(g),
     O = Object.values(m).filter(e => !(0, s.pM)(g.id, e.id)),
-    h = v ? O.map(t => {
+    x = v ? O.map(t => {
       let i = t.managed || !E.Z.isRoleHigher(g, A, t),
         a = -1 !== C.indexOf(t.id);
       return i && !a ? null : (0, l.jsx)(r.MenuCheckboxItem, {
         id: t.id,
-        label: () => I(t, N),
+        label: () => I(t, R),
         disabled: i,
         action: () => {
           var l;
-          return l = t, void(C.includes(l.id) ? (o.Z.updateMemberRoles(n, e, C.filter(e => e !== l.id), [], [l.id]), R(d.jQ.REMOVE_ROLE)) : (o.Z.updateMemberRoles(n, e, C.concat([l.id]), [l.id], []), R(d.jQ.ADD_ROLE)))
+          return l = t, void(C.includes(l.id) ? (o.Z.updateMemberRoles(n, e, C.filter(e => e !== l.id), [], [l.id]), N(d.jQ.REMOVE_ROLE)) : (o.Z.updateMemberRoles(n, e, C.concat([l.id]), [l.id], []), N(d.jQ.ADD_ROLE)))
         },
         checked: a
       }, t.id)
     }) : O.filter(e => -1 !== C.indexOf(e.id)).map(e => (0, s.pM)(g.id, e.id) ? null : (0, l.jsx)(r.MenuItem, {
       id: e.id,
-      label: () => I(e, N)
+      label: () => I(e, R)
     }, e.id));
-  return 0 === h.filter(M.lm).length ? null : t ? h : (0, l.jsx)(r.MenuItem, {
+  return 0 === x.filter(M.lm).length ? null : t ? x : (0, l.jsx)(r.MenuItem, {
     id: "roles",
     label: _.Z.Messages.ROLES_LIST.format({
-      numRoles: h.length
+      numRoles: x.length
     }),
-    children: h
+    children: x
   })
 }

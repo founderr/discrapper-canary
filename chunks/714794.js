@@ -1,9 +1,9 @@
 n.d(t, {
   Z: function() {
-    return l
+    return i
   }
 });
 
-function l(e) {
+function i(e) {
   return null != e && e > 0
 }

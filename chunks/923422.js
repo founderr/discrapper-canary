@@ -1,112 +1,112 @@
-n.r(t), n(47120), n(757143);
-var r = n(735250),
-  u = n(470079),
-  l = n(481060),
-  a = n(239091),
-  i = n(230711),
-  s = n(493544),
-  o = n(108843),
-  c = n(100527),
-  d = n(906732),
-  E = n(386506),
-  I = n(366953),
-  T = n(394644),
-  S = n(606669),
-  _ = n(53432),
-  M = n(74869),
-  Z = n(828064),
-  N = n(308512),
-  m = n(594791),
-  f = n(393431),
-  A = n(981631),
-  g = n(689938);
-t.default = (0, o.Z)(function(e) {
+t.r(n), t(47120), t(757143);
+var o = t(735250),
+  r = t(470079),
+  a = t(481060),
+  c = t(239091),
+  i = t(230711),
+  l = t(493544),
+  u = t(108843),
+  s = t(100527),
+  d = t(906732),
+  _ = t(386506),
+  S = t(366953),
+  E = t(394644),
+  m = t(606669),
+  T = t(53432),
+  I = t(74869),
+  g = t(828064),
+  b = t(308512),
+  M = t(594791),
+  f = t(393431),
+  C = t(981631),
+  p = t(689938);
+n.default = (0, u.Z)(function(e) {
   let {
-    webBuildOverride: t,
-    onSelect: n
-  } = e, [o, c] = u.useState(!1), R = (0, Z.Z)(), p = (0, N.Z)(), G = (0, _.Z)(), C = (0, S.Z)(), h = (0, f.Z)(), O = (0, m.Z)(), x = (0, M.Z)(), {
-    analyticsLocations: v
-  } = (0, d.ZP)(), j = u.useMemo(() => (0, I.j)(), []);
-  async function D() {
+    webBuildOverride: n,
+    onSelect: t
+  } = e, [u, s] = r.useState(!1), R = (0, g.Z)(), Z = (0, b.Z)(), N = (0, T.Z)(), h = (0, m.Z)(), A = (0, f.Z)(), B = (0, M.Z)(), x = (0, I.Z)(), {
+    analyticsLocations: G
+  } = (0, d.ZP)(), O = r.useMemo(() => (0, S.j)(), []);
+  async function k() {
     try {
-      c(!0), await (0, E.bF)(), window.location.reload(!0)
+      s(!0), await (0, _.bF)(), window.location.reload(!0)
     } catch (e) {
-      c(!1)
+      s(!1)
     }
   }
-  let L = e => {
+  let v = e => {
       switch (e) {
-        case A.oAB.GAMES:
+        case C.oAB.GAMES:
           return R;
-        case A.oAB.STREAMER_MODE:
-          return p;
-        case A.oAB.APPEARANCE:
-          return G;
-        case A.oAB.ACCESSIBILITY:
-          return C;
-        case A.oAB.VOICE:
+        case C.oAB.STREAMER_MODE:
+          return Z;
+        case C.oAB.APPEARANCE:
+          return N;
+        case C.oAB.ACCESSIBILITY:
           return h;
-        case A.oAB.TEXT:
-          return O;
-        case A.oAB.EXPERIMENTS:
+        case C.oAB.VOICE:
+          return A;
+        case C.oAB.TEXT:
+          return B;
+        case C.oAB.EXPERIMENTS:
           return x;
         default:
           return null
       }
     },
-    b = (0, T.VO)().filter(e => {
+    D = (0, E.VO)().filter(e => {
       let {
-        section: t
+        section: n
       } = e;
-      return t !== s.ID.HEADER && t !== s.ID.CUSTOM && t !== s.ID.DIVIDER && "logout" !== t
+      return n !== l.ID.HEADER && n !== l.ID.CUSTOM && n !== l.ID.DIVIDER && "logout" !== n
     }).filter(e => null == e.predicate || e.predicate());
-  return (0, r.jsx)(d.Gt, {
-    value: v,
-    children: (0, r.jsxs)(l.Menu, {
+  return (0, o.jsx)(d.Gt, {
+    value: G,
+    children: (0, o.jsxs)(a.Menu, {
       navId: "user-settings-cog",
-      onClose: a.Zy,
-      "aria-label": g.Z.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
-      onSelect: n,
-      children: [b.map(e => {
+      onClose: c.Zy,
+      "aria-label": p.Z.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
+      onSelect: t,
+      children: [D.map(e => {
         let {
-          section: t,
-          label: n,
-          onClick: u
-        } = e, a = t.replace(/\W/gi, "_");
-        return (0, r.jsx)(l.MenuItem, {
-          id: a,
-          label: n,
-          action: () => null != u ? u() : function(e, t) {
-            let n = Object.values(A.oAB).filter(t => t === e)[0];
-            null != n && i.Z.open(n, void 0, {
-              analyticsLocations: t
+          section: n,
+          label: t,
+          onClick: r
+        } = e, c = n.replace(/\W/gi, "_");
+        return (0, o.jsx)(a.MenuItem, {
+          id: c,
+          label: t,
+          action: () => null != r ? r() : function(e, n) {
+            let t = Object.values(C.oAB).filter(n => n === e)[0];
+            null != t && i.Z.open(t, void 0, {
+              analyticsLocations: n
             })
-          }(t, v),
-          children: L(t)
-        }, a)
-      }), e.user.isStaff() && j.length > 0 ? (0, r.jsx)(l.MenuItem, {
+          }(n, G),
+          children: v(n)
+        }, c)
+      }), e.user.isStaff() && O.length > 0 ? (0, o.jsx)(a.MenuItem, {
         label: "Build overrides",
         id: "build_overrides",
-        children: (0, r.jsx)(l.MenuGroup, {
-          children: j.map(e => (0, r.jsx)(l.MenuRadioItem, {
+        children: (0, o.jsx)(a.MenuGroup, {
+          children: O.map(e => (0, o.jsx)(a.MenuRadioItem, {
             id: "input-".concat(e.payload),
             group: "build_overrides",
             label: e.id,
-            checked: (null == t ? void 0 : t.id) === e.id,
+            checked: (null == n ? void 0 : n.id) === e.id,
             action: async () => {
-              if ((null == t ? void 0 : t.id) !== e.id) 200 === (await (0, E.f0)(e.payload)).status && window.location.reload(!0)
+              if ((null == n ? void 0 : n.id) !== e.id) 200 === (await (0, _.f0)(e.payload)).status && window.location.reload(!0)
             }
           }, "input-".concat(e.payload)))
         })
-      }) : null, null != t ? (0, r.jsx)(l.MenuGroup, {
-        children: (0, r.jsx)(l.MenuItem, {
+      }) : null, null != n ? (0, o.jsx)(a.MenuGroup, {
+        children: (0, o.jsx)(a.MenuItem, {
           id: "clear-build-override",
-          disabled: o,
-          label: g.Z.Messages.CLEAR_BUILD_OVERRIDE,
-          action: D,
+          disabled: u,
+          label: p.Z.Messages.CLEAR_BUILD_OVERRIDE,
+          action: k,
           color: "danger"
         })
       }) : null]
     })
   })
-}, [c.Z.CONTEXT_MENU, c.Z.USER_SETTINGS_MENU])
+}, [s.Z.CONTEXT_MENU, s.Z.USER_SETTINGS_MENU])

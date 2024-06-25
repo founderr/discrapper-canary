@@ -3,30 +3,30 @@ t.d(n, {
     return a
   }
 });
-var i = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(421580),
+var i = t(421580),
   s = t(159277),
   r = t(585183),
-  C = t(981631),
-  l = t(927923);
+  l = t(981631),
+  c = t(927923);
 
 function a(e) {
   let {
     platformType: n,
     authToken: t,
     onContinue: a,
-    onError: d,
-    onClose: c
-  } = e, u = n === C.ABu.PLAYSTATION_STAGING ? s.t.PLAYSTATION_STAGING_APPLICATION_ID : s.t.PLAYSTATION_APPLICATION_ID, T = n === C.ABu.PLAYSTATION_STAGING ? o.x.PLAYSTATION_STAGING : o.x.PLAYSTATION;
-  return (0, i.jsx)(r.h, {
+    onError: C,
+    onClose: d
+  } = e, u = n === l.ABu.PLAYSTATION_STAGING ? s.t.PLAYSTATION_STAGING_APPLICATION_ID : s.t.PLAYSTATION_APPLICATION_ID, _ = n === l.ABu.PLAYSTATION_STAGING ? i.x.PLAYSTATION_STAGING : i.x.PLAYSTATION;
+  return (0, o.jsx)(r.h, {
     platformType: n,
     clientId: u,
-    scopes: l.KL,
+    scopes: c.KL,
     authToken: t,
     onContinue: a,
-    onError: d,
-    onClose: c,
-    redirectUri: T
+    onError: C,
+    onClose: d,
+    redirectUri: _
   })
 }

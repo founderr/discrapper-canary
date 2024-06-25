@@ -1,39 +1,39 @@
 n(411104), n(47120);
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(392711),
-  s = n(848246),
-  r = n(481060),
-  a = n(570140),
+var l = n(392711),
+  r = n(848246),
+  a = n(481060),
+  s = n(570140),
   o = n(904245),
-  u = n(317770),
-  c = n(100527),
+  c = n(317770),
+  u = n(100527),
   d = n(358221),
   h = n(963249),
   p = n(592125),
-  g = n(430824),
-  m = n(594174),
-  C = n(295226),
-  E = n(626135),
-  f = n(74538),
-  _ = n(557457),
-  I = n(970645),
+  f = n(430824),
+  _ = n(594174),
+  g = n(295226),
+  m = n(626135),
+  C = n(74538),
+  I = n(557457),
+  E = n(970645),
   N = n(736871),
-  Z = n(6242),
+  x = n(6242),
   S = n(757692),
-  x = n(114064),
-  L = n(937579),
+  Z = n(114064),
+  v = n(937579),
   T = n(485731),
-  v = n(1163),
+  L = n(1163),
   A = n(841174),
-  M = n(11352),
-  R = n(474936),
-  O = n(981631),
-  P = n(354459),
-  b = n(37113),
-  j = n(689938);
+  b = n(11352),
+  M = n(474936),
+  R = n(981631),
+  y = n(354459),
+  O = n(37113),
+  P = n(689938);
 
-function y(e, t, n) {
+function j(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -41,25 +41,25 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class D extends u.Z {
+class D extends c.Z {
   _initialize() {
-    __OVERLAY__ ? a.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (a.Z.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), a.Z.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), a.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), a.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery), a.Z.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), a.Z.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), a.Z.subscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), a.Z.subscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
+    __OVERLAY__ ? s.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (s.Z.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), s.Z.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), s.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), s.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery), s.Z.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), s.Z.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), s.Z.subscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), s.Z.subscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
   }
   _terminate() {
-    __OVERLAY__ ? a.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (a.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), a.Z.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), a.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), a.Z.unsubscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), a.Z.unsubscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), a.Z.unsubscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), a.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
+    __OVERLAY__ ? s.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (s.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), s.Z.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), s.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), s.Z.unsubscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), s.Z.unsubscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), s.Z.unsubscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), s.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
   }
   handleMessageLengthUpsell(e) {
     let {
       channel: t,
-      content: i
+      content: l
     } = e;
-    (0, r.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await n.e("33184").then(n.bind(n, 465836));
-      return n => (0, l.jsx)(e, {
+      return n => (0, i.jsx)(e, {
         channel: t,
-        content: i,
+        content: l,
         ...n
       })
     })
@@ -80,16 +80,16 @@ class D extends u.Z {
     let {
       initialPlanId: t,
       subscriptionTier: n,
-      followupSKUInfo: l,
-      analyticsObject: i
+      followupSKUInfo: i,
+      analyticsObject: l
     } = null != e ? e : {};
-    return new Promise((e, s) => {
-      this._premiumPaymentModalCloseResolve = e, this._premiumPaymentModalCloseReject = s, a.Z.dispatch({
+    return new Promise((e, r) => {
+      this._premiumPaymentModalCloseResolve = e, this._premiumPaymentModalCloseReject = r, s.Z.dispatch({
         type: "PREMIUM_PAYMENT_MODAL_OPEN",
         initialPlanId: t,
         subscriptionTier: n,
-        followupSKUInfo: l,
-        analyticsObject: i
+        followupSKUInfo: i,
+        analyticsObject: l
       })
     })
   }
@@ -102,82 +102,82 @@ class D extends u.Z {
     }, {
       autoTrackExposure: !1
     }), {
-      enabled: l
-    } = v.Z.getCurrentConfig({
+      enabled: i
+    } = L.Z.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     });
-    if (!n || !l || e.state !== O.hes.DISCONNECTED || e.willReconnect) return;
-    let i = p.Z.getChannel(e.channelId);
-    if (null == i || !(null === (t = x.Z.getPerksDemos()) || void 0 === t ? void 0 : t[s.q.STREAM_HIGH_QUALITY])) return;
-    let r = x.Z.getActivated()[s.q.STREAM_HIGH_QUALITY];
-    if (r && a.Z.dispatch({
+    if (!n || !i || e.state !== R.hes.DISCONNECTED || e.willReconnect) return;
+    let l = p.Z.getChannel(e.channelId);
+    if (null == l || !(null === (t = Z.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY])) return;
+    let a = Z.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
+    if (a && s.Z.dispatch({
         type: "PREMIUM_PERKS_DEMO_COMPLETE",
-        perkType: s.q.STREAM_HIGH_QUALITY
-      }), !!r && !!T.j$.getState().hqStreamingDidEnable)(0, A.Z)(i.guild_id)
+        perkType: r.q.STREAM_HIGH_QUALITY
+      }), !!a && !!T.j$.getState().hqStreamingDidEnable)(0, A.Z)(l.guild_id)
   }
   constructor(...e) {
-    super(...e), y(this, "_premiumPaymentModalCloseResolve", null), y(this, "_premiumPaymentModalCloseReject", null), y(this, "_lastStreamingChannelId", null), y(this, "_maybeFetchPremiumOffer", async () => {
-      let e = m.default.getCurrentUser();
+    super(...e), j(this, "_premiumPaymentModalCloseResolve", null), j(this, "_premiumPaymentModalCloseReject", null), j(this, "_lastStreamingChannelId", null), j(this, "_maybeFetchPremiumOffer", async () => {
+      let e = _.default.getCurrentUser();
       if (null != e && e.verified) {
-        let t = !(0, f.I5)(e) && C.Z.shouldFetchOffer();
-        await (0, L.Tf)(t)
+        let t = !(0, C.I5)(e) && g.Z.shouldFetchOffer();
+        await (0, v.Tf)(t)
       }
-      a.Z.dispatch({
+      s.Z.dispatch({
         type: "PREMIUM_MARKETING_DATA_READY"
       })
-    }), y(this, "_maybeFetchCheckoutRecovery", async () => {
-      let e = m.default.getCurrentUser();
-      null != e && e.verified && !(0, f.I5)(e) && await (0, I.o)()
-    }), y(this, "_trackCustomNotificationSoundsExposure", () => {
-      M.Y.trackExposure({
+    }), j(this, "_maybeFetchCheckoutRecovery", async () => {
+      let e = _.default.getCurrentUser();
+      null != e && e.verified && !(0, C.I5)(e) && await (0, E.o)()
+    }), j(this, "_trackCustomNotificationSoundsExposure", () => {
+      b.Y.trackExposure({
         location: "PremiumManager"
       })
-    }), y(this, "_handlePremiumPaymentModalOpen", e => {
+    }), j(this, "_handlePremiumPaymentModalOpen", e => {
       (0, h.Z)({
         ...e,
-        analyticsLocations: [c.Z.OVERLAY],
+        analyticsLocations: [u.Z.OVERLAY],
         onClose: e => {
-          a.Z.dispatch({
+          s.Z.dispatch({
             type: "PREMIUM_PAYMENT_MODAL_CLOSE",
             didSucceed: e
           })
         }
       })
-    }), y(this, "_handlePremiumPaymentModalClose", e => {
+    }), j(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
       t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), this._premiumPaymentModalCloseResolve = null, this._premiumPaymentModalCloseReject = null
-    }), y(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
-      let t = m.default.getCurrentUser();
+    }), j(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
+      let t = _.default.getCurrentUser();
       (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t)
-    }), y(this, "_maybeSendViewerUpsellMessage", (0, i.debounce)((e, t, n) => {
-      var l, i;
-      let s = d.Z.getSelectedParticipant(e),
-        r = (0, S.o)(s, n),
+    }), j(this, "_maybeSendViewerUpsellMessage", (0, l.debounce)((e, t, n) => {
+      var i, l;
+      let r = d.Z.getSelectedParticipant(e),
+        a = (0, S.o)(r, n),
         {
-          sendNitroMessage: a
-        } = (0, Z.TD)(r),
-        u = null !== (i = null === (l = g.Z.getGuild(t)) || void 0 === l ? void 0 : l.premiumTier) && void 0 !== i ? i : O.Eu4.NONE;
-      if (!!a && !(u >= O.Eu4.TIER_2) && (null == s ? void 0 : s.type) === P.fO.STREAM && (null == s ? void 0 : s.id) !== (null == n ? void 0 : n.id) && null != s.maxResolution && null != s.maxFrameRate) {
+          sendNitroMessage: s
+        } = (0, x.TD)(a),
+        c = null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : R.Eu4.NONE;
+      if (!!s && !(c >= R.Eu4.TIER_2) && (null == r ? void 0 : r.type) === y.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
         if (e !== this._lastStreamingChannelId) {
           this._lastStreamingChannelId = e;
-          let n = j.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
-            nickname: s.userNick,
-            resolution: (0, b.o6)(s.maxResolution.height),
-            fps: (0, _.bp)(s.maxFrameRate)
+          let n = P.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
+            nickname: r.userNick,
+            resolution: (0, O.o6)(r.maxResolution.height),
+            fps: (0, I.bp)(r.maxFrameRate)
           });
-          o.Z.sendNitroSystemMessage(e, n), E.default.track(O.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-            type: R.cd.HD_STREAMING_VIEWER_UPSELL,
-            location_section: null != t ? O.jXE.TEXT_IN_VOICE : O.jXE.CHANNEL_TEXT_AREA,
-            location_object: O.qAy.MESSAGE,
+          o.Z.sendNitroSystemMessage(e, n), m.default.track(R.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+            type: M.cd.HD_STREAMING_VIEWER_UPSELL,
+            location_section: null != t ? R.jXE.TEXT_IN_VOICE : R.jXE.CHANNEL_TEXT_AREA,
+            location_object: R.qAy.MESSAGE,
             guild_id: t
           })
         }
       }
-    }, 200)), y(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
+    }, 200)), j(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
       null == e.channelId && (this._lastStreamingChannelId = null)
     })
   }

@@ -1,34 +1,34 @@
 "use strict";
-var n, i, l, a, r = t(442837),
-  o = t(570140),
-  c = t(430824),
-  d = t(981631);
+var s, a, i, r, l = n(442837),
+  o = n(570140),
+  c = n(430824),
+  d = n(981631);
 let u = {
     description: "",
     channels: [],
     enabled: !1
   },
-  E = u,
-  _ = !1,
+  _ = u,
+  E = !1,
   I = !1,
   T = u;
 
-function N(e) {
+function m(e) {
   let {
-    welcomeScreen: s,
-    guildId: t
-  } = e, n = c.Z.getGuild(t);
-  if (null != s) {
-    var i, l;
-    T = E = {
-      description: null !== (i = s.description) && void 0 !== i ? i : "",
-      channels: null !== (l = s.welcome_channels) && void 0 !== l ? l : [],
-      enabled: null == n ? void 0 : n.hasFeature(d.oNc.WELCOME_SCREEN_ENABLED)
+    welcomeScreen: t,
+    guildId: n
+  } = e, s = c.Z.getGuild(n);
+  if (null != t) {
+    var a, i;
+    T = _ = {
+      description: null !== (a = t.description) && void 0 !== a ? a : "",
+      channels: null !== (i = t.welcome_channels) && void 0 !== i ? i : [],
+      enabled: null == s ? void 0 : s.hasFeature(d.oNc.WELCOME_SCREEN_ENABLED)
     }
-  } else T = E = u;
+  } else T = _ = u;
   I = !1
 }
-class m extends(a = r.ZP.Store) {
+class N extends(r = l.ZP.Store) {
   initialize() {
     this.waitFor(c.Z)
   }
@@ -40,43 +40,43 @@ class m extends(a = r.ZP.Store) {
   }
   getSettingsProps() {
     return {
-      submitting: _,
+      submitting: E,
       hasErrors: I,
       welcomeSettings: T,
-      originalWelcomeSettings: E
+      originalWelcomeSettings: _
     }
   }
 }
-l = "WelcomeScreenSettingsStore", (i = "displayName") in(n = m) ? Object.defineProperty(n, i, {
-  value: l,
+i = "WelcomeScreenSettingsStore", (a = "displayName") in(s = N) ? Object.defineProperty(s, a, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = l, s.Z = new m(o.Z, {
-  WELCOME_SCREEN_FETCH_SUCCESS: N,
-  WELCOME_SCREEN_UPDATE: N,
+}) : s[a] = i, t.Z = new N(o.Z, {
+  WELCOME_SCREEN_FETCH_SUCCESS: m,
+  WELCOME_SCREEN_UPDATE: m,
   WELCOME_SCREEN_SETTINGS_RESET: function() {
-    T = E, I = !1
+    T = _, I = !1
   },
   WELCOME_SCREEN_SETTINGS_CLEAR: function() {
-    T = u, E = u
+    T = u, _ = u
   },
   WELCOME_SCREEN_SETTINGS_UPDATE: function(e) {
     let {
-      settings: s
+      settings: t
     } = e;
     T = {
       ...T,
-      ...s
+      ...t
     }
   },
   WELCOME_SCREEN_SUBMIT: function() {
-    _ = !0
+    E = !0
   },
   WELCOME_SCREEN_SUBMIT_SUCCESS: function(e) {
-    N(e), _ = !1
+    m(e), E = !1
   },
   WELCOME_SCREEN_SUBMIT_FAILURE: function() {
-    I = !0, _ = !1
+    I = !0, E = !1
   }
 })

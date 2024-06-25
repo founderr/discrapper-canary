@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250),
@@ -18,27 +18,27 @@ var i = n(735250),
   I = n(675478),
   T = n(19780),
   h = n(208049),
-  S = n(763296),
-  f = n(526617),
-  N = n(761326);
+  f = n(763296),
+  S = n(526617),
+  A = n(761326);
 
-function A(e) {
+function N(e) {
   let {
     guildId: t,
     channel: n,
     containerWidth: s,
-    onClose: A,
+    onClose: N,
     onSelect: m,
     analyticsSource: O,
-    suppressPlaySound: R,
-    shouldShowUpsell: p = !0,
+    suppressPlaySound: p,
+    shouldShowUpsell: R = !0,
     gridNotice: g,
     autoWidth: C = !1,
     soundButtonOverlay: v,
     listPadding: L,
     renderHeader: D,
     defaultSoundsOnly: M
-  } = e, P = (0, l.e7)([S.Z], () => S.Z.isFetchingSounds() || S.Z.isFetchingDefaultSounds()), y = (0, l.e7)([T.Z], () => T.Z.getMediaSessionId()), {
+  } = e, P = (0, l.e7)([f.Z], () => f.Z.isFetchingSounds() || f.Z.isFetchingDefaultSounds()), y = (0, l.e7)([T.Z], () => T.Z.getMediaSessionId()), {
     analyticsLocations: U
   } = (0, c.ZP)(_.Z.SOUNDBOARD_POPOUT);
   return (0, d.Z)({
@@ -54,18 +54,18 @@ function A(e) {
   }, []), (0, i.jsx)(c.Gt, {
     value: U,
     children: (0, i.jsx)(u.Dialog, {
-      className: o()(N.picker, {
-        [N.fetching]: P,
-        [N.autoWidth]: C
+      className: o()(A.picker, {
+        [A.fetching]: P,
+        [A.autoWidth]: C
       }),
-      children: P ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(f.Z, {
+      children: P ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(S.Z, {
         guildId: t,
         channel: n,
-        onClose: A,
+        onClose: N,
         onSelect: m,
         containerWidth: s,
-        suppressPlaySound: R,
-        shouldShowUpsell: p,
+        suppressPlaySound: p,
+        shouldShowUpsell: R,
         gridNotice: g,
         soundButtonOverlay: v,
         listPadding: L,

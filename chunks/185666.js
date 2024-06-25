@@ -1,30 +1,30 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(570140),
-  r = n(317770),
-  a = n(472365),
+var l = n(481060),
+  r = n(570140),
+  a = n(317770),
+  s = n(472365),
   o = n(590965);
-let u = "INVITE_MODAL_KEY";
-class c extends r.Z {
+let c = "INVITE_MODAL_KEY";
+class u extends a.Z {
   _initialize() {
-    s.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal), s.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
+    r.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal), r.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
   }
   _terminate() {
-    (0, i.closeModal)(u), s.Z.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal), s.Z.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
+    (0, l.closeModal)(c), r.Z.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal), r.Z.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
   }
   handleOpenModal() {
-    o.Z.isOpen() && !(0, i.hasModalOpen)(u) && (0, i.openModal)(e => (0, l.jsx)(a.Z, {
+    o.Z.isOpen() && !(0, l.hasModalOpen)(c) && (0, l.openModal)(e => (0, i.jsx)(s.Z, {
       ...e
     }), {
-      modalKey: u,
-      onCloseRequest: () => s.Z.dispatch({
+      modalKey: c,
+      onCloseRequest: () => r.Z.dispatch({
         type: "INVITE_MODAL_CLOSE"
       })
     })
   }
   handleCloseModal() {
-    (0, i.closeModal)(u)
+    (0, l.closeModal)(c)
   }
 }
-t.Z = new c
+t.Z = new u

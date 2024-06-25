@@ -1,340 +1,340 @@
 "use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(772848),
-  a = t(640358),
-  r = t(442837),
-  o = t(544891),
-  c = t(704215),
-  d = t(692547),
-  u = t(481060),
-  E = t(841470),
-  _ = t(605236),
-  I = t(142497),
-  T = t(706454),
-  N = t(650774),
-  m = t(430824),
-  S = t(499150),
-  h = t(626135),
-  g = t(771212),
-  C = t(434404),
-  x = t(146596),
-  R = t(559368),
-  L = t(999382),
-  O = t(981631),
-  A = t(921944),
-  p = t(190378),
-  M = t(689938),
-  f = t(618739),
-  D = t(287837),
-  v = t(573189),
-  j = t(899947),
-  Z = t(117831),
-  U = t(996737),
-  G = t(21846),
-  P = t(280632),
-  b = t(44234),
-  B = t(117428);
-let y = function(e, s, t) {
-    let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      i = null;
-    return null == s || Number.isNaN(s) ? (null == s || Number.isNaN(s)) && null != e && (i = M.Z.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : i = M.Z.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({
-      percentage: (0, a.o)(Math.abs(s), t)
+n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(772848),
+  r = n(640358),
+  l = n(442837),
+  o = n(544891),
+  c = n(704215),
+  d = n(692547),
+  u = n(481060),
+  _ = n(841470),
+  E = n(605236),
+  I = n(142497),
+  T = n(706454),
+  m = n(650774),
+  N = n(430824),
+  S = n(499150),
+  h = n(626135),
+  g = n(771212),
+  C = n(434404),
+  x = n(146596),
+  p = n(559368),
+  R = n(999382),
+  f = n(981631),
+  L = n(921944),
+  O = n(190378),
+  A = n(689938),
+  M = n(618739),
+  v = n(287837),
+  D = n(573189),
+  j = n(899947),
+  Z = n(117831),
+  b = n(996737),
+  U = n(21846),
+  G = n(280632),
+  P = n(44234),
+  B = n(117428);
+let y = function(e, t, n) {
+    let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+      a = null;
+    return null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (a = A.Z.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : a = A.Z.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({
+      percentage: (0, r.o)(Math.abs(t), n)
     }), {
-      localizedNumber: null != e ? "".concat((0, a.o)(e, t)).concat(n ? "%" : "") : M.Z.Messages.NOT_AVAILABLE,
-      subtext: i,
-      isTrendingUp: s > 0,
-      isTrendingDown: s < 0
+      localizedNumber: null != e ? "".concat((0, r.o)(e, n)).concat(s ? "%" : "") : A.Z.Messages.NOT_AVAILABLE,
+      subtext: a,
+      isTrendingUp: t > 0,
+      isTrendingDown: t < 0
     }
   },
   F = function(e) {
-    let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return s || e === O.evJ.NOT_ENOUGH_GUILD_MEMBERS ? (0, n.jsx)(u.FormErrorBlock, {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return t || e === f.evJ.NOT_ENOUGH_GUILD_MEMBERS ? (0, s.jsx)(u.FormErrorBlock, {
       icon: u.CircleInformationIcon,
-      className: f.notEnoughMembersError,
+      className: M.notEnoughMembersError,
       backgroundColor: u.FormErrorBlockColors.BACKGROUND_ACCENT,
-      children: M.Z.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
-    }) : null == e ? null : (0, n.jsx)(u.FormErrorBlock, {
+      children: A.Z.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
+    }) : null == e ? null : (0, s.jsx)(u.FormErrorBlock, {
       backgroundColor: u.FormErrorBlockColors.BACKGROUND_ACCENT,
-      children: M.Z.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
+      children: A.Z.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
     })
   };
 
 function k(e) {
-  h.default.track(O.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
+  h.default.track(f.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
     guild_id: e
   });
-  let s = null == e ? O.E07.DEVELOPER_PORTAL : O.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
-    t = (0, l.Z)();
+  let t = null == e ? f.E07.DEVELOPER_PORTAL : f.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+    n = (0, i.Z)();
   return o.tn.post({
-    url: O.ANM.HANDOFF,
+    url: f.ANM.HANDOFF,
     body: {
-      key: t
+      key: n
     },
     oldFormErrors: !0
   }).then(e => {
-    let n = e.body.handoff_token;
-    window.open(O.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, n, s))
+    let s = e.body.handoff_token;
+    window.open(f.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, s, t))
   }, () => {
-    window.open(s)
+    window.open(t)
   })
 }
-let H = () => {
-  let [e, s] = i.useState(!1), t = (0, r.e7)([L.Z], () => L.Z.getGuildId());
-  return (0, n.jsx)(u.Button, {
-    className: f.developerPortalCta,
+let w = () => {
+  let [e, t] = a.useState(!1), n = (0, l.e7)([R.Z], () => R.Z.getGuildId());
+  return (0, s.jsx)(u.Button, {
+    className: M.developerPortalCta,
     onClick: () => {
-      s(!0), k(t).then(() => {
-        s(!1)
+      t(!0), k(n).then(() => {
+        t(!1)
       })
     },
     submitting: e,
-    children: M.Z.Messages.GUILD_ANALYICS_DEVELOPERS_BUTTON
+    children: A.Z.Messages.GUILD_ANALYICS_DEVELOPERS_BUTTON
   })
 };
 
-function w(e) {
+function H(e) {
   let {
-    guildId: s
+    guildId: t
   } = e, {
-    hasAccessRate: t,
-    accessRate: l
-  } = (0, r.cj)([R.Z], () => R.Z.getMemberInsights(s)), a = (0, r.e7)([N.Z], () => {
+    hasAccessRate: n,
+    accessRate: i
+  } = (0, l.cj)([p.Z], () => p.Z.getMemberInsights(t)), r = (0, l.e7)([m.Z], () => {
     var e;
-    return null !== (e = N.Z.getMemberCount()) && void 0 !== e ? e : 0
+    return null !== (e = m.Z.getMemberCount()) && void 0 !== e ? e : 0
   }), {
     showAccessRate: o
-  } = (0, g.eA)(s, !t);
-  if (i.useEffect(() => {
-      o && ((0, _.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, _.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, {
-        dismissAction: A.L.AUTO
+  } = (0, g.eA)(t, !n);
+  if (a.useEffect(() => {
+      o && ((0, E.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, E.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, {
+        dismissAction: L.L.AUTO
       }))
-    }, [o]), !o || !t || null == l) return null;
-  let E = 10 * Math.ceil((1 - l) * 10),
+    }, [o]), !o || !n || null == i) return null;
+  let _ = 10 * Math.ceil((1 - i) * 10),
     I = B,
     T = null,
-    m = null;
-  return l >= .9 ? (I = B, T = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
-    ratingHook: (e, s) => (0, n.jsx)("span", {
-      className: f.ratingVeryGood,
+    N = null;
+  return i >= .9 ? (I = B, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
+    ratingHook: (e, t) => (0, s.jsx)("span", {
+      className: M.ratingVeryGood,
       children: e
-    }, s)
-  }), m = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
+    }, t)
+  }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
     accessRate: 10
-  })) : l >= (a > 1e4 ? .7 : .8) ? (I = P, T = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
-    ratingHook: (e, s) => (0, n.jsx)("span", {
-      className: f.ratingGood,
+  })) : i >= (r > 1e4 ? .7 : .8) ? (I = G, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+    ratingHook: (e, t) => (0, s.jsx)("span", {
+      className: M.ratingGood,
       children: e
-    }, s)
-  }), m = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
-    accessRate: E
-  })) : l >= .5 ? (I = b, T = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
-    ratingHook: (e, s) => (0, n.jsx)("span", {
-      className: f.ratingNeutral,
+    }, t)
+  }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+    accessRate: _
+  })) : i >= .5 ? (I = P, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
+    ratingHook: (e, t) => (0, s.jsx)("span", {
+      className: M.ratingNeutral,
       children: e
-    }, s)
-  }), m = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
-    accessRate: E
-  })) : (I = G, T = M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
-    ratingHook: (e, s) => (0, n.jsx)("span", {
-      className: f.ratingBad,
+    }, t)
+  }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+    accessRate: _
+  })) : (I = U, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+    ratingHook: (e, t) => (0, s.jsx)("span", {
+      className: M.ratingBad,
       children: e
-    }, s)
-  }), m = 100 === E ? M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
-    accessRate: E
-  }) : M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({
-    accessRate: E
-  })), (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)(u.Heading, {
+    }, t)
+  }), N = 100 === _ ? A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+    accessRate: _
+  }) : A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({
+    accessRate: _
+  })), (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)(u.Heading, {
       variant: "heading-md/semibold",
-      className: f.insightsTitle,
-      children: [M.Z.Messages.MEMBER_INSIGHTS_SERVER_ACCESS, (0, n.jsx)(u.TextBadge, {
-        text: M.Z.Messages.BETA,
+      className: M.insightsTitle,
+      children: [A.Z.Messages.MEMBER_INSIGHTS_SERVER_ACCESS, (0, s.jsx)(u.TextBadge, {
+        text: A.Z.Messages.BETA,
         color: d.Z.unsafe_rawColors.BRAND_500.css,
-        className: f.betaTag
+        className: M.betaTag
       })]
-    }), (0, n.jsxs)("div", {
-      className: f.memberInsightsContainer,
-      children: [(0, n.jsxs)("div", {
-        className: f.insightsHeader,
-        children: [(0, n.jsx)("img", {
+    }), (0, s.jsxs)("div", {
+      className: M.memberInsightsContainer,
+      children: [(0, s.jsxs)("div", {
+        className: M.insightsHeader,
+        children: [(0, s.jsx)("img", {
           alt: "",
-          className: f.insightsIcon,
+          className: M.insightsIcon,
           src: I
-        }), (0, n.jsxs)("div", {
-          children: [(0, n.jsx)(u.Text, {
+        }), (0, s.jsxs)("div", {
+          children: [(0, s.jsx)(u.Text, {
             variant: "text-md/semibold",
-            className: f.title,
+            className: M.title,
             children: T
-          }), (0, n.jsxs)(u.Text, {
-            className: f.description,
+          }), (0, s.jsxs)(u.Text, {
+            className: M.description,
             variant: "text-sm/normal",
-            children: [m, (0, n.jsx)(u.TooltipContainer, {
-              text: M.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
-              className: f.insightsTooltip,
-              children: (0, n.jsx)(u.CircleInformationIcon, {
+            children: [N, (0, s.jsx)(u.TooltipContainer, {
+              text: A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
+              className: M.insightsTooltip,
+              children: (0, s.jsx)(u.CircleInformationIcon, {
                 size: "xs",
                 color: "currentColor",
-                className: f.insightsTooltipIcon
+                className: M.insightsTooltipIcon
               })
             })]
           })]
         })]
-      }), l < .9 ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)("div", {
-          className: f.divider
-        }), (0, n.jsx)(u.Text, {
-          className: f.tips,
+      }), i < .9 ? (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)("div", {
+          className: M.divider
+        }), (0, s.jsx)(u.Text, {
+          className: M.tips,
           variant: "text-sm/semibold",
-          children: M.Z.Messages.MEMBER_INSIGHTS_TIPS.format()
-        }), (0, n.jsxs)("div", {
-          className: f.insightsActions,
-          children: [(0, n.jsxs)("div", {
-            className: f.insightAction,
-            children: [(0, n.jsx)("img", {
+          children: A.Z.Messages.MEMBER_INSIGHTS_TIPS.format()
+        }), (0, s.jsxs)("div", {
+          className: M.insightsActions,
+          children: [(0, s.jsxs)("div", {
+            className: M.insightAction,
+            children: [(0, s.jsx)("img", {
               alt: "",
-              className: f.actionIcon,
+              className: M.actionIcon,
               src: j
-            }), (0, n.jsx)(u.Text, {
-              className: f.actionText,
+            }), (0, s.jsx)(u.Text, {
+              className: M.actionText,
               variant: "text-sm/normal",
-              children: M.Z.Messages.ACCESS_RATE_ACTION_SIMPLIFY
+              children: A.Z.Messages.ACCESS_RATE_ACTION_SIMPLIFY
             })]
-          }), (0, n.jsx)("div", {
-            className: f.dividerInline
-          }), (0, n.jsxs)("div", {
-            className: f.insightAction,
-            children: [(0, n.jsx)("img", {
+          }), (0, s.jsx)("div", {
+            className: M.dividerInline
+          }), (0, s.jsxs)("div", {
+            className: M.insightAction,
+            children: [(0, s.jsx)("img", {
               alt: "",
-              className: f.actionIcon,
+              className: M.actionIcon,
               src: Z
-            }), (0, n.jsx)(u.Text, {
-              className: f.actionText,
+            }), (0, s.jsx)(u.Text, {
+              className: M.actionText,
               variant: "text-sm/normal",
-              children: M.Z.Messages.ACCESS_RATE_ACTION_EXTRA_STEPS
+              children: A.Z.Messages.ACCESS_RATE_ACTION_EXTRA_STEPS
             })]
-          }), (0, n.jsx)("div", {
-            className: f.dividerInline
-          }), (0, n.jsxs)("div", {
-            className: f.insightAction,
-            children: [(0, n.jsx)("img", {
+          }), (0, s.jsx)("div", {
+            className: M.dividerInline
+          }), (0, s.jsxs)("div", {
+            className: M.insightAction,
+            children: [(0, s.jsx)("img", {
               alt: "",
-              className: f.actionIcon,
-              src: v
-            }), (0, n.jsx)(u.Text, {
-              className: f.actionText,
+              className: M.actionIcon,
+              src: D
+            }), (0, s.jsx)(u.Text, {
+              className: M.actionText,
               variant: "text-sm/normal",
-              children: M.Z.Messages.ACCESS_RATE_ACTION_BOTS.format({
-                integrationsHook: (e, s) => (0, n.jsx)(S.Z, {
-                  onClick: () => C.Z.setSection(O.pNK.INTEGRATIONS),
-                  className: f.link,
+              children: A.Z.Messages.ACCESS_RATE_ACTION_BOTS.format({
+                integrationsHook: (e, t) => (0, s.jsx)(S.Z, {
+                  onClick: () => C.Z.setSection(f.pNK.INTEGRATIONS),
+                  className: M.link,
                   children: e
-                }, s)
+                }, t)
               })
             })]
-          }), (0, n.jsx)("div", {
-            className: f.dividerInline
-          }), (0, n.jsxs)("div", {
-            className: f.insightAction,
-            children: [(0, n.jsx)("img", {
+          }), (0, s.jsx)("div", {
+            className: M.dividerInline
+          }), (0, s.jsxs)("div", {
+            className: M.insightAction,
+            children: [(0, s.jsx)("img", {
               alt: "",
-              className: f.actionIcon,
-              src: D
-            }), (0, n.jsx)(u.Text, {
-              className: f.actionText,
+              className: M.actionIcon,
+              src: v
+            }), (0, s.jsx)(u.Text, {
+              className: M.actionText,
               variant: "text-sm/normal",
-              children: M.Z.Messages.ACCESS_RATE_ACTION_AUDIT
+              children: A.Z.Messages.ACCESS_RATE_ACTION_AUDIT
             })]
           })]
         })]
-      }) : (0, n.jsx)("div", {
-        className: f.insightsActions,
-        children: (0, n.jsxs)("div", {
-          className: f.insightAction,
-          children: [(0, n.jsx)("img", {
+      }) : (0, s.jsx)("div", {
+        className: M.insightsActions,
+        children: (0, s.jsxs)("div", {
+          className: M.insightAction,
+          children: [(0, s.jsx)("img", {
             alt: "",
-            className: f.actionIcon,
-            src: U
-          }), (0, n.jsx)(u.Text, {
-            className: f.actionText,
+            className: M.actionIcon,
+            src: b
+          }), (0, s.jsx)(u.Text, {
+            className: M.actionText,
             variant: "text-sm/normal",
-            children: M.Z.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
-              insightsHook: (e, t) => (0, n.jsx)(S.Z, {
-                onClick: () => k(s),
-                className: f.link,
+            children: A.Z.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
+              insightsHook: (e, n) => (0, s.jsx)(S.Z, {
+                onClick: () => k(t),
+                className: M.link,
                 children: e
-              }, t)
+              }, n)
             })
           })]
         })
       })]
-    }), (0, n.jsx)("div", {
-      className: f.divider
-    }), (0, n.jsx)(u.Heading, {
+    }), (0, s.jsx)("div", {
+      className: M.divider
+    }), (0, s.jsx)(u.Heading, {
       variant: "heading-md/semibold",
-      className: f.insightsTitle,
-      children: M.Z.Messages.SERVER_INSIGHTS
+      className: M.insightsTitle,
+      children: A.Z.Messages.SERVER_INSIGHTS
     })]
   })
 }
-s.Z = () => {
-  let e = (0, r.e7)([L.Z], () => L.Z.getGuildId()),
-    s = (0, r.e7)([N.Z], () => N.Z.getMemberCount(e)),
-    t = (0, r.e7)([m.Z], () => m.Z.getGuild(e)),
-    l = (0, r.e7)([T.default], () => T.default.locale),
+t.Z = () => {
+  let e = (0, l.e7)([R.Z], () => R.Z.getGuildId()),
+    t = (0, l.e7)([m.Z], () => m.Z.getMemberCount(e)),
+    n = (0, l.e7)([N.Z], () => N.Z.getGuild(e)),
+    i = (0, l.e7)([T.default], () => T.default.locale),
     {
-      analytics: a,
+      analytics: r,
       errorCode: o
-    } = (0, r.cj)([R.Z], () => ({
-      analytics: null != e ? R.Z.getOverviewAnalytics(e) : null,
-      errorCode: R.Z.getError()
+    } = (0, l.cj)([p.Z], () => ({
+      analytics: null != e ? p.Z.getOverviewAnalytics(e) : null,
+      errorCode: p.Z.getError()
     })),
-    c = null == s || null == t || null != s && s < 500 && null != t && !t.hasFeature(O.oNc.PARTNERED) && !t.hasFeature(O.oNc.VERIFIED);
-  i.useEffect(() => {
+    c = null == t || null == n || null != t && t < 500 && null != n && !n.hasFeature(f.oNc.PARTNERED) && !n.hasFeature(f.oNc.VERIFIED);
+  a.useEffect(() => {
     null != e && !c && ((0, x.Vk)(e), (0, x.SR)(e), (0, x.xl)(e))
-  }, [e, c]), i.useEffect(() => {
-    (0, I.Kw)(p.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU)
+  }, [e, c]), a.useEffect(() => {
+    (0, I.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU)
   }, []);
-  let d = null != a ? (0, n.jsx)("div", {
-    className: f.__invalid_guildAnalyticsOverviewWrapper,
-    children: (0, n.jsxs)("div", {
-      className: f.overviewData,
-      children: [(0, n.jsx)(E.Z, {
-        title: M.Z.Messages.WEEKLY_VISITORS,
-        tooltipText: M.Z.Messages.VISITORS_INFO,
-        ...y(a.visitors, a.visitorsChange, l)
-      }), (0, n.jsx)(E.Z, {
-        title: M.Z.Messages.WEEKLY_COMMUNICATORS,
-        tooltipText: M.Z.Messages.COMMUNICATORS_INFO,
-        ...y(a.communicators, a.communicatorsChange, l)
-      }), (0, n.jsx)(E.Z, {
-        title: M.Z.Messages.WEEKLY_NEW_MEMBERS,
-        ...y(a.newMembers, a.newMembersChange, l)
-      }), (0, n.jsx)(E.Z, {
-        title: M.Z.Messages.WEEKLY_NEW_MEMBER_RETENTION,
-        tooltipText: M.Z.Messages.NEW_MEMBER_RETENTION_INFO,
-        ...y(a.pctRetained, a.pctRetainedChange, l, !0)
+  let d = null != r ? (0, s.jsx)("div", {
+    className: M.__invalid_guildAnalyticsOverviewWrapper,
+    children: (0, s.jsxs)("div", {
+      className: M.overviewData,
+      children: [(0, s.jsx)(_.Z, {
+        title: A.Z.Messages.WEEKLY_VISITORS,
+        tooltipText: A.Z.Messages.VISITORS_INFO,
+        ...y(r.visitors, r.visitorsChange, i)
+      }), (0, s.jsx)(_.Z, {
+        title: A.Z.Messages.WEEKLY_COMMUNICATORS,
+        tooltipText: A.Z.Messages.COMMUNICATORS_INFO,
+        ...y(r.communicators, r.communicatorsChange, i)
+      }), (0, s.jsx)(_.Z, {
+        title: A.Z.Messages.WEEKLY_NEW_MEMBERS,
+        ...y(r.newMembers, r.newMembersChange, i)
+      }), (0, s.jsx)(_.Z, {
+        title: A.Z.Messages.WEEKLY_NEW_MEMBER_RETENTION,
+        tooltipText: A.Z.Messages.NEW_MEMBER_RETENTION_INFO,
+        ...y(r.pctRetained, r.pctRetainedChange, i, !0)
       })]
     })
   }) : null;
-  return (0, n.jsxs)(u.FormSection, {
+  return (0, s.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
-    title: M.Z.Messages.SERVER_INSIGHTS,
-    children: [(0, n.jsx)(u.FormText, {
+    title: A.Z.Messages.SERVER_INSIGHTS,
+    children: [(0, s.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
-      children: M.Z.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
-    }), F(o, c), null != e ? (0, n.jsx)(w, {
+      children: A.Z.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
+    }), F(o, c), null != e ? (0, s.jsx)(H, {
       guildId: e
-    }) : null, (0, n.jsxs)("div", {
-      className: f.developerPortalCtaWrapper,
-      children: [(0, n.jsx)("div", {
-        className: f.placeholderImage
-      }), (0, n.jsx)(u.Text, {
-        className: f.developerPortalCtaText,
+    }) : null, (0, s.jsxs)("div", {
+      className: M.developerPortalCtaWrapper,
+      children: [(0, s.jsx)("div", {
+        className: M.placeholderImage
+      }), (0, s.jsx)(u.Text, {
+        className: M.developerPortalCtaText,
         variant: "text-sm/normal",
-        children: M.Z.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
-      }), (0, n.jsx)(H, {})]
+        children: A.Z.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
+      }), (0, s.jsx)(w, {})]
     }), d]
   })
 }

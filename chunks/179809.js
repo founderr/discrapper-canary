@@ -1,49 +1,49 @@
 n.d(t, {
   Z: function() {
-    return v
+    return L
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  r = n.n(s),
-  a = n(225857),
+var i = n(735250),
+  l = n(470079),
+  r = n(120356),
+  a = n.n(r),
+  s = n(225857),
   o = n(920906),
-  u = n(91192),
-  c = n(477690),
+  c = n(91192),
+  u = n(477690),
   d = n(153867),
   h = n(771845),
   p = n(880080),
-  g = n(624138),
-  m = n(727258),
-  C = n(199540),
-  E = n(40153),
-  f = n(252686),
-  _ = n(682662),
-  I = n(662146),
+  f = n(624138),
+  _ = n(727258),
+  g = n(199540),
+  m = n(40153),
+  C = n(252686),
+  I = n(682662),
+  E = n(662146),
   N = n(689938),
-  Z = n(248699),
+  x = n(248699),
   S = n(784490);
-let x = (0, g.Mg)(c.Z.FOLDER_ITEM_ANIMATION_DURATION),
-  L = (0, g.Mg)(c.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-  T = (0, g.Mg)(c.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  v = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+  T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
-function v(e) {
+function L(e) {
   let {
     folderNode: t,
     setNodeRef: n,
-    selected: s,
-    expanded: c,
-    mediaState: g,
-    mentionCount: v = 0,
+    selected: r,
+    expanded: u,
+    mediaState: f,
+    mentionCount: L = 0,
     unread: A = !1,
-    defaultFolderName: M,
-    useCircleMask: R = !1,
-    draggable: O = !1,
-    sorting: P = !1,
-    onDragStart: b,
-    onDragEnd: j,
-    onExpandCollapse: y,
+    defaultFolderName: b,
+    useCircleMask: M = !1,
+    draggable: R = !1,
+    sorting: y = !1,
+    onDragStart: O,
+    onDragEnd: P,
+    onExpandCollapse: j,
     onContextMenu: D,
     renderChildNode: U,
     folderIconContent: G
@@ -51,29 +51,29 @@ function v(e) {
     id: w,
     name: k,
     children: B
-  } = t, [V, H] = i.useState(!1), [F, W] = i.useState(!1), Y = V || F;
-  i.useEffect(() => {
-    P && H(!1)
-  }, [P]);
+  } = t, [V, H] = l.useState(!1), [F, W] = l.useState(!1), Y = V || F;
+  l.useEffect(() => {
+    y && H(!1)
+  }, [y]);
   let [{
     dragging: z
-  }, K] = (0, a.c)({
-    type: m.eD.FOLDER,
-    item: () => (null == b || b(), {
-      type: m.eD.FOLDER,
+  }, K] = (0, s.c)({
+    type: _.eD.FOLDER,
+    item: () => (null == O || O(), {
+      type: _.eD.FOLDER,
       nodeId: t.id
     }),
     end() {
-      null == j || j(), (0, d.V1)(h.ZP.getCompatibleGuildFolders())
+      null == P || P(), (0, d.V1)(h.ZP.getCompatibleGuildFolders())
     },
     collect: e => ({
       dragging: e.isDragging()
     })
-  }), q = i.useCallback(e => {
+  }), q = l.useCallback(e => {
     W(e)
-  }, []), Q = i.useCallback(e => {
-    ("ArrowRight" === e.key && !c || "ArrowLeft" === e.key && c) && y()
-  }, [y, c]), J = null != k && "" !== k ? k : null != M && "" !== M ? M : N.Z.Messages.SERVER_FOLDER_PLACEHOLDER, X = (0, u.Ie)("".concat(w)), $ = "folder-items-".concat(w), ee = B.length * (L + T), et = (0, o.useTransition)(!z && c, {
+  }, []), Q = l.useCallback(e => {
+    ("ArrowRight" === e.key && !u || "ArrowLeft" === e.key && u) && j()
+  }, [j, u]), J = null != k && "" !== k ? k : null != b && "" !== b ? b : N.Z.Messages.SERVER_FOLDER_PLACEHOLDER, X = (0, c.Ie)("".concat(w)), $ = "folder-items-".concat(w), ee = B.length * (v + T), et = (0, o.useTransition)(!z && u, {
     from: {
       height: 0
     },
@@ -84,36 +84,36 @@ function v(e) {
       height: 0
     },
     config: {
-      duration: x
+      duration: Z
     }
-  }), en = i.useCallback(e => null == n ? void 0 : n(w, e), [n, w]), el = (0, l.jsxs)(_.H, {
-    children: [(0, l.jsx)(p.Z, {
-      disabled: z || c,
+  }), en = l.useCallback(e => null == n ? void 0 : n(w, e), [n, w]), ei = (0, i.jsxs)(I.H, {
+    children: [(0, i.jsx)(p.Z, {
+      disabled: z || u,
       hovered: V,
-      selected: s,
+      selected: r,
       unread: A,
       className: S.pill
-    }), (0, l.jsx)(I.Z, {
+    }), (0, i.jsx)(E.Z, {
       text: J,
-      disabled: P,
-      selected: s,
+      disabled: y,
+      selected: r,
       disableWrapper: !0,
-      children: (0, l.jsx)("div", {
-        ref: O ? K : void 0,
-        className: r()({
-          [S.wobble]: !z && F && !c
+      children: (0, i.jsx)("div", {
+        ref: R ? K : void 0,
+        className: a()({
+          [S.wobble]: !z && F && !u
         }),
         "data-dnd-name": J,
-        children: z ? (0, l.jsx)(f.Z, {}) : (0, l.jsx)(C.Z, {
+        children: z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(g.Z, {
           folderNode: t,
-          expanded: c,
-          forceCircular: R,
-          sorting: P,
-          mediaState: g,
-          mentionCount: v,
+          expanded: u,
+          forceCircular: M,
+          sorting: y,
+          mediaState: f,
+          mentionCount: L,
           tooltipName: J,
           folderGroupId: $,
-          onClick: y,
+          onClick: j,
           onContextMenu: D,
           onHoverChange: H,
           onKeyDown: Q,
@@ -121,34 +121,34 @@ function v(e) {
           folderIconContent: G
         })
       })
-    }), O ? (0, l.jsx)(E.ZP, {
+    }), R ? (0, i.jsx)(m.ZP, {
       name: J,
       targetNode: t,
       onDragOverChanged: q
     }) : null]
   });
-  return (0, l.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     ref: en,
-    className: Z.wrapper,
-    children: [!z && (0, l.jsx)("span", {
-      className: r()(Z.expandedFolderBackground, {
-        [Z.collapsed]: !c,
-        [Z.hover]: Y
+    className: x.wrapper,
+    children: [!z && (0, i.jsx)("span", {
+      className: a()(x.expandedFolderBackground, {
+        [x.collapsed]: !u,
+        [x.hover]: Y
       })
-    }), el, et((e, t, n) => {
+    }), ei, et((e, t, n) => {
       let {
-        key: i
+        key: l
       } = n;
-      return t && (0, l.jsx)(o.animated.ul, {
+      return t && (0, i.jsx)(o.animated.ul, {
         id: $,
         style: {
           height: e.height.to(e => e * ee)
         },
-        className: Z.__invalid_expandedGuilds,
+        className: x.__invalid_expandedGuilds,
         role: "group",
         children: B.map(U)
-      }, i)
-    }), O && c ? (0, l.jsx)(E.Zu, {
+      }, l)
+    }), R && u ? (0, i.jsx)(m.Zu, {
       name: J,
       targetNode: t
     }) : null]

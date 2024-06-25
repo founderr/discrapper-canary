@@ -3,30 +3,30 @@ n.d(t, {
     return o
   }
 });
-var s = n(470079),
-  i = n(143927),
-  l = n(836768),
+var i = n(470079),
+  s = n(143927),
+  a = n(836768),
   r = n(49898),
-  a = n(689938);
+  l = n(689938);
 
 function o() {
-  let e = s.useMemo(() => [{
+  let e = i.useMemo(() => [{
       slug: r.S.SERVERS,
-      title: a.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE
+      title: l.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE
     }, {
       slug: r.S.APPS,
-      title: a.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE
+      title: l.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE
     }, {
       slug: r.S.QUESTS,
-      title: a.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE
+      title: l.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE
     }, {
       slug: r.S.SHOP,
-      title: a.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE
+      title: l.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE
     }], []),
-    t = (0, l.d)(e => e.selectedPage, i.Z);
+    t = (0, a.d)(e => e.selectedPage, s.Z);
   return {
     config: e,
     selectedPage: t,
-    handleSelectPage: l.d.getState().setSelectedPage
+    handleSelectPage: a.d.getState().setSelectedPage
   }
 }

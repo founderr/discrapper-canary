@@ -1,28 +1,28 @@
-t.d(s, {
+i.d(t, {
   Z: function() {
     return u
   }
-}), t(627341);
-var i = t(735250);
-t(470079);
-var l = t(120356),
-  n = t.n(l),
-  a = t(278074),
-  r = t(979554),
-  o = t(481060),
-  d = t(689938),
-  c = t(638544);
+}), i(627341);
+var n = i(735250);
+i(470079);
+var s = i(120356),
+  a = i.n(s),
+  l = i(278074),
+  r = i(979554),
+  o = i(481060),
+  c = i(689938),
+  d = i(638544);
 
 function u(e) {
-  var s;
+  var t;
   let {
-    product: t,
-    isDarkText: l = !1
+    product: i,
+    isDarkText: s = !1
   } = e;
-  let u = (s = t.type, (0, a.EQ)(s).with(r.Z.AVATAR_DECORATION, () => d.Z.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.Z.PROFILE_EFFECT, () => d.Z.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
-  return null === u ? null : (0, i.jsx)(o.Text, {
+  let u = (t = i.type, (0, l.EQ)(t).with(r.Z.AVATAR_DECORATION, () => c.Z.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.Z.PROFILE_EFFECT, () => c.Z.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
+  return null === u ? null : (0, n.jsx)(o.Text, {
     variant: "text-xxs/normal",
-    className: n()([c.container, l ? c.darkText : c.lightText]),
+    className: a()([d.container, s ? d.darkText : d.lightText]),
     children: u
   })
 }

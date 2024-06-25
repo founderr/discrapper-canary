@@ -10,10 +10,10 @@ var i, r, s, o, a = n(392711),
   I = n(981631);
 let T = {},
   h = {},
-  S = {},
-  f = 0,
-  N = 0,
+  f = {},
+  S = 0,
   A = 0,
+  N = 0,
   m = 0;
 
 function O() {
@@ -21,9 +21,9 @@ function O() {
   let {
     [I.OGo.PENDING_INCOMING]: e = 0, [I.OGo.PENDING_OUTGOING]: t = 0, [I.OGo.FRIEND]: n = 0
   } = l().countBy(Object.values(T), e => e);
-  f = e, N = t, A = n
+  S = e, A = t, N = n
 }
-class R extends(i = u.ZP.Store) {
+class p extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(E.default)
   }
@@ -42,13 +42,13 @@ class R extends(i = u.ZP.Store) {
     return !1
   }
   getPendingCount() {
-    return f
+    return S
   }
   getOutgoingCount() {
-    return N
+    return A
   }
   getFriendCount() {
-    return A
+    return N
   }
   getRelationshipCount() {
     return m
@@ -64,24 +64,24 @@ class R extends(i = u.ZP.Store) {
     return h[e]
   }
   getSince(e) {
-    return S[e]
+    return f[e]
   }
   getSinces() {
-    return S
+    return f
   }
   getFriendIDs() {
     return d.default.keys(T).filter(e => T[e] === I.OGo.FRIEND)
   }
 }
-o = "RelationshipStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+o = "RelationshipStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new R(_.Z, {
+}) : r[s] = o, t.Z = new p(_.Z, {
   CONNECTION_OPEN: function(e) {
-    T = {}, h = {}, S = {}, e.relationships.forEach(e => {
-      T[e.id] = e.type, null != e.nickname && (h[e.id] = e.nickname), null != e.since && (S[e.id] = e.since)
+    T = {}, h = {}, f = {}, e.relationships.forEach(e => {
+      T[e.id] = e.type, null != e.nickname && (h[e.id] = e.nickname), null != e.since && (f[e.id] = e.since)
     }), O()
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -97,8 +97,8 @@ o = "RelationshipStore", (s = "displayName") in(r = R) ? Object.defineProperty(r
     }, null != e.relationship.nickname && (h = {
       ...h,
       [e.relationship.id]: e.relationship.nickname
-    }), null != e.relationship.since && (S = {
-      ...S,
+    }), null != e.relationship.since && (f = {
+      ...f,
       [e.relationship.id]: e.relationship.since
     }), O(), e.relationship.type === I.OGo.FRIEND && t === I.OGo.PENDING_OUTGOING && _.Z.dispatch({
       type: "FRIEND_REQUEST_ACCEPTED",
@@ -110,12 +110,12 @@ o = "RelationshipStore", (s = "displayName") in(r = R) ? Object.defineProperty(r
       ...T
     }, delete T[e.relationship.id], null != h[e.relationship.id] && (h = {
       ...h
-    }, delete h[e.relationship.id]), null != S[e.relationship.id] && (S = {
-      ...S
-    }, delete S[e.relationship.id]), O()
+    }, delete h[e.relationship.id]), null != f[e.relationship.id] && (f = {
+      ...f
+    }, delete f[e.relationship.id]), O()
   },
   RELATIONSHIP_UPDATE: function(e) {
-    null == e.relationship.since ? delete S[e.relationship.id] : S[e.relationship.id] = e.relationship.since, null == e.relationship.nickname ? delete h[e.relationship.id] : h[e.relationship.id] = e.relationship.nickname
+    null == e.relationship.since ? delete f[e.relationship.id] : f[e.relationship.id] = e.relationship.since, null == e.relationship.nickname ? delete h[e.relationship.id] : h[e.relationship.id] = e.relationship.nickname
   },
   RELATIONSHIP_PENDING_INCOMING_REMOVED: function(e) {
     T = {

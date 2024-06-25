@@ -1,6 +1,6 @@
 var s = n(525654),
-  r = n.n(s),
-  i = n(643191);
+  i = n.n(s),
+  r = n(643191);
 t.Z = {
   dump(e) {
     let t;
@@ -10,15 +10,15 @@ t.Z = {
       usedJSHeapSize: performance.memory.usedJSHeapSize
     }), e({
       browser: {
-        name: r().name,
-        version: r().version
+        name: i().name,
+        version: i().version
       },
       os: {
-        name: r().os.family,
-        version: r().os.version
+        name: i().os.family,
+        version: i().os.version
       },
       memory: t
     })
   },
-  getTimeSinceNavigationStart: () => Date.now() - i.mb
+  getTimeSinceNavigationStart: () => Date.now() - r.mb
 }

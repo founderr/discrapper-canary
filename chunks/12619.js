@@ -1,6 +1,6 @@
-var t, r, n, o;
+var r, t, n, i;
 a.d(s, {
   X: function() {
-    return r
+    return t
   }
-}), (n = t || (t = {})).TRANFSER_OWNERSHIP = "TRANFSER_OWNERSHIP", n.CONFIRM_EMAIL_CODE = "CONFIRM_EMAIL_CODE", (o = r || (r = {})).MFA = "mfa", o.SMS = "sms", o.EMAIL = "email"
+}), (n = r || (r = {})).TRANFSER_OWNERSHIP = "TRANFSER_OWNERSHIP", n.CONFIRM_EMAIL_CODE = "CONFIRM_EMAIL_CODE", (i = t || (t = {})).MFA = "mfa", i.SMS = "sms", i.EMAIL = "email"

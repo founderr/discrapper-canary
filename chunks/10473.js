@@ -1,7 +1,7 @@
-var s, i = n(108131),
-  l = n.n(i),
-  a = n(442837),
-  r = n(570140),
+var i, s = n(108131),
+  a = n.n(s),
+  r = n(442837),
+  l = n(570140),
   o = n(70956);
 
 function c(e, t, n) {
@@ -12,39 +12,39 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let u = [],
-  d = !1,
-  E = !1,
-  h = {
+let d = [],
+  u = !1,
+  _ = !1,
+  E = {
     status: "unloaded"
   },
-  _ = {};
-class I extends(s = a.ZP.Store) {
+  h = {};
+class I extends(i = r.ZP.Store) {
   getSearchResult(e) {
-    let t = _[l().v3(JSON.stringify(e))];
-    return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? h : t
+    let t = h[a().v3(JSON.stringify(e))];
+    return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? E : t
   }
   hasLoadedStaticClanDiscovery() {
-    return d
-  }
-  getStaticClans() {
     return u
   }
+  getStaticClans() {
+    return d
+  }
   isLoading() {
-    return E
+    return _
   }
 }
-c(I, "displayName", "ClanDiscoveryStore"), c(I, "persistKey", "ClanDiscoveryStore"), t.Z = new I(r.Z, {
+c(I, "displayName", "ClanDiscoveryStore"), c(I, "persistKey", "ClanDiscoveryStore"), t.Z = new I(l.Z, {
   FETCH_STATIC_CLAN_LIST_START: function() {
-    E = !0
+    _ = !0
   },
   FETCH_STATIC_CLAN_LIST_SUCCESS: function(e) {
-    u = e.clans, d = !0, E = !1
+    d = e.clans, u = !0, _ = !1
   },
   FETCH_STATIC_CLAN_LIST_FAILURE: function() {
-    E = !1
+    _ = !1
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-    _[e.criteriaHash] = e.searchResult
+    h[e.criteriaHash] = e.searchResult
   }
 })

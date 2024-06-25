@@ -1,13 +1,13 @@
-s.d(t, {
+n.d(t, {
   _: function() {
     return c
   }
 });
-var n = s(442837),
-  a = s(607070),
-  i = s(314684),
-  r = s(391110),
-  l = s(678081);
+var s = n(442837),
+  a = n(607070),
+  r = n(314684),
+  i = n(391110),
+  l = n(678081);
 let o = {
     subtitle: {
       onlyShowOnHover: !1
@@ -21,11 +21,11 @@ let o = {
     }
   },
   c = e => {
-    let t = (0, n.e7)([a.Z], () => a.Z.useReducedMotion),
-      s = (0, i.IB)() && !t,
+    let t = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
+      n = (0, r.IB)() && !t,
       c = {
-        [r.zW.DEFAULT]: o,
-        [r.zW.REWARD]: {
+        [i.zW.DEFAULT]: o,
+        [i.zW.REWARD]: {
           subtitle: {
             onlyShowOnHover: !0,
             textVariant: "text-sm/semibold"
@@ -40,9 +40,9 @@ let o = {
             className: l.descriptionCTATenureReward
           },
           cardContainer: {
-            className: s ? l.glowingCardContainer : void 0
+            className: n ? l.glowingCardContainer : void 0
           }
         }
       };
-    return null != e ? c[e] : c[r.zW.DEFAULT]
+    return null != e ? c[e] : c[i.zW.DEFAULT]
   }

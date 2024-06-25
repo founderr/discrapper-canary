@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(100527),
-  a = n(360048),
-  r = n(709158),
+var s = n(481060),
+  a = n(100527),
+  r = n(360048),
+  l = n(709158),
   o = n(689938),
   c = n(679638);
 
-function u(e) {
+function d(e) {
   let {
     isSelected: t,
     onClick: n
   } = e;
-  return (0, r.Z)(l.Z.QUEST_HOME_PAGE) ? (0, s.jsx)(a.Z, {
-    avatar: (0, s.jsx)(i.QuestsIcon, {}),
+  return (0, l.Z)(a.Z.QUEST_HOME_PAGE) ? (0, i.jsx)(r.Z, {
+    avatar: (0, i.jsx)(s.QuestsIcon, {}),
     name: o.Z.Messages.QUESTS,
     focusProps: {
       offset: {

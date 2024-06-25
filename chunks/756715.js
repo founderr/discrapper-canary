@@ -24,10 +24,10 @@ function E(e) {
     rel: I,
     target: T,
     useDefaultUnderlineStyles: h = !0,
-    title: S,
-    style: f,
-    focusProps: N,
-    ...A
+    title: f,
+    style: S,
+    focusProps: A,
+    ...N
   } = e;
   null != t && null == n && (n = _.X.getDefaultLinkInterceptor(t));
   let m = r.useContext(a.g),
@@ -39,20 +39,20 @@ function E(e) {
       onClick: n,
       rel: null != I ? I : void 0,
       target: null != T ? T : void 0,
-      title: null != S ? S : void 0,
-      style: null != f ? f : void 0
+      title: null != f ? f : void 0,
+      style: null != S ? S : void 0
     };
   return (null != t && !(0, c.B)(t) && (O.rel = "noreferrer noopener", O.target = "_blank"), m && delete O.href, null != n) ? (0, i.jsx)(l.P, {
     tag: "a",
-    ...A,
+    ...N,
     ...O,
     onClick: n,
-    focusProps: N,
+    focusProps: A,
     children: E
   }) : (0, i.jsx)(u.t, {
-    ...N,
+    ...A,
     children: (0, i.jsx)("a", {
-      ...A,
+      ...N,
       ...O,
       children: E
     })

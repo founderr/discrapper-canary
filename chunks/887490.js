@@ -4,7 +4,7 @@ n.d(t, {
     return I
   },
   Ew: function() {
-    return S
+    return f
   },
   Jz: function() {
     return T
@@ -290,7 +290,7 @@ let _ = {
       }
     }
   },
-  S = {
+  f = {
     equals: (e, t) => null == e && null == t || null != e && null != t && h.equals(e, t),
     isValid(e, t) {
       if (null == t) return !1;
@@ -303,16 +303,16 @@ let _ = {
       return E.isText(r) && E.isText(s) && n.offset <= r.text.length && i.offset <= s.text.length
     }
   },
-  f = (e, t) => {
+  S = (e, t) => {
     let n = (t.top + t.bottom) / 2;
     return e.top <= n && e.bottom >= n
   },
-  N = (e, t, n) => {
+  A = (e, t, n) => {
     let i = _.toDOMRange(e, t).getBoundingClientRect(),
       r = _.toDOMRange(e, n).getBoundingClientRect();
-    return f(i, r) && f(r, i)
+    return S(i, r) && S(r, i)
   },
-  A = (e, t, n, i) => {
+  N = (e, t, n, i) => {
     let r = {
         anchor: t,
         focus: t
@@ -321,12 +321,12 @@ let _ = {
       o = n.length,
       a = Math.floor((s + o) / 2);
     for (; a !== s;)
-      if (N(e, {
+      if (A(e, {
           anchor: n[a],
           focus: n[a]
         }, r) ? i ? o = a : s = a : i ? s = a : o = a, a = Math.floor((s + o) / 2), !i && a === n.length - 2 && o === n.length - 1) {
         let t = n[n.length - 1];
-        N(e, {
+        A(e, {
           anchor: t,
           focus: t
         }, r) && (a = o)
@@ -349,11 +349,11 @@ let _ = {
         a = Array.from(_.positions(e, {
           at: o
         })),
-        l = A(e, t, a, !0);
+        l = N(e, t, a, !0);
       if (n && T.equals(t, l) && !T.isAtEnd(t, r)) {
         let n = _.after(e, t);
         if (null == n) return l;
-        l = A(e, n, a, !0)
+        l = N(e, n, a, !0)
       }
       return l
     },
@@ -373,11 +373,11 @@ let _ = {
         a = Array.from(_.positions(e, {
           at: o
         })),
-        l = A(e, t, a, !1);
+        l = N(e, t, a, !1);
       if (n && T.equals(t, l) && !T.isAtEnd(t, r)) {
         let n = _.after(e, t);
         if (null == n) return l;
-        l = A(e, n, a, !1)
+        l = N(e, n, a, !1)
       }
       return l
     },

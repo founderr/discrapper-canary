@@ -1,28 +1,28 @@
 n.d(t, {
   a: function() {
-    return E
+    return m
   }
 }), n(47120);
-var l = n(392711),
-  i = n.n(l),
-  s = n(442837),
-  a = n(544891),
+var i = n(392711),
+  a = n.n(i),
+  l = n(442837),
+  s = n(544891),
   r = n(570140),
   o = n(375954),
   c = n(306680),
   u = n(748902),
   d = n(981631);
 let h = new Set,
-  m = null;
+  p = null;
 
-function E(e) {
+function m(e) {
   let {
     id: t
   } = e, {
     loaded: n,
-    message: l,
-    error: i
-  } = (0, s.cj)([u.Z, o.Z, c.ZP], () => {
+    message: i,
+    error: a
+  } = (0, l.cj)([u.Z, o.Z, c.ZP], () => {
     let e = c.ZP.lastMessageId(t),
       n = u.Z.getMessageRequestPreview(t);
     if (null == n.message && null != e) {
@@ -34,26 +34,26 @@ function E(e) {
       }
     }
     return n
-  }, [t]), a = (0, s.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
-  return !n && null == l && a && function(e) {
-    h.add(e), null == m && (m = setTimeout(p, 0))
+  }, [t]), s = (0, l.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
+  return !n && null == i && s && function(e) {
+    h.add(e), null == p && (p = setTimeout(_, 0))
   }(t), {
     loaded: n,
-    error: i,
-    message: l
+    error: a,
+    message: i
   }
 }
-async function p() {
+async function _() {
   try {
-    for (; !i().isEmpty(h);) await g()
+    for (; !a().isEmpty(h);) await f()
   } finally {
-    m = null
+    p = null
   }
 }
-async function g() {
+async function f() {
   let e = Array.from(h).slice(0, 25);
   try {
-    let t = await a.tn.get({
+    let t = await s.tn.get({
       url: d.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
       query: {
         channel_ids: e

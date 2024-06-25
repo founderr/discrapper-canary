@@ -1,71 +1,71 @@
 n.d(t, {
   Z: function() {
-    return T
+    return p
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(212093),
-  r = n(703656),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(212093),
+  l = n(703656),
   o = n(769654),
   c = n(430824),
-  u = n(626135),
-  d = n(768581),
-  E = n(125631),
-  h = n(981631),
-  _ = n(689938),
+  d = n(626135),
+  u = n(768581),
+  _ = n(125631),
+  E = n(981631),
+  h = n(689938),
   I = n(387259);
 
 function m(e, t, n) {
-  return (0, s.jsxs)("button", {
+  return (0, i.jsxs)("button", {
     className: I.container,
     onClick: n,
-    children: ["function" == typeof e ? (0, s.jsx)("div", {
+    children: ["function" == typeof e ? (0, i.jsx)("div", {
       className: I.icon,
-      children: (0, s.jsx)(e, {
+      children: (0, i.jsx)(e, {
         className: I.__invalid_iconInner,
-        color: l.tokens.colors.WHITE.css
+        color: a.tokens.colors.WHITE.css
       })
-    }) : (0, s.jsx)("img", {
+    }) : (0, i.jsx)("img", {
       className: I.icon,
       alt: "",
       src: e
-    }), (0, s.jsx)(l.Text, {
+    }), (0, i.jsx)(a.Text, {
       className: I.text,
       variant: "text-md/medium",
       children: t
-    }), (0, s.jsx)(E.Z, {
+    }), (0, i.jsx)(_.Z, {
       className: I.arrow
     })]
   }, t)
 }
 
-function T() {
-  let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(h.oNc.HUB)),
+function p() {
+  let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(E.oNc.HUB)),
     t = e => {
-      u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
+      d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
         guild_id: e
       }), (0, o.X)(e)
     };
-  return (0, s.jsxs)(i.Fragment, {
-    children: [(0, s.jsx)("header", {
+  return (0, i.jsxs)(s.Fragment, {
+    children: [(0, i.jsx)("header", {
       className: I.header,
-      children: (0, s.jsx)(l.FormTitle, {
+      children: (0, i.jsx)(a.FormTitle, {
         tag: "h2",
         className: I.title,
-        children: _.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
+        children: h.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
       })
-    }), (0, s.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       className: I.grid,
-      children: [e.map(e => m(d.ZP.getGuildIconURL({
+      children: [e.map(e => m(u.ZP.getGuildIconURL({
         id: e.id,
         icon: e.icon,
         size: 240
       }), e.name, () => {
         t(e.id)
-      })), m(l.CompassIcon, _.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-        (0, a.AQ)(), u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.uL)(h.Z5c.GUILD_DISCOVERY)
+      })), m(a.CompassIcon, h.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+        (0, r.AQ)(), d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(E.Z5c.GUILD_DISCOVERY)
       })]
     })]
   })

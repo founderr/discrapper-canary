@@ -47,7 +47,7 @@ function h(e) {
     ...l
   }, "MESSAGE_REACTION_ADD" === t ? E[n].firstMessage = l.firstMessage.addReaction(s, _, e.colors, a) : E[n].firstMessage = l.firstMessage.removeReaction(s, _, a)
 }
-class S extends(i = a.ZP.Store) {
+class f extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(_.Z, c.default)
   }
@@ -62,12 +62,12 @@ class S extends(i = a.ZP.Store) {
     }), E[e]
   }
 }
-o = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
+o = "ForumPostMessagesStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new S(l.Z, {
+}) : r[s] = o, t.Z = new f(l.Z, {
   CONNECTION_OPEN: function() {
     E = {}
   },

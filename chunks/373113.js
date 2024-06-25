@@ -1,51 +1,51 @@
 "use strict";
-s.d(t, {
+n.d(t, {
   Z: function() {
-    return a
+    return i
   }
 });
-var n = s(735250);
-s(470079);
-var r = s(911946);
+var r = n(735250);
+n(470079);
+var a = n(911946);
 
-function a() {
-  return (0, n.jsxs)("div", {
-    className: r.__invalid_snowflakes,
-    children: [(0, n.jsx)("div", {
-      className: r.snowflake,
+function i() {
+  return (0, r.jsxs)("div", {
+    className: a.__invalid_snowflakes,
+    children: [(0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, n.jsx)("div", {
-      className: r.snowflake,
+    }), (0, r.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
     })]
   })

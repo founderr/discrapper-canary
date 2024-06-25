@@ -1,6 +1,6 @@
-var l, i;
+var i, a;
 n.d(t, {
   _: function() {
-    return l
+    return i
   }
-}), (i = l || (l = {}))[i.AGGREGATE_RANGE_UNSPECIFIED = 0] = "AGGREGATE_RANGE_UNSPECIFIED", i[i.WEEK = 1] = "WEEK"
+}), (a = i || (i = {}))[a.AGGREGATE_RANGE_UNSPECIFIED = 0] = "AGGREGATE_RANGE_UNSPECIFIED", a[a.WEEK = 1] = "WEEK"

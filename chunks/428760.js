@@ -1,55 +1,55 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return u
   }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(481060),
-  o = t(730671),
-  c = t(689938),
-  d = t(179113);
+var s = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(481060),
+  o = n(730671),
+  c = n(689938),
+  d = n(179113);
 
 function u(e) {
   let {
-    onChangeText: s,
-    maxWordCount: t,
-    className: l,
+    onChangeText: t,
+    maxWordCount: n,
+    className: i,
     textAreaClassName: u,
-    subtitleText: E,
-    initialValue: _
-  } = e, I = i.useMemo(() => null != _ ? _ : [], [_]), {
+    subtitleText: _,
+    initialValue: E
+  } = e, I = a.useMemo(() => null != E ? E : [], [E]), {
     value: T,
-    onChange: N,
-    errorMessage: m
-  } = (0, o.Z)(s, _, t);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)("div", {
-      className: a()(d.keywordsContainer, l),
-      children: [(0, n.jsx)(r.TextAreaAutosize, {
-        className: a()(d.keywordsTextArea, u),
+    onChange: m,
+    errorMessage: N
+  } = (0, o.Z)(t, E, n);
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)("div", {
+      className: r()(d.keywordsContainer, i),
+      children: [(0, s.jsx)(l.TextAreaAutosize, {
+        className: r()(d.keywordsTextArea, u),
         value: T,
-        onChange: N,
+        onChange: m,
         placeholder: c.Z.Messages.GUILD_AUTOMOD_KEYWORDS_PLACEHOLDER
-      }), (0, n.jsx)(r.Text, {
+      }), (0, s.jsx)(l.Text, {
         className: d.keywordsCounter,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: "".concat(I.length, " / ").concat(t)
+        children: "".concat(I.length, " / ").concat(n)
       })]
-    }), null != m ? (0, n.jsx)(r.Text, {
-      className: a()(d.paddingTop, d.errorText),
+    }), null != N ? (0, s.jsx)(l.Text, {
+      className: r()(d.paddingTop, d.errorText),
       variant: "text-xs/medium",
       color: "text-danger",
-      children: m
-    }) : (0, n.jsx)(r.Text, {
+      children: N
+    }) : (0, s.jsx)(l.Text, {
       className: d.paddingTop,
       variant: "text-xs/normal",
       color: "header-secondary",
-      children: null != E ? E : c.Z.Messages.GUILD_AUTOMOD_KEYWORD_ENTRY_HINT
+      children: null != _ ? _ : c.Z.Messages.GUILD_AUTOMOD_KEYWORD_ENTRY_HINT
     })]
   })
 }

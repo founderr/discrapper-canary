@@ -1,59 +1,59 @@
-var s = n(735250),
-  o = n(470079),
+var o = n(735250),
+  s = n(470079),
   r = n(308069),
   a = n(613087),
-  l = n(457153),
-  i = n(254197),
+  i = n(457153),
+  l = n(254197),
   c = n(321025),
-  u = n(11281);
+  d = n(11281);
 t.Z = function(e) {
   var t;
   let {
     expandedContentRef: n,
-    expansionSpring: d,
+    expansionSpring: u,
     isExpanded: p,
-    isExpansionAnimationComplete: x,
-    onCtxMenuOpened: m,
+    isExpansionAnimationComplete: m,
+    onCtxMenuOpened: x,
     onCtxMenuClosed: g,
-    onCtxMenuSelection: h,
+    onCtxMenuSelection: f,
     quest: C,
-    useReducedMotion: f
-  } = e, E = o.useRef(null), S = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
-  return (0, s.jsxs)(a.p, {
+    useReducedMotion: h
+  } = e, _ = s.useRef(null), E = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
+  return (0, o.jsxs)(a.p, {
     expandedContentRef: n,
-    collapsedContentRef: E,
-    expansionSpring: d,
-    isExpansionAnimationComplete: x,
-    children: [!S && (0, s.jsx)(r.Z, {
+    collapsedContentRef: _,
+    expansionSpring: u,
+    isExpansionAnimationComplete: m,
+    children: [!E && (0, o.jsx)(r.Z, {
       quest: C,
-      expansionSpring: d,
-      useReducedMotion: f,
+      expansionSpring: u,
+      useReducedMotion: h,
       isExpanded: p,
-      isExpansionAnimationComplete: x,
-      onCtxMenuOpen: m,
+      isExpansionAnimationComplete: m,
+      onCtxMenuOpen: x,
       onCtxMenuClose: g,
-      onCtxMenuSelect: h
-    }), (0, s.jsx)(l.Z, {
-      ref: E,
-      className: u.content,
-      expansionSpring: d,
+      onCtxMenuSelect: f
+    }), (0, o.jsx)(i.Z, {
+      ref: _,
+      className: d.content,
+      expansionSpring: u,
       isExpanded: p,
-      isExpansionAnimationComplete: x,
+      isExpansionAnimationComplete: m,
       quest: C,
-      useReducedMotion: f
-    }), (0, s.jsx)(i.Z, {
-      expansionSpring: d,
-      className: u.content,
-      onCtxMenuOpen: m,
+      useReducedMotion: h
+    }), (0, o.jsx)(l.Z, {
+      expansionSpring: u,
+      className: d.content,
+      onCtxMenuOpen: x,
       onCtxMenuClose: g,
-      onCtxMenuSelect: h,
+      onCtxMenuSelect: f,
       isExpanded: p,
-      isExpansionAnimationComplete: x,
+      isExpansionAnimationComplete: m,
       quest: C,
-      useReducedMotion: f,
+      useReducedMotion: h,
       ref: n
-    }), (0, s.jsx)(c.Z, {
-      expansionSpring: d,
+    }), (0, o.jsx)(c.Z, {
+      expansionSpring: u,
       isExpanded: p
     })]
   })

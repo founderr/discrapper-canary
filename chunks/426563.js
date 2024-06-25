@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   j: function() {
-    return R
+    return p
   }
 });
 var i = n(526167),
@@ -18,25 +18,25 @@ var i = n(526167),
   I = n(859500),
   T = n(484542),
   h = n(881500),
-  S = n(910826),
-  f = n(307244),
-  N = n(669730),
-  A = n(666828),
+  f = n(910826),
+  S = n(307244),
+  A = n(669730),
+  N = n(666828),
   m = n(185672),
   O = n(235731);
 
-function R() {
+function p() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   return e ? O : r
 }
 t.Z = {
   DEFAULT_AVATARS: [s, o, a, l, u, _],
-  DEFAULT_GROUP_DM_AVATARS: [c, d, E, I, T, h, S, f],
+  DEFAULT_GROUP_DM_AVATARS: [c, d, E, I, T, h, f, S],
   BOT_AVATARS: {
     clyde: m,
-    nitro: A
+    nitro: N
   },
-  DEFAULT_CHANNEL_ICON: N,
+  DEFAULT_CHANNEL_ICON: A,
   canUseWebp: function() {
     return i.og()
   }

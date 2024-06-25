@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 });
-var s = n(981631);
+var i = n(981631);
 
-function i(e, t) {
+function a(e, t) {
   var n;
-  return !s.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type) && (null === (n = e.author) || void 0 === n ? void 0 : n.id) === t
+  return !i.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type) && (null === (n = e.author) || void 0 === n ? void 0 : n.id) === t
 }

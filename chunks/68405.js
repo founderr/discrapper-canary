@@ -16,7 +16,7 @@ n.d(t, {
     return M
   },
   hM: function() {
-    return R
+    return p
   },
   iy: function() {
     return U
@@ -51,25 +51,25 @@ var i = n(392711),
   I = n(626135),
   T = n(708406),
   h = n(591759),
-  S = n(668781),
-  f = n(981631),
-  N = n(526761),
-  A = n(689938);
+  f = n(668781),
+  S = n(981631),
+  A = n(526761),
+  N = n(689938);
 let m = /-/g;
 
 function O(e) {
   let t = null != e ? {
     [e]: 1
   } : {};
-  u.ZP.trackWithMetadata(f.rMx.SEARCH_STARTED, {
-    search_type: f.aib.GIF,
+  u.ZP.trackWithMetadata(S.rMx.SEARCH_STARTED, {
+    search_type: S.aib.GIF,
     load_id: E.Z.getAnalyticsID(),
     num_modifiers: Object.keys(t).length,
     modifiers: t
   })
 }
 
-function R(e, t) {
+function p(e, t) {
   let {
     startTime: n,
     ...i
@@ -84,16 +84,16 @@ function R(e, t) {
   }), o = null == n ? {} : {
     load_duration_ms: Date.now() - n
   };
-  u.ZP.trackWithMetadata(f.rMx.SEARCH_RESULT_VIEWED, {
+  u.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_VIEWED, {
     ...s,
     ...o
   })
 }
 
-function p(e, t, n) {
+function R(e, t, n) {
   let i = Date.now();
   O(t), o.tn.get({
-    url: f.ANM.GIFS_SEARCH,
+    url: S.ANM.GIFS_SEARCH,
     query: {
       q: e,
       media_format: E.Z.getSelectedFormat(),
@@ -104,7 +104,7 @@ function p(e, t, n) {
     oldFormErrors: !0
   }).then(r => {
     let s = r.body;
-    R(s, t, {
+    p(s, t, {
       startTime: i,
       limit: n
     }), l.Z.dispatch({
@@ -117,7 +117,7 @@ function p(e, t, n) {
     query: e
   }))
 }
-let g = r().debounce(p, 250);
+let g = r().debounce(R, 250);
 
 function C(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -125,12 +125,12 @@ function C(e, t) {
   "" === e ? L() : (l.Z.dispatch({
     type: "GIF_PICKER_QUERY",
     query: e
-  }), n ? p(e, t, i) : g(e, t, i))
+  }), n ? R(e, t, i) : g(e, t, i))
 }
 
 function v(e) {
   if ("" !== e && null != e) o.tn.get({
-    url: f.ANM.GIFS_SUGGEST,
+    url: S.ANM.GIFS_SUGGEST,
     query: {
       q: e,
       provider: "tenor",
@@ -171,13 +171,13 @@ function D(e) {
     results: s,
     totalResults: a
   });
-  u.ZP.trackWithMetadata(f.rMx.SEARCH_RESULT_SELECTED, {
+  u.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_SELECTED, {
     ...c,
     index_num: n,
     source_object: "GIF Picker",
     query: l
   }), null != _ && o.tn.post({
-    url: f.ANM.GIFS_SELECT,
+    url: S.ANM.GIFS_SELECT,
     body: {
       id: _,
       q: l
@@ -188,8 +188,8 @@ function D(e) {
 
 function M() {
   let e = (0, s.Z)().replace(m, "");
-  u.ZP.trackWithMetadata(f.rMx.SEARCH_OPENED, {
-    search_type: f.aib.GIF,
+  u.ZP.trackWithMetadata(S.rMx.SEARCH_OPENED, {
+    search_type: S.aib.GIF,
     load_id: e
   }), l.Z.wait(() => {
     l.Z.dispatch({
@@ -201,7 +201,7 @@ function M() {
 
 function P() {
   o.tn.get({
-    url: f.ANM.GIFS_TRENDING,
+    url: S.ANM.GIFS_TRENDING,
     query: {
       provider: "tenor",
       locale: c.default.locale,
@@ -225,8 +225,8 @@ function P() {
 
 function y(e) {
   let t = Date.now();
-  O(f.wI2.TRENDING_GIFS), o.tn.get({
-    url: f.ANM.GIFS_TRENDING_GIFS,
+  O(S.wI2.TRENDING_GIFS), o.tn.get({
+    url: S.ANM.GIFS_TRENDING_GIFS,
     query: {
       media_format: E.Z.getSelectedFormat(),
       provider: "tenor",
@@ -238,7 +238,7 @@ function y(e) {
     let {
       body: i
     } = n;
-    R(i, f.wI2.TRENDING_GIFS, {
+    p(i, S.wI2.TRENDING_GIFS, {
       startTime: t,
       limit: e
     }), l.Z.dispatch({
@@ -264,21 +264,21 @@ function b(e) {
     if (t.gifs[U(e.url)] = {
         ...e,
         order: i + 1
-      }, a.wK.toBinary(t).length > N.vY) return S.Z.show({
-      title: A.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: A.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
+      }, a.wK.toBinary(t).length > A.vY) return f.Z.show({
+      title: N.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+      body: N.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
     }), !1;
     let s = r().size(t.gifs);
-    s > 2 && (t.hideTooltip = !0), I.default.track(f.rMx.GIF_FAVORITED, {
+    s > 2 && (t.hideTooltip = !0), I.default.track(S.rMx.GIF_FAVORITED, {
       total_num_favorited: s
     })
-  }, N.fy.INFREQUENT_USER_ACTION)
+  }, A.fy.INFREQUENT_USER_ACTION)
 }
 
 function G(e) {
   d.DZ.updateAsync("favoriteGifs", t => {
-    e in t.gifs ? delete t.gifs[e] : delete t.gifs[U(e)], I.default.track(f.rMx.GIF_UNFAVORITED, {
+    e in t.gifs ? delete t.gifs[e] : delete t.gifs[U(e)], I.default.track(S.rMx.GIF_UNFAVORITED, {
       total_num_favorited: r().size(t.gifs)
     })
-  }, N.fy.INFREQUENT_USER_ACTION)
+  }, A.fy.INFREQUENT_USER_ACTION)
 }

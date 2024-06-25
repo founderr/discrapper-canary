@@ -37,30 +37,30 @@ function h(e) {
   return T(t)
 }
 
-function S(e) {
+function f(e) {
   let {
     threads: t
   } = e;
-  t.forEach(N)
+  t.forEach(A)
 }
 
-function f(e) {
+function S(e) {
   let t = !1;
   for (let n of e.messages)
-    for (let e of n) t = N(e.thread) || t;
+    for (let e of n) t = A(e.thread) || t;
   return e.threads.forEach(e => {
-    t = N(e) || t
+    t = A(e) || t
   }), t
 }
 
-function N(e) {
+function A(e) {
   if (null != e && !(e.id in E)) {
     let t = d.Z.getChannel(e.id);
     if (null != t) return T(t), !0
   }
   return !1
 }
-class A extends(i = u.ZP.Store) {
+class N extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(d.Z)
   }
@@ -76,12 +76,12 @@ class A extends(i = u.ZP.Store) {
     return E
   }
 }
-o = "ThreadMembersStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+o = "ThreadMembersStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new A(_.Z, {
+}) : r[s] = o, t.Z = new N(_.Z, {
   CONNECTION_OPEN: function(e) {
     E = {}, e.guilds.forEach(I)
   },
@@ -126,10 +126,10 @@ o = "ThreadMembersStore", (s = "displayName") in(r = A) ? Object.defineProperty(
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), t.memberCount = e.memberCount
   },
-  SEARCH_FINISH: f,
-  MOD_VIEW_SEARCH_FINISH: f,
-  LOAD_THREADS_SUCCESS: S,
-  LOAD_ARCHIVED_THREADS_SUCCESS: S,
+  SEARCH_FINISH: S,
+  MOD_VIEW_SEARCH_FINISH: S,
+  LOAD_THREADS_SUCCESS: f,
+  LOAD_ARCHIVED_THREADS_SUCCESS: f,
   THREAD_DELETE: function(e) {
     let {
       channel: t
@@ -138,7 +138,7 @@ o = "ThreadMembersStore", (s = "displayName") in(r = A) ? Object.defineProperty(
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = N(n.thread) || t;
+    for (let n of e.messages) t = A(n.thread) || t;
     return t
   }
 })

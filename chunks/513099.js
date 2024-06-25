@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(158776),
   T = n(74538),
   h = n(998502),
-  S = n(785717),
-  f = n(204197),
-  N = n(652853),
-  A = n(228168),
+  f = n(785717),
+  S = n(204197),
+  A = n(652853),
+  N = n(228168),
   m = n(981631),
   O = n(474936),
-  R = n(148443);
-let p = l.AvatarSizes.SIZE_80,
+  p = n(148443);
+let R = l.AvatarSizes.SIZE_80,
   g = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function C(e) {
@@ -38,11 +38,11 @@ function C(e) {
     onOpenProfile: v
   } = e, {
     theme: L
-  } = (0, N.z)(), {
+  } = (0, A.z)(), {
     analyticsLocations: D
   } = (0, c.ZP)(_.Z.AVATAR), {
     trackUserProfileAction: M
-  } = (0, S.KZ)(), P = T.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), y = r.useMemo(() => (0, d.W)(t, h), [t, h]), {
+  } = (0, f.KZ)(), P = T.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), y = r.useMemo(() => (0, d.W)(t, h), [t, h]), {
     status: U,
     isMobileOnline: b
   } = (0, a.cj)([E.Z, I.Z], () => {
@@ -60,37 +60,37 @@ function C(e) {
   }), {
     avatarDecorationSrc: G,
     avatarSrc: w,
-    eventHandlers: B
-  } = (0, f.Z)({
+    eventHandlers: x
+  } = (0, S.Z)({
     user: t,
     guildId: s,
-    size: p,
+    size: R,
     animateOnHover: C
-  }), x = (0, i.jsx)(g, {
+  }), B = (0, i.jsx)(g, {
     src: w,
     avatarDecoration: G,
-    size: p,
+    size: R,
     "aria-label": t.username,
-    imageClassName: null != v ? R.overlay : void 0,
+    imageClassName: null != v ? p.overlay : void 0,
     status: y ? m.Skl.UNKNOWN : U,
     statusBackdropColor: P && !y ? (0, l.getStatusBackdropColor)(L) : void 0,
     isMobile: b,
     statusTooltip: !0,
-    statusTooltipDelay: A.vB
+    statusTooltipDelay: N.vB
   });
   return null == v ? (0, i.jsx)("div", {
-    ...B,
-    className: R.avatar,
-    children: x
+    ...x,
+    className: p.avatar,
+    children: B
   }) : (0, i.jsx)(l.Clickable, {
-    ...B,
-    className: o()(R.avatar, R.clickable),
+    ...x,
+    className: o()(p.avatar, p.clickable),
     onClick: () => {
       M({
         action: "PRESS_VIEW_PROFILE",
         analyticsLocations: D
       }), null == v || v()
     },
-    children: x
+    children: B
   })
 }

@@ -1,9 +1,9 @@
 n.d(t, {
   M: function() {
-    return i
+    return a
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-10_social_proofing_file_size",
   label: "Social Proofing File Size",
@@ -19,8 +19,8 @@ let s = (0, n(818083).B)({
   }]
 });
 
-function i(e) {
-  return s.getCurrentConfig({
+function a(e) {
+  return i.getCurrentConfig({
     location: e
   }).enabled
 }

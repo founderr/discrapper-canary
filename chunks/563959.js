@@ -1,120 +1,120 @@
 n.d(t, {
   P: function() {
-    return C
+    return f
   },
   e: function() {
-    return S
+    return p
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(239091),
+var i = n(735250),
+  a = n(470079),
+  s = n(481060),
+  l = n(239091),
   r = n(739566),
   o = n(942951),
   c = n(484459),
-  u = n(103575),
-  d = n(594174),
-  E = n(702346),
-  _ = n(768581),
+  d = n(103575),
+  u = n(594174),
+  _ = n(702346),
+  E = n(768581),
   I = n(91047),
-  T = n(628566),
-  m = n(693912),
-  N = n(981631);
+  m = n(628566),
+  T = n(693912),
+  h = n(981631);
 
-function h(e, t) {
-  return i.useCallback(i => (r, o) => {
-    var E;
-    let m = _.ZP.getApplicationIconURL({
-        id: i.id,
-        icon: i.icon,
-        bot: i.bot,
+function N(e, t) {
+  return a.useCallback(a => (r, o) => {
+    var _;
+    let T = E.ZP.getApplicationIconURL({
+        id: a.id,
+        icon: a.icon,
+        bot: a.bot,
         botIconFirst: !0
       }),
-      N = d.default.getUser(null === (E = i.bot) || void 0 === E ? void 0 : E.id),
-      h = T.Z.getIntegration(e.id, i.id),
-      C = e.isPrivate() && null != h ? t => {
-        (0, a.jW)(t, async () => {
+      h = u.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id),
+      N = m.Z.getIntegration(e.id, a.id),
+      f = e.isPrivate() && null != N ? t => {
+        (0, l.jW)(t, async () => {
           let {
             default: t
           } = await n.e("30887").then(n.bind(n, 496281));
-          return n => (0, s.jsx)(t, {
+          return n => (0, i.jsx)(t, {
             ...n,
             channel: e,
-            integration: h
+            integration: N
           })
         })
-      } : null != N ? t => (0, I.Pv)(t, N, e) : void 0,
+      } : null != h ? t => (0, I.Pv)(t, h, e) : void 0,
       {
-        bot: S
-      } = i;
-    return null == S ? r : (0, s.jsx)(l.Popout, {
+        bot: p
+      } = a;
+    return null == p ? r : (0, i.jsx)(s.Popout, {
       position: "right",
-      preload: () => (0, c.W)(S.id, m, {
+      preload: () => (0, c.W)(p.id, T, {
         guildId: e.guild_id,
         channelId: e.id
       }),
-      renderPopout: n => (0, s.jsx)(u.Z, {
+      renderPopout: n => (0, i.jsx)(d.Z, {
         ...n,
         location: "PrivateChannelIntegrationSystemMessage",
-        userId: S.id,
+        userId: p.id,
         guildId: e.guild_id,
         channelId: e.id,
         messageId: t.id
       }),
-      children: e => (0, s.jsx)(l.Anchor, {
+      children: e => (0, i.jsx)(s.Anchor, {
         ...e,
-        onContextMenu: C,
+        onContextMenu: f,
         children: r
       })
     }, o)
   }, [e, t.id])
 }
 
-function C(e) {
+function f(e) {
   let {
     message: t,
-    channel: i,
-    compact: l
-  } = e, a = (0, r.ZP)(t), c = t.application, u = (0, o.l)({
+    channel: a,
+    compact: s
+  } = e, l = (0, r.ZP)(t), c = t.application, d = (0, o.l)({
     user: t.author,
-    channelId: i.id,
-    guildId: i.guild_id,
+    channelId: a.id,
+    guildId: a.guild_id,
     messageId: t.id
-  }), d = h(i, t);
-  return (0, s.jsx)(E.Z, {
+  }), u = N(a, t);
+  return (0, i.jsx)(_.Z, {
     icon: n(570111),
     timestamp: t.timestamp,
-    compact: l,
-    children: (0, m.DS)({
+    compact: s,
+    children: (0, T.DS)({
       application: c,
-      username: a.nick,
-      usernameHook: u(a),
-      applicationNameHook: null != c ? d(c) : N.dG4
+      username: l.nick,
+      usernameHook: d(l),
+      applicationNameHook: null != c ? u(c) : h.dG4
     })
   })
 }
 
-function S(e) {
+function p(e) {
   let {
     message: t,
-    channel: i,
-    compact: l
-  } = e, a = (0, r.ZP)(t), c = t.application, u = (0, o.l)({
+    channel: a,
+    compact: s
+  } = e, l = (0, r.ZP)(t), c = t.application, d = (0, o.l)({
     user: t.author,
-    channelId: i.id,
-    guildId: i.guild_id,
+    channelId: a.id,
+    guildId: a.guild_id,
     messageId: t.id
-  }), d = h(i, t);
-  return (0, s.jsx)(E.Z, {
+  }), u = N(a, t);
+  return (0, i.jsx)(_.Z, {
     icon: n(474019),
     timestamp: t.timestamp,
-    compact: l,
-    children: (0, m.nh)({
+    compact: s,
+    children: (0, T.nh)({
       application: c,
-      username: a.nick,
-      usernameHook: u(a),
-      applicationNameHook: null != c ? d(c) : N.dG4
+      username: l.nick,
+      usernameHook: d(l),
+      applicationNameHook: null != c ? u(c) : h.dG4
     })
   })
 }

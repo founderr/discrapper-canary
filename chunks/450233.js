@@ -1,17 +1,17 @@
 n.d(t, {
   G: function() {
-    return r
+    return l
   }
 });
-var s, i, l, a, r, o, c = n(735250),
-  u = n(470079),
-  d = n(442837),
-  E = n(570140),
-  h = n(16084),
-  _ = n(855775),
+var i, s, a, r, l, o, c = n(735250),
+  d = n(470079),
+  u = n(442837),
+  _ = n(570140),
+  E = n(16084),
+  h = n(855775),
   I = n(689938);
-(s = r || (r = {})).SHORT = "SHORT", s.LONG = "LONG";
-class m extends(o = u.PureComponent) {
+(i = l || (l = {})).SHORT = "SHORT", i.LONG = "LONG";
+class m extends(o = d.PureComponent) {
   getText(e, t) {
     if (429 === e.status) switch (t) {
       case "SHORT":
@@ -27,7 +27,7 @@ class m extends(o = u.PureComponent) {
     }
   }
   componentWillUnmount() {
-    null != this.props.purchaseError && E.Z.wait(() => h.pB())
+    null != this.props.purchaseError && _.Z.wait(() => E.pB())
   }
   render() {
     let {
@@ -41,13 +41,13 @@ class m extends(o = u.PureComponent) {
     })
   }
 }
-a = {
+r = {
   messageStyle: "LONG"
-}, (l = "defaultProps") in(i = m) ? Object.defineProperty(i, l, {
-  value: a,
+}, (a = "defaultProps") in(s = m) ? Object.defineProperty(s, a, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = d.ZP.connectStores([_.Z], () => ({
-  purchaseError: _.Z.error
+}) : s[a] = r, t.Z = u.ZP.connectStores([h.Z], () => ({
+  purchaseError: h.Z.error
 }))(m)

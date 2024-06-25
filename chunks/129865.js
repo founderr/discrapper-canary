@@ -1,5 +1,5 @@
-var l = t(818083);
-s.Z = (0, l.B)({
+var n = s(818083);
+t.Z = (0, n.B)({
   kind: "guild",
   id: "2024-03_advanced_slowmode_input",
   label: "advanced slowmode input",

@@ -1,112 +1,112 @@
 "use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(392711),
-  a = t.n(l),
-  r = t(792986),
-  o = t(442837),
-  c = t(481060),
-  d = t(946314),
-  u = t(938502),
-  E = t(967916),
-  _ = t(68638),
-  I = t(816817),
-  T = t(219369),
-  N = t(650774),
-  m = t(845377),
-  S = t(981631),
-  h = t(689938),
-  g = t(976819),
-  C = t(716455);
+n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(392711),
+  r = n.n(i),
+  l = n(792986),
+  o = n(442837),
+  c = n(481060),
+  d = n(946314),
+  u = n(938502),
+  _ = n(967916),
+  E = n(68638),
+  I = n(816817),
+  T = n(219369),
+  m = n(650774),
+  N = n(845377),
+  S = n(981631),
+  h = n(689938),
+  g = n(976819),
+  C = n(716455);
 let x = ["322850917248663552", "172018499005317120", "414234792121597953", "228406572756369408"],
-  R = ["620723483965653003", "662246299369734154", "181970867549503489", "102860784329052160"];
-s.Z = e => {
+  p = ["620723483965653003", "662246299369734154", "181970867549503489", "102860784329052160"];
+t.Z = e => {
   let {
-    guild: s,
-    onEnableDiscovery: t,
-    isGuildAdmin: l
-  } = e, [L, O] = (0, r.Z)(() => [a().sample(x), a().sample(R)], []);
-  i.useEffect(() => {
-    E.z([L, O])
-  }, [L, O]);
-  let [A, p] = (0, o.Wu)([_.Z], () => [_.Z.getGuild(L), _.Z.getGuild(O)], [L, O]), {
-    canEnableDiscovery: M,
-    isPendingSuccess: f
+    guild: t,
+    onEnableDiscovery: n,
+    isGuildAdmin: i
+  } = e, [R, f] = (0, l.Z)(() => [r().sample(x), r().sample(p)], []);
+  a.useEffect(() => {
+    _.z([R, f])
+  }, [R, f]);
+  let [L, O] = (0, o.Wu)([E.Z], () => [E.Z.getGuild(R), E.Z.getGuild(f)], [R, f]), {
+    canEnableDiscovery: A,
+    isPendingSuccess: M
   } = (0, o.cj)([d.ZP], () => ({
-    canEnableDiscovery: d.ZP.passesChecklist(s.id),
-    isPendingSuccess: d.ZP.isPendingSuccess(s.id)
-  }), [s.id]), [D, v] = (0, o.Wu)([N.Z], () => [null, N.Z.getMemberCount(s.id)], [s.id]), j = i.useCallback(() => {
-    null != t && t()
-  }, [t]), Z = null;
-  return l ? f ? Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, n.jsxs)("div", {
+    canEnableDiscovery: d.ZP.passesChecklist(t.id),
+    isPendingSuccess: d.ZP.isPendingSuccess(t.id)
+  }), [t.id]), [v, D] = (0, o.Wu)([m.Z], () => [null, m.Z.getMemberCount(t.id)], [t.id]), j = a.useCallback(() => {
+    null != n && n()
+  }, [n]), Z = null;
+  return i ? M ? Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !A && (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, s.jsxs)("div", {
     className: g.container,
-    children: [(0, n.jsx)("img", {
+    children: [(0, s.jsx)("img", {
       alt: "",
       src: C,
       className: g.sparkles
-    }), (0, n.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: g.discoverPreview,
-      children: [(0, n.jsx)(I.Z, {
+      children: [(0, s.jsx)(I.Z, {
         className: g.placeholderCard,
         disabled: !0,
         small: !0,
-        loading: null == A,
-        guild: A
-      }), (0, n.jsx)(I.Z, {
+        loading: null == L,
+        guild: L
+      }), (0, s.jsx)(I.Z, {
         className: g.previewCard,
-        guild: s,
+        guild: t,
         description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
-        presenceCount: D,
-        memberCount: v
-      }), (0, n.jsx)(I.Z, {
+        presenceCount: v,
+        memberCount: D
+      }), (0, s.jsx)(I.Z, {
         className: g.placeholderCard,
         disabled: !0,
         small: !0,
-        loading: null == p,
-        guild: p
+        loading: null == O,
+        guild: O
       })]
-    }), (0, n.jsx)(c.Heading, {
+    }), (0, s.jsx)(c.Heading, {
       className: g.header,
       variant: "heading-xl/semibold",
       children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
-    }), (0, n.jsx)(c.Text, {
+    }), (0, s.jsx)(c.Text, {
       variant: "text-md/normal",
       className: g.valueProp,
       color: "header-secondary",
       children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
         onLinkClick: () => (0, T.lW)({
           articleId: S.BhN.SERVER_DISCOVERY,
-          guildId: s.id,
+          guildId: t.id,
           pageView: u.d5.INTRO
         })
       })
-    }), (0, n.jsx)(c.Text, {
+    }), (0, s.jsx)(c.Text, {
       variant: "text-md/normal",
       className: g.byline,
       color: "header-secondary",
       children: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
         onGuidelinesClick: () => (0, T.lW)({
           articleId: S.BhN.SERVER_DISCOVERY_GUIDELINES,
-          guildId: s.id,
+          guildId: t.id,
           pageView: u.d5.INTRO
         })
       })
-    }), (0, n.jsx)(c.Tooltip, {
+    }), (0, s.jsx)(c.Tooltip, {
       text: Z,
-      children: e => (0, n.jsx)(c.Button, {
+      children: e => (0, s.jsx)(c.Button, {
         ...e,
         className: g.enableButton,
         color: c.Button.Colors.BRAND,
         size: c.Button.Sizes.LARGE,
-        disabled: !M || !l,
+        disabled: !A || !i,
         onClick: j,
         children: h.Z.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
       })
-    }), (0, n.jsx)(m.Z, {
+    }), (0, s.jsx)(N.Z, {
       className: g.checklist,
-      guild: s,
-      guildId: s.id
+      guild: t,
+      guildId: t.id
     })]
   })
 }

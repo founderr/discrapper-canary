@@ -1,10 +1,10 @@
-e.d(n, {
+n.d(t, {
   L: function() {
-    return i
+    return r
   }
 });
-var a = e(782568);
+var a = n(782568);
 
-function i(t) {
-  return (0, a.Z)(t)
+function r(e) {
+  return (0, a.Z)(e)
 }

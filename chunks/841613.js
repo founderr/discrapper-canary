@@ -1,34 +1,34 @@
-s.d(t, {
+n.d(t, {
   Gl: function() {
     return i
   },
   hG: function() {
-    return a
+    return s
   },
   oI: function() {
     return o
   }
 });
-var n = s(570140);
+var a = n(570140);
 
-function a(e, t, s) {
-  n.Z.dispatch({
+function s(e, t, n) {
+  a.Z.dispatch({
     type: "CONNECTED_DEVICE_SET",
     displayName: e,
     connectedDevicePreference: t,
-    location: s
+    location: n
   })
 }
 
 function i(e) {
-  n.Z.dispatch({
+  a.Z.dispatch({
     type: "CONNECTED_DEVICE_IGNORE",
     displayName: e
   })
 }
 
 function o() {
-  n.Z.dispatch({
+  a.Z.dispatch({
     type: "CONNECTED_DEVICE_NEVER_SHOW_MODAL"
   })
 }

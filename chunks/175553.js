@@ -6,22 +6,22 @@ n.d(t, {
 });
 var i = n(454902),
   s = n(768581),
-  l = n(312839),
+  a = n(312839),
   o = n(981631),
-  a = n(987650),
-  r = n(689938);
+  r = n(987650),
+  l = n(689938);
 
 function c(e, t) {
   let n = e.username,
-    c = r.Z.Messages.USER_ACTIVITY_USER_JOIN.format({
+    c = l.Z.Messages.USER_ACTIVITY_USER_JOIN.format({
       username: ""
     }),
     d = (0, s.ov)(e),
     {
       trackView: u,
       trackClick: h
-    } = (0, l.R)(a.n0.ActivityUserJoin, {
-      notif_type: a.n0.ActivityUserJoin,
+    } = (0, a.R)(r.n0.ActivityUserJoin, {
+      notif_type: r.n0.ActivityUserJoin,
       notif_user_id: e.id,
       activity_type: o.mFx.JOIN,
       activity_name: t.name
@@ -31,7 +31,7 @@ function c(e, t) {
     icon: d,
     title: n,
     body: c,
-    hint: e => (0, i.Yj)(e, r.Z.Messages.USER_ACTIVITY_USER_JOIN_HINT),
+    hint: e => (0, i.Yj)(e, l.Z.Messages.USER_ACTIVITY_USER_JOIN_HINT),
     onNotificationShow: () => {
       u()
     },

@@ -1,46 +1,46 @@
 var n = t(735250);
 t(470079);
-var i = t(481060),
-  a = t(689938),
-  l = t(304089);
+var a = t(481060),
+  i = t(689938),
+  r = t(304089);
 s.Z = function(e) {
   let {
     hasGuildBoostSlots: s,
-    hasAppliedGuildBoosts: r,
-    isUserPremiumTier2: o,
+    hasAppliedGuildBoosts: o,
+    isUserPremiumTier2: l,
     subscriptionIsPausedOrPausePending: c
   } = e;
   return (0, n.jsxs)("div", {
-    className: l.wrapper,
+    className: r.wrapper,
     children: [(0, n.jsx)("div", {
-      className: l.guildBoostGemWrapper,
+      className: r.guildBoostGemWrapper,
       children: (0, n.jsx)("img", {
         alt: "",
-        className: l.guildBoostGem,
+        className: r.guildBoostGem,
         src: t(908635)
       })
     }), (0, n.jsxs)("div", {
-      className: l.gradient,
-      children: [(0, n.jsx)(i.Heading, {
+      className: r.gradient,
+      children: [(0, n.jsx)(a.Heading, {
         variant: "display-md",
-        className: l.heading,
+        className: r.heading,
         children: function(e) {
           let {
             hasGuildBoostSlots: s,
             hasAppliedGuildBoosts: t,
             isUserPremiumTier2: n,
-            subscriptionIsPausedOrPausePending: i
+            subscriptionIsPausedOrPausePending: a
           } = e;
-          return i ? a.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : s ? n && !t ? a.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : a.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : a.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS
+          return a ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : s ? n && !t ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS
         }({
           hasGuildBoostSlots: s,
-          isUserPremiumTier2: o,
-          hasAppliedGuildBoosts: r,
+          isUserPremiumTier2: l,
+          hasAppliedGuildBoosts: o,
           subscriptionIsPausedOrPausePending: c
         })
       }), (0, n.jsx)("svg", {
         viewBox: "0 0 660 210",
-        className: l.wave,
+        className: r.wave,
         children: (0, n.jsx)("path", {
           d: "M101.3,45.5C57.5,45.9,15.9,82.2,0,99.5V210h660V53.5c-164-137-265.2,32.4-385.8,33.6  C177.7,88.1,158.1,45,101.3,45.5z"
         })

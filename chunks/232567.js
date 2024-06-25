@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   In: function() {
-    return f
+    return S
   },
   Lr: function() {
     return T
   },
   PR: function() {
-    return S
+    return f
   },
   k: function() {
     return I
@@ -75,7 +75,7 @@ function h(e, t) {
   })
 }
 
-function S(e) {
+function f(e) {
   let t = _.default.getUser(e);
   return null != t ? Promise.resolve(t) : a.tn.get({
     url: d.ANM.USER(e),
@@ -85,7 +85,7 @@ function S(e) {
     user: t.body
   }), _.default.getUser(e)))
 }
-async function f(e) {
+async function S(e) {
   let {
     friendToken: t,
     withMutualGuilds: n,

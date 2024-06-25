@@ -1,8 +1,8 @@
 "use strict";
-var s = n(735250),
-  l = n(470079),
-  a = n(120356),
-  r = n.n(a),
+var a = n(735250),
+  s = n(470079),
+  r = n(120356),
+  l = n.n(r),
   i = n(920906),
   o = n(442837),
   c = n(780384),
@@ -10,106 +10,106 @@ var s = n(735250),
   u = n(410030),
   m = n(607070),
   h = n(961675),
-  g = n(883429),
-  x = n(432771),
-  _ = n(406074),
-  E = n(434404),
+  _ = n(883429),
+  g = n(432771),
+  x = n(406074),
+  C = n(434404),
   f = n(430824),
-  C = n(810090),
+  p = n(810090),
   T = n(63063),
-  N = n(595433),
-  I = n(981631),
-  S = n(689938),
-  p = n(167117),
+  I = n(595433),
+  E = n(981631),
+  N = n(689938),
+  b = n(167117),
   v = n(906739),
-  M = n(965358),
-  j = n(420196),
+  S = n(965358),
+  M = n(420196),
   A = n(433075);
 
-function R(e) {
+function j(e) {
   let {
     handleHide: t
   } = e;
-  return (0, s.jsx)(d.Clickable, {
+  return (0, a.jsx)(d.Clickable, {
     onClick: t,
-    className: p.closeButton,
-    "aria-label": S.Z.Messages.DISMISS,
-    children: (0, s.jsx)(d.CloseSmallIcon, {
+    className: b.closeButton,
+    "aria-label": N.Z.Messages.DISMISS,
+    children: (0, a.jsx)(d.CloseSmallIcon, {
       size: "md",
       color: "currentColor",
-      className: p.closeIcon
+      className: b.closeIcon
     })
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     username: t,
     title: n,
-    videoSrc: l,
-    messageCount: a,
+    videoSrc: s,
+    messageCount: r,
     reaction: i,
     reactionCount: o,
     classname: c
   } = e;
-  return (0, s.jsxs)("div", {
-    className: r()(p.videoPreview, c),
-    children: [(0, s.jsx)("div", {
-      className: p.authorRow,
-      children: (0, s.jsxs)("div", {
-        className: p.rowGroup,
-        children: [(0, s.jsx)(d.Text, {
+  return (0, a.jsxs)("div", {
+    className: l()(b.videoPreview, c),
+    children: [(0, a.jsx)("div", {
+      className: b.authorRow,
+      children: (0, a.jsxs)("div", {
+        className: b.rowGroup,
+        children: [(0, a.jsx)(d.Text, {
           tag: "span",
-          className: p.author,
+          className: b.author,
           variant: "text-sm/semibold",
           children: t
-        }), (0, s.jsx)(d.Text, {
+        }), (0, a.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          className: p.postCreationTimestamp,
-          children: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TIMESTAMP
+          className: b.postCreationTimestamp,
+          children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TIMESTAMP
         })]
       })
-    }), (0, s.jsx)(d.Heading, {
+    }), (0, a.jsx)(d.Heading, {
       variant: "heading-md/extrabold",
-      className: p.title,
+      className: b.title,
       color: "header-primary",
       "aria-hidden": !0,
       children: n
-    }), (0, s.jsx)(d.Spacer, {
+    }), (0, a.jsx)(d.Spacer, {
       size: 10
-    }), (0, s.jsx)(C.Z, {
-      className: p.video,
-      src: l,
+    }), (0, a.jsx)(p.Z, {
+      className: b.video,
+      src: s,
       autoPlay: !0,
       loop: !0,
       muted: !0
-    }), (0, s.jsx)(d.Spacer, {
+    }), (0, a.jsx)(d.Spacer, {
       size: 10
-    }), (0, s.jsx)("div", {
-      className: p.footer,
-      children: (0, s.jsxs)("div", {
-        className: p.forumPostControls,
-        children: [(0, s.jsxs)("div", {
-          className: p.messageCountBox,
-          children: [(0, s.jsx)("span", {
-            className: p.messageCountIcon,
-            children: (0, s.jsx)(d.ChatIcon, {
+    }), (0, a.jsx)("div", {
+      className: b.footer,
+      children: (0, a.jsxs)("div", {
+        className: b.forumPostControls,
+        children: [(0, a.jsxs)("div", {
+          className: b.messageCountBox,
+          children: [(0, a.jsx)("span", {
+            className: b.messageCountIcon,
+            children: (0, a.jsx)(d.ChatIcon, {
               size: "xs",
               color: "currentColor"
             })
-          }), (0, s.jsx)(d.Text, {
+          }), (0, a.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "interactive-normal",
-            children: a
+            children: r
           })]
-        }), (0, s.jsxs)("div", {
-          className: p.reactionBox,
-          children: [(0, s.jsx)("span", {
+        }), (0, a.jsxs)("div", {
+          className: b.reactionBox,
+          children: [(0, a.jsx)("span", {
             role: "img",
             "aria-label": "",
             children: i
-          }), (0, s.jsx)(d.Text, {
+          }), (0, a.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "interactive-normal",
             children: o
@@ -122,173 +122,173 @@ function O(e) {
 t.Z = e => {
   var t, n;
   let {
-    channel: a
-  } = e, C = (0, u.ZP)(), b = (0, c.wj)(C), Z = (0, o.e7)([f.Z], () => f.Z.getGuild(a.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([h.Z], () => h.Z.hasHidden(a.id)), D = (0, _.C)({
-    guildId: a.guild_id,
-    channelId: a.id
+    channel: r
+  } = e, p = (0, u.ZP)(), O = (0, c.wj)(p), Z = (0, o.e7)([f.Z], () => f.Z.getGuild(r.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([h.Z], () => h.Z.hasHidden(r.id)), w = (0, x.C)({
+    guildId: r.guild_id,
+    channelId: r.id
   }), {
     transitions: y,
-    setVisible: U
-  } = (0, N.H)(L), F = l.useCallback(() => {
-    U(!1), g.Z.hideAdminOnboarding(a.id, !0)
-  }, [a, U]);
-  l.useEffect(() => {
-    !(0, x.c)(a.id) && U(!P)
-  }, [a, U, P]);
-  let w = l.useMemo(() => [S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
-    H = l.useMemo(() => [S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
-    k = () => {
-      E.Z.open(a.guild_id, I.pNK.ROLE_SUBSCRIPTIONS)
+    setVisible: D
+  } = (0, I.H)(L), F = s.useCallback(() => {
+    D(!1), _.Z.hideAdminOnboarding(r.id, !0)
+  }, [r, D]);
+  s.useEffect(() => {
+    !(0, g.c)(r.id) && D(!P)
+  }, [r, D, P]);
+  let U = s.useMemo(() => [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
+    k = s.useMemo(() => [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
+    H = () => {
+      C.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS)
     },
-    B = null !== (t = null == Z ? void 0 : Z.hasFeature(I.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
-    G = null !== (n = (null == Z ? void 0 : Z.hasFeature(I.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(I.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,
-    z = G ? S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
-    V = G ? S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
-  return (0, s.jsx)(s.Fragment, {
-    children: y((e, t) => t ? (0, s.jsxs)(i.animated.div, {
+    B = null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
+    G = null !== (n = (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,
+    z = G ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
+    V = G ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
+  return (0, a.jsx)(a.Fragment, {
+    children: y((e, t) => t ? (0, a.jsxs)(i.animated.div, {
       style: e,
-      className: p.container,
-      children: [(0, s.jsxs)("div", {
-        className: r()(p.__invalid_wrapper, p.headerRow),
-        children: [(0, s.jsxs)(d.Text, {
+      className: b.container,
+      children: [(0, a.jsxs)("div", {
+        className: l()(b.__invalid_wrapper, b.headerRow),
+        children: [(0, a.jsxs)(d.Text, {
           variant: "text-xs/normal",
-          className: p.visibilityInfo,
-          children: [(0, s.jsx)(d.CircleInformationIcon, {
+          className: b.visibilityInfo,
+          children: [(0, a.jsx)(d.CircleInformationIcon, {
             size: "xxs",
             color: "currentColor",
-            className: p.icon
-          }), S.Z.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
-        }), (0, s.jsx)(R, {
+            className: b.icon
+          }), N.Z.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
+        }), (0, a.jsx)(j, {
           handleHide: F
         })]
-      }), (0, s.jsxs)("div", {
-        className: p.contentContainer,
-        children: [(0, s.jsxs)("div", {
-          className: r()(p.contentRow, G && p.contentRowOne),
-          children: [(0, s.jsx)("div", {
-            className: r()(p.contentMediaContainer),
-            children: (0, s.jsxs)("div", {
-              className: p.contentVideoContainer,
-              children: [(0, s.jsx)(O, {
-                username: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_ONE,
+      }), (0, a.jsxs)("div", {
+        className: b.contentContainer,
+        children: [(0, a.jsxs)("div", {
+          className: l()(b.contentRow, G && b.contentRowOne),
+          children: [(0, a.jsx)("div", {
+            className: l()(b.contentMediaContainer),
+            children: (0, a.jsxs)("div", {
+              className: b.contentVideoContainer,
+              children: [(0, a.jsx)(R, {
+                username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_ONE,
                 videoSrc: "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
-                title: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_ONE,
+                title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_ONE,
                 messageCount: "34",
                 reaction: "⚡️",
                 reactionCount: "724",
-                classname: p.backgroundVideo
-              }), (0, s.jsx)(O, {
-                username: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_TWO,
+                classname: b.backgroundVideo
+              }), (0, a.jsx)(R, {
+                username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_TWO,
                 videoSrc: "https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4",
-                title: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_TWO,
+                title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_TWO,
                 messageCount: "34",
                 reactionCount: "84",
                 reaction: "\uD83D\uDC9E",
-                classname: r()(p.backgroundVideo, p.secondaryVideo)
-              }), (0, s.jsx)(O, {
-                username: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_THREE,
+                classname: l()(b.backgroundVideo, b.secondaryVideo)
+              }), (0, a.jsx)(R, {
+                username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_THREE,
                 videoSrc: "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",
-                title: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_THREE,
+                title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_THREE,
                 messageCount: "7,103",
                 reaction: "⚡️",
                 reactionCount: "724",
-                classname: p.highlightVideo
+                classname: b.highlightVideo
               })]
             })
-          }), (0, s.jsxs)("article", {
-            className: p.contentTextContainer,
-            children: [(0, s.jsx)(d.Heading, {
+          }), (0, a.jsxs)("article", {
+            className: b.contentTextContainer,
+            children: [(0, a.jsx)(d.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: z
-            }), (0, s.jsx)(d.Spacer, {
+            }), (0, a.jsx)(d.Spacer, {
               size: 8
-            }), (0, s.jsx)(d.Text, {
+            }), (0, a.jsx)(d.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: V
-            }), (0, s.jsx)(d.Spacer, {
+            }), (0, a.jsx)(d.Spacer, {
               size: 16
-            }), (0, s.jsxs)(d.Clickable, {
-              onClick: () => open(T.Z.getCreatorSupportArticleURL(I.BhN.MEDIA_CHANNEL)),
-              className: p.helpCenterLink,
-              children: [(0, s.jsx)(d.Text, {
+            }), (0, a.jsxs)(d.Clickable, {
+              onClick: () => open(T.Z.getCreatorSupportArticleURL(E.BhN.MEDIA_CHANNEL)),
+              className: b.helpCenterLink,
+              children: [(0, a.jsx)(d.Text, {
                 variant: "text-sm/medium",
                 color: "text-link",
-                className: p.__invalid_helpCenterLinkText,
-                children: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HELP_CENTER
-              }), (0, s.jsx)(d.WindowLaunchIcon, {
+                className: b.__invalid_helpCenterLinkText,
+                children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HELP_CENTER
+              }), (0, a.jsx)(d.WindowLaunchIcon, {
                 size: "xs",
                 color: "currentColor",
-                className: p.helpCenterLinkIcon
+                className: b.helpCenterLinkIcon
               })]
-            }), (0, s.jsx)(d.Spacer, {
+            }), (0, a.jsx)(d.Spacer, {
               size: 16
-            }), (0, s.jsx)("div", {
-              className: p.mediaChannelTagsContainer,
-              children: w.map(e => (0, s.jsx)(d.Text, {
+            }), (0, a.jsx)("div", {
+              className: b.mediaChannelTagsContainer,
+              children: U.map(e => (0, a.jsx)(d.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
-                className: p.mediaChannelTag,
+                className: b.mediaChannelTag,
                 children: e
               }, e))
             })]
           })]
-        }), G && (0, s.jsxs)("div", {
-          className: r()(p.contentRow, p.contentRowTwo),
-          children: [(0, s.jsx)("div", {
-            className: r()(p.contentMediaContainer),
-            children: (0, s.jsxs)("div", {
-              className: p.contentImageContainer,
-              children: [(0, s.jsx)("img", {
-                src: b ? j : A,
+        }), G && (0, a.jsxs)("div", {
+          className: l()(b.contentRow, b.contentRowTwo),
+          children: [(0, a.jsx)("div", {
+            className: l()(b.contentMediaContainer),
+            children: (0, a.jsxs)("div", {
+              className: b.contentImageContainer,
+              children: [(0, a.jsx)("img", {
+                src: O ? M : A,
                 alt: "",
-                className: r()(p.previewEmbedImage, p.secondaryImage)
-              }), (0, s.jsx)("img", {
-                src: b ? v : M,
+                className: l()(b.previewEmbedImage, b.secondaryImage)
+              }), (0, a.jsx)("img", {
+                src: O ? v : S,
                 alt: "",
-                className: p.previewEmbedImage
+                className: b.previewEmbedImage
               })]
             })
-          }), (0, s.jsxs)("article", {
-            className: p.contentTextContainer,
-            children: [(0, s.jsxs)(d.Text, {
+          }), (0, a.jsxs)("article", {
+            className: b.contentTextContainer,
+            children: [(0, a.jsxs)(d.Text, {
               variant: "text-xxs/bold",
-              className: p.serverSubPill,
-              children: [S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SERVER_SUB_PILL, " ", (0, s.jsx)("span", {
+              className: b.serverSubPill,
+              children: [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SERVER_SUB_PILL, " ", (0, a.jsx)("span", {
                 role: "img",
                 "aria-label": "",
                 children: "\uD83D\uDD25"
               })]
-            }), (0, s.jsx)(d.Spacer, {
+            }), (0, a.jsx)(d.Spacer, {
               size: 10
-            }), (0, s.jsx)(d.Heading, {
+            }), (0, a.jsx)(d.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
-              children: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
-            }), (0, s.jsx)(d.Spacer, {
+              children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
+            }), (0, a.jsx)(d.Spacer, {
               size: 8
-            }), (0, s.jsx)(d.Text, {
+            }), (0, a.jsx)(d.Text, {
               variant: "text-md/normal",
               color: "text-muted",
-              children: S.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
-            }), (0, s.jsx)(d.Spacer, {
+              children: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
+            }), (0, a.jsx)(d.Spacer, {
               size: 16
-            }), (0, s.jsx)("div", {
-              className: p.mediaChannelTagsContainer,
-              children: H.map(e => (0, s.jsx)(d.Text, {
+            }), (0, a.jsx)("div", {
+              className: b.mediaChannelTagsContainer,
+              children: k.map(e => (0, a.jsx)(d.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
-                className: p.mediaChannelTag,
+                className: b.mediaChannelTag,
                 children: e
               }, e))
-            }), (0, s.jsx)(d.Spacer, {
+            }), (0, a.jsx)(d.Spacer, {
               size: 16
-            }), 0 === D.length && (0, s.jsx)(d.ShinyButton, {
+            }), 0 === w.length && (0, a.jsx)(d.ShinyButton, {
               size: d.Button.Sizes.MEDIUM,
               pauseAnimation: L,
-              onClick: k,
-              className: p.addChannelButton,
+              onClick: H,
+              className: b.addChannelButton,
               color: d.Button.Colors.CUSTOM,
               children: B
             })]

@@ -1,22 +1,22 @@
 n.d(t, {
   H: function() {
-    return i
+    return a
   },
   c: function() {
-    return r
+    return s
   }
 });
-var s = n(570140);
+var i = n(570140);
 
-function r(e) {
-  s.Z.wait(() => s.Z.dispatch({
+function s(e) {
+  i.Z.wait(() => i.Z.dispatch({
     type: "NUF_NEW_USER",
     newUserType: e
   }))
 }
 
-function i() {
-  s.Z.wait(() => s.Z.dispatch({
+function a() {
+  i.Z.wait(() => i.Z.dispatch({
     type: "NUF_COMPLETE"
   }))
 }

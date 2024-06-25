@@ -21,9 +21,9 @@ var i = n(470079),
   I = n(763296),
   T = n(697426),
   h = n(549771),
-  S = n(710111);
+  f = n(710111);
 
-function f(e) {
+function S(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = e.map(e => ({
       type: T.vB.SOUND,
@@ -32,7 +32,7 @@ function f(e) {
   return t ? n.sort((e, t) => c.default.compare(e.sound.soundId, t.sound.soundId)) : n
 }
 
-function N(e) {
+function A(e) {
   let {
     sections: t,
     guildIds: n,
@@ -41,7 +41,7 @@ function N(e) {
     sectionType: s,
     sortById: o
   } = e, a = {};
-  for (let e of [...n, S.X8]) {
+  for (let e of [...n, f.X8]) {
     var l;
     for (let t of null !== (l = i.get(e)) && void 0 !== l ? l : []) null != r.find(e => e === t.soundId) && (a[t.soundId] = t)
   }
@@ -50,7 +50,7 @@ function N(e) {
     let t = a[e];
     null != t && u.push(t)
   }
-  let _ = f(u, o);
+  let _ = S(u, o);
   _.length > 0 && t.push({
     key: s,
     categoryInfo: {
@@ -60,24 +60,24 @@ function N(e) {
   })
 }
 
-function A(e, t) {
+function N(e, t) {
   var n;
-  let i = null !== (n = t.get(S.X8)) && void 0 !== n ? n : S.Hy;
+  let i = null !== (n = t.get(f.X8)) && void 0 !== n ? n : f.Hy;
   e.push({
     key: T.bg.DEFAULTS,
     categoryInfo: {
       type: T.bg.DEFAULTS
     },
-    items: f(i)
+    items: S(i)
   })
 }
 
 function m(e) {
   let {
     filterOutEmptyCurrentGuild: t = !1
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, r.e7)([u.default], () => u.default.getCurrentUser()), [S, m, O] = (0, r.Wu)([I.Z], () => [I.Z.getSounds(), I.Z.getFavorites(), I.Z.isFetching()]), R = (0, h.h)(e, !1), p = (0, r.Wu)([a.Z], () => {
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, r.e7)([u.default], () => u.default.getCurrentUser()), [f, m, O] = (0, r.Wu)([I.Z], () => [I.Z.getSounds(), I.Z.getFavorites(), I.Z.isFetching()]), p = (0, h.h)(e, !1), R = (0, r.Wu)([a.Z], () => {
     let e = [];
-    return R.forEach(t => {
+    return p.forEach(t => {
       let n = a.Z.getGuild(t);
       null != n && e.push(n)
     }), e
@@ -99,27 +99,27 @@ function m(e) {
   }(), P = (0, r.Wu)([E.Z], () => E.Z.recentlyHeardSoundIds);
   return i.useMemo(() => {
     let e = [];
-    return n ? (A(e, S), {
+    return n ? (N(e, f), {
       categories: e,
       isFetching: O
-    }) : (N({
+    }) : (A({
       sections: e,
-      guildIds: R,
-      allSounds: S,
+      guildIds: p,
+      allSounds: f,
       potentialSoundIdsForSection: Array.from(m),
       sectionType: T.bg.FAVORITES,
       sortById: !0
-    }), L && N({
+    }), L && A({
       sections: e,
-      guildIds: R,
-      allSounds: S,
+      guildIds: p,
+      allSounds: f,
       potentialSoundIdsForSection: P,
       sectionType: T.bg.RECENTLY_HEARD,
       sortById: !1
-    }), D && N({
+    }), D && A({
       sections: e,
-      guildIds: R,
-      allSounds: S,
+      guildIds: p,
+      allSounds: f,
       potentialSoundIdsForSection: M.map(e => e.soundId),
       sectionType: T.bg.FREQUENTLY_USED,
       sortById: !1
@@ -127,7 +127,7 @@ function m(e) {
       var s;
       if (null == t) return;
       let o = null !== (s = i.get(t.id)) && void 0 !== s ? s : [],
-        a = f(o),
+        a = S(o),
         l = o.length < t.getMaxSoundboardSlots() && n,
         u = 0 === a.length;
       (l || u) && !r && a.push({
@@ -142,11 +142,11 @@ function m(e) {
         key: t.id,
         items: a
       })
-    }(e, C, v, S, t), !g && A(e, S), ! function(e, t, n, i) {
+    }(e, C, v, f, t), !g && N(e, f), ! function(e, t, n, i) {
       for (let s of t) {
         var r;
         if (s.id === n) continue;
-        let t = f(null !== (r = i.get(s.id)) && void 0 !== r ? r : []);
+        let t = S(null !== (r = i.get(s.id)) && void 0 !== r ? r : []);
         t.length > 0 && e.push({
           categoryInfo: {
             type: T.bg.GUILD,
@@ -156,11 +156,11 @@ function m(e) {
           items: t
         })
       }
-    }(e, p, null == C ? void 0 : C.id, S), g && A(e, S), {
+    }(e, R, null == C ? void 0 : C.id, f), g && N(e, f), {
       categories: e,
       isFetching: O
     })
-  }, [R, S, m, P, M, D, L, C, v, t, g, p, n, O])
+  }, [p, f, m, P, M, D, L, C, v, t, g, R, n, O])
 }
 
 function O(e, t, n) {
@@ -169,6 +169,6 @@ function O(e, t, n) {
     categoryInfo: {
       type: T.bg.SEARCH
     },
-    items: f(t, !1)
+    items: S(t, !1)
   }] : e, [e, n.length, t])
 }

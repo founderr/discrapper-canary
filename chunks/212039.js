@@ -28,18 +28,18 @@ async function l(e) {
     });
     t.start()
   };
-  let r = new Promise(e => {
-    t.onSamples = (n, r, i) => {
-      for (let e of i) a.addSample(n, e.data, e);
-      t.releaseUsedSamples(n, i.length), delete l[n];
-      let s = a.getTrackById(n),
-        o = t.getTrackById(n);
-      if (null != o.edts) {
-        let e = o.edts.elst;
-        s.add("edts").boxes.push(e)
+  let i = new Promise(e => {
+    t.onSamples = (n, i, r) => {
+      for (let e of r) a.addSample(n, e.data, e);
+      t.releaseUsedSamples(n, r.length), delete l[n];
+      let o = a.getTrackById(n),
+        s = t.getTrackById(n);
+      if (null != s.edts) {
+        let e = s.edts.elst;
+        o.add("edts").boxes.push(e)
       }
       0 === Object.keys(l).length && e()
     }
   });
-  return t.appendBuffer(e), t.flush(), await r, a.getBuffer()
+  return t.appendBuffer(e), t.flush(), await i, a.getBuffer()
 }

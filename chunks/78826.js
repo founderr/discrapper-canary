@@ -36,7 +36,7 @@ function u(e) {
     for (let t of d) !l(t) && e.add(t);
     e.size !== d.size && E(e)
   }, [d]);
-  let S = r.useCallback(e => {
+  let f = r.useCallback(e => {
       let {
         assetNode: t,
         nodeId: i,
@@ -52,13 +52,13 @@ function u(e) {
         }), c(!0)
       }
     }, [n, u]),
-    f = r.useCallback(e => {
+    S = r.useCallback(e => {
       E(t => {
         let n = new Set(t);
         return n.delete(e), n
       })
     }, []),
-    N = r.useCallback((e, t) => {
+    A = r.useCallback((e, t) => {
       var n;
       if (T(!0), l(e)) return;
       E(t => {
@@ -67,27 +67,27 @@ function u(e) {
       });
       let i = (n = e, (0, s.k)(n, HTMLImageElement) ? "load" : (0, s.k)(n, HTMLVideoElement) ? "canplaythrough" : "load");
       e.addEventListener(i, function t() {
-        f(e), e.removeEventListener(i, t)
+        S(e), e.removeEventListener(i, t)
       });
       e.addEventListener("error", function n(i) {
-        f(e), S({
+        S(e), f({
           assetNode: e,
           nodeId: t,
           errorPrefix: "Error loading asset",
           errorMessage: "message" in i ? i.message : null
         }), e.removeEventListener("error", n)
       })
-    }, [S, f]),
-    A = r.useMemo(() => d.size > 0 || !I, [I, d]);
+    }, [f, S]),
+    N = r.useMemo(() => d.size > 0 || !I, [I, d]);
   r.useEffect(() => {
-    !A && (h.current = !0)
-  }, [A]);
+    !N && (h.current = !0)
+  }, [N]);
   let m = r.useMemo(() => ({
-    registerAsset: N,
-    unregisterAsset: f,
+    registerAsset: A,
+    unregisterAsset: S,
     hasError: _,
-    isLoading: A && !h.current
-  }), [N, f, _, A]);
+    isLoading: N && !h.current
+  }), [A, S, _, N]);
   return (0, i.jsx)(a.Provider, {
     value: m,
     children: t

@@ -1,4 +1,4 @@
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-08_dcf_ml_model",
   label: "DCF ML Perks Relevance Model",
@@ -37,4 +37,4 @@ let s = (0, n(818083).B)({
     }
   }]
 });
-t.Z = s
+t.Z = i

@@ -1,6 +1,6 @@
-var t, i;
-n.d(a, {
+var a, i;
+n.d(t, {
   c: function() {
-    return t
+    return a
   }
-}), (i = t || (t = {}))[i.SEARCH_RESULTS = 1] = "SEARCH_RESULTS", i[i.MUSIC = 2] = "MUSIC"
+}), (i = a || (a = {}))[i.SEARCH_RESULTS = 1] = "SEARCH_RESULTS", i[i.MUSIC = 2] = "MUSIC"

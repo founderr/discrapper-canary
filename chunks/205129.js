@@ -1,12 +1,12 @@
 n.d(t, {
   y: function() {
-    return l
+    return a
   }
 });
-var s = n(603113),
-  i = n(122810);
+var i = n(603113),
+  s = n(122810);
 
-function l(e) {
+function a(e) {
   return {
     af_voice_chat: e.voiceChannels.length > 0,
     af_people_count: e.partiedMembers.length,
@@ -14,8 +14,8 @@ function l(e) {
       let {
         activity: t
       } = e;
-      return (0, i.Z)(t)
+      return (0, s.Z)(t)
     }),
-    game_platform: e.currentActivities.length > 0 ? (0, s.Z)(e.currentActivities[0].activity) : null
+    game_platform: e.currentActivities.length > 0 ? (0, i.Z)(e.currentActivities[0].activity) : null
   }
 }

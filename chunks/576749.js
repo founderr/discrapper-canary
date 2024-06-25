@@ -1,15 +1,15 @@
-var l = n(481060),
-  i = n(40851),
-  s = n(334877),
-  a = n(981631);
+var i = n(481060),
+  a = n(40851),
+  l = n(334877),
+  s = n(981631);
 let r = "guild-event-modal";
 t.Z = () => {
-  let e = (0, i.bp)() === a.IlC.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
+  let e = (0, a.bp)() === s.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
   return {
     modalKey: r,
     contextKey: e,
     onCloseRequest: () => {
-      s.l.getState().canCloseModal && (0, l.closeModal)(r, e)
+      l.l.getState().canCloseModal && (0, i.closeModal)(r, e)
     }
   }
 }

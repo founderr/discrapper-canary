@@ -1,41 +1,41 @@
 n(47120);
-var l, i, s, a, r = n(873546),
+var i, a, l, s, r = n(873546),
   o = n(442837),
   c = n(570140),
   u = n(38618),
   d = n(268967),
   h = n(188785);
-let m = {},
-  E = {},
-  p = !0,
-  g = {},
-  f = !1;
+let p = {},
+  m = {},
+  _ = !0,
+  f = {},
+  E = !1;
 
-function C() {
+function g() {
   return d.Z
 }
 
-function _() {
-  if (g = {}, !p)
+function C() {
+  if (f = {}, !_)
     for (let [e, t] of Object.entries(d.Z)) {
-      let n = !1 !== m[e];
-      if (g[e] = n, n && null != t.prerequisites)
-        for (let n of t.prerequisites) !1 !== m[n] && (g[e] = !1)
+      let n = !1 !== p[e];
+      if (f[e] = n, n && null != t.prerequisites)
+        for (let n of t.prerequisites) !1 !== p[n] && (f[e] = !1)
     }
 }
-class I extends(l = o.ZP.Store) {
+class I extends(i = o.ZP.Store) {
   initialize() {
-    _(), this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(u.Z)
+    C(), this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(u.Z)
   }
   shouldShow(e) {
     var t;
-    return !(!f || p || h.a || (t = e, r.tq && ["writing-messages", "organize-by-topic"].includes(t))) && (g[e] || !1)
+    return !(!E || _ || h.a || (t = e, r.tq && ["writing-messages", "organize-by-topic"].includes(t))) && (f[e] || !1)
   }
   shouldShowAnyIndicators() {
-    return !p
+    return !_
   }
   getIndicators() {
-    return E
+    return m
   }
   getData() {
     return d.Z
@@ -45,41 +45,41 @@ class I extends(l = o.ZP.Store) {
     return null != t ? t[e] : null
   }
 }
-a = "TutorialIndicatorStore", (s = "displayName") in(i = I) ? Object.defineProperty(i, s, {
-  value: a,
+s = "TutorialIndicatorStore", (l = "displayName") in(a = I) ? Object.defineProperty(a, l, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new I(c.Z, {
+}) : a[l] = s, t.Z = new I(c.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       tutorial: t
     } = e;
-    f = !0, p = !0, m = {}, null != t && (p = t.indicators_suppressed, t.indicators_confirmed.forEach(e => m[e] = !1)), _()
+    E = !0, _ = !0, p = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => p[e] = !1)), C()
   },
   CONNECTION_CLOSED: function() {
-    f = !1
+    E = !1
   },
   TUTORIAL_INDICATOR_DISMISS: function(e) {
-    m = {
-      ...m,
+    p = {
+      ...p,
       [e.tutorialId]: !1
-    }, E = {
-      ...E
-    }, delete E[e.tutorialId], _()
+    }, m = {
+      ...m
+    }, delete m[e.tutorialId], C()
   },
   TUTORIAL_INDICATOR_SHOW: function(e) {
-    E = {
-      ...E,
+    m = {
+      ...m,
       [e.tutorialId]: e.renderData
     }
   },
   TUTORIAL_INDICATOR_HIDE: function(e) {
-    E = {
-      ...E
-    }, delete E[e.tutorialId]
+    m = {
+      ...m
+    }, delete m[e.tutorialId]
   },
   TUTORIAL_INDICATOR_SUPPRESS_ALL: function() {
-    p = !0
+    _ = !0
   }
 })

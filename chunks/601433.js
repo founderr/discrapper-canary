@@ -1,6 +1,6 @@
 t.d(s, {
   D: function() {
-    return i
+    return a
   }
 });
 let n = (0, t(818083).B)({
@@ -19,7 +19,7 @@ let n = (0, t(818083).B)({
   }]
 });
 
-function i() {
+function a() {
   return n.getCurrentConfig({
     location: "26c832_1"
   }, {

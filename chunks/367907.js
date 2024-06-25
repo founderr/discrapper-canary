@@ -13,10 +13,10 @@ n.d(t, {
     return P
   },
   kO: function() {
-    return B
+    return x
   },
   oG: function() {
-    return x
+    return B
   },
   v_: function() {
     return U
@@ -39,14 +39,14 @@ var i = n(392711),
   I = n(430824),
   T = n(131951),
   h = n(496675),
-  S = n(158776),
-  f = n(19780),
-  N = n(306680),
-  A = n(944486),
+  f = n(158776),
+  S = n(19780),
+  A = n(306680),
+  N = n(944486),
   m = n(914010),
   O = n(9156),
-  R = n(979651),
-  p = n(626135),
+  p = n(979651),
+  R = n(626135),
   g = n(70956),
   C = n(700785),
   v = n(546416),
@@ -70,7 +70,7 @@ function P(e) {
     o = c.ZP.getChannels(e),
     a = o[c.sH].length,
     l = o[c.Zb].length,
-    _ = R.Z.getVoiceStates(e);
+    _ = p.Z.getVoiceStates(e);
   return {
     guild_id: n.id,
     guild_size_total: d.Z.getMemberCount(e),
@@ -119,13 +119,13 @@ function b(e) {
   let t = _.Z.getChannel(e);
   if (null == t) return null;
   let n = T.Z.isVideoEnabled(),
-    i = f.Z.getMediaSessionId();
+    i = S.Z.getMediaSessionId();
   return {
     channel_id: t.id,
     channel_type: t.type,
     guild_id: t.getGuildId(),
     media_session_id: i,
-    ...B(t.getGuildId(), t.id, n),
+    ...x(t.getGuildId(), t.id, n),
     ...(0, v.V)()
   }
 }
@@ -134,10 +134,10 @@ function G(e) {
   var t, n, i, r, s;
   let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  if (p.default.isThrottled(e)) return;
+  if (R.default.isThrottled(e)) return;
   let l = !("location" in o) || o.location !== L.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
     u = "guild_id" in o ? o.guild_id : l ? m.Z.getGuildId() : null,
-    c = "channel_id" in o ? o.channel_id : l ? A.Z.getChannelId(u) : null,
+    c = "channel_id" in o ? o.channel_id : l ? N.Z.getChannelId(u) : null,
     d = _.Z.getChannel(c);
   let E = (t = d, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (r = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== r ? r : null);
   let I = {
@@ -148,7 +148,7 @@ function G(e) {
       channel_hidden: !1
     }) : U(d)
   };
-  p.default.track(e, I, {
+  R.default.track(e, I, {
     flush: a
   })
 }
@@ -162,7 +162,7 @@ function w(e) {
   if (null == n) return {
     channel_id: e
   };
-  let i = N.ZP.getSnapshot(e, 10 * g.Z.Millis.SECOND);
+  let i = A.ZP.getSnapshot(e, 10 * g.Z.Millis.SECOND);
   return {
     channel_id: e,
     channel_was_unread: i.unread,
@@ -184,26 +184,26 @@ function w(e) {
   }
 }
 
-function B(e, t, n) {
+function x(e, t, n) {
   let i = {
     voice_state_count: 0,
     video_stream_count: 0,
     video_enabled: n
   };
-  return r()(R.Z.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== u.default.getId()).forEach(e => {
+  return r()(p.Z.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== u.default.getId()).forEach(e => {
     i.voice_state_count++, (e.selfVideo || e.selfStream) && i.video_stream_count++
   }), i
 }
 
-function x(e, t) {
+function B(e, t) {
   let n = {
     custom_status_count: 0
   };
-  return r()(R.Z.getVoiceStates(e)).forEach(e => {
-    e.channelId === t && null != S.Z.findActivity(e.userId, e => e.type === L.IIU.CUSTOM_STATUS) && n.custom_status_count++
+  return r()(p.Z.getVoiceStates(e)).forEach(e => {
+    e.channelId === t && null != f.Z.findActivity(e.userId, e => e.type === L.IIU.CUSTOM_STATUS) && n.custom_status_count++
   }), n
 }
 t.ZP = {
   trackWithMetadata: G,
-  getVoiceStateMetadata: B
+  getVoiceStateMetadata: x
 }

@@ -1,15 +1,15 @@
-var n = s(399606),
-  a = s(626135),
-  i = s(280570),
-  r = s(914788),
-  l = s(292352),
-  o = s(981631);
+var s = n(399606),
+  a = n(626135),
+  r = n(280570),
+  i = n(914788),
+  l = n(292352),
+  o = n(981631);
 t.Z = () => {
-  let e = (0, n.e7)([r.Z], () => r.Z.getSelectedTab());
+  let e = (0, s.e7)([i.Z], () => i.Z.getSelectedTab());
   return {
     selectedTab: e,
     handleTabChange: e => {
-      i.ZP.selectTab(e), a.default.track(o.rMx.FAMILY_CENTER_ACTION, {
+      r.ZP.selectTab(e), a.default.track(o.rMx.FAMILY_CENTER_ACTION, {
         action: l.YC.TabChange,
         tab: e
       })

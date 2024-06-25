@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Jh: function() {
-    return p
+    return R
   },
   Lk: function() {
     return g
@@ -13,7 +13,7 @@ n.d(t, {
     return O
   },
   c7: function() {
-    return R
+    return p
   },
   j3: function() {
     return v
@@ -33,10 +33,10 @@ var u = n(729594),
   I = n(252618),
   T = n(703656),
   h = n(769654),
-  S = n(626135),
-  f = n(787025),
-  N = n(981631),
-  A = n(689938),
+  f = n(626135),
+  S = n(787025),
+  A = n(981631),
+  N = n(689938),
   m = n(616730);
 
 function O(e) {
@@ -49,7 +49,7 @@ function O(e) {
     onClose: l
   } = e;
   return (0, I.Tt)({
-    location: A.Z.Messages.OAUTH2_TITLE
+    location: N.Z.Messages.OAUTH2_TITLE
   }), (0, i.jsxs)(i.Fragment, {
     children: [null != l ? (0, i.jsx)(_.ol, {
       onClick: l,
@@ -66,43 +66,43 @@ function O(e) {
         variant: "text-xs/normal",
         color: "text-muted",
         className: m.cta,
-        children: A.Z.Messages.OAUTH2_MESSAGE_CTA
+        children: N.Z.Messages.OAUTH2_MESSAGE_CTA
       }) : null]
     })]
   })
 }
 
-function R(e) {
+function p(e) {
   return (0, i.jsx)(O, {
     ...e,
     headerClassName: m.headerSuccess
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     guild: t,
     application: n,
     ...s
   } = e, {
     onClose: o
-  } = s, a = A.Z.Messages.AUTHORIZED_SUCCESS, l = r.useCallback(() => {
-    if ((null == t ? void 0 : t.id) != null)(0, h.X)(null == t ? void 0 : t.id), null == o || o(), S.default.track(N.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+  } = s, a = N.Z.Messages.AUTHORIZED_SUCCESS, l = r.useCallback(() => {
+    if ((null == t ? void 0 : t.id) != null)(0, h.X)(null == t ? void 0 : t.id), null == o || o(), f.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
       application_id: null == n ? void 0 : n.id,
       guild_id: null == t ? void 0 : t.id
     })
   }, [o, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = r.useCallback(() => {
-    null == o || o(), S.default.track(N.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+    null == o || o(), f.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
       application_id: null == n ? void 0 : n.id
     })
   }, [o, null == n ? void 0 : n.id]), _ = r.useMemo(() => {
-    if (null != n) return null != t ? A.Z.Messages.AUTHORIZED_APP_TO_SERVER.format({
+    if (null != n) return null != t ? N.Z.Messages.AUTHORIZED_APP_TO_SERVER.format({
       installedApplicationName: null == n ? void 0 : n.name,
       guildName: null == t ? void 0 : t.name
-    }) : A.Z.Messages.AUTHORIZED_APP.format({
+    }) : N.Z.Messages.AUTHORIZED_APP.format({
       installedApplicationName: null == n ? void 0 : n.name
     });
-    return A.Z.Messages.AUTHORIZED_GENERIC
+    return N.Z.Messages.AUTHORIZED_GENERIC
   }, [n, t]), c = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(d.x, {
       variant: "text-sm/normal",
@@ -115,7 +115,7 @@ function p(e) {
         color: E.Button.Colors.BRAND,
         onClick: l,
         className: m.button,
-        children: (null == t ? void 0 : t.name.length) > 30 ? A.Z.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : A.Z.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
+        children: (null == t ? void 0 : t.name.length) > 30 ? N.Z.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : N.Z.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
           guildName: null == t ? void 0 : t.name
         })
       }), null != o && (0, i.jsx)(E.Button, {
@@ -123,17 +123,17 @@ function p(e) {
         color: E.Button.Colors.PRIMARY,
         onClick: u,
         className: m.button,
-        children: A.Z.Messages.CLOSE
+        children: N.Z.Messages.CLOSE
       })]
     })]
   });
   return r.useEffect(() => {
-    S.default.track(N.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
+    f.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
       application_id: null == n ? void 0 : n.id
     })
   }, [null == n ? void 0 : n.id]), (0, i.jsx)("div", {
     className: m.authorizedSuccessWrapper,
-    children: (0, i.jsx)(R, {
+    children: (0, i.jsx)(p, {
       message: a,
       footer: c,
       ...s
@@ -151,8 +151,8 @@ function g(e) {
 function C() {
   var e, t;
   let n = (0, l.TH)();
-  return (0, i.jsx)(f.G, {
-    children: (0, i.jsx)(p, {
+  return (0, i.jsx)(S.G, {
+    children: (0, i.jsx)(R, {
       guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
       application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
       showsCloseWindowText: !0
@@ -168,11 +168,11 @@ function v(e) {
   r.useEffect(() => {
     if (null == s) return;
     let e = null != document.referrer && "" !== document.referrer ? u.parse(document.referrer) : null;
-    (null == e || e.host !== window.location.host || e.pathname !== N.Z5c.OAUTH2_AUTHORIZE) && (0, T.uL)(N.Z5c.INDEX)
+    (null == e || e.host !== window.location.host || e.pathname !== A.Z5c.OAUTH2_AUTHORIZE) && (0, T.uL)(A.Z5c.INDEX)
   }, [s]);
   let o = null != s ? (0, a.parse)(s.search) : {},
-    l = null !== (n = null !== (t = o.error_description) && void 0 !== t ? t : o.error) && void 0 !== n ? n : A.Z.Messages.OAUTH2_UNKNOWN_ERROR;
-  return (0, i.jsx)(f.G, {
+    l = null !== (n = null !== (t = o.error_description) && void 0 !== t ? t : o.error) && void 0 !== n ? n : N.Z.Messages.OAUTH2_UNKNOWN_ERROR;
+  return (0, i.jsx)(S.G, {
     children: (0, i.jsx)(g, {
       message: l,
       showsCloseWindowText: !0

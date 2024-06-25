@@ -1,63 +1,63 @@
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(346656),
-  a = n(689938),
-  r = n(640380),
+var s = n(481060),
+  a = n(346656),
+  r = n(689938),
+  l = n(640380),
   o = n(364632);
 t.Z = e => {
   let {
     headerId: t,
     reapplyText: n,
     onReapply: c,
-    confirmText: u,
-    onWithdrawApplication: d,
-    rejectionReason: E = null,
-    guild: h = null
+    confirmText: d,
+    onWithdrawApplication: u,
+    rejectionReason: _ = null,
+    guild: E = null
   } = e;
-  return (0, s.jsxs)("div", {
-    className: r.confirmation,
-    children: [(0, s.jsxs)("div", {
-      className: r.confirmationContent,
-      children: [null !== h ? (0, s.jsx)(l.Z, {
-        size: l.Z.Sizes.LARGER,
-        guild: h,
-        className: r.guildIcon
-      }) : (0, s.jsx)("img", {
-        alt: a.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_ICON,
+  return (0, i.jsxs)("div", {
+    className: l.confirmation,
+    children: [(0, i.jsxs)("div", {
+      className: l.confirmationContent,
+      children: [null !== E ? (0, i.jsx)(a.Z, {
+        size: a.Z.Sizes.LARGER,
+        guild: E,
+        className: l.guildIcon
+      }) : (0, i.jsx)("img", {
+        alt: r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_ICON,
         src: o,
-        className: r.__invalid_verificationStateIcon
-      }), (0, s.jsx)(i.Heading, {
+        className: l.__invalid_verificationStateIcon
+      }), (0, i.jsx)(s.Heading, {
         id: t,
         variant: "heading-xl/semibold",
-        className: r.header,
-        children: (null == h ? void 0 : h.name) != null ? a.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({
-          guildName: h.name
-        }) : a.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
-      }), null != E && "" !== E ? (0, s.jsx)(s.Fragment, {
-        children: (0, s.jsxs)(i.Text, {
+        className: l.header,
+        children: (null == E ? void 0 : E.name) != null ? r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({
+          guildName: E.name
+        }) : r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
+      }), null != _ && "" !== _ ? (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsxs)(s.Text, {
           variant: "text-sm/normal",
-          children: [(0, s.jsx)("span", {
-            className: r.rejectionReasonLabel,
-            children: a.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_REASON
-          }), (0, s.jsx)("span", {
-            className: r.rejectionReason,
-            children: E
+          children: [(0, i.jsx)("span", {
+            className: l.rejectionReasonLabel,
+            children: r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_REASON
+          }), (0, i.jsx)("span", {
+            className: l.rejectionReason,
+            children: _
           })]
         })
       }) : null]
-    }), (0, s.jsxs)("div", {
-      className: r.confirmationButtonRow,
-      children: [(0, s.jsx)(i.Button, {
+    }), (0, i.jsxs)("div", {
+      className: l.confirmationButtonRow,
+      children: [(0, i.jsx)(s.Button, {
         onClick: c,
-        color: i.Button.Colors.PRIMARY,
-        className: r.confirmationButton,
+        color: s.Button.Colors.PRIMARY,
+        className: l.confirmationButton,
         children: n
-      }), (0, s.jsx)(i.Button, {
-        onClick: d,
-        color: i.Button.Colors.RED,
-        className: r.confirmationButton,
-        children: u
+      }), (0, i.jsx)(s.Button, {
+        onClick: u,
+        color: s.Button.Colors.RED,
+        className: l.confirmationButton,
+        children: d
       })]
     })]
   })

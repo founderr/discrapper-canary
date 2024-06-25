@@ -1,86 +1,86 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   DI: function() {
-    return O
+    return f
   },
   x3: function() {
-    return L
+    return R
   }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(512722),
-  a = t.n(l),
-  r = t(442837),
-  o = t(481060),
-  c = t(596454),
-  d = t(907040),
-  u = t(339085),
-  E = t(633302),
-  _ = t(984933),
-  I = t(401227),
-  T = t(285952),
-  N = t(474333),
-  m = t(153124),
-  S = t(691886),
-  h = t(185923),
-  g = t(689938),
-  C = t(187194);
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(512722),
+  r = n.n(i),
+  l = n(442837),
+  o = n(481060),
+  c = n(596454),
+  d = n(907040),
+  u = n(339085),
+  _ = n(633302),
+  E = n(984933),
+  I = n(401227),
+  T = n(285952),
+  m = n(474333),
+  N = n(153124),
+  S = n(691886),
+  h = n(185923),
+  g = n(689938),
+  C = n(187194);
 
 function x(e) {
   let {
-    guildId: s,
-    emojiData: t,
-    "aria-labelledby": l,
-    onSelectEmoji: a
-  } = e, T = (0, r.e7)([u.Z], () => null != t.id ? u.Z.getCustomEmojiById(t.id) : void 0), N = (0, r.e7)([_.ZP], () => _.ZP.getDefaultChannel(s)), m = i.useCallback(e => {
+    guildId: t,
+    emojiData: n,
+    "aria-labelledby": i,
+    onSelectEmoji: r
+  } = e, T = (0, l.e7)([u.Z], () => null != n.id ? u.Z.getCustomEmojiById(n.id) : void 0), m = (0, l.e7)([E.ZP], () => E.ZP.getDefaultChannel(t)), N = a.useCallback(e => {
     let {
-      closePopout: s
+      closePopout: t
     } = e;
-    return (0, n.jsx)(d.Z, {
+    return (0, s.jsx)(d.Z, {
       pickerIntention: h.Hz.GUILD_ROLE_BENEFIT_EMOJI,
-      channel: N,
-      closePopout: s,
-      onNavigateAway: s,
-      onSelectEmoji: (e, t) => {
-        null != e && a(null != e.id ? {
+      channel: m,
+      closePopout: t,
+      onNavigateAway: t,
+      onSelectEmoji: (e, n) => {
+        null != e && r(null != e.id ? {
           id: e.id,
           name: void 0
         } : {
           id: void 0,
           name: e.optionallyDiverseSequence
-        }), t && s()
+        }), n && t()
       }
     })
-  }, [a, N]), S = i.useMemo(() => null == T && null == t.name ? null : function() {
-    return (0, n.jsx)(c.Z, {
+  }, [r, m]), S = a.useMemo(() => null == T && null == n.name ? null : function() {
+    return (0, s.jsx)(c.Z, {
       className: C.emoji,
-      emojiId: t.id,
-      emojiName: t.name,
+      emojiId: n.id,
+      emojiName: n.name,
       animated: null == T ? void 0 : T.animated
     })
-  }, [t, T]), x = "";
-  return null != T ? x = ":".concat(T.name, ":") : null != t.name && (x = E.ZP.convertSurrogateToName(t.name)), (0, n.jsx)(o.Popout, {
+  }, [n, T]), x = "";
+  return null != T ? x = ":".concat(T.name, ":") : null != n.name && (x = _.ZP.convertSurrogateToName(n.name)), (0, s.jsx)(o.Popout, {
     animation: o.Popout.Animation.NONE,
     position: "top",
-    renderPopout: m,
-    children: (e, s) => {
+    renderPopout: N,
+    children: (e, t) => {
       let {
-        isShown: t
-      } = s;
-      return (0, n.jsxs)("div", {
+        isShown: n
+      } = t;
+      return (0, s.jsxs)("div", {
         className: C.emojiInputContainer,
         ...e,
-        children: [(0, n.jsx)(I.Z, {
+        children: [(0, s.jsx)(I.Z, {
           className: C.emojiButton,
-          active: t,
+          active: n,
           tabIndex: 0,
           renderButtonContents: S
-        }), (0, n.jsx)(o.TextInput, {
+        }), (0, s.jsx)(o.TextInput, {
           inputClassName: C.emojiText,
           placeholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EMOJI_PLACEHOLDER,
           value: x,
-          "aria-labelledby": l,
+          "aria-labelledby": i,
           readOnly: !0
         })]
       })
@@ -88,95 +88,95 @@ function x(e) {
   })
 }
 
-function R(e) {
-  var s;
+function p(e) {
+  var t;
   let {
-    guildId: t,
-    initialData: l,
-    benefitTypeInput: a,
-    descriptionPlaceholder: r,
+    guildId: n,
+    initialData: i,
+    benefitTypeInput: r,
+    descriptionPlaceholder: l,
     canSubmit: c,
     onSave: d,
     onDelete: u,
-    transitionState: E,
-    onClose: _
-  } = e, I = (0, m.Dt)(), N = (0, m.Dt)(), S = (0, m.Dt)(), [h, R] = i.useState(null !== (s = null == l ? void 0 : l.description) && void 0 !== s ? s : ""), [L, O] = i.useState(() => ({
-    id: null == l ? void 0 : l.emoji_id,
-    name: null == l ? void 0 : l.emoji_name
-  })), A = c && "" !== h && (null != L.id || null != L.name);
-  return (0, n.jsx)("form", {
+    transitionState: _,
+    onClose: E
+  } = e, I = (0, N.Dt)(), m = (0, N.Dt)(), S = (0, N.Dt)(), [h, p] = a.useState(null !== (t = null == i ? void 0 : i.description) && void 0 !== t ? t : ""), [R, f] = a.useState(() => ({
+    id: null == i ? void 0 : i.emoji_id,
+    name: null == i ? void 0 : i.emoji_name
+  })), L = c && "" !== h && (null != R.id || null != R.name);
+  return (0, s.jsx)("form", {
     onSubmit: function(e) {
-      e.preventDefault(), A && (d({
+      e.preventDefault(), L && (d({
         description: h,
-        emojiId: L.id,
-        emojiName: L.name
-      }), _())
+        emojiId: R.id,
+        emojiName: R.name
+      }), E())
     },
-    children: (0, n.jsxs)(o.ModalRoot, {
-      transitionState: E,
+    children: (0, s.jsxs)(o.ModalRoot, {
+      transitionState: _,
       "aria-labelledby": I,
-      children: [(0, n.jsxs)(o.ModalHeader, {
-        children: [(0, n.jsx)(o.Heading, {
+      children: [(0, s.jsxs)(o.ModalHeader, {
+        children: [(0, s.jsx)(o.Heading, {
           id: I,
           variant: "heading-md/semibold",
           children: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_MODAL_TITLE
-        }), (0, n.jsx)(o.ModalCloseButton, {
+        }), (0, s.jsx)(o.ModalCloseButton, {
           className: C.closeButton,
-          onClick: _
+          onClick: E
         })]
-      }), (0, n.jsxs)(o.ModalContent, {
+      }), (0, s.jsxs)(o.ModalContent, {
         className: C.modalContent,
-        children: [a, (0, n.jsx)(o.Spacer, {
+        children: [r, (0, s.jsx)(o.Spacer, {
           size: 24
-        }), (0, n.jsx)(o.FormSection, {
+        }), (0, s.jsx)(o.FormSection, {
           title: g.Z.Messages.DESCRIPTION,
-          titleId: N,
-          children: (0, n.jsx)(o.TextArea, {
-            placeholder: r,
+          titleId: m,
+          children: (0, s.jsx)(o.TextArea, {
+            placeholder: l,
             value: h,
             rows: 1,
             autosize: !0,
-            onChange: R,
-            "aria-labelledby": N
+            onChange: p,
+            "aria-labelledby": m
           })
-        }), (0, n.jsx)(o.Spacer, {
+        }), (0, s.jsx)(o.Spacer, {
           size: 24
-        }), (0, n.jsx)(o.FormSection, {
+        }), (0, s.jsx)(o.FormSection, {
           title: g.Z.Messages.EMOJI,
           titleId: S,
-          children: (0, n.jsx)(x, {
-            guildId: t,
-            emojiData: L,
-            onSelectEmoji: O,
+          children: (0, s.jsx)(x, {
+            guildId: n,
+            emojiData: R,
+            onSelectEmoji: f,
             "aria-labelledby": S
           })
         })]
-      }), (0, n.jsxs)(o.ModalFooter, {
+      }), (0, s.jsxs)(o.ModalFooter, {
         justify: T.Z.Justify.BETWEEN,
-        children: [(0, n.jsxs)("div", {
+        children: [(0, s.jsxs)("div", {
           className: C.primaryButtons,
-          children: [(0, n.jsx)(o.Button, {
+          children: [(0, s.jsx)(o.Button, {
             type: "submit",
-            disabled: !A,
-            children: null == l ? g.Z.Messages.ADD : g.Z.Messages.SAVE
-          }), null != u && (0, n.jsx)(o.Button, {
+            disabled: !L,
+            children: null == i ? g.Z.Messages.ADD : g.Z.Messages.SAVE
+          }), null != u && (0, s.jsx)(o.Button, {
             look: o.Button.Looks.BLANK,
             size: o.Button.Sizes.ICON,
             className: C.deleteButton,
             onClick: () => {
-              u(), _()
+              u(), E()
             },
-            children: (0, n.jsx)(o.TrashIcon, {
+            children: (0, s.jsx)(o.TrashIcon, {
               size: "md",
               color: "currentColor",
               "aria-label": g.Z.Messages.DELETE
             })
           })]
-        }), (0, n.jsx)(o.Button, {
+        }), (0, s.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
           className: C.cancelButton,
-          onClick: _,
+          onClick: E,
           children: g.Z.Messages.CANCEL
         })]
       })]
@@ -184,46 +184,46 @@ function R(e) {
   })
 }
 
-function L(e) {
+function R(e) {
   let {
-    guildId: s,
-    omitChannelIds: t,
-    initialData: l,
-    onSave: r,
+    guildId: t,
+    omitChannelIds: n,
+    initialData: i,
+    onSave: l,
     onDelete: c,
     transitionState: d,
     onClose: u
-  } = e, [E, _] = i.useState(null == l ? void 0 : l.ref_id), I = (0, m.Dt)(), T = (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(N.Z, {
-      messageType: N.Q.WARNING,
+  } = e, [_, E] = a.useState(null == i ? void 0 : i.ref_id), I = (0, N.Dt)(), T = (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(m.Z, {
+      messageType: m.Q.WARNING,
       children: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_MODAL_WARNING
-    }), (0, n.jsx)(o.Spacer, {
+    }), (0, s.jsx)(o.Spacer, {
       size: 24
-    }), (0, n.jsx)(o.FormSection, {
+    }), (0, s.jsx)(o.FormSection, {
       title: g.Z.Messages.CHANNEL,
       titleId: I,
-      children: (0, n.jsx)(S.Z, {
-        guildId: s,
-        value: E,
-        initialChannelId: null == l ? void 0 : l.ref_id,
-        omitChannelIds: t,
+      children: (0, s.jsx)(S.Z, {
+        guildId: t,
+        value: _,
+        initialChannelId: null == i ? void 0 : i.ref_id,
+        omitChannelIds: n,
         onChange: function(e) {
-          _(e)
+          E(e)
         },
         "aria-labelledby": I
       })
     })]
   });
-  return (0, n.jsx)(R, {
-    guildId: s,
-    initialData: l,
+  return (0, s.jsx)(p, {
+    guildId: t,
+    initialData: i,
     benefitTypeInput: T,
     descriptionPlaceholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_DESCRIPTION_PLACEHOLDER,
-    canSubmit: null != E,
+    canSubmit: null != _,
     onSave: function(e) {
-      a()(null != E, "Cannot submit null channel"), r({
+      r()(null != _, "Cannot submit null channel"), l({
         ...e,
-        channelId: E
+        channelId: _
       })
     },
     transitionState: d,
@@ -232,41 +232,41 @@ function L(e) {
   })
 }
 
-function O(e) {
-  var s;
+function f(e) {
+  var t;
   let {
-    initialData: t,
-    onSave: l,
-    transitionState: r,
+    initialData: n,
+    onSave: i,
+    transitionState: l,
     onClose: c,
     onDelete: d,
     guildId: u
-  } = e, [E, _] = i.useState(null !== (s = null == t ? void 0 : t.name) && void 0 !== s ? s : ""), I = (0, m.Dt)(), T = (0, n.jsx)(o.FormSection, {
+  } = e, [_, E] = a.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""), I = (0, N.Dt)(), T = (0, s.jsx)(o.FormSection, {
     title: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
     titleId: I,
-    children: (0, n.jsx)(o.TextArea, {
+    children: (0, s.jsx)(o.TextArea, {
       placeholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
-      value: E,
+      value: _,
       rows: 1,
       onChange: function(e) {
-        _(e)
+        E(e)
       },
       "aria-labelledby": I
     })
   });
-  return (0, n.jsx)(R, {
+  return (0, s.jsx)(p, {
     guildId: u,
-    initialData: t,
+    initialData: n,
     benefitTypeInput: T,
     descriptionPlaceholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_DESCRIPTION_PLACEHOLDER,
-    canSubmit: "" !== E,
+    canSubmit: "" !== _,
     onSave: function(e) {
-      a()("" !== E, "Cannot submit empty name"), l({
+      r()("" !== _, "Cannot submit empty name"), i({
         ...e,
-        name: E
+        name: _
       })
     },
-    transitionState: r,
+    transitionState: l,
     onClose: c,
     onDelete: d
   })

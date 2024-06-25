@@ -4,19 +4,19 @@ n.d(t, {
     return O
   },
   CS: function() {
-    return f
+    return S
   },
   EW: function() {
     return y
   },
   QB: function() {
-    return p
+    return R
   },
   T0: function() {
     return M
   },
   Tj: function() {
-    return R
+    return p
   },
   Wf: function() {
     return L
@@ -28,7 +28,7 @@ n.d(t, {
     return C
   },
   is: function() {
-    return N
+    return A
   },
   kP: function() {
     return P
@@ -43,7 +43,7 @@ n.d(t, {
     return g
   },
   xw: function() {
-    return A
+    return N
   }
 }), n(411104);
 var i = n(990547),
@@ -60,8 +60,8 @@ var i = n(990547),
   I = n(566078),
   T = n(46140),
   h = n(981631),
-  S = n(689938);
-async function f(e) {
+  f = n(689938);
+async function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   try {
     let n = (await r.tn.post({
@@ -82,22 +82,22 @@ async function f(e) {
     var n;
     let e = new o.Z(t);
     if (429 === e.status) return {
-      errorHints: [S.Z.Messages.RATE_LIMITED]
+      errorHints: [f.Z.Messages.RATE_LIMITED]
     };
     return {
-      errorHints: [null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : S.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR]
+      errorHints: [null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : f.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR]
     }
   }
   return {
     errorHints: []
   }
 }
-async function N(e) {
+async function A(e) {
   await r.tn.post({
     url: h.ANM.QUEST_ON_CONSOLE_STOP(e)
   })
 }
-async function A() {
+async function N() {
   if (!_.Z.isFetchingCurrentQuests) {
     s.Z.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
@@ -197,7 +197,7 @@ async function O(e, t) {
     }
   }
 }
-async function R(e, t, n) {
+async function p(e, t, n) {
   if (!_.Z.isClaimingRewardCode(e)) {
     s.Z.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -225,7 +225,7 @@ async function R(e, t, n) {
     }
   }
 }
-async function p(e, t, n) {
+async function R(e, t, n) {
   if (!_.Z.isClaimingReward(e)) {
     s.Z.dispatch({
       type: "QUESTS_CLAIM_REWARD_BEGIN",

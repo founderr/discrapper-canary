@@ -1,62 +1,62 @@
 n.d(t, {
   Z: function() {
-    return E
+    return _
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(481060),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(481060),
   o = n(63063),
   c = n(981631),
-  u = n(689938),
-  d = n(214003);
+  d = n(689938),
+  u = n(214003);
 
-function E(e) {
+function _(e) {
   let {
     children: t
-  } = e, n = i.useCallback(() => {
+  } = e, n = s.useCallback(() => {
     window.open(o.Z.getArticleURL(c.BhN.QUESTS_LEARN_MORE))
   }, []);
-  return (0, s.jsxs)("div", {
-    className: d.container,
-    children: [(0, s.jsx)("div", {
-      className: a()(d.image)
-    }), (0, s.jsx)("div", {
-      className: a()(d.leftToRightGradient)
-    }), (0, s.jsx)("div", {
-      className: a()(d.gradient)
-    }), (0, s.jsx)("div", {
-      className: d.contents,
-      children: (0, s.jsxs)("div", {
-        className: d.textContainer,
-        children: [(0, s.jsx)(r.Text, {
+  return (0, i.jsxs)("div", {
+    className: u.container,
+    children: [(0, i.jsx)("div", {
+      className: r()(u.image)
+    }), (0, i.jsx)("div", {
+      className: r()(u.leftToRightGradient)
+    }), (0, i.jsx)("div", {
+      className: r()(u.gradient)
+    }), (0, i.jsx)("div", {
+      className: u.contents,
+      children: (0, i.jsxs)("div", {
+        className: u.textContainer,
+        children: [(0, i.jsx)(l.Text, {
           variant: "eyebrow",
           color: "text-brand",
-          className: d.eyebrow,
-          children: u.Z.Messages.QUESTS_HOME_HERO_EYEBROW
-        }), (0, s.jsx)(r.Heading, {
+          className: u.eyebrow,
+          children: d.Z.Messages.QUESTS_HOME_HERO_EYEBROW
+        }), (0, i.jsx)(l.Heading, {
           variant: "display-md",
           color: "always-white",
-          className: d.header,
-          children: u.Z.Messages.QUESTS_HOME_HERO_TITLE
-        }), (0, s.jsx)(r.Text, {
+          className: u.header,
+          children: d.Z.Messages.QUESTS_HOME_HERO_TITLE
+        }), (0, i.jsx)(l.Text, {
           variant: "text-md/medium",
           color: "text-muted",
-          children: u.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION
-        }), (0, s.jsxs)(r.Button, {
+          children: d.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION
+        }), (0, i.jsxs)(l.Button, {
           size: "medium",
-          className: d.button,
+          className: u.button,
           onClick: n,
-          innerClassName: d.innerButton,
-          children: [(0, s.jsx)(r.Text, {
+          innerClassName: u.innerButton,
+          children: [(0, i.jsx)(l.Text, {
             variant: "text-md/semibold",
             color: "always-white",
-            className: d.externalLinkText,
-            children: u.Z.Messages.LEARN_MORE
-          }), (0, s.jsx)(r.LinkExternalSmallIcon, {
-            className: d.icon,
+            className: u.externalLinkText,
+            children: d.Z.Messages.LEARN_MORE
+          }), (0, i.jsx)(l.LinkExternalSmallIcon, {
+            className: u.icon,
             color: "var(--white-500)"
           })]
         })]

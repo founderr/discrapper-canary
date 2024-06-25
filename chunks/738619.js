@@ -5,43 +5,43 @@ n.d(t, {
 }), n(653041), n(47120);
 var i = n(735250),
   s = n(470079),
-  a = n(120356),
-  l = n.n(a),
-  o = n(392711),
-  r = n.n(o),
-  u = n(913527),
-  c = n.n(u),
+  o = n(120356),
+  a = n.n(o),
+  l = n(392711),
+  r = n.n(l),
+  c = n(913527),
+  u = n.n(c),
   d = n(748780),
   h = n(866442),
   m = n(442837),
   p = n(692547),
   g = n(481060),
-  T = n(980568),
-  f = n(560768),
-  v = n(812206),
-  E = n(243778),
-  I = n(843693),
-  N = n(246642),
-  x = n(921227),
-  S = n(314897),
+  f = n(980568),
+  T = n(560768),
+  _ = n(812206),
+  v = n(243778),
+  b = n(843693),
+  E = n(246642),
+  I = n(921227),
+  x = n(314897),
   C = n(430824),
   R = n(496675),
-  Z = n(699516),
-  _ = n(885110),
+  S = n(699516),
+  N = n(885110),
   O = n(300429),
-  j = n(111583),
-  A = n(594174),
+  Z = n(111583),
+  j = n(594174),
   M = n(451478),
-  b = n(626135),
-  P = n(585483),
-  L = n(70956),
-  y = n(823379),
-  U = n(5192),
-  w = n(981631),
+  A = n(626135),
+  y = n(585483),
+  P = n(70956),
+  L = n(823379),
+  w = n(5192),
+  U = n(981631),
   k = n(689938),
-  D = n(497800);
+  B = n(497800);
 
-function B(e, t, n) {
+function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -63,7 +63,7 @@ class V extends s.PureComponent {
   }
   logShownEventIfNeeded() {
     let e = this.props.activity.application_id;
-    null != e && -1 === F.indexOf(e) && (b.default.track(w.rMx.SHOW_TUTORIAL, {
+    null != e && -1 === F.indexOf(e) && (A.default.track(U.rMx.SHOW_TUTORIAL, {
       tutorial: "activity-invite-nux-inline",
       application_id: e
     }), F.push(e))
@@ -76,11 +76,11 @@ class V extends s.PureComponent {
       activity: e
     } = this.props;
     return (0, i.jsxs)("div", {
-      className: l()(D.activityInviteEducation, {
-        [D.activityInviteEducationFadeIn]: this.state.fadeIn
+      className: a()(B.activityInviteEducation, {
+        [B.activityInviteEducationFadeIn]: this.state.fadeIn
       }),
       children: [(0, i.jsx)("div", {
-        className: D.activityInviteEducationArrow
+        className: B.activityInviteEducationArrow
       }), (0, i.jsx)("span", {
         children: k.Z.Messages.USER_ACTIVITY_CHAT_INVITE_EDUCATION.format({
           game: e.name,
@@ -90,13 +90,13 @@ class V extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), B(this, "state", {
+    super(...e), D(this, "state", {
       fadeIn: !1
-    }), B(this, "timeout", null), B(this, "handleDismissInviteEducation", () => {
+    }), D(this, "timeout", null), D(this, "handleDismissInviteEducation", () => {
       let {
         activity: e
       } = this.props;
-      null != e && null != e.application_id && T.Z.dismissForApplicationId(e.application_id)
+      null != e && null != e.application_id && f.Z.dismissForApplicationId(e.application_id)
     })
   }
 }
@@ -106,7 +106,7 @@ function H(e) {
     channel: t,
     guild: n
   } = e;
-  return (0, i.jsx)(E.Z, {
+  return (0, i.jsx)(v.Z, {
     contentTypes: [],
     children: e => {
       let {
@@ -119,10 +119,10 @@ function H(e) {
 }
 class G extends s.PureComponent {
   componentDidMount() {
-    P.S.subscribe(w.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
+    y.S.subscribe(U.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
   }
   componentWillUnmount() {
-    P.S.unsubscribe(w.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
+    y.S.unsubscribe(U.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
   }
   getCooldownTextStyle() {
     let {
@@ -144,55 +144,55 @@ class G extends s.PureComponent {
       guildId: t,
       activity: n,
       showInviteEducation: s,
-      isFocused: a,
-      typingUsers: o,
-      className: u,
+      isFocused: o,
+      typingUsers: l,
+      className: c,
       slowmodeCooldownGuess: h,
       isBypassSlowmode: m,
       channel: p,
-      isThreadCreation: T,
-      renderDots: f,
-      poggermodeEnabled: v,
-      isComboing: E
+      isThreadCreation: f,
+      renderDots: T,
+      poggermodeEnabled: _,
+      isComboing: v
     } = this.props, {
-      rateLimitPerUser: I
-    } = p, x = A.default.getCurrentUser(), S = C.Z.getGuild(t), R = I > 0, _ = T ? [] : r()(o).keys().filter(e => e !== (null == x ? void 0 : x.id)).reject(e => Z.Z.isBlocked(e)).map(e => A.default.getUser(e)).filter(y.lm).map(e => U.ZP.getName(t, this.props.channel.id, e)).value();
-    if (0 === _.length && !R && !E) return s && null != n ? (0, i.jsx)(V, {
+      rateLimitPerUser: b
+    } = p, I = j.default.getCurrentUser(), x = C.Z.getGuild(t), R = b > 0, N = f ? [] : r()(l).keys().filter(e => e !== (null == I ? void 0 : I.id)).reject(e => S.Z.isBlocked(e)).map(e => j.default.getUser(e)).filter(L.lm).map(e => w.ZP.getName(t, this.props.channel.id, e)).value();
+    if (0 === N.length && !R && !v) return s && null != n ? (0, i.jsx)(V, {
       activity: n,
-      isFocused: a
+      isFocused: o
     }) : (0, i.jsx)(H, {
       channel: p,
-      guild: S
+      guild: x
     });
     let O = "",
-      j = null,
+      Z = null,
       M = "";
     if (R) {
-      if (j = (0, i.jsx)(g.TimerIcon, {
+      if (Z = (0, i.jsx)(g.TimerIcon, {
           size: "xs",
           color: "currentColor",
-          className: D.slowModeIcon
-        }), I >= L.Z.Seconds.HOUR) {
-        let e = Math.floor(I / L.Z.Seconds.HOUR),
-          t = Math.floor((I - e * L.Z.Seconds.HOUR) / L.Z.Seconds.MINUTE),
-          n = I - e * L.Z.Seconds.HOUR - t * L.Z.Seconds.MINUTE;
+          className: B.slowModeIcon
+        }), b >= P.Z.Seconds.HOUR) {
+        let e = Math.floor(b / P.Z.Seconds.HOUR),
+          t = Math.floor((b - e * P.Z.Seconds.HOUR) / P.Z.Seconds.MINUTE),
+          n = b - e * P.Z.Seconds.HOUR - t * P.Z.Seconds.MINUTE;
         M = k.Z.Messages.CHANNEL_SLOWMODE_DESC_HOURS.format({
           hours: e,
           minutes: t,
           seconds: n
         })
-      } else if (I >= 60) {
-        let e = Math.floor(I / 60);
+      } else if (b >= 60) {
+        let e = Math.floor(b / 60);
         M = k.Z.Messages.CHANNEL_SLOWMODE_DESC_MINUTES.format({
           minutes: e,
-          seconds: I - 60 * e
+          seconds: b - 60 * e
         })
       } else M = k.Z.Messages.CHANNEL_SLOWMODE_DESC.format({
-        seconds: I
+        seconds: b
       });
       if (!m && h > 0) {
-        let e = c().duration(h);
-        if (h > L.Z.Millis.HOUR) {
+        let e = u().duration(h);
+        if (h > P.Z.Millis.HOUR) {
           let t = "".concat(e.minutes()).padStart(2, "0"),
             n = "".concat(e.seconds()).padStart(2, "0");
           O = "".concat(e.hours(), ":").concat(t, ":").concat(n)
@@ -200,31 +200,31 @@ class G extends s.PureComponent {
           let t = "".concat(e.seconds()).padStart(2, "0");
           O = "".concat(e.minutes(), ":").concat(t)
         }
-      } else 0 === _.length && (O = m ? k.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : k.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT)
+      } else 0 === N.length && (O = m ? k.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : k.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT)
     }
-    let [b, P, w] = _;
-    return e = 0 === _.length ? "" : 1 === _.length ? k.Z.Messages.ONE_USER_TYPING.format({
-      a: b
-    }) : 2 === _.length ? k.Z.Messages.TWO_USERS_TYPING.format({
-      a: b,
-      b: P
-    }) : 3 === _.length ? k.Z.Messages.THREE_USERS_TYPING.format({
-      a: b,
-      b: P,
-      c: w
+    let [A, y, U] = N;
+    return e = 0 === N.length ? "" : 1 === N.length ? k.Z.Messages.ONE_USER_TYPING.format({
+      a: A
+    }) : 2 === N.length ? k.Z.Messages.TWO_USERS_TYPING.format({
+      a: A,
+      b: y
+    }) : 3 === N.length ? k.Z.Messages.THREE_USERS_TYPING.format({
+      a: A,
+      b: y,
+      c: U
     }) : k.Z.Messages.SEVERAL_USERS_TYPING, (0, i.jsxs)("div", {
-      className: l()(D.typing, {
-        "stop-animation": !a,
-        [D.isComboing]: v && E
-      }, u),
+      className: a()(B.typing, {
+        "stop-animation": !o,
+        [B.isComboing]: _ && v
+      }, c),
       children: [(0, i.jsxs)("div", {
-        className: D.typingDots,
-        children: [_.length > 0 && !1 !== f && (0, i.jsx)(g.Dots, {
-          className: D.ellipsis,
+        className: B.typingDots,
+        children: [N.length > 0 && !1 !== T && (0, i.jsx)(g.Dots, {
+          className: B.ellipsis,
           dotRadius: 3.5,
           themed: !0
         }), (0, i.jsx)("span", {
-          className: D.text,
+          className: B.text,
           "aria-live": "polite",
           "aria-atomic": !0,
           children: e
@@ -233,19 +233,19 @@ class G extends s.PureComponent {
         text: M,
         children: e => (0, i.jsxs)(d.Z.div, {
           style: this.getCooldownTextStyle(),
-          className: D.cooldownWrapper,
+          className: B.cooldownWrapper,
           ...e,
-          children: [O, j]
+          children: [O, Z]
         })
-      }), v && E && (0, i.jsx)(N.Z, {
+      }), _ && v && (0, i.jsx)(E.Z, {
         channelId: p.id
       })]
     })
   }
   constructor(...e) {
-    super(...e), B(this, "state", {
+    super(...e), D(this, "state", {
       color: new d.Z.Value(0)
-    }), B(this, "emphasizeSlowmodeCooldown", () => {
+    }), D(this, "emphasizeSlowmodeCooldown", () => {
       let {
         color: e
       } = this.state;
@@ -268,22 +268,22 @@ function W(e) {
     channel: t,
     isThreadCreation: n = !1,
     ...s
-  } = e, a = (0, m.e7)([_.Z], () => _.Z.findActivity(e => null != e.application_id)), l = (0, m.e7)([I.ZP, S.default], () => I.ZP.getUserCombo(S.default.getId(), t.id)), o = (0, m.e7)([x.Z, v.Z], () => (0, f.Z)(t, a, x.Z, v.Z)), r = (0, m.e7)([O.Z], () => O.Z.getSlowmodeCooldownGuess(t.id, n ? O.S.CreateThread : O.S.SendMessage)), u = (0, m.e7)([R.Z], () => n ? R.Z.can(w.Plq.MANAGE_THREADS, t) : R.Z.can(w.Plq.MANAGE_CHANNELS, t) || R.Z.can(w.Plq.MANAGE_MESSAGES, t)), c = {
+  } = e, o = (0, m.e7)([N.Z], () => N.Z.findActivity(e => null != e.application_id)), a = (0, m.e7)([b.ZP, x.default], () => b.ZP.getUserCombo(x.default.getId(), t.id)), l = (0, m.e7)([I.Z, _.Z], () => (0, T.Z)(t, o, I.Z, _.Z)), r = (0, m.e7)([O.Z], () => O.Z.getSlowmodeCooldownGuess(t.id, n ? O.S.CreateThread : O.S.SendMessage)), c = (0, m.e7)([R.Z], () => n ? R.Z.can(U.Plq.MANAGE_THREADS, t) : R.Z.can(U.Plq.MANAGE_CHANNELS, t) || R.Z.can(U.Plq.MANAGE_MESSAGES, t)), u = {
     ...s,
     baseTextColor: (0, g.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
     activeTextColor: (0, g.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
-    showInviteEducation: o,
-    activity: a,
-    typingUsers: (0, m.e7)([j.Z], () => j.Z.getTypingUsers(t.id)),
+    showInviteEducation: l,
+    activity: o,
+    typingUsers: (0, m.e7)([Z.Z], () => Z.Z.getTypingUsers(t.id)),
     isFocused: (0, m.e7)([M.Z], () => M.Z.isFocused()),
     guildId: t.guild_id,
     slowmodeCooldownGuess: r,
-    isComboing: null != l,
-    isBypassSlowmode: u,
+    isComboing: null != a,
+    isBypassSlowmode: c,
     channel: t,
     isThreadCreation: n
   };
   return (0, i.jsx)(G, {
-    ...c
+    ...u
   })
 }

@@ -16,7 +16,7 @@ function u(e) {
     children: t
   } = e, [n, u] = r.useState(null), [_, c] = r.useState(null), d = r.useRef(new Set), [E, I] = r.useState(!1), T = r.useCallback(e => {
     d.current.delete(e), I(d.current.size > 0)
-  }, []), h = r.useCallback(e => (d.current.add(e), I(!0), () => T(e)), [T]), S = r.useCallback((e, t) => {
+  }, []), h = r.useCallback(e => (d.current.add(e), I(!0), () => T(e)), [T]), f = r.useCallback((e, t) => {
     for (let n of d.current) n(e, t)
   }, []);
   return (0, i.jsxs)(i.Fragment, {
@@ -31,7 +31,7 @@ function u(e) {
       ref: c,
       className: l.canvas,
       environment: a.rq,
-      onClick: E ? S : void 0
+      onClick: E ? f : void 0
     }), (0, i.jsx)(s.Ji, {
       ref: u,
       colors: a.Br,

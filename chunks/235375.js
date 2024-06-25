@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   baseRules: function() {
-    return A
+    return N
   },
   customRules: function() {
     return m
@@ -21,11 +21,11 @@ var i = n(735250),
   I = n(626135),
   T = n(981631),
   h = n(596401);
-let S = l().defaultRules.link,
-  f = {
+let f = l().defaultRules.link,
+  S = {
     section: T.jXE.SETTINGS_CHANGELOG
   },
-  N = e => {
+  A = e => {
     var t, n;
     let {
       level: i,
@@ -37,7 +37,7 @@ let S = l().defaultRules.link,
       className: o()(...(t = l, null == (n = a) ? [] : n.split(" ").map(e => t[e])))
     }, s)
   },
-  A = null != d.Z ? d.Z.defaultRules : null,
+  N = null != d.Z ? d.Z.defaultRules : null,
   m = {
     link: {
       parse(e, t, n) {
@@ -48,7 +48,7 @@ let S = l().defaultRules.link,
           a = r.startsWith("/shop/fullscreen?source=1") || r.startsWith("/activities");
         return i = s || o ? e => {
           I.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
-            location: f
+            location: S
           }), s ? c.Z.open(T.oAB.PREMIUM) : o && c.Z.open(T.oAB.HYPESQUAD_ONLINE), n.changeLog.track(T.rMx.CHANGE_LOG_CTA_CLICKED, {
             cta_type: "nitro"
           }), (0, u.closeModal)(h.Xd), e.preventDefault()
@@ -63,7 +63,7 @@ let S = l().defaultRules.link,
             ...I.default.getCampaignParams(r)
           })
         }, {
-          ...S.parse(e, t, n),
+          ...f.parse(e, t, n),
           callToAction: i
         }
       },
@@ -77,7 +77,7 @@ let S = l().defaultRules.link,
       }, n.key)
     },
     lheading: e => ({
-      react: (t, n, r) => (0, i.jsx)(N, {
+      react: (t, n, r) => (0, i.jsx)(A, {
         level: t.level,
         className: t.className,
         styleSheet: e,
@@ -85,7 +85,7 @@ let S = l().defaultRules.link,
       }, r.key)
     }),
     heading: {
-      react: (e, t, n) => (0, i.jsx)(N, {
+      react: (e, t, n) => (0, i.jsx)(A, {
         level: e.level,
         children: t(e.content, n)
       }, n.key)
@@ -100,7 +100,7 @@ let S = l().defaultRules.link,
       }
     },
     blockQuote: {
-      react: null == A ? void 0 : A.blockQuote.react
+      react: null == N ? void 0 : N.blockQuote.react
     },
     paragraph: {
       react: (e, t, n) => (0, i.jsx)("p", {

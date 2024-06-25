@@ -1,49 +1,49 @@
-t.r(s);
-var a = t(735250);
-t(470079);
-var l = t(481060),
-  n = t(430824),
-  o = t(153124),
-  d = t(614812),
-  r = t(689938),
-  i = t(768506);
-s.default = e => {
+a.r(t);
+var s = a(735250);
+a(470079);
+var n = a(481060),
+  o = a(430824),
+  l = a(153124),
+  d = a(614812),
+  c = a(689938),
+  r = a(768506);
+t.default = e => {
   let {
-    onClose: s,
-    guildId: t
-  } = e, c = (0, o.Dt)(), u = r.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({
+    onClose: t,
+    guildId: a
+  } = e, i = (0, l.Dt)(), u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({
     helpdeskArticle: d.z
-  }), I = n.Z.getGuild(t);
-  return null != I && (u = r.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION.format({
-    guildName: I.name,
+  }), _ = o.Z.getGuild(a);
+  return null != _ && (u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION.format({
+    guildName: _.name,
     helpdeskArticle: d.z
-  })), (0, a.jsxs)(l.ModalRoot, {
+  })), (0, s.jsxs)(n.ModalRoot, {
     ...e,
-    "aria-labelledby": c,
-    children: [(0, a.jsxs)(l.ModalHeader, {
+    "aria-labelledby": i,
+    children: [(0, s.jsxs)(n.ModalHeader, {
       separator: !1,
-      className: i.modalHeader,
-      children: [(0, a.jsx)(l.Heading, {
-        id: c,
+      className: r.modalHeader,
+      children: [(0, s.jsx)(n.Heading, {
+        id: i,
         variant: "heading-xl/extrabold",
-        children: r.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING
-      }), (0, a.jsx)(l.ModalCloseButton, {
-        className: i.closeButton,
-        onClick: s
+        children: c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING
+      }), (0, s.jsx)(n.ModalCloseButton, {
+        className: r.closeButton,
+        onClick: t
       })]
-    }), (0, a.jsx)(l.ModalContent, {
-      className: i.modalContent,
-      children: (0, a.jsx)(l.Text, {
+    }), (0, s.jsx)(n.ModalContent, {
+      className: r.modalContent,
+      children: (0, s.jsx)(n.Text, {
         variant: "text-md/normal",
-        className: i.contentText,
+        className: r.contentText,
         children: u
       })
-    }), (0, a.jsx)(l.ModalFooter, {
-      children: (0, a.jsx)(l.Button, {
-        className: i.button,
-        size: l.Button.Sizes.MIN,
-        onClick: s,
-        children: r.Z.Messages.OKAY
+    }), (0, s.jsx)(n.ModalFooter, {
+      children: (0, s.jsx)(n.Button, {
+        className: r.button,
+        size: n.Button.Sizes.MIN,
+        onClick: t,
+        children: c.Z.Messages.OKAY
       })
     })]
   })

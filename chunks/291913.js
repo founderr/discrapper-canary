@@ -5,11 +5,11 @@ t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var l = t(481060),
+var a = t(481060),
   s = t(63063),
-  a = t(285952),
-  r = t(901524),
-  o = t(153124),
+  l = t(285952),
+  o = t(901524),
+  r = t(153124),
   c = t(689938),
   d = t(331651);
 
@@ -19,55 +19,55 @@ function u(e) {
     onChange: t,
     children: u,
     note: I,
-    helpdeskArticleId: N,
-    style: E,
-    disabled: T = !1,
-    hideBorder: m = !1,
-    className: _ = d.marginBottom20
-  } = e, h = (0, o.Dt)();
-  return (0, i.jsxs)(a.Z, {
-    style: E,
-    className: _,
-    direction: a.Z.Direction.VERTICAL,
-    children: [(0, i.jsxs)(a.Z, {
-      children: [(0, i.jsx)(a.Z.Child, {
-        children: (0, i.jsx)(l.FormTitle, {
+    helpdeskArticleId: m,
+    style: _,
+    disabled: N = !1,
+    hideBorder: E = !1,
+    className: T = d.marginBottom20
+  } = e, h = (0, r.Dt)();
+  return (0, i.jsxs)(l.Z, {
+    style: _,
+    className: T,
+    direction: l.Z.Direction.VERTICAL,
+    children: [(0, i.jsxs)(l.Z, {
+      children: [(0, i.jsx)(l.Z.Child, {
+        children: (0, i.jsx)(a.FormTitle, {
           id: h,
           className: d.marginReset,
-          tag: l.FormTitleTags.H3,
-          disabled: T,
+          tag: a.FormTitleTags.H3,
+          disabled: N,
           children: u
         })
-      }), (0, i.jsx)(a.Z.Child, {
+      }), (0, i.jsx)(l.Z.Child, {
         grow: 0,
         shrink: 0,
-        children: (0, i.jsx)(r.Z, {
+        children: (0, i.jsx)(o.Z, {
           value: n,
           onChange: t,
-          disabled: T,
+          disabled: N,
           labelledBy: h
         })
       })]
-    }), null != I && (0, i.jsx)(a.Z.Child, {
+    }), null != I && (0, i.jsx)(l.Z.Child, {
       className: d.marginTop4,
-      children: (0, i.jsx)(l.FormText, {
-        type: l.FormTextTypes.DESCRIPTION,
+      children: (0, i.jsx)(a.FormText, {
+        type: a.FormTextTypes.DESCRIPTION,
         children: I
       })
-    }), null != N && (0, i.jsx)(a.Z.Child, {
+    }), null != m && (0, i.jsx)(l.Z.Child, {
       className: d.marginTop4,
-      children: (0, i.jsx)(l.FormText, {
-        disabled: T,
-        type: l.FormTextTypes.DESCRIPTION,
-        children: (0, i.jsx)(l.Anchor, {
-          href: s.Z.getArticleURL(N),
+      children: (0, i.jsx)(a.FormText, {
+        disabled: N,
+        type: a.FormTextTypes.DESCRIPTION,
+        children: (0, i.jsx)(a.Anchor, {
+          href: s.Z.getArticleURL(m),
           children: c.Z.Messages.LEARN_MORE
         })
       })
-    }), !m && (0, i.jsx)(a.Z.Child, {
+    }), !E && (0, i.jsx)(l.Z.Child, {
       className: d.marginTop20,
-      children: (0, i.jsx)(l.FormDivider, {})
+      children: (0, i.jsx)(a.FormDivider, {})
     })]
   })
 }
-r.Z.Types, u.Types = r.Z.Types
+o.Z.Types, u.Types = o.Z.Types

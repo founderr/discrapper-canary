@@ -1,16 +1,16 @@
 n.d(t, {
   Z: function() {
-    return r
+    return a
   }
 });
-var l = n(442837),
-  i = n(314897),
-  s = n(88751);
+var i = n(442837),
+  l = n(314897),
+  r = n(88751);
 
-function r(e) {
+function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return (0, l.cj)([s.ZP, i.default], () => {
-    let n = i.default.getId();
-    return s.ZP.getPermissionsForUser(n, e, t)
+  return (0, i.cj)([r.ZP, l.default], () => {
+    let n = l.default.getId();
+    return r.ZP.getPermissionsForUser(n, e, t)
   }, [e, t])
 }

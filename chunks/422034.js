@@ -28,7 +28,7 @@ function I(e) {
     affinity: e,
     applyMask: t !== u.length - 1,
     size: c.EF.SIZE_32
-  }, e.id)), h = e => null != e.globalName ? e.globalName : e.username, S = r.useMemo(() => 3 === u.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
+  }, e.id)), h = e => null != e.globalName ? e.globalName : e.username, f = r.useMemo(() => 3 === u.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
     username: h(u[2])
   }) : 2 === u.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
     username: h(u[1]),
@@ -47,11 +47,11 @@ function I(e) {
         return t ? (0, i.jsx)(l.Text, {
           variant: "text-lg/medium",
           color: s,
-          children: S
+          children: f
         }) : (0, i.jsx)(l.Heading, {
           variant: "heading-xl/medium",
           color: s,
-          children: S
+          children: f
         })
       }, {})
     })]

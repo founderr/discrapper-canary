@@ -3,21 +3,21 @@ n.d(t, {
     return r
   },
   w: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(748848);
+var a = n(748848);
 
-function l(e, t) {
+function s(e, t) {
   let {
     children: n
   } = e;
-  return (0, s.jsx)("span", {
+  return (0, i.jsx)("span", {
     className: t,
     children: n
   })
 }
-let a = e => l(e, i.searchFilter),
-  r = e => l(e, i.searchAnswer)
+let l = e => s(e, a.searchFilter),
+  r = e => s(e, a.searchAnswer)

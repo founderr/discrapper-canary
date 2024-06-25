@@ -29,12 +29,12 @@ function d(e) {
     postThread: I,
     user: T,
     selectedGuildId: h,
-    canAccess: S = !1
+    canAccess: f = !1
   } = e;
   if (null == u) return null;
-  let f = (0, l.EY)(u.thumbnail),
-    N = !S && u.has_media_attachment,
-    A = S ? c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+  let S = (0, l.EY)(u.thumbnail),
+    A = !f && u.has_media_attachment,
+    N = f ? c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
     m = null != T ? a.ZP.getName(u.guild_id, u.channel_id, T) : void 0,
     O = null == T ? void 0 : T.getAvatarURL(null == d ? void 0 : d.id, 40);
   (null == O || h !== u.guild_id) && (O = o.ZP.getGuildIconURL({
@@ -43,35 +43,35 @@ function d(e) {
     size: 40,
     canAnimate: !1
   }));
-  let R = function(e) {
+  let p = function(e) {
       if (null == e) return !1;
       let {
         height: t,
         width: n
       } = e;
       return null != t && null != n && t >= n
-    }(u.thumbnail) && !N,
-    p = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(_._j));
+    }(u.thumbnail) && !A,
+    R = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(_._j));
   return {
     title: null !== (r = u.title) && void 0 !== r ? r : "",
     subtitle: u.description,
-    ctaText: A,
-    coverImage: f,
-    coverImageOverlayText: N ? c.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+    ctaText: N,
+    coverImage: S,
+    coverImageOverlayText: A ? c.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
     parentChannelId: u.parent_channel_id,
     threadId: u.channel_id,
     postThread: I,
     messageId: u.message_id,
-    canAccess: S,
+    canAccess: f,
     guildId: u.guild_id,
     guildName: null !== (s = null == d ? void 0 : d.name) && void 0 !== s ? s : u.guild_name,
     authorId: null == u ? void 0 : u.author_id,
     authorName: m,
     channelName: null == E ? void 0 : E.name,
     avatarUrl: O,
-    shouldShowBlurredThumbnailImage: N,
-    shouldContainMediaWithBackground: R,
-    shouldSpoiler: p,
+    shouldShowBlurredThumbnailImage: A,
+    shouldContainMediaWithBackground: p,
+    shouldSpoiler: R,
     obscureAwaitingScan: !1,
     flags: u.flags,
     contentScanVersion: u.content_scan_version

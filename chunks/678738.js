@@ -3,10 +3,10 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(481060),
   r = n(607070),
   o = n(66257);
 
@@ -16,8 +16,8 @@ function c(e) {
     children: n,
     scrollIntoView: c = !1,
     headingColor: u = "header-secondary"
-  } = e, d = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), h = i.useRef(null);
-  return i.useEffect(() => {
+  } = e, d = (0, l.e7)([r.Z], () => r.Z.useReducedMotion), h = a.useRef(null);
+  return a.useEffect(() => {
     let e = h.current;
     if (null == e) return;
     let t = requestAnimationFrame(() => {
@@ -26,10 +26,10 @@ function c(e) {
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [d]), (0, l.jsxs)("section", {
+  }, [d]), (0, i.jsxs)("section", {
     ref: c ? h : void 0,
     className: o.section,
-    children: [(0, l.jsx)(a.Heading, {
+    children: [(0, i.jsx)(s.Heading, {
       variant: "text-xs/semibold",
       color: u,
       children: t

@@ -1,24 +1,24 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return a
+    return r
   }
 });
-var n = t(470079),
-  i = t(584825),
-  l = t(14263);
+var s = n(470079),
+  a = n(584825),
+  i = n(14263);
 
-function a(e, s) {
-  let t = (0, i.qi)(e),
-    a = (0, l.Z)(e);
-  return n.useMemo(() => t.map(e => {
-    var t;
-    let n = null == e ? void 0 : e.role_id;
+function r(e, t) {
+  let n = (0, a.qi)(e),
+    r = (0, i.Z)(e);
+  return s.useMemo(() => n.map(e => {
+    var n;
+    let s = null == e ? void 0 : e.role_id;
     return {
-      ...null !== (t = null == s ? void 0 : s.ppgs[e.id]) && void 0 !== t ? t : {},
+      ...null !== (n = null == t ? void 0 : t.ppgs[e.id]) && void 0 !== n ? n : {},
       key: e.id,
       subscriptionListing: e,
-      roleMemberCount: null == n ? void 0 : null == a ? void 0 : a[n]
+      roleMemberCount: null == s ? void 0 : null == r ? void 0 : r[s]
     }
-  }), [t, null == s ? void 0 : s.ppgs, a])
+  }), [n, null == t ? void 0 : t.ppgs, r])
 }

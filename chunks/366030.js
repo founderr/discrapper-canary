@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return x
+    return B
   }
 }), n(536091), n(47120);
 var i = n(735250),
@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(99690),
   T = n(410030),
   h = n(726542),
-  S = n(367907),
-  f = n(906732),
-  N = n(171368),
-  A = n(598077),
+  f = n(367907),
+  S = n(906732),
+  A = n(171368),
+  N = n(598077),
   m = n(271383),
   O = n(467679),
-  R = n(626135),
-  p = n(275759),
+  p = n(626135),
+  R = n(275759),
   g = n(107484),
   C = n(977392),
   v = n(134433),
@@ -60,7 +60,7 @@ function G(e) {
       break;
     default:
       t = a
-  } else t = (0, p.n_)({
+  } else t = (0, R.n_)({
     connectionType: n,
     connectionMetadataField: r,
     operator: s,
@@ -92,15 +92,15 @@ function w(e) {
         _ = u.filter(e => null != e.operator),
         E = u.find(e => null != e.application),
         T = h.Z.get(e),
-        S = null == E ? void 0 : E.application,
-        f = (null == S ? void 0 : S.bot) != null ? new A.Z(S.bot) : null;
-      return p.SJ.includes(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "") ? l = (0, i.jsx)(L.Z, {
+        f = null == E ? void 0 : E.application,
+        S = (null == f ? void 0 : f.bot) != null ? new N.Z(f.bot) : null;
+      return R.SJ.includes(null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : "") ? l = (0, i.jsx)(L.Z, {
         className: b.botTag,
         color: r,
         size: 16
-      }) : null != f && (l = (0, i.jsx)(O.Z, {
+      }) : null != S && (l = (0, i.jsx)(O.Z, {
         className: b.botTag,
-        verified: f.isVerifiedBot()
+        verified: S.isVerifiedBot()
       })), (0, i.jsxs)("div", {
         className: b.popoutChecksGroup,
         children: [(0, i.jsxs)("div", {
@@ -109,14 +109,14 @@ function w(e) {
             src: (0, c.wj)(n) ? T.icon.darkSVG : T.icon.lightSVG,
             alt: "",
             className: b.popoutCheckGroupPlatformIcon
-          }) : null, null != f ? (0, i.jsx)(I.Z, {
-            user: f,
+          }) : null, null != S ? (0, i.jsx)(I.Z, {
+            user: S,
             size: d.AvatarSizes.SIZE_20,
             className: b.popoutCheckGroupPlatformIcon
           }) : null, (0, i.jsx)(d.Text, {
             variant: "text-sm/medium",
             color: "interactive-active",
-            children: null !== (a = null == T ? void 0 : T.name) && void 0 !== a ? a : null == S ? void 0 : S.name
+            children: null !== (a = null == T ? void 0 : T.name) && void 0 !== a ? a : null == f ? void 0 : f.name
           }), l]
         }), _.map(e => {
           let {
@@ -139,7 +139,7 @@ function w(e) {
   })
 }
 
-function B(e) {
+function x(e) {
   let t, {
     onGetRolesClicked: n,
     onOpenProfile: s,
@@ -150,11 +150,11 @@ function B(e) {
     guildId: c
   } = e;
   r.useEffect(() => {
-    R.default.track(P.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
+    p.default.track(P.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
       other_user_id: a,
       role_id: l,
-      ...(0, S.JS)(_),
-      ...(0, S.hH)(c)
+      ...(0, f.JS)(_),
+      ...(0, f.hH)(c)
     })
   }, [a, l, _, c]);
   let E = (0, u.e7)([m.ZP], () => {
@@ -192,7 +192,7 @@ function B(e) {
   })
 }
 
-function x(e) {
+function B(e) {
   let {
     userId: t,
     messageId: n,
@@ -200,7 +200,7 @@ function x(e) {
     channel: a
   } = e, {
     analyticsLocations: l
-  } = (0, f.ZP)(), _ = (0, C.Z)(s, t, a.id, !0), c = (0, u.e7)([g.Z], () => g.Z.getGuildRoleConnectionEligibility(null == _ ? void 0 : _.id)), [I, T] = r.useState(null == c);
+  } = (0, S.ZP)(), _ = (0, C.Z)(s, t, a.id, !0), c = (0, u.e7)([g.Z], () => g.Z.getGuildRoleConnectionEligibility(null == _ ? void 0 : _.id)), [I, T] = r.useState(null == c);
   if (null == _) return null;
   async function h() {
     if (o()(null != _, "visibleConnectionsRole is null"), !!I && null == c) await E.Z.fetchGuildRoleConnectionsEligibility(s.id, _.id), T(!1)
@@ -212,7 +212,7 @@ function x(e) {
         let {
           closePopout: r
         } = e;
-        return null == c ? (0, i.jsx)(i.Fragment, {}) : (o()(null != _, "visibleConnectionsRole is null"), (0, i.jsx)(B, {
+        return null == c ? (0, i.jsx)(i.Fragment, {}) : (o()(null != _, "visibleConnectionsRole is null"), (0, i.jsx)(x, {
           eligibilityStates: c,
           userId: t,
           roleId: _.id,
@@ -222,7 +222,7 @@ function x(e) {
             (0, D.Am)(s.id)
           },
           onOpenProfile: () => {
-            (0, N.openUserProfileModal)({
+            (0, A.openUserProfileModal)({
               userId: t,
               messageId: n,
               guildId: s.id,

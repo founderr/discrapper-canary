@@ -17,20 +17,20 @@ function c(e, t, n, c) {
   var d, E, I;
   let T = r.Z.getChannel(o.Z.getVoiceChannelId()),
     h = null == T ? void 0 : T.getGuildId(),
-    S = s.Z.getMediaSessionId(),
-    f = s.Z.getRTCConnectionId(),
-    N = null === (d = i.ZP.getCurrentGameForAnalytics()) || void 0 === d ? void 0 : d.name,
-    A = h !== n.guildId && n.guildId !== l.X8;
-  let m = (E = n, I = A, E.guildId === l.X8 ? "default" : I ? "custom-external" : "custom");
+    f = s.Z.getMediaSessionId(),
+    S = s.Z.getRTCConnectionId(),
+    A = null === (d = i.ZP.getCurrentGameForAnalytics()) || void 0 === d ? void 0 : d.name,
+    N = h !== n.guildId && n.guildId !== l.X8;
+  let m = (E = n, I = N, E.guildId === l.X8 ? "default" : I ? "custom-external" : "custom");
   a.default.track(u.rMx.PREMIUM_FEATURE_USAGE, {
     feature_name: _.QP.SOUNDBOARD_PLAY,
-    feature_tier: A ? _.h1.PREMIUM_STANDARD : _.h1.FREE,
+    feature_tier: N ? _.h1.PREMIUM_STANDARD : _.h1.FREE,
     guild_id: h,
     location_stack: e,
-    rtc_connection_id: f,
-    media_session_id: S,
+    rtc_connection_id: S,
+    media_session_id: f,
     in_overlay: t,
-    application_name: N,
+    application_name: A,
     emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
     feature_selection: m,
     feature_selection_id: n.soundId,

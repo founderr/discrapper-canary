@@ -3,10 +3,10 @@ n.d(t, {
     return h
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(774078),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(774078),
   r = n(390322),
   o = n(272929),
   c = n(456631),
@@ -16,20 +16,20 @@ var l = n(735250),
 function h(e) {
   let {
     channel: t
-  } = e, n = (0, s.e7)([c.Z], () => c.Z.effectCooldownEndTime), h = i.useMemo(() => null != n ? (n.getTime() - Date.now()) / 1e3 : 0, [n]), {
-    seconds: m
-  } = (0, a.Z)(null != n ? n : new Date), E = m > 0;
-  return (0, l.jsx)(d.Z, {
+  } = e, n = (0, l.e7)([c.Z], () => c.Z.effectCooldownEndTime), h = a.useMemo(() => null != n ? (n.getTime() - Date.now()) / 1e3 : 0, [n]), {
+    seconds: p
+  } = (0, s.Z)(null != n ? n : new Date), m = p > 0;
+  return (0, i.jsx)(d.Z, {
     renderPopout: e => {
       let {
         closePopout: n,
-        onFocus: i
+        onFocus: a
       } = e;
-      return (0, l.jsx)(r.Z, {
-        children: (0, l.jsx)(u.Z, {
+      return (0, i.jsx)(r.Z, {
+        children: (0, i.jsx)(u.Z, {
           channel: t,
           closePopout: n,
-          onFocus: i
+          onFocus: a
         })
       })
     },
@@ -38,12 +38,12 @@ function h(e) {
         onMouseEnter: t,
         ...n
       } = e;
-      return (0, l.jsx)(o.Z, {
+      return (0, i.jsx)(o.Z, {
         totalCooldownSeconds: h,
-        remainingCooldownSeconds: m,
+        remainingCooldownSeconds: p,
         onMouseEnter: e => {
-          var n, l;
-          return n = e, l = t, void(!E && l(n))
+          var n, i;
+          return n = e, i = t, void(!m && i(n))
         },
         ...n
       })

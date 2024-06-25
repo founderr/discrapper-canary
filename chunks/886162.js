@@ -3,84 +3,84 @@ n.d(t, {
     return I
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(990547),
-  a = n(399606),
-  r = n(481060),
+var i = n(735250),
+  s = n(470079),
+  a = n(990547),
+  r = n(399606),
+  l = n(481060),
   o = n(232567),
   c = n(213609),
-  u = n(23434),
-  d = n(153124),
-  E = n(981631),
-  h = n(689938),
-  _ = n(90054);
+  d = n(23434),
+  u = n(153124),
+  _ = n(981631),
+  E = n(689938),
+  h = n(90054);
 
 function I(e) {
   let {
     transitionState: t
-  } = e, I = (0, a.e7)([u.Z], () => u.Z.getAction()), [m, T] = i.useState(!1), g = (0, d.Dt)();
-  async function p() {
-    return T(!0), I === E.c2C.AGREEMENTS && T(await (0, o.Lr)()), null
+  } = e, I = (0, r.e7)([d.Z], () => d.Z.getAction()), [m, p] = s.useState(!1), g = (0, u.Dt)();
+  async function T() {
+    return p(!0), I === _.c2C.AGREEMENTS && p(await (0, o.Lr)()), null
   }
   return (0, c.Z)({
-    type: l.ImpressionTypes.VIEW,
-    name: l.ImpressionNames.USER_AGREEMENTS,
+    type: a.ImpressionTypes.VIEW,
+    name: a.ImpressionNames.USER_AGREEMENTS,
     properties: {
       required_action: I
     }
-  }, {}, []), (0, s.jsxs)(r.ModalRoot, {
+  }, {}, []), (0, i.jsxs)(l.ModalRoot, {
     "aria-labelledby": g,
     transitionState: t,
-    children: [(0, s.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       id: g
-    }), (0, s.jsx)(r.ModalHeader, {
+    }), (0, i.jsx)(l.ModalHeader, {
       separator: !1,
-      children: (0, s.jsx)(r.Heading, {
+      children: (0, i.jsx)(l.Heading, {
         variant: "heading-lg/semibold",
-        children: h.Z.Messages.NEW_TERMS_TITLE
+        children: E.Z.Messages.NEW_TERMS_TITLE
       })
-    }), (0, s.jsxs)(r.ModalContent, {
-      children: [(0, s.jsx)(r.Text, {
+    }), (0, i.jsxs)(l.ModalContent, {
+      children: [(0, i.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: I === E.c2C.AGREEMENTS ? h.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
-      }), (0, s.jsxs)("div", {
-        className: _.container,
-        children: [(0, s.jsxs)("ul", {
-          className: _.links,
-          children: [(0, s.jsx)("li", {
-            children: h.Z.Messages.TERMS_OF_SERVICE.format({
-              url: E.EYA.TERMS
+        children: I === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+      }), (0, i.jsxs)("div", {
+        className: h.container,
+        children: [(0, i.jsxs)("ul", {
+          className: h.links,
+          children: [(0, i.jsx)("li", {
+            children: E.Z.Messages.TERMS_OF_SERVICE.format({
+              url: _.EYA.TERMS
             })
-          }), (0, s.jsx)("li", {
-            children: h.Z.Messages.PAID_SERVICES_TERMS.format({
-              url: E.EYA.PAID_TERMS
+          }), (0, i.jsx)("li", {
+            children: E.Z.Messages.PAID_SERVICES_TERMS.format({
+              url: _.EYA.PAID_TERMS
             })
-          }), (0, s.jsx)("li", {
-            children: h.Z.Messages.PRIVACY_POLICY.format({
-              url: E.EYA.PRIVACY
+          }), (0, i.jsx)("li", {
+            children: E.Z.Messages.PRIVACY_POLICY.format({
+              url: _.EYA.PRIVACY
             })
-          }), (0, s.jsx)("li", {
-            children: h.Z.Messages.COMMUNITY_GUIDELINES.format({
-              url: E.EYA.GUIDELINES
+          }), (0, i.jsx)("li", {
+            children: E.Z.Messages.COMMUNITY_GUIDELINES.format({
+              url: _.EYA.GUIDELINES
             })
           })]
-        }), (0, s.jsx)("img", {
-          className: _.image,
+        }), (0, i.jsx)("img", {
+          className: h.image,
           alt: "",
           src: n(146714)
         })]
-      }), (0, s.jsx)(r.Text, {
+      }), (0, i.jsx)(l.Text, {
         variant: "text-md/normal",
-        className: _.agreementDescription,
-        children: h.Z.Messages.TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION
+        className: h.agreementDescription,
+        children: E.Z.Messages.TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION
       })]
-    }), (0, s.jsx)(r.ModalFooter, {
-      children: (0, s.jsx)(r.Button, {
+    }), (0, i.jsx)(l.ModalFooter, {
+      children: (0, i.jsx)(l.Button, {
         submitting: m,
-        onClick: p,
-        color: r.Button.Colors.GREEN,
-        children: h.Z.Messages.AGREE
+        onClick: T,
+        color: l.Button.Colors.GREEN,
+        children: E.Z.Messages.AGREE
       })
     })]
   })

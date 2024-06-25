@@ -1,31 +1,31 @@
-s.d(t, {
+n.d(t, {
   B: function() {
-    return u
+    return E
   }
 });
-var n = s(470079),
-  a = s(442837),
-  i = s(594174),
-  r = s(74538),
-  l = s(140465),
-  o = s(775412),
-  c = s(276444),
-  E = s(520540),
-  _ = s(474936);
-let u = function(e) {
+var s = n(470079),
+  a = n(442837),
+  r = n(594174),
+  i = n(74538),
+  l = n(140465),
+  o = n(775412),
+  c = n(276444),
+  d = n(520540),
+  _ = n(474936);
+let E = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    s = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
-    u = (0, l.t7)(),
-    d = (0, o._O)(),
+    n = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
+    E = (0, l.t7)(),
+    u = (0, o._O)(),
     {
       eligibleToFetch: T
-    } = E.g.useExperiment({
+    } = d.g.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1
     }),
-    I = T && null != s && s.verified && (0, r.M5)(s, _.p9.TIER_2) && !u && !d;
-  n.useEffect(() => {
+    I = T && null != n && n.verified && (0, i.M5)(n, _.p9.TIER_2) && !E && !u;
+  s.useEffect(() => {
     I && !t && c.Z.checkAndFetchReferralsRemaining()
   }, [I, t])
 }

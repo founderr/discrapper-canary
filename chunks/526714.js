@@ -27,17 +27,17 @@ function _(e) {
     var e, t, n;
     c ? ((0, a.F)(T), null === (e = h.current) || void 0 === e || e.focus()) : null === (n = h.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n)
   }, [c]);
-  let S = r.useCallback(() => {
+  let f = r.useCallback(() => {
       var e, t;
       (null === (t = h.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && I()
     }, [I]),
-    f = s({
+    S = s({
       onClose: I,
       disabled: _,
       isFocused: c
     }, h);
   return (0, i.jsxs)("div", {
-    onClick: S,
+    onClick: f,
     className: o()(u.item, l._[t], {
       [u.disabled]: _,
       [u.focused]: d && c,
@@ -51,6 +51,6 @@ function _(e) {
         className: u.label,
         children: n
       })
-    }) : null, f]
+    }) : null, S]
   })
 }

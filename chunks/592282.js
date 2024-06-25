@@ -24,22 +24,22 @@ function I(e) {
     subtext: I,
     disabled: T,
     isFocused: h,
-    menuItemProps: S,
-    action: f,
-    className: N,
-    focusedClassName: A
+    menuItemProps: f,
+    action: S,
+    className: A,
+    focusedClassName: N
   } = e, m = r.useRef(null);
   return r.useEffect(() => {
     h && (0, u.F)(m)
   }, [h]), (0, i.jsxs)(a.P, {
     innerRef: m,
-    className: o()(E.item, E.labelContainer, d._[t], N, {
+    className: o()(E.item, E.labelContainer, d._[t], A, {
       [E.disabled]: T,
       [E.focused]: h,
-      [null != A ? A : ""]: h
+      [null != N ? N : ""]: h
     }),
-    onClick: T ? void 0 : f,
-    ...S,
+    onClick: T ? void 0 : S,
+    ...f,
     "aria-checked": s,
     "aria-disabled": T,
     children: [(0, i.jsxs)("div", {

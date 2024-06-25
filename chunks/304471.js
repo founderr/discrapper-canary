@@ -1,38 +1,38 @@
 n.d(t, {
   Z: function() {
-    return u
+    return c
   }
 }), n(47120);
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(619915),
-  r = n(737592),
-  a = n(561788),
+var l = n(481060),
+  r = n(619915),
+  a = n(737592),
+  s = n(561788),
   o = n(854018);
 
-function u(e) {
+function c(e) {
   let {
     channel: t,
     onAction: n
-  } = e, u = (0, s.ZP)(t), c = Array.from((0, s.uF)(u).values());
-  return 0 === c.length ? null : (0, l.jsxs)(i.Scroller, {
+  } = e, c = (0, r.ZP)(t), u = Array.from((0, r.uF)(c).values());
+  return 0 === u.length ? null : (0, i.jsxs)(l.Scroller, {
     className: o.container,
-    children: [(0, l.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       className: o.popoutHeaderContainer,
-      children: (0, l.jsx)(a.Z, {
+      children: (0, i.jsx)(s.Z, {
         channel: t
       })
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: o.headerDivider
-    }), c.map((e, i) => {
-      var s;
-      return (0, l.jsx)(r.Z, {
+    }), u.map((e, l) => {
+      var r;
+      return (0, i.jsx)(a.Z, {
         embeddedApp: e,
-        presenceActivity: null !== (s = e.presenceActivity) && void 0 !== s ? s : void 0,
+        presenceActivity: null !== (r = e.presenceActivity) && void 0 !== r ? r : void 0,
         channel: t,
         onAction: n
-      }, i)
+      }, l)
     })]
   })
 }

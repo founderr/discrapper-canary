@@ -25,10 +25,10 @@ let I = {
   },
   T = !1,
   h = !0,
-  S = () => {
+  f = () => {
     h = !l.ZP.canUsePremiumAppIcons(o.default.getCurrentUser())
   },
-  f = e => {
+  S = e => {
     if (I.client.desktop = e, !h) {
       var t;
       a.default.track(_.rMx.APP_ICON_UPDATED, {
@@ -39,15 +39,15 @@ let I = {
     }
   };
 
-function N() {
+function A() {
   h && (I.client = {
     desktop: u.aH.DEFAULT,
     coachmarkImpressions: 2
   }), T = !1
 }
-class A extends(i = r.ZP.PersistedStore) {
+class N extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (I = e), this.waitFor(o.default), this.syncWith([o.default], S)
+    null != e && (I = e), this.waitFor(o.default), this.syncWith([o.default], f)
   }
   get isEditorOpen() {
     return T
@@ -63,21 +63,21 @@ class A extends(i = r.ZP.PersistedStore) {
     return null == I ? void 0 : null === (e = I.client) || void 0 === e ? void 0 : e.desktop
   }
 }
-E(A, "displayName", "AppIconPersistedStoreState"), E(A, "persistKey", "AppIconPersistedStoreState"), t.Z = new A(s.Z, {
+E(N, "displayName", "AppIconPersistedStoreState"), E(N, "persistKey", "AppIconPersistedStoreState"), t.Z = new N(s.Z, {
   APP_ICON_UPDATED: function(e) {
     let {
       id: t
     } = e;
-    null != t && f(t)
+    null != t && S(t)
   },
   APP_ICON_EDITOR_OPEN: function() {
     T = !0
   },
-  APP_ICON_EDITOR_CLOSE: N,
+  APP_ICON_EDITOR_CLOSE: A,
   APP_ICON_TRACK_IMPRESSION: function(e) {
     let {
       markAsDismissed: t
     } = e;
-    I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(c.L.UNKNOWN), N())
+    I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(c.L.UNKNOWN), A())
   }
 })

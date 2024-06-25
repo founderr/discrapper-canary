@@ -3,29 +3,29 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(846027),
+var a = n(442837),
+  l = n(481060),
+  s = n(846027),
   r = n(131951);
 
 function o() {
-  let e = (0, i.e7)([r.Z], () => Object.values(r.Z.getOutputDevices())),
-    t = (0, i.e7)([r.Z], () => r.Z.getOutputDeviceId());
+  let e = (0, a.e7)([r.Z], () => Object.values(r.Z.getOutputDevices())),
+    t = (0, a.e7)([r.Z], () => r.Z.getOutputDeviceId());
   return e.map(e => {
     let {
       id: n,
-      disabled: i,
+      disabled: a,
       name: r
     } = e;
-    return (0, l.jsx)(s.MenuRadioItem, {
+    return (0, i.jsx)(l.MenuRadioItem, {
       group: "output-devices",
       id: "output-".concat(n),
-      disabled: i,
+      disabled: a,
       label: r,
       checked: n === t,
-      action: () => a.Z.setOutputDevice(n)
+      action: () => s.Z.setOutputDevice(n)
     }, "output-".concat(n))
   })
 }

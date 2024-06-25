@@ -1,158 +1,158 @@
-t.d(a, {
+n.d(a, {
   Z: function() {
-    return _
+    return m
   }
-}), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
-var n = t(470079),
-  l = t(263568),
-  s = t(935369),
-  r = t(398805),
-  o = t(524100),
-  i = t(316758),
-  c = t(203143),
-  u = t(79390),
-  d = t(489887),
-  E = t(689938);
+}), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
+var t = n(470079),
+  r = n(263568),
+  l = n(935369),
+  s = n(398805),
+  o = n(524100),
+  i = n(316758),
+  c = n(203143),
+  u = n(79390),
+  d = n(489887),
+  _ = n(689938);
 
-function _(e, a, t) {
-  let _ = e.id,
-    A = n.useRef();
+function m(e, a, n) {
+  let m = e.id,
+    A = t.useRef();
   null == A.current && (A.current = [(0, u.Uu)(), (0, u.Uu)()]);
-  let [L, C] = n.useState(A.current), [R, h] = n.useState(""), [f, T] = n.useState(l.C.DEFAULT), [O, N] = n.useState(!1), [x, I] = n.useState(d.lc.ONE_DAY), [g, p] = n.useState({}), [P, j] = n.useState(!1), v = L.filter(e => (0, u.cS)(e, f)), M = L.filter(e => (0, u.uY)(e, f)), D = R.length > 0 && v.length >= d.gY && 0 === M.length, [S, {
-    error: b,
-    loading: w
-  }] = (0, s.Z)(c.Z.createPoll), Z = L.length < d.fw, k = L.length > d.gY, U = n.useCallback(e => {
-    p(e => {
+  let [f, C] = t.useState(A.current), [L, h] = t.useState(""), [R, I] = t.useState(r.C.DEFAULT), [x, p] = t.useState(!1), [O, g] = t.useState(d.lc.ONE_DAY), [T, N] = t.useState({}), [P, v] = t.useState(!1), j = f.filter(e => (0, u.cS)(e, R)), D = f.filter(e => (0, u.uY)(e, R)), M = L.length > 0 && j.length >= d.gY && 0 === D.length, [w, {
+    error: S,
+    loading: b
+  }] = (0, l.Z)(c.Z.createPoll), k = f.length < d.fw, Z = f.length > d.gY, y = t.useCallback(e => {
+    N(e => {
       let a = {
         ...e
       };
       return delete a.question, a
     }), h(e)
-  }, []), y = n.useCallback(e => {
+  }, []), B = t.useCallback(e => {
     let {
       text: a,
-      index: t,
-      localCreationAnswerId: n
+      index: n,
+      localCreationAnswerId: t
     } = e;
-    p(e => {
+    N(e => {
       let a = {
         ...e
       };
-      return delete a["answer-".concat(n)], a
+      return delete a["answer-".concat(t)], a
     }), C(e => {
-      let n = [...e];
-      return n[t] = {
-        ...n[t],
+      let t = [...e];
+      return t[n] = {
+        ...t[n],
         text: a
-      }, n
+      }, t
     })
-  }, []), B = n.useCallback((e, a) => {
-    C(t => {
-      let n = [...t];
-      return n[a] = {
-        ...n[a],
+  }, []), U = t.useCallback((e, a) => {
+    C(n => {
+      let t = [...n];
+      return t[a] = {
+        ...t[a],
         image: e
-      }, n
+      }, t
     })
-  }, []), H = n.useCallback((e, a, t) => {
-    var n;
-    let l = L[a],
-      s = null === (n = l.image) || void 0 === n ? void 0 : n.mediaAttachmentState;
-    null != s && s.mediaURL !== t && i.P(e, l.localCreationAnswerId, (0, r.Yk)(l.localCreationAnswerId, s.mediaURL))
-  }, [L]), Y = n.useCallback(async (e, a, t) => {
-    let n = L[a].localCreationAnswerId;
-    if (H(e, a), B(m(t, o._.PREPARING), a), null == await i.IV(e, n, t)) {
-      B(m(t, o._.ERROR), a);
+  }, []), W = t.useCallback((e, a, n) => {
+    var t;
+    let r = f[a],
+      l = null === (t = r.image) || void 0 === t ? void 0 : t.mediaAttachmentState;
+    null != l && l.mediaURL !== n && i.P(e, r.localCreationAnswerId, (0, s.Yk)(r.localCreationAnswerId, l.mediaURL))
+  }, [f]), H = t.useCallback(async (e, a, n) => {
+    let t = f[a].localCreationAnswerId;
+    if (W(e, a), U(E(n, o._.PREPARING), a), null == await i.IV(e, t, n)) {
+      U(E(n, o._.ERROR), a);
       return
     }
-    B(m(t, o._.READY_TO_UPLOAD), a)
-  }, [L, B, H]), F = n.useCallback((e, a, t) => {
-    let n = L[a].localCreationAnswerId,
-      l = URL.createObjectURL(t);
-    H(e, a), B(m(l, o._.PREPARING), a), i.fH(e, n, t), B(m(l, o._.READY_TO_UPLOAD), a)
-  }, [L, B, H]), G = n.useCallback((e, a) => {
-    H(_, a), B({
+    U(E(n, o._.READY_TO_UPLOAD), a)
+  }, [f, U, W]), Y = t.useCallback((e, a, n) => {
+    let t = f[a].localCreationAnswerId,
+      r = URL.createObjectURL(n);
+    W(e, a), U(E(r, o._.PREPARING), a), i.fH(e, t, n), U(E(r, o._.READY_TO_UPLOAD), a)
+  }, [f, U, W]), F = t.useCallback((e, a) => {
+    W(m, a), U({
       emoji: e,
       stickerId: void 0,
       mediaAttachmentState: void 0
     }, a)
-  }, [_, B, H]), W = n.useCallback(e => {
+  }, [m, U, W]), G = t.useCallback(e => {
     C(a => {
-      let t = [...a];
-      return t[e] = {
-        ...t[e],
+      let n = [...a];
+      return n[e] = {
+        ...n[e],
         image: void 0
-      }, t
+      }, n
     })
-  }, []), z = n.useCallback(() => {
-    if (!!Z) C(e => [...e, (0, u.Uu)()])
-  }, [Z]), K = n.useCallback(e => {
-    if (!k) return;
-    let a = L.length;
-    H(_, e), C(a => {
-      let t = [...a];
-      return t.splice(e, 1), t
-    }), null == t || t({
+  }, []), z = t.useCallback(() => {
+    if (!!k) C(e => [...e, (0, u.Uu)()])
+  }, [k]), K = t.useCallback(e => {
+    if (!Z) return;
+    let a = f.length;
+    W(m, e), C(a => {
+      let n = [...a];
+      return n.splice(e, 1), n
+    }), null == n || n({
       indexToRemove: e,
       numberOfAnswers: a
     })
-  }, [L.length, k, _, t, H]);
-  n.useEffect(() => () => {
-    i.xt(_)
-  }, [_]);
-  let V = n.useCallback(() => {
+  }, [f.length, Z, m, n, W]);
+  t.useEffect(() => () => {
+    i.xt(m)
+  }, [m]);
+  let V = t.useCallback(() => {
       let e = !0,
         a = {};
-      return 0 === R.trim().length && (e = !1, a.question = E.Z.Messages.CREATE_POLL_QUESTION_REQUIRED), L.filter(e => (0, u.cS)(e, f)).length < d.gY && (e = !1, a["answer-".concat(L[0].localCreationAnswerId)] = E.Z.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED), L.forEach(t => {
-        (0, u.uY)(t, f) && (e = !1, a["answer-".concat(t.localCreationAnswerId)] = E.Z.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT)
-      }), p(a), j(!e), e
-    }, [L, R, f]),
-    q = n.useCallback(async () => {
-      await S({
+      return 0 === L.trim().length && (e = !1, a.question = _.Z.Messages.CREATE_POLL_QUESTION_REQUIRED), f.filter(e => (0, u.cS)(e, R)).length < d.gY && (e = !1, a["answer-".concat(f[0].localCreationAnswerId)] = _.Z.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED), f.forEach(n => {
+        (0, u.uY)(n, R) && (e = !1, a["answer-".concat(n.localCreationAnswerId)] = _.Z.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT)
+      }), N(a), v(!e), e
+    }, [f, L, R]),
+    J = t.useCallback(async () => {
+      await w({
         channel: e,
-        question: R,
-        answers: v,
-        allowMultiSelect: O,
-        duration: x,
-        layout: f,
+        question: L,
+        answers: j,
+        allowMultiSelect: x,
+        duration: O,
+        layout: R,
         onClose: a
       })
-    }, [R, v, O, x, S, e, f, a]),
-    J = n.useCallback(() => {
-      V() && q()
-    }, [q, V]);
+    }, [L, j, x, O, w, e, R, a]),
+    q = t.useCallback(() => {
+      V() && J()
+    }, [J, V]);
   return {
-    answers: L,
-    question: R,
+    answers: f,
+    question: L,
     setQuestion: h,
-    selectedLayoutType: f,
-    setSelectedLayoutType: T,
-    allowMultiSelect: O,
-    setAllowMultiSelect: N,
-    duration: x,
-    setDuration: I,
-    canPost: D,
-    canAddMoreAnswers: Z,
-    canRemoveMoreAnswers: k,
-    handleQuestionChange: U,
-    handleAnswerTextChange: y,
-    handleGifSelect: Y,
-    handleEmojiSelect: G,
-    handleCustomUpload: F,
+    selectedLayoutType: R,
+    setSelectedLayoutType: I,
+    allowMultiSelect: x,
+    setAllowMultiSelect: p,
+    duration: O,
+    setDuration: g,
+    canPost: M,
+    canAddMoreAnswers: k,
+    canRemoveMoreAnswers: Z,
+    handleQuestionChange: y,
+    handleAnswerTextChange: B,
+    handleGifSelect: H,
+    handleEmojiSelect: F,
+    handleCustomUpload: Y,
     handleAddAnswer: z,
     handleRemoveAnswer: K,
-    handleRemoveAnswerImage: W,
-    fieldErrors: g,
-    createPoll: q,
-    handleSubmitPoll: J,
-    submitting: w,
-    createPollError: b,
+    handleRemoveAnswerImage: G,
+    fieldErrors: T,
+    createPoll: J,
+    handleSubmitPoll: q,
+    submitting: b,
+    createPollError: S,
     shouldFocusOnInvalidField: P,
-    setShouldFocusOnInvalidField: j
+    setShouldFocusOnInvalidField: v
   }
 }
 
-function m(e, a) {
+function E(e, a) {
   return {
     mediaAttachmentState: {
       status: a,

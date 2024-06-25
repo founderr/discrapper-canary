@@ -83,13 +83,13 @@ class h extends r.ZP.Store {
     }) : t[n] = i
   }
 }
-let S = new h(s.Z, {
+let f = new h(s.Z, {
   MESSAGE_CREATE: function(e) {
     let {
       optimistic: t,
       message: n
     } = e, i = n.nonce;
-    if (!t && null != i) S.recordGatewayResponse(i)
+    if (!t && null != i) f.recordGatewayResponse(i)
   }
 });
-t.Z = S
+t.Z = f

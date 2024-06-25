@@ -3,26 +3,26 @@ n.d(t, {
     return h
   }
 }), n(757143);
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(430824),
+var a = n(442837),
+  l = n(481060),
+  s = n(430824),
   r = n(914010),
   o = n(689938),
   c = n(66175);
-let u = () => (0, l.jsx)(l.Fragment, {
+let u = () => (0, i.jsx)(i.Fragment, {
     children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
       shareIcon: o.Z.Messages.INSTANT_INVITE,
-      shareIconHook: () => (0, l.jsx)(s.GroupPlusIcon, {
+      shareIconHook: () => (0, i.jsx)(l.GroupPlusIcon, {
         className: c.icon
       }, "icon")
     })
   }),
   d = () => {
-    let e = (0, i.e7)([a.Z, r.Z], () => a.Z.getGuild(r.Z.getGuildId()), []),
+    let e = (0, a.e7)([s.Z, r.Z], () => s.Z.getGuild(r.Z.getGuildId()), []),
       t = null == e ? void 0 : e.name;
-    return (0, l.jsx)(l.Fragment, {
+    return (0, i.jsx)(i.Fragment, {
       children: o.Z.Messages.TIP_WRITING_MESSAGES_BODY3.format({
         serverName: t
       })
@@ -30,23 +30,23 @@ let u = () => (0, l.jsx)(l.Fragment, {
   },
   h = e => {
     var t, n;
-    let i = {
+    let a = {
         VOICE_CONVERSATIONS: {
-          title: (0, l.jsx)("div", {
+          title: (0, i.jsx)("div", {
             className: c.voiceChannelsTitle,
             children: o.Z.Messages.NUF_VOICE_CHANNELS_TITLE
           }),
           body: o.Z.Messages.NUF_VOICE_CHANNELS_DESCRIPTION
         },
         WRITING_MESSAGES: {
-          title: (0, l.jsx)("div", {
+          title: (0, i.jsx)("div", {
             className: c.writingMessagesTitle,
             children: o.Z.Messages.TIP_WRITING_MESSAGES_TITLE3
           }),
-          body: (0, l.jsx)(d, {})
+          body: (0, i.jsx)(d, {})
         },
         ORGANIZE_BY_TOPIC: {
-          title: (0, l.jsx)("div", {
+          title: (0, i.jsx)("div", {
             className: c.channelsTitle,
             children: o.Z.Messages.NUF_CHANNELS_TITLE
           }),
@@ -58,7 +58,7 @@ let u = () => (0, l.jsx)(l.Fragment, {
         },
         INSTANT_INVITE: {
           title: o.Z.Messages.TIP_INSTANT_INVITE_TITLE3,
-          body: (0, l.jsx)(u, {})
+          body: (0, i.jsx)(u, {})
         },
         SERVER_SETTINGS: {
           title: o.Z.Messages.TIP_SERVER_SETTINGS_TITLE3,
@@ -81,10 +81,10 @@ let u = () => (0, l.jsx)(l.Fragment, {
           body: o.Z.Messages.TIP_FRIENDS_LIST_BODY3.format()
         }
       },
-      s = null !== (t = i[e.replace(/-/g, "_").toUpperCase()]) && void 0 !== t ? t : {};
+      l = null !== (t = a[e.replace(/-/g, "_").toUpperCase()]) && void 0 !== t ? t : {};
     return {
-      title: s.title,
-      body: s.body,
-      isLongText: null !== (n = s.isLongText) && void 0 !== n && n
+      title: l.title,
+      body: l.body,
+      isLongText: null !== (n = l.isLongText) && void 0 !== n && n
     }
   }

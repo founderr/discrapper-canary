@@ -1,48 +1,48 @@
-i.d(t, {
+n.d(t, {
   b: function() {
-    return u
+    return d
   },
   o: function() {
-    return p
+    return c
   }
 });
-var c = i(570140),
-  n = i(605236),
-  d = i(626135),
-  s = i(445507),
-  a = i(981631),
-  o = i(921944);
+var i = n(570140),
+  s = n(605236),
+  a = n(626135),
+  r = n(445507),
+  l = n(981631),
+  o = n(921944);
 
-function p(e) {
+function c(e) {
   let {
     targetKey: t,
-    dismissibleContent: i,
-    data: p,
-    completed: u
+    dismissibleContent: n,
+    data: c,
+    completed: d
   } = e;
-  null != p.selectedOptionKey && (!(0, n.un)(i) && d.default.track(a.rMx.SIGNUP_COMPLETED, {
+  null != c.selectedOptionKey && (!(0, s.un)(n) && a.default.track(l.rMx.SIGNUP_COMPLETED, {
     target_key: t,
-    selected_option_key: p.selectedOptionKey,
-    email: p.email,
-    guild_id: p.guildId,
-    metadata: (0, s.mU)(p),
-    completed: u
-  }), (0, n.EW)(i, {
+    selected_option_key: c.selectedOptionKey,
+    email: c.email,
+    guild_id: c.guildId,
+    metadata: (0, r.mU)(c),
+    completed: d
+  }), (0, s.EW)(n, {
     dismissAction: o.L.PRIMARY,
     forceTrack: !0
-  }), c.Z.dispatch({
+  }), i.Z.dispatch({
     type: "COMPLETE_SIGN_UP",
-    email: p.email,
+    email: c.email,
     targetKey: t,
-    selectedOptionKey: p.selectedOptionKey
+    selectedOptionKey: c.selectedOptionKey
   }))
 }
 
-function u(e, t) {
-  (0, n.EW)(t, {
+function d(e, t) {
+  (0, s.EW)(t, {
     dismissAction: o.L.DISMISS,
     forceTrack: !0
-  }), c.Z.dispatch({
+  }), i.Z.dispatch({
     type: "DISMISS_SIGN_UP",
     targetKey: e
   })

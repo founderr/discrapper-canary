@@ -1,22 +1,22 @@
 n.d(t, {
   v: function() {
-    return i
+    return a
   },
   z: function() {
-    return s
+    return l
   }
 });
-var l = n(570140);
+var i = n(570140);
 
-function i(e) {
-  l.Z.dispatch({
+function a(e) {
+  i.Z.dispatch({
     type: "STAGE_MUSIC_MUTE",
     muted: e
   })
 }
 
-function s(e) {
-  l.Z.dispatch({
+function l(e) {
+  i.Z.dispatch({
     type: "STAGE_MUSIC_PLAY",
     play: e
   })

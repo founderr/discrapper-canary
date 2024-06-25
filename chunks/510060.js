@@ -19,10 +19,10 @@ n.d(t, {
     return d
   }
 });
-var s = n(512722),
-  l = n.n(s);
+var a = n(512722),
+  s = n.n(a);
 
-function a(e, t, n) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let r = 2 / 3,
+let l = 2 / 3,
   i = 12;
 class o {
   getWidth(e) {
@@ -43,10 +43,10 @@ class o {
     };
     let t = e / this.maxWidth,
       n = Math.max(Math.floor(t + (e / this.minWidth - t) / 2), 1),
-      s = this.gap * (n - 1);
+      a = this.gap * (n - 1);
     return {
       columns: n,
-      columnWidth: (e - s) / n
+      columnWidth: (e - a) / n
     }
   }
   constructor({
@@ -54,7 +54,7 @@ class o {
     maxWidth: t,
     gap: n
   }) {
-    a(this, "minWidth", void 0), a(this, "maxWidth", void 0), a(this, "gap", void 0), l()(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = n
+    r(this, "minWidth", void 0), r(this, "maxWidth", void 0), r(this, "gap", void 0), s()(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = n
   }
 }
 let c = {
@@ -63,7 +63,7 @@ let c = {
   },
   d = e => {
     let t = e - 2,
-      n = Math.ceil(t * r);
+      n = Math.ceil(t * l);
     return [t, n]
   },
   u = 12,

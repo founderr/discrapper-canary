@@ -31,24 +31,24 @@ function I(e) {
     botProfilesEnabled: T
   } = (0, l.J)({
     location: t
-  }), h = (0, o.e7)([a.default], () => a.default.getUser(n), [n]), S = null != r ? r : h;
-  s()(null != S, "UserPopoutExperimentWrapper: user cannot be undefined");
-  let f = (0, o.e7)([a.default], () => a.default.getCurrentUser());
-  return (s()(null != f, "UserPopoutExperimentWrapper: currentUser cannot be undefined"), T && S.isNonUserBot()) ? (0, i.jsx)(_.Z, {
+  }), h = (0, o.e7)([a.default], () => a.default.getUser(n), [n]), f = null != r ? r : h;
+  s()(null != f, "UserPopoutExperimentWrapper: user cannot be undefined");
+  let S = (0, o.e7)([a.default], () => a.default.getCurrentUser());
+  return (s()(null != S, "UserPopoutExperimentWrapper: currentUser cannot be undefined"), T && f.isNonUserBot()) ? (0, i.jsx)(_.Z, {
     ...I,
-    user: S,
-    currentUser: f
-  }) : T && S.bot ? (0, i.jsx)(E.Z, {
+    user: f,
+    currentUser: S
+  }) : T && f.bot ? (0, i.jsx)(E.Z, {
     ...I,
-    user: S,
-    currentUser: f
-  }) : S.bot ? (0, i.jsx)(c.Z, {
+    user: f,
+    currentUser: S
+  }) : f.bot ? (0, i.jsx)(c.Z, {
     ...I,
-    user: S,
-    currentUser: f
+    user: f,
+    currentUser: S
   }) : (0, i.jsx)(d.Z, {
     ...I,
-    user: S,
-    currentUser: f
+    user: f,
+    currentUser: S
   })
 }

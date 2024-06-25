@@ -1,80 +1,80 @@
-t.r(s), t.d(s, {
+o.r(t), o.d(t, {
   default: function() {
-    return S
+    return u
   }
-}), t(47120);
-var a = t(735250),
-  o = t(470079),
-  n = t(120356),
-  l = t.n(n),
-  i = t(481060),
-  r = t(153124),
-  d = t(689938),
-  c = t(427325);
+}), o(47120);
+var s = o(735250),
+  a = o(470079),
+  n = o(120356),
+  l = o.n(n),
+  i = o(481060),
+  c = o(153124),
+  d = o(689938),
+  r = o(427325);
 
-function S(e) {
+function u(e) {
   let {
-    transitionState: s,
-    onConfirm: t,
+    transitionState: t,
+    onConfirm: o,
     onClose: n,
-    onDismiss: S
-  } = e, [u, M] = o.useState(!1), [E, h] = o.useState(!0), [_, A] = o.useState(!0), m = (0, r.Dt)(), x = () => {
-    S(), n()
+    onDismiss: u
+  } = e, [S, _] = a.useState(!1), [M, E] = a.useState(!0), [h, m] = a.useState(!0), g = (0, c.Dt)(), A = () => {
+    u(), n()
   };
-  return (0, a.jsxs)(i.ModalRoot, {
-    transitionState: s,
-    "aria-labelledby": m,
+  return (0, s.jsxs)(i.ModalRoot, {
+    transitionState: t,
+    "aria-labelledby": g,
     size: i.ModalSize.SMALL,
-    children: [(0, a.jsxs)(i.ModalContent, {
-      className: c.modalContent,
-      children: [(0, a.jsx)(i.ModalCloseButton, {
-        onClick: x,
-        className: c.closeButton
-      }), (0, a.jsx)(i.Heading, {
-        id: m,
+    children: [(0, s.jsxs)(i.ModalContent, {
+      className: r.modalContent,
+      children: [(0, s.jsx)(i.ModalCloseButton, {
+        onClick: A,
+        className: r.closeButton
+      }), (0, s.jsx)(i.Heading, {
+        id: g,
         variant: "heading-lg/extrabold",
         color: "header-primary",
-        className: c.__invalid_modalTitle,
+        className: r.__invalid_modalTitle,
         children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_MODAL_HEADER
-      }), (0, a.jsx)(i.Text, {
+      }), (0, s.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        className: c.modalBody,
+        className: r.modalBody,
         children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_MODAL_SUBHEADER
-      }), (0, a.jsx)(i.FormSwitch, {
+      }), (0, s.jsx)(i.FormSwitch, {
         hideBorder: !0,
         onChange: e => {
-          h(e)
+          E(e)
         },
-        className: l()(c.modalBody, c.toggle),
-        value: E,
+        className: l()(r.modalBody, r.toggle),
+        value: M,
         children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_TOGGLE
       })]
-    }), (0, a.jsxs)(i.ModalFooter, {
-      children: [(0, a.jsx)(i.Button, {
+    }), (0, s.jsxs)(i.ModalFooter, {
+      children: [(0, s.jsx)(i.Button, {
         type: "submit",
         color: i.Button.Colors.BRAND,
         onClick: () => {
-          if (!u) M(!0), t(E, _), M(!1), n()
+          if (!S) _(!0), o(M, h), _(!1), n()
         },
-        submitting: u,
+        submitting: S,
         children: d.Z.Messages.CONFIRM
-      }), (0, a.jsx)(i.Button, {
+      }), (0, s.jsx)(i.Button, {
         type: "submit",
         color: i.Button.Colors.TRANSPARENT,
         grow: !0,
         look: i.ButtonLooks.LINK,
-        onClick: x,
-        submitting: u,
-        className: c.cancelButton,
+        onClick: A,
+        submitting: S,
+        className: r.cancelButton,
         children: d.Z.Messages.CANCEL
-      }), (0, a.jsx)(i.Checkbox, {
-        value: _,
+      }), (0, s.jsx)(i.Checkbox, {
+        value: h,
         type: i.Checkbox.Types.INVERTED,
-        onChange: (e, s) => {
-          A(s)
+        onChange: (e, t) => {
+          m(t)
         },
-        children: (0, a.jsx)(i.Text, {
+        children: (0, s.jsx)(i.Text, {
           tag: "span",
           variant: "text-sm/normal",
           children: d.Z.Messages.MESSAGE_REQUESTS_SPAM_HAM_OPT_OUT

@@ -1,25 +1,25 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
     return a
   }
 });
-var s = t(735250);
-t(470079);
-var o = t(481060),
-  r = t(897583);
+var s = n(735250);
+n(470079);
+var o = n(481060),
+  r = n(897583);
 
 function a(e) {
   let {
-    heroImageSrc: n,
-    heroImageAlt: t,
+    heroImageSrc: t,
+    heroImageAlt: n,
     children: a,
     header: i,
     description: c
   } = e;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("img", {
-      src: n,
-      alt: t,
+      src: t,
+      alt: n,
       className: r.heroImage
     }), (0, s.jsxs)(o.ModalContent, {
       className: r.body,

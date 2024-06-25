@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 });
 var i = n(735250),
@@ -19,23 +19,23 @@ var i = n(735250),
   T = n(689938),
   h = n(313030);
 
-function S(e) {
+function f(e) {
   let {
     user: t,
     shouldCopyOnClick: n,
     nickname: s,
-    pronouns: S,
-    usernameIcon: f,
-    identityCTA: N,
-    className: A,
+    pronouns: f,
+    usernameIcon: S,
+    identityCTA: A,
+    className: N,
     isTryItOut: m = !1,
     lastSection: O
-  } = e, R = (0, u.Z)("username"), p = r.useMemo(() => ({
+  } = e, p = (0, u.Z)("username"), R = r.useMemo(() => ({
     source: I.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
   return (0, i.jsxs)(E.Z, {
-    className: o()(h.container, A),
+    className: o()(h.container, N),
     lastSection: O,
     children: [(0, i.jsxs)("div", {
       className: n ? h.copiableNameTag : void 0,
@@ -56,7 +56,7 @@ function S(e) {
             className: h.nickname,
             children: s
           }) : null, (0, i.jsx)(l.Z, {
-            usernameIcon: f,
+            usernameIcon: S,
             user: t,
             forceUsername: !0,
             forcePomelo: m,
@@ -64,23 +64,23 @@ function S(e) {
             usernameClass: null == s ? h.userTagUsernameNoNickname : h.userTagUsernameBase,
             discriminatorClass: null == s ? h.userTagDiscriminatorNoNickname : h.discrimBase,
             botClass: null == s ? h.headerBotTag : h.headerBotTagWithNickname
-          }), N]
+          }), A]
         })
-      }), null != S && "" !== S && (0, i.jsx)(a.Tooltip, {
+      }), null != f && "" !== f && (0, i.jsx)(a.Tooltip, {
         text: T.Z.Messages.USER_PROFILE_PRONOUNS,
         children: e => (0, i.jsx)(a.Text, {
           ...e,
           variant: "text-sm/normal",
           className: h.pronouns,
-          children: S
+          children: f
         })
       })]
-    }), R && (0, i.jsx)("div", {
+    }), p && (0, i.jsx)("div", {
       className: h.clanTag,
       children: (0, i.jsx)(_.ZP, {
         userId: t.id,
         inline: !1,
-        profileViewedAnalytics: p
+        profileViewedAnalytics: R
       })
     })]
   })

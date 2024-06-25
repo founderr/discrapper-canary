@@ -1,7 +1,7 @@
-var l, i, s = n(735250);
+var i, a, l = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var s = n(120356),
+  r = n.n(s),
   o = n(481060),
   c = n(871499),
   u = n(400639);
@@ -10,15 +10,15 @@ function d(e) {
   let {
     direction: t,
     className: n,
-    themeable: l,
-    ...i
+    themeable: i,
+    ...a
   } = e;
-  return (0, s.jsx)(c.Z, {
+  return (0, l.jsx)(c.Z, {
     className: r()(n, u.arrow, {
       [u.up]: 0 === t
     }),
     iconComponent: o.ChevronSmallDownIcon,
-    themeable: l,
-    ...i
+    themeable: i,
+    ...a
   })
-}(l = i || (i = {}))[l.UP = 0] = "UP", l[l.DOWN = 1] = "DOWN", d.Directions = i, t.Z = d
+}(i = a || (a = {}))[i.UP = 0] = "UP", i[i.DOWN = 1] = "DOWN", d.Directions = a, t.Z = d

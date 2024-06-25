@@ -1,117 +1,117 @@
 n.d(t, {
   Z: function() {
-    return N
+    return C
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(186325),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(186325),
   o = n(780384),
   c = n(481060),
-  u = n(410030),
-  d = n(810090),
-  E = n(113434),
-  h = n(497505),
-  _ = n(918701),
+  d = n(410030),
+  u = n(810090),
+  _ = n(113434),
+  E = n(497505),
+  h = n(918701),
   I = n(78826),
   m = n(670638),
-  T = n(981631),
+  p = n(981631),
   g = n(689938),
-  p = n(211549);
+  T = n(211549);
 
-function N(e) {
+function C(e) {
   let {
     quest: t,
     isHovering: n,
-    onCtxMenuClose: l,
-    onCtxMenuOpen: N,
-    onCtxMenuSelect: S
-  } = e, C = (0, _.ph)(t), A = (0, u.ZP)(), f = (0, o.wj)(A) ? T.BRd.DARK : T.BRd.LIGHT, Z = f === T.BRd.DARK, L = i.useMemo(() => (0, _.nP)(t.config.assets.questBarHero), [t]), O = i.useContext(r.S).reducedMotion.enabled, v = (0, _.Mi)(t, h.jn.GIFT_INVENTORY_FOR_YOU), R = (0, E.tP)(t), P = i.useRef(n), x = i.useRef(null);
-  return i.useEffect(() => {
-    if (L && null != x.current) return P.current !== n && (n ? x.current.play() : (x.current.pause(), x.current.currentTime = 0)), P.current = n, () => {
+    onCtxMenuClose: a,
+    onCtxMenuOpen: C,
+    onCtxMenuSelect: f
+  } = e, S = (0, h.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? p.BRd.DARK : p.BRd.LIGHT, Z = A === p.BRd.DARK, L = s.useMemo(() => (0, h.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, h.Mi)(t, E.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), P = s.useRef(null);
+  return s.useEffect(() => {
+    if (L && null != P.current) return x.current !== n && (n ? P.current.play() : (P.current.pause(), P.current.currentTime = 0)), x.current = n, () => {
       var e;
-      null === (e = x.current) || void 0 === e || e.pause()
+      null === (e = P.current) || void 0 === e || e.pause()
     }
-  }, [n, L]), (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)("div", {
-      className: p.container,
-      children: [(0, s.jsx)("div", {
-        className: p.heroAssetWrapper,
-        children: L ? (0, s.jsx)(I.Fl, {
+  }, [n, L]), (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsxs)("div", {
+      className: T.container,
+      children: [(0, i.jsx)("div", {
+        className: T.heroAssetWrapper,
+        children: L ? (0, i.jsx)(I.Fl, {
           id: "QuestBarV2ContentExpanded_heroAnimated",
-          children: e => (null != e.current && (x.current = e.current), (0, s.jsx)(d.Z, {
+          children: e => (null != e.current && (P.current = e.current), (0, i.jsx)(u.Z, {
             ref: e,
-            autoPlay: !O && n,
+            autoPlay: !v && n,
             loop: !0,
             playsInline: !0,
-            className: p.heroAsset,
+            className: T.heroAsset,
             controls: !1,
-            children: (0, s.jsx)("source", {
-              src: C,
-              type: (0, _.mN)(C)
+            children: (0, i.jsx)("source", {
+              src: S,
+              type: (0, h.mN)(S)
             })
           }))
-        }) : (0, s.jsx)(I.Fl, {
+        }) : (0, i.jsx)(I.Fl, {
           id: "QuestTileBanner",
-          children: e => (0, s.jsx)("img", {
+          children: e => (0, i.jsx)("img", {
             ref: e,
             alt: "",
-            className: p.heroAsset,
-            src: C
+            className: T.heroAsset,
+            src: S
           })
         })
-      }), (0, s.jsx)("div", {
-        className: a()(p.overlay, {
-          [p.darkThemeGradient]: Z,
-          [p.lightThemeGradient]: !Z
+      }), (0, i.jsx)("div", {
+        className: r()(T.overlay, {
+          [T.darkThemeGradient]: Z,
+          [T.lightThemeGradient]: !Z
         })
-      }), (0, s.jsx)("div", {
-        className: p.positionContentOverBackground,
-        children: (0, s.jsxs)("div", {
-          className: p.contents,
-          children: [(0, s.jsxs)("div", {
-            className: p.topRow,
-            children: [v && !R && (0, s.jsx)("div", {
-              className: p.pill,
-              children: (0, s.jsx)(c.Text, {
+      }), (0, i.jsx)("div", {
+        className: T.positionContentOverBackground,
+        children: (0, i.jsxs)("div", {
+          className: T.contents,
+          children: [(0, i.jsxs)("div", {
+            className: T.topRow,
+            children: [O && !R && (0, i.jsx)("div", {
+              className: T.pill,
+              children: (0, i.jsx)(c.Text, {
                 variant: "eyebrow",
                 color: "always-white",
-                className: p.eyebrowText,
+                className: T.eyebrowText,
                 children: g.Z.Messages.RECOMMENDED
               })
-            }), (0, s.jsx)(m.r, {
-              onOpen: N,
-              onClose: l,
-              onSelect: S,
-              questContent: h.jn.QUEST_HOME_DESKTOP,
+            }), (0, i.jsx)(m.r, {
+              onOpen: C,
+              onClose: a,
+              onSelect: f,
+              questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: t,
               hideLearnMore: !0,
               shouldShowDisclosure: !0,
               showShareLink: !0,
-              children: e => (0, s.jsx)(c.Clickable, {
+              children: e => (0, i.jsx)(c.Clickable, {
                 ...e,
-                className: p.submenuWrapper,
+                className: T.submenuWrapper,
                 "aria-label": g.Z.Messages.ACTIONS,
-                children: (0, s.jsx)(c.MoreHorizontalIcon, {
+                children: (0, i.jsx)(c.MoreHorizontalIcon, {
                   size: "md",
                   color: "currentColor",
-                  className: a()(p.submenuIcon)
+                  className: r()(T.submenuIcon)
                 })
               })
             })]
-          }), (0, s.jsx)(I.Fl, {
+          }), (0, i.jsx)(I.Fl, {
             id: "QuestPartnerBranding_gameLogotype",
-            children: e => (0, s.jsx)("img", {
+            children: e => (0, i.jsx)("img", {
               ref: e,
-              className: p.partnerBranding,
+              className: T.partnerBranding,
               alt: t.config.messages.gameTitle,
-              src: (0, _.Gs)(t, f)
+              src: (0, h.Gs)(t, A)
             })
-          }), (0, s.jsx)("div", {
-            className: p.bottomRow,
-            children: (0, s.jsx)(c.Text, {
+          }), (0, i.jsx)("div", {
+            className: T.bottomRow,
+            children: (0, i.jsx)(c.Text, {
               variant: "text-sm/medium",
               color: "text-muted",
               children: g.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
@@ -121,8 +121,8 @@ function N(e) {
           })]
         })
       })]
-    }), (0, s.jsx)("div", {
-      className: p.spacer
+    }), (0, i.jsx)("div", {
+      className: T.spacer
     })]
   })
 }

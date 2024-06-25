@@ -13,7 +13,7 @@ var i = n(735250),
   I = n(212645);
 let T = l().memoize(e => "".concat(e * E.DC.NonDiversityPerRow, "px ").concat(e * Math.ceil(_.ZP.numNonDiversitySprites / E.DC.NonDiversityPerRow), "px")),
   h = l().memoize(e => "".concat(e * E.DC.DiversityPerRow, "px ").concat(e * Math.ceil(_.ZP.numDiversitySprites / E.DC.DiversityPerRow), "px")),
-  S = (e, t, i) => {
+  f = (e, t, i) => {
     let r, s, o;
     if (!e.useSpriteSheet) return;
     let a = null != e.index ? e.index : 0;
@@ -28,7 +28,7 @@ let T = l().memoize(e => "".concat(e * E.DC.NonDiversityPerRow, "px ").concat(e 
       width: i
     }
   },
-  f = r.memo(function(e) {
+  S = r.memo(function(e) {
     let {
       emoji: t,
       size: n,
@@ -56,7 +56,7 @@ let T = l().memoize(e => "".concat(e * E.DC.NonDiversityPerRow, "px ").concat(e 
         className: o()(I.emojiSpriteImage, {
           [I.lockedEmoji]: _
         }),
-        style: S(t, s, n),
+        style: f(t, s, n),
         children: (0, i.jsx)(u.HiddenVisually, {
           children: l
         })
@@ -73,4 +73,4 @@ let T = l().memoize(e => "".concat(e * E.DC.NonDiversityPerRow, "px ").concat(e 
       }) : null]
     })
   });
-t.Z = f
+t.Z = S

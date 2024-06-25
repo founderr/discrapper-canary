@@ -1,22 +1,22 @@
-s.d(t, {
+t.d(n, {
   n: function() {
     return a
   }
 });
-var n, a, i = s(735250),
-  r = s(470079),
-  l = s(120356),
-  o = s.n(l),
-  c = s(748780),
-  E = s(215569),
-  _ = s(763863);
-(n = a || (a = {}))[n.RIGHT = -1] = "RIGHT", n[n.LEFT = 1] = "LEFT";
-let u = {
+var i, a, r = t(735250),
+  o = t(470079),
+  l = t(120356),
+  s = t.n(l),
+  c = t(748780),
+  d = t(215569),
+  u = t(763863);
+(i = a || (a = {}))[i.RIGHT = -1] = "RIGHT", i[i.LEFT = 1] = "LEFT";
+let _ = {
   friction: 7,
   tension: 40,
   clamp: !0
 };
-class d extends r.PureComponent {
+class p extends o.PureComponent {
   componentWillEnter(e) {
     this._animated.setValue(-this.props.direction), c.Z.spring(this._animated, {
       toValue: 0,
@@ -47,39 +47,39 @@ class d extends r.PureComponent {
     })), e
   }
   render() {
-    return (0, i.jsx)(c.Z.div, {
+    return (0, r.jsx)(c.Z.div, {
       style: this.getStyle(),
-      className: _.item,
+      className: u.item,
       children: this.props.children
     })
   }
   constructor(e) {
-    var t, s, n;
-    super(e), t = this, n = void 0, (s = "_animated") in t ? Object.defineProperty(t, s, {
-      value: n,
+    var n, t, i;
+    super(e), n = this, i = void 0, (t = "_animated") in n ? Object.defineProperty(n, t, {
+      value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[s] = n, this._animated = new c.Z.Value(-1 * e.direction)
+    }) : n[t] = i, this._animated = new c.Z.Value(-1 * e.direction)
   }
 }
-t.Z = e => {
+n.Z = e => {
   let {
-    children: t,
-    step: s,
-    direction: n,
+    children: n,
+    step: t,
+    direction: i,
     className: a,
-    springSettings: r = u,
+    springSettings: o = _,
     fadeInOut: l = !1
   } = e;
-  return (0, i.jsx)(E.W, {
+  return (0, r.jsx)(d.W, {
     component: "div",
-    className: o()(_.animator, a),
-    children: (0, i.jsx)(d, {
-      direction: n,
-      springSettings: r,
+    className: s()(u.animator, a),
+    children: (0, r.jsx)(p, {
+      direction: i,
+      springSettings: o,
       fadeInOut: l,
-      children: t
-    }, s)
+      children: n
+    }, t)
   })
 }

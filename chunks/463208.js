@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   o: function() {
-    return f
+    return S
   },
   p: function() {
-    return S
+    return f
   }
 });
 var i, r = n(735250),
@@ -32,7 +32,7 @@ let h = {
   MINI: I.inputMini
 };
 
-function S(e) {
+function f(e) {
   let {
     error: t
   } = e, n = (0, l.useTransition)(t, {
@@ -86,7 +86,7 @@ function S(e) {
     })
   })
 }
-class f extends(i = s.Component) {
+class S extends(i = s.Component) {
   render() {
     var e, t;
     let {
@@ -123,7 +123,7 @@ class f extends(i = s.Component) {
           onFocus: this.onFocus,
           ref: c
         })
-      }), (0, r.jsx)(S, {
+      }), (0, r.jsx)(f, {
         error: this.getError()
       })]
     })
@@ -171,7 +171,7 @@ class f extends(i = s.Component) {
     }
   }
 }
-T(f, "Sizes", h), T(f, "contextType", _.q3), T(f, "defaultProps", {
+T(S, "Sizes", h), T(S, "contextType", _.q3), T(S, "defaultProps", {
   name: "",
   size: h.DEFAULT,
   disabled: !1,

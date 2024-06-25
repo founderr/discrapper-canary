@@ -1,15 +1,15 @@
 n.d(t, {
   C: function() {
-    return l
+    return i
   },
   W: function() {
-    return i
+    return a
   }
 });
-let l = 450,
-  i = e => {
+let i = 450,
+  a = e => {
     let {
       maxWidth: t
     } = e;
-    return t <= l
+    return t <= i
   }

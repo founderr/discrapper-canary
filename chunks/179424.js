@@ -3,11 +3,11 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(475179),
-  a = n(871499),
+var a = n(481060),
+  l = n(475179),
+  s = n(871499),
   r = n(689938);
 
 function o(e) {
@@ -15,12 +15,12 @@ function o(e) {
     channelId: t,
     ...n
   } = e;
-  return (0, l.jsx)(a.Z, {
+  return (0, i.jsx)(s.Z, {
     onClick: function() {
-      s.Z.selectParticipant(t, null)
+      l.Z.selectParticipant(t, null)
     },
     label: r.Z.Messages.VIDEO_CALL_RETURN_TO_GRID,
-    iconComponent: i.GridSquareIcon,
+    iconComponent: a.GridSquareIcon,
     tooltipPosition: "bottom",
     ...n
   })

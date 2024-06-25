@@ -1,49 +1,49 @@
-i.d(n, {
+a.d(n, {
   m: function() {
-    return c
+    return u
   }
 });
-var a = i(735250);
-i(470079);
-var l = i(468194),
-  t = i(399606),
-  s = i(481060),
-  r = i(430824),
-  o = i(768581),
-  u = i(304200);
+var i = a(735250);
+a(470079);
+var t = a(468194),
+  l = a(399606),
+  s = a(481060),
+  r = a(430824),
+  o = a(768581),
+  c = a(304200);
 
-function c(e) {
+function u(e) {
   let {
     guildId: n
-  } = e, i = (0, t.e7)([r.Z], () => r.Z.getGuild(n));
-  if (null == i) return null;
-  let c = null;
-  if (null != i.icon) {
+  } = e, a = (0, l.e7)([r.Z], () => r.Z.getGuild(n));
+  if (null == a) return null;
+  let u = null;
+  if (null != a.icon) {
     let e = o.ZP.getGuildIconURL({
-      id: i.id,
-      icon: i.icon,
+      id: a.id,
+      icon: a.icon,
       size: 40
     });
-    c = (0, a.jsx)(s.Avatar, {
+    u = (0, i.jsx)(s.Avatar, {
       src: e,
-      "aria-label": i.name,
+      "aria-label": a.name,
       size: s.AvatarSizes.SIZE_24
     })
   } else {
-    let e = (0, l.Zg)(i.name).slice(0, 2);
-    c = (0, a.jsx)(s.Text, {
+    let e = (0, t.Zg)(a.name).slice(0, 2);
+    u = (0, i.jsx)(s.Text, {
       variant: "text-xs/semibold",
-      className: u.acronym,
+      className: c.acronym,
       "aria-hidden": !0,
       children: e
     })
   }
-  return (0, a.jsxs)("div", {
-    className: u.container,
-    children: [c, (0, a.jsx)(s.Text, {
+  return (0, i.jsxs)("div", {
+    className: c.container,
+    children: [u, (0, i.jsx)(s.Text, {
       variant: "text-md/semibold",
-      className: u.text,
-      children: i.name
+      className: c.text,
+      children: a.name
     })]
   })
 }

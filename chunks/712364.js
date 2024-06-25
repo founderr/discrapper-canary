@@ -31,10 +31,10 @@ class d extends(i = s.PureComponent) {
       retryPrompt: T,
       retrySuccessMessage: h
     } = this.props, {
-      code: S,
-      errorMessage: f,
-      retrySuccess: N
-    } = this.state, A = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
+      code: f,
+      errorMessage: S,
+      retrySuccess: A
+    } = this.state, N = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
       type: l.Card.Types.WARNING,
       className: _.card,
       children: (0, r.jsx)(l.Text, {
@@ -51,7 +51,7 @@ class d extends(i = s.PureComponent) {
           children: T
         })
       })]
-    }) : null, O = N ? (0, r.jsx)(l.Card, {
+    }) : null, O = A ? (0, r.jsx)(l.Card, {
       type: l.Card.Types.SUCCESS,
       className: _.card,
       children: (0, r.jsx)(l.Text, {
@@ -75,7 +75,7 @@ class d extends(i = s.PureComponent) {
             variant: "text-md/normal",
             className: _.spacing,
             children: I
-          }) : null, A, O, (0, r.jsxs)(l.FormItem, {
+          }) : null, N, O, (0, r.jsxs)(l.FormItem, {
             title: this.getLabelText(),
             className: _.spacing,
             children: [(0, r.jsx)(l.TextInput, {
@@ -83,20 +83,20 @@ class d extends(i = s.PureComponent) {
               onChange: this.handleCodeChange,
               placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
               maxLength: null != d ? d : 10,
-              value: S,
+              value: f,
               autoComplete: "one-time-code",
               autoFocus: !0
             }), this.errorPresent() ? (0, r.jsx)(l.Text, {
               color: "text-danger",
               variant: "text-xs/normal",
               className: _.error,
-              children: null != o ? o : f
+              children: null != o ? o : S
             }) : null, m]
           })]
         }), (0, r.jsxs)(l.ModalFooter, {
           children: [(0, r.jsx)(l.Button, {
             type: "submit",
-            disabled: c || 0 === S.length,
+            disabled: c || 0 === f.length,
             children: null != n ? n : u.Z.Messages.CONFIRM
           }), (0, r.jsx)(l.Button, {
             onClick: this.handleCancel,

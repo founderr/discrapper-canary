@@ -1,30 +1,30 @@
 n.d(t, {
   e: function() {
-    return i
+    return a
   }
 });
-var s = n(689938);
+var i = n(689938);
 
-function i(e) {
+function a(e) {
   let {
     isVoiceChannel: t,
     isHubGuild: n,
-    isOwnInvite: i,
-    isGuest: l,
-    isStage: a,
+    isOwnInvite: a,
+    isGuest: s,
+    isStage: l,
     isStream: r
   } = e;
   if (t) {
-    if (i) {
-      if (r) return s.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
-      if (a) return s.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STAGE_CHANNEL;
-      else if (l) return s.Z.Messages.GUEST_INVITE_EMBED_TITLE_SENDER;
-      else return s.Z.Messages.INVITE_BUTTON_TITLE_INVITER_VOICE_CHANNEL
+    if (a) {
+      if (r) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STREAM;
+      if (l) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_STAGE_CHANNEL;
+      else if (s) return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_SENDER;
+      else return i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_VOICE_CHANNEL
     }
-    if (r) return s.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
-    if (a) return s.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STAGE_CHANNEL;
-    else if (l) return s.Z.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;
-    else return s.Z.Messages.INVITE_BUTTON_TITLE_INVITED_VOICE_CHANNEL
+    if (r) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STREAM;
+    if (l) return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_STAGE_CHANNEL;
+    else if (s) return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;
+    else return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_VOICE_CHANNEL
   }
-  return n ? i ? s.Z.Messages.INVITE_BUTTON_TITLE_INVITER_HUB : s.Z.Messages.INVITE_BUTTON_TITLE_INVITED_HUB : i ? s.Z.Messages.INVITE_BUTTON_TITLE_INVITER : s.Z.Messages.INVITE_BUTTON_TITLE_INVITED
+  return n ? a ? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_HUB : i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_HUB : a ? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER : i.Z.Messages.INVITE_BUTTON_TITLE_INVITED
 }

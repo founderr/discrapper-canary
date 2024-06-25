@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   C7: function() {
-    return S
+    return f
   },
   Hw: function() {
     return s
@@ -19,7 +19,7 @@ n.d(t, {
     return d
   },
   c8: function() {
-    return f
+    return S
   },
   kG: function() {
     return o
@@ -41,7 +41,7 @@ function E(e) {
 let I = ["open.spotify.com", "www.spotify.com"],
   T = "https://api.spotify.com/v1",
   h = e => "?utm_source=discord&utm_medium=".concat(e),
-  S = Object.freeze({
+  f = Object.freeze({
     PROFILE: "".concat(T, "/me"),
     NOTIFICATIONS_PLAYER: "".concat(T, "/me/notifications/player"),
     PLAYER: "".concat(T, "/me/player"),
@@ -68,7 +68,7 @@ let I = ["open.spotify.com", "www.spotify.com"],
     IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
   });
 
-function f(e) {
+function S(e) {
   if ("string" != typeof e) return null;
   switch (e) {
     case "track":

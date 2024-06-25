@@ -1,8 +1,8 @@
-var l = n(570140);
+var i = n(570140);
 t.Z = {
   viewPrompt: function(e, t) {
-    l.Z.wait(() => {
-      l.Z.dispatch({
+    i.Z.wait(() => {
+      i.Z.dispatch({
         type: "GUILD_PROMPT_VIEWED",
         prompt: e,
         guildId: t

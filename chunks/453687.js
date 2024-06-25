@@ -61,27 +61,27 @@ function d(e, t, n) {
     I = e.stickerItems.length > 0,
     T = e.codedLinks.length > 0,
     h = e.hasFlag(s.iLy.HAS_THREAD),
-    S = d || E || I || T || h || e.type === s.uaV.THREAD_CREATED,
-    f = d && e.content === e.embeds[0].url && e.embeds[0].type === s.hBH.GIFV,
-    N = e.type !== s.uaV.DEFAULT || !f && "" !== e.content,
-    A = (0, r.Z)(e),
-    m = !A && (null == n ? void 0 : n.hasTimestamp) !== !1,
+    f = d || E || I || T || h || e.type === s.uaV.THREAD_CREATED,
+    S = d && e.content === e.embeds[0].url && e.embeds[0].type === s.hBH.GIFV,
+    A = e.type !== s.uaV.DEFAULT || !S && "" !== e.content,
+    N = (0, r.Z)(e),
+    m = !N && (null == n ? void 0 : n.hasTimestamp) !== !1,
     O = l(e, t),
-    R = a(e),
-    p = A ? "" : "".concat(_ ? R : O, " ").concat(i.Z0);
-  if (N) {
+    p = a(e),
+    R = N ? "" : "".concat(_ ? p : O, " ").concat(i.Z0);
+  if (A) {
     let t = o(e);
-    p += " ".concat(t)
+    R += " ".concat(t)
   }
-  if (S) {
+  if (f) {
     let t = c(e);
-    p += " ".concat(t)
+    R += " ".concat(t)
   }
   if (m) {
     let t = u(e);
-    p += " ".concat(i.fy, " ").concat(t)
+    R += " ".concat(i.fy, " ").concat(t)
   }
-  return p.trim()
+  return R.trim()
 }
 
 function E(e) {

@@ -1,54 +1,54 @@
-t.r(s), t(47120);
-var n = t(735250),
-  i = t(470079),
-  o = t(481060),
-  l = t(689938),
-  r = t(886272);
+n.r(t), n(47120);
+var s = n(735250),
+  o = n(470079),
+  r = n(481060),
+  i = n(689938),
+  l = n(886272);
 
-function a(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-    value: t,
+function a(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[s] = t, e
+  }) : e[t] = n, e
 }
-class c extends i.PureComponent {
+class c extends o.PureComponent {
   render() {
     let {
       transitionState: e,
-      header: s,
-      body: i,
+      header: t,
+      body: o,
       confirmText: a
     } = this.props;
-    return (0, n.jsxs)(o.ModalRoot, {
+    return (0, s.jsxs)(r.ModalRoot, {
       transitionState: e,
-      "aria-label": s,
-      children: [(0, n.jsxs)(o.ModalContent, {
-        className: r.content,
-        children: [(0, n.jsx)("img", {
-          src: t(568533),
-          alt: s
-        }), (0, n.jsx)(o.Heading, {
+      "aria-label": t,
+      children: [(0, s.jsxs)(r.ModalContent, {
+        className: l.content,
+        children: [(0, s.jsx)("img", {
+          src: n(568533),
+          alt: t
+        }), (0, s.jsx)(r.Heading, {
           variant: "heading-xl/semibold",
-          className: r.header,
-          children: s
-        }), (0, n.jsx)(o.Text, {
+          className: l.header,
+          children: t
+        }), (0, s.jsx)(r.Text, {
           variant: "text-md/normal",
-          children: i
+          children: o
         })]
-      }), (0, n.jsxs)(o.ModalFooter, {
-        className: r.footer,
-        children: [(0, n.jsx)(o.Button, {
-          size: o.Button.Sizes.SMALL,
+      }), (0, s.jsxs)(r.ModalFooter, {
+        className: l.footer,
+        children: [(0, s.jsx)(r.Button, {
+          size: r.Button.Sizes.SMALL,
           onClick: this.handleConfirm,
           children: a
-        }), (0, n.jsx)(o.Button, {
-          size: o.Button.Sizes.SMALL,
-          look: o.Button.Looks.LINK,
-          color: o.Button.Colors.PRIMARY,
+        }), (0, s.jsx)(r.Button, {
+          size: r.Button.Sizes.SMALL,
+          look: r.Button.Looks.LINK,
+          color: r.Button.Colors.PRIMARY,
           onClick: this.handleDismiss,
-          children: l.Z.Messages.CLOSE
+          children: i.Z.Messages.CLOSE
         })]
       })]
     })
@@ -57,16 +57,16 @@ class c extends i.PureComponent {
     super(...e), a(this, "handleConfirm", () => {
       let {
         onConfirm: e,
-        onClose: s
+        onClose: t
       } = this.props;
-      null == s || s(), null == e || e()
+      null == t || t(), null == e || e()
     }), a(this, "handleDismiss", () => {
       let {
         onDismiss: e,
-        onClose: s
+        onClose: t
       } = this.props;
-      null == s || s(), null == e || e()
+      null == t || t(), null == e || e()
     })
   }
 }
-s.default = c
+t.default = c

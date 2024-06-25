@@ -1,88 +1,88 @@
-n.r(t), n(47120);
+n.r(e), n(47120);
 var a = n(735250),
   r = n(470079),
   o = n(830064),
   s = n(702493),
-  l = n(77987),
+  c = n(77987),
   u = n(133853),
-  i = n(703656),
-  c = n(643366),
+  l = n(703656),
+  i = n(643366),
   d = n(94628),
-  E = n(659154),
-  I = n(902928),
-  C = n(240479),
-  _ = n(981631),
-  A = n(857628);
-t.default = (0, l.e)(function() {
-  let e;
-  let [t, n] = r.useState({
+  _ = n(659154),
+  f = n(902928),
+  I = n(240479),
+  C = n(981631),
+  E = n(857628);
+e.default = (0, c.e)(function() {
+  let t;
+  let [e, n] = r.useState({
     type: "user-code-input",
     usePrefilledCode: !0
   });
-  (0, s.Z)(), (0, c.Y)(t);
-  let l = r.useCallback(() => {
+  (0, s.Z)(), (0, i.Y)(e);
+  let c = r.useCallback(() => {
       n({
         type: "user-code-input"
       })
     }, [n]),
-    T = r.useCallback(e => {
+    A = r.useCallback(t => {
       n({
         type: "authorization",
-        userCodeData: e
+        userCodeData: t
       })
     }, [n]),
-    f = r.useCallback(e => {
+    T = r.useCallback(t => {
       n({
         type: "success",
-        userCodeData: e
+        userCodeData: t
       })
     }, [n]),
-    h = r.useCallback(e => {
+    p = r.useCallback(t => {
       n({
         type: "error",
-        userCodeData: e
+        userCodeData: t
       })
     }, [n]);
-  switch (t.type) {
+  switch (e.type) {
     case "user-code-input":
-      e = (0, a.jsx)(C.v, {
-        usePrefilledCode: t.usePrefilledCode || !1,
-        onUserCodeAccepted: T
+      t = (0, a.jsx)(I.v, {
+        usePrefilledCode: e.usePrefilledCode || !1,
+        onUserCodeAccepted: A
       });
       break;
     case "authorization":
-      e = (0, a.jsx)(d.B, {
-        data: t.userCodeData,
-        onDenied: l,
-        onError: h,
-        onSuccess: f
+      t = (0, a.jsx)(d.B, {
+        data: e.userCodeData,
+        onDenied: c,
+        onError: p,
+        onSuccess: T
       });
       break;
     case "success":
-      e = (0, a.jsx)(I.u, {
-        onComplete: () => (0, i.uL)(_.Z5c.ME),
-        data: t.userCodeData
+      t = (0, a.jsx)(f.u, {
+        onComplete: () => (0, l.uL)(C.Z5c.ME),
+        data: e.userCodeData
       });
       break;
     case "error":
-      e = (0, a.jsx)(E.c, {
-        onTryAgain: l
+      t = (0, a.jsx)(_.c, {
+        onTryAgain: c
       });
       break;
     default:
-      e = null
+      t = null
   }
   return (0, a.jsxs)("div", {
-    className: A.activatePage,
+    className: E.activatePage,
     children: [(0, a.jsx)(o.Z, {
-      className: A.artwork,
+      className: E.artwork,
       preserveAspectRatio: "xMinYMin slice"
     }), (0, a.jsx)(u.Z, {
       show: !0,
-      className: A.logo
+      className: E.logo
     }), (0, a.jsx)("div", {
-      className: A.content,
-      children: e
+      className: E.content,
+      children: t
     })]
   })
 })

@@ -25,15 +25,15 @@ function c(e) {
     pronouns: I,
     className: T,
     isTryItOut: h,
-    onOpenProfile: S,
-    nicknameVariant: f = "heading-lg/bold",
-    pronounsVariant: N = "text-sm/medium"
-  } = e, A = {
+    onOpenProfile: f,
+    nicknameVariant: S = "heading-lg/bold",
+    pronounsVariant: A = "text-sm/medium"
+  } = e, N = {
     [_.biteSize]: n === l.y0.BITE_SIZE,
     [_.fullSize]: n === l.y0.FULL_SIZE,
     [_.panel]: n === l.y0.PANEL
-  }, m = e => null == S ? e : (0, i.jsx)(o.Clickable, {
-    onClick: S,
+  }, m = e => null == f ? e : (0, i.jsx)(o.Clickable, {
+    onClick: f,
     className: _.clickableUsername,
     children: e
   }), O = null != I && I.length > 0;
@@ -42,15 +42,15 @@ function c(e) {
     children: [(0, i.jsxs)("div", {
       className: _.usernameRow,
       children: [m((0, i.jsx)(o.Heading, {
-        className: s()(_.nickname, A),
-        variant: f,
+        className: s()(_.nickname, N),
+        variant: S,
         children: d
       })), null != E && (0, i.jsx)("div", {
-        className: s()(_.nicknameIcons, A),
+        className: s()(_.nicknameIcons, N),
         children: E
       })]
     }), (0, i.jsxs)("div", {
-      className: s()(_.tags, A, O && _.tagsWithPronouns),
+      className: s()(_.tags, N, O && _.tagsWithPronouns),
       children: [m((0, i.jsx)(a.Z, {
         user: t,
         usernameIcon: r,
@@ -69,7 +69,7 @@ function c(e) {
           text: u.Z.Messages.USER_PROFILE_PRONOUNS,
           delay: l.vB,
           children: (0, i.jsx)(o.Text, {
-            variant: N,
+            variant: A,
             className: _.pronouns,
             color: "header-primary",
             children: I

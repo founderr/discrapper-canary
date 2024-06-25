@@ -1,27 +1,27 @@
 n(47120);
-var s = n(243814),
-  i = n(846027),
-  l = n(131951),
-  a = n(13140),
-  r = n(996106),
+var i = n(243814),
+  s = n(846027),
+  a = n(131951),
+  r = n(13140),
+  l = n(996106),
   o = n(452426),
   c = n(186901),
-  u = n(981631),
-  d = n(65154);
+  d = n(981631),
+  u = n(65154);
 
-function E(e) {
+function _(e) {
   let t = e.application.id;
-  if (null == t) throw new r.Z({
-    errorCode: u.lTL.INVALID_COMMAND
+  if (null == t) throw new l.Z({
+    errorCode: d.lTL.INVALID_COMMAND
   }, "No application.");
   return t
 }
 t.Z = {
-  [u.Etm.SET_VOICE_SETTINGS_2]: {
+  [d.Etm.SET_VOICE_SETTINGS_2]: {
     scope: c.lH,
     validation: e => (0, o.Z)(e).required().keys({
       input_mode: (0, o.Z)(e).keys({
-        type: e.string().valid(Object.keys(u.pM4)),
+        type: e.string().valid(Object.keys(d.pM4)),
         shortcut: e.string().required()
       }),
       self_mute: e.boolean(),
@@ -32,20 +32,20 @@ t.Z = {
         socket: t,
         args: {
           input_mode: n,
-          self_mute: s,
-          self_deaf: r
+          self_mute: i,
+          self_deaf: l
         }
-      } = e, o = E(t);
-      null != n && i.Z.setMode(n.type, {
-        shortcut: (0, a.Kd)(n.shortcut)
-      }, o), null != s && s !== l.Z.isSelfMute(o) && i.Z.toggleSelfMute({
+      } = e, o = _(t);
+      null != n && s.Z.setMode(n.type, {
+        shortcut: (0, r.Kd)(n.shortcut)
+      }, o), null != i && i !== a.Z.isSelfMute(o) && s.Z.toggleSelfMute({
         context: o
-      }), null != r && r !== l.Z.isSelfDeaf(o) && i.Z.toggleSelfDeaf({
+      }), null != l && l !== a.Z.isSelfDeaf(o) && s.Z.toggleSelfDeaf({
         context: o
       })
     }
   },
-  [u.Etm.SET_USER_VOICE_SETTINGS_2]: {
+  [d.Etm.SET_USER_VOICE_SETTINGS_2]: {
     scope: c.lH,
     validation: e => (0, o.Z)(e).required().keys({
       user_id: e.string().required(),
@@ -57,16 +57,16 @@ t.Z = {
         socket: t,
         args: {
           user_id: n,
-          mute: s,
-          volume: a
+          mute: i,
+          volume: r
         }
-      } = e, r = E(t);
-      null != s && s !== l.Z.isLocalMute(n, r) && i.Z.toggleLocalMute(n, r), null != a && i.Z.setLocalVolume(n, a, r)
+      } = e, l = _(t);
+      null != i && i !== a.Z.isLocalMute(n, l) && s.Z.toggleLocalMute(n, l), null != r && s.Z.setLocalVolume(n, r, l)
     }
   },
-  [u.Etm.PUSH_TO_TALK]: {
+  [d.Etm.PUSH_TO_TALK]: {
     scope: {
-      [c.Gp.ALL]: [s.x.RPC, s.x.RPC_VOICE_WRITE]
+      [c.Gp.ALL]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
     },
     validation: e => (0, o.Z)(e).required().keys({
       active: e.boolean()
@@ -77,7 +77,7 @@ t.Z = {
           active: t
         }
       } = e;
-      if (l.Z.getMode(d.Yn.DEFAULT) === u.pM4.PUSH_TO_TALK) l.Z.getMediaEngine().eachConnection(e => e.setForceAudioInput(t), d.Yn.DEFAULT)
+      if (a.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) a.Z.getMediaEngine().eachConnection(e => e.setForceAudioInput(t), u.Yn.DEFAULT)
     }
   }
 }

@@ -24,14 +24,14 @@ function d(e) {
       iconClassName: I
     } = e,
     [T, h] = (0, a.Wu)([_.Z], () => [_.Z.desaturateUserColors, _.Z.saturation]),
-    S = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
-    f = (0, o._i)(null != n ? n : S),
-    N = (0, o.ho)(f, !1, T ? h : null);
-  t = null != d ? d : .3 > (0, o.Bd)(f) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
-  let A = r / 8;
+    f = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
+    S = (0, o._i)(null != n ? n : f),
+    A = (0, o.ho)(S, !1, T ? h : null);
+  t = null != d ? d : .3 > (0, o.Bd)(S) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
+  let N = r / 8;
   return (0, i.jsx)("div", {
     style: {
-      background: N,
+      background: A,
       width: r,
       height: r,
       borderRadius: r,
@@ -42,10 +42,10 @@ function d(e) {
       size: "custom",
       color: t,
       className: s()(c.linkIcon, I),
-      width: r - 2 * A,
-      height: r - 2 * A,
+      width: r - 2 * N,
+      height: r - 2 * N,
       style: {
-        margin: A
+        margin: N
       }
     })
   })

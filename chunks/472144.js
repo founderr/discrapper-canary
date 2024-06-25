@@ -1,82 +1,82 @@
-var s = n(735250),
-  o = n(470079),
+var o = n(735250),
+  s = n(470079),
   r = n(569379),
   a = n(581292);
-t.Z = o.forwardRef((e, t) => {
+t.Z = s.forwardRef((e, t) => {
   let {
     percentComplete: n,
-    size: o = 42,
-    strokeWidth: l = 3,
-    glowBlur: i = .4,
+    size: s = 42,
+    strokeWidth: i = 3,
+    glowBlur: l = .4,
     children: c
-  } = e, u = (0, r.EK)(n > 0), d = o / 2, p = o / 2 - l / 2, x = 2 * Math.PI * p, m = x - n * x, g = {
-    strokeDasharray: "".concat(x, " ").concat(x),
-    strokeDashoffset: m
-  }, h = {
-    strokeDasharray: "".concat(x, " ").concat(x),
-    strokeDashoffset: -n * x
+  } = e, d = (0, r.EK)(n > 0), u = s / 2, p = s / 2 - i / 2, m = 2 * Math.PI * p, x = m - n * m, g = {
+    strokeDasharray: "".concat(m, " ").concat(m),
+    strokeDashoffset: x
+  }, f = {
+    strokeDasharray: "".concat(m, " ").concat(m),
+    strokeDashoffset: -n * m
   }, C = {
-    boxShadow: "0 0 30px 0px ".concat(u.glow)
+    boxShadow: "0 0 30px 0px ".concat(d.glow)
   };
-  return (0, s.jsxs)("div", {
+  return (0, o.jsxs)("div", {
     className: a.outer,
     ref: t,
-    children: [(0, s.jsx)("div", {
+    children: [(0, o.jsx)("div", {
       className: a.inner,
       style: C,
       children: c
-    }), (0, s.jsxs)("svg", {
+    }), (0, o.jsxs)("svg", {
       className: a.progressBar,
-      height: o,
-      width: o,
-      children: [(0, s.jsxs)("defs", {
-        children: [(0, s.jsxs)("filter", {
+      height: s,
+      width: s,
+      children: [(0, o.jsxs)("defs", {
+        children: [(0, o.jsxs)("filter", {
           id: "glow",
-          children: [(0, s.jsx)("feGaussianBlur", {
+          children: [(0, o.jsx)("feGaussianBlur", {
             result: "coloredBlur",
-            stdDeviation: i
-          }), (0, s.jsxs)("feMerge", {
-            children: [(0, s.jsx)("feMergeNode", {
+            stdDeviation: l
+          }), (0, o.jsxs)("feMerge", {
+            children: [(0, o.jsx)("feMergeNode", {
               in: "coloredBlur"
-            }), (0, s.jsx)("feMergeNode", {
+            }), (0, o.jsx)("feMergeNode", {
               in: "coloredBlur"
-            }), (0, s.jsx)("feMergeNode", {
+            }), (0, o.jsx)("feMergeNode", {
               in: "coloredBlur"
-            }), (0, s.jsx)("feMergeNode", {
+            }), (0, o.jsx)("feMergeNode", {
               in: "SourceGraphic"
             })]
           })]
-        }), (0, s.jsxs)("linearGradient", {
+        }), (0, o.jsxs)("linearGradient", {
           id: "linear",
           x1: "100%",
           y1: "0%",
           x2: "0%",
           y2: "0%",
-          children: [(0, s.jsx)("stop", {
+          children: [(0, o.jsx)("stop", {
             offset: "0%",
-            stopColor: u.backgroundTop
-          }), (0, s.jsx)("stop", {
+            stopColor: d.backgroundTop
+          }), (0, o.jsx)("stop", {
             offset: "100%",
-            stopColor: u.backgroundBottom
+            stopColor: d.backgroundBottom
           })]
         })]
-      }), (0, s.jsx)("circle", {
+      }), (0, o.jsx)("circle", {
         className: a.progress,
-        strokeWidth: l,
+        strokeWidth: i,
         fill: "transparent",
         r: p,
-        cx: d,
-        cy: d,
+        cx: u,
+        cy: u,
         stroke: "url(#linear)",
-        style: h
-      }), (0, s.jsx)("circle", {
+        style: f
+      }), (0, o.jsx)("circle", {
         className: a.progress,
-        strokeWidth: l,
+        strokeWidth: i,
         fill: "transparent",
         r: p,
-        cx: d,
-        cy: d,
-        stroke: u.foreground,
+        cx: u,
+        cy: u,
+        stroke: d.foreground,
         style: g
       })]
     })]

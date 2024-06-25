@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Hs: function() {
-    return S
+    return f
   },
   Vh: function() {
-    return A
+    return N
   },
   k: function() {
     return h
@@ -32,29 +32,29 @@ function h(e, t) {
   let E;
   let T = m(E = e instanceof u.Sf && e.isThread() ? null !== (r = c.Z.getChannel(e.parent_id)) && void 0 !== r ? r : e : e),
     h = l.xM.getSetting(),
-    S = _.default.getId(),
-    A = null !== (s = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== s && s,
-    O = null != T && null !== (o = null === (i = d.ZP.getMember(T, S)) || void 0 === i ? void 0 : i.roles) && void 0 !== o ? o : [],
-    R = a.Z.isViewingRoles(T),
+    f = _.default.getId(),
+    N = null !== (s = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== s && s,
+    O = null != T && null !== (o = null === (i = d.ZP.getMember(T, f)) || void 0 === i ? void 0 : i.roles) && void 0 !== o ? o : [],
+    p = a.Z.isViewingRoles(T),
     {
-      computedPermissions: p,
+      computedPermissions: R,
       hasBaseAccessPermissions: g,
       hasSendMessagesPermission: C
-    } = N(E, e instanceof u.Sf && e.isThread());
+    } = A(E, e instanceof u.Sf && e.isThread());
   return {
     context: E,
-    userId: S,
+    userId: f,
     roleIds: O,
-    isImpersonating: R,
+    isImpersonating: p,
     commandType: t,
-    computedPermissions: p,
+    computedPermissions: R,
     hasBaseAccessPermissions: g,
     hasSendMessagesPermission: C,
-    allowNsfw: f(E, A, h)
+    allowNsfw: S(E, N, h)
   }
 }
 
-function S(e, t) {
+function f(e, t) {
   let n = i.useMemo(() => {
       if (e instanceof u.Sf && e.isThread()) {
         var t;
@@ -73,32 +73,32 @@ function S(e, t) {
       var e, t;
       return null != r && null !== (t = null === (e = d.ZP.getMember(r, E)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []
     }),
-    S = (0, s.e7)([a.Z], () => a.Z.isViewingRoles(r));
+    f = (0, s.e7)([a.Z], () => a.Z.isViewingRoles(r));
   return i.useMemo(() => {
     let {
       computedPermissions: i,
       hasBaseAccessPermissions: r,
       hasSendMessagesPermission: s
-    } = N(n, e instanceof u.Sf && e.isThread());
+    } = A(n, e instanceof u.Sf && e.isThread());
     return {
       context: n,
       userId: E,
       roleIds: h,
       commandType: t,
-      isImpersonating: S,
+      isImpersonating: f,
       computedPermissions: i,
       hasBaseAccessPermissions: r,
       hasSendMessagesPermission: s,
-      allowNsfw: f(n, T, o)
+      allowNsfw: S(n, T, o)
     }
-  }, [t, n, S, h, E, T, o, e])
+  }, [t, n, f, h, E, T, o, e])
 }
 
-function f(e, t, n) {
+function S(e, t, n) {
   return !!t && (!(e instanceof u.Sf) || (null != e.guild_id ? e.nsfw : n))
 }
 
-function N(e, t) {
+function A(e, t) {
   let n, i;
   if (e instanceof u.Sf && e.isPrivate()) return {
     computedPermissions: r.vB(0),
@@ -113,7 +113,7 @@ function N(e, t) {
   }
 }
 
-function A(e, t) {
+function N(e, t) {
   return e instanceof u.Sf && null == e.guild_id ? e.type === T.d4z.DM && e.getRecipientId() === t ? o.D.BOT_DM : o.D.PRIVATE_CHANNEL : o.D.GUILD
 }
 

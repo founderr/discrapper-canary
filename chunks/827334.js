@@ -1,7 +1,7 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   $: function() {
-    return n.$
+    return s.$
   }
 });
-var n = t(870199)
+var s = n(870199)

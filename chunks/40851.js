@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Aq: function() {
-    return S
+    return f
   },
   GB: function() {
     return I
@@ -85,7 +85,7 @@ function h() {
   return r.useContext(_).appContext
 }
 
-function S() {
+function f() {
   return r.useContext(_).windowDispatch
 }
 t.ZP = _

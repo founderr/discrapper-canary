@@ -22,8 +22,8 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = /(\t|\s)/;
-class f extends r.PureComponent {
+let f = /(\t|\s)/;
+class S extends r.PureComponent {
   componentDidMount() {
     !this.props.disableAutoFocus && (Promise.resolve().then(() => {
       var e;
@@ -55,7 +55,7 @@ class f extends r.PureComponent {
     };
     let n = e.selectionStart,
       i = e.selectionEnd;
-    for (; n > 0 && !S.test(t[n - 1]);) {
+    for (; n > 0 && !f.test(t[n - 1]);) {
       ;
       n--
     }
@@ -130,7 +130,7 @@ class f extends r.PureComponent {
       spellcheckEnabled: E,
       "aria-controls": I,
       "aria-expanded": h,
-      "aria-activedescendant": S
+      "aria-activedescendant": f
     } = this.props;
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(c.d9, {
@@ -160,7 +160,7 @@ class f extends r.PureComponent {
         spellCheck: E,
         "aria-controls": I,
         "aria-expanded": h,
-        "aria-activedescendant": S,
+        "aria-activedescendant": f,
         "aria-haspopup": "listbox",
         "aria-autocomplete": "list",
         "aria-multiline": !0
@@ -257,4 +257,4 @@ class f extends r.PureComponent {
     })
   }
 }
-t.Z = f
+t.Z = S

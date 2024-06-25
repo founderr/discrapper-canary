@@ -5,10 +5,10 @@ t.d(A, {
 }), t(47120);
 var n = t(735250),
   a = t(470079),
-  s = t(120356),
-  r = t.n(s),
-  l = t(481060),
-  o = t(813197),
+  r = t(120356),
+  s = t.n(r),
+  o = t(481060),
+  l = t(813197),
   i = t(689938),
   d = t(713774);
 let c = "custom-image",
@@ -16,24 +16,24 @@ let c = "custom-image",
     let {
       selectedImageName: t,
       onChange: a,
-      disabled: s = !1,
-      name: o,
+      disabled: r = !1,
+      name: l,
       alt: i,
       data: c
-    } = e, u = o === t, C = (0, l.useRadioItem)({
+    } = e, u = l === t, C = (0, o.useRadioItem)({
       isSelected: u,
       label: i
-    }), g = s ? void 0 : () => {
-      a(c, o)
+    }), g = r ? void 0 : () => {
+      a(c, l)
     };
-    return (0, n.jsx)(l.Clickable, {
+    return (0, n.jsx)(o.Clickable, {
       ref: A,
-      className: r()(d.radioOption, {
+      className: s()(d.radioOption, {
         [d.selected]: u,
-        [d.disabled]: s
+        [d.disabled]: r
       }),
       onClick: g,
-      "aria-disabled": s,
+      "aria-disabled": r,
       ...C,
       children: (0, n.jsx)("img", {
         src: c,
@@ -47,92 +47,92 @@ function C(e) {
   let {
     presetImages: A,
     image: t,
-    imageName: s,
+    imageName: r,
     savedImageName: C,
     onChange: g,
     uploadButtonLabel: T = i.Z.Messages.UPLOAD_IMAGE,
-    radioGroupAriaLabel: U = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
-    disabled: m = !1
-  } = e, I = s === c, [h, p] = a.useState(I ? t : null), [v, q] = a.useState(null), f = a.useRef(null), E = a.useRef(null);
+    radioGroupAriaLabel: p = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
+    disabled: h = !1
+  } = e, m = r === c, [I, U] = a.useState(m ? t : null), [f, v] = a.useState(null), q = a.useRef(null), E = a.useRef(null);
   a.useEffect(() => {
-    C !== c && (p(null), q(null))
+    C !== c && (U(null), v(null))
   }, [C]);
-  let N = null != v ? i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
-      filename: v
+  let N = null != f ? i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
+      filename: f
     }) : i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
-    O = (0, l.useRadioGroup)({
+    D = (0, o.useRadioGroup)({
       orientation: "horizontal",
-      isDisabled: m
+      isDisabled: h
     }),
-    D = () => {
+    O = () => {
       var e;
-      return null === (e = f.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+      return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     },
-    R = () => {
-      s === c && g(A[0].data, A[0].name), p(null), q(null)
+    x = () => {
+      r === c && g(A[0].data, A[0].name), U(null), v(null)
     };
   return a.useEffect(() => {
-    if (I && null != v) {
+    if (m && null != f) {
       var e, A;
       null === (A = E.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus()
     }
-  }, [I, v]), (0, n.jsxs)("div", {
+  }, [m, f]), (0, n.jsxs)("div", {
     className: d.imageSelectionContainer,
-    children: [(0, n.jsx)(l.FocusRing, {
+    children: [(0, n.jsx)(o.FocusRing, {
       within: !0,
       children: (0, n.jsxs)("div", {
-        className: r()(d.uploadButton, {
-          [d.disabled]: m,
-          [d.hidden]: null != h
+        className: s()(d.uploadButton, {
+          [d.disabled]: h,
+          [d.hidden]: null != I
         }),
-        "aria-disabled": m,
-        children: [(0, n.jsx)(l.ImagePlusIcon, {
+        "aria-disabled": h,
+        children: [(0, n.jsx)(o.ImagePlusIcon, {
           size: "xs",
           color: "currentColor",
           "aria-hidden": !0
-        }), (0, n.jsx)(l.Text, {
+        }), (0, n.jsx)(o.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
           "aria-hidden": !0,
           children: T
-        }), (0, n.jsx)(o.ZP, {
-          ref: f,
+        }), (0, n.jsx)(l.ZP, {
+          ref: q,
           tabIndex: 0,
           onChange: (e, A) => {
-            null != A && (q(A.name), p(e), g(e, c))
+            null != A && (v(A.name), U(e), g(e, c))
           },
           "aria-label": T
         })]
       })
-    }), null != h && (0, n.jsxs)("div", {
+    }), null != I && (0, n.jsxs)("div", {
       className: d.customImageActionContainer,
-      children: [(0, n.jsx)(l.Tooltip, {
+      children: [(0, n.jsx)(o.Tooltip, {
         text: i.Z.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_IMAGE_TOOLTIP,
         hideOnClick: !0,
-        children: e => (0, n.jsx)(l.Clickable, {
+        children: e => (0, n.jsx)(o.Clickable, {
           ...e,
           className: d.customImageAction,
-          onClick: D,
+          onClick: O,
           "aria-label": i.Z.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
-            filename: v
+            filename: f
           }),
-          children: (0, n.jsx)(l.PencilIcon, {
+          children: (0, n.jsx)(o.PencilIcon, {
             size: "xs",
             color: "currentColor",
             className: d.editIcon
           })
         })
-      }), (0, n.jsx)(l.Tooltip, {
+      }), (0, n.jsx)(o.Tooltip, {
         text: i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_IMAGE_TOOLTIP,
         hideOnClick: !0,
-        children: e => (0, n.jsx)(l.Clickable, {
+        children: e => (0, n.jsx)(o.Clickable, {
           ...e,
           className: d.customImageAction,
-          onClick: R,
+          onClick: x,
           "aria-label": i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
-            filename: v
+            filename: f
           }),
-          children: (0, n.jsx)(l.TrashIcon, {
+          children: (0, n.jsx)(o.TrashIcon, {
             size: "md",
             color: "currentColor",
             className: d.deleteIcon
@@ -140,21 +140,21 @@ function C(e) {
         })
       })]
     }), (0, n.jsxs)("div", {
-      "aria-label": U,
-      ...O,
+      "aria-label": p,
+      ...D,
       className: d.radioGroup,
-      children: [null != h && (0, n.jsx)(u, {
+      children: [null != I && (0, n.jsx)(u, {
         ref: E,
-        selectedImageName: s,
+        selectedImageName: r,
         onChange: g,
-        disabled: m,
+        disabled: h,
         name: c,
         alt: N,
-        data: h
+        data: I
       }), A.map(e => (0, n.jsx)(u, {
-        selectedImageName: s,
+        selectedImageName: r,
         onChange: g,
-        disabled: m,
+        disabled: h,
         ...e
       }, e.name))]
     })]

@@ -1,26 +1,26 @@
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(442837),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(442837),
   o = n(481060),
   c = n(570140),
-  u = n(287259),
-  d = n(819640),
-  E = n(490983),
-  h = n(799777),
-  _ = n(5967),
+  d = n(287259),
+  u = n(819640),
+  _ = n(490983),
+  E = n(799777),
+  h = n(5967),
   I = n(346329),
   m = n(981631),
-  T = n(689938),
+  p = n(689938),
   g = n(518494);
 
-function p(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,15 +28,15 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends i.Component {
+class C extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
   componentWillUnmount() {
-    c.Z.wait(() => u.wX(null)), document.removeEventListener("keydown", this.handleKeyDown)
+    c.Z.wait(() => d.wX(null)), document.removeEventListener("keydown", this.handleKeyDown)
   }
   reset() {
-    u.wX(null), u.JZ("")
+    d.wX(null), d.JZ("")
   }
   focusInput() {
     let {
@@ -48,10 +48,10 @@ class N extends i.Component {
     let {
       applicationViewItems: t,
       activeRowKey: n
-    } = this.props, s = t.findIndex(e => e.key === n), i = 0;
-    s >= 0 && (i = (s + e) % t.length) < 0 && (i = t.length - 1);
-    let l = t[i];
-    u.wX(null != l ? l.key : null, !0)
+    } = this.props, i = t.findIndex(e => e.key === n), s = 0;
+    i >= 0 && (s = (i + e) % t.length) < 0 && (s = t.length - 1);
+    let a = t[s];
+    d.wX(null != a ? a.key : null, !0)
   }
   render() {
     let {
@@ -59,15 +59,15 @@ class N extends i.Component {
     } = this.props, {
       focused: t
     } = this.state;
-    return (0, s.jsx)("div", {
-      className: a()({
+    return (0, i.jsx)("div", {
+      className: r()({
         [g.libraryFilter]: !0,
         [g.focused]: t
       }),
-      children: (0, s.jsx)(o.SearchBar, {
+      children: (0, i.jsx)(o.SearchBar, {
         className: g.searchBar,
         ref: this.setRef,
-        onChange: u.JZ,
+        onChange: d.JZ,
         onFocus: () => this.setState({
           focused: !0
         }),
@@ -80,37 +80,37 @@ class N extends i.Component {
         },
         maxLength: 100,
         query: e,
-        placeholder: T.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+        placeholder: p.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
       })
     })
   }
   constructor(...e) {
-    super(...e), p(this, "searchBarRef", null), p(this, "state", {
+    super(...e), T(this, "searchBarRef", null), T(this, "state", {
       focused: !1
-    }), p(this, "setRef", e => {
+    }), T(this, "setRef", e => {
       this.searchBarRef = e
-    }), p(this, "handleKeyDown", e => {
+    }), T(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: n,
-        hasModalOpen: s,
-        applicationViewItems: i
+        hasModalOpen: i,
+        applicationViewItems: s
       } = this.props, {
-        searchBarRef: l
+        searchBarRef: a
       } = this;
-      if (s || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-      let a = null === (t = (0, _.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(a !== l.inputRef.current && (0, _.VG)(a))) switch (e.which) {
+      if (i || e.ctrlKey || e.altKey || e.metaKey || null == a) return;
+      let r = null === (t = (0, h.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(r !== a.inputRef.current && (0, h.VG)(r))) switch (e.which) {
         case m.yXg.ESCAPE:
-          e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
+          e.target !== a.inputRef.current ? this.reset() : null != a.inputRef.current && a.blur();
           break;
         case m.yXg.ENTER:
           if (null != n) {
             e.preventDefault();
-            let t = i.find(e => e.key === n);
+            let t = s.find(e => e.key === n);
             if (null == t) return;
-            let s = t.libraryApplication;
-            I.performDefaultLibraryApplicationAction(s, {
+            let i = t.libraryApplication;
+            I.performDefaultLibraryApplicationAction(i, {
               analyticsParams: {
                 source: m.Sbl.APPLICATION_LIBRARY,
                 location: {
@@ -127,19 +127,19 @@ class N extends i.Component {
           e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1);
           break;
         default:
-          null != l.inputRef.current && e.target !== l.inputRef.current && l.focus()
+          null != a.inputRef.current && e.target !== a.inputRef.current && a.focus()
       }
     })
   }
 }
 
-function S() {
-  let e = (0, r.e7)([d.Z], () => d.Z.hasLayers()),
+function f() {
+  let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, s.jsx)(N, {
-    activeRowKey: (0, r.e7)([h.Z], () => h.Z.activeRowKey),
+  return (0, i.jsx)(C, {
+    activeRowKey: (0, l.e7)([E.Z], () => E.Z.activeRowKey),
     hasModalOpen: t || e,
-    filterQuery: (0, r.e7)([E.Z], () => E.Z.applicationFilterQuery),
-    applicationViewItems: (0, r.e7)([E.Z], () => E.Z.sortedFilteredLibraryApplicationViewItems)
+    filterQuery: (0, l.e7)([_.Z], () => _.Z.applicationFilterQuery),
+    applicationViewItems: (0, l.e7)([_.Z], () => _.Z.sortedFilteredLibraryApplicationViewItems)
   })
 }

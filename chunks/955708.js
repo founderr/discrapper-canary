@@ -1,82 +1,82 @@
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   InappropriateConversationModalSlideKeys: function() {
     return s
   }
-}), t(47120);
-var s, o, r = t(735250),
-  a = t(470079),
-  i = t(481060),
-  c = t(378298),
-  E = t(473092),
-  N = t(684471),
-  l = t(745982),
-  u = t(463439),
-  I = t(689938),
-  T = t(837034);
+}), n(47120);
+var s, o, r = n(735250),
+  a = n(470079),
+  i = n(481060),
+  c = n(378298),
+  E = n(473092),
+  N = n(684471),
+  u = n(745982),
+  I = n(463439),
+  T = n(689938),
+  l = n(837034);
 (o = s || (s = {}))[o.INTRO = 0] = "INTRO", o[o.SAFETY_TIPS = 1] = "SAFETY_TIPS", o[o.TAKE_ACTION = 2] = "TAKE_ACTION";
-n.default = e => {
+t.default = e => {
   let {
-    warningId: n,
-    warningType: t,
+    warningId: t,
+    warningType: n,
     senderId: s,
     modalProps: o,
-    channelId: A
-  } = e, [_, R] = a.useState(0), d = a.useMemo(() => ({
-    channelId: A,
+    channelId: _
+  } = e, [A, d] = a.useState(0), R = a.useMemo(() => ({
+    channelId: _,
     senderId: s,
-    warningId: n,
-    warningType: t,
+    warningId: t,
+    warningType: n,
     isNudgeWarning: !1
-  }), [A, s, n, t]);
+  }), [_, s, t, n]);
   a.useEffect(() => {
     (0, E.KQ)({
-      ...d,
+      ...R,
       viewName: E.pb.SAFETY_TAKEOVER_MODAL
     })
-  }, [d]);
+  }, [R]);
   let O = a.useCallback(e => {
       (0, E.qc)({
-        ...d,
+        ...R,
         cta: e
       })
-    }, [d]),
+    }, [R]),
     [C, S] = a.useState(!1);
 
   function P(e) {
-    R(e)
+    d(e)
   }
   return (0, r.jsxs)(i.ModalRoot, {
     transitionState: o.transitionState,
     children: [(0, r.jsx)("div", {
-      className: T.container,
+      className: l.container,
       children: (0, r.jsxs)(i.Slides, {
         width: 440,
-        activeSlide: _,
+        activeSlide: A,
         centered: !1,
         overflow: "visible",
         contentDisplay: "flex",
         children: [(0, r.jsx)(i.Slide, {
           id: 0,
           children: (0, r.jsx)(N.Z, {
-            warningId: n,
+            warningId: t,
             senderId: s,
             trackAnalyticsEvent: O,
             onNavigate: P
           })
         }), (0, r.jsx)(i.Slide, {
           id: 1,
-          children: (0, r.jsx)(l.Z, {
-            warningId: n,
+          children: (0, r.jsx)(u.Z, {
+            warningId: t,
             senderId: s,
             trackAnalyticsEvent: O
           })
         }), (0, r.jsx)(i.Slide, {
           id: 2,
-          children: (0, r.jsx)(u.Z, {
-            warningId: n,
+          children: (0, r.jsx)(I.Z, {
+            warningId: t,
             senderId: s,
             trackAnalyticsEvent: O,
-            channelId: A,
+            channelId: _,
             hasReported: C,
             onReport: function() {
               S(!0)
@@ -85,23 +85,23 @@ n.default = e => {
         })]
       })
     }), (0, r.jsxs)(i.ModalFooter, {
-      className: T.footer,
+      className: l.footer,
       children: [(0, r.jsx)(i.Button, {
-        className: T.footerButton,
+        className: l.footerButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,
         onClick: function() {
-          o.onClose(), (0, c.T)(A, [n]), O(E.NM.USER_TAKEOVER_MODAL_DISMISS)
+          o.onClose(), (0, c.T)(_, [t]), O(E.NM.USER_TAKEOVER_MODAL_DISMISS)
         },
-        children: I.Z.Messages.CLOSE
-      }), 0 !== _ && (0, r.jsx)(i.Button, {
-        className: T.footerButton,
+        children: T.Z.Messages.CLOSE
+      }), 0 !== A && (0, r.jsx)(i.Button, {
+        className: l.footerButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,
         onClick: () => P(0),
-        children: I.Z.Messages.BACK
+        children: T.Z.Messages.BACK
       })]
     })]
   })

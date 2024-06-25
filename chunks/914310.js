@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
   modal: "modal_f4abc8",
   content: "content_f4abc8",
   image: "image_f4abc8",

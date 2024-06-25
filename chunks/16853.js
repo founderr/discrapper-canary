@@ -1,32 +1,32 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(643560);
+var a = n(481060),
+  l = n(643560);
 t.Z = e => {
   let {
     entry: t,
     forceLightTheme: n,
-    hideEditButton: a,
+    hideEditButton: s,
     children: r,
     onRequestOpen: o,
     onRequestClose: c
   } = e;
-  return (0, l.jsx)(i.Popout, {
+  return (0, i.jsx)(a.Popout, {
     onRequestOpen: o,
     onRequestClose: c,
-    animation: i.Popout.Animation.NONE,
+    animation: a.Popout.Animation.NONE,
     position: "bottom",
     spacing: 4,
     align: "right",
     renderPopout: e => {
       let {
-        closePopout: i
+        closePopout: a
       } = e;
-      return (0, l.jsx)(s.default, {
+      return (0, i.jsx)(l.default, {
         entry: t,
-        closePopout: i,
+        closePopout: a,
         forceLightTheme: n,
-        hideEditButton: a
+        hideEditButton: s
       })
     },
     children: r

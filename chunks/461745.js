@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   BK: function() {
-    return f
+    return S
   },
   Fj: function() {
     return i
@@ -26,19 +26,19 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = Object.freeze({
+let f = Object.freeze({
   SMALL: T.small,
   MEDIUM: T.medium,
   LARGE: T.large
 });
 (s = i || (i = {})).MEMBER = "MEMBER", s.ROLE = "ROLE", s.CHANNEL = "CHANNEL", s.GUILD = "GUILD", s.USER = "USER";
-let f = e => {
+let S = e => {
   let {
     hasContent: t,
     onClear: n,
     className: i,
     themeOverride: r,
-    size: s = S.SMALL
+    size: s = f.SMALL
   } = e;
   return (0, o.jsx)(_.Clickable, {
     className: u()(i, T.iconLayout, s, (0, d.Q)(r), {
@@ -76,7 +76,7 @@ let f = e => {
     })
   })
 };
-class N extends(r = a.Component) {
+class A extends(r = a.Component) {
   componentDidUpdate(e) {
     let {
       focusAfterReady: t,
@@ -171,11 +171,11 @@ class N extends(r = a.Component) {
       maxHeight: l,
       tags: E,
       onActivate: h,
-      className: S,
-      inputProps: N,
-      focusAfterReady: A
-    } = this.props, m = null != t && t.length > 0, O = !1, R = [];
-    return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => R.push((0, o.jsxs)(_.Anchor, {
+      className: f,
+      inputProps: A,
+      focusAfterReady: N
+    } = this.props, m = null != t && t.length > 0, O = !1, p = [];
+    return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => p.push((0, o.jsxs)(_.Anchor, {
       focusProps: {
         offset: 4
       },
@@ -187,7 +187,7 @@ class N extends(r = a.Component) {
         className: T.close,
         "aria-label": I.Z.Messages.REMOVE
       })]
-    }, t))) : (O = !0, E.forEach((e, t) => R.push((0, o.jsxs)(_.Anchor, {
+    }, t))) : (O = !0, E.forEach((e, t) => p.push((0, o.jsxs)(_.Anchor, {
       className: u()(T.tag, T.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
       children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, o.jsx)(_.Avatar, {
@@ -217,7 +217,7 @@ class N extends(r = a.Component) {
       ringTarget: this.containerRef,
       children: (0, o.jsx)("div", {
         ref: this.containerRef,
-        className: u()(S, T.container, a, (0, d.Q)(i), {
+        className: u()(f, T.container, a, (0, d.Q)(i), {
           [T.disabled]: r
         }),
         children: (0, o.jsxs)(_.ScrollerThin, {
@@ -225,7 +225,7 @@ class N extends(r = a.Component) {
           style: {
             maxHeight: l
           },
-          children: [R, (0, o.jsx)("input", {
+          children: [p, (0, o.jsx)("input", {
             className: u()(T.input, {
               [T.richTagInput]: O
             }),
@@ -239,11 +239,11 @@ class N extends(r = a.Component) {
             onFocus: this.handleFocus,
             disabled: r,
             "aria-disabled": r,
-            autoFocus: !A && e,
+            autoFocus: !N && e,
             onMouseDown: h,
             ...this.defaultInputProps,
-            ...N
-          }), null != s ? (0, o.jsx)(f, {
+            ...A
+          }), null != s ? (0, o.jsx)(S, {
             size: a,
             themeOverride: i,
             hasContent: m,
@@ -308,8 +308,8 @@ class N extends(r = a.Component) {
     })
   }
 }
-h(N, "Sizes", S), h(N, "defaultProps", {
-  size: S.SMALL,
+h(A, "Sizes", f), h(A, "defaultProps", {
+  size: f.SMALL,
   query: "",
   sections: [],
   selectedSection: 0,
@@ -320,4 +320,4 @@ h(N, "Sizes", S), h(N, "defaultProps", {
   autoFocus: !1,
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
-}), t.ZP = N
+}), t.ZP = A

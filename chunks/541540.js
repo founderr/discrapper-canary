@@ -1,21 +1,21 @@
 t.d(s, {
   Z: function() {
-    return A
+    return C
   }
 }), t(47120), t(411104);
 var n = t(735250),
-  i = t(470079),
-  a = t(442837),
-  l = t(481060),
-  r = t(533307),
-  o = t(930114),
+  a = t(470079),
+  i = t(442837),
+  r = t(481060),
+  o = t(533307),
+  l = t(930114),
   c = t(246946),
-  E = t(285952),
-  d = t(626135),
-  _ = t(669079),
-  T = t(981631),
-  S = t(689938),
-  u = t(817271);
+  d = t(285952),
+  _ = t(626135),
+  E = t(669079),
+  u = t(981631),
+  T = t(689938),
+  S = t(817271);
 
 function I(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
@@ -25,7 +25,7 @@ function I(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-class N extends i.Component {
+class N extends a.Component {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -34,7 +34,7 @@ class N extends i.Component {
     } = this.props;
     return {
       ...e,
-      object: T.qAy.BUTTON_CTA
+      object: u.qAy.BUTTON_CTA
     }
   }
   render() {
@@ -43,34 +43,34 @@ class N extends i.Component {
     } = this.props, {
       codeInput: s,
       submitting: t,
-      hasError: i,
-      isPromoCode: a
+      hasError: a,
+      isPromoCode: i
     } = this.state;
-    return (0, n.jsxs)(l.FormSection, {
-      tag: l.FormTitleTags.H1,
-      title: S.Z.Messages.GIFT_INVENTORY_REDEEM_CODES,
-      children: [(0, n.jsx)(l.FormTitle, {
-        children: S.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMPT
+    return (0, n.jsxs)(r.FormSection, {
+      tag: r.FormTitleTags.H1,
+      title: T.Z.Messages.GIFT_INVENTORY_REDEEM_CODES,
+      children: [(0, n.jsx)(r.FormTitle, {
+        children: T.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMPT
       }), (0, n.jsx)("form", {
         onSubmit: this.handleSubmit,
-        children: (0, n.jsxs)(E.Z, {
-          children: [(0, n.jsx)(l.TextInput, {
+        children: (0, n.jsxs)(d.Z, {
+          children: [(0, n.jsx)(r.TextInput, {
             type: e ? "password" : "text",
             value: s,
             onChange: this.handleChange,
             placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
-            error: !a && i ? S.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
-            className: u.codeRedemptionInput
-          }), (0, n.jsx)(l.Button, {
+            error: !i && a ? T.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
+            className: S.codeRedemptionInput
+          }), (0, n.jsx)(r.Button, {
             type: "submit",
             submitting: t,
-            children: S.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_REDEEM
+            children: T.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_REDEEM
           })]
         })
-      }), a ? (0, n.jsx)(l.Text, {
-        className: u.errorMessage,
+      }), i ? (0, n.jsx)(r.Text, {
+        className: S.errorMessage,
         variant: "text-sm/normal",
-        children: S.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
+        children: T.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
           promoLink: () => {
             window.open("https://discord.com/billing/promotions/".concat(s))
           }
@@ -95,7 +95,7 @@ class N extends i.Component {
         codeInput: s
       } = this.state;
       if ("" === s) return;
-      let t = (0, _.JT)(s);
+      let t = (0, E.JT)(s);
       if (null == t) {
         this.setState({
           hasError: !0
@@ -106,17 +106,17 @@ class N extends i.Component {
         submitting: !0
       });
       try {
-        let e = await r.Z.resolveGiftCode(t);
+        let e = await o.Z.resolveGiftCode(t);
         if (null != e && null != e.giftCode.promotion) throw this.setState({
           isPromoCode: !0
         }), Error("Cannnot redeem promotion code as gift");
-        d.default.track(T.rMx.OPEN_MODAL, {
+        _.default.track(u.rMx.OPEN_MODAL, {
           type: "gift_accept",
           location: {
             ...this.analyticsLocation,
-            object: T.qAy.BUTTON_CTA
+            object: u.qAy.BUTTON_CTA
           }
-        }), (0, o.V)({
+        }), (0, l.V)({
           processedCode: t
         }), this.setState({
           codeInput: ""
@@ -134,9 +134,9 @@ class N extends i.Component {
   }
 }
 
-function A() {
-  let e = i.useContext(d.AnalyticsContext),
-    s = (0, a.e7)([c.Z], () => c.Z.enabled);
+function C() {
+  let e = a.useContext(_.AnalyticsContext),
+    s = (0, i.e7)([c.Z], () => c.Z.enabled);
   return (0, n.jsx)(N, {
     analyticsContext: e,
     obscureInput: s

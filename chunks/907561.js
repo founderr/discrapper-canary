@@ -1,20 +1,20 @@
 t.d(n, {
   Km: function() {
-    return s
+    return i
   },
   bC: function() {
-    return l
+    return o
   },
   md: function() {
-    return i
+    return s
   }
 });
 var a = t(470079),
   r = t(772848);
-let s = 262,
-  i = 100;
+let i = 262,
+  s = 100;
 
-function l(e, n) {
+function o(e, n) {
   let t = a.useMemo(() => "clan-banner-container-".concat((0, r.Z)()), []);
   return {
     styleContent: a.useMemo(() => {

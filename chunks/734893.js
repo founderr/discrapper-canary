@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   HH: function() {
-    return R
+    return p
   },
   O9: function() {
     return T
   },
   Vu: function() {
-    return f
+    return S
   },
   W4: function() {
     return d
@@ -22,13 +22,13 @@ n.d(t, {
     return c
   },
   am: function() {
-    return S
+    return f
   },
   av: function() {
     return C
   },
   cq: function() {
-    return A
+    return N
   },
   j: function() {
     return o
@@ -49,7 +49,7 @@ n.d(t, {
     return g
   },
   rk: function() {
-    return p
+    return R
   },
   tB: function() {
     return O
@@ -61,7 +61,7 @@ n.d(t, {
     return m
   },
   x3: function() {
-    return N
+    return A
   }
 });
 var i, r, s, o, a = n(592125),
@@ -74,11 +74,11 @@ let c = 7,
   I = 60,
   T = 5,
   h = 1,
-  S = 30,
-  f = 200,
-  N = 7;
+  f = 30,
+  S = 200,
+  A = 7;
 
-function A(e) {
+function N(e) {
   var t;
   return {
     channelId: e.channel_id,
@@ -119,7 +119,7 @@ function O(e) {
   } = e, s = {
     authorIds: t.author_ids,
     message: t.message
-  }, o = n.filter(e => (0, l.lm)(a.Z.getChannel(e.channel_id))).map(A);
+  }, o = n.filter(e => (0, l.lm)(a.Z.getChannel(e.channel_id))).map(N);
   return {
     welcomeMessage: s,
     newMemberActions: o,
@@ -128,7 +128,7 @@ function O(e) {
   }
 }
 
-function R(e, t) {
+function p(e, t) {
   var n, i;
   if (null == t) return null;
   let {
@@ -175,7 +175,7 @@ function R(e, t) {
     enabled: u
   }
 }(i = s || (s = {}))[i.VIEW = 0] = "VIEW", i[i.CHAT = 1] = "CHAT";
-let p = e => {
+let R = e => {
   if (null == e) return null;
   let t = {};
   for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;

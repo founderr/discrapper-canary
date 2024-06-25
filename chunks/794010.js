@@ -1,52 +1,52 @@
-n.d(t, {
+a.d(t, {
   Z: function() {
-    return r
+    return o
   }
-}), n(47120);
-var a, l = n(735250),
-  i = n(470079);
+}), a(47120);
+var n, i = a(735250),
+  r = a(470079);
 
-function s(e, t, n) {
+function l(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-class r extends(a = i.PureComponent) {
+class o extends(n = r.PureComponent) {
   render() {
     let {
       tag: e,
       children: t,
-      eventName: n,
-      data: a,
-      track: i,
-      trackOutboundLink: s,
-      ...r
+      eventName: a,
+      data: n,
+      track: r,
+      trackOutboundLink: l,
+      ...o
     } = this.props;
-    return null == e ? null : (0, l.jsx)(e, {
-      ...r,
+    return null == e ? null : (0, i.jsx)(e, {
+      ...o,
       onClick: this.handleClick,
       children: t
     })
   }
   constructor(...e) {
-    super(...e), s(this, "handleClick", e => {
+    super(...e), l(this, "handleClick", e => {
       let {
         eventName: t,
-        data: n,
-        href: a,
-        onClick: l,
-        trackOutboundLink: i,
-        track: s
+        data: a,
+        href: n,
+        onClick: i,
+        trackOutboundLink: r,
+        track: l
       } = this.props;
-      if (n.googleAnalytics && i && (null != a ? i(a) : console.warn("TrackClick.handleClick: No href provided when using data.googleAnalytics")), l && l(e), !t) return !1;
-      s(t, n)
+      if (a.googleAnalytics && r && (null != n ? r(n) : console.warn("TrackClick.handleClick: No href provided when using data.googleAnalytics")), i && i(e), !t) return !1;
+      l(t, a)
     })
   }
 }
-s(r, "defaultProps", {
+l(o, "defaultProps", {
   tag: "a",
   data: {}
 })

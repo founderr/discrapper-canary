@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(735250),
@@ -19,7 +19,7 @@ var i = n(735250),
   T = n(589419),
   h = n(622322);
 
-function S(e) {
+function f(e) {
   var t;
   let {
     channel: n,
@@ -30,7 +30,7 @@ function S(e) {
   } = e, u = null != s || null != o, c = (null !== (t = r.description) && void 0 !== t ? t : "").length > 0;
   return (0, i.jsxs)("div", {
     className: T.container,
-    children: [(0, i.jsx)(f, {
+    children: [(0, i.jsx)(S, {
       channel: n,
       application: r,
       sectionName: l
@@ -51,7 +51,7 @@ function S(e) {
         children: [(0, i.jsx)(a.x, {
           variant: "text-sm/semibold",
           children: I.Z.Messages.OVERVIEW
-        }), (0, i.jsx)(N, {
+        }), (0, i.jsx)(A, {
           application: r
         })]
       }) : null]
@@ -59,7 +59,7 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     channel: t,
     application: n,
@@ -88,7 +88,7 @@ function f(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     application: t
   } = e, [n, _] = r.useState(!1), c = r.useMemo(() => {

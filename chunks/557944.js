@@ -1,138 +1,138 @@
-t.r(s), t.d(s, {
+s.r(a), s.d(a, {
   default: function() {
-    return p
+    return k
   }
-}), t(47120);
-var l = t(735250),
-  a = t(470079),
-  n = t(120356),
-  i = t.n(n),
-  r = t(512722),
-  o = t.n(r),
-  c = t(442837),
-  d = t(481060),
-  u = t(749210),
-  h = t(430824),
-  C = t(285952),
-  m = t(695464),
-  M = t(399860),
-  b = t(335049),
-  x = t(689079),
-  I = t(689938),
-  g = t(977043);
+}), s(47120);
+var t = s(735250),
+  l = s(470079),
+  n = s(120356),
+  r = s.n(n),
+  i = s(512722),
+  o = s.n(i),
+  c = s(442837),
+  d = s(481060),
+  u = s(749210),
+  h = s(430824),
+  m = s(285952),
+  C = s(695464),
+  b = s(399860),
+  x = s(335049),
+  I = s(689079),
+  M = s(689938),
+  f = s(977043);
 
-function p(e) {
+function k(e) {
   let {
-    editPermissions: s,
-    guildId: t,
+    editPermissions: a,
+    guildId: s,
     hasMemberSearch: n,
-    headerText: r,
-    onClose: p,
-    overwrittenKeys: N,
-    search: k,
-    searchPlaceholderText: S,
-    selectedPermissionCount: j,
-    transitionState: E
-  } = e, _ = (0, c.e7)([h.Z], () => h.Z.getGuild(t), [t]);
-  o()(null != _, "");
-  let [A, T] = a.useState(null), {
-    query: y,
-    results: Z,
-    setQuery: R
-  } = k(t), [f, O] = a.useState({}), B = a.useMemo(() => Object.keys(f).length, [f]), D = B + j >= x._n, v = a.useMemo(() => Z.filter(e => {
-    let s = (0, M.rE)(e.id, e.type);
-    return !N.includes(s)
-  }), [N, Z]), L = a.useCallback((e, s) => {
-    O(t => {
-      let l = (0, M.rE)(e, s),
-        a = {
-          ...t
+    headerText: i,
+    onClose: k,
+    overwrittenKeys: p,
+    search: g,
+    searchPlaceholderText: N,
+    selectedPermissionCount: _,
+    transitionState: S
+  } = e, j = (0, c.e7)([h.Z], () => h.Z.getGuild(s), [s]);
+  o()(null != j, "");
+  let [E, A] = l.useState(null), {
+    query: T,
+    results: y,
+    setQuery: Z
+  } = g(s), [B, D] = l.useState({}), R = l.useMemo(() => Object.keys(B).length, [B]), O = R + _ >= I._n, v = l.useMemo(() => y.filter(e => {
+    let a = (0, b.rE)(e.id, e.type);
+    return !p.includes(a)
+  }), [p, y]), L = l.useCallback((e, a) => {
+    D(s => {
+      let t = (0, b.rE)(e, a),
+        l = {
+          ...s
         };
-      return l in t ? delete a[l] : !D && (a[l] = {
+      return t in s ? delete l[t] : !O && (l[t] = {
         id: e,
         permission: !0,
-        type: s
-      }), a
+        type: a
+      }), l
     })
-  }, [D, O]), P = a.useCallback(() => {
-    s(f, []), p()
-  }, [s, p, f]);
-  a.useEffect(() => () => clearTimeout(A), [A]);
-  let w = a.useCallback(e => {
-      R(e), n && T(s => (clearTimeout(s), 0 === e.length) ? null : setTimeout(() => {
-        u.Z.requestMembers(t, e, 200, !1)
+  }, [O, D]), P = l.useCallback(() => {
+    a(B, []), k()
+  }, [a, k, B]);
+  l.useEffect(() => () => clearTimeout(E), [E]);
+  let w = l.useCallback(e => {
+      Z(e), n && A(a => (clearTimeout(a), 0 === e.length) ? null : setTimeout(() => {
+        u.Z.requestMembers(s, e, 200, !1)
       }, 500))
-    }, [t, n, R, T]),
-    H = a.useCallback(e => {
-      let s = v[e],
-        t = (0, M.rE)(s.id, s.type),
-        a = t in f,
-        n = D && !a;
-      return (0, l.jsx)("div", {
-        className: g.item,
-        children: (0, l.jsx)(d.Checkbox, {
+    }, [s, n, Z, A]),
+    H = l.useCallback(e => {
+      let a = v[e],
+        s = (0, b.rE)(a.id, a.type),
+        l = s in B,
+        n = O && !l;
+      return (0, t.jsx)("div", {
+        className: f.item,
+        children: (0, t.jsx)(d.Checkbox, {
           type: d.Checkbox.Types.INVERTED,
-          className: i()({
-            [g.checkboxItemDisabled]: n
+          className: r()({
+            [f.checkboxItemDisabled]: n
           }),
           disabled: n,
-          value: a,
-          onChange: () => L(s.id, s.type),
-          children: (0, l.jsx)(b.Z, {
-            guild: _,
-            id: s.id,
-            type: s.type,
+          value: l,
+          onChange: () => L(a.id, a.type),
+          children: (0, t.jsx)(x.Z, {
+            guild: j,
+            id: a.id,
+            type: a.type,
             isLocked: !1
           })
         })
-      }, t)
-    }, [v, _, D, L, f]);
-  return a.useEffect(() => {
-    u.Z.requestMembers(t, void 0, 200, !1)
-  }, [t]), (0, l.jsxs)(d.ModalRoot, {
-    "aria-label": I.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_MODIFY,
-    transitionState: E,
-    children: [(0, l.jsxs)(d.ModalHeader, {
+      }, s)
+    }, [v, j, O, L, B]);
+  return l.useEffect(() => {
+    u.Z.requestMembers(s, void 0, 200, !1)
+  }, [s]), (0, t.jsxs)(d.ModalRoot, {
+    "aria-label": M.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_MODIFY,
+    transitionState: S,
+    children: [(0, t.jsxs)(d.ModalHeader, {
       separator: !1,
-      direction: C.Z.Direction.VERTICAL,
-      children: [(0, l.jsx)(d.Heading, {
+      direction: m.Z.Direction.VERTICAL,
+      children: [(0, t.jsx)(d.Heading, {
         variant: "heading-xl/semibold",
-        className: g.header,
-        children: r
-      }), D ? (0, l.jsx)(d.Heading, {
+        className: f.header,
+        children: i
+      }), O ? (0, t.jsx)(d.Heading, {
         variant: "heading-sm/medium",
         color: "text-danger",
-        children: I.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX
+        children: M.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX
       }) : null]
-    }), (0, l.jsxs)(d.ModalContent, {
-      className: g.modalContent,
-      children: [(0, l.jsx)(d.SearchBar, {
-        className: g.searchBar,
-        query: y,
-        placeholder: S,
-        "aria-label": S,
+    }), (0, t.jsxs)(d.ModalContent, {
+      className: f.modalContent,
+      children: [(0, t.jsx)(d.SearchBar, {
+        className: f.searchBar,
+        query: T,
+        placeholder: N,
+        "aria-label": N,
         onChange: w,
-        onClear: () => R(""),
+        onClear: () => Z(""),
         size: d.SearchBar.Sizes.MEDIUM
-      }), (0, l.jsx)(m.Z, {
+      }), (0, t.jsx)(C.Z, {
         role: "listbox",
         renderRow: H,
         rowCount: v.length,
         rowCountBySection: [v.length],
         rowHeight: 36,
-        className: g.__invalid_list
+        className: f.__invalid_list
       })]
-    }), (0, l.jsxs)(d.ModalFooter, {
-      children: [(0, l.jsx)(d.Button, {
+    }), (0, t.jsxs)(d.ModalFooter, {
+      children: [(0, t.jsx)(d.Button, {
         type: "submit",
         onClick: P,
-        disabled: 0 === B,
-        children: I.Z.Messages.ADD
-      }), (0, l.jsx)(d.Button, {
-        onClick: p,
+        disabled: 0 === R,
+        children: M.Z.Messages.ADD
+      }), (0, t.jsx)(d.Button, {
+        onClick: k,
         look: d.Button.Looks.LINK,
         color: d.Button.Colors.PRIMARY,
-        children: I.Z.Messages.CANCEL
+        children: M.Z.Messages.CANCEL
       })]
     })]
   })

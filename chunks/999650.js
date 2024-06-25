@@ -25,15 +25,15 @@ var i, r, s = n(658722),
   I = n(768119),
   T = n(944486),
   h = n(914010),
-  S = n(246946),
-  f = n(594174),
-  N = n(483360),
-  A = n(226951),
+  f = n(246946),
+  S = n(594174),
+  A = n(483360),
+  N = n(226951),
   m = n(51144),
   O = n(981631),
-  R = n(689938);
+  p = n(689938);
 
-function p() {
+function R() {
   return new Set(_().months().map(e => e.toLowerCase()))
 }
 
@@ -61,11 +61,11 @@ function D(e, t, n) {
 
 function M() {
   return {
-    [R.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => L("day"),
-    [R.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L("day", -1),
-    [R.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => L("week"),
-    [R.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => L("month"),
-    [R.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => L("year")
+    [p.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => L("day"),
+    [p.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L("day", -1),
+    [p.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => L("week"),
+    [p.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => L("month"),
+    [p.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => L("year")
   }
 }
 let P = RegExp("(?:\\s*(".concat("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", "|").concat("([0-9]{4})-([0-9]{1,2})", "|").concat("\\d{4}", "|").concat("([^\\d\\s]+)", "))"), "i"),
@@ -83,17 +83,17 @@ function G(e) {
   let t;
   let n = e.getMatch(1),
     i = e => null != e ? null == e ? void 0 : e.id : null;
-  return null != (t = O.Xyh.test(n) ? n : n === O.ME ? i(f.default.getCurrentUser()) : null != e.getMatch(4) ? i(f.default.findByTag(e.getMatch(4))) : i(f.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData("userId", t), !0)
+  return null != (t = O.Xyh.test(n) ? n : n === O.ME ? i(S.default.getCurrentUser()) : null != e.getMatch(4) ? i(S.default.findByTag(e.getMatch(4))) : i(S.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData("userId", t), !0)
 }
 
 function w(e, t) {
   let n, i;
   let r = e.getFullMatch().trim().toLowerCase(),
     s = M()[r];
-  return null != s ? [n, i] = s() : p().has(r) ? [n, i] = D(r, "MMMM", "month") : g().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, O.b2L, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
+  return null != s ? [n, i] = s() : R().has(r) ? [n, i] = D(r, "MMMM", "month") : g().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, O.b2L, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
 }
 
-function B(e) {
+function x(e) {
   let t = e.getMatch(1),
     n = h.Z.getGuildId(),
     i = d.ZP.getChannels(n)[d.sH].concat(d.ZP.getChannels(n)[d.Zb]),
@@ -110,23 +110,23 @@ function B(e) {
   return null != s && (e.setData("channel", s), !0)
 }
 
-function x(e) {
+function B(e) {
   let t = {
-    [R.Z.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_POLL]: "poll",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_SNAPSHOT]: "snapshot",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_ATTACHMENT]: "file",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_VIDEO]: "video",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_IMAGE]: "image",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_SOUND]: "sound",
-    [R.Z.Messages.SEARCH_ANSWER_HAS_STICKER]: "sticker"
+    [p.Z.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_POLL]: "poll",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_SNAPSHOT]: "snapshot",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_ATTACHMENT]: "file",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_VIDEO]: "video",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_IMAGE]: "image",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_SOUND]: "sound",
+    [p.Z.Messages.SEARCH_ANSWER_HAS_STICKER]: "sticker"
   } [e.getMatch(1)];
   return null != t && "" !== t && (e.setData("has", t), !0)
 }
 
 function k() {
-  return [...Array.from(p()), ...Array.from(g()), ...Array.from(C()), ...Object.keys(M())]
+  return [...Array.from(R()), ...Array.from(g()), ...Array.from(C()), ...Object.keys(M())]
 }
 
 function V() {
@@ -159,19 +159,19 @@ function F(e, t) {
     };
   switch (s) {
     case O.aib.GUILD:
-      n = N.ZP.queryGuildUsers({
+      n = A.ZP.queryGuildUsers({
         ...o,
         guildId: t
       });
       break;
     case O.aib.CHANNEL:
-      n = N.ZP.queryChannelUsers({
+      n = A.ZP.queryChannelUsers({
         ...o,
         channelId: t
       });
       break;
     case O.aib.DMS:
-      n = N.ZP.queryUsers(e, i, !0, r, () => !0);
+      n = A.ZP.queryUsers(e, i, !0, r, () => !0);
       break;
     default:
       return []
@@ -197,7 +197,7 @@ function Y() {
 }
 
 function j() {
-  return !S.Z.hidePersonalInformation
+  return !f.Z.hidePersonalInformation
 }
 let W = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
 (r = i || (i = {})).FILTER = "FILTER", r.ANSWER = "ANSWER";
@@ -211,13 +211,13 @@ function z() {
       location: "SearchTokens"
     }, {
       autoTrackExposure: !1
-    }), t = e ? [R.Z.Messages.SEARCH_ANSWER_HAS_SNAPSHOT] : [], n = [R.Z.Messages.SEARCH_ANSWER_HAS_LINK, R.Z.Messages.SEARCH_ANSWER_HAS_EMBED, R.Z.Messages.SEARCH_ANSWER_HAS_POLL, R.Z.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, R.Z.Messages.SEARCH_ANSWER_HAS_VIDEO, R.Z.Messages.SEARCH_ANSWER_HAS_IMAGE, R.Z.Messages.SEARCH_ANSWER_HAS_SOUND, R.Z.Messages.SEARCH_ANSWER_HAS_STICKER, ...t];
+    }), t = e ? [p.Z.Messages.SEARCH_ANSWER_HAS_SNAPSHOT] : [], n = [p.Z.Messages.SEARCH_ANSWER_HAS_LINK, p.Z.Messages.SEARCH_ANSWER_HAS_EMBED, p.Z.Messages.SEARCH_ANSWER_HAS_POLL, p.Z.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, p.Z.Messages.SEARCH_ANSWER_HAS_VIDEO, p.Z.Messages.SEARCH_ANSWER_HAS_IMAGE, p.Z.Messages.SEARCH_ANSWER_HAS_SOUND, p.Z.Messages.SEARCH_ANSWER_HAS_STICKER, ...t];
     return {
       [O.dCx.FILTER_FROM]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_FROM),
+        regex: b(p.Z.Messages.SEARCH_FILTER_FROM),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_FROM),
-        plainText: R.Z.Messages.SEARCH_FILTER_FROM,
+        key: U(p.Z.Messages.SEARCH_FILTER_FROM),
+        plainText: p.Z.Messages.SEARCH_FILTER_FROM,
         validator: j,
         getAutocompletions: F
       },
@@ -230,10 +230,10 @@ function z() {
         queryKey: "author_id"
       },
       [O.dCx.FILTER_MENTIONS]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_MENTIONS),
+        regex: b(p.Z.Messages.SEARCH_FILTER_MENTIONS),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_MENTIONS),
-        plainText: R.Z.Messages.SEARCH_FILTER_MENTIONS,
+        key: U(p.Z.Messages.SEARCH_FILTER_MENTIONS),
+        plainText: p.Z.Messages.SEARCH_FILTER_MENTIONS,
         validator: j,
         getAutocompletions: F
       },
@@ -246,23 +246,23 @@ function z() {
         queryKey: "mentions"
       },
       [O.dCx.FILTER_HAS]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_HAS),
+        regex: b(p.Z.Messages.SEARCH_FILTER_HAS),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_HAS),
-        plainText: R.Z.Messages.SEARCH_FILTER_HAS,
+        key: U(p.Z.Messages.SEARCH_FILTER_HAS),
+        plainText: p.Z.Messages.SEARCH_FILTER_HAS,
         getAutocompletions: (e, t, i) => H(e, i, n)
       },
       [O.dCx.ANSWER_HAS]: {
-        regex: RegExp("(?:\\s*-?(".concat(n.map(e => A.Z.escape(e)).join("|"), "))"), "i"),
+        regex: RegExp("(?:\\s*-?(".concat(n.map(e => N.Z.escape(e)).join("|"), "))"), "i"),
         follows: [O.dCx.FILTER_HAS],
-        validator: x,
+        validator: B,
         componentType: "ANSWER",
         queryKey: "has"
       },
       [O.dCx.FILTER_FILE_TYPE]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_FILE_TYPE),
-        key: U(R.Z.Messages.SEARCH_FILTER_FILE_TYPE),
-        plainText: R.Z.Messages.SEARCH_FILTER_FILE_TYPE,
+        regex: b(p.Z.Messages.SEARCH_FILTER_FILE_TYPE),
+        key: U(p.Z.Messages.SEARCH_FILTER_FILE_TYPE),
+        plainText: p.Z.Messages.SEARCH_FILTER_FILE_TYPE,
         componentType: "FILTER"
       },
       [O.dCx.ANSWER_FILE_TYPE]: {
@@ -273,9 +273,9 @@ function z() {
         queryKey: "attachment_extensions"
       },
       [O.dCx.FILTER_FILE_NAME]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_FILE_NAME),
-        key: U(R.Z.Messages.SEARCH_FILTER_FILE_NAME),
-        plainText: R.Z.Messages.SEARCH_FILTER_FILE_NAME,
+        regex: b(p.Z.Messages.SEARCH_FILTER_FILE_NAME),
+        key: U(p.Z.Messages.SEARCH_FILTER_FILE_NAME),
+        plainText: p.Z.Messages.SEARCH_FILTER_FILE_NAME,
         componentType: "FILTER"
       },
       [O.dCx.ANSWER_FILE_NAME]: {
@@ -286,24 +286,24 @@ function z() {
         queryKey: "attachment_filename"
       },
       [O.dCx.FILTER_BEFORE]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_BEFORE),
+        regex: b(p.Z.Messages.SEARCH_FILTER_BEFORE),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_BEFORE),
-        plainText: R.Z.Messages.SEARCH_FILTER_BEFORE,
+        key: U(p.Z.Messages.SEARCH_FILTER_BEFORE),
+        plainText: p.Z.Messages.SEARCH_FILTER_BEFORE,
         getAutocompletions: (e, t, n) => Z(e, n, O.dCx.FILTER_BEFORE)
       },
       [O.dCx.FILTER_ON]: {
-        regex: b("(".concat(R.Z.Messages.SEARCH_FILTER_ON, "|").concat(R.Z.Messages.SEARCH_FILTER_DURING, ")")),
+        regex: b("(".concat(p.Z.Messages.SEARCH_FILTER_ON, "|").concat(p.Z.Messages.SEARCH_FILTER_DURING, ")")),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_DURING),
-        plainText: R.Z.Messages.SEARCH_FILTER_DURING,
+        key: U(p.Z.Messages.SEARCH_FILTER_DURING),
+        plainText: p.Z.Messages.SEARCH_FILTER_DURING,
         getAutocompletions: (e, t, n) => Z(e, n, O.dCx.FILTER_ON)
       },
       [O.dCx.FILTER_AFTER]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_AFTER),
+        regex: b(p.Z.Messages.SEARCH_FILTER_AFTER),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_AFTER),
-        plainText: R.Z.Messages.SEARCH_FILTER_AFTER,
+        key: U(p.Z.Messages.SEARCH_FILTER_AFTER),
+        plainText: p.Z.Messages.SEARCH_FILTER_AFTER,
         getAutocompletions: (e, t, n) => Z(e, n, O.dCx.FILTER_AFTER)
       },
       [O.dCx.ANSWER_BEFORE]: {
@@ -328,19 +328,19 @@ function z() {
         validator: e => w(e, "after")
       },
       [O.dCx.FILTER_IN]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_IN),
+        regex: b(p.Z.Messages.SEARCH_FILTER_IN),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_IN),
-        plainText: R.Z.Messages.SEARCH_FILTER_IN,
+        key: U(p.Z.Messages.SEARCH_FILTER_IN),
+        plainText: p.Z.Messages.SEARCH_FILTER_IN,
         validator: Y,
         getAutocompletions(e, t, n) {
           "#" === e[0] && (e = e.substring(1));
-          let i = N.ZP.queryChannels({
+          let i = A.ZP.queryChannels({
             query: e,
             type: d.sH,
             guildId: t,
             limit: 1 / 0
-          }).concat(N.ZP.queryChannels({
+          }).concat(A.ZP.queryChannels({
             query: e,
             type: d.Zb,
             guildId: t,
@@ -371,14 +371,14 @@ function z() {
         mutable: !0,
         follows: [O.dCx.FILTER_IN],
         componentType: "ANSWER",
-        validator: B,
+        validator: x,
         queryKey: "channel_id"
       },
       [O.dCx.FILTER_PINNED]: {
-        regex: b(R.Z.Messages.SEARCH_FILTER_PINNED),
+        regex: b(p.Z.Messages.SEARCH_FILTER_PINNED),
         componentType: "FILTER",
-        key: U(R.Z.Messages.SEARCH_FILTER_PINNED),
-        plainText: R.Z.Messages.SEARCH_FILTER_PINNED,
+        key: U(p.Z.Messages.SEARCH_FILTER_PINNED),
+        plainText: p.Z.Messages.SEARCH_FILTER_PINNED,
         getAutocompletions: () => [{
           text: "true"
         }, {

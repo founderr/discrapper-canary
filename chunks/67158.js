@@ -1,30 +1,30 @@
 "use strict";
 n(47120);
-var s = n(735250),
-  l = n(470079),
-  a = n(120356),
-  r = n.n(a),
+var a = n(735250),
+  s = n(470079),
+  r = n(120356),
+  l = n.n(r),
   i = n(143927),
   o = n(28546),
   c = n(401227),
   d = n(957825),
   u = n(573809);
-t.Z = l.memo(l.forwardRef(function(e, t) {
+t.Z = s.memo(s.forwardRef(function(e, t) {
   let {
     disabled: n,
-    type: a,
+    type: r,
     className: m,
     onClick: h
-  } = e, [g, x] = (0, o.Iu)(e => [e.activeView, e.activeViewType], i.Z), _ = l.useCallback(() => {
-    (0, o.j9)(a), null == h || h()
-  }, [a, h]);
-  return n ? null : (0, s.jsx)("div", {
-    className: r()(d.CT, u.buttonContainer),
+  } = e, [_, g] = (0, o.Iu)(e => [e.activeView, e.activeViewType], i.Z), x = s.useCallback(() => {
+    (0, o.j9)(r), null == h || h()
+  }, [r, h]);
+  return n ? null : (0, a.jsx)("div", {
+    className: l()(d.CT, u.buttonContainer),
     ref: t,
-    children: (0, s.jsx)(c.Z, {
-      className: r()(u.emojiButton, m),
-      onClick: _,
-      active: (g === d.X1.GIF || g === d.X1.EMOJI || g === d.X1.STICKER) && x === a,
+    children: (0, a.jsx)(c.Z, {
+      className: l()(u.emojiButton, m),
+      onClick: x,
+      active: (_ === d.X1.GIF || _ === d.X1.EMOJI || _ === d.X1.STICKER) && g === r,
       tabIndex: 0,
       focusProps: {
         offset: {

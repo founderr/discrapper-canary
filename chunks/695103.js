@@ -22,21 +22,21 @@ let I = {
   },
   T = I,
   h = new Set,
-  S = !1;
+  f = !1;
 
-function f() {
+function S() {
   s = null
 }
 
-function N() {
-  i = null, r = null, h = new Set, T.applicationId = null, T.originURL = null, f()
+function A() {
+  i = null, r = null, h = new Set, T.applicationId = null, T.originURL = null, S()
 }
-class A extends(o = a.ZP.PersistedStore) {
+class N extends(o = a.ZP.PersistedStore) {
   initialize(e) {
     i = (T = {
       ...null != e ? e : I
     }).applicationId, r = T.originURL, this.waitFor(c.Z, u.Z), this.syncWith([c.Z, u.Z], () => !0), d.Z.whenInitialized(() => {
-      S = !0
+      f = !0
     })
   }
   inTestModeForApplication(e) {
@@ -71,11 +71,11 @@ class A extends(o = a.ZP.PersistedStore) {
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
-      if (S) return setImmediate(e), !1
+      if (f) return setImmediate(e), !1
     })
   }
 }
-E(A, "displayName", "TestModeStore"), E(A, "persistKey", "TestModeStore"), t.Z = new A(l.Z, {
+E(N, "displayName", "TestModeStore"), E(N, "persistKey", "TestModeStore"), t.Z = new N(l.Z, {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function(e) {
     let {
       applicationId: t
@@ -102,7 +102,7 @@ E(A, "displayName", "TestModeStore"), E(A, "persistKey", "TestModeStore"), t.Z =
     } = e;
     i = t
   },
-  DEVELOPER_TEST_MODE_RESET_ERROR: f,
-  LOGOUT: N,
-  DEVELOPER_TEST_MODE_RESET: N
+  DEVELOPER_TEST_MODE_RESET_ERROR: S,
+  LOGOUT: A,
+  DEVELOPER_TEST_MODE_RESET: A
 })

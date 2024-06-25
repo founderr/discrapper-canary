@@ -1,80 +1,80 @@
-t.d(l, {
+l.d(t, {
   Z: function() {
     return x
   }
 });
-var n = t(735250),
-  s = t(470079),
-  a = t(120356),
-  o = t.n(a),
-  i = t(913527),
-  r = t.n(i),
-  C = t(399606),
-  c = t(481060),
-  d = t(740900),
-  u = t(241559),
-  E = t(893966),
-  m = t(527379),
-  _ = t(689938),
-  M = t(405811),
-  h = t(817758);
+var n = l(735250),
+  a = l(470079),
+  o = l(120356),
+  s = l.n(o),
+  i = l(913527),
+  r = l.n(i),
+  C = l(399606),
+  c = l(481060),
+  d = l(740900),
+  u = l(241559),
+  m = l(893966),
+  _ = l(527379),
+  E = l(689938),
+  h = l(405811),
+  M = l(817758);
 
 function x(e) {
   let {
-    guild: l,
-    onSubmit: a
-  } = e, i = (0, C.e7)([E.Z], () => E.Z.getMembersCountByGuildId(l.id, d.R_.NEW_GUILD_MEMBER), [l.id]), x = (0, C.e7)([E.Z], () => {
-    let e = E.Z.getNewMemberTimestamp(l.id);
+    guild: t,
+    onSubmit: o
+  } = e, i = (0, C.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]), x = (0, C.e7)([m.Z], () => {
+    let e = m.Z.getNewMemberTimestamp(t.id);
     return r()(e).format("h:mm A")
-  }, [l.id]), T = (0, C.e7)([E.Z], () => E.Z.hasDefaultSearchStateByGuildId(l.id), [l.id]), L = s.useCallback(() => {
-    (0, m.YO)(l.id), null == a || a()
-  }, [l.id, a]), H = s.useCallback(() => {
-    T ? L() : (0, c.openModalLazy)(async () => {
+  }, [t.id]), b = (0, C.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]), T = a.useCallback(() => {
+    (0, _.YO)(t.id), null == o || o()
+  }, [t.id, o]), L = a.useCallback(() => {
+    b ? T() : (0, c.openModalLazy)(async () => {
       let {
         default: e
-      } = await t.e("24478").then(t.bind(t, 319481));
-      return l => (0, n.jsx)(e, {
-        ...l,
-        onConfirm: L
+      } = await l.e("24478").then(l.bind(l, 319481));
+      return t => (0, n.jsx)(e, {
+        ...t,
+        onConfirm: T
       })
     })
-  }, [L, T]), g = new Intl.NumberFormat(_.Z.getLocale()).format(i), A = (0, u.nX)(l.id), I = (0, u.xC)(l.id), N = s.useMemo(() => 1 + (A ? 1 : 0) + (I ? 1 : 0), [A, I]);
+  }, [T, b]), g = new Intl.NumberFormat(E.Z.getLocale()).format(i), I = (0, u.nX)(t.id), p = (0, u.xC)(t.id), H = a.useMemo(() => 1 + (I ? 1 : 0) + (p ? 1 : 0), [I, p]);
   return 0 === i ? null : (0, n.jsxs)("tr", {
-    className: o()(h.newMembersNotice),
-    onClick: H,
+    className: s()(M.newMembersNotice),
+    onClick: L,
     children: [(0, n.jsx)("td", {
       colSpan: 3,
       children: (0, n.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "always-white",
-        children: _.Z.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
+        children: E.Z.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
           count: g,
           date: x
         })
       })
     }), (0, n.jsx)("td", {
-      colSpan: N
+      colSpan: H
     }), (0, n.jsx)("td", {
       colSpan: 2,
       children: (0, n.jsx)("div", {
-        className: o()(M.actionCell),
+        className: s()(h.actionCell),
         children: (0, n.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
           color: c.Button.Colors.TRANSPARENT,
           look: c.Button.Looks.LINK,
-          className: o()(h.memberNoticeActionButton),
+          className: s()(M.memberNoticeActionButton),
           children: (0, n.jsxs)(c.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            className: o()(h.memberNoticeAction),
+            className: s()(M.memberNoticeAction),
             children: [(0, n.jsx)("div", {
-              children: _.Z.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
+              children: E.Z.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
             }), (0, n.jsx)(c.UserIcon, {
               size: "custom",
               color: "currentColor",
               width: 20,
               height: 20,
-              className: o()(h.memberNoticeActionIcon)
+              className: s()(M.memberNoticeActionIcon)
             })]
           })
         })

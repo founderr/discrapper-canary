@@ -1,5 +1,5 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Io: function() {
     return c
   },
@@ -13,117 +13,117 @@ t.d(s, {
     return o
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(983135),
-  a = t(689938),
-  r = t(251149);
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(983135),
+  r = n(689938),
+  l = n(251149);
 
 function o() {
-  return (0, n.jsxs)("div", {
-    className: r.container,
-    children: [(0, n.jsx)(i.Text, {
+  return (0, s.jsxs)("div", {
+    className: l.container,
+    children: [(0, s.jsx)(a.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: r.stepHeader,
-      children: a.Z.Messages.STEP_NUMBER.format({
+      className: l.stepHeader,
+      children: r.Z.Messages.STEP_NUMBER.format({
         number: 1
       })
-    }), (0, n.jsx)(i.Heading, {
+    }), (0, s.jsx)(a.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      className: r.header,
-      children: a.Z.Messages.GUILD_ONBOARDING_UPSELL_SAFETY_TITLE
-    }), (0, n.jsx)(i.Text, {
+      className: l.header,
+      children: r.Z.Messages.GUILD_ONBOARDING_UPSELL_SAFETY_TITLE
+    }), (0, s.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: a.Z.Messages.GUILD_ONBOARDING_UPSELL_SAFETY_TITLE_TOOLTIP
-    }), (0, n.jsx)(i.Button, {
-      className: r.button,
-      onClick: () => (0, l.Nb)("Safety Check"),
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+      children: r.Z.Messages.GUILD_ONBOARDING_UPSELL_SAFETY_TITLE_TOOLTIP
+    }), (0, s.jsx)(a.Button, {
+      className: l.button,
+      onClick: () => (0, i.Nb)("Safety Check"),
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
     })]
   })
 }
 
 function c() {
-  return (0, n.jsxs)("div", {
-    className: r.container,
-    children: [(0, n.jsx)(i.Text, {
+  return (0, s.jsxs)("div", {
+    className: l.container,
+    children: [(0, s.jsx)(a.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: r.stepHeader,
-      children: a.Z.Messages.STEP_NUMBER.format({
+      className: l.stepHeader,
+      children: r.Z.Messages.STEP_NUMBER.format({
         number: 2
       })
-    }), (0, n.jsx)(i.Heading, {
+    }), (0, s.jsx)(a.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      className: r.header,
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_DEFAULT_CHANNELS_TITLE
-    }), (0, n.jsx)(i.Text, {
+      className: l.header,
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_DEFAULT_CHANNELS_TITLE
+    }), (0, s.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_DEFAULT_CHANNELS_SUBTITLE
-    }), (0, n.jsx)(i.Button, {
-      className: r.button,
-      onClick: () => (0, l.Nb)("Default Channels"),
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_DEFAULT_CHANNELS_SUBTITLE
+    }), (0, s.jsx)(a.Button, {
+      className: l.button,
+      onClick: () => (0, i.Nb)("Default Channels"),
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
     })]
   })
 }
 
 function d() {
-  return (0, n.jsxs)("div", {
-    className: r.container,
-    children: [(0, n.jsx)(i.Text, {
+  return (0, s.jsxs)("div", {
+    className: l.container,
+    children: [(0, s.jsx)(a.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: r.stepHeader,
-      children: a.Z.Messages.STEP_NUMBER.format({
+      className: l.stepHeader,
+      children: r.Z.Messages.STEP_NUMBER.format({
         number: 3
       })
-    }), (0, n.jsx)(i.Heading, {
+    }), (0, s.jsx)(a.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      className: r.header,
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_CUSTOMIZATION_QUESTIONS_TITLE
-    }), (0, n.jsx)(i.Text, {
+      className: l.header,
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_CUSTOMIZATION_QUESTIONS_TITLE
+    }), (0, s.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_CUSTOMIZATION_QUESTIONS_SUBTITLE
-    }), (0, n.jsx)(i.Button, {
-      className: r.button,
-      onClick: () => (0, l.Nb)("Customization Questions"),
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_CUSTOMIZATION_QUESTIONS_SUBTITLE
+    }), (0, s.jsx)(a.Button, {
+      className: l.button,
+      onClick: () => (0, i.Nb)("Customization Questions"),
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
     })]
   })
 }
 
 function u() {
-  return (0, n.jsxs)("div", {
-    className: r.container,
-    children: [(0, n.jsx)(i.Text, {
+  return (0, s.jsxs)("div", {
+    className: l.container,
+    children: [(0, s.jsx)(a.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: r.stepHeader,
-      children: a.Z.Messages.STEP_NUMBER.format({
+      className: l.stepHeader,
+      children: r.Z.Messages.STEP_NUMBER.format({
         number: 4
       })
-    }), (0, n.jsx)(i.Heading, {
+    }), (0, s.jsx)(a.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      className: r.header,
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_HOME_TITLE
-    }), (0, n.jsx)(i.Text, {
+      className: l.header,
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_HOME_TITLE
+    }), (0, s.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_HOME_SUBTITLE
-    }), (0, n.jsx)(i.Button, {
-      className: r.button,
-      onClick: () => (0, l.Nb)("Home Settings"),
-      children: a.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_HOME_SUBTITLE
+    }), (0, s.jsx)(a.Button, {
+      className: l.button,
+      onClick: () => (0, i.Nb)("Home Settings"),
+      children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
     })]
   })
 }

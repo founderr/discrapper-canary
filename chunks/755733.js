@@ -1,6 +1,6 @@
-var n, i;
+var n, a;
 t.d(s, {
   x: function() {
     return n
   }
-}), (i = n || (n = {})).INIT = "INIT", i.EDIT = "EDIT", i.REGISTER = "REGISTER", i.NAME = "NAME", i.SUCCESS = "SUCCESS"
+}), (a = n || (n = {})).INIT = "INIT", a.EDIT = "EDIT", a.REGISTER = "REGISTER", a.NAME = "NAME", a.SUCCESS = "SUCCESS"

@@ -1,45 +1,45 @@
-let s, i, l;
+let i, s, a;
 n(47120);
-var a, r, o, c, u = n(442837),
-  d = n(570140);
+var r, l, o, c, d = n(442837),
+  u = n(570140);
 
-function E() {
-  i = {}, s = {}, l = new Set
+function _() {
+  s = {}, i = {}, a = new Set
 }
-E();
-class h extends(a = u.ZP.Store) {
+_();
+class E extends(r = d.ZP.Store) {
   getStatisticsForApplication(e) {
-    return s[e]
+    return i[e]
   }
   shouldFetchStatisticsForApplication(e) {
-    let t = i[e];
-    return !l.has(e) && (null == t || Date.now() - t > 36e5)
+    let t = s[e];
+    return !a.has(e) && (null == t || Date.now() - t > 36e5)
   }
 }
-c = "ApplicationStatisticsStore", (o = "displayName") in(r = h) ? Object.defineProperty(r, o, {
+c = "ApplicationStatisticsStore", (o = "displayName") in(l = E) ? Object.defineProperty(l, o, {
   value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[o] = c, t.Z = new h(d.Z, {
+}) : l[o] = c, t.Z = new E(u.Z, {
   APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
     let {
       applicationId: t
     } = e;
-    l.add(t)
+    a.add(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function(e) {
     let {
       applicationId: t
     } = e;
-    l.delete(t)
+    a.delete(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
     let {
       statistics: t,
       applicationId: n
     } = e;
-    i[n] = Date.now(), l.delete(n), s[n] = t
+    s[n] = Date.now(), a.delete(n), i[n] = t
   },
-  LOGOUT: E
+  LOGOUT: _
 })

@@ -1,55 +1,55 @@
-var n = a(735250);
-a(470079);
-var t = a(120356),
-  l = a.n(t),
-  r = a(91192),
-  i = a(442837),
-  o = a(481060),
-  c = a(209613),
-  I = a(430824),
-  d = a(855981),
-  u = a(55543),
-  E = a(693546),
-  T = a(826581),
-  _ = a(246364),
-  N = a(328977),
-  R = a(571728),
-  M = a(762660),
-  C = a(689938),
-  m = a(425415);
+var a = n(735250);
+n(470079);
+var t = n(120356),
+  r = n.n(t),
+  l = n(91192),
+  i = n(442837),
+  o = n(481060),
+  c = n(209613),
+  d = n(430824),
+  u = n(855981),
+  I = n(55543),
+  E = n(693546),
+  _ = n(826581),
+  T = n(246364),
+  N = n(328977),
+  C = n(571728),
+  R = n(762660),
+  M = n(689938),
+  m = n(425415);
 let A = () => null;
 
 function x(e) {
   let {
     status: s
-  } = e, a = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
+  } = e, n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
   switch (s) {
-    case _.wB.REJECTED:
-      a = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE, t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY;
+    case T.wB.REJECTED:
+      n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE, t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY;
       break;
-    case _.wB.APPROVED:
-      a = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE, t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY;
+    case T.wB.APPROVED:
+      n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE, t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY;
       break;
     default:
-      a = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY
+      n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE, t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY
   }
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: m.emptyContainer,
-    children: [(0, n.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: m.emptyIcon,
-      children: [(0, n.jsx)(u.Z, {
+      children: [(0, a.jsx)(I.Z, {
         className: m.star
-      }), (0, n.jsx)(o.CheckmarkLargeIcon, {
+      }), (0, a.jsx)(o.CheckmarkLargeIcon, {
         size: "md",
         color: "currentColor",
         className: m.checkmark
-      }), (0, n.jsx)(d.Z, {
+      }), (0, a.jsx)(u.Z, {
         className: m.plus
       })]
-    }), (0, n.jsx)(o.Heading, {
+    }), (0, a.jsx)(o.Heading, {
       variant: "heading-xl/semibold",
-      children: a
-    }), (0, n.jsx)(o.Text, {
+      children: n
+    }), (0, a.jsx)(o.Text, {
       color: "header-secondary",
       className: m.emptyBody,
       variant: "text-sm/normal",
@@ -60,87 +60,87 @@ function x(e) {
 s.Z = function(e) {
   var s;
   let {
-    applicationStatus: a,
+    applicationStatus: n,
     guildJoinRequests: t,
-    guildId: d,
-    onScroll: u,
+    guildId: u,
+    onScroll: I,
     listRef: h,
     atMaxMemberCapacity: S
-  } = e, P = (0, i.e7)([I.Z], () => I.Z.getGuild(d), [d]), g = (0, i.e7)([T.Z], () => T.Z.isFetching()), j = g ? [t.length + 25] : [t.length], Z = (0, N.L)({
-    guildId: d
-  }), v = null !== (s = (0, R.A)({
-    guildId: d
-  })) && void 0 !== s ? s : 0, f = (0, c.Z)("guild-join-requests"), O = e => {
+  } = e, P = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]), g = (0, i.e7)([_.Z], () => _.Z.isFetching()), b = g ? [t.length + 25] : [t.length], j = (0, N.L)({
+    guildId: u
+  }), v = null !== (s = (0, C.A)({
+    guildId: u
+  })) && void 0 !== s ? s : 0, p = (0, c.Z)("guild-join-requests"), f = e => {
     let {
       row: s
-    } = e, r = t[s];
-    return null == r ? (0, n.jsx)(M.h, {}, s) : (0, n.jsx)(M.C, {
-      className: l()({
-        [m.selected]: Z === r,
-        [m.siblingSelected]: Z === t[s - 1]
+    } = e, l = t[s];
+    return null == l ? (0, a.jsx)(R.h, {}, s) : (0, a.jsx)(R.C, {
+      className: r()({
+        [m.selected]: j === l,
+        [m.siblingSelected]: j === t[s - 1]
       }),
       guild: P,
-      guildJoinRequest: r,
-      onClick: () => E.Z.setSelectedGuildJoinRequest(d, r),
-      applicationStatus: a,
+      guildJoinRequest: l,
+      onClick: () => E.Z.setSelectedGuildJoinRequest(u, l),
+      applicationStatus: n,
       atMaxMemberCapacity: S
-    }, "".concat(r.userId, "-").concat(r.applicationStatus, "-").concat(s))
+    }, "".concat(l.userId, "-").concat(l.applicationStatus, "-").concat(s))
   };
-  return g || 0 !== t.length ? (0, n.jsxs)(n.Fragment, {
-    children: [0 !== v && a === _.wB.SUBMITTED && (0, n.jsx)(o.Text, {
+  return g || 0 !== t.length ? (0, a.jsxs)(a.Fragment, {
+    children: [0 !== v && n === T.wB.SUBMITTED && (0, a.jsx)(o.Text, {
       className: m.title,
       variant: "text-xs/semibold",
       color: "header-secondary",
       children: (function(e, s) {
-        let a = s.toLocaleString();
+        let n = s.toLocaleString();
         switch (e) {
-          case _.wB.SUBMITTED:
-            return C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({
-              count: a
+          case T.wB.SUBMITTED:
+            return M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({
+              count: n
             });
-          case _.wB.REJECTED:
-            return C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({
-              count: a
+          case T.wB.REJECTED:
+            return M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({
+              count: n
             });
-          case _.wB.APPROVED:
-            return C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({
-              count: a
+          case T.wB.APPROVED:
+            return M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({
+              count: n
             });
           default:
             return ""
         }
-      })(a, v).toUpperCase()
-    }), (0, n.jsx)(r.bG, {
-      navigator: f,
-      children: (0, n.jsx)(r.SJ, {
+      })(n, v).toUpperCase()
+    }), (0, a.jsx)(l.bG, {
+      navigator: p,
+      children: (0, a.jsx)(l.SJ, {
         children: e => {
           let {
             ref: s,
-            role: a,
+            role: n,
             ...t
           } = e;
-          return (0, n.jsx)(o.List, {
-            innerRole: a,
-            innerAriaLabel: C.Z.Messages.MEMBERS,
+          return (0, a.jsx)(o.List, {
+            innerRole: n,
+            innerAriaLabel: M.Z.Messages.MEMBERS,
             ref: e => {
-              var a;
-              h.current = e, s.current = null !== (a = null == e ? void 0 : e.getScrollerNode()) && void 0 !== a ? a : null
+              var n;
+              h.current = e, s.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             paddingTop: 0,
             paddingBottom: 16,
             sectionHeight: 0,
             rowHeight: 64,
             renderSection: A,
-            renderRow: O,
-            sections: j,
-            onScroll: u,
+            renderRow: f,
+            sections: b,
+            onScroll: I,
             fade: !0,
             ...t
           }, "guild-application-review")
         }
       })
     })]
-  }) : (0, n.jsx)(x, {
-    status: a
+  }) : (0, a.jsx)(x, {
+    status: n
   })
 }

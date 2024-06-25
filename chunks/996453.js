@@ -1,123 +1,123 @@
-t.d(s, {
+s.d(t, {
   G: function() {
-    return I
+    return L
   },
   Z: function() {
-    return T
+    return f
   }
-}), t(47120);
-var a = t(735250),
-  l = t(470079),
-  n = t(120356),
-  i = t.n(n),
-  o = t(481060),
-  r = t(749210),
-  c = t(820160),
-  d = t(594174),
-  u = t(285952),
-  C = t(153124),
-  m = t(892880),
-  E = t(458879),
-  _ = t(981631),
-  x = t(689938),
-  L = t(807299);
+}), s(47120);
+var a = s(735250),
+  n = s(470079),
+  l = s(120356),
+  i = s.n(l),
+  o = s(481060),
+  r = s(749210),
+  c = s(820160),
+  d = s(594174),
+  u = s(285952),
+  m = s(153124),
+  C = s(892880),
+  _ = s(458879),
+  x = s(981631),
+  E = s(689938),
+  I = s(807299);
 
-function I(e) {
-  var s;
+function L(e) {
+  var t;
   let {
-    guildTemplate: t,
-    onClose: n,
-    onBack: I,
-    onHubGuildInfoSet: T,
+    guildTemplate: s,
+    onClose: l,
+    onBack: L,
+    onHubGuildInfoSet: f,
     onGuildCreated: h,
-    isSlideReady: g,
-    hasFooter: N = !0,
-    isCommunity: M = !1
-  } = e, [Z, j] = l.useState(m.Z.getGuildNameSuggestion()), [S, U] = l.useState(null), [B, p] = l.useState(!1), [f, A] = l.useState(null), D = !!(null === (s = d.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()), [R, H] = l.useState(D), O = (0, C.Dt)(), v = l.useRef(null);
-  l.useEffect(() => {
+    isSlideReady: T,
+    hasFooter: g = !0,
+    isCommunity: N = !1
+  } = e, [M, B] = n.useState(C.Z.getGuildNameSuggestion()), [p, Z] = n.useState(null), [j, S] = n.useState(!1), [b, U] = n.useState(null), R = !!(null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, m.Dt)(), O = n.useRef(null);
+  n.useEffect(() => {
     var e;
-    g && (null === (e = v.current) || void 0 === e || e.focus())
-  }, [g]);
-  let G = l.useCallback(async e => {
-      if (e.preventDefault(), null != t) {
-        p(!0), A(null);
+    T && (null === (e = O.current) || void 0 === e || e.focus())
+  }, [T]);
+  let v = n.useCallback(async e => {
+      if (e.preventDefault(), null != s) {
+        S(!0), U(null);
         try {
-          if (null != T) T(Z, S);
+          if (null != f) f(M, p);
           else {
-            let e = await E.Z.createGuildFromTemplate(Z, S, t, M, R);
+            let e = await _.Z.createGuildFromTemplate(M, p, s, N, A);
             r.Z.transitionToGuildSync(e.id), null == h || h(e.id)
           }
         } catch (e) {
-          A(e)
+          U(e)
         }
-        p(!1)
+        S(!1)
       }
-    }, [t, T, Z, S, M, R, h]),
-    b = (0, a.jsxs)(a.Fragment, {
+    }, [s, f, M, p, N, A, h]),
+    G = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Button, {
         color: o.Button.Colors.BRAND,
-        onClick: G,
-        disabled: 0 === Z.length,
-        submitting: B,
-        children: null != T ? x.Z.Messages.NEXT : x.Z.Messages.CREATE
+        onClick: v,
+        disabled: 0 === M.length,
+        submitting: j,
+        children: null != f ? E.Z.Messages.NEXT : E.Z.Messages.CREATE
       }), (0, a.jsx)(o.Button, {
-        className: L.backButton,
+        className: I.backButton,
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.MIN,
-        onClick: I,
-        children: x.Z.Messages.BACK
+        onClick: L,
+        children: E.Z.Messages.BACK
       })]
     });
   return {
     content: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(o.ModalHeader, {
         direction: u.Z.Direction.VERTICAL,
-        className: L.header,
+        className: I.header,
         separator: !1,
         children: [(0, a.jsx)(o.Heading, {
-          className: i()(L.title),
+          className: i()(I.title),
           variant: "heading-xl/semibold",
-          children: x.Z.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
+          children: E.Z.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
         }), (0, a.jsx)(o.Text, {
-          className: L.subtitle,
+          className: I.subtitle,
           color: "header-secondary",
           variant: "text-md/normal",
-          children: x.Z.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
-        }), null != n && (0, a.jsx)(o.ModalCloseButton, {
-          className: L.closeButton,
-          onClick: n
+          children: E.Z.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
+        }), null != l && (0, a.jsx)(o.ModalCloseButton, {
+          className: I.closeButton,
+          onClick: l
         })]
       }), (0, a.jsxs)(o.ModalContent, {
-        className: L.createGuild,
+        className: I.createGuild,
         children: [(0, a.jsx)("div", {
-          className: L.uploadIcon,
+          className: I.uploadIcon,
           children: (0, a.jsx)(c.Z, {
-            icon: S,
-            onChange: U
+            icon: p,
+            onChange: Z
           })
         }), (0, a.jsxs)("form", {
-          onSubmit: G,
+          onSubmit: v,
           children: [(0, a.jsxs)(o.FormItem, {
-            className: L.nameInput,
-            error: null == f ? void 0 : f.getFirstFieldErrorMessage("name"),
+            className: I.nameInput,
+            error: null == b ? void 0 : b.getFirstFieldErrorMessage("name"),
             children: [(0, a.jsx)(o.FormTitle, {
               tag: "label",
-              htmlFor: O,
-              children: x.Z.Messages.FORM_LABEL_SERVER_NAME
+              htmlFor: H,
+              children: E.Z.Messages.FORM_LABEL_SERVER_NAME
             }), (0, a.jsx)(o.TextInput, {
               type: "text",
-              value: Z,
+              value: M,
               maxLength: 100,
-              onChange: j,
-              inputRef: v,
-              id: O
+              onChange: B,
+              inputRef: O,
+              id: H
             })]
-          }), D && (0, a.jsx)(o.FormSwitch, {
+          }), R && (0, a.jsx)(o.FormSwitch, {
             hideBorder: !0,
-            value: R,
-            onChange: e => H(e),
-            note: x.Z.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
-            className: L.formItemSpaced,
+            value: A,
+            onChange: e => D(e),
+            note: E.Z.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
+            className: I.formItemSpaced,
             children: (0, a.jsx)(o.FormTitle, {
               tag: "label",
               children: "Staff Only"
@@ -125,28 +125,28 @@ function I(e) {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            className: L.guidelines,
-            children: x.Z.Messages.CREATE_SERVER_GUIDELINES.format({
-              guidelinesURL: _.EYA.GUIDELINES
+            className: I.guidelines,
+            children: E.Z.Messages.CREATE_SERVER_GUIDELINES.format({
+              guidelinesURL: x.EYA.GUIDELINES
             })
           })]
-        }), null == f || f.hasFieldErrors() ? null : (0, a.jsx)(o.Text, {
+        }), null == b || b.hasFieldErrors() ? null : (0, a.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "text-danger",
-          children: f.message
+          children: b.message
         })]
-      }), N && (0, a.jsx)(o.ModalFooter, {
+      }), g && (0, a.jsx)(o.ModalFooter, {
         justify: u.Z.Justify.BETWEEN,
-        children: b
+        children: G
       })]
     }),
-    footer: b
+    footer: G
   }
 }
 
-function T(e) {
+function f(e) {
   let {
-    content: s
-  } = I(e);
-  return s
+    content: t
+  } = L(e);
+  return t
 }

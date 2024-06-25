@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return x
+    return m
   }
 });
 var l = t(735250),
@@ -14,7 +14,7 @@ var l = t(735250),
   d = t(981631),
   p = t(384690);
 
-function m(e) {
+function x(e) {
   let {
     windowKey: n,
     channel: t
@@ -34,10 +34,10 @@ function m(e) {
   })
 }
 
-function x(e, n) {
+function m(e, n) {
   let t = (0, u.P)(n),
     i = r.useCallback(() => {
-      o.bA("".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id), n => (0, l.jsx)(m, {
+      o.bA("".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id), n => (0, l.jsx)(x, {
         windowKey: n,
         channel: e
       }), {

@@ -1,17 +1,17 @@
-t.d(r, {
+n.d(t, {
   Z: function() {
-    return n
+    return o
   }
 });
-var a = t(272423);
+var i = n(272423);
 
-function n(e) {
-  let r = (0, a.kf)(e);
-  if (null != r) return [r.params.guildId, r.params.channelId];
-  let t = (0, a.B3)(e);
-  if (null != t) {
-    var n, i;
-    return [null === (n = t.params) || void 0 === n ? void 0 : n.guildId, null === (i = t.params) || void 0 === i ? void 0 : i.channelId]
+function o(e) {
+  let t = (0, i.kf)(e);
+  if (null != t) return [t.params.guildId, t.params.channelId];
+  let n = (0, i.B3)(e);
+  if (null != n) {
+    var o, r;
+    return [null === (o = n.params) || void 0 === o ? void 0 : o.guildId, null === (r = n.params) || void 0 === r ? void 0 : r.channelId]
   }
   return [void 0, void 0]
 }

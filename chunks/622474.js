@@ -1,173 +1,173 @@
 t(47120), t(653041);
 var n = t(735250),
-  i = t(470079),
-  a = t(120356),
-  l = t.n(a),
-  r = t(913527),
-  o = t.n(r),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(913527),
+  l = t.n(o),
   c = t(374470),
-  E = t(399606),
-  d = t(481060),
-  _ = t(570140),
-  T = t(37234),
-  S = t(960359),
-  u = t(853197),
+  d = t(399606),
+  _ = t(481060),
+  E = t(570140),
+  u = t(37234),
+  T = t(960359),
+  S = t(853197),
   I = t(430492),
   N = t(688465),
-  A = t(594174),
-  C = t(55935),
-  O = t(702512),
-  m = t(689938),
-  h = t(612011);
-let g = "YYYY-MM-DD HH:mm";
+  C = t(594174),
+  A = t(55935),
+  m = t(702512),
+  O = t(689938),
+  g = t(612011);
+let h = "YYYY-MM-DD HH:mm";
 
 function R(e) {
   let {
     drop: s,
     enrolled: t,
-    completed: a
-  } = e, l = i.useRef(null), r = e => {
+    completed: i
+  } = e, r = a.useRef(null), o = e => {
     let s = e.target;
-    (0, c.k)(s, HTMLAnchorElement) && (0, T.xf)()
+    (0, c.k)(s, HTMLAnchorElement) && (0, u.xf)()
   };
-  (0, i.useEffect)(() => {
-    let e = l.current;
-    return null != e && e.addEventListener("click", r), () => {
-      null != e && e.removeEventListener("click", r)
+  (0, a.useEffect)(() => {
+    let e = r.current;
+    return null != e && e.addEventListener("click", o), () => {
+      null != e && e.removeEventListener("click", o)
     }
   }, []);
   let {
-    title: E,
+    title: d,
     endDate: I,
     dropsQuestId: N,
-    assets: A,
-    articleUrl: C
-  } = s, O = (0, u.EW)(N);
-  if (null == O) return null;
-  let g = () => {
-    (0, S.RJ)(N).then(() => {
-      _.Z.wait(async () => {
-        await (0, S.R5)()
+    assets: C,
+    articleUrl: A
+  } = s, m = (0, S.EW)(N);
+  if (null == m) return null;
+  let h = () => {
+    (0, T.RJ)(N).then(() => {
+      E.Z.wait(async () => {
+        await (0, T.R5)()
       })
     })
   };
   return (0, n.jsxs)("div", {
-    className: h.dropContainer,
+    className: g.dropContainer,
     children: [(0, n.jsx)("div", {
-      className: h.dropCard,
+      className: g.dropCard,
       children: (0, n.jsxs)("div", {
-        className: h.mainPromotionCardContainer,
+        className: g.mainPromotionCardContainer,
         children: [(0, n.jsxs)("div", {
-          className: h.promotionCardLeftContainer,
+          className: g.promotionCardLeftContainer,
           children: [(0, n.jsx)("div", {
-            className: h.promotionIcon,
+            className: g.promotionIcon,
             children: (0, n.jsx)("img", {
               alt: "",
-              src: A.iconSrc,
-              className: h.promotionIconImage
+              src: C.iconSrc,
+              className: g.promotionIconImage
             })
           }), (0, n.jsxs)("div", {
-            children: [(0, n.jsx)(d.Heading, {
+            children: [(0, n.jsx)(_.Heading, {
               variant: "heading-md/semibold",
-              children: E
-            }), (0, n.jsx)(d.Text, {
+              children: d
+            }), (0, n.jsx)(_.Text, {
               variant: "text-xs/medium",
               color: "text-normal",
-              className: h.availableUntil,
-              children: m.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-                endDate: o()(I, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
+              className: g.availableUntil,
+              children: O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+                endDate: l()(I, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
-        }), (0, n.jsx)(d.Tooltip, {
-          text: t && !a ? m.Z.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
-          tooltipContentClassName: h.redeemTooltipContent,
-          children: e => (0, n.jsx)(d.Button, {
-            className: h.promotionCardButton,
-            color: d.Button.Colors.BRAND,
-            size: d.Button.Sizes.SMALL,
-            onClick: g,
-            disabled: t && !a,
+        }), (0, n.jsx)(_.Tooltip, {
+          text: t && !i ? O.Z.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
+          tooltipContentClassName: g.redeemTooltipContent,
+          children: e => (0, n.jsx)(_.Button, {
+            className: g.promotionCardButton,
+            color: _.Button.Colors.BRAND,
+            size: _.Button.Sizes.SMALL,
+            onClick: h,
+            disabled: t && !i,
             ...e,
-            children: t ? m.Z.Messages.REDEEM : m.Z.Messages.DROPS_GIFT_INVENTORY_ENROLL
+            children: t ? O.Z.Messages.REDEEM : O.Z.Messages.DROPS_GIFT_INVENTORY_ENROLL
           })
         })]
       })
     }), (0, n.jsxs)("div", {
-      className: h.dropCriteria,
+      className: g.dropCriteria,
       children: [(0, n.jsx)("img", {
         alt: "",
-        src: A.rewardSrc,
-        className: h.dropRewardImage
+        src: C.rewardSrc,
+        className: g.dropRewardImage
       }), (0, n.jsx)("div", {
-        ref: l,
-        children: (0, n.jsx)(d.Text, {
+        ref: r,
+        children: (0, n.jsx)(_.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          className: h.dropCriteriaText,
-          children: O.messages.giftInfo()
+          className: g.dropCriteriaText,
+          children: m.messages.giftInfo()
         })
-      }), (0, n.jsx)(d.Text, {
+      }), (0, n.jsx)(_.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
-        className: h.dropLearnMore,
-        children: m.Z.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: C
+        className: g.dropLearnMore,
+        children: O.Z.Messages.DROPS_LEARN_MORE.format({
+          faqUrl: A
         })
       })]
     })]
   })
 }
 
-function M(e) {
+function p(e) {
   let {
     drop: s,
     code: t,
-    platform: a
-  } = e, [r, c] = i.useState(!1), E = void 0 !== t, _ = (0, C.vc)(o()(s.endDate), "LL"), T = m.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-    endDate: _
-  }), S = E ? m.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : m.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, u = i.useCallback(() => c(!1), []);
+    platform: i
+  } = e, [o, c] = a.useState(!1), d = void 0 !== t, E = (0, A.vc)(l()(s.endDate), "LL"), u = O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+    endDate: E
+  }), T = d ? O.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : O.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, S = a.useCallback(() => c(!1), []);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("div", {
-      className: l()(h.skuCard, h.promotionCard),
+      className: r()(g.skuCard, g.promotionCard),
       children: (0, n.jsxs)("div", {
-        className: h.mainPromotionCardContainer,
+        className: g.mainPromotionCardContainer,
         children: [(0, n.jsxs)("div", {
-          className: h.promotionCardLeftContainer,
+          className: g.promotionCardLeftContainer,
           children: [(0, n.jsx)("div", {
-            className: h.promotionIcon,
+            className: g.promotionIcon,
             children: (0, n.jsx)("img", {
               alt: "",
               src: s.assets.iconSrc,
-              className: h.promotionIconImage
+              className: g.promotionIconImage
             })
           }), (0, n.jsxs)("div", {
-            children: [(0, n.jsx)(d.Heading, {
+            children: [(0, n.jsx)(_.Heading, {
               variant: "heading-md/semibold",
               children: s.title
-            }), (0, n.jsx)(d.Text, {
+            }), (0, n.jsx)(_.Text, {
               variant: "text-sm/normal",
               color: "text-normal",
-              className: h.__invalid_promotionText,
-              children: T
+              className: g.__invalid_promotionText,
+              children: u
             })]
           })]
-        }), (0, n.jsx)(d.Button, {
-          color: d.Button.Colors.BRAND,
-          size: d.Button.Sizes.SMALL,
+        }), (0, n.jsx)(_.Button, {
+          color: _.Button.Colors.BRAND,
+          size: _.Button.Sizes.SMALL,
           onClick: () => c(!0),
-          children: S
+          children: T
         })]
       })
-    }), r && (0, n.jsx)(d.Modal, {
+    }), o && (0, n.jsx)(_.Modal, {
       renderModal: e => (0, n.jsx)(I.ZP, {
         ...e,
-        onClose: u,
+        onClose: S,
         code: t,
         drop: s,
-        platform: a
+        platform: i
       }),
-      onCloseRequest: u
+      onCloseRequest: S
     })]
   })
 }
@@ -175,103 +175,103 @@ s.Z = function(e) {
   var s;
   let {
     dropsOptedOut: t,
-    dropsStatuses: i
-  } = e, a = [], l = [], r = (0, E.e7)([A.default], () => A.default.getCurrentUser()), c = !1;
-  if (null == i) return null;
-  for (let e of Object.keys(i)) {
-    let s = (0, u.EW)(e);
+    dropsStatuses: a
+  } = e, i = [], r = [], o = (0, d.e7)([C.default], () => C.default.getCurrentUser()), c = !1;
+  if (null == a) return null;
+  for (let e of Object.keys(a)) {
+    let s = (0, S.EW)(e);
     if (null == s) continue;
-    let t = i[e],
-      n = (0, u.x8)(e);
+    let t = a[e],
+      n = (0, S.x8)(e);
     if (null == n) continue;
-    let E = (0, u.Xt)(n),
-      d = t.eligible && E,
-      _ = (0, u.A5)(n);
-    if (null == _) continue;
-    d && _.trackExposure({
+    let d = (0, S.Xt)(n),
+      _ = t.eligible && d,
+      E = (0, S.A5)(n);
+    if (null == E) continue;
+    _ && E.trackExposure({
       location: "ENTITLEMENT_GIFTS"
     });
-    let T = !!((null == r ? void 0 : r.isStaff()) && _.getCurrentConfig({
+    let u = !!((null == o ? void 0 : o.isStaff()) && E.getCurrentConfig({
       location: "076035_2"
     }, {
       autoTrackExposure: !1
     }).showUnenroll);
-    if (!_.getCurrentConfig({
+    if (!E.getCurrentConfig({
         location: "076035_3"
       }, {
         autoTrackExposure: !1
       }).dropsEnabled) continue;
     c = !0;
-    let S = o()(s.endDate, g),
-      I = o()();
-    d && null == t.completed_at || null != t.enrolled_at && null == t.completed_at && t.eligible ? I < S && a.push({
+    let T = l()(s.endDate, h),
+      I = l()();
+    _ && null == t.completed_at || null != t.enrolled_at && null == t.completed_at && t.eligible ? I < T && i.push({
       dropsQuestId: e,
       dropsStatus: t,
-      showUnenroll: T,
-      experiment: _
-    }) : (null != t.code || null != t.completed_at) && I < o()(s.finalClaimDate, g) && l.push({
+      showUnenroll: u,
+      experiment: E
+    }) : (null != t.code || null != t.completed_at) && I < l()(s.finalClaimDate, h) && r.push({
       dropsQuestId: e,
       dropsStatus: t,
-      showUnenroll: T,
-      experiment: _
+      showUnenroll: u,
+      experiment: E
     })
   }
-  let _ = (0, n.jsxs)("div", {
-    className: h.dropsHeaderContainer,
-    children: [(0, n.jsx)(d.Heading, {
+  let E = (0, n.jsxs)("div", {
+    className: g.dropsHeaderContainer,
+    children: [(0, n.jsx)(_.Heading, {
       variant: "heading-md/semibold",
-      children: m.Z.Messages.DROPS_GIFT_INVENTORY_TITLE
+      children: O.Z.Messages.DROPS_GIFT_INVENTORY_TITLE
     }), (0, n.jsx)(N.Z, {
-      className: h.betaTagIcon
+      className: g.betaTagIcon
     })]
   });
-  return c && 0 === a.length && 0 === l.length && t ? (0, n.jsxs)(d.FormSection, {
-    children: [_, (0, n.jsx)(d.FormDivider, {
-      className: h.divider
+  return c && 0 === i.length && 0 === r.length && t ? (0, n.jsxs)(_.FormSection, {
+    children: [E, (0, n.jsx)(_.FormDivider, {
+      className: g.divider
     }), (0, n.jsx)("div", {
-      className: h.dropsHelpText,
-      children: m.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: O.n4
+      className: g.dropsHelpText,
+      children: O.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
+        blogURL: m.n4
       })
     })]
-  }) : 0 === a.length && 0 === l.length ? null : (0, n.jsxs)(d.FormSection, {
-    children: [_, (0, n.jsx)(d.FormDivider, {
-      className: h.divider
-    }), a.map(e => {
-      let s = (0, u.EW)(e.dropsQuestId),
+  }) : 0 === i.length && 0 === r.length ? null : (0, n.jsxs)(_.FormSection, {
+    children: [E, (0, n.jsx)(_.FormDivider, {
+      className: g.divider
+    }), i.map(e => {
+      let s = (0, S.EW)(e.dropsQuestId),
         t = null != e.dropsStatus.enrolled_at,
-        i = null != e.dropsStatus.completed_at;
+        a = null != e.dropsStatus.completed_at;
       return null != s ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(R, {
           drop: {
             ...s
           },
           enrolled: t,
-          completed: i
-        }, s.dropsQuestId), e.showUnenroll && (0, n.jsx)(d.Button, {
-          size: d.Button.Sizes.SMALL,
-          onClick: () => (0, S.VT)(e.dropsQuestId),
+          completed: a
+        }, s.dropsQuestId), e.showUnenroll && (0, n.jsx)(_.Button, {
+          size: _.Button.Sizes.SMALL,
+          onClick: () => (0, T.VT)(e.dropsQuestId),
           children: "UNENROLL"
         })]
       }) : null
-    }), l.map(e => {
+    }), r.map(e => {
       var s, t;
-      let i = (0, u.EW)(e.dropsQuestId);
-      return null != i ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(M, {
-          drop: i,
+      let a = (0, S.EW)(e.dropsQuestId);
+      return null != a ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(p, {
+          drop: a,
           code: null !== (s = e.dropsStatus.code) && void 0 !== s ? s : void 0,
           platform: null !== (t = e.dropsStatus.platform) && void 0 !== t ? t : void 0
-        }, e.dropsQuestId), e.showUnenroll && (0, n.jsx)(d.Button, {
-          size: d.Button.Sizes.SMALL,
-          onClick: () => (0, S.VT)(e.dropsQuestId),
+        }, e.dropsQuestId), e.showUnenroll && (0, n.jsx)(_.Button, {
+          size: _.Button.Sizes.SMALL,
+          onClick: () => (0, T.VT)(e.dropsQuestId),
           children: "UNENROLL"
         })]
       }) : null
-    }), "string" == typeof(null == r ? void 0 : r.id) && l.length > 0 ? (0, n.jsx)("div", {
-      className: h.feedback,
-      children: m.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
-        feedbackURL: "https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id=".concat(null !== (s = null == r ? void 0 : r.id) && void 0 !== s ? s : "")
+    }), "string" == typeof(null == o ? void 0 : o.id) && r.length > 0 ? (0, n.jsx)("div", {
+      className: g.feedback,
+      children: O.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
+        feedbackURL: "https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id=".concat(null !== (s = null == o ? void 0 : o.id) && void 0 !== s ? s : "")
       })
     }) : null]
   })

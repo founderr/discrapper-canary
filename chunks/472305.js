@@ -3,12 +3,12 @@ o.d(s, {
     return l
   },
   Qv: function() {
-    return t
+    return n
   },
   pL: function() {
-    return n
+    return t
   }
 });
-let n = "example.com",
-  t = e => "_discord.".concat(e),
+let t = "example.com",
+  n = e => "_discord.".concat(e),
   l = e => "https://".concat(e, "/.well-known/discord")

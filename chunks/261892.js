@@ -1,9 +1,9 @@
 n.d(t, {
   f: function() {
-    return l
+    return i
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_friends_with_nitro_on_profile_side_panel_experiment",
   label: "Friends with Nitro on Profile Side Panel",

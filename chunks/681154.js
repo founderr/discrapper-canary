@@ -13,8 +13,8 @@ n.d(t, {
     return c
   }
 });
-var s, l, a = n(539573),
-  r = n(689938);
+var a, s, r = n(539573),
+  l = n(689938);
 
 function i(e, t) {
   return {
@@ -28,18 +28,18 @@ function o(e) {
 }
 
 function c() {
-  return i(0, r.Z.Messages.FORUM_POST_EMPTY_TITLE_ERROR)
+  return i(0, l.Z.Messages.FORUM_POST_EMPTY_TITLE_ERROR)
 }
 
 function d() {
-  return i(0, r.Z.Messages.FORUM_POST_EMPTY_MESSAGE_ERROR)
+  return i(0, l.Z.Messages.FORUM_POST_EMPTY_MESSAGE_ERROR)
 }
 
 function u(e, t) {
-  return i(1, (0, a.$q)(e, null == t ? void 0 : t.id))
+  return i(1, (0, r.$q)(e, null == t ? void 0 : t.id))
 }
 
 function m(e, t) {
   var n;
   return null == e || 0 === e.type && null != t.content && t.content.trim().length > 0 || 2 === e.type && null != t.tags && t.tags.length > 0 ? null : null !== (n = e.message) && void 0 !== n ? n : null
-}(s = l || (l = {}))[s.EmptyContent = 0] = "EmptyContent", s[s.AutomodViolation = 1] = "AutomodViolation", s[s.EmptyTags = 2] = "EmptyTags"
+}(a = s || (s = {}))[a.EmptyContent = 0] = "EmptyContent", a[a.AutomodViolation = 1] = "AutomodViolation", a[a.EmptyTags = 2] = "EmptyTags"

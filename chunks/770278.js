@@ -36,10 +36,10 @@ let E = o.forwardRef(function(e, t) {
   }), h = {
     background: T,
     backdropFilter: "blur(0px)"
-  }, S = (0, c.Z)(i), f = (0, u.useTransition)(a, {
+  }, f = (0, c.Z)(i), S = (0, u.useTransition)(a, {
     keys: e => e ? "backdrop" : "empty",
     config: {
-      duration: i || S ? 0 : 300
+      duration: i || f ? 0 : 300
     },
     from: h,
     enter: {
@@ -52,7 +52,7 @@ let E = o.forwardRef(function(e, t) {
     let e = {
       zIndex: 1e3 + r
     };
-    return f((t, n) => n ? (0, s.jsx)(u.animated.div, {
+    return S((t, n) => n ? (0, s.jsx)(u.animated.div, {
       className: d.backdrop,
       style: {
         ...t,
@@ -62,7 +62,7 @@ let E = o.forwardRef(function(e, t) {
     }) : null)
   }
   return (0, s.jsx)(o, {
-    children: f((e, t) => t ? (0, s.jsx)(u.animated.div, {
+    children: S((e, t) => t ? (0, s.jsx)(u.animated.div, {
       className: l()(d.backdrop, d.withLayer),
       style: e,
       onClick: E

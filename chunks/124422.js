@@ -25,7 +25,7 @@ function o(e, n, o) {
       null != T && (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([t.e("99387"), t.e("84722")]).then(t.bind(t, 296864));
+        } = await Promise.all([t.e("84722"), t.e("26014")]).then(t.bind(t, 296864));
         return n => (0, l.jsx)(e, {
           ...n,
           event: T

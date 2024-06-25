@@ -1,1 +1,1 @@
-e.exports = t.p + "3e95732851f59fb4a55b.svg"
+e.exports = n.p + "3e95732851f59fb4a55b.svg"

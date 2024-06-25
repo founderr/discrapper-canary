@@ -1,39 +1,39 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return a
+    return r
   }
-}), t(47120);
-var n = t(470079),
-  i = t(881052),
-  l = t(728345);
+}), n(47120);
+var s = n(470079),
+  a = n(881052),
+  i = n(728345);
 
-function a() {
-  let [e, s] = n.useState(!1), [t, a] = n.useState(), r = n.useRef();
+function r() {
+  let [e, t] = s.useState(!1), [n, r] = s.useState(), l = s.useRef();
   return {
-    createGuildApplication: async (e, t, n, o) => {
-      a(void 0);
+    createGuildApplication: async (e, n, s, o) => {
+      r(void 0);
       try {
-        if (s(!0), null == r.current) {
-          let s = await l.Z.createApplication({
+        if (t(!0), null == l.current) {
+          let t = await i.Z.createApplication({
             name: o,
             guildId: e.id,
-            type: n,
-            teamId: t
+            type: s,
+            teamId: n
           });
-          r.current = s
+          l.current = t
         }
-        return await l.Z.getApplicationsForGuild(e.id, {
-          type: n,
+        return await i.Z.getApplicationsForGuild(e.id, {
+          type: s,
           includeTeam: !0
         }), !0
       } catch (e) {
-        return a(new i.Hx(e)), !1
+        return r(new a.Hx(e)), !1
       } finally {
-        s(!1)
+        t(!1)
       }
     },
     submitting: e,
-    error: t
+    error: n
   }
 }

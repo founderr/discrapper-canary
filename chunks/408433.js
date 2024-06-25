@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   dY: function() {
-    return A
+    return N
   },
   kC: function() {
-    return f
+    return S
   },
   l3: function() {
     return m
   },
   o3: function() {
-    return N
+    return A
   },
   vP: function() {
     return O
@@ -38,7 +38,7 @@ function h(e) {
   return t > 0 && n > 0
 }
 
-function S(e) {
+function f(e) {
   let {
     url: t,
     proxy_url: n,
@@ -57,7 +57,7 @@ function S(e) {
   }
 }
 
-function f(e, t, n) {
+function S(e, t, n) {
   let i = {
     id: r().uniqueId("embed_"),
     url: n.url,
@@ -83,12 +83,12 @@ function f(e, t, n) {
     }), null != n.timestamp && (i.timestamp = o()(new Date(n.timestamp))), null != n.color && (i.color = (0, a.ho)(n.color, !0)), null != n.thumbnail && h(n.thumbnail)) switch (i.type) {
     case u.hBH.ARTICLE:
     case u.hBH.IMAGE:
-      i.image = S(n.thumbnail);
+      i.image = f(n.thumbnail);
       break;
     default:
-      i.thumbnail = S(n.thumbnail)
+      i.thumbnail = f(n.thumbnail)
   }
-  if (null != n.image && h(n.image) && (i.image = S(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && h(n.video) && (i.thumbnail = {
+  if (null != n.image && h(n.image) && (i.image = f(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && h(n.video) && (i.thumbnail = {
       width: n.video.width,
       height: n.video.height,
       url: function(e, t) {
@@ -103,7 +103,7 @@ function f(e, t, n) {
       if (null != t && c.test(t.name) || d.test(n.url)) return !1;
       let i = null != n.proxy_url || /^https:/i.test(n.url);
       return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && E.test(t.name)), i
-    }(t, n.provider, n.video) && (i.video = S(n.video))), _.k.has(i.type)) {
+    }(t, n.provider, n.video) && (i.video = f(n.video))), _.k.has(i.type)) {
     var s;
     let e = null !== (s = n.fields) && void 0 !== s ? s : [];
     i.fields = e.map(e => {
@@ -122,7 +122,7 @@ function f(e, t, n) {
   return i
 }
 
-function N(e) {
+function A(e) {
   let t = new Map,
     n = [];
   return e.forEach(e => {
@@ -139,7 +139,7 @@ function N(e) {
   }), n
 }
 
-function A(e) {
+function N(e) {
   let {
     image: t,
     video: n,

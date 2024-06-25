@@ -1,80 +1,80 @@
-t.d(s, {
+n.d(t, {
   D: function() {
-    return P
+    return N
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  i = t(442837),
-  l = t(780384),
-  r = t(481060),
-  o = t(410030),
-  c = t(607070),
-  u = t(530618),
-  d = t(74538),
-  E = t(937615),
-  _ = t(230916),
-  p = t(798769),
-  I = t(474936),
-  m = t(689938),
-  N = t(596159),
-  C = t(982404),
-  h = t(299156);
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(442837),
+  o = n(780384),
+  r = n(481060),
+  l = n(410030),
+  c = n(607070),
+  d = n(530618),
+  u = n(74538),
+  _ = n(937615),
+  p = n(230916),
+  m = n(798769),
+  f = n(474936),
+  E = n(689938),
+  I = n(596159),
+  C = n(982404),
+  h = n(299156);
 
-function P(e) {
+function N(e) {
   let {
-    premiumSubscription: s,
-    premiumType: t,
-    onClose: P,
-    confettiCanvas: T,
-    userWasChurned: A = !1,
-    userDiscountOffer: R
-  } = e, S = (0, o.ZP)(), M = (0, l.wj)(S) ? C : h, f = a.useRef(null), [g, L] = a.useState(!1), x = (0, _._)(s, I.Xh.PREMIUM_MONTH_TIER_2, R), O = (0, d.aS)(I.Xh.PREMIUM_MONTH_TIER_2), D = (0, E.T4)(O.amount, O.currency), y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
+    premiumSubscription: t,
+    premiumType: n,
+    onClose: N,
+    confettiCanvas: P,
+    userWasChurned: g = !1,
+    userDiscountOffer: T
+  } = e, S = (0, l.ZP)(), R = (0, o.wj)(S) ? C : h, A = a.useRef(null), [b, x] = a.useState(!1), M = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, T), L = (0, u.aS)(f.Xh.PREMIUM_MONTH_TIER_2), y = (0, _.T4)(L.amount, L.currency), B = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
   if (a.useEffect(() => {
-      null != f.current && null != x && L(!0)
-    }, [f, g, x]), null == R || null == x) return null;
-  let U = m.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
-      numMonths: R.discount.user_usage_limit,
-      discountedPrice: x,
-      regularPrice: D
+      null != A.current && null != M && x(!0)
+    }, [A, b, M]), null == T || null == M) return null;
+  let D = E.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
+      numMonths: T.discount.user_usage_limit,
+      discountedPrice: M,
+      regularPrice: y
     }),
-    Z = (0, n.jsx)("div", {
-      className: N.whatYouLoseButtonContainer,
-      children: (0, n.jsx)(r.Button, {
+    O = (0, s.jsx)("div", {
+      className: I.whatYouLoseButtonContainer,
+      children: (0, s.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
-        onClick: P,
-        children: m.Z.Messages.PREMIUM_DISCOUNT_SWEET
+        onClick: N,
+        children: E.Z.Messages.PREMIUM_DISCOUNT_SWEET
       })
     });
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(p.Z, {
-      premiumType: t,
-      className: N.cancellationHeader,
-      onClose: P
-    }), (0, n.jsx)("div", {
-      ref: f,
-      children: (0, n.jsx)(r.ModalContent, {
-        className: N.body,
-        children: null != x ? (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsxs)("div", {
-            className: N.discountAppliedBody,
-            children: [(0, n.jsx)("img", {
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(m.Z, {
+      premiumType: n,
+      className: I.cancellationHeader,
+      onClose: N
+    }), (0, s.jsx)("div", {
+      ref: A,
+      children: (0, s.jsx)(r.ModalContent, {
+        className: I.body,
+        children: null != M ? (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsxs)("div", {
+            className: I.discountAppliedBody,
+            children: [(0, s.jsx)("img", {
               alt: "",
-              src: M,
-              className: N.nitroIcon
-            }), (0, n.jsx)(r.Heading, {
+              src: R,
+              className: I.nitroIcon
+            }), (0, s.jsx)(r.Heading, {
               variant: "heading-xl/bold",
-              children: A ? m.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : m.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+              children: g ? E.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : E.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
             })]
-          }), (0, n.jsx)("div", {
-            className: N.bodyString,
-            children: U
-          }), Z]
-        }) : (0, n.jsx)(r.Spinner, {})
+          }), (0, s.jsx)("div", {
+            className: I.bodyString,
+            children: D
+          }), O]
+        }) : (0, s.jsx)(r.Spinner, {})
       })
-    }), !y && g && (0, n.jsx)(u.Z, {
-      confettiTarget: f.current,
-      confettiCanvas: T,
+    }), !B && b && (0, s.jsx)(d.Z, {
+      confettiTarget: A.current,
+      confettiCanvas: P,
       confettiVelocityMultiplier: .75
     })]
   })

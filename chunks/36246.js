@@ -3,11 +3,11 @@ n.d(t, {
     return u
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(873546),
+var a = n(120356),
+  l = n.n(a),
+  s = n(873546),
   r = n(481060),
   o = n(470134),
   c = n(874771);
@@ -16,30 +16,30 @@ function u(e) {
   let {
     guildId: t,
     children: n,
-    className: i
+    className: a
   } = e, {
     horizontalScrollNotice: u,
     handleScroll: d,
     handleSetScrollerRef: h,
-    handleSetContainerRef: m
-  } = (0, o.Z)(t), E = (0, l.jsx)("div", {
+    handleSetContainerRef: p
+  } = (0, o.Z)(t), m = (0, i.jsx)("div", {
     className: c.tierPreviewsContainer,
-    children: (0, l.jsx)("div", {
-      className: s()(c.tierPreviews, i),
+    children: (0, i.jsx)("div", {
+      className: l()(c.tierPreviews, a),
       children: n
     })
   });
-  return !a.tq && (E = (0, l.jsxs)(l.Fragment, {
-    children: [u, (0, l.jsx)(r.AdvancedScroller, {
+  return !s.tq && (m = (0, i.jsxs)(i.Fragment, {
+    children: [u, (0, i.jsx)(r.AdvancedScroller, {
       className: c.scroller,
       orientation: "horizontal",
       ref: h,
       onScroll: d,
-      children: E
+      children: m
     })]
-  })), (0, l.jsx)("div", {
+  })), (0, i.jsx)("div", {
     className: c.carouselMaxWidth,
-    ref: m,
-    children: E
+    ref: p,
+    children: m
   })
 }

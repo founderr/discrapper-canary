@@ -1,70 +1,70 @@
-r.d(t, {
+n.d(t, {
   Z: function() {
-    return B
+    return j
   }
-}), r(653041), r(390547), r(733860), r(47120);
-var n = r(735250),
-  a = r(470079),
-  i = r(392711),
-  s = r.n(i),
-  o = r(442837),
-  l = r(481060),
-  c = r(304680),
-  d = r(503089),
-  u = r(493544),
-  m = r(210887),
-  p = r(592125),
-  h = r(271383),
-  g = r(19780),
-  f = r(226961),
-  y = r(594174),
-  v = r(285952),
-  D = r(51144),
-  C = r(189648),
-  E = r(775194),
-  R = r(499848),
-  Z = r(724392),
-  S = r(442580),
-  F = r(770800),
-  P = r(981631),
-  x = r(65154),
-  T = r(689938),
-  N = r(16281);
-let b = (e, t, r) => (0, n.jsx)(v.Z, {
-    align: v.Z.Align.CENTER,
-    children: (0, n.jsx)(v.Z.Child, {
-      children: (0, n.jsxs)(v.Z, {
-        align: v.Z.Align.CENTER,
-        children: [(0, n.jsx)(l.Avatar, {
+}), n(653041), n(390547), n(733860), n(47120);
+var r = n(735250),
+  a = n(470079),
+  i = n(392711),
+  o = n.n(i),
+  s = n(442837),
+  l = n(481060),
+  c = n(304680),
+  d = n(503089),
+  u = n(493544),
+  m = n(210887),
+  p = n(592125),
+  h = n(271383),
+  g = n(19780),
+  f = n(226961),
+  C = n(594174),
+  y = n(285952),
+  R = n(51144),
+  S = n(189648),
+  D = n(775194),
+  v = n(499848),
+  b = n(724392),
+  E = n(442580),
+  Z = n(770800),
+  F = n(981631),
+  P = n(65154),
+  T = n(689938),
+  x = n(16281);
+let _ = (e, t, n) => (0, r.jsx)(y.Z, {
+    align: y.Z.Align.CENTER,
+    children: (0, r.jsx)(y.Z.Child, {
+      children: (0, r.jsxs)(y.Z, {
+        align: y.Z.Align.CENTER,
+        children: [(0, r.jsx)(l.Avatar, {
           size: l.AvatarSizes.SIZE_24,
-          src: e.getAvatarURL(r, 24),
+          src: e.getAvatarURL(n, 24),
           "aria-label": e.username,
-          className: N.avatar
-        }), (0, n.jsx)("span", {
-          className: N.username,
-          children: null != t ? t : D.ZP.getName(e)
+          className: x.avatar
+        }), (0, r.jsx)("span", {
+          className: x.username,
+          children: null != t ? t : R.ZP.getName(e)
         })]
       })
     })
   }),
-  j = e => (0, n.jsx)(v.Z, {
-    align: v.Z.Align.CENTER,
-    children: (0, n.jsx)(v.Z.Child, {
-      children: (0, n.jsx)(v.Z, {
-        align: v.Z.Align.CENTER,
-        children: (0, n.jsx)("span", {
-          className: N.username,
+  N = e => (0, r.jsx)(y.Z, {
+    align: y.Z.Align.CENTER,
+    children: (0, r.jsx)(y.Z.Child, {
+      children: (0, r.jsx)(y.Z, {
+        align: y.Z.Align.CENTER,
+        children: (0, r.jsx)("span", {
+          className: x.username,
           children: e
         })
       })
     })
   });
 
-function I(e, t, r, n, a) {
+function I(e, t, n, r, a) {
   let i = [];
   if (null == t) return i;
   let {
-    transport: o,
+    transport: s,
     rtp: {
       inbound: l,
       outbound: d
@@ -76,124 +76,124 @@ function I(e, t, r, n, a) {
     label: T.Z.Messages.RTC_DEBUG_CONTEXT.format({
       context: e
     })
-  }), null != o && i.push({
-    section: (0, f.J$)(e, P._s_.TRANSPORT, r),
+  }), null != s && i.push({
+    section: (0, f.J$)(e, F._s_.TRANSPORT, n),
     label: T.Z.Messages.RTC_DEBUG_TRANSPORT,
-    element: F.Z,
-    elementProps: {
-      context: e,
-      index: r
-    }
-  }), null != d && i.push({
-    section: (0, f.J$)(e, P._s_.OUTBOUND, r),
-    label: T.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
     element: Z.Z,
     elementProps: {
       context: e,
-      index: r
+      index: n
     }
-  }), null != m && i.push({
-    section: (0, f.J$)(e, P._s_.CAMERA, r),
-    label: T.Z.Messages.RTC_DEBUG_CAMERA,
-    element: C.Z,
+  }), null != d && i.push({
+    section: (0, f.J$)(e, F._s_.OUTBOUND, n),
+    label: T.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
+    element: b.Z,
     elementProps: {
       context: e,
-      index: r,
+      index: n
+    }
+  }), null != m && i.push({
+    section: (0, f.J$)(e, F._s_.CAMERA, n),
+    label: T.Z.Messages.RTC_DEBUG_CAMERA,
+    element: S.Z,
+    elementProps: {
+      context: e,
+      index: n,
       camera: m
     }
-  }), null != l && !s().isEmpty(l) && (i.push({
+  }), null != l && !o().isEmpty(l) && (i.push({
     section: u.ID.HEADER,
     label: T.Z.Messages.RTC_DEBUG_RTP_INBOUND
   }), Object.keys(l).forEach(t => {
-    let s = y.default.getUser(t),
-      o = h.ZP.getNick(a, t),
-      l = (0, f.J$)(e, t, r);
+    let o = C.default.getUser(t),
+      s = h.ZP.getNick(a, t),
+      l = (0, f.J$)(e, t, n);
     i.push({
       section: l,
-      label: null != s ? b(s, o, a) : j(null != o ? o : t),
-      ariaLabel: null != s ? s.tag : t,
+      label: null != o ? _(o, s, a) : N(null != s ? s : t),
+      ariaLabel: null != o ? o.tag : t,
       onClick: () => {
         c.zc(l)
       },
-      element: R.Z,
+      element: v.Z,
       elementProps: {
         context: e,
-        index: r,
-        videoStreams: n
+        index: n,
+        videoStreams: r
       }
     })
   })), i
 }
 
-function B() {
+function j() {
   var e, t;
   let {
-    defaultStats: r,
+    defaultStats: n,
     streamStats: i
-  } = (0, o.e7)([f.ZP], () => ({
-    defaultStats: f.ZP.getAllStats(x.Yn.DEFAULT),
-    streamStats: f.ZP.getAllStats(x.Yn.STREAM)
-  }), [], o.pF), s = (0, o.e7)([g.Z, p.Z], () => p.Z.getChannel(g.Z.getChannelId())), h = null === (e = r.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, y = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, v = (0, o.e7)([m.Z], () => m.Z.theme), D = (0, o.e7)([m.Z], () => m.Z.darkSidebar ? P.BRd.DARK : void 0), C = (0, o.e7)([f.ZP], () => f.ZP.getSection()), R = (0, o.e7)([f.ZP], () => f.ZP.getVideoStreams()), Z = function(e) {
+  } = (0, s.e7)([f.ZP], () => ({
+    defaultStats: f.ZP.getAllStats(P.Yn.DEFAULT),
+    streamStats: f.ZP.getAllStats(P.Yn.STREAM)
+  }), [], s.pF), o = (0, s.e7)([g.Z, p.Z], () => p.Z.getChannel(g.Z.getChannelId())), h = null === (e = n.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, y = (0, s.e7)([m.Z], () => m.Z.theme), R = (0, s.e7)([m.Z], () => m.Z.darkSidebar ? F.BRd.DARK : void 0), S = (0, s.e7)([f.ZP], () => f.ZP.getSection()), v = (0, s.e7)([f.ZP], () => f.ZP.getVideoStreams()), b = function(e) {
     let {
       defaultStats: t,
-      streamStats: r,
+      streamStats: n,
       videoStreams: a,
       screenshare: i,
-      clips: s,
-      channel: o,
+      clips: o,
+      channel: s,
       connectionState: c
-    } = e, d = t.flatMap((e, t) => I(x.Yn.DEFAULT, e, t, a, null == o ? void 0 : o.getGuildId())), m = r.flatMap((e, t) => I(x.Yn.STREAM, e, t, a, null == o ? void 0 : o.getGuildId())), p = [], h = [], g = {
+    } = e, d = t.flatMap((e, t) => I(P.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())), m = n.flatMap((e, t) => I(P.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())), p = [], h = [], g = {
       section: u.ID.DIVIDER
     };
     null != i && (p.push(g), p.push({
-      section: P._s_.SCREENSHARE,
+      section: F._s_.SCREENSHARE,
       label: T.Z.Messages.RTC_DEBUG_SCREENSHARE,
-      element: S.Z,
+      element: E.Z,
       elementProps: {
         screenshare: i
       }
-    })), null != s && (h.push(g), h.push({
-      section: P._s_.CLIPS,
+    })), null != o && (h.push(g), h.push({
+      section: F._s_.CLIPS,
       label: T.Z.Messages.RTC_DEBUG_CLIPS,
-      element: E.Z,
+      element: D.Z,
       elementProps: {
-        clips: s
+        clips: o
       }
     })), m.length > 0 && m.unshift(g);
-    let f = null != o ? [{
+    let f = null != s ? [{
       section: u.ID.CUSTOM,
       label: "Channel Name",
-      element: () => (0, n.jsx)(l.Heading, {
-        className: N.channelName,
+      element: () => (0, r.jsx)(l.Heading, {
+        className: x.channelName,
         variant: "heading-lg/semibold",
-        children: o.name
+        children: s.name
       })
     }] : [];
     return [...f, {
       section: u.ID.CUSTOM,
       label: "Connection State",
-      element: () => (0, n.jsx)(l.Heading, {
-        className: N.channelName,
+      element: () => (0, r.jsx)(l.Heading, {
+        className: x.channelName,
         variant: "heading-md/normal",
-        children: c === P.hes.RTC_CONNECTED ? "Connected" : "Disconnected"
+        children: c === F.hes.RTC_CONNECTED ? "Connected" : "Disconnected"
       })
     }, ...d, ...m, ...p, ...h]
   }({
-    defaultStats: r,
+    defaultStats: n,
     streamStats: i,
-    videoStreams: R,
+    videoStreams: v,
     screenshare: h,
-    clips: y,
-    channel: s,
-    connectionState: (0, o.e7)([g.Z], () => g.Z.getState())
+    clips: C,
+    channel: o,
+    connectionState: (0, s.e7)([g.Z], () => g.Z.getState())
   });
   return a.useEffect(() => () => {
     c.xv()
-  }, []), (0, n.jsx)(d.ZP, {
-    theme: v,
-    sidebarTheme: D,
-    section: C,
+  }, []), (0, r.jsx)(d.ZP, {
+    theme: y,
+    sidebarTheme: R,
+    section: S,
     onSetSection: c.zc,
-    sections: Z
+    sections: b
   })
 }

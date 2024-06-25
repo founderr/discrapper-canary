@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   L6: function() {
-    return R
+    return p
   },
   ZP: function() {
-    return f
+    return S
   },
   iF: function() {
     return O
@@ -32,11 +32,11 @@ for (let e of I) {
     for (let t of n) T[t.toLowerCase()] = e
 }
 let h = /^[a-z0-9_+\-.#]+$/,
-  S = /^[a-z0-9_+\-.#]+$/i;
+  f = /^[a-z0-9_+\-.#]+$/i;
 for (let e in T)
   if (null == e.match(h)) throw Error("Language name does not match regex: ".concat(e));
 
-function f(e) {
+function S(e) {
   let {
     onChange: t
   } = e, n = null;
@@ -84,18 +84,18 @@ function f(e) {
                 d = n && 0 === o.length,
                 I = i && 0 === o.length,
                 h = (_ ? o.slice(1) : o).length % 2 == 1,
-                f = h && (null == u || "" === u || null != u.match(S)),
-                N = f && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
+                S = h && (null == u || "" === u || null != u.match(f)),
+                A = S && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: d,
                 isStyledCodeBlockLine: I,
-                lang: h || _ ? N : r,
+                lang: h || _ ? A : r,
                 hljsTypes: null,
                 closesCodeBlock: _,
                 opensCodeBlock: h,
-                opensCodeBlockOnOwnLine: f
+                opensCodeBlockOnOwnLine: S
               }
             }(e, i, r, s, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null), t.push(n)
           }
@@ -125,7 +125,7 @@ function f(e) {
                         o = [],
                         a = 0,
                         l = 0;
-                      for (; null != (r = N.exec(s));) {
+                      for (; null != (r = A.exec(s));) {
                         let t = r.index + r[0].length,
                           n = r.index - l;
                         r.index > l && (e.length > 0 && o.push({
@@ -175,13 +175,13 @@ function f(e) {
     }), n = c.bN.richValue(e)), t()
   }, e
 }
-let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-  A = {
+let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+  N = {
     max: 1 / 0,
     maxAge: 1 * o.Z.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  m = new(s())(A);
+  m = new(s())(N);
 
 function O(e, t) {
   let n = 0;
@@ -205,7 +205,7 @@ function O(e, t) {
   return n % 2 != 0
 }
 
-function R(e) {
+function p(e) {
   if (null == e.selection) return !1;
   let t = c.M8.start(e.selection);
   return O(e, t)

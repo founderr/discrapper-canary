@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   N: function() {
-    return N
+    return A
   }
 }), n(757143), n(47120);
 var i = n(623279),
@@ -40,7 +40,7 @@ function h(e) {
   } = n.langtag;
   return "".concat(r.language.toLowerCase(), "-").concat(s.toUpperCase())
 }
-class S {
+class f {
   get enabled() {
     return this._enabled
   }
@@ -97,14 +97,14 @@ class S {
     })
   }
 }
-let f = s().debounce((e, t) => {
+let S = s().debounce((e, t) => {
   let n = function(e) {
     return null == e ? null : (0, o.k)(e, HTMLInputElement) || (0, o.k)(e, HTMLTextAreaElement) ? e.value : (0, o.k)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
   }(t);
   null != n && e.detectLanguage(n)
 }, 250);
-async function N() {
+async function A() {
   var e, t;
-  let n = new S((null !== (e = await T.getAvailableDictionaries()) && void 0 !== e ? e : []).map(h).filter(_.lm));
-  return t = n, null != document.body && document.body.addEventListener("beforeinput", e => f(t, e.target), !0), n
+  let n = new f((null !== (e = await T.getAvailableDictionaries()) && void 0 !== e ? e : []).map(h).filter(_.lm));
+  return t = n, null != document.body && document.body.addEventListener("beforeinput", e => S(t, e.target), !0), n
 }

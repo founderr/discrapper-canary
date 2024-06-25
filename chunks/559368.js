@@ -1,77 +1,77 @@
 "use strict";
-var n, i, l, a, r = t(877921),
-  o = t.n(r),
-  c = t(442837),
-  d = t(570140);
+var s, a, i, r, l = n(877921),
+  o = n.n(l),
+  c = n(442837),
+  d = n(570140);
 let u = ["pct_retained", "new_members", "visitors", "communicators"],
-  E = {},
   _ = {},
+  E = {},
   I = null;
 
 function T(e) {
   let {
-    guildId: s,
-    stats: t
+    guildId: t,
+    stats: n
   } = e;
   I = null;
-  let n = {},
-    i = {},
-    l = t[0],
-    a = t[1];
-  null != l && u.forEach(e => {
-    if (null != l[e]) {
-      let s = o()(e);
-      null != a && 0 !== a[e] && (n["".concat(s, "Change")] = (l[e] - a[e]) * 100 / a[e]), i[s] = l[e]
+  let s = {},
+    a = {},
+    i = n[0],
+    r = n[1];
+  null != i && u.forEach(e => {
+    if (null != i[e]) {
+      let t = o()(e);
+      null != r && 0 !== r[e] && (s["".concat(t, "Change")] = (i[e] - r[e]) * 100 / r[e]), a[t] = i[e]
     }
-  }), E[s] = {
-    ...i,
-    ...n,
-    ...E[s]
+  }), _[t] = {
+    ...a,
+    ...s,
+    ..._[t]
   }
 }
 
-function N(e) {
+function m(e) {
   let {
-    error: s
+    error: t
   } = e;
-  I = s.code
+  I = t.code
 }
-class m extends(a = c.ZP.Store) {
+class N extends(r = c.ZP.Store) {
   getOverviewAnalytics(e) {
-    return E[e]
+    return _[e]
   }
   getMemberInsights(e) {
-    var s;
-    return null !== (s = _[e]) && void 0 !== s ? s : {}
+    var t;
+    return null !== (t = E[e]) && void 0 !== t ? t : {}
   }
   shouldFetchMemberInsights(e) {
-    var s;
-    let t = null === (s = _[e]) || void 0 === s ? void 0 : s.fetchedAt;
-    return null == t || Date.now() - t > 432e5
+    var t;
+    let n = null === (t = E[e]) || void 0 === t ? void 0 : t.fetchedAt;
+    return null == n || Date.now() - n > 432e5
   }
   getError() {
     return I
   }
 }
-l = "GuildSettingsAnalyticsStore", (i = "displayName") in(n = m) ? Object.defineProperty(n, i, {
-  value: l,
+i = "GuildSettingsAnalyticsStore", (a = "displayName") in(s = N) ? Object.defineProperty(s, a, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = l, s.Z = new m(d.Z, {
+}) : s[a] = i, t.Z = new N(d.Z, {
   GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: T,
   GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: T,
   GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: T,
-  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: N,
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: N,
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: N,
+  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: m,
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: m,
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: m,
   GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS: function(e) {
     let {
-      guildId: s,
-      ...t
+      guildId: t,
+      ...n
     } = e;
-    _[s] = {
-      ...t,
+    E[t] = {
+      ...n,
       fetchedAt: Date.now()
     }
   }

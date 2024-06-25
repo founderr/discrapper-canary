@@ -1,6 +1,6 @@
-t.d(n, {
+n.d(t, {
   s: function() {
-    return l
+    return o
   }
 });
-let l = 60
+let o = 60

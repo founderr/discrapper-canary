@@ -1,9 +1,9 @@
 n.d(t, {
   Y: function() {
-    return i
+    return l
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2024-06_checkout_recovery_nagbar_test",
     label: "Testing",
@@ -24,10 +24,10 @@ let l = (0, n(818083).B)({
       }
     }]
   }),
-  i = () => {
+  l = () => {
     let {
       enabled: e
-    } = l.getCurrentConfig({
+    } = i.getCurrentConfig({
       location: "checkout_recovery_nagbar_test"
     });
     return e

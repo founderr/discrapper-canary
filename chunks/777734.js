@@ -1,37 +1,37 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(920040);
-let r = i.forwardRef(function(e, t) {
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(920040);
+let l = s.forwardRef(function(e, t) {
   let {
     title: n,
-    subtitle: i,
-    icon: r,
+    subtitle: s,
+    icon: l,
     style: o
   } = e;
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)("div", {
+  return (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsxs)("div", {
       style: o,
-      className: a.sectionHeader,
-      children: [(0, s.jsxs)("div", {
-        className: a.sectionHeaderTitle,
-        children: [r, (0, s.jsx)(l.Heading, {
+      className: r.sectionHeader,
+      children: [(0, i.jsxs)("div", {
+        className: r.sectionHeaderTitle,
+        children: [l, (0, i.jsx)(a.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
           children: n
         })]
-      }), null != i && (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)("div", {
-          className: a.sectionHeaderSpacer
-        }), (0, s.jsx)(l.Text, {
+      }), null != s && (0, i.jsxs)(i.Fragment, {
+        children: [(0, i.jsx)("div", {
+          className: r.sectionHeaderSpacer
+        }), (0, i.jsx)(a.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: i
+          children: s
         })]
       })]
-    }), (0, s.jsx)("div", {
+    }), (0, i.jsx)("div", {
       ref: t
     })]
   })
 });
-t.Z = i.memo(r)
+t.Z = s.memo(l)

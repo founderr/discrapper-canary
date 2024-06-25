@@ -1,9 +1,9 @@
 n.d(t, {
   m: function() {
-    return s
+    return i
   }
 });
-let s = [{
+let i = [{
   id: "749054660769218631",
   format_type: 3,
   description: "Wumpus waves hello",

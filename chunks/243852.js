@@ -1,124 +1,124 @@
 n(47120);
-var s, i, l, a, r, o = n(442837),
+var i, s, a, r, l, o = n(442837),
   c = n(433517),
-  u = n(846519),
-  d = n(570140),
-  E = n(278323),
-  h = n(581567),
-  _ = n(594190),
+  d = n(846519),
+  u = n(570140),
+  _ = n(278323),
+  E = n(581567),
+  h = n(594190),
   I = n(581883),
   m = n(70956),
-  T = n(780570),
+  p = n(780570),
   g = n(314897),
-  p = n(77498),
-  N = n(283595),
-  S = n(19780),
-  C = n(944486),
-  A = n(981631);
-let f = "ActivityTrackingStore",
+  T = n(77498),
+  C = n(283595),
+  f = n(19780),
+  S = n(944486),
+  N = n(981631);
+let A = "ActivityTrackingStore",
   Z = 30 * m.Z.Millis.MINUTE,
   L = 5 * m.Z.Millis.MINUTE,
-  O = null !== (s = c.K.get(f)) && void 0 !== s ? s : {},
-  v = {},
+  v = null !== (i = c.K.get(A)) && void 0 !== i ? i : {},
+  O = {},
   R = !1;
 
-function P(e) {
+function x(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  t && x(e, !0);
-  let n = v[e.applicationId];
-  null != n && (n.stop(), delete v[e.applicationId]), delete O[e.applicationId], c.K.set(f, O)
+  t && P(e, !0);
+  let n = O[e.applicationId];
+  null != n && (n.stop(), delete O[e.applicationId]), delete v[e.applicationId], c.K.set(A, v)
 }
 
-function x(e) {
+function P(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
-    s = null != e.updatedAt ? n - e.updatedAt : 0;
-  s > Z + L && (s = 0);
-  let i = (0, T.OT)(e.applicationId, N.Z),
-    l = C.Z.getVoiceChannelId(),
-    a = g.default.getSessionId(),
-    r = S.Z.getMediaSessionId();
-  E.Z.updateActivity({
+    i = null != e.updatedAt ? n - e.updatedAt : 0;
+  i > Z + L && (i = 0);
+  let s = (0, p.OT)(e.applicationId, C.Z),
+    a = S.Z.getVoiceChannelId(),
+    r = g.default.getSessionId(),
+    l = f.Z.getMediaSessionId();
+  _.Z.updateActivity({
     applicationId: e.applicationId,
-    distributor: e.isDiscordApplication ? A.GQo.DISCORD : e.distributor,
-    shareActivity: i,
+    distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,
+    shareActivity: s,
     token: e.token,
-    duration: Math.floor(s / 1e3),
+    duration: Math.floor(i / 1e3),
     closed: t,
     exePath: e.exePath,
-    voiceChannelId: l,
-    sessionId: a,
-    mediaSessionId: r
+    voiceChannelId: a,
+    sessionId: r,
+    mediaSessionId: l
   }), e.updatedAt = n;
-  let o = v[e.applicationId];
-  null == o && (o = v[e.applicationId] = new u.Xp).start(Z, () => x(e)), !t && (O[e.applicationId] = e, c.K.set(f, O))
+  let o = O[e.applicationId];
+  null == o && (o = O[e.applicationId] = new d.Xp).start(Z, () => P(e)), !t && (v[e.applicationId] = e, c.K.set(A, v))
 }
 
-function M() {
+function b() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = _.ZP.getVisibleRunningGames(),
+    t = h.ZP.getVisibleRunningGames(),
     n = new Set;
   for (let {
       name: e,
-      distributor: s,
-      exePath: i
+      distributor: i,
+      exePath: s
     }
     of t) {
-    let t = p.Z.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in O) && x({
+    let t = T.Z.getGameByName(e);
+    if (null != t) n.add(t.id), !(t.id in v) && P({
       applicationId: t.id,
       updatedAt: Date.now(),
-      distributor: s,
-      exePath: (0, h.N6)(null != i ? i : "")
+      distributor: i,
+      exePath: (0, E.N6)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(O)) !n.has(t) && P(O[t], e)
+  for (let t of Object.keys(v)) !n.has(t) && x(v[t], e)
 }
 
-function D() {
-  for (let e of Object.keys(O)) P(O[e]);
+function M() {
+  for (let e of Object.keys(v)) x(v[e]);
   R = !1
 }
-class b extends(i = o.ZP.Store) {
+class D extends(s = o.ZP.Store) {
   initialize() {
-    this.waitFor(_.ZP, I.Z, N.Z), this.syncWith([I.Z], M)
+    this.waitFor(h.ZP, I.Z, C.Z), this.syncWith([I.Z], b)
   }
   getActivities() {
-    return O
+    return v
   }
 }
-r = "ActivityTrackingStore", (a = "displayName") in(l = b) ? Object.defineProperty(l, a, {
-  value: r,
+l = "ActivityTrackingStore", (r = "displayName") in(a = D) ? Object.defineProperty(a, r, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[a] = r, new b(d.Z, {
-  RUNNING_GAMES_CHANGE: () => M(),
+}) : a[r] = l, new D(u.Z, {
+  RUNNING_GAMES_CHANGE: () => b(),
   CONNECTION_OPEN: function() {
     if (R) return !1;
-    for (let e of Object.keys(O)) x(O[e]);
-    M(!1), R = !0
+    for (let e of Object.keys(v)) P(v[e]);
+    b(!1), R = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {
       code: t
     } = e;
-    4004 === t && D()
+    4004 === t && M()
   },
-  LOGOUT: D,
+  LOGOUT: M,
   ACTIVITY_UPDATE_SUCCESS: function(e) {
     let {
       applicationId: t,
       token: n
-    } = e, s = O[t];
-    if (null == s) return !1;
-    s.token = n, c.K.set(f, O)
+    } = e, i = v[t];
+    if (null == i) return !1;
+    i.token = n, c.K.set(A, v)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
-    } = e, n = O[t];
+    } = e, n = v[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, c.K.set(f, O)
+    n.token = null, n.updatedAt = null, c.K.set(A, v)
   }
 })

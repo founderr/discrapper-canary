@@ -50,15 +50,15 @@ function E(e) {
         guildRoles: t
       }
     }, [r]),
-    f = (0, s.e7)([u.Z], () => null != i && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(i) : null);
-  return null == e ? null : S({
+    S = (0, s.e7)([u.Z], () => null != i && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(i) : null);
+  return null == e ? null : f({
     user: e.author,
     channel: n,
     guild: T,
     guildRoles: h,
     userName: I,
     member: d,
-    friendNickname: f
+    friendNickname: S
   })
 }
 
@@ -84,7 +84,7 @@ function T(e, t) {
     }, [i]),
     d = (0, s.e7)([u.Z], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null),
     E = c.ZP.useName(e);
-  return S({
+  return f({
     user: e,
     channel: t,
     guild: o,
@@ -102,7 +102,7 @@ function h(e, t) {
     s = null != i ? l.Z.getRoles(i) : void 0,
     o = null == i || null == n ? null : a.ZP.getMember(i, n),
     _ = null != n && null != t && t.isPrivate() ? u.Z.getNickname(n) : null;
-  return S({
+  return f({
     user: e,
     channel: t,
     guild: r,
@@ -112,7 +112,7 @@ function h(e, t) {
   })
 }
 
-function S(e) {
+function f(e) {
   var t, n, i, r;
   let {
     user: s,

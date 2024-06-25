@@ -1,37 +1,37 @@
-t.d(n, {
+n.d(t, {
   Lb: function() {
-    return l
+    return s
   },
   gP: function() {
-    return u
+    return r
   },
   sF: function() {
-    return a
+    return l
   }
 });
-var i = t(626135),
-  r = t(981631);
+var i = n(626135),
+  a = n(981631);
 
-function l(e, n, t) {
-  i.default.track(r.rMx.FORWARD_MESSAGE_STARTED, {
+function s(e, t, n) {
+  i.default.track(a.rMx.FORWARD_MESSAGE_STARTED, {
     channel_id: e,
-    message_id: n,
-    source: t
+    message_id: t,
+    source: n
   })
 }
 
-function a(e, n) {
-  i.default.track(r.rMx.FORWARD_MESSAGE_CANCELLED, {
+function l(e, t) {
+  i.default.track(a.rMx.FORWARD_MESSAGE_CANCELLED, {
     channel_id: e,
-    message_id: n
+    message_id: t
   })
 }
 
-function u(e, n, t, l) {
-  i.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
+function r(e, t, n, s) {
+  i.default.track(a.rMx.FORWARD_MESSAGE_SENT, {
     channel_id: e,
-    message_id: n,
-    has_error: t,
-    num_destinations: l
+    message_id: t,
+    has_error: n,
+    num_destinations: s
   })
 }

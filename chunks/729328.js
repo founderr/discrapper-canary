@@ -1,39 +1,39 @@
-r.r(e), r.d(e, {
+n.r(e), n.d(e, {
   default: function() {
-    return i
+    return a
   }
 });
-var n = r(735250);
-r(470079);
-var s = r(481060),
-  o = r(689938),
-  a = r(85258);
+var r = n(735250);
+n(470079);
+var o = n(481060),
+  s = n(689938),
+  i = n(85258);
 
-function i(t) {
+function a(t) {
   let {
     onClose: e,
-    transitionState: r,
-    body: i
+    transitionState: n,
+    body: a
   } = t;
-  return (0, n.jsxs)(s.ModalRoot, {
-    transitionState: r,
-    children: [(0, n.jsx)(s.ModalHeader, {
+  return (0, r.jsxs)(o.ModalRoot, {
+    transitionState: n,
+    children: [(0, r.jsx)(o.ModalHeader, {
       separator: !1,
-      children: (0, n.jsx)(s.FormTitle, {
+      children: (0, r.jsx)(o.FormTitle, {
         tag: "h2",
-        className: a.title,
-        children: o.Z.Messages.STREAM_REPORTED
+        className: i.title,
+        children: s.Z.Messages.STREAM_REPORTED
       })
-    }), (0, n.jsx)(s.ModalContent, {
-      children: "string" == typeof i ? (0, n.jsx)(s.Text, {
+    }), (0, r.jsx)(o.ModalContent, {
+      children: "string" == typeof a ? (0, r.jsx)(o.Text, {
         variant: "text-md/normal",
-        children: i
-      }) : i
-    }), (0, n.jsx)(s.ModalFooter, {
-      children: (0, n.jsx)(s.Button, {
-        color: s.Button.Colors.BRAND,
+        children: a
+      }) : a
+    }), (0, r.jsx)(o.ModalFooter, {
+      children: (0, r.jsx)(o.Button, {
+        color: o.Button.Colors.BRAND,
         onClick: e,
-        children: o.Z.Messages.DONE
+        children: s.Z.Messages.DONE
       })
     })]
   })

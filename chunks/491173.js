@@ -13,10 +13,10 @@ var i = n(735250),
   I = n(378233),
   T = n(419922),
   h = n(689938),
-  S = n(713216);
-let f = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-  N = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-  A = e => {
+  f = n(713216);
+let S = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+  A = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+  N = e => {
     let t = null,
       n = null;
     if (!(0, I.jl)(e) && !(0, I.J8)(e) || (0, I.J8)(e)) {
@@ -31,7 +31,7 @@ let f = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
       null != r && (t = h.Z.Messages.STICKER_FROM_SOURCE.format({
         source: r.name
       }), n = (0, i.jsx)(T.ZP, {
-        size: N,
+        size: A,
         sticker: (0, I.Zt)(r),
         disableAnimation: !0
       }))
@@ -59,17 +59,17 @@ let f = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
     let {
       graphic: a,
       title: _
-    } = A(s), c = (0, I.jl)(s) || (0, I.J8)(s) ? (0, i.jsx)(T.ZP, {
+    } = N(s), c = (0, I.jl)(s) || (0, I.J8)(s) ? (0, i.jsx)(T.ZP, {
       isInteracting: !0,
-      size: f,
+      size: S,
       sticker: s,
       disableAnimation: !0
     }) : (0, i.jsx)("div", {
-      className: S.iconWrapper,
+      className: f.iconWrapper,
       children: (0, i.jsx)(o.PlusSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: S.icon
+        className: f.icon
       })
     });
     return (0, i.jsx)(u.Z, {

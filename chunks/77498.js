@@ -20,10 +20,10 @@ function E(e, t, n) {
 let I = "GameStoreReportedGames",
   T = new u.Z,
   h = {},
-  S = {},
-  f = null !== (r = a.K.get(I)) && void 0 !== r ? r : {},
-  N = "";
-let A = null;
+  f = {},
+  S = null !== (r = a.K.get(I)) && void 0 !== r ? r : {},
+  A = "";
+let N = null;
 
 function m(e) {
   return {
@@ -43,16 +43,16 @@ function O(e) {
   let t = e instanceof c.Z ? m(e) : e;
   for (let n of (T.set(e.id, t), h[e.name.toLowerCase()] = t, e.aliases)) h[n.toLowerCase()] = t;
   if ((0, d.isDesktop)())
-    for (let n of e.executables) S[n.name] = t
+    for (let n of e.executables) f[n.name] = t
 }
-class R extends(s = o.ZP.PersistedStore) {
+class p extends(s = o.ZP.PersistedStore) {
   initialize(e) {
     var t;
-    null != e && (null != e.detectableGamesEtag && (N = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => O(e)))
+    null != e && (null != e.detectableGamesEtag && (A = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => O(e)))
   }
   getState() {
     return (0, d.isDesktop)() ? {
-      detectableGamesEtag: N,
+      detectableGamesEtag: A,
       detectableGames: T.values()
     } : {
       detectableGamesEtag: "",
@@ -77,13 +77,13 @@ class R extends(s = o.ZP.PersistedStore) {
     return !0 === i
   }
   get detectableGamesEtag() {
-    return N
-  }
-  get lastFetched() {
     return A
   }
+  get lastFetched() {
+    return N
+  }
   getGameByExecutable(e) {
-    return S[e]
+    return f[e]
   }
   getGameByGameData(e) {
     var t, n;
@@ -101,14 +101,14 @@ class R extends(s = o.ZP.PersistedStore) {
   }
   shouldReport(e) {
     let t = null != this.getGameByName(e),
-      n = null != f[e];
+      n = null != S[e];
     return _.G6.getSetting() && !i && !(t || n)
   }
   markGameReported(e) {
-    f[e] = !0, a.K.set(I, f)
+    S[e] = !0, a.K.set(I, S)
   }
 }
-E(R, "displayName", "GameStore"), E(R, "persistKey", "GameStore"), E(R, "migrations", [e => {
+E(p, "displayName", "GameStore"), E(p, "persistKey", "GameStore"), E(p, "migrations", [e => {
   var t, n;
   if (null == e) return {
     detectableGamesEtag: "",
@@ -121,7 +121,7 @@ E(R, "displayName", "GameStore"), E(R, "persistKey", "GameStore"), E(R, "migrati
 }, e => (0, d.isDesktop)() ? e : {
   detectableGamesEtag: "",
   detectableGames: []
-}]), t.Z = new R(l.Z, {
+}]), t.Z = new p(l.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       detectableApplications: t
@@ -139,7 +139,7 @@ E(R, "displayName", "GameStore"), E(R, "persistKey", "GameStore"), E(R, "migrati
       games: t,
       etag: n
     } = e;
-    for (let e of (null != n && N !== n && (N = n), t)) O(function(e) {
+    for (let e of (null != n && A !== n && (A = n), t)) O(function(e) {
       var t, n, i, r, s, o;
       return {
         id: e.id,
@@ -153,6 +153,6 @@ E(R, "displayName", "GameStore"), E(R, "persistKey", "GameStore"), E(R, "migrati
         supportsOutOfProcessOverlay: c.Z.supportsOutOfProcessOverlay(e.overlay_methods)
       }
     }(e));
-    i = void 0, A = Date.now()
+    i = void 0, N = Date.now()
   }
 })

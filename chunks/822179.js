@@ -35,11 +35,11 @@ let T = new l.Z({
   h = () => {
     c.Z.isLoaded && T.compute()
   },
-  S = () => {
+  f = () => {
     h()
   };
 
-function f() {
+function S() {
   var e;
   let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t) return !1;
@@ -48,9 +48,9 @@ function f() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class N extends(i = o.ZP.PersistedStore) {
+class A extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(c.Z), null != e && (I = e), this.syncWith([c.Z], S), this.syncWith([u.Z], f)
+    this.waitFor(c.Z), null != e && (I = e), this.syncWith([c.Z], f), this.syncWith([u.Z], S)
   }
   getState() {
     return I
@@ -62,7 +62,7 @@ class N extends(i = o.ZP.PersistedStore) {
     return T
   }
 }
-E(N, "displayName", "StickersPersistedStore"), E(N, "persistKey", "StickersPersistedStoreV2"), t.Z = new N(a.Z, {
+E(A, "displayName", "StickersPersistedStore"), E(A, "persistKey", "StickersPersistedStoreV2"), t.Z = new A(a.Z, {
   STICKER_TRACK_USAGE: e => {
     let {
       stickerIds: t

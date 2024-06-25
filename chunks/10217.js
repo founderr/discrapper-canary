@@ -25,10 +25,10 @@ var a, l, i = n(735250),
   T = n(981631),
   j = n(689938),
   A = n(827312),
-  P = n(487204);
+  b = n(487204);
 (l = a || (a = {})).DELETE = "delete", l.EDIT = "edit", l.SHARE = "share";
 
-function b(e) {
+function P(e) {
   let {
     clip: t,
     isNew: n,
@@ -93,7 +93,7 @@ function R(e) {
       c(n.name), g(null !== (e = n.name) && void 0 !== e ? e : "")
     }
   }, [n.name, o]), u) ? (0, i.jsx)(C.TextInput, {
-    inputClassName: r()(P["heading-lg/medium"], A.clipTitleInput),
+    inputClassName: r()(b["heading-lg/medium"], A.clipTitleInput),
     onClick: e => e.stopPropagation(),
     value: v,
     autoFocus: !0,
@@ -249,7 +249,7 @@ t.Z = function(e) {
     onShare: L
   } = e, I = (0, u.Wu)([E.default], () => l.users.map(e => E.default.getUser(e)).filter(M.lm)), {
     analyticsLocations: N
-  } = (0, g.ZP)(v.Z.CLIPS_GALLERY_ITEM), [Z, P] = s.useState(!1), k = s.useRef(null), B = (0, f.Z)(null !== (a = null === (t = l.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), D = s.useRef(new m.sW(500, () => {
+  } = (0, g.ZP)(v.Z.CLIPS_GALLERY_ITEM), [Z, b] = s.useState(!1), k = s.useRef(null), B = (0, f.Z)(null !== (a = null === (t = l.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), D = s.useRef(new m.sW(500, () => {
     var e;
     let t = k.current;
     null != t && t.paused && (t.currentTime = B.current, null === (e = k.current) || void 0 === e || e.play())
@@ -258,10 +258,10 @@ t.Z = function(e) {
     null != e && (e.pause(), e.src = "")
   }, []), V = s.useCallback(() => {
     var e;
-    P(!0), null === (e = D.current) || void 0 === e || e.delay()
+    b(!0), null === (e = D.current) || void 0 === e || e.delay()
   }, []), w = s.useCallback(() => {
     var e, t, n;
-    P(!1);
+    b(!1);
     let a = k.current;
     null === (e = D.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (n = null === (t = l.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== n ? n : 0)
   }, [null === (n = l.editMetadata) || void 0 === n ? void 0 : n.start]), Y = s.useCallback(e => {
@@ -286,7 +286,7 @@ t.Z = function(e) {
       onFocus: V,
       onMouseOver: V,
       onMouseLeave: w,
-      children: [(0, i.jsx)(b, {
+      children: [(0, i.jsx)(P, {
         clip: l,
         isNew: d,
         videoRef: k

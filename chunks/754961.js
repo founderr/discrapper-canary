@@ -3,79 +3,79 @@ n.d(t, {
     return m
   },
   i: function() {
-    return T
+    return p
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(920906),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(920906),
   o = n(442837),
   c = n(481060),
-  u = n(607070),
-  d = n(603368),
-  E = n(284019),
-  h = n(689938),
-  _ = n(16747);
+  d = n(607070),
+  u = n(603368),
+  _ = n(284019),
+  E = n(689938),
+  h = n(16747);
 
 function I(e) {
   let {
     index: t,
     onClick: n,
-    name: l,
-    isActive: E,
+    name: a,
+    isActive: _,
     animate: I,
     fillBackgroundColor: m,
-    hasError: T
-  } = e, g = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), p = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), N = i.useMemo(() => (0, d.j1)(m, p.hex()), [m, p]), S = null != N, C = (0, r.useSpring)({
-    transform: E ? "translateX(0%)" : "translateX(-100%)",
+    hasError: p
+  } = e, g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), C = s.useMemo(() => (0, u.j1)(m, T.hex()), [m, T]), f = null != C, S = (0, l.useSpring)({
+    transform: _ ? "translateX(0%)" : "translateX(-100%)",
     config: {
-      ...r.config.stiff,
+      ...l.config.stiff,
       clamp: !0
     },
     immediate: g || !I
-  }), A = (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(c.Text, {
+  }), N = (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(c.Text, {
       variant: "text-sm/medium",
       color: "header-primary",
-      children: h.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
-    }), (0, s.jsx)(c.Text, {
+      children: E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+    }), (0, i.jsx)(c.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      children: h.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+      children: E.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
     })]
   });
-  return (0, s.jsx)(c.Tooltip, {
-    color: T ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
-    text: T ? A : l,
-    "aria-label": T ? h.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : l,
+  return (0, i.jsx)(c.Tooltip, {
+    color: p ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
+    text: p ? N : a,
+    "aria-label": p ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
     shouldShow: null != n,
-    tooltipStyle: N,
-    tooltipClassName: a()(_.progressStepTooltip, {
-      [_.progressStepTooltipCustomColors]: !T && null != N
+    tooltipStyle: C,
+    tooltipClassName: r()(h.progressStepTooltip, {
+      [h.progressStepTooltipCustomColors]: !p && null != C
     }),
-    children: e => (0, s.jsxs)(c.Clickable, {
+    children: e => (0, i.jsxs)(c.Clickable, {
       ...e,
-      "aria-label": h.Z.Messages.STEP_NUMBER.format({
+      "aria-label": E.Z.Messages.STEP_NUMBER.format({
         number: t
       }),
       tabIndex: null == n ? -1 : void 0,
       onClick: n,
-      className: _.progressStepWrapper,
-      children: [T && (0, s.jsx)(c.WarningIcon, {
+      className: h.progressStepWrapper,
+      children: [p && (0, i.jsx)(c.WarningIcon, {
         size: "xs",
         color: "currentColor",
-        className: _.errorIcon
-      }), (0, s.jsx)("div", {
-        className: _.progressStep,
-        children: (0, s.jsx)(r.animated.div, {
+        className: h.errorIcon
+      }), (0, i.jsx)("div", {
+        className: h.progressStep,
+        children: (0, i.jsx)(l.animated.div, {
           style: {
-            ...C,
-            ...N
+            ...S,
+            ...C
           },
-          className: a()(_.progressStepFill, {
-            [_.customProgressStepFill]: S
+          className: r()(h.progressStepFill, {
+            [h.customProgressStepFill]: f
           })
         })
       })]
@@ -87,65 +87,65 @@ function m(e) {
   let {
     steps: t,
     currentStepIndex: n,
-    furthestStepIndex: i,
-    onStepClick: l,
+    furthestStepIndex: s,
+    onStepClick: a,
     stepFillColor: o,
     animationStyle: c,
-    className: u
+    className: d
   } = e;
-  return (0, s.jsx)(r.animated.div, {
+  return (0, i.jsx)(l.animated.div, {
     style: c,
-    className: a()(_.progressContainer, u),
+    className: r()(h.progressContainer, d),
     children: t.map(e => {
       let {
         index: t,
-        name: a,
-        hasError: r
+        name: r,
+        hasError: l
       } = e;
-      return (0, s.jsx)(I, {
-        name: a,
-        onClick: t <= i ? () => l(t) : void 0,
+      return (0, i.jsx)(I, {
+        name: r,
+        onClick: t <= s ? () => a(t) : void 0,
         isActive: t <= n,
-        hasError: r,
+        hasError: l,
         index: t,
         fillBackgroundColor: o,
         animate: n === t || n + 1 === t
-      }, a)
+      }, r)
     })
   })
 }
 
-function T(e) {
+function p(e) {
   let {
     className: t,
     isBackDisabled: n,
-    isNextDisabled: i,
-    onNextClick: l,
+    isNextDisabled: s,
+    onNextClick: a,
     onBackClick: o,
-    nextButtonBackgroundColor: u,
-    nextButtonClassName: d,
+    nextButtonBackgroundColor: d,
+    nextButtonClassName: u,
     nextButtonAnimationStyle: I
   } = e;
-  return (0, s.jsxs)("div", {
-    className: a()(_.buttonsContainer, t),
-    children: [(0, s.jsx)(c.Button, {
+  return (0, i.jsxs)("div", {
+    className: r()(h.buttonsContainer, t),
+    children: [(0, i.jsx)(c.Button, {
       look: c.Button.Looks.OUTLINED,
       size: c.Button.Sizes.MEDIUM,
       color: c.Button.Colors.PRIMARY,
       onClick: o,
       disabled: n,
-      children: h.Z.Messages.BACK
-    }), (0, s.jsx)(r.animated.div, {
+      children: E.Z.Messages.BACK
+    }), (0, i.jsx)(l.animated.div, {
       style: I,
-      children: (0, s.jsx)(E.Z, {
-        className: d,
-        themeColor: u,
+      children: (0, i.jsx)(_.Z, {
+        className: u,
+        themeColor: d,
         color: c.Button.Colors.BRAND,
         look: c.Button.Looks.FILLED,
         size: c.Button.Sizes.MEDIUM,
-        onClick: l,
-        disabled: i,
-        children: h.Z.Messages.NEXT
+        onClick: a,
+        disabled: s,
+        children: E.Z.Messages.NEXT
       })
     })]
   })

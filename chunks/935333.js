@@ -1,36 +1,36 @@
-a.r(s);
-var t = a(735250),
-  i = a(470079),
-  n = a(481060),
-  l = a(689938),
-  o = a(241343);
-s.default = e => {
+s.r(t);
+var a = s(735250),
+  n = s(470079),
+  i = s(481060),
+  o = s(689938),
+  d = s(241343);
+t.default = e => {
   let {
-    transitionState: s,
-    processFiles: a,
-    onClose: r
+    transitionState: t,
+    processFiles: s,
+    onClose: l
   } = e;
-  return i.useEffect(() => {
+  return n.useEffect(() => {
     (async () => {
-      s === n.ModalTransitionState.ENTERED && (await a(), r())
+      t === i.ModalTransitionState.ENTERED && (await s(), l())
     })()
-  }, [r, a, s]), (0, t.jsx)(n.ModalRoot, {
-    transitionState: s,
-    size: n.ModalSize.SMALL,
-    "aria-label": l.Z.Messages.UPLOADING_FILES_TITLE,
-    children: (0, t.jsxs)(n.ModalContent, {
-      className: o.modalContent,
-      children: [(0, t.jsx)(n.Spinner, {
-        className: o.spinner
-      }), (0, t.jsx)(n.FormSection, {
-        tag: n.FormTitleTags.H1,
-        titleClassName: o.title,
-        title: l.Z.Messages.UPLOADING_FILES_TITLE,
-        className: o.__invalid_content,
-        children: (0, t.jsx)(n.FormText, {
-          type: n.FormTextTypes.DESCRIPTION,
-          className: o.description,
-          children: l.Z.Messages.UPLOADING_LOADING_TEXT
+  }, [l, s, t]), (0, a.jsx)(i.ModalRoot, {
+    transitionState: t,
+    size: i.ModalSize.SMALL,
+    "aria-label": o.Z.Messages.UPLOADING_FILES_TITLE,
+    children: (0, a.jsxs)(i.ModalContent, {
+      className: d.modalContent,
+      children: [(0, a.jsx)(i.Spinner, {
+        className: d.spinner
+      }), (0, a.jsx)(i.FormSection, {
+        tag: i.FormTitleTags.H1,
+        titleClassName: d.title,
+        title: o.Z.Messages.UPLOADING_FILES_TITLE,
+        className: d.__invalid_content,
+        children: (0, a.jsx)(i.FormText, {
+          type: i.FormTextTypes.DESCRIPTION,
+          className: d.description,
+          children: o.Z.Messages.UPLOADING_LOADING_TEXT
         })
       })]
     })

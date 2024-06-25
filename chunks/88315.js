@@ -1,15 +1,15 @@
 n.d(t, {
   P7: function() {
-    return E
+    return m
   },
   RR: function() {
-    return m
+    return p
   },
   UN: function() {
     return u
   },
   bg: function() {
-    return p
+    return _
   },
   hn: function() {
     return d
@@ -18,10 +18,10 @@ n.d(t, {
     return h
   }
 });
-var l = n(979590),
-  i = n.n(l),
-  s = n(866442),
-  a = n(220082),
+var i = n(979590),
+  a = n.n(i),
+  l = n(866442),
+  s = n(220082),
   r = n(594174),
   o = n(292793),
   c = n(813900);
@@ -35,13 +35,13 @@ function u(e) {
 function d(e, t) {
   let {
     width: n,
-    height: l,
-    left: i,
-    top: s
-  } = e.getBoundingClientRect(), a = (t.clientX - i) / n;
+    height: i,
+    left: a,
+    top: l
+  } = e.getBoundingClientRect(), s = (t.clientX - a) / n;
   return {
-    x: a,
-    y: (t.clientY - s) / l
+    x: s,
+    y: (t.clientY - l) / i
   }
 }
 
@@ -49,7 +49,7 @@ function h(e, t) {
   return Math.round(e * t * window.devicePixelRatio)
 }
 
-function m(e, t, n) {
+function p(e, t, n) {
   return {
     x: h(e.x, t),
     y: h(e.y, n),
@@ -57,23 +57,23 @@ function m(e, t, n) {
   }
 }
 
-function E(e) {
+function m(e) {
   return e.type === o.W.LINE
 }
 
-function p(e, t, n, l) {
+function _(e, t, n, i) {
   var o;
   let u = r.default.getUser(e),
     d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
-    h = null != d ? null === (o = a.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0] : null,
-    m = null != h ? "#".concat(i()({
+    h = null != d ? null === (o = s.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0] : null,
+    p = null != h ? "#".concat(a()({
       r: h[0],
       g: h[1],
       b: h[2]
-    }).toHex()) : l,
-    E = (0, s.Bd)((0, s._i)(m)) > .5 ? n : t;
+    }).toHex()) : i,
+    m = (0, l.Bd)((0, l._i)(p)) > .5 ? n : t;
   return {
-    fillColor: m,
-    outlineColor: E
+    fillColor: p,
+    outlineColor: m
   }
 }

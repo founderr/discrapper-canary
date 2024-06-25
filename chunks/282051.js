@@ -1,57 +1,57 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(946314),
-  r = n(921944),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(946314),
+  l = n(921944),
   o = n(689938),
   c = n(738934);
 
-function u(e) {
+function d(e) {
   let {
     onClick: t,
     onSecondaryClick: n,
-    onComponentMount: u,
-    markAsDismissed: d
+    onComponentMount: d,
+    markAsDismissed: u
   } = e;
-  i.useEffect(() => {
-    null == u || u()
-  }, [u]);
-  let E = i.useCallback(e => {
-      t(e), null == d || d(r.L.PRIMARY)
-    }, [t, d]),
-    h = i.useCallback(() => {
-      null == n || n(), null == d || d(r.L.SECONDARY)
-    }, [n, d]);
-  return (0, s.jsxs)("div", {
+  s.useEffect(() => {
+    null == d || d()
+  }, [d]);
+  let _ = s.useCallback(e => {
+      t(e), null == u || u(l.L.PRIMARY)
+    }, [t, u]),
+    E = s.useCallback(() => {
+      null == n || n(), null == u || u(l.L.SECONDARY)
+    }, [n, u]);
+  return (0, i.jsxs)("div", {
     className: c.tooltipWrapper,
-    children: [(0, s.jsx)(l.Heading, {
+    children: [(0, i.jsx)(a.Heading, {
       className: c.tooltipHeader,
       variant: "heading-md/semibold",
       children: o.Z.Messages.SERVER_DISCOVERY_TOOLTIP_TITLE
-    }), (0, s.jsx)(l.Text, {
+    }), (0, i.jsx)(a.Text, {
       className: c.tooltipText,
       variant: "text-sm/normal",
       children: o.Z.Messages.SERVER_DISCOVERY_TOOLTIP_DESCRIPTION.format({
-        count: a.WZ
+        count: r.WZ
       })
-    }), (0, s.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       className: c.buttonsContainer,
-      children: [(0, s.jsx)(l.Button, {
+      children: [(0, i.jsx)(a.Button, {
         fullWidth: !0,
-        size: l.Button.Sizes.SMALL,
-        color: l.Button.Colors.BRAND,
-        onClick: E,
+        size: a.Button.Sizes.SMALL,
+        color: a.Button.Colors.BRAND,
+        onClick: _,
         children: o.Z.Messages.LEARN_MORE
-      }), (0, s.jsx)(l.Button, {
+      }), (0, i.jsx)(a.Button, {
         fullWidth: !0,
-        size: l.Button.Sizes.SMALL,
-        look: l.Button.Looks.BLANK,
-        onClick: h,
+        size: a.Button.Sizes.SMALL,
+        look: a.Button.Looks.BLANK,
+        onClick: E,
         children: o.Z.Messages.NO_THANKS
       })]
     })]

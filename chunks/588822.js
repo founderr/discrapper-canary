@@ -24,9 +24,9 @@ function E(e) {
     lineClamp: I = 6,
     setLineClamp: T = !0,
     textColor: h,
-    userId: S
-  } = e, f = r.useMemo(() => (0, u.Z)(S) ? (0, i.jsx)(l.Z, {}) : null == t || "" === t ? null : (0, _.YP)(t), [S, t]);
-  return null == f ? null : (0, i.jsx)("div", {
+    userId: f
+  } = e, S = r.useMemo(() => (0, u.Z)(f) ? (0, i.jsx)(l.Z, {}) : null == t || "" === t ? null : (0, _.YP)(t), [f, t]);
+  return null == S ? null : (0, i.jsx)("div", {
     className: o()(n, d.markup),
     children: (0, i.jsx)(a.Text, {
       variant: "text-sm/normal",
@@ -37,7 +37,7 @@ function E(e) {
           disableAnimations: s && !E,
           disableInteractions: !1
         },
-        children: f
+        children: S
       })
     })
   })

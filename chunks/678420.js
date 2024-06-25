@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return x
   }
 }), n(47120);
 var l = n(735250),
@@ -15,7 +15,7 @@ var l = n(735250),
   u = n(689938),
   g = n(201770);
 
-function x(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function x(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class m extends r.PureComponent {
+class p extends r.PureComponent {
   componentDidMount() {
     this.mountedAt = Date.now(), this.maxScrolledPercentage = 0, this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0)
   }
@@ -40,16 +40,16 @@ class m extends r.PureComponent {
   }
   constructor(...e) {
     var t;
-    super(...e), t = this, x(this, "maxScrolledPercentage", 0), x(this, "mountedAt", 0), x(this, "close", () => {
+    super(...e), t = this, m(this, "maxScrolledPercentage", 0), m(this, "mountedAt", 0), m(this, "close", () => {
       (0, a.closeModal)(h.Xd)
-    }), x(this, "handleScroll", e => {
+    }), m(this, "handleScroll", e => {
       let {
         offsetHeight: t,
         scrollHeight: n,
         scrollTop: l
       } = e.getScrollerState();
       this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, l / (n - t)), 1)
-    }), x(this, "track", function(e) {
+    }), m(this, "track", function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         {
@@ -72,7 +72,7 @@ class m extends r.PureComponent {
   }
 }
 
-function p(e) {
+function x(e) {
   let {
     changelog: t,
     loaded: n,
@@ -110,7 +110,7 @@ function p(e) {
   });
   return (0, l.jsx)(a.ModalRoot, {
     transitionState: e.transitionState,
-    children: (0, l.jsx)(m, {
+    children: (0, l.jsx)(p, {
       changeLog: t
     })
   })

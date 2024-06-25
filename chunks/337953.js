@@ -1,11 +1,11 @@
-s.d(t, {
+a.d(t, {
   Z: function() {
     return o
   }
 });
-var a = s(512722),
-  n = s.n(a),
-  l = s(875425);
+var s = a(512722),
+  n = a.n(s),
+  l = a(875425);
 
 function o(e) {
   if (e !== l.F.TODAY) return n()("number" == typeof e, "Invalid custom status clear timeout"), e;

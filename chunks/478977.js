@@ -1,37 +1,37 @@
 var n = t(735250);
 t(470079);
-var i = t(866442),
-  a = t(481060),
-  l = t(614771);
+var a = t(866442),
+  i = t(481060),
+  r = t(614771);
 s.Z = function(e) {
   let {
     colorKey: s,
     value: t,
-    onChange: r,
-    title: o
+    onChange: o,
+    title: l
   } = e;
-  return (0, n.jsxs)(a.FormItem, {
-    children: [(0, n.jsx)(a.FormTitle, {
-      tag: a.FormTitleTags.H5,
-      children: o
-    }), (0, n.jsx)(a.Popout, {
-      renderPopout: e => (0, n.jsx)(a.CustomColorPicker, {
+  return (0, n.jsxs)(i.FormItem, {
+    children: [(0, n.jsx)(i.FormTitle, {
+      tag: i.FormTitleTags.H5,
+      children: l
+    }), (0, n.jsx)(i.Popout, {
+      renderPopout: e => (0, n.jsx)(i.CustomColorPicker, {
         ...e,
         value: t,
-        onChange: e => r(s, (0, i.Rf)(e))
+        onChange: e => o(s, (0, a.Rf)(e))
       }),
-      children: e => (0, n.jsx)(a.Clickable, {
+      children: e => (0, n.jsx)(i.Clickable, {
         ...e,
         tag: "span",
         "aria-label": "Select a color",
-        className: l.swatchContainer,
+        className: r.swatchContainer,
         style: {
           backgroundColor: t
         },
-        children: (0, n.jsx)(a.EyeDropperIcon, {
+        children: (0, n.jsx)(i.EyeDropperIcon, {
           size: "xs",
           color: "currentColor",
-          className: l.swatchIcon
+          className: r.swatchIcon
         })
       })
     })]

@@ -1,6 +1,6 @@
 t.d(n, {
   NB: function() {
-    return o
+    return l
   },
   ar: function() {
     return c
@@ -18,19 +18,19 @@ t.d(n, {
 var i = t(881052);
 t(496675);
 var r = t(981631),
-  l = t(689938);
-let o = "_role";
+  o = t(689938);
+let l = "_role";
 
 function u(e) {
   if (!(e >= 0)) switch (-e) {
     case r.evJ.ENTITY_TOO_LARGE:
-      return l.Z.Messages.UPLOAD_ERROR_TOO_LARGE;
+      return o.Z.Messages.UPLOAD_ERROR_TOO_LARGE;
     case r.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
-      return l.Z.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
+      return o.Z.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
     case 1:
-      return l.Z.Messages.ERROR_GENERIC_TITLE;
+      return o.Z.Messages.ERROR_GENERIC_TITLE;
     default:
-      return l.Z.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({
+      return o.Z.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({
         code: -e
       })
   }
@@ -42,7 +42,7 @@ function s(e) {
   } = e;
   if (null != n && "" === n.name.trim()) {
     var t, r;
-    return t = o, r = l.Z.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new i.Hx({
+    return t = l, r = o.Z.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new i.Hx({
       status: 400,
       body: {
         message: "Invalid form body",
@@ -65,14 +65,14 @@ function a(e) {
     guildProductListing: t,
     name: i,
     priceTier: r,
-    description: l,
-    image: o,
+    description: o,
+    image: l,
     imageName: u,
     isImageChanged: s,
     newRoleParams: a,
     hasUnsavedAttachmentChanges: c
   } = e, d = {};
-  (null == t ? void 0 : t.name) !== i && "" !== i.trim() && (d.name = i), (null !== (n = null == t ? void 0 : t.description) && void 0 !== n ? n : "") !== l && (d.description = l), (null == t ? void 0 : t.price_tier) !== r && null != r && (d.priceTier = r), null != a && "" !== a.name.trim() ? d.createNewRole = !0 : null === a && (d.unlinkRole = !0), o.startsWith("data:") && (s || null == t && (Object.keys(d).length > 0 || c)) && (d.image = o, d.imageName = u);
+  (null == t ? void 0 : t.name) !== i && "" !== i.trim() && (d.name = i), (null !== (n = null == t ? void 0 : t.description) && void 0 !== n ? n : "") !== o && (d.description = o), (null == t ? void 0 : t.price_tier) !== r && null != r && (d.priceTier = r), null != a && "" !== a.name.trim() ? d.createNewRole = !0 : null === a && (d.unlinkRole = !0), l.startsWith("data:") && (s || null == t && (Object.keys(d).length > 0 || c)) && (d.image = l, d.imageName = u);
   let _ = Object.keys(d).length > 0 || c;
   return {
     changes: d,

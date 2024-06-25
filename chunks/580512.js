@@ -25,11 +25,11 @@ function I(e) {
     onClose: T
   } = e, {
     analyticsLocations: h,
-    newestAnalyticsLocation: S
+    newestAnalyticsLocation: f
   } = (0, o.ZP)(), {
-    trackUserProfileAction: f,
-    ...N
-  } = (0, _.KZ)(), A = (0, r.e7)([u.default], () => u.default.getCurrentUser()), {
+    trackUserProfileAction: S,
+    ...A
+  } = (0, _.KZ)(), N = (0, r.e7)([u.default], () => u.default.getCurrentUser()), {
     isApplicationStreaming: m,
     activity: O
   } = (0, r.cj)([a.Z, l.Z], () => {
@@ -53,13 +53,13 @@ function I(e) {
     type: s.P.BITE_SIZE_POPOUT,
     activity: O,
     className: E.activity,
-    source: S,
+    source: f,
     user: t,
     guildId: null == n ? void 0 : n.id,
     channelId: I,
     onOpenGameProfile: T,
     onAction: () => {
-      f({
+      S({
         action: "JOIN_ACTIVITY"
       }), (0, c.Ac)({
         activityType: m ? d.IIU.STREAMING : null == O ? void 0 : O.type,
@@ -68,10 +68,10 @@ function I(e) {
         activitySessionId: null == O ? void 0 : O.session_id,
         applicationId: null == O ? void 0 : O.application_id,
         analyticsLocations: h,
-        ...N
+        ...A
       }), null == T || T()
     },
-    showActions: t.id !== (null == A ? void 0 : A.id),
+    showActions: t.id !== (null == N ? void 0 : N.id),
     actionColor: E.buttonColor,
     showChannelDetails: !0
   })

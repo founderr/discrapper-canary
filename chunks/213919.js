@@ -5,22 +5,22 @@ n.r(t), n.d(t, {
     return g
   },
   getToken: function() {
-    return A
+    return N
   },
   hideToken: function() {
     return O
   },
   init: function() {
-    return N
+    return A
   },
   removeToken: function() {
-    return p
+    return R
   },
   setToken: function() {
     return m
   },
   showToken: function() {
-    return R
+    return p
   }
 }), n(47120), n(724458);
 var s = n(433517),
@@ -50,7 +50,7 @@ function h() {
   null != r ? s.K.set(o.B1, r) : s.K.remove(o.B1), s.K.set(o.XM, E)
 }
 
-function S(e) {
+function f(e) {
   return null == e || 0 === e.length ? {
     decryptedToken: null,
     wasEncrypted: !1
@@ -63,22 +63,22 @@ function S(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(a) ? "".concat(a).concat(u.encryptString(e)) : e
 }
 
-function N() {
+function A() {
   if (T) return;
   r = s.K.get(o.B1), E = s.K.get(o.XM) || {};
   let {
     decryptedToken: e,
     wasEncrypted: t
-  } = S(r);
+  } = f(r);
   c = t, i = e, d = l(Object.entries(E).map(e => {
     let [t, n] = e, {
       decryptedToken: i,
       wasEncrypted: r
-    } = S(n);
+    } = f(n);
     return c = r || c, [t, i]
   }).filter(e => {
     let [t, n] = e;
@@ -86,13 +86,13 @@ function N() {
   })), T = !0
 }
 
-function A(e) {
-  return (N(), null != e) ? d[e] : i
+function N(e) {
+  return (A(), null != e) ? d[e] : i
 }
 
 function m(e, t) {
   if (null == e) {
-    p(t);
+    R(t);
     return
   }
   i = e, null != t && (d[t] = e), c ? g() : (r = i, E = d, h())
@@ -102,18 +102,18 @@ function O() {
   if (!I) I = !0, h()
 }
 
-function R() {
+function p() {
   if (!!I) I = !1, h()
 }
 
-function p(e) {
+function R(e) {
   let t = i;
   return null != e && (t = d[e], delete d[e], delete E[e]), t === i && (i = null, r = null), h(), null != t
 }
 
 function g() {
-  (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = f(i)), E = l(Object.entries(d).map(e => {
+  (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = S(i)), E = l(Object.entries(d).map(e => {
     let [t, n] = e;
-    return [t, f(n)]
+    return [t, S(n)]
   })), c = !0) : (r = i, E = d), h()
 }

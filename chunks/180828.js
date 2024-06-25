@@ -25,7 +25,7 @@ t.Z = e => {
     botVerified: I = !1,
     style: T,
     useRemSizes: h = !1,
-    usernameIcon: S
+    usernameIcon: f
   } = e;
   return (0, i.jsxs)("div", {
     className: s()(u, l.nameTag),
@@ -35,7 +35,7 @@ t.Z = e => {
       style: null != a ? {
         color: a
       } : void 0,
-      children: [S, t]
+      children: [f, t]
     }), null != n ? (0, i.jsxs)("span", {
       className: null != d ? d : void 0,
       children: ["#", n]

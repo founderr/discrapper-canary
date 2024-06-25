@@ -1,58 +1,58 @@
-let l, s;
+let o, l;
 n.d(t, {
   Z: function() {
     return O
   }
 }), n(47120);
-var r = n(735250),
-  a = n(470079),
-  i = n(120356),
-  o = n.n(i),
+var a = n(735250),
+  r = n(470079),
+  s = n(120356),
+  i = n.n(s),
   c = n(481060),
   u = n(447543),
   _ = n(881052),
-  I = n(703656),
-  E = n(285952),
-  d = n(153124),
+  d = n(703656),
+  I = n(285952),
+  E = n(153124),
   N = n(782605),
-  T = n(981631),
-  m = n(689938),
-  S = n(615882),
-  C = n(216019),
-  p = n(286359);
-let L = "hTKzmak",
-  A = (0, d.hQ)();
-let D = (l = window.GLOBAL_ENV.INVITE_HOST, s = "", null == l && (l = location.host, s = T.Z5c.INVITE("")), "".concat(location.protocol, "//").concat(l).concat(s, "/")),
-  f = [L, "".concat(D).concat(L), "".concat(D).concat("cool-people")],
+  m = n(981631),
+  p = n(689938),
+  T = n(615882),
+  f = n(216019),
+  S = n(286359);
+let C = "hTKzmak",
+  L = (0, E.hQ)();
+let A = (o = window.GLOBAL_ENV.INVITE_HOST, l = "", null == o && (o = location.host, l = m.Z5c.INVITE("")), "".concat(location.protocol, "//").concat(o).concat(l, "/")),
+  D = [C, "".concat(A).concat(C), "".concat(A).concat("cool-people")],
   M = e => {
     let {
       onClick: t
     } = e;
-    return (0, r.jsxs)(c.Clickable, {
-      className: S.rowContainer,
+    return (0, a.jsxs)(c.Clickable, {
+      className: T.rowContainer,
       onClick: () => {
-        t(), (0, I.uL)(T.Z5c.GUILD_DISCOVERY)
+        t(), (0, d.uL)(m.Z5c.GUILD_DISCOVERY)
       },
-      children: [(0, r.jsx)("img", {
+      children: [(0, a.jsx)("img", {
         width: 40,
         height: 40,
-        className: S.rowIcon,
+        className: T.rowIcon,
         alt: "",
-        src: p
-      }), (0, r.jsxs)("div", {
-        children: [(0, r.jsx)(c.Heading, {
-          className: S.rowText,
+        src: S
+      }), (0, a.jsxs)("div", {
+        children: [(0, a.jsx)(c.Heading, {
+          className: T.rowText,
           variant: "heading-md/semibold",
-          children: m.Z.Messages.DISCOVERY_UPSELL_HEADER
-        }), (0, r.jsx)(c.Text, {
-          className: S.rowText,
+          children: p.Z.Messages.DISCOVERY_UPSELL_HEADER
+        }), (0, a.jsx)(c.Text, {
+          className: T.rowText,
           variant: "text-xs/normal",
-          children: m.Z.Messages.DISCOVERY_UPSELL_DESCRIPTION
+          children: p.Z.Messages.DISCOVERY_UPSELL_DESCRIPTION
         })]
-      }), (0, r.jsx)("img", {
-        className: S.rowArrow,
+      }), (0, a.jsx)("img", {
+        className: T.rowArrow,
         alt: "",
-        src: C
+        src: f
       })]
     })
   };
@@ -61,30 +61,30 @@ function O(e) {
   let {
     onBack: t,
     onClose: n,
-    isSlideReady: l
-  } = e, [s, i] = a.useState(""), [I, d] = a.useState(!1), [T, C] = a.useState(null), p = a.useRef(null);
-  a.useEffect(() => {
+    isSlideReady: o
+  } = e, [l, s] = r.useState(""), [d, E] = r.useState(!1), [m, f] = r.useState(null), S = r.useRef(null);
+  r.useEffect(() => {
     var e;
-    l && (null === (e = p.current) || void 0 === e || e.focus())
-  }, [l]);
+    o && (null === (e = S.current) || void 0 === e || e.focus())
+  }, [o]);
   let O = e => {
     e.preventDefault();
-    let t = s.trim();
+    let t = l.trim();
     if ("" === t) {
-      C(m.Z.Messages.INVALID_INVITE_LINK_ERROR);
+      f(p.Z.Messages.INVALID_INVITE_LINK_ERROR);
       return
     }
-    C(null), d(!0);
-    let l = t.split("/"),
-      r = l[l.length - 1];
-    u.Z.resolveInvite(r, "Join Guild", {
+    f(null), E(!0);
+    let o = t.split("/"),
+      a = o[o.length - 1];
+    u.Z.resolveInvite(a, "Join Guild", {
       inputValue: t
     }).then(e => {
       let {
         invite: t
       } = e;
-      if (d(!1), null == t) {
-        C(m.Z.Messages.INSTANT_INVITE_EXPIRED);
+      if (E(!1), null == t) {
+        f(p.Z.Messages.INSTANT_INVITE_EXPIRED);
         return
       }
       if (null != t.channel) {
@@ -96,82 +96,82 @@ function O(e) {
             n(), u.Z.transitionToInvite(e)
           }
         }).then(() => {}, e => {
-          e instanceof _.yZ || e instanceof _.Hx ? C((0, N.O)(e.code)) : C(m.Z.Messages.INVITE_MODAL_ERROR_DEFAULT)
+          e instanceof _.yZ || e instanceof _.Hx ? f((0, N.O)(e.code)) : f(p.Z.Messages.INVITE_MODAL_ERROR_DEFAULT)
         })
       }
     }, e => {
-      d(!1);
+      E(!1);
       let t = new _.yZ(e);
-      C((0, N.O)(t.code))
+      f((0, N.O)(t.code))
     })
   };
-  return (0, r.jsxs)("div", {
-    children: [(0, r.jsxs)(c.ModalHeader, {
-      className: S.header,
-      direction: E.Z.Direction.VERTICAL,
+  return (0, a.jsxs)("div", {
+    children: [(0, a.jsxs)(c.ModalHeader, {
+      className: T.header,
+      direction: I.Z.Direction.VERTICAL,
       separator: !1,
-      children: [(0, r.jsx)(c.Heading, {
-        className: S.title,
+      children: [(0, a.jsx)(c.Heading, {
+        className: T.title,
         variant: "heading-xl/semibold",
-        children: m.Z.Messages.JOIN_SERVER_TITLE
-      }), (0, r.jsx)(c.Text, {
+        children: p.Z.Messages.JOIN_SERVER_TITLE
+      }), (0, a.jsx)(c.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: m.Z.Messages.JOIN_SERVER_DESCRIPTION_NUF
-      }), (0, r.jsx)(c.ModalCloseButton, {
-        className: S.closeButton,
+        children: p.Z.Messages.JOIN_SERVER_DESCRIPTION_NUF
+      }), (0, a.jsx)(c.ModalCloseButton, {
+        className: T.closeButton,
         onClick: n
       })]
-    }), (0, r.jsxs)(c.ModalContent, {
-      className: S.__invalid_content,
-      children: [(0, r.jsx)("form", {
+    }), (0, a.jsxs)(c.ModalContent, {
+      className: T.__invalid_content,
+      children: [(0, a.jsx)("form", {
         onSubmit: O,
-        className: S.inputForm,
-        children: (0, r.jsxs)(c.FormItem, {
-          children: [(0, r.jsx)(c.FormTitle, {
-            id: A,
-            error: T,
-            className: o()(S.formTitle, {
-              [S.error]: null != T
+        className: T.inputForm,
+        children: (0, a.jsxs)(c.FormItem, {
+          children: [(0, a.jsx)(c.FormTitle, {
+            id: L,
+            error: m,
+            className: i()(T.formTitle, {
+              [T.error]: null != m
             }),
             required: !0,
-            children: m.Z.Messages.FORM_LABEL_INVITE_LINK
-          }), (0, r.jsx)(c.TextInput, {
-            value: s,
-            onChange: i,
-            className: S.input,
-            inputClassName: S.inputInner,
-            placeholder: "".concat(D).concat(L),
-            inputRef: p,
+            children: p.Z.Messages.FORM_LABEL_INVITE_LINK
+          }), (0, a.jsx)(c.TextInput, {
+            value: l,
+            onChange: s,
+            className: T.input,
+            inputClassName: T.inputInner,
+            placeholder: "".concat(A).concat(C),
+            inputRef: S,
             required: !0,
-            "aria-labelledby": A
+            "aria-labelledby": L
           })]
         })
-      }), (0, r.jsx)(c.FormItem, {
-        title: m.Z.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
-        titleClassName: S.formTitle,
-        className: S.examplesForm,
-        children: f.map(e => (0, r.jsx)(c.Clickable, {
-          className: S.sampleLink,
-          onClick: () => i(e),
+      }), (0, a.jsx)(c.FormItem, {
+        title: p.Z.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
+        titleClassName: T.formTitle,
+        className: T.examplesForm,
+        children: D.map(e => (0, a.jsx)(c.Clickable, {
+          className: T.sampleLink,
+          onClick: () => s(e),
           children: e
         }, e))
-      }), (0, r.jsx)(M, {
+      }), (0, a.jsx)(M, {
         onClick: n
       })]
-    }), (0, r.jsxs)(c.ModalFooter, {
-      className: S.footer,
-      children: [(0, r.jsx)(c.Button, {
+    }), (0, a.jsxs)(c.ModalFooter, {
+      className: T.footer,
+      children: [(0, a.jsx)(c.Button, {
         color: c.Button.Colors.BRAND,
-        submitting: I,
+        submitting: d,
         onClick: O,
-        children: m.Z.Messages.NUF_JOIN_SERVER_BUTTON
-      }), (0, r.jsx)(c.Button, {
+        children: p.Z.Messages.NUF_JOIN_SERVER_BUTTON
+      }), (0, a.jsx)(c.Button, {
         color: c.Button.Colors.PRIMARY,
         look: c.Button.Looks.LINK,
         size: c.Button.Sizes.MIN,
         onClick: t,
-        children: m.Z.Messages.BACK
+        children: p.Z.Messages.BACK
       })]
     })]
   })

@@ -1,4 +1,4 @@
-function r(e) {
+function a(e) {
   return Object.entries(e).filter(function(e) {
     e[0];
     var t = e[1];
@@ -10,7 +10,7 @@ function r(e) {
   }).join("&")
 }
 
-function a(e) {
+function r(e) {
   var t = e && e.ownerDocument || document,
     n = t.defaultView || t.parentWindow || window;
   return {
@@ -24,10 +24,10 @@ function i(e) {
 }
 n.d(t, {
   $h: function() {
-    return a
+    return r
   },
   Ku: function() {
-    return r
+    return a
   },
   as: function() {
     return i

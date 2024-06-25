@@ -1,47 +1,47 @@
-t.d(n, {
+o.d(n, {
   Z: function() {
     return d
   }
 });
-var o = t(735250);
-t(470079);
-var s = t(212598),
-  r = t(981631),
-  i = t(927923),
-  a = t(689938),
-  c = t(397995),
-  l = t(848499);
+var t = o(735250);
+o(470079);
+var r = o(212598),
+  s = o(981631),
+  i = o(927923),
+  c = o(689938),
+  a = o(397995),
+  l = o(848499);
 
 function d(e) {
   let {
     isWaitingForConnection: n,
-    onWaitingForConnection: t,
+    onWaitingForConnection: o,
     expectedCallbackState: d,
     onAuthToken: u,
-    onError: C,
-    onClose: _
-  } = e, O = n ? (0, o.jsx)("img", {
+    onError: _,
+    onClose: C
+  } = e, x = n ? (0, t.jsx)("img", {
     src: l,
     width: "168",
     height: "124",
     alt: ""
-  }) : (0, o.jsx)("img", {
-    src: c,
+  }) : (0, t.jsx)("img", {
+    src: a,
     width: "152",
     height: "124",
     alt: ""
-  }), x = n ? a.Z.Messages.XBOX_DETAILS_TITLE_WAITING : a.Z.Messages.XBOX_DETAILS_TITLE, N = n ? a.Z.Messages.XBOX_DETAILS_BODY_WAITING : a.Z.Messages.XBOX_DETAILS_BODY;
-  return (0, o.jsx)(s.t, {
-    platformType: r.ABu.XBOX,
+  }), p = n ? c.Z.Messages.XBOX_DETAILS_TITLE_WAITING : c.Z.Messages.XBOX_DETAILS_TITLE, O = n ? c.Z.Messages.XBOX_DETAILS_BODY_WAITING : c.Z.Messages.XBOX_DETAILS_BODY;
+  return (0, t.jsx)(r.t, {
+    platformType: s.ABu.XBOX,
     isWaitingForConnection: n,
-    onWaitingForConnection: t,
+    onWaitingForConnection: o,
     expectedCallbackState: d,
     onAuthToken: u,
-    onError: C,
-    onClose: _,
-    img: O,
-    title: x,
-    body: N,
+    onError: _,
+    onClose: C,
+    img: x,
+    title: p,
+    body: O,
     redirectDestination: i.zM
   })
 }

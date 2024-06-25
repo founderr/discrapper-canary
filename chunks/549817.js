@@ -14,14 +14,14 @@ var i = n(392711),
   I = n(271383),
   T = n(594174),
   h = n(626135),
-  S = n(630388),
-  f = n(823379),
-  N = n(960048),
-  A = n(709054),
+  f = n(630388),
+  S = n(823379),
+  A = n(960048),
+  N = n(709054),
   m = n(45966),
   O = n(637853),
-  R = n(816436),
-  p = n(981631),
+  p = n(816436),
+  R = n(981631),
   g = n(372897),
   C = n(490897);
 
@@ -36,7 +36,7 @@ function v(e) {
   return (n.forEach(e => {
     a[e.id] = Date.now(), e.options.forEach(e => l[e.id] = Date.now())
   }), t) ? s.tn.post({
-    url: p.ANM.GUILD_ONBOARDING_RESPONSES(e),
+    url: R.ANM.GUILD_ONBOARDING_RESPONSES(e),
     body: {
       onboarding_responses: r.map(e => e.id),
       onboarding_prompts_seen: a,
@@ -50,8 +50,8 @@ function v(e) {
       prompts_seen: t.body.onboarding_prompts_seen,
       options_seen: t.body.onboarding_responses_seen
     })
-  }).catch(e => N.Z.captureException(e)) : s.tn.put({
-    url: p.ANM.GUILD_ONBOARDING_RESPONSES(e),
+  }).catch(e => A.Z.captureException(e)) : s.tn.put({
+    url: R.ANM.GUILD_ONBOARDING_RESPONSES(e),
     body: {
       onboarding_responses: r.map(e => e.id),
       onboarding_prompts_seen: a,
@@ -65,7 +65,7 @@ function v(e) {
       prompts_seen: t.body.onboarding_prompts_seen,
       options_seen: t.body.onboarding_responses_seen
     })
-  }).catch(e => N.Z.captureException(e))
+  }).catch(e => A.Z.captureException(e))
 }
 t.Z = {
   selectOption(e, t, n, i) {
@@ -103,11 +103,11 @@ t.Z = {
       s = (0, O.dX)(i),
       o = m.Z.getEnabled(e) ? m.Z.getDefaultChannelIds(e) : [],
       [u, d] = (0, O.Ee)(e, t, o),
-      N = [...s, ...o],
-      L = N.map(e => E.Z.getChannel(e)).filter(f.lm),
-      D = (0, R.v)(e, new Set(N), L, !0).length,
+      A = [...s, ...o],
+      L = A.map(e => E.Z.getChannel(e)).filter(S.lm),
+      D = (0, p.v)(e, new Set(A), L, !0).length,
       M = null == n ? [] : n.options.map(e => e.id);
-    if (h.default.track(p.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
+    if (h.default.track(R.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
         ...(0, l.hH)(e),
         step: t.length - 1,
         options_selected: null == n ? 0 : i.filter(e => M.includes(e.id)).length,
@@ -119,8 +119,8 @@ t.Z = {
         channels_granted: D,
         guild_onboarding_covered_channel_ids: u.map(e => e.id),
         guild_onboarding_uncovered_channel_ids: d.map(e => e.id)
-      }), (0, a.Ju)(e, C.W.GUILD_ONBOARDING_QUESTION, A.default.fromTimestamp(Date.now())), v(e, !0), c.Z.isFullServerPreview(e)) {
-      (0, _.zS)(e, N, []), (0, _.aq)(e, {
+      }), (0, a.Ju)(e, C.W.GUILD_ONBOARDING_QUESTION, N.default.fromTimestamp(Date.now())), v(e, !0), c.Z.isFullServerPreview(e)) {
+      (0, _.zS)(e, A, []), (0, _.aq)(e, {
         optInEnabled: !0
       }), (0, _.og)(e, Array.from(r));
       let t = T.default.getCurrentUser();
@@ -129,7 +129,7 @@ t.Z = {
         let n = null !== (y = null === (P = I.ZP.getMember(e, t.id)) || void 0 === P ? void 0 : P.flags) && void 0 !== y ? y : 0;
         (0, _.aq)(e, {
           memberOptions: {
-            flags: (0, S.mB)(n, g.q.COMPLETED_ONBOARDING, !0)
+            flags: (0, f.mB)(n, g.q.COMPLETED_ONBOARDING, !0)
           }
         })
       }
@@ -138,7 +138,7 @@ t.Z = {
   onboardExistingMember(e, t) {
     let n = new Set(t);
     (m.Z.getEnabled(e) ? m.Z.getDefaultChannelIds(e) : []).forEach(e => n.add(e)), n.size > 0 && (0, d.Mo)(e, Array.from(n), !0, {
-      page: p.ZY5.GUILD_ONBOARDING
+      page: R.ZY5.GUILD_ONBOARDING
     })
   },
   finishOnboarding(e) {
@@ -160,7 +160,7 @@ t.Z = {
       var n, i;
       let r = null !== (i = null === (n = I.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== i ? i : 0;
       await (0, u.e)(e, {
-        flags: (0, S.mB)(r, g.q.COMPLETED_ONBOARDING, !1)
+        flags: (0, f.mB)(r, g.q.COMPLETED_ONBOARDING, !1)
       })
     }
   }

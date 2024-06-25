@@ -25,7 +25,7 @@ n.d(t, {
     return O
   },
   Zv: function() {
-    return p
+    return R
   },
   _V: function() {
     return g
@@ -58,14 +58,14 @@ let {
   MEDIA_PROXY_ENDPOINT: I,
   PROJECT_ENV: T,
   ASSET_ENDPOINT: h,
-  CDN_HOST: S
-} = window.GLOBAL_ENV, f = Object.values(_.og), N = decodeURIComponent(d.ANM.STICKER_ASSET("[\\d]+", "(".concat(f.join("|"), ")"))), A = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(I, ")(").concat(N, ")"), "ig"), m = RegExp("".concat(location.protocol).concat(E, "(").concat(N, ")"), "ig"), O = e => {
+  CDN_HOST: f
+} = window.GLOBAL_ENV, S = Object.values(_.og), A = decodeURIComponent(d.ANM.STICKER_ASSET("[\\d]+", "(".concat(S.join("|"), ")"))), N = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(I, ")(").concat(A, ")"), "ig"), m = RegExp("".concat(location.protocol).concat(E, "(").concat(A, ")"), "ig"), O = e => {
   if (null != e.cover_sticker_id) {
     let t = e.stickers.find(t => t.id === e.cover_sticker_id);
     if (null != t) return t
   }
   return e.stickers[0]
-}, R = e => {
+}, p = e => {
   switch (e) {
     case _.u3.PNG:
       return a.$k ? _.og.WEBP : _.og.PNG;
@@ -78,7 +78,7 @@ let {
     default:
       throw Error("Unexpected format type: ".concat(e))
   }
-}, p = e => {
+}, R = e => {
   switch (e) {
     case "application/json":
       return _.u3.LOTTIE;
@@ -92,7 +92,7 @@ let {
     default:
       throw Error("Unexpected file type: ".concat(e))
   }
-}, g = e => null == e ? null : "".concat(e.name, ".").concat(R(e.format_type)), C = function(e) {
+}, g = e => null == e ? null : "".concat(e.name, ".").concat(p(e.format_type)), C = function(e) {
   let {
     isPreview: t = !1,
     size: n = c.lE
@@ -100,7 +100,7 @@ let {
   if (null == e.format_type) return null;
   let i = e.format_type;
   e.format_type === _.u3.GIF && t && (i = _.u3.PNG);
-  let s = d.ANM.STICKER_ASSET(e.id, R(i));
+  let s = d.ANM.STICKER_ASSET(e.id, p(i));
   if ("development" !== T) {
     if (e.format_type === _.u3.LOTTIE) return "".concat(location.protocol).concat(h).concat(s);
     let i = e.format_type === _.u3.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
@@ -113,8 +113,8 @@ let {
   let i = e.banner_asset_id;
   if (null == i) return null;
   let s = a.$k ? "webp" : "png";
-  return n = null != S ? "".concat(location.protocol, "//").concat(S, "/app-assets/").concat(c.Ks, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(d.ANM.STORE_ASSET(c.Ks, i, s)), null != t && (n += "?size=".concat((0, r.oO)(t))), n
-}, L = e => e.match("development" !== T ? A : m), D = e => e.stickers.some(e => {
+  return n = null != f ? "".concat(location.protocol, "//").concat(f, "/app-assets/").concat(c.Ks, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(d.ANM.STORE_ASSET(c.Ks, i, s)), null != t && (n += "?size=".concat((0, r.oO)(t))), n
+}, L = e => e.match("development" !== T ? N : m), D = e => e.stickers.some(e => {
   let {
     format_type: t
   } = e;

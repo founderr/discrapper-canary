@@ -1,22 +1,22 @@
 n(47120), n(653041);
-var s, i, l, a, r = n(392711),
+var i, a, s, l, r = n(392711),
   o = n.n(r),
   c = n(442837),
-  u = n(433517),
-  d = n(570140),
-  E = n(496929),
-  _ = n(16084),
+  d = n(433517),
+  u = n(570140),
+  _ = n(496929),
+  E = n(16084),
   I = n(728345),
-  T = n(812206),
-  m = n(594190),
-  N = n(594174),
-  h = n(580130),
-  C = n(55563),
-  S = n(981631);
-let A = "DetectedOffPlatformPremiumPerksStore",
+  m = n(812206),
+  T = n(594190),
+  h = n(594174),
+  N = n(580130),
+  f = n(55563),
+  p = n(981631);
+let C = "DetectedOffPlatformPremiumPerksStore",
   g = {},
-  p = {},
-  f = [];
+  S = {},
+  A = [];
 
 function R() {
   let e = !1;
@@ -24,42 +24,42 @@ function R() {
       skuId: t,
       applicationId: n
     }
-    of o().values(p)) {
-    if (f.includes(t)) continue;
-    let s = T.Z.getApplication(n);
-    if (null == s) {
-      !T.Z.isFetchingApplication(n) && !T.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
-      continue
-    }
-    let i = C.Z.get(t);
+    of o().values(S)) {
+    if (A.includes(t)) continue;
+    let i = m.Z.getApplication(n);
     if (null == i) {
-      !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && _.$N(s.id, t);
+      !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
       continue
     }
-    h.Z.applicationIdsFetching.has(s.id) || h.Z.isEntitledToSku(N.default.getCurrentUser(), t, s.id, s.id) || !i.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
+    let a = f.Z.get(t);
+    if (null == a) {
+      !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
+      continue
+    }
+    N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
   }
   return e
 }
-class O extends(s = c.ZP.Store) {
+class x extends(i = c.ZP.Store) {
   initialize() {
     var e;
-    this.waitFor(m.ZP, C.Z, h.Z), f = null !== (e = u.K.get(A)) && void 0 !== e ? e : f
+    this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A
   }
   getDetectedOffPlatformPremiumPerks() {
     return o().values(g)
   }
 }
-a = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(i = O) ? Object.defineProperty(i, l, {
-  value: a,
+l = "DetectedOffPlatformPremiumPerksStore", (s = "displayName") in(a = x) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = new O(d.Z, {
+}) : a[s] = l, t.Z = new x(u.Z, {
   LOGOUT: function() {
-    g = {}, p = {}
+    g = {}, S = {}
   },
   SKU_FETCH_SUCCESS: R,
   ENTITLEMENT_FETCH_APPLICATION_SUCCESS: R,
@@ -69,8 +69,8 @@ a = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(i = O) ? Obje
     let {
       skuId: t
     } = e;
-    if (delete g[t], f.includes(t)) return !1;
-    f.push(t), u.K.set(A, f)
+    if (delete g[t], A.includes(t)) return !1;
+    A.push(t), d.K.set(C, A)
   },
   RUNNING_GAMES_CHANGE: function() {
     let e = !1;
@@ -78,16 +78,16 @@ a = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(i = O) ? Obje
         id: t,
         distributor: n
       }
-      of m.ZP.getRunningGames())
-      if (null != t && n !== S.GQo.DISCORD)
+      of T.ZP.getRunningGames())
+      if (null != t && n !== p.GQo.DISCORD)
         for (let {
             skuId: n,
-            applicationId: s
+            applicationId: i
           }
-          of S.Lg6) {
-          if (!(s !== t || f.includes(n))) null == p[n] && (!h.Z.applicationIdsFetched.has(s) && !h.Z.applicationIdsFetching.has(s) && null == h.Z.getForSku(n) && E.yD(s), p[n] = {
+          of p.Lg6) {
+          if (!(i !== t || A.includes(n))) null == S[n] && (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i), S[n] = {
             skuId: n,
-            applicationId: s
+            applicationId: i
           }, e = !0)
         }
     return e && R(), e

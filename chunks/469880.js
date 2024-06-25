@@ -4,11 +4,11 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(481060),
-  a = t(932776),
-  r = t(680298),
-  o = t(289465),
+  l = t(932776),
+  o = t(680298),
+  r = t(289465),
   c = t(689938),
   d = t(874281);
 
@@ -19,28 +19,28 @@ function u(e) {
     canNavigate: u,
     guildId: I
   } = e, {
-    results: N,
-    query: E,
-    setQuery: T,
-    unfilteredCount: m
-  } = (0, a.O)(), _ = null != N && m > 0;
-  return (0, i.jsx)(l.Fragment, {
-    children: _ ? (0, i.jsx)(o.Z, {
+    results: m,
+    query: _,
+    setQuery: N,
+    unfilteredCount: E
+  } = (0, l.O)(), T = null != m && E > 0;
+  return (0, i.jsx)(a.Fragment, {
+    children: T ? (0, i.jsx)(r.Z, {
       bar: (0, i.jsx)(s.SearchBar, {
-        query: E,
-        onChange: T,
-        onClear: () => T("")
+        query: _,
+        onChange: N,
+        onClear: () => N("")
       }),
       inModal: !1,
       title: c.Z.Messages.COMMANDS,
-      children: N.map((e, a) => (0, i.jsxs)(l.Fragment, {
-        children: [(0, i.jsx)(r.Z, {
+      children: m.map((e, l) => (0, i.jsxs)(a.Fragment, {
+        children: [(0, i.jsx)(o.Z, {
           applicationIcon: n,
           applicationName: t,
           canNavigate: u,
           command: e,
           guildId: I
-        }), a < N.length - 1 ? (0, i.jsx)(s.FormDivider, {}) : null]
+        }), l < m.length - 1 ? (0, i.jsx)(s.FormDivider, {}) : null]
       }, e.id))
     }) : (0, i.jsx)(s.Card, {
       className: d.emptyCard,

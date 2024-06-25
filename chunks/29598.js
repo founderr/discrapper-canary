@@ -29,11 +29,11 @@ let _ = (e, t, n) => {
     } = e, {
       joinedEmojiSourceGuildRecord: a,
       emoji: c
-    } = (0, r.cj)([o.Z, s.Z], () => _(o.Z, s.Z, t)), d = null != a, E = null != a && a.hasFeature(u.oNc.DISCOVERABLE), I = (!d || E) && null != t, [T, h] = i.useState(I), S = null != a ? l.Z.createFromGuildRecord(a) : null, [f, N] = i.useState(S);
+    } = (0, r.cj)([o.Z, s.Z], () => _(o.Z, s.Z, t)), d = null != a, E = null != a && a.hasFeature(u.oNc.DISCOVERABLE), I = (!d || E) && null != t, [T, h] = i.useState(I), f = null != a ? l.Z.createFromGuildRecord(a) : null, [S, A] = i.useState(f);
     return i.useEffect(() => {
       null == n || n();
       let e = async () => {
-        N(null != t ? await l.Z.getGuildFromEmojiId(t) : null), h(!1), null == n || n()
+        A(null != t ? await l.Z.getGuildFromEmojiId(t) : null), h(!1), null == n || n()
       };
       if (I) {
         e();
@@ -41,7 +41,7 @@ let _ = (e, t, n) => {
       }
       null == n || n()
     }, [t, I]), {
-      expressionSourceGuild: f,
+      expressionSourceGuild: S,
       joinedEmojiSourceGuildRecord: a,
       hasJoinedEmojiSourceGuild: d,
       emoji: c,

@@ -10,14 +10,14 @@ var i, r, s, o, a = n(512722),
   I = n(710845),
   T = n(258609),
   h = n(569545),
-  S = n(199902),
-  f = n(314897),
-  N = n(523746),
-  A = n(592125),
+  f = n(199902),
+  S = n(314897),
+  A = n(523746),
+  N = n(592125),
   m = n(944486),
   O = n(606304),
-  R = n(594174),
-  p = n(33039),
+  p = n(594174),
+  R = n(33039),
   g = n(979651),
   C = n(413523),
   v = n(354459),
@@ -30,8 +30,8 @@ let D = new I.Z("ChannelRTCStore"),
   b = {},
   G = {},
   w = {},
-  B = {},
   x = {},
+  B = {},
   k = {},
   V = {},
   Z = {};
@@ -49,14 +49,14 @@ function F(e) {
     let n = er(e) || q(t) ? L.WtW.VIDEO : L.WtW.VOICE;
     n === L.WtW.VOICE ? (delete G[e], delete w[e]) : G[e] = n
   }(n), function(e) {
-    let t = f.default.getId(),
+    let t = S.default.getId(),
       n = H(e);
     if (0 === n.size() || m.Z.getVoiceChannelId() !== e) {
       z(e, null);
       return
     }
     let i = v.dF.NONE,
-      r = n.toArray(C.sI.STREAM).find(e => e.type === v.fO.STREAM && S.Z.getActiveStreamForStreamKey(e.id));
+      r = n.toArray(C.sI.STREAM).find(e => e.type === v.fO.STREAM && f.Z.getActiveStreamForStreamKey(e.id));
     if (null != r) l()(r.type === v.fO.STREAM, "Impossible condition"), i = r.id;
     else if (1 === n.size()) i = t;
     else if (1 === n.size(C.sI.VIDEO)) {
@@ -70,7 +70,7 @@ function F(e) {
     let [o] = j(e);
     if (o !== v.dF.AUTO && o !== v.dF.NONE) {
       let e = n.getParticipant(o);
-      (null == e || e.type === v.fO.STREAM && null == S.Z.getActiveStreamForStreamKey(e.id)) && (o = v.dF.NONE)
+      (null == e || e.type === v.fO.STREAM && null == f.Z.getActiveStreamForStreamKey(e.id)) && (o = v.dF.NONE)
     }
     z(e, [o, i])
   }(n), !0) : t, !1)
@@ -83,7 +83,7 @@ function Y(e) {
 
 function j(e) {
   var t;
-  let n = A.Z.getChannel(e),
+  let n = N.Z.getChannel(e),
     i = (null == n ? void 0 : n.isDM()) ? v.dF.AUTO : v.dF.NONE;
   return null !== (t = U[e]) && void 0 !== t ? t : [i, v.dF.NONE]
 }
@@ -133,7 +133,7 @@ function Q() {
     let n = m.Z.getVoiceChannelId();
     null != n && !e.includes(n) && e.push(n);
     let i = T.Z.getRemoteSessionId(),
-      r = g.Z.getVoiceStateForSession(f.default.getId(), i);
+      r = g.Z.getVoiceStateForSession(S.default.getId(), i);
     (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), _().difference(P, e).forEach(X);
     let s = _().difference(e, P);
     return P = e, s
@@ -186,11 +186,11 @@ function ei(e) {
 
 function er(e) {
   var t;
-  return !!(null === (t = A.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
+  return !!(null === (t = N.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
 }
 class es extends(i = c.ZP.Store) {
   initialize() {
-    this.waitFor(S.Z, f.default, N.Z, A.Z, E.ZP, m.Z, O.Z, R.default, p.Z, g.Z), this.syncWith([E.ZP], J), this.syncWith([T.Z], Q)
+    this.waitFor(f.Z, S.default, A.Z, N.Z, E.ZP, m.Z, O.Z, p.default, R.Z, g.Z), this.syncWith([E.ZP], J), this.syncWith([T.Z], Q)
   }
   getParticipantsVersion(e) {
     return H(e).version
@@ -204,7 +204,7 @@ class es extends(i = c.ZP.Store) {
     return null !== (t = H(e).toArray(C.sI.SPEAKING)) && void 0 !== t ? t : M
   }
   getFilteredParticipants(e) {
-    return x[e] ? H(e).toArray(C.sI.FILTERED) : H(e).toArray()
+    return B[e] ? H(e).toArray(C.sI.FILTERED) : H(e).toArray()
   }
   getVideoParticipants(e) {
     var t;
@@ -227,11 +227,11 @@ class es extends(i = c.ZP.Store) {
   }
   getParticipantsOpen(e) {
     var t;
-    return null === (t = B[e]) || void 0 === t || t
+    return null === (t = x[e]) || void 0 === t || t
   }
   getVoiceParticipantsHidden(e) {
     var t;
-    return null !== (t = x[e]) && void 0 !== t && t
+    return null !== (t = B[e]) && void 0 !== t && t
   }
   getSelectedParticipantId(e) {
     let [t, n] = j(e);
@@ -257,7 +257,7 @@ class es extends(i = c.ZP.Store) {
     var t, n;
     let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.IlC.APP;
     if (__OVERLAY__) return L.AEg.NORMAL;
-    let r = A.Z.getChannel(e),
+    let r = N.Z.getChannel(e),
       s = er(e) || (null == r ? void 0 : r.isBroadcastChannel());
     return null !== (n = null === (t = w[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : s ? L.AEg.NO_CHAT : L.AEg.NORMAL
   }
@@ -297,7 +297,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
     let {
       channelId: t,
       messageId: n
-    } = e, i = Q(), r = A.Z.getChannel(t);
+    } = e, i = Q(), r = N.Z.getChannel(t);
     return null == t || null == n || (null == r ? void 0 : r.type) !== L.d4z.GUILD_VOICE && (null == r ? void 0 : r.type) !== L.d4z.GUILD_STAGE_VOICE || k[t] ? i : (k[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: Q,
@@ -356,10 +356,10 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
         let {
           ownerId: e
         } = (0, h.my)(n);
-        e === f.default.getId() && Y(e, [t])
+        e === S.default.getId() && Y(e, [t])
       } catch (e) {
         D.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-      }!q(i) && (B[t] = !1)
+      }!q(i) && (x[t] = !1)
     }
   },
   CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -378,14 +378,14 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       participantsOpen: n
     } = e;
-    B[t] = n
+    x[t] = n
   },
   CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
     let {
       channelId: t,
       voiceParticipantsHidden: n
     } = e;
-    x[t] = n
+    B[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
     let {
@@ -405,7 +405,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
     let {
       channelId: t,
       selfStreamHidden: n
-    } = e, i = f.default.getId();
+    } = e, i = S.default.getId();
     if (n) {
       let [e] = j(t);
       (0, h.DB)(e) && e.includes(i) && z(t, null)
@@ -469,7 +469,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       guild: t
     } = e, n = [];
     if (_().forEach(P, e => {
-        let i = A.Z.getChannel(e);
+        let i = N.Z.getChannel(e);
         (null == i || i.getGuildId() === t.id) && n.push(e)
       }), 0 === n.length) return !1;
     _().forEach(n, e => X(e))

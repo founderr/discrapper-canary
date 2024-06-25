@@ -3,10 +3,10 @@ n.d(t, {
     return r
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(347469),
-  a = n(144734);
+var i = n(735250),
+  a = n(470079),
+  l = n(347469),
+  s = n(144734);
 
 function r(e) {
   let {
@@ -15,22 +15,22 @@ function r(e) {
     onResizeEnd: r,
     minHeight: o,
     maxHeight: c
-  } = e, [u, d] = i.useState(null);
-  i.useEffect(() => {
+  } = e, [u, d] = a.useState(null);
+  a.useEffect(() => {
     var e, n;
     d(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null)
   }, [t]);
-  let h = (0, s.Z)({
+  let h = (0, l.Z)({
     initialElementDimension: u,
     minDimension: o,
     maxDimension: c,
     resizableDomNodeRef: t,
     onElementResize: n,
     onElementResizeEnd: r,
-    orientation: s.y.VERTICAL_BOTTOM
+    orientation: l.y.VERTICAL_BOTTOM
   });
-  return (0, l.jsx)("div", {
+  return (0, i.jsx)("div", {
     onMouseDown: h,
-    className: a.resizeHandle
+    className: s.resizeHandle
   })
 }

@@ -1,41 +1,41 @@
-s.r(a);
-var t = s(735250);
-s(470079);
-var l = s(481060),
-  n = s(153124),
-  o = s(689938),
-  d = s(238842);
-a.default = e => {
+a.r(t);
+var o = a(735250);
+a(470079);
+var n = a(481060),
+  s = a(153124),
+  c = a(689938),
+  l = a(238842);
+t.default = e => {
   let {
-    onClose: a
-  } = e, s = (0, n.Dt)();
-  return (0, t.jsxs)(l.ModalRoot, {
+    onClose: t
+  } = e, a = (0, s.Dt)();
+  return (0, o.jsxs)(n.ModalRoot, {
     ...e,
-    "aria-labelledby": s,
-    children: [(0, t.jsxs)(l.ModalHeader, {
+    "aria-labelledby": a,
+    children: [(0, o.jsxs)(n.ModalHeader, {
       separator: !1,
-      className: d.modalHeader,
-      children: [(0, t.jsx)(l.Heading, {
-        id: s,
+      className: l.modalHeader,
+      children: [(0, o.jsx)(n.Heading, {
+        id: a,
         variant: "heading-xl/extrabold",
-        children: o.Z.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
-      }), (0, t.jsx)(l.ModalCloseButton, {
-        className: d.closeButton,
-        onClick: a
+        children: c.Z.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
+      }), (0, o.jsx)(n.ModalCloseButton, {
+        className: l.closeButton,
+        onClick: t
       })]
-    }), (0, t.jsx)(l.ModalContent, {
-      className: d.modalContent,
-      children: (0, t.jsx)(l.Text, {
+    }), (0, o.jsx)(n.ModalContent, {
+      className: l.modalContent,
+      children: (0, o.jsx)(n.Text, {
         variant: "text-md/normal",
-        className: d.contentText,
-        children: o.Z.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
+        className: l.contentText,
+        children: c.Z.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
       })
-    }), (0, t.jsx)(l.ModalFooter, {
-      children: (0, t.jsx)(l.Button, {
-        className: d.button,
-        size: l.Button.Sizes.MIN,
-        onClick: a,
-        children: o.Z.Messages.OKAY
+    }), (0, o.jsx)(n.ModalFooter, {
+      children: (0, o.jsx)(n.Button, {
+        className: l.button,
+        size: n.Button.Sizes.MIN,
+        onClick: t,
+        children: c.Z.Messages.OKAY
       })
     })]
   })

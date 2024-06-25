@@ -1,12 +1,12 @@
 var i = n(735250);
 n(470079);
 var s = n(120356),
-  a = n.n(s),
-  l = n(481060),
-  o = n(942951),
+  o = n.n(s),
+  a = n(481060),
+  l = n(942951),
   r = n(456269),
-  u = n(689938),
-  c = n(164675);
+  c = n(689938),
+  u = n(164675);
 t.Z = e => {
   var t, n;
   let {
@@ -17,24 +17,24 @@ t.Z = e => {
   } = e, {
     user: p,
     author: g
-  } = (0, r.AJ)(d), T = null !== (n = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== n ? n : "", f = (0, o.l)({
+  } = (0, r.AJ)(d), f = null !== (n = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== n ? n : "", T = (0, l.l)({
     user: null == s ? void 0 : s.author,
     channelId: d.id,
     guildId: d.guild_id,
     messageId: null == s ? void 0 : s.id,
     stopPropagation: !0,
-    ariaLabel: u.Z.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({
-      name: T
+    ariaLabel: c.Z.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({
+      name: f
     })
   })(null != g ? g : void 0)((0, i.jsx)(i.Fragment, {
-    children: T
+    children: f
   }), d.id);
-  return (0, i.jsxs)(l.Text, {
+  return (0, i.jsxs)(a.Text, {
     tag: "span",
-    className: a()(c.author, {
-      [c.hasUnreads]: m
+    className: o()(u.author, {
+      [u.hasUnreads]: m
     }),
     variant: "text-sm/semibold",
-    children: [f, !0 === h ? ": " : null]
+    children: [T, !0 === h ? ": " : null]
   })
 }

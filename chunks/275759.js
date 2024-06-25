@@ -10,16 +10,16 @@ n.d(t, {
     return h
   },
   Ur: function() {
-    return A
-  },
-  kQ: function() {
     return N
   },
+  kQ: function() {
+    return A
+  },
   n_: function() {
-    return f
+    return S
   },
   xp: function() {
-    return S
+    return f
   }
 });
 var i, r, s = n(512722),
@@ -39,7 +39,7 @@ var E = n(856651),
   T = n(689938);
 let h = ["426537812993638400", "1042836142560645130", "296023718839451649", "979802510766268446", "1031611223235637258", "512333785338216465"];
 
-function S(e) {
+function f(e) {
   let {
     query: t
   } = u.parse(e, !0), {
@@ -56,7 +56,7 @@ function S(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     connectionType: t,
     connectionMetadataField: n,
@@ -273,14 +273,14 @@ function f(e) {
   return o
 }
 
-function N(e, t) {
+function A(e, t) {
   return Object.values(t).some(e => {
     var t;
     return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
   })
 }
 
-function A(e) {
+function N(e) {
   var t, n;
   let {
     guildMember: i,

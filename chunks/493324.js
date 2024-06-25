@@ -1,9 +1,9 @@
 n.d(t, {
   $: function() {
-    return i
+    return a
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-02_hide_member_list_activities",
   label: "Hide member list activities",
@@ -19,8 +19,8 @@ let l = (0, n(818083).B)({
   }]
 });
 
-function i(e) {
-  return l.getCurrentConfig({
+function a(e) {
+  return i.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0

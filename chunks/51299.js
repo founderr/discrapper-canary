@@ -1,30 +1,30 @@
-l.r(e), l.d(e, {
+a.r(e), a.d(e, {
   default: function() {
-    return x
+    return C
   }
 });
-var a = l(735250);
-l(470079);
-var i = l(120356),
-  t = l.n(i),
-  s = l(512722),
-  o = l.n(s),
-  c = l(481060),
-  r = l(99690),
-  d = l(23551),
-  p = l(122021),
-  u = l(689938),
-  m = l(280502);
+var i = a(735250);
+a(470079);
+var t = a(120356),
+  l = a.n(t),
+  c = a(512722),
+  o = a.n(c),
+  s = a(481060),
+  r = a(99690),
+  p = a(23551),
+  d = a(122021),
+  u = a(689938),
+  m = a(280502);
 
 function N(n) {
   let {
     onComplete: e,
-    excludedPlatformTypes: l,
-    includedPlatformTypes: i
-  } = n, t = (0, p.fq)();
-  return (0, a.jsx)("div", {
+    excludedPlatformTypes: a,
+    includedPlatformTypes: t
+  } = n, l = (0, d.fq)();
+  return (0, i.jsx)("div", {
     className: m.connectionsContainer,
-    children: t.filter(n => !(null == l ? void 0 : l.has(n.type)) && (null == i || i.has(n.type))).map(n => (0, a.jsx)(d.Z, {
+    children: l.filter(n => !(null == a ? void 0 : a.has(n.type)) && (null == t || t.has(n.type))).map(n => (0, i.jsx)(p.Z, {
       type: n.type,
       className: m.accountBtn,
       innerClassName: m.accountBtnInner,
@@ -33,41 +33,41 @@ function N(n) {
   })
 }
 
-function h(n) {
+function f(n) {
   let {
     integrations: e,
-    onCompleteApplication: l
+    onCompleteApplication: a
   } = n;
-  if (null == e || null == l) return null;
-  let i = e.filter(n => {
+  if (null == e || null == a) return null;
+  let t = e.filter(n => {
     var e;
     return (null === (e = n.application) || void 0 === e ? void 0 : e.roleConnectionsVerificationUrl) != null
   });
-  return 0 === i.length ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(c.Text, {
+  return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(s.Text, {
       variant: "eyebrow",
       color: "interactive-normal",
       className: m.applicationsHeader,
       children: u.Z.Messages.APPS
-    }), (0, a.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: m.applicationsContainer,
-      children: i.map(n => {
+      children: t.map(n => {
         let e = n.application;
         o()(null != e, "application is null");
-        let i = null == e ? void 0 : e.bot;
-        return o()(null != i, "bot is null"), (0, a.jsxs)(c.Clickable, {
-          onClick: () => l(e.id),
+        let t = null == e ? void 0 : e.bot;
+        return o()(null != t, "bot is null"), (0, i.jsxs)(s.Clickable, {
+          onClick: () => a(e.id),
           className: m.application,
-          children: [(0, a.jsx)(r.Z, {
-            user: i,
+          children: [(0, i.jsx)(r.Z, {
+            user: t,
             className: m.applicationIcon
-          }), (0, a.jsxs)("div", {
+          }), (0, i.jsxs)("div", {
             className: m.applicationNameContainer,
-            children: [(0, a.jsx)(c.Heading, {
+            children: [(0, i.jsx)(s.Heading, {
               variant: "heading-sm/semibold",
               className: m.applicationNameText,
               children: e.name
-            }), null != e.description && e.description.length > 0 ? (0, a.jsx)(c.Text, {
+            }), null != e.description && e.description.length > 0 ? (0, i.jsx)(s.Text, {
               variant: "text-xs/normal",
               color: "header-secondary",
               className: m.applicationNameText,
@@ -80,42 +80,42 @@ function h(n) {
   })
 }
 
-function x(n) {
+function C(n) {
   let {
     transitionState: e,
-    onComplete: l,
-    onClose: i,
-    excludedPlatformTypes: s,
+    onComplete: a,
+    onClose: t,
+    excludedPlatformTypes: c,
     includedPlatformTypes: o,
     integrations: r,
-    onCompleteApplication: d
+    onCompleteApplication: p
   } = n;
-  return (0, a.jsx)(c.ModalRoot, {
+  return (0, i.jsx)(s.ModalRoot, {
     "aria-label": u.Z.Messages.CONNECTIONS_ADD_CONNECTIONS,
-    size: c.ModalSize.SMALL,
+    size: s.ModalSize.SMALL,
     transitionState: e,
-    className: t()(m.container),
+    className: l()(m.container),
     fullscreenOnMobile: !1,
-    children: (0, a.jsxs)(c.ModalContent, {
-      children: [(0, a.jsxs)("div", {
+    children: (0, i.jsxs)(s.ModalContent, {
+      children: [(0, i.jsxs)("div", {
         className: m.header,
-        children: [(0, a.jsx)(c.Heading, {
+        children: [(0, i.jsx)(s.Heading, {
           className: m.title,
           variant: "heading-md/bold",
           children: u.Z.Messages.CONNECTIONS_ADD_CONNECTIONS
-        }), (0, a.jsx)(c.ModalCloseButton, {
-          onClick: i
+        }), (0, i.jsx)(s.ModalCloseButton, {
+          onClick: t
         })]
-      }), (0, a.jsx)(N, {
+      }), (0, i.jsx)(N, {
         onComplete: function(n) {
-          l(n), i()
+          a(n), t()
         },
-        excludedPlatformTypes: s,
+        excludedPlatformTypes: c,
         includedPlatformTypes: o
-      }), (0, a.jsx)(h, {
+      }), (0, i.jsx)(f, {
         integrations: r,
-        onCompleteApplication: null != d ? function(n) {
-          null == d || d(n), i()
+        onCompleteApplication: null != p ? function(n) {
+          null == p || p(n), t()
         } : void 0
       })]
     })

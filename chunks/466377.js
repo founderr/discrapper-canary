@@ -34,19 +34,19 @@ var i, r, s = n(735250),
   I = n(507274),
   T = n(84735),
   h = n(337033),
-  S = n(788698),
-  f = n(742746),
-  N = n(147479),
-  A = n(285952),
+  f = n(788698),
+  S = n(742746),
+  A = n(147479),
+  N = n(285952),
   m = n(602091),
   O = n(231338),
-  R = n(689938),
-  p = n(743942);
+  p = n(689938),
+  R = n(743942);
 (i = r || (r = {})).SMALL = "small", i.MEDIUM = "medium", i.LARGE = "large", i.DYNAMIC = "dynamic";
 let g = Object.freeze({
-  small: p.small,
-  medium: p.medium,
-  large: p.large,
+  small: R.small,
+  medium: R.medium,
+  large: R.large,
   dynamic: null
 });
 
@@ -59,38 +59,38 @@ function C(e) {
     role: a = "dialog",
     className: E,
     fullscreenOnMobile: h = !0,
-    hideShadow: S = !1,
-    onAnimationEnd: f = O.dG,
-    returnRef: N,
-    ...A
-  } = e, R = n === m.Dv.ENTERING || n === m.Dv.ENTERED, {
+    hideShadow: f = !1,
+    onAnimationEnd: S = O.dG,
+    returnRef: A,
+    ...N
+  } = e, p = n === m.Dv.ENTERING || n === m.Dv.ENTERED, {
     reducedMotion: C
   } = o.useContext(d.S), v = (0, u.useSpring)({
-    opacity: R ? 1 : 0,
-    transform: R || C.enabled ? "scale(1)" : "scale(0.7)",
+    opacity: p ? 1 : 0,
+    transform: p || C.enabled ? "scale(1)" : "scale(0.7)",
     config: {
-      duration: R ? 300 : 100,
-      easing: R ? c.Z.Easing.inOut(c.Z.Easing.back()) : c.Z.Easing.quad,
+      duration: p ? 300 : 100,
+      easing: p ? c.Z.Easing.inOut(c.Z.Easing.back()) : c.Z.Easing.quad,
       clamp: !0
     },
-    onRest: f
-  }), L = o.useRef(null), D = null != A["aria-label"], M = null != A["aria-labelledby"], P = o.useId(), y = null !== (t = A["aria-labelledby"]) && void 0 !== t ? t : P, U = o.useMemo(() => ({
+    onRest: S
+  }), L = o.useRef(null), D = null != N["aria-label"], M = null != N["aria-labelledby"], P = o.useId(), y = null !== (t = N["aria-labelledby"]) && void 0 !== t ? t : P, U = o.useMemo(() => ({
     headerId: y,
     headerIdIsManaged: M
   }), [y, M]);
   return (0, s.jsx)(m.zM.Provider, {
     value: U,
     children: (0, s.jsx)(I.V, {
-      className: p.focusLock,
+      className: R.focusLock,
       role: a,
-      returnRef: N,
+      returnRef: A,
       impressionType: _.ImpressionTypes.MODAL,
       "aria-labelledby": D ? void 0 : U.headerId,
-      ...A,
+      ...N,
       children: (0, s.jsx)(u.animated.div, {
-        className: l()(E, p.root, g[r], {
-          [p.fullscreenOnMobile]: h,
-          [p.rootWithShadow]: !S
+        className: l()(E, R.root, g[r], {
+          [R.fullscreenOnMobile]: h,
+          [R.rootWithShadow]: !f
         }),
         ref: L,
         style: v,
@@ -109,15 +109,15 @@ function v(e) {
     headerId: u,
     headerIdIsManaged: _
   } = o.useContext(m.zM);
-  return (0, s.jsx)(A.Z, {
+  return (0, s.jsx)(N.Z, {
     grow: 0,
     shrink: 0,
-    direction: null !== (t = e.direction) && void 0 !== t ? t : A.Z.Direction.HORIZONTAL,
-    justify: null !== (n = e.justify) && void 0 !== n ? n : A.Z.Justify.START,
-    align: null !== (i = e.align) && void 0 !== i ? i : A.Z.Align.CENTER,
-    wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.Z.Wrap.NO_WRAP,
-    className: l()(p.header, e.className, {
-      [p.separator]: null === (a = e.separator) || void 0 === a || a
+    direction: null !== (t = e.direction) && void 0 !== t ? t : N.Z.Direction.HORIZONTAL,
+    justify: null !== (n = e.justify) && void 0 !== n ? n : N.Z.Justify.START,
+    align: null !== (i = e.align) && void 0 !== i ? i : N.Z.Align.CENTER,
+    wrap: null !== (r = e.wrap) && void 0 !== r ? r : N.Z.Wrap.NO_WRAP,
+    className: l()(R.header, e.className, {
+      [R.separator]: null === (a = e.separator) || void 0 === a || a
     }),
     id: _ ? void 0 : u,
     children: e.children
@@ -134,15 +134,15 @@ function L(e) {
   } = e, a = function(e) {
     switch (null != e ? e : "thin") {
       case "auto":
-        return N.yW;
+        return A.yW;
       case "none":
-        return N.xV;
+        return A.xV;
       default:
-        return N.h2
+        return A.h2
     }
   }(r);
   return (0, s.jsx)(a, {
-    className: l()(p.content, t),
+    className: l()(R.content, t),
     ref: i,
     ...o,
     children: (0, s.jsx)(h.y, {
@@ -153,15 +153,15 @@ function L(e) {
 
 function D(e) {
   var t, n, i, r, o;
-  return (0, s.jsx)(A.Z, {
+  return (0, s.jsx)(N.Z, {
     grow: 0,
     shrink: 0,
-    direction: null !== (t = e.direction) && void 0 !== t ? t : A.Z.Direction.HORIZONTAL_REVERSE,
-    justify: null !== (n = e.justify) && void 0 !== n ? n : A.Z.Justify.START,
-    align: null !== (i = e.align) && void 0 !== i ? i : A.Z.Align.STRETCH,
-    wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.Z.Wrap.NO_WRAP,
-    className: l()(p.footer, e.className, {
-      [p.footerSeparator]: null === (o = e.separator) || void 0 === o || o
+    direction: null !== (t = e.direction) && void 0 !== t ? t : N.Z.Direction.HORIZONTAL_REVERSE,
+    justify: null !== (n = e.justify) && void 0 !== n ? n : N.Z.Justify.START,
+    align: null !== (i = e.align) && void 0 !== i ? i : N.Z.Align.STRETCH,
+    wrap: null !== (r = e.wrap) && void 0 !== r ? r : N.Z.Wrap.NO_WRAP,
+    className: l()(R.footer, e.className, {
+      [R.footerSeparator]: null === (o = e.separator) || void 0 === o || o
     }),
     children: (0, s.jsx)(h.y, {
       children: e.children
@@ -172,21 +172,21 @@ function D(e) {
 function M(e) {
   return (0, s.jsx)(E.zx, {
     focusProps: e.focusProps,
-    "aria-label": R.Z.Messages.CLOSE,
+    "aria-label": p.Z.Messages.CLOSE,
     look: E.zx.Looks.BLANK,
     size: E.zx.Sizes.NONE,
     onClick: e.onClick,
     innerClassName: l()({
-      [p.closeWithCircleBackground]: e.withCircleBackground
+      [R.closeWithCircleBackground]: e.withCircleBackground
     }),
     className: l()(e.className, {
-      [p.hideOnFullscreen]: e.hideOnFullscreen,
-      [p.close]: !e.withCircleBackground
+      [R.hideOnFullscreen]: e.hideOnFullscreen,
+      [R.close]: !e.withCircleBackground
     }),
-    children: (0, s.jsx)(S.F, {
+    children: (0, s.jsx)(f.F, {
       size: "md",
       color: "currentColor",
-      className: p.closeIcon
+      className: R.closeIcon
     })
   })
 }
@@ -197,7 +197,7 @@ function P(e) {
     scrollerRef: n,
     ...i
   } = e;
-  return (0, s.jsx)(f.Tv, {
+  return (0, s.jsx)(S.Tv, {
     className: t,
     ref: n,
     ...i

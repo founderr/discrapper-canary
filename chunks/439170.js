@@ -21,14 +21,14 @@ var i, r, s, o = n(392711),
   I = n(280234),
   T = n(653733),
   h = n(700785),
-  S = n(199902),
-  f = n(314897),
-  N = n(592125),
-  A = n(650774),
+  f = n(199902),
+  S = n(314897),
+  A = n(592125),
+  N = n(650774),
   m = n(271383),
   O = n(430824),
-  R = n(158776),
-  p = n(885110),
+  p = n(158776),
+  R = n(885110),
   g = n(594174),
   C = n(981631),
   v = n(689938);
@@ -77,13 +77,13 @@ function P(e, t, n, i) {
 }
 
 function y(e, t, n) {
-  let i = n === f.default.getId(),
-    r = R.Z.isMobileOnline(n),
-    s = i ? p.Z.getStatus() : R.Z.getStatus(n, e),
-    o = i ? p.Z.getActivities() : R.Z.getActivities(n, e),
-    a = S.Z.getStreamForUser(n, e),
+  let i = n === S.default.getId(),
+    r = p.Z.isMobileOnline(n),
+    s = i ? R.Z.getStatus() : p.Z.getStatus(n, e),
+    o = i ? R.Z.getActivities() : p.Z.getActivities(n, e),
+    a = f.Z.getStreamForUser(n, e),
     l = g.default.getUser(n),
-    u = R.Z.getLastOnlineTimestamp(n),
+    u = p.Z.getLastOnlineTimestamp(n),
     {
       isRecentlyOnlineShowable: _
     } = (0, I.$)(u);
@@ -101,7 +101,7 @@ function y(e, t, n) {
 }
 
 function U(e) {
-  let t = N.Z.getChannel(e);
+  let t = A.Z.getChannel(e);
   return null == t ? D : null == t.memberListId ? function(e) {
     return h.oz(C.Plq.VIEW_CHANNEL, e) ? D : u().v3(a()(e.permissionOverwrites).reduce((e, t) => {
       let {
@@ -270,23 +270,23 @@ let G = new class e {
 function w() {
   G.reset()
 }
-let B = [];
+let x = [];
 
-function x() {
-  let e = S.Z.getAllApplicationStreams(),
-    t = B.concat(e);
-  B = e, t.forEach(e => {
+function B() {
+  let e = f.Z.getAllApplicationStreams(),
+    t = x.concat(e);
+  x = e, t.forEach(e => {
     G.forEach(null, t => t.rebuildMember(e.ownerId, !0))
   })
 }
 
 function k() {
-  let e = f.default.getId();
+  let e = S.default.getId();
   G.forEach(null, t => t.rebuildMember(e, !0))
 }
 class V extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(g.default, O.Z, N.Z, m.ZP, R.Z, p.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([p.Z], k), this.syncWith([S.Z], x)
+    this.waitFor(g.default, O.Z, A.Z, m.ZP, p.Z, R.Z, S.default, N.Z, f.Z, E.Z), this.syncWith([R.Z], k), this.syncWith([f.Z], B)
   }
   getProps(e, t) {
     let n = G.get(e, U(t));

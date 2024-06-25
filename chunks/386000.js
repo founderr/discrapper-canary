@@ -3,10 +3,10 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(652844),
-  a = n(628581),
+var i = n(735250),
+  a = n(470079),
+  l = n(652844),
+  s = n(628581),
   r = n(871499);
 
 function o(e) {
@@ -18,22 +18,22 @@ function o(e) {
     awaitingRemote: u,
     onMouseEnter: d,
     onMouseLeave: h,
-    ...m
-  } = e, E = t || n || o, p = c ? r.d : r.Z, g = (0, a.Z)(t, n, o, u), {
-    Component: f,
-    play: C,
-    events: _
-  } = (0, s.O)(E ? "unmute" : "mute");
-  return i.useEffect(() => () => C(), [C, E]), (0, l.jsx)(p, {
-    isActive: !E,
-    iconComponent: f,
-    label: g,
+    ...p
+  } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, s.Z)(t, n, o, u), {
+    Component: E,
+    play: g,
+    events: C
+  } = (0, l.O)(m ? "unmute" : "mute");
+  return a.useEffect(() => () => g(), [g, m]), (0, i.jsx)(_, {
+    isActive: !m,
+    iconComponent: E,
+    label: f,
     onMouseEnter: e => {
-      null == d || d(e), _.onMouseEnter()
+      null == d || d(e), C.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == h || h(e), _.onMouseLeave()
+      null == h || h(e), C.onMouseLeave()
     },
-    ...m
+    ...p
   })
 }

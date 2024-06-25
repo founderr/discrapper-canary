@@ -20,12 +20,12 @@ let a = e => {
     color: d = r.Z.colors.INTERACTIVE_NORMAL,
     colorClass: E = "",
     ...I
-  } = e, T = (0, o.m)(a), h = null !== (t = null == T ? void 0 : T.width) && void 0 !== t ? t : l, S = null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : u;
+  } = e, T = (0, o.m)(a), h = null !== (t = null == T ? void 0 : T.width) && void 0 !== t ? t : l, f = null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : u;
   return (0, i.jsxs)("svg", {
     ...(0, s.Z)(I),
     xmlns: "http://www.w3.org/2000/svg",
     width: h,
-    height: S,
+    height: f,
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, i.jsx)("circle", {

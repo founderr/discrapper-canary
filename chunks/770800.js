@@ -1,94 +1,94 @@
-r(571269), r(298267);
-var n = r(735250),
-  a = r(470079),
-  i = r(392711),
-  s = r.n(i),
-  o = r(442837),
-  l = r(481060),
-  c = r(19780),
-  d = r(226961),
-  u = r(914010),
-  m = r(959457),
-  p = r(246946),
-  h = r(594174),
-  g = r(285952),
-  f = r(5192),
-  y = r(476221),
-  v = r(481250),
-  D = r(206314),
-  C = r(513547),
-  E = r(65154),
-  R = r(689938),
-  Z = r(16281),
-  S = r(331651);
-class F extends a.PureComponent {
+n(571269), n(298267);
+var r = n(735250),
+  a = n(470079),
+  i = n(392711),
+  o = n.n(i),
+  s = n(442837),
+  l = n(481060),
+  c = n(19780),
+  d = n(226961),
+  u = n(914010),
+  m = n(959457),
+  p = n(246946),
+  h = n(594174),
+  g = n(285952),
+  f = n(5192),
+  C = n(476221),
+  y = n(481250),
+  R = n(206314),
+  S = n(513547),
+  D = n(65154),
+  v = n(689938),
+  b = n(16281),
+  E = n(331651);
+class Z extends a.PureComponent {
   render() {
     let {
       transport: e,
       mediaSessionId: t,
-      hidePersonalInformation: r,
+      hidePersonalInformation: n,
       hostname: a
     } = this.props;
-    if (null == e) return (0, n.jsx)(l.Spinner, {
+    if (null == e) return (0, r.jsx)(l.Spinner, {
       type: l.Spinner.Type.SPINNING_CIRCLE
     });
     let i = {
         ...e,
         hostname: a
       },
-      o = s().map(i, (e, t) => {
-        if ("receiverReports" !== t && (!r || "localAddress" !== t)) return (0, n.jsx)(C.ck, {
+      s = o().map(i, (e, t) => {
+        if ("receiverReports" !== t && (!n || "localAddress" !== t)) return (0, r.jsx)(S.ck, {
           label: t,
           value: e
         }, t)
       }),
-      c = s().map(i.receiverReports, e => {
-        let t = Array.isArray(e.bitrate) ? null === (s = e.bitrate.at(-1)) || void 0 === s ? void 0 : s.value : e,
-          r = (0, n.jsxs)(g.Z, {
+      c = o().map(i.receiverReports, e => {
+        let t = Array.isArray(e.bitrate) ? null === (o = e.bitrate.at(-1)) || void 0 === o ? void 0 : o.value : e,
+          n = (0, r.jsxs)(g.Z, {
             id: "bitrate-".concat(e.id),
             justify: g.Z.Justify.BETWEEN,
-            children: [(0, n.jsx)("span", {
+            children: [(0, r.jsx)("span", {
               children: "Bitrate:"
-            }), (0, n.jsxs)("span", {
+            }), (0, r.jsxs)("span", {
               children: [(t / 1e3).toFixed(2), " Kbps"]
             })]
           }),
-          a = (0, n.jsxs)(g.Z, {
+          a = (0, r.jsxs)(g.Z, {
             id: "lost-".concat(e.id),
             justify: g.Z.Justify.BETWEEN,
-            children: [(0, n.jsx)("span", {
+            children: [(0, r.jsx)("span", {
               children: "Packet Loss:"
-            }), (0, n.jsxs)("span", {
+            }), (0, r.jsxs)("span", {
               children: [(100 * e.fractionLost / 256).toFixed(0), "%"]
             })]
           }),
           i = h.default.getUser(e.id);
-        var s, o = f.ZP.getNickname(u.Z.getGuildId(), void 0, i);
-        return null == o && (o = null != i ? i.username : e.id), (0, n.jsx)(D.Z, {
+        var o, s = f.ZP.getNickname(u.Z.getGuildId(), void 0, i);
+        return null == s && (s = null != i ? i.username : e.id), (0, r.jsx)(R.Z, {
           label: e.id,
-          valueRendered: [r, a],
-          children: o
+          valueRendered: [n, a],
+          children: s
         }, e.id)
       });
-    return (0, n.jsxs)(l.FormSection, {
+    return (0, r.jsxs)(l.FormSection, {
       tag: l.FormTitleTags.H2,
-      title: R.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
-      className: Z.allowSelection,
-      children: [(0, v.a)(o), 0 === c.length ? null : (0, n.jsx)(l.FormDivider, {
-        className: S.marginBottom20
-      }), (0, v.a)(c)]
+      title: v.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
+      className: b.allowSelection,
+      children: [(0, y.a)(s), 0 === c.length ? null : (0, r.jsx)(l.FormDivider, {
+        className: E.marginBottom20
+      }), (0, y.a)(c)]
     })
   }
 }
-t.Z = o.ZP.connectStores([d.ZP, c.Z, p.Z, m.Z], e => {
+t.Z = s.ZP.connectStores([d.ZP, c.Z, p.Z, m.Z], e => {
   let {
     context: t,
-    index: r
-  } = e, n = d.ZP.getAllStats(t)[r], a = t === E.Yn.STREAM ? m.Z.getHostname(m.Z.getActiveStreamKey()) : c.Z.getHostname();
+    index: n
+  } = e, r = d.ZP.getAllStats(t)[n], a = t === D.Yn.STREAM ? m.Z.getHostname(m.Z.getActiveStreamKey()) : c.Z.getHostname();
   return {
     hidePersonalInformation: p.Z.hidePersonalInformation,
-    transport: null != n ? n.transport : null,
+    transport: null != r ? r.transport : null,
     mediaSessionId: c.Z.getMediaSessionId(),
-    hostname: y.Z.getShortHostname(a)
+    hostname: C.Z.getShortHostname(a)
   }
-})(F)
+})(Z)

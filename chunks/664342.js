@@ -3,47 +3,47 @@ n.d(t, {
     return A
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(481060),
-  a = n(32750),
+var i = n(735250),
+  a = n(470079),
+  l = n(481060),
+  s = n(32750),
   r = n(323597),
   o = n(438536),
   c = n(193987),
   u = n(933793),
   d = n(13736),
   h = n(732393),
-  m = n(214906),
-  E = n(612856),
-  p = n(137591),
-  g = n(299206),
-  f = n(727429),
-  C = n(359110),
-  _ = n(502568),
+  p = n(214906),
+  m = n(612856),
+  _ = n(137591),
+  f = n(299206),
+  E = n(727429),
+  g = n(359110),
+  C = n(502568),
   I = n(585483),
   x = n(739830),
   T = n(488131),
   N = n(981631),
-  Z = n(689938);
+  v = n(689938);
 
 function S(e) {
   let {
     channel: t
-  } = e, [n, a] = i.useState(!1);
+  } = e, [n, s] = a.useState(!1);
 
   function r() {
-    a(e => !e)
+    s(e => !e)
   }
-  let o = Z.Z.Messages.MORE;
-  return (0, l.jsx)(s.Popout, {
+  let o = v.Z.Messages.MORE;
+  return (0, i.jsx)(l.Popout, {
     shouldShow: n,
-    animation: s.Popout.Animation.NONE,
+    animation: l.Popout.Animation.NONE,
     position: "bottom",
     align: "right",
     autoInvert: !1,
-    onRequestClose: () => a(!1),
+    onRequestClose: () => s(!1),
     renderPopout: function(e) {
-      return (0, l.jsx)(v, {
+      return (0, i.jsx)(Z, {
         ...e,
         channel: t
       })
@@ -52,11 +52,11 @@ function S(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.jsx)(_.ZP.Icon, {
+      return (0, i.jsx)(C.ZP.Icon, {
         ...e,
         onClick: r,
         tooltip: n ? null : o,
-        icon: s.MoreHorizontalIcon,
+        icon: l.MoreHorizontalIcon,
         "aria-label": o,
         selected: n
       })
@@ -64,58 +64,58 @@ function S(e) {
   })
 }
 
-function v(e) {
+function Z(e) {
   let {
     channel: t,
     closePopout: n,
-    onSelect: i
-  } = e, f = (0, o.Z)(t, "Sidebar Overflow"), _ = (0, u.Z)(t), x = (0, m.Z)(t), T = (0, E.Z)(t), S = (0, a.Z)(t), v = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), R = (0, r.Z)(t), j = (0, g.Z)({
+    onSelect: a
+  } = e, E = (0, o.Z)(t, "Sidebar Overflow"), C = (0, u.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, s.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
     id: t.id,
-    label: Z.Z.Messages.COPY_ID_THREAD
-  }), L = (0, p.Z)(t);
+    label: v.Z.Messages.COPY_ID_THREAD
+  }), j = (0, _.Z)(t);
 
-  function O() {
-    (0, C.Kh)(t.id)
+  function L() {
+    (0, g.Kh)(t.id)
   }
-  return (0, l.jsxs)(s.Menu, {
+  return (0, i.jsxs)(l.Menu, {
     navId: "thread-context",
     onClose: n,
-    "aria-label": Z.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-    onSelect: i,
-    children: [(0, l.jsxs)(s.MenuGroup, {
-      children: [f, (0, l.jsx)(s.MenuItem, {
+    "aria-label": v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+    onSelect: a,
+    children: [(0, i.jsxs)(l.MenuGroup, {
+      children: [E, (0, i.jsx)(l.MenuItem, {
         id: "open",
-        label: Z.Z.Messages.OPEN_IN_FULL_VIEW,
-        action: O
+        label: v.Z.Messages.OPEN_IN_FULL_VIEW,
+        action: L
       })]
-    }), (0, l.jsxs)(s.MenuGroup, {
+    }), (0, i.jsxs)(l.MenuGroup, {
       children: [x, T]
-    }), (0, l.jsxs)(s.MenuGroup, {
-      children: [M, _, A]
-    }), (0, l.jsxs)(s.MenuGroup, {
-      children: [(0, l.jsx)(s.MenuItem, {
+    }), (0, i.jsxs)(l.MenuGroup, {
+      children: [M, C, A]
+    }), (0, i.jsxs)(l.MenuGroup, {
+      children: [(0, i.jsx)(l.MenuItem, {
         id: "search",
-        label: Z.Z.Messages.SEARCH,
-        icon: s.WindowLaunchIcon,
+        label: v.Z.Messages.SEARCH,
+        icon: l.WindowLaunchIcon,
         action: function() {
-          O(), setTimeout(() => {
+          L(), setTimeout(() => {
             I.S.dispatch(N.CkL.FOCUS_SEARCH, {
               prefillCurrentChannel: !1
             })
           }, 2e3)
         }
-      }), (0, l.jsx)(s.MenuItem, {
+      }), (0, i.jsx)(l.MenuItem, {
         id: "pins",
-        label: Z.Z.Messages.PINS,
-        icon: s.WindowLaunchIcon,
+        label: v.Z.Messages.PINS,
+        icon: l.WindowLaunchIcon,
         action: function() {
-          O(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS)
+          L(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS)
         }
       })]
-    }), (0, l.jsxs)(s.MenuGroup, {
-      children: [L, S, v, R]
-    }), (0, l.jsx)(s.MenuGroup, {
-      children: j
+    }), (0, i.jsxs)(l.MenuGroup, {
+      children: [j, S, Z, b]
+    }), (0, i.jsx)(l.MenuGroup, {
+      children: R
     })]
   })
 }
@@ -125,15 +125,15 @@ function A(e) {
     channel: t,
     baseChannelId: n
   } = e;
-  return (0, l.jsxs)(l.Fragment, {
-    children: [t.isForumPost() ? null : (0, l.jsx)(x.Z, {
+  return (0, i.jsxs)(i.Fragment, {
+    children: [t.isForumPost() ? null : (0, i.jsx)(x.Z, {
       channel: t
-    }), (0, l.jsx)(S, {
+    }), (0, i.jsx)(S, {
       channel: t
-    }), (0, l.jsx)(_.ZP.Icon, {
-      icon: s.CloseSmallIcon,
-      tooltip: Z.Z.Messages.CLOSE,
-      onClick: () => (0, T.vN)((0, f.e)(t), null != n ? n : t.parent_id)
+    }), (0, i.jsx)(C.ZP.Icon, {
+      icon: l.CloseSmallIcon,
+      tooltip: v.Z.Messages.CLOSE,
+      onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
     })]
   })
 }

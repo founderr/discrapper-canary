@@ -1,16 +1,16 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return l
+    return o
   }
 });
-var a = t(626135),
-  s = t(981631);
+var a = n(626135),
+  s = n(981631);
 
-function l(e) {
+function o(e) {
   let {
-    rating: n = null
+    rating: t = null
   } = e;
   a.default.track(s.rMx.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, {
-    rating: n
+    rating: t
   })
 }

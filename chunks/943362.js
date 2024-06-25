@@ -22,10 +22,10 @@ var r = n(120356),
 function h(e) {
   return {
     react(t, r, h) {
-      let S = h.noStyleAndInteraction ? void 0 : async n => {
+      let f = h.noStyleAndInteraction ? void 0 : async n => {
         let i = await (0, c.B_)(t.attachmentUrl);
         e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, o.closeAllModals)(), (0, l.Z)(i)
-      }, f = h.noStyleAndInteraction ? E.dG4 : e => {
+      }, S = h.noStyleAndInteraction ? E.dG4 : e => {
         (0, a.jW)(e, async () => {
           let {
             default: e
@@ -40,8 +40,8 @@ function h(e) {
       return (0, i.jsxs)(_.Z, {
         role: "link",
         href: t.attachmentUrl,
-        onClick: S,
-        onContextMenu: f,
+        onClick: f,
+        onContextMenu: S,
         className: "attachmentLink",
         children: [(0, i.jsx)(o.AttachmentIcon, {
           size: "xs",

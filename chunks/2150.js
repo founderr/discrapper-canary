@@ -1,6 +1,6 @@
-var s, o;
-t.d(n, {
+var n, t;
+s.d(a, {
   q: function() {
-    return s
+    return n
   }
-}), (o = s || (s = {})).ACCENT = "accent", o.GREEN = "statusGreen", o.YELLOW = "statusYellow", o.ORANGE = "statusOrange", o.RED = "statusRed", o.NONE = "transparent"
+}), (t = n || (n = {})).ACCENT = "accent", t.GREEN = "statusGreen", t.YELLOW = "statusYellow", t.ORANGE = "statusOrange", t.RED = "statusRed", t.NONE = "transparent"

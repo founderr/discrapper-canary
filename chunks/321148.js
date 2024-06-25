@@ -21,7 +21,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends(i = s.Component) {
+class f extends(i = s.Component) {
   render() {
     let {
       popoutOpen: e
@@ -110,6 +110,6 @@ class S extends(i = s.Component) {
     })
   }
 }
-h(S, "defaultProps", {
+h(f, "defaultProps", {
   disablePopout: !1
-}), t.Z = (0, _.Z)(S)
+}), t.Z = (0, _.Z)(f)

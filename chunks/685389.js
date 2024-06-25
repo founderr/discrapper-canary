@@ -1,19 +1,19 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   H: function() {
-    return l
+    return i
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(316185);
+var s = n(735250);
+n(470079);
+var a = n(316185);
 
-function l(e) {
+function i(e) {
   let {
-    children: s
+    children: t
   } = e;
-  return (0, n.jsx)("div", {
-    className: i.metricsContainer,
-    children: s
+  return (0, s.jsx)("div", {
+    className: a.metricsContainer,
+    children: t
   })
 }

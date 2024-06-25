@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return p
+    return R
   }
 });
 var i = n(735250),
@@ -18,10 +18,10 @@ var i = n(735250),
   I = n(806519),
   T = n(74538),
   h = n(618158),
-  S = n(871499),
-  f = n(981631),
-  N = n(474936),
-  A = n(689938),
+  f = n(871499),
+  S = n(981631),
+  A = n(474936),
+  N = n(689938),
   m = n(416555);
 
 function O(e) {
@@ -35,7 +35,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     className: t
   } = e;
@@ -50,17 +50,17 @@ function R(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     hideBadges: t = !1,
     stream: n,
     ...E
-  } = e, I = (0, s.e7)([d.default], () => T.ZP.isPremium(d.default.getCurrentUser(), N.p9.TIER_1)), m = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)), p = r.useMemo(() => null != n ? [n] : [], [n]), g = (0, a.zW)(null == m ? void 0 : m.id), C = r.useCallback(() => {
-    null != m && (0, _.Z)(m.getGuildId(), m.id, f.jXE.STREAM_SETTINGS)
+  } = e, I = (0, s.e7)([d.default], () => T.ZP.isPremium(d.default.getCurrentUser(), A.p9.TIER_1)), m = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)), R = r.useMemo(() => null != n ? [n] : [], [n]), g = (0, a.zW)(null == m ? void 0 : m.id), C = r.useCallback(() => {
+    null != m && (0, _.Z)(m.getGuildId(), m.id, S.jXE.STREAM_SETTINGS)
   }, [m]);
   if (null == n || null == m) return null;
   let v = O;
-  return !t && !I && (v = R), (0, i.jsx)(o.Popout, {
+  return !t && !I && (v = p), (0, i.jsx)(o.Popout, {
     position: "top",
     renderPopout: e => {
       let {
@@ -72,7 +72,7 @@ function p(e) {
         }) : (0, i.jsx)(u.Z, {
           channel: m,
           currentUser: d.default.getCurrentUser(),
-          activeStreams: p,
+          activeStreams: R,
           onClose: t,
           showReportOption: !0,
           handleGoLive: C
@@ -80,9 +80,9 @@ function p(e) {
       })
     },
     animation: o.Popout.Animation.FADE,
-    children: e => (0, i.jsx)(S.Z, {
+    children: e => (0, i.jsx)(f.Z, {
       ...e,
-      label: A.Z.Messages.STREAMER_SETTINGS_TITLE,
+      label: N.Z.Messages.STREAMER_SETTINGS_TITLE,
       iconComponent: v,
       ...E
     })

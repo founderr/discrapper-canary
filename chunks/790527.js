@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(74538),
   T = n(357355),
   h = n(104494),
-  S = n(639119),
-  f = n(165583),
-  N = n(197115),
-  A = n(302945),
+  f = n(639119),
+  S = n(165583),
+  A = n(197115),
+  N = n(302945),
   m = n(631771),
   O = n(474936),
-  R = n(981631),
-  p = n(689938),
+  p = n(981631),
+  R = n(689938),
   g = n(935777),
   C = n(769860);
 
@@ -42,8 +42,8 @@ function v(e) {
     glowUp: b,
     modalClassName: G,
     artContainerClassName: w,
-    headerClassName: B,
-    bodyClassName: x,
+    headerClassName: x,
+    bodyClassName: B,
     transitionState: k,
     onClose: V,
     onSubscribeClick: Z,
@@ -59,17 +59,17 @@ function v(e) {
     showEnhancedUpsell: Q,
     children: J,
     ...$
-  } = e, ee = null != D, et = (0, S.N)(), en = (0, h.Ng)(), ei = ((null == et ? void 0 : null === (t = et.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === K || (0, h.Wp)(en, K)) && !ee, {
+  } = e, ee = null != D, et = (0, f.N)(), en = (0, h.Ng)(), ei = ((null == et ? void 0 : null === (t = et.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === K || (0, h.Wp)(en, K)) && !ee, {
     analyticsLocations: er
   } = (0, c.ZP)(_.Z.PREMIUM_UPSELL_MODAL);
   r.useEffect(() => {
-    !z && (ee ? E.default.track(R.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+    !z && (ee ? E.default.track(p.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(L, " - Tier ").concat(D.boostedGuildTier),
       guild_id: D.guild.id,
       channel_id: D.channelId,
       location: P,
       location_stack: er
-    }) : E.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+    }) : E.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
       type: L,
       source: M,
       location: P,
@@ -108,7 +108,7 @@ function v(e) {
       className: Q ? g.enhancedContent : g.content,
       children: z ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(i.Fragment, {
         children: ei ? (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsx)(f.ZP, {
+          children: (0, i.jsx)(S.ZP, {
             onClose: V,
             type: L,
             subscriptionTier: null !== (s = null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : O.Si.TIER_2,
@@ -123,14 +123,14 @@ function v(e) {
           children: [(0, i.jsx)(l.Heading, {
             className: o()(g.header, {
               [g.enhancedHeader]: Q
-            }, B),
+            }, x),
             variant: "heading-xl/bold",
             children: v
-          }), eo ? (0, i.jsx)(A.Z, {
+          }), eo ? (0, i.jsx)(N.Z, {
             affinities: es
           }) : void 0, J, (0, i.jsx)(l.Text, {
             variant: "text-md/normal",
-            className: o()(x, g.subHeader),
+            className: o()(B, g.subHeader),
             children: y
           })]
         })
@@ -159,7 +159,7 @@ function v(e) {
             guild: D.guild,
             onClose: V
           });
-          let t = Q ? p.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+          let t = Q ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
           if (ei) {
             if (null != et) {
               var n, r;
@@ -167,11 +167,11 @@ function v(e) {
                 intervalType: null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.interval,
                 intervalCount: null == et ? void 0 : null === (r = et.subscription_trial) || void 0 === r ? void 0 : r.interval_count
               }), e = null == et ? void 0 : et.trial_id
-            } else null != en && (t = p.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
+            } else null != en && (t = R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
               percent: en.discount.amount
             }))
           }
-          return (0, i.jsx)(N.Z, {
+          return (0, i.jsx)(A.Z, {
             showGradient: Q,
             premiumModalAnalyticsLocation: P,
             subscriptionTier: K,
@@ -189,7 +189,7 @@ function v(e) {
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.PRIMARY,
         look: l.Button.Looks.LINK,
-        children: null != X ? X : p.Z.Messages.BACK
+        children: null != X ? X : R.Z.Messages.BACK
       })]
     })]
   })

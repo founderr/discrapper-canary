@@ -1,83 +1,83 @@
-i.r(n);
-var e = i(735250);
-i(470079);
-var s = i(442837),
-  a = i(481060),
-  o = i(812206),
-  d = i(922156),
-  r = i(285952),
-  c = i(63063),
-  t = i(689938),
-  u = i(248990);
+e.r(n);
+var o = e(735250);
+e(470079);
+var i = e(442837),
+  a = e(481060),
+  s = e(812206),
+  r = e(922156),
+  d = e(285952),
+  t = e(63063),
+  c = e(689938),
+  u = e(248990);
 n.default = l => {
   let {
     onClose: n,
-    transitionState: i
+    transitionState: e
   } = l, {
-    error: h,
-    applicationName: R
-  } = (0, s.cj)([d.Z, o.Z], () => {
-    let l = d.Z.getLastError(),
+    error: p,
+    applicationName: h
+  } = (0, i.cj)([r.Z, s.Z], () => {
+    let l = r.Z.getLastError(),
       n = null;
     if (null != l && null != l.applicationId) {
-      let i = o.Z.getApplication(l.applicationId);
-      null != i && (n = i.name)
+      let e = s.Z.getApplication(l.applicationId);
+      null != e && (n = e.name)
     }
     return {
       error: l,
       applicationName: n
     }
   });
-  return (0, e.jsxs)(a.ModalRoot, {
-    transitionState: i,
+  return (0, o.jsxs)(a.ModalRoot, {
+    transitionState: e,
     size: a.ModalSize.SMALL,
-    "aria-label": t.Z.Messages.DISPATCH_ERROR_MODAL_HEADER,
-    children: [(0, e.jsxs)(a.ModalHeader, {
-      justify: r.Z.Justify.BETWEEN,
+    "aria-label": c.Z.Messages.DISPATCH_ERROR_MODAL_HEADER,
+    children: [(0, o.jsxs)(a.ModalHeader, {
+      justify: d.Z.Justify.BETWEEN,
       separator: !1,
-      children: [(0, e.jsx)(r.Z.Child, {
+      children: [(0, o.jsx)(d.Z.Child, {
         grow: 1,
-        children: (0, e.jsx)(a.Heading, {
+        children: (0, o.jsx)(a.Heading, {
           variant: "heading-lg/semibold",
-          children: t.Z.Messages.DISPATCH_ERROR_MODAL_HEADER
+          children: c.Z.Messages.DISPATCH_ERROR_MODAL_HEADER
         })
-      }), (0, e.jsx)(r.Z.Child, {
+      }), (0, o.jsx)(d.Z.Child, {
         grow: 0,
-        children: (0, e.jsx)(a.ModalCloseButton, {
+        children: (0, o.jsx)(a.ModalCloseButton, {
           onClick: n
         })
       })]
-    }), (0, e.jsx)(a.ModalContent, {
-      children: (0, e.jsxs)("div", {
+    }), (0, o.jsx)(a.ModalContent, {
+      children: (0, o.jsxs)("div", {
         className: u.body,
-        children: [(0, e.jsx)("div", {
-          children: t.Z.Messages.DISPATCH_ERROR_MODAL_DESCRIPTION.format({
+        children: [(0, o.jsx)("div", {
+          children: c.Z.Messages.DISPATCH_ERROR_MODAL_DESCRIPTION.format({
             link: "https://dis.gd/dispatch-error"
           })
-        }), (0, e.jsx)("div", {
+        }), (0, o.jsx)("div", {
           className: u.supportCallToAction,
-          children: t.Z.Messages.DISPATCH_ERROR_MODAL_BODY
-        }), (0, e.jsx)("div", {
+          children: c.Z.Messages.DISPATCH_ERROR_MODAL_BODY
+        }), (0, o.jsx)("div", {
           className: u.errorLabel,
-          children: t.Z.Messages.DISPATCH_ERROR_MODAL_ERROR_LABEL
-        }), (0, e.jsx)("div", {
+          children: c.Z.Messages.DISPATCH_ERROR_MODAL_ERROR_LABEL
+        }), (0, o.jsx)("div", {
           className: u.errorDetails,
-          children: (0, e.jsxs)("div", {
-            children: [null != R ? "Game: ".concat(R, "\n") : null, (null == h ? void 0 : h.applicationId) != null ? "Game ID: ".concat(h.applicationId, "\n") : null, (null == h ? void 0 : h.branchId) != null && (null == h ? void 0 : h.applicationId) !== (null == h ? void 0 : h.branchId) ? "Branch ID: ".concat(null == h ? void 0 : h.branchId, "\n") : null, (null == h ? void 0 : h.code) != null ? "Error Code: ".concat(null == h ? void 0 : h.code, "\n") : null, (null == h ? void 0 : h.uuid) != null ? "Unique Case ID: ".concat(null == h ? void 0 : h.uuid) : null]
+          children: (0, o.jsxs)("div", {
+            children: [null != h ? "Game: ".concat(h, "\n") : null, (null == p ? void 0 : p.applicationId) != null ? "Game ID: ".concat(p.applicationId, "\n") : null, (null == p ? void 0 : p.branchId) != null && (null == p ? void 0 : p.applicationId) !== (null == p ? void 0 : p.branchId) ? "Branch ID: ".concat(null == p ? void 0 : p.branchId, "\n") : null, (null == p ? void 0 : p.code) != null ? "Error Code: ".concat(null == p ? void 0 : p.code, "\n") : null, (null == p ? void 0 : p.uuid) != null ? "Unique Case ID: ".concat(null == p ? void 0 : p.uuid) : null]
           })
         })]
       })
-    }), (0, e.jsxs)(a.ModalFooter, {
-      children: [(0, e.jsx)(a.Button, {
+    }), (0, o.jsxs)(a.ModalFooter, {
+      children: [(0, o.jsx)(a.Button, {
         onClick: () => {
-          window.open(c.Z.getSubmitRequestURL())
+          window.open(t.Z.getSubmitRequestURL())
         },
-        children: t.Z.Messages.DISPATCH_ERROR_MODAL_OPEN_TICKET
-      }), (0, e.jsx)(a.Button, {
+        children: c.Z.Messages.DISPATCH_ERROR_MODAL_OPEN_TICKET
+      }), (0, o.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         onClick: n,
         color: u.closeLink,
-        children: t.Z.Messages.CLOSE
+        children: c.Z.Messages.CLOSE
       })]
     })]
   })

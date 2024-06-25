@@ -1,61 +1,61 @@
-t.d(l, {
+n.d(t, {
   ZP: function() {
-    return c
+    return h
   },
   pn: function() {
     return r
   }
 });
-var n, r, i = t(735250),
-  s = t(470079),
-  a = t(729594),
-  o = t(140061);
+var l, r, i = n(735250),
+  a = n(470079),
+  o = n(729594),
+  d = n(140061);
 
-function d(e) {
+function s(e) {
   let {
-    autoMute: l,
-    ...t
-  } = e, n = s.useRef(null), r = s.useCallback(e => {
+    autoMute: t,
+    ...n
+  } = e, l = a.useRef(null), r = a.useCallback(e => {
     if (!!e.data["x-tiktok-embed"] && "https://www.tiktok.com" === e.origin) {
       if ("onPlayerReady" === e.data.type) {
-        var t, r, i, s;
-        l && (null === (s = n.current) || void 0 === s || null === (i = s.contentWindow) || void 0 === i || i.postMessage({
+        var n, r, i, a;
+        t && (null === (a = l.current) || void 0 === a || null === (i = a.contentWindow) || void 0 === i || i.postMessage({
           type: "mute",
           "x-tiktok-embed": !0
-        }, e.origin)), null === (r = n.current) || void 0 === r || null === (t = r.contentWindow) || void 0 === t || t.postMessage({
+        }, e.origin)), null === (r = l.current) || void 0 === r || null === (n = r.contentWindow) || void 0 === n || n.postMessage({
           type: "play",
           "x-tiktok-embed": !0
         }, e.origin)
       }
     }
-  }, [l]);
-  return s.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, i.jsx)(h, {
-    ref: n,
-    ...t
+  }, [t]);
+  return a.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, i.jsx)(m, {
+    ref: l,
+    ...n
   })
 }
 
 function u(e) {
   let {
-    src: l,
-    autoMute: t,
-    ...n
-  } = e, r = a.parse(null != l ? l : "", !0);
+    src: t,
+    autoMute: n,
+    ...l
+  } = e, r = o.parse(null != t ? t : "", !0);
   r.query = {
     ...r.query,
     autoplay: "1",
     auto_play: "1"
-  }, t && (r.query.mute = "1"), r.search = null;
-  let s = a.format(r);
-  return (0, i.jsx)(h, {
-    src: s,
-    ...n
+  }, n && (r.query.mute = "1"), r.search = null;
+  let a = o.format(r);
+  return (0, i.jsx)(m, {
+    src: a,
+    ...l
   })
 }
-let h = s.forwardRef(function(e, l) {
+let m = a.forwardRef(function(e, t) {
   return (0, i.jsx)("iframe", {
-    ref: l,
-    className: o.embedIframe,
+    ref: t,
+    className: d.embedIframe,
     allow: "autoplay",
     frameBorder: 0,
     scrolling: "no",
@@ -64,19 +64,19 @@ let h = s.forwardRef(function(e, l) {
   })
 });
 
-function c(e) {
+function h(e) {
   switch (e.provider) {
     case "YouTube":
       return (0, i.jsx)(u, {
         ...e
       });
     case "TikTok":
-      return (0, i.jsx)(d, {
+      return (0, i.jsx)(s, {
         ...e
       });
     default:
-      return (0, i.jsx)(h, {
+      return (0, i.jsx)(m, {
         ...e
       })
   }
-}(n = r || (r = {})).YOUTUBE = "YouTube", n.TIKTOK = "TikTok"
+}(l = r || (r = {})).YOUTUBE = "YouTube", l.TIKTOK = "TikTok"

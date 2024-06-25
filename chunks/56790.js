@@ -1,1 +1,1 @@
-e.exports = s.p + "0d899ece27352515c082.svg"
+e.exports = n.p + "0d899ece27352515c082.svg"

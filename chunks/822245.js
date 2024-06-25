@@ -36,7 +36,7 @@ function h(e) {
   }), T.track(e), T.compute()
 }
 
-function S() {
+function f() {
   var e, t;
   let n = null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
   T.overwriteHistory(s().mapValues(n, e => ({
@@ -44,9 +44,9 @@ function S() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class f extends(i = o.ZP.PersistedStore) {
+class S extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (I = e), this.syncWith([_.Z], S)
+    null != e && (I = e), this.syncWith([_.Z], f)
   }
   getState() {
     return I
@@ -65,7 +65,7 @@ class f extends(i = o.ZP.PersistedStore) {
     return T.frequently
   }
 }
-E(f, "displayName", "ApplicationFrecencyStore"), E(f, "persistKey", "ApplicationFrecency"), t.Z = new f(a.Z, {
+E(S, "displayName", "ApplicationFrecencyStore"), E(S, "persistKey", "ApplicationFrecency"), t.Z = new S(a.Z, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t

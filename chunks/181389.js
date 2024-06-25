@@ -6,30 +6,30 @@ n.d(t, {
     return o
   }
 }), n(653041);
-var s = n(395041);
+var i = n(395041);
 n(349033);
-var i = n(999650);
+var a = n(999650);
 n(72006);
-var l = n(405656);
+var s = n(405656);
 n(981631);
-let a = {
-  [i.Qe.FILTER]: s.w,
-  [i.Qe.ANSWER]: s.O
+let l = {
+  [a.Qe.FILTER]: i.w,
+  [a.Qe.ANSWER]: i.O
 };
 
 function r() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     t = [];
   return Object.keys(e).forEach(n => {
-    let s = e[n];
+    let i = e[n];
     t.push({
-      strategy: (e, t, s) => (function(e, t, n, s) {
+      strategy: (e, t, i) => (function(e, t, n, i) {
         t.findEntityRanges(t => {
           let n = t.getEntity();
-          return null !== n && e.getEntity(n).getType() === s
+          return null !== n && e.getEntity(n).getType() === i
         }, n)
-      })(s, e, t, n),
-      component: a[s.componentType]
+      })(i, e, t, n),
+      component: l[i.componentType]
     })
   }), t
 }
@@ -37,7 +37,7 @@ function r() {
 function o(e, t) {
   let {
     focusOffset: n,
-    anchorOffset: s
+    anchorOffset: i
   } = t.getSelection();
-  return (0, l.g9)(e, n, s)
+  return (0, s.g9)(e, n, i)
 }

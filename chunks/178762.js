@@ -3,73 +3,73 @@ n.d(t, {
     return M
   },
   iZ: function() {
-    return R
+    return b
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(392711),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(392711),
+  s = n.n(l),
   r = n(91192),
   o = n(876215),
   c = n(442837),
   u = n(481060),
   d = n(239091),
   h = n(607070),
-  m = n(439170),
-  E = n(594174),
-  p = n(687694),
-  g = n(69259),
-  f = n(91140),
-  C = n(227172),
-  _ = n(551228),
+  p = n(439170),
+  m = n(594174),
+  _ = n(687694),
+  f = n(69259),
+  E = n(91140),
+  g = n(227172),
+  C = n(551228),
   I = n(678869),
   x = n(278399),
   T = n(886217),
   N = n(555672),
-  Z = n(644548),
+  v = n(644548),
   S = n(335326),
-  v = n(268010),
+  Z = n(268010),
   A = n(206583);
 let M = 72;
 
-function R(e) {
-  return (null == e ? void 0 : e.type) === m.so.CONTENT_INVENTORY ? M : 0
+function b(e) {
+  return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? M : 0
 }
-let j = a().throttle(e => {
-    (0, g.L)(A.xP.CARD_HOVER, e)
+let R = s().throttle(e => {
+    (0, f.L)(A.xP.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
   }),
-  L = e => {
+  j = e => {
     let {
       entry: t,
       ...n
     } = e;
     switch (t.content_type) {
       case o.s.PLAYED_GAME:
-        return (0, l.jsx)(f.Z, {
+        return (0, i.jsx)(E.Z, {
           ...n,
           entry: t
         });
       case o.s.WATCHED_MEDIA:
-        return (0, l.jsx)(S.ZP, {
+        return (0, i.jsx)(S.ZP, {
           ...n,
           entry: t
         });
       case o.s.TOP_GAME:
-        return (0, l.jsx)(N.ZP, {
+        return (0, i.jsx)(N.ZP, {
           ...n,
           entry: t
         });
       case o.s.TOP_ARTIST:
-        return (0, l.jsx)(x.ZP, {
+        return (0, i.jsx)(x.ZP, {
           ...n,
           entry: t
         });
       case o.s.LISTENED_SESSION:
-        return (0, l.jsx)(_.ZP, {
+        return (0, i.jsx)(C.ZP, {
           ...n,
           entry: t
         });
@@ -77,34 +77,34 @@ let j = a().throttle(e => {
         return null
     }
   },
-  O = e => {
+  L = e => {
     let {
       entry: t,
       ...n
     } = e;
     switch (t.content_type) {
       case o.s.PLAYED_GAME:
-        return (0, l.jsx)(C.Z, {
+        return (0, i.jsx)(g.Z, {
           ...n,
           entry: t
         });
       case o.s.WATCHED_MEDIA:
-        return (0, l.jsx)(v.Z, {
+        return (0, i.jsx)(Z.Z, {
           ...n,
           entry: t
         });
       case o.s.TOP_GAME:
-        return (0, l.jsx)(Z.Z, {
+        return (0, i.jsx)(v.Z, {
           ...n,
           entry: t
         });
       case o.s.TOP_ARTIST:
-        return (0, l.jsx)(T.Z, {
+        return (0, i.jsx)(T.Z, {
           ...n,
           entry: t
         });
       case o.s.LISTENED_SESSION:
-        return (0, l.jsx)(I.Z, {
+        return (0, i.jsx)(I.Z, {
           ...n,
           entry: t
         });
@@ -112,93 +112,93 @@ let j = a().throttle(e => {
         return null
     }
   };
-t.ZP = i.memo(e => {
+t.ZP = a.memo(e => {
   var t;
   let {
-    index: s,
-    ...a
-  } = e, [o, m] = i.useState("default"), f = (0, r.JA)("".concat(s)), C = null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), _ = {
-    entry: a.entry,
-    channelId: a.channel.id,
-    guildId: a.channel.guild_id,
-    requestId: a.requestId
+    index: l,
+    ...s
+  } = e, [o, p] = a.useState("default"), E = (0, r.JA)("".concat(l)), g = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), C = {
+    entry: s.entry,
+    channelId: s.channel.id,
+    guildId: s.channel.guild_id,
+    requestId: s.requestId
   }, {
     openOnHover: I
-  } = (0, p.C)({
+  } = (0, _.C)({
     location: "MemberListContentRow"
-  }), x = i.useRef(!1), [T, N] = i.useState(!1), [Z, S] = i.useState(!1), [v, M] = i.useState(!1), R = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
-  i.useEffect(() => {
-    T && R && M(!0)
-  }, [T, R]);
-  let P = i.useCallback(e => {
-      if (!!C)(0, d.jW)(e, async () => {
+  }), x = a.useRef(!1), [T, N] = a.useState(!1), [v, S] = a.useState(!1), [Z, M] = a.useState(!1), b = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+  a.useEffect(() => {
+    T && b && M(!0)
+  }, [T, b]);
+  let P = a.useCallback(e => {
+      if (!!g)(0, d.jW)(e, async () => {
         let {
           default: e
         } = await n.e("153").then(n.bind(n, 330150));
-        return () => (0, l.jsx)(e, {
-          entry: a.entry,
-          requestId: a.requestId
+        return () => (0, i.jsx)(e, {
+          entry: s.entry,
+          requestId: s.requestId
         })
       })
-    }, [a, C]),
-    y = i.useCallback(() => {
-      m(String(Date.now()))
+    }, [s, g]),
+    O = a.useCallback(() => {
+      p(String(Date.now()))
     }, []),
-    b = () => {
+    y = () => {
       x.current = !1, setTimeout(() => {
-        !x.current && (N(!1), M(R))
+        !x.current && (N(!1), M(b))
       }, 100)
     };
-  return (0, l.jsx)("div", {
+  return (0, i.jsx)("div", {
     onMouseEnter: () => {
       x.current = !0, setTimeout(() => {
-        x.current && N(!0), I && (0, g.L)(A.xP.CARD_CLICK, _)
+        x.current && N(!0), I && (0, f.L)(A.xP.CARD_CLICK, C)
       }, 100)
     },
-    onMouseLeave: b,
-    children: (0, l.jsx)(u.Popout, {
+    onMouseLeave: y,
+    children: (0, i.jsx)(u.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, l.jsx)(O, {
+        return (0, i.jsx)(L, {
           closePopout: t,
-          updatePopoutPosition: y,
-          ...a
+          updatePopoutPosition: O,
+          ...s
         })
       },
       position: "left",
-      shouldShow: I ? T : Z,
+      shouldShow: I ? T : v,
       positionKey: o,
-      onRequestOpen: () => (0, g.L)(A.xP.CARD_CLICK, _),
+      onRequestOpen: () => (0, f.L)(A.xP.CARD_CLICK, C),
       onRequestClose: () => {
-        v && b(), !I && (N(!1), S(!1))
+        Z && y(), !I && (N(!1), S(!1))
       },
       spacing: 8,
       children: (e, t) => {
         let {
           isShown: n
         } = t;
-        return (0, l.jsx)(u.Clickable, {
+        return (0, i.jsx)(u.Clickable, {
           onClick: () => {
             I && !T && N(!0), !I && S(e => !e)
           },
-          children: (0, l.jsx)(u.FocusRing, {
+          children: (0, i.jsx)(u.FocusRing, {
             offset: {
               top: 4,
               bottom: 4,
               left: 4,
               right: 4
             },
-            children: (0, l.jsx)("div", {
+            children: (0, i.jsx)("div", {
               ...e,
-              ...f,
+              ...E,
               onMouseEnter: () => {
-                j(_)
+                R(C)
               },
               onContextMenu: P,
-              children: (0, l.jsx)(L, {
-                ...a,
+              children: (0, i.jsx)(j, {
+                ...s,
                 selected: n
               })
             })

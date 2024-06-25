@@ -3,17 +3,17 @@ n.d(t, {
     return i
   }
 }), n(47120);
-var s = n(470079);
+var r = n(470079);
 
-function r() {
+function s() {
   return "undefined" == typeof document || "visible" === document.visibilityState
 }
 
 function i() {
-  let [e, t] = (0, s.useState)(r());
-  return (0, s.useEffect)(() => {
+  let [e, t] = (0, r.useState)(s());
+  return (0, r.useEffect)(() => {
     function e() {
-      t(r())
+      t(s())
     }
     return window.addEventListener("visibilitychange", e), () => {
       window.removeEventListener("visibilitychange", e)

@@ -1,12 +1,12 @@
 t.d(n, {
   A: function() {
-    return s
+    return i
   }
 });
 var a = t(442837),
   r = t(826581);
 
-function s(e) {
+function i(e) {
   let {
     guildId: n
   } = e;

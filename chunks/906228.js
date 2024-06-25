@@ -1,18 +1,18 @@
 n(47120);
-var s = n(243814),
-  i = n(120960),
-  l = n(996106),
-  a = n(452426),
-  r = n(186901),
+var i = n(243814),
+  s = n(120960),
+  a = n(996106),
+  r = n(452426),
+  l = n(186901),
   o = n(981631),
   c = n(65154);
 t.Z = {
   [o.Etm.SET_CERTIFIED_DEVICES]: {
     scope: {
-      [r.Gp.ANY]: [s.x.RPC, r.lH]
+      [l.Gp.ANY]: [i.x.RPC, l.lH]
     },
-    validation: e => (0, a.Z)(e).required().keys({
-      devices: e.array().items((0, a.Z)(e).keys({
+    validation: e => (0, r.Z)(e).required().keys({
+      devices: e.array().items((0, r.Z)(e).keys({
         type: e.string().required().valid([c.h7.AUDIO_INPUT, c.h7.AUDIO_OUTPUT, c.h7.VIDEO_INPUT]),
         id: e.string().required().min(1),
         vendor: e.object().required().keys({
@@ -37,10 +37,10 @@ t.Z = {
           devices: n
         }
       } = e;
-      if (null == t.application.id) throw new l.Z({
+      if (null == t.application.id) throw new a.Z({
         errorCode: o.lTL.INVALID_COMMAND
       }, "No application.");
-      (0, i.N)(t.application.id, n.map(e => ({
+      (0, s.N)(t.application.id, n.map(e => ({
         type: e.type,
         id: e.id,
         vendor: e.vendor,

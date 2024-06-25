@@ -1,22 +1,22 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(704215),
-  l = n(765585),
-  a = n(300284),
-  r = n(526761),
+var s = n(704215),
+  a = n(765585),
+  r = n(300284),
+  l = n(526761),
   o = n(689938),
   c = n(659374);
 
-function u() {
-  let e = (0, a.Z)({
-    scrollPosition: r.Y_.TRY_IT_OUT
+function d() {
+  let e = (0, r.Z)({
+    scrollPosition: l.Y_.TRY_IT_OUT
   });
-  return (0, s.jsx)(l.Z, {
+  return (0, i.jsx)(a.Z, {
     isPremiumFeature: !0,
     shouldUseHorizontalButtons: !0,
     inlineArt: !0,
@@ -24,6 +24,6 @@ function u() {
     onTryFeature: e,
     header: o.Z.Messages.PROFILE_THEMES_TOOLTIP_TITLE,
     body: o.Z.Messages.PROFILE_THEMES_TOOLTIP_DESCRIPTION_PREMIUM,
-    dismissibleContent: i.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2
+    dismissibleContent: s.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2
   })
 }

@@ -1,138 +1,138 @@
 t.d(n, {
   Z: function() {
-    return f
+    return b
   }
 }), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(120356),
-  a = t.n(s),
-  r = t(913527),
-  o = t.n(r),
+  l = t.n(s),
+  o = t(913527),
+  r = t.n(o),
   c = t(442837),
   d = t(481060),
   u = t(139387),
   I = t(726542),
-  N = t(339085),
-  E = t(434404),
-  T = t(598077),
-  m = t(430824),
-  _ = t(246946),
+  m = t(339085),
+  _ = t(434404),
+  N = t(598077),
+  E = t(430824),
+  T = t(246946),
   h = t(285952),
-  g = t(259580),
-  O = t(531087),
-  A = t(768581),
-  x = t(709054),
-  C = t(486199),
-  S = t(981631),
-  p = t(689938),
-  R = t(573138),
-  Z = t(331651);
+  p = t(259580),
+  g = t(531087),
+  C = t(768581),
+  f = t(709054),
+  x = t(486199),
+  O = t(981631),
+  S = t(689938),
+  A = t(573138),
+  R = t(331651);
 
-function f(e) {
+function b(e) {
   let n, {
       guild: t,
       integration: s,
-      editedIntegration: r,
-      isExpanded: f,
-      onToggleExpand: M,
-      onDisable: L,
-      onEnable: v
+      editedIntegration: o,
+      isExpanded: b,
+      onToggleExpand: Z,
+      onDisable: v,
+      onEnable: M
     } = e,
-    j = (0, c.e7)([m.Z], () => m.Z.getRoles(t.id)),
-    [b, P] = l.useState(!1),
-    D = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
-    B = l.useCallback(() => {
-      P(!0), v(s)
-    }, [s, v]),
-    G = l.useCallback(() => {
+    L = (0, c.e7)([E.Z], () => E.Z.getRoles(t.id)),
+    [j, D] = a.useState(!1),
+    P = (0, c.e7)([T.Z], () => T.Z.hidePersonalInformation),
+    B = a.useCallback(() => {
+      D(!0), M(s)
+    }, [s, M]),
+    y = a.useCallback(() => {
       !s.syncing && (0, d.openModal)(e => {
-        let n = 0 === s.expire_behavior ? p.Z.Messages.REMOVE_SYNCED_ROLE : p.Z.Messages.KICK_FROM_SERVER;
+        let n = 0 === s.expire_behavior ? S.Z.Messages.REMOVE_SYNCED_ROLE : S.Z.Messages.KICK_FROM_SERVER;
         return (0, i.jsx)(d.ConfirmModal, {
           ...e,
-          header: p.Z.Messages.DISABLE_INTEGRATION_TITLE,
+          header: S.Z.Messages.DISABLE_INTEGRATION_TITLE,
           confirmText: n,
-          cancelText: p.Z.Messages.CANCEL,
-          onConfirm: () => L(s),
+          cancelText: S.Z.Messages.CANCEL,
+          onConfirm: () => v(s),
           children: (0, i.jsx)(d.Text, {
             variant: "text-md/normal",
-            children: s.type === S.ABu.YOUTUBE ? p.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : p.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
+            children: s.type === O.ABu.YOUTUBE ? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
           })
         })
       })
-    }, [s, L]),
-    y = l.useCallback(() => {
-      E.Z.syncIntegration(t.id, s.id)
+    }, [s, v]),
+    G = a.useCallback(() => {
+      _.Z.syncIntegration(t.id, s.id)
     }, [t.id, s.id]),
-    k = l.useCallback(() => {
-      null != s.role_id && (E.Z.setSection(S.pNK.ROLES), E.Z.selectRole(s.role_id))
+    k = a.useCallback(() => {
+      null != s.role_id && (_.Z.setSection(O.pNK.ROLES), _.Z.selectRole(s.role_id))
     }, [s.role_id]),
     {
       serviceName: U,
       channelURL: H,
-      expireBehaviorLabel: W,
-      syncLabel: w,
+      expireBehaviorLabel: w,
+      syncLabel: W,
       subscribersText: F
-    } = l.useMemo(() => {
-      var e, n, t, i, l;
-      let a = null !== (t = null === (n = I.Z.get(s.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, s.account)) && void 0 !== t ? t : "";
+    } = a.useMemo(() => {
+      var e, n, t, i, a;
+      let l = null !== (t = null === (n = I.Z.get(s.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, s.account)) && void 0 !== t ? t : "";
       switch (s.type) {
-        case S.ABu.YOUTUBE:
+        case O.ABu.YOUTUBE:
           return {
-            serviceName: p.Z.Messages.INTEGRATIONS_YOUTUBE, expireBehaviorLabel: p.Z.Messages.FORM_LABEL_MEMBERSHIP_EXPIRE_BEHAVIOR, syncLabel: p.Z.Messages.FORM_LABEL_SYNCED_MEMBERS, subscribersText: p.Z.Messages.NUM_MEMBERS.format({
+            serviceName: S.Z.Messages.INTEGRATIONS_YOUTUBE, expireBehaviorLabel: S.Z.Messages.FORM_LABEL_MEMBERSHIP_EXPIRE_BEHAVIOR, syncLabel: S.Z.Messages.FORM_LABEL_SYNCED_MEMBERS, subscribersText: S.Z.Messages.NUM_MEMBERS.format({
               subscribers: null !== (i = s.subscriber_count) && void 0 !== i ? i : 0
-            }), channelURL: a
+            }), channelURL: l
           };
-        case S.ABu.TWITCH:
+        case O.ABu.TWITCH:
         default:
           return {
-            serviceName: p.Z.Messages.INTEGRATIONS_TWITCH, expireBehaviorLabel: p.Z.Messages.FORM_LABEL_SUB_EXPIRE_BEHAVIOR, syncLabel: p.Z.Messages.FORM_LABEL_SYNCED_SUBS, subscribersText: p.Z.Messages.NUM_SUBSCRIBERS.format({
-              subscribers: null !== (l = s.subscriber_count) && void 0 !== l ? l : 0
-            }), channelURL: a
+            serviceName: S.Z.Messages.INTEGRATIONS_TWITCH, expireBehaviorLabel: S.Z.Messages.FORM_LABEL_SUB_EXPIRE_BEHAVIOR, syncLabel: S.Z.Messages.FORM_LABEL_SYNCED_SUBS, subscribersText: S.Z.Messages.NUM_SUBSCRIBERS.format({
+              subscribers: null !== (a = s.subscriber_count) && void 0 !== a ? a : 0
+            }), channelURL: l
           }
       }
     }, [s.account, s.subscriber_count, s.type]),
     {
       roleLink: V,
       syncDescriptionText: K
-    } = l.useMemo(() => {
+    } = a.useMemo(() => {
       let e, n;
-      let t = null != s.role_id ? j[s.role_id] : null;
+      let t = null != s.role_id ? L[s.role_id] : null;
       e = null != t ? (0, i.jsx)(d.Anchor, {
         onClick: k,
         children: t.name
-      }) : p.Z.Messages.NONE;
-      let l = I.Z.get(s.type);
+      }) : S.Z.Messages.NONE;
+      let a = I.Z.get(s.type);
       return {
         roleLink: e,
-        syncDescriptionText: n = s.revoked && null != l ? p.Z.Messages.SYNC_REVOKED.format({
+        syncDescriptionText: n = s.revoked && null != a ? S.Z.Messages.SYNC_REVOKED.format({
           user: s.user,
-          platformName: l.name
-        }) : p.Z.Messages.INTEGRATIONS_LAST_SYNC.format({
-          datetime: o()(s.synced_at).calendar()
+          platformName: a.name
+        }) : S.Z.Messages.INTEGRATIONS_LAST_SYNC.format({
+          datetime: r()(s.synced_at).calendar()
         })
       }
-    }, [j, k, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
-    Y = l.useMemo(() => {
-      let e = N.Z.getGuildEmoji(t.id),
-        n = Object.values(j).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
+    }, [L, k, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
+    Y = a.useMemo(() => {
+      let e = m.Z.getGuildEmoji(t.id),
+        n = Object.values(L).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
       return s.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter(e => null != s.role_id && (null == e ? void 0 : e.roles.some(e => n.includes(e)))) : []
-    }, [t.id, j, s.enable_emoticons, s.id, s.role_id]);
-  if (l.useEffect(() => {
-      (null == r ? void 0 : r.id) === s.id && (null == r ? void 0 : r.enabled) === !0 && P(!1)
-    }, [r, s.id]), s.enabled && null != s.user) n = [{
+    }, [t.id, L, s.enable_emoticons, s.id, s.role_id]);
+  if (a.useEffect(() => {
+      (null == o ? void 0 : o.id) === s.id && (null == o ? void 0 : o.enabled) === !0 && D(!1)
+    }, [o, s.id]), s.enabled && null != s.user) n = [{
     icon: d.ClockIcon,
-    text: D ? p.Z.Messages.INTEGRATION_ADDED_DATE.format({
-      timestamp: x.default.extractTimestamp(s.id)
-    }) : p.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-      user: null != s.user ? new T.Z(s.user).tag : null,
-      timestamp: x.default.extractTimestamp(s.id)
+    text: P ? S.Z.Messages.INTEGRATION_ADDED_DATE.format({
+      timestamp: f.default.extractTimestamp(s.id)
+    }) : S.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
+      user: null != s.user ? new N.Z(s.user).tag : null,
+      timestamp: f.default.extractTimestamp(s.id)
     })
   }];
   else {
     let e = new URL(H);
     n = [{
-      text: p.Z.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
+      text: S.Z.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
         serviceName: U,
         accountUrl: H,
         accountUrlText: e.hostname + e.pathname
@@ -140,18 +140,18 @@ function f(e) {
     }]
   }
   let z = (0, i.jsxs)(h.Z, {
-      className: R.header,
+      className: A.header,
       align: h.Z.Align.CENTER,
-      children: [(0, i.jsx)(C.Z, {
+      children: [(0, i.jsx)(x.Z, {
         name: "".concat(s.name),
-        detailsClassName: R.description,
+        detailsClassName: A.description,
         details: n
       }), s.enabled ? (0, i.jsx)(h.Z.Child, {
         shrink: 0,
         grow: 0,
-        children: (0, i.jsx)(g.Z, {
-          className: R.expandIcon,
-          expanded: f && !b,
+        children: (0, i.jsx)(p.Z, {
+          className: A.expandIcon,
+          expanded: b && !j,
           "aria-hidden": !0
         })
       }) : (0, i.jsx)(h.Z.Child, {
@@ -161,47 +161,47 @@ function f(e) {
           size: d.Button.Sizes.SMALL,
           color: d.Button.Colors.PRIMARY,
           onClick: B,
-          disabled: b,
-          children: b ? (0, i.jsx)(O.Z, {
+          disabled: j,
+          children: j ? (0, i.jsx)(g.Z, {
             width: 24,
             height: 24
           }) : (0, i.jsx)(i.Fragment, {
-            children: p.Z.Messages.INTEGRATIONS_ENABLE
+            children: S.Z.Messages.INTEGRATIONS_ENABLE
           })
         })
       })]
     }),
     q = null;
-  return f && !b && null != r && (q = (0, i.jsxs)(h.Z, {
-    className: R.body,
+  return b && !j && null != o && (q = (0, i.jsxs)(h.Z, {
+    className: A.body,
     direction: h.Z.Direction.VERTICAL,
     children: [(0, i.jsx)(d.FormDivider, {
-      className: R.topDivider
+      className: A.topDivider
     }), function(e) {
       let {
         integration: n,
         labelText: t,
-        subscribersText: l,
+        subscribersText: a,
         descriptionText: s,
-        roleLink: a,
-        onSync: r
+        roleLink: l,
+        onSync: o
       } = e;
       return (0, i.jsxs)(h.Z, {
         children: [(0, i.jsxs)(h.Z.Child, {
           basis: "50%",
           children: [(0, i.jsx)(d.FormTitle, {
-            className: Z.marginBottom8,
-            children: p.Z.Messages.FORM_LABEL_SYNCED_ROLE
+            className: R.marginBottom8,
+            children: S.Z.Messages.FORM_LABEL_SYNCED_ROLE
           }), (0, i.jsx)(d.Text, {
-            className: R.syncedRole,
+            className: A.syncedRole,
             color: "header-primary",
             variant: "text-sm/normal",
-            children: a
+            children: l
           })]
         }), (0, i.jsxs)(h.Z.Child, {
           basis: "50%",
           children: [(0, i.jsx)(d.FormTitle, {
-            className: Z.marginBottom8,
+            className: R.marginBottom8,
             children: t
           }), (0, i.jsxs)(h.Z, {
             justify: h.Z.Justify.BETWEEN,
@@ -210,7 +210,7 @@ function f(e) {
               children: [(0, i.jsx)(d.Text, {
                 color: "header-primary",
                 variant: "text-sm/normal",
-                children: l
+                children: a
               }), (0, i.jsx)(d.Text, {
                 color: "header-secondary",
                 variant: "text-xs/normal",
@@ -221,64 +221,64 @@ function f(e) {
               look: d.Button.Looks.FILLED,
               color: d.Button.Colors.PRIMARY,
               disabled: n.syncing || n.revoked,
-              onClick: r,
-              children: n.syncing ? (0, i.jsx)(O.Z, {
+              onClick: o,
+              children: n.syncing ? (0, i.jsx)(g.Z, {
                 width: 24,
                 height: 24
               }) : (0, i.jsx)(i.Fragment, {
-                children: p.Z.Messages.SYNC
+                children: S.Z.Messages.SYNC
               })
             })]
           })]
         })]
       })
     }({
-      integration: r,
-      labelText: w,
+      integration: o,
+      labelText: W,
       subscribersText: F,
       descriptionText: K,
       roleLink: V,
-      onSync: y
+      onSync: G
     }), (0, i.jsx)(d.FormDivider, {
-      className: R.midDivider
+      className: A.midDivider
     }), function(e) {
       let {
         integration: n,
         labelText: t,
-        onBehaviorChange: l,
+        onBehaviorChange: a,
         onGracePeriodChange: s
       } = e;
       return (0, i.jsxs)(h.Z, {
         children: [(0, i.jsxs)(h.Z.Child, {
           basis: "50%",
           children: [(0, i.jsx)(d.FormTitle, {
-            className: Z.marginBottom8,
+            className: R.marginBottom8,
             children: t
           }), (0, i.jsx)(d.SingleSelect, {
             placeholder: t,
             value: "".concat(n.expire_behavior),
             options: [{
               value: "0",
-              label: p.Z.Messages.REMOVE_SYNCED_ROLE
+              label: S.Z.Messages.REMOVE_SYNCED_ROLE
             }, {
               value: "1",
-              label: p.Z.Messages.KICK_FROM_SERVER
+              label: S.Z.Messages.KICK_FROM_SERVER
             }],
             isDisabled: n.syncing,
-            onChange: e => l(parseInt(e))
+            onChange: e => a(parseInt(e))
           })]
         }), (0, i.jsxs)(h.Z.Child, {
           basis: "50%",
           children: [(0, i.jsx)(d.FormTitle, {
-            className: Z.marginBottom8,
-            children: p.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD
+            className: R.marginBottom8,
+            children: S.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD
           }), (0, i.jsx)(d.SingleSelect, {
-            placeholder: p.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD,
+            placeholder: S.Z.Messages.FORM_LABEL_EXPIRE_GRACE_PERIOD,
             maxVisibleItems: 5,
             value: "".concat(n.expire_grace_period),
             options: [1, 3, 7, 14, 30].map(e => ({
               value: "".concat(e),
-              label: p.Z.Messages.N_DAYS.format({
+              label: S.Z.Messages.N_DAYS.format({
                 days: e
               })
             })),
@@ -288,8 +288,8 @@ function f(e) {
         })]
       })
     }({
-      integration: r,
-      labelText: W,
+      integration: o,
+      labelText: w,
       onBehaviorChange: function(e) {
         u.Z.updateIntegration({
           expireBehavior: e
@@ -300,40 +300,40 @@ function f(e) {
           expireGracePeriod: e
         })
       }
-    }), s.type === S.ABu.TWITCH ? function(e) {
+    }), s.type === O.ABu.TWITCH ? function(e) {
       let {
         integration: n,
         emojis: t,
-        onToggle: l
+        onToggle: a
       } = e;
       return (0, i.jsxs)(h.Z, {
         direction: h.Z.Direction.VERTICAL,
         children: [(0, i.jsx)(d.Checkbox, {
           type: d.Checkbox.Types.INVERTED,
-          className: a()(Z.marginTop20, Z.marginBottom8),
+          className: l()(R.marginTop20, R.marginBottom8),
           value: n.enable_emoticons,
           disabled: n.syncing,
           onChange: e => {
             let {
               currentTarget: n
             } = e;
-            return l(n.checked)
+            return a(n.checked)
           },
           children: (0, i.jsx)(d.FormText, {
-            children: p.Z.Messages.ENABLE_TWITCH_EMOJI_SYNC
+            children: S.Z.Messages.ENABLE_TWITCH_EMOJI_SYNC
           })
         }), (0, i.jsx)(h.Z, {
           wrap: h.Z.Wrap.WRAP,
-          className: R.__invalid_twitchEmojis,
+          className: A.__invalid_twitchEmojis,
           children: t.map((e, n) => (0, i.jsx)(d.Tooltip, {
             text: e.name,
             children: n => (0, i.jsx)("img", {
-              alt: p.Z.Messages.IMG_ALT_EMOJI.format({
+              alt: S.Z.Messages.IMG_ALT_EMOJI.format({
                 name: e.name
               }),
               draggable: !1,
-              className: a()(R.emoji, "emoji", "jumboable"),
-              src: A.ZP.getEmojiURL({
+              className: l()(A.emoji, "emoji", "jumboable"),
+              src: C.ZP.getEmojiURL({
                 id: e.id,
                 animated: e.animated,
                 size: 28
@@ -344,7 +344,7 @@ function f(e) {
         })]
       })
     }({
-      integration: r,
+      integration: o,
       emojis: Y,
       onToggle: function(e) {
         u.Z.updateIntegration({
@@ -352,26 +352,26 @@ function f(e) {
         })
       }
     }) : null, (0, i.jsx)(d.FormDivider, {
-      className: R.bottomDivider
+      className: A.bottomDivider
     }), (0, i.jsx)(h.Z, {
       children: (0, i.jsx)(d.Button, {
-        className: R.disableButton,
+        className: A.disableButton,
         size: d.Button.Sizes.SMALL,
         color: d.Button.Colors.RED,
         look: d.Button.Looks.LINK,
-        onClick: G,
-        children: p.Z.Messages.INTEGRATIONS_DISABLE
+        onClick: y,
+        children: S.Z.Messages.INTEGRATIONS_DISABLE
       })
     })]
   })), (0, i.jsx)(d.Card, {
     editable: !0,
-    className: R.card,
+    className: A.card,
     children: (0, i.jsxs)(h.Z, {
       direction: h.Z.Direction.VERTICAL,
       children: [s.enabled ? (0, i.jsx)(d.Clickable, {
-        className: R.expandableHeader,
-        "aria-expanded": f && !b,
-        onClick: M,
+        className: A.expandableHeader,
+        "aria-expanded": b && !j,
+        onClick: Z,
         children: z
       }) : z, q]
     })

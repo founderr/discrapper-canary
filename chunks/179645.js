@@ -1,7 +1,7 @@
-var s, r = n(442837),
-  i = n(570140);
+var s, i = n(442837),
+  r = n(570140);
 
-function l(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -9,29 +9,29 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = null;
-class o extends(s = r.ZP.PersistedStore) {
+let l = null;
+class o extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     var t;
-    a = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
+    l = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
   }
   getType() {
-    return a
+    return l
   }
   getState() {
     return {
-      type: a
+      type: l
     }
   }
 }
-l(o, "displayName", "NewUserStore"), l(o, "persistKey", "nuf"), t.Z = new o(i.Z, {
+a(o, "displayName", "NewUserStore"), a(o, "persistKey", "nuf"), t.Z = new o(r.Z, {
   NUF_NEW_USER: function(e) {
     let {
       newUserType: t
     } = e;
-    a = t
+    l = t
   },
   NUF_COMPLETE: function() {
-    a = null
+    l = null
   }
 })

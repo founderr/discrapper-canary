@@ -1,33 +1,33 @@
 n(47120);
-var t = n(735250),
+var a = n(735250),
   i = n(470079),
   l = n(120356),
-  s = n.n(l),
-  r = n(481060),
-  c = n(981631),
+  r = n.n(l),
+  c = n(481060),
+  s = n(981631),
   o = n(689938),
   d = n(870786);
-a.Z = i.forwardRef(function(e, a) {
+t.Z = i.forwardRef(function(e, t) {
   let {
     query: n,
     canShowCta: l = !1,
     onChange: u,
-    onSubmit: g,
-    className: m
-  } = e, [_, C] = i.useState(!1);
-  return (0, t.jsx)(r.SearchBox, {
-    ref: a,
-    className: s()(d.search, m),
+    onSubmit: _,
+    className: g
+  } = e, [m, p] = i.useState(!1);
+  return (0, a.jsx)(c.SearchBox, {
+    ref: t,
+    className: r()(d.search, g),
     label: o.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
     placeholder: o.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
     searchTerm: n,
-    cta: l && _ && n.length > 0 ? o.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
+    cta: l && m && n.length > 0 ? o.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
     onChange: u,
     onClear: () => u(""),
-    onFocus: () => C(!0),
-    onBlur: () => C(!1),
+    onFocus: () => p(!0),
+    onBlur: () => p(!1),
     onKeyPress: e => {
-      e.charCode === c.yXg.ENTER && (null == g || g())
+      e.charCode === s.yXg.ENTER && (null == _ || _())
     },
     autoFocus: !0
   })

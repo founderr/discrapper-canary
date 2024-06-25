@@ -99,7 +99,7 @@ t.Z = function(e) {
     items: n,
     itemGapPx: a,
     maxLines: d
-  }), S = r.useMemo(() => n.slice(0, E + 1), [n, E]), f = r.useMemo(() => n.slice(E + 1), [n, E]);
+  }), f = r.useMemo(() => n.slice(0, E + 1), [n, E]), S = r.useMemo(() => n.slice(E + 1), [n, E]);
   return (0, i.jsxs)("div", {
     className: o()(t, _.items),
     ref: I,
@@ -117,8 +117,8 @@ t.Z = function(e) {
           count: Number("1".concat(n.length))
         }))
       })]
-    }), S.map(s), f.length > 0 && (0, i.jsx)(c, {
-      items: f,
+    }), f.map(s), S.length > 0 && (0, i.jsx)(c, {
+      items: S,
       renderItem: s
     })]
   })

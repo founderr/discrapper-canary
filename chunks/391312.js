@@ -3,9 +3,9 @@ n.r(t), n.d(t, {
     return d
   }
 }), n(47120);
-var s = n(735250),
+var o = n(735250),
   r = n(470079),
-  o = n(433517),
+  s = n(433517),
   a = n(481060),
   c = n(818634),
   i = n(689938),
@@ -13,7 +13,7 @@ var s = n(735250),
 
 function d(e) {
   let [t, n] = r.useState(!1);
-  return (0, s.jsxs)(a.ConfirmModal, {
+  return (0, o.jsxs)(a.ConfirmModal, {
     ...e,
     header: i.Z.Messages.GUILD_SIDEBAR_REORDER_DIALOG_TITLE,
     confirmText: i.Z.Messages.GUILD_SIDEBAR_REORDER_CONFIRM,
@@ -22,17 +22,17 @@ function d(e) {
       (0, c.l)(!0)
     },
     confirmButtonColor: a.Button.Colors.BRAND,
-    children: [(0, s.jsx)(a.Text, {
+    children: [(0, o.jsx)(a.Text, {
       variant: "text-md/normal",
       children: i.Z.Messages.GUILD_SIDEBAR_REORDER_DESCRIPTION.format()
-    }), (0, s.jsx)(a.Checkbox, {
+    }), (0, o.jsx)(a.Checkbox, {
       className: u.checkboxMargin,
       type: a.Checkbox.Types.INVERTED,
       value: t,
       onChange: () => {
-        o.K.set("doNotShowReorderModal", JSON.stringify(!0)), n(!0)
+        s.K.set("doNotShowReorderModal", JSON.stringify(!0)), n(!0)
       },
-      children: (0, s.jsx)(a.Text, {
+      children: (0, o.jsx)(a.Text, {
         variant: "text-md/normal",
         children: i.Z.Messages.GUILD_SIDEBAR_DO_NOT_SHOW_AGAIN
       })

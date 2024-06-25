@@ -23,10 +23,10 @@ n.d(t, {
     return o
   },
   VS: function() {
-    return S
+    return f
   },
   W2: function() {
-    return f
+    return S
   },
   qU: function() {
     return u
@@ -61,7 +61,7 @@ function d() {
 }
 
 function E(e) {
-  f() && (i = e)
+  S() && (i = e)
 }
 
 function I() {
@@ -76,11 +76,11 @@ function h(e) {
   c = e
 }
 
-function S() {
+function f() {
   return c
 }
 
-function f() {
+function S() {
   var e;
   return void 0 !== r ? r : r = (null !== (e = new URLSearchParams(window.location.search).get("oop")) && void 0 !== e ? e : "") === "true"
 }

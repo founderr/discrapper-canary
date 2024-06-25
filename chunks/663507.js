@@ -83,8 +83,8 @@ class l {
         c = u(h),
         I = this.getMaxColumnHeight(this.columnHeights);
       h > 0 && (I = I - l + this.getSectionGutter());
-      let S = c > 0 ? c + l : 0;
-      for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = I + S;
+      let f = c > 0 ? c + l : 0;
+      for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = I + f;
       for (; _ < e;) {
         ;
         let e = o(h, _);

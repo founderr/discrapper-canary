@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 });
-var s = n(689938);
+var i = n(689938);
 
-function i(e) {
-  return e > 0 ? s.Z.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
+function a(e) {
+  return e > 0 ? i.Z.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
     count: e
-  }) : s.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
+  }) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
 }

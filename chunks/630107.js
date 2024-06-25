@@ -1,70 +1,70 @@
-s.r(t), s.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return g
+    return h
   }
 });
-var n = s(735250),
-  a = s(470079),
-  r = s(873546),
-  l = s(442837),
-  i = s(481060),
-  o = s(830064),
-  c = s(388905),
-  u = s(625128),
-  d = s(362762),
-  m = s(703656),
-  p = s(981631),
-  x = s(186901),
-  N = s(689938),
-  E = s(17747),
-  f = s(343407);
-l.ZP.initialize();
-let h = r.tq || r.Em,
-  j = "inventory";
+var a = t(735250),
+  s = t(470079),
+  i = t(873546),
+  r = t(442837),
+  l = t(481060),
+  o = t(830064),
+  c = t(388905),
+  u = t(625128),
+  d = t(362762),
+  p = t(703656),
+  m = t(981631),
+  x = t(186901),
+  b = t(689938),
+  N = t(17747),
+  _ = t(343407);
+r.ZP.initialize();
+let E = i.tq || i.Em,
+  g = "inventory";
 
-function g() {
-  let e = (0, l.e7)([d.Z], () => d.Z.getState("quests"));
-  if (a.useEffect(() => {
-      if (!h) null == e ? u.Z.openNativeAppModal("quests", p.Etm.DEEP_LINK, {
+function h() {
+  let e = (0, r.e7)([d.Z], () => d.Z.getState("quests"));
+  if (s.useEffect(() => {
+      if (!E) null == e ? u.Z.openNativeAppModal("quests", m.Etm.DEEP_LINK, {
         type: x.jE.USER_SETTINGS,
         params: {
-          section: j
+          section: g
         }
-      }) : e === p.kEZ.OPEN_FAIL && (0, m.dL)(p.Z5c.SETTINGS(j))
-    }, [e]), h) return (0, n.jsxs)("div", {
-    className: E.mobileWebContainer,
-    children: [(0, n.jsx)("img", {
-      src: f,
+      }) : e === m.kEZ.OPEN_FAIL && (0, p.dL)(m.Z5c.SETTINGS(g))
+    }, [e]), E) return (0, a.jsxs)("div", {
+    className: N.mobileWebContainer,
+    children: [(0, a.jsx)("img", {
+      src: _,
       alt: "",
-      className: E.mobileWebImage
-    }), (0, n.jsx)(i.Heading, {
+      className: N.mobileWebImage
+    }), (0, a.jsx)(l.Heading, {
       variant: "display-lg",
       color: "text-brand",
-      children: N.Z.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
-    }), (0, n.jsx)(i.Text, {
+      children: b.Z.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
+    }), (0, a.jsx)(l.Text, {
       variant: "text-md/normal",
-      className: E.mobileWebCopy,
-      children: N.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY.format()
+      className: N.mobileWebCopy,
+      children: b.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY.format()
     })]
   });
-  let t = null == e || e === p.kEZ.OPENING || e === p.kEZ.OPEN_FAIL;
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(o.Z, {
-      className: E.backgroundArtwork,
+  let n = null == e || e === m.kEZ.OPENING || e === m.kEZ.OPEN_FAIL;
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(o.Z, {
+      className: N.backgroundArtwork,
       preserveAspectRatio: "xMinYMin slice"
-    }), (0, n.jsx)("div", {
-      className: E.container,
-      children: (0, n.jsx)(c.ZP, {
-        children: t ? (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(c.Dx, {
-            children: N.Z.Messages.APP_OPENING
-          }), (0, n.jsx)(c.Hh, {})]
-        }) : (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(c.Dx, {
-            className: E.appOpenedTitle,
-            children: N.Z.Messages.APP_OPENED_TITLE
-          }), (0, n.jsx)(c.DK, {
-            children: N.Z.Messages.DEEPLINK_BROWSER_APP_OPENED
+    }), (0, a.jsx)("div", {
+      className: N.container,
+      children: (0, a.jsx)(c.ZP, {
+        children: n ? (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(c.Dx, {
+            children: b.Z.Messages.APP_OPENING
+          }), (0, a.jsx)(c.Hh, {})]
+        }) : (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(c.Dx, {
+            className: N.appOpenedTitle,
+            children: b.Z.Messages.APP_OPENED_TITLE
+          }), (0, a.jsx)(c.DK, {
+            children: b.Z.Messages.DEEPLINK_BROWSER_APP_OPENED
           })]
         })
       })

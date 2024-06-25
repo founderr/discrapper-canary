@@ -1,15 +1,15 @@
 n.d(t, {
   K: function() {
-    return l
+    return a
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060);
+var s = n(481060);
 
-function l() {
-  return (0, s.jsx)("div", {
-    children: (0, s.jsx)(i.Heading, {
+function a() {
+  return (0, i.jsx)("div", {
+    children: (0, i.jsx)(s.Heading, {
       variant: "heading-lg/normal",
       children: "Quests"
     })

@@ -1,50 +1,50 @@
 n.d(t, {
   Z: function() {
-    return E
+    return m
   }
 }), n(47120), n(653041);
-var l = n(470079),
-  i = n(149765),
-  s = n(442837),
-  a = n(902704),
+var i = n(470079),
+  a = n(149765),
+  l = n(442837),
+  s = n(902704),
   r = n(592125),
   o = n(720202),
   c = n(271383),
   u = n(700785),
   d = n(231338);
 let h = [],
-  m = new Set;
+  p = new Set;
 
-function E(e) {
+function m(e) {
   let {
     entries: t,
     channelId: n
-  } = e, E = (0, s.e7)([r.Z], () => r.Z.getChannel(n)), p = null == E ? void 0 : E.guild_id, g = l.useRef(new Set), f = l.useMemo(() => {
+  } = e, m = (0, l.e7)([r.Z], () => r.Z.getChannel(n)), _ = null == m ? void 0 : m.guild_id, f = i.useRef(new Set), E = i.useMemo(() => {
     let e = new Set(null == t ? void 0 : t.map(e => e.author_id));
-    return !(0, a.E)([...g.current], [...e]) && (g.current = e), g.current
+    return !(0, s.E)([...f.current], [...e]) && (f.current = e), f.current
   }, [t]);
-  l.useEffect(() => {
-    if (null != p) Array.from(f).forEach(e => {
-      o.Z.requestMember(p, e)
+  i.useEffect(() => {
+    if (null != _) Array.from(E).forEach(e => {
+      o.Z.requestMember(_, e)
     })
-  }, [f, p]);
-  let C = (0, s.Wu)([c.ZP], () => {
-      if (null == p) return h;
+  }, [E, _]);
+  let g = (0, l.Wu)([c.ZP], () => {
+      if (null == _) return h;
       let e = [];
-      for (let t of f) c.ZP.isMember(p, t) && e.push(t);
+      for (let t of E) c.ZP.isMember(_, t) && e.push(t);
       return e
-    }, [f, p]),
-    _ = l.useMemo(() => {
-      if (null == E || 0 === C.length) return m;
+    }, [E, _]),
+    C = i.useMemo(() => {
+      if (null == m || 0 === g.length) return p;
       let e = new Set;
-      for (let t of C) {
+      for (let t of g) {
         let n = u.uB({
           user: t,
-          context: E
+          context: m
         });
-        i.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t)
+        a.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t)
       }
       return e
-    }, [C, E]);
-  return l.useMemo(() => null == t ? void 0 : t.filter(e => _.has(e.author_id)), [t, _])
+    }, [g, m]);
+  return i.useMemo(() => null == t ? void 0 : t.filter(e => C.has(e.author_id)), [t, C])
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   c4: function() {
-    return S
+    return f
   },
   st: function() {
-    return f
+    return S
   }
 });
 var i = n(735250),
@@ -32,7 +32,7 @@ function h(e) {
   }
 }
 
-function S(e) {
+function f(e) {
   return {
     text: null != e ? e : I.Z.Messages.APPLICATION_COMMAND_FAILED,
     color: "text-danger",
@@ -44,7 +44,7 @@ function S(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     className: t,
     icon: n,
@@ -87,24 +87,24 @@ t.ZP = r.memo(function(e) {
           applicationName: t.author.username
         }));
       case d.rQ.TIMED_OUT:
-        return S(I.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
+        return f(I.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
       case d.rQ.FAILED:
-        return S(t.interactionError)
+        return f(t.interactionError)
     }
   }(u, t);
   else {
     let e = (0, _.SD)(u, t, s);
-    null != e && (T = S(e))
+    null != e && (T = f(e))
   }
   if (null == T) return null;
   let {
-    text: N,
-    icon: A,
+    text: A,
+    icon: N,
     color: m
   } = T;
-  return (0, i.jsx)(f, {
-    icon: A,
-    text: N,
+  return (0, i.jsx)(S, {
+    icon: N,
+    text: A,
     className: n,
     color: m
   })

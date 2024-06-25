@@ -1,86 +1,86 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(442837),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(442837),
   o = n(481060),
   c = n(905405),
-  u = n(255269),
-  d = n(937889),
-  E = n(695346),
-  h = n(496675),
-  _ = n(699516),
+  d = n(255269),
+  u = n(937889),
+  _ = n(695346),
+  E = n(496675),
+  h = n(699516),
   I = n(68588),
   m = n(512665),
-  T = n(868807),
+  p = n(868807),
   g = n(981631),
-  p = n(768760),
-  N = n(689938),
-  S = n(608524),
-  C = n(622322);
-let A = i.memo(function(e) {
+  T = n(768760),
+  C = n(689938),
+  f = n(608524),
+  S = n(622322);
+let N = s.memo(function(e) {
   let {
     channel: t
   } = e, {
     loaded: n,
-    error: l,
-    message: A
-  } = (0, T.a)(t), f = (0, c.p)(), Z = (0, r.e7)([_.Z], () => null != A && _.Z.isBlockedForMessage(A), [A]), L = (0, r.e7)([h.Z], () => h.Z.can(g.Plq.MANAGE_MESSAGES, t)), O = E.cC.useSetting(), {
-    content: v
-  } = i.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, d.ZP)(A, {
+    error: a,
+    message: N
+  } = (0, p.a)(t), A = (0, c.p)(), Z = (0, l.e7)([h.Z], () => null != N && h.Z.isBlockedForMessage(N), [N]), L = (0, l.e7)([E.Z], () => E.Z.can(g.Plq.MANAGE_MESSAGES, t)), v = _.cC.useSetting(), {
+    content: O
+  } = s.useMemo(() => (null == N ? void 0 : N.content) != null && "" !== N.content ? (0, u.ZP)(N, {
     formatInline: !0,
     noStyleAndInteraction: !0,
-    shouldFilterKeywords: f
+    shouldFilterKeywords: A
   }) : {
     content: null
-  }, [A, f]), R = null;
-  if (l) R = (0, s.jsx)(o.Text, {
-    className: S.messageReplacement,
+  }, [N, A]), R = null;
+  if (a) R = (0, i.jsx)(o.Text, {
+    className: f.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
-    children: N.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+    children: C.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != A && Z) R = (0, s.jsx)(o.Text, {
-      className: S.messageReplacement,
+    if (null != N && Z) R = (0, i.jsx)(o.Text, {
+      className: f.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: N.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+      children: C.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
-    else if (null != A) {
+    else if (null != N) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, m.f)(A, v, Z, a()(S.messageContent, C.inlineFormat), {
-        leadingIconClass: S.messageContentIcon,
-        trailingIconClass: S.messageContentIcon,
-        iconSize: p.WW
+      } = (0, m.f)(N, O, Z, r()(f.messageContent, S.inlineFormat), {
+        leadingIconClass: f.messageContentIcon,
+        trailingIconClass: f.messageContentIcon,
+        iconSize: T.WW
       });
-      R = null != t ? (0, s.jsx)(o.Text, {
+      R = null != t ? (0, i.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: S.messageContent,
+        className: f.messageContent,
         children: t
-      }) : (0, s.jsx)(o.Text, {
+      }) : (0, i.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: S.messageReplacement,
+        className: f.messageReplacement,
         children: e
       })
-    } else R = (0, s.jsx)(o.Text, {
-      className: S.messageReplacement,
+    } else R = (0, i.jsx)(o.Text, {
+      className: f.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: N.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+      children: C.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else R = null;
-  return (0, s.jsx)(I.a.Provider, {
-    value: (0, u.Z)(O, L),
-    children: (0, s.jsx)(o.FocusBlock, {
-      className: S.messageFocusBlock,
+  return (0, i.jsx)(I.a.Provider, {
+    value: (0, d.Z)(v, L),
+    children: (0, i.jsx)(o.FocusBlock, {
+      className: f.messageFocusBlock,
       children: R
     })
   })
 });
-t.Z = A
+t.Z = N

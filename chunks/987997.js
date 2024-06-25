@@ -1,23 +1,23 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return l
+    return o
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(544636);
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(544636);
 
-function l(e) {
+function o(e) {
   let {
-    children: s,
-    ...t
+    children: t,
+    ...n
   } = e;
-  return (0, n.jsx)(a.Button, {
-    ...t,
+  return (0, s.jsx)(a.Button, {
+    ...n,
     size: a.Button.Sizes.SMALL,
     color: a.Button.Colors.BRAND_INVERTED,
     className: i.button,
-    children: s
+    children: t
   })
 }

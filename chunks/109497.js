@@ -1,12 +1,12 @@
 n(653041);
-var s, i = n(442837),
-  l = n(570140),
-  a = n(695346),
-  r = n(885110),
+var i, s = n(442837),
+  a = n(570140),
+  r = n(695346),
+  l = n(885110),
   o = n(70956),
   c = n(981631);
 
-function u(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -14,39 +14,39 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = [],
-  E = !1;
+let u = [],
+  _ = !1;
 
-function h() {
-  return d.length >= 4 && d.some(e => e < Date.now() - 3 * o.Z.Millis.DAY)
+function E() {
+  return u.length >= 4 && u.some(e => e < Date.now() - 3 * o.Z.Millis.DAY)
 }
-class _ extends(s = i.ZP.PersistedStore) {
+class h extends(i = s.ZP.PersistedStore) {
   initialize(e) {
-    null != e && Array.isArray(e.sessionStartsWithDND) && (d = e.sessionStartsWithDND)
+    null != e && Array.isArray(e.sessionStartsWithDND) && (u = e.sessionStartsWithDND)
   }
   showNagBar() {
-    return E
+    return _
   }
   getState() {
     return {
-      sessionStartsWithDND: d
+      sessionStartsWithDND: u
     }
   }
   getTemp() {
     return {
-      x: a.Cr.getSetting()
+      x: r.Cr.getSetting()
     }
   }
 }
-u(_, "displayName", "HabitualDNDStore"), u(_, "persistKey", "habitualDND"), new _(l.Z, {
+d(h, "displayName", "HabitualDNDStore"), d(h, "persistKey", "habitualDND"), new h(a.Z, {
   POST_CONNECTION_OPEN: function() {
-    r.Z.getStatus() === c.Skl.DND && "0" === a.Cr.getSetting() ? (d.push(Date.now()), d = d.filter(e => e > Date.now() - 5 * o.Z.Millis.DAY), h() && setTimeout(() => {
-      l.Z.dispatch({
+    l.Z.getStatus() === c.Skl.DND && "0" === r.Cr.getSetting() ? (u.push(Date.now()), u = u.filter(e => e > Date.now() - 5 * o.Z.Millis.DAY), E() && setTimeout(() => {
+      a.Z.dispatch({
         type: "HABITUAL_DND_CLEAR"
       })
-    }, 15 * o.Z.Millis.SECOND)) : d = []
+    }, 15 * o.Z.Millis.SECOND)) : u = []
   },
   HABITUAL_DND_CLEAR: function() {
-    E = !!h() || !1, d = []
+    _ = !!E() || !1, u = []
   }
 })

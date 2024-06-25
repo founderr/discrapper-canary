@@ -1,22 +1,22 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(493683),
-  s = n(599059),
-  a = n(762914),
+var a = n(493683),
+  l = n(599059),
+  s = n(762914),
   r = n(933557),
   o = n(981631),
   c = n(109742);
 t.Z = e => {
   let {
     channel: t
-  } = e, n = (0, r.ZP)(t), u = (0, a.Dd)(t.id);
-  return (0, l.jsx)("div", {
+  } = e, n = (0, r.ZP)(t), u = (0, s.Dd)(t.id);
+  return (0, i.jsx)("div", {
     className: c.container,
     onDoubleClick: e => e.stopPropagation(),
-    children: u ? (0, l.jsx)("div", {
+    children: u ? (0, i.jsx)("div", {
       className: c.channelName,
       children: n
-    }) : (0, l.jsx)(s.Z, {
+    }) : (0, i.jsx)(l.Z, {
       minLen: 1,
       maxLen: o.HN8,
       className: c.channelName,
@@ -24,7 +24,7 @@ t.Z = e => {
       autoComplete: "off",
       value: null != n ? n : "",
       onBlur: e => {
-        n !== e.currentTarget.value && i.Z.setName(t.id, e.currentTarget.value)
+        n !== e.currentTarget.value && a.Z.setName(t.id, e.currentTarget.value)
       }
     })
   })

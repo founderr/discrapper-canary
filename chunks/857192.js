@@ -10,7 +10,7 @@ var i, r, s, o, a = n(261470),
   I = n(70956),
   T = n(960048),
   h = n(981631);
-let S = (() => {
+let f = (() => {
     let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
       t = null,
       n = new a.Z(5 * I.Z.Millis.SECOND, 1 * I.Z.Millis.MINUTE, !0),
@@ -41,8 +41,8 @@ let S = (() => {
       }
     }
   })(),
-  f = "DeveloperOptionsStore",
-  N = {
+  S = "DeveloperOptionsStore",
+  A = {
     trace: !1,
     canary: !1,
     logGatewayEvents: !1,
@@ -55,60 +55,60 @@ let S = (() => {
     idleStatusIndicatorEnabled: !1,
     appDirectoryIncludesInactiveCollections: !1
   },
-  A = {
-    ...N
+  N = {
+    ...A
   };
 
 function m(e) {
-  A = {
-    ...N,
+  N = {
     ...A,
+    ...N,
     ...e
-  }, S.set(A.sourceMapsEnabled), c.K.set(f, A)
+  }, f.set(N.sourceMapsEnabled), c.K.set(S, N)
 }
 class O extends(i = u.ZP.Store) {
   initialize() {
-    let e = c.K.get(f);
-    null != e && (A = {
-      ...N,
+    let e = c.K.get(S);
+    null != e && (N = {
+      ...A,
       ...e
     })
   }
   get isTracingRequests() {
-    return A.trace
+    return N.trace
   }
   get isForcedCanary() {
-    return A.canary
+    return N.canary
   }
   get isLoggingGatewayEvents() {
-    return A.logGatewayEvents
+    return N.logGatewayEvents
   }
   get isLoggingOverlayEvents() {
-    return A.logOverlayEvents
+    return N.logOverlayEvents
   }
   get isLoggingAnalyticsEvents() {
-    return A.logAnalyticsEvents
+    return N.logAnalyticsEvents
   }
   get isAxeEnabled() {
-    return A.axeEnabled
+    return N.axeEnabled
   }
   get sourceMapsEnabled() {
-    return A.sourceMapsEnabled
+    return N.sourceMapsEnabled
   }
   get isAnalyticsDebuggerEnabled() {
-    return A.analyticsDebuggerEnabled
+    return N.analyticsDebuggerEnabled
   }
   get isBugReporterEnabled() {
-    return A.bugReporterEnabled
+    return N.bugReporterEnabled
   }
   get isIdleStatusIndicatorEnabled() {
-    return A.idleStatusIndicatorEnabled
+    return N.idleStatusIndicatorEnabled
   }
   get appDirectoryIncludesInactiveCollections() {
-    return A.appDirectoryIncludesInactiveCollections
+    return N.appDirectoryIncludesInactiveCollections
   }
   getDebugOptionsHeaderValue() {
-    return Object.keys(A).map(e => A[e]), Object.keys(A).filter(e => A[e]).join(",")
+    return Object.keys(N).map(e => N[e]), Object.keys(N).filter(e => N[e]).join(",")
   }
 }
 o = "DeveloperOptionsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -118,13 +118,13 @@ o = "DeveloperOptionsStore", (s = "displayName") in(r = O) ? Object.defineProper
   writable: !0
 }) : r[s] = o, t.default = new O(d.Z, {
   LOGOUT: function(e) {
-    m(N)
+    m(A)
   },
   CONNECTION_OPEN: function(e) {
     var t;
     let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & h.xW$.STAFF) === h.xW$.STAFF,
       i = n || null != e.user.personal_connection_id;
-    n && S.set(A.sourceMapsEnabled), T.Z.setTags({
+    n && f.set(N.sourceMapsEnabled), T.Z.setTags({
       isStaff: i.toString()
     })
   },

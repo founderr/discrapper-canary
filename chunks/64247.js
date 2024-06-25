@@ -1,46 +1,46 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(438536),
-  a = n(214906),
+var a = n(481060),
+  s = n(438536),
+  l = n(214906),
   r = n(346479),
   o = n(723170),
   c = n(124368);
 
-function u(e) {
+function d(e) {
   let {
     channel: t,
     closePopout: n,
-    onSelect: u,
-    navId: d,
-    label: E
-  } = e, _ = (0, l.Z)(t, "Notifications Bell"), I = (0, a.Z)(t), T = (0, o.B)(t);
-  return (0, s.jsxs)(i.Menu, {
-    navId: d,
+    onSelect: d,
+    navId: u,
+    label: _
+  } = e, E = (0, s.Z)(t, "Notifications Bell"), I = (0, l.Z)(t), m = (0, o.B)(t);
+  return (0, i.jsxs)(a.Menu, {
+    navId: u,
     onClose: n,
-    "aria-label": E,
-    onSelect: u,
-    children: [(0, s.jsxs)(i.MenuGroup, {
-      children: [t.isForumPost() ? _ : null, I]
-    }), (0, s.jsx)(i.MenuGroup, {
+    "aria-label": _,
+    onSelect: d,
+    children: [(0, i.jsxs)(a.MenuGroup, {
+      children: [t.isForumPost() ? E : null, I]
+    }), (0, i.jsx)(a.MenuGroup, {
       children: (0, c.zb)().map(e => {
         let {
           setting: n,
-          label: l
+          label: s
         } = e;
-        return (0, s.jsx)(i.MenuRadioItem, {
+        return (0, i.jsx)(a.MenuRadioItem, {
           group: "thread-notifications",
           id: "".concat(n),
-          label: l,
+          label: s,
           action: () => r.Z.setNotificationSettings(t, {
             flags: n
           }),
-          checked: n === T
+          checked: n === m
         }, n)
       })
     })]

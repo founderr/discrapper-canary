@@ -3,10 +3,10 @@ n.d(t, {
     return h
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(286379),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  l = n(286379),
+  s = n(481060),
   r = n(797614),
   o = n(473092),
   c = n(689938),
@@ -18,61 +18,61 @@ function h(e) {
     channelId: t,
     warningId: n,
     senderId: h,
-    warningType: m,
-    header: E,
-    description: p,
-    onDismiss: g,
-    buttons: f
+    warningType: p,
+    header: m,
+    description: _,
+    onDismiss: f,
+    buttons: E
   } = e;
-  i.useEffect(() => {
+  a.useEffect(() => {
     r.Z.increment({
-      name: s.V.SAFETY_WARNING_VIEW
+      name: l.V.SAFETY_WARNING_VIEW
     })
   }, []);
-  let C = i.useCallback(() => {
-    null == g || g(), (0, o.qc)({
+  let g = a.useCallback(() => {
+    null == f || f(), (0, o.qc)({
       channelId: t,
       warningId: n,
       senderId: h,
-      warningType: m,
+      warningType: p,
       cta: o.NM.USER_BANNER_DISMISS
     })
-  }, [g, t, n, h, m]);
-  return (0, l.jsxs)("div", {
+  }, [f, t, n, h, p]);
+  return (0, i.jsxs)("div", {
     className: u.strangerDangerBanner,
-    children: [(0, l.jsxs)("div", {
+    children: [(0, i.jsxs)("div", {
       className: u.shieldAndHeading,
-      children: [(0, l.jsx)("img", {
+      children: [(0, i.jsx)("img", {
         className: u.safetyShieldIcon,
         src: d,
         alt: ""
-      }), (0, l.jsxs)("div", {
-        children: [(0, l.jsx)(a.Heading, {
+      }), (0, i.jsxs)("div", {
+        children: [(0, i.jsx)(s.Heading, {
           variant: "heading-md/semibold",
           color: "text-primary",
-          children: E
-        }), (0, l.jsx)(a.Text, {
+          children: m
+        }), (0, i.jsx)(s.Text, {
           variant: "text-sm/normal",
           color: "text-primary",
-          children: p
+          children: _
         })]
       })]
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: u.buttons,
-      children: null == f ? void 0 : f.map((e, t) => (0, l.jsx)(a.Button, {
-        size: a.Button.Sizes.SMALL,
+      children: null == E ? void 0 : E.map((e, t) => (0, i.jsx)(s.Button, {
+        size: s.Button.Sizes.SMALL,
         color: e.color,
         "aria-label": e.text,
         onClick: e.onclick,
         className: u.ctaButton,
         children: e.text
       }, t))
-    }), (0, l.jsx)(a.Clickable, {
+    }), (0, i.jsx)(s.Clickable, {
       className: u.closeButton,
-      onClick: C,
+      onClick: g,
       role: "button",
       "aria-label": c.Z.Messages.DISMISS,
-      children: (0, l.jsx)(a.CloseSmallIcon, {
+      children: (0, i.jsx)(s.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
         className: u.closeButton

@@ -1,18 +1,18 @@
-t.d(n, {
+t.d(e, {
   Z: function() {
-    return u
+    return r
   }
 });
 var i = t(442837),
-  l = t(592125),
-  r = t(944486);
+  u = t(592125),
+  l = t(944486);
 
-function u() {
-  return (0, i.e7)([r.Z, l.Z], () => {
-    let e = r.Z.getVoiceChannelId();
-    if (null != e) {
-      let n = l.Z.getChannel(e);
-      if (null == n ? void 0 : n.isGuildStageVoice()) return n
+function r() {
+  return (0, i.e7)([l.Z, u.Z], () => {
+    let n = l.Z.getVoiceChannelId();
+    if (null != n) {
+      let e = u.Z.getChannel(n);
+      if (null == e ? void 0 : e.isGuildStageVoice()) return e
     }
     return null
   })

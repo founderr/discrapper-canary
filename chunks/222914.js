@@ -1,79 +1,79 @@
-a.d(s, {
+t.d(s, {
   Z: function() {
-    return x
+    return m
   }
 });
-var t = a(735250),
-  n = a(470079),
-  o = a(120356),
-  i = a.n(o),
-  l = a(399606),
-  r = a(481060),
-  c = a(446183),
-  d = a(677281),
-  E = a(378298),
-  N = a(359119),
-  R = a(473092),
-  _ = a(689938),
-  T = a(885075),
-  A = a(354603);
+var a = t(735250),
+  n = t(470079),
+  o = t(120356),
+  i = t.n(o),
+  d = t(399606),
+  c = t(481060),
+  r = t(446183),
+  l = t(677281),
+  _ = t(378298),
+  N = t(359119),
+  E = t(473092),
+  R = t(689938),
+  u = t(885075),
+  T = t(354603);
 
-function u() {
-  return (0, t.jsxs)("div", {
-    className: i()(A.toast, T.toast),
-    children: [(0, t.jsx)(r.ShieldIcon, {
-      color: r.tokens.colors.TEXT_BRAND
-    }), (0, t.jsx)(r.Text, {
-      className: A.__invalid_content,
+function A() {
+  return (0, a.jsxs)("div", {
+    className: i()(T.toast, u.toast),
+    children: [(0, a.jsx)(c.ShieldIcon, {
+      color: c.tokens.colors.TEXT_BRAND
+    }), (0, a.jsx)(c.Text, {
+      className: T.__invalid_content,
       color: "header-primary",
       variant: "text-md/normal",
-      children: _.Z.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM
+      children: R.Z.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM
     })]
   })
 }
 
-function x(e) {
+function m(e) {
   let {
     channelId: s,
-    warningId: a,
+    warningId: t,
     senderId: o
-  } = e, A = (0, l.e7)([N.ZP], () => N.ZP.getChannelSafetyWarning(s, a)), x = n.useMemo(() => (null == A ? void 0 : A.feedback_type) === N.ny.UPVOTE, [A]), M = n.useMemo(() => (null == A ? void 0 : A.feedback_type) === N.ny.DOWNVOTE, [A]), m = n.useCallback((e, n) => {
-    (null == A ? void 0 : A.feedback_type) !== e && ((0, E.Ms)(s, a, e), (0, r.showToast)((0, r.createToast)(_.Z.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM, r.ToastType.CUSTOM, {
-      component: (0, t.jsx)(u, {})
-    })), (0, R.qc)({
+  } = e, T = (0, d.e7)([N.ZP], () => N.ZP.getChannelSafetyWarning(s, t)), m = n.useMemo(() => (null == T ? void 0 : T.feedback_type) === N.ny.UPVOTE, [T]), x = n.useMemo(() => (null == T ? void 0 : T.feedback_type) === N.ny.DOWNVOTE, [T]), M = n.useCallback((e, n) => {
+    (null == T ? void 0 : T.feedback_type) !== e && ((0, _.Ms)(s, t, e), (0, c.showToast)((0, c.createToast)(R.Z.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM, c.ToastType.CUSTOM, {
+      component: (0, a.jsx)(A, {})
+    })), (0, E.qc)({
       channelId: s,
-      warningId: a,
+      warningId: t,
       senderId: o,
       warningType: N.pj.STRANGER_DANGER,
       cta: n
     }))
-  }, [A, s, a, o]);
-  return (0, t.jsxs)("div", {
-    className: T.feedback,
-    children: [(0, t.jsx)(r.Text, {
+  }, [T, s, t, o]);
+  return (0, a.jsxs)("div", {
+    className: u.feedback,
+    children: [(0, a.jsx)(c.Text, {
       variant: "text-sm/medium",
       color: "text-normal",
-      children: _.Z.Messages.STRANGER_DANGER_WAS_THIS_HELPFUL
-    }), (0, t.jsxs)("div", {
-      className: T.buttonsContainer,
-      children: [(0, t.jsx)(r.Clickable, {
-        className: i()([T.buttonsBackground, x ? T.buttonsBackgroundActive : T.buttonsBackgroundInactive, {
-          [T.disabled]: x
+      children: R.Z.Messages.STRANGER_DANGER_WAS_THIS_HELPFUL
+    }), (0, a.jsxs)("div", {
+      className: u.buttonsContainer,
+      children: [(0, a.jsx)(c.Clickable, {
+        className: i()([u.buttonsBackground, m ? u.buttonsBackgroundActive : u.buttonsBackgroundInactive, {
+          [u.disabled]: m
         }]),
-        onClick: () => m(N.ny.UPVOTE, R.NM.FEEDBACK_UPVOTE),
-        "aria-label": _.Z.Messages.STRANGER_DANGER_THUMBS_UP_A11Y,
-        children: (0, t.jsx)(d.Z, {
-          className: T.__invalid_buttonIcon,
+        onClick: () => M(N.ny.UPVOTE, E.NM.FEEDBACK_UPVOTE),
+        "aria-label": R.Z.Messages.STRANGER_DANGER_THUMBS_UP_A11Y,
+        children: (0, a.jsx)(l.Z, {
+          className: u.__invalid_buttonIcon,
           color: "interactive-normal"
         })
-      }), (0, t.jsx)(r.Clickable, {
-        className: i()([T.buttonsBackground, M ? T.buttonsBackgroundActive : T.buttonsBackgroundInactive, {
-          [T.disabled]: M
+      }), (0, a.jsx)(c.Clickable, {
+        className: i()([u.buttonsBackground, x ? u.buttonsBackgroundActive : u.buttonsBackgroundInactive, {
+          [u.disabled]: x
         }]),
-        onClick: () => m(N.ny.DOWNVOTE, R.NM.FEEDBACK_DOWNVOTE),
-        "aria-label": _.Z.Messages.STRANGER_DANGER_THUMBS_DOWN_A11Y,
-        children: (0, t.jsx)(c.Z, {
-          className: T.__invalid_buttonIcon,
+        onClick: () => M(N.ny.DOWNVOTE, E.NM.FEEDBACK_DOWNVOTE),
+        "aria-label": R.Z.Messages.STRANGER_DANGER_THUMBS_DOWN_A11Y,
+        children: (0, a.jsx)(r.Z, {
+          className: u.__invalid_buttonIcon,
           color: "interactive-normal"
         })
       })]

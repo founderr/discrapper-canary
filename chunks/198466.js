@@ -20,8 +20,8 @@ function E(e) {
     setConfettiCount: i,
     setShouldFireConfetti: r,
     tooltipProps: c
-  } = e, [E, I] = o.useState(0), T = o.useRef(-1), h = o.useRef(!0), S = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), {
-    scaleFactor: f
+  } = e, [E, I] = o.useState(0), T = o.useRef(-1), h = o.useRef(!0), f = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), {
+    scaleFactor: S
   } = (0, a.useSpring)({
     from: {
       scaleFactor: 1
@@ -36,12 +36,12 @@ function E(e) {
   });
   return (o.useEffect(() => () => {
     h.current = !1
-  }, []), S) ? (0, s.jsx)(s.Fragment, {
+  }, []), f) ? (0, s.jsx)(s.Fragment, {
     children: t
   }) : (0, s.jsx)(a.animated.div, {
     className: d.confettiTriggerWrapper,
     style: {
-      transform: f.to(e => "scale(".concat(e, ")"))
+      transform: S.to(e => "scale(".concat(e, ")"))
     },
     children: (0, s.jsx)(u.Clickable, {
       className: d.confettiTrigger,

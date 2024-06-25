@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   FU: function() {
-    return A
+    return N
   },
   eH: function() {
     return m
   },
   wG: function() {
-    return N
+    return A
   }
 }), n(66153), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var i = n(512722),
@@ -29,7 +29,7 @@ async function h(e) {
   return new Uint8ClampedArray(await n.arrayBuffer())
 }
 
-function S(e, t, n, i, r) {
+function f(e, t, n, i, r) {
   (0, u.RI)({
     [e]: {
       graph: n,
@@ -39,11 +39,11 @@ function S(e, t, n, i, r) {
     }
   })
 }
-async function f(e, t, n) {
+async function S(e, t, n) {
   var i, o;
   let l, _ = !1;
-  if (null == n) return S(e, t, s.zZ.NONE);
-  if (n === I.f7) return S(e, t, s.zZ.BACKGROUND_BLUR);
+  if (null == n) return f(e, t, s.zZ.NONE);
+  if (n === I.f7) return f(e, t, s.zZ.BACKGROUND_BLUR);
   if ("string" == typeof n || "number" == typeof n) {
     ;
     let e = (0, d.Z)()[n];
@@ -82,26 +82,26 @@ async function f(e, t, n) {
         }, n.onerror = e => t(e), n.src = o
       })),
       i = _ ? await h(l) : void 0;
-    S(e, t, s.zZ.BACKGROUND_REPLACEMENT, n, i)
+    f(e, t, s.zZ.BACKGROUND_REPLACEMENT, n, i)
   } catch (e) {
     (0, u.Nm)()
   }
 }
-async function N(e, t) {
+async function A(e, t) {
   let {
     track: n = !0,
     location: i
   } = t;
-  await f(s.TO.CAMERA_BACKGROUND_LIVE, {
+  await S(s.TO.CAMERA_BACKGROUND_LIVE, {
     type: s.W$.INPUT_DEVICE
   }, e), n && (0, c.Bh)(e, i, "Enabled")
 }
-async function A(e, t, n) {
+async function N(e, t, n) {
   let {
     track: i = !0,
     location: r
   } = n;
-  (0, u.GS)(), await f(s.TO.CAMERA_BACKGROUND_PREVIEW, {
+  (0, u.GS)(), await S(s.TO.CAMERA_BACKGROUND_PREVIEW, {
     type: s.W$.STREAM,
     streamId: t
   }, e), i && (0, c.Bh)(e, r, "Preview")
@@ -111,7 +111,7 @@ function m() {
   let e = o.default.getCurrentUser();
   if (null == e) return;
   let t = (0, l.P)(e);
-  (0, E.Z)() && !_.Z.hasBeenApplied && null != t && N(t, {
+  (0, E.Z)() && !_.Z.hasBeenApplied && null != t && A(t, {
     track: !1
   }).catch(T.dG4)
 }

@@ -1,66 +1,66 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return Z
+    return g
   }
 });
-var r = n(735250);
-n(470079);
-var u = n(442837),
-  l = n(481060),
-  a = n(153867),
-  i = n(857595),
-  s = n(607070),
-  o = n(906732),
-  c = n(705262),
-  d = n(540059),
-  E = n(210887),
-  I = n(740492),
-  T = n(695346),
-  S = n(874893),
-  _ = n(981631),
-  M = n(689938);
+var o = t(735250);
+t(470079);
+var r = t(442837),
+  a = t(481060),
+  c = t(153867),
+  i = t(857595),
+  l = t(607070),
+  u = t(906732),
+  s = t(705262),
+  d = t(540059),
+  _ = t(210887),
+  S = t(740492),
+  E = t(695346),
+  m = t(874893),
+  T = t(981631),
+  I = t(689938);
 
-function Z() {
-  let e = T.jU.useSetting(),
+function g() {
+  let e = E.jU.useSetting(),
     {
-      analyticsLocations: t
-    } = (0, o.ZP)(),
+      analyticsLocations: n
+    } = (0, u.ZP)(),
     {
-      theme: n,
-      useSystemTheme: Z,
-      useForcedColors: N
-    } = (0, u.cj)([E.Z, I.ZP, s.Z], () => ({
-      theme: E.Z.theme,
-      useSystemTheme: I.ZP.useSystemTheme,
-      useForcedColors: s.Z.useForcedColors
+      theme: t,
+      useSystemTheme: g,
+      useForcedColors: b
+    } = (0, r.cj)([_.Z, S.ZP, l.Z], () => ({
+      theme: _.Z.theme,
+      useSystemTheme: S.ZP.useSystemTheme,
+      useForcedColors: l.Z.useForcedColors
     })),
-    m = (0, d.Q)("appearance_settings"),
-    f = (e, u) => (0, r.jsx)(l.MenuRadioItem, {
+    M = (0, d.Q)("appearance_settings"),
+    f = (e, r) => (0, o.jsx)(a.MenuRadioItem, {
       id: e,
       group: "input-modes",
-      label: u,
-      disabled: N,
-      checked: Z === S.K.ON ? "system" === e : e === n,
+      label: r,
+      disabled: b,
+      checked: g === m.K.ON ? "system" === e : e === t,
       action: () => {
-        (0, c.Yk)({
+        (0, s.Yk)({
           isPersisted: !0,
-          analyticsLocations: t,
+          analyticsLocations: n,
           themeName: "default ".concat(e)
-        }), (0, a.ZI)({
+        }), (0, c.ZI)({
           theme: e
         })
       }
     });
-  return [(0, r.jsxs)(l.MenuGroup, {
-    children: [f(_.BRd.DARK, M.Z.Messages.THEME_DARK), f(_.BRd.LIGHT, M.Z.Messages.THEME_LIGHT), m && (0, r.jsxs)(r.Fragment, {
-      children: [f(_.BRd.DARKER, "Darker"), f(_.BRd.MIDNIGHT, M.Z.Messages.THEME_MIDNIGHT)]
-    }), f("system", M.Z.Messages.THEME_SYSTEM)]
-  }, "theme-items"), (0, r.jsx)(l.MenuGroup, {
-    children: (0, r.jsx)(l.MenuItem, {
+  return [(0, o.jsxs)(a.MenuGroup, {
+    children: [f(T.BRd.DARK, I.Z.Messages.THEME_DARK), f(T.BRd.LIGHT, I.Z.Messages.THEME_LIGHT), M && (0, o.jsxs)(o.Fragment, {
+      children: [f(T.BRd.DARKER, "Darker"), f(T.BRd.MIDNIGHT, I.Z.Messages.THEME_MIDNIGHT)]
+    }), f("system", I.Z.Messages.THEME_SYSTEM)]
+  }, "theme-items"), (0, o.jsx)(a.MenuGroup, {
+    children: (0, o.jsx)(a.MenuItem, {
       id: "compact-mode",
-      label: e ? M.Z.Messages.SWITCH_TO_COZY_MODE : M.Z.Messages.SWITCH_TO_COMPACT_MODE,
+      label: e ? I.Z.Messages.SWITCH_TO_COZY_MODE : I.Z.Messages.SWITCH_TO_COMPACT_MODE,
       action: () => {
-        T.jU.updateSetting(!e), (0, i.ZZ)()
+        E.jU.updateSetting(!e), (0, i.ZZ)()
       }
     })
   }, "compact-mode")]

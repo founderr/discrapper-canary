@@ -21,14 +21,14 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = 1 * d.Z.Millis.MINUTE,
-  f = e => "https://youtube.com/watch?v=".concat(e),
-  N = 5 * d.Z.Millis.MINUTE,
-  A = /live_user_(.*)-\{width\}/,
+let f = 1 * d.Z.Millis.MINUTE,
+  S = e => "https://youtube.com/watch?v=".concat(e),
+  A = 5 * d.Z.Millis.MINUTE,
+  N = /live_user_(.*)-\{width\}/,
   m = null,
   O = 0,
-  R = null,
-  p = new Set,
+  p = null,
+  R = new Set,
   g = {};
 
 function C(e, t, n) {
@@ -58,7 +58,7 @@ let L = new class e {
     !this._started && (this._started = !0, E.Z.isFetching() ? u.Z.fetch() : this._check())
   }
   stop() {
-    this._started = !1, R = null, O = 0, null != this._nextCheck && clearTimeout(this._nextCheck), l.Z.dispatch({
+    this._started = !1, p = null, O = 0, null != this._nextCheck && clearTimeout(this._nextCheck), l.Z.dispatch({
       type: "STREAMING_UPDATE",
       stream: null
     })
@@ -83,14 +83,14 @@ let L = new class e {
         title: E
       } = l, I = {
         large_image: null != u && null !== (i = (0, c.getAssetFromImageURL)(T.ABu.TWITCH, u)) && void 0 !== i ? i : void 0
-      }, h = await v(d, t), S = _.Z.get(T.ABu.TWITCH);
-      let f = null !== (s = u, r = null === (o = A.exec(s)) || void 0 === o ? void 0 : o[1]) && void 0 !== r ? r : e.name;
+      }, h = await v(d, t), f = _.Z.get(T.ABu.TWITCH);
+      let S = null !== (s = u, r = null === (o = N.exec(s)) || void 0 === o ? void 0 : o[1]) && void 0 !== r ? r : e.name;
       return {
-        url: null === (n = S.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(S, {
+        url: null === (n = f.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(f, {
           id: e.id,
-          name: f
+          name: S
         }),
-        name: S.name,
+        name: f.name,
         assets: I,
         details: E,
         state: h
@@ -102,7 +102,7 @@ let L = new class e {
   }
   async _checkYouTube(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if (R = null, e.revoked || p.has(e.id)) return null;
+    if (p = null, e.revoked || R.has(e.id)) return null;
     try {
       var n;
       let {
@@ -131,15 +131,15 @@ let L = new class e {
       } = i[0], l = {
         large_image: null !== (n = (0, c.getAssetFromImageURL)(T.ABu.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
       };
-      return R = {
-        url: f(r),
+      return p = {
+        url: S(r),
         name: _.Z.get(T.ABu.YOUTUBE).name,
         details: s,
         assets: l
       }
     } catch (n) {
       if (401 === n.status && null == t) return u.Z.refreshAccessToken(e.type, e.id).then(t => this._checkYouTube(e, t)).catch(() => null);
-      return 403 === n.status && p.add(e.id), null
+      return 403 === n.status && R.add(e.id), null
     }
   }
   _check() {
@@ -149,11 +149,11 @@ let L = new class e {
     null != this._nextCheck && clearTimeout(this._nextCheck);
     let t = [T.ABu.TWITCH],
       n = Date.now();
-    O <= n && (t.push(T.ABu.YOUTUBE), O = n + N), Promise.allSettled(e.filter(e => t.includes(e.type)).map(e => e.type === T.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))).then(e => {
+    O <= n && (t.push(T.ABu.YOUTUBE), O = n + A), Promise.allSettled(e.filter(e => t.includes(e.type)).map(e => e.type === T.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))).then(e => {
       if (this._started) {
         var t;
         let n = null === (t = e.find(e => "fulfilled" === e.status && null != e.value)) || void 0 === t ? void 0 : t.value;
-        null == n && null != R && (n = R), l.Z.dispatch({
+        null == n && null != p && (n = p), l.Z.dispatch({
           type: "STREAMING_UPDATE",
           stream: n
         })
@@ -162,7 +162,7 @@ let L = new class e {
     })
   }
   _scheduleCheck() {
-    this._started && (this._nextCheck = setTimeout(() => this._check(), S))
+    this._started && (this._nextCheck = setTimeout(() => this._check(), f))
   }
   constructor() {
     h(this, "_nextCheck", void 0), h(this, "_started", void 0), this._started = !1

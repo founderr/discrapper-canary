@@ -15,7 +15,7 @@ var i = n(735250),
   T = n(870187),
   h = n(520076);
 
-function S(e) {
+function f(e) {
   let {
     text: t,
     language: r
@@ -44,7 +44,7 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     expanded: t,
     setExpanded: n,
@@ -68,7 +68,7 @@ function f(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     url: t,
     fileName: n,
@@ -107,7 +107,7 @@ function N(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     language: t,
     setLanguage: n
@@ -158,7 +158,7 @@ function m(e) {
       ...t,
       className: T.openFullPreviewSection,
       onClick: () => {
-        (0, l.openModal)(t => (0, i.jsx)(R, {
+        (0, l.openModal)(t => (0, i.jsx)(p, {
           ...e,
           ...t
         }))
@@ -183,25 +183,25 @@ function O(e) {
     language: E,
     setLanguage: h,
     bytesLeft: O,
-    className: R
-  } = e, p = null == a ? void 0 : a.split("\n"), g = null !== (t = null == p ? void 0 : p.length) && void 0 !== t ? t : 0, C = _ ? 100 : 6, v = 0 === O, L = "";
+    className: p
+  } = e, R = null == a ? void 0 : a.split("\n"), g = null !== (t = null == R ? void 0 : R.length) && void 0 !== t ? t : 0, C = _ ? 100 : 6, v = 0 === O, L = "";
   v && _ && g > C ? L = "\n..." : !v && (L = "..."), "" !== L && (v ? L += " " + I.Z.Messages.PREVIEW_LINES_LEFT.format({
     lines: g - C
   }) : L += " " + I.Z.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, c.IC)(O)
   }));
-  let D = (null == p ? void 0 : p.slice(0, C).join("\n")) + L,
+  let D = (null == R ? void 0 : R.slice(0, C).join("\n")) + L,
     M = (0, u.yx)(D),
     P = _ || C < g;
   return (0, i.jsxs)("div", {
-    className: o()(R, T.container),
+    className: o()(p, T.container),
     children: [(0, i.jsx)("div", {
       className: o()(T.textContainer, {
         [T.expanded]: _
       }),
       children: null == a ? (0, i.jsx)(l.Spinner, {
         className: T.spinner
-      }) : (0, i.jsx)(S, {
+      }) : (0, i.jsx)(f, {
         text: M,
         language: E
       })
@@ -210,7 +210,7 @@ function O(e) {
       className: T.footer,
       variant: "text-sm/normal",
       children: [P ? (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(f, {
+        children: [(0, i.jsx)(S, {
           expanded: _,
           setExpanded: d,
           isWholeFile: v,
@@ -225,11 +225,11 @@ function O(e) {
         })]
       }) : null, (0, i.jsx)("div", {
         className: T.footerGap
-      }), (0, i.jsx)(N, {
+      }), (0, i.jsx)(A, {
         url: n,
         fileName: r,
         fileSize: s
-      }), (0, i.jsx)(A, {
+      }), (0, i.jsx)(N, {
         language: E,
         setLanguage: h
       })]
@@ -237,7 +237,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     url: t,
     fileName: n,
@@ -260,7 +260,7 @@ function R(e) {
         className: T.modalTextContainer,
         children: null == u ? (0, i.jsx)(l.Spinner, {
           className: T.spinner
-        }) : (0, i.jsx)(S, {
+        }) : (0, i.jsx)(f, {
           text: h,
           language: d
         })
@@ -270,11 +270,11 @@ function R(e) {
         variant: "text-sm/normal",
         children: [(0, i.jsx)("div", {
           className: T.footerGap
-        }), (0, i.jsx)(N, {
+        }), (0, i.jsx)(A, {
           url: t,
           fileName: n,
           fileSize: s
-        }), (0, i.jsx)(A, {
+        }), (0, i.jsx)(N, {
           language: d,
           setLanguage: E
         })]
@@ -292,9 +292,9 @@ t.Z = r.memo(function(e) {
     onClick: u,
     onContextMenu: _
   } = e, [c, E] = r.useState(!1), [I, h] = r.useState(n.split(".").slice(-1)[0]), {
-    fileContents: S,
-    bytesLeft: f,
-    hadError: N
+    fileContents: f,
+    bytesLeft: S,
+    hadError: A
   } = function(e, t) {
     let [n, i] = r.useState(!1), [s, o] = r.useState(null), [a, l] = r.useState(1);
     return r.useEffect(() => {
@@ -332,7 +332,7 @@ t.Z = r.memo(function(e) {
       hadError: n
     }
   }(t, a);
-  return N ? (0, i.jsx)(d.Z, {
+  return A ? (0, i.jsx)(d.Z, {
     url: t,
     fileName: n,
     fileSize: s,
@@ -343,8 +343,8 @@ t.Z = r.memo(function(e) {
     url: t,
     fileName: n,
     fileSize: s,
-    fileContents: S,
-    bytesLeft: f,
+    fileContents: f,
+    bytesLeft: S,
     expanded: c,
     setExpanded: E,
     language: I,

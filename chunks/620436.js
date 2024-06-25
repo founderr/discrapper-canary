@@ -1,42 +1,42 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return o
   }
 });
-var n, i, l = t(735250);
-t(470079);
-var a = t(481060),
-  r = t(346122);
-(n = i || (i = {})).ARROW_DOWN = "arrow_down", n.CROSS = "cross";
+var s, a, i = n(735250);
+n(470079);
+var r = n(481060),
+  l = n(346122);
+(s = a || (a = {})).ARROW_DOWN = "arrow_down", s.CROSS = "cross";
 
 function o(e) {
   let {
-    type: s
+    type: t
   } = e;
-  return (0, l.jsx)("div", {
-    className: r.dividerContainer,
-    children: (0, l.jsx)("div", {
-      className: r.dividerIconContainer,
+  return (0, i.jsx)("div", {
+    className: l.dividerContainer,
+    children: (0, i.jsx)("div", {
+      className: l.dividerIconContainer,
       children: function(e) {
         switch (e) {
           case "arrow_down":
-            return (0, l.jsx)(a.ArrowSmallDownIcon, {
+            return (0, i.jsx)(r.ArrowSmallDownIcon, {
               size: "md",
               color: "currentColor",
-              className: r.dividierIcon
+              className: l.dividierIcon
             });
           case "cross":
-            return (0, l.jsx)(a.CloseSmallIcon, {
+            return (0, i.jsx)(r.CloseSmallIcon, {
               size: "md",
               color: "currentColor",
-              className: r.dividierIcon
+              className: l.dividierIcon
             });
           default:
             return null
         }
-      }(s)
+      }(t)
     })
   })
 }
-o.Type = i
+o.Type = a

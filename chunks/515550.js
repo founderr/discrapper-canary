@@ -1,77 +1,77 @@
 n.d(t, {
   Z: function() {
-    return h
+    return E
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(230711),
-  a = n(100527),
-  r = n(906732),
+var s = n(481060),
+  a = n(230711),
+  r = n(100527),
+  l = n(906732),
   o = n(170671),
   c = n(981631),
-  u = n(921944),
-  d = n(689938),
-  E = n(512475);
+  d = n(921944),
+  u = n(689938),
+  _ = n(512475);
 
-function h(e) {
+function E(e) {
   let {
     markAsDismissed: t
   } = e, {
     analyticsLocations: n
-  } = (0, r.ZP)(a.Z.APP_ICON_NEW_STYLES_COACHMARK);
-  return (0, s.jsxs)("div", {
-    className: E.container,
-    children: [(0, s.jsx)("div", {
-      className: E.banner
-    }), (0, s.jsx)(i.Button, {
-      "aria-label": d.Z.Messages.CLOSE,
-      look: i.Button.Looks.BLANK,
-      size: i.Button.Sizes.NONE,
+  } = (0, l.ZP)(r.Z.APP_ICON_NEW_STYLES_COACHMARK);
+  return (0, i.jsxs)("div", {
+    className: _.container,
+    children: [(0, i.jsx)("div", {
+      className: _.banner
+    }), (0, i.jsx)(s.Button, {
+      "aria-label": u.Z.Messages.CLOSE,
+      look: s.Button.Looks.BLANK,
+      size: s.Button.Sizes.NONE,
       onClick: () => {
-        t(u.L.USER_DISMISS)
+        t(d.L.USER_DISMISS)
       },
-      className: E.closeButton,
-      children: (0, s.jsx)(i.CloseSmallIcon, {
+      className: _.closeButton,
+      children: (0, i.jsx)(s.CloseSmallIcon, {
         size: "xs",
-        className: E.closeIcon,
+        className: _.closeIcon,
         color: "white"
       })
-    }), (0, s.jsxs)("div", {
-      className: E.body,
-      children: [(0, s.jsx)(i.Heading, {
+    }), (0, i.jsxs)("div", {
+      className: _.body,
+      children: [(0, i.jsx)(s.Heading, {
         variant: "heading-md/extrabold",
-        className: E.text,
-        children: d.Z.Messages.APP_ICON_NEW_STYLES_HEADER
-      }), (0, s.jsxs)("div", {
-        className: E.poweredByNitroContainer,
-        children: [(0, s.jsx)(o.Z, {
-          className: E.icon,
+        className: _.text,
+        children: u.Z.Messages.APP_ICON_NEW_STYLES_HEADER
+      }), (0, i.jsxs)("div", {
+        className: _.poweredByNitroContainer,
+        children: [(0, i.jsx)(o.Z, {
+          className: _.icon,
           isSelected: !0
-        }), (0, s.jsx)(i.Text, {
+        }), (0, i.jsx)(s.Text, {
           variant: "text-xxs/medium",
-          className: E.text,
-          children: d.Z.Messages.POWERED_BY_NITRO
+          className: _.text,
+          children: u.Z.Messages.POWERED_BY_NITRO
         })]
-      }), (0, s.jsx)(i.Text, {
+      }), (0, i.jsx)(s.Text, {
         variant: "text-sm/medium",
-        className: E.text,
-        children: d.Z.Messages.APP_ICON_NEW_STYLES_BODY
+        className: _.text,
+        children: u.Z.Messages.APP_ICON_NEW_STYLES_BODY
       })]
-    }), (0, s.jsx)(i.Button, {
-      className: E.cta,
-      look: i.Button.Looks.FILLED,
-      color: i.Button.Colors.CUSTOM,
+    }), (0, i.jsx)(s.Button, {
+      className: _.cta,
+      look: s.Button.Looks.FILLED,
+      color: s.Button.Colors.CUSTOM,
       onClick: () => {
-        t(u.L.TAKE_ACTION), l.Z.open(c.oAB.APPEARANCE, null, {
+        t(d.L.TAKE_ACTION), a.Z.open(c.oAB.APPEARANCE, null, {
           openWithoutBackstack: !0,
           analyticsLocations: n
         })
       },
-      children: d.Z.Messages.APP_ICON_NEW_STYLES_CTA
-    }), (0, s.jsx)("div", {
-      className: E.pointer
+      children: u.Z.Messages.APP_ICON_NEW_STYLES_CTA
+    }), (0, i.jsx)("div", {
+      className: _.pointer
     })]
   })
 }

@@ -1,7 +1,7 @@
-var l, i = n(442837),
-  s = n(570140);
+var i, a = n(442837),
+  l = n(570140);
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -13,7 +13,7 @@ let r = {
     toastsEnabledForChannel: {}
   },
   o = r;
-class c extends(l = i.ZP.PersistedStore) {
+class c extends(i = a.ZP.PersistedStore) {
   initialize(e) {
     o = null != e ? e : r
   }
@@ -25,7 +25,7 @@ class c extends(l = i.ZP.PersistedStore) {
     return o
   }
 }
-a(c, "displayName", "CallChatToastsStore"), a(c, "persistKey", "CallChatToasts"), t.Z = new c(s.Z, {
+s(c, "displayName", "CallChatToastsStore"), s(c, "persistKey", "CallChatToasts"), t.Z = new c(l.Z, {
   CALL_CHAT_TOASTS_SET_ENABLED: function(e) {
     let {
       channelId: t,

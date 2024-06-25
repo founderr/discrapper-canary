@@ -13,7 +13,7 @@ var i = n(544891),
   I = n(626135),
   T = n(981631),
   h = n(689938);
-let S = async (e, t) => {
+let f = async (e, t) => {
   let n = null != t ? t : d.Z.getInviteKeyForGuildId(e),
     s = E.default.getCurrentUser(),
     o = !c.ZP.isMember(e, null == s ? void 0 : s.id);
@@ -46,7 +46,7 @@ let S = async (e, t) => {
       guildId: e
     })
   }
-}, f = async (e, t) => {
+}, S = async (e, t) => {
   let {
     body: n
   } = await i.tn.patch({
@@ -65,7 +65,7 @@ let S = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, N = async (e, t) => {
+}, A = async (e, t) => {
   let {
     body: n
   } = await i.tn.patch({
@@ -84,7 +84,7 @@ let S = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, A = async (e, t) => {
+}, N = async (e, t) => {
   await i.tn.patch({
     url: T.ANM.GUILD_MEMBER_VERIFICATION(e),
     body: {
@@ -149,8 +149,8 @@ function O() {
   })
 }
 t.Z = {
-  fetchVerificationForm: S,
-  updateVerificationForm: f,
+  fetchVerificationForm: f,
+  updateVerificationForm: S,
   updateVerificationFormFieldsLocal: (e, t) => {
     r.Z.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -161,7 +161,7 @@ t.Z = {
       isLocalUpdate: !0
     })
   },
-  updateVerificationFormDescription: N,
+  updateVerificationFormDescription: A,
   updateVerificationFormDescriptionLocal: (e, t) => {
     r.Z.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -172,7 +172,7 @@ t.Z = {
       isLocalUpdate: !0
     })
   },
-  enableVerificationForm: A,
+  enableVerificationForm: N,
   submitVerificationForm: m,
   clearCoachmark: function() {
     r.Z.dispatch({

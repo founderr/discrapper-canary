@@ -1,6 +1,6 @@
-t.d(s, {
+t.d(i, {
   j: function() {
-    return i
+    return o
   }
 });
 let n = (0, t(818083).B)({
@@ -19,7 +19,7 @@ let n = (0, t(818083).B)({
   }]
 });
 
-function i() {
+function o() {
   let {
     enabled: e
   } = n.getCurrentConfig({

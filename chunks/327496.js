@@ -28,39 +28,39 @@ let E = e => {
       icon: I,
       name: T,
       ariaLabel: h,
-      className: S,
-      style: f,
-      to: N,
-      onClick: A,
+      className: f,
+      style: S,
+      to: A,
+      onClick: N,
       selected: m = !1,
       ...O
     } = e,
-    R = (0, a.k6)();
+    p = (0, a.k6)();
   if (null == I && null != T) {
-    var p;
-    n = null !== (p = c[(t = (0, u.Zg)(T)).length - 1]) && void 0 !== p ? p : c[c.length - 1]
+    var R;
+    n = null !== (R = c[(t = (0, u.Zg)(T)).length - 1]) && void 0 !== R ? R : c[c.length - 1]
   }
   let g = r.useCallback(e => {
-    if (null == N);
-    else if ("string" == typeof N) R.push(N);
+    if (null == A);
+    else if ("string" == typeof A) p.push(A);
     else {
       let {
         pathname: e = "",
         state: t
-      } = N;
-      R.push(e, t)
+      } = A;
+      p.push(e, t)
     }
-    null != A && A(e)
-  }, [R, N, A]);
+    null != N && N(e)
+  }, [p, A, N]);
   return (0, i.jsxs)(l.Clickable, {
     ...O,
     onClick: g,
-    className: o()(S, _.wrapper, {
+    className: o()(f, _.wrapper, {
       [_.selected]: m
     }),
     "aria-label": null != h && "" !== h ? h : null != T ? T : "",
     style: {
-      ...f,
+      ...S,
       fontSize: n
     },
     focusProps: {

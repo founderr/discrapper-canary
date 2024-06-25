@@ -3,43 +3,43 @@ n.d(t, {
     return c
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(194359),
+var i = n(735250),
+  a = n(470079),
+  s = n(481060),
+  l = n(194359),
   r = n(689938),
   o = n(749967);
 
 function c(e) {
   let {
     userId: t
-  } = e, n = i.useCallback(e => {
-    e.stopPropagation(), a.Z.cancelFriendRequest(t)
-  }, [t]), c = i.useCallback(e => {
-    e.stopPropagation(), a.Z.addRelationship({
+  } = e, n = a.useCallback(e => {
+    e.stopPropagation(), l.Z.cancelFriendRequest(t)
+  }, [t]), c = a.useCallback(e => {
+    e.stopPropagation(), l.Z.addRelationship({
       userId: t
     })
   }, [t]);
-  return (0, s.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     className: o.friendRequestContainer,
-    children: [(0, s.jsx)(l.Button, {
+    children: [(0, i.jsx)(s.Button, {
       className: o.acceptButton,
-      look: l.Button.Looks.FILLED,
-      color: l.Button.Colors.GREEN,
-      size: l.Button.Sizes.NONE,
+      look: s.Button.Looks.FILLED,
+      color: s.Button.Colors.GREEN,
+      size: s.Button.Sizes.NONE,
       onClick: c,
-      children: (0, s.jsx)(l.Text, {
+      children: (0, i.jsx)(s.Text, {
         variant: "text-sm/medium",
         color: "always-white",
         children: r.Z.Messages.FRIEND_REQUEST_ACCEPT
       })
-    }), (0, s.jsx)(l.Button, {
+    }), (0, i.jsx)(s.Button, {
       className: o.ignoreButton,
-      look: l.Button.Looks.FILLED,
-      color: l.Button.Colors.PRIMARY,
-      size: l.Button.Sizes.NONE,
+      look: s.Button.Looks.FILLED,
+      color: s.Button.Colors.PRIMARY,
+      size: s.Button.Sizes.NONE,
       onClick: n,
-      children: (0, s.jsx)(l.Text, {
+      children: (0, i.jsx)(s.Text, {
         variant: "text-sm/medium",
         color: "always-white",
         children: r.Z.Messages.FRIEND_REQUEST_IGNORE

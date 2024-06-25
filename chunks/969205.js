@@ -3,12 +3,12 @@ n.d(t, {
     return c
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(300284),
-  a = n(785717),
-  r = n(993409),
+var s = n(481060),
+  a = n(300284),
+  r = n(785717),
+  l = n(993409),
   o = n(689938);
 
 function c(e) {
@@ -16,10 +16,10 @@ function c(e) {
     onClose: t
   } = e, {
     trackUserProfileAction: n
-  } = (0, a.KZ)(), c = (0, l.Z)();
-  return (0, s.jsx)(r.Z, {
+  } = (0, r.KZ)(), c = (0, a.Z)();
+  return (0, i.jsx)(l.Z, {
     variant: "banner",
-    icon: i.PencilIcon,
+    icon: s.PencilIcon,
     text: o.Z.Messages.EDIT_PROFILE,
     onClick: () => {
       n({

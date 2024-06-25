@@ -17,13 +17,13 @@ function h() {
   return null == r && T.warn("Tried getting Dispatch instance before instantiated"), r
 }
 
-function S(e) {
+function f(e) {
   let t = JSON.parse(e);
   return T.log("Native Dispatch error", t), new o.Z(t)
 }
 
-function f(e, t) {
-  "" !== e && S(e)
+function S(e, t) {
+  "" !== e && f(e)
 }
 t.Z = {
   init(e) {
@@ -43,7 +43,7 @@ t.Z = {
       var i;
       let c = {
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          build_number: "305007"
+          build_number: "305042"
         },
         d = l.default.getCurrentUser();
       null != d && (c.user_id = d.id, c.user_name = d.tag, null != d.email && (c.email = d.email));
@@ -76,7 +76,7 @@ t.Z = {
           } : null
         })
       }, e => {
-        u(S(e))
+        u(f(e))
       }, e => {
         ! function(e) {
           let {
@@ -119,7 +119,7 @@ t.Z = {
       build_id: s,
       manifest_ids: o,
       install_path: a
-    }), f)
+    }), S)
   },
   setCurrentTask(e, t, n, i, r) {
     let s = h();
@@ -130,7 +130,7 @@ t.Z = {
       action: n,
       user_id: i,
       user_token: r
-    }), f), !0)
+    }), S), !0)
   },
   setCredentials(e, t) {
     let n = h();
@@ -138,7 +138,7 @@ t.Z = {
       command: "SetCredentials",
       user_id: e,
       user_token: t
-    }), f)
+    }), S)
   },
   cancel(e, t) {
     let n = h();
@@ -146,7 +146,7 @@ t.Z = {
       command: "Cancel",
       application_id: e,
       branch_id: t
-    }), f)
+    }), S)
   },
   uninstall(e, t) {
     let n = h();
@@ -154,19 +154,19 @@ t.Z = {
       command: "Uninstall",
       application_id: e,
       branch_id: t
-    }), f)
+    }), S)
   },
   pause() {
     let e = h();
     if (null != e) e.command(JSON.stringify({
       command: "Pause"
-    }), f)
+    }), S)
   },
   resume() {
     let e = h();
     if (null != e) e.command(JSON.stringify({
       command: "Resume"
-    }), f)
+    }), S)
   },
   queryDirectory(e, t) {
     let n = h();
@@ -202,7 +202,7 @@ t.Z = {
         s.Z.dispatch({
           type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE"
         });
-        let t = S(e);
+        let t = f(e);
         s.Z.dispatch({
           type: "DISPATCH_APPLICATION_ERROR",
           error: t
@@ -239,7 +239,7 @@ t.Z = {
       option_name: n,
       environment: i
     }), function(e, t) {
-      "" !== e ? s(S(e)) : r([JSON.parse(t).pid])
+      "" !== e ? s(f(e)) : r([JSON.parse(t).pid])
     })
   })
 }

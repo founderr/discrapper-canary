@@ -1,12 +1,12 @@
 t.d(s, {
   Z: function() {
-    return a
+    return i
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(106939);
+var a = t(106939);
 
-function a() {
-  return (0, n.jsx)(i.M, {})
+function i() {
+  return (0, n.jsx)(a.M, {})
 }

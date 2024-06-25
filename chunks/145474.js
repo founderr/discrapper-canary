@@ -4,8 +4,8 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  l = t(470079),
-  r = t(442837),
+  r = t(470079),
+  l = t(442837),
   u = t(481060),
   a = t(352954),
   o = t(441894),
@@ -14,8 +14,8 @@ var i = t(735250),
 
 function c(e, n) {
   let t = (0, o.J)(n),
-    c = (0, r.e7)([s.default], () => s.default.getId() === e),
-    E = l.useCallback(() => {
+    c = (0, l.e7)([s.default], () => s.default.getId() === e),
+    E = r.useCallback(() => {
       a.Z.openSecureFramesUserVerificationModal(e, n)
     }, [n, e]);
   return !t || c ? null : (0, i.jsx)(u.MenuItem, {

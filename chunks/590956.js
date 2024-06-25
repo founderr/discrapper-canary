@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Y: function() {
-    return A
+    return N
   },
   c: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i = n(735250),
@@ -21,9 +21,9 @@ var i = n(735250),
   I = n(524444),
   T = n(981631),
   h = n(185923),
-  S = n(474936),
-  f = n(950110);
-let N = e => {
+  f = n(474936),
+  S = n(950110);
+let A = e => {
     var t;
     let {
       node: n,
@@ -36,7 +36,7 @@ let N = e => {
       src: n.src,
       alt: _,
       animated: !1
-    }), S = e => (0, i.jsx)(l.Tooltip, {
+    }), f = e => (0, i.jsx)(l.Tooltip, {
       text: (0, I.Y)(n.name, a),
       "aria-label": c,
       ...I.b_,
@@ -55,8 +55,8 @@ let N = e => {
           var n;
           T(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
-        className: o()(f.emojiContainer, {
-          [f.emojiContainerClickable]: a
+        className: o()(S.emojiContainer, {
+          [S.emojiContainerClickable]: a
         }),
         children: h(t)
       })
@@ -74,16 +74,16 @@ let N = e => {
         ...e,
         node: n
       }),
-      children: S
-    }) : S()
+      children: f
+    }) : f()
   },
-  A = e => {
+  N = e => {
     let {
       node: t,
       isInteracting: n,
       tooltipPosition: s = I.b_.position,
       enableClick: _ = !0
-    } = e, [S, N] = r.useState(String(Date.now())), [A, O] = r.useState(!1), [R, p] = r.useState(!1), g = function() {
+    } = e, [f, A] = r.useState(String(Date.now())), [N, O] = r.useState(!1), [p, R] = r.useState(!1), g = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, i.jsx)(u.Z, {
         ...e,
@@ -98,7 +98,7 @@ let N = e => {
       "aria-label": t.name,
       ...I.b_,
       position: s,
-      shouldShow: !R,
+      shouldShow: !p,
       onTooltipShow: () => {
         O(!0), _ && (m({
           emojiNode: t,
@@ -114,16 +114,16 @@ let N = e => {
         },
         onClick: t => {
           var n;
-          O(!1), p(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          O(!1), R(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          A && (d.default.track(T.rMx.CLOSE_POPOUT, {
+          N && (d.default.track(T.rMx.CLOSE_POPOUT, {
             nonce: C
           }), O(!1))
         },
         tag: "span",
-        className: o()(f.emojiContainer, {
-          [f.emojiContainerClickable]: _
+        className: o()(S.emojiContainer, {
+          [S.emojiContainerClickable]: _
         }),
         children: g(t)
       })
@@ -134,7 +134,7 @@ let N = e => {
       onRequestClose: () => {
         d.default.track(T.rMx.CLOSE_POPOUT, {
           nonce: C
-        }), O(!1), p(!1)
+        }), O(!1), R(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
@@ -142,10 +142,10 @@ let N = e => {
       renderPopout: e => (0, i.jsx)(E.vk, {
         ...e,
         node: t,
-        refreshPositionKey: () => N(String(Date.now())),
+        refreshPositionKey: () => A(String(Date.now())),
         nonce: C
       }),
-      positionKey: S,
+      positionKey: f,
       children: v
     }) : v()
   },
@@ -156,7 +156,7 @@ let N = e => {
       nonce: i
     } = e;
     _.ZP.trackWithMetadata(T.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-      type: S.cd.EMOJI_IN_MESSAGE_HOVER,
+      type: f.cd.EMOJI_IN_MESSAGE_HOVER,
       expression_id: t.emojiId,
       expression_name: t.name,
       is_animated: t.animated,

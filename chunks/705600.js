@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(854218),
   T = n(623624),
   h = n(210887),
-  S = n(271383),
-  f = n(594174),
-  N = n(267642),
-  A = n(797717),
+  f = n(271383),
+  S = n(594174),
+  A = n(267642),
+  N = n(797717),
   m = n(672752),
   O = n(665786),
-  R = n(697725),
-  p = n(981631),
+  p = n(697725),
+  R = n(981631),
   g = n(689938),
   C = n(325026);
 let v = {
@@ -87,14 +87,14 @@ function L(e) {
     className: C.tooltipPremiumFooterContainer,
     children: [(0, i.jsxs)("div", {
       className: o()(C.tooltipPremiumFooterSegment, C.tooltipPremiumFooterTierSegment),
-      children: [(0, i.jsx)(R.Z, {
+      children: [(0, i.jsx)(p.Z, {
         width: 18,
         height: 18,
         className: C.gemIcon
       }), (0, i.jsx)(_.Text, {
         variant: "text-xs/semibold",
         color: "always-white",
-        children: N.nW(t.premiumTier)
+        children: A.nW(t.premiumTier)
       })]
     }), (0, i.jsx)("div", {
       className: o()(C.tooltipPremiumFooterSegment),
@@ -180,39 +180,39 @@ function M(e) {
   let t, n, {
       guild: s,
       tooltipColor: l = _.Tooltip.Colors.BRAND,
-      tooltipPosition: N,
+      tooltipPosition: A,
       className: m,
       flowerStarClassName: O,
-      iconClassName: R,
+      iconClassName: p,
       badgeStrokeColor: g,
       badgeColor: L,
       size: M = 16,
       disableBoostClick: P,
       "aria-label": y = !1
     } = e,
-    U = (0, a.e7)([f.default, S.ZP], () => {
-      let e = f.default.getCurrentUser();
-      return S.ZP.isMember(null == s ? void 0 : s.id, null == e ? void 0 : e.id)
+    U = (0, a.e7)([S.default, f.ZP], () => {
+      let e = S.default.getCurrentUser();
+      return f.ZP.isMember(null == s ? void 0 : s.id, null == e ? void 0 : e.id)
     }),
     b = (0, a.e7)([h.Z], () => h.Z.theme),
     G = (0, I.XX)(s),
     w = (0, E.i)(G),
-    B = r.useCallback(e => {
+    x = r.useCallback(e => {
       G.premium && U && !P && (e.stopPropagation(), e.preventDefault(), (0, T.f)({
         guildId: s.id,
         location: {
-          section: p.jXE.GUILD_HEADER,
-          object: p.qAy.BOOST_GEM_ICON
+          section: R.jXE.GUILD_HEADER,
+          object: R.qAy.BOOST_GEM_ICON
         }
       }))
     }, [G.premium, U, P, s.id]);
   if (w === E.Q.NONE) return null;
   if (w === E.Q.CLAN) {
-    var x;
-    let e = (0, c.ky)(s.id, null === (x = s.clan) || void 0 === x ? void 0 : x.badge, M);
+    var B;
+    let e = (0, c.ky)(s.id, null === (B = s.clan) || void 0 === B ? void 0 : B.badge, M);
     return (0, i.jsx)(_.Tooltip, {
       color: l,
-      position: N,
+      position: A,
       "aria-label": y,
       text: (0, i.jsx)(D, {
         badgeType: w,
@@ -221,7 +221,7 @@ function M(e) {
       tooltipContentClassName: C.tooltipRemovePadding,
       children: t => (0, i.jsx)(_.Clickable, {
         ...t,
-        onClick: B,
+        onClick: x,
         className: o()(C.clanBadgeContainer, m),
         children: (0, i.jsx)(d.KQ, {
           src: e,
@@ -245,7 +245,7 @@ function M(e) {
     K = (0, u.wj)(b) ? V : Z;
   return t = null != t ? t : W, n = null != n ? n : K, (0, i.jsx)(_.Tooltip, {
     color: l,
-    position: N,
+    position: A,
     "aria-label": y,
     text: (0, i.jsx)(D, {
       badgeType: w,
@@ -253,8 +253,8 @@ function M(e) {
     }),
     tooltipContentClassName: C.tooltipRemovePadding,
     children: e => (0, i.jsx)(_.Clickable, {
-      onClick: B,
-      children: (0, i.jsx)(A.Z, {
+      onClick: x,
+      children: (0, i.jsx)(N.Z, {
         ...e,
         className: m,
         flowerStarClassName: O,
@@ -262,7 +262,7 @@ function M(e) {
         stroke: g,
         size: M,
         children: (0, i.jsx)(k, {
-          className: R,
+          className: p,
           color: null != t ? t : "currentColor"
         })
       })

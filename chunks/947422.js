@@ -1,79 +1,79 @@
-a.r(s), a.d(s, {
+a.r(t), a.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var t = a(735250);
+var n = a(735250);
 a(470079);
-var n = a(481060),
+var s = a(481060),
   o = a(153124),
-  i = a(689938),
-  l = a(615714),
-  r = a(298860);
-let c = e => {
+  l = a(689938),
+  i = a(615714),
+  d = a(298860);
+let r = e => {
   let {
-    text: s,
+    text: t,
     icon: a,
     foreground: o
   } = e;
-  return (0, t.jsxs)("div", {
-    className: l.bulletContainer,
-    children: [(0, t.jsx)("div", {
-      className: l.iconContainer,
-      children: (0, t.jsx)(a, {
+  return (0, n.jsxs)("div", {
+    className: i.bulletContainer,
+    children: [(0, n.jsx)("div", {
+      className: i.iconContainer,
+      children: (0, n.jsx)(a, {
         color: null != o ? o : "currentColor",
-        className: l.bulletIcon,
+        className: i.bulletIcon,
         size: "custom",
         height: 40,
         width: 40
       })
-    }), (0, t.jsx)(n.Text, {
+    }), (0, n.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: l.bulletText,
-      children: s
+      className: i.bulletText,
+      children: t
     })]
   })
 };
 
-function d(e) {
+function c(e) {
   let {
-    transitionState: s,
+    transitionState: t,
     onClose: a,
-    ...d
+    ...c
   } = e, _ = (0, o.Dt)();
-  return (0, t.jsx)(n.ModalRoot, {
-    transitionState: s,
+  return (0, n.jsx)(s.ModalRoot, {
+    transitionState: t,
     "aria-labelledby": _,
-    ...d,
-    size: n.ModalSize.SMALL,
-    children: (0, t.jsxs)("div", {
-      className: l.content,
-      children: [(0, t.jsx)("img", {
-        src: r,
-        alt: i.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_ALT_TEXT,
-        className: l.illustration
-      }), (0, t.jsx)(n.Heading, {
+    ...c,
+    size: s.ModalSize.SMALL,
+    children: (0, n.jsxs)("div", {
+      className: i.content,
+      children: [(0, n.jsx)("img", {
+        src: d,
+        alt: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_ALT_TEXT,
+        className: i.illustration
+      }), (0, n.jsx)(s.Heading, {
         id: _,
         variant: "heading-xl/semibold",
         color: "header-primary",
-        className: l.headerTitle,
-        children: i.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_TITLE
-      }), (0, t.jsx)(c, {
-        text: i.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_1,
-        icon: n.MicrophoneSlashIcon,
-        foreground: l.red
-      }), (0, t.jsx)(c, {
-        text: i.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_2,
-        icon: n.PhoneHangUpIcon
-      }), (0, t.jsx)(c, {
-        text: i.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_3,
-        icon: n.HandRequestSpeakIcon
-      }), (0, t.jsx)(n.Button, {
-        color: n.Button.Colors.BRAND,
-        className: l.button,
+        className: i.headerTitle,
+        children: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_TITLE
+      }), (0, n.jsx)(r, {
+        text: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_1,
+        icon: s.MicrophoneSlashIcon,
+        foreground: i.red
+      }), (0, n.jsx)(r, {
+        text: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_2,
+        icon: s.PhoneHangUpIcon
+      }), (0, n.jsx)(r, {
+        text: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_3,
+        icon: s.HandRequestSpeakIcon
+      }), (0, n.jsx)(s.Button, {
+        color: s.Button.Colors.BRAND,
+        className: i.button,
         onClick: a,
-        children: i.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_ACTION
+        children: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_ACTION
       })]
     })
   })

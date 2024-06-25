@@ -1,126 +1,126 @@
 n(47120);
-var s, i, l, a, r = n(392711),
+var i, a, s, l, r = n(392711),
   o = n.n(r),
   c = n(442837),
-  u = n(570140),
-  d = n(314897),
-  E = n(699516),
-  _ = n(885110),
+  d = n(570140),
+  u = n(314897),
+  _ = n(699516),
+  E = n(885110),
   I = n(981631);
-let T = {},
-  m = {};
-
-function N(e, t) {
-  var n;
-  return (null !== (n = T[e]) && void 0 !== n ? n : {})[t]
-}
+let m = {},
+  T = {};
 
 function h(e, t) {
-  let n = N(e, t);
+  var n;
+  return (null !== (n = m[e]) && void 0 !== n ? n : {})[t]
+}
+
+function N(e, t) {
+  let n = h(e, t);
   if (null == n) return;
-  let s = T[e];
-  delete s[t], o().isEmpty(s) && delete T[e];
-  let i = m[n];
-  null != i && (i.delete(e), 0 === i.size && delete m[n])
+  let i = m[e];
+  delete i[t], o().isEmpty(i) && delete m[e];
+  let a = T[n];
+  null != a && (a.delete(e), 0 === a.size && delete T[n])
 }
 
-function C(e, t, n, s) {
-  let i = n.find(e => null != e.party && e.party.id),
-    l = null != i && null != i.party ? i.party.id : null,
-    a = N(t, e);
-  if (null == l || s === I.Skl.OFFLINE) return null != a && (h(t, e), void 0);
-  if (null != a) {
-    if (a === l) return !1;
-    h(t, e)
+function f(e, t, n, i) {
+  let a = n.find(e => null != e.party && e.party.id),
+    s = null != a && null != a.party ? a.party.id : null,
+    l = h(t, e);
+  if (null == s || i === I.Skl.OFFLINE) return null != l && (N(t, e), void 0);
+  if (null != l) {
+    if (l === s) return !1;
+    N(t, e)
   }! function(e, t, n) {
-    var s;
-    let i = T[e];
-    if (null == i && (i = T[e] = {}), i[t] = n, E.Z.isBlocked(e)) return;
-    let l = null !== (s = m[n]) && void 0 !== s ? s : new Set;
-    m[n] = l, l.add(e)
-  }(t, e, l)
+    var i;
+    let a = m[e];
+    if (null == a && (a = m[e] = {}), a[t] = n, _.Z.isBlocked(e)) return;
+    let s = null !== (i = T[n]) && void 0 !== i ? i : new Set;
+    T[n] = s, s.add(e)
+  }(t, e, s)
 }
 
-function S(e) {
+function p(e) {
   let {
     guild: t
   } = e, n = !1;
   for (let {
       user: e,
-      status: s,
-      activities: i
+      status: i,
+      activities: a
     }
-    of t.presences) !1 !== C(t.id, e.id, i, s) && (n = !0);
+    of t.presences) !1 !== f(t.id, e.id, a, i) && (n = !0);
   return n
 }
 
-function A(e, t) {
+function C(e, t) {
   let n = !1;
   return t.forEach(t => {
-    null != t && C(e, t.user.id, t.activities, t.status) && (n = !0)
+    null != t && f(e, t.user.id, t.activities, t.status) && (n = !0)
   }), n
 }
 
 function g() {
-  let e = d.default.getId(),
-    t = _.Z.getActivities();
-  return C(I.ME, e, t)
+  let e = u.default.getId(),
+    t = E.Z.getActivities();
+  return f(I.ME, e, t)
 }
-class p extends(s = c.ZP.Store) {
+class S extends(i = c.ZP.Store) {
   initialize() {
-    this.syncWith([_.Z], g), this.waitFor(_.Z, E.Z)
+    this.syncWith([E.Z], g), this.waitFor(E.Z, _.Z)
   }
   getParty(e) {
-    return null != e && null != m[e] ? m[e] : null
+    return null != e && null != T[e] ? T[e] : null
   }
   getUserParties() {
-    return T
-  }
-  getParties() {
     return m
   }
+  getParties() {
+    return T
+  }
 }
-a = "GamePartyStore", (l = "displayName") in(i = p) ? Object.defineProperty(i, l, {
-  value: a,
+l = "GamePartyStore", (s = "displayName") in(a = S) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = new p(u.Z, {
+}) : a[s] = l, t.Z = new S(d.Z, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t,
       presences: n
-    } = e, s = !1;
+    } = e, i = !1;
     for (let {
         user: e,
         status: t,
-        activities: i
+        activities: a
       }
-      of n) null != e && !1 !== C(I.ME, e.id, i, t) && (s = !0);
-    for (let e of t) !1 !== S({
+      of n) null != e && !1 !== f(I.ME, e.id, a, t) && (i = !0);
+    for (let e of t) !1 !== p({
       guild: e
-    }) && (s = !0);
-    return s
+    }) && (i = !0);
+    return i
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       parties: t,
       userParties: n
     } = e;
-    m = {}, T = {
+    T = {}, m = {
       ...n
-    }, Object.keys(t).forEach(e => m[e] = new Set(t[e]))
+    }, Object.keys(t).forEach(e => T[e] = new Set(t[e]))
   },
-  GUILD_CREATE: S,
+  GUILD_CREATE: p,
   PRESENCES_REPLACE: function(e) {
     let {
       presences: t
     } = e, n = !1;
     for (let {
         user: e,
-        activities: s
+        activities: i
       }
-      of t) null != e && !1 !== C(I.ME, e.id, s) && (n = !0);
+      of t) null != e && !1 !== f(I.ME, e.id, i) && (n = !0);
     return n
   },
   PRESENCE_UPDATES: function(e) {
@@ -131,10 +131,10 @@ a = "GamePartyStore", (l = "displayName") in(i = p) ? Object.defineProperty(i, l
       let {
         guildId: t,
         user: n,
-        status: s,
-        activities: i
+        status: i,
+        activities: a
       } = e;
-      return C(null != t ? t : I.ME, n.id, i, s)
+      return f(null != t ? t : I.ME, n.id, a, i)
     }).some(e => e)
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {
@@ -142,34 +142,34 @@ a = "GamePartyStore", (l = "displayName") in(i = p) ? Object.defineProperty(i, l
       guildId: t,
       members: n
     } = e;
-    return A(t, n.map(e => e.presence))
+    return C(t, n.map(e => e.presence))
   },
   THREAD_MEMBERS_UPDATE: function(e) {
     let {
       guildId: t,
       addedMembers: n
     } = e;
-    return null != n && A(t, n.map(e => e.presence))
+    return null != n && C(t, n.map(e => e.presence))
   },
   RELATIONSHIP_ADD: function(e) {
     let {
       relationship: t
     } = e;
-    if (!E.Z.isBlocked(t.id)) return !1;
-    let n = T[t.id];
+    if (!_.Z.isBlocked(t.id)) return !1;
+    let n = m[t.id];
     if (null == n) return !1;
     for (let e of o().values(n)) {
-      let n = m[e];
+      let n = T[e];
       null != n && n.delete(t.id)
     }
   },
   RELATIONSHIP_REMOVE: function(e) {
     let {
       relationship: t
-    } = e, n = T[t.id];
+    } = e, n = m[t.id];
     if (null == n) return !1;
     for (let e of o().values(n)) {
-      let n = m[e];
+      let n = T[e];
       null != n && n.add(t.id)
     }
   }

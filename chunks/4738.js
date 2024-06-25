@@ -69,10 +69,10 @@ function h(e) {
     disablePaginationGap: u,
     onPageChange: _,
     hideMaxPage: h = !1,
-    className: S
-  } = e, f = Math.ceil(n / r);
+    className: f
+  } = e, S = Math.ceil(n / r);
   return (0, i.jsx)(d.W, {
-    totalPageCount: f,
+    totalPageCount: S,
     selectedPage: t,
     maxVisiblePages: s,
     hideMaxPage: h,
@@ -85,7 +85,7 @@ function h(e) {
         hasMultiplePages: n
       } = e;
       return n ? (0, i.jsx)("div", {
-        className: o()(I.pageControlContainer, S),
+        className: o()(I.pageControlContainer, f),
         children: (0, i.jsx)("nav", {
           className: I.pageControl,
           children: t.map(e => {
@@ -135,7 +135,7 @@ function h(e) {
                 ;
                 return n = e, (0, i.jsx)(T, {
                   page: n,
-                  totalPageCount: f,
+                  totalPageCount: S,
                   disabled: !!u,
                   onPageChange: _
                 }, n.key);

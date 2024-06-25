@@ -7,7 +7,7 @@ n.d(t, {
     return m
   },
   Bg: function() {
-    return S
+    return f
   },
   D5: function() {
     return _
@@ -22,7 +22,7 @@ n.d(t, {
     return I
   },
   HW: function() {
-    return R
+    return p
   },
   Hp: function() {
     return O
@@ -46,16 +46,16 @@ n.d(t, {
     return C
   },
   WM: function() {
-    return f
+    return S
   },
   X9: function() {
     return u
   },
   XH: function() {
-    return p
+    return R
   },
   _U: function() {
-    return B
+    return x
   },
   dJ: function() {
     return l
@@ -76,16 +76,16 @@ n.d(t, {
     return U
   },
   mg: function() {
-    return A
+    return N
   },
   nU: function() {
-    return N
+    return A
   },
   wD: function() {
     return D
   },
   xd: function() {
-    return x
+    return B
   },
   xx: function() {
     return w
@@ -101,14 +101,14 @@ let E = "alt+c",
   I = 6 * d.Z.Millis.SECOND,
   T = new c.Z("Clips"),
   h = e => "Discord_Clip_".concat(e, ".mp4"),
-  S = 3,
-  f = 1,
-  N = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-  A = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+  f = 3,
+  S = 1,
+  A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+  N = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   m = /(Apple M[12].*)/,
   O = .1,
-  R = 25,
-  p = 0,
+  p = 25,
+  R = 0,
   g = 200,
   C = "clips-edit",
   v = "clips-gallery",
@@ -121,6 +121,6 @@ let E = "alt+c",
   b = 30,
   G = 10,
   w = 14 * d.Z.Millis.DAY,
-  B = 5,
   x = 5,
+  B = 5,
   k = 1

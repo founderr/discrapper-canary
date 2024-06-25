@@ -6,33 +6,33 @@ n.d(t, {
     return Z
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(920906),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(920906),
   o = n(143927),
   c = n(597312),
-  u = n(481060),
-  d = n(393238),
-  E = n(410030),
-  h = n(963202),
-  _ = n(353093),
+  d = n(481060),
+  u = n(393238),
+  _ = n(410030),
+  E = n(963202),
+  h = n(353093),
   I = n(702646),
   m = n(207796),
-  T = n(497189),
+  p = n(497189),
   g = n(304231),
-  p = n(895068),
-  N = n(490610),
-  S = n(981631),
-  C = n(689938),
-  A = n(698829);
-let f = (e, t) => {
+  T = n(895068),
+  C = n(490610),
+  f = n(981631),
+  S = n(689938),
+  N = n(698829);
+let A = (e, t) => {
   switch (e) {
     case m.hz.GENSHIN:
-      return t === S.BRd.DARK ? A.genshinUpsellBackgroundImageDark : A.genshinUpsellBackgroundImageLight;
+      return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
     case m.hz.VALORANT:
-      return t === S.BRd.DARK ? A.valorantUpsellBackgroundImageDark : A.valorantUpsellBackgroundImageLight
+      return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -41,85 +41,85 @@ function Z() {
     t = (0, m.GN)(e => e.userUpsellScreen, o.Z),
     n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
     {
-      ref: l,
+      ref: a,
       width: c
-    } = (0, d.Z)(),
-    [h, _] = i.useState(0),
-    T = (0, r.useSpring)({
+    } = (0, u.Z)(),
+    [E, h] = s.useState(0),
+    p = (0, l.useSpring)({
       from: {
         scrollHeight: 0
       },
       to: {
-        scrollHeight: h
+        scrollHeight: E
       }
     }),
-    N = (0, E.ZP)(),
-    C = i.useMemo(() => f(e, N), [e, N]),
-    Z = i.useCallback(e => {
-      _(e.currentTarget.scrollTop)
-    }, [_]),
-    L = i.useMemo(() => {
+    C = (0, _.ZP)(),
+    S = s.useMemo(() => A(e, C), [e, C]),
+    Z = s.useCallback(e => {
+      h(e.currentTarget.scrollTop)
+    }, [h]),
+    L = s.useMemo(() => {
       switch (e) {
         case m.hz.GENSHIN:
-          return N === S.BRd.DARK ? A.genshinOnboardingBackgroundImageDark : A.genshinOnboardingBackgroundImageLight;
+          return C === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
         case m.hz.VALORANT:
-          return N === S.BRd.DARK ? A.valorantOnboardingBackgroundImageDark : A.valorantOnboardingBackgroundImageLight
+          return C === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight
       }
-    }, [e, N]),
-    O = (0, u.useToken)(u.tokens.colors.BG_MOD_STRONG);
+    }, [e, C]),
+    v = (0, d.useToken)(d.tokens.colors.BG_MOD_STRONG);
   switch (t) {
     case m.o2.USER_UPSELL:
-      return (0, s.jsxs)("div", {
-        ref: l,
-        className: A.container,
-        children: [(0, s.jsxs)("div", {
-          className: A.toolbar,
+      return (0, i.jsxs)("div", {
+        ref: a,
+        className: N.container,
+        children: [(0, i.jsxs)("div", {
+          className: N.toolbar,
           style: {
             width: c
           },
-          children: [(0, s.jsx)(r.animated.div, {
-            className: A.toolbarBackground,
+          children: [(0, i.jsx)(l.animated.div, {
+            className: N.toolbarBackground,
             style: {
               width: c,
-              opacity: T.scrollHeight.to([100, 364], [0, 1]),
-              borderBottom: T.scrollHeight.to([100, 364], [0, 1]).to(e => "1px solid ".concat(O.hex({
+              opacity: p.scrollHeight.to([100, 364], [0, 1]),
+              borderBottom: p.scrollHeight.to([100, 364], [0, 1]).to(e => "1px solid ".concat(v.hex({
                 opacity: e
               })))
             }
-          }), (0, s.jsx)(I.Z, {})]
-        }), (0, s.jsxs)("div", {
-          className: A.upsellContainer,
-          children: [(0, s.jsxs)(r.animated.div, {
-            className: A.backgroundImageContainer,
+          }), (0, i.jsx)(I.Z, {})]
+        }), (0, i.jsxs)("div", {
+          className: N.upsellContainer,
+          children: [(0, i.jsxs)(l.animated.div, {
+            className: N.backgroundImageContainer,
             style: {
-              opacity: T.scrollHeight.to([100, 364], [1, 0])
+              opacity: p.scrollHeight.to([100, 364], [1, 0])
             },
-            children: [(0, s.jsx)("div", {
-              className: C
-            }), (0, s.jsx)("div", {
-              className: A.backgroundImageBlur
+            children: [(0, i.jsx)("div", {
+              className: S
+            }), (0, i.jsx)("div", {
+              className: N.backgroundImageBlur
             })]
-          }), (0, s.jsx)("div", {
-            className: a()(A.backgroundImageContent, A.userUpsell),
-            children: (0, s.jsx)(p.ZP, {
+          }), (0, i.jsx)("div", {
+            className: r()(N.backgroundImageContent, N.userUpsell),
+            children: (0, i.jsx)(T.ZP, {
               onScroll: Z,
               width: null != c ? c : 0,
               isAnimating: !1,
-              variant: p.Bj.UPSELL
+              variant: T.Bj.UPSELL
             })
           })]
         })]
       });
     case m.o2.USER_ONBOARDING:
-      return (0, s.jsx)("div", {
-        className: A.container,
-        children: (0, s.jsxs)("div", {
-          className: a()(L, A.userOnboarding),
-          children: [(0, s.jsx)("div", {
-            className: A.backgroundImageBlur
-          }), (0, s.jsx)("div", {
-            className: A.backgroundImageContent,
-            children: (0, s.jsx)(g.Z, {
+      return (0, i.jsx)("div", {
+        className: N.container,
+        children: (0, i.jsxs)("div", {
+          className: r()(L, N.userOnboarding),
+          children: [(0, i.jsx)("div", {
+            className: N.backgroundImageBlur
+          }), (0, i.jsx)("div", {
+            className: N.backgroundImageContent,
+            children: (0, i.jsx)(g.Z, {
               selectedGame: e,
               setScreen: n
             })
@@ -134,38 +134,38 @@ function L() {
     t = (0, m.GN)(e => e.game, o.Z),
     {
       enableApplication: n
-    } = (0, h.Fg)("ClanDiscoveryAdminContainer"),
+    } = (0, E.Fg)("ClanDiscoveryAdminContainer"),
     {
-      guilds: l
-    } = (0, h.C3)({
+      guilds: a
+    } = (0, E.C3)({
       location: "ClanDiscoveryAdminContainer",
       includeConverted: !0
     }),
-    r = i.useMemo(() => l.filter(e => !(0, _.EJ)(e)), [l]),
-    u = (0, E.ZP)(),
-    d = i.useMemo(() => f(t, u), [t, u]),
+    l = s.useMemo(() => a.filter(e => !(0, h.EJ)(e)), [a]),
+    d = (0, _.ZP)(),
+    u = s.useMemo(() => A(t, d), [t, d]),
     I = !e && n;
-  return 0 === l.length ? null : (0, s.jsx)("div", {
-    className: A.container,
-    children: (0, s.jsxs)(c.u2, {
-      className: A.upsellScroller,
+  return 0 === a.length ? null : (0, i.jsx)("div", {
+    className: N.container,
+    children: (0, i.jsxs)(c.u2, {
+      className: N.upsellScroller,
       fade: !0,
-      children: [(0, s.jsxs)("div", {
-        className: a()(d, A.adminUpsell),
-        children: [(0, s.jsx)("div", {
-          className: A.backgroundImageBlur
-        }), (0, s.jsx)("div", {
-          className: A.backgroundImageContent,
-          children: (0, s.jsx)(T.Z, {
+      children: [(0, i.jsxs)("div", {
+        className: r()(u, N.adminUpsell),
+        children: [(0, i.jsx)("div", {
+          className: N.backgroundImageBlur
+        }), (0, i.jsx)("div", {
+          className: N.backgroundImageContent,
+          children: (0, i.jsx)(p.Z, {
             isBrowseButtonVisible: I,
             selectedGame: t,
-            eligibleGuilds: r,
-            eligibleGuildsIncludingConverted: l
+            eligibleGuilds: l,
+            eligibleGuildsIncludingConverted: a
           })
         })]
-      }), (0, s.jsx)(N.Z, {
-        title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-        subtitle: I ? C.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+      }), (0, i.jsx)(C.Z, {
+        title: S.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+        subtitle: I ? S.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
       })]
     })
   })

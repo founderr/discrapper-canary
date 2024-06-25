@@ -1,13 +1,13 @@
 t.d(n, {
   Z: function() {
-    return l
+    return o
   }
 });
 var i = t(735250);
 t(470079);
 var r = t(113039);
 
-function l(e, n) {
+function o(e, n) {
   let {
     message: t
   } = e;

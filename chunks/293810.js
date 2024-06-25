@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   C5: function() {
-    return S
+    return f
   },
   DN: function() {
     return h
   },
   NT: function() {
-    return f
+    return S
   },
   PY: function() {
     return _
@@ -28,7 +28,7 @@ n.d(t, {
     return I
   },
   iv: function() {
-    return N
+    return A
   }
 });
 var i, r, s, o, a, l, u, _, c = n(474936),
@@ -45,9 +45,9 @@ let h = [{
   interval_count: 7
 }];
 (o = _ || (_ = {}))[o.NONE = 0] = "NONE", o[o.IN_SUBSCRIPTION_SERVER = 1] = "IN_SUBSCRIPTION_SERVER", o[o.SUBSCRIBED = 2] = "SUBSCRIBED";
-let S = "https://".concat(d.$R, "/creators"),
-  f = 90,
-  N = Object.freeze({
+let f = "https://".concat(d.$R, "/creators"),
+  S = 90,
+  A = Object.freeze({
     PROMO_PAGE_GUIDE: "https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature",
     CASE_STUDIES: "https://discord.com/creator-portal/learn-from-creators?tab=creator-case-studies",
     SUBSCRIPTION_OFFERING_GUIDE: "https://discord.com/creators/offering-inspiration-",

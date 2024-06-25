@@ -7,7 +7,7 @@ n.d(t, {
     return h
   },
   Tu: function() {
-    return A
+    return N
   },
   am: function() {
     return function e(t, n, i) {
@@ -24,16 +24,16 @@ n.d(t, {
     return I
   },
   hY: function() {
-    return S
+    return f
   },
   k1: function() {
-    return N
+    return A
   },
   rC: function() {
     return E
   },
   wO: function() {
-    return f
+    return S
   }
 }), n(177593);
 var i = n(544891),
@@ -118,7 +118,7 @@ function h(e, t) {
   }), t))
 }
 
-function S(e, t, n, i) {
+function f(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
     o = _.C7.PLAYER_OPEN(i, n, !1),
     {
@@ -153,7 +153,7 @@ function S(e, t, n, i) {
   }), e))
 }
 
-function f(e, t) {
+function S(e, t) {
   return E.put(e, t, {
     url: _.C7.PLAYER_PAUSE
   }).then(e => (s.Z.dispatch({
@@ -161,7 +161,7 @@ function f(e, t) {
   }), e))
 }
 
-function N() {
+function A() {
   if (!u.Z.isProtocolRegistered())(0, l.isDesktop)() && a.Z.isProtocolRegistered(_.M5).then(e => {
     s.Z.dispatch({
       type: "SPOTIFY_SET_PROTOCOL_REGISTERED",
@@ -170,7 +170,7 @@ function N() {
   })
 }
 
-function A(e, t) {
+function N(e, t) {
   s.Z.dispatch({
     type: "SPOTIFY_SET_ACTIVE_DEVICE",
     accountId: e,

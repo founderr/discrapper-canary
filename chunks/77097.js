@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(259580),
   T = n(785717),
   h = n(621853),
-  S = n(335191),
-  f = n(171368),
-  N = n(659101),
-  A = n(228168),
+  f = n(335191),
+  S = n(171368),
+  A = n(659101),
+  N = n(228168),
   m = n(981631),
   O = n(689938),
-  R = n(19320),
-  p = n(546136);
+  p = n(19320),
+  R = n(546136);
 
 function g(e) {
   var t, n;
@@ -45,10 +45,10 @@ function g(e) {
       roleId: b
     } = (0, T.KZ)(),
     G = (0, c.Z)(L, C, v),
-    [w, B] = r.useState(new Set),
-    x = (0, a.e7)([h.Z], () => h.Z.getUserProfile(C)),
-    k = null !== (t = null == x ? void 0 : x.connectedAccounts) && void 0 !== t ? t : [],
-    V = null !== (n = null == x ? void 0 : x.applicationRoleConnections) && void 0 !== n ? n : [],
+    [w, x] = r.useState(new Set),
+    B = (0, a.e7)([h.Z], () => h.Z.getUserProfile(C)),
+    k = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
+    V = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
     Z = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation),
     H = (0, a.e7)([d.default], () => d.default.locale);
   if (r.useEffect(() => {
@@ -59,12 +59,12 @@ function g(e) {
               connection_type: e
             }
             of n) t.add(e);
-        B(t)
+        x(t)
       })
     }, [null == L ? void 0 : L.id, null == G ? void 0 : G.id]), Z || null == G) return null;
   let F = Array.from(w).map(e => {
     let t = k.find(t => t.type === e);
-    return null == t ? null : (0, i.jsx)(S.E3, {
+    return null == t ? null : (0, i.jsx)(f.E3, {
       connectedAccount: t,
       theme: D,
       locale: H,
@@ -74,50 +74,50 @@ function g(e) {
   return (F.length > 0 && (s = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: p.title,
+      className: R.title,
       children: O.Z.Messages.CONNECTIONS
     }), (0, i.jsxs)("div", {
-      className: o()(R.connectionsContainer, P),
+      className: o()(p.connectionsContainer, P),
       children: [F, (0, i.jsxs)(l.Clickable, {
         onClick: function() {
-          (0, f.openUserProfileModal)({
+          (0, S.openUserProfileModal)({
             userId: C,
             channelId: v,
             guildId: null == L ? void 0 : L.id,
             messageId: U,
             roleId: b,
-            section: A.oh.USER_INFO_CONNECTIONS,
+            section: N.oh.USER_INFO_CONNECTIONS,
             sourceAnalyticsLocations: y,
             analyticsLocation: {
               section: m.jXE.PROFILE_POPOUT
             }
           }), null == M || M()
         },
-        className: R.connections,
+        className: p.connections,
         children: [(0, i.jsx)(l.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
-          className: R.connectionsText,
+          className: p.connectionsText,
           children: O.Z.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
         }), (0, i.jsx)(I.Z, {
           direction: I.Z.Directions.RIGHT,
-          className: R.connectionsCaret
+          className: p.connectionsCaret
         })]
       })]
     })]
   })), V.length > 0 && (g = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: p.title,
+      className: R.title,
       children: O.Z.Messages.APPS
     }), (0, i.jsx)("div", {
-      className: o()(R.connectionsContainer, P),
-      children: V.map(e => (0, i.jsx)(S.tH, {
+      className: o()(p.connectionsContainer, P),
+      children: V.map(e => (0, i.jsx)(f.tH, {
         applicationRoleConnection: e,
         locale: H
       }, e.application.id))
     })]
-  })), null == s && null == g) ? null : (0, i.jsxs)(N.Z, {
+  })), null == s && null == g) ? null : (0, i.jsxs)(A.Z, {
     children: [g, s]
   })
 }

@@ -4,7 +4,7 @@ n.d(t, {
     return i
   },
   cm: function() {
-    return N
+    return A
   }
 }), n(653041), n(47120);
 var i, r, s = n(498607),
@@ -32,16 +32,16 @@ function h(e) {
   return e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t
 }
 
-function S(e) {
+function f(e) {
   return e.sort
 }
 
-function f() {
-  return new a.h(h, S)
+function S() {
+  return new a.h(h, f)
 }(r = i || (i = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", r.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", r.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
-class N {
+class A {
   reset() {
-    this._membersMap.clear(), this._membersMap = f(), this.resetNewMemberTimestamp()
+    this._membersMap.clear(), this._membersMap = S(), this.resetNewMemberTimestamp()
   }
   resetNewMemberTimestamp() {
     this.newMemberTimestamp = Date.now()
@@ -136,6 +136,6 @@ class N {
     return this._membersMap.version
   }
   constructor(e) {
-    I(this, "guildId", void 0), I(this, "_membersMap", void 0), I(this, "newMemberTimestamp", Date.now()), this.guildId = e, this._membersMap = f()
+    I(this, "guildId", void 0), I(this, "_membersMap", void 0), I(this, "newMemberTimestamp", Date.now()), this.guildId = e, this._membersMap = S()
   }
 }

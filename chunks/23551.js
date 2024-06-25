@@ -19,9 +19,9 @@ t.Z = e => {
     className: r,
     innerClassName: T,
     onConnect: h
-  } = e, S = (0, l.ZP)(), f = u.Z.get((0, _.rR)(n));
+  } = e, f = (0, l.ZP)(), S = u.Z.get((0, _.rR)(n));
   return (0, i.jsx)(a.Tooltip, {
-    text: f.name,
+    text: S.name,
     children: e => {
       let {
         onMouseEnter: l,
@@ -37,7 +37,7 @@ t.Z = e => {
             type: "button",
             disabled: t,
             style: {
-              backgroundImage: "url('".concat((0, o.wj)(S) ? f.icon.darkSVG : f.icon.lightSVG, "')")
+              backgroundImage: "url('".concat((0, o.wj)(f) ? S.icon.darkSVG : S.icon.lightSVG, "')")
             },
             onClick: null != h ? h : () => (function(e) {
               let t = u.Z.get(e);
@@ -50,7 +50,7 @@ t.Z = e => {
                 platform_type: t.type
               })
             })(n),
-            "aria-label": f.name
+            "aria-label": S.name
           })
         })
       })

@@ -1,41 +1,41 @@
-var i, a = n(442837),
-  o = n(570140);
+var n, a = i(442837),
+  o = i(570140);
 
-function s(e, t, n) {
+function r(e, t, i) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: i,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = i, e
 }
-let r = {
+let s = {
   canPlayWowMoment: !1,
   isFetchingWowMomentMedia: !1,
   wowMomentWumpusMediaUrl: null
 };
-class u extends(i = a.ZP.PersistedStore) {
+class c extends(n = a.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (r = e), r.canPlayWowMoment = !1, r.isFetchingWowMomentMedia = !1, r.wowMomentWumpusMediaUrl = null
+    null != e && (s = e), s.canPlayWowMoment = !1, s.isFetchingWowMomentMedia = !1, s.wowMomentWumpusMediaUrl = null
   }
   getState() {
-    return r
+    return s
   }
   get canPlayWowMoment() {
-    return r.canPlayWowMoment
+    return s.canPlayWowMoment
   }
   get isFetchingWowMomentMedia() {
-    return r.isFetchingWowMomentMedia
+    return s.isFetchingWowMomentMedia
   }
   get wowMomentWumpusMedia() {
-    return r.wowMomentWumpusMediaUrl
+    return s.wowMomentWumpusMediaUrl
   }
 }
-s(u, "displayName", "PurchasedItemsFestivityStore"), s(u, "persistKey", "PurchasedItemsFestivityStore"), s(u, "migrations", [e => ({
+r(c, "displayName", "PurchasedItemsFestivityStore"), r(c, "persistKey", "PurchasedItemsFestivityStore"), r(c, "migrations", [e => ({
   ...e
-})]), t.Z = new u(o.Z, {
+})]), t.Z = new c(o.Z, {
   LOGOUT: function() {
-    r = {
+    s = {
       canPlayWowMoment: !1,
       isFetchingWowMomentMedia: !1,
       wowMomentWumpusMediaUrl: null
@@ -45,18 +45,18 @@ s(u, "displayName", "PurchasedItemsFestivityStore"), s(u, "persistKey", "Purchas
     let {
       value: t
     } = e;
-    r.canPlayWowMoment = t
+    s.canPlayWowMoment = t
   },
   PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function(e) {
     let {
       value: t
     } = e;
-    r.isFetchingWowMomentMedia = t
+    s.isFetchingWowMomentMedia = t
   },
   PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function(e) {
     let {
       wumpusMedia: t
     } = e;
-    r.wowMomentWumpusMediaUrl = t, r.isFetchingWowMomentMedia = !1
+    s.wowMomentWumpusMediaUrl = t, s.isFetchingWowMomentMedia = !1
   }
 })

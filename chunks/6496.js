@@ -4,16 +4,16 @@ n.d(t, {
     return O
   },
   WW: function() {
-    return A
+    return N
   },
   bE: function() {
-    return p
+    return R
   },
   n4: function() {
     return v
   },
   q8: function() {
-    return R
+    return p
   },
   t$: function() {
     return m
@@ -36,20 +36,20 @@ var i = n(683860),
   I = n(559241),
   T = n(474387),
   h = n(702225),
-  S = n(981631),
-  f = n(176505),
-  N = n(124368);
+  f = n(981631),
+  S = n(176505),
+  A = n(124368);
 
-function A(e) {
+function N(e) {
   return h.Z.getForumChannelSessionId(e)
 }
 
 function m(e) {
   switch (e) {
     case i.z.CREATION_DATE:
-      return N.SX.CREATION_DATE;
+      return A.SX.CREATION_DATE;
     case i.z.LATEST_ACTIVITY:
-      return N.SX.LATEST_ACTIVITY;
+      return A.SX.LATEST_ACTIVITY;
     default:
       throw Error("Unexpected sort order ".concat(e))
   }
@@ -59,7 +59,7 @@ function O(e) {
   return c.Z.getUploads(e, u.d.FirstThreadMessage).length
 }
 
-function R(e) {
+function p(e) {
   var t, n;
   let i = l.Z.getChannel(e);
   if (null == i) return [];
@@ -71,7 +71,7 @@ function R(e) {
   return Array.from(o).filter(e => a.has(e))
 }
 
-function p(e, t) {
+function R(e, t) {
   return Object.keys(r.Z.getThreadsForParent(e, t)).length
 }
 
@@ -94,11 +94,11 @@ function C(e) {
     forum_channel_default_emoji_reaction_id: null === (t = a.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
     forum_channel_default_emoji_reaction_name: null === (n = a.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
     forum_channel_available_tag_ids: null !== (r = null === (i = a.availableTags) || void 0 === i ? void 0 : i.map(e => e.id)) && void 0 !== r ? r : [],
-    forum_channel_tag_required: a.hasFlag(f.zZ.REQUIRE_TAG),
-    forum_channel_can_create_post: _.Z.can(S.Plq.SEND_MESSAGES, a),
+    forum_channel_tag_required: a.hasFlag(S.zZ.REQUIRE_TAG),
+    forum_channel_can_create_post: _.Z.can(f.Plq.SEND_MESSAGES, a),
     forum_channel_filter_tag_ids: I.Z.getFilterTagIdsAnalytics(),
     forum_channel_sort_order: I.Z.getSortOrderAnalytics(a.id),
-    forum_channel_session_id: null != o ? o : A(a.id),
+    forum_channel_session_id: null != o ? o : N(a.id),
     forum_channel_layout: I.Z.getLayoutAnalytics(a.id),
     forum_channel_default_sort_order: a.defaultSortOrder,
     forum_channel_default_layout: a.defaultForumLayout
@@ -112,10 +112,10 @@ function v(e) {
     sessionId: I
   } = e, h = l.Z.getChannel(E);
   if (null == h || !h.isForumPost()) return null;
-  let S = l.Z.getChannel(h.parent_id);
-  return null != S && S.isForumLikeChannel() ? {
+  let f = l.Z.getChannel(h.parent_id);
+  return null != f && f.isForumLikeChannel() ? {
     ...C({
-      channelId: S.id,
+      channelId: f.id,
       sessionId: I
     }),
     thread_approximate_member_count: o.Z.getMemberCount(E),
@@ -144,7 +144,7 @@ function v(e) {
       let o = new Set(s.map(e => e.id));
       return null !== (n = null === (t = i.appliedTags) || void 0 === t ? void 0 : t.filter(e => o.has(e))) && void 0 !== n ? n : []
     }(h.id),
-    forum_post_is_pinned: h.hasFlag(f.zZ.PINNED),
+    forum_post_is_pinned: h.hasFlag(S.zZ.PINNED),
     forum_post_is_new: null === (r = T.Z.getReadStateSnapshotAnalytics(h.id)) || void 0 === r ? void 0 : r.isNew,
     forum_post_is_unread: null === (u = T.Z.getReadStateSnapshotAnalytics(h.id)) || void 0 === u ? void 0 : u.hasUnreads,
     forum_post_is_following: s.Z.hasJoined(h.id),

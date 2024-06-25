@@ -1,132 +1,132 @@
 n.d(t, {
   Z: function() {
-    return M
+    return O
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  s = n(442837),
+  l = n(481060),
   r = n(2052),
   o = n(317381),
   c = n(638880),
-  u = n(146936),
-  d = n(527805),
-  E = n(952561),
-  _ = n(513202),
+  d = n(146936),
+  u = n(527805),
+  _ = n(952561),
+  E = n(513202),
   I = n(100527),
-  T = n(906732),
-  m = n(973616),
-  N = n(314897),
-  h = n(592125),
-  C = n(158776),
-  S = n(594174),
-  A = n(602623),
+  m = n(906732),
+  T = n(973616),
+  h = n(314897),
+  N = n(592125),
+  f = n(158776),
+  p = n(594174),
+  C = n(602623),
   g = n(823379),
-  p = n(226378),
-  f = n(701488),
+  S = n(226378),
+  A = n(701488),
   R = n(689938),
-  O = n(656366);
+  x = n(656366);
 
-function M(e) {
+function O(e) {
   var t;
   let {
     application: n,
-    channelId: M,
-    guildId: x
-  } = e, [v, L] = i.useState(!1), {
+    channelId: O,
+    guildId: M
+  } = e, [v, L] = a.useState(!1), {
     analyticsLocations: Z
-  } = (0, T.ZP)(I.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), D = (0, E.Z)(), j = (0, l.e7)([h.Z], () => h.Z.getChannel(M)), U = (null == j ? void 0 : null === (t = j.isThread) || void 0 === t ? void 0 : t.call(j)) ? null == j ? void 0 : j.parent_id : M, b = (0, l.e7)([N.default], () => N.default.getId()), {
+  } = (0, m.ZP)(I.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([h.default], () => h.default.getId()), {
     embeddedActivity: y,
     currentEmbeddedActivity: B
-  } = (0, l.cj)([o.ZP], () => ({
-    embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != U ? U : "").find(e => e.applicationId === n.id),
+  } = (0, s.cj)([o.ZP], () => ({
+    embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != j ? j : "").find(e => e.applicationId === n.id),
     currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
-  })), k = (0, l.Wu)([S.default], () => {
+  })), k = (0, s.Wu)([p.default], () => {
     var e;
-    return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => S.default.getUser(e)).filter(g.lm)
-  }), G = (0, l.e7)([C.Z], () => {
+    return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm)
+  }), G = (0, s.e7)([f.Z], () => {
     var e;
     let t = null == y ? void 0 : y.userIds.values().next().value;
-    return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
-  }), F = i.useMemo(() => {
-    let e = new m.Z(n);
-    return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = f.wT), e
-  }, [n]), V = (0, d.s5)({
-    userId: b,
-    channelId: M,
+    return null == t ? null : null === (e = f.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
+  }), F = a.useMemo(() => {
+    let e = new T.Z(n);
+    return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e
+  }, [n]), w = (0, u.s5)({
+    userId: U,
+    channelId: O,
     application: F
-  }), w = null == y, H = (0, p.NL)({
+  }), V = null == y, H = (0, S.NL)({
     embeddedActivity: y,
-    joinability: V,
+    joinability: w,
     currentEmbeddedActivity: B,
-    channel: j
+    channel: D
   }), Y = async () => {
     L(!0);
     try {
-      w ? await (0, u.Z)({
+      V ? await (0, d.Z)({
         targetApplicationId: n.id,
-        currentEmbeddedApplication: D,
-        channelId: M,
-        guildId: x,
+        currentEmbeddedApplication: b,
+        channelId: O,
+        guildId: M,
         locationObject: P.location,
-        embeddedActivitiesManager: _.Z,
+        embeddedActivitiesManager: E.Z,
         analyticsLocations: Z
       }) : await (0, c.Z)({
         applicationId: y.applicationId,
-        currentEmbeddedApplication: D,
-        activityChannelId: M,
+        currentEmbeddedApplication: b,
+        activityChannelId: O,
         locationObject: P.location,
-        embeddedActivitiesManager: _.Z,
+        embeddedActivitiesManager: E.Z,
         analyticsLocations: Z
       })
     } finally {
       L(!1)
     }
   }, W = H.disabled ? R.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
-  return (0, s.jsx)("div", {
-    className: O.container,
-    children: (0, s.jsxs)("div", {
-      className: O.contentContainer,
-      children: [(0, s.jsx)("div", {
-        className: O.headerContainer,
-        children: w ? (0, s.jsx)("div", {
-          className: O.__invalid_endedNote,
-          children: (0, s.jsx)(a.Text, {
+  return (0, i.jsx)("div", {
+    className: x.container,
+    children: (0, i.jsxs)("div", {
+      className: x.contentContainer,
+      children: [(0, i.jsx)("div", {
+        className: x.headerContainer,
+        children: V ? (0, i.jsx)("div", {
+          className: x.__invalid_endedNote,
+          children: (0, i.jsx)(l.Text, {
             variant: "text-md/medium",
             children: W
           })
-        }) : (0, s.jsx)(a.Text, {
+        }) : (0, i.jsx)(l.Text, {
           variant: "text-md/medium",
           lineClamp: 1,
           color: "text-normal",
           children: null != G ? G : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })
-      }), (0, s.jsxs)("div", {
-        className: O.footerContainer,
-        children: [(0, s.jsx)(a.Tooltip, {
+      }), (0, i.jsxs)("div", {
+        className: x.footerContainer,
+        children: [(0, i.jsx)(l.Tooltip, {
           text: H.tooltip,
           children: e => {
             let {
               onClick: t,
               ...n
             } = e;
-            return (0, i.createElement)(a.Button, {
+            return (0, a.createElement)(l.Button, {
               ...n,
               key: "".concat(H.isJoinAction),
               onClick: () => {
                 Y(), null == t || t()
               },
-              color: H.isJoinAction ? a.ButtonColors.GREEN : a.ButtonColors.PRIMARY,
+              color: H.isJoinAction ? l.ButtonColors.GREEN : l.ButtonColors.PRIMARY,
               submitting: v,
               disabled: H.disabled
             }, H.text)
           }
-        }), !w && (0, s.jsx)(A.Z, {
-          guildId: x,
+        }), !V && (0, i.jsx)(C.Z, {
+          guildId: M,
           users: k,
           max: 4,
-          size: A.u.SIZE_32
+          size: C.u.SIZE_32
         })]
       })]
     })

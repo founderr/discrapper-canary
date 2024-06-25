@@ -1,87 +1,87 @@
 t.r(n), t.d(n, {
   default: function() {
-    return T
+    return _
   }
 });
-var i = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(481060),
+var i = t(481060),
   s = t(864762),
   r = t(428681),
-  C = t(42338),
-  l = t(569932),
+  l = t(42338),
+  c = t(569932),
   a = t(555638),
-  d = t(42011),
-  c = t(798930),
+  C = t(42011),
+  d = t(798930),
   u = t(985571);
 
-function T(e) {
+function _(e) {
   let {
     transitionState: n,
     onClose: t,
-    analyticsLocation: T,
-    platformType: N
+    analyticsLocation: _,
+    platformType: T
   } = e, {
-    slide: _,
-    gotoNext: A,
-    gotoError: S,
+    slide: N,
+    gotoNext: P,
+    gotoError: A,
     handleWaitingForConnection: f,
     handleAuthToken: I,
     expectedCallbackState: h,
-    callbackData: O
-  } = (0, s.k)(T, N);
-  return (0, i.jsx)(o.ModalRoot, {
+    callbackData: p
+  } = (0, s.k)(_, T);
+  return (0, o.jsx)(i.ModalRoot, {
     className: u.modal,
     transitionState: n,
     disableTrack: !0,
-    children: (0, i.jsxs)(o.Slides, {
-      activeSlide: _,
+    children: (0, o.jsxs)(i.Slides, {
+      activeSlide: N,
       width: 408,
-      children: [(0, i.jsx)(o.Slide, {
-        id: c.O.LANDING,
-        children: (0, i.jsx)(l.A, {
-          platformType: N,
-          onContinue: A,
+      children: [(0, o.jsx)(i.Slide, {
+        id: d.O.LANDING,
+        children: (0, o.jsx)(c.A, {
+          platformType: T,
+          onContinue: P,
           onClose: t
         })
-      }), (0, i.jsx)(o.Slide, {
-        id: c.O.PRE_CONNECT,
-        children: (0, i.jsx)(a.A, {
-          platformType: N,
+      }), (0, o.jsx)(i.Slide, {
+        id: d.O.PRE_CONNECT,
+        children: (0, o.jsx)(a.A, {
+          platformType: T,
           isWaitingForConnection: !1,
           onWaitingForConnection: f,
           onAuthToken: I,
-          onError: S,
+          onError: A,
           onClose: t
         })
-      }), (0, i.jsx)(o.Slide, {
-        id: c.O.PRE_CONNECT_WAITING,
-        children: (0, i.jsx)(a.A, {
-          platformType: N,
+      }), (0, o.jsx)(i.Slide, {
+        id: d.O.PRE_CONNECT_WAITING,
+        children: (0, o.jsx)(a.A, {
+          platformType: T,
           isWaitingForConnection: !0,
           expectedCallbackState: h,
           onAuthToken: I,
-          onError: S,
+          onError: A,
           onClose: t
         })
-      }), (0, i.jsx)(o.Slide, {
-        id: c.O.DISCORD_CONSENT,
-        children: (0, i.jsx)(r.E, {
-          platformType: N,
-          authToken: O,
-          onContinue: A,
-          onError: S,
+      }), (0, o.jsx)(i.Slide, {
+        id: d.O.DISCORD_CONSENT,
+        children: (0, o.jsx)(r.E, {
+          platformType: T,
+          authToken: p,
+          onContinue: P,
+          onError: A,
           onClose: t
         })
-      }), (0, i.jsx)(o.Slide, {
-        id: c.O.ERROR,
-        children: (0, i.jsx)(C.X, {
-          onContinue: A,
+      }), (0, o.jsx)(i.Slide, {
+        id: d.O.ERROR,
+        children: (0, o.jsx)(l.X, {
+          onContinue: P,
           onClose: t
         })
-      }), (0, i.jsx)(o.Slide, {
-        id: c.O.SUCCESS,
-        children: (0, i.jsx)(d.W, {
+      }), (0, o.jsx)(i.Slide, {
+        id: d.O.SUCCESS,
+        children: (0, o.jsx)(C.W, {
           onClose: t
         })
       })]

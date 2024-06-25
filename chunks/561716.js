@@ -1,12 +1,12 @@
 n.d(t, {
   $: function() {
-    return a
+    return i
   }
 });
-var l = n(51596),
-  i = n(819640);
-let a = {
+var c = n(51596),
+  l = n(819640);
+let i = {
   binds: ["mod+k", "mod+t"],
   comboKeysBindGlobal: !0,
-  action: () => (!i.Z.hasLayers() && (0, l.$Z)(), !1)
+  action: () => (!l.Z.hasLayers() && (0, c.$Z)(), !1)
 }

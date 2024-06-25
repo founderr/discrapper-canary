@@ -1,7 +1,7 @@
 var i, s = n(442837),
-  a = n(570140);
+  o = n(570140);
 
-function l(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -9,20 +9,20 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let o = {};
+let l = {};
 class r extends(i = s.ZP.PersistedStore) {
   initialize(e) {
-    Object.assign(o, e)
+    Object.assign(l, e)
   }
   getState() {
-    return o
+    return l
   }
   shouldShowEducation(e) {
-    return !0 !== o[e]
+    return !0 !== l[e]
   }
 }
-l(r, "displayName", "ActivityInviteEducationStore"), l(r, "persistKey", "ActivityInviteEducationExperimentStore"), t.Z = new r(a.Z, {
+a(r, "displayName", "ActivityInviteEducationStore"), a(r, "persistKey", "ActivityInviteEducationExperimentStore"), t.Z = new r(o.Z, {
   ACTIVITY_INVITE_EDUCATION_DISMISS: function(e) {
-    return o[e.key] = e.value, !0
+    return l[e.key] = e.value, !0
   }
 })

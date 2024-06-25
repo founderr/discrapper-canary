@@ -1,69 +1,69 @@
 t.d(n, {
   y: function() {
-    return l
+    return a
   }
 });
-var i, l, s = t(735250);
+var i, a, s = t(735250);
 t(470079);
-var a = t(120356),
-  r = t.n(a),
-  o = t(481060),
+var l = t(120356),
+  o = t.n(l),
+  r = t(481060),
   c = t(689938),
   d = t(585069);
-(i = l || (l = {})).DENY = "DENY", i.PASSTHROUGH = "PASSTHROUGH", i.ALLOW = "ALLOW";
-let u = Object.keys(l);
+(i = a || (a = {})).DENY = "DENY", i.PASSTHROUGH = "PASSTHROUGH", i.ALLOW = "ALLOW";
+let u = Object.keys(a);
 
 function I(e) {
   let {
     value: n = "PASSTHROUGH",
     onChange: t,
     labelledBy: i,
-    disabled: l = !1
-  } = e, a = (0, o.useRadioGroup)({
+    disabled: a = !1
+  } = e, l = (0, r.useRadioGroup)({
     orientation: "horizontal",
-    isDisabled: l,
+    isDisabled: a,
     labelledBy: i
   });
   return (0, s.jsx)("div", {
-    className: r()(d.group, {
-      [d.disabled]: l
+    className: o()(d.group, {
+      [d.disabled]: a
     }),
-    ...a,
-    children: u.map(e => (0, s.jsx)(N, {
+    ...l,
+    children: u.map(e => (0, s.jsx)(m, {
       type: e,
       isSelected: n === e,
       onSelect: e => {
-        n !== e && !l && t(e)
+        n !== e && !a && t(e)
       }
     }, e))
   })
 }
 
-function N(e) {
+function m(e) {
   let n, t, i, {
-    type: l,
-    onSelect: a,
+    type: a,
+    onSelect: l,
     isSelected: u
   } = e;
-  switch (l) {
+  switch (a) {
     case "DENY":
-      i = c.Z.Messages.PERMISSION_OVERRIDE_DENY, n = o.CloseSmallIcon, t = d.deny;
+      i = c.Z.Messages.PERMISSION_OVERRIDE_DENY, n = r.CloseSmallIcon, t = d.deny;
       break;
     case "ALLOW":
-      i = c.Z.Messages.PERMISSION_OVERRIDE_ALLOW, n = o.CheckmarkLargeIcon, t = d.allow;
+      i = c.Z.Messages.PERMISSION_OVERRIDE_ALLOW, n = r.CheckmarkLargeIcon, t = d.allow;
       break;
     default:
-      i = c.Z.Messages.PERMISSION_OVERRIDE_PASSTHROUGH, n = o.SlashIcon, t = d.passthrough
+      i = c.Z.Messages.PERMISSION_OVERRIDE_PASSTHROUGH, n = r.SlashIcon, t = d.passthrough
   }
-  let I = (0, o.useRadioItem)({
+  let I = (0, r.useRadioItem)({
     isSelected: u,
     label: i
   });
-  return (0, s.jsx)(o.Clickable, {
-    className: r()(d.item, t, {
+  return (0, s.jsx)(r.Clickable, {
+    className: o()(d.item, t, {
       [d.selected]: u
     }),
-    onClick: () => a(l),
+    onClick: () => l(a),
     ...I,
     children: (0, s.jsx)(n, {
       color: "currentColor",
@@ -71,4 +71,4 @@ function N(e) {
     })
   })
 }
-I.Types = l, n.Z = I
+I.Types = a, n.Z = I

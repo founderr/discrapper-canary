@@ -1,33 +1,33 @@
 n.d(t, {
   Z: function() {
-    return T
+    return p
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(194359),
-  r = n(906732),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(194359),
+  l = n(906732),
   o = n(388380),
   c = n(171368),
-  u = n(626135),
-  d = n(321488),
-  E = n(417183),
-  h = n(170245),
-  _ = n(981631),
+  d = n(626135),
+  u = n(321488),
+  _ = n(417183),
+  E = n(170245),
+  h = n(981631),
   I = n(689938),
   m = n(208954);
 
-function T(e) {
+function p(e) {
   let {
     user: t,
     nickname: n,
-    status: T,
+    status: p,
     isFocused: g
-  } = e, p = i.useContext(u.AnalyticsContext), {
-    analyticsLocations: N
-  } = (0, r.ZP)(), S = e => {
-    null == e || e.stopPropagation(), a.Z.addRelationship({
+  } = e, T = s.useContext(d.AnalyticsContext), {
+    analyticsLocations: C
+  } = (0, l.ZP)(), f = e => {
+    null == e || e.stopPropagation(), r.Z.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
@@ -36,44 +36,44 @@ function T(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, C = e => {
+  }, S = e => {
     null == e || e.stopPropagation(), o.Z.ignore(t.id)
-  }, A = T === _.Skl.OFFLINE ? _.Skl.UNKNOWN : T;
-  return (0, s.jsx)(E.Z, {
+  }, N = p === h.Skl.OFFLINE ? h.Skl.UNKNOWN : p;
+  return (0, i.jsx)(_.Z, {
     isFocused: g,
     user: t,
     onClick: () => (0, c.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: N,
-      analyticsLocation: p.location
+      sourceAnalyticsLocations: C,
+      analyticsLocation: T.location
     }),
     children: e => {
-      let i = (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(d.Z, {
-          icon: l.CheckmarkLargeIcon,
-          actionType: d.Z.ActionTypes.ACCEPT,
+      let s = (0, i.jsxs)(i.Fragment, {
+        children: [(0, i.jsx)(u.Z, {
+          icon: a.CheckmarkLargeIcon,
+          actionType: u.Z.ActionTypes.ACCEPT,
           tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: S,
+          onClick: f,
           shouldHighlight: e
-        }), (0, s.jsx)(d.Z, {
-          icon: l.CloseSmallIcon,
-          actionType: d.Z.ActionTypes.DENY,
+        }), (0, i.jsx)(u.Z, {
+          icon: a.CloseSmallIcon,
+          actionType: u.Z.ActionTypes.DENY,
           tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: C,
+          onClick: S,
           shouldHighlight: e
         })]
       });
-      return (0, s.jsxs)("div", {
+      return (0, i.jsxs)("div", {
         className: m.listItemContents,
-        children: [(0, s.jsx)(h.Z, {
+        children: [(0, i.jsx)(E.Z, {
           user: t,
           hovered: e,
-          status: A,
+          status: N,
           subText: n,
           className: m.__invalid_userInfo
-        }), (0, s.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: m.actions,
-          children: i
+          children: s
         })]
       })
     }

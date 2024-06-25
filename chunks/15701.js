@@ -1,11 +1,11 @@
 n.d(t, {
   G: function() {
-    return s
+    return l
   }
 });
-var l = n(442837),
-  i = n(333984);
+var i = n(442837),
+  a = n(333984);
 
-function s(e) {
-  return (0, l.e7)([i.Z], () => i.Z.isSpam(e), [e])
+function l(e) {
+  return (0, i.e7)([a.Z], () => a.Z.isSpam(e), [e])
 }

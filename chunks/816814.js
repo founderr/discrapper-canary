@@ -1,26 +1,26 @@
 var n = t(544891),
-  i = t(570140),
+  o = t(570140),
   a = t(325067),
   l = t(981631);
 
-function r(e, s) {
-  return i.Z.dispatch({
+function r(e, i) {
+  return o.Z.dispatch({
     type: "MFA_SMS_TOGGLE"
   }), n.tn.post({
     url: e,
     body: {
-      password: s
+      password: i
     },
     oldFormErrors: !0
-  }).then(e => (i.Z.dispatch({
+  }).then(e => (o.Z.dispatch({
     type: "MFA_SMS_TOGGLE_COMPLETE"
   }), e), e => {
-    throw i.Z.dispatch({
+    throw o.Z.dispatch({
       type: "MFA_SMS_TOGGLE_COMPLETE"
     }), e
   })
 }
-s.Z = {
+i.Z = {
   enableMFAStart: async e => (await n.tn.post({
     url: l.ANM.MFA_TOTP_ENABLE,
     body: {
@@ -41,14 +41,14 @@ s.Z = {
     }
   }),
   setEmailToken(e) {
-    i.Z.dispatch({
+    o.Z.dispatch({
       type: "MFA_ENABLE_EMAIL_TOKEN",
       token: e
     })
   },
   enable(e) {
     let {
-      password: s,
+      password: i,
       code: t,
       secret: a,
       emailToken: r
@@ -58,11 +58,11 @@ s.Z = {
       body: {
         code: t,
         secret: a,
-        password: s,
+        password: i,
         email_token: r
       },
       oldFormErrors: !0
-    }).then(e => i.Z.dispatch({
+    }).then(e => o.Z.dispatch({
       type: "MFA_ENABLE_SUCCESS",
       token: e.body.token,
       codes: e.body.backup_codes
@@ -75,12 +75,12 @@ s.Z = {
     }).then(e => {
       let {
         body: {
-          token: s
+          token: i
         }
       } = e;
-      return i.Z.dispatch({
+      return o.Z.dispatch({
         type: "MFA_DISABLE_SUCCESS",
-        token: s
+        token: i
       })
     })
   },
@@ -92,7 +92,7 @@ s.Z = {
       password: e
     },
     oldFormErrors: !0
-  }).then(e => i.Z.dispatch({
+  }).then(e => o.Z.dispatch({
     type: "MFA_SEND_VERIFICATION_KEY",
     nonces: {
       viewNonce: e.body.nonce,
@@ -101,7 +101,7 @@ s.Z = {
   }), e => {
     throw e
   }),
-  confirmViewBackupCodes(e, s) {
+  confirmViewBackupCodes(e, i) {
     let {
       viewNonce: t,
       regenerateNonce: r
@@ -110,20 +110,20 @@ s.Z = {
       url: l.ANM.MFA_CODES_VERIFICATION,
       body: {
         key: e,
-        nonce: s ? r : t,
-        regenerate: s
+        nonce: i ? r : t,
+        regenerate: i
       },
       oldFormErrors: !0
-    }).then(s => i.Z.dispatch({
+    }).then(i => o.Z.dispatch({
       type: "MFA_VIEW_BACKUP_CODES",
-      codes: s.body.backup_codes,
+      codes: i.body.backup_codes,
       key: e
     }), e => {
       throw e
     })
   },
   clearBackupCodes() {
-    i.Z.dispatch({
+    o.Z.dispatch({
       type: "MFA_CLEAR_BACKUP_CODES"
     })
   }

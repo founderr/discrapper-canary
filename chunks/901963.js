@@ -14,41 +14,41 @@ var i = n(735250),
   I = n(74538),
   T = n(543241),
   h = n(981631),
-  S = n(474936),
-  f = n(689938),
-  N = n(164940);
-let A = "premiumRetentionEmojiPickerNotice",
-  m = l.K.get(A);
+  f = n(474936),
+  S = n(689938),
+  A = n(164940);
+let N = "premiumRetentionEmojiPickerNotice",
+  m = l.K.get(N);
 t.Z = e => {
   let {
     closePopout: t,
     channel: n
   } = e, [s, O] = r.useState(!1), {
-    subscription: R,
-    hasFetchedSubscriptions: p
+    subscription: p,
+    hasFetchedSubscriptions: R
   } = (0, a.cj)([d.ZP], () => ({
     subscription: d.ZP.getPremiumSubscription(),
     hasFetchedSubscriptions: d.ZP.hasFetchedSubscriptions()
   }));
   if (r.useEffect(() => {
-      !p && (0, _.jg)()
-    }, [p]), null == R || !(0, I.zV)(R.status) || s) return null;
-  let g = R.status === h.O0b.PAST_DUE ? (0, I.lY)(R).expiresDate : o()(R.currentPeriodStart).add(S.gh),
-    C = "".concat(R.id, ":").concat(g.toISOString());
+      !R && (0, _.jg)()
+    }, [R]), null == p || !(0, I.zV)(p.status) || s) return null;
+  let g = p.status === h.O0b.PAST_DUE ? (0, I.lY)(p).expiresDate : o()(p.currentPeriodStart).add(f.gh),
+    C = "".concat(p.id, ":").concat(g.toISOString());
   if (m === C) return null;
-  let v = I.ZP.getPremiumType(R.planId) === S.p9.TIER_0 ? E.JX.PREMIUM_TIER_0 : I.ZP.getPremiumType(R.planId) === S.p9.TIER_1 ? E.JX.PREMIUM_TIER_1 : E.JX.PREMIUM_TIER_2;
+  let v = I.ZP.getPremiumType(p.planId) === f.p9.TIER_0 ? E.JX.PREMIUM_TIER_0 : I.ZP.getPremiumType(p.planId) === f.p9.TIER_1 ? E.JX.PREMIUM_TIER_1 : E.JX.PREMIUM_TIER_2;
   return (0, i.jsxs)("div", {
-    className: N.premiumRetentionNotice,
+    className: A.premiumRetentionNotice,
     children: [(0, i.jsx)(u.NitroWheelIcon, {
       size: "md",
-      className: N.premiumRetentionNoticeIcon,
+      className: A.premiumRetentionNoticeIcon,
       color: v
     }), (0, i.jsxs)("div", {
-      className: N.premiumRetentionNoticeContent,
+      className: A.premiumRetentionNoticeContent,
       children: [(0, i.jsx)(u.Text, {
         variant: "text-xs/normal",
-        children: f.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
-          planName: I.ZP.getDisplayPremiumType(R.planId),
+        children: S.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
+          planName: I.ZP.getDisplayPremiumType(p.planId),
           endsAt: g
         })
       }), (0, i.jsx)("div", {
@@ -56,17 +56,17 @@ t.Z = e => {
           onClick: () => {
             (0, T.A3)(n), t(), c.Z.open(h.oAB.PREMIUM)
           },
-          children: f.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
+          children: S.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
         })
       })]
     }), (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        l.K.set(A, C), m = C, O(!0)
+        l.K.set(N, C), m = C, O(!0)
       },
       children: (0, i.jsx)(u.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: N.premiumRetentionNoticeClose
+        className: A.premiumRetentionNoticeClose
       })
     })]
   })

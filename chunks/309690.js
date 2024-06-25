@@ -1,44 +1,44 @@
 t.r(s), t.d(s, {
   default: function() {
-    return d
+    return r
   }
 });
 var a = t(735250);
 t(470079);
-var n = t(481060),
-  i = t(285952),
-  o = t(689938),
-  l = t(29777);
+var o = t(481060),
+  l = t(285952),
+  n = t(689938),
+  d = t(29777);
 
-function d(e) {
+function r(e) {
   let {
     onClose: s,
     transitionState: t
   } = e;
-  return (0, a.jsxs)(n.ModalRoot, {
-    size: n.ModalSize.SMALL,
+  return (0, a.jsxs)(o.ModalRoot, {
+    size: o.ModalSize.SMALL,
     transitionState: t,
-    children: [(0, a.jsxs)(n.ModalHeader, {
-      justify: i.Z.Justify.BETWEEN,
-      children: [(0, a.jsx)(n.FormTitle, {
+    children: [(0, a.jsxs)(o.ModalHeader, {
+      justify: l.Z.Justify.BETWEEN,
+      children: [(0, a.jsx)(o.FormTitle, {
         tag: "h2",
-        className: l.header,
-        children: o.Z.Messages.STREAM_FULL_MODAL_HEADER
-      }), (0, a.jsx)(n.ModalCloseButton, {
+        className: d.header,
+        children: n.Z.Messages.STREAM_FULL_MODAL_HEADER
+      }), (0, a.jsx)(o.ModalCloseButton, {
         onClick: s,
-        className: l.modalCloseButton
+        className: d.modalCloseButton
       })]
-    }), (0, a.jsxs)(n.ModalContent, {
-      children: [(0, a.jsx)(n.Text, {
+    }), (0, a.jsxs)(o.ModalContent, {
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-md/medium",
-        children: o.Z.Messages.STREAM_FULL_MODAL_BODY
+        children: n.Z.Messages.STREAM_FULL_MODAL_BODY
       }), (0, a.jsx)("div", {
-        className: l.fullArt
+        className: d.fullArt
       })]
-    }), (0, a.jsx)(n.ModalFooter, {
-      children: (0, a.jsx)(n.Button, {
+    }), (0, a.jsx)(o.ModalFooter, {
+      children: (0, a.jsx)(o.Button, {
         onClick: s,
-        children: o.Z.Messages.OKAY
+        children: n.Z.Messages.OKAY
       })
     })]
   })

@@ -19,19 +19,19 @@ t.Z = function(e) {
     childrenButtons: I,
     childrenMessageContent: T,
     childrenAccessories: h,
-    messageRef: S,
-    focusProps: f = {
+    messageRef: f,
+    focusProps: S = {
       offset: {
         left: 4,
         right: 4
       }
     },
-    hasThread: N,
-    isSystemMessage: A,
+    hasThread: A,
+    isSystemMessage: N,
     hasReply: m,
     ...O
-  } = e, R = (0, i.jsx)(o.FocusRing, {
-    ...f,
+  } = e, p = (0, i.jsx)(o.FocusRing, {
+    ...S,
     children: (0, i.jsxs)("div", {
       className: s()(t, {
         [a.wrapper]: !0,
@@ -39,11 +39,11 @@ t.Z = function(e) {
         [a.compact]: n,
         [a.cozy]: !n,
         [a.zalgo]: l,
-        [a.hasThread]: N,
-        [a.isSystemMessage]: A,
+        [a.hasThread]: A,
+        [a.isSystemMessage]: N,
         [a.hasReply]: m
       }),
-      ref: S,
+      ref: f,
       ...O,
       role: "article",
       children: [_, c, (0, i.jsxs)("div", {
@@ -56,6 +56,6 @@ t.Z = function(e) {
     })
   });
   return u ? (0, i.jsx)(o.FocusBlock, {
-    children: R
-  }) : R
+    children: p
+  }) : p
 }

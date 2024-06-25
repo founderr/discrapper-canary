@@ -9,11 +9,11 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  l = n.n(a),
+  s = n(481060),
   r = n(130081);
 let o = 16;
 
@@ -21,32 +21,32 @@ function c(e) {
   let {
     description: t,
     name: n,
-    icon: i,
+    icon: a,
     onNavigate: c,
     className: u,
     missingNavIcon: d
   } = e;
-  return (0, l.jsxs)(a.Clickable, {
+  return (0, i.jsxs)(s.Clickable, {
     onClick: c,
-    className: s()(r.modInfoItem, null != c && r.modInfoAction, u),
-    children: [null != i && (0, l.jsx)("div", {
-      className: s()(r.modInfoItemIcon),
-      children: i
-    }), null != n && (0, l.jsx)("div", {
-      className: s()(r.modInfoItemName),
+    className: l()(r.modInfoItem, null != c && r.modInfoAction, u),
+    children: [null != a && (0, i.jsx)("div", {
+      className: l()(r.modInfoItemIcon),
+      children: a
+    }), null != n && (0, i.jsx)("div", {
+      className: l()(r.modInfoItemName),
       children: n
-    }), (0, l.jsx)("div", {
-      className: s()(r.modInfoItemDescription),
+    }), (0, i.jsx)("div", {
+      className: l()(r.modInfoItemDescription),
       children: t
-    }), null != c && (0, l.jsx)("div", {
-      className: s()(r.modInfoItemActionIcon),
-      children: (0, l.jsx)(a.ChevronLargeRightIcon, {
+    }), null != c && (0, i.jsx)("div", {
+      className: l()(r.modInfoItemActionIcon),
+      children: (0, i.jsx)(s.ChevronLargeRightIcon, {
         size: "custom",
         width: o,
         height: o
       })
-    }), null == c && null != d && (0, l.jsx)("div", {
-      className: s()(r.modInfoItemActionIcon),
+    }), null == c && null != d && (0, i.jsx)("div", {
+      className: l()(r.modInfoItemActionIcon),
       children: d
     })]
   })
@@ -56,8 +56,8 @@ function u(e) {
   let {
     children: t
   } = e;
-  return (0, l.jsx)("div", {
-    className: s()(r.modInfoItemContainer),
+  return (0, i.jsx)("div", {
+    className: l()(r.modInfoItemContainer),
     children: t
   })
 }

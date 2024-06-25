@@ -9,11 +9,11 @@ var r, s, o, a, l = n(392711),
 let I = "GameLibraryViewStore",
   T = E.sHY.ASCENDING,
   h = E.iEv.LAST_PLAYED,
-  S = !1,
-  f = u().debounce(() => {
-    S = !1, A.emitChange()
+  f = !1,
+  S = u().debounce(() => {
+    f = !1, N.emitChange()
   }, 200);
-class N extends(a = _.ZP.Store) {
+class A extends(a = _.ZP.Store) {
   initialize() {
     var e;
     let t = null !== (e = c.K.get(I)) && void 0 !== e ? e : {};
@@ -29,16 +29,16 @@ class N extends(a = _.ZP.Store) {
     return i
   }
   get isNavigatingByKeyboard() {
-    return S
+    return f
   }
 }
-o = "GameLibraryViewStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "GameLibraryViewStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let A = new N(d.Z, {
+let N = new A(d.Z, {
   LIBRARY_TABLE_SORT_UPDATE: function(e) {
     let {
       direction: t,
@@ -54,7 +54,7 @@ let A = new N(d.Z, {
       key: t,
       isKeyboardEvent: n
     } = e;
-    n && (S = !0, f()), i = t
+    n && (f = !0, S()), i = t
   }
 });
-t.Z = A
+t.Z = N

@@ -3,24 +3,24 @@ n.d(t, {
     return r
   },
   _: function() {
-    return a
+    return l
   }
 }), n(627341);
-var s = n(278074),
-  i = n(263568),
-  l = n(148163);
+var i = n(278074),
+  a = n(263568),
+  s = n(148163);
 
-function a(e, t) {
-  let n = (0, s.EQ)(t).with(i.C.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers).otherwise(() => l.normalStylesDefault);
+function l(e, t) {
+  let n = (0, i.EQ)(t).with(a.C.IMAGE_ONLY_ANSWERS, () => s.normalStylesImageOnlyAnswers).otherwise(() => s.normalStylesDefault);
   return {
     styles: {
       loserSelected: n,
       normal: n,
       notVoted: n,
       selected: n,
-      voted: l.votedStyles,
-      victorSelected: l.victorStyles,
-      victorNotSelected: l.victorStyles,
+      voted: s.votedStyles,
+      victorSelected: s.victorStyles,
+      victorNotSelected: s.victorStyles,
       normalVote: n
     }
   }

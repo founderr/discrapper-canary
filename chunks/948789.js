@@ -1,4 +1,4 @@
-let s;
+let i;
 n.d(t, {
   fQ: function() {
     return c
@@ -7,20 +7,20 @@ n.d(t, {
     return o
   }
 }), n(653041), n(757143);
-var i = n(438361),
-  l = n.n(i),
-  a = n(33382),
-  r = n.n(a);
+var s = n(438361),
+  a = n.n(s),
+  r = n(33382),
+  l = n.n(r);
 
 function o(e) {
-  s.push(e)
+  i.push(e)
 }
 
 function c(e) {
   return t => {
-    if (null != e) return null != r()(t, {
+    if (null != e) return null != l()(t, {
       end: !1
     }).exec(e.history.location.pathname)
   }
 }
-s = l()()
+i = a()()

@@ -1,54 +1,54 @@
-a.r(s), a.d(s, {
+a.r(e), a.d(e, {
   default: function() {
-    return r
+    return i
   }
 });
-var e = a(735250);
+var n = a(735250);
 a(470079);
-var n = a(481060),
+var s = a(481060),
   t = a(174767),
   l = a(689938),
-  i = a(42318);
+  d = a(42318);
 
-function r(o) {
+function i(o) {
   let {
-    transitionState: s,
+    transitionState: e,
     onClose: a,
-    onDelete: r
+    onDelete: i
   } = o;
-  async function d() {
-    await (0, t.TG)(), r()
+  async function r() {
+    await (0, t.TG)(), i()
   }
-  return (0, e.jsxs)(n.ModalRoot, {
-    size: n.ModalSize.SMALL,
-    transitionState: s,
-    className: i.__invalid_modal,
-    children: [(0, e.jsxs)(n.ModalContent, {
-      className: i.modalContent,
-      children: [(0, e.jsxs)("div", {
-        className: i.header,
-        children: [(0, e.jsx)(n.Heading, {
-          className: i.__invalid_title,
+  return (0, n.jsxs)(s.ModalRoot, {
+    size: s.ModalSize.SMALL,
+    transitionState: e,
+    className: d.__invalid_modal,
+    children: [(0, n.jsxs)(s.ModalContent, {
+      className: d.modalContent,
+      children: [(0, n.jsxs)("div", {
+        className: d.header,
+        children: [(0, n.jsx)(s.Heading, {
+          className: d.__invalid_title,
           variant: "heading-lg/semibold",
           color: "header-primary",
           children: l.Z.Messages.GAME_INVITES_DELETE_MODAL_TITLE
-        }), (0, e.jsx)(n.ModalCloseButton, {
+        }), (0, n.jsx)(s.ModalCloseButton, {
           onClick: a
         })]
-      }), (0, e.jsx)(n.Text, {
+      }), (0, n.jsx)(s.Text, {
         variant: "text-md/normal",
         color: "text-normal",
-        className: i.__invalid_body,
+        className: d.__invalid_body,
         children: l.Z.Messages.GAME_INVITES_DELETE_MODAL_SUBTITLE
       })]
-    }), (0, e.jsxs)(n.ModalFooter, {
-      children: [(0, e.jsx)(n.Button, {
-        color: n.Button.Colors.RED,
-        onClick: d,
+    }), (0, n.jsxs)(s.ModalFooter, {
+      children: [(0, n.jsx)(s.Button, {
+        color: s.Button.Colors.RED,
+        onClick: r,
         children: l.Z.Messages.GAME_INVITES_DELETE_INVITES
-      }), (0, e.jsx)(n.Button, {
-        look: n.Button.Looks.LINK,
-        color: n.Button.Colors.PRIMARY,
+      }), (0, n.jsx)(s.Button, {
+        look: s.Button.Looks.LINK,
+        color: s.Button.Colors.PRIMARY,
         onClick: a,
         children: l.Z.Messages.CANCEL
       })]

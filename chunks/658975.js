@@ -3,11 +3,11 @@ n.d(t, {
     return r
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(739566),
-  l = n(702346),
-  a = n(352736);
+var a = n(739566),
+  s = n(702346),
+  l = n(352736);
 
 function r(e) {
   let {
@@ -15,14 +15,14 @@ function r(e) {
     usernameHook: r,
     compact: o,
     guildId: c
-  } = e, u = (0, i.ZP)(t), d = r(u), E = a.Z.getWelcomeMessageKind(c), _ = a.Z.getSystemMessageUserJoin(t.id, E).format({
-    username: u.nick,
-    usernameHook: d
+  } = e, d = (0, a.ZP)(t), u = r(d), _ = l.Z.getWelcomeMessageKind(c), E = l.Z.getSystemMessageUserJoin(t.id, _).format({
+    username: d.nick,
+    usernameHook: u
   });
-  return (0, s.jsx)(l.Z, {
+  return (0, i.jsx)(s.Z, {
     icon: n(570111),
     timestamp: t.timestamp,
     compact: o,
-    children: _
+    children: E
   })
 }

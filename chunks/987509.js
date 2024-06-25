@@ -1,35 +1,35 @@
 n.d(t, {
   Be: function() {
-    return h
+    return E
   },
   ZP: function() {
-    return A
+    return g
   },
   hC: function() {
-    return _
+    return h
   }
 }), n(47120), n(653041);
 var l = n(392711),
   a = n(212819),
-  s = n(938078),
-  i = n(823385),
+  i = n(938078),
+  s = n(823385),
   r = n(592125),
-  u = n(496675),
+  c = n(496675),
   o = n(594174),
-  c = n(823379),
+  u = n(823379),
   d = n(41837),
-  E = n(981631);
+  _ = n(981631);
 
-function _(e) {
+function h(e) {
   return "".concat(e.type, "-").concat(e.id)
 }
 
-function h(e) {
+function E(e) {
   return "user" === e.type ? r.Z.getDMFromUserId(e.id) : e.id
 }
 
-function S(e) {
-  if ("user" !== e.type) return (0, s.Z)(e.id);
+function f(e) {
+  if ("user" !== e.type) return (0, i.Z)(e.id);
   {
     let t = o.default.getUser(e.id);
     return null != t ? {
@@ -41,12 +41,12 @@ function S(e) {
 }
 n(689938);
 
-function f(e, t) {
+function S(e, t) {
   let n;
   let l = new Set;
   if (null != t)
     for (let e of t) l.add(e);
-  let s = [];
+  let i = [];
   for (let t of e) {
     if (null != t)
       if (t.type === a.h8.HEADER) n = t;
@@ -54,37 +54,37 @@ function f(e, t) {
         let {
           id: e
         } = t.record;
-        !l.has(e) && (l.add(e), null != n && (s.push(n), n = void 0), s.push(t))
+        !l.has(e) && (l.add(e), null != n && (i.push(n), n = void 0), i.push(t))
       }
   }
-  return s
+  return i
 }
 
-function g(e) {
+function I(e) {
   return e.filter(e => {
     var t;
-    return (0, c.lm)(e) && (e.type === a.h8.HEADER || (0, d.o)(e) && ((t = e).type === a.h8.USER ? null != r.Z.getDMFromUserId(t.record.id) : t.type === a.h8.GROUP_DM || t.record.type !== E.d4z.GUILD_FORUM && t.record.type !== E.d4z.GUILD_MEDIA && u.Z.can(E.Plq.VIEW_CHANNEL, t.record) && u.Z.can(E.Plq.SEND_MESSAGES, t.record)))
+    return (0, u.lm)(e) && (e.type === a.h8.HEADER || (0, d.o)(e) && ((t = e).type === a.h8.USER ? null != r.Z.getDMFromUserId(t.record.id) : t.type === a.h8.GROUP_DM || t.record.type !== _.d4z.GUILD_FORUM && t.record.type !== _.d4z.GUILD_MEDIA && c.Z.can(_.Plq.VIEW_CHANNEL, t.record) && c.Z.can(_.Plq.SEND_MESSAGES, t.record)))
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     results: t,
     hasQuery: n,
     queryMode: a,
     frequentChannels: r,
-    targetDestination: u,
+    targetDestination: c,
     selectedDestinations: o,
-    pinnedDestinations: c,
+    pinnedDestinations: u,
     originDestination: d
   } = e;
-  if (n) return f(g(t));
-  let E = null != c && c.length > 0 ? c.map(e => S(e)) : [],
-    _ = i.Z.getChannelHistory(),
-    h = _.length > 0 ? _.map(e => (0, s.Z)(e)) : [],
-    A = r.length > 0 ? r.map(e => (0, s.Z)(e.id)) : [],
-    I = g([...E, null != u ? S(u) : null, ...h, ...A]),
+  if (n) return S(I(t));
+  let _ = null != u && u.length > 0 ? u.map(e => f(e)) : [],
+    h = s.Z.getChannelHistory(),
+    E = h.length > 0 ? h.map(e => (0, i.Z)(e)) : [],
+    g = r.length > 0 ? r.map(e => (0, i.Z)(e.id)) : [],
+    A = I([..._, null != c ? f(c) : null, ...E, ...g]),
     p = (null == o ? void 0 : o.find(e => (0, l.isEqual)(e, d))) != null,
-    C = null == d || p ? [] : [d.id];
-  return null != a ? f(I.filter(e => e.type === a)) : f(I, C)
+    m = null == d || p ? [] : [d.id];
+  return null != a ? S(A.filter(e => e.type === a)) : S(A, m)
 }

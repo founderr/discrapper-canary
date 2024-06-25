@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i, r = n(735250),
@@ -17,9 +17,9 @@ var i, r = n(735250),
   I = n(981631),
   T = n(503349),
   h = n(689938),
-  S = n(422322);
+  f = n(422322);
 
-function f(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends(i = s.PureComponent) {
+class A extends(i = s.PureComponent) {
   render() {
     let {
       appContext: e,
@@ -42,7 +42,7 @@ class N extends(i = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "onMouseEnter", (e, t) => {
+    super(...e), S(this, "onMouseEnter", (e, t) => {
       let {
         preloadImage: n
       } = t, {
@@ -50,9 +50,9 @@ class N extends(i = s.PureComponent) {
         height: r
       } = this.props;
       n((0, d.zp)(i, r))
-    }), f(this, "modalContext", (0, a.modalContextFromAppContext)(this.props.appContext)), f(this, "onCloseImage", () => {
+    }), S(this, "modalContext", (0, a.modalContextFromAppContext)(this.props.appContext)), S(this, "onCloseImage", () => {
       (0, a.closeModal)(T.c, this.modalContext)
-    }), f(this, "onZoom", (e, t) => {
+    }), S(this, "onZoom", (e, t) => {
       let {
         zoomThumbnailPlaceholder: n,
         trigger: i
@@ -64,24 +64,24 @@ class N extends(i = s.PureComponent) {
         original: _,
         width: d,
         height: E,
-        animated: f,
-        children: N,
-        renderLinkComponent: A,
+        animated: S,
+        children: A,
+        renderLinkComponent: N,
         renderForwardComponent: m,
         isWindowFocused: O,
-        shouldHideMediaOptions: R = !1
-      } = this.props, p = {
+        shouldHideMediaOptions: p = !1
+      } = this.props, R = {
         alt: s,
         src: l,
         original: null != _ ? _ : l,
         width: d,
         height: E,
-        animated: f,
-        children: N,
+        animated: S,
+        children: A,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: A,
+        renderLinkComponent: N,
         renderForwardComponent: m,
-        onContextMenu: R ? e => {
+        onContextMenu: p ? e => {
           e.stopPropagation(), e.preventDefault()
         } : void 0,
         trigger: i
@@ -89,16 +89,16 @@ class N extends(i = s.PureComponent) {
       (0, o.k)(e.currentTarget) && e.currentTarget.blur(), c.default.track(I.rMx.OPEN_MODAL, {
         type: "Media Modal"
       }), (0, a.openModal)(e => (0, r.jsx)(a.ModalRoot, {
-        className: S.modal,
+        className: f.modal,
         ...e,
         size: a.ModalSize.DYNAMIC,
         "aria-label": h.Z.Messages.IMAGE,
         children: (0, r.jsx)(u.y, {
-          ...p,
-          className: S.image,
+          ...R,
+          className: f.image,
           shouldAnimate: O,
           onClose: this.onCloseImage,
-          shouldHideMediaOptions: R
+          shouldHideMediaOptions: p
         })
       }), {
         modalKey: T.c
@@ -107,16 +107,16 @@ class N extends(i = s.PureComponent) {
   }
 }
 
-function A(e) {
+function N(e) {
   let t = (0, l.bp)(),
     n = (0, E.n)();
-  return (0, r.jsx)(N, {
+  return (0, r.jsx)(A, {
     ...e,
     isWindowFocused: n,
     appContext: t
   })
 }
-f(N, "defaultProps", {
+S(A, "defaultProps", {
   shouldLink: !0,
   autoPlay: !1,
   animated: !1

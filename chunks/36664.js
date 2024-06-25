@@ -6,31 +6,31 @@ n.d(t, {
     return o
   },
   k$: function() {
-    return d
+    return u
   },
   s0: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(702346),
-  a = n(689938),
+var a = n(481060),
+  s = n(702346),
+  l = n(689938),
   r = n(277633);
 
 function o(e) {
   let {
     message: t,
-    compact: i,
+    compact: a,
     onClick: o
   } = e;
-  return (0, s.jsx)(l.Z, {
+  return (0, i.jsx)(s.Z, {
     icon: n(508933),
     timestamp: t.timestamp,
-    compact: i,
+    compact: a,
     contentClassName: r.messageContent,
-    children: a.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({
+    children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_DISQUALIFIED.format({
       onClick: o
     })
   })
@@ -39,34 +39,14 @@ function o(e) {
 function c(e) {
   let {
     message: t,
-    compact: i
+    compact: a
   } = e;
-  return (0, s.jsx)(l.Z, {
+  return (0, i.jsx)(s.Z, {
     icon: n(324606),
     timestamp: t.timestamp,
-    compact: i,
+    compact: a,
     contentClassName: r.messageContent,
-    children: a.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
-  })
-}
-
-function u(e) {
-  let {
-    message: t,
-    compact: n
-  } = e;
-  return (0, s.jsx)(l.Z, {
-    iconNode: (0, s.jsx)(i.CircleExclamationPointIcon, {
-      size: "custom",
-      width: 20,
-      height: 20,
-      color: "currentColor",
-      className: r.alertIcon
-    }),
-    timestamp: t.timestamp,
-    compact: n,
-    contentClassName: r.messageContent,
-    children: a.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING
+    children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_REQUALIFIED
   })
 }
 
@@ -75,8 +55,8 @@ function d(e) {
     message: t,
     compact: n
   } = e;
-  return (0, s.jsx)(l.Z, {
-    iconNode: (0, s.jsx)(i.CircleExclamationPointIcon, {
+  return (0, i.jsx)(s.Z, {
+    iconNode: (0, i.jsx)(a.CircleExclamationPointIcon, {
       size: "custom",
       width: 20,
       height: 20,
@@ -86,6 +66,26 @@ function d(e) {
     timestamp: t.timestamp,
     compact: n,
     contentClassName: r.messageContent,
-    children: a.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING
+    children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING
+  })
+}
+
+function u(e) {
+  let {
+    message: t,
+    compact: n
+  } = e;
+  return (0, i.jsx)(s.Z, {
+    iconNode: (0, i.jsx)(a.CircleExclamationPointIcon, {
+      size: "custom",
+      width: 20,
+      height: 20,
+      color: "currentColor",
+      className: r.alertIcon
+    }),
+    timestamp: t.timestamp,
+    compact: n,
+    contentClassName: r.messageContent,
+    children: l.Z.Messages.SYSTEM_MESSAGE_GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING
   })
 }

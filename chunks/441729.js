@@ -1,7 +1,7 @@
-var s, i = n(442837),
-  l = n(570140);
+var i, a = n(442837),
+  s = n(570140);
 
-function a(e, t, n) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -14,7 +14,7 @@ let r = {
     currentMessage: null
   },
   o = r;
-class c extends(s = i.ZP.DeviceSettingsStore) {
+class c extends(i = a.ZP.DeviceSettingsStore) {
   initialize(e) {
     o = {
       ...r,
@@ -37,7 +37,7 @@ class c extends(s = i.ZP.DeviceSettingsStore) {
     return o
   }
 }
-a(c, "displayName", "TTSStore"), a(c, "persistKey", "TTSStore"), a(c, "migrations", []), t.Z = new c(l.Z, __OVERLAY__ ? {} : {
+l(c, "displayName", "TTSStore"), l(c, "persistKey", "TTSStore"), l(c, "migrations", []), t.Z = new c(s.Z, __OVERLAY__ ? {} : {
   SPEAKING_MESSAGE: function(e) {
     let {
       messageId: t,

@@ -14,16 +14,16 @@ var i = n(735250),
   I = n(621600),
   T = n(82554),
   h = n(981631),
-  S = n(689938),
-  f = n(771102);
+  f = n(689938),
+  S = n(771102);
 t.Z = e => {
   let {
     userId: t,
     reportId: n,
-    reportName: N,
-    showBlock: A,
+    reportName: A,
+    showBlock: N,
     showMute: m
-  } = e, O = _.Z.getDMFromUserId(t), R = (0, s.e7)([d.ZP], () => null == O ? null : d.ZP.isChannelMuted(null, O)), [p, g] = r.useState(null != R && R), [C, v] = r.useState(!1), L = (0, s.e7)([E.default], () => E.default.getUser(t), [t]), D = (0, s.e7)([c.Z], () => c.Z.getRelationshipType(t), [t]) === h.OGo.BLOCKED;
+  } = e, O = _.Z.getDMFromUserId(t), p = (0, s.e7)([d.ZP], () => null == O ? null : d.ZP.isChannelMuted(null, O)), [R, g] = r.useState(null != p && p), [C, v] = r.useState(!1), L = (0, s.e7)([E.default], () => E.default.getUser(t), [t]), D = (0, s.e7)([c.Z], () => c.Z.getRelationshipType(t), [t]) === h.OGo.BLOCKED;
   r.useEffect(() => {
     v(D)
   }, [D]);
@@ -47,28 +47,28 @@ t.Z = e => {
         muted: !0
       }, I.ZB.Muted))
     }, [O, t, n]),
-    y = N === T.b.USER,
-    U = y ? S.Z.Messages.REPORTS_MUTE_USER_ELEMENT_DESCRIPTION : S.Z.Messages.MOBILE_REPORTS_MUTE_ELEMENT_DESCRIPTION,
-    b = y ? S.Z.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : S.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION,
-    G = y ? S.Z.Messages.REPORTS_BLOCK_AND_MUTE_USER_ELEMENT_DESCRIPTION : S.Z.Messages.MOBILE_REPORTS_BLOCK_AND_MUTE_ELEMENT_DESCRIPTION,
-    w = m || A;
+    y = A === T.b.USER,
+    U = y ? f.Z.Messages.REPORTS_MUTE_USER_ELEMENT_DESCRIPTION : f.Z.Messages.MOBILE_REPORTS_MUTE_ELEMENT_DESCRIPTION,
+    b = y ? f.Z.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION,
+    G = y ? f.Z.Messages.REPORTS_BLOCK_AND_MUTE_USER_ELEMENT_DESCRIPTION : f.Z.Messages.MOBILE_REPORTS_BLOCK_AND_MUTE_ELEMENT_DESCRIPTION,
+    w = m || N;
   return null != L && w ? (0, i.jsxs)("div", {
-    className: f.container,
+    className: S.container,
     children: [(0, i.jsx)(o.Text, {
-      className: f.description,
+      className: S.description,
       variant: "text-sm/normal",
-      children: A && m ? G : A ? b : U
+      children: N && m ? G : N ? b : U
     }), (0, i.jsxs)("div", {
-      className: f.userContainer,
+      className: S.userContainer,
       children: [(0, i.jsxs)("div", {
-        className: f.userInfo,
+        className: S.userInfo,
         children: [(0, i.jsx)(o.Avatar, {
           size: o.AvatarSizes.SIZE_32,
           src: L.getAvatarURL(void 0, 32),
-          className: f.avatar,
+          className: S.avatar,
           "aria-label": L.username
         }), (0, i.jsx)(o.Text, {
-          className: f.userName,
+          className: S.userName,
           variant: "text-sm/semibold",
           children: L.username
         }), !L.isPomelo() && (0, i.jsxs)(o.Text, {
@@ -76,19 +76,19 @@ t.Z = e => {
           children: ["#", L.discriminator]
         })]
       }), (0, i.jsxs)("div", {
-        className: f.actionButtonsContainer,
+        className: S.actionButtonsContainer,
         children: [m && (0, i.jsx)(o.Button, {
           onClick: P,
-          disabled: p,
+          disabled: R,
           size: o.Button.Sizes.SMALL,
           color: o.Button.Colors.PRIMARY,
-          children: p ? S.Z.Messages.MUTED : S.Z.Messages.MUTE
-        }), A && (0, i.jsx)(o.Button, {
+          children: R ? f.Z.Messages.MUTED : f.Z.Messages.MUTE
+        }), N && (0, i.jsx)(o.Button, {
           onClick: M,
           disabled: C,
           size: o.Button.Sizes.SMALL,
           color: o.Button.Colors.RED,
-          children: C ? S.Z.Messages.BLOCKED : S.Z.Messages.BLOCK
+          children: C ? f.Z.Messages.BLOCKED : f.Z.Messages.BLOCK
         })]
       })]
     })]

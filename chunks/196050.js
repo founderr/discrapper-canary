@@ -17,32 +17,32 @@ t.Z = e => {
     fileName: I,
     focusProps: T,
     onClick: h,
-    ...S
-  } = e, f = r.useMemo(() => s.X.getDefaultLinkInterceptor(t), [t]), N = r.useCallback(e => {
+    ...f
+  } = e, S = r.useMemo(() => s.X.getDefaultLinkInterceptor(t), [t]), A = r.useCallback(e => {
     a.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
       attachment_type: null == E ? void 0 : E[0],
       attachment_subtype: null == E ? void 0 : E[1]
-    }), null == h || h(), null == f || f(e)
-  }, [f, E, h]);
+    }), null == h || h(), null == S || S(e)
+  }, [S, E, h]);
   return null != I ? (0, i.jsx)(o.Anchor, {
     href: t,
-    onClick: N,
+    onClick: A,
     target: d,
     rel: c,
     className: n,
     "aria-label": u.Z.Messages.DOWNLOAD,
     focusProps: T,
-    ...S,
+    ...f,
     children: I
   }) : (0, i.jsx)(o.Anchor, {
     href: t,
-    onClick: N,
+    onClick: A,
     target: d,
     rel: c,
     className: n,
     "aria-label": u.Z.Messages.DOWNLOAD,
     focusProps: T,
-    ...S,
+    ...f,
     children: (0, i.jsx)(o.DownloadIcon, {
       size: "md",
       color: "currentColor",

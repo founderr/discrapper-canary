@@ -1,12 +1,12 @@
 n(47120);
-var s = n(710845),
-  i = n(914946),
-  l = n(452426),
-  a = n(981631);
-let r = new s.Z(a.BZL);
+var i = n(710845),
+  s = n(914946),
+  a = n(452426),
+  r = n(981631);
+let l = new i.Z(r.BZL);
 t.Z = {
-  [a.Etm.CAPTURE_LOG]: {
-    validation: e => (0, l.Z)(e).required().keys({
+  [r.Etm.CAPTURE_LOG]: {
+    validation: e => (0, a.Z)(e).required().keys({
       level: e.string().max(10).required(),
       message: e.string().max(1e3).required()
     }),
@@ -15,27 +15,27 @@ t.Z = {
         socket: t,
         args: {
           level: n,
-          message: s
+          message: i
         }
       } = e;
-      (0, i.bu)(t.transport);
-      let l = t.application.id,
-        a = "".concat(l, " - ").concat(s);
+      (0, s.bu)(t.transport);
+      let a = t.application.id,
+        r = "".concat(a, " - ").concat(i);
       switch (n) {
         case "log":
-          r.log(a);
+          l.log(r);
           break;
         case "warn":
-          r.warn(a);
+          l.warn(r);
           break;
         case "debug":
-          r.verbose(a);
+          l.verbose(r);
           break;
         case "info":
-          r.info(a);
+          l.info(r);
           break;
         case "error":
-          r.error(a)
+          l.error(r)
       }
     }
   }

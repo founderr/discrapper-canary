@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(392711),
@@ -73,7 +73,7 @@ function h(e) {
   }
   return !0
 }
-class S extends o.Z {
+class f extends o.Z {
   possiblyShowFeedbackModal(e, t) {
     if (!! function(e) {
         var t;

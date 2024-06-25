@@ -1,13 +1,13 @@
 n.d(t, {
   _: function() {
-    return s
+    return a
   }
 });
-var l = n(481060),
-  i = n(191980),
-  a = n(285371);
-let s = {
+var c = n(481060),
+  l = n(191980),
+  i = n(285371);
+let a = {
   binds: ["mod+/", "mod+shift+/"],
   comboKeysBindGlobal: !0,
-  action: () => ((0, l.hasModalOpen)(a.J) ? i.C() : i.$(), !1)
+  action: () => ((0, c.hasModalOpen)(i.J) ? l.C() : l.$(), !1)
 }

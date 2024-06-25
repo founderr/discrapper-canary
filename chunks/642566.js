@@ -1,22 +1,22 @@
-t.d(e, {
+o.d(e, {
   Z: function() {
-    return s
+    return c
   }
 });
-var o = t(735250);
-t(470079);
-var i = t(859097),
-  r = t(689938);
+var t = o(735250);
+o(470079);
+var r = o(859097),
+  i = o(689938);
 
-function s(n) {
+function c(n) {
   let {
     onContinue: e,
-    onClose: t
+    onClose: o
   } = n;
-  return (0, o.jsx)(i.C, {
-    title: r.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_TITLE,
-    body: r.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_BODY,
-    onClose: t,
+  return (0, t.jsx)(r.C, {
+    title: i.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_TITLE,
+    body: i.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_BODY,
+    onClose: o,
     onContinue: e
   })
 }

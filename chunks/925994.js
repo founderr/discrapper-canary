@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   sg: function() {
-    return S
+    return f
   },
   sk: function() {
     return T
@@ -65,8 +65,8 @@ function h(e, t) {
     }
   let T = d > 0 && I.aj.isType(e[d - 1], "blockQuote"),
     h = I.aj.isType(e[d], "blockQuote"),
-    f = I.aj.isType(e[E], "blockQuote"),
-    N = [];
+    S = I.aj.isType(e[E], "blockQuote"),
+    A = [];
   for (let t = d; t <= E; t++) {
     let n = e[t];
     if (l && I.LC.isText(n) && 0 === n.text.length) continue;
@@ -78,24 +78,24 @@ function h(e, t) {
         path: o.path.slice(1),
         offset: o.offset
       } : void 0,
-      u = S(n, {
+      u = f(n, {
         mode: r,
         start: i,
         end: a,
-        allowBlockQuotePrefix: null == s || null == o || !T && (!h || f),
+        allowBlockQuotePrefix: null == s || null == o || !T && (!h || S),
         preventEmojiSurrogates: _
       });
-    (!l || u.length > 0) && N.push(u)
+    (!l || u.length > 0) && A.push(u)
   }
-  return N.join(a)
+  return A.join(a)
 }
 
-function S(e, t) {
+function f(e, t) {
   let {
     mode: n,
     start: i,
     allowBlockQuotePrefix: T = !1,
-    preventEmojiSurrogates: S = !1
+    preventEmojiSurrogates: f = !1
   } = null != t ? t : {};
   if (I.LC.isText(e)) return function(e, t) {
     var n, i;
@@ -119,7 +119,7 @@ function S(e, t) {
     }
     case "emoji": {
       let t = e.emoji;
-      if (!S && null != t.surrogate) return t.surrogate;
+      if (!f && null != t.surrogate) return t.surrogate;
       return t.name
     }
     case "customEmoji": {

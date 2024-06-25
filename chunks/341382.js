@@ -1,12 +1,12 @@
 n.d(t, {
   M: function() {
-    return i
+    return l
   }
 });
-var l = n(570140);
+var i = n(570140);
 
-function i(e) {
-  l.Z.dispatch({
+function l(e) {
+  i.Z.dispatch({
     type: "PREMIUM_REQUIRED_MODAL_CLOSE",
     shouldContinue: e
   })

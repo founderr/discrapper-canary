@@ -1,4 +1,4 @@
-t.r(e.exports = {
+r.r(e.exports = {
   unsupportedBrowser: "unsupportedBrowser_be70cf",
   wrap: "wrap_be70cf",
   title: "title_be70cf",

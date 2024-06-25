@@ -1,6 +1,6 @@
-var l, i;
+var i, a;
 n.d(t, {
   E: function() {
-    return l
+    return i
   }
-}), (i = l || (l = {})).NEW_MESSAGES = "new_messages", i.OPT_IN_CHANNEL = "opt_in_channel", i.SUMMARIES = "summaries"
+}), (a = i || (i = {})).NEW_MESSAGES = "new_messages", a.OPT_IN_CHANNEL = "opt_in_channel", a.SUMMARIES = "summaries"

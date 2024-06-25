@@ -6,8 +6,8 @@ t.d(n, {
 var i = t(735250);
 t(470079);
 var r = t(481060),
-  l = t(201895),
-  o = t(471445),
+  o = t(201895),
+  l = t(471445),
   u = t(823379),
   s = t(303737),
   a = t(293810),
@@ -21,10 +21,10 @@ function _(e) {
   if (null == t) return (0, i.jsx)(i.Fragment, {
     children: "[".concat(c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
   });
-  let u = t.isMediaChannel() ? r.ImageIcon : (0, o.Th)(t.type);
+  let u = t.isMediaChannel() ? r.ImageIcon : (0, l.Th)(t.type);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(r.HiddenVisually, {
-      children: (0, l.ZP)({
+      children: (0, o.ZP)({
         channel: t
       })
     }), (0, i.jsxs)("div", {

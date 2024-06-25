@@ -1,40 +1,40 @@
-e.r(n), e.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return N
+    return j
   }
 });
-var a = e(735250);
-e(470079);
-var i = e(512722),
-  r = e.n(i),
-  s = e(468194),
-  l = e(442837),
-  o = e(477690),
-  c = e(481060),
-  u = e(809086),
-  d = e(430824),
-  m = e(240864),
-  x = e(598952),
-  h = e(596211),
-  f = e(689938),
-  g = e(243841);
-let _ = (0, s.Mg)(o.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
+var a = n(735250);
+n(470079);
+var r = n(512722),
+  i = n.n(r),
+  o = n(468194),
+  s = n(442837),
+  l = n(477690),
+  c = n(481060),
+  d = n(809086),
+  u = n(430824),
+  m = n(240864),
+  f = n(598952),
+  x = n(596211),
+  _ = n(689938),
+  g = n(243841);
+let h = (0, o.Mg)(l.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
 
-function v(t) {
+function v(e) {
   let {
-    guildProductListing: n,
-    guildId: e,
-    onClose: i
-  } = t, r = (0, l.e7)([d.Z], () => {
-    var t;
-    return null === (t = d.Z.getGuild(e)) || void 0 === t ? void 0 : t.name
+    guildProductListing: t,
+    guildId: n,
+    onClose: r
+  } = e, i = (0, s.e7)([u.Z], () => {
+    var e;
+    return null === (e = u.Z.getGuild(n)) || void 0 === e ? void 0 : e.name
   });
   return (0, a.jsxs)(c.ModalHeader, {
     className: g.header,
-    children: [(0, a.jsx)(u.Z, {
+    children: [(0, a.jsx)(d.Z, {
       className: g.headerImage,
-      listing: n,
-      imageSize: _,
+      listing: t,
+      imageSize: h,
       alt: ""
     }), (0, a.jsx)(c.Spacer, {
       size: 16,
@@ -44,44 +44,44 @@ function v(t) {
       children: [(0, a.jsx)(c.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: n.name
+        children: t.name
       }), (0, a.jsx)(c.Spacer, {
         size: 8
       }), (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: g.__invalid_description,
-        children: r
+        children: i
       }), (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: g.__invalid_description,
-        children: f.Z.Messages.GUILD_PRODUCT_DOWNLOADS_COUNT.format({
-          count: n.attachments_count
+        children: _.Z.Messages.GUILD_PRODUCT_DOWNLOADS_COUNT.format({
+          count: t.attachments_count
         })
       })]
     }), (0, a.jsx)(c.ModalCloseButton, {
       className: g.closeButton,
-      onClick: i
+      onClick: r
     })]
   })
 }
 
-function j(t) {
+function b(e) {
   let {
-    attachment: n,
-    guildId: e,
-    productId: i
-  } = t;
+    attachment: t,
+    guildId: n,
+    productId: r
+  } = e;
   return (0, a.jsxs)("li", {
     className: g.attachmentRow,
-    children: [(0, a.jsx)(x.Z, {
-      attachment: n
-    }), (0, a.jsx)(h.Z, {
+    children: [(0, a.jsx)(f.Z, {
+      attachment: t
+    }), (0, a.jsx)(x.Z, {
       className: g.attachmentDownloadButton,
-      guildId: e,
-      productId: i,
-      attachmentId: n.id,
+      guildId: n,
+      productId: r,
+      attachmentId: t.id,
       children: (0, a.jsx)(c.DownloadIcon, {
         size: "md",
         color: "currentColor"
@@ -90,33 +90,33 @@ function j(t) {
   })
 }
 
-function N(t) {
-  var n;
+function j(e) {
+  var t;
   let {
-    guildId: e,
-    productId: i,
-    onClose: s,
-    transitionState: o
-  } = t, u = (0, l.e7)([m.Z], () => m.Z.getGuildProduct(i));
-  r()(null != u, "guildProductListing cannot be null");
-  let d = null !== (n = u.attachments) && void 0 !== n ? n : [];
+    guildId: n,
+    productId: r,
+    onClose: o,
+    transitionState: l
+  } = e, d = (0, s.e7)([m.Z], () => m.Z.getGuildProduct(r));
+  i()(null != d, "guildProductListing cannot be null");
+  let u = null !== (t = d.attachments) && void 0 !== t ? t : [];
   return (0, a.jsxs)(c.ModalRoot, {
     className: g.modal,
     size: c.ModalSize.MEDIUM,
-    transitionState: o,
-    "aria-label": f.Z.Messages.GUILD_PRODUCT_DOWNLOAD_MODAL_ARIA_LABEL,
+    transitionState: l,
+    "aria-label": _.Z.Messages.GUILD_PRODUCT_DOWNLOAD_MODAL_ARIA_LABEL,
     children: [(0, a.jsx)(v, {
-      guildId: e,
-      guildProductListing: u,
-      onClose: s
+      guildId: n,
+      guildProductListing: d,
+      onClose: o
     }), (0, a.jsx)(c.ModalContent, {
       children: (0, a.jsx)("ul", {
         className: g.__invalid_attachmentsList,
-        children: d.map(t => (0, a.jsx)(j, {
-          guildId: e,
-          productId: u.id,
-          attachment: t
-        }, t.id))
+        children: u.map(e => (0, a.jsx)(b, {
+          guildId: n,
+          productId: d.id,
+          attachment: e
+        }, e.id))
       })
     })]
   })

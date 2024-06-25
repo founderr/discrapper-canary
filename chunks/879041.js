@@ -1,9 +1,9 @@
 n.d(t, {
   e: function() {
-    return i
+    return l
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2022-12_message_request_home_count",
   label: "Safety Experience Message Request Home Count",
@@ -19,11 +19,11 @@ let l = (0, n(818083).B)({
   }]
 });
 
-function i(e) {
+function l(e) {
   let {
     location: t
   } = e;
-  return l.useExperiment({
+  return i.useExperiment({
     location: t
   }, {
     autoTrackExposure: !0

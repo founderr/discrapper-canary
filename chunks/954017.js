@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   sendReactionToActivity: function() {
-    return N
+    return A
   },
   sendReplyToActivity: function() {
-    return A
+    return N
   }
 });
 var i = n(512722),
@@ -21,9 +21,9 @@ var i = n(512722),
   I = n(201133),
   T = n(55e3),
   h = n(314091),
-  S = n(981631),
-  f = n(689938);
-let N = async e => {
+  f = n(981631),
+  S = n(689938);
+let A = async e => {
   let {
     reaction: t,
     altText: n,
@@ -35,7 +35,7 @@ let N = async e => {
     user: i.user,
     reaction: t
   })
-}, A = async e => {
+}, N = async e => {
   let {
     reply: t,
     altText: n,
@@ -58,7 +58,7 @@ let N = async e => {
   } = (0, h.j3)(s, "black"), a = "dark" === o, l = (0, h.ZH)(i), {
     assets: u,
     application_id: _
-  } = i, c = (0, d.getAssetImage)(_, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? a ? l.icon.darkPNG : l.icon.lightPNG : i.type === S.IIU.PLAYING ? a ? n(414575) : n(807612) : null, f = i.type === S.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.qc)({
+  } = i, c = (0, d.getAssetImage)(_, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? a ? l.icon.darkPNG : l.icon.lightPNG : i.type === f.IIU.PLAYING ? a ? n(414575) : n(807612) : null, S = i.type === f.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.qc)({
     id: i.emoji.id,
     name: i.emoji.name,
     animated: !1
@@ -73,8 +73,8 @@ let N = async e => {
     ...null != I && {
       ApplicationImage: I
     },
-    ...null != f && {
-      HangStatus: f
+    ...null != S && {
+      HangStatus: S
     }
   }
 }, O = async e => {
@@ -94,7 +94,7 @@ let N = async e => {
       var i;
       e.setFont({
         truncate: u.GX.Truncate
-      }), null != r ? L(e, n, t) : (0, l.Z)(n) ? g(e, n, t) : (0, a.Z)(n) && n.name === o.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? v(e, n, t) : n.type === S.IIU.HANG_STATUS ? C(e, n, t) : p(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
+      }), null != r ? L(e, n, t) : (0, l.Z)(n) ? g(e, n, t) : (0, a.Z)(n) && n.name === o.Z.get(f.ABu.LEAGUE_OF_LEGENDS).name ? v(e, n, t) : n.type === f.IIU.HANG_STATUS ? C(e, n, t) : R(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
         x: T.En - T.o3 - T.ez,
         y: T.o3
       }, {
@@ -110,12 +110,12 @@ let N = async e => {
       channelId: c
     }
   })
-}, R = (e, t) => {
+}, p = (e, t) => {
   e.setColor("dark" === t ? "white" : "black"), e.drawPath(T.Cv, {
     x: T.o3,
     y: T.o3
   }, !0, 2 + 2 / 3)
-}, p = (e, t, n) => {
+}, R = (e, t, n) => {
   var i, r, s;
   e.setSize({
     w: T.En,
@@ -147,7 +147,7 @@ let N = async e => {
   }, {
     w: T.vS,
     h: T.vS
-  }, 8) : R(e, a);
+  }, 8) : p(e, a);
   let l = T.vS + T.o3 + T.sB;
   e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,
@@ -233,13 +233,13 @@ let N = async e => {
   }, {
     w: T.vS,
     h: T.vS
-  }, 8) : R(e, a);
+  }, 8) : p(e, a);
   let l = T.vS + T.o3 + T.sB;
   e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 14,
     family: ["gg sans", "sans-serif"],
     weight: 700
-  }), e.drawText(f.Z.Messages.STATUS_LEAD_IN_JUST, {
+  }), e.drawText(S.Z.Messages.STATUS_LEAD_IN_JUST, {
     x: l,
     y: T.SG + 1 * T.Nv,
     w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(T.W3.Platform)) ? T.ee : T.sp
@@ -330,7 +330,7 @@ let N = async e => {
   }, {
     w: T.vS,
     h: T.vS
-  }, 8) : R(e, a);
+  }, 8) : p(e, a);
   let l = T.vS + T.o3 + T.sB;
   e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
     size: 16,

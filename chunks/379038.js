@@ -9,8 +9,8 @@ var l = n(735250),
   r = n(981888),
   a = n(157689),
   d = n(894017),
-  u = n(854698),
-  o = n(440371),
+  o = n(854698),
+  u = n(440371),
   c = n(689938),
   E = n(719611);
 
@@ -19,13 +19,13 @@ function _(e) {
     guildEvent: t,
     recurrenceId: n,
     transitionState: _,
-    onClose: h
-  } = e, x = (0, d.Z)(n, t.id), m = (0, u.iA)(n, t), g = (0, u.x6)(m, x), [D, T] = s.useState(g), [j, {
-    loading: N,
-    error: I
+    onClose: x
+  } = e, h = (0, d.Z)(n, t.id), m = (0, o.iA)(n, t), g = (0, o.x6)(m, h), [D, I] = s.useState(g), [T, {
+    loading: j,
+    error: N
   }] = (0, r.Z)(() => {
-    let e = (0, a.Z)(t, n, D, x);
-    return null == I && h(), e
+    let e = (0, a.Z)(t, n, D, h);
+    return null == N && x(), e
   });
   return (0, l.jsxs)(i.ModalRoot, {
     transitionState: _,
@@ -36,13 +36,13 @@ function _(e) {
       })
     }), (0, l.jsxs)(i.ModalContent, {
       className: E.content,
-      children: [(0, l.jsx)(o.Z, {
+      children: [(0, l.jsx)(u.Z, {
         onScheduleChange: e => {
           let {
             startDate: t,
             endDate: n
           } = e;
-          null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")), T({
+          null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")), I({
             startDate: t,
             endDate: n
           })
@@ -52,24 +52,24 @@ function _(e) {
         requireEndDate: null != D.endDate,
         guildId: t.guild_id,
         recurrenceRule: t.recurrence_rule
-      }), null != I ? (0, l.jsx)(i.Text, {
+      }), null != N ? (0, l.jsx)(i.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
         className: E.warning,
-        children: I.getAnyErrorMessage()
+        children: N.getAnyErrorMessage()
       }) : null]
     }), (0, l.jsxs)(i.ModalFooter, {
       className: E.footer,
       children: [(0, l.jsx)(i.Button, {
         color: i.Button.Colors.BRAND,
-        onClick: j,
+        onClick: T,
         className: E.button,
-        submitting: N,
-        disabled: (0, u.Y4)(D, g),
+        submitting: j,
+        disabled: (0, o.Y4)(D, g),
         children: c.Z.Messages.SAVE_EVENT
       }), (0, l.jsx)(i.Button, {
         color: i.Button.Colors.PRIMARY,
-        onClick: h,
+        onClick: x,
         children: c.Z.Messages.CANCEL
       })]
     })]

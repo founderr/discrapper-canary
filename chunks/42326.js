@@ -3,11 +3,11 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  l = n.n(a),
+  s = n(481060),
   r = n(618158),
   o = n(318643);
 
@@ -16,13 +16,13 @@ function c(e) {
     errorMessage: t,
     className: n
   } = e;
-  return (0, l.jsx)(a.TooltipContainer, {
-    className: s()(n, o.root),
+  return (0, i.jsx)(s.TooltipContainer, {
+    className: l()(n, o.root),
     text: t,
     position: "bottom",
-    color: a.TooltipColors.GREY,
-    children: (0, l.jsx)(r.Z, {
-      children: (0, l.jsx)(a.CircleExclamationPointIcon, {
+    color: s.TooltipColors.GREY,
+    children: (0, i.jsx)(r.Z, {
+      children: (0, i.jsx)(s.CircleExclamationPointIcon, {
         size: "custom",
         width: 20,
         height: 20,

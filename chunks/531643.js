@@ -31,7 +31,7 @@ function E(e) {
     icons: E,
     fileSize: I,
     onClose: T
-  } = e, h = (0, u.Dt)(), S = null != E ? E : c.J6;
+  } = e, h = (0, u.Dt)(), f = null != E ? E : c.J6;
   return r ? (0, i.jsx)(l.Z, {
     transitionState: o,
     onClose: T,
@@ -45,7 +45,7 @@ function E(e) {
       children: (0, i.jsxs)("div", {
         className: d.inner,
         children: [(0, i.jsx)(_.Z, {
-          icons: S
+          icons: f
         }), (0, i.jsx)("div", {
           id: h,
           className: d.title,

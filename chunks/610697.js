@@ -3,20 +3,20 @@ n.d(t, {
     return c
   }
 }), n(47120);
-var s = n(470079),
-  i = n(442837),
-  l = n(594174),
-  a = n(823162),
+var i = n(470079),
+  a = n(442837),
+  s = n(594174),
+  l = n(823162),
   r = n(355298);
 let o = new Set(["GB"]);
 
 function c() {
-  let e = (0, i.e7)([r.Z], () => r.Z.getUserCountryCode()),
-    t = !1 === (0, i.e7)([l.default], () => {
+  let e = (0, a.e7)([r.Z], () => r.Z.getUserCountryCode()),
+    t = !1 === (0, a.e7)([s.default], () => {
       var e;
-      return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+      return null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
     });
-  return s.useEffect(() => {
-    null == e && (0, a.hi)()
+  return i.useEffect(() => {
+    null == e && (0, l.hi)()
   }, [e]), !!(null != e && o.has(e.alpha2)) && !!t || !1
 }

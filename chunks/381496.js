@@ -1,13 +1,13 @@
-s.d(t, {
+n.d(t, {
   j: function() {
-    return r
+    return i
   }
 });
-var n = s(544891),
-  a = s(570140),
-  i = s(981631);
-let r = () => n.tn.get({
-  url: i.ANM.GUILD_AFFINITIES,
+var s = n(544891),
+  a = n(570140),
+  r = n(981631);
+let i = () => s.tn.get({
+  url: r.ANM.GUILD_AFFINITIES,
   oldFormErrors: !0
 }).then(e => {
   let {

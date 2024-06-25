@@ -1,11 +1,11 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return r
+    return s
   }
 });
-var a, s, l = t(689938);
+var a, o, l = n(689938);
 
-function r() {
+function s() {
   return [{
     label: l.Z.Messages.IAR_FEEDBACK_PROBLEM_COULD_NOT_FIND,
     code: 2,
@@ -19,4 +19,4 @@ function r() {
     code: 1,
     value: "Other"
   }]
-}(a = s || (s = {})).COULD_NOT_FIND = "I couldn't find what I was looking for", a.CONFUSING_LANGUAGE = "I found the language confusing", a.OTHER = "Other"
+}(a = o || (o = {})).COULD_NOT_FIND = "I couldn't find what I was looking for", a.CONFUSING_LANGUAGE = "I found the language confusing", a.OTHER = "Other"

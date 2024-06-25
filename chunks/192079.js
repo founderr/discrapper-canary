@@ -10,21 +10,21 @@ t.d(e, {
   }
 }), t(724458), t(47120), t(392711);
 var i = t(19780),
-  s = t(5192),
-  l = t(700785),
+  l = t(5192),
+  s = t(700785),
   a = t(427679),
   r = t(157925),
-  u = t(981631),
+  c = t(981631),
   o = t(71080),
-  c = t(689938);
+  u = t(689938);
 
 function d(n, e, t, i) {
-  let l = e[0],
-    a = s.ZP.getName(n, t, l),
+  let s = e[0],
+    a = l.ZP.getName(n, t, s),
     r = null != i ? i : e.length;
-  return 1 === r && null != l ? a : null == l ? c.Z.Messages.SPEAKING_COUNT.format({
+  return 1 === r && null != s ? a : null == s ? u.Z.Messages.SPEAKING_COUNT.format({
     count: r
-  }) : c.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
+  }) : u.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
     name: a,
     count: r - 1
   })
@@ -33,12 +33,12 @@ function d(n, e, t, i) {
 function _(n, e) {
   switch (n) {
     case o.aC.OWNER:
-      return c.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+      return u.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
     case o.aC.ADMINISTRATOR:
-      return c.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+      return u.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
     case o.aC.MEMBER:
     case o.aC.ROLE:
-      return e ? c.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : c.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+      return e ? u.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : u.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
     case o.aC.EMPTY_STATE:
   }
   return null
@@ -51,7 +51,7 @@ function E(n) {
     guild_id: n.guild_id,
     topic: null == e ? void 0 : e.topic,
     media_session_id: i.Z.getMediaSessionId(),
-    request_to_speak_state: l.Uu(u.Plq.REQUEST_TO_SPEAK, n) ? r.BM.EVERYONE : r.BM.NO_ONE,
+    request_to_speak_state: s.Uu(c.Plq.REQUEST_TO_SPEAK, n) ? r.BM.EVERYONE : r.BM.NO_ONE,
     stage_instance_id: null == e ? void 0 : e.id
   }
 }

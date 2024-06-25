@@ -1,27 +1,27 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(132338),
   o = n(105461);
-let c = i.forwardRef(function(e, t) {
+let c = a.forwardRef(function(e, t) {
   let {
     className: n,
-    isBeforeGroup: i = !1,
-    ...s
+    isBeforeGroup: a = !1,
+    ...l
   } = e, {
     children: c
-  } = s;
-  return (0, l.jsx)(r.Z, {
-    ...s,
+  } = l;
+  return (0, i.jsx)(r.Z, {
+    ...l,
     ref: t,
     role: "separator",
     "aria-label": "string" == typeof c ? c : void 0,
-    className: a()(n, {
+    className: s()(n, {
       [o.divider]: !0,
       [o.hasContent]: null != c,
-      [o.beforeGroup]: i
+      [o.beforeGroup]: a
     })
   })
 });
-t.Z = i.memo(c)
+t.Z = a.memo(c)

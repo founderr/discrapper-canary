@@ -1,35 +1,35 @@
 t.r(n), t.d(n, {
   default: function() {
-    return j
+    return b
   }
 }), t(47120), t(653041);
-var s, i, o = t(735250),
-  a = t(470079),
+var a, s, o = t(735250),
+  i = t(470079),
   l = t(149765),
   r = t(442837),
   c = t(704215),
   _ = t(692547),
   I = t(481060),
-  E = t(388905),
-  d = t(434404),
+  d = t(388905),
+  E = t(434404),
   N = t(764260),
   S = t(422559),
   u = t(430824),
   T = t(768581),
   O = t(700785),
-  p = t(645041),
-  m = t(981631),
+  m = t(645041),
+  p = t(981631),
   A = t(921944),
   L = t(135899),
   M = t(689938),
   C = t(894050);
 
-function U(e) {
+function h(e) {
   let {
     guild: n,
-    headerText: s,
-    headerSubtext: i,
-    step: a
+    headerText: a,
+    headerSubtext: s,
+    step: i
   } = e, l = T.ZP.getGuildIconURL({
     id: n.id,
     icon: n.icon,
@@ -47,12 +47,12 @@ function U(e) {
       }) : (0, o.jsx)("div", {
         className: C.acronym,
         children: n.acronym
-      }), 2 === a ? (0, o.jsx)(I.CircleCheckIcon, {
+      }), 2 === i ? (0, o.jsx)(I.CircleCheckIcon, {
         size: "md",
         className: C.greenPing,
         color: _.Z.unsafe_rawColors.GREEN_360.css,
         secondaryColor: _.Z.unsafe_rawColors.WHITE_100.css
-      }) : (0, o.jsx)(E.Ee, {
+      }) : (0, o.jsx)(d.Ee, {
         src: t(173326),
         className: C.redPing
       })]
@@ -61,42 +61,42 @@ function U(e) {
       children: [(0, o.jsx)(I.Heading, {
         variant: "heading-lg/extrabold",
         color: "header-primary",
-        children: s
+        children: a
       }), (0, o.jsx)(I.Text, {
         variant: "text-md/normal",
         color: "header-primary",
-        children: i
+        children: s
       })]
     })]
   })
 }
 
-function h(e) {
+function R(e) {
   let {
     guild: n
   } = e, t = (0, r.e7)([u.Z], () => u.Z.getRole(n.id, n.getEveryoneRoleId()));
   if (null == t) return null;
   let {
-    name: s,
-    color: i
+    name: a,
+    color: s
   } = t;
   return (0, o.jsxs)("span", {
     className: C.roleRow,
     children: [(0, o.jsx)(I.RoleDot, {
       className: C.roleDot,
-      color: i.toString(),
+      color: s.toString(),
       background: !1,
       tooltip: !1
     }), (0, o.jsx)(I.Text, {
       className: C.roleName,
       variant: "text-sm/medium",
       color: "interactive-active",
-      children: s
+      children: a
     })]
   })
-}(i = s || (s = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.SUBMITTING = 1] = "SUBMITTING", i[i.SUBMITTED = 2] = "SUBMITTED";
-let R = e => {
-  if (e.toString() === m.Plq.MENTION_EVERYONE.toString()) return M.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
+}(s = a || (a = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.SUBMITTING = 1] = "SUBMITTING", s[s.SUBMITTED = 2] = "SUBMITTED";
+let U = e => {
+  if (e.toString() === p.Plq.MENTION_EVERYONE.toString()) return M.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
   return (0, S.wt)(e)
 };
 
@@ -121,7 +121,7 @@ function D(e) {
         }), (0, o.jsx)(I.Text, {
           variant: "text-sm/normal",
           color: "text-normal",
-          children: R(e)
+          children: U(e)
         })]
       }, n))
     })]
@@ -149,7 +149,7 @@ function x(e) {
         }), (0, o.jsx)(I.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: R(e)
+          children: U(e)
         })]
       }, n))
     })]
@@ -161,33 +161,33 @@ function f(e) {
     permissions: n,
     step: t
   } = e, {
-    enabledPermissions: s,
-    disabledPermissions: i
+    enabledPermissions: a,
+    disabledPermissions: s
   } = n;
-  return 0 === s.length && 2 !== t ? null : (0, o.jsxs)("div", {
+  return 0 === a.length && 2 !== t ? null : (0, o.jsxs)("div", {
     className: C.table,
     children: [2 !== t ? (0, o.jsx)(D, {
-      permissions: s,
+      permissions: a,
       step: t
     }) : null, (0, o.jsx)(x, {
-      permissions: i,
+      permissions: s,
       step: t
     })]
   })
 }
 
-function v(e) {
+function g(e) {
   let {
     guild: n,
     permissions: t,
-    step: s,
-    canEveryoneModerate: i,
-    isDefaultNotificationsAllMessages: a
+    step: a,
+    canEveryoneModerate: s,
+    isDefaultNotificationsAllMessages: i
   } = e;
   return (0, o.jsx)(I.ModalContent, {
     children: (0, o.jsxs)("div", {
       className: C.updatedForm,
-      children: [a ? (0, o.jsxs)("div", {
+      children: [i ? (0, o.jsxs)("div", {
         className: C.checklistRow,
         children: [(0, o.jsx)(I.CircleCheckIcon, {
           size: "md",
@@ -209,7 +209,7 @@ function v(e) {
             })
           })
         })]
-      }) : null, i ? (0, o.jsxs)("div", {
+      }) : null, s ? (0, o.jsxs)("div", {
         className: C.checklistRow,
         children: [(0, o.jsx)(I.CircleCheckIcon, {
           size: "md",
@@ -219,31 +219,31 @@ function v(e) {
         }), (0, o.jsx)(I.Text, {
           variant: "text-md/normal",
           children: M.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL_UPDATED
-        }), (0, o.jsx)(h, {
+        }), (0, o.jsx)(R, {
           guild: n
         })]
       }) : null, (0, o.jsx)(f, {
         permissions: t,
-        step: s
+        step: a
       })]
     })
   })
 }
 
-function g(e) {
+function v(e) {
   let {
     onConfirm: n,
     onDismiss: t,
-    canEveryoneModerate: s,
-    step: i
+    canEveryoneModerate: a,
+    step: s
   } = e;
   return (0, o.jsxs)(I.ModalFooter, {
     className: C.footer,
     children: [(0, o.jsx)(I.Button, {
       onClick: n,
-      submitting: 1 === i,
-      children: 0 === i ? s ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION : M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION_DONE
-    }), 0 === i ? (0, o.jsx)(I.Button, {
+      submitting: 1 === s,
+      children: 0 === s ? a ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION : M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION_DONE
+    }), 0 === s ? (0, o.jsx)(I.Button, {
       look: I.Button.Looks.LINK,
       onClick: t,
       color: I.Button.Colors.PRIMARY,
@@ -256,18 +256,18 @@ function g(e) {
   })
 }
 
-function j(e) {
+function b(e) {
   let {
     guild: n,
     canEveryoneModerate: t,
-    isDefaultNotificationsAllMessages: s,
-    transitionState: i,
+    isDefaultNotificationsAllMessages: a,
+    transitionState: s,
     onClose: r
-  } = e, [_, E] = a.useState(0), S = a.useMemo(() => {
+  } = e, [_, d] = i.useState(0), S = i.useMemo(() => {
     let e = [],
       t = [];
-    return L.$X.map(s => {
-      O.oz(s, n) ? e.push(s) : t.push(s)
+    return L.$X.map(a => {
+      O.oz(a, n) ? e.push(a) : t.push(a)
     }), {
       enabledPermissions: e,
       disabledPermissions: t
@@ -283,38 +283,38 @@ function j(e) {
         permissions: t
       }])
     },
-    h = () => {
-      d.Z.updateGuild({
-        defaultMessageNotifications: m.bL.ONLY_MENTIONS
-      }), d.Z.saveGuild(n.id, {
-        defaultMessageNotifications: m.bL.ONLY_MENTIONS
+    R = () => {
+      E.Z.updateGuild({
+        defaultMessageNotifications: p.bL.ONLY_MENTIONS
+      }), E.Z.saveGuild(n.id, {
+        defaultMessageNotifications: p.bL.ONLY_MENTIONS
       })
     },
-    R = () => {
-      t && T(), s && h()
+    U = () => {
+      t && T(), a && R()
     };
   return (0, o.jsxs)(I.ModalRoot, {
-    transitionState: i,
+    transitionState: s,
     size: I.ModalSize.SMALL,
     className: C.modal,
-    children: [(0, o.jsx)(U, {
+    children: [(0, o.jsx)(h, {
       guild: n,
       headerText: t ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_HEADER : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_HEADER,
       headerSubtext: t ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_SUBHEADER : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_SUBHEADER,
       step: _
-    }), (0, o.jsx)(v, {
+    }), (0, o.jsx)(g, {
       guild: n,
       permissions: S,
       step: _,
       canEveryoneModerate: t,
-      isDefaultNotificationsAllMessages: s
-    }), (0, o.jsx)(g, {
+      isDefaultNotificationsAllMessages: a
+    }), (0, o.jsx)(v, {
       onConfirm: () => {
-        var e, s;
-        !t && (R(), r(), (0, p.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : "", !0, A.L.PRIMARY)), 0 === _ ? (E(1), setTimeout(() => E(2), 3e3)) : 2 === _ && (R(), r(), (0, p.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : "", !0, A.L.PRIMARY))
+        var e, a;
+        !t && (U(), r(), (0, m.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : "", !0, A.L.PRIMARY)), 0 === _ ? (d(1), setTimeout(() => d(2), 3e3)) : 2 === _ && (U(), r(), (0, m.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : "", !0, A.L.PRIMARY))
       },
       onDismiss: () => {
-        r(), (0, p.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, n.id, !0, A.L.DISMISS)
+        r(), (0, m.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, n.id, !0, A.L.DISMISS)
       },
       step: _,
       canEveryoneModerate: t

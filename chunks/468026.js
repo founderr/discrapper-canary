@@ -17,14 +17,14 @@ t.default = e => {
     body: I,
     cancelText: T,
     className: h,
-    confirmColor: S,
-    confirmText: f = d.Z.Messages.OKAY,
-    secondaryConfirmText: N,
-    onCancel: A,
+    confirmColor: f,
+    confirmText: S = d.Z.Messages.OKAY,
+    secondaryConfirmText: A,
+    onCancel: N,
     onClose: m,
     onConfirm: O,
-    onConfirmSecondary: R,
-    title: p,
+    onConfirmSecondary: p,
+    title: R,
     transitionState: g,
     titleClassName: C
   } = e;
@@ -33,31 +33,31 @@ t.default = e => {
     size: o.zx.Sizes.LARGE,
     color: o.zx.Colors.PRIMARY,
     onClick: () => {
-      null == m || m(), null == A || A()
+      null == m || m(), null == N || N()
     },
     className: E.secondaryButton,
     children: T
-  })), null != f && "" !== f && (n = (0, i.jsx)(o.zx, {
+  })), null != S && "" !== S && (n = (0, i.jsx)(o.zx, {
     type: "submit",
-    color: S,
+    color: f,
     size: o.zx.Sizes.LARGE,
     className: s()(E.primaryButton, null != t ? E.gutter : null),
     autoFocus: !0,
-    children: f
-  })), null != N && "" !== N && (r = (0, i.jsx)(a.P, {
+    children: S
+  })), null != A && "" !== A && (r = (0, i.jsx)(a.P, {
     onClick: () => {
-      null == m || m(), null == R || R()
+      null == m || m(), null == p || p()
     },
     className: E.minorContainer,
     children: (0, i.jsx)(_.x, {
       className: E.secondaryAction,
       variant: "text-xs/normal",
-      children: N
+      children: A
     })
   })), (0, i.jsx)(u.Y0, {
     transitionState: g,
     className: s()(h, E.container),
-    "aria-label": p,
+    "aria-label": R,
     children: (0, i.jsxs)("form", {
       onSubmit: e => {
         null != e && e.preventDefault(), null == m || m(), null == O || O()
@@ -69,10 +69,10 @@ t.default = e => {
           direction: c.Z.Direction.VERTICAL,
           justify: c.Z.Justify.CENTER,
           className: E.content,
-          children: [null != p && (0, i.jsx)(l.v, {
+          children: [null != R && (0, i.jsx)(l.v, {
             tag: "h2",
             className: s()(E.title, C),
-            children: p
+            children: R
           }), null != I && (0, i.jsx)(_.x, {
             variant: "text-md/normal",
             className: E.body,

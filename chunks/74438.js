@@ -1,39 +1,39 @@
 i.r(t), i.d(t, {
   default: function() {
-    return x
+    return f
   }
 });
 var n = i(735250),
-  s = i(470079),
-  a = i(399606),
-  r = i(626135),
-  l = i(894653),
-  o = i(738130),
+  a = i(470079),
+  r = i(399606),
+  o = i(626135),
+  s = i(894653),
+  l = i(738130),
   c = i(132871),
   d = i(961106),
   u = i(62413),
   h = i(603406),
-  m = i(165209),
+  _ = i(165209),
   p = i(981631),
-  _ = i(246125);
+  m = i(246125);
 
-function x() {
+function f() {
   let e = (0, c.useApplicationDirectoryHistory)(e => e.guildId),
-    t = (0, a.e7)([l.Z], () => l.Z.getCategories()),
+    t = (0, r.e7)([s.Z], () => s.Z.getCategories()),
     i = (0, c.getPreviousView)();
-  return s.useEffect(() => {
-    r.default.track(p.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+  return a.useEffect(() => {
+    o.default.track(p.rMx.APP_DIRECTORY_PAGE_VIEWED, {
       current_page: c.ApplicationDirectoryViews.HOME,
       previous_page: null == i ? void 0 : i.type,
       guild_id: e,
       referrer: document.referrer
     })
-  }, [e, i]), (0, n.jsxs)(o.Z, {
+  }, [e, i]), (0, n.jsxs)(l.Z, {
     children: [(0, n.jsx)(h.Z, {}), null != t && t.length > 0 && (0, n.jsx)(d.Z, {
-      className: _.categoryList
+      className: m.categoryList
     }), (0, n.jsx)("main", {
-      className: _.collectionsContainer,
+      className: m.collectionsContainer,
       children: (0, n.jsx)(u.Z, {})
-    }), (0, n.jsx)(m.Z, {})]
+    }), (0, n.jsx)(_.Z, {})]
   })
 }

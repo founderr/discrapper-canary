@@ -9,8 +9,8 @@ t.d(n, {
 var i = t(735250);
 t(470079);
 var r = t(481060),
-  l = t(44315),
-  o = t(377171),
+  o = t(44315),
+  l = t(377171),
   u = t(981631),
   s = t(689938),
   a = t(706751);
@@ -18,8 +18,8 @@ var r = t(481060),
 function c(e) {
   let {
     label: n,
-    backgroundColor: t = o.Z.BUTTON_SECONDARY_BACKGROUND,
-    icon: l,
+    backgroundColor: t = l.Z.BUTTON_SECONDARY_BACKGROUND,
+    icon: o,
     iconColor: u
   } = e;
   return (0, i.jsxs)("div", {
@@ -32,7 +32,7 @@ function c(e) {
       color: "always-white",
       className: a.__invalid_badgeText,
       children: n
-    }), (0, i.jsx)(l, {
+    }), (0, i.jsx)(o, {
       className: a.badgeIcon,
       color: null != u ? u : "currentColor",
       "aria-hidden": !0
@@ -52,6 +52,6 @@ function _() {
   return (0, i.jsx)(c, {
     label: s.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
     icon: r.PencilIcon,
-    iconColor: (0, l.Lq)(u.Ilk.PRIMARY_330)
+    iconColor: (0, o.Lq)(u.Ilk.PRIMARY_330)
   })
 }

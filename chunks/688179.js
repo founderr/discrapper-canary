@@ -3,18 +3,18 @@ n.d(t, {
     return r
   }
 });
-var s = n(806966),
-  i = n(585483),
-  l = n(981631),
-  a = n(957825);
+var i = n(806966),
+  a = n(585483),
+  s = n(981631),
+  l = n(957825);
 
 function r(e) {
   let {
     stickerPack: t,
     stickerPickerCategories: n
   } = e;
-  i.S.dispatchToLastSubscribed(l.CkL.OPEN_EXPRESSION_PICKER, {
-    activeView: a.X1.STICKER
+  a.S.dispatchToLastSubscribed(s.CkL.OPEN_EXPRESSION_PICKER, {
+    activeView: l.X1.STICKER
   });
-  let r = n.findIndex(e => e.id === t.id); - 1 !== r && s.ZN.setActiveCategoryIndex(r)
+  let r = n.findIndex(e => e.id === t.id); - 1 !== r && i.ZN.setActiveCategoryIndex(r)
 }

@@ -10,10 +10,10 @@ var i, r, s, o, a = n(442837),
   I = n(647177);
 let T = !1,
   h = null,
-  S = !1,
-  f = {};
+  f = !1,
+  S = {};
 
-function N(e) {
+function A(e) {
   var t;
   let n = E.default.getCurrentUser();
   if (null == n) return !1;
@@ -21,21 +21,21 @@ function N(e) {
   return null != d.Z.getVoiceChannelId() && c.Z.isVideoEnabled() && null != i
 }
 
-function A() {
-  h !== d.Z.getVoiceChannelId() && (S = !1), N() && (S = !0), h = d.Z.getVoiceChannelId()
+function N() {
+  h !== d.Z.getVoiceChannelId() && (f = !1), A() && (f = !0), h = d.Z.getVoiceChannelId()
 }
 class m extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], A)
+    this.waitFor(_.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], N)
   }
   get videoFilterAssets() {
-    return f
+    return S
   }
   get hasBeenApplied() {
     return T
   }
   get hasUsedBackgroundInCall() {
-    return S
+    return f
   }
 }
 o = "VideoBackgroundStore", (s = "displayName") in(r = m) ? Object.defineProperty(r, s, {
@@ -48,7 +48,7 @@ o = "VideoBackgroundStore", (s = "displayName") in(r = m) ? Object.definePropert
     let {
       assets: t
     } = e;
-    f = t.reduce((e, t) => ({
+    S = t.reduce((e, t) => ({
       ...e,
       [t.id]: t
     }), {})
@@ -57,8 +57,8 @@ o = "VideoBackgroundStore", (s = "displayName") in(r = m) ? Object.definePropert
     let {
       videoFilterAsset: t
     } = e;
-    f = {
-      ...f,
+    S = {
+      ...S,
       [t.id]: t
     }
   },
@@ -66,15 +66,15 @@ o = "VideoBackgroundStore", (s = "displayName") in(r = m) ? Object.definePropert
     let {
       videoFilterAsset: t
     } = e;
-    f = {
-      ...f
-    }, delete f[t.id]
+    S = {
+      ...S
+    }, delete S[t.id]
   },
   VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(e) {
     let {
       backgroundOption: t
     } = e;
-    N(t) && (S = !0)
+    A(t) && (f = !0)
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
     let {

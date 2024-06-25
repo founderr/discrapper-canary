@@ -1,8 +1,8 @@
 t(47120);
 var n = t(735250),
-  s = t(470079),
-  l = t(120356),
-  r = t.n(l),
+  r = t(470079),
+  s = t(120356),
+  l = t.n(s),
   o = t(481060),
   i = t(285952),
   c = t(538298);
@@ -15,7 +15,7 @@ function u(e, a, t) {
     writable: !0
   }) : e[a] = t, e
 }
-class E extends s.PureComponent {
+class d extends r.PureComponent {
   componentDidUpdate(e) {
     if (this.props.formError !== e.formError) this.setState({
       changedSinceError: new Set
@@ -61,43 +61,43 @@ class E extends s.PureComponent {
       let {
         values: a,
         onFieldChange: t,
-        onFieldFocus: s,
-        onFieldBlur: l,
+        onFieldFocus: r,
+        onFieldBlur: s,
         layout: i,
         ...c
       } = this.props, {
         getClassNameForLayout: u,
-        renderInput: E,
-        title: d,
-        name: A,
-        id: _,
-        placeholder: N,
-        ...m
-      } = e, p = {
-        ...m,
-        placeholder: null == N ? void 0 : N(),
+        renderInput: d,
+        title: E,
+        name: _,
+        id: p,
+        placeholder: m,
+        ...A
+      } = e, N = {
+        ...A,
+        placeholder: null == m ? void 0 : m(),
         layout: i,
-        error: this.getError(A),
-        value: a[A],
-        name: A,
-        "aria-labelledby": _,
+        error: this.getError(_),
+        value: a[_],
+        name: _,
+        "aria-labelledby": p,
         onChange: t,
-        onFocus: s,
-        onBlur: l
+        onFocus: r,
+        onBlur: s
       };
       return (0, n.jsx)(o.FormSection, {
-        className: r()(null == u ? void 0 : u(i)),
-        title: d(),
-        titleId: _,
-        children: E(p, c)
-      }, A)
+        className: l()(null == u ? void 0 : u(i)),
+        title: E(),
+        titleId: p,
+        children: d(N, c)
+      }, _)
     }), u(this, "renderFormRow", e => {
       let a = e.fields.map(this.renderFormSection);
       return (0, n.jsx)(i.Z, {
-        className: r()(c.row, e.className),
+        className: l()(c.row, e.className),
         children: a
       }, e.fields.map(e => e.name).join(""))
     })
   }
 }
-a.Z = E
+a.Z = d

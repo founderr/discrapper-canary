@@ -1,6 +1,6 @@
 n.d(t, {
   CR: function() {
-    return E
+    return m
   },
   UU: function() {
     return h
@@ -9,10 +9,10 @@ n.d(t, {
     return d
   }
 }), n(627494), n(757143);
-var l = n(884439),
-  i = n(55e3),
-  s = n(693824),
-  a = n(690725),
+var i = n(884439),
+  a = n(55e3),
+  l = n(693824),
+  s = n(690725),
   r = n(561308),
   o = n(737583),
   c = n(169040),
@@ -28,7 +28,7 @@ let d = e => {
   },
   h = e => {
     var t;
-    let n = null === (t = (0, r.PJ)(e, l.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+    let n = null === (t = (0, r.PJ)(e, i.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     return null == n ? [] : [{
       iconPath: c.eF,
       text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
@@ -36,7 +36,7 @@ let d = e => {
       })
     }]
   },
-  m = e => {
+  p = e => {
     let {
       avatarSrc: t,
       mediaImageSrc: n
@@ -48,21 +48,21 @@ let d = e => {
       }
     }
   },
-  E = async e => {
+  m = async e => {
     let {
       user: t,
       channel: n,
-      mediaImageSrc: l,
+      mediaImageSrc: i,
       artist: r,
       description: d,
       colors: h,
-      badges: E
-    } = e, p = m({
+      badges: m
+    } = e, _ = p({
       avatarSrc: t.getAvatarURL(n.guild_id, 128),
-      mediaImageSrc: l
-    }), g = r.replaceAll(/[^a-zA-Z0-9 ]/g, "").replaceAll(" ", "-");
-    return await (0, a.f)({
-      assetsToLoad: p,
+      mediaImageSrc: i
+    }), f = r.replaceAll(/[^a-zA-Z0-9 ]/g, "").replaceAll(" ", "-");
+    return await (0, s.f)({
+      assetsToLoad: _,
       drawImage: e => {
         (function(e, t) {
           let n = t.map((e, t) => ({
@@ -95,7 +95,7 @@ let d = e => {
             size: 12,
             family: ["gg sans", "sans-serif"],
             weight: 500,
-            truncate: s.GX.None
+            truncate: l.GX.None
           }), e.drawText(u.Z.Messages.BETA, {
             x: c.nx - c.sB - 29,
             y: 26
@@ -109,8 +109,8 @@ let d = e => {
             w: c.Pu,
             h: c.Pu
           }, 8, {
-            fillMode: s.JU.Contain
-          }) === s.vP.Failure && e.drawPath(i.Cv, {
+            fillMode: l.JU.Contain
+          }) === l.vP.Failure && e.drawPath(a.Cv, {
             x: c.sB,
             y: c.sB
           }, !0, 2 + 2 / 3)
@@ -127,7 +127,7 @@ let d = e => {
         function(e, t) {
           e.setColor("white"), e.setFont({
             size: 16,
-            truncate: s.GX.Wrap
+            truncate: l.GX.Wrap
           }), e.drawText(t, {
             x: c.Iq,
             y: 64,
@@ -136,15 +136,15 @@ let d = e => {
           }, !0)
         }(e, d), (0, o.J)({
           canvas: e,
-          badges: E,
+          badges: m,
           startPosition: c.Iq,
           maxWidth: c.kC
         })
       },
       exportConfigs: {
-        format: s.kH.CloudUpload,
+        format: l.kH.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(g, ".png").toLowerCase(),
+        fileName: "user-reacting-to-".concat(f, ".png").toLowerCase(),
         fileType: "png",
         channelId: n.id
       }

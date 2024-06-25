@@ -3,29 +3,29 @@ n.d(t, {
     return d
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(481060),
-  r = n(460562),
-  a = n(768581),
+var i = n(735250),
+  l = n(470079),
+  r = n(481060),
+  a = n(460562),
+  s = n(768581),
   o = n(682662),
-  u = n(662146),
-  c = n(459458);
+  c = n(662146),
+  u = n(459458);
 
 function d(e) {
-  let [t, d] = i.useState(!1);
-  return (0, l.jsx)(o.H, {
-    children: (0, l.jsx)(u.Z, {
+  let [t, d] = l.useState(!1);
+  return (0, i.jsx)(o.H, {
+    children: (0, i.jsx)(c.Z, {
       text: e.name,
-      children: (0, l.jsx)(s.BlobMask, {
-        className: c.circleIconButton,
+      children: (0, i.jsx)(r.BlobMask, {
+        className: u.circleIconButton,
         selected: t,
-        lowerBadge: (0, l.jsx)(s.IconBadge, {
-          icon: (0, s.makeIconCompat)(r.Z),
+        lowerBadge: (0, i.jsx)(r.IconBadge, {
+          icon: (0, r.makeIconCompat)(a.Z),
           disableColor: !0,
-          className: c.geoRestrictedBadge
+          className: u.geoRestrictedBadge
         }),
-        children: (0, l.jsx)(s.NavItem, {
+        children: (0, i.jsx)(r.NavItem, {
           name: e.name,
           onMouseEnter: () => {
             d(!0)
@@ -34,18 +34,18 @@ function d(e) {
             d(!1)
           },
           onClick: () => {
-            (0, s.openModalLazy)(async () => {
+            (0, r.openModalLazy)(async () => {
               let {
                 default: t
               } = await n.e("42358").then(n.bind(n, 210995));
-              return n => (0, l.jsx)(t, {
+              return n => (0, i.jsx)(t, {
                 name: e.name,
                 guildId: e.id,
                 ...n
               })
             })
           },
-          icon: null != e.icon ? a.ZP.getGuildIconURL({
+          icon: null != e.icon ? s.ZP.getGuildIconURL({
             id: e.id,
             icon: e.icon,
             canAnimate: !1,

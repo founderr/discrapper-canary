@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
   container: "container_a5828d",
   content: "content_a5828d",
   iconBackground: "iconBackground_a5828d",

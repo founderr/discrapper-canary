@@ -1,58 +1,58 @@
-i.d(e, {
+i.d(n, {
   Z: function() {
     return o
   }
 });
 var l = i(735250);
 i(470079);
-var t = i(120356),
-  a = i.n(t),
-  r = i(481060),
-  s = i(689938),
+var a = i(120356),
+  t = i.n(a),
+  s = i(481060),
+  r = i(689938),
   c = i(710208);
 
-function o(n) {
+function o(e) {
   let {
-    guild: e,
+    guild: n,
     speakers: i,
-    speakerCount: t,
+    speakerCount: a,
     className: o
-  } = n, u = i.slice(0, 5), d = u.map(n => {
-    var i, t;
+  } = e, u = i.slice(0, 5), d = u.map(e => {
+    var i, a;
     return (0, l.jsxs)("div", {
       className: c.speakerContainer,
-      children: [(0, l.jsx)(r.Avatar, {
-        src: null == n ? void 0 : null === (i = n.user) || void 0 === i ? void 0 : i.getAvatarURL(e.id, 20),
-        size: r.AvatarSizes.SIZE_20,
+      children: [(0, l.jsx)(s.Avatar, {
+        src: null == e ? void 0 : null === (i = e.user) || void 0 === i ? void 0 : i.getAvatarURL(n.id, 20),
+        size: s.AvatarSizes.SIZE_20,
         className: c.avatar,
-        "aria-label": "".concat(null == n ? void 0 : n.userNick, "-avatar")
+        "aria-label": "".concat(null == e ? void 0 : e.userNick, "-avatar")
       }), (0, l.jsx)("div", {
         className: c.textInGridContainer,
-        children: (0, l.jsx)(r.Text, {
+        children: (0, l.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
           className: c.textInGrid,
-          children: null == n ? void 0 : n.userNick
+          children: null == e ? void 0 : e.userNick
         })
       })]
-    }, null == n ? void 0 : null === (t = n.user) || void 0 === t ? void 0 : t.id)
-  }), h = t - u.length;
+    }, null == e ? void 0 : null === (a = e.user) || void 0 === a ? void 0 : a.id)
+  }), h = a - u.length;
   return (0, l.jsxs)("div", {
-    className: a()(c.grid, o),
+    className: t()(c.grid, o),
     children: [d, h > 0 && (0, l.jsxs)("div", {
       className: c.speakerContainer,
       children: [(0, l.jsx)("div", {
         className: c.iconMicrophone,
-        children: (0, l.jsx)(r.MicrophoneIcon, {
+        children: (0, l.jsx)(s.MicrophoneIcon, {
           size: "custom",
           color: "currentColor",
           height: 12
         })
-      }), (0, l.jsx)(r.Text, {
+      }), (0, l.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         className: c.textInGrid,
-        children: s.Z.Messages.STAGE_DISCOVERY_LIVE_STAGE_TILE_SPEAKER_SUMMARY_OVERFLOW.format({
+        children: r.Z.Messages.STAGE_DISCOVERY_LIVE_STAGE_TILE_SPEAKER_SUMMARY_OVERFLOW.format({
           count: h
         })
       })]

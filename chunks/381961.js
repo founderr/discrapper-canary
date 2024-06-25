@@ -1,9 +1,9 @@
 n.d(t, {
   u: function() {
-    return s
+    return i
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_app_storefront_message_embeds",
   label: "Storefront Message Embed",

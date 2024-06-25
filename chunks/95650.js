@@ -1,52 +1,52 @@
-i.d(n, {
+t.d(n, {
   U: function() {
-    return P
+    return x
   }
 });
-var t = i(735250),
-  l = i(470079),
-  a = i(120356),
-  s = i.n(a),
-  r = i(442837),
-  o = i(481060),
-  c = i(765717),
-  d = i(283836),
-  u = i(507608),
-  p = i(147496),
-  _ = i(519896),
-  m = i(270144),
-  I = i(171246),
-  h = i(55563),
-  g = i(147890),
-  E = i(272242),
-  A = i(981631),
-  v = i(689938),
-  R = i(580954);
+var i = t(735250),
+  a = t(470079),
+  r = t(120356),
+  o = t.n(r),
+  l = t(442837),
+  s = t(481060),
+  c = t(765717),
+  d = t(283836),
+  u = t(507608),
+  _ = t(147496),
+  p = t(519896),
+  m = t(270144),
+  I = t(171246),
+  f = t(55563),
+  g = t(147890),
+  h = t(272242),
+  C = t(981631),
+  v = t(689938),
+  E = t(580954);
 
-function P(e) {
+function x(e) {
   let {
     appId: n,
-    guildId: i
+    guildId: t
   } = e, {
-    subscriptionGroupListing: l
-  } = (0, m.F5)(n, i), {
-    subs: a,
-    otps: r
-  } = (0, d.q)(n, i);
-  return (0, t.jsxs)(t.Fragment, {
-    children: [a.length > 0 && null != l && (0, t.jsxs)("div", {
-      className: R.productSection,
-      children: [(0, t.jsx)(o.Heading, {
+    subscriptionGroupListing: a
+  } = (0, m.F5)(n, t), {
+    subs: r,
+    otps: l
+  } = (0, d.q)(n, t);
+  return (0, i.jsxs)(i.Fragment, {
+    children: [r.length > 0 && null != a && (0, i.jsxs)("div", {
+      className: E.productSection,
+      children: [(0, i.jsx)(s.Heading, {
         variant: "heading-lg/semibold",
         children: v.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
-      }), (0, t.jsx)("div", {
-        className: s()(R.productList, R.subList),
-        children: a.map(e => (0, t.jsx)(u.zz, {
+      }), (0, i.jsx)("div", {
+        className: o()(E.productList, E.subList),
+        children: r.map(e => (0, i.jsx)(u.zz, {
           appId: n,
-          groupListingId: l.id,
-          guildId: i,
+          groupListingId: a.id,
+          guildId: t,
           listing: e,
-          groupListingType: (0, I.KW)(l.sku_flags) ? "user" : "guild",
+          groupListingType: (0, I.KW)(a.sku_flags) ? "user" : "guild",
           onDetails: () => {
             (0, g.goToApplicationStoreSku)({
               applicationId: n,
@@ -55,14 +55,14 @@ function P(e) {
           }
         }, e.id))
       })]
-    }), r.length > 0 && (0, t.jsxs)("div", {
-      className: R.productSection,
-      children: [(0, t.jsx)(o.Heading, {
+    }), l.length > 0 && (0, i.jsxs)("div", {
+      className: E.productSection,
+      children: [(0, i.jsx)(s.Heading, {
         variant: "heading-lg/semibold",
         children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
-      }), (0, t.jsx)("div", {
-        className: s()(R.productList, R.itemList),
-        children: r.map(e => (0, t.jsx)(u.hd, {
+      }), (0, i.jsx)("div", {
+        className: o()(E.productList, E.itemList),
+        children: l.map(e => (0, i.jsx)(u.hd, {
           skuId: e.sku.id,
           appId: n,
           onDetails: () => {
@@ -73,89 +73,89 @@ function P(e) {
           }
         }, e.id))
       })]
-    }), (0, t.jsx)(c.Z, {
-      path: A.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(":applicationId", ":skuId"),
+    }), (0, i.jsx)(c.Z, {
+      path: C.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(":applicationId", ":skuId"),
       exact: !0,
-      render: e => (0, t.jsx)(C, {
+      render: e => (0, i.jsx)(b, {
         ...e,
-        subscriptionGroupListing: null != l ? l : void 0
+        subscriptionGroupListing: null != a ? a : void 0
       })
     })]
   })
 }
 
-function C(e) {
+function b(e) {
   let {
     match: {
       params: {
         applicationId: n,
-        skuId: i
+        skuId: t
       }
     },
-    subscriptionGroupListing: a
-  } = e, s = (0, r.e7)([h.Z], () => h.Z.get(i), [i]), c = l.useId();
-  return l.useLayoutEffect(() => {
-    if (null != s) switch (s.type) {
-      case A.epS.CONSUMABLE:
-      case A.epS.DURABLE:
-        return function(e, n, i) {
-          (0, o.openModal)(e => {
+    subscriptionGroupListing: r
+  } = e, o = (0, l.e7)([f.Z], () => f.Z.get(t), [t]), c = a.useId();
+  return a.useLayoutEffect(() => {
+    if (null != o) switch (o.type) {
+      case C.epS.CONSUMABLE:
+      case C.epS.DURABLE:
+        return function(e, n, t) {
+          (0, s.openModal)(e => {
             let {
-              onClose: l,
-              transitionState: a
+              onClose: a,
+              transitionState: r
             } = e;
-            return (0, t.jsx)(p.ItemDetailsModal, {
+            return (0, i.jsx)(_.ItemDetailsModal, {
               appId: n,
-              skuId: i,
-              onClose: l,
-              transitionState: a
+              skuId: t,
+              onClose: a,
+              transitionState: r
             })
           }, {
             modalKey: e,
             onCloseCallback() {
-              !T() && (0, g.goToApplicationSection)({
+              !A() && (0, g.goToApplicationSection)({
                 applicationId: n,
-                section: E.ApplicationDirectoryProfileSections.STORE
+                section: h.ApplicationDirectoryProfileSections.STORE
               })
             }
           })
-        }(c, n, i);
-      case A.epS.SUBSCRIPTION: {
+        }(c, n, t);
+      case C.epS.SUBSCRIPTION: {
         var e;
+        if (null == r) return;
+        let a = null === (e = r.subscription_listings) || void 0 === e ? void 0 : e.find(e => e.id === t);
         if (null == a) return;
-        let l = null === (e = a.subscription_listings) || void 0 === e ? void 0 : e.find(e => e.id === i);
-        if (null == l) return;
-        return function(e, n, i, l) {
-          (0, o.openModal)(e => {
+        return function(e, n, t, a) {
+          (0, s.openModal)(e => {
             let {
-              onClose: a,
-              transitionState: s
+              onClose: r,
+              transitionState: o
             } = e;
-            return (0, t.jsx)(_.SubscriptionDetailsModal, {
+            return (0, i.jsx)(p.SubscriptionDetailsModal, {
               appId: n,
-              groupListingId: i.id,
-              groupListingType: (0, I.KW)(i.sku_flags) ? "user" : "guild",
-              skuId: l.id,
-              onClose: a,
-              transitionState: s
+              groupListingId: t.id,
+              groupListingType: (0, I.KW)(t.sku_flags) ? "user" : "guild",
+              skuId: a.id,
+              onClose: r,
+              transitionState: o
             })
           }, {
             modalKey: e,
             onCloseCallback() {
-              !T() && (0, g.goToApplicationSection)({
+              !A() && (0, g.goToApplicationSection)({
                 applicationId: n,
-                section: E.ApplicationDirectoryProfileSections.STORE
+                section: h.ApplicationDirectoryProfileSections.STORE
               })
             }
           })
-        }(c, n, a, l)
+        }(c, n, r, a)
       }
     }
-  }, [n, c, s, i, a]), l.useLayoutEffect(() => () => {
-    (0, o.closeModal)(c)
+  }, [n, c, o, t, r]), a.useLayoutEffect(() => () => {
+    (0, s.closeModal)(c)
   }, [c]), null
 }
 
-function T() {
+function A() {
   return window.location.pathname.startsWith("/login")
 }

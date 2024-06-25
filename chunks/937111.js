@@ -31,7 +31,7 @@ function h(e) {
   }
 }
 
-function S(e) {
+function f(e) {
   let {
     guildId: t,
     request: n
@@ -42,7 +42,7 @@ function S(e) {
   if (null != r && i.userId !== r.id) return !1;
   (0, c.d3)(i) ? delete E[t]: E[t] = i
 }
-class f extends(o = a.ZP.Store) {
+class S extends(o = a.ZP.Store) {
   getRequest(e) {
     return E[e]
   }
@@ -59,12 +59,12 @@ class f extends(o = a.ZP.Store) {
     return d
   }
 }
-s = "UserGuildJoinRequestStore", (r = "displayName") in(i = f) ? Object.defineProperty(i, r, {
+s = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new f(l.Z, {
+}) : i[r] = s, t.Z = new S(l.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
@@ -76,8 +76,8 @@ s = "UserGuildJoinRequestStore", (r = "displayName") in(i = f) ? Object.definePr
       null != t && (E[t] = h(e))
     })
   },
-  GUILD_JOIN_REQUEST_UPDATE: S,
-  GUILD_JOIN_REQUEST_CREATE: S,
+  GUILD_JOIN_REQUEST_UPDATE: f,
+  GUILD_JOIN_REQUEST_CREATE: f,
   USER_GUILD_JOIN_REQUEST_UPDATE: function(e) {
     let {
       request: t,

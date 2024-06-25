@@ -1,6 +1,6 @@
 n.d(t, {
   XB: function() {
-    return l
+    return s
   },
   ZP: function() {
     return r
@@ -9,16 +9,16 @@ n.d(t, {
     return o
   }
 });
-var s = n(726542),
-  i = n(973616);
-let l = "spotify",
-  a = s.Z.get(l);
-class r extends i.Z {
+var i = n(726542),
+  a = n(973616);
+let s = "spotify",
+  l = i.Z.get(s);
+class r extends a.Z {
   getIconURL(e) {
-    return a.icon.lightPNG
+    return l.icon.lightPNG
   }
   constructor() {
-    super({}), this.id = l, this.name = a.name
+    super({}), this.id = s, this.name = l.name
   }
 }
 let o = new r

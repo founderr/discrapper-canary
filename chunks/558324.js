@@ -1,63 +1,63 @@
 "use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(481060),
-  o = t(981631),
-  c = t(432359);
-s.Z = e => {
+n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(481060),
+  o = n(981631),
+  c = n(432359);
+t.Z = e => {
   let {
-    className: s,
-    tags: t,
-    value: l,
+    className: t,
+    tags: n,
+    value: i,
     onRemoveTag: d,
     onAddTag: u,
-    maxTaxLength: E,
-    maxTags: _,
+    maxTaxLength: _,
+    maxTags: E,
     disabled: I,
     placeholder: T,
-    ...N
-  } = e, [m, S] = i.useState(null != l ? l : ""), h = t.map((e, s) => (0, n.jsxs)("span", {
-    className: a()(c.tag, {
+    ...m
+  } = e, [N, S] = a.useState(null != i ? i : ""), h = n.map((e, t) => (0, s.jsxs)("span", {
+    className: r()(c.tag, {
       [c.__invalid_disabledTag]: I
     }),
-    children: [e, !I && (0, n.jsx)(r.Clickable, {
+    children: [e, !I && (0, s.jsx)(l.Clickable, {
       className: c.closeWrapper,
-      onClick: () => d(s),
-      children: (0, n.jsx)(r.CloseSmallIcon, {
+      onClick: () => d(t),
+      children: (0, s.jsx)(l.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
         className: c.close
       })
     })]
-  }, s)), g = i.useCallback(() => {
-    let e = m.trim();
-    if (0 !== e.length)(null == _ || !(t.length >= _)) && (u(e), S(""))
-  }, [m, _, u, t.length]), C = i.useCallback(e => {
+  }, t)), g = a.useCallback(() => {
+    let e = N.trim();
+    if (0 !== e.length)(null == E || !(n.length >= E)) && (u(e), S(""))
+  }, [N, E, u, n.length]), C = a.useCallback(e => {
     switch (e.keyCode) {
       case o.yXg.BACKSPACE:
-        0 === m.length && t.length > 0 && (e.preventDefault(), e.stopPropagation(), d(t.length - 1));
+        0 === N.length && n.length > 0 && (e.preventDefault(), e.stopPropagation(), d(n.length - 1));
         break;
       case o.yXg.ENTER:
       case o.yXg.TAB:
       case o.yXg.COMMA:
         e.preventDefault(), e.stopPropagation(), g()
     }
-  }, [g, m.length, d, t.length]);
-  return (0, n.jsxs)("div", {
-    className: a()(s, c.inputWrapper, {
+  }, [g, N.length, d, n.length]);
+  return (0, s.jsxs)("div", {
+    className: r()(t, c.inputWrapper, {
       [c.disabled]: I
     }),
-    children: [h, (0, n.jsx)(r.TextInput, {
+    children: [h, (0, s.jsx)(l.TextInput, {
       className: c.inputOuter,
       inputClassName: c.inputInner,
-      ...N,
-      value: m,
+      ...m,
+      value: N,
       onKeyDown: C,
       onChange: S,
-      maxLength: E,
+      maxLength: _,
       disabled: I,
       onBlur: g,
       placeholder: T

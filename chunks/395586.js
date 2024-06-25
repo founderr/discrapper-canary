@@ -1,32 +1,32 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   AL: function() {
     return o
   },
   f3: function() {
-    return r
+    return l
   }
-}), t(411104);
-var n = t(735250),
-  i = t(470079),
-  l = t(674180);
-let a = i.createContext(void 0);
+}), n(411104);
+var s = n(735250),
+  a = n(470079),
+  i = n(674180);
+let r = a.createContext(void 0);
 
-function r() {
-  let e = i.useContext(a);
+function l() {
+  let e = a.useContext(r);
   if (null == e) throw Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
   return e
 }
 
 function o(e) {
   let {
-    guildId: s,
-    children: t
+    guildId: t,
+    children: n
   } = e, {
-    shouldRestrictUpdatingCreatorMonetizationSettings: i
-  } = (0, l.gX)(s);
-  return (0, n.jsx)(a.Provider, {
-    value: i,
-    children: t
+    shouldRestrictUpdatingCreatorMonetizationSettings: a
+  } = (0, i.gX)(t);
+  return (0, s.jsx)(r.Provider, {
+    value: a,
+    children: n
   })
 }

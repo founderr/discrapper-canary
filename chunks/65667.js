@@ -1,89 +1,89 @@
 n.d(t, {
   Z: function() {
-    return m
+    return T
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  l = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  s = n.n(a),
+  l = n(481060),
   r = n(739566),
   o = n(467679),
   c = n(778947),
-  u = n(702346),
-  d = n(787374),
-  E = n(981631),
-  _ = n(674563),
+  d = n(702346),
+  u = n(787374),
+  _ = n(981631),
+  E = n(674563),
   I = n(689938),
-  T = n(923255);
+  m = n(923255);
 
-function m(e) {
+function T(e) {
   let {
     message: t,
     compact: n,
-    usernameHook: i
-  } = e, m = (0, r.ZP)(t), N = i(m), {
-    avatarSrc: h,
+    usernameHook: a
+  } = e, T = (0, r.ZP)(t), h = a(T), {
+    avatarSrc: N,
     eventHandlers: {
-      onMouseEnter: C,
-      onMouseLeave: S
+      onMouseEnter: f,
+      onMouseLeave: p
     }
-  } = (0, d.m)(!0), A = "" !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
+  } = (0, u.m)(!0), C = "" !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
     hour: "numeric",
     minute: "2-digit",
     month: "2-digit",
     day: "2-digit",
     year: "numeric"
   }) : "";
-  return (0, s.jsx)("div", {
-    onMouseEnter: C,
-    onMouseLeave: S,
-    children: (0, s.jsx)(u.Z, {
-      className: l()(T.mainContainer, {
-        [T.compact]: n
+  return (0, i.jsx)("div", {
+    onMouseEnter: f,
+    onMouseLeave: p,
+    children: (0, i.jsx)(d.Z, {
+      className: s()(m.mainContainer, {
+        [m.compact]: n
       }),
-      iconNode: n ? null : (0, s.jsx)(d.S, {
-        src: h
+      iconNode: n ? null : (0, i.jsx)(u.S, {
+        src: N
       }),
-      iconContainerClassName: T.iconContainer,
+      iconContainerClassName: m.iconContainer,
       compact: n,
-      children: (0, s.jsxs)("div", {
-        className: l()(T.content, {
-          [T.compact]: n
+      children: (0, i.jsxs)("div", {
+        className: s()(m.content, {
+          [m.compact]: n
         }),
-        children: [(0, s.jsx)(c.nD, {
+        children: [(0, i.jsx)(c.nD, {
           message: t,
-          messageClassname: T.spanCorrection,
-          className: l()(T.usernameContainer, T.spanCorrection, {
-            [T.compact]: n
+          messageClassname: m.spanCorrection,
+          className: s()(m.usernameContainer, m.spanCorrection, {
+            [m.compact]: n
           }),
-          username: (0, s.jsxs)("div", {
-            className: T.spanCorrection,
-            children: [(0, s.jsx)(a.Text, {
+          username: (0, i.jsxs)("div", {
+            className: m.spanCorrection,
+            children: [(0, i.jsx)(l.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: T.username,
+              className: m.username,
               children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
-            }), (0, s.jsx)(o.Z, {
-              type: _.Hb.SYSTEM_DM,
-              className: T.systemTag
+            }), (0, i.jsx)(o.Z, {
+              type: E.Hb.SYSTEM_DM,
+              className: m.systemTag
             })]
           }),
           compact: n,
           showTimestamp: !0
-        }), (0, s.jsx)("div", {
-          className: l()(T.__invalid_messageContent, {
-            [T.compact]: n
+        }), (0, i.jsx)("div", {
+          className: s()(m.__invalid_messageContent, {
+            [m.compact]: n
           }),
-          children: t.type === E.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-            username: m.nick,
-            usernameHook: N,
-            time: A
+          children: t.type === _.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+            username: T.nick,
+            usernameHook: h,
+            time: C
           }) : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-            username: m.nick,
-            usernameHook: N
+            username: T.nick,
+            usernameHook: h
           })
         })]
       })

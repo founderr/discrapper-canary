@@ -2,106 +2,106 @@ a.r(s), a(47120);
 var o = a(735250),
   t = a(470079),
   r = a(481060),
-  l = a(985002),
-  n = a(880257),
-  c = a(198952),
-  N = a(329242),
-  i = a(689938),
-  C = a(147817);
+  n = a(985002),
+  c = a(880257),
+  l = a(198952),
+  i = a(329242),
+  _ = a(689938),
+  N = a(147817);
 s.default = e => {
   let {
     currentUser: s,
     otherUser: a,
-    transitionState: E,
-    onClose: _
-  } = e, d = t.useCallback(() => {
-    _()
-  }, [_]), I = (0, n.Z)(), [T, L] = t.useState(!1), [h, u] = t.useState(!1), M = t.useCallback(() => {
-    u(!0), L(!1)
+    transitionState: d,
+    onClose: C
+  } = e, E = t.useCallback(() => {
+    C()
+  }, [C]), I = (0, c.Z)(), [h, x] = t.useState(!1), [T, L] = t.useState(!1), u = t.useCallback(() => {
+    L(!0), x(!1)
   }, []), {
-    disconnectLinkRequest: x,
-    isDisconnectLoading: A
-  } = (0, l.G)({
-    onSuccess: d,
-    onError: M
+    disconnectLinkRequest: M,
+    isDisconnectLoading: b
+  } = (0, n.G)({
+    onSuccess: E,
+    onError: u
   });
   return (0, o.jsx)(r.ModalRoot, {
-    transitionState: E,
+    transitionState: d,
     children: (0, o.jsxs)("form", {
       onSubmit: e => {
-        e.preventDefault(), x(a)
+        e.preventDefault(), M(a)
       },
-      children: [h ? (0, o.jsx)(r.FormErrorBlock, {
-        className: C.error,
-        children: i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_ERROR
+      children: [T ? (0, o.jsx)(r.FormErrorBlock, {
+        className: N.error,
+        children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_ERROR
       }) : null, (0, o.jsxs)(r.ModalContent, {
         children: [(0, o.jsxs)("div", {
-          className: C.header,
-          children: [(0, o.jsx)(c.Z, {
+          className: N.header,
+          children: [(0, o.jsx)(l.Z, {
             currentUser: s,
             otherUser: a,
             children: (0, o.jsx)(r.CloseSmallIcon, {
               size: "md",
               color: "currentColor",
-              className: C.closeIcon
+              className: N.closeIcon
             })
           }), (0, o.jsx)(r.Heading, {
-            className: C.headerText,
+            className: N.headerText,
             variant: "text-lg/bold",
-            children: i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_TITLE.format({
+            children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_TITLE.format({
               isAdult: I
             })
-          }), (0, o.jsx)(N.Z, {
+          }), (0, o.jsx)(i.Z, {
             user: a,
             fill: !0
           })]
         }), (0, o.jsxs)("div", {
-          className: C.content,
+          className: N.content,
           children: [(0, o.jsx)(r.Text, {
-            className: C.noticeHeader,
+            className: N.noticeHeader,
             variant: "eyebrow",
             color: "header-primary",
-            children: i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_HEADER
+            children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_HEADER
           }), (0, o.jsx)(r.Text, {
             variant: "text-sm/normal",
             color: "header-secondary",
-            children: I ? i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_PARENT : i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_TEEN
+            children: I ? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_PARENT : _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_TEEN
           })]
         }), (0, o.jsx)(r.Checkbox, {
-          className: C.acknowledgementCheckbox,
+          className: N.acknowledgementCheckbox,
           type: r.Checkbox.Types.INVERTED,
-          value: T,
+          value: h,
           onChange: (e, s) => {
-            L(s), u(!1)
+            x(s), L(!1)
           },
           children: (0, o.jsx)("div", {
-            className: C.checkboxLabel,
+            className: N.checkboxLabel,
             children: (0, o.jsx)(r.Text, {
               variant: "text-xs/semibold",
-              children: I ? i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_PARENT : i.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_TEEN
+              children: I ? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_PARENT : _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_TEEN
             })
           })
         })]
       }), (0, o.jsx)(r.ModalFooter, {
         children: (0, o.jsxs)("div", {
-          className: C.footer,
+          className: N.footer,
           children: [(0, o.jsx)(r.Button, {
-            className: C.button,
+            className: N.button,
             type: "button",
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.PRIMARY,
-            onClick: _,
+            onClick: C,
             size: r.Button.Sizes.SMALL,
-            disabled: A,
-            children: i.Z.Messages.CANCEL
+            disabled: b,
+            children: _.Z.Messages.CANCEL
           }), (0, o.jsx)(r.Button, {
-            className: C.button,
+            className: N.button,
             type: "submit",
-            disabled: !T || A,
-            submitting: A,
+            disabled: !h || b,
+            submitting: b,
             color: r.ButtonColors.RED,
             size: r.Button.Sizes.SMALL,
-            children: i.Z.Messages.FAMILY_CENTER_DISCONNECT_BUTTON
+            children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_BUTTON
           })]
         })
       })]

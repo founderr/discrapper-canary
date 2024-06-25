@@ -3,11 +3,11 @@ n.d(t, {
     return c
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(110255),
-  a = n(64247),
+var a = n(481060),
+  s = n(110255),
+  l = n(64247),
   r = n(981631),
   o = n(689938);
 
@@ -15,16 +15,16 @@ function c(e) {
   let {
     channel: t
   } = e;
-  return (0, s.jsx)(i.Popout, {
+  return (0, i.jsx)(a.Popout, {
     align: "right",
-    animation: i.Popout.Animation.NONE,
+    animation: a.Popout.Animation.NONE,
     position: "bottom",
-    renderPopout: e => t.isThread() ? (0, s.jsx)(a.Z, {
+    renderPopout: e => t.isThread() ? (0, i.jsx)(l.Z, {
       ...e,
       channel: t,
       navId: "recents-thread-notifications",
       label: o.Z.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL
-    }) : (0, s.jsx)(l.Z, {
+    }) : (0, i.jsx)(s.Z, {
       ...e,
       channel: t,
       navId: "recents-notifications",
@@ -38,10 +38,10 @@ function c(e) {
       let {
         onClick: t
       } = e;
-      return (0, s.jsx)(i.CircleIconButton, {
+      return (0, i.jsx)(a.CircleIconButton, {
         tooltip: o.Z.Messages.NOTIFICATION_SETTINGS,
-        color: i.CircleIconButtonColors.TERTIARY,
-        icon: (0, s.jsx)(i.BellIcon, {
+        color: a.CircleIconButtonColors.TERTIARY,
+        icon: (0, i.jsx)(a.BellIcon, {
           size: "xs",
           color: "currentColor"
         }),

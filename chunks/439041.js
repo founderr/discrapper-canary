@@ -1,8 +1,8 @@
-var n, s, l, r, o = t(442837),
+var n, r, s, l, o = t(442837),
   i = t(570140);
 let c = null,
   u = null;
-class E extends(r = o.ZP.Store) {
+class d extends(l = o.ZP.Store) {
   get client() {
     return c
   }
@@ -10,13 +10,13 @@ class E extends(r = o.ZP.Store) {
     return u
   }
 }
-l = "AdyenStore", (s = "displayName") in(n = E) ? Object.defineProperty(n, s, {
-  value: l,
+s = "AdyenStore", (r = "displayName") in(n = d) ? Object.defineProperty(n, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[s] = l;
-let d = new E(i.Z, {
+}) : n[r] = s;
+let E = new d(i.Z, {
   ADYEN_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: a
@@ -33,4 +33,4 @@ let d = new E(i.Z, {
     u = a
   }
 });
-a.Z = d
+a.Z = E

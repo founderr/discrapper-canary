@@ -1,29 +1,29 @@
-s.d(t, {
+a.d(t, {
   Z: function() {
     return u
   }
 });
-var a = s(913527),
-  n = s.n(a),
-  l = s(695346),
-  o = s(626135),
-  i = s(337953),
-  r = s(981631);
+var s = a(913527),
+  n = a.n(s),
+  l = a(695346),
+  o = a(626135),
+  r = a(337953),
+  i = a(981631);
 
-function u(e, t, s, a) {
+function u(e, t, a, s) {
   let u = e.trim();
   if (u.length > 0 || null != t) {
-    var c;
+    var d;
     l.Ok.updateSetting({
       text: u.length > 0 ? u : "",
-      expiresAtMs: null != s ? String(n()().add((0, i.Z)(s), "ms").toDate().getTime()) : "0",
+      expiresAtMs: null != a ? String(n()().add((0, r.Z)(a), "ms").toDate().getTime()) : "0",
       emojiId: null != t && null != t.id ? t.id : "0",
       emojiName: null != t ? t.name : ""
-    }), o.default.track(r.rMx.CUSTOM_STATUS_UPDATED, {
-      location: null != a ? a.location : null,
-      emoji_type: null == (c = t) ? null : null != c.id ? "custom" : "unicode",
+    }), o.default.track(i.rMx.CUSTOM_STATUS_UPDATED, {
+      location: null != s ? s.location : null,
+      emoji_type: null == (d = t) ? null : null != d.id ? "custom" : "unicode",
       text_len: u.length,
-      clear_after: null != s ? "".concat(s) : null
+      clear_after: null != a ? "".concat(a) : null
     })
   } else l.Ok.updateSetting(void 0)
 }

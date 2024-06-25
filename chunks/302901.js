@@ -4,19 +4,19 @@ n.d(t, {
     return I
   },
   Xv: function() {
-    return N
+    return A
   },
   li: function() {
     return T
   },
   mh: function() {
-    return f
+    return S
   },
   px: function() {
     return h
   },
   wL: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(735250),
@@ -76,11 +76,11 @@ let h = e => {
   })
 };
 
-function S(e) {
+function f(e) {
   let t = (0, c.Z)(e, d.layerContainer);
   return l()(null != t, "Unexpected missing parent container"), t
 }
-let f = e => {
+let S = e => {
   let {
     layerContext: t,
     children: n
@@ -93,7 +93,7 @@ let f = e => {
   })
 };
 
-function N(e) {
+function A(e) {
   let t = r.createContext([null, () => {}]),
     n = {
       LayerProvider: e => (0, i.jsx)(T, {
@@ -104,7 +104,7 @@ function N(e) {
         layerContext: t,
         ...e
       }),
-      Layer: e => (0, i.jsx)(f, {
+      Layer: e => (0, i.jsx)(S, {
         layerContext: t,
         ...e
       }),

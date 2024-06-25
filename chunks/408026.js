@@ -1,23 +1,23 @@
 n(47120);
-var s = n(570140),
-  i = n(224706),
-  l = n(710845),
-  a = n(77498);
-let r = {};
+var i = n(570140),
+  s = n(224706),
+  a = n(710845),
+  r = n(77498);
+let l = {};
 
 function o(e) {
   let {
     name: t,
     hash: n,
-    missingData: s
+    missingData: i
   } = e;
-  for (let e of (a.Z.markGameReported(t), s)) {
+  for (let e of (r.Z.markGameReported(t), i)) {
     if ("icon" === e) {
-      let e = r[t];
-      null != e && i.Z.uploadIcon(t, n, e);
+      let e = l[t];
+      null != e && s.Z.uploadIcon(t, n, e);
       return
     }
-    new l.Z("GameStoreIconManager").log("Could not find missing data key: ".concat(e))
+    new a.Z("GameStoreIconManager").log("Could not find missing data key: ".concat(e))
   }
 }
 
@@ -26,10 +26,10 @@ function c(e) {
     gameName: t,
     icon: n
   } = e;
-  r[t] = n
+  l[t] = n
 }
 t.Z = {
   initialize() {
-    s.Z.subscribe("UNVERIFIED_GAME_UPDATE", o), s.Z.subscribe("GAME_ICON_UPDATE", c)
+    i.Z.subscribe("UNVERIFIED_GAME_UPDATE", o), i.Z.subscribe("GAME_ICON_UPDATE", c)
   }
 }

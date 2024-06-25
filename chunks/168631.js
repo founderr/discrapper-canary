@@ -7,19 +7,19 @@ n.d(t, {
     return I
   },
   ZB: function() {
-    return f
+    return S
   },
   e4: function() {
-    return N
+    return A
   },
   fq: function() {
     return E
   },
   lM: function() {
-    return A
+    return N
   },
   wu: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(470079),
@@ -98,11 +98,11 @@ function h(e, t) {
   return (0, s.QT)("rgba(".concat(l, ", ").concat(u, ", ").concat(_, ")"))
 }
 
-function S(e, t, n) {
+function f(e, t, n) {
   let i = E(e);
   return null == i || null == t ? null : h(t, n ? i.overlaySyncedWithUserTheme : i.overlay)
 }
-let f = (0, r.memoize)(e => {
+let S = (0, r.memoize)(e => {
   let t = (0, l.Qg)(e, {
     base: "#ffffff",
     contrastRatio: l.S3.HighContrastText
@@ -110,12 +110,12 @@ let f = (0, r.memoize)(e => {
   return (0, s._i)(t)
 }, e => e);
 
-function N(e, t) {
+function A(e, t) {
   let n = E(e);
   return null != n && null != t ? h(t, null == n ? void 0 : n.messageInputBorder) : null
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = (0, _.Sl)(d.Ilk.WHITE_500).hex;
-  return (0, l.wj)(e) ? (0, s._i)(n) : null != t ? f(t) : null
+  return (0, l.wj)(e) ? (0, s._i)(n) : null != t ? S(t) : null
 }

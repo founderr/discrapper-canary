@@ -7,10 +7,10 @@ n.d(t, {
     return k
   },
   GJ: function() {
-    return f
+    return S
   },
   Gy: function() {
-    return p
+    return R
   },
   RD: function() {
     return H
@@ -22,13 +22,13 @@ n.d(t, {
     return j
   },
   W: function() {
-    return A
+    return N
   },
   Wx: function() {
     return v
   },
   X0: function() {
-    return N
+    return A
   },
   Yh: function() {
     return V
@@ -37,7 +37,7 @@ n.d(t, {
     return Z
   },
   _A: function() {
-    return x
+    return B
   },
   aq: function() {
     return m
@@ -58,10 +58,10 @@ n.d(t, {
     return F
   },
   pM: function() {
-    return R
+    return p
   },
   yv: function() {
-    return B
+    return x
   },
   zB: function() {
     return w
@@ -81,13 +81,13 @@ var i = n(149765),
   I = n(51144),
   T = n(71080),
   h = n(981631),
-  S = n(689938);
+  f = n(689938);
 
-function f(e) {
+function S(e) {
   return i.e$(e.permissions, h.Plq.ADMINISTRATOR)
 }
 
-function N(e) {
+function A(e) {
   var t, n;
   let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   let o = (n = e, i.e$(n.permissions, h.Plq.ADMINISTRATOR) ? T.aC.ADMINISTRATOR : T.aC.ROLE);
@@ -96,20 +96,20 @@ function N(e) {
     colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, r.Rf)(h.p6O),
     name: e.name,
     id: e.id,
-    disabled: f(e) || s,
+    disabled: S(e) || s,
     key: "".concat(o, ":").concat(e.id),
     tags: e.tags
   }
 }
 
-function A(e, t) {
-  let n = f(e) ? 0 : 1,
-    i = f(t) ? 0 : 1;
+function N(e, t) {
+  let n = S(e) ? 0 : 1,
+    i = S(t) ? 0 : 1;
   return n !== i ? n - i : t.position - e.position
 }
 
 function m() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
   return [{
     rowType: T.aC.EMPTY_STATE,
     colorString: (0, r.Rf)(h.p6O),
@@ -127,32 +127,32 @@ function O(e, t, n, r) {
   return (null == r ? void 0 : r[t]) != null && (o = r[t]), null == o || !i.e$(o.allow, n)
 }
 
-function R(e, t) {
+function p(e, t) {
   return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t
 }
 
-function p(e, t) {
-  return !R(e, t)
+function R(e, t) {
+  return !p(e, t)
 }
 
 function g(e, t) {
-  return !R(e.id, t.id)
+  return !p(e.id, t.id)
 }
 
 function C(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !f(t) && O(n, t.id, i) && g(e, t) && r(t.name)).sort(A).map(e => N(e))
+  return Object.values(t).filter(t => !S(t) && O(n, t.id, i) && g(e, t) && r(t.name)).sort(N).map(e => A(e))
 }
 
 function v(e, t, n, r) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !f(t) && O(n, t.id, r) && g(e, t) && s(t.name)).sort(A).map(e => N(e, i.e$(e.permissions, r)))
+  return Object.values(t).filter(t => !S(t) && O(n, t.id, r) && g(e, t) && s(t.name)).sort(N).map(e => A(e, i.e$(e.permissions, r)))
 }
 
 function L(e, t, n, i, r) {
   var s, o, a, l, u;
   let _ = [];
-  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => f(e) || !O(a, e.id, l, u) && g(s, e))).sort(A).map(e => N(e))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
+  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => S(e) || !O(a, e.id, l, u) && g(s, e))).sort(N).map(e => A(e))).length ? m(f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
 }
 
 function D(e, t, n, r, s) {
@@ -160,8 +160,8 @@ function D(e, t, n, r, s) {
   let c = [];
   return 0 === (c = (o = e, a = t, l = n, u = r, _ = s, Object.values(a).filter(e => {
     var t;
-    return f(e) || !O(l, e.id, u, _) && g(o, e) || i.e$(i.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-  })).sort(A).map(e => N(e, i.e$(e.permissions, r)))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
+    return S(e) || !O(l, e.id, u, _) && g(o, e) || i.e$(i.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+  })).sort(N).map(e => A(e, i.e$(e.permissions, r)))).length ? m(f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
 }
 
 function M(e, t) {
@@ -210,39 +210,39 @@ function G(e, t, n, i, r) {
 function w(e, t) {
   switch (e) {
     case T.aC.ROLE:
-      return S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
+      return f.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
     case T.aC.OWNER:
-      return S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
+      return f.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
     case T.aC.ADMINISTRATOR:
-      return S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
+      return f.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
     case T.aC.MEMBER:
-      return t ? S.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
+      return t ? f.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
     case T.aC.USER:
-      return S.Z.Messages.USER;
+      return f.Z.Messages.USER;
     case T.aC.GUILD:
-      return S.Z.Messages.SERVER;
+      return f.Z.Messages.SERVER;
     case T.aC.EMPTY_STATE:
       return null
   }
 }
 
-function B(e) {
+function x(e) {
   switch (e) {
     case T.aC.ROLE:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+      return f.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
     case T.aC.OWNER:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+      return f.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
     case T.aC.ADMINISTRATOR:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+      return f.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
     case T.aC.MEMBER:
-      return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+      return f.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
     case T.aC.EMPTY_STATE:
     default:
       return null
   }
 }
 
-function x(e, t, n) {
+function B(e, t, n) {
   let r = e.permissionOverwrites[e.guild_id];
   null == r && (r = d.we(e.guild_id));
   let s = {
@@ -252,7 +252,7 @@ function x(e, t, n) {
 }
 
 function k(e, t, n) {
-  let i = x(e, t, n);
+  let i = B(e, t, n);
   (0, s.kY)(e, i.id, i.allow, i.deny)
 }
 
@@ -296,11 +296,11 @@ function Y(e) {
   switch (e) {
     case h.d4z.GUILD_TEXT:
     case h.d4z.GUILD_ANNOUNCEMENT:
-      return S.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+      return f.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
     case h.d4z.GUILD_VOICE:
-      return S.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+      return f.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
     case h.d4z.GUILD_CATEGORY:
-      return S.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+      return f.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
     default:
       return null
   }

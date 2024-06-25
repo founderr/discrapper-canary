@@ -41,7 +41,7 @@ function h(e) {
       size: 80
     }), (0, i.jsx)(s.Z, {
       size: 54
-    }), (0, i.jsx)(l ? S : f, {
+    }), (0, i.jsx)(l ? f : S, {
       channel: t,
       application: n,
       sectionName: a
@@ -53,7 +53,7 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   let {
     channel: t,
     application: n,
@@ -75,7 +75,7 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     channel: t,
     application: n,

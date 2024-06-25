@@ -1,1 +1,1 @@
-L.exports = C.p + "afecb8805d83667de19a.svg"
+e.exports = a.p + "afecb8805d83667de19a.svg"

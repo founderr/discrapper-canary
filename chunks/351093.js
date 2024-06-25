@@ -1,99 +1,99 @@
-t.d(l, {
+n.d(t, {
   Z: function() {
     return u
   }
 });
-var n = t(735250),
-  r = t(470079),
-  i = t(941797),
-  s = t(810090),
-  a = t(981631),
-  o = t(689938);
+var l = n(735250),
+  r = n(470079),
+  i = n(941797),
+  a = n(810090),
+  o = n(981631),
+  d = n(689938);
 
-function d(e) {
+function s(e) {
   let {
-    poster: l,
-    src: t,
+    poster: t,
+    src: n,
     width: i,
-    height: o,
-    naturalWidth: d,
+    height: d,
+    naturalWidth: s,
     naturalHeight: u,
-    play: h = !0,
-    className: c,
-    alt: m,
+    play: m = !0,
+    className: h,
+    alt: c,
     responsive: p
-  } = e, g = r.useRef(null);
+  } = e, b = r.useRef(null);
   return (r.useEffect(() => {
     let {
       current: e
-    } = g;
-    if (null != e) h ? e.play() : e.pause()
-  }, [h]), d <= a.N_j && u <= a.XKF || d <= a.XKF && u <= a.N_j) ? (0, n.jsx)(s.Z, {
-    ref: g,
-    className: c,
-    poster: l,
-    src: t,
+    } = b;
+    if (null != e) m ? e.play() : e.pause()
+  }, [m]), s <= o.N_j && u <= o.XKF || s <= o.XKF && u <= o.N_j) ? (0, l.jsx)(a.Z, {
+    ref: b,
+    className: h,
+    poster: t,
+    src: n,
     width: i,
-    height: o,
+    height: d,
     responsive: p,
     muted: !0,
     loop: !0,
-    autoPlay: h,
+    autoPlay: m,
     preload: "none",
-    "aria-label": m
-  }) : (0, n.jsx)("img", {
+    "aria-label": c
+  }) : (0, l.jsx)("img", {
     alt: "",
-    src: l,
+    src: t,
     width: i,
-    height: o
+    height: d
   })
 }
 
 function u(e) {
   let {
-    src: l,
-    poster: t,
+    src: t,
+    poster: n,
     naturalWidth: r,
-    naturalHeight: s,
-    responsive: a,
+    naturalHeight: a,
+    responsive: o,
     autoPlay: u,
-    className: h,
-    playable: c = !0,
-    renderImageComponent: m,
+    className: m,
+    playable: h = !0,
+    renderImageComponent: c,
     renderForwardComponent: p,
-    alt: g = o.Z.Messages.GIF,
-    ...f
+    alt: b = d.Z.Messages.GIF,
+    ...g
   } = e;
-  return (0, n.jsx)(i.h.Consumer, {
-    children: e => m({
-      ...f,
-      alt: g,
-      src: t,
-      containerClassName: h,
+  return (0, l.jsx)(i.h.Consumer, {
+    children: e => c({
+      ...g,
+      alt: b,
+      src: n,
+      containerClassName: m,
       autoPlay: u,
-      animated: c,
-      responsive: a,
+      animated: h,
+      responsive: o,
       renderAccessory: e,
       renderForwardComponent: p,
-      tabIndex: c ? 0 : -1,
+      tabIndex: h ? 0 : -1,
       children(e) {
         let {
-          src: t,
+          src: n,
           size: i,
-          animating: o,
+          animating: d,
           alt: u
         } = e;
-        return (0, n.jsx)(d, {
+        return (0, l.jsx)(s, {
           alt: u,
-          className: h,
-          poster: t,
-          src: l,
+          className: m,
+          poster: n,
+          src: t,
           width: i.width,
           height: i.height,
           naturalWidth: r,
-          naturalHeight: s,
-          responsive: a,
-          play: c && o
+          naturalHeight: a,
+          responsive: o,
+          play: h && d
         })
       }
     })

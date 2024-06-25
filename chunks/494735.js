@@ -1,20 +1,20 @@
 n.d(e, {
   Pz: function() {
-    return m
+    return f
   },
   am: function() {
     return g
   }
 }), n(47120);
-var s, i = n(735250),
-  o = n(470079),
-  r = n(120356),
-  l = n.n(r),
-  a = n(481060),
+var o, r = n(735250),
+  i = n(470079),
+  s = n(120356),
+  a = n.n(s),
+  l = n(481060),
   c = n(996753),
   u = n(100320);
 
-function h(t, e, n) {
+function p(t, e, n) {
   return e in t ? Object.defineProperty(t, e, {
     value: n,
     enumerable: !0,
@@ -22,11 +22,11 @@ function h(t, e, n) {
     writable: !0
   }) : t[e] = n, t
 }
-let p = {
+let h = {
   CENTER: u.alignCenter,
   LEFT: u.alignLeft
 };
-class d extends(s = o.PureComponent) {
+class d extends(o = i.PureComponent) {
   componentDidUpdate(t) {
     let {
       selectedIndex: e
@@ -38,14 +38,14 @@ class d extends(s = o.PureComponent) {
       renderItem: t,
       items: e,
       vertical: n,
-      paginationContainerClass: s,
-      align: r
+      paginationContainerClass: o,
+      align: s
     } = this.props, c = n ? u.verticalPaginationItemContainer : u.horizontalPaginationItemContainer;
-    return (0, i.jsx)(a.AdvancedScrollerAuto, {
+    return (0, r.jsx)(l.AdvancedScrollerAuto, {
       orientation: n ? "vertical" : "horizontal",
-      className: l()(c, s, r),
+      className: a()(c, o, s),
       ref: this.handleSetScrollerRef,
-      children: e.map((e, n) => o.cloneElement(t(e, n), {
+      children: e.map((e, n) => i.cloneElement(t(e, n), {
         onClick: () => this.handlePageClick(n),
         key: n,
         ref: t => {
@@ -55,9 +55,9 @@ class d extends(s = o.PureComponent) {
     })
   }
   constructor(...t) {
-    super(...t), h(this, "_scrollerRef", null), h(this, "_paginationItemRefs", []), h(this, "handleSetScrollerRef", t => {
+    super(...t), p(this, "_scrollerRef", null), p(this, "_paginationItemRefs", []), p(this, "handleSetScrollerRef", t => {
       this._scrollerRef = t
-    }), h(this, "handleSelectedIndexChange", t => {
+    }), p(this, "handleSelectedIndexChange", t => {
       let e = this._scrollerRef;
       if (null == e) return;
       let n = this._paginationItemRefs[t];
@@ -66,7 +66,7 @@ class d extends(s = o.PureComponent) {
         animate: !0,
         padding: this.props.scrollToPadding
       })
-    }), h(this, "handlePageClick", t => {
+    }), p(this, "handlePageClick", t => {
       let {
         onSetItem: e
       } = this.props;
@@ -74,33 +74,33 @@ class d extends(s = o.PureComponent) {
     })
   }
 }
-h(d, "Align", p), h(d, "defaultProps", {
+p(d, "Align", h), p(d, "defaultProps", {
   scrollToPadding: {
     top: 0,
     left: 0,
     bottom: 0,
     right: 0
   },
-  align: p.CENTER
+  align: h.CENTER
 });
-class g extends o.PureComponent {
+class g extends i.PureComponent {
   render() {
     let {
       className: t
     } = this.props;
-    return (0, i.jsx)(a.Button, {
-      look: a.Button.Looks.BLANK,
-      size: a.Button.Sizes.NONE,
-      className: l()(u.prevButtonContainer, t),
+    return (0, r.jsx)(l.Button, {
+      look: l.Button.Looks.BLANK,
+      size: l.Button.Sizes.NONE,
+      className: a()(u.prevButtonContainer, t),
       onClick: this.handlePrevClick,
-      children: (0, i.jsx)(c.Z, {
+      children: (0, r.jsx)(c.Z, {
         className: u.arrow,
         direction: c.Z.Directions.LEFT
       })
     })
   }
   constructor(...t) {
-    super(...t), h(this, "handlePrevClick", t => {
+    super(...t), p(this, "handlePrevClick", t => {
       t.stopPropagation(), t.preventDefault();
       let {
         onClick: e
@@ -109,24 +109,24 @@ class g extends o.PureComponent {
     })
   }
 }
-class m extends o.PureComponent {
+class f extends i.PureComponent {
   render() {
     let {
       className: t
     } = this.props;
-    return (0, i.jsx)(a.Button, {
-      look: a.Button.Looks.BLANK,
-      size: a.Button.Sizes.NONE,
-      className: l()(u.nextButtonContainer, t),
+    return (0, r.jsx)(l.Button, {
+      look: l.Button.Looks.BLANK,
+      size: l.Button.Sizes.NONE,
+      className: a()(u.nextButtonContainer, t),
       onClick: this.handleNextClick,
-      children: (0, i.jsx)(c.Z, {
+      children: (0, r.jsx)(c.Z, {
         className: u.arrow,
         direction: c.Z.Directions.RIGHT
       })
     })
   }
   constructor(...t) {
-    super(...t), h(this, "handleNextClick", t => {
+    super(...t), p(this, "handleNextClick", t => {
       t.stopPropagation(), t.preventDefault();
       let {
         onClick: e

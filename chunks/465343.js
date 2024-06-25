@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   K: function() {
-    return f
+    return S
   },
   i: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(933557),
@@ -22,10 +22,10 @@ var i = n(933557),
   T = n(752305),
   h = n(377668);
 
-function S(e, t, n, d) {
+function f(e, t, n, d) {
   let {
     allowUsers: T = !0,
-    allowRoles: S = !0
+    allowRoles: f = !0
   } = null != d ? d : {};
   switch (e[0]) {
     case "@":
@@ -46,7 +46,7 @@ function S(e, t, n, d) {
           if (null != e) {
             if (e.isPrivate()) {
               for (let t of e.recipients)
-                if (N(o, a, t)) return {
+                if (A(o, a, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
@@ -58,14 +58,14 @@ function S(e, t, n, d) {
                   userId: e
                 }
                 of _.ZP.getMembers(t))
-                if (N(o, a, e)) return {
+                if (A(o, a, e)) return {
                   type: "userMention",
                   userId: e,
                   children: [{
                     text: ""
                   }]
                 };
-              if (d && N(o, a, h.fL)) return {
+              if (d && A(o, a, h.fL)) return {
                 type: "userMention",
                 userId: h.fL,
                 children: [{
@@ -76,7 +76,7 @@ function S(e, t, n, d) {
           }
         }
         return null
-      }(e, t, n, T, S);
+      }(e, t, n, T, f);
     case ":":
       return function(e, t) {
         let n = o.ZP.EMOJI_NAME_RE.exec(e);
@@ -149,12 +149,12 @@ function S(e, t, n, d) {
   return null
 }
 
-function f(e, t, n, i) {
-  let r = S(e, t, n, i);
+function S(e, t, n, i) {
+  let r = f(e, t, n, i);
   return null == r ? null : (0, T.VI)(r)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let i = d.default.getUser(n);
   return null != i && (n === h.fL && "clyde" === e.toLowerCase() || i.username === e && i.discriminator === (null != t ? t : "0"))
 }

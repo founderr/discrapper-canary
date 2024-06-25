@@ -1,27 +1,27 @@
 "use strict";
-t(47120);
-var n = t(470079),
-  i = t(586739);
-s.Z = function() {
+n(47120);
+var s = n(470079),
+  a = n(586739);
+t.Z = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
-      refreshOnDepChange: s
+      refreshOnDepChange: t
     } = e,
-    [t, l] = n.useState([]),
-    [a, r] = n.useState(!0),
+    [n, i] = s.useState([]),
+    [r, l] = s.useState(!0),
     o = async () => {
-      r(!0);
+      l(!0);
       try {
-        let e = await i.Z.fetchTeams(!0);
-        l(e.body)
+        let e = await a.Z.fetchTeams(!0);
+        i(e.body)
       } catch (e) {}
-      r(!1)
-    }, c = n.useRef(!0);
-  return n.useEffect(() => {
-    (c.current || s) && (c.current = !1, o())
-  }, [s]), {
-    teams: t,
-    loading: a,
+      l(!1)
+    }, c = s.useRef(!0);
+  return s.useEffect(() => {
+    (c.current || t) && (c.current = !1, o())
+  }, [t]), {
+    teams: n,
+    loading: r,
     refresh: o
   }
 }

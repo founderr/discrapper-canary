@@ -1,16 +1,16 @@
 n(653041), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
-  r = n(16084),
+var i = n(735250),
+  s = n(470079),
+  a = n(442837),
+  r = n(481060),
+  l = n(16084),
   o = n(730749),
   c = n(812206),
-  u = n(984370),
-  d = n(703656),
-  E = n(55563),
-  h = n(981631),
-  _ = n(30284);
+  d = n(984370),
+  u = n(703656),
+  _ = n(55563),
+  E = n(981631),
+  h = n(30284);
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -20,35 +20,35 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class m extends i.PureComponent {
+class m extends s.PureComponent {
   componentDidMount() {
     let {
       sku: e,
       primarySkuId: t,
       isFetchingPrimarySku: n
     } = this.props;
-    null != t && !n && null != e && (0, r.$N)(e.applicationId, t)
+    null != t && !n && null != e && (0, l.$N)(e.applicationId, t)
   }
   render() {
     let {
       sku: e,
       primarySku: t
-    } = this.props, n = [], i = null;
+    } = this.props, n = [], s = null;
     if (null != e) {
-      let s = h.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-      i = s, null != t && n.push({
-        id: h.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
+      let i = E.Z5c.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
+      s = i, null != t && n.push({
+        id: E.Z5c.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
         label: t.name
       }), n.push({
-        id: s,
+        id: i,
         label: e.name
       })
     }
-    return (0, s.jsx)(a.Breadcrumbs, {
+    return (0, i.jsx)(r.Breadcrumbs, {
       renderCustomBreadcrumb: this.renderCustomBreadcrumb,
       onBreadcrumbClick: this.handleClick,
       breadcrumbs: n,
-      activeId: i
+      activeId: s
     })
   }
   constructor(...e) {
@@ -56,29 +56,29 @@ class m extends i.PureComponent {
       let {
         sku: t
       } = this.props;
-      (0, d.uL)(e.id, {
+      (0, u.uL)(e.id, {
         state: {
           analyticsSource: {
-            object: h.qAy.NAVIGATION_LINK,
-            section: h.jXE.NAVIGATION,
-            page: null == t ? h.ZY5.STORE_DIRECTORY_BROWSE : h.ZY5.STORE_LISTING
+            object: E.qAy.NAVIGATION_LINK,
+            section: E.jXE.NAVIGATION,
+            page: null == t ? E.ZY5.STORE_DIRECTORY_BROWSE : E.ZY5.STORE_LISTING
           }
         }
       })
-    }), I(this, "renderCustomBreadcrumb", (e, t) => (0, s.jsx)(u.Z.Title, {
-      className: t ? null : _.breadcrumb,
+    }), I(this, "renderCustomBreadcrumb", (e, t) => (0, i.jsx)(d.Z.Title, {
+      className: t ? null : h.breadcrumb,
       muted: !t,
       children: e.label
     }))
   }
 }
-t.Z = (0, o.Z)(l.ZP.connectStores([c.Z, E.Z], e => {
+t.Z = (0, o.Z)(a.ZP.connectStores([c.Z, _.Z], e => {
   let {
     sku: t
-  } = e, n = null != t ? c.Z.getApplication(t.applicationId) : null, s = null != n && null != n.primarySkuId && n.primarySkuId !== t.id ? n.primarySkuId : null;
+  } = e, n = null != t ? c.Z.getApplication(t.applicationId) : null, i = null != n && null != n.primarySkuId && n.primarySkuId !== t.id ? n.primarySkuId : null;
   return {
-    primarySkuId: s,
-    isFetchingPrimarySku: null != s && E.Z.isFetching(s),
-    primarySku: null != s ? E.Z.get(s) : null
+    primarySkuId: i,
+    isFetchingPrimarySku: null != i && _.Z.isFetching(i),
+    primarySku: null != i ? _.Z.get(i) : null
   }
 })(m))

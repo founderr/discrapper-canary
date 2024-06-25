@@ -3,35 +3,35 @@ n.d(t, {
     return C
   }
 }), n(47120), n(724458);
-var s = n(735250),
-  o = n(470079),
+var o = n(735250),
+  s = n(470079),
   r = n(120356),
   a = n.n(r),
-  l = n(392711),
-  i = n.n(l),
+  i = n(392711),
+  l = n.n(i),
   c = n(442837),
-  u = n(481060),
-  d = n(451478),
+  d = n(481060),
+  u = n(451478),
   p = n(302221),
-  x = n(261345);
-let m = [0, .5, 1],
+  m = n(261345);
+let x = [0, .5, 1],
   g = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   };
-async function h(e, t) {
-  let s = (await n.e("30166").then(n.t.bind(n, 235630, 19))).default;
+async function f(e, t) {
+  let o = (await n.e("30166").then(n.t.bind(n, 235630, 19))).default;
   return function(e, t, n) {
-    for (let s in t) {
-      let t = i().get(e, s);
+    for (let o in t) {
+      let t = l().get(e, o);
       if (null == t) continue;
-      let o = t.map((e, t) => {
-        var s;
-        return null !== (s = n[t]) && void 0 !== s ? s : e
+      let s = t.map((e, t) => {
+        var o;
+        return null !== (o = n[t]) && void 0 !== o ? o : e
       });
-      i().set(e, s, o)
+      l().set(e, o, s)
     }
-  }(s, g, t), s
+  }(o, g, t), o
 }
 
 function C(e) {
@@ -39,43 +39,43 @@ function C(e) {
   let {
     animationClassName: n,
     className: r,
-    quest: l,
-    useReducedMotion: i
-  } = e, g = (0, c.e7)([d.Z], () => d.Z.isFocused()), C = o.useRef(null), [f, E] = o.useState(!1), S = o.useMemo(() => {
-    if (null == l) return null;
-    let e = (0, p.oo)(l.config.colors.primary),
+    quest: i,
+    useReducedMotion: l
+  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = s.useRef(null), [h, _] = s.useState(!1), E = s.useMemo(() => {
+    if (null == i) return null;
+    let e = (0, p.oo)(i.config.colors.primary),
       t = {
         r: e.r / 255,
         g: e.g / 255,
         b: e.b / 255
       },
-      n = m.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-    return h(l.id, n)
-  }, [l]), v = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !i && g;
-  o.useEffect(() => {
-    var e, t, n, s;
-    g ? T && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+      n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
+    return f(i.id, n)
+  }, [i]), S = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !l && g;
+  s.useEffect(() => {
+    var e, t, n, o;
+    g ? T && (null === (o = C.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [T, g]);
-  let j = o.useCallback(() => {
-    E(!0)
+  let v = s.useCallback(() => {
+    _(!0)
   }, []);
-  return null == S || v ? (0, s.jsx)("div", {
-    className: x.backgroundFallback,
+  return null == E || S ? (0, o.jsx)("div", {
+    className: m.backgroundFallback,
     style: {
-      backgroundImage: "linear-gradient(90deg, ".concat(l.config.colors.primary, ", ").concat(l.config.colors.secondary, ")")
+      backgroundImage: "linear-gradient(90deg, ".concat(i.config.colors.primary, ", ").concat(i.config.colors.secondary, ")")
     }
-  }) : (0, s.jsx)("div", {
-    className: a()(x.lottieAnimationBackgroundWrapper, r),
-    children: (0, s.jsx)(u.LottieAnimation, {
+  }) : (0, o.jsx)("div", {
+    className: a()(m.lottieAnimationBackgroundWrapper, r),
+    children: (0, o.jsx)(d.LottieAnimation, {
       ref: C,
-      onComplete: j,
-      importData: () => S,
-      shouldAnimate: !f && T,
-      className: a()(x.lottieAnimation, x.lottieAnimationBackground, n),
+      onComplete: v,
+      importData: () => E,
+      shouldAnimate: !h && T,
+      className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
       loop: 0,
       rendererSettings: {
         preserveAspectRatio: "none"
       }
-    }, l.config.colors.primary)
+    }, i.config.colors.primary)
   })
 }

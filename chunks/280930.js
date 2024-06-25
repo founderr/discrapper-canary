@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   },
   m: function() {
-    return f
+    return S
   }
 }), n(47120), n(653041);
 var i = n(470079),
@@ -21,7 +21,7 @@ var i = n(470079),
   I = n(606301),
   T = n(549058);
 let h = (0, E.ad)(l.$p, T.J7),
-  S = (e, t, n) => {
+  f = (e, t, n) => {
     let r = (0, u.fQ)(n),
       s = (0, o.e7)([c.default], () => c.default.getCurrentUser());
     return i.useMemo(() => {
@@ -44,7 +44,7 @@ let h = (0, E.ad)(l.$p, T.J7),
       return o.length > 0 && (c = o.slice(0, T.qm), 0 !== l.length && (c.length === T.qm && c.pop(), c.push(l[0]))), c
     }, [e, n, r, t, s])
   },
-  f = e => {
+  S = e => {
     let {
       setTextInputValue: t,
       setHasDismissed: n,

@@ -3,10 +3,10 @@ n.d(t, {
     return u
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(981631),
   o = n(889328);
 
@@ -18,7 +18,7 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class u extends i.Component {
+class u extends a.Component {
   componentDidUpdate(e, t) {
     if (t.focused !== this.state.focused && this.state.focused) {
       var n;
@@ -33,8 +33,8 @@ class u extends i.Component {
     let {
       className: t,
       name: n,
-      autoComplete: i,
-      maxLen: s
+      autoComplete: a,
+      maxLen: l
     } = this.props, r = {
       position: "absolute",
       left: 0,
@@ -44,24 +44,24 @@ class u extends i.Component {
     return this.state.focused ? e = {
       visibility: "hidden",
       pointerEvents: "none"
-    } : r.opacity = 0, (0, l.jsx)("div", {
-      className: a()(o.outer, t),
-      children: (0, l.jsxs)("div", {
+    } : r.opacity = 0, (0, i.jsx)("div", {
+      className: s()(o.outer, t),
+      children: (0, i.jsxs)("div", {
         className: o.container,
-        children: [(0, l.jsx)("input", {
+        children: [(0, i.jsx)("input", {
           type: "text",
           className: o.input,
           ref: this.inputRef,
           style: r,
           value: this.state.value,
           name: n,
-          maxLength: s,
-          autoComplete: i,
+          maxLength: l,
+          autoComplete: a,
           onKeyPress: this.handleKeyPress,
           onChange: this.handleChange,
           onFocus: this.handleFocus,
           onBlur: this.handleBlur
-        }), (0, l.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: o.input,
           style: e,
           children: this.state.value
@@ -70,7 +70,7 @@ class u extends i.Component {
     })
   }
   constructor(...e) {
-    super(...e), c(this, "inputRef", i.createRef()), c(this, "state", {
+    super(...e), c(this, "inputRef", a.createRef()), c(this, "state", {
       focused: !1,
       lastGoodValue: this.props.value,
       value: this.props.value
@@ -115,6 +115,6 @@ function d() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     t = arguments.length > 1 ? arguments[1] : void 0,
     n = arguments.length > 2 ? arguments[2] : void 0,
-    l = "" !== e ? e : null != n.value && "" !== n.value ? n.value : "";
-  return (null == t.minLen || !(l.length < t.minLen)) && (null == t.maxLen || !(l.length > t.maxLen)) && !0
+    i = "" !== e ? e : null != n.value && "" !== n.value ? n.value : "";
+  return (null == t.minLen || !(i.length < t.minLen)) && (null == t.maxLen || !(i.length > t.maxLen)) && !0
 }

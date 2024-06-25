@@ -4,7 +4,7 @@ n.d(t, {
     return P
   },
   DU: function() {
-    return B
+    return x
   },
   EH: function() {
     return D
@@ -31,7 +31,7 @@ n.d(t, {
     return G
   },
   kJ: function() {
-    return x
+    return B
   },
   t5: function() {
     return U
@@ -53,14 +53,14 @@ var i, r, s, o, a = n(470079),
   I = n(272008),
   T = n(569984),
   h = n(497505),
-  S = n(918701),
-  f = n(242755),
-  N = n(977156),
-  A = n(31055),
+  f = n(918701),
+  S = n(242755),
+  A = n(977156),
+  N = n(31055),
   m = n(566078),
   O = n(46140),
-  R = n(981631),
-  p = n(689938);
+  p = n(981631),
+  R = n(689938);
 let g = 12633 == n.j ? -1 : null;
 
 function C() {
@@ -76,7 +76,7 @@ function C() {
       isFetchingCurrentQuests: T.Z.isFetchingCurrentQuests,
       lastFetchedCurrentQuests: T.Z.lastFetchedCurrentQuests
     })),
-    o = (0, N.cB)({
+    o = (0, A.cB)({
       location: O.dr.USE_QUESTS
     });
   return a.useEffect(() => {
@@ -108,12 +108,12 @@ function L(e) {
       if (n.current.length > 0) return n.current;
       let e = t.sort((e, t) => {
         var n, i, r, s, o, a;
-        let l = !(0, S.zi)(e),
-          u = !(0, S.zi)(t),
-          _ = (0, S.Mi)(e, h.jn.QUEST_BAR) || (0, S.Mi)(e, h.jn.QUEST_BAR_V2),
-          c = (0, S.Mi)(t, h.jn.QUEST_BAR) || (0, S.Mi)(t, h.jn.QUEST_BAR_V2),
-          d = (0, S.Mi)(e, h.jn.GIFT_INVENTORY_FOR_YOU),
-          E = (0, S.Mi)(t, h.jn.GIFT_INVENTORY_FOR_YOU),
+        let l = !(0, f.zi)(e),
+          u = !(0, f.zi)(t),
+          _ = (0, f.Mi)(e, h.jn.QUEST_BAR) || (0, f.Mi)(e, h.jn.QUEST_BAR_V2),
+          c = (0, f.Mi)(t, h.jn.QUEST_BAR) || (0, f.Mi)(t, h.jn.QUEST_BAR_V2),
+          d = (0, f.Mi)(e, h.jn.GIFT_INVENTORY_FOR_YOU),
+          E = (0, f.Mi)(t, h.jn.GIFT_INVENTORY_FOR_YOU),
           I = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
           T = (null === (i = t.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null;
         return l !== u ? l ? g : 1 : _ !== c && l && u ? _ ? g : 1 : d !== E ? d ? g : 1 : I !== T ? I ? g : 1 : l && u ? v(null === (o = e.config) || void 0 === o ? void 0 : o.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 1) : v(null === (r = e.config) || void 0 === r ? void 0 : r.expiresAt, null === (s = t.config) || void 0 === s ? void 0 : s.expiresAt, 0)
@@ -157,18 +157,18 @@ function D() {
     isFetchingCurrentQuests: t
   } = C({
     fetchPolicy: "cache-only"
-  }), [n, i] = a.useState(() => new Map(e.map(e => [e.id, (0, S.zi)(e)])));
+  }), [n, i] = a.useState(() => new Map(e.map(e => [e.id, (0, f.zi)(e)])));
   return a.useEffect(() => {
     if (t) return;
     let n = [];
     for (let t of e)
-      if (null == t || (0, S.zi)(t)) null != t && (0, S.zi)(t) && i(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
+      if (null == t || (0, f.zi)(t)) null != t && (0, f.zi)(t) && i(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
       else {
         let e = new l.V7,
           r = () => {
             let s = Date.parse(t.config.expiresAt) - Date.now();
             e.start(s, () => {
-              (0, S.zi)(t) ? i(e => new Map(e).set(t.id, !0)): r()
+              (0, f.zi)(t) ? i(e => new Map(e).set(t.id, !0)): r()
             }), n.push(e)
           };
         r()
@@ -198,14 +198,14 @@ let y = e => {
     quest: t,
     location: n
   } = e;
-  return a.useMemo(() => (0, S.il)({
+  return a.useMemo(() => (0, f.il)({
     quest: t,
     location: n
   }), [t, n])
 };
 
 function U(e, t) {
-  let n = (0, f.A)({
+  let n = (0, S.A)({
       location: t
     }),
     {
@@ -214,16 +214,16 @@ function U(e, t) {
       quest: e,
       location: t
     });
-  if ((0, S.zK)(e, O.S7.IN_HOUSE_CONSOLE_QUEST)) return p.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
+  if ((0, f.zK)(e, O.S7.IN_HOUSE_CONSOLE_QUEST)) return R.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
     minutes: i,
     onClick: () => {
-      _.Z.open(R.oAB.CONNECTIONS)
+      _.Z.open(p.oAB.CONNECTIONS)
     }
   });
-  let r = p.Z.Messages.QUESTS_STREAM_TASK;
-  return n && (0, S.Nj)({
+  let r = R.Z.Messages.QUESTS_STREAM_TASK;
+  return n && (0, f.Nj)({
     quest: e
-  }) && (r = p.Z.Messages.QUESTS_PLAY_TASK), r.format({
+  }) && (r = R.Z.Messages.QUESTS_PLAY_TASK), r.format({
     minutes: i,
     gameTitle: e.config.messages.gameTitle
   })
@@ -241,13 +241,13 @@ function b() {
     if (t || 0 === e.length) return i;
     for (let t of e) {
       var r;
-      if (!(0, S.vR)(t, h.jn.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (r = n.get(t.id)) && void 0 !== r && r) continue;
+      if (!(0, f.vR)(t, h.jn.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (r = n.get(t.id)) && void 0 !== r && r) continue;
       if ((null == t ? void 0 : t.userStatus) == null) {
         i.push(t);
         continue
       }
       let e = null != t.userStatus.claimedAt,
-        s = (0, S.zE)(t.userStatus, h.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+        s = (0, f.zE)(t.userStatus, h.jn.GIFT_INVENTORY_SETTINGS_BADGE);
       if (!e && !s) {
         i.push(t);
         continue
@@ -265,17 +265,17 @@ function G() {
 }
 
 function w(e) {
-  let t = (0, A.z)({
+  let t = (0, N.z)({
       location: O.dr.MEMBERS_LIST
     }),
     n = (0, u.e7)([T.Z], () => t ? T.Z.quests : null),
-    i = a.useMemo(() => (0, S.Jg)(n, e), [e, n]);
+    i = a.useMemo(() => (0, f.Jg)(n, e), [e, n]);
   return M(i) ? null : i
 }
 
-function B(e) {
+function x(e) {
   var t;
-  let n = (0, S.Xv)(e),
+  let n = (0, f.Xv)(e),
     {
       product: i,
       isFetching: r
@@ -287,7 +287,7 @@ function B(e) {
   }
 }
 
-function x(e) {
+function B(e) {
   return {
     handleComplete: () => (0, I.Wf)(e),
     handleResetStatusClick: () => (0, I.eT)(e),
@@ -309,8 +309,8 @@ function k() {
     xboxAndPlaystationAccounts: r
   } = a.useMemo(() => {
     let e = t.filter(e => !1 === e.revoked),
-      n = e.filter(e => e.type === R.ABu.XBOX),
-      i = e.filter(e => e.type === R.ABu.PLAYSTATION),
+      n = e.filter(e => e.type === p.ABu.XBOX),
+      i = e.filter(e => e.type === p.ABu.PLAYSTATION),
       r = n.concat(i);
     return {
       xboxAccounts: n,

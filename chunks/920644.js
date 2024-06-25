@@ -1,74 +1,74 @@
 n.d(t, {
   Z: function() {
-    return _
+    return h
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(990547),
-  l = n(481060),
-  a = n(703656),
-  r = n(153124),
+var s = n(990547),
+  a = n(481060),
+  r = n(703656),
+  l = n(153124),
   o = n(63063),
   c = n(758119),
-  u = n(981631),
-  d = n(689938),
-  E = n(846378);
+  d = n(981631),
+  u = n(689938),
+  _ = n(846378);
 
-function h() {
-  (0, c.qV)(), (0, a.uL)(u.Z5c.LOGIN)
+function E() {
+  (0, c.qV)(), (0, r.uL)(d.Z5c.LOGIN)
 }
 
-function _(e) {
+function h(e) {
   let {
     underageMessage: t,
-    transitionState: a
-  } = e, c = (0, r.Dt)();
-  return (0, s.jsxs)(l.ModalRoot, {
-    transitionState: a,
-    size: l.ModalSize.SMALL,
+    transitionState: r
+  } = e, c = (0, l.Dt)();
+  return (0, i.jsxs)(a.ModalRoot, {
+    transitionState: r,
+    size: a.ModalSize.SMALL,
     "aria-labelledby": c,
     impression: {
-      impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+      impressionName: s.ImpressionNames.USER_AGE_GATE_UNDERAGE,
       impressionProperties: {
         existing_user: !0
       }
     },
-    children: [(0, s.jsx)(l.ModalContent, {
-      children: (0, s.jsxs)("div", {
-        className: E.container,
-        children: [(0, s.jsx)("img", {
+    children: [(0, i.jsx)(a.ModalContent, {
+      children: (0, i.jsxs)("div", {
+        className: _.container,
+        children: [(0, i.jsx)("img", {
           alt: "",
           src: n(231443),
-          className: E.img
-        }), (0, s.jsx)(l.Heading, {
+          className: _.img
+        }), (0, i.jsx)(a.Heading, {
           variant: "heading-xl/semibold",
-          className: E.title,
+          className: _.title,
           id: c,
-          children: d.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
-        }), (0, s.jsx)(l.Text, {
+          children: u.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
+        }), (0, i.jsx)(a.Text, {
           color: "header-secondary",
-          className: E.subtitle,
+          className: _.subtitle,
           variant: "text-sm/normal",
-          children: d.Z.Messages.AGE_GATE_UNDERAGE_BODY.format({
-            underageMessage: null != t ? t : d.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
-            helpURL: o.Z.getArticleURL(u.BhN.AGE_GATE)
+          children: u.Z.Messages.AGE_GATE_UNDERAGE_BODY.format({
+            underageMessage: null != t ? t : u.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
+            helpURL: o.Z.getArticleURL(d.BhN.AGE_GATE)
           })
-        }), (0, s.jsx)(l.Text, {
+        }), (0, i.jsx)(a.Text, {
           color: "header-secondary",
-          className: E.subtitle,
+          className: _.subtitle,
           variant: "text-sm/normal",
-          children: d.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_BODY_DELETION_WITH_DAYS.format({
+          children: u.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_BODY_DELETION_WITH_DAYS.format({
             days: 30
           })
         })]
       })
-    }), (0, s.jsx)(l.ModalFooter, {
-      children: (0, s.jsx)(l.Button, {
-        size: l.ButtonSizes.SMALL,
+    }), (0, i.jsx)(a.ModalFooter, {
+      children: (0, i.jsx)(a.Button, {
+        size: a.ButtonSizes.SMALL,
         fullWidth: !0,
-        onClick: h,
-        children: d.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
+        onClick: E,
+        children: u.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
       })
     })]
   })

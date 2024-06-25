@@ -1,53 +1,53 @@
-t.r(e), t.d(e, {
+t.r(s), t.d(s, {
   default: function() {
-    return c
+    return l
   }
 });
-var n = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(481060),
-  o = t(285952),
-  i = t(153124),
+var n = t(481060),
+  i = t(285952),
+  o = t(153124),
   d = t(952164),
   r = t(689938),
-  l = t(41565);
+  c = t(41565);
 
-function c(s) {
+function l(e) {
   let {
-    transitionState: e,
+    transitionState: s,
     onClose: t
-  } = s, c = (0, i.Dt)();
-  return (0, n.jsxs)(a.ModalRoot, {
-    "aria-labelledby": c,
-    transitionState: e,
-    size: a.ModalSize.SMALL,
-    children: [(0, n.jsx)(a.ModalHeader, {
+  } = e, l = (0, o.Dt)();
+  return (0, a.jsxs)(n.ModalRoot, {
+    "aria-labelledby": l,
+    transitionState: s,
+    size: n.ModalSize.SMALL,
+    children: [(0, a.jsx)(n.ModalHeader, {
       separator: !1,
-      children: (0, n.jsx)(a.Heading, {
-        id: c,
+      children: (0, a.jsx)(n.Heading, {
+        id: l,
         variant: "heading-lg/semibold",
         children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_HEADER
       })
-    }), (0, n.jsxs)(a.ModalContent, {
-      children: [(0, n.jsx)(o.Z, {
-        justify: o.Z.Justify.CENTER,
-        children: (0, n.jsx)("div", {
-          className: l.image
+    }), (0, a.jsxs)(n.ModalContent, {
+      children: [(0, a.jsx)(i.Z, {
+        justify: i.Z.Justify.CENTER,
+        children: (0, a.jsx)("div", {
+          className: c.image
         })
-      }), (0, n.jsx)(a.Text, {
-        className: l.text,
+      }), (0, a.jsx)(n.Text, {
+        className: c.text,
         variant: "text-sm/normal",
         children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_BODY
       })]
-    }), (0, n.jsxs)(a.ModalFooter, {
-      children: [(0, n.jsx)(a.Button, {
+    }), (0, a.jsxs)(n.ModalFooter, {
+      children: [(0, a.jsx)(n.Button, {
         onClick: function() {
           (0, d.KK)(), t()
         },
         children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_BUTTON
-      }), (0, n.jsx)(a.Button, {
-        look: a.Button.Looks.LINK,
-        color: a.Button.Colors.PRIMARY,
+      }), (0, a.jsx)(n.Button, {
+        look: n.Button.Looks.LINK,
+        color: n.Button.Colors.PRIMARY,
         onClick: t,
         children: r.Z.Messages.CANCEL
       })]

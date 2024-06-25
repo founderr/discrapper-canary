@@ -1,28 +1,28 @@
 n.d(t, {
   X: function() {
-    return d
+    return u
   },
   j: function() {
-    return E
+    return _
   }
 }), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
-var s = n(108131),
-  i = n.n(s),
-  l = n(544891),
-  a = n(570140),
-  r = n(10473),
+var i = n(108131),
+  s = n.n(i),
+  a = n(544891),
+  r = n(570140),
+  l = n(10473),
   o = n(976757),
   c = n(981631);
-let u = new Worker(new URL(n.p + n.u("59546"), n.b));
+let d = new Worker(new URL(n.p + n.u("59546"), n.b));
 
-function d() {
-  return a.Z.dispatch({
+function u() {
+  return r.Z.dispatch({
     type: "FETCH_STATIC_CLAN_LIST_START"
-  }), l.tn.get({
+  }), a.tn.get({
     url: c.ANM.DISCOVERY_ALL_GAMES
   }).then(e => {
     let t = e.body.clans.map(o.Gh);
-    a.Z.dispatch({
+    r.Z.dispatch({
       type: "FETCH_STATIC_CLAN_LIST_SUCCESS",
       clans: function(e) {
         let t = new Set;
@@ -30,42 +30,42 @@ function d() {
       }(t)
     })
   }).catch(e => {
-    a.Z.dispatch({
+    r.Z.dispatch({
       type: "FETCH_STATIC_CLAN_LIST_FAILURE",
       error: e
     })
   })
 }
-async function E(e) {
-  var t, n, s;
-  if ("loaded" === r.Z.getSearchResult(e).status) return;
-  let l = i().v3(JSON.stringify(e)),
-    o = r.Z.getStaticClans();
-  let c = await (t = o, n = l, s = e, new Promise(e => {
-      let i = t => {
+async function _(e) {
+  var t, n, i;
+  if ("loaded" === l.Z.getSearchResult(e).status) return;
+  let a = s().v3(JSON.stringify(e)),
+    o = l.Z.getStaticClans();
+  let c = await (t = o, n = a, i = e, new Promise(e => {
+      let s = t => {
         let {
           data: {
-            id: s,
-            sortedClans: l
+            id: i,
+            sortedClans: a
           }
         } = t;
-        n === s && e(l), null == u || u.removeEventListener("message", i)
+        n === i && e(a), null == d || d.removeEventListener("message", s)
       };
-      null == u || u.addEventListener("message", i);
-      null == u || u.postMessage({
+      null == d || d.addEventListener("message", s);
+      null == d || d.postMessage({
         id: n,
         unsortedClans: t,
-        criteria: s
+        criteria: i
       })
     })),
-    d = {
+    u = {
       status: "loaded",
       loadedAt: Date.now(),
       items: c
     };
-  a.Z.dispatch({
+  r.Z.dispatch({
     type: "FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS",
-    criteriaHash: l,
-    searchResult: d
+    criteriaHash: a,
+    searchResult: u
   })
 }

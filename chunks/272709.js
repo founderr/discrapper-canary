@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(565799),
   T = n(501655),
   h = n(427679),
-  S = n(543882),
-  f = n(592125),
-  N = n(496675),
-  A = n(594174),
+  f = n(543882),
+  S = n(592125),
+  A = n(496675),
+  N = n(594174),
   m = n(979651),
   O = n(366695),
-  R = n(806519),
-  p = n(912787),
+  p = n(806519),
+  R = n(912787),
   g = n(623552),
   C = n(718582),
   v = n(177963),
@@ -39,15 +39,15 @@ var i = n(735250),
   G = n(689938),
   w = n(970508);
 
-function B(e) {
-  let t = (0, p.Z)(e),
+function x(e) {
+  let t = (0, R.Z)(e),
     {
       category: n
     } = e;
   return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : (n === y.L.GAMING || n === y.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0 || n === y.L.HANGOUT && e.streamUserIds.length > 0 ? u.ScreenArrowIcon : n === y.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && m.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon
 }
 
-function x(e) {
+function B(e) {
   let {
     users: t,
     othersCount: n,
@@ -64,10 +64,10 @@ function x(e) {
       return r === t.length - 1 && 0 === n ? (0, i.jsx)("div", {
         className: w.facePileItem,
         children: s
-      }, e.id) : (0, i.jsx)(R.ZP, {
+      }, e.id) : (0, i.jsx)(p.ZP, {
         width: 20,
         height: 20,
-        mask: R.ZP.Masks.GUILD_POPOUT_FACE_PILE_AVATAR,
+        mask: p.ZP.Masks.GUILD_POPOUT_FACE_PILE_AVATAR,
         className: w.facePileItem,
         children: s
       }, e.id)
@@ -85,12 +85,12 @@ function k(e) {
   let {
     cardData: s,
     guildId: _,
-    cardIndex: R
+    cardIndex: p
   } = e, {
     category: L
-  } = s, [M, P] = r.useState(!1), k = L === y.L.HANGOUT && s.streamUserIds.length > 0, V = (0, l.e7)([S.Z], () => k ? S.Z.getPreviewURL(_, s.channelId, s.streamUserIds[0]) : null), Z = (0, l.e7)([S.Z], () => L === y.L.HANGOUT ? S.Z.getIsPreviewLoading(_, s.channelId, s.streamUserIds[0]) : null), H = L === y.L.HANGOUT && s.streamUserIds.length > 0 && null == V && !Z, F = (0, l.e7)([f.Z], () => {
+  } = s, [M, P] = r.useState(!1), k = L === y.L.HANGOUT && s.streamUserIds.length > 0, V = (0, l.e7)([f.Z], () => k ? f.Z.getPreviewURL(_, s.channelId, s.streamUserIds[0]) : null), Z = (0, l.e7)([f.Z], () => L === y.L.HANGOUT ? f.Z.getIsPreviewLoading(_, s.channelId, s.streamUserIds[0]) : null), H = L === y.L.HANGOUT && s.streamUserIds.length > 0 && null == V && !Z, F = (0, l.e7)([S.Z], () => {
     let e = L === y.L.HANGOUT || L === y.L.GAMING ? s.channelId : L === y.L.EVENT ? s.event.channel_id : L === y.L.EMBEDDED_ACTIVITY ? s.embeddedActivities[0].channelId : null;
-    return f.Z.getChannel(e)
+    return S.Z.getChannel(e)
   }), Y = (0, l.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(null == F ? void 0 : F.id)), {
     usersToShow: j,
     othersCount: W
@@ -99,9 +99,9 @@ function k(e) {
   } = (0, C.Es)(F), z = (0, C.ni)(s), q = function(e, t, n, r) {
     let {
       category: s
-    } = e, o = (0, p.Z)(e), {
+    } = e, o = (0, R.Z)(e), {
       usersToShow: _
-    } = (0, C.Es)(o), d = (0, l.e7)([S.Z], () => s === y.L.HANGOUT ? S.Z.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null);
+    } = (0, C.Es)(o), d = (0, l.e7)([f.Z], () => s === y.L.HANGOUT ? f.Z.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null);
     switch (s) {
       case y.L.GAMING:
         let {
@@ -173,13 +173,13 @@ function k(e) {
               className: w.streamPreview
             }), e(w.liveBadge)]
           });
-          let s = r.map(e => A.default.getUser(e)).filter(e => null != e);
+          let s = r.map(e => N.default.getUser(e)).filter(e => null != e);
           return (0, i.jsx)(g.Z, {
             guildId: t,
             users: s
           })
         }
-        let E = s.map(e => A.default.getUser(e)).filter(e => null != e);
+        let E = s.map(e => N.default.getUser(e)).filter(e => null != e);
         return (0, i.jsx)(g.Z, {
           guildId: t,
           users: E
@@ -189,7 +189,7 @@ function k(e) {
   }(s, _, V, z), X = function(e, t) {
     let {
       category: n
-    } = e, r = (0, C.FP)(n === y.L.HANGOUT ? null == e ? void 0 : e.userIds : []), s = (0, C.FP)(n === y.L.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), a = (0, C.FP)(n === y.L.GAMING ? null == e ? void 0 : e.gameUserIds : []), l = (0, p.Z)(e), {
+    } = e, r = (0, C.FP)(n === y.L.HANGOUT ? null == e ? void 0 : e.userIds : []), s = (0, C.FP)(n === y.L.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), a = (0, C.FP)(n === y.L.GAMING ? null == e ? void 0 : e.gameUserIds : []), l = (0, R.Z)(e), {
       hasChannelStatus: _
     } = (0, C.CE)(l), {
       usersToShow: c
@@ -222,8 +222,8 @@ function k(e) {
         }
         let n = (0, C.K6)(d.length > 0 ? d : s.length > 0 ? s : r, t);
         if (e.isStage) {
-          var T, S;
-          return null !== (S = null === (T = h.Z.getStageInstanceByChannel(e.channelId)) || void 0 === T ? void 0 : T.topic) && void 0 !== S ? S : n
+          var T, f;
+          return null !== (f = null === (T = h.Z.getStageInstanceByChannel(e.channelId)) || void 0 === T ? void 0 : T.topic) && void 0 !== f ? f : n
         }
         return n
       }
@@ -240,7 +240,7 @@ function k(e) {
     var r, s, o;
     let {
       category: a
-    } = e, l = (0, p.Z)(e), _ = B(e), {
+    } = e, l = (0, R.Z)(e), _ = x(e), {
       audienceCount: c
     } = (0, C.Es)(l), {
       channelStatus: d,
@@ -269,15 +269,15 @@ function k(e) {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: w.ellipsis,
-            children: null === (r = f.Z.getChannel(h)) || void 0 === r ? void 0 : r.name
+            children: null === (r = S.Z.getChannel(h)) || void 0 === r ? void 0 : r.name
           })]
         });
       case y.L.EVENT:
         let {
-          event: S
-        } = e, N = (0, C.NZ)(S), A = null == N ? void 0 : N.IconComponent, m = null == N ? void 0 : N.locationName;
-        if (null != A && null != m) return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(A, {
+          event: f
+        } = e, A = (0, C.NZ)(f), N = null == A ? void 0 : A.IconComponent, m = null == A ? void 0 : A.locationName;
+        if (null != N && null != m) return (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)(N, {
             className: w.categoryIcon
           }), (0, i.jsx)(u.Text, {
             variant: "text-xs/medium",
@@ -319,7 +319,7 @@ function k(e) {
             variant: "text-xs/medium",
             color: "text-secondary",
             className: w.ellipsis,
-            children: null === (s = f.Z.getChannel(O[0].channelId)) || void 0 === s ? void 0 : s.name
+            children: null === (s = S.Z.getChannel(O[0].channelId)) || void 0 === s ? void 0 : s.name
           })]
         });
       case y.L.HANGOUT: {
@@ -341,7 +341,7 @@ function k(e) {
               variant: "text-xs/medium",
               color: "text-secondary",
               className: w.ellipsis,
-              children: null === (o = f.Z.getChannel(t)) || void 0 === o ? void 0 : o.name
+              children: null === (o = S.Z.getChannel(t)) || void 0 === o ? void 0 : o.name
             }), I && null != n && (0, i.jsxs)(i.Fragment, {
               children: ["•", (0, i.jsx)(u.Text, {
                 variant: "text-xs/medium",
@@ -371,7 +371,7 @@ function k(e) {
   }(s, z, V), J = function(e) {
     let {
       category: t
-    } = e, n = (0, p.Z)(e), {
+    } = e, n = (0, R.Z)(e), {
       audienceCount: i
     } = (0, C.Es)(n);
     switch (t) {
@@ -416,7 +416,7 @@ function k(e) {
       default:
         return []
     }
-  }(s), $ = (0, C.$1)(s, _, R), ee = function(e, t, n) {
+  }(s), $ = (0, C.$1)(s, _, p), ee = function(e, t, n) {
     var r;
     let {
       category: s
@@ -424,7 +424,7 @@ function k(e) {
     if (null == (o = a ? e.event.channel_id : s === y.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId) && !a) return;
     let l = null != o && m.Z.isInChannel(o),
       _ = a && (e.event.entity_type === b.WX.EXTERNAL || e.event.entity_type === b.WX.NONE) ? G.Z.Messages.VIEW : l ? G.Z.Messages.GUILD_POPOUT_JOINED : G.Z.Messages.JOIN,
-      c = (null === (r = f.Z.getChannel(o)) || void 0 === r ? void 0 : r.isGuildVocal()) && !N.Z.can(U.Plq.CONNECT, f.Z.getChannel(o)),
+      c = (null === (r = S.Z.getChannel(o)) || void 0 === r ? void 0 : r.isGuildVocal()) && !A.Z.can(U.Plq.CONNECT, S.Z.getChannel(o)),
       d = (0, C.DE)(e, t),
       E = (0, i.jsxs)(u.Button, {
         size: u.Button.Sizes.MIN,
@@ -446,9 +446,9 @@ function k(e) {
       className: w.joinButtonWhatWrapper,
       children: E
     })
-  }(s, _, R), {
+  }(s, _, p), {
     hasChannelStatus: et
-  } = (0, C.CE)(F), en = B(s), ei = L === y.L.HANGOUT && et && null == V, er = (null != Y || !!(null == F ? void 0 : F.isGuildStageVoice())) && K.length > 0, es = L === y.L.HANGOUT && (0 === s.streamUserIds.length || H) && !(null == F ? void 0 : F.isGuildStageVoice()), eo = L === y.L.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
+  } = (0, C.CE)(F), en = x(s), ei = L === y.L.HANGOUT && et && null == V, er = (null != Y || !!(null == F ? void 0 : F.isGuildStageVoice())) && K.length > 0, es = L === y.L.HANGOUT && (0 === s.streamUserIds.length || H) && !(null == F ? void 0 : F.isGuildStageVoice()), eo = L === y.L.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: w.pill,
     children: [(0, i.jsx)(u.ScreenArrowIcon, {
       size: "md",
@@ -483,7 +483,7 @@ function k(e) {
         color: "text-secondary",
         className: w.subtitle,
         children: Q
-      }), !(er || es) && !(null == F ? void 0 : F.isGuildStageVoice()) && j.length > 0 && (0, i.jsx)(x, {
+      }), !(er || es) && !(null == F ? void 0 : F.isGuildStageVoice()) && j.length > 0 && (0, i.jsx)(B, {
         users: j,
         othersCount: W,
         extraPill: eo
@@ -497,7 +497,7 @@ function k(e) {
           variant: "text-xs/medium",
           color: "text-secondary",
           className: w.ellipsis,
-          children: null === (t = f.Z.getChannel(s.channelId)) || void 0 === t ? void 0 : t.name
+          children: null === (t = S.Z.getChannel(s.channelId)) || void 0 === t ? void 0 : t.name
         })]
       })]
     }), M && ee]

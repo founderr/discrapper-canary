@@ -1,4 +1,4 @@
-e.exports = {
+l.exports = {
   supportCallToAction: "supportCallToAction_b07a08",
   errorLabel: "errorLabel_b07a08",
   errorDetails: "errorDetails_b07a08",

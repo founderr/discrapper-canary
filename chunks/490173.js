@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(735250),
@@ -19,7 +19,7 @@ var i = n(735250),
   T = n(585483),
   h = n(981631);
 
-function S(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = e => {
+let S = e => {
   let {
     children: t,
     close: n,
@@ -36,18 +36,18 @@ let f = e => {
     rect: d,
     position: E,
     align: T,
-    impressionName: S,
-    impressionProperties: f
-  } = e, N = r.useRef(null), A = r.useMemo(() => ({
+    impressionName: f,
+    impressionProperties: S
+  } = e, A = r.useRef(null), N = r.useMemo(() => ({
     current: u
   }), [u]);
   r.useEffect(() => {
     var e, t;
-    let i = (0, s.findDOMNode)(N.current);
+    let i = (0, s.findDOMNode)(A.current);
     if (null == i) return;
     let r = e => {
       let t = e.target,
-        i = (0, s.findDOMNode)(N.current);
+        i = (0, s.findDOMNode)(A.current);
       if (!(null != i && (0, l.referencePortalAwareContains)(i, t))) window.getSelection().removeAllRanges(), n()
     };
     return null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
@@ -61,33 +61,33 @@ let f = e => {
     return null === (e = m.current) || void 0 === e ? void 0 : e.call(m)
   }, []), r.useLayoutEffect(() => {
     var e;
-    null === (e = N.current) || void 0 === e || e.updatePosition()
+    null === (e = A.current) || void 0 === e || e.updatePosition()
   }), (0, c.Z)({
     type: o.ImpressionTypes.MENU,
-    name: S,
-    properties: f
+    name: f,
+    properties: S
   });
   let O = (0, _.Aq)(),
-    R = r.useCallback(() => {
+    p = r.useCallback(() => {
       O.dispatch(h.CkL.POPOUT_SHOW)
     }, [O]),
-    p = r.useCallback(() => {
+    R = r.useCallback(() => {
       O.dispatch(h.CkL.POPOUT_HIDE)
     }, [O]);
   return (0, i.jsx)(I.W5, {
-    onMount: R,
-    onUnmount: p,
-    targetRef: A,
+    onMount: p,
+    onUnmount: R,
+    targetRef: N,
     overrideTargetRect: d,
     position: null != E ? E : "right",
     align: null != T ? T : "top",
     autoInvert: !0,
-    ref: N,
+    ref: A,
     nudgeAlignIntoViewport: !0,
     children: t
   })
 };
-class N extends r.PureComponent {
+class A extends r.PureComponent {
   componentDidMount() {
     let {
       renderLazy: e,
@@ -131,7 +131,7 @@ class N extends r.PureComponent {
       config: o,
       rect: a
     } = this.props, l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-    return r && null != a && null != o && null != n && null != l && o.context === t ? (0, i.jsx)(f, {
+    return r && null != a && null != o && null != n && null != l && o.context === t ? (0, i.jsx)(S, {
       target: n,
       rect: a,
       close: this.close,
@@ -156,14 +156,14 @@ class N extends r.PureComponent {
     }) : null
   }
   constructor(...e) {
-    super(...e), S(this, "state", {
+    super(...e), f(this, "state", {
       render: void 0
-    }), S(this, "closeResize", e => {
+    }), f(this, "closeResize", e => {
       let {
         renderWindow: t
       } = this.props;
       if (e.target === t) this.close()
-    }), S(this, "close", () => {
+    }), f(this, "close", () => {
       let {
         isOpen: e,
         closeContextMenu: t
@@ -173,7 +173,7 @@ class N extends r.PureComponent {
   }
 }
 
-function A() {
+function N() {
   let {
     contextMenu: e,
     version: t,
@@ -186,7 +186,7 @@ function A() {
     appContext: o,
     renderWindow: l
   } = r.useContext(_.ZP);
-  return (0, i.jsx)(N, {
+  return (0, i.jsx)(A, {
     appContext: o,
     renderWindow: l,
     ...e,

@@ -23,8 +23,8 @@ let d = {
       skuId: I,
       pid: T,
       className: h,
-      guildClassName: S,
-      size: f = d.MEDIUM
+      guildClassName: f,
+      size: S = d.MEDIUM
     } = e;
     if (null != I && (t = function(e) {
         if (null == e) return null;
@@ -56,7 +56,7 @@ let d = {
           default:
             return 80
         }
-      }(f))), null == (t = (0, a.Z)(T, t)) && null != E) {
+      }(S))), null == (t = (0, a.Z)(T, t)) && null != E) {
       let e = function(e) {
         switch (e) {
           case d.XSMALL:
@@ -69,9 +69,9 @@ let d = {
           case d.MEDIUM:
             return l.Z.Sizes.MEDIUM
         }
-      }(f);
+      }(S);
       return (0, i.jsx)(l.Z, {
-        className: s()(c.gameIcon, S, h),
+        className: s()(c.gameIcon, f, h),
         guild: E,
         size: e
       })
@@ -79,16 +79,16 @@ let d = {
     if (null == t) return (0, i.jsx)(o.UnknownGameIcon, {
       size: "md",
       color: "currentColor",
-      className: s()(c.gameIcon, f, h)
+      className: s()(c.gameIcon, S, h)
     });
-    let N = null == r ? void 0 : r.name,
-      A = null != N && "" !== N ? _.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-        applicationName: N
+    let A = null == r ? void 0 : r.name,
+      N = null != A && "" !== A ? _.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: A
       }) : _.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
     return (0, i.jsx)("img", {
-      alt: A,
+      alt: N,
       src: t,
-      className: s()(c.gameIcon, f, h)
+      className: s()(c.gameIcon, S, h)
     })
   };
 E.Sizes = d, t.Z = E

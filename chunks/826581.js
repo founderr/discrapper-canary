@@ -10,32 +10,32 @@ var i, r, s, o, a = n(913527),
   I = n(70956),
   T = n(881952),
   h = n(246364),
-  S = n(937111),
-  f = n(981631);
-let N = new Map,
-  A = {};
+  f = n(937111),
+  S = n(981631);
+let A = new Map,
+  N = {};
 
 function m(e) {
-  return A[e]
+  return N[e]
 }
 
 function O(e, t) {
-  A[e] = t, N.set(e, l()())
+  N[e] = t, A.set(e, l()())
 }
 
-function R(e, t, n) {
+function p(e, t, n) {
   if (t !== n && null != t) {
     if (t === h.wB.SUBMITTED) {
-      let t = A[e];
+      let t = N[e];
       O(e, t + 1)
     }
     if (n === h.wB.SUBMITTED) {
-      let t = A[e];
+      let t = N[e];
       O(e, Math.max(0, t - 1))
     }
   }
 }
-let p = !1,
+let R = !1,
   g = e => "guild-join-request=".concat(e),
   C = (e, t) => "guild-".concat(e, "-").concat(t);
 
@@ -52,7 +52,7 @@ function P(e) {
 }
 
 function y(e) {
-  B[e.joinRequestId] = e, L.set(e.joinRequestId, e), (0, T.Nd)(e.applicationStatus) && (M.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, T.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), M.set(e.joinRequestId, e))
+  x[e.joinRequestId] = e, L.set(e.joinRequestId, e), (0, T.Nd)(e.applicationStatus) && (M.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, T.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), M.set(e.joinRequestId, e))
 }
 
 function U(e) {
@@ -60,39 +60,39 @@ function U(e) {
   let {
     guildId: i,
     request: r
-  } = e, s = (0, S.j)(r), o = E.default.getCurrentUser();
+  } = e, s = (0, f.j)(r), o = E.default.getCurrentUser();
   if (null == o || s.userId === o.id) return !1;
   let a = null === (n = s.joinRequestId, t = L.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
-  return R(i, s.applicationStatus, a), y(s), !0
+  return p(i, s.applicationStatus, a), y(s), !0
 }
 let b = {},
   G = {},
   w = {},
-  B = {},
-  x = 10 * I.Z.Seconds.MINUTE;
+  x = {},
+  B = 10 * I.Z.Seconds.MINUTE;
 class k extends(i = u.ZP.Store) {
   getRequest(e) {
-    return B[e]
+    return x[e]
   }
   getRequests(e, t) {
     let n = C(e, t);
     return (0, T.bk)(t) ? M.values(n) : (0, T.Nd)(t) ? D.values(n) : L.values(n)
   }
   getSubmittedGuildJoinRequestTotal(e) {
-    return A[e]
+    return N[e]
   }
   isFetching() {
-    return p
+    return R
   }
   hasFetched(e) {
-    if (!N.has(e)) return !1;
-    let t = N.get(e);
-    return null != t && l()().diff(t, "seconds") < x
+    if (!A.has(e)) return !1;
+    let t = A.get(e);
+    return null != t && l()().diff(t, "seconds") < B
   }
   getSelectedApplicationTab(e) {
     var t;
     let n = d.Z.getGuild(e),
-      i = (null == n ? void 0 : n.hasFeature(f.oNc.CLAN)) ? "REVIEW_APPLICATION" : h.wB.SUBMITTED;
+      i = (null == n ? void 0 : n.hasFeature(S.oNc.CLAN)) ? "REVIEW_APPLICATION" : h.wB.SUBMITTED;
     return null !== (t = b[e]) && void 0 !== t ? t : i
   }
   getSelectedSortOrder(e) {
@@ -124,15 +124,15 @@ o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = k) ? Object.defineProp
       total: i,
       guildId: r
     } = e;
-    p = !1, t === h.wB.SUBMITTED && O(r, i), n.forEach(e => {
+    R = !1, t === h.wB.SUBMITTED && O(r, i), n.forEach(e => {
       y(e)
     })
   },
   GUILD_JOIN_REQUESTS_FETCH_START: function() {
-    p = !0
+    R = !0
   },
   GUILD_JOIN_REQUESTS_FETCH_FAILURE: function() {
-    p = !1
+    R = !1
   },
   GUILD_JOIN_REQUESTS_BULK_ACTION: function(e) {
     let {
@@ -157,7 +157,7 @@ o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = k) ? Object.defineProp
     let s = (t = i, L.get(t));
     if (null != s) {
       ;
-      R(r, null, s.applicationStatus), n = i, delete B[n], L.delete(n), D.delete(n), M.delete(n)
+      p(r, null, s.applicationStatus), n = i, delete x[n], L.delete(n), D.delete(n), M.delete(n)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {

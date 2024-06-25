@@ -1,19 +1,19 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(378720),
-  a = n(232126),
-  r = n(285952),
+var i = n(735250),
+  s = n(470079),
+  a = n(378720),
+  r = n(232126),
+  l = n(285952),
   o = n(981631),
   c = n(689938),
-  u = n(17997);
-class d extends i.PureComponent {
+  d = n(17997);
+class u extends s.PureComponent {
   renderContentRatingImage() {
     let {
       contentRating: e,
       contentRatingAgency: t
     } = this.props.sku;
-    return null == e || null == t ? null : (0, s.jsx)(a.Z, {
-      className: u.rating,
+    return null == e || null == t ? null : (0, i.jsx)(r.Z, {
+      className: d.rating,
       agency: t,
       rating: e.rating
     })
@@ -27,7 +27,7 @@ class d extends i.PureComponent {
       className: n
     } = this.props;
     if (null == e || null == t) return null;
-    let i = {
+    let s = {
         [o.aIt.ESRB]: {
           1: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
           2: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
@@ -83,19 +83,19 @@ class d extends i.PureComponent {
           7: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
         }
       },
-      a = e.descriptors.map(e => i[t][e]).join(", ");
-    return (0, s.jsxs)("div", {
+      r = e.descriptors.map(e => s[t][e]).join(", ");
+    return (0, i.jsxs)("div", {
       className: n,
-      children: [(0, s.jsx)(l.Z, {
+      children: [(0, i.jsx)(a.Z, {
         children: c.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RATINGS
-      }), (0, s.jsxs)(r.Z, {
-        className: u.content,
-        children: [this.renderContentRatingImage(), (0, s.jsx)("div", {
-          className: u.__invalid_info,
-          children: a
+      }), (0, i.jsxs)(l.Z, {
+        className: d.content,
+        children: [this.renderContentRatingImage(), (0, i.jsx)("div", {
+          className: d.__invalid_info,
+          children: r
         })]
       })]
     })
   }
 }
-t.Z = d
+t.Z = u

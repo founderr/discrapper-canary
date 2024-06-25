@@ -1,46 +1,46 @@
 var n = t(735250);
 t(470079);
-var i = t(442837),
-  a = t(481060),
-  l = t(78839),
-  r = t(270144),
-  o = t(238847),
+var a = t(442837),
+  i = t(481060),
+  r = t(78839),
+  o = t(270144),
+  l = t(238847),
   c = t(689938),
-  E = t(637295);
+  d = t(637295);
 s.Z = e => {
   let {
     onGoBack: s
-  } = e, t = (0, i.e7)([l.ZP], () => {
+  } = e, t = (0, a.e7)([r.ZP], () => {
     var e;
-    return null !== (e = l.ZP.getActiveApplicationSubscriptions()) && void 0 !== e ? e : []
+    return null !== (e = r.ZP.getActiveApplicationSubscriptions()) && void 0 !== e ? e : []
   }), {
-    loading: d
-  } = (0, r.sp)(t), {
-    loadState: _
-  } = (0, r.qz)();
-  return d || _ !== r.jd.LOADED ? (0, n.jsx)(a.Spinner, {}) : 0 === t.length ? null : (0, n.jsxs)("div", {
-    className: E.__invalid_container,
-    children: [(0, n.jsxs)(a.Button, {
-      look: a.Button.Looks.BLANK,
-      innerClassName: E.backButtonContents,
+    loading: _
+  } = (0, o.sp)(t), {
+    loadState: E
+  } = (0, o.qz)();
+  return _ || E !== o.jd.LOADED ? (0, n.jsx)(i.Spinner, {}) : 0 === t.length ? null : (0, n.jsxs)("div", {
+    className: d.__invalid_container,
+    children: [(0, n.jsxs)(i.Button, {
+      look: i.Button.Looks.BLANK,
+      innerClassName: d.backButtonContents,
       onClick: s,
-      children: [(0, n.jsx)(a.ArrowSmallRightIcon, {
+      children: [(0, n.jsx)(i.ArrowSmallRightIcon, {
         size: "md",
         color: "currentColor",
-        className: E.arrowIcon
+        className: d.arrowIcon
       }), c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_BACK_CTA]
-    }), (0, n.jsx)(a.Spacer, {
+    }), (0, n.jsx)(i.Spacer, {
       size: 10
-    }), (0, n.jsx)(a.FormTitle, {
+    }), (0, n.jsx)(i.FormTitle, {
       tag: "h1",
       children: c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
-    }), (0, n.jsx)(a.Text, {
+    }), (0, n.jsx)(i.Text, {
       variant: "text-sm/normal",
-      className: E.pageDescription,
+      className: d.pageDescription,
       children: c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_DESCRIPTION
     }), (0, n.jsx)("div", {
-      className: E.subscriptionsContainer,
-      children: t.map(e => (0, n.jsx)(o.Z, {
+      className: d.subscriptionsContainer,
+      children: t.map(e => (0, n.jsx)(l.Z, {
         subscription: e
       }, e.id))
     })]

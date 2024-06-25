@@ -25,7 +25,7 @@ t.Z = r.memo(function(e) {
   } = e, n = (0, s.cj)([a.C], () => a.C.getCurrentBuildOverride()), o = (0, s.e7)([a.C], () => a.C.getBuildOverride(t)), {
     payload: I,
     validatedURL: T
-  } = o, h = n.state === a.Z.Resolving || o.state === a.Z.Resolving, S = r.useCallback(() => {
+  } = o, h = n.state === a.Z.Resolving || o.state === a.Z.Resolving, f = r.useCallback(() => {
     if ((0, l.mG)(o.url) && null != o.override) {
       var e;
       return d(null === (e = o.override) || void 0 === e ? void 0 : e.targetBuildOverride)
@@ -37,7 +37,7 @@ t.Z = r.memo(function(e) {
     loading: h,
     linkMeta: o.override,
     currentOverrides: n.overrides,
-    applyBuildOverride: S,
+    applyBuildOverride: f,
     clearBuildOverride: E,
     url: T
   }) : null

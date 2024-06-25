@@ -1,43 +1,43 @@
 n.d(t, {
   Z: function() {
-    return d
+    return u
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  l = n.n(i),
-  a = n(918701),
-  r = n(566078),
+var s = n(120356),
+  a = n.n(s),
+  r = n(918701),
+  l = n(566078),
   o = n(78826),
   c = n(981631),
-  u = n(140945);
+  d = n(140945);
 
-function d(e) {
+function u(e) {
   let {
     quest: t
-  } = e, n = (0, a.gO)(t), i = r.r.build(t.config).defaultReward.messages.name;
-  return (0, s.jsxs)("div", {
-    className: u.container,
-    children: [(0, s.jsx)(o.Fl, {
+  } = e, n = (0, r.gO)(t), s = l.r.build(t.config).defaultReward.messages.name;
+  return (0, i.jsxs)("div", {
+    className: d.container,
+    children: [(0, i.jsx)(o.Fl, {
       id: "QuestRewardTile_rewardTileStatic",
-      children: e => (0, s.jsx)("img", {
+      children: e => (0, i.jsx)("img", {
         ref: e,
-        alt: i,
-        className: l()(u.image),
+        alt: s,
+        className: a()(d.image),
         src: n.url
       })
-    }), (0, s.jsx)("div", {
-      className: u.overlay
-    }), (0, s.jsx)("div", {
-      className: u.contents,
-      children: (0, s.jsx)(o.Fl, {
+    }), (0, i.jsx)("div", {
+      className: d.overlay
+    }), (0, i.jsx)("div", {
+      className: d.contents,
+      children: (0, i.jsx)(o.Fl, {
         id: "QuestPartnerBranding_gameLogotype",
-        children: e => (0, s.jsx)("img", {
+        children: e => (0, i.jsx)("img", {
           ref: e,
-          className: u.partnerBranding,
+          className: d.partnerBranding,
           alt: t.config.messages.gameTitle,
-          src: (0, a.Gs)(t, c.BRd.DARK)
+          src: (0, r.Gs)(t, c.BRd.DARK)
         })
       })
     })]

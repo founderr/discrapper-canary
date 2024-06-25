@@ -1,23 +1,23 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(230711),
-  a = n(82950),
-  r = n(981631),
+var i = n(735250),
+  s = n(470079),
+  a = n(230711),
+  r = n(82950),
+  l = n(981631),
   o = n(689938),
   c = n(510342);
-class u extends i.PureComponent {
+class d extends s.PureComponent {
   render() {
-    return (0, s.jsx)(a.Z, {
+    return (0, i.jsx)(r.Z, {
       guild: this.props.guild,
-      onClick: () => l.Z.open(r.oAB.ACCOUNT),
+      onClick: () => a.Z.open(l.oAB.ACCOUNT),
       message: o.Z.Messages.TWO_FA_GUILD_MFA_WARNING_MESSAGE_WITH_SPACING.format(),
       cta: o.Z.Messages.TWO_FA_GUILD_MFA_WARNING_RESOLVE_BUTTON,
-      trackingSource: r.PsQ.GUILD_MFA_WARNING,
-      type: r.vID.MFA_WARNING,
+      trackingSource: l.PsQ.GUILD_MFA_WARNING,
+      type: l.vID.MFA_WARNING,
       image: c,
       imageMarginX: 54,
       undismissable: !0
     })
   }
 }
-t.Z = u
+t.Z = d

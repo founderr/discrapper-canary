@@ -1,34 +1,34 @@
 "use strict";
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(920906),
-  o = t(643422);
-class c extends i.Component {
+var s = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(920906),
+  o = n(643422);
+class c extends a.Component {
   render() {
     let {
       icon: e,
-      ...s
+      ...t
     } = this.props;
-    return (0, n.jsx)(e, {
+    return (0, s.jsx)(e, {
       size: "md",
-      ...s,
+      ...t,
       color: "currentColor"
     })
   }
 }
-let d = (0, r.animated)(c);
-s.Z = function(e) {
+let d = (0, l.animated)(c);
+t.Z = function(e) {
   let {
-    className: s,
-    name: t,
-    icon: i,
-    iconClassName: l
-  } = e, c = (0, r.useTransition)({
-    name: t,
-    icon: i,
-    iconClassName: l
+    className: t,
+    name: n,
+    icon: a,
+    iconClassName: i
+  } = e, c = (0, l.useTransition)({
+    name: n,
+    icon: a,
+    iconClassName: i
   }, {
     key: e => e.name,
     initial: null,
@@ -42,16 +42,16 @@ s.Z = function(e) {
       opacity: 0
     }
   });
-  return (0, n.jsx)("div", {
-    className: a()(o.crossfade, s),
-    children: c((e, s) => {
+  return (0, s.jsx)("div", {
+    className: r()(o.crossfade, t),
+    children: c((e, t) => {
       let {
-        icon: t,
-        iconClassName: i
-      } = s;
-      return (0, n.jsx)(d, {
-        icon: t,
-        className: a()(o.icon, i),
+        icon: n,
+        iconClassName: a
+      } = t;
+      return (0, s.jsx)(d, {
+        icon: n,
+        className: r()(o.icon, a),
         style: e
       })
     })

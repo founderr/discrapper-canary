@@ -1,29 +1,29 @@
-t.d(n, {
+o.d(n, {
   Z: function() {
-    return c
+    return a
   }
 });
-var o = t(735250);
-t(470079);
-var s = t(159277),
-  r = t(585183),
-  i = t(981631),
-  a = t(927923);
+var t = o(735250);
+o(470079);
+var r = o(159277),
+  s = o(585183),
+  i = o(981631),
+  c = o(927923);
 
-function c(e) {
+function a(e) {
   let {
     authToken: n,
-    onContinue: t,
-    onError: c,
+    onContinue: o,
+    onError: a,
     onClose: l
   } = e;
-  return (0, o.jsx)(r.h, {
+  return (0, t.jsx)(s.h, {
     platformType: i.ABu.XBOX,
-    clientId: s.t.XBOX_APPLICATION_ID,
-    scopes: a.tA,
+    clientId: r.t.XBOX_APPLICATION_ID,
+    scopes: c.tA,
     authToken: n,
-    onContinue: t,
-    onError: c,
+    onContinue: o,
+    onError: a,
     onClose: l
   })
 }

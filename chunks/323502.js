@@ -1,25 +1,25 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   S: function() {
-    return a
+    return r
   }
 });
-var n = t(544891),
-  i = t(570140),
-  l = t(981631);
+var s = n(544891),
+  a = n(570140),
+  i = n(981631);
 
-function a(e) {
-  return n.tn.get({
-    url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
+function r(e) {
+  return s.tn.get({
+    url: i.ANM.GUILD_TOP_READ_CHANNELS(e),
     oldFormErrors: !0
-  }).then(s => {
+  }).then(t => {
     let {
-      body: t
-    } = s;
-    i.Z.dispatch({
+      body: n
+    } = t;
+    a.Z.dispatch({
       type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
       guildId: e,
-      topChannelIds: t
+      topChannelIds: n
     })
   })
 }

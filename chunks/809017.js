@@ -1,6 +1,6 @@
 n.d(t, {
   G: function() {
-    return l
+    return i
   }
 });
-let l = "content-inventory-feed"
+let i = "content-inventory-feed"

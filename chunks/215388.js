@@ -1,14 +1,14 @@
 t.d(A, {
   Z: function() {
-    return v
+    return f
   }
 }), t(47120);
 var n = t(735250),
   a = t(470079),
-  s = t(120356),
-  r = t.n(s),
-  l = t(772848),
-  o = t(481060),
+  r = t(120356),
+  s = t.n(r),
+  o = t(772848),
+  l = t(481060),
   i = t(752305),
   d = t(893718),
   c = t(131704),
@@ -16,14 +16,14 @@ var n = t(735250),
   C = t(981631),
   g = t(689938),
   T = t(884027),
-  U = t(313586);
-let m = (0, l.Z)(),
-  I = (0, c.kt)({
+  p = t(313586);
+let h = (0, o.Z)(),
+  m = (0, c.kt)({
     id: "1",
     type: C.d4z.DM
   });
 
-function h() {
+function I() {
   return new Promise(e => {
     e({
       shouldClear: !1,
@@ -32,39 +32,39 @@ function h() {
   })
 }
 
-function p(e) {
+function U(e) {
   var A;
   let {
     hasError: t,
     maxLength: a,
-    text: s
+    text: r
   } = e;
   return (0, n.jsxs)("div", {
-    className: r()(U.maxLength, {
-      [U.errorOverflow]: t
+    className: s()(p.maxLength, {
+      [p.errorOverflow]: t
     }),
     "aria-hidden": "true",
-    children: [null !== (A = null == s ? void 0 : s.length) && void 0 !== A ? A : 0, " ", null != a && "/ ".concat(a)]
+    children: [null !== (A = null == r ? void 0 : r.length) && void 0 !== A ? A : 0, " ", null != a && "/ ".concat(a)]
   })
 }
 
-function v(e) {
+function f(e) {
   var A;
   let {
     "aria-labelledby": t,
-    className: s,
-    id: l,
+    className: r,
+    id: o,
     autoFocus: c,
     maxLength: C,
-    onChange: U,
-    onSubmit: v,
-    showCharacterCount: q = !1,
-    placeholder: f,
+    onChange: p,
+    onSubmit: f,
+    showCharacterCount: v = !1,
+    placeholder: q,
     required: E,
     value: N,
-    enableThemedBackground: O = !1,
-    parentModalKey: D
-  } = e, R = (0, o.useFormContext)(), [x, L] = a.useState(() => (0, i.JM)(N)), P = a.useRef(!0 === c), V = null != t ? t : null == R ? void 0 : R.titleId, Z = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : m, S = a.useMemo(() => ({
+    enableThemedBackground: D = !1,
+    parentModalKey: O
+  } = e, x = (0, l.useFormContext)(), [R, L] = a.useState(() => (0, i.JM)(N)), b = a.useRef(!0 === c), P = null != t ? t : null == x ? void 0 : x.titleId, V = null !== (A = null == x ? void 0 : x.errorId) && void 0 !== A ? A : h, _ = a.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
@@ -86,37 +86,37 @@ function v(e) {
     }
   }), [c]);
   return (0, n.jsxs)(d.Z, {
-    "aria-describedby": Z,
-    "aria-labelledby": V,
-    innerClassName: r()(s, T.textArea),
-    id: l,
+    "aria-describedby": V,
+    "aria-labelledby": P,
+    innerClassName: s()(r, T.textArea),
+    id: o,
     maxCharacterCount: C,
     onChange: function(e, A, t) {
-      U(A), L(t)
+      p(A), L(t)
     },
-    placeholder: f,
+    placeholder: q,
     required: E,
-    channel: I,
+    channel: m,
     textValue: N,
-    richValue: x,
-    type: S,
+    richValue: R,
+    type: _,
     onBlur: () => {
-      P.current = !1
+      b.current = !1
     },
     onFocus: () => {
-      P.current = !0
+      b.current = !0
     },
-    focused: P.current,
-    onSubmit: null != v ? v : h,
-    disableThemedBackground: !O,
-    parentModalKey: D,
+    focused: b.current,
+    onSubmit: null != f ? f : I,
+    disableThemedBackground: !D,
+    parentModalKey: O,
     emojiPickerCloseOnModalOuterClick: !0,
-    children: [!0 === q && (0, n.jsx)(p, {
-      hasError: null != R.error || null != C && N.length > C,
+    children: [!0 === v && (0, n.jsx)(U, {
+      hasError: null != x.error || null != C && N.length > C,
       text: N,
       maxLength: C
-    }), null != C && (0, n.jsx)(o.HiddenVisually, {
-      id: m,
+    }), null != C && (0, n.jsx)(l.HiddenVisually, {
+      id: h,
       children: g.Z.Messages.MAXIMUM_LENGTH.format({
         maxLength: C
       })

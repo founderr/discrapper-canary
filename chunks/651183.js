@@ -3,11 +3,11 @@ n.d(t, {
     return r
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(475674),
-  s = n(42326),
-  a = n(906467);
+var a = n(475674),
+  l = n(42326),
+  s = n(906467);
 
 function r(e) {
   var t;
@@ -15,8 +15,8 @@ function r(e) {
     participant: n,
     className: r
   } = e;
-  let o = null == (t = (0, i.Z)(n)) ? null : a.Z.isDeveloper ? "".concat(t.message, " (").concat(t.errorType, ")") : t.message;
-  return null != o ? (0, l.jsx)(s.Z, {
+  let o = null == (t = (0, a.Z)(n)) ? null : s.Z.isDeveloper ? "".concat(t.message, " (").concat(t.errorType, ")") : t.message;
+  return null != o ? (0, i.jsx)(l.Z, {
     className: r,
     errorMessage: o
   }) : null

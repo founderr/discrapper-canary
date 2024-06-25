@@ -1,27 +1,27 @@
 n.d(t, {
   Z: function() {
-    return r
+    return a
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(785144);
+var l = n(481060),
+  r = n(785144);
 
-function r(e) {
+function a(e) {
   let {
     userCount: t
   } = e;
-  return (0, l.jsxs)("div", {
-    className: s.container,
-    children: [(0, l.jsx)(i.GroupIcon, {
+  return (0, i.jsxs)("div", {
+    className: r.container,
+    children: [(0, i.jsx)(l.GroupIcon, {
       size: "xxs",
       color: "currentColor",
-      className: s.peopleIcon
-    }), (0, l.jsx)(i.Text, {
+      className: r.peopleIcon
+    }), (0, i.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      className: s.userCountText,
+      className: r.userCountText,
       children: t
     })]
   })

@@ -24,8 +24,8 @@ function E(e, t, n) {
     T = (0, c.i)(e),
     h = null;
   s.Z.hasLoaded(d.yP.PRELOADED_USER_SETTINGS) ? h = T.find(e => null == E || !(0, a.jl)(E, e)) : null != E && (h = T.find(e => !(0, a.jl)(E, e)));
-  let S = (0, u.ZP)(e => null != h && e.currentlyShown.has(h)),
-    f = (0, r.e7)([l.Z], () => null != h && l.Z.hasUserHitDCCap(h));
+  let f = (0, u.ZP)(e => null != h && e.currentlyShown.has(h)),
+    S = (0, r.e7)([l.Z], () => null != h && l.Z.hasUserHitDCCap(h));
   i.useEffect(() => {
     if (null != h) return (0, _.kk)(h, {
       groupName: t,
@@ -38,8 +38,8 @@ function E(e, t, n) {
         groupName: t
       }, e)
     }
-  }, [h, t, I, f, n]);
-  let N = i.useCallback((e, n) => {
+  }, [h, t, I, S, n]);
+  let A = i.useCallback((e, n) => {
     null != h && (0, _.EW)(h, {
       dismissAction: e,
       groupName: t,
@@ -47,5 +47,5 @@ function E(e, t, n) {
       forceTrack: n
     })
   }, [h, t, I]);
-  return [S && null != h ? h : null, N]
+  return [f && null != h ? h : null, A]
 }

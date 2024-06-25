@@ -1,45 +1,45 @@
-var a = n(735250),
-  l = n(470079),
-  s = n(461745),
-  r = n(747608);
+var n = a(735250),
+  l = a(470079),
+  s = a(461745),
+  r = a(747608);
 let i = l.forwardRef(function(e, t) {
   let {
-    query: n,
+    query: a,
     onQueryChange: l,
     onRemoveTag: i,
     onSelect: o,
-    onSelectionChange: d,
-    selectedSection: c,
+    onSelectionChange: c,
+    selectedSection: d,
     selectedRow: u,
     tags: m,
     sections: h,
     placeholder: S = "",
-    focusAfterReady: T,
-    isReady: x,
+    focusAfterReady: x,
+    isReady: T,
     "aria-labelledby": g,
-    "aria-controls": v
+    "aria-controls": f
   } = e;
-  return (0, a.jsx)(s.ZP, {
+  return (0, n.jsx)(s.ZP, {
     autoFocus: !0,
     className: r.searchBar,
     maxHeight: 100,
     onQueryChange: l,
     onRemoveTag: i,
-    selectedSection: c,
+    selectedSection: d,
     selectedRow: u,
     onSelect: o,
-    onSelectionChange: d,
+    onSelectionChange: c,
     placeholder: 0 === m.length ? S : "",
-    query: n,
+    query: a,
     ref: t,
     size: s.ZP.Sizes.MEDIUM,
     tags: m,
     sections: h,
-    focusAfterReady: T,
-    isReady: x,
+    focusAfterReady: x,
+    isReady: T,
     inputProps: {
       "aria-labelledby": g,
-      "aria-controls": v,
+      "aria-controls": f,
       "aria-expanded": !0,
       "aria-activedescendant": "user-row-".concat(u)
     }

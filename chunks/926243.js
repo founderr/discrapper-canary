@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return p
+    return R
   }
 }), n(47120);
 var i = n(735250),
@@ -18,13 +18,13 @@ var i = n(735250),
   I = n(691251),
   T = n(536442),
   h = n(912893),
-  S = n(430824),
-  f = n(358085),
-  N = n(288406),
-  A = n(689938),
+  f = n(430824),
+  S = n(358085),
+  A = n(288406),
+  N = n(689938),
   m = n(688623);
 let O = (e, t) => "".concat(e, ":").concat(t),
-  R = r.forwardRef(function(e, t) {
+  p = r.forwardRef(function(e, t) {
     let n, {
         emoji: r,
         isFavorite: s,
@@ -34,15 +34,15 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         isDisabled: E,
         showPulse: T,
         columnIndex: h,
-        rowIndex: f,
+        rowIndex: S,
         size: O,
-        surrogateCodePoint: R,
-        allowAnimatedEmoji: p,
+        surrogateCodePoint: p,
+        allowAnimatedEmoji: R,
         selectedItemClassName: g,
         inNitroLockedSection: C,
         ...v
       } = e,
-      L = (0, a.e7)([S.Z], () => r.type === d.B.GUILD ? S.Z.getGuild(r.guildId) : void 0, [r]);
+      L = (0, a.e7)([f.Z], () => r.type === d.B.GUILD ? f.Z.getGuild(r.guildId) : void 0, [r]);
     return (0, i.jsx)(l.FocusRing, {
       children: (0, i.jsx)("button", {
         ...v,
@@ -57,36 +57,36 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         "data-id": r.id,
         "data-name": r.name,
         ref: t,
-        children: (0, i.jsx)(N.Z, {
-          "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = A.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
+        children: (0, i.jsx)(A.Z, {
+          "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = N.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: n,
             guildName: L.name
-          })), s) ? A.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), s) ? N.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: n
           }) : n),
           columnIndex: h,
-          rowIndex: f,
+          rowIndex: S,
           emoji: r,
           size: O,
-          surrogateCodePoint: R,
-          allowAnimatedEmoji: p,
+          surrogateCodePoint: p,
+          allowAnimatedEmoji: R,
           isLocked: E && !C
         })
       })
     })
   });
 
-function p(e) {
+function R(e) {
   let {
     descriptor: t,
     emojiItemKey: s,
     isInspected: o,
     rowIndex: d,
     channelGuildId: I,
-    onInspect: S,
-    onSelect: N,
+    onInspect: f,
+    onSelect: A,
     isScrolling: m,
-    isUsingKeyboardNavigation: p,
+    isUsingKeyboardNavigation: R,
     showEmojiFavoriteTooltip: g,
     surrogateCodePoint: C,
     selectedItemClassName: v,
@@ -99,21 +99,21 @@ function p(e) {
     messageId: b,
     isBurstReaction: G,
     rowPosition: w,
-    inNitroLockedSection: B
-  } = e, [x, k] = r.useState(""), V = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), Z = (0, a.e7)([c.Z], () => c.Z.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+    inNitroLockedSection: x
+  } = e, [B, k] = r.useState(""), V = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), Z = (0, a.e7)([c.Z], () => c.Z.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
     emoji: F,
     size: Y,
     isDisabled: j,
     columnIndex: W
   } = t, K = e => {
-    if (e.stopPropagation(), m.current || p.current) return;
+    if (e.stopPropagation(), m.current || R.current) return;
     let n = e.altKey;
-    n && !c.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(F) && U(s), (0, T.Kw)(T.v6.FAVORITE_EMOJI_TOOLTIP), N(t, {
+    n && !c.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(F) && U(s), (0, T.Kw)(T.v6.FAVORITE_EMOJI_TOOLTIP), A(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: n
     })
   }, z = () => {
-    !m.current && !p.current && S(t)
+    !m.current && !R.current && f(t)
   }, q = e => {
     (0, u.jW)(e, async () => {
       let {
@@ -138,7 +138,7 @@ function p(e) {
       ..._,
       key: s,
       ref: H
-    }, x !== O(W, d) && (0, i.jsx)(R, {
+    }, B !== O(W, d) && (0, i.jsx)(p, {
       ref: a,
       emoji: F,
       isFavorite: Z.isFavoriteEmojiWithoutFetchingLatest(F),
@@ -167,12 +167,12 @@ function p(e) {
       size: Y,
       surrogateCodePoint: C,
       selectedItemClassName: v,
-      inNitroLockedSection: B
+      inNitroLockedSection: x
     }))
   };
   return g ? (0, i.jsx)(l.Tooltip, {
-    text: A.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
-      key: (0, f.isMac)() ? "Opt" : "Alt"
+    text: N.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+      key: (0, S.isMac)() ? "Opt" : "Alt"
     }),
     position: "top",
     delay: 200,

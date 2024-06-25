@@ -45,13 +45,13 @@ let E = {
         channel: I,
         query: T,
         options: h,
-        onHover: S,
-        onClick: f
+        onHover: f,
+        onClick: S
       } = e,
-      N = s.map((e, t) => (0, i.jsx)(o.ZP.User, {
+      A = s.map((e, t) => (0, i.jsx)(o.ZP.User, {
         guildId: I.guild_id,
-        onClick: f,
-        onHover: S,
+        onClick: S,
+        onHover: f,
         selected: E === t,
         index: t,
         user: e.user,
@@ -59,9 +59,9 @@ let E = {
         status: e.status,
         hidePersonalInformation: h.hidePersonalInformation
       }, e.user.id)),
-      A = a.map((e, t) => (0, i.jsx)(o.ZP.Generic, {
-        onClick: f,
-        onHover: S,
+      N = a.map((e, t) => (0, i.jsx)(o.ZP.Generic, {
+        onClick: S,
+        onHover: f,
         selected: E === t + s.length,
         index: s.length + t,
         text: e.text,
@@ -69,8 +69,8 @@ let E = {
         "aria-label": e.text
       }, e.text)),
       m = l.map((e, t) => (0, i.jsx)(o.ZP.Role, {
-        onClick: f,
-        onHover: S,
+        onClick: S,
+        onHover: f,
         selected: E === t + s.length + a.length,
         index: s.length + a.length + t,
         role: e,
@@ -82,7 +82,7 @@ let E = {
         titleWithoutQuery: n,
         query: T,
         getQuery: e => "".concat(c.ME).concat(e)
-      }), N, s.length > 0 && a.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, A, s.length > 0 && l.length > 0 || a.length > 0 && l.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, m]
+      }), A, s.length > 0 && a.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, N, s.length > 0 && l.length > 0 || a.length > 0 && l.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, m]
     }, "mentions")
   },
   onSelect(e) {

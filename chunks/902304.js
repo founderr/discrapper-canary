@@ -14,15 +14,15 @@ var i = n(512722),
   I = n(979651),
   T = n(823379),
   h = n(254238),
-  S = n(607214),
-  f = n(258609),
-  N = n(565473),
-  A = n(444092),
+  f = n(607214),
+  S = n(258609),
+  A = n(565473),
+  N = n(444092),
   m = n(927923),
   O = n(65154),
-  R = n(689938);
+  p = n(689938);
 
-function p(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -41,7 +41,7 @@ async function C(e) {
 }
 class v extends l.Z {
   constructor(...e) {
-    super(...e), p(this, "rollbackCommandTimeout", new s.V7), p(this, "awaitRemoteTimeout", new s.V7), p(this, "actions", {
+    super(...e), R(this, "rollbackCommandTimeout", new s.V7), R(this, "awaitRemoteTimeout", new s.V7), R(this, "actions", {
       WAIT_FOR_REMOTE_SESSION: () => this.handleWaitForRemoteSession(),
       POST_CONNECTION_OPEN: () => this.handleSessionsChanged(),
       SESSIONS_REPLACE: () => this.handleSessionsChanged(),
@@ -51,13 +51,13 @@ class v extends l.Z {
       CONSOLE_COMMAND_UPDATE: e => this.handleConsoleCommandUpdate(e),
       PASSIVE_UPDATE_V2: e => this.handleVoiceStateUpdates(e),
       REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
-    }), p(this, "maybeConnect", e => {
+    }), R(this, "maybeConnect", e => {
       let t = function(e) {
-        let t = f.Z.getAwaitingRemoteSessionInfo();
+        let t = S.Z.getAwaitingRemoteSessionInfo();
         return e.find(e => {
           let n = m.al.has(e.clientInfo.os),
             i = null != I.Z.getVoiceStateForSession(_.default.getId(), e.sessionId),
-            r = null == t || (0, N.y)(t.type) === e.clientInfo.os;
+            r = null == t || (0, A.y)(t.type) === e.clientInfo.os;
           return n && r && i
         })
       }(e);
@@ -65,7 +65,7 @@ class v extends l.Z {
       this.awaitRemoteTimeout.stop(), (0, h.ef)(t.sessionId);
       let n = I.Z.getVoiceStateForSession(_.default.getId(), t.sessionId);
       null != n && C(n)
-    }), p(this, "handleAudioStateToggle", e => {
+    }), R(this, "handleAudioStateToggle", e => {
       let {
         syncRemote: t,
         context: n
@@ -74,7 +74,7 @@ class v extends l.Z {
       let i = c.Z.isSelfDeaf(),
         r = c.Z.isSelfMute(),
         s = _.default.getId(),
-        o = f.Z.getRemoteSessionId();
+        o = S.Z.getRemoteSessionId();
       if (null == o) return;
       let a = I.Z.getVoiceStateForSession(s, o);
       if (null != a)(a.selfDeaf !== i || a.selfMute !== r) && ((0, h.Vv)(o, {
@@ -83,9 +83,9 @@ class v extends l.Z {
       }), this.rollbackCommandTimeout.start(3e3, () => {
         C(a)
       }))
-    }), p(this, "handleVoiceStateUpdates", e => {
+    }), R(this, "handleVoiceStateUpdates", e => {
       let t = e.voiceStates,
-        n = f.Z.getRemoteSessionId();
+        n = S.Z.getRemoteSessionId();
       if (null == n) {
         let e = t.map(e => {
           let {
@@ -102,17 +102,17 @@ class v extends l.Z {
         return t === n
       });
       null != i && (this.rollbackCommandTimeout.stop(), C(i))
-    }), p(this, "handleSessionsChanged", () => {
-      let e = f.Z.getRemoteSessionId();
+    }), R(this, "handleSessionsChanged", () => {
+      let e = S.Z.getRemoteSessionId();
       null != e && null == E.Z.getSessionById(e) && (0, h.s6)(), null == e && this.maybeConnect(Object.values(E.Z.getSessions()))
-    }), p(this, "handleWaitForRemoteSession", () => {
+    }), R(this, "handleWaitForRemoteSession", () => {
       this.awaitRemoteTimeout.start(6e4, () => {
         (0, h.s6)(), o.Z.show({
-          title: R.Z.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_TITLE,
-          body: R.Z.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_BODY
+          title: p.Z.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_TITLE,
+          body: p.Z.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_BODY
         })
       })
-    }), p(this, "handleConsoleCommandUpdate", e => {
+    }), R(this, "handleConsoleCommandUpdate", e => {
       var t;
       let {
         id: n,
@@ -121,21 +121,21 @@ class v extends l.Z {
       } = e;
       if ("failed" !== i && "n/a" !== i || null == r) return;
       g.info("Console command Error result:", i, r);
-      let s = f.Z.getAwaitingRemoteSessionInfo();
+      let s = S.Z.getAwaitingRemoteSessionInfo();
       if ((null == s ? void 0 : s.commandId) !== n) return;
-      let o = f.Z.getDevice(s.type, null !== (t = s.deviceId) && void 0 !== t ? t : ""),
-        a = (0, A.Z)(null != o ? o : {
+      let o = S.Z.getDevice(s.type, null !== (t = s.deviceId) && void 0 !== t ? t : ""),
+        a = (0, N.Z)(null != o ? o : {
           id: "id",
-          platform: R.Z.Messages.STATUS_UNKNOWN,
-          name: R.Z.Messages.STATUS_UNKNOWN
+          platform: p.Z.Messages.STATUS_UNKNOWN,
+          name: p.Z.Messages.STATUS_UNKNOWN
         }, i, r);
-      null != a && S.Z.showSelfDismissableAlert({
+      null != a && f.Z.showSelfDismissableAlert({
         title: a.title,
         body: a.body,
         errorCodeMessage: a.errorCodeMessage,
         reconnectPlatformType: a.isAccountLinkError ? s.type : void 0
       }), m.e8.has(r.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(18e4, () => (0, h.s6)(), !0) : "failed" === i && (0, h.s6)()
-    }), p(this, "handleRemoteSessionDisconnect", () => {
+    }), R(this, "handleRemoteSessionDisconnect", () => {
       this.awaitRemoteTimeout.stop()
     })
   }

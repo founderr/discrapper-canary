@@ -18,10 +18,10 @@ var i = n(735250),
   I = n(327943),
   T = n(997945),
   h = n(401460),
-  S = n(441319),
-  f = n(921944),
-  N = n(526761),
-  A = n(689938),
+  f = n(441319),
+  S = n(921944),
+  A = n(526761),
+  N = n(689938),
   m = n(776327);
 
 function O(e) {
@@ -29,8 +29,8 @@ function O(e) {
     className: t,
     disabled: n,
     renderCTAButtons: O
-  } = e, [R, p] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), g = r.useRef(null);
-  (0, d.Z)(g, N.h1.CUSTOM_APP_ICONS);
+  } = e, [p, R] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), g = r.useRef(null);
+  (0, d.Z)(g, A.h1.CUSTOM_APP_ICONS);
   let C = (0, E.Dt)(),
     v = (0, o.useRadioGroup)({
       orientation: "horizontal",
@@ -43,7 +43,7 @@ function O(e) {
       });
       let t = T.Mw.get(e);
       null != t && (0, l.EW)(t, {
-        dismissAction: f.L.TAKE_ACTION
+        dismissAction: S.L.TAKE_ACTION
       })
     },
     D = "AppIconSelectionGroup",
@@ -77,7 +77,7 @@ function O(e) {
       let t = T.Mw.get(e),
         i = null != t && !(0, l.un)(t);
       return n && i && setTimeout(() => (0, l.EW)(t, {
-        dismissAction: f.L.AUTO_DISMISS
+        dismissAction: S.L.AUTO_DISMISS
       }), 5e3), i
     }, [n]);
   return (0, i.jsx)("div", {
@@ -91,22 +91,22 @@ function O(e) {
           className: m.header,
           children: [(0, i.jsxs)("div", {
             className: m.headings,
-            children: [p ? null : (0, i.jsxs)("div", {
+            children: [R ? null : (0, i.jsxs)("div", {
               className: m.title,
               children: [(0, i.jsx)(o.Heading, {
                 variant: "text-md/medium",
-                children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
+                children: N.Z.Messages.APP_ICON_SETTINGS_TITLE
               }), (0, i.jsx)(c.Z, {
                 className: m.premiumIcon
               })]
             }), (0, i.jsx)(o.Heading, {
               variant: "text-sm/normal",
-              children: A.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
+              children: N.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]
           }), null == O ? void 0 : O()]
         }), (0, i.jsx)("div", {
           className: m.presets,
-          children: S.UZ.filter(e => {
+          children: f.UZ.filter(e => {
             let {
               isHidden: t,
               id: n
@@ -114,7 +114,7 @@ function O(e) {
             return y(t, n)
           }).map((e, t) => (0, i.jsx)(h.Z, {
             icon: e,
-            isSelected: R === e.id,
+            isSelected: p === e.id,
             onSelect: e => L(e),
             disabled: n,
             tabIndex: 0 !== t || n ? void 0 : 0,

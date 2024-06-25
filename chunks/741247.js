@@ -3,31 +3,31 @@ t.r(n), t.d(n, {
     return c
   },
   useHasGuildRoleItems: function() {
-    return o
+    return r
   }
 });
 var i = t(735250);
 t(470079);
-var l = t(481060),
+var a = t(481060),
   s = t(239091),
-  a = t(241635),
-  r = t(689938);
+  l = t(241635),
+  o = t(689938);
 
-function o(e, n) {
-  return (0, a.Z)(e, n).length > 0
+function r(e, n) {
+  return (0, l.Z)(e, n).length > 0
 }
 
 function c(e) {
   let {
     role: n,
     guild: t,
-    onSelect: o
-  } = e, c = (0, a.Z)(t, n);
-  return 0 === c.length ? null : (0, i.jsx)(l.Menu, {
+    onSelect: r
+  } = e, c = (0, l.Z)(t, n);
+  return 0 === c.length ? null : (0, i.jsx)(a.Menu, {
     navId: "guild-settings-role-context",
-    "aria-label": r.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
+    "aria-label": o.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
     onClose: s.Zy,
-    onSelect: o,
+    onSelect: r,
     children: c
   })
 }

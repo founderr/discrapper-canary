@@ -5,28 +5,28 @@ t.d(n, {
 });
 var i = t(735250),
   r = t(470079),
-  l = t(778947),
-  o = t(901461);
-let u = r.memo(l.ZP);
+  o = t(778947),
+  l = t(901461);
+let u = r.memo(o.ZP);
 
 function s(e) {
   let {
     message: n,
     channel: t,
     author: r,
-    compact: l,
+    compact: o,
     animateAvatar: s,
     guildId: a,
     isGroupStart: c = !0,
     roleIcon: d,
     hideTimestamp: _
   } = e;
-  return !(0, o.Z)(n) && (c || l) ? (0, i.jsx)(u, {
+  return !(0, l.Z)(n) && (c || o) ? (0, i.jsx)(u, {
     message: n,
     channel: t,
     author: r,
     guildId: a,
-    compact: l,
+    compact: o,
     animate: s,
     roleIcon: d,
     hideTimestamp: _

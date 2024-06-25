@@ -3,16 +3,16 @@ t.d(n, {
     return u
   },
   Md: function() {
-    return o
+    return l
   },
   Q8: function() {
-    return l
+    return o
   }
 });
 var i = t(373228),
   r = t(689938);
-let l = () => [r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
-  o = () => [r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
+let o = () => [r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
+  l = () => [r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
   u = [{
     id: "781323471249604648",
     format_type: i.u3.APNG,

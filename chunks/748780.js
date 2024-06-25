@@ -52,28 +52,28 @@ t.Z = {
       type: I = "spring",
       shouldLoop: T,
       durationMin: h,
-      durationMax: S,
-      ...f
-    } = n, N = t._value, A = E(n.duration, h, S), m = E(n.toValue, s, o), O = i[I](t, {
-      ...f,
+      durationMax: f,
+      ...S
+    } = n, A = t._value, N = E(n.duration, h, f), m = E(n.toValue, s, o), O = i[I](t, {
+      ...S,
       toValue: m,
       tension: a,
       friction: l,
-      duration: A
-    }), R = O;
+      duration: N
+    }), p = O;
     if (_ || c) {
-      let e = E(n.duration, h, S);
+      let e = E(n.duration, h, f);
       r = i[I](t, {
-        ...f,
-        toValue: _ ? N : -m,
+        ...S,
+        toValue: _ ? A : -m,
         tension: a,
         friction: l,
         duration: e
-      }), R = i.sequence([O, r])
+      }), p = i.sequence([O, r])
     }
-    u ? R.start(() => {
+    u ? p.start(() => {
       (!T || T && T()) && (d ? d(e.bind(null, t, n)) : e(t, n))
-    }) : R.start(d)
+    }) : p.start(d)
   },
   interpolate: function(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

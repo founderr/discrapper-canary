@@ -1,14 +1,14 @@
-s.d(n, {
+t.d(a, {
   Ui: function() {
     return i
   },
   p$: function() {
-    return r
+    return d
   }
 });
-var a = s(818083),
-  l = s(981631);
-let t = (0, a.B)({
+var n = t(818083),
+  o = t(981631);
+let r = (0, n.B)({
   kind: "guild",
   id: "2023-03_guild_media_channel",
   label: "Media Channel",
@@ -25,18 +25,18 @@ let t = (0, a.B)({
 });
 
 function i(e) {
-  var n;
+  var a;
   let {
-    enabled: s
-  } = t.useExperiment({
-    guildId: null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : l.lds,
+    enabled: t
+  } = r.useExperiment({
+    guildId: null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : o.lds,
     location: "96e84c_1"
   }, {
     autoTrackExposure: !0
   });
-  return (null == e ? void 0 : e.id) != null && s
+  return (null == e ? void 0 : e.id) != null && t
 }
-let o = (0, a.B)({
+let l = (0, n.B)({
   kind: "user",
   id: "2023-04_guild_media_channel_post_preview_embed_users",
   label: "Guild Role Subscription Users",
@@ -52,10 +52,10 @@ let o = (0, a.B)({
   }]
 });
 
-function r() {
+function d() {
   let {
     enabledForUser: e
-  } = o.useExperiment({
+  } = l.useExperiment({
     location: "96e84c_2"
   }, {
     autoTrackExposure: !0

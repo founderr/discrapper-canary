@@ -9,10 +9,10 @@ var s, o, a, l, u = n(442837),
 let I = "hideSuppressWarning",
   T = !1,
   h = !0,
-  S = !1;
-class f extends(s = u.ZP.Store) {
+  f = !1;
+class S extends(s = u.ZP.Store) {
   initialize() {
-    S = _.K.get(I) || S
+    f = _.K.get(I) || f
   }
   isAFKChannel() {
     let e = d.Z.getChannel(r);
@@ -25,12 +25,12 @@ class f extends(s = u.ZP.Store) {
     return !(null === (e = d.Z.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !h
   }
 }
-l = "PermissionSpeakStore", (a = "displayName") in(o = f) ? Object.defineProperty(o, a, {
+l = "PermissionSpeakStore", (a = "displayName") in(o = S) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new f(c.Z, {
+}) : o[a] = l, t.Z = new S(c.Z, {
   CONNECTION_OPEN: function(e) {
     i = e.sessionId, T = !1
   },
@@ -41,12 +41,12 @@ l = "PermissionSpeakStore", (a = "displayName") in(o = f) ? Object.definePropert
     let {
       voiceStates: t
     } = e;
-    return t.reduce((e, t) => i !== t.sessionId ? e : (T !== t.suppress && (h = !(T = t.suppress)), r !== t.channelId && (r = t.channelId, h = !T), (S || null == t.channelId) && (h = !0), !0), !1)
+    return t.reduce((e, t) => i !== t.sessionId ? e : (T !== t.suppress && (h = !(T = t.suppress)), r !== t.channelId && (r = t.channelId, h = !T), (f || null == t.channelId) && (h = !0), !0), !1)
   },
   PERMISSION_CLEAR_SUPPRESS_WARNING: function(e) {
     let {
       forever: t
     } = e;
-    h = !0, t && (S = !0, _.K.set(I, S))
+    h = !0, t && (f = !0, _.K.set(I, f))
   }
 })

@@ -64,14 +64,14 @@ var i, r, s = n(735250),
   I = n(904245),
   T = n(45114),
   h = n(431279),
-  S = n(794295),
-  f = n(593472),
-  N = n(110924),
-  A = n(688465),
+  f = n(794295),
+  S = n(593472),
+  A = n(110924),
+  N = n(688465),
   m = n(479313),
   O = n(765104),
-  R = n(505953),
-  p = n(695346),
+  p = n(505953),
+  R = n(695346),
   g = n(201542),
   C = n(306680),
   v = n(594174),
@@ -84,8 +84,8 @@ var i, r, s = n(735250),
   b = n(259580),
   G = n(626135),
   w = n(823379),
-  B = n(589530),
-  x = n(709054),
+  x = n(589530),
+  B = n(709054),
   k = n(981631),
   V = n(420212),
   Z = n(814249),
@@ -97,10 +97,10 @@ let j = {
     position: "top"
   },
   W = e => t => {
-    null == e || e(t), (0, B.jA)(t)
+    null == e || e(t), (0, x.jA)(t)
   },
   K = e => t => {
-    null == e || e(t), (0, B.Zj)(t)
+    null == e || e(t), (0, x.Zj)(t)
   };
 
 function z(e) {
@@ -114,7 +114,7 @@ function z(e) {
     renderOverlayContent: u,
     ..._
   } = e, c = W(t), d = K(n);
-  return i = null == i ? B.FC : i, r = null == r ? B.rs : r, (0, s.jsxs)(o.Fragment, {
+  return i = null == i ? x.FC : i, r = null == r ? x.rs : r, (0, s.jsxs)(o.Fragment, {
     children: [(0, s.jsx)(M.Z, {
       ..._,
       alt: a,
@@ -138,7 +138,7 @@ function q(e) {
     renderAdjacentContent: l,
     ...u
   } = e, _ = W(t), c = K(i);
-  return n = null == n ? B.FC : n, (0, s.jsxs)(o.Fragment, {
+  return n = null == n ? x.FC : n, (0, s.jsxs)(o.Fragment, {
     children: [(0, s.jsx)(D.Z, {
       ...u,
       onVolumeChange: _,
@@ -159,7 +159,7 @@ function X(e) {
     onMute: i,
     ...r
   } = e, o = W(t), a = K(i);
-  return n = null == n ? B.FC : n, (0, s.jsx)(g.Z, {
+  return n = null == n ? x.FC : n, (0, s.jsx)(g.Z, {
     ...r,
     onVolumeChange: o,
     onMute: a,
@@ -178,7 +178,7 @@ function Q(e) {
     mediaLayoutType: _,
     imageContainerStyle: c,
     renderForwardComponent: d
-  } = e, I = _ === H.hV.MOSAIC, T = !u && p.H1.getSetting() && null != t && "" !== t && !0 !== n, S = e => {
+  } = e, I = _ === H.hV.MOSAIC, T = !u && R.H1.getSetting() && null != t && "" !== t && !0 !== n, f = e => {
     let {
       altText: t
     } = e;
@@ -188,7 +188,7 @@ function Q(e) {
       onKeyDown: e => {
         e.key === V.mR.Escape && setTimeout(() => {
           var e;
-          return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
+          return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
         }, 0)
       },
       children: [(0, s.jsx)("span", {
@@ -199,7 +199,7 @@ function Q(e) {
         children: t
       })]
     })
-  }, f = o.createRef();
+  }, S = o.createRef();
   return (0, s.jsxs)("div", {
     className: l()(Y.imageContent, r),
     children: [(0, s.jsxs)("div", {
@@ -214,7 +214,7 @@ function Q(e) {
       className: Y.mediaMosaicAltTextContainer,
       children: (0, s.jsx)(E.Popout, {
         animation: E.Popout.Animation.FADE,
-        renderPopout: () => (0, s.jsx)(S, {
+        renderPopout: () => (0, s.jsx)(f, {
           altText: t
         }),
         children: e => (0, s.jsx)(E.FocusRing, {
@@ -222,7 +222,7 @@ function Q(e) {
           children: (0, s.jsx)("button", {
             ...e,
             type: "button",
-            ref: f,
+            ref: S,
             "aria-label": F.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
             className: Y.mediaMosaicAltText,
             children: F.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_CTA
@@ -237,7 +237,7 @@ function Q(e) {
 }
 
 function J(e) {
-  return (0, s.jsx)(S.Z, {
+  return (0, s.jsx)(f.Z, {
     ...e
   })
 }
@@ -356,7 +356,7 @@ function ei(e) {
       context: "Mark As Read"
     }) : I.Z.jumpToMessage({
       channelId: n,
-      messageId: x.default.castChannelIdAsMessageId(n),
+      messageId: B.default.castChannelIdAsMessageId(n),
       offset: 1,
       context: "Mark As Read"
     })
@@ -407,10 +407,10 @@ function er(e) {
     scrollManager: u
   } = e, {
     disableInteractions: h
-  } = o.useContext(U.G), [S, p] = o.useState(null), g = o.useRef(null), [L, D] = o.useState(null), M = o.useRef(null), P = (0, d.Wu)([O.Z], () => {
+  } = o.useContext(U.G), [f, R] = o.useState(null), g = o.useRef(null), [L, D] = o.useState(null), M = o.useRef(null), P = (0, d.Wu)([O.Z], () => {
     var e;
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
-  }, [r]), y = (0, N.Z)(P);
+  }, [r]), y = (0, A.Z)(P);
   o.useEffect(() => {
     !_().isEqual(y, P) && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: P.length,
@@ -423,7 +423,7 @@ function er(e) {
       channel_type: r.type
     })
   }, [P, y, r.guild_id, r.id, r.type]);
-  let B = (0, d.e7)([v.default], () => {
+  let x = (0, d.e7)([v.default], () => {
       var e;
       return null !== (e = null == P ? void 0 : P.map(e => {
         var t;
@@ -435,11 +435,11 @@ function er(e) {
     }, [P], es),
     V = null !== (n = (0, d.e7)([O.Z], () => O.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     H = null == P ? void 0 : null === (t = P[V]) || void 0 === t ? void 0 : t.topic;
-  null == H && null == S && (null == P ? void 0 : P.length) >= 1 && (H = null === (i = P[0]) || void 0 === i ? void 0 : i.topic);
+  null == H && null == f && (null == P ? void 0 : P.length) >= 1 && (H = null === (i = P[0]) || void 0 === i ? void 0 : i.topic);
   let j = o.useMemo(() => _().debounce(e => {
       var t;
-      p(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
-    }, 64), [p]),
+      R(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
+    }, 64), [R]),
     W = o.useMemo(() => _().throttle(() => {
       (0, m.yK)(null)
     }, 1200, {
@@ -483,7 +483,7 @@ function er(e) {
         messageId: n.startId,
         flash: !0,
         offset: 0,
-        jumpType: f.SR.ANIMATED,
+        jumpType: S.SR.ANIMATED,
         context: "Summary Jump"
       })
     }, [P, r, K, u]),
@@ -522,13 +522,13 @@ function er(e) {
   }, [r.id]), o.useEffect(() => (document.addEventListener("mousedown", $), () => {
     document.removeEventListener("mousedown", $)
   }), [$]);
-  let ee = o.useMemo(() => (0, s.jsx)(R.Z, {
+  let ee = o.useMemo(() => (0, s.jsx)(p.Z, {
       channel: r,
       summaries: P,
-      summariesMembers: B,
+      summariesMembers: x,
       selectTopic: Q,
       setOpen: J
-    }), [P, B, Q, J, r]),
+    }), [P, x, Q, J, r]),
     et = o.useCallback(() => {
       let e = C.ZP.ackMessageId(r.id);
       null != e ? I.Z.jumpToMessage({
@@ -538,7 +538,7 @@ function er(e) {
         context: "Mark As Read"
       }) : I.Z.jumpToMessage({
         channelId: r.id,
-        messageId: x.default.castChannelIdAsMessageId(r.id),
+        messageId: B.default.castChannelIdAsMessageId(r.id),
         offset: 1,
         context: "Mark As Read"
       })
@@ -609,7 +609,7 @@ function er(e) {
             color: "header-primary",
             lineClamp: 1,
             children: F.Z.Messages.SUMMARIES
-          }), (0, s.jsx)(A.Z, {
+          }), (0, s.jsx)(N.Z, {
             className: Y.summariesBetaTag
           })]
         }), (0, s.jsx)(E.Clickable, {
@@ -645,10 +645,10 @@ function eo(e) {
     scrollManager: a
   } = e, {
     disableInteractions: u
-  } = o.useContext(U.G), [T, h] = o.useState(null), S = o.useRef(null), [p, g] = o.useState(null), C = o.useRef(null), L = (0, d.Wu)([O.Z], () => {
+  } = o.useContext(U.G), [T, h] = o.useState(null), f = o.useRef(null), [R, g] = o.useState(null), C = o.useRef(null), L = (0, d.Wu)([O.Z], () => {
     var e;
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
-  }, [r]), D = (0, N.Z)(L);
+  }, [r]), D = (0, A.Z)(L);
   o.useEffect(() => {
     !_().isEqual(D, L) && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: L.length,
@@ -674,8 +674,8 @@ function eo(e) {
     P = null !== (n = (0, d.e7)([O.Z], () => O.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     y = null == L ? void 0 : null === (t = L[P]) || void 0 === t ? void 0 : t.topic;
   null == y && null == T && (null == L ? void 0 : L.length) >= 1 && (y = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
-  let B = o.useMemo(() => _().get(L, P - 1), [P, L]),
-    x = o.useMemo(() => _().get(L, P + 1), [P, L]),
+  let x = o.useMemo(() => _().get(L, P - 1), [P, L]),
+    B = o.useMemo(() => _().get(L, P + 1), [P, L]),
     V = o.useMemo(() => _().debounce(e => {
       var t;
       h(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -723,7 +723,7 @@ function eo(e) {
         messageId: n.startId,
         flash: !0,
         offset: 0,
-        jumpType: f.SR.ANIMATED,
+        jumpType: S.SR.ANIMATED,
         context: "Summary Jump"
       })
     }, [L, r, j, a]),
@@ -740,16 +740,16 @@ function eo(e) {
       null != n && g(n)
     }, []);
   o.useEffect(() => {
-    if (null != p && W) {
+    if (null != R && W) {
       var e;
       null === (e = C.current) || void 0 === e || e.scrollTo({
-        top: p
+        top: R
       })
     }
-  }, [p, W]);
+  }, [R, W]);
   let $ = o.useCallback(e => {
     var t;
-    if (!((0, c.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target)))) W && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    if (!((0, c.k)(e.target) && (null === (t = f.current) || void 0 === t ? void 0 : t.contains(e.target)))) W && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: L.length,
       message_counts: L.map(e => e.count),
@@ -768,7 +768,7 @@ function eo(e) {
   }, [r.id]), o.useEffect(() => (document.addEventListener("mousedown", $), () => {
     document.removeEventListener("mousedown", $)
   }), [$]);
-  let ee = o.useMemo(() => (0, s.jsx)(R.Z, {
+  let ee = o.useMemo(() => (0, s.jsx)(p.Z, {
     channel: r,
     summaries: L,
     summariesMembers: M,
@@ -778,7 +778,7 @@ function eo(e) {
   if (!(0, d.e7)([O.Z], () => O.Z.shouldShowTopicsBar())) return null;
   let et = F.Z.Messages.SUMMARIES_NO_SUMMARIES;
   return L.length > 0 && (et = "" === y || null == y ? F.Z.Messages.SUMMARIES_VIEW_ALL : y), u ? null : (0, s.jsxs)("div", {
-    ref: S,
+    ref: f,
     className: l()(Y.topicsPillContainer, Y.containerMarginTop),
     children: [(0, s.jsxs)("div", {
       className: Y.topicsPill,
@@ -812,7 +812,7 @@ function eo(e) {
           "aria-label": F.Z.Messages.SUMMARY_PILL_NEXT,
           onClick: Q,
           className: l()(Y.topicsPillCaret, Y.topicsCaretLeft, {
-            [Y.topicsPillCaretDisabled]: null == x
+            [Y.topicsPillCaretDisabled]: null == B
           }),
           children: (0, s.jsx)(b.Z, {
             width: 16,
@@ -823,7 +823,7 @@ function eo(e) {
           "aria-label": F.Z.Messages.SUMMARY_PILL_PREVIOUS,
           onClick: X,
           className: l()(Y.topicsPillCaret, Y.topicsCaretRight, {
-            [Y.topicsPillCaretDisabled]: null == B
+            [Y.topicsPillCaretDisabled]: null == x
           }),
           children: (0, s.jsx)(b.Z, {
             width: 16,
@@ -849,7 +849,7 @@ function eo(e) {
             color: "header-primary",
             lineClamp: 1,
             children: F.Z.Messages.SUMMARIES
-          }), (0, s.jsx)(A.Z, {
+          }), (0, s.jsx)(N.Z, {
             className: Y.summariesBetaTag
           })]
         }), (0, s.jsx)(E.Clickable, {

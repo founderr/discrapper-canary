@@ -1,22 +1,22 @@
-var s, i, l, a, r = n(442837),
+var i, s, a, r, l = n(442837),
   o = n(570140),
   c = n(496675),
-  u = n(981631);
+  d = n(981631);
 
-function d() {
+function u() {
   return !0
 }
-class E extends(a = r.ZP.Store) {
+class _ extends(r = l.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z), this.syncWith([c.Z], d)
+    this.waitFor(c.Z), this.syncWith([c.Z], u)
   }
   channelNoticePredicate(e, t) {
-    return Date.now() - t >= u.Hqc && c.Z.can(u.Plq.ADMINISTRATOR, e)
+    return Date.now() - t >= d.Hqc && c.Z.can(d.Plq.ADMINISTRATOR, e)
   }
 }
-l = "InviteNoticeStore", (i = "displayName") in(s = E) ? Object.defineProperty(s, i, {
-  value: l,
+a = "InviteNoticeStore", (s = "displayName") in(i = _) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = l, t.Z = new E(o.Z)
+}) : i[s] = a, t.Z = new _(o.Z)

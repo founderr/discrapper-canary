@@ -1,45 +1,45 @@
 n.d(t, {
   Z: function() {
-    return _
+    return h
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(399606),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(399606),
   o = n(243778),
   c = n(914010),
-  u = n(566840),
-  d = n(921944),
-  E = n(575174);
-let h = i.memo(function(e) {
-  var t, n, l;
+  d = n(566840),
+  u = n(921944),
+  _ = n(575174);
+let E = s.memo(function(e) {
+  var t, n, a;
   let {
-    state: r,
+    state: l,
     markAsDismissed: o
   } = e, {
     name: c,
-    guildId: u,
-    boundingRect: d
-  } = r, h = i.useMemo(() => (function(e, t, n) {
+    guildId: d,
+    boundingRect: u
+  } = l, E = s.useMemo(() => (function(e, t, n) {
     return null
-  })(c, 0, 0), [c, u, o]);
-  if (null == h) return null;
-  return (0, s.jsx)("div", {
-    className: a()(E.upsell, !(null != (t = d) && !(t.y < 0)) && E.hidden),
-    style: (n = c, null == (l = d) ? {} : {
-      top: l.top,
-      left: l.right - l.x
+  })(c, 0, 0), [c, d, o]);
+  if (null == E) return null;
+  return (0, i.jsx)("div", {
+    className: r()(_.upsell, !(null != (t = u) && !(t.y < 0)) && _.hidden),
+    style: (n = c, null == (a = u) ? {} : {
+      top: a.top,
+      left: a.right - a.x
     }),
-    children: h
+    children: E
   })
 });
 
-function _() {
-  let e = (0, r.e7)([c.Z], () => c.Z.getGuildId()),
-    t = (0, u.Eg)(e),
-    [n, i] = (0, o.U)(Object.values(t).filter(e => {
+function h() {
+  let e = (0, l.e7)([c.Z], () => c.Z.getGuildId()),
+    t = (0, d.Eg)(e),
+    [n, s] = (0, o.U)(Object.values(t).filter(e => {
       let {
         disabled: t
       } = e;
@@ -49,14 +49,14 @@ function _() {
         name: t
       } = e;
       return t
-    }), d.R.SIDEBAR);
+    }), u.R.SIDEBAR);
   if (null == n) return null;
-  let l = t[n];
-  return null == l ? null : (0, s.jsx)("div", {
-    className: E.container,
-    children: (0, s.jsx)(h, {
-      state: l,
-      markAsDismissed: i
+  let a = t[n];
+  return null == a ? null : (0, i.jsx)("div", {
+    className: _.container,
+    children: (0, i.jsx)(E, {
+      state: a,
+      markAsDismissed: s
     })
   })
 }

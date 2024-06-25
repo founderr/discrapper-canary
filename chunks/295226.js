@@ -28,12 +28,12 @@ let T = {
   },
   h = T;
 
-function S() {
+function f() {
   h.userTrialOffers = {}, h.userDiscountOffers = {}, h.userOffersLastFetchedAtDate = void 0, h.userAnnualOfferLastFetchedAtDate = void 0
 }
-let f = () => !0;
+let S = () => !0;
 
-function N() {
+function A() {
   if (null != d.ZP.getPremiumTypeSubscription()) {
     let e = s()(h.userDiscountOffers[E.gW]),
       t = s()(h.userDiscountOffers[E.Nl]);
@@ -42,7 +42,7 @@ function N() {
   return !1
 }
 
-function A() {
+function N() {
   let e = _.default.getCurrentUser();
   !(0, c.I5)(e) && Object.keys(h.userDiscountOffers).length > 0 && (0, u.Tf)(!0)
 }
@@ -63,7 +63,7 @@ function m() {
 }
 class O extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    h = null != e ? e : T, this.waitFor(_.default), this.syncWith([_.default], f), this.syncWith([d.ZP], N), this.syncWith([l.Z], m)
+    h = null != e ? e : T, this.waitFor(_.default), this.syncWith([_.default], S), this.syncWith([d.ZP], A), this.syncWith([l.Z], m)
   }
   getUserTrialOffer(e) {
     if (null !== e) return h.userTrialOffers[e]
@@ -116,7 +116,7 @@ class O extends(i = o.ZP.PersistedStore) {
     return h
   }
   forceReset() {
-    S()
+    f()
   }
 }
 I(O, "displayName", "UserOfferStore"), I(O, "persistKey", "UserOfferStore"), I(O, "migrations", [e => {
@@ -135,7 +135,7 @@ I(O, "displayName", "UserOfferStore"), I(O, "persistKey", "UserOfferStore"), I(O
     let {
       userTrialOffer: t
     } = e;
-    null != t ? h.userTrialOffers[t.trial_id] = t : S(), h.userOffersLastFetchedAtDate = Date.now()
+    null != t ? h.userTrialOffers[t.trial_id] = t : f(), h.userOffersLastFetchedAtDate = Date.now()
   },
   BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
     let {
@@ -149,7 +149,7 @@ I(O, "displayName", "UserOfferStore"), I(O, "persistKey", "UserOfferStore"), I(O
       userDiscount: n,
       userDiscountOffer: i
     } = e;
-    null == t && null == n && null == i && S(), null != t ? (h.userTrialOffers[t.trial_id] = t, h.userDiscountOffers = {}) : null != n ? (h.userDiscountOffers[n.discount_id] = n, h.userTrialOffers = {}) : null != i && (h.userDiscountOffers[i.discount_id] = i, h.userTrialOffers = {}), h.userOffersLastFetchedAtDate = Date.now()
+    null == t && null == n && null == i && f(), null != t ? (h.userTrialOffers[t.trial_id] = t, h.userDiscountOffers = {}) : null != n ? (h.userDiscountOffers[n.discount_id] = n, h.userTrialOffers = {}) : null != i && (h.userDiscountOffers[i.discount_id] = i, h.userTrialOffers = {}), h.userOffersLastFetchedAtDate = Date.now()
   },
   BILLING_ANNUAL_USER_OFFER_FETCH_SUCCESS: function(e) {
     let {
@@ -166,13 +166,13 @@ I(O, "displayName", "UserOfferStore"), I(O, "persistKey", "UserOfferStore"), I(O
     null != t ? h.userTrialOffers[t.trial_id] = t : h.userTrialOffers = {}, null != n ? h.userDiscountOffers[n.discount_id] = n : null != i ? h.userDiscountOffers[i.discount_id] = i : h.userDiscountOffers = {}, h.userOffersLastFetchedAtDate = Date.now()
   },
   BILLING_USER_OFFER_FETCH_FAIL: function() {
-    S(), h.userOffersLastFetchedAtDate = Date.now()
+    f(), h.userOffersLastFetchedAtDate = Date.now()
   },
   BILLING_ANNUAL_USER_OFFER_FETCH_FAIL: function() {
     delete h.userDiscountOffers[E.gW], delete h.userDiscountOffers[E.Nl], h.userAnnualOfferLastFetchedAtDate = Date.now()
   },
-  BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: A,
-  BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: A,
-  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: A,
-  LOGOUT: S
+  BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: N,
+  BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: N,
+  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: N,
+  LOGOUT: f
 })

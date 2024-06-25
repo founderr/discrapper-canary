@@ -1,14 +1,14 @@
 n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 }), n(47120);
-var l = n(470079);
+var i = n(470079);
 
-function i() {
+function a() {
   var e;
-  let [t, n] = l.useState((e = window.innerWidth < 1132, e));
-  return l.useEffect(() => {
+  let [t, n] = i.useState((e = window.innerWidth < 1132, e));
+  return i.useEffect(() => {
     function e() {
       n(window.innerWidth < 1132)
     }

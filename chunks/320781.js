@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-    return m
+    return p
   }
 }), n(47120);
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(995123),
+var a = n(442837),
+  l = n(481060),
+  s = n(995123),
   r = n(456269),
   o = n(660189),
   c = n(257511),
@@ -15,31 +15,31 @@ var i = n(442837),
   d = n(689938),
   h = n(73409);
 
-function m(e) {
+function p(e) {
   var t;
   let {
     channel: n
-  } = e, m = (0, r.eV)(n), {
-    firstMessage: E
-  } = (0, i.cj)([o.Z], () => o.Z.getMessage(n.id)), p = new Set((0, r.kn)(n, m)), g = null !== (t = (0, a.Z)(n)) && void 0 !== t ? t : s.ChatIcon;
-  return (0, l.jsxs)(u.ZP, {
+  } = e, p = (0, r.eV)(n), {
+    firstMessage: m
+  } = (0, a.cj)([o.Z], () => o.Z.getMessage(n.id)), _ = new Set((0, r.kn)(n, p)), f = null !== (t = (0, s.Z)(n)) && void 0 !== t ? t : l.ChatIcon;
+  return (0, i.jsxs)(u.ZP, {
     channelId: n.id,
     className: h.container,
-    children: [(0, l.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       className: h.iconWrapper,
-      children: (0, l.jsx)(g, {
+      children: (0, i.jsx)(f, {
         className: h.icon,
         strokeWidth: 1.75
       })
-    }), (0, l.jsx)(u.Ot, {
+    }), (0, i.jsx)(u.Ot, {
       className: h.header,
       children: n.name
-    }), null == E && (0, l.jsx)(s.Text, {
+    }), null == m && (0, i.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: d.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
-    }), (0, l.jsx)(c.Z, {
-      appliedTags: p
+    }), (0, i.jsx)(c.Z, {
+      appliedTags: _
     })]
   })
 }

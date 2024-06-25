@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(481060),
-  r = n(338690),
+var r = n(481060),
+  a = n(338690),
   o = n(689938),
   i = n(557569);
 
@@ -15,27 +15,27 @@ function d(e) {
     transitionState: t,
     onClose: n
   } = e;
-  return (0, s.jsxs)(a.ModalRoot, {
+  return (0, s.jsxs)(r.ModalRoot, {
     transitionState: t,
-    children: [(0, s.jsx)(a.ModalHeader, {
+    children: [(0, s.jsx)(r.ModalHeader, {
       separator: !1,
-      children: (0, s.jsx)(a.Heading, {
+      children: (0, s.jsx)(r.Heading, {
         variant: "heading-lg/semibold",
         children: o.Z.Messages.SYSTEM_DM_URGENT_MESSAGE_MODAL_HEADER
       })
-    }), (0, s.jsxs)(a.ModalContent, {
-      children: [(0, s.jsx)(a.Text, {
+    }), (0, s.jsxs)(r.ModalContent, {
+      children: [(0, s.jsx)(r.Text, {
         variant: "text-md/normal",
         children: o.Z.Messages.SYSTEM_DM_URGENT_MESSAGE_MODAL_BODY
       }), (0, s.jsx)("div", {
         className: i.art
       })]
-    }), (0, s.jsx)(a.ModalFooter, {
-      children: (0, s.jsx)(a.Button, {
+    }), (0, s.jsx)(r.ModalFooter, {
+      children: (0, s.jsx)(r.Button, {
         type: "submit",
-        color: a.Button.Colors.BRAND,
+        color: r.Button.Colors.BRAND,
         onClick: () => {
-          (0, r.Z)(), n()
+          (0, a.Z)(), n()
         },
         children: o.Z.Messages.OKAY
       })

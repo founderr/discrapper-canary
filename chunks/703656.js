@@ -8,22 +8,22 @@ n.d(t, {
     return C
   },
   DR: function() {
-    return R
+    return p
   },
   Wf: function() {
     return g
   },
   XU: function() {
-    return f
+    return S
   },
   dL: function() {
-    return A
+    return N
   },
   eH: function() {
     return L
   },
   m1: function() {
-    return p
+    return R
   },
   op: function() {
     return v
@@ -32,10 +32,10 @@ n.d(t, {
     return m
   },
   uL: function() {
-    return S
+    return f
   },
   uv: function() {
-    return N
+    return A
   }
 }), n(653041), n(757143);
 var o = n(539528),
@@ -59,7 +59,7 @@ function h(e, t) {
   return !!("string" == typeof e && d.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
 }
 
-function S(e, t, n, o) {
+function f(e, t, n, o) {
   !h(e, "assign") && (c.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
     source: n
   } : t.source = n), null == t ? i.push(e) : i.push({
@@ -68,19 +68,19 @@ function S(e, t, n, o) {
   }), r = n, s = o)
 }
 
-function f(e, t, n, i, r) {
+function S(e, t, n, i, r) {
   c.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
     guildId: e,
     channelId: t,
     messageId: n
-  }))), S(_.Z5c.CHANNEL(e, t, n), null != r ? r : null, i)
+  }))), f(_.Z5c.CHANNEL(e, t, n), null != r ? r : null, i)
 }
 
-function N() {
+function A() {
   return null != r && u.Hb.has(r)
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   !h(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), r = n)
 }
 
@@ -92,11 +92,11 @@ function O() {
   return r
 }
 
-function R() {
+function p() {
   return s
 }
 
-function p(e) {
+function R(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""

@@ -1,91 +1,91 @@
-n.r(s), n.d(s, {
+s.r(n), s.d(n, {
   default: function() {
-    return A
+    return x
   }
-}), n(47120);
-var a = n(735250),
-  l = n(470079),
-  t = n(481060),
-  i = n(613734),
-  o = n(409617),
-  r = n(451426),
-  c = n(384725),
-  d = n(534044),
-  _ = n(670199),
-  E = n(800530),
-  N = n(981631),
-  x = n(707134);
+}), s(47120);
+var a = s(735250),
+  t = s(470079),
+  l = s(481060),
+  i = s(613734),
+  o = s(409617),
+  r = s(451426),
+  c = s(384725),
+  d = s(534044),
+  _ = s(670199),
+  E = s(800530),
+  N = s(981631),
+  u = s(707134);
 
-function A(e) {
+function x(e) {
   let {
-    classificationId: s,
-    transitionState: n,
-    initialSlide: A = E.Cs.SPEED_BUMP,
-    onClose: u
-  } = e, [I, S] = l.useState(A), {
-    classification: T,
-    isDsaEligible: C
-  } = (0, i.YG)(null != s ? s : N.lds), h = (null == T ? void 0 : T.is_spam) || !1, L = (null == T ? void 0 : T.is_coppa) || !1;
-  l.useEffect(() => {
-    C ? S(A) : S(E.Cs.COLLECT_SIGNAL)
-  }, [S, A, C]);
-  let m = l.useCallback(() => {
-      c.Z.close(), u()
-    }, [u]),
-    M = l.useCallback(() => {
-      var e, s;
-      let n = null;
-      (n = C ? null === (e = E.d9[I]) || void 0 === e ? void 0 : e.next : null === (s = E.c6[I]) || void 0 === s ? void 0 : s.next) ? S(n): m()
-    }, [I, C, m]),
-    g = l.useCallback(() => {
-      var e, s;
-      let n;
-      (n = C ? null === (e = E.d9[I]) || void 0 === e ? void 0 : e.prev : null === (s = E.c6[I]) || void 0 === s ? void 0 : s.prev) ? S(n): m()
-    }, [I, C, m]);
-  return (0, a.jsx)(t.ModalRoot, {
-    transitionState: n,
+    classificationId: n,
+    transitionState: s,
+    initialSlide: x = E.Cs.SPEED_BUMP,
+    onClose: A
+  } = e, [I, C] = t.useState(x), {
+    classification: S,
+    isDsaEligible: T
+  } = (0, i.YG)(null != n ? n : N.lds), m = (null == S ? void 0 : S.is_spam) || !1, h = (null == S ? void 0 : S.is_coppa) || !1;
+  t.useEffect(() => {
+    T ? C(x) : C(E.Cs.COLLECT_SIGNAL)
+  }, [C, x, T]);
+  let M = t.useCallback(() => {
+      c.Z.close(), A()
+    }, [A]),
+    L = t.useCallback(() => {
+      var e, n;
+      let s = null;
+      (s = T ? null === (e = E.d9[I]) || void 0 === e ? void 0 : e.next : null === (n = E.c6[I]) || void 0 === n ? void 0 : n.next) ? C(s): M()
+    }, [I, T, M]),
+    g = t.useCallback(() => {
+      var e, n;
+      let s;
+      (s = T ? null === (e = E.d9[I]) || void 0 === e ? void 0 : e.prev : null === (n = E.c6[I]) || void 0 === n ? void 0 : n.prev) ? C(s): M()
+    }, [I, T, M]);
+  return (0, a.jsx)(l.ModalRoot, {
+    transitionState: s,
     disableTrack: !0,
-    size: t.ModalSize.DYNAMIC,
+    size: l.ModalSize.DYNAMIC,
     children: (0, a.jsx)("div", {
-      className: x.container,
-      children: (0, a.jsxs)(t.Slides, {
+      className: u.container,
+      children: (0, a.jsxs)(l.Slides, {
         activeSlide: I,
         width: 500,
-        children: [(0, a.jsx)(t.Slide, {
+        children: [(0, a.jsx)(l.Slide, {
           id: E.Cs.SPEED_BUMP,
           children: (0, a.jsx)(_.Z, {
-            classification: T,
-            onClose: m,
-            onNext: M,
-            isSpam: h,
-            isCoppa: L
+            classification: S,
+            onClose: M,
+            onNext: L,
+            isSpam: m,
+            isCoppa: h
           })
-        }), (0, a.jsx)(t.Slide, {
+        }), (0, a.jsx)(l.Slide, {
           id: E.Cs.COLLECT_SIGNAL,
           children: (0, a.jsx)(o.Z, {
-            isDsaEligible: C,
-            onClose: m,
-            onNext: M,
+            isDsaEligible: T,
+            onClose: M,
+            onNext: L,
             onBack: g
           })
-        }), (0, a.jsx)(t.Slide, {
+        }), (0, a.jsx)(l.Slide, {
           id: E.Cs.CONFIRM_SUBMISSION,
           children: (0, a.jsx)(r.Z, {
-            onClose: m,
-            onNext: M,
+            onClose: M,
+            onNext: L,
             onBack: g
           })
-        }), (0, a.jsx)(t.Slide, {
+        }), (0, a.jsx)(l.Slide, {
           id: E.Cs.REQUEST_SENT,
           children: (0, a.jsx)(d.Z, {
-            onNext: M
+            onNext: L
           })
-        }), (0, a.jsx)(t.Slide, {
+        }), (0, a.jsx)(l.Slide, {
           id: E.Cs.THANKS,
           children: (0, a.jsx)(o.Z, {
-            isDsaEligible: C,
-            onClose: m,
-            onNext: M,
+            isDsaEligible: T,
+            onClose: M,
+            onNext: L,
             onBack: g
           })
         })]

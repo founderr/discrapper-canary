@@ -1,50 +1,50 @@
-var r = t(735250);
+var i = t(735250);
 t(470079);
-var o = t(120356),
-  a = t.n(o),
-  l = t(772848),
+var r = t(120356),
+  o = t.n(r),
+  a = t(772848),
   s = t(320459);
-let i = (0, l.Z)();
+let l = (0, a.Z)();
 n.Z = e => {
   let {
     open: n,
     className: t,
-    withHighlight: o = !1
+    withHighlight: r = !1
   } = e;
-  return (0, r.jsxs)("svg", {
+  return (0, i.jsxs)("svg", {
     width: "18",
     height: "18",
-    className: a()(s.button, t, {
+    className: o()(s.button, t, {
       [s.open]: n,
-      [s.withHighlight]: o
+      [s.withHighlight]: r
     }),
-    children: [o && (0, r.jsx)("defs", {
-      children: (0, r.jsxs)("linearGradient", {
-        id: i,
+    children: [r && (0, i.jsx)("defs", {
+      children: (0, i.jsxs)("linearGradient", {
+        id: l,
         x1: "0",
         y1: "0",
         x2: "0",
         y2: "18",
         gradientUnits: "userSpaceOnUse",
-        children: [(0, r.jsx)("stop", {
+        children: [(0, i.jsx)("stop", {
           offset: "0",
           stopColor: "#B473F5"
-        }), (0, r.jsx)("stop", {
+        }), (0, i.jsx)("stop", {
           offset: "1",
           stopColor: "#E292AA"
         })]
       })
-    }), (0, r.jsxs)("g", {
+    }), (0, i.jsxs)("g", {
       fill: "none",
       fillRule: "evenodd",
-      children: [(0, r.jsx)("path", {
+      children: [(0, i.jsx)("path", {
         d: "M0 0h18v18H0"
-      }), (0, r.jsx)("path", {
-        stroke: o ? "url(#".concat(i, ")") : "currentColor",
+      }), (0, i.jsx)("path", {
+        stroke: r ? "url(#".concat(l, ")") : "currentColor",
         d: "M4.5 4.5l9 9",
         strokeLinecap: "round"
-      }), (0, r.jsx)("path", {
-        stroke: o ? "url(#".concat(i, ")") : "currentColor",
+      }), (0, i.jsx)("path", {
+        stroke: r ? "url(#".concat(l, ")") : "currentColor",
         d: "M13.5 4.5l-9 9",
         strokeLinecap: "round"
       })]

@@ -1,24 +1,24 @@
 t(47120);
-var n, i, a, l, r = t(442837),
-  o = t(570140);
+var n, a, i, r, o = t(442837),
+  l = t(570140);
 let c = [];
 
-function E() {
+function d() {
   c = []
 }
-class d extends(n = r.ZP.Store) {
+class _ extends(n = o.ZP.Store) {
   getSessions() {
     return c
   }
 }
-l = "AuthSessionsStore", (a = "displayName") in(i = d) ? Object.defineProperty(i, a, {
-  value: l,
+r = "AuthSessionsStore", (i = "displayName") in(a = _) ? Object.defineProperty(a, i, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = l, s.Z = new d(o.Z, {
-  LOGOUT: E,
-  LOGIN_SUCCESS: E,
+}) : a[i] = r, s.Z = new _(l.Z, {
+  LOGOUT: d,
+  LOGIN_SUCCESS: d,
   FETCH_AUTH_SESSIONS_SUCCESS: function(e) {
     let {
       sessions: s

@@ -1,25 +1,25 @@
 t.d(n, {
   Z: function() {
-    return o
+    return l
   }
 });
 var a = t(735250);
 t(470079);
 var r = t(120356),
-  s = t.n(r),
-  i = t(481060),
-  l = t(237261);
+  i = t.n(r),
+  s = t(481060),
+  o = t(237261);
 
-function o(e) {
+function l(e) {
   let {
     title: n,
     children: t
   } = e;
-  return (0, a.jsxs)(i.FormSection, {
-    className: s()(l.backgroundContainer, l.spacingContainer, l.containerPadding),
-    children: [(0, a.jsx)(i.FormTitle, {
+  return (0, a.jsxs)(s.FormSection, {
+    className: i()(o.backgroundContainer, o.spacingContainer, o.containerPadding),
+    children: [(0, a.jsx)(s.FormTitle, {
       tag: "h3",
-      className: l.containerTitle,
+      className: o.containerTitle,
       children: n
     }), t]
   })

@@ -14,14 +14,14 @@ var i = n(735250),
   I = n(865427),
   T = n(25779),
   h = n(797614),
-  S = n(703656),
-  f = n(586576),
-  N = n(626135),
-  A = n(960048),
+  f = n(703656),
+  S = n(586576),
+  A = n(626135),
+  N = n(960048),
   m = n(998502),
   O = n(981631),
-  R = n(689938),
-  p = n(635603);
+  p = n(689938),
+  R = n(635603);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -49,8 +49,8 @@ function C() {
     size: c.ButtonSizes.LARGE,
     onClick: n,
     submitting: e,
-    className: p.clearOverrideButton,
-    children: R.Z.Messages.CLEAR_BUILD_OVERRIDE
+    className: R.clearOverrideButton,
+    children: p.Z.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
 let v = o().throttle(e => {
@@ -66,16 +66,16 @@ class L extends r.PureComponent {
     this.triggerSoftCrash(e, t)
   }
   triggerSoftCrash(e, t) {
-    let n = (0, S.s1)().location;
+    let n = (0, f.s1)().location;
     this.setState({
       error: e,
       info: t
     });
     let i = (0, T.e)(),
-      r = A.Z.captureCrash(e, {
+      r = N.Z.captureCrash(e, {
         extra: t
       });
-    N.default.track(O.rMx.APP_CRASHED, {
+    A.default.track(O.rMx.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
@@ -105,24 +105,24 @@ class L extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, i.jsxs)("div", {
           children: [(0, i.jsx)("p", {
-            children: R.Z.Messages.ERRORS_UNEXPECTED_CRASH
+            children: p.Z.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, i.jsx)("p", {
-            children: R.Z.Messages.ERRORS_ACTION_TO_TAKE
+            children: p.Z.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, i.jsxs)("div", {
-          className: p.buttons,
+          className: R.buttons,
           children: [(0, i.jsx)(c.Button, {
             size: c.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: R.Z.Messages.ERRORS_RELOAD
+            children: p.Z.Messages.ERRORS_RELOAD
           }), (0, i.jsx)(C, {})]
         });
-      return (0, i.jsx)(f.Z, {
-        title: R.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+      return (0, i.jsx)(S.Z, {
+        title: p.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
-        className: p.errorPage
+        className: R.errorPage
       })
     }
     return e

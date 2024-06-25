@@ -4,13 +4,13 @@ n.d(t, {
     return I
   },
   j1: function() {
-    return S
-  },
-  nP: function() {
     return f
   },
+  nP: function() {
+    return S
+  },
   nj: function() {
-    return N
+    return A
   },
   pX: function() {
     return h
@@ -83,7 +83,7 @@ function h(e, t) {
   if (null != _) return s()(_.toHexString())
 }
 
-function S(e, t) {
+function f(e, t) {
   let n = function(e, t) {
     if (null == e) return;
     let n = h(e, t, l.S3.NonText);
@@ -106,7 +106,7 @@ function S(e, t) {
   }
 }
 
-function f(e, t) {
+function S(e, t) {
   let [n, r = 1] = t, s = (0, _.ZP)();
   return i.useMemo(() => null != e ? e : n.resolve({
     theme: s,
@@ -114,7 +114,7 @@ function f(e, t) {
   }).hex(), [e, n, r, s])
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "top left",
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : .3,
     r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "50%";

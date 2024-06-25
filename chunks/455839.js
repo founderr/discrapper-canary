@@ -3,60 +3,60 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return _
+    return h
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  l = n(481060),
-  a = n(239091),
-  r = n(299206),
+var s = n(442837),
+  a = n(481060),
+  r = n(239091),
+  l = n(299206),
   o = n(726521),
   c = n(430824),
-  u = n(496675),
-  d = n(556017),
-  E = n(981631),
-  h = n(689938);
+  d = n(496675),
+  u = n(556017),
+  _ = n(981631),
+  E = n(689938);
 
-function _(e) {
+function h(e) {
   let {
     guild: t,
     shiftId: n,
-    onSelect: _,
+    onSelect: h,
     closePopout: I,
     "aria-label": m
-  } = e, T = (0, r.Z)({
+  } = e, p = (0, l.Z)({
     id: t.id,
-    label: h.Z.Messages.COPY_ID_GUILD,
+    label: E.Z.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: I
-  }), g = (0, i.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), p = (0, i.e7)([u.Z], () => u.Z.can(E.Plq.ADMINISTRATOR, g)), {
-    canSeeInAppReportingButtons: N
-  } = d.N.useExperiment({
+  }), g = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, s.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, g)), {
+    canSeeInAppReportingButtons: C
+  } = u.N.useExperiment({
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
-  }), S = () => {
-    (0, a.Zy)(), null == I || I()
+  }), f = () => {
+    (0, r.Zy)(), null == I || I()
   };
-  return (0, s.jsxs)(l.Menu, {
-    onSelect: _,
+  return (0, i.jsxs)(a.Menu, {
+    onSelect: h,
     navId: "guild-discovery-context-menu",
-    "aria-label": null != m ? m : h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-    onClose: a.Zy,
-    children: [(0, s.jsx)(l.MenuGroup, {
-      children: !p && N ? (0, s.jsx)(l.MenuItem, {
+    "aria-label": null != m ? m : E.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    onClose: r.Zy,
+    children: [(0, i.jsx)(a.MenuGroup, {
+      children: !T && C ? (0, i.jsx)(a.MenuItem, {
         id: "report-guild-discovery-listing",
-        label: h.Z.Messages.REPORT_SERVER_NO_NAME,
+        label: E.Z.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
-          (0, o.lt)(t), S()
+          (0, o.lt)(t), f()
         },
-        icon: l.FlagIcon,
+        icon: a.FlagIcon,
         color: "danger"
       }) : null
-    }), (0, s.jsx)(l.MenuGroup, {
-      children: T
+    }), (0, i.jsx)(a.MenuGroup, {
+      children: p
     })]
   })
 }
@@ -64,13 +64,13 @@ let I = e => {
   let {
     guild: t,
     children: n,
-    onRequestOpen: i,
-    onRequestClose: a
+    onRequestOpen: s,
+    onRequestClose: r
   } = e;
-  return (0, s.jsx)(l.Popout, {
-    onRequestOpen: i,
-    onRequestClose: a,
-    animation: l.Popout.Animation.NONE,
+  return (0, i.jsx)(a.Popout, {
+    onRequestOpen: s,
+    onRequestClose: r,
+    animation: a.Popout.Animation.NONE,
     position: "bottom",
     spacing: 4,
     align: "right",
@@ -78,7 +78,7 @@ let I = e => {
       let {
         closePopout: n
       } = e;
-      return (0, s.jsx)(_, {
+      return (0, i.jsx)(h, {
         guild: t,
         closePopout: n
       })

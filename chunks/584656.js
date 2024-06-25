@@ -1,20 +1,20 @@
 n.d(t, {
   t: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(820644);
+var a = n(481060),
+  s = n(820644);
 
-function a(e) {
+function l(e) {
   let {
     text: t,
     id: n
   } = e;
-  (0, i.showToast)((0, i.createToast)(t, i.ToastType.CUSTOM, {
-    component: (0, s.jsx)(l.o, {
+  (0, a.showToast)((0, a.createToast)(t, a.ToastType.CUSTOM, {
+    component: (0, i.jsx)(s.o, {
       text: t
     }, n)
   }))

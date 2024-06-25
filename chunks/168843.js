@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-    return m
+    return p
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(816782),
+var a = n(442837),
+  l = n(481060),
+  s = n(816782),
   r = n(367907),
   o = n(433355),
   c = n(914010),
@@ -15,20 +15,20 @@ var i = n(442837),
   d = n(981631),
   h = n(689938);
 
-function m(e) {
+function p(e) {
   let {
     channelId: t
-  } = e, n = (0, i.e7)([o.ZP], () => o.ZP.getSection(t)), m = (0, i.e7)([c.Z], () => c.Z.getGuildId()), E = n === d.ULH.MEMBERS;
-  return (0, l.jsx)(u.JO, {
-    tooltip: E ? h.Z.Messages.MEMBER_LIST_SHOWN : h.Z.Messages.MEMBER_LIST_HIDDEN,
-    icon: s.GroupIcon,
+  } = e, n = (0, a.e7)([o.ZP], () => o.ZP.getSection(t)), p = (0, a.e7)([c.Z], () => c.Z.getGuildId()), m = n === d.ULH.MEMBERS;
+  return (0, i.jsx)(u.JO, {
+    tooltip: m ? h.Z.Messages.MEMBER_LIST_SHOWN : h.Z.Messages.MEMBER_LIST_HIDDEN,
+    icon: l.GroupIcon,
     onClick: () => {
       r.ZP.trackWithMetadata(d.rMx.MEMBER_LIST_TOGGLED, {
         channel_id: t,
-        guild_id: m,
-        member_list_open: !E
-      }), a.Z.toggleMembersSection()
+        guild_id: p,
+        member_list_open: !m
+      }), s.Z.toggleMembersSection()
     },
-    selected: E
+    selected: m
   })
 }

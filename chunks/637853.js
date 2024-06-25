@@ -7,13 +7,13 @@ n.d(t, {
     return P
   },
   V7: function() {
-    return R
+    return p
   },
   VF: function() {
     return M
   },
   b$: function() {
-    return S
+    return f
   },
   d9: function() {
     return L
@@ -25,7 +25,7 @@ n.d(t, {
     return y
   },
   iF: function() {
-    return p
+    return R
   },
   kl: function() {
     return C
@@ -34,10 +34,10 @@ n.d(t, {
     return g
   },
   p3: function() {
-    return N
+    return A
   },
   wC: function() {
-    return f
+    return S
   }
 }), n(789020), n(47120), n(724458), n(653041), n(536091);
 var i = n(442837),
@@ -55,7 +55,7 @@ var i = n(442837),
   T = n(372897);
 let h = new Date(16824888e5);
 
-function S(e) {
+function f(e) {
   return (0, i.e7)([l.Z, u.Z], () => {
     let t = l.Z.getGuild(e),
       n = !!(null == t ? void 0 : t.hasFeature(I.oNc.COMMUNITY)),
@@ -65,7 +65,7 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   let t = l.Z.getGuild(e),
     n = !!(null == t ? void 0 : t.hasFeature(I.oNc.COMMUNITY)),
     i = u.Z.can(I.Plq.MANAGE_GUILD, t),
@@ -73,14 +73,14 @@ function f(e) {
   return n && i && r
 }
 
-function N(e, t) {
+function A(e, t) {
   var n;
   if (null == e || !e.hasFeature(I.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
   let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
   return _.yE(i, T.q.STARTED_ONBOARDING) && !_.yE(i, T.q.COMPLETED_ONBOARDING)
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   let i = new Set;
   e.forEach(e => {
     e.options.forEach(e => {
@@ -96,7 +96,7 @@ function A(e, t, n) {
 }
 
 function m(e, t, n) {
-  return A(t, n, a.ZP.getChannels(e)[a.sH].map(e => {
+  return N(t, n, a.ZP.getChannels(e)[a.sH].map(e => {
     let {
       channel: t
     } = e;
@@ -105,7 +105,7 @@ function m(e, t, n) {
 }
 
 function O(e, t, n) {
-  return A(t, n, (0, i.e7)([a.ZP], () => a.ZP.getChannels(e))[a.sH].map(e => {
+  return N(t, n, (0, i.e7)([a.ZP], () => a.ZP.getChannels(e))[a.sH].map(e => {
     let {
       channel: t
     } = e;
@@ -113,18 +113,18 @@ function O(e, t, n) {
   }))
 }
 
-function R(e) {
-  return p(o.Z.getChannel(e))
+function p(e) {
+  return R(o.Z.getChannel(e))
 }
 
-function p(e) {
+function R(e) {
   return !!(null != e && (0, E.s)(e.guild_id, e.id)) && (e.isForumChannel() ? d.Uu(I.Plq.SEND_MESSAGES_IN_THREADS, e) : d.Uu(I.Plq.SEND_MESSAGES, e))
 }
 
 function g(e) {
   return (0, i.e7)([o.Z], () => {
     let t = o.Z.getChannel(e);
-    return (0, c.lm)(t) && p(t)
+    return (0, c.lm)(t) && R(t)
   })
 }
 
@@ -172,7 +172,7 @@ function L(e, t) {
     return t
   }), i = o, n.filter(e => {
     var t;
-    return p(null === (t = i[e]) || void 0 === t ? void 0 : t.channel)
+    return R(null === (t = i[e]) || void 0 === t ? void 0 : t.channel)
   })), r]
 }
 
@@ -186,7 +186,7 @@ function M(e, t) {
       i = [],
       r = [],
       s = {};
-    for (let e of n[a.sH])(0, E.s)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (s[e.channel.id] = e, i.push(e.channel), p(e.channel) && r.push(e.channel.id));
+    for (let e of n[a.sH])(0, E.s)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (s[e.channel.id] = e, i.push(e.channel), R(e.channel) && r.push(e.channel.id));
     return [r, i]
   }, [e, t], D)
 }

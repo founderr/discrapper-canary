@@ -16,14 +16,14 @@ var r, s, o = n(990547),
   I = n(57132),
   T = n(703656),
   h = n(365007),
-  S = n(314897),
-  f = n(480294),
-  N = n(573261),
-  A = n(572691),
+  f = n(314897),
+  S = n(480294),
+  A = n(573261),
+  N = n(572691),
   m = n(981631),
   O = n(792101);
-let R = new E.Z("AuthenticationActionCreators"),
-  p = null;
+let p = new E.Z("AuthenticationActionCreators"),
+  R = null;
 
 function g(e) {
   let t = {
@@ -32,7 +32,7 @@ function g(e) {
   };
   _.Z.dispatch(t).catch(e => {
     var t;
-    throw R.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
+    throw p.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
   })
 }
 
@@ -40,7 +40,7 @@ function C() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Z5c.DEFAULT_LOGGED_OUT;
   g();
   let t = (0, I.PP)();
-  null != e && (null != t ? (A.Z.popAll(), t.navigate("auth")) : (0, T.uL)(e))
+  null != e && (null != t ? (N.Z.popAll(), t.navigate("auth")) : (0, T.uL)(e))
 }(s = r || (r = {})).MFA = "MFA", s.SUCCESS = "SUCCESS", t.Z = {
   startSession(e) {
     _.Z.wait(() => {
@@ -73,7 +73,7 @@ function C() {
       type: "LOGIN",
       login: n,
       loginMethod: null != r && "" !== r ? m.nnr.LOGIN_CODE : m.nnr.PASSWORD
-    }), this.setLoginCredentials(n, null !== (t = null != i ? i : r) && void 0 !== t ? t : void 0), N.Z.post({
+    }), this.setLoginCredentials(n, null !== (t = null != i ? i : r) && void 0 !== t ? t : void 0), A.Z.post({
       url: m.ANM.LOGIN,
       body: {
         login: n,
@@ -165,7 +165,7 @@ function C() {
       isMultiAccount: s,
       mfaType: a
     } = e;
-    return N.Z.post({
+    return A.Z.post({
       url: m.ANM.LOGIN_MFA(a),
       body: {
         code: t,
@@ -230,7 +230,7 @@ function C() {
       source: i,
       giftCodeSKUId: r
     } = e;
-    return N.Z.post({
+    return A.Z.post({
       url: m.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
       body: {
         credential: n,
@@ -303,7 +303,7 @@ function C() {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Z5c.DEFAULT_LOGGED_OUT,
       n = arguments.length > 1 ? arguments[1] : void 0;
-    return N.Z.post({
+    return A.Z.post({
       url: m.ANM.LOGOUT,
       body: {
         provider: (0, O.xJ)(),
@@ -321,21 +321,21 @@ function C() {
         }
       }
     }).finally(() => {
-      (null == n || n === S.default.getId()) && C(t)
+      (null == n || n === f.default.getId()) && C(t)
     })
   },
   switchAccountToken(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      n = S.default.getToken();
-    R.log("Switching accounts", {
+      n = f.default.getToken();
+    p.log("Switching accounts", {
       wasLoggedIn: null != n,
       tokenHasChanged: e !== n
     }), g({
       isSwitchingAccount: !0
     });
     let i = this.loginToken(e, !0).then(() => {
-      let t = S.default.getToken();
-      R.log("Switched accounts finished", {
+      let t = f.default.getToken();
+      p.log("Switched accounts finished", {
         isCorrectToken: e === t
       })
     });
@@ -349,7 +349,7 @@ function C() {
     }).catch(() => C(e))
   },
   verify(e) {
-    null != e ? N.Z.post({
+    null != e ? A.Z.post({
       url: m.ANM.VERIFY,
       body: {
         token: e
@@ -376,7 +376,7 @@ function C() {
   },
   async authorizePayment(e) {
     try {
-      await N.Z.post({
+      await A.Z.post({
         url: m.ANM.AUTHORIZE_PAYMENT,
         body: {
           token: e
@@ -404,7 +404,7 @@ function C() {
       return
     }
     try {
-      await N.Z.post({
+      await A.Z.post({
         url: m.ANM.AUTHORIZE_IP,
         body: {
           token: e
@@ -423,7 +423,7 @@ function C() {
       })
     }
   },
-  verifyResend: () => N.Z.post({
+  verifyResend: () => A.Z.post({
     url: m.ANM.VERIFY_RESEND,
     oldFormErrors: !0,
     trackedActionData: {
@@ -455,7 +455,7 @@ function C() {
           backup: a,
           totp: l
         }
-      } = await N.Z.post({
+      } = await A.Z.post({
         url: m.ANM.RESET_PASSWORD,
         body: i,
         oldFormErrors: !0,
@@ -490,7 +490,7 @@ function C() {
     } = e;
     return _.Z.dispatch({
       type: "LOGIN_MFA"
-    }), (await N.Z.post({
+    }), (await A.Z.post({
       url: m.ANM.RESET_PASSWORD,
       body: {
         code: n,
@@ -514,7 +514,7 @@ function C() {
       type: "FORGOT_PASSWORD_REQUEST"
     });
     try {
-      await N.Z.post({
+      await A.Z.post({
         url: m.ANM.FORGOT_PASSWORD,
         body: {
           login: e
@@ -548,18 +548,18 @@ function C() {
       withGuildExperiments: e
     })
   },
-  getLocationMetadata: () => null != p ? p : (clearTimeout(i), i = setTimeout(() => {
+  getLocationMetadata: () => null != R ? R : (clearTimeout(i), i = setTimeout(() => {
     _.Z.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
     })
-  }, 5e3), p = l.tn.get({
+  }, 5e3), R = l.tn.get({
     url: m.ANM.AUTH_LOCATION_METADATA,
     retries: 2,
     oldFormErrors: !0
   }).then(e => {
     var t, n, r, s, o;
-    if (clearTimeout(i), null == f.Z.getAuthenticationConsentRequired()) {
+    if (clearTimeout(i), null == S.Z.getAuthenticationConsentRequired()) {
       let t = null === (s = null == e ? void 0 : null === (r = e.body) || void 0 === r ? void 0 : r.consent_required) || void 0 === s || s;
       _.Z.dispatch({
         type: "SET_CONSENT_REQUIRED",
@@ -569,7 +569,7 @@ function C() {
     if (_.Z.dispatch({
         type: "SET_LOCATION_METADATA",
         countryCode: null !== (o = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== o ? o : void 0
-      }), p = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
+      }), R = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
       let t = e.body.promotional_email_opt_in;
       (0, d.K4)({
         required: t.required,
@@ -581,7 +581,7 @@ function C() {
     clearTimeout(i), _.Z.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
-    }), p = null
+    }), R = null
   })),
   closeSuspendedUser() {
     _.Z.dispatch({

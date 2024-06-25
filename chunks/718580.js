@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   H: function() {
-    return S
+    return f
   },
   M: function() {
     return h
@@ -39,14 +39,14 @@ function h(e) {
   return null
 }
 
-function S(e) {
-  var t, n, h, S, f;
+function f(e) {
+  var t, n, h, f, S;
   let {
-    contentDisplay: N,
-    fadeInOut: A = !1,
+    contentDisplay: A,
+    fadeInOut: N = !1,
     ...m
   } = e, O = {}, {
-    analyticsLocations: R
+    analyticsLocations: p
   } = (0, c.ZP)();
   r.Children.forEach(m.children, (e, t) => {
     O[e.props.id] = {
@@ -56,17 +56,17 @@ function S(e) {
       index: t
     }
   });
-  let p = m.activeSlide,
+  let R = m.activeSlide,
     g = (0, _.Z)(m.activeSlide);
-  let C = null !== (t = m.directionOverride) && void 0 !== t ? t : (S = null != g ? O[g] : null, f = O[p], null == S ? null : S.index > f.index ? "backwards" : S.index < f.index ? "forwards" : null),
+  let C = null !== (t = m.directionOverride) && void 0 !== t ? t : (f = null != g ? O[g] : null, S = O[R], null == f ? null : f.index > S.index ? "backwards" : f.index < S.index ? "forwards" : null),
     {
       reducedMotion: v
     } = r.useContext(l.S),
     L = r.useContext(d.Z),
-    D = O[p].impressionName,
+    D = O[R].impressionName,
     M = {
-      ...O[p].impressionProperties,
-      location_stack: R
+      ...O[R].impressionProperties,
+      location_stack: p
     };
   L({
     type: o.ImpressionTypes.MODAL,
@@ -80,7 +80,7 @@ function S(e) {
     ref: P,
     width: y = 0,
     height: U = 0
-  } = (0, u.Z)(p), b = {
+  } = (0, u.Z)(R), b = {
     ...I,
     ...m.springConfig,
     ...v.enabled ? {
@@ -91,7 +91,7 @@ function S(e) {
     width: null !== (n = m.width) && void 0 !== n ? n : y,
     height: U,
     config: b
-  }), w = (0, s.useTransition)(p, {
+  }), w = (0, s.useTransition)(R, {
     immediate: null == g,
     value: 0,
     from: {
@@ -108,10 +108,10 @@ function S(e) {
       let {
         item: n
       } = t;
-      n === p && null != m.onSlideReady && m.onSlideReady(n)
+      n === R && null != m.onSlideReady && m.onSlideReady(n)
     }
-  }), B = (0, E.Z)(C), {
-    width: x,
+  }), x = (0, E.Z)(C), {
+    width: B,
     centered: k = !0
   } = m, V = a.tq ? "100%" : G.width.to(e => Math.round(e)), Z = a.tq ? "100%" : G.height.to(e => Math.round(e)), H = a.tq ? {} : k ? {
     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
@@ -135,18 +135,18 @@ function S(e) {
         opacity: e.value.to(e => 1 - Math.abs(e))
       };
       return (0, i.jsx)(s.animated.div, {
-        ref: t === p ? P : null,
+        ref: t === R ? P : null,
         style: {
           position: "absolute",
-          display: N,
+          display: A,
           flexDirection: "column",
           backfaceVisibility: "hidden",
-          width: a.tq ? "100%" : x,
+          width: a.tq ? "100%" : B,
           ...H,
           ...v.enabled ? o : {
-            left: e.value.to(T("left", B)),
-            right: e.value.to(T("right", B)),
-            ...A && o
+            left: e.value.to(T("left", x)),
+            right: e.value.to(T("right", x)),
+            ...N && o
           }
         },
         children: O[t].children

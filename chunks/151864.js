@@ -1,9 +1,9 @@
 n(653041);
-var s, i = n(442837),
-  l = n(570140),
-  a = n(765305);
+var i, s = n(442837),
+  a = n(570140),
+  r = n(765305);
 
-function r(e, t, n) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -14,7 +14,7 @@ function r(e, t, n) {
 let o = {
   hiddenEventsAndStages: []
 };
-class c extends(s = i.ZP.PersistedStore) {
+class c extends(i = s.ZP.PersistedStore) {
   initialize(e) {
     null != e && null != e.hiddenEventsAndStages && (o = e)
   }
@@ -29,7 +29,7 @@ class c extends(s = i.ZP.PersistedStore) {
     return o
   }
 }
-r(c, "displayName", "LiveChannelNoticesStore"), r(c, "persistKey", "liveChannelNotices_v2"), t.Z = new c(l.Z, {
+l(c, "displayName", "LiveChannelNoticesStore"), l(c, "persistKey", "liveChannelNotices_v2"), t.Z = new c(a.Z, {
   LIVE_CHANNEL_NOTICE_HIDE: function(e) {
     let {
       eventId: t,
@@ -41,7 +41,7 @@ r(c, "displayName", "LiveChannelNoticesStore"), r(c, "persistKey", "liveChannelN
     let {
       guildScheduledEvent: t
     } = e, n = "event-".concat(t.id);
-    o.hiddenEventsAndStages.includes(n) && (t.status === a.p1.CANCELED || t.status === a.p1.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter(e => e !== n))
+    o.hiddenEventsAndStages.includes(n) && (t.status === r.p1.CANCELED || t.status === r.p1.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter(e => e !== n))
   },
   GUILD_SCHEDULED_EVENT_DELETE: function(e) {
     let {

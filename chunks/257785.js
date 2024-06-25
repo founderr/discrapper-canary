@@ -1,4 +1,4 @@
-t.d(r, {
+r.d(t, {
   E: function() {
     return c
   },
@@ -9,47 +9,47 @@ t.d(r, {
     return d
   }
 });
-var a = t(735250);
-t(470079);
-var n = t(120356),
-  i = t.n(n),
-  l = t(481060),
-  o = t(719556);
+var a = r(735250);
+r(470079);
+var n = r(120356),
+  i = r.n(n),
+  o = r(481060),
+  l = r(719556);
 
 function c(e) {
   let {
-    className: r,
-    children: t
+    className: t,
+    children: r
   } = e;
   return (0, a.jsx)("dl", {
-    className: i()(o.properties, r),
-    children: t
+    className: i()(l.properties, t),
+    children: r
   })
 }
 
 function s(e) {
   let {
-    name: r,
-    children: t
+    name: t,
+    children: r
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
-      className: o.propertyName,
-      children: r
-    }), (0, a.jsx)("dd", {
+      className: l.propertyName,
       children: t
+    }), (0, a.jsx)("dd", {
+      children: r
     })]
   })
 }
 
 function d(e) {
   let {
-    value: r
+    value: t
   } = e;
-  return (0, a.jsx)(l.Checkbox, {
+  return (0, a.jsx)(o.Checkbox, {
     size: 16,
-    value: r,
-    shape: l.Checkbox.Shapes.SMALL_BOX,
+    value: t,
+    shape: o.Checkbox.Shapes.SMALL_BOX,
     displayOnly: !0
   })
 }

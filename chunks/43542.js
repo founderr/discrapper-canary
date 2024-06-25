@@ -1,29 +1,29 @@
 t.d(n, {
   y: function() {
-    return i
+    return s
   }
 });
-var r = t(735250);
+var i = t(735250);
 t(470079);
-var s = t(481060),
-  a = t(689938),
-  l = t(936307);
+var r = t(481060),
+  o = t(689938),
+  a = t(936307);
 
-function i(e) {
+function s(e) {
   let {
     selectedGuildId: n,
     onGuildChange: t,
-    eligibleApplicationSubscriptionGuilds: i
-  } = e, o = i.map(e => ({
+    eligibleApplicationSubscriptionGuilds: s
+  } = e, l = s.map(e => ({
     value: e.id,
     label: e.name
   }));
-  return (0, r.jsx)(s.SearchableSelect, {
-    className: l.select,
+  return (0, i.jsx)(r.SearchableSelect, {
+    className: a.select,
     maxVisibleItems: 5,
     value: n,
-    placeholder: a.Z.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
-    options: o,
+    placeholder: o.Z.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
+    options: l,
     onChange: e => {
       t(e)
     }

@@ -1,25 +1,25 @@
 t.d(s, {
   h: function() {
-    return E
+    return d
   },
   p: function() {
-    return d
+    return _
   }
 }), t(47120);
 var n = t(470079),
-  i = t(913527),
-  a = t.n(i),
-  l = t(442837),
-  r = t(314897),
-  o = t(673096),
+  a = t(913527),
+  i = t.n(a),
+  r = t(442837),
+  o = t(314897),
+  l = t(673096),
   c = t(689938);
 
-function E() {
-  let e = (0, l.cj)([o.Z], () => o.Z.getSessions());
+function d() {
+  let e = (0, r.cj)([l.Z], () => l.Z.getSessions());
   return n.useMemo(() => {
     let s = [...e],
       t = null,
-      n = r.default.getAuthSessionIdHash();
+      n = o.default.getAuthSessionIdHash();
     if (null != n) {
       let e = s.findIndex(e => e.id_hash === n);
       e >= 0 && (t = s.splice(e, 1)[0])
@@ -31,6 +31,6 @@ function E() {
   }, [e])
 }
 
-function d(e) {
-  return (Date.now() - e.valueOf()) / 1e3 / 60 / 60 < 1 ? c.Z.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : a()(e).fromNow()
+function _(e) {
+  return (Date.now() - e.valueOf()) / 1e3 / 60 / 60 < 1 ? c.Z.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : i()(e).fromNow()
 }

@@ -18,7 +18,7 @@ var i = n(512722),
   I = n(70956),
   T = n(40786),
   h = n(362092);
-let S = {
+let f = {
     link: {
       type: "skip"
     },
@@ -163,13 +163,13 @@ let S = {
       after: ""
     }
   },
-  f = new Set(["*", "_", "\\"]),
-  N = {},
-  A = {};
+  S = new Set(["*", "_", "\\"]),
+  A = {},
+  N = {};
 for (let e in c.Z.RULES) {
-  if (!(e in S)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
-  let t = S[e];
-  "skip" !== t.type && (N[e] = m(c.Z.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (A[e] = m("text" === e ? d.ZP : c.Z.RULES[e]))
+  if (!(e in f)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
+  let t = f[e];
+  "skip" !== t.type && (A[e] = m(c.Z.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (N[e] = m("text" === e ? d.ZP : c.Z.RULES[e]))
 }
 
 function m(e) {
@@ -224,10 +224,10 @@ let O = {
       }
     }
   },
-  R = (0, E.Z)([N, O]),
   p = (0, E.Z)([A, O]),
-  g = l._p(R),
-  C = l._p(p),
+  R = (0, E.Z)([N, O]),
+  g = l._p(p),
+  C = l._p(R),
   v = {
     max: 1 / 0,
     maxAge: 1 * I.Z.Millis.MINUTE,
@@ -396,7 +396,7 @@ function P(e, t, n, i, s) {
           before: "_",
           after: "_"
         };
-        let r = S["link" === t ? "url" : t];
+        let r = f["link" === t ? "url" : t];
         if ("inlineStyle" === r.type) return r;
         throw Error("Slate: rule must be an inlineStyle")
       }(t, a, i, l);
@@ -470,7 +470,7 @@ function G(e, t) {
 
 function w(e, t, n, i) {
   for (; n < i;)
-    if (f.has(t[n])) n = U(e, t, t[n], n, "syntaxBefore"), n = G(t, n);
+    if (S.has(t[n])) n = U(e, t, t[n], n, "syntaxBefore"), n = G(t, n);
     else break;
   return n
 }

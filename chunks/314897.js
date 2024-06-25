@@ -9,14 +9,14 @@ var s, o, a, l, u = n(512722),
   I = n(544891),
   T = n(433517),
   h = n(570140),
-  S = n(911969),
-  f = n(109728),
-  N = n(670890),
-  A = n(569611),
+  f = n(911969),
+  S = n(109728),
+  A = n(670890),
+  N = n(569611),
   m = n(710845),
   O = n(703656),
-  R = n(786213),
-  p = n(626135),
+  p = n(786213),
+  R = n(626135),
   g = n(449934),
   C = n(960048),
   v = n(117240),
@@ -29,8 +29,8 @@ let P = n(952265).nf,
   b = "email_cache",
   G = "user_id_cache",
   w = null,
-  B = null,
   x = null,
+  B = null,
   k = null,
   V = null,
   Z = null,
@@ -86,7 +86,7 @@ function ec() {
 function ed(e) {
   let {
     withGuildExperiments: t
-  } = e, n = {}, i = p.default.getSuperPropertiesBase64();
+  } = e, n = {}, i = R.default.getSuperPropertiesBase64();
   null != i && (n["X-Super-Properties"] = i), null != Z && (n["X-Fingerprint"] = Z), es = I.tn.get({
     url: D.ANM.EXPERIMENTS,
     query: {
@@ -112,7 +112,7 @@ function ed(e) {
       fingerprint: t,
       experiments: n,
       guildExperiments: i
-    }), es = null, (0, f.$L)()
+    }), es = null, (0, S.$L)()
   }, () => {
     es = null, h.Z.dispatch({
       type: "EXPERIMENTS_FETCH_FAILURE"
@@ -133,12 +133,12 @@ function eT() {
 }
 
 function eh() {
-  W = !0, eS(), h.Z.wait(() => {
+  W = !0, ef(), h.Z.wait(() => {
     (0, O.uL)(D.Z5c.REGISTER)
   })
 }
 
-function eS(e) {
+function ef(e) {
   var t;
   e_("handleLogout called.");
   let n = eT();
@@ -146,14 +146,14 @@ function eS(e) {
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
   }), L.Z.clearAll();
-  A.ZH(), C.Z.clearUser(), T.K.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE, j = D.$ib.NONE, z = "", $ = "", X = null, q = !1, ee = !1, et = !1, en = {}, ei = {}, el = !1
+  N.ZH(), C.Z.clearUser(), T.K.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE, j = D.$ib.NONE, z = "", $ = "", X = null, q = !1, ee = !1, et = !1, en = {}, ei = {}, el = !1
 }
-class ef extends(s = E.ZP.Store) {
+class eS extends(s = E.ZP.Store) {
   initialize() {
-    w = T.K.get(G), B = T.K.get(b), eo = T.K.get("login_cache"), null == c.getToken() && ec(), this.addChangeListener(() => (0, N.u)(w))
+    w = T.K.get(G), x = T.K.get(b), eo = T.K.get("login_cache"), null == c.getToken() && ec(), this.addChangeListener(() => (0, A.u)(w))
   }
   getEmail() {
-    return B
+    return x
   }
   getLogin() {
     return eo
@@ -177,7 +177,7 @@ class ef extends(s = E.ZP.Store) {
     return w
   }
   getSessionId() {
-    return x
+    return B
   }
   getAuthSessionIdHash() {
     return k
@@ -230,13 +230,13 @@ class ef extends(s = E.ZP.Store) {
     }), e
   }
   hasTOTPEnabled() {
-    return K.includes(S.Pi.TOTP)
+    return K.includes(f.Pi.TOTP)
   }
   hasSMSEnabled() {
-    return K.includes(S.Pi.SMS)
+    return K.includes(f.Pi.SMS)
   }
   hasWebAuthnEnabled() {
-    return K.includes(S.Pi.WEBAUTHN)
+    return K.includes(f.Pi.WEBAUTHN)
   }
   getMaskedPhone() {
     return $
@@ -264,12 +264,12 @@ class ef extends(s = E.ZP.Store) {
     return el
   }
 }
-l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.defineProperty(o, a, {
+l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.default = new ef(h.Z, {
+}) : o[a] = l, t.default = new eS(h.Z, {
   CONNECTION_OPEN: function(e) {
     var t;
     let {
@@ -280,7 +280,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       auth: o,
       staticAuthSessionId: a
     } = e;
-    e_("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), x = i, k = r, V = a, F = s, w = n.id, B = n.email, void 0 !== o && (K = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
+    e_("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.Z)(n)), B = i, k = r, V = a, F = s, w = n.id, x = n.email, void 0 !== o && (K = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -290,7 +290,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       analyticsToken: r,
       token: s
     } = e;
-    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), x = i, F = r, eI(s), eE(), w = n.id, T.K.set(G, n.id)
+    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.Z)(n)), B = i, F = r, eI(s), eE(), w = n.id, T.K.set(G, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -301,9 +301,9 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
         eh();
         return
       }
-      p.default.track(D.rMx.APP_USER_DEAUTHENTICATED, {
+      R.default.track(D.rMx.APP_USER_DEAUTHENTICATED, {
         user_id: T.K.get(G)
-      }), eS(), setImmediate(() => (0, O.uL)(D.Z5c.DEFAULT_LOGGED_OUT))
+      }), ef(), setImmediate(() => (0, O.uL)(D.Z5c.DEFAULT_LOGGED_OUT))
     }
   },
   AUTH_SESSION_CHANGE: function(e) {
@@ -408,13 +408,13 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       password: n
     }
   },
-  LOGOUT: eS,
+  LOGOUT: ef,
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
-    null == Z ? null != t ? (p.default.track(D.rMx.USER_FINGERPRINT_CHANGED, {
+    null == Z ? null != t ? (R.default.track(D.rMx.USER_FINGERPRINT_CHANGED, {
       old_fingerprint: null != H ? (0, d.s)(H) : null,
       new_fingerprint: (0, d.s)(t)
-    }), Z = t, H = t, T.K.set(U, Z)) : ec() : null != t && Z !== t && p.default.track(D.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
+    }), Z = t, H = t, T.K.set(U, Z)) : ec() : null != t && Z !== t && R.default.track(D.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
       fingerprint: (0, d.s)(Z),
       dropped_fingerprint: (0, d.s)(t)
     })
@@ -477,14 +477,14 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
     let {
       user: t
     } = e;
-    w = t.id, B = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_types), T.K.set(b, t.email), T.K.set(G, t.id)
+    w = t.id, x = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_types), T.K.set(b, t.email), T.K.set(G, t.id)
   },
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eh,
   CLEAR_AUTHENTICATION_ERRORS: function() {
     ei = {}
   },
   CLOSE_SUSPENDED_USER: function() {
-    ea = null, Y = D.u34.NONE, eS(), setImmediate(() => (0, O.uL)(D.Z5c.DEFAULT_LOGGED_OUT))
+    ea = null, Y = D.u34.NONE, ef(), setImmediate(() => (0, O.uL)(D.Z5c.DEFAULT_LOGGED_OUT))
   },
   PASSWORDLESS_FAILURE: function(e) {
     let {

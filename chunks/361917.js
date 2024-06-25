@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return B
+    return x
   }
 }), n(653041), n(47120);
 var i = n(735250),
@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(127255),
   T = n(880308),
   h = n(367907),
-  S = n(399654),
-  f = n(844439),
-  N = n(10718),
-  A = n(148958),
+  f = n(399654),
+  S = n(844439),
+  A = n(10718),
+  N = n(148958),
   m = n(424602),
   O = n(827498),
-  R = n(87005),
-  p = n(695676),
+  p = n(87005),
+  R = n(695676),
   g = n(98880),
   C = n(804307),
   v = n(41558),
@@ -48,7 +48,7 @@ let b = [],
     look: g.U4.NO_BANNER
   }];
 
-function B(e) {
+function x(e) {
   let {
     channel: t,
     entrypoint: n,
@@ -57,24 +57,24 @@ function B(e) {
     enableRecommendations: a,
     enableRecents: l,
     enableGlobalSearch: u
-  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === O._b.TEXT && l, T = n === O._b.TEXT, h = n === O._b.TEXT && a, S = n === O._b.VOICE, f = h || T, N = n === O._b.TEXT;
+  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === O._b.TEXT && l, T = n === O._b.TEXT, h = n === O._b.TEXT && a, f = n === O._b.VOICE, S = h || T, A = n === O._b.TEXT;
   r.useEffect(() => {
     c && (0, E.w1)({
       guildId: t.getGuildId(),
       force: !0
     })
   }, [c, t]);
-  let A = s.length > 0;
+  let N = s.length > 0;
   return (0, i.jsxs)("div", {
     className: U.container,
-    children: [(0, i.jsx)(x, {
+    children: [(0, i.jsx)(B, {
       searchQuery: s,
       setSearchQuery: o,
-      placeholder: N ? y.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : y.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+      placeholder: A ? y.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : y.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
     }), (0, i.jsx)(_.Scroller, {
       className: U.scrollableContent,
       fade: !0,
-      children: A ? (0, i.jsx)("div", {
+      children: N ? (0, i.jsx)("div", {
         children: (0, i.jsx)(D.Z, {
           channel: t,
           query: s,
@@ -90,15 +90,15 @@ function B(e) {
           channel: t
         }), h && (0, i.jsx)(H, {
           channel: t
-        }), S && (0, i.jsx)(V, {
+        }), f && (0, i.jsx)(V, {
           channel: t
-        }), f && (0, i.jsx)(L.Z, {})]
+        }), S && (0, i.jsx)(L.Z, {})]
       })
     })]
   })
 }
 
-function x(e) {
+function B(e) {
   let {
     searchQuery: t,
     setSearchQuery: n,
@@ -129,7 +129,7 @@ function k(e) {
   } = e, {
     frecentApps: s,
     loading: o
-  } = (0, R.f)(t, !0), a = r.useMemo(() => {
+  } = (0, p.f)(t, !0), a = r.useMemo(() => {
     let e = [];
     for (let t of s) null != t.application && e.push({
       application: t.application,
@@ -217,7 +217,7 @@ function Z(e) {
     sectionDescriptors: n,
     filterSection: s,
     loading: a
-  } = N.wi(t, {
+  } = A.wi(t, {
     commandType: c.yU.CHAT
   }, {
     placeholderCount: 0,
@@ -228,7 +228,7 @@ function Z(e) {
     s(P.bi.FRECENCY)
   }, [s]);
   let l = r.useMemo(() => n.filter(e => e.id !== P.bi.FRECENCY && e.id !== P.bi.BUILT_IN), [n]),
-    u = (0, A.h)(l),
+    u = (0, N.h)(l),
     _ = r.useMemo(() => o().compact(u.map(e => {
       let {
         application: t
@@ -278,15 +278,15 @@ function H(e) {
       location: n
     } = e;
     r.useEffect(() => {
-      (0, S.$)({
+      (0, f.$)({
         channelId: t,
         location: n
       })
     }, [t, n]);
-    let [i, s] = (0, u.Wu)([f.Z], () => [f.Z.getFetchState({
+    let [i, s] = (0, u.Wu)([S.Z], () => [S.Z.getFetchState({
       channelId: t,
       location: n
-    }), f.Z.getRecommendations({
+    }), S.Z.getRecommendations({
       channelId: t,
       location: n
     })]);
@@ -321,7 +321,7 @@ function H(e) {
     recommendationsSections: s
   });
   return (0, i.jsx)(i.Fragment, {
-    children: n === f.M.FETCHING ? w.map((e, t) => {
+    children: n === S.M.FETCHING ? w.map((e, t) => {
       let {
         cards: n,
         look: r
@@ -396,14 +396,14 @@ function F(e) {
 function Y(e, t, n, i) {
   let {
     pushHistory: s
-  } = (0, p.hH)();
+  } = (0, R.hH)();
   return r.useMemo(() => n.length <= i ? {
     items: n,
     handleViewMore: void 0
   } : {
     items: n.slice(0, i),
     handleViewMore: () => s({
-      type: p.gc.LIST,
+      type: R.gc.LIST,
       title: e,
       look: t,
       items: n

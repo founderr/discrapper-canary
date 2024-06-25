@@ -1,41 +1,41 @@
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   },
   openEffectsUpsellModal: function() {
-    return p
+    return _
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(174609),
-  a = n(98278),
+var a = n(481060),
+  l = n(174609),
+  s = n(98278),
   r = n(790527),
   o = n(810090),
   c = n(626135),
   u = n(981631),
   d = n(689938),
   h = n(603374),
-  m = n(626065);
+  p = n(626065);
 
-function E(e) {
+function m(e) {
   let {
     onClose: t,
     analytics: n,
-    ...i
-  } = e, E = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
+    ...a
+  } = e, m = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
     onPressMore: function() {
-      (0, s.Z)(), t(), c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
+      (0, l.Z)(), t(), c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
         location_section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
         location_object: u.qAy.NAVIGATION_LINK
-      }), (0, a.z)()
+      }), (0, s.z)()
     }
   });
-  return (0, l.jsx)(r.Z, {
+  return (0, i.jsx)(r.Z, {
     title: d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
-    glowUp: E,
-    body: E,
+    glowUp: m,
+    body: m,
     artContainerClassName: h.artContainer,
     enableArtBoxShadow: !1,
     type: n.type,
@@ -48,26 +48,26 @@ function E(e) {
       section: n.section
     },
     onClose: t,
-    onSubscribeClick: s.Z,
-    artElement: (0, l.jsx)(o.Z, {
+    onSubscribeClick: l.Z,
+    artElement: (0, i.jsx)(o.Z, {
       className: h.video,
-      src: m,
+      src: p,
       loop: !0,
       autoPlay: !0
     }),
-    ...i
+    ...a
   })
 }
 
-function p(e) {
+function _(e) {
   let {
     analytics: t
   } = e;
-  (0, i.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.resolve().then(n.bind(n, 310892));
-    return n => (0, l.jsx)(e, {
+    return n => (0, i.jsx)(e, {
       analytics: t,
       ...n
     })

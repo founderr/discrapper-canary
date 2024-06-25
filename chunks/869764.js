@@ -1,163 +1,163 @@
 l.d(n, {
   Z: function() {
-    return b
+    return E
   },
   k: function() {
-    return E
+    return j
   }
 }), l(789020);
 var a = l(735250),
-  i = l(470079),
-  s = l(442837),
-  r = l(481060),
-  t = l(933557),
+  r = l(470079),
+  i = l(442837),
+  t = l(481060),
+  s = l(933557),
   d = l(471445),
-  c = l(592125),
-  o = l(271383),
+  o = l(592125),
+  c = l(271383),
   u = l(430824),
   h = l(496675),
   m = l(186523),
   g = l(768581),
-  x = l(630388),
-  Z = l(526120),
-  C = l(563534),
-  v = l(846121),
-  f = l(305762),
-  I = l(981631),
-  j = l(372897),
-  N = l(689938),
-  p = l(336324);
+  C = l(630388),
+  x = l(526120),
+  f = l(563534),
+  I = l(846121),
+  Z = l(305762),
+  _ = l(981631),
+  v = l(372897),
+  p = l(689938),
+  N = l(336324);
 
-function E(e) {
+function j(e) {
   let {
     title: n,
     emojiId: l,
-    emojiName: i,
-    icon: s,
-    completed: t,
+    emojiName: r,
+    icon: i,
+    completed: s,
     Icon: d,
-    ...c
-  } = e, o = "channel" === c.variant ? c.channelId : null, u = "static" === c.variant ? c.subtitle : c.channelName, h = null != o ? g.ZP.getNewMemberActionIconURL({
-    channelId: o,
-    icon: s
+    ...o
+  } = e, c = "channel" === o.variant ? o.channelId : null, u = "static" === o.variant ? o.subtitle : o.channelName, h = null != c ? g.ZP.getNewMemberActionIconURL({
+    channelId: c,
+    icon: i
   }) : null;
   return (0, a.jsxs)("div", {
-    className: p.action,
+    className: N.action,
     children: [null != h ? (0, a.jsx)("img", {
       src: h,
-      className: p.icon,
+      className: N.icon,
       width: 32,
       height: 32,
       alt: "",
       "aria-hidden": !0
-    }) : (0, a.jsx)(f.Z, {
+    }) : (0, a.jsx)(Z.Z, {
       emojiId: l,
-      emojiName: i,
-      size: f.R.LARGE,
+      emojiName: r,
+      size: Z.R.LARGE,
       defaultComponent: (0, a.jsx)("div", {
-        className: p.channelIconContainer,
+        className: N.channelIconContainer,
         children: (0, a.jsx)(d, {
-          className: p.channelIcon,
+          className: N.channelIcon,
           color: "currentColor"
         })
       })
     }), (0, a.jsxs)("div", {
-      className: p.actionInfo,
-      children: [(0, a.jsx)(r.Text, {
+      className: N.actionInfo,
+      children: [(0, a.jsx)(t.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: n
-      }), null != u ? (0, a.jsx)(r.Text, {
+      }), null != u ? (0, a.jsx)(t.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: u
       }) : null]
-    }), t ? (0, a.jsx)(r.CircleCheckIcon, {
+    }), s ? (0, a.jsx)(t.CircleCheckIcon, {
       size: "md",
       color: "currentColor",
       secondaryColor: "#fff",
-      className: p.checkCircleCompleted
+      className: N.checkCircleCompleted
     }) : (0, a.jsx)(m.Z, {
-      className: p.checkCircle,
+      className: N.checkCircle,
       width: 24,
       height: 24
     })]
   })
 }
 
-function _(e) {
+function b(e) {
   var n;
   let {
     action: l,
-    completed: o
+    completed: c
   } = e, {
     channelId: u,
     title: m,
     emoji: g,
-    icon: x
+    icon: C
   } = l, {
-    id: C,
-    name: v
-  } = null != g ? g : {}, f = (0, s.e7)([c.Z], () => c.Z.getChannel(u)), j = (0, t.ZP)(f, !0), N = (0, s.e7)([h.Z], () => h.Z.can(I.Plq.VIEW_CHANNEL, f)), _ = i.useCallback(() => {
-    if (null == f) return null;
-    (0, Z.gp)(f.guild_id, f.id)
-  }, [f]);
-  if (null == f || !N) return null;
-  let b = null !== (n = (0, d.KS)(f)) && void 0 !== n ? n : r.TextIcon;
-  return (0, a.jsx)(r.Clickable, {
-    className: p.clickableAction,
-    onClick: _,
-    children: (0, a.jsx)(E, {
+    id: f,
+    name: I
+  } = null != g ? g : {}, Z = (0, i.e7)([o.Z], () => o.Z.getChannel(u)), v = (0, s.ZP)(Z, !0), p = (0, i.e7)([h.Z], () => h.Z.can(_.Plq.VIEW_CHANNEL, Z)), b = r.useCallback(() => {
+    if (null == Z) return null;
+    (0, x.gp)(Z.guild_id, Z.id)
+  }, [Z]);
+  if (null == Z || !p) return null;
+  let E = null !== (n = (0, d.KS)(Z)) && void 0 !== n ? n : t.TextIcon;
+  return (0, a.jsx)(t.Clickable, {
+    className: N.clickableAction,
+    onClick: b,
+    children: (0, a.jsx)(j, {
       variant: "channel",
       channelId: u,
       title: m,
-      channelName: j,
-      emojiId: C,
-      emojiName: v,
-      icon: x,
-      completed: o,
-      Icon: b
+      channelName: v,
+      emojiId: f,
+      emojiName: I,
+      icon: C,
+      completed: c,
+      Icon: E
     })
   })
 }
 
-function b(e) {
+function E(e) {
   let {
     guildId: n
-  } = e, l = (0, s.e7)([C.Z], () => C.Z.getNewMemberActions(n), [n]), t = (0, s.e7)([v.Z], () => v.Z.getCompletedActions(n)), d = (0, s.e7)([o.ZP], () => o.ZP.getSelfMember(n)), c = (0, s.e7)([u.Z], () => u.Z.getGuild(n));
-  i.useEffect(() => {
+  } = e, l = (0, i.e7)([f.Z], () => f.Z.getNewMemberActions(n), [n]), s = (0, i.e7)([I.Z], () => I.Z.getCompletedActions(n)), d = (0, i.e7)([c.ZP], () => c.ZP.getSelfMember(n)), o = (0, i.e7)([u.Z], () => u.Z.getGuild(n));
+  r.useEffect(() => {
     var e;
-    null == t && (null == d ? void 0 : d.flags) != null && (0, x.yE)(null !== (e = d.flags) && void 0 !== e ? e : 0, j.q.STARTED_HOME_ACTIONS) && (0, Z.Fg)(n)
-  }, [t, n, null == d ? void 0 : d.flags]);
-  let h = i.useCallback(() => {
-    null != c && null != c.rulesChannelId && (0, Z.gp)(c.id, c.rulesChannelId)
-  }, [c]);
+    null == s && (null == d ? void 0 : d.flags) != null && (0, C.yE)(null !== (e = d.flags) && void 0 !== e ? e : 0, v.q.STARTED_HOME_ACTIONS) && (0, x.Fg)(n)
+  }, [s, n, null == d ? void 0 : d.flags]);
+  let h = r.useCallback(() => {
+    null != o && null != o.rulesChannelId && (0, x.gp)(o.id, o.rulesChannelId)
+  }, [o]);
   return null == d || null == l || 0 === l.length ? null : (0, a.jsxs)("div", {
-    className: p.container,
-    children: [(0, a.jsx)(r.Heading, {
+    className: N.container,
+    children: [(0, a.jsx)(t.Heading, {
       variant: "heading-lg/bold",
       color: "header-primary",
-      children: N.Z.Messages.GET_STARTED
-    }), l.map(e => (0, a.jsx)(_, {
+      children: p.Z.Messages.GET_STARTED
+    }), l.map(e => (0, a.jsx)(b, {
       action: e,
-      completed: (null == t ? void 0 : t[e.channelId]) === !0,
+      completed: (null == s ? void 0 : s[e.channelId]) === !0,
       guildId: n
-    }, e.channelId)), (null == c ? void 0 : c.rulesChannelId) != null && (0, a.jsxs)(r.Clickable, {
-      className: p.action,
+    }, e.channelId)), (null == o ? void 0 : o.rulesChannelId) != null && (0, a.jsxs)(t.Clickable, {
+      className: N.action,
       onClick: h,
       children: [(0, a.jsx)("div", {
-        className: p.rulesIconContainer,
-        children: (0, a.jsx)(r.BookCheckIcon, {
+        className: N.rulesIconContainer,
+        children: (0, a.jsx)(t.BookCheckIcon, {
           size: "xs",
           color: "currentColor",
-          className: p.rulesIcon
+          className: N.rulesIcon
         })
       }), (0, a.jsx)("div", {
-        className: p.actionInfo,
-        children: (0, a.jsx)(r.Text, {
+        className: N.actionInfo,
+        children: (0, a.jsx)(t.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: N.Z.Messages.GUILD_SETTINGS_ONBOARDING_RULES_ACTION
+          children: p.Z.Messages.GUILD_SETTINGS_ONBOARDING_RULES_ACTION
         })
       })]
     })]

@@ -16,7 +16,7 @@ var r = n(392711),
   T = n(981631),
   h = n(689938);
 
-function S(e) {
+function f(e) {
   switch (e) {
     case T.nkL.GIF.title:
     case T.nkL.TENOR.title:
@@ -25,7 +25,7 @@ function S(e) {
       return ""
   }
 }
-let f = [...s()(T.nkL).values().map(e => ({
+let S = [...s()(T.nkL).values().map(e => ({
   id: e.commandId,
   name: e.command,
   displayName: e.command,
@@ -33,10 +33,10 @@ let f = [...s()(T.nkL).values().map(e => ({
   inputType: E.iw.BUILT_IN_INTEGRATION,
   applicationId: I.bi.BUILT_IN,
   get description() {
-    return S(e.title)
+    return f(e.title)
   },
   get displayDescription() {
-    return S(e.title)
+    return f(e.title)
   },
   options: e.type === T.q9n.GIF ? [{
     name: "query",
@@ -92,7 +92,7 @@ let f = [...s()(T.nkL).values().map(e => ({
     }), I = h.Z.Messages.LEAVE_GROUP_DM_BODY.format({
       name: u
     }), T = null !== (r = null === (n = e.find(e => "silent" === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== r && r;
-    async function S() {
+    async function f() {
       try {
         await a.Z.closePrivateChannel(s.id, void 0, T)
       } catch (e) {
@@ -107,7 +107,7 @@ let f = [...s()(T.nkL).values().map(e => ({
       header: E,
       confirmText: h.Z.Messages.LEAVE_GROUP_DM,
       cancelText: h.Z.Messages.CANCEL,
-      onConfirm: S,
+      onConfirm: f,
       ...e,
       children: (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
@@ -116,4 +116,4 @@ let f = [...s()(T.nkL).values().map(e => ({
     }))
   }
 }];
-t.Z = f
+t.Z = S

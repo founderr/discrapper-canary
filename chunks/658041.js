@@ -11,20 +11,20 @@ var l = n(913527),
 function u(e, t, n, l) {
   let u = r()(),
     a = new Date(e.scheduled_start_time).getTime(),
-    E = {
+    d = {
       start: a - s.VF,
       end: a
     };
-  if (u.isBetween(E.start, E.end)) {
+  if (u.isBetween(d.start, d.end)) {
     if (null != t) {
       let e = r()(t),
-        n = e.isBetween(E.start, E.end),
+        n = e.isBetween(d.start, d.end),
         i = e.isBetween(r()(a).subtract(s.zV, "days"), a);
       return n || i && !l ? void 0 : s.X_.EVENT_STARTING_SOON
     }
     return s.X_.EVENT_STARTING_SOON
   }
-  let d = i.default.extractTimestamp(e.id),
-    o = Math.min((null != n ? n : d) + s.Fc, a);
-  if (u.isBetween(d, o) && null == t && !l) return s.X_.NEW_EVENT
+  let E = i.default.extractTimestamp(e.id),
+    o = Math.min((null != n ? n : E) + s.Fc, a);
+  if (u.isBetween(E, o) && null == t && !l) return s.X_.NEW_EVENT
 }

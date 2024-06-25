@@ -3,20 +3,20 @@ n.d(t, {
     return o
   }
 });
-var l = n(442837),
-  i = n(592125),
-  s = n(938475),
-  r = n(853856),
-  a = n(981631);
+var i = n(442837),
+  l = n(592125),
+  r = n(938475),
+  a = n(853856),
+  s = n(981631);
 
 function o(e) {
-  return (0, l.cj)([s.ZP, i.Z, r.Z], () => {
-    if (e !== a.I_8) return s.ZP.getVoiceStates(e);
-    let t = r.Z.getFavoriteChannels(),
+  return (0, i.cj)([r.ZP, l.Z, a.Z], () => {
+    if (e !== s.I_8) return r.ZP.getVoiceStates(e);
+    let t = a.Z.getFavoriteChannels(),
       n = {};
     for (let e in t) {
-      let t = i.Z.getChannel(e);
-      null != t && (n[e] = s.ZP.getVoiceStatesForChannel(t))
+      let t = l.Z.getChannel(e);
+      null != t && (n[e] = r.ZP.getVoiceStatesForChannel(t))
     }
     return n
   }, [e])

@@ -1,7 +1,7 @@
-var n, i = t(442837),
-  a = t(570140);
+var n, a = t(442837),
+  i = t(570140);
 
-function l(e, s, t) {
+function r(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -9,22 +9,22 @@ function l(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-let r = !1;
-class o extends(n = i.ZP.PersistedStore) {
+let o = !1;
+class l extends(n = a.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (r = e.persistentCodesEnabled)
+    null != e && (o = e.persistentCodesEnabled)
   }
   getState() {
     return {
-      persistentCodesEnabled: r
+      persistentCodesEnabled: o
     }
   }
   getPersistentCodesEnabled() {
-    return r
+    return o
   }
 }
-l(o, "displayName", "SecureFramesSettingsStore"), l(o, "persistKey", "SecureFramesSettingsStore"), s.Z = new o(a.Z, {
+r(l, "displayName", "SecureFramesSettingsStore"), r(l, "persistKey", "SecureFramesSettingsStore"), s.Z = new l(i.Z, {
   SECURE_FRAMES_SETTINGS_UPDATE: function(e) {
-    r = e.persistentCodesEnabled
+    o = e.persistentCodesEnabled
   }
 })

@@ -3,23 +3,23 @@ n.d(t, {
     return c
   }
 });
-var s = n(159300),
-  i = n(430824),
-  l = n(496675),
-  a = n(996106),
-  r = n(561205),
+var i = n(159300),
+  s = n(430824),
+  a = n(496675),
+  r = n(996106),
+  l = n(561205),
   o = n(981631);
 
 function c() {
-  let e = (0, r.Z)();
-  if (null == e) throw new a.Z({
+  let e = (0, l.Z)();
+  if (null == e) throw new r.Z({
     errorCode: o.lTL.INVALID_CHANNEL
   }, "Invalid channel");
-  let t = i.Z.getGuild(e.getGuildId());
-  if (null == t) throw new a.Z({
+  let t = s.Z.getGuild(e.getGuildId());
+  if (null == t) throw new r.Z({
     errorCode: o.lTL.INVALID_CHANNEL
   }, "Invalid guild ".concat(e.getGuildId()));
-  if (!(0, s.b)(l.Z, t, e)) throw new a.Z({
+  if (!(0, i.b)(a.Z, t, e)) throw new r.Z({
     errorCode: o.lTL.INVALID_PERMISSIONS
   }, "No invite permissions for ".concat(e.id));
   return {

@@ -1,27 +1,27 @@
 n.d(t, {
   E: function() {
-    return v
+    return L
   }
 }), n(47120), n(724458), n(653041);
-var l, i = n(735250),
-  s = n(470079),
-  r = n(120356),
-  a = n.n(r),
+var i, l = n(735250),
+  r = n(470079),
+  a = n(120356),
+  s = n.n(a),
   o = n(748780),
-  u = n(442837),
-  c = n(692547),
+  c = n(442837),
+  u = n(692547),
   d = n(215569),
   h = n(481060),
   p = n(812206),
-  g = n(703656),
-  m = n(417363),
-  C = n(941128),
-  E = n(366966),
-  f = n(780570),
-  _ = n(353042),
-  I = n(981631),
+  f = n(703656),
+  _ = n(417363),
+  g = n(941128),
+  m = n(366966),
+  C = n(780570),
+  I = n(353042),
+  E = n(981631),
   N = n(689938),
-  Z = n(182216);
+  x = n(182216);
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -31,69 +31,69 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let x = {
-  [I.vxO.INSTALLING]: {
-    [E.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+let Z = {
+  [E.vxO.INSTALLING]: {
+    [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
-    [E.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+    [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [E.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+    [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [E.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+    [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   },
-  [I.vxO.UPDATING]: {
-    [E.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
+  [E.vxO.UPDATING]: {
+    [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
       name: e
     }),
-    [E.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
+    [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [E.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
+    [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [E.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
+    [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   },
-  [I.vxO.REPAIRING]: {
-    [E.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+  [E.vxO.REPAIRING]: {
+    [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
-    [E.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+    [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [E.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+    [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [E.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+    [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   }
 };
-class L extends s.PureComponent {
+class v extends r.PureComponent {
   renderText() {
     let {
       state: e,
       isPaused: t
     } = this.props;
-    if (e.type === I.vxO.UPDATING || e.type === I.vxO.REPAIRING || e.type === I.vxO.INSTALLING) {
+    if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.INSTALLING) {
       if (t) return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === I.f07.PATCHING || e.stage === I.f07.REPAIRING) return (0, i.jsx)(_.Z, {
-        getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
+      if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING) return (0, l.jsx)(I.Z, {
+        getHistoricalTotalBytes: _.Z.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
       })
@@ -108,31 +108,31 @@ class L extends s.PureComponent {
     super(...e), S(this, "renderProgressBody", (e, t) => {
       let {
         state: n,
-        application: l
+        application: i
       } = this.props, {
-        stage: i,
-        progress: s,
-        total: r,
-        type: a
+        stage: l,
+        progress: r,
+        total: a,
+        type: s
       } = n;
-      if (null == s || null == r || null == i) return null;
+      if (null == r || null == a || null == l) return null;
       let o = e[e.length - 1] / t * 1e3,
-        u = 0 !== o ? Math.max(1, (r - s) / o) : null,
-        c = x[a],
-        d = null != c ? Object.keys(c) : [],
+        c = 0 !== o ? Math.max(1, (a - r) / o) : null,
+        u = Z[s],
+        d = null != u ? Object.keys(u) : [],
         {
           unit: h,
           time: p
-        } = (0, E.CI)(null != u ? u / 60 : null, d);
-      if (null != c && null != h) {
-        let e = c[h];
-        return null != e ? e(l.name, p) : null
+        } = (0, m.CI)(null != c ? c / 60 : null, d);
+      if (null != u && null != h) {
+        let e = u[h];
+        return null != e ? e(i.name, p) : null
       }
       return null
     })
   }
 }
-class T extends(l = s.PureComponent) {
+class T extends(i = r.PureComponent) {
   componentWillAppear(e) {
     this.state.animationScale.setValue(1), e()
   }
@@ -154,7 +154,7 @@ class T extends(l = s.PureComponent) {
       firstState: t,
       isPaused: n
     } = this.props;
-    return null == e || null == t ? N.Z.Messages.LIBRARY : (0, i.jsx)(L, {
+    return null == e || null == t ? N.Z.Messages.LIBRARY : (0, l.jsx)(v, {
       application: e,
       state: t,
       isPaused: n
@@ -166,27 +166,27 @@ class T extends(l = s.PureComponent) {
       isPaused: t,
       className: n
     } = this.props;
-    return (0, i.jsx)(o.Z.div, {
+    return (0, l.jsx)(o.Z.div, {
       style: {
         transform: [{
           scale: this.state.animationScale
         }]
       },
-      className: a()(n, Z.progressContainer),
+      className: s()(n, x.progressContainer),
       onClick: this.handleOnClick,
-      children: (0, i.jsx)(h.Tooltip, {
+      children: (0, l.jsx)(h.Tooltip, {
         text: this.getTooltipText(),
         position: "right",
         "aria-label": !1,
-        children: n => (0, i.jsx)("div", {
+        children: n => (0, l.jsx)("div", {
           ...n,
-          children: (0, i.jsx)(h.ProgressCircle, {
+          children: (0, l.jsx)(h.ProgressCircle, {
             percent: e,
-            colorOverride: t ? c.Z.unsafe_rawColors.PRIMARY_500.css : null,
-            children: (0, i.jsx)(h.DownloadIcon, {
+            colorOverride: t ? u.Z.unsafe_rawColors.PRIMARY_500.css : null,
+            children: (0, l.jsx)(h.DownloadIcon, {
               size: "md",
               color: "currentColor",
-              className: Z.downloadIcon
+              className: x.downloadIcon
             })
           })
         })
@@ -200,7 +200,7 @@ class T extends(l = s.PureComponent) {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(I.Z5c.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.uL)(E.Z5c.APPLICATION_LIBRARY)
     })
   }
 }
@@ -208,25 +208,25 @@ S(T, "defaultProps", {
   strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM
 });
 
-function v(e, t) {
+function L(e, t) {
   return e.reduce((e, n) => {
     let {
-      applicationId: l,
-      branchId: i
-    } = n, s = t.getState(l, i);
-    return null != s && e.push(s), e
+      applicationId: i,
+      branchId: l
+    } = n, r = t.getState(i, l);
+    return null != r && e.push(r), e
   }, [])
 }
-t.Z = u.ZP.connectStores([C.Z, m.Z, p.Z], () => {
-  let e = C.Z.activeItems,
-    t = v(e, m.Z),
+t.Z = c.ZP.connectStores([g.Z, _.Z, p.Z], () => {
+  let e = g.Z.activeItems,
+    t = L(e, _.Z),
     {
       total: n,
-      progress: l
-    } = f.lK(t);
+      progress: i
+    } = C.lK(t);
   return {
-    percent: f.xI(l, n),
-    isPaused: C.Z.paused,
+    percent: C.xI(i, n),
+    isPaused: g.Z.paused,
     firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null
   }
@@ -235,12 +235,12 @@ t.Z = u.ZP.connectStores([C.Z, m.Z, p.Z], () => {
     determineOwnVisibility: t = !0,
     ...n
   } = e;
-  return t ? (0, i.jsx)(d.W, {
-    component: s.Fragment,
-    children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(T, {
+  return t ? (0, l.jsx)(d.W, {
+    component: r.Fragment,
+    children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(T, {
       ...n
     }) : null
-  }) : (0, i.jsx)(T, {
+  }) : (0, l.jsx)(T, {
     ...n
   })
 })

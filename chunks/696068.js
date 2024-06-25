@@ -1,73 +1,73 @@
-i.d(n, {
+a.d(n, {
   F: function() {
-    return v
+    return f
   },
   d: function() {
     return x
   }
-}), i(653041), i(47120);
-var a = i(442837),
-  l = i(592125),
-  t = i(324067),
-  s = i(430824),
-  r = i(496675),
-  o = i(944486),
-  u = i(979651),
-  c = i(938475),
-  d = i(823379),
-  g = i(374065),
-  p = i(981631);
+}), a(653041), a(47120);
+var i = a(442837),
+  t = a(592125),
+  l = a(324067),
+  s = a(430824),
+  r = a(496675),
+  o = a(944486),
+  c = a(979651),
+  u = a(938475),
+  d = a(823379),
+  g = a(374065),
+  p = a(981631);
 
-function m(e, n, i, a, l) {
-  let t = (0, g.e4)({
+function m(e, n, a, i, t) {
+  let l = (0, g.e4)({
     channelId: e.id,
     ChannelStore: n,
-    GuildStore: i,
-    PermissionStore: a,
-    VoiceStateStore: l
+    GuildStore: a,
+    PermissionStore: i,
+    VoiceStateStore: t
   });
-  return e.type === p.d4z.GUILD_VOICE && t === g.jy.CAN_LAUNCH || !1
+  return e.type === p.d4z.GUILD_VOICE && l === g.jy.CAN_LAUNCH || !1
 }
 
 function x(e) {
-  var n, i, a;
+  var n, a, i;
   let {
     guildId: g,
     allowGdmActivityChannelSuggestion: p = !1
   } = e;
   if (null == g && !p) return null;
   let x = o.Z.getVoiceChannelId(),
-    f = l.Z.getChannel(x);
-  if (null != f && (null != f.guild_id || p)) return f.id;
-  let v = [];
-  for (let e of Object.values(t.Z.getCategories(g)))
-    for (let n of e) m(n.channel, l.Z, s.Z, r.Z, u.Z) && v.push({
+    v = t.Z.getChannel(x);
+  if (null != v && (null != v.guild_id || p)) return v.id;
+  let f = [];
+  for (let e of Object.values(l.Z.getCategories(g)))
+    for (let n of e) m(n.channel, t.Z, s.Z, r.Z, c.Z) && f.push({
       channel: n.channel,
-      users: c.ZP.getVoiceStatesForChannel(n.channel).filter(d.lm)
+      users: u.ZP.getVoiceStatesForChannel(n.channel).filter(d.lm)
     });
-  return null !== (a = null === (i = v.sort((e, n) => e.users.length > n.users.length ? -1 : 1)[0]) || void 0 === i ? void 0 : null === (n = i.channel) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : null
+  return null !== (i = null === (a = f.sort((e, n) => e.users.length > n.users.length ? -1 : 1)[0]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null
 }
 
-function f(e, n) {
+function v(e, n) {
   if (e.length !== n.length) return !1;
-  for (let i = 0; i < e.length; i++)
-    if (e[i].value.channel.id !== n[i].value.channel.id) return !1;
+  for (let a = 0; a < e.length; a++)
+    if (e[a].value.channel.id !== n[a].value.channel.id) return !1;
   return !0
 }
 
-function v(e) {
-  return (0, a.e7)([t.Z, l.Z, s.Z, r.Z, u.Z, c.ZP], () => {
+function f(e) {
+  return (0, i.e7)([l.Z, t.Z, s.Z, r.Z, c.Z, u.ZP], () => {
     if (null == e) return [];
     let n = [];
-    return Object.values(t.Z.getCategories(e)).forEach(e => {
+    return Object.values(l.Z.getCategories(e)).forEach(e => {
       e.forEach(e => {
         let {
-          channel: i
+          channel: a
         } = e;
-        m(i, l.Z, s.Z, r.Z, u.Z) && n.push(i)
+        m(a, t.Z, s.Z, r.Z, c.Z) && n.push(a)
       })
     }), n.map(e => {
-      let n = c.ZP.getVoiceStatesForChannel(e).filter(d.lm);
+      let n = u.ZP.getVoiceStatesForChannel(e).filter(d.lm);
       return {
         value: {
           channel: e,
@@ -76,5 +76,5 @@ function v(e) {
         label: e.name
       }
     }).sort((e, n) => e.value.users.length > n.value.users.length ? -1 : 1)
-  }, [e], f)
+  }, [e], v)
 }

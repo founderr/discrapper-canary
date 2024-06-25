@@ -7,9 +7,9 @@ t.d(a, {
   }
 });
 var n = t(818083),
-  s = t(358085),
-  l = t(474936);
-let r = (0, n.B)({
+  r = t(358085),
+  s = t(474936);
+let l = (0, n.B)({
   id: "2023-07_checkout_optimization_browser_autofill",
   label: "Checkout Optimization Browser Autofill",
   kind: "user",
@@ -35,7 +35,7 @@ let r = (0, n.B)({
 });
 
 function o() {
-  return r.getCurrentConfig({
+  return l.getCurrentConfig({
     location: "5f89bb_3"
   }, {
     autoTrackExposure: !0
@@ -43,5 +43,5 @@ function o() {
 }
 
 function i(e, a, t) {
-  return (0, s.isDesktop)() && null != e && [l.Si.TIER_0, l.Si.TIER_2].includes(e) && !a && null == t
+  return (0, r.isDesktop)() && null != e && [s.Si.TIER_0, s.Si.TIER_2].includes(e) && !a && null == t
 }

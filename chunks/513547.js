@@ -1,18 +1,18 @@
-r.d(t, {
+n.d(t, {
   al: function() {
-    return D
+    return R
   },
   ck: function() {
-    return Z
+    return b
   }
-}), r(47120), r(653041), r(571269), r(298267);
-var n = r(735250),
-  a = r(470079),
-  i = r(112456),
-  s = r.n(i),
-  o = r(226961),
-  l = r(706619),
-  c = r(206314);
+}), n(47120), n(653041), n(571269), n(298267);
+var r = n(735250),
+  a = n(470079),
+  i = n(112456),
+  o = n.n(i),
+  s = n(226961),
+  l = n(706619),
+  c = n(206314);
 let d = {
   accelerateRate: "Accelerate Rate",
   audioDetected: "Audio Detected",
@@ -137,7 +137,7 @@ function u(e) {
 }
 
 function m(e) {
-  return s().filesize(e)
+  return o().filesize(e)
 }
 
 function p(e) {
@@ -156,17 +156,17 @@ function f(e) {
   return e ? "Yes" : "No"
 }
 
-function y(e) {
+function C(e) {
   return "".concat(Math.max(e, 0).toFixed(2), " dB")
 }
 
-function v(e) {
+function y(e) {
   let {
     last: t
   } = e;
   return "".concat(t, " ms")
 }
-let D = {
+let R = {
     audioJitterBuffer: !0,
     audioJitterDelay: !0,
     audioJitterTarget: !0,
@@ -190,10 +190,10 @@ let D = {
     encryptDuration: !0,
     encryptMaxAttempts: !0
   },
-  C = {
+  S = {
     accelerateRate: g,
     audioDetected: f,
-    audioLevel: y,
+    audioLevel: C,
     availableOutgoingBitrate: u,
     averageDecodeTime: h,
     averageEncodeTime: h,
@@ -205,16 +205,16 @@ let D = {
     codec: function(e) {
       let {
         id: t,
-        name: r
+        name: n
       } = e;
-      return r = null != (r = "" === r ? "unknown" : r) ? r : "unknown", "".concat(r[0].toUpperCase()).concat(r.slice(1), " (").concat(t, ")")
+      return n = null != (n = "" === n ? "unknown" : n) ? n : "unknown", "".concat(n[0].toUpperCase()).concat(n.slice(1), " (").concat(t, ")")
     },
     cpuLimitedResolution: f,
     currentDelay: h,
     decoderImplementationName: p,
     delayEstimate: h,
     encoderImplementationName: p,
-    encoderQualityPsnr: y,
+    encoderQualityPsnr: C,
     encoderQualityVmaf: e => "".concat(e.toFixed(2)),
     encodeUsage: g,
     expandRate: g,
@@ -231,15 +231,15 @@ let D = {
     ping: h,
     preemptiveExpandRate: g,
     receiverBitrateEstimate: u,
-    relativePlayoutDelay: v,
-    relativeReceptionDelay: v,
+    relativePlayoutDelay: y,
+    relativeReceptionDelay: y,
     renderDelay: h,
     resolution: e => {
       let {
         width: t,
-        height: r
+        height: n
       } = e;
-      return "".concat(t, "x").concat(r)
+      return "".concat(t, "x").concat(n)
     },
     secondaryDecodedRate: g,
     secureFramesProtocolVersion: function(e) {
@@ -252,41 +252,41 @@ let D = {
       return e < t.length ? t[e] : "Unknown"
     }
   },
-  E = e => e,
-  R = e => {
+  D = e => e,
+  v = e => {
     let [t] = a.useState([]);
     return t.push({
       value: e.value,
       time: Date.now()
-    }), t.length > 600 && t.shift(), (0, n.jsx)(l.Z, {
+    }), t.length > 600 && t.shift(), (0, r.jsx)(l.Z, {
       dataPoints: t,
       width: e.width,
       height: e.height
     })
   };
 
-function Z(e) {
-  var t, r, a, i;
+function b(e) {
+  var t, n, a, i;
   let {
-    label: s,
+    label: o,
     value: u,
     section: m
-  } = e, p = null !== (r = C[s]) && void 0 !== r ? r : E;
-  let h = o.Pz[s] && (Array.isArray(i = u) && i.length > 0 && "number" == typeof i[0].value ? (0, n.jsx)(l.Z, {
+  } = e, p = null !== (n = S[o]) && void 0 !== n ? n : D;
+  let h = s.Pz[o] && (Array.isArray(i = u) && i.length > 0 && "number" == typeof i[0].value ? (0, r.jsx)(l.Z, {
       dataPoints: i,
       width: 300,
       height: 100
-    }) : "number" == typeof i ? (0, n.jsx)(R, {
+    }) : "number" == typeof i ? (0, r.jsx)(v, {
       value: i,
       width: 300,
       height: 100
     }) : void 0),
     g = Array.isArray(u) ? null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value : u;
-  return (0, n.jsx)(c.Z, {
-    label: s,
+  return (0, r.jsx)(c.Z, {
+    label: o,
     valueRendered: p(g),
     section: m,
     renderGraph: h,
-    children: null !== (a = d[s]) && void 0 !== a ? a : s
+    children: null !== (a = d[o]) && void 0 !== a ? a : o
   })
 }

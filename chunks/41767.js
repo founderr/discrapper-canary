@@ -3,31 +3,31 @@ t.r(n), t.d(n, {
     return u
   }
 }), t(47120);
-var _ = t(735250),
-  s = t(470079),
-  a = t(481060),
-  r = t(153124),
+var a = t(735250),
+  r = t(470079),
+  _ = t(481060),
+  s = t(153124),
   l = t(556012),
   A = t(590433),
-  I = t(689938),
-  O = t(629728);
-let o = e => {
+  o = t(689938),
+  I = t(629728);
+let O = e => {
   var n;
   let {
     duration: t,
-    onSelectDuration: s
-  } = e, r = (0, A.tr)(), l = r.find(e => e.value === t);
-  return (0, _.jsx)(a.FormItem, {
-    className: O.durationSelector,
+    onSelectDuration: r
+  } = e, s = (0, A.tr)(), l = s.find(e => e.value === t);
+  return (0, a.jsx)(_.FormItem, {
+    className: I.durationSelector,
     required: !0,
-    children: (0, _.jsx)(a.SearchableSelect, {
+    children: (0, a.jsx)(_.SearchableSelect, {
       value: null !== (n = null == l ? void 0 : l.value) && void 0 !== n ? n : A.UK.DURATION_60_SEC,
-      options: r,
+      options: s,
       onChange: e => {
-        let n = r.find(n => n.value === e);
-        null != n && s(n.value)
+        let n = s.find(n => n.value === e);
+        null != n && r(n.value)
       },
-      placeholder: I.Z.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_PLACEHOLDER
+      placeholder: o.Z.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_PLACEHOLDER
     })
   })
 };
@@ -37,51 +37,51 @@ function u(e) {
     action: n,
     triggerType: t,
     isEdit: u,
-    onUpdateDuration: N,
-    onClose: S,
-    transitionState: E
-  } = e, i = (0, r.Dt)(), [c, M] = s.useState(() => null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : A.UK.DURATION_60_SEC), C = (0, l.c)(n.type, n, t);
-  if (null == C) return null;
+    onUpdateDuration: c,
+    onClose: i,
+    transitionState: S
+  } = e, N = (0, s.Dt)(), [E, C] = r.useState(() => null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : A.UK.DURATION_60_SEC), M = (0, l.c)(n.type, n, t);
+  if (null == M) return null;
   let {
-    headerText: T
-  } = C;
-  return (0, _.jsxs)(a.ModalRoot, {
-    transitionState: E,
-    "aria-labelledby": i,
-    size: a.ModalSize.SMALL,
-    children: [(0, _.jsxs)(a.ModalContent, {
-      className: O.actionContentContainer,
-      children: [(0, _.jsx)(a.Heading, {
-        id: i,
+    headerText: d
+  } = M;
+  return (0, a.jsxs)(_.ModalRoot, {
+    transitionState: S,
+    "aria-labelledby": N,
+    size: _.ModalSize.SMALL,
+    children: [(0, a.jsxs)(_.ModalContent, {
+      className: I.actionContentContainer,
+      children: [(0, a.jsx)(_.Heading, {
+        id: N,
         color: "header-primary",
         variant: "heading-lg/semibold",
-        className: O.header,
-        children: T
-      }), (0, _.jsx)(a.Text, {
+        className: I.header,
+        children: d
+      }), (0, a.jsx)(_.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: I.Z.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_MODAL_DESCRIPTION
-      }), (0, _.jsx)(o, {
-        duration: c,
+        children: o.Z.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_MODAL_DESCRIPTION
+      }), (0, a.jsx)(O, {
+        duration: E,
         onSelectDuration: e => {
-          M(e)
+          C(e)
         }
       })]
-    }), (0, _.jsxs)(a.ModalFooter, {
-      children: [(0, _.jsx)(a.Button, {
+    }), (0, a.jsxs)(_.ModalFooter, {
+      children: [(0, a.jsx)(_.Button, {
         onClick: () => {
-          N(c)
+          c(E)
         },
-        color: a.Button.Colors.BRAND,
-        size: a.Button.Sizes.SMALL,
-        children: u ? I.Z.Messages.EDIT : I.Z.Messages.SAVE
-      }), (0, _.jsx)(a.Button, {
+        color: _.Button.Colors.BRAND,
+        size: _.Button.Sizes.SMALL,
+        children: u ? o.Z.Messages.EDIT : o.Z.Messages.SAVE
+      }), (0, a.jsx)(_.Button, {
         onClick: () => {
-          S()
+          i()
         },
-        color: a.Button.Colors.TRANSPARENT,
-        look: a.Button.Looks.LINK,
-        children: I.Z.Messages.CANCEL
+        color: _.Button.Colors.TRANSPARENT,
+        look: _.Button.Looks.LINK,
+        children: o.Z.Messages.CANCEL
       })]
     })]
   })

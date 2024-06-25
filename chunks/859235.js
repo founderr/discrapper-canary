@@ -16,9 +16,9 @@ var i, r, s = n(735250),
   I = n(43085),
   T = n(981631),
   h = n(689938),
-  S = n(605590);
+  f = n(605590);
 
-function f(e) {
+function S(e) {
   e.stopPropagation()
 }(i = r || (r = {}))[i.SMALL = 0] = "SMALL", i[i.MEDIUM = 1] = "MEDIUM", i[i.CLIP = 2] = "CLIP";
 t.Z = o.forwardRef(function(e, t) {
@@ -28,31 +28,31 @@ t.Z = o.forwardRef(function(e, t) {
     className: r,
     children: o,
     actions: a,
-    handleEditModal: N,
-    keyboardModeEnabled: A,
+    handleEditModal: A,
+    keyboardModeEnabled: N,
     onKeyDown: m,
     draftType: O,
-    size: R = 1
+    size: p = 1
   } = e, {
-    onFocus: p,
+    onFocus: R,
     ...g
   } = (0, u.JA)(n), {
     handleFocus: C,
     handleBlur: v
-  } = (0, I.b)(p), L = 0 === R, D = null != a;
+  } = (0, I.b)(R), L = 0 === p, D = null != a;
   return (0, s.jsx)(_.FocusRing, {
     children: (0, s.jsx)("li", {
       ...g,
       onFocus: C,
       onBlur: v,
       onKeyDown: e => {
-        if (!!A) {
+        if (!!N) {
           switch (e.which) {
             case T.yXg.D:
               e.preventDefault(), c.Z.remove(i, n, O);
               return;
             case T.yXg.E:
-              null != N && (e.preventDefault(), N(e));
+              null != A && (e.preventDefault(), A(e));
               return;
             case T.yXg.BACKSPACE:
               e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, O)) : (e.preventDefault(), c.Z.remove(i, n, O));
@@ -66,23 +66,23 @@ t.Z = o.forwardRef(function(e, t) {
           null == m || m(e)
         }
       },
-      className: l()(S.upload, r, {
-        [S.sizeClip]: 2 === R
+      className: l()(f.upload, r, {
+        [f.sizeClip]: 2 === p
       }),
       ref: t,
       children: (0, s.jsxs)("div", {
-        className: S.uploadContainer,
+        className: f.uploadContainer,
         children: [o, D ? (0, s.jsx)("div", {
-          className: S.actionBarContainer,
+          className: f.actionBarContainer,
           children: (0, s.jsx)("div", {
-            className: l()(S.actionBar, {
-              [S.smallActionBar]: L
+            className: l()(f.actionBar, {
+              [f.smallActionBar]: L
             }),
-            onContextMenu: f,
+            onContextMenu: S,
             "aria-label": h.Z.Messages.ATTACHMENT_UTILITIES,
             children: (0, s.jsx)(d.ZP, {
               className: l()({
-                [S.miniPopover]: L
+                [f.miniPopover]: L
               }),
               children: a
             })

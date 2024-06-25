@@ -1,16 +1,16 @@
 "use strict";
-var n = s(735250),
-  r = s(470079),
-  a = s(481060),
-  i = s(727637),
-  l = s(906732),
-  o = s(241553),
-  c = s(333867),
-  u = s(884697),
-  d = s(231338),
-  C = s(689938),
-  f = s(521746);
-let p = {
+var r = n(735250),
+  a = n(470079),
+  i = n(481060),
+  o = n(727637),
+  s = n(906732),
+  c = n(241553),
+  l = n(333867),
+  d = n(884697),
+  u = n(231338),
+  p = n(689938),
+  f = n(521746);
+let g = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -59,43 +59,43 @@ let p = {
 t.Z = e => {
   let {
     product: t,
-    returnRef: s,
-    onSuccess: E,
-    tooltipDelay: g,
-    isGiftEasterEggEnabled: m,
-    disableCustomColor: h = !1
+    returnRef: n,
+    onSuccess: _,
+    tooltipDelay: C,
+    isGiftEasterEggEnabled: b,
+    disableCustomColor: m = !1
   } = e, {
-    analyticsLocations: x
-  } = (0, l.ZP)(), I = r.useRef(null), _ = (0, i.Z)(I), T = h ? d.BR.DARK : d.BR.LIGHT;
-  return (0, u.x6)(t) ? null : (0, n.jsx)(a.Tooltip, {
-    text: C.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: g,
-    children: e => (0, n.jsx)(a.Button, {
+    analyticsLocations: h
+  } = (0, s.ZP)(), x = a.useRef(null), I = (0, o.Z)(x), E = m ? u.BR.DARK : u.BR.LIGHT;
+  return (0, d.x6)(t) ? null : (0, r.jsx)(i.Tooltip, {
+    text: p.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
+    delay: C,
+    children: e => (0, r.jsx)(i.Button, {
       ...e,
-      buttonRef: I,
+      buttonRef: x,
       className: f.giftButton,
-      color: h ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
-      look: a.Button.Looks.FILLED,
-      size: a.ButtonSizes.ICON,
+      color: m ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
+      look: i.Button.Looks.FILLED,
+      size: i.ButtonSizes.ICON,
       innerClassName: f.giftButtonInner,
-      "aria-label": C.Z.Messages.PREMIUM_GIFTING_BUTTON,
+      "aria-label": p.Z.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
-        e.stopPropagation(), (0, c.Z)({
+        e.stopPropagation(), (0, l.Z)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: x,
-          returnRef: s,
-          onClose: null != E ? e => {
-            e && E()
+          analyticsLocations: h,
+          returnRef: n,
+          onClose: null != _ ? e => {
+            e && _()
           } : void 0
         })
       },
-      children: m ? (0, n.jsx)(o.e, {
-        hovered: _,
+      children: b ? (0, r.jsx)(c.e, {
+        hovered: I,
         isContentDismissed: !0,
-        themeOverride: T,
-        boxColors: p
-      }) : (0, n.jsx)(a.GiftIcon, {
+        themeOverride: E,
+        boxColors: g
+      }) : (0, r.jsx)(i.GiftIcon, {
         size: "md",
         color: "currentColor"
       })

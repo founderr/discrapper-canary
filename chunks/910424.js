@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i = n(735250);
@@ -19,48 +19,48 @@ var r = n(442837),
   I = n(915863),
   T = n(981631),
   h = n(689938),
-  S = n(405224);
+  f = n(405224);
 
-function f(e) {
+function S(e) {
   let {
     isCurrentUser: t,
     color: n,
-    look: f,
-    applicationStream: N,
-    onAction: A
+    look: S,
+    applicationStream: A,
+    onAction: N
   } = e, {
     activeStream: m,
     watchingOtherStream: O
   } = (0, r.cj)([c.Z], () => ({
-    activeStream: c.Z.getActiveStreamForApplicationStream(N),
-    watchingOtherStream: null != N && c.Z.getAllActiveStreamsForChannel(N.channelId).filter(e => {
+    activeStream: c.Z.getActiveStreamForApplicationStream(A),
+    watchingOtherStream: null != A && c.Z.getAllActiveStreamsForChannel(A.channelId).filter(e => {
       let {
         ownerId: t
       } = e;
-      return t !== N.ownerId
+      return t !== A.ownerId
     }).length > 0
-  })), R = (0, r.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.channelId)), [p, g] = (0, _.wq)(R), C = (0, u.Aq)(), v = null != m && null != N && m.state !== T.jm8.ENDED && m.ownerId === N.ownerId, L = e => {
-    if (null != N) null == A || A(), a.default.selectVoiceChannel(N.channelId), !v && (0, l.iV)(N, {
+  })), p = (0, r.e7)([d.Z], () => d.Z.getChannel(null == A ? void 0 : A.channelId)), [R, g] = (0, _.wq)(p), C = (0, u.Aq)(), v = null != m && null != A && m.state !== T.jm8.ENDED && m.ownerId === A.ownerId, L = e => {
+    if (null != A) null == N || N(), a.default.selectVoiceChannel(A.channelId), !v && (0, l.iV)(A, {
       forceMultiple: e
     }), C.dispatch(T.CkL.POPOUT_CLOSE), E.S.dispatch(T.CkL.MODAL_CLOSE), o.Z.popAll()
   };
-  if (null == N) return null;
+  if (null == A) return null;
   let D = (0, _.P9)(g);
   t ? D = h.Z.Messages.WATCH_STREAM_STREAMING : v && (D = h.Z.Messages.WATCH_STREAM_WATCHING);
   let M = {
     color: n,
-    look: f
+    look: S
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(I.Z, {
-      disabled: t || v || !p,
+      disabled: t || v || !R,
       onClick: () => L(!1),
       ...M,
       fullWidth: !0,
       children: [(0, i.jsx)(s.ScreenArrowIcon, {
         size: "md",
         color: "currentColor",
-        className: S.streamIcon
+        className: f.streamIcon
       }), D]
     }, "play"), O && !v ? (0, i.jsx)(s.Tooltip, {
       text: h.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
@@ -71,12 +71,12 @@ function f(e) {
           null === (t = e.onClick) || void 0 === t || t.call(e), L(!0)
         },
         ...M,
-        className: S.iconButton,
-        size: S.iconButtonSize,
+        className: f.iconButton,
+        size: f.iconButtonSize,
         children: (0, i.jsx)(s.EyePlusIcon, {
           size: "xs",
           color: "currentColor",
-          className: S.iconSize
+          className: f.iconSize
         })
       })
     }) : null]

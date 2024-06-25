@@ -1,36 +1,36 @@
 n.d(t, {
   Z: function() {
-    return _
+    return C
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(920906),
+var a = n(120356),
+  l = n.n(a),
+  s = n(920906),
   r = n(399606),
   o = n(481060),
   c = n(511010),
   u = n(446183),
   d = n(677281),
   h = n(765104),
-  m = n(477291),
-  E = n(531578),
-  p = n(959517),
-  g = n(689938),
-  f = n(153023);
+  p = n(477291),
+  m = n(531578),
+  _ = n(959517),
+  f = n(689938),
+  E = n(153023);
 
-function C(e) {
+function g(e) {
   let {
     summary: t,
     channel: n
-  } = e, i = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)), s = (e, l) => {
-    e.stopPropagation(), (0, m.Z)({
+  } = e, a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)), l = (e, i) => {
+    e.stopPropagation(), (0, p.Z)({
       summary: t,
       channel: n,
-      rating: l
+      rating: i
     })
-  }, c = (0, a.useTransition)(null == i, {
+  }, c = (0, s.useTransition)(null == a, {
     enter: {
       from: {
         opacity: 0
@@ -49,27 +49,27 @@ function C(e) {
       clamp: !0
     }
   });
-  return (0, l.jsx)(l.Fragment, {
-    children: c((e, t) => t ? (0, l.jsx)("div", {
-      className: f.summaryFeedbackWrapper,
-      children: (0, l.jsxs)(a.animated.div, {
+  return (0, i.jsx)(i.Fragment, {
+    children: c((e, t) => t ? (0, i.jsx)("div", {
+      className: E.summaryFeedbackWrapper,
+      children: (0, i.jsxs)(s.animated.div, {
         style: e,
-        className: f.summaryFeedback,
-        children: [(0, l.jsx)(o.Text, {
+        className: E.summaryFeedback,
+        children: [(0, i.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: g.Z.Messages.SUMMARY_FEEDBACK
-        }), (0, l.jsx)(o.Clickable, {
-          onClick: e => s(e, E.aZ.GOOD),
-          children: (0, l.jsx)(d.Z, {
-            className: f.thumbIcon,
+          children: f.Z.Messages.SUMMARY_FEEDBACK
+        }), (0, i.jsx)(o.Clickable, {
+          onClick: e => l(e, m.aZ.GOOD),
+          children: (0, i.jsx)(d.Z, {
+            className: E.thumbIcon,
             width: 12,
             height: 12
           })
-        }), (0, l.jsx)(o.Clickable, {
-          onClick: e => s(e, E.aZ.BAD),
-          children: (0, l.jsx)(u.Z, {
-            className: f.thumbIcon,
+        }), (0, i.jsx)(o.Clickable, {
+          onClick: e => l(e, m.aZ.BAD),
+          children: (0, i.jsx)(u.Z, {
+            className: E.thumbIcon,
             width: 12,
             height: 12
           })
@@ -79,37 +79,37 @@ function C(e) {
   })
 }
 
-function _(e) {
+function C(e) {
   var t, n;
-  let i, {
-      item: a,
+  let a, {
+      item: s,
       channel: u,
       index: d
     } = e,
-    m = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
-  if (null == m) return null;
-  let E = null != a.unreadId,
-    g = null != a.content;
-  return i = g ? (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(o.TopicsIcon, {
+    p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
+  if (null == p) return null;
+  let m = null != s.unreadId,
+    f = null != s.content;
+  return a = f ? (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(o.TopicsIcon, {
       size: "xs",
       color: "currentColor",
-      className: f.summaryStartIcon
-    }), a.content]
-  }) : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(C, {
-      summary: m,
+      className: E.summaryStartIcon
+    }), s.content]
+  }) : (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(g, {
+      summary: p,
       channel: u
-    }), (0, l.jsx)(o.TopicsIcon, {
+    }), (0, i.jsx)(o.TopicsIcon, {
       size: "xs",
       color: "currentColor",
-      className: f.summaryEndIcon
+      className: E.summaryEndIcon
     })]
-  }), (0, l.jsx)(c.Z, {
-    className: s()(f.summaryDivider, g ? f.summaryDividerStart : f.summaryDividerEnd),
-    contentClassName: g ? f.summaryStartContent : f.summaryEndContent,
-    isUnread: E,
-    id: E ? p.j1 : void 0,
-    children: i
-  }, "divider-".concat(null !== (n = null !== (t = a.contentKey) && void 0 !== t ? t : a.unreadId) && void 0 !== n ? n : d))
+  }), (0, i.jsx)(c.Z, {
+    className: l()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
+    contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
+    isUnread: m,
+    id: m ? _.j1 : void 0,
+    children: a
+  }, "divider-".concat(null !== (n = null !== (t = s.contentKey) && void 0 !== t ? t : s.unreadId) && void 0 !== n ? n : d))
 }

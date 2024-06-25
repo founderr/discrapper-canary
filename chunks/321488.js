@@ -1,35 +1,35 @@
-var s, i, l = n(735250);
+var i, s, a = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var r = n(120356),
+  l = n.n(r),
   o = n(873546),
   c = n(481060),
-  u = n(248614);
+  d = n(248614);
 
-function d(e) {
+function u(e) {
   let {
     icon: t,
     tooltip: n,
-    onClick: s,
-    actionType: i = 2,
-    shouldHighlight: a
+    onClick: i,
+    actionType: s = 2,
+    shouldHighlight: r
   } = e;
-  return (0, l.jsx)(c.Tooltip, {
+  return (0, a.jsx)(c.Tooltip, {
     text: n,
-    children: e => (0, l.jsx)(c.Clickable, {
+    children: e => (0, a.jsx)(c.Clickable, {
       ...e,
       "aria-label": n,
-      onClick: s,
-      className: r()(u.actionButton, {
-        [u.actionAccept]: 0 === i,
-        [u.actionDeny]: 1 === i,
-        [u.highlight]: a,
-        [u.actionButtonMobile]: o.tq
+      onClick: i,
+      className: l()(d.actionButton, {
+        [d.actionAccept]: 0 === s,
+        [d.actionDeny]: 1 === s,
+        [d.highlight]: r,
+        [d.actionButtonMobile]: o.tq
       }),
-      children: (0, l.jsx)(t, {
-        className: u.icon,
+      children: (0, a.jsx)(t, {
+        className: d.icon,
         color: "currentColor"
       })
     })
   })
-}(s = i || (i = {}))[s.ACCEPT = 0] = "ACCEPT", s[s.DENY = 1] = "DENY", s[s.DEFAULT = 2] = "DEFAULT", d.ActionTypes = i, t.Z = d
+}(i = s || (s = {}))[i.ACCEPT = 0] = "ACCEPT", i[i.DENY = 1] = "DENY", i[i.DEFAULT = 2] = "DEFAULT", u.ActionTypes = s, t.Z = u

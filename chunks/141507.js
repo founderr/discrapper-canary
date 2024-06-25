@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(430824),
   T = n(451478),
   h = n(768581),
-  S = n(392552),
-  f = n(543241),
-  N = n(199257),
-  A = n(880949),
+  f = n(392552),
+  S = n(543241),
+  A = n(199257),
+  N = n(880949),
   m = n(784222),
   O = n(149203),
-  R = n(689938),
-  p = n(961184);
+  p = n(689938),
+  R = n(961184);
 
 function g(e) {
   return "animated" in e
@@ -35,7 +35,7 @@ let C = e => {
       inspectedEmoji: t,
       guild: n
     } = e, i = g(t);
-    return null != n && i ? R.Z.Messages.EMOJI_FROM_GUILD.format({
+    return null != n && i ? p.Z.Messages.EMOJI_FROM_GUILD.format({
       guildName: n.name
     }) : null
   },
@@ -49,7 +49,7 @@ let C = e => {
       } = e,
       {
         enabled: P
-      } = S.Z.useExperiment({
+      } = f.Z.useExperiment({
         location: "EmojiPicker"
       }, {
         autoTrackExposure: !1
@@ -70,18 +70,18 @@ let C = e => {
       },
       G = (0, s.e7)([I.Z], () => null !== b && b.type === l.B.GUILD ? I.Z.getGuild(b.guildId) : null, [b]),
       w = (0, s.e7)([T.Z], () => T.Z.isFocused()),
-      B = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
-      x = E.Yk.useSetting(),
-      k = (0, f.C1)(L, g(b) ? b : null),
+      x = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
+      B = E.Yk.useSetting(),
+      k = (0, S.C1)(L, g(b) ? b : null),
       {
         newlyAddedEmojis: V
-      } = (0, N.Z)(L, D),
+      } = (0, A.Z)(L, D),
       Z = b.id,
       H = (null == U ? void 0 : U.type) === m.ld.EMOJI ? U.subCategory : O.t0.NONE;
     if (r.useEffect(() => {
         let e = Date.now();
         return () => {
-          Date.now() - e >= 250 && g(b) && H !== O.t0.NONE && (H === O.t0.NEWLY_ADDED_EMOJI && null !== b && b.type === l.B.GUILD && (0, _.Zg)(b.guildId, V[0].id), null != y.source && (0, f.Gn)({
+          Date.now() - e >= 250 && g(b) && H !== O.t0.NONE && (H === O.t0.NEWLY_ADDED_EMOJI && null !== b && b.type === l.B.GUILD && (0, _.Zg)(b.guildId, V[0].id), null != y.source && (0, S.Gn)({
             emoji: b,
             subCategory: H,
             position: U.columnIndex + 1,
@@ -93,31 +93,31 @@ let C = e => {
       var F;
       let e = null != b.id ? h.ZP.getEmojiURL({
         id: b.id,
-        animated: x && b.animated,
+        animated: B && b.animated,
         size: 28
       }) : b.url;
       t = "" === e ? (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
-        className: p.glyphEmoji,
+        className: R.glyphEmoji,
         children: "surrogates" in b ? b.surrogates : null
       }) : (0, i.jsx)("img", {
         alt: null !== (F = b.allNamesString) && void 0 !== F ? F : "",
         src: e,
-        className: p.emoji
+        className: R.emoji
       })
     } else t = (0, i.jsx)(o.CirclePlusIcon, {
       size: "md",
       color: "currentColor",
-      className: p.icon,
-      colorClass: p.icon
+      className: R.icon,
+      colorClass: R.icon
     });
-    let Y = null != G ? (0, i.jsx)(A.Z, {
-        className: p.__invalid_guildIcon,
+    let Y = null != G ? (0, i.jsx)(N.Z, {
+        className: R.__invalid_guildIcon,
         guild: G,
-        shouldAnimate: !B && w
+        shouldAnimate: !x && w
       }) : null,
-      j = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : b.allNamesString,
-      W = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : C({
+      j = P && "CREATE_EMOJI" === b.type ? p.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : b.allNamesString,
+      W = P && "CREATE_EMOJI" === b.type ? p.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : C({
         inspectedEmoji: b,
         channel: M,
         guildId: L,

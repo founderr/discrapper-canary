@@ -18,14 +18,14 @@ var i = n(525654),
   I = n(839426),
   T = n(625128),
   h = n(972830),
-  S = n(305325),
-  f = n(281956),
-  N = n(931261),
-  A = n(15274),
+  f = n(305325),
+  S = n(281956),
+  A = n(931261),
+  N = n(15274),
   m = n(924301),
   O = n(82085),
-  R = n(264229),
-  p = n(652898),
+  p = n(264229),
+  R = n(652898),
   g = n(895886),
   C = n(143816),
   v = n(703656),
@@ -38,8 +38,8 @@ var i = n(525654),
   b = n(430824),
   G = n(607744),
   w = n(341165),
-  B = n(496675),
-  x = n(594174),
+  x = n(496675),
+  B = n(594174),
   k = n(626135),
   V = n(70956),
   Z = n(573261),
@@ -81,9 +81,9 @@ function $(e) {
   } = i, a = P.Z.getChannel(i.id), l = function(e, t, n) {
     var i, r;
     if ((null == n ? void 0 : n.targetType) === z.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return W.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, N.s)(e)) return W.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, A.s)(e)) return W.oC.GUILD_HOME;
     let s = P.Z.getChannel(t.id);
-    return B.Z.can(j.Plq.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = y.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
+    return x.Z.can(j.Plq.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = y.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
   }(t, i, r), {
     targetUserId: u,
     targetType: _,
@@ -105,7 +105,7 @@ function $(e) {
           channelId: l
         }), _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent))
       };
-      (0, f.n)(t, [b.Z, G.Z, x.default, U.ZP]) ? (0, S.hk)(t, o) : o()
+      (0, S.n)(t, [b.Z, G.Z, B.default, U.ZP]) ? (0, f.hk)(t, o) : o()
     })
   }) : (0, E.l5)(a) && _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent)), (function(e, t) {
     let {
@@ -125,7 +125,7 @@ let ee = function(e, t) {
     P.Z.addConditionalChangeListener(() => {
       var i;
       let r = P.Z.getChannel(e),
-        s = x.default.getCurrentUser();
+        s = B.default.getCurrentUser();
       return null == r || null == s || (!r.nsfw || !!s.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
         let {
           guildScheduledEvent: t,
@@ -135,7 +135,7 @@ let ee = function(e, t) {
           let e = {
             guildScheduledEventId: t.id
           };
-          null != n && (e.welcomeModalChannelId = n), (0, A.P3)(t, e)
+          null != n && (e.welcomeModalChannelId = n), (0, N.P3)(t, e)
         })
       }(t), !1) : ($({
         guildId: null !== (i = r.getGuildId()) && void 0 !== i ? i : j.ME,
@@ -157,7 +157,7 @@ t.Z = {
     return _.Z.isDispatching() ? Promise.resolve().then(() => e(t, n, i)) : (_.Z.dispatch({
       type: "INVITE_RESOLVE",
       code: t
-    }), (0, p.Z)(t, n, i).then(e => {
+    }), (0, R.Z)(t, n, i).then(e => {
       let {
         invite: t,
         code: n,
@@ -318,12 +318,12 @@ t.Z = {
       context: o,
       callback: a,
       skipOnboarding: l
-    } = e, c = (0, R.fU)(s), E = c.baseCode, I = M.default.getSessionId();
+    } = e, c = (0, p.fU)(s), E = c.baseCode, I = M.default.getSessionId();
     let T = (i = o, r = c, {
         ...i,
         invite_guild_scheduled_event_id: r.guildScheduledEventId
       }),
-      h = x.default.getCurrentUser();
+      h = B.default.getCurrentUser();
     return null !== (t = null == h ? void 0 : h.hasFlag(j.xW$.QUARANTINED)) && void 0 !== t && t ? ((0, g.default)(), new Promise((e, t) => t(Error()))) : (_.Z.dispatch({
       type: "INVITE_ACCEPT",
       code: E
@@ -427,7 +427,7 @@ t.Z = {
   openApp(e, t, n, i, s) {
     var u, c;
     let d;
-    let E = null != e ? (0, R.fU)(e) : null,
+    let E = null != e ? (0, p.fU)(e) : null,
       I = null == E ? void 0 : E.baseCode;
     if (_.Z.dispatch({
         type: "INVITE_APP_OPENING",

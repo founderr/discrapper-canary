@@ -9,16 +9,16 @@ var i, r, s, o, a, l = n(442837),
 let I = "MaskedLinkStore",
   T = new Set,
   h = new Set,
-  S = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
+  f = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
 
-function f(e) {
+function S(e) {
   let t = (0, d.F)(e);
   switch (t) {
     case window.GLOBAL_ENV.CDN_HOST:
     case window.GLOBAL_ENV.INVITE_HOST:
     case window.GLOBAL_ENV.GIFT_CODE_HOST:
     case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
-    case S:
+    case f:
     case location.hostname:
       return !0;
     default:
@@ -26,11 +26,11 @@ function f(e) {
   }
 }
 
-function N(e) {
+function A(e) {
   let t = (0, d.E)(e);
   return h.has(t)
 }
-class A extends(r = l.ZP.Store) {
+class N extends(r = l.ZP.Store) {
   initialize() {
     var e;
     let t = null !== (e = u.K.get(I)) && void 0 !== e ? e : {};
@@ -44,23 +44,23 @@ class A extends(r = l.ZP.Store) {
     }
   }
   isTrustedDomain(e) {
-    return f(e)
+    return S(e)
   }
   isTrustedProtocol(e) {
-    return N(e)
+    return A(e)
   }
 }
-a = "MaskedLinkStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, o, {
+a = "MaskedLinkStore", (o = "displayName") in(s = N) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new A(_.Z, {
+}) : s[o] = a, t.Z = new N(_.Z, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function(e) {
     let {
       url: t
     } = e;
-    if (f(t)) return !1;
+    if (S(t)) return !1;
     T.add((0, d.F)(t)), u.K.set(I, {
       trustedDomains: T,
       trustedProtocols: h
@@ -70,7 +70,7 @@ a = "MaskedLinkStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, 
     let {
       url: t
     } = e;
-    if (N(t)) return !1;
+    if (A(t)) return !1;
     h.add((0, d.E)(t)), u.K.set(I, {
       trustedDomains: T,
       trustedProtocols: h

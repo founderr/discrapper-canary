@@ -14,14 +14,14 @@ var i = n(481060),
   I = n(163268),
   T = n(539573),
   h = n(786761),
-  S = n(3148),
-  f = n(48854),
-  N = n(785359),
-  A = n(79390),
+  f = n(3148),
+  S = n(48854),
+  A = n(785359),
+  N = n(79390),
   m = n(623292),
   O = n(807092),
-  R = n(467798),
-  p = n(703558),
+  p = n(467798),
+  R = n(703558),
   g = n(117530),
   C = n(630388),
   v = n(226351),
@@ -39,7 +39,7 @@ async function M(e) {
     } = e,
     G = new E.Z(L.ANM.MESSAGES(d)),
     w = new v.o,
-    B = {
+    x = {
       content: "",
       nonce: "",
       channel_id: d,
@@ -47,21 +47,21 @@ async function M(e) {
       sticker_ids: null == U ? void 0 : U.stickerIds,
       poll: null == U ? void 0 : U.poll
     };
-  null != y && (B.content = null == y ? void 0 : y.content), null != O.Z.getPendingReply(d) && (B.type = L.uaV.REPLY, B.message_reference = U.messageReference, B.allowed_mentions = U.allowedMentions, (0, m.A6)(d));
-  let [x, k] = (0, R.Z)(B.content);
-  x && (B.content = k, B.flags = (0, C.pj)(null !== (t = B.flags) && void 0 !== t ? t : 0, L.iLy.SUPPRESS_NOTIFICATIONS));
-  let V = null !== (n = U.nonce) && void 0 !== n ? n : (0, f.r)(),
-    Z = (0, S.ZP)({
+  null != y && (x.content = null == y ? void 0 : y.content), null != O.Z.getPendingReply(d) && (x.type = L.uaV.REPLY, x.message_reference = U.messageReference, x.allowed_mentions = U.allowedMentions, (0, m.A6)(d));
+  let [B, k] = (0, p.Z)(x.content);
+  B && (x.content = k, x.flags = (0, C.pj)(null !== (t = x.flags) && void 0 !== t ? t : 0, L.iLy.SUPPRESS_NOTIFICATIONS));
+  let V = null !== (n = U.nonce) && void 0 !== n ? n : (0, S.r)(),
+    Z = (0, f.ZP)({
       channelId: d,
-      content: B.content,
+      content: x.content,
       tts: null !== (i = null == y ? void 0 : y.tts) && void 0 !== i && i,
-      type: B.type,
-      messageReference: B.message_reference,
-      flags: B.flags,
+      type: x.type,
+      messageReference: x.message_reference,
+      flags: x.flags,
       nonce: V,
-      poll: (0, A.x9)(U.poll)
+      poll: (0, N.x9)(U.poll)
     });
-  return (B.nonce = V, G.on("start", e => {
+  return (x.nonce = V, G.on("start", e => {
     c = (0, h.e5)({
       ...Z,
       id: e.id
@@ -84,7 +84,7 @@ async function M(e) {
         channelId: d,
         file: e,
         messageRecord: c
-      }), (0, N.x)({
+      }), (0, A.x)({
         fileItems: e.items,
         failureCode: t,
         errorMessage: null == i ? void 0 : i.msg
@@ -116,7 +116,7 @@ async function M(e) {
     }, t)) : (0, l.openUploadError)({
       title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
       help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-    }), "" !== B.content && "" === p.Z.getDraft(d, P) && s.Z.saveDraft(d, B.content, P), 0 === g.Z.getUploadCount(d, P) && a.Z.setUploads({
+    }), "" !== x.content && "" === R.Z.getDraft(d, P) && s.Z.saveDraft(d, x.content, P), 0 === g.Z.getUploadCount(d, P) && a.Z.setUploads({
       channelId: d,
       uploads: M,
       draftType: P
@@ -129,7 +129,7 @@ async function M(e) {
       aborted: G._aborted,
       messageRecord: t
     })
-  }), await G.uploadFiles(M, B), w.resolve(), w.promise
+  }), await G.uploadFiles(M, x), w.resolve(), w.promise
 }
 t.Z = {
   instantBatchUpload: function(e) {
@@ -195,7 +195,7 @@ t.Z = {
           type: "UPLOAD_FAIL",
           channelId: n,
           file: t
-        }), (0, N.x)({
+        }), (0, A.x)({
           fileItems: t.items,
           failureCode: c
         }), c === L.evJ.EXPLICIT_CONTENT) {
@@ -213,7 +213,7 @@ t.Z = {
             })
           }
         })
-      }), "" !== T.content && "" === p.Z.getDraft(n, u) && s.Z.saveDraft(n, T.content, u)
+      }), "" !== T.content && "" === R.Z.getDraft(n, u) && s.Z.saveDraft(n, T.content, u)
     }), h.on("complete", e => {
       r.Z.dispatch({
         type: "UPLOAD_COMPLETE",
@@ -227,11 +227,11 @@ t.Z = {
     r.Z.dispatch({
       type: "UPLOAD_CANCEL_REQUEST",
       file: e
-    }), null != e.draftContent && null != e.channelId && "" === p.Z.getDraft(e.channelId, p.d.ChannelMessage) && r.Z.dispatch({
+    }), null != e.draftContent && null != e.channelId && "" === R.Z.getDraft(e.channelId, R.d.ChannelMessage) && r.Z.dispatch({
       type: "DRAFT_SAVE",
       channelId: e.channelId,
       draft: e.draftContent,
-      draftType: p.d.ChannelMessage
+      draftType: R.d.ChannelMessage
     })
   }
 }

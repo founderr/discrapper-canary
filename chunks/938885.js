@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
   container: "container_dfff12",
   content: "content_dfff12",
   descriptionText: "descriptionText_dfff12",

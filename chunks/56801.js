@@ -24,12 +24,12 @@ function I(e) {
     activeCategoryIndex: I,
     filteredSectionId: T,
     onSectionClick: h,
-    applicationCommandListRef: S
-  } = e, f = r.useRef(null), N = r.useCallback((e, t) => {
+    applicationCommandListRef: f
+  } = e, S = r.useRef(null), A = r.useCallback((e, t) => {
     var n;
     let i = 8;
     return (null === (n = s[t + 1]) || void 0 === n ? void 0 : n.type) === _.Qi.BUILT_IN && (i += 8), 32 + i
-  }, [s]), A = r.useCallback((e, t) => {
+  }, [s]), N = r.useCallback((e, t) => {
     var n;
     if (!t) return 0 === e ? 0 : 8;
     return (null === (n = s[e + 1]) || void 0 === n ? void 0 : n.type) === _.Qi.BUILT_IN ? 0 : 8
@@ -48,7 +48,7 @@ function I(e) {
         height: u,
         selectable: !0
       }),
-      S = r.type !== _.Qi.BUILT_IN && t < s.length - 1 && s[t + 1].type === _.Qi.BUILT_IN;
+      f = r.type !== _.Qi.BUILT_IN && t < s.length - 1 && s[t + 1].type === _.Qi.BUILT_IN;
     return (0, i.jsxs)("div", {
       className: d.section,
       children: [(0, i.jsx)(a.Tooltip, {
@@ -68,7 +68,7 @@ function I(e) {
             children: E
           })
         }
-      }), S ? (0, i.jsx)("hr", {
+      }), f ? (0, i.jsx)("hr", {
         className: d.builtInSeparator
       }) : null]
     }, r.id)
@@ -76,16 +76,16 @@ function I(e) {
   return 0 === s.length ? null : (0, i.jsx)("div", {
     className: o()(t, d.wrapper),
     children: (0, i.jsx)(u.Z, {
-      categoryListRef: f,
-      expressionsListRef: S,
+      categoryListRef: S,
+      expressionsListRef: f,
       store: l.Xn,
       categories: s,
       className: d.list,
       renderCategoryListItem: m,
       rowCount: s.length,
-      categoryHeight: N,
+      categoryHeight: A,
       listPadding: E,
-      getScrollOffsetForIndex: A
+      getScrollOffsetForIndex: N
     })
   })
 }

@@ -3,11 +3,11 @@ n.d(t, {
     return u
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(906732),
-  a = n(785717),
+var a = n(481060),
+  l = n(906732),
+  s = n(785717),
   r = n(171368),
   o = n(689938),
   c = n(615264);
@@ -18,15 +18,15 @@ function u(e) {
     channelId: n
   } = e, {
     analyticsLocations: u
-  } = (0, s.ZP)(), {
+  } = (0, l.ZP)(), {
     trackUserProfileAction: d
-  } = (0, a.KZ)();
-  return (0, l.jsx)("footer", {
+  } = (0, s.KZ)();
+  return (0, i.jsx)("footer", {
     className: c.footer,
-    children: (0, l.jsx)(i.Button, {
+    children: (0, i.jsx)(a.Button, {
       fullWidth: !0,
-      size: i.Button.Sizes.LARGE,
-      look: i.Button.Looks.BLANK,
+      size: a.Button.Sizes.LARGE,
+      look: a.Button.Looks.BLANK,
       color: c.buttonColor,
       onClick: () => {
         d({

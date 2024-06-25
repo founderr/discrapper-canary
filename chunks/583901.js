@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   DR: function() {
-    return A
-  },
-  bD: function() {
     return N
   },
+  bD: function() {
+    return A
+  },
   oK: function() {
-    return S
+    return f
   }
 }), n(627341);
 var i = n(735250);
@@ -26,7 +26,7 @@ var r = n(120356),
   T = n(689938),
   h = n(480094);
 
-function S() {
+function f() {
   return (0, i.jsx)("div", {
     className: h.selectionCircle,
     children: (0, i.jsx)(_.CircleCheckIcon, {
@@ -39,7 +39,7 @@ function S() {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     name: t,
     className: n,
@@ -67,19 +67,19 @@ function f(e) {
         style: r,
         onClick: a ? I.dG4 : o,
         children: u
-      }), a && (0, i.jsx)(S, {}), !a && c && (0, i.jsx)("div", {
+      }), a && (0, i.jsx)(f, {}), !a && c && (0, i.jsx)("div", {
         className: h.redCircle
       })]
     })
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     theme: t,
     isSelected: n,
     onSelect: r
-  } = e, d = (0, a.e7)([c.Z], () => c.Z.systemPrefersColorScheme), S = e => (0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css, N = (0, o.EQ)({
+  } = e, d = (0, a.e7)([c.Z], () => c.Z.systemPrefersColorScheme), f = e => (0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css, A = (0, o.EQ)({
     theme: t,
     systemPrefersColorScheme: d
   }).with({
@@ -93,24 +93,24 @@ function N(e) {
     theme: I.BRd.DARKER
   }, () => h.darkerIcon).with({
     theme: I.BRd.MIDNIGHT
-  }, () => h.midnightIcon).otherwise(() => h.darkIcon), A = (0, o.EQ)(t).with(I.BRd.LIGHT, () => T.Z.Messages.THEME_LIGHT).with(I.BRd.DARK, () => T.Z.Messages.THEME_DARK).with(I.BRd.DARKER, () => "Darker").with(I.BRd.MIDNIGHT, () => T.Z.Messages.THEME_MIDNIGHT).with("system", () => T.Z.Messages.THEME_SYSTEM).exhaustive(), m = (0, _.useRedesignIconContext)().enabled;
-  return (0, i.jsx)(f, {
+  }, () => h.midnightIcon).otherwise(() => h.darkIcon), N = (0, o.EQ)(t).with(I.BRd.LIGHT, () => T.Z.Messages.THEME_LIGHT).with(I.BRd.DARK, () => T.Z.Messages.THEME_DARK).with(I.BRd.DARKER, () => "Darker").with(I.BRd.MIDNIGHT, () => T.Z.Messages.THEME_MIDNIGHT).with("system", () => T.Z.Messages.THEME_SYSTEM).exhaustive(), m = (0, _.useRedesignIconContext)().enabled;
+  return (0, i.jsx)(S, {
     onSelect: r,
     isSelected: n,
-    name: A,
-    className: s()(h.defaultThemeSelection, N),
+    name: N,
+    className: s()(h.defaultThemeSelection, A),
     children: "system" === t && (0, i.jsx)("div", {
       className: h.iconWrapper,
       children: m ? (0, i.jsx)(_.RefreshIcon, {
-        color: S(d)
+        color: f(d)
       }) : (0, i.jsx)(E.Z, {
-        fill: S(d)
+        fill: f(d)
       })
     })
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     preset: t,
     isSelected: n,
@@ -126,7 +126,7 @@ function A(e) {
     colors: _,
     angle: c
   });
-  return (0, i.jsx)(f, {
+  return (0, i.jsx)(S, {
     onSelect: r ? void 0 : a,
     isSelected: n,
     name: t.getName(),

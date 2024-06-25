@@ -1,12 +1,12 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  r = n.n(s),
-  a = n(748780),
+var i = n(735250),
+  l = n(470079),
+  r = n(120356),
+  a = n.n(r),
+  s = n(748780),
   o = n(846519),
-  u = n(585483),
-  c = n(981631),
+  c = n(585483),
+  u = n(981631),
   d = n(689938),
   h = n(97124);
 
@@ -18,18 +18,18 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let g = {
+let f = {
   friction: 15,
   tension: 100
 };
-class m extends i.PureComponent {
+class _ extends l.PureComponent {
   componentDidMount() {
     this.setState({
       shown: !0
-    }), u.S.subscribe(c.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
+    }), c.S.subscribe(u.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
   }
   componentWillUnmount() {
-    this.focusTimeout.stop(), u.S.unsubscribe(c.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
+    this.focusTimeout.stop(), c.S.unsubscribe(u.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
   }
   componentDidUpdate() {
     let {
@@ -38,32 +38,32 @@ class m extends i.PureComponent {
     !e && this.springTo(0)
   }
   springTo(e) {
-    a.Z.spring(this.state.translateY, {
+    s.Z.spring(this.state.translateY, {
       toValue: Math.min(e, 250),
-      ...g
+      ...f
     }).start()
   }
   renderArrowGroup(e) {
-    return (0, l.jsxs)("div", {
-      className: r()(h.arrowGroup, e),
-      children: [(0, l.jsx)(a.Z.div, {
-        className: r()(h.arrowContainer, h.horizontal),
+    return (0, i.jsxs)("div", {
+      className: a()(h.arrowGroup, e),
+      children: [(0, i.jsx)(s.Z.div, {
+        className: a()(h.arrowContainer, h.horizontal),
         style: this.getStyle(),
-        children: (0, l.jsx)("img", {
+        children: (0, i.jsx)("img", {
           alt: "",
           src: n(403756),
           className: h.arrowIcon
         })
-      }), (0, l.jsx)("div", {
-        className: r()(h.arrowContainer, h.diag1),
-        children: (0, l.jsx)("img", {
+      }), (0, i.jsx)("div", {
+        className: a()(h.arrowContainer, h.diag1),
+        children: (0, i.jsx)("img", {
           alt: "",
           src: n(536404),
           className: h.arrowIcon
         })
-      }), (0, l.jsx)("div", {
-        className: r()(h.arrowContainer, h.diag2),
-        children: (0, l.jsx)("img", {
+      }), (0, i.jsx)("div", {
+        className: a()(h.arrowContainer, h.diag2),
+        children: (0, i.jsx)("img", {
           alt: "",
           src: n(569347),
           className: h.arrowIcon
@@ -72,12 +72,12 @@ class m extends i.PureComponent {
     })
   }
   renderContent() {
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: h.tutorialMessages,
-      children: [(0, l.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: h.searchMessage,
         children: d.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SEARCH
-      }), (0, l.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: h.selectMessage,
         children: d.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SELECT
       })]
@@ -89,9 +89,9 @@ class m extends i.PureComponent {
     } = this.props, {
       shown: t
     } = this.state;
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       ref: this.rootRef,
-      className: r()(h.tutorial, {
+      className: a()(h.tutorial, {
         [h.shown]: t,
         [h.hasQuery]: e
       }),
@@ -113,8 +113,8 @@ class m extends i.PureComponent {
   constructor(...e) {
     super(...e), p(this, "state", {
       shown: !1,
-      translateY: new a.Z.Value(0)
-    }), p(this, "rootRef", i.createRef()), p(this, "focusTimeout", new o.V7), p(this, "handleResultFocus", e => {
+      translateY: new s.Z.Value(0)
+    }), p(this, "rootRef", l.createRef()), p(this, "focusTimeout", new o.V7), p(this, "handleResultFocus", e => {
       let {
         node: t
       } = e;
@@ -124,11 +124,11 @@ class m extends i.PureComponent {
             top: e
           } = this.rootRef.current.getBoundingClientRect(), {
             top: n
-          } = t.getBoundingClientRect(), l = Math.abs(e - n);
-          this.springTo(l - 118 + 9)
+          } = t.getBoundingClientRect(), i = Math.abs(e - n);
+          this.springTo(i - 118 + 9)
         } else this.springTo(0)
       })
     })
   }
 }
-t.Z = m
+t.Z = _

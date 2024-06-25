@@ -1,4 +1,4 @@
-t.d(s, {
+a.d(t, {
   l: function() {
     return i
   },
@@ -6,24 +6,24 @@ t.d(s, {
     return r
   }
 });
-var a = t(544891),
-  n = t(570140),
-  l = t(981631);
+var n = a(544891),
+  s = a(570140),
+  l = a(981631);
 
-function i(e, s) {
-  n.Z.dispatch({
+function i(e, t) {
+  s.Z.dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
     selectedTemplate: e,
-    guildId: s
+    guildId: t
   })
 }
 async function r(e) {
-  let s = (await a.tn.get({
+  let t = (await n.tn.get({
     url: l.ANM.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e)
   })).body;
-  null != s.templates && n.Z.dispatch({
+  null != t.templates && s.Z.dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES",
-    templates: s.templates,
+    templates: t.templates,
     guildId: e
   })
 }

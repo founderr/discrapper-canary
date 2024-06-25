@@ -1,6 +1,6 @@
 n.d(t, {
   El: function() {
-    return i
+    return a
   },
   RN: function() {
     return c
@@ -9,28 +9,28 @@ n.d(t, {
     return r
   },
   Zv: function() {
-    return E
+    return _
   },
   _e: function() {
     return o
   },
   fS: function() {
-    return u
+    return d
   },
   kS: function() {
-    return l
+    return s
   },
   n4: function() {
-    return a
+    return l
   },
   oL: function() {
-    return d
+    return u
   }
 });
-var s = n(689938);
-let i = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
-  l = 2592e4,
-  a = "https://support.discord.com/hc/en-us/articles/9146392276375",
+var i = n(689938);
+let a = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
+  s = 2592e4,
+  l = "https://support.discord.com/hc/en-us/articles/9146392276375",
   r = {
     FORTNITE: "FORTNITE"
   },
@@ -43,9 +43,9 @@ let i = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
   c = {
     FORTNITE: ["Fortnite"]
   },
-  u = "YYYY-MM-DD HH:mm",
-  d = "1022633972510752774",
-  E = {
+  d = "YYYY-MM-DD HH:mm",
+  u = "1022633972510752774",
+  _ = {
     [r.FORTNITE]: {
       title: "Fortnite",
       gameSearchTerm: c[r.FORTNITE],
@@ -54,26 +54,26 @@ let i = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
         tooltipSrc: n(836110),
         rewardSrc: n(945368)
       },
-      dropsQuestId: d,
+      dropsQuestId: u,
       dropsGameId: "432980957394370572",
       endDate: "2023-05-22 23:59",
       finalClaimDate: "2023-5-29 08:00",
       dropsNoticeBannerDurationDays: 3,
-      articleUrl: a,
+      articleUrl: l,
       messages: {
-        claimTip: () => s.Z.Messages.FORTNITE_REDEMPTION_TIP.format({
+        claimTip: () => i.Z.Messages.FORTNITE_REDEMPTION_TIP.format({
           learnMoreUrl: "https://discord.com/blog/fortnite-quest"
         }),
-        giftInfo: () => s.Z.Messages.FORTNITE_GIFT_INVENTORY_INFO.format({
-          guardOutfitName: s.Z.Messages.FORNITE_GUARD_OUTPUT,
-          rewardName: s.Z.Messages.FORTNITE_REWARD_NAME
+        giftInfo: () => i.Z.Messages.FORTNITE_GIFT_INVENTORY_INFO.format({
+          guardOutfitName: i.Z.Messages.FORNITE_GUARD_OUTPUT,
+          rewardName: i.Z.Messages.FORTNITE_REWARD_NAME
         }),
-        enrollmentTooltip: e => s.Z.Messages.FORTNITE_DROPS_ELIGIBILITY_ENROLLMENT_TOOLTIP.format({
-          rewardName: s.Z.Messages.FORTNITE_REWARD_NAME,
+        enrollmentTooltip: e => i.Z.Messages.FORTNITE_DROPS_ELIGIBILITY_ENROLLMENT_TOOLTIP.format({
+          rewardName: i.Z.Messages.FORTNITE_REWARD_NAME,
           streamLengthRequirement: e
         }),
-        completionTooltip: e => s.Z.Messages.FORTNITE_DROPS_COMPLETION_TOOLTIP.format({
-          rewardName: s.Z.Messages.FORTNITE_REWARD_NAME,
+        completionTooltip: e => i.Z.Messages.FORTNITE_DROPS_COMPLETION_TOOLTIP.format({
+          rewardName: i.Z.Messages.FORTNITE_REWARD_NAME,
           streamLengthRequirement: e
         })
       }

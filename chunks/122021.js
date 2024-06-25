@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Xj: function() {
-    return f
+    return S
   },
   fq: function() {
-    return N
+    return A
   },
   rR: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(470079),
@@ -28,9 +28,9 @@ let T = {
   h = new Map([
     [E.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]
   ]),
-  S = 30 * c.Z.Millis.DAY;
+  f = 30 * c.Z.Millis.DAY;
 
-function f(e) {
+function S(e) {
   let {
     forUserProfile: t
   } = e, n = (0, o.e7)([_.default], () => _.default.getCurrentUser()), i = l.c.useExperiment({
@@ -48,9 +48,9 @@ function f(e) {
   }
 }
 
-function N() {
+function A() {
   let e = (0, o.e7)([u.Z], () => u.Z.getAccounts()),
-    t = f({
+    t = S({
       forUserProfile: !1
     }),
     n = i.useMemo(() => {
@@ -59,11 +59,11 @@ function N() {
     }, [e]);
   return s().sortBy(a.Z.filter(t), [e => {
     var t;
-    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + S)
+    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + f)
   }, e => n.has(e.type), e => e.hasMetadata, e => !E.vbS.has(e.type), e => e.name])
 }
 
-function A(e) {
+function N(e) {
   let [t, n] = i.useState(!1);
 
   function r(e) {

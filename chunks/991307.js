@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return m
+    return _
   }
 });
 var i = t(735250);
@@ -20,15 +20,15 @@ var l = t(442837),
   I = t(689938),
   g = t(555057);
 
-function m(e) {
+function _(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Yn.DEFAULT,
     t = (0, l.e7)([Z.default], () => {
       var n;
       return (null === (n = Z.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e
     }),
-    m = (0, l.e7)([d.Z], () => d.Z.isLocalSoundboardMuted(e)),
+    _ = (0, l.e7)([d.Z], () => d.Z.isLocalSoundboardMuted(e)),
     {
-      muted: _,
+      muted: m,
       deafened: N = !1,
       localVideoDisabled: C = !1,
       localVideoAutoDisabled: A = !1
@@ -78,10 +78,10 @@ function m(e) {
           target_user_id: e,
           media_session_id: null == t ? void 0 : t.getMediaSessionId(),
           parent_media_session_id: null == t ? void 0 : t.parentMediaSessionId,
-          mute_soundboard: !m
+          mute_soundboard: !_
         }), o.Z.toggleLocalSoundboardMute(e, n)
       },
-      checked: m
+      checked: _
     }, "soundboard-sound-mute");
   return t ? [(0, i.jsx)(a.MenuCheckboxItem, {
     id: "mute",
@@ -89,7 +89,7 @@ function m(e) {
     action: () => o.Z.toggleSelfMute({
       context: n
     }),
-    checked: _
+    checked: m
   }, "self-mute"), (0, i.jsx)(a.MenuCheckboxItem, {
     id: "deafen",
     label: I.Z.Messages.DEAFEN,
@@ -101,6 +101,6 @@ function m(e) {
     id: "mute",
     label: I.Z.Messages.SOUND_MUTE,
     action: () => o.Z.toggleLocalMute(e, n),
-    checked: _
+    checked: m
   }, "self-mute"), T, b]
 }

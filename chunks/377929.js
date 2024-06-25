@@ -3,47 +3,47 @@ n.d(t, {
     return S
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(392711),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(392711),
+  s = n.n(l),
   r = n(442837),
   o = n(481060),
   c = n(32750),
   u = n(109764),
   d = n(323597),
   h = n(438536),
-  m = n(251746),
-  E = n(193987),
-  p = n(933793),
-  g = n(13736),
-  f = n(732393),
-  C = n(137591),
-  _ = n(299206),
+  p = n(251746),
+  m = n(193987),
+  _ = n(933793),
+  f = n(13736),
+  E = n(732393),
+  g = n(137591),
+  C = n(299206),
   I = n(695346),
   x = n(979651),
   T = n(502568),
   N = n(488131),
-  Z = n(689938);
+  v = n(689938);
 
 function S(e) {
   let {
     channel: t
-  } = e, [n, s] = i.useState(!1);
+  } = e, [n, l] = a.useState(!1);
 
-  function a() {
-    s(e => !e)
+  function s() {
+    l(e => !e)
   }
-  let r = Z.Z.Messages.MORE;
-  return (0, l.jsx)(o.Popout, {
+  let r = v.Z.Messages.MORE;
+  return (0, i.jsx)(o.Popout, {
     shouldShow: n,
     animation: o.Popout.Animation.NONE,
     position: "bottom",
     align: "right",
     autoInvert: !1,
-    onRequestClose: () => s(!1),
+    onRequestClose: () => l(!1),
     renderPopout: function(e) {
-      return (0, l.jsx)(v, {
+      return (0, i.jsx)(Z, {
         ...e,
         channel: t
       })
@@ -52,9 +52,9 @@ function S(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.jsx)(T.ZP.Icon, {
+      return (0, i.jsx)(T.ZP.Icon, {
         ...e,
-        onClick: a,
+        onClick: s,
         tooltip: n ? null : r,
         icon: o.MoreHorizontalIcon,
         "aria-label": r,
@@ -64,33 +64,33 @@ function S(e) {
   })
 }
 
-function v(e) {
+function Z(e) {
   let {
     channel: t,
     closePopout: n,
-    onSelect: i
-  } = e, s = (0, c.Z)(t), T = (0, E.Z)(t), S = (0, f.Z)(t.id), v = (0, g.Z)(t), A = (0, _.Z)({
+    onSelect: a
+  } = e, l = (0, c.Z)(t), T = (0, m.Z)(t), S = (0, E.Z)(t.id), Z = (0, f.Z)(t), A = (0, C.Z)({
     id: t.id,
-    label: Z.Z.Messages.COPY_ID_THREAD
-  }), M = (0, u.Z)(t), R = (0, d.Z)(t), j = (0, h.Z)(t, "Toolbar Overflow"), L = (0, p.Z)(t), O = (0, m.Z)(t), P = (0, C.Z)(t), y = I.vF.useSetting(), b = (0, r.e7)([x.Z], () => !a().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
-  return (0, l.jsxs)(o.Menu, {
+    label: v.Z.Messages.COPY_ID_THREAD
+  }), M = (0, u.Z)(t), b = (0, d.Z)(t), R = (0, h.Z)(t, "Toolbar Overflow"), j = (0, _.Z)(t), L = (0, p.Z)(t), P = (0, g.Z)(t), O = I.vF.useSetting(), y = (0, r.e7)([x.Z], () => !s().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
+  return (0, i.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
-    "aria-label": Z.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-    onSelect: i,
-    children: [(0, l.jsxs)(o.MenuGroup, {
-      children: [j, O]
-    }), (0, l.jsxs)(o.MenuGroup, {
-      children: [v, L, S, y && !b ? (0, l.jsx)(o.MenuItem, {
+    "aria-label": v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+    onSelect: a,
+    children: [(0, i.jsxs)(o.MenuGroup, {
+      children: [R, L]
+    }), (0, i.jsxs)(o.MenuGroup, {
+      children: [Z, j, S, O && !y ? (0, i.jsx)(o.MenuItem, {
         id: "open",
-        label: Z.Z.Messages.OPEN_IN_SPLIT_VIEW,
+        label: v.Z.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {
           (0, N.ok)(t)
         }
       }) : null]
-    }), (0, l.jsxs)(o.MenuGroup, {
-      children: [P, s, T, R]
-    }), (0, l.jsxs)(o.MenuGroup, {
+    }), (0, i.jsxs)(o.MenuGroup, {
+      children: [P, l, T, b]
+    }), (0, i.jsxs)(o.MenuGroup, {
       children: [M, A]
     })]
   })

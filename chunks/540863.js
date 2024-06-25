@@ -20,8 +20,8 @@ let a = r.forwardRef(function(e, t) {
     style: I,
     title: T,
     error: h,
-    ...S
-  } = e, f = r.useId(), N = r.useId(), A = null !== (n = S.titleId) && void 0 !== n ? n : f, m = null != h ? null !== (a = S.errorId) && void 0 !== a ? a : N : void 0;
+    ...f
+  } = e, S = r.useId(), A = r.useId(), N = null !== (n = f.titleId) && void 0 !== n ? n : S, m = null != h ? null !== (a = f.errorId) && void 0 !== a ? a : A : void 0;
   return (0, i.jsxs)("div", {
     ref: t,
     className: null != _ ? _ : void 0,
@@ -32,12 +32,12 @@ let a = r.forwardRef(function(e, t) {
       required: E,
       error: h,
       className: c,
-      id: A,
+      id: N,
       errorId: m,
-      ...S,
+      ...f,
       children: T
     }) : null, (0, i.jsx)(s.ol, {
-      titleId: A,
+      titleId: N,
       errorId: m,
       error: null != h ? h : void 0,
       children: l

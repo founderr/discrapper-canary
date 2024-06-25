@@ -1,101 +1,101 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(392711),
-  a = n.n(l),
-  r = n(481060),
+var i = n(735250),
+  s = n(470079),
+  a = n(392711),
+  r = n.n(a),
+  l = n(481060),
   o = n(367907),
   c = n(626135),
-  u = n(986332),
-  d = n(428695),
-  E = n(981631),
-  h = n(689938),
-  _ = n(243844);
-let I = a().debounce(o.ZP.trackWithMetadata, 500),
+  d = n(986332),
+  u = n(428695),
+  _ = n(981631),
+  E = n(689938),
+  h = n(243844);
+let I = r().debounce(o.ZP.trackWithMetadata, 500),
   m = e => {
     let {
       guild: t,
       title: n,
-      message: l,
-      image: a,
-      type: u,
-      imageMarginX: d,
+      message: a,
+      image: r,
+      type: d,
+      imageMarginX: u,
       imageMarginTop: m,
-      trackingSource: T,
+      trackingSource: p,
       undismissable: g,
-      onDismissed: p,
-      onClick: N,
-      cta: S,
-      ctaColor: C
+      onDismissed: T,
+      onClick: C,
+      cta: f,
+      ctaColor: S
     } = e;
-    i.useEffect(() => {
-      I(E.rMx.CHANNEL_NOTICE_VIEWED, {
-        notice_type: u,
+    s.useEffect(() => {
+      I(_.rMx.CHANNEL_NOTICE_VIEWED, {
+        notice_type: d,
         guild_id: t.id
       })
-    }, [t.id, u]);
-    let A = null;
-    "function" == typeof S ? A = S() : null != S && (A = (0, s.jsx)(r.Button, {
-      className: _.btn,
-      size: r.Button.Sizes.SMALL,
+    }, [t.id, d]);
+    let N = null;
+    "function" == typeof f ? N = f() : null != f && (N = (0, i.jsx)(l.Button, {
+      className: h.btn,
+      size: l.Button.Sizes.SMALL,
       onClick: () => {
-        null != u && c.default.track(E.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: T,
+        null != d && c.default.track(_.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+          source: p,
           guild_id: t.id,
-          notice_type: u
-        }), null == N || N()
+          notice_type: d
+        }), null == C || C()
       },
       fullWidth: !0,
-      color: C,
-      children: S
+      color: S,
+      children: f
     }));
-    let f = null != d ? "".concat(d, "px") : "16px";
-    return (0, s.jsxs)("div", {
-      className: _.channelNotice,
-      children: [!0 === g ? null : (0, s.jsx)(r.Clickable, {
+    let A = null != u ? "".concat(u, "px") : "16px";
+    return (0, i.jsxs)("div", {
+      className: h.channelNotice,
+      children: [!0 === g ? null : (0, i.jsx)(l.Clickable, {
         onClick: () => {
-          o.ZP.trackWithMetadata(E.rMx.CHANNEL_NOTICE_CLOSED, {
-            notice_type: u
-          }), null == p || p()
+          o.ZP.trackWithMetadata(_.rMx.CHANNEL_NOTICE_CLOSED, {
+            notice_type: d
+          }), null == T || T()
         },
-        className: _.close,
-        "aria-label": h.Z.Messages.DISMISS,
-        children: (0, s.jsx)(r.CloseSmallIcon, {
+        className: h.close,
+        "aria-label": E.Z.Messages.DISMISS,
+        children: (0, i.jsx)(l.CloseSmallIcon, {
           size: "md",
           color: "currentColor",
-          className: _.closeIcon
+          className: h.closeIcon
         })
-      }), (0, s.jsx)("div", {
-        className: _.imageContainer,
+      }), (0, i.jsx)("div", {
+        className: h.imageContainer,
         style: {
           marginTop: "".concat(m, "px"),
-          marginLeft: f,
-          marginRight: f
+          marginLeft: A,
+          marginRight: A
         },
-        children: (0, s.jsx)("img", {
-          className: _.image,
-          src: a,
+        children: (0, i.jsx)("img", {
+          className: h.image,
+          src: r,
           alt: ""
         })
-      }), (0, s.jsxs)("div", {
-        className: _.message,
-        children: [null != n ? (0, s.jsx)(r.Heading, {
+      }), (0, i.jsxs)("div", {
+        className: h.message,
+        children: [null != n ? (0, i.jsx)(l.Heading, {
           variant: "heading-md/semibold",
-          className: _.title,
+          className: h.title,
           children: n
-        }) : null, (0, s.jsx)(r.Text, {
+        }) : null, (0, i.jsx)(l.Text, {
           variant: "text-sm/normal",
-          children: l
-        }), A]
+          children: a
+        }), N]
       })]
     })
   };
 t.Z = function(e) {
   let {
     showRedesignedChannelNotice: t
-  } = (0, u.o)(!0);
-  return t ? (0, s.jsx)(d.Z, {
+  } = (0, d.o)(!0);
+  return t ? (0, i.jsx)(u.Z, {
     ...e
-  }) : (0, s.jsx)(m, {
+  }) : (0, i.jsx)(m, {
     ...e
   })
 }

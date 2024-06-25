@@ -2,10 +2,10 @@
 let i;
 n.d(t, {
   RI: function() {
-    return N
+    return A
   },
   jy: function() {
-    return A
+    return N
   }
 });
 var r = n(570140),
@@ -21,41 +21,41 @@ var r = n(570140),
   I = n(979651),
   T = n(317381),
   h = n(719296),
-  S = n(958185),
-  f = n(981631);
+  f = n(958185),
+  S = n(981631);
 
-function N(e) {
+function A(e) {
   let t = null != e ? e : i;
   null != t && _.Z.isOpen(t) && r.Z.wait(() => s.Cp(t))
 }
 
-function A(e) {
+function N(e) {
   let t = null != e ? e : i;
   null != t && _.Z.isOpen(t) && r.Z.wait(() => s.$Z(t))
 }
 
 function m() {
   let e = T.ZP.getConnectedActivityChannelId(),
-    t = T.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : f.lds),
+    t = T.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : S.lds),
     n = l.Z.getChannel(e);
   return null == e || null == n || null == t ? function() {
     let e = i;
     null != e && _.Z.isOpen(e) && (r.Z.wait(() => s.xv(e)), i = null)
   }() : function(e, t) {
     if (_.Z.isOpen(t)) return !1;
-    r.Z.wait(() => s.bA(t, f.NYg.EMBED_IFRAME, {
+    r.Z.wait(() => s.bA(t, S.NYg.EMBED_IFRAME, {
       channel: e
     })), i = t
   }(n, (0, h.Z)(e, t.applicationId))
 }
 
 function O() {
-  return (0, S.Z)({
+  return (0, f.Z)({
     LayerStore: u.Z,
     PopoutWindowStore: a.Z
-  }) ? N() : A()
+  }) ? A() : N()
 }
-class R extends o.Z {
+class p extends o.Z {
   _initialize() {
     d.Z.addChangeListener(m), E.Z.addChangeListener(m), c.Z.addChangeListener(m), I.Z.addChangeListener(m), a.Z.addChangeListener(m), T.ZP.addChangeListener(m), u.Z.addChangeListener(O)
   }
@@ -63,4 +63,4 @@ class R extends o.Z {
     d.Z.removeChangeListener(m), E.Z.removeChangeListener(m), c.Z.removeChangeListener(m), I.Z.removeChangeListener(m), a.Z.removeChangeListener(m), T.ZP.removeChangeListener(m), u.Z.removeChangeListener(O)
   }
 }
-t.ZP = new R
+t.ZP = new p

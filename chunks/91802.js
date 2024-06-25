@@ -1,12 +1,12 @@
 t.d(n, {
   n: function() {
-    return l
+    return o
   }
 });
 var i = t(442837),
   r = t(351402);
 
-function l() {
+function o() {
   let {
     localizedPricingPromo: e,
     hasError: n

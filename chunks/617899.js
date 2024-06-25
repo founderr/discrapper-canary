@@ -1,16 +1,16 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(904245),
-  r = n(944486),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(904245),
+  l = n(944486),
   o = n(82950),
   c = n(981631),
-  u = n(921944),
-  d = n(689938),
-  E = n(589148);
+  d = n(921944),
+  u = n(689938),
+  _ = n(589148);
 
-function h(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,42 +18,42 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class _ extends i.PureComponent {
+class h extends s.PureComponent {
   render() {
-    let e = "".concat(d.Z.Messages.INVITE_NOTICE_MESSAGE, "\n").concat(d.Z.Messages.INVITE_NOTICE_MESSAGE_PART_2);
-    return (0, s.jsx)(o.Z, {
+    let e = "".concat(u.Z.Messages.INVITE_NOTICE_MESSAGE, "\n").concat(u.Z.Messages.INVITE_NOTICE_MESSAGE_PART_2);
+    return (0, i.jsx)(o.Z, {
       guild: this.props.guild,
       onDismissed: this.handleClose,
       onClick: this.handleInvite,
       message: e,
-      cta: d.Z.Messages.INVITE_PEOPLE,
+      cta: u.Z.Messages.INVITE_PEOPLE,
       trackingSource: c.PsQ.INVITE_NOTICE,
       type: c.vID.INVITE,
-      image: E,
+      image: _,
       imageMarginX: 46
     })
   }
   constructor(...e) {
-    super(...e), h(this, "handleInvite", () => {
+    super(...e), E(this, "handleInvite", () => {
       let {
         guild: e
       } = this.props;
-      (0, l.openModalLazy)(async () => {
+      (0, a.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, 560114));
-        return n => (0, s.jsx)(t, {
+        } = await Promise.all([n.e("7654"), n.e("30135")]).then(n.bind(n, 560114));
+        return n => (0, i.jsx)(t, {
           ...n,
           guild: e,
           source: c.t4x.INVITE_NOTICE
         })
       })
-    }), h(this, "handleClose", () => {
-      let e = r.Z.getChannelId();
-      this.props.markAsDismissed(u.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, d.Z.Messages.HOW_TO_INVITE_OTHERS.format({
-        invitePeople: d.Z.Messages.INVITE_PEOPLE
+    }), E(this, "handleClose", () => {
+      let e = l.Z.getChannelId();
+      this.props.markAsDismissed(d.L.UNKNOWN), null != e && r.Z.sendBotMessage(e, u.Z.Messages.HOW_TO_INVITE_OTHERS.format({
+        invitePeople: u.Z.Messages.INVITE_PEOPLE
       }))
     })
   }
 }
-t.Z = _
+t.Z = h

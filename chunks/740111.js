@@ -1,16 +1,16 @@
 n.d(t, {
   Wc: function() {
-    return s
+    return i
   },
   xY: function() {
-    return _
+    return h
   }
 }), n(47120), n(411104), n(653041);
-var s, i, l = n(230367),
-  a = n(320215),
-  r = n(240773),
+var i, s, a = n(230367),
+  r = n(320215),
+  l = n(240773),
   o = n(495852);
-(i = s || (s = {}))[i.UNSPECIFIED = 0] = "UNSPECIFIED", i[i.OPEN_MARKETING_PAGE = 1] = "OPEN_MARKETING_PAGE", i[i.OPEN_TIER_2_PAYMENT_MODAL = 2] = "OPEN_TIER_2_PAYMENT_MODAL";
+(s = i || (i = {}))[s.UNSPECIFIED = 0] = "UNSPECIFIED", s[s.OPEN_MARKETING_PAGE = 1] = "OPEN_MARKETING_PAGE", s[s.OPEN_TIER_2_PAYMENT_MODAL = 2] = "OPEN_TIER_2_PAYMENT_MODAL";
 class c extends o.C {
   create(e) {
     let t = {
@@ -20,45 +20,45 @@ class c extends o.C {
       imageLink: "",
       imageLinkLightTheme: ""
     };
-    return globalThis.Object.defineProperty(t, r.C, {
+    return globalThis.Object.defineProperty(t, l.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.l)(this, t, e), t
+    }), void 0 !== e && (0, r.l)(this, t, e), t
   }
-  internalBinaryRead(e, t, n, s) {
-    let i = null != s ? s : this.create(),
-      a = e.pos + t;
-    for (; e.pos < a;) {
-      let [t, s] = e.tag();
+  internalBinaryRead(e, t, n, i) {
+    let s = null != i ? i : this.create(),
+      r = e.pos + t;
+    for (; e.pos < r;) {
+      let [t, i] = e.tag();
       switch (t) {
         case 1:
-          i.header = e.string();
+          s.header = e.string();
           break;
         case 2:
-          i.pill = e.string();
+          s.pill = e.string();
           break;
         case 3:
-          i.body = e.string();
+          s.body = e.string();
           break;
         case 4:
-          i.imageLink = e.string();
+          s.imageLink = e.string();
           break;
         case 5:
-          i.imageLinkLightTheme = e.string();
+          s.imageLinkLightTheme = e.string();
           break;
         default:
-          let a = n.readUnknownField;
-          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(s, ") for ").concat(this.typeName));
-          let r = e.skip(s);
-          !1 !== a && (!0 === a ? l.z.onRead : a)(this.typeName, i, t, s, r)
+          let r = n.readUnknownField;
+          if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
+          let l = e.skip(i);
+          !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l)
       }
     }
-    return i
+    return s
   }
   internalBinaryWrite(e, t, n) {
-    "" !== e.header && t.tag(1, l.TD.LengthDelimited).string(e.header), "" !== e.pill && t.tag(2, l.TD.LengthDelimited).string(e.pill), "" !== e.body && t.tag(3, l.TD.LengthDelimited).string(e.body), "" !== e.imageLink && t.tag(4, l.TD.LengthDelimited).string(e.imageLink), "" !== e.imageLinkLightTheme && t.tag(5, l.TD.LengthDelimited).string(e.imageLinkLightTheme);
-    let s = n.writeUnknownFields;
-    return !1 !== s && (!0 == s ? l.z.onWrite : s)(this.typeName, e, t), t
+    "" !== e.header && t.tag(1, a.TD.LengthDelimited).string(e.header), "" !== e.pill && t.tag(2, a.TD.LengthDelimited).string(e.pill), "" !== e.body && t.tag(3, a.TD.LengthDelimited).string(e.body), "" !== e.imageLink && t.tag(4, a.TD.LengthDelimited).string(e.imageLink), "" !== e.imageLinkLightTheme && t.tag(5, a.TD.LengthDelimited).string(e.imageLinkLightTheme);
+    let i = n.writeUnknownFields;
+    return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.premium_marketing.v1.FeatureCard", [{
@@ -89,43 +89,43 @@ class c extends o.C {
     }])
   }
 }
-let u = new c;
-class d extends o.C {
+let d = new c;
+class u extends o.C {
   create(e) {
     let t = {
       copy: "",
       buttonAction: 0
     };
-    return globalThis.Object.defineProperty(t, r.C, {
+    return globalThis.Object.defineProperty(t, l.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.l)(this, t, e), t
+    }), void 0 !== e && (0, r.l)(this, t, e), t
   }
-  internalBinaryRead(e, t, n, s) {
-    let i = null != s ? s : this.create(),
-      a = e.pos + t;
-    for (; e.pos < a;) {
-      let [t, s] = e.tag();
+  internalBinaryRead(e, t, n, i) {
+    let s = null != i ? i : this.create(),
+      r = e.pos + t;
+    for (; e.pos < r;) {
+      let [t, i] = e.tag();
       switch (t) {
         case 1:
-          i.copy = e.string();
+          s.copy = e.string();
           break;
         case 2:
-          i.buttonAction = e.int32();
+          s.buttonAction = e.int32();
           break;
         default:
-          let a = n.readUnknownField;
-          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(s, ") for ").concat(this.typeName));
-          let r = e.skip(s);
-          !1 !== a && (!0 === a ? l.z.onRead : a)(this.typeName, i, t, s, r)
+          let r = n.readUnknownField;
+          if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
+          let l = e.skip(i);
+          !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l)
       }
     }
-    return i
+    return s
   }
   internalBinaryWrite(e, t, n) {
-    "" !== e.copy && t.tag(1, l.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, l.TD.Varint).int32(e.buttonAction);
-    let s = n.writeUnknownFields;
-    return !1 !== s && (!0 == s ? l.z.onWrite : s)(this.typeName, e, t), t
+    "" !== e.copy && t.tag(1, a.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, a.TD.Varint).int32(e.buttonAction);
+    let i = n.writeUnknownFields;
+    return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.premium_marketing.v1.SubscriptionButton", [{
@@ -137,12 +137,12 @@ class d extends o.C {
       no: 2,
       name: "button_action",
       kind: "enum",
-      T: () => ["discord_protos.premium_marketing.v1.ButtonAction", s, "BUTTON_ACTION_"]
+      T: () => ["discord_protos.premium_marketing.v1.ButtonAction", i, "BUTTON_ACTION_"]
     }])
   }
 }
-let E = new d;
-class h extends o.C {
+let _ = new u;
+class E extends o.C {
   create(e) {
     let t = {
       header: "",
@@ -156,65 +156,65 @@ class h extends o.C {
       heroArtImageLinkLightTheme: "",
       modalTopPill: ""
     };
-    return globalThis.Object.defineProperty(t, r.C, {
+    return globalThis.Object.defineProperty(t, l.C, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.l)(this, t, e), t
+    }), void 0 !== e && (0, r.l)(this, t, e), t
   }
-  internalBinaryRead(e, t, n, s) {
-    let i = null != s ? s : this.create(),
-      a = e.pos + t;
-    for (; e.pos < a;) {
-      let [t, s] = e.tag();
+  internalBinaryRead(e, t, n, i) {
+    let s = null != i ? i : this.create(),
+      r = e.pos + t;
+    for (; e.pos < r;) {
+      let [t, i] = e.tag();
       switch (t) {
         case 1:
-          i.header = e.string();
+          s.header = e.string();
           break;
         case 2:
-          i.subheader = e.string();
+          s.subheader = e.string();
           break;
         case 3:
-          i.videoLink = e.string();
+          s.videoLink = e.string();
           break;
         case 4:
-          i.helpArticleId = e.string();
+          s.helpArticleId = e.string();
           break;
         case 5:
-          i.featureCards.push(u.internalBinaryRead(e, e.uint32(), n));
+          s.featureCards.push(d.internalBinaryRead(e, e.uint32(), n));
           break;
         case 6:
-          i.button = E.internalBinaryRead(e, e.uint32(), n, i.button);
+          s.button = _.internalBinaryRead(e, e.uint32(), n, s.button);
           break;
         case 7:
-          i.dismissKey = e.string();
+          s.dismissKey = e.string();
           break;
         case 8:
-          i.heroArtVideoLinkLightTheme = e.string();
+          s.heroArtVideoLinkLightTheme = e.string();
           break;
         case 9:
-          i.heroArtImageLinkDarkTheme = e.string();
+          s.heroArtImageLinkDarkTheme = e.string();
           break;
         case 10:
-          i.heroArtImageLinkLightTheme = e.string();
+          s.heroArtImageLinkLightTheme = e.string();
           break;
         case 11:
-          i.modalTopPill = e.string();
+          s.modalTopPill = e.string();
           break;
         default:
-          let a = n.readUnknownField;
-          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(s, ") for ").concat(this.typeName));
-          let r = e.skip(s);
-          !1 !== a && (!0 === a ? l.z.onRead : a)(this.typeName, i, t, s, r)
+          let r = n.readUnknownField;
+          if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
+          let l = e.skip(i);
+          !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l)
       }
     }
-    return i
+    return s
   }
   internalBinaryWrite(e, t, n) {
-    "" !== e.header && t.tag(1, l.TD.LengthDelimited).string(e.header), "" !== e.subheader && t.tag(2, l.TD.LengthDelimited).string(e.subheader), "" !== e.videoLink && t.tag(3, l.TD.LengthDelimited).string(e.videoLink), "" !== e.helpArticleId && t.tag(4, l.TD.LengthDelimited).string(e.helpArticleId);
-    for (let s = 0; s < e.featureCards.length; s++) u.internalBinaryWrite(e.featureCards[s], t.tag(5, l.TD.LengthDelimited).fork(), n).join();
-    e.button && E.internalBinaryWrite(e.button, t.tag(6, l.TD.LengthDelimited).fork(), n).join(), "" !== e.dismissKey && t.tag(7, l.TD.LengthDelimited).string(e.dismissKey), "" !== e.heroArtVideoLinkLightTheme && t.tag(8, l.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), "" !== e.heroArtImageLinkDarkTheme && t.tag(9, l.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), "" !== e.heroArtImageLinkLightTheme && t.tag(10, l.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), "" !== e.modalTopPill && t.tag(11, l.TD.LengthDelimited).string(e.modalTopPill);
-    let s = n.writeUnknownFields;
-    return !1 !== s && (!0 == s ? l.z.onWrite : s)(this.typeName, e, t), t
+    "" !== e.header && t.tag(1, a.TD.LengthDelimited).string(e.header), "" !== e.subheader && t.tag(2, a.TD.LengthDelimited).string(e.subheader), "" !== e.videoLink && t.tag(3, a.TD.LengthDelimited).string(e.videoLink), "" !== e.helpArticleId && t.tag(4, a.TD.LengthDelimited).string(e.helpArticleId);
+    for (let i = 0; i < e.featureCards.length; i++) d.internalBinaryWrite(e.featureCards[i], t.tag(5, a.TD.LengthDelimited).fork(), n).join();
+    e.button && _.internalBinaryWrite(e.button, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), "" !== e.dismissKey && t.tag(7, a.TD.LengthDelimited).string(e.dismissKey), "" !== e.heroArtVideoLinkLightTheme && t.tag(8, a.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), "" !== e.heroArtImageLinkDarkTheme && t.tag(9, a.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), "" !== e.heroArtImageLinkLightTheme && t.tag(10, a.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), "" !== e.modalTopPill && t.tag(11, a.TD.LengthDelimited).string(e.modalTopPill);
+    let i = n.writeUnknownFields;
+    return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties", [{
@@ -242,12 +242,12 @@ class h extends o.C {
       name: "feature_cards",
       kind: "message",
       repeat: 1,
-      T: () => u
+      T: () => d
     }, {
       no: 6,
       name: "button",
       kind: "message",
-      T: () => E
+      T: () => _
     }, {
       no: 7,
       name: "dismiss_key",
@@ -276,4 +276,4 @@ class h extends o.C {
     }])
   }
 }
-let _ = new h
+let h = new E

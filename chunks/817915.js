@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return l
+    return i
   },
   t: function() {
-    return i
+    return l
   }
 });
-let l = 64,
-  i = 1200
+let i = 64,
+  l = 1200

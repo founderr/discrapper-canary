@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-    return m
+    return p
   }
 });
-var l = n(470079),
-  i = n(442837),
-  s = n(367907),
-  a = n(906732),
+var i = n(470079),
+  a = n(442837),
+  l = n(367907),
+  s = n(906732),
   r = n(703656),
   o = n(626135),
   c = n(730647),
@@ -14,29 +14,29 @@ var l = n(470079),
   d = n(934826),
   h = n(981631);
 
-function m(e) {
+function p(e) {
   var t;
   let {
     guildId: n,
-    groupListingId: m,
-    location: E,
-    relevantSubscriptionListingIds: p
-  } = e, g = (0, c.f)("useTrackRoleSubscriptionUpsellAnalytics"), {
-    activeSubscription: f
-  } = (0, d.Z)(m), C = null != f, _ = (0, i.Wu)([u.Z], () => (null != p ? p : []).filter(e => {
+    groupListingId: p,
+    location: m,
+    relevantSubscriptionListingIds: _
+  } = e, f = (0, c.f)("useTrackRoleSubscriptionUpsellAnalytics"), {
+    activeSubscription: E
+  } = (0, d.Z)(p), g = null != E, C = (0, a.Wu)([u.Z], () => (null != _ ? _ : []).filter(e => {
     var t;
     return (null === (t = u.Z.getSubscriptionListing(e)) || void 0 === t ? void 0 : t.published) === !0
-  }), [p]), {
+  }), [_]), {
     analyticsLocations: I
-  } = (0, a.ZP)(null !== (t = (0, r.DR)()) && void 0 !== t ? t : []), x = l.useRef(!1);
-  l.useEffect(() => {
-    g && null != m && null != _ && !x.current && (x.current = !0, o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
-      role_subscription_group_listing_id: m,
-      role_subscription_listing_ids: _,
-      is_premium_member: C,
+  } = (0, s.ZP)(null !== (t = (0, r.DR)()) && void 0 !== t ? t : []), x = i.useRef(!1);
+  i.useEffect(() => {
+    f && null != p && null != C && !x.current && (x.current = !0, o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
+      role_subscription_group_listing_id: p,
+      role_subscription_listing_ids: C,
+      is_premium_member: g,
       location_stack: I,
-      location: E,
-      ...(0, s.hH)(n)
+      location: m,
+      ...(0, l.hH)(n)
     }))
-  }, [n, m, g, E, _, C, I])
+  }, [n, p, f, m, C, g, I])
 }

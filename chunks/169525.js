@@ -4,16 +4,16 @@ n.d(t, {
     return O
   },
   BP: function() {
-    return A
-  },
-  MC: function() {
-    return p
-  },
-  dn: function() {
     return N
   },
-  hL: function() {
+  MC: function() {
     return R
+  },
+  dn: function() {
+    return A
+  },
+  hL: function() {
+    return p
   },
   lK: function() {
     return m
@@ -34,10 +34,10 @@ var i, r, s = n(278074),
   I = n(496675),
   T = n(630388),
   h = n(255269),
-  S = n(981631),
-  f = n(689938);
+  f = n(981631),
+  S = n(689938);
 (r = i || (i = {})).SPOILER = "spoiler", r.EXPLICIT_CONTENT = "explicit_content", r.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-let N = (e, t) => {
+let A = (e, t) => {
     let {
       spoiler: n,
       flags: i = 0,
@@ -45,11 +45,11 @@ let N = (e, t) => {
     } = e;
     if (t) {
       if ((0, l.Sv)(r)) return "potential_explicit_content";
-      if ((0, T.yE)(i, S.J0y.CONTAINS_EXPLICIT_MEDIA) || a.ZP.get("obscure_blur_effect_enabled")) return "explicit_content"
+      if ((0, T.yE)(i, f.J0y.CONTAINS_EXPLICIT_MEDIA) || a.ZP.get("obscure_blur_effect_enabled")) return "explicit_content"
     }
-    return n || (0, T.yE)(i, S.J0y.IS_SPOILER) ? "spoiler" : null
+    return n || (0, T.yE)(i, f.J0y.IS_SPOILER) ? "spoiler" : null
   },
-  A = (e, t, n, i, r) => {
+  N = (e, t, n, i, r) => {
     let {
       flags: s = 0,
       contentScanVersion: o
@@ -57,7 +57,7 @@ let N = (e, t) => {
     if (null == u) return null;
     if (r) {
       if (!u.author.bot && (0, l.Sv)(o)) return "potential_explicit_content";
-      if ((0, T.yE)(s, S.xPJ.CONTAINS_EXPLICIT_MEDIA) || a.ZP.get("obscure_blur_effect_enabled")) return "explicit_content"
+      if ((0, T.yE)(s, f.xPJ.CONTAINS_EXPLICIT_MEDIA) || a.ZP.get("obscure_blur_effect_enabled")) return "explicit_content"
     }
     return i ? "spoiler" : null
   },
@@ -95,11 +95,11 @@ function O(e, t, n) {
   }, n) ? [!0, "explicit_content"] : e.spoiler ? [t, "spoiler"] : [!1, void 0]
 }
 
-function R(e) {
+function p(e) {
   let {
     channel: t,
     media: n
-  } = e, i = (0, o.e7)([I.Z], () => null != t && I.Z.can(S.Plq.MANAGE_MESSAGES, t)), r = d.cC.useSetting(), s = (0, u.m)();
+  } = e, i = (0, o.e7)([I.Z], () => null != t && I.Z.can(f.Plq.MANAGE_MESSAGES, t)), r = d.cC.useSetting(), s = (0, u.m)();
   return O(n, !(0, h.Z)(r, i), s)
 }
-let p = e => (0, s.EQ)(e).with("explicit_content", () => f.Z.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => f.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let R = e => (0, s.EQ)(e).with("explicit_content", () => S.Z.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => S.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

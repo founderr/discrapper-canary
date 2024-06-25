@@ -26,9 +26,9 @@ function l(e) {
     showGuildProfile: I,
     analyticsLocation: T,
     sourceAnalyticsLocations: h
-  } = e, S = s.default.getUser(t), f = null != n && n !== a.ME ? n : void 0;
-  if (null == S) return (0, r.In)(t, {
-    guildId: I ? f : void 0,
+  } = e, f = s.default.getUser(t), S = null != n && n !== a.ME ? n : void 0;
+  if (null == f) return (0, r.In)(t, {
+    guildId: I ? S : void 0,
     withMutualGuilds: !0,
     withMutualFriends: !0,
     friendToken: E
@@ -48,8 +48,8 @@ function l(e) {
       sourceAnalyticsLocations: h
     })
   });
-  (0, o.W)(S, {
-    guildId: I ? f : void 0,
+  (0, o.W)(f, {
+    guildId: I ? S : void 0,
     withMutualGuilds: !0,
     withMutualFriends: !0,
     friendToken: E

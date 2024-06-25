@@ -1,94 +1,94 @@
 n.d(t, {
   g: function() {
-    return p
+    return T
   }
 }), n(653041);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  l = n(481060),
-  a = n(44315),
-  r = n(598077),
+var s = n(442837),
+  a = n(481060),
+  r = n(44315),
+  l = n(598077),
   o = n(246946),
   c = n(594174),
-  u = n(626135),
-  d = n(51144),
-  E = n(480387),
-  h = n(726745),
-  _ = n(251423),
+  d = n(626135),
+  u = n(51144),
+  _ = n(480387),
+  E = n(726745),
+  h = n(251423),
   I = n(383832),
   m = n(981631),
-  T = n(689938),
+  p = n(689938),
   g = n(886085);
 
-function p() {
-  let e = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-    t = (0, i.e7)([o.Z], () => o.Z.hidePersonalInformation),
+function T() {
+  let e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+    t = (0, s.e7)([o.Z], () => o.Z.hidePersonalInformation),
     {
       multiAccountUsers: n
-    } = (0, _.L)(),
-    p = t => {
-      if (t !== (null == e ? void 0 : e.id)) u.default.track(m.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+    } = (0, h.L)(),
+    T = t => {
+      if (t !== (null == e ? void 0 : e.id)) d.default.track(m.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
           section: m.jXE.PROFILE_POPOUT
         }
-      }), E.yD(t)
+      }), _.yD(t)
     },
-    N = n.map(n => {
-      let i = new r.Z(n),
-        o = i.id === (null == e ? void 0 : e.id),
-        c = n.tokenStatus === h.q.INVALID,
-        u = t ? null : "#".concat(i.discriminator);
-      return (0, s.jsx)(l.MenuItem, {
-        id: i.id,
+    C = n.map(n => {
+      let s = new l.Z(n),
+        o = s.id === (null == e ? void 0 : e.id),
+        c = n.tokenStatus === E.q.INVALID,
+        d = t ? null : "#".concat(s.discriminator);
+      return (0, i.jsx)(a.MenuItem, {
+        id: s.id,
         focusedClassName: g.focused,
         label: e => {
           let {
-            isFocused: r
+            isFocused: l
           } = e;
-          return (0, s.jsxs)("div", {
+          return (0, i.jsxs)("div", {
             className: g.userMenuItem,
-            children: [(0, s.jsx)(l.Avatar, {
-              src: i.getAvatarURL(void 0, 40),
-              size: l.AvatarSizes.SIZE_24,
+            children: [(0, i.jsx)(a.Avatar, {
+              src: s.getAvatarURL(void 0, 40),
+              size: a.AvatarSizes.SIZE_24,
               "aria-label": n.username
-            }), (0, s.jsxs)("div", {
+            }), (0, i.jsxs)("div", {
               className: g.userMenuUsername,
-              children: [(0, s.jsx)(l.Text, {
+              children: [(0, i.jsx)(a.Text, {
                 className: g.userMenuText,
                 variant: "text-sm/normal",
-                children: d.ZP.getUserTag(i, {
+                children: u.ZP.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
-              }), !i.isPomelo() && (0, s.jsx)(l.Text, {
+              }), !s.isPomelo() && (0, i.jsx)(a.Text, {
                 className: g.userMenuDiscriminator,
                 variant: "text-sm/normal",
-                children: u
+                children: d
               })]
-            }), o && (0, s.jsx)(l.CircleCheckIcon, {
+            }), o && (0, i.jsx)(a.CircleCheckIcon, {
               size: "sm",
-              color: (0, a.Lq)(r ? m.Ilk.WHITE_500 : m.Ilk.BRAND_500),
-              secondaryColor: (0, a.Lq)(r ? m.Ilk.BRAND_500 : m.Ilk.WHITE_500),
+              color: (0, r.Lq)(l ? m.Ilk.WHITE_500 : m.Ilk.BRAND_500),
+              secondaryColor: (0, r.Lq)(l ? m.Ilk.BRAND_500 : m.Ilk.WHITE_500),
               className: g.activeIcon
-            }), c && (0, s.jsx)(l.CircleExclamationPointIcon, {
-              color: (0, a.Lq)(m.Ilk.RED_400),
-              secondaryColor: (0, a.Lq)(m.Ilk.WHITE_500),
+            }), c && (0, i.jsx)(a.CircleExclamationPointIcon, {
+              color: (0, r.Lq)(m.Ilk.RED_400),
+              secondaryColor: (0, r.Lq)(m.Ilk.WHITE_500),
               size: "xs",
               className: g.activeIcon
             })]
           })
         },
         action: () => {
-          c ? (0, I.Z)() : p(i.id)
+          c ? (0, I.Z)() : T(s.id)
         }
-      }, i.id)
+      }, s.id)
     });
-  return N.push((0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(l.MenuSeparator, {}), (0, s.jsx)(l.MenuItem, {
+  return C.push((0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(a.MenuSeparator, {}), (0, i.jsx)(a.MenuItem, {
       id: "manage-accounts",
-      label: T.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+      label: p.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: I.Z
     })]
-  })), N
+  })), C
 }

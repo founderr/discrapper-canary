@@ -1,13 +1,13 @@
 n.d(t, {
   W: function() {
-    return l
+    return i
   },
   p: function() {
-    return i
+    return a
   }
 });
-let l = "chat-messages";
+let i = "chat-messages";
 
-function i(e, t) {
-  return "".concat(l, "-").concat(e, "-").concat(t)
+function a(e, t) {
+  return "".concat(i, "-").concat(e, "-").concat(t)
 }

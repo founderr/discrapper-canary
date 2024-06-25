@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
   root: "root_fabd5d",
   header: "header_fabd5d",
   title: "title_fabd5d",

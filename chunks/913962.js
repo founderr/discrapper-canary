@@ -1,35 +1,35 @@
-e.r(n), e.d(n, {
+n.r(e), n.d(e, {
   default: function() {
     return T
   }
 });
-var o = e(735250);
-e(470079);
-var s = e(481060),
-  i = e(230711),
-  a = e(695346),
-  l = e(285952),
-  r = e(153124),
-  c = e(626135),
-  A = e(981631),
-  d = e(526761),
-  _ = e(689938),
-  u = e(32441),
-  C = e(38880);
+var o = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(230711),
+  i = n(695346),
+  l = n(285952),
+  r = n(153124),
+  d = n(626135),
+  c = n(981631),
+  A = n(526761),
+  _ = n(689938),
+  u = n(32441),
+  C = n(38880);
 
 function T(t) {
   let {
-    onClose: n,
-    transitionState: e
+    onClose: e,
+    transitionState: n
   } = t, T = (0, r.Dt)();
 
   function N() {
-    n(), i.Z.open(A.oAB.ACCESSIBILITY, null, {
-      scrollPosition: d.rP.LEGACY_CHAT_INPUT
+    e(), a.Z.open(c.oAB.ACCESSIBILITY, null, {
+      scrollPosition: A.rP.LEGACY_CHAT_INPUT
     })
   }
   return (0, o.jsxs)(s.ModalRoot, {
-    transitionState: e,
+    transitionState: n,
     "aria-labelledby": T,
     children: [(0, o.jsx)("img", {
       className: u.art,
@@ -48,10 +48,10 @@ function T(t) {
           variant: "text-md/normal",
           className: u.body,
           children: _.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_MESSAGE.format({
-            openSettingsHook: (t, n) => (0, o.jsx)(s.Anchor, {
+            openSettingsHook: (t, e) => (0, o.jsx)(s.Anchor, {
               onClick: N,
               children: t
-            }, n)
+            }, e)
           })
         })]
       })
@@ -59,10 +59,10 @@ function T(t) {
       children: [(0, o.jsx)(s.Button, {
         type: "button",
         onClick: function() {
-          c.default.track(A.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+          d.default.track(c.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
             enabled: !1,
             location: "LegacyChatInputExplanationModal"
-          }), a.dN.updateSetting(!1), n()
+          }), i.dN.updateSetting(!1), e()
         },
         children: _.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_BUTTON_CTA
       }), (0, o.jsx)(s.Button, {
@@ -70,7 +70,7 @@ function T(t) {
         look: s.Button.Looks.LINK,
         size: s.Button.Sizes.MEDIUM,
         color: s.Button.Colors.PRIMARY,
-        onClick: n,
+        onClick: e,
         children: _.Z.Messages.NO_THANKS
       })]
     })]

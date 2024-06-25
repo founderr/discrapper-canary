@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   n: function() {
-    return p
+    return R
   }
 }), n(757143), n(411104), n(47120);
 var i, r, s, o, a = n(735250),
@@ -14,9 +14,9 @@ var i, r, s, o, a = n(735250),
   I = n(1561),
   T = n(993365),
   h = n(981631),
-  S = n(399189);
+  f = n(399189);
 
-function f(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,12 +24,12 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = {
-    side: S.side,
-    top: S.top,
-    "top-pill": S.topPill
+let A = {
+    side: f.side,
+    top: f.top,
+    "top-pill": f.topPill
   },
-  A = l.forwardRef(function(e, t) {
+  N = l.forwardRef(function(e, t) {
     let {
       children: n,
       id: i,
@@ -54,7 +54,7 @@ function O(e, t) {
   let n = {};
   return "Selected" === t ? (n.backgroundColor = e, n.color = E.Z.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, d.wK)(e, .1)), n.color = e, n)
 }(o = i || (i = {})).DEFAULT = "Default", o.HOVER = "Hover", o.SELECTED = "Selected";
-class R extends(r = l.Component) {
+class p extends(r = l.Component) {
   getStyle() {
     let {
       color: e,
@@ -101,11 +101,11 @@ class R extends(r = l.Component) {
     } = this.props, d = this.props["aria-label"], E = i === n;
     return (0, a.jsx)(I.P, {
       className: _()(t, {
-        [S.item]: !c,
-        [S.brand]: "brand" === u,
-        [S.selected]: null == r && E,
-        [S.themed]: "grey" === u,
-        [S.disabled]: null == r && s
+        [f.item]: !c,
+        [f.brand]: "brand" === u,
+        [f.selected]: null == r && E,
+        [f.themed]: "grey" === u,
+        [f.disabled]: null == r && s
       }),
       style: this.getStyle(),
       role: "tab",
@@ -125,10 +125,10 @@ class R extends(r = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "state", {
+    super(...e), S(this, "state", {
       hover: !1,
       active: !1
-    }), f(this, "handleClick", e => {
+    }), S(this, "handleClick", e => {
       let {
         disabled: t,
         onClick: n,
@@ -136,22 +136,22 @@ class R extends(r = l.Component) {
         onItemSelect: r
       } = this.props;
       if (!t) null != n ? n(e) : null != r && r(i)
-    }), f(this, "handleMouseDown", () => {
+    }), S(this, "handleMouseDown", () => {
       let {
         color: e
       } = this.props;
       null != e && this.setState({
         active: !0
       })
-    }), f(this, "handleMouseUp", () => {
+    }), S(this, "handleMouseUp", () => {
       this.setState({
         active: !1
       })
-    }), f(this, "handleMouseOver", () => {
+    }), S(this, "handleMouseOver", () => {
       this.setState({
         hover: !0
       })
-    }), f(this, "handleMouseOut", () => {
+    }), S(this, "handleMouseOut", () => {
       this.setState({
         hover: !1,
         active: !1
@@ -159,12 +159,12 @@ class R extends(r = l.Component) {
     })
   }
 }
-f(R, "defaultProps", {
+S(p, "defaultProps", {
   disabled: !1,
   look: "grey",
   disableItemStyles: !1
 });
-class p extends(s = l.Component) {
+class R extends(s = l.Component) {
   render() {
     let {
       className: e,
@@ -176,7 +176,7 @@ class p extends(s = l.Component) {
     } = this.props;
     return (0, a.jsx)("div", {
       ref: this.tabBarRef,
-      className: _()(e, N[n]),
+      className: _()(e, A[n]),
       style: i,
       role: "tablist",
       "aria-orientation": s,
@@ -186,7 +186,7 @@ class p extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "tabBarRef", l.createRef()), f(this, "focusManager", (0, c.E)({
+    super(...e), S(this, "tabBarRef", l.createRef()), S(this, "focusManager", (0, c.E)({
       getFocusableElements: () => {
         let e = this.tabBarRef.current;
         return null != e ? Array.from(e.querySelectorAll('[role="tab"][aria-disabled="false"]')) : []
@@ -195,7 +195,7 @@ class p extends(s = l.Component) {
         var e;
         return null === (e = this.tabBarRef.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement
       }
-    })), f(this, "renderChildren", e => {
+    })), S(this, "renderChildren", e => {
       let {
         selectedItem: t,
         onItemSelect: n,
@@ -208,7 +208,7 @@ class p extends(s = l.Component) {
         itemType: i,
         look: r
       }) : null
-    }), f(this, "getNodeForKeydownEvent", async e => {
+    }), S(this, "getNodeForKeydownEvent", async e => {
       let {
         orientation: t = "horizontal"
       } = this.props, n = "vertical" === t ? h.yXg.ARROW_UP : h.yXg.ARROW_LEFT, i = "vertical" === t ? h.yXg.ARROW_DOWN : h.yXg.ARROW_RIGHT;
@@ -223,13 +223,13 @@ class p extends(s = l.Component) {
           return this.focusManager.getLastFocusableElement()
       }
       return null
-    }), f(this, "handleKeyDown", async e => {
+    }), S(this, "handleKeyDown", async e => {
       let t = await this.getNodeForKeydownEvent(e);
       null != t && (e.preventDefault(), t.focus())
     })
   }
 }
-f(p, "Header", function(e) {
+S(R, "Header", function(e) {
   let {
     className: t,
     onClick: n,
@@ -239,7 +239,7 @@ f(p, "Header", function(e) {
   } = e;
   return (0, a.jsx)(I.P, {
     tabIndex: null == n ? -1 : 0,
-    className: _()(S.header, t),
+    className: _()(f.header, t),
     onClick: n,
     "aria-expanded": r,
     "aria-controls": s,
@@ -251,16 +251,16 @@ f(p, "Header", function(e) {
     children: (0, a.jsx)(T.x, {
       variant: "eyebrow",
       color: "none",
-      className: S.headerText,
+      className: f.headerText,
       children: i
     })
   })
-}), f(p, "Item", R), f(p, "Separator", function(e) {
+}), S(R, "Item", p), S(R, "Separator", function(e) {
   let {
     style: t
   } = e;
   return (0, a.jsx)("div", {
-    className: S.separator,
+    className: f.separator,
     style: t
   })
-}), f(p, "Panel", A)
+}), S(R, "Panel", N)

@@ -1,19 +1,19 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
-  r = n(325432),
+var i = n(735250),
+  s = n(470079),
+  a = n(442837),
+  r = n(481060),
+  l = n(325432),
   o = n(391690),
   c = n(714759),
-  u = n(285952),
-  d = n(546591),
-  E = n(424218),
-  h = n(358085),
-  _ = n(998502),
+  d = n(285952),
+  u = n(546591),
+  _ = n(424218),
+  E = n(358085),
+  h = n(998502),
   I = n(689938),
   m = n(145537),
-  T = n(331651);
+  p = n(331651);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -23,12 +23,12 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends i.PureComponent {
+class T extends s.PureComponent {
   renderDiskUsageCircle() {
     let {
       metadata: e
     } = this.props;
-    return null != e && null != e.availableKB && null != e.totalKB ? (0, s.jsx)(c.Z, {
+    return null != e && null != e.availableKB && null != e.totalKB ? (0, i.jsx)(c.Z, {
       total: e.totalKB,
       used: e.totalKB - e.availableKB
     }) : null
@@ -37,47 +37,47 @@ class p extends i.PureComponent {
     let e, t;
     let {
       path: n,
-      label: i,
-      editingPath: l,
-      isDefault: r,
+      label: s,
+      editingPath: a,
+      isDefault: l,
       metadata: c
     } = this.props;
-    return null != c && (e = null != c.availableKB ? (0, E.BU)(c.availableKB, {
+    return null != c && (e = null != c.availableKB ? (0, _.BU)(c.availableKB, {
       useKibibytes: !0
-    }) : null, t = null != c.totalKB ? (0, E.BU)(c.totalKB, {
+    }) : null, t = null != c.totalKB ? (0, _.BU)(c.totalKB, {
       useKibibytes: !0
-    }) : null), (0, s.jsxs)(u.Z, {
+    }) : null), (0, i.jsxs)(d.Z, {
       className: m.installationPath,
-      align: u.Z.Align.CENTER,
-      children: [this.renderDiskUsageCircle(), (0, s.jsxs)(u.Z, {
-        direction: u.Z.Direction.VERTICAL,
+      align: d.Z.Align.CENTER,
+      children: [this.renderDiskUsageCircle(), (0, i.jsxs)(d.Z, {
+        direction: d.Z.Direction.VERTICAL,
         className: m.__invalid_descriptionWrapper,
-        children: [(0, s.jsxs)(u.Z, {
-          align: u.Z.Align.CENTER,
-          children: [(0, s.jsx)(a.Heading, {
+        children: [(0, i.jsxs)(d.Z, {
+          align: d.Z.Align.CENTER,
+          children: [(0, i.jsx)(r.Heading, {
             className: m.rowTitle,
             variant: "heading-md/semibold",
-            children: null != i ? i : o.Z.getLabelFromPath(n)
-          }), r ? (0, s.jsx)("span", {
+            children: null != s ? s : o.Z.getLabelFromPath(n)
+          }), l ? (0, i.jsx)("span", {
             className: m.defaultIndicator,
             children: I.Z.Messages.DEFAULT
           }) : null]
-        }), null != c && null != e && null != t ? (0, s.jsx)(d.Z, {
+        }), null != c && null != e && null != t ? (0, i.jsx)(u.Z, {
           className: m.rowBody,
           hoverText: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
             available: e,
             total: t
           }),
           children: n
-        }) : (0, s.jsx)(a.Text, {
+        }) : (0, i.jsx)(r.Text, {
           className: m.rowBody,
           variant: "text-xs/normal",
           children: n
         })]
-      }), (0, s.jsx)(a.Button, {
-        size: a.Button.Sizes.SMALL,
-        disabled: null != l,
-        color: a.Button.Colors.PRIMARY,
+      }), (0, i.jsx)(r.Button, {
+        size: r.Button.Sizes.SMALL,
+        disabled: null != a,
+        color: r.Button.Colors.PRIMARY,
         onClick: this.handleStartEditing,
         children: I.Z.Messages.EDIT
       })]
@@ -89,56 +89,56 @@ class p extends i.PureComponent {
       hasGamesInstalledInPath: t
     } = this.props, {
       label: n,
-      isDefault: i
+      isDefault: s
     } = this.state;
-    return (0, s.jsx)(a.Card, {
+    return (0, i.jsx)(r.Card, {
       editable: !0,
       className: m.installationPathEditing,
-      children: (0, s.jsxs)(u.Z, {
-        children: [this.renderDiskUsageCircle(), (0, s.jsxs)(u.Z.Child, {
-          children: [(0, s.jsx)(a.FormItem, {
+      children: (0, i.jsxs)(d.Z, {
+        children: [this.renderDiskUsageCircle(), (0, i.jsxs)(d.Z.Child, {
+          children: [(0, i.jsx)(r.FormItem, {
             title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
-            children: (0, s.jsx)(a.TextInput, {
+            children: (0, i.jsx)(r.TextInput, {
               value: n,
               placeholder: o.Z.getLabelFromPath(e),
               onChange: this.handleLabelChange
             })
-          }), (0, s.jsx)(a.FormItem, {
+          }), (0, i.jsx)(r.FormItem, {
             title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
-            className: T.marginTop20,
-            children: (0, s.jsx)(a.TextInput, {
+            className: p.marginTop20,
+            children: (0, i.jsx)(r.TextInput, {
               disabled: !0,
               value: e
             })
-          }), (0, s.jsx)(a.Checkbox, {
-            type: a.Checkbox.Types.INVERTED,
-            value: null != i ? i : this.props.isDefault,
+          }), (0, i.jsx)(r.Checkbox, {
+            type: r.Checkbox.Types.INVERTED,
+            value: null != s ? s : this.props.isDefault,
             disabled: this.props.isDefault,
             className: m.defaultLocationCheckbox,
             onChange: this.handleToggleDefault,
             children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_MAKE_DEFAULT
-          }), (0, s.jsx)(a.FormDivider, {
+          }), (0, i.jsx)(r.FormDivider, {
             className: m.separator
-          }), (0, s.jsxs)(u.Z, {
-            children: [(0, s.jsx)(a.Button, {
+          }), (0, i.jsxs)(d.Z, {
+            children: [(0, i.jsx)(r.Button, {
               disabled: t || this.props.isDefault,
-              size: a.Button.Sizes.SMALL,
-              color: a.Button.Colors.RED,
-              look: a.Button.Looks.OUTLINED,
+              size: r.Button.Sizes.SMALL,
+              color: r.Button.Colors.RED,
+              look: r.Button.Looks.OUTLINED,
               onClick: this.handleRemoveLocation,
               children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
-            }), (0, s.jsxs)(u.Z, {
-              justify: u.Z.Justify.END,
-              children: [(0, s.jsx)(a.Button, {
-                size: a.Button.Sizes.SMALL,
-                color: a.Button.Colors.PRIMARY,
-                look: a.Button.Looks.LINK,
+            }), (0, i.jsxs)(d.Z, {
+              justify: d.Z.Justify.END,
+              children: [(0, i.jsx)(r.Button, {
+                size: r.Button.Sizes.SMALL,
+                color: r.Button.Colors.PRIMARY,
+                look: r.Button.Looks.LINK,
                 onClick: this.handleStopEditing,
                 children: I.Z.Messages.CANCEL
-              }), (0, s.jsx)(a.Button, {
-                disabled: e === this.props.path && n === this.props.label && i === this.props.isDefault,
-                size: a.Button.Sizes.SMALL,
-                color: a.Button.Colors.GREEN,
+              }), (0, i.jsx)(r.Button, {
+                disabled: e === this.props.path && n === this.props.label && s === this.props.isDefault,
+                size: r.Button.Sizes.SMALL,
+                color: r.Button.Colors.GREEN,
                 onClick: this.handleSaveChanges,
                 children: I.Z.Messages.SAVE
               })]
@@ -160,9 +160,9 @@ class p extends i.PureComponent {
         path: e,
         label: t,
         isDefault: n,
-        onToggleEditing: s
+        onToggleEditing: i
       } = this.props;
-      s(e), this.setState({
+      i(e), this.setState({
         label: t,
         isDefault: n
       })
@@ -175,21 +175,21 @@ class p extends i.PureComponent {
         isDefault: null
       })
     }), g(this, "handleRemoveLocation", () => {
-      (0, a.openModal)(e => (0, s.jsx)(a.ConfirmModal, {
+      (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
         ...e,
         header: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
         confirmText: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
         cancelText: I.Z.Messages.CANCEL,
         onConfirm: () => {
-          this.handleStopEditing(), (0, r.iD)(this.props.path)
+          this.handleStopEditing(), (0, l.iD)(this.props.path)
         },
-        children: (0, s.jsx)(a.Text, {
+        children: (0, i.jsx)(r.Text, {
           variant: "text-md/normal",
           children: I.Z.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
         })
       }))
     }), g(this, "handleSaveChanges", () => {
-      (0, r.Tb)(this.props.path, {
+      (0, l.Tb)(this.props.path, {
         label: null != this.state.label ? this.state.label : this.props.label,
         isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
       }), this.handleStopEditing()
@@ -204,9 +204,9 @@ class p extends i.PureComponent {
     })
   }
 }
-class N extends i.PureComponent {
+class C extends s.PureComponent {
   componentDidMount() {
-    (0, r.ec)(this.props.installationPaths.map(e => {
+    (0, l.ec)(this.props.installationPaths.map(e => {
       let {
         path: t
       } = e;
@@ -219,31 +219,31 @@ class N extends i.PureComponent {
       installationPathsMetadata: t,
       defaultInstallationPath: n
     } = this.props, {
-      editingPath: i
+      editingPath: s
     } = this.state;
-    return (0, s.jsxs)(a.FormSection, {
+    return (0, i.jsxs)(r.FormSection, {
       className: m.wrapper,
       title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATIONS,
       children: [e.map(e => {
         let {
-          path: l,
-          label: a
+          path: a,
+          label: r
         } = e;
-        return (0, s.jsx)(p, {
-          path: l,
-          label: a,
-          metadata: t[l],
-          isDefault: n === l,
-          editingPath: i,
-          hasGamesInstalledInPath: o.Z.hasGamesInstalledInPath(l),
+        return (0, i.jsx)(T, {
+          path: a,
+          label: r,
+          metadata: t[a],
+          isDefault: n === a,
+          editingPath: s,
+          hasGamesInstalledInPath: o.Z.hasGamesInstalledInPath(a),
           onToggleEditing: this.handleToggleEditing
-        }, l)
-      }), (0, s.jsx)("div", {
+        }, a)
+      }), (0, i.jsx)("div", {
         className: m.buttonRowWrapper,
-        children: (0, s.jsx)(a.Button, {
-          disabled: !h.isPlatformEmbedded,
+        children: (0, i.jsx)(r.Button, {
+          disabled: !E.isPlatformEmbedded,
           onClick: this.handleAddInstallationLocation,
-          size: a.Button.Sizes.SMALL,
+          size: r.Button.Sizes.SMALL,
           children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
         })
       })]
@@ -253,8 +253,8 @@ class N extends i.PureComponent {
     super(...e), g(this, "state", {
       editingPath: null
     }), g(this, "handleAddInstallationLocation", () => {
-      _.ZP.showOpenDialog(["openDirectory"]).then(e => {
-        if (null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0])(0, r.RY)(e[0])
+      h.ZP.showOpenDialog(["openDirectory"]).then(e => {
+        if (null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0])(0, l.RY)(e[0])
       })
     }), g(this, "handleToggleEditing", e => {
       this.setState({
@@ -263,8 +263,8 @@ class N extends i.PureComponent {
     })
   }
 }
-t.Z = l.ZP.connectStores([o.Z], () => ({
+t.Z = a.ZP.connectStores([o.Z], () => ({
   installationPaths: o.Z.installationPaths,
   installationPathsMetadata: o.Z.installationPathsMetadata,
   defaultInstallationPath: o.Z.defaultInstallationPath
-}))(N)
+}))(C)

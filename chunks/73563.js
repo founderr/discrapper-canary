@@ -3,13 +3,13 @@ n.d(t, {
     return h
   },
   e: function() {
-    return i
+    return a
   }
 });
-var l, i, s = n(735250);
+var i, a, l = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var s = n(120356),
+  r = n.n(s),
   o = n(285952),
   c = n(507675),
   u = n(820687);
@@ -18,38 +18,38 @@ function d(e) {
   let {
     disableGradients: t = !1,
     renderHeader: n,
-    renderBottomLeft: l,
-    renderBottomCenter: i,
-    renderBottomRight: a,
+    renderBottomLeft: i,
+    renderBottomCenter: a,
+    renderBottomRight: s,
     renderCenter: r
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: u.videoControls,
-    children: [!(0 === t || !0 === t) && (0, s.jsx)("div", {
+    children: [!(0 === t || !0 === t) && (0, l.jsx)("div", {
       className: u.gradientTop
-    }), !(1 === t || !0 === t) && (0, s.jsx)("div", {
+    }), !(1 === t || !0 === t) && (0, l.jsx)("div", {
       className: u.gradientBottom
-    }), (0, s.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: u.topControls,
       children: null == n ? void 0 : n()
-    }), null == r ? void 0 : r(), (0, s.jsxs)("div", {
+    }), null == r ? void 0 : r(), (0, l.jsxs)("div", {
       className: u.bottomControls,
-      children: [(0, s.jsx)(o.Z, {
+      children: [(0, l.jsx)(o.Z, {
         grow: 0,
         shrink: 1,
         align: o.Z.Align.CENTER,
-        children: null == l ? void 0 : l()
-      }), (0, s.jsx)(o.Z, {
+        children: null == i ? void 0 : i()
+      }), (0, l.jsx)(o.Z, {
         grow: 1,
         justify: o.Z.Justify.CENTER,
         align: o.Z.Align.CENTER,
-        children: null == i ? void 0 : i()
-      }), (0, s.jsx)(o.Z, {
+        children: null == a ? void 0 : a()
+      }), (0, l.jsx)(o.Z, {
         grow: 0,
         shrink: 1,
         justify: o.Z.Justify.END,
         align: o.Z.Align.CENTER,
-        children: null == a ? void 0 : a()
+        children: null == s ? void 0 : s()
       })]
     })]
   })
@@ -59,33 +59,33 @@ function h(e) {
   let {
     screenMessage: t,
     onDoubleClick: n,
-    onActive: l,
-    onForceIdle: i,
-    idle: a,
+    onActive: i,
+    onForceIdle: a,
+    idle: s,
     children: o,
     renderChatButton: h,
-    renderChatToasts: m,
-    renderVoiceChannelEffects: E,
-    style: p,
-    ...g
+    renderChatToasts: p,
+    renderVoiceChannelEffects: m,
+    style: _,
+    ...f
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: r()(u.root, {
-      [u.idle]: a
+      [u.idle]: s
     }),
-    style: p,
-    onMouseMove: l,
-    onMouseDown: l,
-    onMouseLeave: i,
+    style: _,
+    onMouseMove: i,
+    onMouseDown: i,
+    onMouseLeave: a,
     onDoubleClick: n,
-    children: [o, null != t ? (0, s.jsx)(c.Z, {
+    children: [o, null != t ? (0, l.jsx)(c.Z, {
       size: "large",
       ...t
-    }) : null, (0, s.jsx)(d, {
-      ...g
+    }) : null, (0, l.jsx)(d, {
+      ...f
     }), null == h ? void 0 : h({
       className: u.chatButton,
       showingClassName: u.chatButtonShowing
-    }), null == m ? void 0 : m(), null == E ? void 0 : E()]
+    }), null == p ? void 0 : p(), null == m ? void 0 : m()]
   })
-}(l = i || (i = {}))[l.TOP = 0] = "TOP", l[l.BOTTOM = 1] = "BOTTOM"
+}(i = a || (a = {}))[i.TOP = 0] = "TOP", i[i.BOTTOM = 1] = "BOTTOM"

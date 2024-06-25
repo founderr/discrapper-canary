@@ -1,55 +1,55 @@
-t.r(s), t.d(s, {
+a.r(e), a.d(e, {
   default: function() {
-    return h
+    return b
   }
 });
-var a = t(735250);
-t(470079);
-var o = t(780384),
-  l = t(481060),
-  n = t(410030),
-  r = t(153124),
-  i = t(689938),
-  c = t(376065),
-  d = t(167969),
-  u = t(557256);
+var o = a(735250);
+a(470079);
+var s = a(780384),
+  n = a(481060),
+  l = a(410030),
+  i = a(153124),
+  c = a(689938),
+  r = a(376065),
+  d = a(167969),
+  u = a(557256);
 
-function h(e) {
+function b(t) {
   let {
-    onClose: s,
-    transitionState: t
-  } = e, h = (0, r.Dt)(), m = (0, o.wj)((0, n.ZP)());
-  return (0, a.jsxs)(l.ModalRoot, {
-    transitionState: t,
-    "aria-labelledby": h,
-    size: l.ModalSize.SMALL,
-    children: [(0, a.jsxs)(l.ModalContent, {
-      className: c.content,
-      children: [(0, a.jsx)(l.ModalCloseButton, {
-        className: c.closeButton,
-        onClick: s
-      }), (0, a.jsx)("img", {
-        className: c.image,
-        src: m ? d : u,
+    onClose: e,
+    transitionState: a
+  } = t, b = (0, i.Dt)(), _ = (0, s.wj)((0, l.ZP)());
+  return (0, o.jsxs)(n.ModalRoot, {
+    transitionState: a,
+    "aria-labelledby": b,
+    size: n.ModalSize.SMALL,
+    children: [(0, o.jsxs)(n.ModalContent, {
+      className: r.content,
+      children: [(0, o.jsx)(n.ModalCloseButton, {
+        className: r.closeButton,
+        onClick: e
+      }), (0, o.jsx)("img", {
+        className: r.image,
+        src: _ ? d : u,
         alt: ""
-      }), (0, a.jsx)(l.Text, {
+      }), (0, o.jsx)(n.Text, {
         variant: "text-lg/semibold",
         color: "header-primary",
-        className: c.title,
-        children: i.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_TITLE
-      }), (0, a.jsx)(l.Text, {
+        className: r.title,
+        children: c.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_TITLE
+      }), (0, o.jsx)(n.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        className: c.body,
-        children: i.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_BODY
+        className: r.body,
+        children: c.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_BODY
       })]
-    }), (0, a.jsx)(l.ModalFooter, {
-      children: (0, a.jsx)(l.Button, {
-        className: c.button,
-        color: l.Button.Colors.BRAND,
-        onClick: s,
-        size: l.Button.Sizes.LARGE,
-        children: i.Z.Messages.OKAY
+    }), (0, o.jsx)(n.ModalFooter, {
+      children: (0, o.jsx)(n.Button, {
+        className: r.button,
+        color: n.Button.Colors.BRAND,
+        onClick: e,
+        size: n.Button.Sizes.LARGE,
+        children: c.Z.Messages.OKAY
       })
     })]
   })

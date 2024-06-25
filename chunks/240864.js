@@ -3,7 +3,7 @@ u.d(e, {
     return n
   }
 }), u(653041), u(47120);
-var n, i, l, d, r, o, c = u(442837),
+var n, i, l, d, r, c, o = u(442837),
   a = u(759174),
   E = u(570140),
   C = u(70956),
@@ -29,7 +29,7 @@ let G = new a.h(t => {
     return t.published ? -e : -e + 1e12
   })(t)),
   F = [];
-class h extends(i = c.ZP.Store) {
+class h extends(i = o.ZP.Store) {
   getGuildProductsForGuildFetchState(t) {
     var e;
     return null !== (e = _[t]) && void 0 !== e ? e : 0
@@ -52,12 +52,12 @@ class h extends(i = c.ZP.Store) {
     return Date.now() - (null !== (e = D[t]) && void 0 !== e ? e : 0) > U
   }
 }
-o = "GuildProductsStore", (r = "displayName") in(d = h) ? Object.defineProperty(d, r, {
-  value: o,
+c = "GuildProductsStore", (r = "displayName") in(d = h) ? Object.defineProperty(d, r, {
+  value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : d[r] = o, e.Z = new h(E.Z, {
+}) : d[r] = c, e.Z = new h(E.Z, {
   CONNECTION_OPEN: function() {
     G.clear(), _ = {}, T = {}, D = {}
   },

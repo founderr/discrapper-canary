@@ -1,12 +1,12 @@
 n.d(t, {
   S: function() {
-    return i
+    return s
   },
   u: function() {
-    return l
+    return a
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-01_consumer_education_launch",
   label: "Safety Consumer Education Launch - Block/Mute",
@@ -31,16 +31,16 @@ let s = (0, n(818083).B)({
   }]
 });
 
-function i() {
-  return s.useExperiment({
+function s() {
+  return i.useExperiment({
     location: "b85a21_1"
   }, {
     autoTrackExposure: !0
   }).enabled
 }
 
-function l() {
-  return s.useExperiment({
+function a() {
+  return i.useExperiment({
     location: "b85a21_2"
   }, {
     autoTrackExposure: !1

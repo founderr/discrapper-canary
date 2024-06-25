@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   An: function() {
-    return S
+    return f
   },
   C3: function() {
     return T
@@ -16,7 +16,7 @@ n.d(t, {
     return h
   },
   nk: function() {
-    return A
+    return N
   }
 }), n(653041);
 var i = n(442837),
@@ -160,7 +160,7 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   let {
     location: t,
     autoTrackExposure: n = !0
@@ -178,7 +178,7 @@ function S(e) {
     })
   })
 }
-let f = (0, r.B)({
+let S = (0, r.B)({
     kind: "user",
     id: "2024-05_clans_valorant_pilot",
     label: "Clans Valorant Pilot",
@@ -195,7 +195,7 @@ let f = (0, r.B)({
       }
     }]
   }),
-  N = (0, r.B)({
+  A = (0, r.B)({
     kind: "user",
     id: "2024-05_clans_genshin_pilot",
     label: "Clans Genshin Pilot",
@@ -213,15 +213,15 @@ let f = (0, r.B)({
     }]
   });
 
-function A(e) {
+function N(e) {
   var t, n;
   let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    r = f.useExperiment({
+    r = S.useExperiment({
       location: e
     }, {
       autoTrackExposure: i
     }),
-    s = N.useExperiment({
+    s = A.useExperiment({
       location: e
     }, {
       autoTrackExposure: i

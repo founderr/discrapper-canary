@@ -3,28 +3,28 @@ n.d(t, {
     return S
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(597312),
-  a = n(727637),
+var i = n(735250),
+  a = n(470079),
+  l = n(597312),
+  s = n(727637),
   r = n(410030),
   o = n(100527),
   c = n(906732),
   u = n(680295),
   d = n(785717),
   h = n(318661),
-  m = n(502762),
-  E = n(544989),
-  p = n(481932),
-  g = n(272510),
-  f = n(171368),
-  C = n(926150),
-  _ = n(308829),
+  p = n(502762),
+  m = n(544989),
+  _ = n(481932),
+  f = n(272510),
+  E = n(171368),
+  g = n(926150),
+  C = n(308829),
   I = n(354810),
   x = n(940885),
   T = n(625015),
   N = n(228168),
-  Z = n(20256);
+  v = n(20256);
 
 function S(e) {
   let {
@@ -32,62 +32,62 @@ function S(e) {
     channel: n
   } = e, {
     analyticsLocations: S
-  } = (0, c.ZP)(o.Z.PROFILE_PANEL), v = (0, h.ZP)(t.id), A = (0, r.ZP)(), M = i.useRef(null), R = (0, a.Z)(M), j = e => {
-    (0, f.openUserProfileModal)({
+  } = (0, c.ZP)(o.Z.PROFILE_PANEL), Z = (0, h.ZP)(t.id), A = (0, r.ZP)(), M = a.useRef(null), b = (0, s.Z)(M), R = e => {
+    (0, E.openUserProfileModal)({
       sourceAnalyticsLocations: S,
       userId: t.id,
       channelId: n.id,
       ...e
     })
   };
-  return (0, l.jsx)(c.Gt, {
+  return (0, i.jsx)(c.Gt, {
     value: S,
-    children: (0, l.jsx)(d.Mt, {
+    children: (0, i.jsx)(d.Mt, {
       layout: "SIMPLIFIED_DM_PANEL",
       userId: t.id,
       channelId: n.id,
-      children: (0, l.jsxs)(m.Z, {
+      children: (0, i.jsxs)(p.Z, {
         ref: M,
         user: t,
-        displayProfile: v,
+        displayProfile: Z,
         profileType: N.y0.PANEL,
         themeOverride: A,
-        className: Z.container,
-        children: [(0, l.jsxs)(s.u2, {
-          children: [(0, l.jsxs)(E.Z, {
+        className: v.container,
+        children: [(0, i.jsxs)(l.u2, {
+          children: [(0, i.jsxs)(m.Z, {
             profileType: N.y0.PANEL,
-            children: [(0, l.jsx)(p.Z, {
+            children: [(0, i.jsx)(_.Z, {
               user: t,
               profileType: N.y0.PANEL
-            }), (0, l.jsx)(g.Z, {
+            }), (0, i.jsx)(f.Z, {
               user: t,
               profileType: N.y0.PANEL
             })]
-          }), (0, l.jsx)(I.Z, {
+          }), (0, i.jsx)(I.Z, {
             user: t,
-            displayProfile: v,
+            displayProfile: Z,
             channel: n,
-            isHovering: R,
-            onOpenProfile: j
-          }), (0, l.jsx)(C.Z, {
+            isHovering: b,
+            onOpenProfile: R
+          }), (0, i.jsx)(g.Z, {
             user: t,
-            displayProfile: v,
+            displayProfile: Z,
             channelId: n.id,
-            isHovering: R,
-            onOpenProfile: j
-          }), (0, l.jsx)(x.Z, {
+            isHovering: b,
+            onOpenProfile: R
+          }), (0, i.jsx)(x.Z, {
             user: t,
             channelId: n.id
-          }), (0, l.jsx)(T.Z, {
+          }), (0, i.jsx)(T.Z, {
             user: t,
-            displayProfile: v
+            displayProfile: Z
           })]
-        }), (0, l.jsx)(_.Z, {
+        }), (0, i.jsx)(C.Z, {
           user: t,
           channelId: n.id
-        }), (null == v ? void 0 : v.profileEffectId) != null && (0, l.jsx)(u.Z, {
-          profileEffectId: null == v ? void 0 : v.profileEffectId,
-          isHovering: R
+        }), (null == Z ? void 0 : Z.profileEffectId) != null && (0, i.jsx)(u.Z, {
+          profileEffectId: null == Z ? void 0 : Z.profileEffectId,
+          isHovering: b
         })]
       })
     })

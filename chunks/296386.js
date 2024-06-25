@@ -3,22 +3,22 @@ t.d(n, {
     return C
   },
   K0: function() {
-    return g
-  },
-  Kq: function() {
     return I
   },
+  Kq: function() {
+    return T
+  },
   P$: function() {
-    return E
+    return x
   },
   TA: function() {
     return m
   },
   Vv: function() {
-    return _
+    return p
   },
   W1: function() {
-    return x
+    return _
   },
   aC: function() {
     return d
@@ -30,29 +30,29 @@ t.d(n, {
     return c
   },
   mA: function() {
-    return f
+    return h
   },
   t$: function() {
-    return T
+    return g
   },
   zH: function() {
-    return h
+    return f
   }
 });
 var a = t(544891),
   r = t(570140),
-  s = t(706454),
-  i = t(683301),
-  l = t(150192),
-  o = t(981631);
+  i = t(706454),
+  s = t(683301),
+  o = t(150192),
+  l = t(981631);
 async function c() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    t = s.default.locale,
-    c = n && !i.ZP.getIsReady();
-  if (t === l.Z.getFetchedLocale() && !c) return;
+    t = i.default.locale,
+    c = n && !s.ZP.getIsReady();
+  if (t === o.Z.getFetchedLocale() && !c) return;
   let d = await a.tn.get({
-    url: o.ANM.GUILD_DISCOVERY_CATEGORIES,
+    url: l.ANM.GUILD_DISCOVERY_CATEGORIES,
     query: {
       locale: t,
       primary_only: e
@@ -71,28 +71,28 @@ async function d(e) {
     let {
       primary_category_id: n,
       category_ids: t,
-      keywords: s,
-      emoji_discoverability_enabled: i,
-      partner_actioned_timestamp: l,
+      keywords: i,
+      emoji_discoverability_enabled: s,
+      partner_actioned_timestamp: o,
       partner_application_timestamp: c,
       is_published: d,
       reasons_to_join: u,
       social_links: m,
-      about: h
+      about: f
     } = (await a.tn.get({
-      url: o.ANM.GUILD_DISCOVERY_METADATA(e),
+      url: l.ANM.GUILD_DISCOVERY_METADATA(e),
       oldFormErrors: !0
     })).body, C = {
       primaryCategoryId: n,
       secondaryCategoryIds: t,
-      keywords: s,
-      emojiDiscoverabilityEnabled: i,
-      partnerActionedTimestamp: l,
+      keywords: i,
+      emojiDiscoverabilityEnabled: s,
+      partnerActionedTimestamp: o,
       partnerApplicationTimestamp: c,
       isPublished: d,
       reasonsToJoin: u,
       socialLinks: m,
-      about: h
+      about: f
     };
     return r.Z.dispatch({
       type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER",
@@ -108,7 +108,7 @@ async function d(e) {
 async function u(e) {
   try {
     let n = (await a.tn.get({
-      url: o.ANM.GUILD_DISCOVERY_SLUG(e)
+      url: l.ANM.GUILD_DISCOVERY_SLUG(e)
     })).body.slug;
     r.Z.dispatch({
       type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS",
@@ -130,7 +130,7 @@ function m(e, n) {
   })
 }
 
-function h(e, n) {
+function f(e, n) {
   r.Z.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -146,7 +146,7 @@ function C(e, n) {
   })
 }
 
-function x(e, n) {
+function _(e, n) {
   r.Z.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -154,7 +154,7 @@ function x(e, n) {
   })
 }
 
-function f(e, n) {
+function h(e, n) {
   r.Z.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -162,7 +162,7 @@ function f(e, n) {
   })
 }
 
-function E(e, n) {
+function x(e, n) {
   r.Z.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -170,50 +170,50 @@ function E(e, n) {
   })
 }
 
-function T(e, n) {
+function g(e, n) {
   r.Z.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     socialLinks: n
   })
 }
-async function _(e) {
+async function p(e) {
   let {
     guildId: n,
     primaryCategoryId: t,
-    keywords: s,
-    emojiDiscoverabilityEnabled: i,
-    partnerActionedTimestamp: l,
+    keywords: i,
+    emojiDiscoverabilityEnabled: s,
+    partnerActionedTimestamp: o,
     partnerApplicationTimestamp: c,
     isPublished: d,
     reasonsToJoin: u,
     socialLinks: m,
-    about: h
+    about: f
   } = e;
   try {
     let {
       primary_category_id: e,
       category_ids: C,
-      keywords: x,
-      emoji_discoverability_enabled: f,
-      partner_actioned_timestamp: E,
-      partner_application_timestamp: T,
-      is_published: _,
-      reasons_to_join: I,
-      social_links: g,
-      about: p
+      keywords: _,
+      emoji_discoverability_enabled: h,
+      partner_actioned_timestamp: x,
+      partner_application_timestamp: g,
+      is_published: p,
+      reasons_to_join: T,
+      social_links: I,
+      about: E
     } = (await a.tn.patch({
-      url: o.ANM.GUILD_DISCOVERY_METADATA(n),
+      url: l.ANM.GUILD_DISCOVERY_METADATA(n),
       body: {
         primary_category_id: t,
-        emoji_discoverability_enabled: i,
-        partner_actioned_timestamp: l,
+        emoji_discoverability_enabled: s,
+        partner_actioned_timestamp: o,
         partner_application_timestamp: c,
-        keywords: s,
+        keywords: i,
         is_published: d,
         reasons_to_join: u,
         social_links: m,
-        about: h
+        about: f
       },
       oldFormErrors: !0
     })).body;
@@ -223,14 +223,14 @@ async function _(e) {
       metadata: {
         primaryCategoryId: e,
         secondaryCategoryIds: C,
-        keywords: x,
-        emojiDiscoverabilityEnabled: f,
-        partnerActionedTimestamp: E,
-        partnerApplicationTimestamp: T,
-        isPublished: _,
-        reasonsToJoin: I,
-        socialLinks: g,
-        about: p
+        keywords: _,
+        emojiDiscoverabilityEnabled: h,
+        partnerActionedTimestamp: x,
+        partnerApplicationTimestamp: g,
+        isPublished: p,
+        reasonsToJoin: T,
+        socialLinks: I,
+        about: E
       }
     })
   } catch (e) {
@@ -242,9 +242,9 @@ async function _(e) {
   }
 }
 
-function I(e, n) {
+function T(e, n) {
   a.tn.put({
-    url: o.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
+    url: l.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
     oldFormErrors: !0
   }).then(() => {
     r.Z.dispatch({
@@ -261,9 +261,9 @@ function I(e, n) {
   })
 }
 
-function g(e, n) {
+function I(e, n) {
   a.tn.del({
-    url: o.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
+    url: l.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
     oldFormErrors: !0
   }).then(() => {
     r.Z.dispatch({

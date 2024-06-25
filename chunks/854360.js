@@ -4,8 +4,8 @@ a.r(s), a.d(s, {
   }
 }), a(47120);
 var t = a(735250),
-  r = a(470079),
-  n = a(481060),
+  n = a(470079),
+  r = a(481060),
   c = a(749210),
   i = a(910693),
   o = a(51144),
@@ -19,34 +19,34 @@ function m(e) {
     user: a,
     location: m,
     ...C
-  } = e, [g, h] = r.useState(""), x = (0, i.sE)(s, {
+  } = e, [g, p] = n.useState(""), f = (0, i.sE)(s, {
     location: m,
     targetUserId: a.id
-  }), K = r.useCallback(() => {
-    c.Z.kickUser(s, a.id, g), x(i.jQ.KICK)
-  }, [s, a.id, g, x]), _ = r.useCallback(e => {
-    h(e)
+  }), h = n.useCallback(() => {
+    c.Z.kickUser(s, a.id, g), f(i.jQ.KICK)
+  }, [s, a.id, g, f]), x = n.useCallback(e => {
+    p(e)
   }, []);
-  return (0, t.jsxs)(n.ConfirmModal, {
+  return (0, t.jsxs)(r.ConfirmModal, {
     header: d.Z.Messages.KICK_USER_FROM_SERVER.format({
       user: a.username
     }),
     confirmText: d.Z.Messages.KICK,
     cancelText: d.Z.Messages.CANCEL,
-    onConfirm: K,
+    onConfirm: h,
     ...C,
-    children: [(0, t.jsx)(n.Text, {
+    children: [(0, t.jsx)(r.Text, {
       variant: "text-md/normal",
       className: l.spacing,
       children: d.Z.Messages.KICK_USER_BODY.format({
         user: "@".concat(o.ZP.getName(a))
       })
-    }), (0, t.jsx)(n.FormItem, {
+    }), (0, t.jsx)(r.FormItem, {
       title: d.Z.Messages.FORM_LABEL_REASON_KICK,
       className: l.spacing,
-      children: (0, t.jsx)(n.TextArea, {
+      children: (0, t.jsx)(r.TextArea, {
         maxLength: u.GNZ,
-        onChange: _,
+        onChange: x,
         value: g,
         rows: 2
       })

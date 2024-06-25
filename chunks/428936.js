@@ -1,49 +1,49 @@
-t.d(l, {
+l.d(t, {
   Z: function() {
-    return _
+    return E
   }
-}), t(47120);
-var n = t(735250),
-  s = t(470079),
-  a = t(120356),
-  o = t.n(a),
-  i = t(399606),
-  r = t(481060),
-  C = t(823596),
-  c = t(201070),
-  d = t(893966),
-  u = t(527379),
-  E = t(689938),
-  m = t(388797);
+}), l(47120);
+var n = l(735250),
+  a = l(470079),
+  o = l(120356),
+  s = l.n(o),
+  i = l(399606),
+  r = l(481060),
+  C = l(823596),
+  c = l(201070),
+  d = l(893966),
+  u = l(527379),
+  m = l(689938),
+  _ = l(388797);
 
-function _(e) {
+function E(e) {
   let {
-    guildId: l,
-    onPageChange: t
-  } = e, [a, _] = s.useTransition(), M = (0, i.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(l), [l]), h = (0, i.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(l), [l]), x = (0, c.$j)(l), T = s.useMemo(() => C.LU.map(e => ({
+    guildId: t,
+    onPageChange: l
+  } = e, [o, E] = a.useTransition(), h = (0, i.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]), M = (0, i.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]), x = (0, c.$j)(t), b = a.useMemo(() => C.LU.map(e => ({
     value: e,
     label: Number(e).toLocaleString()
-  })), []), L = new Intl.NumberFormat(E.Z.getLocale()).format(M), H = E.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
-    count: x ? "..." : L
-  }), g = M > h.pageSize || x, A = M > C.LU["0"];
+  })), []), T = new Intl.NumberFormat(m.Z.getLocale()).format(h), L = m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
+    count: x ? "..." : T
+  }), g = h > M.pageSize || x, I = h > C.LU["0"];
   return (0, n.jsxs)("div", {
-    className: o()(m.paginationContainer),
+    className: s()(_.paginationContainer),
     children: [(0, n.jsx)("div", {
-      className: o()(m.pageSizeSelection),
-      children: A ? (0, n.jsxs)(n.Fragment, {
+      className: s()(_.pageSizeSelection),
+      children: I ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(r.Text, {
           variant: "text-md/normal",
           color: "text-muted",
-          children: E.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
+          children: m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
         }), (0, n.jsx)(r.Select, {
-          "aria-label": H,
-          className: m.pageSizeInput,
-          options: T,
-          isSelected: e => e === h.pageSize,
+          "aria-label": L,
+          className: _.pageSizeInput,
+          options: b,
+          isSelected: e => e === M.pageSize,
           select: e => {
-            _(() => {
-              (0, u._o)(l, {
-                ...h,
+            E(() => {
+              (0, u._o)(t, {
+                ...M,
                 pageSize: e
               })
             })
@@ -52,37 +52,37 @@ function _(e) {
           popoutPosition: "top",
           popoutWidth: 72
         }), (0, n.jsx)(r.Tooltip, {
-          text: E.Z.Messages.LOADING,
+          text: m.Z.Messages.LOADING,
           shouldShow: x,
           children: e => (0, n.jsx)(r.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            className: o()(m.pageLabel),
+            className: s()(_.pageLabel),
             ...e,
-            children: H
+            children: L
           })
         })]
       }) : (0, n.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: E.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_NO_PAGE_NUMBERS_LABEL.format({
-          count: M
+        children: m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_NO_PAGE_NUMBERS_LABEL.format({
+          count: h
         })
       })
     }), (0, n.jsx)("div", {
-      className: o()(m.pagination),
+      className: s()(_.pagination),
       children: g && (0, n.jsx)(r.Paginator, {
-        className: o()(m.paginationInput),
-        totalCount: M,
-        pageSize: h.pageSize,
+        className: s()(_.paginationInput),
+        totalCount: h,
+        pageSize: M.pageSize,
         disablePaginationGap: !0,
         hideMaxPage: !0,
-        currentPage: h.currentPage,
+        currentPage: M.currentPage,
         onPageChange: e => {
-          null == t || t(e), requestIdleCallback(() => {
-            _(() => {
-              (0, u._o)(l, {
-                ...h,
+          null == l || l(e), requestIdleCallback(() => {
+            E(() => {
+              (0, u._o)(t, {
+                ...M,
                 currentPage: e
               })
             })

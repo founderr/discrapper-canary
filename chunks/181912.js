@@ -6,10 +6,10 @@ n.d(t, {
 });
 var i = n(26151),
   s = n(13245),
-  l = n(43267),
+  a = n(43267),
   o = n(933557),
-  a = n(699516),
-  r = n(594174),
+  r = n(699516),
+  l = n(594174),
   c = n(454902),
   d = n(312839),
   u = n(981631),
@@ -17,11 +17,11 @@ var i = n(26151),
   p = n(689938);
 
 function f(e) {
-  let t = (0, o.F6)(e, r.default, a.Z),
+  let t = (0, o.F6)(e, l.default, r.Z),
     n = p.Z.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
-    f = (0, l.x)(e),
+    f = (0, a.x)(e),
     {
-      trackView: E,
+      trackView: _,
       trackClick: g
     } = (0, d.R)(h.n0.IncomingCall, {
       notif_type: h.n0.IncomingCall,
@@ -39,7 +39,7 @@ function f(e) {
     confirmText: p.Z.Messages.JOIN_CALL,
     cancelText: p.Z.Messages.DECLINE,
     onNotificationShow: () => {
-      E()
+      _()
     },
     onConfirmClick: () => {
       s.Z.callPrivateChannel(e.id), g("join"), s.Z.track(u.rMx.VOICE_CHANNEL_SELECTED, {

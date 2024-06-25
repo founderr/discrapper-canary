@@ -1,27 +1,27 @@
 t(47120);
-var l = t(735250),
-  a = t(470079),
+var a = t(735250),
+  l = t(470079),
   i = t(120356),
   n = t.n(i),
   o = t(481060),
   r = t(153124),
   c = t(689938),
   d = t(574264);
-let E = e => {
+let _ = e => {
   let {
     index: s,
     title: t,
-    selected: a
+    selected: l
   } = e;
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: n()(d.overviewStep, {
-      [d.selected]: a
+      [d.selected]: l
     }),
-    children: [(0, l.jsx)(o.Text, {
+    children: [(0, a.jsx)(o.Text, {
       className: d.stepIndex,
       variant: "text-sm/normal",
       children: s + 1
-    }), (0, l.jsx)(o.Text, {
+    }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       className: d.stepTitle,
       children: t
@@ -33,54 +33,54 @@ s.Z = e => {
     className: s,
     title: t,
     stepData: i,
-    transitionState: _,
+    transitionState: E,
     onClose: N,
     completeButtonText: I,
-    overviewFooter: M,
-    onNextPressed: T,
-    onPrevPressed: L,
+    overviewFooter: T,
+    onNextPressed: M,
+    onPrevPressed: m,
     onComplete: x,
-    sequencerClassName: m,
-    initialStep: u = 0,
+    sequencerClassName: u,
+    initialStep: L = 0,
     forceStep: O,
     submitting: C = !1,
     autoCloseOnComplete: h = !0
-  } = e, [A, S] = a.useState([]), [p, g] = a.useState(u), v = (0, r.Dt)();
-  a.useEffect(() => {
-    S([...Array(i.length).keys()])
+  } = e, [p, A] = l.useState([]), [S, f] = l.useState(L), g = (0, r.Dt)();
+  l.useEffect(() => {
+    A([...Array(i.length).keys()])
   }, [i.length]);
-  let f = null != O ? O : p,
-    j = i[f],
-    D = 0 === f,
-    b = f === i.length - 1,
+  let v = null != O ? O : S,
+    b = i[v],
+    D = 0 === v,
+    j = v === i.length - 1,
     R = null != I ? I : c.Z.Messages.DONE,
-    U = a.useCallback(() => {
-      null == L || L(), g(f - 1)
-    }, [L, f, g]);
-  return (0, l.jsxs)(o.ModalRoot, {
+    U = l.useCallback(() => {
+      null == m || m(), f(v - 1)
+    }, [m, v, f]);
+  return (0, a.jsxs)(o.ModalRoot, {
     size: o.ModalSize.MEDIUM,
     className: n()(d.container, s),
-    transitionState: _,
-    "aria-labelledby": v,
-    children: [(0, l.jsxs)("div", {
+    transitionState: E,
+    "aria-labelledby": g,
+    children: [(0, a.jsxs)("div", {
       className: d.overviewSidebar,
-      children: [(0, l.jsx)(o.Heading, {
-        id: v,
+      children: [(0, a.jsx)(o.Heading, {
+        id: g,
         variant: "heading-xl/semibold",
         className: d.header,
         children: t
-      }), (0, l.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: d.overviewSteps,
-        children: i.map((e, s) => (0, l.jsx)(E, {
+        children: i.map((e, s) => (0, a.jsx)(_, {
           index: s,
           title: e.overviewTitle,
-          selected: s === f
+          selected: s === v
         }, s))
-      }), M]
-    }), (0, l.jsxs)("div", {
+      }), T]
+    }), (0, a.jsxs)("div", {
       className: d.modal,
-      children: [(0, l.jsxs)(o.ModalContent, {
-        children: [(0, l.jsx)(o.ModalCloseButton, {
+      children: [(0, a.jsxs)(o.ModalContent, {
+        children: [(0, a.jsx)(o.ModalCloseButton, {
           focusProps: {
             offset: {
               top: 4,
@@ -90,27 +90,27 @@ s.Z = e => {
           },
           onClick: N,
           className: d.closeButton
-        }), (0, l.jsx)(o.Sequencer, {
-          step: f,
-          steps: A,
+        }), (0, a.jsx)(o.Sequencer, {
+          step: v,
+          steps: p,
           sideMargin: 24,
           verticalMargin: 24,
-          className: n()(d.sequencer, m),
+          className: n()(d.sequencer, u),
           innerClassName: d.innerSequencer,
-          children: j.modalContent
+          children: b.modalContent
         })]
-      }), (0, l.jsxs)(o.ModalFooter, {
+      }), (0, a.jsxs)(o.ModalFooter, {
         className: d.footer,
-        children: [(0, l.jsx)(o.Button, {
+        children: [(0, a.jsx)(o.Button, {
           type: "submit",
           submitting: C,
           onClick: () => {
-            b ? (x(), h && N()) : (null == T || T(), g(f + 1))
+            j ? (x(), h && N()) : (null == M || M(), f(v + 1))
           },
           color: o.Button.Colors.GREEN,
-          disabled: j.disableNextStep,
-          children: b ? R : c.Z.Messages.NEXT
-        }), D ? null : (0, l.jsx)(o.Button, {
+          disabled: b.disableNextStep,
+          children: j ? R : c.Z.Messages.NEXT
+        }), D ? null : (0, a.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.MIN,

@@ -1,17 +1,17 @@
 t.d(A, {
   B: function() {
-    return l
+    return o
   }
 });
 var n = t(735250);
 t(470079);
 var a = t(481060),
-  s = t(120651),
-  r = t(689938);
+  r = t(120651),
+  s = t(689938);
 
-function l(e, A, t) {
-  let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-  (0, s.Z)({
+function o(e, A, t) {
+  let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+  (0, r.Z)({
     title: e,
     body: "string" == typeof A ? A : A.format({
       highlightHook: e => (0, n.jsx)(a.Text, {
@@ -22,9 +22,9 @@ function l(e, A, t) {
         },
         children: e
       }),
-      ...l
+      ...o
     }),
-    cta: r.Z.Messages.GOT_IT,
+    cta: s.Z.Messages.GOT_IT,
     onConfirm: () => {},
     iconVariant: t
   })

@@ -1,10 +1,10 @@
 n.d(t, {
   x: function() {
-    return i
+    return l
   }
 });
-var l = n(709054);
+var i = n(709054);
 
-function i(e) {
-  return e.sort((e, t) => l.default.compare(e.lastMessageId, t.lastMessageId)).reverse()
+function l(e) {
+  return e.sort((e, t) => i.default.compare(e.lastMessageId, t.lastMessageId)).reverse()
 }

@@ -24,16 +24,16 @@ function h(e, t) {
   }, !0
 }
 
-function S(e) {
+function f(e) {
   return I[e]
 }
 
-function f(e) {
+function S(e) {
   var t;
   return null === (t = I[e]) || void 0 === t ? void 0 : t.message
 }
 
-function N(e) {
+function A(e) {
   let {
     threads: t,
     mostRecentMessages: n
@@ -42,7 +42,7 @@ function N(e) {
     h(e.channel_id, e)
   })
 }
-class A extends(o = a.ZP.Store) {
+class N extends(o = a.ZP.Store) {
   initialize() {
     this.waitFor(_.Z, c.default)
   }
@@ -53,12 +53,12 @@ class A extends(o = a.ZP.Store) {
     }), I[e]
   }
 }
-s = "ForumPostRecentMessageStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+s = "ForumPostRecentMessageStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, new A(l.Z, {
+}) : i[r] = s, new N(l.Z, {
   CONNECTION_OPEN: function() {
     I = {}
   },
@@ -72,7 +72,7 @@ s = "ForumPostRecentMessageStore", (r = "displayName") in(i = A) ? Object.define
       let n = function(e) {
           return I[e]
         }(e),
-        i = f(e);
+        i = S(e);
       null != n && null != i && (I[e] = {
         ...n,
         message: (0, u.wi)(i, t)
@@ -81,7 +81,7 @@ s = "ForumPostRecentMessageStore", (r = "displayName") in(i = A) ? Object.define
   },
   MESSAGE_DELETE: function(e) {
     return function(e, t) {
-      let n = f(e);
+      let n = S(e);
       return (null == n ? void 0 : n.id) === t && (delete I[e], !0)
     }(e.channelId, e.id)
   },
@@ -91,6 +91,6 @@ s = "ForumPostRecentMessageStore", (r = "displayName") in(i = A) ? Object.define
     } = e;
     for (let e in t) h(e, t[e].most_recent_message)
   },
-  LOAD_ARCHIVED_THREADS_SUCCESS: N,
-  LOAD_THREADS_SUCCESS: N
+  LOAD_ARCHIVED_THREADS_SUCCESS: A,
+  LOAD_THREADS_SUCCESS: A
 })

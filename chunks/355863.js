@@ -10,9 +10,9 @@ var s, o, a, l = n(392711),
   I = n(131792),
   T = n(252982),
   h = n(434529),
-  S = n(981631);
+  f = n(981631);
 
-function f(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,9 +20,9 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a = s || (s = {})).REQUIRED = "REQUIRED", a.OPTIONAL = "OPTIONAL", a.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
-let N = "migrated",
-  A = {
-    [S.Odu.GUILDS]: {
+let A = "migrated",
+  N = {
+    [f.Odu.GUILDS]: {
       minSize: {
         width: 312,
         height: 300
@@ -45,7 +45,7 @@ let N = "migrated",
         pinned: !1
       }
     },
-    [S.Odu.TEXT]: {
+    [f.Odu.TEXT]: {
       minSize: {
         width: 430,
         height: 300
@@ -68,7 +68,7 @@ let N = "migrated",
         pinned: !0
       }
     },
-    [S.Odu.VOICE]: {
+    [f.Odu.VOICE]: {
       minSize: {
         width: 272,
         height: 100
@@ -91,7 +91,7 @@ let N = "migrated",
         pinned: !0
       }
     },
-    [S.Odu.GUILDS_TEXT]: {
+    [f.Odu.GUILDS_TEXT]: {
       minSize: {
         height: 300,
         width: 610
@@ -125,9 +125,9 @@ function m(e, t) {
 
 function O(e) {
   var t;
-  return null === (t = A[e]) || void 0 === t ? void 0 : t.defaultSettings
+  return null === (t = N[e]) || void 0 === t ? void 0 : t.defaultSettings
 }
-class R extends(o = c.ZP.PersistedStore) {
+class p extends(o = c.ZP.PersistedStore) {
   initialize(e) {
     null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
       let t = {};
@@ -142,7 +142,7 @@ class R extends(o = c.ZP.PersistedStore) {
     }(e.widgets)) : (i = {}, r = {});
     let t = !1,
       n = [];
-    u().forEach(A, (e, t) => {
+    u().forEach(N, (e, t) => {
       "REQUIRED" === e.layoutPolicy && n.push(t)
     }), u().forEach(i, (e, s) => {
       let o = this.getWidgetsForLayout(s),
@@ -205,7 +205,7 @@ class R extends(o = c.ZP.PersistedStore) {
     }, [])
   }
   getWidgetConfig(e) {
-    return A[e]
+    return N[e]
   }
   getWidgetDefaultSettings(e) {
     return O(e)
@@ -215,7 +215,7 @@ class R extends(o = c.ZP.PersistedStore) {
     return null != t ? t.type : ""
   }
   getRegisteredWidgets() {
-    return A
+    return N
   }
   getDefaultLayout(e) {
     let t = [];
@@ -233,7 +233,7 @@ class R extends(o = c.ZP.PersistedStore) {
     }), t
   }
 }
-f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "migrations", [() => {
+S(p, "displayName", "LayoutStore"), S(p, "persistKey", "LayoutStore"), S(p, "migrations", [() => {
   let {
     pinnedWidgets: e,
     positions: t,
@@ -249,7 +249,7 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
           s = null != n ? n[e] : null,
           o = {
             id: e,
-            layoutId: N,
+            layoutId: A,
             type: e,
             anchor: r || {
               top: -1,
@@ -268,8 +268,8 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
       });
     return {
       layouts: [
-        [N, {
-          id: N,
+        [A, {
+          id: A,
           widgets: r
         }]
       ],
@@ -284,12 +284,12 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
   let {
     layouts: t,
     widgets: n
-  } = e, i = new Set(Object.keys(S.Odu)), r = Array.from(n).filter(e => {
+  } = e, i = new Set(Object.keys(f.Odu)), r = Array.from(n).filter(e => {
     let [t] = e;
     return !i.has(t)
   }), s = Array.from(t).filter(e => {
     let [t] = e;
-    return t !== N
+    return t !== A
   });
   return s.forEach(e => {
     let [t, n] = e, i = null, s = null;
@@ -298,12 +298,12 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
           let [i, r] = n;
           return i === e && r.layoutId === t
         });
-        return null != n && (null == s && n[1].type === S.Odu.VOICE && (s = n[0]), null == i && n[1].type === S.Odu.TEXT && (i = n[1].pinned), null != i && null != s || void 0)
+        return null != n && (null == s && n[1].type === f.Odu.VOICE && (s = n[0]), null == i && n[1].type === f.Odu.TEXT && (i = n[1].pinned), null != i && null != s || void 0)
       }), i || null == s) return;
     let o = (0, _.Z)();
     n.widgets = [s, o], r.push([o, {
-      ...O(S.Odu.GUILDS_TEXT),
-      type: S.Odu.GUILDS_TEXT,
+      ...O(f.Odu.GUILDS_TEXT),
+      type: f.Odu.GUILDS_TEXT,
       id: o,
       layoutId: t,
       zIndex: 2
@@ -327,7 +327,7 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
       return e[n] = i, e
     }, {})
   }
-}]), t.Z = new R(E.Z, {
+}]), t.Z = new p(E.Z, {
   LAYOUT_CREATE: function(e) {
     let {
       layoutId: t,
@@ -338,7 +338,7 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
     let o = [];
     n.forEach((e, t) => {
       let n = function(e) {
-          let t = i[N];
+          let t = i[A];
           if (null != t)
             for (let n of t.widgets) {
               let t = r[n];
@@ -423,7 +423,7 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
     r = {
       ...r
     }, delete r[t], u().forEach(i, (e, n) => {
-      if (n === N) return;
+      if (n === A) return;
       let r = e.widgets.indexOf(t);
       if (r >= 0) {
         let t = [...e.widgets];

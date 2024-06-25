@@ -1,4 +1,4 @@
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "guild",
   id: "2023-01_shared_canvas",
   label: "Shared Canvas",
@@ -13,4 +13,4 @@ let l = (0, n(818083).B)({
     }
   }]
 });
-t.Z = l
+t.Z = i

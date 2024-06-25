@@ -1,83 +1,83 @@
-n.d(t, {
+t.d(n, {
   Ux: function() {
-    return h
+    return N
   },
   gS: function() {
-    return C
+    return L
   },
   ww: function() {
-    return S
+    return U
   }
-}), n(789020);
-var s = n(470079),
-  i = n(399606),
-  l = n(230711),
-  a = n(906732),
-  r = n(18438),
-  o = n(314897),
-  c = n(271383),
-  u = n(430824),
-  d = n(496675),
-  E = n(914010),
-  _ = n(715903),
-  I = n(981631),
-  T = n(372897),
-  m = n(526761),
-  N = n(689938);
+}), t(789020);
+var s = t(470079),
+  o = t(399606),
+  r = t(230711),
+  i = t(906732),
+  a = t(18438),
+  l = t(314897),
+  u = t(271383),
+  _ = t(430824),
+  d = t(496675),
+  c = t(914010),
+  I = t(715903),
+  A = t(981631),
+  O = t(372897),
+  E = t(526761),
+  M = t(689938);
 
-function h(e) {
-  return (0, i.e7)([o.default, c.ZP], () => {
+function N(e) {
+  return (0, o.e7)([l.default, u.ZP], () => {
     if (null == e) return !1;
-    let t = o.default.getId();
-    return (0, _.EY)(c.ZP.getMember(e, t))
+    let n = l.default.getId();
+    return (0, I.EY)(u.ZP.getMember(e, n))
   }, [e])
 }
 
-function C(e) {
-  return (0, i.cj)([o.default, c.ZP, E.Z, u.Z], () => {
-    let t = {
+function L(e) {
+  return (0, o.cj)([l.default, u.ZP, c.Z, _.Z], () => {
+    let n = {
         nick: void 0,
         bio: void 0
       },
-      n = E.Z.getGuildId(),
-      s = null != e ? e : n,
-      i = u.Z.getGuild(s);
-    if (null == i || null == s) return t;
-    let l = o.default.getId(),
-      a = c.ZP.getMember(s, l),
-      r = (0, _.Ow)(null == a ? void 0 : a.flags);
-    if (0 === r.size) return t;
-    if (r.has(T.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
+      t = c.Z.getGuildId(),
+      s = null != e ? e : t,
+      o = _.Z.getGuild(s);
+    if (null == o || null == s) return n;
+    let r = l.default.getId(),
+      i = u.ZP.getMember(s, r),
+      a = (0, I.Ow)(null == i ? void 0 : i.flags);
+    if (0 === a.size) return n;
+    if (a.has(O.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
       if (null == e) {
         var d;
-        t.nick = [N.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
-          guildName: null !== (d = i.name) && void 0 !== d ? d : ""
+        n.nick = [M.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
+          guildName: null !== (d = o.name) && void 0 !== d ? d : ""
         })]
-      } else t.nick = [N.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME]
+      } else n.nick = [M.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME]
     }
-    return r.has(T.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [N.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
+    return a.has(O.q.AUTOMOD_QUARANTINED_BIO) && (n.bio = [M.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), n
   }, [e])
 }
 
-function S(e) {
+function U(e) {
   let {
-    guildId: t,
-    scrollPosition: n,
-    analyticsLocation: o,
-    analyticsLocations: c,
-    openWithoutBackstack: E
+    guildId: n,
+    scrollPosition: t,
+    analyticsLocation: l,
+    analyticsLocations: u,
+    openWithoutBackstack: c
   } = e, {
-    analyticsLocations: _
-  } = (0, a.ZP)(), T = (0, i.e7)([u.Z], () => u.Z.getGuild(t), [t]), N = (0, i.e7)([d.Z], () => null != T && d.Z.can(I.Plq.CHANGE_NICKNAME, T), [T]);
+    analyticsLocations: I
+  } = (0, i.ZP)(), O = (0, o.e7)([_.Z], () => _.Z.getGuild(n), [n]), M = (0, o.e7)([d.Z], () => null != O && d.Z.can(A.Plq.CHANGE_NICKNAME, O), [O]);
   return [s.useCallback(() => {
-    if (null == T) return;
-    let e = I.oAB.PROFILE_CUSTOMIZATION,
-      t = m.NB.GUILD;
-    N ? (0, r.Fq)(T, null != c ? c : _) : t = m.NB.USER_PROFILE, l.Z.open(e, t, {
-      scrollPosition: n,
-      analyticsLocation: o,
-      analyticsLocations: c,
-      openWithoutBackstack: E
+    if (null == O) return;
+    let e = A.oAB.PROFILE_CUSTOMIZATION,
+      n = E.NB.GUILD;
+    M ? (0, a.Fq)(O, null != u ? u : I) : n = E.NB.USER_PROFILE, r.Z.open(e, n, {
+      scrollPosition: t,
+      analyticsLocation: l,
+      analyticsLocations: u,
+      openWithoutBackstack: c
     })
-  }, [N, n, o, c, E, T, _]), N]
+  }, [M, t, l, u, c, O, I]), M]
 }

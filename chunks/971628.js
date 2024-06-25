@@ -1,85 +1,85 @@
-n.d(t, {
+a.d(t, {
   G: function() {
-    return C
+    return b
   },
   Z: function() {
-    return _
+    return R
   }
-}), n(47120), n(724458);
-var a = n(735250),
-  l = n(470079),
-  s = n(120356),
-  r = n.n(s),
-  i = n(91192),
-  o = n(481060),
-  d = n(631969),
-  c = n(467679),
-  u = n(285952),
-  m = n(346656),
-  h = n(153124),
-  S = n(605436),
-  T = n(537383),
-  x = n(71080),
-  g = n(689938),
-  v = n(992944);
-let f = (0, h.hQ)(),
-  E = (0, h.hQ)();
+}), a(47120), a(724458);
+var n = a(735250),
+  l = a(470079),
+  s = a(120356),
+  r = a.n(s),
+  i = a(91192),
+  o = a(481060),
+  c = a(631969),
+  d = a(467679),
+  u = a(285952),
+  m = a(346656),
+  h = a(153124),
+  S = a(605436),
+  x = a(537383),
+  T = a(71080),
+  g = a(689938),
+  f = a(992944);
+let v = (0, h.hQ)(),
+  _ = (0, h.hQ)();
 
-function C(e) {
+function b(e) {
   return "".concat(e.rowType, ":").concat(e.id)
 }
 
-function b(e) {
-  return (0, a.jsx)(o.FormTitle, {
+function E(e) {
+  return (0, n.jsx)(o.FormTitle, {
     tag: "h5",
-    className: r()(v.sectionTitle, v.rowHeight),
+    className: r()(f.sectionTitle, f.rowHeight),
     children: e
   }, e)
 }
 
-function R(e) {
+function C(e) {
   let {
     id: t,
-    children: n,
+    children: a,
     rowLabel: l,
     checked: s,
-    onSelect: d,
-    disabled: c,
+    onSelect: c,
+    disabled: d,
     showCheckbox: m,
     selected: h,
     onMouseEnter: S,
-    "aria-posinset": T,
-    "aria-setsize": x
+    "aria-posinset": x,
+    "aria-setsize": T
   } = e, g = (0, i.JA)(t);
-  return (0, a.jsx)(o.Clickable, {
+  return (0, n.jsx)(o.Clickable, {
     ...g,
     id: t,
-    className: r()(v.addMemberRow, {
-      [v.selectedRow]: h
+    className: r()(f.addMemberRow, {
+      [f.selectedRow]: h
     }),
     onClick: e => {
-      !c && (e.preventDefault(), d())
+      !d && (e.preventDefault(), c())
     },
     onMouseEnter: S,
     role: "option",
-    "aria-disabled": c,
+    "aria-disabled": d,
     "aria-selected": s,
-    "aria-setsize": x,
-    "aria-posinset": T,
-    children: (0, a.jsxs)(u.Z, {
+    "aria-setsize": T,
+    "aria-posinset": x,
+    children: (0, n.jsxs)(u.Z, {
       justify: u.Z.Justify.BETWEEN,
       align: u.Z.Align.CENTER,
-      children: [m ? (0, a.jsx)(o.Checkbox, {
+      children: [m ? (0, n.jsx)(o.Checkbox, {
         displayOnly: !0,
         size: 18,
         value: s,
         type: o.Checkbox.Types.INVERTED,
-        disabled: c,
-        children: (0, a.jsx)("div", {
-          className: v.checkboxLabel,
-          children: n
+        disabled: d,
+        children: (0, n.jsx)("div", {
+          className: f.checkboxLabel,
+          children: a
         })
-      }) : n, null != l ? (0, a.jsx)(o.Text, {
+      }) : a, null != l ? (0, n.jsx)(o.Text, {
         color: "text-muted",
         variant: "text-xs/normal",
         children: l
@@ -88,37 +88,37 @@ function R(e) {
   })
 }
 
-function _(e) {
+function R(e) {
   let {
     listClassName: t,
-    pendingAdditions: n,
+    pendingAdditions: a,
     query: s,
     onQueryChange: i,
     onClickRow: h,
-    onRemovePendingAddition: _,
-    roles: I = [],
-    members: M = [],
-    users: A = [],
-    guilds: p = [],
-    placeholderText: N,
-    disabledText: Z,
-    hintText: j,
-    searchTitleText: U,
-    renderEmptyText: D,
-    focusSearchAfterReady: L,
-    isReady: y,
-    maxCount: w,
+    onRemovePendingAddition: R,
+    roles: p = [],
+    members: I = [],
+    users: M = [],
+    guilds: A = [],
+    placeholderText: w,
+    disabledText: N,
+    hintText: Z,
+    searchTitleText: j,
+    renderEmptyText: L,
+    focusSearchAfterReady: U,
+    isReady: D,
+    maxCount: y,
     hideRowLabel: O = !1
-  } = e, G = l.useRef(null), B = l.useRef(null), k = [I.length, M.length, A.length, p.length], [P, F] = l.useState(!1), [z, H] = l.useState(0), [$, K] = l.useState(-1);
+  } = e, G = l.useRef(null), B = l.useRef(null), k = [p.length, I.length, M.length, A.length], [P, F] = l.useState(!1), [H, z] = l.useState(0), [$, K] = l.useState(-1);
   l.useEffect(() => {
     var e;
     null === (e = G.current) || void 0 === e || e.focus()
   }, []);
   let Q = l.useCallback(function(e, t) {
-      let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-      if (H(e), K(t), n) {
-        var a;
-        null === (a = B.current) || void 0 === a || a.scrollToIndex({
+      let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+      if (z(e), K(t), a) {
+        var n;
+        null === (n = B.current) || void 0 === n || n.scrollToIndex({
           section: null != e ? e : 0,
           row: null != t ? t : 0,
           padding: 8
@@ -128,15 +128,15 @@ function _(e) {
     W = l.useCallback((e, t) => {
       if (null == t) return;
       i("");
-      let n = (e === x.m$.ROLES ? I : [])[t];
-      n.rowType !== x.aC.EMPTY_STATE && h(n)
-    }, [I, h, i]),
+      let a = (e === T.m$.ROLES ? p : [])[t];
+      a.rowType !== T.aC.EMPTY_STATE && h(a)
+    }, [p, h, i]),
     q = l.useCallback(e => {
       var t;
-      if (null != e && e.rowType !== x.aC.EMPTY_STATE) h(e), i(""), null === (t = G.current) || void 0 === t || t.focus()
+      if (null != e && e.rowType !== T.aC.EMPTY_STATE) h(e), i(""), null === (t = G.current) || void 0 === t || t.focus()
     }, [h, i]),
-    V = l.useMemo(() => Object.keys(n), [n]),
-    Y = l.useMemo(() => M.some(e => !e.disabled) || I.some(e => !e.disabled) || A.some(e => !e.disabled) || p.some(e => !e.disabled), [M, I, A, p]) || "" === s.trim();
+    V = l.useMemo(() => Object.keys(a), [a]),
+    Y = l.useMemo(() => I.some(e => !e.disabled) || p.some(e => !e.disabled) || M.some(e => !e.disabled) || A.some(e => !e.disabled), [I, p, M, A]) || "" === s.trim();
 
   function J() {
     var e;
@@ -144,144 +144,144 @@ function _(e) {
   }
   return l.useEffect(() => {
     J()
-  }), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)("div", {
-      className: r()(v.searchBox, {
-        [v.scrollSeparator]: P
+  }), (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)("div", {
+      className: r()(f.searchBox, {
+        [f.scrollSeparator]: P
       }),
-      children: [null != U && (0, a.jsx)(o.FormTitle, {
+      children: [null != j && (0, n.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        children: U
-      }), (0, a.jsx)(T.Z, {
+        children: j
+      }), (0, n.jsx)(x.Z, {
         ref: G,
         query: s,
         onQueryChange: i,
-        selectedSection: z,
+        selectedSection: H,
         selectedRow: $,
         onSelectionChange: Q,
         onSelect: W,
-        tags: V.map(e => n[e].display),
+        tags: V.map(e => a[e].display),
         sections: k,
         onRemoveTag: function(e) {
-          _(V[e])
+          R(V[e])
         },
-        placeholder: N,
-        focusAfterReady: L,
-        isReady: y,
-        "aria-labelledby": f,
-        "aria-controls": E
-      }), null != j ? (0, a.jsx)(o.Text, {
+        placeholder: w,
+        focusAfterReady: U,
+        isReady: D,
+        "aria-labelledby": v,
+        "aria-controls": _
+      }), null != Z ? (0, n.jsx)(o.Text, {
         variant: "text-xs/normal",
-        children: j
+        children: Z
       }) : null]
-    }), Y ? (0, a.jsx)(o.List, {
+    }), Y ? (0, n.jsx)(o.List, {
       ref: B,
-      className: r()(v.roleMemberList, t),
+      className: r()(f.roleMemberList, t),
       sections: k,
       renderRow: e => {
         let t, l, {
             section: s,
             row: i
           } = e,
-          d = null,
+          c = null,
           u = !1,
           h = !1,
-          T = !1,
-          g = null != w && Object.keys(n).length >= w;
+          x = !1,
+          g = null != y && Object.keys(a).length >= y;
         switch (s) {
-          case x.m$.ROLES:
-            u = (l = C(d = I[i])) in n || d.disabled, h = d.disabled || g, T = z === x.m$.ROLES && $ === i, t = (0, a.jsxs)("div", {
-              className: v.rowBody,
-              children: [(0, a.jsx)("div", {
-                className: r()(v.rowHeight, v.alignCenter),
-                children: (0, a.jsx)(o.ShieldUserIcon, {
+          case T.m$.ROLES:
+            u = (l = b(c = p[i])) in a || c.disabled, h = c.disabled || g, x = H === T.m$.ROLES && $ === i, t = (0, n.jsxs)("div", {
+              className: f.rowBody,
+              children: [(0, n.jsx)("div", {
+                className: r()(f.rowHeight, f.alignCenter),
+                children: (0, n.jsx)(o.ShieldUserIcon, {
                   size: "custom",
-                  color: d.colorString,
+                  color: c.colorString,
                   height: 20
                 })
-              }), (0, a.jsxs)("div", {
-                className: v.rowLabel,
-                children: [(0, a.jsx)(o.Text, {
+              }), (0, n.jsxs)("div", {
+                className: f.rowLabel,
+                children: [(0, n.jsx)(o.Text, {
                   variant: "text-sm/medium",
-                  className: v.__invalid_rowTitle,
-                  color: d.rowType === x.aC.EMPTY_STATE ? "text-muted" : "text-normal",
-                  children: d.name
-                }), d.disabled && null != Z ? (0, a.jsx)(o.Text, {
+                  className: f.__invalid_rowTitle,
+                  color: c.rowType === T.aC.EMPTY_STATE ? "text-muted" : "text-normal",
+                  children: c.name
+                }), c.disabled && null != N ? (0, n.jsx)(o.Text, {
                   color: "header-secondary",
                   variant: "text-xs/normal",
-                  children: Z
+                  children: N
                 }) : null]
               })]
             });
             break;
-          case x.m$.MEMBERS:
-            u = (l = C(d = M[i])) in n || d.disabled, h = d.disabled || g, T = z === x.m$.MEMBERS && $ === i, t = (0, a.jsxs)("div", {
-              className: v.rowBody,
-              children: [(0, a.jsx)(o.Avatar, {
-                src: d.avatarURL,
+          case T.m$.MEMBERS:
+            u = (l = b(c = I[i])) in a || c.disabled, h = c.disabled || g, x = H === T.m$.MEMBERS && $ === i, t = (0, n.jsxs)("div", {
+              className: f.rowBody,
+              children: [(0, n.jsx)(o.Avatar, {
+                src: c.avatarURL,
                 size: o.AvatarSizes.SIZE_24,
                 "aria-label": ""
-              }), (0, a.jsx)(o.Text, {
-                className: v.rowLabel,
+              }), (0, n.jsx)(o.Text, {
+                className: f.rowLabel,
                 variant: "text-sm/normal",
-                children: d.name
-              }), null != d.nickname ? (0, a.jsx)(o.Text, {
+                children: c.name
+              }), null != c.nickname ? (0, n.jsx)(o.Text, {
                 color: "text-muted",
-                className: v.rowLabelSubText,
+                className: f.rowLabelSubText,
                 variant: "text-sm/normal",
                 "aria-hidden": !0,
-                children: d.username
-              }) : null, d.bot && (0, a.jsx)(c.Z, {
-                verified: d.verifiedBot
+                children: c.username
+              }) : null, c.bot && (0, n.jsx)(d.Z, {
+                verified: c.verifiedBot
               })]
             });
             break;
-          case x.m$.USERS:
-            u = (l = C(d = A[i])) in n || d.disabled, h = d.disabled || g, T = z === x.m$.USERS && $ === i, t = (0, a.jsxs)("div", {
-              className: v.rowBody,
-              children: [(0, a.jsx)(o.Avatar, {
-                src: d.avatarURL,
+          case T.m$.USERS:
+            u = (l = b(c = M[i])) in a || c.disabled, h = c.disabled || g, x = H === T.m$.USERS && $ === i, t = (0, n.jsxs)("div", {
+              className: f.rowBody,
+              children: [(0, n.jsx)(o.Avatar, {
+                src: c.avatarURL,
                 size: o.AvatarSizes.SIZE_24,
                 "aria-label": ""
-              }), (0, a.jsxs)("div", {
-                className: v.rowLabel,
-                children: [(0, a.jsx)(o.Text, {
+              }), (0, n.jsxs)("div", {
+                className: f.rowLabel,
+                children: [(0, n.jsx)(o.Text, {
                   variant: "text-sm/normal",
-                  children: d.name
-                }), d.disabled && null != Z ? (0, a.jsx)(o.Text, {
+                  children: c.name
+                }), c.disabled && null != N ? (0, n.jsx)(o.Text, {
                   color: "header-secondary",
                   variant: "text-xs/normal",
-                  children: Z
+                  children: N
                 }) : null]
               })]
             });
             break;
-          case x.m$.GUILDS:
-            u = (l = C(d = p[i])) in n || d.disabled, h = d.disabled || g, T = z === x.m$.GUILDS && $ === i, t = (0, a.jsxs)("div", {
-              className: v.rowBody,
-              children: [(0, a.jsx)(m.Z, {
-                guild: d.guild,
+          case T.m$.GUILDS:
+            u = (l = b(c = A[i])) in a || c.disabled, h = c.disabled || g, x = H === T.m$.GUILDS && $ === i, t = (0, n.jsxs)("div", {
+              className: f.rowBody,
+              children: [(0, n.jsx)(m.Z, {
+                guild: c.guild,
                 active: !0,
                 size: m.Z.Sizes.SMALLER
-              }), (0, a.jsx)("div", {
-                className: v.rowLabel,
-                children: (0, a.jsx)(o.Text, {
+              }), (0, n.jsx)("div", {
+                className: f.rowLabel,
+                children: (0, n.jsx)(o.Text, {
                   variant: "text-sm/medium",
                   color: "text-normal",
-                  children: d.name
+                  children: c.name
                 })
               })]
             })
         }
-        return null == d ? null : (0, a.jsx)(R, {
+        return null == c ? null : (0, n.jsx)(C, {
           id: "user-row-".concat(i),
-          rowLabel: O ? null : S.zB(d.rowType),
+          rowLabel: O ? null : S.zB(c.rowType),
           checked: u,
           disabled: h,
-          onSelect: () => q(d),
-          showCheckbox: d.rowType !== x.aC.EMPTY_STATE,
+          onSelect: () => q(c),
+          showCheckbox: c.rowType !== T.aC.EMPTY_STATE,
           onMouseEnter: () => Q(s, i, !1),
-          selected: T,
+          selected: x,
           "aria-posinset": i + 1,
           "aria-setsize": k.reduce((e, t) => e + t, 0),
           children: t
@@ -293,33 +293,33 @@ function _(e) {
           section: t
         } = e;
         switch (t) {
-          case x.m$.ROLES:
-            return b(g.Z.Messages.ROLES);
-          case x.m$.MEMBERS:
-            return b(g.Z.Messages.MEMBERS);
-          case x.m$.USERS:
-            return b(g.Z.Messages.USERS);
-          case x.m$.GUILDS:
-            return b(g.Z.Messages.SERVERS)
+          case T.m$.ROLES:
+            return E(g.Z.Messages.ROLES);
+          case T.m$.MEMBERS:
+            return E(g.Z.Messages.MEMBERS);
+          case T.m$.USERS:
+            return E(g.Z.Messages.USERS);
+          case T.m$.GUILDS:
+            return E(g.Z.Messages.SERVERS)
         }
       },
       sectionHeight: 32,
       onScroll: J,
       role: void 0,
       innerRole: "listbox",
-      innerId: E,
+      innerId: _,
       innerAriaMultiselectable: !0,
       innerAriaOrientation: "vertical"
-    }) : (0, a.jsxs)(u.Z, {
+    }) : (0, n.jsxs)(u.Z, {
       className: t,
       align: u.Z.Align.CENTER,
       justify: u.Z.Justify.CENTER,
       direction: u.Z.Direction.VERTICAL,
-      children: [(0, a.jsx)(d.Z, {
-        className: v.noResultIcon
-      }), (0, a.jsx)(o.Text, {
+      children: [(0, n.jsx)(c.Z, {
+        className: f.noResultIcon
+      }), (0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: D(s)
+        children: L(s)
       })]
     })]
   })

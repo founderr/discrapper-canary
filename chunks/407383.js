@@ -1,9 +1,9 @@
-var a, r, s, i;
-n.d(e, {
+var o, i, r, a;
+e.d(n, {
   G: function() {
-    return a
+    return o
   },
   I: function() {
-    return r
+    return i
   }
-}), (s = a || (a = {})).PLAY = "play", s.PAUSE = "pause", s.BACK_TO_CONVERSATION = "back_to_conversation", (i = r || (r = {})).INAPPROPRIATE_CONVERSATION = "inappropriate_conversation", i.KEYBIND = "keybind"
+}), (r = o || (o = {})).PLAY = "play", r.PAUSE = "pause", r.BACK_TO_CONVERSATION = "back_to_conversation", (a = i || (i = {})).INAPPROPRIATE_CONVERSATION = "inappropriate_conversation", a.KEYBIND = "keybind"

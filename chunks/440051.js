@@ -1,9 +1,9 @@
 n.d(t, {
   Y: function() {
-    return s
+    return i
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-01_expiring_status",
   label: "Expiring status Experiment ",

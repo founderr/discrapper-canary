@@ -19,8 +19,8 @@ t.Z = r.memo(function(e) {
       history: I,
       setHistory: T,
       currentView: h,
-      pushHistory: S,
-      goBack: f
+      pushHistory: f,
+      goBack: S
     } = function() {
       let [e, t] = r.useState([{
         type: a.gc.HOME
@@ -39,7 +39,7 @@ t.Z = r.memo(function(e) {
         }
       }
     }(),
-    [N, A] = r.useState(""),
+    [A, N] = r.useState(""),
     m = s.K.useExperiment({
       location: "App Launcher Root"
     }, {
@@ -55,8 +55,8 @@ t.Z = r.memo(function(e) {
       t = (0, i.jsx)(u.Z, {
         channel: d,
         entrypoint: E,
-        searchQuery: N,
-        setSearchQuery: A,
+        searchQuery: A,
+        setSearchQuery: N,
         enableRecommendations: m.recommendationsEnabled,
         enableRecents: m.recentsDropdownEnabled,
         enableGlobalSearch: O.enabled
@@ -91,8 +91,8 @@ t.Z = r.memo(function(e) {
           history: I,
           setHistory: T,
           currentView: h,
-          pushHistory: S,
-          goBack: f
+          pushHistory: f,
+          goBack: S
         },
         children: t
       })

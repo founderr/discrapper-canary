@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
   Ng: function() {
-    return N
+    return A
   },
   OC: function() {
-    return R
+    return p
   },
   dg: function() {
-    return A
+    return N
   },
   dp: function() {
     return T
   },
   f3: function() {
-    return S
+    return f
   },
   nA: function() {
     return m
@@ -22,7 +22,7 @@ n.d(t, {
     return I
   },
   uV: function() {
-    return f
+    return S
   },
   vY: function() {
     return O
@@ -98,22 +98,22 @@ let h = [{
   klass: "audio"
 }];
 
-function S(e) {
-  return f(e.name, e.type)
+function f(e) {
+  return S(e.name, e.type)
 }
 
-function f(e, t) {
+function S(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
   let i = o().find(h, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
   return null != i ? i.klass : "unknown"
 }
 
-function N(e) {
+function A(e) {
   return r().filesize(e)
 }
 
-function A(e) {
+function N(e) {
   let t = _.default.getCurrentUser();
   a.Z.trackExposure({
     location: "de18ec_1"
@@ -127,7 +127,7 @@ function A(e) {
 }
 
 function m(e, t) {
-  let n = A(t);
+  let n = N(t);
   return Array.from(e).some(e => e.size > n)
 }
 
@@ -136,10 +136,10 @@ function O(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > R()
+  }(e) > p()
 }
 
-function R() {
+function p() {
   let e = _.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

@@ -6,9 +6,9 @@ a.r(s), a.d(s, {
 var t = a(735250);
 a(470079);
 var r = a(481060),
-  i = a(935369),
-  l = a(53365),
-  n = a(689938),
+  n = a(935369),
+  i = a(53365),
+  l = a(689938),
   o = a(562402),
   _ = a(490962),
   c = a(221870);
@@ -47,9 +47,9 @@ function E(e) {
     transitionState: _,
     onClose: E
   } = e, [d, {
-    loading: x,
-    error: C
-  }] = (0, i.Z)(a ? l.$J : l.hY), N = async () => {
+    loading: m,
+    error: x
+  }] = (0, n.Z)(a ? i.$J : i.hY), C = async () => {
     try {
       let e = await d(s);
       null != e && (null == E || E())
@@ -59,7 +59,7 @@ function E(e) {
     className: o.__invalid_container,
     size: r.ModalSize.SMALL,
     transitionState: _,
-    "aria-label": n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE,
+    "aria-label": l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE,
     children: [(0, t.jsx)(r.ModalHeader, {
       separator: !1,
       className: o.header,
@@ -77,25 +77,25 @@ function E(e) {
         children: [(0, t.jsx)(r.Heading, {
           variant: "heading-xl/medium",
           color: "header-primary",
-          children: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE
+          children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_TITLE
         }), (0, t.jsx)(r.Spacer, {
           size: 12
         }), (0, t.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY.format({
+          children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY.format({
             termsURL: "https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms"
           })
         }), (0, t.jsx)(r.Spacer, {
           size: 24
         }), (0, t.jsx)(T, {
-          header: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_HEADER,
-          body: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_BODY
+          header: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_HEADER,
+          body: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_1_BODY
         }), (0, t.jsx)(r.Spacer, {
           size: 16
         }), (0, t.jsx)(T, {
-          header: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_HEADER,
-          body: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_BODY
+          header: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_HEADER,
+          body: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY_POINT_2_BODY
         })]
       })
     }), (0, t.jsx)(r.ModalFooter, {
@@ -103,9 +103,9 @@ function E(e) {
         className: o.footer,
         children: [(0, t.jsx)(r.Button, {
           fullWidth: !0,
-          onClick: N,
-          submitting: x,
-          children: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_CTA
+          onClick: C,
+          submitting: m,
+          children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_CTA
         }), (0, t.jsx)(r.Spacer, {
           size: 4
         }), (0, t.jsx)(r.Button, {
@@ -114,21 +114,21 @@ function E(e) {
           look: r.Button.Looks.LINK,
           fullWidth: !0,
           onClick: E,
-          children: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_REMIND_ME_LATER
-        }), null == C ? null : (0, t.jsxs)(t.Fragment, {
+          children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_REMIND_ME_LATER
+        }), null == x ? null : (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)(r.Spacer, {
             size: 8
           }), (0, t.jsxs)(r.Text, {
             variant: "text-xs/normal",
             color: "status-danger",
-            children: ["Error: ", C.message]
+            children: ["Error: ", x.message]
           })]
         }), (0, t.jsx)(r.Spacer, {
           size: 10
         }), (0, t.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: n.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_DISCLAIMER.format({
+          children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_DISCLAIMER.format({
             termsURL: "https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms"
           })
         })]

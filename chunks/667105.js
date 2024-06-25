@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   g2: function() {
-    return S
+    return f
   },
   hf: function() {
     return T
@@ -53,7 +53,7 @@ function h(e) {
   let i = Date.now() - 2592e7;
   return i <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0)
 }
-let S = e => {
+let f = e => {
   let {
     useReducedMotion: t,
     className: n

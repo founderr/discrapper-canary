@@ -1,56 +1,56 @@
 n.d(t, {
   Z: function() {
-    return E
+    return m
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(433517),
   o = n(518774),
   c = n(27457),
   u = n(981631),
   d = n(289999),
   h = n(972667);
-let m = "CameraPreviewPosition";
+let p = "CameraPreviewPosition";
 
-function E(e) {
+function m(e) {
   let {
     width: t,
     onContextMenuParticipant: n,
-    height: s,
-    channel: E,
-    participants: p
-  } = e, [g, f] = function() {
-    let [e, t] = i.useState(() => r.K.get(m, u.VD2.BOTTOM_RIGHT));
-    return [e, i.useCallback(e => {
-      r.K.set(m, e), t(e)
+    height: l,
+    channel: m,
+    participants: _
+  } = e, [f, E] = function() {
+    let [e, t] = a.useState(() => r.K.get(p, u.VD2.BOTTOM_RIGHT));
+    return [e, a.useCallback(e => {
+      r.K.set(p, e), t(e)
     }, [])]
-  }(), C = i.useRef(null), _ = null == E.getGuildId() ? 70 : 50;
-  return i.useLayoutEffect(() => {
+  }(), g = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
+  return a.useLayoutEffect(() => {
     var e;
-    null === (e = C.current) || void 0 === e || e.ensureIsInPosition()
-  }, [p.length]), (0, l.jsx)("div", {
+    null === (e = g.current) || void 0 === e || e.ensureIsInPosition()
+  }, [_.length]), (0, i.jsx)("div", {
     className: d.container,
-    children: (0, l.jsx)(o._, {
-      position: g,
+    children: (0, i.jsx)(o._, {
+      position: f,
       id: 0,
-      ref: C,
-      onMove: (e, t) => f(t),
+      ref: g,
+      onMove: (e, t) => E(t),
       maxX: t,
-      maxY: s,
-      edgeOffsetTop: _,
+      maxY: l,
+      edgeOffsetTop: C,
       edgeOffsetBottom: 70,
       edgeOffsetLeft: 16,
       edgeOffsetRight: 16,
-      children: (0, l.jsx)("div", {
+      children: (0, i.jsx)("div", {
         className: d.tileContainer,
-        children: p.map(e => (0, l.jsx)(c.ZP, {
+        children: _.map(e => (0, i.jsx)(c.ZP, {
           participant: e,
-          channel: E,
+          channel: m,
           onContextMenu: n,
-          className: a()(d.tile, h.elevationHigh),
+          className: s()(d.tile, h.elevationHigh),
           fit: c.BP.COVER,
           inCall: !0,
           inPopout: !1,

@@ -17,7 +17,7 @@ function h(e) {
   if (!I.has(e.guild.id)) return !1;
   I.delete(e.guild.id), E.info("Guild has become available: ".concat(e.guild.id))
 }
-class S extends(i = u.ZP.Store) {
+class f extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(d.Z)
   }
@@ -34,12 +34,12 @@ class S extends(i = u.ZP.Store) {
     return Array.from(I)
   }
 }
-o = "GuildAvailabilityStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
+o = "GuildAvailabilityStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new S(_.Z, {
+}) : r[s] = o, t.Z = new f(_.Z, {
   CONNECTION_OPEN: T,
   OVERLAY_INITIALIZE: T,
   GUILD_UNAVAILABLE: function(e) {

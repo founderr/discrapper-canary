@@ -1,12 +1,12 @@
 n.d(t, {
   P: function() {
-    return r
+    return l
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(709014);
-let a = {
+var i = n(735250),
+  s = n(470079),
+  a = n(709014);
+let r = {
     disable: {
       name: "disable",
       start: 0,
@@ -28,18 +28,18 @@ let a = {
       duration: 70
     }
   },
-  r = e => {
-    let t = i.useRef(null),
-      r = i.useRef(e),
-      o = i.useMemo(() => () => {
+  l = e => {
+    let t = s.useRef(null),
+      l = s.useRef(e),
+      o = s.useMemo(() => () => {
         null != t.current && t.current.play(e)
       }, [e]),
-      c = i.useCallback(() => {
+      c = s.useCallback(() => {
         if (null == t.current) return;
         let n = "enable" === e ? "hover_disabled" : "hover_enabled";
         t.current.play(n)
       }, [e]),
-      u = i.useCallback(() => {
+      d = s.useCallback(() => {
         if (null == t.current) return;
         let n = "enable" === e ? "hover_disabled" : "hover_enabled";
         t.current.stopIfPlaying(n)
@@ -48,15 +48,15 @@ let a = {
       events: {
         onClick: o,
         onMouseEnter: c,
-        onMouseLeave: u
+        onMouseLeave: d
       },
       play: o,
-      Component: i.useCallback(e => (0, s.jsx)(l.L, {
+      Component: s.useCallback(e => (0, i.jsx)(a.L, {
         ...e,
         src: () => n.e("7584").then(n.t.bind(n, 883488, 19)),
         ref: t,
-        initialAnimation: r.current,
-        markers: a
+        initialAnimation: l.current,
+        markers: r
       }), [])
     }
   }

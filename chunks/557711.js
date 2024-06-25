@@ -26,15 +26,15 @@ function _(e) {
     className: T,
     onAction: h
   } = e, {
-    tooltip: S,
-    loading: f,
-    disabled: N,
-    onClick: A
+    tooltip: f,
+    loading: S,
+    disabled: A,
+    onClick: N
   } = (0, l.Fe)(t, n, c, a.ZP.getNickname(_, r, n)), m = () => {
-    null == h || h(), A()
+    null == h || h(), N()
   };
   return (0, i.jsx)(o.Tooltip, {
-    text: S,
+    text: f,
     children: e => {
       let {
         onMouseEnter: n,
@@ -49,9 +49,9 @@ function _(e) {
         onClick: m,
         onMouseEnter: n,
         onMouseLeave: r,
-        disabled: N,
-        submitting: f,
-        "aria-label": null != S ? S : t.name,
+        disabled: A,
+        submitting: S,
+        "aria-label": null != f ? f : t.name,
         children: (0, i.jsx)(o.UserPlayIcon, {
           size: "xs",
           color: "currentColor"

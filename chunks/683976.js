@@ -4,7 +4,7 @@ n.d(t, {
     return I
   },
   n: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(735250),
@@ -107,22 +107,22 @@ function h(e) {
       onChange: r,
       selected: t
     }, e.key || e.value)
-  }), S = (0, c.Dt)(), f = (0, l.ZP)({
-    id: S,
+  }), f = (0, c.Dt)(), S = (0, l.ZP)({
+    id: f,
     isEnabled: !0,
     wrap: !0,
     async scrollToStart() {},
     async scrollToEnd() {}
   }), {
-    ref: N,
-    ...A
-  } = f.containerProps;
-  return (0, u.useFocusLock)(N), (0, i.jsx)(a.bG, {
-    navigator: f,
+    ref: A,
+    ...N
+  } = S.containerProps;
+  return (0, u.useFocusLock)(A), (0, i.jsx)(a.bG, {
+    navigator: S,
     children: (0, i.jsx)("div", {
-      ref: N,
+      ref: A,
       className: I,
-      ...A,
+      ...N,
       role: "listbox",
       children: r ? (0, i.jsx)(u.Scroller, {
         className: d.quickSelectScroller,
@@ -131,7 +131,7 @@ function h(e) {
     })
   })
 }
-class S extends r.PureComponent {
+class f extends r.PureComponent {
   render() {
     let {
       label: e,

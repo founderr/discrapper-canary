@@ -3,10 +3,10 @@ n.d(t, {
     return eh
   },
   St: function() {
-    return es
+    return el
   },
   WT: function() {
-    return ea
+    return es
   },
   jL: function() {
     return ed
@@ -18,10 +18,10 @@ n.d(t, {
     return en
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(512722),
   o = n.n(r);
 n(699581);
@@ -29,40 +29,40 @@ var c = n(442837),
   u = n(704215),
   d = n(692547),
   h = n(481060),
-  m = n(493683),
-  E = n(475179),
-  p = n(287734),
-  g = n(872810),
-  f = n(607070),
-  C = n(220779),
-  _ = n(201133),
+  p = n(493683),
+  m = n(475179),
+  _ = n(287734),
+  f = n(872810),
+  E = n(607070),
+  g = n(220779),
+  C = n(201133),
   I = n(605236),
   x = n(543241),
   T = n(318374),
   N = n(258609),
-  Z = n(774073),
+  v = n(774073),
   S = n(382182),
-  v = n(871118),
+  Z = n(871118),
   A = n(359110),
   M = n(171368),
-  R = n(12168),
-  j = n(592125),
-  L = n(430824),
-  O = n(496675),
+  b = n(12168),
+  R = n(592125),
+  j = n(430824),
+  L = n(496675),
   P = n(699516),
-  y = n(9156),
-  b = n(979651),
+  O = n(9156),
+  y = n(979651),
   D = n(938475),
-  U = n(346656),
-  k = n(409216),
+  k = n(346656),
+  U = n(409216),
   w = n(368666),
-  H = n(626135),
-  G = n(768581),
-  B = n(5192),
+  B = n(626135),
+  H = n(768581),
+  G = n(5192),
   V = n(26033),
   F = n(192918),
-  z = n(22211),
-  W = n(571243),
+  W = n(22211),
+  z = n(571243),
   Y = n(69259),
   K = n(206295),
   q = n(111386),
@@ -76,47 +76,47 @@ var c = n(442837),
 function en(e) {
   let {
     children: t
-  } = e, n = i.useRef(null);
-  return (0, h.useFocusLock)(n), (0, l.jsx)("div", {
+  } = e, n = a.useRef(null);
+  return (0, h.useFocusLock)(n), (0, i.jsx)("div", {
     className: et.popout,
     ref: n,
     children: t
   })
 }
 
-function el(e) {
+function ei(e) {
   let {
     children: t,
     backgroundImgSrc: n,
-    className: i,
-    style: s = {}
+    className: a,
+    style: l = {}
   } = e, {
     primaryColor: r,
     secondaryColor: o
   } = (0, K.Z)(n);
-  return (0, l.jsx)("div", {
+  return (0, i.jsx)("div", {
     "data-disable-adaptive-theme": !0,
-    className: a()(et.hero, "theme-".concat($.BRd.DARK), i),
+    className: s()(et.hero, "theme-".concat($.BRd.DARK), a),
     style: {
       background: "linear-gradient(45deg, ".concat(r, ", ").concat(o, ")"),
-      ...s
+      ...l
     },
     children: t
   })
 }
-let ei = i.createContext(null);
+let ea = a.createContext(null);
 
-function es(e) {
+function el(e) {
   let {
     children: t
-  } = e, n = i.useRef(null);
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)("div", {
+  } = e, n = a.useRef(null);
+  return (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)("div", {
       className: et.interactionsContainerHeader,
       ref: e => n.current = e
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: et.interactionsContainer,
-      children: (0, l.jsx)(ei.Provider, {
+      children: (0, i.jsx)(ea.Provider, {
         value: n.current,
         children: t
       })
@@ -124,36 +124,36 @@ function es(e) {
   })
 }
 
-function ea(e) {
+function es(e) {
   let {
     channel: t,
     user: n,
-    generateReactionImage: s,
-    reactionImageAltText: a,
+    generateReactionImage: l,
+    reactionImageAltText: s,
     closePopout: r,
-    entry: p,
-    requestId: g,
-    buttons: f = [],
+    entry: _,
+    requestId: f,
+    buttons: E = [],
     header: x
-  } = e, [T, N] = i.useState(!1), [Z, S] = i.useState(null), v = (0, c.e7)([O.Z], () => O.Z.can($.Plq.SEND_MESSAGES, t)), M = (0, W.a)({
+  } = e, [T, N] = a.useState(!1), [v, S] = a.useState(null), Z = (0, c.e7)([L.Z], () => L.Z.can($.Plq.SEND_MESSAGES, t)), M = (0, z.a)({
     location: "PopoutReactor"
-  }), [R, b] = i.useState(!1), [w, G] = i.useState(!1), {
+  }), [b, y] = a.useState(!1), [w, H] = a.useState(!1), {
     voiceBar: V,
     joinVoiceButton: F
   } = function(e) {
     let {
       channel: t,
       entry: n,
-      requestId: s
+      requestId: l
     } = e, {
-      streamPreviewUrl: a,
+      streamPreviewUrl: s,
       channel: r
-    } = (0, z.Z)(n), o = (0, c.e7)([L.Z], () => null != r ? L.Z.getGuild(r.guild_id) : void 0), u = (0, c.Wu)([D.ZP], () => null != r ? D.ZP.getVoiceStatesForChannel(r) : [], [r]), m = i.useMemo(() => {
+    } = (0, W.Z)(n), o = (0, c.e7)([j.Z], () => null != r ? j.Z.getGuild(r.guild_id) : void 0), u = (0, c.Wu)([D.ZP], () => null != r ? D.ZP.getVoiceStatesForChannel(r) : [], [r]), p = a.useMemo(() => {
       for (let e of u) {
-        let t = j.Z.getDMFromUserId(e.user.id),
-          n = null != t && y.ZP.isChannelMuted(null, t),
-          l = P.Z.isBlocked(e.user.id);
-        if (n || l) return !0
+        let t = R.Z.getDMFromUserId(e.user.id),
+          n = null != t && O.ZP.isChannelMuted(null, t),
+          i = P.Z.isBlocked(e.user.id);
+        if (n || i) return !0
       }
       return !1
     }, [u]);
@@ -161,230 +161,230 @@ function ea(e) {
       voiceBar: void 0,
       joinVoiceButton: void 0
     };
-    let p = null != a,
-      g = () => {
-        E.Z.updateChatOpen(r.id, !0), (0, A.Kh)(r.id), (0, Y.L)(J.xP.VOICE_CHANNEL_PREVIEWED, {
+    let _ = null != s,
+      f = () => {
+        m.Z.updateChatOpen(r.id, !0), (0, A.Kh)(r.id), (0, Y.L)(J.xP.VOICE_CHANNEL_PREVIEWED, {
           entry: n,
           channelId: t.id,
           guildId: t.guild_id,
-          requestId: s,
+          requestId: l,
           destinationChannelId: r.id,
           destinationGuildId: r.guild_id
         })
       },
-      f = m ? ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
-      C = e => {
+      E = p ? ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
+      g = e => {
         let {
           children: t
         } = e;
-        return (0, l.jsx)(h.Tooltip, {
-          "aria-label": f,
-          text: (0, l.jsxs)(l.Fragment, {
-            children: [m && (0, l.jsx)(h.WarningIcon, {
+        return (0, i.jsx)(h.Tooltip, {
+          "aria-label": E,
+          text: (0, i.jsxs)(i.Fragment, {
+            children: [p && (0, i.jsx)(h.WarningIcon, {
               size: "custom",
               width: 13,
               height: 13,
               className: et.popoutBlockedWarningIcon
-            }), f]
+            }), E]
           }),
           shouldShow: !0,
           children: t
         }, "voice-preview")
       },
-      _ = (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsxs)("div", {
+      C = (0, i.jsxs)(i.Fragment, {
+        children: [(0, i.jsxs)("div", {
           className: et.voiceChannelPopoutReactorHeader,
-          children: [(0, l.jsx)(C, {
-            children: e => (0, l.jsxs)(h.Clickable, {
+          children: [(0, i.jsx)(g, {
+            children: e => (0, i.jsxs)(h.Clickable, {
               ...e,
               "aria-label": ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
-              onClick: g,
+              onClick: f,
               className: et.voiceChannelPopoutReactorChannel,
-              children: [(0, l.jsx)(U.Z, {
+              children: [(0, i.jsx)(k.Z, {
                 guild: o,
-                size: U.Z.Sizes.SMOL,
+                size: k.Z.Sizes.SMOL,
                 className: et.voiceChannelGuildIcon,
                 active: !0
-              }), (0, l.jsx)(h.ChevronSmallRightIcon, {
+              }), (0, i.jsx)(h.ChevronSmallRightIcon, {
                 size: "xxs",
                 color: d.Z.colors.INTERACTIVE_NORMAL
-              }), (0, l.jsx)(h.VoiceNormalIcon, {
+              }), (0, i.jsx)(h.VoiceNormalIcon, {
                 size: "xs",
                 color: d.Z.colors.TEXT_NORMAL
-              }), (0, l.jsx)(h.Text, {
+              }), (0, i.jsx)(h.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
                 className: et.voiceChannelName,
                 children: r.name
               })]
             })
-          }), (0, l.jsx)(k.Z, {
+          }), (0, i.jsx)(U.Z, {
             guildId: o.id,
             users: u,
             max: 3,
-            renderUser: (e, t) => (0, l.jsx)(h.Avatar, {
+            renderUser: (e, t) => (0, i.jsx)(h.Avatar, {
               src: e.user.getAvatarURL(o.id, 16),
               size: h.AvatarSizes.SIZE_16,
               "aria-label": "avatar",
               className: t
             }),
-            renderMoreUsers: e => (0, l.jsx)("div", {
+            renderMoreUsers: e => (0, i.jsx)("div", {
               className: et.voiceChannelAdditionalParticipants,
-              children: (0, l.jsx)(h.Text, {
+              children: (0, i.jsx)(h.Text, {
                 variant: "text-xxs/semibold",
                 color: "text-normal",
                 children: e
               })
             })
           })]
-        }), (0, l.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: et.primaryActionPopoutDivider
         })]
       });
     return {
-      voiceBar: _,
-      joinVoiceButton: (0, l.jsx)(C, {
-        children: e => (0, l.jsx)(eh, {
+      voiceBar: C,
+      joinVoiceButton: (0, i.jsx)(g, {
+        children: e => (0, i.jsx)(eh, {
           ...e,
           color: h.Button.Colors.GREEN,
-          onClick: g,
-          IconComponent: p ? h.ScreenIcon : h.VoiceNormalIcon,
+          onClick: f,
+          IconComponent: _ ? h.ScreenIcon : h.VoiceNormalIcon,
           children: ee.Z.Messages.PREVIEW
         })
       })
     }
   }({
     channel: t,
-    entry: p,
-    requestId: g
-  }), K = null != F && 0 === f.length ? [F] : f, X = K.length > 0, en = K.length >= 2, [el, ei] = i.useState(!X), es = "#".concat(t.name), ea = B.ZP.getName(t.guild_id, t.id, n), eo = T ? ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, ec = async e => {
+    entry: _,
+    requestId: f
+  }), K = null != F && 0 === E.length ? [F] : E, X = K.length > 0, en = K.length >= 2, [ei, ea] = a.useState(!X), el = "#".concat(t.name), es = G.ZP.getName(t.guild_id, t.id, n), eo = T ? ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, ec = async e => {
     if (null != e) {
-      if (H.default.track($.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
+      if (B.default.track($.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: J.Kd.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
         }), M) {
-        let i;
-        if ((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), b(!0), G(!1), T) i = t;
+        let a;
+        if ((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), y(!0), H(!1), T) a = t;
         else {
-          var l;
-          let e = await m.Z.getOrEnsurePrivateChannel(n.id);
-          i = null !== (l = j.Z.getChannel(e)) && void 0 !== l ? l : null
+          var i;
+          let e = await p.Z.getOrEnsurePrivateChannel(n.id);
+          a = null !== (i = R.Z.getChannel(e)) && void 0 !== i ? i : null
         }
-        return o()(null != i, "Send channel must be defined"), ed({
+        return o()(null != a, "Send channel must be defined"), ed({
           reply: ":".concat(e.name, ":"),
-          sendToChannel: i,
+          sendToChannel: a,
           onComplete: () => {
-            G(!0), setTimeout(() => {
-              b(!1), r()
+            H(!0), setTimeout(() => {
+              y(!1), r()
             }, 600)
           },
           interactionType: J.xP.REACTION_EMOJI_REACT_SENT
         })
       }
-      ei(!0), null != Z && (Z.insertEmoji(e, !1, !1), Z.focus())
+      ea(!0), null != v && (v.insertEmoji(e, !1, !1), v.focus())
     }
   }, eu = async e => {
-    let l;
-    if (M && (0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), T) l = t;
+    let i;
+    if (M && (0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), T) i = t;
     else {
-      let e = await m.Z.openPrivateChannel(n.id, !1, !1),
-        t = j.Z.getChannel(e);
-      o()(null != t, "DM channel must be defined"), l = t
+      let e = await p.Z.openPrivateChannel(n.id, !1, !1),
+        t = R.Z.getChannel(e);
+      o()(null != t, "DM channel must be defined"), i = t
     }
-    let i = l.type === $.d4z.DM ? J.xP.DM_REACTION_MESSAGE_SENT : J.xP.CHANNEL_REACTION_MESSAGE_SENT;
+    let a = i.type === $.d4z.DM ? J.xP.DM_REACTION_MESSAGE_SENT : J.xP.CHANNEL_REACTION_MESSAGE_SENT;
     return ed({
       reply: e,
-      sendToChannel: l,
+      sendToChannel: i,
       onComplete: r,
-      interactionType: i
+      interactionType: a
     })
   }, ed = async e => {
     var n;
     let {
-      reply: l,
-      sendToChannel: i,
+      reply: i,
+      sendToChannel: a,
       onComplete: r,
       interactionType: c
     } = e;
-    let u = await (n = s, async function() {
-      for (var e = arguments.length, t = Array(e), l = 0; l < e; l++) t[l] = arguments[l];
+    let u = await (n = l, async function() {
+      for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
       try {
         return await n(...t)
       } catch (e) {
         throw e
       }
-    })(i.id);
-    o()(null != u, "Reaction image must be defined"), await (0, _.B)({
+    })(a.id);
+    o()(null != u, "Reaction image must be defined"), await (0, C.B)({
       file: u,
-      channel: i,
-      altText: a,
-      reply: l
+      channel: a,
+      altText: s,
+      reply: i
     }), (0, Y.L)(c, {
-      entry: p,
+      entry: _,
       channelId: t.id,
       guildId: t.guild_id,
-      requestId: g,
-      destinationChannelId: i.id,
-      destinationGuildId: i.guild_id
+      requestId: f,
+      destinationChannelId: a.id,
+      destinationGuildId: a.guild_id
     }), null == r || r()
-  }, em = null != x ? x : null != V ? V : void 0;
-  return (0, l.jsxs)("div", {
+  }, ep = null != x ? x : null != V ? V : void 0;
+  return (0, i.jsxs)("div", {
     style: {
-      pointerEvents: R ? "none" : "all"
+      pointerEvents: b ? "none" : "all"
     },
-    children: [(0, l.jsx)(Q.Z, {
+    children: [(0, i.jsx)(Q.Z, {
       sent: w,
-      shown: R,
+      shown: b,
       className: et.toastContainer
-    }), null != em ? em : M ? (0, l.jsx)(q.Z, {
-      children: (0, l.jsxs)("div", {
+    }), null != ep ? ep : M ? (0, i.jsx)(q.Z, {
+      children: (0, i.jsxs)("div", {
         className: et.emojiHotrailShareToChannel,
-        children: [(0, l.jsx)(er, {
+        children: [(0, i.jsx)(er, {
           channel: t,
           onClickSuggestion: ec
-        }), (0, l.jsx)(C.dE, {
+        }), (0, i.jsx)(g.dE, {
           onSelectEmoji: ec
         })]
       })
-    }) : (0, l.jsx)("div", {
+    }) : (0, i.jsx)("div", {
       className: et.emojiHotrailShareToChannel,
-      children: (0, l.jsx)(er, {
+      children: (0, i.jsx)(er, {
         channel: t,
         onClickSuggestion: ec
       })
-    }), (0, l.jsxs)("div", {
-      className: el ? et.inputContainerShareToChannel : et.hiddenButRenderedInputField,
-      children: [X && (0, l.jsx)(h.Clickable, {
-        onClick: () => ei(!1),
+    }), (0, i.jsxs)("div", {
+      className: ei ? et.inputContainerShareToChannel : et.hiddenButRenderedInputField,
+      children: [X && (0, i.jsx)(h.Clickable, {
+        onClick: () => ea(!1),
         className: et.primaryActionPopoutMessageCloseIcon,
-        children: (0, l.jsx)(h.CloseSmallIcon, {
+        children: (0, i.jsx)(h.CloseSmallIcon, {
           size: "custom",
           width: 20,
           height: 20,
           color: d.Z.colors.ICON_PRIMARY
         })
-      }), (0, l.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: et.replyInputWrapper,
-        children: (0, l.jsx)(C.A7, {
+        children: (0, i.jsx)(g.A7, {
           placeholder: ee.Z.Messages.TEXTAREA_PLACEHOLDER.format({
-            channel: T ? es : "@".concat(ea)
+            channel: T ? el : "@".concat(es)
           }),
           onEnter: eu,
           setEditorRef: e => S(e),
           channel: T ? t : void 0,
-          showEmojiButton: null != em,
-          renderAttachButton: v ? () => (0, l.jsx)(h.Tooltip, {
+          showEmojiButton: null != ep,
+          renderAttachButton: Z ? () => (0, i.jsx)(h.Tooltip, {
             text: eo,
-            children: e => (0, l.jsx)(h.Clickable, {
+            children: e => (0, i.jsx)(h.Clickable, {
               ...e,
               className: et.shareToChannelButton,
               onClick: () => N(e => !e),
-              children: T ? (0, l.jsx)(h.TextIcon, {
+              children: T ? (0, i.jsx)(h.TextIcon, {
                 size: "custom",
                 width: 20,
                 height: 20
-              }) : (0, l.jsx)(h.AtIcon, {
+              }) : (0, i.jsx)(h.AtIcon, {
                 size: "custom",
                 width: 20,
                 height: 20
@@ -393,20 +393,20 @@ function ea(e) {
           }) : void 0
         })
       })]
-    }), !1 === el && (0, l.jsxs)("div", {
+    }), !1 === ei && (0, i.jsxs)("div", {
       className: et.primaryActionPopoutActionButtons,
-      children: [(0, l.jsxs)(h.Button, {
+      children: [(0, i.jsxs)(h.Button, {
         className: et.secondaryButton,
         color: h.Button.Colors.CUSTOM,
-        onClick: () => ei(!0),
+        onClick: () => ea(!0),
         innerClassName: et.iconButton,
         size: en ? h.Button.Sizes.MIN : h.Button.Sizes.LARGE,
-        children: [(0, l.jsx)(h.ChatIcon, {
+        children: [(0, i.jsx)(h.ChatIcon, {
           size: "custom",
           width: 20,
           height: 20,
           colorClass: et.secondaryText
-        }), !en && (0, l.jsx)(h.Text, {
+        }), !en && (0, i.jsx)(h.Text, {
           variant: "text-md/semibold",
           className: et.secondaryText,
           children: ee.Z.Messages.USER_POPOUT_MESSAGE
@@ -419,30 +419,30 @@ let er = e => {
   let {
     channel: t,
     onClickSuggestion: n
-  } = e, [s, a] = i.useState(!1);
-  i.useEffect(() => {
-    a(!0)
+  } = e, [l, s] = a.useState(!1);
+  a.useEffect(() => {
+    s(!0)
   }, []);
-  let r = !!f.Z.keyboardModeEnabled && !s,
+  let r = !!E.Z.keyboardModeEnabled && !l,
     o = (0, x.wC)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
       emoji: e,
       url: e.url
     } : {
       emoji: e,
-      url: (0, G.gT)({
+      url: (0, H.gT)({
         id: e.id,
         animated: e.animated,
         size: 58
       })
     });
-  return (0, l.jsx)(l.Fragment, {
+  return (0, i.jsx)(i.Fragment, {
     children: o.map(e => {
       let {
         emoji: t,
-        url: i
+        url: a
       } = e;
-      return null != i ? (0, l.jsx)("div", {
-        children: (0, l.jsx)(h.TooltipContainer, {
+      return null != a ? (0, i.jsx)("div", {
+        children: (0, i.jsx)(h.TooltipContainer, {
           text: ee.Z.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
             emojiName: t.name
           }),
@@ -452,9 +452,9 @@ let er = e => {
           }),
           color: h.Tooltip.Colors.PRIMARY,
           shouldShow: !r && void 0,
-          children: (0, l.jsx)(R.u, {
+          children: (0, i.jsx)(b.u, {
             emoji: t,
-            isDisabled: !s,
+            isDisabled: !l,
             onClick: () => n(t),
             className: et.emoji
           })
@@ -468,52 +468,52 @@ function eo(e) {
   let {
     channel: t,
     userDescription: n,
-    headerIcons: i,
-    entry: s
+    headerIcons: a,
+    entry: l
   } = e, r = t.guild_id, {
     displayParticipants: o,
     participant1: c,
     participant2: u,
     numOtherParticipants: d
-  } = (0, F.Z)(s, 3), m = [c, u];
-  return (0, l.jsxs)("div", {
+  } = (0, F.Z)(l, 3), p = [c, u];
+  return (0, i.jsxs)("div", {
     className: et.popoutContentHeader,
-    children: [(0, l.jsxs)("div", {
+    children: [(0, i.jsxs)("div", {
       className: et.popoutUserContainer,
-      children: [(0, l.jsx)(T.Z, {
+      children: [(0, i.jsx)(T.Z, {
         maxUsers: 3,
         users: o,
         size: h.AvatarSizes.SIZE_24,
         avatarClassName: et.popoutStackedAvatar,
         hideOverflowCount: !0,
         disableUsernameTooltip: !0
-      }), (0, l.jsx)(h.Spacer, {
+      }), (0, i.jsx)(h.Spacer, {
         size: 8,
         horizontal: !0
-      }), (0, l.jsx)(h.Heading, {
+      }), (0, i.jsx)(h.Heading, {
         variant: "heading-sm/normal",
         className: et.popoutTextSecondary,
         children: n.format({
-          user1: B.ZP.getName(r, t.id, m[0]),
-          user2: B.ZP.getName(r, t.id, m[1]),
+          user1: G.ZP.getName(r, t.id, p[0]),
+          user2: G.ZP.getName(r, t.id, p[1]),
           countOthers: d,
-          nameHook: (e, t) => (0, l.jsx)(h.Clickable, {
+          nameHook: (e, t) => (0, i.jsx)(h.Clickable, {
             tag: "span",
             onClick: () => (0, M.openUserProfileModal)({
-              userId: m[parseInt(t)].id
+              userId: p[parseInt(t)].id
             }),
             className: et.maybeClickable,
-            children: (0, l.jsx)(h.Text, {
+            children: (0, i.jsx)(h.Text, {
               variant: "text-sm/medium",
-              className: a()(et.popoutUsername, et.popoutTextPrimary),
+              className: s()(et.popoutUsername, et.popoutTextPrimary),
               children: e
             }, t)
           })
         })
       })]
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: et.popoutHeaderIcons,
-      children: i
+      children: a
     })]
   })
 }
@@ -523,9 +523,9 @@ function ec(e) {
     children: t,
     onClick: n
   } = e;
-  return null == n ? (0, l.jsx)(l.Fragment, {
+  return null == n ? (0, i.jsx)(i.Fragment, {
     children: t
-  }) : (0, l.jsx)(h.Clickable, {
+  }) : (0, i.jsx)(h.Clickable, {
     className: et.maybeClickable,
     onClick: n,
     children: t
@@ -535,72 +535,72 @@ function ec(e) {
 function eu(e) {
   var t;
   let {
-    thumbnailSrc: i,
-    thumbnailFallbackSrc: s,
-    thumbnailTitle: a,
+    thumbnailSrc: a,
+    thumbnailFallbackSrc: l,
+    thumbnailTitle: s,
     title: r,
     subtitle: o,
     badges: c,
     children: u,
     onClickTitle: d,
-    onClickSubtitle: m,
-    ...E
+    onClickSubtitle: p,
+    ...m
   } = e, {
-    entry: p,
-    channel: g
-  } = E, f = (0, V.d)(p), C = (0, Z.ZP)({
+    entry: _,
+    channel: f
+  } = m, E = (0, V.d)(_), g = (0, v.ZP)({
     location: "ContentPopout",
-    applicationId: f ? null === (t = p.extra) || void 0 === t ? void 0 : t.application_id : void 0
-  }) && f ? () => {
+    applicationId: E ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0
+  }) && E ? () => {
     (0, h.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("7613")]).then(n.bind(n, 644941));
-      return t => (0, l.jsx)(e, {
-        applicationId: p.extra.application_id,
-        channel: g,
+      } = await Promise.all([n.e("7613"), n.e("55799")]).then(n.bind(n, 644941));
+      return t => (0, i.jsx)(e, {
+        applicationId: _.extra.application_id,
+        channel: f,
         ...t
       })
     })
   } : void 0;
-  return (0, l.jsxs)(el, {
-    backgroundImgSrc: i,
-    children: [(0, l.jsx)(eo, {
-      ...E
-    }), (0, l.jsxs)("div", {
+  return (0, i.jsxs)(ei, {
+    backgroundImgSrc: a,
+    children: [(0, i.jsx)(eo, {
+      ...m
+    }), (0, i.jsxs)("div", {
       className: et.popoutContentBody,
-      children: [(0, l.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: et.popoutThumbnailContainer,
-        children: (0, l.jsx)(ec, {
-          onClick: C,
-          children: (0, l.jsx)(X.f, {
+        children: (0, i.jsx)(ec, {
+          onClick: g,
+          children: (0, i.jsx)(X.f, {
             size: 72,
-            alt: a,
-            src: i,
-            fallbackSrc: s,
+            alt: s,
+            src: a,
+            fallbackSrc: l,
             className: et.contentImage
           })
         })
-      }), (0, l.jsx)(h.Spacer, {
+      }), (0, i.jsx)(h.Spacer, {
         size: 16,
         horizontal: !0
-      }), (0, l.jsxs)("div", {
-        children: [(0, l.jsx)(ec, {
-          onClick: null != d ? d : C,
-          children: (0, l.jsx)(h.Heading, {
+      }), (0, i.jsxs)("div", {
+        children: [(0, i.jsx)(ec, {
+          onClick: null != d ? d : g,
+          children: (0, i.jsx)(h.Heading, {
             variant: "heading-md/medium",
             className: et.popoutTextPrimary,
             lineClamp: 3,
             children: r
           })
-        }), null != o ? (0, l.jsx)(ec, {
-          onClick: null != m ? m : C,
-          children: (0, l.jsx)(h.Text, {
+        }), null != o ? (0, i.jsx)(ec, {
+          onClick: null != p ? p : g,
+          children: (0, i.jsx)(h.Text, {
             variant: "text-md/normal",
             className: et.popoutTextSecondary,
             children: o
           })
-        }) : null, (0, l.jsx)(h.Spacer, {
+        }) : null, (0, i.jsx)(h.Spacer, {
           size: 8
         }), c]
       })]
@@ -612,45 +612,45 @@ function ed(e) {
   let {
     title: t,
     badges: n,
-    stream: s,
-    ...a
-  } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == s ? void 0 : s.channelId)), [o] = i.useMemo(() => (0, S.p9)(r, b.Z, L.Z, O.Z, N.Z), [r]);
-  return null == s ? null : (0, l.jsxs)(el, {
+    stream: l,
+    ...s
+  } = e, r = (0, c.e7)([R.Z], () => R.Z.getChannel(null == l ? void 0 : l.channelId)), [o] = a.useMemo(() => (0, S.p9)(r, y.Z, j.Z, L.Z, N.Z), [r]);
+  return null == l ? null : (0, i.jsxs)(ei, {
     className: et.streamingPopoutHero,
-    children: [(0, l.jsx)(eo, {
-      ...a,
-      headerIcons: (0, l.jsx)(w.ZP, {
+    children: [(0, i.jsx)(eo, {
+      ...s,
+      headerIcons: (0, i.jsx)(w.ZP, {
         size: w.ZP.Sizes.SMALL
       })
-    }), (0, l.jsx)(h.Spacer, {
+    }), (0, i.jsx)(h.Spacer, {
       size: 16
-    }), (0, l.jsx)(ec, {
+    }), (0, i.jsx)(ec, {
       onClick: o ? () => {
-        p.default.selectVoiceChannel(s.channelId), (0, g.iV)(s)
+        _.default.selectVoiceChannel(l.channelId), (0, f.iV)(l)
       } : void 0,
-      children: (0, l.jsxs)("div", {
+      children: (0, i.jsxs)("div", {
         style: {
           position: "relative"
         },
-        children: [(0, l.jsx)(v.Z, {
+        children: [(0, i.jsx)(Z.Z, {
           className: et.streamingPopoutHero,
-          stream: s
-        }), o && (0, l.jsx)("div", {
+          stream: l
+        }), o && (0, i.jsx)("div", {
           className: et.streamCTA,
-          children: (0, l.jsx)(h.Text, {
+          children: (0, i.jsx)(h.Text, {
             variant: "text-md/normal",
             children: ee.Z.Messages.WATCH_STREAM
           })
         })]
       })
-    }), (0, l.jsx)(h.Spacer, {
+    }), (0, i.jsx)(h.Spacer, {
       size: 16
-    }), (0, l.jsx)(h.Heading, {
+    }), (0, i.jsx)(h.Heading, {
       variant: "heading-md/semibold",
       className: et.popoutTextPrimary,
       lineClamp: 3,
       children: t
-    }), (0, l.jsx)(h.Spacer, {
+    }), (0, i.jsx)(h.Spacer, {
       size: 8
     }), n]
   })
@@ -660,20 +660,20 @@ function eh(e) {
   let {
     IconComponent: t,
     children: n,
-    className: i,
-    ...s
+    className: a,
+    ...l
   } = e;
-  return (0, l.jsxs)(h.Button, {
-    ...s,
-    className: a()(i, et.primaryButton),
+  return (0, i.jsxs)(h.Button, {
+    ...l,
+    className: s()(a, et.primaryButton),
     innerClassName: null != t ? et.iconButton : void 0,
     size: h.Button.Sizes.LARGE,
-    children: [null != t ? (0, l.jsx)(t, {
+    children: [null != t ? (0, i.jsx)(t, {
       size: "custom",
       width: 20,
       height: 20,
       color: d.Z.colors.WHITE
-    }) : null, (0, l.jsx)(h.Text, {
+    }) : null, (0, i.jsx)(h.Text, {
       variant: "text-md/semibold",
       color: "always-white",
       children: n

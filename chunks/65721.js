@@ -1,17 +1,17 @@
 n.d(t, {
   Z: function() {
-    return r
+    return a
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(682662),
-  s = n(47061);
+var l = n(682662),
+  r = n(47061);
 
-function r() {
-  return (0, l.jsx)(i.H, {
-    children: (0, l.jsx)("div", {
-      className: s.guildSeparator
+function a() {
+  return (0, i.jsx)(l.H, {
+    children: (0, i.jsx)("div", {
+      className: r.guildSeparator
     })
   })
 }

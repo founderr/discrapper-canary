@@ -1,30 +1,30 @@
 "use strict";
-s.d(t, {
+n.d(t, {
   F: function() {
-    return u
+    return d
   }
 });
-var n = s(735250),
-  r = s(470079),
-  a = s(481060),
-  i = s(906732),
-  l = s(963249),
-  o = s(474936),
-  c = s(799381);
-let u = e => {
+var r = n(735250),
+  a = n(470079),
+  i = n(481060),
+  o = n(906732),
+  s = n(963249),
+  c = n(474936),
+  l = n(799381);
+let d = e => {
   let {
     text: t
   } = e, {
-    analyticsLocations: s
-  } = (0, i.ZP)(), u = r.useRef(null);
-  return (0, n.jsx)(a.Clickable, {
-    className: c.subscribeNow,
-    innerRef: u,
+    analyticsLocations: n
+  } = (0, o.ZP)(), d = a.useRef(null);
+  return (0, r.jsx)(i.Clickable, {
+    className: l.subscribeNow,
+    innerRef: d,
     onClick: () => {
-      (0, l.Z)({
-        subscriptionTier: o.Si.TIER_2,
-        analyticsLocations: s,
-        returnRef: u
+      (0, s.Z)({
+        subscriptionTier: c.Si.TIER_2,
+        analyticsLocations: n,
+        returnRef: d
       })
     },
     children: t

@@ -31,11 +31,11 @@ function _(e, t) {
       contentClassName: I,
       onScroll: T,
       dir: h = "ltr",
-      fade: S = !1,
-      customTheme: f = !1,
-      style: N,
-      ...A
-    } = t, m = r.useRef(null), O = r.useRef(null), [R, p] = r.useState(!1), {
+      fade: f = !1,
+      customTheme: S = !1,
+      style: A,
+      ...N
+    } = t, m = r.useRef(null), O = r.useRef(null), [p, R] = r.useState(!1), {
       scrollerRef: g,
       getScrollerState: C
     } = (0, l.Ke)(), v = (0, l.t2)(g);
@@ -46,8 +46,8 @@ function _(e, t) {
       ...(0, l.Ue)(g, C, v)
     }), [g, C, v]);
     let L = r.useCallback(e => {
-      null == m.current ? p(!0) : clearTimeout(m.current), m.current = setTimeout(() => {
-        m.current = null, p(!1)
+      null == m.current ? R(!0) : clearTimeout(m.current), m.current = setTimeout(() => {
+        m.current = null, R(!1)
       }, 200), null != T && T(e)
     }, [T]);
     return r.useEffect(() => () => clearTimeout(m.current), []), (0, l.zn)({
@@ -65,22 +65,22 @@ function _(e, t) {
     }), (0, i.jsx)("div", {
       ref: g,
       className: o()(d, {
-        [u.fade]: S,
-        [u.customTheme]: f,
+        [u.fade]: f,
+        [u.customTheme]: S,
         [e]: !0,
         [u.managedReactiveScroller]: !0,
-        [u.scrolling]: R && S
+        [u.scrolling]: p && f
       }),
-      style: N,
+      style: A,
       dir: h,
       onScroll: L,
-      ...A,
+      ...N,
       children: (0, i.jsx)(a.J, {
         containerRef: O,
         children: (0, i.jsxs)("div", {
           ref: O,
           className: o()(I, u.content),
-          children: [c, R && (0, i.jsx)("div", {
+          children: [c, p && (0, i.jsx)("div", {
             className: u.pointerCover
           })]
         })

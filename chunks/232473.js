@@ -1,12 +1,12 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   C: function() {
-    return l
+    return i
   }
 });
-var n = t(544891),
-  i = t(981631);
-let l = async (e, s) => (await n.tn.get({
-  url: i.ANM.PAYMENT_PAYOUT_GROUPS(e),
-  query: s
+var s = n(544891),
+  a = n(981631);
+let i = async (e, t) => (await s.tn.get({
+  url: a.ANM.PAYMENT_PAYOUT_GROUPS(e),
+  query: t
 })).body

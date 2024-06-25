@@ -1,18 +1,18 @@
 s.r(e), s(47120);
 var a, n, i = s(735250),
   o = s(470079),
-  r = s(442837),
-  c = s(481060),
+  c = s(442837),
+  r = s(481060),
   l = s(355467),
-  T = s(505649),
-  A = s(626135),
-  u = s(937615),
-  d = s(622999),
+  u = s(505649),
+  d = s(626135),
+  T = s(937615),
+  A = s(622999),
   h = s(981631),
   N = s(689938),
-  M = s(491275);
+  _ = s(491275);
 
-function _(t, e, s) {
+function M(t, e, s) {
   return e in t ? Object.defineProperty(t, e, {
     value: s,
     enumerable: !0,
@@ -20,14 +20,14 @@ function _(t, e, s) {
     writable: !0
   }) : t[e] = s, t
 }(n = a || (a = {}))[n.START = 0] = "START", n[n.FAIL = 1] = "FAIL", n[n.SUCCESS = 2] = "SUCCESS", n[n.CANCELED = 3] = "CANCELED";
-class E extends o.Component {
+class I extends o.Component {
   componentDidMount() {
-    A.default.track(h.rMx.OPEN_MODAL, {
+    d.default.track(h.rMx.OPEN_MODAL, {
       type: h.jXE.PAYMENT_AUTHENTICATION_MODAL
     })
   }
   componentWillUnmount() {
-    A.default.track(h.rMx.MODAL_DISMISSED, {
+    d.default.track(h.rMx.MODAL_DISMISSED, {
       type: h.jXE.PAYMENT_AUTHENTICATION_MODAL
     })
   }
@@ -52,11 +52,11 @@ class E extends o.Component {
     } = this.state;
     switch (t) {
       case 0:
-        return M.authenticationRequiredImage;
+        return _.authenticationRequiredImage;
       case 2:
-        return M.authenticationSuccessImage;
+        return _.authenticationSuccessImage;
       default:
-        return M.authenticationFailImage
+        return _.authenticationFailImage
     }
   }
   getMessage() {
@@ -68,7 +68,7 @@ class E extends o.Component {
     switch (t) {
       case 0:
         return N.Z.Messages.PAYMENT_AUTHENTICATION_MODAL_START.format({
-          price: (0, u.T4)(e.amount, e.currency),
+          price: (0, T.T4)(e.amount, e.currency),
           item: e.description
         });
       case 2:
@@ -88,22 +88,22 @@ class E extends o.Component {
       disableAuthentication: e
     } = this.props;
     if (0 === t) return (0, i.jsxs)(o.Fragment, {
-      children: [(0, i.jsx)(c.Button, {
-        color: c.ButtonColors.BRAND,
+      children: [(0, i.jsx)(r.Button, {
+        color: r.ButtonColors.BRAND,
         disabled: e,
         onClick: this.handleAuthenticate,
         children: N.Z.Messages.PAYMENT_AUTHENTICATION_MODAL_BUTTON
-      }), (0, i.jsx)(c.Button, {
-        look: c.Button.Looks.LINK,
-        size: c.Button.Sizes.NONE,
-        color: c.Button.Colors.PRIMARY,
+      }), (0, i.jsx)(r.Button, {
+        look: r.Button.Looks.LINK,
+        size: r.Button.Sizes.NONE,
+        color: r.Button.Colors.PRIMARY,
         onClick: this.cancelPayment,
-        className: M.cancelButton,
+        className: _.cancelButton,
         children: N.Z.Messages.PAYMENT_AUTHENTICATION_MODAL_BUTTON_CANCEL_PAYMENT
       })]
     });
-    return (0, i.jsx)(c.Button, {
-      color: c.ButtonColors.BRAND,
+    return (0, i.jsx)(r.Button, {
+      color: r.ButtonColors.BRAND,
       onClick: this.close,
       children: N.Z.Messages.CLOSE
     })
@@ -112,40 +112,40 @@ class E extends o.Component {
     let {
       transitionState: t
     } = this.props;
-    return (0, i.jsxs)(c.ModalRoot, {
+    return (0, i.jsxs)(r.ModalRoot, {
       transitionState: t,
-      className: M.modal,
-      size: c.ModalSize.SMALL,
+      className: _.modal,
+      size: r.ModalSize.SMALL,
       "aria-label": this.getTitle(),
-      children: [(0, i.jsxs)(c.ModalHeader, {
-        children: [(0, i.jsx)(c.Heading, {
+      children: [(0, i.jsxs)(r.ModalHeader, {
+        children: [(0, i.jsx)(r.Heading, {
           variant: "heading-lg/semibold",
           children: (0, i.jsx)("span", {
-            className: M.__invalid_modalTitle,
+            className: _.__invalid_modalTitle,
             children: this.getTitle()
           })
-        }), (0, i.jsx)(c.ModalCloseButton, {
-          className: M.closeIcon,
+        }), (0, i.jsx)(r.ModalCloseButton, {
+          className: _.closeIcon,
           onClick: this.close
         })]
-      }), (0, i.jsxs)(c.ModalContent, {
-        className: M.content,
+      }), (0, i.jsxs)(r.ModalContent, {
+        className: _.content,
         children: [(0, i.jsx)("div", {
           className: this.getImageStyle()
-        }), (0, i.jsx)(c.Text, {
+        }), (0, i.jsx)(r.Text, {
           variant: "text-md/normal",
           children: this.getMessage()
         })]
-      }), (0, i.jsx)(c.ModalFooter, {
-        className: M.__invalid_footer,
+      }), (0, i.jsx)(r.ModalFooter, {
+        className: _.__invalid_footer,
         children: this.renderButtons()
       })]
     })
   }
   constructor(...t) {
-    super(...t), _(this, "state", {
+    super(...t), M(this, "state", {
       step: 0
-    }), _(this, "close", async () => {
+    }), M(this, "close", async () => {
       let {
         step: t
       } = this.state, {
@@ -153,7 +153,7 @@ class E extends o.Component {
         pendingPayment: s
       } = this.props;
       0 === t && await (0, l.UY)(s.id), e()
-    }), _(this, "cancelPayment", async () => {
+    }), M(this, "cancelPayment", async () => {
       let {
         pendingPayment: t
       } = this.props;
@@ -167,12 +167,12 @@ class E extends o.Component {
       this.setState({
         step: 3
       })
-    }), _(this, "handleAuthenticate", async () => {
+    }), M(this, "handleAuthenticate", async () => {
       let {
         pendingPayment: t
       } = this.props, {
         error: e
-      } = await (0, d.oe)(t.id);
+      } = await (0, A.oe)(t.id);
       null != e ? this.setState({
         step: 1
       }) : this.setState({
@@ -181,6 +181,6 @@ class E extends o.Component {
     })
   }
 }
-e.default = r.ZP.connectStores([T.Z], () => ({
-  disableAuthentication: T.Z.isAwaitingAuthentication
-}))(E)
+e.default = c.ZP.connectStores([u.Z], () => ({
+  disableAuthentication: u.Z.isAwaitingAuthentication
+}))(I)

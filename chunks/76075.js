@@ -1,58 +1,58 @@
-s.r(n);
-var a = s(735250);
-s(470079);
-var l = s(442837),
-  i = s(481060),
-  t = s(100527),
-  o = s(970606),
-  r = s(271383),
-  c = s(430824),
-  u = s(594174),
-  d = s(153124),
-  E = s(693546),
-  I = s(305325),
-  R = s(937111),
-  N = s(702286),
-  _ = s(523924),
-  C = s(981631),
-  m = s(689938);
-n.default = function(e) {
+o.r(e);
+var a = o(735250);
+o(470079);
+var t = o(442837),
+  i = o(481060),
+  r = o(100527),
+  l = o(970606),
+  s = o(271383),
+  c = o(430824),
+  u = o(594174),
+  d = o(153124),
+  f = o(693546),
+  _ = o(305325),
+  m = o(937111),
+  b = o(702286),
+  I = o(523924),
+  C = o(981631),
+  E = o(689938);
+e.default = function(n) {
   let {
-    guildId: n,
-    transitionState: s,
-    ...A
-  } = e, h = (0, d.Dt)(), v = (0, l.e7)([R.Z], () => R.Z.getRequest(n), [n]), M = (0, l.e7)([c.Z], () => c.Z.getGuild(n), [n]), T = (0, l.e7)([u.default], () => {
-    var e;
-    return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
-  }), Z = (0, l.e7)([r.ZP], () => null != T ? r.ZP.getMember(n, T) : null, [T, n]), g = async () => {
-    var e;
-    if (null !== (e = null == M ? void 0 : M.hasFeature(C.oNc.CLAN)) && void 0 !== e && e && (0, o.Vr)({
-        guildId: n,
-        source: t.Z.CLAN_REAPPLY
-      }), null == M ? void 0 : M.hasFeature(C.oNc.PREVIEW_ENABLED)) {
+    guildId: e,
+    transitionState: o,
+    ...R
+  } = n, p = (0, d.Dt)(), N = (0, t.e7)([m.Z], () => m.Z.getRequest(e), [e]), g = (0, t.e7)([c.Z], () => c.Z.getGuild(e), [e]), h = (0, t.e7)([u.default], () => {
+    var n;
+    return null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id
+  }), A = (0, t.e7)([s.ZP], () => null != h ? s.ZP.getMember(e, h) : null, [h, e]), B = async () => {
+    var n;
+    if (null !== (n = null == g ? void 0 : g.hasFeature(C.oNc.CLAN)) && void 0 !== n && n && (0, l.Vr)({
+        guildId: e,
+        source: r.Z.CLAN_REAPPLY
+      }), null == g ? void 0 : g.hasFeature(C.oNc.PREVIEW_ENABLED)) {
       try {
-        await E.Z.removeGuildJoinRequest(n)
-      } catch (e) {
-        throw e
+        await f.Z.removeGuildJoinRequest(e)
+      } catch (n) {
+        throw n
       }
-      A.onClose(), (0, I.hk)(n)
-    } else E.Z.resetGuildJoinRequest(n)
+      R.onClose(), (0, _.hk)(e)
+    } else f.Z.resetGuildJoinRequest(e)
   };
   return (0, a.jsx)(i.ModalRoot, {
     size: i.ModalSize.DYNAMIC,
-    transitionState: s,
-    "aria-labelledby": h,
-    children: (0, a.jsx)(_.Z, {
-      ...A,
-      headerId: h,
-      reapplyText: m.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
-      onReapply: g,
-      confirmText: m.Z.Messages.OKAY,
+    transitionState: o,
+    "aria-labelledby": p,
+    children: (0, a.jsx)(I.Z, {
+      ...R,
+      headerId: p,
+      reapplyText: E.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+      onReapply: B,
+      confirmText: E.Z.Messages.OKAY,
       onWithdrawApplication: () => {
-        A.onClose(), null == Z && (0, N.Z)()
+        R.onClose(), null == A && (0, b.Z)()
       },
-      rejectionReason: null == v ? void 0 : v.rejectionReason,
-      guild: M
+      rejectionReason: null == N ? void 0 : N.rejectionReason,
+      guild: g
     })
   })
 }

@@ -1,20 +1,20 @@
-a.d(s, {
+n.d(s, {
   j: function() {
     return i
   }
-}), a(47120);
-var n = a(470079),
-  t = a(442837),
-  l = a(826581),
-  r = a(246364);
+}), n(47120);
+var a = n(470079),
+  t = n(442837),
+  r = n(826581),
+  l = n(246364);
 
 function i(e) {
   let {
     guildId: s,
-    applicationStatus: a,
+    applicationStatus: n,
     sortOrder: i
-  } = e, o = (0, t.e7)([l.Z], () => l.Z.getRequests(s, a), [a, s]);
+  } = e, o = (0, t.e7)([r.Z], () => r.Z.getRequests(s, n), [n, s]);
   return {
-    guildJoinRequests: n.useMemo(() => i === r.Nw.TIMESTAMP_DESC ? [...o].reverse() : o, [i, o])
+    guildJoinRequests: a.useMemo(() => i === l.Nw.TIMESTAMP_DESC ? [...o].reverse() : o, [i, o])
   }
 }

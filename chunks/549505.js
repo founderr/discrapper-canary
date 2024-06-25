@@ -1,75 +1,75 @@
-a.r(s), a.d(s, {
+t.r(a), t.d(a, {
   default: function() {
-    return N
+    return _
   }
 });
-var t = a(735250);
-a(470079);
-var n = a(481060),
-  r = a(547972),
-  i = a(63063),
-  o = a(981631),
-  c = a(332325),
-  l = a(689938),
-  E = a(709788),
-  d = a(83173);
+var s = t(735250);
+t(470079);
+var n = t(481060),
+  o = t(547972),
+  r = t(63063),
+  d = t(981631),
+  i = t(332325),
+  l = t(689938),
+  c = t(709788),
+  E = t(83173);
 
-function N(e) {
+function _(e) {
   let {
-    transitionState: s,
-    onClose: a
+    transitionState: a,
+    onClose: t
   } = e;
-  return (0, t.jsxs)(n.ModalRoot, {
-    transitionState: s,
+  return (0, s.jsxs)(n.ModalRoot, {
+    transitionState: a,
     size: n.ModalSize.DYNAMIC,
-    className: E.modalRoot,
-    children: [(0, t.jsxs)(n.ModalHeader, {
+    className: c.modalRoot,
+    children: [(0, s.jsxs)(n.ModalHeader, {
       separator: !1,
-      className: E.modalHeader,
-      children: [(0, t.jsx)("div", {
-        className: E.imageFrame,
-        children: (0, t.jsx)("img", {
+      className: c.modalHeader,
+      children: [(0, s.jsx)("div", {
+        className: c.imageFrame,
+        children: (0, s.jsx)("img", {
           alt: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_ALT,
-          src: d,
-          className: E.heroImage
+          src: E,
+          className: c.heroImage
         })
-      }), (0, t.jsxs)("div", {
-        className: E.headerWrapper,
-        children: [(0, t.jsx)(n.Heading, {
+      }), (0, s.jsxs)("div", {
+        className: c.headerWrapper,
+        children: [(0, s.jsx)(n.Heading, {
           variant: "heading-xl/bold",
           children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER
-        }), (0, t.jsx)("div", {
-          className: E.betaTag,
-          children: (0, t.jsx)(n.Text, {
+        }), (0, s.jsx)("div", {
+          className: c.betaTag,
+          children: (0, s.jsx)(n.Text, {
             variant: "text-xs/semibold",
             color: "always-white",
             children: l.Z.Messages.BETA
           })
         })]
       })]
-    }), (0, t.jsxs)(n.ModalContent, {
-      className: E.modalContent,
-      children: [(0, t.jsxs)("div", {
-        className: E.modalContentFrame,
-        children: [(0, t.jsx)(n.Text, {
+    }), (0, s.jsxs)(n.ModalContent, {
+      className: c.modalContent,
+      children: [(0, s.jsxs)("div", {
+        className: c.modalContentFrame,
+        children: [(0, s.jsx)(n.Text, {
           variant: "text-md/medium",
           color: "header-secondary",
           children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DESCRIPTION
-        }), (0, t.jsx)(T, {})]
-      }), (0, t.jsxs)("div", {
-        className: E.modalFooter,
-        children: [(0, t.jsx)(n.Button, {
-          onClick: a,
-          className: E.button,
+        }), (0, s.jsx)(m, {})]
+      }), (0, s.jsxs)("div", {
+        className: c.modalFooter,
+        children: [(0, s.jsx)(n.Button, {
+          onClick: t,
+          className: c.button,
           children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT
-        }), (0, t.jsx)(n.Text, {
+        }), (0, s.jsx)(n.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          className: E.disclosureText,
+          className: c.disclosureText,
           children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DISCLOSURE.format({
-            recentActivityURL: i.Z.getArticleURL(o.BhN.MEMBER_LIST_ACTIVITY_FEED),
+            recentActivityURL: r.Z.getArticleURL(d.BhN.MEMBER_LIST_ACTIVITY_FEED),
             handleActivityPrivacyClick: () => {
-              a(), (0, r.Z)(c.Z.ACTIVITY_PRIVACY)
+              t(), (0, o.Z)(i.Z.ACTIVITY_PRIVACY)
             }
           })
         })]
@@ -77,40 +77,40 @@ function N(e) {
     })]
   })
 }
-let T = () => {
+let m = () => {
   let e = [{
-    icon: (0, t.jsx)(n.FriendsIcon, {
-      className: E.icon
+    icon: (0, s.jsx)(n.FriendsIcon, {
+      className: c.icon
     }),
     text: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_FRIEND_NOTE
   }, {
-    icon: (0, t.jsx)(n.GameControllerIcon, {
-      className: E.icon
+    icon: (0, s.jsx)(n.GameControllerIcon, {
+      className: c.icon
     }),
     text: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_PLAYED_NOTE
   }, {
-    icon: (0, t.jsx)(n.ChatIcon, {
-      className: E.icon
+    icon: (0, s.jsx)(n.ChatIcon, {
+      className: c.icon
     }),
     text: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_REPLY_NOTE
   }];
-  return (0, t.jsx)("div", {
-    className: E.notes,
-    children: e.map((e, s) => {
+  return (0, s.jsx)("div", {
+    className: c.notes,
+    children: e.map((e, a) => {
       let {
-        icon: a,
-        text: r
+        icon: t,
+        text: o
       } = e;
-      return (0, t.jsxs)("div", {
-        className: E.badgeNote,
-        children: [(0, t.jsx)("div", {
-          className: E.badge,
-          children: a
-        }), (0, t.jsx)(n.Text, {
+      return (0, s.jsxs)("div", {
+        className: c.badgeNote,
+        children: [(0, s.jsx)("div", {
+          className: c.badge,
+          children: t
+        }), (0, s.jsx)(n.Text, {
           variant: "text-sm/medium",
-          children: r
+          children: o
         })]
-      }, "memberlist-learn-more-note-".concat(s))
+      }, "memberlist-learn-more-note-".concat(a))
     })
   })
 }

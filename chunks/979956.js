@@ -1,35 +1,35 @@
-n.d(t, {
+i.d(t, {
   BK: function() {
-    return o
+    return _
   },
   Bf: function() {
-    return c
+    return r
   },
   KZ: function() {
-    return u
+    return s
   }
-}), n(724458), n(653041);
-var l = n(476326),
-  i = n(403182),
-  s = n(74538),
-  a = n(474936),
-  r = n(689938);
+}), i(724458), i(653041);
+var n = i(476326),
+  c = i(403182),
+  o = i(74538),
+  a = i(474936),
+  l = i(689938);
 
-function o(e, t) {
-  let n = i.Ng(i.dg(t));
-  return s.ZP.isPremium(e, a.p9.TIER_2) ? r.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-    maxSize: n
-  }) : s.ZP.isPremium(e, a.p9.TIER_1) ? r.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
-    maxSize: n
-  }) : r.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-    maxSize: n
+function _(e, t) {
+  let i = c.Ng(c.dg(t));
+  return o.ZP.isPremium(e, a.p9.TIER_2) ? l.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+    maxSize: i
+  }) : o.ZP.isPremium(e, a.p9.TIER_1) ? l.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
+    maxSize: i
+  }) : l.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+    maxSize: i
   })
 }
 
-function c(e, t) {
-  return i.nA(e, t) || i.vY(e)
+function r(e, t) {
+  return c.nA(e, t) || c.vY(e)
 }
 
-function u(e) {
-  return e.reduce((e, t) => (t.item.platform === l.ow.WEB && e.push(t.item.file), e), [])
+function s(e) {
+  return e.reduce((e, t) => (t.item.platform === n.ow.WEB && e.push(t.item.file), e), [])
 }

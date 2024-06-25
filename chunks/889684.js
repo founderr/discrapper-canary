@@ -1,56 +1,56 @@
-s.r(a);
-var t = s(735250),
-  o = s(470079),
-  i = s(481060),
-  n = s(230711),
-  l = s(197115),
-  r = s(626135),
-  M = s(981631),
-  c = s(474936),
-  E = s(689938),
-  d = s(24692);
+t.r(a);
+var o = t(735250),
+  s = t(470079),
+  n = t(481060),
+  i = t(230711),
+  r = t(197115),
+  l = t(626135),
+  c = t(981631),
+  M = t(474936),
+  d = t(689938),
+  E = t(24692);
 a.default = e => {
   let {
     transitionState: a,
-    onClose: s
+    onClose: t
   } = e;
-  return o.useEffect(() => {
-    r.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: c.cd.EMOJI_AUTOCOMPLETE_MODAL
+  return s.useEffect(() => {
+    l.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, {
+      type: M.cd.EMOJI_AUTOCOMPLETE_MODAL
     })
-  }, []), (0, t.jsxs)(i.ModalRoot, {
+  }, []), (0, o.jsxs)(n.ModalRoot, {
     transitionState: a,
-    size: i.ModalSize.SMALL,
+    size: n.ModalSize.SMALL,
     "aria-label": "",
-    children: [(0, t.jsxs)(i.ModalContent, {
-      className: d.content,
-      children: [(0, t.jsx)("div", {
+    children: [(0, o.jsxs)(n.ModalContent, {
+      className: E.content,
+      children: [(0, o.jsx)("div", {
         role: "image",
-        className: d.image
-      }), (0, t.jsx)(i.Heading, {
+        className: E.image
+      }), (0, o.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
-        className: d.header,
-        children: E.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL_MODAL_HEADER
-      }), (0, t.jsx)(i.Text, {
+        className: E.header,
+        children: d.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL_MODAL_HEADER
+      }), (0, o.jsx)(n.Text, {
         variant: "text-md/normal",
-        children: E.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL_MODAL_BLURB.format({
+        children: d.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL_MODAL_BLURB.format({
           onLearnMore: () => {
-            s(), n.Z.open(M.oAB.PREMIUM)
+            t(), i.Z.open(c.oAB.PREMIUM)
           }
         })
       })]
-    }), (0, t.jsx)(i.ModalFooter, {
-      children: (0, t.jsx)(l.Z, {
-        onClick: s,
+    }), (0, o.jsx)(n.ModalFooter, {
+      children: (0, o.jsx)(r.Z, {
+        onClick: t,
         buttonText: "Get Nitro",
-        subscriptionTier: c.Si.TIER_2,
+        subscriptionTier: M.Si.TIER_2,
         premiumModalAnalyticsLocation: {
-          page: M.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL
+          page: c.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL
         }
       })
-    }), (0, t.jsx)(i.ModalCloseButton, {
-      className: d.closeButton,
-      onClick: s
+    }), (0, o.jsx)(n.ModalCloseButton, {
+      className: E.closeButton,
+      onClick: t
     })]
   })
 }

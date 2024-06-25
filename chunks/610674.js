@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return s
+    return i
   }
 });
-let s = "https://dis.gd/appeal"
+let i = "https://dis.gd/appeal"

@@ -6,7 +6,7 @@ n.d(t, {
     return c
   },
   _Z: function() {
-    return A
+    return p
   },
   kj: function() {
     return I
@@ -119,7 +119,7 @@ function f(e, t) {
   }, r.fy.FREQUENT_USER_ACTION)
 }
 
-function A() {
+function p() {
   r.hW.updateAsync("favorites", e => {
     e.muted = !e.muted
   }, r.fy.INFREQUENT_USER_ACTION)

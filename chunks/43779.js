@@ -3,81 +3,81 @@ n.d(t, {
     return I
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(113434),
-  r = n(497505),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(113434),
+  l = n(497505),
   o = n(918701),
   c = n(566078),
-  u = n(472144),
-  d = n(644646),
-  E = n(69439),
-  h = n(689938),
-  _ = n(444745);
+  d = n(472144),
+  u = n(644646),
+  _ = n(69439),
+  E = n(689938),
+  h = n(444745);
 
 function I(e) {
   let {
     quest: t,
     location: n,
     questContent: I
-  } = e, m = c.r.build(t.config).defaultReward.messages.name, T = (0, a.Rf)({
+  } = e, m = c.r.build(t.config).defaultReward.messages.name, p = (0, r.Rf)({
     quest: t,
     location: n
-  }), g = T.percentComplete > 0, p = (0, o.pG)({
+  }), g = p.percentComplete > 0, T = (0, o.pG)({
     quest: t,
     location: n,
     useV2Variants: !0,
-    taskDetails: T
-  }), N = !(0, o.zi)(t), S = i.useCallback(() => (0, s.jsx)(l.Text, {
+    taskDetails: p
+  }), C = !(0, o.zi)(t), f = s.useCallback(() => (0, i.jsx)(a.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
-    className: _.header,
+    className: h.header,
     children: m
   }), [m]);
-  return (0, s.jsxs)("div", {
-    className: _.container,
-    children: [(0, s.jsxs)("div", {
-      className: _.rewardDescriptionContainer,
-      children: [g ? (0, s.jsx)("div", {
-        className: _.progressWrapper,
-        children: (0, s.jsx)(u.Z, {
+  return (0, i.jsxs)("div", {
+    className: h.container,
+    children: [(0, i.jsxs)("div", {
+      className: h.rewardDescriptionContainer,
+      children: [g ? (0, i.jsx)("div", {
+        className: h.progressWrapper,
+        children: (0, i.jsx)(d.Z, {
           size: 76,
-          percentComplete: T.percentComplete,
-          children: (0, s.jsx)("div", {
-            className: _.circularRewardTileWrapper,
-            children: (0, s.jsx)(d.Z, {
+          percentComplete: p.percentComplete,
+          children: (0, i.jsx)("div", {
+            className: h.circularRewardTileWrapper,
+            children: (0, i.jsx)(u.Z, {
               quest: t,
               questContent: I,
-              className: _.circularQuestRewardTileAsset
+              className: h.circularQuestRewardTileAsset
             })
           })
         })
-      }) : (0, s.jsx)(d.Z, {
+      }) : (0, i.jsx)(u.Z, {
         quest: t,
-        questContent: r.jn.QUEST_HOME_DESKTOP,
-        className: _.questRewardTileAsset
-      }), (0, s.jsxs)("div", {
-        className: _.textContainer,
-        children: [(0, s.jsx)("span", {
-          className: _.headerSpan,
-          children: (0, s.jsx)(l.Text, {
+        questContent: l.jn.QUEST_HOME_DESKTOP,
+        className: h.questRewardTileAsset
+      }), (0, i.jsxs)("div", {
+        className: h.textContainer,
+        children: [(0, i.jsx)("span", {
+          className: h.headerSpan,
+          children: (0, i.jsx)(a.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
-            className: _.header,
-            children: h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: S
+            className: h.header,
+            children: E.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+              rewardHook: f
             })
           })
-        }), null != p ? (0, s.jsx)(l.Text, {
+        }), null != T ? (0, i.jsx)(a.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          className: _.description,
-          children: p
+          className: h.description,
+          children: T
         }) : null]
       })]
-    }), N ? (0, s.jsx)(E.Z, {
+    }), C ? (0, i.jsx)(_.Z, {
       quest: t
     }) : null]
   })

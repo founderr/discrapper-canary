@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   B1: function() {
-    return A
+    return N
   },
   DR: function() {
     return d
@@ -13,10 +13,10 @@ n.d(t, {
     return m
   },
   fK: function() {
-    return N
+    return A
   },
   jr: function() {
-    return f
+    return S
   },
   mK: function() {
     return c
@@ -28,7 +28,7 @@ n.d(t, {
     return T
   },
   qg: function() {
-    return S
+    return f
   }
 });
 var i = n(544891),
@@ -87,7 +87,7 @@ let c = e => {
         error: e
       }), new o.Hx(e)
     }
-  }, S = async () => {
+  }, f = async () => {
     r.Z.dispatch({
       type: "COLLECTIBLES_PURCHASES_FETCH"
     });
@@ -103,7 +103,7 @@ let c = e => {
         error: e
       }), new o.Hx(e)
     }
-  }, f = async (e, t) => {
+  }, S = async (e, t) => {
     r.Z.dispatch({
       type: "COLLECTIBLES_PRODUCT_FETCH",
       skuId: e
@@ -127,7 +127,7 @@ let c = e => {
         error: t
       }), new o.Hx(t)
     }
-  }, N = async e => {
+  }, A = async e => {
     r.Z.dispatch({
       type: "COLLECTIBLES_CLAIM",
       skuId: e
@@ -152,7 +152,7 @@ let c = e => {
         error: t
       }), new o.Hx(t)
     }
-  }, A = async (e, t) => {
+  }, N = async (e, t) => {
     try {
       return (await i.tn.get({
         url: _.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,

@@ -1,57 +1,57 @@
 n.d(t, {
   M: function() {
-    return s
+    return i
   }
 }), n(47120), n(653041);
-var s, i, l, a, r, o, c = n(442837),
-  u = n(570140),
-  d = n(973616),
-  E = n(911955);
-(l = s || (s = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.FETCH_FAILED = 3] = "FETCH_FAILED";
-let _ = new Map,
+var i, a, s, l, r, o, c = n(442837),
+  d = n(570140),
+  u = n(973616),
+  _ = n(911955);
+(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.FETCH_FAILED = 3] = "FETCH_FAILED";
+let E = new Map,
   I = new Map,
-  T = [],
-  m = 0,
-  N = [];
-class h extends(i = c.ZP.Store) {
+  m = [],
+  T = 0,
+  h = [];
+class N extends(a = c.ZP.Store) {
   getIntegrations(e) {
     var t;
-    return null !== (t = _.get(e)) && void 0 !== t ? t : N
+    return null !== (t = E.get(e)) && void 0 !== t ? t : h
   }
   getIntegration(e, t) {
     var n;
-    return null === (n = _.get(e)) || void 0 === n ? void 0 : n.find(e => e.application.id === t)
+    return null === (n = E.get(e)) || void 0 === n ? void 0 : n.find(e => e.application.id === t)
   }
   getAllIntegrations() {
-    return _
+    return E
   }
   getIntegrationsFetchState(e) {
     var t;
     return null !== (t = I.get(e)) && void 0 !== t ? t : 0
   }
   getApplicationsShelfFetchState() {
-    return m
+    return T
   }
   getApplicationsShelf() {
-    return T
+    return m
   }
 }
 
-function C(e) {
+function f(e) {
   return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
 }
-o = "PrivateChannelIntegrationStore", (r = "displayName") in(a = h) ? Object.defineProperty(a, r, {
+o = "PrivateChannelIntegrationStore", (r = "displayName") in(l = N) ? Object.defineProperty(l, r, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[r] = o;
-let S = new h(u.Z, {
+}) : l[r] = o;
+let p = new N(d.Z, {
   LOGOUT() {
-    _.clear()
+    E.clear()
   },
   CONNECTION_OPEN() {
-    _.clear(), I.clear()
+    E.clear(), I.clear()
   },
   CHANNEL_SELECT(e) {
     let {
@@ -61,29 +61,29 @@ let S = new h(u.Z, {
     I.set(t, 0)
   },
   APPLICATIONS_SHELF_FETCH_START() {
-    m = 1
+    T = 1
   },
   APPLICATIONS_SHELF_FETCH_SUCCESS(e) {
     let {
       applications: t
     } = e;
-    T = t.map(d.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), m = 2
+    m = t.map(u.Z.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), T = 2
   },
   APPLICATIONS_SHELF_FETCH_FAIL() {
-    m = 3
+    T = 3
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START(e) {
     let {
       channelId: t
     } = e;
-    _.set(t, null), I.set(t, 1)
+    E.set(t, null), I.set(t, 1)
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS(e) {
     let {
       channelId: t,
       integrations: n
     } = e;
-    _.set(t, C(n.map(E.F))), I.set(t, 2)
+    E.set(t, f(n.map(_.F))), I.set(t, 2)
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
     let {
@@ -94,32 +94,32 @@ let S = new h(u.Z, {
   PRIVATE_CHANNEL_INTEGRATION_CREATE(e) {
     let {
       integration: t
-    } = e, n = _.get(t.channel_id);
+    } = e, n = E.get(t.channel_id);
     if (null == n) return !1;
-    _.set(t.channel_id, C([...n, (0, E.F)(t)]))
+    E.set(t.channel_id, f([...n, (0, _.F)(t)]))
   },
   PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
     let {
       integration: t
-    } = e, n = _.get(t.channel_id);
+    } = e, n = E.get(t.channel_id);
     if (null == n) return !1;
-    let s = (0, E.F)(t),
-      i = n.findIndex(e => e.application.id === s.application.id),
-      l = [...n]; - 1 === i ? l.push(s) : l[i] = s, _.set(s.channel_id, C(l))
+    let i = (0, _.F)(t),
+      a = n.findIndex(e => e.application.id === i.application.id),
+      s = [...n]; - 1 === a ? s.push(i) : s[a] = i, E.set(i.channel_id, f(s))
   },
   PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
     let {
       channelId: t,
       applicationId: n
-    } = e, s = _.get(t);
-    if (null == s) return !1;
-    _.set(t, s.filter(e => e.application.id !== n))
+    } = e, i = E.get(t);
+    if (null == i) return !1;
+    E.set(t, i.filter(e => e.application.id !== n))
   },
   CHANNEL_DELETE(e) {
     let {
       channel: t
     } = e;
-    return _.delete(t.id)
+    return E.delete(t.id)
   }
 });
-t.Z = S
+t.Z = p

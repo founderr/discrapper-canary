@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   G: function() {
-    return N
+    return A
   },
   S: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i = n(913527),
@@ -21,9 +21,9 @@ var i = n(913527),
   I = n(981631),
   T = n(921944);
 let h = [s.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, s.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
-  S = [0, 1, 7];
+  f = [0, 1, 7];
 
-function f(e, t) {
+function S(e, t) {
   var n;
   let i = _.Z.getGuilds(),
     s = c.default.entries(i).some(e => {
@@ -33,11 +33,11 @@ function f(e, t) {
   if (s || !(0, E.wC)(e)) return !1;
   let l = null === (n = u.Z.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
     T = null != l ? o.E.toDate(l) : void 0,
-    f = null != T ? r()().diff(T, "days") : null,
-    N = h.indexOf(t);
-  if (-1 === N || !(null == f || f > S[N]) || h.find(e => !(0, a.un)(e)) !== t) return !1;
+    S = null != T ? r()().diff(T, "days") : null,
+    A = h.indexOf(t);
+  if (-1 === A || !(null == S || S > f[A]) || h.find(e => !(0, a.un)(e)) !== t) return !1;
   let {
-    showLifecycleUpsells: A
+    showLifecycleUpsells: N
   } = d.Z.getCurrentConfig({
     guildId: e,
     location: "7f5b67_1"
@@ -45,10 +45,10 @@ function f(e, t) {
     disable: s || !(0, E.wC)(e),
     autoTrackExposure: !0
   });
-  return A
+  return N
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = o.E.now();
   l.hW.updateAsync("userContent", e => {
     e.guildOnboardingUpsellDismissedAt = n

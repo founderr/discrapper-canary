@@ -7,7 +7,7 @@ n.d(t, {
     return T
   },
   ub: function() {
-    return S
+    return f
   }
 });
 var i = n(735250),
@@ -72,7 +72,7 @@ let h = e => {
     }) : null]
   })
 };
-class S extends r.PureComponent {
+class f extends r.PureComponent {
   render() {
     let {
       children: e,

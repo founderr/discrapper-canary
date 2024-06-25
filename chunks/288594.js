@@ -1,23 +1,23 @@
 t.d(n, {
   Z: function() {
-    return a
+    return l
   }
 });
 var i = t(735250);
 t(470079);
-var l = t(864843),
+var a = t(864843),
   s = t(981631);
 
-function a(e) {
+function l(e) {
   let {
     guildId: n,
     applicationId: t,
-    applicationPrimarySkuId: a
+    applicationPrimarySkuId: l
   } = e;
-  return (0, i.jsx)(l.Z, {
+  return (0, i.jsx)(a.Z, {
     guildId: n,
     applicationId: t,
-    applicationPrimarySkuId: a,
+    applicationPrimarySkuId: l,
     analyticsLocation: s.Sbl.GUILD_INTEGRATION_SETTINGS
   })
 }

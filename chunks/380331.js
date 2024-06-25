@@ -14,30 +14,30 @@ var i = n(735250),
   I = n(607070),
   T = n(806966),
   h = n(254494),
-  S = n(593618),
-  f = n(451478),
-  N = n(626135),
-  A = n(624138),
+  f = n(593618),
+  S = n(451478),
+  A = n(626135),
+  N = n(624138),
   m = n(543241),
   O = n(883661),
-  R = n(880949),
-  p = n(784222),
+  p = n(880949),
+  R = n(784222),
   g = n(149203),
   C = n(981631),
   v = n(957825),
   L = n(689938),
   D = n(761002);
-let M = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-  P = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-  y = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
-  U = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
-  b = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
-  G = (0, A.Mg)(D.__invalid_unicodeCategoryShortcutHeight),
-  w = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-  B = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-  x = y + P + 2 * b,
+let M = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
+  P = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+  y = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+  U = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
+  b = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
+  G = (0, N.Mg)(D.__invalid_unicodeCategoryShortcutHeight),
+  w = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+  x = (0, N.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+  B = y + P + 2 * b,
   k = M + P,
-  V = k + (w + 2 * B),
+  V = k + (w + 2 * x),
   Z = y + U + 2 * b;
 
 function H(e) {
@@ -50,46 +50,46 @@ function H(e) {
     handleCategorySelect: _,
     isWindowFocused: c,
     useReducedMotion: E
-  } = e, I = (0, u.JA)("expression-guild-".concat(n)), T = l.type === g.En.GUILD ? null : l.id, h = t === n, f = l.type === g.En.GUILD ? l.guild : null, A = (0, i.jsxs)(d.Clickable, {
+  } = e, I = (0, u.JA)("expression-guild-".concat(n)), T = l.type === g.En.GUILD ? null : l.id, h = t === n, S = l.type === g.En.GUILD ? l.guild : null, N = (0, i.jsxs)(d.Clickable, {
     ...I,
-    "aria-label": (0, m.Nf)(l, f),
+    "aria-label": (0, m.Nf)(l, S),
     className: o()({
-      [D.categoryItemGuildCategory]: null != f,
-      [D.categoryItemDefaultCategory]: null == f,
-      [D.categoryItemDefaultCategorySelected]: null == f && h,
+      [D.categoryItemGuildCategory]: null != S,
+      [D.categoryItemDefaultCategory]: null == S,
+      [D.categoryItemDefaultCategorySelected]: null == S && h,
       [D.categoryItemRecentEmoji]: l.type === g.En.RECENT
     }),
     onClick: () => {
-      null != f && N.default.track(C.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+      null != S && A.default.track(C.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
         location: null == s ? void 0 : s.location,
         tab: v.X1.EMOJI,
-        guild_id: f.id
+        guild_id: S.id
       }), _(n)
     },
-    children: [null != f ? (0, i.jsx)(R.Z, {
-      guild: f,
+    children: [null != S ? (0, i.jsx)(p.Z, {
+      guild: S,
       isSelected: h,
       shouldAnimate: !E && c,
       isLocked: l.isNitroLocked
-    }) : null, null == f && null != T ? (0, i.jsx)(O.Z, {
+    }) : null, null == S && null != T ? (0, i.jsx)(O.Z, {
       categoryId: T,
       className: D.categoryIcon,
       height: y,
       width: y,
       size: "custom"
     }) : null]
-  }), p = a[n + 1], L = null != p && l.type === g.En.GUILD && p.type !== g.En.GUILD;
-  return null != f ? (0, i.jsxs)(r.Fragment, {
-    children: [(0, i.jsx)(S.Z, {
-      guild: f,
+  }), R = a[n + 1], L = null != R && l.type === g.En.GUILD && R.type !== g.En.GUILD;
+  return null != S ? (0, i.jsxs)(r.Fragment, {
+    children: [(0, i.jsx)(f.Z, {
+      guild: S,
       includeActivity: !1,
       children: (0, i.jsx)("div", {
-        children: A
+        children: N
       })
     }), L ? (0, i.jsx)("hr", {
       className: D.guildCategorySeparator
     }, "separator") : null]
-  }) : A
+  }) : N
 }
 t.Z = e => {
   let {
@@ -98,30 +98,30 @@ t.Z = e => {
     sectionDescriptors: s,
     intention: a,
     channel: u
-  } = e, c = T.kJ.useStore(e => e.activeCategoryIndex), S = (0, p.Ni)({
+  } = e, c = T.kJ.useStore(e => e.activeCategoryIndex), f = (0, R.Ni)({
     sectionDescriptors: s,
     emojiListRef: n
-  }), N = (0, E.O)(), A = (0, m.kI)(a, u), O = r.useRef(null), R = (0, _.e7)([f.Z], () => f.Z.isFocused()), C = (0, _.e7)([I.Z], () => I.Z.useReducedMotion, []), v = r.useMemo(() => l().memoize((e, t) => {
-    let n = A[t];
+  }), A = (0, E.O)(), N = (0, m.kI)(a, u), O = r.useRef(null), p = (0, _.e7)([S.Z], () => S.Z.isFocused()), C = (0, _.e7)([I.Z], () => I.Z.useReducedMotion, []), v = r.useMemo(() => l().memoize((e, t) => {
+    let n = N[t];
     if (null != n) return (0, i.jsx)(H, {
       activeIndex: c,
-      analyticsContext: N,
-      categories: A,
+      analyticsContext: A,
+      categories: N,
       category: n,
       categoryIndex: t,
-      handleCategorySelect: S,
-      isWindowFocused: R,
+      handleCategorySelect: f,
+      isWindowFocused: p,
       useReducedMotion: C
     }, t)
-  }), [c, N, A, S, R, C]), M = r.useMemo(() => [8, 8, 0, 8], []), b = r.useCallback((e, t) => {
-    let n = A[t];
-    if (n.type === g.En.RECENT) return x;
+  }), [c, A, N, f, p, C]), M = r.useMemo(() => [8, 8, 0, 8], []), b = r.useCallback((e, t) => {
+    let n = N[t];
+    if (n.type === g.En.RECENT) return B;
     if (n.type === g.En.GUILD) {
-      let e = A[t + 1];
+      let e = N[t + 1];
       return null != e && e.type !== g.En.GUILD ? V : k
     }
     return Z
-  }, [A]), {
+  }, [N]), {
     nonUnicodeCategoryCount: F,
     firstUnicodeCategoryIndex: Y,
     firstUnicodeCategoryOffsetTop: j,
@@ -131,17 +131,17 @@ t.Z = e => {
       t = 0,
       n = 0,
       i = 0;
-    A.forEach(r => {
+    N.forEach(r => {
       r.type === g.En.GUILD ? (t += 1, n += 1) : r.type === g.En.UNICODE ? i += 1 : (e += 1, t += 1)
     });
-    let r = x + t * k + V;
+    let r = B + t * k + V;
     return {
       nonUnicodeCategoryCount: t,
       firstUnicodeCategoryIndex: t,
       firstUnicodeCategoryOffsetTop: r,
       rowCountBySection: [e, n, i]
     }
-  }, [A]), [K, z] = r.useState(!0);
+  }, [N]), [K, z] = r.useState(!0);
   r.useLayoutEffect(() => {
     z(F >= 7)
   }, [F]);
@@ -155,16 +155,16 @@ t.Z = e => {
       e(Y), null === (t = O.current) || void 0 === t || t.scrollTo(j)
     }, [j, Y]),
     Q = r.useCallback((e, t) => {
-      let n = A[e];
+      let n = N[e];
       if (null == n) return 0;
       let i = K ? G : 0;
       if (n.type === g.En.RECENT) return t ? 0 : U;
       if (n.type === g.En.GUILD) {
-        let n = A[e + 1];
-        return null != n && n.type !== g.En.GUILD ? t ? w + -2 * B + P + i : P : t ? i : P
+        let n = N[e + 1];
+        return null != n && n.type !== g.En.GUILD ? t ? w + -2 * x + P + i : P : t ? i : P
       }
       return t ? P + i : 2 * P
-    }, [A, K]),
+    }, [N, K]),
     J = r.useMemo(() => function(e, t) {
       return (0, i.jsx)(r.Fragment, {
         children: t
@@ -176,12 +176,12 @@ t.Z = e => {
     expressionsListRef: n,
     className: t,
     store: T.kJ,
-    categories: A,
+    categories: N,
     listPadding: M,
     onScroll: q,
     renderCategoryListItem: v,
     renderSection: J,
-    rowCount: A.length,
+    rowCount: N.length,
     categoryHeight: b,
     getScrollOffsetForIndex: Q,
     rowCountBySection: W,

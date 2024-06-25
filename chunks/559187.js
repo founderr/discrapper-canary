@@ -1,26 +1,26 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
     return l
   }
 });
-var a = t(626135),
-  s = t(981631);
+var a = n(626135),
+  o = n(981631);
 
 function l(e) {
   let {
-    problem: n,
-    feedback: t,
+    problem: t,
+    feedback: n,
     reportType: l,
-    reportId: r = null,
-    rating: o = null,
+    reportId: s = null,
+    rating: r = null,
     dontShowAgain: i
   } = e;
-  a.default.track(s.rMx.IAR_FEEDBACK_SUBMITTED, {
-    reason: n,
+  a.default.track(o.rMx.IAR_FEEDBACK_SUBMITTED, {
+    reason: t,
     report_type: l,
-    report_id: r,
-    rating: o,
-    feedback: t,
+    report_id: s,
+    rating: r,
+    feedback: n,
     dont_show_again: i
   })
 }

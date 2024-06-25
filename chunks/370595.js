@@ -3,11 +3,11 @@ n.d(t, {
     return h
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  l = n.n(a),
+  s = n(481060),
   r = n(991570),
   o = n(50493),
   c = n(689938),
@@ -18,32 +18,32 @@ function h(e) {
   let {
     userId: t,
     guildId: n,
-    onNavigate: i,
+    onNavigate: a,
     backPanel: h = o.k.INFO
-  } = e, m = (0, r.f)(t, n, .8, a.tokens.colors.BACKGROUND_SECONDARY);
-  return (0, l.jsxs)("div", {
-    className: s()(d.header),
+  } = e, p = (0, r.f)(t, n, .8, s.tokens.colors.BACKGROUND_SECONDARY);
+  return (0, i.jsxs)("div", {
+    className: l()(d.header),
     style: {
-      backgroundColor: m
+      backgroundColor: p
     },
-    children: [(0, l.jsx)("div", {
-      className: s()(d.headerTitle),
-      children: (0, l.jsxs)(a.Clickable, {
-        className: s()(u.backButton),
-        onClick: () => null == i ? void 0 : i(h),
-        children: [(0, l.jsx)(a.ArrowSmallLeftIcon, {
+    children: [(0, i.jsx)("div", {
+      className: l()(d.headerTitle),
+      children: (0, i.jsxs)(s.Clickable, {
+        className: l()(u.backButton),
+        onClick: () => null == a ? void 0 : a(h),
+        children: [(0, i.jsx)(s.ArrowSmallLeftIcon, {
           size: "custom",
-          className: s()(u.__invalid_backButtonIcon),
+          className: l()(u.__invalid_backButtonIcon),
           width: 20,
           height: 20
-        }), (0, l.jsx)(a.Heading, {
+        }), (0, i.jsx)(s.Heading, {
           variant: "heading-md/semibold",
           children: c.Z.Messages.BACK
         })]
       })
-    }), (0, l.jsx)("div", {
-      className: s()(u.__invalid_options),
-      children: (0, l.jsx)(a.KeyCombo, {
+    }), (0, i.jsx)("div", {
+      className: l()(u.__invalid_options),
+      children: (0, i.jsx)(s.KeyCombo, {
         shortcut: "esc",
         keyClassName: u.keyComboInner,
         className: u.keyComboContainer

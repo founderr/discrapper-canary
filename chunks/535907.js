@@ -1,10 +1,10 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   z: function() {
-    return n
+    return s
   }
 });
-let n = {
+let s = {
   authorIds: [],
   message: ""
 }

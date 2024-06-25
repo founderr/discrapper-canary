@@ -1,6 +1,6 @@
-n.d(t, {
+n.d(e, {
   B: function() {
-    return l
+    return c
   }
 });
 var a = n(735250);
@@ -9,21 +9,21 @@ var r = n(69580),
   o = n(944844),
   s = n(553669);
 
-function l(e) {
+function c(t) {
   let {
-    data: t,
+    data: e,
     onDenied: n,
-    onError: l,
+    onError: c,
     onSuccess: u
-  } = e, i = (0, o.t)(t, n, l, u);
+  } = t, l = (0, o.t)(e, n, c, u);
   return (0, a.jsx)("div", {
     className: s.content,
     children: (0, a.jsx)(r.OAuth2Authorize, {
-      clientId: t.clientId,
-      scopes: t.scopes,
+      clientId: e.clientId,
+      scopes: e.scopes,
       showLogout: !0,
       isTrustedName: !0,
-      callbackWithoutPost: i
+      callbackWithoutPost: l
     })
   })
 }

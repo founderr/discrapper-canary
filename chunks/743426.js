@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 }), n(47120), n(411104);
 var i = n(264344),
@@ -27,10 +27,10 @@ function h(e, t, n) {
   }) : e[t] = n, e
 }
 
-function S(e) {
+function f(e) {
   return (null != e ? e : T.Qx) / T.Qx
 }
-class f extends o.Z {
+class S extends o.Z {
   destroy() {
     this.eachConnection(e => e.destroy()), this.emit(a.aB.Destroy), this.removeAllListeners()
   }
@@ -157,10 +157,10 @@ class f extends o.Z {
     return Promise.resolve()
   }
   setInputVolume(e) {
-    (0, d.zS)().setInputVolume(S(e))
+    (0, d.zS)().setInputVolume(f(e))
   }
   setOutputVolume(e) {
-    (0, d.zS)().setOutputVolume(S(e))
+    (0, d.zS)().setOutputVolume(f(e))
   }
   getAudioInputDevices() {
     return (0, _.Hg)()
@@ -512,8 +512,8 @@ class f extends o.Z {
         ducking: !1
       }), this.on("removeListener", this.handleRemoveListener), this.on("newListener", this.handleNewListener), null != (0, d.zS)().getAudioSubsystem ? (0, d.zS)().getAudioSubsystem((e, t) => {
         this.audioSubsystem = e, this.audioLayer = t
-      }) : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? T.iA.LEGACY : T.iA.STANDARD), null != n.pingVoiceThread && "undefined" != typeof window && "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !f.installedLogHooks)
-      for (let e of (f.installedLogHooks = !0, ["trace", "debug", "info", "warn", "error", "log"])) {
+      }) : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? T.iA.LEGACY : T.iA.STANDARD), null != n.pingVoiceThread && "undefined" != typeof window && "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !S.installedLogHooks)
+      for (let e of (S.installedLogHooks = !0, ["trace", "debug", "info", "warn", "error", "log"])) {
         let t = console,
           n = t[e];
         null != n && (t[e] = function() {
@@ -527,4 +527,4 @@ class f extends o.Z {
     null != n.setActiveSinksChangeCallback && n.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this)
   }
 }
-h(f, "installedLogHooks", !1)
+h(S, "installedLogHooks", !1)

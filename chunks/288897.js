@@ -14,10 +14,10 @@ var i = n(735250),
   I = n(436660),
   T = n(887490),
   h = n(77224),
-  S = n(135223),
-  f = n(704875),
-  N = n(653309),
-  A = n(214262),
+  f = n(135223),
+  S = n(704875),
+  A = n(653309),
+  N = n(214262),
   m = n(622322);
 
 function O(e, t, n) {
@@ -28,7 +28,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class R extends r.PureComponent {
+class p extends r.PureComponent {
   componentDidMount() {
     this.props.editor.events.addListener("onChange", this.handleOnChange)
   }
@@ -52,7 +52,7 @@ class R extends r.PureComponent {
       guildId: i,
       decorateExtra: r
     } = this.props;
-    return [...(0, S.Z)(n, e, i), ...(0, h.Z)(n, e), ...null !== (t = null == r ? void 0 : r(n, e)) && void 0 !== t ? t : []]
+    return [...(0, f.Z)(n, e, i), ...(0, h.Z)(n, e), ...null !== (t = null == r ? void 0 : r(n, e)) && void 0 !== t ? t : []]
   }
   renderElement(e) {
     var t;
@@ -68,7 +68,7 @@ class R extends r.PureComponent {
       ...o.style,
       textAlign: "right"
     });
-    let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, f.Z)(e, n, r);
+    let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, S.Z)(e, n, r);
     return null != l ? l : (0, i.jsx)("div", {
       ...o,
       children: a
@@ -82,7 +82,7 @@ class R extends r.PureComponent {
     } = this.props, {
       attributes: s,
       children: o
-    } = e, a = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, N.Z)(n, e);
+    } = e, a = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, A.Z)(n, e);
     return null != a ? a : (0, i.jsx)("span", {
       ...s,
       children: o
@@ -298,23 +298,23 @@ class R extends r.PureComponent {
       onKeyDown: I,
       onKeyUp: T,
       decorateExtra: h,
-      renderExtraElement: S,
-      renderExtraLeaf: f,
-      ...N
+      renderExtraElement: f,
+      renderExtraLeaf: S,
+      ...A
     } = this.props;
     return (0, i.jsxs)("div", {
       ref: this.containerRef,
       className: n,
       children: [this.state.showPlaceholder ? (0, i.jsx)("div", {
-        className: o()(A.placeholder, t),
+        className: o()(N.placeholder, t),
         "aria-hidden": !0,
         children: l
       }) : null, (0, i.jsx)(a.mH, {
         editor: e,
         value: [...this.state.initialValue],
         children: (0, i.jsx)(a.CX, {
-          ...N,
-          className: o()(m.markup, A.editor, t),
+          ...A,
+          className: o()(m.markup, N.editor, t),
           decorate: this.decorate,
           renderElement: this.renderElement,
           renderLeaf: this.renderLeaf,
@@ -346,4 +346,4 @@ class R extends r.PureComponent {
     }
   }
 }
-t.Z = R
+t.Z = p

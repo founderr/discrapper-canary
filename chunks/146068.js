@@ -6,10 +6,10 @@ t.d(n, {
 var a = t(735250);
 t(470079);
 var r = t(249849),
-  s = t(907561),
-  i = t(689938),
-  l = t(585025);
-let o = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
+  i = t(907561),
+  s = t(689938),
+  o = t(585025);
+let l = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
   c = ["#0b3215", "#a6b51a", "#35748a", "#65a88f", "#621c12", "#f96748", "#ffbbbb"],
   d = [.25, .9, .9],
   u = [{
@@ -23,7 +23,7 @@ let o = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
     tint: 1
   }],
   m = [.05, .4, .15, .33, .1, .3, .6],
-  h = [{
+  f = [{
     base: 8,
     tint: 1
   }, {
@@ -51,30 +51,30 @@ function C(e) {
     width: n,
     height: t,
     primaryTintColor: C,
-    secondaryTintColor: x,
-    ...f
+    secondaryTintColor: _,
+    ...h
   } = e, {
-    primaryColorsTransformed: E,
-    secondaryColorsTransformed: T
+    primaryColorsTransformed: x,
+    secondaryColorsTransformed: g
   } = (0, r.s)({
-    primaryBaseColors: o,
+    primaryBaseColors: l,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
     secondaryBaseColors: c,
-    secondaryTintColor: x,
+    secondaryTintColor: _,
     secondaryTintLuminances: m,
-    secondaryLuminanceWeights: h
+    secondaryLuminanceWeights: f
   }), {
-    styleContent: _,
-    containerId: I
-  } = (0, s.bC)(E, T);
+    styleContent: p,
+    containerId: T
+  } = (0, i.bC)(x, g);
   return (0, a.jsxs)("svg", {
-    ...f,
-    "aria-label": i.Z.Messages.CLAN_LOOK_BANNER,
+    ...h,
+    "aria-label": s.Z.Messages.CLAN_LOOK_BANNER,
     width: n,
     height: t,
-    viewBox: "0 0 ".concat(s.Km, " ").concat(s.md),
+    viewBox: "0 0 ".concat(i.Km, " ").concat(i.md),
     children: [(0, a.jsxs)("defs", {
       children: [(0, a.jsx)("defs", {
         children: (0, a.jsxs)("linearGradient", {
@@ -84,24 +84,24 @@ function C(e) {
           y1: "0",
           y2: "1",
           children: [(0, a.jsx)("stop", {
-            stopColor: E[2],
+            stopColor: x[2],
             offset: "0%"
           }), (0, a.jsx)("stop", {
-            stopColor: E[0],
+            stopColor: x[0],
             offset: "100%"
           })]
         })
       }), (0, a.jsx)("style", {
-        children: _
+        children: p
       })]
     }), (0, a.jsx)("use", {
-      href: "".concat(l, "#sky"),
+      href: "".concat(o, "#sky"),
       style: {
         fill: "url(#sky-gradient)"
       }
     }), (0, a.jsx)("use", {
-      href: "".concat(l, "#wrapper-layer"),
-      id: I
+      href: "".concat(o, "#wrapper-layer"),
+      id: T
     })]
   })
 }

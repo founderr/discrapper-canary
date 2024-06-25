@@ -1,15 +1,15 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-    return r
+    return o
   }
 });
-var a = t(470079),
-  i = t(442837),
-  l = t(430824),
-  n = t(687476);
+var a = s(470079),
+  l = s(442837),
+  i = s(430824),
+  n = s(687476);
 
-function r(e) {
-  let s = (0, i.e7)([l.Z], () => l.Z.getRoles(e)),
-    t = (0, i.e7)([n.Z], () => n.Z.getSubscriptionRoles(e));
-  return a.useMemo(() => Object.values(s).filter(e => t.has(e.id)), [s, t])
+function o(e) {
+  let t = (0, l.e7)([i.Z], () => i.Z.getRoles(e)),
+    s = (0, l.e7)([n.Z], () => n.Z.getSubscriptionRoles(e));
+  return a.useMemo(() => Object.values(t).filter(e => s.has(e.id)), [t, s])
 }

@@ -1,12 +1,12 @@
-s.d(n, {
+o.d(e, {
   Z: function() {
     return i
   }
 });
-var a = s(703656),
-  l = s(981631);
+var a = o(703656),
+  t = o(981631);
 
 function i() {
-  let e = (0, a.s1)();
-  e.length > 0 ? e.goBack() : (0, a.uL)(l.Z5c.ME)
+  let n = (0, a.s1)();
+  n.length > 0 ? n.goBack() : (0, a.uL)(t.Z5c.ME)
 }

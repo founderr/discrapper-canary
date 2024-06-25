@@ -22,9 +22,9 @@ class h extends o.PureComponent {
       tooltipDelay: d,
       size: E = 16,
       badgeColor: h,
-      iconClassName: S,
-      flowerStarClassName: f
-    } = this.props, N = function(e) {
+      iconClassName: f,
+      flowerStarClassName: S
+    } = this.props, A = function(e) {
       switch (e) {
         case 2:
           return I.Z.Messages.GUILD_VERIFIED;
@@ -48,7 +48,7 @@ class h extends o.PureComponent {
       color: o,
       position: a,
       delay: d,
-      text: N,
+      text: A,
       children: o => 5 === e || 4 === e ? (0, s.jsx)("div", {
         ...o,
         className: l()(n, i),
@@ -57,18 +57,18 @@ class h extends o.PureComponent {
           height: E
         },
         children: (0, s.jsx)(t, {
-          className: l()(T.icon, S),
+          className: l()(T.icon, f),
           color: "currentColor"
         })
       }) : (0, s.jsx)(c.Z, {
         ...o,
         className: l()(n, i),
-        flowerStarClassName: f,
+        flowerStarClassName: S,
         color: h,
         stroke: r,
         size: E,
         children: (0, s.jsx)(t, {
-          className: l()(T.icon, S),
+          className: l()(T.icon, f),
           color: "currentColor"
         })
       })

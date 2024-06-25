@@ -1,21 +1,21 @@
 t.d(n, {
   Z: function() {
-    return l
+    return o
   }
 });
 var a = t(735250);
 t(470079);
 var r = t(481060),
-  s = t(689938),
-  i = t(684201);
+  i = t(689938),
+  s = t(684201);
 
-function l(e) {
+function o(e) {
   let {
     onClick: n
   } = e;
   return (0, a.jsxs)(r.Button, {
-    className: i.randomizeButton,
-    innerClassName: i.randomizeButtonInner,
+    className: s.randomizeButton,
+    innerClassName: s.randomizeButtonInner,
     look: r.Button.Looks.OUTLINED,
     size: r.Button.Sizes.MEDIUM,
     color: r.Button.Colors.PRIMARY,
@@ -23,6 +23,6 @@ function l(e) {
     grow: !1,
     children: [(0, a.jsx)(r.RetryIcon, {
       size: "xs"
-    }), s.Z.Messages.CLAN_SETUP_RANDOMIZE_LOOK]
+    }), i.Z.Messages.CLAN_SETUP_RANDOMIZE_LOOK]
   })
 }

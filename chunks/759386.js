@@ -1,68 +1,68 @@
 t.r(n), t.d(n, {
   getApplicationPaymentSteps: function() {
-    return I
+    return _
   }
 }), t(47120);
-var r = t(735250);
+var i = t(735250);
 t(470079);
-var s = t(409813),
-  a = t(276442),
-  l = t(961830),
-  i = t(721165),
-  o = t(519801),
-  u = t(589771),
-  c = t(883419),
-  d = t(689938);
+var r = t(409813),
+  o = t(276442),
+  a = t(961830),
+  s = t(721165),
+  l = t(519801),
+  c = t(589771),
+  d = t(883419),
+  u = t(689938);
 
-function I(e) {
+function _(e) {
   let {
     guildId: n,
     eligibleApplicationSubscriptionGuilds: t,
-    showBenefitsFirst: I
+    showBenefitsFirst: _
   } = e;
   return [{
     key: null,
-    renderStep: e => (0, r.jsx)(u.Z, {
-      initialStep: I ? s.h8.BENEFITS : s.h8.REVIEW,
+    renderStep: e => (0, i.jsx)(c.Z, {
+      initialStep: _ ? r.h8.BENEFITS : r.h8.REVIEW,
       guildId: n,
       ...e
     })
   }, {
-    key: s.h8.BENEFITS,
-    renderStep: e => (0, r.jsx)(i.Z, {
+    key: r.h8.BENEFITS,
+    renderStep: e => (0, i.jsx)(s.Z, {
       ...e
     }),
     options: {
-      useBreadcrumbLabel: () => d.Z.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
+      useBreadcrumbLabel: () => u.Z.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
     }
   }, {
-    key: s.h8.ADD_PAYMENT_STEPS,
-    renderStep: e => (0, r.jsx)(r.Fragment, {
-      children: (0, r.jsx)(a.J, {
+    key: r.h8.ADD_PAYMENT_STEPS,
+    renderStep: e => (0, i.jsx)(i.Fragment, {
+      children: (0, i.jsx)(o.J, {
         ...e,
-        breadcrumbSteps: [s.h8.ADD_PAYMENT_STEPS, s.h8.REVIEW, s.h8.CONFIRM]
+        breadcrumbSteps: [r.h8.ADD_PAYMENT_STEPS, r.h8.REVIEW, r.h8.CONFIRM]
       })
     }),
     options: {
       renderHeader: !0
     }
-  }, ...l.yp, {
-    key: s.h8.REVIEW,
-    renderStep: e => (0, r.jsx)(c.Z, {
-      backButtonEligible: !!I || void 0,
-      prevStep: I ? s.h8.BENEFITS : void 0,
+  }, ...a.yp, {
+    key: r.h8.REVIEW,
+    renderStep: e => (0, i.jsx)(d.Z, {
+      backButtonEligible: !!_ || void 0,
+      prevStep: _ ? r.h8.BENEFITS : void 0,
       showGuildPicker: null == n,
       eligibleApplicationSubscriptionGuilds: t,
       ...e
     }),
     options: {
       renderHeader: !0,
-      useBreadcrumbLabel: () => d.Z.Messages.BILLING_STEP_REVIEW
+      useBreadcrumbLabel: () => u.Z.Messages.BILLING_STEP_REVIEW
     }
   }, {
-    key: s.h8.CONFIRM,
-    renderStep: e => (0, r.jsx)(o.Z, {
-      showBenefits: !I,
+    key: r.h8.CONFIRM,
+    renderStep: e => (0, i.jsx)(l.Z, {
+      showBenefits: !_,
       ...e
     })
   }]

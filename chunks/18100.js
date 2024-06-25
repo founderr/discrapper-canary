@@ -1,114 +1,114 @@
 t.d(n, {
   Z: function() {
-    return f
+    return h
   }
 }), t(47120);
 var a = t(735250),
   r = t(470079),
-  s = t(120356),
-  i = t.n(s),
-  l = t(442837),
-  o = t(481060),
+  i = t(120356),
+  s = t.n(i),
+  o = t(442837),
+  l = t(481060),
   c = t(231467),
   d = t(430824),
   u = t(214715),
   m = t(308083),
-  h = t(689938),
+  f = t(689938),
   C = t(309479);
 
-function x(e) {
+function _(e) {
   let {
     trait: n,
     selected: t,
-    onClick: s
-  } = e, [l, o] = r.useState(!1), c = r.useCallback(() => o(!0), []), d = r.useCallback(() => o(!1), []);
+    onClick: i
+  } = e, [o, l] = r.useState(!1), c = r.useCallback(() => l(!0), []), d = r.useCallback(() => l(!1), []);
   return (0, a.jsx)(u.Z, {
     variant: "text-xs/semibold",
-    color: l ? "text-muted" : "interactive-active",
-    className: i()(C.trait, {
-      [C.strikethrough]: l
+    color: o ? "text-muted" : "interactive-active",
+    className: s()(C.trait, {
+      [C.strikethrough]: o
     }),
     text: n,
     selected: t,
     onMouseEnter: t ? c : void 0,
     onMouseLeave: t ? d : void 0,
-    onClick: t ? s : void 0
+    onClick: t ? i : void 0
   }, n)
 }
 
-function f(e) {
+function h(e) {
   var n;
   let {
     guildId: t,
-    progress: s,
+    progress: i,
     traitsToHighlight: u,
-    maskDescription: f,
-    maskTraits: E,
-    onTraitClick: T
-  } = e, _ = (0, l.e7)([d.Z], () => d.Z.getGuild(t)), {
-    interests: I,
-    description: g,
-    playstyle: p,
-    wildcardDescriptors: N,
-    brandPrimaryColor: v
-  } = s, y = (0, o.useToken)(o.tokens.colors.TEXT_BRAND), S = Array.from(I), A = r.useMemo(() => null != u ? new Set(u) : new Set, [u]);
+    maskDescription: h,
+    maskTraits: x,
+    onTraitClick: g
+  } = e, p = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), {
+    interests: T,
+    description: I,
+    playstyle: E,
+    wildcardDescriptors: b,
+    brandPrimaryColor: N
+  } = i, v = (0, l.useToken)(l.tokens.colors.TEXT_BRAND), y = Array.from(T), S = r.useMemo(() => null != u ? new Set(u) : new Set, [u]);
   return (0, a.jsxs)("div", {
     children: [(0, a.jsxs)("div", {
-      className: i()(C.description, f ? C.descriptionBorderMask : void 0),
+      className: s()(C.description, h ? C.descriptionBorderMask : void 0),
       children: [(0, a.jsx)("div", {
-        className: f ? C.descriptionMask : void 0
-      }), (0, a.jsx)(o.Heading, {
+        className: h ? C.descriptionMask : void 0
+      }), (0, a.jsx)(l.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
         lineClamp: 1,
-        children: null == _ ? void 0 : _.name
+        children: null == p ? void 0 : p.name
       }), (0, a.jsxs)("div", {
         className: C.clanInfoRow,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, a.jsx)(l.Text, {
           variant: "text-xxs/normal",
           className: C.clanInfoItem,
           children: (0, a.jsx)("span", {
             role: "img",
-            "aria-label": h.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+            "aria-label": f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
             children: "\uD83C\uDFAE"
           })
-        }), (0, a.jsx)(o.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
           className: C.clanInfoItem,
-          children: null !== (n = (0, m.mv)(p)) && void 0 !== n ? n : h.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
-        }), null != _ && (0, a.jsx)(c.cS, {
-          wildcardDescriptors: N,
-          primaryColor: null != v ? v : y.hex()
+          children: null !== (n = (0, m.mv)(E)) && void 0 !== n ? n : f.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+        }), null != p && (0, a.jsx)(c.cS, {
+          wildcardDescriptors: b,
+          primaryColor: null != N ? N : v.hex()
         })]
-      }), (0, a.jsx)(o.Text, {
+      }), (0, a.jsx)(l.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
         className: C.descriptionText,
-        children: (null == g ? void 0 : g.length) > 0 ? g : h.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        children: (null == I ? void 0 : I.length) > 0 ? I : f.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })]
     }), (0, a.jsxs)("div", {
-      className: i()(C.tagsContainer, E ? C.traitsBorderMask : void 0),
+      className: s()(C.tagsContainer, x ? C.traitsBorderMask : void 0),
       children: [(0, a.jsx)("div", {
-        className: E ? C.traitsMask : void 0
+        className: x ? C.traitsMask : void 0
       }), (0, a.jsxs)("div", {
         className: C.tagsCount,
-        children: [(0, a.jsx)(o.TagsIcon, {
+        children: [(0, a.jsx)(l.TagsIcon, {
           size: "xxs",
           className: C.tags
-        }), (0, a.jsx)(o.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-xs/semibold",
           color: "text-muted",
-          children: h.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
-            n: S.length
+          children: f.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            n: y.length
           })
         })]
       }), (0, a.jsx)("div", {
         className: C.traits,
-        children: S.map(e => (0, a.jsx)(x, {
+        children: y.map(e => (0, a.jsx)(_, {
           trait: e,
-          selected: A.has(e),
-          onClick: T
+          selected: S.has(e),
+          onClick: g
         }, e))
       })]
     })]

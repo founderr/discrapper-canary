@@ -1,94 +1,94 @@
 n.d(t, {
   Z: function() {
-    return y
+    return j
   }
 }), n(47120), n(653041);
-var l, i, s = n(735250),
-  r = n(470079),
-  a = n(120356),
-  o = n.n(a),
-  u = n(512722),
-  c = n.n(u),
+var i, l, r = n(735250),
+  a = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  c = n(512722),
+  u = n.n(c),
   d = n(392711),
   h = n.n(d),
   p = n(748780),
-  g = n(442837),
-  m = n(215569),
-  C = n(481060),
-  E = n(612226),
-  f = n(951483),
-  _ = n(714338),
-  I = n(607070),
+  f = n(442837),
+  _ = n(215569),
+  g = n(481060),
+  m = n(612226),
+  C = n(951483),
+  I = n(714338),
+  E = n(607070),
   N = n(585483),
-  Z = n(557177),
+  x = n(557177),
   S = n(264549),
-  x = n(981631),
-  L = n(689938),
+  Z = n(981631),
+  v = n(689938),
   T = n(661948);
 
-function v(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(i = l || (l = {})).UP = "UP", i.DOWN = "DOWN", i.LEFT = "LEFT", i.RIGHT = "RIGHT";
+}(l = i || (i = {})).UP = "UP", l.DOWN = "DOWN", l.LEFT = "LEFT", l.RIGHT = "RIGHT";
 let A = {
-  UP: h().throttle(() => (0, Z.GN)("ddr-up"), 100),
-  DOWN: h().throttle(() => (0, Z.GN)("ddr-down"), 100),
-  LEFT: h().throttle(() => (0, Z.GN)("ddr-left"), 100),
-  RIGHT: h().throttle(() => (0, Z.GN)("ddr-right"), 100)
+  UP: h().throttle(() => (0, x.GN)("ddr-up"), 100),
+  DOWN: h().throttle(() => (0, x.GN)("ddr-down"), 100),
+  LEFT: h().throttle(() => (0, x.GN)("ddr-left"), 100),
+  RIGHT: h().throttle(() => (0, x.GN)("ddr-right"), 100)
 };
 
-function M(e) {
+function b(e) {
   switch (e.keyCode) {
-    case x.yXg.ARROW_UP:
+    case Z.yXg.ARROW_UP:
       return "UP";
-    case x.yXg.ARROW_DOWN:
+    case Z.yXg.ARROW_DOWN:
       return "DOWN";
-    case x.yXg.ARROW_LEFT:
+    case Z.yXg.ARROW_LEFT:
       return "LEFT";
-    case x.yXg.ARROW_RIGHT:
+    case Z.yXg.ARROW_RIGHT:
       return "RIGHT";
     default:
       return null
   }
 }
-let R = 1e3 / 60,
-  O = [E.Q2.MESSAGE, E.Q2.NAVIGATION, E.Q2.VOICE_AND_VIDEO, E.Q2.CHAT, E.Q2.MISCELLANEOUS];
+let M = 1e3 / 60,
+  R = [m.Q2.MESSAGE, m.Q2.NAVIGATION, m.Q2.VOICE_AND_VIDEO, m.Q2.CHAT, m.Q2.MISCELLANEOUS];
 
-function P() {
-  let e = r.useMemo(() => h()((0, E.Rv)()).groupBy(e => e.group).value(), []);
-  return (0, s.jsx)("div", {
+function y() {
+  let e = a.useMemo(() => h()((0, m.Rv)()).groupBy(e => e.group).value(), []);
+  return (0, r.jsx)("div", {
     className: T.keyboardShortcutList,
-    children: O.map(t => {
+    children: R.map(t => {
       let n = e[t],
-        l = (0, E.UD)(t),
-        i = (0, E.U6)(t);
-      return (0, s.jsxs)("div", {
+        i = (0, m.UD)(t),
+        l = (0, m.U6)(t);
+      return (0, r.jsxs)("div", {
         className: T.keyboardShortcutSection,
-        children: [(0, s.jsxs)("div", {
-          children: [(0, s.jsx)(C.Heading, {
+        children: [(0, r.jsxs)("div", {
+          children: [(0, r.jsx)(g.Heading, {
             variant: "heading-lg/semibold",
-            children: l
-          }), null != i && (0, s.jsx)(C.Text, {
+            children: i
+          }), null != l && (0, r.jsx)(g.Text, {
             className: T.keybindGroupDescription,
             variant: "text-sm/normal",
-            children: i
+            children: l
           })]
-        }), (0, s.jsx)("div", {
+        }), (0, r.jsx)("div", {
           className: T.keyboardShortcutListGroup,
           children: n.map((e, t) => {
             var n;
-            return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, s.jsxs)("div", {
+            return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, r.jsxs)("div", {
               className: o()(T.keybindGroup),
-              children: [(0, s.jsx)(C.Text, {
+              children: [(0, r.jsx)(g.Text, {
                 variant: "text-sm/normal",
                 children: e.description
-              }), (0, s.jsx)("div", {
+              }), (0, r.jsx)("div", {
                 className: "keybind-shortcuts",
-                children: e.binds.map(e => (0, s.jsx)(C.KeyCombo, {
+                children: e.binds.map(e => (0, r.jsx)(g.KeyCombo, {
                   className: T.keybindKey,
                   shortcut: e
                 }, e))
@@ -100,16 +100,16 @@ function P() {
     })
   })
 }
-class b extends r.PureComponent {
+class O extends a.PureComponent {
   componentDidMount() {
-    this.lastInputedKeys = [], N.S.subscribe(x.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
+    this.lastInputedKeys = [], N.S.subscribe(Z.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(Z.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.addEventListener("keyup", this.handleKeyUp, {
       capture: !0
     })
   }
   componentWillUnmount() {
-    N.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
+    N.S.unsubscribe(Z.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(Z.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.removeEventListener("keyup", this.handleKeyUp, {
       capture: !0
@@ -120,56 +120,56 @@ class b extends r.PureComponent {
       UP: e,
       DOWN: t,
       LEFT: n,
-      RIGHT: l
+      RIGHT: i
     } = this.state;
-    return (0, s.jsxs)(p.Z.div, {
+    return (0, r.jsxs)(p.Z.div, {
       className: T.keyboardShortcutsModal,
       style: this.getStyles(),
-      children: [(0, s.jsxs)(C.H, {
+      children: [(0, r.jsxs)(g.H, {
         className: T.modalTitle,
-        children: [(0, s.jsx)("div", {
+        children: [(0, r.jsx)("div", {
           className: T.content,
-          children: L.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
-        }), (0, s.jsx)(C.KeyCombo, {
+          children: v.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
+        }), (0, r.jsx)(g.KeyCombo, {
           shortcut: "mod+/"
         })]
-      }), (0, s.jsx)("div", {
+      }), (0, r.jsx)("div", {
         className: T.modalSubtitle,
-        children: L.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SUBTITLE
-      }), (0, s.jsxs)("div", {
+        children: v.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SUBTITLE
+      }), (0, r.jsxs)("div", {
         className: T.ddrArrows,
-        children: [(0, s.jsx)(j, {
+        children: [(0, r.jsx)(P, {
           arrow: "LEFT",
           isActive: n,
           className: T.left,
           children: "left"
-        }), (0, s.jsx)(j, {
+        }), (0, r.jsx)(P, {
           arrow: "DOWN",
           isActive: t,
           className: T.down,
           children: "down"
-        }), (0, s.jsx)(j, {
+        }), (0, r.jsx)(P, {
           arrow: "UP",
           isActive: e,
           className: T.up,
           children: "up"
-        }), (0, s.jsx)(j, {
+        }), (0, r.jsx)(P, {
           arrow: "RIGHT",
-          isActive: l,
+          isActive: i,
           className: T.right,
           children: "right"
         })]
-      }), (0, s.jsx)(C.AdvancedScrollerAuto, {
+      }), (0, r.jsx)(g.AdvancedScrollerAuto, {
         ref: this.scrollerRef,
         fade: !0,
-        children: (0, s.jsx)(C.HeadingLevel, {
-          children: (0, s.jsx)(P, {})
+        children: (0, r.jsx)(g.HeadingLevel, {
+          children: (0, r.jsx)(y, {})
         })
       })]
     })
   }
   constructor(...e) {
-    super(...e), v(this, "state", {
+    super(...e), L(this, "state", {
       UP: !1,
       DOWN: !1,
       LEFT: !1,
@@ -178,86 +178,86 @@ class b extends r.PureComponent {
       scaleX: new p.Z.Value(1),
       scaleY: new p.Z.Value(0),
       animating: !1
-    }), v(this, "scrollerRef", r.createRef()), v(this, "lastInputedKeys", []), v(this, "scrollPageUp", () => {
+    }), L(this, "scrollerRef", a.createRef()), L(this, "lastInputedKeys", []), L(this, "scrollPageUp", () => {
       let e = this.scrollerRef.current;
-      c()(null != e, "Scroller is pagedUp when not mounted"), e.scrollPageUp({
+      u()(null != e, "Scroller is pagedUp when not mounted"), e.scrollPageUp({
         animate: !0
       })
-    }), v(this, "scrollPageDown", () => {
+    }), L(this, "scrollPageDown", () => {
       let e = this.scrollerRef.current;
-      c()(null != e, "Scroller is pagedDown when not mounted"), e.scrollPageDown({
+      u()(null != e, "Scroller is pagedDown when not mounted"), e.scrollPageDown({
         animate: !0
       })
-    }), v(this, "arrowUp", e => {
+    }), L(this, "arrowUp", e => {
       let {
         direction: t
       } = e;
       this.setState({
         [t]: !1
       })
-    }), v(this, "arrowDown", e => {
+    }), L(this, "arrowDown", e => {
       let {
         direction: t
       } = e;
       A[t](), this.setState({
         [t]: !0
       })
-    }), v(this, "componentWillLeave", e => {
+    }), L(this, "componentWillLeave", e => {
       this.setState({
         animating: !0
       }), this.state.opacity.setValue(1), this.state.scaleX.setValue(.5), this.state.scaleY.setValue(1), p.Z.sequence([p.Z.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         delay: 300,
         toValue: .7,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * R
+        duration: 2 * M
       }), p.Z.timing(this.state.scaleY, {
         delay: 100,
         toValue: .005,
-        duration: 8 * R,
+        duration: 8 * M,
         easing: p.Z.Easing.in(p.Z.Easing.ease)
       }), p.Z.parallel([p.Z.timing(this.state.scaleX, {
         toValue: 1,
-        duration: 10 * R,
+        duration: 10 * M,
         easing: p.Z.Easing.out(p.Z.Easing.ease)
       }), p.Z.timing(this.state.opacity, {
         toValue: 0,
-        duration: 12 * R
+        duration: 12 * M
       })])]).start(e)
-    }), v(this, "toggleOpacity", () => {
+    }), L(this, "toggleOpacity", () => {
       1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1)
-    }), v(this, "getStyles", () => ({
+    }), L(this, "getStyles", () => ({
       opacity: this.state.opacity.interpolate({
         inputRange: [0, 1],
         outputRange: [0, 1]
@@ -273,19 +273,19 @@ class b extends r.PureComponent {
           outputRange: [0, 1]
         })
       }]
-    })), v(this, "handleKeyDown", e => {
-      if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === x.yXg.H && this.lastInputedKeys[1] === x.yXg.H && this.lastInputedKeys[2] === x.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === x.yXg.N && this.lastInputedKeys[4] === x.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = M(e);
+    })), L(this, "handleKeyDown", e => {
+      if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === Z.yXg.H && this.lastInputedKeys[1] === Z.yXg.H && this.lastInputedKeys[2] === Z.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === Z.yXg.N && this.lastInputedKeys[4] === Z.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
+      let t = b(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
-    }), v(this, "handleKeyUp", e => {
+    }), L(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = M(e);
+      let t = b(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))
-    }), v(this, "onArrowClick", e => {
+    }), L(this, "onArrowClick", e => {
       this.arrowDown({
         direction: e
       })
@@ -293,50 +293,50 @@ class b extends r.PureComponent {
   }
 }
 
-function j(e) {
+function P(e) {
   let {
     isActive: t,
     arrow: n,
-    className: l,
-    children: i
-  } = e, [a, u] = r.useState(t), c = r.useCallback(() => {
-    A[n](), u(!0)
+    className: i,
+    children: l
+  } = e, [s, c] = a.useState(t), u = a.useCallback(() => {
+    A[n](), c(!0)
   }, [n]);
-  return r.useEffect(() => {
-    if (a) {
-      let e = setTimeout(() => u(!1), 500);
+  return a.useEffect(() => {
+    if (s) {
+      let e = setTimeout(() => c(!1), 500);
       return () => clearTimeout(e)
     }
-  }, [a]), (0, s.jsx)(C.Clickable, {
-    onClick: c,
-    className: o()(T.arrow, l, {
-      [T.active]: t || a
+  }, [s]), (0, r.jsx)(g.Clickable, {
+    onClick: u,
+    className: o()(T.arrow, i, {
+      [T.active]: t || s
     }),
-    children: i
+    children: l
   })
 }
 
-function y(e) {
+function j(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, i] = r.useState(!1), a = r.useMemo(() => __OVERLAY__ ? (0, f.Zg)() : (0, E.Rv)(), []), u = (0, g.e7)([I.Z], () => I.Z.keyboardModeEnabled);
-  return (0, s.jsx)(C.ModalRoot, {
+  } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, m.Rv)(), []), c = (0, f.e7)([E.Z], () => E.Z.keyboardModeEnabled);
+  return (0, r.jsx)(g.ModalRoot, {
     className: o()(T.noBackground, {
-      [T.noShadow]: l
+      [T.noShadow]: i
     }),
-    size: C.ModalSize.DYNAMIC,
-    "aria-label": L.Z.Messages.KEYBINDS,
+    size: g.ModalSize.DYNAMIC,
+    "aria-label": v.Z.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(m.W, {
+    children: (0, r.jsx)(_.W, {
       component: "div",
-      children: l ? (0, s.jsx)(S.Z, {
+      children: i ? (0, r.jsx)(S.Z, {
         onClose: n
-      }, "raging-demo") : (0, s.jsx)(b, {
-        content: a,
-        keyboardModeEnabled: u,
+      }, "raging-demo") : (0, r.jsx)(O, {
+        content: s,
+        keyboardModeEnabled: c,
         activateRagingDemon: function() {
-          _.Z.disable(), i(!0)
+          I.Z.disable(), l(!0)
         }
       }, "modal")
     })

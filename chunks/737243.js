@@ -3,13 +3,13 @@ n.d(t, {
     return u
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(699516),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(699516),
   r = n(783709),
   o = n(348238);
-let c = i.memo(function(e) {
+let c = a.memo(function(e) {
   var t;
   let {
     message: n,
@@ -17,43 +17,43 @@ let c = i.memo(function(e) {
     compact: u = !1,
     interactionUsernameProfile: d,
     interactionAvatarProfile: h,
-    interactionData: m,
-    setPopout: E
-  } = e, p = (0, s.e7)([a.Z], () => a.Z.isBlockedForMessage(n), [n]), g = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), f = (0, o.Nk)(n.interaction, c, d, E), C = (0, o.NU)(h, E), _ = (0, o.Xn)(m, E), I = i.useCallback(() => E({
+    interactionData: p,
+    setPopout: m
+  } = e, _ = (0, l.e7)([s.Z], () => s.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, d, m), g = (0, o.NU)(h, m), C = (0, o.Xn)(p, m), I = a.useCallback(() => m({
     interactionUsernameProfile: !1,
     interactionAvatarProfile: !1,
     interactionData: !1
-  }), [E]);
-  return (0, l.jsx)(r.Z, {
+  }), [m]);
+  return (0, i.jsx)(r.Z, {
     message: n,
     channel: c,
     compact: u,
-    isInteractionUserBlocked: p,
+    isInteractionUserBlocked: _,
     showAvatarPopout: h,
     showUsernamePopout: d,
-    showDataPopout: m,
-    onClickAvatar: C,
-    onClickUsername: f,
-    onClickCommand: _,
-    onUserContextMenu: g,
+    showDataPopout: p,
+    onClickAvatar: g,
+    onClickUsername: E,
+    onClickCommand: C,
+    onUserContextMenu: f,
     onPopoutRequestClose: I
   })
 });
 
 function u(e, t, n) {
   let {
-    message: i,
-    channel: s,
-    compact: a
+    message: a,
+    channel: l,
+    compact: s
   } = e, {
     interactionUsernameProfile: r,
     interactionAvatarProfile: o,
     interactionData: u
   } = n;
-  return null != i.interaction && "" !== i.interaction.displayName ? (0, l.jsx)(c, {
-    message: i,
-    channel: s,
-    compact: a,
+  return null != a.interaction && "" !== a.interaction.displayName ? (0, i.jsx)(c, {
+    message: a,
+    channel: l,
+    compact: s,
     setPopout: t,
     interactionUsernameProfile: r,
     interactionAvatarProfile: o,

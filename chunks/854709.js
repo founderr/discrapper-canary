@@ -1,11 +1,11 @@
 n.d(t, {
   X: function() {
-    return i
+    return a
   }
 });
-var s = n(594174);
+var i = n(594174);
 
-function i() {
+function a() {
   var e, t;
-  return null !== (t = null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
+  return null !== (t = null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
 }

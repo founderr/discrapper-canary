@@ -1,48 +1,48 @@
 n.d(e, {
   X: function() {
-    return r
+    return l
   },
   h: function() {
-    return a
+    return s
   }
 }), n(757143), n(47120);
 var o = n(470079),
-  s = n(902676);
+  a = n(902676);
 
-function a(t) {
+function s(t) {
   let {
     protocol: e,
     hostname: n
   } = o.useMemo(() => ({
-    protocol: (0, s.E)(t),
-    hostname: (0, s.F)(t)
-  }), [t]), a = "".concat(e, "//").concat(n);
+    protocol: (0, a.E)(t),
+    hostname: (0, a.F)(t)
+  }), [t]), s = "".concat(e, "//").concat(n);
   return {
     protocol: e,
     hostname: n,
-    theRestOfTheUrl: t.replace(a, "")
+    theRestOfTheUrl: t.replace(s, "")
   }
 }
 
-function r(t) {
+function l(t) {
   let {
     url: e,
     trustUrl: n,
-    onConfirm: s,
-    onClose: r
-  } = t, [l, i] = o.useState(!1), {
+    onConfirm: a,
+    onClose: l
+  } = t, [r, i] = o.useState(!1), {
     protocol: c,
     hostname: d,
-    theRestOfTheUrl: u
-  } = a(e), _ = o.useCallback(() => {
-    l && n(e), null == r || r(), s()
-  }, [e, l, n, s, r]);
+    theRestOfTheUrl: _
+  } = s(e), u = o.useCallback(() => {
+    r && n(e), null == l || l(), a()
+  }, [e, r, n, a, l]);
   return {
     protocol: c,
     hostname: d,
-    theRestOfTheUrl: u,
-    shouldTrustUrl: l,
+    theRestOfTheUrl: _,
+    shouldTrustUrl: r,
     setShouldTrustUrl: i,
-    handleConfirm: _
+    handleConfirm: u
   }
 }

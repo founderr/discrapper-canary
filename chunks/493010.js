@@ -1,20 +1,20 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(704215),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  l = n(704215),
+  s = n(481060),
   r = n(475179),
   o = n(561472),
   c = n(287746),
   u = n(325708),
   d = n(541716),
   h = n(605236),
-  m = n(703558),
-  E = n(502568),
-  p = n(585483),
-  g = n(909820),
-  f = n(981631),
-  C = n(921944),
-  _ = n(689938),
+  p = n(703558),
+  m = n(502568),
+  _ = n(585483),
+  f = n(909820),
+  E = n(981631),
+  g = n(921944),
+  C = n(689938),
   I = n(423289);
 t.Z = function(e) {
   let {
@@ -22,39 +22,39 @@ t.Z = function(e) {
     guild: n,
     maxWidth: x
   } = e;
-  i.useEffect(() => {
-    (0, h.EW)(s.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
-      dismissAction: C.L.AUTO
+  a.useEffect(() => {
+    (0, h.EW)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
+      dismissAction: g.L.AUTO
     })
   }, []);
-  let T = i.useCallback(() => {
-      r.Z.updateChatOpen(t.id, !1), p.S.safeDispatch(f.CkL.FOCUS_CHAT_BUTTON)
+  let T = a.useCallback(() => {
+      r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON)
     }, [t.id]),
-    N = (0, l.jsx)(E.ZP.Icon, {
-      icon: a.CloseSmallIcon,
-      tooltip: _.Z.Messages.CLOSE,
+    N = (0, i.jsx)(m.ZP.Icon, {
+      icon: s.CloseSmallIcon,
+      tooltip: C.Z.Messages.CLOSE,
       onClick: T
     });
-  return (0, l.jsxs)(u.Z, {
+  return (0, i.jsxs)(u.Z, {
     sidebarType: u.y.CallChatSidebar,
     maxWidth: x,
-    floatingLayer: g.ZP,
-    children: [(0, l.jsx)(o.Z, {
+    floatingLayer: f.ZP,
+    children: [(0, i.jsx)(o.Z, {
       channel: t,
-      draftType: m.d.ChannelMessage
-    }), (0, l.jsxs)(E.ZP, {
+      draftType: p.d.ChannelMessage
+    }), (0, i.jsxs)(m.ZP, {
       toolbar: N,
-      "aria-label": _.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-      children: [(0, l.jsx)(E.ZP.Icon, {
-        icon: a.ChatIcon,
+      "aria-label": C.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+      children: [(0, i.jsx)(m.ZP.Icon, {
+        icon: s.ChatIcon,
         disabled: !0,
-        "aria-label": _.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
-      }), (0, l.jsx)(E.ZP.Title, {
+        "aria-label": C.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
+      }), (0, i.jsx)(m.ZP.Title, {
         children: t.name
       })]
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: I.chat,
-      children: (0, l.jsx)(c.Z, {
+      children: (0, i.jsx)(c.Z, {
         channel: t,
         guild: n,
         chatInputType: d.I.SIDEBAR

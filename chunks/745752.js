@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   I1: function() {
-    return f
+    return S
   },
   eM: function() {
     return h
   },
   rK: function() {
-    return S
+    return f
   },
   rj: function() {
     return T
@@ -54,7 +54,7 @@ function h(e) {
     guildId: e
   }), t))
 }
-async function S(e) {
+async function f(e) {
   var t, n;
   let i = o.default.getId(),
     r = (0, _.yE)(null !== (n = null === (t = a.ZP.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, I.q.COMPLETED_ONBOARDING),
@@ -62,19 +62,19 @@ async function S(e) {
   if (null == s || !s.hasFeature(E.oNc.GUILD_ONBOARDING)) return Promise.resolve();
   let u = c.Z.shouldFetchPrompts(e),
     d = c.Z.getOnboardingPrompts(e);
-  if (!u && d.length > 0) return d.every(e => !e.inOnboarding) ? (N(e), Promise.resolve()) : (!r && f(e), Promise.resolve());
+  if (!u && d.length > 0) return d.every(e => !e.inOnboarding) ? (A(e), Promise.resolve()) : (!r && S(e), Promise.resolve());
   let T = await h(e);
-  return Array.isArray(T) && T.every(e => !e.inOnboarding) ? (N(e), Promise.resolve()) : (!r && f(e), T)
+  return Array.isArray(T) && T.every(e => !e.inOnboarding) ? (A(e), Promise.resolve()) : (!r && S(e), T)
 }
 
-function f(e) {
+function S(e) {
   r.Z.dispatch({
     type: "GUILD_ONBOARDING_START",
     guildId: e
   })
 }
 
-function N(e) {
+function A(e) {
   u.default.track(E.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
     ...(0, s.hH)(e),
     step: -2,

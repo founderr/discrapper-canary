@@ -1,149 +1,149 @@
-s.r(a), s.d(a, {
+l.r(a), l.d(a, {
   default: function() {
-    return _
+    return N
   }
-}), s(47120);
-var l = s(735250),
-  t = s(470079),
-  n = s(392711),
-  i = s.n(n),
-  r = s(442837),
-  o = s(481060),
-  c = s(741361),
-  d = s(596454),
-  x = s(447003),
-  m = s(471445),
-  h = s(605436),
-  u = s(633302),
-  T = s(984933),
-  j = s(153124),
-  E = s(689938),
-  N = s(683135);
+}), l(47120);
+var s = l(735250),
+  t = l(470079),
+  n = l(392711),
+  i = l.n(n),
+  o = l(442837),
+  c = l(481060),
+  r = l(741361),
+  d = l(596454),
+  m = l(447003),
+  x = l(471445),
+  h = l(605436),
+  u = l(633302),
+  _ = l(984933),
+  T = l(153124),
+  C = l(689938),
+  E = l(683135);
 
-function v(e) {
+function I(e) {
   var a, t, n;
   let {
     onClose: i,
-    handleReviewPermissions: r
-  } = e, c = e => (0, l.jsx)(o.Text, {
+    handleReviewPermissions: o
+  } = e, r = e => (0, s.jsx)(c.Text, {
     tag: "span",
     variant: "text-md/medium",
     color: "header-primary",
     children: e
   });
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(o.ModalContent, {
-      className: N.infoContent,
-      children: [(0, l.jsxs)("div", {
-        className: N.modalHeader,
-        children: [(0, l.jsx)("img", {
-          className: N.modalImage,
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)(c.ModalContent, {
+      className: E.infoContent,
+      children: [(0, s.jsxs)("div", {
+        className: E.modalHeader,
+        children: [(0, s.jsx)("img", {
+          className: E.modalImage,
           "data-accessibility": "desaturate",
           alt: "",
-          src: s(592614)
-        }), (0, l.jsx)(o.Heading, {
+          src: l(592614)
+        }), (0, s.jsx)(c.Heading, {
           variant: "heading-lg/semibold",
           color: "header-primary",
-          children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_MODAL_HEADER
+          children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_MODAL_HEADER
         })]
-      }), (0, l.jsxs)("ul", {
-        children: [(0, l.jsxs)("li", {
-          className: N.infoListItem,
-          children: [(0, l.jsx)("div", {
-            className: N.iconWrapper,
-            children: (0, l.jsx)(d.Z, {
+      }), (0, s.jsxs)("ul", {
+        children: [(0, s.jsxs)("li", {
+          className: E.infoListItem,
+          children: [(0, s.jsx)("div", {
+            className: E.iconWrapper,
+            children: (0, s.jsx)(d.Z, {
               emojiName: null === (a = u.ZP.getByName("eyes")) || void 0 === a ? void 0 : a.surrogates
             })
-          }), (0, l.jsx)(o.Text, {
+          }), (0, s.jsx)(c.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_1.format({
-              emphasisHook: c
+            children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_1.format({
+              emphasisHook: r
             })
           })]
-        }), (0, l.jsxs)("li", {
-          className: N.infoListItem,
-          children: [(0, l.jsx)("div", {
-            className: N.iconWrapper,
-            children: (0, l.jsx)(d.Z, {
+        }), (0, s.jsxs)("li", {
+          className: E.infoListItem,
+          children: [(0, s.jsx)("div", {
+            className: E.iconWrapper,
+            children: (0, s.jsx)(d.Z, {
               emojiName: null === (t = u.ZP.getByName("star_struck")) || void 0 === t ? void 0 : t.surrogates
             })
-          }), (0, l.jsx)(o.Text, {
+          }), (0, s.jsx)(c.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_2.format({
-              emphasisHook: c
+            children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_2.format({
+              emphasisHook: r
             })
           })]
-        }), (0, l.jsxs)("li", {
-          className: N.infoListItem,
-          children: [(0, l.jsx)("div", {
-            className: N.iconWrapper,
-            children: (0, l.jsx)(d.Z, {
+        }), (0, s.jsxs)("li", {
+          className: E.infoListItem,
+          children: [(0, s.jsx)("div", {
+            className: E.iconWrapper,
+            children: (0, s.jsx)(d.Z, {
               emojiName: null === (n = u.ZP.getByName("books")) || void 0 === n ? void 0 : n.surrogates
             })
-          }), (0, l.jsx)(o.Text, {
+          }), (0, s.jsx)(c.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_3.format({
-              emphasisHook: c
+            children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_3.format({
+              emphasisHook: r
             })
           })]
         })]
       })]
-    }), (0, l.jsxs)(o.ModalFooter, {
-      children: [(0, l.jsx)(o.Button, {
-        onClick: r,
-        children: (0, l.jsx)(o.Text, {
+    }), (0, s.jsxs)(c.ModalFooter, {
+      children: [(0, s.jsx)(c.Button, {
+        onClick: o,
+        children: (0, s.jsx)(c.Text, {
           variant: "text-md/medium",
           color: "always-white",
-          children: E.Z.Messages.GUILD_SETTINGS_REVIEW_PERMISSIONS
+          children: C.Z.Messages.GUILD_SETTINGS_REVIEW_PERMISSIONS
         })
-      }), (0, l.jsx)(o.Button, {
-        className: N.__invalid_modalCancel,
-        look: o.Button.Looks.LINK,
-        color: o.Button.Colors.PRIMARY,
+      }), (0, s.jsx)(c.Button, {
+        className: E.__invalid_modalCancel,
+        look: c.Button.Looks.LINK,
+        color: c.Button.Colors.PRIMARY,
         onClick: i,
-        children: (0, l.jsx)(o.Text, {
+        children: (0, s.jsx)(c.Text, {
           variant: "text-md/medium",
-          children: E.Z.Messages.CANCEL
+          children: C.Z.Messages.CANCEL
         })
       })]
     })]
   })
 }
 
-function I(e) {
+function j(e) {
   var a;
   let {
-    channel: s,
+    channel: l,
     selected: n,
     onChange: i
-  } = e, r = null !== (a = (0, m.KS)(s)) && void 0 !== a ? a : o.TextIcon, c = t.useCallback(() => {
-    i(s)
-  }, [s, i]);
-  return (0, l.jsxs)(o.Clickable, {
-    "aria-label": s.name,
+  } = e, o = null !== (a = (0, x.KS)(l)) && void 0 !== a ? a : c.TextIcon, r = t.useCallback(() => {
+    i(l)
+  }, [l, i]);
+  return (0, s.jsxs)(c.Clickable, {
+    "aria-label": l.name,
     "aria-checked": n,
-    className: N.selectableChannelRow,
-    onClick: c,
-    children: [(0, l.jsxs)("div", {
-      className: N.selectableChannelCellFirst,
-      children: [(0, l.jsx)(r, {
-        className: N.channelIcon,
+    className: E.selectableChannelRow,
+    onClick: r,
+    children: [(0, s.jsxs)("div", {
+      className: E.selectableChannelCellFirst,
+      children: [(0, s.jsx)(o, {
+        className: E.channelIcon,
         size: "xs",
         color: "currentColor"
-      }), (0, l.jsx)(o.Text, {
-        className: N.__invalid_channelName,
+      }), (0, s.jsx)(c.Text, {
+        className: E.__invalid_channelName,
         variant: "text-md/medium",
         color: "text-normal",
         lineClamp: 1,
-        children: s.name
+        children: l.name
       })]
-    }), (0, l.jsx)("div", {
-      className: N.selectableChannelCellSecond,
-      children: (0, l.jsx)(o.Checkbox, {
-        type: o.Checkbox.Types.INVERTED,
+    }), (0, s.jsx)("div", {
+      className: E.selectableChannelCellSecond,
+      children: (0, s.jsx)(c.Checkbox, {
+        type: c.Checkbox.Types.INVERTED,
         value: n,
         displayOnly: !0
       })
@@ -151,97 +151,97 @@ function I(e) {
   })
 }
 
-function _(e) {
+function N(e) {
   let {
     transitionState: a,
-    onClose: s,
+    onClose: l,
     guildId: n,
     startingChannelId: d
-  } = e, m = (0, r.Wu)([T.ZP], () => {
+  } = e, x = (0, o.Wu)([_.ZP], () => {
     var e, a;
-    let s = T.ZP.getChannels(n);
-    return (null !== (e = s[T.sH]) && void 0 !== e ? e : []).concat(null !== (a = s[T.Zb]) && void 0 !== a ? a : []).filter(e => (0, x.Z)(e.channel)).map(e => e.channel)
-  }), [u, _] = t.useState(0), C = m.find(e => e.id === d), [S, g] = t.useState(null != C ? [C] : []), L = (0, j.Dt)(), p = S.length === m.length, b = t.useCallback(() => {
-    _(1)
-  }, [_]), k = t.useCallback(e => {
-    g(a => a.includes(e) ? [...i().pull(a, e)] : [...a, e])
-  }, [g]), M = t.useCallback(() => {
-    p ? g([]) : g(m)
-  }, [p, m, g]), A = t.useCallback(() => {
-    S.forEach(e => {
+    let l = _.ZP.getChannels(n);
+    return (null !== (e = l[_.sH]) && void 0 !== e ? e : []).concat(null !== (a = l[_.Zb]) && void 0 !== a ? a : []).filter(e => (0, m.Z)(e.channel)).map(e => e.channel)
+  }), [u, N] = t.useState(0), v = x.find(e => e.id === d), [p, b] = t.useState(null != v ? [v] : []), S = (0, T.Dt)(), g = p.length === x.length, L = t.useCallback(() => {
+    N(1)
+  }, [N]), A = t.useCallback(e => {
+    b(a => a.includes(e) ? [...i().pull(a, e)] : [...a, e])
+  }, [b]), k = t.useCallback(() => {
+    g ? b([]) : b(x)
+  }, [g, x, b]), M = t.useCallback(() => {
+    p.forEach(e => {
       let a = (0, h._A)(e, e.accessPermissions, !0);
-      (0, c.hw)(e.id, [a]), s()
+      (0, r.hw)(e.id, [a]), l()
     })
-  }, [S, s]);
-  return 0 === u ? (0, l.jsx)(o.ModalRoot, {
+  }, [p, l]);
+  return 0 === u ? (0, s.jsx)(c.ModalRoot, {
     transitionState: a,
-    "aria-labelledby": L,
-    size: o.ModalSize.SMALL,
-    children: (0, l.jsx)(v, {
-      handleReviewPermissions: b,
-      onClose: s
+    "aria-labelledby": S,
+    size: c.ModalSize.SMALL,
+    children: (0, s.jsx)(I, {
+      handleReviewPermissions: L,
+      onClose: l
     })
-  }) : (0, l.jsxs)(o.ModalRoot, {
+  }) : (0, s.jsxs)(c.ModalRoot, {
     transitionState: a,
-    "aria-labelledby": L,
-    size: o.ModalSize.SMALL,
-    children: [(0, l.jsxs)(o.ModalContent, {
-      className: N.updateContent,
-      children: [(0, l.jsxs)("div", {
-        className: N.modalHeader,
-        children: [(0, l.jsx)(o.Heading, {
+    "aria-labelledby": S,
+    size: c.ModalSize.SMALL,
+    children: [(0, s.jsxs)(c.ModalContent, {
+      className: E.updateContent,
+      children: [(0, s.jsxs)("div", {
+        className: E.modalHeader,
+        children: [(0, s.jsx)(c.Heading, {
           variant: "heading-lg/semibold",
           color: "header-primary",
-          children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_TITLE
-        }), (0, l.jsx)(o.Text, {
-          className: N.__invalid_modalSubheader,
+          children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_TITLE
+        }), (0, s.jsx)(c.Text, {
+          className: E.__invalid_modalSubheader,
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_SUBTITLE
+          children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_SUBTITLE
         })]
-      }), (0, l.jsxs)("div", {
-        className: N.selectAllContainer,
-        children: [(0, l.jsx)(o.Text, {
-          className: N.selectAllTitle,
+      }), (0, s.jsxs)("div", {
+        className: E.selectAllContainer,
+        children: [(0, s.jsx)(c.Text, {
+          className: E.selectAllTitle,
           variant: "text-xs/semibold",
           color: "text-muted",
-          children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_CHANNEL_COUNT.format({
-            count: m.length
+          children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_CHANNEL_COUNT.format({
+            count: x.length
           })
-        }), (0, l.jsxs)(o.Clickable, {
-          "aria-label": E.Z.Messages.SELECT_ALL,
-          className: N.selectAllButton,
-          onClick: M,
-          children: [(0, l.jsx)(o.Text, {
+        }), (0, s.jsxs)(c.Clickable, {
+          "aria-label": C.Z.Messages.SELECT_ALL,
+          className: E.selectAllButton,
+          onClick: k,
+          children: [(0, s.jsx)(c.Text, {
             variant: "text-xs/normal",
-            children: E.Z.Messages.SELECT_ALL
-          }), (0, l.jsx)(o.Checkbox, {
+            children: C.Z.Messages.SELECT_ALL
+          }), (0, s.jsx)(c.Checkbox, {
             size: 16,
-            type: o.Checkbox.Types.INVERTED,
-            value: p,
+            type: c.Checkbox.Types.INVERTED,
+            value: g,
             displayOnly: !0
           })]
         })]
-      }), (0, l.jsx)("div", {
-        className: N.deprivateTableBody,
-        children: m.map(e => (0, l.jsx)(I, {
+      }), (0, s.jsx)("div", {
+        className: E.deprivateTableBody,
+        children: x.map(e => (0, s.jsx)(j, {
           channel: e,
-          selected: S.includes(e),
-          onChange: k
+          selected: p.includes(e),
+          onChange: A
         }, e.id))
-      }), (0, l.jsx)("div", {
-        className: N.deprivateExplainer,
-        children: (0, l.jsx)(o.Text, {
+      }), (0, s.jsx)("div", {
+        className: E.deprivateExplainer,
+        children: (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: E.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_4.format({
-            emphasisHook: e => (0, l.jsx)(o.Text, {
+          children: C.Z.Messages.GUILD_SETTINGS_DEPRIVATE_EXPLAINER_4.format({
+            emphasisHook: e => (0, s.jsx)(c.Text, {
               tag: "span",
               variant: "text-xs/medium",
               color: "interactive-active",
               children: e
             }),
-            brandHook: e => (0, l.jsx)(o.Text, {
+            brandHook: e => (0, s.jsx)(c.Text, {
               tag: "span",
               variant: "text-xs/normal",
               color: "text-brand",
@@ -250,23 +250,23 @@ function _(e) {
           })
         })
       })]
-    }), (0, l.jsxs)(o.ModalFooter, {
-      className: N.modalFooter,
-      children: [(0, l.jsx)(o.Button, {
-        disabled: 0 === S.length,
-        onClick: A,
-        children: (0, l.jsx)(o.Text, {
+    }), (0, s.jsxs)(c.ModalFooter, {
+      className: E.modalFooter,
+      children: [(0, s.jsx)(c.Button, {
+        disabled: 0 === p.length,
+        onClick: M,
+        children: (0, s.jsx)(c.Text, {
           variant: "text-md/medium",
           color: "always-white",
-          children: E.Z.Messages.GUILD_SETTINGS_UPDATE_PERMISSIONS
+          children: C.Z.Messages.GUILD_SETTINGS_UPDATE_PERMISSIONS
         })
-      }), (0, l.jsx)(o.Button, {
-        look: o.Button.Looks.LINK,
-        color: o.Button.Colors.PRIMARY,
-        onClick: s,
-        children: (0, l.jsx)(o.Text, {
+      }), (0, s.jsx)(c.Button, {
+        look: c.Button.Looks.LINK,
+        color: c.Button.Colors.PRIMARY,
+        onClick: l,
+        children: (0, s.jsx)(c.Text, {
           variant: "text-md/medium",
-          children: E.Z.Messages.CANCEL
+          children: C.Z.Messages.CANCEL
         })
       })]
     })]

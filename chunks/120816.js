@@ -1,15 +1,15 @@
-t(47120);
-var a, n, i, l, o = t(772848),
-  c = t(756647),
-  s = t(442837),
-  d = t(570140),
-  u = t(314897),
-  h = t(906467);
+r(47120);
+var a, n, i, o, l = r(772848),
+  c = r(756647),
+  s = r(442837),
+  d = r(570140),
+  u = r(314897),
+  h = r(906467);
 let m = 0,
   g = [],
   p = [],
   b = !1;
-class y extends(a = s.ZP.Store) {
+class f extends(a = s.ZP.Store) {
   initialize() {
     this.waitFor(h.Z)
   }
@@ -23,24 +23,24 @@ class y extends(a = s.ZP.Store) {
     return b
   }
 }
-l = "AnalyticsLogStore", (i = "displayName") in(n = y) ? Object.defineProperty(n, i, {
-  value: l,
+o = "AnalyticsLogStore", (i = "displayName") in(n = f) ? Object.defineProperty(n, i, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = l, r.Z = new y(d.Z, {
+}) : n[i] = o, t.Z = new f(d.Z, {
   TRACK: function(e) {
     let {
-      event: r,
-      properties: t,
+      event: t,
+      properties: r,
       fingerprint: a
     } = e;
     if (h.Z.isDeveloper) {
       var n;
       (g = [...g, {
         key: (m++).toString(),
-        event: r,
-        properties: t,
+        event: t,
+        properties: r,
         fingerprint: null != (n = a) ? (0, c.s)(n) : u.default.getId(),
         timestamp: new Date
       }]).length > 500 && g.shift()
@@ -48,29 +48,29 @@ l = "AnalyticsLogStore", (i = "displayName") in(n = y) ? Object.defineProperty(n
   },
   TRACK_TRIGGER: function(e) {
     let {
-      experimentId: r,
-      descriptor: t,
+      experimentId: t,
+      descriptor: r,
       exposureType: a,
       excluded: n,
       location: i,
-      previouslyTracked: l
+      previouslyTracked: o
     } = e;
     if (!!h.Z.isDeveloper) b && (p = [...p, {
-      key: (0, o.Z)(),
-      experimentId: r,
-      descriptor: t,
+      key: (0, l.Z)(),
+      experimentId: t,
+      descriptor: r,
       exposureType: a,
       excluded: n,
       location: i,
-      previouslyTracked: l,
+      previouslyTracked: o,
       timestamp: new Date
     }]).length > 500 && p.shift()
   },
   SET_TRACK_TRIGGERS: function(e) {
     let {
-      enabled: r
+      enabled: t
     } = e;
-    b = r
+    b = t
   },
   ANALYTICS_LOG_CLEAR: function() {
     g = [], p = []

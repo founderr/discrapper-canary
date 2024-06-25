@@ -1,21 +1,21 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
     return i
   }
 });
-var r = n(735250);
-n(470079);
-var u = n(481060),
-  l = n(547972),
-  a = n(326528);
+var o = t(735250);
+t(470079);
+var r = t(481060),
+  a = t(547972),
+  c = t(326528);
 
 function i() {
-  let e = (0, a.b)().map(e => (0, r.jsx)(u.MenuItem, {
+  let e = (0, c.b)().map(e => (0, o.jsx)(r.MenuItem, {
     id: e.id,
     label: e.title,
-    action: () => (0, l.Z)(e.id)
+    action: () => (0, a.Z)(e.id)
   }, e.id));
-  return (0, r.jsx)(r.Fragment, {
+  return (0, o.jsx)(o.Fragment, {
     children: e
   })
 }

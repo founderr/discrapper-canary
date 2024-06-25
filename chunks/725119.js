@@ -1,35 +1,35 @@
-t.d(e, {
+t.d(n, {
   Z: function() {
-    return _
+    return Z
   }
 });
-var u = t(735250),
-  l = t(470079),
-  i = t(481060),
+var l = t(735250),
+  i = t(470079),
+  a = t(481060),
   r = t(40851),
-  a = t(906732),
-  o = t(171368),
-  c = t(626135),
-  s = t(981631),
-  d = t(689938);
+  u = t(906732),
+  s = t(171368),
+  d = t(626135),
+  o = t(981631),
+  c = t(689938);
 
-function _(n, e, t) {
-  let _ = l.useContext(c.AnalyticsContext),
+function Z(e, n, t) {
+  let Z = i.useContext(d.AnalyticsContext),
     {
       analyticsLocations: E
-    } = (0, a.ZP)(),
+    } = (0, u.ZP)(),
     M = (0, r.Aq)();
-  return (0, u.jsx)(i.MenuItem, {
+  return (0, l.jsx)(a.MenuItem, {
     id: "user-profile",
-    label: d.Z.Messages.PROFILE,
+    label: c.Z.Messages.PROFILE,
     action: () => {
-      (0, o.openUserProfileModal)({
-        userId: n,
-        guildId: e,
+      (0, s.openUserProfileModal)({
+        userId: e,
+        guildId: n,
         channelId: t,
         sourceAnalyticsLocations: E,
-        analyticsLocation: _.location
-      }), M.dispatch(s.CkL.POPOUT_CLOSE)
+        analyticsLocation: Z.location
+      }), M.dispatch(o.CkL.POPOUT_CLOSE)
     }
   })
 }

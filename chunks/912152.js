@@ -1,66 +1,66 @@
 var n = t(735250);
 t(470079);
-var i = t(481060),
-  a = t(230711),
-  l = t(63063),
-  r = t(74538),
-  o = t(937615),
+var a = t(481060),
+  i = t(230711),
+  r = t(63063),
+  o = t(74538),
+  l = t(937615),
   c = t(981631),
-  E = t(474936),
-  d = t(689938),
-  _ = t(202354);
+  d = t(474936),
+  _ = t(689938),
+  E = t(202354);
 s.Z = function(e) {
   let {
     hasAppliedGuildBoosts: s,
     isUserPremiumTier2: t,
-    hasGuildAffinitiesOrInGuild: T,
-    subscriptionIsPausedOrPausePending: S
+    hasGuildAffinitiesOrInGuild: u,
+    subscriptionIsPausedOrPausePending: T
   } = e, {
-    subtitle: u,
+    subtitle: S,
     flavor: I
   } = function(e) {
     let {
       hasAppliedGuildBoosts: s,
       isUserPremiumTier2: t,
       hasGuildAffinitiesOrInGuild: n,
-      subscriptionIsPausedOrPausePending: i
+      subscriptionIsPausedOrPausePending: a
     } = e;
-    if (i) return {
-      flavor: d.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION_WITH_LINK.format({
-        onClick: () => a.Z.open(c.oAB.SUBSCRIPTIONS)
+    if (a) return {
+      flavor: _.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION_WITH_LINK.format({
+        onClick: () => i.Z.open(c.oAB.SUBSCRIPTIONS)
       })
     };
     if (!n) return {
-      subtitle: d.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_JOINED_SERVER_SUBTITLE
+      subtitle: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_JOINED_SERVER_SUBTITLE
     };
     if (s) return {
-      subtitle: d.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS,
-      flavor: d.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS_FLAVOR.format({
-        helpdeskArticle: l.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS)
+      subtitle: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS,
+      flavor: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS_FLAVOR.format({
+        helpdeskArticle: r.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS)
       })
     };
-    let _ = E.GP[E.Xh.PREMIUM_MONTH_GUILD],
-      T = r.ZP.getDefaultPrice(_.id, t),
-      S = (0, o.og)((0, o.T4)(T.amount, T.currency), _.interval, _.intervalCount);
+    let E = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
+      u = o.ZP.getDefaultPrice(E.id, t),
+      T = (0, l.og)((0, l.T4)(u.amount, u.currency), E.interval, E.intervalCount);
     return {
-      subtitle: t ? d.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_SUBBED_NO_ACTIVE_BOOSTS : d.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_SUB_NO_ACTIVE_BOOSTS,
-      flavor: d.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_ACTIVE_BOOSTS_FLAVOR.format({
-        monthlyGuildBoostPrice: S
+      subtitle: t ? _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_SUBBED_NO_ACTIVE_BOOSTS : _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_SUB_NO_ACTIVE_BOOSTS,
+      flavor: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_NO_ACTIVE_BOOSTS_FLAVOR.format({
+        monthlyGuildBoostPrice: T
       })
     }
   }({
     hasAppliedGuildBoosts: s,
     isUserPremiumTier2: t,
-    hasGuildAffinitiesOrInGuild: T,
-    subscriptionIsPausedOrPausePending: S
+    hasGuildAffinitiesOrInGuild: u,
+    subscriptionIsPausedOrPausePending: T
   });
   return (0, n.jsxs)("div", {
-    className: _.wrapper,
-    children: [(0, n.jsx)(i.Heading, {
+    className: E.wrapper,
+    children: [(0, n.jsx)(a.Heading, {
       variant: "heading-lg/bold",
-      className: _.subtitle,
-      children: u
-    }), null != I && (0, n.jsx)(i.Text, {
+      className: E.subtitle,
+      children: S
+    }), null != I && (0, n.jsx)(a.Text, {
       variant: "text-sm/normal",
       children: I
     })]

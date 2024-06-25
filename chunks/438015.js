@@ -2,10 +2,10 @@
 n(47120);
 var i = n(735250),
   s = n(470079),
-  l = n(748780),
+  a = n(748780),
   o = n(13245),
-  a = n(454902),
-  r = n(692546),
+  r = n(454902),
+  l = n(692546),
   c = n(981631),
   d = n(233460);
 
@@ -43,35 +43,35 @@ class h extends s.Component {
     e.index !== t && this.animateTo(t)
   }
   animateTo(e, t) {
-    let n, i, s, l;
+    let n, i, s, a;
     let {
       opacity: o,
-      scale: a,
-      translateX: r,
+      scale: r,
+      translateX: l,
       translateY: c
     } = this;
     switch (e) {
       case 0:
-        i = 0, s = 1, l = 1;
+        i = 0, s = 1, a = 1;
         break;
       case 1:
-        i = .3, s = .6, l = .98;
+        i = .3, s = .6, a = .98;
         break;
       case 2:
-        i = .6, s = .3, l = .95;
+        i = .6, s = .3, a = .95;
         break;
       default:
-        i = .6, s = 0, l = .93
+        i = .6, s = 0, a = .93
     }
-    null != t ? (0 === e ? l = 1.1 : i = 1.3, s = 0, n = t) : n = this.handleAnimationEnd, r.setValue(1), c.setValue(i), a.setValue(l), o.setValue(s), n()
+    null != t ? (0 === e ? a = 1.1 : i = 1.3, s = 0, n = t) : n = this.handleAnimationEnd, l.setValue(1), c.setValue(i), r.setValue(a), o.setValue(s), n()
   }
   getStyle() {
     let e, t, n, i, s;
     let {
-      opacity: l,
+      opacity: a,
       scale: o,
-      translateX: a,
-      translateY: r,
+      translateX: r,
+      translateY: l,
       props: {
         position: d,
         zIndex: u
@@ -99,14 +99,14 @@ class h extends s.Component {
       bottom: i,
       top: s,
       zIndex: u,
-      opacity: l,
+      opacity: a,
       transform: [{
-        translateX: a.interpolate({
+        translateX: r.interpolate({
           inputRange: [0, 1],
           outputRange: [e, "0%"]
         })
       }, {
-        translateY: r.interpolate({
+        translateY: l.interpolate({
           inputRange: [0, 1],
           outputRange: ["0px", "20px"]
         })
@@ -134,10 +134,10 @@ class h extends s.Component {
       state: {
         animatedIn: p
       }
-    } = this, f = (0, i.jsx)(l.Z.div, {
+    } = this, f = (0, i.jsx)(a.Z.div, {
       className: d.animationContainer,
       style: this.getStyle(),
-      children: (0, i.jsx)(a.ZP, {
+      children: (0, i.jsx)(r.ZP, {
         ...h,
         onNotificationShow: p && 0 === t ? this.handleNotificationShow : null,
         onDismissClick: this.handleDismissClick,
@@ -148,13 +148,13 @@ class h extends s.Component {
         disabled: 0 !== t
       })
     });
-    return 0 === t ? (0, i.jsx)(r.Z, {
+    return 0 === t ? (0, i.jsx)(l.Z, {
       observeInterval: 200,
       children: f
     }) : f
   }
   constructor(...e) {
-    super(...e), u(this, "translateX", new l.Z.Value(0)), u(this, "translateY", new l.Z.Value(0)), u(this, "scale", new l.Z.Value(1)), u(this, "opacity", new l.Z.Value(1)), u(this, "state", {
+    super(...e), u(this, "translateX", new a.Z.Value(0)), u(this, "translateY", new a.Z.Value(0)), u(this, "scale", new a.Z.Value(1)), u(this, "opacity", new a.Z.Value(1)), u(this, "state", {
       animatedIn: !1
     }), u(this, "handleNotificationShow", () => {
       let {

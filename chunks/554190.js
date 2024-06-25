@@ -1,4 +1,4 @@
-t.r(e.exports = {
+a.r(e.exports = {
   footer: "footer_ad7a9f",
   footerPrimary: "footerPrimary_ad7a9f footer_ad7a9f",
   footerBackgroundPrimary: "footerBackgroundPrimary_ad7a9f",

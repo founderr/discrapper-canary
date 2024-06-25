@@ -1,32 +1,32 @@
-r.d(n, {
+n.d(r, {
   Mf: function() {
-    return o
+    return i
   },
   Y6: function() {
-    return i
+    return s
   },
   pF: function() {
     return a
   }
 });
-var l = r(652874);
-let t = Object.freeze({
+var t = n(652874);
+let l = Object.freeze({
     inspectedStickerPosition: {
       rowIndex: -1,
       columnIndex: -1
     }
   }),
-  s = (0, l.Z)(e => t),
-  i = s,
-  o = (e, n, r) => {
-    s.setState({
+  o = (0, t.Z)(e => l),
+  s = o,
+  i = (e, r, n) => {
+    o.setState({
       inspectedStickerPosition: {
-        rowIndex: n,
+        rowIndex: r,
         columnIndex: e,
-        source: r
+        source: n
       }
     })
   },
   a = () => {
-    o(-1, -1)
+    i(-1, -1)
   }

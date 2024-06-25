@@ -1,5 +1,5 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   M7: function() {
     return c
   },
@@ -7,13 +7,13 @@ t.d(s, {
     return o
   },
   ue: function() {
-    return n
+    return s
   }
-}), t(411104), t(47120);
-var n, i, l = t(735250),
-  a = t(470079);
-(i = n || (n = {}))[i.BASIC_INFO = 0] = "BASIC_INFO", i[i.TIERS = 1] = "TIERS", i[i.PAYMENT = 2] = "PAYMENT", i[i.EMOJIS = 3] = "EMOJIS";
-let r = a.createContext({
+}), n(411104), n(47120);
+var s, a, i = n(735250),
+  r = n(470079);
+(a = s || (s = {}))[a.BASIC_INFO = 0] = "BASIC_INFO", a[a.TIERS = 1] = "TIERS", a[a.PAYMENT = 2] = "PAYMENT", a[a.EMOJIS = 3] = "EMOJIS";
+let l = r.createContext({
   currentTab: 0,
   setCurrentTab: () => {
     throw Error("useTabBarState must be used within TabBarContextProvider")
@@ -21,19 +21,19 @@ let r = a.createContext({
 });
 
 function o() {
-  return a.useContext(r)
+  return r.useContext(l)
 }
 
 function c(e) {
   let {
-    initialTab: s,
-    children: t
-  } = e, [n, i] = a.useState(s);
-  return (0, l.jsx)(r.Provider, {
+    initialTab: t,
+    children: n
+  } = e, [s, a] = r.useState(t);
+  return (0, i.jsx)(l.Provider, {
     value: {
-      currentTab: n,
-      setCurrentTab: i
+      currentTab: s,
+      setCurrentTab: a
     },
-    children: t
+    children: n
   })
 }

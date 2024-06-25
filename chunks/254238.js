@@ -4,7 +4,7 @@ n.d(t, {
     return g
   },
   On: function() {
-    return R
+    return p
   },
   Vv: function() {
     return m
@@ -16,10 +16,10 @@ n.d(t, {
     return C
   },
   ef: function() {
-    return A
+    return N
   },
   s6: function() {
-    return N
+    return A
   },
   sh: function() {
     return D
@@ -39,16 +39,16 @@ var i = n(434179),
   I = n(258609),
   T = n(893387),
   h = n(981631),
-  S = n(689938);
+  f = n(689938);
 
-function f(e, t) {
+function S(e, t) {
   var n, i;
   c.default.track(h.rMx.REMOTE_COMMAND_SENT, {
     command_type: e,
     remote_platform: null === (i = _.Z.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
 }
-async function N() {
+async function A() {
   let e = I.Z.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
   o.Z.dispatch({
@@ -64,13 +64,13 @@ async function N() {
     await Promise.all(n)
   } catch (e) {
     a.Z.show({
-      title: S.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
-      body: S.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
+      title: f.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
+      body: f.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
     })
   }
 }
 
-function A(e) {
+function N(e) {
   o.Z.dispatch({
     type: "REMOTE_SESSION_CONNECT",
     sessionId: e
@@ -90,7 +90,7 @@ function m(e, t) {
       self_mute: n,
       self_deaf: i
     }
-  }), f("VOICE_STATE_UPDATE", e)
+  }), S("VOICE_STATE_UPDATE", e)
 }
 
 function O(e) {
@@ -100,10 +100,10 @@ function O(e) {
     payload: {
       type: "DISCONNECT"
     }
-  }), f("DISCONNECT", e), N()
+  }), S("DISCONNECT", e), A()
 }
 
-function R(e, t, n, i) {
+function p(e, t, n, i) {
   let r = (0, l.z)(n);
   null != r && (o.Z.dispatch({
     type: "REMOTE_COMMAND",
@@ -114,9 +114,9 @@ function R(e, t, n, i) {
       id: t,
       ...i
     }
-  }), f("AUDIO_SETTINGS_UPDATE", e))
+  }), S("AUDIO_SETTINGS_UPDATE", e))
 }
-async function p() {
+async function R() {
   let e;
   try {
     let t = null != u.Z.getRTCConnectionId() ? r.o.TRANSFER_EXISTING_CALL : r.o.CREATE_NEW_CALL;
@@ -226,7 +226,7 @@ async function L(e, t, n) {
   })
 }
 async function D(e, t, n) {
-  await E.Z.maybeShowPTTAlert(e), await N();
-  let i = await p();
+  await E.Z.maybeShowPTTAlert(e), await A();
+  let i = await R();
   await v(e, t, n, i), (0, T.Z)(n.id, e)
 }

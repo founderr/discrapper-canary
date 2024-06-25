@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Q: function() {
-    return f
+    return S
   }
 });
 var i = n(264344),
@@ -29,7 +29,7 @@ function T(e, t, n) {
 function h(e) {
   return e.split("-")[0]
 }
-class S extends a.Z {
+class f extends a.Z {
   destroy() {
     super.destroy(), this.pc.close()
   }
@@ -96,8 +96,8 @@ class S extends a.Z {
   }
 }
 
-function f(e, t, n, i) {
+function S(e, t, n, i) {
   let o = "".concat(null != r().name && "" !== r().name ? r().name : "unknown", " ").concat(null != r().version && "" !== r().version ? r().version : "unknown"),
     a = new s.Y("Connection(".concat(e, ")"));
-  return I.WS ? (a.info("Using Unified Plan (".concat(o, ")")), new d.Z(e, t, n, i)) : (a.info("Using Plan B (".concat(o, ")")), new S(e, t, n, i))
+  return I.WS ? (a.info("Using Unified Plan (".concat(o, ")")), new d.Z(e, t, n, i)) : (a.info("Using Plan B (".concat(o, ")")), new f(e, t, n, i))
 }

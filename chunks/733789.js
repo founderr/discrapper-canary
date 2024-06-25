@@ -1,20 +1,20 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(481060),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(481060),
   o = n(100527),
   c = n(484459),
-  u = n(103575),
-  d = n(366966),
-  E = n(409216),
-  h = n(51144),
-  _ = n(981631),
+  d = n(103575),
+  u = n(366966),
+  _ = n(409216),
+  E = n(51144),
+  h = n(981631),
   I = n(689938),
   m = n(659342);
 
-function T(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function T(e, t, n) {
   }) : e[t] = n, e
 }
 let g = {
-  [_.AzA.NOW_PLAYING]: {
+  [h.AzA.NOW_PLAYING]: {
     single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
       user1: e.username,
       user1Hook: () => t(e)
@@ -38,7 +38,7 @@ let g = {
       count: e
     })
   },
-  [_.AzA.RECENTLY_PLAYED]: {
+  [h.AzA.RECENTLY_PLAYED]: {
     single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
       user1: e.username,
       user1Hook: () => t(e)
@@ -53,7 +53,7 @@ let g = {
       count: e
     })
   },
-  [_.AzA.EVER_PLAYED]: {
+  [h.AzA.EVER_PLAYED]: {
     single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
       user1: e.username,
       user1Hook: () => t(e)
@@ -69,22 +69,22 @@ let g = {
     })
   }
 };
-class p extends i.PureComponent {
+class T extends s.PureComponent {
   renderDescription(e, t) {
     let n = g[e];
     return 1 === t.length ? n.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : n.other(t.length)
   }
   renderActivityDiscordTag(e) {
-    return (0, s.jsx)(r.Popout, {
+    return (0, i.jsx)(l.Popout, {
       preload: () => (0, c.W)(e),
-      renderPopout: t => (0, s.jsx)(u.Z, {
+      renderPopout: t => (0, i.jsx)(d.Z, {
         ...t,
         location: "ApplicationRecommendationActivity",
         userId: e.id,
         newAnalyticsLocations: [o.Z.USERNAME]
       }),
       position: "right",
-      children: t => (0, s.jsx)("span", {
+      children: t => (0, i.jsx)("span", {
         className: m.username,
         ...t,
         children: e.username
@@ -97,13 +97,13 @@ class p extends i.PureComponent {
       className: t
     } = this.props, {
       type: n,
-      userInfo: i
+      userInfo: s
     } = e;
-    return 0 === i.length ? null : (0, s.jsxs)("div", {
-      className: a()(m.recommendationActivity, t),
-      children: [(0, s.jsx)(E.Z, {
+    return 0 === s.length ? null : (0, i.jsxs)("div", {
+      className: r()(m.recommendationActivity, t),
+      children: [(0, i.jsx)(_.Z, {
         className: m.players,
-        users: i.map(e => {
+        users: s.map(e => {
           let {
             user: t
           } = e;
@@ -112,56 +112,56 @@ class p extends i.PureComponent {
         renderUser: this.renderPlayer,
         max: 4,
         renderMoreUsers: this.renderPlayerOverflow
-      }), (0, s.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: m.description,
-        children: this.renderDescription(n, i)
+        children: this.renderDescription(n, s)
       })]
     })
   }
   constructor(...e) {
-    super(...e), T(this, "renderUserTooltip", (e, t, n) => (0, s.jsxs)("div", {
+    super(...e), p(this, "renderUserTooltip", (e, t, n) => (0, i.jsxs)("div", {
       className: m.tooltip,
-      children: [(0, s.jsx)("div", {
-        children: h.ZP.getUserTag(e)
-      }), (0, s.jsx)(d.ZP, {
+      children: [(0, i.jsx)("div", {
+        children: E.ZP.getUserTag(e)
+      }), (0, i.jsx)(u.ZP, {
         className: m.tooltipTimestamp,
         start: t,
         end: n,
-        location: d.ZP.Locations.ACTIVITY_FEED
+        location: u.ZP.Locations.ACTIVITY_FEED
       })]
-    })), T(this, "renderPlayer", (e, t, n, i) => {
+    })), p(this, "renderPlayer", (e, t, n, s) => {
       if (null == e) return null;
-      let l = this.props.reason.userInfo.find(t => t.user === e);
-      return null == l ? null : (0, s.jsx)(r.Popout, {
+      let a = this.props.reason.userInfo.find(t => t.user === e);
+      return null == a ? null : (0, i.jsx)(l.Popout, {
         preload: () => (0, c.W)(e),
-        renderPopout: t => (0, s.jsx)(u.Z, {
+        renderPopout: t => (0, i.jsx)(d.Z, {
           ...t,
           location: "ApplicationRecommendationActivity",
           userId: e.id,
           newAnalyticsLocations: [o.Z.AVATAR]
         }),
         position: "right",
-        children: t => (0, s.jsx)(r.Tooltip, {
-          text: this.renderUserTooltip(e, l.startTime, l.endTime),
-          "aria-label": (0, h.W5)(e, {
+        children: t => (0, i.jsx)(l.Tooltip, {
+          text: this.renderUserTooltip(e, a.startTime, a.endTime),
+          "aria-label": (0, E.W5)(e, {
             decoration: "never"
           }),
-          children: n => (0, s.jsx)(r.Avatar, {
-            className: a()(m.playerAvatar, {
-              [m.avatarMasked]: !i
+          children: n => (0, i.jsx)(l.Avatar, {
+            className: r()(m.playerAvatar, {
+              [m.avatarMasked]: !s
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
-            size: r.AvatarSizes.SIZE_32,
+            size: l.AvatarSizes.SIZE_32,
             ...n,
             ...t
           })
         })
       }, e.id)
-    }), T(this, "renderPlayerOverflow", (e, t, n) => (0, s.jsx)("div", {
+    }), p(this, "renderPlayerOverflow", (e, t, n) => (0, i.jsx)("div", {
       className: m.playerOverflow,
       children: e
     }, n))
   }
 }
-t.Z = p
+t.Z = T

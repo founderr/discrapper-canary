@@ -46,10 +46,10 @@ function I(e) {
     onResize: a,
     className: u,
     ...I
-  } = e, T = r.useRef(null), h = r.useRef(null), S = r.useRef({
+  } = e, T = r.useRef(null), h = r.useRef(null), f = r.useRef({
     width: 0,
     height: 0
-  }), f = r.useRef({
+  }), S = r.useRef({
     streamId: t,
     paused: n,
     onReady: s,
@@ -62,7 +62,7 @@ function I(e) {
     if (null != e) {
       let t = document.createElement("video");
       t.style.display = "block", t.style.width = "100%", t.style.height = "100%", t.autoplay = !0, t.muted = !0, t.addEventListener("pause", function() {
-        if (!f.current.paused) {
+        if (!S.current.paused) {
           var e;
           null === (e = h.current) || void 0 === e || e.play()
         }
@@ -71,21 +71,21 @@ function I(e) {
         let {
           width: o,
           height: a
-        } = S.current, l = null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, u = null !== (i = null === (t = h.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
+        } = f.current, l = null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, u = null !== (i = null === (t = h.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
         if (o !== l || a !== u) {
           let e = {
             width: l,
             height: u
           };
-          null === (r = (s = f.current).onResize) || void 0 === r || r.call(s, e), S.current = e
+          null === (r = (s = S.current).onResize) || void 0 === r || r.call(s, e), f.current = e
         }
       }), t.addEventListener("canplaythrough", function() {
         var e, t;
-        _.info("handleReady for ".concat(f.current.streamId, ", have onReady callback = ").concat(null != f.current.onReady)), null === (e = (t = f.current).onReady) || void 0 === e || e.call(t)
-      }), _.info("create video element for ".concat(f.current.streamId, ", readyState=").concat(t.readyState)), t.readyState > 3 && _.error("video element for ".concat(f.current.streamId, " was ready before attached")), e.appendChild(t), h.current = t
+        _.info("handleReady for ".concat(S.current.streamId, ", have onReady callback = ").concat(null != S.current.onReady)), null === (e = (t = S.current).onReady) || void 0 === e || e.call(t)
+      }), _.info("create video element for ".concat(S.current.streamId, ", readyState=").concat(t.readyState)), t.readyState > 3 && _.error("video element for ".concat(S.current.streamId, " was ready before attached")), e.appendChild(t), h.current = t
     }
   }, []), r.useEffect(() => {
-    f.current.streamId = t, f.current.paused = n, f.current.onReady = s, f.current.onResize = a
+    S.current.streamId = t, S.current.paused = n, S.current.onReady = s, S.current.onResize = a
   }), r.useEffect(() => {
     let e = h.current;
     if (null != e) {

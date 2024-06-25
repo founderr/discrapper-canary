@@ -1,121 +1,121 @@
 t(47120);
 var a = t(735250),
   r = t(470079),
-  s = t(120356),
-  i = t.n(s),
-  l = t(481060),
-  o = t(442837),
+  i = t(120356),
+  s = t.n(i),
+  o = t(481060),
+  l = t(442837),
   c = t(314897),
   d = t(353093),
   u = t(214715),
   m = t(18100),
-  h = t(308083),
+  f = t(308083),
   C = t(689938),
-  x = t(360884);
+  _ = t(360884);
 n.Z = e => {
   let {
     guildId: n,
     handleUpdate: t,
-    progress: s,
-    error: f
+    progress: i,
+    error: h
   } = e, {
-    interests: E
-  } = s, [T, _] = r.useState(""), I = (0, o.e7)([c.default], () => c.default.getId()), g = r.useMemo(() => (0, d.SS)(h.i6, I), [I]), p = r.useMemo(() => Array.from(E), [E]), N = r.useMemo(() => p.filter(h.O6), [p]), v = r.useMemo(() => [...g, ...N], [N, g]), y = r.useMemo(() => p.filter(e => !h.WZ.has(e) && !h.gh.has(e)), [p]), S = e => {
-    let n = new Set(E);
+    interests: x
+  } = i, [g, p] = r.useState(""), T = (0, l.e7)([c.default], () => c.default.getId()), I = r.useMemo(() => (0, d.SS)(f.i6, T), [T]), E = r.useMemo(() => Array.from(x), [x]), b = r.useMemo(() => E.filter(f.O6), [E]), N = r.useMemo(() => [...I, ...b], [b, I]), v = r.useMemo(() => E.filter(e => !f.WZ.has(e) && !f.gh.has(e)), [E]), y = e => {
+    let n = new Set(x);
     n.delete(e), t({
       interests: n
     })
-  }, A = r.useCallback(e => {
-    if (E.size === h.c4) return;
-    let n = null != e ? e : T.trim();
+  }, S = r.useCallback(e => {
+    if (x.size === f.c4) return;
+    let n = null != e ? e : g.trim();
     if (0 === n.length) return;
-    let a = new Set(E);
+    let a = new Set(x);
     a.add(n), t({
       interests: a
-    }), _("")
-  }, [t, T, E]), M = r.useCallback(e => {
+    }), p("")
+  }, [t, g, x]), A = r.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), A()
+        e.preventDefault(), e.stopPropagation(), S()
     }
-  }, [A]);
+  }, [S]);
   return (0, a.jsxs)("div", {
-    className: x.slideContent,
-    children: [(0, a.jsx)(l.Heading, {
+    className: _.slideContent,
+    children: [(0, a.jsx)(o.Heading, {
       variant: "heading-xxl/medium",
-      className: x.title,
+      className: _.title,
       children: C.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: x.subtitle,
+      className: _.subtitle,
       children: C.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
-    }), null != f && (0, a.jsx)(l.Text, {
+    }), null != h && (0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: x.errorText,
-      children: f
+      className: _.errorText,
+      children: h
     }), (0, a.jsxs)("div", {
-      className: x.content,
+      className: _.content,
       children: [(0, a.jsxs)("div", {
-        className: x.mainPanelContainer,
+        className: _.mainPanelContainer,
         children: [(0, a.jsxs)("div", {
-          className: x.inputContainer,
-          children: [(0, a.jsx)(l.Text, {
+          className: _.inputContainer,
+          children: [(0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
-            className: x.contentLabel,
+            className: _.contentLabel,
             children: C.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
-          }), (0, a.jsx)(l.TextInput, {
+          }), (0, a.jsx)(o.TextInput, {
             autoFocus: !0,
-            inputClassName: x.input,
-            value: T,
-            onKeyDown: M,
-            onChange: _,
+            inputClassName: _.input,
+            value: g,
+            onKeyDown: A,
+            onChange: p,
             placeholder: C.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-            maxLength: h.Sq,
-            disabled: E.size === h.c4
-          }), T.length > 0 && (0, a.jsx)(l.Clickable, {
-            onClick: () => A(T.trim()),
-            className: i()(x.plusIcon, x.clickable),
-            children: (0, a.jsx)(l.PlusSmallIcon, {
+            maxLength: f.Sq,
+            disabled: x.size === f.c4
+          }), g.length > 0 && (0, a.jsx)(o.Clickable, {
+            onClick: () => S(g.trim()),
+            className: s()(_.plusIcon, _.clickable),
+            children: (0, a.jsx)(o.PlusSmallIcon, {
               size: "md",
               color: "currentColor",
-              className: x.icon
+              className: _.icon
             })
-          }), T.length > 0 && (0, a.jsx)(l.Text, {
+          }), g.length > 0 && (0, a.jsx)(o.Text, {
             color: "text-muted",
             variant: "text-xs/normal",
-            className: x.enterToSearchText,
+            className: _.enterToSearchText,
             children: C.Z.Messages.CLAN_SETUP_INTERESTS_HELP
           })]
-        }), (0, a.jsx)(l.Text, {
-          className: x.interestsCategoryTitle,
+        }), (0, a.jsx)(o.Text, {
+          className: _.interestsCategoryTitle,
           variant: "text-xs/semibold",
           color: "text-muted",
           children: C.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
         }), (0, a.jsx)("div", {
-          className: x.interestsCategory,
-          children: v.map(e => {
-            let n = E.has(e);
+          className: _.interestsCategory,
+          children: N.map(e => {
+            let n = x.has(e);
             return (0, a.jsx)(u.Z, {
               variant: "text-xs/semibold",
               color: "interactive-normal",
               text: e,
               selected: n,
-              onClick: n ? S : A
+              onClick: n ? y : S
             }, e)
           })
         })]
       }), (0, a.jsx)("div", {
-        className: x.fixedWidthSidebar,
-        children: p.length > 0 && (0, a.jsx)(m.Z, {
+        className: _.fixedWidthSidebar,
+        children: E.length > 0 && (0, a.jsx)(m.Z, {
           guildId: n,
-          progress: s,
-          traitsToHighlight: y,
+          progress: i,
+          traitsToHighlight: v,
           maskDescription: !0,
-          onTraitClick: S
+          onTraitClick: y
         })
       })]
     })]

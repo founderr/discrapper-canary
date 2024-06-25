@@ -1,22 +1,22 @@
-var s, i, l, a, r = n(873546),
+var i, s, a, r, l = n(873546),
   o = n(442837),
   c = n(570140);
-let u = !1;
-class d extends(a = o.ZP.Store) {
+let d = !1;
+class u extends(r = o.ZP.Store) {
   getIsOpen() {
-    return !r.tq || u
+    return !l.tq || d
   }
 }
-l = "MobileWebSidebarStore", (i = "displayName") in(s = d) ? Object.defineProperty(s, i, {
-  value: l,
+a = "MobileWebSidebarStore", (s = "displayName") in(i = u) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = l, t.Z = new d(c.Z, {
+}) : i[s] = a, t.Z = new u(c.Z, {
   MOBILE_WEB_SIDEBAR_OPEN: function() {
-    u = !0
+    d = !0
   },
   MOBILE_WEB_SIDEBAR_CLOSE: function() {
-    u = !1
+    d = !1
   }
 })

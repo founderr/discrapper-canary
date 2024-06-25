@@ -45,11 +45,11 @@ function a(e) {
     key: I,
     indexOffset: T = 0,
     headerClassName: h,
-    headerTrailingContent: S,
-    footer: f
+    headerTrailingContent: f,
+    footer: S
   } = e;
-  if (null == f && (null == s || 0 === s.length)) return null;
-  let N = null == s ? void 0 : s.map((e, t) => {
+  if (null == S && (null == s || 0 === s.length)) return null;
+  let A = null == s ? void 0 : s.map((e, t) => {
     let i = t + T,
       s = d(e, i);
     return (0, r.createElement)(c, {
@@ -68,7 +68,7 @@ function a(e) {
       query: t,
       getQuery: E,
       headerClassName: h,
-      headerTrailingContent: S
-    }) : null, N, f]
+      headerTrailingContent: f
+    }) : null, A, S]
   }, I)
 }

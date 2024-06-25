@@ -1,23 +1,23 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  r = n(546591),
-  a = n(977059),
+var l = n(120356),
+  r = n.n(l),
+  a = n(546591),
+  s = n(977059),
   o = n(689938),
-  u = n(857665);
+  c = n(857665);
 t.Z = function(e) {
   let {
     className: t,
     text: n
   } = e, {
-    enabled: i
-  } = a.c.useExperiment({
+    enabled: l
+  } = s.c.useExperiment({
     location: "RTCConnectionStatusText"
   });
-  return (0, l.jsx)(r.Z, {
-    className: s()(t, i ? u.hoverableStatus : u.status),
-    hoverText: i ? o.Z.Messages.E2EE_CALL_DETAILS : null,
+  return (0, i.jsx)(a.Z, {
+    className: r()(t, l ? c.hoverableStatus : c.status),
+    hoverText: l ? o.Z.Messages.E2EE_CALL_DETAILS : null,
     children: n
   })
 }

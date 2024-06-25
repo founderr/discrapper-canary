@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Yy: function() {
-    return S
+    return f
   },
   ZP: function() {
     return m
@@ -30,12 +30,12 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = {
+let f = {
     any: 100
   },
-  f = 30 * c.Z.Millis.SECOND,
-  N = 120 * c.Z.Millis.SECOND,
-  A = -1 !== (0, _.hY)();
+  S = 30 * c.Z.Millis.SECOND,
+  A = 120 * c.Z.Millis.SECOND,
+  N = -1 !== (0, _.hY)();
 (r = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", r.Update = "update";
 class m extends s.Z {
   getWantsLevel() {
@@ -93,7 +93,7 @@ class m extends s.Z {
     return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamIds[e], this.update(Array.from(this.participants))
   }
   reset() {
-    this.setConnection(null, !1), this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.latestWants = S
+    this.setConnection(null, !1), this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.latestWants = f
   }
   setSelectedParticipant(e) {
     if (e === this.selectedParticipantId) return this.latestWants;
@@ -137,14 +137,14 @@ class m extends s.Z {
     return e
   }
   getOffscreenTimeoutMs() {
-    return this.isStageChannel ? N : f
+    return this.isStageChannel ? A : S
   }
   getSimulcastOverrideQuality(e) {
     return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : T.Z.NO_OVERRIDE
   }
   constructor(e, t, n, i = new a.x) {
     var r;
-    super(), r = this, h(this, "userId", void 0), h(this, "isStageChannel", void 0), h(this, "supportsSeamless", void 0), h(this, "ladder", void 0), h(this, "connection", void 0), h(this, "audioSsrcs", void 0), h(this, "videoSsrcs", void 0), h(this, "remoteVideoSsrcs", void 0), h(this, "framesReceived", void 0), h(this, "streamIds", void 0), h(this, "offscreenUsers", void 0), h(this, "offscreenDisabledUsers", void 0), h(this, "latestWants", void 0), h(this, "participants", void 0), h(this, "selectedParticipantId", void 0), h(this, "delayedCall", void 0), h(this, "offscreenTimeout", void 0), h(this, "pipOpen", void 0), h(this, "simulcastDebugOverrides", void 0), h(this, "videoHealthManager", void 0), h(this, "delayedUpdate", void 0), h(this, "addLru", void 0), h(this, "updateOffscreenUsers", void 0), h(this, "handleLocalVideoDisabled", void 0), h(this, "handleLocalMute", void 0), h(this, "update", void 0), this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = i, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = S, this.participants = new Set, this.selectedParticipantId = null, this.pipOpen = !1, this.simulcastDebugOverrides = new Map, this.videoHealthManager = null, this.delayedUpdate = () => {
+    super(), r = this, h(this, "userId", void 0), h(this, "isStageChannel", void 0), h(this, "supportsSeamless", void 0), h(this, "ladder", void 0), h(this, "connection", void 0), h(this, "audioSsrcs", void 0), h(this, "videoSsrcs", void 0), h(this, "remoteVideoSsrcs", void 0), h(this, "framesReceived", void 0), h(this, "streamIds", void 0), h(this, "offscreenUsers", void 0), h(this, "offscreenDisabledUsers", void 0), h(this, "latestWants", void 0), h(this, "participants", void 0), h(this, "selectedParticipantId", void 0), h(this, "delayedCall", void 0), h(this, "offscreenTimeout", void 0), h(this, "pipOpen", void 0), h(this, "simulcastDebugOverrides", void 0), h(this, "videoHealthManager", void 0), h(this, "delayedUpdate", void 0), h(this, "addLru", void 0), h(this, "updateOffscreenUsers", void 0), h(this, "handleLocalVideoDisabled", void 0), h(this, "handleLocalMute", void 0), h(this, "update", void 0), this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = i, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = f, this.participants = new Set, this.selectedParticipantId = null, this.pipOpen = !1, this.simulcastDebugOverrides = new Map, this.videoHealthManager = null, this.delayedUpdate = () => {
       this.delayedCall.delay()
     }, this.addLru = (e, t, n) => {
       if (n.push(e), n.length <= 3) return;
@@ -200,7 +200,7 @@ class m extends s.Z {
         var i;
         (null === (i = r.connection) || void 0 === i ? void 0 : i.getLocalMute(e)) && (n[t] = 0)
       }
-      return A ? r.latestWants : (null != r.connection && !(0, l.Z)(r.latestWants, n) && (r.latestWants = n, r.emit("update", n)), n)
+      return N ? r.latestWants : (null != r.connection && !(0, l.Z)(r.latestWants, n) && (r.latestWants = n, r.emit("update", n)), n)
     }, this.delayedCall = new u.sW(100, this.update), this.offscreenTimeout = new u.V7, E.Z.subscribe(() => {
       this.update()
     })

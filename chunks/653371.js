@@ -1,49 +1,49 @@
-n.d(t, {
+a.d(t, {
   a: function() {
     return I
   }
-}), n(47120), n(653041);
-var a = n(735250),
-  l = n(470079),
-  i = n(557533),
-  s = n.n(i),
-  r = n(771950),
-  o = n(860911),
-  c = n(66037),
-  d = n(787907),
-  u = n(643103),
-  h = n(34211),
-  p = n(231338),
-  m = n(436620),
-  N = n(431138),
-  k = n(705478);
+}), a(47120), a(653041);
+var n = a(735250),
+  i = a(470079),
+  r = a(557533),
+  l = a.n(r),
+  o = a(771950),
+  s = a(860911),
+  c = a(66037),
+  d = a(787907),
+  u = a(643103),
+  p = a(34211),
+  h = a(231338),
+  m = a(436620),
+  N = a(431138),
+  k = a(705478);
 
-function g(e, t, n) {
+function _(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-let C = p.j_.MAIN_NAVIGATION_MENU,
-  x = () => [{
-    route: (0, r.L)(p.RK.TWITTER),
+let f = h.j_.MAIN_NAVIGATION_MENU,
+  g = () => [{
+    route: (0, o.L)(h.RK.TWITTER),
     linkClicked: "twitter",
     alt: "Discord's Twitter",
     img: N.r.ASSET_SOCIAL_TWITTER
   }, {
-    route: p.fK.FACEBOOK_URL,
+    route: h.fK.FACEBOOK_URL,
     linkClicked: "facebook",
     alt: "Discord's Facebook",
     img: N.r.ASSET_SOCIAL_FACEBOOK
   }, {
-    route: p.fK.INSTAGRAM_URL,
+    route: h.fK.INSTAGRAM_URL,
     linkClicked: "instagram",
     alt: "Discord's Instagram",
     img: N.r.ASSET_SOCIAL_INSTAGRAM
   }];
-class I extends l.PureComponent {
+class I extends i.PureComponent {
   componentDidMount() {
     this.setState({
       isAppCompatible: m.KO
@@ -53,87 +53,87 @@ class I extends l.PureComponent {
     let {
       className: e,
       mainContentId: t,
-      skipToContentLabel: n,
-      NavigationMessages: l,
-      onChangeLocale: i,
-      TrackClick: r,
-      avoidRouter: o
+      skipToContentLabel: a,
+      NavigationMessages: i,
+      onChangeLocale: r,
+      TrackClick: o,
+      avoidRouter: s
     } = this.props;
-    return (0, a.jsxs)("header", {
-      className: s()(k.header, e),
-      children: [(0, a.jsxs)("nav", {
+    return (0, n.jsxs)("header", {
+      className: l()(k.header, e),
+      children: [(0, n.jsxs)("nav", {
         className: k.headerInner,
-        children: [(0, a.jsxs)("div", {
+        children: [(0, n.jsxs)("div", {
           className: k.headerLogo,
-          children: [(0, a.jsx)(r, {
+          children: [(0, n.jsx)(o, {
             tag: "div",
-            eventName: C,
+            eventName: f,
             data: {
               linkClicked: "logo"
             },
-            children: (0, a.jsx)(c.Z, {
-              avoidRouter: o,
-              to: p.am.INDEX,
-              from: p.j_.MAIN_NAVIGATION_MENU,
-              children: (0, a.jsx)(d.O, {})
+            children: (0, n.jsx)(c.Z, {
+              avoidRouter: s,
+              to: h.am.INDEX,
+              from: h.j_.MAIN_NAVIGATION_MENU,
+              children: (0, n.jsx)(d.O, {})
             })
-          }), null != t ? (0, a.jsx)("a", {
+          }), null != t ? (0, n.jsx)("a", {
             className: k.skipToContent,
             href: "#".concat(t),
-            children: n
+            children: a
           }) : null]
-        }), (0, a.jsx)("ul", {
+        }), (0, n.jsx)("ul", {
           className: k.headerNav,
-          children: (0, a.jsx)(h.o, {
-            avoidRouter: o,
-            TrackClick: r,
+          children: (0, n.jsx)(p.o, {
+            avoidRouter: s,
+            TrackClick: o,
             styles: k,
-            NavigationMessages: l
+            NavigationMessages: i
           })
-        }), (0, a.jsxs)("ul", {
+        }), (0, n.jsxs)("ul", {
           className: k.headerNavRight,
-          children: [this.renderSocialMediaNav(), (0, a.jsx)(u.p, {
-            onChange: i
+          children: [this.renderSocialMediaNav(), (0, n.jsx)(u.p, {
+            onChange: r
           })]
         })]
-      }), null != t && (0, a.jsx)("div", {
+      }), null != t && (0, n.jsx)("div", {
         id: t,
         tabIndex: -1
       })]
     })
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), _(this, "state", {
       isAppCompatible: !0
-    }), g(this, "getAppButton", () => {
+    }), _(this, "getAppButton", () => {
       let {
         token: e,
         NavigationMessages: t,
-        TrackClick: n,
-        authRedirectTo: l
+        TrackClick: a,
+        authRedirectTo: i
       } = this.props, {
-        isAppCompatible: i
-      } = this.state, s = (0, o.U)(l), r = t.LOGIN;
-      return null != e && (s = p.$w.ME, r = t.OPEN), i ? (0, a.jsx)("li", {
+        isAppCompatible: r
+      } = this.state, l = (0, s.U)(i), o = t.LOGIN;
+      return null != e && (l = h.$w.ME, o = t.OPEN), r ? (0, n.jsx)("li", {
         className: k.listItemInactive,
-        children: (0, a.jsx)(n, {
-          eventName: C,
+        children: (0, n.jsx)(a, {
+          eventName: f,
           className: k.appButton,
           data: {
             linkClicked: e ? "open" : "login",
             googleAnalytics: !0
           },
-          href: s,
-          children: r
+          href: l,
+          children: o
         })
       }, "app-button") : null
-    }), g(this, "renderSocialMediaNav", () => {
+    }), _(this, "renderSocialMediaNav", () => {
       let {
         TrackClick: e
-      } = this.props, t = x().map(t => (0, a.jsx)("li", {
-        className: s()(k.listItemInactive, k.listItemSocialMedia),
-        children: (0, a.jsx)(e, {
-          eventName: C,
+      } = this.props, t = g().map(t => (0, n.jsx)("li", {
+        className: l()(k.listItemInactive, k.listItemSocialMedia),
+        children: (0, n.jsx)(e, {
+          eventName: f,
           className: k.rightNavLink,
           data: {
             linkClicked: t.linkClicked
@@ -141,13 +141,13 @@ class I extends l.PureComponent {
           href: t.route,
           rel: "me",
           target: "_blank",
-          children: (0, a.jsx)("img", {
+          children: (0, n.jsx)("img", {
             src: t.img,
             alt: t.alt
           })
         })
-      }, t.route)), n = this.getAppButton();
-      return null != n && t.push(n), t
+      }, t.route)), a = this.getAppButton();
+      return null != a && t.push(a), t
     })
   }
 }

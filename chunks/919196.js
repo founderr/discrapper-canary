@@ -1,193 +1,193 @@
 t.d(n, {
   Z: function() {
-    return R
+    return A
   }
 }), t(47120), t(653041);
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(442837),
-  a = t(481060),
-  r = t(668781),
-  o = t(434404),
+  l = t(481060),
+  o = t(668781),
+  r = t(434404),
   c = t(590157),
   d = t(270144),
   u = t(288594),
   I = t(588822),
-  N = t(496675),
-  E = t(285952),
-  T = t(768581),
-  m = t(709054),
-  _ = t(51144),
+  m = t(496675),
+  _ = t(285952),
+  N = t(768581),
+  E = t(709054),
+  T = t(51144),
   h = t(486199),
-  g = t(366598),
-  O = t(125657),
-  A = t(725875),
-  x = t(981631),
-  C = t(689938),
-  S = t(20943);
+  p = t(366598),
+  g = t(125657),
+  C = t(725875),
+  f = t(981631),
+  x = t(689938),
+  O = t(20943);
 
-function p(e) {
+function S(e) {
   let {
     application: n,
     guild: t,
-    integration: l,
+    integration: a,
     ...s
   } = e;
-  return (0, i.jsx)(a.ConfirmModal, {
+  return (0, i.jsx)(l.ConfirmModal, {
     ...s,
-    header: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({
+    header: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({
       applicationName: n.name
     }),
-    confirmText: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
-    cancelText: C.Z.Messages.CANCEL,
+    confirmText: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
+    cancelText: x.Z.Messages.CANCEL,
     onConfirm: () => {
-      o.Z.disableIntegration(t.id, l.id).catch(() => {
-        r.Z.show({
-          title: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
-          body: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
+      r.Z.disableIntegration(t.id, a.id).catch(() => {
+        o.Z.show({
+          title: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
+          body: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
         })
       })
     },
-    children: (0, i.jsx)(a.Text, {
+    children: (0, i.jsx)(l.Text, {
       variant: "text-md/normal",
-      children: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({
+      children: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({
         applicationName: n.name
       })
     })
   })
 }
 
-function R(e) {
+function A(e) {
   var n;
   let {
     guild: t,
-    applicationIntegration: r,
-    selectableWebhookChannels: o,
-    editedWebhook: R,
-    errors: Z,
-    canNavigate: f
+    applicationIntegration: o,
+    selectableWebhookChannels: r,
+    editedWebhook: A,
+    errors: R,
+    canNavigate: b
   } = e, {
-    application: M,
-    integration: L,
-    webhooks: v
-  } = r, [j, b] = (0, s.Wu)([N.Z], () => [N.Z.can(x.Plq.MANAGE_ROLES, t), null == M.bot || N.Z.canManageUser(x.Plq.MANAGE_GUILD, M.bot.id, t)], [M.bot, t]), P = (0, s.e7)([N.Z], () => N.Z.can(x.Plq.MANAGE_WEBHOOKS, t), [t]), D = l.useCallback(() => {
-    f() && (0, a.openModal)(e => (0, i.jsx)(p, {
+    application: Z,
+    integration: v,
+    webhooks: M
+  } = o, [L, j] = (0, s.Wu)([m.Z], () => [m.Z.can(f.Plq.MANAGE_ROLES, t), null == Z.bot || m.Z.canManageUser(f.Plq.MANAGE_GUILD, Z.bot.id, t)], [Z.bot, t]), D = (0, s.e7)([m.Z], () => m.Z.can(f.Plq.MANAGE_WEBHOOKS, t), [t]), P = a.useCallback(() => {
+    b() && (0, l.openModal)(e => (0, i.jsx)(S, {
       guild: t,
-      application: M,
-      integration: L,
+      application: Z,
+      integration: v,
       ...e
     }))
-  }, [M, f, t, L]), B = l.useMemo(() => {
+  }, [Z, b, t, v]), B = a.useMemo(() => {
     let e = [{
-      icon: a.ClockIcon,
-      text: C.Z.Messages.INTEGRATION_ADDED_DATE.format({
-        timestamp: m.default.extractTimestamp(L.id)
+      icon: l.ClockIcon,
+      text: x.Z.Messages.INTEGRATION_ADDED_DATE.format({
+        timestamp: E.default.extractTimestamp(v.id)
       })
     }];
-    return null != L.user && e.push({
-      icon: a.UserIcon,
-      text: C.Z.Messages.INTEGRATION_ADDED_USER.format({
-        user: _.ZP.getUserTag(L.user)
+    return null != v.user && e.push({
+      icon: l.UserIcon,
+      text: x.Z.Messages.INTEGRATION_ADDED_USER.format({
+        user: T.ZP.getUserTag(v.user)
       })
     }), e
-  }, [L.id, L.user]), G = l.useMemo(() => null != M.bot ? (0, i.jsx)(O.Z, {
+  }, [v.id, v.user]), y = a.useMemo(() => null != Z.bot ? (0, i.jsx)(g.Z, {
     guild: t,
-    applicationIntegration: r
-  }) : (0, i.jsx)(a.Card, {
-    className: S.emptyCard,
+    applicationIntegration: o
+  }) : (0, i.jsx)(l.Card, {
+    className: O.emptyCard,
     editable: !0,
-    children: (0, i.jsx)(a.Text, {
+    children: (0, i.jsx)(l.Text, {
       color: "text-muted",
       variant: "text-sm/normal",
-      children: C.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
+      children: x.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
     })
-  }), [M.bot, r, t]), {
-    applicationSubscriptionListingsShown: y
+  }), [Z.bot, o, t]), {
+    applicationSubscriptionListingsShown: G
   } = (0, d.ZP)({
-    applicationId: M.id,
-    groupListingId: M.primarySkuId,
+    applicationId: Z.id,
+    groupListingId: Z.primarySkuId,
     guildId: t.id
   });
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(h.Z, {
-      name: M.name,
-      imageSrc: null !== (n = M.getIconURL(32)) && void 0 !== n ? n : T.pK["0"],
+      name: Z.name,
+      imageSrc: null !== (n = Z.getIconURL(32)) && void 0 !== n ? n : N.pK["0"],
       details: B,
       isHeader: !0
-    }), (null == M ? void 0 : M.description) != null ? (0, i.jsx)(I.Z, {
-      userBio: M.description,
-      className: S.headerDescription
-    }) : null, j ? (0, i.jsx)(c.Z, {
-      application: M,
-      canNavigate: f,
+    }), (null == Z ? void 0 : Z.description) != null ? (0, i.jsx)(I.Z, {
+      userBio: Z.description,
+      className: O.headerDescription
+    }) : null, L ? (0, i.jsx)(c.Z, {
+      application: Z,
+      canNavigate: b,
       guildId: t.id
-    }) : null, (0, i.jsx)(a.FormDivider, {
-      className: S.headerDivider
-    }), null != M.bot ? (0, i.jsxs)("div", {
-      className: S.section,
-      children: [(0, i.jsx)(g.Z, {
-        icon: (0, i.jsx)(a.RobotIcon, {
+    }) : null, (0, i.jsx)(l.FormDivider, {
+      className: O.headerDivider
+    }), null != Z.bot ? (0, i.jsxs)("div", {
+      className: O.section,
+      children: [(0, i.jsx)(p.Z, {
+        icon: (0, i.jsx)(l.RobotIcon, {
           size: "xs",
           color: "currentColor"
         }),
-        title: C.Z.Messages.INTEGRATIONS_APPLICATION_BOT
-      }), G]
-    }) : null, y && null != M.primarySkuId && (0, i.jsxs)("div", {
-      className: S.section,
-      children: [(0, i.jsx)(g.Z, {
-        icon: (0, i.jsx)(a.TicketIcon, {
+        title: x.Z.Messages.INTEGRATIONS_APPLICATION_BOT
+      }), y]
+    }) : null, G && null != Z.primarySkuId && (0, i.jsxs)("div", {
+      className: O.section,
+      children: [(0, i.jsx)(p.Z, {
+        icon: (0, i.jsx)(l.TicketIcon, {
           size: "md",
           color: "currentColor"
         }),
-        title: C.Z.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
+        title: x.Z.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
       }), (0, i.jsx)(u.Z, {
-        applicationId: M.id,
-        applicationPrimarySkuId: M.primarySkuId,
+        applicationId: Z.id,
+        applicationPrimarySkuId: Z.primarySkuId,
         guildId: t.id
       })]
     }), (0, i.jsxs)("div", {
-      className: S.section,
-      children: [(0, i.jsx)(g.Z, {
-        icon: (0, i.jsx)(a.WebhookIcon, {
+      className: O.section,
+      children: [(0, i.jsx)(p.Z, {
+        icon: (0, i.jsx)(l.WebhookIcon, {
           size: "md",
           color: "currentColor"
         }),
-        title: C.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
-      }), v.length > 0 ? (0, i.jsx)(A.Z, {
-        webhooks: v,
-        editedWebhook: R,
-        selectableWebhookChannels: o,
-        errors: Z,
-        canNavigate: f
-      }) : (0, i.jsx)(a.Card, {
-        className: S.emptyCard,
+        title: x.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
+      }), M.length > 0 ? (0, i.jsx)(C.Z, {
+        webhooks: M,
+        editedWebhook: A,
+        selectableWebhookChannels: r,
+        errors: R,
+        canNavigate: b
+      }) : (0, i.jsx)(l.Card, {
+        className: O.emptyCard,
         editable: !0,
-        children: (0, i.jsx)(a.Text, {
+        children: (0, i.jsx)(l.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: P ? C.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : C.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
+          children: D ? x.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : x.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
         })
       })]
-    }), (0, i.jsx)(a.FormDivider, {
-      className: S.headerDivider
-    }), (0, i.jsxs)(E.Z, {
-      className: S.section,
-      justify: E.Z.Justify.BETWEEN,
-      align: E.Z.Align.CENTER,
-      children: [(0, i.jsx)(a.Text, {
+    }), (0, i.jsx)(l.FormDivider, {
+      className: O.headerDivider
+    }), (0, i.jsxs)(_.Z, {
+      className: O.section,
+      justify: _.Z.Justify.BETWEEN,
+      align: _.Z.Align.CENTER,
+      children: [(0, i.jsx)(l.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: b ? C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
-      }), (0, i.jsx)(E.Z.Child, {
+        children: j ? x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
+      }), (0, i.jsx)(_.Z.Child, {
         grow: 0,
         shrink: 0,
-        children: (0, i.jsx)(a.Button, {
-          size: a.Button.Sizes.SMALL,
-          color: a.Button.Colors.RED,
-          look: a.Button.Looks.FILLED,
-          disabled: !b,
-          onClick: D,
-          children: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE
+        children: (0, i.jsx)(l.Button, {
+          size: l.Button.Sizes.SMALL,
+          color: l.Button.Colors.RED,
+          look: l.Button.Looks.FILLED,
+          disabled: !j,
+          onClick: P,
+          children: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE
         })
       })]
     })]

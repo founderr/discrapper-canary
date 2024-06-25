@@ -1,12 +1,12 @@
 n.d(t, {
   N: function() {
-    return i
+    return s
   }
 });
-var s = n(570140);
+var i = n(570140);
 
-function i(e, t) {
-  s.Z.dispatch({
+function s(e, t) {
+  i.Z.dispatch({
     type: "CERTIFIED_DEVICES_SET",
     applicationId: e,
     devices: t

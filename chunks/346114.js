@@ -1,9 +1,9 @@
 n.d(t, {
   a: function() {
-    return s
+    return i
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-05_go_live_quest_fortnite",
   label: "Fortnite: Go Live Quest",

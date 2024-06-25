@@ -19,11 +19,11 @@ t.Z = r.memo(function(e) {
   } = e, {
     guildId: T,
     channelId: h,
-    messageId: S,
-    roleId: f
+    messageId: f,
+    roleId: S
   } = (0, a.KZ)(), {
-    analyticsLocations: N
-  } = (0, o.ZP)(), [A, m] = r.useState(!1);
+    analyticsLocations: A
+  } = (0, o.ZP)(), [N, m] = r.useState(!1);
   return I || null == E || "" === E ? null : (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
       ref: e => {
@@ -35,7 +35,7 @@ t.Z = r.memo(function(e) {
         setLineClamp: !1,
         textColor: "header-primary"
       })
-    }), A && (0, i.jsx)(s.Button, {
+    }), N && (0, i.jsx)(s.Button, {
       look: s.Button.Looks.BLANK,
       size: s.Button.Sizes.NONE,
       className: d.viewFullBio,
@@ -45,12 +45,12 @@ t.Z = r.memo(function(e) {
           userId: t.id,
           guildId: null != T ? T : void 0,
           channelId: null != h ? h : void 0,
-          messageId: null != S ? S : void 0,
-          roleId: null != f ? f : void 0,
+          messageId: null != f ? f : void 0,
+          roleId: null != S ? S : void 0,
           analyticsLocation: {
             section: _.jXE.BITE_SIZE_PROFILE_POPOUT
           },
-          sourceAnalyticsLocations: N
+          sourceAnalyticsLocations: A
         })
       },
       children: (0, i.jsx)(s.Text, {

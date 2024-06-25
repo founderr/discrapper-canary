@@ -1,57 +1,57 @@
-t.d(n, {
+n.d(t, {
   s: function() {
-    return S
+    return T
   }
 });
-var i = t(735250),
-  r = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  u = t(481060),
-  o = t(346610),
-  c = t(868643),
-  s = t(912332),
-  d = t(503349),
-  _ = t(689938),
-  f = t(789447);
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  l = n.n(s),
+  r = n(481060),
+  o = n(346610),
+  c = n(868643),
+  d = n(912332),
+  u = n(503349),
+  _ = n(689938),
+  E = n(789447);
 
-function m() {
-  (0, u.closeModal)(d.c)
+function I() {
+  (0, r.closeModal)(u.c)
 }
 
-function E(e) {
+function m(e) {
   let {
-    className: n,
-    channelId: t,
-    messageId: l,
+    className: t,
+    channelId: n,
+    messageId: s,
     target: o
-  } = e, c = r.useCallback(() => {
+  } = e, c = a.useCallback(() => {
     if ("embed" === o.type) {
-      (0, s.l8)({
-        messageId: l,
-        channelId: t,
+      (0, d.l8)({
+        messageId: s,
+        channelId: n,
         source: "media-viewer",
         forwardOptions: {
           onlyEmbedIndices: [o.embedIndex]
         },
-        onRequestSent: m
+        onRequestSent: I
       });
       return
-    }(0, s.l8)({
-      messageId: l,
-      channelId: t,
+    }(0, d.l8)({
+      messageId: s,
+      channelId: n,
       source: "media-viewer",
       forwardOptions: {
         onlyAttachmentIds: [o.attachmentId]
       },
-      onRequestSent: m
+      onRequestSent: I
     })
-  }, [t, l, o]);
-  return (0, i.jsx)(u.Clickable, {
-    className: a()(f.container, n),
+  }, [n, s, o]);
+  return (0, i.jsx)(r.Clickable, {
+    className: l()(E.container, t),
     onClick: c,
-    children: (0, i.jsx)(u.Text, {
-      className: f.text,
+    children: (0, i.jsx)(r.Text, {
+      className: E.text,
       variant: "text-sm/medium",
       color: "always-white",
       children: _.Z.Messages.MESSAGE_ACTION_FORWARD
@@ -59,23 +59,23 @@ function E(e) {
   })
 }
 
-function S(e, n) {
+function T(e, t) {
   let {
-    canForwardMessages: t
+    canForwardMessages: n
   } = o.w.getCurrentConfig({
     location: "ForwardLink"
   }, {
     autoTrackExposure: !1
   });
-  return t && (0, c.h)(e) ? t => {
+  return n && (0, c.h)(e) ? n => {
     let {
-      className: r
-    } = t;
-    return (0, i.jsx)(E, {
-      className: r,
+      className: a
+    } = n;
+    return (0, i.jsx)(m, {
+      className: a,
       channelId: e.channel_id,
       messageId: e.id,
-      target: n
+      target: t
     })
   } : () => null
 }

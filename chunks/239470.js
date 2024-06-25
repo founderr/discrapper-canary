@@ -17,20 +17,20 @@ function r(e, t, n, r) {
     I = n.id === t.getId(),
     T = l && !u,
     h = null != E && E === (null == r ? void 0 : r.sync_id),
-    S = (null == d ? void 0 : d.party) != null && (null == r ? void 0 : null === (s = r.party) || void 0 === s ? void 0 : s.id) === d.party.id,
-    f = (null == c ? void 0 : c.userId) != null && (null == c ? void 0 : c.userId) === n.id;
+    f = (null == d ? void 0 : d.party) != null && (null == r ? void 0 : null === (s = r.party) || void 0 === s ? void 0 : s.id) === d.party.id,
+    S = (null == c ? void 0 : c.userId) != null && (null == c ? void 0 : c.userId) === n.id;
   return {
     user: n,
     activity: r,
     hasSpotifyAccount: l,
     canPlaySpotify: u,
     notPlayable: T,
-    syncingWithParty: S,
-    syncingWithUser: f,
+    syncingWithParty: f,
+    syncingWithUser: S,
     isCurrentUser: I,
     currentUserTrackId: E,
     playingSameTrack: h,
     playDisabled: I || T || h,
-    syncDisabled: I || f || S
+    syncDisabled: I || S || f
   }
 }

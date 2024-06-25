@@ -3,8 +3,8 @@ n.d(t, {
     return c
   }
 });
-var s, i, l = n(470079),
-  a = n(867176),
+var i, a, s = n(470079),
+  l = n(867176),
   r = n(527805),
   o = n(689938);
 
@@ -12,31 +12,31 @@ function c(e) {
   let {
     embeddedActivity: t,
     joinability: n,
-    currentEmbeddedActivity: s,
-    channel: i
+    currentEmbeddedActivity: i,
+    channel: a
   } = e;
-  return l.useMemo(() => (function(e) {
+  return s.useMemo(() => (function(e) {
     let {
       embeddedActivity: t,
       joinability: n,
-      currentEmbeddedActivity: s,
-      channel: i
-    } = e, l = null == t, c = {
+      currentEmbeddedActivity: i,
+      channel: a
+    } = e, s = null == t, c = {
       disabled: !1,
-      isJoinAction: !l,
-      text: l ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
+      isJoinAction: !s,
+      text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
       tooltip: void 0
-    }, u = (0, a.WS)(i, l, "EmbeddedApplicationInstanceUtils");
-    if (null != t && null != s && t.launchId === s.launchId) return {
+    }, d = (0, l.WS)(a, s, "EmbeddedApplicationInstanceUtils");
+    if (null != t && null != i && t.launchId === i.launchId) return {
       ...c,
       disabled: !0,
       text: o.Z.Messages.EMBEDDED_ACTIVITIES_JOINED,
       tooltip: o.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
     };
-    if (l) return {
+    if (s) return {
       ...c,
-      disabled: !u,
-      tooltip: u ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
+      disabled: !d,
+      tooltip: d ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
     };
     if (null != n && n !== r.Fw.CAN_JOIN) {
       let e;
@@ -75,7 +75,7 @@ function c(e) {
   })({
     embeddedActivity: t,
     joinability: n,
-    currentEmbeddedActivity: s,
-    channel: i
-  }), [t, n, s, i])
-}(s = i || (i = {}))[s.ACTIVE = 0] = "ACTIVE", s[s.ENDED = 1] = "ENDED"
+    currentEmbeddedActivity: i,
+    channel: a
+  }), [t, n, i, a])
+}(i = a || (a = {}))[i.ACTIVE = 0] = "ACTIVE", i[i.ENDED = 1] = "ENDED"

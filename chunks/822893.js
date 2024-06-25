@@ -4,10 +4,10 @@ n.d(t, {
     return I
   },
   Kp: function() {
-    return S
+    return f
   },
   Mf: function() {
-    return f
+    return S
   },
   Y_: function() {
     return h
@@ -36,7 +36,7 @@ function I(e, t) {
     skipped: !1,
     reason: "adding",
     rating: "".concat(c.Z.getMessageReminders().length)
-  }), A([{
+  }), N([{
     messageId: e.id,
     channelId: e.channel_id,
     savedAt: new Date,
@@ -73,7 +73,7 @@ function T(e, t) {
     rating: "".concat(c.Z.getMessageReminders().length)
   });
   let n = c.Z.getMessageReminders().find(t => t.messageId === e);
-  if (null != n) A([{
+  if (null != n) N([{
     ...n,
     savedAt: new Date,
     dueAt: t
@@ -92,25 +92,25 @@ function h(e, t) {
   })
 }
 
-function S(e) {
+function f(e) {
   _.default.track(E.rMx.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "complete and clear immediately",
     rating: "".concat(c.Z.getMessageReminders().length)
-  }), A([], c.Z.getMessageReminders().filter(t => t.messageId === e))
+  }), N([], c.Z.getMessageReminders().filter(t => t.messageId === e))
 }
 
-function f() {
+function S() {
   _.default.track(E.rMx.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "clearing",
     rating: "".concat(c.Z.getMessageReminders().length)
   });
   let e = c.Z.getMessageReminders();
-  e.some(e => e.complete) && A([], e.filter(e => e.complete))
+  e.some(e => e.complete) && N([], e.filter(e => e.complete))
 }
 
-function N(e) {
+function A(e) {
   _.default.track(E.rMx.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "updated_from_server",
@@ -121,7 +121,7 @@ function N(e) {
   })
 }
 
-function A(e, t) {
+function N(e, t) {
   (0 !== e.length || 0 !== t.length) && i.tn.post({
     url: E.ANM.SAVED_MESSAGES,
     body: {
@@ -129,7 +129,7 @@ function A(e, t) {
       removed: t.map(d.cu)
     }
   }).then(e => {
-    N(e.body.saved_messages.map(d.lY))
+    A(e.body.saved_messages.map(d.lY))
   })
 }
 
@@ -137,6 +137,6 @@ function m() {
   return c.Z.recentlyFetched() ? Promise.resolve() : i.tn.get({
     url: E.ANM.SAVED_MESSAGES
   }).then(e => {
-    N(e.body.saved_messages.map(d.lY))
+    A(e.body.saved_messages.map(d.lY))
   })
 }

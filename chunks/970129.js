@@ -1,5 +1,5 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   T: function() {
     return c
   },
@@ -7,35 +7,35 @@ t.d(s, {
     return d
   }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(481060),
-  r = t(496675),
-  o = t(689938);
+var s = n(735250),
+  a = n(470079),
+  i = n(442837),
+  r = n(481060),
+  l = n(496675),
+  o = n(689938);
 
-function c(e, s, t) {
-  let n = (0, l.e7)([r.Z], () => !r.Z.isRoleHigher(e, s, t), [e, s, t]);
-  return i.useMemo(() => n && t.id === (null == s ? void 0 : s.id), [n, t, s]) ? o.Z.Messages.HELP_ROLE_LOCKED_MINE : n ? o.Z.Messages.HELP_ROLE_LOCKED : null
+function c(e, t, n) {
+  let s = (0, i.e7)([l.Z], () => !l.Z.isRoleHigher(e, t, n), [e, t, n]);
+  return a.useMemo(() => s && n.id === (null == t ? void 0 : t.id), [s, n, t]) ? o.Z.Messages.HELP_ROLE_LOCKED_MINE : s ? o.Z.Messages.HELP_ROLE_LOCKED : null
 }
 
 function d(e) {
   let {
-    className: s,
-    tooltipText: t,
-    width: i = 16,
-    height: l = 16
+    className: t,
+    tooltipText: n,
+    width: a = 16,
+    height: i = 16
   } = e;
-  return (0, n.jsx)(a.Tooltip, {
-    text: t,
-    children: e => (0, n.jsx)("div", {
-      className: s,
+  return (0, s.jsx)(r.Tooltip, {
+    text: n,
+    children: e => (0, s.jsx)("div", {
+      className: t,
       ...e,
-      children: (0, n.jsx)(a.LockIcon, {
+      children: (0, s.jsx)(r.LockIcon, {
         size: "custom",
         color: "currentColor",
-        width: i,
-        height: l
+        width: a,
+        height: i
       })
     })
   })

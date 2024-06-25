@@ -35,7 +35,7 @@ function h() {
     number: 3
   })), s.default.selectVoiceChannel(null)
 }
-class S extends o.Z {
+class f extends o.Z {
   constructor(...e) {
     super(...e), E(this, "idleTimeout", new i.V7), E(this, "handleConnectionClosed", () => {
       this.idleTimeout.stop()
@@ -54,4 +54,4 @@ class S extends o.Z {
     })
   }
 }
-t.Z = new S
+t.Z = new f

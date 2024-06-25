@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   J$: function() {
-    return p
+    return R
   },
   Pz: function() {
-    return S
+    return f
   },
   fZ: function() {
     return g
@@ -27,11 +27,11 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = p(c.Yn.DEFAULT, _._s_.TRANSPORT, 0),
+let E = R(c.Yn.DEFAULT, _._s_.TRANSPORT, 0),
   I = E,
   T = {},
   h = new Map,
-  S = {
+  f = {
     availableOutgoingBitrate: !0,
     bitrate: !0,
     bitrateTarget: !0,
@@ -52,42 +52,42 @@ let E = p(c.Yn.DEFAULT, _._s_.TRANSPORT, 0),
     ping: !0
   };
 
-function f(e, t, n) {
+function S(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
-function N(e, t) {
+function A(e, t) {
   return "".concat(e, ":").concat(t)
 }
-class A {
+class N {
   static empty() {
-    return new A({})
+    return new N({})
   }
   put(e, t, n, i) {
     if ("" === i) {
       let i = {
         ...this.state
       };
-      return delete i[f(e, t, n)], new A(i)
+      return delete i[S(e, t, n)], new N(i)
     }
-    return new A({
-      [f(e, t, n)]: i,
+    return new N({
+      [S(e, t, n)]: i,
       ...this.state
     })
   }
   get(e, t, n) {
-    let i = this.state[f(e, t, n)];
+    let i = this.state[S(e, t, n)];
     return null != i ? i : null
   }
   constructor(e) {
     d(this, "state", void 0), this.state = e
   }
 }
-let m = A.empty(),
+let m = N.empty(),
   O = !1,
-  R = null;
+  p = null;
 
-function p(e, t, n) {
+function R(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
@@ -107,7 +107,7 @@ function C() {
 C();
 
 function v() {
-  null != R && (R.destroy(), R = null)
+  null != p && (p.destroy(), p = null)
 }
 class L extends(i = r.ZP.Store) {
   getSection() {
@@ -128,7 +128,7 @@ class L extends(i = r.ZP.Store) {
     return O
   }
   getSimulcastDebugOverride(e, t) {
-    let n = N(e, t);
+    let n = A(e, t);
     return h.has(n) ? h.get(n) : c.Z.NO_OVERRIDE
   }
 }
@@ -178,7 +178,7 @@ d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
           } else if ("object" == typeof o && null !== o) {
             let n = "object" == typeof t && null !== t ? t : {};
             r[s] = e(o, n, i)
-          } else if (s in S && "number" == typeof o) {
+          } else if (s in f && "number" == typeof o) {
             let e = r[s] = Array.isArray(t) ? t : [];
             e.push({
               value: o,
@@ -199,7 +199,7 @@ d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
     } = e, n = l.Z.getMediaEngine();
     if (v(), !n.supports(c.AN.CONNECTION_REPLAY) || 0 === t.length) return;
     let i = n.createReplayConnection(c.Yn.DEFAULT, t);
-    null != i && (R = i, i.on(s.Sh.Video, (e, t, n, r, s) => {
+    null != i && (p = i, i.on(s.Sh.Video, (e, t, n, r, s) => {
       o.Z.dispatch({
         type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
         mediaEngineConnectionId: i.mediaEngineConnectionId,
@@ -224,7 +224,7 @@ d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
       context: n,
       quality: i
     } = e;
-    h.set(N(t, n), i)
+    h.set(A(t, n), i)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     null != e.channelId && (C(), h.clear())

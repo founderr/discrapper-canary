@@ -7,13 +7,13 @@ n.d(t, {
     return g
   },
   Ij: function() {
-    return f
+    return S
   },
   L0: function() {
     return u
   },
   MY: function() {
-    return S
+    return f
   },
   N8: function() {
     return T
@@ -22,13 +22,13 @@ n.d(t, {
     return C
   },
   SW: function() {
-    return p
+    return R
   },
   Uo: function() {
     return h
   },
   WV: function() {
-    return R
+    return p
   },
   X_: function() {
     return c
@@ -49,13 +49,13 @@ n.d(t, {
     return m
   },
   sX: function() {
-    return A
+    return N
   },
   u: function() {
     return o
   },
   ut: function() {
-    return N
+    return A
   },
   vJ: function() {
     return l
@@ -75,14 +75,14 @@ let l = 568,
   I = 960,
   T = 2400,
   h = 600,
-  S = 17 / 6,
-  f = 16 / 9,
-  N = 2.5,
-  A = 4,
+  f = 17 / 6,
+  S = 16 / 9,
+  A = 2.5,
+  N = 4,
   m = 568 / (17 / 6),
   O = 568 / (16 / 9),
-  R = 227.2,
-  p = 142,
+  p = 227.2,
+  R = 142,
   g = a.HE.width / a.HE.height,
   C = l / g;
 (r = o || (o = {}))[r.CROP_GIF_START = 0] = "CROP_GIF_START", r[r.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", r[r.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"

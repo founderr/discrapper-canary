@@ -14,9 +14,9 @@ let u = s().defaultRules.lheading,
   I = s().defaultRules.blockQuote,
   T = s().defaultRules.paragraph,
   h = /\{(.+?)}/,
-  S = /^\$(\w+?)\$/;
+  f = /^\$(\w+?)\$/;
 i = n(235375);
-let f = e => {
+let S = e => {
     let {
       transformUpperCase: t = !1
     } = e;
@@ -30,7 +30,7 @@ let f = e => {
       }
     }
   },
-  N = e => ({
+  A = e => ({
     ...i.baseRules,
     image: {
       ...d,
@@ -46,7 +46,7 @@ let f = e => {
     },
     interpolation: {
       order: l.ZP.order,
-      match: e => S.exec(e),
+      match: e => f.exec(e),
       parse(e, t, n) {
         let i = n.interpolations[e[1]];
         return null == i ? {
@@ -61,7 +61,7 @@ let f = e => {
     },
     lheading: {
       ...u,
-      parse: f({
+      parse: S({
         transformUpperCase: !0
       }),
       ..."function" == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading
@@ -79,17 +79,17 @@ let f = e => {
       ..."function" == typeof i.customRules.paragraph ? i.customRules.paragraph(e) : i.customRules.paragraph
     }
   }),
-  A = e => ({
+  N = e => ({
     lheading: {
       ...u,
-      parse: f({
+      parse: S({
         transformUpperCase: !1
       }),
       ..."function" == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading
     }
   }),
   m = e => ({
-    ...N(e),
+    ...A(e),
     newline: {
       ...s().defaultRules.newline
     },
@@ -99,11 +99,11 @@ let f = e => {
   });
 t.Z = {
   getDefaultRules: e => ({
-    ...N(e)
+    ...A(e)
   }),
   getSpecialRules: e => ({
-    ...N(e),
-    ...A(e)
+    ...A(e),
+    ...N(e)
   }),
   getMessageRules: e => ({
     ...m(e)

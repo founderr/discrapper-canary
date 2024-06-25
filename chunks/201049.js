@@ -1,97 +1,97 @@
-l.r(n), l.d(n, {
+o.r(n), o.d(n, {
   default: function() {
-    return x
+    return _
   }
-}), l(47120);
-var o = l(735250),
-  a = l(470079),
-  t = l(442837),
-  i = l(481060),
-  s = l(596454),
-  d = l(907040),
-  u = l(339085),
-  r = l(984933),
-  c = l(401227),
-  m = l(153124),
-  j = l(883429),
-  C = l(981631),
-  h = l(185923),
-  v = l(689938),
-  E = l(568505);
+}), o(47120);
+var l = o(735250),
+  t = o(470079),
+  a = o(442837),
+  i = o(481060),
+  s = o(596454),
+  u = o(907040),
+  d = o(339085),
+  r = o(984933),
+  c = o(401227),
+  m = o(153124),
+  j = o(883429),
+  C = o(981631),
+  h = o(185923),
+  v = o(689938),
+  x = o(568505);
 
-function x(e) {
+function _(e) {
   var n;
   let {
-    transitionState: l,
-    onClose: x,
-    channelId: N,
-    guildId: g,
-    tag: T
-  } = e, p = (0, m.Dt)(), M = null != T, [R, _] = a.useState(null !== (n = null == T ? void 0 : T.name) && void 0 !== n ? n : ""), [k, I] = a.useState(null != T ? {
-    id: T.emojiId,
-    name: T.emojiName
-  } : null), [A, Z] = a.useState(null == T ? void 0 : T.moderated), B = (0, t.e7)([u.Z], () => (null == k ? void 0 : k.id) != null ? u.Z.getUsableCustomEmojiById(k.id) : null), O = (null == T ? void 0 : T.name) !== R || (null == T ? void 0 : T.emojiId) !== (null == k ? void 0 : k.id) || (null == T ? void 0 : T.emojiName) !== (null == k ? void 0 : k.name) || A !== (null == T ? void 0 : T.moderated), b = () => {
-    if (null != R && O) {
-      if (M) {
+    transitionState: o,
+    onClose: _,
+    channelId: E,
+    guildId: b,
+    tag: p
+  } = e, N = (0, m.Dt)(), g = null != p, [T, M] = t.useState(null !== (n = null == p ? void 0 : p.name) && void 0 !== n ? n : ""), [B, R] = t.useState(null != p ? {
+    id: p.emojiId,
+    name: p.emojiName
+  } : null), [k, I] = t.useState(null == p ? void 0 : p.moderated), A = (0, a.e7)([d.Z], () => (null == B ? void 0 : B.id) != null ? d.Z.getUsableCustomEmojiById(B.id) : null), f = (null == p ? void 0 : p.name) !== T || (null == p ? void 0 : p.emojiId) !== (null == B ? void 0 : B.id) || (null == p ? void 0 : p.emojiName) !== (null == B ? void 0 : B.name) || k !== (null == p ? void 0 : p.moderated), Z = () => {
+    if (null != T && f) {
+      if (g) {
         j.Z.updateForumTag({
-          id: T.id,
-          name: R,
-          emojiId: null == k ? void 0 : k.id,
-          emojiName: null == k ? void 0 : k.name,
-          moderated: A
-        }, N), x();
+          id: p.id,
+          name: T,
+          emojiId: null == B ? void 0 : B.id,
+          emojiName: null == B ? void 0 : B.name,
+          moderated: k
+        }, E), _();
         return
       }
       j.Z.createForumTag({
-        name: R,
-        emojiId: null == k ? void 0 : k.id,
-        emojiName: null == k ? void 0 : k.name,
-        moderated: A
-      }, N), x()
+        name: T,
+        emojiId: null == B ? void 0 : B.id,
+        emojiName: null == B ? void 0 : B.name,
+        moderated: k
+      }, E), _()
     }
-  }, f = e => {
-    null != e && I(null != e.id ? {
+  }, O = e => {
+    null != e && R(null != e.id ? {
       id: e.id,
       name: e.name
     } : {
       id: void 0,
       name: e.optionallyDiverseSequence
     })
-  }, D = a.useCallback(e => _(e), []), F = a.createRef();
-  return a.useEffect(() => {
+  }, D = t.useCallback(e => M(e), []), F = t.createRef();
+  return t.useEffect(() => {
     null != F.current && F.current.focus()
-  }, []), (0, o.jsxs)(i.ModalRoot, {
-    transitionState: l,
-    "aria-labelledby": p,
-    children: [(0, o.jsx)(i.ModalHeader, {
+  }, []), (0, l.jsxs)(i.ModalRoot, {
+    transitionState: o,
+    "aria-labelledby": N,
+    children: [(0, l.jsx)(i.ModalHeader, {
       separator: !1,
-      children: (0, o.jsx)(i.Heading, {
+      children: (0, l.jsx)(i.Heading, {
         variant: "heading-md/semibold",
-        children: M ? v.Z.Messages.FORUM_TAG_EDIT : v.Z.Messages.FORUM_TAG_CREATE
+        children: g ? v.Z.Messages.FORUM_TAG_EDIT : v.Z.Messages.FORUM_TAG_CREATE
       })
-    }), (0, o.jsxs)("div", {
-      className: E.content,
-      children: [(0, o.jsx)(i.Text, {
+    }), (0, l.jsxs)("div", {
+      className: x.content,
+      children: [(0, l.jsx)(i.Text, {
         variant: "text-sm/normal",
         children: v.Z.Messages.FORUM_TAG_CREATE_DESCRIPTION
-      }), (0, o.jsxs)("div", {
-        className: E.inputContainer,
-        children: [(0, o.jsx)("div", {
-          className: E.emojiButtonContainer,
-          children: (0, o.jsx)(i.Popout, {
+      }), (0, l.jsxs)("div", {
+        className: x.inputContainer,
+        children: [(0, l.jsx)("div", {
+          className: x.emojiButtonContainer,
+          children: (0, l.jsx)(i.Popout, {
             renderPopout: e => {
               let {
                 closePopout: n
-              } = e, l = r.ZP.getDefaultChannel(g);
-              return (0, o.jsx)(d.Z, {
-                guildId: g,
+              } = e, o = r.ZP.getDefaultChannel(b);
+              return (0, l.jsx)(u.Z, {
+                guildId: b,
                 closePopout: n,
-                onSelectEmoji: (e, l) => {
-                  f(e), l && n()
+                onSelectEmoji: (e, o) => {
+                  O(e), o && n()
                 },
                 pickerIntention: h.Hz.COMMUNITY_CONTENT,
-                onNavigateAway: x,
-                channel: l
+                onNavigateAway: _,
+                channel: o
               })
             },
             position: "left",
@@ -99,83 +99,83 @@ function x(e) {
             align: "bottom",
             children: (e, n) => {
               let {
-                isShown: l
+                isShown: o
               } = n;
-              return (0, o.jsx)(c.Z, {
+              return (0, l.jsx)(c.Z, {
                 ...e,
                 onClick: n => {
-                  var l;
-                  null === (l = e.onClick) || void 0 === l || l.call(e, n)
+                  var o;
+                  null === (o = e.onClick) || void 0 === o || o.call(e, n)
                 },
-                active: l,
-                className: E.emojiButton,
+                active: o,
+                className: x.emojiButton,
                 tabIndex: 0,
-                renderButtonContents: null != k && (null != k.id || null != k.name) ? () => (0, o.jsx)(s.Z, {
-                  className: E.emoji,
-                  emojiId: k.id,
-                  emojiName: k.name,
-                  animated: !!(null == B ? void 0 : B.animated)
+                renderButtonContents: null != B && (null != B.id || null != B.name) ? () => (0, l.jsx)(s.Z, {
+                  className: x.emoji,
+                  emojiId: B.id,
+                  emojiName: B.name,
+                  animated: !!(null == A ? void 0 : A.animated)
                 }) : null
               })
             }
           })
-        }), (0, o.jsx)(i.TextInput, {
+        }), (0, l.jsx)(i.TextInput, {
           inputRef: F,
           maxLength: 20,
-          value: R,
-          inputClassName: E.input,
+          value: T,
+          inputClassName: x.input,
           placeholder: v.Z.Messages.FORUM_TAG_CREATE_PLACEHOLDER,
           onChange: D,
           autoFocus: !0,
           onKeyDown: e => {
-            e.keyCode === C.yXg.ENTER && R.length > 0 && (R.length > 0 && b(), e.preventDefault())
+            e.keyCode === C.yXg.ENTER && T.length > 0 && (T.length > 0 && Z(), e.preventDefault())
           }
-        }), R.length > 0 || null != k ? (0, o.jsx)(i.Button, {
+        }), T.length > 0 || null != B ? (0, l.jsx)(i.Button, {
           "aria-label": v.Z.Messages.FORUM_TAG_EDIT_RESET_LABEL,
-          className: E.clearButton,
+          className: x.clearButton,
           onClick: () => {
-            _(""), I(null)
+            M(""), R(null)
           },
           look: i.Button.Looks.BLANK,
           size: i.Button.Sizes.NONE,
-          children: (0, o.jsx)(i.CircleXIcon, {
+          children: (0, l.jsx)(i.CircleXIcon, {
             size: "md",
             color: "currentColor",
-            className: E.clearIcon
+            className: x.clearIcon
           })
         }) : null]
       })]
-    }), (0, o.jsx)(i.Checkbox, {
+    }), (0, l.jsx)(i.Checkbox, {
       type: i.Checkbox.Types.INVERTED,
       size: 18,
-      value: null != A && A,
-      onChange: (e, n) => Z(n || (null == T ? void 0 : T.moderated) == null && void 0),
-      className: E.moderatedCheckbox,
-      children: (0, o.jsx)(i.Text, {
+      value: null != k && k,
+      onChange: (e, n) => I(n || (null == p ? void 0 : p.moderated) == null && void 0),
+      className: x.moderatedCheckbox,
+      children: (0, l.jsx)(i.Text, {
         variant: "text-sm/normal",
         children: v.Z.Messages.FORUM_MODERATED_TAG_CHECKBOX
       })
-    }), (0, o.jsxs)(i.ModalFooter, {
-      className: E.footer,
-      children: [(0, o.jsxs)("div", {
-        className: E.buttons,
-        children: [(0, o.jsx)(i.Button, {
+    }), (0, l.jsxs)(i.ModalFooter, {
+      className: x.footer,
+      children: [(0, l.jsxs)("div", {
+        className: x.buttons,
+        children: [(0, l.jsx)(i.Button, {
           color: i.Button.Colors.PRIMARY,
           onClick: () => {
-            x()
+            _()
           },
           children: v.Z.Messages.CANCEL
-        }), (0, o.jsx)(i.Button, {
-          onClick: b,
-          disabled: 0 === R.length || !O,
+        }), (0, l.jsx)(i.Button, {
+          onClick: Z,
+          disabled: 0 === T.length || !f,
           autoFocus: !0,
           children: v.Z.Messages.SAVE
         })]
-      }), M && (0, o.jsx)(i.Button, {
+      }), g && (0, l.jsx)(i.Button, {
         color: i.Button.Colors.RED,
         look: i.Button.Looks.LINK,
         onClick: () => {
-          M && (j.Z.deleteForumTag(N, T.id), x())
+          g && (j.Z.deleteForumTag(E, p.id), _())
         },
         children: v.Z.Messages.FORUM_TAG_REMOVE
       })]

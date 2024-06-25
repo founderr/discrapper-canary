@@ -33,7 +33,7 @@ function c(e) {
     }, [d, n]), r.useEffect(() => {
       if (!!h.current) null == I ? null != c && d(null) : !I.channels.some(e => e.id === c) && d(null)
     }, [I, d, c, n]), null == n) return null;
-  let S = null == I || I.guildId !== n ? [] : (null !== (t = null == I ? void 0 : I.channels) && void 0 !== t ? t : []).map(e => ({
+  let f = null == I || I.guildId !== n ? [] : (null !== (t = null == I ? void 0 : I.channels) && void 0 !== t ? t : []).map(e => ({
     value: e.id,
     label: e.name
   }));
@@ -52,7 +52,7 @@ function c(e) {
       maxVisibleItems: 5,
       select: d,
       placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
-      options: S,
+      options: f,
       isSelected: e => e === c,
       serialize: e => e,
       renderOptionLabel: e => (0, i.jsx)(o.x, {

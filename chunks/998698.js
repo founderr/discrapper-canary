@@ -60,7 +60,7 @@ function h(e) {
   return r !== s.preferredCommandId && (null !== s.preferredCommandId || r !== (null !== (n = null === (t = s.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && (s.activeCommand = null, s.activeOptionName = null, s.preferredCommandId = r, s.optionStates = {}, !0)
 }
 
-function S(e) {
+function f(e) {
   let {
     channelId: t,
     changedOptionStates: n
@@ -95,7 +95,7 @@ function S(e) {
   }
   return i.optionStates = r, !0
 }
-class f extends(i = a.ZP.Store) {
+class S extends(i = a.ZP.Store) {
   initialize() {
     u.ZP.addChangeListener(() => {
       let e = _.Z.getChannelId();
@@ -140,19 +140,19 @@ class f extends(i = a.ZP.Store) {
     }
   }
 }
-o = "ApplicationCommandStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
+o = "ApplicationCommandStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let N = new f(l.Z, {
+let A = new S(l.Z, {
   CONNECTION_OPEN: E,
   CHANNEL_SELECT: E,
   LOGOUT: E,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: T,
   APPLICATION_COMMAND_SET_PREFERRED_COMMAND: h,
-  APPLICATION_COMMAND_UPDATE_OPTIONS: S,
+  APPLICATION_COMMAND_UPDATE_OPTIONS: f,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
     let {
       channelId: t,
@@ -171,7 +171,7 @@ let N = new f(l.Z, {
       type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
       channelId: t,
       commandId: n
-    }), u = S({
+    }), u = f({
       type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
       channelId: t,
       changedOptionStates: o
@@ -179,4 +179,4 @@ let N = new f(l.Z, {
     return a || l || u
   }
 });
-t.Z = N
+t.Z = A

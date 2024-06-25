@@ -1,7 +1,7 @@
 "use strict";
 var i = n(735250),
   s = n(470079);
-class l extends s.PureComponent {
+class a extends s.PureComponent {
   render() {
     let {
       layout: e,
@@ -19,4 +19,4 @@ class l extends s.PureComponent {
     }) : null
   }
 }
-t.Z = l
+t.Z = a

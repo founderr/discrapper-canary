@@ -3,9 +3,9 @@ n.d(t, {
     return a
   }
 });
-var s = n(818083),
-  o = n(977156);
-let r = (0, s.B)({
+var o = n(818083),
+  s = n(977156);
+let r = (0, o.B)({
     id: "2024-03_quest_bar_progress_cta",
     kind: "user",
     label: "Quest Bar Progress CTA",
@@ -30,7 +30,7 @@ let r = (0, s.B)({
     let {
       location: t,
       autoTrackExposure: n = !1
-    } = e, s = (0, o.Zy)({
+    } = e, o = (0, s.Zy)({
       location: t
     }), {
       enabled: a
@@ -39,5 +39,5 @@ let r = (0, s.B)({
     }, {
       autoTrackExposure: n
     });
-    return s && a
+    return o && a
   }

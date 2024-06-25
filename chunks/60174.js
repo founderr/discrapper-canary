@@ -1,34 +1,34 @@
 n.d(t, {
   X: function() {
-    return x
+    return M
   }
 }), n(789020), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  l = n.n(s),
   r = n(954955),
   o = n.n(r),
   c = n(507274),
-  u = n(481060),
-  d = n(130402),
-  E = n(466794),
-  _ = n(659215),
+  d = n(481060),
+  u = n(130402),
+  _ = n(466794),
+  E = n(659215),
   I = n(222677),
-  T = n(995774),
-  m = n(931651),
-  N = n(594174),
-  h = n(630388),
-  C = n(74538),
-  S = n(566006),
-  A = n(981631),
+  m = n(995774),
+  T = n(931651),
+  h = n(594174),
+  N = n(630388),
+  f = n(74538),
+  p = n(566006),
+  C = n(981631),
   g = n(185923),
-  p = n(474936),
-  f = n(689938),
+  S = n(474936),
+  A = n(689938),
   R = n(704963),
-  O = n(667671);
+  x = n(667671);
 
-function M(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -36,126 +36,126 @@ function M(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class x extends i.Component {
+class M extends a.Component {
   render() {
     let {
       type: e,
       message: t,
       className: n,
-      children: i,
-      useChatFontScaling: l
+      children: a,
+      useChatFontScaling: s
     } = this.props, {
       isReactionPickerActive: r
-    } = this.state, o = t.state === A.yb.SENDING, c = e === S.O.BURST;
-    if (o || (0, h.yE)(t.flags, A.iLy.EPHEMERAL)) return null;
-    let _ = N.default.getCurrentUser(),
-      I = (0, C.I5)(_),
-      T = c ? f.Z.Messages.ADD_BURST_REACTION : f.Z.Messages.ADD_REACTION;
-    !I && c && (T = (0, s.jsx)(E.X, {
-      tooltipText: f.Z.Messages.ADD_BURST_REACTION
+    } = this.state, o = t.state === C.yb.SENDING, c = e === p.O.BURST;
+    if (o || (0, N.yE)(t.flags, C.iLy.EPHEMERAL)) return null;
+    let E = h.default.getCurrentUser(),
+      I = (0, f.I5)(E),
+      m = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
+    !I && c && (m = (0, i.jsx)(_.X, {
+      tooltipText: A.Z.Messages.ADD_BURST_REACTION
     }));
-    let m = l ? O : R;
-    return (0, s.jsx)(u.Popout, {
+    let T = s ? x : R;
+    return (0, i.jsx)(d.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,
       renderPopout: this.renderReactionPopout,
       position: "right",
       children: (e, t) => {
         let {
-          isShown: l
+          isShown: s
         } = t;
-        return (0, s.jsx)(u.TooltipContainer, {
-          text: T,
-          color: u.TooltipColors.PRIMARY,
-          "aria-label": c ? f.Z.Messages.ADD_BURST_REACTION : f.Z.Messages.ADD_REACTION,
-          tooltipClassName: m.__invalid_addReactionTooltip,
-          children: (0, s.jsxs)(u.Clickable, {
+        return (0, i.jsx)(d.TooltipContainer, {
+          text: m,
+          color: d.TooltipColors.PRIMARY,
+          "aria-label": c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION,
+          tooltipClassName: T.__invalid_addReactionTooltip,
+          children: (0, i.jsxs)(d.Clickable, {
             ...e,
             onClick: e => {
               this.handleAddReactionClick(e)
             },
-            onMouseEnter: () => (0, d.x)(g.qR.AddReactionPopoutMouseEntered),
-            onFocus: () => (0, d.x)(g.qR.AddReactionPopoutFocused),
-            className: a()(m.reactionBtn, {
-              [m.active]: l
+            onMouseEnter: () => (0, u.x)(g.qR.AddReactionPopoutMouseEntered),
+            onFocus: () => (0, u.x)(g.qR.AddReactionPopoutFocused),
+            className: l()(T.reactionBtn, {
+              [T.active]: s
             }, n),
-            children: [c ? (0, s.jsx)(s.Fragment, {
-              children: (0, s.jsx)(u.SuperReactionIcon, {
+            children: [c ? (0, i.jsx)(i.Fragment, {
+              children: (0, i.jsx)(d.SuperReactionIcon, {
                 size: "sm",
                 color: "currentColor",
-                className: m.icon
+                className: T.icon
               })
-            }) : (0, s.jsx)(s.Fragment, {
-              children: (0, s.jsx)(u.ReactionIcon, {
+            }) : (0, i.jsx)(i.Fragment, {
+              children: (0, i.jsx)(d.ReactionIcon, {
                 size: "sm",
                 color: "currentColor",
-                className: m.icon
+                className: T.icon
               })
-            }), i]
+            }), a]
           })
         })
       }
     })
   }
   constructor(...e) {
-    super(...e), M(this, "state", {
+    super(...e), O(this, "state", {
       isReactionPickerActive: !1
-    }), M(this, "onAddReaction", (e, t) => {
+    }), O(this, "onAddReaction", (e, t) => {
       if (null == e) return;
       let {
         channel: n,
-        message: s,
-        isForumToolbar: i
+        message: i,
+        isForumToolbar: a
       } = this.props;
-      (0, I.rU)(n.id, s.id, (0, T.g1)(e), i ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE, {
+      (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE, {
         burst: t
       })
-    }), M(this, "handleReactionPickerToggle", () => {
+    }), O(this, "handleReactionPickerToggle", () => {
       this.setState(e => ({
         isReactionPickerActive: !e.isReactionPickerActive
       }))
-    }), M(this, "handleAddReactionClick", e => {
+    }), O(this, "handleAddReactionClick", e => {
       let {
         type: t,
         channel: n
       } = this.props;
       e.stopPropagation();
-      let s = N.default.getCurrentUser();
-      t === S.O.BURST && !(0, C.I5)(s) && (0, _.openBurstReactionsUpsellModal)({
+      let i = h.default.getCurrentUser();
+      t === p.O.BURST && !(0, f.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
         analytics: {
-          type: p.cd.BURST_REACTION_UPSELL,
-          page: null != n.getGuildId() ? A.ZY5.GUILD_CHANNEL : A.ZY5.DM_CHANNEL,
-          section: (0, T.s4)(n),
-          object: A.qAy.INLINE_REACTION_PICKER_UPSELL
+          type: S.cd.BURST_REACTION_UPSELL,
+          page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+          section: (0, m.s4)(n),
+          object: C.qAy.INLINE_REACTION_PICKER_UPSELL
         }
       }), this.handleReactionPickerToggle()
-    }), M(this, "renderReactionPopout", e => {
+    }), O(this, "renderReactionPopout", e => {
       let {
         closePopout: t
       } = e, {
         type: n,
-        channel: i,
-        message: l
-      } = this.props, a = {
+        channel: a,
+        message: s
+      } = this.props, l = {
         openPopoutType: "message_reaction_emoji_picker",
-        ...n === S.O.BURST && {
+        ...n === p.O.BURST && {
           openPopoutType: "message_super_reaction_emoji_picker",
-          page: null != i.getGuildId() ? A.ZY5.GUILD_CHANNEL : A.ZY5.DM_CHANNEL,
-          section: (0, T.s4)(i),
-          object: A.qAy.REACTION_RAIL
+          page: null != a.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
+          section: (0, m.s4)(a),
+          object: C.qAy.REACTION_RAIL
         }
-      }, r = (0, s.jsx)(m.$, {
+      }, r = (0, i.jsx)(T.$, {
         closePopout: t,
-        channel: i,
-        onSelectEmoji: (e, n, s) => {
-          this.onAddReaction(e, s), n && (s ? o()(t, 150)() : t())
+        channel: a,
+        onSelectEmoji: (e, n, i) => {
+          this.onAddReaction(e, i), n && (i ? o()(t, 150)() : t())
         },
-        analyticsOverride: a,
-        messageId: l.id
+        analyticsOverride: l,
+        messageId: s.id
       });
-      return (0, s.jsx)(c.M.Consumer, {
-        children: e => e ? (0, s.jsx)(u.Dialog, {
-          "aria-label": f.Z.Messages.REACTION_PICKER,
+      return (0, i.jsx)(c.M.Consumer, {
+        children: e => e ? (0, i.jsx)(d.Dialog, {
+          "aria-label": A.Z.Messages.REACTION_PICKER,
           children: r
         }) : r
       })

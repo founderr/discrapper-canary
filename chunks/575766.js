@@ -1,13 +1,13 @@
-l.d(n, {
+t.d(n, {
   n: function() {
-    return i
+    return o
   }
 });
-var t = l(470079),
-  s = l(941028);
+var l = t(470079),
+  s = t(941028);
 
-function i(e) {
-  t.useEffect(() => (s.k$(e), () => {
+function o(e) {
+  l.useEffect(() => (s.k$(e), () => {
     s.kr(e)
   }), [e])
 }

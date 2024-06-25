@@ -1,19 +1,19 @@
-l.d(n, {
+t.d(u, {
   Z: function() {
-    return s
+    return r
   }
 });
-var t = l(442837),
-  i = l(241155),
-  r = l(430824);
+var e = t(442837),
+  c = t(241155),
+  i = t(430824);
 
-function s(e, n) {
-  return (0, t.cj)([r.Z, i.Z], () => {
-    let l = r.Z.getGuild(e),
-      t = null != l;
-    return null == l && null != n && (l = i.Z.getCachedGuildByEventId(n)), {
-      isMember: t,
-      guild: l
+function r(n, u) {
+  return (0, e.cj)([i.Z, c.Z], () => {
+    let t = i.Z.getGuild(n),
+      e = null != t;
+    return null == t && null != u && (t = c.Z.getCachedGuildByEventId(u)), {
+      isMember: e,
+      guild: t
     }
-  }, [e, n])
+  }, [n, u])
 }

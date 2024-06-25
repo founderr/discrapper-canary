@@ -4,10 +4,10 @@ n.d(t, {
   }
 });
 var s = n(287734),
-  a = n(592125),
-  r = n(894257);
+  r = n(592125),
+  a = n(894257);
 
 function o() {
-  let e = a.Z.getDMFromUserId(r.I);
+  let e = r.Z.getDMFromUserId(a.I);
   null != e && s.default.selectPrivateChannel(e)
 }

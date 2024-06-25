@@ -1,44 +1,44 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
     return r
   }
 });
-var l = t(735250);
-t(470079);
-var n = t(481060),
-  i = t(285952),
-  a = t(785102);
+var n = s(735250);
+s(470079);
+var l = s(481060),
+  a = s(285952),
+  i = s(785102);
 
 function r(e) {
   let {
-    description: s,
-    icon: t,
+    description: t,
+    icon: s,
     id: r,
     label: o,
     onChange: d,
     value: c
   } = e;
-  return (0, l.jsxs)("div", {
-    className: a.cardContent,
-    children: [(0, l.jsxs)(i.Z, {
-      justify: i.Z.Justify.BETWEEN,
-      align: i.Z.Align.CENTER,
-      children: [t, (0, l.jsx)(i.Z.Child, {
+  return (0, n.jsxs)("div", {
+    className: i.cardContent,
+    children: [(0, n.jsxs)(a.Z, {
+      justify: a.Z.Justify.BETWEEN,
+      align: a.Z.Align.CENTER,
+      children: [s, (0, n.jsx)(a.Z.Child, {
         grow: 1,
-        children: (0, l.jsx)(n.Text, {
+        children: (0, n.jsx)(l.Text, {
           variant: "text-md/semibold",
           children: o
         })
-      }), null != d && null != c ? (0, l.jsx)(n.Switch, {
+      }), null != d && null != c ? (0, n.jsx)(l.Switch, {
         id: r,
         checked: c,
         onChange: d
       }) : null]
-    }), (0, l.jsx)(n.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-xs/normal",
       color: "text-normal",
-      className: a.cardDescription,
-      children: s
+      className: i.cardDescription,
+      children: t
     })]
   })
 }

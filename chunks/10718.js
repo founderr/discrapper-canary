@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Hf: function() {
-    return S
+    return f
   },
   JT: function() {
-    return N
+    return A
   },
   Nk: function() {
     return T
@@ -19,10 +19,10 @@ n.d(t, {
     return I
   },
   YZ: function() {
-    return A
+    return N
   },
   wi: function() {
-    return f
+    return S
   }
 }), n(47120), n(653041), n(724458);
 var i = n(470079),
@@ -81,13 +81,13 @@ function h(e, t, n) {
   }
 }
 
-function S(e) {
+function f(e) {
   let t = l.ZP.getUserState(),
     n = l.ZP.getContextState(e);
   return [null == t ? void 0 : t.result, null == n ? void 0 : n.result]
 }
 
-function f(e, t, n) {
+function S(e, t, n) {
   let o = (0, r.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
     {
       descriptors: u,
@@ -99,23 +99,23 @@ function f(e, t, n) {
       allowFetch: !0
     }),
     [T, h] = i.useState(null),
-    S = i.useRef(!1);
-  S.current = I;
-  let f = i.useMemo(() => {
+    f = i.useRef(!1);
+  f.current = I;
+  let S = i.useMemo(() => {
     let e = [];
     if (null != n.placeholderCount)
-      for (let i = 0; i < n.placeholderCount; i++) e.push(R(i, t.commandType));
+      for (let i = 0; i < n.placeholderCount; i++) e.push(p(i, t.commandType));
     return e
   }, [t.commandType, n.placeholderCount]);
   return i.useMemo(() => {
     let e = {
-      loading: S,
+      loading: f,
       commands: _,
       activeSections: u,
       commandsByActiveSection: c,
       filteredSectionId: T,
       hasMoreAfter: !1,
-      placeholders: I ? f : [],
+      placeholders: I ? S : [],
       sectionDescriptors: u,
       filterSection: e => {
         h(e)
@@ -130,36 +130,36 @@ function f(e, t, n) {
       let t = c[0];
       if (null != t) e.commandsByActiveSection = [{
         section: t.section,
-        data: [...t.data, ...f]
+        data: [...t.data, ...S]
       }, ...c.slice(1)];
       else {
         let t = a.Tm[d.bi.BUILT_IN];
         e.activeSections = [t], e.commandsByActiveSection = [{
           section: t,
-          data: f
+          data: S
         }]
       }
-      e.commands = [..._, ...f]
+      e.commands = [..._, ...S]
     }
     return e
-  }, [_, u, T, c, I, f])
+  }, [_, u, T, c, I, S])
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let {
     descriptors: i,
     commands: r,
     loading: s
   } = l.ZP.query(e, t, n), o = [];
   if (null != n.placeholderCount && s)
-    for (let e = 0; e < n.placeholderCount; e++) o.push(R(e, t.commandType));
+    for (let e = 0; e < n.placeholderCount; e++) o.push(p(e, t.commandType));
   return {
     commands: s ? [...r, ...o] : r,
     sections: s && 0 === i.length ? [a.Tm[d.bi.BUILT_IN]] : i
   }
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = (0, l.PL)(!0, !0),
     r = (0, l.em)(e, !0, !0);
   return i.useMemo(() => {
@@ -203,7 +203,7 @@ let O = {
   name: ""
 };
 
-function R(e, t) {
+function p(e, t) {
   return {
     type: t,
     inputType: _.iw.PLACEHOLDER,

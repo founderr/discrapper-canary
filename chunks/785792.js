@@ -1,6 +1,6 @@
 t.d(n, {
   b: function() {
-    return a
+    return c
   }
 });
 var r = t(735250),
@@ -10,16 +10,16 @@ var r = t(735250),
   s = t(481060),
   i = t(727857);
 
-function a(e) {
+function c(e) {
   let {
     chunks: n,
     columns: t,
     className: u
-  } = e, a = o.useMemo(() => ({
+  } = e, c = o.useMemo(() => ({
     "--secure-frames-columns": t
   }), [t]);
   return (0, r.jsx)("div", {
-    style: a,
+    style: c,
     className: l()(i.code, u),
     children: n.map((e, n) => (0, r.jsx)("div", {
       className: l()(i.chunk, {

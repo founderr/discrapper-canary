@@ -1,92 +1,92 @@
 n.d(t, {
   Z: function() {
-    return _
+    return h
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(990547),
-  l = n(481060),
-  a = n(230711),
-  r = n(960359),
+var s = n(990547),
+  a = n(481060),
+  r = n(230711),
+  l = n(960359),
   o = n(730417),
   c = n(981631),
-  u = n(921944),
-  d = n(689938),
-  E = n(849158);
-let h = (e, t) => ({
-  header: d.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
+  d = n(921944),
+  u = n(689938),
+  _ = n(849158);
+let E = (e, t) => ({
+  header: u.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
     gameName: e.title
   }),
   body: e.messages.enrollmentTooltip(t),
   imgSrc: e.assets.tooltipSrc,
-  imgStyle: E.defaultDropImage
+  imgStyle: _.defaultDropImage
 });
 
-function _(e) {
+function h(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
-  (0, o.hs)(n, i.ImpressionTypes.POPOUT, i.ImpressionNames.DROPS_QUEST_ENROLLMENT);
-  let _ = (0, o.au)(n);
-  if (null == _) return null;
+  (0, o.hs)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_ENROLLMENT);
+  let h = (0, o.au)(n);
+  if (null == h) return null;
   let {
     header: I,
     body: m,
-    imgSrc: T,
+    imgSrc: p,
     imgStyle: g
-  } = h(_.drop, _.config.streamLengthRequirement), p = () => {
-    t(u.L.DISMISS)
+  } = E(h.drop, h.config.streamLengthRequirement), T = () => {
+    t(d.L.DISMISS)
   };
-  return (0, s.jsxs)("div", {
-    className: E.container,
-    children: [(0, s.jsx)("img", {
-      src: T,
+  return (0, i.jsxs)("div", {
+    className: _.container,
+    children: [(0, i.jsx)("img", {
+      src: p,
       alt: "",
       className: g
-    }), (0, s.jsx)(l.Clickable, {
-      className: E.__invalid_buttonClose,
-      "aria-label": d.Z.Messages.CLOSE,
-      onClick: p,
-      children: (0, s.jsx)(l.CloseSmallIcon, {
+    }), (0, i.jsx)(a.Clickable, {
+      className: _.__invalid_buttonClose,
+      "aria-label": u.Z.Messages.CLOSE,
+      onClick: T,
+      children: (0, i.jsx)(a.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
-        className: E.closeIcon
+        className: _.closeIcon
       })
-    }), (0, s.jsx)(l.Heading, {
-      className: E.title,
+    }), (0, i.jsx)(a.Heading, {
+      className: _.title,
       variant: "heading-md/extrabold",
       children: I
-    }), (0, s.jsx)(l.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-sm/medium",
-      className: E.subTitle,
+      className: _.subTitle,
       children: m
-    }), _.config.autoEnrollment ? (0, s.jsx)(l.Button, {
-      color: l.Button.Colors.BRAND_INVERTED,
+    }), h.config.autoEnrollment ? (0, i.jsx)(a.Button, {
+      color: a.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        a.Z.open(c.oAB.INVENTORY), t(u.L.PRIMARY)
+        r.Z.open(c.oAB.INVENTORY), t(d.L.PRIMARY)
       },
-      children: d.Z.Messages.LEARN_MORE
-    }) : (0, s.jsx)(l.Button, {
-      innerClassName: E.button,
-      color: l.Button.Colors.BRAND_INVERTED,
+      children: u.Z.Messages.LEARN_MORE
+    }) : (0, i.jsx)(a.Button, {
+      innerClassName: _.button,
+      color: a.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        (0, r.RJ)(_.drop.dropsQuestId), a.Z.open(c.oAB.INVENTORY), t(u.L.PRIMARY)
+        (0, l.RJ)(h.drop.dropsQuestId), r.Z.open(c.oAB.INVENTORY), t(d.L.PRIMARY)
       },
-      children: d.Z.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
-    }), (0, s.jsx)(l.Button, {
-      className: E.linkButtonContainer,
-      innerClassName: E.linkButton,
-      onClick: p,
-      look: l.Button.Looks.LINK,
+      children: u.Z.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
+    }), (0, i.jsx)(a.Button, {
+      className: _.linkButtonContainer,
+      innerClassName: _.linkButton,
+      onClick: T,
+      look: a.Button.Looks.LINK,
       fullWidth: !0,
-      color: l.Button.Colors.WHITE,
-      children: d.Z.Messages.NOT_NOW
-    }), (0, s.jsx)("div", {
-      className: E.pointer
+      color: a.Button.Colors.WHITE,
+      children: u.Z.Messages.NOT_NOW
+    }), (0, i.jsx)("div", {
+      className: _.pointer
     })]
   })
 }

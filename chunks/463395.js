@@ -10,22 +10,22 @@ let E = "CertifiedDeviceStore",
   T = {},
   h = 0;
 
-function S(e, t, n) {
+function f(e, t, n) {
   let i = T[e];
   return null != i ? n(i) : t
 }
 
-function f(e, t) {
+function S(e, t) {
   let n = I[e];
   null != n && n.forEach(e => delete T[e.id]), I[e] = t, t.forEach(e => T[e.id] = e)
 }
-class N extends(o = u.ZP.Store) {
+class A extends(o = u.ZP.Store) {
   initialize() {
     let e = _.K.get(E);
     null != e && l().forEach(e, (e, t) => {
       e.forEach(e => {
         "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1)
-      }), f(t, e)
+      }), S(t, e)
     })
   }
   isCertified(e) {
@@ -42,38 +42,38 @@ class N extends(o = u.ZP.Store) {
     return l().find(T, t => t.type === e)
   }
   isHardwareMute(e) {
-    return S(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.hardwareMute)
+    return f(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.hardwareMute)
   }
   hasEchoCancellation(e) {
-    return S(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.echoCancellation)
+    return f(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.echoCancellation)
   }
   hasNoiseSuppression(e) {
-    return S(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.noiseSuppression)
+    return f(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.noiseSuppression)
   }
   hasAutomaticGainControl(e) {
-    return S(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.automaticGainControl)
+    return f(e, !1, e => e.type === d.h7.AUDIO_INPUT && e.automaticGainControl)
   }
   getVendor(e) {
-    return S(e, null, e => e.vendor)
+    return f(e, null, e => e.vendor)
   }
   getModel(e) {
-    return S(e, null, e => e.model)
+    return f(e, null, e => e.model)
   }
   getRevision() {
     return h
   }
 }
-s = "CertifiedDeviceStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
+s = "CertifiedDeviceStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(c.Z, {
+}) : i[r] = s, t.Z = new A(c.Z, {
   CERTIFIED_DEVICES_SET: function(e) {
     let {
       applicationId: t,
       devices: n
     } = e;
-    f(t, n), _.K.set(E, I), h++
+    S(t, n), _.K.set(E, I), h++
   }
 })

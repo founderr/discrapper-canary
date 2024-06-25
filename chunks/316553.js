@@ -1,22 +1,22 @@
 n.d(t, {
   J: function() {
-    return a
+    return r
   }
 });
-var s = n(470079),
-  i = n(207796),
-  l = n(308083);
+var i = n(470079),
+  s = n(207796),
+  a = n(308083);
 
-function a(e) {
+function r(e) {
   let {
     selectedGame: t
   } = e;
-  return s.useMemo(() => {
+  return i.useMemo(() => {
     switch (t) {
-      case i.hz.GENSHIN:
-        return l.xn;
-      case i.hz.VALORANT:
-        return l.nJ
+      case s.hz.GENSHIN:
+        return a.xn;
+      case s.hz.VALORANT:
+        return a.nJ
     }
   }, [t])
 }

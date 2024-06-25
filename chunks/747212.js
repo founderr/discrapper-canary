@@ -1,37 +1,37 @@
-t(47120);
-var l = t(735250);
-t(470079);
-var n = t(120356),
-  i = t.n(n),
-  a = t(481060),
-  r = t(968437),
-  o = t(689938),
-  d = t(615006);
-s.Z = e => {
+s(47120);
+var n = s(735250);
+s(470079);
+var l = s(120356),
+  a = s.n(l),
+  i = s(481060),
+  r = s(968437),
+  o = s(689938),
+  d = s(615006);
+t.Z = e => {
   let {
-    autoArchiveDuration: s,
-    onChange: t,
-    isDisabled: n
-  } = e, c = (0, r.nt)(), u = (e, s) => (0, l.jsx)("span", {
-    className: i()(d.optionLabel, {
-      [d.dropdownOption]: s
+    autoArchiveDuration: t,
+    onChange: s,
+    isDisabled: l
+  } = e, c = (0, r.nt)(), u = (e, t) => (0, n.jsx)("span", {
+    className: a()(d.optionLabel, {
+      [d.dropdownOption]: t
     }),
     children: e.label
   });
-  return (0, l.jsx)(a.FormSection, {
+  return (0, n.jsx)(i.FormSection, {
     title: o.Z.Messages.FORM_THREAD_AUTO_ARCHIVE_SECTION_LABEL,
     className: d.formSection,
-    children: (0, l.jsx)(a.SingleSelect, {
-      isDisabled: n,
+    children: (0, n.jsx)(i.SingleSelect, {
+      isDisabled: l,
       options: c,
-      value: s,
+      value: t,
       maxVisibleItems: c.length,
-      onChange: t,
+      onChange: s,
       optionClassName: d.dropdownOption,
       renderOptionLabel: e => u(e, !0),
       renderOptionValue: e => {
-        let [s] = e;
-        return u(s, !1)
+        let [t] = e;
+        return u(t, !1)
       }
     })
   })

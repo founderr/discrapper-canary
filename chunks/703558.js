@@ -24,14 +24,14 @@ function T(e, t, n) {
 }
 let h = n(981631).en1 + 500;
 (s = i || (i = {}))[s.ChannelMessage = 0] = "ChannelMessage", s[s.ThreadSettings = 1] = "ThreadSettings", s[s.FirstThreadMessage = 2] = "FirstThreadMessage", s[s.ApplicationLauncherCommand = 3] = "ApplicationLauncherCommand", s[s.Poll = 4] = "Poll", s[s.SlashCommand = 5] = "SlashCommand";
-let S = {};
+let f = {};
 
-function f(e) {
-  let t = S[e];
-  return null == t && (t = S[e] = {}), t
+function S(e) {
+  let t = f[e];
+  return null == t && (t = f[e] = {}), t
 }
 
-function N(e) {
+function A(e) {
   let {
     type: t,
     channelId: n,
@@ -42,21 +42,21 @@ function N(e) {
   let o = d.default.getId();
   if (null != o && null != i && "" !== i) {
     var a, l;
-    let e = f(o),
+    let e = S(o),
       t = e[n];
     if (null == t && (t = e[n] = {}), (l = i).length > h && (l = l.substr(0, h)), (i = l) === (null === (a = t[r]) || void 0 === a ? void 0 : a.draft)) return !1;
     t[r] = {
       timestamp: Date.now(),
       draft: i
     }
-  } else A(n, r);
+  } else N(n, r);
   return "DRAFT_SAVE" === t
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.default.getId();
   if (null == n) return !1;
-  let i = f(n),
+  let i = S(n),
     r = i[e];
   if (null == r) return !1;
   delete r[t], a().isEmpty(r) && delete i[e]
@@ -65,7 +65,7 @@ function A(e, t) {
 function m() {
   let e = d.default.getId();
   if (null == e || I.Z.totalUnavailableGuilds > 0) return;
-  let t = f(e);
+  let t = S(e);
   for (let e in t) null == E.Z.getChannel(e) && delete t[e]
 }
 
@@ -76,26 +76,26 @@ function O(e) {
     }
   } = e, n = d.default.getId();
   if (null == n) return !1;
-  let i = f(n);
+  let i = S(n);
   return delete i[t], !1
 }
-class R extends(r = l.ZP.PersistedStore) {
+class p extends(r = l.ZP.PersistedStore) {
   initialize(e) {
-    S = null != e ? e : {}, ! function() {
-      for (let [e, t] of c.default.entries(S))
+    f = null != e ? e : {}, ! function() {
+      for (let [e, t] of c.default.entries(f))
         for (let [n, i] of c.default.entries(t)) {
           let t = i[0];
-          null != t && ("" === t.draft || "" === t.draft.trim()) && A(n, 0, e)
+          null != t && ("" === t.draft || "" === t.draft.trim()) && N(n, 0, e)
         }
     }(), this.waitFor(d.default, E.Z, I.Z)
   }
   getState() {
-    return S
+    return f
   }
   getThreadDraftWithParentMessageId(e) {
     let t = d.default.getId();
     if (null == t) return;
-    let n = f(t),
+    let n = S(t),
       i = c.default.keys(n).find(t => {
         let n = this.getThreadSettings(t);
         return (null == n ? void 0 : n.parentMessageId) === e
@@ -105,7 +105,7 @@ class R extends(r = l.ZP.PersistedStore) {
   getRecentlyEditedDrafts(e) {
     let t = d.default.getId();
     if (null == t) return [];
-    let n = f(t);
+    let n = S(t);
     return a()(n).mapValues(t => null == t ? void 0 : t[e]).pickBy(_.lm).toPairs().map(e => {
       let [t, {
         timestamp: n,
@@ -126,7 +126,7 @@ class R extends(r = l.ZP.PersistedStore) {
   getDraft(e, t) {
     let n = d.default.getId();
     if (null == n) return "";
-    let i = f(n)[e];
+    let i = S(n)[e];
     if (null != i) {
       let e = i[t];
       if (null != e) return e.draft
@@ -136,11 +136,11 @@ class R extends(r = l.ZP.PersistedStore) {
   getThreadSettings(e) {
     let t = d.default.getId();
     if (null == t) return null;
-    let n = f(t)[e];
+    let n = S(t)[e];
     return null == n ? null : n[1]
   }
 }
-T(R, "displayName", "DraftStore"), T(R, "persistKey", "DraftStore"), T(R, "migrations", [e => {
+T(p, "displayName", "DraftStore"), T(p, "persistKey", "DraftStore"), T(p, "migrations", [e => {
   if (null == e) return {};
   for (let t in e) "timestamp" in e[t] && (e[t] = {
     0: e[t]
@@ -153,16 +153,16 @@ T(R, "displayName", "DraftStore"), T(R, "persistKey", "DraftStore"), T(R, "migra
     i = n[t] = {};
   for (let t in e) i[t] = e[t];
   return n
-}]), t.Z = new R(u.Z, {
+}]), t.Z = new p(u.Z, {
   CONNECTION_OPEN: function() {
     let e = d.default.getId();
-    return !(e in S) && (S[e] = {}), m(), !1
+    return !(e in f) && (f[e] = {}), m(), !1
   },
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (S = {})
+    !e.isSwitchingAccount && (f = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in S && delete S[e.userId]
+    e.userId in f && delete f[e.userId]
   },
   GUILD_DELETE: function() {
     return m(), !1
@@ -174,7 +174,7 @@ T(R, "displayName", "DraftStore"), T(R, "persistKey", "DraftStore"), T(R, "migra
       channel: t
     } = e, n = d.default.getId();
     if (null == n || t.ownerId === n) return !1;
-    let i = f(n),
+    let i = S(n),
       r = i[t.parent_id];
     if (null == r) return !1;
     let s = r[1];
@@ -190,17 +190,17 @@ T(R, "displayName", "DraftStore"), T(R, "persistKey", "DraftStore"), T(R, "migra
           timestamp: Date.now(),
           draft: n
         }
-      }), A(t.parent_id, 1), A(t.parent_id, 2)
+      }), N(t.parent_id, 1), N(t.parent_id, 2)
     }
   },
-  DRAFT_SAVE: N,
-  DRAFT_CHANGE: N,
+  DRAFT_SAVE: A,
+  DRAFT_CHANGE: A,
   DRAFT_CLEAR: function(e) {
     let {
       channelId: t,
       draftType: n
     } = e;
-    return A(t, n)
+    return N(t, n)
   },
   THREAD_SETTINGS_DRAFT_CHANGE: function(e) {
     let {
@@ -208,7 +208,7 @@ T(R, "displayName", "DraftStore"), T(R, "persistKey", "DraftStore"), T(R, "migra
       draft: n
     } = e, i = d.default.getId();
     if (null == i) return;
-    let r = f(i),
+    let r = S(i),
       s = r[t];
     null == s && (s = r[t] = {}), s[1] = {
       timestamp: Date.now(),

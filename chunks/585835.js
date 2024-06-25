@@ -1,81 +1,81 @@
 t.d(n, {
   Z: function() {
-    return x
+    return f
   }
 }), t(653041), t(47120);
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(120356),
-  a = t.n(s),
-  r = t(243814),
-  o = t(442837),
+  l = t.n(s),
+  o = t(243814),
+  r = t(442837),
   c = t(481060),
   d = t(367907),
   u = t(213459),
   I = t(488915),
-  N = t(970731),
-  E = t(598077),
-  T = t(285952),
-  m = t(626135),
-  _ = t(486199),
+  m = t(970731),
+  _ = t(598077),
+  N = t(285952),
+  E = t(626135),
+  T = t(486199),
   h = t(929507),
-  g = t(981631),
-  O = t(689938),
-  A = t(509770);
+  p = t(981631),
+  g = t(689938),
+  C = t(509770);
 
-function x(e) {
-  var n, t, s, x, C, S, p;
+function f(e) {
+  var n, t, s, f, x, O, S;
   let {
-    name: R,
-    icon: Z,
-    imageSrc: f,
-    iconBackgroundColor: M,
-    iconClassName: L,
-    details: v,
-    integration: j,
-    buttonText: b,
-    buttonDisabled: P,
-    hasNextSection: D,
+    name: A,
+    icon: R,
+    imageSrc: b,
+    iconBackgroundColor: Z,
+    iconClassName: v,
+    details: M,
+    integration: L,
+    buttonText: j,
+    buttonDisabled: D,
+    hasNextSection: P,
     onButtonClick: B,
-    guildId: G,
-    isScrolling: y,
+    guildId: y,
+    isScrolling: G,
     canShowMigrationTooltip: k
-  } = e, [U, H] = l.useState(!1), [W, w] = l.useState(!1);
-  let F = (x = b, C = P, S = D, p = B, null == x || null == p ? null : S ? (0, i.jsxs)(T.Z, {
-      align: T.Z.Align.CENTER,
+  } = e, [U, H] = a.useState(!1), [w, W] = a.useState(!1);
+  let F = (f = j, x = D, O = P, S = B, null == f || null == S ? null : O ? (0, i.jsxs)(N.Z, {
+      align: N.Z.Align.CENTER,
       children: [(0, i.jsx)(c.Text, {
         variant: "text-sm/normal",
-        children: x
-      }), S ? (0, i.jsx)(c.ChevronSmallRightIcon, {
+        children: f
+      }), O ? (0, i.jsx)(c.ChevronSmallRightIcon, {
         size: "custom",
         color: "currentColor",
         width: 10,
         height: 10,
-        className: A.caret
+        className: C.caret
       }) : null]
     }) : (0, i.jsx)(c.Button, {
       size: c.Button.Sizes.SMALL,
-      look: S ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
-      color: S ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
-      disabled: C,
-      onClick: p,
-      children: x
+      look: O ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
+      color: O ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
+      disabled: x,
+      onClick: S,
+      children: f
     })),
-    V = k && !y && !W && void 0 !== G && null != j;
-  l.useEffect(() => {
-    V && m.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-      ...(0, d.hH)(G),
-      application_id: null == j ? void 0 : j.application.id,
+    V = k && !G && !w && void 0 !== y && null != L;
+  a.useEffect(() => {
+    V && E.default.track(p.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+      ...(0, d.hH)(y),
+      application_id: null == L ? void 0 : L.application.id,
       location: "overview"
     })
-  }, [G, null == j ? void 0 : j.application.id, V]);
+  }, [y, null == L ? void 0 : L.application.id, V]);
   let K = V ? (0, i.jsx)(c.Popout, {
       renderPopout: () => (0, i.jsx)(c.Clickable, {
         onClick: e => {
-          e.stopPropagation(), w(!0), h.Z.dismissOverviewTooltip(G, j.integration)
+          e.stopPropagation(), W(!0), h.Z.dismissOverviewTooltip(y, L.integration)
         },
-        children: (0, i.jsx)(N.ZP, {
-          content: O.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
+        children: (0, i.jsx)(m.ZP, {
+          content: g.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
           onClick: () => {}
         })
       }),
@@ -85,82 +85,82 @@ function x(e) {
       shouldShow: !0,
       children: () => F
     }) : F,
-    Y = (0, o.Wu)([I.Z], () => {
+    Y = (0, r.Wu)([I.Z], () => {
       var e;
-      return null != j && null != G && null !== (e = I.Z.getApplicationEntitlementsForGuild(j.application.id, G)) && void 0 !== e ? e : []
+      return null != L && null != y && null !== (e = I.Z.getApplicationEntitlementsForGuild(L.application.id, y)) && void 0 !== e ? e : []
     }),
-    z = (0, u.LD)(G, !0),
-    q = (null == j ? void 0 : j.application) != null && Object.keys(null !== (s = null === (t = z.result) || void 0 === t ? void 0 : null === (n = t.sections[j.application.id]) || void 0 === n ? void 0 : n.commands) && void 0 !== s ? s : {}).length > 0,
-    J = (0, i.jsxs)(T.Z, {
-      children: [(0, i.jsx)(_.Z, {
-        name: R,
-        icon: Z,
-        imageSrc: f,
-        iconBackgroundColor: M,
-        iconClassName: L,
-        details: v,
+    z = (0, u.LD)(y, !0),
+    q = (null == L ? void 0 : L.application) != null && Object.keys(null !== (s = null === (t = z.result) || void 0 === t ? void 0 : null === (n = t.sections[L.application.id]) || void 0 === n ? void 0 : n.commands) && void 0 !== s ? s : {}).length > 0,
+    J = (0, i.jsxs)(N.Z, {
+      children: [(0, i.jsx)(T.Z, {
+        name: A,
+        icon: R,
+        imageSrc: b,
+        iconBackgroundColor: Z,
+        iconClassName: v,
+        details: M,
         isPremium: Y.length > 0
-      }), (0, i.jsx)(T.Z.Child, {
+      }), (0, i.jsx)(N.Z.Child, {
         shrink: 0,
         grow: 0,
-        children: (0, i.jsxs)(T.Z, {
-          align: T.Z.Align.CENTER,
-          justify: T.Z.Justify.END,
+        children: (0, i.jsxs)(N.Z, {
+          align: N.Z.Align.CENTER,
+          justify: N.Z.Justify.END,
           children: [function(e, n, t) {
-            var l;
+            var a;
             if (null == e) return null;
             let s = [],
               {
-                application: a,
-                integration: o,
+                application: l,
+                integration: r,
                 webhooks: d
               } = e;
-            return null != a.bot && s.push((0, i.jsx)(c.TooltipContainer, {
+            return null != l.bot && s.push((0, i.jsx)(c.TooltipContainer, {
               forceOpen: n,
-              text: new E.Z(a.bot).isVerifiedBot() ? O.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : O.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
-              className: A.feature,
+              text: new _.Z(l.bot).isVerifiedBot() ? g.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : g.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
+              className: C.feature,
               children: (0, i.jsx)(c.RobotIcon, {
                 size: "md",
                 color: "currentColor",
-                className: A.featureIcon
+                className: C.featureIcon
               })
             }, "bot")), d.length > 0 && s.push((0, i.jsx)(c.TooltipContainer, {
               forceOpen: n,
-              text: O.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
+              text: g.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
                 count: d.length
               }),
-              className: A.feature,
+              className: C.feature,
               children: (0, i.jsx)(c.WebhookIcon, {
                 size: "md",
                 color: "currentColor",
-                className: A.featureIcon
+                className: C.featureIcon
               })
-            }, "webhooks")), (null == o ? void 0 : null === (l = o.scopes) || void 0 === l ? void 0 : l.includes(r.x.APPLICATIONS_COMMANDS)) === !0 && t && s.push((0, i.jsx)("div", {
-              className: A.feature,
+            }, "webhooks")), (null == r ? void 0 : null === (a = r.scopes) || void 0 === a ? void 0 : a.includes(o.x.APPLICATIONS_COMMANDS)) === !0 && t && s.push((0, i.jsx)("div", {
+              className: C.feature,
               children: (0, i.jsx)(c.SlashBoxIcon, {
                 size: "md",
                 color: "currentColor",
-                className: A.featureIcon
+                className: C.featureIcon
               })
             }, "commands")), s
-          }(j, U, q), K]
+          }(L, U, q), K]
         })
       })]
     });
-  return D ? (0, i.jsx)(c.Clickable, {
+  return P ? (0, i.jsx)(c.Clickable, {
     onClick: () => {
-      k && null != G && null != j && h.Z.dismissOverviewTooltip(G, j.integration), null == B || B()
+      k && null != y && null != L && h.Z.dismissOverviewTooltip(y, L.integration), null == B || B()
     },
     onFocus: () => H(!0),
     onBlur: () => H(!1),
     children: (0, i.jsx)(c.Card, {
       editable: !0,
-      className: a()(A.card, A.clickable),
+      className: l()(C.card, C.clickable),
       children: J
     })
   }) : (0, i.jsx)(c.Card, {
     editable: !0,
-    className: A.card,
+    className: C.card,
     children: J
   })
 }

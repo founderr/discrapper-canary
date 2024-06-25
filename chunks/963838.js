@@ -4,7 +4,7 @@ n.d(t, {
     return k
   },
   Jw: function() {
-    return B
+    return x
   },
   _r: function() {
     return V
@@ -13,7 +13,7 @@ n.d(t, {
     return H
   },
   lv: function() {
-    return x
+    return B
   },
   v: function() {
     return b
@@ -33,14 +33,14 @@ var i = n(392711),
   I = n(966552),
   T = n(561763),
   h = n(529306),
-  S = n(90075),
-  f = n(862666),
-  N = n(252611),
-  A = n(136144),
+  f = n(90075),
+  S = n(862666),
+  A = n(252611),
+  N = n(136144),
   m = n(316137),
   O = n(654123),
-  R = n(660020),
-  p = n(980084),
+  p = n(660020),
+  R = n(980084),
   g = n(24688),
   C = n(200997),
   v = n(633302),
@@ -55,12 +55,12 @@ let b = {
     end: 15
   },
   G = [s],
-  w = [o, a, l, u, _, c, d, E, I, T, h, S, f, N, A, m, O, R, p, g, C],
-  B = {
+  w = [o, a, l, u, _, c, d, E, I, T, h, f, S, A, N, m, O, p, R, g, C],
+  x = {
     [y.q.BASIC]: G,
     [y.q.PREMIUM]: w
   },
-  x = r().memoize(e => new Promise(t => {
+  B = r().memoize(e => new Promise(t => {
     let n = new Image;
     n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
       let i = y.v * (0, L.x_)();
@@ -73,7 +73,7 @@ let b = {
     }
   })),
   k = (e, t) => {
-    let n = B[e];
+    let n = x[e];
     if (null != t && e === y.q.PREMIUM) {
       let e = t.end + 1;
       return Math.floor(Math.random() * (t.start - e) + e)

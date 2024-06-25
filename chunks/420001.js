@@ -15,7 +15,7 @@ var i = n(911969),
   T = n(126226),
   h = n(689938);
 
-function S(e) {
+function f(e) {
   let t = d.X.exec(e);
   if (null != t) {
     let n = t[1],
@@ -28,18 +28,18 @@ function S(e) {
   }
   return null
 }
-let f = {
+let S = {
   ...T.Z,
   sentinel: void 0,
   focusMode: I.QZ.MANUAL,
   matches(e, t, n, i, r) {
     if (r.commands === I.L8.DISABLED || r.commands === I.L8.OLD_BUILT_INS || n.length < 2 || !l.Xk.getSetting()) return !1;
-    let s = S(n);
+    let s = f(n);
     return null != s && s.cleanedQuery.length > 0
   },
   queryResults(e, t, n, o, u) {
     if (!l.Xk.getSetting()) return T.K;
-    let _ = S(n);
+    let _ = f(n);
     if (null == _) return T.K;
     let c = (0, a.hV)(e, _.cleanedQuery),
       {
@@ -107,7 +107,7 @@ let f = {
         }
       },
       getQuery: e => {
-        let t = S(e);
+        let t = f(e);
         if ("mention" !== t.type) return e;
         let n = c.ZP.getName(null == i ? void 0 : i.id, r.id, t.user);
         return e.replace(d.X, "@".concat(n))
@@ -136,4 +136,4 @@ let f = {
     }
   }
 };
-t.Z = f
+t.Z = S

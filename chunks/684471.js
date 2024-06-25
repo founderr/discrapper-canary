@@ -1,55 +1,55 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return T
+    return l
   }
 });
-var s = t(735250);
-t(470079);
-var o = t(481060),
-  r = t(442837),
-  a = t(594174),
-  i = t(51144),
-  c = t(473092),
-  E = t(955708),
-  N = t(850165),
-  l = t(689938),
-  u = t(897583),
-  I = t(282668);
+var s = n(735250);
+n(470079);
+var o = n(481060),
+  r = n(442837),
+  a = n(594174),
+  i = n(51144),
+  c = n(473092),
+  E = n(955708),
+  N = n(850165),
+  u = n(689938),
+  I = n(897583),
+  T = n(282668);
 
-function T(e) {
+function l(e) {
   let {
-    senderId: n,
-    trackAnalyticsEvent: t,
-    onNavigate: T
-  } = e, A = (0, r.e7)([a.default], () => {
-    let e = a.default.getUser(n);
+    senderId: t,
+    trackAnalyticsEvent: n,
+    onNavigate: l
+  } = e, _ = (0, r.e7)([a.default], () => {
+    let e = a.default.getUser(t);
     return i.ZP.getName(e)
   });
   return (0, s.jsx)(N.Z, {
-    header: l.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER,
-    description: l.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
-      username: A
+    header: u.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER,
+    description: u.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION.format({
+      username: _
     }),
-    heroImageSrc: I,
-    heroImageAlt: l.Z.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT,
+    heroImageSrc: T,
+    heroImageAlt: u.Z.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT,
     children: (0, s.jsxs)("div", {
-      className: u.buttonContainer,
+      className: I.buttonContainer,
       children: [(0, s.jsx)(o.Button, {
         color: o.Button.Colors.BRAND,
         size: o.Button.Sizes.LARGE,
-        className: u.button,
+        className: I.button,
         onClick: () => {
-          T(E.InappropriateConversationModalSlideKeys.TAKE_ACTION), t(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION)
+          l(E.InappropriateConversationModalSlideKeys.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION)
         },
-        children: l.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION
+        children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION
       }), (0, s.jsx)(o.Button, {
         color: o.Button.Colors.PRIMARY,
         size: o.Button.Sizes.LARGE,
-        className: u.button,
+        className: I.button,
         onClick: () => {
-          T(E.InappropriateConversationModalSlideKeys.SAFETY_TIPS), t(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS)
+          l(E.InappropriateConversationModalSlideKeys.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS)
         },
-        children: l.Z.Messages.INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS
+        children: u.Z.Messages.INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS
       })]
     })
   })

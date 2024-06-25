@@ -3,17 +3,17 @@ n.d(t, {
     return r
   },
   v: function() {
-    return a
+    return s
   }
 });
-var l = n(442837),
-  i = n(355298),
-  s = n(333984);
+var i = n(442837),
+  a = n(355298),
+  l = n(333984);
 
-function a(e) {
-  return (0, l.e7)([i.Z], () => i.Z.isMessageRequest(e), [e])
+function s(e) {
+  return (0, i.e7)([a.Z], () => a.Z.isMessageRequest(e), [e])
 }
 
 function r(e) {
-  return (0, l.e7)([i.Z, s.Z], () => null != e && (i.Z.isMessageRequest(e) || s.Z.isSpam(e)))
+  return (0, i.e7)([a.Z, l.Z], () => null != e && (a.Z.isMessageRequest(e) || l.Z.isSpam(e)))
 }

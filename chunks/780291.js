@@ -24,15 +24,15 @@ function T(e) {
     textValue: _
   } = e, d = r.useRef(_), T = (0, o.Z)({
     editorHeight: i
-  }), h = (0, c.Z)(), S = (0, s.e7)([u.ZP, a.default, l.Z], () => {
+  }), h = (0, c.Z)(), f = (0, s.e7)([u.ZP, a.default, l.Z], () => {
     var e;
     return u.ZP.isComboing(a.default.getId(), null !== (e = l.Z.getChannelId()) && void 0 !== e ? e : E.lds)
-  }), f = null !== (t = null == T ? void 0 : T.left) && void 0 !== t ? t : 0, N = (null !== (n = null == T ? void 0 : T.top) && void 0 !== n ? n : 0) - 16, A = r.useMemo(() => .05 > Math.random(), [0 === _.length]);
+  }), S = null !== (t = null == T ? void 0 : T.left) && void 0 !== t ? t : 0, A = (null !== (n = null == T ? void 0 : T.top) && void 0 !== n ? n : 0) - 16, N = r.useMemo(() => .05 > Math.random(), [0 === _.length]);
   return r.useEffect(() => {
-    0 !== _.length && _ !== d.current && S && (h.fire(f, N, A ? {
+    0 !== _.length && _ !== d.current && f && (h.fire(S, A, N ? {
       sprite: I.vv
     } : null), d.current = _)
-  }, [_, S, f, N, A, h]), null
+  }, [_, f, S, A, N, h]), null
 }
 
 function h(e) {

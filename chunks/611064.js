@@ -1,74 +1,74 @@
 n.d(t, {
   R: function() {
-    return f
+    return E
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(481060),
   r = n(239091),
   o = n(151827),
   c = n(485267),
   u = n(146282),
   d = n(703180),
   h = n(809017),
-  m = n(981631),
-  E = n(689938),
-  p = n(493893),
-  g = n(279691);
+  p = n(981631),
+  m = n(689938),
+  _ = n(493893),
+  f = n(279691);
 
-function f(e) {
+function E(e) {
   return (null == e ? void 0 : e.id) === h.G
 }
-t.Z = i.memo(function(e) {
+t.Z = a.memo(function(e) {
   let t, {
       title: h,
-      onToggleExpand: f,
-      expanded: C,
-      expandedCount: _
+      onToggleExpand: E,
+      expanded: g,
+      expandedCount: C
     } = e,
-    I = (0, s.e7)([u.Z], () => u.Z.hidden),
-    x = i.useCallback(e => {
+    I = (0, l.e7)([u.Z], () => u.Z.hidden),
+    x = a.useCallback(e => {
       (0, r.jW)(e, async () => {
         let {
           MemberListContentSettingsMenu: e
         } = await Promise.resolve().then(n.bind(n, 703180));
-        return () => (0, l.jsx)(e, {
+        return () => (0, i.jsx)(e, {
           closePopout: r.Zy
         })
       })
     }, []);
-  return (0, l.jsxs)(o.Z, {
-    className: g.membersGroup,
-    children: [(0, l.jsx)(a.HiddenVisually, {
-      children: E.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+  return (0, i.jsxs)(o.Z, {
+    className: f.membersGroup,
+    children: [(0, i.jsx)(s.HiddenVisually, {
+      children: m.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
         title: h,
-        count: _
+        count: C
       })
-    }), (0, l.jsxs)(a.Clickable, {
+    }), (0, i.jsxs)(s.Clickable, {
       onClick: e => {
-        if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.l)() : _ > 3 ? f() : (0, m.dG4)()
+        if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.l)() : C > 3 ? E() : (0, p.dG4)()
       },
       onContextMenu: x,
       tag: "span",
       "aria-hidden": !0,
-      className: p.headerContainer,
-      children: [(0, l.jsxs)("div", {
-        className: p.header,
-        children: [(0, l.jsxs)("span", {
-          children: [h, " — ", _]
-        }), (0, l.jsx)(d.default, {})]
-      }), _ <= 3 && !I ? null : (t = I ? (0, l.jsx)(a.ChevronSmallUpIcon, {
-        className: p.toggleExpandIcon
-      }) : C ? (0, l.jsx)(a.ChevronSmallDownIcon, {
-        className: p.toggleExpandIcon
-      }) : (0, l.jsx)(a.ChevronSmallRightIcon, {
-        className: p.toggleExpandIcon
-      }), (0, l.jsx)(a.FocusRing, {
-        children: (0, l.jsx)("div", {
+      className: _.headerContainer,
+      children: [(0, i.jsxs)("div", {
+        className: _.header,
+        children: [(0, i.jsxs)("span", {
+          children: [h, " — ", C]
+        }), (0, i.jsx)(d.default, {})]
+      }), C <= 3 && !I ? null : (t = I ? (0, i.jsx)(s.ChevronSmallUpIcon, {
+        className: _.toggleExpandIcon
+      }) : g ? (0, i.jsx)(s.ChevronSmallDownIcon, {
+        className: _.toggleExpandIcon
+      }) : (0, i.jsx)(s.ChevronSmallRightIcon, {
+        className: _.toggleExpandIcon
+      }), (0, i.jsx)(s.FocusRing, {
+        children: (0, i.jsx)("div", {
           tabIndex: 0,
-          className: p.toggleExpandIcon,
+          className: _.toggleExpandIcon,
           children: t
         })
       }))]

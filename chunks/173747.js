@@ -10,20 +10,20 @@ var i, r, s, o, a = n(392711),
   I = n(51025),
   T = n(812206),
   h = n(283595),
-  S = n(417363),
-  f = n(391690),
-  N = n(70956),
-  A = n(780570),
+  f = n(417363),
+  S = n(391690),
+  A = n(70956),
+  N = n(780570),
   m = n(804739);
 let O = new Set,
-  R = {},
-  p = new Set,
+  p = {},
+  R = new Set,
   g = {},
   C = new Set,
   v = {},
-  L = 10 * N.Z.Millis.MINUTE,
-  D = 6 * N.Z.Millis.HOUR,
-  M = 10 * N.Z.Millis.MINUTE,
+  L = 10 * A.Z.Millis.MINUTE,
+  D = 6 * A.Z.Millis.HOUR,
+  M = 10 * A.Z.Millis.MINUTE,
   P = new _.V7;
 
 function y(e) {
@@ -40,13 +40,13 @@ function U() {
 }
 
 function b(e, t) {
-  if (null != R[t] && f.Z.shouldBeInstalled(e, t)) {
-    let n = R[t],
+  if (null != p[t] && S.Z.shouldBeInstalled(e, t)) {
+    let n = p[t],
       i = n.manifestIds,
-      r = S.Z.getState(e, t);
+      r = f.Z.getState(e, t);
     null != r && r.shouldPatch && (r.buildId !== n.id || !l().isEqual(r.manifestIds, i)) && c.Z.wait(() => {
       let r = T.Z.getApplication(e);
-      null != r ? (C.delete((0, A.Tu)(e, t)), (0, I.li)(r, t, n.id, i, !0)) : C.add((0, A.Tu)(e, t))
+      null != r ? (C.delete((0, N.Tu)(e, t)), (0, I.li)(r, t, n.id, i, !0)) : C.add((0, N.Tu)(e, t))
     })
   }
 }
@@ -56,16 +56,16 @@ function G() {
 }
 class w extends(i = u.ZP.Store) {
   initialize() {
-    this.syncWith([h.Z], U), this.waitFor(S.Z, h.Z, T.Z)
+    this.syncWith([h.Z], U), this.waitFor(f.Z, h.Z, T.Z)
   }
   getTargetBuildId(e, t) {
-    return null == R[t] ? null : R[t].id
+    return null == p[t] ? null : p[t].id
   }
   getTargetManifests(e, t) {
-    return null == R[t] ? null : R[t].manifestIds
+    return null == p[t] ? null : p[t].manifestIds
   }
   hasNoBuild(e, t) {
-    return p.has(t)
+    return R.has(t)
   }
   isFetching(e, t) {
     return O.has(t)
@@ -92,7 +92,7 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
       let {
         applicationId: t,
         branchId: n
-      } = (0, A.CP)(e);
+      } = (0, N.CP)(e);
       null != T.Z.getApplication(t) && (C.delete(e), b(t, n))
     }
   },
@@ -117,7 +117,7 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
         return t
       }),
       o = r.id;
-    p.delete(n), R[n] = {
+    R.delete(n), p[n] = {
       id: o,
       applicationId: t,
       branchId: n,
@@ -129,7 +129,7 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
     let {
       branchId: t
     } = e;
-    O.delete(t), p.add(t)
+    O.delete(t), R.add(t)
   },
   APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
     let {
@@ -185,7 +185,7 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
     for (let e of t) n.add(e.application_id);
     for (let e in h.Z.libraryApplications) {
       let t = h.Z.libraryApplications[e];
-      n.has(t.id) && (0, A.Je)(t) && c.Z.wait(() => E.l(t.id, t.branchId))
+      n.has(t.id) && (0, N.Je)(t) && c.Z.wait(() => E.l(t.id, t.branchId))
     }
   }
 })

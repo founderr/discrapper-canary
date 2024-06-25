@@ -15,10 +15,10 @@ let I = null,
     return (0, _.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.gg$.BRAINTREE, i)
   },
   open: e => {
-    r = e, window.open(e), f.emitChange()
+    r = e, window.open(e), S.emitChange()
   }
 });
-class S extends(s = u.ZP.Store) {
+class f extends(s = u.ZP.Store) {
   getClient() {
     return I
   }
@@ -32,13 +32,13 @@ class S extends(s = u.ZP.Store) {
     return r
   }
 }
-l = "BraintreeStore", (a = "displayName") in(o = S) ? Object.defineProperty(o, a, {
+l = "BraintreeStore", (a = "displayName") in(o = f) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : o[a] = l;
-let f = new S(c.Z, {
+let S = new f(c.Z, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: t
@@ -85,4 +85,4 @@ let f = new S(c.Z, {
     h = null
   }
 });
-t.Z = f
+t.Z = S

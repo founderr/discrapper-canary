@@ -1,27 +1,27 @@
 n.d(t, {
   Z: function() {
-    return _
+    return I
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  r = n(481060),
-  a = n(19780),
+var i = n(735250),
+  l = n(470079),
+  r = n(442837),
+  a = n(481060),
+  s = n(19780),
   o = n(362446),
-  u = n(153124),
-  c = n(441894),
+  c = n(153124),
+  u = n(441894),
   d = n(160038),
   h = n(586646),
   p = n(689938),
-  g = n(228233);
+  f = n(228233);
 
-function m(e) {
+function _(e) {
   let {
     lobbyId: t,
     connectionTypeText: n,
-    closePopout: i
-  } = e, r = (0, s.cj)([o.Z], () => ({
+    closePopout: l
+  } = e, a = (0, r.cj)([o.Z], () => ({
     connectionState: o.Z.getConnectionState(t),
     hostname: o.Z.getHostname(t),
     averagePing: o.Z.getAveragePing(t),
@@ -29,98 +29,98 @@ function m(e) {
     pings: o.Z.getPings(),
     outboundLossRate: o.Z.getOutboundLossRate(t)
   }));
-  return (0, l.jsx)(d.Z, {
-    ...r,
-    closePopout: i,
+  return (0, i.jsx)(d.Z, {
+    ...a,
+    closePopout: l,
     connectionTypeText: n
+  })
+}
+
+function g(e) {
+  let {
+    closePopout: t,
+    connectionTypeText: n
+  } = e, l = (0, r.cj)([s.Z], () => ({
+    connectionState: s.Z.getState(),
+    hostname: s.Z.getHostname(),
+    averagePing: s.Z.getAveragePing(),
+    lastPing: s.Z.getLastPing(),
+    outboundLossRate: s.Z.getOutboundLossRate(),
+    pings: s.Z.getPings()
+  }));
+  return (0, i.jsx)(d.Z, {
+    ...l,
+    closePopout: t,
+    connectionTypeText: n
+  })
+}
+
+function m(e) {
+  let {
+    channelId: t,
+    isOverlay: n,
+    lobbyId: l,
+    closePopout: r
+  } = e, a = (0, u.J)(t) ? p.Z.Messages.E2EE_END_TO_END_ENCRYPTED : p.Z.Messages.SECURE_CONNECTION;
+  return n ? (0, i.jsx)(_, {
+    lobbyId: l,
+    closePopout: r,
+    connectionTypeText: a
+  }) : (0, i.jsx)(g, {
+    closePopout: r,
+    connectionTypeText: a
   })
 }
 
 function C(e) {
-  let {
-    closePopout: t,
-    connectionTypeText: n
-  } = e, i = (0, s.cj)([a.Z], () => ({
-    connectionState: a.Z.getState(),
-    hostname: a.Z.getHostname(),
-    averagePing: a.Z.getAveragePing(),
-    lastPing: a.Z.getLastPing(),
-    outboundLossRate: a.Z.getOutboundLossRate(),
-    pings: a.Z.getPings()
-  }));
-  return (0, l.jsx)(d.Z, {
-    ...i,
-    closePopout: t,
-    connectionTypeText: n
-  })
-}
-
-function E(e) {
-  let {
-    channelId: t,
-    isOverlay: n,
-    lobbyId: i,
-    closePopout: s
-  } = e, r = (0, c.J)(t) ? p.Z.Messages.E2EE_END_TO_END_ENCRYPTED : p.Z.Messages.SECURE_CONNECTION;
-  return n ? (0, l.jsx)(m, {
-    lobbyId: i,
-    closePopout: s,
-    connectionTypeText: r
-  }) : (0, l.jsx)(C, {
-    closePopout: s,
-    connectionTypeText: r
-  })
-}
-
-function f(e) {
-  let [t, n] = i.useState("rtc_debug_panel"), s = (0, u.Dt)(), a = i.useMemo(() => {
+  let [t, n] = l.useState("rtc_debug_panel"), r = (0, c.Dt)(), s = l.useMemo(() => {
     switch (t) {
       case "rtc_debug_panel":
-        return (0, l.jsx)(E, {
+        return (0, i.jsx)(m, {
           ...e
         });
       case "rtc_secure_frames":
-        return (0, l.jsx)(h.Z, {})
+        return (0, i.jsx)(h.Z, {})
     }
   }, [e, t]);
-  return (0, l.jsxs)("div", {
-    className: g.container,
-    children: [(0, l.jsx)(r.Heading, {
-      className: g.title,
+  return (0, i.jsxs)("div", {
+    className: f.container,
+    children: [(0, i.jsx)(a.Heading, {
+      className: f.title,
       variant: "heading-lg/bold",
       color: "header-primary",
       children: p.Z.Messages.E2EE_VOICE_DETAILS
-    }), (0, l.jsxs)(r.TabBar, {
-      className: g.tabs,
+    }), (0, i.jsxs)(a.TabBar, {
+      className: f.tabs,
       selectedItem: t,
       type: "top",
       look: "brand",
       onItemSelect: n,
-      children: [(0, l.jsx)(r.TabBar.Item, {
+      children: [(0, i.jsx)(a.TabBar.Item, {
         id: "rtc_debug_panel",
-        className: g.tabBarItem,
+        className: f.tabBarItem,
         children: p.Z.Messages.E2EE_CONNECTION
-      }), (0, l.jsx)(r.TabBar.Item, {
+      }), (0, i.jsx)(a.TabBar.Item, {
         id: "rtc_secure_frames",
-        className: g.tabBarItem,
+        className: f.tabBarItem,
         children: p.Z.Messages.E2EE_PRIVACY
       })]
-    }), (0, l.jsx)(r.TabBar.Panel, {
+    }), (0, i.jsx)(a.TabBar.Panel, {
       id: t,
-      "aria-labelledby": s,
-      children: a
+      "aria-labelledby": r,
+      children: s
     })]
   })
 }
 
-function _(e) {
-  return (0, c.J)(e.channelId) ? (0, l.jsx)(f, {
+function I(e) {
+  return (0, u.J)(e.channelId) ? (0, i.jsx)(C, {
     ...e
-  }) : (0, l.jsx)("div", {
-    className: g.debugPanelStandalone,
-    children: (0, l.jsx)("section", {
-      className: g.debugPanelSection,
-      children: (0, l.jsx)(E, {
+  }) : (0, i.jsx)("div", {
+    className: f.debugPanelStandalone,
+    children: (0, i.jsx)("section", {
+      className: f.debugPanelSection,
+      children: (0, i.jsx)(m, {
         ...e
       })
     })

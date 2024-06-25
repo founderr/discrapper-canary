@@ -1,22 +1,22 @@
-s.d(i, {
+i.d(n, {
   Z: function() {
-    return a
+    return r
   }
-}), s(789020);
-var n = s(735250);
-s(470079);
-var l = s(442837),
-  t = s(954295),
-  o = s(621853),
-  r = s(667589);
+}), i(789020);
+var t = i(735250);
+i(470079);
+var s = i(442837),
+  o = i(954295),
+  l = i(621853),
+  a = i(667589);
 
-function a(e) {
-  var i;
+function r(e) {
+  var n;
   let {
-    user: s
-  } = e, a = null === (i = (0, l.e7)([o.Z], () => o.Z.getUserProfile(s.id))) || void 0 === i ? void 0 : i.application;
-  return (0, n.jsx)(t.Z, {
-    flags: null == a ? void 0 : a.flags,
-    listScrollerStyle: r.listScroller
+    user: i
+  } = e, r = null === (n = (0, s.e7)([l.Z], () => l.Z.getUserProfile(i.id))) || void 0 === n ? void 0 : n.application;
+  return (0, t.jsx)(o.Z, {
+    flags: null == r ? void 0 : r.flags,
+    listScrollerStyle: a.listScroller
   })
 }

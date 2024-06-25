@@ -1,31 +1,31 @@
 n.d(t, {
   n: function() {
-    return T
+    return m
   }
 }), n(411104);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  l = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  s = n.n(a),
+  l = n(481060),
   r = n(910111),
   o = n(732559),
   c = n(723851),
-  u = n(981631),
-  d = n(689938),
-  E = n(968406);
-let _ = {
-  [u.TaA.WINDOWS]: {
+  d = n(981631),
+  u = n(689938),
+  _ = n(968406);
+let E = {
+  [d.TaA.WINDOWS]: {
     icon: c.Z,
-    getLabel: () => d.Z.Messages.WINDOWS
+    getLabel: () => u.Z.Messages.WINDOWS
   },
-  [u.TaA.MACOS]: {
+  [d.TaA.MACOS]: {
     icon: o.Z,
-    getLabel: () => d.Z.Messages.MACOS
+    getLabel: () => u.Z.Messages.MACOS
   },
-  [u.TaA.LINUX]: {
+  [d.TaA.LINUX]: {
     icon: r.Z,
-    getLabel: () => d.Z.Messages.LINUX
+    getLabel: () => u.Z.Messages.LINUX
   }
 };
 
@@ -33,28 +33,28 @@ function I(e) {
   let {
     operatingSystem: t,
     className: n
-  } = e, i = _[t];
-  if (null == i) throw Error("Unexpected operating system: ".concat(t));
-  let l = i.icon;
-  return (0, s.jsx)(a.Tooltip, {
-    text: i.getLabel(),
-    children: e => (0, s.jsx)(l, {
+  } = e, a = E[t];
+  if (null == a) throw Error("Unexpected operating system: ".concat(t));
+  let s = a.icon;
+  return (0, i.jsx)(l.Tooltip, {
+    text: a.getLabel(),
+    children: e => (0, i.jsx)(s, {
       ...e,
       className: n
     })
   })
 }
-let T = e => {
+let m = e => {
   let {
     systems: t,
     className: n,
-    iconClassName: i
+    iconClassName: a
   } = e;
-  return (0, s.jsx)("div", {
-    className: l()(E.OSSection, n),
-    children: t.map(e => (0, s.jsx)(I, {
+  return (0, i.jsx)("div", {
+    className: s()(_.OSSection, n),
+    children: t.map(e => (0, i.jsx)(I, {
       operatingSystem: e,
-      className: l()(E.purchaseUnitOperatingSystem, i)
+      className: s()(_.purchaseUnitOperatingSystem, a)
     }, e))
   })
 }

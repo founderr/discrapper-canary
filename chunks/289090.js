@@ -1,6 +1,6 @@
-var l, i;
+var i, l;
 n.d(t, {
   S: function() {
-    return l
+    return i
   }
-}), (i = l || (l = {}))[i.PENDING_JOIN_REQUESTS_FOLDER = 1] = "PENDING_JOIN_REQUESTS_FOLDER"
+}), (l = i || (i = {}))[l.PENDING_JOIN_REQUESTS_FOLDER = 1] = "PENDING_JOIN_REQUESTS_FOLDER"

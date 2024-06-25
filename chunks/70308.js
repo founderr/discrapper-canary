@@ -83,25 +83,25 @@ function I() {
       I.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position, T.current = null !== (i = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : _.si.duration
     }
   }, [d]);
-  let S = r.useMemo(() => {
+  let f = r.useMemo(() => {
       var e, t;
       return E[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : I.current]
     }, [d]),
-    f = (0, s.useTransition)(d, {
+    S = (0, s.useTransition)(d, {
       keys: e => {
         var t;
         return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
       },
       immediate: h,
-      ...S.transition
+      ...f.transition
     });
   return r.useEffect(() => {
     null != d && setTimeout(() => {
       (0, u.z5)()
     }, T.current)
   }, [d]), (0, i.jsx)("div", {
-    className: S.styles,
-    children: f((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
+    className: f.styles,
+    children: S((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
       style: e,
       children: (0, i.jsx)(l.F, {
         ...t

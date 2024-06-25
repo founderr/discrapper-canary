@@ -23,7 +23,7 @@ function I(e, t, n) {
 let T = [],
   h = !1;
 
-function S(e) {
+function f(e) {
   T = T.filter(t => {
     let {
       id: n
@@ -32,7 +32,7 @@ function S(e) {
   }), l.removeToken(e)
 }
 
-function f(e, t) {
+function S(e, t) {
   let n = T.slice(),
     i = n.find(t => {
       let {
@@ -42,7 +42,7 @@ function f(e, t) {
     });
   null != i && (i.tokenStatus = t, T = n)
 }
-class N extends(o = u.ZP.PersistedStore) {
+class A extends(o = u.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t;
@@ -91,7 +91,7 @@ class N extends(o = u.ZP.PersistedStore) {
     return h
   }
 }
-I(N, "displayName", "MultiAccountStore"), I(N, "persistKey", "MultiAccountStore"), I(N, "migrations", [e => {
+I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"), I(A, "migrations", [e => {
   if (null != e) {
     var t;
     return {
@@ -103,7 +103,7 @@ I(N, "displayName", "MultiAccountStore"), I(N, "persistKey", "MultiAccountStore"
     users: [],
     canUseMultiAccountMobile: !1
   }
-}]), t.Z = new N(_.Z, {
+}]), t.Z = new A(_.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t
@@ -127,7 +127,7 @@ I(N, "displayName", "MultiAccountStore"), I(N, "persistKey", "MultiAccountStore"
       let {
         id: t
       } = e;
-      S(t)
+      f(t)
     })
   },
   LOGOUT: function(e) {
@@ -138,10 +138,10 @@ I(N, "displayName", "MultiAccountStore"), I(N, "persistKey", "MultiAccountStore"
       return t !== i
     })), i = null
   },
-  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => f(e.userId, 1),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => f(e.userId, 2),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => f(e.userId, 0),
-  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => S(e.userId),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => S(e.userId, 1),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => S(e.userId, 2),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => S(e.userId, 0),
+  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => f(e.userId),
   MULTI_ACCOUNT_MOVE_ACCOUNT: function(e) {
     let {
       from: t,

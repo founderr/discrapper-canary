@@ -1,12 +1,12 @@
 "use strict";
 let i, r, s, o, a, l, u, _, c, d, E, I;
 n(47120);
-var T, h, S, f, N = n(906280),
-  A = n.n(N),
+var T, h, f, S, A = n(906280),
+  N = n.n(A),
   m = n(887003),
   O = n(442837),
-  R = n(570140),
-  p = n(497505),
+  p = n(570140),
+  R = n(497505),
   g = n(918701),
   C = n(5881),
   v = n(46140);
@@ -109,12 +109,12 @@ class G extends(T = O.ZP.Store) {
     return r.get(e)
   }
 }
-f = "QuestsStore", (S = "displayName") in(h = G) ? Object.defineProperty(h, S, {
-  value: f,
+S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
+  value: S,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : h[S] = f, t.Z = new G(R.Z, {
+}) : h[f] = S, t.Z = new G(p.Z, {
   LOGOUT: function() {
     L()
   },
@@ -129,7 +129,7 @@ f = "QuestsStore", (S = "displayName") in(h = G) ? Object.defineProperty(h, S, {
     let n = new Map(r);
     for (let e of (r = new Map, t)) {
       var s, o;
-      let t = A()(e),
+      let t = N()(e),
         i = n.get(t.id),
         a = (null === (s = t.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && null == t.userStatus.completedAt;
       if ((null == i ? void 0 : i.userStatus) != null && null != t.userStatus && a) {
@@ -140,7 +140,7 @@ f = "QuestsStore", (S = "displayName") in(h = G) ? Object.defineProperty(h, S, {
           null != e && null != i && e > i.value && (i.value = e)
         }
       }
-      r.set(t.id, t), t.targetedContent.includes(p.jn.QUEST_BAR) && (0, C.T)({
+      r.set(t.id, t), t.targetedContent.includes(R.jn.QUEST_BAR) && (0, C.T)({
         location: v.dr.QUESTS_STORE
       }).log("Delivered ".concat(t.config.messages.questName, " (").concat(t.id, ")"))
     }

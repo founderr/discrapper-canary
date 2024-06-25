@@ -1,10 +1,10 @@
 t.d(s, {
   G: function() {
-    return i
+    return a
   }
 });
 var n = t(74538);
 
-function i(e, s) {
+function a(e, s) {
   return n.ZP.getNumIncludedPremiumGuildSubscriptionSlots(e.planId) + (null != s ? 1 : 0)
 }

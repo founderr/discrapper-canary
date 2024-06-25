@@ -1,85 +1,85 @@
-t.d(l, {
+l.d(t, {
   Z: function() {
-    return I
+    return p
   }
-}), t(47120), t(724458), t(653041);
-var n = t(735250),
-  s = t(470079),
-  a = t(120356),
-  o = t.n(a),
-  i = t(658722),
-  r = t.n(i),
-  C = t(954955),
-  c = t.n(C),
-  d = t(498607),
-  u = t.n(d),
-  E = t(399606),
-  m = t(481060),
-  _ = t(563115),
-  M = t(910693),
-  h = t(893966),
-  x = t(527379),
-  T = t(285173),
-  L = t(689938),
-  H = t(262155),
-  g = t(405811);
-let A = new Set;
+}), l(47120), l(724458), l(653041);
+var n = l(735250),
+  a = l(470079),
+  o = l(120356),
+  s = l.n(o),
+  i = l(658722),
+  r = l.n(i),
+  C = l(954955),
+  c = l.n(C),
+  d = l(498607),
+  u = l.n(d),
+  m = l(399606),
+  _ = l(481060),
+  E = l(563115),
+  h = l(910693),
+  M = l(893966),
+  x = l(527379),
+  b = l(285173),
+  T = l(689938),
+  L = l(262155),
+  g = l(405811);
+let I = new Set;
 
-function I(e) {
+function p(e) {
   let {
-    guildId: l,
-    onClose: t
-  } = e, a = (0, M.BG)(l), i = (0, E.e7)([h.Z], () => h.Z.getSearchStateByGuildId(l), [l], u()), [C, d] = s.useState(i.selectedRoleIds), I = (0, _.h)(l, A, !0), N = (e, t) => {
+    guildId: t,
+    onClose: l
+  } = e, o = (0, h.BG)(t), i = (0, m.e7)([M.Z], () => M.Z.getSearchStateByGuildId(t), [t], u()), [C, d] = a.useState(i.selectedRoleIds), p = (0, E.h)(t, I, !0), H = (e, l) => {
     let {
-      record: s
+      record: a
     } = e;
-    return (0, n.jsx)(m.ComboboxItem, {
-      value: s.id,
+    return (0, n.jsx)(_.ComboboxItem, {
+      value: a.id,
       children: (0, n.jsxs)("div", {
-        className: o()(H.roleNameContainer),
+        className: s()(L.roleNameContainer),
         children: [(0, n.jsxs)("div", {
-          className: o()(H.roleLabel),
+          className: s()(L.roleLabel),
           children: [(0, n.jsx)("div", {
-            className: o()(H.labelBackground, t && H.selected)
-          }), (0, n.jsx)(m.ComboboxItem.Label, {
-            children: (0, n.jsx)(T.Z, {
-              className: o()(g.roleTooltipItem),
-              role: s,
-              guildId: l
-            }, s.id)
+            className: s()(L.labelBackground, l && L.selected)
+          }), (0, n.jsx)(_.ComboboxItem.Label, {
+            children: (0, n.jsx)(b.Z, {
+              className: s()(g.roleTooltipItem),
+              role: a,
+              guildId: t
+            }, a.id)
           })]
         }), (0, n.jsx)("div", {
-          className: H.checkboxContainer,
-          children: (0, n.jsx)(m.ComboboxItem.Checkbox, {
-            checked: t
+          className: L.checkboxContainer,
+          children: (0, n.jsx)(_.ComboboxItem.Checkbox, {
+            checked: l
           })
         })]
       })
-    }, s.id)
-  }, R = (e, l) => I.reduce((t, n) => {
+    }, a.id)
+  }, f = (e, t) => p.reduce((l, n) => {
     let {
-      record: s
-    } = n, a = e.has(s.id);
-    return r()(l.toLowerCase(), s.name.toLowerCase()) ? t.push(N(n, a)) : a && t.push(N(n, a)), t
-  }, []), p = s.useCallback(e => {
-    (0, x.Dr)(l, {
+      record: a
+    } = n, o = e.has(a.id);
+    return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(H(n, o)) : o && l.push(H(n, o)), l
+  }, []), A = a.useCallback(e => {
+    (0, x.Dr)(t, {
       selectedRoleIds: e
-    }), a(e)
-  }, [l, a]), S = s.useCallback(c()(p, 300), [p]), Z = s.useCallback(e => {
-    let l;
-    d(l = C.has(e) ? new Set([...C].filter(l => l !== e)) : new Set([...C, e])), S(l)
-  }, [C, S]);
-  return (0, n.jsx)(m.ComboboxPopout, {
-    className: o()(H.rolePopout),
-    placeholder: L.Z.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
+    }), o(e)
+  }, [t, o]), N = a.useCallback(c()(A, 300), [A]), R = a.useCallback(e => {
+    let t;
+    d(t = C.has(e) ? new Set([...C].filter(t => t !== e)) : new Set([...C, e])), N(t)
+  }, [C, N]);
+  return (0, n.jsx)(_.ComboboxPopout, {
+    className: s()(L.rolePopout),
+    placeholder: T.Z.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
     value: C,
-    onChange: Z,
+    onChange: R,
     onClose: () => {
-      t()
+      l()
     },
     multiSelect: !0,
     showScrollbar: !0,
     autoFocus: !0,
-    children: e => R(C, e)
+    children: e => f(C, e)
   })
 }

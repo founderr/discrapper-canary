@@ -1,4 +1,4 @@
-s.d(t, {
+n.d(t, {
   HI: function() {
     return l
   },
@@ -6,9 +6,9 @@ s.d(t, {
     return a
   }
 });
-var n, a, i = s(818083);
-(n = a || (a = {}))[n.DEFAULT = 0] = "DEFAULT", n[n.VARIANT_1 = 1] = "VARIANT_1", n[n.VARIANT_2 = 2] = "VARIANT_2";
-let r = (0, i.B)({
+var s, a, r = n(818083);
+(s = a || (a = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.VARIANT_1 = 1] = "VARIANT_1", s[s.VARIANT_2 = 2] = "VARIANT_2";
+let i = (0, r.B)({
   kind: "user",
   id: "2024-04_marketing_page_non_sub_perk_tile_order",
   label: "Changes the order of the non-subscriber perk tiles",
@@ -40,9 +40,9 @@ function l(e) {
   let {
     location: t
   } = e, {
-    tileOrderVariant: s
-  } = r.useExperiment({
+    tileOrderVariant: n
+  } = i.useExperiment({
     location: t
   });
-  return s
+  return n
 }

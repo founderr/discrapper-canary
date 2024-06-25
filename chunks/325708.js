@@ -1,52 +1,52 @@
 n.d(t, {
   Z: function() {
-    return f
+    return E
   },
   y: function() {
-    return l
+    return i
   }
 }), n(47120);
-var l, i, s = n(735250),
-  a = n(470079),
+var i, a, l = n(735250),
+  s = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(392711),
   u = n(692547),
   d = n(153867),
   h = n(347469),
-  m = n(740492),
-  E = n(36645),
-  p = n(923756);
-(i = l || (l = {}))[i.PostSidebar = 0] = "PostSidebar", i[i.ThreadSidebar = 1] = "ThreadSidebar", i[i.CallChatSidebar = 2] = "CallChatSidebar", i[i.MessageRequestSidebar = 3] = "MessageRequestSidebar", i[i.HomeSidebar = 4] = "HomeSidebar";
-
-function g(e) {
-  let {
-    resizableNode: t,
-    onResize: n,
-    onResizeEnd: l,
-    maxWidth: i
-  } = e, a = (0, h.Z)({
-    minDimension: E.C,
-    maxDimension: i,
-    resizableDomNodeRef: t,
-    onElementResize: n,
-    onElementResizeEnd: l,
-    orientation: h.y.HORIZONTAL_LEFT
-  });
-  return (0, s.jsx)("div", {
-    onMouseDown: a,
-    className: p.resizeHandle
-  })
-}
+  p = n(740492),
+  m = n(36645),
+  _ = n(923756);
+(a = i || (i = {}))[a.PostSidebar = 0] = "PostSidebar", a[a.ThreadSidebar = 1] = "ThreadSidebar", a[a.CallChatSidebar = 2] = "CallChatSidebar", a[a.MessageRequestSidebar = 3] = "MessageRequestSidebar", a[a.HomeSidebar = 4] = "HomeSidebar";
 
 function f(e) {
   let {
+    resizableNode: t,
+    onResize: n,
+    onResizeEnd: i,
+    maxWidth: a
+  } = e, s = (0, h.Z)({
+    minDimension: m.C,
+    maxDimension: a,
+    resizableDomNodeRef: t,
+    onElementResize: n,
+    onElementResizeEnd: i,
+    orientation: h.y.HORIZONTAL_LEFT
+  });
+  return (0, l.jsx)("div", {
+    onMouseDown: s,
+    className: _.resizeHandle
+  })
+}
+
+function E(e) {
+  let {
     sidebarType: t,
     maxWidth: n,
-    onWidthChange: l,
-    children: i,
+    onWidthChange: i,
+    children: a,
     floatingLayer: r
-  } = e, h = a.useRef(null), f = function(e) {
+  } = e, h = s.useRef(null), E = function(e) {
     switch (e) {
       case 0:
         return "postSidebarWidth";
@@ -59,51 +59,51 @@ function f(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [C, _] = a.useState(m.ZP[f]), I = a.useCallback(e => {
+  }(t), [g, C] = s.useState(p.ZP[E]), I = s.useCallback(e => {
     d.ZP.updatedUnsyncedSettings({
-      [f]: e
+      [E]: e
     })
-  }, [f]), x = (0, E.W)({
+  }, [E]), x = (0, m.W)({
     maxWidth: n
-  }), T = (0, c.clamp)(C, E.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
-  a.useEffect(() => {
-    null == l || l(T, x)
-  }, [T, l, x]);
-  let Z = (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)("div", {
-      className: o()(p.chatTarget, {
-        [p.floating]: x,
-        [p.notFloating]: !x
+  }), T = (0, c.clamp)(g, m.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  s.useEffect(() => {
+    null == i || i(T, x)
+  }, [T, i, x]);
+  let v = (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)("div", {
+      className: o()(_.chatTarget, {
+        [_.floating]: x,
+        [_.notFloating]: !x
       }),
       style: {
         width: N
       }
-    }), !x && (0, s.jsx)(g, {
+    }), !x && (0, l.jsx)(f, {
       maxWidth: n,
       resizableNode: h,
-      onResize: _,
+      onResize: C,
       onResizeEnd: I
-    }), (0, s.jsx)("div", {
+    }), (0, l.jsx)("div", {
       ref: h,
-      className: o()(p.container, {
-        [p.floating]: x
+      className: o()(_.container, {
+        [_.floating]: x
       }),
       style: {
         width: T
       },
-      children: i
+      children: a
     })]
   });
   if (x) {
-    let e = null != r ? r : a.Fragment;
-    return (0, s.jsx)(e, {
-      children: (0, s.jsx)("div", {
-        className: p.chatLayerWrapper,
-        children: Z
+    let e = null != r ? r : s.Fragment;
+    return (0, l.jsx)(e, {
+      children: (0, l.jsx)("div", {
+        className: _.chatLayerWrapper,
+        children: v
       })
     })
   }
-  return (0, s.jsx)(s.Fragment, {
-    children: Z
+  return (0, l.jsx)(l.Fragment, {
+    children: v
   })
 }

@@ -1,20 +1,20 @@
 "use strict";
 s.d(t, {
   Z: function() {
-    return l
+    return u
   }
 }), s(47120);
 var n = s(735250),
   r = s(470079),
-  i = s(748780),
-  o = s(481060),
+  o = s(748780),
+  i = s(481060),
   a = s(45791);
-class l extends r.Component {
+class u extends r.Component {
   componentWillEnter(e) {
     let {
       offset: t
     } = this.state;
-    t.setValue(1), i.Z.spring(t, {
+    t.setValue(1), o.Z.spring(t, {
       toValue: 0,
       duration: 75
     }).start(e)
@@ -26,7 +26,7 @@ class l extends r.Component {
     t.setValue(0), this.setState({
       isExiting: !0
     }, () => {
-      i.Z.spring(t, {
+      o.Z.spring(t, {
         toValue: -1,
         duration: 75
       }).start(e)
@@ -37,7 +37,7 @@ class l extends r.Component {
       isExiting: e,
       offset: t
     } = this.state;
-    return (0, n.jsx)(i.Z.div, {
+    return (0, n.jsx)(o.Z.div, {
       className: a.wrapper,
       style: {
         left: 0,
@@ -50,7 +50,7 @@ class l extends r.Component {
           })
         }]
       },
-      children: (0, n.jsx)(o.ModalContent, {
+      children: (0, n.jsx)(i.ModalContent, {
         className: a.contentWrapper,
         children: this.props.children
       })
@@ -60,7 +60,7 @@ class l extends r.Component {
     var t, s, n;
     super(...e), t = this, s = "state", n = {
       isExiting: !1,
-      offset: new i.Z.Value(0),
+      offset: new o.Z.Value(0),
       selectedValue: null
     }, s in t ? Object.defineProperty(t, s, {
       value: n,

@@ -1,59 +1,59 @@
 t.d(s, {
   Z: function() {
-    return T
+    return u
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(481060),
-  r = t(654904),
-  o = t(993413),
+var a = t(120356),
+  i = t.n(a),
+  r = t(481060),
+  o = t(654904),
+  l = t(993413),
   c = t(486324),
-  E = t(689938),
-  d = t(851401);
-let _ = [{
+  d = t(689938),
+  _ = t(851401);
+let E = [{
   name: "gif",
   extensions: ["gif"]
 }];
 
-function T(e) {
+function u(e) {
   let {
     showRemoveAvatarButton: s,
     errors: t,
-    onAvatarChange: i,
-    sectionTitle: T,
-    changeAvatarButtonText: S,
-    guildId: u,
+    onAvatarChange: a,
+    sectionTitle: u,
+    changeAvatarButtonText: T,
+    guildId: S,
     className: I,
     disabled: N = !1,
-    isTryItOutFlow: A = !1,
-    forcedDivider: C,
-    withHighlight: O = !1
-  } = e, m = O ? l.ShinyButton : l.Button;
-  return (0, n.jsx)(o.Z, {
+    isTryItOutFlow: C = !1,
+    forcedDivider: A,
+    withHighlight: m = !1
+  } = e, O = m ? r.ShinyButton : r.Button;
+  return (0, n.jsx)(l.Z, {
     className: I,
-    title: T,
+    title: u,
     errors: t,
     disabled: N,
-    forcedDivider: C,
+    forcedDivider: A,
     children: (0, n.jsxs)("div", {
-      className: d.buttonsContainer,
-      children: [(0, n.jsx)(m, {
-        className: a()({
-          [d.buttonHighlighted]: O
+      className: _.buttonsContainer,
+      children: [(0, n.jsx)(O, {
+        className: i()({
+          [_.buttonHighlighted]: m
         }),
-        size: l.Button.Sizes.SMALL,
-        onClick: () => (0, r.$r)(c.pC.AVATAR, u, A, A ? _ : void 0),
-        children: null != S ? S : E.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
-      }), s && (0, n.jsx)(l.Button, {
-        className: d.removeButton,
-        color: l.Button.Colors.PRIMARY,
-        look: l.Button.Looks.LINK,
-        size: l.Button.Sizes.SMALL,
-        onClick: () => i(null),
-        children: null != u ? E.Z.Messages.USER_SETTINGS_RESET_AVATAR : E.Z.Messages.USER_SETTINGS_REMOVE_AVATAR
+        size: r.Button.Sizes.SMALL,
+        onClick: () => (0, o.$r)(c.pC.AVATAR, S, C, C ? E : void 0),
+        children: null != T ? T : d.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
+      }), s && (0, n.jsx)(r.Button, {
+        className: _.removeButton,
+        color: r.Button.Colors.PRIMARY,
+        look: r.Button.Looks.LINK,
+        size: r.Button.Sizes.SMALL,
+        onClick: () => a(null),
+        children: null != S ? d.Z.Messages.USER_SETTINGS_RESET_AVATAR : d.Z.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

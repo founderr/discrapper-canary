@@ -24,14 +24,14 @@ var i = n(392711),
   I = n(273593),
   T = n(665801),
   h = n(818143),
-  S = n(666475),
-  f = n(591304),
-  N = n(73375),
-  A = n(328664),
+  f = n(666475),
+  S = n(591304),
+  A = n(73375),
+  N = n(328664),
   m = n(328259),
   O = n(19009),
-  R = n(234912),
-  p = n(405571),
+  p = n(234912),
+  R = n(405571),
   g = n(730886),
   C = n(473974),
   v = n(563856),
@@ -50,7 +50,7 @@ let M = 60,
     isPremium: !0
   }, {
     id: L.Ru.MANGA,
-    iconSource: A,
+    iconSource: N,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_MANGA
   }, {
@@ -65,7 +65,7 @@ let M = 60,
     isPremium: !0
   }, {
     id: L.Ru.PASTEL,
-    iconSource: p,
+    iconSource: R,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_PASTEL
   }, {
@@ -105,7 +105,7 @@ let M = 60,
     name: D.Z.Messages.APP_ICON_BEANIE
   }, {
     id: L.Ru.GAMING,
-    iconSource: S,
+    iconSource: f,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_GAMING
   }, {
@@ -115,7 +115,7 @@ let M = 60,
     name: D.Z.Messages.APP_ICON_CIRCUIT
   }, {
     id: L.Ru.HOLO_WAVES,
-    iconSource: f,
+    iconSource: S,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_HOLO_WAVES
   }, {
@@ -140,12 +140,12 @@ let M = 60,
     name: D.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
   }, {
     id: L.Ru.IN_RAINBOWS,
-    iconSource: N,
+    iconSource: A,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_IN_RAINBOWS
   }, {
     id: L.Ru.MIDNIGHT_PRISM,
-    iconSource: R,
+    iconSource: p,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_MIDNIGHT_PRISM
   }, {

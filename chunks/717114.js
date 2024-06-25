@@ -13,12 +13,12 @@ var i = n(735250),
   E = n(981631),
   I = n(689938);
 t.Z = () => {
-  let [e, t] = (0, s.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []), n = (0, s.e7)([c.Z], () => c.Z.isConnected(), []), T = (0, s.e7)([_.Z], () => _.Z.getMode() === E.pM4.PUSH_TO_TALK, []), h = null != t && t.elevated && n && T && e, S = r.useRef(null);
+  let [e, t] = (0, s.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []), n = (0, s.e7)([c.Z], () => c.Z.isConnected(), []), T = (0, s.e7)([_.Z], () => _.Z.getMode() === E.pM4.PUSH_TO_TALK, []), h = null != t && t.elevated && n && T && e, f = r.useRef(null);
 
-  function f() {
-    null !== S.current && ((0, o.closeModal)(S.current), S.current = null)
+  function S() {
+    null !== f.current && ((0, o.closeModal)(f.current), f.current = null)
   }
-  return r.useEffect(() => (h ? S.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
+  return r.useEffect(() => (h ? f.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
     title: I.Z.Messages.PTT_PERMISSION_TITLE,
     body: I.Z.Messages.PTT_PERMISSION_BODY.format({
       game: null == t ? void 0 : t.name
@@ -28,7 +28,7 @@ t.Z = () => {
     onConfirm: () => window.open(d.Z.getArticleURL(E.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
     confirmText: I.Z.Messages.HELP_DESK,
     ...e
-  })) : f(), () => {
-    f()
+  })) : S(), () => {
+    S()
   }), [t, h]), null
 }

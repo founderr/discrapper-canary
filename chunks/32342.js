@@ -1,47 +1,47 @@
-s.r(a), s.d(a, {
+a.r(t), a.d(t, {
   TeamSetup: function() {
-    return T
+    return N
   },
   default: function() {
     return A
   }
-}), s(47120);
-var t = s(735250),
-  n = s(470079),
-  l = s(481060),
-  r = s(782568),
-  o = s(53365),
-  _ = s(377176),
-  d = s(577275),
-  E = s(153124),
-  O = s(981631),
-  c = s(829857),
-  i = s(689938),
-  N = s(941882);
+}), a(47120);
+var s = a(735250),
+  n = a(470079),
+  o = a(481060),
+  d = a(782568),
+  l = a(53365),
+  r = a(377176),
+  _ = a(577275),
+  c = a(153124),
+  E = a(981631),
+  O = a(829857),
+  i = a(689938),
+  T = a(941882);
 
-function T(e) {
+function N(e) {
   let {
-    selectedTeamId: a,
-    onSetSelectedTeamId: s,
+    selectedTeamId: t,
+    onSetSelectedTeamId: a,
     teamOptions: n
   } = e;
-  return (0, t.jsx)("div", {
-    className: N.teamSetup,
-    children: 0 === n.length ? (0, t.jsx)(l.Text, {
+  return (0, s.jsx)("div", {
+    className: T.teamSetup,
+    children: 0 === n.length ? (0, s.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_NO_TEAM_BODY.format()
-    }) : (0, t.jsxs)(t.Fragment, {
-      children: [(0, t.jsx)(l.Text, {
+    }) : (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(o.Text, {
         variant: "text-md/normal",
-        className: N.teamBodyText,
+        className: T.teamBodyText,
         color: "header-secondary",
         children: i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_CHOOSE_TEAM_BODY
-      }), (0, t.jsx)(l.SingleSelect, {
+      }), (0, s.jsx)(o.SingleSelect, {
         options: n,
         placeholder: i.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
-        value: a,
-        onChange: s,
+        value: t,
+        onChange: a,
         "aria-label": i.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
       })]
     })
@@ -50,59 +50,59 @@ function T(e) {
 
 function A(e) {
   let {
-    guildId: a,
-    requireTeamSetup: s,
+    guildId: t,
+    requireTeamSetup: a,
     onClose: A,
-    transitionState: M
-  } = e, h = (0, E.Dt)(), [u, I] = n.useState(), [R, x] = n.useState(!1), {
-    teams: C
-  } = (0, d.Z)(), m = C.filter(e => e.payout_account_status === c.C.ACTIVE), D = n.useMemo(() => m.map(e => ({
+    transitionState: u
+  } = e, h = (0, c.Dt)(), [M, x] = n.useState(), [I, m] = n.useState(!1), {
+    teams: R
+  } = (0, _.Z)(), f = R.filter(e => e.payout_account_status === O.C.ACTIVE), C = n.useMemo(() => f.map(e => ({
     label: e.name,
     value: e.id
-  })), [m]), L = n.useCallback(() => {
-    (0, r.Z)(O.EYA.DEVELOPER_PORTAL_TEAMS)
+  })), [f]), p = n.useCallback(() => {
+    (0, d.Z)(E.EYA.DEVELOPER_PORTAL_TEAMS)
   }, []);
-  return (0, t.jsxs)(l.ModalRoot, {
+  return (0, s.jsxs)(o.ModalRoot, {
     "aria-labelledby": h,
-    size: l.ModalSize.DYNAMIC,
-    transitionState: M,
-    children: [(0, t.jsx)(l.ModalHeader, {
+    size: o.ModalSize.DYNAMIC,
+    transitionState: u,
+    children: [(0, s.jsx)(o.ModalHeader, {
       separator: !1,
-      className: N.header,
-      children: (0, t.jsx)(l.Heading, {
+      className: T.header,
+      children: (0, s.jsx)(o.Heading, {
         variant: "heading-xl/semibold",
-        children: s ? i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE : i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE_ACCEPT_TERM_ONLY
+        children: a ? i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE : i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE_ACCEPT_TERM_ONLY
       })
-    }), (0, t.jsxs)(l.ModalContent, {
-      className: N.content,
-      children: [s && (0, t.jsx)(T, {
-        selectedTeamId: u,
-        onSetSelectedTeamId: I,
-        teamOptions: D
-      }), (0, t.jsx)(l.Checkbox, {
+    }), (0, s.jsxs)(o.ModalContent, {
+      className: T.content,
+      children: [a && (0, s.jsx)(N, {
+        selectedTeamId: M,
+        onSetSelectedTeamId: x,
+        teamOptions: C
+      }), (0, s.jsx)(o.Checkbox, {
         onChange: () => {
-          x(e => !e)
+          m(e => !e)
         },
         size: 20,
-        type: l.Checkbox.Types.INVERTED,
-        value: R,
-        children: (0, t.jsx)(l.Text, {
+        type: o.Checkbox.Types.INVERTED,
+        value: I,
+        children: (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
-          children: (0, _.f)()
+          children: (0, r.f)()
         })
       })]
-    }), (0, t.jsx)(l.ModalFooter, {
-      className: N.footer,
-      children: (0, t.jsx)("div", {
-        className: N.buttons,
-        children: s && 0 === D.length ? (0, t.jsx)(l.Button, {
-          onClick: L,
+    }), (0, s.jsx)(o.ModalFooter, {
+      className: T.footer,
+      children: (0, s.jsx)("div", {
+        className: T.buttons,
+        children: a && 0 === C.length ? (0, s.jsx)(o.Button, {
+          onClick: p,
           children: i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_SETUP_TEAM_CTA
-        }) : (0, t.jsx)(l.Button, {
-          disabled: !R || s && null == u,
+        }) : (0, s.jsx)(o.Button, {
+          disabled: !I || a && null == M,
           onClick: () => {
-            A(), (0, o.df)(a, u)
+            A(), (0, l.df)(t, M)
           },
           children: i.Z.Messages.SUBMIT
         })

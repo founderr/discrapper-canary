@@ -1,53 +1,53 @@
-t.d(s, {
+r.d(s, {
   Z: function() {
     return o
   }
 });
-var a = t(735250);
-t(470079);
-var i = t(120356),
-  r = t.n(i),
-  l = t(481060),
-  n = t(204197),
-  C = t(726558);
+var t = r(735250);
+r(470079);
+var a = r(120356),
+  i = r.n(a),
+  n = r(481060),
+  l = r(204197),
+  C = r(726558);
 
 function o(e) {
   var s;
   let {
-    user: t,
-    checked: i,
+    user: r,
+    checked: a,
     onChange: o,
     disabled: d
   } = e, {
     avatarSrc: c,
-    eventHandlers: x
-  } = (0, n.Z)({
-    user: t,
-    size: l.AvatarSizes.SIZE_32
-  }), _ = null !== (s = t.globalName) && void 0 !== s ? s : t.username;
-  return (0, a.jsxs)("div", {
+    eventHandlers: _
+  } = (0, l.Z)({
+    user: r,
+    size: n.AvatarSizes.SIZE_32
+  }), x = null !== (s = r.globalName) && void 0 !== s ? s : r.username;
+  return (0, t.jsxs)("div", {
     className: C.container,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, t.jsxs)("div", {
       className: C.user,
-      children: [(0, a.jsx)(l.Avatar, {
-        className: r()({
+      children: [(0, t.jsx)(n.Avatar, {
+        className: i()({
           [C.muted]: d
         }),
         src: c,
-        "aria-label": _,
-        size: l.AvatarSizes.SIZE_32,
-        ...x
-      }), (0, a.jsx)(l.Text, {
+        "aria-label": x,
+        size: n.AvatarSizes.SIZE_32,
+        ..._
+      }), (0, t.jsx)(n.Text, {
         color: d ? "text-muted" : "text-normal",
         variant: "text-md/semibold",
-        children: _
+        children: x
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, t.jsx)("div", {
       className: C.checkbox,
-      children: (0, a.jsx)(l.Checkbox, {
+      children: (0, t.jsx)(n.Checkbox, {
         disabled: d,
-        value: i,
-        onChange: (e, s) => o(t, s)
+        value: a,
+        onChange: (e, s) => o(r, s)
       })
     })]
   })

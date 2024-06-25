@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(605236),
   T = n(243778),
   h = n(963249),
-  S = n(646476),
-  f = n(819640),
-  N = n(594174),
-  A = n(147915),
+  f = n(646476),
+  S = n(819640),
+  A = n(594174),
+  N = n(147915),
   m = n(965645),
   O = n(362061),
-  R = n(70956),
-  p = n(709054),
+  p = n(70956),
+  R = n(709054),
   g = n(51144),
   C = n(981631),
   v = n(921944),
@@ -78,10 +78,10 @@ let y = [{
     ribbon: "#81C29F"
   }],
   b = 1 / 300,
-  G = R.Z.Millis.DAYS_30,
+  G = p.Z.Millis.DAYS_30,
   w = (0, s.animated)(m.Z),
-  B = (0, s.animated)(O.Z),
-  x = (0, s.animated)(u.GiftIcon);
+  x = (0, s.animated)(O.Z),
+  B = (0, s.animated)(u.GiftIcon);
 
 function k(e) {
   let {
@@ -117,7 +117,7 @@ function k(e) {
       friction: 24
     }
   }), I = o ? d : 0, T = (0, l.wj)(null != t ? t : u) ? a.dark[I] : a.light[I];
-  return !n && o ? (0, i.jsx)(x, {}) : o && _ ? (0, i.jsx)(B, {
+  return !n && o ? (0, i.jsx)(B, {}) : o && _ ? (0, i.jsx)(x, {
     isDark: (0, l.wj)(u),
     style: E
   }) : (0, i.jsx)(w, {
@@ -132,15 +132,15 @@ t.Z = r.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: s
-  } = (0, E.ZP)(d.Z.GIFT_BUTTON), [l, c] = r.useState(!1), m = (0, o.e7)([f.Z], () => !(null === f.Z || void 0 === f.Z ? void 0 : f.Z.hasLayers())), O = (0, o.e7)([N.default], () => N.default.getCurrentUser()), R = null != O ? p.default.age(O.id) : 0, y = !t && m && R >= G, {
+  } = (0, E.ZP)(d.Z.GIFT_BUTTON), [l, c] = r.useState(!1), m = (0, o.e7)([S.Z], () => !(null === S.Z || void 0 === S.Z ? void 0 : S.Z.hasLayers())), O = (0, o.e7)([A.default], () => A.default.getCurrentUser()), p = null != O ? R.default.age(O.id) : 0, y = !t && m && p >= G, {
     enabled: U
-  } = S.RO.useExperiment({
+  } = f.RO.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
     autoTrackExposure: y
   }), b = [];
   U && y && b.push(a.z.SEASONAL_GIFTING_COACHMARK_2023);
-  let [w, B] = (0, T.U)(b), x = null != w, V = (0, g.Ft)(n), Z = null != V;
+  let [w, x] = (0, T.U)(b), B = null != w, V = (0, g.Ft)(n), Z = null != V;
   if (t) return null;
   let H = () => {
       (0, h.Z)({
@@ -165,12 +165,12 @@ t.Z = r.memo(function(e) {
       onMouseLeave: () => {
         c(!1)
       },
-      children: [x && (0, i.jsx)(_.Z, {
+      children: [B && (0, i.jsx)(_.Z, {
         onComplete: () => c(!1),
         onDMCheckItOutClick: H,
-        markAsDismissed: B,
+        markAsDismissed: x,
         isDM: Z
-      }), (0, i.jsx)(A.Z, {
+      }), (0, i.jsx)(N.Z, {
         innerClassName: P.button,
         "aria-label": D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         isActive: !1,
@@ -183,12 +183,12 @@ t.Z = r.memo(function(e) {
           className: M.noPointerEvents,
           children: (0, i.jsx)(k, {
             hovered: l,
-            isContentDismissed: !x
+            isContentDismissed: !B
           })
         })
       })]
     });
-  return x ? F : (0, i.jsx)(u.TooltipContainer, {
+  return B ? F : (0, i.jsx)(u.TooltipContainer, {
     className: M.container,
     text: (0, _.i)(Z),
     children: F

@@ -4,7 +4,7 @@ n.d(t, {
     return k
   },
   tZ: function() {
-    return x
+    return B
   }
 }), n(627341);
 var i = n(735250),
@@ -21,14 +21,14 @@ var i = n(735250),
   I = n(233440),
   T = n(680295),
   h = n(430824),
-  S = n(806519),
-  f = n(626135),
-  N = n(74538),
-  A = n(998502),
+  f = n(806519),
+  S = n(626135),
+  A = n(74538),
+  N = n(998502),
   m = n(785717),
   O = n(621853),
-  R = n(204197),
-  p = n(735336),
+  p = n(204197),
+  R = n(735336),
   g = n(793397),
   C = n(184325),
   v = n(652853),
@@ -71,9 +71,9 @@ function w(e) {
     })]
   })
 }
-let B = A.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+let x = N.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
-function x(e) {
+function B(e) {
   let {
     user: t,
     displayProfile: n,
@@ -84,38 +84,38 @@ function x(e) {
     guildId: E,
     channelId: T,
     onClose: h,
-    disableUserProfileLink: A,
+    disableUserProfileLink: N,
     profileType: O,
-    animateOnHover: p,
+    animateOnHover: R,
     hasProfileEffect: C,
     statusTooltipDelay: w
   } = e, {
-    theme: x
-  } = (0, v.z)(), k = r.useContext(f.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = N.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
+    theme: B
+  } = (0, v.z)(), k = r.useContext(S.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = A.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
     analyticsLocations: F
   } = (0, c.ZP)(), {
     trackUserProfileAction: Y,
     messageId: j,
     roleId: W
-  } = (0, m.KZ)(), K = A || t.isClyde(), {
+  } = (0, m.KZ)(), K = N || t.isClyde(), {
     avatarDecorationSrc: z,
     avatarSrc: q,
     eventHandlers: X
-  } = (0, R.Z)({
+  } = (0, p.Z)({
     user: t,
     guildId: E,
     size: b,
-    animateOnHover: p
+    animateOnHover: R
   }), Q = (0, i.jsx)("div", {
     className: U.avatarHoverTarget,
     ...X,
-    children: (0, i.jsx)(B, {
+    children: (0, i.jsx)(x, {
       src: null != s ? s : q,
       avatarDecoration: z,
       size: b,
       "aria-label": t.username,
       status: H ? M.Skl.UNKNOWN : u,
-      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(x) : void 0,
+      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(B) : void 0,
       isMobile: d,
       statusTooltip: !0,
       statusTooltipDelay: w
@@ -152,8 +152,8 @@ function x(e) {
       children: [Q, !K && function() {
         let e = null != z,
           t = e ? G : (0, _.getAvatarSize)(b);
-        return (0, i.jsx)(S.ZP, {
-          mask: null == u || u === M.Skl.UNKNOWN || H ? S.ZP.Masks.AVATAR_DEFAULT : (0, a.EQ)([e, d]).with([!0, !0], () => S.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => S.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => S.ZP.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => S.ZP.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+        return (0, i.jsx)(f.ZP, {
+          mask: null == u || u === M.Skl.UNKNOWN || H ? f.ZP.Masks.AVATAR_DEFAULT : (0, a.EQ)([e, d]).with([!0, !0], () => f.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => f.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => f.ZP.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => f.ZP.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
           className: e ? U.avatarDecorationHint : U.avatarHint,
           style: e ? {
             borderRadius: .4 * t
@@ -186,7 +186,7 @@ function k(e) {
     upsell: E
   } = e;
   return (0, i.jsxs)(i.Fragment, {
-    children: [E, (0, i.jsx)(p.Z, {
+    children: [E, (0, i.jsx)(R.Z, {
       user: t,
       displayProfile: n,
       onClose: o,
@@ -199,7 +199,7 @@ function k(e) {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: c
-    }), (0, i.jsx)(x, {
+    }), (0, i.jsx)(B, {
       user: t,
       displayProfile: n,
       status: l ? M.Skl.STREAMING : u,

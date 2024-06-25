@@ -1,67 +1,67 @@
 t.d(s, {
   Z: function() {
-    return C
+    return A
   }
 }), t(47120);
 var n = t(735250);
 t(470079);
-var i = t(392711),
-  a = t.n(i),
-  l = t(442837),
-  r = t(780384),
-  o = t(481060),
+var a = t(392711),
+  i = t.n(a),
+  r = t(442837),
+  o = t(780384),
+  l = t(481060),
   c = t(846027),
-  E = t(463395),
-  d = t(131951),
-  _ = t(285952),
-  T = t(210887),
-  S = t(962100),
-  u = t(65154),
+  d = t(463395),
+  _ = t(131951),
+  E = t(285952),
+  u = t(210887),
+  T = t(962100),
+  S = t(65154),
   I = t(689938),
   N = t(216430),
-  A = t(331651);
+  C = t(331651);
 
-function C() {
+function A() {
   let e, s;
-  let i = (0, l.e7)([T.Z], () => T.Z.theme),
+  let a = (0, r.e7)([u.Z], () => u.Z.theme),
     {
-      canSetInputDevice: C,
-      canSetOutputDevice: O,
-      inputDeviceId: m,
-      outputDeviceId: h
-    } = (0, l.cj)([d.Z], () => ({
-      canSetInputDevice: d.Z.supports(u.AN.AUDIO_INPUT_DEVICE),
-      canSetOutputDevice: d.Z.supports(u.AN.AUDIO_OUTPUT_DEVICE),
-      inputDeviceId: d.Z.getInputDeviceId(),
-      outputDeviceId: d.Z.getOutputDeviceId()
+      canSetInputDevice: A,
+      canSetOutputDevice: m,
+      inputDeviceId: O,
+      outputDeviceId: g
+    } = (0, r.cj)([_.Z], () => ({
+      canSetInputDevice: _.Z.supports(S.AN.AUDIO_INPUT_DEVICE),
+      canSetOutputDevice: _.Z.supports(S.AN.AUDIO_OUTPUT_DEVICE),
+      inputDeviceId: _.Z.getInputDeviceId(),
+      outputDeviceId: _.Z.getOutputDeviceId()
     })),
-    g = (0, l.e7)([d.Z], () => d.Z.getInputDevices()),
-    R = (0, l.e7)([d.Z], () => d.Z.getOutputDevices());
-  !C && (e = (0, n.jsx)(o.FormText, {
-    type: o.FormText.Types.DESCRIPTION,
-    className: A.marginTop8,
+    h = (0, r.e7)([_.Z], () => _.Z.getInputDevices()),
+    R = (0, r.e7)([_.Z], () => _.Z.getOutputDevices());
+  !A && (e = (0, n.jsx)(l.FormText, {
+    type: l.FormText.Types.DESCRIPTION,
+    className: C.marginTop8,
     children: I.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
-      onDownloadClick: () => (0, S.y)("Help Text Input Devices")
+      onDownloadClick: () => (0, T.y)("Help Text Input Devices")
     })
-  })), !O && (s = (0, n.jsx)(o.FormText, {
-    type: o.FormText.Types.DESCRIPTION,
-    className: A.marginTop8,
+  })), !m && (s = (0, n.jsx)(l.FormText, {
+    type: l.FormText.Types.DESCRIPTION,
+    className: C.marginTop8,
     children: I.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
-      onDownloadClick: () => (0, S.y)("Help Text Output Devices")
+      onDownloadClick: () => (0, T.y)("Help Text Output Devices")
     })
   }));
-  let M = a()(g).values().first(),
-    x = null != M ? M.disabled : null != e,
-    D = a()(R).values().first(),
-    p = null != D ? D.disabled : null != s;
+  let p = i()(h).values().first(),
+    x = null != p ? p.disabled : null != e,
+    M = i()(R).values().first(),
+    D = null != M ? M.disabled : null != s;
 
-  function L(e) {
+  function f(e) {
     let s, {
-      label: a,
-      value: l
+      label: i,
+      value: r
     } = e;
-    if (E.Z.isCertified(l)) {
-      let e = (0, r.ap)(i) ? t(561259) : t(887695);
+    if (d.Z.isCertified(r)) {
+      let e = (0, o.ap)(a) ? t(561259) : t(887695);
       s = (0, n.jsx)("img", {
         src: e,
         alt: "Certified",
@@ -72,26 +72,26 @@ function C() {
       className: N.deviceOption,
       children: [(0, n.jsx)("span", {
         className: N.deviceOptionLabel,
-        children: E.Z.getCertifiedDeviceName(l, a)
+        children: d.Z.getCertifiedDeviceName(r, i)
       }), s]
-    }, l)
+    }, r)
   }
 
-  function P(e) {
-    return L(e[0])
+  function L(e) {
+    return f(e[0])
   }
-  return (0, n.jsxs)(_.Z, {
-    className: A.marginBottom20,
-    children: [(0, n.jsxs)(_.Z.Child, {
+  return (0, n.jsxs)(E.Z, {
+    className: C.marginBottom20,
+    children: [(0, n.jsxs)(E.Z.Child, {
       basis: "50%",
-      children: [(0, n.jsx)(o.FormTitle, {
-        tag: o.FormTitleTags.H5,
-        className: A.marginBottom8,
+      children: [(0, n.jsx)(l.FormTitle, {
+        tag: l.FormTitleTags.H5,
+        className: C.marginBottom8,
         children: I.Z.Messages.FORM_LABEL_INPUT_DEVICE
-      }), (0, n.jsx)(o.SingleSelect, {
-        value: m,
+      }), (0, n.jsx)(l.SingleSelect, {
+        value: O,
         onChange: e => c.Z.setInputDevice(e, "Settings"),
-        options: a().map(g, e => {
+        options: i().map(h, e => {
           let {
             id: s,
             name: t
@@ -102,19 +102,19 @@ function C() {
           }
         }),
         isDisabled: x,
-        renderOptionValue: P,
-        renderOptionLabel: L
+        renderOptionValue: L,
+        renderOptionLabel: f
       }), e]
-    }), (0, n.jsxs)(_.Z.Child, {
+    }), (0, n.jsxs)(E.Z.Child, {
       basis: "50%",
-      children: [(0, n.jsx)(o.FormTitle, {
-        tag: o.FormTitleTags.H5,
-        className: A.marginBottom8,
+      children: [(0, n.jsx)(l.FormTitle, {
+        tag: l.FormTitleTags.H5,
+        className: C.marginBottom8,
         children: I.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
-      }), (0, n.jsx)(o.SingleSelect, {
-        value: h,
+      }), (0, n.jsx)(l.SingleSelect, {
+        value: g,
         onChange: e => c.Z.setOutputDevice(e, "Settings"),
-        options: a().map(R, e => {
+        options: i().map(R, e => {
           let {
             id: s,
             name: t
@@ -124,9 +124,9 @@ function C() {
             label: t
           }
         }),
-        isDisabled: p,
-        renderOptionValue: P,
-        renderOptionLabel: L
+        isDisabled: D,
+        renderOptionValue: L,
+        renderOptionLabel: f
       }), s]
     })]
   })

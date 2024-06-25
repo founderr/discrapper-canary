@@ -15,7 +15,7 @@ var i = n(735250),
   T = n(424434),
   h = n(331651);
 
-function S(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = l().memoize(e => {
+let S = l().memoize(e => {
   let t = !1;
   if (null != e && (0, u.FX)(e)) {
     let n = (0, u._i)(e);
@@ -31,7 +31,7 @@ let f = l().memoize(e => {
   }
   return t ? _.Z.unsafe_rawColors.BLACK_500.css : _.Z.unsafe_rawColors.WHITE_500.css
 });
-class N extends r.PureComponent {
+class A extends r.PureComponent {
   render() {
     let e;
     let {
@@ -39,7 +39,7 @@ class N extends r.PureComponent {
       color: n,
       className: r,
       children: s
-    } = this.props, a = f(n);
+    } = this.props, a = S(n);
     return t ? e = {
       color: a,
       background: null != n ? n : _.Z.unsafe_rawColors.BRAND_500.css
@@ -81,9 +81,9 @@ class N extends r.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), S(this, "state", {
-      color: f(this.props.color)
-    }), S(this, "handleKeyUp", e => {
+    super(...e), f(this, "state", {
+      color: S(this.props.color)
+    }), f(this, "handleKeyUp", e => {
       if (e.which === I.yXg.ENTER || e.which === I.yXg.SPACE) {
         let {
           onClick: e,
@@ -91,7 +91,7 @@ class N extends r.PureComponent {
         } = this.props;
         e(t)
       }
-    }), S(this, "handleClick", () => {
+    }), f(this, "handleClick", () => {
       let {
         onClick: e,
         ...t
@@ -100,4 +100,4 @@ class N extends r.PureComponent {
     })
   }
 }
-t.Z = N
+t.Z = A

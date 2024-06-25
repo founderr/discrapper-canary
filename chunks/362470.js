@@ -3,9 +3,9 @@ t.d(n, {
     return s
   }
 });
-var i = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(325767);
+var i = t(325767);
 
 function s(e) {
   let {
@@ -13,14 +13,14 @@ function s(e) {
     height: t = 24,
     color: s = "currentColor",
     foreground: r,
-    ...C
+    ...l
   } = e;
-  return (0, i.jsx)("svg", {
-    ...(0, o.Z)(C),
+  return (0, o.jsx)("svg", {
+    ...(0, i.Z)(l),
     width: n,
     height: t,
     viewBox: "0 0 24 25",
-    children: (0, i.jsx)("path", {
+    children: (0, o.jsx)("path", {
       className: r,
       fill: s,
       fillRule: "evenodd",

@@ -9,20 +9,20 @@ n.d(t, {
     return c
   }
 });
-var s = n(652874),
-  i = n(902704);
-let l = {},
-  a = (0, s.Z)(e => ({
+var i = n(652874),
+  a = n(902704);
+let s = {},
+  l = (0, i.Z)(e => ({
     polls: {},
-    updatePollState(t, n, s) {
+    updatePollState(t, n, i) {
       e(e => {
-        var i;
+        var a;
         return {
           polls: {
             ...e.polls,
             [t]: {
               ...e.polls[t],
-              [n]: s(null === (i = e.polls[t]) || void 0 === i ? void 0 : i[n])
+              [n]: i(null === (a = e.polls[t]) || void 0 === a ? void 0 : a[n])
             }
           }
         }
@@ -31,17 +31,17 @@ let l = {},
   }));
 
 function r(e) {
-  return a(t => {
+  return l(t => {
     var n;
-    return null !== (n = t.polls[e]) && void 0 !== n ? n : l
-  }, i.Z)
+    return null !== (n = t.polls[e]) && void 0 !== n ? n : s
+  }, a.Z)
 }
 
 function o(e, t, n) {
-  a.getState().updatePollState(e, t, n)
+  l.getState().updatePollState(e, t, n)
 }
 
 function c(e, t) {
   var n;
-  return null === (n = a.getState().polls[e]) || void 0 === n ? void 0 : n[t]
+  return null === (n = l.getState().polls[e]) || void 0 === n ? void 0 : n[t]
 }

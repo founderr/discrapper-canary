@@ -1,50 +1,50 @@
 n.d(t, {
   Z: function() {
-    return g
+    return f
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(787014),
+var a = n(442837),
+  l = n(481060),
+  s = n(787014),
   r = n(933557),
   o = n(454585),
   c = n(131704),
   u = n(496675),
   d = n(396769),
   h = n(967128),
-  m = n(981631),
-  E = n(689938),
-  p = n(193308);
+  p = n(981631),
+  m = n(689938),
+  _ = n(193308);
 
-function g(e) {
+function f(e) {
   let {
     channel: t
-  } = e, n = (0, r.ZP)(t, !0), g = (0, i.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
-  return (0, l.jsxs)(h.ZP, {
+  } = e, n = (0, r.ZP)(t, !0), f = (0, a.e7)([u.Z], () => u.Z.can(p.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+  return (0, i.jsxs)(h.ZP, {
     channelId: t.id,
-    children: [(0, l.jsx)(h.Kq, {
+    children: [(0, i.jsx)(h.Kq, {
       channelType: t.type
-    }), (0, l.jsx)(h.Ot, {
-      children: E.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
+    }), (0, i.jsx)(h.Ot, {
+      children: m.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: n
       })
-    }), (0, l.jsx)(h.jz, {
-      children: E.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
+    }), (0, i.jsx)(h.jz, {
+      children: m.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
         channelName: n,
         topicHook: () => o.Z.parseTopic(t.topic, !0, {
           channelId: t.id
         })
       })
-    }), g ? (0, l.jsx)("div", {
-      className: p.buttonContainer,
-      children: (0, l.jsx)(d.Z, {
-        label: E.Z.Messages.EDIT_CHANNEL,
+    }), f ? (0, i.jsx)("div", {
+      className: _.buttonContainer,
+      children: (0, i.jsx)(d.Z, {
+        label: m.Z.Messages.EDIT_CHANNEL,
         onClick: () => {
-          a.ZP.open(t.id)
+          s.ZP.open(t.id)
         },
-        icon: (0, l.jsx)(s.PencilIcon, {
+        icon: (0, i.jsx)(l.PencilIcon, {
           size: "xs",
           color: "currentColor"
         })

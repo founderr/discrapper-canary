@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
     return i
   },
   getNativePlatform: function() {
-    return N
-  },
-  getOS: function() {
     return A
   },
+  getOS: function() {
+    return N
+  },
   getPlatform: function() {
-    return S
+    return f
   },
   getPlatformName: function() {
-    return f
+    return S
   },
   isAndroid: function() {
     return T
@@ -68,7 +68,7 @@ function c() {
 }
 
 function d() {
-  return "WEB" === S()
+  return "WEB" === f()
 }
 
 function E() {
@@ -88,15 +88,15 @@ function h() {
   return "ios" === a
 }
 
-function S() {
+function f() {
   return l() ? "WINDOWS" : u() ? "OSX" : _() ? "LINUX" : "WEB"
 }
 
-function f() {
+function S() {
   return a
 }
 
-function N() {
+function A() {
   switch (a) {
     case "ios":
     case "android":
@@ -106,7 +106,7 @@ function N() {
   }
 }
 
-function A() {
+function N() {
   let {
     userAgent: e
   } = window.navigator;

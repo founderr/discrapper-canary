@@ -1,51 +1,51 @@
-t.d(l, {
+n.d(t, {
   Z: function() {
     return u
   }
 });
-var n = t(735250);
-t(470079);
-var r = t(120356),
-  i = t.n(r),
-  s = t(729594),
-  a = t(140061);
-let o = RegExp("^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)");
+var l = n(735250);
+n(470079);
+var r = n(120356),
+  i = n.n(r),
+  a = n(729594),
+  o = n(140061);
+let d = RegExp("^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)");
 
-function d(e) {
-  let l = null,
-    t = null,
-    n = null;
+function s(e) {
+  let t = null,
+    n = null,
+    l = null;
   try {
-    l = (n = s.parse(e, !0)).host, t = n.pathname
+    t = (l = a.parse(e, !0)).host, n = l.pathname
   } catch (e) {
     return null
   }
-  return null != n && o.test(null != l ? l : "") && null != t ? n : null
+  return null != l && d.test(null != t ? t : "") && null != n ? l : null
 }
 
 function u(e) {
   let {
-    className: l,
+    className: t,
     embed: {
-      url: t,
+      url: n,
       thumbnail: r
     }
   } = e;
-  if (null == t || null == r) return null;
-  let s = d(t);
-  if (null == s) return null;
-  let o = s.query.iframe_url;
-  if (null == o || Array.isArray(o) || null == d(o)) return null;
+  if (null == n || null == r) return null;
+  let a = s(n);
+  if (null == a) return null;
+  let d = a.query.iframe_url;
+  if (null == d || Array.isArray(d) || null == s(d)) return null;
   let {
     width: u,
-    height: h
-  } = r, c = u, m = h;
-  return (u > 500 || h > 400) && (u > h ? (c = 500, m = 500 * h / u) : (c = 400 * u / h, m = 400)), (0, n.jsx)("iframe", {
-    className: i()(a.embedAmazonMusic, l),
-    src: o,
+    height: m
+  } = r, h = u, c = m;
+  return (u > 500 || m > 400) && (u > m ? (h = 500, c = 500 * m / u) : (h = 400 * u / m, c = 400)), (0, l.jsx)("iframe", {
+    className: i()(o.embedAmazonMusic, t),
+    src: d,
     style: {
-      width: c,
-      height: m
+      width: h,
+      height: c
     },
     frameBorder: 0,
     sandbox: "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

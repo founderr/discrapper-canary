@@ -25,20 +25,20 @@ function h() {
   } = (0, I.Xo)(e => ({
     debugTrackedData: e.debugTrackedData,
     impressions: e.impressions
-  })), n = (0, a.e7)([_.default], () => _.default.isAnalyticsDebuggerEnabled), s = (0, a.e7)([u.Z], () => u.Z.isDeveloper), [h, S] = r.useState(!1), {
-    name: f,
-    ...N
-  } = null != e ? e : {}, A = null != f;
+  })), n = (0, a.e7)([_.default], () => _.default.isAnalyticsDebuggerEnabled), s = (0, a.e7)([u.Z], () => u.Z.isDeveloper), [h, f] = r.useState(!1), {
+    name: S,
+    ...A
+  } = null != e ? e : {}, N = null != S;
   return s && n ? (0, i.jsx)(E.ZP, {
     children: (0, i.jsxs)("div", {
       className: o()(T.container, {
         [T.containerMinimized]: h,
-        [T.notTracked]: !A
+        [T.notTracked]: !N
       }),
       children: [(0, i.jsx)(l.Clickable, {
         className: T.minimizeButton,
         onClick: () => {
-          S(!h)
+          f(!h)
         },
         children: h ? (0, i.jsx)(c.Z, {}) : (0, i.jsx)(d.Z, {})
       }), (0, i.jsxs)("div", {
@@ -47,10 +47,10 @@ function h() {
         }),
         children: [(0, i.jsxs)(l.Text, {
           className: o()(T.label, {
-            [T.notTracked]: !A
+            [T.notTracked]: !N
           }),
           variant: "text-xxs/normal",
-          children: [A ? (0, i.jsx)(l.CircleCheckIcon, {
+          children: [N ? (0, i.jsx)(l.CircleCheckIcon, {
             size: "md",
             color: "currentColor",
             className: T.iconTracked
@@ -58,13 +58,13 @@ function h() {
             size: "md",
             color: "currentColor",
             className: T.iconNotTracked
-          }), null != f ? f : "(untracked)"]
+          }), null != S ? S : "(untracked)"]
         }), (0, i.jsx)("div", {
           className: T.current,
-          children: JSON.stringify(N, void 0, 2)
+          children: JSON.stringify(A, void 0, 2)
         }), (0, i.jsx)(l.Text, {
           className: o()(T.label, {
-            [T.notTracked]: !A
+            [T.notTracked]: !N
           }),
           variant: "text-xxs/normal",
           children: "impressions stack"

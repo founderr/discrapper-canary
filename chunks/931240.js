@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Ii: function() {
-    return f
+    return S
   },
   LX: function() {
     return E
@@ -10,13 +10,13 @@ n.d(t, {
     return c
   },
   Zx: function() {
-    return A
+    return N
   },
   _9: function() {
     return I
   },
   aH: function() {
-    return S
+    return f
   },
   mf: function() {
     return T
@@ -25,7 +25,7 @@ n.d(t, {
     return d
   },
   nr: function() {
-    return N
+    return A
   },
   sv: function() {
     return _
@@ -148,7 +148,7 @@ let h = e => {
     brandSecondaryColor: e.brand_color_secondary
   }
 };
-async function S(e) {
+async function f(e) {
   r.Z.dispatch({
     type: "CLAN_SETTINGS_FETCH_START"
   });
@@ -161,7 +161,7 @@ async function S(e) {
     settings: h(t.body)
   })
 }
-async function f(e, t) {
+async function S(e, t) {
   r.Z.dispatch({
     type: "CLAN_SETTINGS_SUBMIT",
     guildId: e
@@ -198,7 +198,7 @@ async function f(e, t) {
     }), e
   }
 }
-async function N(e) {
+async function A(e) {
   try {
     await i.tn.post({
       url: l.ANM.DISABLE_CLAN(e)
@@ -207,7 +207,7 @@ async function N(e) {
     throw e
   }
 }
-async function A(e) {
+async function N(e) {
   try {
     await i.tn.post({
       url: l.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e)

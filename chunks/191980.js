@@ -1,21 +1,21 @@
 n.d(t, {
   $: function() {
-    return i
+    return l
   },
   C: function() {
-    return a
+    return i
   }
 });
-var l = n(570140);
+var c = n(570140);
 
-function i() {
-  l.Z.dispatch({
+function l() {
+  c.Z.dispatch({
     type: "SHOW_KEYBOARD_SHORTCUTS"
   })
 }
 
-function a() {
-  l.Z.dispatch({
+function i() {
+  c.Z.dispatch({
     type: "HIDE_KEYBOARD_SHORTCUTS"
   })
 }

@@ -14,7 +14,7 @@ let a = /\n{2,}$/,
   I = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
   T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
   h = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
-  S = {
+  f = {
     ...o().defaultRules.list,
     requiredFirstCharacters: " *-0123456789".split(""),
     match: (e, t) => {
@@ -43,15 +43,15 @@ let a = /\n{2,}$/,
           u = d;
           let I = n.inline,
             T = n._list,
-            S = n._listLevel;
-          n._list = !0, n._listLevel = (null != S ? S : 0) + 1, d ? (n.inline = !1, r = a.replace(E, "\n\n")) : (n.inline = !0, r = a.replace(E, ""));
-          let f = h(t(r, {
+            f = n._listLevel;
+          n._list = !0, n._listLevel = (null != f ? f : 0) + 1, d ? (n.inline = !1, r = a.replace(E, "\n\n")) : (n.inline = !0, r = a.replace(E, ""));
+          let S = h(t(r, {
             ...n,
             allowHeading: !1
           }));
-          return n.inline = I, n._list = T, n._listLevel = S, f
+          return n.inline = I, n._list = T, n._listLevel = f, S
         })
       }
     }
   };
-t.Z = S
+t.Z = f

@@ -10,38 +10,38 @@ let E = new Set,
   I = new Set,
   T = new Map,
   h = new Map,
-  S = new Map;
+  f = new Map;
 
-function f(e) {
+function S(e) {
   T.set(e.id, c.Z.createFromServer(e)), E.delete(e.id), I.delete(e.id), !h.has(e.application_id) && h.set(e.application_id, new Set), h.get(e.application_id).add(e.id)
 }
 
-function N(e) {
-  f(e)
+function A(e) {
+  S(e)
 }
 
-function A(e) {
-  f(e.sku), null != e.child_skus && e.child_skus.forEach(e => f(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => f(e))
+function N(e) {
+  S(e.sku), null != e.child_skus && e.child_skus.forEach(e => S(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => S(e))
 }
 
 function m(e) {
   let {
     entitlements: t
   } = e;
-  for (let e of t) null != e.sku && f(e.sku)
+  for (let e of t) null != e.sku && S(e.sku)
 }
 
 function O() {
-  E = new Set, I = new Set, T = new Map, h = new Map, S = new Map
+  E = new Set, I = new Set, T = new Map, h = new Map, f = new Map
 }
 
-function R() {
+function p() {
   if (i === _.default.locale) return !1;
   i = _.default.locale, O()
 }
-class p extends(r = l.yh) {
+class R extends(r = l.yh) {
   initialize() {
-    this.waitFor(_.default, d.Z), this.syncWith([_.default], R), i = _.default.locale
+    this.waitFor(_.default, d.Z), this.syncWith([_.default], p), i = _.default.locale
   }
   get(e) {
     return T.get(e)
@@ -60,30 +60,30 @@ class p extends(r = l.yh) {
     return I.has(e)
   }
 }
-a = "SKUStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
+a = "SKUStore", (o = "displayName") in(s = R) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new p(u.Z, {
+}) : s[o] = a, t.Z = new R(u.Z, {
   STORE_LISTINGS_FETCH_SUCCESS: function(e) {
     let {
       storeListings: t
     } = e;
-    for (let e of t) A(e)
+    for (let e of t) N(e)
   },
   STORE_LISTING_FETCH_SUCCESS: function(e) {
     let {
       storeListing: t
     } = e;
-    A(t)
+    N(t)
   },
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t
     } = e;
     if (null == t.store_listing) return !1;
-    f(t.store_listing.sku)
+    S(t.store_listing.sku)
   },
   SKU_FETCH_START: function(e) {
     let {
@@ -95,7 +95,7 @@ a = "SKUStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
     let {
       sku: t
     } = e;
-    f(t)
+    S(t)
   },
   SKU_FETCH_FAIL: function(e) {
     let {
@@ -108,8 +108,8 @@ a = "SKUStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
       guildId: t,
       skus: n
     } = e;
-    for (let e of n) f(e);
-    null != t && S.set(t, new Set(n.map(e => e.id)))
+    for (let e of n) S(e);
+    null != t && f.set(t, new Set(n.map(e => e.id)))
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
   APPLICATION_STORE_CLEAR_DATA: O,

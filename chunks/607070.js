@@ -51,7 +51,7 @@ let I = {
     20: "font-size-20",
     24: "font-size-24"
   };
-class S extends(i = r.ZP.DeviceSettingsStore) {
+class f extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(u.Z), isNaN((T = {
       ...I,
@@ -169,7 +169,7 @@ class S extends(i = r.ZP.DeviceSettingsStore) {
     return T
   }
 }
-E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStore"), E(S, "migrations", [() => {
+E(f, "displayName", "AccessibilityStore"), E(f, "persistKey", "AccessibilityStore"), E(f, "migrations", [() => {
   let e = "a11yFontScale",
     t = "a11yZoom",
     n = "a11yColorblindMode",
@@ -232,7 +232,7 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
   } catch (e) {}
   return e
 }]);
-let f = new S(a.Z, {
+let S = new f(a.Z, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
     var t;
     let n = (t = e.fontSize, c.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : c.yqN.FONT_SIZE_DEFAULT);
@@ -381,4 +381,4 @@ let f = new S(a.Z, {
     }
   }
 });
-t.Z = f
+t.Z = S

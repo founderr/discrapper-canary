@@ -3,23 +3,23 @@ n.d(t, {
     return s
   },
   Z: function() {
-    return v
+    return _
   }
 });
-var i, s, a = n(735250),
-  l = n(470079),
-  o = n(120356),
-  r = n.n(o),
-  u = n(500923),
-  c = n.n(u),
+var i, s, o = n(735250),
+  a = n(470079),
+  l = n(120356),
+  r = n.n(l),
+  c = n(500923),
+  u = n.n(c),
   d = n(570140),
   h = n(960020),
   m = n(831244),
   p = n(815605),
   g = n(981631),
-  T = n(114905);
+  f = n(114905);
 (i = s || (s = {}))[i.NORMAL = 16] = "NORMAL", i[i.LARGE = 32] = "LARGE";
-let f = async e => {
+let T = async e => {
   var t;
   let {
     effect: n
@@ -27,22 +27,22 @@ let f = async e => {
   return s.assets[0].p = n.url, s
 };
 
-function v(e) {
+function _(e) {
   let {
     className: t,
     effect: n,
     onComplete: i,
     emojiSize: s = 16
-  } = e, o = l.useRef(null), u = s * p.Vz, m = (u + s) / 2;
-  return l.useEffect(() => {
+  } = e, l = a.useRef(null), c = s * p.Vz, m = (c + s) / 2;
+  return a.useEffect(() => {
     let e;
     if (null != n) return !async function() {
-      if (null != o.current) {
-        let t = await f({
+      if (null != l.current) {
+        let t = await T({
           effect: n
         });
-        (e = c().loadAnimation({
-          container: o.current,
+        (e = u().loadAnimation({
+          container: l.current,
           renderer: "svg",
           loop: !1,
           autoplay: !0,
@@ -60,16 +60,16 @@ function v(e) {
     }(), () => {
       null != e && e.destroy()
     }
-  }, [i, n, s]), (0, a.jsx)("div", {
-    className: T.effectsWrapper,
-    children: (0, a.jsx)("div", {
-      className: r()(T.effect, t),
+  }, [i, n, s]), (0, o.jsx)("div", {
+    className: f.effectsWrapper,
+    children: (0, o.jsx)("div", {
+      className: r()(f.effect, t),
       style: {
         transform: "translateY(".concat(m, "px)"),
-        height: u,
-        width: u
+        height: c,
+        width: c
       },
-      ref: o
+      ref: l
     })
   })
 }

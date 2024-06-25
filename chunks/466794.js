@@ -1,26 +1,26 @@
 n.d(t, {
   X: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(842333);
+var a = n(481060),
+  s = n(842333);
 
-function a(e) {
+function l(e) {
   let {
     tooltipText: t,
     textColor: n
   } = e;
-  return (0, s.jsxs)("span", {
-    className: l.tooltipTextContainer,
-    children: [(0, s.jsx)(i.NitroWheelIcon, {
+  return (0, i.jsxs)("span", {
+    className: s.tooltipTextContainer,
+    children: [(0, i.jsx)(a.NitroWheelIcon, {
       size: "md",
       color: "currentColor",
-      className: l.nitroWheel
-    }), (0, s.jsx)(i.Text, {
-      className: l.tooltipText,
+      className: s.nitroWheel
+    }), (0, i.jsx)(a.Text, {
+      className: s.tooltipText,
       variant: "text-sm/medium",
       color: null != n ? n : "text-normal",
       children: t

@@ -1,60 +1,60 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(252618),
-  r = n(900849),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(252618),
+  l = n(900849),
   o = n(526383),
   c = n(602597),
-  u = n(731455),
-  d = n(689938),
-  E = n(939502),
-  h = n(661278);
+  d = n(731455),
+  u = n(689938),
+  _ = n(939502),
+  E = n(661278);
 t.Z = e => {
   let {
     loadId: t
   } = e, n = (0, o.Z)();
-  return i.useEffect(() => {
-    (0, r.Zt)({
+  return s.useEffect(() => {
+    (0, l.Zt)({
       loadId: t,
       gamesYouPlayGuilds: [],
       allGuilds: [],
-      categoryId: u.U
+      categoryId: d.U
     })
-  }, [t]), (0, a.Tt)({
-    subsection: d.Z.Messages.HUB_SCHOOL_HUBS,
-    location: d.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
-  }), (0, s.jsx)(l.Scroller, {
-    className: E.scroller,
-    children: (0, s.jsxs)("div", {
-      className: E.viewWrapper,
-      children: [(0, s.jsxs)("div", {
-        className: E.headerContainer,
-        children: [(0, s.jsx)("img", {
+  }, [t]), (0, r.Tt)({
+    subsection: u.Z.Messages.HUB_SCHOOL_HUBS,
+    location: u.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
+  }), (0, i.jsx)(a.Scroller, {
+    className: _.scroller,
+    children: (0, i.jsxs)("div", {
+      className: _.viewWrapper,
+      children: [(0, i.jsxs)("div", {
+        className: _.headerContainer,
+        children: [(0, i.jsx)("img", {
           alt: "",
-          className: E.headerImage,
-          src: h
-        }), (0, s.jsxs)("div", {
-          className: E.headerContent,
-          children: [(0, s.jsx)(l.Heading, {
-            className: E.headerText,
+          className: _.headerImage,
+          src: E
+        }), (0, i.jsxs)("div", {
+          className: _.headerContent,
+          children: [(0, i.jsx)(a.Heading, {
+            className: _.headerText,
             variant: "heading-xl/semibold",
-            children: d.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
-          }), (0, s.jsx)(l.Text, {
-            className: E.headerDescription,
+            children: u.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
+          }), (0, i.jsx)(a.Text, {
+            className: _.headerDescription,
             variant: "text-md/normal",
             color: "none",
-            children: d.Z.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
+            children: u.Z.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
           })]
         })]
-      }), (0, s.jsx)(c.Z, {
+      }), (0, i.jsx)(c.Z, {
         guilds: n
-      }), (0, s.jsx)("div", {
-        className: E.divider
-      }), (0, s.jsx)(l.Text, {
-        className: E.footerDescription,
+      }), (0, i.jsx)("div", {
+        className: _.divider
+      }), (0, i.jsx)(a.Text, {
+        className: _.footerDescription,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: d.Z.Messages.HUB_DISCOVERY_FOOTER_DESCRIPTION
+        children: u.Z.Messages.HUB_DISCOVERY_FOOTER_DESCRIPTION
       })]
     })
   })

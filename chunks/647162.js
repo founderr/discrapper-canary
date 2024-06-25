@@ -10,7 +10,7 @@ n.d(t, {
     return T
   },
   iy: function() {
-    return f
+    return S
   },
   yp: function() {
     return h
@@ -86,20 +86,20 @@ function h() {
   })
 }
 
-function S(e) {
+function f(e) {
   if ("string" == typeof e) return e;
   throw Error("value is not a string")
 }
-async function f(e, t) {
+async function S(e, t) {
   var n;
   let r = await (0, i.sd)(e, t),
-    s = (0, _.c8)(S(null !== (n = r.type) && void 0 !== n ? n : _.Hw.TRACK));
+    s = (0, _.c8)(f(null !== (n = r.type) && void 0 !== n ? n : _.Hw.TRACK));
   if (null === s) throw Error("invalid type ".concat(r.type));
   return {
     context_uri: "string" == typeof r.context_uri ? r.context_uri : void 0,
-    album_id: S(r.album_id),
-    artist_ids: Array.isArray(r.artist_ids) ? r.artist_ids.map(S) : [],
+    album_id: f(r.album_id),
+    artist_ids: Array.isArray(r.artist_ids) ? r.artist_ids.map(f) : [],
     type: s,
-    button_urls: Array.isArray(r.button_urls) ? r.button_urls.map(S) : []
+    button_urls: Array.isArray(r.button_urls) ? r.button_urls.map(f) : []
   }
 }

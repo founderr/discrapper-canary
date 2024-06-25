@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   g: function() {
-    return S
+    return f
   },
   s: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i = n(392711),
@@ -37,7 +37,7 @@ function h(e) {
   return i && r && e.hasFeature(I.oNc.COMMUNITY) && !(e.hasFeature(I.oNc.GUILD_ONBOARDING) && !s)
 }
 
-function S(e) {
+function f(e) {
   let {
     homeSettingsEnabled: t
   } = c.ZP.useExperiment({
@@ -57,7 +57,7 @@ function S(e) {
   }, [e, t, n, i])
 }
 
-function f(e) {
+function S(e) {
   let t = u.Z.getGuild(e),
     {
       homeSettingsEnabled: n

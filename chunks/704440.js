@@ -18,18 +18,18 @@ var i = n(735250),
   I = n(626135),
   T = n(55935),
   h = n(63063),
-  S = n(281494),
-  f = n(790368),
-  N = n(474936),
-  A = n(981631),
+  f = n(281494),
+  S = n(790368),
+  A = n(474936),
+  N = n(981631),
   m = n(689938),
   O = n(752423),
-  R = n(751599),
-  p = n(397293),
+  p = n(751599),
+  R = n(397293),
   g = n(352175),
   C = n(90351);
 let v = async (e, t, n) => {
-  n(!0), await (0, S.Eo)(e).then(() => {
+  n(!0), await (0, f.Eo)(e).then(() => {
     t(), (0, c.Ou)()
   }).finally(() => {
     n(!1)
@@ -54,7 +54,7 @@ let v = async (e, t, n) => {
         className: O.closeButton
       }), (0, i.jsx)("img", {
         alt: "",
-        src: l ? p : g,
+        src: l ? R : g,
         className: O.confirmationImage
       }), (0, i.jsx)(_.Heading, {
         variant: "heading-xl/bold",
@@ -77,9 +77,9 @@ let v = async (e, t, n) => {
         className: O.confirmationShareButton,
         submitting: u,
         onClick: () => {
-          v(s, t, c), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
+          v(s, t, c), I.default.track(N.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: a,
-            step: N.fz.FLOW_COMPLETED,
+            step: A.fz.FLOW_COMPLETED,
             other_user_id: Number(s)
           })
         },
@@ -105,11 +105,11 @@ function D(e) {
     channel: n,
     onClose: s,
     isResending: a
-  } = e, [u, c] = r.useState(!1), [S, g] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+  } = e, [u, c] = r.useState(!1), [f, g] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
     analyticsLocations: M
   } = (0, E.ZP)(d.Z.REFERRAL_TRIALS_POPOUT), {
     enabled: P
-  } = f.Z.useExperiment({
+  } = S.Z.useExperiment({
     location: "200c24_1"
   }, {
     autoTrackExposure: !0
@@ -126,7 +126,7 @@ function D(e) {
       className: O.generalBodyContainer,
       children: [(0, i.jsx)("img", {
         alt: "",
-        src: P ? p : C,
+        src: P ? R : C,
         className: O.generalBodyImage
       }), (0, i.jsxs)("div", {
         className: O.innerContent,
@@ -144,7 +144,7 @@ function D(e) {
             className: o()(O.learnMore, {
               [O.learnMoreResendUnderlinedText]: a
             }),
-            href: h.Z.getArticleURL(A.BhN.SHARE_NITRO_FAQ),
+            href: h.Z.getArticleURL(N.BhN.SHARE_NITRO_FAQ),
             children: a ? m.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : m.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
               count: t
             })
@@ -159,18 +159,18 @@ function D(e) {
         })]
       }), P && (0, i.jsx)("img", {
         alt: "",
-        src: R,
+        src: p,
         className: O.birthdayBackgroundImage
       })]
     }), (0, i.jsx)("div", {
       className: O.generalButtonContainer,
       children: (0, i.jsx)(_.Button, {
         className: O.generalShareButton,
-        submitting: S,
+        submitting: f,
         onClick: () => {
-          a ? v(D, s, g) : (c(!0), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
+          a ? v(D, s, g) : (c(!0), I.default.track(N.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
-            step: N.fz.FLOW_STARTED,
+            step: A.fz.FLOW_STARTED,
             other_user_id: Number(D)
           }))
         },

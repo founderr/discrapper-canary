@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 });
 var i = n(470079),
@@ -23,7 +23,7 @@ let h = (0, l.trackMaker)({
   TRACK_ACTION_NAME: "TRACK"
 });
 
-function S(e) {
+function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       disableTrack: !1,
       trackOnInitialLoad: !1
@@ -36,7 +36,7 @@ function S(e) {
     i && (r.current = e);
     let u = !s()(o.current, n);
     if (u && (o.current = n), !i && !u) return;
-    let S = {
+    let f = {
       ...e,
       sequenceId: a()("impression_")
     };
@@ -55,7 +55,7 @@ function S(e) {
       (0, T.Ps)(e);
       let a = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : d.Z.getGuildId(),
         u = null !== (n = null == o ? void 0 : o.channel_id) && void 0 !== n ? n : c.Z.getChannelId(a),
-        S = (0, E.expandEventProperties)({
+        f = (0, E.expandEventProperties)({
           impression_type: s,
           location: (0, T.k$)(),
           ...(0, I.hH)(a),
@@ -66,9 +66,9 @@ function S(e) {
         (0, T.dT)(null, null);
         return
       }
-      null != r && null != s && ((0, E.debugLogEvent)(r, S), h(r, S)), (0, T.dT)(r, S)
-    }(S, t.disableTrack), () => {
-      null != S && (0, T.dw)(S)
+      null != r && null != s && ((0, E.debugLogEvent)(r, f), h(r, f)), (0, T.dT)(r, f)
+    }(f, t.disableTrack), () => {
+      null != f && (0, T.dw)(f)
     }
   }, t.trackOnInitialLoad ? [] : void 0)
 }

@@ -1,34 +1,34 @@
 n(653041), n(47120);
-var s = n(243814),
-  i = n(100527),
-  l = n(208049),
-  a = n(763296),
-  r = n(697426),
+var i = n(243814),
+  s = n(100527),
+  a = n(208049),
+  r = n(763296),
+  l = n(697426),
   o = n(242291),
   c = n(641015),
-  u = n(594174),
-  d = n(996106),
-  E = n(452426),
-  h = n(736045),
-  _ = n(186901),
+  d = n(594174),
+  u = n(996106),
+  _ = n(452426),
+  E = n(736045),
+  h = n(186901),
   I = n(231338);
 t.Z = {
   [I.Et.GET_SOUNDBOARD_SOUNDS]: {
     scope: {
-      [_.Gp.ANY]: [s.x.RPC, _.lH]
+      [h.Gp.ANY]: [i.x.RPC, h.lH]
     },
     async handler() {
-      await (0, l.w)();
-      let e = a.Z.getSounds(),
+      await (0, a.w)();
+      let e = r.Z.getSounds(),
         t = [];
-      return e.forEach(e => e.forEach(e => t.push((0, r.QL)(e)))), t
+      return e.forEach(e => e.forEach(e => t.push((0, l.QL)(e)))), t
     }
   },
   [I.Et.PLAY_SOUNDBOARD_SOUND]: {
     scope: {
-      [_.Gp.ALL]: [s.x.RPC, s.x.RPC_VOICE_WRITE]
+      [h.Gp.ALL]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
     },
-    validation: e => (0, E.Z)(e).required().keys({
+    validation: e => (0, _.Z)(e).required().keys({
       guild_id: e.string(),
       sound_id: e.string()
     }),
@@ -39,20 +39,20 @@ t.Z = {
           sound_id: n
         }
       } = e;
-      await (0, l.w)();
-      let s = u.default.getCurrentUser(),
-        r = a.Z.getSound(t, n),
-        E = (0, h.Z)(),
-        _ = null != r && null != s && (0, o.Nq)(s, r, E);
-      if (null == E) throw new d.Z({
+      await (0, a.w)();
+      let i = d.default.getCurrentUser(),
+        l = r.Z.getSound(t, n),
+        _ = (0, E.Z)(),
+        h = null != l && null != i && (0, o.Nq)(i, l, _);
+      if (null == _) throw new u.Z({
         errorCode: I.lT.INVALID_CHANNEL
       }, "Invalid Channel.");
-      if (_) {
-        if ((0, c.Z)(E)) null != r && (0, o.GN)(r, E.id, [i.Z.RPC]);
-        else throw new d.Z({
+      if (h) {
+        if ((0, c.Z)(_)) null != l && (0, o.GN)(l, _.id, [s.Z.RPC]);
+        else throw new u.Z({
           errorCode: I.lT.INVALID_PERMISSIONS
         }, "Invalid Permissions.")
-      } else throw new d.Z({
+      } else throw new u.Z({
         errorCode: I.lT.INVALID_SOUND
       }, "Invalid Sound.")
     }

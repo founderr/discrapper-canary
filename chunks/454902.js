@@ -4,23 +4,23 @@ n.d(t, {
     return s
   },
   QR: function() {
-    return I
+    return Z
   },
   Yj: function() {
-    return S
+    return I
   }
 });
-var i, s, l, o = n(735250),
-  a = n(470079),
-  r = n(120356),
-  c = n.n(r),
+var i, s, a, o = n(735250),
+  r = n(470079),
+  l = n(120356),
+  c = n.n(l),
   d = n(481060),
   u = n(376218),
   h = n(689938),
   p = n(295687),
   f = n(331651);
 
-function E(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,10 +35,10 @@ let g = e => e.stopPropagation(),
     onMouseEnter: g,
     onMouseOver: g
   }),
-  Z = () => (0, o.jsx)("div", {
+  E = () => (0, o.jsx)("div", {
     className: p.divider
   }),
-  I = (e, t, n) => (0, o.jsx)("div", {
+  Z = (e, t, n) => (0, o.jsx)("div", {
     className: p.keybindMessage,
     children: n.format({
       keybind: t,
@@ -48,12 +48,12 @@ let g = e => e.stopPropagation(),
       }, n)
     })
   }),
-  S = (e, t) => (0, o.jsx)("div", {
+  I = (e, t) => (0, o.jsx)("div", {
     className: p.hintSubtleText,
     children: t
   });
 (i = s || (s = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
-class _ extends(l = a.PureComponent) {
+class S extends(a = r.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       expand: n
@@ -103,12 +103,12 @@ class _ extends(l = a.PureComponent) {
     if (null == e) return null;
     if ("function" == typeof e) {
       let i = e(n, t);
-      return null != i ? (0, o.jsxs)(a.Fragment, {
-        children: [(0, o.jsx)(Z, {}), i]
+      return null != i ? (0, o.jsxs)(r.Fragment, {
+        children: [(0, o.jsx)(E, {}), i]
       }, "hint-custom") : null
     }
-    return (0, o.jsxs)(a.Fragment, {
-      children: [(0, o.jsx)(Z, {}), (0, o.jsx)("div", {
+    return (0, o.jsxs)(r.Fragment, {
+      children: [(0, o.jsx)(E, {}), (0, o.jsx)("div", {
         className: "string" == typeof e ? p.hintText : void 0,
         children: e
       }, "hint-text")]
@@ -122,31 +122,31 @@ class _ extends(l = a.PureComponent) {
         confirmText: n,
         onConfirmClick: i,
         onCancelClick: s,
-        hint: l,
-        colorScheme: r
+        hint: a,
+        colorScheme: l
       },
       state: {
         expanded: c
       }
     } = this;
-    if (!c) return null != l ? this.renderHint() : null;
+    if (!c) return null != a ? this.renderHint() : null;
     if (null != e) {
-      let t = e(c, r);
-      return null != t ? (0, o.jsxs)(a.Fragment, {
-        children: [(0, o.jsx)(Z, {}), t]
+      let t = e(c, l);
+      return null != t ? (0, o.jsxs)(r.Fragment, {
+        children: [(0, o.jsx)(E, {}), t]
       }, "footer-custom-content") : null
     }
     if (null != i || null != s) {
       let e = d.Button.Colors.GREEN,
-        l = d.Button.Colors.PRIMARY,
+        a = d.Button.Colors.PRIMARY,
         c = d.Button.Looks.FILLED;
-      switch (r) {
+      switch (l) {
         case "DANGER":
         case "BRAND":
-          e = l = d.Button.Colors.WHITE, c = d.Button.Looks.OUTLINED
+          e = a = d.Button.Colors.WHITE, c = d.Button.Looks.OUTLINED
       }
-      return (0, o.jsxs)(a.Fragment, {
-        children: [(0, o.jsx)(Z, {}), (0, o.jsxs)("div", {
+      return (0, o.jsxs)(r.Fragment, {
+        children: [(0, o.jsx)(E, {}), (0, o.jsxs)("div", {
           className: p.buttonContainer,
           children: [null != i ? (0, o.jsx)(d.Button, {
             fullWidth: !0,
@@ -160,7 +160,7 @@ class _ extends(l = a.PureComponent) {
             fullWidth: !0,
             size: d.Button.Sizes.SMALL,
             look: c,
-            color: l,
+            color: a,
             onClick: this.handleCancelClick,
             className: p.button,
             children: null != t ? t : h.Z.Messages.CANCEL
@@ -233,25 +233,25 @@ class _ extends(l = a.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), E(this, "handleDismiss", e => {
+    super(e), _(this, "handleDismiss", e => {
       e.stopPropagation();
       let {
         onDismissClick: t
       } = this.props;
       null == t || t(e)
-    }), E(this, "handleConfirmClick", e => {
+    }), _(this, "handleConfirmClick", e => {
       e.stopPropagation();
       let {
         onConfirmClick: t
       } = this.props;
       null == t || t(e)
-    }), E(this, "handleCancelClick", e => {
+    }), _(this, "handleCancelClick", e => {
       e.stopPropagation();
       let {
         onCancelClick: t
       } = this.props;
       null == t || t(e)
-    }), E(this, "handleMouseEnter", () => {
+    }), _(this, "handleMouseEnter", () => {
       !this.props.disabled && this.setState({
         expanded: !0
       })
@@ -264,9 +264,9 @@ class _ extends(l = a.PureComponent) {
     }
   }
 }
-E(_, "ColorSchemes", s), E(_, "defaultProps", {
+_(S, "ColorSchemes", s), _(S, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
-}), t.ZP = _
+}), t.ZP = S

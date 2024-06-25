@@ -1,114 +1,114 @@
-s.d(i, {
+i.d(n, {
   Z: function() {
-    return R
+    return T
   }
-}), s(47120);
-var n = s(735250);
-s(470079);
-var l = s(442837),
-  t = s(481060),
-  o = s(100527),
-  r = s(906732),
-  a = s(158776),
-  d = s(5192),
-  c = s(785717),
-  u = s(318661),
-  I = s(741308),
-  E = s(681837),
-  Z = s(502762),
-  f = s(530),
-  _ = s(544989),
-  S = s(272510),
-  v = s(740021),
-  m = s(616140),
-  x = s(29530),
-  h = s(228168),
-  N = s(981631),
-  g = s(689938),
-  T = s(327570);
+}), i(47120);
+var t = i(735250);
+i(470079);
+var s = i(442837),
+  o = i(481060),
+  l = i(100527),
+  a = i(906732),
+  r = i(158776),
+  d = i(5192),
+  c = i(785717),
+  u = i(318661),
+  I = i(741308),
+  f = i(681837),
+  E = i(502762),
+  _ = i(530),
+  S = i(544989),
+  Z = i(272510),
+  m = i(740021),
+  v = i(616140),
+  x = i(29530),
+  h = i(228168),
+  g = i(981631),
+  N = i(689938),
+  p = i(327570);
 
-function R(e) {
+function T(e) {
   let {
-    user: i,
-    currentUser: s,
-    guildId: R,
+    user: n,
+    currentUser: i,
+    guildId: T,
     channelId: C,
-    messageId: A,
-    roleId: M,
-    initialSection: p,
+    messageId: R,
+    roleId: A,
+    initialSection: M,
     initialSubsection: j,
     transitionState: U,
-    onClose: L,
-    sourceAnalyticsLocations: O = []
-  } = e, P = R === N.ME ? void 0 : R, y = (0, u.ZP)(i.id, P), {
-    analyticsLocations: D
-  } = (0, r.ZP)([...O, o.Z.SIMPLIFIED_PROFILE_MODAL]), F = (0, l.e7)([a.Z], () => a.Z.findActivity(i.id, e => {
+    onClose: P,
+    sourceAnalyticsLocations: L = []
+  } = e, O = T === g.ME ? void 0 : T, y = (0, u.ZP)(n.id, O), {
+    analyticsLocations: b
+  } = (0, a.ZP)([...L, l.Z.SIMPLIFIED_PROFILE_MODAL]), D = (0, s.e7)([r.Z], () => r.Z.findActivity(n.id, e => {
     let {
-      type: i
+      type: n
     } = e;
-    return i === N.IIU.CUSTOM_STATUS
-  })), b = (0, x.Z)(i);
-  return (0, n.jsx)(r.Gt, {
-    value: D,
-    children: (0, n.jsx)(c.Mt, {
+    return n === g.IIU.CUSTOM_STATUS
+  })), F = (0, x.Z)(n);
+  return (0, t.jsx)(a.Gt, {
+    value: b,
+    children: (0, t.jsx)(c.Mt, {
       layout: "SIMPLIFIED_MODAL",
-      userId: i.id,
-      guildId: P,
+      userId: n.id,
+      guildId: O,
       channelId: C,
-      messageId: A,
-      roleId: M,
+      messageId: R,
+      roleId: A,
       showGuildProfile: !0,
-      children: (0, n.jsx)(t.ModalRoot, {
+      children: (0, t.jsx)(o.ModalRoot, {
         transitionState: U,
-        className: T.root,
+        className: p.root,
         hideShadow: !0,
-        "aria-label": g.Z.Messages.USER_PROFILE_MODAL,
-        children: (0, n.jsxs)(Z.Z, {
-          user: i,
+        "aria-label": N.Z.Messages.USER_PROFILE_MODAL,
+        children: (0, t.jsxs)(E.Z, {
+          user: n,
           displayProfile: y,
           profileType: h.y0.FULL_SIZE,
-          children: [(0, n.jsx)(_.Z, {
+          children: [(0, t.jsx)(S.Z, {
             profileType: h.y0.FULL_SIZE,
-            children: (0, n.jsx)(S.Z, {
-              user: i,
+            children: (0, t.jsx)(Z.Z, {
+              user: n,
               profileType: h.y0.FULL_SIZE,
-              guildId: P
+              guildId: O
             })
-          }), (0, n.jsx)(v.Z, {
-            user: i,
+          }), (0, t.jsx)(m.Z, {
+            user: n,
             displayProfile: y,
-            guildId: P,
+            guildId: O,
             channelId: C,
             activity: void 0,
-            customStatusActivity: F,
+            customStatusActivity: D,
             transitionState: U,
-            onClose: L
-          }), (0, n.jsxs)("div", {
-            className: T.body,
-            children: [(0, n.jsx)(f.Z, {
-              user: i,
+            onClose: P
+          }), (0, t.jsxs)("div", {
+            className: p.body,
+            children: [(0, t.jsx)(_.Z, {
+              user: n,
               profileType: h.y0.FULL_SIZE,
-              nickname: d.ZP.getName(P, C, i),
+              nickname: d.ZP.getName(O, C, n),
               pronouns: null == y ? void 0 : y.pronouns,
               nicknameVariant: "heading-xl/bold",
-              nicknameIcons: (0, n.jsx)(E.Z, {
-                userId: i.id
+              nicknameIcons: (0, t.jsx)(f.Z, {
+                userId: n.id
               }),
-              tags: (0, n.jsx)(I.Z, {
+              tags: (0, t.jsx)(I.Z, {
                 displayProfile: y,
                 profileType: h.y0.FULL_SIZE,
-                onClose: L
+                onClose: P
               })
-            }), (0, n.jsx)(Z.Z.Overlay, {
-              className: T.overlay,
-              children: (0, n.jsx)(m.Z, {
-                user: i,
-                currentUser: s,
+            }), (0, t.jsx)(E.Z.Overlay, {
+              className: p.overlay,
+              children: (0, t.jsx)(v.Z, {
+                user: n,
+                currentUser: i,
                 displayProfile: y,
-                items: b,
-                initialSection: p,
+                items: F,
+                initialSection: M,
                 initialSubsection: j,
-                onClose: L
+                onClose: P
               })
             })]
           })]

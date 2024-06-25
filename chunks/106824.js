@@ -126,23 +126,23 @@ class c extends i.EventEmitter {
     r.allowStickers = r.allowStickers ? T : r.allowStickers;
     let {
       results: h,
-      metadata: S
-    } = d.queryResults(this.props.channel, this.props.guild, E, r, I), f = 0;
-    for (let e of Object.values(h)) Array.isArray(e) && (f += e.length);
-    let N = !0 === h.isLoading,
-      A = this.shouldShow(f, N, d),
+      metadata: f
+    } = d.queryResults(this.props.channel, this.props.guild, E, r, I), S = 0;
+    for (let e of Object.values(h)) Array.isArray(e) && (S += e.length);
+    let A = !0 === h.isLoading,
+      N = this.shouldShow(S, A, d),
       m = this.state.selectedIndex;
-    !A || N ? m = null : null != m && m >= f && (m = f - 1), A && !this.state.isVisible && (0, s.a7)(c, this.props.channel, S), this.setState({
+    !N || A ? m = null : null != m && m >= S && (m = S - 1), N && !this.state.isVisible && (0, s.a7)(c, this.props.channel, f), this.setState({
       query: {
         type: c,
         typeInfo: d,
         queryText: E,
         results: h,
-        resultCount: f,
+        resultCount: S,
         options: r,
-        isLoading: N
+        isLoading: A
       },
-      isVisible: A,
+      isVisible: N,
       selectedIndex: m
     })
   }

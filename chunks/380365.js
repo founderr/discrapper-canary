@@ -1,73 +1,73 @@
-var s = a(735250),
-  n = a(470079),
-  i = a(442837),
-  o = a(481060),
-  t = a(271383),
-  r = a(430824),
-  d = a(594174),
-  c = a(5192),
-  u = a(645896),
-  _ = a(979264),
-  m = a(308083),
-  v = a(689938),
-  A = a(457017);
-l.Z = n.memo(function(e) {
-  var l, a, n, N, x, g;
+var n = l(735250),
+  s = l(470079),
+  i = l(442837),
+  o = l(481060),
+  t = l(271383),
+  r = l(430824),
+  d = l(594174),
+  c = l(5192),
+  u = l(645896),
+  _ = l(979264),
+  m = l(308083),
+  v = l(689938),
+  x = l(457017);
+a.Z = s.memo(function(e) {
+  var a, l, s, C, g, A;
   let {
-    guildId: C,
+    guildId: N,
     isTagAdopted: h,
     onChangeUseTag: S
-  } = e, T = (0, u.Cc)(C), L = (0, i.e7)([r.Z], () => r.Z.getGuild(C)), E = null !== (N = null == T ? void 0 : null === (l = T.badge) || void 0 === l ? void 0 : l.imageHash) && void 0 !== N ? N : null == L ? void 0 : null === (a = L.clan) || void 0 === a ? void 0 : a.badge, j = null !== (x = null == T ? void 0 : T.tag) && void 0 !== x ? x : null == L ? void 0 : null === (n = L.clan) || void 0 === n ? void 0 : n.tag, M = (0, i.e7)([d.default], () => d.default.getCurrentUser()), D = (0, i.e7)([t.ZP], () => null != M ? t.ZP.getMember(C, M.id) : null);
-  return null == L || null == M || null == D || null == E ? null : (0, s.jsxs)("div", {
-    className: A.previewSection,
-    children: [(0, s.jsxs)("div", {
-      className: A.chatPreview,
-      children: [(0, s.jsx)(o.Avatar, {
-        src: M.getAvatarURL(C, 40),
+  } = e, T = (0, u.Cc)(N), f = (0, i.e7)([r.Z], () => r.Z.getGuild(N)), L = null !== (C = null == T ? void 0 : null === (a = T.badge) || void 0 === a ? void 0 : a.imageHash) && void 0 !== C ? C : null == f ? void 0 : null === (l = f.clan) || void 0 === l ? void 0 : l.badge, M = null !== (g = null == T ? void 0 : T.tag) && void 0 !== g ? g : null == f ? void 0 : null === (s = f.clan) || void 0 === s ? void 0 : s.tag, E = (0, i.e7)([d.default], () => d.default.getCurrentUser()), j = (0, i.e7)([t.ZP], () => null != E ? t.ZP.getMember(N, E.id) : null);
+  return null == f || null == E || null == j || null == L ? null : (0, n.jsxs)("div", {
+    className: x.previewSection,
+    children: [(0, n.jsxs)("div", {
+      className: x.chatPreview,
+      children: [(0, n.jsx)(o.Avatar, {
+        src: E.getAvatarURL(N, 40),
         size: o.AvatarSizes.SIZE_40,
         "aria-hidden": !0
-      }), (0, s.jsxs)("div", {
-        className: A.previewText,
-        children: [(0, s.jsxs)("div", {
-          className: A.userName,
-          children: [(0, s.jsx)(o.NameWithRole, {
-            className: A.userName,
-            name: c.ZP.getName(C, null, M),
-            color: null !== (g = D.colorString) && void 0 !== g ? g : void 0
-          }), h && (0, s.jsx)(_.aG, {
-            guildId: C,
-            clanBadge: E,
-            clanTag: j,
+      }), (0, n.jsxs)("div", {
+        className: x.previewText,
+        children: [(0, n.jsxs)("div", {
+          className: x.userName,
+          children: [(0, n.jsx)(o.NameWithRole, {
+            className: x.userName,
+            name: c.ZP.getName(N, null, E),
+            color: null !== (A = j.colorString) && void 0 !== A ? A : void 0
+          }), h && (0, n.jsx)(_.aG, {
+            guildId: N,
+            clanBadge: L,
+            clanTag: M,
             badgeSize: m.NC.SIZE_12,
             textVariant: "text-xs/semibold"
           })]
-        }), (0, s.jsx)("div", {
-          className: A.fakeMessage,
+        }), (0, n.jsx)("div", {
+          className: x.fakeMessage,
           style: {
             width: "80%"
           }
-        }), (0, s.jsx)("div", {
-          className: A.fakeMessage,
+        }), (0, n.jsx)("div", {
+          className: x.fakeMessage,
           style: {
             width: "50%"
           }
         })]
       })]
-    }), (0, s.jsx)("div", {
-      className: A.divider
-    }), (0, s.jsxs)("div", {
-      className: A.settingSection,
-      children: [(0, s.jsxs)("div", {
-        children: [(0, s.jsx)(o.Text, {
+    }), (0, n.jsx)("div", {
+      className: x.divider
+    }), (0, n.jsxs)("div", {
+      className: x.settingSection,
+      children: [(0, n.jsxs)("div", {
+        children: [(0, n.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "header-primary",
           children: v.Z.Messages.CLAN_SUCCESS_USE_TAG_TEXT
-        }), (0, s.jsx)(o.Text, {
+        }), (0, n.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: v.Z.Messages.CLAN_SUCCESS_USE_TAG_HELP
         })]
-      }), (0, s.jsx)(o.Switch, {
+      }), (0, n.jsx)(o.Switch, {
         onChange: S,
         checked: h
       })]

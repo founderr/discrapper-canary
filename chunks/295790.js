@@ -1,22 +1,22 @@
 n.d(t, {
   Z: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(901461),
-  l = n(815387);
+var a = n(901461),
+  s = n(815387);
 
-function a(e) {
+function l(e) {
   let {
     message: t,
     channel: n,
-    compact: a
+    compact: l
   } = e;
-  return (0, i.Z)(t) ? (0, s.jsx)(l.Z, {
+  return (0, a.Z)(t) ? (0, i.jsx)(s.Z, {
     message: t,
     channel: n,
-    compact: a
+    compact: l
   }) : null
 }

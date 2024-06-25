@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -19,25 +19,25 @@ var r = n(120356),
   I = n(221292),
   T = n(290421),
   h = n(228168),
-  S = n(981631),
-  f = n(689938),
-  N = n(255693);
+  f = n(981631),
+  S = n(689938),
+  A = n(255693);
 
-function A(e) {
+function N(e) {
   let {
     badges: t,
     className: n,
     badgeClassName: r,
-    onClose: A
+    onClose: N
   } = e, {
     analyticsLocations: m
   } = (0, u.ZP)(l.Z.BADGE), {
     trackUserProfileAction: O,
-    ...R
+    ...p
   } = (0, E.KZ)();
   return (0, i.jsx)("div", {
-    className: s()(N.container, n),
-    "aria-label": f.Z.Messages.PROFILE_USER_BADGES,
+    className: s()(A.container, n),
+    "aria-label": S.Z.Messages.PROFILE_USER_BADGES,
     role: "group",
     children: t.map(e => (0, i.jsx)(o.TooltipContainer, {
       text: e.description,
@@ -49,22 +49,22 @@ function A(e) {
           }), (0, I.NE)({
             badge: e.id,
             analyticsLocations: m,
-            ...R
+            ...p
           });
           let n = null != e.link ? (0, a.default)(e.link, {
             analyticsLocations: m
           }) : null;
-          if (null != n) return null == A || A(), n(t)
+          if (null != n) return null == N || N(), n(t)
         },
         onMouseEnter: () => {
-          e.id === T.i && d.default.track(S.rMx.QUEST_CONTENT_VIEWED, {
+          e.id === T.i && d.default.track(f.rMx.QUEST_CONTENT_VIEWED, {
             ...(0, _.mH)(c.jn.QUEST_BADGE)
           }), O({
             action: "HOVER_BADGE"
           }), (0, I.Qf)({
             badge: e.id,
             analyticsLocations: m,
-            ...R
+            ...p
           })
         },
         href: e.link,
@@ -72,7 +72,7 @@ function A(e) {
           alt: " ",
           "aria-hidden": !0,
           src: (0, h.jC)(e.icon),
-          className: s()(N.badge, r)
+          className: s()(A.badge, r)
         })
       })
     }, e.id))

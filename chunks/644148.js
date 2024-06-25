@@ -1,50 +1,50 @@
-n.d(t, {
+a.d(t, {
   BT: function() {
-    return M
+    return I
   },
   KO: function() {
-    return p
+    return A
   },
   Kw: function() {
-    return R
+    return C
   },
   OU: function() {
-    return b
+    return E
   },
   bI: function() {
-    return N
+    return w
   },
   jp: function() {
-    return A
+    return M
   }
-}), n(653041), n(47120);
-var a = n(470079),
-  l = n(512722),
-  s = n.n(l),
-  r = n(442837),
-  i = n(461745),
-  o = n(971628),
-  d = n(695346),
-  c = n(314897),
-  u = n(592125),
-  m = n(650774),
-  h = n(271383),
-  S = n(430824),
-  T = n(699516),
-  x = n(771845),
-  g = n(594174),
-  v = n(709054),
-  f = n(51144),
-  E = n(995923),
-  C = n(71080);
+}), a(653041), a(47120);
+var n = a(470079),
+  l = a(512722),
+  s = a.n(l),
+  r = a(442837),
+  i = a(461745),
+  o = a(971628),
+  c = a(695346),
+  d = a(314897),
+  u = a(592125),
+  m = a(650774),
+  h = a(271383),
+  S = a(430824),
+  x = a(699516),
+  T = a(771845),
+  g = a(594174),
+  f = a(709054),
+  v = a(51144),
+  _ = a(995923),
+  b = a(71080);
 
-function b(e) {
+function E(e) {
   let t;
-  return e.rowType === C.aC.USER ? t = {
+  return e.rowType === b.aC.USER ? t = {
     type: i.Fj.USER,
     label: e.name,
     avatar: e.avatarURL
-  } : e.rowType === C.aC.GUILD && (t = {
+  } : e.rowType === b.aC.GUILD && (t = {
     type: i.Fj.GUILD,
     label: e.name,
     guild: e.guild
@@ -54,100 +54,100 @@ function b(e) {
   }
 }
 
-function R(e) {
+function C(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0;
   return (0, r.Wu)([S.Z, m.Z], () => {
-    let n = [];
+    let a = [];
     return e.forEach(e => {
-      var a;
+      var n;
       let l = S.Z.getGuild(e),
-        s = null !== (a = m.Z.getMemberCount(e)) && void 0 !== a ? a : E.UK;
-      null != l && s < E.UK && (null == t ? void 0 : t(l.name)) && n.push(l)
-    }), n
+        s = null !== (n = m.Z.getMemberCount(e)) && void 0 !== n ? n : _.UK;
+      null != l && s < _.UK && (null == t ? void 0 : t(l.name)) && a.push(l)
+    }), a
   }, [e, t])
 }
 
-function _(e) {
+function R(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0,
-    n = R(e, t);
-  return a.useMemo(() => n.map(e => ({
-    rowType: C.aC.GUILD,
+    a = C(e, t);
+  return n.useMemo(() => a.map(e => ({
+    rowType: b.aC.GUILD,
     name: e.name,
     id: e.id,
     disabled: !1,
     guild: e,
-    key: "".concat(C.aC.GUILD, ":").concat(e.id)
-  })), [n])
+    key: "".concat(b.aC.GUILD, ":").concat(e.id)
+  })), [a])
+}
+
+function p(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0,
+    a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  return e.filter(e => null != e && (null == t ? void 0 : t(e.username))).map(e => ({
+    rowType: b.aC.USER,
+    name: v.ZP.getUserTag(e),
+    id: e.id,
+    disabled: a && x.Z.isFriend(e.id),
+    avatarURL: e.getAvatarURL(null, 24),
+    key: "".concat(b.aC.USER, ":").concat(e.id)
+  }))
 }
 
 function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0,
-    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  return e.filter(e => null != e && (null == t ? void 0 : t(e.username))).map(e => ({
-    rowType: C.aC.USER,
-    name: f.ZP.getUserTag(e),
-    id: e.id,
-    disabled: n && T.Z.isFriend(e.id),
-    avatarURL: e.getAvatarURL(null, 24),
-    key: "".concat(C.aC.USER, ":").concat(e.id)
-  }))
-}
-
-function M(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0,
-    n = arguments.length > 2 ? arguments[2] : void 0,
-    l = (0, r.e7)([x.ZP], () => x.ZP.getFlattenedGuildIds()),
-    s = _(l, t),
+    a = arguments.length > 2 ? arguments[2] : void 0,
+    l = (0, r.e7)([T.ZP], () => T.ZP.getFlattenedGuildIds()),
+    s = R(l, t),
     i = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : () => !0,
         t = arguments.length > 1 ? arguments[1] : void 0,
-        n = arguments.length > 2 ? arguments[2] : void 0,
-        l = (0, r.Wu)([T.Z], () => T.Z.getFriendIDs()),
-        s = R(t),
-        i = (0, r.e7)([c.default], () => c.default.getId()),
+        a = arguments.length > 2 ? arguments[2] : void 0,
+        l = (0, r.Wu)([x.Z], () => x.Z.getFriendIDs()),
+        s = C(t),
+        i = (0, r.e7)([d.default], () => d.default.getId()),
         o = (0, r.e7)([h.ZP], () => h.ZP.getMemberVersion()),
-        d = a.useMemo(() => {
+        c = n.useMemo(() => {
           let e = new Set(l);
           return s.forEach(t => {
             h.ZP.getMemberIds(t.id).forEach(t => {
-              !e.has(t) && !T.Z.isBlocked(t) && e.add(t)
+              !e.has(t) && !x.Z.isBlocked(t) && e.add(t)
             })
           }), e
         }, [s, l, o]);
-      return I((0, r.Wu)([g.default], () => [...d].map(e => g.default.getUser(e)), [d]).filter(e => null != e && !e.bot && e.id !== i).sort((e, t) => {
-        let n = u.Z.getChannel(u.Z.getDMFromUserId(null == e ? void 0 : e.id)),
-          a = u.Z.getChannel(u.Z.getDMFromUserId(null == t ? void 0 : t.id));
-        return v.default.compare(null == n ? void 0 : n.lastMessageId, null == a ? void 0 : a.lastMessageId) > 0 ? -1 : 1
-      }), e, n)
-    }(t, l, n);
+      return p((0, r.Wu)([g.default], () => [...c].map(e => g.default.getUser(e)), [c]).filter(e => null != e && !e.bot && e.id !== i).sort((e, t) => {
+        let a = u.Z.getChannel(u.Z.getDMFromUserId(null == e ? void 0 : e.id)),
+          n = u.Z.getChannel(u.Z.getDMFromUserId(null == t ? void 0 : t.id));
+        return f.default.compare(null == a ? void 0 : a.lastMessageId, null == n ? void 0 : n.lastMessageId) > 0 ? -1 : 1
+      }), e, a)
+    }(t, l, a);
   return [i, e ? [] : s]
 }
 
-function A() {
-  let e = d.MI.useSetting(),
-    t = d.GA.useSetting(),
-    n = {},
-    a = {};
-  return _(e).forEach(e => {
-    n[(0, o.G)(e)] = b(e)
-  }), t.length > 0 && I(t.map(e => g.default.getUser(e)).filter(e => null != e)).map(e => {
-    a[(0, o.G)(e)] = b(e)
+function M() {
+  let e = c.MI.useSetting(),
+    t = c.GA.useSetting(),
+    a = {},
+    n = {};
+  return R(e).forEach(e => {
+    a[(0, o.G)(e)] = E(e)
+  }), t.length > 0 && p(t.map(e => g.default.getUser(e)).filter(e => null != e)).map(e => {
+    n[(0, o.G)(e)] = E(e)
   }), {
-    [C.aC.GUILD]: n,
-    [C.aC.USER]: a
+    [b.aC.GUILD]: a,
+    [b.aC.USER]: n
   }
 }
 
-function p(e) {
-  let t = c.default.getId(),
-    n = e;
-  return n.length > E.Ly && (n = n.slice(0, E.Ly)), n = n.filter(e => {
-    var n;
-    return h.ZP.isMember(e, t) && (null !== (n = m.Z.getMemberCount(e)) && void 0 !== n ? n : E.UK) < E.UK
+function A(e) {
+  let t = d.default.getId(),
+    a = e;
+  return a.length > _.Ly && (a = a.slice(0, _.Ly)), a = a.filter(e => {
+    var a;
+    return h.ZP.isMember(e, t) && (null !== (a = m.Z.getMemberCount(e)) && void 0 !== a ? a : _.UK) < _.UK
   })
 }
 
-function N(e) {
+function w(e) {
   let t = e;
-  return t.length > E.uv && (t = t.slice(0, E.uv)), t
+  return t.length > _.uv && (t = t.slice(0, _.uv)), t
 }

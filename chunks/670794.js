@@ -1,62 +1,62 @@
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
-}), t(47120);
-var n = t(735250),
-  a = t(470079),
-  o = t(481060),
-  l = t(194359),
-  i = t(153124),
-  r = t(51144),
-  u = t(689938),
-  d = t(714628);
+}), s(47120);
+var n = s(735250),
+  o = s(470079),
+  a = s(481060),
+  i = s(194359),
+  l = s(153124),
+  r = s(51144),
+  u = s(689938),
+  d = s(714628);
 
 function c(e) {
   let {
-    user: s,
-    nickname: t,
+    user: t,
+    nickname: s,
     transitionState: c,
     onClose: N
-  } = e, h = (0, i.Dt)(), [M, I] = a.useState(!1), [p, C] = a.useState(t), E = a.useRef(null), x = async e => {
-    e.preventDefault(), I(!0);
+  } = e, p = (0, l.Dt)(), [h, M] = o.useState(!1), [I, C] = o.useState(s), E = o.useRef(null), x = async e => {
+    e.preventDefault(), M(!0);
     try {
-      await l.Z.updateRelationship(s.id, p), N()
+      await i.Z.updateRelationship(t.id, I), N()
     } catch (e) {} finally {
-      I(!1)
+      M(!1)
     }
-  }, R = null == t ? u.Z.Messages.ADD_FRIEND_NICKNAME : u.Z.Messages.CHANGE_FRIEND_NICKNAME;
-  return (0, n.jsx)(o.ModalRoot, {
+  }, f = null == s ? u.Z.Messages.ADD_FRIEND_NICKNAME : u.Z.Messages.CHANGE_FRIEND_NICKNAME;
+  return (0, n.jsx)(a.ModalRoot, {
     transitionState: c,
-    size: o.ModalSize.SMALL,
-    "aria-labelledby": h,
+    size: a.ModalSize.SMALL,
+    "aria-labelledby": p,
     children: (0, n.jsxs)("form", {
       onSubmit: x,
-      children: [(0, n.jsx)(o.ModalHeader, {
+      children: [(0, n.jsx)(a.ModalHeader, {
         separator: !1,
-        children: (0, n.jsx)(o.Heading, {
+        children: (0, n.jsx)(a.Heading, {
           variant: "heading-lg/semibold",
-          children: R
+          children: f
         })
-      }), (0, n.jsxs)(o.ModalContent, {
-        children: [(0, n.jsx)(o.Text, {
+      }), (0, n.jsxs)(a.ModalContent, {
+        children: [(0, n.jsx)(a.Text, {
           variant: "text-md/normal",
           className: d.description,
           children: u.Z.Messages.FRIEND_NICKNAME_DESCRIPTION
-        }), (0, n.jsx)(o.FormItem, {
+        }), (0, n.jsx)(a.FormItem, {
           title: u.Z.Messages.FRIEND_NICKNAME,
-          children: (0, n.jsx)(o.TextInput, {
+          children: (0, n.jsx)(a.TextInput, {
             inputRef: E,
-            value: null != p ? p : "",
-            placeholder: r.ZP.getName(s),
+            value: null != I ? I : "",
+            placeholder: r.ZP.getName(t),
             onChange: C,
             className: d.input,
             autoFocus: !0
           })
-        }), (0, n.jsx)(o.Button, {
-          look: o.Button.Looks.LINK,
-          color: o.Button.Colors.LINK,
-          size: o.Button.Sizes.NONE,
+        }), (0, n.jsx)(a.Button, {
+          look: a.Button.Looks.LINK,
+          color: a.Button.Colors.LINK,
+          size: a.Button.Sizes.NONE,
           onClick: () => {
             var e;
             C(null), null === (e = E.current) || void 0 === e || e.focus()
@@ -64,15 +64,15 @@ function c(e) {
           className: d.reset,
           children: u.Z.Messages.RESET_FRIEND_NICKNAME
         })]
-      }), (0, n.jsxs)(o.ModalFooter, {
-        children: [(0, n.jsx)(o.Button, {
+      }), (0, n.jsxs)(a.ModalFooter, {
+        children: [(0, n.jsx)(a.Button, {
           type: "submit",
-          disabled: M,
+          disabled: h,
           children: u.Z.Messages.SAVE
-        }), (0, n.jsx)(o.Button, {
+        }), (0, n.jsx)(a.Button, {
           onClick: N,
-          look: o.Button.Looks.LINK,
-          color: o.Button.Colors.PRIMARY,
+          look: a.Button.Looks.LINK,
+          color: a.Button.Colors.PRIMARY,
           children: u.Z.Messages.CANCEL
         })]
       })]

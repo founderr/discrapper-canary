@@ -1,36 +1,36 @@
 n(411104);
-var s, i, l = n(735250);
+var i, s, a = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var r = n(120356),
+  l = n.n(r),
   o = n(442837),
   c = n(481060),
-  u = n(700582),
-  d = n(451478),
-  E = n(689938),
-  h = n(379555);
-(i = s || (s = {}))[i.STAFF_NOTES = 1] = "STAFF_NOTES";
-let _ = o.ZP.connectStores([d.Z], () => ({
-    animate: d.Z.isFocused()
+  d = n(700582),
+  u = n(451478),
+  _ = n(689938),
+  E = n(379555);
+(s = i || (i = {}))[s.STAFF_NOTES = 1] = "STAFF_NOTES";
+let h = o.ZP.connectStores([u.Z], () => ({
+    animate: u.Z.isFocused()
   }))(e => {
     let {
       user: t,
       className: n,
-      animate: s
+      animate: i
     } = e;
-    return (0, l.jsxs)("div", {
-      className: r()(h.staffReviewHeader, n),
-      children: [(0, l.jsx)(u.Z, {
+    return (0, a.jsxs)("div", {
+      className: l()(E.staffReviewHeader, n),
+      children: [(0, a.jsx)(d.Z, {
         size: c.AvatarSizes.SIZE_32,
         user: t,
-        animate: s
-      }), (0, l.jsxs)("div", {
-        className: h.headerText,
-        children: [(0, l.jsx)("div", {
-          className: h.label,
-          children: E.Z.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, l.jsx)("div", {
-          className: h.username,
+        animate: i
+      }), (0, a.jsxs)("div", {
+        className: E.headerText,
+        children: [(0, a.jsx)("div", {
+          className: E.label,
+          children: _.Z.Messages.APPLICATION_STORE_STAFF_PICK
+        }), (0, a.jsx)("div", {
+          className: E.username,
           children: t.username
         })]
       })]
@@ -45,19 +45,19 @@ let _ = o.ZP.connectStores([d.Z], () => ({
       if (null == t.staffNotes) return null;
       let {
         user: e,
-        content: s
+        content: i
       } = t.staffNotes;
-      return null == e ? null : (0, l.jsxs)("div", {
+      return null == e ? null : (0, a.jsxs)("div", {
         className: n,
-        children: [(0, l.jsx)(_, {
+        children: [(0, a.jsx)(h, {
           user: e,
-          className: h.header
-        }), (0, l.jsx)("div", {
-          className: h.notes,
-          children: s
+          className: E.header
+        }), (0, a.jsx)("div", {
+          className: E.notes,
+          children: i
         })]
       })
     }
     throw Error("Unknown type")
   };
-I.Types = s, t.Z = I
+I.Types = i, t.Z = I

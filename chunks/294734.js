@@ -3,40 +3,40 @@ n.d(t, {
     return L
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(793030),
-  a = n(442837),
+var i = n(735250),
+  a = n(470079),
+  s = n(793030),
+  l = n(442837),
   r = n(902704),
   o = n(692547),
   c = n(481060),
-  u = n(356264),
-  d = n(628238),
-  E = n(25015),
-  _ = n(438075),
+  d = n(356264),
+  u = n(628238),
+  _ = n(25015),
+  E = n(438075),
   I = n(695346),
-  T = n(592125),
-  m = n(906467),
-  N = n(430824),
-  h = n(496675),
-  C = n(699516),
-  S = n(594174),
-  A = n(113039),
+  m = n(592125),
+  T = n(906467),
+  h = n(430824),
+  N = n(496675),
+  f = n(699516),
+  p = n(594174),
+  C = n(113039),
   g = n(100604),
-  p = n(694784),
-  f = n(39154),
+  S = n(694784),
+  A = n(39154),
   R = n(689938),
-  O = n(414700);
+  x = n(414700);
 
-function M() {
-  return (0, s.jsxs)("div", {
-    className: O.headerContainer,
-    children: [(0, s.jsx)(c.ChatArrowRightIcon, {
+function O() {
+  return (0, i.jsxs)("div", {
+    className: x.headerContainer,
+    children: [(0, i.jsx)(c.ChatArrowRightIcon, {
       size: "xs",
-      className: O.headerIcon,
+      className: x.headerIcon,
       color: o.Z.colors.TEXT_LOW_CONTRAST
-    }), (0, s.jsx)(l.x, {
-      className: O.headerText,
+    }), (0, i.jsx)(s.x, {
+      className: x.headerText,
       variant: "text-sm/semibold",
       color: "text-low-contrast",
       children: R.Z.Messages.MESSAGE_FORWARDED
@@ -44,27 +44,27 @@ function M() {
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     message: t,
     snapshot: n,
-    index: d
-  } = e, E = i.useMemo(() => new g.r(t, n, d), [t, n, d]), _ = (0, a.e7)([T.Z, S.default, C.Z, h.Z, N.Z, u.Z], () => E.getForwardInfo(T.Z, S.default, C.Z, h.Z, N.Z, u.Z).footerInfo, [E], r.Z), I = i.useCallback(() => {
-    (0, p.Z)(t)
+    index: u
+  } = e, _ = a.useMemo(() => new g.r(t, n, u), [t, n, u]), E = (0, l.e7)([m.Z, p.default, f.Z, N.Z, h.Z, d.Z], () => _.getForwardInfo(m.Z, p.default, f.Z, N.Z, h.Z, d.Z).footerInfo, [_], r.Z), I = a.useCallback(() => {
+    (0, S.Z)(t)
   }, [t]);
-  return null == _ ? null : (0, s.jsxs)(c.Clickable, {
-    className: O.footerContainer,
+  return null == E ? null : (0, i.jsxs)(c.Clickable, {
+    className: x.footerContainer,
     onClick: I,
-    children: [null != _.originIconUrl ? (0, s.jsx)("img", {
-      className: O.originIcon,
-      src: _.originIconUrl,
+    children: [null != E.originIconUrl ? (0, i.jsx)("img", {
+      className: x.originIcon,
+      src: E.originIconUrl,
       alt: ""
-    }) : null, (0, s.jsx)(l.x, {
-      className: O.footerText,
+    }) : null, (0, i.jsx)(s.x, {
+      className: x.footerText,
       variant: "text-sm/medium",
       color: "none",
-      children: "".concat(_.originLabel, "  •  ").concat(_.timestampLabel)
-    }), (0, s.jsx)(c.ChevronSmallRightIcon, {
+      children: "".concat(E.originLabel, "  •  ").concat(E.timestampLabel)
+    }), (0, i.jsx)(c.ChevronSmallRightIcon, {
       size: "xxs",
       color: o.Z.colors.TEXT_LOW_CONTRAST
     })]
@@ -75,42 +75,42 @@ function v(e) {
   var t;
   let {
     message: n,
-    snapshot: l,
+    snapshot: s,
     index: r
-  } = e, o = i.useMemo(() => (0, f.Z)(n, l), [n, l]), c = I.RS.useSetting(), u = I.NA.useSetting(), N = (0, a.e7)([m.Z], () => m.Z.isDeveloper), h = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-    content: C,
-    hasSpoilerEmbeds: S
-  } = (0, E.Z)(o, {
-    hideSimpleEmbedContent: c && u,
+  } = e, o = a.useMemo(() => (0, A.Z)(n, s), [n, s]), c = I.RS.useSetting(), d = I.NA.useSetting(), h = (0, l.e7)([T.Z], () => T.Z.isDeveloper), N = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+    content: f,
+    hasSpoilerEmbeds: p
+  } = (0, _.Z)(o, {
+    hideSimpleEmbedContent: c && d,
     isInteracting: !1,
     formatInline: !1,
-    allowList: h,
-    allowHeading: h,
+    allowList: N,
+    allowHeading: N,
     allowLinks: !0,
-    allowDevLinks: N,
+    allowDevLinks: h,
     previewLinkTarget: !0
-  }), g = (0, a.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), p = I.jU.useSetting();
-  return null == g ? null : (0, s.jsxs)("div", {
-    className: O.container,
-    children: [(0, s.jsx)("div", {
-      className: O.quote
-    }), (0, s.jsxs)("div", {
-      className: O.content,
-      children: [(0, s.jsx)(M, {}), (0, s.jsx)(A.ZP, {
+  }), g = (0, l.e7)([m.Z], () => m.Z.getChannel(n.channel_id)), S = I.jU.useSetting();
+  return null == g ? null : (0, i.jsxs)("div", {
+    className: x.container,
+    children: [(0, i.jsx)("div", {
+      className: x.quote
+    }), (0, i.jsxs)("div", {
+      className: x.content,
+      children: [(0, i.jsx)(O, {}), (0, i.jsx)(C.ZP, {
         message: o,
-        content: C
-      }), (0, _.Z)({
+        content: f
+      }), (0, E.Z)({
         channelMessageProps: {
           message: o,
           channel: g,
-          compact: p
+          compact: S
         },
-        hasSpoilerEmbeds: S,
+        hasSpoilerEmbeds: p,
         isInteracting: !1,
         isMessageSnapshot: !0
-      }), (0, s.jsx)(x, {
+      }), (0, i.jsx)(M, {
         message: n,
-        snapshot: l,
+        snapshot: s,
         index: r
       })]
     })]
@@ -121,8 +121,8 @@ function L(e) {
   let {
     message: t
   } = e;
-  return (0, s.jsx)(s.Fragment, {
-    children: t.messageSnapshots.map((e, n) => (0, s.jsx)(v, {
+  return (0, i.jsx)(i.Fragment, {
+    children: t.messageSnapshots.map((e, n) => (0, i.jsx)(v, {
       message: t,
       snapshot: e,
       index: n

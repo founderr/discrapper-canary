@@ -5,14 +5,14 @@ var a, l, u, _, c, d, E = n(392711),
   I = n.n(E),
   T = n(442837),
   h = n(570140),
-  S = n(902840),
-  f = n(212819),
-  N = n(353926),
-  A = n(823385),
+  f = n(902840),
+  S = n(212819),
+  A = n(353926),
+  N = n(823385),
   m = n(592125),
   O = n(430824),
-  R = n(306680),
-  p = n(944486),
+  p = n(306680),
+  R = n(944486),
   g = n(9156),
   C = n(594174),
   v = n(70956),
@@ -30,11 +30,11 @@ let P = {},
     lastRequest: null,
     lastResponse: null
   },
-  B = [],
-  x = [];
+  x = [],
+  B = [];
 
 function k() {
-  B = A.Z.getProps().results.filter(e => e.type === f.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+  x = N.Z.getProps().results.filter(e => e.type === S.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
 class V extends(l = T.ZP.PersistedStore) {
   getState() {
@@ -44,7 +44,7 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   initialize(e) {
     var t;
-    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, p.Z, O.Z, N.Z), this.syncWith([A.Z], k)
+    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, R.Z, O.Z, A.Z), this.syncWith([N.Z], k)
   }
   allSummaries() {
     return P
@@ -54,7 +54,7 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   summaries(e) {
     var t;
-    return null !== (t = P[e]) && void 0 !== t ? t : x
+    return null !== (t = P[e]) && void 0 !== t ? t : B
   }
   shouldShowTopicsBar() {
     return i
@@ -80,7 +80,7 @@ class V extends(l = T.ZP.PersistedStore) {
     var n, i;
     let r = y[e],
       s = m.Z.getChannel(e);
-    if (!(0, S.Lp)(s)) return !1;
+    if (!(0, f.Lp)(s)) return !1;
     if (null != t) {
       let e = null !== (n = null == r ? void 0 : r.summaryIdLastRequestedAt) && void 0 !== n ? n : 0,
         i = Date.now() - e;
@@ -108,12 +108,12 @@ class V extends(l = T.ZP.PersistedStore) {
       withUnreads: i,
       numChannels: r = 25
     } = e, s = [];
-    return t && (s = s.concat(B)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
+    return t && (s = s.concat(x)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
       let t = m.Z.getChannel(e);
-      return null != t && !g.ZP.isChannelMuted(t.guild_id, e) && R.ZP.hasUnread(e)
+      return null != t && !g.ZP.isChannelMuted(t.guild_id, e) && p.ZP.hasUnread(e)
     })), (s = s.filter(e => {
       let t = m.Z.getChannel(e);
-      return (0, S.Lp)(t, !1, !1)
+      return (0, f.Lp)(t, !1, !1)
     })).slice(0, r)
   }
   visibleSummaryIndex() {
@@ -217,7 +217,7 @@ let Z = new V(h.Z, {
     }
   },
   UPDATE_VISIBLE_MESSAGES(e) {
-    let t = p.Z.getChannelId();
+    let t = R.Z.getChannelId();
     if (null != t) {
       if (null != r && r.channelId === t && null != r.summaryId) {
         let e = P[r.channelId];

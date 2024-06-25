@@ -3,17 +3,17 @@ n.d(t, {
     return o
   }
 });
-var s = n(442837),
-  i = n(223892),
-  l = n(430824),
-  a = n(594174),
-  r = n(981631);
+var i = n(442837),
+  s = n(223892),
+  a = n(430824),
+  r = n(594174),
+  l = n(981631);
 
 function o(e) {
   var t;
-  let n = (0, s.e7)([l.Z], () => l.Z.getGuild(e)),
-    o = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
+  let n = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
+    o = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
     c = (null == n ? void 0 : n.ownerId) === (null == o ? void 0 : o.id),
-    u = (0, i.Sd)();
-  return c && null !== (t = null == n ? void 0 : n.hasFeature(r.oNc.COMMUNITY)) && void 0 !== t && t && u && !((null == n ? void 0 : n.hasFeature(r.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(r.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (null == n ? void 0 : n.hasFeature(r.oNc.CREATOR_MONETIZABLE_DISABLED)))
+    d = (0, s.Sd)();
+  return c && null !== (t = null == n ? void 0 : n.hasFeature(l.oNc.COMMUNITY)) && void 0 !== t && t && d && !((null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE_DISABLED)))
 }

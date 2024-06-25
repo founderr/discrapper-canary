@@ -1,123 +1,123 @@
-n.d(s, {
+s.d(n, {
   Z: function() {
     return I
   }
-}), n(47120);
-var a = n(735250),
-  l = n(470079),
-  t = n(442837),
-  i = n(481060),
-  o = n(570140),
-  r = n(285952),
-  c = n(103879),
-  d = n(236289),
-  _ = n(788080),
-  E = n(613734),
-  N = n(981631),
-  x = n(689938),
-  A = n(393188),
-  u = n(298196);
+}), s(47120);
+var a = s(735250),
+  t = s(470079),
+  l = s(442837),
+  i = s(481060),
+  o = s(570140),
+  r = s(285952),
+  c = s(103879),
+  d = s(236289),
+  _ = s(788080),
+  E = s(613734),
+  N = s(981631),
+  u = s(689938),
+  x = s(393188),
+  A = s(298196);
 
 function I(e) {
   let {
-    className: s,
-    onClose: n,
+    className: n,
+    onClose: s,
     onNext: I,
-    onBack: S
-  } = e, T = (0, t.e7)([d.Z], () => d.Z.getAppealClassificationId()), {
-    classification: C
-  } = (0, E.YG)(null != T ? T : N.lds), h = (0, _.c7)(null == C ? void 0 : C.description), L = (0, t.e7)([d.Z], () => d.Z.getIsSubmitting()), m = (0, t.e7)([d.Z], () => d.Z.getAppealSignal()), M = (0, t.e7)([d.Z], () => d.Z.getFreeTextAppealReason()), [g, O] = l.useState(!1), [j, P] = l.useState(""), p = l.useCallback(e => {
+    onBack: C
+  } = e, S = (0, l.e7)([d.Z], () => d.Z.getAppealClassificationId()), {
+    classification: T
+  } = (0, E.YG)(null != S ? S : N.lds), m = (0, _.c7)(null == T ? void 0 : T.description), h = (0, l.e7)([d.Z], () => d.Z.getIsSubmitting()), M = (0, l.e7)([d.Z], () => d.Z.getAppealSignal()), L = (0, l.e7)([d.Z], () => d.Z.getFreeTextAppealReason()), [g, O] = t.useState(!1), [p, j] = t.useState(""), P = t.useCallback(e => {
     o.Z.dispatch({
       type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
       userInput: e
     })
-  }, []), Z = l.useCallback(async () => {
-    if (null !== T) try {
-      P(""), await c.uR(T, m, M), null == I || I()
-    } catch (s) {
+  }, []), b = t.useCallback(async () => {
+    if (null !== S) try {
+      j(""), await c.uR(S, M, L), null == I || I()
+    } catch (n) {
       var e;
-      P((0, _.Zs)(null === (e = s.body) || void 0 === e ? void 0 : e.code))
+      j((0, _.Zs)(null === (e = n.body) || void 0 === e ? void 0 : e.code))
     }
-  }, [T, m, M, I]);
+  }, [S, M, L, I]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(i.ModalHeader, {
       direction: r.Z.Direction.VERTICAL,
-      className: u.header,
+      className: A.header,
       separator: !1,
       children: [(0, a.jsx)(i.Heading, {
-        className: u.title,
+        className: A.title,
         variant: "heading-xl/semibold",
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_HEADER
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_HEADER
       }), (0, a.jsx)(i.Text, {
-        className: u.subtitle,
+        className: A.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
-      }), null != n && (0, a.jsx)(i.ModalCloseButton, {
-        className: u.closeButton,
-        onClick: n
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
+      }), null != s && (0, a.jsx)(i.ModalCloseButton, {
+        className: A.closeButton,
+        onClick: s
       })]
     }), (0, a.jsxs)(i.ModalContent, {
-      className: s,
+      className: n,
       paddingFix: !1,
       children: [(0, a.jsx)("ul", {
-        className: A.listContainer,
-        children: [(0, _.ox)(m), M].filter(e => e.length > 0).map((e, s) => (0, a.jsx)("li", {
-          className: A.listItem,
+        className: x.listContainer,
+        children: [(0, _.ox)(M), L].filter(e => e.length > 0).map((e, n) => (0, a.jsx)("li", {
+          className: x.listItem,
           children: (0, a.jsx)(i.Text, {
             tag: "span",
             variant: "text-md/normal",
             children: e
           })
-        }, s))
+        }, n))
       }), (0, a.jsx)("div", {
-        className: A.anchorContainer,
+        className: x.anchorContainer,
         children: (0, a.jsx)(i.Anchor, {
           onClick: () => O(e => !e),
           children: (0, a.jsx)(i.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
-            children: M.length > 0 ? x.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : x.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+            children: L.length > 0 ? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
           })
         })
       }), g && (0, a.jsx)("div", {
-        className: A.inputContainer,
+        className: x.inputContainer,
         children: (0, a.jsx)(i.TextArea, {
-          value: M,
-          onChange: p
+          value: L,
+          onChange: P
         })
       }), (0, a.jsx)("div", {
-        className: u.policyContainer,
+        className: A.policyContainer,
         children: (0, a.jsx)(i.Text, {
           variant: "text-md/semibold",
-          children: h
+          children: m
         })
       }), (0, a.jsx)(i.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        className: A.footerText,
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
+        className: x.footerText,
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
       })]
     }), (0, a.jsxs)(i.ModalFooter, {
       direction: r.Z.Direction.VERTICAL,
-      children: ["" !== j && (0, a.jsx)(i.Text, {
-        className: A.errorText,
+      children: ["" !== p && (0, a.jsx)(i.Text, {
+        className: x.errorText,
         variant: "text-lg/normal",
         color: "text-danger",
-        children: j
+        children: p
       }), (0, a.jsxs)("div", {
-        className: A.buttonContainer,
+        className: x.buttonContainer,
         children: [(0, a.jsx)(i.Button, {
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,
-          onClick: S,
-          disabled: L,
-          children: x.Z.Messages.BACK
+          onClick: C,
+          disabled: h,
+          children: u.Z.Messages.BACK
         }), (0, a.jsx)(i.Button, {
-          onClick: Z,
+          onClick: b,
           color: i.Button.Colors.RED,
-          submitting: L,
-          children: x.Z.Messages.SUBMIT
+          submitting: h,
+          children: u.Z.Messages.SUBMIT
         })]
       })]
     })]

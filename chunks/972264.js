@@ -3,15 +3,15 @@ n.d(t, {
     return o
   }
 });
-var s = n(442837),
-  i = n(430824),
-  l = n(496675),
-  a = n(312146),
-  r = n(981631);
+var i = n(442837),
+  s = n(430824),
+  a = n(496675),
+  r = n(312146),
+  l = n(981631);
 
 function o(e) {
-  let t = (0, s.e7)([i.Z], () => i.Z.getGuild(e)),
-    n = (0, a.Ui)(t),
-    o = l.Z.can(r.Plq.MANAGE_CHANNELS, t);
+  let t = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
+    n = (0, r.Ui)(t),
+    o = a.Z.can(l.Plq.MANAGE_CHANNELS, t);
   return n && o
 }

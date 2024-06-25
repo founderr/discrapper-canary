@@ -1,82 +1,82 @@
 "use strict";
-s.d(t, {
+n.d(t, {
   G: function() {
-    return m
+    return b
   }
 });
-var n = s(735250);
-s(470079);
-var r = s(120356),
-  a = s.n(r),
-  i = s(442837),
-  l = s(481060),
-  o = s(607070),
-  c = s(873268),
-  u = s(196798),
-  d = s(660348),
-  C = s(872044),
-  f = s(671581),
-  p = s(830487),
-  E = s(602476);
+var r = n(735250);
+n(470079);
+var a = n(120356),
+  i = n.n(a),
+  o = n(442837),
+  s = n(481060),
+  c = n(607070),
+  l = n(873268),
+  d = n(196798),
+  u = n(660348),
+  p = n(872044),
+  f = n(671581),
+  g = n(830487),
+  _ = n(602476);
 
-function g() {
-  return (0, n.jsxs)("div", {
-    className: c.attributionLogos,
+function C() {
+  return (0, r.jsxs)("div", {
+    className: l.attributionLogos,
     "aria-label": "Discord x Pocketpair",
-    children: [(0, n.jsx)(l.ClydeIcon, {
+    children: [(0, r.jsx)(s.ClydeIcon, {
       size: "custom",
       color: "currentColor",
       height: 22,
       "aria-hidden": !0
-    }), (0, n.jsx)(l.Text, {
+    }), (0, r.jsx)(s.Text, {
       variant: "heading-sm/extrabold",
       tag: "div",
       children: "|"
-    }), (0, n.jsx)("img", {
-      src: d,
+    }), (0, r.jsx)("img", {
+      src: u,
       alt: "",
       "aria-hidden": !0
     })]
   })
 }
 
-function m(e) {
+function b(e) {
   let {
     category: t
-  } = e, s = (0, i.e7)([o.Z], () => o.Z.useReducedMotion);
-  return (0, n.jsxs)("div", {
-    className: a()(c.banner),
+  } = e, n = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
+  return (0, r.jsxs)("div", {
+    className: i()(l.banner),
     "aria-label": t.name,
-    children: [(0, n.jsxs)("div", {
-      className: c.mainContent,
-      children: [(0, n.jsx)("img", {
-        src: C,
-        className: c.bannerImage,
+    children: [(0, r.jsxs)("div", {
+      className: l.mainContent,
+      children: [(0, r.jsx)("img", {
+        src: p,
+        className: l.bannerImage,
         alt: t.name,
         "aria-hidden": !0
-      }), (0, n.jsx)(g, {}), (0, n.jsx)("img", {
+      }), (0, r.jsx)(C, {}), (0, r.jsx)("img", {
         src: f,
-        className: c.categoryLogo,
+        className: l.categoryLogo,
         alt: t.name,
         "aria-hidden": !0
-      }), !s && (0, n.jsx)("img", {
-        src: u,
-        className: c.animatedLayer,
+      }), !n && (0, r.jsx)("img", {
+        src: d,
+        className: l.animatedLayer,
         alt: "",
         "aria-hidden": !0
-      }), (0, n.jsx)(l.Text, {
-        className: c.summary,
+      }), (0, r.jsx)(s.Text, {
+        className: l.summary,
         variant: "text-md/normal",
         children: t.summary
       })]
-    }), (0, n.jsx)("img", {
-      src: E,
-      className: a()(c.overflowImage, c.overflowRight),
+    }), (0, r.jsx)("img", {
+      src: _,
+      className: i()(l.overflowImage, l.overflowRight),
       alt: "",
       "aria-hidden": !0
-    }), (0, n.jsx)("img", {
-      src: p,
-      className: a()(c.overflowImage, c.overflowLeft),
+    }), (0, r.jsx)("img", {
+      src: g,
+      className: i()(l.overflowImage, l.overflowLeft),
       alt: "",
       "aria-hidden": !0
     })]

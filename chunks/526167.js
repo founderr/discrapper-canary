@@ -4,10 +4,10 @@ n.d(t, {
     return T
   },
   og: function() {
-    return S
+    return f
   },
   rO: function() {
-    return f
+    return S
   },
   vu: function() {
     return d
@@ -29,11 +29,11 @@ function T() {
 }
 let h = "edge" === _.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : "", 10) : -1;
 
-function S() {
+function f() {
   return -1 !== c || -1 !== E || -1 !== I || -1 !== h
 }
 
-function f() {
+function S() {
   var e;
   let t = window.navigator,
     n = t.userAgent.toLowerCase(),

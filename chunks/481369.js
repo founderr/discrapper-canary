@@ -3,10 +3,10 @@ n.d(t, {
     return d
   }
 });
-var l = n(399606),
-  i = n(317381),
-  s = n(917107),
-  a = n(592125),
+var i = n(399606),
+  a = n(317381),
+  l = n(917107),
+  s = n(592125),
   r = n(226027),
   o = n(918559);
 let c = "no_text_activity",
@@ -19,7 +19,7 @@ let c = "no_text_activity",
   };
 
 function d() {
-  let e = (0, l.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity()),
-    t = (0, l.e7)([i.ZP], () => i.ZP.getActivityPanelMode());
-  return void 0 === e || (0, s.Z)(null == e ? void 0 : e.channelId, a.Z) ? u[c] : u[t]
+  let e = (0, i.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
+    t = (0, i.e7)([a.ZP], () => a.ZP.getActivityPanelMode());
+  return void 0 === e || (0, l.Z)(null == e ? void 0 : e.channelId, s.Z) ? u[c] : u[t]
 }

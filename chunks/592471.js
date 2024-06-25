@@ -3,10 +3,10 @@ n.d(t, {
     return r
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(709014);
-let a = {
+var i = n(735250),
+  a = n(470079),
+  l = n(709014);
+let s = {
     hover: {
       name: "hover",
       start: 0,
@@ -19,14 +19,14 @@ let a = {
     }
   },
   r = () => {
-    let e = i.useRef(null),
-      t = i.useCallback(() => {
+    let e = a.useRef(null),
+      t = a.useCallback(() => {
         null != e.current && e.current.play("click")
       }, []),
-      r = i.useCallback(() => {
+      r = a.useCallback(() => {
         null != e.current && e.current.play("hover")
       }, []),
-      o = i.useCallback(() => {
+      o = a.useCallback(() => {
         null != e.current && e.current.stopIfPlaying("hover")
       }, []);
     return {
@@ -36,11 +36,11 @@ let a = {
         onMouseLeave: o
       },
       play: t,
-      Component: i.useCallback(t => (0, l.jsx)(s.L, {
+      Component: a.useCallback(t => (0, i.jsx)(l.L, {
         ...t,
         src: () => n.e("8631").then(n.t.bind(n, 105262, 19)),
         ref: e,
-        markers: a
+        markers: s
       }), [])
     }
   }

@@ -1,100 +1,100 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return E
+    return _
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(556012),
-  a = t(862085),
-  r = t(769998),
-  o = t(671066),
-  c = t(273504),
-  d = t(716054);
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(556012),
+  r = n(862085),
+  l = n(769998),
+  o = n(671066),
+  c = n(273504),
+  d = n(716054);
 
 function u(e) {
   let {
-    action: s,
-    triggerType: t,
-    toggled: a,
-    onToggleAction: r
-  } = e, o = (0, l.c)(s.type, s, t);
+    action: t,
+    triggerType: n,
+    toggled: r,
+    onToggleAction: l
+  } = e, o = (0, i.c)(t.type, t, n);
   if (null == o) return null;
   let {
     headerText: c,
     descriptionText: u,
-    icon: E
+    icon: _
   } = o;
-  return (0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: d.actionContainer,
-    children: [(0, n.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: d.actionIconContainer,
-      children: (0, n.jsx)(E, {
+      children: (0, s.jsx)(_, {
         size: "md",
         color: "currentColor",
         className: d.actionIcon
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: d.actionTextContainer,
-      children: [(0, n.jsx)(i.Heading, {
+      children: [(0, s.jsx)(a.Heading, {
         variant: "heading-sm/semibold",
         children: c
-      }), (0, n.jsx)(i.Text, {
+      }), (0, s.jsx)(a.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
         children: u
       })]
-    }), (0, n.jsx)("div", {
-      children: (0, n.jsx)(i.Checkbox, {
+    }), (0, s.jsx)("div", {
+      children: (0, s.jsx)(a.Checkbox, {
         disabled: !o.isEditable,
-        type: i.Checkbox.Types.INVERTED,
-        value: a,
-        onChange: () => r(!1),
+        type: a.Checkbox.Types.INVERTED,
+        value: r,
+        onChange: () => l(!1),
         className: d.__invalid_actionCheckbox
       })
     })]
   })
 }
 
-function E(e) {
+function _(e) {
   let {
-    action: s,
-    guildId: t,
-    triggerType: i,
-    toggled: l,
+    action: t,
+    guildId: n,
+    triggerType: a,
+    toggled: i,
     onToggleAction: d
   } = e;
-  switch (s.type) {
+  switch (t.type) {
     case c.jj.FLAG_TO_CHANNEL:
-      return (0, n.jsx)(o.Z, {
-        action: s,
-        triggerType: i,
-        toggled: l,
+      return (0, s.jsx)(o.Z, {
+        action: t,
+        triggerType: a,
+        toggled: i,
         onToggleAction: d
       });
     case c.jj.USER_COMMUNICATION_DISABLED:
-      return (0, n.jsx)(r.Z, {
-        action: s,
-        guildId: t,
-        triggerType: i,
-        toggled: l,
+      return (0, s.jsx)(l.Z, {
+        action: t,
+        guildId: n,
+        triggerType: a,
+        toggled: i,
         onToggleAction: d
       });
     case c.jj.BLOCK_MESSAGE:
-      return (0, n.jsx)(a.Z, {
-        action: s,
-        triggerType: i,
-        toggled: l,
+      return (0, s.jsx)(r.Z, {
+        action: t,
+        triggerType: a,
+        toggled: i,
         onToggleAction: d
       });
     default:
-      return (0, n.jsx)(u, {
-        action: s,
-        guildId: t,
-        toggled: l,
-        triggerType: i,
+      return (0, s.jsx)(u, {
+        action: t,
+        guildId: n,
+        toggled: i,
+        triggerType: a,
         onToggleAction: d
       })
   }

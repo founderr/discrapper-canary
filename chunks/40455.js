@@ -22,18 +22,18 @@ function I(e, t, n) {
 }
 let T = null,
   h = new l.b(750, 500),
-  S = new u.S(15),
-  f = !1;
-class N extends o.Z {
+  f = new u.S(15),
+  S = !1;
+class A extends o.Z {
   initialize() {
-    this.waitFor(i.Z), this.waitFor(s.Z), this.waitFor(r.Z), this.syncWith([a.Z], () => !0), this.syncWith([s.Z], A)
+    this.waitFor(i.Z), this.waitFor(s.Z), this.waitFor(r.Z), this.syncWith([a.Z], () => !0), this.syncWith([s.Z], N)
   }
   loadCache() {
-    let e = this.readSnapshot(N.LATEST_SNAPSHOT_VERSION);
-    null != e && (f = !0, N.mergeSnapshot(e))
+    let e = this.readSnapshot(A.LATEST_SNAPSHOT_VERSION);
+    null != e && (S = !0, A.mergeSnapshot(e))
   }
   canEvictOrphans() {
-    return f
+    return S
   }
   saveLimit(e) {
     let t = i.Z.getBasicChannel(e);
@@ -48,21 +48,21 @@ class N extends o.Z {
   }
   takeSnapshot() {
     return {
-      version: N.LATEST_SNAPSHOT_VERSION,
+      version: A.LATEST_SNAPSHOT_VERSION,
       data: {
         channels: [...h.allValues()].filter(e => !e.fallback),
-        penalized: [...S.keys()],
+        penalized: [...f.keys()],
         lastChannel: T
       }
     }
   }
   static mergeSnapshot(e) {
     let t = h,
-      n = S;
-    for (let n of (h = new l.b(h.primaryCapacity, h.extendedCapacity), S = new u.S(S.capacity), T = null != T ? T : e.lastChannel, [e.channels, t.values()]))
+      n = f;
+    for (let n of (h = new l.b(h.primaryCapacity, h.extendedCapacity), f = new u.S(f.capacity), T = null != T ? T : e.lastChannel, [e.channels, t.values()]))
       for (let e of n) !e.fallback && h.put(e.channelId, e);
     for (let t of [e.penalized, n.keys()])
-      for (let e of t) S.put(e, null)
+      for (let e of t) f.put(e, null)
   }
   static recordChannel(e) {
     let t = i.Z.getBasicChannel(e);
@@ -73,7 +73,7 @@ class N extends o.Z {
         channelId: e,
         channelType: t.type
       };
-      T = i, h.put(e, i), (0, _.Hr)(t) && null != S.put(e, null) && h.delete(e)
+      T = i, h.put(e, i), (0, _.Hr)(t) && null != f.put(e, null) && h.delete(e)
     }
   }
   static deleteChannel(e) {
@@ -85,11 +85,11 @@ class N extends o.Z {
   static dropUnreachableChannels() {
     for (let e of h.keys()) {
       let t = i.Z.getBasicChannel(e);
-      !(0, d.v)(t) && N.deleteChannel(e)
+      !(0, d.v)(t) && A.deleteChannel(e)
     }
   }
   static deleteUnreadableGuildChannels(e) {
-    for (let t of h.values()) e === t.guildId && !(0, d.$)(t.channelId) && N.deleteChannel(t.channelId)
+    for (let t of h.values()) e === t.guildId && !(0, d.$)(t.channelId) && A.deleteChannel(t.channelId)
   }
   static replaceLru(e) {
     h = e
@@ -98,8 +98,8 @@ class N extends o.Z {
     super({
       CACHE_LOADED_LAZY_NO_CACHE: D,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      CHANNEL_DELETE: p,
-      CHANNEL_UPDATES: R,
+      CHANNEL_DELETE: R,
+      CHANNEL_UPDATES: p,
       CONNECTION_OPEN_SUPPLEMENTAL: m,
       GUILD_DELETE: v,
       LOGIN_SUCCESS: L,
@@ -109,28 +109,28 @@ class N extends o.Z {
   }
 }
 
-function A() {
+function N() {
   let e = s.Z.getChannelId();
-  null != e && N.recordChannel(e)
+  null != e && A.recordChannel(e)
 }
 
 function m() {
-  N.dropUnreachableChannels(), N.replaceLru((0, E.J)(h, 1250))
+  A.dropUnreachableChannels(), A.replaceLru((0, E.J)(h, 1250))
 }
 
 function O(e) {
   let t = e.id,
     n = (0, d.v)(e),
     i = s.Z.getChannelId();
-  n && t === i && N.recordChannel(t), !n && N.deleteChannel(t)
-}
-
-function R(e) {
-  for (let t of e.channels) O(t)
+  n && t === i && A.recordChannel(t), !n && A.deleteChannel(t)
 }
 
 function p(e) {
-  N.deleteChannel(e.channel.id)
+  for (let t of e.channels) O(t)
+}
+
+function R(e) {
+  A.deleteChannel(e.channel.id)
 }
 
 function g(e) {
@@ -138,18 +138,18 @@ function g(e) {
 }
 
 function C(e) {
-  N.deleteChannel(e.channel.id)
+  A.deleteChannel(e.channel.id)
 }
 
 function v(e) {
-  return !e.guild.unavailable && (N.deleteGuild(e.guild.id), !0)
+  return !e.guild.unavailable && (A.deleteGuild(e.guild.id), !0)
 }
 
 function L(e) {
-  h.clear(), S.clear(), f = !1
+  h.clear(), f.clear(), S = !1
 }
 
 function D(e) {
-  f = !0
+  S = !0
 }
-I(N, "displayName", "SaveableChannelsStore"), I(N, "LATEST_SNAPSHOT_VERSION", 1), t.ZP = new N
+I(A, "displayName", "SaveableChannelsStore"), I(A, "LATEST_SNAPSHOT_VERSION", 1), t.ZP = new A

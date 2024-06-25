@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Qs: function() {
-    return S
+    return f
   },
   Uf: function() {
     return h
   },
   VO: function() {
-    return f
+    return S
   },
   Xs: function() {
     return T
@@ -16,10 +16,10 @@ n.d(t, {
     return I
   },
   t$: function() {
-    return A
+    return N
   },
   yi: function() {
-    return N
+    return A
   }
 }), n(47120), n(653041);
 var i = n(470079),
@@ -118,7 +118,7 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       l(e), a(e)
     }, [l, a])
   },
-  S = e => {
+  f = e => {
     let {
       activeCategoryIndex: t,
       listRef: n,
@@ -148,7 +148,7 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       r.current = !0, c(), E(e)
     }, [r, c, E])
   },
-  f = e => {
+  S = e => {
     let {
       columnCounts: t,
       gridNavigatorId: n,
@@ -192,8 +192,8 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     }, [c, l]), {
       dispatch: T,
       getItemProps: h,
-      getRowProps: S,
-      getContainerProps: f
+      getRowProps: f,
+      getContainerProps: S
     } = (0, a.Z)({
       navId: n,
       columnCounts: t,
@@ -202,15 +202,15 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       autoFocusElement: !1,
       useVirtualFocus: !0
     }), {
-      gridContainerProps: N,
-      handleGridContainerKeyDown: A
+      gridContainerProps: A,
+      handleGridContainerKeyDown: N
     } = i.useMemo(() => {
-      let e = f();
+      let e = S();
       return {
         gridContainerProps: e,
         handleGridContainerKeyDown: e.onKeyDown
       }
-    }, [f]);
+    }, [S]);
     return i.useEffect(() => {
       let e = () => {
         _.current = !1
@@ -219,14 +219,14 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     }, []), {
       gridDispatch: T,
       getItemProps: h,
-      getRowProps: S,
-      gridContainerProps: N,
-      handleGridContainerKeyDown: A,
+      getRowProps: f,
+      gridContainerProps: A,
+      handleGridContainerKeyDown: N,
       isUsingKeyboardNavigation: _
     }
   };
 
-function N(e) {
+function A(e) {
   let {
     categories: t,
     collapsedCategories: n,
@@ -280,7 +280,7 @@ function N(e) {
   }, [t, n, r, a, o, s])
 }
 
-function A(e) {
+function N(e) {
   let {
     columnCounts: t,
     expressionsGrid: n,
@@ -295,7 +295,7 @@ function A(e) {
     gridContainerProps: E,
     handleGridContainerKeyDown: I,
     isUsingKeyboardNavigation: T
-  } = f({
+  } = S({
     columnCounts: t,
     gridNavigatorId: o,
     itemGrid: n,

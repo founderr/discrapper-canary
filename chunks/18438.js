@@ -16,13 +16,13 @@ n.d(t, {
     return T
   },
   IO: function() {
-    return f
+    return S
   },
   It: function() {
     return u
   },
   W3: function() {
-    return A
+    return N
   },
   b9: function() {
     return m
@@ -37,7 +37,7 @@ n.d(t, {
     return o
   },
   pG: function() {
-    return N
+    return A
   },
   sr: function() {
     return h
@@ -46,7 +46,7 @@ n.d(t, {
     return d
   },
   z5: function() {
-    return S
+    return f
   }
 }), n(411104);
 var i = n(544891),
@@ -161,26 +161,26 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function f() {
+function S() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES"
   })
 }
 
-function N() {
+function A() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function A() {
+function N() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
   })

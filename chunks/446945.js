@@ -1,10 +1,10 @@
 var a = t(735250);
 t(470079);
 var r = t(481060),
-  s = t(239091),
-  i = t(838221),
-  l = t(246364),
-  o = t(700833),
+  i = t(239091),
+  s = t(838221),
+  o = t(246364),
+  l = t(700833),
   c = t(689938),
   d = t(383354);
 
@@ -17,25 +17,25 @@ function u(e) {
   return (0, a.jsx)(r.Menu, {
     navId: "add-questions",
     className: d.menu,
-    onClose: s.Zy,
+    onClose: i.Zy,
     "aria-label": c.Z.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: t,
     children: (0, a.jsxs)(r.MenuGroup, {
       children: [(0, a.jsx)(r.MenuItem, {
         id: "text-input",
-        icon: (0, r.makeIconCompat)(i.Z),
+        icon: (0, r.makeIconCompat)(s.Z),
         label: c.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-        action: () => (0, o.Md)(l.QJ.TEXT_INPUT, n, u)
+        action: () => (0, l.Md)(o.QJ.TEXT_INPUT, n, u)
       }), (0, a.jsx)(r.MenuItem, {
         id: "paragraph",
         icon: r.ChannelListIcon,
         label: c.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-        action: () => (0, o.Md)(l.QJ.PARAGRAPH, n, u)
+        action: () => (0, l.Md)(o.QJ.PARAGRAPH, n, u)
       }), (0, a.jsx)(r.MenuItem, {
         id: "multiple-choice",
         icon: r.ListBulletsIcon,
         label: c.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-        action: () => (0, o.Md)(l.QJ.MULTIPLE_CHOICE, n, u)
+        action: () => (0, l.Md)(o.QJ.MULTIPLE_CHOICE, n, u)
       })]
     })
   })
@@ -44,8 +44,8 @@ n.Z = function(e) {
   let {
     addFormField: n,
     guild: t
-  } = e, i = e => {
-    (0, s.vq)(e, e => (0, a.jsx)(u, {
+  } = e, s = e => {
+    (0, i.vq)(e, e => (0, a.jsx)(u, {
       ...e,
       addFormField: n,
       guild: t
@@ -59,7 +59,7 @@ n.Z = function(e) {
     children: e => (0, a.jsxs)(r.Clickable, {
       ...e,
       className: d.container,
-      onClick: i,
+      onClick: s,
       children: [(0, a.jsx)(r.PlusSmallIcon, {
         size: "md",
         color: "currentColor",

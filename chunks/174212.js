@@ -30,20 +30,20 @@ function h() {
   return d.clear(), E.clear(), !0
 }
 
-function S(e) {
+function f(e) {
   let {
     channelId: t,
     command: n
   } = e;
-  f(t, null == n ? void 0 : n.id)
+  S(t, null == n ? void 0 : n.id)
 }
 
-function f(e, t) {
+function S(e, t) {
   let n = _.Z.getActiveOptionName(e),
     i = E.get(e);
   return null != i && (t !== i.commandId || n !== i.optionName) && (null != t && t !== i.commandId && (i.optionNameToLastResults.clear(), i.optionNameToNonce.clear(), i.optionNameToLastQuery.clear(), i.optionNameToAutocompleteQueries.clear()), i.lastErrored = !1, i.commandId = t, i.optionName = n, !0)
 }
-class N extends(i = a.ZP.Store) {
+class A extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(_.Z)
   }
@@ -61,12 +61,12 @@ class N extends(i = a.ZP.Store) {
     return T(e).lastResponseNonce
   }
 }
-o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new N(l.Z, {
+}) : r[s] = o, t.Z = new A(l.Z, {
   CONNECTION_OPEN: h,
   LOGOUT: h,
   CHANNEL_SELECT: h,
@@ -129,13 +129,13 @@ o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Objec
       error: !0
     }), I.delete(t), T(n.channelId).lastErrored = !0, !0
   },
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: S,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: S,
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: f,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: f,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
     let {
       channelId: t,
       command: n
     } = e;
-    f(t, null == n ? void 0 : n.id)
+    S(t, null == n ? void 0 : n.id)
   }
 })

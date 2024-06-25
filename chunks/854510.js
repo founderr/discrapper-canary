@@ -3,14 +3,14 @@ n.r(s), n.d(s, {
     return d
   }
 });
-var r = n(735250);
+var c = n(735250);
 n(470079);
-var a = n(481060),
-  l = n(153124),
-  o = n(930180),
-  t = n(582019),
-  i = n(689938),
-  c = n(750267);
+var r = n(481060),
+  o = n(153124),
+  t = n(930180),
+  a = n(582019),
+  l = n(689938),
+  i = n(750267);
 
 function d(e) {
   let {
@@ -18,58 +18,58 @@ function d(e) {
     onAccept: n,
     transitionState: d,
     onClose: u,
-    ...x
-  } = e, E = (0, l.Dt)(), h = (0, o.z)(s.id);
-  return (0, r.jsxs)(a.ModalRoot, {
+    ..._
+  } = e, x = (0, o.Dt)(), h = (0, t.z)(s.id);
+  return (0, c.jsxs)(r.ModalRoot, {
     transitionState: d,
-    "aria-labelledby": E,
-    ...x,
-    size: a.ModalSize.SMALL,
-    children: [(0, r.jsxs)(a.ModalHeader, {
-      className: c.header,
-      children: [(0, r.jsx)(a.Heading, {
+    "aria-labelledby": x,
+    ..._,
+    size: r.ModalSize.SMALL,
+    children: [(0, c.jsxs)(r.ModalHeader, {
+      className: i.header,
+      children: [(0, c.jsx)(r.Heading, {
         variant: "heading-xl/semibold",
-        children: i.Z.Messages.STAGE_BLOCKED_USERS_TITLE_PLURAL.format({
+        children: l.Z.Messages.STAGE_BLOCKED_USERS_TITLE_PLURAL.format({
           number: h.length
         })
-      }), (0, r.jsx)(a.Text, {
+      }), (0, c.jsx)(r.Text, {
         color: "header-secondary",
-        className: c.description,
+        className: i.description,
         variant: "text-sm/normal",
-        children: i.Z.Messages.STAGE_BLOCKED_USERS_BODY.format({
+        children: l.Z.Messages.STAGE_BLOCKED_USERS_BODY.format({
           number: h.length
         })
       })]
-    }), (0, r.jsx)(a.ModalContent, {
-      className: c.content,
+    }), (0, c.jsx)(r.ModalContent, {
+      className: i.content,
       children: h.map(e => {
         let {
           user: n,
-          id: a,
-          speaker: l
+          id: r,
+          speaker: o
         } = e;
-        return (0, r.jsx)(t.Xd, {
+        return (0, c.jsx)(a.Xd, {
           user: n,
-          speaker: l,
+          speaker: o,
           showStatus: !0,
           channelId: s.id
-        }, a)
+        }, r)
       })
-    }), (0, r.jsxs)(a.ModalFooter, {
-      className: c.footer,
-      children: [(0, r.jsx)(a.Button, {
+    }), (0, c.jsxs)(r.ModalFooter, {
+      className: i.footer,
+      children: [(0, c.jsx)(r.Button, {
         onClick: () => {
           n(s), u()
         },
-        color: a.Button.Colors.BRAND,
-        children: i.Z.Messages.STAGE_BLOCKED_USERS_ACCEPT
-      }), (0, r.jsx)(a.Button, {
+        color: r.Button.Colors.BRAND,
+        children: l.Z.Messages.STAGE_BLOCKED_USERS_ACCEPT
+      }), (0, c.jsx)(r.Button, {
         onClick: () => {
           u()
         },
-        color: a.Button.Colors.PRIMARY,
-        look: a.Button.Looks.LINK,
-        children: i.Z.Messages.STAGE_BLOCKED_USERS_CANCEL
+        color: r.Button.Colors.PRIMARY,
+        look: r.Button.Looks.LINK,
+        children: l.Z.Messages.STAGE_BLOCKED_USERS_CANCEL
       })]
     })]
   })

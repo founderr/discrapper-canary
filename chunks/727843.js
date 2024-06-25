@@ -1,29 +1,29 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   I: function() {
-    return r
+    return l
   },
   N: function() {
-    return a
+    return r
   }
-}), t(411104);
-var n = t(735250),
-  i = t(470079);
-let l = i.createContext(void 0);
+}), n(411104);
+var s = n(735250),
+  a = n(470079);
+let i = a.createContext(void 0);
 
-function a() {
-  let e = i.useContext(l);
+function r() {
+  let e = a.useContext(i);
   if (null == e) throw Error("No edit state; are you missing an <EditStateContextProvider />?");
   return e
 }
 
-function r(e) {
+function l(e) {
   let {
-    children: s,
-    ...t
+    children: t,
+    ...n
   } = e;
-  return (0, n.jsx)(l.Provider, {
-    value: t,
-    children: s
+  return (0, s.jsx)(i.Provider, {
+    value: n,
+    children: t
   })
 }

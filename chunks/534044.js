@@ -1,28 +1,28 @@
-n.d(s, {
+s.d(n, {
   Z: function() {
-    return A
+    return x
   }
 });
-var a = n(735250);
-n(470079);
-var l = n(120356),
-  t = n.n(l),
-  i = n(481060),
-  o = n(285952),
-  r = n(548647),
-  c = n(696375),
-  d = n(800530),
-  _ = n(689938),
-  E = n(570415),
-  N = n(298196),
-  x = n(160557);
+var a = s(735250);
+s(470079);
+var t = s(120356),
+  l = s.n(t),
+  i = s(481060),
+  o = s(285952),
+  r = s(548647),
+  c = s(696375),
+  d = s(800530),
+  _ = s(689938),
+  E = s(570415),
+  N = s(298196),
+  u = s(160557);
 
-function A(e) {
+function x(e) {
   let {
-    className: s,
-    onNext: n,
-    onClose: l
-  } = e, A = (0, r.n)();
+    className: n,
+    onNext: s,
+    onClose: t
+  } = e, x = (0, r.n)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(i.ModalHeader, {
       direction: o.Z.Direction.VERTICAL,
@@ -31,7 +31,7 @@ function A(e) {
       children: [(0, a.jsx)("div", {
         className: E.iconContainer,
         children: (0, a.jsx)("img", {
-          src: x,
+          src: u,
           alt: "",
           className: E.icon
         })
@@ -44,12 +44,12 @@ function A(e) {
         color: "header-secondary",
         variant: "text-md/normal",
         children: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER
-      }), null != l && (0, a.jsx)(i.ModalCloseButton, {
+      }), null != t && (0, a.jsx)(i.ModalCloseButton, {
         className: N.closeButton,
-        onClick: l
+        onClick: t
       })]
     }), (0, a.jsxs)(i.ModalContent, {
-      className: t()(E.modalContent, s),
+      className: l()(E.modalContent, n),
       paddingFix: !1,
       children: [(0, a.jsx)(i.Heading, {
         variant: "heading-md/bold",
@@ -59,15 +59,15 @@ function A(e) {
       }), (0, a.jsx)(c.Z, {
         text: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_GUIDELINES_LINK,
         url: d.sQ.COMMUNITY_GUIDELINES,
-        onClick: () => A(d.n0.ClickCommunityGuidelinesLink)
+        onClick: () => x(d.n0.ClickCommunityGuidelinesLink)
       }), (0, a.jsx)(c.Z, {
         text: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_RULES_LINK,
         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-        onClick: () => A(d.n0.ClickWarningSystemHelpcenterLink)
+        onClick: () => x(d.n0.ClickWarningSystemHelpcenterLink)
       })]
     }), (0, a.jsx)(i.ModalFooter, {
       children: (0, a.jsx)(i.Button, {
-        onClick: n,
+        onClick: s,
         color: i.Button.Colors.BRAND,
         children: _.Z.Messages.DONE
       })

@@ -1,14 +1,14 @@
-n.d(t, {
+a.d(t, {
   Ly: function() {
     return l
   },
   UK: function() {
-    return a
+    return n
   },
   uv: function() {
     return s
   }
 });
-let a = 200,
+let n = 200,
   l = 10,
   s = 10

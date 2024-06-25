@@ -21,14 +21,14 @@ var i = n(512722),
   I = n(957730),
   T = n(968437),
   h = n(928477),
-  S = n(665906),
-  f = n(695346),
-  N = n(592125),
-  A = n(496675),
+  f = n(665906),
+  S = n(695346),
+  A = n(592125),
+  N = n(496675),
   m = n(594174),
   O = n(70956),
-  R = n(51144),
-  p = n(895924),
+  p = n(51144),
+  R = n(895924),
   g = n(689079),
   C = n(981631),
   v = n(590433),
@@ -41,14 +41,14 @@ let D = n(227419).Z,
   P = {
     [g.bi.BUILT_IN]: {
       id: g.bi.BUILT_IN,
-      type: p.Qi.BUILT_IN,
+      type: R.Qi.BUILT_IN,
       get name() {
         return L.Z.Messages.COMMAND_SECTION_BUILT_IN_NAME
       }
     },
     [g.bi.FRECENCY]: {
       id: g.bi.FRECENCY,
-      type: p.Qi.BUILT_IN,
+      type: R.Qi.BUILT_IN,
       get name() {
         return L.Z.Messages.FREQUENTLY_USED
       }
@@ -59,7 +59,7 @@ let D = n(227419).Z,
     name: "shrug",
     displayName: "shrug",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN_TEXT,
+    inputType: R.iw.BUILT_IN_TEXT,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_SHRUG_DESCRIPTION
@@ -90,7 +90,7 @@ let D = n(227419).Z,
     name: "tableflip",
     displayName: "tableflip",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN_TEXT,
+    inputType: R.iw.BUILT_IN_TEXT,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_TABLEFLIP_DESCRIPTION
@@ -121,7 +121,7 @@ let D = n(227419).Z,
     name: "unflip",
     displayName: "unflip",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN_TEXT,
+    inputType: R.iw.BUILT_IN_TEXT,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
@@ -152,7 +152,7 @@ let D = n(227419).Z,
     name: "tts",
     displayName: "tts",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN_TEXT,
+    inputType: R.iw.BUILT_IN_TEXT,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_TTS_DESCRIPTION
@@ -176,7 +176,7 @@ let D = n(227419).Z,
       let {
         channel: t
       } = e;
-      return !t.isPrivate() && f.OW.getSetting() && A.Z.can(C.Plq.SEND_TTS_MESSAGES, t)
+      return !t.isPrivate() && S.OW.getSetting() && N.Z.can(C.Plq.SEND_TTS_MESSAGES, t)
     },
     execute: e => {
       var t;
@@ -190,7 +190,7 @@ let D = n(227419).Z,
     name: "me",
     displayName: "me",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN_TEXT,
+    inputType: R.iw.BUILT_IN_TEXT,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_ME_DESCRIPTION
@@ -222,7 +222,7 @@ let D = n(227419).Z,
     name: "spoiler",
     displayName: "spoiler",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN_TEXT,
+    inputType: R.iw.BUILT_IN_TEXT,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_SPOILER_DESCRIPTION
@@ -254,7 +254,7 @@ let D = n(227419).Z,
     name: "nick",
     displayName: "nick",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN,
+    inputType: R.iw.BUILT_IN,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_NICK_DESCRIPTION
@@ -277,7 +277,7 @@ let D = n(227419).Z,
       let {
         channel: t
       } = e;
-      return !t.isPrivate() && (A.Z.can(C.Plq.CHANGE_NICKNAME, t) || A.Z.can(C.Plq.MANAGE_NICKNAMES, t))
+      return !t.isPrivate() && (N.Z.can(C.Plq.CHANGE_NICKNAME, t) || N.Z.can(C.Plq.MANAGE_NICKNAMES, t))
     },
     execute: (e, t) => {
       var n;
@@ -294,7 +294,7 @@ let D = n(227419).Z,
     name: "thread",
     displayName: "thread",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN,
+    inputType: R.iw.BUILT_IN,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_THREAD_DESCRIPTION
@@ -329,7 +329,7 @@ let D = n(227419).Z,
       let {
         channel: t
       } = e;
-      return (0, S.ki)(t)
+      return (0, f.ki)(t)
     },
     execute: async (e, t) => {
       var n, i;
@@ -343,7 +343,7 @@ let D = n(227419).Z,
     name: "kick",
     displayName: "kick",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN,
+    inputType: R.iw.BUILT_IN,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_KICK_DESCRIPTION
@@ -378,7 +378,7 @@ let D = n(227419).Z,
       let {
         guild: t
       } = e;
-      return A.Z.can(C.Plq.KICK_MEMBERS, t)
+      return N.Z.can(C.Plq.KICK_MEMBERS, t)
     },
     execute: (e, t) => {
       var n;
@@ -388,7 +388,7 @@ let D = n(227419).Z,
       } = t;
       if (null == i) return;
       let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
-      if (!A.Z.canManageUser(C.Plq.KICK_MEMBERS, s, i)) {
+      if (!N.Z.canManageUser(C.Plq.KICK_MEMBERS, s, i)) {
         c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_KICK_UNABLE);
         return
       }(async () => {
@@ -396,7 +396,7 @@ let D = n(227419).Z,
         let n = m.default.getUser(s);
         if (null == n) throw Error();
         await _.Z.kickUser(i.id, s, null !== (t = M(e, "reason")) && void 0 !== t ? t : ""), c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_KICK_CONFIRMATION.format({
-          user: R.ZP.getUserTag(n)
+          user: p.ZP.getUserTag(n)
         }))
       })().catch(() => {
         c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_KICK_ERROR)
@@ -407,7 +407,7 @@ let D = n(227419).Z,
     name: "ban",
     displayName: "ban",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN,
+    inputType: R.iw.BUILT_IN,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_BAN_DESCRIPTION
@@ -484,7 +484,7 @@ let D = n(227419).Z,
       let {
         guild: t
       } = e;
-      return A.Z.can(C.Plq.BAN_MEMBERS, t)
+      return N.Z.can(C.Plq.BAN_MEMBERS, t)
     },
     execute: (e, t) => {
       var n;
@@ -494,7 +494,7 @@ let D = n(227419).Z,
       } = t;
       if (null == i) return;
       let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
-      if (!A.Z.canManageUser(C.Plq.BAN_MEMBERS, s, i)) {
+      if (!N.Z.canManageUser(C.Plq.BAN_MEMBERS, s, i)) {
         c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_BAN_UNABLE);
         return
       }(async () => {
@@ -504,7 +504,7 @@ let D = n(227419).Z,
           a = null !== (n = M(e, "reason")) && void 0 !== n ? n : "",
           l = m.default.getUser(s);
         await _.Z.banUser(i.id, s, o, a), c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_BAN_CONFIRMATION.format({
-          user: null != l ? R.ZP.getUserTag(l) : s
+          user: null != l ? p.ZP.getUserTag(l) : s
         }))
       })().catch(() => {
         c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_BAN_ERROR)
@@ -515,7 +515,7 @@ let D = n(227419).Z,
     name: "timeout",
     displayName: "timeout",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN,
+    inputType: R.iw.BUILT_IN,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_TIMEOUT_DESCRIPTION
@@ -568,7 +568,7 @@ let D = n(227419).Z,
       let {
         guild: t
       } = e;
-      return A.Z.can(C.Plq.MODERATE_MEMBERS, t)
+      return N.Z.can(C.Plq.MODERATE_MEMBERS, t)
     },
     execute: (e, t) => {
       let {
@@ -593,7 +593,7 @@ let D = n(227419).Z,
           duration: a,
           reason: l
         }), c.Z.sendBotMessage(i.id, L.Z.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
-          user: R.ZP.getUserTag(u),
+          user: p.ZP.getUserTag(u),
           duration: a
         }))
       })().catch(() => {
@@ -605,7 +605,7 @@ let D = n(227419).Z,
     name: "msg",
     displayName: "msg",
     type: d.yU.CHAT,
-    inputType: p.iw.BUILT_IN,
+    inputType: R.iw.BUILT_IN,
     applicationId: g.bi.BUILT_IN,
     get description() {
       return L.Z.Messages.COMMAND_MSG_DESCRIPTION
@@ -647,7 +647,7 @@ let D = n(227419).Z,
       } = t, s = M(e, "user"), o = null !== (n = M(e, "message")) && void 0 !== n ? n : "";
       (async () => {
         await u.Z.openPrivateChannel(s).then(e => {
-          let t = N.Z.getChannel(e);
+          let t = A.Z.getChannel(e);
           r()(null != t, "Newly created PrivateChannel is null"), c.Z.sendMessage(t.id, I.ZP.parse(t, o))
         })
       })().catch(() => {
@@ -658,5 +658,5 @@ let D = n(227419).Z,
   b = y.filter(e => ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.name)),
   G = (e, t, n) => {
     let i = t ? y : b;
-    return i = i.filter(t => t.type === e && (!n || t.inputType === p.iw.BUILT_IN_TEXT || t.inputType === p.iw.BUILT_IN_INTEGRATION))
+    return i = i.filter(t => t.type === e && (!n || t.inputType === R.iw.BUILT_IN_TEXT || t.inputType === R.iw.BUILT_IN_INTEGRATION))
   }

@@ -195,13 +195,13 @@ let E = {
         width: 312,
         height: 0
       },
-      S = {
+      f = {
         top: 0,
         left: 0,
         right: 0,
         bottom: 0
       },
-      f = {
+      S = {
         width: 0,
         height: 0
       };
@@ -220,16 +220,16 @@ let E = {
             T = (0, u.vS)(i, r, E), h = (0, u.w_)(r, E), (0, c.E9)(n);
             break;
           case d.Odu.GUILDS_TEXT:
-            S = (0, u.vS)(i, r, E), f = (0, u.w_)(r, E), (0, c.E9)(n)
+            f = (0, u.vS)(i, r, E), S = (0, u.w_)(r, E), (0, c.E9)(n)
         }
       }), e) {
-      let e = "auto" === f.width ? a.minSize.width : f.width;
+      let e = "auto" === S.width ? a.minSize.width : S.width;
       e -= r.minSize.width;
-      let [n, s] = (0, u.o4)(S, {
-        ...f,
+      let [n, s] = (0, u.o4)(f, {
+        ...S,
         width: r.minSize.width
-      }, E), [l, _] = (0, u.uq)(S, {
-        ...f,
+      }, E), [l, _] = (0, u.uq)(f, {
+        ...S,
         width: e
       }, E, {
         x: 10,

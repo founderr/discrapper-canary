@@ -1,48 +1,48 @@
 n.d(t, {
   Z: function() {
-    return a
+    return s
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  r = n(746555);
+var l = n(120356),
+  r = n.n(l),
+  a = n(746555);
 
-function a(e) {
+function s(e) {
   let {
     selected: t,
     muted: n = !1,
-    highlighted: i = !1,
-    wrapContent: a = !1,
+    highlighted: l = !1,
+    wrapContent: s = !1,
     avatar: o,
-    decorators: u,
-    name: c,
+    decorators: c,
+    name: u,
     subText: d,
     avatarClassName: h,
     innerClassName: p
   } = e;
-  return (0, l.jsxs)("div", {
-    className: s()(p, r.layout, {
-      [r.muted]: !t && n,
-      [r.highlighted]: i,
-      [r.wrappedLayout]: a
+  return (0, i.jsxs)("div", {
+    className: r()(p, a.layout, {
+      [a.muted]: !t && n,
+      [a.highlighted]: l,
+      [a.wrappedLayout]: s
     }),
-    children: [(0, l.jsx)("div", {
-      className: s()(r.avatar, h),
+    children: [(0, i.jsx)("div", {
+      className: r()(a.avatar, h),
       children: o
-    }), (0, l.jsxs)("div", {
-      className: r.content,
-      children: [(0, l.jsxs)("div", {
-        className: r.nameAndDecorators,
-        children: [(0, l.jsx)("div", {
-          className: s()(r.name, {
-            [r.wrappedName]: a
+    }), (0, i.jsxs)("div", {
+      className: a.content,
+      children: [(0, i.jsxs)("div", {
+        className: a.nameAndDecorators,
+        children: [(0, i.jsx)("div", {
+          className: r()(a.name, {
+            [a.wrappedName]: s
           }),
-          children: c
-        }), u]
-      }), null != d ? (0, l.jsx)("div", {
-        className: r.subText,
+          children: u
+        }), c]
+      }), null != d ? (0, i.jsx)("div", {
+        className: a.subText,
         children: d
       }) : null]
     })]

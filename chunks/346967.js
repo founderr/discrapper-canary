@@ -1,51 +1,51 @@
 n.d(t, {
   Z: function() {
-    return g
+    return f
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(512722),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(512722),
+  s = n.n(l),
   r = n(442837),
   o = n(911367),
   c = n(594174),
   u = n(786874),
   d = n(484459),
   h = n(87728),
-  m = n(792379),
-  E = n(123579),
-  p = n(402777);
+  p = n(792379),
+  m = n(123579),
+  _ = n(402777);
 
-function g(e) {
+function f(e) {
   let {
     location: t,
     channel: n,
-    ...s
+    ...l
   } = e, {
-    botProfilesEnabled: g
+    botProfilesEnabled: f
   } = (0, u.J)({
     location: t
-  }), f = (0, h.Z)();
+  }), E = (0, h.Z)();
   (0, o.t)();
-  let [C] = n.recipients, _ = (0, r.e7)([c.default], () => c.default.getUser(C));
-  return (a()(null != _, "ProfilePanelExperimentWrapper: user cannot be undefined"), i.useEffect(() => {
-    (0, d.W)(_, {
-      withMutualFriends: !_.bot,
+  let [g] = n.recipients, C = (0, r.e7)([c.default], () => c.default.getUser(g));
+  return (s()(null != C, "ProfilePanelExperimentWrapper: user cannot be undefined"), a.useEffect(() => {
+    (0, d.W)(C, {
+      withMutualFriends: !C.bot,
       withMutualGuilds: !0,
       channelId: n.id
     })
-  }, [_, n.id]), f) ? null : g && _.isNonUserBot() ? (0, l.jsx)(m.Z, {
-    user: _,
+  }, [C, n.id]), E) ? null : f && C.isNonUserBot() ? (0, i.jsx)(p.Z, {
+    user: C,
     channel: n,
-    ...s
-  }) : g || !_.bot ? (0, l.jsx)(p.Z, {
-    user: _,
+    ...l
+  }) : f || !C.bot ? (0, i.jsx)(_.Z, {
+    user: C,
     channel: n,
-    ...s
-  }) : (0, l.jsx)(E.Z, {
-    user: _,
+    ...l
+  }) : (0, i.jsx)(m.Z, {
+    user: C,
     channel: n,
-    ...s
+    ...l
   })
 }

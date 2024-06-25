@@ -30,11 +30,11 @@ let v = "YYYYMMDDTHHmmss",
 function A(e, n, t, i) {
   var s, A, m;
   let C;
-  let P = (0, d.e7)([N.ZP], () => N.ZP.isActive(e)),
-    h = (0, I.zI)(null != e ? e : "", i),
+  let h = (0, d.e7)([N.ZP], () => N.ZP.isActive(e)),
+    P = (0, I.zI)(null != e ? e : "", i),
     R = (0, d.e7)([N.ZP], () => N.ZP.getGuildScheduledEvent(e), [e]),
     L = (0, d.e7)([_.Z], () => _.Z.getGuild(n), [n]);
-  if (P || null == h || null == R) return null;
+  if (h || null == P || null == R) return null;
   C = R.entity_type === g.WX.EXTERNAL ? R.entity_metadata.location : null != t && null != L ? D.Z.Messages.CALENDAR_CHANNEL_LOCATION.format({
     channelName: t.name,
     guildName: L.name
@@ -47,7 +47,7 @@ function A(e, n, t, i) {
     {
       startTime: x,
       endTime: y
-    } = h,
+    } = P,
     w = null !== (A = r()(x)) && void 0 !== A ? A : p,
     j = null !== (m = r()(null != y ? y : x)) && void 0 !== m ? m : p,
     H = () => {

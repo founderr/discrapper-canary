@@ -1,16 +1,16 @@
 t(47120);
 var n = t(735250),
-  s = t(470079),
-  l = t(481060),
-  r = t(710845),
+  r = t(470079),
+  s = t(481060),
+  l = t(710845),
   o = t(285952),
   i = t(912454),
   c = t(358085),
   u = t(622999),
-  E = t(981631),
-  d = t(689938);
+  d = t(981631),
+  E = t(689938);
 
-function A(e, a, t) {
+function _(e, a, t) {
   return a in e ? Object.defineProperty(e, a, {
     value: t,
     enumerable: !0,
@@ -18,8 +18,8 @@ function A(e, a, t) {
     writable: !0
   }) : e[a] = t, e
 }
-let _ = new r.Z("PaymentRequest");
-class N extends s.Component {
+let p = new l.Z("PaymentRequest");
+class m extends r.Component {
   componentDidMount() {
     (0, u.d2)().then(e => {
       this.initPaymentRequest(e)
@@ -29,36 +29,36 @@ class N extends s.Component {
     let {
       canMakePayment: e
     } = this.state;
-    if (null == e) return (0, n.jsx)(l.Button, {
+    if (null == e) return (0, n.jsx)(s.Button, {
       submitting: !0,
-      look: l.Button.Looks.FILLED
+      look: s.Button.Looks.FILLED
     });
-    if (!1 === e) return (0, n.jsx)(l.Button, {
+    if (!1 === e) return (0, n.jsx)(s.Button, {
       disabled: !0,
-      look: l.Button.Looks.FILLED,
-      children: d.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
+      look: s.Button.Looks.FILLED,
+      children: E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
     });
     let a = (0, c.isAndroidChrome)(),
-      t = a ? d.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : d.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
-      s = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
+      t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
+      r = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
       {
-        className: r,
+        className: l,
         iconClassName: u
       } = this.props;
-    return (0, n.jsx)(l.Button, {
+    return (0, n.jsx)(s.Button, {
       onClick: this.handleOnClick,
-      className: r,
+      className: l,
       children: (0, n.jsxs)(o.Z, {
         align: o.Z.Align.CENTER,
         children: [(0, n.jsx)(i.ZP, {
           className: u,
-          type: s
+          type: r
         }), t]
       })
-    }, E.HeQ.PAYMENT_REQUEST)
+    }, d.HeQ.PAYMENT_REQUEST)
   }
   constructor(...e) {
-    super(...e), A(this, "state", {}), A(this, "initPaymentRequest", async e => {
+    super(...e), _(this, "state", {}), _(this, "initPaymentRequest", async e => {
       if (null == e) return;
       let a = e.paymentRequest({
           country: "US",
@@ -83,15 +83,15 @@ class N extends s.Component {
         t(null)
       });
       let n = await a.canMakePayment();
-      _.info("PaymentRequest availablity check", n), this.setState({
+      p.info("PaymentRequest availablity check", n), this.setState({
         canMakePayment: !!n,
         paymentRequest: a
       })
-    }), A(this, "handleOnClick", () => {
+    }), _(this, "handleOnClick", () => {
       let {
         onChooseType: e
       } = this.props;
-      e(E.HeQ.PAYMENT_REQUEST);
+      e(d.HeQ.PAYMENT_REQUEST);
       let {
         paymentRequest: a
       } = this.state;
@@ -99,4 +99,4 @@ class N extends s.Component {
     })
   }
 }
-a.Z = N
+a.Z = m

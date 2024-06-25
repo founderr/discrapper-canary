@@ -1,35 +1,35 @@
-a.d(n, {
+n.d(a, {
   Z: function() {
-    return t
+    return s
   }
 });
-var s = a(70722),
-  l = a(689938);
+var t = n(70722),
+  l = n(689938);
 
-function t(e, n) {
+function s(e, a) {
   return [{
-    value: s.kr.BLACK_SCREEN,
-    label: n ? l.Z.Messages.STREAM_REPORT_ENDED_BLACK : l.Z.Messages.STREAM_REPORT_BLACK
+    value: t.kr.BLACK_SCREEN,
+    label: a ? l.Z.Messages.STREAM_REPORT_ENDED_BLACK : l.Z.Messages.STREAM_REPORT_BLACK
   }, {
-    value: s.kr.BLURRY,
-    label: n ? l.Z.Messages.STREAM_REPORT_ENDED_BLURRY : l.Z.Messages.STREAM_REPORT_BLURRY
+    value: t.kr.BLURRY,
+    label: a ? l.Z.Messages.STREAM_REPORT_ENDED_BLURRY : l.Z.Messages.STREAM_REPORT_BLURRY
   }, {
-    value: s.kr.LAGGING,
-    label: n ? l.Z.Messages.STREAM_REPORT_ENDED_LAGGING : l.Z.Messages.STREAM_REPORT_LAGGING
+    value: t.kr.LAGGING,
+    label: a ? l.Z.Messages.STREAM_REPORT_ENDED_LAGGING : l.Z.Messages.STREAM_REPORT_LAGGING
   }, {
-    value: s.kr.OUT_OF_SYNC,
-    label: n ? l.Z.Messages.STREAM_REPORT_ENDED_OUT_OF_SYNC : l.Z.Messages.STREAM_REPORT_OUT_OF_SYNC
+    value: t.kr.OUT_OF_SYNC,
+    label: a ? l.Z.Messages.STREAM_REPORT_ENDED_OUT_OF_SYNC : l.Z.Messages.STREAM_REPORT_OUT_OF_SYNC
   }, {
-    value: s.kr.AUDIO_MISSING,
-    label: n ? l.Z.Messages.STREAM_REPORT_ENDED_AUDIO_MISSING : l.Z.Messages.STREAM_REPORT_AUDIO_MISSING
+    value: t.kr.AUDIO_MISSING,
+    label: a ? l.Z.Messages.STREAM_REPORT_ENDED_AUDIO_MISSING : l.Z.Messages.STREAM_REPORT_AUDIO_MISSING
   }, {
-    value: s.kr.AUDIO_POOR,
-    label: n ? l.Z.Messages.STREAM_REPORT_ENDED_AUDIO_POOR : l.Z.Messages.STREAM_REPORT_AUDIO_POOR
+    value: t.kr.AUDIO_POOR,
+    label: a ? l.Z.Messages.STREAM_REPORT_ENDED_AUDIO_POOR : l.Z.Messages.STREAM_REPORT_AUDIO_POOR
   }, {
-    value: s.kr.STREAM_STOPPED,
+    value: t.kr.STREAM_STOPPED,
     label: l.Z.Messages.STREAM_REPORT_ENDED_STREAM_STOPPED_UNEXPECTEDLY
   }, {
-    value: s.kr.OTHER,
+    value: t.kr.OTHER,
     label: l.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
   }]
 }

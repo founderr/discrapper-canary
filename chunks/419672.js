@@ -1,61 +1,61 @@
-t(47120);
-var T = t(735250),
-  n = t(470079),
-  l = t(481060),
-  o = t(230711),
-  a = t(63063),
-  _ = t(378298),
-  S = t(584656),
-  r = t(993750),
-  i = t(981631),
-  E = t(526761),
-  O = t(689938),
-  c = t(330731);
-s.Z = function(e) {
+s(47120);
+var o = s(735250),
+  T = s(470079),
+  n = s(481060),
+  a = s(230711),
+  l = s(63063),
+  i = s(378298),
+  r = s(584656),
+  _ = s(993750),
+  S = s(981631),
+  c = s(526761),
+  E = s(689938),
+  O = s(330731);
+t.Z = function(e) {
   let {
-    onClose: s,
-    channelId: t
-  } = e, [A, d] = n.useState(!1), u = n.useCallback(() => {
-    o.Z.open(i.oAB.PRIVACY_AND_SAFETY, null, {
-      scrollPosition: E.to.DM_SAFETY_ALERTS
-    }), s()
-  }, [s]), I = n.useCallback(() => {
-    !A && (d(!0), (0, _.Uj)(t).then(() => {
-      s(), (0, S.t)({
-        text: O.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
+    onClose: t,
+    channelId: s
+  } = e, [d, u] = T.useState(!1), A = T.useCallback(() => {
+    a.Z.open(S.oAB.PRIVACY_AND_SAFETY, null, {
+      scrollPosition: c.to.DM_SAFETY_ALERTS
+    }), t()
+  }, [t]), I = T.useCallback(() => {
+    !d && (u(!0), (0, i.Uj)(s).then(() => {
+      t(), (0, r.t)({
+        text: E.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
         id: "safety-tools-report-false-positive"
       })
     }).catch(() => {
-      d(!1), (0, l.showToast)((0, l.createToast)(O.Z.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
+      u(!1), (0, n.showToast)((0, n.createToast)(E.Z.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
     }))
-  }, [t, s, A]);
-  return (0, T.jsxs)(r.Z, {
-    style: c.wrapperStyle,
-    children: [(0, T.jsx)(l.Text, {
+  }, [s, t, d]);
+  return (0, o.jsxs)(_.Z, {
+    style: O.wrapperStyle,
+    children: [(0, o.jsx)(n.Text, {
       variant: "text-md/medium",
-      children: O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
-        learnMoreLink: a.Z.getArticleURL(i.BhN.SAFETY_ALERTS)
+      children: E.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
+        learnMoreLink: l.Z.getArticleURL(S.BhN.SAFETY_ALERTS)
       })
-    }), (0, T.jsx)(l.Button, {
-      className: c.settingsButton,
-      onClick: u,
+    }), (0, o.jsx)(n.Button, {
+      className: O.settingsButton,
+      onClick: A,
       fullWidth: !0,
-      children: O.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
-    }), (0, T.jsx)("div", {
-      children: (0, T.jsx)(l.Text, {
+      children: E.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
+    }), (0, o.jsx)("div", {
+      children: (0, o.jsx)(n.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: c.reportFalsePositiveText,
-        children: O.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE.format({
-          reportFalsePositiveHook: (e, s) => (0, T.jsx)(l.Button, {
-            className: c.reportFalsePositiveButton,
-            size: l.Button.Sizes.NONE,
-            color: l.Button.Colors.LINK,
-            look: l.Button.Looks.LINK,
-            disabled: A,
+        className: O.reportFalsePositiveText,
+        children: E.Z.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE.format({
+          reportFalsePositiveHook: (e, t) => (0, o.jsx)(n.Button, {
+            className: O.reportFalsePositiveButton,
+            size: n.Button.Sizes.NONE,
+            color: n.Button.Colors.LINK,
+            look: n.Button.Looks.LINK,
+            disabled: d,
             onClick: I,
             children: e
-          }, s)
+          }, t)
         })
       })
     })]

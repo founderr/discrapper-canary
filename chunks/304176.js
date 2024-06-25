@@ -13,22 +13,22 @@ var i = n(735250),
   I = n(944486),
   T = n(514342),
   h = n(709586),
-  S = n(176278),
-  f = n(626135),
-  N = n(524444),
-  A = n(981631),
+  f = n(176278),
+  S = n(626135),
+  A = n(524444),
+  N = n(981631),
   m = n(176505),
   O = n(689938),
-  R = n(493633);
+  p = n(493633);
 t.Z = e => {
   let {
     roleIcon: t,
     guild: n
   } = e, {
-    name: p
+    name: R
   } = t;
   r.useEffect(() => {
-    f.default.track(A.rMx.OPEN_POPOUT, {
+    S.default.track(N.rMx.OPEN_POPOUT, {
       type: "Role Icon Popout",
       guild_id: n.id,
       ...(0, a.v_)(d.Z.getChannel(I.Z.getChannelId(n.id)))
@@ -37,9 +37,9 @@ t.Z = e => {
   let g = (0, s.e7)([E.Z], () => null != t.roleId ? E.Z.getRole(n.id, t.roleId) : void 0),
     C = (0, _.Z)(g),
     v = C ? O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
-      name: p
+      name: R
     }) : O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
-      name: p
+      name: R
     }),
     L = {
       ...t,
@@ -47,36 +47,36 @@ t.Z = e => {
       size: 40
     },
     D = C ? () => {
-      (0, c.uL)(A.Z5c.CHANNEL(n.id, m.oC.ROLE_SUBSCRIPTIONS))
+      (0, c.uL)(N.Z5c.CHANNEL(n.id, m.oC.ROLE_SUBSCRIPTIONS))
     } : () => {
       (0, u.f)({
         guildId: n.id,
         location: {
-          section: A.jXE.ROLE_ICON_POPOUT
+          section: N.jXE.ROLE_ICON_POPOUT
         }
       })
     };
   return (0, i.jsx)(o.Dialog, {
-    children: (0, i.jsx)(N.W_, {
+    children: (0, i.jsx)(A.W_, {
       children: (0, i.jsxs)("div", {
-        className: R.popoutContainer,
+        className: p.popoutContainer,
         children: [(0, i.jsxs)("div", {
-          className: R.mainContent,
+          className: p.mainContent,
           children: [(0, i.jsx)("div", {
-            className: R.roleIconContainer,
-            children: (0, i.jsx)(S.Z, {
+            className: p.roleIconContainer,
+            children: (0, i.jsx)(f.Z, {
               ...L,
               enableTooltip: !1,
-              className: R.__invalid_roleIcon,
+              className: p.__invalid_roleIcon,
               enableHeight: !1
             })
           }), (0, i.jsxs)("div", {
-            className: R.truncatingText,
+            className: p.truncatingText,
             children: [(0, i.jsx)(o.Heading, {
               variant: "heading-md/semibold",
-              className: R.roleName,
+              className: p.roleName,
               children: (0, i.jsx)(T.Z, {
-                children: p
+                children: R
               })
             }), (0, i.jsx)(o.Text, {
               variant: "text-sm/normal",
@@ -86,15 +86,15 @@ t.Z = e => {
         }), (0, i.jsxs)(o.Button, {
           size: o.Button.Sizes.SMALL,
           color: o.Button.Colors.PRIMARY,
-          className: R.ctaButton,
-          innerClassName: R.ctaButtonContent,
+          className: p.ctaButton,
+          innerClassName: p.ctaButtonContent,
           fullWidth: !0,
           onClick: D,
           autoFocus: !0,
           children: [(0, i.jsx)(h.Z, {
             width: 14,
             height: 14,
-            className: R.boosterBadge
+            className: p.boosterBadge
           }), O.Z.Messages.ROLE_ICON_POPOUT_CTA]
         })]
       })

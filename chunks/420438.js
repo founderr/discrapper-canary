@@ -1,8 +1,8 @@
 n(47120);
-var l, i = n(442837),
-  s = n(570140);
+var i, a = n(442837),
+  l = n(570140);
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,7 +11,7 @@ function a(e, t, n) {
   }) : e[t] = n, e
 }
 let r = {};
-class o extends(l = i.ZP.PersistedStore) {
+class o extends(i = a.ZP.PersistedStore) {
   initialize(e) {
     for (let t in e) {
       let n = e[t];
@@ -26,13 +26,13 @@ class o extends(l = i.ZP.PersistedStore) {
     return r
   }
 }
-a(o, "displayName", "GuildPromptsStore"), a(o, "persistKey", "GuildPromptsStore"), t.Z = new o(s.Z, {
+s(o, "displayName", "GuildPromptsStore"), s(o, "persistKey", "GuildPromptsStore"), t.Z = new o(l.Z, {
   GUILD_PROMPT_VIEWED: function(e) {
     let {
       prompt: t,
       guildId: n
-    } = e, l = r[n];
-    return null == l ? (r[n] = new Set, r[n].add(t), !0) : !l.has(t) && (l.add(t), !0)
+    } = e, i = r[n];
+    return null == i ? (r[n] = new Set, r[n].add(t), !0) : !i.has(t) && (i.add(t), !0)
   },
   GUILD_DELETE: function(e) {
     let {

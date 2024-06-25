@@ -1,9 +1,9 @@
-s.d(t, {
+n.d(t, {
   e: function() {
-    return n
+    return s
   }
 });
-let n = (0, s(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2024-05_server_profiles",
   label: "Server Profiles",

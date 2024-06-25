@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-    return f
+    return m
   }
 });
 var r = i(735250);
@@ -15,7 +15,7 @@ var s = i(442837),
   c = i(689938),
   Z = i(562813);
 
-function m(e) {
+function f(e) {
   let {
     color: n,
     className: i
@@ -52,7 +52,7 @@ function m(e) {
   })
 }
 
-function f(e, n) {
+function m(e, n) {
   let i = (0, s.e7)([o.default], () => o.default.getCurrentUser());
   return null == i || n.ownerId !== i.id || e.id === i.id || (null == n ? void 0 : n.isBroadcastChannel()) ? null : (0, r.jsx)(t.MenuItem, {
     id: "make-dm-owner",
@@ -67,7 +67,7 @@ function f(e, n) {
         cancelText: c.Z.Messages.CANCEL,
         onConfirm: () => l.Z.setDMOwner(n.id, e.id),
         ...i,
-        children: [(0, r.jsx)(m, {
+        children: [(0, r.jsx)(f, {
           color: a.Z.unsafe_rawColors.PRIMARY_300.css
         }), (0, r.jsxs)("div", {
           className: Z.fromToWrapper,

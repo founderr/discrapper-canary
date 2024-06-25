@@ -22,8 +22,8 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = 1 * E.Z.Millis.MINUTE;
-class f extends r.Z {
+let f = 1 * E.Z.Millis.MINUTE;
+class S extends r.Z {
   _initialize() {
     __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(c.Z, () => this._handleSpeakingStoreChanged()).set(u.Z, () => this._handleRTCConnectionStoreChanged()), this._reset())
   }
@@ -93,7 +93,7 @@ class f extends r.Z {
           this._reset();
           return
         }
-        null == this._reportInterval && (this._reportInterval = new i.Xp, this._reportInterval.start(S, () => {
+        null == this._reportInterval && (this._reportInterval = new i.Xp, this._reportInterval.start(f, () => {
           this._trackStartSpeaking(), this._trackStartListening()
         }))
       }
@@ -105,4 +105,4 @@ class f extends r.Z {
     })
   }
 }
-t.Z = new f
+t.Z = new S

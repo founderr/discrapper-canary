@@ -22,20 +22,20 @@ function _(e) {
     onMouseLeave: d,
     ...E
   } = e, I = t ? l.d : l.Z, T = n.isBroadcastChannel(), h = (0, a.zW)(n.id), {
-    Component: S,
-    events: f
+    Component: f,
+    events: S
   } = (0, r.K)();
   return (0, i.jsx)(I, {
     ...E,
     onClick: () => {
       h && (0, o.b_)(), s.default.disconnect(), null == _ || _()
     },
-    iconComponent: S,
+    iconComponent: f,
     onMouseEnter: e => {
-      null == c || c(e), f.onMouseEnter()
+      null == c || c(e), S.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == d || d(e), f.onMouseLeave()
+      null == d || d(e), S.onMouseLeave()
     },
     label: h ? u.Z.Messages.STOP_BROADCASTING : T ? u.Z.Messages.LEAVE_BROADCAST : u.Z.Messages.DISCONNECT_SELF
   })

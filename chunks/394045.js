@@ -1,81 +1,81 @@
-s.r(t);
-var n = s(735250),
-  a = s(470079),
-  o = s(481060),
-  i = s(434404),
-  l = s(703656),
-  r = s(153124),
-  c = s(112612),
-  I = s(981631),
-  d = s(176505),
-  u = s(689938),
-  T = s(938885);
-t.default = function(e) {
+n.r(e);
+var a = n(735250),
+  s = n(470079),
+  o = n(481060),
+  i = n(434404),
+  r = n(703656),
+  c = n(153124),
+  l = n(112612),
+  d = n(981631),
+  u = n(176505),
+  T = n(689938),
+  x = n(938885);
+e.default = function(t) {
   let {
-    guildId: t,
-    submittedGuildJoinRequestsCount: s,
-    onClose: x,
-    transitionState: E,
-    onConfirm: N
-  } = e, _ = (0, r.Dt)(), {
-    submitting: C,
-    errorMessage: M,
-    onSubmit: m
-  } = (0, c.Z)({
-    onSubmit: N,
-    onClose: x
-  }), h = a.useCallback(() => {
-    x(), i.Z.close(), (0, l.uL)(I.Z5c.CHANNEL(t, d.oC.MEMBER_APPLICATIONS))
-  }, [t, x]);
-  return (0, n.jsxs)(o.ModalRoot, {
-    className: T.container,
-    transitionState: E,
-    "aria-labelledby": _,
-    children: [(0, n.jsxs)(o.ModalContent, {
-      className: T.content,
-      children: [(0, n.jsx)(o.Heading, {
+    guildId: e,
+    submittedGuildJoinRequestsCount: n,
+    onClose: I,
+    transitionState: _,
+    onConfirm: E
+  } = t, N = (0, c.Dt)(), {
+    submitting: f,
+    errorMessage: m,
+    onSubmit: C
+  } = (0, l.Z)({
+    onSubmit: E,
+    onClose: I
+  }), M = s.useCallback(() => {
+    I(), i.Z.close(), (0, r.uL)(d.Z5c.CHANNEL(e, u.oC.MEMBER_APPLICATIONS))
+  }, [e, I]);
+  return (0, a.jsxs)(o.ModalRoot, {
+    className: x.container,
+    transitionState: _,
+    "aria-labelledby": N,
+    children: [(0, a.jsxs)(o.ModalContent, {
+      className: x.content,
+      children: [(0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
-        id: _,
-        children: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EDIT_WARNING_TITLE.format({
-          count: s
+        id: N,
+        children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EDIT_WARNING_TITLE.format({
+          count: n
         })
-      }), (0, n.jsx)(o.Text, {
-        className: T.descriptionText,
+      }), (0, a.jsx)(o.Text, {
+        className: x.descriptionText,
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EDIT_WARNING_DESCRIPTIONG
-      }), (0, n.jsx)(o.Clickable, {
-        className: T.actionText,
-        onClick: h,
-        children: (0, n.jsx)(o.Text, {
+        children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EDIT_WARNING_DESCRIPTIONG
+      }), (0, a.jsx)(o.Clickable, {
+        className: x.actionText,
+        onClick: M,
+        children: (0, a.jsx)(o.Text, {
           variant: "text-sm/normal",
           color: "text-link",
-          children: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPLICATIONS_TITLE
+          children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPLICATIONS_TITLE
         })
-      }), null != M && (0, n.jsx)(o.Text, {
-        className: T.__invalid_errorText,
+      }), null != m && (0, a.jsx)(o.Text, {
+        className: x.__invalid_errorText,
         variant: "text-xs/normal",
         color: "text-danger",
-        children: M
+        children: m
       })]
-    }), (0, n.jsxs)(o.ModalFooter, {
-      children: [(0, n.jsx)(o.Button, {
-        className: T.actionButton,
+    }), (0, a.jsxs)(o.ModalFooter, {
+      children: [(0, a.jsx)(o.Button, {
+        className: x.actionButton,
         color: o.Button.Colors.BRAND,
-        submitting: C,
-        onClick: m,
+        submitting: f,
+        onClick: C,
         size: o.Button.Sizes.SMALL,
-        children: (0, n.jsx)(o.Text, {
+        children: (0, a.jsx)(o.Text, {
           variant: "text-sm/semibold",
-          children: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_CONTINUE_EDITING
+          children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_CONTINUE_EDITING
         })
-      }), (0, n.jsx)(o.Button, {
+      }), (0, a.jsx)(o.Button, {
         color: o.Button.Colors.PRIMARY,
-        onClick: x,
+        onClick: I,
         size: o.Button.Sizes.SMALL,
-        children: (0, n.jsx)(o.Text, {
+        children: (0, a.jsx)(o.Text, {
           variant: "text-sm/semibold",
-          children: u.Z.Messages.CANCEL
+          children: T.Z.Messages.CANCEL
         })
       })]
     })]

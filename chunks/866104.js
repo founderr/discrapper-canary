@@ -1,76 +1,76 @@
 n.d(t, {
   C: function() {
-    return x
+    return M
   },
   Z: function() {
-    return M
+    return O
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(512722),
-  a = n.n(l),
+var i = n(735250),
+  a = n(470079),
+  s = n(512722),
+  l = n.n(s),
   r = n(442837),
   o = n(481060),
   c = n(131388),
-  u = n(357352),
-  d = n(353254),
-  E = n(695346),
-  _ = n(271383),
+  d = n(357352),
+  u = n(353254),
+  _ = n(695346),
+  E = n(271383),
   I = n(594174),
-  T = n(346656),
-  m = n(671533),
-  N = n(810090),
-  h = n(51144),
-  C = n(506071),
-  S = n(696014),
-  A = n(847033),
+  m = n(346656),
+  T = n(671533),
+  h = n(810090),
+  N = n(51144),
+  f = n(506071),
+  p = n(696014),
+  C = n(847033),
   g = n(544978),
-  p = n(893182),
-  f = n(689938),
+  S = n(893182),
+  A = n(689938),
   R = n(828406);
 
-function O(e) {
+function x(e) {
   let {
     onClick: t
   } = e;
-  return (0, s.jsxs)(o.Clickable, {
+  return (0, i.jsxs)(o.Clickable, {
     onClick: t,
     className: R.showMoreButton,
-    children: [(0, s.jsx)(o.Text, {
+    children: [(0, i.jsx)(o.Text, {
       variant: "text-sm/medium",
       color: "header-primary",
-      children: f.Z.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
-    }), (0, s.jsx)(o.Spacer, {
+      children: A.Z.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
+    }), (0, i.jsx)(o.Spacer, {
       size: 4,
       horizontal: !0
-    }), (0, s.jsx)(m.Z, {
-      direction: m.Z.Directions.RIGHT,
+    }), (0, i.jsx)(T.Z, {
+      direction: T.Z.Directions.RIGHT,
       className: R.showMoreArrow
     })]
   })
 }
 
-function M(e) {
+function O(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, i = E.QK.useSetting(), l = (0, C.n)() && i, [a, r] = (0, d.Z)(t, l), o = l ? (0, s.jsx)(N.Z, {
+  } = e, a = _.QK.useSetting(), s = (0, f.n)() && a, [l, r] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
     autoPlay: !0,
     loop: !0,
     className: R.coverImage,
     width: 655,
-    poster: (0, u.b)("server_products/storefront/default-header.png"),
-    src: (0, u.b)("server_products/storefront/default-header.mov")
-  }) : (0, s.jsx)("img", {
-    src: (0, u.b)("server_products/storefront/default-header.png"),
+    poster: (0, d.b)("server_products/storefront/default-header.png"),
+    src: (0, d.b)("server_products/storefront/default-header.mov")
+  }) : (0, i.jsx)("img", {
+    src: (0, d.b)("server_products/storefront/default-header.png"),
     alt: "",
     className: R.coverImage
   });
-  return (0, s.jsx)("div", {
-    ref: a,
+  return (0, i.jsx)("div", {
+    ref: l,
     className: R.coverImageContainer,
-    children: null == r || n ? o : (0, s.jsx)("img", {
+    children: null == r || n ? o : (0, i.jsx)("img", {
       src: r,
       alt: "",
       className: R.coverImage
@@ -78,103 +78,103 @@ function M(e) {
   })
 }
 
-function x(e) {
-  var t, n, l;
+function M(e) {
+  var t, n, s;
   let {
-    guild: d,
-    subscriptionsSettings: E
-  } = e, m = d.id;
+    guild: u,
+    subscriptionsSettings: _
+  } = e, T = u.id;
   let {
-    nickname: N,
-    nickcolor: C
-  } = (l = m, (0, r.cj)([_.ZP, I.default], () => {
+    nickname: h,
+    nickcolor: f
+  } = (s = T, (0, r.cj)([E.ZP, I.default], () => {
     var e, t;
     let n = I.default.getCurrentUser();
-    a()(null != n, "user cannot be null");
-    let s = _.ZP.getMember(l, n.id);
+    l()(null != n, "user cannot be null");
+    let i = E.ZP.getMember(s, n.id);
     return {
-      nickname: null !== (e = null == s ? void 0 : s.nick) && void 0 !== e ? e : h.ZP.getName(n),
-      nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
+      nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
+      nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
     }
-  }, [l])), {
-    isTruncated: x,
+  }, [s])), {
+    isTruncated: M,
     ExpandableTextContainer: v
-  } = (0, S.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = i.useState(1), D = (0, c.Z)("(max-width: 1439px)"), {
-    selectedTab: j,
-    isPhantomPreview: U
-  } = (0, A.m)(), b = j === g.y.GUILD_PRODUCTS_PREVIEW ? f.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : f.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(v, {
-      lineClamp: D || 2 === Z ? 2 : 3,
-      children: (0, s.jsx)(o.Text, {
+  } = (0, p.s)(), L = (null !== (n = null == _ ? void 0 : null === (t = _.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)("(max-width: 1439px)"), {
+    selectedTab: D,
+    isPhantomPreview: j
+  } = (0, C.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(v, {
+      lineClamp: b || 2 === Z ? 2 : 3,
+      children: (0, i.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-normal",
-        children: null == E ? void 0 : E.description
+        children: null == _ ? void 0 : _.description
       })
-    }), x && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(o.Spacer, {
+    }), M && (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)(o.Spacer, {
         size: 4
-      }), (0, s.jsx)(O, {
-        onClick: () => (0, p.Z)({
-          guildId: m
+      }), (0, i.jsx)(x, {
+        onClick: () => (0, S.Z)({
+          guildId: T
         })
       })]
     })]
-  }) : (0, s.jsx)(o.Text, {
+  }) : (0, i.jsx)(o.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
-    children: U ? b : f.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+    children: j ? U : A.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
   });
-  return (0, s.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     className: R.container,
-    children: [(0, s.jsxs)("div", {
+    children: [(0, i.jsxs)("div", {
       className: R.infoContainer,
-      children: [(0, s.jsx)("div", {
-        children: (0, s.jsx)(T.Z, {
-          guild: d,
-          size: T.Z.Sizes.LARGER,
-          iconSrc: null == d.icon || U ? (0, u.b)("server_products/storefront/default-guild-icon.jpg") : void 0
+      children: [(0, i.jsx)("div", {
+        children: (0, i.jsx)(m.Z, {
+          guild: u,
+          size: m.Z.Sizes.LARGER,
+          iconSrc: null == u.icon || j ? (0, d.b)("server_products/storefront/default-guild-icon.jpg") : void 0
         })
-      }), (0, s.jsx)(o.Spacer, {
+      }), (0, i.jsx)(o.Spacer, {
         size: 16,
         horizontal: !0
-      }), (0, s.jsxs)("div", {
-        children: [(0, s.jsx)("div", {
+      }), (0, i.jsxs)("div", {
+        children: [(0, i.jsx)("div", {
           ref: e => {
             null != e && e.clientHeight > 30 && P(2)
           },
-          children: (0, s.jsx)(o.Heading, {
+          children: (0, i.jsx)(o.Heading, {
             variant: "heading-xl/semibold",
             color: "header-primary",
             lineClamp: 2,
-            children: U ? f.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : f.Z.Messages.GUILD_STORE_HERO_TITLE.format({
-              guildName: d.name
+            children: j ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : A.Z.Messages.GUILD_STORE_HERO_TITLE.format({
+              guildName: u.name
             })
           })
-        }), (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(o.Spacer, {
+        }), (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)(o.Spacer, {
             size: 8
-          }), (0, s.jsx)(o.Text, {
+          }), (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
             color: "text-normal",
-            children: f.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-              username: N,
+            children: A.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
+              username: h,
               usernameHook: function(e, t) {
-                return (0, s.jsx)("span", {
+                return (0, i.jsx)("span", {
                   style: {
-                    color: C
+                    color: f
                   },
                   children: e
                 }, t)
               }
             })
-          }), (0, s.jsx)(o.Spacer, {
+          }), (0, i.jsx)(o.Spacer, {
             size: 9
           }), y]
         })]
       })]
-    }), (0, s.jsx)(M, {
-      coverImageAsset: null == E ? void 0 : E.cover_image_asset,
-      isPreview: U
+    }), (0, i.jsx)(O, {
+      coverImageAsset: null == _ ? void 0 : _.cover_image_asset,
+      isPreview: j
     })]
   })
 }

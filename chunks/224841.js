@@ -1,6 +1,6 @@
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060),
+var s = n(481060),
   i = n(388905),
   a = n(703656),
   o = n(63063),
@@ -13,22 +13,22 @@ t.Z = e => {
     authBoxClassName: t,
     underageMessage: a
   } = e;
-  return (0, s.jsxs)(i.ZP, {
+  return (0, r.jsxs)(i.ZP, {
     className: t,
-    children: [(0, s.jsx)("img", {
+    children: [(0, r.jsx)("img", {
       alt: "",
       src: n(231443),
       className: u.img
-    }), (0, s.jsx)(i.Dx, {
+    }), (0, r.jsx)(i.Dx, {
       className: u.title,
       children: c.Z.Messages.AGE_GATE_UNDERAGE_HEADER
-    }), (0, s.jsx)(i.DK, {
+    }), (0, r.jsx)(i.DK, {
       className: u.subtitle,
       children: c.Z.Messages.AGE_GATE_UNDERAGE_BODY.format({
         underageMessage: null != a ? a : c.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
         helpURL: o.Z.getArticleURL(l.BhN.AGE_GATE)
       })
-    }), (0, s.jsx)(r.Button, {
+    }), (0, r.jsx)(s.Button, {
       fullWidth: !0,
       onClick: d,
       children: c.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN

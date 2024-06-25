@@ -1,50 +1,50 @@
 n.d(t, {
   Z: function() {
-    return h
+    return E
   }
 });
-var s = n(442837),
-  i = n(594190),
-  l = n(836157),
-  a = n(480294),
-  r = n(131951),
+var i = n(442837),
+  s = n(594190),
+  a = n(836157),
+  r = n(480294),
+  l = n(131951),
   o = n(924557),
   c = n(435064),
-  u = n(779618),
-  d = n(356659),
-  E = n(981631);
+  d = n(779618),
+  u = n(356659),
+  _ = n(981631);
 
-function h(e) {
+function E(e) {
   let t = (0, o.nM)({
       autoTrackExposure: !0
     }),
     {
       enableDecoupledGameClipping: n
-    } = l.Z.useExperiment({
+    } = a.Z.useExperiment({
       location: "useShouldDisplayClipsGuildSidebarEducation"
     }, {
       autoTrackExposure: !1
     });
-  return (0, s.e7)([c.Z, i.ZP, a.Z, r.Z], () => {
-    if (!(0, u.Z)(r.Z) || !t || !n) return !1;
+  return (0, i.e7)([c.Z, s.ZP, r.Z, l.Z], () => {
+    if (!(0, d.Z)(l.Z) || !t || !n) return !1;
     if (null != c.Z.getLastClipsError()) return !0;
-    if (!a.Z.hasConsented(E.pjP.PERSONALIZATION) || null == i.ZP.getVisibleGame()) return !1;
+    if (!r.Z.hasConsented(_.pjP.PERSONALIZATION) || null == s.ZP.getVisibleGame()) return !1;
     let {
       clipsEducationState: {
-        dismissedAt: s,
-        numberOfGamesLaunchedSinceDismissal: l,
-        numberOfTimesDismissed: h
+        dismissedAt: i,
+        numberOfGamesLaunchedSinceDismissal: a,
+        numberOfTimesDismissed: E
       },
-      hasTakenDecoupledClip: _,
+      hasTakenDecoupledClip: h,
       clipsSettings: {
         clipsEnabled: I
       }
     } = c.Z.getState();
-    if (null === s) return !0;
+    if (null === i) return !0;
     if (!(null != e && (0, o.xt)(e))) return !1;
-    let m = Date.now() - s > d.xx,
-      T = l >= d._U,
-      g = I ? d.xd : d.A5;
-    return m && T && h < g && !_
+    let m = Date.now() - i > u.xx,
+      p = a >= u._U,
+      g = I ? u.xd : u.A5;
+    return m && p && E < g && !h
   })
 }

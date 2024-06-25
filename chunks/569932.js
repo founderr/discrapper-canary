@@ -1,59 +1,59 @@
 t.d(n, {
   A: function() {
-    return T
+    return _
   }
 });
-var i = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(362470),
+var i = t(362470),
   s = t(961842),
   r = t(63063),
-  C = t(921869),
-  l = t(514161),
+  l = t(921869),
+  c = t(514161),
   a = t(981631),
-  d = t(689938),
-  c = t(913045);
+  C = t(689938),
+  d = t(913045);
 
 function u() {
-  let e = [d.Z.Messages.PS_VALUE_PROP_VOICE, d.Z.Messages.PS_VALUE_PROP_GAME],
-    n = [d.Z.Messages.PS_VALUE_PROP_GAME];
-  return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(l.yC, {
-      children: (0, i.jsx)(l.pT, {
-        icon: (0, i.jsx)(s.Z, {}),
-        title: d.Z.Messages.PS5,
+  let e = [C.Z.Messages.PS_VALUE_PROP_VOICE, C.Z.Messages.PS_VALUE_PROP_GAME],
+    n = [C.Z.Messages.PS_VALUE_PROP_GAME];
+  return (0, o.jsxs)(o.Fragment, {
+    children: [(0, o.jsx)(c.yC, {
+      children: (0, o.jsx)(c.pT, {
+        icon: (0, o.jsx)(s.Z, {}),
+        title: C.Z.Messages.PS5,
         bulletPoints: e
       })
-    }), (0, i.jsx)(l.yC, {
-      children: (0, i.jsx)(l.pT, {
-        icon: (0, i.jsx)(o.Z, {}),
-        title: d.Z.Messages.PS4,
+    }), (0, o.jsx)(c.yC, {
+      children: (0, o.jsx)(c.pT, {
+        icon: (0, o.jsx)(i.Z, {}),
+        title: C.Z.Messages.PS4,
         bulletPoints: n
       })
     })]
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     platformType: n,
     onContinue: t,
-    onClose: o
+    onClose: i
   } = e;
-  return (0, i.jsx)(C.m, {
+  return (0, o.jsx)(l.m, {
     platformType: n,
-    headerConnect: d.Z.Messages.CONNECT_PS_LANDING_TITLE,
-    headerReconnect: d.Z.Messages.RECONNECT_PS_LANDING_TITLE,
-    body: d.Z.Messages.CONNECT_PS_LANDING_BODY,
-    onClose: o,
+    headerConnect: C.Z.Messages.CONNECT_PS_LANDING_TITLE,
+    headerReconnect: C.Z.Messages.RECONNECT_PS_LANDING_TITLE,
+    body: C.Z.Messages.CONNECT_PS_LANDING_BODY,
+    onClose: i,
     onContinue: t,
-    img: (0, i.jsx)("img", {
-      src: c,
+    img: (0, o.jsx)("img", {
+      src: d,
       width: 230,
       height: 138,
       alt: ""
     }),
-    valueProps: (0, i.jsx)(u, {}),
+    valueProps: (0, o.jsx)(u, {}),
     learnMoreLink: r.Z.getArticleURL(a.BhN.PS_CONNECTION)
   })
 }

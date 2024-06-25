@@ -1,5 +1,5 @@
 e.exports = {
-  container: "container_e40c16 " + t("173902").fixClipping,
+  container: "container_e40c16 " + n("173902").fixClipping,
   ready: "ready_e40c16",
   content: "content_e40c16",
   problems: "problems_e40c16",

@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 });
-var s = n(570140);
+var i = n(570140);
 
-function i(e) {
-  s.Z.dispatch({
+function a(e) {
+  i.Z.dispatch({
     type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS",
     skuId: e
   })

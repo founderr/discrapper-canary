@@ -1,16 +1,16 @@
-a.d(n, {
+o.d(t, {
   B: function() {
-    return t
+    return s
   }
-}), a(653041);
-var s = a(392711),
-  l = a.n(s);
-let t = (e, n) => {
-  let a = l().shuffle(e),
-    s = a.findIndex(e => e.value === n);
-  if (s > -1) {
-    let e = a[s];
-    a.splice(s, 1), a.push(e)
+}), o(653041);
+var n = o(392711),
+  a = o.n(n);
+let s = (e, t) => {
+  let o = a().shuffle(e),
+    n = o.findIndex(e => e.value === t);
+  if (n > -1) {
+    let e = o[n];
+    o.splice(n, 1), o.push(e)
   }
-  return a
+  return o
 }

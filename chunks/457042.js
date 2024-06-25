@@ -1,80 +1,80 @@
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   ParagraphFormFieldModal: function() {
     return I
   },
   TextInputFormFieldModal: function() {
-    return E
+    return f
   }
-}), n(47120), n(757143);
-var l = n(735250),
-  s = n(470079),
-  a = n(481060),
-  r = n(881052),
-  o = n(246364),
-  i = n(915509),
-  c = n(592286),
-  u = n(689938);
+}), a(47120), a(757143);
+var n = a(735250),
+  r = a(470079),
+  o = a(481060),
+  l = a(881052),
+  s = a(246364),
+  i = a(915509),
+  d = a(592286),
+  u = a(689938);
 
-function d(e) {
+function c(e) {
   var t;
   let {
-    type: n,
-    title: o,
-    description: d,
-    field: E,
+    type: a,
+    title: s,
+    description: c,
+    field: f,
     onSave: I,
-    onClose: M
-  } = e, [R, _] = s.useState(null !== (t = null == E ? void 0 : E.label) && void 0 !== t ? t : ""), [T, N] = s.useState(null), h = async () => {
-    null != T && N(null);
-    let e = R.trim();
+    onClose: _
+  } = e, [p, E] = r.useState(null !== (t = null == f ? void 0 : f.label) && void 0 !== t ? t : ""), [m, C] = r.useState(null), R = async () => {
+    null != m && C(null);
+    let e = p.trim();
     if ("" === e) {
-      N(u.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION_REQUIRED_ERROR);
+      C(u.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION_REQUIRED_ERROR);
       return
     }
     try {
       await I({
-        field_type: n,
+        field_type: a,
         label: e,
         required: !0
-      }), M()
+      }), _()
     } catch (e) {
-      N(new r.Hx(e).getAnyErrorMessage())
+      C(new l.Hx(e).getAnyErrorMessage())
     }
   };
-  return (0, l.jsx)(i.Z, {
+  return (0, n.jsx)(i.Z, {
     ...e,
-    errorText: T,
-    title: o,
-    description: d,
-    onConfirm: h,
-    onCancel: M,
-    children: (0, l.jsx)(a.TextInput, {
+    errorText: m,
+    title: s,
+    description: c,
+    onConfirm: R,
+    onCancel: _,
+    children: (0, n.jsx)(o.TextInput, {
       onChange: e => {
-        null != T && N(null);
+        null != m && C(null);
         let t = e.replace(/(\r\n|\n|\r)/g, " ");
-        t.length > c.XN && (t = t.slice(0, c.XN)), _(t)
+        t.length > d.XN && (t = t.slice(0, d.XN)), E(t)
       },
       placeholder: u.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION,
-      value: R,
-      onKeyDown: e => "Enter" === e.key && h()
+      value: p,
+      onKeyDown: e => "Enter" === e.key && R()
     })
   })
 }
 
-function E(e) {
-  return (0, l.jsx)(d, {
+function f(e) {
+  return (0, n.jsx)(c, {
     title: u.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
     description: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_TEXT_DESCRIPTION,
-    type: o.QJ.TEXT_INPUT,
+    type: s.QJ.TEXT_INPUT,
     ...e
   })
 }
 
 function I(e) {
-  return (0, l.jsx)(d, {
+  return (0, n.jsx)(c, {
     title: u.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
     description: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PARAGRAPH_DESCRIPTION,
-    type: o.QJ.PARAGRAPH,
+    type: s.QJ.PARAGRAPH,
     ...e
   })
 }

@@ -1,16 +1,16 @@
 n.d(t, {
   Z: function() {
-    return l
+    return a
   }
 });
-var s = n(699516),
-  i = n(453542);
+var i = n(699516),
+  s = n(453542);
 
-function l() {
+function a() {
   return {
-    num_friends: s.Z.getFriendCount(),
-    num_outgoing_requests: s.Z.getOutgoingCount(),
-    num_incoming_requests: s.Z.getPendingCount(),
-    ...(0, i.X)()
+    num_friends: i.Z.getFriendCount(),
+    num_outgoing_requests: i.Z.getOutgoingCount(),
+    num_incoming_requests: i.Z.getPendingCount(),
+    ...(0, s.X)()
   }
 }

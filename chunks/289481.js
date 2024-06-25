@@ -1,171 +1,171 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  l = n.n(s),
   r = n(920906),
   o = n(442837),
   c = n(481060),
-  u = n(570140),
-  d = n(45114),
-  E = n(367907),
-  _ = n(717680),
+  d = n(570140),
+  u = n(45114),
+  _ = n(367907),
+  E = n(717680),
   I = n(703656),
-  T = n(592125),
-  m = n(259580),
-  N = n(617379),
-  h = n(324081),
-  C = n(305248),
-  S = n(520116),
-  A = n(981631),
+  m = n(592125),
+  T = n(259580),
+  h = n(617379),
+  N = n(324081),
+  f = n(305248),
+  p = n(520116),
+  C = n(981631),
   g = n(689938),
-  p = n(385190);
-let f = i.memo(function(e) {
+  S = n(385190);
+let A = a.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
-  } = e, l = i.useRef(null), [
-    [a, o], c
-  ] = i.useState([0, 0]), u = t.deleted && a > 0;
-  if (t.deleted && 0 === a && null != l.current) {
-    let e = l.current.offsetHeight,
-      t = l.current.offsetTop,
-      n = l.current.parentElement.scrollTop,
-      s = n > t ? e - (n - t) : e;
-    c([e, e - s])
+  } = e, s = a.useRef(null), [
+    [l, o], c
+  ] = a.useState([0, 0]), d = t.deleted && l > 0;
+  if (t.deleted && 0 === l && null != s.current) {
+    let e = s.current.offsetHeight,
+      t = s.current.offsetTop,
+      n = s.current.parentElement.scrollTop,
+      i = n > t ? e - (n - t) : e;
+    c([e, e - i])
   }
   let {
-    opacity: d,
-    size: E
+    opacity: u,
+    size: _
   } = (0, r.useSpring)({
     config: {
       clamp: !0,
       friction: 18,
       tension: 200
     },
-    opacity: u ? 0 : 1,
-    size: u ? 0 : 1,
+    opacity: d ? 0 : 1,
+    size: d ? 0 : 1,
     onRest: () => {
       n(t.channelId)
     }
-  }), _ = {
-    opacity: d,
-    height: E.to(e => u ? function(e, t, n) {
+  }), E = {
+    opacity: u,
+    height: _.to(e => d ? function(e, t, n) {
       return t + (e - t) * n
-    }(a, o, e) : "auto")
+    }(l, o, e) : "auto")
   };
-  return (0, s.jsx)(r.animated.div, {
-    ref: l,
-    style: _,
-    children: (0, s.jsx)(R, {
+  return (0, i.jsx)(r.animated.div, {
+    ref: s,
+    style: E,
+    children: (0, i.jsx)(R, {
       ...e
     })
   })
 });
-t.Z = f;
-let R = i.memo(function(e) {
+t.Z = A;
+let R = a.memo(function(e) {
   let {
     channel: t,
     onJump: n,
-    deleteChannel: l,
-    toggle: a
-  } = e, r = (0, o.e7)([T.Z], () => T.Z.getChannel(t.channelId));
-  if (i.useEffect(() => {
-      null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && u.Z.wait(() => {
-        (0, d.In)(t.channelId, !0), l(t.channelId)
+    deleteChannel: s,
+    toggle: l
+  } = e, r = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
+  if (a.useEffect(() => {
+      null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.Z.wait(() => {
+        (0, u.In)(t.channelId, !0), s(t.channelId)
       })
     }), null == r || !t.hasLoadedAnything) return null;
-  let _ = (e, s) => {
-    (0, E.yw)(A.rMx.INBOX_CHANNEL_CLICKED, {
+  let E = (e, i) => {
+    (0, _.yw)(C.rMx.INBOX_CHANNEL_CLICKED, {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
-    let i = null != s ? s : t.oldestUnreadMessageId;
-    (0, I.uL)(A.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : i)), n(e)
+    let a = null != i ? i : t.oldestUnreadMessageId;
+    (0, I.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
-  return (0, s.jsx)("div", {
-    className: p.channel,
-    children: (0, s.jsx)(c.HeadingLevel, {
-      component: (0, s.jsxs)(h.Z, {
+  return (0, i.jsx)("div", {
+    className: S.channel,
+    children: (0, i.jsx)(c.HeadingLevel, {
+      component: (0, i.jsxs)(N.Z, {
         channel: r,
-        gotoChannel: _,
+        gotoChannel: E,
         mentionCount: t.mentionCount,
-        toggleCollapsed: a,
+        toggleCollapsed: l,
         channelState: t,
-        children: [(0, s.jsx)(N.Z, {
+        children: [(0, i.jsx)(h.Z, {
           channel: r
-        }), (0, s.jsx)(O, {
+        }), (0, i.jsx)(x, {
           ...e
-        }), "nsfw" === t.type ? null : (0, s.jsx)(M, {
+        }), "nsfw" === t.type ? null : (0, i.jsx)(O, {
           ...e
         })]
       }),
-      children: t.collapsed ? null : "messages" === t.type ? (0, s.jsx)(S.Z, {
+      children: t.collapsed ? null : "messages" === t.type ? (0, i.jsx)(p.Z, {
         channel: t,
         channelRecord: r,
-        gotoChannel: _
-      }) : "forum" === t.type ? (0, s.jsx)(C.Z, {
+        gotoChannel: E
+      }) : "forum" === t.type ? (0, i.jsx)(f.Z, {
         channel: t,
         channelRecord: r,
-        deleteChannel: l
+        deleteChannel: s
       }) : null
     })
   })
 });
 
-function O(e) {
+function x(e) {
   let {
     channel: t,
     markChannelRead: n,
-    markGuildRead: i,
-    getNumUnreadChannels: l
-  } = e, a = (0, _.Z)() && null != t.guildId;
-  return (0, s.jsx)(c.CircleIconButton, {
-    className: p.markReadButton,
-    tooltip: a ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
+    markGuildRead: a,
+    getNumUnreadChannels: s
+  } = e, l = (0, E.Z)() && null != t.guildId;
+  return (0, i.jsx)(c.CircleIconButton, {
+    className: S.markReadButton,
+    tooltip: l ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
     color: c.CircleIconButtonColors.TERTIARY,
-    icon: a ? (0, s.jsx)(c.DoubleCheckmarkLargeIcon, {
+    icon: l ? (0, i.jsx)(c.DoubleCheckmarkLargeIcon, {
       size: "xs",
       color: "currentColor"
-    }) : (0, s.jsx)(c.CheckmarkLargeIcon, {
+    }) : (0, i.jsx)(c.CheckmarkLargeIcon, {
       size: "xs",
       color: "currentColor"
     }),
     onClick: function() {
-      a && null != t.guildId ? i(t.guildId) : n(t), (0, E.yw)(A.rMx.INBOX_CHANNEL_ACKED, {
+      l && null != t.guildId ? a(t.guildId) : n(t), (0, _.yw)(C.rMx.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
-        num_unread_channels_remaining: l() - 1
+        num_unread_channels_remaining: s() - 1
       })
     }
   })
 }
 
-function M(e) {
+function O(e) {
   let {
     channel: t,
     toggle: n,
-    getNumUnreadChannels: i
+    getNumUnreadChannels: a
   } = e;
 
-  function l() {
-    n(t), (0, E.yw)(A.rMx.INBOX_CHANNEL_COLLAPSED, {
+  function s() {
+    n(t), (0, _.yw)(C.rMx.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
-      num_unread_channels_remaining: i(),
+      num_unread_channels_remaining: a(),
       is_now_collapsed: !t.collapsed
     })
   }
-  return (0, s.jsx)(c.Tooltip, {
+  return (0, i.jsx)(c.Tooltip, {
     text: g.Z.Messages.COLLAPSE,
-    children: e => (0, s.jsx)(c.Clickable, {
+    children: e => (0, i.jsx)(c.Clickable, {
       ...e,
-      className: a()(p.collapseButton, {
-        [p.collapsed]: t.collapsed
+      className: l()(S.collapseButton, {
+        [S.collapsed]: t.collapsed
       }),
-      onClick: l,
-      children: (0, s.jsx)(m.Z, {
+      onClick: s,
+      children: (0, i.jsx)(T.Z, {
         width: 16,
         height: 16
       })

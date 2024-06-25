@@ -1,12 +1,12 @@
 n.d(t, {
   M: function() {
-    return s
+    return l
   },
   i: function() {
-    return i
+    return a
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_rtc_voice_state_sync_experiment",
   label: "RTC and Voice State Desync Fixes",
@@ -22,19 +22,19 @@ let l = (0, n(818083).B)({
   }]
 });
 
-function i() {
+function a() {
   let {
     enabled: e
-  } = l.getCurrentConfig({
+  } = i.getCurrentConfig({
     location: "isRTCVoiceStateDesyncExperimentEnabled"
   });
   return e
 }
 
-function s() {
+function l() {
   let {
     enabled: e
-  } = l.useExperiment({
+  } = i.useExperiment({
     location: "useIsRTCVoiceStateDesyncExperimentEnabled"
   });
   return e

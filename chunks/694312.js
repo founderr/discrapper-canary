@@ -22,18 +22,18 @@ function d(e) {
     I = null != d ? [d, ...E] : E,
     T = (0, s.Z)(I),
     h = i.useMemo(() => T.filter(l.lm), [T]),
-    S = i.useMemo(() => null != d && h.length > 0 && h[0].id === d && null != h[0].embeddedActivityConfig ? [{
+    f = i.useMemo(() => null != d && h.length > 0 && h[0].id === d && null != h[0].embeddedActivityConfig ? [{
       activity: h[0].embeddedActivityConfig,
       application: h[0]
     }] : [], [h, d]),
-    f = i.useMemo(() => n.map(e => {
+    S = i.useMemo(() => n.map(e => {
       let t = h.find(t => t.id === e.application_id);
       return null == t ? null : {
         activity: e,
         application: t
       }
     }).filter(l.lm), [n, h]);
-  return i.useMemo(() => [...S, ...f].filter(e => {
+  return i.useMemo(() => [...f, ...S].filter(e => {
     var t;
     let {
       activity: n
@@ -44,5 +44,5 @@ function d(e) {
       activity: n
     } = e;
     return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
-  }), [null == t ? void 0 : t.nsfwAllowed, f, S])
+  }), [null == t ? void 0 : t.nsfwAllowed, S, f])
 }

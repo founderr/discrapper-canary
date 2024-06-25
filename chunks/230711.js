@@ -84,9 +84,9 @@ t.Z = {
       password: I,
       avatar: T,
       newPassword: h,
-      discriminator: S
+      discriminator: f
     } = e, {
-      close: f
+      close: S
     } = t;
     return (0, _.Z)(e => {
       let t = {
@@ -97,7 +97,7 @@ t.Z = {
           avatar: T,
           new_password: h,
           ...e,
-          discriminator: null != S && "" !== S ? S : void 0
+          discriminator: null != f && "" !== f ? f : void 0
         },
         s = r.K.get(c.JkL),
         l = (0, d.xJ)();
@@ -138,7 +138,7 @@ t.Z = {
       }), null != I && null != h && s.Z.dispatch({
         type: "PASSWORD_UPDATED",
         userId: t.id
-      }), f ? this.close() : this.submitComplete(), e
+      }), S ? this.close() : this.submitComplete(), e
     }, e => (s.Z.dispatch({
       type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
       errors: e.body

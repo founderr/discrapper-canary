@@ -4,7 +4,7 @@ n.d(t, {
     return h
   },
   Pn: function() {
-    return S
+    return f
   },
   RS: function() {
     return I
@@ -54,5 +54,5 @@ let s = new Set([r.QJ.TERMS]),
   I = 1e3,
   T = 300,
   h = "Membership Gating",
-  S = "in-app-member-verification";
+  f = "in-app-member-verification";
 (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

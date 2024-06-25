@@ -1,8 +1,8 @@
 n(47120);
-var l, i = n(442837),
-  s = n(570140);
+var i, a = n(442837),
+  l = n(570140);
 
-function a(e, t, n) {
+function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,7 +11,7 @@ function a(e, t, n) {
   }) : e[t] = n, e
 }
 let r = new Set;
-class o extends(l = i.ZP.PersistedStore) {
+class o extends(i = a.ZP.PersistedStore) {
   initialize(e) {
     null != e && (r = new Set(e))
   }
@@ -22,7 +22,7 @@ class o extends(l = i.ZP.PersistedStore) {
     return r
   }
 }
-a(o, "displayName", "ForumChannelAdminOnboardingGuideStore"), a(o, "persistKey", "ForumChannelAdminOnboardingGuideStore"), t.Z = new o(s.Z, {
+s(o, "displayName", "ForumChannelAdminOnboardingGuideStore"), s(o, "persistKey", "ForumChannelAdminOnboardingGuideStore"), t.Z = new o(l.Z, {
   ADMIN_ONBOARDING_GUIDE_HIDE: function(e) {
     let {
       channelId: t,

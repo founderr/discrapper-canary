@@ -1,31 +1,31 @@
-a.d(s, {
+s.d(a, {
   Z: function() {
-    return m
+    return u
   }
 });
-var t = a(544891),
-  r = a(933557),
-  n = a(430824),
-  l = a(131951),
-  i = a(699516),
-  o = a(594174),
-  d = a(927923),
-  c = a(981631),
-  u = a(689938);
+var r = s(544891),
+  t = s(933557),
+  n = s(430824),
+  d = s(131951),
+  c = s(699516),
+  o = s(594174),
+  i = s(927923),
+  l = s(981631),
+  f = s(689938);
 
-function m(e, s) {
-  var a;
+function u(e, a) {
+  var s;
   let {
-    nonce: m,
-    forQRCode: f
-  } = s, x = e.getGuildId(), h = n.Z.getGuild(x), N = (0, d.Lc)({
-    guildId: null != x ? x : c.aIL,
+    nonce: u,
+    forQRCode: m
+  } = a, x = e.getGuildId(), _ = n.Z.getGuild(x), N = (0, i.Lc)({
+    guildId: null != x ? x : l.aIL,
     channelId: e.id,
-    channelName: (0, r.F6)(e, o.default, i.Z),
-    guildName: null !== (a = null == h ? void 0 : h.name) && void 0 !== a ? a : u.Z.Messages.UNNAMED,
-    muted: l.Z.isSelfMute(),
-    deafened: l.Z.isSelfDeaf(),
-    nonce: m
+    channelName: (0, t.F6)(e, o.default, c.Z),
+    guildName: null !== (s = null == _ ? void 0 : _.name) && void 0 !== s ? s : f.Z.Messages.UNNAMED,
+    muted: d.Z.isSelfMute(),
+    deafened: d.Z.isSelfDeaf(),
+    nonce: u
   });
-  return f ? "".concat((0, t.K0)()).concat(c.ANM.XBOX_HANDOFF, "?").concat(N.toString()) : "".concat(d.bJ, "?").concat(N.toString())
+  return m ? "".concat((0, r.K0)()).concat(l.ANM.XBOX_HANDOFF, "?").concat(N.toString()) : "".concat(i.bJ, "?").concat(N.toString())
 }

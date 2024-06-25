@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   p: function() {
-    return f
+    return S
   }
 }), n(789020);
 var i = n(570140),
@@ -63,7 +63,7 @@ async function h(e) {
   }
   return !0
 }
-async function S(e) {
+async function f(e) {
   let {
     application: t,
     applicationId: n,
@@ -77,6 +77,6 @@ async function S(e) {
     })
   }))
 }
-async function f(e) {
-  return !!(await T(e) && await h(e) && await S(e)) || !1
+async function S(e) {
+  return !!(await T(e) && await h(e) && await f(e)) || !1
 }

@@ -1,34 +1,34 @@
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(512722),
-  o = n.n(r),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(512722),
+  o = n.n(l),
   c = n(481060),
-  u = n(194359),
-  d = n(153124),
-  E = n(657682),
-  h = n(981631),
-  _ = n(420212),
+  d = n(194359),
+  u = n(153124),
+  _ = n(657682),
+  E = n(981631),
+  h = n(420212),
   I = n(689938),
   m = n(804025),
-  T = n(331651);
+  p = n(331651);
 let g = {
     canSend: !1,
     hint: null,
     success: null,
     error: null
   },
-  p = (0, d.hQ)(),
-  N = "".concat(p, "-decription"),
-  S = "".concat(p, "-error");
+  T = (0, u.hQ)(),
+  C = "".concat(T, "-decription"),
+  f = "".concat(T, "-error");
 
-function C(e, t) {
+function S(e, t) {
   switch (t.type) {
     case "RESET":
       return g;
@@ -47,92 +47,92 @@ function C(e, t) {
   }
 }
 
-function A() {
-  let e = i.createRef(),
-    t = i.createRef(),
-    [n, l] = i.useReducer(C, g),
+function N() {
+  let e = s.createRef(),
+    t = s.createRef(),
+    [n, a] = s.useReducer(S, g),
     {
-      canSend: r,
-      hint: d,
-      success: A,
-      error: f
+      canSend: l,
+      hint: u,
+      success: N,
+      error: A
     } = n;
-  return i.useEffect(() => {
-    null != A && (o()(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
-  }, [A, e]), (0, s.jsxs)("form", {
+  return s.useEffect(() => {
+    null != N && (o()(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
+  }, [N, e]), (0, i.jsxs)("form", {
     onSubmit: t => {
       t.preventDefault(), o()(null != e.current, "Input is submitted when not mounted");
       let n = e.current.value.trim();
       !n.includes("#") && n.startsWith("@") && (n = n.substring(1));
-      let s = (0, E.Zy)(n);
-      if (null != s) {
-        l({
+      let i = (0, _.Zy)(n);
+      if (null != i) {
+        a({
           type: "ERROR",
-          text: s
+          text: i
         });
         return
       }
-      u.Z.sendRequest({
+      d.Z.sendRequest({
         discordTag: n,
         context: {
           location: "Add Friend"
         }
-      }).then(() => l({
+      }).then(() => a({
         type: "SUCCESS",
         text: I.Z.Messages.ADD_FRIEND_SUCCESS.format({
           discordTag: n
         })
       }), e => {
         var t;
-        return l({
+        return a({
           type: "ERROR",
-          text: (0, E.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
+          text: (0, _.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
         })
       })
     },
     autoComplete: "off",
-    children: [(0, s.jsx)(c.FormText, {
-      id: N,
+    children: [(0, i.jsx)(c.FormText, {
+      id: C,
       type: c.FormText.Types.DESCRIPTION,
       children: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
-    }), (0, s.jsx)(c.FocusRing, {
+    }), (0, i.jsx)(c.FocusRing, {
       focusTarget: e,
       ringTarget: t,
       ringClassName: m.ring,
-      children: (0, s.jsxs)("div", {
+      children: (0, i.jsxs)("div", {
         ref: t,
-        className: a()(m.addFriendInputWrapper, {
-          [m.success]: A,
-          [m.error]: f
+        className: r()(m.addFriendInputWrapper, {
+          [m.success]: N,
+          [m.error]: A
         }),
-        children: [(0, s.jsx)(c.TextInput, {
-          id: p,
+        children: [(0, i.jsx)(c.TextInput, {
+          id: T,
           inputRef: e,
           className: m.addFriendInput,
           inputClassName: m.input,
           onKeyPress: t => {
             let n = t.currentTarget.value;
-            if (t.key !== _.mR.Enter) {
+            if (t.key !== h.mR.Enter) {
               if (n.includes("#")) {
                 o()(null != e.current, "Input is handling keypress when not mounted");
-                let s = n.indexOf("#"),
-                  i = e.current.selectionStart,
-                  l = t.key === _.mR.Backspace || t.key === _.mR.ArrowRight || t.key === _.mR.ArrowLeft,
-                  a = t.which >= 48 && t.which <= 57;
-                null != i && i > s && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != i && i > s && !a && !l && t.preventDefault()
+                let i = n.indexOf("#"),
+                  s = e.current.selectionStart,
+                  a = t.key === h.mR.Backspace || t.key === h.mR.ArrowRight || t.key === h.mR.ArrowLeft,
+                  r = t.which >= 48 && t.which <= 57;
+                null != s && s > i && /^(.+?#\d{4})$/.test(n) && !a ? t.preventDefault() : null != s && s > i && !r && !a && t.preventDefault()
               }
             }
           },
           onChange: e => {
             if (e.length <= 0) {
-              l({
+              a({
                 type: "RESET"
               });
               return
             }
             let t = "",
               [, n] = e.split("#");
-            null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)), l({
+            null != n && (t = e + E.LYt.slice(null != n ? n.length + 1 : 0)), a({
               type: "HINT",
               text: t
             })
@@ -144,30 +144,30 @@ function A() {
           "data-lpignore": !0,
           placeholder: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          "aria-invalid": null != f || void 0,
-          "aria-describedby": null != f ? S : N
-        }), null != d && (0, s.jsx)("div", {
+          "aria-invalid": null != A || void 0,
+          "aria-describedby": null != A ? f : C
+        }), null != u && (0, i.jsx)("div", {
           className: m.addFriendHint,
           "aria-hidden": !0,
-          children: d
-        }), (0, s.jsx)(c.Button, {
+          children: u
+        }), (0, i.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          disabled: !r,
+          disabled: !l,
           type: "submit",
           children: I.Z.Messages.ADD_FRIEND_BUTTON
         })]
       })
-    }), null != f && (0, s.jsx)(c.FormText, {
+    }), null != A && (0, i.jsx)(c.FormText, {
       role: "alert",
-      id: S,
+      id: f,
       type: c.FormText.Types.ERROR,
-      className: T.marginTop8,
-      children: f
-    }), null != A && (0, s.jsx)(c.FormText, {
+      className: p.marginTop8,
+      children: A
+    }), null != N && (0, i.jsx)(c.FormText, {
       role: "status",
       type: c.FormText.Types.SUCCESS,
-      className: T.marginTop8,
-      children: A
+      className: p.marginTop8,
+      children: N
     })]
   })
 }

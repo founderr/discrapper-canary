@@ -1,39 +1,39 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
     return c
   }
 });
-var n = t(735250);
-t(470079);
-var r = t(481060),
-  i = t(847033),
-  l = t(544978),
-  o = t(689938),
-  a = t(149429);
+var r = n(735250);
+n(470079);
+var s = n(481060),
+  i = n(847033),
+  o = n(544978),
+  a = n(689938),
+  l = n(149429);
 
 function c() {
   let {
     selectedTab: e,
-    isPhantomPreview: s,
-    handlePreviewDismiss: t
+    isPhantomPreview: t,
+    handlePreviewDismiss: n
   } = (0, i.m)();
-  return s ? (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)("div", {
-      className: a.previewNotice,
-      children: [(0, n.jsx)(r.EyeSlashIcon, {
+  return t ? (0, r.jsxs)(r.Fragment, {
+    children: [(0, r.jsxs)("div", {
+      className: l.previewNotice,
+      children: [(0, r.jsx)(s.EyeSlashIcon, {
         size: "xs",
         color: "currentColor"
-      }), (0, n.jsx)(r.Text, {
+      }), (0, r.jsx)(s.Text, {
         variant: "text-sm/normal",
-        className: a.previewNoticeText,
-        children: e === l.y.GUILD_PRODUCTS_PREVIEW ? o.Z.Messages.GUILD_SHOP_TAB_PREVIEW_NOTICE_LABEL : o.Z.Messages.GUILD_SHOP_PAGE_PREVIEW_NOTICE_LABEL
+        className: l.previewNoticeText,
+        children: e === o.y.GUILD_PRODUCTS_PREVIEW ? a.Z.Messages.GUILD_SHOP_TAB_PREVIEW_NOTICE_LABEL : a.Z.Messages.GUILD_SHOP_PAGE_PREVIEW_NOTICE_LABEL
       })]
-    }), (0, n.jsx)(r.Button, {
-      size: r.Button.Sizes.MIN,
-      color: r.Button.Colors.PRIMARY,
-      className: a.removePreviewButton,
-      onClick: t,
-      children: e === l.y.GUILD_PRODUCTS_PREVIEW ? o.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_TAB_BUTTON : o.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_PAGE_BUTTON
+    }), (0, r.jsx)(s.Button, {
+      size: s.Button.Sizes.MIN,
+      color: s.Button.Colors.PRIMARY,
+      className: l.removePreviewButton,
+      onClick: n,
+      children: e === o.y.GUILD_PRODUCTS_PREVIEW ? a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_TAB_BUTTON : a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_PAGE_BUTTON
     })]
   }) : null
 }

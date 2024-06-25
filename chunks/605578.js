@@ -23,26 +23,26 @@ function a(e) {
     onBlur: I,
     onMouseOver: T,
     onMouseDown: h,
-    onMouseLeave: S,
-    buttonProps: f,
-    "aria-label": N
-  } = e, A = r.useRef(null);
+    onMouseLeave: f,
+    buttonProps: S,
+    "aria-label": A
+  } = e, N = r.useRef(null);
   return (0, i.jsxs)(t, {
-    ref: A,
+    ref: N,
     className: a,
     onClick: u,
     onMouseOver: T,
-    onMouseLeave: S,
+    onMouseLeave: f,
     onDoubleClick: _,
     onContextMenu: c,
     children: [(0, i.jsx)(s.P, {
-      ...f,
+      ...S,
       focusProps: {
-        ringTarget: A,
+        ringTarget: N,
         ...l
       },
       className: o.focusTarget,
-      "aria-label": N,
+      "aria-label": A,
       onClick: e => {
         e.stopPropagation(), null == u || u(e)
       },

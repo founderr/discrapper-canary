@@ -1,14 +1,14 @@
 t.d(s, {
   Z: function() {
-    return E
+    return d
   }
 }), t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(481060),
-  l = t(401190),
-  r = t(689938),
-  o = t(248669);
+  a = t(470079),
+  i = t(481060),
+  r = t(401190),
+  o = t(689938),
+  l = t(248669);
 
 function c(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
@@ -18,14 +18,14 @@ function c(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-class E extends i.PureComponent {
+class d extends a.PureComponent {
   renderErrorMessage() {
     let {
       hasError: e
     } = this.state;
     return e ? (0, n.jsx)("div", {
-      className: o.error,
-      children: r.Z.Messages.HYPESQUAD_LEAVE_ERROR
+      className: l.error,
+      children: o.Z.Messages.HYPESQUAD_LEAVE_ERROR
     }) : null
   }
   render() {
@@ -35,17 +35,17 @@ class E extends i.PureComponent {
       isHypeSquadOnlineMember: s
     } = this.props;
     return s ? (0, n.jsxs)("div", {
-      className: o.leaveActionWrapper,
-      children: [this.renderErrorMessage(), (0, n.jsxs)(a.Text, {
+      className: l.leaveActionWrapper,
+      children: [this.renderErrorMessage(), (0, n.jsxs)(i.Text, {
         variant: "text-sm/normal",
-        children: [r.Z.Messages.HYPESQUAD_LEAVE_PROMPT, (0, n.jsx)(a.Button, {
-          className: o.leaveButton,
-          color: a.Button.Colors.LINK,
-          look: a.Button.Looks.LINK,
+        children: [o.Z.Messages.HYPESQUAD_LEAVE_PROMPT, (0, n.jsx)(i.Button, {
+          className: l.leaveButton,
+          color: i.Button.Colors.LINK,
+          look: i.Button.Looks.LINK,
           onClick: this.handleLeaveHypeSquadClick,
-          size: a.Button.Sizes.NONE,
+          size: i.Button.Sizes.NONE,
           submitting: e,
-          children: r.Z.Messages.HYPESQUAD_LEAVE_ACTION
+          children: o.Z.Messages.HYPESQUAD_LEAVE_ACTION
         })]
       })]
     }) : null
@@ -62,7 +62,7 @@ class E extends i.PureComponent {
       this.setState({
         isRequestPending: !0
       }, () => {
-        l.Z.leaveHypeSquadOnline().then(() => {
+        r.Z.leaveHypeSquadOnline().then(() => {
           this.setState({
             isRequestPending: !1
           })

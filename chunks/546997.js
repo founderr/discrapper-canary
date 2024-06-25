@@ -1,41 +1,41 @@
 t.d(s, {
   Z: function() {
-    return E
+    return d
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(442837),
-  a = t(481060),
-  l = t(846027),
-  r = t(131951),
-  o = t(689938),
+var a = t(442837),
+  i = t(481060),
+  r = t(846027),
+  o = t(131951),
+  l = t(689938),
   c = t(331651);
 
-function E() {
+function d() {
   let {
     videoHook: e,
     experimentalSoundshare: s,
     supportsVideoHook: t,
-    supportsExperimentalSoundshare: E
-  } = (0, i.cj)([r.Z], () => ({
-    videoHook: r.Z.getVideoHook(),
-    experimentalSoundshare: r.Z.getExperimentalSoundshare(),
-    supportsVideoHook: r.Z.supportsVideoHook(),
-    supportsExperimentalSoundshare: r.Z.supportsExperimentalSoundshare()
+    supportsExperimentalSoundshare: d
+  } = (0, a.cj)([o.Z], () => ({
+    videoHook: o.Z.getVideoHook(),
+    experimentalSoundshare: o.Z.getExperimentalSoundshare(),
+    supportsVideoHook: o.Z.supportsVideoHook(),
+    supportsExperimentalSoundshare: o.Z.supportsExperimentalSoundshare()
   }));
-  return t || E ? (0, n.jsxs)(a.FormSection, {
+  return t || d ? (0, n.jsxs)(i.FormSection, {
     className: c.marginBottom20,
-    title: o.Z.Messages.FORM_LABEL_SCREENSHARE,
-    children: [t && (0, n.jsx)(a.FormSwitch, {
+    title: l.Z.Messages.FORM_LABEL_SCREENSHARE,
+    children: [t && (0, n.jsx)(i.FormSwitch, {
       value: e,
-      onChange: e => l.Z.setVideoHook(e),
-      note: o.Z.Messages.FORM_HELP_VIDEO_HOOK,
-      children: o.Z.Messages.USER_SETTINGS_VOICE_VIDEO_HOOK_LABEL
-    }), E && (0, n.jsx)(a.FormSwitch, {
+      onChange: e => r.Z.setVideoHook(e),
+      note: l.Z.Messages.FORM_HELP_VIDEO_HOOK,
+      children: l.Z.Messages.USER_SETTINGS_VOICE_VIDEO_HOOK_LABEL
+    }), d && (0, n.jsx)(i.FormSwitch, {
       value: s,
-      onChange: e => l.Z.setExperimentalSoundshare(e),
-      children: o.Z.Messages.USER_SETTINGS_VOICE_EXPERIMENTAL_SOUNDSHARE_LABEL
+      onChange: e => r.Z.setExperimentalSoundshare(e),
+      children: l.Z.Messages.USER_SETTINGS_VOICE_EXPERIMENTAL_SOUNDSHARE_LABEL
     })]
   }) : null
 }

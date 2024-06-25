@@ -1,43 +1,43 @@
-var s = n(735250),
-  i = n(470079),
-  l = n(788307),
-  a = n(280234),
-  r = n(509275),
+var i = n(735250),
+  s = n(470079),
+  a = n(788307),
+  r = n(280234),
+  l = n(509275),
   o = n(51144),
   c = n(166896);
 t.Z = function(e) {
   let {
     hovered: t,
     activities: n,
-    applicationStream: u,
-    status: d,
-    user: E,
-    lastOnlineTimestamp: h,
-    experimentLocation: _ = "status_text"
+    applicationStream: d,
+    status: u,
+    user: _,
+    lastOnlineTimestamp: E,
+    experimentLocation: h = "status_text"
   } = e, I = n.length > 0, {
     isRecentlyOnlineShowable: m,
-    isRecentlyOnlineTrackable: T
-  } = (0, a.$)(h);
-  if (i.useEffect(() => {
-      T && !I && a.Z.trackExposure({
-        location: _
+    isRecentlyOnlineTrackable: p
+  } = (0, r.$)(E);
+  if (s.useEffect(() => {
+      p && !I && r.Z.trackExposure({
+        location: h
       })
-    }, [T, I, _]), I) return (0, s.jsx)(l.Z, {
+    }, [p, I, h]), I) return (0, i.jsx)(a.Z, {
     className: c.activity,
     textClassName: c.text,
     emojiClassName: c.customStatusEmoji,
     activities: n,
-    applicationStream: u,
+    applicationStream: d,
     animate: t,
-    user: E
+    user: _
   });
-  if (!m) return (0, s.jsx)("div", {
+  if (!m) return (0, i.jsx)("div", {
     className: c.text,
-    children: (0, o.u5)(d)
+    children: (0, o.u5)(u)
   });
   {
-    let e = (0, r.H)(h);
-    return (0, s.jsx)("div", {
+    let e = (0, l.H)(E);
+    return (0, i.jsx)("div", {
       className: c.text,
       children: e
     })

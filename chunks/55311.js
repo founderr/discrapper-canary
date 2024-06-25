@@ -3,21 +3,21 @@ n.d(t, {
     return o
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(846027),
-  a = n(468026),
-  r = n(689938);
+var s = n(481060),
+  a = n(846027),
+  r = n(468026),
+  l = n(689938);
 
 function o(e) {
   if (e) {
-    (0, i.openModal)(e => (0, s.jsx)(a.default, {
+    (0, s.openModal)(e => (0, i.jsx)(r.default, {
       ...e,
-      title: r.Z.Messages.SERVER_DEAFENED_DIALOG_TITLE,
-      body: r.Z.Messages.SERVER_DEAFENED_DIALOG_BODY
+      title: l.Z.Messages.SERVER_DEAFENED_DIALOG_TITLE,
+      body: l.Z.Messages.SERVER_DEAFENED_DIALOG_BODY
     }));
     return
   }
-  l.Z.toggleSelfDeaf()
+  a.Z.toggleSelfDeaf()
 }

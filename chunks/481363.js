@@ -3,11 +3,11 @@ n.d(t, {
     return c
   }
 }), n(789020);
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(630388),
-  s = n(901461),
-  a = n(773176),
+var a = n(630388),
+  l = n(901461),
+  s = n(773176),
   r = n(981631),
   o = n(105461);
 
@@ -22,16 +22,16 @@ function c(e) {
     isFocused: d,
     buttonProps: {
       message: h,
-      channel: m,
-      groupId: E,
-      compact: p = !1
+      channel: p,
+      groupId: m,
+      compact: _ = !1
     }
-  } = e, g = h.state === r.yb.SENDING, f = h.id === E, C = (0, i.yE)(h.flags, r.iLy.EPHEMERAL), _ = h.state === r.yb.SEND_FAILED;
-  return g || C && !_ ? null : (0, l.jsx)(a.Z, {
+  } = e, f = h.state === r.yb.SENDING, E = h.id === m, g = (0, a.yE)(h.flags, r.iLy.EPHEMERAL), C = h.state === r.yb.SEND_FAILED;
+  return f || g && !C ? null : (0, i.jsx)(s.Z, {
     className: o.buttons,
     innerClassName: o.buttonsInner,
-    isHeader: !p && f && !(0, s.Z)(h),
-    channel: m,
+    isHeader: !_ && E && !(0, l.Z)(h),
+    channel: p,
     message: h,
     setPopout: t,
     showEmojiPicker: n,

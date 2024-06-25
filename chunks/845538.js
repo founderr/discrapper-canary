@@ -35,7 +35,7 @@ function E(e) {
   let I = r.useMemo(() => [() => n.e("36278").then(n.t.bind(n, 268147, 19)), () => n.e("66902").then(n.t.bind(n, 7171, 19)), () => n.e("99694").then(n.t.bind(n, 55562, 19))], []),
     T = E || !(s.tq || s.Em),
     h = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : _.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-    S = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+    f = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, i.jsxs)("div", {
     className: c.container,
     children: [(0, i.jsx)(o.ChainedLottieAnimation, {
@@ -64,7 +64,7 @@ function E(e) {
         className: c.dmButton,
         color: o.Button.Colors.BRAND_INVERTED,
         onClick: () => u(),
-        children: S
+        children: f
       })]
     }), (0, i.jsx)("div", {
       className: c.pointer

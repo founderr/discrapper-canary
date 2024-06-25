@@ -4,13 +4,13 @@ n.d(t, {
     return T
   },
   UV: function() {
-    return A
-  },
-  WR: function() {
     return N
   },
+  WR: function() {
+    return A
+  },
   lr: function() {
-    return S
+    return f
   },
   t7: function() {
     return h
@@ -42,7 +42,7 @@ let h = () => {
       n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
     return null != n && s()(Date.now()) <= s()(n)
   },
-  S = () => {
+  f = () => {
     var e;
     let t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
     switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
@@ -73,7 +73,7 @@ let h = () => {
         return
     }
   },
-  f = async () => {
+  S = async () => {
     let e = null;
     try {
       var t;
@@ -83,7 +83,7 @@ let h = () => {
       e = null !== (t = n.body.offer) && void 0 !== t ? t : null
     } catch (e) {}
     return e
-  }, N = e => {
+  }, A = e => {
     let [t, n] = i.useState(!1), [r, s] = i.useState(!1), [o, a] = i.useState(null);
     if (e) return {
       churnUserDiscountOffer: o,
@@ -92,7 +92,7 @@ let h = () => {
     let l = () => {
       n(!0), s(!1)
     };
-    return !r && !t && (s(!0), f().then(e => {
+    return !r && !t && (s(!0), S().then(e => {
       a(e), l()
     }).catch(e => {
       l()
@@ -100,7 +100,7 @@ let h = () => {
       churnUserDiscountOffer: o,
       isFetchingChurnDiscountOffer: r
     }
-  }, A = () => {
+  }, N = () => {
     let {
       enabled: e
     } = _.Z.useExperiment({

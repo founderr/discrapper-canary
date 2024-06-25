@@ -1,15 +1,15 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 });
-var n = t(689938);
+var s = n(689938);
 
-function i(e) {
-  return e > 0 && e % 7 == 0 ? n.Z.Messages.DURATION_WEEKS.format({
+function a(e) {
+  return e > 0 && e % 7 == 0 ? s.Z.Messages.DURATION_WEEKS.format({
     weeks: e / 7
-  }) : n.Z.Messages.DURATION_DAYS.format({
+  }) : s.Z.Messages.DURATION_DAYS.format({
     days: e
   })
 }

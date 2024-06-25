@@ -16,7 +16,7 @@ n.d(t, {
     return E
   },
   fZ: function() {
-    return S
+    return f
   },
   iN: function() {
     return I
@@ -61,4 +61,4 @@ function T() {
   }]
 }(s = i || (i = {})).EMBED = "Embed", s.BROWSER = "Thread Browser", s.POPOUT = "Active Threads Popout", s.CHANNEL_LIST = "Channel List", s.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", s.INBOX = "Inbox", s.FORUM = "Forum", s.VOICE_AUTO_OPEN = "Voice Auto Open", (o = r || (r = {})).LATEST_ACTIVITY = "Last Message", o.CREATION_DATE = "Creation";
 let h = new Set([a.evJ.TOO_MANY_ATTACHMENTS, a.evJ.EXPLICIT_CONTENT, a.evJ.ENTITY_TOO_LARGE, a.evJ.EXPLICIT_CONTENT]),
-  S = new Set([a.evJ.AUTOMOD_MESSAGE_BLOCKED, a.evJ.AUTOMOD_TITLE_BLOCKED])
+  f = new Set([a.evJ.AUTOMOD_MESSAGE_BLOCKED, a.evJ.AUTOMOD_TITLE_BLOCKED])

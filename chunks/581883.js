@@ -20,30 +20,30 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = {
+let f = {
     ProtoClass: _.o8,
     proto: _.o8.create(),
     lazyLoaded: !1,
     editInfo: (0, T.JC)()
   },
-  f = {
+  S = {
     ProtoClass: u.ji,
     proto: u.ji.create(),
     lazyLoaded: !0,
     editInfo: (0, T.JC)()
   },
-  N = {
-    [T.yP.PRELOADED_USER_SETTINGS]: S,
-    [T.yP.FRECENCY_AND_FAVORITES_SETTINGS]: f
+  A = {
+    [T.yP.PRELOADED_USER_SETTINGS]: f,
+    [T.yP.FRECENCY_AND_FAVORITES_SETTINGS]: S
   },
-  A = !1;
+  N = !1;
 
 function m() {
   O()
 }
 
 function O() {
-  Object.values(N).forEach(e => {
+  Object.values(A).forEach(e => {
     if (null != e.editInfo.timeout) {
       var t, n;
       clearTimeout(e.editInfo.timeout), e.editInfo.timeout = void 0, e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER, e.editInfo.rateLimited = !1, e.editInfo.offlineEditDataVersion = null !== (n = null === (t = e.proto.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : 0
@@ -51,11 +51,11 @@ function O() {
   })
 }
 
-function R(e) {
+function p(e) {
   null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, T.JC)()
 }
 
-function p(e) {
+function R(e) {
   let {
     settings: {
       proto: t,
@@ -65,13 +65,13 @@ function p(e) {
     resetEditInfo: r,
     local: o
   } = e;
-  A = !o;
-  let a = N[n];
-  r && R(a), i ? (a.proto = (0, I.re)(a.ProtoClass, a.proto, t), s()("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = t, s()("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
+  N = !o;
+  let a = A[n];
+  r && p(a), i ? (a.proto = (0, I.re)(a.ProtoClass, a.proto, t), s()("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = t, s()("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
 }
 
 function g(e) {
-  null != e && a().forEach(N, (t, n) => {
+  null != e && a().forEach(A, (t, n) => {
     var i, r;
     let o = e[Number(n)];
     if (null == o) return;
@@ -93,7 +93,7 @@ class C extends(i = l.ZP.PersistedStore) {
     return this.computeState()
   }
   computeState() {
-    return a().mapValues(N, e => {
+    return a().mapValues(A, e => {
       let t = {
         proto: (0, I.xU)(e.ProtoClass, e.proto)
       };
@@ -101,23 +101,23 @@ class C extends(i = l.ZP.PersistedStore) {
     })
   }
   hasLoaded(e) {
-    return N[e].editInfo.loaded
+    return A[e].editInfo.loaded
   }
   get settings() {
-    return S.proto
-  }
-  get frecencyWithoutFetchingLatest() {
     return f.proto
   }
+  get frecencyWithoutFetchingLatest() {
+    return S.proto
+  }
   get wasMostRecentUpdateFromServer() {
-    return A
+    return N
   }
   getFullState() {
-    return N
+    return A
   }
   getGuildFolders() {
     var e;
-    let t = null === (e = S.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
+    let t = null === (e = f.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
     return null == t ? null : t.map(e => {
       var t, n, i;
       let r = null === (t = e.id) || void 0 === t ? void 0 : t.value,
@@ -152,8 +152,8 @@ h(C, "displayName", "UserSettingsProtoStore"), h(C, "persistKey", "UserSettingsP
     } = e;
     g(t)
   },
-  USER_SETTINGS_PROTO_UPDATE: p,
-  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: p,
+  USER_SETTINGS_PROTO_UPDATE: R,
+  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: R,
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function(e) {
     let {
       settings: {
@@ -162,7 +162,7 @@ h(C, "displayName", "UserSettingsProtoStore"), h(C, "persistKey", "UserSettingsP
       }
     } = e;
     s()(!__OVERLAY__, "this cannot run in the overlay");
-    let i = N[t];
+    let i = A[t];
     return i.editInfo = {
       ...i.editInfo,
       ...n
@@ -172,13 +172,13 @@ h(C, "displayName", "UserSettingsProtoStore"), h(C, "persistKey", "UserSettingsP
     let {
       userSettingsProto: t
     } = e;
-    null != t && (S.proto = t, s()("string" != typeof S.proto, "UserSettingsProto cannot be a string"));
+    null != t && (f.proto = t, s()("string" != typeof f.proto, "UserSettingsProto cannot be a string"));
     let {
       proto: n,
       isDirty: i,
       cleanupFuncs: r
-    } = (0, I.xt)(S.proto, E.Z[T.yP.PRELOADED_USER_SETTINGS]);
-    i && R(S), S.proto = n, s()("string" != typeof S.proto, "UserSettingsProto cannot be a string"), S.editInfo.triggeredMigrations = i, S.editInfo.cleanupFuncs = r, S.editInfo.loaded = !0, Object.values(N).forEach(e => {
+    } = (0, I.xt)(f.proto, E.Z[T.yP.PRELOADED_USER_SETTINGS]);
+    i && p(f), f.proto = n, s()("string" != typeof f.proto, "UserSettingsProto cannot be a string"), f.editInfo.triggeredMigrations = i, f.editInfo.cleanupFuncs = r, f.editInfo.loaded = !0, Object.values(A).forEach(e => {
       e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
     }), O()
   },
@@ -188,10 +188,10 @@ h(C, "displayName", "UserSettingsProtoStore"), h(C, "persistKey", "UserSettingsP
     let {
       userSettingsProto: t
     } = e;
-    S.proto = (0, I.ac)(t), s()("string" != typeof S.proto, "UserSettingsProto cannot be a string")
+    f.proto = (0, I.ac)(t), s()("string" != typeof f.proto, "UserSettingsProto cannot be a string")
   },
   LOGOUT: function() {
-    O(), Object.values(N).forEach(e => {
+    O(), Object.values(A).forEach(e => {
       e.proto = e.ProtoClass.create(), e.editInfo = (0, T.JC)()
     })
   }

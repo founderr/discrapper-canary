@@ -14,11 +14,11 @@ var r = n(348327),
   I = n(486472),
   T = n(271383),
   h = n(430824),
-  S = n(412788),
-  f = n(9156),
-  N = n(594174);
+  f = n(412788),
+  S = n(9156),
+  A = n(594174);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function O(e) {
   }
 }
 
-function R(e, t) {
+function p(e, t) {
   let n = m;
   if (m = new l.g8, 0 === e.length && t.length > 0)
     for (let e of t) m.addNode((0, l.Mg)(e));
@@ -62,15 +62,15 @@ function R(e, t) {
   }(e => null == m.nodes[e], e => m.addNode((0, l.Mg)(e), m.root, !1)), !s()(n, m)
 }
 
-function p() {
+function R() {
   var e, t, n;
-  return R(null !== (t = _.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = _.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
+  return p(null !== (t = _.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = _.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
 }
 
 function g() {
   var e, t;
   let n = _.Z.getGuildFolders();
-  return !(null != i && s()(i, n)) && R(null != (i = n) ? i : [], null !== (t = null === (e = _.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
+  return !(null != i && s()(i, n)) && p(null != (i = n) ? i : [], null !== (t = null === (e = _.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
 }
 
 function C(e) {
@@ -145,10 +145,10 @@ function M(e) {
     guildId: t,
     joinedAt: n,
     user: i
-  } = e, r = N.default.getCurrentUser(), s = h.Z.getGuild(t);
+  } = e, r = A.default.getCurrentUser(), s = h.Z.getGuild(t);
   if ((null == r ? void 0 : r.id) !== i.id || null == s) return !1;
   let o = "string" == typeof n ? new Date(n) : n;
-  return o !== s.joinedAt && null != o && p()
+  return o !== s.joinedAt && null != o && R()
 }
 
 function P(e) {
@@ -178,7 +178,7 @@ function b(e, t) {
 }
 let G = (0, c.oH)((e, t) => e.sortedGuildNodes().map(e => e.id)),
   w = (0, c.oH)((e, t) => e.getRoots().map(O)),
-  B = (0, c.oH)((e, t) => {
+  x = (0, c.oH)((e, t) => {
     let n = [];
     return ! function e(t) {
       switch (t.type) {
@@ -189,10 +189,10 @@ let G = (0, c.oH)((e, t) => e.sortedGuildNodes().map(e => e.id)),
       for (let n of t.children) e(n)
     }(e.root), n
   }),
-  x = (0, c.oH)((e, t) => e.root.children.map(O));
-class k extends S.Z {
+  B = (0, c.oH)((e, t) => e.root.children.map(O));
+class k extends f.Z {
   initialize() {
-    this.waitFor(h.Z, f.ZP, _.Z, I.Z, u.Z, E.Z)
+    this.waitFor(h.Z, S.ZP, _.Z, I.Z, u.Z, E.Z)
   }
   getGuildsTree() {
     return m
@@ -207,10 +207,10 @@ class k extends S.Z {
     return G(m, m.version)
   }
   getFlattenedGuildFolderList() {
-    return B(m, m.version)
+    return x(m, m.version)
   }
   getCompatibleGuildFolders() {
-    return x(m, m.version)
+    return B(m, m.version)
   }
   getFastListGuildFolders() {
     return m.getRoots()
@@ -225,11 +225,11 @@ class k extends S.Z {
   }
   constructor() {
     super({
-      CONNECTION_OPEN: p,
-      OVERLAY_INITIALIZE: p,
+      CONNECTION_OPEN: R,
+      OVERLAY_INITIALIZE: R,
       CACHE_LOADED: () => this.loadCache(),
-      GUILD_CREATE: p,
-      GUILD_DELETE: p,
+      GUILD_CREATE: R,
+      GUILD_DELETE: R,
       GUILD_MEMBER_ADD: M,
       USER_SETTINGS_PROTO_UPDATE: g,
       GUILD_MOVE_BY_ID: C,
@@ -239,7 +239,7 @@ class k extends S.Z {
       TOGGLE_GUILD_FOLDER_EXPAND: P,
       SET_GUILD_FOLDER_EXPANDED: y,
       GUILD_FOLDER_COLLAPSE: U
-    }), A(this, "loadCache", () => {
+    }), N(this, "loadCache", () => {
       let e = this.readSnapshot(k.LATEST_SNAPSHOT_VERSION),
         t = null == e ? void 0 : e.tree;
       if (null != t)
@@ -247,4 +247,4 @@ class k extends S.Z {
     })
   }
 }
-A(k, "displayName", "SortedGuildStore"), A(k, "LATEST_SNAPSHOT_VERSION", 1), t.ZP = new k
+N(k, "displayName", "SortedGuildStore"), N(k, "LATEST_SNAPSHOT_VERSION", 1), t.ZP = new k

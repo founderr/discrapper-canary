@@ -10,9 +10,9 @@ var i, n = s(735250),
   c = s(689938),
   m = s(685359),
   g = s(83922),
-  E = s(331651);
+  p = s(331651);
 
-function p(e, t, s) {
+function E(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -20,7 +20,7 @@ function p(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class f extends(i = a.PureComponent) {
+class _ extends(i = a.PureComponent) {
   async componentDidMount() {
     let [e, {
       default: t
@@ -49,7 +49,7 @@ class f extends(i = a.PureComponent) {
       className: m.container,
       children: [(0, n.jsx)(d.FormItem, {
         title: c.Z.Messages.FORM_LABEL_EMAIL,
-        className: E.marginBottom20,
+        className: p.marginBottom20,
         children: (0, n.jsx)(d.TextInput, {
           value: i,
           error: e,
@@ -59,7 +59,7 @@ class f extends(i = a.PureComponent) {
         })
       }), (0, n.jsx)(d.FormItem, {
         title: c.Z.Messages.FORM_LABEL_PASSWORD,
-        className: E.marginBottom40,
+        className: p.marginBottom40,
         children: (0, n.jsx)(d.TextInput, {
           type: "password",
           value: a,
@@ -84,14 +84,14 @@ class f extends(i = a.PureComponent) {
     return (0, n.jsxs)("div", {
       className: m.container,
       children: [(0, n.jsx)(d.Button, {
-        className: E.marginTop20,
+        className: p.marginTop20,
         fullWidth: !0,
         size: d.Button.Sizes.LARGE,
         color: d.ButtonColors.PRIMARY,
         onClick: this.handleResendEmail,
         children: c.Z.Messages.RESEND_EMAIL
       }), e && (0, n.jsx)(d.Button, {
-        className: E.marginTop20,
+        className: p.marginTop20,
         fullWidth: !0,
         size: d.Button.Sizes.MEDIUM,
         look: d.ButtonLooks.LINK,
@@ -115,34 +115,34 @@ class f extends(i = a.PureComponent) {
     }) : i ? c.Z.Messages.VERIFY_EMAIL_BODY : c.Z.Messages.ENTER_EMAIL_BODY, (0, n.jsxs)(d.ModalRoot, {
       transitionState: a,
       "aria-labelledby": this._headerId,
-      className: l()(m.emailVerificationModal, g.vertical, g.alignCenter, g.justifyCenter, E.marginTop60),
+      className: l()(m.emailVerificationModal, g.vertical, g.alignCenter, g.justifyCenter, p.marginTop60),
       children: [(0, n.jsx)("div", {
         className: m.animationContainer,
         ref: this.setLottieRef
       }), (0, n.jsx)("div", {
         id: this._headerId,
-        className: l()(m.title, E.marginBottom8),
+        className: l()(m.title, p.marginBottom8),
         children: c.Z.Messages.VERIFY_BY_EMAIL
       }), (0, n.jsx)("div", {
-        className: l()(m.body, E.marginBottom20),
+        className: l()(m.body, p.marginBottom20),
         children: e
       }), i ? this.renderActions() : this.renderInputs()]
     })
   }
   constructor(...e) {
-    super(...e), p(this, "_lottieRef", void 0), p(this, "_animItem", null), p(this, "_timeout", new h.V7), p(this, "_headerId", (0, r.Z)()), p(this, "state", {
+    super(...e), E(this, "_lottieRef", void 0), E(this, "_animItem", null), E(this, "_timeout", new h.V7), E(this, "_headerId", (0, r.Z)()), E(this, "state", {
       resent: !1,
       shouldClose: !1,
       email: "",
       password: ""
-    }), p(this, "setLottieRef", e => {
+    }), E(this, "setLottieRef", e => {
       this._lottieRef = e
-    }), p(this, "handleVerify", () => {
+    }), E(this, "handleVerify", () => {
       let {
         onVerify: e
       } = this.props;
       e(this.state.email, this.state.password)
-    }), p(this, "handleResendEmail", () => {
+    }), E(this, "handleResendEmail", () => {
       let {
         onResend: e,
         onClose: t
@@ -153,7 +153,7 @@ class f extends(i = a.PureComponent) {
       }), this._timeout.start(3e3, () => {
         this.state.shouldClose && t()
       }))
-    }), p(this, "handleChangeEmailClick", () => {
+    }), E(this, "handleChangeEmailClick", () => {
       let {
         onChangeEmailClick: e
       } = this.props;
@@ -161,15 +161,15 @@ class f extends(i = a.PureComponent) {
         resent: !1,
         shouldClose: !1
       }), e()
-    }), p(this, "handleEmailChange", e => {
+    }), E(this, "handleEmailChange", e => {
       this.setState({
         email: e
       })
-    }), p(this, "handlePasswordChange", e => {
+    }), E(this, "handlePasswordChange", e => {
       this.setState({
         password: e
       })
-    }), p(this, "handleKeyPress", e => {
+    }), E(this, "handleKeyPress", e => {
       let {
         email: t,
         password: s
@@ -178,11 +178,11 @@ class f extends(i = a.PureComponent) {
     })
   }
 }
-p(f, "defaultProps", {
+E(_, "defaultProps", {
   canResend: !1,
   canChange: !0,
   onChangeEmailClick: u.dG4,
   onVerify: (e, t) => {},
   onResend: u.dG4,
   onClose: u.dG4
-}), t.Z = f
+}), t.Z = _

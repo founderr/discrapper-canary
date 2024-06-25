@@ -25,12 +25,12 @@ function I(e) {
     friendToken: I,
     className: T
   } = e, h = u.ZP.getName(n, r, t), {
-    trackUserProfileAction: S
+    trackUserProfileAction: f
   } = (0, c.KZ)(), {
-    newestAnalyticsLocation: f
+    newestAnalyticsLocation: S
   } = (0, l.ZP)(), {
-    originalFriendingEnabled: N,
-    improvedFriendingEnabled: A
+    originalFriendingEnabled: A,
+    improvedFriendingEnabled: N
   } = (0, _.V)({
     location: "UserProfileIncomingFriendRequestBanner"
   });
@@ -46,20 +46,20 @@ function I(e) {
       children: [(0, i.jsx)(o.Button, {
         look: o.Button.Looks.FILLED,
         color: s()({
-          [o.Button.Colors.GREEN]: N,
-          [o.Button.Colors.BRAND]: A,
-          [E.color]: A
+          [o.Button.Colors.GREEN]: A,
+          [o.Button.Colors.BRAND]: N,
+          [E.color]: N
         }),
         size: o.Button.Sizes.SMALL,
         className: E.button,
         onClick: () => {
-          S({
+          f({
             action: "ACCEPT_FRIEND_REQUEST"
           }), a.Z.addRelationship({
             userId: t.id,
             friendToken: I,
             context: {
-              location: f
+              location: S
             }
           })
         },
@@ -70,10 +70,10 @@ function I(e) {
         size: o.Button.Sizes.SMALL,
         className: E.button,
         onClick: () => {
-          S({
+          f({
             action: "IGNORE_FRIEND_REQUEST"
           }), a.Z.cancelFriendRequest(t.id, {
-            location: f
+            location: S
           })
         },
         children: d.Z.Messages.FRIEND_REQUEST_IGNORE

@@ -3,10 +3,10 @@ n.d(t, {
     return d
   }
 });
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  i = n.n(r),
+var s = n(120356),
+  i = n.n(s),
   a = n(481060),
   o = n(285952),
   l = n(388905),
@@ -17,23 +17,23 @@ function d(e) {
   let {
     value: t,
     onChange: n,
-    subText: r,
+    subText: s,
     muted: d,
     marginTopStyle: h
   } = e;
-  return (0, s.jsx)(o.Z, {
+  return (0, r.jsx)(o.Z, {
     className: null != h ? h : u.marginTop20,
     align: o.Z.Align.CENTER,
-    children: (0, s.jsx)(a.Checkbox, {
+    children: (0, r.jsx)(a.Checkbox, {
       value: t,
       type: a.Checkbox.Types.INVERTED,
       onChange: (e, t) => n(t),
       className: c.checkbox,
-      children: (0, s.jsx)(l.i_, {
+      children: (0, r.jsx)(l.i_, {
         className: i()({
           [c.subText]: !d
         }),
-        children: r
+        children: s
       })
     })
   })

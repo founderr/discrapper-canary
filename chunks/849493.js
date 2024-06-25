@@ -1,15 +1,15 @@
 d.r(o), d.d(o, {
   default: function() {
-    return n
+    return r
   }
 });
 var e = d(735250);
 d(470079);
 var l = d(481060),
-  r = d(915312);
+  n = d(915312);
 
-function n() {
-  return (0, r.bN)(document.body), (0, e.jsx)(l.HiddenVisually, {
+function r() {
+  return (0, n.bN)(document.body), (0, e.jsx)(l.HiddenVisually, {
     children: (0, e.jsx)("svg", {
       "aria-hidden": !0,
       children: (0, e.jsxs)("filter", {

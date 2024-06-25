@@ -1,183 +1,183 @@
 i.d(t, {
   Z: function() {
-    return v
+    return N
   }
 }), i(47120);
 var n = i(735250),
-  s = i(470079),
-  a = i(120356),
-  r = i.n(a),
-  l = i(912370),
-  o = i(477690),
+  a = i(470079),
+  r = i(120356),
+  o = i.n(r),
+  s = i(912370),
+  l = i(477690),
   c = i(481060),
   d = i(731081),
   u = i(626135),
   h = i(463571),
-  m = i(34674),
+  _ = i(34674),
   p = i(132871),
-  _ = i(147890),
-  x = i(409425),
+  m = i(147890),
+  f = i(409425),
   g = i(57716),
   C = i(981631),
-  I = i(689938),
-  f = i(76405);
+  x = i(689938),
+  I = i(76405);
 
-function N(e) {
+function b(e) {
   let {
     collectionTitle: t,
     title: i,
-    description: s,
-    handleClick: a,
-    imageSrc: l,
-    ctaLabel: o,
+    description: a,
+    handleClick: r,
+    imageSrc: s,
+    ctaLabel: l,
     ctaLink: d,
     applicationId: u
-  } = e, m = "936929561302675456" === u, p = null == u ? (0, n.jsx)(c.Button, {
-    className: f.applicationCta,
-    onClick: a,
-    children: o
+  } = e, _ = "936929561302675456" === u, p = null == u ? (0, n.jsx)(c.Button, {
+    className: I.applicationCta,
+    onClick: r,
+    children: l
   }) : (0, n.jsx)(h.Z, {
     href: C.Z5c.APPLICATION_DIRECTORY_PROFILE(u),
     children: (0, n.jsx)(c.Button, {
-      className: f.applicationCta,
-      onClick: a,
-      children: o
+      className: I.applicationCta,
+      onClick: r,
+      children: l
     })
   });
   return (0, n.jsxs)("div", {
-    className: f.card,
+    className: I.card,
     children: [(0, n.jsx)("div", {
-      className: f.textContainer,
+      className: I.textContainer,
       children: (0, n.jsxs)("div", {
-        className: f.verticallyCenter,
+        className: I.verticallyCenter,
         children: [(0, n.jsx)(c.Text, {
-          className: f.collectionTitle,
+          className: I.collectionTitle,
           tag: "span",
           color: "header-secondary",
           variant: "heading-deprecated-12/semibold",
           children: t
         }), (0, n.jsxs)(c.Heading, {
-          className: f.applicationName,
+          className: I.applicationName,
           variant: "heading-xxl/medium",
-          children: [i, " ", m && (0, n.jsx)(x.Z, {})]
+          children: [i, " ", _ && (0, n.jsx)(f.Z, {})]
         }), (0, n.jsx)(c.Text, {
-          className: f.applicationDescription,
+          className: I.applicationDescription,
           variant: "text-md/normal",
           lineClamp: 3,
-          children: s
+          children: a
         }), null == d ? p : (0, n.jsx)(c.Anchor, {
-          onClick: a,
+          onClick: r,
           href: d,
-          className: r()((0, c.getButtonStyle)({
+          className: o()((0, c.getButtonStyle)({
             grow: !1
-          }), f.applicationCta),
-          children: o
+          }), I.applicationCta),
+          children: l
         })]
       })
     }), (0, n.jsx)("div", {
-      className: f.imageContainer,
+      className: I.imageContainer,
       children: (0, n.jsx)("img", {
         alt: i,
-        className: f.image,
-        src: l
+        className: I.image,
+        src: s
       })
     })]
   })
 }
 
-function v(e) {
+function N(e) {
   let {
     collection: t,
     collection: {
       id: i,
-      title: a,
+      title: r,
       application_directory_collection_items: c
     }
   } = e, h = (0, g.Z)({
     collection: t
-  }), [x, v] = s.useState(), E = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
-  return s.useEffect(() => {
+  }), [f, N] = a.useState(), v = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
+  return a.useEffect(() => {
     let e = null == h ? void 0 : h.current;
     if (null == e) return;
     let t = new ResizeObserver(() => {
-      let t = document.body.offsetWidth < parseFloat(o.Z.COLLECTION_GALLERY_MEDIA_BREAKPOINT) ? parseFloat(o.Z.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT) : parseFloat(o.Z.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
-      v(e.offsetWidth / t)
+      let t = document.body.offsetWidth < parseFloat(l.Z.COLLECTION_GALLERY_MEDIA_BREAKPOINT) ? parseFloat(l.Z.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT) : parseFloat(l.Z.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
+      N(e.offsetWidth / t)
     });
     return t.observe(document.body), () => {
       t.disconnect()
     }
   }, [h]), (0, n.jsx)("article", {
     ref: h,
-    className: r()({
-      [f.collectionBottomMargin]: c.length <= 1
+    className: o()({
+      [I.collectionBottomMargin]: c.length <= 1
     }),
     children: (0, n.jsx)(d.Z, {
-      aspectRatio: x,
+      aspectRatio: f,
       themedPagination: !0,
-      paginationClassName: f.paginationControls,
-      paginationArrowClassName: f.paginationArrow,
+      paginationClassName: I.paginationControls,
+      paginationArrowClassName: I.paginationArrow,
       items: c,
       onChangeItem: (e, t, n) => {
         let {
-          application: s
+          application: a
         } = e;
-        null != s && u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
+        null != a && u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
           collection_id: i,
           offset: n,
-          results: [s.id],
-          guild_id: E
+          results: [a.id],
+          guild_id: v
         })
       },
       renderItem: e => {
         let {
           id: t,
-          image_hash: s,
-          application: r,
-          type: o,
+          image_hash: a,
+          application: o,
+          type: l,
           description: c,
           title: d,
           call_to_action_label: h,
           call_to_action_url: p
         } = e;
-        if (null == s) return;
-        let x = (0, m.$_)({
+        if (null == a) return;
+        let f = (0, _.$_)({
           itemId: t,
-          hash: s
+          hash: a
         });
-        if (o === l.C.APPLICATION && null != r) {
-          var g, f;
-          return (0, n.jsx)(N, {
-            collectionTitle: a,
-            title: r.name,
-            description: null !== (f = null === (g = r.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== f ? f : r.description,
+        if (l === s.C.APPLICATION && null != o) {
+          var g, I;
+          return (0, n.jsx)(b, {
+            collectionTitle: r,
+            title: o.name,
+            description: null !== (I = null === (g = o.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== I ? I : o.description,
             handleClick: () => {
               u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: i,
-                application_id: r.id,
-                guild_id: E,
+                application_id: o.id,
+                guild_id: v,
                 shown_mutual_guilds_count: void 0
-              }), (0, _.goToApplication)({
-                applicationId: r.id
+              }), (0, m.goToApplication)({
+                applicationId: o.id
               })
             },
-            imageSrc: x,
-            ctaLabel: I.Z.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
-            applicationId: r.id
+            imageSrc: f,
+            ctaLabel: x.Z.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
+            applicationId: o.id
           })
         }
-        if (o === l.C.LINK && null != d && null != p && null != h) return (0, n.jsx)(N, {
-          collectionTitle: a,
+        if (l === s.C.LINK && null != d && null != p && null != h) return (0, n.jsx)(b, {
+          collectionTitle: r,
           title: d,
           description: c,
           handleClick: () => {
             u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
               collection_id: i,
               link: p,
-              guild_id: E,
+              guild_id: v,
               shown_mutual_guilds_count: void 0
             })
           },
-          imageSrc: x,
+          imageSrc: f,
           ctaLabel: h,
           ctaLink: p
         })

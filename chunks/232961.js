@@ -1,12 +1,12 @@
 n.d(t, {
   I: function() {
-    return i
+    return a
   }
 });
-var l = n(570140);
+var i = n(570140);
 
-function i(e) {
-  l.Z.dispatch({
+function a(e) {
+  i.Z.dispatch({
     type: "REMOVE_AUTOMOD_MESSAGE_NOTICE",
     messageId: e
   })

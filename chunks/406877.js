@@ -1,41 +1,41 @@
-e.d(n, {
+n.d(t, {
   Z: function() {
     return c
   }
-}), e(47120);
-var a = e(470079),
-  i = e(668781),
-  r = e(881052),
-  s = e(824389),
-  l = e(179838),
-  o = e(689938);
+}), n(47120);
+var a = n(470079),
+  r = n(668781),
+  i = n(881052),
+  o = n(824389),
+  s = n(179838),
+  l = n(689938);
 
-function c(t, n) {
-  let [e, c] = a.useState(!1);
+function c(e, t) {
+  let [n, c] = a.useState(!1);
   return {
-    isLoading: e,
-    downloadAttachment: a.useCallback(async e => {
-      if (null != t && null != n) {
+    isLoading: n,
+    downloadAttachment: a.useCallback(async n => {
+      if (null != e && null != t) {
         c(!0);
         try {
           let {
             url: a
-          } = await s.gs({
-            guildId: t,
-            productId: n,
-            attachmentId: e
+          } = await o.gs({
+            guildId: e,
+            productId: t,
+            attachmentId: n
           });
-          await l.L(a)
-        } catch (n) {
-          let t = n instanceof r.Hx ? n.getAnyErrorMessage() : void 0;
-          i.Z.show({
-            title: o.Z.Messages.ERROR_GENERIC_TITLE,
-            body: null != t ? t : o.Z.Messages.GENERIC_ERROR_BODY
+          await s.L(a)
+        } catch (t) {
+          let e = t instanceof i.Hx ? t.getAnyErrorMessage() : void 0;
+          r.Z.show({
+            title: l.Z.Messages.ERROR_GENERIC_TITLE,
+            body: null != e ? e : l.Z.Messages.GENERIC_ERROR_BODY
           })
         } finally {
           c(!1)
         }
       }
-    }, [t, n])
+    }, [e, t])
   }
 }

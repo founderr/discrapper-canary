@@ -1,45 +1,45 @@
 n.d(t, {
   Z: function() {
-    return m
+    return T
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(399606),
-  a = n(704215),
+var i = n(735250),
+  a = n(470079),
+  s = n(399606),
+  l = n(704215),
   r = n(481060),
   o = n(605236),
   c = n(434404),
-  u = n(430824),
-  d = n(914010),
-  E = n(626135),
-  _ = n(150340),
+  d = n(430824),
+  u = n(914010),
+  _ = n(626135),
+  E = n(150340),
   I = n(981631),
-  T = n(689938);
+  m = n(689938);
 
-function m(e) {
+function T(e) {
   let {
     dismissCurrentNotice: t
-  } = e, n = (0, l.e7)([d.Z], () => d.Z.getGuildId(), []), m = (0, l.e7)([u.Z], () => u.Z.getGuild(n), [n]);
-  return (i.useEffect(() => {
-    (0, o.kk)(a.z.GUILD_ONBOARDING_UPSELL_NAGBAR)
-  }, []), null == m) ? null : (0, s.jsxs)(r.Notice, {
+  } = e, n = (0, s.e7)([u.Z], () => u.Z.getGuildId(), []), T = (0, s.e7)([d.Z], () => d.Z.getGuild(n), [n]);
+  return (a.useEffect(() => {
+    (0, o.kk)(l.z.GUILD_ONBOARDING_UPSELL_NAGBAR)
+  }, []), null == T) ? null : (0, i.jsxs)(r.Notice, {
     color: r.NoticeColors.DEFAULT,
-    children: [(0, s.jsx)(r.NoticeCloseButton, {
+    children: [(0, i.jsx)(r.NoticeCloseButton, {
       onClick: () => {
-        E.default.track(I.rMx.UPSELL_CLICKED, {
-          type: a.z[a.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
+        _.default.track(I.rMx.UPSELL_CLICKED, {
+          type: l.z[l.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
           action: "dismiss"
-        }), t(), (0, _.G)(m.id, a.z.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        }), t(), (0, E.G)(T.id, l.z.GUILD_ONBOARDING_UPSELL_NAGBAR)
       }
-    }), T.Z.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE, (0, s.jsx)(r.NoticeButton, {
+    }), m.Z.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE, (0, i.jsx)(r.NoticeButton, {
       onClick: () => {
-        E.default.track(I.rMx.UPSELL_CLICKED, {
-          type: a.z[a.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
+        _.default.track(I.rMx.UPSELL_CLICKED, {
+          type: l.z[l.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
           action: "primary"
-        }), c.Z.open(m.id, I.pNK.ONBOARDING), (0, _.G)(m.id, a.z.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        }), c.Z.open(T.id, I.pNK.ONBOARDING), (0, E.G)(T.id, l.z.GUILD_ONBOARDING_UPSELL_NAGBAR)
       },
-      children: T.Z.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
+      children: m.Z.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
     })]
   })
 }

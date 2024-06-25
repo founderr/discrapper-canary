@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 });
 var i = n(430198),
@@ -18,33 +18,33 @@ var i = n(430198),
   I = n(754688),
   T = n(981631),
   h = n(176505);
-async function S(e) {
+async function f(e) {
   let {
     guildId: t,
     channelId: n
-  } = e, S = d.Z.getGuild(t), f = d.Z.getRoles(t);
-  if (null == S && t !== T.ME) return !1;
+  } = e, f = d.Z.getGuild(t), S = d.Z.getRoles(t);
+  if (null == f && t !== T.ME) return !1;
   if (null == n) return !0;
   if ((0, h.AB)(n)) switch (n) {
     case h.oC.ROLE_SUBSCRIPTIONS:
-      return (0, u.on)(t, f);
+      return (0, u.on)(t, S);
     case h.oC.GUILD_SHOP:
-      return (0, r.r)(S, f);
+      return (0, r.r)(f, S);
     case h.oC.MEMBER_APPLICATIONS:
       return (0, s.v)(t);
     case h.oC.GUILD_HOME:
       return (0, l.s)(t);
     case h.oC.CHANNEL_BROWSER:
-      return null != S && S.hasFeature(T.oNc.COMMUNITY);
+      return null != f && f.hasFeature(T.oNc.COMMUNITY);
     case h.oC.GUILD_ONBOARDING:
       return a.ZP.shouldShowOnboarding(t);
     case h.oC.CUSTOMIZE_COMMUNITY:
-      return null != S && S.hasFeature(T.oNc.COMMUNITY);
+      return null != f && f.hasFeature(T.oNc.COMMUNITY);
     case h.oC.MEMBER_SAFETY:
       return (0, o.lv)(t);
     default:
       (0, E.vE)(n)
   }
-  let N = c.Z.getChannel(n);
-  return (null != N || (await _.Z.loadThread(n), null != (N = c.Z.getChannel(n)))) && ((0, I.YO)(N) || i.Z.isChannelGatedAndVisible(t, n))
+  let A = c.Z.getChannel(n);
+  return (null != A || (await _.Z.loadThread(n), null != (A = c.Z.getChannel(n)))) && ((0, I.YO)(A) || i.Z.isChannelGatedAndVisible(t, n))
 }

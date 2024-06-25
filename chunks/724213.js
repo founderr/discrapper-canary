@@ -1,4 +1,4 @@
-l.d(n, {
+t.d(n, {
   hi: function() {
     return u
   },
@@ -8,24 +8,24 @@ l.d(n, {
   rz: function() {
     return m
   }
-}), l(789020), l(47120), l(653041), l(524437);
-var t = l(549817);
-l(581883);
-var i = l(984933),
-  s = l(271383),
-  a = l(9156),
-  r = l(630388),
-  d = l(152376),
-  o = l(398758),
-  c = l(372897);
+}), t(789020), t(47120), t(653041), t(524437);
+var l = t(549817);
+t(581883);
+var a = t(984933),
+  i = t(271383),
+  r = t(9156),
+  s = t(630388),
+  o = t(152376),
+  c = t(398758),
+  d = t(372897);
 
 function u(e) {
-  var n, l;
-  let t = (0, o.r1)(e),
-    i = null !== (l = null === (n = s.ZP.getSelfMember(e)) || void 0 === n ? void 0 : n.flags) && void 0 !== l ? l : 0,
-    d = (0, r.yE)(i, c.q.COMPLETED_ONBOARDING),
-    u = a.ZP.getOptedInChannels(e).size > 0;
-  return !t && !d && !u
+  var n, t;
+  let l = (0, c.r1)(e),
+    a = null !== (t = null === (n = i.ZP.getSelfMember(e)) || void 0 === n ? void 0 : n.flags) && void 0 !== t ? t : 0,
+    o = (0, s.yE)(a, d.q.COMPLETED_ONBOARDING),
+    u = r.ZP.getOptedInChannels(e).size > 0;
+  return !l && !o && !u
 }
 
 function h(e) {
@@ -33,25 +33,25 @@ function h(e) {
     m(e);
     return
   } {
-    let n = (0, o.r1)(e);
-    (0, d.QG)(e, !n)
+    let n = (0, c.r1)(e);
+    (0, o.QG)(e, !n)
   }
 }
 
 function m(e) {
   let {
     include: n = new Set,
-    exclude: l = new Set
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, s = i.ZP.getChannels(e), a = [...s[i.sH], ...s[i.Zb]].filter(e => {
+    exclude: t = new Set
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = a.ZP.getChannels(e), r = [...i[a.sH], ...i[a.Zb]].filter(e => {
     let {
       channel: n
     } = e;
-    return !n.isThread() && !l.has(n.id)
+    return !n.isThread() && !t.has(n.id)
   }).map(e => {
     let {
       channel: n
     } = e;
     return n.id
   });
-  n.forEach(e => a.push(e)), t.Z.onboardExistingMember(e, new Set(a))
+  n.forEach(e => r.push(e)), l.Z.onboardExistingMember(e, new Set(r))
 }

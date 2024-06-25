@@ -1,6 +1,6 @@
-o.r(t), o.d(t, {
+o.r(e), o.d(e, {
   default: function() {
-    return h
+    return p
   }
 });
 var l = o(735250),
@@ -10,8 +10,8 @@ var l = o(735250),
   r = o(499150),
   i = o(557177),
   d = o(689938),
-  c = o(865685);
-let u = [{
+  u = o(865685);
+let c = [{
   preBold: "That's pretty...",
   bold: "fly!"
 }, {
@@ -24,53 +24,53 @@ let u = [{
   postBold: "lievable!"
 }];
 
-function p(e) {
+function b(t) {
   let {
-    punConfig: t
-  } = e;
+    punConfig: e
+  } = t;
   return (0, l.jsxs)(l.Fragment, {
-    children: [t.preBold, (0, l.jsx)("b", {
+    children: [e.preBold, (0, l.jsx)("b", {
       children: (0, l.jsx)("i", {
-        children: t.bold
+        children: e.bold
       })
-    }), t.postBold]
+    }), e.postBold]
   })
 }
 
-function h(e) {
+function p(t) {
   let {
-    transitionState: t,
+    transitionState: e,
     onClose: o,
-    asanaTask: h
-  } = e;
+    asanaTask: p
+  } = t;
   n.useEffect(() => {
     (0, i.GN)("success", .1)
   }, []);
-  let b = n.useRef(u[Math.floor(Math.random() * u.length)]).current;
+  let m = n.useRef(c[Math.floor(Math.random() * c.length)]).current;
   return (0, l.jsx)(s.ModalRoot, {
-    className: c.bugReporterSubmitModalRoot,
-    transitionState: t,
+    className: u.bugReporterSubmitModalRoot,
+    transitionState: e,
     "aria-label": d.Z.Messages.SUBMIT_BUG,
     children: (0, l.jsxs)(s.ModalContent, {
       style: {
         overflow: "hidden",
         paddingRight: "0px"
       },
-      className: c.modalContent,
+      className: u.modalContent,
       paddingFix: !1,
       children: [(0, l.jsx)(s.ModalCloseButton, {
         onClick: () => {
           null == o || o()
         },
-        className: c.closeButton
+        className: u.closeButton
       }), (0, l.jsxs)(s.Text, {
-        className: c.submitText,
+        className: u.submitText,
         variant: "text-sm/normal",
         children: ["Thanks for submitting a ", (0, l.jsx)(r.Z, {
-          onClick: () => (0, a.Z)(h.permalink_url),
+          onClick: () => (0, a.Z)(p.permalink_url),
           children: "bug"
-        }), "!", (0, l.jsx)("br", {}), (0, l.jsx)(p, {
-          punConfig: b
+        }), "!", (0, l.jsx)("br", {}), (0, l.jsx)(b, {
+          punConfig: m
         })]
       })]
     })

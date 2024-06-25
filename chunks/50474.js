@@ -4,19 +4,19 @@ s.r(i), s.d(i, {
   }
 }), s(47120);
 var o = s(735250),
-  n = s(470079),
+  a = s(470079),
   t = s(392711),
-  a = s.n(t),
-  r = s(481060),
-  l = s(139387),
-  d = s(479531),
+  r = s.n(t),
+  n = s(481060),
+  d = s(139387),
+  l = s(479531),
   c = s(895924),
-  u = s(581364),
-  m = s(768581),
+  m = s(581364),
+  u = s(768581),
   p = s(821864),
   h = s(399860),
-  E = s(995390),
-  x = s(665578),
+  x = s(995390),
+  E = s(665578),
   M = s(689938),
   v = s(519709);
 
@@ -25,60 +25,60 @@ function C(e) {
     applicationIcon: i,
     applicationId: s,
     applicationName: t,
-    command: m,
+    command: u,
     guildId: C,
     onClose: j,
-    transitionState: N
-  } = e, [y, A] = n.useState(null), [f, g] = n.useState(!1), {
-    originalApplicationPermissions: k,
-    originalCommandPermissions: b,
+    transitionState: y
+  } = e, [b, N] = a.useState(null), [A, f] = a.useState(!1), {
+    originalApplicationPermissions: g,
+    originalCommandPermissions: k,
     editedTargetPermissions: P,
     hasChanges: S,
-    selectedPermissionCount: R
-  } = (0, E.Z)(C, s, m.id), O = n.useCallback(async () => {
-    var e, i, o, n, t;
+    selectedPermissionCount: _
+  } = (0, x.Z)(C, s, u.id), B = a.useCallback(async () => {
+    var e, i, o, a, t;
     if (!S) {
       j();
       return
     }
-    let r = a().difference(Object.keys(null !== (o = m.permissions) && void 0 !== o ? o : {}), Object.keys(P)),
-      l = a().omit({
+    let n = r().difference(Object.keys(null !== (o = u.permissions) && void 0 !== o ? o : {}), Object.keys(P)),
+      d = r().omit({
         ...P
-      }, r),
-      E = (0, u.bD)(C),
-      x = (0, h.rE)(C, c.Kw.ROLE),
-      M = (0, h.rE)(E, c.Kw.CHANNEL),
-      v = null === (n = null === (e = k[x]) || void 0 === e ? void 0 : e.permission) || void 0 === n || n,
-      I = null === (t = null === (i = k[M]) || void 0 === i ? void 0 : i.permission) || void 0 === t || t,
-      N = Object.values(l).map(e => ({
+      }, n),
+      x = (0, m.bD)(C),
+      E = (0, h.rE)(C, c.Kw.ROLE),
+      M = (0, h.rE)(x, c.Kw.CHANNEL),
+      v = null === (a = null === (e = g[E]) || void 0 === e ? void 0 : e.permission) || void 0 === a || a,
+      I = null === (t = null === (i = g[M]) || void 0 === i ? void 0 : i.permission) || void 0 === t || t,
+      y = Object.values(d).map(e => ({
         id: e.id,
         permission: e.permission,
         type: e.type
       }));
-    A(null), g(!0);
+    N(null), f(!0);
     try {
       await p.U3({
         defaultEveryoneValue: v,
         defaultEverywhereValue: I,
         applicationId: s,
-        commandId: m.id,
+        commandId: u.id,
         guildId: C,
-        permissions: N
-      }), g(!1), j()
+        permissions: y
+      }), f(!1), j()
     } catch (e) {
-      A(new d.Z(e))
+      N(new l.Z(e))
     }
-    g(!1)
-  }, [s, k, m.id, m.permissions, C, S, j, P, A, g]);
-  n.useEffect(() => () => {
-    p.Ui(m.id), l.Z.stopEditingCommandPermissions(m.id)
-  }, [m.id]);
-  let Z = (0, h.gw)(m.type, m.displayName);
-  return (0, o.jsxs)(r.ModalRoot, {
+    f(!1)
+  }, [s, g, u.id, u.permissions, C, S, j, P, N, f]);
+  a.useEffect(() => () => {
+    p.Ui(u.id), d.Z.stopEditingCommandPermissions(u.id)
+  }, [u.id]);
+  let R = (0, h.gw)(u.type, u.displayName);
+  return (0, o.jsxs)(n.ModalRoot, {
     "aria-label": M.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_MODIFY,
-    size: r.ModalSize.MEDIUM,
-    transitionState: N,
-    children: [(0, o.jsxs)(r.ModalHeader, {
+    size: n.ModalSize.MEDIUM,
+    transitionState: y,
+    children: [(0, o.jsxs)(n.ModalHeader, {
       separator: !1,
       className: v.modalHeader,
       children: [(0, o.jsx)(I, {
@@ -87,41 +87,41 @@ function C(e) {
         name: t
       }), (0, o.jsxs)("div", {
         className: v.headerDescription,
-        children: [(0, o.jsx)(r.Text, {
+        children: [(0, o.jsx)(n.Text, {
           variant: "text-md/semibold",
-          children: Z
-        }), (0, o.jsx)(r.Text, {
+          children: R
+        }), (0, o.jsx)(n.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: m.displayDescription
+          children: u.displayDescription
         })]
       })]
-    }), (0, o.jsxs)(r.ModalContent, {
+    }), (0, o.jsxs)(n.ModalContent, {
       className: v.modalBody,
-      children: [null == y || y.hasFieldErrors() ? null : (0, o.jsx)(r.FormErrorBlock, {
-        children: y.getAnyErrorMessage()
-      }), (0, o.jsx)(x.Z, {
+      children: [null == b || b.hasFieldErrors() ? null : (0, o.jsx)(n.FormErrorBlock, {
+        children: b.getAnyErrorMessage()
+      }), (0, o.jsx)(E.Z, {
         applicationId: s,
-        commandId: m.id,
+        commandId: u.id,
         guildId: C,
         inModal: !0,
-        originalApplicationPermissions: k,
-        originalCommandPermissions: b,
+        originalApplicationPermissions: g,
+        originalCommandPermissions: k,
         editedTargetPermissions: P,
-        selectedPermissionCount: R
+        selectedPermissionCount: _
       })]
-    }), (0, o.jsxs)(r.ModalFooter, {
+    }), (0, o.jsxs)(n.ModalFooter, {
       className: v.modalFooter,
-      children: [(0, o.jsx)(r.Button, {
+      children: [(0, o.jsx)(n.Button, {
         type: "submit",
-        disabled: f,
-        onClick: O,
-        color: !0 === S ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
+        disabled: A,
+        onClick: B,
+        color: !0 === S ? n.Button.Colors.GREEN : n.Button.Colors.PRIMARY,
         children: M.Z.Messages.SAVE
-      }), (0, o.jsx)(r.Button, {
+      }), (0, o.jsx)(n.Button, {
         onClick: j,
-        look: r.Button.Looks.LINK,
-        color: r.Button.Colors.PRIMARY,
+        look: n.Button.Looks.LINK,
+        color: n.Button.Colors.PRIMARY,
         children: M.Z.Messages.CANCEL
       })]
     })]
@@ -132,14 +132,14 @@ function I(e) {
   let {
     icon: i,
     id: s
-  } = e, n = m.ZP.getApplicationIconURL({
+  } = e, a = u.ZP.getApplicationIconURL({
     id: s,
     icon: i,
     size: 40
   });
-  return (0, o.jsx)(r.Avatar, {
-    src: n,
-    size: r.AvatarSizes.SIZE_40,
+  return (0, o.jsx)(n.Avatar, {
+    src: a,
+    size: n.AvatarSizes.SIZE_40,
     "aria-hidden": !0
   })
 }

@@ -3,32 +3,32 @@ n.d(t, {
     return o
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(921944),
-  a = n(689938),
-  r = n(769285);
+var s = n(481060),
+  a = n(921944),
+  r = n(689938),
+  l = n(769285);
 
 function o(e) {
   let {
     markAsDismissed: t
   } = e;
-  return (0, s.jsxs)("div", {
-    className: r.container,
-    children: [(0, s.jsx)("div", {
-      className: r.pointer
-    }), (0, s.jsx)(i.Text, {
+  return (0, i.jsxs)("div", {
+    className: l.container,
+    children: [(0, i.jsx)("div", {
+      className: l.pointer
+    }), (0, i.jsx)(s.Text, {
       variant: "text-sm/normal",
-      className: r.content,
-      children: a.Z.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
-    }), (0, s.jsx)(i.Button, {
-      color: i.Button.Colors.BRAND_INVERTED,
+      className: l.content,
+      children: r.Z.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
+    }), (0, i.jsx)(s.Button, {
+      color: s.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        t(l.L.AUTO)
+        t(a.L.AUTO)
       },
-      children: a.Z.Messages.GOT_IT
+      children: r.Z.Messages.GOT_IT
     })]
   })
 }

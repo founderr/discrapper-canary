@@ -1,6 +1,6 @@
 n.d(t, {
   T: function() {
-    return a
+    return o
   }
 });
 var i = n(347904);
@@ -41,8 +41,8 @@ let s = [{
   }, {
     load: () => n.e("73921").then(n.t.bind(n, 558619, 19))
   }],
-  a = async function(e, t, n) {
+  o = async function(e, t, n) {
     arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    let a = s[(0, i.vJ)("".concat(e).concat(t).concat(n)) % s.length];
-    return await a.load()
+    let o = s[(0, i.vJ)("".concat(e).concat(t).concat(n)) % s.length];
+    return await o.load()
   }

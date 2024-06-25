@@ -24,8 +24,8 @@ function T(e) {
     guildMember: n,
     highestRole: T,
     onAddRole: h,
-    ...S
-  } = e, f = (0, r.e7)([u.Z], () => u.Z.roleStyle), N = e => (0, _.Gy)(t.id, e.id) && !e.managed && c.Z.isRoleHigher(t, T, e) && -1 === n.roles.indexOf(e.id);
+    ...f
+  } = e, S = (0, r.e7)([u.Z], () => u.Z.roleStyle), A = e => (0, _.Gy)(t.id, e.id) && !e.managed && c.Z.isRoleHigher(t, T, e) && -1 === n.roles.indexOf(e.id);
   return (0, i.jsx)(o.y, {
     position: "bottom",
     align: "center",
@@ -35,8 +35,8 @@ function T(e) {
       } = e;
       return (0, i.jsx)(l.Z, {
         guild: t,
-        roleStyle: f,
-        roleFilter: N,
+        roleStyle: S,
+        roleFilter: A,
         onSelect: h,
         onClose: n
       })
@@ -49,7 +49,7 @@ function T(e) {
       size: s.zx.Sizes.NONE,
       grow: !1,
       ...e,
-      ...S
+      ...f
     })
   })
 }

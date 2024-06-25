@@ -14,14 +14,14 @@ var r, s, o, a, l = n(392711),
   I = n(228392),
   T = n(131704),
   h = n(592125),
-  S = n(306680),
-  f = n(823379),
-  N = n(709054),
-  A = n(569471);
+  f = n(306680),
+  S = n(823379),
+  A = n(709054),
+  N = n(569471);
 let m = 25,
   O = !1,
-  R = !0,
-  p = !1,
+  p = !0,
+  R = !1,
   g = !1,
   C = null,
   v = _.z.LATEST_ACTIVITY,
@@ -29,16 +29,16 @@ let m = 25,
   D = 0;
 
 function M() {
-  O = !1, R = !0, p = !1, g = !1, C = null, v = _.z.LATEST_ACTIVITY, i = new Set, D = 0, L = []
+  O = !1, p = !0, R = !1, g = !1, C = null, v = _.z.LATEST_ACTIVITY, i = new Set, D = 0, L = []
 }
 
 function P(e, t) {
-  return t === _.z.LATEST_ACTIVITY ? S.ZP.lastMessageId(e.id) : e.id
+  return t === _.z.LATEST_ACTIVITY ? f.ZP.lastMessageId(e.id) : e.id
 }
 
 function y() {
   if (null == C) return !1;
-  let e = !p,
+  let e = !R,
     t = h.Z.getChannel(L[L.length - 1]),
     n = null == t ? null : P(t, v);
   L = u()(h.Z.getAllThreadsForParent(C)).filter(e => e.isArchivedThread()).filter(t => {
@@ -47,9 +47,9 @@ function y() {
     if (e || null == n) return !0;
     {
       let e = null == t ? null : P(t, v);
-      return null != e && N.default.compare(e, n) >= 0
+      return null != e && A.default.compare(e, n) >= 0
     }
-  }).sort((e, t) => N.default.compare(P(e, v), P(t, v))).map(e => e.id).reverse().value()
+  }).sort((e, t) => A.default.compare(P(e, v), P(t, v))).map(e => e.id).reverse().value()
 }
 
 function U(e) {
@@ -59,22 +59,22 @@ function U(e) {
 let b = [];
 class G extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(h.Z, A.Z, S.ZP)
+    this.waitFor(h.Z, N.Z, f.ZP)
   }
   get canLoadMore() {
-    return p && !O && !g
+    return R && !O && !g
   }
   get nextOffset() {
     return D
   }
   get isInitialLoad() {
-    return R
+    return p
   }
   isLoading(e, t, n) {
-    return C === e && v === t && (0, f.OL)(i, n) ? O : (M(), !1)
+    return C === e && v === t && (0, S.OL)(i, n) ? O : (M(), !1)
   }
   getThreads(e, t, n) {
-    return C === e && v === t && (0, f.OL)(i, n) ? L : b
+    return C === e && v === t && (0, S.OL)(i, n) ? L : b
   }
 }
 a = "ArchivedThreadsStore", (o = "displayName") in(s = G) ? Object.defineProperty(s, o, {
@@ -101,10 +101,10 @@ a = "ArchivedThreadsStore", (o = "displayName") in(s = G) ? Object.definePropert
     M()
   },
   LOAD_ARCHIVED_THREADS: function(e) {
-    (e.channelId !== C || e.sortOrder !== v || !(0, f.OL)(e.tagFilter, i)) && M(), C = e.channelId, v = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), O = !0, R = !1
+    (e.channelId !== C || e.sortOrder !== v || !(0, S.OL)(e.tagFilter, i)) && M(), C = e.channelId, v = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), O = !0, p = !1
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-    if (e.channelId !== C || e.sortOrder !== v || !(0, f.OL)(e.tagFilter, i)) return !1;
+    if (e.channelId !== C || e.sortOrder !== v || !(0, S.OL)(e.tagFilter, i)) return !1;
     let t = e.threads.filter(e => T.AW.has(e.type)).map(e => e.id);
     L = L.concat(t);
     let n = h.Z.getChannel(C);
@@ -115,11 +115,11 @@ a = "ArchivedThreadsStore", (o = "displayName") in(s = G) ? Object.definePropert
       hasMoreThreads: e.hasMore,
       filterTagIds: Array.from(e.tagFilter),
       sortOrder: e.sortOrder
-    }), y(), p = e.hasMore, D = e.offset + m, O = !1, R = !1
+    }), y(), R = e.hasMore, D = e.offset + m, O = !1, p = !1
   },
   LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-    if (e.channelId !== C || e.sortOrder !== v || !(0, f.OL)(e.tagFilter, i)) return !1;
-    O = !1, g = !0, R = !1
+    if (e.channelId !== C || e.sortOrder !== v || !(0, S.OL)(e.tagFilter, i)) return !1;
+    O = !1, g = !0, p = !1
   },
   RESORT_THREADS: function(e) {
     return (null == C || null == e.channelId || C === e.channelId) && y()

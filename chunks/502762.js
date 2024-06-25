@@ -37,43 +37,43 @@ let I = (e, t) => {
       pendingThemeColors: _,
       pendingProfileEffectId: d,
       themeOverride: h,
-      children: S,
-      forceShowPremium: f = !1,
-      showOutOfBoundaryComponents: N = !1
+      children: f,
+      forceShowPremium: S = !1,
+      showOutOfBoundaryComponents: A = !1
     } = e, {
-      theme: A,
+      theme: N,
       primaryColor: m,
       secondaryColor: O
     } = (0, l.Z)({
       user: n,
       displayProfile: r,
       pendingThemeColors: _,
-      isPreview: f
+      isPreview: S
     }), {
-      profileThemeStyle: R,
-      profileThemeClassName: p
+      profileThemeStyle: p,
+      profileThemeClassName: R
     } = (0, u.Z)({
-      theme: null != h ? h : A,
+      theme: null != h ? h : N,
       primaryColor: m,
       secondaryColor: O
-    }), g = (null == r ? void 0 : r.canEditThemes) || f, C = null !== d && ((null == r ? void 0 : r.banner) != null || void 0 !== d);
+    }), g = (null == r ? void 0 : r.canEditThemes) || S, C = null !== d && ((null == r ? void 0 : r.banner) != null || void 0 !== d);
     return (0, i.jsx)("div", {
-      className: o()(I(s, g), N ? E.showOutOfBoundaryComponents : void 0, p, a),
-      style: R,
+      className: o()(I(s, g), A ? E.showOutOfBoundaryComponents : void 0, R, a),
+      style: p,
       ref: t,
       children: (0, i.jsx)("div", {
         className: T(s, g, C),
         children: (0, i.jsx)(c.X, {
           profileType: s,
-          theme: null != h ? h : A,
+          theme: null != h ? h : N,
           primaryColor: m,
           secondaryColor: O,
-          children: S
+          children: f
         })
       })
     })
   }),
-  S = e => (0, a.EQ)(e).with(d.y0.POPOUT, d.y0.SETTINGS, () => E.userPopoutOverlayBackground).with(d.y0.MODAL, () => E.userProfileModalOverlayBackground).with(d.y0.BITE_SIZE, () => E.biteSizeOverlayBackground).with(d.y0.FULL_SIZE, () => E.fullSizeOverlayBackground).otherwise(() => E.overlayBackground);
+  f = e => (0, a.EQ)(e).with(d.y0.POPOUT, d.y0.SETTINGS, () => E.userPopoutOverlayBackground).with(d.y0.MODAL, () => E.userProfileModalOverlayBackground).with(d.y0.BITE_SIZE, () => E.biteSizeOverlayBackground).with(d.y0.FULL_SIZE, () => E.fullSizeOverlayBackground).otherwise(() => E.overlayBackground);
 t.Z = Object.assign(h, {
   Overlay: function(e) {
     let {
@@ -83,7 +83,7 @@ t.Z = Object.assign(h, {
       profileType: r
     } = (0, c.z)();
     return (0, i.jsx)("div", {
-      className: o()(S(r), n),
+      className: o()(f(r), n),
       children: t
     })
   }

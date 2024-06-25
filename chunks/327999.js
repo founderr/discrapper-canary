@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   MS: function() {
-    return R
+    return p
   },
   Ph: function() {
-    return p
+    return R
   },
   _2: function() {
     return C
@@ -28,19 +28,19 @@ var i, r, s, o, a, l, u = n(544891),
   T = n(689938);
 let h = {};
 
-function S(e, t) {
+function f(e, t) {
   return e + t
 }
 
-function f(e, t) {
+function S(e, t) {
   return t.map(t => e + t)
 }
 
-function N(e) {
+function A(e) {
   return e.split("-")[1]
 }(o = i || (i = {}))[o.FAILED = 0] = "FAILED", o[o.UNFETCHED = 1] = "UNFETCHED", o[o.PENDING = 2] = "PENDING", o[o.SUCCEEDED = 3] = "SUCCEEDED", o[o.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
-function A(e, t) {
+function N(e, t) {
   e.forEach(e => {
     h[e] = t
   })
@@ -77,7 +77,7 @@ let O = function(e) {
   }
 };
 (l = s || (s = {})).DISCORD = "discord", l.TWITCH = "twitch", l.YOUTUBE = "youtube", l.GUILD_SUBSCRIPTION = "guild_subscription";
-let R = e => {
+let p = e => {
     switch (e) {
       case "twitch":
         return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
@@ -87,7 +87,7 @@ let R = e => {
         return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  p = e => {
+  R = e => {
     let t = d.Z.get((0, E.rR)(e)),
       n = (0, c.ZP)();
     return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, _.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
@@ -103,10 +103,10 @@ function g(e) {
   }
 }
 async function C(e, t) {
-  let n = f(e, t),
-    i = n.filter(e => h[e] <= 1).map(N);
+  let n = S(e, t),
+    i = n.filter(e => h[e] <= 1).map(A);
   if (0 === i.length) return [];
-  A(n, 2);
+  N(n, 2);
   try {
     let t = await u.tn.post({
       url: I.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
@@ -114,7 +114,7 @@ async function C(e, t) {
         user_ids: i
       }
     });
-    if (!Array.isArray(t.body)) return A(n, 0), [];
+    if (!Array.isArray(t.body)) return N(n, 0), [];
     let r = t.body.map(g),
       s = [];
     r.forEach(e => {
@@ -123,12 +123,12 @@ async function C(e, t) {
       } = e;
       return s.push(t)
     });
-    let o = f(e, s),
+    let o = S(e, s),
       a = i.filter(e => !s.includes(e)),
-      l = f(e, a);
-    return A(o, 3), A(l, 0), r
+      l = S(e, a);
+    return N(o, 3), N(l, 0), r
   } catch (e) {
-    A(n, 0)
+    N(n, 0)
   }
   return []
 }

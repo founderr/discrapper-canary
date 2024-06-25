@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
   C3: function() {
-    return f
-  },
-  Fg: function() {
     return S
   },
+  Fg: function() {
+    return f
+  },
   Oh: function() {
-    return A
+    return N
   },
   cP: function() {
     return h
   },
   gp: function() {
-    return N
+    return A
   }
 }), n(47120), n(724458);
 var i = n(544891),
@@ -51,7 +51,7 @@ let h = async e => {
       guildId: e
     })
   }
-}, S = async e => {
+}, f = async e => {
   if (!a.Z.isFullServerPreview(e)) {
     r.Z.dispatch({
       type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -75,7 +75,7 @@ let h = async e => {
       })
     }
   }
-}, f = function(e, t) {
+}, S = function(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   if (r.Z.dispatch({
       type: "SELECT_HOME_RESOURCE_CHANNEL",
@@ -96,7 +96,7 @@ let h = async e => {
     flash: !1,
     jumpType: o.SR.INSTANT
   })
-}, N = (e, t) => {
+}, A = (e, t) => {
   r.Z.dispatch({
     type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
     guildId: e,
@@ -110,7 +110,7 @@ let h = async e => {
     server_guide_channel_type: "member action",
     channel_action_type: i.actionType
   }), (0, l.Kh)(t)
-}, A = (e, t) => {
+}, N = (e, t) => {
   if (r.Z.dispatch({
       type: "COMPLETE_NEW_MEMBER_ACTION",
       guildId: e,

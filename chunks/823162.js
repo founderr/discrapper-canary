@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
   Xy: function() {
     return N
   },
@@ -6,23 +6,23 @@ t.d(n, {
     return c
   },
   gN: function() {
-    return l
+    return u
   },
   hi: function() {
-    return I
+    return T
   },
   qR: function() {
     return E
   },
   r_: function() {
-    return u
+    return I
   }
 });
-var s = t(544891),
-  o = t(570140),
-  r = t(893776),
-  a = t(290323),
-  i = t(981631);
+var s = n(544891),
+  o = n(570140),
+  r = n(893776),
+  a = n(290323),
+  i = n(981631);
 async function c(e) {
   await s.tn.put({
     url: i.ANM.CHANNEL_RECIPIENT_CONSENT(e),
@@ -53,13 +53,13 @@ function N(e) {
   })
 }
 
-function l(e) {
+function u(e) {
   return s.tn.del({
     url: i.ANM.CHANNEL_RECIPIENT_CONSENT(e)
   })
 }
 
-function u(e) {
+function I(e) {
   return s.tn.put({
     url: i.ANM.CHANNEL_RECIPIENT_REJECT_BATCH(),
     body: {
@@ -68,6 +68,6 @@ function u(e) {
   })
 }
 
-function I() {
+function T() {
   r.Z.getLocationMetadata()
 }

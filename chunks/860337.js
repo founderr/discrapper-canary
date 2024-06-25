@@ -1,29 +1,29 @@
-t.d(r, {
+r.d(t, {
   Z: function() {
     return h
   }
 });
-var a = t(735250),
-  n = t(470079),
-  i = t(120356),
-  l = t.n(i),
-  o = t(481060),
-  c = t(931240),
-  s = t(207796),
-  d = t(333748),
-  u = t(719556);
+var a = r(735250),
+  n = r(470079),
+  i = r(120356),
+  o = r.n(i),
+  l = r(481060),
+  c = r(931240),
+  s = r(207796),
+  d = r(333748),
+  u = r(719556);
 
 function h() {
   let e = n.useRef(null);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l()(u.panel, d.panel),
-    children: [(0, a.jsx)(o.Button, {
-      size: o.Button.Sizes.SMALL,
+    className: o()(u.panel, d.panel),
+    children: [(0, a.jsx)(l.Button, {
+      size: l.Button.Sizes.SMALL,
       onClick: c.LX,
       children: "Reset Every Clan Setup State"
-    }), (0, a.jsx)(o.Button, {
-      size: o.Button.Sizes.SMALL,
+    }), (0, a.jsx)(l.Button, {
+      size: l.Button.Sizes.SMALL,
       onClick: s.PJ,
       children: "Reset Clan Discovery State"
     })]

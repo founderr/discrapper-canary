@@ -12,15 +12,15 @@ var s, o = n(442837),
   I = n(695346),
   T = n(581883),
   h = n(131704),
-  S = n(592125),
-  f = n(594174),
-  N = n(74538),
-  A = n(51144),
+  f = n(592125),
+  S = n(594174),
+  A = n(74538),
+  N = n(51144),
   m = n(47760),
   O = n(469115),
-  R = n(874893);
+  p = n(874893);
 
-function p(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -40,7 +40,7 @@ function D() {
   C && (i = void 0), v = !1, g = !1
 }
 let M = () => {
-    C = !N.ZP.canUseClientThemes(f.default.getCurrentUser())
+    C = !A.ZP.canUseClientThemes(S.default.getCurrentUser())
   },
   P = () => {
     let e = I.L1.getSetting().backgroundGradientPresetId;
@@ -55,7 +55,7 @@ let M = () => {
   y = () => {
     if (!_.Z.shouldSync("appearance")) return;
     let e = I.L1.getSetting().backgroundGradientPresetId;
-    if (E.ZP.useSystemTheme === R.K.ON && null != e && (0, c.hi)(R.K.OFF), null == e) {
+    if (E.ZP.useSystemTheme === p.K.ON && null != e && (0, c.hi)(p.K.OFF), null == e) {
       null != i && (i = void 0);
       return
     }
@@ -65,7 +65,7 @@ let M = () => {
   };
 class U extends(s = o.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? O.qt[e.gradientPresetId] : void 0), this.waitFor(f.default, d.Z, S.Z, _.Z, T.Z), this.syncWith([f.default], M), this.syncWith([_.Z], P), this.syncWith([T.Z], y)
+    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? O.qt[e.gradientPresetId] : void 0), this.waitFor(S.default, d.Z, f.Z, _.Z, T.Z), this.syncWith([S.default], M), this.syncWith([_.Z], P), this.syncWith([T.Z], y)
   }
   getState() {
     return C ? {} : {
@@ -91,7 +91,7 @@ class U extends(s = o.ZP.PersistedStore) {
     return r
   }
   constructor(...e) {
-    super(...e), p(this, "migrations", [e => {
+    super(...e), R(this, "migrations", [e => {
       var t;
       return {
         gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id
@@ -99,7 +99,7 @@ class U extends(s = o.ZP.PersistedStore) {
     }])
   }
 }
-p(U, "displayName", "ClientThemesBackgroundStore"), p(U, "persistKey", "ClientThemesBackgroundStore"), t.Z = new U(l.Z, {
+R(U, "displayName", "ClientThemesBackgroundStore"), R(U, "persistKey", "ClientThemesBackgroundStore"), t.Z = new U(l.Z, {
   UPDATE_BACKGROUND_GRADIENT_PRESET: e => {
     let {
       presetId: t
@@ -135,9 +135,9 @@ p(U, "displayName", "ClientThemesBackgroundStore"), p(U, "persistKey", "ClientTh
     let {
       channelId: t,
       guildId: n
-    } = e, i = f.default.getCurrentUser();
-    if (null == t || null == n || (0, u.un)(a.z.CLIENT_THEMES_COACHMARK) || !(0, A.Fc)(i)) return;
-    let r = S.Z.getChannel(t);
+    } = e, i = S.default.getCurrentUser();
+    if (null == t || null == n || (0, u.un)(a.z.CLIENT_THEMES_COACHMARK) || !(0, N.Fc)(i)) return;
+    let r = f.Z.getChannel(t);
     null != r && (0, h.zi)(r.type) && (v = !0, function() {
       g = !0
     }())

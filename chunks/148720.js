@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   k: function() {
-    return f
+    return S
   }
 });
 var i = n(668781),
@@ -18,27 +18,27 @@ var i = n(668781),
   I = n(638880),
   T = n(782769),
   h = n(527805),
-  S = n(689938);
-async function f(e) {
+  f = n(689938);
+async function S(e) {
   var t;
   let {
     channelId: n,
-    applicationId: f,
-    launchId: N,
-    inputApplication: A,
+    applicationId: S,
+    launchId: A,
+    inputApplication: N,
     analyticsLocations: m,
     embeddedActivitiesManager: O
-  } = e, R = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === f && (null == N || e.launchId === N)), p = A;
-  if (null == p) {
-    let e = await r.Z.fetchApplication(f);
-    p = a.Z.createFromServer(e)
+  } = e, p = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === S && (null == A || e.launchId === A)), R = N;
+  if (null == R) {
+    let e = await r.Z.fetchApplication(S);
+    R = a.Z.createFromServer(e)
   }
-  if (null == R || null == p) return;
+  if (null == p || null == R) return;
   let g = c.default.getCurrentUser(),
     C = l.Z.getChannel(n),
     v = (0, h.ZP)({
       userId: null == g ? void 0 : g.id,
-      application: p,
+      application: R,
       channelId: n,
       currentUser: g,
       isActivitiesEnabledForCurrentPlatform: (0, T.a)(C),
@@ -64,22 +64,22 @@ async function f(e) {
         break;
       case h.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
         i.Z.show({
-          title: S.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: S.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+          title: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: f.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
           hideActionSheet: !1
         });
         break;
       case h.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
         i.Z.show({
-          title: S.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: S.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
+          title: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: f.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
           hideActionSheet: !1
         });
         break;
       case h.Fw.ACTIVITY_AGE_GATED:
         i.Z.show({
-          title: S.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: S.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
+          title: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
           hideActionSheet: !1
         });
         break;
@@ -88,16 +88,16 @@ async function f(e) {
       case h.Fw.NO_CHANNEL:
       case h.Fw.NO_USER:
         i.Z.show({
-          title: S.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: S.Z.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
+          title: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: f.Z.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
           hideActionSheet: !1
         })
     }
   }({
     embeddedActivityJoinability: v,
     handleCanJoin: async function e() {
-      if (null != R) await (0, I.Z)({
-        applicationId: R.applicationId,
+      if (null != p) await (0, I.Z)({
+        applicationId: p.applicationId,
         currentEmbeddedApplication: M,
         activityChannelId: n,
         locationObject: {},

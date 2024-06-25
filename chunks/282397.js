@@ -9,22 +9,22 @@ var s, o, a, l, u = n(442837),
   I = n(622449);
 let T = {},
   h = {},
-  S = {};
+  f = {};
 
-function f(e) {
+function S(e) {
   var t;
   if (null == e) return !1;
   let n = T[e];
   if (null == n) return !1;
-  null === (t = n.onSuccess) || void 0 === t || t.call(n), N(e)
+  null === (t = n.onSuccess) || void 0 === t || t.call(n), A(e)
 }
 
-function N(e) {
+function A(e) {
   delete T[e];
-  let t = S[e];
-  null != t && delete h[t], delete S[e]
+  let t = f[e];
+  null != t && delete h[t], delete f[e]
 }
-class A extends(s = u.ZP.Store) {
+class N extends(s = u.ZP.Store) {
   getInteraction(e) {
     let t = h[e.id];
     return null != t ? T[t] : null
@@ -32,7 +32,7 @@ class A extends(s = u.ZP.Store) {
   getMessageInteractionStates() {
     let e = {};
     for (let [t, n] of Object.entries(T)) {
-      let i = S[t];
+      let i = f[t];
       null != i && (e[i] = n.state)
     }
     return e
@@ -48,14 +48,14 @@ class A extends(s = u.ZP.Store) {
     return i
   }
 }
-l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o, a, {
+l = "InteractionStore", (a = "displayName") in(o = N) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new A(_.Z, {
+}) : o[a] = l, t.Z = new N(_.Z, {
   LOGOUT: function() {
-    T = {}, h = {}, S = {}
+    T = {}, h = {}, f = {}
   },
   INTERACTION_QUEUE: function(e) {
     let {
@@ -67,7 +67,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
       onSuccess: o,
       onFailure: a
     } = e;
-    null != n && (h[n] = t, S[t] = n), T[t] = {
+    null != n && (h[n] = t, f[t] = n), T[t] = {
       state: I.F.QUEUED,
       data: i,
       onCreate: r,
@@ -91,7 +91,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
     let {
       nonce: t
     } = e;
-    f(t)
+    S(t)
   },
   INTERACTION_FAILURE: function(e) {
     var t;
@@ -103,7 +103,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
     if (null == n) return !1;
     let s = T[n];
     if (null == s) return !1;
-    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === c.B8.APPLICATION_COMMAND ? N(n) : T[n] = {
+    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === c.B8.APPLICATION_COMMAND ? A(n) : T[n] = {
       ...s,
       state: I.F.FAILED,
       errorCode: i,
@@ -119,7 +119,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
       var n;
       let e = T[t.nonce];
       if (null == e) return !1;
-      null === (n = e.onSuccess) || void 0 === n || n.call(e), N(t.nonce)
+      null === (n = e.onSuccess) || void 0 === n || n.call(e), A(t.nonce)
     }
   },
   CHANNEL_SELECT: function(e) {
@@ -127,7 +127,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
       channelId: t
     } = e;
     if (null == E.Z.getChannel(t)) return !1;
-    for (let [e, t] of Object.entries(T)) t.state === I.F.FAILED && N(e)
+    for (let [e, t] of Object.entries(T)) t.state === I.F.FAILED && A(e)
   },
   INTERACTION_IFRAME_MODAL_CREATE: function(e) {
     let {
@@ -148,6 +148,6 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
     let {
       participants: t
     } = e, n = d.default.getSessionId(), i = d.default.getId(), r = t.find(e => e.user_id === i && e.session_id === n);
-    if (null != r && null != r.nonce) f(r.nonce)
+    if (null != r && null != r.nonce) S(r.nonce)
   }
 })

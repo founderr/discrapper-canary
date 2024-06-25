@@ -4,11 +4,11 @@ n.d(t, {
     return h
   }
 });
-var s = n(735250);
+var a = n(735250);
 n(470079);
-var l = n(399606),
-  a = n(481060),
-  r = n(541716),
+var s = n(399606),
+  r = n(481060),
+  l = n(541716),
   i = n(859235),
   o = n(898463),
   c = n(76451),
@@ -19,36 +19,36 @@ var l = n(399606),
 function h(e) {
   let {
     parentChannel: t
-  } = e, n = (0, l.Wu)([d.Z], () => {
-    let e = d.Z.getUploads(t.id, r.I.CREATE_FORUM_POST.drafts.type);
+  } = e, n = (0, s.Wu)([d.Z], () => {
+    let e = d.Z.getUploads(t.id, l.I.CREATE_FORUM_POST.drafts.type);
     return null == e ? void 0 : e.filter(e => !0 !== e.isThumbnail)
   });
-  return (0, s.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: m.container,
-    children: [(0, s.jsx)(a.Text, {
+    children: [(0, a.jsx)(r.Text, {
       variant: "text-md/semibold",
       color: "text-muted",
       children: u.Z.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_TITLE
-    }), (0, s.jsx)(a.Text, {
+    }), (0, a.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: u.Z.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_DESCRIPTION
-    }), (0, s.jsx)("div", {
-      children: (0, s.jsx)(a.ScrollerThin, {
+    }), (0, a.jsx)("div", {
+      children: (0, a.jsx)(r.ScrollerThin, {
         className: m.uploadsContainer,
         orientation: "horizontal",
         paddingFix: !1,
         fade: !0,
-        children: (0, s.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
           className: m.uploads,
-          children: [n.map(e => (0, s.jsx)(o.Z, {
+          children: [n.map(e => (0, a.jsx)(o.Z, {
             channelId: t.id,
-            draftType: r.I.CREATE_FORUM_POST.drafts.type,
+            draftType: l.I.CREATE_FORUM_POST.drafts.type,
             upload: e,
             keyboardModeEnabled: !0,
             hideFileName: !0,
             size: i.q.SMALL
-          }, e.id)), (0, s.jsx)(c._, {
+          }, e.id)), (0, a.jsx)(c._, {
             channelId: t.id
           })]
         })

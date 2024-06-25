@@ -1,24 +1,24 @@
 t.d(s, {
   HV: function() {
-    return o
+    return l
   },
   Tp: function() {
-    return r
+    return o
   },
   Xv: function() {
-    return l
+    return r
   }
 });
 var n = t(392711),
-  i = t(423891),
-  a = t.n(i);
-let l = async (e, s, t) => {
+  a = t(423891),
+  i = t.n(a);
+let r = async (e, s, t) => {
   var n;
   return {
     src: e,
     loop: !1,
     loopDelay: 0,
-    duration: (n = await s.arrayBuffer(), a().decode(n).frames.length * 80),
+    duration: (n = await s.arrayBuffer(), i().decode(n).frames.length * 80),
     start: 0,
     position: {
       x: 0,
@@ -29,13 +29,13 @@ let l = async (e, s, t) => {
     width: 450,
     name: s.name
   }
-}, r = e => {
+}, o = e => {
   let s = (0, n.cloneDeep)(e),
     t = Math.floor(101 * Math.random()) + 150;
   return s.forEach((e, s) => {
     0 !== s && (e.start += t)
   }), s
-}, o = function(e) {
+}, l = function(e) {
   let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "json",
     t = "\n[";
   return "json" === s && e.forEach((e, s) => {

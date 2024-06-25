@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $d: function() {
-    return R
+    return p
   },
   AA: function() {
-    return p
+    return R
   },
   Db: function() {
     return P
@@ -48,7 +48,7 @@ var i = n(392711),
   I = n(981631),
   T = n(526761),
   h = n(689938);
-let S = async e => {
+let f = async e => {
   try {
     let t = (await s.tn.get({
       url: I.ANM.SOUNDBOARD_DEFAULT_SOUNDS,
@@ -65,22 +65,22 @@ let S = async e => {
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"
     }), new l.Z(e)
   }
-}, f = e => new Promise(t => {
+}, S = e => new Promise(t => {
   let n = () => {
     o.Z.unsubscribe(e, n), setTimeout(t, 0)
   };
   o.Z.subscribe(e, n)
-}), N = e => {
+}), A = e => {
   if (!_.Z.shouldFetchDefaultSounds()) return Promise.resolve();
   o.Z.dispatch({
     type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS"
   });
-  let t = f("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
-  return S(e), t
-}, A = () => {
+  let t = S("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+  return f(e), t
+}, N = () => {
   let e = (0, d.D)();
   if (0 === e.length) return Promise.resolve();
-  let t = f("SOUNDBOARD_SOUNDS_RECEIVED");
+  let t = S("SOUNDBOARD_SOUNDS_RECEIVED");
   return o.Z.dispatch({
     type: "GUILD_SOUNDBOARD_FETCH"
   }), o.Z.dispatch({
@@ -89,7 +89,7 @@ let S = async e => {
   }), t
 }, m = () => __OVERLAY__ ? (o.Z.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
-}), Promise.all([])) : Promise.all([N(), A()]);
+}), Promise.all([])) : Promise.all([A(), N()]);
 async function O(e) {
   let {
     guildId: t,
@@ -110,7 +110,7 @@ async function O(e) {
   });
   return (0, c.o3)(l.body, t)
 }
-async function R(e) {
+async function p(e) {
   let {
     guildId: t,
     soundId: n,
@@ -129,7 +129,7 @@ async function R(e) {
   });
   return (0, c.o3)(l.body, t)
 }
-async function p(e, t) {
+async function R(e, t) {
   await s.tn.del({
     url: I.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
     oldFormErrors: !0

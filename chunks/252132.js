@@ -3,11 +3,11 @@ n.d(t, {
     return r
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(27457),
-  s = n(131951),
-  a = n(89032);
+var a = n(27457),
+  l = n(131951),
+  s = n(89032);
 
 function r(e) {
   let {
@@ -19,42 +19,42 @@ function r(e) {
     children: u,
     inCall: d,
     inPopout: h,
-    noBorder: m,
-    onClick: E,
-    onContextMenu: p,
-    onDoubleClick: g,
-    onVideoResize: f,
-    paused: C,
-    pulseSpeakingIndicator: _,
+    noBorder: p,
+    onClick: m,
+    onContextMenu: _,
+    onDoubleClick: f,
+    onVideoResize: E,
+    paused: g,
+    pulseSpeakingIndicator: C,
     participant: I,
     width: x,
     ...T
-  } = e, N = s.Z.getVideoComponent();
-  return (0, l.jsx)("div", {
+  } = e, N = l.Z.getVideoComponent();
+  return (0, i.jsx)("div", {
     style: {
       width: x
     },
-    className: a.spaceBetweenTiles,
-    children: (0, l.jsxs)("div", {
-      className: a.tileSizer,
+    className: s.spaceBetweenTiles,
+    children: (0, i.jsxs)("div", {
+      className: s.tileSizer,
       style: {
         aspectRatio: t
       },
-      children: [(0, l.jsx)(i.ZP, {
+      children: [(0, i.jsx)(a.ZP, {
         blocked: n,
         channel: r,
         className: o,
         focused: c,
         inCall: d,
         inPopout: h,
-        noBorder: m,
-        onClick: E,
-        onContextMenu: p,
-        onDoubleClick: g,
-        onVideoResize: f,
+        noBorder: p,
+        onClick: m,
+        onContextMenu: _,
+        onDoubleClick: f,
+        onVideoResize: E,
         participant: I,
-        paused: C,
-        pulseSpeakingIndicator: _,
+        paused: g,
+        pulseSpeakingIndicator: C,
         videoComponent: N,
         width: x,
         ...T

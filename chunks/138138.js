@@ -1,9 +1,9 @@
 n.d(t, {
   u: function() {
-    return l
+    return i
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_activity_rythm_mini_shelf_banner",
   label: "Activity Rythm Mini-Shelf Banner",

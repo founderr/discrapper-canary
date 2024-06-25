@@ -51,8 +51,8 @@ function I(e) {
       startTime: T
     } = (0, l.Kq)(E, n),
     h = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(I, T, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
-    S = null != h && _.$I.has(h) ? null : null != n ? n : (0, u.DK)(E),
-    f = d(E.id),
-    N = d(E.id, S);
-  null == S ? (r(t, null, i, null != f ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == c || c()) : null != N ? (r(t, S, i, null != f ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == c || c()) : s(E, S)
+    f = null != h && _.$I.has(h) ? null : null != n ? n : (0, u.DK)(E),
+    S = d(E.id),
+    A = d(E.id, f);
+  null == f ? (r(t, null, i, null != S ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == c || c()) : null != A ? (r(t, f, i, null != S ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == c || c()) : s(E, f)
 }(i = r || (r = {}))[i.SERIES = 0] = "SERIES", i[i.RECURRENCE = 1] = "RECURRENCE"

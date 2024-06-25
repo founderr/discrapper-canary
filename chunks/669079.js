@@ -7,7 +7,7 @@ n.d(t, {
     return q
   },
   Fp: function() {
-    return B
+    return x
   },
   JT: function() {
     return z
@@ -22,7 +22,7 @@ n.d(t, {
     return k
   },
   Q_: function() {
-    return x
+    return B
   },
   TO: function() {
     return H
@@ -67,15 +67,15 @@ var i, r, s = n(278074),
   I = n(358085),
   T = n(74538),
   h = n(226951),
-  S = n(73346),
-  f = n(981631),
-  N = n(474936),
-  A = n(689938);
+  f = n(73346),
+  S = n(981631),
+  A = n(474936),
+  N = n(689938);
 let m = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   O = [m, ...["discordapp.com/gifts", "discord.com/gifts"].map(e => h.Z.escape(e))].join("|"),
-  R = RegExp("(?: |^|https?://)(?:".concat(O, ")/([a-z0-9-]+)"), "gi"),
-  p = [...["discord.com/billing/promotions", "promos.discord.gg"].map(e => h.Z.escape(e))].join("|"),
-  g = RegExp("(?: |^|https?://)(?:".concat(p, ")/([a-z0-9-]+)"), "gi"),
+  p = RegExp("(?: |^|https?://)(?:".concat(O, ")/([a-z0-9-]+)"), "gi"),
+  R = [...["discord.com/billing/promotions", "promos.discord.gg"].map(e => h.Z.escape(e))].join("|"),
+  g = RegExp("(?: |^|https?://)(?:".concat(R, ")/([a-z0-9-]+)"), "gi"),
   C = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
   v = C(4, 4),
   L = C(4, 6),
@@ -104,12 +104,12 @@ function G(e) {
 function w(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
-let B = e => (null == e ? void 0 : e.type) === f.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === f.hBH.GIFT,
-  x = e => {
+let x = e => (null == e ? void 0 : e.type) === S.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === S.hBH.GIFT,
+  B = e => {
     let t;
     if (null == e) return [];
     let n = new Set;
-    for (; null != (t = R.exec(e)) && n.size < 3;) n.add(w(t[1]));
+    for (; null != (t = p.exec(e)) && n.size < 3;) n.add(w(t[1]));
     for (; null != (t = g.exec(e)) && n.size < 3;) n.add(w(t[1]));
     return Array.from(n)
   };
@@ -123,15 +123,15 @@ async function V(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   try {
-    let i = (await (0, S.Kb)({
-      url: f.ANM.GIFT_CODE_RESOLVE(e),
+    let i = (await (0, f.Kb)({
+      url: S.ANM.GIFT_CODE_RESOLVE(e),
       query: {
         with_application: t,
         with_subscription_plan: n
       },
       oldFormErrors: !0
     })).body;
-    return d.default.track(f.rMx.GIFT_CODE_RESOLVED, {
+    return d.default.track(S.rMx.GIFT_CODE_RESOLVED, {
       resolved: !0,
       gift_code: i.code,
       gift_code_max_uses: i.max_uses,
@@ -143,7 +143,7 @@ async function V(e) {
       flush: !0
     }), i
   } catch (t) {
-    throw d.default.track(f.rMx.GIFT_CODE_RESOLVED, {
+    throw d.default.track(S.rMx.GIFT_CODE_RESOLVED, {
       resolved: !1,
       gift_code: e
     }), new l.Z(t)
@@ -151,47 +151,47 @@ async function V(e) {
 }
 
 function Z(e, t) {
-  d.default.track(f.rMx.GIFT_CODE_COPIED, {
+  d.default.track(S.rMx.GIFT_CODE_COPIED, {
     ...(0, u.Z)(t, !1, !1),
     ...e.analyticsData
   })
 }
 
 function H(e, t, n, i, r, s, o) {
-  return null == n && (i || r || null == e) ? !o || s || i || r ? i && (t.isSubscription || null != e) ? f.wZ8.SUCCESS : f.wZ8.CONFIRM : f.wZ8.OPEN : f.wZ8.ERROR
+  return null == n && (i || r || null == e) ? !o || s || i || r ? i && (t.isSubscription || null != e) ? S.wZ8.SUCCESS : S.wZ8.CONFIRM : S.wZ8.OPEN : S.wZ8.ERROR
 }
 
 function F(e, t, n) {
   switch (e) {
-    case f.wZ8.ERROR:
-      return A.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
-    case f.wZ8.SUCCESS:
-      return t.isSubscription ? A.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
+    case S.wZ8.ERROR:
+      return N.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
+    case S.wZ8.SUCCESS:
+      return t.isSubscription ? N.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
         skuName: n.name
-      }) : A.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
-    case f.wZ8.CONFIRM:
+      }) : N.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
+    case S.wZ8.CONFIRM:
     default:
-      return t.isSubscription ? A.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
+      return t.isSubscription ? N.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
         skuName: n.name
-      }) : A.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
+      }) : N.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
   }
 }
 
 function Y(e, t, n) {
   switch (e) {
-    case f.wZ8.ERROR:
-      return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
-    case f.wZ8.SUCCESS:
-      if (__OVERLAY__) return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
-      if (t.isSubscription) return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
-      return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
-    case f.wZ8.OPEN:
-      return A.Z.Messages.GIFT_OPEN_PROMPT;
-    case f.wZ8.CONFIRM:
+    case S.wZ8.ERROR:
+      return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
+    case S.wZ8.SUCCESS:
+      if (__OVERLAY__) return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
+      if (t.isSubscription) return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
+      return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
+    case S.wZ8.OPEN:
+      return N.Z.Messages.GIFT_OPEN_PROMPT;
+    case S.wZ8.CONFIRM:
     default:
-      if (null != n && n) return A.Z.Messages.GIFT_CODE_AUTH_ACCEPT;
-      if (null != t.giftStyle) return t.isClaimed ? A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
-      return t.isSubscription ? A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
+      if (null != n && n) return N.Z.Messages.GIFT_CODE_AUTH_ACCEPT;
+      if (null != t.giftStyle) return t.isClaimed ? N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
+      return t.isSubscription ? N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
   }
 }
 
@@ -207,76 +207,76 @@ function j(e) {
     subscriptionPlan: u = null
   } = e;
   switch (t) {
-    case f.wZ8.ERROR:
+    case S.wZ8.ERROR:
       return W(i, r, o, a, l);
-    case f.wZ8.SUCCESS:
+    case S.wZ8.SUCCESS:
       if (null != u) {
         var _;
         return _ = u, (0, s.EQ)(_).with({
-          interval: N.rV.MONTH,
-          premiumSubscriptionType: N.p9.TIER_2
-        }, () => A.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
-          timeInterval: A.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
+          interval: A.rV.MONTH,
+          premiumSubscriptionType: A.p9.TIER_2
+        }, () => N.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
+          timeInterval: N.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
         })).with({
-          interval: N.rV.YEAR,
-          premiumSubscriptionType: N.p9.TIER_2
-        }, () => A.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
-          timeInterval: A.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+          interval: A.rV.YEAR,
+          premiumSubscriptionType: A.p9.TIER_2
+        }, () => N.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
+          timeInterval: N.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
         })).with({
-          interval: N.rV.MONTH,
-          premiumSubscriptionType: N.p9.TIER_1
-        }, () => A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
+          interval: A.rV.MONTH,
+          premiumSubscriptionType: A.p9.TIER_1
+        }, () => N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
           intervalCount: _.intervalCount
         })).with({
-          interval: N.rV.YEAR,
-          premiumSubscriptionType: N.p9.TIER_1
-        }, () => A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
+          interval: A.rV.YEAR,
+          premiumSubscriptionType: A.p9.TIER_1
+        }, () => N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
           intervalCount: _.intervalCount
-        })).otherwise(() => A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
+        })).otherwise(() => N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
       }
-      return A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
+      return N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
         skuName: n.name
       });
-    case f.wZ8.CONFIRM:
+    case S.wZ8.CONFIRM:
     default:
-      if (null != u) return (u.interval === N.rV.MONTH ? A.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : A.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM).format({
+      if (null != u) return (u.interval === A.rV.MONTH ? N.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : N.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM).format({
         skuName: n.name,
         intervalCount: u.intervalCount
       });
-      return A.Z.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
+      return N.Z.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
         skuName: n.name
       })
   }
 }
 
 function W(e, t, n, i, r) {
-  let s = A.Z.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
+  let s = N.Z.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
     onGoToLibrary: r
   });
   return null != (n || i ? void 0 : e) ? s : null == t ? null : function(e, t) {
     switch (e.code) {
-      case f.evJ.INVALID_GIFT_SELF_REDEMPTION:
-        return A.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
-      case f.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-        return A.Z.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
-      case f.evJ.INVALID_GIFT_REDEMPTION_OWNED:
-        return A.Z.Messages.GIFT_ERROR_OWNED;
-      case f.evJ.UNKNOWN_GIFT_CODE:
-        return A.Z.Messages.GIFT_CONFIRMATION_BODY_INVALID;
-      case f.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-        return A.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-          planName: (0, T.M5)(t, N.p9.TIER_2) ? A.Z.Messages.PREMIUM_TIER_2 : A.Z.Messages.PREMIUM_TIER_1
+      case S.evJ.INVALID_GIFT_SELF_REDEMPTION:
+        return N.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
+      case S.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+        return N.Z.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
+      case S.evJ.INVALID_GIFT_REDEMPTION_OWNED:
+        return N.Z.Messages.GIFT_ERROR_OWNED;
+      case S.evJ.UNKNOWN_GIFT_CODE:
+        return N.Z.Messages.GIFT_CONFIRMATION_BODY_INVALID;
+      case S.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
+        return N.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
+          planName: (0, T.M5)(t, A.p9.TIER_2) ? N.Z.Messages.PREMIUM_TIER_2 : N.Z.Messages.PREMIUM_TIER_1
         });
-      case f.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-        return A.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
-      case f.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-        return A.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
-      case f.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-        return A.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
-      case f.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-        return A.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
+      case S.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
+        return N.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
+      case S.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
+        return N.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
+      case S.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
+        return N.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
+      case S.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
+        return N.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
       default:
-        return A.Z.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
+        return N.Z.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
     }
   }(t, c.default.getCurrentUser())
 }

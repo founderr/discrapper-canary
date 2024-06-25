@@ -1,23 +1,23 @@
-C.d(e, {
+a.d(L, {
   E: function() {
-    return t
+    return i
   },
   Z: function() {
-    return s
+    return t
   }
 });
-var a = C(570140);
+var C = a(570140);
 
-function s(L) {
-  a.Z.dispatch({
+function t(e) {
+  C.Z.dispatch({
     type: "ACTIVITIES_WHATS_NEW_ACKNOWLEDGE_SECTION",
-    section: L
+    section: e
   })
 }
 
-function t(L) {
-  a.Z.dispatch({
+function i(e) {
+  C.Z.dispatch({
     type: "ACTIVITIES_WHATS_NEW_MARK_OPENED_SECTION",
-    section: L
+    section: e
   })
 }

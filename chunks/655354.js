@@ -1,29 +1,29 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  l = n.n(s),
   r = n(481060),
   o = n(689938),
   c = n(554050);
 
-function u(e) {
+function d(e) {
   let {
     className: t,
     onJump: n
-  } = e, [l, u] = i.useState(!1);
-  return (0, s.jsx)(r.Clickable, {
-    className: a()(c.jumpButton, t),
+  } = e, [s, d] = a.useState(!1);
+  return (0, i.jsx)(r.Clickable, {
+    className: l()(c.jumpButton, t),
     onClick: e => {
-      u(!0), n(e)
+      d(!0), n(e)
     },
-    children: l ? (0, s.jsx)(r.Spinner, {
+    children: s ? (0, i.jsx)(r.Spinner, {
       type: r.Spinner.Type.PULSING_ELLIPSIS
-    }) : (0, s.jsx)(r.Text, {
+    }) : (0, i.jsx)(r.Text, {
       variant: "text-xs/normal",
       className: c.text,
       children: o.Z.Messages.JUMP

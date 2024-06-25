@@ -1,32 +1,32 @@
 n.d(t, {
   H: function() {
-    return a
+    return l
   },
   Z: function() {
     return r
   }
 });
-var s = n(913527),
-  i = n.n(s),
-  l = n(689938);
+var i = n(913527),
+  a = n.n(i),
+  s = n(689938);
 
-function a(e) {
-  let t = i()();
+function l(e) {
+  let t = a()();
   if (e <= t) return;
   let n = e.diff(t, "days");
-  if (n > 1) return l.Z.Messages.POLL_EXPIRY_DAYS_REMAINING.format({
+  if (n > 1) return s.Z.Messages.POLL_EXPIRY_DAYS_REMAINING.format({
     days: n
   });
-  let s = e.diff(t, "hours");
-  if (s > 1) return l.Z.Messages.POLL_EXPIRY_HOURS_REMAINING.format({
-    hours: s
+  let i = e.diff(t, "hours");
+  if (i > 1) return s.Z.Messages.POLL_EXPIRY_HOURS_REMAINING.format({
+    hours: i
   });
-  let a = e.diff(t, "minutes");
-  return l.Z.Messages.POLL_EXPIRY_MINUTES_REMAINING.format({
-    minutes: a
+  let l = e.diff(t, "minutes");
+  return s.Z.Messages.POLL_EXPIRY_MINUTES_REMAINING.format({
+    minutes: l
   })
 }
 
 function r(e) {
-  if (null != e) return a(e)
+  if (null != e) return l(e)
 }

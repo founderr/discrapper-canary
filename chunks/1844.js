@@ -35,13 +35,13 @@ function h() {
   return e
 }
 
-function S() {
+function f() {
   var e, t, n;
   T = null !== (n = null === (t = o.Z.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
 }
-class f extends(i = r.ZP.PersistedStore) {
+class S extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (u = e), this.waitFor(o.Z), this.syncWith([o.Z], S)
+    null != e && (u = e), this.waitFor(o.Z), this.syncWith([o.Z], f)
   }
   get outboundPromotions() {
     return I
@@ -77,7 +77,7 @@ class f extends(i = r.ZP.PersistedStore) {
     return u
   }
 }
-a(f, "displayName", "PromotionsStore"), a(f, "persistKey", "PromotionsPersistedStore"), t.Z = new f(s.Z, {
+a(S, "displayName", "PromotionsStore"), a(S, "persistKey", "PromotionsPersistedStore"), t.Z = new S(s.Z, {
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function(e) {
     let {
       activeOutboundPromotions: t,

@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
   body: "body_c96919",
   wumpus: "wumpus_c96919",
   textContainer: "textContainer_c96919",

@@ -1,7 +1,7 @@
 n(733860);
-var l, i = n(31775),
-  s = n.n(i),
-  a = n(442837),
+var i, a = n(31775),
+  l = n.n(a),
+  s = n(442837),
   r = n(570140);
 
 function o(e, t, n) {
@@ -13,7 +13,7 @@ function o(e, t, n) {
   }) : e[t] = n, e
 }
 let c = {
-  channelVisits: new(s())({
+  channelVisits: new(l())({
     max: 1e3
   }),
   bannerRenders: []
@@ -22,7 +22,7 @@ let c = {
 function u(e, t) {
   return e + t
 }
-class d extends(l = a.ZP.PersistedStore) {
+class d extends(i = s.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) Array.isArray(e.bannerRenders) && (c.bannerRenders = e.bannerRenders), null != e.channelVisitsDump && c.channelVisits.load(e.channelVisitsDump)
   }
@@ -41,8 +41,8 @@ class d extends(l = a.ZP.PersistedStore) {
     return (null !== (t = c.bannerRenders) && void 0 !== t ? t : []).filter(t => t >= Date.now() - 1e3 * e).length
   }
   getNumberOfChannelVisitsSince(e, t, n) {
-    var l;
-    return (null !== (l = c.channelVisits.get(e + t)) && void 0 !== l ? l : []).filter(e => e >= Date.now() - 1e3 * n).length
+    var i;
+    return (null !== (i = c.channelVisits.get(e + t)) && void 0 !== i ? i : []).filter(e => e >= Date.now() - 1e3 * n).length
   }
 }
 o(d, "displayName", "UnreadSettingNoticeStore"), o(d, "persistKey", "UnreadSettingNoticeStore"), t.Z = new d(r.Z, {
@@ -53,8 +53,8 @@ o(d, "displayName", "UnreadSettingNoticeStore"), o(d, "persistKey", "UnreadSetti
     var t;
     let {
       guildId: n,
-      channelId: l
-    } = e, i = n + l, s = null !== (t = c.channelVisits.get(i)) && void 0 !== t ? t : [];
-    s.length > 100 && s.pop(), s.unshift(Date.now()), c.channelVisits.set(i, s)
+      channelId: i
+    } = e, a = n + i, l = null !== (t = c.channelVisits.get(a)) && void 0 !== t ? t : [];
+    l.length > 100 && l.pop(), l.unshift(Date.now()), c.channelVisits.set(a, l)
   }
 })

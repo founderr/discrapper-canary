@@ -1,7 +1,7 @@
-var s = n(470079);
+var i = n(470079);
 t.Z = () => {
-  let e = s.useRef(!0);
-  return s.useEffect(() => () => {
+  let e = i.useRef(!0);
+  return i.useEffect(() => () => {
     e.current = !1
-  }, []), s.useCallback(() => e.current, [])
+  }, []), i.useCallback(() => e.current, [])
 }

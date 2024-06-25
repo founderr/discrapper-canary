@@ -323,7 +323,7 @@ let a = {
     },
     toolbarType: 2
   },
-  S = {
+  f = {
     analyticsName: "profile_bio_input",
     drafts: {
       type: o.d.ChannelMessage
@@ -341,7 +341,7 @@ let a = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  f = {
+  S = {
     analyticsName: "custom_gift_type",
     drafts: {
       type: o.d.ChannelMessage
@@ -357,7 +357,7 @@ let a = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  N = {
+  A = {
     analyticsName: "rules_input",
     drafts: {
       type: o.d.ChannelMessage
@@ -371,7 +371,7 @@ let a = {
     },
     showCharacterCount: !0
   },
-  A = {
+  N = {
     analyticsName: "forum_channel_guidelines",
     drafts: {
       type: o.d.ChannelMessage
@@ -399,12 +399,12 @@ let a = {
     VOICE_CHANNEL_STATUS: d,
     THREAD_CREATION: E,
     USER_PROFILE: h,
-    PROFILE_BIO_INPUT: S,
-    CUSTOM_GIFT: f,
-    RULES_INPUT: N,
+    PROFILE_BIO_INPUT: f,
+    CUSTOM_GIFT: S,
+    RULES_INPUT: A,
     CREATE_FORUM_POST: I,
     CREATE_POLL: T,
-    FORUM_CHANNEL_GUIDELINES: A,
+    FORUM_CHANNEL_GUIDELINES: N,
     ATOMIC_REACTOR_REPLY_INPUT: {
       analyticsName: "atomic_reator_reply_input",
       drafts: {

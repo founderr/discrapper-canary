@@ -3,11 +3,11 @@ n.d(t, {
     return u
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(493683),
-  a = n(726521),
+var a = n(481060),
+  l = n(493683),
+  s = n(726521),
   r = n(718538),
   o = n(868807),
   c = n(689938);
@@ -15,30 +15,30 @@ var i = n(481060),
 function u(e) {
   let {
     channel: t,
-    buttonSize: n = i.ButtonSizes.TINY,
+    buttonSize: n = a.ButtonSizes.TINY,
     className: u,
     onReportClick: d,
     onReportSubmit: h,
-    onMouseEnter: m,
-    onMouseLeave: E
+    onMouseEnter: p,
+    onMouseLeave: m
   } = e, {
-    error: p,
-    loaded: g
-  } = (0, o.a)(t), f = t.isDM() ? t.getRecipientId() : null, C = (0, r.V)(t.id, f);
-  if (null == C && (g || p)) return null;
-  let _ = () => {
-    null == h || h(), s.Z.closePrivateChannel(t.id)
+    error: _,
+    loaded: f
+  } = (0, o.a)(t), E = t.isDM() ? t.getRecipientId() : null, g = (0, r.V)(t.id, E);
+  if (null == g && (f || _)) return null;
+  let C = () => {
+    null == h || h(), l.Z.closePrivateChannel(t.id)
   };
-  return (0, l.jsx)(i.Button, {
+  return (0, i.jsx)(a.Button, {
     className: u,
     size: n,
-    color: i.Button.Colors.RED,
-    disabled: null == C,
+    color: a.Button.Colors.RED,
+    disabled: null == g,
     onClick: e => {
-      e.stopPropagation(), null == d || d(), null != C && (0, a.WL)(C, _)
+      e.stopPropagation(), null == d || d(), null != g && (0, s.WL)(g, C)
     },
-    onMouseEnter: m,
-    onMouseLeave: E,
+    onMouseEnter: p,
+    onMouseLeave: m,
     children: c.Z.Messages.REPORT
   })
 }

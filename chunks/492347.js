@@ -1,20 +1,20 @@
 n.d(t, {
   Z: function() {
-    return a
+    return r
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(151827),
-  l = n(171230);
+var s = n(151827),
+  a = n(171230);
 
-function a(e) {
+function r(e) {
   let {
     title: t,
     id: n
   } = e;
-  return (0, s.jsx)(i.Z, {
-    className: l.title,
+  return (0, i.jsx)(s.Z, {
+    className: a.title,
     id: n,
     children: t
   })

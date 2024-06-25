@@ -1,12 +1,12 @@
-var s = n(570140);
+var i = n(570140);
 t.Z = {
   clearRemoteDisconnectVoiceChannelId() {
-    s.Z.dispatch({
+    i.Z.dispatch({
       type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID"
     })
   },
   clearLastSessionVoiceChannelId() {
-    s.Z.dispatch({
+    i.Z.dispatch({
       type: "CLEAR_LAST_SESSION_VOICE_CHANNEL_ID"
     })
   }

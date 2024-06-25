@@ -1,89 +1,89 @@
-n.d(s, {
+s.d(n, {
   Z: function() {
-    return u
+    return A
   }
 });
-var a = n(735250);
-n(470079);
-var l = n(120356),
-  t = n.n(l),
-  i = n(481060),
-  o = n(285952),
-  r = n(219230),
-  c = n(788080),
-  d = n(548647),
-  _ = n(696375),
-  E = n(97568),
-  N = n(800530),
-  x = n(689938),
-  A = n(298196);
+var a = s(735250);
+s(470079);
+var t = s(120356),
+  l = s.n(t),
+  i = s(481060),
+  o = s(285952),
+  r = s(219230),
+  c = s(788080),
+  d = s(548647),
+  _ = s(696375),
+  E = s(97568),
+  N = s(800530),
+  u = s(689938),
+  x = s(298196);
 
-function u(e) {
-  var s, n;
+function A(e) {
+  var n, s;
   let {
-    classification: l,
-    isSpam: u = !1,
+    classification: t,
+    isSpam: A = !1,
     isCoppa: I = !1,
-    className: S,
-    onClose: T,
-    onNext: C
-  } = e, h = (0, d.n)(), L = null !== (s = null == l ? void 0 : l.explainer_link) && void 0 !== s ? s : "", m = null != l && null != l.flagged_content && l.flagged_content.length > 0, M = (0, c.c7)(null == l ? void 0 : l.description), g = !u && !I, O = (0, r.B)("classification_evidence"), j = null != l && ((0, c.FB)(l) && O || m);
+    className: C,
+    onClose: S,
+    onNext: T
+  } = e, m = (0, d.n)(), h = null !== (n = null == t ? void 0 : t.explainer_link) && void 0 !== n ? n : "", M = null != t && null != t.flagged_content && t.flagged_content.length > 0, L = (0, c.c7)(null == t ? void 0 : t.description), g = !A && !I, O = (0, r.B)("classification_evidence"), p = null != t && ((0, c.FB)(t) && O || M);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(i.ModalHeader, {
       direction: o.Z.Direction.VERTICAL,
-      className: A.header,
+      className: x.header,
       separator: !1,
       children: [(0, a.jsx)(i.Heading, {
-        className: A.title,
+        className: x.title,
         variant: "heading-xl/semibold",
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_HEADER
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_HEADER
       }), (0, a.jsx)(i.Text, {
-        className: A.subtitle,
+        className: x.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER
-      }), null != T && (0, a.jsx)(i.ModalCloseButton, {
-        className: A.closeButton,
-        onClick: T
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER
+      }), null != S && (0, a.jsx)(i.ModalCloseButton, {
+        className: x.closeButton,
+        onClick: S
       })]
     }), (0, a.jsxs)(i.ModalContent, {
-      className: t()(A.modalContent, !j && A.evidenceOffset, S),
+      className: l()(x.modalContent, !p && x.evidenceOffset, C),
       paddingFix: !1,
-      children: [j && (0, a.jsx)(E.s, {
-        flaggedContent: null !== (n = l.flagged_content) && void 0 !== n ? n : []
+      children: [p && (0, a.jsx)(E.s, {
+        flaggedContent: null !== (s = t.flagged_content) && void 0 !== s ? s : []
       }), (0, a.jsx)(i.Text, {
-        className: A.optionHeader,
+        className: x.optionHeader,
         color: "header-secondary",
         variant: "text-xs/bold",
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_POLICY_HEADER
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_POLICY_HEADER
       }), (0, a.jsx)("div", {
-        className: A.policyContainer,
+        className: x.policyContainer,
         children: (0, a.jsx)(i.Text, {
           variant: "text-md/semibold",
-          children: M
+          children: L
         })
       }), I && (0, a.jsx)(_.Z, {
         url: N.sQ.AGE_VERIFICATION_LINK,
-        text: x.Z.Messages.APPEAL_INGESTION_AGE_VERIFICATION_LINK_TITLE,
-        onClick: () => h(N.n0.ClickAgeVerificationLink)
-      }), u && !I && (0, a.jsx)(_.Z, {
+        text: u.Z.Messages.APPEAL_INGESTION_AGE_VERIFICATION_LINK_TITLE,
+        onClick: () => m(N.n0.ClickAgeVerificationLink)
+      }), A && !I && (0, a.jsx)(_.Z, {
         url: N.sQ.SPAM_LINK,
-        text: x.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM,
-        onClick: () => h(N.n0.ClickSpamWebformLink)
+        text: u.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM,
+        onClick: () => m(N.n0.ClickSpamWebformLink)
       }), !I && (0, a.jsx)(_.Z, {
-        text: x.Z.Messages.APPEAL_INGESTION_LEARN_MORE_LINK_TITLE,
-        url: L,
-        onClick: () => h(N.n0.ClickLearnMoreLink)
+        text: u.Z.Messages.APPEAL_INGESTION_LEARN_MORE_LINK_TITLE,
+        url: h,
+        onClick: () => m(N.n0.ClickLearnMoreLink)
       }), g && (0, a.jsx)(i.Text, {
-        className: A.learnMore,
+        className: x.learnMore,
         variant: "text-xs/normal",
-        children: x.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA.format()
+        children: u.Z.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA.format()
       })]
     }), g && (0, a.jsx)(i.ModalFooter, {
       children: (0, a.jsx)(i.Button, {
-        onClick: C,
+        onClick: T,
         color: i.Button.Colors.BRAND,
-        children: x.Z.Messages.NEXT
+        children: u.Z.Messages.NEXT
       })
     })]
   })

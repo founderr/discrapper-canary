@@ -3,18 +3,18 @@ n.d(t, {
     return g
   },
   ZP: function() {
-    return T
+    return f
   }
 });
 var i = n(735250);
 n(470079);
 var s = n(120356),
-  a = n.n(s),
-  l = n(692547),
-  o = n(481060),
+  o = n.n(s),
+  a = n(692547),
+  l = n(481060),
   r = n(109434),
-  u = n(456269),
-  c = n(479099),
+  c = n(456269),
+  u = n(479099),
   d = n(176505),
   h = n(689938),
   m = n(804702),
@@ -24,46 +24,46 @@ function g(e) {
   let {
     channel: t,
     isNew: n
-  } = e, i = (0, u.eV)(t), s = i.slice(void 0, 3), a = i.slice(3), l = i.length > 3 ? i.length - 3 : 0, o = t.hasFlag(d.zZ.PINNED), r = s.length > 0 || o || n;
+  } = e, i = (0, c.eV)(t), s = i.slice(void 0, 3), o = i.slice(3), a = i.length > 3 ? i.length - 3 : 0, l = t.hasFlag(d.zZ.PINNED), r = s.length > 0 || l || n;
   return {
     shownTags: s,
-    remainingTags: a,
-    moreTagsCount: l,
-    isPinned: o,
+    remainingTags: o,
+    moreTagsCount: a,
+    isPinned: l,
     shouldRenderTagsRow: r,
     forumPostContainsTags: i.length > 0
   }
 }
 
-function T(e) {
+function f(e) {
   let {
     channel: t,
     isNew: n,
     tagsClassName: s,
-    className: u
+    className: c
   } = e, {
     shownTags: d,
-    remainingTags: T,
-    moreTagsCount: f,
-    isPinned: v,
-    shouldRenderTagsRow: E
+    remainingTags: f,
+    moreTagsCount: T,
+    isPinned: _,
+    shouldRenderTagsRow: v
   } = g({
     channel: t,
     isNew: n
   }), {
-    tagFilter: I
+    tagFilter: b
   } = (0, r.H)(t.id);
-  return E ? (0, i.jsxs)("div", {
-    className: a()(p.tags, u),
-    children: [n ? (0, i.jsx)(o.TextBadge, {
-      className: a()(m.newBadge, m.inTagsRow),
-      color: l.Z.unsafe_rawColors.BRAND_260.css,
+  return v ? (0, i.jsxs)("div", {
+    className: o()(p.tags, c),
+    children: [n ? (0, i.jsx)(l.TextBadge, {
+      className: o()(m.newBadge, m.inTagsRow),
+      color: a.Z.unsafe_rawColors.BRAND_260.css,
       text: h.Z.Messages.NEW
-    }) : null, v && (0, i.jsx)("div", {
+    }) : null, _ && (0, i.jsx)("div", {
       className: p.pinIcon,
-      children: (0, i.jsx)(o.Tooltip, {
+      children: (0, i.jsx)(l.Tooltip, {
         text: h.Z.Messages.PINNED_POST,
-        children: e => (0, i.jsx)(o.PinIcon, {
+        children: e => (0, i.jsx)(l.PinIcon, {
           size: "custom",
           ...e,
           width: 16,
@@ -71,16 +71,16 @@ function T(e) {
           color: "white"
         })
       })
-    }), d.map(e => (0, i.jsx)(c.Z, {
+    }), d.map(e => (0, i.jsx)(u.Z, {
       tag: e,
-      size: c.Z.Sizes.SMALL,
-      className: a()(s, {
-        [p.tagFiltered]: I.has(e.id)
+      size: u.Z.Sizes.SMALL,
+      className: o()(s, {
+        [p.tagFiltered]: b.has(e.id)
       })
-    }, e.id)), f > 0 ? (0, i.jsx)(c.f, {
-      tags: T,
-      count: f,
-      size: c.Z.Sizes.SMALL
+    }, e.id)), T > 0 ? (0, i.jsx)(u.f, {
+      tags: f,
+      count: T,
+      size: u.Z.Sizes.SMALL
     }) : null]
   }) : null
 }

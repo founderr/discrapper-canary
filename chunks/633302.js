@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   dy: function() {
-    return R
+    return p
   },
   gw: function() {
-    return f
+    return S
   }
 }), n(411104), n(47120), n(757143), n(653041), n(724458);
 var i = n(392711),
@@ -29,23 +29,23 @@ let u = null,
   I = [],
   T = 0,
   h = 0,
-  S = {
+  f = {
     "1f3fb": 0,
     "1f3fc": 1,
     "1f3fd": 2,
     "1f3fe": 3,
     "1f3ff": 4
   },
-  f = ["\uD83C\uDFFB", "\uD83C\uDFFC", "\uD83C\uDFFD", "\uD83C\uDFFE", "\uD83C\uDFFF"],
-  N = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-  A = n(523558),
+  S = ["\uD83C\uDFFB", "\uD83C\uDFFC", "\uD83C\uDFFD", "\uD83C\uDFFE", "\uD83C\uDFFF"],
+  A = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
+  N = n(523558),
   m = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
   O = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
-for (let e = 0; e < f.length; e++) {
-  let t = f[e];
+for (let e = 0; e < S.length; e++) {
+  let t = S[e];
   d["skin-tone-".concat(e + 1)] = t, E[t] = "skin-tone-".concat(e + 1)
 }
-class R {
+class p {
   get names() {
     return this.emojiObject.names
   }
@@ -110,15 +110,15 @@ class R {
       for (let t of e.diversityChildren)
         if (null != t.diversity) {
           let e = t.diversity.join("-");
-          this.diversityChildren[e] = new R(t)
+          this.diversityChildren[e] = new p(t)
         }
     }
   }
 }
-let p = n(5420);
-for (let e in p) {
-  let t = p[e].map(e => {
-    let t = new R(e),
+let R = n(5420);
+for (let e in R) {
+  let t = R[e].map(e => {
+    let t = new p(e),
       n = t.surrogates,
       i = t.uniqueName;
     if (t.setSpriteSheetIndex(t.hasDiversity ? T++ : h++), E[n] = i, 0 > n.indexOf("‍")) {
@@ -132,7 +132,7 @@ for (let e in p) {
         i = n.surrogates;
       for (let e of n.names) c[e] = n, d[e] = i;
       if (!e.hasMultiDiversity) {
-        let t = S[n.emojiObject.diversity[0]];
+        let t = f[n.emojiObject.diversity[0]];
         for (let r of e.names) {
           let e = "".concat(r, "::skin-tone-").concat(t + 1);
           d[e] = i, c[e] = n
@@ -224,7 +224,7 @@ t.ZP = {
     return _[e]
   },
   translateInlineEmojiToSurrogates: function(e) {
-    return e.replace(N, (e, t) => P(t, e))
+    return e.replace(A, (e, t) => P(t, e))
   },
   maybeTranslateSurrogatesToInlineEmoji: function(e) {
     if (!m.test(e)) return null;
@@ -241,17 +241,17 @@ t.ZP = {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
       i = n;
-    return Object.prototype.hasOwnProperty.call(A, e) && (i = A[e]), t ? ":".concat(i, ":") : i
+    return Object.prototype.hasOwnProperty.call(N, e) && (i = N[e]), t ? ":".concat(i, ":") : i
   },
   convertSurrogateToBase: function(e) {
-    return g(y(f.reduce((e, t) => e.replace(t, ""), e), !1))
+    return g(y(S.reduce((e, t) => e.replace(t, ""), e), !1))
   },
   forEach: e => r().each(I, e),
   all: () => I,
   numDiversitySprites: T,
   numNonDiversitySprites: h,
   EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-  EMOJI_NAME_AND_DIVERSITY_RE: N,
+  EMOJI_NAME_AND_DIVERSITY_RE: A,
   EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
   hasSurrogates: function(e) {
     return r().toArray(e).some(e => null != E[e])

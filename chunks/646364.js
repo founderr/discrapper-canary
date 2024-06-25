@@ -1,68 +1,68 @@
 t.r(a), t(47120);
 var s = t(735250),
-  n = t(470079),
-  i = t(442837),
+  o = t(470079),
+  d = t(442837),
   r = t(481060),
-  d = t(367907),
+  n = t(367907),
   l = t(434404),
-  o = t(650774),
-  c = t(153124),
-  E = t(816817),
-  C = t(981631),
-  _ = t(689938),
-  S = t(574845);
+  i = t(650774),
+  C = t(153124),
+  c = t(816817),
+  _ = t(981631),
+  E = t(689938),
+  u = t(574845);
 a.default = e => {
   let {
     transitionState: a,
     onClose: t,
-    guild: u
-  } = e, h = (0, c.Dt)();
-  n.useEffect(() => {
-    d.ZP.trackWithMetadata(C.rMx.OPEN_MODAL, {
-      type: C.jXE.DISCOVERY_SETUP_SUCCESS_MODAL
+    guild: m
+  } = e, h = (0, C.Dt)();
+  o.useEffect(() => {
+    n.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, {
+      type: _.jXE.DISCOVERY_SETUP_SUCCESS_MODAL
     })
   }, []);
-  let [m, M] = (0, i.Wu)([o.Z], () => [o.Z.getOnlineCount(u.id), o.Z.getMemberCount(u.id)], [u.id]);
+  let [S, p] = (0, d.Wu)([i.Z], () => [i.Z.getOnlineCount(m.id), i.Z.getMemberCount(m.id)], [m.id]);
   return (0, s.jsxs)(r.ModalRoot, {
     transitionState: a,
     "aria-labelledby": h,
-    className: S.root,
+    className: u.root,
     children: [(0, s.jsx)(r.ModalHeader, {
-      className: S.modalHeader,
+      className: u.modalHeader,
       separator: !1,
       children: (0, s.jsx)(r.ModalCloseButton, {
         onClick: t,
-        className: S.modalCloseButton
+        className: u.modalCloseButton
       })
     }), (0, s.jsx)(r.Heading, {
       variant: "heading-xl/semibold",
       id: h,
-      className: S.header,
-      children: _.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_HEADER
+      className: u.header,
+      children: E.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_HEADER
     }), (0, s.jsxs)(r.ModalContent, {
-      className: S.modalContent,
+      className: u.modalContent,
       children: [(0, s.jsx)(r.Text, {
         variant: "text-md/normal",
-        className: S.subheader,
-        children: _.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_SUBHEADING.format({
+        className: u.subheader,
+        children: E.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_SUBHEADING.format({
           onServerSettingsClick: () => {
-            t(), l.Z.setSection(C.pNK.DISCOVERY), d.ZP.trackWithMetadata(C.rMx.SETTINGS_PANE_VIEWED, {
+            t(), l.Z.setSection(_.pNK.DISCOVERY), n.ZP.trackWithMetadata(_.rMx.SETTINGS_PANE_VIEWED, {
               settings_type: "guild",
               origin_pane: "DISCOVERY",
               destination_pane: "DISCOVERY"
             })
           }
         })
-      }), (0, s.jsx)(E.Z, {
-        className: S.previewCard,
-        guild: u,
-        presenceCount: m,
-        memberCount: M
+      }), (0, s.jsx)(c.Z, {
+        className: u.previewCard,
+        guild: m,
+        presenceCount: S,
+        memberCount: p
       })]
     }), (0, s.jsx)(r.ModalFooter, {
       children: (0, s.jsx)(r.Button, {
         onClick: t,
-        children: _.Z.Messages.GOT_IT
+        children: E.Z.Messages.GOT_IT
       })
     })]
   })

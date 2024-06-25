@@ -14,16 +14,16 @@ var i = n(735250),
   I = n(168551),
   T = n(19759),
   h = n(706454),
-  S = n(210887),
-  f = n(451478),
-  N = n(792125),
-  A = n(597952),
+  f = n(210887),
+  S = n(451478),
+  A = n(792125),
+  N = n(597952),
   m = n(252618),
   O = n(587061),
-  R = n(392358),
-  p = n(981631);
+  p = n(392358),
+  R = n(981631);
 n(209525);
-let g = new Set([p.Z5c.LOGIN, p.Z5c.REGISTER]);
+let g = new Set([R.Z5c.LOGIN, R.Z5c.REGISTER]);
 t.Z = r.memo(function(e) {
   let {
     children: t,
@@ -33,7 +33,7 @@ t.Z = r.memo(function(e) {
     skipsSettingDefaultPageTitle: s
   });
   let {
-    clientThemesClassName: p,
+    clientThemesClassName: R,
     clientThemesCSS: C
   } = (0, I.ZP)(), v = r.createElement("style", {
     [I.PQ]: !0
@@ -43,16 +43,16 @@ t.Z = r.memo(function(e) {
       let {
         locale: t,
         theme: n
-      } = (0, _.cj)([S.Z, h.default], () => ({
+      } = (0, _.cj)([f.Z, h.default], () => ({
         locale: h.default.locale,
-        theme: S.Z.theme
-      })), s = (0, _.e7)([f.Z], () => f.Z.isFocused(), []), {
+        theme: f.Z.theme
+      })), s = (0, _.e7)([S.Z], () => S.Z.isFocused(), []), {
         reducedMotion: a,
         alwaysShowLinkDecorations: c
       } = r.useContext(d.AccessibilityPreferencesContext), {
         fontScale: I,
         fontScaleClass: m,
-        keyboardModeEnabled: p,
+        keyboardModeEnabled: R,
         saturation: C,
         desaturateUserColors: v,
         useForcedColors: L,
@@ -78,7 +78,7 @@ t.Z = r.memo(function(e) {
         }
       }), M = (0, l.TH)(), P = r.useMemo(() => g.has(M.pathname), [M.pathname]);
       (0, O.Z)(window, P);
-      let y = (0, R.Z)(window, __OVERLAY__ || s),
+      let y = (0, p.Z)(window, __OVERLAY__ || s),
         U = (0, _.e7)([T.Z], () => T.Z.sidebarWidth),
         b = (0, d.useRedesignIconContext)().enabled,
         G = window.CSS.supports("selector(::-webkit-scrollbar)");
@@ -88,7 +88,7 @@ t.Z = r.memo(function(e) {
         className: o()(e, {
           overlay: __OVERLAY__,
           "mouse-mode": y,
-          "keyboard-mode": p,
+          "keyboard-mode": R,
           "reduce-motion": a.enabled,
           "full-motion": !a.enabled,
           "is-mobile": u.tq,
@@ -101,9 +101,9 @@ t.Z = r.memo(function(e) {
           "show-redesigned-icons": b,
           "no-webkit-scrollbar": !G,
           "has-webkit-scrollbar": G
-        }, (0, N.Q)(n), (0, A.Z)(), m)
+        }, (0, A.Q)(n), (0, N.Z)(), m)
       })
-    }(p), function() {
+    }(R), function() {
       let [e, t] = r.useState([]);
       return r.useEffect(() => {
         Promise.all(c.L.map(e => n(529305)("./".concat(e, ".woff2")).then(e => {

@@ -1,7 +1,7 @@
 "use strict";
 var i, r, s, o, a, l, u, _, c, d, E, I, T, h;
 
-function S(e, t) {
+function f(e, t) {
   let {
     sound_id: n,
     emoji_id: i,
@@ -21,7 +21,7 @@ function S(e, t) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     soundId: t,
     guildId: n,
@@ -50,7 +50,7 @@ n.d(t, {
     return i
   },
   QL: function() {
-    return f
+    return S
   },
   YQ: function() {
     return u
@@ -62,7 +62,7 @@ n.d(t, {
     return r
   },
   o3: function() {
-    return S
+    return f
   },
   vB: function() {
     return l

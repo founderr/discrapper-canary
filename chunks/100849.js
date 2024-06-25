@@ -1,93 +1,93 @@
-s.d(i, {
+i.d(n, {
   Z: function() {
-    return m
+    return v
   }
 });
-var n = s(735250),
-  l = s(470079),
-  t = s(120356),
-  o = s.n(t),
-  r = s(442837),
-  a = s(481060),
-  d = s(717881),
-  c = s(906732),
-  u = s(199902),
-  I = s(158776),
-  E = s(543595),
-  Z = s(785717),
-  f = s(221292),
-  _ = s(981631),
-  S = s(110957),
-  v = s(667589);
+var t = i(735250),
+  s = i(470079),
+  o = i(120356),
+  l = i.n(o),
+  a = i(442837),
+  r = i(481060),
+  d = i(717881),
+  c = i(906732),
+  u = i(199902),
+  I = i(158776),
+  f = i(543595),
+  E = i(785717),
+  _ = i(221292),
+  S = i(981631),
+  Z = i(110957),
+  m = i(667589);
 
-function m(e) {
+function v(e) {
   let {
-    user: i,
-    type: s,
-    showActions: t,
-    onClose: m
-  } = e, x = (0, r.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(i.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(i.id)), N = l.useMemo(() => h.filter(e => e.type !== _.IIU.CUSTOM_STATUS), [h]), g = l.useMemo(() => x ? N.find(e => e.type === _.IIU.PLAYING) : null, [N, x]), T = l.useMemo(() => N.filter(e => e !== g), [g, N]), {
-    analyticsLocations: R,
+    user: n,
+    type: i,
+    showActions: o,
+    onClose: v
+  } = e, x = (0, a.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(n.id)), g = s.useMemo(() => h.filter(e => e.type !== S.IIU.CUSTOM_STATUS), [h]), N = s.useMemo(() => x ? g.find(e => e.type === S.IIU.PLAYING) : null, [g, x]), p = s.useMemo(() => g.filter(e => e !== N), [N, g]), {
+    analyticsLocations: T,
     newestAnalyticsLocation: C
   } = (0, c.ZP)(), {
-    trackUserProfileAction: A,
-    ...M
-  } = (0, Z.KZ)(), p = {
+    trackUserProfileAction: R,
+    ...A
+  } = (0, E.KZ)(), M = {
     location: {
-      page: _.ZY5.USER_PROFILE,
-      section: _.jXE.PROFILE_MODAL
+      page: S.ZY5.USER_PROFILE,
+      section: S.jXE.PROFILE_MODAL
     }
   };
-  return (0, n.jsxs)(a.ScrollerThin, {
-    className: v.listScroller,
+  return (0, t.jsxs)(r.ScrollerThin, {
+    className: m.listScroller,
     fade: !0,
-    children: [x ? (0, n.jsx)(d.Z, {
-      type: s,
-      user: i,
+    children: [x ? (0, t.jsx)(d.Z, {
+      type: i,
+      user: n,
       source: C,
-      className: S.userProfileActivity,
-      showChannelDetails: s === E.Y.SIMPLIFIED_PROFILE,
-      activity: g,
-      actionColor: S.actionColor,
-      analyticsParams: p,
-      showActions: t,
-      onOpenGameProfile: m,
+      className: Z.userProfileActivity,
+      showChannelDetails: i === f.Y.SIMPLIFIED_PROFILE,
+      activity: N,
+      actionColor: Z.actionColor,
+      analyticsParams: M,
+      showActions: o,
+      onOpenGameProfile: v,
       onAction: () => {
-        A({
+        R({
           action: "JOIN_ACTIVITY"
-        }), (0, f.Ac)({
-          activityType: _.IIU.STREAMING,
-          activityName: null == g ? void 0 : g.name,
-          activityPlatform: null == g ? void 0 : g.platform,
-          activitySessionId: null == g ? void 0 : g.session_id,
-          applicationId: null == g ? void 0 : g.application_id,
-          analyticsLocations: R,
-          ...M
+        }), (0, _.Ac)({
+          activityType: S.IIU.STREAMING,
+          activityName: null == N ? void 0 : N.name,
+          activityPlatform: null == N ? void 0 : N.platform,
+          activitySessionId: null == N ? void 0 : N.session_id,
+          applicationId: null == N ? void 0 : N.application_id,
+          analyticsLocations: T,
+          ...A
         })
       }
-    }) : null, T.map(e => (0, n.jsx)(d.Z, {
-      type: s,
+    }) : null, p.map(e => (0, t.jsx)(d.Z, {
+      type: i,
       activity: e,
-      user: i,
+      user: n,
       useStoreStream: !1,
       source: C,
-      className: o()(S.userProfileActivity, s === E.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
-      showChannelDetails: s === E.Y.SIMPLIFIED_PROFILE,
-      actionColor: S.actionColor,
-      analyticsParams: p,
-      showActions: t,
-      onOpenGameProfile: m,
+      className: l()(Z.userProfileActivity, i === f.Y.SIMPLIFIED_PROFILE && Z.simplifiedProfileActivity),
+      showChannelDetails: i === f.Y.SIMPLIFIED_PROFILE,
+      actionColor: Z.actionColor,
+      analyticsParams: M,
+      showActions: o,
+      onOpenGameProfile: v,
       onAction: () => {
-        A({
+        R({
           action: "JOIN_ACTIVITY"
-        }), (0, f.Ac)({
+        }), (0, _.Ac)({
           activityType: e.type,
           activityName: e.name,
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: R,
-          ...M
+          analyticsLocations: T,
+          ...A
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

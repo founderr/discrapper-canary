@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i, r = n(735250),
@@ -73,7 +73,7 @@ class h extends(i = s.PureComponent) {
   }
 }
 
-function S(e) {
+function f(e) {
   let t = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation),
     n = (0, _.Z)(e.userId);
   return (0, r.jsx)(h, {

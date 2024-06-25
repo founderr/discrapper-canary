@@ -41,11 +41,11 @@ function h(e, t) {
   }).map(e => e.split(":")[0])
 }
 
-function S(e, t) {
+function f(e, t) {
   return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? "".concat(t.id, ":").concat(e.guild.id) : t.id
 }
 
-function f() {
+function S() {
   var e, t;
   let n = null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
   T.overwriteHistory(s().mapValues(n, e => ({
@@ -53,9 +53,9 @@ function f() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class N extends(i = o.ZP.PersistedStore) {
+class A extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (I = e), this.syncWith([_.Z], f)
+    null != e && (I = e), this.syncWith([_.Z], S)
   }
   getState() {
     return I
@@ -68,20 +68,20 @@ class N extends(i = o.ZP.PersistedStore) {
   }
   getScoreWithoutLoadingLatest(e, t) {
     var n;
-    return null !== (n = T.getScore(S(e, t))) && void 0 !== n ? n : 0
+    return null !== (n = T.getScore(f(e, t))) && void 0 !== n ? n : 0
   }
   getTopCommandsWithoutLoadingLatest() {
     return T.frequently
   }
 }
-E(N, "displayName", "ApplicationCommandFrecencyStore"), E(N, "persistKey", "ApplicationCommandFrecencyV2"), t.ZP = new N(a.Z, {
+E(A, "displayName", "ApplicationCommandFrecencyStore"), E(A, "persistKey", "ApplicationCommandFrecencyV2"), t.ZP = new A(a.Z, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t,
       context: n
     } = e;
     if (t.type !== l.yU.CHAT) return !1;
-    let i = S(n, t);
+    let i = f(n, t);
     I.pendingUsages.push({
       key: i,
       timestamp: Date.now()

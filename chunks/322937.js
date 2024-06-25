@@ -1,27 +1,27 @@
 n.d(t, {
   $: function() {
-    return a
+    return s
   }
 });
-var l = n(470079),
-  i = n(774078),
-  s = n(202107);
+var i = n(470079),
+  a = n(774078),
+  l = n(202107);
 
-function a(e) {
+function s(e) {
   let {
     communicationDisabledUntil: t,
     userId: n,
-    guildId: a
-  } = null != e ? e : {}, r = (0, i.Z)(null != t ? Date.parse(t) : Date.now()), o = r.seconds, c = (0, l.useRef)(null);
-  return (0, l.useEffect)(() => {
-    if (null == e || null == a || null == n) {
+    guildId: s
+  } = null != e ? e : {}, r = (0, a.Z)(null != t ? Date.parse(t) : Date.now()), o = r.seconds, c = (0, i.useRef)(null);
+  return (0, i.useEffect)(() => {
+    if (null == e || null == s || null == n) {
       clearTimeout(c.current);
       return
     }
     return o <= 0 && null == c.current && (c.current = setTimeout(() => {
-      s.Z.clearGuildMemberTimeout(a, n)
+      l.Z.clearGuildMemberTimeout(s, n)
     }, 1e3)), () => {
       null != c.current && (clearTimeout(c.current), c.current = null)
     }
-  }, [a, n, o, t, e]), r
+  }, [s, n, o, t, e]), r
 }

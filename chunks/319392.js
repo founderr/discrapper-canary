@@ -1,71 +1,71 @@
-t.d(n, {
+o.d(n, {
   Z: function() {
-    return x
+    return p
   }
 });
-var o = t(735250);
-t(470079);
-var s = t(481060),
-  r = t(726542),
-  i = t(277390),
-  a = t(63063),
-  c = t(376340),
-  l = t(981631),
-  d = t(927923),
-  u = t(689938),
-  C = t(916839),
-  _ = t(418811);
+var t = o(735250);
+o(470079);
+var r = o(481060),
+  s = o(726542),
+  i = o(277390),
+  c = o(63063),
+  a = o(376340),
+  l = o(981631),
+  d = o(927923),
+  u = o(689938),
+  _ = o(916839),
+  C = o(418811);
 
-function O() {
-  return (0, o.jsxs)("div", {
-    className: C.getXboxApp,
-    children: [(0, o.jsxs)("div", {
-      className: C.getXboxAppBody,
-      children: [(0, o.jsxs)(s.Heading, {
-        className: C.getXboxAppHeading,
+function x() {
+  return (0, t.jsxs)("div", {
+    className: _.getXboxApp,
+    children: [(0, t.jsxs)("div", {
+      className: _.getXboxAppBody,
+      children: [(0, t.jsxs)(r.Heading, {
+        className: _.getXboxAppHeading,
         variant: "text-lg/semibold",
-        children: [(0, o.jsx)("div", {
-          className: C.xboxLogoBox,
-          children: (0, o.jsx)("img", {
-            src: r.Z.get(l.ABu.XBOX).icon.whiteSVG,
+        children: [(0, t.jsx)("div", {
+          className: _.xboxLogoBox,
+          children: (0, t.jsx)("img", {
+            src: s.Z.get(l.ABu.XBOX).icon.whiteSVG,
             alt: ""
           })
         }), u.Z.Messages.GET_XBOX_APP]
-      }), (0, o.jsx)(s.Text, {
+      }), (0, t.jsx)(r.Text, {
         tag: "p",
         variant: "text-md/normal",
         color: "header-secondary",
         children: u.Z.Messages.CONNECT_XBOX_SUCCESS_APP_BODY
-      }), (0, o.jsx)(s.Text, {
+      }), (0, t.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: (0, o.jsx)(s.Anchor, {
-          href: a.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
+        children: (0, t.jsx)(r.Anchor, {
+          href: c.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
           children: u.Z.Messages.LEARN_MORE
         })
       })]
-    }), (0, o.jsx)(i.ZP, {
-      className: C.getXboxAppQR,
+    }), (0, t.jsx)(i.ZP, {
+      className: _.getXboxAppQR,
       text: d.X3,
       size: 90
     })]
   })
 }
 
-function x(e) {
+function p(e) {
   let {
     onClose: n
   } = e;
-  return (0, o.jsx)(c.L, {
-    img: (0, o.jsx)("img", {
-      src: _,
+  return (0, t.jsx)(a.L, {
+    img: (0, t.jsx)("img", {
+      src: C,
       width: "232",
       height: "113",
       alt: ""
     }),
     title: u.Z.Messages.CONNECT_XBOX_SUCCESS_TITLE,
     body: u.Z.Messages.CONNECT_XBOX_SUCCESS_BODY,
-    content: (0, o.jsx)(O, {}),
+    content: (0, t.jsx)(x, {}),
     onClose: n
   })
 }

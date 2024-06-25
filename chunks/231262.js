@@ -1,57 +1,57 @@
-n.d(t, {
+a.d(t, {
   h: function() {
-    return p
+    return h
   }
 });
-var a = n(735250),
-  l = n(470079),
-  i = n(557533),
-  s = n.n(i),
-  r = n(794010),
-  o = n(653371),
-  c = n(388755),
-  d = n(330711),
-  u = n(681206);
-let h = null;
-class p extends l.PureComponent {
+var n = a(735250),
+  i = a(470079),
+  r = a(557533),
+  l = a.n(r),
+  o = a(794010),
+  s = a(653371),
+  c = a(388755),
+  d = a(330711),
+  u = a(681206);
+let p = null;
+class h extends i.PureComponent {
   render() {
     let {
       token: e,
       className: t,
-      onChangeLocale: n,
-      mainContentId: i,
-      mobileClassName: r,
-      avoidRouter: p,
+      onChangeLocale: a,
+      mainContentId: r,
+      mobileClassName: o,
+      avoidRouter: h,
       authRedirectTo: m,
       openNavAriaLabel: N,
       hideNavAriaLabel: k,
-      skipToContentLabel: g
+      skipToContentLabel: _
     } = this.props;
-    return null == h ? null : (0, a.jsxs)(l.Fragment, {
-      children: [(0, a.jsx)(o.a, {
-        className: s()(u.desktopHeader, t),
-        TrackClick: h,
+    return null == p ? null : (0, n.jsxs)(i.Fragment, {
+      children: [(0, n.jsx)(s.a, {
+        className: l()(u.desktopHeader, t),
+        TrackClick: p,
         token: e,
-        avoidRouter: p,
+        avoidRouter: h,
         authRedirectTo: m,
         NavigationMessages: d.Z.Messages.Navigation,
-        onChangeLocale: n,
-        mainContentId: i,
-        skipToContentLabel: g
-      }), (0, a.jsx)(c.D, {
-        className: s()(u.mobileHeader, r),
+        onChangeLocale: a,
+        mainContentId: r,
+        skipToContentLabel: _
+      }), (0, n.jsx)(c.D, {
+        className: l()(u.mobileHeader, o),
         token: e,
-        avoidRouter: p,
-        TrackClick: h,
+        avoidRouter: h,
+        TrackClick: p,
         NavigationMessages: d.Z.Messages.Navigation,
-        onChangeLocale: n,
+        onChangeLocale: a,
         openNavAriaLabel: N,
         hideNavAriaLabel: k
       })]
     })
   }
   constructor(e) {
-    super(e), null != e.locale && d.Z.setLocale(e.locale), h = t => (0, a.jsx)(r.Z, {
+    super(e), null != e.locale && d.Z.setLocale(e.locale), p = t => (0, n.jsx)(o.Z, {
       track: e.track,
       trackOutboundLink: e.trackOutboundLink,
       ...t

@@ -1,44 +1,44 @@
 n(47120);
-var l, i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+var i, a = n(735250),
+  l = n(470079),
+  s = n(120356),
+  r = n.n(s),
   o = n(512722),
   c = n.n(o),
   u = n(613828),
   d = n(442837),
   h = n(481060),
-  m = n(490173),
-  E = n(40851),
-  p = n(607070),
-  g = n(899663),
-  f = n(317381),
-  C = n(496616),
-  _ = n(100527),
+  p = n(490173),
+  m = n(40851),
+  _ = n(607070),
+  f = n(899663),
+  E = n(317381),
+  g = n(496616),
+  C = n(100527),
   I = n(906732),
   x = n(168551),
   T = n(597952),
   N = n(628123),
-  Z = n(151851),
+  v = n(151851),
   S = n(587061),
-  v = n(392358),
+  Z = n(392358),
   A = n(892254),
   M = n(706454),
-  R = n(210887),
-  j = n(740492),
-  L = n(451478),
-  O = n(153850),
+  b = n(210887),
+  R = n(740492),
+  j = n(451478),
+  L = n(153850),
   P = n(806519),
-  y = n(358085),
-  b = n(792125),
+  O = n(358085),
+  y = n(792125),
   D = n(998502),
-  U = n(473159),
-  k = n(928518),
+  k = n(473159),
+  U = n(928518),
   w = n(981631),
-  H = n(689938),
-  G = n(559286);
+  B = n(689938),
+  H = n(559286);
 
-function B(e, t, n) {
+function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -46,21 +46,21 @@ function B(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class V extends(l = s.Component) {
+class V extends(i = l.Component) {
   componentDidMount() {
     let {
       guestWindow: e
     } = this.props, t = e.document;
-    null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, U.O)(e), e.addEventListener("blur", this.handleBlur), t.addEventListener("contextmenu", this.handleContextMenu, !0), e.addEventListener("beforeunload", this.warnPopoutClose)
+    null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, k.O)(e), e.addEventListener("blur", this.handleBlur), t.addEventListener("contextmenu", this.handleContextMenu, !0), e.addEventListener("beforeunload", this.warnPopoutClose)
   }
   componentDidUpdate(e) {
     let {
       title: t,
       fontScale: n,
-      locale: l,
-      clientThemesCSS: i
+      locale: i,
+      clientThemesCSS: a
     } = this.props;
-    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== l && this.updateLocale(), e.clientThemesCSS !== i && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors()
+    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== i && this.updateLocale(), e.clientThemesCSS !== a && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors()
   }
   componentWillUnmount() {
     let {
@@ -103,15 +103,15 @@ class V extends(l = s.Component) {
     let {
       clientThemesCSS: e,
       guestWindow: t
-    } = this.props, n = t.document, l = (0, n.head);
-    c()(null != l, "Window document ".concat("head", " was null"));
-    let i = l.querySelector("style[".concat(x.PQ, "]"));
-    if (null != i) {
-      i.textContent = e;
+    } = this.props, n = t.document, i = (0, n.head);
+    c()(null != i, "Window document ".concat("head", " was null"));
+    let a = i.querySelector("style[".concat(x.PQ, "]"));
+    if (null != a) {
+      a.textContent = e;
       return
     }
-    let s = n.createElement("style");
-    s.setAttribute(x.PQ, "true"), s.textContent = e, l.appendChild(s)
+    let l = n.createElement("style");
+    l.setAttribute(x.PQ, "true"), l.textContent = e, i.appendChild(l)
   }
   updateForcedColors() {
     let {
@@ -126,55 +126,55 @@ class V extends(l = s.Component) {
       theme: e,
       forcedColors: t,
       focused: n,
-      appFocused: l,
-      children: s,
-      windowKey: a,
+      appFocused: i,
+      children: l,
+      windowKey: s,
       mouseModeEnabled: o,
       keyboardModeEnabled: c,
       reducedMotionEnabled: d,
-      fontScaleClass: p,
-      saturation: f,
-      withTitleBar: C,
-      guestWindow: _,
+      fontScaleClass: _,
+      saturation: E,
+      withTitleBar: g,
+      guestWindow: C,
       clientThemesClassName: I,
       contentClassName: x
-    } = this.props, S = (0, y.getPlatform)(), v = r()(p, {
+    } = this.props, S = (0, O.getPlatform)(), Z = r()(_, {
       "mouse-mode": o,
       "reduce-motion": d,
       "full-motion": !d,
       "keyboard-mode": c,
-      "app-focused": n || l,
-      "low-saturation": f <= .4
+      "app-focused": n || i,
+      "low-saturation": E <= .4
     });
-    return (0, i.jsx)(u.VK, {
-      children: (0, i.jsx)(A.Z, {
-        children: (0, i.jsx)(h.ThemeContextProvider, {
+    return (0, a.jsx)(u.VK, {
+      children: (0, a.jsx)(A.Z, {
+        children: (0, a.jsx)(h.ThemeContextProvider, {
           theme: e,
-          children: (0, i.jsx)(h.RedesignIconContextProvider, {
-            children: (0, i.jsx)("div", {
+          children: (0, a.jsx)(h.RedesignIconContextProvider, {
+            children: (0, a.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: r()((0, b.Q)(e), (0, T.Z)(), v, I),
-              children: (0, i.jsx)(h.FocusRingScope, {
+              className: r()((0, y.Q)(e), (0, T.Z)(), Z, I),
+              children: (0, a.jsx)(h.FocusRingScope, {
                 containerRef: this.rootRef,
-                children: (0, i.jsx)(g.Z, {
-                  children: (0, i.jsxs)(N.Z, {
-                    children: [(0, i.jsx)(P.Co, {}), (0, i.jsx)(E.Wu, {
+                children: (0, a.jsx)(f.Z, {
+                  children: (0, a.jsxs)(N.Z, {
+                    children: [(0, a.jsx)(P.Co, {}), (0, a.jsx)(m.Wu, {
                       appContext: w.IlC.POPOUT,
-                      renderWindow: _,
-                      children: (0, i.jsxs)(O.yP, {
-                        children: [(0, i.jsxs)("div", {
-                          className: G.popout,
-                          children: [C && null != S ? (0, i.jsx)(Z.Z, {
+                      renderWindow: C,
+                      children: (0, a.jsxs)(L.yP, {
+                        children: [(0, a.jsxs)("div", {
+                          className: H.popout,
+                          children: [g && null != S ? (0, a.jsx)(v.Z, {
                             focused: n,
                             type: S,
-                            windowKey: a,
+                            windowKey: s,
                             macOSFrame: !0
-                          }) : null, (0, i.jsx)("div", {
-                            className: r()(G.content, x),
-                            children: s
+                          }) : null, (0, a.jsx)("div", {
+                            className: r()(H.content, x),
+                            children: l
                           })]
-                        }), (0, i.jsx)(h.Modals, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(O.Un, {})]
+                        }), (0, a.jsx)(h.Modals, {}), (0, a.jsx)(p.Z, {}), (0, a.jsx)(L.Un, {})]
                       })
                     })]
                   })
@@ -187,90 +187,90 @@ class V extends(l = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), B(this, "rootRef", s.createRef()), B(this, "_cleanupWindowActionCreators", void 0), B(this, "warnPopoutClose", e => {
-      if (this.props.connectedToEmbeddedActivity && !j.ZP.disableEmbeddedActivityPopOutAlert) {
-        if (e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!y.isPlatformEmbedded)(0, C.Z)(() => {
-          k.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && D.ZP.close(this.props.windowKey)
+    super(...e), G(this, "rootRef", l.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
+      if (this.props.connectedToEmbeddedActivity && !R.ZP.disableEmbeddedActivityPopOutAlert) {
+        if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)(0, g.Z)(() => {
+          U.Z.unmountWindow(this.props.windowKey), O.isPlatformEmbedded && D.ZP.close(this.props.windowKey)
         })
       }
-    }), B(this, "handleBlur", () => {
+    }), G(this, "handleBlur", () => {
       var e, t;
       null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t)
-    }), B(this, "handleContextMenu", e => {
+    }), G(this, "handleContextMenu", e => {
       e.preventDefault()
     })
   }
 }
-B(V, "defaultProps", {
+G(V, "defaultProps", {
   withTitleBar: !0
 });
-let F = s.forwardRef(function(e, t) {
+let F = l.forwardRef(function(e, t) {
   let {
     guestWindow: n,
-    focused: l
-  } = (0, d.cj)([k.Z], () => ({
-    guestWindow: k.Z.getWindow(e.windowKey),
-    focused: k.Z.getWindowFocused(e.windowKey)
+    focused: i
+  } = (0, d.cj)([U.Z], () => ({
+    guestWindow: U.Z.getWindow(e.windowKey),
+    focused: U.Z.getWindowFocused(e.windowKey)
   }));
   c()(null != n, "Missing guestWindow reference");
-  let s = (0, d.e7)([L.Z], () => L.Z.isFocused()),
+  let l = (0, d.e7)([j.Z], () => j.Z.isFocused()),
     {
-      locale: a,
+      locale: s,
       theme: r
-    } = (0, d.cj)([R.Z, M.default], () => ({
+    } = (0, d.cj)([b.Z, M.default], () => ({
       locale: M.default.locale,
-      theme: R.Z.theme
+      theme: b.Z.theme
     })),
-    o = (0, d.e7)([p.Z], () => p.Z.useForcedColors ? "yes" : "no"),
+    o = (0, d.e7)([_.Z], () => _.Z.useForcedColors ? "yes" : "no"),
     {
       fontScale: u,
-      keyboardModeEnabled: m,
-      reducedMotionEnabled: E,
-      fontScaleClass: g,
-      saturation: C,
+      keyboardModeEnabled: p,
+      reducedMotionEnabled: m,
+      fontScaleClass: f,
+      saturation: g,
       systemForcedColors: T,
       useForcedColors: N
-    } = (0, d.cj)([p.Z], () => ({
-      fontScale: p.Z.fontScale,
-      keyboardModeEnabled: p.Z.keyboardModeEnabled,
-      reducedMotionEnabled: p.Z.useReducedMotion,
-      fontScaleClass: p.Z.fontScaleClass,
-      saturation: p.Z.saturation,
-      systemForcedColors: p.Z.systemForcedColors,
-      useForcedColors: p.Z.useForcedColors
+    } = (0, d.cj)([_.Z], () => ({
+      fontScale: _.Z.fontScale,
+      keyboardModeEnabled: _.Z.keyboardModeEnabled,
+      reducedMotionEnabled: _.Z.useReducedMotion,
+      fontScaleClass: _.Z.fontScaleClass,
+      saturation: _.Z.saturation,
+      systemForcedColors: _.Z.systemForcedColors,
+      useForcedColors: _.Z.useForcedColors
     })),
-    Z = (0, d.e7)([f.ZP], () => null != e.channelId && null !== f.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+    v = (0, d.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, S.Z)(n, !1);
-  let A = (0, v.Z)(n, l),
+  let A = (0, Z.Z)(n, i),
     {
-      analyticsLocations: j
-    } = (0, I.ZP)(_.Z.POPOUT_WINDOW),
+      analyticsLocations: R
+    } = (0, I.ZP)(C.Z.POPOUT_WINDOW),
     {
-      clientThemesClassName: O,
+      clientThemesClassName: L,
       clientThemesCSS: P
     } = (0, x.ZP)();
-  return null == n ? null : (0, i.jsx)(h.DnDProvider, {
-    children: (0, i.jsx)(I.Gt, {
-      value: j,
-      children: (0, i.jsx)(V, {
+  return null == n ? null : (0, a.jsx)(h.DnDProvider, {
+    children: (0, a.jsx)(I.Gt, {
+      value: R,
+      children: (0, a.jsx)(V, {
         ref: t,
         ...e,
         guestWindow: n,
-        focused: l,
-        appFocused: s,
-        locale: a,
+        focused: i,
+        appFocused: l,
+        locale: s,
         theme: r,
         forcedColors: o,
         useForcedColors: N,
         systemForcedColors: T,
         fontScale: u,
-        keyboardModeEnabled: m,
+        keyboardModeEnabled: p,
         mouseModeEnabled: A,
-        reducedMotionEnabled: E,
-        connectedToEmbeddedActivity: Z,
-        fontScaleClass: g,
-        saturation: C,
-        clientThemesClassName: O,
+        reducedMotionEnabled: m,
+        connectedToEmbeddedActivity: v,
+        fontScaleClass: f,
+        saturation: g,
+        clientThemesClassName: L,
         clientThemesCSS: P
       })
     })

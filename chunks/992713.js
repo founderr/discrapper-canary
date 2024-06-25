@@ -14,18 +14,18 @@ var i = n(108131),
   I = n(709054),
   T = n(38618);
 let h = new u.Z("EntityVersionsManager");
-class S extends a.Z {
+class f extends a.Z {
   _initialize() {
-    o.Z.subscribe("CONNECTION_OPEN", N)
+    o.Z.subscribe("CONNECTION_OPEN", A)
   }
   _terminate() {
-    o.Z.unsubscribe("CONNECTION_OPEN", N)
+    o.Z.unsubscribe("CONNECTION_OPEN", A)
   }
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      GUILD_CREATE: A,
-      DELETED_ENTITY_IDS: f
+      GUILD_CREATE: N,
+      DELETED_ENTITY_IDS: S
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -35,7 +35,7 @@ class S extends a.Z {
   }
 }
 
-function f(e) {
+function S(e) {
   var t;
   let n = null === (t = E.Z.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
   h.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(n, ")")), s.ZP.Emitter.batched(() => {
@@ -83,13 +83,13 @@ function f(e) {
   })
 }
 
-function N() {
+function A() {
   l.Z.getAll().then(e => {
     e.forEach(e => m(e))
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     guild: t
   } = e;
@@ -112,4 +112,4 @@ function m(e) {
 function O(e) {
   return r().v3(e.sort().join(",")).toString()
 }
-t.Z = new S
+t.Z = new f

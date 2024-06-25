@@ -1,32 +1,32 @@
 n.d(t, {
   be: function() {
-    return y
+    return O
   }
 }), n(47120), n(773603);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(848246),
   o = n(793030),
   c = n(442837),
   u = n(46973),
   d = n(481060),
   h = n(846027),
-  m = n(607070),
-  E = n(361291),
-  p = n(131951),
-  g = n(626135),
-  f = n(120522),
-  C = n(386542),
-  _ = n(933843),
+  p = n(607070),
+  m = n(361291),
+  _ = n(131951),
+  f = n(626135),
+  E = n(120522),
+  g = n(386542),
+  C = n(933843),
   I = n(485731),
   x = n(1163),
   T = n(738672),
   N = n(981631),
-  Z = n(37113),
+  v = n(37113),
   S = n(689938),
-  v = n(778855);
+  Z = n(778855);
 let A = async () => {
   let {
     default: e
@@ -39,100 +39,100 @@ function M(e) {
     className: t,
     onDismiss: n
   } = e;
-  return (0, l.jsx)(d.Button, {
+  return (0, i.jsx)(d.Button, {
     className: t,
     "aria-label": S.Z.Messages.CLOSE,
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
     onClick: n,
-    children: (0, l.jsx)(d.CloseSmallIcon, {
+    children: (0, i.jsx)(d.CloseSmallIcon, {
       size: "xs",
-      className: v.closeIcon,
+      className: Z.closeIcon,
       color: "white"
     })
   })
 }
-let R = Z.LY.RESOLUTION_1440,
-  j = Z.ws.FPS_60;
+let b = v.LY.RESOLUTION_1440,
+  R = v.ws.FPS_60;
 
-function L(e) {
+function j(e) {
   let {
     channel: t
-  } = e, n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion), [s, a] = i.useState(!1), {
+  } = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [l, s] = a.useState(!1), {
     preset: o
-  } = (0, c.cj)([E.Z], () => E.Z.getState()), C = (0, c.e7)([p.Z], () => p.Z.getGoLiveSource()), x = i.useCallback(() => {
-    a(!0), (0, f.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
+  } = (0, c.cj)([m.Z], () => m.Z.getState()), g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
+    s(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
       if (e) {
-        if ((0, I.J1)(!(0, _.mc)(R, j)), g.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+        if ((0, I.J1)(!(0, C.mc)(b, R)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
             guild_id: t.guild_id,
             channel_id: t.id,
             perk_type: r.q.STREAM_HIGH_QUALITY,
-            resolution: R,
-            max_fps: j
-          }), (0, I.cD)(!1), null == C) return;
+            resolution: b,
+            max_fps: R
+          }), (0, I.cD)(!1), null == g) return;
         let e = {
           qualityOptions: {
             preset: o,
-            resolution: R,
-            frameRate: j
+            resolution: b,
+            frameRate: R
           },
           context: u.Yn.STREAM
         };
-        null != C.desktopSource ? e.desktopSettings = {
-          sourceId: C.desktopSource.id,
+        null != g.desktopSource ? e.desktopSettings = {
+          sourceId: g.desktopSource.id,
           sound: !0
-        } : null != C.cameraSource && (e.cameraSettings = {
-          videoDeviceGuid: C.cameraSource.videoDeviceGuid,
-          audioDeviceGuid: C.cameraSource.audioDeviceGuid
+        } : null != g.cameraSource && (e.cameraSettings = {
+          videoDeviceGuid: g.cameraSource.videoDeviceGuid,
+          audioDeviceGuid: g.cameraSource.audioDeviceGuid
         }), h.Z.setGoLiveSource(e)
       }
     }).catch(() => {}).finally(() => {
-      a(!1)
+      s(!1)
     })
-  }, [o, t, C]);
-  return (0, l.jsx)(d.ShinyButton, {
+  }, [o, t, g]);
+  return (0, i.jsx)(d.ShinyButton, {
     fullWidth: !0,
     pauseAnimation: n,
     color: d.Button.Colors.GREEN,
     size: d.Button.Sizes.SMALL,
-    className: v.optInButton,
+    className: Z.optInButton,
     onClick: x,
-    submitting: s,
+    submitting: l,
     children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA
   })
 }
 
-function O(e) {
+function L(e) {
   let {
     channel: t,
     hidden: n,
-    onDismiss: i
-  } = e, s = (0, c.e7)([m.Z], () => m.Z.useReducedMotion);
-  return (0, l.jsxs)("div", {
-    className: a()(v.optInPopout, {
-      [v.hidden]: n
+    onDismiss: a
+  } = e, l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
+  return (0, i.jsxs)("div", {
+    className: s()(Z.optInPopout, {
+      [Z.hidden]: n
     }),
-    children: [(0, l.jsxs)("div", {
-      className: v.variant1InfoContainerParent,
-      children: [(0, l.jsxs)("div", {
-        className: v.variant1InfoContainer,
-        children: [(0, l.jsx)(d.LottieAnimation, {
+    children: [(0, i.jsxs)("div", {
+      className: Z.variant1InfoContainerParent,
+      children: [(0, i.jsxs)("div", {
+        className: Z.variant1InfoContainer,
+        children: [(0, i.jsx)(d.LottieAnimation, {
           importData: A,
-          shouldAnimate: !s,
-          className: v.lottie,
+          shouldAnimate: !l,
+          className: Z.lottie,
           loop: !0
-        }), (0, l.jsx)(o.x, {
-          className: v.variant1Text,
+        }), (0, i.jsx)(o.x, {
+          className: Z.variant1Text,
           variant: "text-sm/medium",
           children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
         })]
-      }), (0, l.jsx)("div", {
-        children: (0, l.jsx)(M, {
-          className: v.variant1CloseButton,
-          onDismiss: i
+      }), (0, i.jsx)("div", {
+        children: (0, i.jsx)(M, {
+          className: Z.variant1CloseButton,
+          onDismiss: a
         })
       })]
-    }), (0, l.jsx)(L, {
+    }), (0, i.jsx)(j, {
       channel: t
     })]
   })
@@ -142,28 +142,28 @@ function P(e) {
   let {
     channel: t,
     hidden: n,
-    onDismiss: i
+    onDismiss: a
   } = e;
-  return (0, l.jsxs)("div", {
-    className: a()(v.optInPopout, v.variant2OptInPopout, {
-      [v.hidden]: n
+  return (0, i.jsxs)("div", {
+    className: s()(Z.optInPopout, Z.variant2OptInPopout, {
+      [Z.hidden]: n
     }),
-    children: [(0, l.jsx)("img", {
-      className: v.image,
+    children: [(0, i.jsx)("img", {
+      className: Z.image,
       src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
       alt: "HD Streaming Nitro Perk"
-    }), (0, l.jsx)(M, {
-      className: v.variant2CloseButton,
-      onDismiss: i
-    }), (0, l.jsx)("div", {
-      className: v.variant2InfoContainerParent,
-      children: (0, l.jsxs)("div", {
-        className: v.variant2InfoContainer,
-        children: [(0, l.jsx)(o.x, {
-          className: v.variant2Text,
+    }), (0, i.jsx)(M, {
+      className: Z.variant2CloseButton,
+      onDismiss: a
+    }), (0, i.jsx)("div", {
+      className: Z.variant2InfoContainerParent,
+      children: (0, i.jsxs)("div", {
+        className: Z.variant2InfoContainer,
+        children: [(0, i.jsx)(o.x, {
+          className: Z.variant2Text,
           variant: "text-sm/medium",
           children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
-        }), (0, l.jsx)(L, {
+        }), (0, i.jsx)(j, {
           channel: t
         })]
       })
@@ -171,34 +171,34 @@ function P(e) {
   })
 }
 
-function y(e) {
+function O(e) {
   let {
     channel: t,
     ...n
   } = e, {
     hqStreamingState: {
-      hqStreamingOptOutPopoutShouldShow: s
+      hqStreamingOptOutPopoutShouldShow: l
     }
-  } = (0, C.k)(r.q.STREAM_HIGH_QUALITY), {
-    enabled: a,
+  } = (0, g.k)(r.q.STREAM_HIGH_QUALITY), {
+    enabled: s,
     variant1: o
   } = x.Z.useExperiment({
     location: "StreamButtonDemoOptInPopout"
   }, {
-    autoTrackExposure: s,
-    disable: !s
-  }), c = i.useRef(!1);
-  if (i.useEffect(() => {
-      s && a && !c.current && (c.current = !0, g.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
+    autoTrackExposure: l,
+    disable: !l
+  }), c = a.useRef(!1);
+  if (a.useEffect(() => {
+      l && s && !c.current && (c.current = !0, f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
         guild_id: t.guild_id,
         channel_id: t.id,
         perk_type: r.q.STREAM_HIGH_QUALITY
       }))
-    }, [s, a, t]), !s || !a) return null;
-  let u = o ? O : P;
-  return (0, l.jsx)(T.h, {
+    }, [l, s, t]), !l || !s) return null;
+  let u = o ? L : P;
+  return (0, i.jsx)(T.h, {
     ...n,
-    renderComponent: e => (0, l.jsx)(u, {
+    renderComponent: e => (0, i.jsx)(u, {
       ...e,
       channel: t
     })

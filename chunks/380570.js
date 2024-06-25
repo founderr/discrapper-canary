@@ -1,9 +1,9 @@
 n(47120);
-var s = n(748780),
-  i = n(570140),
-  l = n(317770),
-  a = n(716578),
-  r = n(928518);
+var i = n(748780),
+  s = n(570140),
+  a = n(317770),
+  r = n(716578),
+  l = n(928518);
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -13,17 +13,17 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends l.Z {
+class c extends a.Z {
   _initialize() {
-    r.Z.addChangeListener(this.handlePopoutWindowChange), i.Z.subscribe("WINDOW_FOCUS", this.handleMainWindowFocus)
+    l.Z.addChangeListener(this.handlePopoutWindowChange), s.Z.subscribe("WINDOW_FOCUS", this.handleMainWindowFocus)
   }
   _terminate() {
-    r.Z.removeChangeListener(this.handlePopoutWindowChange), i.Z.unsubscribe("WINDOW_FOCUS", this.handleMainWindowFocus), this.injectWindowAnimationFrame(window)
+    l.Z.removeChangeListener(this.handlePopoutWindowChange), s.Z.unsubscribe("WINDOW_FOCUS", this.handleMainWindowFocus), this.injectWindowAnimationFrame(window)
   }
   injectWindowAnimationFrame(e) {
     let t = t => e.requestAnimationFrame(t),
       n = t => e.cancelAnimationFrame(t);
-    s.Z.inject.RequestAnimationFrame(t), s.Z.inject.CancelAnimationFrame(n), a.f.setRAF(t, n)
+    i.Z.inject.RequestAnimationFrame(t), i.Z.inject.CancelAnimationFrame(n), r.f.setRAF(t, n)
   }
   constructor(...e) {
     super(...e), o(this, "handleMainWindowFocus", e => {
@@ -32,9 +32,9 @@ class c extends l.Z {
       } = e;
       t && this.injectWindowAnimationFrame(window)
     }), o(this, "handlePopoutWindowChange", () => {
-      let e = r.Z.getWindowKeys().find(e => r.Z.getWindowFocused(e));
+      let e = l.Z.getWindowKeys().find(e => l.Z.getWindowFocused(e));
       if (null == e) return this.injectWindowAnimationFrame(window);
-      let t = r.Z.getWindow(e);
+      let t = l.Z.getWindow(e);
       if (null == t || t.closed) return this.injectWindowAnimationFrame(window);
       this.injectWindowAnimationFrame(t)
     })

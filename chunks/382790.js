@@ -1,22 +1,22 @@
 "use strict";
 n(47120);
 var i, s = n(735250),
-  l = n(470079),
+  a = n(470079),
   o = n(120356),
-  a = n.n(o),
-  r = n(442837),
+  r = n.n(o),
+  l = n(442837),
   c = n(416568),
   d = n(914010),
   u = n(583883),
   h = n(547881),
   p = n(178528),
   f = n(669083),
-  E = n(483962),
+  _ = n(483962),
   g = n(711553),
   m = n(689938),
-  Z = n(208029);
+  E = n(208029);
 
-function I(e, t, n) {
+function Z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,7 +25,7 @@ function I(e, t, n) {
   }) : e[t] = n, e
 }
 
-function S(e) {
+function I(e) {
   let {
     closePopout: t
   } = e;
@@ -33,7 +33,7 @@ function S(e) {
     onClose: t
   })
 }
-class _ extends(i = l.PureComponent) {
+class S extends(i = a.PureComponent) {
   render() {
     let {
       selectedGuildId: e,
@@ -44,13 +44,13 @@ class _ extends(i = l.PureComponent) {
       onDragStart: this.onDragStart
     }, e) : (0, s.jsx)(g.Z, {
       title: m.Z.Messages.DIRECT_MESSAGES,
-      renderSettings: S,
+      renderSettings: I,
       onDragStart: this.onDragStart,
-      children: (0, s.jsx)(E.Z, {})
-    }), l = n ? "div" : h.ZP;
-    return (0, s.jsxs)(l, {
-      className: a()(Z.base, {
-        [Z.widget]: !n
+      children: (0, s.jsx)(_.Z, {})
+    }), a = n ? "div" : h.ZP;
+    return (0, s.jsxs)(a, {
+      className: r()(E.base, {
+        [E.widget]: !n
       }),
       children: [(0, s.jsx)(c.Z, {
         isOverlay: !0,
@@ -60,7 +60,7 @@ class _ extends(i = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "onDragStart", e => {
+    super(...e), Z(this, "onDragStart", e => {
       let {
         dragStart: t
       } = this.props;
@@ -68,8 +68,8 @@ class _ extends(i = l.PureComponent) {
     })
   }
 }
-I(_, "defaultProps", {
+Z(S, "defaultProps", {
   contained: !1
-}), t.Z = r.ZP.connectStores([d.Z], () => ({
+}), t.Z = l.ZP.connectStores([d.Z], () => ({
   selectedGuildId: d.Z.getGuildId()
-}))(_)
+}))(S)

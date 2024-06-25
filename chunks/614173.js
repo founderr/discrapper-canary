@@ -3,18 +3,18 @@ n.d(t, {
     return c
   }
 }), n(47120);
-var l = n(470079),
-  i = n(442837),
-  s = n(592125),
-  a = n(700785),
+var i = n(470079),
+  a = n(442837),
+  l = n(592125),
+  s = n(700785),
   r = n(471253),
   o = n(981631);
 
 function c(e) {
-  let t = (0, i.e7)([s.Z], () => s.Z.getChannel(e), [e]),
-    n = a.Uu(o.Plq.REQUEST_TO_SPEAK, t),
-    [c, u] = l.useState(n);
-  return l.useEffect(() => {
+  let t = (0, a.e7)([l.Z], () => l.Z.getChannel(e), [e]),
+    n = s.Uu(o.Plq.REQUEST_TO_SPEAK, t),
+    [c, u] = i.useState(n);
+  return i.useEffect(() => {
     n !== c && u(n)
   }, [n]), [c, e => {
     null != t && (u(e), (0, r.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e))

@@ -3,21 +3,21 @@ n.d(t, {
     return r
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(825829),
-  l = n(223),
-  a = n(102250);
+var a = n(825829),
+  s = n(223),
+  l = n(102250);
 
 function r(e) {
   let {
     message: t,
     ...n
   } = e;
-  return (0, i.OP)(t) ? (0, s.jsx)(a.Z, {
+  return (0, a.OP)(t) ? (0, i.jsx)(l.Z, {
     message: t,
     ...n
-  }) : (0, s.jsx)(l.Z, {
+  }) : (0, i.jsx)(s.Z, {
     message: t,
     ...n
   })

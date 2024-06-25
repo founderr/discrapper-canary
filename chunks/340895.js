@@ -10,21 +10,21 @@ var i, r, s, o, a = n(442837),
   I = n(885110),
   T = n(981631);
 let h = "IncomingCallStore",
-  S = {
+  f = {
     width: 232,
     height: 315
   },
-  f = new Set,
-  N = [],
-  A = new Map,
+  S = new Set,
+  A = [],
+  N = new Map,
   m = new Set,
   O = 0,
-  R = 0,
-  p = !1;
+  p = 0,
+  R = !1;
 
 function g(e) {
-  if (null == e || null == A.get(e)) return !1;
-  A.delete(e), (m = new Set(m)).delete(e)
+  if (null == e || null == N.get(e)) return !1;
+  N.delete(e), (m = new Set(m)).delete(e)
 }
 
 function C(e) {
@@ -36,10 +36,10 @@ function C(e) {
     let e = E.Z.getChannel(t);
     if (null == e) return !1;
     let n = 10 * m.size;
-    A.set(t, {
+    N.set(t, {
       channel: e,
       x: O + n,
-      y: R + n
+      y: p + n
     }), (m = new Set(m)).add(t)
   } else {
     if (!m.has(t) || i) return !1;
@@ -47,31 +47,31 @@ function C(e) {
   }
 }! function() {
   let e = l.K.get(h);
-  if (null != e) O = +e.x, R = +e.y;
+  if (null != e) O = +e.x, p = +e.y;
   else {
     let e = n(451478).Z.windowSize();
-    O = e.width / 2 - S.width / 2, R = e.height / 2 - S.height / 2
+    O = e.width / 2 - f.width / 2, p = e.height / 2 - f.height / 2
   }
 }();
 
 function v() {
-  p = I.Z.getStatus() === T.Skl.DND || _.QZ.getSetting()
+  R = I.Z.getStatus() === T.Skl.DND || _.QZ.getSetting()
 }
 class L extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(E.Z, I.Z), this.syncWith([I.Z], v), this.syncWith([c.Z], v)
   }
   getIncomingCalls() {
-    return p ? N : Array.from(A.values())
+    return R ? A : Array.from(N.values())
   }
   getIncomingCallChannelIds() {
-    return p ? f : m
+    return R ? S : m
   }
   getFirstIncomingCallId() {
-    return p ? null : m.values().next().value
+    return R ? null : m.values().next().value
   }
   hasIncomingCalls() {
-    return !p && m.size > 0
+    return !R && m.size > 0
   }
 }
 o = "IncomingCallStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
@@ -99,9 +99,9 @@ o = "IncomingCallStore", (s = "displayName") in(r = L) ? Object.defineProperty(r
       x: t,
       y: n
     } = e;
-    return O = t, R = n, l.K.set(h, {
+    return O = t, p = n, l.K.set(h, {
       x: O,
-      y: R
+      y: p
     }), !1
   },
   CHANNEL_DELETE: function(e) {

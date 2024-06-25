@@ -1,7 +1,7 @@
 t(724458);
 var i, r = t(442837),
-  l = t(570140),
-  o = t(673750),
+  o = t(570140),
+  l = t(673750),
   u = t(786761),
   s = t(592125),
   a = t(375954),
@@ -20,13 +20,13 @@ function E(e, n, t) {
 }
 let I = {},
   g = 0,
-  S = {},
   p = {},
-  m = (e, n) => {
-    let t = (0, o.hc)(e),
+  m = {},
+  S = (e, n) => {
+    let t = (0, l.hc)(e),
       i = {
         id: t,
-        isBlockedEdit: (0, o.Bz)(e),
+        isBlockedEdit: (0, l.Bz)(e),
         messageData: e,
         errorMessage: (0, d.uF)(e, n)
       };
@@ -42,18 +42,18 @@ function N(e) {
     messageData: n,
     errorResponseBody: t
   } = e;
-  return m(n, t), !0
+  return S(n, t), !0
 }
 
-function A(e) {
+function h(e) {
   var n;
   let {
     channelId: t,
     messages: i
   } = e, r = null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.getGuildId();
   if (null == r) return !1;
-  let l = p[r],
-    o = i.reduce((e, n) => {
+  let o = m[r],
+    l = i.reduce((e, n) => {
       var t;
       return n.type === f.uaV.AUTO_MODERATION_ACTION && (null === (t = n.embeds) || void 0 === t ? void 0 : t.some(e => {
         let {
@@ -61,18 +61,18 @@ function A(e) {
         } = e;
         return n === f.hBH.AUTO_MODERATION_NOTIFICATION
       })) ? null == e || -1 === c.default.compare(e, n.id) ? n.id : void 0 : e
-    }, l);
-  return null != o && p[r] !== o && (p[r] = o, !0)
+    }, o);
+  return null != l && m[r] !== l && (m[r] = l, !0)
 }
 class v extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(a.Z), null != e && (I = e.automodFailedMessages, S = e.mentionRaidDetectionByGuild)
+    this.waitFor(a.Z), null != e && (I = e.automodFailedMessages, p = e.mentionRaidDetectionByGuild)
   }
   getState() {
     return {
       automodFailedMessages: I,
-      mentionRaidDetectionByGuild: S,
-      lastIncidentAlertMessage: p
+      mentionRaidDetectionByGuild: p,
+      lastIncidentAlertMessage: m
     }
   }
   getMessage(e) {
@@ -84,19 +84,19 @@ class v extends(i = r.ZP.PersistedStore) {
   }
   getMentionRaidDetected(e) {
     var n;
-    return null !== (n = S[e]) && void 0 !== n ? n : null
+    return null !== (n = p[e]) && void 0 !== n ? n : null
   }
   getLastIncidentAlertMessage(e) {
     var n;
-    return null !== (n = p[e]) && void 0 !== n ? n : null
+    return null !== (n = m[e]) && void 0 !== n ? n : null
   }
 }
-E(v, "displayName", "GuildAutomodMessageStore"), E(v, "persistKey", "GuildAutomodMessages"), n.Z = new v(l.Z, {
+E(v, "displayName", "GuildAutomodMessageStore"), E(v, "persistKey", "GuildAutomodMessages"), n.Z = new v(o.Z, {
   CONNECTION_OPEN: function(e) {
     return I = {}, g++, !0
   },
-  LOAD_MESSAGES_SUCCESS: A,
-  LOCAL_MESSAGES_LOADED: A,
+  LOAD_MESSAGES_SUCCESS: h,
+  LOCAL_MESSAGES_LOADED: h,
   MESSAGE_CREATE: function(e) {
     let {
       guildId: n,
@@ -104,7 +104,7 @@ E(v, "displayName", "GuildAutomodMessageStore"), E(v, "persistKey", "GuildAutomo
     } = e;
     if (null == n || t.type !== f.uaV.AUTO_MODERATION_ACTION) return !1;
     let i = (0, u.e5)(t);
-    return !!(0, _.nY)(i) && !!(0, _.OP)(i) && (p[n] = i.id, !0)
+    return !!(0, _.nY)(i) && !!(0, _.OP)(i) && (m[n] = i.id, !0)
   },
   MESSAGE_SEND_FAILED_AUTOMOD: N,
   MESSAGE_EDIT_FAILED_AUTOMOD: N,
@@ -129,7 +129,7 @@ E(v, "displayName", "GuildAutomodMessageStore"), E(v, "persistKey", "GuildAutomo
       decisionId: t,
       suspiciousMentionActivityUntil: i
     } = e;
-    return S[n] = {
+    return p[n] = {
       guildId: n,
       decisionId: t,
       suspiciousMentionActivityUntil: i
@@ -139,6 +139,6 @@ E(v, "displayName", "GuildAutomodMessageStore"), E(v, "persistKey", "GuildAutomo
     let {
       guildId: n
     } = e;
-    return delete S[n], !0
+    return delete p[n], !0
   }
 })

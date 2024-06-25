@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   E: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i, r = n(735250),
@@ -74,7 +74,7 @@ let T = Object.freeze({
     })
   };
 h.Sizes = T;
-class S extends(i = s.PureComponent) {
+class f extends(i = s.PureComponent) {
   focus() {
     let {
       current: e
@@ -100,14 +100,14 @@ class S extends(i = s.PureComponent) {
       onKeyPress: c,
       isLoading: I,
       size: T,
-      disabled: S,
-      onChange: f,
-      onBlur: N,
-      onFocus: A,
+      disabled: f,
+      onChange: S,
+      onBlur: A,
+      onFocus: N,
       autoComplete: m,
       inputProps: O,
-      hideSearchIcon: R,
-      "aria-label": p = d.Z.Messages.SEARCH,
+      hideSearchIcon: p,
+      "aria-label": R = d.Z.Messages.SEARCH,
       ...g
     } = this.props;
     return (0, r.jsx)(u.t, {
@@ -115,7 +115,7 @@ class S extends(i = s.PureComponent) {
       ringTarget: this.containerRef,
       children: (0, r.jsx)("div", {
         className: a()(i, E.container, T, {
-          [E.disabled]: S
+          [E.disabled]: f
         }),
         ref: this.containerRef,
         ...g,
@@ -123,8 +123,8 @@ class S extends(i = s.PureComponent) {
           className: E.inner,
           children: [(0, r.jsx)("input", {
             ...O,
-            onFocus: A,
-            onBlur: N,
+            onFocus: N,
+            onBlur: A,
             className: E.input,
             value: e,
             onChange: this.handleOnChange,
@@ -132,12 +132,12 @@ class S extends(i = s.PureComponent) {
             onKeyUp: _,
             onKeyPress: c,
             placeholder: s,
-            disabled: S,
+            disabled: f,
             autoFocus: t,
             autoComplete: m,
-            "aria-label": p,
+            "aria-label": R,
             ref: this.inputRef
-          }), !R && (0, r.jsx)(h, {
+          }), !p && (0, r.jsx)(h, {
             size: T,
             hasContent: e.length > 0,
             onClear: n,
@@ -157,7 +157,7 @@ class S extends(i = s.PureComponent) {
     })
   }
 }
-I(S, "Sizes", T), I(S, "defaultProps", {
+I(f, "Sizes", T), I(f, "defaultProps", {
   size: T.SMALL,
   isLoading: !1,
   disabled: !1

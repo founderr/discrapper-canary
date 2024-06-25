@@ -5,17 +5,17 @@ t.d(a, {
 });
 var n = t(735250);
 t(470079);
-var s = t(481060),
-  l = t(689938),
-  r = t(335966);
+var r = t(481060),
+  s = t(689938),
+  l = t(335966);
 let o = e => {
   let {
     onClick: a,
     children: t
   } = e;
-  return (0, n.jsx)(s.Anchor, {
+  return (0, n.jsx)(r.Anchor, {
     onClick: a,
-    className: r.link,
+    className: l.link,
     children: t
   })
 };
@@ -25,6 +25,6 @@ a.Z = e => {
   } = e;
   return (0, n.jsx)(o, {
     onClick: a,
-    children: l.Z.Messages.BACK
+    children: s.Z.Messages.BACK
   })
 }

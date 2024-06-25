@@ -1,11 +1,11 @@
 t.d(A, {
   M: function() {
-    return s
+    return r
   }
 });
 var n = t(83439),
   a = t(100781);
-let s = [{
+let r = [{
   name: "cool-frog",
   alt: "A cool frog",
   data: n.Z

@@ -1,56 +1,56 @@
-a.r(e), a.d(e, {
+t.r(s), t.d(s, {
   ConfirmNoSharedServerSubscribeWarningModal: function() {
-    return c
+    return r
   }
 });
-var n = a(735250);
-a(470079);
-var o = a(481060),
-  t = a(689938),
-  i = a(793591),
-  r = a(607273);
+var a = t(735250);
+t(470079);
+var n = t(481060),
+  o = t(689938),
+  i = t(793591),
+  d = t(607273);
 
-function c(s) {
+function r(e) {
   let {
-    applicationName: e,
-    onConfirm: a,
-    onClose: c,
-    onCancel: d,
+    applicationName: s,
+    onConfirm: t,
+    onClose: r,
+    onCancel: c,
     ...l
-  } = s;
-  return (0, n.jsxs)(o.ModalRoot, {
+  } = e;
+  return (0, a.jsxs)(n.ModalRoot, {
     ...l,
-    children: [(0, n.jsxs)(o.ModalContent, {
+    children: [(0, a.jsxs)(n.ModalContent, {
       className: i.body,
-      children: [(0, n.jsx)("img", {
+      children: [(0, a.jsx)("img", {
         alt: "",
-        src: r,
+        src: d,
         className: i.img,
         "aria-hidden": !0
-      }), (0, n.jsx)(o.Heading, {
+      }), (0, a.jsx)(n.Heading, {
         variant: "heading-xl/extrabold",
         className: i.title,
-        children: t.Z.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_TITLE.format({
-          applicationName: e
+        children: o.Z.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_TITLE.format({
+          applicationName: s
         })
-      }), (0, n.jsx)(o.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-md/medium",
-        children: t.Z.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_BODY
+        children: o.Z.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_BODY
       })]
-    }), (0, n.jsxs)(o.ModalFooter, {
-      children: [(0, n.jsx)(o.Button, {
+    }), (0, a.jsxs)(n.ModalFooter, {
+      children: [(0, a.jsx)(n.Button, {
         onClick: () => {
-          a(), c()
+          t(), r()
         },
-        children: t.Z.Messages.CONTINUE
-      }), (0, n.jsx)(o.Button, {
+        children: o.Z.Messages.CONTINUE
+      }), (0, a.jsx)(n.Button, {
         className: i.__invalid_cancel,
         onClick: () => {
-          d(), c()
+          c(), r()
         },
-        look: o.Button.Looks.LINK,
-        color: o.Button.Colors.PRIMARY,
-        children: t.Z.Messages.CANCEL
+        look: n.Button.Looks.LINK,
+        color: n.Button.Colors.PRIMARY,
+        children: o.Z.Messages.CANCEL
       })]
     })]
   })

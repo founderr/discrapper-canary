@@ -1,41 +1,41 @@
 n.d(t, {
   Z: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(829820);
+var a = n(481060),
+  s = n(829820);
 
-function a(e) {
+function l(e) {
   let {
     activity: t,
     user: n,
-    source: a,
+    source: l,
     ...r
   } = e, {
     label: o,
     tooltip: c,
-    loading: u,
-    disabled: d,
-    onClick: E
-  } = (0, l.Lz)(t, n, a);
-  return (0, s.jsx)(i.Tooltip, {
+    loading: d,
+    disabled: u,
+    onClick: _
+  } = (0, s.Lz)(t, n, l);
+  return (0, i.jsx)(a.Tooltip, {
     text: c,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, s.jsx)(i.Button, {
+      return (0, i.jsx)(a.Button, {
         ...r,
-        color: d ? i.Button.Colors.PRIMARY : i.Button.Colors.GREEN,
-        onClick: E,
+        color: u ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+        onClick: _,
         onMouseEnter: t,
         onMouseLeave: n,
-        disabled: !u && d,
-        submitting: u,
+        disabled: !d && u,
+        submitting: d,
         children: o
       })
     }

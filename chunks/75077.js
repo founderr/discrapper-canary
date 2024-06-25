@@ -1,255 +1,255 @@
-s.d(t, {
+n.d(t, {
   BS: function() {
     return S
   },
   Op: function() {
-    return L
+    return O
   },
   gx: function() {
     return h
   },
   k3: function() {
-    return m
+    return N
   },
   mN: function() {
     return P
   },
   sP: function() {
-    return x
+    return b
   },
   t2: function() {
-    return p
+    return f
   },
   vZ: function() {
-    return M
+    return m
   }
-}), s(653041), s(627341);
-var n = s(278074),
-  a = s(442837),
-  i = s(780384),
-  r = s(410154),
-  l = s(594174),
-  o = s(78839),
-  c = s(74538),
-  E = s(331119),
-  _ = s(575595),
-  u = s(528865),
-  d = s(915296),
-  T = s(650032),
-  I = s(781922),
-  R = s(885462),
-  A = s(391110),
-  N = s(474936),
-  C = s(735825),
-  g = s(689938);
-let m = e => {
+}), n(653041), n(627341);
+var s = n(278074),
+  a = n(442837),
+  r = n(780384),
+  i = n(410154),
+  l = n(594174),
+  o = n(78839),
+  c = n(74538),
+  d = n(331119),
+  _ = n(575595),
+  E = n(528865),
+  u = n(915296),
+  T = n(650032),
+  I = n(781922),
+  R = n(885462),
+  C = n(391110),
+  g = n(474936),
+  p = n(735825),
+  A = n(689938);
+let N = e => {
     switch (e) {
-      case C.EB.PENDING:
-        return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
-      case C.EB.REDEEMABLE:
-        return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
-      case C.EB.REDEEMED:
-        return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+      case p.EB.PENDING:
+        return A.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
+      case p.EB.REDEEMABLE:
+        return A.Z.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
+      case p.EB.REDEEMED:
+        return A.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
       default:
         return ""
     }
   },
-  M = (e, t) => {
+  m = (e, t) => {
     switch (e) {
-      case C.EB.PENDING:
-        return t === C.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
-      case C.EB.REDEEMABLE:
-        return t === C.Ft.FREE_GUILD_BOOST_1_MONTH ? g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT : g.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
-      case C.EB.REDEEMED:
-        return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
+      case p.EB.PENDING:
+        return t === p.Ft.FREE_GUILD_BOOST_1_MONTH ? A.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : A.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
+      case p.EB.REDEEMABLE:
+        return t === p.Ft.FREE_GUILD_BOOST_1_MONTH ? A.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT : A.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
+      case p.EB.REDEEMED:
+        return A.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
       default:
         return
     }
   },
   S = e => {
     switch (e) {
-      case C.EB.PENDING:
-        return g.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
-      case C.EB.REDEEMABLE:
+      case p.EB.PENDING:
+        return A.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
+      case p.EB.REDEEMABLE:
         return;
-      case C.EB.REDEEMED:
-        return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
+      case p.EB.REDEEMED:
+        return A.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
       default:
         return
     }
   };
 
-function p(e, t) {
+function f(e, t) {
   switch (e) {
-    case C.EB.PENDING:
-      return null != t ? g.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
+    case p.EB.PENDING:
+      return null != t ? A.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
         days: t
       }) : "";
-    case C.EB.REDEEMABLE:
-      return g.Z.Messages.REDEEM;
-    case C.EB.REDEEMED:
-      return g.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+    case p.EB.REDEEMABLE:
+      return A.Z.Messages.REDEEM;
+    case p.EB.REDEEMED:
+      return A.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
     default:
       return ""
   }
 }
-let h = (e, t, s) => (0, i.wj)(e) ? t : s,
-  f = "getWhatsNewRow",
-  O = e => {
-    let {
-      cards: t,
-      perksCards: s,
-      isFullScreen: n,
-      showTenureCard: a,
-      shopMarketingVariation: i
-    } = e, l = n ? 3 : 2, o = e => {
-      let {
-        card: s
-      } = e;
-      t.length < l && t.push(s)
-    }, c = () => {
-      i !== r.C5.DEFAULT ? o({
-        card: s.specialShopPerks
-      }) : o({
-        card: s.specialMemberPricing
-      })
-    }, {
-      shouldShowCard: d
-    } = u.W.getCurrentConfig({
-      location: f
-    }, {
-      autoTrackExposure: !1
-    }), {
-      shouldShowCard: A
-    } = R.e.getCurrentConfig({
-      location: f
-    }, {
-      autoTrackExposure: !1
-    }), {
-      shouldShowCard: N
-    } = I.X.getCurrentConfig({
-      location: f
-    }, {
-      autoTrackExposure: !1
-    }), {
-      enabled: C
-    } = T._.getCurrentConfig({
-      location: f
-    }, {
-      autoTrackExposure: !1
-    }), {
-      enabled: g
-    } = _.r.getCurrentConfig({
-      location: f
-    }, {
-      autoTrackExposure: !1
-    }), {
-      enabled: m
-    } = E.C.getCurrentConfig({
-      location: f
-    }, {
-      autoTrackExposure: !1
-    }), M = v();
-    return null != s.freeBoost && !0 === a && o({
-      card: s.freeBoost
-    }), n && M && d && A ? (0 === t.length && c(), o({
-      card: s.newAppStylesUpdateJune2024
-    }), o({
-      card: s.serverProfiles
-    })) : n && !M && d && A && (N && C && !g && !m ? o({
-      card: s.referralProgram
-    }) : c(), o({
-      card: s.newAppStylesUpdateJune2024
-    }), o({
-      card: s.serverProfiles
-    })), o({
-      card: s.earlyAccess
-    }), c(), o({
-      card: s.unlimitedSuperReactions
-    }), t
-  },
+let h = (e, t, n) => (0, r.wj)(e) ? t : n,
+  M = "getWhatsNewRow",
   x = e => {
     let {
+      cards: t,
+      perksCards: n,
+      isFullScreen: s,
+      showTenureCard: a,
+      shopMarketingVariation: r
+    } = e, l = s ? 3 : 2, o = e => {
+      let {
+        card: n
+      } = e;
+      t.length < l && t.push(n)
+    }, c = () => {
+      r !== i.C5.DEFAULT ? o({
+        card: n.specialShopPerks
+      }) : o({
+        card: n.specialMemberPricing
+      })
+    }, {
+      shouldShowCard: u
+    } = E.W.getCurrentConfig({
+      location: M
+    }, {
+      autoTrackExposure: !1
+    }), {
+      shouldShowCard: C
+    } = R.e.getCurrentConfig({
+      location: M
+    }, {
+      autoTrackExposure: !1
+    }), {
+      shouldShowCard: g
+    } = I.X.getCurrentConfig({
+      location: M
+    }, {
+      autoTrackExposure: !1
+    }), {
+      enabled: p
+    } = T._.getCurrentConfig({
+      location: M
+    }, {
+      autoTrackExposure: !1
+    }), {
+      enabled: A
+    } = _.r.getCurrentConfig({
+      location: M
+    }, {
+      autoTrackExposure: !1
+    }), {
+      enabled: N
+    } = d.C.getCurrentConfig({
+      location: M
+    }, {
+      autoTrackExposure: !1
+    }), m = L();
+    return null != n.freeBoost && !0 === a && o({
+      card: n.freeBoost
+    }), s && m && u && C ? (0 === t.length && c(), o({
+      card: n.newAppStylesUpdateJune2024
+    }), o({
+      card: n.serverProfiles
+    })) : s && !m && u && C && (g && p && !A && !N ? o({
+      card: n.referralProgram
+    }) : c(), o({
+      card: n.newAppStylesUpdateJune2024
+    }), o({
+      card: n.serverProfiles
+    })), o({
+      card: n.earlyAccess
+    }), c(), o({
+      card: n.unlimitedSuperReactions
+    }), t
+  },
+  b = e => {
+    let {
       perksCards: t,
-      variant: s,
+      variant: n,
       shopMarketingVariation: a,
-      isFullScreen: i,
-      showTenureCard: r,
+      isFullScreen: r,
+      showTenureCard: i,
       tileOrderVariant: l,
       isPremiumSubscriber: o
     } = e, c = [];
-    switch (s) {
-      case A.R0.PERKS_DISCOVERABILITY:
-        c = (0, n.EQ)({
+    switch (n) {
+      case C.R0.PERKS_DISCOVERABILITY:
+        c = (0, s.EQ)({
           tileOrderVariant: l,
           isPremiumSubscriber: o
         }).with({
-          tileOrderVariant: d.mJ.VARIANT_1,
+          tileOrderVariant: u.mJ.VARIANT_1,
           isPremiumSubscriber: !1
         }, () => [t.profiles, t.moreEmojiPower, t.largeUploads]).with({
-          tileOrderVariant: d.mJ.VARIANT_2,
+          tileOrderVariant: u.mJ.VARIANT_2,
           isPremiumSubscriber: !1
         }, () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]).otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
         break;
-      case A.R0.WHATS_NEW:
-        c = O({
+      case C.R0.WHATS_NEW:
+        c = x({
           cards: c,
           perksCards: t,
-          isFullScreen: i,
-          showTenureCard: r,
+          isFullScreen: r,
+          showTenureCard: i,
           shopMarketingVariation: a
         });
         break;
-      case A.R0.CARD_CAROUSEL_FIRST_ROW:
-        c = (0, n.EQ)({
+      case C.R0.CARD_CAROUSEL_FIRST_ROW:
+        c = (0, s.EQ)({
           tileOrderVariant: l,
           isPremiumSubscriber: o
         }).with({
-          tileOrderVariant: d.mJ.VARIANT_1,
+          tileOrderVariant: u.mJ.VARIANT_1,
           isPremiumSubscriber: !1
         }, () => [t.hdVideo, t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]).with({
-          tileOrderVariant: d.mJ.VARIANT_2,
+          tileOrderVariant: u.mJ.VARIANT_2,
           isPremiumSubscriber: !1
         }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]).otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
         break;
-      case A.R0.CARD_CAROUSEL_SECOND_ROW:
-        c = (0, n.EQ)({
+      case C.R0.CARD_CAROUSEL_SECOND_ROW:
+        c = (0, s.EQ)({
           tileOrderVariant: l,
           isPremiumSubscriber: o
         }).with({
-          tileOrderVariant: d.mJ.VARIANT_1,
+          tileOrderVariant: u.mJ.VARIANT_1,
           isPremiumSubscriber: !1
         }, () => [t.clientThemes, t.customAppIcons, t.customSoundsEverywhere, t.specialStickerAccess]).with({
-          tileOrderVariant: d.mJ.VARIANT_2,
+          tileOrderVariant: u.mJ.VARIANT_2,
           isPremiumSubscriber: !1
         }, () => [t.customSoundsEverywhere, t.specialStickerAccess]).otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
         break;
-      case A.R0.CARD_CAROUSEL_THIRD_ROW:
+      case C.R0.CARD_CAROUSEL_THIRD_ROW:
         c = [t.entranceSoundsSeeAllVariation, t.badge]
     }
-    return !i && (c = c.filter(e => !e.hideOnNarrowScreen)), c
+    return !r && (c = c.filter(e => !e.hideOnNarrowScreen)), c
   },
-  L = e => {
+  O = e => {
     let t = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
-      s = null != t ? c.ZP.getPremiumPlanItem(t) : null,
-      n = (null != s ? c.ZP.getSkuIdForPlan(s.planId) : null) === N.Si.TIER_2;
-    if (e) return n ? {
-      title: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
-      subtitle: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
+      n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
+      s = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === g.Si.TIER_2;
+    if (e) return s ? {
+      title: A.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
+      subtitle: A.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
     } : {
-      title: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
-      subtitle: g.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
+      title: A.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
+      subtitle: A.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
     };
     return {
-      title: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
-      subtitle: g.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
+      title: A.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
+      subtitle: A.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
     }
   },
   P = () => {
     let e = (0, a.e7)([l.default], () => l.default.getCurrentUser());
     return (0, c.I5)(e)
   },
-  v = () => {
+  L = () => {
     let e = l.default.getCurrentUser();
-    return (0, c.M5)(e, N.p9.TIER_2)
+    return (0, c.M5)(e, g.p9.TIER_2)
   }

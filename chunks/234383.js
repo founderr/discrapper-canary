@@ -1,16 +1,16 @@
 n.d(t, {
   Z: function() {
-    return r
+    return a
   }
 });
-var l = n(442837),
-  i = n(937111),
-  s = n(430824);
+var i = n(442837),
+  l = n(937111),
+  r = n(430824);
 
-function r() {
-  return (0, l.Wu)([i.Z, s.Z], () => {
-    let e = i.Z.computeGuildIds(),
-      t = s.Z.getGuilds();
+function a() {
+  return (0, i.Wu)([l.Z, r.Z], () => {
+    let e = l.Z.computeGuildIds(),
+      t = r.Z.getGuilds();
     return e.filter(e => null == t[e])
   })
 }

@@ -1,66 +1,66 @@
 t.d(s, {
   Z: function() {
-    return T
+    return u
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(913527),
-  r = t.n(l),
-  o = t(481060),
+var a = t(120356),
+  i = t.n(a),
+  r = t(913527),
+  o = t.n(r),
+  l = t(481060),
   c = t(55935),
-  E = t(955204),
-  d = t(674680),
-  _ = t(778609);
+  d = t(955204),
+  _ = t(674680),
+  E = t(778609);
 
-function T(e) {
+function u(e) {
   let {
     achievementId: s,
     dateUnlocked: t
-  } = e, i = (0, E.oX)(s);
-  if (null == i) return null;
-  let l = null != t,
+  } = e, a = (0, d.oX)(s);
+  if (null == a) return null;
+  let r = null != t,
     {
-      name: T,
-      description: S,
-      hideDescriptionUntilUnlock: u,
+      name: u,
+      description: T,
+      hideDescriptionUntilUnlock: S,
       onAction: I
-    } = i,
-    N = u && !l,
-    A = l ? "header-primary" : "text-muted",
-    C = l ? "header-secondary" : "text-muted",
-    O = r()(t),
-    m = null != I && l,
-    h = m ? o.Clickable : "div";
-  return (0, n.jsxs)(h, {
-    className: a()(_.container, m && _.actionable),
+    } = a,
+    N = S && !r,
+    C = r ? "header-primary" : "text-muted",
+    A = r ? "header-secondary" : "text-muted",
+    m = o()(t),
+    O = null != I && r,
+    g = O ? l.Clickable : "div";
+  return (0, n.jsxs)(g, {
+    className: i()(E.container, O && E.actionable),
     onClick: () => {
-      m && I()
+      O && I()
     },
     children: [(0, n.jsx)("div", {
-      className: _.iconContainer,
-      children: (0, n.jsx)(d.Z, {
+      className: E.iconContainer,
+      children: (0, n.jsx)(_.Z, {
         achievementId: s,
-        size: d.Z.Sizes.SIZE_40,
-        unlocked: l
+        size: _.Z.Sizes.SIZE_40,
+        unlocked: r
       })
     }), (0, n.jsxs)("div", {
-      className: _.nameContainer,
-      children: [null != t && (0, n.jsx)(o.Text, {
+      className: E.nameContainer,
+      children: [null != t && (0, n.jsx)(l.Text, {
         variant: "text-xxs/semibold",
         color: "text-muted",
-        className: _.unlocked,
-        children: (0, c.Y4)(O)
-      }), (0, n.jsx)(o.Text, {
+        className: E.unlocked,
+        children: (0, c.Y4)(m)
+      }), (0, n.jsx)(l.Text, {
         variant: "text-md/medium",
-        color: A,
-        children: T()
-      }), (0, n.jsx)(o.Text, {
-        variant: "text-xs/normal",
         color: C,
-        children: N ? "?????" : S()
+        children: u()
+      }), (0, n.jsx)(l.Text, {
+        variant: "text-xs/normal",
+        color: A,
+        children: N ? "?????" : T()
       })]
     })]
   })

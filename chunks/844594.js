@@ -1,82 +1,82 @@
 n.r(i), n.d(i, {
   default: function() {
-    return p
+    return A
   }
 });
 var a = n(735250),
-  s = n(470079),
-  r = n(481060),
+  r = n(470079),
+  o = n(481060),
   t = n(197115),
-  l = n(25373),
-  o = n(318661),
+  s = n(25373),
+  l = n(318661),
   u = n(721987),
   c = n(153124),
   d = n(626135),
   v = n(981631),
   m = n(486324),
-  I = n(474936),
-  A = n(689938),
-  E = n(495598);
+  p = n(474936),
+  I = n(689938),
+  f = n(495598);
 
-function p(e) {
+function A(e) {
   let {
     user: i,
     guildId: n,
-    transitionState: p,
-    imageSrc: f,
-    uploadType: T,
-    onSubscribe: Z,
+    transitionState: A,
+    imageSrc: E,
+    uploadType: _,
+    onSubscribe: T,
     onClose: h
-  } = e, P = (0, c.Dt)(), N = (0, o.ZP)(i.id, n), {
-    primaryColor: _,
-    secondaryColor: x
+  } = e, Z = (0, c.Dt)(), x = (0, l.ZP)(i.id, n), {
+    primaryColor: P,
+    secondaryColor: N
   } = (0, u.Z)({
     user: i,
-    displayProfile: N,
-    pendingAvatar: T === m.pC.AVATAR ? f : void 0,
+    displayProfile: x,
+    pendingAvatar: _ === m.pC.AVATAR ? E : void 0,
     isPreview: !0
   });
-  return s.useEffect(() => {
+  return r.useEffect(() => {
     d.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: I.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL
+      type: p.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL
     })
-  }, []), (0, a.jsxs)(r.ModalRoot, {
-    className: E.modalRoot,
-    transitionState: p,
-    size: r.ModalSize.SMALL,
-    "aria-labelledby": P,
+  }, []), (0, a.jsxs)(o.ModalRoot, {
+    className: f.modalRoot,
+    transitionState: A,
+    size: o.ModalSize.SMALL,
+    "aria-labelledby": Z,
     hideShadow: !0,
-    children: [(0, a.jsx)(l.Z, {
+    children: [(0, a.jsx)(s.Z, {
       user: i,
       canUsePremiumCustomization: !0,
       disabledInputs: !0,
-      pendingAvatar: T === m.pC.AVATAR ? f : void 0,
-      pendingBanner: T === m.pC.BANNER ? f : void 0,
-      pendingThemeColors: [_, x]
+      pendingAvatar: _ === m.pC.AVATAR ? E : void 0,
+      pendingBanner: _ === m.pC.BANNER ? E : void 0,
+      pendingThemeColors: [P, N]
     }), (0, a.jsxs)("div", {
-      className: E.upsellSection,
-      children: [(0, a.jsx)(r.Text, {
-        className: E.joinText,
+      className: f.upsellSection,
+      children: [(0, a.jsx)(o.Text, {
+        className: f.joinText,
         variant: "text-sm/normal",
-        children: T === m.pC.AVATAR ? A.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : A.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
+        children: _ === m.pC.AVATAR ? I.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : I.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
       }), (0, a.jsx)(t.Z, {
-        buttonText: A.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
-        subscriptionTier: I.Si.TIER_2,
-        className: E.premiumSubscribeButton,
-        size: r.Button.Sizes.SMALL,
+        buttonText: I.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
+        subscriptionTier: p.Si.TIER_2,
+        className: f.premiumSubscribeButton,
+        size: o.Button.Sizes.SMALL,
         premiumModalAnalyticsLocation: {
           section: v.jXE.SETTINGS_EDIT_PROFILE,
           object: v.qAy.BUTTON_CTA
         },
         onSubscribeModalClose: e => {
-          e && (null == Z || Z(), h())
+          e && (null == T || T(), h())
         }
-      }), (0, a.jsx)(r.Button, {
+      }), (0, a.jsx)(o.Button, {
         onClick: h,
-        size: r.Button.Sizes.SMALL,
-        color: r.Button.Colors.PRIMARY,
-        look: r.Button.Looks.FILLED,
-        children: A.Z.Messages.PREMIUM_PREVIEW_EXIT
+        size: o.Button.Sizes.SMALL,
+        color: o.Button.Colors.PRIMARY,
+        look: o.Button.Looks.FILLED,
+        children: I.Z.Messages.PREMIUM_PREVIEW_EXIT
       })]
     })]
   })

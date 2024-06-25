@@ -1,12 +1,12 @@
 t.d(n, {
   Z: function() {
-    return N
+    return T
   },
   k: function() {
     return l
   }
 });
-var s, l, a = t(735250);
+var a, l, s = t(735250);
 t(470079);
 var i = t(120356),
   r = t.n(i),
@@ -14,102 +14,102 @@ var i = t(120356),
   c = t(857395),
   d = t(131154),
   u = t(940627),
-  E = t(346656),
-  _ = t(38981),
-  T = t(53221);
+  _ = t(346656),
+  E = t(38981),
+  h = t(53221);
 
-function N(e) {
+function T(e) {
   let {
     guild: n,
     stageInstance: t,
-    showGuildPopout: s,
+    showGuildPopout: a,
     setShowGuildPopout: l,
     handleGuildNameClick: i,
-    source: N,
-    speakers: h,
+    source: T,
+    speakers: m,
     speakerCount: I,
-    audienceCount: x,
-    channelName: m
-  } = e, S = n.id;
-  return (0, a.jsx)("div", {
-    className: T.contentContainer,
-    children: (0, a.jsxs)("div", {
-      className: T.headerContainer,
-      children: [(0, a.jsxs)("div", {
-        className: T.guildInfoContainer,
-        children: [(0, a.jsx)(c.Z, {
-          guildId: S,
-          shouldShow: s,
+    audienceCount: N,
+    channelName: x
+  } = e, f = n.id;
+  return (0, s.jsx)("div", {
+    className: h.contentContainer,
+    children: (0, s.jsxs)("div", {
+      className: h.headerContainer,
+      children: [(0, s.jsxs)("div", {
+        className: h.guildInfoContainer,
+        children: [(0, s.jsx)(c.Z, {
+          guildId: f,
+          shouldShow: a,
           onRequestClose: () => l(!1),
-          children: () => (0, a.jsxs)(o.Clickable, {
-            className: T.flexContainerRow,
+          children: () => (0, s.jsxs)(o.Clickable, {
+            className: h.flexContainerRow,
             onClick: i,
-            children: [(0, a.jsx)(E.Z, {
+            children: [(0, s.jsx)(_.Z, {
               guild: n,
-              size: E.Z.Sizes.MINI,
-              className: T.guildIcon
-            }), (0, a.jsxs)("div", {
-              className: T.flexContainerRow,
-              children: [(0, a.jsx)(o.Text, {
+              size: _.Z.Sizes.MINI,
+              className: h.guildIcon
+            }), (0, s.jsxs)("div", {
+              className: h.flexContainerRow,
+              children: [(0, s.jsx)(o.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: r()(T.guildName, {
-                  [T.disabled]: null == i
+                className: r()(h.guildName, {
+                  [h.disabled]: null == i
                 }),
                 children: n.name
-              }), (0, a.jsx)(u.Z, {
+              }), (0, s.jsx)(u.Z, {
                 guild: n
               })]
             })]
           })
-        }), (0, a.jsxs)("div", {
-          className: T.rightJustifiedContent,
-          children: [6 === N && (0, a.jsx)("div", {
-            className: T.featuredTag,
-            children: (0, a.jsx)(o.Text, {
+        }), (0, s.jsxs)("div", {
+          className: h.rightJustifiedContent,
+          children: [6 === T && (0, s.jsx)("div", {
+            className: h.featuredTag,
+            children: (0, s.jsx)(o.Text, {
               variant: "text-sm/normal",
-              className: T.featuredTagText,
+              className: h.featuredTagText,
               children: "Featured"
             })
-          }), (0, a.jsx)(_.Z, {
-            count: x,
-            className: T.__invalid_audienceCount
+          }), (0, s.jsx)(E.Z, {
+            count: N,
+            className: h.__invalid_audienceCount
           })]
         })]
-      }), (0, a.jsx)(o.Text, {
+      }), (0, s.jsx)(o.Text, {
         color: "header-primary",
         variant: "text-lg/semibold",
-        className: T.topicText,
+        className: h.topicText,
         children: t.topic
-      }), (0, a.jsx)(o.Text, {
+      }), (0, s.jsx)(o.Text, {
         color: "header-secondary",
-        className: T.description,
+        className: h.description,
         variant: "text-sm/normal",
         children: t.description
-      }), (0, a.jsx)(d.Z, {
+      }), (0, s.jsx)(d.Z, {
         guild: n,
-        speakers: h,
+        speakers: m,
         speakerCount: I,
-        className: T.speakers
-      }), null != m && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)("hr", {
-          className: T.divider
-        }), (0, a.jsxs)("div", {
-          className: T.footer,
-          children: [(0, a.jsx)(o.StageIcon, {
+        className: h.speakers
+      }), null != x && (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)("hr", {
+          className: h.divider
+        }), (0, s.jsxs)("div", {
+          className: h.footer,
+          children: [(0, s.jsx)(o.StageIcon, {
             size: "custom",
             color: "currentColor",
             width: 20,
             height: 20,
-            className: T.icon
-          }), (0, a.jsx)(o.Text, {
+            className: h.icon
+          }), (0, s.jsx)(o.Text, {
             color: "header-secondary",
-            className: T.__invalid_label,
+            className: h.__invalid_label,
             variant: "text-sm/normal",
-            children: m
+            children: x
           })]
         })]
       })]
     })
   })
-}(s = l || (l = {}))[s.UNSPECIFIED = 0] = "UNSPECIFIED", s[s.TRENDING = 1] = "TRENDING", s[s.PERSONALIZED = 2] = "PERSONALIZED", s[s.USER_GUILDS = 3] = "USER_GUILDS", s[s.FRIENDS_GUILDS = 4] = "FRIENDS_GUILDS", s[s.INTRO_CARD = 5] = "INTRO_CARD", s[s.FEATURED = 6] = "FEATURED"
+}(a = l || (l = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.TRENDING = 1] = "TRENDING", a[a.PERSONALIZED = 2] = "PERSONALIZED", a[a.USER_GUILDS = 3] = "USER_GUILDS", a[a.FRIENDS_GUILDS = 4] = "FRIENDS_GUILDS", a[a.INTRO_CARD = 5] = "INTRO_CARD", a[a.FEATURED = 6] = "FEATURED"

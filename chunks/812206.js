@@ -24,7 +24,7 @@ function h(e) {
     of t)(null == e ? void 0 : e.application) != null && (T(u.Z.createFromServer(e.application)), n = !0);
   return n
 }
-class S extends(i = a.ZP.Store) {
+class f extends(i = a.ZP.Store) {
   _getAllApplications() {
     return Object.values(c)
   }
@@ -56,12 +56,12 @@ class S extends(i = a.ZP.Store) {
     return Object.keys(I)
   }
 }
-o = "ApplicationStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
+o = "ApplicationStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new S(l.Z, {
+}) : r[s] = o, t.Z = new f(l.Z, {
   LOGOUT: function() {
     c = {}, d = {}, E = {}, I = {}
   },

@@ -1,23 +1,23 @@
-t.d(r, {
+r.d(t, {
   Z: function() {
     return i
   },
   q: function() {
-    return l
+    return o
   }
 });
-var a = t(570140),
-  n = t(91311);
+var a = r(570140),
+  n = r(91311);
 
-function i(e, r) {
-  let t = "boolean" == typeof r ? r : !n.Z.get(e);
+function i(e, t) {
+  let r = "boolean" == typeof t ? t : !n.Z.get(e);
   a.Z.dispatch({
     type: "DEV_TOOLS_DESIGN_TOGGLE_WEB_SET",
     toggle: e,
-    value: t
+    value: r
   })
 }
 
-function l() {
+function o() {
   for (let e in n.Z.all()) i(e, !1)
 }

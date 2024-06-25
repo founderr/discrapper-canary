@@ -1,6 +1,6 @@
 n(47120);
-var r = n(735250),
-  a = n(470079),
+var a = n(735250),
+  r = n(470079),
   i = n(745625),
   o = n(14199),
   c = n(772848),
@@ -21,60 +21,60 @@ t.Z = e => {
     onClose: C,
     onChalExpired: E,
     ...R
-  } = e, b = a.useRef(null), _ = (0, c.Z)(), [x, g] = a.useState(!1), w = a.useCallback(e => {
+  } = e, _ = r.useRef(null), b = (0, c.Z)(), [x, g] = r.useState(!1), w = r.useCallback(e => {
     h.default.track(l.rMx.CAPTCHA_EVENT, {
       captcha_event_name: e,
       captcha_service: t,
       sitekey: n,
-      captcha_flow_key: _
+      captcha_flow_key: b
     })
-  }, [_, t, n]), k = a.useCallback(e => {
+  }, [b, t, n]), k = r.useCallback(e => {
     d.Z.increment({
       name: s.V.CAPTCHA_EVENT,
       tags: ["event_name:".concat(e), "captcha_service:".concat(t)]
     })
-  }, [t]), A = a.useCallback(() => {
-    if (null != u && "" !== u && null != b.current) {
+  }, [t]), A = r.useCallback(() => {
+    if (null != u && "" !== u && null != _.current) {
       var e;
-      null === (e = b.current) || void 0 === e || e.setData({
+      null === (e = _.current) || void 0 === e || e.setData({
         rqdata: u
       })
     }
-  }, [u, b]), I = a.useCallback(() => {
+  }, [u, _]), I = r.useCallback(() => {
     !x && (w("initial-load"), k("initial-load"), g(!0)), A()
   }, [k, x, w, A]);
-  a.useEffect(() => {
+  r.useEffect(() => {
     A()
-  }, [A]), a.useEffect(() => {
+  }, [A]), r.useEffect(() => {
     I()
   }, [I]);
-  let S = a.useCallback(() => {
+  let S = r.useCallback(() => {
       w("error"), k("error"), A(), null == m || m()
     }, [w, k, A, m]),
-    j = a.useCallback(e => {
+    j = r.useCallback(e => {
       w("verify"), k("verify"), v(e)
     }, [k, v, w]),
-    O = a.useCallback(() => {
+    O = r.useCallback(() => {
       w("render"), null == f || f()
     }, [f, w]),
-    P = a.useCallback(() => {
+    P = r.useCallback(() => {
       w("open"), k("open"), null == y || y()
     }, [k, y, w]),
-    Z = a.useCallback(() => {
+    Z = r.useCallback(() => {
       w("close"), A(), null == C || C()
     }, [C, w, A]),
-    T = a.useCallback(() => {
+    T = r.useCallback(() => {
       w("chal-expire"), null == E || E()
     }, [E, w]);
-  return ((null == n || "" === n) && (n = l.OL7), t === p.hP.RECAPTCHA) ? (0, r.jsx)(o.Z, {
+  return ((null == n || "" === n) && (n = l.OL7), t === p.hP.RECAPTCHA) ? (0, a.jsx)(o.Z, {
     ...R,
     onLoad: I,
     onRender: O,
     onVerify: j,
     onError: S,
     sitekey: n
-  }) : t === p.hP.HCAPTCHA ? (0, r.jsx)(i.Z, {
-    ref: b,
+  }) : t === p.hP.HCAPTCHA ? (0, a.jsx)(i.Z, {
+    ref: _,
     ...R,
     sitekey: n,
     onLoad: I,
@@ -83,7 +83,7 @@ t.Z = e => {
     onChalExpired: T,
     onOpen: P,
     onClose: Z
-  }) : (0, r.jsx)(o.Z, {
+  }) : (0, a.jsx)(o.Z, {
     ...R,
     sitekey: n,
     onLoad: I,

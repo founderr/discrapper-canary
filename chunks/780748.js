@@ -23,18 +23,18 @@ function u(e) {
     allowNewLines: I,
     submit: T,
     hideAutocomplete: h,
-    moveSelection: S
-  } = e, f = i.useCallback(e => {
+    moveSelection: f
+  } = e, S = i.useCallback(e => {
     var i;
     switch (e.which) {
       case l.yXg.ARROW_UP:
-        if (S(-1)) {
+        if (f(-1)) {
           e.preventDefault();
           return
         }
         break;
       case l.yXg.ARROW_DOWN:
-        if (S(1)) {
+        if (f(1)) {
           e.preventDefault();
           return
         }
@@ -42,7 +42,7 @@ function u(e) {
       case l.yXg.P:
         if ((0, a.E)(e, {
             ctrl: !0
-          }) && S(-1)) {
+          }) && f(-1)) {
           e.preventDefault();
           return
         }
@@ -50,7 +50,7 @@ function u(e) {
       case l.yXg.N:
         if ((0, a.E)(e, {
             ctrl: !0
-          }) && S(1)) {
+          }) && f(1)) {
           e.preventDefault();
           return
         }
@@ -79,9 +79,9 @@ function u(e) {
       return
     }
     e.which === l.yXg.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, o.L6)(t) || !I) && (e.preventDefault(), e.stopPropagation(), T()), null == _ || _(e)
-  }, [I, n.id, u, t, h, S, E, _, d, T]);
+  }, [I, n.id, u, t, h, f, E, _, d, T]);
   return {
-    handleKeyDown: f,
+    handleKeyDown: S,
     handleKeyUp: i.useCallback(e => {
       null == c || c(e)
     }, [c])

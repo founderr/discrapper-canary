@@ -1,15 +1,15 @@
 t.d(s, {
   a: function() {
-    return l
+    return r
   }
 });
 var n = t(470079),
-  i = t(996073);
-let a = {
+  a = t(996073);
+let i = {
   block: "center"
 };
 
-function l(e) {
+function r(e) {
   let s = n.useRef(null);
-  return (0, i.Z)(s, e, a, 400), s
+  return (0, a.Z)(s, e, i, 400), s
 }

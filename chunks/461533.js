@@ -1,72 +1,72 @@
 n.r(s), n.d(s, {
   default: function() {
-    return c
+    return M
   }
 }), n(47120);
-var S = n(735250),
-  r = n(470079),
-  o = n(481060),
+var o = n(735250),
+  c = n(470079),
+  r = n(481060),
   t = n(369994),
   a = n(781208),
-  _ = n(689938),
-  M = n(106677);
+  S = n(689938),
+  _ = n(106677);
 
-function c(e) {
+function M(e) {
   let {
     guildId: s,
     transitionState: n,
-    onClose: c
-  } = e, [l, i] = r.useState([]), I = r.useCallback(() => {
-    (0, t.KK)(s, l), (0, t.C4)(s), c()
-  }, [s, c, l]), A = r.useCallback(e => () => {
-    i(s => s.includes(e) ? s.filter(s => s !== e) : [...s, e])
-  }, []), E = r.useCallback(() => {
+    onClose: M
+  } = e, [i, l] = c.useState([]), I = c.useCallback(() => {
+    (0, t.KK)(s, i), (0, t.C4)(s), M()
+  }, [s, M, i]), C = c.useCallback(e => () => {
+    l(s => s.includes(e) ? s.filter(s => s !== e) : [...s, e])
+  }, []), A = c.useCallback(() => {
     open(a.RI)
   }, []);
-  return (0, S.jsxs)(o.ModalRoot, {
+  return (0, o.jsxs)(r.ModalRoot, {
     transitionState: n,
-    size: o.ModalSize.SMALL,
-    children: [(0, S.jsx)(o.ModalHeader, {
+    size: r.ModalSize.SMALL,
+    children: [(0, o.jsx)(r.ModalHeader, {
       separator: !1,
-      children: (0, S.jsx)(o.Heading, {
+      children: (0, o.jsx)(r.Heading, {
         color: "header-primary",
         variant: "heading-md/semibold",
-        children: _.Z.Messages.GUILD_REPORT_RAID_MODAL_TITLE
+        children: S.Z.Messages.GUILD_REPORT_RAID_MODAL_TITLE
       })
-    }), (0, S.jsxs)(o.ModalContent, {
-      children: [(0, S.jsx)(o.Text, {
+    }), (0, o.jsxs)(r.ModalContent, {
+      children: [(0, o.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: _.Z.Messages.GUILD_REPORT_RAID_MODAL_DESCRIPTION_CLICKABLE.format({
-          onClick: E
+        children: S.Z.Messages.GUILD_REPORT_RAID_MODAL_DESCRIPTION_CLICKABLE.format({
+          onClick: A
         })
-      }), (0, S.jsx)("div", {
-        className: M.mainCheckboxContainer,
-        children: a.Ud.map(e => (0, S.jsxs)(o.Clickable, {
-          className: M.checkboxContainer,
-          onClick: A(e),
-          children: [(0, S.jsx)(o.Checkbox, {
-            type: o.Checkbox.Types.INVERTED,
-            className: M.checkbox,
-            value: l.includes(e),
+      }), (0, o.jsx)("div", {
+        className: _.mainCheckboxContainer,
+        children: a.Ud.map(e => (0, o.jsxs)(r.Clickable, {
+          className: _.checkboxContainer,
+          onClick: C(e),
+          children: [(0, o.jsx)(r.Checkbox, {
+            type: r.Checkbox.Types.INVERTED,
+            className: _.checkbox,
+            value: i.includes(e),
             displayOnly: !0
-          }), (0, S.jsx)(o.Text, {
+          }), (0, o.jsx)(r.Text, {
             variant: "text-sm/normal",
             children: (0, a.$l)(e)
           })]
         }, e))
       })]
-    }), (0, S.jsxs)(o.ModalFooter, {
-      children: [(0, S.jsx)(o.Button, {
+    }), (0, o.jsxs)(r.ModalFooter, {
+      children: [(0, o.jsx)(r.Button, {
         onClick: I,
-        color: o.Button.Colors.BRAND,
-        look: o.Button.Looks.FILLED,
-        children: _.Z.Messages.SUBMIT
-      }), (0, S.jsx)(o.Button, {
-        onClick: c,
-        color: o.Button.Colors.PRIMARY,
-        look: o.Button.Looks.LINK,
-        children: _.Z.Messages.CANCEL
+        color: r.Button.Colors.BRAND,
+        look: r.Button.Looks.FILLED,
+        children: S.Z.Messages.SUBMIT
+      }), (0, o.jsx)(r.Button, {
+        onClick: M,
+        color: r.Button.Colors.PRIMARY,
+        look: r.Button.Looks.LINK,
+        children: S.Z.Messages.CANCEL
       })]
     })]
   })

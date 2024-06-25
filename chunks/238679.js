@@ -3,27 +3,27 @@ n.d(t, {
     return I
   },
   KW: function() {
-    return h
-  },
-  dO: function() {
     return E
   },
-  gQ: function() {
+  dO: function() {
     return _
+  },
+  gQ: function() {
+    return h
   }
 });
-var s = n(392711),
-  i = n.n(s),
-  l = n(570140),
-  a = n(317381),
-  r = n(594174),
+var i = n(392711),
+  s = n.n(i),
+  a = n(570140),
+  r = n(317381),
+  l = n(594174),
   o = n(823379),
   c = n(5192),
-  u = n(863141),
-  d = n(186901);
+  d = n(863141),
+  u = n(186901);
 
-function E() {
-  let e = a.ZP.getCurrentEmbeddedActivity();
+function _() {
+  let e = r.ZP.getCurrentEmbeddedActivity();
   if (null == e) return {
     participants: []
   };
@@ -33,34 +33,34 @@ function E() {
   } = e;
   return {
     participants: Array.from(e.userIds, e => {
-      let s = r.default.getUser(e);
-      if (null == s) return;
-      let i = (0, c.y)(t, n, s);
+      let i = l.default.getUser(e);
+      if (null == i) return;
+      let s = (0, c.y)(t, n, i);
       return {
-        ...(0, u.Z)(s),
-        nickname: null != i ? i : void 0
+        ...(0, d.Z)(i),
+        nickname: null != s ? s : void 0
       }
     }).filter(o.lm)
   }
 }
-let h = {
-    [d.Gp.ANY]: [d.wE]
+let E = {
+    [u.Gp.ANY]: [u.wE]
   },
-  _ = {
-    scope: h,
+  h = {
+    scope: E,
     handler: () => e => {
       let {
         prevState: t,
         dispatch: n
-      } = e, s = E();
-      return !i().isEqual(s, t) && n(s), s
+      } = e, i = _();
+      return !s().isEqual(i, t) && n(i), i
     }
   };
 
 function I(e) {
   let t = "EMBEDDED_ACTIVITY_UPDATE",
     n = () => {
-      e(E())
+      e(_())
     };
-  return l.Z.subscribe(t, n), () => l.Z.unsubscribe(t, n)
+  return a.Z.subscribe(t, n), () => a.Z.unsubscribe(t, n)
 }

@@ -1,38 +1,38 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(434404),
-  l = n(970731),
-  a = n(981631),
-  r = n(689938),
+var s = n(434404),
+  a = n(970731),
+  r = n(981631),
+  l = n(689938),
   o = n(490808),
   c = n(687351);
 
-function u(e) {
+function d(e) {
   let {
     guild: t,
     markAsDismissed: n
   } = e;
-  return (0, s.jsx)(l.ZP, {
-    header: r.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_TITLE,
-    content: r.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_DESCRIPTION,
-    asset: (0, s.jsx)("div", {
+  return (0, i.jsx)(a.ZP, {
+    header: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_TITLE,
+    content: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_DESCRIPTION,
+    asset: (0, i.jsx)("div", {
       className: o.image,
-      children: (0, s.jsx)("img", {
+      children: (0, i.jsx)("img", {
         alt: "",
         src: c
       })
     }),
-    buttonCTA: r.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_ACCEPT,
+    buttonCTA: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_ACCEPT,
     onClick: e => {
       var n;
-      n = t, i.Z.open(n.id, a.pNK.DISCOVERY_LANDING_PAGE)
+      n = t, s.Z.open(n.id, r.pNK.DISCOVERY_LANDING_PAGE)
     },
-    secondaryButtonCTA: r.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_DISMISS,
+    secondaryButtonCTA: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_DISMISS,
     onSecondaryClick: () => {},
     markAsDismissed: n
   })

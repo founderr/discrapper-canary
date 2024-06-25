@@ -9,9 +9,9 @@ var i, r, s, o, a = n(442837),
   I = n(979651),
   T = n(981631);
 let h = !0,
-  S = !0;
+  f = !0;
 
-function f() {
+function S() {
   let e;
   let t = E.Z.getChannelId();
   if (null == t) e = !0;
@@ -22,37 +22,37 @@ function f() {
     e = c.Z.getMode() !== T.pM4.VOICE_ACTIVITY || null == i || i.isPrivate() || i.isGuildStageVoice() || d.Z.can(T.Plq.USE_VAD, i) || null == (n = r) || !!n.suppress || null != n.requestToSpeakTimestamp || !1
   }
   if (h === e) return !1;
-  S = e, h = e, l.Z.dispatch({
+  f = e, h = e, l.Z.dispatch({
     type: "SET_VAD_PERMISSION",
     hasPermission: h
   })
 }
-class N extends(o = a.ZP.Store) {
+class A extends(o = a.ZP.Store) {
   initialize() {
     this.waitFor(d.Z, c.Z, E.Z, I.Z)
   }
   shouldShowWarning() {
-    return !S
+    return !f
   }
   canUseVoiceActivity() {
     return h
   }
 }
-s = "PermissionVADStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
+s = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(l.Z, {
-  RTC_CONNECTION_STATE: f,
-  MEDIA_ENGINE_SET_AUDIO_ENABLED: f,
-  AUDIO_SET_MODE: f,
-  CHANNEL_UPDATES: f,
-  THREAD_UPDATE: f,
-  GUILD_ROLE_UPDATE: f,
-  GUILD_MEMBER_UPDATE: f,
-  IMPERSONATE_UPDATE: f,
-  IMPERSONATE_STOP: f,
+}) : i[r] = s, t.Z = new A(l.Z, {
+  RTC_CONNECTION_STATE: S,
+  MEDIA_ENGINE_SET_AUDIO_ENABLED: S,
+  AUDIO_SET_MODE: S,
+  CHANNEL_UPDATES: S,
+  THREAD_UPDATE: S,
+  GUILD_ROLE_UPDATE: S,
+  GUILD_MEMBER_UPDATE: S,
+  IMPERSONATE_UPDATE: S,
+  IMPERSONATE_STOP: S,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
@@ -61,13 +61,13 @@ s = "PermissionVADStore", (r = "displayName") in(i = N) ? Object.defineProperty(
       let {
         userId: t
       } = e;
-      return t === u.default.getId() && f()
+      return t === u.default.getId() && S()
     })
   },
   AUDIO_TOGGLE_SELF_MUTE: function() {
-    S = h
+    f = h
   },
   PERMISSION_CLEAR_VAD_WARNING: function() {
-    S = !0
+    f = !0
   }
 })

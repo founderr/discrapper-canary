@@ -1,18 +1,18 @@
 t.d(s, {
   r: function() {
-    return a
+    return i
   },
   v: function() {
-    return l
+    return r
   }
 });
 var n = t(481060),
-  i = t(689938);
+  a = t(689938);
 
-function a() {
-  (0, n.showToast)((0, n.createToast)(i.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR, n.ToastType.FAILURE))
+function i() {
+  (0, n.showToast)((0, n.createToast)(a.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR, n.ToastType.FAILURE))
 }
 
-function l() {
-  (0, n.showToast)((0, n.createToast)(i.Z.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR, n.ToastType.FAILURE))
+function r() {
+  (0, n.showToast)((0, n.createToast)(a.Z.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR, n.ToastType.FAILURE))
 }

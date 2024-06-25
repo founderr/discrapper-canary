@@ -1,87 +1,87 @@
-t.r(s), t.d(s, {
+a.r(t), a.d(t, {
   default: function() {
-    return A
+    return v
   }
-}), t(47120);
-var a = t(735250),
-  n = t(470079),
-  l = t(120356),
-  i = t.n(l),
-  r = t(990547),
-  c = t(399606),
-  o = t(780384),
-  d = t(481060),
-  _ = t(935369),
-  m = t(367907),
-  T = t(213609),
-  E = t(44315),
-  x = t(210887),
-  I = t(626135),
-  u = t(923726),
-  h = t(570849),
-  L = t(853439),
-  N = t(303737),
-  R = t(587431),
-  C = t(862239),
-  S = t(847004),
-  g = t(981631),
-  j = t(689938),
-  p = t(710368);
+}), a(47120);
+var n = a(735250),
+  s = a(470079),
+  l = a(120356),
+  i = a.n(l),
+  r = a(990547),
+  c = a(399606),
+  o = a(780384),
+  d = a(481060),
+  _ = a(935369),
+  m = a(367907),
+  T = a(213609),
+  x = a(44315),
+  I = a(210887),
+  E = a(626135),
+  u = a(923726),
+  h = a(570849),
+  R = a(853439),
+  C = a(303737),
+  p = a(587431),
+  L = a(862239),
+  N = a(847004),
+  g = a(981631),
+  S = a(689938),
+  j = a(710368);
 
 function O(e) {
   let {
-    name: s,
-    imageUrl: t,
-    selected: n,
+    name: t,
+    imageUrl: a,
+    selected: s,
     onTap: l
   } = e;
-  return (0, a.jsxs)(d.Clickable, {
+  return (0, n.jsxs)(d.Clickable, {
     onClick: l,
-    className: p.templateCard,
-    children: [(0, a.jsx)("img", {
-      src: t,
+    className: j.templateCard,
+    children: [(0, n.jsx)("img", {
+      src: a,
       alt: "",
-      className: p.templateCardImage
-    }), (0, a.jsxs)("div", {
-      className: p.templateNameRow,
-      children: [(0, a.jsx)(d.Heading, {
+      className: j.templateCardImage
+    }), (0, n.jsxs)("div", {
+      className: j.templateNameRow,
+      children: [(0, n.jsx)(d.Heading, {
         variant: "heading-md/normal",
         className: i()({
-          [p.unselectedTemplateName]: !n
+          [j.unselectedTemplateName]: !s
         }),
-        children: s
-      }), n && (0, a.jsx)(d.CircleCheckIcon, {
+        children: t
+      }), s && (0, n.jsx)(d.CircleCheckIcon, {
         size: "md",
-        secondaryColor: (0, E.Lq)(g.Ilk.WHITE_500),
-        color: (0, E.Lq)(g.Ilk.BRAND_500)
+        secondaryColor: (0, x.Lq)(g.Ilk.WHITE_500),
+        color: (0, x.Lq)(g.Ilk.BRAND_500)
       })]
     })]
   })
 }
 
-function M(e) {
+function f(e) {
   let {
-    loading: s,
-    error: t,
-    templates: n,
+    loading: t,
+    error: a,
+    templates: s,
     selectedTemplateIndex: l,
     handleTapTemplate: i
-  } = e, r = (0, c.e7)([x.Z], () => x.Z.theme);
-  return s ? (0, a.jsx)(d.Spinner, {}) : null != t ? (0, a.jsx)(R.Z, {
-    children: t.message
-  }) : null == n || 0 === n.length ? null : (0, a.jsx)("div", {
-    className: p.templateCardList,
-    children: n.map((e, s) => (0, a.jsx)(O, {
-      imageUrl: s === l ? e.category_image : (0, o.ap)(r) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
+  } = e, r = (0, c.e7)([I.Z], () => I.Z.theme);
+  return t ? (0, n.jsx)(d.Spinner, {}) : null != a ? (0, n.jsx)(p.Z, {
+    children: a.message
+  }) : null == s || 0 === s.length ? null : (0, n.jsx)("div", {
+    className: j.templateCardList,
+    children: s.map((e, t) => (0, n.jsx)(O, {
+      imageUrl: t === l ? e.category_image : (0, o.ap)(r) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
       name: e.category,
-      selected: s === l,
-      onTap: () => i(s)
-    }, s))
+      selected: t === l,
+      onTap: () => i(t)
+    }, t))
   })
 }
 
-function v(e) {
-  var s, t;
+function B(e) {
+  var t, a;
   let {
     guildId: l,
     templates: i,
@@ -90,126 +90,126 @@ function v(e) {
     showPriceReselection: o,
     setShowPriceReselection: d,
     handleCreateTierFromTemplate: _
-  } = e, m = (0, N.g4)(l, c, null != i ? null === (t = i[r]) || void 0 === t ? void 0 : null === (s = t.listings[0]) || void 0 === s ? void 0 : s.price_tier : void 0), T = null != m && m.length > 0, E = n.useCallback(e => {
+  } = e, m = (0, C.g4)(l, c, null != i ? null === (a = i[r]) || void 0 === a ? void 0 : null === (t = a.listings[0]) || void 0 === t ? void 0 : t.price_tier : void 0), T = null != m && m.length > 0, x = s.useCallback(e => {
     T ? d(!0) : _(e)
   }, [_, T, d]);
-  return null == i || 0 === i.length ? null : o && T ? (0, a.jsx)(S.Z, {
+  return null == i || 0 === i.length ? null : o && T ? (0, n.jsx)(N.Z, {
     selectedTemplate: i[r],
     handleSelectTemplate: _,
     newPricesToPick: m
-  }) : (0, a.jsx)(C.Z, {
+  }) : (0, n.jsx)(L.Z, {
     selectedTemplate: i[r],
-    handleSelectTemplate: E
+    handleSelectTemplate: x
   })
 }
 
-function A(e) {
+function v(e) {
   let {
-    transitionState: s,
-    onClose: t,
+    transitionState: t,
+    onClose: a,
     guildId: l,
     addNewEditStateFromTemplate: i,
     addNewEditStateFromScratch: o,
-    priceTiers: E
-  } = e, x = (0, c.e7)([L.Z], () => L.Z.getTemplates(l)), [N, {
-    loading: R,
-    error: C
-  }] = (0, _.Z)(h.u), S = n.useRef("voluntarily_exit");
-  n.useEffect(() => {
-    (null == x || 0 === x.length) && N(l)
-  }, [N, l, x]), n.useEffect(() => {
-    s === d.ModalTransitionState.EXITING && I.default.track(g.rMx.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
-      exit_reason: S.current,
+    priceTiers: x
+  } = e, I = (0, c.e7)([R.Z], () => R.Z.getTemplates(l)), [C, {
+    loading: p,
+    error: L
+  }] = (0, _.Z)(h.u), N = s.useRef("voluntarily_exit");
+  s.useEffect(() => {
+    (null == I || 0 === I.length) && C(l)
+  }, [C, l, I]), s.useEffect(() => {
+    t === d.ModalTransitionState.EXITING && E.default.track(g.rMx.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
+      exit_reason: N.current,
       ...(0, m.hH)(l)
     })
-  }, [s, l, S]);
-  let [O, A] = n.useState(0), [D, U] = n.useState(!1), P = n.useCallback(e => {
-    S.current = "template_selected", (0, h.l)(e, l), i(e), t()
-  }, [l, i, t]), f = n.useCallback(() => {
-    D ? U(!1) : t()
-  }, [D, t]), B = (0, u.yi)(l);
+  }, [t, l, N]);
+  let [O, v] = s.useState(0), [M, A] = s.useState(!1), D = s.useCallback(e => {
+    N.current = "template_selected", (0, h.l)(e, l), i(e), a()
+  }, [l, i, a]), U = s.useCallback(() => {
+    M ? A(!1) : a()
+  }, [M, a]), b = (0, u.yi)(l);
   return (0, T.Z)({
     type: r.ImpressionTypes.MODAL,
     name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
     properties: {
       guild_id: l
     }
-  }), (0, a.jsxs)(d.ModalRoot, {
-    transitionState: s,
+  }), (0, n.jsxs)(d.ModalRoot, {
+    transitionState: t,
     size: d.ModalSize.DYNAMIC,
-    className: p.modalRoot,
-    children: [(0, a.jsx)(d.Clickable, {
-      onClick: f,
-      className: p.closeButton,
-      children: (0, a.jsx)(d.CloseSmallIcon, {
+    className: j.modalRoot,
+    children: [(0, n.jsx)(d.Clickable, {
+      onClick: U,
+      className: j.closeButton,
+      children: (0, n.jsx)(d.CloseSmallIcon, {
         size: "xxs",
         color: "currentColor"
       })
-    }), (0, a.jsxs)(d.ModalContent, {
-      className: p.modalContent,
-      children: [(0, a.jsxs)("div", {
-        className: p.templatesContainer,
-        children: [D && (0, a.jsx)(d.Clickable, {
-          className: p.blackoutOverlay,
+    }), (0, n.jsxs)(d.ModalContent, {
+      className: j.modalContent,
+      children: [(0, n.jsxs)("div", {
+        className: j.templatesContainer,
+        children: [M && (0, n.jsx)(d.Clickable, {
+          className: j.blackoutOverlay,
           onClick: () => {
-            D && U(!1)
+            M && A(!1)
           },
           "aria-label": "overlay"
-        }), (0, a.jsxs)(d.ScrollerThin, {
-          className: p.templatesContainerBody,
-          children: [(0, a.jsx)(d.Heading, {
+        }), (0, n.jsxs)(d.ScrollerThin, {
+          className: j.templatesContainerBody,
+          children: [(0, n.jsx)(d.Heading, {
             variant: "heading-xl/semibold",
-            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_HEADER
-          }), (0, a.jsx)(d.Text, {
+            children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_HEADER
+          }), (0, n.jsx)(d.Text, {
             variant: "text-sm/normal",
-            className: p.modalBodyText,
-            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_BODY
-          }), B && (0, a.jsx)(d.Text, {
+            className: j.modalBodyText,
+            children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_BODY
+          }), b && (0, n.jsx)(d.Text, {
             variant: "text-sm/normal",
-            className: p.creatorPortalText,
-            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATOR_PORTAL_LINK.format({
+            className: j.creatorPortalText,
+            children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATOR_PORTAL_LINK.format({
               creatorPortalUrl: "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons"
             })
-          }), (0, a.jsx)("div", {
-            className: p.templatesContentContainer,
-            children: (0, a.jsx)(M, {
-              loading: R,
-              error: C,
-              templates: x,
+          }), (0, n.jsx)("div", {
+            className: j.templatesContentContainer,
+            children: (0, n.jsx)(f, {
+              loading: p,
+              error: L,
+              templates: I,
               selectedTemplateIndex: O,
               handleTapTemplate: e => {
-                A(e)
+                v(e)
               }
             })
           })]
-        }), (0, a.jsx)(d.Text, {
+        }), (0, n.jsx)(d.Text, {
           variant: "text-sm/normal",
-          children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_PROMPT
-        }), (0, a.jsxs)(d.Button, {
+          children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_PROMPT
+        }), (0, n.jsxs)(d.Button, {
           size: d.Button.Sizes.MEDIUM,
           onClick: () => {
-            S.current = "create_from_scratch", o(), t()
+            N.current = "create_from_scratch", o(), a()
           },
           look: d.Button.Looks.OUTLINED,
           color: d.Button.Colors.PRIMARY,
-          className: p.createFromStratchButton,
-          innerClassName: p.createFromStratchButtonInner,
-          children: [(0, a.jsx)(d.PencilIcon, {
+          className: j.createFromStratchButton,
+          innerClassName: j.createFromStratchButtonInner,
+          children: [(0, n.jsx)(d.PencilIcon, {
             size: "custom",
             color: "currentColor",
             width: 14,
             height: 14,
-            className: p.editIcon
-          }), j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_BUTTON]
+            className: j.editIcon
+          }), S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_BUTTON]
         })]
-      }), (0, a.jsx)(v, {
+      }), (0, n.jsx)(B, {
         guildId: l,
-        templates: x,
+        templates: I,
         selectedTemplateIndex: O,
-        priceTiers: E,
-        showPriceReselection: D,
-        setShowPriceReselection: U,
-        handleCreateTierFromTemplate: P
+        priceTiers: x,
+        showPriceReselection: M,
+        setShowPriceReselection: A,
+        handleCreateTierFromTemplate: D
       })]
     })]
   })

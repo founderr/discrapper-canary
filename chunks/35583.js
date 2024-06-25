@@ -1,18 +1,18 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  s = n(442837),
+  l = n(481060),
   r = n(668781),
   o = n(431583),
   c = n(91372),
-  u = n(19780),
-  d = n(502568),
-  E = n(35818),
-  _ = n(689938),
+  d = n(19780),
+  u = n(502568),
+  _ = n(35818),
+  E = n(689938),
   I = n(656847);
 
-function T(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,7 +20,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class m extends i.PureComponent {
+class T extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -28,7 +28,7 @@ class m extends i.PureComponent {
     } : null
   }
   handleDownloadApps() {
-    (0, a.openModal)(e => (0, s.jsx)(o.default, {
+    (0, l.openModal)(e => (0, i.jsx)(o.default, {
       source: "Links",
       ...e
     }))
@@ -36,44 +36,44 @@ class m extends i.PureComponent {
   render() {
     switch (this.props.mode) {
       case "UPDATE_AVAILABLE":
-        return (0, s.jsx)(d.JO, {
+        return (0, i.jsx)(u.JO, {
           hideOnClick: !1,
-          tooltip: _.Z.Messages.UPDATE_AVAILABLE,
+          tooltip: E.Z.Messages.UPDATE_AVAILABLE,
           foreground: I.downloadArrow,
           background: I.cloud,
-          icon: a.DownloadIcon
+          icon: l.DownloadIcon
         });
       case "UPDATE_MANUALLY":
       case "UPDATE_DOWNLOADED":
-        return (0, s.jsx)(d.JO, {
-          tooltip: _.Z.Messages.UPDATE_DOWNLOADED,
+        return (0, i.jsx)(u.JO, {
+          tooltip: E.Z.Messages.UPDATE_DOWNLOADED,
           foreground: I.updateIconForeground,
           onClick: this.handleInstallDownload,
-          icon: a.DownloadIcon
+          icon: l.DownloadIcon
         });
       default:
         return null
     }
   }
   constructor(...e) {
-    super(...e), T(this, "state", {
+    super(...e), m(this, "state", {
       memoizedMode: this.props.mode,
       clicked: !1
-    }), T(this, "handleInstallDownload", () => {
-      u.Z.isConnected() ? r.Z.show({
-        title: _.Z.Messages.UPDATE_DURING_CALL_TITLE,
-        body: _.Z.Messages.UPDATE_DURING_CALL_BODY,
+    }), m(this, "handleInstallDownload", () => {
+      d.Z.isConnected() ? r.Z.show({
+        title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
+        body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
         onConfirm: this.doUpdate,
-        cancelText: _.Z.Messages.CANCEL,
-        confirmText: _.Z.Messages.UPDATE_DURING_CALL_CONTINUE
+        cancelText: E.Z.Messages.CANCEL,
+        confirmText: E.Z.Messages.UPDATE_DURING_CALL_CONTINUE
       }) : this.doUpdate()
-    }), T(this, "doUpdate", () => {
+    }), m(this, "doUpdate", () => {
       !this.state.clicked && (this.setState({
         clicked: !0
-      }), (0, E.Q)())
+      }), (0, _.Q)())
     })
   }
 }
-t.Z = l.ZP.connectStores([c.Z], () => ({
+t.Z = s.ZP.connectStores([c.Z], () => ({
   mode: c.Z.getState()
-}))(m)
+}))(T)

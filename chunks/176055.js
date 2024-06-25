@@ -1,26 +1,26 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(593473),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(593473),
   o = n(442837),
   c = n(481060),
-  u = n(749210),
-  d = n(558381),
-  E = n(666743),
-  h = n(41776),
-  _ = n(703656),
+  d = n(749210),
+  u = n(558381),
+  _ = n(666743),
+  E = n(41776),
+  h = n(703656),
   I = n(769654),
   m = n(601964),
-  T = n(430824),
+  p = n(430824),
   g = n(378720),
-  p = n(285952),
-  N = n(346656),
-  S = n(843445),
-  C = n(981631),
-  A = n(689938),
-  f = n(654075);
+  T = n(285952),
+  C = n(346656),
+  f = n(843445),
+  S = n(981631),
+  N = n(689938),
+  A = n(654075);
 
 function Z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -30,27 +30,27 @@ function Z(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class L extends i.PureComponent {
+class L extends s.PureComponent {
   renderMemberInfo() {
     let {
       approximateMemberCount: e,
       approximatePresenceCount: t
     } = this.props.guild;
-    return null == e || null == t ? null : (0, s.jsxs)(p.Z, {
-      className: f.memberInfo,
-      align: p.Z.Align.CENTER,
-      children: [(0, s.jsx)("div", {
-        className: f.dotOnline
-      }), (0, s.jsx)("span", {
-        className: f.memberText,
-        children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+    return null == e || null == t ? null : (0, i.jsxs)(T.Z, {
+      className: A.memberInfo,
+      align: T.Z.Align.CENTER,
+      children: [(0, i.jsx)("div", {
+        className: A.dotOnline
+      }), (0, i.jsx)("span", {
+        className: A.memberText,
+        children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
           membersOnline: t
         })
-      }), (0, s.jsx)("div", {
-        className: f.dotOffline
-      }), (0, s.jsx)("span", {
-        className: f.memberText,
-        children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+      }), (0, i.jsx)("div", {
+        className: A.dotOffline
+      }), (0, i.jsx)("span", {
+        className: A.memberText,
+        children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
           count: e
         })
       })]
@@ -61,54 +61,54 @@ class L extends i.PureComponent {
       guild: e,
       inChannel: t,
       isInGuild: n,
-      isLurking: i,
-      isAuthenticated: l,
-      className: r,
+      isLurking: s,
+      isAuthenticated: a,
+      className: l,
       pageSize: o
     } = this.props;
     if (t && n) return null;
-    let u = new m.ZP(e),
-      d = A.Z.Messages.LURKER_MODE_VIEW_GUILD,
-      E = this.handleJoinOrView,
-      h = c.Button.Looks.FILLED,
-      _ = c.Button.Colors.PRIMARY;
-    return l ? n ? (h = c.Button.Looks.OUTLINED, _ = f.buttonColorInGuild, d = (0, s.jsxs)(p.Z, {
-      align: p.Z.Align.CENTER,
-      children: [(0, s.jsx)("div", {
-        children: A.Z.Messages.JOINED_GUILD
-      }), (0, s.jsx)(c.CheckmarkLargeIcon, {
+    let d = new m.ZP(e),
+      u = N.Z.Messages.LURKER_MODE_VIEW_GUILD,
+      _ = this.handleJoinOrView,
+      E = c.Button.Looks.FILLED,
+      h = c.Button.Colors.PRIMARY;
+    return a ? n ? (E = c.Button.Looks.OUTLINED, h = A.buttonColorInGuild, u = (0, i.jsxs)(T.Z, {
+      align: T.Z.Align.CENTER,
+      children: [(0, i.jsx)("div", {
+        children: N.Z.Messages.JOINED_GUILD
+      }), (0, i.jsx)(c.CheckmarkLargeIcon, {
         size: "md",
         color: "currentColor",
-        className: f.joinedCheckmark
+        className: A.joinedCheckmark
       })]
-    })) : i && t && (d = A.Z.Messages.JOIN_GUILD) : (d = A.Z.Messages._LOGIN, E = this.handleLogin), (0, s.jsxs)("div", {
-      className: a()(r, o === S.b.SMALL ? f.inviteSmall : f.inviteLarge),
-      children: [(0, s.jsx)(g.Z, {
-        children: A.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
-      }), (0, s.jsxs)("div", {
-        className: f.content,
-        children: [(0, s.jsxs)("div", {
-          className: f.info,
-          children: [(0, s.jsx)(N.Z, {
-            guild: u,
+    })) : s && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)("div", {
+      className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
+      children: [(0, i.jsx)(g.Z, {
+        children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
+      }), (0, i.jsxs)("div", {
+        className: A.content,
+        children: [(0, i.jsxs)("div", {
+          className: A.info,
+          children: [(0, i.jsx)(C.Z, {
+            guild: d,
             active: !0,
-            size: N.Z.Sizes.LARGE,
-            className: f.guildIcon
-          }), (0, s.jsxs)("div", {
-            className: f.infoText,
-            children: [(0, s.jsx)("div", {
-              className: f.name,
+            size: C.Z.Sizes.LARGE,
+            className: A.guildIcon
+          }), (0, i.jsxs)("div", {
+            className: A.infoText,
+            children: [(0, i.jsx)("div", {
+              className: A.name,
               children: e.name
             }), this.renderMemberInfo()]
           })]
-        }), (0, s.jsx)(c.Button, {
+        }), (0, i.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          className: f.actionButton,
+          className: A.actionButton,
           fullWidth: !0,
-          color: _,
-          look: h,
-          onClick: E,
-          children: d
+          color: h,
+          look: E,
+          onClick: _,
+          children: u
         })]
       })]
     })
@@ -119,32 +119,32 @@ class L extends i.PureComponent {
         guild: e,
         skuId: t,
         isInGuild: n,
-        isLurking: s
-      } = this.props, i = () => (0, I.X)(e.id);
-      if (s)(0, d.Oj)(t).then(i);
-      else if (n) i();
+        isLurking: i
+      } = this.props, s = () => (0, I.X)(e.id);
+      if (i)(0, u.Oj)(t).then(s);
+      else if (n) s();
       else try {
-        await u.Z.joinGuild(e.id, {
+        await d.Z.joinGuild(e.id, {
           lurker: !0,
-          source: C.vtS.APPLICATION_STORE
-        }), i()
+          source: S.vtS.APPLICATION_STORE
+        }), s()
       } catch {}
     }), Z(this, "handleLogin", () => {
       let e = {
-        redirect_to: C.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
+        redirect_to: S.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
       };
-      (0, _.uL)(C.Z5c.LOGIN, {
-        search: (0, r.stringify)(e)
+      (0, h.uL)(S.Z5c.LOGIN, {
+        search: (0, l.stringify)(e)
       })
     })
   }
 }
-t.Z = (0, E.Z)(o.ZP.connectStores([T.Z, h.Z], e => {
+t.Z = (0, _.Z)(o.ZP.connectStores([p.Z, E.Z], e => {
   let {
     guild: t
-  } = e, n = h.Z.isLurking(t.id);
+  } = e, n = E.Z.isLurking(t.id);
   return {
-    isInGuild: null != T.Z.getGuild(t.id) && !n,
+    isInGuild: null != p.Z.getGuild(t.id) && !n,
     isLurking: n
   }
 })(L))

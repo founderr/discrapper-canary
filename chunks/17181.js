@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return T
   },
   isOnboardingActiveForGuild: function() {
-    return f
+    return S
   },
   openAndWaitForOnboarding: function() {
-    return S
+    return f
   }
 });
 var i = n(512722),
@@ -43,11 +43,11 @@ async function h(e) {
       if (!l.hasFeature(d.oNc.GUILD_ONBOARDING)) return;
       await (0, u.rK)(t)
     }
-    _.ZP.shouldShowOnboarding(t) && (await S(t), null != n && (0, a.uL)(d.Z5c.CHANNEL(t, n)))
+    _.ZP.shouldShowOnboarding(t) && (await f(t), null != n && (0, a.uL)(d.Z5c.CHANNEL(t, n)))
   }
 }
 
-function S(e) {
+function f(e) {
   return new Promise(t => {
     I[e] = t, (0, c.x)(e).then(() => {
       var t, n;
@@ -56,6 +56,6 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   return null != I[e]
 }

@@ -1,52 +1,52 @@
 n(47120);
-var l, i, s, r, a = n(442837),
+var i, l, r, a, s = n(442837),
   o = n(570140),
-  u = n(131704),
-  c = n(251625),
+  c = n(131704),
+  u = n(251625),
   d = n(592125),
   h = n(306680),
   p = n(944486),
-  g = n(55589);
-let m = [];
+  f = n(55589);
+let _ = [];
 
-function C() {
-  let e = g.Z.getPrivateChannelIds().filter(e => h.ZP.getMentionCount(e) > 0);
-  return e.length > 20 && (e.length = 20), !(0, c.EF)(e, m) && (m = e, !0)
+function g() {
+  let e = f.Z.getPrivateChannelIds().filter(e => h.ZP.getMentionCount(e) > 0);
+  return e.length > 20 && (e.length = 20), !(0, u.EF)(e, _) && (_ = e, !0)
 }
 
-function E() {
-  return C()
+function m() {
+  return g()
 }
 
-function f(e) {
+function C(e) {
   let {
     channelId: t
   } = e, n = d.Z.getChannel(t);
-  return !!(null != n && (0, u.hv)(n.type)) && C()
+  return !!(null != n && (0, c.hv)(n.type)) && g()
 }
-class _ extends(l = a.ZP.Store) {
+class I extends(i = s.ZP.Store) {
   initialize() {
-    this.waitFor(g.Z, d.Z, p.Z, h.ZP)
+    this.waitFor(f.Z, d.Z, p.Z, h.ZP)
   }
   getUnreadPrivateChannelIds() {
-    return m
+    return _
   }
 }
-r = "PrivateChannelReadStateStore", (s = "displayName") in(i = _) ? Object.defineProperty(i, s, {
-  value: r,
+a = "PrivateChannelReadStateStore", (r = "displayName") in(l = I) ? Object.defineProperty(l, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = r, t.Z = new _(o.Z, {
-  CONNECTION_OPEN: E,
-  OVERLAY_INITIALIZE: E,
-  MESSAGE_CREATE: f,
-  MESSAGE_ACK: f,
+}) : l[r] = a, t.Z = new I(o.Z, {
+  CONNECTION_OPEN: m,
+  OVERLAY_INITIALIZE: m,
+  MESSAGE_CREATE: C,
+  MESSAGE_ACK: C,
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e, n = d.Z.getChannel(t);
-    return !!(null != n && (0, u.hv)(n.type)) && C()
+    return !!(null != n && (0, c.hv)(n.type)) && g()
   },
   CHANNEL_DELETE: function(e) {
     let {
@@ -54,11 +54,11 @@ r = "PrivateChannelReadStateStore", (s = "displayName") in(i = _) ? Object.defin
         id: t
       }
     } = e, n = d.Z.getChannel(t);
-    return !!(null != n && (0, u.hv)(n.type)) && C()
+    return !!(null != n && (0, c.hv)(n.type)) && g()
   },
   WINDOW_FOCUS: function() {
     let e = d.Z.getChannel(p.Z.getChannelId());
-    return !!(null != e && (0, u.hv)(e.type)) && C()
+    return !!(null != e && (0, c.hv)(e.type)) && g()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -66,7 +66,7 @@ r = "PrivateChannelReadStateStore", (s = "displayName") in(i = _) ? Object.defin
         id: t
       }
     } = e, n = d.Z.getChannel(t);
-    return !!(null != n && (0, u.hv)(n.type)) && C()
+    return !!(null != n && (0, c.hv)(n.type)) && g()
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -77,8 +77,8 @@ r = "PrivateChannelReadStateStore", (s = "displayName") in(i = _) ? Object.defin
       }
       of t) {
       let t = d.Z.getChannel(e);
-      null != t && (0, u.hv)(t.type) && (n = !0)
+      null != t && (0, c.hv)(t.type) && (n = !0)
     }
-    return !!n && C()
+    return !!n && g()
   }
 })

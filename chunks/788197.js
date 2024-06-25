@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return x
+    return B
   }
 }), n(47120);
 var i = n(735250),
@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(906732),
   T = n(812206),
   h = n(835473),
-  S = n(199902),
-  f = n(271383),
-  N = n(430824),
-  A = n(158776),
+  f = n(199902),
+  S = n(271383),
+  A = n(430824),
+  N = n(158776),
   m = n(699516),
   O = n(626135),
-  R = n(785717),
-  p = n(621853),
+  p = n(785717),
+  R = n(621853),
   g = n(505737),
   C = n(318661),
   v = n(502762),
@@ -39,15 +39,15 @@ var i = n(735250),
   G = n(616922),
   w = n(530086);
 
-function B(e) {
+function x(e) {
   e.stopPropagation()
 }
 
-function x(e) {
+function B(e) {
   let {
     user: t,
     guildId: n,
-    channelId: x,
+    channelId: B,
     messageId: k,
     roleId: V,
     setNote: Z,
@@ -58,32 +58,32 @@ function x(e) {
     newAnalyticsLocations: W = []
   } = e, {
     analyticsLocations: K
-  } = (0, I.ZP)([...W, E.Z.PROFILE_POPOUT]), z = r.useRef(null), q = (0, C.ZP)(t.id, n), X = (0, l.Z)(z), Q = (0, s.e7)([p.Z], () => {
+  } = (0, I.ZP)([...W, E.Z.PROFILE_POPOUT]), z = r.useRef(null), q = (0, C.ZP)(t.id, n), X = (0, l.Z)(z), Q = (0, s.e7)([R.Z], () => {
     var e;
-    return null === (e = p.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), J = (0, s.e7)([N.Z], () => null != n ? N.Z.getGuild(n) : null), $ = (0, s.e7)([f.ZP], () => null != n ? f.ZP.getMember(n, t.id) : null), ee = t.isNonUserBot(), {
+    return null === (e = R.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
+  }), J = (0, s.e7)([A.Z], () => null != n ? A.Z.getGuild(n) : null), $ = (0, s.e7)([S.ZP], () => null != n ? S.ZP.getMember(n, t.id) : null), ee = t.isNonUserBot(), {
     activity: et,
     customStatusActivity: en,
     status: ei,
     isMobile: er,
     isApplicationStreaming: es
-  } = (0, s.cj)([S.Z, A.Z], () => {
-    let e = null != S.Z.getAnyStreamForUser(t.id);
+  } = (0, s.cj)([f.Z, N.Z], () => {
+    let e = null != f.Z.getAnyStreamForUser(t.id);
     return {
-      activity: A.Z.findActivity(t.id, t => {
+      activity: N.Z.findActivity(t.id, t => {
         let {
           type: n
         } = t;
         return e ? n === b.IIU.PLAYING : n !== b.IIU.CUSTOM_STATUS
       }),
-      customStatusActivity: A.Z.findActivity(t.id, e => {
+      customStatusActivity: N.Z.findActivity(t.id, e => {
         let {
           type: t
         } = e;
         return t === b.IIU.CUSTOM_STATUS
       }),
-      status: ee ? null : A.Z.getStatus(t.id),
-      isMobile: A.Z.isMobileOnline(t.id),
+      status: ee ? null : N.Z.getStatus(t.id),
+      isMobile: N.Z.isMobileOnline(t.id),
       isApplicationStreaming: e
     }
   }), [eo, ea] = r.useState(!1), el = r.useMemo(() => null != n ? {
@@ -122,7 +122,7 @@ function x(e) {
         O.default.track(b.rMx.OPEN_POPOUT, {
           type: "Profile Popout",
           guild_id: n,
-          channel_id: x,
+          channel_id: B,
           other_user_id: t.id,
           application_id: null != et ? et.application_id : void 0,
           application_name: null != et ? et.name : void 0,
@@ -149,11 +149,11 @@ function x(e) {
     }
   }, [$, null == et ? void 0 : et.application_id, eE, eo, n]), (0, i.jsx)(I.Gt, {
     value: K,
-    children: (0, i.jsx)(R.Mt, {
+    children: (0, i.jsx)(p.Mt, {
       layout: "POPOUT",
       userId: t.id,
       guildId: n,
-      channelId: x,
+      channelId: B,
       messageId: k,
       roleId: V,
       shouldTrackViewOnMount: null == $ || null != $.fullProfileLoadedTimestamp,
@@ -162,8 +162,8 @@ function x(e) {
         children: (0, i.jsx)(o.Dialog, {
           ref: z,
           "aria-label": t.username,
-          onClick: B,
-          onContextMenu: B,
+          onClick: x,
+          onContextMenu: x,
           style: e_.shouldShow ? {
             marginTop: D.Ao
           } : void 0,
@@ -177,7 +177,7 @@ function x(e) {
               user: t,
               displayProfile: q,
               guildId: n,
-              channelId: x,
+              channelId: B,
               onClose: () => null == H ? void 0 : H(),
               isMobile: er,
               isStreaming: (0, d.Z)(et),
@@ -199,7 +199,7 @@ function x(e) {
                 user: t,
                 guild: J,
                 guildMember: $,
-                channelId: x,
+                channelId: B,
                 onClose: H,
                 setNote: Z,
                 canDM: eu,

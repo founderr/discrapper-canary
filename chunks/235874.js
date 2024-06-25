@@ -45,10 +45,10 @@ class I extends(r = a.Component) {
       positionKey: I,
       preload: T,
       disablePointerEvents: h,
-      ignoreModalClicks: S,
-      closeOnScroll: f,
-      useMouseEnter: N,
-      renderPopout: A,
+      ignoreModalClicks: f,
+      closeOnScroll: S,
+      useMouseEnter: A,
+      renderPopout: N,
       layerContext: m
     } = this.props;
     return (0, o.jsx)(u.H, {
@@ -75,15 +75,15 @@ class I extends(r = a.Component) {
       useRawTargetDimensions: c,
       renderPopout: this.renderPopout,
       spacing: d,
-      shouldShow: null != A && t,
+      shouldShow: null != N && t,
       onRequestOpen: i,
       onRequestClose: r,
       onShiftClick: E,
       positionKey: I,
       disablePointerEvents: h,
-      ignoreModalClicks: S,
-      closeOnScroll: f,
-      useMouseEnter: N,
+      ignoreModalClicks: f,
+      closeOnScroll: S,
+      useMouseEnter: A,
       layerContext: m,
       children: e
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return R
   }
 }), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
@@ -18,11 +18,11 @@ var i = n(735250),
   I = n(358085),
   T = n(998502),
   h = n(981631),
-  S = n(689938),
-  f = n(214932),
-  N = n(331651);
+  f = n(689938),
+  S = n(214932),
+  A = n(331651);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -62,8 +62,8 @@ function m(e) {
   return (0, i.jsx)("img", {
     ref: T,
     src: u,
-    className: o()(f.icon, {
-      [f.image]: !c
+    className: o()(S.icon, {
+      [S.image]: !c
     }),
     "aria-hidden": !0,
     alt: "",
@@ -84,13 +84,13 @@ class O extends r.Component {
       file: this.props.upload.item.file
     });
     return (0, i.jsx)("div", {
-      className: o()(f.icon, {
-        [f[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
+      className: o()(S.icon, {
+        [S[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
       })
     })
   }
 }
-class R extends r.Component {
+class p extends r.Component {
   componentDidMount() {
     var e;
     (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.ow.WEB && E.default.track(h.rMx.OPEN_MODAL, {
@@ -117,40 +117,40 @@ class R extends r.Component {
       hasSpoiler: l
     } = this.state;
     return (0, i.jsxs)(a.ModalRoot, {
-      "aria-label": S.Z.Messages.ATTACH_FILES,
+      "aria-label": f.Z.Messages.ATTACH_FILES,
       size: a.ModalSize.DYNAMIC,
       transitionState: t,
-      className: o()(f.uploadModal),
+      className: o()(S.uploadModal),
       children: [(0, i.jsxs)("div", {
-        className: f.inner,
+        className: S.inner,
         children: [(0, i.jsxs)("div", {
-          className: o()(f.file, {
-            [f.expandable]: e.isImage
+          className: o()(S.file, {
+            [S.expandable]: e.isImage
           }),
           children: [(0, i.jsx)(O, {
             upload: e
           }), (0, i.jsxs)("div", {
-            className: f.description,
+            className: S.description,
             children: [(0, i.jsx)("div", {
-              className: f.filename,
-              children: e.showLargeMessageDialog ? S.Z.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({
+              className: S.filename,
+              children: e.showLargeMessageDialog ? f.Z.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({
                 maxLength: n
               }) : e.filename
             }), e.showLargeMessageDialog ? (0, i.jsx)("div", {
-              className: f.subtitle,
-              children: S.Z.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
+              className: S.subtitle,
+              children: f.Z.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
             }) : null]
           })]
         }), (0, i.jsx)("div", {
-          className: f.comment,
+          className: S.comment,
           children: (0, i.jsxs)(r.Fragment, {
             children: [(0, i.jsx)("div", {
-              className: f.label,
+              className: S.label,
               children: (0, i.jsx)("span", {
-                children: S.Z.Messages.UPLOAD_AREA_FILENAME
+                children: f.Z.Messages.UPLOAD_AREA_FILENAME
               })
             }), (0, i.jsx)(a.TextInput, {
-              className: o()(f.channelTextAreaUpload, N.marginTop8),
+              className: o()(S.channelTextAreaUpload, A.marginTop8),
               value: this.state.filename,
               onChange: e => this.setState({
                 filename: e
@@ -160,13 +160,13 @@ class R extends r.Component {
               }
             }), e.isImage ? (0, i.jsxs)(r.Fragment, {
               children: [(0, i.jsx)("div", {
-                className: f.label,
+                className: S.label,
                 children: (0, i.jsx)("span", {
-                  children: S.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
+                  children: f.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                 })
               }), (0, i.jsx)(a.TextInput, {
-                className: o()(f.channelTextAreaUpload, N.marginTop8),
-                placeholder: S.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
+                className: o()(S.channelTextAreaUpload, A.marginTop8),
+                placeholder: f.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                 value: this.state.description,
                 onChange: e => this.setState({
                   description: e
@@ -176,35 +176,35 @@ class R extends r.Component {
                 }
               })]
             }) : null, !0 !== s && (0, i.jsx)(a.Checkbox, {
-              className: N.marginBottom20,
+              className: A.marginBottom20,
               value: l,
               onChange: (e, t) => this.setState({
                 hasSpoiler: t
               }),
               children: (0, i.jsx)(a.Text, {
                 variant: "text-sm/normal",
-                children: S.Z.Messages.SPOILER_MARK_SELECTED
+                children: f.Z.Messages.SPOILER_MARK_SELECTED
               })
             })]
           })
         })]
       }), (0, i.jsx)("div", {
-        className: f.footer,
+        className: S.footer,
         children: (0, i.jsxs)("div", {
-          className: o()(f.hasSpoilers, f.footerRightAlign),
+          className: o()(S.hasSpoilers, S.footerRightAlign),
           children: [(0, i.jsx)(a.Button, {
             type: "button",
             look: a.Button.Looks.LINK,
             color: a.Button.Colors.PRIMARY,
             onClick: this.cancel,
             children: (0, i.jsx)("span", {
-              children: S.Z.Messages.CANCEL
+              children: f.Z.Messages.CANCEL
             })
           }), (0, i.jsx)(a.Button, {
             type: "submit",
             onClick: this.handleSubmit,
             children: (0, i.jsx)("span", {
-              children: S.Z.Messages.ATTACHMENT_MODAL_SAVE
+              children: f.Z.Messages.ATTACHMENT_MODAL_SAVE
             })
           })]
         })
@@ -213,16 +213,16 @@ class R extends r.Component {
   }
   constructor(e) {
     var t, n, i, r, s, o;
-    super(e), A(this, "cancelAll", () => {
+    super(e), N(this, "cancelAll", () => {
       l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose()
-    }), A(this, "cancel", () => {
+    }), N(this, "cancel", () => {
       this.props.onClose()
-    }), A(this, "handleTextChange", (e, t, n) => {
+    }), N(this, "handleTextChange", (e, t, n) => {
       this.setState({
         textValue: t,
         richValue: n
       })
-    }), A(this, "handleSubmit", () => {
+    }), N(this, "handleSubmit", () => {
       let {
         upload: e,
         onClose: t,
@@ -251,9 +251,9 @@ class R extends r.Component {
   }
 }
 
-function p(e) {
+function R(e) {
   let t = (0, c.Z)();
-  return e.upload.item.platform !== u.ow.WEB ? null : (0, i.jsx)(R, {
+  return e.upload.item.platform !== u.ow.WEB ? null : (0, i.jsx)(p, {
     ...e,
     file: e.upload.item.file,
     messageMaxLength: t

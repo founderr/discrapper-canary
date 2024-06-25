@@ -1,10 +1,10 @@
 var a = t(735250);
 t(470079);
 var r = t(120356),
-  s = t.n(r),
-  i = t(481060),
-  l = t(246364),
-  o = t(700833),
+  i = t.n(r),
+  s = t(481060),
+  o = t(246364),
+  l = t(700833),
   c = t(689938),
   d = t(237261);
 n.Z = function(e) {
@@ -13,27 +13,27 @@ n.Z = function(e) {
     guild: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: s()(d.spacingContainer, d.leftRailIconContainer, d.backgroundContainer),
+    className: i()(d.spacingContainer, d.leftRailIconContainer, d.backgroundContainer),
     children: [(0, a.jsx)("div", {
       className: d.iconContainer,
-      children: (0, a.jsx)(i.BookCheckIcon, {
+      children: (0, a.jsx)(s.BookCheckIcon, {
         size: "custom",
         color: "currentColor",
         width: 18,
         height: 20,
         className: d.icon
       })
-    }), (0, a.jsxs)(i.FormSection, {
-      children: [(0, a.jsx)(i.FormTitle, {
+    }), (0, a.jsxs)(s.FormSection, {
+      children: [(0, a.jsx)(s.FormTitle, {
         tag: "h3",
         className: d.leftRailIconContainerTitle,
         children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
-      }), (0, a.jsx)(i.FormText, {
+      }), (0, a.jsx)(s.FormText, {
         className: d.leftRailIconContainerDescription,
-        type: i.FormText.Types.DESCRIPTION,
+        type: s.FormText.Types.DESCRIPTION,
         children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
-      }), (0, a.jsx)(i.Button, {
-        onClick: () => (0, o.Md)(l.QJ.TERMS, n, t),
+      }), (0, a.jsx)(s.Button, {
+        onClick: () => (0, l.Md)(o.QJ.TERMS, n, t),
         children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
       })]
     })]

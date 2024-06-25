@@ -3,7 +3,7 @@ a.d(t, {
     return l
   },
   S: function() {
-    return r
+    return i
   }
 });
 var n = a(470079);
@@ -22,6 +22,6 @@ let l = n.createContext({
   setCropData: () => {}
 });
 
-function r() {
+function i() {
   return n.useContext(l)
 }

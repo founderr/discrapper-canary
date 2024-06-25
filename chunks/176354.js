@@ -4,7 +4,7 @@ n.d(t, {
     return O
   },
   qc: function() {
-    return R
+    return p
   },
   sp: function() {
     return m
@@ -24,18 +24,18 @@ var i = n(738774),
   I = n(185923);
 let T = new Set([I.Z5.PREMIUM_LOCKED, I.Z5.ROLE_SUBSCRIPTION_LOCKED]),
   h = new Set([I.Z5.PREMIUM_LOCKED, I.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, I.Z5.ROLE_SUBSCRIPTION_LOCKED, I.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-  S = new Set([I.Z5.DISALLOW_EXTERNAL, I.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, I.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
+  f = new Set([I.Z5.DISALLOW_EXTERNAL, I.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, I.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
 
-function f(e) {
+function S(e) {
   if (e.type === r.B.GUILD) return !0;
   return null != e.guildId
 }
 
-function N(e, t) {
-  return null != e && null != t && (!f(e) || t === e.guildId)
+function A(e, t) {
+  return null != e && null != t && (!S(e) || t === e.guildId)
 }
 
-function A(e) {
+function N(e) {
   let {
     emoji: t,
     channel: n,
@@ -43,21 +43,21 @@ function A(e) {
     intention: u,
     forceIncludeExternalGuilds: _
   } = e;
-  if (!f(t)) return null;
+  if (!S(t)) return null;
   let c = null != n && (0, o.zi)(n.type),
     T = null != n && (0, o.bw)(n.type),
-    h = N(t, r),
-    S = a.Z.can(E.Plq.USE_EXTERNAL_EMOJIS, n);
+    h = A(t, r),
+    f = a.Z.can(E.Plq.USE_EXTERNAL_EMOJIS, n);
   if (u === I.Hz.COMMUNITY_CONTENT) return h && null != t.guildId && t.available ? null : I.Z5.DISALLOW_EXTERNAL;
-  if (!(0, I.Gt)(u) && !N(t, r) && !_ || (c || T) && !h && !S) return I.Z5.DISALLOW_EXTERNAL;
+  if (!(0, I.Gt)(u) && !A(t, r) && !_ || (c || T) && !h && !f) return I.Z5.DISALLOW_EXTERNAL;
   if (null != t.id && !t.available) return I.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
-  let A = l.default.getCurrentUser();
-  if (!d.ZP.canUseEmojisEverywhere(A) && !h) {
+  let N = l.default.getCurrentUser();
+  if (!d.ZP.canUseEmojisEverywhere(N) && !h) {
     if (u === I.Hz.STATUS) return I.Z5.PREMIUM_LOCKED;
     if (!t.managed) return I.Z5.PREMIUM_LOCKED
   }
   if ((0, s.Fv)(t, null != r ? r : void 0)) return (0, i.Ol)(t.guildId) ? I.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : I.Z5.ROLE_SUBSCRIPTION_LOCKED;
-  return !t.animated || d.ZP.canUseAnimatedEmojis(A) || (0, s.yH)(t) ? null : I.Z5.PREMIUM_LOCKED
+  return !t.animated || d.ZP.canUseAnimatedEmojis(N) || (0, s.yH)(t) ? null : I.Z5.PREMIUM_LOCKED
 }
 
 function m(e, t) {
@@ -82,7 +82,7 @@ async function O(e) {
   return await _.Z.getEmojiColors(e)
 }
 
-function R(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
     {
       id: n,
@@ -102,9 +102,9 @@ t.ZP = {
   },
   filterUnsupportedEmojis: _.Z.filterUnsupportedEmojis,
   getURL: _.Z.getURL,
-  isInternalEmojiForGuildId: N,
-  getEmojiUnavailableReason: A,
-  isCustomEmoji: f,
+  isInternalEmojiForGuildId: A,
+  getEmojiUnavailableReason: N,
+  isCustomEmoji: S,
   getEmojiUnavailableReasons(e) {
     let {
       categoryEmojis: t,
@@ -114,13 +114,13 @@ t.ZP = {
       computeUnfiltered: s = !1
     } = e, o = new Set, a = 0, l = s ? [] : void 0, u = 0, _ = !1;
     for (let e of t) {
-      let t = A({
+      let t = N({
         emoji: e,
         channel: n,
         guildId: i,
         intention: r
       });
-      null != t ? (S.has(t) ? a++ : s && (null == l || l.push(e)), T.has(t) && (!_ && t === I.Z5.PREMIUM_LOCKED && (_ = !0), null != e.id && o.add(e.id), u++)) : s && (null == l || l.push(e))
+      null != t ? (f.has(t) ? a++ : s && (null == l || l.push(e)), T.has(t) && (!_ && t === I.Z5.PREMIUM_LOCKED && (_ = !0), null != e.id && o.add(e.id), u++)) : s && (null == l || l.push(e))
     }
     return {
       emojisDisabled: o,
@@ -131,11 +131,11 @@ t.ZP = {
     }
   },
   isEmojiFiltered(e) {
-    let t = A(e);
-    return S.has(t)
+    let t = N(e);
+    return f.has(t)
   },
   isEmojiPremiumLocked(e) {
-    let t = A(e);
+    let t = N(e);
     return T.has(t)
   },
   isEmojiCategoryNitroLocked(e) {
@@ -146,7 +146,7 @@ t.ZP = {
       intention: r
     } = e, s = !1, o = 0;
     for (let e of t) {
-      let t = A({
+      let t = N({
         emoji: e,
         channel: n,
         intention: r,
@@ -160,7 +160,7 @@ t.ZP = {
     return this.isEmojiFiltered(e) || this.isEmojiPremiumLocked(e)
   },
   isEmojiDisabled(e) {
-    let t = A(e);
+    let t = N(e);
     return h.has(t)
   },
   isFileTooBig: e => e.size > 2097152,

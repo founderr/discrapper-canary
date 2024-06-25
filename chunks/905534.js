@@ -1,9 +1,9 @@
 n(177593);
-var s = n(626135),
-  i = n(189800),
-  l = n(996106),
-  a = n(34954),
-  r = n(986768),
+var i = n(626135),
+  s = n(189800),
+  a = n(996106),
+  r = n(34954),
+  l = n(986768),
   o = n(981631);
 t.Z = {
   [o.Etm.SUBSCRIBE]: {
@@ -12,37 +12,37 @@ t.Z = {
         server: t,
         socket: n,
         evt: c,
-        args: u
-      } = e, d = t.events[c];
-      if (null == d) throw new l.Z({
+        args: d
+      } = e, u = t.events[c];
+      if (null == u) throw new a.Z({
         errorCode: o.lTL.INVALID_EVENT
       }, "Invalid event: ".concat(c));
-      if (!(0, a.Z)(n.authorization.scopes, d.scope)) throw new l.Z({
+      if (!(0, r.Z)(n.authorization.scopes, u.scope)) throw new a.Z({
         errorCode: o.lTL.INVALID_PERMISSIONS
       }, "Not authenticated or invalid scope");
-      if (i.N.getCurrentConfig({
+      if (s.N.getCurrentConfig({
           location: "RPCServer"
-        }).enabled && s.default.track(o.rMx.RPC_SUBSCRIPTION_REQUESTED, {
+        }).enabled && i.default.track(o.rMx.RPC_SUBSCRIPTION_REQUESTED, {
           event: c,
-          scope: "object" == typeof d.scope ? JSON.stringify(d.scope) : d.scope,
+          scope: "object" == typeof u.scope ? JSON.stringify(u.scope) : u.scope,
           application_id: n.application.id,
           socket_scope: n.authorization.scopes.toString()
-        }), null != d.validation) {
+        }), null != u.validation) {
         let e = await t.getJoi();
-        if (null != e.validate(u, d.validation(e), {
+        if (null != e.validate(d, u.validation(e), {
             convert: !1
-          }).error) throw new l.Z({
+          }).error) throw new a.Z({
           errorCode: o.lTL.INVALID_PAYLOAD
         }, "Invalid subscription parameters provided")
       }
-      let E = d.handler({
-          args: u,
+      let _ = u.handler({
+          args: d,
           socket: n
         }),
-        h = await (0, r.V)(n, c, u);
+        E = await (0, l.V)(n, c, d);
       return new Promise(e => {
         setImmediate(() => {
-          t.addSubscription(n, c, u, E), null != h && t.dispatchToSubscriptions(c, e => e.socket.id === n.id, h)
+          t.addSubscription(n, c, d, _), null != E && t.dispatchToSubscriptions(c, e => e.socket.id === n.id, E)
         }), e({
           evt: c
         })
@@ -54,14 +54,14 @@ t.Z = {
       let {
         server: t,
         socket: n,
-        evt: s,
-        args: i
+        evt: i,
+        args: s
       } = e;
-      if (null == t.events[s]) throw new l.Z({
+      if (null == t.events[i]) throw new a.Z({
         errorCode: o.lTL.INVALID_EVENT
-      }, "Invalid event: ".concat(s));
-      return t.removeSubscription(n, s, i), {
-        evt: s
+      }, "Invalid event: ".concat(i));
+      return t.removeSubscription(n, i, s), {
+        evt: i
       }
     }
   }

@@ -4,40 +4,40 @@ t.d(s, {
   }
 }), t(653041), t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(120356),
-  l = t.n(a),
-  r = t(392711),
-  o = t.n(r),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(392711),
+  l = t.n(o),
   c = t(442837),
-  E = t(481060),
-  d = t(668781),
-  _ = t(292556),
-  T = t(92114),
-  S = t(419363),
-  u = t(818083),
+  d = t(481060),
+  _ = t(668781),
+  E = t(292556),
+  u = t(92114),
+  T = t(419363),
+  S = t(818083),
   I = t(688465),
   N = t(487419),
-  A = t(378364),
-  C = t(197344),
-  O = t(734934),
-  m = t(223683),
-  h = t(312400),
-  g = t(115345),
+  C = t(378364),
+  A = t(197344),
+  m = t(734934),
+  O = t(223683),
+  g = t(312400),
+  h = t(115345),
   R = t(392888),
-  M = t(921801),
+  p = t(921801),
   x = t(657254),
-  D = t(470647),
-  p = t(292959),
-  L = t(9156),
-  P = t(626135),
-  Z = t(912101),
-  f = t(358085),
+  M = t(470647),
+  D = t(292959),
+  f = t(9156),
+  L = t(626135),
+  P = t(912101),
+  Z = t(358085),
   v = t(709054),
-  j = t(557177),
-  U = t(695346),
-  B = t(675478),
-  b = t(33656),
+  b = t(557177),
+  j = t(695346),
+  U = t(675478),
+  B = t(33656),
   G = t(726985),
   F = t(981631),
   V = t(468788),
@@ -58,27 +58,27 @@ function w(e) {
   let {
     label: s,
     enabled: t,
-    disabled: i,
-    onPreview: a,
-    onChange: l,
-    tooltip: r
+    disabled: a,
+    onPreview: i,
+    onChange: r,
+    tooltip: o
   } = e;
-  return (0, n.jsx)(E.FormSwitch, {
+  return (0, n.jsx)(d.FormSwitch, {
     className: Y.soundRow,
     value: t,
-    onChange: l,
-    disabled: i,
-    tooltipNote: r,
+    onChange: r,
+    disabled: a,
+    tooltipNote: o,
     children: (0, n.jsxs)("div", {
       className: Y.notificationSound,
       children: [(0, n.jsx)("div", {
         className: Y.soundName,
         children: s
-      }), (0, n.jsx)(E.Clickable, {
+      }), (0, n.jsx)(d.Clickable, {
         className: Y.soundIcon,
-        onClick: a,
+        onClick: i,
         "aria-label": y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_PREVIEW_SOUND,
-        children: (0, n.jsx)(E.VoiceNormalIcon, {
+        children: (0, n.jsx)(d.VoiceNormalIcon, {
           size: "xs",
           color: "currentColor",
           className: Y.icon,
@@ -93,39 +93,39 @@ function W(e) {
   let {
     disabledSounds: s,
     disableAllSounds: t,
-    notifyMessagesInSelectedChannel: a
+    notifyMessagesInSelectedChannel: i
   } = e, {
-    allowAprilFoolsSoundpack: r
+    allowAprilFoolsSoundpack: o
   } = x.Z.useExperiment({
     location: "791c79_1"
   }, {
     autoTrackExposure: !1
-  }), o = C.Z.useIsRingtoneEligible();
-  i.useEffect(() => {
+  }), l = A.Z.useIsRingtoneEligible();
+  a.useEffect(() => {
     x.Z.trackExposure({
       location: "791c79_3"
     })
   }, []);
-  let c = i.useRef(),
-    d = (0, O.p)(),
-    T = i.useCallback((e, s) => {
-      s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = j.GN(e)
+  let c = a.useRef(),
+    _ = (0, m.p)(),
+    u = a.useCallback((e, s) => {
+      s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = b.GN(e)
     }, []),
-    S = i.useCallback((e, t) => {
+    T = a.useCallback((e, t) => {
       let n = s.filter(s => s !== e);
-      !t && n.push(e), e === A.Z.ringtone && P.default.track(F.rMx.EVENT_RINGTONE_TOGGLED, {
+      !t && n.push(e), e === C.Z.ringtone && L.default.track(F.rMx.EVENT_RINGTONE_TOGGLED, {
         toggled_on: t,
         sound_name: e
-      }), _.default.setDisabledSounds(n)
+      }), E.default.setDisabledSounds(n)
     }, [s]);
-  i.useEffect(() => () => {
+  a.useEffect(() => () => {
     var e;
     null === (e = c.current) || void 0 === e || e.stop()
   });
-  let u = [{
+  let S = [{
     label: y.Z.Messages.SOUND_MESSAGE,
     sound: "message1",
-    focusModeDisabled: d
+    focusModeDisabled: _
   }, {
     label: y.Z.Messages.SOUND_DEAFEN,
     sound: "deafen"
@@ -162,9 +162,9 @@ function W(e) {
   }, {
     label: y.Z.Messages.SOUND_INCOMING_RING,
     sound: "call_ringing"
-  }, ...o ? [{
-    label: A.Z.getRingtoneSettingsLabel(),
-    sound: A.Z.ringtone,
+  }, ...l ? [{
+    label: C.Z.getRingtoneSettingsLabel(),
+    sound: C.Z.ringtone,
     disabled: s.includes("call_ringing")
   }] : [], {
     label: y.Z.Messages.SOUND_STREAM_STARTED,
@@ -194,43 +194,43 @@ function W(e) {
     label: y.Z.Messages.SOUND_INVITED_TO_SPEAK,
     sound: "reconnect"
   }];
-  return (0, n.jsx)(M.F, {
+  return (0, n.jsx)(p.F, {
     setting: G.s6.NOTIFICATIONS_SOUNDS,
-    children: (0, n.jsxs)(E.FormSection, {
-      tag: E.FormTitleTags.H1,
+    children: (0, n.jsxs)(d.FormSection, {
+      tag: d.FormTitleTags.H1,
       title: y.Z.Messages.SOUNDS,
-      children: [r ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(E.FormTitle, {
+      children: [o ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(d.FormTitle, {
           className: H.marginBottom20,
           children: y.Z.Messages.SOUNDPACK_LABEL
-        }), (0, n.jsx)(D.Z, {
-          className: l()(Y.soundpackSelect, H.marginBottom40)
+        }), (0, n.jsx)(M.Z, {
+          className: r()(Y.soundpackSelect, H.marginBottom40)
         })]
-      }) : null, (0, n.jsx)(E.FormSwitch, {
+      }) : null, (0, n.jsx)(d.FormSwitch, {
         note: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_NOTE,
-        value: a,
-        onChange: _.default.setNotifyMessagesInSelectedChannel,
+        value: i,
+        onChange: E.default.setNotifyMessagesInSelectedChannel,
         children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_LABEL
-      }), (0, n.jsx)(E.FormSwitch, {
+      }), (0, n.jsx)(d.FormSwitch, {
         note: y.Z.Messages.SOUND_DISABLE_ALL_NOTE,
         value: t,
-        onChange: _.default.toggleDisableAllSounds,
+        onChange: E.default.toggleDisableAllSounds,
         children: y.Z.Messages.SOUND_DISABLE_ALL
-      }), u.map(e => {
+      }), S.map(e => {
         let {
-          label: i,
-          sound: a,
-          disabled: l,
-          focusModeDisabled: r
+          label: a,
+          sound: i,
+          disabled: r,
+          focusModeDisabled: o
         } = e;
         return (0, n.jsx)(w, {
-          label: i,
-          disabled: t || !0 === l || !0 === r,
-          tooltip: r ? y.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
-          onChange: e => S(a, e),
-          onPreview: e => T(a, e),
-          enabled: !t && !s.includes(a) && !0 !== r
-        }, a)
+          label: a,
+          disabled: t || !0 === r || !0 === o,
+          tooltip: o ? y.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
+          onChange: e => T(i, e),
+          onPreview: e => u(i, e),
+          enabled: !t && !s.includes(i) && !0 !== o
+        }, i)
       })]
     })
   })
@@ -238,169 +238,169 @@ function W(e) {
 
 function K() {
   let e = (0, c.e7)([N.Z], () => N.Z.getGuildAlertSettings()),
-    [s, t] = i.useState(null),
-    a = v.default.keys(e).map(s => {
+    [s, t] = a.useState(null),
+    i = v.default.keys(e).map(s => {
       let t = e[s];
       return {
         label: t.guildName,
         value: t.guildId
       }
     });
-  return 0 === Object.keys(e).length ? null : (0, n.jsxs)(M.F, {
+  return 0 === Object.keys(e).length ? null : (0, n.jsxs)(p.F, {
     setting: G.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
-    children: [(0, n.jsxs)(E.Heading, {
+    children: [(0, n.jsxs)(d.Heading, {
       variant: "heading-lg/semibold",
-      className: l()(Y.titleWithBeta, H.marginBottom20),
+      className: r()(Y.titleWithBeta, H.marginBottom20),
       children: [y.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, n.jsx)(I.Z, {})]
-    }), (0, n.jsx)(E.FormText, {
-      type: E.FormTextTypes.DESCRIPTION,
+    }), (0, n.jsx)(d.FormText, {
+      type: d.FormTextTypes.DESCRIPTION,
       className: H.marginBottom20,
       children: y.Z.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
-    }), (0, n.jsxs)(E.FormItem, {
+    }), (0, n.jsxs)(d.FormItem, {
       title: y.Z.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
-      children: [(0, n.jsx)(E.SingleSelect, {
+      children: [(0, n.jsx)(d.SingleSelect, {
         className: null != s ? H.marginBottom20 : H.marginBottom40,
         value: s,
         onChange: e => {
           t(e)
         },
-        options: a
+        options: i
       }), null != s ? (0, n.jsxs)("div", {
         className: H.marginTop20,
-        children: [(0, n.jsxs)(M.F, {
+        children: [(0, n.jsxs)(p.F, {
           setting: G.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
-          children: [(0, n.jsx)(E.FormSwitch, {
-            className: l()(H.marginBottom20),
+          children: [(0, n.jsx)(d.FormSwitch, {
+            className: r()(H.marginBottom20),
             note: y.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
             value: !e[s].disableRaidAlertNag,
             onChange: () => {
-              (0, B.PS)(s, e => {
+              (0, U.PS)(s, e => {
                 e.disableRaidAlertNag = !e.disableRaidAlertNag
-              }, B.fy.INFREQUENT_USER_ACTION)
+              }, U.fy.INFREQUENT_USER_ACTION)
             },
             hideBorder: !0,
             children: y.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
-          }), (0, n.jsx)(E.FormDivider, {
-            className: l()(H.marginTop20, H.marginBottom40)
+          }), (0, n.jsx)(d.FormDivider, {
+            className: r()(H.marginTop20, H.marginBottom40)
           })]
-        }), (0, n.jsxs)(M.F, {
+        }), (0, n.jsxs)(p.F, {
           setting: G.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
-          children: [(0, n.jsx)(E.FormSwitch, {
+          children: [(0, n.jsx)(d.FormSwitch, {
             className: H.marginBottom20,
             note: y.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
             value: !e[s].disableRaidAlertPush,
             onChange: () => {
-              (0, B.PS)(s, e => {
+              (0, U.PS)(s, e => {
                 e.disableRaidAlertPush = !e.disableRaidAlertPush
-              }, B.fy.INFREQUENT_USER_ACTION)
+              }, U.fy.INFREQUENT_USER_ACTION)
             },
             hideBorder: !0,
             children: y.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
-          }), (0, n.jsx)(E.FormDivider, {
-            className: l()(H.marginTop20, H.marginBottom40)
+          }), (0, n.jsx)(d.FormDivider, {
+            className: r()(H.marginTop20, H.marginBottom40)
           })]
         })]
-      }) : null, null != s ? null : (0, n.jsx)(E.FormDivider, {
-        className: l()(H.marginTop20, H.marginBottom40)
+      }) : null, null != s ? null : (0, n.jsx)(d.FormDivider, {
+        className: r()(H.marginTop20, H.marginBottom40)
       })]
     })]
   })
 }
-class z extends i.PureComponent {
+class z extends a.PureComponent {
   handleDesktopChange(e) {
     let s = e ? F.qrD.ALL : F.qrD.NEVER;
     if (s !== F.qrD.NEVER) {
       var t;
-      t = "UserSettingsModal", Z.Z.requestPermission(e => {
+      t = "UserSettingsModal", P.Z.requestPermission(e => {
         let s = e ? F.$Ab.ENABLED : F.$Ab.BLOCKED;
-        _.default.setPermissionsState(s, t)
+        E.default.setPermissionsState(s, t)
       })
-    } else _.default.setDesktopType(s)
+    } else E.default.setDesktopType(s)
   }
   handleTTSChange(e) {
     let s = e.value;
-    _.default.setTTSType(s)
+    E.default.setTTSType(s)
   }
   render() {
     let {
       desktopType: e,
       afkTimeout: s,
       disableUnreadBadge: t,
-      taskbarFlash: i,
-      disabledSounds: a,
-      disableAllSounds: r,
+      taskbarFlash: a,
+      disabledSounds: i,
+      disableAllSounds: o,
       notifyMessagesInSelectedChannel: c,
-      focusMode: d
-    } = this.props, _ = f.isPlatformEmbedded && (0, f.isWindows)(), T = o().range(1, 11).map(e => ({
+      focusMode: _
+    } = this.props, E = Z.isPlatformEmbedded && (0, Z.isWindows)(), u = l().range(1, 11).map(e => ({
       value: 60 * e,
       label: y.Z.Messages.DURATION_MINUTES.format({
         minutes: e
       })
     }));
-    return (0, n.jsxs)(E.FormSection, {
-      tag: E.FormTitleTags.H1,
+    return (0, n.jsxs)(d.FormSection, {
+      tag: d.FormTitleTags.H1,
       title: y.Z.Messages.NOTIFICATIONS,
-      children: [(0, n.jsx)(M.F, {
+      children: [(0, n.jsx)(p.F, {
         setting: G.s6.NOTIFICATIONS_ENABLE_DESKTOP,
-        children: (0, n.jsx)(E.FormSwitch, {
+        children: (0, n.jsx)(d.FormSwitch, {
           className: H.marginBottom20,
-          value: e !== F.qrD.NEVER && !d,
+          value: e !== F.qrD.NEVER && !_,
           onChange: this.handleDesktopChange,
           note: y.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
-          disabled: d,
-          tooltipNote: d ? y.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
+          disabled: _,
+          tooltipNote: _ ? y.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
           children: y.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE
         })
-      }), (0, n.jsx)(X, {}), (0, n.jsx)(M.F, {
+      }), (0, n.jsx)(X, {}), (0, n.jsx)(p.F, {
         setting: G.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
-        children: (0, n.jsx)(E.FormSwitch, {
-          className: _ ? H.marginBottom20 : H.marginBottom40,
+        children: (0, n.jsx)(d.FormSwitch, {
+          className: E ? H.marginBottom20 : H.marginBottom40,
           value: !t,
           note: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
           onChange: this.handleToggleShowUnreadBadge,
           children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
         })
-      }), (0, n.jsx)(M.F, {
+      }), (0, n.jsx)(p.F, {
         setting: G.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
-        children: (0, n.jsx)(E.FormSwitch, {
+        children: (0, n.jsx)(d.FormSwitch, {
           className: H.marginBottom40,
-          value: i,
+          value: a,
           note: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
           onChange: this.handleToggleShowFlash,
           children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL
         })
-      }), (0, n.jsx)(q, {}), (0, n.jsx)(M.F, {
+      }), (0, n.jsx)(q, {}), (0, n.jsx)(p.F, {
         setting: G.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
-        children: (0, n.jsxs)(E.FormItem, {
+        children: (0, n.jsxs)(d.FormItem, {
           title: y.Z.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
-          children: [(0, n.jsx)(E.SingleSelect, {
+          children: [(0, n.jsx)(d.SingleSelect, {
             value: s,
-            onChange: U.CM.updateSetting,
-            options: T
-          }), (0, n.jsx)(E.FormText, {
-            type: E.FormTextTypes.DESCRIPTION,
+            onChange: j.CM.updateSetting,
+            options: u
+          }), (0, n.jsx)(d.FormText, {
+            type: d.FormTextTypes.DESCRIPTION,
             className: H.marginTop8,
             children: y.Z.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
-          }), (0, n.jsx)(E.FormDivider, {
-            className: l()(H.marginTop40, H.marginBottom40)
+          }), (0, n.jsx)(d.FormDivider, {
+            className: r()(H.marginTop40, H.marginBottom40)
           })]
         })
-      }), this.renderTTS(), (0, n.jsx)(K, {}), (0, n.jsx)(E.FormItem, {
+      }), this.renderTTS(), (0, n.jsx)(K, {}), (0, n.jsx)(d.FormItem, {
         children: (0, n.jsx)(W, {
-          disabledSounds: a,
-          disableAllSounds: r,
+          disabledSounds: i,
+          disableAllSounds: o,
           notifyMessagesInSelectedChannel: c
         })
-      }), (0, n.jsx)(b.Z, {})]
+      }), (0, n.jsx)(B.Z, {})]
     })
   }
   constructor(...e) {
     super(...e), k(this, "handleToggleShowUnreadBadge", () => {
-      _.default.setDisableUnreadBadge(!this.props.disableUnreadBadge)
+      E.default.setDisableUnreadBadge(!this.props.disableUnreadBadge)
     }), k(this, "handleToggleShowFlash", () => {
-      _.default.setTaskbarFlash(!this.props.taskbarFlash)
+      E.default.setTaskbarFlash(!this.props.taskbarFlash)
     }), k(this, "renderTTS", () => {
-      if (!S.Zh) return null;
+      if (!T.Zh) return null;
       let e = [{
         name: y.Z.Messages.TTS_ALLS,
         value: F.PrB.ALL_CHANNELS
@@ -411,27 +411,27 @@ class z extends i.PureComponent {
         name: y.Z.Messages.TTS_NEVER,
         value: F.PrB.NEVER
       }];
-      return (0, n.jsxs)(M.F, {
+      return (0, n.jsxs)(p.F, {
         setting: G.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
-        children: [(0, n.jsxs)(E.FormItem, {
+        children: [(0, n.jsxs)(d.FormItem, {
           title: y.Z.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
-          children: [(0, n.jsx)(E.FormText, {
-            type: E.FormTextTypes.DESCRIPTION,
+          children: [(0, n.jsx)(d.FormText, {
+            type: d.FormTextTypes.DESCRIPTION,
             className: H.marginBottom8,
             children: y.Z.Messages.FORM_DESCRIPTION_TTS
-          }), (0, n.jsx)(E.RadioGroup, {
+          }), (0, n.jsx)(d.RadioGroup, {
             options: e,
             onChange: this.handleTTSChange,
             value: this.props.ttsType
           })]
-        }), (0, n.jsx)(E.FormDivider, {
-          className: l()(H.marginTop40, H.marginBottom40)
+        }), (0, n.jsx)(d.FormDivider, {
+          className: r()(H.marginTop40, H.marginBottom40)
         })]
       })
     })
   }
 }
-let Q = (0, u.B)({
+let Q = (0, S.B)({
   kind: "user",
   id: "2024-01_mention_on_all_messages",
   label: "Mention on all messages",
@@ -453,14 +453,14 @@ function X() {
     }, {
       autoTrackExposure: !1
     }).enabled,
-    s = (0, c.e7)([L.ZP], () => L.ZP.mentionOnAllMessages);
-  return e ? (0, n.jsx)(M.F, {
+    s = (0, c.e7)([f.ZP], () => f.ZP.mentionOnAllMessages);
+  return e ? (0, n.jsx)(p.F, {
     setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
-    children: (0, n.jsx)(E.FormSwitch, {
+    children: (0, n.jsx)(d.FormSwitch, {
       className: H.marginBottom20,
       value: s,
       onChange: e => {
-        T.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e)
+        u.Z.setAccountFlag(V.c.MENTION_ON_ALL_MESSAGES, e)
       },
       note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
       children: "Mention on all messages?"
@@ -469,101 +469,101 @@ function X() {
 }
 
 function q() {
-  let e = h.xT.useExperiment({
+  let e = g.xT.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
     }).enabled,
     {
       manuallyOpen: s
-    } = h.fs.useExperiment({
+    } = g.fs.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
     }),
-    t = (0, c.e7)([L.ZP], () => L.ZP.useNewNotifications),
-    [a, r] = i.useState(!1);
+    t = (0, c.e7)([f.ZP], () => f.ZP.useNewNotifications),
+    [i, o] = a.useState(!1);
   return e && (t || s) ? (0, n.jsxs)(n.Fragment, {
-    children: [t ? (0, n.jsx)(M.F, {
+    children: [t ? (0, n.jsx)(p.F, {
       setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
-      children: (0, n.jsx)(E.FormSwitch, {
+      children: (0, n.jsx)(d.FormSwitch, {
         className: H.marginBottom40,
         style: {
           marginTop: -20
         },
         value: t,
-        disabled: a || !t,
+        disabled: i || !t,
         note: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_SUBTITLE,
-        onChange: () => J(r),
+        onChange: () => J(o),
         children: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
-    }) : s ? (0, n.jsx)(M.F, {
+    }) : s ? (0, n.jsx)(p.F, {
       setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
-      children: (0, n.jsx)(E.FormSwitch, {
+      children: (0, n.jsx)(d.FormSwitch, {
         className: H.marginBottom40,
         value: t,
-        disabled: a || t,
+        disabled: i || t,
         note: "Turns on the new notification system",
         onChange: () => (0, R.R)(!0),
         children: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
-    }) : null, (0, n.jsxs)(M.F, {
+    }) : null, (0, n.jsxs)(p.F, {
       setting: G.s6.NOTIFICATIONS_NEW_SETTINGS,
-      children: [(0, n.jsx)(E.FormItem, {
+      children: [(0, n.jsx)(d.FormItem, {
         title: "New Notification Settings (Advanced, Staff Only)",
         children: (0, n.jsxs)("div", {
           style: {
             display: "flex",
             gap: 16
           },
-          children: [(0, n.jsx)(M.F, {
+          children: [(0, n.jsx)(p.F, {
             setting: G.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
-            children: (0, n.jsx)(E.Button, {
-              onClick: m.KP,
+            children: (0, n.jsx)(d.Button, {
+              onClick: O.KP,
               children: "Restore most recent snapshot"
             })
-          }), (0, n.jsx)(M.F, {
+          }), (0, n.jsx)(p.F, {
             setting: G.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
-            children: (0, n.jsx)(E.Button, {
+            children: (0, n.jsx)(d.Button, {
               onClick: () => {
                 (0, R.R)(!0)
               },
               children: "Launch Migration"
             })
-          }), (0, n.jsx)(M.F, {
+          }), (0, n.jsx)(p.F, {
             setting: G.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
-            children: (0, n.jsx)(E.FormSwitch, {
+            children: (0, n.jsx)(d.FormSwitch, {
               hideBorder: !0,
               value: t,
               onChange: e => {
-                T.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e)
+                u.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e)
               },
               children: "Toggle new system on/off"
             })
           })]
         })
-      }), (0, n.jsx)(E.FormDivider, {
-        className: l()(H.marginTop40, H.marginBottom40)
+      }), (0, n.jsx)(d.FormDivider, {
+        className: r()(H.marginTop40, H.marginBottom40)
       })]
     })]
   }) : null
 }
 async function J(e) {
   e(!0);
-  let s = await (0, m.Tn)();
-  0 === s.length ? await (0, g.oL)() : d.Z.show({
+  let s = await (0, O.Tn)();
+  0 === s.length ? await (0, h.oL)() : _.Z.show({
     title: y.Z.Messages.CONFIRM,
     body: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
       date: new Date(s[s.length - 1].recorded_at)
     }),
     cancelText: y.Z.Messages.CANCEL,
     confirmText: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION,
-    onConfirm: g.oL
+    onConfirm: h.oL
   }), e(!1)
 }
 
 function $(e) {
-  let s = (0, O.p)();
+  let s = (0, m.p)();
   return (0, n.jsx)(z, {
     ...e,
     focusMode: s
@@ -571,17 +571,17 @@ function $(e) {
 }
 
 function ee() {
-  let e = (0, c.cj)([p.Z], () => ({
-    disableUnreadBadge: p.Z.getDisableUnreadBadge(),
-    taskbarFlash: p.Z.taskbarFlash,
-    disabledSounds: p.Z.getDisabledSounds(),
-    disableAllSounds: p.Z.getDisableAllSounds(),
-    desktopType: p.Z.getDesktopType(),
-    ttsType: p.Z.getTTSType(),
-    notifyMessagesInSelectedChannel: p.Z.getNotifyMessagesInSelectedChannel()
+  let e = (0, c.cj)([D.Z], () => ({
+    disableUnreadBadge: D.Z.getDisableUnreadBadge(),
+    taskbarFlash: D.Z.taskbarFlash,
+    disabledSounds: D.Z.getDisabledSounds(),
+    disableAllSounds: D.Z.getDisableAllSounds(),
+    desktopType: D.Z.getDesktopType(),
+    ttsType: D.Z.getTTSType(),
+    notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
   }));
   return (0, n.jsx)($, {
     ...e,
-    afkTimeout: U.CM.useSetting()
+    afkTimeout: j.CM.useSetting()
   })
 }

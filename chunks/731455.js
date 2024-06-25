@@ -7,19 +7,19 @@ n.d(t, {
     return T
   },
   L3: function() {
-    return f
+    return S
   },
   U: function() {
     return h
   },
   U2: function() {
-    return N
+    return A
   },
   Vb: function() {
     return I
   },
   b0: function() {
-    return R
+    return p
   },
   dU: function() {
     return O
@@ -34,10 +34,10 @@ n.d(t, {
     return m
   },
   lA: function() {
-    return S
+    return f
   },
   md: function() {
-    return p
+    return R
   },
   o3: function() {
     return d
@@ -53,10 +53,10 @@ let d = 0,
   T = -1,
   h = -2;
 (i = a || (a = {}))[i.Quests = -4] = "Quests", i[i.Clans = -3] = "Clans", i[i.Hub = h] = "Hub", i[i.Communities = T] = "Communities", i[i.Activity = 1] = "Activity", i[i.Music = 2] = "Music", i[i.Television = 3] = "Television", i[i.Science = 5] = "Science", i[i.Education = 6] = "Education";
-let S = 1e3,
-  f = [1, 2, 3, 5, 6];
+let f = 1e3,
+  S = [1, 2, 3, 5, 6];
 (r = l || (l = {}))[r.GENERAL_CHATTING = 14] = "GENERAL_CHATTING", r[r.GAMING = 1] = "GAMING", r[r.MUSIC = 2] = "MUSIC", r[r.ENTERTAINMENT = 3] = "ENTERTAINMENT", r[r.CREATIVE_ARTS = 4] = "CREATIVE_ARTS", r[r.SCIENCE_AND_TECH = 5] = "SCIENCE_AND_TECH", r[r.EDUCATION = 6] = "EDUCATION", r[r.SPORTS = 7] = "SPORTS", r[r.FASHION_AND_BEAUTY = 8] = "FASHION_AND_BEAUTY", r[r.RELATIONSHIPS_AND_IDENTITY = 9] = "RELATIONSHIPS_AND_IDENTITY", r[r.TRAVEL_AND_FOOD = 10] = "TRAVEL_AND_FOOD", r[r.FITNESS_AND_HEALTH = 11] = "FITNESS_AND_HEALTH", r[r.FINANCE = 12] = "FINANCE", r[r.OTHER = 13] = "OTHER", r[r.EMOJI = 43] = "EMOJI", r[r.BOTS = 49] = "BOTS";
-let N = {
+let A = {
     14: [() => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],
     1: [() => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM],
     2: [() => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL],
@@ -74,7 +74,7 @@ let N = {
     43: [() => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
     49: [() => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN, () => c.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES]
   },
-  A = ["en-GB"];
+  N = ["en-GB"];
 
 function m() {
   return c.Z.getAvailableLocales().map(e => {
@@ -97,15 +97,15 @@ function m() {
       label: r,
       image: t
     }
-  }).filter(e => !A.includes(e.value))
+  }).filter(e => !N.includes(e.value))
 }
 m();
-let O = c.Z.getLanguages().filter(e => !A.includes(e.code)).map(e => "en-US" === e.code ? {
+let O = c.Z.getLanguages().filter(e => !N.includes(e.code)).map(e => "en-US" === e.code ? {
     ...e,
     name: c.Z.Messages.en
   } : e),
-  R = 40,
-  p = 20;
+  p = 40,
+  R = 20;
 (s = u || (u = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (o = _ || (_ = {}))[o.Activity = 0] = "Activity", o[o.Discover = 1] = "Discover", o[o.Education = 2] = "Education", o[o.Music = 3] = "Music", o[o.Science = 4] = "Science", o[o.Stage = 5] = "Stage", o[o.Television = 6] = "Television", o[o.Server = 7] = "Server", o[o.Quest = 8] = "Quest";
 let g = {
   facebook: {

@@ -1,7 +1,7 @@
-var i, l, s = t(735250),
-  a = t(470079),
-  r = t(120356),
-  o = t.n(r),
+var i, a, s = t(735250),
+  l = t(470079),
+  o = t(120356),
+  r = t.n(o),
   c = t(481060),
   d = t(285952),
   u = t(876700);
@@ -14,7 +14,7 @@ function I(e, n, t) {
     writable: !0
   }) : e[n] = t, e
 }
-class N extends(i = a.PureComponent) {
+class m extends(i = l.PureComponent) {
   render() {
     let {
       scrollable: e,
@@ -36,33 +36,33 @@ class N extends(i = a.PureComponent) {
     })
   }
 }
-I(N, "defaultProps", {
+I(m, "defaultProps", {
   basis: 232,
   grow: 0,
   shrink: 0,
   className: u.sidebar
 });
-class E extends a.PureComponent {
+class _ extends l.PureComponent {
   render() {
     let {
       className: e,
       ...n
     } = this.props;
     return (0, s.jsx)(d.Z.Child, {
-      className: o()(u.content, e),
+      className: r()(u.content, e),
       wrap: !0,
       ...n
     })
   }
 }
-class T extends(l = a.PureComponent) {
+class N extends(a = l.PureComponent) {
   render() {
     return (0, s.jsx)(d.Z, {
       ...this.props
     })
   }
 }
-I(T, "defaultProps", {
+I(N, "defaultProps", {
   className: u.layout,
   direction: d.Z.Direction.HORIZONTAL,
   justify: d.Z.Justify.START,
@@ -71,4 +71,4 @@ I(T, "defaultProps", {
   shrink: 1,
   grow: 1,
   basis: "auto"
-}), I(T, "Direction", d.Z.Direction), I(T, "Justify", d.Z.Justify), I(T, "Align", d.Z.Align), I(T, "Wrap", d.Z.Wrap), I(T, "Sidebar", N), I(T, "Content", E), n.ZP = T
+}), I(N, "Direction", d.Z.Direction), I(N, "Justify", d.Z.Justify), I(N, "Align", d.Z.Align), I(N, "Wrap", d.Z.Wrap), I(N, "Sidebar", m), I(N, "Content", _), n.ZP = N

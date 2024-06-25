@@ -1,10 +1,10 @@
 t.d(s, {
   W: function() {
-    return i
+    return a
   }
 });
 let n = {};
 
-function i() {
+function a() {
   return n
 }

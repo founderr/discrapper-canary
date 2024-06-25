@@ -25,7 +25,7 @@ function h(e) {
     width: n,
     noArt: r = !1,
     selected: h = !1
-  } = e, S = n < 195, f = (0, o.e7)([u.Z, _.default], () => u.Z.getAllActiveStreams().some(e => {
+  } = e, f = n < 195, S = (0, o.e7)([u.Z, _.default], () => u.Z.getAllActiveStreams().some(e => {
     let {
       ownerId: t
     } = e;
@@ -33,7 +33,7 @@ function h(e) {
   }));
   return (0, i.jsx)("div", {
     className: s()(I.content, I.streamHidden, {
-      [I.__invalid_small]: S
+      [I.__invalid_small]: f
     }),
     children: (0, i.jsx)(d.Z, {
       className: I.streamHiddenEmptyState,
@@ -41,19 +41,19 @@ function h(e) {
       noArt: r,
       selected: h,
       size: (0, d.L)(n),
-      header: S ? null : E.Z.Messages.STREAM_HIDDEN,
+      header: f ? null : E.Z.Messages.STREAM_HIDDEN,
       description: h ? null : (0, i.jsxs)("div", {
         className: s()(I.streamHiddenCTA, {
-          [I.largePaddingTop]: !S
+          [I.largePaddingTop]: !f
         }),
         children: [(0, i.jsx)(c.a, {
-          isSmall: S,
+          isSmall: f,
           children: (0, i.jsx)(a.Text, {
-            variant: S ? "text-sm/semibold" : "text-md/semibold",
+            variant: f ? "text-sm/semibold" : "text-md/semibold",
             color: "none",
             children: n < 175 ? E.Z.Messages.WATCH : E.Z.Messages.WATCH_STREAM
           })
-        }), f ? (0, i.jsx)(c.a, {
+        }), S ? (0, i.jsx)(c.a, {
           className: I.addCTA,
           tooltip: E.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
           onClick: e => {
@@ -61,7 +61,7 @@ function h(e) {
               forceMultiple: !0
             })
           },
-          isSmall: S,
+          isSmall: f,
           children: (0, i.jsx)(a.EyePlusIcon, {
             size: "xs",
             color: "currentColor",

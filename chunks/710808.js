@@ -1,73 +1,73 @@
 t.d(s, {
   Z: function() {
-    return g
+    return h
   }
 }), t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(442837),
-  l = t(481060),
-  r = t(846027),
-  o = t(304680),
+  a = t(470079),
+  i = t(442837),
+  r = t(481060),
+  o = t(846027),
+  l = t(304680),
   c = t(579806),
-  E = t(729345),
-  d = t(921801),
-  _ = t(131951),
-  T = t(226961),
-  S = t(285952),
-  u = t(12647),
+  d = t(729345),
+  _ = t(921801),
+  E = t(131951),
+  u = t(226961),
+  T = t(285952),
+  S = t(12647),
   I = t(726985),
   N = t(981631),
-  A = t(65154),
-  C = t(689938),
-  O = t(331651);
-async function m() {
+  C = t(65154),
+  A = t(689938),
+  m = t(331651);
+async function O() {
   let e = await c.Z.fileManager.getModulePath(),
     s = c.Z.fileManager.join(e, "discord_voice");
   c.Z.fileManager.showItemInFolder(s)
 }
 
-function h(e) {
-  (0, l.openModal)(s => (0, n.jsx)(l.ConfirmModal, {
-    header: C.Z.Messages.SET_DEBUG_LOGGING,
-    confirmText: C.Z.Messages.OKAY,
-    cancelText: C.Z.Messages.CANCEL,
+function g(e) {
+  (0, r.openModal)(s => (0, n.jsx)(r.ConfirmModal, {
+    header: A.Z.Messages.SET_DEBUG_LOGGING,
+    confirmText: A.Z.Messages.OKAY,
+    cancelText: A.Z.Messages.CANCEL,
     onCancel: s.onClose,
-    onConfirm: () => r.Z.setDebugLogging(e),
+    onConfirm: () => o.Z.setDebugLogging(e),
     ...s,
-    children: (0, n.jsx)(l.Text, {
+    children: (0, n.jsx)(r.Text, {
       variant: "text-md/normal",
-      children: C.Z.Messages.SET_DEBUG_LOGGING_BODY
+      children: A.Z.Messages.SET_DEBUG_LOGGING_BODY
     })
   }))
 }
 
-function g() {
-  let [e, s] = i.useState(!1), {
+function h() {
+  let [e, s] = a.useState(!1), {
     debugLogging: t,
     aecDumpEnabled: c
-  } = (0, a.cj)([_.Z], () => ({
-    aecDumpSupported: _.Z.isAecDumpSupported(),
-    debugLogging: _.Z.getDebugLogging(),
-    aecDumpEnabled: _.Z.getAecDump(),
-    supportsConnectionReplay: _.Z.supports(A.AN.CONNECTION_REPLAY)
-  })), g = (0, a.e7)([T.ZP], () => T.ZP.shouldRecordNextConnection());
+  } = (0, i.cj)([E.Z], () => ({
+    aecDumpSupported: E.Z.isAecDumpSupported(),
+    debugLogging: E.Z.getDebugLogging(),
+    aecDumpEnabled: E.Z.getAecDump(),
+    supportsConnectionReplay: E.Z.supports(C.AN.CONNECTION_REPLAY)
+  })), h = (0, i.e7)([u.ZP], () => u.ZP.shouldRecordNextConnection());
   async function R() {
     s(!0);
     try {
-      await _.Z.getMediaEngine().writeAudioDebugState(), await u.Z.submitLiveCrashReport({
+      await E.Z.getMediaEngine().writeAudioDebugState(), await S.Z.submitLiveCrashReport({
         message: {
           message: "User Live Dump"
         }
-      }), await (0, E.E)(N.GU0.RTC), ! function() {
-        let e = C.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
-          s = C.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
-        (0, l.openModal)(t => (0, n.jsx)(l.ConfirmModal, {
+      }), await (0, d.E)(N.GU0.RTC), ! function() {
+        let e = A.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
+          s = A.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
+        (0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
           header: e,
-          confirmButtonColor: l.Button.Colors.BRAND,
-          confirmText: C.Z.Messages.OKAY,
+          confirmButtonColor: r.Button.Colors.BRAND,
+          confirmText: A.Z.Messages.OKAY,
           ...t,
-          children: (0, n.jsx)(l.Text, {
+          children: (0, n.jsx)(r.Text, {
             variant: "text-md/normal",
             children: s
           })
@@ -75,14 +75,14 @@ function g() {
       }()
     } catch (e) {
       ! function(e) {
-        let s = C.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
-          t = null != e ? e : C.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
-        (0, l.openModal)(e => (0, n.jsx)(l.ConfirmModal, {
+        let s = A.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
+          t = null != e ? e : A.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
+        (0, r.openModal)(e => (0, n.jsx)(r.ConfirmModal, {
           header: s,
-          confirmButtonColor: l.Button.Colors.BRAND,
-          confirmText: C.Z.Messages.OKAY,
+          confirmButtonColor: r.Button.Colors.BRAND,
+          confirmText: A.Z.Messages.OKAY,
           ...e,
-          children: (0, n.jsx)(l.Text, {
+          children: (0, n.jsx)(r.Text, {
             variant: "text-md/normal",
             children: t
           })
@@ -90,67 +90,67 @@ function g() {
       }(e.displayMessage)
     }
   }
-  return (0, n.jsxs)(l.FormSection, {
-    className: O.marginBottom40,
-    title: C.Z.Messages.FORM_LABEL_DEBUG,
-    children: [(0, n.jsx)(d.F, {
+  return (0, n.jsxs)(r.FormSection, {
+    className: m.marginBottom40,
+    title: A.Z.Messages.FORM_LABEL_DEBUG,
+    children: [(0, n.jsx)(_.F, {
       setting: I.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
-      children: (0, n.jsx)(l.FormSwitch, {
+      children: (0, n.jsx)(r.FormSwitch, {
         value: c,
-        onChange: e => r.Z.setAecDump(e),
-        note: C.Z.Messages.FORM_HELP_AEC_DUMP,
-        children: C.Z.Messages.FORM_CHECKBOX_AEC_DUMP
+        onChange: e => o.Z.setAecDump(e),
+        note: A.Z.Messages.FORM_HELP_AEC_DUMP,
+        children: A.Z.Messages.FORM_CHECKBOX_AEC_DUMP
       })
-    }), (0, n.jsxs)(d.F, {
+    }), (0, n.jsxs)(_.F, {
       setting: I.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
-      children: [(0, n.jsx)(l.FormSwitch, {
+      children: [(0, n.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        value: g,
-        onChange: e => o.TC(e),
-        note: C.Z.Messages.FORM_HELP_CONNECTION_LOG,
-        children: C.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG
-      }), (0, n.jsx)(l.FormItem, {
-        children: (0, n.jsx)(S.Z, {
-          className: O.marginBottom20,
-          children: (0, n.jsx)(S.Z.Child, {
+        value: h,
+        onChange: e => l.TC(e),
+        note: A.Z.Messages.FORM_HELP_CONNECTION_LOG,
+        children: A.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG
+      }), (0, n.jsx)(r.FormItem, {
+        children: (0, n.jsx)(T.Z, {
+          className: m.marginBottom20,
+          children: (0, n.jsx)(T.Z.Child, {
             grow: 0,
             shrink: 0,
-            children: (0, n.jsx)(l.Button, {
-              size: l.Button.Sizes.SMALL,
-              onClick: () => o.z4(),
-              children: C.Z.Messages.OPEN_CONNECTION_REPLAY
+            children: (0, n.jsx)(r.Button, {
+              size: r.Button.Sizes.SMALL,
+              onClick: () => l.z4(),
+              children: A.Z.Messages.OPEN_CONNECTION_REPLAY
             })
           })
         })
-      }), (0, n.jsx)(l.FormDivider, {
-        className: O.marginBottom20
+      }), (0, n.jsx)(r.FormDivider, {
+        className: m.marginBottom20
       })]
-    }), (0, n.jsxs)(d.F, {
+    }), (0, n.jsxs)(_.F, {
       setting: I.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
-      children: [(0, n.jsx)(l.FormSwitch, {
+      children: [(0, n.jsx)(r.FormSwitch, {
         hideBorder: !0,
         value: t,
-        onChange: h,
-        note: C.Z.Messages.FORM_HELP_DEBUG_LOGGING,
-        children: C.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
-      }), (0, n.jsx)(l.FormItem, {
-        children: (0, n.jsxs)(S.Z, {
-          children: [(0, n.jsx)(S.Z.Child, {
+        onChange: g,
+        note: A.Z.Messages.FORM_HELP_DEBUG_LOGGING,
+        children: A.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
+      }), (0, n.jsx)(r.FormItem, {
+        children: (0, n.jsxs)(T.Z, {
+          children: [(0, n.jsx)(T.Z.Child, {
             grow: 0,
             shrink: 0,
-            children: (0, n.jsx)(l.Button, {
+            children: (0, n.jsx)(r.Button, {
               disabled: e,
-              size: l.Button.Sizes.SMALL,
+              size: r.Button.Sizes.SMALL,
               onClick: R,
-              children: C.Z.Messages.UPLOAD
+              children: A.Z.Messages.UPLOAD
             })
-          }), (0, n.jsx)(S.Z.Child, {
+          }), (0, n.jsx)(T.Z.Child, {
             grow: 0,
             shrink: 0,
-            children: (0, n.jsx)(l.Button, {
-              size: l.Button.Sizes.SMALL,
-              onClick: m,
-              children: C.Z.Messages.SHOW_FOLDER
+            children: (0, n.jsx)(r.Button, {
+              size: r.Button.Sizes.SMALL,
+              onClick: O,
+              children: A.Z.Messages.SHOW_FOLDER
             })
           })]
         })

@@ -7,7 +7,7 @@ n.d(t, {
     return _
   },
   _G: function() {
-    return S
+    return f
   },
   _I: function() {
     return E
@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   mG: function() {
-    return N
+    return A
   },
   pU: function() {
     return c
@@ -51,8 +51,8 @@ function d() {
 }
 
 function E(e) {
-  if (N(e)) return Promise.resolve(function(e) {
-    let t = e.match(f);
+  if (A(e)) return Promise.resolve(function(e) {
+    let t = e.match(S);
     if (null == t || 2 !== t.length) return null;
     let n = (0, o.getNativePlatform)(),
       i = t[1];
@@ -91,24 +91,24 @@ function T() {
 }
 let h = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
 
-function S(e) {
+function f(e) {
   return null != e && h.test(e)
 }
-let f = RegExp("^dev://branch/([\\w-./]+)$", "i");
+let S = RegExp("^dev://branch/([\\w-./]+)$", "i");
 
-function N(e) {
-  return null != e && f.test(e)
+function A(e) {
+  return null != e && S.test(e)
 }
-let A = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
+let N = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
   m = new Set(["/__development/link", "/__development/link/"]);
 
 function O(e) {
-  if (N(e)) return {
+  if (A(e)) return {
     payload: null,
     url: e
   };
   let t = a.Z.safeParseWithQuery(e);
-  if (null == t || !A.has(t.hostname) || !("s" in t.query) || !m.has(t.pathname)) return null;
+  if (null == t || !N.has(t.hostname) || !("s" in t.query) || !m.has(t.pathname)) return null;
   for (let e in t.query) "s" !== e && delete t.query[e];
   return {
     payload: t.query.s,

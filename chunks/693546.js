@@ -103,7 +103,7 @@ let d = async e => {
     status: a.body.application_status,
     request: a.body
   })
-}, S = async (e, t) => {
+}, f = async (e, t) => {
   let n = await i.tn.patch({
     url: c.ANM.GUILD_JOIN_REQUESTS(e),
     body: {
@@ -115,7 +115,7 @@ let d = async e => {
     guildId: e,
     action: t
   }), n.body
-}, f = async e => {
+}, S = async e => {
   try {
     let {
       body: t
@@ -130,7 +130,7 @@ let d = async e => {
   } catch (e) {
     throw e
   }
-}, N = async () => {
+}, A = async () => {
   let e = await i.tn.get({
     url: c.ANM.USER_JOIN_REQUEST_GUILDS
   });
@@ -138,7 +138,7 @@ let d = async e => {
     type: "USER_JOIN_REQUEST_GUILDS_FETCH",
     guilds: e.body
   })
-}, A = async function(e) {
+}, N = async function(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = await i.tn.post({
       url: c.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e)
@@ -155,9 +155,9 @@ t.Z = {
   ackUserGuildJoinRequest: T,
   removeGuildJoinRequest: I,
   updateGuildJoinRequest: h,
-  actionAllPendingJoinRequests: S,
-  resetGuildJoinRequest: f,
-  fetchRequestToJoinGuilds: N,
+  actionAllPendingJoinRequests: f,
+  resetGuildJoinRequest: S,
+  fetchRequestToJoinGuilds: A,
   setSelectedApplicationTab: (e, t) => {
     r.Z.dispatch({
       type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB",
@@ -183,5 +183,5 @@ t.Z = {
       request: t
     })
   },
-  createOrEnterJoinRequestInterview: A
+  createOrEnterJoinRequestInterview: N
 }

@@ -1,76 +1,76 @@
 n.d(t, {
   R: function() {
-    return l
+    return i
   }
 }), n(47120);
-var l, i, s = n(735250),
-  a = n(470079),
+var i, a, l = n(735250),
+  s = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(481060),
   u = n(259580),
   d = n(38371),
   h = n(599625),
-  m = n(13484);
-(i = l || (l = {}))[i.MutualFriendsList = 0] = "MutualFriendsList", i[i.MutualGuildList = 1] = "MutualGuildList";
+  p = n(13484);
+(a = i || (i = {}))[a.MutualFriendsList = 0] = "MutualFriendsList", a[a.MutualGuildList = 1] = "MutualGuildList";
 t.Z = e => {
   let {
     header: t,
     children: n,
-    itemType: l = 1,
-    isLoadingHeader: i,
+    itemType: i = 1,
+    isLoadingHeader: a,
     isLoadingContents: r,
-    loadingContentsCount: E = 0,
-    className: p,
-    onExpand: g,
-    onHover: f,
-    onFocus: C
-  } = e, [_, I] = a.useState(!0), x = (0, s.jsx)("div", {
+    loadingContentsCount: m = 0,
+    className: _,
+    onExpand: f,
+    onHover: E,
+    onFocus: g
+  } = e, [C, I] = s.useState(!0), x = (0, l.jsx)("div", {
     className: h.iconWrapper,
-    children: (0, s.jsx)(u.Z, {
-      direction: _ ? u.Z.Directions.RIGHT : u.Z.Directions.DOWN
+    children: (0, l.jsx)(u.Z, {
+      direction: C ? u.Z.Directions.RIGHT : u.Z.Directions.DOWN
     })
   });
-  return (0, s.jsxs)("div", {
-    className: p,
-    children: [(0, s.jsx)(c.Button, {
+  return (0, l.jsxs)("div", {
+    className: _,
+    children: [(0, l.jsx)(c.Button, {
       className: h.collapseBtn,
       innerClassName: h.collapseBtnContent,
       color: c.ButtonColors.CUSTOM,
-      onMouseEnter: f,
-      onFocus: C,
+      onMouseEnter: E,
+      onFocus: g,
       onClick: () => {
-        I(!_), _ && (null == g || g())
+        I(!C), C && (null == f || f())
       },
-      children: i ? (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(d.ZT, {
+      children: a ? (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(d.ZT, {
           width: 34,
           opacity: .08
-        }), (0, s.jsx)(d.ZT, {
+        }), (0, l.jsx)(d.ZT, {
           width: 135,
           opacity: .08
         })]
-      }) : (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(c.Text, {
+      }) : (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(c.Text, {
           variant: "text-sm/medium",
           children: t
         }), x]
       })
-    }), (0, s.jsx)("ul", {
+    }), (0, l.jsx)("ul", {
       className: o()(h.connectionList, {
-        [h.isCollapsed]: _
+        [h.isCollapsed]: C
       }),
       children: r ? Array.from({
-        length: E
-      }).map((e, t) => (0, s.jsxs)("div", {
+        length: m
+      }).map((e, t) => (0, l.jsxs)("div", {
         className: o()({
-          [m.mutualFriendItem]: 0 === l,
-          [m.mutualGuildItem]: 1 === l
+          [p.mutualFriendItem]: 0 === i,
+          [p.mutualGuildItem]: 1 === i
         }),
-        children: [(0, s.jsx)(d.ZT, {
+        children: [(0, l.jsx)(d.ZT, {
           width: 34,
           opacity: .08
-        }), (0, s.jsx)(d.ZT, {
+        }), (0, l.jsx)(d.ZT, {
           width: 135,
           opacity: .08
         })]

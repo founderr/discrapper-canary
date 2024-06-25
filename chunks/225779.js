@@ -13,7 +13,7 @@ n.d(t, {
     return h
   },
   qX: function() {
-    return S
+    return f
   },
   u3: function() {
     return T
@@ -122,7 +122,7 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   let {
     color: t = d.DEFAULT,
     className: n,

@@ -3,26 +3,26 @@ n.d(t, {
     return c
   },
   T: function() {
-    return i
+    return a
   }
 });
-var l, i, s = n(735250);
+var i, a, l = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var s = n(120356),
+  r = n.n(s),
   o = n(616347);
-(l = i || (i = {}))[l.POPOUT = 0] = "POPOUT", l[l.SECONDARY = 1] = "SECONDARY", l[l.BLACK = 2] = "BLACK";
+(i = a || (a = {}))[i.POPOUT = 0] = "POPOUT", i[i.SECONDARY = 1] = "SECONDARY", i[i.BLACK = 2] = "BLACK";
 let c = e => {
   let {
     left: t,
     top: n = 0,
-    right: l = 0,
-    bottom: i,
-    size: a = 8,
+    right: i = 0,
+    bottom: a,
+    size: s = 8,
     alert: c = !1,
     maskColor: u = 1
   } = e;
-  return (0, s.jsx)("span", {
+  return (0, l.jsx)("span", {
     className: r()(o.dot, {
       [o.alert]: c,
       [o.maskPopout]: 0 === u,
@@ -30,12 +30,12 @@ let c = e => {
       [o.maskBlack]: 2 === u
     }),
     style: {
-      height: a,
-      width: a,
+      height: s,
+      width: s,
       left: t,
       top: n,
-      right: l,
-      bottom: i
+      right: i,
+      bottom: a
     }
   })
 }

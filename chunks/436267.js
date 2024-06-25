@@ -1,17 +1,17 @@
 t.d(s, {
   O: function() {
-    return a
+    return i
   },
   Z: function() {
-    return i
+    return a
   }
 });
 var n = t(159277);
 
-function i(e) {
+function a(e) {
   return n.t.XBOX_APPLICATION_ID === e || n.M.PLAYSTATION_APPLICATION_IDS.has(e)
 }
 
-function a(e) {
-  return i(e)
+function i(e) {
+  return a(e)
 }

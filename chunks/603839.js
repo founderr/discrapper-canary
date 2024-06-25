@@ -1,64 +1,64 @@
 n.d(t, {
   Z: function() {
-    return v
+    return O
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(392711),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(392711),
   o = n(920906),
   c = n(442837),
-  u = n(481060),
-  d = n(607070),
-  E = n(207796),
-  h = n(889711),
-  _ = n(931240),
+  d = n(481060),
+  u = n(607070),
+  _ = n(207796),
+  E = n(889711),
+  h = n(931240),
   I = n(970606),
   m = n(963202),
-  T = n(650461),
+  p = n(650461),
   g = n(432632),
-  p = n(35313),
-  N = n(284019),
-  S = n(672775),
-  C = n(601463),
-  A = n(192565),
-  f = n(641037),
+  T = n(35313),
+  C = n(284019),
+  f = n(672775),
+  S = n(601463),
+  N = n(192565),
+  A = n(641037),
   Z = n(689938),
   L = n(414868);
-let O = {
+let v = {
   mass: 1,
   tension: 600,
   friction: 60,
   clamp: !0
 };
 
-function v(e) {
+function O(e) {
   let {
     guildId: t,
     onClose: n
-  } = e, l = (0, c.e7)([d.Z], () => d.Z.useReducedMotion), v = (0, T.Wg)(), {
+  } = e, a = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), O = (0, p.Wg)(), {
     progress: R,
-    errors: P,
-    submitting: x
-  } = (0, c.cj)([T.ZP], () => {
-    var e, n, s, i;
+    errors: x,
+    submitting: P
+  } = (0, c.cj)([p.ZP], () => {
+    var e, n, i, s;
     return {
-      progress: null !== (i = null === (e = T.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== i ? i : v,
-      errors: null === (n = T.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
-      submitting: null === (s = T.ZP.getStateForGuild(t)) || void 0 === s ? void 0 : s.submitting
+      progress: null !== (s = null === (e = p.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : O,
+      errors: null === (n = p.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
+      submitting: null === (i = p.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
     }
-  }), M = (0, g.N)(t, "ClanSetupModal"), D = i.useMemo(() => (0, f.G)(P), [P]), [b, y] = i.useState(!1), [j, U] = i.useState(window.innerWidth), [G, w] = i.useState(1), [k, B] = i.useState(!0), H = (0, p.f)(), V = (0, o.useSpring)({
+  }), b = (0, g.N)(t, "ClanSetupModal"), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
     opacity: G,
-    config: O,
+    config: v,
     onStart: () => B(!0),
     onRest: () => B(1 === G),
-    immediate: l
+    immediate: a
   }), F = (0, o.useSpring)({
     transform: "translateX(".concat(1 === G ? 0 : -1 * (j - 380) / 2 + 190, "px)"),
-    config: O,
-    immediate: l
+    config: v,
+    immediate: a
   }), Y = (0, o.useTransition)(0 === G, {
     from: {
       opacity: 0
@@ -67,9 +67,9 @@ function v(e) {
       opacity: 1,
       delay: 500
     },
-    config: O,
-    immediate: l
-  }), z = (0, o.useTransition)(0 === G, {
+    config: v,
+    immediate: a
+  }), W = (0, o.useTransition)(0 === G, {
     from: {
       opacity: 0
     },
@@ -79,33 +79,33 @@ function v(e) {
     leave: {
       opacity: 0
     },
-    config: O,
-    immediate: l
-  }), W = i.useCallback(e => {
-    if (e === D.length) w(0), (0, I.Lp)(t, "signature");
+    config: v,
+    immediate: a
+  }), z = s.useCallback(e => {
+    if (e === M.length) w(0), (0, I.Lp)(t, "signature");
     else if (0 === G) w(1);
     else {
       var n;
-      _._9(t, {
+      h._9(t, {
         currentStep: e,
         furthestStep: Math.max(null !== (n = R.furthestStep) && void 0 !== n ? n : 0, e)
       })
     }
-  }, [G, t, R.furthestStep, D.length]);
-  i.useEffect(() => {
+  }, [G, t, R.furthestStep, M.length]);
+  s.useEffect(() => {
     (0, I.Lp)(t, (0, I.Qh)(R.currentStep))
-  }, [t, R.currentStep]), i.useEffect(() => {
-    let e = (0, h.pP)((0, r.debounce)(() => U(window.innerWidth), 250));
-    return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body)
-  }, [G, k]), i.useEffect(() => {
-    null != M && (0, _._9)(t, {
-      requiredGameId: M
+  }, [t, R.currentStep]), s.useEffect(() => {
+    let e = (0, E.pP)((0, l.debounce)(() => U(window.innerWidth), 250));
+    return (0, E.YP)(e, document.body), () => (0, E.UC)(e, document.body)
+  }, [G, k]), s.useEffect(() => {
+    null != b && (0, h._9)(t, {
+      requiredGameId: b
     })
-  }, [M, t]);
-  let K = i.useMemo(() => null != P && Object.values(P).some(e => null != e), [P]),
-    q = i.useMemo(() => null != P && Object.values(P).length > 0 ? (0, f.G)(P).find(e => e.hasError) : null, [P]),
-    Q = i.useCallback(() => {
-      w(1), _._9(t, {
+  }, [b, t]);
+  let K = s.useMemo(() => null != x && Object.values(x).some(e => null != e), [x]),
+    q = s.useMemo(() => null != x && Object.values(x).length > 0 ? (0, A.G)(x).find(e => e.hasError) : null, [x]),
+    Q = s.useCallback(() => {
+      w(1), h._9(t, {
         currentStep: null == q ? void 0 : q.index
       })
     }, [null == q ? void 0 : q.index, t]),
@@ -118,11 +118,11 @@ function v(e) {
     {
       enableApplication: J
     } = (0, m.Fg)("ClanDiscoveryAdminContainer"),
-    $ = i.useCallback(() => {
-      0 === X.filter(e => e.id !== t).length && J ? (0, E.fH)(E.v0.GET_STARTED) : (0, E.fH)(E.v0.ADMIN_UPSELL)
+    $ = s.useCallback(() => {
+      0 === X.filter(e => e.id !== t).length && J ? (0, _.fH)(_.v0.GET_STARTED) : (0, _.fH)(_.v0.ADMIN_UPSELL)
     }, [X, t, J]),
-    ee = i.useCallback(() => {
-      (0, f.V)({
+    ee = s.useCallback(() => {
+      (0, A.V)({
         guildId: t,
         onSuccess: () => {
           $(), n()
@@ -130,23 +130,23 @@ function v(e) {
         progress: R
       })
     }, [t, R, $, n]),
-    et = i.useRef(null),
-    en = null != q ? (0, s.jsxs)("div", {
+    et = s.useRef(null),
+    en = null != q ? (0, i.jsxs)("div", {
       className: L.tooltipContents,
-      children: [(0, s.jsx)(u.WarningIcon, {
+      children: [(0, i.jsx)(d.WarningIcon, {
         size: "xs",
         color: "currentColor",
         className: L.errorIcon
-      }), (0, s.jsxs)("div", {
-        children: [(0, s.jsx)(u.Text, {
+      }), (0, i.jsxs)("div", {
+        children: [(0, i.jsx)(d.Text, {
           variant: "text-sm/medium",
           color: "header-primary",
           children: Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
-        }), (0, s.jsx)(u.Text, {
+        }), (0, i.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: Z.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
-            backHook: (e, t) => (0, s.jsx)(u.Anchor, {
+            backHook: (e, t) => (0, i.jsx)(d.Anchor, {
               className: L.errorLink,
               onClick: Q,
               children: e
@@ -155,59 +155,59 @@ function v(e) {
         })]
       })]
     }) : null;
-  return (0, s.jsx)(o.animated.div, {
+  return (0, i.jsx)(o.animated.div, {
     ref: et,
     style: H,
     className: L.modal,
-    children: (0, s.jsxs)(u.FocusRingScope, {
+    children: (0, i.jsxs)(d.FocusRingScope, {
       containerRef: et,
-      children: [(0, s.jsx)(u.Button, {
+      children: [(0, i.jsx)(d.Button, {
         className: L.close,
-        look: u.Button.Looks.OUTLINED,
-        size: u.Button.Sizes.MEDIUM,
-        color: u.Button.Colors.PRIMARY,
+        look: d.Button.Looks.OUTLINED,
+        size: d.Button.Sizes.MEDIUM,
+        color: d.Button.Colors.PRIMARY,
         onClick: n,
         children: Z.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
-      }), (0, s.jsxs)("div", {
+      }), (0, i.jsxs)("div", {
         className: L.content,
-        children: [(0, s.jsxs)("div", {
+        children: [(0, i.jsxs)("div", {
           className: L.panel,
-          children: [(0, s.jsx)(o.animated.div, {
+          children: [(0, i.jsx)(o.animated.div, {
             style: V,
-            className: a()(L.stepsContainer, {
+            className: r()(L.stepsContainer, {
               [L.hidden]: !k
             }),
-            children: (0, s.jsx)(A.Z, {
+            children: (0, i.jsx)(N.Z, {
               guildId: t
             })
-          }), (0, s.jsx)("div", {
-            className: a()(L.navigationContainer, {
+          }), (0, i.jsx)("div", {
+            className: r()(L.navigationContainer, {
               [L.elevatedNavigationContainer]: !k
             }),
-            children: (0, s.jsx)(S.Z, {
-              steps: D,
+            children: (0, i.jsx)(f.Z, {
+              steps: M,
               progress: R,
-              updateCurrentStep: W,
+              updateCurrentStep: z,
               animationStyle: V,
-              animationClassName: a()({
+              animationClassName: r()({
                 [L.hidden]: !k
               })
             })
           })]
-        }), (0, s.jsx)(o.animated.div, {
+        }), (0, i.jsx)(o.animated.div, {
           style: V,
-          className: a()(L.divider, {
+          className: r()(L.divider, {
             [L.hidden]: !k,
             [L.dividerResponsive]: k
           })
-        }), (0, s.jsx)(o.animated.div, {
+        }), (0, i.jsx)(o.animated.div, {
           style: F,
-          className: a()(L.sidebar, {
+          className: r()(L.sidebar, {
             [L.sidebarResponsive]: k
           }),
-          children: (0, s.jsx)(C.Z, {
+          children: (0, i.jsx)(S.Z, {
             guildId: t,
-            signed: b,
+            signed: D,
             setSigned: k ? void 0 : y,
             sidebarWidth: 380,
             windowWidth: j,
@@ -215,24 +215,24 @@ function v(e) {
             brandPrimaryColor: R.brandPrimaryColor
           })
         })]
-      }), z((e, t) => t && (0, s.jsx)(o.animated.div, {
+      }), W((e, t) => t && (0, i.jsx)(o.animated.div, {
         style: e,
         className: L.submit,
-        children: (0, s.jsx)(u.Tooltip, {
-          color: u.Tooltip.Colors.GREY,
+        children: (0, i.jsx)(d.Tooltip, {
+          color: d.Tooltip.Colors.GREY,
           tooltipClassName: L.tooltip,
           text: en,
           "aria-label": null != q ? Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
           shouldShow: null != q,
           forceOpen: null != q,
-          children: e => (0, s.jsx)(N.Z, {
+          children: e => (0, i.jsx)(C.Z, {
             ...e,
             themeColor: R.brandPrimaryColor,
-            disabled: !b || K,
-            submitting: x,
-            look: u.Button.Looks.FILLED,
-            size: u.Button.Sizes.MEDIUM,
-            color: u.Button.Colors.BRAND,
+            disabled: !D || K,
+            submitting: P,
+            look: d.Button.Looks.FILLED,
+            size: d.Button.Sizes.MEDIUM,
+            color: d.Button.Colors.BRAND,
             onClick: ee,
             children: Z.Z.Messages.FINISH
           })

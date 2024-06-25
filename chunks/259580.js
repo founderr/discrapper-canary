@@ -25,14 +25,14 @@ let u = {
       ...T
     } = e, {
       enabled: h
-    } = (0, o.useRedesignIconContext)(), S = t;
-    if (!0 === I ? S = u.DOWN : !1 === I && (S = u.RIGHT), h) {
+    } = (0, o.useRedesignIconContext)(), f = t;
+    if (!0 === I ? f = u.DOWN : !1 === I && (f = u.RIGHT), h) {
       let e = {
         [u.UP]: o.ChevronSmallUpIcon,
         [u.DOWN]: o.ChevronSmallDownIcon,
         [u.LEFT]: o.ChevronSmallLeftIcon,
         [u.RIGHT]: o.ChevronSmallRightIcon
-      } [S];
+      } [f];
       return (0, i.jsx)(e, {
         ...T,
         className: d,
@@ -44,7 +44,7 @@ let u = {
       })
     }
     return (0, i.jsx)("svg", {
-      className: s()(d, c, S),
+      className: s()(d, c, f),
       width: n,
       height: r,
       viewBox: "0 0 24 24",

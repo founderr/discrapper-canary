@@ -10,13 +10,13 @@ var l = n(735250),
   h = n(454585),
   u = n(524444),
   g = n(529815),
-  x = n(250496),
-  m = n(285952),
-  p = n(810090),
+  m = n(250496),
+  p = n(285952),
+  x = n(810090),
   f = n(55406),
-  E = n(981631),
-  C = n(689938),
-  _ = n(612785),
+  _ = n(981631),
+  E = n(689938),
+  C = n(612785),
   L = n(372992);
 
 function S(e, t, n) {
@@ -27,7 +27,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = h.Z.reactParserFor(f.Z.getDefaultRules(_)),
+let N = h.Z.reactParserFor(f.Z.getDefaultRules(C)),
   j = {};
 class O extends r.PureComponent {
   track(e, t, n) {
@@ -35,29 +35,29 @@ class O extends r.PureComponent {
   }
   renderFooter() {
     return (0, l.jsxs)("div", {
-      className: _.footer,
+      className: C.footer,
       children: [(0, l.jsx)(c.Anchor, {
-        "aria-label": C.Z.Messages.TWITTER,
-        className: _.socialLink,
-        href: (0, d.Z)(E.RK.TWITTER),
+        "aria-label": E.Z.Messages.TWITTER,
+        className: C.socialLink,
+        href: (0, d.Z)(_.RK.TWITTER),
         target: "blank",
         children: (0, l.jsx)(c.XNeutralIcon, {
           size: "xs",
           color: "currentColor"
         })
       }), (0, l.jsx)(c.Anchor, {
-        "aria-label": C.Z.Messages.FACEBOOK,
-        className: _.socialLink,
-        href: E.fK7.FACEBOOK_URL,
+        "aria-label": E.Z.Messages.FACEBOOK,
+        className: C.socialLink,
+        href: _.fK7.FACEBOOK_URL,
         target: "blank",
         children: (0, l.jsx)(c.FacebookIcon, {
           size: "xs",
           color: "currentColor"
         })
       }), (0, l.jsx)(c.Anchor, {
-        "aria-label": C.Z.Messages.INSTAGRAM,
-        className: _.socialLink,
-        href: E.fK7.INSTAGRAM_URL,
+        "aria-label": E.Z.Messages.INSTAGRAM,
+        className: C.socialLink,
+        href: _.fK7.INSTAGRAM_URL,
         target: "blank",
         children: (0, l.jsx)(c.InstagramIcon, {
           size: "xs",
@@ -65,7 +65,7 @@ class O extends r.PureComponent {
         })
       }), (0, l.jsx)(c.Text, {
         variant: "text-xs/normal",
-        children: C.Z.Messages.FOLLOW_US_FOR_MORE_UPDATES
+        children: E.Z.Messages.FOLLOW_US_FOR_MORE_UPDATES
       })]
     })
   }
@@ -74,7 +74,7 @@ class O extends r.PureComponent {
       changeLog: e
     } = this.props, t = e.youtube_video_id, r = e.video, a = e.image;
     if (null != t && "" !== t) return (0, l.jsx)(g.BC, {
-      className: o()(_.video),
+      className: o()(C.video),
       allowFullScreen: !1,
       href: "https://youtu.be/".concat(t),
       thumbnail: {
@@ -87,19 +87,19 @@ class O extends r.PureComponent {
         width: 451,
         height: 254
       },
-      provider: x.pn.YOUTUBE,
+      provider: m.pn.YOUTUBE,
       maxWidth: 451,
       maxHeight: 254,
       renderVideoComponent: u.lV,
       renderImageComponent: u.Yi,
       renderLinkComponent: u.iT,
       onPlay: () => {
-        this.track(E.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
+        this.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
       }
     });
     if (null != r && "" !== r) {
       let e = r.startsWith("https://") ? r : n(595173)("./".concat(r));
-      return (0, l.jsx)(p.Z, {
+      return (0, l.jsx)(x.Z, {
         src: e,
         poster: a,
         width: 451,
@@ -107,9 +107,9 @@ class O extends r.PureComponent {
         loop: !0,
         muted: !0,
         autoPlay: !0,
-        className: _.video,
+        className: C.video,
         onPlay: () => {
-          this.track(E.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
+          this.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
         }
       })
     }
@@ -117,7 +117,7 @@ class O extends r.PureComponent {
     else {
       let e = a.startsWith("https://") ? a : n(595173)("./".concat(a));
       return (0, l.jsx)("img", {
-        className: _.image,
+        className: C.image,
         alt: "",
         src: e,
         width: 451,
@@ -133,22 +133,22 @@ class O extends r.PureComponent {
       transitionState: c.ModalTransitionState.ENTERED,
       className: L.modal,
       children: [(0, l.jsxs)(c.ModalHeader, {
-        align: m.Z.Justify.BETWEEN,
+        align: p.Z.Justify.BETWEEN,
         separator: !1,
-        children: [this.renderHeader(), (0, l.jsx)(m.Z.Child, {
+        children: [this.renderHeader(), (0, l.jsx)(p.Z.Child, {
           grow: 0,
           children: (0, l.jsx)(c.ModalCloseButton, {
             onClick: this.props.onClose
           })
         })]
       }), (0, l.jsx)(c.ModalContent, {
-        className: o()(L.content, _.container, {}),
+        className: o()(L.content, C.container, {}),
         scrollerRef: this.scrollerRef,
         onScroll: this.handleScroll,
         children: (0, l.jsxs)("div", {
           tabIndex: 0,
           role: "region",
-          "aria-label": C.Z.Messages.CHANGELOG_CONTENT_LABEL,
+          "aria-label": E.Z.Messages.CHANGELOG_CONTENT_LABEL,
           children: [this.renderVideo(), N(e.body, !1, {
             changeLog: this,
             interpolations: j,
@@ -156,7 +156,7 @@ class O extends r.PureComponent {
           })]
         })
       }), (0, l.jsx)(c.ModalFooter, {
-        direction: m.Z.Direction.HORIZONTAL,
+        direction: p.Z.Direction.HORIZONTAL,
         children: this.renderFooter()
       })]
     })
@@ -171,7 +171,7 @@ class O extends r.PureComponent {
         null === (t = (n = this.props).onScroll) || void 0 === t || t.call(n, e)
       }
     }), S(this, "trackLinkClick", e => {
-      this.props.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
+      this.props.track(_.rMx.CHANGE_LOG_CTA_CLICKED, {
         cta_type: "inline_link",
         target: e
       }, !1)
@@ -179,16 +179,16 @@ class O extends r.PureComponent {
       let {
         changeLog: e
       } = this.props;
-      return (0, l.jsxs)(m.Z.Child, {
+      return (0, l.jsxs)(p.Z.Child, {
         grow: 1,
         shrink: 1,
         children: [(0, l.jsx)(c.Heading, {
           variant: "heading-lg/semibold",
-          children: C.Z.Messages.WHATS_NEW
+          children: E.Z.Messages.WHATS_NEW
         }), (0, l.jsx)(c.Text, {
           variant: "text-xs/normal",
-          className: _.date,
-          children: C.Z.Messages.WHATS_NEW_DATE.format({
+          className: C.date,
+          children: E.Z.Messages.WHATS_NEW_DATE.format({
             date: null != e.date && "" !== e.date ? i()(e.date).toDate() : new Date
           })
         })]

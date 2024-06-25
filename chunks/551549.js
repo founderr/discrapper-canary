@@ -1,6 +1,6 @@
 n.d(t, {
   oK: function() {
-    return r
+    return i
   }
 });
 let s = (0, n(818083).B)({
@@ -25,7 +25,7 @@ let s = (0, n(818083).B)({
   }]
 });
 
-function r(e) {
+function i(e) {
   return s.useExperiment({
     location: e
   }, {

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Aq: function() {
-    return R
+    return p
   },
   ZP: function() {
     return g
@@ -10,16 +10,16 @@ n.d(t, {
     return m
   },
   cI: function() {
-    return A
-  },
-  f0: function() {
-    return f
-  },
-  gE: function() {
     return N
   },
+  f0: function() {
+    return S
+  },
+  gE: function() {
+    return A
+  },
   mc: function() {
-    return p
+    return R
   },
   ot: function() {
     return O
@@ -67,7 +67,7 @@ let s = new(n(499303)).I,
     })), e.candidates.get(t[Math.floor(Math.random() * t.length)])
   },
   h = e => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
-  S = e => {
+  f = e => {
     if (0 === e.candidates.size) return e;
     let t = new Date().getTime() - e.lastWinnerTime > 3e5;
     if (h(e) && !t) return s.unschedule(), E(e, I(e));
@@ -80,27 +80,27 @@ let s = new(n(499303)).I,
       })
     }, 250), e)
   },
-  f = e => {
+  S = e => {
     let t = r.O.has(e.content);
     a.setState(n => {
       let i = l(n);
-      return t ? _(i, e) : S(c(i, e))
+      return t ? _(i, e) : f(c(i, e))
     })
   },
-  N = (e, t) => {
+  A = (e, t) => {
     a.setState(n => {
       let i = l(n);
-      return t ? S(u(d(i, e), e)) : u(d(i, e), e)
+      return t ? f(u(d(i, e), e)) : u(d(i, e), e)
     })
   },
-  A = e => a.getState().currentlyShown.has(e),
+  N = e => a.getState().currentlyShown.has(e),
   m = e => a(t => t.currentlyShown.has(e)),
   O = e => a(t => e.some(e => t.currentlyShown.has(e))),
-  R = () => {
+  p = () => {
     let e = [...a.getState().currentlyShown].filter(e => !r.O.has(e)).length;
     return [a.getState().currentlyShown.size, e]
   },
-  p = () => {
+  R = () => {
     a.setState(o), s.unschedule()
   };
 

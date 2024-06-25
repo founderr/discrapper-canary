@@ -1,29 +1,29 @@
 n.d(t, {
   j: function() {
-    return l
+    return s
   }
 });
-var s = n(406432),
-  i = n(981631);
+var i = n(406432),
+  a = n(981631);
 
-function l(e, t) {
+function s(e, t) {
   let {
     targetKind: n,
-    embedIndex: l
+    embedIndex: s
   } = t;
   if ("media" === n) {
-    var a, r;
+    var l, r;
     let t = e;
-    return (null === (a = e.messageReference) || void 0 === a ? void 0 : a.type) === i.Uvt.FORWARD && (t = null === (r = e.messageSnapshots[0]) || void 0 === r ? void 0 : r.message), {
+    return (null === (l = e.messageReference) || void 0 === l ? void 0 : l.type) === a.Uvt.FORWARD && (t = null === (r = e.messageSnapshots[0]) || void 0 === r ? void 0 : r.message), {
       onlyAttachmentIds: null == t ? void 0 : t.attachments.filter(e => {
         let {
           filename: t
         } = e;
-        return (0, s.CO)(t) || (0, s.NU)(t)
+        return (0, i.CO)(t) || (0, i.NU)(t)
       }).map(e => e.id)
     }
   }
-  if ("embed" === n && null != l) return {
-    onlyEmbedIndices: [l]
+  if ("embed" === n && null != s) return {
+    onlyEmbedIndices: [s]
   }
 }

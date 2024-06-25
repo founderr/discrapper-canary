@@ -18,27 +18,27 @@ let _ = r.forwardRef(function(e, t) {
     selected: I,
     muted: T,
     to: h,
-    avatarClassName: S,
-    selectedClassName: f,
-    innerClassName: N,
-    wrapContent: A,
+    avatarClassName: f,
+    selectedClassName: S,
+    innerClassName: A,
+    wrapContent: N,
     highlighted: m,
     focusProps: O,
-    ...R
+    ...p
   } = e;
-  R.className = o()(R.className, u.container, {
+  p.className = o()(p.className, u.container, {
     [u.selected]: I,
     [u.highlighted]: m,
-    [null != f ? f : ""]: I,
+    [null != S ? S : ""]: I,
     [u.clickable]: !I && (null != h || null != E)
-  }), R["aria-selected"] = null !== (n = R["aria-selected"]) && void 0 !== n ? n : I;
-  let p = (0, i.jsxs)("div", {
-    className: o()(N, u.layout, {
+  }), p["aria-selected"] = null !== (n = p["aria-selected"]) && void 0 !== n ? n : I;
+  let R = (0, i.jsxs)("div", {
+    className: o()(A, u.layout, {
       [u.muted]: !I && T,
-      [u.wrappedLayout]: A
+      [u.wrappedLayout]: N
     }),
     children: [(0, i.jsx)("div", {
-      className: o()(u.avatar, S),
+      className: o()(u.avatar, f),
       children: r
     }), (0, i.jsxs)("div", {
       className: u.content,
@@ -46,7 +46,7 @@ let _ = r.forwardRef(function(e, t) {
         className: u.nameAndDecorators,
         children: [(0, i.jsx)("div", {
           className: o()(u.name, {
-            [u.wrappedName]: A
+            [u.wrappedName]: N
           }),
           children: s
         }), d]
@@ -64,25 +64,25 @@ let _ = r.forwardRef(function(e, t) {
     children: (0, i.jsx)(a.rU, {
       to: h,
       onClick: E,
-      ...R,
+      ...p,
       role: "listitem",
       ref: t,
-      children: p
+      children: R
     })
   }) : null != E ? (0, i.jsx)(l.Clickable, {
     onClick: E,
     focusProps: O,
-    ...R,
+    ...p,
     role: "listitem",
     innerRef: t,
-    children: p
+    children: R
   }) : (0, i.jsx)(l.FocusRing, {
     ...O,
     children: (0, i.jsx)("div", {
-      ...R,
+      ...p,
       role: "listitem",
       ref: t,
-      children: p
+      children: R
     })
   })
 });

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250),
@@ -18,10 +18,10 @@ var i = n(735250),
   I = n(488131),
   T = n(375954),
   h = n(981631),
-  S = n(689938),
-  f = n(520759);
+  f = n(689938),
+  S = n(520759);
 
-function N(e) {
+function A(e) {
   let {
     channel: t,
     message: n,
@@ -38,7 +38,7 @@ function N(e) {
     onClick: function() {
       (0, c.A6)(t.id), (0, I.R6)(t, n, "Reply Chain Nudge")
     },
-    className: f.threadSuggestionBar,
+    className: S.threadSuggestionBar,
     focusProps: {
       offset: {
         right: -4,
@@ -47,21 +47,21 @@ function N(e) {
     },
     children: [(0, i.jsx)(l.Text, {
       color: "header-secondary",
-      className: f.text,
+      className: S.text,
       variant: "text-sm/normal",
-      children: S.Z.Messages.THREAD_REPLY_SUGGESTION.format({
+      children: f.Z.Messages.THREAD_REPLY_SUGGESTION.format({
         count: Math.min(10, s + 1)
       })
     }), (0, i.jsx)(l.Text, {
       color: "text-link",
-      className: f.createThreadButton,
+      className: S.createThreadButton,
       variant: "text-sm/semibold",
-      children: S.Z.Messages.CREATE_THREAD
+      children: f.Z.Messages.CREATE_THREAD
     })]
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     reply: t,
     chatInputType: n
@@ -71,10 +71,10 @@ function A(e) {
     shouldMention: u,
     showMentionToggle: I
   } = t, {
-    nick: A,
+    nick: N,
     colorString: m,
     colorRoleName: O
-  } = (0, _.ZP)(s), R = function(e, t) {
+  } = (0, _.ZP)(s), p = function(e, t) {
     let n = e.id,
       i = t.id;
     return (0, a.e7)([T.Z], () => {
@@ -86,17 +86,17 @@ function A(e) {
       }
       return 10
     }, [n, i])
-  }(r, s), p = (0, E.NE)(r, s), g = n.showThreadPromptOnReply && R >= 2 && p;
+  }(r, s), R = (0, E.NE)(r, s), g = n.showThreadPromptOnReply && p >= 2 && R;
 
   function C(e) {
     e.stopPropagation(), (0, c.qx)(r.id, !u)
   }
   return (0, i.jsx)("div", {
-    className: f.clipContainer,
+    className: S.clipContainer,
     children: (0, i.jsxs)("div", {
-      className: f.container,
+      className: S.container,
       children: [(0, i.jsxs)("div", {
-        className: f.replyBar,
+        className: S.replyBar,
         children: [(0, i.jsx)(l.Clickable, {
           onClick: () => (0, d.uL)(h.Z5c.CHANNEL(r.getGuildId(), r.id, s.id)),
           focusProps: {
@@ -109,22 +109,22 @@ function A(e) {
           },
           children: (0, i.jsx)(l.Text, {
             color: "header-secondary",
-            className: o()(f.text, f.replyLabel),
+            className: o()(S.text, S.replyLabel),
             variant: "text-sm/normal",
-            children: S.Z.Messages.REPLYING_TO.format({
+            children: f.Z.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
-                className: f.name,
-                name: A,
+                className: S.name,
+                name: N,
                 color: m,
                 roleName: O
               }, t)
             })
           })
         }), (0, i.jsxs)("div", {
-          className: f.actions,
+          className: S.actions,
           children: [I && (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Tooltip, {
-              text: u ? S.Z.Messages.REPLY_MENTION_ON_TOOLTIP : S.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
+              text: u ? f.Z.Messages.REPLY_MENTION_ON_TOOLTIP : f.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {
                 let {
                   onMouseEnter: t,
@@ -143,36 +143,36 @@ function A(e) {
                   children: (0, i.jsxs)(l.Text, {
                     variant: "text-sm/bold",
                     color: u ? "text-link" : "text-muted",
-                    className: f.mentionButton,
+                    className: S.mentionButton,
                     children: [(0, i.jsx)(l.AtIcon, {
                       size: "md",
                       color: "currentColor",
-                      "aria-label": S.Z.Messages.MENTION,
-                      className: f.mentionIcon
-                    }), u ? S.Z.Messages.REPLY_MENTION_ON : S.Z.Messages.REPLY_MENTION_OFF]
+                      "aria-label": f.Z.Messages.MENTION,
+                      className: S.mentionIcon
+                    }), u ? f.Z.Messages.REPLY_MENTION_ON : f.Z.Messages.REPLY_MENTION_OFF]
                   })
                 })
               }
             }), (0, i.jsx)("div", {
-              className: f.separator,
+              className: S.separator,
               "aria-hidden": !0
             })]
           }), (0, i.jsx)(l.Clickable, {
-            className: f.closeButton,
+            className: S.closeButton,
             onClick: function(e) {
               e.stopPropagation(), (0, c.A6)(r.id)
             },
             children: (0, i.jsx)(l.CircleXIcon, {
               size: "md",
               color: "currentColor",
-              className: f.closeIcon
+              className: S.closeIcon
             })
           })]
         })]
-      }), g && (0, i.jsx)(N, {
+      }), g && (0, i.jsx)(A, {
         channel: r,
         message: s,
-        replyChainLength: R
+        replyChainLength: p
       })]
     })
   })

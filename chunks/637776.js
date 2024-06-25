@@ -1,88 +1,88 @@
 n.d(t, {
   Z: function() {
-    return N
+    return p
   }
 }), n(47120);
 var s = n(735250),
-  r = n(470079),
-  i = n(442837),
-  l = n(231239),
-  a = n(129293),
+  i = n(470079),
+  r = n(442837),
+  a = n(231239),
+  l = n(129293),
   o = n(388905),
-  u = n(703656),
-  c = n(108427),
+  c = n(703656),
+  u = n(108427),
   d = n(844800),
-  E = n(580497),
-  _ = n(981631),
-  h = n(689938),
-  I = n(530392);
+  _ = n(580497),
+  E = n(981631),
+  I = n(689938),
+  h = n(530392);
 
-function N(e) {
+function p(e) {
   let {
     location: t
-  } = e, [N, p] = r.useState(!1), {
-    verifySuccess: g,
-    verifyErrors: m,
-    redirectGuildId: T
-  } = (0, i.e7)([d.Z], () => d.Z.getState());
-  r.useEffect(() => {
-    let e = (0, a.Z)(t);
-    l.Z.verify(e), (0, c.e)("verify_hub_email")
+  } = e, [p, g] = i.useState(!1), {
+    verifySuccess: f,
+    verifyErrors: N,
+    redirectGuildId: m
+  } = (0, r.e7)([d.Z], () => d.Z.getState());
+  i.useEffect(() => {
+    let e = (0, l.Z)(t);
+    a.Z.verify(e), (0, u.e)("verify_hub_email")
   }, [t]);
-  let f = () => {
-    (0, E.Z)(T), p(!0)
+  let T = () => {
+    (0, _.Z)(m), g(!0)
   };
-  return N ? (0, s.jsxs)(o.ZP, {
+  return p ? (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)(o.Dx, {
-      className: I.title,
-      children: h.Z.Messages.APP_OPENED_TITLE
+      className: h.title,
+      children: I.Z.Messages.APP_OPENED_TITLE
     }), (0, s.jsx)(o.DK, {
-      className: I.subtitle,
-      children: h.Z.Messages.APP_OPENED_BODY
+      className: h.subtitle,
+      children: I.Z.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(o.zx, {
-      className: I.spacedButton,
-      onClick: () => (0, u.uL)(_.Z5c.CHANNEL(T)),
-      children: h.Z.Messages.CONTINUE_TO_WEBAPP
+      className: h.spacedButton,
+      onClick: () => (0, c.uL)(E.Z5c.CHANNEL(m)),
+      children: I.Z.Messages.CONTINUE_TO_WEBAPP
     })]
-  }) : g ? (0, s.jsxs)(o.ZP, {
+  }) : f ? (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)(o.Ee, {
-      className: I.image,
+      className: h.image,
       src: n(73962)
     }), (0, s.jsx)(o.Dx, {
-      className: I.title,
-      children: h.Z.Messages.VERIFICATION_VERIFIED
+      className: h.title,
+      children: I.Z.Messages.VERIFICATION_VERIFIED
     }), (0, s.jsx)(o.zx, {
-      onClick: f,
-      children: h.Z.Messages.VERIFICATION_OPEN_DISCORD
+      onClick: T,
+      children: I.Z.Messages.VERIFICATION_OPEN_DISCORD
     })]
-  }) : null != m ? (0, s.jsxs)(o.ZP, {
+  }) : null != N ? (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)(o.Ee, {
-      className: I.image,
+      className: h.image,
       src: n(375673)
     }), (0, s.jsx)(o.Dx, {
-      className: I.title,
-      children: h.Z.Messages.VERFICATION_EXPIRED
+      className: h.title,
+      children: I.Z.Messages.VERFICATION_EXPIRED
     }), (0, s.jsx)(o.DK, {
-      className: I.subtitle,
-      children: h.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+      className: h.subtitle,
+      children: I.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
     }), (0, s.jsx)(o.zx, {
-      onClick: f,
-      children: h.Z.Messages.VERIFICATION_OPEN_DISCORD
+      onClick: T,
+      children: I.Z.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)(o.Ee, {
-      className: I.image,
+      className: h.image,
       src: n(892235)
     }), (0, s.jsx)(o.Dx, {
-      className: I.title,
-      children: h.Z.Messages.VERIFICATION_VERIFYING
+      className: h.title,
+      children: I.Z.Messages.VERIFICATION_VERIFYING
     }), (0, s.jsx)(o.DK, {
-      className: I.subtitle,
-      children: h.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
+      className: h.subtitle,
+      children: I.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
     }), (0, s.jsx)(o.zx, {
       submitting: !0,
       color: o.zx.Colors.PRIMARY
     })]
   })
 }
-i.ZP.initialize()
+r.ZP.initialize()

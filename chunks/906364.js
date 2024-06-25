@@ -1,36 +1,36 @@
 t.d(s, {
   Z: function() {
-    return r
+    return o
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(481060),
-  a = t(993413),
-  l = t(689938);
+var a = t(481060),
+  i = t(993413),
+  r = t(689938);
 
-function r(e) {
+function o(e) {
   let {
     sectionTitle: s,
     errors: t,
-    onPronounsChange: r,
-    pendingPronouns: o,
+    onPronounsChange: o,
+    pendingPronouns: l,
     placeholder: c,
-    currentPronouns: E,
-    disabled: d = !1
+    currentPronouns: d,
+    disabled: _ = !1
   } = e;
-  return (0, n.jsx)(a.Z, {
+  return (0, n.jsx)(i.Z, {
     title: s,
     errors: t,
-    disabled: d,
-    children: (0, n.jsx)(i.TextInput, {
-      placeholder: null != c ? c : l.Z.Messages.PROFILE_CUSTOMIZATION_PRONOUNS_PLACEHOLDER,
+    disabled: _,
+    children: (0, n.jsx)(a.TextInput, {
+      placeholder: null != c ? c : r.Z.Messages.PROFILE_CUSTOMIZATION_PRONOUNS_PLACEHOLDER,
       maxLength: 40,
-      value: null != o ? o : E,
+      value: null != l ? l : d,
       onChange: function(e) {
-        r(e === E ? void 0 : e)
+        o(e === d ? void 0 : e)
       },
-      disabled: d
+      disabled: _
     })
   })
 }

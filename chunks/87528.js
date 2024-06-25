@@ -4,19 +4,19 @@ i.d(t, {
   }
 }), i(47120), i(724458), i(653041);
 var n = i(735250),
-  s = i(470079),
-  a = i(912370),
-  r = i(477690),
-  l = i(153124),
-  o = i(626135),
+  a = i(470079),
+  r = i(912370),
+  o = i(477690),
+  s = i(153124),
+  l = i(626135),
   c = i(463571),
   d = i(744142),
   u = i(132871),
   h = i(147890),
-  m = i(216547),
+  _ = i(216547),
   p = i(57716),
-  _ = i(981631),
-  x = i(361501);
+  m = i(981631),
+  f = i(361501);
 
 function g(e) {
   let {
@@ -26,80 +26,80 @@ function g(e) {
       title: g,
       application_directory_collection_items: C
     }
-  } = e, [I, f] = s.useState(300), [N, v] = s.useState(4), E = parseFloat(r.Z.COLLECTION_LIST_CARD_GAP), T = (0, u.useApplicationDirectoryHistory)(e => e.guildId), R = (0, p.Z)({
+  } = e, [x, I] = a.useState(300), [b, N] = a.useState(4), v = parseFloat(o.Z.COLLECTION_LIST_CARD_GAP), A = (0, u.useApplicationDirectoryHistory)(e => e.guildId), E = (0, p.Z)({
     collection: t
   });
-  s.useEffect(() => {
+  a.useEffect(() => {
     function e() {
       var e;
-      let t = null === (e = R.current) || void 0 === e ? void 0 : e.offsetWidth,
+      let t = null === (e = E.current) || void 0 === e ? void 0 : e.offsetWidth,
         i = 1;
-      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), v(i), (t - (i - 1) * E) / i)
+      return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1e3 && (i = 4), N(i), (t - (i - 1) * v) / i)
     }
-    let t = R.current;
+    let t = E.current;
     if (null == t) return;
     let i = new ResizeObserver(() => {
-      f(e())
+      I(e())
     });
-    return f(e()), i.observe(t), () => {
+    return I(e()), i.observe(t), () => {
       i.disconnect()
     }
-  }, [E, R]);
-  let A = (0, l.Dt)();
+  }, [v, E]);
+  let T = (0, s.Dt)();
   return (0, n.jsx)("div", {
-    ref: R,
-    children: (0, n.jsx)(m.Z, {
+    ref: E,
+    children: (0, n.jsx)(_.Z, {
       header: g,
-      headerId: A,
-      tileWidth: I,
-      tileMargin: E,
+      headerId: T,
+      tileWidth: x,
+      tileMargin: v,
       onScroll: e => {
         let {
           tileIndex: t
-        } = e, n = C.slice(t, t + N).reduce((e, t) => {
+        } = e, n = C.slice(t, t + b).reduce((e, t) => {
           let {
             type: i,
             application: n
           } = t;
-          return i === a.C.APPLICATION && null != n && e.push(n.id), e
+          return i === r.C.APPLICATION && null != n && e.push(n.id), e
         }, []);
-        o.default.track(_.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
+        l.default.track(m.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
           collection_id: i,
           offset: t,
           results: n,
-          guild_id: T
+          guild_id: A
         })
       },
       children: (0, n.jsx)("ul", {
-        "aria-labelledby": A,
-        className: x.itemsContainer,
+        "aria-labelledby": T,
+        className: f.itemsContainer,
         children: C.map(e => {
           let {
             id: t,
-            type: s,
-            application: r
+            type: a,
+            application: o
           } = e;
-          if (s === a.C.APPLICATION && null != r) return (0, n.jsx)("li", {
+          if (a === r.C.APPLICATION && null != o) return (0, n.jsx)("li", {
             style: {
-              width: I
+              width: x
             },
-            className: x.itemContainer,
+            className: f.itemContainer,
             children: (0, n.jsx)(c.Z, {
-              className: x.seoAnchor,
-              href: _.Z5c.APPLICATION_DIRECTORY_PROFILE(r.id),
+              className: f.seoAnchor,
+              href: m.Z5c.APPLICATION_DIRECTORY_PROFILE(o.id),
               children: (0, n.jsx)(d.Z, {
-                application: r,
+                application: o,
                 onClick: e => {
                   let {
                     mutualGuilds: t
                   } = e;
-                  o.default.track(_.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                  l.default.track(m.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: i,
-                    application_id: r.id,
-                    guild_id: T,
+                    application_id: o.id,
+                    guild_id: A,
                     shown_mutual_guilds_count: t.length
                   }), (0, h.goToApplication)({
-                    applicationId: r.id
+                    applicationId: o.id
                   })
                 },
                 animatesOnHover: !0

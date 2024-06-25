@@ -1,6 +1,6 @@
 n.d(t, {
   q: function() {
-    return l.q
+    return i.q
   }
 });
-var l = n(93582)
+var i = n(93582)

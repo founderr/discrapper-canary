@@ -17,10 +17,10 @@ var i, r = n(735250),
   I = n(278297),
   T = n(768581),
   h = n(176354),
-  S = n(506071),
-  f = n(149203);
+  f = n(506071),
+  S = n(149203);
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class A extends(i = s.PureComponent) {
+class N extends(i = s.PureComponent) {
   componentWillUnmount() {
     var e;
     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -50,7 +50,7 @@ class A extends(i = s.PureComponent) {
       } = this.state;
     if (null != t) return t;
     if (null != n) {
-      let e = f.kV[l];
+      let e = S.kV[l];
       return T.ZP.getEmojiURL({
         id: n,
         animated: o && !0 === r && (!0 === s || u || !0 === a),
@@ -101,14 +101,14 @@ class A extends(i = s.PureComponent) {
     }))
   }
   constructor(...e) {
-    super(...e), N(this, "state", {
+    super(...e), A(this, "state", {
       hover: !1
-    }), N(this, "key", void 0), N(this, "cancelLoadImage", void 0), N(this, "onError", () => {
+    }), A(this, "key", void 0), A(this, "cancelLoadImage", void 0), A(this, "onError", () => {
       let e = this.getSrc();
       null != e && (this.cancelLoadImage = (0, c.po)(e, e => {
         !e && (this.key = Date.now(), this.forceUpdate())
       }))
-    }), N(this, "onMouseEnter", e => {
+    }), A(this, "onMouseEnter", e => {
       this.setState({
         hover: !0
       });
@@ -116,7 +116,7 @@ class A extends(i = s.PureComponent) {
         onMouseEnter: t
       } = this.props;
       null != t && t(e)
-    }), N(this, "onMouseLeave", e => {
+    }), A(this, "onMouseLeave", e => {
       this.setState({
         hover: !1
       });
@@ -127,7 +127,7 @@ class A extends(i = s.PureComponent) {
     })
   }
 }
-N(A, "defaultProps", {
+A(N, "defaultProps", {
   isInteracting: !1
 });
 let m = function(e) {
@@ -205,7 +205,7 @@ let m = function(e) {
       })
     }
   }
-}(A);
+}(N);
 
 function O(e) {
   let t = d.Yk.useSetting(),
@@ -213,7 +213,7 @@ function O(e) {
       autoplay: null == e.autoplay ? t : e.autoplay,
       allowAnimatedEmoji: t
     },
-    i = __OVERLAY__ ? (0, _.e7)([E.Z], () => E.Z.isInstanceFocused()) : (0, S.n)();
+    i = __OVERLAY__ ? (0, _.e7)([E.Z], () => E.Z.isInstanceFocused()) : (0, f.n)();
   return (0, r.jsx)(m, {
     ...e,
     ...n,

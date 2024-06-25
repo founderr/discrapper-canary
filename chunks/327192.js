@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(497321),
   T = n(23551),
   h = n(468026),
-  S = n(410030),
-  f = n(726542),
-  N = n(122021),
-  A = n(275759),
+  f = n(410030),
+  S = n(726542),
+  A = n(122021),
+  N = n(275759),
   m = n(231757),
   O = n(323588),
-  R = n(605236),
-  p = n(553795),
+  p = n(605236),
+  R = n(553795),
   g = n(430824),
   C = n(771845),
   v = n(246946),
@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(494620),
   G = n(205266),
   w = n(216153),
-  B = n(981631),
-  x = n(856651),
+  x = n(981631),
+  B = n(856651),
   k = n(921944),
   V = n(689938),
   Z = n(417276),
@@ -53,10 +53,10 @@ let F = e => {
       isJoining: o,
       joinErrorMessage: l,
       showJoinErrorMessage: u
-    } = (0, a.cj)([p.Z], () => ({
-      isJoining: p.Z.isJoining(s.id),
-      joinErrorMessage: "" === p.Z.joinErrorMessage(s.id) ? V.Z.Messages.ERROR : p.Z.joinErrorMessage(s.id),
-      showJoinErrorMessage: void 0 !== p.Z.joinErrorMessage(s.id)
+    } = (0, a.cj)([R.Z], () => ({
+      isJoining: R.Z.isJoining(s.id),
+      joinErrorMessage: "" === R.Z.joinErrorMessage(s.id) ? V.Z.Messages.ERROR : R.Z.joinErrorMessage(s.id),
+      showJoinErrorMessage: void 0 !== R.Z.joinErrorMessage(s.id)
     }), [s.id]),
     _ = null != (0, a.e7)([g.Z], () => g.Z.getGuild(s.guild.id), [s.guild.id]);
   return !_ && (r = (0, i.jsx)(c.Button, {
@@ -83,7 +83,7 @@ let F = e => {
           color: "header-primary",
           children: s.guild.toString()
         }), (0, i.jsx)(c.Anchor, {
-          href: null === (n = f.Z.get(s.type)) || void 0 === n ? void 0 : null === (t = n.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(n, s.account),
+          href: null === (n = S.Z.get(s.type)) || void 0 === n ? void 0 : null === (t = n.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(n, s.account),
           children: (0, i.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
@@ -106,9 +106,9 @@ function Y(e) {
       onDisconnect: d,
       account: I,
       theme: T,
-      locale: S
+      locale: f
     } = e,
-    [R, p] = r.useState(I.friendSync),
+    [p, R] = r.useState(I.friendSync),
     [g, C] = r.useState(I.visibility),
     [v, D] = r.useState(I.metadataVisibility),
     [M, y] = r.useState(I.showActivity),
@@ -116,10 +116,10 @@ function Y(e) {
     [Y, j] = r.useState(null),
     [W, K] = r.useState(!1),
     [z, q] = r.useState([]),
-    X = (0, N.rR)(I.type),
-    Q = f.Z.get(X);
+    X = (0, A.rR)(I.type),
+    Q = S.Z.get(X);
   r.useEffect(() => {
-    p(I.friendSync), C(I.visibility), D(I.metadataVisibility), y(I.showActivity)
+    R(I.friendSync), C(I.visibility), D(I.metadataVisibility), y(I.showActivity)
   }, [I]), r.useEffect(() => {
     if (!1 !== I.verified) null != k && (C(k), E.Z.setVisibility(I.type, I.id, k), H(null)), null != Y && (D(Y), E.Z.setMetadataVisibility(I.type, I.id, Y), j(null))
   }, [I]);
@@ -132,7 +132,7 @@ function Y(e) {
   }
 
   function $() {
-    let e = f.Z.get(I.type),
+    let e = S.Z.get(I.type),
       t = V.Z.Messages.DISCONNECT_ACCOUNT_BODY;
     (0, U.Z)(I) && (t = (0, i.jsxs)(i.Fragment, {
       children: [t, (0, i.jsx)(b.Z, {
@@ -182,7 +182,7 @@ function Y(e) {
   }
 
   function en(e) {
-    p(e), E.Z.setFriendSync(I.type, I.id, e)
+    R(e), E.Z.setFriendSync(I.type, I.id, e)
   }
 
   function ei(e) {
@@ -192,11 +192,11 @@ function Y(e) {
     className: Z.connection,
     children: [function(e) {
       var t;
-      let n = f.Z.get(e.type),
-        r = f.Z.get(X),
-        s = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[x.PC.TWITTER_VERIFIED],
+      let n = S.Z.get(e.type),
+        r = S.Z.get(X),
+        s = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[B.PC.TWITTER_VERIFIED],
         o = null;
-      return n.type === B.ABu.TWITTER && s && (o = (0, i.jsx)(c.Tooltip, {
+      return n.type === x.ABu.TWITTER && s && (o = (0, i.jsx)(c.Tooltip, {
         text: V.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
         children: e => (0, i.jsx)(L.Z, {
           ...e,
@@ -245,34 +245,34 @@ function Y(e) {
           })
         })]
       })
-    }(I), (t = I).twoWayLink ? null : t.type === B.ABu.XBOX ? (0, i.jsx)("div", {
+    }(I), (t = I).twoWayLink ? null : t.type === x.ABu.XBOX ? (0, i.jsx)("div", {
       className: Z.upsellWrapper,
       children: (0, i.jsx)(w.Y, {})
-    }) : t.type === B.ABu.PLAYSTATION ? (0, i.jsx)("div", {
+    }) : t.type === x.ABu.PLAYSTATION ? (0, i.jsx)("div", {
       className: Z.upsellWrapper,
       children: (0, i.jsx)(G.t, {})
     }) : null, function(e) {
       var t;
       let n = null !== (t = e.metadata) && void 0 !== t ? t : {},
         r = null,
-        s = (0, A.FI)(n[x.PC.CREATED_AT], S);
+        s = (0, N.FI)(n[B.PC.CREATED_AT], f);
       switch (e.type) {
-        case B.ABu.REDDIT:
+        case x.ABu.REDDIT:
           r = (0, O.oP)(n, Z.metadataItem);
           break;
-        case B.ABu.STEAM:
+        case x.ABu.STEAM:
           r = (0, O.Dq)(n, Z.metadataItem);
           break;
-        case B.ABu.TWITTER:
+        case x.ABu.TWITTER:
           r = (0, O.rJ)(n, Z.metadataItem);
           break;
-        case B.ABu.EBAY:
+        case x.ABu.EBAY:
           r = (0, O.ul)(n, Z.metadataItem);
           break;
-        case B.ABu.PAYPAL:
+        case x.ABu.PAYPAL:
           r = (0, O.li)(n, Z.metadataItem);
           break;
-        case B.ABu.TIKTOK:
+        case x.ABu.TIKTOK:
           r = (0, O.hf)(n, Z.metadataItem)
       }
       null !== s && (null == r && (r = []), null == r || r.push((0, i.jsx)(c.Text, {
@@ -286,7 +286,7 @@ function Y(e) {
       let o = z.includes(e.id),
         a = V.Z.Messages.REFRESH;
       if (null == r || 0 === r.length) {
-        if (!0 !== f.Z.get(e.type).hasMetadata) return null;
+        if (!0 !== S.Z.get(e.type).hasMetadata) return null;
         r = [(0, i.jsx)(c.TextBadge, {
           className: Z.connectionMetadataUpsellTag,
           text: V.Z.Messages.NEW
@@ -294,7 +294,7 @@ function Y(e) {
           variant: "text-xs/normal",
           className: Z.connectionMetadataUpsellDescription,
           children: V.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: P.Z.getArticleURL(B.BhN.CONNECTION_DETAILS)
+            helpdeskUrl: P.Z.getArticleURL(x.BhN.CONNECTION_DETAILS)
           })
         }, "label")], a = V.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -316,16 +316,16 @@ function Y(e) {
         className: Z.metadataContainer,
         children: r
       })
-    }(I), (n = Q, B.BFP.has(I.type) && (o = (0, i.jsx)(c.FormSwitch, {
+    }(I), (n = Q, x.BFP.has(I.type) && (o = (0, i.jsx)(c.FormSwitch, {
       className: Z.connectionOptionSwitch,
       hideBorder: !0,
-      value: R,
+      value: p,
       onChange: en,
       children: (0, i.jsx)(c.Text, {
         variant: "text-sm/semibold",
         children: V.Z.Messages.SYNC_FRIENDS
       })
-    })), B.vbS.has(I.type) && (a = (0, i.jsx)(c.FormSwitch, {
+    })), x.vbS.has(I.type) && (a = (0, i.jsx)(c.FormSwitch, {
       className: Z.connectionOptionSwitch,
       hideBorder: !0,
       value: M,
@@ -336,7 +336,7 @@ function Y(e) {
           platform: n.name
         })
       })
-    })), (null === (s = f.Z.get(I.type)) || void 0 === s ? void 0 : s.hasMetadata) === !0 && (l = (0, i.jsx)(c.FormSwitch, {
+    })), (null === (s = S.Z.get(I.type)) || void 0 === s ? void 0 : s.hasMetadata) === !0 && (l = (0, i.jsx)(c.FormSwitch, {
       className: Z.connectionOptionSwitch,
       hideBorder: !0,
       value: 1 === v,
@@ -392,7 +392,7 @@ function Y(e) {
 
 function j() {
   return r.useEffect(() => () => {
-    (0, R.EW)(l.z.NEW_CRUNCHYROLL_CONNECTION, {
+    (0, p.EW)(l.z.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: k.L.AUTO
     })
   }, []), (0, i.jsxs)("div", {
@@ -406,17 +406,17 @@ function j() {
       variant: "text-xs/normal",
       color: "header-secondary",
       children: V.Z.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-        privacyPolicyUrl: B.EYA.PRIVACY
+        privacyPolicyUrl: x.EYA.PRIVACY
       })
     }), (0, i.jsx)(K, {})]
   })
 }
 
 function W(e) {
-  let t = f.Z.get(e);
+  let t = S.Z.get(e);
   (0, m.Z)({
     platformType: t.type
-  }), M.default.track(B.rMx.ACCOUNT_LINK_STEP, {
+  }), M.default.track(x.rMx.ACCOUNT_LINK_STEP, {
     previous_step: "desktop connections",
     current_step: "desktop oauth",
     platform_type: t.type
@@ -430,7 +430,7 @@ function K() {
       onComplete: W
     })
   }
-  let t = (0, N.fq)(),
+  let t = (0, A.fq)(),
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, i.jsxs)("div", {
     className: Z.connectionsContainer,
@@ -492,7 +492,7 @@ function z(e) {
       note: V.Z.Messages.CONNECTED_ACCOUNTS_NONE,
       children: V.Z.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
     })]
-  }) : s.filter(e => f.Z.isSupported(e.type)).map((e, t) => (0, i.jsx)(Y, {
+  }) : s.filter(e => S.Z.isSupported(e.type)).map((e, t) => (0, i.jsx)(Y, {
     theme: o,
     account: e,
     locale: a,
@@ -510,9 +510,9 @@ function z(e) {
 }
 t.Z = () => {
   let e = (0, a.e7)([v.Z], () => v.Z.hidePersonalInformation),
-    t = (0, a.e7)([p.Z], () => p.Z.isFetching()),
-    n = (0, a.e7)([p.Z], () => p.Z.getAccounts()),
-    s = (0, S.ZP)();
+    t = (0, a.e7)([R.Z], () => R.Z.isFetching()),
+    n = (0, a.e7)([R.Z], () => R.Z.getAccounts()),
+    s = (0, f.ZP)();
   (0, a.e7)([C.ZP], () => C.ZP.getFlattenedGuildIds());
   let o = (0, a.e7)([y.default], () => y.default.locale);
   return (r.useEffect(() => {

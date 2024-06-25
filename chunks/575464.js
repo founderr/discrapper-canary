@@ -1,80 +1,80 @@
 n.d(t, {
   Z: function() {
-    return p
+    return _
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(91192),
+var a = n(120356),
+  l = n.n(a),
+  s = n(91192),
   r = n(442837),
   o = n(481060),
   c = n(129861),
   u = n(700582),
   d = n(158776),
   h = n(285952),
-  m = n(51144),
-  E = n(864731);
+  p = n(51144),
+  m = n(864731);
 
-function p(e) {
+function _(e) {
   let {
     user: t,
     row: n,
-    hideDiscriminator: i,
-    comparator: p,
-    selected: g,
-    checked: f,
-    onClick: C,
-    onMouseEnter: _,
+    hideDiscriminator: a,
+    comparator: _,
+    selected: f,
+    checked: E,
+    onClick: g,
+    onMouseEnter: C,
     "aria-setsize": I,
     "aria-posinset": x
-  } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, a.JA)(String(t.id));
-  return (0, l.jsx)(o.Clickable, {
+  } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, s.JA)(String(t.id));
+  return (0, i.jsx)(o.Clickable, {
     id: "user-row-".concat(n),
-    className: E.friendWrapper,
+    className: m.friendWrapper,
     onClick: () => {
-      null != C && C(t.id)
+      null != g && g(t.id)
     },
     onMouseEnter: () => {
-      null != _ && _(n)
+      null != C && C(n)
     },
     ...N,
     role: "option",
-    "aria-selected": f,
+    "aria-selected": E,
     "aria-setsize": I,
     "aria-posinset": x,
-    children: (0, l.jsxs)(h.Z, {
+    children: (0, i.jsxs)(h.Z, {
       align: h.Z.Align.CENTER,
-      className: s()(E.friend, {
-        [E.friendSelected]: g
+      className: l()(m.friend, {
+        [m.friendSelected]: f
       }),
-      children: [(0, l.jsx)(u.Z, {
+      children: [(0, i.jsx)(u.Z, {
         user: t,
         status: T,
-        className: E.avatar
-      }), (0, l.jsxs)(h.Z, {
-        className: E.match,
+        className: m.avatar
+      }), (0, i.jsxs)(h.Z, {
+        className: m.match,
         align: h.Z.Align.BASELINE,
-        children: [(0, l.jsx)(o.Text, {
+        children: [(0, i.jsx)(o.Text, {
           tag: "strong",
-          className: E.nickname,
+          className: m.nickname,
           "aria-hidden": !0,
           variant: "text-md/medium",
-          children: null != p && p === t.tag ? m.ZP.getName(t) : null != p && "" !== p ? p : m.ZP.getName(t)
-        }), (0, l.jsx)(c.Z, {
+          children: null != _ && _ === t.tag ? p.ZP.getName(t) : null != _ && "" !== _ ? _ : p.ZP.getName(t)
+        }), (0, i.jsx)(c.Z, {
           user: t,
-          hideDiscriminator: i,
-          className: E.discordTag,
-          usernameClass: E.__invalid_weightMedium,
-          discriminatorClass: E.__invalid_weightMedium,
+          hideDiscriminator: a,
+          className: m.discordTag,
+          usernameClass: m.__invalid_weightMedium,
+          discriminatorClass: m.__invalid_weightMedium,
           forceUsername: !0
         })]
-      }), (0, l.jsx)(o.Checkbox, {
+      }), (0, i.jsx)(o.Checkbox, {
         displayOnly: !0,
         size: 22,
-        value: f,
-        className: E.checkbox
+        value: E,
+        className: m.checkbox
       })]
     })
   })

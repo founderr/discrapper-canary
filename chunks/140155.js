@@ -39,7 +39,7 @@ function h(e) {
   return null != e.id && null != e.type
 }
 
-function S() {
+function f() {
   T = {
     loading: !1,
     initialized: !1,
@@ -56,7 +56,7 @@ function S() {
   }
 }
 
-function f(e) {
+function S(e) {
   return {
     ...e,
     kind: "notification-center-item",
@@ -64,13 +64,13 @@ function f(e) {
   }
 }
 
-function N(e) {
-  let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? f(e.item) : e.item;
+function A(e) {
+  let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? S(e.item) : e.item;
   if (!T.initialized || !h(t) || T.notifCenterIds.has(t.id)) return !1;
   T.notifCenterIds.add(t.id), T.notifCenterItems = [t, ...T.notifCenterItems], T.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id))
 }
 
-function A(e, t) {
+function N(e, t) {
   T.notifCenterItems = T.notifCenterItems.map(n => e.includes(n.id) ? {
     ...n,
     acked: t
@@ -88,7 +88,7 @@ function O(e) {
     disable_action: !0
   } : t)
 }
-class R extends(i = r.ZP.PersistedStore) {
+class p extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     if (this.waitFor(u.default), null != e) {
       let t = e.notifCenterItems.map(e => ({
@@ -143,10 +143,10 @@ class R extends(i = r.ZP.PersistedStore) {
     return T.notifCenterTabFocused
   }
 }
-I(R, "displayName", "NotificationCenterItemsStore"), I(R, "persistKey", "NotificationCenterItemsStore_v2");
-let p = new R(s.Z, {
+I(p, "displayName", "NotificationCenterItemsStore"), I(p, "persistKey", "NotificationCenterItemsStore_v2");
+let R = new p(s.Z, {
   CONNECTION_OPEN: function(e) {
-    S();
+    f();
     let t = [];
     e.relationships.forEach(e => {
       let {
@@ -164,18 +164,18 @@ let p = new R(s.Z, {
       })
     }), T.notifCenterLocalItems = t
   },
-  LOGOUT: S,
+  LOGOUT: f,
   NOTIFICATION_CENTER_ITEMS_ACK: function(e) {
     let {
       ids: t
     } = e;
-    A(t, !0)
+    N(t, !0)
   },
   NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function(e) {
     let {
       ids: t
     } = e;
-    A(t, !1)
+    N(t, !1)
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
     let {
@@ -183,7 +183,7 @@ let p = new R(s.Z, {
     } = e;
     O(t)
   },
-  NOTIFICATION_CENTER_ITEM_CREATE: N,
+  NOTIFICATION_CENTER_ITEM_CREATE: A,
   NOTIFICATION_CENTER_ITEM_DELETE: function(e) {
     let {
       id: t
@@ -191,7 +191,7 @@ let p = new R(s.Z, {
     if (!T.notifCenterIds.has(t)) return !1;
     T.notifCenterIds.delete(t), T.notifCenterItems = T.notifCenterItems.filter(e => e.id !== t)
   },
-  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: N,
+  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: A,
   LOAD_NOTIFICATION_CENTER_ITEMS: function() {
     T.loading = !0
   },
@@ -204,9 +204,9 @@ let p = new R(s.Z, {
       hasMore: n,
       cursor: i
     } = e;
-    if (!!T.loading) T.loading = !1, T.initialized = !0, T.errored = !1, T.isDataStale = !1, (null == i || !T.notifCenterIds.has(i)) && (T.paginationHasMore = t.length > 0 && n, T.paginationCursor = t.length > 0 ? i : void 0), T.notifCenterItems = [...T.notifCenterItems, ...t.map(f).filter(e => !T.notifCenterIds.has(e.id))], T.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id)), t.forEach(e => T.notifCenterIds.add(e.id))
+    if (!!T.loading) T.loading = !1, T.initialized = !0, T.errored = !1, T.isDataStale = !1, (null == i || !T.notifCenterIds.has(i)) && (T.paginationHasMore = t.length > 0 && n, T.paginationCursor = t.length > 0 ? i : void 0), T.notifCenterItems = [...T.notifCenterItems, ...t.map(S).filter(e => !T.notifCenterIds.has(e.id))], T.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id)), t.forEach(e => T.notifCenterIds.add(e.id))
   },
-  RESET_NOTIFICATION_CENTER: S,
+  RESET_NOTIFICATION_CENTER: f,
   NOTIFICATION_CENTER_SET_ACTIVE: function(e) {
     let {
       active: t
@@ -251,7 +251,7 @@ let p = new R(s.Z, {
       acked: !0
     } : e).filter(h)
   },
-  SET_RECENT_MENTIONS_FILTER: S,
+  SET_RECENT_MENTIONS_FILTER: f,
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function(e) {
     let {
       newBuild: t
@@ -262,4 +262,4 @@ let p = new R(s.Z, {
     }
   }
 });
-t.Z = p
+t.Z = R

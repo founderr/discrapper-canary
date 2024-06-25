@@ -1,13 +1,13 @@
 t.d(n, {
   Z: function() {
-    return S
+    return p
   },
   f: function() {
-    return p
+    return m
   }
 }), t(47120);
-var i, r, l = t(735250),
-  o = t(470079),
+var i, r, o = t(735250),
+  l = t(470079),
   u = t(120356),
   s = t.n(u),
   a = t(91192),
@@ -19,98 +19,98 @@ var i, r, l = t(735250),
   I = t(689938),
   g = t(169320);
 
-function S(e) {
+function p(e) {
   let {
     tag: n,
     size: t = 1,
     disabled: i,
     className: r,
     onClick: u,
-    onRemove: S,
-    selected: p,
-    ariaLabel: m
+    onRemove: p,
+    selected: m,
+    ariaLabel: S
   } = e, {
     name: C,
     emojiId: T,
     emojiName: N
-  } = n, A = null != S, [v, h] = o.useState(!1), R = (0, c.e7)([E.Z], () => null != T ? E.Z.getUsableCustomEmojiById(T) : null), L = A || null != u, M = (!A || !v) && (null != T || null != N), O = 0 === t, Z = o.useRef(null), D = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled), b = (0, l.jsxs)(l.Fragment, {
-    children: [M ? (0, l.jsx)(_.Z, {
+  } = n, h = null != p, [v, A] = l.useState(!1), R = (0, c.e7)([E.Z], () => null != T ? E.Z.getUsableCustomEmojiById(T) : null), b = h || null != u, M = (!h || !v) && (null != T || null != N), L = 0 === t, O = l.useRef(null), Z = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled), D = (0, o.jsxs)(o.Fragment, {
+    children: [M ? (0, o.jsx)(_.Z, {
       className: s()(g.emoji, {
-        [g.small]: O
+        [g.small]: L
       }),
       emojiId: T,
       emojiName: N,
       animated: !!(null == R ? void 0 : R.animated),
       size: "reaction"
-    }) : null, v && A && (0, l.jsx)("div", {
+    }) : null, v && h && (0, o.jsx)("div", {
       className: g.closeCircle,
-      children: (0, l.jsx)(d.CloseSmallIcon, {
+      children: (0, o.jsx)(d.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
         className: g.close
       })
-    }), (0, l.jsx)(d.Text, {
-      variant: O ? "text-xs/semibold" : "text-sm/semibold",
+    }), (0, o.jsx)(d.Text, {
+      variant: L ? "text-xs/semibold" : "text-sm/semibold",
       lineClamp: 1,
       children: C
     })]
-  }), P = {
+  }), x = {
     key: n.id,
     className: s()(g.pill, {
       [g.disabled]: i,
-      [g.clickable]: L,
-      [g.small]: O,
-      [g.selected]: p
+      [g.clickable]: b,
+      [g.small]: L,
+      [g.selected]: m
     }, r),
     onClick: e => {
-      null == u || u(e), null == S || S(n), !D && null != Z.current && Z.current.blur()
+      null == u || u(e), null == p || p(n), !Z && null != O.current && O.current.blur()
     },
-    onMouseEnter: () => A && h(!0),
-    onMouseLeave: () => A && h(!1)
-  }, x = (0, a.JA)("forum-tag-".concat(n.id));
-  return L ? (0, l.jsx)(d.Clickable, {
-    ...x,
-    innerRef: Z,
+    onMouseEnter: () => h && A(!0),
+    onMouseLeave: () => h && A(!1)
+  }, P = (0, a.JA)("forum-tag-".concat(n.id));
+  return b ? (0, o.jsx)(d.Clickable, {
+    ...P,
+    innerRef: O,
     focusProps: {
-      ringTarget: Z
+      ringTarget: O
     },
-    "aria-label": null != m ? m : I.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
+    "aria-label": null != S ? S : I.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
       tagName: C
     }),
     role: "button",
-    "aria-pressed": p,
-    ...P,
-    children: b
-  }) : (0, l.jsx)("div", {
-    ...P,
-    children: b
+    "aria-pressed": m,
+    ...x,
+    children: D
+  }) : (0, o.jsx)("div", {
+    ...x,
+    children: D
   })
 }
 
-function p(e) {
+function m(e) {
   let {
     tags: n,
     count: t,
     size: i = 1
   } = e, r = 0 === i;
-  return (0, l.jsx)(d.Tooltip, {
+  return (0, o.jsx)(d.Tooltip, {
     "aria-label": I.Z.Messages.FORUM_TAGS,
-    text: (0, l.jsx)(l.Fragment, {
-      children: n.map(e => (0, l.jsx)(S, {
+    text: (0, o.jsx)(o.Fragment, {
+      children: n.map(e => (0, o.jsx)(p, {
         tag: e,
         className: g.tooltipPill,
-        size: S.Sizes.SMALL
+        size: p.Sizes.SMALL
       }, e.id))
     }),
-    children: e => (0, l.jsx)("div", {
+    children: e => (0, o.jsx)("div", {
       ...e,
       className: s()(g.pill, {
         [g.small]: r
       }),
-      children: (0, l.jsxs)(d.Text, {
+      children: (0, o.jsxs)(d.Text, {
         variant: r ? "text-xs/semibold" : "text-sm/semibold",
         children: ["+", t]
       })
     })
   })
-}(r = i || (i = {}))[r.SMALL = 0] = "SMALL", r[r.MEDIUM = 1] = "MEDIUM", S.Sizes = i
+}(r = i || (i = {}))[r.SMALL = 0] = "SMALL", r[r.MEDIUM = 1] = "MEDIUM", p.Sizes = i

@@ -1,70 +1,70 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return o
+    return u
   }
 });
-var r = n(735250);
-n(470079);
-var u = n(442837),
-  l = n(481060),
-  a = n(857595),
-  i = n(607070),
-  s = n(689938);
+var o = t(735250);
+t(470079);
+var r = t(442837),
+  a = t(481060),
+  c = t(857595),
+  i = t(607070),
+  l = t(689938);
 
-function o() {
+function u() {
   let {
     saturation: e,
-    useReducedMotion: t,
-    roleStyle: n
-  } = (0, u.cj)([i.Z], () => ({
+    useReducedMotion: n,
+    roleStyle: t
+  } = (0, r.cj)([i.Z], () => ({
     saturation: i.Z.saturation,
     useReducedMotion: i.Z.useReducedMotion,
     roleStyle: i.Z.roleStyle
-  })), o = [{
-    name: s.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_USERNAME_LABEL,
+  })), u = [{
+    name: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_USERNAME_LABEL,
     value: "username"
   }, {
-    name: s.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_DOT_LABEL,
+    name: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_DOT_LABEL,
     value: "dot"
   }, {
-    name: s.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_HIDDEN_LABEL,
+    name: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_HIDDEN_LABEL,
     value: "hidden"
   }];
-  return [(0, r.jsx)(l.MenuGroup, {
-    children: (0, r.jsx)(l.MenuCheckboxItem, {
+  return [(0, o.jsx)(a.MenuGroup, {
+    children: (0, o.jsx)(a.MenuCheckboxItem, {
       id: "reduced-motion",
-      label: s.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE,
-      checked: t,
-      action: () => (0, a.Zt)(t ? "no-preference" : "reduce")
+      label: l.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE,
+      checked: n,
+      action: () => (0, c.Zt)(n ? "no-preference" : "reduce")
     })
-  }, "reduced-motion"), (0, r.jsx)(l.MenuGroup, {
-    children: (0, r.jsx)(l.MenuControlItem, {
+  }, "reduced-motion"), (0, o.jsx)(a.MenuGroup, {
+    children: (0, o.jsx)(a.MenuControlItem, {
       id: "input",
-      label: s.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE,
-      control: (t, n) => (0, r.jsx)(l.MenuSliderControl, {
-        ...t,
-        ref: n,
+      label: l.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE,
+      control: (n, t) => (0, o.jsx)(a.MenuSliderControl, {
+        ...n,
+        ref: t,
         value: 100 * e,
-        onChange: e => (0, a.o2)(e / 100),
-        "aria-label": s.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
+        onChange: e => (0, c.o2)(e / 100),
+        "aria-label": l.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
       })
     })
-  }, "input"), (0, r.jsx)(l.MenuGroup, {
-    children: (0, r.jsx)(l.MenuItem, {
+  }, "input"), (0, o.jsx)(a.MenuGroup, {
+    children: (0, o.jsx)(a.MenuItem, {
       id: "role-colors",
-      label: s.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
-      children: o.map(e => {
+      label: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
+      children: u.map(e => {
         let {
-          name: t,
-          value: u
+          name: n,
+          value: r
         } = e;
-        return (0, r.jsx)(l.MenuRadioItem, {
-          id: u,
+        return (0, o.jsx)(a.MenuRadioItem, {
+          id: r,
           group: "role-colors",
-          checked: u === n,
-          label: t,
-          action: () => (0, a.u1)(u)
-        }, u)
+          checked: r === t,
+          label: n,
+          action: () => (0, c.u1)(r)
+        }, r)
       })
     })
   }, "role-colors")]

@@ -23,30 +23,30 @@ function T(e) {
     commandIds: n,
     channel: T,
     guildId: h,
-    onClick: S
+    onClick: f
   } = e, {
-    commands: f
-  } = a.Qm(T, t, n), N = r.useMemo(() => null == f ? void 0 : f.filter(e => !0 !== e.nsfw), [f]), A = r.useCallback(e => {
-    null == S || S(), u.default.track(c.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
+    commands: S
+  } = a.Qm(T, t, n), A = r.useMemo(() => null == S ? void 0 : S.filter(e => !0 !== e.nsfw), [S]), N = r.useCallback(e => {
+    null == f || f(), u.default.track(c.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
       guild_id: h,
       ...(0, o.JS)(T.id)
     })
-  }, [t, T.id, h, S]);
-  return null == N || 0 === N.length ? null : (0, i.jsxs)(_.Z, {
+  }, [t, T.id, h, f]);
+  return null == A || 0 === A.length ? null : (0, i.jsxs)(_.Z, {
     children: [(0, i.jsx)(s.Heading, {
       variant: "eyebrow",
       className: I.title,
       children: d.Z.Messages.BOT_PROFILE_SLASH_COMMANDS
     }), (0, i.jsx)("ul", {
       className: E.popularApplicationCommandsList,
-      children: N.map(e => (0, i.jsx)("li", {
+      children: A.map(e => (0, i.jsx)("li", {
         children: (0, i.jsx)(l.wz, {
           commandId: e.id,
           commandName: e.displayName,
           commandDescription: e.displayDescription,
-          onClick: A,
+          onClick: N,
           guildId: h,
           channelId: T.id
         })

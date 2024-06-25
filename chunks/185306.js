@@ -1,36 +1,36 @@
-var n = t(735250),
-  l = t(470079),
-  s = t(120356),
-  r = t.n(s),
-  o = t(263568),
-  i = t(481060),
-  c = t(689938),
-  u = t(991833);
+var t = n(735250),
+  r = n(470079),
+  l = n(120356),
+  s = n.n(l),
+  o = n(263568),
+  i = n(481060),
+  c = n(689938),
+  u = n(991833);
 
 function d(e) {
   let {
     label: a,
-    isSelected: t,
-    onClick: l,
-    children: s
+    isSelected: n,
+    onClick: r,
+    children: l
   } = e, o = (0, i.useRadioItem)({
-    isSelected: t,
+    isSelected: n,
     label: a
   });
-  return (0, n.jsx)(i.Clickable, {
+  return (0, t.jsx)(i.Clickable, {
     ...o,
-    onClick: l,
-    className: r()(u.option, t && u.optionSelected),
-    children: s
+    onClick: r,
+    className: s()(u.option, n && u.optionSelected),
+    children: l
   })
 }
 a.Z = function(e) {
   let {
     selectedLayoutType: a,
-    onSelectedLayoutType: t
-  } = e, s = (0, i.useRadioGroup)({
+    onSelectedLayoutType: n
+  } = e, l = (0, i.useRadioGroup)({
     orientation: "horizontal"
-  }), r = l.useMemo(() => [{
+  }), s = r.useMemo(() => [{
     name: o.C.DEFAULT,
     label: c.Z.Messages.CREATE_POLL_LAYOUT_DEFAULT,
     icon: i.ListBulletsIcon
@@ -38,20 +38,20 @@ a.Z = function(e) {
     name: o.C.IMAGE_ONLY_ANSWERS,
     label: c.Z.Messages.CREATE_POLL_LAYOUT_IMAGE,
     icon: i.ImageIcon
-  }], []), E = e => {
-    t(e)
+  }], []), _ = e => {
+    n(e)
   };
-  return (0, n.jsx)("div", {
+  return (0, t.jsx)("div", {
     className: u.container,
     "aria-label": c.Z.Messages.CREATE_POLL_LAYOUTS_RADIOGROUP_ARIA_LABEL,
-    ...s,
-    children: r.map(e => {
-      let t = e.icon;
-      return (0, n.jsx)(d, {
+    ...l,
+    children: s.map(e => {
+      let n = e.icon;
+      return (0, t.jsx)(d, {
         label: e.label,
         isSelected: e.name === a,
-        onClick: () => E(e.name),
-        children: (0, n.jsx)(t, {
+        onClick: () => _(e.name),
+        children: (0, t.jsx)(n, {
           className: u.icon
         })
       }, e.name)

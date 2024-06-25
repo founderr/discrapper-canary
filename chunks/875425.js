@@ -1,4 +1,4 @@
-s.d(t, {
+a.d(t, {
   F: function() {
     return l
   },
@@ -6,7 +6,7 @@ s.d(t, {
     return n
   }
 });
-let a = 36e5,
+let s = 36e5,
   n = 128,
   l = Object.freeze({
     MINUTES_30: 18e5,

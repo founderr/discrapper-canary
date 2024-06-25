@@ -3,11 +3,11 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(594174),
-  a = n(74538),
+var a = n(442837),
+  l = n(594174),
+  s = n(74538),
   r = n(878349),
   o = n(689938);
 
@@ -17,12 +17,12 @@ function c(e) {
     labelText: n,
     onChange: c,
     onShowUpsell: u
-  } = e, d = (0, i.e7)([s.default], () => s.default.getCurrentUser()), h = a.ZP.canUseFancyVoiceChannelReactions(d), m = "";
-  return m = h ? t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL, (0, l.jsx)(r.Z, {
+  } = e, d = (0, a.e7)([l.default], () => l.default.getCurrentUser()), h = s.ZP.canUseFancyVoiceChannelReactions(d), p = "";
+  return p = h ? t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL, (0, i.jsx)(r.Z, {
     checked: t,
     onChange: c,
     labelText: n,
-    tooltipText: m,
+    tooltipText: p,
     iconAltText: o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TADA_ALT,
     canToggle: h,
     onClick: h ? () => {} : u

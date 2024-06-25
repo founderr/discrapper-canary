@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   K: function() {
-    return E
+    return _
   },
   Z: function() {
     return g
@@ -10,10 +10,10 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(704215),
-  l = n(481060),
+  a = n(481060),
   o = n(13245),
-  a = n(312839),
-  r = n(706140),
+  r = n(312839),
+  l = n(706140),
   c = n(454902),
   d = n(658785),
   u = n(987650),
@@ -21,8 +21,8 @@ var s = n(704215),
   p = n(689938),
   f = n(982110);
 
-function E() {
-  let [e, t] = (0, r.c)([s.z.OVERLAY_KEYBIND_NOTIFICATION]), {
+function _() {
+  let [e, t] = (0, l.c)([s.z.OVERLAY_KEYBIND_NOTIFICATION]), {
     showKeybindIndicators: n
   } = d.Z.useExperiment({
     location: "Overlay"
@@ -41,7 +41,7 @@ function g(e) {
   } = e, {
     trackView: n,
     trackClick: s
-  } = (0, a.R)(u.n0.KeybindIndicatorsNotification, {
+  } = (0, r.R)(u.n0.KeybindIndicatorsNotification, {
     notif_type: u.n0.KeybindIndicatorsNotification
   });
   return {
@@ -50,13 +50,13 @@ function g(e) {
       className: f.notificationBody,
       children: [(0, i.jsx)("div", {
         className: f.iconContainer,
-        children: (0, i.jsx)(l.MicrophoneIcon, {
+        children: (0, i.jsx)(a.MicrophoneIcon, {
           size: "custom",
           color: "currentColor",
           height: 28,
           width: 28
         })
-      }), (0, i.jsx)(l.Text, {
+      }), (0, i.jsx)(a.Text, {
         variant: "text-sm/normal",
         children: p.Z.Messages.KEYBIND_NOTIFICATION_DESCRIPTION
       })]

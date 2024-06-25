@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   A_: function() {
-    return f
+    return S
   },
   Ok: function() {
     return O
   },
   U4: function() {
-    return N
+    return A
   },
   Ye: function() {
     return T.Z
@@ -16,7 +16,7 @@ n.d(t, {
     return m
   },
   q: function() {
-    return A
+    return N
   }
 }), n(789020);
 var i = n(913527),
@@ -33,22 +33,22 @@ var i = n(913527),
   I = n(569471),
   T = n(814391),
   h = n(124368),
-  S = n(981631);
+  f = n(981631);
 
-function f() {
-  (0, o.yw)(S.rMx.THREAD_BROWSER_TAB_CHANGED)
+function S() {
+  (0, o.yw)(f.rMx.THREAD_BROWSER_TAB_CHANGED)
 }
 
-function N() {
+function A() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
-  (0, o.yw)(S.rMx.OPEN_MODAL, {
+  (0, o.yw)(f.rMx.OPEN_MODAL, {
     type: "Thread Browser",
     location_section: e
   })
 }
 
-function A() {
-  _.default.track(S.rMx.OPEN_POPOUT, {
+function N() {
+  _.default.track(f.rMx.OPEN_POPOUT, {
     type: "Active Threads Popout"
   })
 }
@@ -61,20 +61,20 @@ function m(e, t) {
     o = e.parent_id,
     l = (0, d.I)(s, o),
     E = e => {
-      if ((0, c.yE)(e, h.iN.ALL_MESSAGES)) return d.$R[S.bL.ALL_MESSAGES];
-      if ((0, c.yE)(e, h.iN.ONLY_MENTIONS)) return d.$R[S.bL.ONLY_MENTIONS];
-      if ((0, c.yE)(e, h.iN.NO_MESSAGES)) return d.$R[S.bL.NO_MESSAGES];
-      return d.$R[S.bL.NULL]
+      if ((0, c.yE)(e, h.iN.ALL_MESSAGES)) return d.$R[f.bL.ALL_MESSAGES];
+      if ((0, c.yE)(e, h.iN.ONLY_MENTIONS)) return d.$R[f.bL.ONLY_MENTIONS];
+      if ((0, c.yE)(e, h.iN.NO_MESSAGES)) return d.$R[f.bL.NO_MESSAGES];
+      return d.$R[f.bL.NULL]
     },
     T = null !== (n = I.Z.flags(e.id)) && void 0 !== n ? n : 0,
-    f = E(T),
-    N = I.Z.isMuted(e.id),
-    A = (0, d.sK)(I.Z.getMuteConfig(e.id)),
+    S = E(T),
+    A = I.Z.isMuted(e.id),
+    N = (0, d.sK)(I.Z.getMuteConfig(e.id)),
     {
       can_send_message: m,
       ...O
     } = r,
-    R = {
+    p = {
       ...O,
       channel_id: e.id,
       guild_id: s,
@@ -82,15 +82,15 @@ function m(e, t) {
       channel_type: e.type,
       has_interacted_with_thread: (T & h.iN.HAS_INTERACTED) != 0,
       parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(s, o),
-      old_thread_notification_setting: f,
-      new_thread_notification_setting: null != t.flags ? E(t.flags) : f,
+      old_thread_notification_setting: S,
+      new_thread_notification_setting: null != t.flags ? E(t.flags) : S,
       parent_notification_setting: l.channel_message_notification_settings,
-      old_thread_is_muted: N,
-      new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : N,
-      old_thread_muted_until: A,
-      new_thread_muted_until: null != t.mute_config ? (0, d.sK)(t.mute_config) : A
+      old_thread_is_muted: A,
+      new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : A,
+      old_thread_muted_until: N,
+      new_thread_muted_until: null != t.mute_config ? (0, d.sK)(t.mute_config) : N
     };
-  _.default.track(S.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, R)
+  _.default.track(f.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, p)
 }
 n(689938);
 let O = e => {

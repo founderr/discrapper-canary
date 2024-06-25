@@ -1,26 +1,26 @@
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return _
   }
 });
-var n, a, i = s(735250),
-  o = s(470079),
-  r = s(481060),
-  E = s(841613),
-  d = s(285952),
-  l = s(626135),
-  c = s(981631),
-  D = s(689938),
-  T = s(292212);
+var a, s, i = n(735250),
+  o = n(470079),
+  r = n(481060),
+  E = n(841613),
+  d = n(285952),
+  l = n(626135),
+  c = n(981631),
+  D = n(689938),
+  T = n(292212);
 
-function N(e, t, s) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
-}(n = a || (a = {})).CERTIFIED = "New Audio Device Detected - Certified", n.NOT_CERTIFIED = "New Audio Device Detected - Not Certified";
+  }) : e[t] = n, e
+}(a = s || (s = {})).CERTIFIED = "New Audio Device Detected - Certified", a.NOT_CERTIFIED = "New Audio Device Detected - Not Certified";
 class _ extends o.Component {
   track() {
     let {
@@ -45,36 +45,36 @@ class _ extends o.Component {
     let e;
     let {
       device: t,
-      certifiedDeviceMetadata: s
+      certifiedDeviceMetadata: n
     } = this.props, {
-      devicePreference: n
+      devicePreference: a
     } = this.state;
     switch (t.type) {
       case c.QyF.INPUT:
-        e = null != s ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_INPUT_BODY.format({
-          vendorName: s.vendor.name,
-          modelName: s.model.name
+        e = null != n ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_INPUT_BODY.format({
+          vendorName: n.vendor.name,
+          modelName: n.model.name
         }) : D.Z.Messages.CONNECTED_DEVICE_DETECTED_INPUT_BODY.format({
           name: t.displayName
         });
         break;
       case c.QyF.OUTPUT:
-        e = null != s ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_OUTPUT_BODY.format({
-          vendorName: s.vendor.name,
-          modelName: s.model.name
+        e = null != n ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_OUTPUT_BODY.format({
+          vendorName: n.vendor.name,
+          modelName: n.model.name
         }) : D.Z.Messages.CONNECTED_DEVICE_DETECTED_OUTPUT_BODY.format({
           name: t.displayName
         });
         break;
       default:
         e = (0, i.jsxs)(o.Fragment, {
-          children: [null != s ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_INPUT_AND_OUTPUT_BODY.format({
-            vendorName: s.vendor.name,
-            modelName: s.model.name
+          children: [null != n ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_AUDIO_INPUT_AND_OUTPUT_BODY.format({
+            vendorName: n.vendor.name,
+            modelName: n.model.name
           }) : D.Z.Messages.CONNECTED_DEVICE_DETECTED_INPUT_AND_OUTPUT_BODY.format({
             name: t.displayName
           }), (0, i.jsx)(r.RadioGroup, {
-            value: n,
+            value: a,
             className: T.options,
             onChange: this.handleConnectedDeviceType,
             options: [{
@@ -104,15 +104,15 @@ class _ extends o.Component {
     let {
       certifiedDeviceMetadata: e,
       transitionState: t
-    } = this.props, s = null != e ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_TITLE : D.Z.Messages.CONNECTED_DEVICE_DETECTED_TITLE;
+    } = this.props, n = null != e ? D.Z.Messages.CERTIFIED_DEVICE_RECOMMENDATION_TITLE : D.Z.Messages.CONNECTED_DEVICE_DETECTED_TITLE;
     return (0, i.jsxs)(r.ModalRoot, {
       transitionState: t,
-      "aria-label": s,
+      "aria-label": n,
       children: [(0, i.jsx)(r.ModalHeader, {
         separator: !1,
         children: (0, i.jsx)(r.Heading, {
           variant: "heading-lg/semibold",
-          children: s
+          children: n
         })
       }), (0, i.jsx)(r.ModalContent, {
         children: (0, i.jsx)(r.Text, {
@@ -141,9 +141,9 @@ class _ extends o.Component {
         device: e,
         onClose: t
       } = this.props, {
-        devicePreference: s
+        devicePreference: n
       } = this.state;
-      null != s && (E.hG(e.displayName, s, "New Audio Device Detected Modal"), t())
+      null != n && (E.hG(e.displayName, n, "New Audio Device Detected Modal"), t())
     }), N(this, "cancel", () => {
       let {
         device: e,

@@ -1,83 +1,83 @@
 n.d(t, {
   Z: function() {
-    return C
+    return g
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(171368),
+var a = n(442837),
+  l = n(481060),
+  s = n(171368),
   r = n(650774),
   o = n(430824),
   c = n(496675),
   u = n(502568),
   d = n(709054),
   h = n(826581),
-  m = n(246364),
-  E = n(360328),
-  p = n(981631),
-  g = n(689938),
-  f = n(695572);
+  p = n(246364),
+  m = n(360328),
+  _ = n(981631),
+  f = n(689938),
+  E = n(695572);
 
-function C(e) {
+function g(e) {
   let {
     channelId: t,
     showProfile: n = !1,
-    showTrailingDivider: C = !1
-  } = e, _ = d.default.cast(t), {
+    showTrailingDivider: g = !1
+  } = e, C = d.default.cast(t), {
     joinRequest: I,
     isModmin: x,
     guildId: T,
     maxMembers: N
-  } = (0, i.cj)([h.Z, o.Z, c.Z], () => {
-    let e = h.Z.getRequest(_),
+  } = (0, a.cj)([h.Z, o.Z, c.Z], () => {
+    let e = h.Z.getRequest(C),
       t = o.Z.getGuild(null == e ? void 0 : e.guildId);
     return {
       joinRequest: e,
-      isModmin: null != t && c.Z.can(p.Plq.KICK_MEMBERS, t),
+      isModmin: null != t && c.Z.can(_.Plq.KICK_MEMBERS, t),
       guildId: null == t ? void 0 : t.id,
       maxMembers: null == t ? void 0 : t.maxMembers
     }
-  }), Z = (0, i.e7)([r.Z], () => null != T ? r.Z.getMemberCount(T) : 0), S = null != N && (null != Z ? Z : 0) >= N, {
-    approveRequest: v,
+  }), v = (0, a.e7)([r.Z], () => null != T ? r.Z.getMemberCount(T) : 0), S = null != N && (null != v ? v : 0) >= N, {
+    approveRequest: Z,
     rejectRequest: A,
     submitting: M
-  } = (0, E.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
-  return null != I && I.applicationStatus === m.wB.SUBMITTED && x ? (0, l.jsxs)("div", {
-    className: f.buttons,
-    children: [(0, l.jsx)(s.Tooltip, {
-      text: g.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
+  } = (0, m.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
+  return null != I && I.applicationStatus === p.wB.SUBMITTED && x ? (0, i.jsxs)("div", {
+    className: E.buttons,
+    children: [(0, i.jsx)(l.Tooltip, {
+      text: f.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
       shouldShow: S,
-      children: e => (0, l.jsx)(s.Button, {
+      children: e => (0, i.jsx)(l.Button, {
         ...e,
-        color: s.Button.Colors.GREEN,
+        color: l.Button.Colors.GREEN,
         submitting: M,
-        onClick: v,
-        size: s.ButtonSizes.SMALL,
+        onClick: Z,
+        size: l.ButtonSizes.SMALL,
         disabled: S,
-        children: g.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+        children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
       })
-    }), (0, l.jsx)(s.Button, {
-      color: s.Button.Colors.RED,
+    }), (0, i.jsx)(l.Button, {
+      color: l.Button.Colors.RED,
       onClick: A,
-      size: s.ButtonSizes.SMALL,
-      disabled: M || I.applicationStatus !== m.wB.SUBMITTED,
-      children: g.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
-    }), n && (0, l.jsx)(s.Button, {
-      color: s.Button.Colors.TRANSPARENT,
+      size: l.ButtonSizes.SMALL,
+      disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
+      children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+    }), n && (0, i.jsx)(l.Button, {
+      color: l.Button.Colors.TRANSPARENT,
       onClick: () => {
-        (0, a.openUserProfileModal)({
+        (0, s.openUserProfileModal)({
           userId: I.userId,
           guildId: I.guildId,
           analyticsLocation: {
-            section: p.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: p.qAy.JOIN_REQUEST
+            section: _.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+            object: _.qAy.JOIN_REQUEST
           }
         })
       },
-      size: s.ButtonSizes.SMALL,
-      children: g.Z.Messages.VIEW_PROFILE
-    }), C && (0, l.jsx)(u.ZP.Divider, {})]
+      size: l.ButtonSizes.SMALL,
+      children: f.Z.Messages.VIEW_PROFILE
+    }), g && (0, i.jsx)(u.ZP.Divider, {})]
   }) : null
 }

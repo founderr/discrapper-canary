@@ -1,23 +1,23 @@
-var s, i, l, a, r = n(442837),
+var i, s, a, r, l = n(442837),
   o = n(704215),
   c = n(570140),
-  u = n(150340),
-  d = n(496675);
+  d = n(150340),
+  u = n(496675);
 
-function E() {
+function _() {
   return !0
 }
-class h extends(a = r.ZP.Store) {
+class E extends(r = l.ZP.Store) {
   initialize() {
-    this.waitFor(d.Z), this.syncWith([d.Z], E)
+    this.waitFor(u.Z), this.syncWith([u.Z], _)
   }
   channelNoticePredicate(e) {
-    return (0, u.S)(e.id, o.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
+    return (0, d.S)(e.id, o.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
   }
 }
-l = "GuildOnboardingUpsellNoticeStore", (i = "displayName") in(s = h) ? Object.defineProperty(s, i, {
-  value: l,
+a = "GuildOnboardingUpsellNoticeStore", (s = "displayName") in(i = E) ? Object.defineProperty(i, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = l, t.Z = new h(c.Z)
+}) : i[s] = a, t.Z = new E(c.Z)

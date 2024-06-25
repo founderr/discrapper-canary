@@ -1,5 +1,5 @@
 "use strict";
-let n = (0, t(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2020-12_guild_delete_feedback",
   label: "Guild Delete Feedback experiment",
@@ -14,4 +14,4 @@ let n = (0, t(818083).B)({
     }
   }]
 });
-s.Z = n
+t.Z = s

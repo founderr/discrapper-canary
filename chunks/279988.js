@@ -2,10 +2,10 @@ t(47120);
 var a = t(735250);
 t(470079);
 var r = t(120356),
-  s = t.n(r),
-  i = t(692547),
-  l = t(481060),
-  o = t(259580),
+  i = t.n(r),
+  s = t(692547),
+  o = t(481060),
+  l = t(259580),
   c = t(196345),
   d = t(137158),
   u = t(689938),
@@ -15,45 +15,45 @@ n.Z = function(e) {
     channelId: n,
     formField: t,
     index: r,
-    isDragEnabled: h,
+    isDragEnabled: f,
     isDropHovered: C,
-    onDrop: x,
-    onEdit: f,
-    onRemove: E,
-    canRemove: T,
-    title: _,
-    actionsLocation: I
-  } = e, g = t.values, p = g.slice(0, 1), N = g.length - p.length;
+    onDrop: _,
+    onEdit: h,
+    onRemove: x,
+    canRemove: g,
+    title: p,
+    actionsLocation: T
+  } = e, I = t.values, E = I.slice(0, 1), b = I.length - E.length;
   return (0, a.jsxs)(d.Z, {
     field: t,
     index: r,
-    isDragEnabled: h,
+    isDragEnabled: f,
     isDropHovered: C,
-    onDrop: x,
-    onEdit: f,
-    onRemove: E,
-    title: _,
-    canRemove: T,
-    actionsLocation: I,
+    onDrop: _,
+    onEdit: h,
+    onRemove: x,
+    title: p,
+    canRemove: g,
+    actionsLocation: T,
     children: [(0, a.jsx)(c.EK, {
-      className: s()(m.fieldBackground, {
-        [m.withFooter]: 0 !== N
+      className: i()(m.fieldBackground, {
+        [m.withFooter]: 0 !== b
       }),
-      terms: p,
+      terms: E,
       channelId: n
-    }), 0 !== N && (0, a.jsxs)(l.Clickable, {
-      className: s()(m.fieldFooterContainer, m.clickable),
-      onClick: f,
-      children: [(0, a.jsx)(l.FormText, {
+    }), 0 !== b && (0, a.jsxs)(o.Clickable, {
+      className: i()(m.fieldFooterContainer, m.clickable),
+      onClick: h,
+      children: [(0, a.jsx)(o.FormText, {
         className: m.clickable,
         children: u.Z.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-          count: N
+          count: b
         })
-      }), (0, a.jsx)(o.Z, {
+      }), (0, a.jsx)(l.Z, {
         className: m.termsFieldCaretIcon,
         height: 14,
         width: 14,
-        color: i.Z.unsafe_rawColors.WHITE_500.css
+        color: s.Z.unsafe_rawColors.WHITE_500.css
       })]
     }), (0, a.jsx)(c.G0, {
       disabled: !0,

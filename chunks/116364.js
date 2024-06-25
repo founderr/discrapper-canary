@@ -14,14 +14,14 @@ var r = n(392711),
   I = n(590921),
   T = n(689079),
   h = n(689938),
-  S = n(535175),
-  f = n(239840);
-let N = {
+  f = n(535175),
+  S = n(239840);
+let A = {
     results: {
       choices: []
     }
   },
-  A = {
+  N = {
     results: {
       choices: [],
       isLoading: !0
@@ -40,11 +40,11 @@ let N = {
       isError: !0
     }
   },
-  R = s().debounce(_.Z, T.Fu, {
+  p = s().debounce(_.Z, T.Fu, {
     leading: !0,
     trailing: !0
   }),
-  p = {
+  R = {
     stores: [u.Z, l.Z],
     showEmpty: !0,
     matches(e, t, n, i, r) {
@@ -54,11 +54,11 @@ let N = {
     queryResults(e, t, n, i, r) {
       var s;
       let o = u.Z.getActiveOption(e.id);
-      if (null == o) return N;
+      if (null == o) return A;
       if (o.autocomplete) {
         if (r) {
           let r = u.Z.getActiveCommand(e.id);
-          R({
+          p({
             command: r,
             optionValues: i.getCommandOptionValues(),
             context: {
@@ -73,7 +73,7 @@ let N = {
         }
         if (l.Z.getLastErrored(e.id)) return O;
         let s = l.Z.getAutocompleteChoices(e.id, o.name, n);
-        return null == s ? A : {
+        return null == s ? N : {
           results: {
             choices: s
           }
@@ -100,8 +100,8 @@ let N = {
       } = e;
       return r ? (0, i.jsx)(o.Z, {
         message: h.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-        noResultsImageURL: f,
-        className: S.noAutocompleteResults
+        noResultsImageURL: S,
+        className: f.noAutocompleteResults
       }) : 0 !== t.length || n ? (0, E.HI)({
         query: a,
         selectedIndex: s,
@@ -119,8 +119,8 @@ let N = {
         key: "choice"
       }) : (0, i.jsx)(o.Z, {
         message: h.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-        noResultsImageURL: f,
-        className: S.noAutocompleteResults
+        noResultsImageURL: S,
+        className: f.noAutocompleteResults
       })
     },
     onSelect(e) {
@@ -138,4 +138,4 @@ let N = {
       }
     }
   };
-t.Z = p
+t.Z = R

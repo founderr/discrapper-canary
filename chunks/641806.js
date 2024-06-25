@@ -1,16 +1,16 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   $: function() {
-    return l
+    return i
   }
 });
-var n = t(970648),
-  i = t(981631);
-async function l(e) {
-  let s = n.Z.generateNonce();
+var s = n(970648),
+  a = n(981631);
+async function i(e) {
+  let t = s.Z.generateNonce();
   try {
-    let t = await n.Z.createHandoffToken(s);
-    return i.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, t, e)
+    let n = await s.Z.createHandoffToken(t);
+    return a.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, n, e)
   } catch {
     return "//".concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/").concat(e)
   }

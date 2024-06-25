@@ -1,25 +1,25 @@
 n.d(t, {
   Z: function() {
-    return a
+    return s
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(601173);
+var a = n(481060),
+  l = n(601173);
 
-function a(e) {
+function s(e) {
   let {
     changePage: t,
     offset: n,
-    totalResults: a,
+    totalResults: s,
     pageLength: r
   } = e, o = Math.floor(n / r) + 1;
-  return (0, l.jsx)("div", {
-    className: s.container,
-    children: (0, l.jsx)(i.Paginator, {
+  return (0, i.jsx)("div", {
+    className: l.container,
+    children: (0, i.jsx)(a.Paginator, {
       currentPage: o,
-      totalCount: a,
+      totalCount: s,
       pageSize: r,
       onPageChange: t,
       maxVisiblePages: 5

@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
   Dk: function() {
-    return A
+    return N
   },
   P5: function() {
     return O
   },
   QF: function() {
-    return S
+    return f
   },
   Sk: function() {
     return c.Skl
   },
   W5: function() {
-    return p
+    return R
   },
   lm: function() {
     return h
@@ -22,7 +22,7 @@ n.d(t, {
     return g
   },
   rs: function() {
-    return R
+    return p
   },
   vP: function() {
     return m
@@ -73,19 +73,19 @@ function h(e, t) {
   return t === d.VZ.WHITE && e === c.Skl.IDLE ? d.d_.HIGH : d.d_.LOW
 }
 
-function S(e) {
+function f(e) {
   return (0, l.wj)(e) ? d.VZ.BLACK : d.VZ.WHITE
 }
 
-function f(e, t, n, i) {
+function S(e, t, n, i) {
   return "scale(".concat(t, ") translate(").concat(.5625 * e + i, " ").concat(.75 * e + n, ")")
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   return "".concat(.5625 * e + n, "px ").concat(.75 * e + t, "px")
 }
 
-function A(e) {
+function N(e) {
   let {
     size: t,
     status: n,
@@ -105,8 +105,8 @@ function A(e) {
     cutoutWidth: 0,
     cutoutHeight: 0,
     cutoutRadius: 0,
-    polygonScale: f(t, 0, a, l),
-    polygonOrigin: N(t, a, l),
+    polygonScale: S(t, 0, a, l),
+    polygonOrigin: A(t, a, l),
     dotY: .75 * t + a,
     dotX: .5 * t + l,
     dotRadius: 0
@@ -124,33 +124,33 @@ function A(e) {
         cutoutWidth: .75 * t,
         cutoutHeight: .75 * t,
         cutoutRadius: 0,
-        polygonScale: f(t, 0, a, l),
-        polygonOrigin: N(t, a, l),
+        polygonScale: S(t, 0, a, l),
+        polygonOrigin: A(t, a, l),
         dotY: 1.25 * t,
         dotX: .5 * t + l,
         dotRadius: .125 * t
       };
       return {
-        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + a, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: 0, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + a, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: 0, polygonScale: S(t, 0, a, l), polygonOrigin: A(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
     case c.Skl.IDLE:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: -(.125 * t) + l, cutoutY: .125 * t + a, cutoutWidth: .75 * t, cutoutHeight: .75 * t, cutoutRadius: .375 * t, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: -(.125 * t) + l, cutoutY: .125 * t + a, cutoutWidth: .75 * t, cutoutHeight: .75 * t, cutoutRadius: .375 * t, polygonScale: S(t, 0, a, l), polygonOrigin: A(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
     case c.Skl.DND:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .125 * t + l, cutoutY: .625 * t + a, cutoutWidth: .75 * t, cutoutHeight: .25 * t, cutoutRadius: .125 * t, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .125 * t + l, cutoutY: .625 * t + a, cutoutWidth: .75 * t, cutoutHeight: .25 * t, cutoutRadius: .125 * t, polygonScale: S(t, 0, a, l), polygonOrigin: A(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
     case c.Skl.STREAMING:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + a, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: .25 * t, polygonScale: f(t, 1, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + a, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: .25 * t, polygonScale: S(t, 1, a, l), polygonOrigin: A(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
     case c.Skl.INVISIBLE:
     case c.Skl.UNKNOWN:
     case c.Skl.OFFLINE:
     default:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .25 * t + l, cutoutY: .5 * t + a, cutoutWidth: .5 * t, cutoutHeight: .5 * t, cutoutRadius: .25 * t, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .25 * t + l, cutoutY: .5 * t + a, cutoutWidth: .5 * t, cutoutHeight: .5 * t, cutoutRadius: .25 * t, polygonScale: S(t, 0, a, l), polygonOrigin: A(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       }
   }
 }
@@ -169,10 +169,10 @@ function m(e, t, n) {
     cutoutHeight: I,
     cutoutRadius: T,
     polygonScale: h,
-    polygonOrigin: S,
-    dotY: f,
-    dotX: N,
-    dotRadius: A
+    polygonOrigin: f,
+    dotY: S,
+    dotX: A,
+    dotRadius: N
   } = e;
   return (0, i.jsxs)("mask", {
     id: n,
@@ -197,13 +197,13 @@ function m(e, t, n) {
       fill: "black",
       transform: h,
       style: {
-        transformOrigin: S
+        transformOrigin: f
       }
     }), (0, i.jsx)(a.animated.circle, {
       fill: "black",
-      cx: N,
-      cy: f,
-      r: A
+      cx: A,
+      cy: S,
+      r: N
     })]
   })
 }
@@ -216,37 +216,37 @@ function O(e) {
     color: l,
     className: u,
     style: _
-  } = e, h = r.useId(), S = t === c.Skl.ONLINE && n, f = r.useMemo(() => A({
+  } = e, h = r.useId(), f = t === c.Skl.ONLINE && n, S = r.useMemo(() => N({
     size: s,
     status: t,
-    isMobile: S
-  }), [s, t, S]), N = (0, a.useSpring)({
+    isMobile: f
+  }), [s, t, f]), A = (0, a.useSpring)({
     config: I,
-    to: f
+    to: S
   }), O = T(t, l), [{
-    fill: R
+    fill: p
   }] = (0, a.useSpring)({
     config: I,
     fill: O
-  }, [O]), p = Math.ceil(s * d.EW);
+  }, [O]), R = Math.ceil(s * d.EW);
   return (0, i.jsxs)("svg", {
     width: s,
-    height: p,
-    viewBox: "0 0 ".concat(s, " ").concat(p),
+    height: R,
+    viewBox: "0 0 ".concat(s, " ").concat(R),
     className: o()(E.mask, u),
     style: _,
-    children: [m(N, s, h), (0, i.jsx)(a.animated.rect, {
+    children: [m(A, s, h), (0, i.jsx)(a.animated.rect, {
       x: 0,
       y: 0,
       width: s,
-      height: p,
-      fill: R,
+      height: R,
+      fill: p,
       mask: "url(#".concat(h, ")")
     })]
   })
 }
 
-function R(e, t) {
+function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (n) return _.ZP.Masks.STATUS_TYPING;
   switch (e) {
@@ -267,7 +267,7 @@ function R(e, t) {
   }
 }
 
-function p(e, t, n) {
+function R(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
   return t === c.Skl.ONLINE && n && !i ? {
     width: e,
@@ -288,10 +288,10 @@ function g(e) {
     color: l
   } = e, u = t === c.Skl.ONLINE && n, d = T(t, l);
   return (0, i.jsx)(_.ZP, {
-    mask: R(t, u),
+    mask: p(t, u),
     className: o()(E.mask, s),
     style: a,
-    ...p(r, t, u),
+    ...R(r, t, u),
     children: (0, i.jsx)("div", {
       style: {
         backgroundColor: d

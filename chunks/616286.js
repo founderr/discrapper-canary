@@ -3,37 +3,37 @@ n.d(t, {
     return T
   }
 }), n(47120), n(653041);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(392711),
   o = n(442837),
   c = n(475179),
   u = n(358221),
   d = n(306680),
   h = n(944486),
-  m = n(111583),
-  E = n(459273),
-  p = n(880831),
-  g = n(774168),
-  f = n(871499),
-  C = n(981631),
-  _ = n(689938);
+  p = n(111583),
+  m = n(459273),
+  _ = n(880831),
+  f = n(774168),
+  E = n(871499),
+  g = n(981631),
+  C = n(689938);
 
 function I(e) {
-  let t = (0, o.e7)([m.Z], () => !(0, r.isEmpty)(m.Z.getTypingUsers(e)), [e]),
+  let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
     n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
     {
-      unreadCount: l,
-      mentionCount: i
+      unreadCount: i,
+      mentionCount: a
     } = (0, o.cj)([d.ZP], () => ({
       unreadCount: d.ZP.getUnreadCount(e),
       mentionCount: d.ZP.getMentionCount(e)
     }), [e]);
   return {
-    unreadCount: l,
-    mentionCount: i,
+    unreadCount: i,
+    mentionCount: a,
     voiceChannelIsSelected: n,
     isTyping: t
   }
@@ -44,16 +44,16 @@ function x(e) {
     className: t,
     channelId: n
   } = e, {
-    unreadCount: i,
-    mentionCount: s,
-    isTyping: a,
+    unreadCount: a,
+    mentionCount: l,
+    isTyping: s,
     voiceChannelIsSelected: r
   } = I(n);
-  return (0, l.jsx)(g.Z, {
+  return (0, i.jsx)(f.Z, {
     className: t,
-    unreadCount: i,
-    mentionCount: s,
-    isTyping: a,
+    unreadCount: a,
+    mentionCount: l,
+    isTyping: s,
     canBadge: r
   })
 }
@@ -61,91 +61,91 @@ function x(e) {
 function T(e) {
   let t, {
       channelId: n,
-      className: s,
+      className: l,
       showingClassName: r,
       onClick: d,
       inPopout: h,
-      showRequestToSpeakSidebar: m,
-      toggleRequestToSpeakSidebar: g,
+      showRequestToSpeakSidebar: p,
+      toggleRequestToSpeakSidebar: f,
       ...T
     } = e,
     {
       disabled: N
     } = T,
-    Z = i.useRef(null),
+    v = a.useRef(null),
     S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
     {
-      isShowing: v,
+      isShowing: Z,
       unreadCount: A,
       mentionCount: M
     } = function(e) {
       let {
         unreadCount: t,
         mentionCount: n,
-        isTyping: l
-      } = I(e), [s, a] = i.useState(!1);
-      return i.useEffect(() => {
-        a(t > 0);
+        isTyping: i
+      } = I(e), [l, s] = a.useState(!1);
+      return a.useEffect(() => {
+        s(t > 0);
         let e = setTimeout(() => {
-          a(!1)
-        }, p.z);
+          s(!1)
+        }, _.z);
         return () => {
-          clearTimeout(e), a(!1)
+          clearTimeout(e), s(!1)
         }
       }, [t]), {
-        isShowing: s || n > 0 || l,
+        isShowing: l || n > 0 || i,
         unreadCount: t,
         mentionCount: n
       }
     }(n),
-    R = i.useCallback(() => {
-      null == d || d(), !S && m && (null == g || g()), c.Z.updateChatOpen(n, !S)
-    }, [n, S, d, m, g]),
-    j = i.useCallback(e => {
+    b = a.useCallback(() => {
+      null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S)
+    }, [n, S, d, p, f]),
+    R = a.useCallback(e => {
       let {
         className: t
       } = e;
-      return (0, l.jsx)(x, {
+      return (0, i.jsx)(x, {
         className: t,
         channelId: n
       })
     }, [n]),
-    L = i.useCallback(() => {
+    j = a.useCallback(() => {
       var e;
-      null === (e = Z.current) || void 0 === e || e.focus()
+      null === (e = v.current) || void 0 === e || e.focus()
     }, []);
-  (0, E.yp)({
-    event: C.CkL.FOCUS_CHAT_BUTTON,
-    handler: N ? null : L
+  (0, m.yp)({
+    event: g.CkL.FOCUS_CHAT_BUTTON,
+    handler: N ? null : j
   });
-  let [O, P] = i.useState(!1), y = i.useCallback(() => {
+  let [L, P] = a.useState(!1), O = a.useCallback(() => {
     h && P(!0)
   }, [h]);
-  (0, E.yp)({
-    event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-    handler: y
-  }), i.useEffect(() => {
+  (0, m.yp)({
+    event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+    handler: O
+  }), a.useEffect(() => {
     let e;
-    return O && (e = setTimeout(() => {
+    return L && (e = setTimeout(() => {
       P(!1)
     }, 3e3)), () => {
       clearTimeout(e)
     }
-  }, [O]);
-  let b = [t = h && N ? _.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? _.Z.Messages.VIDEO_CALL_HIDE_CHAT : _.Z.Messages.VIDEO_CALL_SHOW_CHAT];
-  return M > 0 && b.push(_.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  }, [L]);
+  let y = [t = h && N ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT];
+  return M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: M
-  })), A > 0 && b.push(_.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, l.jsx)(f.Z, {
-    buttonRef: Z,
-    onClick: R,
+  })), A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, i.jsx)(E.Z, {
+    buttonRef: v,
+    onClick: b,
     label: t,
-    "aria-label": b.join(", "),
-    iconComponent: j,
+    "aria-label": y.join(", "),
+    iconComponent: R,
     tooltipPosition: "bottom",
-    wrapperClassName: a()(s, null != r && {
-      [r]: v
+    wrapperClassName: s()(l, null != r && {
+      [r]: Z
     }),
-    forceTooltipOpen: O,
+    forceTooltipOpen: L,
     ...T
   })
 }

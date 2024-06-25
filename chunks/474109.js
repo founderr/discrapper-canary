@@ -1,43 +1,43 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  r = n(664915),
-  a = n(888369),
+var i = n(735250),
+  l = n(470079),
+  r = n(442837),
+  a = n(664915),
+  s = n(888369),
   o = n(358652),
-  u = n(771845),
-  c = n(613060),
+  c = n(771845),
+  u = n(613060),
   d = n(451478),
   h = n(816779),
   p = n(251625),
-  g = n(981631),
-  m = n(689938);
-let C = "app-download-item",
-  E = "add-server-item";
+  f = n(981631),
+  _ = n(689938);
+let g = "app-download-item",
+  m = "add-server-item";
 
-function f() {
+function C() {
   return !1
 }
 
-function _(e) {
+function I(e) {
   var t;
-  let n = a.default.getMutableGuildStates();
-  return e === g.x8Z.SERVER_DISCOVERY_BADGE && !c.Z.hasViewed(g.x8Z.SERVER_DISCOVERY_BADGE) || e !== C && e !== E && (null === (t = n[null != e ? e : "null"]) || void 0 === t ? void 0 : t.mentionCount) > 0
+  let n = s.default.getMutableGuildStates();
+  return e === f.x8Z.SERVER_DISCOVERY_BADGE && !u.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE) || e !== g && e !== m && (null === (t = n[null != e ? e : "null"]) || void 0 === t ? void 0 : t.mentionCount) > 0
 }
-let I = (0, p.oH)((e, t, n) => ["null", ...t, ...e, E, g.x8Z.E3_SERVER_DISCOVERY_BADGE, C]);
-t.Z = i.forwardRef(function(e, t) {
-  let n = (0, s.Wu)([u.ZP, o.Z, a.default], () => I(u.ZP.getGuildFolders(), o.Z.getUnreadPrivateChannelIds(), a.default.getStoreChangeSentinel())),
-    i = (0, s.e7)([d.Z], () => d.Z.isFocused()),
-    c = (0, s.e7)([r.Z], () => r.Z.getExpandedFolders());
-  return (0, l.jsx)(h.Z, {
+let E = (0, p.oH)((e, t, n) => ["null", ...t, ...e, m, f.x8Z.E3_SERVER_DISCOVERY_BADGE, g]);
+t.Z = l.forwardRef(function(e, t) {
+  let n = (0, r.Wu)([c.ZP, o.Z, s.default], () => E(c.ZP.getGuildFolders(), o.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel())),
+    l = (0, r.e7)([d.Z], () => d.Z.isFocused()),
+    u = (0, r.e7)([a.Z], () => a.Z.getExpandedFolders());
+  return (0, i.jsx)(h.Z, {
     ...e,
     ref: t,
     items: n,
-    isUnread: f,
-    textUnread: m.Z.Messages.NEW,
-    textMention: m.Z.Messages.NEW,
-    isMentioned: _,
-    animate: i,
-    expandedFolders: c
+    isUnread: C,
+    textUnread: _.Z.Messages.NEW,
+    textMention: _.Z.Messages.NEW,
+    isMentioned: I,
+    animate: l,
+    expandedFolders: u
   })
 })

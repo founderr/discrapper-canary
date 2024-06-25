@@ -18,12 +18,12 @@ let h = r.forwardRef(function(e, t) {
     emojiListRef: n,
     gridNavigatorId: s,
     isFullRow: h,
-    onKeyDown: S,
-    onFocus: f,
-    autoFocus: N,
-    className: A,
+    onKeyDown: f,
+    onFocus: S,
+    autoFocus: A,
+    className: N,
     defaultSearchPlaceholder: m
-  } = e, O = r.useRef(null), R = (0, c.Iu)(e => e.searchQuery), [p, g] = _.kJ.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], a.Z), C = r.useCallback(e => {
+  } = e, O = r.useRef(null), p = (0, c.Iu)(e => e.searchQuery), [R, g] = _.kJ.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], a.Z), C = r.useCallback(e => {
     var t;
     _.kJ.setActiveCategoryIndex("" === e ? 0 : d.c), _.kJ.setInspectedExpressionPosition(0, 0), _.kJ.setSearchPlaceholder(null), (0, c.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
   }, [n]), v = r.useCallback(() => {
@@ -35,8 +35,8 @@ let h = r.forwardRef(function(e, t) {
       return null === (e = O.current) || void 0 === e ? void 0 : e.focus()
     }
   })), (0, i.jsx)(u.ZP, {
-    autoFocus: N,
-    query: R,
+    autoFocus: A,
+    query: p,
     ref: O,
     size: u.ZP.Sizes.MEDIUM,
     placeholder: null != g ? g : m,
@@ -49,11 +49,11 @@ let h = r.forwardRef(function(e, t) {
         case E.yXg.ARROW_DOWN:
           document.activeElement !== e.target && e.preventDefault()
       }
-      S(e)
+      f(e)
     },
-    onFocus: f,
+    onFocus: S,
     onQueryChange: C,
-    className: o()(A, {
+    className: o()(N, {
       [T.searchBarFullRow]: h
     }),
     preventEscapePropagation: !1,
@@ -63,7 +63,7 @@ let h = r.forwardRef(function(e, t) {
       "aria-haspopup": "grid",
       "aria-controls": s,
       "aria-expanded": !0,
-      "aria-activedescendant": (0, l.NE)(s, p.columnIndex, p.rowIndex)
+      "aria-activedescendant": (0, l.NE)(s, R.columnIndex, R.rowIndex)
     }
   })
 });

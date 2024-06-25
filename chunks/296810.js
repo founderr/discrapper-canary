@@ -1,37 +1,37 @@
 t.d(s, {
   Z: function() {
-    return d
+    return _
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(873546),
-  r = t(481060),
-  o = t(993413),
+var a = t(120356),
+  i = t.n(a),
+  r = t(873546),
+  o = t(481060),
+  l = t(993413),
   c = t(689938),
-  E = t(20439);
+  d = t(20439);
 
-function d(e) {
+function _(e) {
   let {
     children: s,
     className: t,
-    layoutClassName: i,
-    profilePreview: d,
-    previewTitle: _
-  } = e, T = () => (0, n.jsx)(o.Z, {
-    title: null != _ ? _ : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
-    className: E.preview,
-    children: d
+    layoutClassName: a,
+    profilePreview: _,
+    previewTitle: E
+  } = e, u = () => (0, n.jsx)(l.Z, {
+    title: null != E ? E : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
+    className: d.preview,
+    children: _
   });
   return (0, n.jsx)("div", {
     className: t,
-    children: (0, n.jsxs)(r.FormSection, {
-      className: E.profileCustomizationSection,
-      children: [l.tq && T(), (0, n.jsxs)("div", {
-        className: a()(E.baseLayout, i),
-        children: [s, !l.tq && T()]
+    children: (0, n.jsxs)(o.FormSection, {
+      className: d.profileCustomizationSection,
+      children: [r.tq && u(), (0, n.jsxs)("div", {
+        className: i()(d.baseLayout, a),
+        children: [s, !r.tq && u()]
       })]
     })
   })

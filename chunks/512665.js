@@ -21,14 +21,14 @@ var i = n(735250),
   I = n(372900),
   T = n(453687),
   h = n(123145),
-  S = n(223021),
-  f = n(79390),
-  N = n(869765),
-  A = n(403132),
+  f = n(223021),
+  S = n(79390),
+  A = n(869765),
+  N = n(403132),
   m = n(378233),
   O = n(768581),
-  R = n(55935),
-  p = n(823379),
+  p = n(55935),
+  R = n(823379),
   g = n(113039),
   C = n(768760),
   v = n(981631),
@@ -84,12 +84,12 @@ function y(e, t, n, r, s) {
       leadingIconClass: T,
       iconSize: h
     } = s,
-    S = null == t || "" === t || Array.isArray(t) && 0 === t.length,
-    N = (0, m.cv)(c).length > 0,
-    A = null != c.interaction,
+    f = null == t || "" === t || Array.isArray(t) && 0 === t.length,
+    A = (0, m.cv)(c).length > 0,
+    N = null != c.interaction,
     O = c.hasFlag(v.iLy.IS_VOICE_MESSAGE),
-    R = c.isPoll(),
-    p = c.type === v.uaV.POLL_RESULT;
+    p = c.isPoll(),
+    R = c.type === v.uaV.POLL_RESULT;
   if ((0, d.Z)(e) && (_ = (0, i.jsx)(u.ChatArrowRightIcon, {
       size: "custom",
       className: T,
@@ -97,11 +97,11 @@ function y(e, t, n, r, s) {
       height: h
     })), n) o = L.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
   else if (c.type === v.uaV.CHANNEL_PINNED_MESSAGE) o = L.Z.Messages.MESSAGE_PINNED;
-  else if (S) {
-    if (R) {
+  else if (f) {
+    if (p) {
       var C, D;
       a = null == c ? void 0 : null === (D = c.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text
-    } else p ? o = (0, f.N4)(c) : N ? o = L.Z.Messages.REPLY_QUOTE_STICKER : A ? o = L.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = L.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = L.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(u.ImageIcon, {
+    } else R ? o = (0, S.N4)(c) : A ? o = L.Z.Messages.REPLY_QUOTE_STICKER : N ? o = L.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = L.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = L.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(u.ImageIcon, {
       size: "custom",
       color: "currentColor",
       className: I,
@@ -113,13 +113,13 @@ function y(e, t, n, r, s) {
     content: t,
     className: r
   });
-  return N ? l = (0, i.jsx)(u.StickerSmallIcon, {
+  return A ? l = (0, i.jsx)(u.StickerSmallIcon, {
     size: "custom",
     color: "currentColor",
     className: I,
     width: h,
     height: h
-  }) : A ? l = (0, i.jsx)(u.SlashBoxIcon, {
+  }) : N ? l = (0, i.jsx)(u.SlashBoxIcon, {
     size: "custom",
     color: "currentColor",
     className: I,
@@ -131,7 +131,7 @@ function y(e, t, n, r, s) {
     className: I,
     width: 19 / 24 * h,
     height: h
-  }) : (c.attachments.length > 0 || c.embeds.length > 0) && !p && (l = (0, i.jsx)(u.ImageIcon, {
+  }) : (c.attachments.length > 0 || c.embeds.length > 0) && !R && (l = (0, i.jsx)(u.ImageIcon, {
     size: "custom",
     color: "currentColor",
     className: I,
@@ -153,7 +153,7 @@ function U(e) {
     baseMessage: a,
     referencedMessage: d,
     renderPopout: E
-  } = e, f = r.useMemo(() => null != E && d.state === N.Y.LOADED ? e => E(e, d.message) : void 0, [d, E]), m = function(e, t, n) {
+  } = e, S = r.useMemo(() => null != E && d.state === A.Y.LOADED ? e => E(e, d.message) : void 0, [d, E]), m = function(e, t, n) {
     let {
       referencedMessage: r,
       compact: s,
@@ -166,7 +166,7 @@ function U(e) {
     } = e, {
       analyticsLocations: h
     } = (0, c.ZP)(_.Z.AVATAR);
-    if (s || r.state !== N.Y.LOADED || a) return (0, i.jsx)("div", {
+    if (s || r.state !== A.Y.LOADED || a) return (0, i.jsx)("div", {
       className: D.replyBadge,
       children: (0, i.jsx)(M, {
         className: D.replyIcon
@@ -186,7 +186,7 @@ function U(e) {
       height: C.WW,
       size: "custom"
     });
-    let S = () => {
+    let f = () => {
       var e, n, s, a, u;
       return e = r.message.author, n = l, s = t, a = E, u = I, (0, i.jsx)("img", {
         alt: "",
@@ -210,13 +210,13 @@ function U(e) {
         shouldShow: d,
         position: "right",
         onRequestClose: T,
-        children: S
+        children: f
       })
     }) : (0, i.jsx)(c.Gt, {
       value: h,
-      children: S()
+      children: f()
     })
-  }(e, r.useContext(I.Z), f), g = function(e, t) {
+  }(e, r.useContext(I.Z), S), g = function(e, t) {
     let {
       baseMessage: n,
       channel: r,
@@ -225,12 +225,12 @@ function U(e) {
       onClickUsername: a,
       onContextMenu: l,
       onPopoutRequestClose: u
-    } = e, _ = (null == s ? void 0 : s.state) === N.Y.LOADED ? s.message : void 0;
+    } = e, _ = (null == s ? void 0 : s.state) === A.Y.LOADED ? s.message : void 0;
     return null == _ || _.type === v.uaV.USER_JOIN || _.type === v.uaV.ROLE_SUBSCRIPTION_PURCHASE || _.type === v.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || _.type === v.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || _.type === v.uaV.GUILD_GAMING_STATS_PROMPT || _.type === v.uaV.POLL_RESULT ? null : (0, i.jsx)(h.Z, {
       message: _,
       channel: r,
       compact: !0,
-      withMentionPrefix: (0, A.Z)(n, _),
+      withMentionPrefix: (0, N.Z)(n, _),
       showPopout: o,
       renderPopout: t,
       onClick: a,
@@ -238,14 +238,14 @@ function U(e) {
       onPopoutRequestClose: u,
       isRepliedMessage: !0
     })
-  }(e, f), U = function(e) {
+  }(e, S), U = function(e) {
     let {
       content: t,
       referencedMessage: n,
       isReplyAuthorBlocked: r
-    } = e, s = n.state !== N.Y.DELETED ? e.onClickReply : void 0;
+    } = e, s = n.state !== A.Y.DELETED ? e.onClickReply : void 0;
     switch (n.state) {
-      case N.Y.LOADED: {
+      case A.Y.LOADED: {
         let {
           contentPlaceholder: e,
           renderedContent: a,
@@ -269,7 +269,7 @@ function U(e) {
           }), l]
         })
       }
-      case N.Y.NOT_LOADED:
+      case A.Y.NOT_LOADED:
         return (0, i.jsx)(u.Clickable, {
           className: o()(D.repliedTextPreview, D.clickable),
           onClick: s,
@@ -278,7 +278,7 @@ function U(e) {
             children: L.Z.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
           })
         });
-      case N.Y.DELETED:
+      case A.Y.DELETED:
         return (0, i.jsx)("div", {
           className: D.repliedTextPreview,
           children: (0, i.jsx)("span", {
@@ -287,9 +287,9 @@ function U(e) {
           })
         });
       default:
-        (0, p.vE)(n)
+        (0, R.vE)(n)
     }
-  }(e), b = r.useMemo(() => e.compact ? (0, S.Z)((0, R.vc)(l()(), "LT")) : null, [e.compact]);
+  }(e), b = r.useMemo(() => e.compact ? (0, f.Z)((0, p.vc)(l()(), "LT")) : null, [e.compact]);
   return null != n && null != s && (t = L.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
     author: null == s ? void 0 : s.nick,
     repliedAuthor: null == n ? void 0 : n.nick

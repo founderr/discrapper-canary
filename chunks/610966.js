@@ -1,31 +1,31 @@
 t.d(s, {
   Z: function() {
-    return d
+    return _
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(866442),
-  a = t(692547),
-  l = t(481060),
-  r = t(220082),
-  o = t(193528),
+var a = t(866442),
+  i = t(692547),
+  r = t(481060),
+  o = t(220082),
+  l = t(193528),
   c = t(993413),
-  E = t(689938);
+  d = t(689938);
 
-function d(e) {
+function _(e) {
   var s;
   let {
     user: t,
-    savedUserColor: d,
-    pendingColor: _,
-    setPendingAccentColor: T
-  } = e, S = t.getAvatarURL(null, 80), u = (0, l.useToken)(a.Z.unsafe_rawColors.PRIMARY_530).hex(), I = (0, r.Cf)(S, u, !1), N = (0, i._i)(I[0]);
+    savedUserColor: _,
+    pendingColor: E,
+    setPendingAccentColor: u
+  } = e, T = t.getAvatarURL(null, 80), S = (0, r.useToken)(i.Z.unsafe_rawColors.PRIMARY_530).hex(), I = (0, o.Cf)(T, S, !1), N = (0, a._i)(I[0]);
   return (0, n.jsx)(c.Z, {
-    title: E.Z.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
-    children: (0, n.jsx)(o.Z, {
-      onChange: e => T(e),
-      color: null !== (s = null != _ ? _ : d) && void 0 !== s ? s : N,
+    title: d.Z.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
+    children: (0, n.jsx)(l.Z, {
+      onChange: e => u(e),
+      color: null !== (s = null != E ? E : _) && void 0 !== s ? s : N,
       suggestedColors: I,
       showEyeDropper: !0
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   hB: function() {
-    return S
+    return f
   },
   lv: function() {
     return d
@@ -13,7 +13,7 @@ n.d(t, {
     return h
   },
   rX: function() {
-    return f
+    return S
   },
   xC: function() {
     return T
@@ -68,14 +68,14 @@ function h(e) {
   }, [e])
 }
 
-function S(e, t, n) {
+function f(e, t, n) {
   return (0, r.e7)([o.Z, s.Z], () => {
     let i = s.Z.getGuild(e);
     return null != i && t && o.Z.canManageUser(_.Plq.BAN_MEMBERS, n, i)
   }, [t, e, n])
 }
 
-function f(e, t, n) {
+function S(e, t, n) {
   let i = s.Z.getGuild(e);
   return null != i && t && o.Z.canManageUser(_.Plq.BAN_MEMBERS, n, i)
 }

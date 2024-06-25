@@ -3,10 +3,10 @@ n.d(t, {
     return d
   }
 }), n(653041);
-var l = n(55e3),
-  i = n(693824),
-  s = n(690725),
-  a = n(737583),
+var i = n(55e3),
+  a = n(693824),
+  l = n(690725),
+  s = n(737583),
   r = n(169040),
   o = n(689938);
 let c = (e, t, n) => ({
@@ -34,15 +34,15 @@ let c = (e, t, n) => ({
       entry: n,
       avatarSrc: d,
       description: h,
-      timestamp: m,
-      episodeDescription: E,
-      colors: p,
-      channelId: g
-    } = e, f = n.extra.media_title, C = c(d, t);
-    return await (0, s.f)({
-      assetsToLoad: C,
+      timestamp: p,
+      episodeDescription: m,
+      colors: _,
+      channelId: f
+    } = e, E = n.extra.media_title, g = c(d, t);
+    return await (0, l.f)({
+      assetsToLoad: g,
       drawImage: e => {
-        let t = p.map((e, t) => ({
+        let t = _.map((e, t) => ({
           color: e,
           stop: t
         }));
@@ -69,7 +69,7 @@ let c = (e, t, n) => ({
           size: 12,
           family: ["gg sans", "sans-serif"],
           weight: 500,
-          truncate: i.GX.None
+          truncate: a.GX.None
         }), e.drawText(o.Z.Messages.BETA, {
           x: r.nx - r.sB - 29,
           y: 26
@@ -81,15 +81,15 @@ let c = (e, t, n) => ({
           w: r.Pu,
           h: r.Pu
         }, 8, {
-          fillMode: i.JU.Contain
+          fillMode: a.JU.Contain
         });
-        n === i.vP.Failure && (n = e.drawRoundedImage("ApplicationImage", {
+        n === a.vP.Failure && (n = e.drawRoundedImage("ApplicationImage", {
           x: r.sB,
           y: r.sB
         }, {
           w: r.Pu,
           h: r.Pu
-        }, 8)), n === i.vP.Failure && e.drawPath(l.Cv, {
+        }, 8)), n === a.vP.Failure && e.drawPath(i.Cv, {
           x: r.sB,
           y: r.sB
         }, !0, 2 + 2 / 3), e.drawRoundedImage("AvatarImage", {
@@ -100,27 +100,27 @@ let c = (e, t, n) => ({
           h: r.$S
         }, 50), e.setFont({
           size: 16,
-          truncate: i.GX.Wrap
+          truncate: a.GX.Wrap
         }), e.drawText(h, {
           x: r.Iq,
           y: 64,
           h: 32,
           w: r.kC
         }, !0);
-        let s = u(m, E);
-        (0, a.J)({
+        let l = u(p, m);
+        (0, s.J)({
           canvas: e,
-          badges: s,
+          badges: l,
           startPosition: r.Iq,
           maxWidth: r.kC
         })
       },
       exportConfigs: {
-        format: i.kH.CloudUpload,
+        format: a.kH.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(f, ".png").toLowerCase(),
+        fileName: "user-reacting-to-".concat(E, ".png").toLowerCase(),
         fileType: "png",
-        channelId: g
+        channelId: f
       }
     })
   }

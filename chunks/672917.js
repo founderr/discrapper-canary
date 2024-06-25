@@ -1,7 +1,7 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   X: function() {
-    return n.X
+    return s.X
   }
 });
-var n = t(289092)
+var s = n(289092)

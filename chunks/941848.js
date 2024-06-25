@@ -1,29 +1,29 @@
-a.d(s, {
+s.d(a, {
   Z: function() {
-    return E
+    return M
   }
-}), a(47120);
-var t = a(735250),
-  n = a(470079),
-  r = a(481060),
-  _ = a(458044),
-  o = a(689938),
-  i = a(651151);
+}), s(47120);
+var t = s(735250),
+  n = s(470079),
+  r = s(481060),
+  o = s(458044),
+  _ = s(689938),
+  i = s(651151);
 
 function c(e) {
   let {
-    user: s,
-    tagId: a,
+    user: a,
+    tagId: s,
     title: n,
-    messageCount: _,
+    messageCount: o,
     reactionCount: c,
     activeAgo: l,
-    tags: M,
-    attachment: E
+    tags: d,
+    attachment: M
   } = e, {
-    name: d,
+    name: E,
     avatarSrc: m
-  } = s;
+  } = a;
   return (0, t.jsxs)("div", {
     className: i.post,
     children: [(0, t.jsxs)("div", {
@@ -35,11 +35,11 @@ function c(e) {
           className: i.inline,
           children: [(0, t.jsx)("img", {
             src: m,
-            alt: o.Z.Messages.USER_SETTINGS_AVATAR,
+            alt: _.Z.Messages.USER_SETTINGS_AVATAR,
             width: 16,
             height: 16
-          }), d]
-        }), null != a && (0, t.jsxs)(t.Fragment, {
+          }), E]
+        }), null != s && (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)("span", {
             className: i.bullet,
             children: "•"
@@ -47,7 +47,7 @@ function c(e) {
             color: "header-primary",
             variant: "text-xxs/medium",
             className: i.inlineTag,
-            children: M[a]
+            children: d[s]
           })]
         })]
       }), (0, t.jsx)(r.Heading, {
@@ -65,7 +65,7 @@ function c(e) {
             size: "xs",
             color: "currentColor",
             className: i.icon
-          }), _]
+          }), o]
         }), c > 0 && (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)("span", {
             className: i.bullet,
@@ -76,7 +76,7 @@ function c(e) {
             className: i.alignCenter,
             children: [(0, t.jsx)("span", {
               role: "img",
-              "aria-label": o.Z.Messages.REACTIONS,
+              "aria-label": _.Z.Messages.REACTIONS,
               className: i.icon,
               children: "❤️"
             }), c]
@@ -90,9 +90,9 @@ function c(e) {
           children: l
         })]
       })]
-    }), null != E && (0, t.jsx)("img", {
-      src: E,
-      alt: o.Z.Messages.MESSAGE_ATTACHMENT_A11Y_LABEL.format({
+    }), null != M && (0, t.jsx)("img", {
+      src: M,
+      alt: _.Z.Messages.MESSAGE_ATTACHMENT_A11Y_LABEL.format({
         name: n
       }),
       className: i.attachment
@@ -102,18 +102,18 @@ function c(e) {
 
 function l(e) {
   let {
-    author: s,
-    content: a
+    author: a,
+    content: s
   } = e, {
     name: n,
-    isOP: _,
+    isOP: o,
     avatarSrc: c
-  } = s;
+  } = a;
   return (0, t.jsxs)("div", {
     className: i.message,
     children: [(0, t.jsx)("img", {
       src: c,
-      alt: o.Z.Messages.USER_SETTINGS_AVATAR,
+      alt: _.Z.Messages.USER_SETTINGS_AVATAR,
       width: 40,
       height: 40
     }), (0, t.jsxs)("div", {
@@ -123,23 +123,23 @@ function l(e) {
           color: "header-primary",
           variant: "text-sm/semibold",
           children: n
-        }), _ && (0, t.jsx)("span", {
+        }), o && (0, t.jsx)("span", {
           className: i.opTag,
-          children: o.Z.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER
+          children: _.Z.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER
         })]
       }), (0, t.jsx)(r.Text, {
         color: "text-normal",
         variant: "text-sm/normal",
-        children: a
+        children: s
       })]
     })]
   })
 }
 
-function M(e) {
+function d(e) {
   let {
-    title: s,
-    messages: a,
+    title: a,
+    messages: s,
     maxHeight: n
   } = e;
   return (0, t.jsx)("div", {
@@ -158,13 +158,13 @@ function M(e) {
         color: "header-primary",
         variant: "heading-lg/semibold",
         className: i.header,
-        children: s
+        children: a
       }), (0, t.jsx)("div", {
         className: i.messageContainer,
-        children: a.map((e, s) => (0, t.jsxs)(t.Fragment, {
+        children: s.map((e, a) => (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)(l, {
             ...e
-          }, s), 0 === s && (0, t.jsxs)("div", {
+          }, a), 0 === a && (0, t.jsxs)("div", {
             children: [(0, t.jsx)("hr", {
               className: i.topSeparator
             }), (0, t.jsxs)("div", {
@@ -175,7 +175,7 @@ function M(e) {
                 className: i.fakeReactions,
                 children: [(0, t.jsx)("span", {
                   role: "img",
-                  "aria-label": o.Z.Messages.REACTIONS,
+                  "aria-label": _.Z.Messages.REACTIONS,
                   className: i.icon,
                   children: "❤️"
                 }), "17"]
@@ -186,7 +186,7 @@ function M(e) {
                 children: [(0, t.jsx)(r.BellIcon, {
                   size: "xs",
                   color: "currentColor"
-                }), o.Z.Messages.FOLLOW]
+                }), _.Z.Messages.FOLLOW]
               })]
             }), (0, t.jsx)("hr", {
               className: i.bottomSeparator
@@ -198,53 +198,53 @@ function M(e) {
         children: (0, t.jsx)(r.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: o.Z.Messages.SEND_A_MESSAGE
+          children: _.Z.Messages.SEND_A_MESSAGE
         })
       })]
     })
   })
 }
 
-function E(e) {
+function M(e) {
   let {
-    id: s
-  } = e, [a, o] = n.useState(0), l = n.useRef(null), {
-    tags: E,
-    posts: d,
+    id: a
+  } = e, [s, _] = n.useState(0), l = n.useRef(null), {
+    tags: M,
+    posts: E,
     postPreview: m,
-    ariaLabel: T
-  } = (0, _.Z)(s);
+    ariaLabel: g
+  } = (0, o.Z)(a);
   return n.useEffect(() => {
-    o(0)
-  }, [s]), n.useEffect(() => {
+    _(0)
+  }, [a]), n.useEffect(() => {
     var e;
-    0 === a && (null == l ? void 0 : null === (e = l.current) || void 0 === e ? void 0 : e.clientHeight) != null && o(l.current.clientHeight - 40)
-  }, [a]), (0, t.jsxs)("div", {
+    0 === s && (null == l ? void 0 : null === (e = l.current) || void 0 === e ? void 0 : e.clientHeight) != null && _(l.current.clientHeight - 40)
+  }, [s]), (0, t.jsxs)("div", {
     className: i.container,
     role: "image",
-    "aria-label": T,
+    "aria-label": g,
     children: [(0, t.jsxs)("div", {
       ref: l,
       className: i.browser,
       "aria-hidden": !0,
       children: [(0, t.jsx)("div", {
         className: i.tags,
-        children: E.map((e, s) => (0, t.jsx)(r.Text, {
+        children: M.map((e, a) => (0, t.jsx)(r.Text, {
           color: "header-primary",
           variant: "text-xs/medium",
           className: i.tag,
           children: e
-        }, s))
+        }, a))
       }), (0, t.jsx)("div", {
         className: i.posts,
-        children: d.map((e, s) => (0, t.jsx)(c, {
+        children: E.map((e, a) => (0, t.jsx)(c, {
           ...e,
-          tags: E
-        }, s))
+          tags: M
+        }, a))
       })]
-    }), (0, t.jsx)(M, {
+    }), (0, t.jsx)(d, {
       ...m,
-      maxHeight: a
+      maxHeight: s
     })]
   })
 }

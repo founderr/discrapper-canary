@@ -14,16 +14,16 @@ var i, r, s, o, a = n(392711),
   I = n(591526),
   T = n(458772),
   h = n(38217),
-  S = n(710845),
-  f = n(853856),
-  N = n(131704),
-  A = n(823379),
+  f = n(710845),
+  S = n(853856),
+  A = n(131704),
+  N = n(823379),
   m = n(709054),
   O = n(314897),
-  R = n(430824),
-  p = n(594174),
+  p = n(430824),
+  R = n(594174),
   g = n(981631);
-let C = new S.Z("ChannelStore"),
+let C = new f.Z("ChannelStore"),
   v = {},
   L = {},
   D = {},
@@ -34,15 +34,15 @@ let C = new S.Z("ChannelStore"),
   b = 0,
   G = {},
   w = {},
-  B = new Set,
-  x = {},
+  x = new Set,
+  B = {},
   k = 0,
   V = {},
   Z = 0,
   H = 0;
 class F {
   static loadAllMissingChannels() {
-    let e = R.Z.getGuildIds().filter(e => !B.has(e));
+    let e = p.Z.getGuildIds().filter(e => !x.has(e));
     return this.loadGuildIds(e)
   }
   static loadGuildFromChannelId(e) {
@@ -50,35 +50,35 @@ class F {
     return null == e ? null : F.loadGuildIds([null === (t = K(e)) || void 0 === t ? void 0 : t.guild_id])
   }
   static loadGuildIds(e) {
-    let t = e.filter(A.lm);
+    let t = e.filter(N.lm);
     if (0 === t.length) return null;
     let n = d.Z.database();
-    if (null == n || !t.some(e => !B.has(e))) return null;
+    if (null == n || !t.some(e => !x.has(e))) return null;
     let i = k;
     return (0, E.gs)("loadChannels", async () => {
       let e = t.map(e => {
-          if (B.has(e)) return null;
-          if (null != x[e]) return C.fileOnly("Skipping loading ".concat(e, " because a load is pending")), null;
+          if (x.has(e)) return null;
+          if (null != B[e]) return C.fileOnly("Skipping loading ".concat(e, " because a load is pending")), null;
           let t = I.Z.getAsync(n, e).then(t => (C.fileOnly("Lazy loaded channels for ".concat(e, " #:").concat(t.length)), {
             guildId: e,
             channels: t
           }));
-          return x[e] = t, {
+          return B[e] = t, {
             guildId: e,
             promise: t
           }
-        }).filter(A.lm),
+        }).filter(N.lm),
         r = e.map(e => e.promise);
       try {
         let t = await Promise.all(r);
         if (k !== i) return C.fileOnly("lastResetTime has changed, skipping loads for " + e.map(e => e.guildId)), null;
-        let n = t.filter(e => !B.has(e.guildId));
+        let n = t.filter(e => !x.has(e.guildId));
         await c.Z.dispatch({
           type: "LOAD_CHANNELS",
           channels: n
         })
       } catch (t) {
-        for (let n of (C.error("Failed to load channels from disk for " + e.map(e => e.guildId), t), e)) delete x[n.guildId];
+        for (let n of (C.error("Failed to load channels from disk for " + e.map(e => e.guildId), t), e)) delete B[n.guildId];
         throw t
       }
       return null
@@ -87,17 +87,17 @@ class F {
 }
 
 function Y(e, t, n) {
-  if (null == e || "null" === e || B.has(e) || 0 === t && T.Z.hasGuild(e)) return;
+  if (null == e || "null" === e || x.has(e) || 0 === t && T.Z.hasGuild(e)) return;
   let i = d.Z.database();
   if (null == i) return;
   C.verbose("hydrating guild (guild: ".concat(e, ", trace: ").concat(n, ")"));
   let r = (0, E.Pv)("ensureGuildLoaded(".concat(e, ")"), () => I.Z.getSync(i, e), "ensureGuildLoaded");
   if (null == r) {
-    B.add(e), T.Z.restored(e), C.log("load returned null; early returning (guild: ".concat(e, ", database: ").concat(i, ")"));
+    x.add(e), T.Z.restored(e), C.log("load returned null; early returning (guild: ".concat(e, ", database: ").concat(i, ")"));
     return
   }
   let [s, o] = r;
-  for (let n of ((0, h.ZP)(s), 0 !== t && (H += 1), B.add(e), T.Z.restored(e), u.Z.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), s)) !Object.hasOwn(L, n.id) && J((0, N._H)(n));
+  for (let n of ((0, h.ZP)(s), 0 !== t && (H += 1), x.add(e), T.Z.restored(e), u.Z.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), s)) !Object.hasOwn(L, n.id) && J((0, A._H)(n));
   C.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(s.length, ", guilds_loaded: ").concat(H, ")"))
 }
 
@@ -126,7 +126,7 @@ function z(e) {
 }
 
 function q(e) {
-  e.isPrivate() ? (delete V[e.id], X(e)) : e.isThread() ? Q(e) : N.oj.has(e.type) && function(e) {
+  e.isPrivate() ? (delete V[e.id], X(e)) : e.isThread() ? Q(e) : A.oj.has(e.type) && function(e) {
     J(e)
   }(e)
 }
@@ -157,7 +157,7 @@ function J(e) {
 
 function $(e) {
   if (null != e.channels)
-    for (let t of (C.fileOnly("GuildCreate contained full channels for ".concat(e.id, " #:").concat(e.channels.length)), W(e.id), B.add(e.id), T.Z.restored(e.id), e.channels)) J(t);
+    for (let t of (C.fileOnly("GuildCreate contained full channels for ".concat(e.id, " #:").concat(e.channels.length)), W(e.id), x.add(e.id), T.Z.restored(e.id), e.channels)) J(t);
   if (null != e.channelUpdates) {
     let t = e.channelUpdates;
     for (let n of ((t.writes.length > 0 || t.deletes.length > 0) && T.Z.invalidate(e.id), t.deletes)) en(L[n]);
@@ -168,7 +168,7 @@ function $(e) {
 }
 
 function ee(e) {
-  if (!N.AW.has(e.channel.type)) return !1;
+  if (!A.AW.has(e.channel.type)) return !1;
   let t = z(e.channel.id);
   if (null == t) t = e.channel;
   else {
@@ -186,7 +186,7 @@ function et(e) {
     threads: t
   } = e;
   t.forEach(e => {
-    N.AW.has(e.type) && q((0, N.q_)(e))
+    A.AW.has(e.type) && q((0, A.q_)(e))
   })
 }
 
@@ -194,7 +194,7 @@ function en(e) {
   if (null == e) return;
   let t = e.guild_id;
   e.id in M && delete M[e.id], e.id in L && delete L[e.id], e.id in y && delete y[e.id], null != t && null != D[t] && e.id in D[t] && delete D[t][e.id], ! function(e) {
-    if (null == e.guild_id || N.Ec.has(e.type))(0, N.hv)(e.type) && (b += 1);
+    if (null == e.guild_id || A.Ec.has(e.type))(0, A.hv)(e.type) && (b += 1);
     else {
       var t;
       G[e.guild_id] = (null !== (t = G[e.guild_id]) && void 0 !== t ? t : 0) + 1
@@ -219,7 +219,7 @@ function er(e) {
   let {
     messages: t
   } = e;
-  for (let e of t) null != e.thread && !(e.thread.id in y) && N.AW.has(e.thread.type) && Q((0, N.q_)(e.thread))
+  for (let e of t) null != e.thread && !(e.thread.id in y) && A.AW.has(e.thread.type) && Q((0, A.q_)(e.thread))
 }
 
 function es(e) {
@@ -231,7 +231,7 @@ function es(e) {
   for (let e of t)
     for (let t of e) eo(t.thread);
   n.forEach(eo), null == i || i.forEach(e => {
-    let t = (0, N.q_)(e),
+    let t = (0, A.q_)(e),
       n = null != z(e.id),
       i = null != V[e.id];
     t.isPrivate() && (!n || i) ? V[t.id] = t : !n && q(t)
@@ -239,18 +239,18 @@ function es(e) {
 }
 
 function eo(e) {
-  null != e && !(e.id in y) && N.AW.has(e.type) && Q((0, N.q_)(e))
+  null != e && !(e.id in y) && A.AW.has(e.type) && Q((0, A.q_)(e))
 }
 
 function ea() {
-  for (let e in w = {}, f.Z.getFavoriteChannels()) {
-    let t = f.Z.getCategoryRecord(e);
+  for (let e in w = {}, S.Z.getFavoriteChannels()) {
+    let t = S.Z.getCategoryRecord(e);
     null != t && (w[e] = t)
   }
 }
 class el extends(i = _.ZP.Store) {
   initialize() {
-    this.waitFor(T.Z, p.default, R.Z, f.Z), this.syncWith([f.Z], ea)
+    this.waitFor(T.Z, R.default, p.Z, S.Z), this.syncWith([S.Z], ea)
   }
   hasChannel(e) {
     return null != K(e)
@@ -262,7 +262,7 @@ class el extends(i = _.ZP.Store) {
     if (null != e) return z(e)
   }
   loadAllGuildAndPrivateChannelsFromDisk() {
-    for (let e of R.Z.getGuildIds()) Y(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
+    for (let e of p.Z.getGuildIds()) Y(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
     return {
       ...L,
       ...M
@@ -314,8 +314,8 @@ class el extends(i = _.ZP.Store) {
   }
   getDebugInfo() {
     return {
-      loadedGuildIds: Array.from(B).sort(m.default.compare),
-      pendingGuildLoads: Object.keys(x).sort(m.default.compare),
+      loadedGuildIds: Array.from(x).sort(m.default.compare),
+      pendingGuildLoads: Object.keys(B).sort(m.default.compare),
       guildSizes: Object.keys(D).sort(m.default.compare).map(e => "".concat(e, ": ").concat(eu(e)))
     }
   }
@@ -340,13 +340,13 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
         var t, i;
         C.fileOnly("Restoring guild channels b/c partial in bg sync, for ".concat(e.id, " #:").concat(eu(e.id))), l().forEach(n[e.id], J);
         let r = null !== (i = e.partial_updates.deleted_channel_ids) && void 0 !== i ? i : [];
-        r.length > 0 && (Y(e.id, 1, "handleBackgroundSync"), r.forEach(e => en(L[e]))), null === (t = e.partial_updates.channels) || void 0 === t || t.forEach(t => J((0, N.q_)(t, e.id)))
-      } else C.fileOnly("BG sync contained full channels for ".concat(e.id, " #:").concat(e.channels.length)), W(e.id), B.add(e.id), T.Z.restored(e.id), e.channels.forEach(t => J((0, N.q_)(t, e.id)))
+        r.length > 0 && (Y(e.id, 1, "handleBackgroundSync"), r.forEach(e => en(L[e]))), null === (t = e.partial_updates.channels) || void 0 === t || t.forEach(t => J((0, A.q_)(t, e.id)))
+      } else C.fileOnly("BG sync contained full channels for ".concat(e.id, " #:").concat(e.channels.length)), W(e.id), x.add(e.id), T.Z.restored(e.id), e.channels.forEach(t => J((0, A.q_)(t, e.id)))
     })
   },
   CACHE_LOADED_LAZY: function(e) {
     for (let [t, n] of e.guildChannels)
-      for (let e of (C.fileOnly("Lazy cache contained full guild channels for ".concat(t, " #:").concat(n.length)), B.add(t), n)) q((0, N._H)(e))
+      for (let e of (C.fileOnly("Lazy cache contained full guild channels for ".concat(t, " #:").concat(n.length)), x.add(t), n)) q((0, A._H)(e))
   },
   CACHE_LOADED: function(e) {
     var t;
@@ -356,9 +356,9 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
       initialGuildChannels: i
     } = e;
     for (let e of [n, i])
-      for (let t of e) q((0, h.d7)((0, N._H)(t)));
+      for (let t of e) q((0, h.d7)((0, A._H)(t)));
     let r = null === (t = i[0]) || void 0 === t ? void 0 : t.guild_id;
-    null != r && (C.fileOnly("Early cache contained full guild channels for ".concat(r)), B.add(r))
+    null != r && (C.fileOnly("Early cache contained full guild channels for ".concat(r)), x.add(r))
   },
   CHANNEL_CREATE: function(e) {
     q(e.channel)
@@ -389,14 +389,14 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
   },
   CONNECTION_OPEN: function(e) {
     let t = D;
-    for (let n of (U = {}, L = {}, D = {}, y = {}, G = {}, V = {}, x = {}, k = Date.now(), P = e.initialPrivateChannels, e.initialPrivateChannels.forEach(X), e.guilds)) "partial" === n.dataMode && (l().forEach(t[n.id], J), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eu(n.id)))), $(n);
+    for (let n of (U = {}, L = {}, D = {}, y = {}, G = {}, V = {}, B = {}, k = Date.now(), P = e.initialPrivateChannels, e.initialPrivateChannels.forEach(X), e.guilds)) "partial" === n.dataMode && (l().forEach(t[n.id], J), C.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eu(n.id)))), $(n);
     ea()
   },
   GUILD_CREATE: function(e) {
     $(e.guild)
   },
   GUILD_DELETE: function(e) {
-    C.fileOnly("GuildDelete of ".concat(e.guild.id)), W(e.guild.id), B.delete(e.guild.id), T.Z.invalidate(e.guild.id)
+    C.fileOnly("GuildDelete of ".concat(e.guild.id)), W(e.guild.id), x.delete(e.guild.id), T.Z.invalidate(e.guild.id)
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: et,
   LOAD_CHANNELS: function(e) {
@@ -405,17 +405,17 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
         channels: n
       }
       of e.channels)
-      for (let e of (C.fileOnly("Lazy loaded guild channels for ".concat(t)), (0, h.ZP)(n), B.add(t), T.Z.restored(t), n)) !Object.hasOwn(L, e.id) && J((0, N._H)(e));
+      for (let e of (C.fileOnly("Lazy loaded guild channels for ".concat(t)), (0, h.ZP)(n), x.add(t), T.Z.restored(t), n)) !Object.hasOwn(L, e.id) && J((0, A._H)(e));
     return !1
   },
   LOAD_MESSAGES_AROUND_SUCCESS: er,
   LOAD_MESSAGES_SUCCESS: er,
   LOAD_THREADS_SUCCESS: et,
   LOGOUT: function() {
-    C.fileOnly("initializeClear()"), U = {}, L = {}, D = {}, G = {}, M = {}, V = {}, y = {}, B = new Set, x = {}, k = Date.now()
+    C.fileOnly("initializeClear()"), U = {}, L = {}, D = {}, G = {}, M = {}, V = {}, y = {}, x = new Set, B = {}, k = Date.now()
   },
   OVERLAY_INITIALIZE: function(e) {
-    for (let t of (e.guilds.length, e.channels)) q((0, h.d7)((0, N._H)(t)))
+    for (let t of (e.guilds.length, e.channels)) q((0, h.d7)((0, A._H)(t)))
   },
   SEARCH_FINISH: es,
   MOD_VIEW_SEARCH_FINISH: es,
@@ -426,7 +426,7 @@ o = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
       threads: t
     } = e;
     t.forEach(e => {
-      N.AW.has(e.type) && q(e)
+      A.AW.has(e.type) && q(e)
     })
   },
   THREAD_UPDATE: ee

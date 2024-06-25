@@ -17,9 +17,9 @@ var i, r = n(735250),
   I = n(689938),
   T = n(313586),
   h = n(838009),
-  S = n(520076);
+  f = n(520076);
 
-function f(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,8 +27,8 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = (0, l.Z)(),
-  A = (0, l.Z)(),
+let A = (0, l.Z)(),
+  N = (0, l.Z)(),
   m = (0, l.Z)();
 class O extends(i = s.Component) {
   getPaddingRight() {
@@ -104,7 +104,7 @@ class O extends(i = s.Component) {
   renderErrorMessage() {
     let e = this.getErrorMessage();
     return null == e ? null : (0, r.jsx)(d.x, {
-      id: N,
+      id: A,
       variant: "text-xs/normal",
       color: "text-danger",
       className: T.errorMessage,
@@ -121,11 +121,11 @@ class O extends(i = s.Component) {
       minLength: l,
       maxLength: _,
       allowOverflow: d,
-      spellCheck: f,
-      resizeable: N,
+      spellCheck: S,
+      resizeable: A,
       className: O,
-      id: R,
-      rows: p,
+      id: p,
+      rows: R,
       flex: g,
       autosize: C,
       required: v,
@@ -143,10 +143,10 @@ class O extends(i = s.Component) {
         children: [(0, r.jsx)(u.t, {
           children: (0, r.jsx)(M, {
             type: "text",
-            className: a()(h.inputDefault, T.textArea, S.scrollbarDefault, O, {
+            className: a()(h.inputDefault, T.textArea, f.scrollbarDefault, O, {
               [h.error]: P,
               [h.disabled]: n,
-              [T.resizeable]: N
+              [T.resizeable]: A
             }),
             "aria-labelledby": y,
             "aria-describedby": U,
@@ -154,25 +154,25 @@ class O extends(i = s.Component) {
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: R,
+            id: p,
             disabled: n,
             placeholder: s,
             value: i,
             autoFocus: o,
             minLength: l,
             maxLength: d ? void 0 : _,
-            spellCheck: f,
+            spellCheck: S,
             required: v,
             onChange: this.onChange,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
             onInvalid: L,
-            rows: p,
+            rows: R,
             ref: D
           })
         }), null != l && (0, r.jsx)(c.n, {
-          id: A,
+          id: N,
           children: I.Z.Messages.MINIMUM_LENGTH.format({
             minLength: l
           })
@@ -187,15 +187,15 @@ class O extends(i = s.Component) {
   }
   constructor(e) {
     var t;
-    super(e), f(this, "getAriaDescribedBy", () => {
+    super(e), S(this, "getAriaDescribedBy", () => {
       var e;
       let {
         maxLength: t,
         minLength: n,
         error: i
       } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(N) : (null != t && r.push(m), null != n && r.push(A)), r.length > 0 ? r.join(" ") : void 0
-    }), f(this, "onChange", e => {
+      return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(m), null != n && r.push(N)), r.length > 0 ? r.join(" ") : void 0
+    }), S(this, "onChange", e => {
       let {
         onChange: t,
         name: n
@@ -203,19 +203,19 @@ class O extends(i = s.Component) {
       null == t || t(e.currentTarget.value, n), this.setState({
         dirty: !0
       })
-    }), f(this, "onFocus", e => {
+    }), S(this, "onFocus", e => {
       let {
         onFocus: t,
         name: n
       } = this.props;
       null == t || t(e, n)
-    }), f(this, "onBlur", e => {
+    }), S(this, "onBlur", e => {
       let {
         onBlur: t,
         name: n
       } = this.props;
       null == t || t(e, n)
-    }), f(this, "onKeyDown", e => {
+    }), S(this, "onKeyDown", e => {
       let {
         onKeyDown: t
       } = this.props;
@@ -225,7 +225,7 @@ class O extends(i = s.Component) {
     }
   }
 }
-f(O, "contextType", _.q3), f(O, "defaultProps", {
+S(O, "contextType", _.q3), S(O, "defaultProps", {
   name: "",
   disabled: !1,
   placeholder: "",

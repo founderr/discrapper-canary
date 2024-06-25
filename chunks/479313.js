@@ -4,22 +4,22 @@ n.d(t, {
     return C
   },
   G1: function() {
-    return f
+    return S
   },
   JR: function() {
     return O
   },
   U$: function() {
-    return R
+    return p
   },
   e7: function() {
-    return A
+    return N
   },
   wv: function() {
     return m
   },
   yK: function() {
-    return N
+    return A
   }
 });
 var i = n(470079),
@@ -36,7 +36,7 @@ var i = n(470079),
   I = n(765104),
   T = n(981631);
 let h = 30 * E.Z.Millis.SECOND;
-async function S(e, t) {
+async function f(e, t) {
   let n, i;
   if (!I.Z.shouldFetch(e, t)) return;
   let r = Date.now();
@@ -61,7 +61,7 @@ async function S(e, t) {
     receivedAt: Date.now()
   })
 }
-async function f(e) {
+async function S(e) {
   var t, n;
   let i, r;
   if (!I.Z.shouldFetch(e)) return;
@@ -87,7 +87,7 @@ async function f(e) {
   })
 }
 
-function N(e, t) {
+function A(e, t) {
   l.Z.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -95,14 +95,14 @@ function N(e, t) {
   })
 }
 
-function A() {
+function N() {
   l.Z.dispatch({
     type: "TOGGLE_TOPICS_BAR"
   })
 }
 
 function m(e, t) {
-  null != e && null != t && S(e, t), l.Z.dispatch({
+  null != e && null != t && f(e, t), l.Z.dispatch({
     type: "SET_SELECTED_SUMMARY",
     channelId: e,
     summaryId: null != t ? t : null
@@ -117,14 +117,14 @@ function O(e, t) {
   })
 }
 
-function R(e, t) {
+function p(e, t) {
   l.Z.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
     rating: t
   })
 }
-async function p() {
+async function R() {
   var e;
   let t, n;
   if (!I.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -205,11 +205,11 @@ async function C(e) {
   }
 }
 let v = 12633 == n.j ? {
-  setSummaryFeedback: R,
+  setSummaryFeedback: p,
   updateVisibleMessages: O,
   setSelectedSummary: m,
-  setHighlightedSummary: N,
-  fetchSummaries: f,
+  setHighlightedSummary: A,
+  fetchSummaries: S,
   fetchSummariesBulk: g,
   useChannelSummaries: function(e) {
     let {
@@ -223,7 +223,7 @@ let v = 12633 == n.j ? {
         t && e();
         async function e() {
           try {
-            await p()
+            await R()
           } catch (e) {}
           await g(n.split(","))
         }

@@ -1,64 +1,64 @@
-s.r(a), s.d(a, {
+n.r(a), n.d(a, {
   default: function() {
-    return C
+    return _
   }
 });
-var n = s(735250),
-  t = s(470079),
-  o = s(120356),
-  r = s.n(o),
-  i = s(481060),
-  l = s(454585),
-  c = s(153124),
-  d = s(585483),
-  h = s(981631),
-  u = s(689938),
-  p = s(796300),
-  x = s(622322);
+var s = n(735250),
+  t = n(470079),
+  o = n(120356),
+  r = n.n(o),
+  d = n(481060),
+  c = n(454585),
+  i = n(153124),
+  l = n(585483),
+  h = n(981631),
+  u = n(689938),
+  p = n(796300),
+  x = n(622322);
 
-function C(e) {
+function _(e) {
   let {
     channel: a,
-    isFromComposer: s,
+    isFromComposer: n,
     transitionState: o,
-    onClose: C
-  } = e, M = (0, c.Dt)();
+    onClose: _
+  } = e, I = (0, i.Dt)();
   return t.useEffect(() => () => {
-    s && d.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE)
-  }, [s]), (0, n.jsxs)(i.ModalRoot, {
+    n && l.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE)
+  }, [n]), (0, s.jsxs)(d.ModalRoot, {
     transitionState: o,
-    "aria-labelledby": M,
-    size: i.ModalSize.DYNAMIC,
+    "aria-labelledby": I,
+    size: d.ModalSize.DYNAMIC,
     className: p.container,
-    children: [(0, n.jsxs)(i.ModalHeader, {
+    children: [(0, s.jsxs)(d.ModalHeader, {
       className: p.header,
       separator: !1,
-      children: [(0, n.jsx)(i.BookCheckIcon, {
+      children: [(0, s.jsx)(d.BookCheckIcon, {
         size: "custom",
         color: "currentColor",
         className: p.rulesIcon,
         width: 24,
         height: 24
-      }), (0, n.jsx)(i.Heading, {
+      }), (0, s.jsx)(d.Heading, {
         variant: "heading-lg/extrabold",
         children: u.Z.Messages.FORUM_POST_GUIDELINES_TITLE
       })]
-    }), (0, n.jsx)(i.ModalContent, {
-      children: (0, n.jsx)(i.Text, {
+    }), (0, s.jsx)(d.ModalContent, {
+      children: (0, s.jsx)(d.Text, {
         className: r()(p.content, x.markup),
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: (0, n.jsx)("div", {
-          children: l.Z.parseForumPostGuidelines(a.topic, !0, {
+        children: (0, s.jsx)("div", {
+          children: c.Z.parseForumPostGuidelines(a.topic, !0, {
             channelId: a.id,
             allowHeading: !0,
             allowList: !0
           })
         })
       })
-    }), (0, n.jsx)(i.ModalFooter, {
-      children: (0, n.jsx)(i.Button, {
-        onClick: C,
+    }), (0, s.jsx)(d.ModalFooter, {
+      children: (0, s.jsx)(d.Button, {
+        onClick: _,
         children: u.Z.Messages.GOT_IT
       })
     })]

@@ -1,18 +1,18 @@
-t.d(l, {
+l.d(t, {
   Z: function() {
-    return s
+    return a
   }
 });
-var n = t(735250);
+var n = l(735250);
 
-function s(e) {
+function a(e) {
   let {
-    width: l = 188,
-    height: t = 90
+    width: t = 188,
+    height: l = 90
   } = e;
   return (0, n.jsxs)("svg", {
-    width: l,
-    height: t,
+    width: t,
+    height: l,
     viewBox: "0 0 188 90",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
@@ -220,4 +220,4 @@ function s(e) {
     })]
   })
 }
-t(470079)
+l(470079)

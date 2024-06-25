@@ -88,20 +88,20 @@ function I(e) {
       postProcessor: E,
       shouldFilterKeywords: I,
       contentMessage: T
-    } = n, f = !1, N = (null != T ? T : t).content, A = e(I ? (0, r.N)(N, {
+    } = n, S = !1, A = (null != T ? T : t).content, N = e(I ? (0, r.N)(A, {
       escapeReplacement: !0,
       messageId: t.id,
       channelId: t.channel_id,
       authorId: null === (s = t.author) || void 0 === s ? void 0 : s.id
-    }) : N, !0, c(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
+    }) : A, !0, c(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
       return ("link" === n.type || "attachmentLink" === n.type) && u.has(i.type) && (0, a.dY)(i) ? [] : e
     }(e, (null != T ? T : t).embeds)), !d && (e = function(e, t) {
       return t ? h(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = h(e[0].content)), e)
-    }(e, n)), f = function(e, t) {
-      return t ? S(e) : "paragraph" === e[0].type && e[0].content instanceof Array && S(e[0].content)
+    }(e, n)), S = function(e, t) {
+      return t ? f(e) : "paragraph" === e[0].type && e[0].content instanceof Array && f(e[0].content)
     }(e = function(e) {
       let t = e.some(e => "link" !== e.type || !1);
       return e.filter(e => {
@@ -115,8 +115,8 @@ function I(e) {
       }), t
     }(e)), null != E && (e = E(e, n)), e));
     return {
-      hasSpoilerEmbeds: f,
-      content: A
+      hasSpoilerEmbeds: S,
+      content: N
     }
   }(t.formatInline ? s.Z.parseInlineReply : s.Z.parse, e, t)
 }
@@ -151,6 +151,6 @@ function h(e) {
   }), e)
 }
 
-function S(e) {
+function f(e) {
   return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
 }

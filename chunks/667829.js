@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(166459),
   T = n(911969),
   h = n(476326),
-  S = n(998698),
-  f = n(710845),
-  N = n(117530),
-  A = n(459273),
+  f = n(998698),
+  S = n(710845),
+  A = n(117530),
+  N = n(459273),
   m = n(403182),
   O = n(541716),
-  R = n(752305),
-  p = n(30465),
+  p = n(752305),
+  R = n(30465),
   g = n(140963),
   C = n(4484),
   v = n(925994),
@@ -41,7 +41,7 @@ function P(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-new f.Z("ChannelEditor.tsx");
+new S.Z("ChannelEditor.tsx");
 let y = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
   },
@@ -64,7 +64,7 @@ class b extends r.Component {
       let e;
       e = this.props.useSlate ? this.props.textValue : (0, v.sk)(this.props.richValue, {
         mode: "plain"
-      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, R.JM)(e))
+      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, p.JM)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
   }
   componentWillUnmount() {
@@ -176,11 +176,11 @@ class b extends r.Component {
       onResize: I,
       onSubmit: T,
       channel: h,
-      type: S,
-      fontSize: f,
-      useSlate: N,
+      type: f,
+      fontSize: S,
+      useSlate: A,
       spellcheckEnabled: m,
-      useNewSlashCommands: p,
+      useNewSlashCommands: R,
       canOnlyUseTextCommands: v,
       className: D,
       id: P,
@@ -188,24 +188,24 @@ class b extends r.Component {
       maxCharacterCount: b,
       allowNewLines: G,
       "aria-describedby": w,
-      "aria-labelledby": B,
-      accessibilityLabel: x
+      "aria-labelledby": x,
+      accessibilityLabel: B
     } = this.props, {
       submitting: k,
       popup: V
     } = this.state, Z = {
       channel: h,
       className: o()(D, M.textArea, {
-        [M.textAreaSlate]: N,
+        [M.textAreaSlate]: A,
         [M.textAreaDisabled]: _ || k
       }),
       id: P,
       placeholder: this.getPlaceholder(),
       required: y,
-      accessibilityLabel: x,
+      accessibilityLabel: B,
       disabled: _ || !1,
       submitting: k,
-      isEdit: S === O.I.EDIT,
+      isEdit: f === O.I.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
       onPaste: this.handlePaste,
@@ -219,30 +219,30 @@ class b extends r.Component {
       onResize: I,
       onKeyDown: E,
       onSubmit: T,
-      textAreaPaddingClassName: o()(U[f], {
-        [M.textAreaWithoutAttachmentButton]: S !== O.I.NORMAL && S !== O.I.OVERLAY && S !== O.I.THREAD_CREATION && S !== O.I.SIDEBAR,
-        [M.textAreaForPostCreation]: S === O.I.CREATE_FORUM_POST,
-        [M.textAreaCustomGift]: S === O.I.CUSTOM_GIFT,
-        [M.textAreaForUserProfile]: S === O.I.USER_PROFILE
+      textAreaPaddingClassName: o()(U[S], {
+        [M.textAreaWithoutAttachmentButton]: f !== O.I.NORMAL && f !== O.I.OVERLAY && f !== O.I.THREAD_CREATION && f !== O.I.SIDEBAR,
+        [M.textAreaForPostCreation]: f === O.I.CREATE_FORUM_POST,
+        [M.textAreaCustomGift]: f === O.I.CUSTOM_GIFT,
+        [M.textAreaForUserProfile]: f === O.I.USER_PROFILE
       }),
       spellcheckEnabled: m,
-      useNewSlashCommands: p,
-      disableAutoFocus: d.tq || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
-      disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
+      useNewSlashCommands: R,
+      disableAutoFocus: d.tq || null !== (n = f.disableAutoFocus) && void 0 !== n && n,
+      disableEnterToSubmit: null !== (r = null === (e = f.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
       "aria-controls": null !== (s = V.id) && void 0 !== s ? s : void 0,
       "aria-haspopup": "listbox",
       "aria-expanded": null !== V.id || void 0,
       "aria-activedescendant": null !== (a = V.activeDescendant) && void 0 !== a ? a : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
-      "aria-labelledby": B,
+      "aria-labelledby": x,
       "aria-autocomplete": "list"
-    }, H = N ? (0, i.jsx)(C.Z, {
+    }, H = A ? (0, i.jsx)(C.Z, {
       ref: this.ref,
       ...Z,
-      type: S,
-      value: _ ? (0, R.JM)("") : u,
-      canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
+      type: f,
+      value: _ ? (0, p.JM)("") : u,
+      canUseCommands: null === (t = f.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: v
     }) : (0, i.jsx)(g.Z, {
       ref: this.ref,
@@ -250,10 +250,10 @@ class b extends r.Component {
       value: _ ? "" : l
     });
     return (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(A.d9, {
+      children: [(0, i.jsx)(N.d9, {
         event: L.CkL.INSERT_TEXT,
         handler: this.handleInsertText
-      }), (0, i.jsx)(A.d9, {
+      }), (0, i.jsx)(N.d9, {
         event: L.CkL.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
@@ -302,7 +302,7 @@ class b extends r.Component {
       E.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type)
     }), P(this, "handleClearText", () => {
       var e, t;
-      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, R.JM)(""))
+      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, p.JM)(""))
     }), P(this, "handleInsertText", e => {
       let {
         plainText: t,
@@ -411,16 +411,16 @@ class b extends r.Component {
         }
       })), 0 !== a.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
         var i, s;
-        let a = S.Z.getActiveCommand(t.id);
+        let a = f.Z.getActiveCommand(t.id);
         if (null == a) return r(e, t, o.drafts.type, {
           requireConfirm: !0,
           showLargeMessageDialog: n
         });
         let l = null !== (i = o.drafts.commandType) && void 0 !== i ? i : o.drafts.type,
           u = null,
-          _ = S.Z.getActiveOption(t.id);
+          _ = f.Z.getActiveOption(t.id);
         if (null != (u = (null == _ ? void 0 : _.type) === T.jw.ATTACHMENT ? _ : null === (s = a.options) || void 0 === s ? void 0 : s.find(e => {
-            if (e.type === T.jw.ATTACHMENT) return null == N.Z.getUpload(t.id, e.name, l)
+            if (e.type === T.jw.ATTACHMENT) return null == A.Z.getUpload(t.id, e.name, l)
           }))) I.Z.setFile({
           channelId: t.id,
           id: u.name,
@@ -432,7 +432,7 @@ class b extends r.Component {
           }
         })
       })(a), this.focus(), !0)
-    }), this._unsubscribe = p.p8.subscribe(e => {
+    }), this._unsubscribe = R.p8.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -441,7 +441,7 @@ class b extends r.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: p.p8.getState()
+      popup: R.p8.getState()
     }
   }
 }

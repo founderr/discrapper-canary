@@ -3,10 +3,10 @@ n.d(t, {
     return h
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(481060),
   o = n(923726),
   c = n(689938),
@@ -17,39 +17,39 @@ function d(e) {
     text: t,
     hasScrolled: n
   } = e;
-  return (0, l.jsxs)("div", {
-    className: a()(u.container, {
+  return (0, i.jsxs)("div", {
+    className: s()(u.container, {
       [u.containerHide]: n
     }),
-    children: [(0, l.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       className: u.notice,
-      children: (0, l.jsx)(r.Text, {
+      children: (0, i.jsx)(r.Text, {
         className: u.__invalid_label,
         variant: "text-md/medium",
         color: "header-primary",
         children: t
       })
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: u.noticeArrow
     })]
   })
 }
 
 function h(e) {
-  let [t, n] = i.useState(), [s, a] = i.useState(), [r, u] = i.useState(!1), [h, m] = i.useState(!1), {
-    enabled: E
+  let [t, n] = a.useState(), [l, s] = a.useState(), [r, u] = a.useState(!1), [h, p] = a.useState(!1), {
+    enabled: m
   } = (0, o.s1)(e);
-  return i.useEffect(() => {
-    E && null != t && null != s ? u(t < s) : u(!1)
-  }, [E, t, s]), {
-    horizontalScrollNotice: i.useMemo(() => r ? (0, l.jsx)(d, {
+  return a.useEffect(() => {
+    m && null != t && null != l ? u(t < l) : u(!1)
+  }, [m, t, l]), {
+    horizontalScrollNotice: a.useMemo(() => r ? (0, i.jsx)(d, {
       text: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
       hasScrolled: h
     }) : null, [r, h]),
-    handleScroll: () => m(!0),
+    handleScroll: () => p(!0),
     handleSetScrollerRef: e => {
       var t;
-      return a(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth)
+      return s(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth)
     },
     handleSetContainerRef: e => n(null == e ? void 0 : e.clientWidth)
   }

@@ -23,18 +23,18 @@ function d(e) {
     filter: E
   } = (0, r.cj)([o.Z], () => ({
     filter: o.Z.getFilter()
-  })), I = (0, l.E)(t), T = (0, u.Z)(I), h = (0, _.o)(), S = (0, a.oy)(d);
+  })), I = (0, l.E)(t), T = (0, u.Z)(I), h = (0, _.o)(), f = (0, a.oy)(d);
   return i.useMemo(() => {
     function e(e) {
       return !!(!n || "" === E || e.application.name.toLowerCase().includes(E.toLowerCase())) || !1
     }
 
     function t(e) {
-      return !S || (0, s.yE)(e.application.flags, c.udG.EMBEDDED_RELEASED)
+      return !f || (0, s.yE)(e.application.flags, c.udG.EMBEDDED_RELEASED)
     }
     let i = [...h].filter(e).filter(t),
       r = new Set(i.map(e => e.application.id));
     for (let n of T) !r.has(n.application.id) && e(n) && t(n) && i.push(n);
     return i
-  }, [h, n, E, T, S])
+  }, [h, n, E, T, f])
 }

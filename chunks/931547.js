@@ -1,61 +1,61 @@
-s.d(t, {
+n.d(t, {
   Z: function() {
     return o
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(481060),
-  l = s(831489);
+var s = n(735250);
+n(470079);
+var a = n(120356),
+  r = n.n(a),
+  i = n(481060),
+  l = n(831489);
 
 function o(e) {
   let {
     message: t,
-    error: s,
+    error: n,
     onClick: a,
     submitting: o,
     className: c,
-    ctaMessage: E
+    ctaMessage: d
   } = e;
-  return (0, n.jsxs)("div", {
-    className: i()(l.container, c),
-    children: [(0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
+    className: r()(l.container, c),
+    children: [(0, s.jsxs)("div", {
       className: l.textContainer,
-      children: [(0, n.jsx)(r.CircleExclamationPointIcon, {
+      children: [(0, s.jsx)(i.CircleExclamationPointIcon, {
         size: "custom",
         width: 20,
         height: 20,
         color: "currentColor",
         className: l.warningIcon
-      }), (0, n.jsx)(r.Spacer, {
+      }), (0, s.jsx)(i.Spacer, {
         size: 10,
         horizontal: !0
-      }), (0, n.jsxs)("div", {
-        children: [(0, n.jsx)(r.Spacer, {
+      }), (0, s.jsxs)("div", {
+        children: [(0, s.jsx)(i.Spacer, {
           size: 1
-        }), (0, n.jsx)(r.Text, {
+        }), (0, s.jsx)(i.Text, {
           className: l.info,
           variant: "text-sm/normal",
           children: t
-        }), null != s && (0, n.jsx)(r.Text, {
-          className: i()(l.info, l.error),
+        }), null != n && (0, s.jsx)(i.Text, {
+          className: r()(l.info, l.error),
           variant: "text-sm/normal",
-          children: s
+          children: n
         })]
       })]
-    }), (0, n.jsx)(r.Spacer, {
+    }), (0, s.jsx)(i.Spacer, {
       size: 16,
       horizontal: !0
-    }), (0, n.jsx)(r.Button, {
+    }), (0, s.jsx)(i.Button, {
       className: l.undoButton,
-      color: r.Button.Colors.LINK,
-      look: r.Button.Looks.LINK,
-      size: r.Button.Sizes.ICON,
+      color: i.Button.Colors.LINK,
+      look: i.Button.Looks.LINK,
+      size: i.Button.Sizes.ICON,
       onClick: a,
       submitting: o,
-      children: E
+      children: d
     })]
   })
 }

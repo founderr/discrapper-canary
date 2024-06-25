@@ -1,26 +1,26 @@
 t.d(s, {
   Z: function() {
-    return o
+    return l
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(793030),
-  a = t(689938),
-  l = t(392323),
-  r = t(838190);
+var a = t(793030),
+  i = t(689938),
+  r = t(392323),
+  o = t(838190);
 
-function o() {
+function l() {
   return (0, n.jsxs)("div", {
-    className: l.container,
+    className: r.container,
     children: [(0, n.jsx)("img", {
-      className: l.emptySearchIcon,
-      src: r,
+      className: r.emptySearchIcon,
+      src: o,
       alt: ""
-    }), (0, n.jsx)(i.x, {
+    }), (0, n.jsx)(a.x, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: a.Z.Messages.USER_SETTINGS_NO_SEARCH_RESULTS
+      children: i.Z.Messages.USER_SETTINGS_NO_SEARCH_RESULTS
     })]
   })
 }

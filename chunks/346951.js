@@ -1,38 +1,38 @@
 var n = t(735250),
-  i = t(470079),
-  a = t(481060),
-  l = t(707558),
-  r = t(577720),
-  o = t(689938),
+  a = t(470079),
+  i = t(481060),
+  r = t(707558),
+  o = t(577720),
+  l = t(689938),
   c = t(561521);
-let E = () => [{
+let d = () => [{
   icon: c.perkNewsletter,
-  title: o.Z.Messages.HYPESQUAD_PERK_TITLE_NEWSLETTER,
-  description: o.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_NEWSLETTER
+  title: l.Z.Messages.HYPESQUAD_PERK_TITLE_NEWSLETTER,
+  description: l.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_NEWSLETTER
 }, {
   icon: c.perkBadge,
-  title: o.Z.Messages.HYPESQUAD_PERK_TITLE_PROFILE_BADGE,
-  description: o.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_PROFILE_BADGE
+  title: l.Z.Messages.HYPESQUAD_PERK_TITLE_PROFILE_BADGE,
+  description: l.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_PROFILE_BADGE
 }, {
   icon: c.perkChallenges,
-  title: o.Z.Messages.HYPESQUAD_PERK_TITLE_SQUAD_CHALLENGES,
-  description: o.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_SQUAD_CHALLENGES
+  title: l.Z.Messages.HYPESQUAD_PERK_TITLE_SQUAD_CHALLENGES,
+  description: l.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_SQUAD_CHALLENGES
 }];
-class d extends i.Component {
+class _ extends a.Component {
   render() {
     return (0, n.jsxs)("div", {
       className: c.features,
-      children: [(0, n.jsx)(r.Z, {
+      children: [(0, n.jsx)(o.Z, {
         className: c.video,
         videoID: "SWzB1mx2o5k"
-      }), (0, n.jsx)(a.Heading, {
+      }), (0, n.jsx)(i.Heading, {
         className: c.perksHeading,
         variant: "heading-sm/semibold",
-        children: o.Z.Messages.HYPESQUAD_PERKS_HEADING
-      }), (0, n.jsx)(l.Z, {
-        features: E()
+        children: l.Z.Messages.HYPESQUAD_PERKS_HEADING
+      }), (0, n.jsx)(r.Z, {
+        features: d()
       })]
     })
   }
 }
-s.Z = d
+s.Z = _

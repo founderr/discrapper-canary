@@ -1,34 +1,34 @@
 n(47120);
-var s = n(570140),
-  i = n(996106),
-  l = n(452426),
-  a = n(701488),
-  r = n(231338);
+var i = n(570140),
+  s = n(996106),
+  a = n(452426),
+  r = n(701488),
+  l = n(231338);
 t.Z = {
-  [r.Et.SET_ORIENTATION_LOCK_STATE]: {
-    validation: e => (0, l.Z)(e).required().keys({
-      lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).required(),
-      picture_in_picture_lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).allow(null).optional(),
-      grid_lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).allow(null).optional()
+  [l.Et.SET_ORIENTATION_LOCK_STATE]: {
+    validation: e => (0, a.Z)(e).required().keys({
+      lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).required(),
+      picture_in_picture_lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).allow(null).optional(),
+      grid_lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).allow(null).optional()
     }),
     handler(e) {
       let {
         socket: t,
         args: {
           lock_state: n,
-          picture_in_picture_lock_state: l,
-          grid_lock_state: a
+          picture_in_picture_lock_state: a,
+          grid_lock_state: r
         }
       } = e, o = t.application.id;
-      if (null != o) s.Z.dispatch({
+      if (null != o) i.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
         applicationId: o,
         lockState: n,
-        pictureInPictureLockState: l,
-        gridLockState: a
+        pictureInPictureLockState: a,
+        gridLockState: r
       });
-      else throw new i.Z({
-        errorCode: r.lT.INVALID_COMMAND
+      else throw new s.Z({
+        errorCode: l.lT.INVALID_COMMAND
       }, "No application.")
     }
   }

@@ -4,11 +4,11 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(120356),
-  a = t.n(s),
-  r = t(481060),
-  o = t(875078);
+  l = t.n(s),
+  o = t(481060),
+  r = t(875078);
 
 function c(e) {
   let {
@@ -17,16 +17,16 @@ function c(e) {
     title: s
   } = e;
   return (0, i.jsxs)("header", {
-    className: o.header,
+    className: r.header,
     children: [(0, i.jsxs)("div", {
-      className: o.name,
-      children: [l.cloneElement(t, {
-        className: a()(t.props.className, o.icon),
+      className: r.name,
+      children: [a.cloneElement(t, {
+        className: l()(t.props.className, r.icon),
         height: 24,
         width: 24
-      }), (0, i.jsx)(r.Heading, {
+      }), (0, i.jsx)(o.Heading, {
         variant: "heading-md/semibold",
-        className: o.title,
+        className: r.title,
         children: s
       })]
     }), n]

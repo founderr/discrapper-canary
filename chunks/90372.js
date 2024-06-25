@@ -1,15 +1,15 @@
 "use strict";
-var s = n(470079),
-  l = n(451478),
-  a = n(830917),
-  r = n(985518);
+var a = n(470079),
+  s = n(451478),
+  r = n(830917),
+  l = n(985518);
 t.Z = {
   useForumChannelSeenManager: function(e) {
     let {
       guildId: t,
       channelId: n
-    } = e, i = s.useRef(null), o = (0, a.UU)(), c = !l.Z.isFocused(o);
-    return s.useLayoutEffect(() => (null == i.current && (i.current = new r.ZP({
+    } = e, i = a.useRef(null), o = (0, r.UU)(), c = !s.Z.isFocused(o);
+    return a.useLayoutEffect(() => (null == i.current && (i.current = new l.ZP({
       guildId: t,
       channelId: n,
       isPaused: c,

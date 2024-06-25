@@ -1,1 +1,1 @@
-L.exports = C.p + "0886e72aca54f20d76a4.png"
+e.exports = a.p + "0886e72aca54f20d76a4.png"

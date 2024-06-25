@@ -3,10 +3,10 @@ n.d(t, {
     return u
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(481060),
-  a = n(570140),
+var i = n(735250),
+  a = n(470079),
+  l = n(481060),
+  s = n(570140),
   r = n(937995),
   o = n(618158),
   c = n(153850);
@@ -17,38 +17,38 @@ function u(e) {
     dismissed: n,
     onDismiss: u,
     renderComponent: d
-  } = e, h = i.useContext(r.h9), [m, E] = i.useState(""), [p, g] = i.useState(!1);
+  } = e, h = a.useContext(r.h9), [p, m] = a.useState(""), [_, f] = a.useState(!1);
 
-  function f(e) {
+  function E(e) {
     var t;
     let {
       settings: n
-    } = e, l = n.callHeaderHeight;
-    E(null !== (t = null == l ? void 0 : l.toString()) && void 0 !== t ? t : ""), g(void 0 !== l && l < 300)
+    } = e, i = n.callHeaderHeight;
+    m(null !== (t = null == i ? void 0 : i.toString()) && void 0 !== t ? t : ""), f(void 0 !== i && i < 300)
   }
-  i.useEffect(() => (a.Z.subscribe("UNSYNCED_USER_SETTINGS_UPDATE", f), () => {
-    a.Z.unsubscribe("UNSYNCED_USER_SETTINGS_UPDATE", f)
+  a.useEffect(() => (s.Z.subscribe("UNSYNCED_USER_SETTINGS_UPDATE", E), () => {
+    s.Z.unsubscribe("UNSYNCED_USER_SETTINGS_UPDATE", E)
   }), []);
   let {
-    preventIdle: C,
-    allowIdle: _
+    preventIdle: g,
+    allowIdle: C
   } = (0, o.Y)("popup");
-  return (null == t ? void 0 : t.current) == null ? null : (0, l.jsx)(s.Layer, {
+  return (null == t ? void 0 : t.current) == null ? null : (0, i.jsx)(l.Layer, {
     layerContext: c.nz,
-    children: (0, l.jsx)(s.ReferencePositionLayer, {
+    children: (0, i.jsx)(l.ReferencePositionLayer, {
       targetRef: t,
       position: "top",
       align: "center",
       spacing: 0,
       nudgeAlignIntoViewport: !1,
-      positionKey: m,
-      children: () => (0, l.jsx)("div", {
-        onMouseOver: C,
-        onFocus: C,
-        onBlur: _,
-        onMouseLeave: _,
+      positionKey: p,
+      children: () => (0, i.jsx)("div", {
+        onMouseOver: g,
+        onFocus: g,
+        onBlur: C,
+        onMouseLeave: C,
         children: d({
-          hidden: p || h || n,
+          hidden: _ || h || n,
           onDismiss: u
         })
       })

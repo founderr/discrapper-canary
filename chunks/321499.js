@@ -1,91 +1,91 @@
 t.d(s, {
   Z: function() {
-    return g
+    return h
   }
 });
 var n = t(735250),
-  i = t(470079),
-  a = t(120356),
-  l = t.n(a),
-  r = t(442837),
-  o = t(780384),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(780384),
   c = t(481060),
-  E = t(846027),
-  d = t(131951),
-  _ = t(285952),
-  T = t(998502),
-  S = t(210887),
-  u = t(996073),
+  d = t(846027),
+  _ = t(131951),
+  E = t(285952),
+  u = t(998502),
+  T = t(210887),
+  S = t(996073),
   I = t(526761),
   N = t(65154),
-  A = t(689938),
-  C = t(331651);
-let O = t(651714),
-  m = t(297166);
+  C = t(689938),
+  A = t(331651);
+let m = t(651714),
+  O = t(297166);
 
-function h() {
+function g() {
   let {
     experimentalEncoders: e
-  } = (0, r.cj)([d.Z], () => ({
-    experimentalEncoders: d.Z.getExperimentalEncoders()
+  } = (0, o.cj)([_.Z], () => ({
+    experimentalEncoders: _.Z.getExperimentalEncoders()
   }));
-  return "stable" !== T.ZP.releaseChannel && d.Z.isExperimentalEncodersSupported() ? (0, n.jsx)(c.FormSwitch, {
-    className: l()(C.marginTop8, C.marginBottom20),
+  return "stable" !== u.ZP.releaseChannel && _.Z.isExperimentalEncodersSupported() ? (0, n.jsx)(c.FormSwitch, {
+    className: r()(A.marginTop8, A.marginBottom20),
     value: e,
-    onChange: e => E.Z.setExperimentalEncoders(e),
+    onChange: e => d.Z.setExperimentalEncoders(e),
     disabled: !1,
-    children: A.Z.Messages.EXPERIMENTAL_ENCODERS
+    children: C.Z.Messages.EXPERIMENTAL_ENCODERS
   }) : null
 }
 
-function g() {
-  let e = (0, r.e7)([S.Z], () => S.Z.theme),
+function h() {
+  let e = (0, o.e7)([T.Z], () => T.Z.theme),
     {
       openH264: s,
       hardwareEncoding: t,
-      supportsOpenH264: a
-    } = (0, r.cj)([d.Z], () => ({
-      openH264: d.Z.getOpenH264(),
-      hardwareEncoding: d.Z.getHardwareEncoding(),
-      supportsOpenH264: d.Z.supports(N.AN.OPEN_H264)
+      supportsOpenH264: i
+    } = (0, o.cj)([_.Z], () => ({
+      openH264: _.Z.getOpenH264(),
+      hardwareEncoding: _.Z.getHardwareEncoding(),
+      supportsOpenH264: _.Z.supports(N.AN.OPEN_H264)
     })),
-    T = i.useRef(null);
-  return (0, u.Z)(T, I.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, n.jsxs)(n.Fragment, {
+    u = a.useRef(null);
+  return (0, S.Z)(u, I.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(c.FormSection, {
-      className: C.marginBottom20,
-      title: A.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
+      className: A.marginBottom20,
+      title: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
       children: (0, n.jsx)(c.FormNotice, {
-        className: C.marginBottom20,
+        className: A.marginBottom20,
         type: c.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, o.ap)(e) ? O : m,
+          src: (0, l.ap)(e) ? m : O,
           width: 70,
           height: 40
         },
-        align: _.Z.Align.CENTER,
-        body: A.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
+        align: E.Z.Align.CENTER,
+        body: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
     }), (0, n.jsxs)(c.FormSection, {
-      className: C.marginBottom20,
-      title: A.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
-      children: [a && (0, n.jsx)(c.FormSwitch, {
-        className: l()(C.marginTop8, C.marginBottom20),
+      className: A.marginBottom20,
+      title: C.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+      children: [i && (0, n.jsx)(c.FormSwitch, {
+        className: r()(A.marginTop8, A.marginBottom20),
         value: s,
-        onChange: e => E.Z.setOpenH264(e),
+        onChange: e => d.Z.setOpenH264(e),
         disabled: !1,
-        children: A.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
+        children: C.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
       }), (0, n.jsx)("div", {
         style: {
           scrollMarginTop: "48px"
         },
-        ref: T
+        ref: u
       }), (0, n.jsx)(c.FormSwitch, {
-        className: l()(C.marginTop8, C.marginBottom20),
+        className: r()(A.marginTop8, A.marginBottom20),
         value: t,
-        onChange: e => E.Z.setHardwareEncoding(e),
-        note: A.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
-        children: A.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
-      }), (0, n.jsx)(h, {})]
+        onChange: e => d.Z.setHardwareEncoding(e),
+        note: C.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
+        children: C.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
+      }), (0, n.jsx)(g, {})]
     })]
   })
 }

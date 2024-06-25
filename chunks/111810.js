@@ -1,17 +1,17 @@
-a.d(s, {
+n.d(t, {
   Z: function() {
-    return _
+    return r
   }
 });
-var l = a(470079),
-  t = a(252618),
-  n = a(358085),
-  r = a(689938);
+var s = n(470079),
+  a = n(252618),
+  o = n(358085),
+  l = n(689938);
 
-function _() {
-  return l.useEffect(() => {
-    !n.isPlatformEmbedded && (0, t.EM)({
-      messages: [r.Z.Messages.GO_LIVE_HEY, r.Z.Messages.GO_LIVE_LOOK, r.Z.Messages.GO_LIVE_LISTEN],
+function r() {
+  return s.useEffect(() => {
+    !o.isPlatformEmbedded && (0, a.EM)({
+      messages: [l.Z.Messages.GO_LIVE_HEY, l.Z.Messages.GO_LIVE_LOOK, l.Z.Messages.GO_LIVE_LISTEN],
       interval: 600,
       count: 20,
       onlyWhenBlurred: !0

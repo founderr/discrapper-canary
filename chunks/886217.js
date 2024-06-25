@@ -1,31 +1,31 @@
 n(627494), n(757143);
-var l = n(735250),
-  i = n(470079),
-  s = n(317261),
-  a = n(442837),
+var i = n(735250),
+  a = n(470079),
+  l = n(317261),
+  s = n(442837),
   r = n(594174),
   o = n(823379),
   c = n(5192),
   u = n(561308),
   d = n(256726),
   h = n(206295),
-  m = n(278399),
-  E = n(297781),
-  p = n(591853),
-  g = n(410441),
-  f = n(689938);
-let C = (e, t, n, l) => {
-    let i = function(e) {
-        if (e === s._.WEEK) return f.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT
-      }(l),
-      a = c.ZP.getName(t.guild_id, t.id, n),
+  p = n(278399),
+  m = n(297781),
+  _ = n(591853),
+  f = n(410441),
+  E = n(689938);
+let g = (e, t, n, i) => {
+    let a = function(e) {
+        if (e === l._.WEEK) return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT
+      }(i),
+      s = c.ZP.getName(t.guild_id, t.id, n),
       r = e.extra.artist.name;
-    return i.plainFormat({
+    return a.plainFormat({
       artist: r,
-      userName: a
+      userName: s
     }).replaceAll("*", "")
   },
-  _ = (e, t) => f.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
+  C = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
     username: t.username,
     artist: e.extra.artist.name
   });
@@ -33,54 +33,54 @@ t.Z = e => {
   let {
     channel: t,
     entry: n,
-    requestId: s,
+    requestId: l,
     closePopout: c
   } = e, {
     parent_title: I,
     provider: x,
     image_url: T
-  } = n.extra.media, N = n.extra.artist.name, Z = (0, a.e7)([r.default], () => r.default.getUser(n.author_id)), {
+  } = n.extra.media, N = n.extra.artist.name, v = (0, s.e7)([r.default], () => r.default.getUser(n.author_id)), {
     primaryColor: S,
-    secondaryColor: v
-  } = (0, h.Z)(T), A = (0, u.Nq)(n), M = i.useCallback(() => {
-    if (null == Z || !(0, o.Hi)(A, m.y9)) return;
-    let e = C(n, t, Z, A);
+    secondaryColor: Z
+  } = (0, h.Z)(T), A = (0, u.Nq)(n), M = a.useCallback(() => {
+    if (null == v || !(0, o.Hi)(A, p.y9)) return;
+    let e = g(n, t, v, A);
     return (0, d.CR)({
-      user: Z,
+      user: v,
       channel: t,
       mediaImageSrc: T,
       artist: N,
       description: e,
-      colors: [S, v],
+      colors: [S, Z],
       badges: (0, d.UU)(n)
     })
-  }, [T, N, t, n, S, A, v, Z]);
-  return null != Z && (0, o.Hi)(A, m.y9) ? (0, l.jsxs)(p.yR, {
-    children: [(0, l.jsx)(p.wG, {
+  }, [T, N, t, n, S, A, Z, v]);
+  return null != v && (0, o.Hi)(A, p.y9) ? (0, i.jsxs)(_.yR, {
+    children: [(0, i.jsx)(_.wG, {
       thumbnailSrc: T,
       channel: t,
       entry: n,
-      headerIcons: (0, l.jsx)(g.Z, {
+      headerIcons: (0, i.jsx)(f.Z, {
         provider: x
       }),
-      userDescription: f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+      userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
       title: I,
       subtitle: N,
-      badges: (0, l.jsx)(E.Gk, {
-        location: E.Gt.POPOUT,
-        children: m.Ho.map((e, t) => (0, l.jsx)(e, {
+      badges: (0, i.jsx)(m.Gk, {
+        location: m.Gt.POPOUT,
+        children: p.Ho.map((e, t) => (0, i.jsx)(e, {
           entry: n
         }, t))
       })
-    }), (0, l.jsx)(p.St, {
-      children: (0, l.jsx)(p.WT, {
+    }), (0, i.jsx)(_.St, {
+      children: (0, i.jsx)(_.WT, {
         closePopout: c,
-        user: Z,
+        user: v,
         channel: t,
         generateReactionImage: M,
-        reactionImageAltText: _(n, Z),
+        reactionImageAltText: C(n, v),
         entry: n,
-        requestId: s
+        requestId: l
       })
     })]
   }) : null

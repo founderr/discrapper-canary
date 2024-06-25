@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -19,8 +19,8 @@ var r = n(481060),
   I = n(430824),
   T = n(900849),
   h = n(746878),
-  S = n(981631);
-async function f(e, t, n) {
+  f = n(981631);
+async function S(e, t, n) {
   if (null == t) return;
   if (a.Z.trackDiscordLinkClicked({
       guildId: e,
@@ -39,17 +39,17 @@ async function f(e, t, n) {
   if (null != i && null == n && (0, d.bw)(i.type) && (0, l.YO)(i)) {
     o.default.selectVoiceChannel(i.id);
     return
-  }(0, u.Z)(S.Z5c.CHANNEL(e, t, n))
+  }(0, u.Z)(f.Z5c.CHANNEL(e, t, n))
 }
 
-function N(e) {
+function A(e) {
   return {
     react(t, o, a) {
       let l = E.Z.getChannel(t.channelId),
         u = a.noStyleAndInteraction ? void 0 : n => {
-          e.shouldStopPropagation && (null == n || n.stopPropagation()), f(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
+          e.shouldStopPropagation && (null == n || n.stopPropagation()), S(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
         },
-        d = a.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? S.dG4 : e => {
+        d = a.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? f.dG4 : e => {
           (0, s.jW)(e, async () => {
             let {
               default: e

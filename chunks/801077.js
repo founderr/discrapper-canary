@@ -1,33 +1,33 @@
 n(47120), n(653041), n(724458);
-var l, i, s, r, a = n(392711),
-  o = n.n(a),
-  u = n(442837),
-  c = n(570140),
+var i, l, r, a, s = n(392711),
+  o = n.n(s),
+  c = n(442837),
+  u = n(570140),
   d = n(782769),
   h = n(527805),
   p = n(841784),
-  g = n(503438),
-  m = n(802856),
-  C = n(420660),
-  E = n(728345),
-  f = n(812206),
-  _ = n(710845),
-  I = n(38618),
+  f = n(503438),
+  _ = n(802856),
+  g = n(420660),
+  m = n(728345),
+  C = n(812206),
+  I = n(710845),
+  E = n(38618),
   N = n(656063),
-  Z = n(761282),
+  x = n(761282),
   S = n(814443),
-  x = n(789407),
-  L = n(630186),
+  Z = n(789407),
+  v = n(630186),
   T = n(250889),
-  v = n(199902),
+  L = n(199902),
   A = n(592125),
-  M = n(480294),
-  R = n(831506),
-  O = n(731290),
-  P = n(430824),
-  b = n(496675),
-  j = n(158776),
-  y = n(699516),
+  b = n(480294),
+  M = n(831506),
+  R = n(731290),
+  y = n(430824),
+  O = n(496675),
+  P = n(158776),
+  j = n(699516),
   D = n(594174),
   U = n(979651),
   G = n(823379),
@@ -42,12 +42,12 @@ let k = !1,
   z = new Set;
 
 function K() {
-  let e = y.Z.getFriendIDs();
-  return M.Z.hasConsented(w.pjP.PERSONALIZATION) ? new Set([...S.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e)
+  let e = j.Z.getFriendIDs();
+  return b.Z.hasConsented(w.pjP.PERSONALIZATION) ? new Set([...S.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e)
 }
 
 function q(e) {
-  return j.Z.findActivity(e, e => e.type !== w.IIU.CUSTOM_STATUS)
+  return P.Z.findActivity(e, e => e.type !== w.IIU.CUSTOM_STATUS)
 }
 
 function Q(e) {
@@ -62,7 +62,7 @@ function Q(e) {
 function J(e) {
   return null == W[e] && (W = {
     ...W,
-    [e]: new L.Z({
+    [e]: new v.Z({
       url: e
     })
   }), W[e]
@@ -73,110 +73,110 @@ function X(e) {
 }
 
 function $(e) {
-  if ((0, g.Z)(e)) return x.r9;
-  let t = null != e.application_id ? f.Z.getApplication(e.application_id) : null;
-  return null != t ? t : (0, m.Z)(e) ? Q(e.name) : (0, C.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t)
+  if ((0, f.Z)(e)) return Z.r9;
+  let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
+  return null != t ? t : (0, _.Z)(e) ? Q(e.name) : (0, g.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t)
 }
 
 function ee(e) {
   let t = U.Z.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && b.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && O.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
     channelId: t.channelId
   }) ? t.channelId : null
 }
 
 function et(e) {
-  return y.Z.isFriend(e.id)
+  return j.Z.isFriend(e.id)
 }
 
 function en(e, t, n) {
-  var l, i, s, r, a, u;
-  let c;
-  let g = D.default.getCurrentUser(),
-    m = null !== (l = null == g ? void 0 : g.nsfwAllowed) && void 0 !== l && l,
-    C = t.map(e => e.id),
-    E = t.filter(t => e.has(t.id)),
-    I = !1,
+  var i, l, r, a, s, c;
+  let u;
+  let f = D.default.getCurrentUser(),
+    _ = null !== (i = null == f ? void 0 : f.nsfwAllowed) && void 0 !== i && i,
+    g = t.map(e => e.id),
+    m = t.filter(t => e.has(t.id)),
+    E = !1,
     S = [],
-    M = new Set,
-    y = !1,
+    b = new Set,
+    j = !1,
     w = [];
   for (let e of t) {
-    let n = v.Z.getAnyStreamForUser(e.id),
-      l = A.Z.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!m || !O.Z.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
-    let a = q(e.id);
+    let n = L.Z.getAnyStreamForUser(e.id),
+      i = A.Z.getChannel(null == n ? void 0 : n.channelId);
+    if ((null == i ? void 0 : i.isNSFW()) && (!_ || !R.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+    let s = q(e.id);
     if (null != n && w.push({
         stream: n,
         streamUser: e,
-        activity: a
-      }), null == a) continue;
-    let u = (0, N.Z)(a);
-    if (null == u) continue;
-    y = u === x.XB;
-    let c = function(e) {
-        let t = f.Z.getApplication(e);
-        return null != t ? t : "string" != typeof e ? (new _.Z("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
+        activity: s
+      }), null == s) continue;
+    let c = (0, N.Z)(s);
+    if (null == c) continue;
+    j = c === Z.XB;
+    let u = function(e) {
+        let t = C.Z.getApplication(e);
+        return null != t ? t : "string" != typeof e ? (new I.Z("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === x.XB ? x.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(L._) ? J(e.slice(L._.length)) : (X(e), null)
-      }(u),
-      C = null === (i = a.timestamps) || void 0 === i ? void 0 : i.start;
-    if ((0, p.Z)(a)) {
+        }), null) : e === Z.XB ? Z.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(v._) ? J(e.slice(v._.length)) : (X(e), null)
+      }(c),
+      g = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
+    if ((0, p.Z)(s)) {
       let t = (0, d.a)();
       if ((0, h.ZP)({
-          activity: a,
+          activity: s,
           userId: e.id,
-          application: c,
-          channelId: null === (s = U.Z.getVoiceStateForUser(e.id)) || void 0 === s ? void 0 : s.channelId,
-          currentUser: g,
+          application: u,
+          channelId: null === (r = U.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
+          currentUser: f,
           isActivitiesEnabledForCurrentPlatform: t,
           ChannelStore: A.Z,
           VoiceStateStore: U.Z,
-          PermissionStore: b.Z,
-          GuildStore: P.Z
+          PermissionStore: O.Z,
+          GuildStore: y.Z
         }) !== h.Fw.CAN_JOIN) continue
-    } else if (null == C) continue;
-    if (!Z.JE(a) || null == c || M.has(c.id)) continue;
-    let E = null != a ? $(a) : null;
-    (null == E || E.id !== c.id) && (a = null);
-    let j = [];
-    j = null != a && null != a.party && null != a.party.id ? Array.from(null !== (r = R.Z.getParty(a.party.id)) && void 0 !== r ? r : []).reduce((e, t) => {
+    } else if (null == g) continue;
+    if (!x.JE(s) || null == u || b.has(u.id)) continue;
+    let m = null != s ? $(s) : null;
+    (null == m || m.id !== u.id) && (s = null);
+    let P = [];
+    P = null != s && null != s.party && null != s.party.id ? Array.from(null !== (a = M.Z.getParty(s.party.id)) && void 0 !== a ? a : []).reduce((e, t) => {
       let n = D.default.getUser(t);
       return null != n && e.push(n), e
     }, []) : t.filter(e => {
       let t = q(e.id),
         n = null != t ? $(t) : null;
-      return null != n && n.id === c.id
-    }), (j = o().orderBy(j, [et], ["desc"])).length !== t.length && (I = !0), M.add(c.id), S.push({
-      game: c,
-      activity: a,
+      return null != n && n.id === u.id
+    }), (P = o().orderBy(P, [et], ["desc"])).length !== t.length && (E = !0), b.add(u.id), S.push({
+      game: u,
+      activity: s,
       activityUser: e,
-      startedPlayingTime: C,
-      playingMembers: j
+      startedPlayingTime: g,
+      playingMembers: P
     })
   }
-  let k = 1 === E.length,
+  let k = 1 === m.length,
     B = [],
     V = new Set,
     H = new Set;
   for (let e of t) {
     let n = ee(e.id),
-      l = A.Z.getChannel(n),
-      i = null != l ? l.getGuildId() : null,
-      s = P.Z.getGuild(i);
-    if (H.has(i) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (c = null, k = !0);
+      i = A.Z.getChannel(n),
+      l = null != i ? i.getGuildId() : null,
+      r = y.Z.getGuild(l);
+    if (H.has(l) && V.has(n) || null == i || null == r || i.id === r.afkChannelId) null == i && (u = null, k = !0);
     else {
-      let e = o()(U.Z.getVoiceStatesForChannel(l.id)).map(e => {
+      let e = o()(U.Z.getVoiceStatesForChannel(i.id)).map(e => {
         let {
           userId: t
         } = e;
         return D.default.getUser(t)
       }).filter(G.lm).orderBy([et], ["desc"]).value();
-      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), k ? !H.has(i) && (c = null) : (c = s, k = !0), H.add(i), V.add(n), B.push({
-        channel: l,
-        guild: s,
+      e.filter(e => !g.includes(e.id)).forEach(e => t.push(e)), k ? !H.has(l) && (u = null) : (u = r, k = !0), H.add(l), V.add(n), B.push({
+        channel: i,
+        guild: r,
         members: e
       })
     }
@@ -184,29 +184,29 @@ function en(e, t, n) {
   return {
     id: n,
     voiceChannels: B,
-    isSpotifyActivity: y,
-    priorityMembers: E.map(e => ({
+    isSpotifyActivity: j,
+    priorityMembers: m.map(e => ({
       user: e,
-      status: j.Z.getStatus(e.id)
+      status: P.Z.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: I,
-    guildContext: c,
-    currentActivities: (a = S, u = e => {
+    showPlayingMembers: E,
+    guildContext: u,
+    currentActivities: (s = S, c = e => {
       var t;
       return null !== (t = e.startedPlayingTime) && void 0 !== t ? t : 0
-    }, o()(a).orderBy([u, e => e.game.name], ["desc", "asc"])).value(),
+    }, o()(s).orderBy([c, e => e.game.name], ["desc", "asc"])).value(),
     applicationStreams: w
   }
 }
 
-function el() {
-  return k && I.Z.isConnected()
+function ei() {
+  return k && E.Z.isConnected()
 }
-let ei = o().throttle(() => {
+let el = o().throttle(() => {
   ! function() {
     var e;
-    if (!el()) return;
+    if (!ei()) return;
     Y.clear(), H = (V = (function(e) {
       let t = K(),
         n = en.bind(null, t);
@@ -217,26 +217,26 @@ let ei = o().throttle(() => {
     }, []), o()(e).groupBy(e => {
       var t;
       let n = ee(e.id),
-        l = q(e.id);
-      return null != n ? "".concat("channel-", "-").concat(n) : (null == l ? void 0 : null === (t = l.party) || void 0 === t ? void 0 : t.id) != null ? "".concat("party-", "-").concat(l.party.id) : "".concat("user-", "-").concat(e.id)
+        i = q(e.id);
+      return null != n ? "".concat("channel-", "-").concat(n) : (null == i ? void 0 : null === (t = i.party) || void 0 === t ? void 0 : t.id) != null ? "".concat("party-", "-").concat(i.party.id) : "".concat("user-", "-").concat(e.id)
     }))).values().orderBy([e => e.partiedMembers.length > 1, e => e.applicationStreams.length > 0, e => e.voiceChannels.length > 0, e => e.currentActivities.length > 0, e => e.isSpotifyActivity, e => e.priorityMembers.map(e => e.user.username.toLowerCase()).join(" ")], ["desc", "desc", "desc", "desc", "asc", "asc"]).value().filter(e => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map(e => ({
       type: w.GOo.USER,
       party: e
     })), ! function() {
       if (Y.size > 0) {
         let e = Array.from(Y);
-        E.Z.fetchApplications(e), e.forEach(e => z.add(e)), Y.clear()
+        m.Z.fetchApplications(e), e.forEach(e => z.add(e)), Y.clear()
       }
     }(), B = !0
-  }(), ea.emitChange()
+  }(), es.emitChange()
 }, 1e3);
 
-function es() {
-  return !!el() && (ei(), !1)
+function er() {
+  return !!ei() && (el(), !1)
 }
-class er extends(l = u.ZP.Store) {
+class ea extends(i = c.ZP.Store) {
   initialize() {
-    this.syncWith([D.default, f.Z, j.Z, R.Z, U.Z, v.Z, y.Z, M.Z, S.Z], es), this.waitFor(I.Z, P.Z, f.Z, D.default, S.Z)
+    this.syncWith([D.default, C.Z, P.Z, M.Z, U.Z, L.Z, j.Z, b.Z, S.Z], er), this.waitFor(E.Z, y.Z, C.Z, D.default, S.Z)
   }
   get currentActivityParties() {
     return V
@@ -251,21 +251,21 @@ class er extends(l = u.ZP.Store) {
     return B
   }
 }
-r = "NowPlayingViewStore", (s = "displayName") in(i = er) ? Object.defineProperty(i, s, {
-  value: r,
+a = "NowPlayingViewStore", (r = "displayName") in(l = ea) ? Object.defineProperty(l, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = r;
-let ea = new er(c.Z, {
+}) : l[r] = a;
+let es = new ea(u.Z, {
   LOGOUT: function() {
     k = !1, V = [], H = [], Y.clear()
   },
   NOW_PLAYING_MOUNTED: function() {
-    k = !0, ei()
+    k = !0, el()
   },
   NOW_PLAYING_UNMOUNTED: function() {
     k = !1
   }
 });
-t.Z = ea
+t.Z = es

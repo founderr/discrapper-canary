@@ -1,29 +1,29 @@
-t.d(n, {
+o.d(n, {
   Z: function() {
-    return C
+    return _
   }
 });
-var o = t(735250);
-t(470079);
-var s = t(481060),
-  r = t(63063),
-  i = t(921869),
-  a = t(514161),
-  c = t(981631),
-  l = t(689938),
-  d = t(932508);
+var t = o(735250);
+o(470079);
+var r = o(481060),
+  s = o(63063),
+  i = o(921869),
+  c = o(514161),
+  a = o(981631),
+  l = o(689938),
+  d = o(932508);
 
 function u() {
-  return (0, o.jsxs)(a.yC, {
-    children: [(0, o.jsx)(a.Ux, {
+  return (0, t.jsxs)(c.yC, {
+    children: [(0, t.jsx)(c.Ux, {
       text: l.Z.Messages.CONNECT_XBOX_TRANSFER_VOICE_VALUE_PROP,
-      children: (0, o.jsx)(s.VoiceNormalIcon, {
+      children: (0, t.jsx)(r.VoiceNormalIcon, {
         size: "md",
         color: "currentColor"
       })
-    }), (0, o.jsx)(a.Ux, {
+    }), (0, t.jsx)(c.Ux, {
       text: l.Z.Messages.CONNECT_XBOX_DISPLAY_GAME_VALUE_PROP,
-      children: (0, o.jsx)(s.GameControllerIcon, {
+      children: (0, t.jsx)(r.GameControllerIcon, {
         size: "md",
         color: "currentColor"
       })
@@ -31,25 +31,25 @@ function u() {
   })
 }
 
-function C(e) {
+function _(e) {
   let {
     onContinue: n,
-    onClose: t
-  } = e, s = r.Z.getArticleURL(c.BhN.XBOX_CONNECTION);
-  return (0, o.jsx)(i.m, {
-    platformType: c.ABu.XBOX,
+    onClose: o
+  } = e, r = s.Z.getArticleURL(a.BhN.XBOX_CONNECTION);
+  return (0, t.jsx)(i.m, {
+    platformType: a.ABu.XBOX,
     headerConnect: l.Z.Messages.CONNECT_XBOX_LANDING_TITLE,
     headerReconnect: l.Z.Messages.RECONNECT_XBOX_LANDING_TITLE,
     body: l.Z.Messages.CONNECT_XBOX_LANDING_BODY,
-    learnMoreLink: s,
-    onClose: t,
+    learnMoreLink: r,
+    onClose: o,
     onContinue: n,
-    img: (0, o.jsx)("img", {
+    img: (0, t.jsx)("img", {
       src: d,
       width: 234,
       height: 152,
       alt: ""
     }),
-    valueProps: (0, o.jsx)(u, {})
+    valueProps: (0, t.jsx)(u, {})
   })
 }

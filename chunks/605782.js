@@ -1,8 +1,8 @@
-var s = n(735250),
-  r = n(470079),
+var r = n(735250),
+  s = n(470079),
   i = n(266067),
   a = n(215569);
-class o extends r.Component {
+class o extends s.Component {
   render() {
     let {
       children: e,
@@ -12,10 +12,10 @@ class o extends r.Component {
       match: l,
       ...c
     } = this.props, u = null, d = null;
-    return r.Children.forEach(e, e => {
-      if (null == u && r.isValidElement(e)) {
+    return s.Children.forEach(e, e => {
+      if (null == u && s.isValidElement(e)) {
         let {
-          component: s,
+          component: r,
           render: a,
           ...l
         } = e.props, c = l.path || l.from;
@@ -29,9 +29,9 @@ class o extends r.Component {
           match: u,
           history: n,
           staticContext: o
-        }, null != s ? d = r.createElement(s, l) : null != a && (d = a(l))
+        }, null != r ? d = s.createElement(r, l) : null != a && (d = a(l))
       }
-    }), (0, s.jsx)(a.W, {
+    }), (0, r.jsx)(a.W, {
       ...c,
       children: d
     })

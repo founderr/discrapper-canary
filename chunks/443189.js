@@ -1,54 +1,54 @@
-s.r(a), s.d(a, {
+n.r(a), n.d(a, {
   default: function() {
-    return N
+    return u
   }
 });
-var t = s(735250),
-  n = s(470079),
-  r = s(481060),
-  c = s(153124),
-  l = s(626135),
-  o = s(981631),
-  i = s(689938),
-  d = s(776953),
-  C = s(963705);
+var t = n(735250),
+  s = n(470079),
+  o = n(481060),
+  r = n(153124),
+  c = n(626135),
+  d = n(981631),
+  i = n(689938),
+  l = n(776953),
+  C = n(963705);
 
-function N(e) {
+function u(e) {
   let {
     source: a,
-    onClose: s,
-    transitionState: N
+    onClose: n,
+    transitionState: u
   } = e;
-  n.useEffect(() => {
-    l.default.track(o.rMx.OPEN_MODAL, {
-      type: o.jXE.CONTACT_SYNC_NC_MODAL,
+  s.useEffect(() => {
+    c.default.track(d.rMx.OPEN_MODAL, {
+      type: d.jXE.CONTACT_SYNC_NC_MODAL,
       source: {
         location: a
       }
     })
   }, [a]);
-  let u = (0, c.Dt)();
-  return (0, t.jsxs)(r.ModalRoot, {
-    className: d.contactSync,
-    transitionState: N,
-    "aria-labelledby": u,
-    children: [(0, t.jsx)(r.ModalCloseButton, {
-      onClick: s,
-      className: d.modalCloseButton
+  let N = (0, r.Dt)();
+  return (0, t.jsxs)(o.ModalRoot, {
+    className: l.contactSync,
+    transitionState: u,
+    "aria-labelledby": N,
+    children: [(0, t.jsx)(o.ModalCloseButton, {
+      onClick: n,
+      className: l.modalCloseButton
     }), (0, t.jsxs)("div", {
-      className: d.inner,
-      children: [(0, t.jsx)(r.Heading, {
+      className: l.inner,
+      children: [(0, t.jsx)(o.Heading, {
         variant: "heading-xl/extrabold",
         color: "header-primary",
-        className: d.header,
+        className: l.header,
         children: i.Z.Messages.NOTIFICATION_CENTER_CONTACT_SYNC_TITLE
-      }), (0, t.jsx)(r.Text, {
+      }), (0, t.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
         children: i.Z.Messages.NOTIFICATION_CENTER_CONTACT_SYNC_BODY
       })]
     }), (0, t.jsx)("div", {
-      className: d.container,
+      className: l.container,
       children: (0, t.jsx)("img", {
         alt: "",
         src: C

@@ -1,10 +1,10 @@
 "use strict";
 var i = n(735250),
   s = n(470079),
-  l = n(120356),
-  o = n.n(l),
-  a = n(442837),
-  r = n(215569),
+  a = n(120356),
+  o = n.n(a),
+  r = n(442837),
+  l = n(215569),
   c = n(261435),
   d = n(237997),
   u = n(438015),
@@ -19,13 +19,13 @@ class f extends s.Component {
       locked: s
     } = this.props;
     if (n === h._vf.DISABLED) return null;
-    let l = -1;
-    return (0, i.jsx)(r.W, {
+    let a = -1;
+    return (0, i.jsx)(l.W, {
       component: "div",
       className: o()(p.container, p[n]),
-      children: t.map(t => s && t.status === h._1z.TIMED_OUT ? null : (l += 1, (0, i.jsx)(u.Z, {
-        index: l,
-        zIndex: 100 - l,
+      children: t.map(t => s && t.status === h._1z.TIMED_OUT ? null : (a += 1, (0, i.jsx)(u.Z, {
+        index: a,
+        zIndex: 100 - a,
         position: n,
         notification: t,
         keybind: e,
@@ -34,7 +34,7 @@ class f extends s.Component {
     })
   }
 }
-t.Z = a.ZP.connectStores([c.Z, d.Z], () => ({
+t.Z = r.ZP.connectStores([c.Z, d.Z], () => ({
   notifications: c.Z.getNotifications(),
   position: d.Z.getNotificationPositionMode()
 }))(f)

@@ -1,35 +1,35 @@
-t.r(n), t.d(n, {
+t.r(i), t.d(i, {
   default: function() {
     return h
   }
 });
-var i = t(735250),
+var n = t(735250),
   o = t(470079),
   a = t(481060),
-  r = t(651711),
-  l = t(434404),
+  l = t(651711),
+  r = t(434404),
   s = t(202858),
   c = t(587431),
   d = t(400842),
   u = t(271267),
-  E = t(981631),
-  _ = t(689938),
+  _ = t(981631),
+  E = t(689938),
   M = t(15821),
   A = t(653904);
 
-function S() {
-  return (0, i.jsxs)("div", {
+function b() {
+  return (0, n.jsxs)("div", {
     className: M.eligibilityHeader,
-    children: [(0, i.jsx)(a.Heading, {
+    children: [(0, n.jsx)(a.Heading, {
       className: M.eligibilityHeaderText,
       variant: "heading-lg/extrabold",
       color: "header-primary",
-      children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_NOT_ELIGIBLE_TITLE_V2
-    }), (0, i.jsx)("img", {
+      children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_NOT_ELIGIBLE_TITLE_V2
+    }), (0, n.jsx)("img", {
       className: M.eligibilityHeaderImage,
       src: A,
       alt: ""
-    }), (0, i.jsx)(a.ModalCloseButton, {
+    }), (0, n.jsx)(a.ModalCloseButton, {
       className: M.eligibilityHeaderCloseButton,
       onClick: () => {
         (0, a.closeModal)(u.Q)
@@ -40,62 +40,62 @@ function S() {
 
 function C(e) {
   let {
-    eligibility: n,
+    eligibility: i,
     eligibilityLoading: t,
-    eligibilityError: _,
+    eligibilityError: E,
     guildId: A,
-    onEligibilityBecameStale: S
+    onEligibilityBecameStale: b
   } = e, C = o.useMemo(() => ({
-    onEligibilityBecameStale: S,
+    onEligibilityBecameStale: b,
     sortedByIneligible: !0,
     actions: {
       onEnableMFAClick: s.ZP.enableMFA,
       onRequireModeratorMFAClick: () => {
-        (0, a.closeModal)(u.Q), l.Z.open(A, E.pNK.SAFETY, void 0, E.KsC.SAFETY_PERMISSIONS)
+        (0, a.closeModal)(u.Q), r.Z.open(A, _.pNK.SAFETY, void 0, _.KsC.SAFETY_PERMISSIONS)
       }
     }
-  }), [A, S]), h = (0, r.Z)(n, C);
-  return null != _ ? (0, i.jsx)("div", {
+  }), [A, b]), h = (0, l.Z)(i, C);
+  return null != E ? (0, n.jsx)("div", {
     className: M.paddedContainer,
-    children: (0, i.jsx)(c.Z, {
-      children: _.message
+    children: (0, n.jsx)(c.Z, {
+      children: E.message
     })
-  }) : null == h || t ? (0, i.jsx)("div", {
+  }) : null == h || t ? (0, n.jsx)("div", {
     className: M.paddedContainer,
-    children: (0, i.jsx)(a.Spinner, {})
-  }) : (0, i.jsx)("div", {
-    children: h.map((e, n) => (0, i.jsxs)(o.Fragment, {
-      children: [(0, i.jsx)(d.d, {
+    children: (0, n.jsx)(a.Spinner, {})
+  }) : (0, n.jsx)("div", {
+    children: h.map((e, i) => (0, n.jsxs)(o.Fragment, {
+      children: [(0, n.jsx)(d.d, {
         name: e.checked ? e.checkedLabel : e.uncheckedLabel,
         description: e.description,
         checked: e.checked,
         actionLabel: e.actionLabel,
         actionHandler: e.actionHandler
-      }), n < h.length - 1 ? (0, i.jsx)(a.FormDivider, {}) : null]
+      }), i < h.length - 1 ? (0, n.jsx)(a.FormDivider, {}) : null]
     }, e.checkedLabel))
   })
 }
 
 function h(e) {
   let {
-    eligibility: n,
+    eligibility: i,
     eligibilityLoading: t,
     eligibilityError: o,
-    refreshEligibility: r,
-    guildId: l,
+    refreshEligibility: l,
+    guildId: r,
     transitionState: s
   } = e;
-  return (0, i.jsxs)(a.ModalRoot, {
+  return (0, n.jsxs)(a.ModalRoot, {
     className: M.eligibilityModal,
     size: a.ModalSize.MEDIUM,
     transitionState: s,
-    children: [(0, i.jsx)(S, {}), (0, i.jsx)(a.ModalContent, {
-      children: (0, i.jsx)(C, {
-        eligibility: n,
+    children: [(0, n.jsx)(b, {}), (0, n.jsx)(a.ModalContent, {
+      children: (0, n.jsx)(C, {
+        eligibility: i,
         eligibilityLoading: t,
         eligibilityError: o,
-        guildId: l,
-        onEligibilityBecameStale: r
+        guildId: r,
+        onEligibilityBecameStale: l
       })
     })]
   })

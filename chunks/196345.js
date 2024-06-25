@@ -1,100 +1,100 @@
-n.d(t, {
+t.d(n, {
   EK: function() {
     return d
   },
   G0: function() {
-    return h
+    return m
   },
   QC: function() {
-    return m
+    return f
   },
   dd: function() {
     return p
   }
-}), n(47120);
-var r = n(735250);
-n(470079);
-var o = n(120356),
-  a = n.n(o),
-  s = n(481060),
-  i = n(454585),
-  l = n(489813),
-  c = n(689938),
-  u = n(953136);
+}), t(47120);
+var o = t(735250);
+t(470079);
+var r = t(120356),
+  a = t.n(r),
+  i = t(481060),
+  s = t(454585),
+  l = t(489813),
+  c = t(689938),
+  u = t(953136);
 
 function d(e) {
   let {
-    terms: t,
-    channelId: n,
-    className: o
+    terms: n,
+    channelId: t,
+    className: r
   } = e;
-  return (0, r.jsx)("div", {
-    className: a()(u.termsFieldBody, o),
-    children: t.map((e, t) => (0, r.jsxs)("div", {
+  return (0, o.jsx)("div", {
+    className: a()(u.termsFieldBody, r),
+    children: n.map((e, n) => (0, o.jsxs)("div", {
       className: u.termsRow,
-      children: [(0, r.jsx)(s.Text, {
+      children: [(0, o.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: "".concat(t + 1, ".")
-      }), (0, r.jsx)(s.Text, {
+        children: "".concat(n + 1, ".")
+      }), (0, o.jsx)(i.Text, {
         variant: "text-md/normal",
         className: u.termsRowContent,
-        children: i.Z.parseGuildVerificationFormRule(e, !0, {
-          channelId: n
+        children: s.Z.parseGuildVerificationFormRule(e, !0, {
+          channelId: t
         })
       })]
-    }, "term-".concat(t)))
+    }, "term-".concat(n)))
   })
 }
 
-function h(e) {
+function m(e) {
   let {
-    onChange: t,
-    checked: n,
-    disabled: o
+    onChange: n,
+    checked: t,
+    disabled: r
   } = e;
-  return (0, r.jsx)(s.Checkbox, {
+  return (0, o.jsx)(i.Checkbox, {
     size: 20,
-    type: s.Checkbox.Types.INVERTED,
-    value: n,
-    onChange: t,
-    disabled: o,
+    type: i.Checkbox.Types.INVERTED,
+    value: t,
+    onChange: n,
+    disabled: r,
     style: {
       borderWidth: 2
     },
     className: u.checkbox,
-    children: (0, r.jsx)(s.Text, {
+    children: (0, o.jsx)(i.Text, {
       variant: "text-sm/normal",
       children: c.Z.Messages.MEMBER_VERIFICATION_READ_RULES
     })
   })
 }
 
-function m(e) {
+function f(e) {
   let {
-    formField: t
+    formField: n
   } = e;
-  return (0, r.jsx)(l.Ih, {
-    icon: s.BookCheckIcon,
+  return (0, o.jsx)(l.Ih, {
+    icon: i.BookCheckIcon,
     text: c.Z.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
-    meetsRequirement: !!t.response
+    meetsRequirement: !!n.response
   })
 }
 let p = e => {
   let {
-    channelId: t,
-    formField: n,
-    onChange: o
+    channelId: n,
+    formField: t,
+    onChange: r
   } = e;
-  return (0, r.jsxs)(l.hK, {
+  return (0, o.jsxs)(l.hK, {
     title: c.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
-    children: [(0, r.jsx)(d, {
+    children: [(0, o.jsx)(d, {
       className: u.fieldBackground,
-      terms: n.values,
-      channelId: t
-    }), (0, r.jsx)(h, {
-      onChange: o,
-      checked: n.response
+      terms: t.values,
+      channelId: n
+    }), (0, o.jsx)(m, {
+      onChange: r,
+      checked: t.response
     })]
   })
 }

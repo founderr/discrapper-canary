@@ -1,60 +1,60 @@
-a.d(s, {
+n.d(s, {
   Z: function() {
-    return T
+    return _
   }
 });
-var n = a(735250);
-a(470079);
-var t = a(120356),
-  l = a.n(t),
-  r = a(481060),
-  i = a(906732),
-  o = a(171368),
-  c = a(768581),
-  I = a(51144),
-  d = a(981631),
-  u = a(689938),
-  E = a(767795);
+var a = n(735250);
+n(470079);
+var t = n(120356),
+  r = n.n(t),
+  l = n(481060),
+  i = n(906732),
+  o = n(171368),
+  c = n(768581),
+  d = n(51144),
+  u = n(981631),
+  I = n(689938),
+  E = n(767795);
 
-function T(e) {
+function _(e) {
   let {
     user: s,
-    guildId: a,
+    guildId: n,
     className: t
   } = e, {
-    username: T
-  } = s, _ = c.ZP.getUserAvatarURL(s), {
+    username: _
+  } = s, T = c.ZP.getUserAvatarURL(s), {
     analyticsLocations: N
-  } = (0, i.ZP)(), R = () => {
+  } = (0, i.ZP)(), C = () => {
     (0, o.openUserProfileModal)({
       userId: s.id,
-      guildId: a,
+      guildId: n,
       sourceAnalyticsLocations: N,
       analyticsLocation: {
-        section: d.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-        object: d.qAy.JOIN_REQUEST
+        section: u.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+        object: u.qAy.JOIN_REQUEST
       }
     })
   };
-  return (0, n.jsxs)("div", {
-    className: l()(E.container, t),
-    children: [(0, n.jsx)(r.Anchor, {
-      onClick: R,
-      children: (0, n.jsx)(r.Avatar, {
-        src: _,
-        size: r.AvatarSizes.SIZE_80,
-        "aria-label": T,
+  return (0, a.jsxs)("div", {
+    className: r()(E.container, t),
+    children: [(0, a.jsx)(l.Anchor, {
+      onClick: C,
+      children: (0, a.jsx)(l.Avatar, {
+        src: T,
+        size: l.AvatarSizes.SIZE_80,
+        "aria-label": _,
         className: E.avatar
       })
-    }), (0, n.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: E.username,
-      children: (0, n.jsx)(r.Heading, {
+      children: (0, a.jsx)(l.Heading, {
         variant: "heading-lg/semibold",
-        children: I.ZP.getFormattedName(s)
+        children: d.ZP.getFormattedName(s)
       })
-    }), (0, n.jsx)(r.Anchor, {
-      onClick: R,
-      children: u.Z.Messages.VIEW_PROFILE
+    }), (0, a.jsx)(l.Anchor, {
+      onClick: C,
+      children: I.Z.Messages.VIEW_PROFILE
     })]
   })
 }

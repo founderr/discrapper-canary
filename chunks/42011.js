@@ -1,20 +1,20 @@
 t.d(n, {
   W: function() {
-    return C
+    return l
   }
 });
-var i = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(376340),
+var i = t(376340),
   s = t(689938),
   r = t(290661);
 
-function C(e) {
+function l(e) {
   let {
     onClose: n
   } = e;
-  return (0, i.jsx)(o.L, {
-    img: (0, i.jsx)("img", {
+  return (0, o.jsx)(i.L, {
+    img: (0, o.jsx)("img", {
       src: r,
       width: "241 ",
       height: "118",

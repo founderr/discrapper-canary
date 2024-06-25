@@ -3,41 +3,41 @@ n.d(t, {
     return r
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(739566),
-  l = n(702346),
-  a = n(689938);
+var a = n(739566),
+  s = n(702346),
+  l = n(689938);
 
 function r(e) {
   let t, {
       message: r,
       usernameHook: o,
       otherUser: c,
-      otherUsernameHook: u,
-      compact: d,
-      channel: E
+      otherUsernameHook: d,
+      compact: u,
+      channel: _
     } = e,
-    _ = (0, i.ZP)(r),
-    I = _.nick,
-    T = o(_),
-    m = (0, i.Sw)(c, E);
-  if (null != m && null != u) {
-    let e = u(m);
-    t = a.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
+    E = (0, a.ZP)(r),
+    I = E.nick,
+    m = o(E),
+    T = (0, a.Sw)(c, _);
+  if (null != T && null != d) {
+    let e = d(T);
+    t = l.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
       username: I,
-      usernameHook: T,
-      otherUsername: m.nick,
+      usernameHook: m,
+      otherUsername: T.nick,
       otherUsernameHook: e
     })
-  } else t = a.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
+  } else t = l.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
     username: I,
-    usernameHook: T
+    usernameHook: m
   });
-  return (0, s.jsx)(l.Z, {
+  return (0, i.jsx)(s.Z, {
     icon: n(474019),
     timestamp: r.timestamp,
-    compact: d,
+    compact: u,
     children: t
   })
 }

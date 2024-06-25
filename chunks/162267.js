@@ -32,22 +32,22 @@ function d(e) {
       }
     })()
   }, [h, e, E]);
-  let S = (0, s.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
-    f = (0, i.useMemo)(() => {
+  let f = (0, s.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+    S = (0, i.useMemo)(() => {
       if (null == n) return null;
       if (n.length < 2) return n;
-      let e = Object.fromEntries(S.map((e, t) => [e, t]));
+      let e = Object.fromEntries(f.map((e, t) => [e, t]));
       return (0, r.sortBy)(n, t => {
         var n;
         let {
           guild: i
         } = t;
-        return null !== (n = e[i.id]) && void 0 !== n ? n : S.length
+        return null !== (n = e[i.id]) && void 0 !== n ? n : f.length
       })
-    }, [n, S]),
-    N = (0, a.Z)(f);
+    }, [n, f]),
+    A = (0, a.Z)(S);
   return {
-    mutualGuilds: null != f ? f : N,
+    mutualGuilds: null != S ? S : A,
     isFetching: d
   }
 }

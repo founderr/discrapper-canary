@@ -64,12 +64,12 @@ async function h(e) {
   })).body) : []
 }
 
-function S() {
+function f() {
   _ = {
     ...s.Z.getCollapsedCategories()
   }
 }
-class f extends r.Z {
+class S extends r.Z {
   constructor(...e) {
     super(...e), u(this, "actions", {
       CATEGORY_COLLAPSE: I,
@@ -77,8 +77,8 @@ class f extends r.Z {
       CATEGORY_COLLAPSE_ALL: I,
       CATEGORY_EXPAND_ALL: I,
       POST_CONNECTION_OPEN: E,
-      USER_GUILD_SETTINGS_FULL_UPDATE: S
+      USER_GUILD_SETTINGS_FULL_UPDATE: f
     }), u(this, "saveUserGuildSettings", T), u(this, "saveUserGuildSettingsBulk", h)
   }
 }
-t.Z = new f
+t.Z = new S

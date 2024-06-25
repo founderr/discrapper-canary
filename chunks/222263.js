@@ -1,32 +1,32 @@
 n.d(t, {
   Z: function() {
-    return s
+    return i
   }
 });
 
-function s(e) {
+function i(e) {
   let {
     userId: t,
     nick: n,
-    guildId: s,
-    avatar: i,
-    avatarDecoration: l,
-    banner: a,
-    bio: r,
+    guildId: i,
+    avatar: s,
+    avatarDecoration: a,
+    banner: r,
+    bio: l,
     pronouns: o,
     colorString: c
   } = e;
   return {
     user_id: t,
     nick: n,
-    guild_id: s,
-    avatar: i,
-    avatar_decoration_data: null != l ? {
-      asset: l.asset,
-      sku_id: l.skuId
+    guild_id: i,
+    avatar: s,
+    avatar_decoration_data: null != a ? {
+      asset: a.asset,
+      sku_id: a.skuId
     } : null,
-    banner: a,
-    bio: r,
+    banner: r,
+    bio: l,
     pronouns: o,
     color_string: c
   }

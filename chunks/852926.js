@@ -3,57 +3,57 @@ n.d(t, {
     return I
   },
   _X: function() {
-    return _
-  },
-  em: function() {
     return h
   },
-  s0: function() {
+  em: function() {
     return E
+  },
+  s0: function() {
+    return _
   }
 });
-var s = n(13245),
-  i = n(808506),
-  l = n(998502),
-  a = n(13140),
-  r = n(996106),
+var i = n(13245),
+  s = n(808506),
+  a = n(998502),
+  r = n(13140),
+  l = n(996106),
   o = n(914946),
   c = n(186901),
-  u = n(981631);
-let d = ["207646673902501888"];
+  d = n(981631);
+let u = ["207646673902501888"];
 
-function E(e) {
-  return i.Z.isReady(e) ? (s.Z.setLocked(!1, e), {
+function _(e) {
+  return s.Z.isReady(e) ? (i.Z.setLocked(!1, e), {
     lock() {
-      s.Z.setLocked(!0, e)
+      i.Z.setLocked(!0, e)
     },
-    context: u.IlC.OVERLAY
-  }) : (l.ZP.focus(null, !0), {
+    context: d.IlC.OVERLAY
+  }) : (a.ZP.focus(null, !0), {
     lock() {
-      l.ZP.setForegroundProcess(e)
+      a.ZP.setForegroundProcess(e)
     },
-    context: u.IlC.APP
+    context: d.IlC.APP
   })
 }
-let h = async (e, t, n) => {
+let E = async (e, t, n) => {
   if ((0, o.YK)(e, t), (null == n || "" === n) && (0, o.s9)(t)) return e.authorization.scopes = [c.cE, c.CN], Promise.resolve();
-  if (null == n || "" === n) return Promise.reject(new r.Z({
-    closeCode: u.$VG.INVALID_CLIENTID
+  if (null == n || "" === n) return Promise.reject(new l.Z({
+    closeCode: d.$VG.INVALID_CLIENTID
   }, "No Client ID Specified"));
-  let s = l.ZP.releaseChannel !== u.R5N.CANARY && !d.includes(n) && e.transport !== c.He.POST_MESSAGE;
-  return await (0, o.vv)(n, s), (0, o.fy)(e, n, t)
-}, _ = () => (0, o.tr)(e => {
+  let i = a.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
+  return await (0, o.vv)(n, i), (0, o.fy)(e, n, t)
+}, h = () => (0, o.tr)(e => {
   let t = [];
   if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut)) t = e.modeOptions.shortcut.map(e => {
     var t;
     return {
       type: e[0],
       code: e[1],
-      name: null !== (t = (0, a.H9)(e)) && void 0 !== t ? t : "unknown"
+      name: null !== (t = (0, r.H9)(e)) && void 0 !== t ? t : "unknown"
     }
   });
   return t
 }), I = e => (0, o.FJ)(e, e => {
   let t = "";
-  return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, a.BB)(e.modeOptions.shortcut)), t
+  return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, r.BB)(e.modeOptions.shortcut)), t
 })

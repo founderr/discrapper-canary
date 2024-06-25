@@ -42,14 +42,14 @@ let c = {
     return e.isGuildStageVoice() ? t = u.LK : e.isGuildVoice() && (t = u.AN), [r.$e(t, _.Pl.CREATE_EVENTS), r.$e(t, _.Pl.MANAGE_EVENTS)]
   },
   I = e => {
-    let [t, n] = e instanceof o.ZP ? [_.Pl.CREATE_EVENTS, _.Pl.MANAGE_EVENTS] : E(e), [r, u, I, T] = (0, s.Wu)([a.Z], () => [a.Z.can(_.Pl.CREATE_GUILD_EXPRESSIONS, e), a.Z.can(_.Pl.MANAGE_GUILD_EXPRESSIONS, e), a.Z.can(t, e), a.Z.can(n, e)]), h = (0, s.e7)([l.default], () => l.default.getCurrentUser()), S = i.useCallback(e => d(e, h, u, r), [r, u, h]), f = i.useCallback(e => d(e, h, T, I), [T, I, h]);
+    let [t, n] = e instanceof o.ZP ? [_.Pl.CREATE_EVENTS, _.Pl.MANAGE_EVENTS] : E(e), [r, u, I, T] = (0, s.Wu)([a.Z], () => [a.Z.can(_.Pl.CREATE_GUILD_EXPRESSIONS, e), a.Z.can(_.Pl.MANAGE_GUILD_EXPRESSIONS, e), a.Z.can(t, e), a.Z.can(n, e)]), h = (0, s.e7)([l.default], () => l.default.getCurrentUser()), f = i.useCallback(e => d(e, h, u, r), [r, u, h]), S = i.useCallback(e => d(e, h, T, I), [T, I, h]);
     return null == e ? c : {
       canCreateExpressions: r,
       canCreateGuildEvent: I,
       canManageAllExpressions: u,
       canManageAllEvents: T,
-      canManageGuildExpression: S,
-      canManageGuildEvent: f
+      canManageGuildExpression: f,
+      canManageGuildEvent: S
     }
   },
   T = function(e) {

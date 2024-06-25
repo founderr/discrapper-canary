@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   G: function() {
-    return S
+    return f
   },
   j: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i = n(735250),
@@ -22,13 +22,13 @@ var i = n(735250),
   T = n(689938),
   h = n(466320);
 
-function S(e) {
+function f(e) {
   let {
     children: t,
     wrapperClassName: n,
     embedded: s
-  } = e, [a, S] = r.useState(I.hO.INITIAL), f = r.useCallback(e => {
-    S(t => Math.max(t, e))
+  } = e, [a, f] = r.useState(I.hO.INITIAL), S = r.useCallback(e => {
+    f(t => Math.max(t, e))
   }, []);
   return (0, _.Tt)({
     location: T.Z.Messages.OAUTH2_TITLE
@@ -40,7 +40,7 @@ function S(e) {
       splash: (0, c.gK)(),
       waveState: a,
       showLogo: !0,
-      updateWaveState: f,
+      updateWaveState: S,
       children: (0, i.jsx)("div", {
         className: o()(h.oauth2Wrapper, n),
         children: t
@@ -49,7 +49,7 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     children: t,
     footer: n,

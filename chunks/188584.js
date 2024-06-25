@@ -1,20 +1,20 @@
-t.d(s, {
+i.d(t, {
   k: function() {
-    return n
+    return a
   }
 });
-var i = t(470079),
-  l = t(328456);
-let n = e => {
+var n = i(470079),
+  s = i(328456);
+let a = e => {
   let {
-    firstProfileEffect: s,
-    firstAvatarDecoration: t
-  } = i.useMemo(() => {
-    var s;
-    return new l.b(null !== (s = e.bundledProducts) && void 0 !== s ? s : [])
+    firstProfileEffect: t,
+    firstAvatarDecoration: i
+  } = n.useMemo(() => {
+    var t;
+    return new s.b(null !== (t = e.bundledProducts) && void 0 !== t ? t : [])
   }, [e]);
   return {
-    firstProfileEffect: s,
-    firstAvatarDecoration: t
+    firstProfileEffect: t,
+    firstAvatarDecoration: i
   }
 }

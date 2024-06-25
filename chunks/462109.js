@@ -24,10 +24,10 @@ let l = e => {
     c(e, t, o.u.GRID_NAVIGATOR_EVENT)
   }, [c]), {
     gridDispatch: h,
-    getItemProps: S,
-    getRowProps: f,
-    gridContainerProps: N,
-    handleGridContainerKeyDown: A,
+    getItemProps: f,
+    getRowProps: S,
+    gridContainerProps: A,
+    handleGridContainerKeyDown: N,
     isUsingKeyboardNavigation: m
   } = (0, a.VO)({
     columnCounts: t,
@@ -50,10 +50,10 @@ let l = e => {
       y: n
     })
   }, e => e.inspectedExpressionPosition), [h, u]), {
-    getItemProps: S,
-    getRowProps: f,
-    gridContainerProps: N,
-    handleGridContainerKeyDown: A,
+    getItemProps: f,
+    getRowProps: S,
+    gridContainerProps: A,
+    handleGridContainerKeyDown: N,
     isUsingKeyboardNavigation: m
   }
 }

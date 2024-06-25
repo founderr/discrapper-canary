@@ -10,8 +10,8 @@ var r = t(481060),
   c = t(299206),
   d = t(916069),
   p = t(895563),
-  m = t(212205),
-  x = t(478035),
+  x = t(212205),
+  m = t(478035),
   h = t(62420),
   f = t(423589),
   N = t(398048),
@@ -20,8 +20,8 @@ var r = t(481060),
   Z = t(323597),
   v = t(852245),
   I = t(367722),
-  b = t(461535),
-  C = t(776568),
+  C = t(461535),
+  b = t(776568),
   E = t(218035),
   T = t(775666),
   _ = t(593589),
@@ -33,7 +33,7 @@ function S(e) {
   let {
     channel: n,
     onSelect: t
-  } = e, i = (0, b.Z)(n), s = (0, g.Z)(n), u = (0, p.l)(n), d = (0, p.P)(n), N = (0, m.Z)(n), j = (0, x.Z)(n), Z = (0, h.Z)(n), I = (0, C.ZP)(n), _ = (0, E.Z)(n), L = (0, v.Z)(n), M = (0, c.Z)({
+  } = e, i = (0, C.Z)(n), s = (0, g.Z)(n), u = (0, p.l)(n), d = (0, p.P)(n), N = (0, x.Z)(n), j = (0, m.Z)(n), Z = (0, h.Z)(n), I = (0, b.ZP)(n), _ = (0, E.Z)(n), L = (0, v.Z)(n), M = (0, c.Z)({
     id: n.id,
     label: O.Z.Messages.COPY_ID_CHANNEL
   }), S = (0, o.Z)(n), A = (0, T.ZP)(n), P = (0, f.Mn)("ChannelContextFavoritesMenu");
@@ -67,7 +67,7 @@ function A(e) {
     channel: n,
     guild: t,
     onSelect: i
-  } = e, s = (0, b.Z)(n), o = (0, g.Z)(n), u = (0, p.l)(n), d = (0, p.P)(n), m = (0, L.Z)(n), x = (0, C.ZP)(n), h = (0, v.Z)(n), M = (0, I.Z)(n, t), S = (0, N.Z)(n, t), A = (0, j.Z)(n, t), P = (0, Z.Z)(n), U = (0, c.Z)({
+  } = e, s = (0, C.Z)(n), o = (0, g.Z)(n), u = (0, p.l)(n), d = (0, p.P)(n), x = (0, L.Z)(n), m = (0, b.ZP)(n), h = (0, v.Z)(n), M = (0, I.Z)(n, t), S = (0, N.Z)(n, t), A = (0, j.Z)(n, t), P = (0, Z.Z)(n), U = (0, c.Z)({
     id: n.id,
     label: O.Z.Messages.COPY_ID_CHANNEL
   }), y = (0, _.Z)(n, "list_text_channel_context_menu"), G = (0, E.Z)(n), B = (0, T.ZP)(n), R = (0, f.Mn)("ChannelContextMenuNormal");
@@ -79,9 +79,9 @@ function A(e) {
     children: [(0, l.jsxs)(r.MenuGroup, {
       children: [s, u]
     }, "mark-as-read-or-favorite"), (0, l.jsxs)(r.MenuGroup, {
-      children: [M, m, o, y]
+      children: [M, x, o, y]
     }, "channel-actions"), (0, l.jsxs)(r.MenuGroup, {
-      children: [x, R ? B : G]
+      children: [m, R ? B : G]
     }, "notifications"), (0, l.jsxs)(r.MenuGroup, {
       children: [h, S, A, P]
     }, "admin-actions"), (0, l.jsx)(r.MenuGroup, {

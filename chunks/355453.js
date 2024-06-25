@@ -1,96 +1,96 @@
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
-}), s(47120);
-var n = s(735250),
-  i = s(470079),
-  r = s(442837),
-  o = s(481060),
-  a = s(660216),
-  l = s(825209),
-  d = s(714338),
-  c = s(556296),
-  h = s(474333),
-  u = s(13140),
-  p = s(710111),
-  E = s(981631),
-  D = s(689938),
-  R = s(60341);
+}), n(47120);
+var s = n(735250),
+  i = n(470079),
+  a = n(442837),
+  o = n(481060),
+  r = n(660216),
+  d = n(825209),
+  l = n(714338),
+  c = n(556296),
+  u = n(474333),
+  h = n(13140),
+  _ = n(710111),
+  p = n(981631),
+  E = n(689938),
+  D = n(60341);
 
-function m(e) {
+function g(e) {
   var t;
   let {
-    transitionState: s,
-    onClose: m
-  } = e, g = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD)), [_, N] = i.useState(null !== (t = null == g ? void 0 : g.shortcut) && void 0 !== t ? t : []);
-  return i.useEffect(() => (d.Z.disable(), () => {
-    d.Z.enable()
-  }), []), (0, n.jsxs)(o.ModalRoot, {
-    transitionState: s,
-    children: [(0, n.jsxs)(o.ModalHeader, {
+    transitionState: n,
+    onClose: g
+  } = e, R = (0, a.e7)([c.Z], () => c.Z.getKeybindForAction(p.kg4.SOUNDBOARD_HOLD)), [m, b] = i.useState(null !== (t = null == R ? void 0 : R.shortcut) && void 0 !== t ? t : []);
+  return i.useEffect(() => (l.Z.disable(), () => {
+    l.Z.enable()
+  }), []), (0, s.jsxs)(o.ModalRoot, {
+    transitionState: n,
+    children: [(0, s.jsxs)(o.ModalHeader, {
       separator: !1,
-      children: [(0, n.jsx)(o.Heading, {
-        className: R.header,
+      children: [(0, s.jsx)(o.Heading, {
+        className: D.header,
         variant: "heading-xl/semibold",
-        children: D.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_HEADER
-      }), (0, n.jsx)(o.ModalCloseButton, {
-        className: R.closeButton,
-        onClick: m
+        children: E.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_HEADER
+      }), (0, s.jsx)(o.ModalCloseButton, {
+        className: D.closeButton,
+        onClick: g
       })]
-    }), (0, n.jsxs)(o.ModalContent, {
-      className: R.content,
-      children: [(0, n.jsx)(h.Z, {
-        className: R.warning,
-        messageType: h.Q.WARNING,
-        children: D.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_KEYBINDS_DISABLED_MESSAGE
-      }), (0, n.jsx)(o.Heading, {
-        className: R.formHeader,
+    }), (0, s.jsxs)(o.ModalContent, {
+      className: D.content,
+      children: [(0, s.jsx)(u.Z, {
+        className: D.warning,
+        messageType: u.Q.WARNING,
+        children: E.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_KEYBINDS_DISABLED_MESSAGE
+      }), (0, s.jsx)(o.Heading, {
+        className: D.formHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: D.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION
-      }), (0, n.jsx)(o.Text, {
-        className: R.action,
+        children: E.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION
+      }), (0, s.jsx)(o.Text, {
+        className: D.action,
         variant: "text-md/normal",
-        children: D.Z.Messages.KEYBIND_SOUNDBOARD_HOLD
-      }), (0, n.jsx)(o.Text, {
-        className: R.actionDescription,
+        children: E.Z.Messages.KEYBIND_SOUNDBOARD_HOLD
+      }), (0, s.jsx)(o.Text, {
+        className: D.actionDescription,
         variant: "text-sm/normal",
-        children: D.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD
-      }), (0, n.jsx)(o.Heading, {
-        className: R.formHeader,
+        children: E.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD
+      }), (0, s.jsx)(o.Heading, {
+        className: D.formHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: D.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND
-      }), (0, n.jsx)(l.Z, {
-        defaultValue: _,
-        onChange: N
-      }), (0, n.jsx)(o.Anchor, {
-        className: R.resetButton,
-        onClick: () => N((0, u.Kd)(p.D_)),
-        children: D.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_RESET_KEYBIND
+        children: E.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND
+      }), (0, s.jsx)(d.Z, {
+        defaultValue: m,
+        onChange: b
+      }), (0, s.jsx)(o.Anchor, {
+        className: D.resetButton,
+        onClick: () => b((0, h.Kd)(_.D_)),
+        children: E.Z.Messages.SOUNDBOARD_KEYBIND_MODAL_RESET_KEYBIND
       })]
-    }), (0, n.jsxs)(o.ModalFooter, {
-      children: [(0, n.jsx)(o.Button, {
+    }), (0, s.jsxs)(o.ModalFooter, {
+      children: [(0, s.jsx)(o.Button, {
         onClick: function() {
-          if (0 === _.length) return null != g && a.Z.deleteKeybind(g.id), m();
-          null == g ? a.Z.addKeybind({
-            action: E.kg4.SOUNDBOARD_HOLD,
-            shortcut: _,
+          if (0 === m.length) return null != R && r.Z.deleteKeybind(R.id), g();
+          null == R ? r.Z.addKeybind({
+            action: p.kg4.SOUNDBOARD_HOLD,
+            shortcut: m,
             enabled: !0,
             params: {}
-          }) : a.Z.setKeybind({
-            ...g,
-            shortcut: _
+          }) : r.Z.setKeybind({
+            ...R,
+            shortcut: m
           });
-          m()
+          g()
         },
-        children: D.Z.Messages.SAVE
-      }), (0, n.jsx)(o.Button, {
-        onClick: m,
+        children: E.Z.Messages.SAVE
+      }), (0, s.jsx)(o.Button, {
+        onClick: g,
         look: o.Button.Looks.LINK,
         color: o.Button.Colors.PRIMARY,
-        children: D.Z.Messages.CANCEL
+        children: E.Z.Messages.CANCEL
       })]
     })]
   })

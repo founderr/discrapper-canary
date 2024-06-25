@@ -1,70 +1,70 @@
 "use strict";
-t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(442837),
-  o = t(692547),
-  c = t(481060),
-  d = t(142497),
-  u = t(338327),
-  E = t(496675),
-  _ = t(63063),
-  I = t(981631),
-  T = t(190378),
-  N = t(689938),
-  m = t(277060),
-  S = t(438825),
-  h = t(236140),
-  g = t(37069),
-  C = t(518513),
-  x = t(168179),
-  R = t(348986),
-  L = t(930065),
-  O = t(345669);
-let A = () => [{
+n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(442837),
+  o = n(692547),
+  c = n(481060),
+  d = n(142497),
+  u = n(338327),
+  _ = n(496675),
+  E = n(63063),
+  I = n(981631),
+  T = n(190378),
+  m = n(689938),
+  N = n(277060),
+  S = n(438825),
+  h = n(236140),
+  g = n(37069),
+  C = n(518513),
+  x = n(168179),
+  p = n(348986),
+  R = n(930065),
+  f = n(345669);
+let L = () => [{
     icon: c.AnalyticsIcon,
     color: o.Z.unsafe_rawColors.GREEN_360.css,
-    header: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_HEADER,
-    body: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_BODY.format({
-      featureHook: (e, s) => (0, n.jsx)("strong", {
-        className: m.featuredText,
+    header: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_HEADER,
+    body: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_BODY.format({
+      featureHook: (e, t) => (0, s.jsx)("strong", {
+        className: N.featuredText,
         children: e
-      }, s)
+      }, t)
     })
   }, {
     icon: c.AnalyticsIcon,
     color: o.Z.unsafe_rawColors.PARTNER.css,
-    header: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_HEADER,
-    body: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_BODY.format({
-      infoHook: () => (0, n.jsx)(c.Tooltip, {
-        text: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
-        "aria-label": N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
-        children: e => (0, n.jsx)(c.CircleInformationIcon, {
+    header: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_HEADER,
+    body: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_BODY.format({
+      infoHook: () => (0, s.jsx)(c.Tooltip, {
+        text: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
+        "aria-label": m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
+        children: e => (0, s.jsx)(c.CircleInformationIcon, {
           size: "xs",
           color: "currentColor",
-          className: m.infoIcon,
+          className: N.infoIcon,
           ...e
         })
       }),
-      featureHook: (e, s) => (0, n.jsx)("strong", {
-        className: m.featuredText,
+      featureHook: (e, t) => (0, s.jsx)("strong", {
+        className: N.featuredText,
         children: e
-      }, s)
+      }, t)
     })
   }, {
     icon: c.CircleInformationIcon,
     color: o.Z.unsafe_rawColors.RED_360.css,
-    header: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_HEADER,
-    body: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_BODY
+    header: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_HEADER,
+    body: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_BODY
   }],
-  p = [{
-    iconSrc: R,
+  O = [{
+    iconSrc: p,
     name: "Pokemon GO Paris",
     position: [-230, -100]
   }, {
-    iconSrc: L,
+    iconSrc: R,
     name: "Python",
     position: [-180, -100],
     faded: !0,
@@ -80,7 +80,7 @@ let A = () => [{
     position: [-320, -30],
     rightAlign: !0
   }, {
-    iconSrc: O,
+    iconSrc: f,
     name: "Sneaker Fans",
     position: [-250, 40]
   }, {
@@ -90,134 +90,134 @@ let A = () => [{
     faded: !0,
     rightAlign: !0
   }],
-  M = e => {
+  A = e => {
     let {
-      icon: s,
-      color: t,
-      size: i = 24,
-      header: l,
-      body: a
+      icon: t,
+      color: n,
+      size: a = 24,
+      header: i,
+      body: r
     } = e;
-    return (0, n.jsxs)("div", {
-      className: m.featureCard,
-      children: [(0, n.jsx)("div", {
-        className: m.featureIcon,
-        children: (0, n.jsx)(s, {
-          color: null != t ? t : "currentColor",
-          width: i,
-          height: i,
+    return (0, s.jsxs)("div", {
+      className: N.featureCard,
+      children: [(0, s.jsx)("div", {
+        className: N.featureIcon,
+        children: (0, s.jsx)(t, {
+          color: null != n ? n : "currentColor",
+          width: a,
+          height: a,
           size: "custom"
         })
-      }), (0, n.jsx)(c.Heading, {
+      }), (0, s.jsx)(c.Heading, {
         variant: "heading-md/semibold",
-        className: m.featureHeader,
-        children: l
-      }), (0, n.jsx)(c.Text, {
+        className: N.featureHeader,
+        children: i
+      }), (0, s.jsx)(c.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: a
+        children: r
       })]
     })
   },
-  f = e => {
+  M = e => {
     let {
-      iconSrc: s,
-      name: t,
-      position: i,
-      faded: l,
-      rightAlign: r,
+      iconSrc: t,
+      name: n,
+      position: a,
+      faded: i,
+      rightAlign: l,
       imageCoordinates: o
     } = e, d = {
-      [r ? "right" : "left"]: o[0] + i[0],
-      top: o[1] + i[1]
+      [l ? "right" : "left"]: o[0] + a[0],
+      top: o[1] + a[1]
     };
-    return (0, n.jsxs)("div", {
-      className: a()(m.guildDetails, {
-        [m.faded]: l
+    return (0, s.jsxs)("div", {
+      className: r()(N.guildDetails, {
+        [N.faded]: i
       }),
       style: d,
-      children: [(0, n.jsx)("div", {
-        className: m.guildIcon,
-        children: (0, n.jsx)("img", {
+      children: [(0, s.jsx)("div", {
+        className: N.guildIcon,
+        children: (0, s.jsx)("img", {
           alt: "",
-          src: s,
+          src: t,
           width: 24,
           height: 24
         })
-      }), (0, n.jsx)(c.Heading, {
+      }), (0, s.jsx)(c.Heading, {
         variant: "heading-deprecated-12/semibold",
-        children: t
+        children: n
       })]
     })
   };
-s.Z = e => {
+t.Z = e => {
   let {
-    guild: s
-  } = e, [t, l] = i.useState(0), [a, o] = i.useState(0), [g, C] = i.useState(), x = (0, r.e7)([E.Z], () => E.Z.can(I.Plq.ADMINISTRATOR, s)), R = null == g ? void 0 : g.offsetWidth, L = null == g ? void 0 : g.offsetHeight;
-  i.useEffect(() => {
-    null != R && l(R / 2), null != L && o(L / 2)
-  }, [R, L, l, o]), i.useEffect(() => {
+    guild: t
+  } = e, [n, i] = a.useState(0), [r, o] = a.useState(0), [g, C] = a.useState(), x = (0, l.e7)([_.Z], () => _.Z.can(I.Plq.ADMINISTRATOR, t)), p = null == g ? void 0 : g.offsetWidth, R = null == g ? void 0 : g.offsetHeight;
+  a.useEffect(() => {
+    null != p && i(p / 2), null != R && o(R / 2)
+  }, [p, R, i, o]), a.useEffect(() => {
     (0, d.Kw)(T.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
   }, []);
-  let O = () => {
+  let f = () => {
     u.Z.open()
   };
-  return (0, n.jsxs)("div", {
-    className: m.container,
-    children: [(0, n.jsxs)("div", {
-      className: m.banner,
+  return (0, s.jsxs)("div", {
+    className: N.container,
+    children: [(0, s.jsxs)("div", {
+      className: N.banner,
       ref: e => C(e),
-      children: [p.map(e => (0, n.jsx)(f, {
+      children: [O.map(e => (0, s.jsx)(M, {
         ...e,
-        imageCoordinates: [t, a]
-      }, e.name)), (0, n.jsx)("img", {
+        imageCoordinates: [n, r]
+      }, e.name)), (0, s.jsx)("img", {
         alt: "",
         src: S,
-        className: m.image,
+        className: N.image,
         width: 256
-      }), (0, n.jsx)("img", {
+      }), (0, s.jsx)("img", {
         alt: "",
         src: h,
-        className: m.sparkles
+        className: N.sparkles
       })]
-    }), (0, n.jsx)(c.Heading, {
+    }), (0, s.jsx)(c.Heading, {
       variant: "heading-xl/semibold",
-      children: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_HEADER
-    }), (0, n.jsx)(c.Text, {
+      children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_HEADER
+    }), (0, s.jsx)(c.Text, {
       color: "header-secondary",
       variant: "text-md/normal",
-      className: m.body,
-      children: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
-        helpdeskArticle: _.Z.getArticleURL(I.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+      className: N.body,
+      children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
+        helpdeskArticle: E.Z.getArticleURL(I.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
       })
-    }), (0, n.jsx)(c.Tooltip, {
-      text: x ? null : N.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-      "aria-label": x ? void 0 : N.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-      children: e => (0, n.jsx)(c.Button, {
-        onClick: O,
-        className: m.button,
+    }), (0, s.jsx)(c.Tooltip, {
+      text: x ? null : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+      "aria-label": x ? void 0 : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+      children: e => (0, s.jsx)(c.Button, {
+        onClick: f,
+        className: N.button,
         disabled: !x,
         ...e,
-        children: N.Z.Messages.GET_STARTED
+        children: m.Z.Messages.GET_STARTED
       })
-    }), (0, n.jsx)("hr", {
-      className: m.separator
-    }), (0, n.jsx)(c.Text, {
+    }), (0, s.jsx)("hr", {
+      className: N.separator
+    }), (0, s.jsx)(c.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_DETAILS
-    }), (0, n.jsx)(c.Text, {
+      children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_DETAILS
+    }), (0, s.jsx)(c.Text, {
       color: "header-secondary",
-      className: m.body,
+      className: N.body,
       variant: "text-sm/normal",
-      children: N.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
-        helpdeskArticle: _.Z.getArticleURL(I.BhN.GUILD_COMMUNITY_FEATURE)
+      children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
+        helpdeskArticle: E.Z.getArticleURL(I.BhN.GUILD_COMMUNITY_FEATURE)
       })
-    }), (0, n.jsx)("div", {
-      className: m.features,
-      children: A().map((e, s) => (0, n.jsx)(M, {
+    }), (0, s.jsx)("div", {
+      className: N.features,
+      children: L().map((e, t) => (0, s.jsx)(A, {
         ...e
-      }, s))
+      }, t))
     })]
   })
 }

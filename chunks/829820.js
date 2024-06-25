@@ -4,7 +4,7 @@ n.d(t, {
     return m
   },
   Ih: function() {
-    return A
+    return N
   },
   Lz: function() {
     return O
@@ -24,9 +24,9 @@ var i = n(470079),
   I = n(894344),
   T = n(203777),
   h = n(616922);
-let S = 30 * l.Z.Millis.SECOND;
+let f = 30 * l.Z.Millis.SECOND;
 
-function f(e) {
+function S(e) {
   let {
     currentUserTrackId: t,
     syncingWithUser: n,
@@ -36,7 +36,7 @@ function f(e) {
     a && (t !== _ || n || r) && (l(!1), u.stop())
   }, [t, _, n, r, a, u]);
   let c = i.useCallback(() => {
-      l(!0), u.start(S, () => l(!1))
+      l(!0), u.start(f, () => l(!1))
     }, [u]),
     d = i.useCallback(() => {
       l(!1), u.stop()
@@ -48,12 +48,12 @@ function f(e) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   return (0, r.cj)([_.Z, a.default], () => (0, E.Z)(_.Z, a.default, t, e), [e, t])
 }
 
-function A(e, t, n) {
-  let r = N(e, t),
+function N(e, t, n) {
+  let r = A(e, t),
     {
       notPlayable: s,
       isCurrentUser: o,
@@ -63,7 +63,7 @@ function A(e, t, n) {
       loading: l,
       startLoading: u,
       clearLoading: _
-    } = f(r),
+    } = S(r),
     E = i.useCallback(() => {
       u(), (0, T.Z)(r, h.kG.USER_ACTIVITY_PLAY, n).catch(_)
     }, [r, n, u, _]);
@@ -79,7 +79,7 @@ function A(e, t, n) {
 
 function m(e, t, n, r) {
   let s = null != r ? r : u.ZP.getName(t),
-    o = N(e, t),
+    o = A(e, t),
     {
       syncingWithUser: a,
       syncingWithParty: l,
@@ -88,23 +88,23 @@ function m(e, t, n, r) {
     {
       loading: E,
       startLoading: T,
-      clearLoading: S
-    } = f(o),
-    A = i.useCallback(() => {
-      T(), (0, I.Z)(o, h.kG.USER_ACTIVITY_SYNC, n).catch(S)
-    }, [o, n, T, S]);
+      clearLoading: f
+    } = S(o),
+    N = i.useCallback(() => {
+      T(), (0, I.Z)(o, h.kG.USER_ACTIVITY_SYNC, n).catch(f)
+    }, [o, n, T, f]);
   return {
     label: (0, c.Z)(o, h.kG.USER_ACTIVITY_SYNC),
     tooltip: (0, d.Z)(o, h.kG.USER_ACTIVITY_SYNC, s),
     disabled: !E && (_ || a || l),
     loading: E,
-    onClick: A,
+    onClick: N,
     spotifyData: o
   }
 }
 
 function O(e, t, n) {
-  let r = N(e, t),
+  let r = A(e, t),
     {
       notPlayable: s,
       syncingWithUser: o,
@@ -115,7 +115,7 @@ function O(e, t, n) {
       loading: u,
       startLoading: _,
       clearLoading: E
-    } = f(r),
+    } = S(r),
     T = i.useCallback(() => {
       _(), (0, I.Z)(r, h.kG.EMBED_SYNC, n).catch(E)
     }, [r, n, _, E]);

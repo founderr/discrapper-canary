@@ -1,55 +1,55 @@
 "use strict";
-var n, i, l, a, r = t(442837),
-  o = t(570140),
-  c = t(999382),
-  d = t(740903),
-  u = t(981631);
-let E = d.u.OVERVIEW,
-  _ = null;
+var s, a, i, r, l = n(442837),
+  o = n(570140),
+  c = n(999382),
+  d = n(740903),
+  u = n(981631);
+let _ = d.u.OVERVIEW,
+  E = null;
 
 function I(e) {
   let {
-    subsection: s
+    subsection: t
   } = e;
-  switch (s) {
+  switch (t) {
     case u.KsC.SAFETY_AUTOMOD:
-      E = d.u.AUTOMOD;
+      _ = d.u.AUTOMOD;
       break;
     case u.KsC.SAFETY_DM_AND_SPAM_PROTECTION:
-      E = d.u.DM_AND_SPAM_PROTECTION;
+      _ = d.u.DM_AND_SPAM_PROTECTION;
       break;
     case u.KsC.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
-      E = d.u.CAPTCHA_AND_RAID_PROTECTION;
+      _ = d.u.CAPTCHA_AND_RAID_PROTECTION;
       break;
     case u.KsC.SAFETY_PERMISSIONS:
-      E = d.u.PERMISSIONS;
+      _ = d.u.PERMISSIONS;
       break;
     case u.KsC.SAFETY_OVERVIEW:
     default:
-      E = d.u.OVERVIEW
+      _ = d.u.OVERVIEW
   }
 }
-class T extends(a = r.ZP.Store) {
+class T extends(r = l.ZP.Store) {
   getCurrentPage() {
-    return E
+    return _
   }
 }
-l = "GuildSettingsSafetyStore", (i = "displayName") in(n = T) ? Object.defineProperty(n, i, {
-  value: l,
+i = "GuildSettingsSafetyStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = l, s.Z = new T(o.Z, {
+}) : s[a] = i, t.Z = new T(o.Z, {
   GUILD_SETTINGS_INIT: function() {
-    if (c.Z.getGuildId() === _) return !1;
-    _ = c.Z.getGuildId()
+    if (c.Z.getGuildId() === E) return !1;
+    E = c.Z.getGuildId()
   },
   GUILD_SETTINGS_SET_SECTION: I,
   GUILD_SETTINGS_SAFETY_SET_SUBSECTION: I,
   GUILD_SETTINGS_SAFETY_PAGE: function(e) {
     let {
-      page: s
+      page: t
     } = e;
-    E = s
+    _ = t
   }
 })

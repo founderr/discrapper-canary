@@ -1,34 +1,34 @@
 t.d(n, {
   R: function() {
-    return d
+    return u
   },
   _: function() {
-    return u
+    return d
   }
 });
-var r = t(735250),
-  o = t(470079),
+var o = t(735250),
+  r = t(470079),
   a = t(512722),
-  l = t.n(a),
-  s = t(442837),
-  i = t(240864);
-let c = o.createContext(void 0);
+  i = t.n(a),
+  c = t(442837),
+  s = t(240864);
+let l = r.createContext(void 0);
 
-function u() {
-  let e = o.useContext(c);
-  return l()(null != e, "GuildProductPurchaseContext not found"), e
+function d() {
+  let e = r.useContext(l);
+  return i()(null != e, "GuildProductPurchaseContext not found"), e
 }
 
-function d(e) {
+function u(e) {
   let {
     children: n,
     guildProductListingId: t,
-    ...o
-  } = e, a = (0, s.e7)([i.Z], () => i.Z.getGuildProduct(t));
-  return l()(null != a, "guildProductListing cannot be null"), (0, r.jsx)(c.Provider, {
+    ...r
+  } = e, a = (0, c.e7)([s.Z], () => s.Z.getGuildProduct(t));
+  return i()(null != a, "guildProductListing cannot be null"), (0, o.jsx)(l.Provider, {
     value: {
       guildProductListing: a,
-      ...o
+      ...r
     },
     children: n
   })

@@ -2,7 +2,7 @@
 let i;
 n.d(t, {
   H: function() {
-    return f
+    return S
   }
 }), n(47120), n(733860);
 var r, s, o, a, l = n(392711),
@@ -14,18 +14,18 @@ var r, s, o, a, l = n(392711),
   I = n(354459);
 let T = [],
   h = {},
-  S = [],
-  f = e => {
+  f = [],
+  S = e => {
     null != e && c.Z.dispatch({
       type: "VOICE_CHANNEL_EFFECT_CLEAR",
       userId: e
     })
   },
-  N = [],
-  A = 10 * d.Z.Millis.SECOND,
+  A = [],
+  N = 10 * d.Z.Millis.SECOND,
   m = (0, l.debounce)(() => {
-    let e = (0, E.cX)(S);
-    _.uv.announce(e, "polite"), S = []
+    let e = (0, E.cX)(f);
+    _.uv.announce(e, "polite"), f = []
   }, 500);
 class O extends(r = u.ZP.Store) {
   get recentlyUsedEmojis() {
@@ -69,17 +69,17 @@ a = "VoiceChannelEffectsStore", (o = "displayName") in(s = O) ? Object.definePro
       emoji: t,
       sentAt: Date.now(),
       animationType: i
-    }, S = [...S, {
+    }, f = [...f, {
       emojiName: t.name,
       userId: n
     }], m())
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
     let e = new Date;
-    if ((N = [e, ...N].slice(0, 20)).length >= 20) {
-      let t = N[N.length - 1],
+    if ((A = [e, ...A].slice(0, 20)).length >= 20) {
+      let t = A[A.length - 1],
         n = e.getTime() - t.getTime();
-      n < A && (i = new Date(e.getTime() + A - n))
+      n < N && (i = new Date(e.getTime() + N - n))
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: e => {

@@ -1,21 +1,21 @@
 n.d(t, {
   M: function() {
-    return T
+    return m
   }
 }), n(411104);
-var s, i, l, a, r = n(735250),
+var i, a, s, l, r = n(735250),
   o = n(470079),
   c = n(120356),
-  u = n.n(c),
-  d = n(481060),
-  E = n(689938),
-  _ = n(634936);
+  d = n.n(c),
+  u = n(481060),
+  _ = n(689938),
+  E = n(634936);
 
 function I(e) {
   e.stopPropagation(), e.preventDefault()
 }
 
-function T(e, t, n) {
+function m(e, t, n) {
   return {
     id: "".concat(e, "-").concat(t),
     role: "option",
@@ -23,59 +23,59 @@ function T(e, t, n) {
     "aria-selected": n
   }
 }
-class m extends(s = o.PureComponent) {
+class T extends(i = o.PureComponent) {
   renderQuery(e) {
     let {
       query: t,
       navId: n,
-      focusedIndex: s,
-      onSelectQuery: i,
-      onSelectSearchEverywhere: l,
-      onHighlightQuery: a,
+      focusedIndex: i,
+      onSelectQuery: a,
+      onSelectSearchEverywhere: s,
+      onHighlightQuery: l,
       hideQuery: o,
       searchFavorites: c
     } = this.props;
     if (e || o) return null;
-    let I = -1 === s;
+    let I = -1 === i;
     return (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsxs)(d.Clickable, {
-        className: u()(_.queryContainer, {
-          [_.focused]: I
+      children: [(0, r.jsxs)(u.Clickable, {
+        className: d()(E.queryContainer, {
+          [E.focused]: I
         }),
-        ...T(n, -1, I),
-        onMouseEnter: a,
-        onClick: i,
+        ...m(n, -1, I),
+        onMouseEnter: l,
+        onClick: a,
         children: [(0, r.jsx)("div", {
-          className: _.queryText,
-          children: c ? E.Z.Messages.SEARCH_FAVORITES : E.Z.Messages.SEARCH_FOR_VALUE.format({
+          className: E.queryText,
+          children: c ? _.Z.Messages.SEARCH_FAVORITES : _.Z.Messages.SEARCH_FOR_VALUE.format({
             value: t
           })
         }), (0, r.jsx)("div", {
-          className: _.queryShortcut,
+          className: E.queryShortcut,
           "aria-hidden": !0,
-          children: (0, r.jsx)(d.KeyCombo, {
+          children: (0, r.jsx)(u.KeyCombo, {
             shortcut: "return",
             dim: !0,
-            className: _.keyCombo
+            className: E.keyCombo
           })
         })]
-      }), c && (0, r.jsxs)(d.Clickable, {
-        className: u()(_.queryContainer, {
-          [_.focused]: I
+      }), c && (0, r.jsxs)(u.Clickable, {
+        className: d()(E.queryContainer, {
+          [E.focused]: I
         }),
-        ...T(n, -1, I),
-        onMouseEnter: a,
-        onClick: l,
+        ...m(n, -1, I),
+        onMouseEnter: l,
+        onClick: s,
         children: [(0, r.jsx)("div", {
-          className: _.queryText,
-          children: E.Z.Messages.SEARCH_EVERYWHERE
+          className: E.queryText,
+          children: _.Z.Messages.SEARCH_EVERYWHERE
         }), (0, r.jsx)("div", {
-          className: _.queryShortcut,
+          className: E.queryShortcut,
           "aria-hidden": !0,
-          children: (0, r.jsx)(d.KeyCombo, {
+          children: (0, r.jsx)(u.KeyCombo, {
             shortcut: "shift+return",
             dim: !0,
-            className: _.keyCombo
+            className: E.keyCombo
           })
         })]
       })]
@@ -85,16 +85,16 @@ class m extends(s = o.PureComponent) {
     let {
       numResults: t,
       renderNoResults: n,
-      renderInitialState: s,
-      renderResult: i,
-      renderCustomResults: l
+      renderInitialState: i,
+      renderResult: a,
+      renderCustomResults: s
     } = this.props;
-    if (e) return s();
+    if (e) return i();
     if (0 === t) return n();
-    if (null != i) return Array.from({
+    if (null != a) return Array.from({
       length: t
-    }).map((e, t) => i(t));
-    if (null != l) return l();
+    }).map((e, t) => a(t));
+    if (null != s) return s();
     throw Error("SearchResultsPopout.renderResults: Flow should never allow this...")
   }
   render() {
@@ -102,29 +102,29 @@ class m extends(s = o.PureComponent) {
       query: e,
       focusedIndex: t,
       navId: n,
-      width: s
-    } = this.props, i = "" === e.trim();
+      width: i
+    } = this.props, a = "" === e.trim();
     return (0, r.jsxs)("div", {
-      className: _.container,
+      className: E.container,
       style: {
-        width: s
+        width: i
       },
       onMouseDown: I,
       role: "listbox",
       id: n,
       tabIndex: -1,
       "aria-activedescendant": "".concat(n, "-").concat(t),
-      children: [this.renderQuery(i), this.renderResults(i)]
+      children: [this.renderQuery(a), this.renderResults(a)]
     })
   }
 }
-a = {
+l = {
   renderInitialState: () => null,
   hideQuery: !1,
   width: 320
-}, (l = "defaultProps") in(i = m) ? Object.defineProperty(i, l, {
-  value: a,
+}, (s = "defaultProps") in(a = T) ? Object.defineProperty(a, s, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = m
+}) : a[s] = l, t.Z = T

@@ -1,67 +1,67 @@
-s.d(t, {
+n.d(t, {
   Ag: function() {
     return T
   },
   I2: function() {
     return I
   }
-}), s(47120);
-var n = s(470079),
-  a = s(399606),
-  i = s(704215),
-  r = s(211242),
-  l = s(605236),
-  o = s(706140),
-  c = s(581883),
-  E = s(494127),
-  _ = s(687362),
-  u = s(526761);
-let d = [
-    [i.z.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, E.F_, i.z.WHATS_NEW_AVATAR_DECOS_FLIP],
-    [i.z.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, E.YQ, i.z.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+}), n(47120);
+var s = n(470079),
+  a = n(399606),
+  r = n(704215),
+  i = n(211242),
+  l = n(605236),
+  o = n(706140),
+  c = n(581883),
+  d = n(494127),
+  _ = n(687362),
+  E = n(526761);
+let u = [
+    [r.z.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.F_, r.z.WHATS_NEW_AVATAR_DECOS_FLIP],
+    [r.z.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.YQ, r.z.WHATS_NEW_PROFILE_EFFECTS_FLIP]
   ],
   T = e => {
-    let t = d.some(e => {
-        let [t, s, n] = e, {
+    let t = u.some(e => {
+        let [t, n, s] = e, {
           flipped: a
-        } = s.getCurrentConfig({
+        } = n.getCurrentConfig({
           location: "useShouldShowNewBadge"
         });
         return !!a && !(0, l.un)(t)
       }),
-      s = (0, _.v)(e);
-    return t || !0 === s
+      n = (0, _.v)(e);
+    return t || !0 === n
   },
   I = () => {
-    let e = (0, r.Q)(),
-      t = d.map(e => {
-        let [t, s] = e, {
-          flipped: n
-        } = s.getCurrentConfig({
+    let e = (0, i.Q)(),
+      t = u.map(e => {
+        let [t, n] = e, {
+          flipped: s
+        } = n.getCurrentConfig({
           location: "useClearNewBadge"
         });
-        return n ? t : null
+        return s ? t : null
       }).filter(e => null != e),
-      [s] = (0, o.c)(e ? [] : t);
-    null != s && t.includes(s) && !e && (0, l.EW)(s)
+      [n] = (0, o.c)(e ? [] : t);
+    null != n && t.includes(n) && !e && (0, l.EW)(n)
   };
-t.ZP = 12633 == s.j ? () => {
-  let e = (0, r.Q)(),
-    t = (0, a.e7)([c.Z], () => c.Z.hasLoaded(u.yP.PRELOADED_USER_SETTINGS)),
-    s = d.map(e => {
-      let [t, s, n] = e, {
+t.ZP = 12633 == n.j ? () => {
+  let e = (0, i.Q)(),
+    t = (0, a.e7)([c.Z], () => c.Z.hasLoaded(E.yP.PRELOADED_USER_SETTINGS)),
+    n = u.map(e => {
+      let [t, n, s] = e, {
         flipped: a
-      } = s.getCurrentConfig({
+      } = n.getCurrentConfig({
         location: "useShouldShowNewBadge"
-      }), i = null != n && (0, l.un)(n);
-      return a && !i ? t : null
+      }), r = null != s && (0, l.un)(s);
+      return a && !r ? t : null
     }).filter(e => null != e);
-  n.useEffect(() => {
-    t && d.forEach(e => {
-      let [t, s, n] = e;
-      if (null != n)(0, l.un)(n) && (0, l.EW)(t)
+  s.useEffect(() => {
+    t && u.forEach(e => {
+      let [t, n, s] = e;
+      if (null != s)(0, l.un)(s) && (0, l.EW)(t)
     })
-  }, [s, t]);
-  let [i] = (0, o.c)(e ? [] : s);
-  return null != i && s.includes(i) && !e
+  }, [n, t]);
+  let [r] = (0, o.c)(e ? [] : n);
+  return null != r && n.includes(r) && !e
 } : null

@@ -1,9 +1,9 @@
-t.d(s, {
+n.d(t, {
   U: function() {
     return a
   }
 });
-let n = (0, t(818083).B)({
+let s = (0, n(818083).B)({
   id: "2021-08_user_initiated_refunds",
   label: "User Initiated Refunds",
   kind: "user",
@@ -28,12 +28,12 @@ let n = (0, t(818083).B)({
 function a() {
   let {
     enabled: e
-  } = n.getCurrentConfig({
+  } = s.getCurrentConfig({
     location: "70b634_1"
   }, {
     autoTrackExposure: !1
   });
-  return n.trackExposure({
+  return s.trackExposure({
     location: "70b634_2"
   }), e
 }

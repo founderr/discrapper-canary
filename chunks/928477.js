@@ -34,22 +34,22 @@ var i, r, s = n(470079),
   I = n(957730),
   T = n(467798),
   h = n(592125),
-  S = n(703558),
-  f = n(375954),
-  N = n(300429),
-  A = n(70956),
+  f = n(703558),
+  S = n(375954),
+  A = n(300429),
+  N = n(70956),
   m = n(630388),
   O = n(709054),
-  R = n(968437),
-  p = n(665906),
+  p = n(968437),
+  R = n(665906),
   g = n(456077),
   C = n(124368),
   v = n(981631),
   L = n(689938);
 
 function D(e) {
-  let t = (0, p.NE)(e);
-  return (0, p.Xu)(e) ? t ? 2 : 3 : 1
+  let t = (0, R.NE)(e);
+  return (0, R.Xu)(e) ? t ? 2 : 3 : 1
 }
 
 function M(e, t) {
@@ -60,7 +60,7 @@ function M(e, t) {
 
 function P(e, t) {
   var n, i, r, s;
-  let o = null == t ? null : f.Z.getMessage(e.id, t),
+  let o = null == t ? null : S.Z.getMessage(e.id, t),
     a = null !== (r = null == o ? void 0 : null === (i = o.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== r ? r : "";
   if ("" !== a) return a.length > 40 ? a.substring(0, 40) + "..." : a;
   {
@@ -98,15 +98,15 @@ function y(e) {
     uploadHandler: E
   } = e;
   return s.useCallback(async (e, s, T) => {
-    var f;
-    let N = null == n,
-      A = M(i, r),
-      m = null !== (f = i.name) && void 0 !== f ? f : "";
+    var S;
+    let A = null == n,
+      N = M(i, r),
+      m = null !== (S = i.name) && void 0 !== S ? S : "";
     if ("" === m && d) {
       let e = P(t, n);
       m = "" !== e ? e : L.Z.Messages.THREAD
     }
-    let p = (0, R.WD)(t),
+    let R = (0, p.WD)(t),
       g = h.Z.getChannel(O.default.castMessageIdAsChannelId(n)),
       C = await G(t, () => {
         let e = null != n ? v.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : v.ANM.CHANNEL_THREADS(t.id);
@@ -114,17 +114,17 @@ function y(e) {
           url: e,
           body: {
             name: m,
-            type: A ? v.d4z.PRIVATE_THREAD : t.type === v.d4z.GUILD_ANNOUNCEMENT ? v.d4z.ANNOUNCEMENT_THREAD : v.d4z.PUBLIC_THREAD,
-            auto_archive_duration: p,
+            type: N ? v.d4z.PRIVATE_THREAD : t.type === v.d4z.GUILD_ANNOUNCEMENT ? v.d4z.ANNOUNCEMENT_THREAD : v.d4z.PUBLIC_THREAD,
+            auto_archive_duration: R,
             location: a
           }
         })
       });
-    C !== g && (u.Z.clearDraft(t.id, S.d.ThreadSettings), u.Z.clearDraft(t.id, S.d.FirstThreadMessage), null == l || l(C), (N || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
+    C !== g && (u.Z.clearDraft(t.id, f.d.ThreadSettings), u.Z.clearDraft(t.id, f.d.FirstThreadMessage), null == l || l(C), (A || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
       if (null != r && null != i && i.length > 0) r(e, i, t, n);
       else if (null != n && n.length > 0) _.Z.sendStickers(e.id, n, t);
       else _.Z.sendMessage(e.id, I.ZP.parse(e, t))
-    }(C, e, s, T, E)), c.Z.clearAll(t.id, S.d.FirstThreadMessage)
+    }(C, e, s, T, E)), c.Z.clearAll(t.id, f.d.FirstThreadMessage)
   }, [t, n, i, l, r, a, d, E])
 }
 
@@ -152,9 +152,9 @@ function b(e) {
     let _ = 0,
       [d, I] = (0, T.Z)(e);
     d && (e = I, _ = (0, m.pj)(_, v.iLy.SUPPRESS_NOTIFICATIONS));
-    let h = (0, R.WD)(t, null),
-      f = v.ANM.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
-      N = {
+    let h = (0, p.WD)(t, null),
+      S = v.ANM.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+      A = {
         name: n,
         auto_archive_duration: h,
         applied_tags: i,
@@ -164,15 +164,15 @@ function b(e) {
           flags: 0 !== _ ? _ : void 0
         }
       },
-      A = await G(t, () => null != l && l.length > 0 ? a(f, N, l) : o.tn.post({
-        url: f,
-        body: N
+      N = await G(t, () => null != l && l.length > 0 ? a(S, A, l) : o.tn.post({
+        url: S,
+        body: A
       }));
-    return u.Z.clearDraft(t.id, S.d.ThreadSettings), u.Z.clearDraft(t.id, S.d.FirstThreadMessage), c.Z.clearAll(t.id, S.d.FirstThreadMessage), (0, E.Je)({
+    return u.Z.clearDraft(t.id, f.d.ThreadSettings), u.Z.clearDraft(t.id, f.d.FirstThreadMessage), c.Z.clearAll(t.id, f.d.FirstThreadMessage), (0, E.Je)({
       guildId: t.guild_id,
       channelId: t.id,
-      postId: A.id
-    }), null == r || r(A), A
+      postId: N.id
+    }), null == r || r(N), N
   }, [t, n, r, i, a])
 }(r = i || (i = {}))[r.Disabled = 1] = "Disabled", r[r.Enabled = 2] = "Enabled", r[r.PrivateOnly = 3] = "PrivateOnly";
 async function G(e, t) {
@@ -184,7 +184,7 @@ async function G(e, t) {
       body: L.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
     }) : (a.Z.dispatch({
       type: "SLOWMODE_RESET_COOLDOWN",
-      slowmodeType: N.S.CreateThread,
+      slowmodeType: A.S.CreateThread,
       channelId: e.id
     }), a.Z.dispatch({
       type: "THREAD_CREATE_LOCAL",
@@ -205,8 +205,8 @@ async function G(e, t) {
       n > 0 && a.Z.dispatch({
         type: "SLOWMODE_SET_COOLDOWN",
         channelId: e.id,
-        slowmodeType: N.S.CreateThread,
-        cooldownMs: n * A.Z.Millis.SECOND
+        slowmodeType: A.S.CreateThread,
+        cooldownMs: n * N.Z.Millis.SECOND
       })
     } else if (429 === t.status) l.Z.show({
       title: i ? L.Z.Messages.CANNOT_CREATE_FORUM_POST : L.Z.Messages.CANNOT_CREATE_THREAD,

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return r
+    return o
   }
 });
 var a = t(735250);
@@ -9,7 +9,7 @@ var i = t(481060),
   l = t(572004),
   u = t(689938);
 
-function r(e) {
+function o(e) {
   return l.wS ? (0, a.jsx)(i.MenuItem, {
     id: "copy-channel-topic",
     label: u.Z.Messages.COPY_CHANNEL_TOPIC,

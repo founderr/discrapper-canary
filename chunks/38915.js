@@ -5,40 +5,40 @@ t.d(s, {
 }), t(47120);
 var n = t(735250);
 t(470079);
-var i = t(442837),
-  a = t(481060),
-  l = t(536442),
-  r = t(650434);
+var a = t(442837),
+  i = t(481060),
+  r = t(536442),
+  o = t(650434);
 
-function o(e) {
+function l(e) {
   let {
     hotspotLocation: s
-  } = e, [t, o] = (0, i.Wu)([l.qc], () => [l.qc.hasHotspot(s, !0), l.qc.getHotspotOverride(s)]);
+  } = e, [t, l] = (0, a.Wu)([r.qc], () => [r.qc.hasHotspot(s, !0), r.qc.getHotspotOverride(s)]);
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)(a.FormItem, {
+    children: [(0, n.jsxs)(i.FormItem, {
       title: s,
-      className: r.hotspotSwitch,
-      children: [t ? (0, n.jsx)(a.TooltipContainer, {
-        className: r.iconContainer,
+      className: o.hotspotSwitch,
+      children: [t ? (0, n.jsx)(i.TooltipContainer, {
+        className: o.iconContainer,
         element: "span",
         text: "Active",
-        children: (0, n.jsx)(a.CheckmarkLargeIcon, {
+        children: (0, n.jsx)(i.CheckmarkLargeIcon, {
           size: "md",
           color: "currentColor",
-          className: r.checkmark
+          className: o.checkmark
         })
-      }) : (0, n.jsx)(a.TooltipContainer, {
-        className: r.iconContainer,
+      }) : (0, n.jsx)(i.TooltipContainer, {
+        className: o.iconContainer,
         element: "span",
         text: "Inactive",
-        children: (0, n.jsx)(a.CloseSmallIcon, {
+        children: (0, n.jsx)(i.CloseSmallIcon, {
           size: "md",
           color: "currentColor",
-          className: r.xmark
+          className: o.xmark
         })
-      }), (0, n.jsx)(a.SingleSelect, {
-        className: r.overrideSelect,
-        value: o,
+      }), (0, n.jsx)(i.SingleSelect, {
+        className: o.overrideSelect,
+        value: l,
         options: [{
           value: void 0,
           label: "No Override"
@@ -49,9 +49,9 @@ function o(e) {
           value: !1,
           label: "Force Inactive"
         }],
-        onChange: e => null != e ? (0, l.hv)(s, e) : (0, l.Po)(s)
+        onChange: e => null != e ? (0, r.hv)(s, e) : (0, r.Po)(s)
       })]
-    }), (0, n.jsx)(a.FormDivider, {})]
+    }), (0, n.jsx)(i.FormDivider, {})]
   })
 }
 
@@ -59,16 +59,16 @@ function c(e) {
   let {
     className: s
   } = e;
-  return (0, n.jsxs)(a.FormSection, {
+  return (0, n.jsxs)(i.FormSection, {
     title: "Hotspots",
-    tag: a.FormTitleTags.H1,
+    tag: i.FormTitleTags.H1,
     className: s,
-    children: [(0, n.jsx)(a.Text, {
-      className: r.helpText,
+    children: [(0, n.jsx)(i.Text, {
+      className: o.helpText,
       tag: "p",
       variant: "text-sm/normal",
       children: 'All the "hotspots" in app, and their current status. Use the select menu to override them on or off.'
-    }), Object.keys(l.v6).sort((e, s) => e.localeCompare(s)).map(e => (0, n.jsx)(o, {
+    }), Object.keys(r.v6).sort((e, s) => e.localeCompare(s)).map(e => (0, n.jsx)(l, {
       hotspotLocation: e
     }, e))]
   })

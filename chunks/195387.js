@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 });
 var i = n(735250);
@@ -20,28 +20,28 @@ var r = n(442837),
   T = n(50493),
   h = n(689938);
 
-function S(e) {
+function f(e) {
   let {
     user: t,
     guildId: n,
-    channelId: S,
-    onClose: f
+    channelId: f,
+    onClose: S
   } = e, {
-    trackUserProfileAction: N
+    trackUserProfileAction: A
   } = (0, d.KZ)(), {
-    newestAnalyticsLocation: A
-  } = (0, o.ZP)(), m = (0, r.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)), O = (0, l.ms)(null != n ? n : null, !0), R = (0, r.e7)([c.Z], () => null != S ? S : c.Z.getChannelId(n, !0), [S, n]);
+    newestAnalyticsLocation: N
+  } = (0, o.ZP)(), m = (0, r.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)), O = (0, l.ms)(null != n ? n : null, !0), p = (0, r.e7)([c.Z], () => null != f ? f : c.Z.getChannelId(n, !0), [f, n]);
   return null == n || !O || m ? null : (0, i.jsx)(E.Z, {
     variant: "banner",
     icon: s.ModerationIcon,
     text: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
     onClick: () => {
-      u.Z.close(), N({
+      u.Z.close(), A({
         action: "PRESS_MOD_VIEW"
-      }), (0, a.r)(n, t.id, null != R ? R : I.oC.MEMBER_SAFETY, {
+      }), (0, a.r)(n, t.id, null != p ? p : I.oC.MEMBER_SAFETY, {
         modViewPanel: T.k.INFO,
-        sourceLocation: A
-      }), null == f || f()
+        sourceLocation: N
+      }), null == S || S()
     }
   })
 }

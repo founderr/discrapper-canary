@@ -3,125 +3,125 @@ n.d(t, {
     return m
   }
 }), n(47120);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(512722),
-  l = n.n(i),
-  a = n(841784),
-  r = n(503438),
+var s = n(512722),
+  a = n.n(s),
+  r = n(841784),
+  l = n(503438),
   o = n(802856),
   c = n(366966),
-  u = n(51144),
-  d = n(761282),
-  E = n(358924),
-  h = n(817915),
-  _ = n(981631),
+  d = n(51144),
+  u = n(761282),
+  _ = n(358924),
+  E = n(817915),
+  h = n(981631),
   I = n(689938);
 
 function m(e) {
   let {
     party: t,
-    onUserContextMenu: i
+    onUserContextMenu: s
   } = e, {
     priorityMembers: m,
-    guildContext: T
-  } = t, g = m[0], p = function(e) {
+    guildContext: p
+  } = t, g = m[0], T = function(e) {
     let {
       priorityMembers: t,
       partiedMembers: n
-    } = e, s = new Set(t.map(e => {
+    } = e, i = new Set(t.map(e => {
       let {
         user: t
       } = e;
       return t.id
-    })), i = n.filter(e => !s.has(e.id)), l = u.ZP.getName(t[0].user), a = null != t[1] ? u.ZP.getName(t[1].user) : null != i[0] ? u.ZP.getName(i[0]) : null;
+    })), s = n.filter(e => !i.has(e.id)), a = d.ZP.getName(t[0].user), r = null != t[1] ? d.ZP.getName(t[1].user) : null != s[0] ? d.ZP.getName(s[0]) : null;
     switch (n.length) {
       case 1:
-        return l;
+        return a;
       case 2:
         return I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
-          user1: l,
-          user2: a
+          user1: a,
+          user2: r
         });
       default:
         return I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
-          user1: l,
-          user2: a,
+          user1: a,
+          user2: r,
           extras: n.length - 2
         })
     }
   }(t), {
-    subtitle: N,
-    icon: S
+    subtitle: C,
+    icon: f
   } = function(e) {
     var t;
     let {
-      priorityMembers: i,
-      partiedMembers: u,
+      priorityMembers: s,
+      partiedMembers: d,
       voiceChannels: m,
-      currentActivities: T
-    } = e, g = i.length, p = u.length - g, N = T[0], S = null == N ? void 0 : N.activity, C = null == N ? void 0 : N.startedPlayingTime, A = {
-      name: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : ""
+      currentActivities: p
+    } = e, g = s.length, T = d.length - g, C = p[0], f = null == C ? void 0 : C.activity, S = null == C ? void 0 : C.startedPlayingTime, N = {
+      name: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ""
     };
-    if ((0, a.Z)(S) && null != S) return {
-      subtitle: (0, s.jsx)(c.ZP, {
-        start: C,
+    if ((0, r.Z)(f) && null != f) return {
+      subtitle: (0, i.jsx)(c.ZP, {
+        start: S,
         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-        messageProps: A
+        messageProps: N
       }),
       icon: null
     };
-    if (g + p === 1 && null != N) {
+    if (g + T === 1 && null != C) {
       let {
         game: e
-      } = N;
-      if (null == S) return {
+      } = C;
+      if (null == f) return {
         subtitle: null,
         icon: null
       };
-      let t = d.dc(S);
+      let t = u.dc(f);
       if (null != t) return t;
-      switch (S.type) {
-        case _.IIU.PLAYING:
-          if ((0, o.Z)(S)) return {
+      switch (f.type) {
+        case h.IIU.PLAYING:
+          if ((0, o.Z)(f)) return {
             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
-            icon: (0, s.jsx)(E.Z.Header.Icon, {
-              src: E.Z.Header.Icon.Src.XBOX
+            icon: (0, i.jsx)(_.Z.Header.Icon, {
+              src: _.Z.Header.Icon.Src.XBOX
             })
           };
           return {
-            subtitle: (0, s.jsx)(c.ZP, {
-              start: C,
+            subtitle: (0, i.jsx)(c.ZP, {
+              start: S,
               location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-              messageProps: A
-            }), icon: null != e ? (0, s.jsx)(E.Z.Header.Icon, {
-              src: null != e.getIconURL(h.Z) ? e.getIconURL(h.Z) : n(211827)
+              messageProps: N
+            }), icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, {
+              src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827)
             }) : null
           };
-        case _.IIU.STREAMING:
+        case h.IIU.STREAMING:
           return {
-            subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH, icon: null != e && null != e.getIconURL(h.Z) ? (0, s.jsx)(E.Z.Header.Icon, {
-              src: e.getIconURL(h.Z)
+            subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH, icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+              src: e.getIconURL(E.Z)
             }) : null
           };
-        case _.IIU.LISTENING:
-          let i;
-          return i = (0, r.Z)(S) ? (0, s.jsx)(E.Z.Header.Icon, {
-            src: E.Z.Header.Icon.Src.SPOTIFY
-          }) : null != e.getIconURL(h.Z) ? (0, s.jsx)(E.Z.Header.Icon, {
-            src: e.getIconURL(h.Z)
-          }) : (0, s.jsx)(E.Z.Header.Icon, {
+        case h.IIU.LISTENING:
+          let s;
+          return s = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, {
+            src: _.Z.Header.Icon.Src.SPOTIFY
+          }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+            src: e.getIconURL(E.Z)
+          }) : (0, i.jsx)(_.Z.Header.Icon, {
             src: n(211827)
           }), {
             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-              name: S.name
+              name: f.name
             }),
-            icon: i
+            icon: s
           };
-        case _.IIU.WATCHING:
+        case h.IIU.WATCHING:
           return {
-            subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING, icon: null != e && null != e.getIconURL(h.Z) ? (0, s.jsx)(E.Z.Header.Icon, {
-              src: e.getIconURL(h.Z)
+            subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING, icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+              src: e.getIconURL(E.Z)
             }) : null
           };
         default:
@@ -130,29 +130,29 @@ function m(e) {
           }
       }
     }
-    if (0 === T.length) {
+    if (0 === p.length) {
       if (m.length > 0) return {
         subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
         icon: null
       };
-      let e = T[0];
+      let e = p[0];
       if (null != e) {
         let {
           activity: t
         } = e;
         if (null != t) {
-          let e = d.dc(t);
+          let e = u.dc(t);
           if (null != e) return e
         }
-        if (null != t && t.type === _.IIU.LISTENING) return {
+        if (null != t && t.type === h.IIU.LISTENING) return {
           subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
-          icon: (0, s.jsx)(E.Z.Header.Icon, {
-            src: E.Z.Header.Icon.Src.SPOTIFY
+          icon: (0, i.jsx)(_.Z.Header.Icon, {
+            src: _.Z.Header.Icon.Src.SPOTIFY
           })
         }
       }
-    } else if (1 === T.length) {
-      let e = T.find(e => null != e.activity);
+    } else if (1 === p.length) {
+      let e = p.find(e => null != e.activity);
       if (null == e) return {
         subtitle: null,
         icon: null
@@ -160,32 +160,32 @@ function m(e) {
       let {
         activity: t,
         game: n,
-        startedPlayingTime: i
+        startedPlayingTime: s
       } = e;
-      return l()(null != t, "Activity was null somehow"), {
-        subtitle: (0, s.jsx)(c.ZP, {
-          start: i,
+      return a()(null != t, "Activity was null somehow"), {
+        subtitle: (0, i.jsx)(c.ZP, {
+          start: s,
           location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-          messageProps: A
+          messageProps: N
         }),
-        icon: null != n && null != n.getIconURL(h.Z) ? (0, s.jsx)(E.Z.Header.Icon, {
-          src: n.getIconURL(h.Z)
+        icon: null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+          src: n.getIconURL(E.Z)
         }) : null
       }
     }
     return {
       subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
-      icon: (0, s.jsx)(E.Z.Header.Icon, {
-        src: E.Z.Header.Icon.Src.MULTIPLE
+      icon: (0, i.jsx)(_.Z.Header.Icon, {
+        src: _.Z.Header.Icon.Src.MULTIPLE
       })
     }
   }(t);
-  return (0, s.jsx)(E.Z.Header, {
+  return (0, i.jsx)(_.Z.Header, {
     priorityUser: g,
-    guildId: null == T ? void 0 : T.id,
-    title: p,
-    subtitle: N,
-    icon: S,
-    onContextMenu: e => i(e, g.user)
+    guildId: null == p ? void 0 : p.id,
+    title: T,
+    subtitle: C,
+    icon: f,
+    onContextMenu: e => s(e, g.user)
   })
 }

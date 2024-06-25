@@ -1,79 +1,79 @@
 n.d(t, {
   Z: function() {
-    return h
+    return E
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(990547),
-  l = n(481060),
-  a = n(230711),
-  r = n(730417),
+var s = n(990547),
+  a = n(481060),
+  r = n(230711),
+  l = n(730417),
   o = n(981631),
   c = n(921944),
-  u = n(689938),
-  d = n(876860);
-let E = (e, t) => ({
+  d = n(689938),
+  u = n(876860);
+let _ = (e, t) => ({
   body: e.messages.completionTooltip(t),
   imgSrc: e.assets.tooltipSrc,
-  imgStyle: d.defaultDropImage
+  imgStyle: u.defaultDropImage
 });
 
-function h(e) {
+function E(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
-  (0, r.hs)(n, i.ImpressionTypes.POPOUT, i.ImpressionNames.DROPS_QUEST_COMPLETION);
-  let h = (0, r.au)(n);
-  if (null == h) return null;
+  (0, l.hs)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_COMPLETION);
+  let E = (0, l.au)(n);
+  if (null == E) return null;
   let {
-    body: _,
+    body: h,
     imgSrc: I,
     imgStyle: m
-  } = E(h.drop, h.config.streamLengthRequirement), T = () => {
+  } = _(E.drop, E.config.streamLengthRequirement), p = () => {
     t(c.L.DISMISS)
   };
-  return (0, s.jsxs)("div", {
-    className: d.container,
-    children: [(0, s.jsx)("img", {
+  return (0, i.jsxs)("div", {
+    className: u.container,
+    children: [(0, i.jsx)("img", {
       src: I,
       alt: "",
       className: m
-    }), (0, s.jsx)(l.Clickable, {
-      className: d.__invalid_buttonClose,
-      "aria-label": u.Z.Messages.CLOSE,
-      onClick: T,
-      children: (0, s.jsx)(l.CloseSmallIcon, {
+    }), (0, i.jsx)(a.Clickable, {
+      className: u.__invalid_buttonClose,
+      "aria-label": d.Z.Messages.CLOSE,
+      onClick: p,
+      children: (0, i.jsx)(a.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
-        className: d.closeIcon
+        className: u.closeIcon
       })
-    }), (0, s.jsx)(l.Heading, {
-      className: d.title,
+    }), (0, i.jsx)(a.Heading, {
+      className: u.title,
       variant: "heading-md/extrabold",
-      children: u.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER
-    }), (0, s.jsx)(l.Text, {
+      children: d.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER
+    }), (0, i.jsx)(a.Text, {
       variant: "text-sm/medium",
-      className: d.subTitle,
-      children: _
-    }), (0, s.jsx)(l.Button, {
-      color: l.Button.Colors.BRAND_INVERTED,
+      className: u.subTitle,
+      children: h
+    }), (0, i.jsx)(a.Button, {
+      color: a.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        a.Z.open(o.oAB.INVENTORY), t(c.L.PRIMARY)
+        r.Z.open(o.oAB.INVENTORY), t(c.L.PRIMARY)
       },
-      children: u.Z.Messages.REDEEM
-    }), (0, s.jsx)(l.Button, {
-      className: d.linkButtonContainer,
-      innerClassName: d.linkButton,
-      onClick: T,
-      look: l.Button.Looks.LINK,
+      children: d.Z.Messages.REDEEM
+    }), (0, i.jsx)(a.Button, {
+      className: u.linkButtonContainer,
+      innerClassName: u.linkButton,
+      onClick: p,
+      look: a.Button.Looks.LINK,
       fullWidth: !0,
-      color: l.Button.Colors.WHITE,
-      children: u.Z.Messages.NOT_NOW
-    }), (0, s.jsx)("div", {
-      className: d.pointer
+      color: a.Button.Colors.WHITE,
+      children: d.Z.Messages.NOT_NOW
+    }), (0, i.jsx)("div", {
+      className: u.pointer
     })]
   })
 }

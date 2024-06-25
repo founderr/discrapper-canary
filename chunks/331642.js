@@ -1,60 +1,60 @@
 t.d(s, {
   Z: function() {
-    return O
+    return m
   }
 }), t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(442837),
-  l = t(692547),
-  r = t(481060),
-  o = t(596454),
+  a = t(470079),
+  i = t(442837),
+  r = t(692547),
+  o = t(481060),
+  l = t(596454),
   c = t(594174),
-  E = t(74538),
-  d = t(242291),
-  _ = t(706667),
-  T = t(458263),
-  S = t(409673),
-  u = t(603074),
+  d = t(74538),
+  _ = t(242291),
+  E = t(706667),
+  u = t(458263),
+  T = t(409673),
+  S = t(603074),
   I = t(689938),
   N = t(836214);
 
-function A(e) {
+function C(e) {
   let {
     onSelect: s
-  } = e, [t, l] = i.useState(!1), o = (0, a.e7)([c.default], () => c.default.getCurrentUser()), d = E.ZP.canUseCustomCallSounds(o);
+  } = e, [t, r] = a.useState(!1), l = (0, i.e7)([c.default], () => c.default.getCurrentUser()), _ = d.ZP.canUseCustomCallSounds(l);
 
-  function _(e) {
-    d && (l(!1), null == s || s(e))
+  function E(e) {
+    _ && (r(!1), null == s || s(e))
   }
-  return (0, n.jsx)(r.Popout, {
+  return (0, n.jsx)(o.Popout, {
     shouldShow: t,
     position: "left",
-    onRequestClose: () => l(!1),
+    onRequestClose: () => r(!1),
     renderPopout: e => {
       let {
         closePopout: s
       } = e;
-      return (0, n.jsx)(r.Dialog, {
-        children: (0, n.jsx)(u.Z, {
+      return (0, n.jsx)(o.Dialog, {
+        children: (0, n.jsx)(S.Z, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
           channel: null,
           onClose: s,
-          onSelect: _,
-          gridNotice: d ? null : (0, n.jsx)(T.o, {}),
+          onSelect: E,
+          gridNotice: _ ? null : (0, n.jsx)(u.o, {}),
           analyticsSource: "call sounds edit setting"
         })
       })
     },
-    children: e => (0, n.jsx)(S.hU, {
+    children: e => (0, n.jsx)(T.hU, {
       ...e,
       onClick: () => {
-        l(!t)
+        r(!t)
       },
       text: I.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
-      children: (0, n.jsx)(r.PencilIcon, {
+      children: (0, n.jsx)(o.PencilIcon, {
         size: "md",
         color: "currentColor",
         className: N.secondaryIcon
@@ -63,19 +63,19 @@ function A(e) {
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     sound: s
   } = e, {
     previewSound: t
-  } = (0, _.Z)(s, null), i = 0 === (0, d.pI)() ? I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, E.Z)(s, null), a = 0 === (0, _.pI)() ? I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: s.emojiName,
     soundName: s.name
   });
-  return (0, n.jsx)(S.hU, {
+  return (0, n.jsx)(T.hU, {
     onClick: t,
-    text: i,
-    children: (0, n.jsx)(r.VoiceNormalIcon, {
+    text: a,
+    children: (0, n.jsx)(o.VoiceNormalIcon, {
       size: "md",
       color: "currentColor",
       className: N.secondaryIconActive
@@ -83,12 +83,12 @@ function C(e) {
   })
 }
 
-function O(e) {
+function m(e) {
   let {
     sound: s,
     isGlobal: t,
-    onSelect: i
-  } = e, a = null != s, c = null == s ? void 0 : s.emojiId, E = null == s ? void 0 : s.emojiName, d = a && (null != E || null != c), _ = e => (0, n.jsx)(r.Text, {
+    onSelect: a
+  } = e, i = null != s, c = null == s ? void 0 : s.emojiId, d = null == s ? void 0 : s.emojiName, _ = i && (null != d || null != c), E = e => (0, n.jsx)(o.Text, {
     variant: "text-xs/medium",
     color: "header-secondary",
     tag: "span",
@@ -98,35 +98,35 @@ function O(e) {
     className: N.soundButtonSettingContainer,
     children: [(0, n.jsxs)("div", {
       className: N.container,
-      children: [d && (0, n.jsx)(o.Z, {
+      children: [_ && (0, n.jsx)(l.Z, {
         emojiId: c,
-        emojiName: E,
+        emojiName: d,
         className: N.emoji
-      }), (0, n.jsx)(r.Text, {
+      }), (0, n.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "header-primary",
         className: N.soundText,
         children: null == s ? I.Z.Messages.NONE : t ? I.Z.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: s.name,
-          subtextHook: _
+          subtextHook: E
         }) : s.name
-      }), a ? (0, n.jsx)(C, {
+      }), i ? (0, n.jsx)(A, {
         sound: s
-      }) : (0, n.jsx)(r.VoiceNormalIcon, {
+      }) : (0, n.jsx)(o.VoiceNormalIcon, {
         size: "md",
         color: "currentColor",
         className: N.secondaryIconDisabled
       })]
     }), (0, n.jsxs)("div", {
       className: N.container,
-      children: [(0, n.jsx)(A, {
-        onSelect: i
-      }), a && !t && (0, n.jsx)(S.hU, {
-        onClick: () => i(null),
+      children: [(0, n.jsx)(C, {
+        onSelect: a
+      }), i && !t && (0, n.jsx)(T.hU, {
+        onClick: () => a(null),
         text: I.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
-        children: (0, n.jsx)(r.TrashIcon, {
+        children: (0, n.jsx)(o.TrashIcon, {
           size: "md",
-          color: l.Z.unsafe_rawColors.RED_400.css,
+          color: r.Z.unsafe_rawColors.RED_400.css,
           className: N.secondaryIcon
         })
       })]

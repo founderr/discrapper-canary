@@ -1,29 +1,29 @@
 n.d(t, {
   B: function() {
-    return a
+    return l
   },
   W: function() {
     return r
   }
 });
-var s = n(544891),
-  i = n(881052),
-  l = n(981631);
-async function a(e) {
+var i = n(544891),
+  a = n(881052),
+  s = n(981631);
+async function l(e) {
   let {
     channelId: t,
     messageId: n,
-    answerIds: a
+    answerIds: l
   } = e;
   try {
-    await s.tn.put({
-      url: l.ANM.POLL_ANSWERS(t, n),
+    await i.tn.put({
+      url: s.ANM.POLL_ANSWERS(t, n),
       body: {
-        answer_ids: a
+        answer_ids: l
       }
     })
   } catch (e) {
-    throw new i.Hx(e)
+    throw new a.Hx(e)
   }
 }
 async function r(e) {
@@ -32,10 +32,10 @@ async function r(e) {
     messageId: n
   } = e;
   try {
-    await s.tn.post({
-      url: l.ANM.POLL_EXPIRE(t, n)
+    await i.tn.post({
+      url: s.ANM.POLL_EXPIRE(t, n)
     })
   } catch (e) {
-    throw new i.Hx(e)
+    throw new a.Hx(e)
   }
 }

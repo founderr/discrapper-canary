@@ -3,60 +3,60 @@ n.d(t, {
     return w
   }
 }), n(47120);
-var s, i, l = n(735250),
-  a = n(470079),
-  r = n(120356),
-  o = n.n(r),
+var i, s, a = n(735250),
+  r = n(470079),
+  l = n(120356),
+  o = n.n(l),
   c = n(442837),
-  u = n(692547),
-  d = n(481060),
-  E = n(232567),
-  h = n(100527),
-  _ = n(471445),
+  d = n(692547),
+  u = n(481060),
+  _ = n(232567),
+  E = n(100527),
+  h = n(471445),
   I = n(15274),
   m = n(924301),
-  T = n(504160),
+  p = n(504160),
   g = n(151864),
-  p = n(725436),
-  N = n(497656),
-  S = n(554747),
-  C = n(230900),
-  A = n(854698),
-  f = n(703656),
+  T = n(725436),
+  C = n(497656),
+  f = n(554747),
+  S = n(230900),
+  N = n(854698),
+  A = n(703656),
   Z = n(922482),
   L = n(565799),
-  O = n(501655),
-  v = n(427679),
+  v = n(501655),
+  O = n(427679),
   R = n(448206),
-  P = n(484459),
-  x = n(103575),
-  M = n(496675),
-  D = n(594174),
-  b = n(662868),
+  x = n(484459),
+  P = n(103575),
+  b = n(496675),
+  M = n(594174),
+  D = n(662868),
   y = n(981631),
   j = n(765305),
   U = n(689938),
   G = n(846756);
-(i = s || (s = {}))[i.STAGE = 0] = "STAGE", i[i.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", i[i.EVENT_VOICE = 2] = "EVENT_VOICE", i[i.STUDY_ROOM = 3] = "STUDY_ROOM";
+(s = i || (i = {}))[s.STAGE = 0] = "STAGE", s[s.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", s[s.EVENT_VOICE = 2] = "EVENT_VOICE", s[s.STUDY_ROOM = 3] = "STUDY_ROOM";
 
 function w(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, s = (0, N.y)(t.id), i = (0, S.k5)(t.id), r = (0, c.e7)([v.Z], () => v.Z.getStageInstanceByChannel(null == s ? void 0 : s.id), [s]), {
+  } = e, i = (0, C.y)(t.id), s = (0, f.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
     isStageNoticeHidden: w,
     isEventNoticeHidden: k
   } = (0, c.cj)([g.Z], () => ({
     isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({
-      stageId: null == r ? void 0 : r.id
+      stageId: null == l ? void 0 : l.id
     }),
     isEventNoticeHidden: g.Z.isLiveChannelNoticeHidden({
-      eventId: null == i ? void 0 : i.id
+      eventId: null == s ? void 0 : s.id
     })
-  }), [r, i]), B = null == s ? void 0 : s.id, H = (0, c.Wu)([L.Z], () => [...new Set(L.Z.getMutableParticipants(B, O.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([L.Z], () => null != B ? L.Z.getParticipantCount(B, O.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([M.Z], () => M.Z.can(y.Plq.CONNECT, s)), Y = (0, R.Z)(null == s ? void 0 : s.id), z = null == i ? void 0 : i.creator_id, W = (0, c.e7)([D.default], () => D.default.getUser(z), [z]);
-  a.useEffect(() => {
-    null != z && (0, E.PR)(z)
-  }, [z]);
+  }), [l, s]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([L.Z], () => [...new Set(L.Z.getMutableParticipants(B, v.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([L.Z], () => null != B ? L.Z.getParticipantCount(B, v.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([b.Z], () => b.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), W = null == s ? void 0 : s.creator_id, z = (0, c.e7)([M.default], () => M.default.getUser(W), [W]);
+  r.useEffect(() => {
+    null != W && (0, _.PR)(W)
+  }, [W]);
   let {
     noticeType: K,
     title: q,
@@ -67,66 +67,66 @@ function w(e) {
     users: ee,
     overflowUsers: et,
     onClose: en
-  } = a.useMemo(() => (function(e) {
+  } = r.useMemo(() => (function(e) {
     let {
       guildEvent: t,
       stageInstance: n,
-      activeChannel: s,
-      canConnect: i,
-      myRole: a,
-      eventCreator: r,
+      activeChannel: i,
+      canConnect: s,
+      myRole: r,
+      eventCreator: l,
       speakers: o,
       listenerCount: c,
-      isEventNoticeHidden: u,
-      isStageNoticeHidden: E,
-      isStudyRoomNotice: h
-    } = e, I = null != n && null != s && !E, g = null != t ? (0, A.DK)(t) : null;
-    if (h && null != s) {
-      let e = (0, _.KS)(s);
+      isEventNoticeHidden: d,
+      isStageNoticeHidden: _,
+      isStudyRoomNotice: E
+    } = e, I = null != n && null != i && !_, g = null != t ? (0, N.DK)(t) : null;
+    if (E && null != i) {
+      let e = (0, h.KS)(i);
       return {
         noticeType: 3,
-        title: "\uD83D\uDCDA☕ ".concat(s.name),
+        title: "\uD83D\uDCDA☕ ".concat(i.name),
         location: U.Z.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
-        locationIcon: null != e ? (0, l.jsx)(e, {
+        locationIcon: null != e ? (0, a.jsx)(e, {
           size: "xs",
           color: "currentColor",
           className: G.locationIcon
         }) : null,
-        canListenIn: i,
+        canListenIn: s,
         buttonText: U.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA,
         users: [],
         overflowUsers: null
       }
     }
-    if (null == t || u) {
+    if (null == t || d) {
       if (I) {
         let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
-        return (null == a ? void 0 : a.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != a && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
+        return (null == r ? void 0 : r.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
-          location: s.name,
-          locationIcon: (0, l.jsx)(d.StageIcon, {
+          location: i.name,
+          locationIcon: (0, a.jsx)(u.StageIcon, {
             size: "custom",
             color: "currentColor",
             width: 16,
             height: 16,
             className: G.locationIcon
           }),
-          canListenIn: i,
+          canListenIn: s,
           buttonText: e,
-          onClose: () => (0, T.ji)({
+          onClose: () => (0, p.ji)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
-          overflowUsers: c < 1 ? null : (0, l.jsxs)("div", {
+          overflowUsers: c < 1 ? null : (0, a.jsxs)("div", {
             className: G.pill,
-            children: [(0, l.jsx)(d.HeadphonesIcon, {
+            children: [(0, a.jsx)(u.HeadphonesIcon, {
               size: "custom",
               color: "currentColor",
               width: 12,
               height: 12,
               className: G.pillIcon
-            }), (0, l.jsx)(d.Text, {
+            }), (0, a.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: G.pillLabel,
@@ -138,32 +138,32 @@ function w(e) {
     } else {
       if (t.entity_type === j.WX.STAGE_INSTANCE && I) {
         let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
-        return (null == a ? void 0 : a.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != a && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
+        return (null == r ? void 0 : r.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
-          location: s.name,
-          locationIcon: (0, l.jsx)(d.StageIcon, {
+          location: i.name,
+          locationIcon: (0, a.jsx)(u.StageIcon, {
             size: "custom",
             color: "currentColor",
             width: 16,
             height: 16,
             className: G.locationIcon
           }),
-          canListenIn: i,
+          canListenIn: s,
           buttonText: e,
-          onClose: () => (0, T.ji)({
+          onClose: () => (0, p.ji)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
-          overflowUsers: c < 1 ? null : (0, l.jsxs)("div", {
+          overflowUsers: c < 1 ? null : (0, a.jsxs)("div", {
             className: G.pill,
-            children: [(0, l.jsx)(d.HeadphonesIcon, {
+            children: [(0, a.jsx)(u.HeadphonesIcon, {
               size: "custom",
               color: "currentColor",
               width: 12,
               height: 12,
               className: G.pillIcon
-            }), (0, l.jsx)(d.Text, {
+            }), (0, a.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: G.pillLabel,
@@ -173,7 +173,7 @@ function w(e) {
         }
       }
       if (t.entity_type === j.WX.EXTERNAL) {
-        let e = (0, C.cS)(t);
+        let e = (0, S.cS)(t);
         if (null == e) return {
           noticeType: null
         };
@@ -181,8 +181,8 @@ function w(e) {
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, p.m)(e, !0),
-          locationIcon: (0, l.jsx)(d.LocationIcon, {
+          location: (0, T.m)(e, !0),
+          locationIcon: (0, a.jsx)(u.LocationIcon, {
             size: "custom",
             color: "currentColor",
             width: 16,
@@ -191,19 +191,19 @@ function w(e) {
           }),
           canListenIn: !1,
           buttonText: U.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-          onClose: () => (0, T.ji)({
+          onClose: () => (0, p.ji)({
             eventId: null == t ? void 0 : t.id
           }),
-          users: null == r ? [] : [r],
-          overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
+          users: null == l ? [] : [l],
+          overflowUsers: n < 1 ? null : (0, a.jsxs)("div", {
             className: G.pill,
-            children: [(0, l.jsx)(d.StarIcon, {
+            children: [(0, a.jsx)(u.StarIcon, {
               size: "custom",
               color: "currentColor",
               width: 12,
               height: 12,
               className: G.pillIcon
-            }), (0, l.jsx)(d.Text, {
+            }), (0, a.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: G.pillLabel,
@@ -211,33 +211,33 @@ function w(e) {
             })]
           })
         }
-      } else if (t.entity_type === j.WX.VOICE && null != s) {
-        let e = (0, _.KS)(s),
+      } else if (t.entity_type === j.WX.VOICE && null != i) {
+        let e = (0, h.KS)(i),
           n = m.ZP.getUserCount(t.id, g);
         return {
           noticeType: 2,
           title: t.name,
-          location: s.name,
-          locationIcon: null != e ? (0, l.jsx)(e, {
+          location: i.name,
+          locationIcon: null != e ? (0, a.jsx)(e, {
             size: "xs",
             color: "currentColor",
             className: G.locationIcon
           }) : null,
-          canListenIn: i,
+          canListenIn: s,
           buttonText: U.Z.Messages.GUILD_EVENT_JOIN,
-          onClose: () => (0, T.ji)({
+          onClose: () => (0, p.ji)({
             eventId: null == t ? void 0 : t.id
           }),
-          users: null == r ? [] : [r],
-          overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
+          users: null == l ? [] : [l],
+          overflowUsers: n < 1 ? null : (0, a.jsxs)("div", {
             className: G.pill,
-            children: [(0, l.jsx)(d.StarIcon, {
+            children: [(0, a.jsx)(u.StarIcon, {
               size: "custom",
               color: "currentColor",
               width: 12,
               height: 12,
               className: G.pillIcon
-            }), (0, l.jsx)(d.Text, {
+            }), (0, a.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: G.pillLabel,
@@ -251,84 +251,84 @@ function w(e) {
       noticeType: null
     }
   })({
-    guildEvent: i,
-    stageInstance: r,
-    activeChannel: s,
+    guildEvent: s,
+    stageInstance: l,
+    activeChannel: i,
     canConnect: F,
     myRole: Y,
-    eventCreator: W,
+    eventCreator: z,
     speakers: H,
     listenerCount: V,
     isEventNoticeHidden: k,
     isStageNoticeHidden: w,
     isStudyRoomNotice: n
-  }), [i, r, s, F, Y, W, H, V, k, w, n]);
-  return null == K ? null : (0, l.jsxs)("div", {
+  }), [s, l, i, F, Y, z, H, V, k, w, n]);
+  return null == K ? null : (0, a.jsxs)("div", {
     className: G.container,
-    children: [null != en ? (0, l.jsx)(d.Clickable, {
+    children: [null != en ? (0, a.jsx)(u.Clickable, {
       onClick: en,
       className: G.close,
       "aria-label": U.Z.Messages.DISMISS,
-      children: (0, l.jsx)(d.CloseSmallIcon, {
+      children: (0, a.jsx)(u.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
         className: G.closeIcon
       })
-    }) : null, (0, l.jsxs)("div", {
+    }) : null, (0, a.jsxs)("div", {
       className: G.header,
-      children: [(0, l.jsx)(b.Z, {
-        color: u.Z.unsafe_rawColors.GREEN_230.css,
+      children: [(0, a.jsx)(D.Z, {
+        color: d.Z.unsafe_rawColors.GREEN_230.css,
         width: 16,
         height: 16
-      }), (0, l.jsx)(d.Text, {
+      }), (0, a.jsx)(u.Text, {
         variant: "text-xs/semibold",
         color: "text-positive",
         children: U.Z.Messages.LIVE
       })]
-    }), (ee.length > 0 || null != et) && (0, l.jsxs)("div", {
+    }), (ee.length > 0 || null != et) && (0, a.jsxs)("div", {
       className: G.participants,
-      children: [ee.map(e => (0, l.jsx)(d.Popout, {
-        preload: () => (0, P.W)(e, {
+      children: [ee.map(e => (0, a.jsx)(u.Popout, {
+        preload: () => (0, x.W)(e, {
           guildId: t.id
         }),
-        renderPopout: n => (0, l.jsx)(x.Z, {
+        renderPopout: n => (0, a.jsx)(P.Z, {
           ...n,
           location: "LiveChannelNotice",
           userId: e.id,
           guildId: t.id,
-          newAnalyticsLocations: [h.Z.AVATAR]
+          newAnalyticsLocations: [E.Z.AVATAR]
         }),
         position: "right",
-        children: n => (0, l.jsx)(d.Avatar, {
+        children: n => (0, a.jsx)(u.Avatar, {
           ...n,
           src: e.getAvatarURL(t.id, 24),
           "aria-label": e.username,
-          size: d.AvatarSizes.SIZE_24,
+          size: u.AvatarSizes.SIZE_24,
           className: G.avatar
         })
       }, e.id)), et]
-    }), (0, l.jsx)(d.Text, {
+    }), (0, a.jsx)(u.Text, {
       variant: "text-md/medium",
       color: "header-primary",
       className: o()(G.title, G.live),
       children: q
-    }), (0, l.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: G.locationContainer,
-      children: [X, (0, l.jsx)(d.Text, {
+      children: [X, (0, a.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         className: G.location,
         children: Q
       })]
-    }), J || 1 === K ? (0, l.jsx)(d.Button, {
-      size: d.Button.Sizes.SMALL,
-      color: d.Button.Colors.GREEN,
+    }), J || 1 === K ? (0, a.jsx)(u.Button, {
+      size: u.Button.Sizes.SMALL,
+      color: u.Button.Colors.GREEN,
       onClick: () => {
-        if (J) null != s && null != s.getGuildId() && ((0, Z.Cq)(s), (0, f.XU)(s.getGuildId(), s.id));
+        if (J) null != i && null != i.getGuildId() && ((0, Z.Cq)(i), (0, A.XU)(i.getGuildId(), i.id));
         else {
-          if (null == i) return;
+          if (null == s) return;
           (0, I.bO)({
-            eventId: i.id
+            eventId: s.id
           })
         }
       },

@@ -26,10 +26,10 @@ function f(e) {
   } = n, {
     loading: g,
     note: I
-  } = (0, u.Z)(_), m = !g && null != I && I.length > 0, N = f === Z.IlC.POPOUT, R = i.useContext(c.AnalyticsContext), {
+  } = (0, u.Z)(_), m = !g && null != I && I.length > 0, R = f === Z.IlC.POPOUT, N = i.useContext(c.AnalyticsContext), {
     analyticsLocations: C
   } = (0, r.ZP)();
-  return _ === d.default.getId() || o.Z.hidePersonalInformation || N ? null : (0, l.jsx)(a.MenuItem, {
+  return _ === d.default.getId() || o.Z.hidePersonalInformation || R ? null : (0, l.jsx)(a.MenuItem, {
     id: "note",
     label: g ? M.Z.Messages.LOADING_NOTE : m ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
     action: () => {
@@ -39,7 +39,7 @@ function f(e) {
         subsection: E.Tb.NOTE,
         guildId: t,
         sourceAnalyticsLocations: C,
-        analyticsLocation: R.location
+        analyticsLocation: N.location
       })
     }
   })

@@ -3,11 +3,11 @@ n.d(t, {
     return h
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(442837),
+var a = n(120356),
+  l = n.n(a),
+  s = n(442837),
   r = n(481060),
   o = n(607070),
   c = n(254238),
@@ -17,25 +17,25 @@ var i = n(120356),
 function h(e) {
   let {
     height: t
-  } = e, i = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
-  return (0, l.jsxs)("div", {
+  } = e, a = (0, s.e7)([o.Z], () => o.Z.useReducedMotion);
+  return (0, i.jsxs)("div", {
     className: d.root,
-    children: [(0, l.jsx)(r.LottieAnimation, {
+    children: [(0, i.jsx)(r.LottieAnimation, {
       importData: () => n.e("70036").then(n.t.bind(n, 141923, 19)).then(e => {
         let {
           default: t
         } = e;
         return t
       }),
-      shouldAnimate: !i,
-      className: s()(d.art, {
+      shouldAnimate: !a,
+      className: l()(d.art, {
         [d.hidden]: t <= 280
       })
-    }), (0, l.jsx)(r.Heading, {
+    }), (0, i.jsx)(r.Heading, {
       className: d.header,
       variant: "heading-md/bold",
       children: u.Z.Messages.PLAYSTATION_TRANSFERRING
-    }), (0, l.jsx)(r.Text, {
+    }), (0, i.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: u.Z.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({

@@ -17,14 +17,14 @@ var i, r, s, o, a = n(392711),
   I = n(853856),
   T = n(846787),
   h = n(131704),
-  S = n(700785),
-  f = n(314897),
-  N = n(592125),
-  A = n(271383),
+  f = n(700785),
+  S = n(314897),
+  A = n(592125),
+  N = n(271383),
   m = n(430824),
   O = n(496675),
-  R = n(699516),
-  p = n(594174),
+  p = n(699516),
+  R = n(594174),
   g = n(981631),
   C = n(689938);
 let v = "SELECTABLE",
@@ -44,8 +44,8 @@ let v = "SELECTABLE",
     })
   },
   w = k(g.kod),
-  B = [],
-  x = {};
+  x = [],
+  B = {};
 
 function k(e) {
   return {
@@ -81,7 +81,7 @@ function H(e) {
           let e = {},
             t = I.Z.getFavoriteChannels();
           for (let n in t) {
-            let i = N.Z.getChannel(n);
+            let i = A.Z.getChannel(n);
             if (null == i) continue;
             let r = t[n],
               s = (0, T.r)(t, r, i);
@@ -93,7 +93,7 @@ function H(e) {
           return e
         }();
         let t = {},
-          n = N.Z.getMutableGuildChannelsForGuild(e);
+          n = A.Z.getMutableGuildChannelsForGuild(e);
         for (let e in n) t[e] = {
           channel: n[e],
           comparator: n[e].position
@@ -114,7 +114,7 @@ function H(e) {
       e[v].forEach(e => {
         let {
           channel: i
-        } = e, r = (0, E.F6)(i, p.default, R.Z), s = Object.prototype.hasOwnProperty.call(n, r) ? n[r] : null;
+        } = e, r = (0, E.F6)(i, R.default, p.Z), s = Object.prototype.hasOwnProperty.call(n, r) ? n[r] : null;
         null == s ? n[r] = 1 : (n[r] = s + 1, r += "~".concat(s)), t[i.id] = {
           id: i.id,
           name: r
@@ -141,7 +141,7 @@ function H(e) {
           of s)
           if (W(e, t)) return !0;
         return !1
-      })(p.default.getCurrentUser(), e) ? y[e] = !0: delete y[e]
+      })(R.default.getCurrentUser(), e) ? y[e] = !0: delete y[e]
     }(e), n
 }
 
@@ -173,7 +173,7 @@ function j(e) {
 }
 
 function W(e, t) {
-  return u.Db(S.uB({
+  return u.Db(f.uB({
     user: e,
     context: t,
     checkElevated: !1
@@ -193,7 +193,7 @@ function z() {
 }
 class q extends(i = _.ZP.Store) {
   initialize() {
-    this.waitFor(m.Z, A.ZP, N.Z, O.Z, f.default, d.Z, I.Z), this.syncWith([I.Z], z)
+    this.waitFor(m.Z, N.ZP, A.Z, O.Z, S.default, d.Z, I.Z), this.syncWith([I.Z], z)
   }
   getAllGuilds() {
     return M
@@ -248,7 +248,7 @@ class q extends(i = _.ZP.Store) {
         channel: t
       } = e;
       return t.id
-    })) && void 0 !== n ? n : B
+    })) && void 0 !== n ? n : x
   }
   hasSelectableChannel(e, t) {
     return this.getSelectableChannelIds(e).includes(t)
@@ -264,7 +264,7 @@ class q extends(i = _.ZP.Store) {
   }
   getTextChannelNameDisambiguations(e) {
     var t;
-    return null != e && null !== (t = P[e]) && void 0 !== t ? t : x
+    return null != e && null !== (t = P[e]) && void 0 !== t ? t : B
   }
 }
 o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {
@@ -299,7 +299,7 @@ o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r
       guildId: t,
       user: n
     } = e;
-    if (f.default.getId() !== n.id) return !1;
+    if (S.default.getId() !== n.id) return !1;
     M[t] = void 0, t === D && H(t)
   },
   CHANNEL_CREATE: Y,
@@ -325,10 +325,10 @@ o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r
     let {
       channelId: t
     } = e;
-    return null == t && null != U ? K(N.Z.getChannel(U), null) : K(N.Z.getChannel(t), t)
+    return null == t && null != U ? K(A.Z.getChannel(U), null) : K(A.Z.getChannel(t), t)
   },
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-    let t = N.Z.getBasicChannel(e.id);
+    let t = A.Z.getBasicChannel(e.id);
     null != t && null != t.guild_id && H(t.guild_id)
   },
   VOICE_STATE_UPDATES: function(e) {
@@ -340,7 +340,7 @@ o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r
         channelId: n,
         sessionId: i
       } = t;
-      return f.default.getSessionId() !== i ? e : K(N.Z.getChannel(n), n) || e
+      return S.default.getSessionId() !== i ? e : K(A.Z.getChannel(n), n) || e
     }, !1)
   }
 })

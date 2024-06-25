@@ -16,12 +16,12 @@ t.Z = e => {
     height: c = 32,
     shouldAnimate: d = !0,
     isLocked: E = !1
-  } = e, [I, T] = r.useState(!1), h = n.getIconURL(32, d && s), S = () => T(!0), f = () => T(!1);
+  } = e, [I, T] = r.useState(!1), h = n.getIconURL(32, d && s), f = () => T(!0), S = () => T(!1);
   return (0, i.jsxs)("div", {
-    onFocus: S,
-    onBlur: f,
-    onMouseOver: S,
-    onMouseLeave: f,
+    onFocus: f,
+    onBlur: S,
+    onMouseOver: f,
+    onMouseLeave: S,
     children: [(0, i.jsx)(l.ZP, {
       className: o()(u.mask, t),
       mask: s || I ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,

@@ -1,20 +1,20 @@
 n(47120);
-var s, i, l = n(470079),
-  a = n(442837),
-  r = n(846027),
+var i, s, a = n(470079),
+  r = n(442837),
+  l = n(846027),
   o = n(230711),
   c = n(888369),
-  u = n(131951),
-  d = n(292959),
-  E = n(19780),
-  h = n(699516),
-  _ = n(606304),
+  d = n(131951),
+  u = n(292959),
+  _ = n(19780),
+  E = n(699516),
+  h = n(606304),
   I = n(358085),
   m = n(998502),
-  T = n(981631);
-(i = s || (s = {})).DEFAULT = "DEFAULT", i.UNREAD = "UNREAD", i.CONNECTED = "CONNECTED", i.SPEAKING = "SPEAKING", i.MUTED = "MUTED", i.DEAFENED = "DEAFENED";
+  p = n(981631);
+(s = i || (i = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
 let g = (0, I.isMac)() ? null : "DEFAULT";
-class p extends l.PureComponent {
+class T extends a.PureComponent {
   componentDidMount() {
     m.ZP.setSystemTrayIcon(this.getIcon())
   }
@@ -28,37 +28,37 @@ class p extends l.PureComponent {
     return null
   }
   constructor(...e) {
-    var t, n, s;
-    super(...e), t = this, n = "getIcon", s = () => {
+    var t, n, i;
+    super(...e), t = this, n = "getIcon", i = () => {
       let {
         deafened: e,
         muted: t,
         speaking: n,
-        connected: s,
-        unread: i
-      } = this.props, l = g;
-      return (0, I.isMac)() && !s ? l : (0, I.isLinux)() || !s ? (i && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
+        connected: i,
+        unread: s
+      } = this.props, a = g;
+      return (0, I.isMac)() && !i ? a : (0, I.isLinux)() || !i ? (s && (a = "UNREAD"), a) : a = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
     }, n in t ? Object.defineProperty(t, n, {
-      value: s,
+      value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = s
+    }) : t[n] = i
   }
 }
-let N = () => null;
-I.isPlatformEmbedded && (m.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.Z.toggleSelfMute()), m.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.Z.toggleSelfDeaf()), m.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-  o.Z.open(T.oAB.VOICE)
-}), N = a.ZP.connectStores([E.Z, u.Z, _.Z, c.default, h.Z, d.Z], () => {
+let C = () => null;
+I.isPlatformEmbedded && (m.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.Z.toggleSelfMute()), m.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.Z.toggleSelfDeaf()), m.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
+  o.Z.open(p.oAB.VOICE)
+}), C = r.ZP.connectStores([_.Z, d.Z, h.Z, c.default, E.Z, u.Z], () => {
   let e = c.default.getTotalMentionCount(),
     t = c.default.hasAnyUnread(),
-    n = h.Z.getPendingCount(),
-    s = d.Z.getDisableUnreadBadge();
+    n = E.Z.getPendingCount(),
+    i = u.Z.getDisableUnreadBadge();
   return {
-    connected: E.Z.isConnected(),
-    speaking: _.Z.isCurrentUserSpeaking(),
-    muted: u.Z.isSelfMute() || u.Z.isSelfMutedTemporarily(),
-    deafened: u.Z.isSelfDeaf(),
-    unread: !s && !!(t || e + n > 0)
+    connected: _.Z.isConnected(),
+    speaking: h.Z.isCurrentUserSpeaking(),
+    muted: d.Z.isSelfMute() || d.Z.isSelfMutedTemporarily(),
+    deafened: d.Z.isSelfDeaf(),
+    unread: !i && !!(t || e + n > 0)
   }
-})(p)), t.Z = N
+})(T)), t.Z = C

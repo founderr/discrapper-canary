@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return p
   }
 }), n(47120);
 var o = n(735250),
@@ -9,61 +9,61 @@ var o = n(735250),
   a = n(481060),
   i = n(933557),
   r = n(592125),
-  u = n(285952),
-  c = n(153124),
-  d = n(853856),
+  c = n(285952),
+  d = n(153124),
+  u = n(853856),
   h = n(117984),
   x = n(689938),
-  C = n(987642);
+  m = n(987642);
 
-function N(e) {
+function p(e) {
   let {
     channelId: t,
     onClose: n,
-    transitionState: N,
-    heading: j,
-    formTitle: m,
-    allowReset: p = !1
-  } = e, k = (0, c.Dt)(), E = (0, l.e7)([r.Z], () => r.Z.getChannel(t)), I = (0, i.ZP)(E), M = d.Z.getNickname(t), [f, g] = s.useState(null != M ? M : "");
+    transitionState: p,
+    heading: C,
+    formTitle: N,
+    allowReset: f = !1
+  } = e, j = (0, d.Dt)(), k = (0, l.e7)([r.Z], () => r.Z.getChannel(t)), E = (0, i.ZP)(k), I = u.Z.getNickname(t), [M, b] = s.useState(null != I ? I : "");
   return (0, o.jsx)("form", {
     onSubmit: function(e) {
-      e.preventDefault(), (0, h.UT)(t, f), n()
+      e.preventDefault(), (0, h.UT)(t, M), n()
     },
     children: (0, o.jsxs)(a.ModalRoot, {
-      transitionState: N,
-      "aria-labelledby": k,
+      transitionState: p,
+      "aria-labelledby": j,
       children: [(0, o.jsxs)(a.ModalHeader, {
         separator: !0,
-        justify: u.Z.Justify.BETWEEN,
+        justify: c.Z.Justify.BETWEEN,
         children: [(0, o.jsx)(a.Heading, {
-          id: k,
+          id: j,
           variant: "heading-lg/semibold",
-          children: j
+          children: C
         }), (0, o.jsx)(a.ModalCloseButton, {
           onClick: n
         })]
       }), (0, o.jsxs)(a.ModalContent, {
         children: [(0, o.jsx)(a.FormItem, {
-          className: C.name,
-          title: m,
+          className: m.name,
+          title: N,
           children: (0, o.jsx)(a.TextInput, {
-            value: f,
-            onChange: g,
-            placeholder: null != I ? I : void 0,
+            value: M,
+            onChange: b,
+            placeholder: null != E ? E : void 0,
             maxLength: 100,
             autoFocus: !0
           })
-        }), p && null != M ? (0, o.jsx)(a.Button, {
+        }), f && null != I ? (0, o.jsx)(a.Button, {
           look: a.Button.Looks.LINK,
           color: a.Button.Colors.LINK,
           size: a.Button.Sizes.NONE,
           onClick: function() {
             (0, h.UT)(t, null), n()
           },
-          className: C.reset,
+          className: m.reset,
           children: x.Z.Messages.RESET_NICKNAME
         }) : null, (0, o.jsx)(a.Text, {
-          className: C.description,
+          className: m.description,
           variant: "text-sm/normal",
           color: "header-secondary",
           children: x.Z.Messages.FAVORITES_SET_NICKNAME_DESCRIPTION
@@ -71,7 +71,7 @@ function N(e) {
       }), (0, o.jsxs)(a.ModalFooter, {
         children: [(0, o.jsx)(a.Button, {
           type: "submit",
-          children: j
+          children: C
         }), (0, o.jsx)(a.Button, {
           onClick: n,
           look: a.Button.Looks.LINK,

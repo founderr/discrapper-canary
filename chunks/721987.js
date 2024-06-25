@@ -21,18 +21,18 @@ function c(e) {
     pendingThemeColors: I,
     pendingAvatar: T,
     isPreview: h
-  } = e, S = (0, s.ZP)(), f = (0, r.e7)([o.Z], () => o.Z.syncProfileThemeWithUserTheme), N = null != T ? T : null == d ? void 0 : d.getAvatarURL(null == E ? void 0 : E.guildId, 80), A = (0, l.Sl)(_.Ilk.PRIMARY_530).hex, [m, O] = (0, a.Cf)(N, A, !1);
+  } = e, f = (0, s.ZP)(), S = (0, r.e7)([o.Z], () => o.Z.syncProfileThemeWithUserTheme), A = null != T ? T : null == d ? void 0 : d.getAvatarURL(null == E ? void 0 : E.guildId, 80), N = (0, l.Sl)(_.Ilk.PRIMARY_530).hex, [m, O] = (0, a.Cf)(A, N, !1);
   if (!(null == E ? void 0 : E.canEditThemes) && !h) return {
-    theme: S,
+    theme: f,
     primaryColor: null,
     secondaryColor: null
   };
-  let R = null == E ? void 0 : E.getPreviewThemeColors(I),
-    p = null !== (t = null == R ? void 0 : R[0]) && void 0 !== t ? t : (0, i._i)(m),
-    g = null !== (n = null == R ? void 0 : R[1]) && void 0 !== n ? n : (0, i._i)(O);
+  let p = null == E ? void 0 : E.getPreviewThemeColors(I),
+    R = null !== (t = null == p ? void 0 : p[0]) && void 0 !== t ? t : (0, i._i)(m),
+    g = null !== (n = null == p ? void 0 : p[1]) && void 0 !== n ? n : (0, i._i)(O);
   return {
-    theme: f ? S : null !== (c = (0, u.V3)(p)) && void 0 !== c ? c : S,
-    primaryColor: p,
+    theme: S ? f : null !== (c = (0, u.V3)(R)) && void 0 !== c ? c : f,
+    primaryColor: R,
     secondaryColor: g
   }
 }

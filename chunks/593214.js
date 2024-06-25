@@ -1,67 +1,67 @@
 t.d(n, {
   Mt: function() {
-    return x
+    return v
   },
   li: function() {
-    return f
+    return h
   },
   s4: function() {
-    return m
+    return f
   },
   up: function() {
-    return g
+    return x
   },
   zv: function() {
-    return v
+    return g
   }
 }), t(47120), t(653041);
-var l = t(470079),
-  r = t(106351),
-  i = t(442837);
+var r = t(470079),
+  i = t(106351),
+  o = t(442837);
 t(592125);
-var o = t(984933),
+var l = t(984933),
   a = t(914010),
-  s = t(594174);
+  d = t(594174);
 t(709054);
-var d = t(853856),
+var c = t(853856),
   u = t(362658),
-  c = t(434065),
-  h = t(981631);
+  s = t(434065),
+  m = t(981631);
 
-function f(e) {
+function h(e) {
   let {
     favoritesEnabled: n,
     hasStaffPrivileges: t
-  } = (0, u.z)("useCanFavoriteChannel"), l = (0, i.e7)([d.Z], () => d.Z.isFavorite(e.id)), r = (0, i.e7)([s.default], () => s.default.getCurrentUser()), o = !(e.isDM() || e.isThread()) || t && (null == r ? void 0 : r.isStaff()) === !0;
-  return n && !__OVERLAY__ && !l && o
+  } = (0, u.z)("useCanFavoriteChannel"), r = (0, o.e7)([c.Z], () => c.Z.isFavorite(e.id)), i = (0, o.e7)([d.default], () => d.default.getCurrentUser()), l = !(e.isDM() || e.isThread()) || t && (null == i ? void 0 : i.isStaff()) === !0;
+  return n && !__OVERLAY__ && !r && l
 }
 
-function m(e) {
-  return (0, i.e7)([d.Z], () => d.Z.getFavorite(e))
+function f(e) {
+  return (0, o.e7)([c.Z], () => c.Z.getFavorite(e))
 }
 
-function v() {
-  return (0, i.e7)([o.ZP], () => o.ZP.getChannels(h.I_8))[r.d.GUILD_CATEGORY].map(e => ({
+function g() {
+  return (0, o.e7)([l.ZP], () => l.ZP.getChannels(m.I_8))[i.d.GUILD_CATEGORY].map(e => ({
     id: "null" === e.channel.id ? null : e.channel.id,
     name: e.channel.name
   }))
 }
 
-function x() {
-  return (0, i.e7)([a.Z], () => a.Z.getGuildId()) === h.I_8
+function v() {
+  return (0, o.e7)([a.Z], () => a.Z.getGuildId()) === m.I_8
 }
 
-function g() {
+function x() {
   let {
     isFavoritesPerk: e
-  } = (0, u.z)("useFavoriteAdded"), n = (0, c.r)(), t = l.useCallback(() => {
+  } = (0, u.z)("useFavoriteAdded"), n = (0, s.r)(), t = r.useCallback(() => {
     e && n.notifyFavoriteAdded()
-  }, [n, e]), r = l.useCallback(() => {
+  }, [n, e]), i = r.useCallback(() => {
     e && n.clearFavoriteAdded()
   }, [n, e]);
   return {
     favoriteAdded: n.favoriteAdded,
     notifyFavoriteAdded: t,
-    clearFavoriteAdded: r
+    clearFavoriteAdded: i
   }
 }

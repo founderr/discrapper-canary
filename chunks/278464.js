@@ -1,19 +1,19 @@
 n.d(t, {
   n: function() {
-    return r
+    return a
   }
 });
-var l = n(266067),
-  i = n(905423),
-  s = n(981631);
+var i = n(266067),
+  l = n(905423),
+  r = n(981631);
 
-function r() {
-  let e = (0, i.Z)(e => e.guildId),
+function a() {
+  let e = (0, l.Z)(e => e.guildId),
     {
       pathname: t
-    } = (0, l.TH)(),
-    n = t.startsWith(s.Z5c.GUILD_DISCOVERY),
-    r = t.startsWith(s.Z5c.GUILD_MEMBER_VERIFICATION("")),
-    a = t.startsWith(s.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
-  return null == e && !(n || r || a)
+    } = (0, i.TH)(),
+    n = t.startsWith(r.Z5c.GUILD_DISCOVERY),
+    a = t.startsWith(r.Z5c.GUILD_MEMBER_VERIFICATION("")),
+    s = t.startsWith(r.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+  return null == e && !(n || a || s)
 }

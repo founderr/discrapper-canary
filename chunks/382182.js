@@ -4,16 +4,16 @@ n.d(t, {
     return h
   },
   P9: function() {
-    return S
-  },
-  h_: function() {
-    return A
-  },
-  p9: function() {
     return f
   },
-  wq: function() {
+  h_: function() {
     return N
+  },
+  p9: function() {
+    return S
+  },
+  wq: function() {
+    return A
   }
 }), n(653041), n(47120);
 var i, r, s = n(442837),
@@ -37,7 +37,7 @@ function h(e, t, n) {
   return (!e.isGuildStageVoice() || !(o <= 0)) && (!r || !!T(e, n)) && !!n.can(E.Plq.STREAM, e) && null != s && s.afkChannelId !== e.id && !0
 }
 
-function S(e) {
+function f(e) {
   switch (e) {
     case 0:
       return I.Z.Messages.CONSOLE_STREAM_UNAVAILABLE;
@@ -50,7 +50,7 @@ function S(e) {
   }
 }
 
-function f(e, t, n, i, r) {
+function S(e, t, n, i, r) {
   let s;
   if (null == e) return [!1, 2];
   let o = t.isInChannel(e.id),
@@ -60,11 +60,11 @@ function f(e, t, n, i, r) {
   return _ ? s = 0 : u || o ? l && !o && (s = 1) : s = 2, [!__OVERLAY__ && !_ && (o || u && !l), s]
 }
 
-function N(e) {
-  return (0, s.Wu)([c.Z, u.Z, _.Z, o.Z], () => f(e, c.Z, u.Z, _.Z, o.Z))
+function A(e) {
+  return (0, s.Wu)([c.Z, u.Z, _.Z, o.Z], () => S(e, c.Z, u.Z, _.Z, o.Z))
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   let i = [];
   for (let {
       channel: r

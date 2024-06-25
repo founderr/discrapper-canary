@@ -3,54 +3,54 @@ n.d(t, {
     return g
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  l = n(704215),
-  a = n(481060),
-  r = n(410575),
+var s = n(442837),
+  a = n(704215),
+  r = n(481060),
+  l = n(410575),
   o = n(100527),
   c = n(906732),
-  u = n(243778),
-  d = n(352455),
-  E = n(480294),
-  h = n(153124),
-  _ = n(791359),
+  d = n(243778),
+  u = n(352455),
+  _ = n(480294),
+  E = n(153124),
+  h = n(791359),
   I = n(981631),
   m = n(689938),
-  T = n(966073);
+  p = n(966073);
 
 function g() {
   let {
     analyticsLocations: e
-  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, i.e7)([E.Z], () => E.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [l.z.NOW_PLAYING_CONSENT_CARD], n = (0, h.Dt)();
-  return (0, s.jsx)(c.Gt, {
+  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, s.e7)([_.Z], () => _.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [a.z.NOW_PLAYING_CONSENT_CARD], n = (0, E.Dt)();
+  return (0, i.jsx)(c.Gt, {
     value: e,
-    children: (0, s.jsx)(r.Z, {
+    children: (0, i.jsx)(l.Z, {
       section: I.jXE.ACTIVE_NOW_COLUMN,
-      children: (0, s.jsx)("aside", {
-        className: T.container,
+      children: (0, i.jsx)("aside", {
+        className: p.container,
         "aria-labelledby": n,
-        children: (0, s.jsxs)(a.Scroller, {
-          className: T.scroller,
-          children: [(0, s.jsx)(a.Heading, {
+        children: (0, i.jsxs)(r.Scroller, {
+          className: p.scroller,
+          children: [(0, i.jsx)(r.Heading, {
             variant: "heading-lg/semibold",
-            className: T.header,
+            className: p.header,
             id: n,
             children: m.Z.Messages.GAME_FEED_CURRENT_HEADER_TITLE
-          }), (0, s.jsx)(u.Z, {
+          }), (0, i.jsx)(d.Z, {
             contentTypes: t,
             children: e => {
               let {
                 visibleContent: t,
                 markAsDismissed: n
               } = e;
-              if (t === l.z.NOW_PLAYING_CONSENT_CARD) return (0, s.jsx)(d.Z, {
-                className: T.__invalid_consentCard,
+              if (t === a.z.NOW_PLAYING_CONSENT_CARD) return (0, i.jsx)(u.Z, {
+                className: p.__invalid_consentCard,
                 markAsDismissed: n
               })
             }
-          }), (0, s.jsx)(_.Z, {})]
+          }), (0, i.jsx)(h.Z, {})]
         })
       })
     })

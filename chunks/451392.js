@@ -1,64 +1,64 @@
 t.d(s, {
   Z: function() {
-    return A
+    return C
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(498607),
-  r = t.n(l),
-  o = t(692547),
+var a = t(120356),
+  i = t.n(a),
+  r = t(498607),
+  o = t.n(r),
+  l = t(692547),
   c = t(481060),
-  E = t(220082),
-  d = t(318661),
-  _ = t(721987),
-  T = t(74538),
-  S = t(193528),
-  u = t(993413),
+  d = t(220082),
+  _ = t(318661),
+  E = t(721987),
+  u = t(74538),
+  T = t(193528),
+  S = t(993413),
   I = t(689938),
   N = t(983138);
 
-function A(e) {
+function C(e) {
   let {
     user: s,
     pendingAvatar: t,
-    pendingColors: i,
-    onThemeColorsChange: l,
-    preventDisabled: A,
-    guildId: C,
-    className: O,
-    showPremiumIcon: m = !0,
-    showResetThemeButton: h = !1,
-    forcedDivider: g
-  } = e, R = (0, d.ZP)(s.id, C), {
-    primaryColor: M,
+    pendingColors: a,
+    onThemeColorsChange: r,
+    preventDisabled: C,
+    guildId: A,
+    className: m,
+    showPremiumIcon: O = !0,
+    showResetThemeButton: g = !1,
+    forcedDivider: h
+  } = e, R = (0, _.ZP)(s.id, A), {
+    primaryColor: p,
     secondaryColor: x
-  } = (0, _.Z)({
+  } = (0, E.Z)({
     user: s,
     displayProfile: R,
-    pendingThemeColors: i,
+    pendingThemeColors: a,
     isPreview: !0
-  }), D = T.ZP.canUsePremiumProfileCustomization(s), p = null != t ? t : s.getAvatarURL(C, 80), L = (0, c.useToken)(o.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, E.Cf)(p, L, !1);
-  if (null == M || null == x) return null;
-  let Z = e => {
-    l(r()(e, null == R ? void 0 : R.themeColors) ? void 0 : e)
+  }), M = u.ZP.canUsePremiumProfileCustomization(s), D = null != t ? t : s.getAvatarURL(A, 80), f = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), L = (0, d.Cf)(D, f, !1);
+  if (null == p || null == x) return null;
+  let P = e => {
+    r(o()(e, null == R ? void 0 : R.themeColors) ? void 0 : e)
   };
-  return (0, n.jsx)(u.Z, {
+  return (0, n.jsx)(S.Z, {
     title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-    disabled: !D && !A,
-    className: a()(N.__invalid_profileThemesSection, O),
-    showPremiumIcon: m,
-    forcedDivider: g,
+    disabled: !M && !C,
+    className: i()(N.__invalid_profileThemesSection, m),
+    showPremiumIcon: O,
+    forcedDivider: h,
     children: (0, n.jsxs)("div", {
       className: N.sectionContainer,
       children: [(0, n.jsx)("div", {
         className: N.sparkleContainer,
-        children: (0, n.jsx)(S.Z, {
-          onChange: e => Z([e, x]),
-          color: M,
-          suggestedColors: P,
+        children: (0, n.jsx)(T.Z, {
+          onChange: e => P([e, x]),
+          color: p,
+          suggestedColors: L,
           showEyeDropper: !0,
           label: (0, n.jsx)(c.Text, {
             className: N.colorSwatchLabel,
@@ -70,10 +70,10 @@ function A(e) {
         })
       }), (0, n.jsx)("div", {
         className: N.sparkleContainer,
-        children: (0, n.jsx)(S.Z, {
-          onChange: e => Z([M, e]),
+        children: (0, n.jsx)(T.Z, {
+          onChange: e => P([p, e]),
           color: x,
-          suggestedColors: P,
+          suggestedColors: L,
           showEyeDropper: !0,
           label: (0, n.jsx)(c.Text, {
             className: N.colorSwatchLabel,
@@ -83,12 +83,12 @@ function A(e) {
             children: I.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), h && null != C && (0, n.jsx)(c.Button, {
+      }), g && null != A && (0, n.jsx)(c.Button, {
         className: N.resetButton,
         color: c.Button.Colors.PRIMARY,
         look: c.Button.Looks.LINK,
         size: c.Button.Sizes.SMALL,
-        onClick: () => Z([null, null]),
+        onClick: () => P([null, null]),
         children: I.Z.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })

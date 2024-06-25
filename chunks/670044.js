@@ -1,14 +1,14 @@
 n.d(t, {
   Z: function() {
-    return s
+    return l
   }
 });
-var l = n(990547),
-  i = n(213609);
+var i = n(990547),
+  a = n(213609);
 
-function s(e) {
-  return (0, i.Z)({
-    type: l.ImpressionTypes.VIEW,
-    name: l.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE
+function l(e) {
+  return (0, a.Z)({
+    type: i.ImpressionTypes.VIEW,
+    name: i.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE
   }, void 0, [e.id]), null
 }

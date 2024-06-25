@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(785717),
   T = n(318661),
   h = n(502762),
-  S = n(544989),
-  f = n(481932),
-  N = n(195387),
-  A = n(272510),
+  f = n(544989),
+  S = n(481932),
+  A = n(195387),
+  N = n(272510),
   m = n(171368),
   O = n(958120),
-  R = n(215633),
-  p = n(23293),
+  p = n(215633),
+  R = n(23293),
   g = n(228168),
   C = n(689938);
 
@@ -47,14 +47,14 @@ function v(e) {
     location: "BiteSizeProfilePopout"
   }), {
     analyticsLocations: w
-  } = (0, u.ZP)([...b, l.Z.BITE_SIZE_PROFILE_POPOUT]), B = (0, I.Q1)({
+  } = (0, u.ZP)([...b, l.Z.BITE_SIZE_PROFILE_POPOUT]), x = (0, I.Q1)({
     layout: "BITE_SIZE_POPOUT",
     userId: t.id,
     guildId: v,
     channelId: L,
     messageId: D,
     roleId: M
-  }), x = (0, s.e7)([d.Z], () => null != v ? d.Z.getGuild(v) : null), k = (0, s.e7)([c.ZP], () => null != v ? c.ZP.getMember(v, t.id) : null), V = r.useRef(null), Z = (0, T.ZP)(t.id, v), H = (0, a.Z)(V);
+  }), B = (0, s.e7)([d.Z], () => null != v ? d.Z.getGuild(v) : null), k = (0, s.e7)([c.ZP], () => null != v ? c.ZP.getMember(v, t.id) : null), V = r.useRef(null), Z = (0, T.ZP)(t.id, v), H = (0, a.Z)(V);
   r.useEffect(() => {
     null == y || y(null == V ? void 0 : V.current)
   }, [V, y]);
@@ -86,18 +86,18 @@ function v(e) {
           user: t,
           displayProfile: Z,
           profileType: g.y0.BITE_SIZE,
-          children: [(0, i.jsxs)(S.Z, {
+          children: [(0, i.jsxs)(f.Z, {
             profileType: g.y0.BITE_SIZE,
-            children: [(0, i.jsx)(N.Z, {
+            children: [(0, i.jsx)(A.Z, {
               user: t,
               guildId: v,
               channelId: L,
               onClose: P
-            }), (0, i.jsx)(f.Z, {
+            }), (0, i.jsx)(S.Z, {
               profileType: g.y0.BITE_SIZE,
               user: t,
               acceptFriendRequestColor: G ? o.tokens.colors.BUTTON_OUTLINE_POSITIVE_BORDER : null
-            }), (0, i.jsx)(A.Z, {
+            }), (0, i.jsx)(N.Z, {
               user: t,
               profileType: g.y0.BITE_SIZE,
               guildId: v,
@@ -105,14 +105,14 @@ function v(e) {
                 id: "view-profile",
                 label: C.Z.Messages.VIEW_FULL_PROFILE,
                 action: () => {
-                  B({
+                  x({
                     action: "PRESS_VIEW_PROFILE",
                     analyticsLocations: w
                   }), F()
                 }
               })
             })]
-          }), (0, i.jsx)(p.Z, {
+          }), (0, i.jsx)(R.Z, {
             user: t,
             displayProfile: Z,
             guildId: v,
@@ -123,12 +123,12 @@ function v(e) {
             user: t,
             currentUser: n,
             displayProfile: Z,
-            guild: x,
+            guild: B,
             isHovering: H,
             onOpenProfile: F,
             channelId: L,
             onClose: P
-          }), (0, i.jsx)(R.Z, {
+          }), (0, i.jsx)(p.Z, {
             user: t,
             guildId: v,
             channelId: L,

@@ -3,11 +3,11 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(26151),
-  a = n(871499),
+var a = n(481060),
+  l = n(26151),
+  s = n(871499),
   r = n(689938);
 
 function o(e) {
@@ -15,10 +15,10 @@ function o(e) {
     channel: t,
     ...n
   } = e;
-  return (0, l.jsx)(a.d, {
+  return (0, i.jsx)(s.d, {
     ...n,
-    iconComponent: i.CloseSmallIcon,
+    iconComponent: a.CloseSmallIcon,
     label: r.Z.Messages.DISMISS,
-    onClick: () => s.Z.stopRinging(t.id)
+    onClick: () => l.Z.stopRinging(t.id)
   })
 }

@@ -1,84 +1,84 @@
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return B
+    return M
   }
-}), s(47120);
-var n = s(735250),
-  r = s(470079),
-  l = s(120356),
-  i = s.n(l),
-  o = s(920906),
-  a = s(442837),
-  d = s(481060),
-  c = s(749210),
-  u = s(830064),
-  m = s(393238),
-  h = s(607070),
-  x = s(480608),
-  g = s(160404),
-  p = s(703656),
-  N = s(430824),
-  E = s(257915),
-  I = s(768581),
-  f = s(302221),
-  Z = s(956664),
-  j = s(549817),
-  v = s(45966),
-  O = s(819553),
-  C = s(548473),
-  R = s(15320),
-  b = s(973051),
-  _ = s(981631),
-  D = s(689938),
-  M = s(749153);
-async function T(e) {
-  let t = await new Promise((t, s) => {
-    let n = new Image;
-    n.crossOrigin = "Anonymous", n.onerror = e => {
-      s(e), n.onerror = n.onload = null, n = null
-    }, n.onload = () => {
-      t((0, Z.XN)(n, 2, 10)), n.onerror = n.onload = null, n = null
-    }, n.src = e
+}), n(47120);
+var s = n(735250),
+  r = n(470079),
+  o = n(120356),
+  l = n.n(o),
+  i = n(920906),
+  a = n(442837),
+  d = n(481060),
+  c = n(749210),
+  u = n(830064),
+  m = n(393238),
+  p = n(607070),
+  h = n(480608),
+  g = n(160404),
+  x = n(703656),
+  f = n(430824),
+  _ = n(257915),
+  N = n(768581),
+  I = n(302221),
+  b = n(956664),
+  C = n(549817),
+  E = n(45966),
+  v = n(819553),
+  j = n(548473),
+  O = n(15320),
+  Z = n(973051),
+  B = n(981631),
+  R = n(689938),
+  T = n(749153);
+async function D(e) {
+  let t = await new Promise((t, n) => {
+    let s = new Image;
+    s.crossOrigin = "Anonymous", s.onerror = e => {
+      n(e), s.onerror = s.onload = null, s = null
+    }, s.onload = () => {
+      t((0, b.XN)(s, 2, 10)), s.onerror = s.onload = null, s = null
+    }, s.src = e
   });
   return null == t ? void 0 : t.map(e => {
-    let [t, s, n] = e;
-    return (0, f.vq)(t, s, n)
+    let [t, n, s] = e;
+    return (0, I.vq)(t, n, s)
   })
 }
 
-function B(e) {
+function M(e) {
   let {
     guildId: t
-  } = e, s = (0, a.e7)([h.Z], () => h.Z.useReducedMotion), {
-    ref: l,
-    width: Z,
-    height: B
-  } = (0, m.Z)(), [P, k] = r.useState(), L = (0, a.Wu)([v.Z], () => v.Z.getOnboardingPromptsForOnboarding(t)), S = (0, a.e7)([v.Z], () => v.Z.getEnabled(t)), A = r.useCallback((e, s, n) => {
-    j.Z.selectOption(t, e, s, n)
-  }, [t]), U = r.useCallback(() => {
-    j.Z.completeOnboarding(t, L)
-  }, [t, L]), F = (0, a.e7)([N.Z], () => N.Z.getGuild(t)), w = r.useMemo(() => null == F ? null : I.ZP.getGuildSplashURL({
+  } = e, n = (0, a.e7)([p.Z], () => p.Z.useReducedMotion), {
+    ref: o,
+    width: b,
+    height: M
+  } = (0, m.Z)(), [P, k] = r.useState(), S = (0, a.Wu)([E.Z], () => E.Z.getOnboardingPromptsForOnboarding(t)), L = (0, a.e7)([E.Z], () => E.Z.getEnabled(t)), A = r.useCallback((e, n, s) => {
+    C.Z.selectOption(t, e, n, s)
+  }, [t]), w = r.useCallback(() => {
+    C.Z.completeOnboarding(t, S)
+  }, [t, S]), F = (0, a.e7)([f.Z], () => f.Z.getGuild(t)), U = r.useMemo(() => null == F ? null : N.ZP.getGuildSplashURL({
     id: F.id,
     splash: F.splash
-  }), [F]), G = (0, a.e7)([O.ZP], () => O.ZP.getCurrentOnboardingStep(t)), [H, q] = r.useState(null != w ? null : "cover");
-  null != w && null == P && T(w).then(e => {
+  }), [F]), G = (0, a.e7)([v.ZP], () => v.ZP.getCurrentOnboardingStep(t)), [H, y] = r.useState(null != U ? null : "cover");
+  null != U && null == P && D(U).then(e => {
     k(e[0])
   });
-  let y = r.useCallback(e => {
-      q(G), j.Z.setUserOnboardingStep(t, e)
+  let q = r.useCallback(e => {
+      y(G), C.Z.setUserOnboardingStep(t, e)
     }, [t, G]),
-    z = (0, a.e7)([g.Z], () => g.Z.isFullServerPreview(t)),
-    V = (0, a.e7)([O.ZP], () => O.ZP.getOnboardingStatus(t)),
-    Y = null != L && L.length > 0,
+    V = (0, a.e7)([g.Z], () => g.Z.isFullServerPreview(t)),
+    z = (0, a.e7)([v.ZP], () => v.ZP.getOnboardingStatus(t)),
+    Y = null != S && S.length > 0,
     Q = r.useCallback(() => {
-      (0, O.kp)(V) && S && Y ? y(0) : U()
-    }, [V, S, Y, y, U]);
+      (0, v.kp)(z) && L && Y ? q(0) : w()
+    }, [z, L, Y, q, w]);
   r.useEffect(() => {
-    if (!O.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
-    (0, x.E)(t)
+    if (!v.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
+    (0, h.E)(t)
   }, [t]);
-  let W = (0, o.useTransition)(G, {
-      config: o.config.default,
+  let W = (0, i.useTransition)(G, {
+      config: i.config.default,
       from: {
         scale: .8,
         opacity: 0
@@ -87,84 +87,84 @@ function B(e) {
         scale: 1,
         opacity: 1
       },
-      immediate: s || "cover" !== H && null !== H
+      immediate: n || "cover" !== H && null !== H
     }),
-    X = O.ZP.shouldShowOnboarding(t),
+    X = v.ZP.shouldShowOnboarding(t),
     K = null == F;
   if (r.useEffect(() => {
       if (!X || K) {
         let e = setTimeout(() => {
-          (0, p.uL)(_.Z5c.CHANNEL(t))
+          (0, x.uL)(B.Z5c.CHANNEL(t))
         }, 1e3);
         return () => clearTimeout(e)
       }
-    }, [X, K, t]), !O.ZP.shouldShowOnboarding(t) || null == F) return null;
+    }, [X, K, t]), !v.ZP.shouldShowOnboarding(t) || null == F) return null;
   let J = () => {
     switch (G) {
       case "cover":
-        return (0, n.jsx)(C.ZP, {
+        return (0, s.jsx)(j.ZP, {
           guild: F,
-          onboardingStatus: O.uX.READY,
+          onboardingStatus: v.uX.READY,
           onStart: Q,
-          disableTracking: z
+          disableTracking: V
         });
       case "rules":
-        return (0, n.jsx)(b.Z, {
-          setCurrentStep: y,
-          previousPromptIndex: L.length - 1,
+        return (0, s.jsx)(Z.Z, {
+          setCurrentStep: q,
+          previousPromptIndex: S.length - 1,
           guild: F,
-          prompts: L,
-          completeOnboarding: U,
-          disableTracking: z
+          prompts: S,
+          completeOnboarding: w,
+          disableTracking: V
         });
       case null:
         return null;
       default:
-        return (0, n.jsx)(R.Z, {
+        return (0, s.jsx)(O.Z, {
           guild: F,
-          prompts: L,
+          prompts: S,
           step: G,
           selectOption: A,
-          completeOnboarding: U,
-          setCurrentStep: y,
-          disableTracking: z
+          completeOnboarding: w,
+          setCurrentStep: q,
+          disableTracking: V
         })
     }
   };
-  return (0, n.jsxs)("div", {
-    className: M.main,
-    ref: l,
-    children: [null != w ? (0, n.jsx)(E.Z, {
-      className: i()(M.artwork),
-      src: w,
-      width: Z,
-      height: B,
-      imageClassName: M.cover
-    }) : (0, n.jsx)(u.Z, {
-      className: M.artwork,
+  return (0, s.jsxs)("div", {
+    className: T.main,
+    ref: o,
+    children: [null != U ? (0, s.jsx)(_.Z, {
+      className: l()(T.artwork),
+      src: U,
+      width: b,
+      height: M,
+      imageClassName: T.cover
+    }) : (0, s.jsx)(u.Z, {
+      className: T.artwork,
       preserveAspectRatio: "xMinYMin slice"
-    }), null != P && (0, n.jsx)("div", {
-      className: M.gradient,
+    }), null != P && (0, s.jsx)("div", {
+      className: T.gradient,
       style: {
-        background: "linear-gradient(180deg, ".concat((0, f.aD)(P, .16), " 0%, ").concat((0, f.aD)(P, 1), " 100%)")
+        background: "linear-gradient(180deg, ".concat((0, I.aD)(P, .16), " 0%, ").concat((0, I.aD)(P, 1), " 100%)")
       }
-    }), (0, n.jsx)("div", {
-      className: M.gradient
-    }), W((e, t, s) => {
+    }), (0, s.jsx)("div", {
+      className: T.gradient
+    }), W((e, t, n) => {
       let {
         key: r
-      } = s;
-      return (0, n.jsx)(o.animated.div, {
+      } = n;
+      return (0, s.jsx)(i.animated.div, {
         style: e,
         children: J()
       }, r)
-    }), "cover" === G && (0, n.jsx)("div", {
-      className: M.bottomCenterContent,
-      children: (0, n.jsx)(d.Heading, {
+    }), "cover" === G && (0, s.jsx)("div", {
+      className: T.bottomCenterContent,
+      children: (0, s.jsx)(d.Heading, {
         variant: "heading-sm/normal",
         color: "header-secondary",
-        children: D.Z.Messages.ONBOARDING_COVER_PRIVACY_POLICY.format({
-          privacyLink: _.EYA.PRIVACY
+        children: R.Z.Messages.ONBOARDING_COVER_PRIVACY_POLICY.format({
+          privacyLink: B.EYA.PRIVACY
         })
       })
     })]

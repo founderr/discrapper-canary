@@ -1,20 +1,20 @@
 n.d(t, {
   Z: function() {
-    return s
+    return l
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(277048);
+var a = n(277048);
 
-function s(e, t) {
+function l(e, t) {
   let {
     message: n,
-    compact: s
+    compact: l
   } = e;
-  return (0, l.jsx)(i.Z, {
+  return (0, i.jsx)(a.Z, {
     message: n,
     content: t,
-    compact: s
+    compact: l
   })
 }

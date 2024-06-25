@@ -3,40 +3,40 @@ n.d(t, {
     return h
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  r = n(91192),
-  a = n(589440),
+var l = n(120356),
+  r = n.n(l),
+  a = n(91192),
+  s = n(589440),
   o = n(481060),
-  u = n(595954),
-  c = n(47705),
+  c = n(595954),
+  u = n(47705),
   d = n(359123);
 
 function h(e) {
   var t;
   let {
     id: n,
-    className: i,
+    className: l,
     innerClassName: h,
     renderIcon: p,
-    text: g,
-    selected: m,
-    trailing: C,
-    showUnread: E = !1,
-    ...f
-  } = e, _ = (0, r.JA)(n), I = null !== (t = (0, a.q)(g)) && void 0 !== t ? t : "";
-  return (0, l.jsx)("li", {
-    children: (0, l.jsxs)(o.ClickableContainer, {
-      ...f,
+    text: f,
+    selected: _,
+    trailing: g,
+    showUnread: m = !1,
+    ...C
+  } = e, I = (0, a.JA)(n), E = null !== (t = (0, s.q)(f)) && void 0 !== t ? t : "";
+  return (0, i.jsx)("li", {
+    children: (0, i.jsxs)(o.ClickableContainer, {
+      ...C,
       buttonProps: {
-        ..._,
+        ...I,
         id: n,
         role: "button"
       },
       tag: "div",
-      "aria-label": I,
+      "aria-label": E,
       focusProps: {
         offset: {
           top: 1,
@@ -44,26 +44,26 @@ function h(e) {
           right: 4
         }
       },
-      onContextMenu: null != f.onContextMenu ? f.onContextMenu : e => {
+      onContextMenu: null != C.onContextMenu ? C.onContextMenu : e => {
         e.stopPropagation()
       },
-      className: s()(c.containerDefault, d.wrapper, {
-        [d.modeSelected]: m
-      }, i),
-      children: [E ? (0, l.jsx)("div", {
-        className: s()(d.unread, d.unreadImportant)
-      }) : null, (0, l.jsx)("div", {
-        className: s()([d.link, d.basicChannelRowLink, h]),
-        children: (0, l.jsxs)("div", {
-          className: u.content,
-          children: [(0, l.jsx)("div", {
+      className: r()(u.containerDefault, d.wrapper, {
+        [d.modeSelected]: _
+      }, l),
+      children: [m ? (0, i.jsx)("div", {
+        className: r()(d.unread, d.unreadImportant)
+      }) : null, (0, i.jsx)("div", {
+        className: r()([d.link, d.basicChannelRowLink, h]),
+        children: (0, i.jsxs)("div", {
+          className: c.content,
+          children: [(0, i.jsx)("div", {
             className: d.iconContainer,
             children: p(d.icon)
-          }), (0, l.jsx)("div", {
+          }), (0, i.jsx)("div", {
             className: d.name,
             "aria-hidden": !0,
-            children: g
-          }), C]
+            children: f
+          }), g]
         })
       })]
     })

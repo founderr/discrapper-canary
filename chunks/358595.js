@@ -1,18 +1,18 @@
 n.d(t, {
   Z: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(197409),
-  l = n(689938);
+var a = n(197409),
+  s = n(689938);
 
-function a() {
-  return (0, s.jsxs)(i.Z, {
-    children: [(0, s.jsx)(i.Z.Header, {
-      text: l.Z.Messages.INVITE_BUTTON_RESOLVING
-    }), (0, s.jsx)(i.Z.Body, {
+function l() {
+  return (0, i.jsxs)(a.Z, {
+    children: [(0, i.jsx)(a.Z.Header, {
+      text: s.Z.Messages.INVITE_BUTTON_RESOLVING
+    }), (0, i.jsx)(a.Z.Body, {
       resolving: !0
     })]
   })

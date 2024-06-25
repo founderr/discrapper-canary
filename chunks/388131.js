@@ -1,52 +1,52 @@
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   createModeratorOverwrite: function() {
-    return S
+    return p
   },
   default: function() {
-    return p
+    return C
   }
-}), n(47120);
-var r = n(735250),
-  l = n(470079),
-  a = n(442837),
-  s = n(481060),
-  i = n(741361),
-  o = n(881052),
-  d = n(911969),
-  c = n(185413),
-  u = n(592125),
-  h = n(430824),
-  x = n(285952),
-  g = n(153124),
-  M = n(700785),
-  m = n(146085),
-  E = n(71080),
-  C = n(689938),
-  N = n(899509);
+}), r(47120);
+var n = r(735250),
+  l = r(470079),
+  a = r(442837),
+  o = r(481060),
+  i = r(741361),
+  d = r(881052),
+  s = r(911969),
+  c = r(185413),
+  u = r(592125),
+  h = r(430824),
+  x = r(285952),
+  g = r(153124),
+  m = r(700785),
+  M = r(146085),
+  S = r(71080),
+  b = r(689938),
+  E = r(899509);
 
-function S(e, t) {
+function p(e, t) {
   return {
     id: e,
     type: t,
-    deny: M.Hn,
-    allow: m.yP
+    deny: m.Hn,
+    allow: M.yP
   }
 }
 
-function p(e) {
+function C(e) {
   let {
     transitionState: t,
-    onClose: n,
-    channelId: M
-  } = e, p = (0, g.Dt)(), A = (0, a.e7)([u.Z], () => u.Z.getChannel(M)), j = (0, a.e7)([h.Z], () => h.Z.getGuild(null == A ? void 0 : A.getGuildId())), [R, b] = l.useState({}), [y, L] = l.useState(!1), [f, B] = l.useState(null);
-  if (null == A || null == j) return null;
-  let I = async () => {
-    L(!0);
+    onClose: r,
+    channelId: m
+  } = e, C = (0, g.Dt)(), N = (0, a.e7)([u.Z], () => u.Z.getChannel(m)), R = (0, a.e7)([h.Z], () => h.Z.getGuild(null == N ? void 0 : N.getGuildId())), [A, j] = l.useState({}), [I, _] = l.useState(!1), [f, y] = l.useState(null);
+  if (null == N || null == R) return null;
+  let L = async () => {
+    _(!0);
     try {
       await
 
       function(e, t) {
-        let n = Object.values(t).filter(e => {
+        let r = Object.values(t).filter(e => {
           let {
             row: t
           } = e;
@@ -55,59 +55,59 @@ function p(e) {
           let {
             row: t
           } = e;
-          return t.rowType === E.aC.ROLE ? S(t.id, d.BN.ROLE) : S(t.id, d.BN.MEMBER)
+          return t.rowType === S.aC.ROLE ? p(t.id, s.BN.ROLE) : p(t.id, s.BN.MEMBER)
         });
-        return (0, i.hw)(e.id, n, !0)
-      }(A, R), n()
+        return (0, i.hw)(e.id, r, !0)
+      }(N, A), r()
     } catch (t) {
-      let e = new o.Hx(t);
-      L(!1), B(e)
+      let e = new d.Hx(t);
+      _(!1), y(e)
     }
   };
-  return (0, r.jsxs)(s.ModalRoot, {
+  return (0, n.jsxs)(o.ModalRoot, {
     transitionState: t,
-    "aria-labelledby": p,
-    size: s.ModalSize.SMALL,
-    className: N.modalRoot,
-    children: [(0, r.jsxs)(s.ModalHeader, {
+    "aria-labelledby": C,
+    size: o.ModalSize.SMALL,
+    className: E.modalRoot,
+    children: [(0, n.jsxs)(o.ModalHeader, {
       separator: !1,
       direction: x.Z.Direction.VERTICAL,
       align: x.Z.Align.CENTER,
-      className: N.header,
-      children: [(0, r.jsx)(s.Heading, {
+      className: E.header,
+      children: [(0, n.jsx)(o.Heading, {
         variant: "heading-xl/semibold",
-        children: C.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
-      }), (0, r.jsxs)(s.Text, {
+        children: b.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+      }), (0, n.jsxs)(o.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        className: N.headerSubtitle,
-        children: [(0, r.jsx)(s.StageIcon, {
+        className: E.headerSubtitle,
+        children: [(0, n.jsx)(o.StageIcon, {
           size: "xs",
           color: "currentColor",
-          className: N.headerSubtitleIcon
-        }), A.name]
+          className: E.headerSubtitleIcon
+        }), N.name]
       })]
-    }), (0, r.jsx)(c.AddMembersBody, {
-      guild: j,
-      channel: A,
-      permission: m.yP,
-      pendingAdditions: R,
-      setPendingAdditions: b
-    }), null != f ? (0, r.jsx)(s.Text, {
-      className: N.error,
+    }), (0, n.jsx)(c.AddMembersBody, {
+      guild: R,
+      channel: N,
+      permission: M.yP,
+      pendingAdditions: A,
+      setPendingAdditions: j
+    }), null != f ? (0, n.jsx)(o.Text, {
+      className: E.error,
       variant: "text-xs/normal",
       color: "text-danger",
       children: f.getAnyErrorMessage()
-    }) : null, (0, r.jsxs)(s.ModalFooter, {
-      children: [(0, r.jsx)(s.Button, {
-        onClick: I,
-        submitting: y,
-        children: C.Z.Messages.ADD
-      }), (0, r.jsx)(s.Button, {
-        look: s.Button.Looks.LINK,
-        color: s.Button.Colors.PRIMARY,
-        onClick: n,
-        children: C.Z.Messages.CANCEL
+    }) : null, (0, n.jsxs)(o.ModalFooter, {
+      children: [(0, n.jsx)(o.Button, {
+        onClick: L,
+        submitting: I,
+        children: b.Z.Messages.ADD
+      }), (0, n.jsx)(o.Button, {
+        look: o.Button.Looks.LINK,
+        color: o.Button.Colors.PRIMARY,
+        onClick: r,
+        children: b.Z.Messages.CANCEL
       })]
     })]
   })

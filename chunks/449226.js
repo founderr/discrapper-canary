@@ -1,32 +1,32 @@
 t.d(n, {
   Z: function() {
-    return o
+    return l
   }
 });
 var a = t(735250);
 t(470079);
 var r = t(120356),
-  s = t.n(r),
-  i = t(481060),
-  l = t(609191);
+  i = t.n(r),
+  s = t(481060),
+  o = t(609191);
 
-function o(e) {
+function l(e) {
   let {
     checked: n,
     onChange: t,
     disabled: r,
-    className: o,
+    className: l,
     tooltipProps: c
   } = e, d = e => {
     e.stopPropagation(), e.preventDefault()
   };
-  return (0, a.jsx)(i.Clickable, {
+  return (0, a.jsx)(s.Clickable, {
     onClick: d,
     onMouseDown: d,
     onMouseUp: d,
-    className: s()(l.switch, o),
+    className: i()(o.switch, l),
     ...c,
-    children: (0, a.jsx)(i.Switch, {
+    children: (0, a.jsx)(s.Switch, {
       checked: n,
       onChange: t,
       disabled: r

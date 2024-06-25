@@ -1,10 +1,10 @@
 var a = t(735250);
 t(470079);
 var r = t(120356),
-  s = t.n(r),
-  i = t(186078),
-  l = t(137158),
-  o = t(237261);
+  i = t.n(r),
+  s = t(186078),
+  o = t(137158),
+  l = t(237261);
 n.Z = function(e) {
   let {
     formField: n,
@@ -14,12 +14,12 @@ n.Z = function(e) {
     onDrop: d,
     onEdit: u,
     onRemove: m,
-    canRemove: h,
+    canRemove: f,
     actionsLocation: C
   } = e, {
-    label: x
+    label: _
   } = n;
-  return (0, a.jsx)(l.Z, {
+  return (0, a.jsx)(o.Z, {
     field: n,
     index: t,
     isDragEnabled: r,
@@ -27,13 +27,13 @@ n.Z = function(e) {
     onDrop: d,
     onEdit: u,
     onRemove: m,
-    title: x,
-    canRemove: h,
+    title: _,
+    canRemove: f,
     actionsLocation: C,
-    children: (0, a.jsx)(i.BO, {
+    children: (0, a.jsx)(s.BO, {
       field: n,
       value: void 0,
-      radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),
+      radioItemClassName: i()(l.fieldBackground, l.multipleChoiceFixedTextColor),
       disabled: !1
     })
   })

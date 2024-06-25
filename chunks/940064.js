@@ -1,31 +1,31 @@
-i.d(n, {
+t.d(n, {
   Z: function() {
     return c
   }
 });
-var t = i(735250);
-i(470079);
-var l = i(120356),
-  a = i.n(l),
-  s = i(481060),
-  r = i(665692),
-  o = i(75169);
+var i = t(735250);
+t(470079);
+var a = t(120356),
+  r = t.n(a),
+  o = t(481060),
+  l = t(665692),
+  s = t(75169);
 
 function c(e) {
   let {
     commands: n,
-    className: i
+    className: t
   } = e;
-  return (0, t.jsx)("div", {
-    className: a()(o.list, i),
-    children: n.map(e => (0, t.jsxs)("div", {
-      className: o.row,
-      children: [(0, t.jsxs)(s.Text, {
-        className: o.commandName,
+  return (0, i.jsx)("div", {
+    className: r()(s.list, t),
+    children: n.map(e => (0, i.jsxs)("div", {
+      className: s.row,
+      children: [(0, i.jsxs)(o.Text, {
+        className: s.commandName,
         variant: "text-md/semibold",
         color: "header-primary",
-        children: [r.GI, e.displayName]
-      }), (0, t.jsx)(s.Text, {
+        children: [l.GI, e.displayName]
+      }), (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         children: e.displayDescription
       })]

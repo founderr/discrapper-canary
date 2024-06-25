@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   $R: function() {
-    return S
+    return f
   },
   GA: function() {
     return O
   },
   I: function() {
-    return p
+    return R
   },
   Ib: function() {
     return i
@@ -16,7 +16,7 @@ n.d(t, {
     return h
   },
   Wq: function() {
-    return f
+    return S
   },
   ZB: function() {
     return r
@@ -25,10 +25,10 @@ n.d(t, {
     return m
   },
   rU: function() {
-    return R
+    return p
   },
   sK: function() {
-    return A
+    return N
   },
   wK: function() {
     return g
@@ -58,20 +58,20 @@ let h = {
     unreads: e => e === I.i.ALL_MESSAGES ? "unreads set to all messages" : e === I.i.ONLY_MENTIONS ? "unreads set to mentions" : "unreads set to the default",
     notifications: e => e === E.bL.ALL_MESSAGES ? "notifications set to all messages" : e === E.bL.ONLY_MENTIONS ? "notifications set to mentions" : e === E.bL.NO_MESSAGES ? "notifications set to nothing" : "notifications set to the default"
   },
-  S = Object.freeze({
+  f = Object.freeze({
     [E.bL.ALL_MESSAGES]: "All",
     [E.bL.ONLY_MENTIONS]: "Mentions",
     [E.bL.NO_MESSAGES]: "Nothing",
     [E.bL.NULL]: null
   });
 
-function f(e, t, n, i, r) {
+function S(e, t, n, i, r) {
   var s, o;
   let u = function(e) {
       var t, n, i, r, s, o, a;
       let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         u = null != l.mute_config && null != l.mute_config.end_time ? new Date(l.mute_config.end_time).getTime() : e.guild_muted_until,
-        _ = null != l.message_notifications ? S[l.message_notifications] : e.guild_message_notification_settings;
+        _ = null != l.message_notifications ? f[l.message_notifications] : e.guild_message_notification_settings;
       return {
         guild_muted_until: u,
         guild_flags: null !== (t = l.flags) && void 0 !== t ? t : e.guild_flags,
@@ -86,10 +86,10 @@ function f(e, t, n, i, r) {
     },
     _ = u(n),
     c = u(O(e), t),
-    I = N(_, c, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    I = A(_, c, "RETURN_PREVIOUS_WHEN_CHANGED"),
     h = null !== (s = I("guild_flags")) && void 0 !== s ? s : 0,
-    f = (null !== (o = c.guild_flags) && void 0 !== o ? o : 0) ^ h,
-    A = 0 === (0, d.M1)(f, T.vc.OPT_IN_CHANNELS_OFF, T.vc.OPT_IN_CHANNELS_ON);
+    S = (null !== (o = c.guild_flags) && void 0 !== o ? o : 0) ^ h,
+    N = 0 === (0, d.M1)(S, T.vc.OPT_IN_CHANNELS_OFF, T.vc.OPT_IN_CHANNELS_ON);
   a.ZP.trackWithMetadata(E.rMx.NOTIFICATION_SETTINGS_UPDATED, {
     ...c,
     ...l.Z.getStats(e),
@@ -105,41 +105,41 @@ function f(e, t, n, i, r) {
     guild_receive_mobile_push_old: I("guild_receive_mobile_push"),
     guild_scheduled_events_muted_old: I("guild_scheduled_events_muted"),
     guild_message_notification_settings_old: I("guild_message_notification_settings"),
-    is_opt_in_only_change: A
+    is_opt_in_only_change: N
   })
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   return i => {
     if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0
   }
 }
 
-function A(e) {
+function N(e) {
   return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null
 }
 
 function m(e, t, n, i, r, s) {
   var o, c, I, h;
-  let f = function(t) {
+  let S = function(t) {
       var n, i;
       let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         s = null !== (n = r.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
-        o = null != r.message_notifications ? S[r.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
+        o = null != r.message_notifications ? f[r.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
         a = null == e ? null : !0 === s || null != o;
       return {
         channel_is_muted: s,
         channel_is_overridden: a,
         channel_flags: null !== (i = r.flags) && void 0 !== i ? i : null == t ? void 0 : t.channel_flags,
         channel_message_notification_settings: o,
-        channel_muted_until: A(r.mute_config)
+        channel_muted_until: N(r.mute_config)
       }
     },
-    m = f(i),
-    O = f(p(e, t), n),
-    R = N(m, O, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    m = S(i),
+    O = S(R(e, t), n),
+    p = A(m, O, "RETURN_PREVIOUS_WHEN_CHANGED"),
     g = u.Z.getChannel(t),
-    C = null !== (c = R("channel_flags")) && void 0 !== c ? c : 0,
+    C = null !== (c = p("channel_flags")) && void 0 !== c ? c : 0,
     v = (null !== (I = O.channel_flags) && void 0 !== I ? I : 0) ^ C,
     L = 0 === (0, d.M1)(v, T.ic.FAVORITED, T.ic.OPT_IN_ENABLED),
     D = null !== (h = null === (o = _.Z.getLastMessage(t)) || void 0 === o ? void 0 : o.type) && void 0 !== h ? h : null;
@@ -152,11 +152,11 @@ function m(e, t, n, i, r, s) {
     update_type: "channel",
     label: r,
     parent_id: null != g ? g.parent_id : null,
-    channel_flags_old: R("channel_flags"),
-    channel_is_muted_old: R("channel_is_muted"),
-    channel_muted_until_old: R("channel_muted_until"),
-    channel_is_overridden_old: R("channel_is_overridden"),
-    channel_message_notification_settings_old: R("channel_message_notification_settings"),
+    channel_flags_old: p("channel_flags"),
+    channel_is_muted_old: p("channel_is_muted"),
+    channel_muted_until_old: p("channel_muted_until"),
+    channel_is_overridden_old: p("channel_is_overridden"),
+    channel_message_notification_settings_old: p("channel_message_notification_settings"),
     is_opt_in_only_change: L,
     last_message_type: D
   })
@@ -172,29 +172,29 @@ function O(e) {
     guild_is_muted: t,
     guild_muted_until: null != n && null != n.end_time ? new Date(n.end_time).getTime() : null,
     guild_receive_mobile_push: c.ZP.isMobilePushEnabled(e),
-    guild_message_notification_settings: S[c.ZP.getMessageNotifications(e)],
+    guild_message_notification_settings: f[c.ZP.getMessageNotifications(e)],
     guild_notify_highlights: c.ZP.getNotifyHighlights(e),
     guild_flags: c.ZP.getGuildFlags(e)
   }
 }
 
-function R(e) {
+function p(e) {
   let t = new Map;
   return e.forEach(e => t.set(e, O(e))), t
 }
 
-function p(e, t) {
+function R(e, t) {
   let n = c.ZP.isChannelMuted(e, t),
     i = c.ZP.getChannelMuteConfig(e, t);
   return {
     channel_is_muted: n,
     channel_muted_until: null != i && null != i.end_time ? new Date(i.end_time).getTime() : null,
-    channel_message_notification_settings: S[c.ZP.getChannelMessageNotifications(e, t)],
+    channel_message_notification_settings: f[c.ZP.getChannelMessageNotifications(e, t)],
     channel_flags: c.ZP.getChannelIdFlags(e, t)
   }
 }
 
 function g(e, t) {
   let n = new Map;
-  return t.forEach(t => n.set(t, p(e, t))), n
+  return t.forEach(t => n.set(t, R(e, t))), n
 }

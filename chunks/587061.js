@@ -18,7 +18,7 @@ function h(e) {
   e.key === T.mR.Tab && !t && !__OVERLAY__ && !(0, s.$s)() && _.Z.maybeShowKeyboardNavigationExplainerModal()
 }
 
-function S() {
+function f() {
   (0, l.rf)()
 }
 t.Z = function(e, t) {
@@ -48,7 +48,7 @@ t.Z = function(e, t) {
       null != s && !c.Z.hasExactKeybind(s) && !a.Z.hasBind(null !== (i = E.H9(s[0])) && void 0 !== i ? i : "") && ((0, l.Qj)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
-  return (0, i.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", S), e.addEventListener("keydown", h)) : e.addEventListener("keydown", s), () => {
-    n ? (e.removeEventListener("mousedown", S), e.removeEventListener("keydown", h)) : e.removeEventListener("keydown", s)
+  return (0, i.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", f), e.addEventListener("keydown", h)) : e.addEventListener("keydown", s), () => {
+    n ? (e.removeEventListener("mousedown", f), e.removeEventListener("keydown", h)) : e.removeEventListener("keydown", s)
   }), [e, s, n]), n
 }

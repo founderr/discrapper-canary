@@ -3,18 +3,18 @@ n.d(t, {
     return u
   }
 });
-var l = n(442837),
-  i = n(314897),
-  s = n(111583),
-  a = n(351780),
+var i = n(442837),
+  a = n(314897),
+  l = n(111583),
+  s = n(351780),
   r = n(843693),
   o = n(170248),
   c = n(524484);
 
 function u(e) {
   let t = (0, o.Z)(c.oZ.CHAT_INPUT),
-    n = (0, l.e7)([a.Z], () => a.Z.isEnabled({
+    n = (0, i.e7)([s.Z], () => s.Z.isEnabled({
       shakeLocation: c.oZ.CHAT_INPUT
     }));
-  return (0, l.e7)([s.Z, r.ZP, i.default], () => n && s.Z.isTyping(e, i.default.getId()) ? r.ZP.getUserComboShakeIntensity(i.default.getId(), e, t) : 0)
+  return (0, i.e7)([l.Z, r.ZP, a.default], () => n && l.Z.isTyping(e, a.default.getId()) ? r.ZP.getUserComboShakeIntensity(a.default.getId(), e, t) : 0)
 }

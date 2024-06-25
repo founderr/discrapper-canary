@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
   c: function() {
     return u
   }
@@ -8,15 +8,15 @@ n(470079);
 var r = n(481060),
   o = n(689938),
   s = n(125476),
-  l = n(387852);
-let u = e => {
+  c = n(387852);
+let u = t => {
   let {
-    onTryAgain: t
-  } = e;
+    onTryAgain: e
+  } = t;
   return (0, a.jsxs)("div", {
     className: s.bodyContent,
     children: [(0, a.jsx)("img", {
-      src: l,
+      src: c,
       width: "254",
       height: "127",
       alt: ""
@@ -32,7 +32,7 @@ let u = e => {
     }), (0, a.jsx)(r.Button, {
       className: s.footerButton,
       color: r.Button.Colors.BRAND,
-      onClick: t,
+      onClick: e,
       children: o.Z.Messages.TRY_AGAIN
     })]
   })

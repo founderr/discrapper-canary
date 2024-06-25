@@ -4,10 +4,10 @@ n.d(t, {
     return O
   },
   NE: function() {
-    return R
+    return p
   },
   Qf: function() {
-    return p
+    return R
   },
   pQ: function() {
     return m
@@ -43,13 +43,13 @@ let h = e => {
     }
     return (null == s ? void 0 : s.bio) && o.push(E.cm.BIO), (null == s ? void 0 : s.themeColors) != null && void 0 !== s.themeColors.find(e => null !== e) && o.push(E.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && o.push(E.cm.AVATAR_DECORATION), (null == s ? void 0 : s.profileEffectId) != null && o.push(E.cm.PROFILE_EFFECT), o
   },
-  S = e => {
+  f = e => {
     let t = o.Z.getStatus(e),
       n = o.Z.isMobileOnline(e);
     return t === T.Sk.ONLINE && n ? "".concat(t, "-mobile") : t === T.Sk.ONLINE ? "".concat(t, "-desktop") : t
   },
-  f = e => null == e ? e : Object.keys(I.IIU)[Object.values(I.IIU).indexOf(e)],
-  N = e => {
+  S = e => null == e ? e : Object.keys(I.IIU)[Object.values(I.IIU).indexOf(e)],
+  A = e => {
     var t, n;
     let {
       layout: i,
@@ -84,12 +84,12 @@ let h = e => {
       }),
       avatar_decoration_sku_id: null === (n = _.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
       profile_effect_sku_id: null == c ? void 0 : c.profileEffectId,
-      user_status: S(_.id),
+      user_status: f(_.id),
       is_guild_profile: (null == c ? void 0 : c.guildId) != null,
       is_bot_profile: _.bot
     }
   },
-  A = e => {
+  N = e => {
     var t, n;
     return null == e ? {} : {
       related_user_id: e,
@@ -116,13 +116,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_ACTION, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...N({
+      ...A({
         layout: _,
         userId: t,
         guildId: n,
         showGuildProfile: a
       }),
-      ...A(t),
+      ...N(t),
       location_stack: l,
       profile_action: c,
       profile_section: d,
@@ -148,44 +148,20 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_ACTIVITY_JOINED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...N({
+      ...A({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...A(t),
+      ...N(t),
       location_stack: o,
-      activity_type: null != T ? "VOICE" : f(l),
+      activity_type: null != T ? "VOICE" : S(l),
       activity_name: _,
       activity_platform: c,
       activity_session_id: d,
       application_id: E,
       voice_channel_id: T
-    })
-  },
-  R = e => {
-    let {
-      userId: t,
-      guildId: n,
-      channelId: r,
-      showGuildProfile: s,
-      analyticsLocations: o,
-      layout: a,
-      badge: l
-    } = e;
-    u.default.track(I.rMx.USER_PROFILE_BADGE_PRESSED, {
-      ...(0, i.hH)(n),
-      ...(0, i.JS)(r),
-      ...N({
-        layout: a,
-        userId: t,
-        guildId: n,
-        showGuildProfile: s
-      }),
-      ...A(t),
-      location_stack: o,
-      badge: l
     })
   },
   p = e => {
@@ -198,16 +174,40 @@ let h = e => {
       layout: a,
       badge: l
     } = e;
-    u.default.track(I.rMx.USER_PROFILE_BADGE_HOVERED, {
+    u.default.track(I.rMx.USER_PROFILE_BADGE_PRESSED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...N({
+      ...A({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...A(t),
+      ...N(t),
+      location_stack: o,
+      badge: l
+    })
+  },
+  R = e => {
+    let {
+      userId: t,
+      guildId: n,
+      channelId: r,
+      showGuildProfile: s,
+      analyticsLocations: o,
+      layout: a,
+      badge: l
+    } = e;
+    u.default.track(I.rMx.USER_PROFILE_BADGE_HOVERED, {
+      ...(0, i.hH)(n),
+      ...(0, i.JS)(r),
+      ...A({
+        layout: a,
+        userId: t,
+        guildId: n,
+        showGuildProfile: s
+      }),
+      ...N(t),
       location_stack: o,
       badge: l
     })

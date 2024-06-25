@@ -33,8 +33,8 @@ let T = {
   },
   {
     enable: h,
-    isNotSupported: S,
-    trackToggleSelfMute: f
+    isNotSupported: f,
+    trackToggleSelfMute: S
   } = T = n(929782);
 t.Z = {
   enable: h,
@@ -45,7 +45,7 @@ t.Z = {
       usedKeybind: n = !1,
       playSoundEffect: r = !0
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return S() ? Promise.resolve() : (f({
+    return f() ? Promise.resolve() : (S({
       usedKeybind: n
     }), a.Z.isEnabled()) ? i.Z.dispatch({
       type: "AUDIO_TOGGLE_SELF_MUTE",
@@ -55,14 +55,14 @@ t.Z = {
     }) : this.enable(!0)
   },
   setSelfMute(e, t) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_SELF_MUTE",
       context: e,
       mute: t
     })
   },
   setTemporarySelfMute(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_TEMPORARY_SELF_MUTE",
       mute: e
     })
@@ -72,7 +72,7 @@ t.Z = {
       context: e = d.Yn.DEFAULT,
       syncRemote: t = !0
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_TOGGLE_SELF_DEAF",
       context: e,
       syncRemote: t
@@ -80,7 +80,7 @@ t.Z = {
   },
   toggleLocalMute(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT;
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_TOGGLE_LOCAL_MUTE",
       context: t,
       userId: e
@@ -98,7 +98,7 @@ t.Z = {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Yn.DEFAULT,
       r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
       s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
       context: n,
       userId: e,
@@ -129,7 +129,7 @@ t.Z = {
   setMode(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Yn.DEFAULT;
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_MODE",
       context: n,
       mode: e,
@@ -140,19 +140,19 @@ t.Z = {
     })
   },
   setInputVolume(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_INPUT_VOLUME",
       volume: e
     })
   },
   setOutputVolume(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_OUTPUT_VOLUME",
       volume: e
     })
   },
   setInputDevice(e, t) {
-    if (!S()) {
+    if (!f()) {
       if (null != t) {
         let n = a.Z.getInputDevices();
         I(n, a.Z.getInputDeviceId(), e, "Audio Input", t)
@@ -164,7 +164,7 @@ t.Z = {
     }
   },
   setOutputDevice(e, t) {
-    if (!S()) {
+    if (!f()) {
       if (null != t) {
         let n = a.Z.getOutputDevices();
         I(n, a.Z.getOutputDeviceId(), e, "Audio Output", t)
@@ -176,7 +176,7 @@ t.Z = {
     }
   },
   setVideoDevice(e, t) {
-    if (!S()) {
+    if (!f()) {
       if (null != t) {
         let n = a.Z.getVideoDevices();
         I(n, a.Z.getVideoDeviceId(), e, "Video", t)
@@ -188,27 +188,27 @@ t.Z = {
     }
   },
   setEchoCancellation(e, t) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_ECHO_CANCELLATION",
       enabled: e,
       location: t
     })
   },
   setLoopback(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_LOOPBACK",
       enabled: e
     })
   },
   setNoiseSuppression(e, t) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_NOISE_SUPPRESSION",
       enabled: e,
       location: t
     })
   },
   setNoiseCancellation(e, t) {
-    !S() && (i.Z.dispatch({
+    !f() && (i.Z.dispatch({
       type: "AUDIO_SET_NOISE_CANCELLATION",
       enabled: e,
       location: t
@@ -219,26 +219,26 @@ t.Z = {
     }))
   },
   setAutomaticGainControl(e, t) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL",
       enabled: e,
       location: t
     })
   },
   setExperimentalEncoders(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS",
       enabled: e
     })
   },
   setHardwareEncoding(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_SET_HARDWARE_ENCODING",
       enabled: e
     })
   },
   setAttenuation(e, t, n) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_ATTENUATION",
       attenuation: e,
       attenuateWhileSpeakingSelf: t,
@@ -246,42 +246,42 @@ t.Z = {
     })
   },
   setQoS(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_QOS",
       enabled: e
     })
   },
   reset() {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_RESET"
     })
   },
   setSilenceWarning(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_DISPLAY_SILENCE_WARNING",
       enabled: e
     })
   },
   setDebugLogging(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_DEBUG_LOGGING",
       enabled: e
     })
   },
   setVideoHook(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_SET_VIDEO_HOOK",
       enabled: e
     })
   },
   setExperimentalSoundshare(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE",
       enabled: e
     })
   },
   setAudioSubsystem(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "AUDIO_SET_SUBSYSTEM",
       subsystem: e
     })
@@ -299,19 +299,19 @@ t.Z = {
     })
   },
   setOpenH264(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_SET_OPEN_H264",
       enabled: e
     })
   },
   setAecDump(e) {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_SET_AEC_DUMP",
       enabled: e
     })
   },
   interact() {
-    !S() && i.Z.dispatch({
+    !f() && i.Z.dispatch({
       type: "MEDIA_ENGINE_INTERACTION_REQUIRED",
       required: !1
     })

@@ -3,21 +3,21 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  l = n.n(a),
+  s = n(481060),
   r = n(322526);
 
 function o(e) {
   let {
     hasMentions: t,
     truncatedCount: n,
-    className: i
+    className: a
   } = e;
-  return (0, l.jsx)(a.Text, {
-    className: s()(r.unreadCount, i, {
+  return (0, i.jsx)(s.Text, {
+    className: l()(r.unreadCount, a, {
       [r.mention]: t
     }),
     variant: "text-xs/normal",

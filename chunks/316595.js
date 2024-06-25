@@ -3,10 +3,10 @@ n.d(t, {
     return u
   }
 }), n(653041);
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(704215),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(704215),
   r = n(243778),
   o = n(375954),
   c = n(423490);
@@ -14,17 +14,17 @@ var l = n(735250),
 function u(e) {
   let {
     children: t
-  } = e, n = (0, s.e7)([o.Z], () => o.Z.hasCurrentUserSentMessageSinceAppStart()), u = i.useMemo(() => {
+  } = e, n = (0, l.e7)([o.Z], () => o.Z.hasCurrentUserSentMessageSinceAppStart()), u = a.useMemo(() => {
     let e = [];
-    return n && e.push(a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e
+    return n && e.push(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e
   }, [n]);
-  return (0, l.jsx)(r.Z, {
+  return (0, i.jsx)(r.Z, {
     contentTypes: u,
     children: e => {
       let {
         visibleContent: n
       } = e;
-      if (n === a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2) return (0, l.jsx)(c.Q, {
+      if (n === s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2) return (0, i.jsx)(c.Q, {
         children: t
       });
       return t

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 }), n(789020), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i = n(735250);
@@ -19,7 +19,7 @@ var r = n(120356),
   I = n(981631),
   T = n(689938),
   h = n(416342);
-let S = e => {
+let f = e => {
   switch (e) {
     case u.ZC.IP_LOCATION:
       return l.GlobeEarthIcon;
@@ -30,20 +30,20 @@ let S = e => {
   }
 };
 
-function f(e) {
+function S(e) {
   var t;
   let n, {
       application: r,
       scopes: s,
       redirectUri: a,
-      approximateGuildCount: f,
-      isEmbeddedFlow: A,
+      approximateGuildCount: S,
+      isEmbeddedFlow: N,
       disclosures: m
     } = e,
     O = new Date(c.default.extractTimestamp(r.id)),
-    R = (0, E.W3)(s),
-    p = (0, _.yE)(null !== (t = r.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
-  if (null != a && !p && !A) try {
+    p = (0, E.W3)(s),
+    R = (0, _.yE)(null !== (t = r.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
+  if (null != a && !R && !N) try {
     let e = new URL(a);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   } catch (e) {
@@ -51,32 +51,32 @@ function f(e) {
   }
   return (0, i.jsxs)("div", {
     className: h.applicationDetails,
-    children: [null != n ? (0, i.jsx)(N, {
+    children: [null != n ? (0, i.jsx)(A, {
       className: h.redirectWarning,
       icon: l.LinkIcon,
       text: T.Z.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, i.jsx)(N, {
+    }) : null, (0, i.jsx)(A, {
       icon: l.LockIcon,
       text: (0, d.i)(r)
-    }), (0, i.jsx)(N, {
+    }), (0, i.jsx)(A, {
       icon: l.ClockIcon,
       text: T.Z.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
         date: O
       })
-    }), s.includes(o.x.BOT) && null != f ? (0, i.jsx)(N, {
+    }), s.includes(o.x.BOT) && null != S ? (0, i.jsx)(A, {
       icon: l.RobotIcon,
       text: T.Z.Messages.OAUTH2_DETAILS_GUILDS.format({
-        guildCount: f
+        guildCount: S
       })
-    }) : null, (0, i.jsx)(N, {
+    }) : null, (0, i.jsx)(A, {
       icon: l.ShieldIcon,
-      text: R
+      text: p
     }), null != m ? m.map(e => {
       let t = (0, u.PM)(e),
-        n = S(e);
-      return null != n && null != t ? (0, i.jsx)(N, {
+        n = f(e);
+      return null != n && null != t ? (0, i.jsx)(A, {
         icon: n,
         text: t
       }) : null
@@ -84,7 +84,7 @@ function f(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     icon: t,
     text: n,

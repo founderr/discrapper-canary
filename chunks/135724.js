@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-    return r
+    return a
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(829750),
-  s = n(280102);
+var l = n(829750),
+  r = n(280102);
 
-function r(e) {
+function a(e) {
   let {
     channel: t,
     video: n,
-    userCount: r
+    userCount: a
   } = e, {
-    limit: a
-  } = (0, i.Z)(t), o = -1, u = !1;
-  return t.userLimit > 0 && (o = t.userLimit), n && a > 0 && (u = o < 0 || a < o, o = o > 0 ? Math.min(o, a) : a), (0, l.jsx)(s.Z, {
-    users: r,
+    limit: s
+  } = (0, l.Z)(t), o = -1, c = !1;
+  return t.userLimit > 0 && (o = t.userLimit), n && s > 0 && (c = o < 0 || s < o, o = o > 0 ? Math.min(o, s) : s), (0, i.jsx)(r.Z, {
+    users: a,
     total: o,
-    videoLimit: u
+    videoLimit: c
   })
 }

@@ -16,9 +16,9 @@ function u(e, t, n) {
     (0, r.Z)(l) && (0, i.TG)(n, s) && u.add(l)
   }
   let a = t[e.getEveryoneRoleId()],
-    E = null != a && !l.e$(a.permissions, s.Plq.VIEW_CHANNEL),
-    d = (0, i.wB)(n, n.permissionOverwrites[e.id]);
-  if (E && !d)
+    d = null != a && !l.e$(a.permissions, s.Plq.VIEW_CHANNEL),
+    E = (0, i.wB)(n, n.permissionOverwrites[e.id]);
+  if (d && !E)
     for (let e of Object.values(t))(0, r.Z)(e) && (0, i.MT)(e) && u.add(e);
   return [...u]
 }

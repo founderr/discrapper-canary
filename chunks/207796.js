@@ -1,31 +1,31 @@
-t.d(r, {
+n.d(t, {
   GN: function() {
-    return h
+    return _
   },
   PJ: function() {
-    return g
+    return h
   },
   fH: function() {
-    return m
+    return E
   },
   hz: function() {
-    return o
+    return l
   },
   o2: function() {
-    return c
+    return o
   },
   t1: function() {
-    return p
+    return I
   },
   v0: function() {
-    return l
+    return r
   }
 });
-var a, n, i, l, o, c, s = t(652874),
-  d = t(868888),
-  u = t(433517);
-(a = l || (l = {})).ADMIN_UPSELL = "admin_upsell", a.GET_STARTED = "get_started", a.DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (n = o || (o = {})).VALORANT = "valorant", n.GENSHIN = "genshin", (i = c || (c = {})).USER_UPSELL = "user_upsell", i.USER_ONBOARDING = "user_onboarding";
-let h = (0, s.Z)((0, d.tJ)(e => ({
+var i, s, a, r, l, o, c = n(652874),
+  d = n(868888),
+  u = n(433517);
+(i = r || (r = {})).ADMIN_UPSELL = "admin_upsell", i.GET_STARTED = "get_started", i.DISCOVERY = "discovery", i.PLAYSTYLE = "playstyle", i.TRAITS = "traits", i.GAMES = "games", (s = l || (l = {})).VALORANT = "valorant", s.GENSHIN = "genshin", (a = o || (o = {})).USER_UPSELL = "user_upsell", a.USER_ONBOARDING = "user_onboarding";
+let _ = (0, c.Z)((0, d.tJ)(e => ({
   mode: "admin_upsell",
   previousMode: "admin_upsell",
   game: "valorant",
@@ -34,31 +34,31 @@ let h = (0, s.Z)((0, d.tJ)(e => ({
   selectedGames: [],
   selectedPlaystyle: null,
   selectedTraits: [],
-  setGame: r => e({
-    game: r
+  setGame: t => e({
+    game: t
   }),
-  setSelectedGames: r => e({
-    selectedGames: r
+  setSelectedGames: t => e({
+    selectedGames: t
   }),
-  setSelectedPlaystyle: r => e({
-    selectedPlaystyle: r,
+  setSelectedPlaystyle: t => e({
+    selectedPlaystyle: t,
     started: !0
   }),
-  setSelectedTraits: r => e({
-    selectedTraits: r,
+  setSelectedTraits: t => e({
+    selectedTraits: t,
     started: !0
   }),
-  setUserUpsellScreen: r => e({
-    userUpsellScreen: r
+  setUserUpsellScreen: t => e({
+    userUpsellScreen: t
   })
 }), {
   name: "clan-discovery",
   getStorage: () => ({
     getItem: e => {
-      var r;
-      return null !== (r = u.K.get(e)) && void 0 !== r ? r : null
+      var t;
+      return null !== (t = u.K.get(e)) && void 0 !== t ? t : null
     },
-    setItem: (e, r) => u.K.set(e, r),
+    setItem: (e, t) => u.K.set(e, t),
     removeItem: e => u.K.remove(e)
   }),
   partialize: e => ({
@@ -71,19 +71,19 @@ let h = (0, s.Z)((0, d.tJ)(e => ({
   })
 }));
 
-function m(e) {
-  let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    t = h.getState().mode,
-    a = h.getState().started;
-  h.setState({
+function E(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    n = _.getState().mode,
+    i = _.getState().started;
+  _.setState({
     mode: e,
-    previousMode: t,
-    started: r || a
+    previousMode: n,
+    started: t || i
   })
 }
 
-function g() {
-  h.setState({
+function h() {
+  _.setState({
     started: !1,
     mode: "admin_upsell",
     previousMode: "admin_upsell",
@@ -95,13 +95,13 @@ function g() {
   })
 }
 
-function p(e) {
-  var r;
-  let t = e.selectedGames,
-    a = null !== (r = e.selectedPlaystyle) && void 0 !== r ? r : void 0;
+function I(e) {
+  var t;
+  let n = e.selectedGames,
+    i = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
   return {
-    games: t,
-    playstyle: a,
+    games: n,
+    playstyle: i,
     traits: e.selectedTraits
   }
 }

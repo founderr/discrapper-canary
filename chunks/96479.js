@@ -1,54 +1,54 @@
 n.d(t, {
   Z: function() {
-    return E
+    return _
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(6025),
-  l = n(433355),
-  a = n(626135),
-  r = n(585483),
+var s = n(6025),
+  a = n(433355),
+  r = n(626135),
+  l = n(585483),
   o = n(922409),
   c = n(545724),
-  u = n(749405),
-  d = n(981631);
+  d = n(749405),
+  u = n(981631);
 
-function E(e) {
+function _(e) {
   let {
     index: t,
     className: n,
-    channel: E,
-    user: h,
-    hasSingleMessageRequest: _
+    channel: _,
+    user: E,
+    hasSingleMessageRequest: h
   } = e, {
     channelId: I
   } = (0, o._)();
-  return (0, s.jsx)(c.Z, {
+  return (0, i.jsx)(c.Z, {
     index: t,
     className: n,
-    isFocused: I === E.id,
-    channel: E,
-    user: h,
+    isFocused: I === _.id,
+    channel: _,
+    user: E,
     onClick: e => {
-      e.stopPropagation(), i.Z.openPrivateChannelAsSidebar({
-        channelId: E.id,
-        baseChannelId: l.uZ,
-        hasSingleMessageRequest: _
-      }), a.default.track(d.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+      e.stopPropagation(), s.Z.openPrivateChannelAsSidebar({
+        channelId: _.id,
+        baseChannelId: a.uZ,
+        hasSingleMessageRequest: h
+      }), r.default.track(u.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
         is_spam: !1,
-        channel_id: E.id,
-        other_user_id: h.id
+        channel_id: _.id,
+        other_user_id: E.id
       }), setTimeout(() => {
-        r.S.dispatch(d.CkL.FOCUS_CHANNEL_TEXT_AREA, {
-          channelId: E.id
+        l.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+          channelId: _.id
         })
       }, 0)
     },
-    children: e => (0, s.jsx)(u.C, {
+    children: e => (0, i.jsx)(d.C, {
       active: e,
-      user: h,
-      channel: E
+      user: E,
+      channel: _
     })
   })
 }

@@ -1,134 +1,134 @@
 t.d(s, {
   Z: function() {
-    return C
+    return A
   }
 }), t(47120);
-var n, i, a = t(735250),
-  l = t(470079),
-  r = t(442837),
-  o = t(481060),
+var n, a, i = t(735250),
+  r = t(470079),
+  o = t(442837),
+  l = t(481060),
   c = t(570140),
-  E = t(401430),
-  d = t(155268),
-  _ = t(695103),
-  T = t(285952),
-  S = t(153124),
-  u = t(689938),
+  d = t(401430),
+  _ = t(155268),
+  E = t(695103),
+  u = t(285952),
+  T = t(153124),
+  S = t(689938),
   I = t(860923),
   N = t(331651);
-let A = /^\d+$|^$/;
-(i = n || (n = {})).LOCALHOST = "localhost", i.PROXY = "proxy";
+let C = /^\d+$|^$/;
+(a = n || (n = {})).LOCALHOST = "localhost", a.PROXY = "proxy";
 
-function C(e) {
+function A(e) {
   let {
     onClose: s,
     transitionState: t
   } = e, {
     authorizedApplicationId: n,
-    authorizationError: i,
-    authorizing: C
-  } = (0, r.cj)([_.Z], () => ({
-    authorizedApplicationId: _.Z.testModeApplicationId,
-    authorizationError: _.Z.error,
-    authorizing: _.Z.isFetchingAuthorization
-  })), [O, m] = l.useState(null != n ? n : ""), [h, g] = l.useState("8080"), [R, M] = l.useState("localhost"), x = (0, S.Dt)(), D = A.test(O);
-  async function p() {
-    E.q$();
+    authorizationError: a,
+    authorizing: A
+  } = (0, o.cj)([E.Z], () => ({
+    authorizedApplicationId: E.Z.testModeApplicationId,
+    authorizationError: E.Z.error,
+    authorizing: E.Z.isFetchingAuthorization
+  })), [m, O] = r.useState(null != n ? n : ""), [g, h] = r.useState("8080"), [R, p] = r.useState("localhost"), x = (0, T.Dt)(), M = C.test(m);
+  async function D() {
+    d.q$();
     let e = function(e, s, t) {
       if (null == e) return null;
       switch (e) {
         case "localhost":
           return "https://localhost:".concat(s);
         case "proxy":
-          return (0, d.Z)(t)
+          return (0, _.Z)(t)
       }
-    }(R, h, O);
-    null != await E.Wt(O, e) && s()
+    }(R, g, m);
+    null != await d.Wt(m, e) && s()
   }
-  l.useEffect(() => () => c.Z.wait(() => E.q$()), []);
-  let L = null != n && n === O,
-    P = L ? function() {
-      E.mc(), m(""), M(null)
-    } : p;
-  return (0, a.jsxs)(o.ModalRoot, {
+  r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
+  let f = null != n && n === m,
+    L = f ? function() {
+      d.mc(), O(""), p(null)
+    } : D;
+  return (0, i.jsxs)(l.ModalRoot, {
     "aria-labelledby": x,
     transitionState: t,
-    children: [(0, a.jsxs)(o.ModalHeader, {
-      justify: T.Z.Justify.BETWEEN,
+    children: [(0, i.jsxs)(l.ModalHeader, {
+      justify: u.Z.Justify.BETWEEN,
       separator: !1,
-      children: [(0, a.jsx)(o.FormTitle, {
+      children: [(0, i.jsx)(l.FormTitle, {
         id: x,
         tag: "h1",
         className: N.marginReset,
-        children: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
-      }), (0, a.jsx)(o.ModalCloseButton, {
+        children: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
+      }), (0, i.jsx)(l.ModalCloseButton, {
         onClick: s
       })]
-    }), (0, a.jsxs)(o.ModalContent, {
+    }), (0, i.jsxs)(l.ModalContent, {
       className: I.modalContent,
-      children: [(0, a.jsx)(o.FormText, {
+      children: [(0, i.jsx)(l.FormText, {
         className: N.marginBottom20,
-        type: o.FormText.Types.DESCRIPTION,
-        children: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
-      }), null == i ? null : (0, a.jsx)(o.FormErrorBlock, {
+        type: l.FormText.Types.DESCRIPTION,
+        children: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
+      }), null == a ? null : (0, i.jsx)(l.FormErrorBlock, {
         className: N.marginBottom20,
-        children: i
-      }), (0, a.jsx)("form", {
+        children: a
+      }), (0, i.jsx)("form", {
         onSubmit: e => {
-          e.preventDefault(), P()
+          e.preventDefault(), L()
         },
-        children: (0, a.jsxs)(T.Z, {
-          direction: T.Z.Direction.VERTICAL,
-          align: T.Z.Align.START,
-          children: [(0, a.jsx)(o.FormItem, {
+        children: (0, i.jsxs)(u.Z, {
+          direction: u.Z.Direction.VERTICAL,
+          align: u.Z.Align.START,
+          children: [(0, i.jsx)(l.FormItem, {
             className: I.inputWrapper,
-            title: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
+            title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
-            children: (0, a.jsx)(o.TextInput, {
-              value: O,
+            children: (0, i.jsx)(l.TextInput, {
+              value: m,
               maxLength: 19,
-              error: D ? null : u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+              error: M ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
-                m(e)
+                O(e)
               },
-              disabled: C
+              disabled: A
             })
-          }), (0, a.jsx)(o.FormItem, {
+          }), (0, i.jsx)(l.FormItem, {
             className: I.inputWrapper,
-            title: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
-            children: (0, a.jsx)(o.SingleSelect, {
-              isDisabled: !D || "" === O,
+            title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
+            children: (0, i.jsx)(l.SingleSelect, {
+              isDisabled: !M || "" === m,
               value: R,
               options: [{
                 value: "localhost",
-                label: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
+                label: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
                 key: "localhost"
               }, {
                 value: "proxy",
-                label: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
+                label: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
                 key: "proxy"
               }],
               onChange: function(e) {
-                M(e)
+                p(e)
               },
               placeholder: "URL Origin Type"
             })
-          }), "localhost" !== R ? null : (0, a.jsx)(o.FormItem, {
+          }), "localhost" !== R ? null : (0, i.jsx)(l.FormItem, {
             className: I.inputWrapper,
-            title: u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
+            title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
-            children: (0, a.jsx)(o.TextInput, {
-              value: h,
+            children: (0, i.jsx)(l.TextInput, {
+              value: g,
               maxLength: 5,
-              onChange: e => g(e),
-              disabled: C
+              onChange: e => h(e),
+              disabled: A
             })
-          }), (0, a.jsx)(o.Button, {
-            submitting: C,
+          }), (0, i.jsx)(l.Button, {
+            submitting: A,
             type: "submit",
-            disabled: !D || 0 === O.length || "localhost" === R && 0 === h.length,
-            color: L ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-            children: L ? u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : u.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+            disabled: !M || 0 === m.length || "localhost" === R && 0 === g.length,
+            color: f ? l.Button.Colors.RED : l.Button.Colors.GREEN,
+            children: f ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]
         })
       })]

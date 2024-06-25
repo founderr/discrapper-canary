@@ -1,55 +1,55 @@
 n.d(t, {
   V5: function() {
-    return u
+    return c
   },
   ie: function() {
     return o
   }
 });
-var l = n(680089),
-  i = n(496675),
-  s = n(540126),
-  r = n(443063),
-  a = n(981631);
+var i = n(680089),
+  l = n(496675),
+  r = n(540126),
+  a = n(443063),
+  s = n(981631);
 
 function o(e, t, n) {
-  var l, i, a, o, u;
+  var i, l, s, o, c;
   return {
-    hasDivider: (l = e, i = t, ! function(e, t) {
-      if (t === s.zm) {
+    hasDivider: (i = e, l = t, ! function(e, t) {
+      if (t === r.zm) {
         let t = e.getCommunitySection().getRows();
-        return 1 === t.length && t[0] === r.f.GUILD_PREMIUM_PROGRESS_BAR || e.getCommunitySection().isEmpty()
+        return 1 === t.length && t[0] === a.f.GUILD_PREMIUM_PROGRESS_BAR || e.getCommunitySection().isEmpty()
       }
       return 0 === e.getSections()[t]
-    }(l, a = n) && (a === s.zm || !!i && (a === s.p2 || a !== s.wd && (a === l.recentsSectionNumber || (l.voiceChannelsSectionNumber, !1))))),
-    canHaveVoiceSummary: (o = e, !((u = n) === s.zm || u === s.p2 || u === s.wd || u === o.recentsSectionNumber || u === o.voiceChannelsSectionNumber))
+    }(i, s = n) && (s === r.zm || !!l && (s === r.p2 || s !== r.wd && (s === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))),
+    canHaveVoiceSummary: (o = e, !((c = n) === r.zm || c === r.p2 || c === r.wd || c === o.recentsSectionNumber || c === o.voiceChannelsSectionNumber))
   }
 }
 
-function u(e) {
+function c(e) {
   let {
     category: t,
     voiceStates: n,
-    selectedChannelId: s,
-    selectedVoiceChannelId: r
+    selectedChannelId: r,
+    selectedVoiceChannelId: a
   } = e;
   return function(e) {
     let {
       category: t,
       voiceStates: n,
-      selectedChannelId: s,
-      selectedVoiceChannelId: r
+      selectedChannelId: r,
+      selectedVoiceChannelId: a
     } = e;
-    return !0 !== l.Z.isCollapsed(t.record.id) ? [] : t.getChannelRecords().filter(e => {
+    return !0 !== i.Z.isCollapsed(t.record.id) ? [] : t.getChannelRecords().filter(e => {
       var t;
-      if (!i.Z.can(a.Plq.VIEW_CHANNEL, e)) return !1;
-      let l = null !== (t = n[e.id]) && void 0 !== t ? t : [];
-      return e.id !== r && e.id !== s && l.length > 0
+      if (!l.Z.can(s.Plq.VIEW_CHANNEL, e)) return !1;
+      let i = null !== (t = n[e.id]) && void 0 !== t ? t : [];
+      return e.id !== a && e.id !== r && i.length > 0
     })
   }({
     category: t,
-    selectedChannelId: s,
-    selectedVoiceChannelId: r,
+    selectedChannelId: r,
+    selectedVoiceChannelId: a,
     voiceStates: n
   }).length > 0
 }

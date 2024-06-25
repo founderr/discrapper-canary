@@ -3,9 +3,9 @@ n.d(t, {
     return d
   }
 });
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(990547),
+var s = n(990547),
   i = n(481060),
   a = n(213609),
   o = n(388905),
@@ -18,31 +18,31 @@ function d(e) {
     onDismiss: t
   } = e;
   return (0, a.Z)({
-    type: r.ImpressionTypes.MODAL,
-    name: r.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
-  }), (0, s.jsxs)(o.ZP, {
+    type: s.ImpressionTypes.MODAL,
+    name: s.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
+  }), (0, r.jsxs)(o.ZP, {
     className: u.chooseAccountAuthBox,
-    children: [(0, s.jsx)(o.Dx, {
+    children: [(0, r.jsx)(o.Dx, {
       children: c.Z.Messages.SWITCH_ACCOUNTS_CHOOSE_ACCOUNT
-    }), (0, s.jsx)(i.Text, {
+    }), (0, r.jsx)(i.Text, {
       className: u.chooseAccountHelpText,
       variant: "text-md/normal",
       color: "header-secondary",
       children: c.Z.Messages.SWITCH_ACCOUNTS_CHOOSE_ACCOUNT_HELPER
-    }), (0, s.jsx)(l.Z, {
+    }), (0, r.jsx)(l.Z, {
       actionText: c.Z.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN,
       onAction: e => {
         e === l.W.LOGIN_REQUIRED && t()
       }
-    }), (0, s.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: u.actions,
-      children: (0, s.jsx)(i.Button, {
+      children: (0, r.jsx)(i.Button, {
         className: u.__invalid_chooseAccountButton,
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.PRIMARY,
         onClick: t,
         size: i.Button.Sizes.MEDIUM,
-        children: (0, s.jsx)(i.Text, {
+        children: (0, r.jsx)(i.Text, {
           variant: "text-sm/normal",
           children: c.Z.Messages.SWITCH_ACCOUNTS_ADD_AN_ACCOUNT_BUTTON
         })

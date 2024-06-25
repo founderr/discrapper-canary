@@ -63,7 +63,7 @@ class h extends s.PureComponent {
     }
   }
 }
-class S extends(i = s.PureComponent) {
+class f extends(i = s.PureComponent) {
   componentDidMount() {
     document.addEventListener("mousedown", this.handleMouseEvent, !0), document.addEventListener("mousemove", this.handleMouseEvent, !0)
   }
@@ -167,7 +167,7 @@ class S extends(i = s.PureComponent) {
     }
   }
 }
-I(S, "defaultProps", {
+I(f, "defaultProps", {
   layout: d.AEg.MINIMUM,
   animated: !0
 })

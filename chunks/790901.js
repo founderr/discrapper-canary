@@ -1,9 +1,9 @@
 n.d(t, {
   u: function() {
-    return l
+    return i
   }
 });
 
-function l(e) {
+function i(e) {
   return e.length > 0
 }

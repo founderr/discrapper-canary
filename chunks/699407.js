@@ -5,7 +5,7 @@ n.d(t, {
     return T
   },
   l: function() {
-    return f
+    return S
   }
 }), n(177593), n(733860), n(47120), n(653041), n(17089);
 var o, a = n(756647),
@@ -31,35 +31,35 @@ let d = 1500,
     handleTrack: () => {}
   },
   h = [],
-  S = () => Promise.resolve({
+  f = () => Promise.resolve({
     sessionId: void 0
   }),
-  f = e => {
+  S = e => {
     let {
       dispatcher: t,
       actionHandler: n,
       getFingerprint: o,
-      getSessionId: _ = S,
-      TRACKING_URL: f,
-      drainTimeoutOverride: N,
-      waitFor: A
+      getSessionId: _ = f,
+      TRACKING_URL: S,
+      drainTimeoutOverride: A,
+      waitFor: N
     } = e;
-    d = null != N ? N : 1500;
+    d = null != A ? A : 1500;
 
     function m() {
       return 0 !== h.length && (null != r ? null != i : null != o())
     }
 
     function O() {
-      null == s && m() && (s = E(R, {
+      null == s && m() && (s = E(p, {
         timeout: d
       }))
     }
 
-    function R() {
+    function p() {
       if (s = null, !m()) return;
       let e = h.slice();
-      h = [], p(e).then(() => {
+      h = [], R(e).then(() => {
         e.forEach(e => {
           var t;
           null === (t = e.resolve) || void 0 === t || t.call(e)
@@ -73,7 +73,7 @@ let d = 1500,
       })
     }
 
-    function p(e) {
+    function R(e) {
       let t = Date.now(),
         n = e.map(e => ({
           ...e,
@@ -83,7 +83,7 @@ let d = 1500,
           }
         }));
       return u.tn.post({
-        url: f,
+        url: S,
         body: {
           token: i,
           events: n
@@ -98,9 +98,9 @@ let d = 1500,
       } = e;
       return null != t && (i = t), null != n.id && (r = n.id), O(), !1
     }, T.handleConnectionClosed = function() {
-      return R(), i = null, r = null, !1
+      return p(), i = null, r = null, !1
     }, T.handleFingerprint = function() {
-      return R(), !1
+      return p(), !1
     }, T.handleTrack = function(e) {
       let {
         event: t,
@@ -127,15 +127,15 @@ let d = 1500,
           return null != t ? (0, a.s)(t) : null
         }(_);
         null != c && (_.properties.client_uuid = I.generate(c)), h.push(_);
-        h.length > 1e4 && (h = h.slice(-1e4)), i ? R() : O()
+        h.length > 1e4 && (h = h.slice(-1e4)), i ? p() : O()
       }), !1
     };
     class g extends l.yh {
       initialize() {
-        null != A && this.waitFor(...A)
+        null != N && this.waitFor(...N)
       }
       constructor(...e) {
-        super(...e), c(this, "submitEventsImmediately", p)
+        super(...e), c(this, "submitEventsImmediately", R)
       }
     }
     return c(g, "displayName", "AnalyticsTrackingStore"), new g(t, n)

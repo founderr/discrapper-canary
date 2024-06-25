@@ -1,69 +1,69 @@
 n.d(t, {
   Z: function() {
-    return T
+    return p
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(286379),
-  a = n(481060),
-  r = n(797614),
+var i = n(735250),
+  s = n(470079),
+  a = n(286379),
+  r = n(481060),
+  l = n(797614),
   o = n(359110),
   c = n(6025),
-  u = n(433355),
-  d = n(26373),
-  E = n(486622),
-  h = n(376191),
-  _ = n(86203),
+  d = n(433355),
+  u = n(26373),
+  _ = n(486622),
+  E = n(376191),
+  h = n(86203),
   I = n(689938),
   m = n(228255);
 
-function T(e) {
+function p(e) {
   let {
     active: t,
     user: n,
-    channel: T
-  } = e, g = (0, d.V)(), p = i.useCallback(() => {
-    (0, a.showToast)((0, a.createToast)(I.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, a.ToastType.FAILURE)), r.Z.increment({
-      name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW
+    channel: p
+  } = e, g = (0, u.V)(), T = s.useCallback(() => {
+    (0, r.showToast)((0, r.createToast)(I.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({
+      name: a.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), N = i.useCallback(() => {
-    c.Z.closeChannelSidebar(u.uZ)
-  }, []), S = i.useCallback(() => {
-    c.Z.closeChannelSidebar(u.uZ), g && (0, o.Kh)(T.id)
-  }, [T.id, g]), {
-    acceptMessageRequest: C,
-    isAcceptLoading: A,
-    isUserProfileLoading: f,
+  }, []), C = s.useCallback(() => {
+    c.Z.closeChannelSidebar(d.uZ)
+  }, []), f = s.useCallback(() => {
+    c.Z.closeChannelSidebar(d.uZ), g && (0, o.Kh)(p.id)
+  }, [p.id, g]), {
+    acceptMessageRequest: S,
+    isAcceptLoading: N,
+    isUserProfileLoading: A,
     isOptimisticAccepted: Z
-  } = (0, E.m)({
+  } = (0, _.m)({
     user: n,
-    onAcceptSuccess: S,
-    onRejectSuccess: N,
-    onError: p
-  }), L = A || f, O = L || Z;
-  return (0, s.jsxs)("div", {
+    onAcceptSuccess: f,
+    onRejectSuccess: C,
+    onError: T
+  }), L = N || A, v = L || Z;
+  return (0, i.jsxs)("div", {
     className: m.container,
-    children: [(0, s.jsx)(h.Z, {
+    children: [(0, i.jsx)(E.Z, {
       otherUser: n,
-      channel: T,
+      channel: p,
       active: t
-    }), (0, s.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       className: m.actions,
-      children: [(0, s.jsx)(a.Button, {
+      children: [(0, i.jsx)(r.Button, {
         className: m.button,
-        color: a.ButtonColors.PRIMARY,
-        size: a.Button.Sizes.SMALL,
+        color: r.ButtonColors.PRIMARY,
+        size: r.Button.Sizes.SMALL,
         onClick: e => {
-          C(T.id), e.stopPropagation()
+          S(p.id), e.stopPropagation()
         },
-        disabled: O,
+        disabled: v,
         submitting: L,
         children: I.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
-      }), (0, s.jsx)(_.Z, {
+      }), (0, i.jsx)(h.Z, {
         className: m.button,
-        channel: T,
-        buttonSize: a.Button.Sizes.SMALL
+        channel: p,
+        buttonSize: r.Button.Sizes.SMALL
       })]
     })]
   })

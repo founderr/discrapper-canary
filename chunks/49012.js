@@ -21,29 +21,29 @@ var i = n(302454),
   I = n(772096),
   T = n(982806),
   h = n(540709),
-  S = n(881706),
-  f = n(592125),
-  N = n(430824),
-  A = n(20303),
+  f = n(881706),
+  S = n(592125),
+  A = n(430824),
+  N = n(20303),
   m = n(902676),
   O = n(375954),
-  R = n(699516),
-  p = n(944486),
+  p = n(699516),
+  R = n(944486),
   g = n(626135),
   C = n(981631),
   v = n(689938);
 
 function L(e, t) {
   var n;
-  let i = f.Z.getChannel(p.Z.getChannelId());
-  return !!(null == i || i.type !== C.d4z.DM || R.Z.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
+  let i = S.Z.getChannel(R.Z.getChannelId());
+  return !!(null == i || i.type !== C.d4z.DM || p.Z.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
 }
 
 function D(e, t) {
   let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
     {
-      trusted: R,
-      onClick: p,
+      trusted: p,
+      onClick: R,
       onConfirm: L,
       shouldConfirm: D,
       messageId: M,
@@ -64,22 +64,22 @@ function D(e, t) {
     b = !1,
     G = M,
     w = P,
-    B = null;
+    x = null;
   if (null != M && null != P) {
-    var x, k, V;
+    var B, k, V;
     let e = O.Z.getMessage(P, M),
-      t = f.Z.getBasicChannel(P);
+      t = S.Z.getBasicChannel(P);
     U = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
-    let n = N.Z.getGuild(U),
-      i = (null == e ? void 0 : null === (x = e.messageReference) || void 0 === x ? void 0 : x.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.iLy.IS_CROSSPOST)) && null != U;
-    i && (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null ? (G = e.messageReference.message_id, w = e.messageReference.channel_id, B = e.messageReference.guild_id) : B = U;
+    let n = A.Z.getGuild(U),
+      i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.iLy.IS_CROSSPOST)) && null != U;
+    i && (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null ? (G = e.messageReference.message_id, w = e.messageReference.channel_id, x = e.messageReference.guild_id) : x = U;
     let r = (null == t ? void 0 : t.type) === C.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(C.oNc.COMMUNITY)) === !0,
       s = (null == e ? void 0 : e.hasFlag(C.iLy.EPHEMERAL)) === !0;
     b = null != e && !s && (i || r)
   }
   if (null != P) {
-    let e = f.Z.getChannel(P),
-      t = N.Z.getGuild(null == e ? void 0 : e.getGuildId());
+    let e = S.Z.getChannel(P),
+      t = A.Z.getGuild(null == e ? void 0 : e.getGuildId());
     null != e && null != t && t.hasFeature(C.oNc.DISCOVERABLE) && g.default.track(C.rMx.URL_CLICKED, {
       url_domain: (0, m.F)(y),
       guild_id: t.id,
@@ -89,8 +89,8 @@ function D(e, t) {
       target: y
     })
   }
-  if (E.Z.trackLinkClicked(y), null != p) {
-    if (p(t)) return
+  if (E.Z.trackLinkClicked(y), null != R) {
+    if (R(t)) return
   } else {
     let {
       default: e
@@ -106,7 +106,7 @@ function D(e, t) {
         channelId: P,
         guildId: U,
         sourceChannelId: w,
-        sourceGuildId: B
+        sourceGuildId: x
       }), null != L) {
       L();
       return
@@ -116,7 +116,7 @@ function D(e, t) {
     null == t || t.preventDefault(), l.Z.show(y);
     return
   }
-  if (null != (0, S.v)(y)) {
+  if (null != (0, f.v)(y)) {
     null == t || t.preventDefault(), h.Z.show(y);
     return
   }
@@ -124,16 +124,16 @@ function D(e, t) {
     null == t || t.preventDefault(), c.Z.show(y);
     return
   }
-  let H = "function" == typeof R ? R() : R,
+  let H = "function" == typeof p ? p() : p,
     F = (0, m.E)(y),
     Y = !("http:" === F || "https:" === F);
-  if (!Y && (H || A.Z.isTrustedDomain(y)) || Y && A.Z.isTrustedProtocol(y)) {
+  if (!Y && (H || N.Z.isTrustedDomain(y)) || Y && N.Z.isTrustedProtocol(y)) {
     null == t || null != D && D ? Z() : b && E.Z.trackAnnouncementMessageLinkClicked({
       messageId: G,
       channelId: P,
       guildId: U,
       sourceChannelId: w,
-      sourceGuildId: B
+      sourceGuildId: x
     });
     return
   }

@@ -12,53 +12,53 @@ n.d(t, {
     return B
   },
   sc: function() {
-    return U
+    return j
   },
   zs: function() {
     return G
   }
 }), n(627341);
-var s, i, l = n(735250),
-  a = n(470079),
+var i, a, s = n(735250),
+  l = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(278074),
-  u = n(481060),
-  d = n(596454),
-  E = n(44315),
-  _ = n(377171),
+  d = n(481060),
+  u = n(596454),
+  _ = n(44315),
+  E = n(377171),
   I = n(695346),
-  T = n(261922),
-  m = n(186523),
-  N = n(553826),
-  h = n(506071),
-  C = n(203143),
-  S = n(79390),
-  A = n(839963),
+  m = n(261922),
+  T = n(186523),
+  h = n(553826),
+  N = n(506071),
+  f = n(203143),
+  p = n(79390),
+  C = n(839963),
   g = n(294608),
-  p = n(65145),
-  f = n(981631),
+  S = n(65145),
+  A = n(981631),
   R = n(689938),
-  O = n(353452);
+  x = n(353452);
 
-function M(e) {
+function O(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsx)("ul", {
+  return (0, s.jsx)("ul", {
     "aria-label": R.Z.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     className: t,
     children: n
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, s.jsx)("div", {
     "aria-label": R.Z.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
@@ -70,12 +70,12 @@ function v(e) {
   let {
     className: t,
     children: n
-  } = e, s = (0, u.useRadioGroup)({
+  } = e, i = (0, d.useRadioGroup)({
     orientation: "vertical"
   });
-  return (0, l.jsx)("div", {
+  return (0, s.jsx)("div", {
     "aria-label": R.Z.Messages.POLL_OPTIONS_ARIA,
-    ...s,
+    ...i,
     className: t,
     children: n
   })
@@ -85,43 +85,43 @@ function L(e) {
   let {
     className: t,
     onClick: n,
-    isSelected: s,
-    isFirstAnswer: i,
-    children: a
+    isSelected: i,
+    isFirstAnswer: a,
+    children: l
   } = e, {
     pollAnswerRef: r
-  } = (0, p.dv)();
-  return (0, l.jsx)(u.Clickable, {
+  } = (0, S.dv)();
+  return (0, s.jsx)(d.Clickable, {
     role: "checkbox",
-    className: o()(t, O.enabled),
+    className: o()(t, x.enabled),
     onClick: n,
-    "aria-checked": s,
-    ref: i ? r : void 0,
-    children: a
+    "aria-checked": i,
+    ref: a ? r : void 0,
+    children: l
   })
 }
 
 function Z(e) {
   let t, {
     className: n,
-    children: s,
-    onClick: i,
-    isSelected: a,
+    children: i,
+    onClick: a,
+    isSelected: l,
     hasSelectedAnyAnswer: r,
     isFirstAnswer: c
   } = e;
-  t = r ? a ? 0 : -1 : c ? 0 : -1;
+  t = r ? l ? 0 : -1 : c ? 0 : -1;
   let {
-    pollAnswerRef: d
-  } = (0, p.dv)();
-  return (0, l.jsx)(u.Clickable, {
+    pollAnswerRef: u
+  } = (0, S.dv)();
+  return (0, s.jsx)(d.Clickable, {
     role: "radio",
-    className: o()(n, O.enabled),
-    onClick: i,
-    "aria-checked": a,
+    className: o()(n, x.enabled),
+    onClick: a,
+    "aria-checked": l,
     tabIndex: t,
-    ref: c ? d : void 0,
-    children: s
+    ref: c ? u : void 0,
+    children: i
   })
 }
 
@@ -129,123 +129,123 @@ function P(e) {
   let {
     answers: t,
     answersInteraction: n,
-    answerTapAccessibilityLabel: s,
-    canTapAnswers: i,
-    hasSelectedAnyAnswer: a,
+    answerTapAccessibilityLabel: i,
+    canTapAnswers: a,
+    hasSelectedAnyAnswer: l,
     className: r,
-    answerClassName: u,
-    renderAnswerContent: d
+    answerClassName: d,
+    renderAnswerContent: u
   } = e, {
-    ContainerComponent: E,
-    answerElementType: _
+    ContainerComponent: _,
+    answerElementType: E
   } = (0, c.EQ)({
-    canTapAnswers: i,
+    canTapAnswers: a,
     answersInteraction: n
   }).with({
-    answersInteraction: A.Y7.RADIO_BUTTONS
+    answersInteraction: C.Y7.RADIO_BUTTONS
   }, () => ({
     ContainerComponent: v,
     answerElementType: 1
   })).with({
-    answersInteraction: A.Y7.CHECKBOXES
+    answersInteraction: C.Y7.CHECKBOXES
   }, () => ({
-    ContainerComponent: x,
+    ContainerComponent: M,
     answerElementType: 2
   })).with({
     canTapAnswers: !0,
-    answersInteraction: A.Y7.LIST
+    answersInteraction: C.Y7.LIST
   }, () => ({
-    ContainerComponent: M,
+    ContainerComponent: O,
     answerElementType: 3
   })).otherwise(() => ({
-    ContainerComponent: M,
+    ContainerComponent: O,
     answerElementType: 0
   }));
-  return (0, l.jsx)(E, {
+  return (0, s.jsx)(_, {
     className: r,
-    children: t.map((e, t) => (0, l.jsx)(D, {
-      className: o()(O.__invalid_answer, u),
+    children: t.map((e, t) => (0, s.jsx)(b, {
+      className: o()(x.__invalid_answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
-      elementType: _,
-      answerTapAccessibilityLabel: s,
-      hasSelectedAnyAnswer: a,
-      children: d(e)
+      elementType: E,
+      answerTapAccessibilityLabel: i,
+      hasSelectedAnyAnswer: l,
+      children: u(e)
     }, e.answerId))
   })
 }
 
-function D(e) {
+function b(e) {
   let {
     className: t,
     answer: n,
-    children: s,
-    hasSelectedAnyAnswer: i,
+    children: i,
+    hasSelectedAnyAnswer: a,
     isFirstAnswer: r,
     elementType: c
   } = e, {
-    channelId: u,
-    messageId: d
-  } = (0, g.pE)(), E = (0, g.$B)(n.style), _ = !0 === n.isSelected, I = a.useCallback(() => {
-    C.Z.handlePollAnswerTapped({
-      channelId: u,
-      messageId: d,
+    channelId: d,
+    messageId: u
+  } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, I = l.useCallback(() => {
+    f.Z.handlePollAnswerTapped({
+      channelId: d,
+      messageId: u,
       answerId: n.answerId
     })
-  }, [u, d, n.answerId]);
+  }, [d, u, n.answerId]);
   switch (c) {
     case 0:
     case 3:
-      return (0, l.jsx)("li", {
-        className: o()(t, E),
-        children: s
+      return (0, s.jsx)("li", {
+        className: o()(t, _),
+        children: i
       });
     case 1:
-      return (0, l.jsx)(Z, {
-        className: o()(t, E),
+      return (0, s.jsx)(Z, {
+        className: o()(t, _),
         onClick: I,
-        isSelected: _,
-        hasSelectedAnyAnswer: i,
+        isSelected: E,
+        hasSelectedAnyAnswer: a,
         isFirstAnswer: r,
-        children: s
+        children: i
       });
     case 2:
-      return (0, l.jsx)(L, {
-        className: o()(t, E),
+      return (0, s.jsx)(L, {
+        className: o()(t, _),
         onClick: I,
-        isSelected: _,
+        isSelected: E,
         isFirstAnswer: r,
-        children: s
+        children: i
       })
   }
 }
 
-function j(e) {
+function D(e) {
   var t;
   let {
     attachment: n,
-    className: s
-  } = e, i = (0, h.n)(), a = I.QK.useSetting();
-  return (0, l.jsx)(T.Z, {
-    className: s,
-    imageClassName: O.attachmentImage,
+    className: i
+  } = e, a = (0, N.n)(), l = I.QK.useSetting();
+  return (0, s.jsx)(m.Z, {
+    className: i,
+    imageClassName: x.attachmentImage,
     src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,
-    alt: null !== (t = n.description) && void 0 !== t ? t : (0, S.fw)(n.filename),
+    alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
     responsive: !0,
     width: 212,
     height: 212,
-    autoPlay: a,
-    shouldAnimate: i,
+    autoPlay: l,
+    shouldAnimate: a,
     shouldRenderAccessory: !1
   })
 }
 
-function U(e) {
+function j(e) {
   let {
     className: t,
     emoji: n
   } = e;
-  return (0, l.jsx)(d.Z, {
+  return (0, s.jsx)(u.Z, {
     className: t,
     emojiId: n.id,
     emojiName: n.name,
@@ -253,11 +253,11 @@ function U(e) {
   })
 }
 
-function b(e, t) {
-  return null != e ? (0, l.jsx)("div", {
+function U(e, t) {
+  return null != e ? (0, s.jsx)("div", {
     className: e,
     children: t
-  }) : (0, l.jsx)(l.Fragment, {
+  }) : (0, s.jsx)(s.Fragment, {
     children: t
   })
 }
@@ -266,9 +266,9 @@ function y(e) {
   let {
     media: t,
     containerClassName: n,
-    attachmentClassName: s,
-    emojiClassName: i,
-    fallback: a
+    attachmentClassName: i,
+    emojiClassName: a,
+    fallback: l
   } = e, {
     message: r
   } = (0, g.GF)();
@@ -277,16 +277,16 @@ function y(e) {
       var n;
       return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0])
     });
-    if (null != e) return b(n, (0, l.jsx)(j, {
-      className: s,
+    if (null != e) return U(n, (0, s.jsx)(D, {
+      className: i,
       attachment: e
     }))
   }
-  return null != t.emoji ? b(n, (0, l.jsx)(U, {
-    className: i,
+  return null != t.emoji ? U(n, (0, s.jsx)(j, {
+    className: a,
     emoji: t.emoji
-  })) : void 0 !== a ? (0, l.jsx)(l.Fragment, {
-    children: a
+  })) : void 0 !== l ? (0, s.jsx)(s.Fragment, {
+    children: l
   }) : null
 }
 
@@ -294,10 +294,10 @@ function B(e) {
   let {
     isVictor: t,
     isExpired: n,
-    size: s,
-    className: i
+    size: i,
+    className: a
   } = e, {
-    color: a,
+    color: l,
     backgroundColor: r
   } = (0, c.EQ)({
     isVictor: t,
@@ -306,24 +306,24 @@ function B(e) {
     isExpired: !0,
     isVictor: !0
   }, () => ({
-    color: _.Z.BUTTON_POSITIVE_BACKGROUND,
-    backgroundColor: (0, E.Lq)(f.Ilk.WHITE_500)
+    color: E.Z.BUTTON_POSITIVE_BACKGROUND,
+    backgroundColor: (0, _.Lq)(A.Ilk.WHITE_500)
   })).with({
     isExpired: !0,
     isVictor: !1
   }, () => ({
-    color: _.Z.ICON_PRIMARY,
-    backgroundColor: _.Z.BG_MOD_FAINT
+    color: E.Z.ICON_PRIMARY,
+    backgroundColor: E.Z.BG_MOD_FAINT
   })).otherwise(() => ({
-    color: (0, E.Lq)(f.Ilk.BRAND_500),
-    backgroundColor: (0, E.Lq)(f.Ilk.WHITE_500)
+    color: (0, _.Lq)(A.Ilk.BRAND_500),
+    backgroundColor: (0, _.Lq)(A.Ilk.WHITE_500)
   }));
-  return (0, l.jsx)(u.CircleCheckIcon, {
+  return (0, s.jsx)(d.CircleCheckIcon, {
     size: "custom",
-    width: s,
-    height: s,
-    className: i,
-    color: a,
+    width: i,
+    height: i,
+    className: a,
+    color: l,
     secondaryColor: r,
     "aria-hidden": !0
   })
@@ -333,20 +333,20 @@ function k(e) {
   let {
     isSelected: t,
     size: n,
-    className: s
-  } = e, i = {
+    className: i
+  } = e, a = {
     width: n,
     height: n,
-    background: O.radioBackground,
+    background: x.radioBackground,
     "aria-hidden": !0
   };
-  return t ? (0, l.jsx)(N.Z, {
-    ...i,
-    foreground: O.radioForeground,
-    className: s
-  }) : (0, l.jsx)(m.Z, {
-    ...i,
-    className: s
+  return t ? (0, s.jsx)(h.Z, {
+    ...a,
+    foreground: x.radioForeground,
+    className: i
+  }) : (0, s.jsx)(T.Z, {
+    ...a,
+    className: i
   })
 }
 
@@ -354,22 +354,22 @@ function G(e) {
   let {
     isSelected: t,
     size: n,
-    className: s
-  } = e, i = .85 * n;
-  return (0, l.jsx)("div", {
-    className: o()(O.checkbox, {
-      [O.checkboxSelected]: t
-    }, s),
+    className: i
+  } = e, a = .85 * n;
+  return (0, s.jsx)("div", {
+    className: o()(x.checkbox, {
+      [x.checkboxSelected]: t
+    }, i),
     style: {
       width: n,
       height: n
     },
     "aria-hidden": !0,
-    children: t && (0, l.jsx)(u.CheckmarkLargeIcon, {
+    children: t && (0, s.jsx)(d.CheckmarkLargeIcon, {
       size: "custom",
-      width: i,
-      height: i,
-      color: (0, E.Lq)(f.Ilk.WHITE_500)
+      width: a,
+      height: a,
+      color: (0, _.Lq)(A.Ilk.WHITE_500)
     })
   })
-}(i = s || (s = {}))[i.LIST_ITEM = 0] = "LIST_ITEM", i[i.RADIO = 1] = "RADIO", i[i.CHECKBOX = 2] = "CHECKBOX", i[i.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"
+}(a = i || (i = {}))[a.LIST_ITEM = 0] = "LIST_ITEM", a[a.RADIO = 1] = "RADIO", a[a.CHECKBOX = 2] = "CHECKBOX", a[a.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"

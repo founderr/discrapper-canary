@@ -1,4 +1,4 @@
-t.d(r, {
+r.d(t, {
   K: function() {
     return i
   }

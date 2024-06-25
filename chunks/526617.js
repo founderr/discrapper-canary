@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(28546),
   T = n(468954),
   h = n(695346),
-  S = n(594174),
-  f = n(979651),
-  N = n(153124),
-  A = n(259580),
+  f = n(594174),
+  S = n(979651),
+  A = n(153124),
+  N = n(259580),
   m = n(626135),
   O = n(74538),
-  R = n(697426),
-  p = n(242291),
+  p = n(697426),
+  R = n(242291),
   g = n(421673),
   C = n(663215),
   v = n(409673),
@@ -39,11 +39,11 @@ var i = n(735250),
   G = n(938594);
 let w = [8, 0, 8, 8];
 
-function B(e) {
+function x(e) {
   return 0 === e ? 16 : 32
 }
 
-function x(e) {
+function B(e) {
   let {
     categoryInfo: t,
     collapsed: n,
@@ -62,13 +62,13 @@ function x(e) {
         className: G.sectionHeaderContent,
         children: [function() {
           switch (t.type) {
-            case R.bg.FAVORITES:
+            case p.bg.FAVORITES:
               return (0, i.jsx)(l.StarIcon, {
                 size: "xs",
                 color: "currentColor",
                 className: G.headerIcon
               });
-            case R.bg.RECENTLY_HEARD:
+            case p.bg.RECENTLY_HEARD:
               return (0, i.jsx)(l.ClockIcon, {
                 size: "custom",
                 width: 20,
@@ -76,17 +76,17 @@ function x(e) {
                 color: "currentColor",
                 className: G.headerIcon
               });
-            case R.bg.FREQUENTLY_USED:
+            case p.bg.FREQUENTLY_USED:
               return (0, i.jsx)(l.AnalyticsIcon, {
                 className: G.headerIcon
               });
-            case R.bg.GUILD:
+            case p.bg.GUILD:
               return (0, i.jsx)(d.Z, {
                 guild: t.guild,
                 height: 16,
                 width: 16
               });
-            case R.bg.DEFAULTS:
+            case p.bg.DEFAULTS:
               return (0, i.jsx)(l.ClydeIcon, {
                 size: "custom",
                 width: 28,
@@ -94,7 +94,7 @@ function x(e) {
                 color: "currentColor",
                 className: G.headerIcon
               });
-            case R.bg.SEARCH:
+            case p.bg.SEARCH:
               return (0, i.jsx)(l.MagnifyingGlassIcon, {
                 size: "md",
                 color: "currentColor",
@@ -107,23 +107,23 @@ function x(e) {
           className: G.sectionTitle,
           children: function() {
             switch (t.type) {
-              case R.bg.FAVORITES:
+              case p.bg.FAVORITES:
                 return b.Z.Messages.FAVORITES;
-              case R.bg.RECENTLY_HEARD:
+              case p.bg.RECENTLY_HEARD:
                 return b.Z.Messages.RECENTLY_HEARD;
-              case R.bg.FREQUENTLY_USED:
+              case p.bg.FREQUENTLY_USED:
                 return b.Z.Messages.FREQUENTLY_USED;
-              case R.bg.GUILD:
+              case p.bg.GUILD:
                 return t.guild.name;
-              case R.bg.DEFAULTS:
+              case p.bg.DEFAULTS:
                 return b.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
-              case R.bg.SEARCH:
+              case p.bg.SEARCH:
                 return b.Z.Messages.SEARCH_RESULTS_SECTION_LABEL
             }
           }()
-        }), (0, i.jsx)(A.Z, {
+        }), (0, i.jsx)(N.Z, {
           className: G.headerIcon,
-          direction: n ? A.Z.Directions.RIGHT : A.Z.Directions.DOWN
+          direction: n ? N.Z.Directions.RIGHT : N.Z.Directions.DOWN
         })]
       })
     })
@@ -156,7 +156,7 @@ function V(e) {
       let i = "item-".concat(t),
         l = o && I.rowIndex === s && I.columnIndex === t;
       switch (e.item.type) {
-        case R.vB.SOUND:
+        case p.vB.SOUND:
           return (0, r.createElement)(v.ZP, {
             ...u(t),
             ...n,
@@ -169,7 +169,7 @@ function V(e) {
             enableSecondaryActions: !0,
             buttonOverlay: d
           });
-        case R.vB.ADD_SOUND:
+        case p.vB.ADD_SOUND:
           return (0, r.createElement)(L.Z, {
             ...u(t),
             key: i,
@@ -188,7 +188,7 @@ function Z(e) {
     containerWidth: o,
     onClose: _,
     onSelect: d,
-    suppressPlaySound: A = !1,
+    suppressPlaySound: N = !1,
     shouldShowUpsell: v = !0,
     gridNotice: L,
     soundButtonOverlay: Z,
@@ -197,31 +197,31 @@ function Z(e) {
     defaultSoundsOnly: Y = !1
   } = e, {
     analyticsLocations: j
-  } = (0, c.ZP)(), [W, K] = r.useState(null), z = (0, a.e7)([S.default], () => S.default.getCurrentUser()), q = (0, a.e7)([f.Z], () => {
+  } = (0, c.ZP)(), [W, K] = r.useState(null), z = (0, a.e7)([f.default], () => f.default.getCurrentUser()), q = (0, a.e7)([S.Z], () => {
     var e;
-    return f.Z.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : U.lds)
-  }), X = (null == q ? void 0 : q.selfDeaf) || (null == q ? void 0 : q.mute) || (null == q ? void 0 : q.suppress), Q = (0, I.Iu)(e => e.searchQuery), J = (0, N.Dt)(), {
+    return S.Z.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : U.lds)
+  }), X = (null == q ? void 0 : q.selfDeaf) || (null == q ? void 0 : q.mute) || (null == q ? void 0 : q.suppress), Q = (0, I.Iu)(e => e.searchQuery), J = (0, A.Dt)(), {
     categories: $
   } = (0, C.ZP)(s, void 0, Y), [ee, et] = r.useState([]), en = (0, C.FS)($, ee, Q), ei = h.T4.useSetting(), er = r.useMemo(() => new Set(ei), [ei]), es = null == s, eo = O.ZP.canUseCustomCallSounds(z), ea = r.useCallback(e => {
     er.has(e) ? er.delete(e) : er.add(e), h.T4.updateSetting(Array.from(er))
   }, [er]), el = r.useCallback((e, t) => {
-    if (!A && (0, p.Nq)(z, e, s, !1)) {
+    if (!N && (0, R.Nq)(z, e, s, !1)) {
       var n;
-      (0, p.GN)(e, null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : U.lds, t), null != Q && "" !== Q && m.default.track(U.rMx.SEARCH_RESULT_SELECTED, {
+      (0, R.GN)(e, null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : U.lds, t), null != Q && "" !== Q && m.default.track(U.rMx.SEARCH_RESULT_SELECTED, {
         search_type: U.aib.SOUNDBOARD,
         channel_id: null == s ? void 0 : s.id,
         query: Q,
         location_stack: t
       })
     } else {
-      if ((0, p.Nq)(z, e, s)) return;
+      if ((0, R.Nq)(z, e, s)) return;
       v && K(e)
     }
-  }, [A, z, s, v, Q]), eu = r.useCallback(e => {
+  }, [N, z, s, v, Q]), eu = r.useCallback(e => {
     switch (e.item.type) {
-      case R.vB.SOUND:
+      case p.vB.SOUND:
         return null == d || d(e.item.sound), el(e.item.sound, j);
-      case R.vB.ADD_SOUND:
+      case p.vB.ADD_SOUND:
         return (0, y.Z)(e.item.guild.id)
     }
   }, [j, el, d]), e_ = r.useCallback((e, t, n, r, o) => (0, i.jsx)(V, {
@@ -231,7 +231,7 @@ function Z(e) {
     gridRowProps: t,
     getItemProps: r,
     onItemMouseEnter: o,
-    suppressPlaySound: A,
+    suppressPlaySound: N,
     onSelectItem: eu,
     soundButtonProps: {
       channel: s,
@@ -240,9 +240,9 @@ function Z(e) {
       analyticsLocations: j
     },
     buttonOverlay: Z
-  }, "row-".concat(t["aria-rowindex"])), [eu, s, X, A, j, es, eo, Z]), ec = r.useCallback((e, t) => {
+  }, "row-".concat(t["aria-rowindex"])), [eu, s, X, N, j, es, eo, Z]), ec = r.useCallback((e, t) => {
     let n = "".concat(e.key);
-    return (0, i.jsx)(x, {
+    return (0, i.jsx)(B, {
       categoryInfo: e.categoryInfo,
       toggleCollapsed: () => ea(n),
       collapsed: er.has(n),
@@ -272,7 +272,7 @@ function Z(e) {
     categories: $,
     listPadding: H
   }), [$, H]), eh = r.useCallback(e => {
-    if ((null == e ? void 0 : e.item.type) === R.vB.SOUND) {
+    if ((null == e ? void 0 : e.item.type) === p.vB.SOUND) {
       var t;
       return (0, i.jsx)(M.Z, {
         closePicker: _,
@@ -301,7 +301,7 @@ function Z(e) {
       renderCategoryList: eT,
       renderHeaderAccessories: eI,
       rowHeight: 48,
-      sectionHeaderHeight: B,
+      sectionHeaderHeight: x,
       listPadding: w,
       itemNodeWidth: 150,
       gridNavigatorId: J,

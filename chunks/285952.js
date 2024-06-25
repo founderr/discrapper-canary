@@ -78,18 +78,18 @@ let I = e => {
     shrink: I,
     grow: T,
     basis: h,
-    style: S,
-    ...f
+    style: f,
+    ...S
   } = e;
   return (0, i.jsx)("div", {
     style: {
       flexShrink: I,
       flexGrow: T,
       flexBasis: h,
-      ...S
+      ...f
     },
     className: o()(a.flex, r, s, l, E, n),
-    ...f,
+    ...S,
     children: t
   })
 };

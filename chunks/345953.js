@@ -14,17 +14,17 @@ var i = n(392711),
   I = n(709054),
   T = n(815016),
   h = n(725380),
-  S = n(340332),
-  f = n(675478),
-  N = n(65154);
-let A = e => "AudioContextSettingsMigrated:".concat(e),
-  m = e => e === N.Yn.STREAM ? s.h.STREAM : s.h.USER;
+  f = n(340332),
+  S = n(675478),
+  A = n(65154);
+let N = e => "AudioContextSettingsMigrated:".concat(e),
+  m = e => e === A.Yn.STREAM ? s.h.STREAM : s.h.USER;
 
 function O() {
-  (0, T.R)() && (a.K.get(A(d.default.getId())) || f.hW.updateAsync("audioContextSettings", e => {
+  (0, T.R)() && (a.K.get(N(d.default.getId())) || S.hW.updateAsync("audioContextSettings", e => {
     let t = !1;
     for (let [n, i] of Object.entries(E.Z.getState().settingsByContext)) {
-      let r = (0, S.z)(n);
+      let r = (0, f.z)(n);
       if (null == r) continue;
       let s = e[r],
         o = String(Date.now()),
@@ -39,7 +39,7 @@ function O() {
         muted: !1,
         modifiedAt: o,
         ...a[e],
-        volume: (0, S.r)(t, n)
+        volume: (0, f.r)(t, n)
       };
       let l = Object.keys(s).length;
       for (let [e, [n, i]] of Object.entries(a).entries()) {
@@ -47,24 +47,24 @@ function O() {
         null == s[n] && (t = !0, s[n] = i)
       }
     }
-    return a.K.set(A(d.default.getId()), !0), t
-  }, f.fy.AUTOMATED))
+    return a.K.set(N(d.default.getId()), !0), t
+  }, S.fy.AUTOMATED))
 }
-let R = r().debounce(() => {
+let p = r().debounce(() => {
     g()
   }, 2e3),
-  p = r().debounce(u.On, 500, {
+  R = r().debounce(u.On, 500, {
     maxWait: 500
   });
 
 function g() {
-  f.hW.updateAsync("audioContextSettings", e => {
+  S.hW.updateAsync("audioContextSettings", e => {
     let t = !1;
     return (0, h.$E)((n, i, r) => {
       let s = function(e, t, n, i) {
         var r, s, a, l, u;
         let _ = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-          c = (0, S.z)(n);
+          c = (0, f.z)(n);
         if (null == c) return !1;
         let d = e[c];
         if (d[t] = null !== (r = d[t]) && void 0 !== r ? r : (s = n, o.JY.create({
@@ -97,7 +97,7 @@ function g() {
       });
       t = t || s
     }), t
-  }, f.fy.INFREQUENT_USER_ACTION)
+  }, S.fy.INFREQUENT_USER_ACTION)
 }
 
 function C(e) {
@@ -109,12 +109,12 @@ function C(e) {
   } = e;
   if (s === d.default.getId() || !(0, T.R)()) return;
   let a = _.Z.getRemoteSessionId();
-  null != a && p(a, s, r, {
+  null != a && R(a, s, r, {
     muted: E.Z.isLocalMute(s, r),
     volume: o
   }), t = r, n = s, i = o, (0, h.RF)(t, n, {
     volume: i
-  }), R()
+  }), p()
 }
 
 function v(e) {
@@ -127,7 +127,7 @@ function v(e) {
       var i, r, s;
       i = t, r = n, s = E.Z.isLocalMute(n, t), (0, h.RF)(i, r, {
         muted: s
-      }), R.cancel(), g()
+      }), p.cancel(), g()
     }
   }
 }
@@ -142,7 +142,7 @@ function L(e) {
       var i, r, s;
       i = t, r = n, s = c.Z.isLocalSoundboardMuted(n), (0, h.RF)(i, r, {
         soundboardMuted: s
-      }), R.cancel(), g()
+      }), p.cancel(), g()
     }
   }
 }

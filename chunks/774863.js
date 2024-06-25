@@ -13,7 +13,7 @@ let I = {},
 function h() {
   I = {}, T = {}
 }
-class S extends(r = l.ZP.Store) {
+class f extends(r = l.ZP.Store) {
   getFpMessageInfo(e) {
     return I[e]
   }
@@ -29,12 +29,12 @@ class S extends(r = l.ZP.Store) {
     return i
   }
 }
-a = "FalsePositiveStore", (o = "displayName") in(s = S) ? Object.defineProperty(s, o, {
+a = "FalsePositiveStore", (o = "displayName") in(s = f) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new S(u.Z, {
+}) : s[o] = a, t.Z = new f(u.Z, {
   LOGOUT: function() {
     (function() {
       I = {}, T = {}

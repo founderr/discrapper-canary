@@ -9,9 +9,9 @@ var i, r, s, o, a = n(392711),
   I = n(914010),
   T = n(981631);
 let h = {},
-  S = {};
+  f = {};
 
-function f() {
+function S() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.Z.getChannelId(),
     n = d.Z.getChannel(t);
@@ -27,7 +27,7 @@ function f() {
   }
   return !1
 }
-class N extends(o = u.ZP.Store) {
+class A extends(o = u.ZP.Store) {
   initialize() {
     this.waitFor(I.Z, E.Z)
   }
@@ -52,21 +52,21 @@ class N extends(o = u.ZP.Store) {
   getInternalState() {
     return {
       calls: h,
-      enqueuedRings: S
+      enqueuedRings: f
     }
   }
 }
-s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
+s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(c.Z, {
+}) : i[r] = s, t.Z = new A(c.Z, {
   CONNECTION_OPEN: function() {
-    return f(!0)
+    return S(!0)
   },
   CONNECTION_CLOSED: function() {
-    h = {}, S = {}
+    h = {}, f = {}
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
@@ -74,24 +74,24 @@ s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
     } = e;
     h = {
       ...t.calls
-    }, S = {
+    }, f = {
       ...t.enqueuedRings
     }
   },
   CONNECTION_RESUMED: function() {
-    return f(!0)
+    return S(!0)
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return f(!1, t)
+    return S(!1, t)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    if (null != S[t.id] && delete S[t.id], null == h[t.id]) return !1;
+    if (null != f[t.id] && delete f[t.id], null == h[t.id]) return !1;
     delete h[t.id]
   },
   CALL_CREATE: function(e) {
@@ -108,9 +108,9 @@ s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
         ringing: r,
         unavailable: !1,
         regionUpdated: !1
-      }, null != S[t]) {
-      let e = S[t];
-      delete S[t], 1 !== e.indexOf("all") && (e = null), _.tn.post({
+      }, null != f[t]) {
+      let e = f[t];
+      delete f[t], 1 !== e.indexOf("all") && (e = null), _.tn.post({
         url: T.ANM.CALL_RING(t),
         body: {
           recipients: e
@@ -149,7 +149,7 @@ s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
       region: null,
       regionUpdated: !1,
       unavailable: n
-    }, null != S[t] && delete S[t]
+    }, null != f[t] && delete f[t]
   },
   CALL_ENQUEUE_RING: function(e) {
     var t;
@@ -157,12 +157,12 @@ s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
       channelId: n,
       recipients: i
     } = e;
-    S[n] = l().union(null !== (t = S[n]) && void 0 !== t ? t : [], null != i ? i : ["all"])
+    f[n] = l().union(null !== (t = f[n]) && void 0 !== t ? t : [], null != i ? i : ["all"])
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    null == t && (S = {})
+    null == t && (f = {})
   }
 })

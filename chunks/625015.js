@@ -1,70 +1,70 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(704215),
-  a = n(974674),
+var i = n(735250),
+  a = n(470079),
+  l = n(704215),
+  s = n(974674),
   r = n(481060),
   o = n(243778),
   c = n(261892),
   u = n(197115),
   d = n(703656),
   h = n(594174),
-  m = n(626135),
-  E = n(74538),
-  p = n(204197),
-  g = n(502762),
-  f = n(981631),
-  C = n(921944),
-  _ = n(474936),
+  p = n(626135),
+  m = n(74538),
+  _ = n(204197),
+  f = n(502762),
+  E = n(981631),
+  g = n(921944),
+  C = n(474936),
   I = n(689938),
   x = n(780104);
 
 function T() {
-  m.default.track(f.rMx.PREMIUM_UPSELL_INTERACTED, {
+  p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
     cta_type: "Learn more button",
     target: "premium marketing page"
-  }), (0, d.uL)(f.Z5c.APPLICATION_STORE)
+  }), (0, d.uL)(E.Z5c.APPLICATION_STORE)
 }
 
 function N(e) {
   let {
     avatarSrc: t,
     username: n
-  } = e, [i, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
-  return i !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, l.jsxs)(g.Z.Overlay, {
+  } = e, [a, c] = (0, o.U)([l.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+  return a !== l.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsxs)(f.Z.Overlay, {
     className: x.overlay,
-    children: [(0, l.jsxs)("div", {
+    children: [(0, i.jsxs)("div", {
       className: x.contentGroup,
-      children: [(0, l.jsx)(a.qE, {
+      children: [(0, i.jsx)(s.qE, {
         src: t,
         size: r.AvatarSizes.SIZE_32,
         status: r.StatusTypes.UNKNOWN,
         "aria-label": n
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: x.contentText,
         children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
           username: n
         })
-      }), (0, l.jsx)(r.Clickable, {
-        onClick: () => c(C.L.USER_DISMISS),
+      }), (0, i.jsx)(r.Clickable, {
+        onClick: () => c(g.L.USER_DISMISS),
         "aria-label": I.Z.Messages.DISMISS,
         className: x.closeIconWrapper,
-        children: (0, l.jsx)(r.CloseSmallIcon, {
+        children: (0, i.jsx)(r.CloseSmallIcon, {
           size: "md",
           color: "currentColor",
           className: x.closeIcon
         })
       })]
-    }), (0, l.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       className: x.buttonGroup,
-      children: [(0, l.jsx)(r.Button, {
+      children: [(0, i.jsx)(r.Button, {
         className: x.learnMoreButton,
         size: r.Button.Sizes.TINY,
         color: r.Button.Colors.CUSTOM,
         onClick: T,
         children: I.Z.Messages.LEARN_MORE
-      }), (0, l.jsx)(u.Z, {
+      }), (0, i.jsx)(u.Z, {
         className: x.getNitroButton,
         size: r.Button.Sizes.TINY,
         color: r.Button.Colors.CUSTOM,
@@ -74,32 +74,32 @@ function N(e) {
   })
 }
 
-function Z(e) {
+function v(e) {
   let {
     avatarSrc: t,
     username: n
-  } = e, [i, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
-  return i !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, l.jsx)(g.Z.Overlay, {
+  } = e, [a, c] = (0, o.U)([l.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+  return a !== l.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsx)(f.Z.Overlay, {
     className: x.overlay2,
-    children: (0, l.jsxs)("div", {
+    children: (0, i.jsxs)("div", {
       className: x.contentGroup,
-      children: [(0, l.jsx)(a.qE, {
+      children: [(0, i.jsx)(s.qE, {
         src: t,
         size: r.AvatarSizes.SIZE_32,
         status: r.StatusTypes.UNKNOWN,
         "aria-label": n
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: x.contentText,
         children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1_WITH_LINK.format({
           username: n,
           onClickLearnMore: T
         })
-      }), (0, l.jsx)(r.Clickable, {
-        onClick: () => c(C.L.USER_DISMISS),
+      }), (0, i.jsx)(r.Clickable, {
+        onClick: () => c(g.L.USER_DISMISS),
         "aria-label": I.Z.Messages.DISMISS,
         className: x.closeIconWrapper,
-        children: (0, l.jsx)(r.CloseSmallIcon, {
+        children: (0, i.jsx)(r.CloseSmallIcon, {
           size: "md",
           color: "currentColor",
           className: x.closeIcon
@@ -114,16 +114,16 @@ function S(e) {
     avatarSrc: t,
     username: n
   } = e;
-  return (0, l.jsx)(g.Z.Overlay, {
+  return (0, i.jsx)(f.Z.Overlay, {
     className: x.overlay2,
-    children: (0, l.jsxs)("div", {
+    children: (0, i.jsxs)("div", {
       className: x.contentGroup,
-      children: [(0, l.jsx)(a.qE, {
+      children: [(0, i.jsx)(s.qE, {
         src: t,
         size: r.AvatarSizes.SIZE_32,
         status: r.StatusTypes.UNKNOWN,
         "aria-label": n
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: x.contentText,
         children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1_WITH_LINK.format({
@@ -135,47 +135,47 @@ function S(e) {
   })
 }
 
-function v(e) {
+function Z(e) {
   let {
     variant: t,
     avatarSrc: n,
-    username: i
+    username: a
   } = e;
-  if (1 === t) return (0, l.jsx)(N, {
+  if (1 === t) return (0, i.jsx)(N, {
     avatarSrc: n,
-    username: i
+    username: a
   });
-  if (2 === t) return (0, l.jsx)(Z, {
+  if (2 === t) return (0, i.jsx)(v, {
     avatarSrc: n,
-    username: i
+    username: a
   });
-  if (3 === t) return (0, l.jsx)(S, {
+  if (3 === t) return (0, i.jsx)(S, {
     avatarSrc: n,
-    username: i
+    username: a
   });
   return null
 }
-let A = i.memo(function(e) {
+let A = a.memo(function(e) {
   let {
     user: t,
     displayProfile: n
   } = e, {
-    avatarSrc: i
-  } = (0, p.Z)({
+    avatarSrc: a
+  } = (0, _.Z)({
     user: t,
     size: r.AvatarSizes.SIZE_32
-  }), s = h.default.getCurrentUser(), a = E.ZP.isPremium(s) || null == n || !E.ZP.isPremiumAtLeast(n.premiumType, _.p9.TIER_2), {
+  }), l = h.default.getCurrentUser(), s = m.ZP.isPremium(l) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2), {
     enabled: o,
     variant: u
   } = c.f.useExperiment({
     location: "SimplifiedProfilePanelPremiumUpsell"
   }, {
-    disable: a,
-    autoTrackExposure: !a
+    disable: s,
+    autoTrackExposure: !s
   });
-  return o ? (0, l.jsx)(v, {
+  return o ? (0, i.jsx)(Z, {
     variant: u,
-    avatarSrc: i,
+    avatarSrc: a,
     username: t.username
   }) : null
 });

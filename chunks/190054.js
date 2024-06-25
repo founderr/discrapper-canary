@@ -9,8 +9,8 @@ var r = t(735250),
   l = t.n(u),
   s = t(481060),
   i = t(572004),
-  a = t(689938),
-  c = t(560237);
+  c = t(689938),
+  a = t(560237);
 
 function d(e) {
   let {
@@ -21,10 +21,10 @@ function d(e) {
     f(!0), (0, i.JG)(d)
   }, [d]), _ = E ? s.CircleCheckIcon : s.CopyIcon;
   return (0, r.jsx)(s.Clickable, {
-    className: l()(c.container, t),
+    className: l()(a.container, t),
     onClick: I,
     children: (0, r.jsx)(s.Tooltip, {
-      text: E ? a.Z.Messages.COPIED : a.Z.Messages.COPY,
+      text: E ? c.Z.Messages.COPIED : c.Z.Messages.COPY,
       children: e => (0, r.jsx)(_, {
         ...u,
         ...e,

@@ -1,31 +1,31 @@
-s.d(_, {
+t.d(n, {
   W: function() {
-    return a
+    return i
   }
 });
-var n = s(544891),
-  I = s(570140),
-  t = s(814443),
-  l = s(981631);
+var o = t(544891),
+  a = t(570140),
+  d = t(814443),
+  c = t(981631);
 
-function a() {
+function i() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return t.Z.needsRefresh() ? (I.Z.dispatch({
+  return d.Z.needsRefresh() ? (a.Z.dispatch({
     type: "LOAD_USER_AFFINITIES"
-  }), n.tn.get({
-    url: l.ANM.USER_AFFINITIES,
+  }), o.tn.get({
+    url: c.ANM.USER_AFFINITIES,
     retries: e ? 3 : 0,
     oldFormErrors: !0
   }).then(e => {
     let {
-      body: _
+      body: n
     } = e;
-    I.Z.dispatch({
+    a.Z.dispatch({
       type: "LOAD_USER_AFFINITIES_SUCCESS",
-      affinities: _
+      affinities: n
     })
   }, () => {
-    I.Z.dispatch({
+    a.Z.dispatch({
       type: "LOAD_USER_AFFINITIES_FAILURE"
     })
   })) : Promise.resolve()

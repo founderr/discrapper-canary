@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Ao: function() {
-    return S
+    return f
   },
   Jv: function() {
     return I
@@ -13,10 +13,10 @@ n.d(t, {
     return h
   },
   VO: function() {
-    return N
+    return A
   },
   YO: function() {
-    return f
+    return S
   }
 });
 var i = n(592125),
@@ -62,7 +62,7 @@ function h(e) {
   } : null
 }
 
-function S(e) {
+function f(e) {
   if (null == e) return null;
   let t = e.match(E);
   return null != t && t.length > 1 ? {
@@ -72,11 +72,11 @@ function S(e) {
   } : null
 }
 
-function f(e) {
+function S(e) {
   return !!e.isPrivate() || s.Z.can(a.Plq.VIEW_CHANNEL, e)
 }
 
-function N(e) {
+function A(e) {
   let {
     guildId: t,
     channelId: n
@@ -84,5 +84,5 @@ function N(e) {
   if (null == r.Z.getGuild(t) && t !== a.ME) return !1;
   if (null == n) return !0;
   let s = i.Z.getChannel(n);
-  return null != s && f(s)
+  return null != s && S(s)
 }

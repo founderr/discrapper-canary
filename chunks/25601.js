@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-    return a
+    return s
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(831209),
-  s = n(481060),
-  r = n(667863);
+var l = n(831209),
+  r = n(481060),
+  a = n(667863);
 
-function a(e) {
+function s(e) {
   let {
     mentionsCount: t
   } = e;
-  return (0, l.jsx)("div", {
-    className: r.mentionsBadge,
+  return (0, i.jsx)("div", {
+    className: a.mentionsBadge,
     "aria-hidden": !0,
-    children: (0, l.jsx)(s.NumberBadge, {
+    children: (0, i.jsx)(r.NumberBadge, {
       count: t,
-      color: i.Z.STATUS_DANGER
+      color: l.Z.STATUS_DANGER
     })
   })
 }

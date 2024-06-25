@@ -1,121 +1,121 @@
-let l;
+let i;
 n(47120), n(724458), n(653041);
-var i, s, a, r, o = n(392711),
+var a, l, s, r, o = n(392711),
   c = n.n(o),
   u = n(442837),
   d = n(570140),
   h = n(279779),
-  m = n(131704),
-  E = n(624138),
-  p = n(51144),
-  g = n(592125),
-  f = n(580005),
-  C = n(699516),
-  _ = n(594174),
+  p = n(131704),
+  m = n(624138),
+  _ = n(51144),
+  f = n(592125),
+  E = n(580005),
+  g = n(699516),
+  C = n(594174),
   I = n(981631);
 let x = !1,
   T = "",
   N = 0,
-  Z = [],
+  v = [],
   S = !1,
-  v = new Set,
+  Z = new Set,
   A = null;
 
 function M() {
-  T = "", N = 0, Z = [], v = new Set, x = !1, A = null
+  T = "", N = 0, v = [], Z = new Set, x = !1, A = null
 }
 
-function R(e) {
-  T = e, N = 0, j()
+function b(e) {
+  T = e, N = 0, R()
 }
 
-function j() {
+function R() {
   if (!x) return !1;
-  let e = g.Z.getChannel(A);
-  if (0 === T.trim().length) return null != l && l.clearQuery(), Z = function(e) {
-    let t = C.Z.getFriendIDs();
+  let e = f.Z.getChannel(A);
+  if (0 === T.trim().length) return null != i && i.clearQuery(), v = function(e) {
+    let t = g.Z.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
-      let n = _.default.getUser(t);
+      let n = C.default.getUser(t);
       return null == n ? e : (e.push({
         user: n
       }), e)
-    }, []).sort(O)
+    }, []).sort(L)
   }(e), !0;
   let t = null != e ? e.recipients : [];
-  return null != l && l.setQuery(T, {
+  return null != i && i.setQuery(T, {
     friends: !0
   }, t, function() {
-    let e = f.Z.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof m.mn && e.isDM()),
+    let e = E.Z.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof p.mn && e.isDM()),
       t = Math.max(...e.map(e => {
         let {
           id: t
         } = e;
-        return f.Z.getScoreWithoutFetchingLatest(t)
+        return E.Z.getScoreWithoutFetchingLatest(t)
       })),
       n = {};
     return e.forEach(e => {
-      let l = f.Z.getScoreWithoutFetchingLatest(e.id),
-        i = e.getRecipientId(),
-        s = C.Z.isFriend(i) ? .2 : 0,
-        a = null != g.Z.getDMFromUserId(i) ? .1 : 0;
-      n[i] = 1 + l / t + s + a
+      let i = E.Z.getScoreWithoutFetchingLatest(e.id),
+        a = e.getRecipientId(),
+        l = g.Z.isFriend(a) ? .2 : 0,
+        s = null != f.Z.getDMFromUserId(a) ? .1 : 0;
+      n[a] = 1 + i / t + l + s
     }), n
   }()), !1
 }
 
-function L() {
+function j() {
   if (!x) return !1;
   let e = S;
-  return (S = c().some(C.Z.getRelationships(), e => e === I.OGo.FRIEND)) !== e
+  return (S = c().some(g.Z.getRelationships(), e => e === I.OGo.FRIEND)) !== e
 }
 
-function O(e, t) {
-  return (0, E._I)(p.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, E._I)(p.ZP.getName(t.user).toLocaleLowerCase()))
+function L(e, t) {
+  return (0, m._I)(_.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, m._I)(_.ZP.getName(t.user).toLocaleLowerCase()))
 }
 
 function P(e) {
   let {
     results: t
   } = e;
-  if (!!x && "" !== T) Z = t.map(e => {
+  if (!!x && "" !== T) v = t.map(e => {
     let {
       id: t
     } = e;
     return {
-      user: _.default.getUser(t)
+      user: C.default.getUser(t)
     }
   }).filter(e => null != e.user), w.emitChange()
 }
 
-function y() {
-  return null != l && (l.destroy(), l = null), h.Z.getSearchContext(P, 1e3)
+function O() {
+  return null != i && (i.destroy(), i = null), h.Z.getSearchContext(P, 1e3)
 }
 
-function b(e) {
+function y(e) {
   if (e.key !== I.vTt) return !1;
-  x = !0, L(), l = y(), A = null, R("")
+  x = !0, j(), i = O(), A = null, b("")
 }
 
 function D(e) {
   if (e.key !== I.vTt) return !1;
-  U()
+  k()
 }
 
-function U() {
-  null != l && (l.destroy(), l = null), M()
+function k() {
+  null != i && (i.destroy(), i = null), M()
 }
-class k extends(i = u.ZP.Store) {
+class U extends(a = u.ZP.Store) {
   initialize() {
-    this.waitFor(_.default, g.Z, C.Z), this.syncWith([_.default, g.Z], j), this.syncWith([C.Z], L)
+    this.waitFor(C.default, f.Z, g.Z), this.syncWith([C.default, f.Z], R), this.syncWith([g.Z], j)
   }
   getResults() {
-    return Z
+    return v
   }
   hasFriends() {
     return S
   }
   getSelectedUsers() {
-    return v
+    return Z
   }
   getQuery() {
     return T
@@ -124,19 +124,19 @@ class k extends(i = u.ZP.Store) {
     return {
       query: T,
       selectedRow: N,
-      selectedUsers: v,
-      results: Z,
+      selectedUsers: Z,
+      results: v,
       hasFriends: S
     }
   }
 }
-r = "PrivateChannelRecipientsInviteStore", (a = "displayName") in(s = k) ? Object.defineProperty(s, a, {
+r = "PrivateChannelRecipientsInviteStore", (s = "displayName") in(l = U) ? Object.defineProperty(l, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r;
-let w = new k(d.Z, {
+}) : l[s] = r;
+let w = new U(d.Z, {
   CONNECTION_OPEN: function() {
     M()
   },
@@ -146,19 +146,19 @@ let w = new k(d.Z, {
       channelId: n
     } = e;
     if (null != t) return !1;
-    let l = x;
-    return M(), x = l, A = n, j()
+    let i = x;
+    return M(), x = i, A = n, R()
   },
-  MODAL_PUSH: b,
-  SHOW_ACTION_SHEET: b,
+  MODAL_PUSH: y,
+  SHOW_ACTION_SHEET: y,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    x = !0, L(), l = y(), A = e.channelId, R("")
+    x = !0, j(), i = O(), A = e.channelId, b("")
   },
   MODAL_POP: D,
   HIDE_ACTION_SHEET: D,
-  PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: U,
+  PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: k,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
-    A = e.channelId, R(e.query)
+    A = e.channelId, b(e.query)
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function(e) {
     N = e.row
@@ -167,13 +167,13 @@ let w = new k(d.Z, {
     let {
       userId: t
     } = e;
-    v.add(t), v = new Set(v)
+    Z.add(t), Z = new Set(Z)
   },
   PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function(e) {
     let {
       userId: t
     } = e;
-    v.delete(t), v = new Set(v)
+    Z.delete(t), Z = new Set(Z)
   }
 });
 t.Z = w

@@ -1,158 +1,158 @@
-s.d(i, {
+i.d(n, {
   Z: function() {
     return j
   }
-}), s(47120);
-var n = s(735250),
-  l = s(470079),
-  t = s(481060),
-  o = s(727637),
-  r = s(100527),
-  a = s(906732),
-  d = s(680295),
-  c = s(5192),
-  u = s(998502),
-  I = s(785717),
-  E = s(318661),
-  Z = s(721987),
-  f = s(204197),
-  _ = s(78675),
-  S = s(741308),
-  v = s(588822),
-  m = s(900927),
-  x = s(678738),
-  h = s(502762),
-  N = s(530),
-  g = s(228168),
-  T = s(981631),
-  R = s(689938),
-  C = s(327570),
-  A = s(143599),
-  M = s(784204);
-let p = u.ZP.getEnableHardwareAcceleration() ? t.AnimatedAvatar : t.Avatar;
+}), i(47120);
+var t = i(735250),
+  s = i(470079),
+  o = i(481060),
+  l = i(727637),
+  a = i(100527),
+  r = i(906732),
+  d = i(680295),
+  c = i(5192),
+  u = i(998502),
+  I = i(785717),
+  f = i(318661),
+  E = i(721987),
+  _ = i(204197),
+  S = i(78675),
+  Z = i(741308),
+  m = i(588822),
+  v = i(900927),
+  x = i(678738),
+  h = i(502762),
+  g = i(530),
+  N = i(228168),
+  p = i(981631),
+  T = i(689938),
+  C = i(327570),
+  R = i(143599),
+  A = i(784204);
+let M = u.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
 function j(e) {
   let {
-    user: i,
-    guildId: s,
+    user: n,
+    guildId: i,
     channelId: u,
     messageId: j,
     roleId: U,
-    transitionState: L,
-    onClose: O,
-    sourceAnalyticsLocations: P = []
+    transitionState: P,
+    onClose: L,
+    sourceAnalyticsLocations: O = []
   } = e, {
     analyticsLocations: y
-  } = (0, a.ZP)([...P, r.Z.SIMPLIFIED_PROFILE_MODAL]), D = s === T.ME ? void 0 : s, F = (0, E.ZP)(i.id, D), {
-    theme: b
-  } = (0, Z.Z)({
-    user: i,
-    displayProfile: F
+  } = (0, r.ZP)([...O, a.Z.SIMPLIFIED_PROFILE_MODAL]), b = i === p.ME ? void 0 : i, D = (0, f.ZP)(n.id, b), {
+    theme: F
+  } = (0, E.Z)({
+    user: n,
+    displayProfile: D
   }), {
     avatarSrc: B,
     eventHandlers: G,
-    avatarDecorationSrc: k
-  } = (0, f.Z)({
-    user: i,
-    guildId: null == F ? void 0 : F.guildId,
-    size: t.AvatarSizes.SIZE_120
-  }), w = l.createRef(), Y = (0, o.Z)(w);
-  return (0, n.jsx)(a.Gt, {
+    avatarDecorationSrc: w
+  } = (0, _.Z)({
+    user: n,
+    guildId: null == D ? void 0 : D.guildId,
+    size: o.AvatarSizes.SIZE_120
+  }), k = s.createRef(), Y = (0, l.Z)(k);
+  return (0, t.jsx)(r.Gt, {
     value: y,
-    children: (0, n.jsx)(I.Mt, {
+    children: (0, t.jsx)(I.Mt, {
       layout: "SIMPLIFIED_MODAL",
-      userId: i.id,
-      guildId: D,
+      userId: n.id,
+      guildId: b,
       channelId: u,
       messageId: j,
       roleId: U,
       showGuildProfile: !0,
-      children: (0, n.jsxs)(t.ModalRoot, {
-        transitionState: L,
+      children: (0, t.jsxs)(o.ModalRoot, {
+        transitionState: P,
         className: C.root,
         hideShadow: !0,
-        "aria-label": R.Z.Messages.USER_PROFILE_MODAL,
-        children: [(0, n.jsxs)(h.Z, {
-          user: i,
-          displayProfile: F,
-          profileType: g.y0.FULL_SIZE,
-          ref: w,
-          children: [(0, n.jsxs)("header", {
-            children: [(0, n.jsx)(_.Z, {
-              user: i,
-              displayProfile: F,
-              profileType: g.y0.FULL_SIZE,
-              hasProfileEffect: (null == F ? void 0 : F.profileEffectId) != null
-            }), (0, n.jsx)("div", {
+        "aria-label": T.Z.Messages.USER_PROFILE_MODAL,
+        children: [(0, t.jsxs)(h.Z, {
+          user: n,
+          displayProfile: D,
+          profileType: N.y0.FULL_SIZE,
+          ref: k,
+          children: [(0, t.jsxs)("header", {
+            children: [(0, t.jsx)(S.Z, {
+              user: n,
+              displayProfile: D,
+              profileType: N.y0.FULL_SIZE,
+              hasProfileEffect: (null == D ? void 0 : D.profileEffectId) != null
+            }), (0, t.jsx)("div", {
               className: C.headerInner,
-              children: (0, n.jsx)("div", {
+              children: (0, t.jsx)("div", {
                 ...G,
-                children: (0, n.jsx)(p, {
+                children: (0, t.jsx)(M, {
                   src: B,
-                  avatarDecoration: k,
-                  size: t.AvatarSizes.SIZE_120,
+                  avatarDecoration: w,
+                  size: o.AvatarSizes.SIZE_120,
                   className: C.avatar,
                   status: void 0,
-                  statusBackdropColor: (0, t.getStatusBackdropColor)(b),
-                  "aria-label": i.username,
+                  statusBackdropColor: (0, o.getStatusBackdropColor)(F),
+                  "aria-label": n.username,
                   isMobile: !1,
                   statusTooltip: !0,
-                  statusTooltipDelay: g.vB
+                  statusTooltipDelay: N.vB
                 })
               })
             })]
-          }), (0, n.jsxs)("div", {
+          }), (0, t.jsxs)("div", {
             className: C.body,
-            children: [(0, n.jsx)(N.Z, {
-              user: i,
-              profileType: g.y0.FULL_SIZE,
-              nickname: c.ZP.getName(D, u, i),
-              pronouns: null == F ? void 0 : F.pronouns,
+            children: [(0, t.jsx)(g.Z, {
+              user: n,
+              profileType: N.y0.FULL_SIZE,
+              nickname: c.ZP.getName(b, u, n),
+              pronouns: null == D ? void 0 : D.pronouns,
               nicknameVariant: "heading-xl/bold",
-              tags: (0, n.jsx)(S.Z, {
-                displayProfile: F,
-                profileType: g.y0.FULL_SIZE,
-                onClose: O
+              tags: (0, t.jsx)(Z.Z, {
+                displayProfile: D,
+                profileType: N.y0.FULL_SIZE,
+                onClose: L
               })
-            }), (0, n.jsx)(h.Z.Overlay, {
+            }), (0, t.jsx)(h.Z.Overlay, {
               className: C.overlay,
-              children: (0, n.jsxs)("div", {
-                className: M.container,
-                children: [(0, n.jsx)(t.TabBar, {
-                  className: M.tabBar,
+              children: (0, t.jsxs)("div", {
+                className: A.container,
+                children: [(0, t.jsx)(o.TabBar, {
+                  className: A.tabBar,
                   type: "top",
-                  selectedItem: g.oh.USER_INFO,
-                  onItemSelect: T.dG4,
-                  children: (0, n.jsx)(t.TabBar.Item, {
-                    className: M.tabBarItem,
-                    id: g.oh.USER_INFO,
-                    "aria-label": R.Z.Messages.USER_PROFILE_ABOUT_ME,
-                    children: (0, n.jsx)(t.Text, {
+                  selectedItem: N.oh.USER_INFO,
+                  onItemSelect: p.dG4,
+                  children: (0, t.jsx)(o.TabBar.Item, {
+                    className: A.tabBarItem,
+                    id: N.oh.USER_INFO,
+                    "aria-label": T.Z.Messages.USER_PROFILE_ABOUT_ME,
+                    children: (0, t.jsx)(o.Text, {
                       variant: "text-sm/normal",
-                      children: R.Z.Messages.USER_PROFILE_ABOUT_ME
+                      children: T.Z.Messages.USER_PROFILE_ABOUT_ME
                     })
-                  }, g.oh.USER_INFO)
-                }), (0, n.jsxs)(t.ScrollerThin, {
+                  }, N.oh.USER_INFO)
+                }), (0, t.jsxs)(o.ScrollerThin, {
                   fade: !0,
-                  className: A.scroller,
-                  children: [(0, n.jsx)(v.Z, {
-                    userId: i.id,
-                    userBio: null == F ? void 0 : F.bio,
+                  className: R.scroller,
+                  children: [(0, t.jsx)(m.Z, {
+                    userId: n.id,
+                    userBio: null == D ? void 0 : D.bio,
                     setLineClamp: !1
-                  }), (0, n.jsx)(x.Z, {
-                    title: R.Z.Messages.USER_PROFILE_MEMBER_SINCE,
-                    children: (0, n.jsx)(m.Z, {
-                      userId: i.id,
-                      guildId: D,
-                      tooltipDelay: g.vB
+                  }), (0, t.jsx)(x.Z, {
+                    title: T.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    children: (0, t.jsx)(v.Z, {
+                      userId: n.id,
+                      guildId: b,
+                      tooltipDelay: N.vB
                     })
                   })]
                 })]
               })
             })]
           })]
-        }), (null == F ? void 0 : F.profileEffectId) != null && (0, n.jsx)(d.Z, {
-          profileEffectId: null == F ? void 0 : F.profileEffectId,
+        }), (null == D ? void 0 : D.profileEffectId) != null && (0, t.jsx)(d.Z, {
+          profileEffectId: null == D ? void 0 : D.profileEffectId,
           isHovering: Y
         })]
       })

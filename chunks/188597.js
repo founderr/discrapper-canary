@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   $s: function() {
-    return R
+    return p
   },
   Sg: function() {
     return m
   },
   ow: function() {
-    return S
+    return f
   },
   qn: function() {
-    return N
+    return A
   },
   rQ: function() {
     return i
@@ -19,7 +19,7 @@ n.d(t, {
     return O
   },
   tM: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i, r, s = n(544891),
@@ -35,10 +35,10 @@ var i, r, s = n(544891),
   T = n(96989),
   h = n(981631);
 
-function S(e) {
+function f(e) {
   return null == e || "" === e || Number.isNaN(e) ? Date.now() : c.default.extractTimestamp(e) + 9e5
 }
-let f = async e => {
+let S = async e => {
   let {
     componentType: t,
     messageId: n,
@@ -48,21 +48,21 @@ let f = async e => {
     applicationId: a,
     channelId: I,
     guildId: T,
-    localState: S
-  } = e, f = c.default.fromTimestamp(Date.now());
-  if (!E.Z.canQueueInteraction(n, f)) return;
-  await u.Z.unarchiveThreadIfNecessary(I), (0, d.kz)(f, {
+    localState: f
+  } = e, S = c.default.fromTimestamp(Date.now());
+  if (!E.Z.canQueueInteraction(n, S)) return;
+  await u.Z.unarchiveThreadIfNecessary(I), (0, d.kz)(S, {
     messageId: n,
     data: {
       interactionType: l.B8.MESSAGE_COMPONENT,
       customId: r,
       componentId: o
     },
-    onFailure: (e, t) => A(I, e, t)
-  }), null != S && (0, d.B0)(n, f, S, o);
-  let N = {
+    onFailure: (e, t) => N(I, e, t)
+  }), null != f && (0, d.B0)(n, S, f, o);
+  let A = {
     type: l.B8.MESSAGE_COMPONENT,
-    nonce: f,
+    nonce: S,
     guild_id: T,
     channel_id: I,
     message_flags: i,
@@ -80,17 +80,17 @@ let f = async e => {
           type: e.type,
           values: t
         }
-      }(S)
+      }(f)
     }
   };
   await s.tn.post({
     url: h.ANM.INTERACTIONS,
-    body: N,
+    body: A,
     timeout: 3e3
   }, e => {
-    m(f, e, a, I, T)
+    m(S, e, a, I, T)
   })
-}, N = async e => {
+}, A = async e => {
   let {
     applicationId: t,
     channelId: n,
@@ -120,7 +120,7 @@ let f = async e => {
   }, e => {
     m(o, e, t, n, i)
   })
-}, A = (e, t, n) => {
+}, N = (e, t, n) => {
   null == n && null != t && a.Z.sendClydeError(e, t)
 }, m = (e, t, n, i, r) => {
   if (!t.ok) {
@@ -147,7 +147,7 @@ let f = async e => {
 let O = (e, t) => {
   var n;
   let i = null == t ? void 0 : t.state,
-    r = e.state === h.yb.SENT && S(e.id) < Date.now();
+    r = e.state === h.yb.SENT && f(e.id) < Date.now();
   let s = e.state === h.yb.SEND_FAILED && (null == (n = e.id) || "" === n || Number.isNaN(n) ? Date.now() : c.default.extractTimestamp(n) + 3e3) < Date.now(),
     o = (null == t ? void 0 : t.data.interactionType) === l.B8.APPLICATION_COMMAND,
     a = e.isCommandType();
@@ -159,7 +159,7 @@ let O = (e, t) => {
   else if (null != e.interaction && e.hasFlag(h.iLy.EPHEMERAL)) return 4
 };
 
-function R(e) {
+function p(e) {
   let t = e.options;
   for (;
     (null == t ? void 0 : t.length) === 1 && (t[0].type === l.jw.SUB_COMMAND_GROUP || t[0].type === l.jw.SUB_COMMAND);) t = t[0].options;

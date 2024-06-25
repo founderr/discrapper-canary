@@ -3,14 +3,14 @@ t.d(a, {
     return u
   },
   b: function() {
-    return E
+    return d
   }
 });
 var n = t(735250);
 t(470079);
-var s = t(512722),
-  l = t.n(s),
-  r = t(481060),
+var r = t(512722),
+  s = t.n(r),
+  l = t(481060),
   o = t(598),
   i = t(185139),
   c = t(689938);
@@ -18,31 +18,31 @@ let u = e => {
   let {
     className: a
   } = e;
-  return (0, n.jsx)(r.FormSection, {
+  return (0, n.jsx)(l.FormSection, {
     className: a,
-    children: (0, n.jsx)(r.FormTitle, {
+    children: (0, n.jsx)(l.FormTitle, {
       children: c.Z.Messages.PAYMENT_WAITING_FOR_AUTHENTICATION
     })
   })
 };
 
-function E(e) {
+function d(e) {
   let {
     steps: a,
     currentStep: t,
-    paymentError: s,
-    className: r
+    paymentError: r,
+    className: l
   } = e, {
     steps: c,
-    step: E,
-    paymentError: d
+    step: d,
+    paymentError: E
   } = (0, o.usePaymentContext)();
-  return a = null != a ? a : c, null == t && null != E && (t = E), l()(t, "step should be set"), l()(a, "step should be set"), s = null != s ? s : d, (0, n.jsx)(i.Z, {
+  return a = null != a ? a : c, null == t && null != d && (t = d), s()(t, "step should be set"), s()(a, "step should be set"), r = null != r ? r : E, (0, n.jsx)(i.Z, {
     steps: a,
     currentStep: t,
-    paymentError: s,
+    paymentError: r,
     body: (0, n.jsx)(u, {
-      className: r
+      className: l
     }),
     footer: null
   })

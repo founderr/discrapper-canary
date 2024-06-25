@@ -24,14 +24,14 @@ function I(e) {
     showIconFirst: I = !1,
     imageUrl: T,
     hint: h,
-    subtext: S,
-    hasSubmenu: f,
-    disabled: N,
-    isFocused: A,
+    subtext: f,
+    hasSubmenu: S,
+    disabled: A,
+    isFocused: N,
     menuItemProps: m,
     action: O,
-    onClose: R,
-    onFocus: p,
+    onClose: p,
+    onFocus: R,
     className: g,
     focusedClassName: C,
     subMenuIconClassName: v,
@@ -41,19 +41,19 @@ function I(e) {
     sparkle: P
   } = e, y = r.useContext(u.r), U = r.useRef(null), b = r.useCallback(e => {
     if (null == O) return !1;
-    !(e.shiftKey && L) && !D && R(), e.persist(), null == y || y(), requestAnimationFrame(() => O(e))
-  }, [O, R, y, L, D]);
+    !(e.shiftKey && L) && !D && p(), e.persist(), null == y || y(), requestAnimationFrame(() => O(e))
+  }, [O, p, y, L, D]);
   return r.useEffect(() => {
-    A && ((0, _.F)(U), null == p || p())
-  }, [A, p]), (0, i.jsxs)(a.P, {
+    N && ((0, _.F)(U), null == R || R())
+  }, [N, R]), (0, i.jsxs)(a.P, {
     innerRef: U,
     className: o()(E.item, E.labelContainer, d._[t], g, {
-      [E.disabled]: N,
-      [E.focused]: A,
-      [null != C ? C : ""]: A
+      [E.disabled]: A,
+      [E.focused]: N,
+      [null != C ? C : ""]: N
     }),
-    onClick: N ? void 0 : b,
-    "aria-disabled": N,
+    onClick: A ? void 0 : b,
+    "aria-disabled": A,
     ...m,
     "data-menu-item": "true",
     children: [I && null != s && (0, i.jsx)("div", {
@@ -62,13 +62,13 @@ function I(e) {
         color: "currentColor",
         ...M,
         className: o()(E.icon, null == M ? void 0 : M.className),
-        isFocused: A
+        isFocused: N
       })
     }), (0, i.jsxs)("div", {
       className: E.label,
-      children: [(0, l.I)(n, e), null != S && (0, i.jsx)("div", {
+      children: [(0, l.I)(n, e), null != f && (0, i.jsx)("div", {
         className: E.subtext,
-        children: S
+        children: f
       })]
     }), null != h && (0, i.jsx)("div", {
       className: E.hintContainer,
@@ -79,7 +79,7 @@ function I(e) {
         color: "currentColor",
         ...M,
         className: o()(E.icon, null == M ? void 0 : M.className),
-        isFocused: A
+        isFocused: N
       })
     }), null != T && (0, i.jsx)("div", {
       className: E.imageContainer,
@@ -88,7 +88,7 @@ function I(e) {
         src: (0, l.I)(T, e),
         alt: ""
       })
-    }), f && (0, i.jsxs)("div", {
+    }), S && (0, i.jsxs)("div", {
       className: E.iconContainer,
       children: [(0, i.jsx)(c.ChevronSmallRightIcon, {
         size: "md",

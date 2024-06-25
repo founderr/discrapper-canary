@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   },
   r: function() {
-    return f
+    return S
   }
 });
 var i = n(735250);
@@ -22,9 +22,9 @@ var r = n(120356),
   I = n(540028),
   T = n(507675),
   h = n(689938),
-  S = n(910310);
+  f = n(910310);
 
-function f(e) {
+function S(e) {
   let {
     title: t,
     onJumpToChannel: n,
@@ -35,19 +35,19 @@ function f(e) {
     idle: r
   }) : null;
   return (0, i.jsxs)(s, {
-    className: S.headerIdleContainer,
+    className: f.headerIdleContainer,
     children: [(0, i.jsxs)(u.Clickable, {
-      className: S.headerTitle,
+      className: f.headerTitle,
       onClick: n,
       children: [(0, i.jsx)(u.ArrowSmallLeftIcon, {
         size: "custom",
         color: "currentColor",
         "aria-label": h.Z.Messages.OPEN_IN_THEATER,
-        className: S.backButton,
+        className: f.backButton,
         width: 20,
         height: 20
       }), (0, i.jsx)(E.Z, {
-        className: S.headerText,
+        className: f.headerText,
         size: E.Z.Sizes.SIZE_16,
         color: a.Z.unsafe_rawColors.WHITE_500.css,
         children: t
@@ -56,7 +56,7 @@ function f(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     children: t,
     idle: n,
@@ -68,43 +68,43 @@ function N(e) {
     renderBottomRightControls: E,
     screenMessage: I,
     hideControls: h = !1,
-    className: N,
-    innerClassName: A,
+    className: A,
+    innerClassName: N,
     ...m
   } = e;
   return (0, i.jsxs)("div", {
     onMouseMove: a,
     onMouseDown: a,
     onMouseLeave: u,
-    className: s()(S.pictureInPictureVideo, {
-      [S.idle]: n
-    }, N),
+    className: s()(f.pictureInPictureVideo, {
+      [f.idle]: n
+    }, A),
     onDoubleClick: r,
     children: [(0, i.jsx)(l.W, {
       children: (0, i.jsx)(d.B, {
-        className: A,
+        className: N,
         children: t
       }, o)
     }), null != I ? (0, i.jsx)(T.Z, {
       size: "small",
       ...I
     }) : null, !h && (0, i.jsxs)("div", {
-      className: S.videoControls,
+      className: f.videoControls,
       children: [(0, i.jsx)("div", {
-        className: S.topControls,
-        children: (0, i.jsx)(f, {
+        className: f.topControls,
+        children: (0, i.jsx)(S, {
           idle: n,
           onJumpToChannel: r,
           ...m
         })
       }), (0, i.jsxs)("div", {
-        className: S.bottomControls,
+        className: f.bottomControls,
         children: [(0, i.jsx)(c.Z, {
           grow: 0,
           shrink: 1,
           basis: "50%",
           align: c.Z.Align.CENTER,
-          className: S.bottomLeftControls,
+          className: f.bottomLeftControls,
           children: null == _ ? void 0 : _()
         }), (0, i.jsx)(c.Z, {
           grow: 0,

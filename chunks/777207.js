@@ -24,11 +24,11 @@ let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         color: I,
         tabularNumbers: T = !1,
         scaleFontToUserSetting: h = !1,
-        ...S
+        ...f
       } = e,
-      f = "",
-      N = {};
-    if (null != E && (1 === E ? f = _.lineClamp1 : (f = _.lineClamp2Plus, N = {
+      S = "",
+      A = {};
+    if (null != E && (1 === E ? S = _.lineClamp1 : (S = _.lineClamp2Plus, A = {
         lineClamp: E,
         WebkitLineClamp: E
       })), void 0 !== I) switch (I) {
@@ -42,13 +42,13 @@ let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         n = "white";
         break;
       default:
-        var A;
-        n = null === (A = u.Z.colors[d[I]]) || void 0 === A ? void 0 : A.css
+        var N;
+        n = null === (N = u.Z.colors[d[I]]) || void 0 === N ? void 0 : N.css
     }
     let m = {
       color: n,
-      ...N,
-      ...S.style
+      ...A,
+      ...f.style
     };
     return (0, i.jsx)(s, {
       ref: t,
@@ -57,8 +57,8 @@ let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         [_.selectable]: a,
         [_.tabularNumbers]: T,
         [c.fontScaling]: h
-      }, f, c[r], l),
-      ...S,
+      }, S, c[r], l),
+      ...f,
       style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
       "data-text-variant": r
     })

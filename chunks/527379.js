@@ -20,8 +20,8 @@ t.d(n, {
 });
 var i = t(570140),
   r = t(434404),
-  l = t(703656),
-  o = t(430824),
+  o = t(703656),
+  l = t(430824),
   u = t(241559),
   s = t(327999),
   a = t(981631),
@@ -61,8 +61,8 @@ async function E(e, n) {
 
 function I(e) {
   let n = (0, u.lv)(e),
-    t = o.Z.getGuild(e);
-  return !!n && null != t && (t.hasFeature(a.oNc.COMMUNITY) || t.hasFeature(a.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.uL)(a.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (r.Z.open(t.id, a.pNK.MEMBERS), !0))
+    t = l.Z.getGuild(e);
+  return !!n && null != t && (t.hasFeature(a.oNc.COMMUNITY) || t.hasFeature(a.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, o.uL)(a.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (r.Z.open(t.id, a.pNK.MEMBERS), !0))
 }
 async function g(e, n) {
   let t = await (0, s._2)(e, n);

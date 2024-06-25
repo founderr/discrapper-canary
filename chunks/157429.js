@@ -1,67 +1,67 @@
-n.r(s), n.d(s, {
+e.r(a), e.d(a, {
   default: function() {
-    return _
+    return E
   }
-}), n(47120);
-var a = n(735250);
-n(470079);
-var l = n(512722),
-  t = n.n(l),
-  o = n(481060),
-  i = n(935369),
-  r = n(53365),
-  d = n(153124),
-  c = n(981631),
-  u = n(689938),
-  E = n(857674);
+}), e(47120);
+var s = e(735250);
+e(470079);
+var t = e(512722),
+  o = e.n(t),
+  i = e(481060),
+  l = e(935369),
+  r = e(53365),
+  c = e(153124),
+  d = e(981631),
+  u = e(689938),
+  _ = e(857674);
 
-function _(e) {
+function E(n) {
   let {
-    transitionState: s,
-    guild: n,
-    onClose: l
-  } = e, _ = (0, d.Dt)(), [T, {
-    loading: N,
-    error: O
-  }] = (0, i.Z)(r.oL), h = async () => {
-    t()(null != n, "no guild"), null != await T(n.id) && l()
+    transitionState: a,
+    guild: e,
+    onClose: t
+  } = n, E = (0, c.Dt)(), [T, {
+    loading: g,
+    error: I
+  }] = (0, l.Z)(r.oL), N = async () => {
+    o()(null != e, "no guild"), null != await T(e.id) && t()
   };
-  return (0, a.jsxs)(o.ModalRoot, {
-    transitionState: s,
-    "aria-labelledby": _,
-    children: [(0, a.jsxs)(o.ModalHeader, {
-      children: [(0, a.jsx)(o.Heading, {
-        id: _,
+  return (0, s.jsxs)(i.ModalRoot, {
+    transitionState: a,
+    "aria-labelledby": E,
+    children: [(0, s.jsxs)(i.ModalHeader, {
+      children: [(0, s.jsx)(i.Heading, {
+        id: E,
         variant: "heading-md/semibold",
         children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_MODAL_HEADER
-      }), (0, a.jsx)(o.ModalCloseButton, {
-        className: E.closeButton,
-        onClick: l
+      }), (0, s.jsx)(i.ModalCloseButton, {
+        className: _.closeButton,
+        onClick: t
       })]
-    }), (0, a.jsxs)(o.ModalContent, {
-      className: E.content,
-      children: [null != O ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(o.FormErrorBlock, {
-          children: O.message
-        }), (0, a.jsx)(o.Spacer, {
+    }), (0, s.jsxs)(i.ModalContent, {
+      className: _.content,
+      children: [null != I ? (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)(i.FormErrorBlock, {
+          children: I.message
+        }), (0, s.jsx)(i.Spacer, {
           size: 24
         })]
-      }) : null, (0, a.jsx)(o.FormText, {
-        type: o.FormText.Types.ERROR,
+      }) : null, (0, s.jsx)(i.FormText, {
+        type: i.FormText.Types.ERROR,
         children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_MODAL_DESCRIPTION.format({
-          guildName: n.toString(),
-          url: c.EYA.DEVELOPER_PORTAL_TEAMS
+          guildName: e.toString(),
+          url: d.EYA.DEVELOPER_PORTAL_TEAMS
         })
-      }), (0, a.jsx)(o.Spacer, {
+      }), (0, s.jsx)(i.Spacer, {
         size: 16
       })]
-    }), (0, a.jsx)(o.ModalFooter, {
-      className: E.__invalid_footer,
-      children: (0, a.jsx)(o.Button, {
-        color: o.Button.Colors.RED,
-        className: E.__invalid_goBackButton,
-        submitting: N,
-        onClick: h,
+    }), (0, s.jsx)(i.ModalFooter, {
+      className: _.__invalid_footer,
+      children: (0, s.jsx)(i.Button, {
+        color: i.Button.Colors.RED,
+        className: _.__invalid_goBackButton,
+        submitting: g,
+        onClick: N,
         children: u.Z.Messages.SAVE
       })
     })]

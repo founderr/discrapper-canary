@@ -1,13 +1,13 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return n
+    return i
   }
 });
-var r = t(593473);
+var s = n(593473);
 
-function n(e) {
-  let s = null != e.hash && "" !== e.hash ? (0, r.parse)(e.hash) : null;
-  if ((null == s ? void 0 : s.token) != null) return s.token;
-  let t = null != e.search && "" !== e.search ? (0, r.parse)(e.search) : null;
-  return (null == t ? void 0 : t.token) != null ? t.token : null
+function i(e) {
+  let t = null != e.hash && "" !== e.hash ? (0, s.parse)(e.hash) : null;
+  if ((null == t ? void 0 : t.token) != null) return t.token;
+  let n = null != e.search && "" !== e.search ? (0, s.parse)(e.search) : null;
+  return (null == n ? void 0 : n.token) != null ? n.token : null
 }

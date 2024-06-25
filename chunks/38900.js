@@ -1,37 +1,37 @@
 "use strict";
-var n = s(735250);
-s(470079);
-var r = s(120356),
-  a = s.n(r),
-  i = s(4477),
-  l = s(12900),
-  o = s(423839),
-  c = s(246318);
-let u = () => 4 * Math.random() + 8,
-  d = [u(), u(), u()];
-t.Z = () => (0, n.jsx)("div", {
-  className: i.skeletons,
-  children: d.map(e => (0, n.jsxs)("div", {
-    className: i.cardsContainer,
-    children: [(0, n.jsx)("div", {
-      className: a()(o.skeleton, l.shopBanner),
-      children: (0, n.jsx)("div", {
-        className: o.bannerBody
+var r = n(735250);
+n(470079);
+var a = n(120356),
+  i = n.n(a),
+  o = n(4477),
+  s = n(12900),
+  c = n(423839),
+  l = n(246318);
+let d = () => 4 * Math.random() + 8,
+  u = [d(), d(), d()];
+t.Z = () => (0, r.jsx)("div", {
+  className: o.skeletons,
+  children: u.map(e => (0, r.jsxs)("div", {
+    className: o.cardsContainer,
+    children: [(0, r.jsx)("div", {
+      className: i()(c.skeleton, s.shopBanner),
+      children: (0, r.jsx)("div", {
+        className: c.bannerBody
       })
     }), Array.from({
       length: e
-    }, (e, t) => t).map(e => (0, n.jsx)("div", {
-      className: a()(o.skeleton, c.shopCard),
-      children: (0, n.jsxs)("div", {
-        className: o.cardBody,
-        children: [(0, n.jsx)("div", {
-          className: o.cardAvatar
-        }), (0, n.jsx)("div", {
-          className: o.cardTitle
-        }), (0, n.jsx)("div", {
-          className: o.cardDescription
-        }), (0, n.jsx)("div", {
-          className: o.cardSummary
+    }, (e, t) => t).map(e => (0, r.jsx)("div", {
+      className: i()(c.skeleton, l.shopCard),
+      children: (0, r.jsxs)("div", {
+        className: c.cardBody,
+        children: [(0, r.jsx)("div", {
+          className: c.cardAvatar
+        }), (0, r.jsx)("div", {
+          className: c.cardTitle
+        }), (0, r.jsx)("div", {
+          className: c.cardDescription
+        }), (0, r.jsx)("div", {
+          className: c.cardSummary
         })]
       })
     }, e))]

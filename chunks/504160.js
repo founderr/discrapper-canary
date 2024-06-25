@@ -1,37 +1,37 @@
 n.d(t, {
   L_: function() {
-    return l
-  },
-  _6: function() {
     return a
   },
+  _6: function() {
+    return r
+  },
   ji: function() {
-    return i
+    return s
   }
 });
-var s = n(570140);
+var i = n(570140);
 
-function i(e) {
+function s(e) {
   let {
     eventId: t,
     stageId: n
   } = e;
-  (null != t || null != n) && s.Z.dispatch({
+  (null != t || null != n) && i.Z.dispatch({
     type: "LIVE_CHANNEL_NOTICE_HIDE",
     eventId: t,
     stageId: n
   })
 }
 
-function l(e) {
-  s.Z.dispatch({
+function a(e) {
+  i.Z.dispatch({
     type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE",
     eventId: e
   })
 }
 
-function a(e) {
-  s.Z.dispatch({
+function r(e) {
+  i.Z.dispatch({
     type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN",
     guildEventId: e
   })

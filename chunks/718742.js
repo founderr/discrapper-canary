@@ -3,8 +3,8 @@ n.r(t), n.d(t, {
     return f
   }
 }), n(47120);
-var r = n(735250),
-  a = n(470079),
+var a = n(735250),
+  r = n(470079),
   i = n(481060),
   o = n(841074),
   c = n(585483),
@@ -26,36 +26,36 @@ function f(e) {
     rqtoken: C,
     ...E
   } = e, R = (0, s.Z)(f);
-  return (a.useEffect(() => {
+  return (r.useEffect(() => {
     c.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t)
-  }, [t]), null != v && u.has(v)) ? (0, r.jsx)(i.ModalRoot, {
+  }, [t]), null != v && u.has(v)) ? (0, a.jsx)(i.ModalRoot, {
     transitionState: v,
     "aria-label": "CAPTCHA",
     className: h.modal,
-    children: (0, r.jsxs)(i.ModalContent, {
+    children: (0, a.jsxs)(i.ModalContent, {
       className: h.container,
-      children: [(0, r.jsx)(i.ModalCloseButton, {
+      children: [(0, a.jsx)(i.ModalCloseButton, {
         className: h.close,
         onClick: t
-      }), (0, r.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: h.content,
-        children: v !== i.ModalTransitionState.ENTERED ? (0, r.jsx)(i.Spinner, {
+        children: v !== i.ModalTransitionState.ENTERED ? (0, a.jsx)(i.Spinner, {
           type: i.Spinner.Type.SPINNING_CIRCLE
-        }) : (0, r.jsxs)(r.Fragment, {
-          children: [(0, r.jsx)("div", {
-            children: (0, r.jsx)("img", {
+        }) : (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)("div", {
+            children: (0, a.jsx)("img", {
               src: l,
               alt: ""
             })
-          }), (0, r.jsx)("div", {
+          }), (0, a.jsx)("div", {
             className: h.title,
             "aria-hidden": !0,
             children: null != m ? m : d.Z.Messages.GENERIC_CAPTCHA_HEADER
-          }), (0, r.jsx)("div", {
+          }), (0, a.jsx)("div", {
             children: null != y ? y : d.Z.Messages.GENERIC_CAPTCHA_DESCRIPTION
-          }), (0, r.jsx)("div", {
+          }), (0, a.jsx)("div", {
             className: h.captchaContainer,
-            children: (0, r.jsx)(o.Z, {
+            children: (0, a.jsx)(o.Z, {
               onVerify: e => {
                 R(), n(e, C), t()
               },

@@ -1,28 +1,28 @@
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(283029),
-  r = t(964497);
+var a = t(120356),
+  i = t.n(a),
+  r = t(283029),
+  o = t(964497);
 s.Z = function(e) {
   let {
     className: s,
-    hasCooldown: i,
-    isCanceled: o,
+    hasCooldown: a,
+    isCanceled: l,
     useReducedMotion: c
   } = e;
   return (0, n.jsxs)("div", {
-    className: a()(r.boostIconContainer, s),
-    children: [o ? (0, n.jsx)("img", {
-      className: a()(r.boostIcon, r.boostIconCanceled),
+    className: i()(o.boostIconContainer, s),
+    children: [l ? (0, n.jsx)("img", {
+      className: i()(o.boostIcon, o.boostIconCanceled),
       src: t(457026),
       alt: ""
-    }) : (0, n.jsx)(l.Z, {
-      className: r.boostIcon,
-      boostInCooldown: i,
+    }) : (0, n.jsx)(r.Z, {
+      className: o.boostIcon,
+      boostInCooldown: a,
       useReducedMotion: c
-    }), !o && i && (0, n.jsx)("img", {
-      className: r.snowflake,
+    }), !l && a && (0, n.jsx)("img", {
+      className: o.snowflake,
       src: t(765028),
       alt: ""
     })]

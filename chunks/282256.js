@@ -1,70 +1,70 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(434650),
   o = n(393903),
   c = n(353093),
   u = n(979264),
   d = n(256037);
-t.Z = i.memo(function(e) {
+t.Z = a.memo(function(e) {
   let {
     children: t,
     isOverlay: n,
-    contextGuildId: s,
+    contextGuildId: l,
     ...h
-  } = e, m = i.useRef(null), [E, p] = i.useState({
+  } = e, p = a.useRef(null), [m, _] = a.useState({
     maskImage: "none"
-  }), g = i.useCallback(() => {
+  }), f = a.useCallback(() => {
     var e, t;
     if (n) {
-      p({
+      _({
         maskImage: "none"
       });
       return
     }
-    let l = null === (e = f.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-      i = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
-    if (null == l || null == i) {
-      p({
+    let i = null === (e = E.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+      a = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+    if (null == i || null == a) {
+      _({
         maskImage: "none"
       });
       return
     }
-    let s = i.right - l.right,
-      a = i.width - s;
-    if (a > i.width) {
-      p({
+    let l = a.right - i.right,
+      s = a.width - l;
+    if (s > a.width) {
+      _({
         maskImage: "none"
       });
       return
     }
-    p({
-      maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(a, "px)")
+    _({
+      maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(s, "px)")
     })
-  }, []), f = (0, o.y)(g), C = (0, c.p0)(h.userId, s);
-  i.useEffect(() => {
-    if (null != f.current) g()
-  }, [C]);
-  let _ = (0, r.O)(g);
-  return (0, l.jsxs)("div", {
-    className: a()(d.container, n && d.isOverlayContainer),
-    ref: f,
-    children: [(0, l.jsx)("div", {
+  }, []), E = (0, o.y)(f), g = (0, c.p0)(h.userId, l);
+  a.useEffect(() => {
+    if (null != E.current) f()
+  }, [g]);
+  let C = (0, r.O)(f);
+  return (0, i.jsxs)("div", {
+    className: s()(d.container, n && d.isOverlayContainer),
+    ref: E,
+    children: [(0, i.jsx)("div", {
       className: d.usernameContainer,
       children: t
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: d.chipletParent,
-      ref: _,
-      children: (0, l.jsx)("span", {
-        className: a()(d.chipletContainer, !C && n && d.noPadding),
-        ref: m,
-        style: E,
-        children: (0, l.jsx)(u.ZP, {
+      ref: C,
+      children: (0, i.jsx)("span", {
+        className: s()(d.chipletContainer, !g && n && d.noPadding),
+        ref: p,
+        style: m,
+        children: (0, i.jsx)(u.ZP, {
           ...h,
-          contextGuildId: s,
-          className: a()(h.className, n && d.isOverlayTag)
+          contextGuildId: l,
+          className: s()(h.className, n && d.isOverlayTag)
         })
       })
     })]

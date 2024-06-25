@@ -1,11 +1,11 @@
-t.d(n, {
+s.d(t, {
   q: function() {
-    return r
+    return n
   }
 });
-var s = t(442837),
-  o = t(375954);
-let r = e => (0, s.e7)([o.Z], () => {
-  var n;
-  return null !== (n = o.Z.getLastNonCurrentUserMessage(e)) && void 0 !== n ? n : o.Z.getLastMessage(e)
+var o = s(442837),
+  T = s(375954);
+let n = e => (0, o.e7)([T.Z], () => {
+  var t;
+  return null !== (t = T.Z.getLastNonCurrentUserMessage(e)) && void 0 !== t ? t : T.Z.getLastMessage(e)
 })

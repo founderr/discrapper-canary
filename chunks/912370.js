@@ -1,6 +1,6 @@
-var n, s;
+var n, a;
 i.d(t, {
   C: function() {
     return n
   }
-}), i(47120), (s = n || (n = {}))[s.APPLICATION = 1] = "APPLICATION", s[s.LINK = 2] = "LINK"
+}), i(47120), (a = n || (n = {}))[a.APPLICATION = 1] = "APPLICATION", a[a.LINK = 2] = "LINK"

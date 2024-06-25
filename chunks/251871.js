@@ -4,18 +4,18 @@ t.r(n), t.d(n, {
   }
 }), t(47120);
 var s = t(735250),
-  l = t(470079),
+  o = t(470079),
   r = t(399606),
-  o = t(481060),
-  i = t(100527),
-  a = t(906732),
-  _ = t(314897),
-  u = t(271383),
+  i = t(481060),
+  a = t(100527),
+  l = t(906732),
+  u = t(314897),
+  _ = t(271383),
   d = t(430824),
-  I = t(346656),
-  A = t(626135),
-  O = t(715903),
-  c = t(295474),
+  c = t(346656),
+  I = t(626135),
+  A = t(715903),
+  O = t(295474),
   E = t(273504),
   M = t(981631),
   N = t(372897),
@@ -28,75 +28,75 @@ function D(e) {
     onClose: t,
     transitionState: D,
     guildId: R
-  } = e, T = (0, r.e7)([_.default], () => _.default.getId()), Z = (0, r.e7)([u.ZP], () => u.ZP.getMember(R, T), [R, T]), f = (0, r.e7)([d.Z], () => d.Z.getGuild(R), [R]), g = null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : "", C = (0, O.no)(Z), {
+  } = e, C = (0, r.e7)([u.default], () => u.default.getId()), T = (0, r.e7)([_.ZP], () => _.ZP.getMember(R, C), [R, C]), f = (0, r.e7)([d.Z], () => d.Z.getGuild(R), [R]), Z = null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : "", g = (0, A.no)(T), {
     analyticsLocations: h
-  } = (0, a.ZP)(i.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [P, m] = (0, c.ww)({
+  } = (0, l.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [P, m] = (0, O.ww)({
     guildId: R,
     analyticsLocations: h,
     openWithoutBackstack: !0
-  }), G = C.has(N.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? L.Z.Messages.GUILD_AUTOMOD_USERNAME_INVALID_MODAL_DESCRIPTION_MOBILE : L.Z.Messages.GUILD_AUTOMOD_BIO_INVALID_MODAL_DESCRIPTION_MOBILE;
-  !m && (G = L.Z.Messages.GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
-  let x = m ? L.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : L.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
-  return (l.useEffect(() => {
-    A.default.track(M.rMx.OPEN_MODAL, {
+  }), x = g.has(N.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? L.Z.Messages.GUILD_AUTOMOD_USERNAME_INVALID_MODAL_DESCRIPTION_MOBILE : L.Z.Messages.GUILD_AUTOMOD_BIO_INVALID_MODAL_DESCRIPTION_MOBILE;
+  !m && (x = L.Z.Messages.GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
+  let G = m ? L.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : L.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
+  return (o.useEffect(() => {
+    I.default.track(M.rMx.OPEN_MODAL, {
       type: E.dc,
       guild_id: R,
-      other_user_id: T
+      other_user_id: C
     })
-  }, []), l.useEffect(() => {
+  }, []), o.useEffect(() => {
     if (null == f) {
       t();
       return
     }
-  }, [f, t]), null == f) ? null : (0, s.jsxs)(o.ModalRoot, {
+  }, [f, t]), null == f) ? null : (0, s.jsxs)(i.ModalRoot, {
     transitionState: D,
-    size: o.ModalSize.SMALL,
-    children: [(0, s.jsx)(o.ModalHeader, {
+    size: i.ModalSize.SMALL,
+    children: [(0, s.jsx)(i.ModalHeader, {
       separator: !1,
       children: (0, s.jsxs)("div", {
         className: U.headerContainer,
         children: [(0, s.jsxs)("div", {
           className: U.guildIconContainer,
-          children: [(0, s.jsx)(I.Z, {
+          children: [(0, s.jsx)(c.Z, {
             guild: f,
-            size: I.Z.Sizes.LARGER
+            size: c.Z.Sizes.LARGER
           }), (0, s.jsx)("div", {
             className: U.statusContainer,
-            children: (0, s.jsx)(o.ChatXIcon, {
+            children: (0, s.jsx)(i.ChatXIcon, {
               size: "md",
               color: "currentColor",
               className: U.statusIcon
             })
           })]
-        }), (0, s.jsx)(o.Heading, {
+        }), (0, s.jsx)(i.Heading, {
           color: "header-primary",
           variant: "heading-md/semibold",
           children: L.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({
-            guildName: g
+            guildName: Z
           })
         })]
       })
-    }), (0, s.jsx)(o.ModalContent, {
+    }), (0, s.jsx)(i.ModalContent, {
       children: (0, s.jsx)("div", {
         className: U.descriptionContainer,
-        children: (0, s.jsx)(o.Text, {
+        children: (0, s.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: G
+          children: x
         })
       })
-    }), (0, s.jsxs)(o.ModalFooter, {
-      children: [(0, s.jsx)(o.Button, {
+    }), (0, s.jsxs)(i.ModalFooter, {
+      children: [(0, s.jsx)(i.Button, {
         onClick: () => {
           P(), t()
         },
-        color: o.Button.Colors.BRAND,
-        look: o.Button.Looks.FILLED,
-        children: x
-      }), (0, s.jsx)(o.Button, {
+        color: i.Button.Colors.BRAND,
+        look: i.Button.Looks.FILLED,
+        children: G
+      }), (0, s.jsx)(i.Button, {
         onClick: t,
-        color: o.Button.Colors.PRIMARY,
-        look: o.Button.Looks.LINK,
+        color: i.Button.Colors.PRIMARY,
+        look: i.Button.Looks.LINK,
         children: L.Z.Messages.CANCEL
       })]
     })]

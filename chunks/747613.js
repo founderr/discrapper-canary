@@ -14,17 +14,17 @@ var i = n(735250),
   I = n(80932),
   T = n(351773),
   h = n(209613),
-  S = n(633302),
-  f = n(153124),
-  N = n(176354),
-  A = n(624138),
+  f = n(633302),
+  S = n(153124),
+  A = n(176354),
+  N = n(624138),
   m = n(981631),
   O = n(689938),
-  R = n(53755);
-let p = (0, f.hQ)(),
+  p = n(53755);
+let R = (0, S.hQ)(),
   g = c.Z.convert.fromCodePoint("1f44f"),
-  C = (0, A.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-  v = (0, A.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+  C = (0, N.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+  v = (0, N.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
   L = e => {
     let {
       fade: t,
@@ -32,7 +32,7 @@ let p = (0, f.hQ)(),
       onClick: r,
       delay: s,
       index: o
-    } = e, a = (0, _.JA)("item-".concat(o)), l = N.ZP.getURL(g + n), d = (0, u.useSpring)({
+    } = e, a = (0, _.JA)("item-".concat(o)), l = A.ZP.getURL(g + n), d = (0, u.useSpring)({
       opacity: 1,
       from: {
         opacity: t ? 0 : 1
@@ -44,7 +44,7 @@ let p = (0, f.hQ)(),
       role: "option",
       "aria-selected": 0 === o,
       onClick: () => r(n),
-      className: R.diversityEmojiItem,
+      className: p.diversityEmojiItem,
       children: (0, i.jsx)(u.animated.div, {
         "aria-label": function(e) {
           switch (c.Z.convert.toCodePoint(e)) {
@@ -62,7 +62,7 @@ let p = (0, f.hQ)(),
               return O.Z.Messages.EMOJI_MODIFIER_NONE
           }
         }(n),
-        className: R.diversityEmojiItemImage,
+        className: p.diversityEmojiItemImage,
         style: {
           backgroundImage: 'url("'.concat(l, '")'),
           ...d
@@ -77,7 +77,7 @@ let p = (0, f.hQ)(),
       onClick: s,
       hasTabWrapper: a
     } = e, c = (0, h.Z)("diversity"), d = (0, u.useSpring)({
-      height: (v + 2 * C) * (S.gw.length + 1),
+      height: (v + 2 * C) * (f.gw.length + 1),
       from: {
         height: v
       },
@@ -88,7 +88,7 @@ let p = (0, f.hQ)(),
     r.useEffect(() => {
       c.focusFirstVisibleItem()
     }, [c]);
-    let E = ["", ...S.gw];
+    let E = ["", ...f.gw];
     return l().remove(E, e => e === n), E.unshift(n), (0, i.jsx)(_.bG, {
       navigator: c,
       children: (0, i.jsx)(_.SJ, {
@@ -101,8 +101,8 @@ let p = (0, f.hQ)(),
             ...r,
             id: t,
             ref: n,
-            className: o()(R.diversitySelectorOptions, {
-              [R.diversitySelectorOptionsHasTabWrapper]: a
+            className: o()(p.diversitySelectorOptions, {
+              [p.diversitySelectorOptionsHasTabWrapper]: a
             }),
             style: d,
             role: "listbox",
@@ -124,23 +124,23 @@ t.Z = e => {
     selectedSurrogate: n,
     className: s,
     hasTabWrapper: o
-  } = e, a = N.ZP.getURL(g + n), [l, u] = r.useState(!1), _ = (0, T.Z)(null, () => u(!1)), c = r.useRef(null);
+  } = e, a = A.ZP.getURL(g + n), [l, u] = r.useState(!1), _ = (0, T.Z)(null, () => u(!1)), c = r.useRef(null);
   return (0, i.jsxs)("div", {
     ref: _,
     className: s,
     children: [(0, i.jsx)(E.Clickable, {
       innerRef: c,
-      className: R.diversitySelectorButton,
+      className: p.diversitySelectorButton,
       onClick: () => {
         u(!0)
       },
       "aria-label": O.Z.Messages.EMOJI_MODIFIER_MENU_BUTTON,
       "aria-haspopup": !0,
       "aria-expanded": l,
-      "aria-controls": p,
+      "aria-controls": R,
       tabIndex: l ? -1 : 0,
       children: (0, i.jsx)("div", {
-        className: R.diversityEmojiItemImage,
+        className: p.diversityEmojiItemImage,
         style: {
           backgroundImage: 'url("'.concat(a, '")')
         }
@@ -150,7 +150,7 @@ t.Z = e => {
         e.keyCode === m.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
       },
       children: (0, i.jsx)(D, {
-        id: p,
+        id: R,
         hasTabWrapper: o,
         selectedSurrogate: n,
         onClick: e => {

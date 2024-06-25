@@ -1,163 +1,163 @@
-l.r(n), l.d(n, {
+t.r(n), t.d(n, {
   default: function() {
-    return B
+    return L
   }
-}), l(47120);
-var t = l(735250),
-  i = l(470079),
-  s = l(120356),
-  a = l.n(s),
-  r = l(442837),
-  d = l(704215),
-  o = l(692547),
-  c = l(481060),
-  u = l(252618),
-  h = l(605236),
-  m = l(473403),
-  x = l(984370),
-  N = l(216306),
-  C = l(104155),
-  g = l(22082),
-  E = l(703656),
-  p = l(433355),
-  f = l(592125),
-  Z = l(430824),
-  _ = l(944486),
-  I = l(514342),
-  v = l(31445),
-  j = l(59350),
-  S = l(290511),
-  R = l(176505),
-  T = l(921944),
-  O = l(689938),
-  A = l(553003),
-  L = l(175803);
+}), t(47120);
+var l = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  s = t(442837),
+  o = t(704215),
+  c = t(692547),
+  d = t(481060),
+  u = t(252618),
+  h = t(605236),
+  m = t(473403),
+  _ = t(984370),
+  f = t(216306),
+  C = t(104155),
+  p = t(22082),
+  x = t(703656),
+  g = t(433355),
+  N = t(592125),
+  I = t(430824),
+  b = t(944486),
+  E = t(514342),
+  Z = t(31445),
+  v = t(59350),
+  j = t(290511),
+  T = t(176505),
+  S = t(921944),
+  R = t(689938),
+  A = t(553003),
+  O = t(175803);
 
-function M(e) {
+function B(e) {
   let {
     guild: n,
-    previousChannel: l
-  } = e, s = (0, v.Z)(n);
-  i.useEffect(() => {
-    (0, h.EW)(d.z.CHANNEL_BROWSER_NEW_BADGE_NUX, {
-      dismissAction: T.L.DISMISS
+    previousChannel: t
+  } = e, i = (0, Z.Z)(n);
+  a.useEffect(() => {
+    (0, h.EW)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX, {
+      dismissAction: S.L.DISMISS
     })
   });
-  let a = s ? O.Z.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({
+  let r = i ? R.Z.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({
       guildName: n.name
-    }) : O.Z.Messages.CHANNEL_BROWSER_HTML_TITLE.format({
+    }) : R.Z.Messages.CHANNEL_BROWSER_HTML_TITLE.format({
       guildName: n.name
     }),
-    r = s ? O.Z.Messages.CHANNELS_AND_ROLES : O.Z.Messages.CHANNEL_BROWSER_TITLE;
+    s = i ? R.Z.Messages.CHANNELS_AND_ROLES : R.Z.Messages.CHANNEL_BROWSER_TITLE;
   return (0, u.Tt)({
-    location: a
-  }), (0, t.jsxs)(x.Z, {
+    location: r
+  }), (0, l.jsxs)(_.Z, {
     className: A.header,
     innerClassname: A.innerHeader,
     hideSearch: !0,
-    channelId: R.oC.CUSTOMIZE_COMMUNITY,
+    channelId: T.oC.CUSTOMIZE_COMMUNITY,
     guildId: n.id,
-    toolbar: null != l ? (0, t.jsx)(c.Button, {
+    toolbar: null != t ? (0, l.jsx)(d.Button, {
       className: A.returnButton,
-      size: c.Button.Sizes.SMALL,
-      look: c.Button.Looks.OUTLINED,
-      color: c.Button.Colors.PRIMARY,
+      size: d.Button.Sizes.SMALL,
+      look: d.Button.Looks.OUTLINED,
+      color: d.Button.Colors.PRIMARY,
       onClick: () => {
-        null != l && (0, E.XU)(n.id, l.id)
+        null != t && (0, x.XU)(n.id, t.id)
       },
-      children: (0, t.jsx)(c.Text, {
+      children: (0, l.jsx)(d.Text, {
         className: A.returnButtonText,
         variant: "text-xs/medium",
         color: "none",
-        children: O.Z.Messages.RETURN_TO_CHANNEL.format({
-          channelNameHook: () => null == l ? null : (0, t.jsxs)(i.Fragment, {
-            children: [(0, t.jsx)(m._, {
+        children: R.Z.Messages.RETURN_TO_CHANNEL.format({
+          channelNameHook: () => null == t ? null : (0, l.jsxs)(a.Fragment, {
+            children: [(0, l.jsx)(m._, {
               className: A.returnIcon,
               guild: n,
-              channel: l
-            }), (0, t.jsx)(I.Z, {
-              children: (0, t.jsx)(c.Text, {
+              channel: t
+            }), (0, l.jsx)(E.Z, {
+              children: (0, l.jsx)(d.Text, {
                 variant: "text-xs/medium",
                 color: "none",
-                children: l.name
+                children: t.name
               })
             })]
-          }, l.id)
+          }, t.id)
         })
       })
     }) : [],
-    children: [(0, t.jsx)(x.Z.Icon, {
-      icon: c.ChannelListMagnifyingGlassIcon,
+    children: [(0, l.jsx)(_.Z.Icon, {
+      icon: d.ChannelListMagnifyingGlassIcon,
       "aria-hidden": !0
-    }), (0, t.jsx)(x.Z.Title, {
-      children: r
+    }), (0, l.jsx)(_.Z.Title, {
+      children: s
     })]
   })
 }
 
-function B(e) {
+function L(e) {
   let {
     guildId: n,
-    selectedSection: l
-  } = e, s = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)), d = (0, v.Z)(s), [u, h] = i.useState(null != l ? l : S.l7.CUSTOMIZE);
-  i.useEffect(() => {
-    null != l && h(l)
-  }, [l]);
-  let m = (0, r.e7)([_.Z], () => _.Z.getLastSelectedChannelId(n)),
-    x = (0, r.e7)([p.ZP], () => p.ZP.getCurrentSidebarChannelId(R.oC.CHANNEL_BROWSER)),
-    E = null != x && u === S.l7.BROWSE,
-    I = (0, r.e7)([f.Z], () => f.Z.getChannel(m)),
-    T = (0, r.e7)([g.Z], () => g.Z.getNewChannelIds(n).size > 0),
-    B = (0, N.fU)(n);
-  return null == s ? null : (0, t.jsxs)(t.Fragment, {
-    children: [(0, t.jsxs)("div", {
-      className: a()(L.chat, {
-        [L.threadSidebarOpen]: E
+    selectedSection: t
+  } = e, i = (0, s.e7)([I.Z], () => I.Z.getGuild(n)), o = (0, Z.Z)(i), [u, h] = a.useState(null != t ? t : j.l7.CUSTOMIZE);
+  a.useEffect(() => {
+    null != t && h(t)
+  }, [t]);
+  let m = (0, s.e7)([b.Z], () => b.Z.getLastSelectedChannelId(n)),
+    _ = (0, s.e7)([g.ZP], () => g.ZP.getCurrentSidebarChannelId(T.oC.CHANNEL_BROWSER)),
+    x = null != _ && u === j.l7.BROWSE,
+    E = (0, s.e7)([N.Z], () => N.Z.getChannel(m)),
+    S = (0, s.e7)([p.Z], () => p.Z.getNewChannelIds(n).size > 0),
+    L = (0, f.fU)(n);
+  return null == i ? null : (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)("div", {
+      className: r()(O.chat, {
+        [O.threadSidebarOpen]: x
       }),
-      children: [(0, t.jsx)(M, {
-        guild: s,
-        previousChannel: I
-      }), (0, t.jsxs)("div", {
-        className: a()(L.content, A.container),
-        children: [d && (0, t.jsxs)(c.TabBar, {
+      children: [(0, l.jsx)(B, {
+        guild: i,
+        previousChannel: E
+      }), (0, l.jsxs)("div", {
+        className: r()(O.content, A.container),
+        children: [o && (0, l.jsxs)(d.TabBar, {
           className: A.tabBar,
           type: "top",
           look: "brand",
           selectedItem: u,
           onItemSelect: e => h(e),
-          children: [(0, t.jsx)(c.TabBar.Item, {
+          children: [(0, l.jsx)(d.TabBar.Item, {
             className: A.tabBarItem,
-            id: S.l7.CUSTOMIZE,
-            children: O.Z.Messages.OPT_IN_GUILD_NOTICE_CTA
-          }, S.l7.CUSTOMIZE), (0, t.jsxs)(c.TabBar.Item, {
+            id: j.l7.CUSTOMIZE,
+            children: R.Z.Messages.OPT_IN_GUILD_NOTICE_CTA
+          }, j.l7.CUSTOMIZE), (0, l.jsxs)(d.TabBar.Item, {
             className: A.tabBarItem,
-            id: S.l7.BROWSE,
-            "aria-label": O.Z.Messages.CHANNEL_BROWSER_TITLE,
-            children: [O.Z.Messages.CHANNEL_BROWSER_TITLE, (0, t.jsx)(c.TextBadge, {
-              text: T ? O.Z.Messages.CHANNEL_TYPE_NEW : B,
-              color: T ? o.Z.unsafe_rawColors.BRAND_260.css : o.Z.colors.BACKGROUND_ACCENT.css,
-              className: a()({
-                [A.newBadge]: T
+            id: j.l7.BROWSE,
+            "aria-label": R.Z.Messages.CHANNEL_BROWSER_TITLE,
+            children: [R.Z.Messages.CHANNEL_BROWSER_TITLE, (0, l.jsx)(d.TextBadge, {
+              text: S ? R.Z.Messages.CHANNEL_TYPE_NEW : L,
+              color: S ? c.Z.unsafe_rawColors.BRAND_260.css : c.Z.colors.BACKGROUND_ACCENT.css,
+              className: r()({
+                [A.newBadge]: S
               })
             })]
-          }, S.l7.BROWSE)]
+          }, j.l7.BROWSE)]
         }), (() => {
           switch (u) {
-            case S.l7.CUSTOMIZE:
-              return (0, t.jsx)(j.Z, {
+            case j.l7.CUSTOMIZE:
+              return (0, l.jsx)(v.Z, {
                 guildId: n,
-                onBrowseChannels: () => h(S.l7.BROWSE)
+                onBrowseChannels: () => h(j.l7.BROWSE)
               });
-            case S.l7.BROWSE:
+            case j.l7.BROWSE:
             default:
-              return (0, t.jsx)(C.Z, {
+              return (0, l.jsx)(C.Z, {
                 guildId: n
               })
           }
         })()]
       })]
-    }), E && (0, t.jsx)(C.I, {
-      channelId: x
+    }), x && (0, l.jsx)(C.I, {
+      channelId: _
     })]
   })
 }

@@ -18,14 +18,14 @@ var i = n(729594),
   I = n(543842),
   T = n(754688),
   h = n(336197),
-  S = n(540709),
-  f = n(881706),
-  N = n(701190),
-  A = n(944486),
+  f = n(540709),
+  S = n(881706),
+  A = n(701190),
+  N = n(944486),
   m = n(914010),
   O = n(771845),
-  R = n(626135),
-  p = n(591759);
+  p = n(626135),
+  R = n(591759);
 n(782568);
 var g = n(981631);
 async function C(e, t) {
@@ -38,7 +38,7 @@ async function C(e, t) {
 }
 async function v(e) {
   var t;
-  let n = N.Z.getInvite(e.code);
+  let n = A.Z.getInvite(e.code);
   if (null == n) {
     let {
       invite: t
@@ -71,11 +71,11 @@ function D(e) {
     let {
       code: i
     } = o, s = null !== (t = m.Z.getGuildId()) && void 0 !== t ? t : void 0;
-    return R.default.track(g.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+    return p.default.track(g.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
       application_id: i,
       device_platform: r.tq ? "mobile_web" : "desktop_web",
       guild_id: s,
-      channel_id: A.Z.getChannelId()
+      channel_id: N.Z.getChannelId()
     }), Promise.resolve().then(n.bind(n, 147890)).then(e => {
       let {
         goToAppDirectory: t
@@ -103,15 +103,15 @@ function D(e) {
     }), !0
   };
   let {
-    path: N,
+    path: A,
     hostname: O = "",
     host: C,
     query: D,
     hash: M
-  } = i.parse(e), P = p.Z.isDiscordHostname(O) || p.Z.isDiscordLocalhost(C, O);
-  if (P && (null == N ? void 0 : N.startsWith("/application-directory"))) {
+  } = i.parse(e), P = R.Z.isDiscordHostname(O) || R.Z.isDiscordLocalhost(C, O);
+  if (P && (null == A ? void 0 : A.startsWith("/application-directory"))) {
     let e;
-    let t = N.split("/"),
+    let t = A.split("/"),
       [, , i, s] = t;
     5 === t.length && (e = t[4]);
     let o = null != i && (0, l.BH)(i) ? i : void 0;
@@ -123,11 +123,11 @@ function D(e) {
       } = n(272242), {
         ApplicationDirectoryViews: _
       } = n(132871), c = null !== (a = m.Z.getGuildId()) && void 0 !== a ? a : void 0, d = _.HOME;
-      return "search" === i && (d = _.SEARCH), null != o && (d = _.APPLICATION, R.default.track(g.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+      return "search" === i && (d = _.SEARCH), null != o && (d = _.APPLICATION, p.default.track(g.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
         application_id: o,
         device_platform: r.tq ? "mobile_web" : "desktop_web",
         guild_id: c,
-        channel_id: A.Z.getChannelId()
+        channel_id: N.Z.getChannelId()
       })), Promise.resolve().then(n.bind(n, 147890)).then(t => {
         let {
           goToAppDirectory: n
@@ -145,19 +145,19 @@ function D(e) {
       }), !0
     }
   }
-  if (null != N && P && p.Z.isAppRoute(N)) {
+  if (null != A && P && R.Z.isAppRoute(A)) {
     let e = {};
-    return null != D && (e.search = D), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, h.Z)(N, Object.keys(e).length > 0 ? e : null), !0)
+    return null != D && (e.search = D), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, h.Z)(A, Object.keys(e).length > 0 ? e : null), !0)
   }
-  if (null != N && P) {
+  if (null != A && P) {
     let {
       getOAuth2AuthorizeProps: t,
       openOAuth2ModalWithCreateGuildModal: i
     } = n(69580), r = t(e);
     if (null != r) return e => (null == e || e.preventDefault(), i(r), !0)
   }
-  let y = (0, T.Ao)(N);
-  if (null != N && P && null != y) return e => {
+  let y = (0, T.Ao)(A);
+  if (null != A && P && null != y) return e => {
     null == e || e.preventDefault();
     let t = m.Z.getGuildId();
     null != y.guildId && "" !== y.guildId && y.guildId !== t && (0, h.Z)(g.Z5c.CHANNEL(y.guildId));
@@ -166,15 +166,15 @@ function D(e) {
       eventId: n.id
     }), !0
   };
-  if (P && (null == N ? void 0 : N.startsWith("/settings/"))) {
+  if (P && (null == A ? void 0 : A.startsWith("/settings/"))) {
     let {
       default: e
-    } = n(357269), t = e(N);
+    } = n(357269), t = e(A);
     if (null != t) return e => (null == e || e.preventDefault(), a.Z.open(t.section, t.subsection, {
       openWithoutBackstack: !1,
       impressionSource: t.source,
       analyticsLocations: s
     }), !0)
   }
-  if (!t && null != (0, f.v)(e)) return t => (null == t || t.preventDefault(), S.Z.show(e), !0)
+  if (!t && null != (0, S.v)(e)) return t => (null == t || t.preventDefault(), f.Z.show(e), !0)
 }

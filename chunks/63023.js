@@ -1,4 +1,4 @@
-function s(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -8,10 +8,10 @@ function s(e, t, n) {
 }
 n.d(t, {
   Z: function() {
-    return i
+    return s
   }
 }), n(653041);
-class i {
+class s {
   _processQueue() {
     setTimeout(() => {
       if (this._queue.length > 0 && this._tokenCount > 0) {
@@ -30,6 +30,6 @@ class i {
     })
   }
   constructor(e, t) {
-    s(this, "_capacity", void 0), s(this, "_tokenCount", void 0), s(this, "_queue", void 0), s(this, "_intervalPeriod", void 0), s(this, "_intervalID", void 0), this._capacity = e, this._tokenCount = e, this._queue = [], this._intervalPeriod = t / e, this._intervalID = null
+    i(this, "_capacity", void 0), i(this, "_tokenCount", void 0), i(this, "_queue", void 0), i(this, "_intervalPeriod", void 0), i(this, "_intervalID", void 0), this._capacity = e, this._tokenCount = e, this._queue = [], this._intervalPeriod = t / e, this._intervalID = null
   }
 }

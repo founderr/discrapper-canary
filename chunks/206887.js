@@ -1,50 +1,50 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(481060),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(481060),
   o = n(404975),
   c = n(455839),
-  u = n(689938),
-  d = n(421096);
+  d = n(689938),
+  u = n(421096);
 t.Z = function(e) {
   let {
     guild: t
-  } = e, [n, l] = i.useState(!1), E = i.useCallback(() => l(!0), [l]), h = i.useCallback(() => l(!0), [l]);
-  return (0, s.jsx)("div", {
-    className: a()(d.actionButtonsContainer, {
-      [d.forceButtonsShow]: n
+  } = e, [n, a] = s.useState(!1), _ = s.useCallback(() => a(!0), [a]), E = s.useCallback(() => a(!0), [a]);
+  return (0, i.jsx)("div", {
+    className: r()(u.actionButtonsContainer, {
+      [u.forceButtonsShow]: n
     }),
-    children: (0, s.jsx)(o.ZP, {
-      children: (0, s.jsx)(c.GuildDiscoveryMenuPopout, {
-        onRequestOpen: E,
-        onRequestClose: h,
+    children: (0, i.jsx)(o.ZP, {
+      children: (0, i.jsx)(c.GuildDiscoveryMenuPopout, {
+        onRequestOpen: _,
+        onRequestClose: E,
         guild: t,
         children: e => {
           let {
             onClick: t,
             ...n
           } = e;
-          return (0, s.jsx)(r.Tooltip, {
-            text: u.Z.Messages.MORE,
+          return (0, i.jsx)(l.Tooltip, {
+            text: d.Z.Messages.MORE,
             hideOnClick: !0,
             children: e => {
               let {
-                onClick: i,
-                ...l
+                onClick: s,
+                ...a
               } = e;
-              return (0, s.jsx)(o.zx, {
+              return (0, i.jsx)(o.zx, {
                 ...n,
-                ...l,
+                ...a,
                 onClick: e => {
-                  e.stopPropagation(), null == i || i(), t(e)
+                  e.stopPropagation(), null == s || s(), t(e)
                 },
-                "aria-label": u.Z.Messages.MORE,
-                children: (0, s.jsx)(r.MoreHorizontalIcon, {
+                "aria-label": d.Z.Messages.MORE,
+                children: (0, i.jsx)(l.MoreHorizontalIcon, {
                   size: "md",
                   color: "currentColor",
-                  className: d.overflowIcon
+                  className: u.overflowIcon
                 })
               })
             }

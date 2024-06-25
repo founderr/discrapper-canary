@@ -1,46 +1,46 @@
-t.r(n), t.d(n, {
+a.r(n), a.d(n, {
   default: function() {
     return O
   }
-}), t(47120);
-var a = t(735250),
-  s = t(470079),
-  r = t(512722),
-  l = t.n(r),
-  i = t(399606),
-  o = t(481060),
-  c = t(668781),
-  d = t(430824),
-  _ = t(495437),
-  u = t(240864),
-  E = t(981631),
-  m = t(689938),
-  T = t(267095);
+}), a(47120);
+var t = a(735250),
+  r = a(470079),
+  s = a(512722),
+  i = a.n(s),
+  o = a(399606),
+  l = a(481060),
+  d = a(668781),
+  c = a(430824),
+  _ = a(495437),
+  u = a(240864),
+  E = a(981631),
+  m = a(689938),
+  T = a(267095);
 
 function D(e) {
   let {
     guildProductListing: n,
-    guildId: t
-  } = e, s = (0, i.e7)([d.Z], () => {
+    guildId: a
+  } = e, r = (0, o.e7)([c.Z], () => {
     var e;
-    return d.Z.getRole(t, null !== (e = null == n ? void 0 : n.role_id) && void 0 !== e ? e : E.lds)
+    return c.Z.getRole(a, null !== (e = null == n ? void 0 : n.role_id) && void 0 !== e ? e : E.lds)
   });
-  return null == s ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(o.Heading, {
+  return null == r ? null : (0, t.jsxs)(t.Fragment, {
+    children: [(0, t.jsxs)(l.Heading, {
       className: T.warningSectionHeader,
       variant: "text-md/medium",
       color: "text-normal",
-      children: [(0, a.jsx)(o.CircleExclamationPointIcon, {
+      children: [(0, t.jsx)(l.CircleExclamationPointIcon, {
         size: "sm",
         color: "currentColor"
-      }), (0, a.jsx)(o.Spacer, {
+      }), (0, t.jsx)(l.Spacer, {
         horizontal: !0,
         size: 8
       }), m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING_HEADER]
-    }), (0, a.jsx)(o.Text, {
+    }), (0, t.jsx)(l.Text, {
       variant: "text-md/normal",
       children: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format({
-        roleName: s.name
+        roleName: r.name
       })
     })]
   })
@@ -49,15 +49,15 @@ function D(e) {
 function O(e) {
   let {
     guildId: n,
-    productId: t,
-    ...r
-  } = e, [i] = s.useState(() => u.Z.getGuildProduct(t));
-  l()(null != i, "guildProductListing cannot be null");
-  let [d, E] = s.useState(!1), O = async () => {
+    productId: a,
+    ...s
+  } = e, [o] = r.useState(() => u.Z.getGuildProduct(a));
+  i()(null != o, "guildProductListing cannot be null");
+  let [c, E] = r.useState(!1), O = async () => {
     try {
-      E(!0), await _.mh(n, t)
+      E(!0), await _.mh(n, a)
     } catch (e) {
-      c.Z.show({
+      d.Z.show({
         title: m.Z.Messages.GUILD_PRODUCTS_DELETE_ERROR_TITLE,
         body: e.message
       })
@@ -65,21 +65,21 @@ function O(e) {
       E(!1)
     }
   };
-  return (0, a.jsxs)(o.ConfirmModal, {
-    ...r,
+  return (0, t.jsxs)(l.ConfirmModal, {
+    ...s,
     className: T.modalContainer,
     header: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
     confirmText: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BUTTON,
     cancelText: m.Z.Messages.CANCEL,
-    loading: d,
+    loading: c,
     onConfirm: O,
-    children: [(0, a.jsx)(o.Text, {
+    children: [(0, t.jsx)(l.Text, {
       variant: "text-md/normal",
       children: m.Z.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY.format({
-        productName: i.name
+        productName: o.name
       })
-    }), (0, a.jsx)(D, {
-      guildProductListing: i,
+    }), (0, t.jsx)(D, {
+      guildProductListing: o,
       guildId: n
     })]
   })

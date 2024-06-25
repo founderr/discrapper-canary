@@ -17,14 +17,14 @@ let {
   SemanticColors: T,
   RawColors: h
 } = u.V, {
-  Shadows: S
+  Shadows: f
 } = d.V, {
-  Spacing: f
+  Spacing: S
 } = E.V, {
-  Modules: N
-} = _.V, A = l()(h, e => r()(e)), m = {
+  Modules: A
+} = _.V, N = l()(h, e => r()(e)), m = {
   themes: I,
-  modules: N,
+  modules: A,
   colors: l()(T, (e, t) => ({
     css: g(t),
     resolve(t) {
@@ -33,19 +33,19 @@ let {
         r = n.opacity;
       if (1 === r) return m.unsafe_rawColors[i].resolve(t);
       {
-        let e = A[i];
+        let e = N[i];
         return 0 !== e.alpha() && 1 !== r && (e = e.alpha(r)), O(e, t.saturation)
       }
     }
   })),
   unsafe_rawColors: l()(h, (e, t) => {
-    let n = A[t];
+    let n = N[t];
     return {
       css: g(t),
       resolve: e => O(n, e.saturation)
     }
   }),
-  shadows: l()(S, (e, t) => ({
+  shadows: l()(f, (e, t) => ({
     css: g(t),
     resolve: t => ({
       boxShadow: e[t.theme].boxShadow,
@@ -54,46 +54,46 @@ let {
     })
   })),
   radii: c.w,
-  spacing: l()(f, e => "".concat(e, "px"))
+  spacing: l()(S, e => "".concat(e, "px"))
 };
 
 function O(e, t) {
   return {
     spring() {
       let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return R(e, t, n).hex("rgba")
+      return p(e, t, n).hex("rgba")
     },
     hsl() {
       let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return R(e, t, n).css("hsl")
+      return p(e, t, n).css("hsl")
     },
     hex() {
       let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return R(e, t, n).hex()
+      return p(e, t, n).hex()
     },
     int() {
       let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        i = R(e, t, n),
+        i = p(e, t, n),
         r = i.num();
       return 1 !== i.alpha() ? r << 8 | Math.round(255 * i.alpha()) : r
     }
   }
 }
 
-function R(e, t, n) {
+function p(e, t, n) {
   var i;
   let r = o()(null !== (i = n.opacity) && void 0 !== i ? i : 1, 0, 1),
     s = e;
   return 1 !== t && (s = s.set("hsl.s", s.get("hsl.s") * t)), 1 !== r && (s = s.alpha(s.alpha() * r)), s
 }
 
-function p(e) {
+function R(e) {
   return e.toLowerCase().replace(/_/g, "-")
 }
 
 function g(e, t) {
-  let n = null != t ? p(t) : null,
-    i = p(e);
+  let n = null != t ? R(t) : null,
+    i = R(e);
   return "var(--".concat([n, i].filter(Boolean).join("-"), ")")
 }
 t.Z = m

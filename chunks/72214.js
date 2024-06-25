@@ -1,70 +1,70 @@
 n.d(t, {
   s: function() {
-    return _
+    return h
   }
 }), n(47120);
 var l = n(470079),
   a = n(442837),
-  s = n(38618),
-  i = n(51596),
+  i = n(38618),
+  s = n(51596),
   r = n(516373),
-  u = n(314897),
+  c = n(314897),
   o = n(580005),
-  c = n(987509),
+  u = n(987509),
   d = n(601565),
-  E = n(41837);
+  _ = n(41837);
 
-function _(e) {
+function h(e) {
   let {
     searchText: t,
     targetDestination: n,
-    selectedDestinations: _,
-    originDestination: h
-  } = e, S = (0, a.e7)([u.default], () => u.default.getId()), f = l.useMemo(() => ({
+    selectedDestinations: h,
+    originDestination: E
+  } = e, f = (0, a.e7)([c.default], () => c.default.getId()), S = l.useMemo(() => ({
     searchOptions: {
-      blacklist: new Set(["user:".concat(S)]),
+      blacklist: new Set(["user:".concat(f)]),
       frecencyBoosters: !0,
       userFilters: null
     }
-  }), [S]), {
-    search: g,
-    query: A,
-    results: I
-  } = (0, d.Z)(f), p = l.useMemo(() => (function(e) {
+  }), [f]), {
+    search: I,
+    query: g,
+    results: A
+  } = (0, d.Z)(S), p = l.useMemo(() => (function(e) {
     let {
       query: t,
       queryMode: n
-    } = (0, i.F_)(e), l = E.M, a = null;
-    return null != n && E.M.includes(n) && (l = [n], a = n), {
+    } = (0, s.F_)(e), l = _.M, a = null;
+    return null != n && _.M.includes(n) && (l = [n], a = n), {
       query: t,
       queryMode: a,
       resultTypes: l
     }
   })(t), [t]), {
-    queryMode: C
-  } = p, [m, N] = l.useState(null != _ ? _ : []);
+    queryMode: m
+  } = p, [b, C] = l.useState(null != h ? h : []);
   l.useLayoutEffect(() => {
     let {
       query: e,
       resultTypes: t
     } = p;
-    g({
+    I({
       query: e,
       resultTypes: t
-    }), N(null != _ ? _ : [])
-  }, [g, p]), (0, r.D)();
-  let T = (0, a.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
-    L = (0, a.e7)([s.Z], () => s.Z.isConnected()),
-    b = "" !== A;
-  return l.useMemo(() => (0, c.ZP)({
-    results: I,
-    hasQuery: b,
-    queryMode: C,
+    }), C(null != h ? h : [])
+  }, [I, p]), (0, r.D)();
+  let L = (0, a.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+    N = (0, a.e7)([i.Z], () => i.Z.isConnected()),
+    T = "" !== g;
+  return l.useMemo(() => (0, u.ZP)({
+    results: A,
+    hasQuery: T,
+    queryMode: m,
     targetDestination: n,
-    frequentChannels: T,
-    selectedDestinations: _,
-    pinnedDestinations: m,
-    originDestination: h,
-    isConnected: L
-  }), [I, b, C, n, T, _, m, h, L])
+    frequentChannels: L,
+    selectedDestinations: h,
+    pinnedDestinations: b,
+    originDestination: E,
+    isConnected: N
+  }), [A, T, m, n, L, h, b, E, N])
 }

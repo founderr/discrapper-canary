@@ -11,7 +11,7 @@ let E = [],
   T = null,
   h = null;
 
-function S(e) {
+function f(e) {
   let t = E.indexOf(e);
   if (t > -1) {
     let n = [...E];
@@ -20,10 +20,10 @@ function S(e) {
   return !1
 }
 
-function f(e) {
+function S(e) {
   return !(e === d.ME || E.includes(e)) && (E = [...E, e], !0)
 }
-class N extends(i = a.ZP.Store) {
+class A extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(_.Z, c.default)
   }
@@ -52,12 +52,12 @@ class N extends(i = a.ZP.Store) {
     return null != e ? I[e] : null
   }
 }
-o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new N(l.Z, {
+}) : r[s] = o, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function() {
     E = Object.values(_.Z.getGuilds()).reduce((e, t) => t.isLurker() ? [...e, t.id] : e, [])
   },
@@ -71,7 +71,7 @@ o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, 
     } = e;
     if (n) {
       var o, a;
-      switch (f(t), o = t, null != (a = s) && (I[o] = a), i) {
+      switch (S(t), o = t, null != (a = s) && (I[o] = a), i) {
         case d.vtS.MOBILE_GUILD_DISCOVERY:
           h = {
             type: d.vtS.MOBILE_GUILD_DISCOVERY
@@ -95,7 +95,7 @@ o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, 
       ignoredGuildIds: t
     } = e, n = function(e) {
       let t = new Set([...null != e ? e : []]);
-      return [...E].reduce((e, n) => t.has(n) ? e : S(n) || e, !1)
+      return [...E].reduce((e, n) => t.has(n) ? e : f(n) || e, !1)
     }(t);
     return n && (T = null, h = null), n
   },
@@ -104,19 +104,19 @@ o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, 
       lurkingGuildId: t,
       lurkingSource: n
     } = e;
-    return f(t), h = n, !0
+    return S(t), h = n, !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    return !!(null != t.joined_at && E.includes(t.id)) && (S(t.id), T = null, h = null, !0)
+    return !!(null != t.joined_at && E.includes(t.id)) && (f(t.id), T = null, h = null, !0)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    return !!E.includes(t.id) && (S(t.id), T = null, h = null, !0)
+    return !!E.includes(t.id) && (f(t.id), T = null, h = null, !0)
   },
   GUILD_MEMBER_ADD: function(e) {
     var t;
@@ -125,6 +125,6 @@ o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, 
       joinedAt: i,
       user: r
     } = e, s = r.id === (null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-    return !!(s && null != i && E.includes(n)) && (S(n), T = null, h = null, !0)
+    return !!(s && null != i && E.includes(n)) && (f(n), T = null, h = null, !0)
   }
 })

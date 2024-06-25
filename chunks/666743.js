@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-    return r
+    return l
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(314897);
+var i = n(735250),
+  s = n(470079),
+  a = n(314897);
 
-function a(e, t, n) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,26 +16,26 @@ function a(e, t, n) {
   }) : e[t] = n, e
 }
 
-function r(e) {
-  return class extends i.Component {
+function l(e) {
+  return class extends s.Component {
     componentDidMount() {
-      l.default.addChangeListener(this.onStoreChange)
+      a.default.addChangeListener(this.onStoreChange)
     }
     componentWillUnmount() {
-      l.default.removeChangeListener(this.onStoreChange)
+      a.default.removeChangeListener(this.onStoreChange)
     }
     render() {
-      return (0, s.jsx)(e, {
+      return (0, i.jsx)(e, {
         ...this.props,
         isAuthenticated: this.state.isAuthenticated
       })
     }
     constructor(...e) {
-      super(...e), a(this, "state", {
-        isAuthenticated: l.default.isAuthenticated()
-      }), a(this, "onStoreChange", () => {
+      super(...e), r(this, "state", {
+        isAuthenticated: a.default.isAuthenticated()
+      }), r(this, "onStoreChange", () => {
         this.setState({
-          isAuthenticated: l.default.isAuthenticated()
+          isAuthenticated: a.default.isAuthenticated()
         })
       })
     }

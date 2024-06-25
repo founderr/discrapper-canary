@@ -1,73 +1,73 @@
 n.d(t, {
   C: function() {
-    return _
+    return h
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(481060),
-  a = n(359110),
-  r = n(6025),
+var i = n(735250),
+  s = n(470079),
+  a = n(481060),
+  r = n(359110),
+  l = n(6025),
   o = n(433355),
   c = n(26373),
-  u = n(486622),
-  d = n(376191),
-  E = n(689938),
-  h = n(177133);
+  d = n(486622),
+  u = n(376191),
+  _ = n(689938),
+  E = n(177133);
 
-function _(e) {
+function h(e) {
   let {
     active: t,
     user: n,
-    channel: _
-  } = e, I = (0, c.K)(), m = i.useCallback(() => {
-    (0, l.showToast)((0, l.createToast)(E.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
-  }, []), T = i.useCallback(() => {
-    r.Z.closeChannelSidebar(o.uZ)
-  }, []), g = i.useCallback(() => {
-    r.Z.closeChannelSidebar(o.uZ), I && (0, a.Kh)(_.id)
-  }, [_.id, I]), {
-    acceptMessageRequest: p,
-    rejectMessageRequest: N,
-    isAcceptLoading: S,
-    isRejectLoading: C,
-    isUserProfileLoading: A,
-    isOptimisticAccepted: f,
+    channel: h
+  } = e, I = (0, c.K)(), m = s.useCallback(() => {
+    (0, a.showToast)((0, a.createToast)(_.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, a.ToastType.FAILURE))
+  }, []), p = s.useCallback(() => {
+    l.Z.closeChannelSidebar(o.uZ)
+  }, []), g = s.useCallback(() => {
+    l.Z.closeChannelSidebar(o.uZ), I && (0, r.Kh)(h.id)
+  }, [h.id, I]), {
+    acceptMessageRequest: T,
+    rejectMessageRequest: C,
+    isAcceptLoading: f,
+    isRejectLoading: S,
+    isUserProfileLoading: N,
+    isOptimisticAccepted: A,
     isOptimisticRejected: Z
-  } = (0, u.m)({
+  } = (0, d.m)({
     user: n,
     onAcceptSuccess: g,
-    onRejectSuccess: T,
+    onRejectSuccess: p,
     onError: m
-  }), L = S || C || A || f || Z;
-  return (0, s.jsxs)("div", {
-    className: h.container,
-    children: [(0, s.jsx)(d.Z, {
-      channel: _,
+  }), L = f || S || N || A || Z;
+  return (0, i.jsxs)("div", {
+    className: E.container,
+    children: [(0, i.jsx)(u.Z, {
+      channel: h,
       otherUser: n,
       active: t
-    }), (0, s.jsxs)("div", {
-      className: h.actions,
-      children: [(0, s.jsx)(l.Button, {
-        className: h.button,
-        color: l.ButtonColors.PRIMARY,
-        size: l.Button.Sizes.SMALL,
+    }), (0, i.jsxs)("div", {
+      className: E.actions,
+      children: [(0, i.jsx)(a.Button, {
+        className: E.button,
+        color: a.ButtonColors.PRIMARY,
+        size: a.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), N(_.id)
+          e.stopPropagation(), C(h.id)
         },
         disabled: L,
-        submitting: C || Z,
-        children: E.Z.Messages.MESSAGE_REQUEST_IGNORE
-      }), (0, s.jsx)(l.Button, {
-        className: h.button,
-        color: l.ButtonColors.BRAND,
-        size: l.Button.Sizes.SMALL,
+        submitting: S || Z,
+        children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
+      }), (0, i.jsx)(a.Button, {
+        className: E.button,
+        color: a.ButtonColors.BRAND,
+        size: a.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), p(_.id)
+          e.stopPropagation(), T(h.id)
         },
         disabled: L,
-        submitting: S || A || f,
-        children: E.Z.Messages.MESSAGE_REQUEST_ACCEPT
+        submitting: f || N || A,
+        children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]
   })

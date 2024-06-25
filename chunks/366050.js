@@ -9,7 +9,7 @@ let E = "PictureInPictureLocation",
   I = new Map,
   T = d.VD2.BOTTOM_RIGHT,
   h = {};
-class S extends(s = u.ZP.Store) {
+class f extends(s = u.ZP.Store) {
   initialize() {
     T = _.K.get(E, d.VD2.BOTTOM_RIGHT)
   }
@@ -36,12 +36,12 @@ class S extends(s = u.ZP.Store) {
     return null != e && I.has(e)
   }
 }
-l = "PictureInPictureStore", (a = "displayName") in(o = S) ? Object.defineProperty(o, a, {
+l = "PictureInPictureStore", (a = "displayName") in(o = f) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new S(c.Z, {
+}) : o[a] = l, t.Z = new f(c.Z, {
   PICTURE_IN_PICTURE_OPEN: function(e) {
     var t, n;
     let {

@@ -1,35 +1,35 @@
 n.d(t, {
   Q: function() {
-    return S
+    return E
   }
 });
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(120356),
-  r = n.n(o),
+var s = n(120356),
+  r = n.n(s),
   a = n(533627),
-  l = n(432594),
-  i = n(481060),
+  i = n(432594),
+  l = n(481060),
   c = n(230711),
-  u = n(327192),
-  d = n(796111),
+  d = n(327192),
+  u = n(796111),
   p = n(46140),
-  x = n(981631),
-  m = n(689938),
+  m = n(981631),
+  x = n(689938),
   g = n(600852);
 
-function h(e) {
+function f(e) {
   let {
     isConnected: t,
     consoleType: n
   } = e;
-  return (0, s.jsx)(i.Clickable, {
+  return (0, o.jsx)(l.Clickable, {
     className: g.connectConsoleButtonWrapper,
-    onClick: () => (0, u.q)(n),
-    children: n === x.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
+    onClick: () => (0, d.q)(n),
+    children: n === m.ABu.PLAYSTATION ? (0, o.jsx)(a.K, {
       colorClass: r()(g.connectConsoleButton, t ? g.playstationButtonConnected : g.connectConsoleButtonUnconnected),
       size: "sm"
-    }) : (0, s.jsx)(l.a, {
+    }) : (0, o.jsx)(i.a, {
       colorClass: r()(g.connectConsoleButton, t ? g.xboxButtonConnected : g.connectConsoleButtonUnconnected),
       size: "sm"
     })
@@ -40,10 +40,10 @@ function C(e) {
   let {
     text: t
   } = e;
-  return (0, s.jsx)(i.Clickable, {
+  return (0, o.jsx)(l.Clickable, {
     className: g.showConnectionsButton,
-    onClick: () => c.Z.open(x.oAB.CONNECTIONS),
-    children: (0, s.jsx)(i.Text, {
+    onClick: () => c.Z.open(m.oAB.CONNECTIONS),
+    children: (0, o.jsx)(l.Text, {
       "aria-label": t,
       color: "none",
       variant: "text-xxs/normal",
@@ -52,73 +52,73 @@ function C(e) {
   })
 }
 
-function f(e) {
+function h(e) {
   let {
     xboxAccounts: t,
     playstationAccounts: n,
-    xboxAndPlaystationAccounts: o
-  } = e, a = o.slice(0, 2), l = o.length > 0, c = t.length > 0, u = n.length > 0;
-  return (0, s.jsxs)("div", {
+    xboxAndPlaystationAccounts: s
+  } = e, a = s.slice(0, 2), i = s.length > 0, c = t.length > 0, d = n.length > 0;
+  return (0, o.jsxs)("div", {
     className: g.inlineConsoleConnectionDetails,
-    children: [(0, s.jsxs)("div", {
+    children: [(0, o.jsxs)("div", {
       className: g.inlineConsoleConnectionDetailsUpper,
-      children: [(0, s.jsx)(i.Text, {
+      children: [(0, o.jsx)(l.Text, {
         color: "header-secondary",
         variant: "text-xxs/normal",
-        children: l ? m.Z.Messages.QUESTS_CONNECTED : m.Z.Messages.QUESTS_SELECT_TO_START
-      }), (0, s.jsxs)("div", {
+        children: i ? x.Z.Messages.QUESTS_CONNECTED : x.Z.Messages.QUESTS_SELECT_TO_START
+      }), (0, o.jsxs)("div", {
         className: g.inlineConsoleConnectionDetailsIcons,
-        children: [(0, s.jsx)(h, {
-          consoleType: x.ABu.PLAYSTATION,
-          isConnected: u
-        }), (0, s.jsx)("div", {
+        children: [(0, o.jsx)(f, {
+          consoleType: m.ABu.PLAYSTATION,
+          isConnected: d
+        }), (0, o.jsx)("div", {
           className: g.consoleIconDivider
-        }), (0, s.jsx)(h, {
-          consoleType: x.ABu.XBOX,
+        }), (0, o.jsx)(f, {
+          consoleType: m.ABu.XBOX,
           isConnected: c
         })]
       })]
-    }), l && (0, s.jsxs)("div", {
+    }), i && (0, o.jsxs)("div", {
       className: g.inlineConsoleConnectionDetailsLower,
-      children: [a.map((e, t) => (0, s.jsxs)("div", {
+      children: [a.map((e, t) => (0, o.jsxs)("div", {
         className: r()(g.inlineConsoleConnectionDetailsLowerItem, t > 0 ? g.marginTop4px : void 0),
-        children: [(0, s.jsx)(i.Text, {
+        children: [(0, o.jsx)(l.Text, {
           color: "header-secondary",
           variant: "text-xxs/normal",
-          children: e.type === x.ABu.XBOX ? m.Z.Messages.QUESTS_XBOX_ID : m.Z.Messages.QUESTS_PSN_ONLINE_ID
-        }), (0, s.jsx)(i.Text, {
+          children: e.type === m.ABu.XBOX ? x.Z.Messages.QUESTS_XBOX_ID : x.Z.Messages.QUESTS_PSN_ONLINE_ID
+        }), (0, o.jsx)(l.Text, {
           color: "header-secondary",
           variant: "text-xxs/normal",
           children: e.name
         })]
-      }, t)), o.length > 2 && (0, s.jsx)(C, {
-        text: m.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS
+      }, t)), s.length > 2 && (0, o.jsx)(C, {
+        text: x.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS
       })]
     })]
   })
 }
 
-function E(e) {
+function _(e) {
   let {
     xboxAndPlaystationAccounts: t
   } = e;
-  return t.length > 0 ? (0, s.jsx)(C, {
-    text: m.Z.Messages.QUESTS_SHOW_CONNECTIONS
+  return t.length > 0 ? (0, o.jsx)(C, {
+    text: x.Z.Messages.QUESTS_SHOW_CONNECTIONS
   }) : null
 }
 
-function S(e) {
-  let t = (0, d.P)({
+function E(e) {
+  let t = (0, u.P)({
     location: p.dr.QUESTS_BAR
   });
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(i.Text, {
+  return (0, o.jsxs)(o.Fragment, {
+    children: [(0, o.jsx)(l.Text, {
       color: "text-muted",
       variant: "text-xs/medium",
-      children: m.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
-    }), t ? (0, s.jsx)(f, {
+      children: x.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
+    }), t ? (0, o.jsx)(h, {
       ...e
-    }) : (0, s.jsx)(E, {
+    }) : (0, o.jsx)(_, {
       ...e
     })]
   })

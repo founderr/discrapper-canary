@@ -1,7 +1,7 @@
-var s, i = n(442837),
-  l = n(570140),
-  a = n(267642),
-  r = n(981631);
+var i, s = n(442837),
+  a = n(570140),
+  r = n(267642),
+  l = n(981631);
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ c = {
   lastDismissedGracePeriods: {},
   isVisible: {}
 };
-class u extends(s = i.ZP.PersistedStore) {
+class d extends(i = s.ZP.PersistedStore) {
   initialize(e) {
     null != e && (c = e)
   }
@@ -30,23 +30,23 @@ class u extends(s = i.ZP.PersistedStore) {
     return c
   }
 }
-o(u, "displayName", "GuildBoostingGracePeriodNoticeStore"), o(u, "persistKey", "PremiumGuildGracePeriodNoticeStore"), o(u, "migrations", [e => ({
+o(d, "displayName", "GuildBoostingGracePeriodNoticeStore"), o(d, "persistKey", "PremiumGuildGracePeriodNoticeStore"), o(d, "migrations", [e => ({
   ...e,
   lastDismissedGracePeriods: null != e ? {
     ...e.lastDismissedGracePeriods
   } : {},
   isVisible: {}
-})]), t.Z = new u(l.Z, {
+})]), t.Z = new d(a.Z, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       appliedBoosts: n
-    } = e, s = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null, i = null != s && Date.now() - s <= r.Dge, l = null != n && !i && (0, a.Vx)(n, t);
+    } = e, i = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null, s = null != i && Date.now() - i <= l.Dge, a = null != n && !s && (0, r.Vx)(n, t);
     c = {
       ...c,
       isVisible: {
         ...c.isVisible,
-        [t]: l
+        [t]: a
       }
     }
   },

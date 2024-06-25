@@ -1,30 +1,30 @@
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return v
+    return Z
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(512722),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(512722),
+  s = n.n(l),
   r = n(442837),
   o = n(481060),
   c = n(904245),
   u = n(654030),
   d = n(744061),
   h = n(367907),
-  m = n(728345),
-  E = n(812206),
-  p = n(541716),
-  g = n(752305),
-  f = n(893718),
-  C = n(957730),
-  _ = n(789407),
+  p = n(728345),
+  m = n(812206),
+  _ = n(541716),
+  f = n(752305),
+  E = n(893718),
+  g = n(957730),
+  C = n(789407),
   I = n(300429),
   x = n(838440),
   T = n(981631),
   N = n(689938),
-  Z = n(915301);
+  v = n(915301);
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,8 +34,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let v = "ActivityInvite";
-class A extends i.PureComponent {
+let Z = "ActivityInvite";
+class A extends a.PureComponent {
   componentDidMount() {
     this.fetchApplication()
   }
@@ -50,7 +50,7 @@ class A extends i.PureComponent {
       activity: e,
       application: t
     } = this.props;
-    null != e.application_id && null == t && m.Z.fetchApplication(e.application_id)
+    null != e.application_id && null == t && p.Z.fetchApplication(e.application_id)
   }
   renderTitle() {
     let {
@@ -70,90 +70,90 @@ class A extends i.PureComponent {
       textValue: e,
       richValue: t,
       textFocused: n,
-      contentWarningProps: i
+      contentWarningProps: a
     } = this.state, {
-      activity: s,
+      activity: l,
       analyticsLocations: r,
       channel: c,
       activityActionType: h,
-      cooldown: m,
-      application: E,
-      transitionState: g,
-      onClose: C
-    } = this.props, _ = m > 0, I = _ ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
-      seconds: Math.round((m + 1e3) / 1e3)
+      cooldown: p,
+      application: m,
+      transitionState: f,
+      onClose: g
+    } = this.props, C = p > 0, I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+      seconds: Math.round((p + 1e3) / 1e3)
     }) : null;
-    return (0, l.jsxs)(o.ModalRoot, {
+    return (0, i.jsxs)(o.ModalRoot, {
       size: o.ModalSize.SMALL,
-      transitionState: g,
+      transitionState: f,
       "aria-label": this.renderTitle(),
-      children: [(0, l.jsx)(o.ModalHeader, {
+      children: [(0, i.jsx)(o.ModalHeader, {
         separator: !1,
-        children: (0, l.jsx)(o.Heading, {
+        children: (0, i.jsx)(o.Heading, {
           variant: "heading-lg/semibold",
           children: this.renderTitle()
         })
-      }), (0, l.jsxs)(o.ModalContent, {
-        children: [(0, l.jsx)("div", {
-          className: Z.subHeader,
+      }), (0, i.jsxs)(o.ModalContent, {
+        children: [(0, i.jsx)("div", {
+          className: v.subHeader,
           children: N.Z.Messages.MESSAGE_PREVIEW
-        }), (0, l.jsx)(u.Z, {
+        }), (0, i.jsx)(u.Z, {
           activityActionType: h,
-          activity: s,
-          className: Z.preview,
-          application: E,
-          partyId: null != s.party ? s.party.id : null,
+          activity: l,
+          className: v.preview,
+          application: m,
+          partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
-        }), (0, l.jsx)("div", {
-          className: Z.subHeader,
+        }), (0, i.jsx)("div", {
+          className: v.subHeader,
           children: N.Z.Messages.ADD_A_COMMENT_OPTIONAL
-        }), (0, l.jsx)(o.Popout, {
+        }), (0, i.jsx)(o.Popout, {
           position: "top",
           onRequestClose: () => {
             var e;
-            null == i || null === (e = i.onCancel) || void 0 === e || e.call(i), this.setState({
+            null == a || null === (e = a.onCancel) || void 0 === e || e.call(a), this.setState({
               contentWarningProps: null
             })
           },
-          shouldShow: null != i,
+          shouldShow: null != a,
           renderPopout: e => {
             let {
               closePopout: t
             } = e;
-            return a()(null != i, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, l.jsx)(d.Z, {
+            return s()(null != a, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, i.jsx)(d.Z, {
               onClose: t,
-              ...i
+              ...a
             })
           },
-          children: () => (0, l.jsx)(f.Z, {
-            className: Z.textArea,
+          children: () => (0, i.jsx)(E.Z, {
+            className: v.textArea,
             textValue: e,
             richValue: t,
             focused: n,
             channel: c,
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
-            type: p.I.FORM,
-            parentModalKey: v,
+            type: _.I.FORM,
+            parentModalKey: Z,
             disableThemedBackground: !0
           })
         })]
-      }), (0, l.jsxs)(o.ModalFooter, {
-        children: [(0, l.jsx)(o.Tooltip, {
+      }), (0, i.jsxs)(o.ModalFooter, {
+        children: [(0, i.jsx)(o.Tooltip, {
           text: I,
-          children: e => (0, l.jsx)("div", {
+          children: e => (0, i.jsx)("div", {
             ...e,
-            children: (0, l.jsx)(o.Button, {
-              disabled: _,
+            children: (0, i.jsx)(o.Button, {
+              disabled: C,
               onClick: this.handleShare,
               children: N.Z.Messages.INVITE_EMBED_SEND_INVITE
             })
           })
-        }), (0, l.jsx)(o.Button, {
+        }), (0, i.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
-          onClick: C,
+          onClick: g,
           children: N.Z.Messages.CANCEL
         })]
       })]
@@ -161,7 +161,7 @@ class A extends i.PureComponent {
   }
   constructor(...e) {
     super(...e), S(this, "state", {
-      ...(0, g.H2)(),
+      ...(0, f.H2)(),
       textFocused: !0,
       contentWarningProps: null
     }), S(this, "trackInvite", e => {
@@ -169,20 +169,20 @@ class A extends i.PureComponent {
         let {
           activity: t,
           channel: n,
-          activityActionType: l
-        } = this.props, i = "";
-        switch (l) {
+          activityActionType: i
+        } = this.props, a = "";
+        switch (i) {
           case T.mFx.JOIN:
-            i = "Invite to Join";
+            a = "Invite to Join";
             break;
           case T.mFx.LISTEN:
-            i = "Invite to Listen";
+            a = "Invite to Listen";
             break;
           case T.mFx.WATCH:
-            i = "Invite to Watch"
+            a = "Invite to Watch"
         }
         return h.ZP.trackWithMetadata(T.rMx.INVITE_SENT, {
-          location: "Channel Text Area - ".concat(i),
+          location: "Channel Text Area - ".concat(a),
           invite_type: t.type === T.IIU.LISTENING ? T.dAT.SPOTIFY : T.dAT.APPLICATION,
           application_id: t.application_id,
           guild_id: n.getGuildId(),
@@ -200,34 +200,34 @@ class A extends i.PureComponent {
         channel: e,
         activity: t,
         activityActionType: n,
-        cooldown: l,
-        onClose: i
+        cooldown: i,
+        onClose: a
       } = this.props, {
-        textValue: s,
-        contentWarningProps: a
+        textValue: l,
+        contentWarningProps: s
       } = this.state;
-      if (l > 0) return Promise.resolve({
+      if (i > 0) return Promise.resolve({
         shouldClear: !1,
         shouldRefocus: !0
       });
-      let r = C.ZP.parse(e, s),
+      let r = g.ZP.parse(e, l),
         o = {
           activity: t,
           type: n
         };
-      return null != a ? (this.setState({
+      return null != s ? (this.setState({
         contentWarningProps: null
       }), c.Z.sendMessage(e.id, r, !0, {
         activityAction: o
-      }).then(e => this.trackInvite(e)), i(), Promise.resolve({
+      }).then(e => this.trackInvite(e)), a(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !0
       })) : (0, x.v)({
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
-        type: p.I.FORM,
-        content: s,
+        type: _.I.FORM,
+        content: l,
         channel: e
       }).then(t => {
         let {
@@ -235,7 +235,7 @@ class A extends i.PureComponent {
         } = t;
         return n ? (c.Z.sendMessage(e.id, r, !0, {
           activityAction: o
-        }).then(e => this.trackInvite(e)), i(), {
+        }).then(e => this.trackInvite(e)), a(), {
           shouldClear: !1,
           shouldRefocus: !1
         }) : {
@@ -246,13 +246,13 @@ class A extends i.PureComponent {
     })
   }
 }
-t.default = r.ZP.connectStores([I.Z, E.Z], e => {
+t.default = r.ZP.connectStores([I.Z, m.Z], e => {
   let {
     channel: t,
     activity: n
   } = e;
   return {
     cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-    application: null != n.application_id ? E.Z.getApplication(n.application_id) : _.r9
+    application: null != n.application_id ? m.Z.getApplication(n.application_id) : C.r9
   }
 })(A)

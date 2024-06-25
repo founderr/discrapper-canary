@@ -1,30 +1,30 @@
-t(47120), t(653041);
-var a = t(470079),
-  l = t(442837),
-  n = t(430824),
-  i = t(496675),
-  o = t(771845),
-  r = t(99325),
-  c = t(273387),
-  d = t(981631);
-s.Z = (e, s) => {
-  let [t, u] = a.useState(!1), C = (0, l.e7)([c.Z], () => c.Z.getAdminGuildEntryIds(s)), m = (0, l.Wu)([o.ZP, n.Z, i.Z], () => {
-    let s = o.ZP.getFlattenedGuildIds(),
-      t = [];
-    return s.forEach(s => {
-      let a = n.Z.getGuild(s);
-      null != a && i.Z.can(d.Plq.ADMINISTRATOR, a) && a.id !== e && t.push(a)
-    }), t
-  }, [e]), E = a.useCallback(async () => {
-    u(!0), await r._Q(s, m.map(e => e.id)), u(!1)
-  }, [s, m]);
+s(47120), s(653041);
+var a = s(470079),
+  n = s(442837),
+  l = s(430824),
+  i = s(496675),
+  o = s(771845),
+  r = s(99325),
+  c = s(273387),
+  d = s(981631);
+t.Z = (e, t) => {
+  let [s, u] = a.useState(!1), m = (0, n.e7)([c.Z], () => c.Z.getAdminGuildEntryIds(t)), C = (0, n.Wu)([o.ZP, l.Z, i.Z], () => {
+    let t = o.ZP.getFlattenedGuildIds(),
+      s = [];
+    return t.forEach(t => {
+      let a = l.Z.getGuild(t);
+      null != a && i.Z.can(d.Plq.ADMINISTRATOR, a) && a.id !== e && s.push(a)
+    }), s
+  }, [e]), _ = a.useCallback(async () => {
+    u(!0), await r._Q(t, C.map(e => e.id)), u(!1)
+  }, [t, C]);
   a.useEffect(() => {
-    E()
+    _()
   }, []);
-  let _ = a.useMemo(() => m.filter(e => !(null == C ? void 0 : C.has(e.id))), [m, C]);
+  let x = a.useMemo(() => C.filter(e => !(null == m ? void 0 : m.has(e.id))), [C, m]);
   return {
-    availableGuilds: _,
-    addedGuilds: a.useMemo(() => m.filter(e => null == C ? void 0 : C.has(e.id)), [m, C]),
-    loading: t
+    availableGuilds: x,
+    addedGuilds: a.useMemo(() => C.filter(e => null == m ? void 0 : m.has(e.id)), [C, m]),
+    loading: s
   }
 }

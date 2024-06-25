@@ -13,15 +13,15 @@ var i, r, s = n(735250),
   T = n(346656);
 n(5192);
 var h = n(342656),
-  S = n(785717),
-  f = n(726059),
-  N = n(162267),
-  A = n(171368),
+  f = n(785717),
+  S = n(726059),
+  A = n(162267),
+  N = n(171368),
   m = n(228168),
   O = n(689938),
-  R = n(647114);
+  p = n(647114);
 (r = i || (i = {}))[r.NOT_CHECKED = 0] = "NOT_CHECKED", r[r.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", r[r.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", r[r.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
-let p = o.memo(function(e) {
+let R = o.memo(function(e) {
   let {
     user: t,
     mutualFriends: n,
@@ -32,13 +32,13 @@ let p = o.memo(function(e) {
     underlineTextOnHover: I = !1,
     showTooltips: h = !0
   } = e, {
-    analyticsLocations: f
+    analyticsLocations: S
   } = (0, c.ZP)(), {
-    guildId: N,
-    channelId: p,
+    guildId: A,
+    channelId: R,
     messageId: g,
     roleId: C
-  } = (0, S.KZ)(), v = o.useMemo(() => {
+  } = (0, f.KZ)(), v = o.useMemo(() => {
     var e;
     return null !== (e = null == n ? void 0 : n.map(e => {
       let {
@@ -63,32 +63,32 @@ let p = o.memo(function(e) {
       var e;
       G((null === (e = P.current) || void 0 === e ? void 0 : e.clientHeight) > 19), U(!0)
     }
-  }, []), B = o.useCallback(e => () => {
-    (0, A.openUserProfileModal)({
+  }, []), x = o.useCallback(e => () => {
+    (0, N.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: f,
-      guildId: N,
-      channelId: p,
+      sourceAnalyticsLocations: S,
+      guildId: A,
+      channelId: R,
       messageId: g,
       roleId: C,
       section: e,
       analyticsLocation: a
     }), null == r || r()
-  }, [a, f, r, t.id, N, p, g, C]);
+  }, [a, S, r, t.id, A, R, g, C]);
   o.useEffect(() => {
     w()
   }, [w, D]);
-  let x = v.length > 0,
+  let B = v.length > 0,
     k = L.length > 0;
   return (0, s.jsxs)("div", {
-    className: l()(R.compactItemContainer, !y && R.hideElement),
+    className: l()(p.compactItemContainer, !y && p.hideElement),
     ref: P,
-    children: [x && (() => {
+    children: [B && (() => {
       let e = (0, s.jsxs)(_.Clickable, {
-        onClick: B(m.oh.MUTUAL_FRIENDS),
-        className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
+        onClick: x(m.oh.MUTUAL_FRIENDS),
+        className: l()(p.avatarAndTextContainer, p.__invalid_friendsContainer),
         children: [(0, s.jsx)("div", {
-          className: R.__invalid_avatars,
+          className: p.__invalid_avatars,
           children: (0, s.jsx)(d.Z, {
             maxUsers: u,
             users: v,
@@ -97,7 +97,7 @@ let p = o.memo(function(e) {
             disableUsernameTooltip: !0
           })
         }), (0, s.jsx)(_.Text, {
-          className: l()(R.itemizedListText, I && R.underlineOnHover),
+          className: l()(p.itemizedListText, I && p.underlineOnHover),
           variant: "text-sm/normal",
           color: "interactive-normal",
           children: D
@@ -107,15 +107,15 @@ let p = o.memo(function(e) {
         text: O.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
         children: e
       }) : e
-    })(), x && k && (0, s.jsx)("div", {
+    })(), B && k && (0, s.jsx)("div", {
       "aria-hidden": "true",
-      className: R.dotSpacer
+      className: p.dotSpacer
     }), k && (() => {
       let e = (0, s.jsxs)(_.Clickable, {
-        onClick: B(m.oh.MUTUAL_GUILDS),
-        className: l()(R.avatarAndTextContainer, R.serverContainer),
+        onClick: x(m.oh.MUTUAL_GUILDS),
+        className: l()(p.avatarAndTextContainer, p.serverContainer),
         children: [!b && (0, s.jsx)("div", {
-          className: R.__invalid_avatars,
+          className: p.__invalid_avatars,
           children: (0, s.jsx)(E.Z, {
             maxGuilds: u,
             guilds: L,
@@ -124,7 +124,7 @@ let p = o.memo(function(e) {
             disableGuildNameTooltip: !0
           })
         }), (0, s.jsx)(_.Text, {
-          className: l()(R.itemizedListText, I && R.underlineOnHover),
+          className: l()(p.itemizedListText, I && p.underlineOnHover),
           variant: "text-sm/normal",
           color: "interactive-normal",
           children: M
@@ -146,24 +146,24 @@ t.ZP = o.memo(function(e) {
     sourceAnaylticsLocations: a
   } = e, {
     analyticsLocations: d
-  } = (0, c.ZP)(), E = null !== (n = null !== (t = null == a ? void 0 : a[0]) && void 0 !== t ? t : null == d ? void 0 : d[0]) && void 0 !== n ? n : null, T = (0, u.e7)([I.default], () => I.default.getId()), S = i.id === T, A = i.bot || S, {
+  } = (0, c.ZP)(), E = null !== (n = null !== (t = null == a ? void 0 : a[0]) && void 0 !== t ? t : null == d ? void 0 : d[0]) && void 0 !== n ? n : null, T = (0, u.e7)([I.default], () => I.default.getId()), f = i.id === T, N = i.bot || f, {
     enabled: m
   } = (0, h.qI)({
     autoTrackExposure: !1,
     location: E,
-    disable: A
+    disable: N
   }), {
     mutualGuilds: g
-  } = (0, N.Z)(i.id), {
+  } = (0, A.Z)(i.id), {
     mutualFriends: C
-  } = (0, f.Z)(i.id);
-  return !m || A || (null == C || 0 === C.length) && (null == g || 0 === g.length) ? null : (0, s.jsxs)("div", {
-    className: l()(R.mainContainer, o),
+  } = (0, S.Z)(i.id);
+  return !m || N || (null == C || 0 === C.length) && (null == g || 0 === g.length) ? null : (0, s.jsxs)("div", {
+    className: l()(p.mainContainer, o),
     children: [(0, s.jsx)(_.Heading, {
       variant: "eyebrow",
-      className: R.__invalid_title,
+      className: p.__invalid_title,
       children: O.Z.Messages.USER_PROFILE_MUTUALS_TITLE
-    }), (0, s.jsx)(p, {
+    }), (0, s.jsx)(R, {
       user: i,
       mutualFriends: C,
       mutualGuilds: g,

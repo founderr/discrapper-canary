@@ -191,7 +191,7 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   let {
     currentTier: t
   } = e, n = function(e) {
@@ -224,9 +224,9 @@ t.Z = function(e) {
     [n, s] = r.useState(null),
     {
       className: c,
-      guild: f,
-      hideHeading: N,
-      hideTier0: A
+      guild: S,
+      hideHeading: A,
+      hideTier0: N
     } = e;
 
   function m() {
@@ -234,14 +234,14 @@ t.Z = function(e) {
   }
   return (0, i.jsxs)("div", {
     className: c,
-    children: [!N && (0, i.jsx)(l.Heading, {
+    children: [!A && (0, i.jsx)(l.Heading, {
       className: E.heading,
       variant: "heading-xxl/extrabold",
       children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_HEADING
     }), (0, i.jsxs)("div", {
       className: E.tableWrapper,
-      children: [null != f && (0, i.jsx)(S, {
-        currentTier: f.premiumTier
+      children: [null != S && (0, i.jsx)(f, {
+        currentTier: S.premiumTier
       }), (0, i.jsxs)("table", {
         className: E.table,
         cellPadding: 0,
@@ -252,7 +252,7 @@ t.Z = function(e) {
             children: [(0, i.jsx)(T, {
               className: E.tableRowHeading,
               children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
-            }), !A && (0, i.jsx)(T, {
+            }), !N && (0, i.jsx)(T, {
               tier: _.Eu4.NONE,
               children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
             }), (0, i.jsx)(T, {
@@ -303,7 +303,7 @@ t.Z = function(e) {
                     })
                   })
                 })
-              }), !A && (0, i.jsx)(h, {
+              }), !N && (0, i.jsx)(h, {
                 textVariant: "text-md/normal",
                 value: e.getTier0Value()
               }), (0, i.jsx)(h, {

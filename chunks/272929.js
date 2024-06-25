@@ -3,23 +3,23 @@ n.d(t, {
     return u
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(920906),
-  s = n(481060),
-  a = n(871499),
+var a = n(920906),
+  l = n(481060),
+  s = n(871499),
   r = n(689938),
   o = n(288768);
-let c = (0, i.animated)(e => {
+let c = (0, a.animated)(e => {
   let {
     percentComplete: t
   } = e, n = 20;
-  return (0, l.jsx)("svg", {
+  return (0, i.jsx)("svg", {
     className: o.countdown,
     width: 40,
     height: 40,
     viewBox: "0 0 ".concat(40, " ").concat(40),
-    children: (0, l.jsx)("circle", {
+    children: (0, i.jsx)("circle", {
       style: {
         strokeDashoffset: Math.round(100 * t)
       },
@@ -41,33 +41,33 @@ function u(e) {
     onClick: u,
     onKeyDown: d,
     onMouseEnter: h,
-    onMouseLeave: m,
-    isActive: E = !1,
-    isCenterButton: p = !1,
-    ...g
-  } = e, f = n > 0, C = (0, i.useSpring)({
+    onMouseLeave: p,
+    isActive: m = !1,
+    isCenterButton: _ = !1,
+    ...f
+  } = e, E = n > 0, g = (0, a.useSpring)({
     percentComplete: 0 !== n ? (t - n) / t : 0,
     config: {
-      ...i.config.molasses,
+      ...a.config.molasses,
       duration: 1e3
     }
-  }), _ = f ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
+  }), C = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
     seconds: n
-  }) : void 0, I = p ? a.d : a.Z;
-  return (0, l.jsxs)("div", {
+  }) : void 0, I = _ ? s.d : s.Z;
+  return (0, i.jsxs)("div", {
     className: o.container,
-    children: [f ? (0, l.jsx)(c, {
-      percentComplete: C.percentComplete
-    }) : null, (0, l.jsx)(I, {
-      ...g,
-      disabled: f,
-      label: _,
-      iconComponent: s.ReactionIcon,
+    children: [E ? (0, i.jsx)(c, {
+      percentComplete: g.percentComplete
+    }) : null, (0, i.jsx)(I, {
+      ...f,
+      disabled: E,
+      label: C,
+      iconComponent: l.ReactionIcon,
       onClick: u,
       onKeyDown: d,
       onMouseEnter: h,
-      onMouseLeave: m,
-      isActive: E,
+      onMouseLeave: p,
+      isActive: m,
       grow: !1
     })]
   })

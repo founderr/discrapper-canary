@@ -1,19 +1,19 @@
-a.d(s, {
+s.d(a, {
   Z: function() {
     return m
   }
 });
-var t = a(689938),
-  n = a(918298),
-  r = a(301745),
-  _ = a(588415),
-  o = a(162822),
-  i = a(937855),
-  c = a(5396),
-  l = a(563772),
-  M = a(420241),
-  E = a(140574),
-  d = a(765434);
+var t = s(689938),
+  n = s(918298),
+  r = s(301745),
+  o = s(588415),
+  _ = s(162822),
+  i = s(937855),
+  c = s(5396),
+  l = s(563772),
+  d = s(420241),
+  M = s(140574),
+  E = s(765434);
 
 function m(e) {
   return [{
@@ -21,7 +21,7 @@ function m(e) {
     posts: [{
       user: {
         name: "pocketman",
-        avatarSrc: M
+        avatarSrc: d
       },
       tagId: 2,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_1_POST_TITLE_1,
@@ -46,7 +46,7 @@ function m(e) {
     }, {
       user: {
         name: "ladydaisy",
-        avatarSrc: E
+        avatarSrc: M
       },
       tagId: 2,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_1_POST_TITLE_3,
@@ -58,7 +58,7 @@ function m(e) {
     }, {
       user: {
         name: "kittyx",
-        avatarSrc: d
+        avatarSrc: E
       },
       tagId: 0,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_1_POST_TITLE_4,
@@ -81,14 +81,14 @@ function m(e) {
       }, {
         author: {
           name: "pocketman",
-          avatarSrc: M,
+          avatarSrc: d,
           isOP: !1
         },
         content: t.Z.Messages.FORUM_UPSELL_DEMO_1_MESSAGE_CONTENT_2
       }, {
         author: {
           name: "ladydaisy",
-          avatarSrc: E,
+          avatarSrc: M,
           isOP: !1
         },
         content: t.Z.Messages.FORUM_UPSELL_DEMO_1_MESSAGE_CONTENT_3
@@ -100,7 +100,7 @@ function m(e) {
     posts: [{
       user: {
         name: "ladydaisy",
-        avatarSrc: E
+        avatarSrc: M
       },
       tagId: 0,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_2_POST_TITLE_1,
@@ -109,11 +109,11 @@ function m(e) {
       activeAgo: t.Z.Messages.THREAD_BROWSER_TIMESTAMP_MINUTES.format({
         count: 10
       }),
-      attachment: _
+      attachment: o
     }, {
       user: {
         name: "pocketman",
-        avatarSrc: M
+        avatarSrc: d
       },
       tagId: 1,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_2_POST_TITLE_2,
@@ -137,7 +137,7 @@ function m(e) {
     }, {
       user: {
         name: "kittyx",
-        avatarSrc: d
+        avatarSrc: E
       },
       tagId: 2,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_2_POST_TITLE_4,
@@ -146,7 +146,7 @@ function m(e) {
       activeAgo: t.Z.Messages.THREAD_BROWSER_TIMESTAMP_HOURS.format({
         count: 1
       }),
-      attachment: o
+      attachment: _
     }],
     postPreview: {
       title: t.Z.Messages.FORUM_UPSELL_DEMO_2_POST_TITLE_3,
@@ -160,14 +160,14 @@ function m(e) {
       }, {
         author: {
           name: "pocketman",
-          avatarSrc: M,
+          avatarSrc: d,
           isOP: !1
         },
         content: t.Z.Messages.FORUM_UPSELL_DEMO_2_MESSAGE_CONTENT_2
       }, {
         author: {
           name: "ladydaisy",
-          avatarSrc: E,
+          avatarSrc: M,
           isOP: !1
         },
         content: t.Z.Messages.FORUM_UPSELL_DEMO_2_MESSAGE_CONTENT_3
@@ -192,7 +192,7 @@ function m(e) {
     }, {
       user: {
         name: "pocketman",
-        avatarSrc: M
+        avatarSrc: d
       },
       tagId: 1,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_3_POST_TITLE_2,
@@ -204,7 +204,7 @@ function m(e) {
     }, {
       user: {
         name: "ladydaisy",
-        avatarSrc: E
+        avatarSrc: M
       },
       tagId: 0,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_3_POST_TITLE_3,
@@ -216,7 +216,7 @@ function m(e) {
     }, {
       user: {
         name: "kittyx",
-        avatarSrc: d
+        avatarSrc: E
       },
       tagId: null,
       title: t.Z.Messages.FORUM_UPSELL_DEMO_3_POST_TITLE_4,
@@ -239,14 +239,14 @@ function m(e) {
       }, {
         author: {
           name: "pocketman",
-          avatarSrc: M,
+          avatarSrc: d,
           isOP: !1
         },
         content: t.Z.Messages.FORUM_UPSELL_DEMO_3_MESSAGE_CONTENT_2
       }, {
         author: {
           name: "ladydaisy",
-          avatarSrc: E,
+          avatarSrc: M,
           isOP: !1
         },
         content: t.Z.Messages.FORUM_UPSELL_DEMO_3_MESSAGE_CONTENT_3

@@ -1,17 +1,17 @@
 n.d(t, {
   o: function() {
-    return a
+    return s
   }
 });
-var l = n(399606),
-  i = n(592125),
-  s = n(587100);
+var i = n(399606),
+  a = n(592125),
+  l = n(587100);
 
-function a(e) {
-  let t = (0, l.e7)([i.Z], () => i.Z.getChannel(e)),
+function s(e) {
+  let t = (0, i.e7)([a.Z], () => a.Z.getChannel(e)),
     {
       enabled: n
-    } = s.Z.useExperiment({
+    } = l.Z.useExperiment({
       location: "baec9c_1"
     });
   return n && function(e) {

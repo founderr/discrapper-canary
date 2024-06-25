@@ -1,66 +1,66 @@
 n.d(t, {
   Z: function() {
-    return T
+    return m
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(287734),
-  a = n(475468),
+var i = n(735250),
+  a = n(470079),
+  s = n(287734),
+  l = n(475468),
   r = n(358555),
   o = n(944486),
   c = n(914010),
-  u = n(197409),
-  d = n(626135),
-  E = n(981631),
-  _ = n(689938),
+  d = n(197409),
+  u = n(626135),
+  _ = n(981631),
+  E = n(689938),
   I = n(637091);
 
-function T(e) {
+function m(e) {
   var t;
   let {
     guild: n,
-    channel: T,
-    messageData: m
-  } = e, N = c.Z.getGuildId(), h = o.Z.getChannelId(N), C = i.useCallback(() => {
+    channel: m,
+    messageData: T
+  } = e, h = c.Z.getGuildId(), N = o.Z.getChannelId(h), f = a.useCallback(() => {
     var e;
-    d.default.track(E.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-      author_id: null === (e = m.author) || void 0 === e ? void 0 : e.id,
+    u.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
+      author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
       link_guild_id: n.id,
-      link_channel_id: T.id,
-      link_channel_type: T.type,
-      guild_id: N,
-      channel_id: h
-    }), (0, a.K)(n.id, T.id), l.default.selectVoiceChannel(T.id)
-  }, [null === (t = m.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, N, h]), S = (0, s.jsx)(u.Z.Channel, {
-    channel: T
+      link_channel_id: m.id,
+      link_channel_type: m.type,
+      guild_id: h,
+      channel_id: N
+    }), (0, l.K)(n.id, m.id), s.default.selectVoiceChannel(m.id)
+  }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, h, N]), p = (0, i.jsx)(d.Z.Channel, {
+    channel: m
   });
-  return (0, s.jsx)(u.Z, {
-    children: (0, s.jsxs)(u.Z.Body, {
-      children: [(0, s.jsxs)("div", {
+  return (0, i.jsx)(d.Z, {
+    children: (0, i.jsxs)(d.Z.Body, {
+      children: [(0, i.jsxs)("div", {
         className: I.headerLine,
-        children: [(0, s.jsx)(u.Z.Icon, {
+        children: [(0, i.jsx)(d.Z.Icon, {
           guild: n
-        }), (0, s.jsx)(u.Z.Info, {
-          title: S,
-          onClick: C,
-          children: (0, s.jsxs)("span", {
+        }), (0, i.jsx)(d.Z.Info, {
+          title: p,
+          onClick: f,
+          children: (0, i.jsxs)("span", {
             className: I.infoTitle,
-            children: [_.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
+            children: [E.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
               guildName: n.name
-            }), (0, s.jsx)("span", {
+            }), (0, i.jsx)("span", {
               className: I.infoBadge,
-              children: (0, s.jsx)(r.Z, {
+              children: (0, i.jsx)(r.Z, {
                 guild: n,
                 isBannerVisible: !1
               })
             })]
           })
         })]
-      }), (0, s.jsx)(u.Z.Button, {
-        onClick: C,
-        color: u.Z.Button.Colors.GREEN,
-        children: T.isGuildStageVoice() ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.JOIN_VOICE
+      }), (0, i.jsx)(d.Z.Button, {
+        onClick: f,
+        color: d.Z.Button.Colors.GREEN,
+        children: m.isGuildStageVoice() ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.JOIN_VOICE
       })]
     })
   })

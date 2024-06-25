@@ -3,32 +3,32 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(134433),
+var a = n(120356),
+  l = n.n(a),
+  s = n(134433),
   r = n(461124);
 
 function o(e) {
   let t, {
     className: n,
-    children: i,
+    children: a,
     verified: o,
     roleColor: c,
     roleName: u
   } = e;
-  return t = o ? (0, l.jsx)(a.Z, {
+  return t = o ? (0, i.jsx)(s.Z, {
     size: 12,
     color: c,
     className: r.linkedRoleColor
-  }) : (0, l.jsx)("div", {
+  }) : (0, i.jsx)("div", {
     className: r.roleColor,
     style: {
       backgroundColor: c
     }
-  }), (0, l.jsxs)("div", {
-    className: s()(n, r.role),
-    children: [t, u, i]
+  }), (0, i.jsxs)("div", {
+    className: l()(n, r.role),
+    children: [t, u, a]
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   yv: function() {
-    return B
+    return x
   }
 }), n(653041), n(47120), n(411104);
 var i, r, s = n(735250),
@@ -16,14 +16,14 @@ var i, r, s = n(735250),
   I = n(268353),
   T = n(866960),
   h = n(196050),
-  S = n(27268),
-  f = n(259773),
-  N = n(80618),
-  A = n(181058),
+  f = n(27268),
+  S = n(259773),
+  A = n(80618),
+  N = n(181058),
   m = n(810090),
   O = n(626135),
-  R = n(70956),
-  p = n(36703),
+  p = n(70956),
+  R = n(36703),
   g = n(228488),
   C = n(540026),
   v = n(981631),
@@ -55,16 +55,16 @@ let U = "-:--",
     backgroundColor: "black"
   };
 
-function B(e) {
+function x(e) {
   let t = 0 | e,
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let x = e => {
+let B = e => {
   let {
     current: t,
     duration: n
-  } = e, i = null != t ? B(t) : U, r = null != n ? B(n) : U;
+  } = e, i = null != t ? x(t) : U, r = null != n ? x(n) : U;
   return i = i.padStart(r.length, "0"), (0, s.jsxs)("div", {
     className: M.durationTimeWrapper,
     children: [(0, s.jsx)("span", {
@@ -144,7 +144,7 @@ class k extends(i = o.Component) {
       onClick: r,
       tabIndex: o ? -1 : 0,
       "aria-label": D.Z.Messages.PLAY_AGAIN,
-      children: (0, s.jsx)(A.Z, {
+      children: (0, s.jsx)(N.Z, {
         className: M.controlIcon
       }, "replay")
     }) : (0, s.jsx)(d.Clickable, {
@@ -181,7 +181,7 @@ class k extends(i = o.Component) {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(x, {
+      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(B, {
         current: n,
         duration: i
       }) : null, (0, s.jsx)(C.Z, {
@@ -194,7 +194,7 @@ class k extends(i = o.Component) {
         ref: this.setDurationRef
       }), (0, s.jsx)("div", {
         className: P.flex,
-        children: (0, s.jsx)(N.Z, {
+        children: (0, s.jsx)(A.Z, {
           ref: this.setVolumeButtonRef,
           muted: r,
           value: I,
@@ -556,7 +556,7 @@ class Y extends(r = o.PureComponent) {
         let e = i();
         e !== this.state.muted && (r.muted = e, s.muted = e)
       }
-      this.setState(s), r.play(), null == t || t(e, r.currentTime * R.Z.Millis.SECOND, r.duration * R.Z.Millis.SECOND)
+      this.setState(s), r.play(), null == t || t(e, r.currentTime * p.Z.Millis.SECOND, r.duration * p.Z.Millis.SECOND)
     }
   }
   getWidth() {
@@ -679,16 +679,16 @@ class Y extends(r = o.PureComponent) {
         hideControls: E,
         muted: T,
         playing: h,
-        fullscreen: f,
-        volume: N,
-        dragging: A
+        fullscreen: S,
+        volume: A,
+        dragging: N
       }
     } = this, m = this.getWidth();
     return d || n || t === G.AUDIO ? (0, s.jsx)(k, {
       buffers: u,
       currentTime: _,
       duration: c,
-      volume: (0, p.P)(N, 1),
+      volume: (0, R.P)(A, 1),
       hide: t === G.VIDEO && E,
       muted: T,
       autoPlay: n,
@@ -703,10 +703,10 @@ class Y extends(r = o.PureComponent) {
       onControlsShow: l,
       onControlsHide: a,
       playing: h,
-      dragging: A,
+      dragging: N,
       type: t,
       ref: this.controlsRef,
-      width: f ? window.screen.width : m,
+      width: S ? window.screen.width : m,
       disabled: !i,
       children: t === G.VIDEO ? (0, s.jsx)(I.Z, {
         "aria-label": D.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
@@ -715,7 +715,7 @@ class Y extends(r = o.PureComponent) {
         onClick: this.toggleFullscreen,
         node: (0, g.fn)(null == e ? void 0 : e.parentNode, e)
       }) : null
-    }) : (0, s.jsx)(S.Z, {
+    }) : (0, s.jsx)(f.Z, {
       onPlay: this.handleVideoClick,
       inactive: !i
     })
@@ -787,7 +787,7 @@ class Y extends(r = o.PureComponent) {
         },
         children: [this.renderMetadata(), this.renderVideo(), (0, s.jsx)("div", {
           className: M.playCenter,
-          children: (0, s.jsx)(f.Z, {
+          children: (0, s.jsx)(S.Z, {
             className: M.__invalid_playButton,
             externalURL: n,
             renderLinkComponent: o
@@ -853,7 +853,7 @@ class Y extends(r = o.PureComponent) {
       } = this.mediaRef;
       if (t === C.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
       else if (t === C.Z.Types.VOLUME) {
-        let t = (0, p.A)(e, 1);
+        let t = (0, R.A)(e, 1);
         0 === t ? this.setState({
           muted: !0,
           volume: t

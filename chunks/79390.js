@@ -7,13 +7,13 @@ n.d(t, {
     return D
   },
   UI: function() {
-    return R
+    return p
   },
   Uu: function() {
-    return A
+    return N
   },
   _N: function() {
-    return p
+    return R
   },
   cS: function() {
     return C
@@ -51,11 +51,11 @@ var i = n(392711),
   I = n(699516),
   T = n(70956),
   h = n(5192),
-  S = n(489887),
-  f = n(981631),
-  N = n(689938);
+  f = n(489887),
+  S = n(981631),
+  A = n(689938);
 
-function A() {
+function N() {
   return {
     text: void 0,
     image: void 0,
@@ -75,11 +75,11 @@ function O(e) {
   return !1
 }
 
-function R(e) {
-  return (0, l.e7)([E.Z], () => !!(null != e && f.TPd.POLLS.has(e.type)) && (!!e.isPrivate() || E.Z.can(f.Plq.SEND_MESSAGES, e) && E.Z.can(f.Plq.SEND_POLLS, e)))
+function p(e) {
+  return (0, l.e7)([E.Z], () => !!(null != e && S.TPd.POLLS.has(e.type)) && (!!e.isPrivate() || E.Z.can(S.Plq.SEND_MESSAGES, e) && E.Z.can(S.Plq.SEND_POLLS, e)))
 }
 
-function p() {
+function R() {
   return !1
 }
 
@@ -134,8 +134,8 @@ function D(e) {
     var n, i, r, s;
     let o = null !== (s = null === (r = e.embeds[0]) || void 0 === r ? void 0 : null === (i = r.fields) || void 0 === i ? void 0 : null === (n = i.find(e => "poll_question_text" === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== s ? s : "";
     return null != t ? (0, a.aF)(o, t) : o
-  }(e, S.Dv);
-  return N.Z.Messages.POLL_RESULT_REPLY_TEXT.format({
+  }(e, f.Dv);
+  return A.Z.Messages.POLL_RESULT_REPLY_TEXT.format({
     title: t
   })
 }
@@ -163,34 +163,34 @@ function P(e, t, n) {
           id: t,
           name: "",
           animated: !1
-        }, S.$J, u.O.VOTE),
+        }, f.$J, u.O.VOTE),
         s = _.Z.getChannel(n),
         o = null == s || s.isPrivate() ? null : s.getGuildId();
-      return r()(i).reject(e => I.Z.isBlocked(e.id)).take(S.$J).map(e => h.ZP.getName(o, null == s ? void 0 : s.id, e)).value()
+      return r()(i).reject(e => I.Z.isBlocked(e.id)).take(f.$J).map(e => h.ZP.getName(o, null == s ? void 0 : s.id, e)).value()
     }(o, n);
   return 0 === E.length ? "" : function(e, t) {
     let n = Math.max(0, t - e.length);
-    if (1 === e.length) return n > 0 ? N.Z.Messages.POLL_VOTES_TOOLTIP_1_N.format({
+    if (1 === e.length) return n > 0 ? A.Z.Messages.POLL_VOTES_TOOLTIP_1_N.format({
       a: e[0],
       n: n.toLocaleString()
     }) : e[0];
-    if (2 === e.length) return n > 0 ? N.Z.Messages.POLL_VOTES_TOOLTIP_2_N.format({
+    if (2 === e.length) return n > 0 ? A.Z.Messages.POLL_VOTES_TOOLTIP_2_N.format({
       a: e[0],
       b: e[1],
       n: n.toLocaleString()
-    }) : N.Z.Messages.POLL_VOTES_TOOLTIP_2.format({
+    }) : A.Z.Messages.POLL_VOTES_TOOLTIP_2.format({
       a: e[0],
       b: e[1]
     });
-    if (3 !== e.length) return N.Z.Messages.POLL_VOTES_TOOLTIP_N.format({
+    if (3 !== e.length) return A.Z.Messages.POLL_VOTES_TOOLTIP_N.format({
       n: n.toLocaleString()
     });
-    else return n > 0 ? N.Z.Messages.POLL_VOTES_TOOLTIP_3_N.format({
+    else return n > 0 ? A.Z.Messages.POLL_VOTES_TOOLTIP_3_N.format({
       a: e[0],
       b: e[1],
       c: e[2],
       n: n.toLocaleString()
-    }) : N.Z.Messages.POLL_VOTES_TOOLTIP_3.format({
+    }) : A.Z.Messages.POLL_VOTES_TOOLTIP_3.format({
       a: e[0],
       b: e[1],
       c: e[2]

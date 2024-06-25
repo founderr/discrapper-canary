@@ -1,27 +1,27 @@
 t.d(n, {
   L: function() {
-    return c
+    return l
   }
 });
-var r = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(409813),
+var r = t(409813),
   a = t(443650),
-  l = t(464797),
-  s = t(950806);
+  i = t(464797),
+  c = t(950806);
 
-function i(e) {
+function s(e) {
   let {
     onClose: n
   } = e, {
     guildProductListing: t
-  } = (0, l._)();
-  return (0, r.jsx)(a.Z, {
+  } = (0, i._)();
+  return (0, o.jsx)(a.Z, {
     guildProductListing: t,
-    className: s.header,
+    className: c.header,
     onClose: n
   })
 }
-let c = (e, n, t) => t === o.h8.CONFIRM ? null : (0, r.jsx)(i, {
+let l = (e, n, t) => t === r.h8.CONFIRM ? null : (0, o.jsx)(s, {
   onClose: () => n(!1)
 })

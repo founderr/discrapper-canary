@@ -1,68 +1,68 @@
 t.d(s, {
   Z: function() {
-    return A
+    return C
   }
 }), t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(481060),
-  l = t(541716),
-  r = t(752305),
-  o = t(893718),
+  a = t(470079),
+  i = t(481060),
+  r = t(541716),
+  o = t(752305),
+  l = t(893718),
   c = t(131704),
-  E = t(153124),
-  d = t(993413),
-  _ = t(981631),
-  T = t(689938),
-  S = t(236235);
-let u = (0, E.hQ)(),
+  d = t(153124),
+  _ = t(993413),
+  E = t(981631),
+  u = t(689938),
+  T = t(236235);
+let S = (0, d.hQ)(),
   I = (0, c.kt)({
     id: "1",
-    type: _.d4z.DM
+    type: E.d4z.DM
   }),
-  N = (0, E.hQ)();
+  N = (0, d.hQ)();
 
-function A(e) {
+function C(e) {
   let {
     sectionTitle: s,
     errors: t,
     onBioChange: c,
-    pendingBio: E,
-    placeholder: A,
-    currentBio: C,
-    disabled: O = !1
-  } = e, [m, h] = i.useState(null != E ? E : C), [g, R] = i.useState((0, r.JM)(m)), M = i.useRef(!1);
-  return i.useEffect(() => {
-    if (void 0 === E) {
-      let e = (0, r.JM)(C);
-      h(C), R(e)
+    pendingBio: d,
+    placeholder: C,
+    currentBio: A,
+    disabled: m = !1
+  } = e, [O, g] = a.useState(null != d ? d : A), [h, R] = a.useState((0, o.JM)(O)), p = a.useRef(!1);
+  return a.useEffect(() => {
+    if (void 0 === d) {
+      let e = (0, o.JM)(A);
+      g(A), R(e)
     }
-  }, [E, C]), (0, n.jsxs)(d.Z, {
+  }, [d, A]), (0, n.jsxs)(_.Z, {
     title: s,
-    titleId: u,
-    description: T.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
+    titleId: S,
+    description: u.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: t,
-    disabled: O,
-    children: [(0, n.jsx)(o.Z, {
+    disabled: m,
+    children: [(0, n.jsx)(l.Z, {
       "aria-describedby": N,
-      "aria-labelledby": u,
-      innerClassName: S.bioTextArea,
-      maxCharacterCount: _.tPV,
+      "aria-labelledby": S,
+      innerClassName: T.bioTextArea,
+      maxCharacterCount: E.tPV,
       onChange: function(e, s, t) {
-        s !== m && (h(s), R(t), c(s))
+        s !== O && (g(s), R(t), c(s))
       },
-      placeholder: A,
+      placeholder: C,
       channel: I,
-      textValue: m,
-      richValue: g,
-      type: l.I.PROFILE_BIO_INPUT,
+      textValue: O,
+      richValue: h,
+      type: r.I.PROFILE_BIO_INPUT,
       onBlur: () => {
-        M.current = !1
+        p.current = !1
       },
       onFocus: () => {
-        M.current = !0
+        p.current = !0
       },
-      focused: M.current,
+      focused: p.current,
       onSubmit: function() {
         return new Promise(e => {
           e({
@@ -71,10 +71,10 @@ function A(e) {
           })
         })
       }
-    }), (0, n.jsx)(a.HiddenVisually, {
+    }), (0, n.jsx)(i.HiddenVisually, {
       id: N,
-      children: T.Z.Messages.MAXIMUM_LENGTH.format({
-        maxLength: _.tPV
+      children: u.Z.Messages.MAXIMUM_LENGTH.format({
+        maxLength: E.tPV
       })
     })]
   })

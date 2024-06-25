@@ -32,17 +32,17 @@ function d(e) {
       }
     })()
   }, [h, e, E]);
-  let S = (0, s.e7)([u.Z], () => u.Z.getUserAffinitiesMap()),
-    f = (0, i.useMemo)(() => null == n ? null : n.length < 2 ? n : (0, r.sortBy)(n, e => {
+  let f = (0, s.e7)([u.Z], () => u.Z.getUserAffinitiesMap()),
+    S = (0, i.useMemo)(() => null == n ? null : n.length < 2 ? n : (0, r.sortBy)(n, e => {
       var t, n;
       let {
         user: i
       } = e;
-      return -((null !== (n = null === (t = S.get(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1)
-    }), [n, S]),
-    N = (0, a.Z)(f);
+      return -((null !== (n = null === (t = f.get(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1)
+    }), [n, f]),
+    A = (0, a.Z)(S);
   return {
-    mutualFriends: null != f ? f : N,
+    mutualFriends: null != S ? S : A,
     isFetching: d
   }
 }

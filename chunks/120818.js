@@ -1,42 +1,42 @@
 n.d(t, {
   T: function() {
-    return f
+    return C
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(91192),
-  r = n(442837),
-  a = n(481060),
+var i = n(735250),
+  l = n(470079),
+  r = n(91192),
+  a = n(442837),
+  s = n(481060),
   o = n(44315),
-  u = n(563534),
-  c = n(846121),
+  c = n(563534),
+  u = n(846121),
   d = n(703656),
   h = n(259580),
   p = n(981631),
-  g = n(176505),
-  m = n(689938),
-  C = n(909398);
+  f = n(176505),
+  _ = n(689938),
+  g = n(909398);
 
-function E(e, t) {
-  return (0, l.jsx)(a.Text, {
+function m(e, t) {
+  return (0, i.jsx)(s.Text, {
     variant: "text-xs/bold",
     color: "text-normal",
     children: e
   }, t)
 }
-let f = i.memo(function(e) {
+let C = l.memo(function(e) {
   let {
     guild: t
-  } = e, n = (0, r.e7)([u.Z], () => u.Z.getNewMemberActions(t.id), [t.id]), f = (0, r.e7)([c.Z], () => c.Z.getCompletedActions(t.id)), _ = i.useMemo(() => {
-    if (null == n || null == f) return 0;
+  } = e, n = (0, a.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]), C = (0, a.e7)([u.Z], () => u.Z.getCompletedActions(t.id)), I = l.useMemo(() => {
+    if (null == n || null == C) return 0;
     let e = 0;
     return n.forEach(t => {
-      null != f[t.channelId] && e++
+      null != C[t.channelId] && e++
     }), e
-  }, [f, n]), I = null == n ? 0 : n.length, N = (0, s.JA)("progress-bar-".concat(t.id));
-  return (0, l.jsxs)("li", {
-    children: [(0, l.jsxs)(a.Clickable, {
+  }, [C, n]), E = null == n ? 0 : n.length, N = (0, r.JA)("progress-bar-".concat(t.id));
+  return (0, i.jsxs)("li", {
+    children: [(0, i.jsxs)(s.Clickable, {
       ...N,
       role: "button",
       focusProps: {
@@ -44,42 +44,42 @@ let f = i.memo(function(e) {
           right: 4
         }
       },
-      className: C.progressBarContainer,
+      className: g.progressBarContainer,
       onClick: function() {
-        (0, d.uL)(p.Z5c.CHANNEL(t.id, g.oC.GUILD_HOME))
+        (0, d.uL)(p.Z5c.CHANNEL(t.id, f.oC.GUILD_HOME))
       },
-      children: [(0, l.jsxs)("div", {
-        className: C.progressBarText,
-        children: [(0, l.jsx)(a.Heading, {
+      children: [(0, i.jsxs)("div", {
+        className: g.progressBarText,
+        children: [(0, i.jsx)(s.Heading, {
           variant: "heading-sm/bold",
-          children: m.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
-        }), (0, l.jsxs)("div", {
-          className: C.rightContainer,
-          children: [(0, l.jsx)(a.Text, {
+          children: _.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
+        }), (0, i.jsxs)("div", {
+          className: g.rightContainer,
+          children: [(0, i.jsx)(s.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            className: C.rightText,
-            children: m.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
-              numberHook: E,
-              total: I.toString(),
-              completed: _.toString()
+            className: g.rightText,
+            children: _.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
+              numberHook: m,
+              total: E.toString(),
+              completed: I.toString()
             })
-          }), (0, l.jsx)(h.Z, {
-            className: C.arrow,
+          }), (0, i.jsx)(h.Z, {
+            className: g.arrow,
             width: 16,
             height: 16,
             direction: h.Z.Directions.RIGHT
           })]
         })]
-      }), (0, l.jsx)(a.Progress, {
-        className: C.progressBar,
+      }), (0, i.jsx)(s.Progress, {
+        className: g.progressBar,
         foregroundGradientColor: [(0, o.Lq)(p.Ilk.GREEN_300), (0, o.Lq)(p.Ilk.GREEN_230)],
-        percent: _ / I * 100 + 3,
+        percent: I / E * 100 + 3,
         animate: !0
       })]
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       role: "separator",
-      className: C.divider
+      className: g.divider
     })]
   })
 })

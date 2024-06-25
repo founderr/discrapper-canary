@@ -7,20 +7,20 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(442837),
-  l = n(352527),
+  a = n(352527),
   o = n(183584),
-  a = n(487029),
-  r = n(592125),
+  r = n(487029),
+  l = n(592125),
   c = n(944486),
   d = n(554174),
   u = n(710111),
   h = n(641973);
 
 function p() {
-  let [e, t] = (0, s.Wu)([l.Z], () => [l.Z.enabled, l.Z.keepOpen]), n = (0, s.e7)([c.Z], () => c.Z.getVoiceChannelId()), p = (0, s.e7)([r.Z], () => r.Z.getChannel(n), [n]), f = null == p ? void 0 : p.getGuildId();
+  let [e, t] = (0, s.Wu)([a.Z], () => [a.Z.enabled, a.Z.keepOpen]), n = (0, s.e7)([c.Z], () => c.Z.getVoiceChannelId()), p = (0, s.e7)([l.Z], () => l.Z.getChannel(n), [n]), f = null == p ? void 0 : p.getGuildId();
   return e && null != p ? (0, i.jsx)("div", {
     className: h.widget,
-    children: (0, i.jsx)(a.Z, {
+    children: (0, i.jsx)(r.Z, {
       width: u.FW.width,
       height: u.FW.height,
       guildId: f,

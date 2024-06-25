@@ -14,9 +14,9 @@ var i, r, s, o, a = n(442837),
   I = n(351780),
   T = n(641033),
   h = n(524484),
-  S = n(981631);
-let f = new Set,
-  N = new l.h(function(e) {
+  f = n(981631);
+let S = new Set,
+  A = new l.h(function(e) {
     let {
       userId: t,
       channelId: n
@@ -29,7 +29,7 @@ let f = new Set,
     } = e;
     return "".concat(n, "-").concat(t)
   }),
-  A = new l.h(function(e) {
+  N = new l.h(function(e) {
     let {
       messageId: t,
       channelId: n,
@@ -59,19 +59,19 @@ let f = new Set,
 function O(e, t, n, i) {
   return !(e !== t || null == n || i.has(n)) && (i.add(n), !0)
 }
-class R extends(i = a.ZP.Store) {
+class p extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(c.default, d.Z)
   }
   getComboScore(e, t) {
-    let n = N.get(m({
+    let n = A.get(m({
       userId: e,
       channelId: t
     }));
     return null == n ? 0 : (0, T.Eo)(n)
   }
   getUserCombo(e, t) {
-    return N.get(m({
+    return A.get(m({
       userId: e,
       channelId: t
     }))
@@ -83,11 +83,11 @@ class R extends(i = a.ZP.Store) {
   }
   getMessageCombo(e) {
     var t;
-    let n = A.get(e);
+    let n = N.get(e);
     return null !== (t = null == n ? void 0 : n.combo) && void 0 !== t ? t : void 0
   }
   getMostRecentMessageCombo(e) {
-    let t = A.values(e);
+    let t = N.values(e);
     return t[t.length - 1]
   }
   getUserComboShakeIntensity(e, t, n, i) {
@@ -95,13 +95,13 @@ class R extends(i = a.ZP.Store) {
     return null != r ? (0, T.KH)(r, i) * n : 0
   }
 }
-o = "PoggermodeStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+o = "PoggermodeStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let p = new R(_.Z, {
+let R = new p(_.Z, {
   POGGERMODE_UPDATE_COMBO: function(e) {
     let {
       type: t,
@@ -111,7 +111,7 @@ let p = new R(_.Z, {
     ! function e(t) {
       var n, i, r, s, o, a;
       let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        _ = N.get(m(t)),
+        _ = A.get(m(t)),
         c = {
           ..._,
           ...t,
@@ -119,8 +119,8 @@ let p = new R(_.Z, {
           multiplier: Math.min(null !== (s = null !== (r = t.multiplier) && void 0 !== r ? r : null == _ ? void 0 : _.multiplier) && void 0 !== s ? s : 1, 7),
           decayInterval: null !== (o = null == _ ? void 0 : _.decayInterval) && void 0 !== o ? o : new u.Xp
         };
-      N.set(m(t), c), l && (null === (a = c.decayInterval) || void 0 === a || a.start(1e3, () => {
-        let t = N.get(m(c));
+      A.set(m(t), c), l && (null === (a = c.decayInterval) || void 0 === a || a.start(1e3, () => {
+        let t = A.get(m(c));
         if (null != t) {
           let i = c.multiplier !== t.multiplier && c.value !== t.value;
           if (t.value <= 0 || i) {
@@ -129,11 +129,11 @@ let p = new R(_.Z, {
               ...t,
               value: 0,
               multiplier: 1
-            }), p.emitChange())
+            }), R.emitChange())
           } else e({
             ...t,
             value: t.value - 1
-          }), p.emitChange()
+          }), R.emitChange()
         }
       }))
     }(n)
@@ -144,7 +144,7 @@ let p = new R(_.Z, {
       comboMessage: n
     } = e;
     if (!I.Z.isEnabled()) return !1;
-    t = n, A.set(t.messageId, t)
+    t = n, N.set(t.messageId, t)
   },
   MESSAGE_CREATE: function(e) {
     var t, n;
@@ -158,14 +158,14 @@ let p = new R(_.Z, {
     } = e;
     if (!I.Z.isEnabled()) return !1;
     let a = c.default.getId();
-    if (!O(null == s ? void 0 : s.id, a, o, f)) return !1;
-    let l = N.get(m({
+    if (!O(null == s ? void 0 : s.id, a, o, S)) return !1;
+    let l = A.get(m({
       userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
       channelId: i
     }));
     if (I.Z.screenshakeEnabled && I.Z.screenshakeEnabledLocations[h.oZ.MENTION] && null != r && null != r.find(e => e.id === a)) {
       let e = null != l ? null !== (n = (0, T.KH)(l, h.qi.LEVEL_4)) && void 0 !== n ? n : .001 : 4 * Math.random();
-      return E.S.dispatch(S.CkL.SHAKE_APP, {
+      return E.S.dispatch(f.CkL.SHAKE_APP, {
         duration: 1e3,
         intensity: e
       }), !0
@@ -173,4 +173,4 @@ let p = new R(_.Z, {
     return !1
   }
 });
-t.ZP = p
+t.ZP = R

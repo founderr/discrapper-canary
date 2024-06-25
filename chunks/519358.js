@@ -1,68 +1,68 @@
 n.d(t, {
   m: function() {
-    return x
+    return Z
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(399606),
-  r = n(704215),
-  a = n(692547),
+var i = n(735250),
+  l = n(470079),
+  r = n(399606),
+  a = n(704215),
+  s = n(692547),
   o = n(481060),
-  u = n(239091),
-  c = n(605236),
+  c = n(239091),
+  u = n(605236),
   d = n(45966),
   h = n(31445),
   p = n(22082),
-  g = n(703656),
-  m = n(306680),
-  C = n(709054),
-  E = n(540126),
-  f = n(434479),
-  _ = n(981631),
-  I = n(176505),
+  f = n(703656),
+  _ = n(306680),
+  g = n(709054),
+  m = n(540126),
+  C = n(434479),
+  I = n(981631),
+  E = n(176505),
   N = n(490897),
-  Z = n(689938),
+  x = n(689938),
   S = n(219644);
 
-function x(e) {
+function Z(e) {
   let {
     guild: t,
-    selected: x
-  } = e, L = (0, h.Z)(t), T = (0, c.wE)(r.z.CHANNEL_BROWSER_NEW_BADGE_NUX), v = (0, s.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, s.e7)([m.ZP], () => m.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), M = v.length > E.Cb, R = (0, s.e7)([d.Z, m.ZP], () => {
+    selected: Z
+  } = e, v = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([_.ZP], () => _.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > m.Cb, M = (0, r.e7)([d.Z, _.ZP], () => {
     let e = d.Z.lastFetchedAt(t.id),
-      n = m.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
+      n = _.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
     if (null == n) return !1;
-    let l = C.default.extractTimestamp(n);
-    return null != e && e > l
-  }), O = i.useCallback(() => {
-    (0, g.uL)(_.Z5c.CHANNEL(t.id, L ? I.oC.CUSTOMIZE_COMMUNITY : I.oC.CHANNEL_BROWSER))
-  }, [t.id, L]), P = i.useCallback(e => {
-    (0, u.jW)(e, async () => {
+    let i = g.default.extractTimestamp(n);
+    return null != e && e > i
+  }), R = l.useCallback(() => {
+    (0, f.uL)(I.Z5c.CHANNEL(t.id, v ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER))
+  }, [t.id, v]), y = l.useCallback(e => {
+    (0, c.jW)(e, async () => {
       let {
         default: e
       } = await n.e("8926").then(n.bind(n, 156673));
-      return n => (0, l.jsx)(e, {
+      return n => (0, i.jsx)(e, {
         ...n,
         guild: t
       })
     })
-  }, [t]), b = null;
-  return (!T || A || M) && !x && !R && (b = (0, l.jsx)(o.TextBadge, {
-    color: a.Z.unsafe_rawColors.BRAND_260.css,
-    text: Z.Z.Messages.NEW,
+  }, [t]), O = null;
+  return (!T || A || b) && !Z && !M && (O = (0, i.jsx)(o.TextBadge, {
+    color: s.Z.unsafe_rawColors.BRAND_260.css,
+    text: x.Z.Messages.NEW,
     className: S.newChannel
-  })), (0, l.jsx)(f.m, {
+  })), (0, i.jsx)(C.m, {
     id: "channels-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(o.ChannelListMagnifyingGlassIcon, {
+    renderIcon: e => (0, i.jsx)(o.ChannelListMagnifyingGlassIcon, {
       size: "md",
       color: "currentColor",
       className: e
     }),
-    text: L ? Z.Z.Messages.CHANNELS_AND_ROLES : Z.Z.Messages.CHANNEL_BROWSER_TITLE,
-    selected: x,
-    onClick: O,
-    onContextMenu: P,
-    trailing: b
+    text: v ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
+    selected: Z,
+    onClick: R,
+    onContextMenu: y,
+    trailing: O
   })
 }

@@ -1,42 +1,42 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(392711),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(392711),
+  s = n.n(l),
   r = n(442837),
   o = n(481060),
   c = n(557135),
   u = n(590293),
   d = n(66999),
   h = n(665906),
-  m = n(496675),
-  E = n(979651),
-  p = n(502568),
-  g = n(585483),
-  f = n(981631),
-  C = n(689938);
-t.Z = i.memo(function(e) {
+  p = n(496675),
+  m = n(979651),
+  _ = n(502568),
+  f = n(585483),
+  E = n(981631),
+  g = n(689938);
+t.Z = a.memo(function(e) {
   let {
     channel: t
-  } = e, n = (0, u.Z)(), s = (0, r.e7)([E.Z], () => E.Z.isInChannel(t.id)), _ = (0, r.e7)([E.Z], () => !a().isEmpty(E.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([m.Z], () => m.Z.can(f.Plq.CONNECT, t)), {
+  } = e, n = (0, u.Z)(), l = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), C = (0, r.e7)([m.Z], () => !s().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
     needSubscriptionToAccess: x
-  } = (0, d.Z)(t.id), T = (0, h.$R)(t), N = i.useCallback(() => {
+  } = (0, d.Z)(t.id), T = (0, h.$R)(t), N = a.useCallback(() => {
     c.Z.handleVoiceConnect({
       channel: t,
-      connected: s,
+      connected: l,
       needSubscriptionToAccess: x,
       locked: !1
     })
-  }, [t, s, x]);
-  return (i.useEffect(() => (g.S.subscribe(f.CkL.CALL_START, N), () => {
-    g.S.unsubscribe(f.CkL.CALL_START, N)
+  }, [t, l, x]);
+  return (a.useEffect(() => (f.S.subscribe(E.CkL.CALL_START, N), () => {
+    f.S.unsubscribe(E.CkL.CALL_START, N)
   }), [N]), h.tM.useExperiment({
     guildId: t.guild_id,
     location: "63250c_1"
   }, {
     autoTrackExposure: !1
-  }).enabled && !n && !s && I && T && t.isVocalThread()) ? (0, l.jsx)(p.ZP.Icon, {
+  }).enabled && !n && !l && I && T && t.isVocalThread()) ? (0, i.jsx)(_.ZP.Icon, {
     icon: o.PhoneCallIcon,
     onClick: N,
-    tooltip: _ ? C.Z.Messages.JOIN_VOICE_CALL : C.Z.Messages.START_VOICE_CALL
+    tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
   }) : null
 })

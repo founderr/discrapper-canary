@@ -1,50 +1,50 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(481060),
-  a = n(287734),
+var i = n(735250),
+  a = n(470079),
+  l = n(481060),
+  s = n(287734),
   r = n(305325),
   o = n(281956),
   c = n(584729),
   u = n(27457),
   d = n(354459),
   h = n(689938),
-  m = n(679386);
+  p = n(679386);
 t.Z = function(e) {
   var t, n;
   let {
-    participants: E,
-    channel: p,
-    hasConnectPermission: g
-  } = e, f = E.filter(d.Io), C = (0, o.J)(p.guild_id), _ = i.useCallback(() => {
-    C ? (0, r.hk)(p.guild_id, () => a.default.selectVoiceChannel(p.id)) : a.default.selectVoiceChannel(p.id)
-  }, [p.id, p.guild_id, C]), I = 4 === f.length ? 2 : 3;
-  return (0, l.jsxs)("div", {
-    className: m.container,
-    children: [(0, l.jsx)("div", {
-      className: m.tiles,
+    participants: m,
+    channel: _,
+    hasConnectPermission: f
+  } = e, E = m.filter(d.Io), g = (0, o.J)(_.guild_id), C = a.useCallback(() => {
+    g ? (0, r.hk)(_.guild_id, () => s.default.selectVoiceChannel(_.id)) : s.default.selectVoiceChannel(_.id)
+  }, [_.id, _.guild_id, g]), I = 4 === E.length ? 2 : 3;
+  return (0, i.jsxs)("div", {
+    className: p.container,
+    children: [(0, i.jsx)("div", {
+      className: p.tiles,
       style: {
         maxWidth: 168 * I
       },
-      children: f.slice(0, 5).map(e => (0, l.jsx)(u.ZP, {
+      children: E.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
         participant: e,
-        channel: p,
-        className: m.tile,
+        channel: _,
+        className: p.tile,
         paused: !0,
         inCall: !0,
         noVideoRender: !0,
         inPopout: !1,
         width: 48
       }, e.id))
-    }), (0, l.jsx)(s.Heading, {
-      className: m.channelName,
+    }), (0, i.jsx)(l.Heading, {
+      className: p.channelName,
       variant: "heading-xxl/semibold",
-      children: p.name
-    }), (0, l.jsx)("div", {
-      className: m.participantsRow,
-      children: (0, l.jsx)(s.Text, {
+      children: _.name
+    }), (0, i.jsx)("div", {
+      className: p.participantsRow,
+      children: (0, i.jsx)(l.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: (t = p, 0 === (n = f).length ? h.Z.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? h.Z.Messages.CURRENTLY_IN_VOICE_1.format({
+        children: (t = _, 0 === (n = E).length ? h.Z.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? h.Z.Messages.CURRENTLY_IN_VOICE_1.format({
           a: (0, c.Z)(t, n[0])
         }) : 2 === n.length ? h.Z.Messages.CURRENTLY_IN_VOICE_2.format({
           a: (0, c.Z)(t, n[0]),
@@ -55,13 +55,13 @@ t.Z = function(e) {
           n: n.length - 2
         }) : void 0)
       })
-    }), (0, l.jsx)(s.Button, {
-      disabled: !g,
-      className: m.joinButton,
-      color: g ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
-      onClick: _,
-      size: s.Button.Sizes.MEDIUM,
-      children: g ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
+    }), (0, i.jsx)(l.Button, {
+      disabled: !f,
+      className: p.joinButton,
+      color: f ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
+      onClick: C,
+      size: l.Button.Sizes.MEDIUM,
+      children: f ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
     })]
   })
 }

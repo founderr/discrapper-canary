@@ -21,15 +21,15 @@ var i, r, s, o, a = n(512722),
 n(893233);
 var T = n(873741),
   h = n(314897),
-  S = n(866960),
-  f = n(70956),
-  N = n(403182),
-  A = n(651655),
+  f = n(866960),
+  S = n(70956),
+  A = n(403182),
+  N = n(651655),
   m = n(861990),
   O = n(141795),
-  R = n(981631);
+  p = n(981631);
 
-function p(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -42,8 +42,8 @@ __OVERLAY__ && (g = n(237997).Z), (s = i || (i = {})).OVERLAY_UNLOCKED = "overla
 let C = e => 0 === e.type,
   v = e => 1 === e.type,
   L = e => C(e) ? e.message.nonce : v(e) ? e.message.messageId : e.message.data.id,
-  D = [1 * f.Z.Millis.MINUTE, 5 * f.Z.Millis.MINUTE];
-class M extends A.Z {
+  D = [1 * S.Z.Millis.MINUTE, 5 * S.Z.Millis.MINUTE];
+class M extends N.Z {
   isFull() {
     return this.queue.length >= this.maxSize
   }
@@ -77,7 +77,7 @@ class M extends A.Z {
   }
   startQueueMetricTimers(e) {
     let t = D.map(e => setTimeout(() => {
-      (0, d.yw)(R.rMx.SEND_MESSAGE_QUEUED, {
+      (0, d.yw)(p.rMx.SEND_MESSAGE_QUEUED, {
         queued_duration_ms: e
       })
     }, e));
@@ -90,8 +90,8 @@ class M extends A.Z {
   createResponseHandler(e, t) {
     return n => {
       if (null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr) return t(null, n);
-      null != n.body && (n.body.code === R.evJ.SLOWMODE_RATE_LIMITED || n.body.code === R.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
-        retryAfter: n.body.retry_after * f.Z.Millis.SECOND
+      null != n.body && (n.body.code === p.evJ.SLOWMODE_RATE_LIMITED || n.body.code === p.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
+        retryAfter: n.body.retry_after * S.Z.Millis.SECOND
       }) : t(null, n)
     }
   }
@@ -103,7 +103,7 @@ class M extends A.Z {
       filename: s,
       ...o
     } = e, a = (0, T.d)(), l = {
-      mobile_network_type: S.Z.getType(),
+      mobile_network_type: f.Z.getType(),
       ...o,
       ...null != a && {
         signal_strength: a
@@ -122,7 +122,7 @@ class M extends A.Z {
     }
     null != g && (g.isInstanceUILocked() ? n = {
       location: "overlay_locked_activated"
-    } : !g.isInstanceUILocked() && (n = g.isPinned(R.Odu.TEXT) ? {
+    } : !g.isInstanceUILocked() && (n = g.isPinned(p.Odu.TEXT) ? {
       location: "overlay_unlocked_pinned"
     } : {
       location: "overlay_unlocked"
@@ -130,7 +130,7 @@ class M extends A.Z {
     let c = this.createResponseHandler(e.nonce, t),
       d = new AbortController;
     if (this.startQueueMetricTimers(e.nonce), null != r && null != s && "" !== s) _.tn.post({
-      url: R.ANM.MESSAGES(i),
+      url: p.ANM.MESSAGES(i),
       fields: Object.entries(l).map(e => {
         let [t, n] = e;
         return {
@@ -153,11 +153,11 @@ class M extends A.Z {
     else {
       let t;
       t = {
-        timeout: 60 * f.Z.Millis.SECOND,
+        timeout: 60 * S.Z.Millis.SECOND,
         retries: 3,
         backoff: new u.Z
       }, _.tn.post({
-        url: R.ANM.MESSAGES(i),
+        url: p.ANM.MESSAGES(i),
         body: l,
         context: n,
         oldFormErrors: !0,
@@ -176,7 +176,7 @@ class M extends A.Z {
       ...r
     } = e, s = new AbortController;
     _.tn.patch({
-      url: R.ANM.MESSAGE(n, i),
+      url: p.ANM.MESSAGE(n, i),
       body: r,
       retries: 1,
       oldFormErrors: !0,
@@ -213,27 +213,27 @@ class M extends A.Z {
       T.data.attachments = [], n = [];
       T.data.attachments = u.map((e, t) => (l()(e.status === O.m.COMPLETED, "Uploads must be staged before trying to send a message"), (0, m.B)(e, t)))
     }
-    let S = new AbortController;
+    let f = new AbortController;
     _.tn.post({
-      url: R.ANM.INTERACTIONS,
+      url: p.ANM.INTERACTIONS,
       fields: [{
         name: "payload_json",
         value: JSON.stringify(T)
       }],
       attachments: n,
-      signal: S.signal,
+      signal: f.signal,
       onRequestCreated: e => {
-        this.requests.set(a, S), e.on("progress", e => {
+        this.requests.set(a, f), e.on("progress", e => {
           let {
             total: t
-          } = e, n = (0, N.dg)(r);
+          } = e, n = (0, A.dg)(r);
           null != t && t > n && (this.cancelRequest(a), null == d || d(n))
         })
       }
     }, this.createResponseHandler(a, t))
   }
   constructor(e = 5) {
-    super(new E.Z("MessageQueue")), p(this, "maxSize", void 0), p(this, "requests", void 0), p(this, "analyticsTimeouts", void 0), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
+    super(new E.Z("MessageQueue")), R(this, "maxSize", void 0), R(this, "requests", void 0), R(this, "analyticsTimeouts", void 0), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
   }
 }
 t.ZP = new M

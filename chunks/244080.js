@@ -1,14 +1,14 @@
 n.d(t, {
   Z: function() {
-    return i
+    return s
   }
 });
-var s = n(380349);
+var i = n(380349);
 
-function i(e) {
+function s(e) {
   let {
     currentActivities: t,
     isSpotifyActivity: n
-  } = e, i = t[0], l = (0, s.Z)(null == i ? void 0 : i.activity, null == i ? void 0 : i.activityUser);
-  return n ? l : null
+  } = e, s = t[0], a = (0, i.Z)(null == s ? void 0 : s.activity, null == s ? void 0 : s.activityUser);
+  return n ? a : null
 }

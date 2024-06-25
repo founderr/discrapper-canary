@@ -33,7 +33,7 @@ class T {
     return new Promise((t, n) => {
       this._waitQueue.push(() => {
         try {
-          null == this.functionCache[e.type] && (this.functionCache[e.type] = e => this._dispatchWithDevtools(e), S(this.functionCache[e.type], "dispatch_" + e.type)), this.functionCache[e.type](e), t()
+          null == this.functionCache[e.type] && (this.functionCache[e.type] = e => this._dispatchWithDevtools(e), f(this.functionCache[e.type], "dispatch_" + e.type)), this.functionCache[e.type](e), t()
         } catch (e) {
           n(e)
         }
@@ -139,7 +139,7 @@ class h {
     for (let n in t) {
       let i = t[n],
         r = e => i(e);
-      S(r, "".concat(e, "_").concat(n)), o[n] = r
+      f(r, "".concat(e, "_").concat(n)), o[n] = r
     }
     return this._dependencyGraph.addNode(r, {
       name: e,
@@ -206,7 +206,7 @@ class h {
   }
 }
 
-function S(e, t) {
+function f(e, t) {
   Object.defineProperty(e, "name", {
     value: t
   })

@@ -1,14 +1,14 @@
 n(724458);
-var l, i, s, r, a = n(442837),
+var i, l, r, a, s = n(442837),
   o = n(570140),
-  u = n(981631);
-let c = {};
+  c = n(981631);
+let u = {};
 
 function d(e) {
-  let t = c[e = null != e ? e : "null"];
-  return null == t && (t = c[e] = {
-    state: u.hes.DISCONNECTED,
-    quality: u.IE4.UNKNOWN,
+  let t = u[e = null != e ? e : "null"];
+  return null == t && (t = u[e] = {
+    state: c.hes.DISCONNECTED,
+    quality: c.IE4.UNKNOWN,
     pings: [],
     hostname: null,
     lossRate: null
@@ -16,17 +16,17 @@ function d(e) {
 }
 
 function h(e, t, n) {
-  let l = c[e = null != e ? e : "null"];
-  return null != l ? t(l) : n
+  let i = u[e = null != e ? e : "null"];
+  return null != i ? t(i) : n
 }
-class p extends(l = a.ZP.Store) {
+class p extends(i = s.ZP.Store) {
   getConnectionState(e) {
     return h(e, e => {
       let {
         state: t
       } = e;
       return t
-    }, u.hes.DISCONNECTED)
+    }, c.hes.DISCONNECTED)
   }
   getQuality(e) {
     return h(e, e => {
@@ -34,7 +34,7 @@ class p extends(l = a.ZP.Store) {
         quality: t
       } = e;
       return t
-    }, u.IE4.UNKNOWN)
+    }, c.IE4.UNKNOWN)
   }
   getHostname(e) {
     return h(e, e => {
@@ -71,14 +71,14 @@ class p extends(l = a.ZP.Store) {
     }, null)
   }
 }
-r = "OverlayRTCConnectionStore", (s = "displayName") in(i = p) ? Object.defineProperty(i, s, {
-  value: r,
+a = "OverlayRTCConnectionStore", (r = "displayName") in(l = p) ? Object.defineProperty(l, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = r, t.Z = new p(o.Z, {
+}) : l[r] = a, t.Z = new p(o.Z, {
   OVERLAY_INITIALIZE: function(e) {
-    c = e.rtcConnectionStates
+    u = e.rtcConnectionStates
   },
   RTC_CONNECTION_STATE: function(e) {
     if (null != e.streamKey) return !1;

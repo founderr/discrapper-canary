@@ -1,14 +1,14 @@
-t.d(n, {
+t.d(i, {
   d: function() {
     return d
   }
 });
-var i = t(735250);
+var n = t(735250);
 t(470079);
 var o = t(120356),
   a = t.n(o),
-  r = t(692547),
-  l = t(481060);
+  l = t(692547),
+  r = t(481060);
 t(651711);
 var s = t(551556);
 t(689938);
@@ -16,42 +16,42 @@ var c = t(442243);
 t(347157), t(177266);
 let d = e => {
   let {
-    name: n,
+    name: i,
     description: t,
     checked: o,
     actionLabel: d,
     actionHandler: u
-  } = e, E = null;
-  return E = o ? (0, i.jsx)(s.Z, {
+  } = e, _ = null;
+  return _ = o ? (0, n.jsx)(s.Z, {
     width: 20,
     height: 20
-  }) : (0, i.jsx)(l.CircleXIcon, {
+  }) : (0, n.jsx)(r.CircleXIcon, {
     size: "custom",
-    color: r.Z.unsafe_rawColors.RED_400.css,
+    color: l.Z.unsafe_rawColors.RED_400.css,
     width: 20,
     height: 20
-  }), (0, i.jsxs)("div", {
+  }), (0, n.jsxs)("div", {
     className: c.checklistItem,
-    children: [(0, i.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: c.checklistIcon,
-      children: E
-    }), (0, i.jsxs)("div", {
+      children: _
+    }), (0, n.jsxs)("div", {
       className: a()(c.__invalid_checklistText, o && c.ineligibleRow),
-      children: [(0, i.jsx)(l.Heading, {
+      children: [(0, n.jsx)(r.Heading, {
         variant: "heading-md/semibold",
         className: c.checklistItemName,
-        children: n
-      }), (0, i.jsx)(l.Text, {
+        children: i
+      }), (0, n.jsx)(r.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
         children: t
       })]
-    }), null != d && (0, i.jsx)("div", {
+    }), null != d && (0, n.jsx)("div", {
       className: c.eligibilityActionContainer,
-      children: (0, i.jsx)(l.Button, {
+      children: (0, n.jsx)(r.Button, {
         className: c.eligibilityActionButton,
-        look: l.ButtonLooks.OUTLINED,
-        color: l.ButtonColors.PRIMARY,
+        look: r.ButtonLooks.OUTLINED,
+        color: r.ButtonColors.PRIMARY,
         onClick: u,
         grow: !0,
         children: d

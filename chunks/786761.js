@@ -4,13 +4,13 @@ n.d(t, {
     return O
   },
   gx: function() {
-    return R
+    return p
   },
   lp: function() {
     return M
   },
   wi: function() {
-    return p
+    return R
   }
 }), n(789020), n(47120);
 var i = n(913527),
@@ -29,12 +29,12 @@ var o = n(292419),
   T = n(408433),
   h = n(669079);
 n(358085), n(51144);
-var S = n(572804);
+var f = n(572804);
 n(739566);
-var f = n(959517),
-  N = n(981631);
+var S = n(959517),
+  A = n(981631);
 n(689938);
-let A = new c.Z({
+let N = new c.Z({
   id: "???",
   username: "???"
 });
@@ -54,29 +54,29 @@ function m(e) {
 }
 
 function O(e) {
-  var t, n, i, r, o, l, T, f, O, R;
+  var t, n, i, r, o, l, T, S, O, p;
   let {
-    reactions: p,
+    reactions: R,
     interactionData: g
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, v = m(e), M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (o = e.mention_roles) && void 0 !== o ? o : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], U = e.message_reference, b = e.type === N.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content);
-  let G = null == (f = e).author ? A : null != f.webhook_id ? new c.Z(f.author) : null !== (O = I.default.getUser(f.author.id)) && void 0 !== O ? O : new c.Z(f.author),
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, v = m(e), M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (o = e.mention_roles) && void 0 !== o ? o : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], U = e.message_reference, b = e.type === A.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content);
+  let G = null == (S = e).author ? N : null != S.webhook_id ? new c.Z(S.author) : null !== (O = I.default.getUser(S.author.id)) && void 0 !== O ? O : new c.Z(S.author),
     w = null == e ? void 0 : e.gift_info,
-    B = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-    x = e.type === N.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-    k = e.type === N.uaV.PREMIUM_REFERRAL ? e.content : void 0,
+    x = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
+    B = e.type === A.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+    k = e.type === A.uaV.PREMIUM_REFERRAL ? e.content : void 0,
     V = e.content;
-  return e.type === N.uaV.PREMIUM_REFERRAL && (V = ""), R = 0, new _.ZP({
+  return e.type === A.uaV.PREMIUM_REFERRAL && (V = ""), p = 0, new _.ZP({
     ...e,
     ...v.toJS(),
     author: G,
     webhookId: e.webhook_id,
-    blocked: E.Z.isBlockedForMessage(e) || null != x && E.Z.isBlocked(x),
+    blocked: E.Z.isBlockedForMessage(e) || null != B && E.Z.isBlocked(B),
     mentionEveryone: e.mention_everyone,
     mentions: M,
     mentionRoles: P,
     mentionChannels: y,
     messageReference: U,
-    mentioned: (0, S.Sz)({
+    mentioned: (0, f.Sz)({
       userId: d.default.getId(),
       channelId: e.channel_id,
       mentionEveryone: null !== (T = e.mention_everyone) && void 0 !== T && T,
@@ -89,8 +89,8 @@ function O(e) {
     referralTrialOfferId: k,
     call: C(e.call, v.timestamp),
     messageSnapshots: D(e),
-    reactions: L(null != p ? p : e.reactions, e.poll),
-    interaction: B,
+    reactions: L(null != R ? R : e.reactions, e.poll),
+    interaction: x,
     interactionData: null != g ? g : e.interaction_data,
     interactionMetadata: e.interaction_metadata,
     roleSubscriptionData: e.role_subscription_data,
@@ -100,7 +100,7 @@ function O(e) {
   })
 }
 
-function R(e, t) {
+function p(e, t) {
   return null != t.edited_timestamp ? {
     ...t,
     reactions: e.reactions,
@@ -111,7 +111,7 @@ function R(e, t) {
   }
 }
 
-function p(e, t) {
+function R(e, t) {
   if (null != t.edited_timestamp) return O(t, {
     reactions: e.reactions,
     interactionData: e.interactionData
@@ -129,7 +129,7 @@ function p(e, t) {
 function g(e) {
   return null == e.attachments ? [] : e.attachments.map(e => ({
     ...e,
-    spoiler: e.filename.startsWith(f._j)
+    spoiler: e.filename.startsWith(S._j)
   }))
 }
 

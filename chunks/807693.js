@@ -1,21 +1,21 @@
-var r, l, a, s, o = t(442837),
-  i = t(570140);
-let u = {};
-class c extends(s = o.ZP.Store) {
+var r, l, a, o, i = t(442837),
+  s = t(570140);
+let c = {};
+class u extends(o = i.ZP.Store) {
   getEULA(e) {
-    return u[e]
+    return c[e]
   }
 }
-a = "EULAStore", (l = "displayName") in(r = c) ? Object.defineProperty(r, l, {
+a = "EULAStore", (l = "displayName") in(r = u) ? Object.defineProperty(r, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[l] = a, n.Z = new c(i.Z, {
+}) : r[l] = a, n.Z = new u(s.Z, {
   EULA_FETCH_SUCCESS: function(e) {
     let {
       eula: n
     } = e;
-    u[n.id] = n
+    c[n.id] = n
   }
 })

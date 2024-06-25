@@ -1,15 +1,15 @@
 t.d(n, {
   f: function() {
-    return l
+    return o
   }
 });
 var a = t(920906),
   r = t(748780),
-  s = t(442837),
-  i = t(607070);
+  i = t(442837),
+  s = t(607070);
 
-function l() {
-  let e = (0, s.e7)([i.Z], () => i.Z.useReducedMotion);
+function o() {
+  let e = (0, i.e7)([s.Z], () => s.Z.useReducedMotion);
   return (0, a.useSpring)({
     from: {
       opacity: e ? 1 : 0,

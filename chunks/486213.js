@@ -1,15 +1,15 @@
-var T = t(735250);
-t(470079);
-var n = t(353672),
-  l = t(993750),
-  o = t(134612),
-  a = t(689938);
-s.Z = function() {
-  let e = (0, o.Nn)();
-  return (0, T.jsx)(l.Z, {
-    children: (0, T.jsx)(n.Z, {
+var o = s(735250);
+s(470079);
+var T = s(353672),
+  n = s(993750),
+  a = s(134612),
+  l = s(689938);
+t.Z = function() {
+  let e = (0, a.Nn)();
+  return (0, o.jsx)(n.Z, {
+    children: (0, o.jsx)(T.Z, {
       tips: e,
-      headerText: a.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
+      headerText: l.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION
     })
   })
 }

@@ -16,7 +16,7 @@ n.d(t, {
     return D
   },
   pI: function() {
-    return R
+    return p
   },
   sR: function() {
     return L
@@ -39,43 +39,43 @@ var i = n(399606),
   I = n(74538),
   T = n(51144),
   h = n(208049),
-  S = n(763296),
-  f = n(697426),
-  N = n(641015),
-  A = n(893663),
+  f = n(763296),
+  S = n(697426),
+  A = n(641015),
+  N = n(893663),
   m = n(710111),
   O = n(981631);
 
-function R() {
+function p() {
   var e;
   let t = o.kU.getSetting();
   return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
 }
 
-function p(e, t) {
+function R(e, t) {
   return (null == t ? void 0 : t.guild_id) == null || c.Z.can(O.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === m.X8 || e.guildId === (null == t ? void 0 : t.guild_id)
 }
 
 function g(e, t, n) {
   let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return (I.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === m.X8) && p(t, n) && (!i || t.available)
+  return (I.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === m.X8) && R(t, n) && (!i || t.available)
 }
 
 function C(e, t, n) {
-  (0, h.XE)(t, e, f.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n)
+  (0, h.XE)(t, e, S.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n)
 }
 async function v(e) {
   let t = d.default.getCurrentUser(),
     n = (0, s.Z)(),
-    i = (0, A.k9)(e);
-  if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, N.D)()) return;
+    i = (0, N.k9)(e);
+  if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, A.D)()) return;
   await (0, h.w)();
   let r = i.guildId === m.hY ? m.X8 : i.guildId,
-    o = S.Z.getSound(r, i.soundId);
+    o = f.Z.getSound(r, i.soundId);
   if (null != o) {
     var a, l;
-    if (!p(o, n) || !g(t, o, n, !0)) return null;
-    a = o, l = n.id, (0, h.XE)(l, a, f.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, a, __OVERLAY__)
+    if (!R(o, n) || !g(t, o, n, !0)) return null;
+    a = o, l = n.id, (0, h.XE)(l, a, S.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, a, __OVERLAY__)
   }
 }
 
@@ -96,8 +96,8 @@ function D(e, t) {
   (0, a.PS)(e, n => {
     n.joinSound = void 0, P({
       guildId: e,
-      changeType: f.MW.REMOVED,
-      soundType: f.jy.ENTRY,
+      changeType: S.MW.REMOVED,
+      soundType: S.jy.ENTRY,
       location: t
     })
   }, a.fy.INFREQUENT_USER_ACTION)
@@ -106,8 +106,8 @@ function D(e, t) {
 function M(e, t, n) {
   (0, a.PS)(e, i => {
     let r = t.guildId === m.X8,
-      s = r ? f.H$.DEFAULT : f.H$.CUSTOM,
-      o = null != i.joinSound ? f.MW.UPDATED : f.MW.ADDED;
+      s = r ? S.H$.DEFAULT : S.H$.CUSTOM,
+      o = null != i.joinSound ? S.MW.UPDATED : S.MW.ADDED;
     i.joinSound = {
       soundId: t.soundId,
       guildId: r ? m.hY : t.guildId
@@ -115,7 +115,7 @@ function M(e, t, n) {
       guildId: e,
       changeType: o,
       soundSource: s,
-      soundType: f.jy.ENTRY,
+      soundType: S.jy.ENTRY,
       location: n
     })
   }, a.fy.INFREQUENT_USER_ACTION)

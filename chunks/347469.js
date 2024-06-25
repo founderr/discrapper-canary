@@ -39,16 +39,16 @@ t.Z = e => {
           s = 1 === u(c) ? "width" : "height";
         n.current.style[s] = "".concat(r, "px"), t(r)
       },
-      S = t => {
+      f = t => {
         I(!1);
         let n = e(t);
         s(n), null == o || o(n)
       },
-      f = d ? "pointerup" : "mouseup",
-      N = d ? "pointermove" : "mousemove",
-      A = n.current.ownerDocument;
-    return A.addEventListener(f, S), A.addEventListener(N, a), () => {
-      A.removeEventListener(f, S), A.removeEventListener(N, a), t.cancel()
+      S = d ? "pointerup" : "mouseup",
+      A = d ? "pointermove" : "mousemove",
+      N = n.current.ownerDocument;
+    return N.addEventListener(S, f), N.addEventListener(A, a), () => {
+      N.removeEventListener(S, f), N.removeEventListener(A, a), t.cancel()
     }
   }, [E, s, r, i, c, n, _, o, d]), a.useCallback(e => {
     let t = 1 === u(c);

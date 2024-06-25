@@ -1,7 +1,7 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(390322),
-  a = n(381871);
+var i = n(735250),
+  a = n(470079),
+  l = n(390322),
+  s = n(381871);
 t.Z = e => {
   let {
     isHovered: t,
@@ -11,13 +11,13 @@ t.Z = e => {
     onFocus: c,
     channel: u
   } = e;
-  return i.useEffect(() => {
+  return a.useEffect(() => {
     !t && n()
-  }, [n, t]), (0, l.jsx)(s.Z, {
-    children: (0, l.jsx)("div", {
+  }, [n, t]), (0, i.jsx)(l.Z, {
+    children: (0, i.jsx)("div", {
       onMouseEnter: r,
       onMouseLeave: o,
-      children: (0, l.jsx)(a.Z, {
+      children: (0, i.jsx)(s.Z, {
         channel: u,
         closePopout: n,
         onFocus: c

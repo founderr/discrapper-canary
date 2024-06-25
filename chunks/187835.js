@@ -3,32 +3,32 @@ n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(603592),
-  r = n(689938);
-let a = "DOWNLOAD_APPS";
+var l = n(481060),
+  r = n(603592),
+  a = n(689938);
+let s = "DOWNLOAD_APPS";
 
 function o() {
-  let e = (0, i.useModalsStore)(e => (0, i.hasModalOpenSelector)(e, a));
-  return (0, l.jsx)(s.Z, {
+  let e = (0, l.useModalsStore)(e => (0, l.hasModalOpenSelector)(e, s));
+  return (0, i.jsx)(r.Z, {
     id: "app-download-button",
     onClick: () => {
-      (0, i.openModalLazy)(async () => {
+      (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, 431583));
-        return t => (0, l.jsx)(e, {
+        return t => (0, i.jsx)(e, {
           source: "Guilds",
           ...t
         })
       }, {
-        modalKey: a
+        modalKey: s
       })
     },
     selected: e,
-    tooltip: r.Z.Messages.DOWNLOAD_APPS,
-    icon: i.DownloadIcon
+    tooltip: a.Z.Messages.DOWNLOAD_APPS,
+    icon: l.DownloadIcon
   })
 }

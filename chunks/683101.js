@@ -1,21 +1,21 @@
 n.d(t, {
   Z: function() {
-    return p
+    return _
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(392711),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(392711),
+  s = n.n(l),
   r = n(374470),
   o = n(481060),
   c = n(239091),
   u = n(294218),
   d = n(592125),
   h = n(689938),
-  m = n(932688);
+  p = n(932688);
 
-function E(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,42 +23,42 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends i.PureComponent {
+class _ extends a.PureComponent {
   render() {
     let {
       result: e,
       listItemProps: t,
       searchOffset: n,
-      index: i,
-      totalResults: s
-    } = this.props, r = a().find(e, e => e.isSearchHit);
+      index: a,
+      totalResults: l
+    } = this.props, r = s().find(e, e => e.isSearchHit);
     if (null == r) return null;
     let c = d.Z.getChannel(r.channel_id);
     if (null == c) return null;
-    let E = "search-result-".concat(r.id);
-    return (0, l.jsx)(o.FocusRing, {
+    let m = "search-result-".concat(r.id);
+    return (0, i.jsx)(o.FocusRing, {
       ringTarget: this.hitRef,
-      ringClassName: m.__invalid_searchResultFocusRing,
+      ringClassName: p.__invalid_searchResultFocusRing,
       offset: 4,
-      children: (0, l.jsxs)("li", {
-        className: m.container,
+      children: (0, i.jsxs)("li", {
+        className: p.container,
         ...t,
-        "aria-posinset": 1 + n + i,
-        "aria-setsize": s,
-        "aria-labelledby": E,
-        children: [(0, l.jsx)(o.Clickable, {
+        "aria-posinset": 1 + n + a,
+        "aria-setsize": l,
+        "aria-labelledby": m,
+        children: [(0, i.jsx)(o.Clickable, {
           tabIndex: -1,
           onClick: this.handleMessageClick,
           innerRef: this.containerRef,
-          className: m.searchResult,
+          className: p.searchResult,
           focusProps: {
             enabled: !1
           },
-          children: (0, l.jsx)("div", {
+          children: (0, i.jsx)("div", {
             ref: this.hitRef,
-            className: m.message,
-            children: (0, l.jsx)(u.Z, {
-              id: E,
+            className: p.message,
+            children: (0, i.jsx)(u.Z, {
+              id: m,
               message: r,
               channel: c,
               onContextMenu: e => this.handleContextMenu(e, r),
@@ -67,11 +67,11 @@ class p extends i.PureComponent {
               trackAnnouncementViews: !0
             })
           }, r.id)
-        }), (0, l.jsx)("div", {
-          className: m.buttonsContainer,
+        }), (0, i.jsx)("div", {
+          className: p.buttonsContainer,
           "aria-hidden": !0,
-          children: (0, l.jsx)(o.Clickable, {
-            className: m.button,
+          children: (0, i.jsx)(o.Clickable, {
+            className: p.button,
             onClick: this.jumpTo,
             children: h.Z.Messages.JUMP
           })
@@ -80,30 +80,30 @@ class p extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), E(this, "containerRef", i.createRef()), E(this, "hitRef", i.createRef()), E(this, "handleContextMenu", (e, t) => {
-      let i = d.Z.getChannel(t.channel_id);
-      if (null != i) e.stopPropagation(), (0, c.jW)(e, async () => {
+    super(...e), m(this, "containerRef", a.createRef()), m(this, "hitRef", a.createRef()), m(this, "handleContextMenu", (e, t) => {
+      let a = d.Z.getChannel(t.channel_id);
+      if (null != a) e.stopPropagation(), (0, c.jW)(e, async () => {
         let {
           default: e
         } = await n.e("53809").then(n.bind(n, 858341));
-        return n => (0, l.jsx)(e, {
+        return n => (0, i.jsx)(e, {
           ...n,
           message: t,
-          channel: i
+          channel: a
         })
       })
-    }), E(this, "jumpTo", e => {
+    }), m(this, "jumpTo", e => {
       null != e && (e.preventDefault(), e.stopPropagation());
       let {
         onJump: t,
         result: n
-      } = this.props, l = n.find(e => e.isSearchHit);
-      null != l && t(l)
-    }), E(this, "handleMessageClick", e => {
+      } = this.props, i = n.find(e => e.isSearchHit);
+      null != i && t(i)
+    }), m(this, "handleMessageClick", e => {
       if (function(e, t) {
           var n;
-          let l = null === (n = window) || void 0 === n ? void 0 : n.getSelection();
-          if (null != l && !l.isCollapsed) return !0;
+          let i = null === (n = window) || void 0 === n ? void 0 : n.getSelection();
+          if (null != i && !i.isCollapsed) return !0;
           if (null == e || null == t) return !1;
           for (;
             (0, r.k)(e) && e !== t;) {

@@ -6,10 +6,10 @@ n.d(t, {
 });
 var i = n(278323),
   s = n(13245),
-  l = n(45114),
+  a = n(45114),
   o = n(237997),
-  a = n(454902),
-  r = n(312839),
+  r = n(454902),
+  l = n(312839),
   c = n(981631),
   d = n(987650),
   u = n(689938);
@@ -20,22 +20,22 @@ function h(e, t, n, h) {
       username: "",
       game: n.name
     }),
-    E = t.getAvatarURL(e.guild_id, 80),
+    _ = t.getAvatarURL(e.guild_id, 80),
     {
       trackView: g,
       trackClick: m
-    } = (0, r.R)(d.n0.ActivityInvite, {
+    } = (0, l.R)(d.n0.ActivityInvite, {
       notif_type: d.n0.ActivityInvite,
       notif_user_id: t.id,
       activity_type: c.mFx.JOIN_REQUEST,
       activity_name: n.name
     });
   return {
-    colorScheme: a.ZP.ColorSchemes.PRIMARY,
-    icon: E,
+    colorScheme: r.ZP.ColorSchemes.PRIMARY,
+    icon: _,
     title: p,
     body: f,
-    hint: e => (0, a.QR)(e, (0, r.P)(), u.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
+    hint: e => (0, r.QR)(e, (0, l.P)(), u.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
     confirmText: u.Z.Messages.USER_ACTIVITY_RESPOND_YEAH,
     cancelText: u.Z.Messages.USER_ACTIVITY_RESPOND_NOPE,
     onNotificationShow: () => {
@@ -50,7 +50,7 @@ function h(e, t, n, h) {
       }), m("join"), s.Z.updateNotificationStatus(n)
     },
     onCancelClick: (t, n) => {
-      (0, l.In)(e.id, !0, !0), s.Z.updateNotificationStatus(n), m("decline")
+      (0, a.In)(e.id, !0, !0), s.Z.updateNotificationStatus(n), m("decline")
     },
     onDismissClick: () => {
       m("dismiss")

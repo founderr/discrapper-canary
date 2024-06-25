@@ -1,9 +1,9 @@
 n.d(t, {
   Q: function() {
-    return i
+    return a
   }
 });
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2022-07_system_dm_safety_onboarding",
   label: "System DM Safety Onboarding",
@@ -25,11 +25,11 @@ let l = (0, n(818083).B)({
   }]
 });
 
-function i() {
-  return l.getCurrentConfig({
+function a() {
+  return i.getCurrentConfig({
     location: "0a5674_1"
   }, {
     autoTrackExposure: !1
   }).systemDMRedesignEnabled
 }
-t.Z = l
+t.Z = i

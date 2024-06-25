@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i = n(735250),
@@ -28,7 +28,7 @@ function h(e) {
   }, [e]), t
 }
 
-function S(e) {
+function f(e) {
   let {
     application: t,
     scrollerRef: n
@@ -37,20 +37,20 @@ function S(e) {
     icon: t.icon,
     bot: t.bot,
     size: 24
-  }), S = (0, o.ap)((0, l.ZP)()), f = r.useRef(null), N = r.useRef(null), A = r.useRef(null), m = (0, a.useToken)(a.tokens.colors.BG_BASE_PRIMARY).hex(), O = (0, u.ZP)("number" == typeof T ? "" : T, null != m ? m : ""), R = r.useMemo(() => {
+  }), f = (0, o.ap)((0, l.ZP)()), S = r.useRef(null), A = r.useRef(null), N = r.useRef(null), m = (0, a.useToken)(a.tokens.colors.BG_BASE_PRIMARY).hex(), O = (0, u.ZP)("number" == typeof T ? "" : T, null != m ? m : ""), p = r.useMemo(() => {
     var e, t;
-    let n = (0, s.compact)([c.Z.parseHexString(O), c.Z.parseHexString(S ? "#000000" : "#ffffff")]);
+    let n = (0, s.compact)([c.Z.parseHexString(O), c.Z.parseHexString(f ? "#000000" : "#ffffff")]);
     return null !== (t = null === (e = (0, d.k8)({
       colors: n,
       ratio: 5,
       saturationFactor: .6
     })) || void 0 === e ? void 0 : e.toHexString()) && void 0 !== t ? t : O
-  }, [O, S]), p = h(f), g = h(N), C = r.useCallback(() => {
+  }, [O, f]), R = h(S), g = h(A), C = r.useCallback(() => {
     var e, t, i, r, o, a, l, u, _;
     let c = n.current,
-      d = f.current,
-      E = A.current,
-      I = parseInt(null !== (e = null == p ? void 0 : p.height) && void 0 !== e ? e : ""),
+      d = S.current,
+      E = N.current,
+      I = parseInt(null !== (e = null == R ? void 0 : R.height) && void 0 !== e ? e : ""),
       T = parseInt(null !== (t = null == g ? void 0 : g.height) && void 0 !== t ? t : "");
     if (null != c && null != d && null != E && !isNaN(I) && !isNaN(T)) {
       ;
@@ -58,14 +58,14 @@ function S(e) {
         t = 0 !== c.scrollHeight ? c.scrollHeight : T + 20,
         n = 0 !== c.clientHeight ? c.clientHeight : T + 20,
         h = T - I,
-        f = (0, s.clamp)(t - n, h + 1, T + 20);
-      let N = (r = e, (o = h) === (a = f) ? 1 : (0, s.clamp)((r - o) / (a - o), 0, 1));
-      d.style.filter = "brightness(".concat(1 + ((S ? 1.4 : .6) - (l = 1)) * N, ")"), d.style.backgroundColor = "color-mix(in oklab,".concat(O, " ").concat((1 - N) * 100, "%, ").concat(R, ")"), E.style.opacity = "".concat(0 + (1 - (u = 0)) * N), E.style.transform = "translateY(".concat((_ = I / 4) + (0 - _) * N, "px)")
+        S = (0, s.clamp)(t - n, h + 1, T + 20);
+      let A = (r = e, (o = h) === (a = S) ? 1 : (0, s.clamp)((r - o) / (a - o), 0, 1));
+      d.style.filter = "brightness(".concat(1 + ((f ? 1.4 : .6) - (l = 1)) * A, ")"), d.style.backgroundColor = "color-mix(in oklab,".concat(O, " ").concat((1 - A) * 100, "%, ").concat(p, ")"), E.style.opacity = "".concat(0 + (1 - (u = 0)) * A), E.style.transform = "translateY(".concat((_ = I / 4) + (0 - _) * A, "px)")
     }
-  }, [R, O, null == g ? void 0 : g.height, S, n, null == p ? void 0 : p.height]);
+  }, [p, O, null == g ? void 0 : g.height, f, n, null == R ? void 0 : R.height]);
   return r.useEffect(() => {
     C()
-  }, [C, S]), r.useEffect(() => {
+  }, [C, f]), r.useEffect(() => {
     let e = n.current,
       t = () => {
         C()
@@ -80,7 +80,7 @@ function S(e) {
         className: I.stickyBannerContainer,
         children: (0, i.jsx)("div", {
           className: I.stickyBanner,
-          ref: f
+          ref: S
         })
       }), (0, i.jsx)("div", {
         className: I.backButtonContainer,
@@ -88,14 +88,14 @@ function S(e) {
       }), (0, i.jsx)("div", {
         className: I.nameContainer,
         children: (0, i.jsx)(a.Heading, {
-          ref: A,
+          ref: N,
           className: I.textApplicationName,
           variant: "heading-md/extrabold",
           children: t.name
         })
       })]
     }), (0, i.jsx)("div", {
-      ref: N,
+      ref: A,
       className: I.bannerBackground,
       style: {
         backgroundColor: O

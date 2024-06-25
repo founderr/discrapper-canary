@@ -1,57 +1,57 @@
-var n, i = l(442837),
-  u = l(433517),
-  a = l(570140),
-  r = l(981631);
+var i, r = t(442837),
+  o = t(433517),
+  a = t(570140),
+  s = t(981631);
 
-function o(e, t, l) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: l,
+function l(e, n, t) {
+  return n in e ? Object.defineProperty(e, n, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = l, e
+  }) : e[n] = t, e
 }
-let d = {
+let c = {
     lastViewedPath: null,
     lastViewedNonVoicePath: null
   },
-  s = d,
-  c = "LAST_VIEWED_PATH";
-class h extends(n = i.ZP.PersistedStore) {
+  d = c,
+  u = "LAST_VIEWED_PATH";
+class _ extends(i = r.ZP.PersistedStore) {
   initialize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d;
-    s = null != e ? e : d
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c;
+    d = null != e ? e : c
   }
   get defaultRoute() {
-    return r.Z5c.ME
+    return s.Z5c.ME
   }
   get lastNonVoiceRoute() {
     var e;
-    return null !== (e = s.lastViewedNonVoicePath) && void 0 !== e ? e : r.Z5c.ME
+    return null !== (e = d.lastViewedNonVoicePath) && void 0 !== e ? e : s.Z5c.ME
   }
   get fallbackRoute() {
-    return r.Z5c.ME
+    return s.Z5c.ME
   }
   getState() {
-    return s
+    return d
   }
 }
-o(h, "displayName", "DefaultRouteStore"), o(h, "persistKey", "DefaultRouteStore"), o(h, "migrations", [() => {
-  let e = u.K.get(c, null);
-  return u.K.remove(c), {
+l(_, "displayName", "DefaultRouteStore"), l(_, "persistKey", "DefaultRouteStore"), l(_, "migrations", [() => {
+  let e = o.K.get(u, null);
+  return o.K.remove(u), {
     lastViewedPath: e
   }
-}]), t.Z = new h(a.Z, {
+}]), n.Z = new _(a.Z, {
   SAVE_LAST_ROUTE: function(e) {
     let {
-      path: t
+      path: n
     } = e;
-    return s.lastViewedPath = t, !0
+    return d.lastViewedPath = n, !0
   },
   SAVE_LAST_NON_VOICE_ROUTE: function(e) {
     let {
-      path: t
+      path: n
     } = e;
-    return s.lastViewedNonVoicePath = t, !0
+    return d.lastViewedNonVoicePath = n, !0
   }
 })

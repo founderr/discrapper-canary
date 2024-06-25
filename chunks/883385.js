@@ -1,21 +1,21 @@
-t.d(e, {
+n.d(e, {
   Z: function() {
-    return i
+    return a
   }
 });
-var u = t(735250);
-t(470079);
-var l = t(410575);
+var t = n(735250);
+n(470079);
+var l = n(410575);
 
-function i(n, e) {
-  return function(t) {
-    return (0, u.jsx)(l.Z, {
+function a(i, e) {
+  return function(n) {
+    return (0, t.jsx)(l.Z, {
       page: e.page,
       section: e.section,
       object: e.object,
       objectType: e.objectType,
-      children: (0, u.jsx)(n, {
-        ...t
+      children: (0, t.jsx)(i, {
+        ...n
       })
     })
   }

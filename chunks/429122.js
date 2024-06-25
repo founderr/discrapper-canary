@@ -3,25 +3,25 @@ n.d(t, {
     return p
   },
   eo: function() {
-    return g
+    return f
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(602623),
-  r = n(934415),
-  a = n(540126),
+var i = n(735250),
+  l = n(470079),
+  r = n(602623),
+  a = n(934415),
+  s = n(540126),
   o = n(700026),
-  u = n(301342),
-  c = n(327530),
+  c = n(301342),
+  u = n(327530),
   d = n(857100);
-let h = i.memo(function(e) {
+let h = l.memo(function(e) {
   let {
     guildChannels: t,
     guildChannelsVersion: n
-  } = e, s = i.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-  return null == s ? null : (0, l.jsx)(u.Qo, {
-    category: s
+  } = e, r = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
+  return null == r ? null : (0, i.jsx)(c.Qo, {
+    category: r
   })
 });
 
@@ -29,66 +29,66 @@ function p(e) {
   let {
     sectionIndex: t,
     guildChannels: n,
-    voiceStates: l,
-    selectedChannelId: i,
-    selectedVoiceChannelId: s,
-    optInEnabled: r
+    voiceStates: i,
+    selectedChannelId: l,
+    selectedVoiceChannelId: r,
+    optInEnabled: a
   } = e;
   if (t === n.voiceChannelsSectionNumber) return 44;
   let {
-    hasDivider: u,
+    hasDivider: c,
     canHaveVoiceSummary: d
-  } = (0, o.ie)(n, r, t), h = u ? c.QP : 0;
-  if (!d || t === a.zm) return h;
+  } = (0, o.ie)(n, a, t), h = c ? u.QP : 0;
+  if (!d || t === s.zm) return h;
   let p = n.getNamedCategoryFromSection(t);
   return null == p ? h : (0, o.V5)({
     category: p,
-    selectedChannelId: i,
-    selectedVoiceChannelId: s,
-    voiceStates: l
-  }) ? c.Vf + h : h
+    selectedChannelId: l,
+    selectedVoiceChannelId: r,
+    voiceStates: i
+  }) ? u.Vf + h : h
 }
 
-function g(e, t, n) {
+function f(e, t, n) {
   if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
   let {
-    hasDivider: l,
-    canHaveVoiceSummary: i
+    hasDivider: i,
+    canHaveVoiceSummary: l
   } = (0, o.ie)(t, n, e);
-  return "section-footer-".concat(e).concat(l ? "-divider" : "").concat(i ? "-voice-summary" : "")
+  return "section-footer-".concat(e).concat(i ? "-divider" : "").concat(l ? "-voice-summary" : "")
 }
-t.ZP = i.memo(function(e) {
+t.ZP = l.memo(function(e) {
   let {
     sectionIndex: t,
     guildChannels: n,
-    guildChannelsVersion: u,
-    voiceStates: c,
+    guildChannelsVersion: c,
+    voiceStates: u,
     guildId: p,
-    selectedChannelId: g,
-    selectedVoiceChannelId: m,
-    optInEnabled: C
+    selectedChannelId: f,
+    selectedVoiceChannelId: _,
+    optInEnabled: g
   } = e, {
-    hasDivider: E,
-    canHaveVoiceSummary: f
-  } = i.useMemo(() => (0, o.ie)(n, C, t), [n, C, t, u]), _ = i.useMemo(() => t === a.zm ? null : n.getCategoryFromSection(t), [n, t, u]), I = i.useMemo(() => null != _ && _.isCollapsed ? (0, r.c4)({
-    channels: _.getChannelRecords(),
-    selectedChannelId: g,
-    selectedVoiceChannelId: m,
-    voiceStates: c
-  }) : [], [_, g, m, c]);
-  if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(h, {
+    hasDivider: m,
+    canHaveVoiceSummary: C
+  } = l.useMemo(() => (0, o.ie)(n, g, t), [n, g, t, c]), I = l.useMemo(() => t === s.zm ? null : n.getCategoryFromSection(t), [n, t, c]), E = l.useMemo(() => null != I && I.isCollapsed ? (0, a.c4)({
+    channels: I.getChannelRecords(),
+    selectedChannelId: f,
+    selectedVoiceChannelId: _,
+    voiceStates: u
+  }) : [], [I, f, _, u]);
+  if (t === n.voiceChannelsSectionNumber) return (0, i.jsx)(h, {
     guildChannels: n,
-    guildChannelsVersion: u
+    guildChannelsVersion: c
   });
-  let N = E ? (0, l.jsx)("div", {
+  let N = m ? (0, i.jsx)("div", {
     className: d.sectionDivider
   }) : null;
-  return f && 0 !== I.length ? (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)("div", {
+  return C && 0 !== E.length ? (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)("div", {
       className: d.voiceUserSummary,
-      children: (0, l.jsx)(s.Z, {
+      children: (0, i.jsx)(r.Z, {
         renderIcon: !0,
-        users: I,
+        users: E,
         max: 8,
         showUserPopout: !0,
         guildId: p

@@ -1,85 +1,85 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(481060),
   o = n(998951),
   c = n(702346),
   u = n(534469),
   d = n(511010),
   h = n(981631),
-  m = n(689938),
-  E = n(429759),
-  p = n(105461);
+  p = n(689938),
+  m = n(429759),
+  _ = n(105461);
 
-function g(e) {
+function f(e) {
   let {
     expanded: t,
     onClick: n,
-    count: i,
-    compact: s,
-    collapsedReason: a
+    count: a,
+    compact: l,
+    collapsedReason: s
   } = e;
-  return (0, l.jsx)(o.Z, {
-    compact: s,
+  return (0, i.jsx)(o.Z, {
+    compact: l,
     role: "group",
-    childrenMessageContent: (0, l.jsx)(c.Z, {
-      compact: s,
-      className: E.blockedSystemMessage,
-      iconNode: (0, l.jsx)(r.CloseSmallIcon, {
+    childrenMessageContent: (0, i.jsx)(c.Z, {
+      compact: l,
+      className: m.blockedSystemMessage,
+      iconNode: (0, i.jsx)(r.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: E.blockedIcon
+        className: m.blockedIcon
       }),
-      children: (0, l.jsxs)("div", {
-        className: E.blockedMessageText,
-        children: [a.format({
-          count: i
-        }), " —", " ", (0, l.jsx)(r.Clickable, {
+      children: (0, i.jsxs)("div", {
+        className: m.blockedMessageText,
+        children: [s.format({
+          count: a
+        }), " —", " ", (0, i.jsx)(r.Clickable, {
           tag: "span",
           onClick: n,
-          className: E.blockedAction,
-          children: t ? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({
-            count: i
-          }) : m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({
-            count: i
+          className: m.blockedAction,
+          children: t ? p.Z.Messages.BLOCKED_MESSAGES_HIDE.format({
+            count: a
+          }) : p.Z.Messages.BLOCKED_MESSAGES_SHOW.format({
+            count: a
           })
         })]
       })
     })
   })
 }
-t.Z = i.memo(function(e) {
+t.Z = a.memo(function(e) {
   var t;
   let {
     messages: n,
-    channel: s,
+    channel: l,
     compact: r = !1,
     unreadId: o,
     collapsedReason: c
   } = e, {
-    hasJumpTarget: m = !1
-  } = n, [f, C] = i.useState(m), _ = i.useCallback(() => C(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
-  return (0, l.jsxs)("div", {
-    className: a()({
-      [p.groupStart]: !0,
-      [E.expanded]: f
+    hasJumpTarget: p = !1
+  } = n, [E, g] = a.useState(p), C = a.useCallback(() => g(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
+  return (0, i.jsxs)("div", {
+    className: s()({
+      [_.groupStart]: !0,
+      [m.expanded]: E
     }),
-    children: [n.hasUnread && (!f || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, l.jsx)(d.Z, {
+    children: [n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, i.jsx)(d.Z, {
       isUnread: !0,
       id: o
-    }, "divider") : null, (0, l.jsx)(g, {
+    }, "divider") : null, (0, i.jsx)(f, {
       count: I,
       compact: r,
-      expanded: f,
-      onClick: _,
+      expanded: E,
+      onClick: C,
       collapsedReason: c
-    }, "collapsed-message-item"), f ? n.content.map((e, t) => {
+    }, "collapsed-message-item"), E ? n.content.map((e, t) => {
       if (e.type === h.ys_.DIVIDER && t > 0) {
-        var i, a;
-        let e = null !== (a = null === (i = n.content[t + 1]) || void 0 === i ? void 0 : i.isGroupStart) && void 0 !== a && a;
-        return (0, l.jsx)(d.Z, {
+        var a, s;
+        let e = null !== (s = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== s && s;
+        return (0, i.jsx)(d.Z, {
           isUnread: !0,
           isBeforeGroup: e,
           id: o
@@ -87,10 +87,10 @@ t.Z = i.memo(function(e) {
       }
       if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
         let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
-        return (0, l.jsx)(t, {
-          className: E.__invalid_blocked,
+        return (0, i.jsx)(t, {
+          className: m.__invalid_blocked,
           compact: r,
-          channel: s,
+          channel: l,
           message: e.content,
           groupId: e.groupId,
           flashKey: e.flashKey,

@@ -1,32 +1,32 @@
-s.d(t, {
+n.d(t, {
   _: function() {
     return I
   }
-}), s(47120);
-var n, a = s(735250),
-  i = s(470079),
-  r = s(120356),
-  l = s.n(r),
-  o = s(692547),
-  c = s(477690),
-  E = s(624138),
-  _ = s(162168),
-  u = s(937459);
+}), n(47120);
+var s, a = n(735250),
+  r = n(470079),
+  i = n(120356),
+  l = n.n(i),
+  o = n(692547),
+  c = n(477690),
+  d = n(624138),
+  _ = n(162168),
+  E = n(937459);
 
-function d(e, t, s) {
+function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
-let T = (0, E.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
+let T = (0, d.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
   I = Object.freeze({
-    BLACK: u.black,
-    GRAY: u.gray
+    BLACK: E.black,
+    GRAY: E.gray
   });
-class R extends(n = i.Component) {
+class R extends(s = r.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -40,23 +40,23 @@ class R extends(n = i.Component) {
     let {
       progress: e
     } = this.props, t = Math.max(0, Math.min(100, e)), {
-      barWidth: s
-    } = this.state, n = Math.abs(this.roundToNearestStep(s * (100 - t) / 100) - s);
+      barWidth: n
+    } = this.state, s = Math.abs(this.roundToNearestStep(n * (100 - t) / 100) - n);
     return {
-      transform: "translateX(".concat(n, "px)")
+      transform: "translateX(".concat(s, "px)")
     }
   }
   getGradientStyles() {
     let {
       gradientEnd: e,
       gradientStart: t,
-      progress: s
+      progress: n
     } = this.props, {
-      barWidth: n
+      barWidth: s
     } = this.state;
     return {
-      width: "".concat(n, "px"),
-      background: s <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
+      width: "".concat(s, "px"),
+      background: n <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
     }
   }
   render() {
@@ -64,28 +64,28 @@ class R extends(n = i.Component) {
       className: e,
       notchBackground: t
     } = this.props, {
-      barWidth: s
+      barWidth: n
     } = this.state;
     return (0, a.jsx)("div", {
-      className: u.wrapper,
+      className: E.wrapper,
       ref: this.sizerRef,
       children: (0, a.jsxs)("div", {
-        className: l()(u.container, e),
+        className: l()(E.container, e),
         style: this.getGradientStyles(),
         children: [(0, a.jsx)("div", {
-          className: u.progress,
+          className: E.progress,
           style: this.getProgressStyles()
-        }), 0 !== s && (0, a.jsx)(_.Z, {
-          width: s,
-          className: l()(u.notches, t)
+        }), 0 !== n && (0, a.jsx)(_.Z, {
+          width: n,
+          className: l()(E.notches, t)
         })]
       })
     })
   }
   constructor(...e) {
-    super(...e), d(this, "state", {
+    super(...e), u(this, "state", {
       barWidth: 0
-    }), d(this, "sizerRef", i.createRef()), d(this, "computeBars", () => {
+    }), u(this, "sizerRef", r.createRef()), u(this, "computeBars", () => {
       let {
         current: e
       } = this.sizerRef;
@@ -95,7 +95,7 @@ class R extends(n = i.Component) {
     })
   }
 }
-d(R, "defaultProps", {
+u(R, "defaultProps", {
   gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
   gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
 }), t.Z = R

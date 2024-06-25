@@ -1,11 +1,11 @@
-l.d(n, {
+t.d(e, {
   b: function() {
-    return i
+    return u
   }
 });
-var t = l(981631);
+var i = t(981631);
 
-function i(e, n, l, i) {
-  let r = null != l ? l : n;
-  return null != r && e.can(t.Plq.CREATE_INSTANT_INVITE, r) || null != n && null != n.vanityURLCode || (null == i ? void 0 : i.invite_code) != null
+function u(n, e, t, u) {
+  let l = null != t ? t : e;
+  return null != l && n.can(i.Plq.CREATE_INSTANT_INVITE, l) || null != e && null != e.vanityURLCode || (null == u ? void 0 : u.invite_code) != null
 }

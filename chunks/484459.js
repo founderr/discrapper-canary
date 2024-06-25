@@ -37,46 +37,46 @@ async function I(e, t) {
   let I, {
     withMutualGuilds: T = !1,
     withMutualFriendsCount: h = !1,
-    withMutualFriends: S = !1,
-    friendToken: f,
-    preloadUserBanner: N = !0,
-    dispatchWait: A = !1,
+    withMutualFriends: f = !1,
+    friendToken: S,
+    preloadUserBanner: A = !0,
+    dispatchWait: N = !1,
     guildId: m,
     channelId: O,
-    abortSignal: R
+    abortSignal: p
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   if ("" === e) return;
   (0, a.z)(), null != t && (0, s.vM)(t), null != m && !T && (T = !0), null != m && (I = null !== (l = null === (n = (0, o.Ur)({
     guildMember: _.ZP.getMember(m, e),
     channel: u.Z.getChannel(O)
   })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
-  let p = c.Z.getUserProfile(e),
+  let R = c.Z.getUserProfile(e),
     g = c.Z.getGuildMemberProfile(e, m),
     C = c.Z.getMutualGuilds(e),
     v = c.Z.getMutualFriends(e),
     L = c.Z.getMutualFriendsCount(e),
     D = c.Z.isFetchingProfile(e),
-    M = N ? d.Z : void 0,
+    M = A ? d.Z : void 0,
     P = null == C && T,
-    y = null == v && S,
+    y = null == v && f,
     U = null == L && h,
     b = null != m && null == g,
-    G = Date.now() - (null !== (E = null == p ? void 0 : p.lastFetched) && void 0 !== E ? E : 0) >= 6e4;
-  if (!!(!D && (P || U || y)) || !!b || !!G) A ? await i.Z.wait(() => (0, r.In)(e, {
+    G = Date.now() - (null !== (E = null == R ? void 0 : R.lastFetched) && void 0 !== E ? E : 0) >= 6e4;
+  if (!!(!D && (P || U || y)) || !!b || !!G) N ? await i.Z.wait(() => (0, r.In)(e, {
     withMutualGuilds: T,
-    withMutualFriends: S,
+    withMutualFriends: f,
     withMutualFriendsCount: h,
-    friendToken: f,
+    friendToken: S,
     guildId: m,
     connectionsRoleId: I,
-    abortSignal: R
+    abortSignal: p
   }, M)) : await (0, r.In)(e, {
     withMutualGuilds: T,
-    withMutualFriends: S,
+    withMutualFriends: f,
     withMutualFriendsCount: h,
-    friendToken: f,
+    friendToken: S,
     guildId: m,
     connectionsRoleId: I,
-    abortSignal: R
+    abortSignal: p
   }, M)
 }

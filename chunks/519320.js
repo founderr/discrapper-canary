@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
   EW: function() {
     return o
   },
@@ -6,34 +6,34 @@ t.d(n, {
     return c
   },
   tb: function() {
-    return u
+    return r
   }
 });
-var i, r, l = t(626135),
-  a = t(981631);
+var i, a, s = n(626135),
+  l = n(981631);
 
-function u(e, n, t, i) {
-  l.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+function r(e, t, n, i) {
+  s.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
     message_id: e,
-    total_duration_secs: n,
-    start_duration_secs: Math.min(null != n ? n : t, t),
+    total_duration_secs: t,
+    start_duration_secs: Math.min(null != t ? t : n, n),
     sender_user_id: i
   })
 }
 
-function o(e, n, t, i, r) {
-  l.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function o(e, t, n, i, a) {
+  s.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
     message_id: e,
-    total_duration_secs: n,
-    end_duration_secs: Math.min(null != n ? n : t, t),
+    total_duration_secs: t,
+    end_duration_secs: Math.min(null != t ? t : n, n),
     sender_user_id: i,
-    duration_listening_secs: r
+    duration_listening_secs: a
   })
 }
 
-function c(e, n) {
-  l.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function c(e, t) {
+  s.default.track(l.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
     message_id: e,
-    error_message: n
+    error_message: t
   })
-}(i = r || (r = {})).SENT = "sent", i.CANCELLED_DURATION = "cancelled_duration", i.CANCELLED_USER_REQUESTED = "cancelled_user_requested", i.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict", i.CANCELLED_ON_BACKGROUND = "cancelled_on_background"
+}(i = a || (a = {})).SENT = "sent", i.CANCELLED_DURATION = "cancelled_duration", i.CANCELLED_USER_REQUESTED = "cancelled_user_requested", i.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict", i.CANCELLED_ON_BACKGROUND = "cancelled_on_background"

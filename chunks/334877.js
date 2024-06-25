@@ -1,9 +1,9 @@
 n.d(t, {
   l: function() {
-    return l
+    return i
   }
 });
-let l = (0, n(652874).Z)(e => ({
+let i = (0, n(652874).Z)(e => ({
   canCloseModal: !0,
   onUpdateCanCloseModal(t) {
     e({

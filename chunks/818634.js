@@ -6,14 +6,14 @@ n.d(t, {
     return c
   }
 });
-var s = n(652874);
+var o = n(652874);
 let r = Object.freeze({
     isPopoutOpen: !1
   }),
-  o = (0, s.Z)(e => r),
+  s = (0, o.Z)(e => r),
   a = e => {
-    o.setState(() => ({
+    s.setState(() => ({
       isPopoutOpen: e
     }))
   },
-  c = o
+  c = s

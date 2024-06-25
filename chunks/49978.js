@@ -1,127 +1,127 @@
-l.d(n, {
+n.d(t, {
   Z: function() {
     return L
   },
   q: function() {
-    return V
+    return O
   }
-}), l(47120);
-var t = l(735250),
-  i = l(470079),
-  a = l(442837),
-  s = l(481060),
-  r = l(153867),
-  o = l(607070),
-  c = l(100527),
-  d = l(906732),
-  u = l(740492),
-  g = l(592125),
-  p = l(430824),
-  m = l(496675),
-  v = l(944486),
-  I = l(368874),
-  x = l(810090),
-  E = l(566620),
-  T = l(317381),
-  h = l(146936),
-  f = l(678173),
-  C = l(696068),
-  _ = l(361213),
-  S = l(952561),
-  j = l(778569),
-  Z = l(513202),
-  N = l(412019),
-  M = l(981631),
-  A = l(689938),
-  D = l(380121);
+}), n(47120);
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(481060),
+  r = n(153867),
+  o = n(607070),
+  c = n(100527),
+  d = n(906732),
+  u = n(740492),
+  g = n(592125),
+  p = n(430824),
+  v = n(496675),
+  m = n(944486),
+  x = n(368874),
+  I = n(810090),
+  h = n(566620),
+  _ = n(317381),
+  f = n(146936),
+  T = n(678173),
+  C = n(696068),
+  E = n(361213),
+  S = n(952561),
+  j = n(778569),
+  N = n(513202),
+  M = n(412019),
+  A = n(981631),
+  Z = n(689938),
+  b = n(380121);
 
 function y(e) {
-  return (0, a.e7)([p.Z, m.Z], () => {
-    let n = p.Z.getGuild(e);
-    return null != n && m.Z.can(M.Plq.CREATE_INSTANT_INVITE, n)
+  return (0, l.e7)([p.Z, v.Z], () => {
+    let t = p.Z.getGuild(e);
+    return null != t && v.Z.can(A.Plq.CREATE_INSTANT_INVITE, t)
   }, [e])
 }
-let b = ["embedded_background"];
+let D = ["embedded_background"];
 
 function L(e) {
-  var n, l;
+  var t, n;
   let {
     applicationId: c,
     guildId: d,
-    selectedChannelId: m,
-    setSelectedChannelId: T,
-    enableSelectedTextChannelInvite: h
-  } = e, S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), Z = (0, a.e7)([g.Z], () => g.Z.getChannel(m)), M = (0, f.T)(null != d ? d : null, null != c ? c : "", Z), [L, V] = i.useState(h && !u.ZP.disableInviteWithTextChannelActivityLaunch), R = (0, C.F)(d);
-  i.useEffect(() => {
+    selectedChannelId: v,
+    setSelectedChannelId: _,
+    enableSelectedTextChannelInvite: f
+  } = e, S = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), N = (0, l.e7)([g.Z], () => g.Z.getChannel(v)), A = (0, T.T)(null != d ? d : null, null != c ? c : "", N), [L, O] = a.useState(f && !u.ZP.disableInviteWithTextChannelActivityLaunch), B = (0, C.F)(d);
+  a.useEffect(() => {
     var e;
-    E.w1({
+    h.w1({
       guildId: d
-    }), T(null !== (e = (0, C.d)({
+    }), _(null !== (e = (0, C.d)({
       guildId: d
     })) && void 0 !== e ? e : void 0)
-  }, [d, T]);
-  let O = null == M ? void 0 : M.activity.activity_preview_video_asset_id,
-    B = null != O ? (0, _.Z)(null !== (n = null == M ? void 0 : M.application.id) && void 0 !== n ? n : "", O) : null,
+  }, [d, _]);
+  let V = null == A ? void 0 : A.activity.activity_preview_video_asset_id,
+    R = null != V ? (0, E.Z)(null !== (t = null == A ? void 0 : A.application.id) && void 0 !== t ? t : "", V) : null,
     {
-      url: H
+      url: k
     } = (0, j.Z)({
-      applicationId: null !== (l = null == M ? void 0 : M.application.id) && void 0 !== l ? l : "",
+      applicationId: null !== (n = null == A ? void 0 : A.application.id) && void 0 !== n ? n : "",
       size: 1024,
-      names: b
+      names: D
     }),
-    P = (0, a.e7)([p.Z], () => p.Z.getGuild(d)),
-    F = (0, a.e7)([g.Z, v.Z], () => g.Z.getChannel(v.Z.getChannelId())),
-    k = y(null != d ? d : void 0);
-  if ((null == M ? void 0 : M.application) == null || null == P) return null;
-  let Y = (null == F ? void 0 : F.name) == null || (null == F ? void 0 : F.name) === "" ? A.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(F.name);
-  return (0, t.jsxs)(s.Scroller, {
-    className: D.scroll,
-    children: [null != B || null != H ? (0, t.jsx)(I.Z, {
+    H = (0, l.e7)([p.Z], () => p.Z.getGuild(d)),
+    F = (0, l.e7)([g.Z, m.Z], () => g.Z.getChannel(m.Z.getChannelId())),
+    P = y(null != d ? d : void 0);
+  if ((null == A ? void 0 : A.application) == null || null == H) return null;
+  let U = (null == F ? void 0 : F.name) == null || (null == F ? void 0 : F.name) === "" ? Z.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(F.name);
+  return (0, i.jsxs)(s.Scroller, {
+    className: b.scroll,
+    children: [null != R || null != k ? (0, i.jsx)(x.Z, {
       aspectRatio: 16 / 9,
-      className: D.imageContainer,
-      children: (0, t.jsx)(x.Z, {
-        className: D.video,
-        src: B,
+      className: b.imageContainer,
+      children: (0, i.jsx)(I.Z, {
+        className: b.video,
+        src: R,
         loop: !0,
         autoPlay: !S,
-        poster: H,
+        poster: k,
         muted: !0
       })
-    }) : null, (0, t.jsxs)("div", {
-      className: D.descriptionArea,
-      children: [(0, t.jsx)(s.Heading, {
+    }) : null, (0, i.jsxs)("div", {
+      className: b.descriptionArea,
+      children: [(0, i.jsx)(s.Heading, {
         variant: "heading-xl/semibold",
-        children: null == M ? void 0 : M.application.name
-      }), (0, t.jsx)(s.Text, {
-        className: D.descriptionAreaSubtext,
+        children: null == A ? void 0 : A.application.name
+      }), (0, i.jsx)(s.Text, {
+        className: b.descriptionAreaSubtext,
         variant: "text-md/normal",
-        children: null == M ? void 0 : M.application.description
+        children: null == A ? void 0 : A.application.description
       })]
-    }), (0, t.jsx)(s.Select, {
-      placeholder: A.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-      optionClassName: D.__invalid_option,
-      options: R,
+    }), (0, i.jsx)(s.Select, {
+      placeholder: Z.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
+      optionClassName: b.__invalid_option,
+      options: B,
       isSelected: e => {
         let {
-          channel: n
+          channel: t
         } = e;
-        return n.id === m
+        return t.id === v
       },
       select: e => {
         let {
-          channel: n
+          channel: t
         } = e;
-        return T(n.id)
+        return _(t.id)
       },
       serialize: e => {
         let {
-          channel: n
+          channel: t
         } = e;
-        return n.id
+        return t.id
       },
       renderOptionValue: () => {
-        let e = R.find(e => e.value.channel.id === m);
-        return null == e ? null : (0, t.jsx)(N.O, {
+        let e = B.find(e => e.value.channel.id === v);
+        return null == e ? null : (0, i.jsx)(M.O, {
           channel: e.value.channel,
           users: e.value.users
         })
@@ -129,84 +129,84 @@ function L(e) {
       renderOptionLabel: e => {
         let {
           value: {
-            channel: n,
-            users: l
+            channel: t,
+            users: n
           }
         } = e;
-        return (0, t.jsx)(N.O, {
-          channel: n,
-          users: l
+        return (0, i.jsx)(M.O, {
+          channel: t,
+          users: n
         })
       }
-    }), k && h ? (0, t.jsxs)(s.Clickable, {
-      className: D.checkboxContainer,
+    }), P && f ? (0, i.jsxs)(s.Clickable, {
+      className: b.checkboxContainer,
       onClick: () => {
         let e = !L;
         r.ZP.updatedUnsyncedSettings({
           disableInviteWithTextChannelActivityLaunch: !e
-        }), V(e)
+        }), O(e)
       },
-      children: [(0, t.jsx)(s.Checkbox, {
+      children: [(0, i.jsx)(s.Checkbox, {
         type: s.Checkbox.Types.INVERTED,
-        className: D.checkbox,
+        className: b.checkbox,
         value: L,
         displayOnly: !0
-      }), (0, t.jsxs)(s.Text, {
+      }), (0, i.jsxs)(s.Text, {
         variant: "text-sm/normal",
-        children: [A.Z.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, " ", (0, t.jsx)("strong", {
-          children: Y
+        children: [Z.Z.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, " ", (0, i.jsx)("strong", {
+          children: U
         })]
       })]
     }) : null]
   })
 }
 
-function V(e) {
+function O(e) {
   let {
-    applicationId: n,
-    guildId: l,
-    locationObject: i,
+    applicationId: t,
+    guildId: n,
+    locationObject: a,
     onBack: r,
     onClose: o,
     selectedChannelId: p,
-    enableSelectedTextChannelInvite: m
+    enableSelectedTextChannelInvite: v
   } = e, {
-    analyticsLocations: I
-  } = (0, d.ZP)(c.Z.ACTIVITY_CHANNEL_SELECTOR), x = (0, a.e7)([g.Z], () => g.Z.getChannel(p)), C = (0, f.T)(null != l ? l : null, null != n ? n : null, x), _ = (0, S.Z)(), j = (0, a.e7)([g.Z, v.Z], () => g.Z.getChannel(v.Z.getChannelId())), N = (0, a.e7)([u.ZP], () => m && !u.ZP.disableInviteWithTextChannelActivityLaunch), b = (0, a.e7)([T.ZP], () => null != p && "" !== p && T.ZP.getEmbeddedActivitiesForChannel(p).some(e => e.applicationId === n)), L = y(l), V = async () => {
+    analyticsLocations: x
+  } = (0, d.ZP)(c.Z.ACTIVITY_CHANNEL_SELECTOR), I = (0, l.e7)([g.Z], () => g.Z.getChannel(p)), C = (0, T.T)(null != n ? n : null, null != t ? t : null, I), E = (0, S.Z)(), j = (0, l.e7)([g.Z, m.Z], () => g.Z.getChannel(m.Z.getChannelId())), M = (0, l.e7)([u.ZP], () => v && !u.ZP.disableInviteWithTextChannelActivityLaunch), D = (0, l.e7)([_.ZP], () => null != p && "" !== p && _.ZP.getEmbeddedActivitiesForChannel(p).some(e => e.applicationId === t)), L = y(n), O = async () => {
     var e;
-    if (null != p && "" !== p && null != C && null != l && "" !== l) await (0, h.Z)({
+    if (null != p && "" !== p && null != C && null != n && "" !== n) await (0, f.Z)({
       targetApplicationId: null === (e = C.application) || void 0 === e ? void 0 : e.id,
-      currentEmbeddedApplication: _,
-      locationObject: i,
+      currentEmbeddedApplication: E,
+      locationObject: a,
       channelId: p,
-      guildId: l,
-      embeddedActivitiesManager: Z.Z,
-      analyticsLocations: I
-    }) && (o(), null != j && L && N && await E.sN({
+      guildId: n,
+      embeddedActivitiesManager: N.Z,
+      analyticsLocations: x
+    }) && (o(), null != j && L && M && await h.sN({
       activityChannelId: p,
       invitedChannelId: j.id,
       applicationId: C.application.id,
-      location: M.Sbl.ACTIVITY_SHELF
+      location: A.Sbl.ACTIVITY_SHELF
     }))
   };
-  return (0, t.jsx)(d.Gt, {
-    value: I,
-    children: (0, t.jsxs)("div", {
-      className: D.footerContainer,
-      children: [(0, t.jsx)(s.Clickable, {
+  return (0, i.jsx)(d.Gt, {
+    value: x,
+    children: (0, i.jsxs)("div", {
+      className: b.footerContainer,
+      children: [(0, i.jsx)(s.Clickable, {
         onClick: r,
-        className: D.backToBrowse,
-        children: (0, t.jsx)(s.Text, {
+        className: b.backToBrowse,
+        children: (0, i.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-md/normal",
-          children: A.Z.Messages.BACK
+          children: Z.Z.Messages.BACK
         })
-      }), null == p ? (0, t.jsx)("div", {}) : (0, t.jsx)(s.Button, {
-        className: D.launchButton,
-        onClick: V,
-        color: b ? s.Button.Colors.GREEN : void 0,
+      }), null == p ? (0, i.jsx)("div", {}) : (0, i.jsx)(s.Button, {
+        className: b.launchButton,
+        onClick: O,
+        color: D ? s.Button.Colors.GREEN : void 0,
         fullWidth: !0,
-        children: b ? A.Z.Messages.EMBEDDED_ACTIVITIES_JOIN : A.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH
+        children: D ? Z.Z.Messages.EMBEDDED_ACTIVITIES_JOIN : Z.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH
       })]
     })
   })

@@ -1,30 +1,30 @@
 t.d(A, {
   P: function() {
-    return l
+    return o
   },
   W: function() {
-    return o
+    return l
   }
 }), t(411104);
 var n = t(735250),
   a = t(470079),
-  s = t(828762);
-let r = a.createContext(void 0);
+  r = t(828762);
+let s = a.createContext(void 0);
 
-function l() {
-  let e = a.useContext(r);
+function o() {
+  let e = a.useContext(s);
   if (null == e) throw Error("No GuildProductAttachmentManagerContextProvider found");
   return e
 }
 
-function o(e) {
+function l(e) {
   let {
     children: A,
     guildId: t,
     ...a
-  } = e, l = (0, s.Z)(t, a);
-  return (0, n.jsx)(r.Provider, {
-    value: l,
+  } = e, o = (0, r.Z)(t, a);
+  return (0, n.jsx)(s.Provider, {
+    value: o,
     children: A
   })
 }

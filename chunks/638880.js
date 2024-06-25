@@ -22,33 +22,33 @@ async function h(e) {
     applicationId: t,
     currentEmbeddedApplication: n,
     activityChannelId: h,
-    locationObject: S,
-    embeddedActivitiesManager: f,
-    analyticsLocations: N
-  } = e, A = r.Z.getChannel(h), m = null == A ? void 0 : A.getGuildId(), O = null == m || "" === m, R = o.default.getCurrentUser();
-  if (null == A || O && !A.isPrivate() || null == h || null == R) return Promise.resolve(!1);
+    locationObject: f,
+    embeddedActivitiesManager: S,
+    analyticsLocations: A
+  } = e, N = r.Z.getChannel(h), m = null == N ? void 0 : N.getGuildId(), O = null == m || "" === m, p = o.default.getCurrentUser();
+  if (null == N || O && !N.isPrivate() || null == h || null == p) return Promise.resolve(!1);
   if (s.Z.getVoiceChannelId() === h && (null == n ? void 0 : n.id) === t) return (0, E.Z)(m, h), Promise.resolve(!0);
   if (!await (0, u.p)({
       applicationId: t,
       application: i.Z.getApplication(t),
-      channel: A,
+      channel: N,
       currentEmbeddedApplication: n,
-      embeddedActivitiesManager: f,
-      user: R
+      embeddedActivitiesManager: S,
+      user: p
     })) return !1;
-  let p = (0, _.Z)(A.id),
-    g = I.wP.includes(A.type);
-  if (p) {
+  let R = (0, _.Z)(N.id),
+    g = I.wP.includes(N.type);
+  if (R) {
     if (!await (0, c.Z)({
-        channelId: A.id,
+        channelId: N.id,
         bypassChangeModal: null != n
       })) return !1
-  } else if (!(0, a.WS)(A, !1, "joinEmbeddedActivity") || !g) return !1;
-  return (0, E.Z)(m, h), (0, l.J$)(h, t, N), (0, d.Z)({
+  } else if (!(0, a.WS)(N, !1, "joinEmbeddedActivity") || !g) return !1;
+  return (0, E.Z)(m, h), (0, l.J$)(h, t, A), (0, d.Z)({
     type: T.q5t.JOIN,
-    userId: R.id,
+    userId: p.id,
     applicationId: t,
-    locationObject: S,
-    analyticsLocations: N
+    locationObject: f,
+    analyticsLocations: A
   }), !0
 }

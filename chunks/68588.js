@@ -23,7 +23,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(s = i || (i = {})).TEXT = "text", s.ATTACHMENT = "attachment", s.EMBED = "embed";
-let S = e => {
+let f = e => {
     let {
       className: t
     } = e;
@@ -32,7 +32,7 @@ let S = e => {
       children: I.Z.Messages.SPOILER
     })
   },
-  f = e => {
+  S = e => {
     let {
       className: t,
       isSingleMosaicItem: n,
@@ -53,7 +53,7 @@ let S = e => {
       })
     })
   },
-  N = e => {
+  A = e => {
     let {
       reason: t = d.wk.SPOILER,
       className: n,
@@ -61,16 +61,16 @@ let S = e => {
     } = e;
     switch (t) {
       case d.wk.SPOILER:
-        return (0, o.jsx)(S, {
+        return (0, o.jsx)(f, {
           className: n
         });
       case d.wk.EXPLICIT_CONTENT:
-        return (0, o.jsx)(f, {
+        return (0, o.jsx)(S, {
           isSingleMosaicItem: i,
           className: n
         });
       case d.wk.POTENTIAL_EXPLICIT_CONTENT:
-        return (0, o.jsx)(f, {
+        return (0, o.jsx)(S, {
           isSingleMosaicItem: i,
           className: n,
           obscureOnly: !0
@@ -79,7 +79,7 @@ let S = e => {
         return (0, E.vE)(t)
     }
   },
-  A = e => {
+  N = e => {
     let {
       obscureReason: t,
       isVisible: n,
@@ -145,14 +145,14 @@ class O extends(r = a.PureComponent) {
           }),
           role: I ? "presentation" : "button",
           tabIndex: I ? -1 : 0,
-          children: [I || t ? null : (0, o.jsx)(N, {
+          children: [I || t ? null : (0, o.jsx)(A, {
             reason: s,
             isSingleMosaicItem: a
           }), (0, o.jsx)("div", {
             "aria-hidden": !I,
             className: T.spoilerInnerContainer,
             children: e(!I)
-          }), (0, o.jsx)(A, {
+          }), (0, o.jsx)(N, {
             obscureReason: s,
             isVisible: _,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -169,7 +169,7 @@ class O extends(r = a.PureComponent) {
           }),
           role: I ? "presentation" : "button",
           tabIndex: I ? -1 : 0,
-          children: [I || t ? null : (0, o.jsx)(N, {
+          children: [I || t ? null : (0, o.jsx)(A, {
             reason: s,
             isSingleMosaicItem: a
           }), (0, o.jsx)("div", {
@@ -205,14 +205,14 @@ class O extends(r = a.PureComponent) {
           }),
           role: _ ? "presentation" : "button",
           tabIndex: _ ? -1 : 0,
-          children: [_ ? null : (0, o.jsx)(N, {
+          children: [_ ? null : (0, o.jsx)(A, {
             reason: s,
             isSingleMosaicItem: i
           }), (0, o.jsx)("div", {
             "aria-hidden": !_,
             className: T.spoilerInnerContainer,
             children: e(!_)
-          }), (0, o.jsx)(A, {
+          }), (0, o.jsx)(N, {
             obscureReason: s,
             isVisible: a,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -228,7 +228,7 @@ class O extends(r = a.PureComponent) {
           style: n,
           role: _ ? "presentation" : "button",
           tabIndex: _ ? -1 : 0,
-          children: [_ ? null : (0, o.jsx)(N, {
+          children: [_ ? null : (0, o.jsx)(A, {
             reason: s,
             className: T.embed
           }), (0, o.jsx)("div", {

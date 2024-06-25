@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250),
@@ -19,7 +19,7 @@ var i = n(735250),
   T = n(192275);
 let h = [8, 8, 8, 8];
 
-function S(e) {
+function f(e) {
   let {
     icon: t,
     isSelected: n,
@@ -41,7 +41,7 @@ function S(e) {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     category: t,
     categoryIndex: n,
@@ -84,7 +84,7 @@ function f(e) {
     children: e => (function(e, t, n, r, s) {
       switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
-          return (0, i.jsx)(S, {
+          return (0, i.jsx)(f, {
             ...r,
             icon: l.StarIcon,
             onClick: t,
@@ -92,7 +92,7 @@ function f(e) {
             listItemProps: s
           }, e.key);
         case E.bg.RECENTLY_HEARD:
-          return (0, i.jsx)(S, {
+          return (0, i.jsx)(f, {
             ...r,
             icon: l.ClockIcon,
             onClick: t,
@@ -100,7 +100,7 @@ function f(e) {
             listItemProps: s
           }, e.key);
         case E.bg.FREQUENTLY_USED:
-          return (0, i.jsx)(S, {
+          return (0, i.jsx)(f, {
             ...r,
             icon: l.AnalyticsIcon,
             onClick: t,
@@ -119,7 +119,7 @@ function f(e) {
             })
           }, e.key);
         case E.bg.DEFAULTS:
-          return (0, i.jsx)(S, {
+          return (0, i.jsx)(f, {
             ...r,
             icon: l.ClydeIcon,
             onClick: t,
@@ -133,12 +133,12 @@ function f(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     soundboardListRef: t,
     categories: n,
     listPadding: s = h
-  } = e, o = r.useRef(null), a = r.useCallback((e, t, n, r) => (0, i.jsx)(f, {
+  } = e, o = r.useRef(null), a = r.useCallback((e, t, n, r) => (0, i.jsx)(S, {
     category: e,
     categoryIndex: t,
     onClick: n,

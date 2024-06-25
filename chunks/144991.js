@@ -1,26 +1,26 @@
 t(411104);
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(120356),
-  a = t.n(s),
-  r = t(149765),
-  o = t(253923),
+  l = t.n(s),
+  o = t(149765),
+  r = t(253923),
   c = t(481060),
   d = t(901524),
   u = t(291913),
   I = t(185402),
-  N = t(331651);
-class E extends l.PureComponent {
+  m = t(331651);
+class _ extends a.PureComponent {
   getOverwriteValue(e) {
     let {
       allow: n,
       deny: t
     } = this.props;
     if (null == n || null == t) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
-    return r.e$(n, e) ? d.y.ALLOW : r.e$(t, e) ? d.y.DENY : d.y.PASSTHROUGH
+    return o.e$(n, e) ? d.y.ALLOW : o.e$(t, e) ? d.y.DENY : d.y.PASSTHROUGH
   }
   getPermissionValue(e, n) {
-    return r.e$(n, e)
+    return o.e$(n, e)
   }
   handleChange(e, n) {
     let {
@@ -47,32 +47,32 @@ class E extends l.PureComponent {
     let {
       title: n,
       description: t,
-      helpdeskArticleId: l,
+      helpdeskArticleId: a,
       flag: s
     } = e, {
-      permissions: r,
+      permissions: o,
       locked: d,
-      permissionRender: N
-    } = this.props, E = null == N ? void 0 : N(s), T = !!(d || E), m = "string" == typeof E ? this.renderDisabledIndicator(E) : null, _ = a()({
-      [I.title]: null != m
+      permissionRender: m
+    } = this.props, _ = null == m ? void 0 : m(s), N = !!(d || _), E = "string" == typeof _ ? this.renderDisabledIndicator(_) : null, T = l()({
+      [I.title]: null != E
     });
-    return null == r ? (0, i.jsxs)(u.Z, {
-      disabled: T,
+    return null == o ? (0, i.jsxs)(u.Z, {
+      disabled: N,
       value: this.getOverwriteValue(s),
       onChange: e => this.handleChange(s, e),
-      note: (0, o._u)(t),
-      helpdeskArticleId: l,
-      children: [m, (0, i.jsx)("span", {
-        className: _,
+      note: (0, r._u)(t),
+      helpdeskArticleId: a,
+      children: [E, (0, i.jsx)("span", {
+        className: T,
         children: n
       })]
     }, String(s)) : (0, i.jsxs)(c.FormSwitch, {
-      disabled: T,
-      value: this.getPermissionValue(s, r),
+      disabled: N,
+      value: this.getPermissionValue(s, o),
       onChange: e => this.handleChange(s, e),
-      note: (0, o._u)(t),
-      children: [m, (0, i.jsx)("span", {
-        className: _,
+      note: (0, r._u)(t),
+      children: [E, (0, i.jsx)("span", {
+        className: T,
         children: n
       })]
     }, String(s))
@@ -87,17 +87,17 @@ class E extends l.PureComponent {
       children: (0, i.jsxs)(c.HeadingLevel, {
         component: (0, i.jsx)(c.FormTitle, {
           tag: c.FormTitleTags.H5,
-          className: null != e.description ? N.marginBottom8 : N.marginBottom20,
+          className: null != e.description ? m.marginBottom8 : m.marginBottom20,
           children: e.title
         }),
         children: [null != e.description && (0, i.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          className: N.marginBottom20,
+          className: m.marginBottom20,
           children: e.description
         }), e.permissions.map(this.renderComponent, this)]
       })
     })
   }
 }
-n.Z = E
+n.Z = _

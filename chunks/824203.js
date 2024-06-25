@@ -24,17 +24,17 @@ function _(e, t, n) {
   if (null == e || T) return !1;
   let {
     context: h,
-    userId: S,
-    roleIds: f,
-    isImpersonating: N
-  } = d, A = null === (u = I.result) || void 0 === u ? void 0 : null === (i = u.sections[e.applicationId]) || void 0 === i ? void 0 : i.descriptor;
-  if (void 0 !== A) {
-    let n = (0, l.ZJ)(A.permissions, t, null == t ? void 0 : t.guild_id),
-      i = (0, l.ML)(A.permissions, h.guild_id, S, f, N);
+    userId: f,
+    roleIds: S,
+    isImpersonating: A
+  } = d, N = null === (u = I.result) || void 0 === u ? void 0 : null === (i = u.sections[e.applicationId]) || void 0 === i ? void 0 : i.descriptor;
+  if (void 0 !== N) {
+    let n = (0, l.ZJ)(N.permissions, t, null == t ? void 0 : t.guild_id),
+      i = (0, l.ML)(N.permissions, h.guild_id, f, S, A);
     if ((0, l.Ft)(e, d, {
         applicationAllowedForUser: i,
         applicationAllowedForChannel: n,
-        commandBotId: A.botId
+        commandBotId: N.botId
       }) === l.mF.ALLOWED) return !1
   }
   let m = null === (c = E.result) || void 0 === c ? void 0 : null === (_ = c.sections[e.applicationId]) || void 0 === _ ? void 0 : _.commands;

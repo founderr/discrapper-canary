@@ -4,10 +4,10 @@ n.d(t, {
     return _
   },
   OY: function() {
-    return f
+    return S
   },
   SG: function() {
-    return S
+    return f
   },
   T1: function() {
     return d
@@ -80,11 +80,11 @@ function h(e) {
   return (null == e ? void 0 : e.dmsDisabledUntil) != null && new Date(e.dmsDisabledUntil) > new Date
 }
 
-function S(e) {
+function f(e) {
   return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date
 }
 
-function f(e, t) {
+function S(e, t) {
   var n;
   let i = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
   if (null == i) return "";

@@ -1,45 +1,45 @@
 t(47120);
-var n, i, a, l, r = t(442837),
-  o = t(570140),
+var n, a, i, r, o = t(442837),
+  l = t(570140),
   c = t(911969);
-let E = !1,
-  d = [];
-class _ extends(n = r.ZP.Store) {
+let d = !1,
+  _ = [];
+class E extends(n = o.ZP.Store) {
   hasFetchedCredentials() {
-    return E
-  }
-  getCredentials() {
     return d
   }
+  getCredentials() {
+    return _
+  }
 }
-l = "WebAuthnStore", (a = "displayName") in(i = _) ? Object.defineProperty(i, a, {
-  value: l,
+r = "WebAuthnStore", (i = "displayName") in(a = E) ? Object.defineProperty(a, i, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = l, s.Z = new _(o.Z, {
+}) : a[i] = r, s.Z = new E(l.Z, {
   LOGOUT: function() {
-    d = [], E = !1
+    _ = [], d = !1
   },
   MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
-    d = e.credentials, E = !0
+    _ = e.credentials, d = !0
   },
   AUTHENTICATOR_CREATE(e) {
     let {
       credential: s
     } = e;
-    s.type === c.Pi.WEBAUTHN && void 0 === d.find(e => e.id === s.id) && (d = [...d, s])
+    s.type === c.Pi.WEBAUTHN && void 0 === _.find(e => e.id === s.id) && (_ = [..._, s])
   },
   AUTHENTICATOR_UPDATE(e) {
     let {
       credential: s
     } = e;
-    s.type === c.Pi.WEBAUTHN && (d = d.map(e => e.id === s.id ? s : e))
+    s.type === c.Pi.WEBAUTHN && (_ = _.map(e => e.id === s.id ? s : e))
   },
   AUTHENTICATOR_DELETE(e) {
     let {
       credential: s
     } = e;
-    s.type === c.Pi.WEBAUTHN && (d = d.filter(e => e.id !== s.id))
+    s.type === c.Pi.WEBAUTHN && (_ = _.filter(e => e.id !== s.id))
   }
 })

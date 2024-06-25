@@ -1,11 +1,11 @@
 n.d(t, {
   D: function() {
-    return i
+    return l
   }
 });
-var l = n(689938);
+var i = n(689938);
 
-function i(e) {
+function l(e) {
   if (null == e) return null;
   switch (e.type) {
     case "embedded-activities":
@@ -15,7 +15,7 @@ function i(e) {
       };
     case "go-live":
       return {
-        subtitle: l.Z.Messages.GO_LIVE_SUBTITLE
+        subtitle: i.Z.Messages.GO_LIVE_SUBTITLE
       }
   }
   return null

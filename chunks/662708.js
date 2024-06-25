@@ -9,7 +9,7 @@ var a = t(735250),
   d = t(689938),
   c = t(792137);
 
-function u(e, s, t) {
+function m(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -17,7 +17,7 @@ function u(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-let m = (0, n.Un)({
+let u = (0, n.Un)({
   createPromise: () => t.e("5609").then(t.bind(t, 336231)),
   webpackId: 336231
 });
@@ -58,7 +58,7 @@ class p extends o.PureComponent {
           }), (0, a.jsx)(l.FormItem, {
             title: d.Z.Messages.GUILD_FOLDER_COLOR,
             className: c.formItem,
-            children: (0, a.jsx)(m, {
+            children: (0, a.jsx)(u, {
               defaultColor: h.Wyy,
               colors: h.pmI,
               value: null != t ? t : h.Wyy,
@@ -77,20 +77,20 @@ class p extends o.PureComponent {
   }
   constructor(...e) {
     var s;
-    super(...e), u(this, "state", {
+    super(...e), m(this, "state", {
       name: null !== (s = this.props.folderName) && void 0 !== s ? s : "",
       color: this.props.folderColor
-    }), u(this, "close", () => {
+    }), m(this, "close", () => {
       this.props.onClose()
-    }), u(this, "handleNameChange", e => {
+    }), m(this, "handleNameChange", e => {
       this.setState({
         name: e
       })
-    }), u(this, "handleColorChange", e => {
+    }), m(this, "handleColorChange", e => {
       this.setState({
         color: e
       })
-    }), u(this, "handleSubmit", e => {
+    }), m(this, "handleSubmit", e => {
       e.preventDefault();
       let {
         folderId: s

@@ -1,4 +1,4 @@
-t.r(e.exports = {
+n.r(e.exports = {
   wrapper: "wrapper_eb1d8c",
   video: "video_eb1d8c",
   videoCover: "videoCover_eb1d8c",

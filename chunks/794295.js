@@ -19,17 +19,17 @@ t.Z = r.memo(function(e) {
     ...T
   } = e, {
     analyticsLocations: h
-  } = (0, u.ZP)(l.Z.MASKED_LINK), S = r.useCallback(t => (0, _.q)(e, t, h), [h, e]), f = r.useCallback(e => {
-    1 === e.button && S(e)
-  }, [S]), N = o().sanitizeUrl(c);
+  } = (0, u.ZP)(l.Z.MASKED_LINK), f = r.useCallback(t => (0, _.q)(e, t, h), [h, e]), S = r.useCallback(e => {
+    1 === e.button && f(e)
+  }, [f]), A = o().sanitizeUrl(c);
   return (0, i.jsx)(a.Anchor, {
     ...T,
     title: s,
     target: "_blank",
     rel: "noreferrer noopener",
-    href: N,
-    onClick: S,
-    onAuxClick: f,
+    href: A,
+    onClick: f,
+    onAuxClick: S,
     children: null != d ? d : s
   })
 })

@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return E
+    return _
   }
 });
 var i = n(735250);
 n(470079);
 var s = n(13245),
-  l = n(703656),
+  a = n(703656),
   o = n(974180),
-  a = n(237997),
-  r = n(454902),
+  r = n(237997),
+  l = n(454902),
   c = n(150097),
   d = n(557177),
   u = n(312839),
@@ -18,15 +18,15 @@ var s = n(13245),
   p = n(987650),
   f = n(689938);
 
-function E(e, t, n, E) {
+function _(e, t, n, _) {
   var g;
   let {
     icon: m,
-    title: Z,
-    body: I
+    title: E,
+    body: Z
   } = (0, c.Xi)(e, t, n), {
-    trackView: S,
-    trackClick: _
+    trackView: I,
+    trackClick: S
   } = (0, u.R)(p.n0.TextChat, {
     notif_type: p.n0.TextChat,
     notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
@@ -37,10 +37,10 @@ function E(e, t, n, E) {
     channel_type: e.type
   });
   return {
-    colorScheme: r.IC.PRIMARY,
+    colorScheme: l.IC.PRIMARY,
     icon: m,
-    title: Z,
-    body: I,
+    title: E,
+    body: Z,
     renderFooter: e => e ? (0, i.jsx)("div", {
       style: {
         textAlign: "center"
@@ -49,13 +49,13 @@ function E(e, t, n, E) {
     }) : null,
     maxBodyLines: 2,
     onNotificationShow: () => {
-      E && (0, d.GN)(o.Ay, o.yk), S()
+      _ && (0, d.GN)(o.Ay, o.yk), I()
     },
     onNotificationClick: () => {
-      (0, l.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), _("jump"), a.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1)
+      (0, a.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S("jump"), r.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      _("dismiss")
+      S("dismiss")
     }
   }
 }

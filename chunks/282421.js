@@ -1,9 +1,9 @@
 n.d(t, {
   B: function() {
-    return s
+    return i
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-05_quest_home",
   label: "Quest Home",

@@ -17,10 +17,10 @@ var i, r = n(735250),
   I = n(823023),
   T = n(981631),
   h = n(768760),
-  S = n(689938),
-  f = n(278919),
-  N = n(167969),
-  A = n(557256);
+  f = n(689938),
+  S = n(278919),
+  A = n(167969),
+  N = n(557256);
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,9 +42,9 @@ class O extends(i = s.PureComponent) {
       placeholderVersion: l,
       alt: _,
       width: E,
-      height: N,
-      maxWidth: A = E,
-      maxHeight: m = N,
+      height: A,
+      maxWidth: N = E,
+      maxHeight: m = A,
       minWidth: O,
       minHeight: g,
       mediaLayoutType: C,
@@ -59,32 +59,32 @@ class O extends(i = s.PureComponent) {
       useFullWidth: G = !1,
       ...w
     } = this.props;
-    if (1 === E && 1 === N) return null;
-    let B = (0, d.Tj)({
+    if (1 === E && 1 === A) return null;
+    let x = (0, d.Tj)({
         width: E,
-        height: N,
-        maxWidth: A,
+        height: A,
+        maxWidth: N,
         maxHeight: m,
         minWidth: O,
         minHeight: g
       }),
-      x = 0 !== B.width ? B.width / B.height : 1;
+      B = 0 !== x.width ? x.width / x.height : 1;
     "" !== s && i !== T.zo9.ERROR ? e = P({
       src: s,
-      size: B,
+      size: x,
       alt: _,
       className: n,
       mediaLayoutType: C
-    }) : i !== T.zo9.LOADING && (e = (0, r.jsx)(R, {
-      size: B,
+    }) : i !== T.zo9.LOADING && (e = (0, r.jsx)(p, {
+      size: x,
       mediaLayoutType: C,
       alt: _
     })), e = (0, r.jsx)(I.N, {
       readyState: i,
-      aspectRatio: x,
+      aspectRatio: B,
       placeholder: o,
       placeholderVersion: l,
-      placeholderStyle: p(B, C),
+      placeholderStyle: R(x, C),
       children: e
     });
     let k = null != y ? y() : null;
@@ -92,10 +92,10 @@ class O extends(i = s.PureComponent) {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
-        className: a()(f.imageWrapper, {
-          [f.imageZoom]: D,
-          [f.imageWrapperBackground]: i !== T.zo9.READY,
-          [f.clickable]: null != U
+        className: a()(S.imageWrapper, {
+          [S.imageZoom]: D,
+          [S.imageWrapperBackground]: i !== T.zo9.READY,
+          [S.clickable]: null != U
         }, t),
         style: function(e, t, n, i) {
           return i === h.hV.MOSAIC ? {
@@ -109,22 +109,22 @@ class O extends(i = s.PureComponent) {
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(B, v, G, C),
+        }(x, v, G, C),
         ...w,
         children: [null != M && (0, r.jsx)("a", {
           tabIndex: -1,
           onClick: U,
           "aria-hidden": !0,
-          className: f.originalLink,
+          className: S.originalLink,
           href: M,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": s
         }), null != U ? (0, r.jsx)(u.Clickable, {
-          className: f.clickableWrapper,
+          className: S.clickableWrapper,
           tabIndex: null != b ? b : 0,
           onClick: U,
-          "aria-label": null != _ ? _ : S.Z.Messages.IMAGE,
+          "aria-label": null != _ ? _ : f.Z.Messages.IMAGE,
           "aria-describedby": c.r5,
           innerRef: this._clickableRef,
           focusProps: {
@@ -132,7 +132,7 @@ class O extends(i = s.PureComponent) {
           },
           children: e
         }) : e, null != k ? (0, r.jsx)("div", {
-          className: f.imageAccessory,
+          className: S.imageAccessory,
           children: k
         }) : null]
       })
@@ -143,14 +143,14 @@ class O extends(i = s.PureComponent) {
   }
 }
 
-function R(e) {
+function p(e) {
   let {
     size: t,
     mediaLayoutType: n,
     alt: i
   } = e, s = (0, _.ZP)();
   return (0, r.jsx)("div", {
-    className: f.imageErrorWrapper,
+    className: S.imageErrorWrapper,
     style: function(e, t) {
       switch (t) {
         case h.hV.MOSAIC:
@@ -166,9 +166,9 @@ function R(e) {
       }
     }(t, n),
     children: (0, r.jsx)("img", {
-      src: (0, l.ap)(s) ? A : N,
-      className: f.imageError,
-      alt: null != i ? i : S.Z.Messages.IMAGE
+      src: (0, l.ap)(s) ? N : A,
+      className: S.imageError,
+      alt: null != i ? i : f.Z.Messages.IMAGE
     })
   })
 }
@@ -185,16 +185,16 @@ m(O, "defaultProps", {
     } = e;
     return (0, r.jsx)("img", {
       className: null != s ? s : void 0,
-      alt: null != i ? i : S.Z.Messages.IMAGE,
+      alt: null != i ? i : f.Z.Messages.IMAGE,
       src: t,
-      style: p(n, o)
+      style: R(n, o)
     })
   },
   minWidth: 0,
   minHeight: 0
 });
 
-function p(e, t) {
+function R(e, t) {
   switch (t) {
     case h.hV.MOSAIC:
       return {

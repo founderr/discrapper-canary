@@ -1,24 +1,24 @@
-var t = n(735250);
+var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
+var s = n(120356),
+  a = n.n(s),
   r = n(826686);
-i.Z = e => {
+t.Z = e => {
   let {
-    aspectRatio: i,
+    aspectRatio: t,
     style: n,
-    className: a,
-    children: o
+    className: s,
+    children: l
   } = e;
-  return (0, t.jsx)("div", {
-    className: s()(r.outer, a),
+  return (0, i.jsx)("div", {
+    className: a()(r.outer, s),
     style: {
-      paddingTop: "".concat(1 / i * 100, "%"),
+      paddingTop: "".concat(1 / t * 100, "%"),
       ...n
     },
-    children: (0, t.jsx)("div", {
+    children: (0, i.jsx)("div", {
       className: r.inner,
-      children: o
+      children: l
     })
   })
 }

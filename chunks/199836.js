@@ -1,67 +1,67 @@
-n.r(t);
-var s = n(735250);
+n.r(e);
+var a = n(735250);
 n(470079);
-var a = n(481060),
-  r = n(153124),
-  o = n(112612),
-  i = n(689938),
-  l = n(938885);
-t.default = function(e) {
+var o = n(481060),
+  s = n(153124),
+  i = n(112612),
+  r = n(689938),
+  c = n(938885);
+e.default = function(t) {
   let {
-    onClose: t,
+    onClose: e,
     transitionState: n,
-    onSubmit: c
-  } = e, {
+    onSubmit: l
+  } = t, {
     submitting: d,
     errorMessage: u,
     onSubmit: x
-  } = (0, o.Z)({
-    onSubmit: c,
-    onClose: t
-  }), N = (0, r.Dt)();
-  return (0, s.jsxs)(a.ModalRoot, {
-    className: l.container,
+  } = (0, i.Z)({
+    onSubmit: l,
+    onClose: e
+  }), _ = (0, s.Dt)();
+  return (0, a.jsxs)(o.ModalRoot, {
+    className: c.container,
     transitionState: n,
-    "aria-labelledby": N,
-    children: [(0, s.jsxs)(a.ModalContent, {
-      className: l.content,
-      children: [(0, s.jsx)(a.Heading, {
+    "aria-labelledby": _,
+    children: [(0, a.jsxs)(o.ModalContent, {
+      className: c.content,
+      children: [(0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
-        id: N,
-        children: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_WARNING_TITLE
-      }), (0, s.jsx)(a.Text, {
-        className: l.manualApprovalDescriptionText,
+        id: _,
+        children: r.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_WARNING_TITLE
+      }), (0, a.jsx)(o.Text, {
+        className: c.manualApprovalDescriptionText,
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_WARNING_DESCRIPTION
-      }), (0, s.jsx)(a.Text, {
+        children: r.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_WARNING_DESCRIPTION
+      }), (0, a.jsx)(o.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_WARNING_EXPLANATION.format()
-      }), null != u && (0, s.jsx)(a.Text, {
-        className: l.__invalid_errorText,
+        children: r.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_WARNING_EXPLANATION.format()
+      }), null != u && (0, a.jsx)(o.Text, {
+        className: c.__invalid_errorText,
         variant: "text-xs/normal",
         color: "text-danger",
         children: u
       })]
-    }), (0, s.jsxs)(a.ModalFooter, {
-      children: [(0, s.jsx)(a.Button, {
-        className: l.actionButton,
-        color: a.Button.Colors.BRAND,
+    }), (0, a.jsxs)(o.ModalFooter, {
+      children: [(0, a.jsx)(o.Button, {
+        className: c.actionButton,
+        color: o.Button.Colors.BRAND,
         submitting: d,
         onClick: x,
-        size: a.Button.Sizes.SMALL,
-        children: (0, s.jsx)(a.Text, {
+        size: o.Button.Sizes.SMALL,
+        children: (0, a.jsx)(o.Text, {
           variant: "text-sm/semibold",
-          children: i.Z.Messages.CONFIRM
+          children: r.Z.Messages.CONFIRM
         })
-      }), (0, s.jsx)(a.Button, {
-        color: a.Button.Colors.PRIMARY,
-        onClick: t,
-        size: a.Button.Sizes.SMALL,
-        children: (0, s.jsx)(a.Text, {
+      }), (0, a.jsx)(o.Button, {
+        color: o.Button.Colors.PRIMARY,
+        onClick: e,
+        size: o.Button.Sizes.SMALL,
+        children: (0, a.jsx)(o.Text, {
           variant: "text-sm/semibold",
-          children: i.Z.Messages.CANCEL
+          children: r.Z.Messages.CANCEL
         })
       })]
     })]

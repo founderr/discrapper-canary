@@ -1,8 +1,8 @@
 t(653041), t(47120);
 var i, r = t(735250),
-  l = t(470079),
-  o = t(120356),
-  u = t.n(o),
+  o = t(470079),
+  l = t(120356),
+  u = t.n(l),
   s = t(481060),
   a = t(598077),
   c = t(847178),
@@ -16,20 +16,20 @@ function _(e, n, t) {
     writable: !0
   }) : e[n] = t, e
 }
-class f extends(i = l.PureComponent) {
+class f extends(i = o.PureComponent) {
   renderUsers() {
     let {
       users: e,
       max: n,
       renderUser: t = this.defaultRenderUser,
       renderMoreUsers: i
-    } = this.props, r = [], l = e.length === n ? e.length : n - 1, o = 0;
-    for (; o < l && o < e.length;) {
-      let n = o === e.length - 1;
-      r.push(t(e[o] || null, n ? null : c.avatarMasked, "user-".concat(o), n)), o++
+    } = this.props, r = [], o = e.length === n ? e.length : n - 1, l = 0;
+    for (; l < o && l < e.length;) {
+      let n = l === e.length - 1;
+      r.push(t(e[l] || null, n ? null : c.avatarMasked, "user-".concat(l), n)), l++
     }
-    if (o < e.length) {
-      let n = Math.min(e.length - o, 99);
+    if (l < e.length) {
+      let n = Math.min(e.length - l, 99);
       r.push(i("+".concat(n), c.moreUsers, "more-users", n))
     }
     return r
@@ -58,19 +58,19 @@ class f extends(i = l.PureComponent) {
   constructor(...e) {
     super(...e), _(this, "_ref", void 0), _(this, "defaultRenderUser", (e, n, t, i) => {
       let {
-        onClick: l,
-        size: o,
+        onClick: o,
+        size: l,
         guildId: _
       } = this.props, f = e instanceof a.Z ? e : null != e ? e.user : null;
       return null == f ? (0, r.jsx)("div", {
         className: u()(c.emptyUser, n)
       }, t) : (0, r.jsx)(s.Avatar, {
         tabIndex: 0,
-        src: f.getAvatarURL(_, (0, s.getAvatarSize)(o)),
-        size: o,
+        src: f.getAvatarURL(_, (0, s.getAvatarSize)(l)),
+        size: l,
         "aria-label": f.username,
         className: u()(n, d.cursorPointer, c.avatarSize),
-        onClick: e => null != l ? l(e, f, this._ref) : null
+        onClick: e => null != o ? o(e, f, this._ref) : null
       }, f.id)
     })
   }

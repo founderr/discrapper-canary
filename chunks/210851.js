@@ -1,45 +1,45 @@
 t(47120);
 var n = t(735250),
-  i = t(470079),
-  a = t(481060),
-  l = t(763610),
-  r = t(614771);
+  a = t(470079),
+  i = t(481060),
+  r = t(763610),
+  o = t(614771);
 s.Z = function(e) {
   var s, t;
   let {
-    assetKey: o,
+    assetKey: l,
     filters: c,
-    initialValue: E,
-    onFileChange: d,
-    title: _
-  } = e, [T, S] = i.useState(null), [u, I] = i.useState(!1);
-  return (0, n.jsxs)(a.FormItem, {
-    children: [(0, n.jsx)(a.FormTitle, {
-      tag: a.FormTitleTags.H5,
+    initialValue: d,
+    onFileChange: _,
+    title: E
+  } = e, [u, T] = a.useState(null), [S, I] = a.useState(!1);
+  return (0, n.jsxs)(i.FormItem, {
+    children: [(0, n.jsx)(i.FormTitle, {
+      tag: i.FormTitleTags.H5,
       children: (0, n.jsxs)("div", {
-        className: r.headingWithTooltip,
-        children: [_, (0, n.jsx)(a.Tooltip, {
+        className: o.headingWithTooltip,
+        children: [E, (0, n.jsx)(i.Tooltip, {
           text: "Supported asset formats: ".concat(c.join(", ")),
-          children: e => (0, n.jsx)(a.CircleInformationIcon, {
+          children: e => (0, n.jsx)(i.CircleInformationIcon, {
             size: "xs",
             ...e
           })
         })]
       })
-    }), (0, n.jsx)(l.Z, {
-      filename: null !== (t = null !== (s = null == T ? void 0 : T.name) && void 0 !== s ? s : E) && void 0 !== t ? t : "",
+    }), (0, n.jsx)(r.Z, {
+      filename: null !== (t = null !== (s = null == u ? void 0 : u.name) && void 0 !== s ? s : d) && void 0 !== t ? t : "",
       filters: [{
-        name: _,
+        name: E,
         extensions: c
       }],
       buttonText: "Browse",
       placeholder: "Select an asset",
       onFileSelect: function(e) {
-        if (S(null != e ? e : null), null == e) return;
+        if (T(null != e ? e : null), null == e) return;
         I(!0);
         let s = new FileReader;
         s.onload = function() {
-          "string" == typeof s.result && (d(o, s.result), I(!1))
+          "string" == typeof s.result && (_(l, s.result), I(!1))
         }, s.onerror = function(e) {
           console.error(e)
         }, s.readAsDataURL(e)

@@ -1,30 +1,30 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return T
   }
 });
-var n = t(470079),
-  i = t(399606),
-  l = t(674180),
-  a = t(594174),
-  r = t(63063),
-  o = t(223892),
-  c = t(58259),
-  d = t(158992),
-  u = t(159361),
-  E = t(377176),
-  _ = t(981631),
-  I = t(689938);
+var s = n(470079),
+  a = n(399606),
+  i = n(674180),
+  r = n(594174),
+  l = n(63063),
+  o = n(223892),
+  c = n(58259),
+  d = n(158992),
+  u = n(159361),
+  _ = n(377176),
+  E = n(981631),
+  I = n(689938);
 
 function T(e) {
-  let s;
-  let t = (0, o.Ob)(e),
-    T = null == e ? void 0 : e.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-    N = null == e ? void 0 : e.hasFeature(_.oNc.CREATOR_MONETIZABLE),
-    m = (0, i.e7)([a.default], () => {
-      let s = a.default.getCurrentUser();
-      return (null == e ? void 0 : e.isOwner(s)) === !0
+  let t;
+  let n = (0, o.Ob)(e),
+    T = null == e ? void 0 : e.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+    m = null == e ? void 0 : e.hasFeature(E.oNc.CREATOR_MONETIZABLE),
+    N = (0, a.e7)([r.default], () => {
+      let t = r.default.getCurrentUser();
+      return (null == e ? void 0 : e.isOwner(t)) === !0
     }),
     {
       error: S,
@@ -34,55 +34,55 @@ function T(e) {
     } = (0, c.Z)(null == e ? void 0 : e.id),
     {
       loading: x,
-      error: R,
-      refresh: L,
-      eligibility: O
+      error: p,
+      refresh: R,
+      eligibility: f
     } = (0, d.Z)(null == e ? void 0 : e.id),
     {
-      isApplicationRejected: A,
-      requestCooldownDuration: p
-    } = (0, u.Z)(O),
-    M = (null == e ? void 0 : e.hasFeature(_.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
+      isApplicationRejected: L,
+      requestCooldownDuration: O
+    } = (0, u.Z)(f),
+    A = (null == e ? void 0 : e.hasFeature(E.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(E.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
     {
-      isMonetizationReapplicationDisabled: f
-    } = (0, l.eC)(null == e ? void 0 : e.id),
-    D = C || (null == O ? void 0 : O.isApplicationPending) === !0,
-    v = (null == O ? void 0 : O.canApply) === !0,
+      isMonetizationReapplicationDisabled: M
+    } = (0, i.eC)(null == e ? void 0 : e.id),
+    v = C || (null == f ? void 0 : f.isApplicationPending) === !0,
+    D = (null == f ? void 0 : f.canApply) === !0,
     j = I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
-      faqUrl: r.Z.getArticleURL(_.BhN.CREATOR_FAQ)
+      faqUrl: l.Z.getArticleURL(E.BhN.CREATOR_FAQ)
     });
-  A && f ? s = !0 === T ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
-    communityGuidelineUrl: _.EYA.GUIDELINES
+  L && M ? t = !0 === T ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
+    communityGuidelineUrl: E.EYA.GUIDELINES
   }) : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
-    communityGuidelineUrl: _.EYA.GUIDELINES
-  }) : A && null != p && (s = I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
-    requestCooldownDuration: p,
-    creatorRevenuePolicyUrl: r.Z.getArticleURL(_.BhN.CREATOR_POLICY)
+    communityGuidelineUrl: E.EYA.GUIDELINES
+  }) : L && null != O && (t = I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
+    requestCooldownDuration: O,
+    creatorRevenuePolicyUrl: l.Z.getArticleURL(E.BhN.CREATOR_POLICY)
   }));
-  let Z = t && m && !1 === N,
-    U = t && !1 === T,
-    G = (0, E.f)(),
-    P = A && v && m ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
-  return n.useEffect(() => {
-    Z && L()
-  }, [L, Z]), {
+  let Z = n && N && !1 === m,
+    b = n && !1 === T,
+    U = (0, _.f)(),
+    G = L && D && N ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
+  return s.useEffect(() => {
+    Z && R()
+  }, [R, Z]), {
     resubmittingEnableRequest: h,
     resubmissionError: S,
-    isGuildOwner: m,
+    isGuildOwner: N,
     createEnableRequest: g,
     resubmittedRequest: C,
     eligibilityLoading: x,
-    eligibilityError: R,
-    refreshEligibility: L,
-    eligibility: O,
-    eligibleForMonetization: v,
-    isApplicationPending: D,
-    hasPreviousApplicationRejection: A,
-    requestRejectedNoticeText: s,
-    reapplyNoticeText: P,
-    showAcceptTermsFlow: U,
-    wasRejectedInV1: U && (M || A),
+    eligibilityError: p,
+    refreshEligibility: R,
+    eligibility: f,
+    eligibleForMonetization: D,
+    isApplicationPending: v,
+    hasPreviousApplicationRejection: L,
+    requestRejectedNoticeText: t,
+    reapplyNoticeText: G,
+    showAcceptTermsFlow: b,
+    wasRejectedInV1: b && (A || L),
     requirementsFinePrintText: j,
-    acceptTermsCheckboxText: G
+    acceptTermsCheckboxText: U
   }
 }

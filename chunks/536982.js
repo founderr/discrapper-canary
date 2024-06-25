@@ -1,52 +1,52 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return c
   }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060),
-  a = t(428760),
-  r = t(689938),
-  o = t(658514);
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(481060),
+  r = n(428760),
+  l = n(689938),
+  o = n(658514);
 
 function c(e) {
   let {
-    onChange: s,
-    initialValue: t,
+    onChange: t,
+    initialValue: n,
     maxWordCount: c,
     collapsed: d = !1
-  } = e, [u, E] = i.useState(!d);
-  return (0, n.jsx)(l.Collapsible, {
+  } = e, [u, _] = a.useState(!d);
+  return (0, s.jsx)(i.Collapsible, {
     isExpanded: u,
-    collapsibleContent: (0, n.jsx)(a.Z, {
-      onChangeText: s,
+    collapsibleContent: (0, s.jsx)(r.Z, {
+      onChangeText: t,
       maxWordCount: c,
       className: o.keywordTextAreaContainer,
       textAreaClassName: o.keywordTextArea,
-      subtitleText: r.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_SUBTITLE,
-      initialValue: t
+      subtitleText: l.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_SUBTITLE,
+      initialValue: n
     }),
     className: o.collapseable,
     children: e => {
       let {
-        onClick: s
+        onClick: t
       } = e;
-      return (0, n.jsx)(l.Clickable, {
+      return (0, s.jsx)(i.Clickable, {
         onClick: e => {
-          E(!u), s(e)
+          _(!u), t(e)
         },
-        children: (0, n.jsxs)("div", {
+        children: (0, s.jsxs)("div", {
           className: o.header,
-          children: [(0, n.jsx)(l.Heading, {
+          children: [(0, s.jsx)(i.Heading, {
             variant: "text-sm/medium",
-            children: r.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_TITLE
-          }), u ? (0, n.jsx)(l.ChevronSmallUpIcon, {
+            children: l.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_TITLE
+          }), u ? (0, s.jsx)(i.ChevronSmallUpIcon, {
             size: "md",
             color: "currentColor",
             className: o.arrow
-          }) : (0, n.jsx)(l.ChevronSmallDownIcon, {
+          }) : (0, s.jsx)(i.ChevronSmallDownIcon, {
             size: "md",
             color: "currentColor",
             className: o.arrow

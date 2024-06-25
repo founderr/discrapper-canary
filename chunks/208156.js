@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   J: function() {
-    return A
+    return N
   }
 }), n(47120), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
@@ -18,41 +18,41 @@ var i = n(735250),
   I = n(53289),
   T = n(953101),
   h = n(701488),
-  S = n(981631),
-  f = n(972216);
+  f = n(981631),
+  S = n(972216);
 
-function N(e) {
+function A(e) {
   let {
     url: t,
     className: n,
     style: s,
     onLoad: o,
-    shouldRefocus: f,
-    queryParams: N,
-    allowPopups: A = !1,
+    shouldRefocus: S,
+    queryParams: A,
+    allowPopups: N = !1,
     referrerPolicy: m = "origin"
-  } = e, O = (0, u.e7)([_.Z], () => _.Z.getWindow(S.KJ3.CHANNEL_CALL_POPOUT)), R = (0, a.useMemoOne)(() => (0, l.Z)(), [t]), p = r.useRef(null), g = (0, I.Z)(p, f, null == O ? window : O), C = {
-    ...N,
-    frame_id: R,
+  } = e, O = (0, u.e7)([_.Z], () => _.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT)), p = (0, a.useMemoOne)(() => (0, l.Z)(), [t]), R = r.useRef(null), g = (0, I.Z)(R, S, null == O ? window : O), C = {
+    ...A,
+    frame_id: p,
     platform: h.S4.DESKTOP
   }, [v, L] = r.useState(!1), D = d.Z.theme, M = {
     ...s
   };
-  return D === S.BRd.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.S.dispatch(S.CkL.IFRAME_MOUNT, {
-    id: R
+  return D === f.BRd.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.S.dispatch(f.CkL.IFRAME_MOUNT, {
+    id: p
   }), () => {
-    E.S.dispatch(S.CkL.IFRAME_UNMOUNT, {
-      id: R
+    E.S.dispatch(f.CkL.IFRAME_UNMOUNT, {
+      id: p
     })
-  }), [R]), r.useEffect(() => {
+  }), [p]), r.useEffect(() => {
     let e = e => {
       let {
         resizing: t
       } = e;
       L(t)
     };
-    return E.S.subscribe(S.CkL.MANUAL_IFRAME_RESIZING, e), () => {
-      E.S.unsubscribe(S.CkL.MANUAL_IFRAME_RESIZING, e)
+    return E.S.subscribe(f.CkL.MANUAL_IFRAME_RESIZING, e), () => {
+      E.S.unsubscribe(f.CkL.MANUAL_IFRAME_RESIZING, e)
     }
   }, []), v && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
     style: M,
@@ -60,29 +60,29 @@ function N(e) {
     referrerPolicy: m,
     onLoad: function(e) {
       var n;
-      null == o || o(e.target), p.current = e.target, g(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, C], null != t ? t : "")
+      null == o || o(e.target), R.current = e.target, g(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, C], null != t ? t : "")
     },
     sandbox: (0, T.Z)({
-      allowPopups: A
+      allowPopups: N
     }),
     className: n,
     src: "".concat(t, "?").concat(new URLSearchParams(C))
   }) : null
 }
 
-function A(e) {
+function N(e) {
   let {
     onLoad: t
   } = e, [n, s] = r.useState(!1), a = r.useCallback(e => {
     s(!0), null == t || t(e)
   }, [t]);
   return (0, i.jsxs)("div", {
-    className: f.fillParent,
+    className: S.fillParent,
     children: [!n && (0, i.jsx)("div", {
-      className: o()(f.fillParent, f.iframePlaceholder)
+      className: o()(S.fillParent, S.iframePlaceholder)
     }), (0, i.jsx)("div", {
-      className: o()(f.fillParent, n ? void 0 : f.hiddenIframeContainer),
-      children: (0, i.jsx)(N, {
+      className: o()(S.fillParent, n ? void 0 : S.hiddenIframeContainer),
+      children: (0, i.jsx)(A, {
         ...e,
         onLoad: a
       })

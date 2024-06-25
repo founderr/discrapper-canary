@@ -8,14 +8,14 @@ n.d(t, {
 var _, c, d, E, I = n(392711),
   T = n.n(I),
   h = n(442837),
-  S = n(433517),
-  f = n(570140),
-  N = n(57132),
-  A = n(781157),
+  f = n(433517),
+  S = n(570140),
+  A = n(57132),
+  N = n(781157),
   m = n(703656),
   O = n(131704),
-  R = n(823379),
-  p = n(314897),
+  p = n(823379),
+  R = n(314897),
   g = n(592125),
   C = n(984933),
   v = n(430824),
@@ -29,19 +29,19 @@ let y = "SelectedChannelStore",
   G = {},
   w = new Set;
 
-function B(e) {
+function x(e) {
   return String(e)
 }
 
-function x() {
-  !__OVERLAY__ && S.K.set(y, {
+function B() {
+  !__OVERLAY__ && f.K.set(y, {
     selectedChannelId: s,
     selectedVoiceChannelId: a,
     lastChannelFollowingDestination: o,
     lastConnectedTime: l,
     selectedChannelIds: U,
     mostRecentSelectedTextChannelIds: G,
-    knownThreadIds: T()(U).values().concat(T().values(G)).filter(R.lm).uniq().filter(e => {
+    knownThreadIds: T()(U).values().concat(T().values(G)).filter(p.lm).uniq().filter(e => {
       let t = g.Z.getBasicChannel(e);
       return w.has(e) || null != t && O.Ec.has(t.type)
     }).value()
@@ -85,11 +85,11 @@ function H() {
 function F(e, t) {
   if (w.delete(e), null == t) {
     let n = D.Z.getGuildId();
-    U[B(n)] === e && (t = n)
+    U[x(n)] === e && (t = n)
   }
   let n = null != v.Z.getGuild(t) ? t : null,
     i = !1;
-  a === e && (a = null, i = !0), !(0, N.cn)() && (U[B(n)] === e && (U[B(n)] = k(B(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[B(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && x()
+  a === e && (a = null, i = !0), !(0, A.cn)() && (U[x(n)] === e && (U[x(n)] = k(x(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[x(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
 }
 
 function Y(e) {
@@ -105,7 +105,7 @@ class j extends(_ = h.ZP.Store) {
   initialize() {
     if (!__OVERLAY__) {
       var e, t;
-      let n = null !== (e = S.K.get(y)) && void 0 !== e ? e : {
+      let n = null !== (e = f.K.get(y)) && void 0 !== e ? e : {
         selectedChannelId: s,
         selectedVoiceChannelId: a,
         lastChannelFollowingDestination: o,
@@ -123,7 +123,7 @@ class j extends(_ = h.ZP.Store) {
   getChannelId(e) {
     var t, n;
     let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      r = B(e === M.ME ? null : null !== (t = null != e ? e : D.Z.getGuildId()) && void 0 !== t ? t : null);
+      r = x(e === M.ME ? null : null !== (t = null != e ? e : D.Z.getGuildId()) && void 0 !== t ? t : null);
     return i ? null !== (n = U[r]) && void 0 !== n ? n : k(r) : U[r]
   }
   getVoiceChannelId() {
@@ -151,9 +151,9 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : c[d] = E, t.Z = new j(f.Z, {
+}) : c[d] = E, t.Z = new j(S.Z, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, null != a && null == g.Z.getChannel(a) && (a = null), H() && x()
+    i = e.sessionId, null != a && null == g.Z.getChannel(a) && (a = null), H() && B()
   },
   OVERLAY_INITIALIZE: function(e) {
     i = e.sessionId, a = e.selectedVoiceChannelId, U = {}, b = {}, s = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, V(e.selectedGuildId, s), H()
@@ -167,7 +167,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
       channelId: n
     } = e;
     if (void 0 === t) return !1;
-    null == n && (!(0, N.cn)() || (0, A.Z0)(t)) && (n = k(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[B(t)] !== n && (b[B(t)] = U[B(t)], U[B(t)] = s), x()
+    null == n && (!(0, A.cn)() || (0, N.Z0)(t)) && (n = k(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[x(t)] !== n && (b[x(t)] = U[x(t)], U[x(t)] = s), B()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -195,7 +195,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
     } = e;
     if (null == U[t.id]) {
       let e = k(t.id);
-      U[t.id] = e, V(t.id, e), x()
+      U[t.id] = e, V(t.id, e), B()
     }
   },
   GUILD_DELETE: function(e) {
@@ -206,7 +206,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
       }
     } = e;
     if (a === U[t] && (a = null), n) return !1;
-    delete G[t], delete U[t], x()
+    delete G[t], delete U[t], B()
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
@@ -217,7 +217,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
         t = null == e ? void 0 : e.guild_id;
       null != t && t !== D.Z.getGuildId() && U[t] === a && (U[t] = k(t))
     }
-    a = t, x()
+    a = t, B()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -229,14 +229,14 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
         clearInterval(u);
         let e = null === (n = g.Z.getChannel(a)) || void 0 === n ? void 0 : n.getGuildId();
         t.guildId !== e && null == t.channelId || (a = t.channelId), l = Date.now(), null != a && (u = setInterval(() => {
-          l = Date.now(), x()
-        }, 6e4)), x()
+          l = Date.now(), B()
+        }, 6e4)), B()
       } else {
-        if (t.userId !== p.default.getId()) return e;
+        if (t.userId !== R.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
         let n = null === (r = g.Z.getChannel(a)) || void 0 === r ? void 0 : r.getGuildId(),
           i = null === (s = g.Z.getChannel(t.channelId)) || void 0 === s ? void 0 : s.getGuildId();
-        (null != n && i === n || a === t.channelId) && (a = null), x()
+        (null != n && i === n || a === t.channelId) && (a = null), B()
       }
       return !0
     }, !1)
@@ -249,9 +249,9 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
     (null == o || t !== o.channelId) && (o = {
       channelId: t,
       guildId: n
-    }, x())
+    }, B())
   },
   LOGOUT: function() {
-    U = {}, s = null, r = void 0, G = {}, o = {}, a = null, S.K.remove(y)
+    U = {}, s = null, r = void 0, G = {}, o = {}, a = null, f.K.remove(y)
   }
 })

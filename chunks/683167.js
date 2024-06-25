@@ -1,55 +1,55 @@
 n.d(t, {
   I: function() {
-    return a
+    return r
   }
 });
-var s = n(818083),
-  i = n(302800);
-let l = (0, s.B)({
+var i = n(818083),
+  s = n(302800);
+let a = (0, i.B)({
     kind: "user",
     id: "2024-04_shop_marketing_badge",
     label: "Shop Marketing New Badge Design Experiment",
     defaultConfig: {
-      coachtipEdition: i.LM.NONE
+      coachtipEdition: s.LM.NONE
     },
     treatments: [{
       id: 1,
       label: "Shy",
       config: {
-        coachtipEdition: i.LM.SHY
+        coachtipEdition: s.LM.SHY
       }
     }, {
       id: 2,
       label: "Lofi Vibes",
       config: {
-        coachtipEdition: i.LM.LOFI_VIBES
+        coachtipEdition: s.LM.LOFI_VIBES
       }
     }, {
       id: 3,
       label: "Galaxy",
       config: {
-        coachtipEdition: i.LM.GALAXY
+        coachtipEdition: s.LM.GALAXY
       }
     }, {
       id: 4,
       label: "Retro & Pirates",
       config: {
-        coachtipEdition: i.LM.RETRO_AND_PIRATES
+        coachtipEdition: s.LM.RETRO_AND_PIRATES
       }
     }, {
       id: 5,
       label: "Arcade",
       config: {
-        coachtipEdition: i.LM.ARCADE
+        coachtipEdition: s.LM.ARCADE
       }
     }, {
       id: 6,
       label: "Tide",
       config: {
-        coachtipEdition: i.LM.TIDE
+        coachtipEdition: s.LM.TIDE
       }
     }]
   }),
-  a = e => l.useExperiment({
+  r = e => a.useExperiment({
     location: e
   }).coachtipEdition

@@ -46,7 +46,7 @@ function g(e) {
     channel: g,
     recurrenceId: t,
     isRecurrenceItem: v
-  }), C = (0, c.Z)(n, M, g), P = (0, I.Z)(n, M, g), h = (0, d.Z)(n, M.id, t), R = (0, _.Z)(n), L = (0, r.Z)({
+  }), C = (0, c.Z)(n, M, g), h = (0, I.Z)(n, M, g), P = (0, d.Z)(n, M.id, t), R = (0, _.Z)(n), L = (0, r.Z)({
     id: n,
     label: f.Z.Messages.COPY_ID_EVENT
   }), p = (0, r.Z)({
@@ -66,7 +66,7 @@ function g(e) {
       "aria-label": f.Z.Messages.USER_ACTIONS_MENU_LABEL,
       onSelect: S,
       children: [(0, l.jsxs)(i.MenuGroup, {
-        children: [V, !v && P, m, !v && C, A, O, h, v && U]
+        children: [V, !v && h, m, !v && C, A, O, P, v && U]
       }), !v && (0, l.jsx)(i.MenuGroup, {
         children: R
       }), (0, l.jsxs)(i.MenuGroup, {

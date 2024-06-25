@@ -6,26 +6,26 @@ t.d(e, {
     return r
   },
   me: function() {
-    return l
+    return s
   }
 });
 var i = t(544891),
-  s = t(981631);
-async function l(n, e, t, l, a) {
+  l = t(981631);
+async function s(n, e, t, s, a) {
   return (await i.tn.post({
-    url: s.ANM.STAGE_INSTANCES,
+    url: l.ANM.STAGE_INSTANCES,
     body: {
       channel_id: n,
       topic: e,
       privacy_level: t,
       guild_scheduled_event_id: a,
-      send_start_notification: l
+      send_start_notification: s
     }
   })).body
 }
 async function a(n, e, t) {
   return (await i.tn.patch({
-    url: s.ANM.STAGE_INSTANCE(n),
+    url: l.ANM.STAGE_INSTANCE(n),
     body: {
       topic: e,
       privacy_level: t
@@ -34,5 +34,5 @@ async function a(n, e, t) {
 }
 
 function r(n) {
-  return i.tn.del(s.ANM.STAGE_INSTANCE(n))
+  return i.tn.del(l.ANM.STAGE_INSTANCE(n))
 }

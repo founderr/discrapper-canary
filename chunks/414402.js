@@ -3,33 +3,33 @@ o.r(s), o.d(s, {
     return C
   }
 }), o(47120), o(773603);
-var n, t, l = o(735250),
+var t, n, l = o(735250),
   a = o(470079),
   i = o(544891),
   r = o(481060),
-  d = o(285952),
-  c = o(474333),
+  c = o(285952),
+  d = o(474333),
   I = o(572004),
   N = o(472305),
   u = o(981631),
-  O = o(689938),
-  x = o(719323);
+  _ = o(689938),
+  O = o(719323);
 
-function _(e) {
+function x(e) {
   let {
     name: s,
     value: o
-  } = e, [n, t] = a.useState(r.CopyInputModes.DEFAULT);
+  } = e, [t, n] = a.useState(r.CopyInputModes.DEFAULT);
   return (0, l.jsxs)("div", {
-    className: x.infoRow,
+    className: O.infoRow,
     children: [(0, l.jsx)(r.FormTitle, {
       children: s
     }), (0, l.jsx)(r.CopyInput, {
       value: o,
-      mode: n,
+      mode: t,
       supportsCopy: I.wS,
       onCopy: () => {
-        (0, I.JG)(o), t(r.CopyInputModes.SUCCESS)
+        (0, I.JG)(o), n(r.CopyInputModes.SUCCESS)
       }
     })]
   })
@@ -39,31 +39,31 @@ function C(e) {
   let {
     onClose: s,
     transitionState: o
-  } = e, [n, t] = a.useState(""), [I, C] = a.useState(""), [M, m] = a.useState(null), [h, R] = a.useState(!1), [A, T] = a.useState("DOMAIN"), j = () => {
-    R(!0), m(null), i.tn.post({
-      url: u.ANM.CONNECTION(u.ABu.DOMAIN, n),
+  } = e, [t, n] = a.useState(""), [I, C] = a.useState(""), [h, M] = a.useState(null), [R, m] = a.useState(!1), [A, T] = a.useState("DOMAIN"), j = () => {
+    m(!0), M(null), i.tn.post({
+      url: u.ANM.CONNECTION(u.ABu.DOMAIN, t),
       body: {}
     }).then(() => {
       s()
     }).catch(e => {
-      var s, o, n, t, l, a, i;
-      (null === (s = e.body) || void 0 === s ? void 0 : s.proof) && "DOMAIN" === A ? (C(e.body.proof), T("PROOF_DNS")) : m((null === (a = e.body) || void 0 === a ? void 0 : null === (l = a.errors) || void 0 === l ? void 0 : null === (t = l.domain) || void 0 === t ? void 0 : null === (n = t._errors) || void 0 === n ? void 0 : null === (o = n[0]) || void 0 === o ? void 0 : o.message) || (null === (i = e.body) || void 0 === i ? void 0 : i.message) || e.message)
+      var s, o, t, n, l, a, i;
+      (null === (s = e.body) || void 0 === s ? void 0 : s.proof) && "DOMAIN" === A ? (C(e.body.proof), T("PROOF_DNS")) : M((null === (a = e.body) || void 0 === a ? void 0 : null === (l = a.errors) || void 0 === l ? void 0 : null === (n = l.domain) || void 0 === n ? void 0 : null === (t = n._errors) || void 0 === t ? void 0 : null === (o = t[0]) || void 0 === o ? void 0 : o.message) || (null === (i = e.body) || void 0 === i ? void 0 : i.message) || e.message)
     }).finally(() => {
-      R(!1)
+      m(!1)
     })
   };
   return (0, l.jsxs)(r.ModalRoot, {
     transitionState: o,
-    className: x.__invalid_modal,
+    className: O.__invalid_modal,
     children: [(0, l.jsxs)(r.ModalHeader, {
-      direction: d.Z.Direction.VERTICAL,
-      className: x.header,
+      direction: c.Z.Direction.VERTICAL,
+      className: O.header,
       separator: !1,
       children: [(0, l.jsx)(r.Heading, {
         variant: "heading-xl/semibold",
-        children: O.Z.Messages.DOMAIN_VERIFICATION_HEADER
+        children: _.Z.Messages.DOMAIN_VERIFICATION_HEADER
       }), (0, l.jsx)(r.ModalCloseButton, {
-        className: x.closeButton,
+        className: O.closeButton,
         onClick: s
       })]
     }), (0, l.jsxs)(r.Slides, {
@@ -76,158 +76,158 @@ function C(e) {
             e.preventDefault(), j()
           },
           children: [(0, l.jsxs)(r.ModalContent, {
-            className: x.content,
+            className: O.content,
             children: [(0, l.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "header-secondary",
-              className: x.description,
-              children: O.Z.Messages.DOMAIN_VERIFICATION_DESCRIPTION
+              className: O.description,
+              children: _.Z.Messages.DOMAIN_VERIFICATION_DESCRIPTION
             }), (0, l.jsx)(r.FormItem, {
-              title: O.Z.Messages.DOMAIN_VERIFICATION_LABEL,
-              error: M,
+              title: _.Z.Messages.DOMAIN_VERIFICATION_LABEL,
+              error: h,
               children: (0, l.jsx)(r.TextInput, {
-                onChange: t,
+                onChange: n,
                 placeholder: N.pL,
                 maxLength: 253,
-                value: n,
-                disabled: h,
+                value: t,
+                disabled: R,
                 autoFocus: !0
               })
             })]
           }), (0, l.jsxs)(r.ModalFooter, {
-            className: x.footer,
+            className: O.footer,
             children: [(0, l.jsx)(r.Button, {
               type: "submit",
-              submitting: h,
-              disabled: "" === n,
-              children: O.Z.Messages.NEXT
+              submitting: R,
+              disabled: "" === t,
+              children: _.Z.Messages.NEXT
             }), (0, l.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
               color: r.Button.Colors.PRIMARY,
               onClick: s,
-              children: O.Z.Messages.CANCEL
+              children: _.Z.Messages.CANCEL
             })]
           })]
         })
       }), (0, l.jsxs)(r.Slide, {
         id: "PROOF_DNS",
         children: [(0, l.jsxs)(r.ModalContent, {
-          className: x.content,
+          className: O.content,
           children: [(0, l.jsxs)("ol", {
-            className: x.list,
+            className: O.list,
             children: [(0, l.jsx)("li", {
               children: (0, l.jsx)(r.Text, {
                 tag: "span",
                 variant: "text-md/normal",
-                children: O.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
+                children: _.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
               })
             }), (0, l.jsxs)("li", {
               children: [(0, l.jsx)(r.Text, {
                 tag: "span",
                 variant: "text-md/normal",
-                children: O.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
+                children: _.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
               }), (0, l.jsxs)("div", {
-                className: x.dnsRecordContainer,
-                children: [(0, l.jsx)(_, {
-                  name: O.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-                  value: (0, N.Qv)(n)
-                }), (0, l.jsx)(_, {
-                  name: O.Z.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
+                className: O.dnsRecordContainer,
+                children: [(0, l.jsx)(x, {
+                  name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+                  value: (0, N.Qv)(t)
+                }), (0, l.jsx)(x, {
+                  name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
                   value: "TXT"
-                }), (0, l.jsx)(_, {
-                  name: O.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+                }), (0, l.jsx)(x, {
+                  name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
                   value: I
                 })]
               })]
             })]
-          }), (0, l.jsx)(c.Z, {
-            messageType: c.Q.INFO,
-            className: x.text,
-            children: O.Z.Messages.DOMAIN_VERIFICATION_DNS_WARNING
-          }), null != M && (0, l.jsx)(r.Text, {
+          }), (0, l.jsx)(d.Z, {
+            messageType: d.Q.INFO,
+            className: O.text,
+            children: _.Z.Messages.DOMAIN_VERIFICATION_DNS_WARNING
+          }), null != h && (0, l.jsx)(r.Text, {
             variant: "text-sm/normal",
             color: "text-danger",
-            className: x.text,
-            children: M
+            className: O.text,
+            children: h
           })]
         }), (0, l.jsxs)(r.ModalFooter, {
-          className: x.footer,
-          direction: d.Z.Direction.HORIZONTAL,
+          className: O.footer,
+          direction: c.Z.Direction.HORIZONTAL,
           children: [(0, l.jsx)(r.Button, {
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.PRIMARY,
             onClick: () => {
-              T("DOMAIN"), m(null)
+              T("DOMAIN"), M(null)
             },
-            children: O.Z.Messages.BACK
+            children: _.Z.Messages.BACK
           }), (0, l.jsxs)("div", {
-            className: x.footerInner,
+            className: O.footerInner,
             children: [(0, l.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
               color: r.Button.Colors.PRIMARY,
               onClick: () => {
-                T("PROOF_HTTP"), m(null)
+                T("PROOF_HTTP"), M(null)
               },
-              className: x.__invalid_switchButton,
-              children: O.Z.Messages.DOMAIN_VERIFICATION_USE_HTTP
+              className: O.__invalid_switchButton,
+              children: _.Z.Messages.DOMAIN_VERIFICATION_USE_HTTP
             }), (0, l.jsx)(r.Button, {
-              submitting: h,
+              submitting: R,
               onClick: j,
-              children: O.Z.Messages.VERIFY
+              children: _.Z.Messages.VERIFY
             })]
           })]
         })]
       }), (0, l.jsxs)(r.Slide, {
         id: "PROOF_HTTP",
         children: [(0, l.jsxs)(r.ModalContent, {
-          className: x.content,
+          className: O.content,
           children: [(0, l.jsx)(r.Text, {
             tag: "span",
             variant: "text-md/normal",
-            children: O.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
+            children: _.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
           }), (0, l.jsxs)("div", {
-            className: x.httpFileContainer,
-            children: [(0, l.jsx)(_, {
-              name: O.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-              value: (0, N.F9)(n)
-            }), (0, l.jsx)(_, {
-              name: O.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+            className: O.httpFileContainer,
+            children: [(0, l.jsx)(x, {
+              name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+              value: (0, N.F9)(t)
+            }), (0, l.jsx)(x, {
+              name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
               value: I
             })]
-          }), null != M && (0, l.jsx)(r.Text, {
+          }), null != h && (0, l.jsx)(r.Text, {
             variant: "text-sm/normal",
             color: "text-danger",
-            className: x.text,
-            children: M
+            className: O.text,
+            children: h
           })]
         }), (0, l.jsxs)(r.ModalFooter, {
-          className: x.footer,
-          direction: d.Z.Direction.HORIZONTAL,
+          className: O.footer,
+          direction: c.Z.Direction.HORIZONTAL,
           children: [(0, l.jsx)(r.Button, {
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.PRIMARY,
             onClick: () => {
-              T("DOMAIN"), m(null)
+              T("DOMAIN"), M(null)
             },
-            children: O.Z.Messages.BACK
+            children: _.Z.Messages.BACK
           }), (0, l.jsxs)("div", {
-            className: x.footerInner,
+            className: O.footerInner,
             children: [(0, l.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
               color: r.Button.Colors.PRIMARY,
               onClick: () => {
-                T("PROOF_DNS"), m(null)
+                T("PROOF_DNS"), M(null)
               },
-              className: x.__invalid_switchButton,
-              children: O.Z.Messages.DOMAIN_VERIFICATION_USE_DNS
+              className: O.__invalid_switchButton,
+              children: _.Z.Messages.DOMAIN_VERIFICATION_USE_DNS
             }), (0, l.jsx)(r.Button, {
-              submitting: h,
+              submitting: R,
               onClick: j,
-              children: O.Z.Messages.VERIFY
+              children: _.Z.Messages.VERIFY
             })]
           })]
         })]
       })]
     })]
   })
-}(t = n || (n = {})).DOMAIN = "DOMAIN", t.PROOF_DNS = "PROOF_DNS", t.PROOF_HTTP = "PROOF_HTTP"
+}(n = t || (t = {})).DOMAIN = "DOMAIN", n.PROOF_DNS = "PROOF_DNS", n.PROOF_HTTP = "PROOF_HTTP"

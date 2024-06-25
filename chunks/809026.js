@@ -1,40 +1,40 @@
-function s(e) {
+function i(e) {
   if ((null == e ? void 0 : e.fields) == null) return null;
   let t = {},
     n = {};
-  for (let s of e.fields) switch (s.rawName) {
+  for (let i of e.fields) switch (i.rawName) {
     case "poll_question_text":
-      t.questionText = s.rawValue;
+      t.questionText = i.rawValue;
       break;
     case "victor_answer_id":
-      t.victorAnswerId = s.rawValue;
+      t.victorAnswerId = i.rawValue;
       break;
     case "victor_answer_text":
-      t.victorAnswerText = s.rawValue;
+      t.victorAnswerText = i.rawValue;
       break;
     case "victor_answer_votes":
-      t.victorAnswerVotes = parseInt(s.rawValue, 10);
+      t.victorAnswerVotes = parseInt(i.rawValue, 10);
       break;
     case "total_votes":
-      t.totalVotes = parseInt(s.rawValue, 10);
+      t.totalVotes = parseInt(i.rawValue, 10);
       break;
     case "victor_answer_emoji_id":
-      n.id = s.rawValue;
+      n.id = i.rawValue;
       break;
     case "victor_answer_emoji_name":
-      n.name = s.rawValue;
+      n.name = i.rawValue;
       break;
     case "victor_answer_emoji_animated":
-      n.animated = "true" === s.rawValue
+      n.animated = "true" === i.rawValue
   }
   if (null != n.name) {
-    var s;
-    n.animated = null !== (s = n.animated) && void 0 !== s && s, t.victorEmoji = n
+    var i;
+    n.animated = null !== (i = n.animated) && void 0 !== i && i, t.victorEmoji = n
   }
   return t
 }
 n.d(t, {
   Z: function() {
-    return s
+    return i
   }
 }), n(47120)

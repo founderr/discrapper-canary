@@ -24,22 +24,22 @@ function c(e) {
     action: I,
     dontCloseOnActionIfHoldingShiftKey: T,
     dontCloseOnAction: h,
-    onClose: S
-  } = e, f = r.useRef(null);
+    onClose: f
+  } = e, S = r.useRef(null);
   r.useEffect(() => {
-    s && (0, l.F)(f)
+    s && (0, l.F)(S)
   }, [s]);
-  let N = r.useCallback(e => {
+  let A = r.useCallback(e => {
       if (null == I) return !1;
-      !(e.shiftKey && T) && !h && S(), e.persist(), requestAnimationFrame(() => I(e))
-    }, [I, S, T, h]),
-    A = d ? o()(_.item, u._[n], {
+      !(e.shiftKey && T) && !h && f(), e.persist(), requestAnimationFrame(() => I(e))
+    }, [I, f, T, h]),
+    N = d ? o()(_.item, u._[n], {
       [_.focused]: s
     }) : _.customItem;
   return (0, i.jsx)(a.P, {
-    innerRef: f,
-    className: A,
-    onClick: c ? void 0 : N,
+    innerRef: S,
+    className: N,
+    onClick: c ? void 0 : A,
     "aria-disabled": c,
     ...E,
     children: t({

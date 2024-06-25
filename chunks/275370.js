@@ -1,97 +1,97 @@
-t.r(s), t(47120);
-var o = t(735250),
-  a = t(470079),
-  l = t(512722),
-  r = t.n(l),
-  n = t(481060),
-  i = t(51144),
-  c = t(985002),
-  d = t(880257),
-  u = t(198952),
-  C = t(130310),
-  _ = t(329242),
-  m = t(689938),
-  L = t(467833);
+o.r(s), o(47120);
+var t = o(735250),
+  r = o(470079),
+  n = o(512722),
+  a = o.n(n),
+  l = o(481060),
+  c = o(51144),
+  i = o(985002),
+  d = o(880257),
+  _ = o(198952),
+  u = o(130310),
+  C = o(329242),
+  m = o(689938),
+  h = o(467833);
 s.default = e => {
   let {
     currentUser: s,
-    otherUser: t,
-    transitionState: l,
-    onClose: E
-  } = e, N = a.useCallback(() => {
-    E()
-  }, [E]), M = (0, d.Z)(), [h, x] = a.useState(!1), A = a.useCallback(() => {
-    x(!0)
+    otherUser: o,
+    transitionState: n,
+    onClose: x
+  } = e, L = r.useCallback(() => {
+    x()
+  }, [x]), E = (0, d.Z)(), [N, M] = r.useState(!1), A = r.useCallback(() => {
+    M(!0)
   }, []), {
     acceptLinkRequest: I,
     isAcceptLoading: T
-  } = (0, c.G)({
+  } = (0, i.G)({
     onError: A,
-    onSuccess: N
+    onSuccess: L
   });
-  return r()(!M, "FamilyCenterAcceptLinkModal should only be rendered for teens."), (0, o.jsxs)(n.ModalRoot, {
-    transitionState: l,
+  return a()(!E, "FamilyCenterAcceptLinkModal should only be rendered for teens."), (0, t.jsxs)(l.ModalRoot, {
+    transitionState: n,
     "aria-label": m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_MODAL_TITLE,
-    className: L.root,
-    children: [h ? (0, o.jsx)(n.FormErrorBlock, {
-      className: L.error,
+    className: h.root,
+    children: [N ? (0, t.jsx)(l.FormErrorBlock, {
+      className: h.error,
       children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_MODAL_ERROR
-    }) : null, (0, o.jsxs)(n.ModalContent, {
-      className: L.__invalid_modalContent,
-      children: [(0, o.jsxs)("div", {
-        className: L.header,
-        children: [(0, o.jsx)(u.Z, {
+    }) : null, (0, t.jsxs)(l.ModalContent, {
+      className: h.__invalid_modalContent,
+      children: [(0, t.jsxs)("div", {
+        className: h.header,
+        children: [(0, t.jsx)(_.Z, {
           currentUser: s,
-          otherUser: t,
-          children: (0, o.jsx)(n.LinkIcon, {
+          otherUser: o,
+          children: (0, t.jsx)(l.LinkIcon, {
             size: "md",
             color: "currentColor",
-            className: L.linkIcon
+            className: h.linkIcon
           })
-        }), (0, o.jsx)(n.Heading, {
-          className: L.headerText,
+        }), (0, t.jsx)(l.Heading, {
+          className: h.headerText,
           variant: "text-lg/bold",
           children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_MODAL_TITLE
-        }), (0, o.jsx)(_.Z, {
-          user: t,
+        }), (0, t.jsx)(C.Z, {
+          user: o,
           fill: !0
         })]
-      }), (0, o.jsxs)("div", {
-        className: L.content,
-        children: [(0, o.jsx)(C.Z, {
+      }), (0, t.jsxs)("div", {
+        className: h.content,
+        children: [(0, t.jsx)(u.Z, {
           inModal: !0
-        }), (0, o.jsx)(n.Text, {
-          className: L.disclaimer,
+        }), (0, t.jsx)(l.Text, {
+          className: h.disclaimer,
           variant: "text-xs/normal",
           color: "text-normal",
           children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_ACTIVITY_DISCLAIMER.format({
-            username: i.ZP.getName(t)
+            username: c.ZP.getName(o)
           })
         })]
       })]
-    }), (0, o.jsx)(n.ModalFooter, {
-      children: (0, o.jsx)("form", {
+    }), (0, t.jsx)(l.ModalFooter, {
+      children: (0, t.jsx)("form", {
         onSubmit: e => {
-          e.preventDefault(), I(t)
+          e.preventDefault(), I(o)
         },
-        children: (0, o.jsxs)("div", {
-          className: L.footer,
-          children: [(0, o.jsx)(n.Button, {
-            className: L.button,
+        children: (0, t.jsxs)("div", {
+          className: h.footer,
+          children: [(0, t.jsx)(l.Button, {
+            className: h.button,
             type: "button",
             disabled: T,
-            look: n.Button.Looks.LINK,
-            color: n.Button.Colors.PRIMARY,
-            onClick: E,
-            size: n.Button.Sizes.SMALL,
+            look: l.Button.Looks.LINK,
+            color: l.Button.Colors.PRIMARY,
+            onClick: x,
+            size: l.Button.Sizes.SMALL,
             children: m.Z.Messages.CANCEL
-          }), (0, o.jsx)(n.Button, {
-            className: L.button,
+          }), (0, t.jsx)(l.Button, {
+            className: h.button,
             type: "submit",
             disabled: T,
             submitting: T,
-            color: n.ButtonColors.BRAND,
-            size: n.Button.Sizes.SMALL,
+            color: l.ButtonColors.BRAND,
+            size: l.Button.Sizes.SMALL,
             children: m.Z.Messages.FAMILY_CENTER_ACCEPT_REQUEST
           })]
         })

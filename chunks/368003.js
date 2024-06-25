@@ -1,20 +1,20 @@
 "use strict";
 s.d(t, {
   Z: function() {
-    return p
+    return h
   }
 }), s(47120);
 var n = s(735250),
   r = s(470079),
-  i = s(404759),
-  o = s.n(i),
+  o = s(404759),
+  i = s.n(o),
   a = s(423650),
-  l = s.n(a),
-  u = s(481060),
+  u = s.n(a),
+  l = s(481060),
   c = s(689938),
   d = s(941643);
 
-function h(e, t, s) {
+function p(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -22,23 +22,23 @@ function h(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class p extends r.Component {
+class h extends r.Component {
   render() {
     let {
       selectedValue: e
     } = this.state;
     return (0, n.jsxs)(r.Fragment, {
-      children: [(0, n.jsx)(u.Heading, {
+      children: [(0, n.jsx)(l.Heading, {
         className: d.prompt,
         variant: "heading-md/semibold",
         children: this.props.prompt
       }), (0, n.jsx)("hr", {
         className: d.separator
-      }), (0, n.jsx)(u.Text, {
+      }), (0, n.jsx)(l.Text, {
         className: d.selectYourAnswer,
         variant: "text-xs/normal",
         children: c.Z.Messages.HYPESQUAD_QUIZ_SELECT_ANSWER
-      }), (0, n.jsx)(u.RadioGroup, {
+      }), (0, n.jsx)(l.RadioGroup, {
         options: this.getQuestionOptions(),
         onChange: this.handleOptionChange,
         value: e
@@ -46,12 +46,12 @@ class p extends r.Component {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "state", {
+    super(...e), p(this, "state", {
       selectedValue: null
-    }), h(this, "getQuestionOptions", o()(() => l()(this.props.options.map(e => ({
+    }), p(this, "getQuestionOptions", i()(() => u()(this.props.options.map(e => ({
       name: e.copy,
       value: e.house
-    }))))), h(this, "handleOptionChange", e => {
+    }))))), p(this, "handleOptionChange", e => {
       let {
         onSelect: t
       } = this.props;

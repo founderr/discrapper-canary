@@ -1,27 +1,27 @@
-var s = n(735250),
-  o = n(470079),
+var o = n(735250),
+  s = n(470079),
   r = n(120356),
   a = n.n(r),
-  l = n(920906),
-  i = n(759853),
+  i = n(920906),
+  l = n(759853),
   c = n(95985),
-  u = n(743294),
-  d = n(232604);
-let p = o.forwardRef(function(e, t) {
+  d = n(743294),
+  u = n(232604);
+let p = s.forwardRef(function(e, t) {
   var n;
   let {
     className: r,
     expansionSpring: p,
-    isExpanded: x,
-    isExpansionAnimationComplete: m,
+    isExpanded: m,
+    isExpansionAnimationComplete: x,
     quest: g
-  } = e, h = o.useRef(null), C = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
-  return (0, s.jsxs)(l.animated.div, {
+  } = e, f = s.useRef(null), C = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
+  return (0, o.jsxs)(i.animated.div, {
     ref: t,
-    "aria-hidden": x && m,
-    className: a()(r, d.contentCollapsed, {
-      [d.contentCollapsedExpanded]: x,
-      [d.contentCollapsedAccepted]: C
+    "aria-hidden": m && x,
+    className: a()(r, u.contentCollapsed, {
+      [u.contentCollapsedExpanded]: m,
+      [u.contentCollapsedAccepted]: C
     }),
     style: {
       opacity: p.to({
@@ -29,20 +29,20 @@ let p = o.forwardRef(function(e, t) {
         output: [1, 0]
       })
     },
-    children: [C ? (0, s.jsx)("div", {
-      className: d.postEnrollmentBackground,
+    children: [C ? (0, o.jsx)("div", {
+      className: u.postEnrollmentBackground,
       style: {
-        backgroundImage: "linear-gradient(90deg, ".concat(u.aY, ", ").concat(u.v6, ")")
+        backgroundImage: "linear-gradient(90deg, ".concat(d.aY, ", ").concat(d.v6, ")")
       }
-    }) : null, (0, s.jsx)(i.Z, {
-      progressBarRef: h,
+    }) : null, (0, o.jsx)(l.Z, {
+      progressBarRef: f,
       quest: g,
-      isExpanded: x
-    }), (0, s.jsx)("div", {
-      className: d.contentCollapsedWrapper,
-      children: C ? (0, s.jsx)(c.Z, {
+      isExpanded: m
+    }), (0, o.jsx)("div", {
+      className: u.contentCollapsedWrapper,
+      children: C ? (0, o.jsx)(c.Z, {
         quest: g,
-        progressBarRef: h,
+        progressBarRef: f,
         isExpanded: !1
       }) : null
     })]

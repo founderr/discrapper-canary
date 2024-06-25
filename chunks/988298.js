@@ -1,23 +1,23 @@
 n.d(t, {
   GG: function() {
-    return r
-  },
-  R2: function() {
     return a
   },
+  R2: function() {
+    return s
+  },
   h7: function() {
-    return i
+    return l
   },
   rh: function() {
-    return s
+    return r
   }
 });
-var l = n(570140);
+var i = n(570140);
 
-function i(e, t) {
+function l(e, t) {
   return new Promise(n => {
     setTimeout(() => {
-      l.Z.dispatch({
+      i.Z.dispatch({
         type: "ACTIVITY_INVITE_MODAL_OPEN",
         activity: e,
         isPrivate: t,
@@ -27,22 +27,22 @@ function i(e, t) {
   })
 }
 
-function s(e) {
-  l.Z.dispatch({
+function r(e) {
+  i.Z.dispatch({
     type: "ACTIVITY_INVITE_MODAL_QUERY",
     query: e
   })
 }
 
-function r(e) {
-  l.Z.dispatch({
+function a(e) {
+  i.Z.dispatch({
     type: "ACTIVITY_INVITE_MODAL_SEND",
     channelId: e
   })
 }
 
-function a(e) {
-  l.Z.dispatch({
+function s(e) {
+  i.Z.dispatch({
     type: "ACTIVITY_INVITE_MODAL_SEND",
     userId: e
   })

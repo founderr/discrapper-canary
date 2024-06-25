@@ -1,28 +1,28 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return T
   }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(536982),
-  a = t(456677),
-  r = t(951665),
-  o = t(428760),
-  c = t(55889),
-  d = t(300453),
-  u = t(620436),
-  E = t(273504),
-  _ = t(689938),
-  I = t(921624);
+var s = n(735250),
+  a = n(470079),
+  i = n(536982),
+  r = n(456677),
+  l = n(951665),
+  o = n(428760),
+  c = n(55889),
+  d = n(300453),
+  u = n(620436),
+  _ = n(273504),
+  E = n(689938),
+  I = n(921624);
 
 function T(e) {
-  var s, t, T, N, m, S;
+  var t, n, T, m, N, S;
   let {
     rule: h,
     onChangeRule: g
-  } = e, C = i.useCallback(e => {
+  } = e, C = a.useCallback(e => {
     g({
       ...h,
       triggerMetadata: {
@@ -30,7 +30,7 @@ function T(e) {
         keywordFilter: e
       }
     })
-  }, [g, h]), x = i.useCallback(e => {
+  }, [g, h]), x = a.useCallback(e => {
     g({
       ...h,
       triggerMetadata: {
@@ -39,41 +39,41 @@ function T(e) {
       }
     })
   }, [g, h]);
-  return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsxs)("div", {
+  return (0, s.jsx)(s.Fragment, {
+    children: (0, s.jsxs)("div", {
       className: I.cardContentsContainer,
-      children: [(0, n.jsxs)(d.Z, {
+      children: [(0, s.jsxs)(d.Z, {
         step: 1,
-        header: _.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_TRIGGER_HEADER,
-        children: [(0, n.jsx)(o.Z, {
+        header: E.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_TRIGGER_HEADER,
+        children: [(0, s.jsx)(o.Z, {
           onChangeText: C,
-          maxWordCount: E.RH,
-          initialValue: null === (s = h.triggerMetadata) || void 0 === s ? void 0 : s.keywordFilter
-        }), (0, n.jsx)(r.Z, {
+          maxWordCount: _.RH,
+          initialValue: null === (t = h.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+        }), (0, s.jsx)(l.Z, {
           rule: h,
           onChangeRule: g,
-          collapsed: (null == h ? void 0 : null === (t = h.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns) == null || (null == h ? void 0 : null === (T = h.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
-        }), (0, n.jsx)(l.Z, {
+          collapsed: (null == h ? void 0 : null === (n = h.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == h ? void 0 : null === (T = h.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
+        }), (0, s.jsx)(i.Z, {
           onChange: x,
-          initialValue: null === (N = h.triggerMetadata) || void 0 === N ? void 0 : N.allowList,
-          maxWordCount: E.n4,
-          collapsed: (null === (m = h.triggerMetadata) || void 0 === m ? void 0 : m.allowList) == null || (null === (S = h.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
+          initialValue: null === (m = h.triggerMetadata) || void 0 === m ? void 0 : m.allowList,
+          maxWordCount: _.n4,
+          collapsed: (null === (N = h.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (S = h.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
         })]
-      }), (0, n.jsx)(u.Z, {
+      }), (0, s.jsx)(u.Z, {
         type: u.Z.Type.ARROW_DOWN
-      }), (0, n.jsx)(d.Z, {
+      }), (0, s.jsx)(d.Z, {
         step: 2,
-        header: _.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-        children: (0, n.jsx)(a.Z, {
+        header: E.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
+        children: (0, s.jsx)(r.Z, {
           rule: h,
           onChangeRule: g
         })
-      }), (0, n.jsx)(u.Z, {
+      }), (0, s.jsx)(u.Z, {
         type: u.Z.Type.CROSS
-      }), (0, n.jsx)(d.Z, {
+      }), (0, s.jsx)(d.Z, {
         step: 3,
-        header: _.Z.Messages.GUILD_AUTOMOD_ROLES_EXEMPTION_HEADER,
-        children: (0, n.jsx)(c.Z, {
+        header: E.Z.Messages.GUILD_AUTOMOD_ROLES_EXEMPTION_HEADER,
+        children: (0, s.jsx)(c.Z, {
           rule: h,
           onChangeRule: g,
           onlyRoles: !0

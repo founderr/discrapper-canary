@@ -3,10 +3,10 @@ n.d(t, {
     return r
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(709014);
-let a = {
+var i = n(735250),
+  a = n(470079),
+  l = n(709014);
+let s = {
     mute: {
       name: "mute",
       start: 0,
@@ -29,17 +29,17 @@ let a = {
     }
   },
   r = e => {
-    let t = i.useRef(null),
-      r = i.useRef(e),
-      o = i.useMemo(() => () => {
+    let t = a.useRef(null),
+      r = a.useRef(e),
+      o = a.useMemo(() => () => {
         null != t.current && t.current.play(e)
       }, [e]),
-      c = i.useCallback(() => {
+      c = a.useCallback(() => {
         if (null == t.current) return;
         let n = "mute" === e ? "hover_unmuted" : "hover_muted";
         t.current.play(n)
       }, [e]),
-      u = i.useCallback(() => {
+      u = a.useCallback(() => {
         if (null == t.current) return;
         let n = "mute" === e ? "hover_unmuted" : "hover_muted";
         t.current.stopIfPlaying(n)
@@ -51,12 +51,12 @@ let a = {
         onMouseLeave: u
       },
       play: o,
-      Component: i.useCallback(e => (0, l.jsx)(s.L, {
+      Component: a.useCallback(e => (0, i.jsx)(l.L, {
         ...e,
         src: () => n.e("410").then(n.t.bind(n, 992285, 19)),
         ref: t,
         initialAnimation: r.current,
-        markers: a
+        markers: s
       }), [])
     }
   }

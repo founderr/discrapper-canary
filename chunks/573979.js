@@ -3,11 +3,11 @@ n.d(t, {
     return o
   }
 });
-var s, i, l, a, r = n(358085);
+var i, s, a, r, l = n(358085);
 
 function o(e) {
-  if ((0, r.isIOS)()) return e;
-  if (!(0, r.isAndroid)()) return -1;
+  if ((0, l.isIOS)()) return e;
+  if (!(0, l.isAndroid)()) return -1;
   switch (e) {
     case 0:
       return 0;
@@ -23,4 +23,4 @@ function o(e) {
     default:
       return -1
   }
-}(s = l || (l = {}))[s.UNHANDLED = -1] = "UNHANDLED", s[s.NOMINAL = 0] = "NOMINAL", s[s.FAIR = 1] = "FAIR", s[s.SERIOUS = 2] = "SERIOUS", s[s.CRITICAL = 3] = "CRITICAL", (i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.LIGHT = 1] = "LIGHT", i[i.MODERATE = 2] = "MODERATE", i[i.SEVERE = 3] = "SEVERE", i[i.CRITICAL = 4] = "CRITICAL", i[i.EMERGENCY = 5] = "EMERGENCY", i[i.SHUTDOWN = 6] = "SHUTDOWN"
+}(i = a || (a = {}))[i.UNHANDLED = -1] = "UNHANDLED", i[i.NOMINAL = 0] = "NOMINAL", i[i.FAIR = 1] = "FAIR", i[i.SERIOUS = 2] = "SERIOUS", i[i.CRITICAL = 3] = "CRITICAL", (s = r || (r = {}))[s.NONE = 0] = "NONE", s[s.LIGHT = 1] = "LIGHT", s[s.MODERATE = 2] = "MODERATE", s[s.SEVERE = 3] = "SEVERE", s[s.CRITICAL = 4] = "CRITICAL", s[s.EMERGENCY = 5] = "EMERGENCY", s[s.SHUTDOWN = 6] = "SHUTDOWN"

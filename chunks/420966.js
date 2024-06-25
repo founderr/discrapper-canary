@@ -1,109 +1,109 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   V: function() {
-    return N
+    return m
   },
   Z: function() {
-    return m
+    return N
   }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(481060),
-  r = t(239091),
-  o = t(605436),
-  c = t(741247),
-  d = t(474333),
-  u = t(243730),
-  E = t(852898),
-  _ = t(203377),
-  I = t(689938),
-  T = t(97054);
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(442837),
+  r = n(481060),
+  l = n(239091),
+  o = n(605436),
+  c = n(741247),
+  d = n(474333),
+  u = n(243730),
+  _ = n(852898),
+  E = n(203377),
+  I = n(689938),
+  T = n(97054);
 
-function N() {
-  let [e, s] = i.useState(!0);
+function m() {
+  let [e, t] = a.useState(!0);
   return {
     scrolledToTop: e,
     handleScroll: function(e) {
-      s(0 === e.currentTarget.scrollTop)
+      t(0 === e.currentTarget.scrollTop)
     }
   }
 }
 
-function m(e) {
+function N(e) {
   let {
-    guild: s,
-    role: N,
-    selectedSection: m,
+    guild: t,
+    role: m,
+    selectedSection: N,
     setSelectedSection: S
-  } = e, h = i.useCallback(e => {
+  } = e, h = a.useCallback(e => {
     S(e)
-  }, [S]), g = (0, l.e7)([u.Z], () => {
+  }, [S]), g = (0, i.e7)([u.Z], () => {
     var e;
-    return null === (e = u.Z.getRoleMemberCount(s.id)) || void 0 === e ? void 0 : e[N.id]
-  }, [N.id, s.id]), C = (0, o.pM)(s.id, N.id), x = (0, E.Z)(N);
-  i.useEffect(() => {
-    C && S(_.ZI.PERMISSIONS)
+    return null === (e = u.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[m.id]
+  }, [m.id, t.id]), C = (0, o.pM)(t.id, m.id), x = (0, _.Z)(m);
+  a.useEffect(() => {
+    C && S(E.ZI.PERMISSIONS)
   }, [C, S]);
-  let R = (0, c.useHasGuildRoleItems)(s, N);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)("div", {
+  let p = (0, c.useHasGuildRoleItems)(t, m);
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)("div", {
       className: T.titleContainer,
-      children: [(0, n.jsx)(a.Text, {
+      children: [(0, s.jsx)(r.Text, {
         className: T.titleText,
         color: "header-primary",
         variant: "text-md/semibold",
         children: I.Z.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({
-          roleName: N.name
+          roleName: m.name
         })
-      }), R ? (0, n.jsx)(a.Clickable, {
+      }), p ? (0, s.jsx)(r.Clickable, {
         className: T.menu,
         onClick: function(e) {
-          (0, r.jW)(e, async () => {
+          (0, l.jW)(e, async () => {
             let {
               default: e
-            } = await Promise.resolve().then(t.bind(t, 741247));
-            return t => (0, n.jsx)(e, {
-              ...t,
-              guild: s,
-              role: N
+            } = await Promise.resolve().then(n.bind(n, 741247));
+            return n => (0, s.jsx)(e, {
+              ...n,
+              guild: t,
+              role: m
             })
           })
         },
         "aria-label": I.Z.Messages.MORE_OPTIONS,
-        children: (0, n.jsx)(a.MoreHorizontalIcon, {
+        children: (0, s.jsx)(r.MoreHorizontalIcon, {
           size: "md",
           color: "currentColor"
         })
       }) : null]
-    }), null != x ? (0, n.jsx)(d.Z, {
+    }), null != x ? (0, s.jsx)(d.Z, {
       messageType: d.Q.WARNING,
       children: x
-    }) : null, (0, n.jsxs)(a.TabBar, {
+    }) : null, (0, s.jsxs)(r.TabBar, {
       className: T.tabBar,
       "aria-label": I.Z.Messages.OPTIONS,
-      selectedItem: m,
+      selectedItem: N,
       type: "top",
       look: "brand",
       onItemSelect: h,
-      children: [(0, n.jsx)(a.TabBar.Item, {
+      children: [(0, s.jsx)(r.TabBar.Item, {
         className: T.tabBarItem,
-        id: _.ZI.DISPLAY,
+        id: E.ZI.DISPLAY,
         disabled: C,
         children: I.Z.Messages.ROLE_EDIT_TAB_DISPLAY
-      }), (0, n.jsx)(a.TabBar.Item, {
+      }), (0, s.jsx)(r.TabBar.Item, {
         className: T.tabBarItem,
-        id: _.ZI.PERMISSIONS,
+        id: E.ZI.PERMISSIONS,
         children: I.Z.Messages.ROLE_EDIT_TAB_PERMISSIONS
-      }), (0, n.jsx)(a.TabBar.Item, {
+      }), (0, s.jsx)(r.TabBar.Item, {
         className: T.tabBarItem,
-        id: _.ZI.VERIFICATIONS,
+        id: E.ZI.VERIFICATIONS,
         disabled: C,
         children: I.Z.Messages.ROLE_EDIT_TAB_VERIFICATION
-      }), (0, n.jsx)(a.TabBar.Item, {
+      }), (0, s.jsx)(r.TabBar.Item, {
         className: T.tabBarItem,
-        id: _.ZI.MEMBERS,
+        id: E.ZI.MEMBERS,
         disabled: C,
         children: C ? I.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({
           numMembers: String(g)

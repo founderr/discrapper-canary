@@ -7,16 +7,16 @@ n.d(t, {
     return O
   },
   Mn: function() {
-    return N
+    return A
   },
   P6: function() {
     return D
   },
   S2: function() {
-    return f
+    return S
   },
   UZ: function() {
-    return R
+    return p
   },
   V3: function() {
     return m
@@ -31,16 +31,16 @@ n.d(t, {
     return C
   },
   cV: function() {
-    return p
+    return R
   },
   ol: function() {
-    return A
+    return N
   },
   si: function() {
     return v
   },
   ss: function() {
-    return S
+    return f
   },
   xn: function() {
     return g
@@ -71,7 +71,7 @@ function h() {
   })
 }
 
-function S(e, t) {
+function f(e, t) {
   let n = t ? I.Z.Messages.DELETE_ACCOUNT : I.Z.Messages.DISABLE_ACCOUNT,
     r = t ? d.ANM.DELETE_ACCOUNT : d.ANM.DISABLE_ACCOUNT;
   return (0, _.Z)(t => i.tn.post({
@@ -90,7 +90,7 @@ function S(e, t) {
     c.Z.logoutInternal(), (0, a.uL)(d.Z5c.DEFAULT_LOGGED_OUT)
   })
 }
-async function f(e) {
+async function S(e) {
   let t = await i.tn.patch({
       url: d.ANM.ME,
       oldFormErrors: !0,
@@ -114,7 +114,7 @@ async function f(e) {
   }), t
 }
 
-function N(e) {
+function A(e) {
   let {
     username: t,
     discriminator: n,
@@ -124,7 +124,7 @@ function N(e) {
     avatar: c,
     avatarDecoration: T,
     newPassword: h,
-    globalName: S
+    globalName: f
   } = e;
   return o.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
@@ -136,7 +136,7 @@ function N(e) {
       password: a,
       avatar: c,
       discriminator: n,
-      global_name: S,
+      global_name: f,
       new_password: h,
       ...e
     };
@@ -145,7 +145,7 @@ function N(e) {
       u = (0, E.xJ)();
     null != u && null != l && (o.push_provider = u, o.push_token = l);
     let _ = r.K.get(d.scU);
-    return null != E.mv && null != _ && (o.push_voip_provider = E.mv, o.push_voip_token = _), f(o)
+    return null != E.mv && null != _ && (o.push_voip_provider = E.mv, o.push_voip_token = _), S(o)
   }, {
     checkEnabled: !1,
     modalProps: {
@@ -170,7 +170,7 @@ function N(e) {
   }), e))
 }
 
-function A() {
+function N() {
   return i.tn.get({
     url: d.ANM.USER_HARVEST,
     oldFormErrors: !0
@@ -194,14 +194,14 @@ function O(e) {
   }), null == e ? s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
-function R(e) {
+function p(e) {
   o.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
     globalName: e
   })
 }
 
-function p(e) {
+function R(e) {
   o.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e

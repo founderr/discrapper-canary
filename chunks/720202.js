@@ -23,7 +23,7 @@ function h(e, t) {
   return I.request(e, t), !1
 }
 
-function S(e, t) {
+function f(e, t) {
   return t.forEach(t => {
     let {
       author: n,
@@ -33,22 +33,22 @@ function S(e, t) {
   }), !1
 }
 
-function f(e) {
+function S(e) {
   let {
     channelId: t,
     messages: n
   } = e, i = d.Z.getChannel(t);
-  return null != i && null != i.guild_id && S(i.guild_id, n)
+  return null != i && null != i.guild_id && f(i.guild_id, n)
 }
 
-function N(e) {
+function A(e) {
   let {
     guildId: t,
     messages: n
   } = e;
-  return null != t && S(t, l().flatten(n))
+  return null != t && f(t, l().flatten(n))
 }
-class A extends(i = u.ZP.Store) {
+class N extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(d.Z, E.ZP)
   }
@@ -56,12 +56,12 @@ class A extends(i = u.ZP.Store) {
     h(e, t)
   }
 }
-o = "GuildMemberRequesterStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+o = "GuildMemberRequesterStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new A(_.Z, {
+}) : r[s] = o, t.Z = new N(_.Z, {
   CONNECTION_CLOSED: T,
   CONNECTION_OPEN: T,
   CONNECTION_RESUMED: function() {
@@ -76,11 +76,11 @@ o = "GuildMemberRequesterStore", (s = "displayName") in(r = A) ? Object.definePr
     }), null != e.notFound && e.notFound.forEach(t => I.acknowledge(e.guildId, t));
     return !1
   },
-  SEARCH_FINISH: N,
-  MOD_VIEW_SEARCH_FINISH: N,
-  LOCAL_MESSAGES_LOADED: f,
-  LOAD_MESSAGES_SUCCESS: f,
-  LOAD_MESSAGES_AROUND_SUCCESS: f,
-  LOAD_PINNED_MESSAGES_SUCCESS: f,
-  LOAD_RECENT_MENTIONS_SUCCESS: f
+  SEARCH_FINISH: A,
+  MOD_VIEW_SEARCH_FINISH: A,
+  LOCAL_MESSAGES_LOADED: S,
+  LOAD_MESSAGES_SUCCESS: S,
+  LOAD_MESSAGES_AROUND_SUCCESS: S,
+  LOAD_PINNED_MESSAGES_SUCCESS: S,
+  LOAD_RECENT_MENTIONS_SUCCESS: S
 })

@@ -1,40 +1,40 @@
 "use strict";
 n.d(t, {
   wB: function() {
-    return Z
+    return E
   }
 }), n(411104);
-var i, s, l, o, a = n(735250),
-  r = n(470079),
+var i, s, a, o, r = n(735250),
+  l = n(470079),
   c = n(120356),
   d = n.n(c),
   u = n(877921),
   h = n.n(u),
   p = n(481060),
   f = n(981631),
-  E = n(780440),
+  _ = n(780440),
   g = n(83922);
 let m = f.t_t.DEFAULT,
-  Z = 1,
-  I = r.createContext({
+  E = 1,
+  Z = l.createContext({
     type: m,
-    opacity: Z
+    opacity: E
   }),
-  S = r.createContext(void 0),
-  _ = e => {
+  I = l.createContext(void 0),
+  S = e => {
     let {
       children: t,
       className: n,
       ...i
     } = e;
-    return (0, a.jsx)(I.Consumer, {
+    return (0, r.jsx)(Z.Consumer, {
       children: e => {
         let {
           type: s
         } = e;
-        return (0, a.jsx)(S.Consumer, {
-          children: e => (0, a.jsx)("div", {
-            className: d()(n, E.bar, E[h()(s)]),
+        return (0, r.jsx)(I.Consumer, {
+          children: e => (0, r.jsx)("div", {
+            className: d()(n, _.bar, _[h()(s)]),
             style: e,
             ...i,
             children: t
@@ -43,24 +43,24 @@ let m = f.t_t.DEFAULT,
       }
     })
   };
-class C extends(i = r.PureComponent) {
+class C extends(i = l.PureComponent) {
   render() {
     let {
       disableScroll: e,
       children: t,
       className: n
     } = this.props;
-    return (0, a.jsx)(S.Consumer, {
-      children: i => (0, a.jsx)(I.Consumer, {
+    return (0, r.jsx)(I.Consumer, {
+      children: i => (0, r.jsx)(Z.Consumer, {
         children: s => {
-          let l = d()(E.body, E[h()(s.type)], n);
-          return e ? (0, a.jsx)("div", {
-            className: l,
+          let a = d()(_.body, _[h()(s.type)], n);
+          return e ? (0, r.jsx)("div", {
+            className: a,
             style: i,
             children: t
-          }) : (0, a.jsx)(p.Scroller, {
+          }) : (0, r.jsx)(p.Scroller, {
             fade: !0,
-            className: l,
+            className: a,
             children: t
           })
         }
@@ -70,34 +70,34 @@ class C extends(i = r.PureComponent) {
 }
 o = {
   disableScroll: !1
-}, (l = "defaultProps") in(s = C) ? Object.defineProperty(s, l, {
+}, (a = "defaultProps") in(s = C) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = o;
+}) : s[a] = o;
 let v = e => {
     let {
       type: t = m,
       width: n,
       height: i,
       children: s,
-      className: l,
-      opacity: o = Z,
-      onClick: r
+      className: a,
+      opacity: o = E,
+      onClick: l
     } = e;
-    return (0, a.jsx)(I.Provider, {
+    return (0, r.jsx)(Z.Provider, {
       value: {
         type: t,
         opacity: o
       },
-      children: (0, a.jsx)("div", {
-        className: d()(E.widget, E[h()(t)], l),
+      children: (0, r.jsx)("div", {
+        className: d()(_.widget, _[h()(t)], a),
         style: {
           width: n,
           height: i
         },
-        onClick: r,
+        onClick: l,
         children: s
       })
     })
@@ -108,10 +108,10 @@ let v = e => {
       className: n,
       dynamicSize: i = !1
     } = e;
-    return (0, a.jsx)(S.Consumer, {
-      children: e => (0, a.jsx)("div", {
-        className: d()(E.content, n, {
-          [E.staticSize]: !i
+    return (0, r.jsx)(I.Consumer, {
+      children: e => (0, r.jsx)("div", {
+        className: d()(_.content, n, {
+          [_.staticSize]: !i
         }),
         style: e,
         children: t
@@ -124,19 +124,19 @@ v.Background = e => {
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [_, C, x];
-  return (0, a.jsx)(I.Consumer, {
+  let i = [S, C, x];
+  return (0, r.jsx)(Z.Consumer, {
     children: e => {
       let {
         opacity: s
-      } = e, l = {
+      } = e, a = {
         backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : s), ")")
       };
-      if ("string" == typeof t.type) return r.cloneElement(t, {
-        style: l
+      if ("string" == typeof t.type) return l.cloneElement(t, {
+        style: a
       });
-      if (i.includes(t.type)) return (0, a.jsx)(S.Provider, {
-        value: l,
+      if (i.includes(t.type)) return (0, r.jsx)(I.Provider, {
+        value: a,
         children: t
       });
       {
@@ -151,36 +151,36 @@ v.Background = e => {
     label: n,
     onClick: i,
     isActive: s,
-    tooltipPosition: l = "top",
+    tooltipPosition: a = "top",
     size: o = 20,
-    isTutorial: r = !1
+    isTutorial: l = !1
   } = e;
-  return (0, a.jsx)(p.Tooltip, {
-    text: r ? (0, a.jsx)("div", {
-      className: E.tutorialTip,
+  return (0, r.jsx)(p.Tooltip, {
+    text: l ? (0, r.jsx)("div", {
+      className: _.tutorialTip,
       children: n
     }) : n,
     "aria-label": n,
-    position: l,
-    forceOpen: r,
-    color: r ? p.Tooltip.Colors.BRAND : p.Tooltip.Colors.BLACK,
+    position: a,
+    forceOpen: l,
+    color: l ? p.Tooltip.Colors.BRAND : p.Tooltip.Colors.BLACK,
     children: e => {
       let {
-        onMouseEnter: l,
-        onMouseLeave: r
+        onMouseEnter: a,
+        onMouseLeave: l
       } = e;
-      return (0, a.jsx)(p.Button, {
+      return (0, r.jsx)(p.Button, {
         look: p.Button.Looks.BLANK,
         size: p.Button.Sizes.NONE,
         onClick: i,
-        onMouseEnter: l,
-        onMouseLeave: r,
-        className: d()(E.icon, {
-          [E.toggledIconOn]: s
+        onMouseEnter: a,
+        onMouseLeave: l,
+        className: d()(_.icon, {
+          [_.toggledIconOn]: s
         }),
         innerClassName: g.flexCenter,
         "aria-label": n,
-        children: (0, a.jsx)(t, {
+        children: (0, r.jsx)(t, {
           color: "currentColor",
           size: "custom",
           width: o,
@@ -190,4 +190,4 @@ v.Background = e => {
       })
     }
   })
-}, v.Bar = _, t.ZP = v
+}, v.Bar = S, t.ZP = v

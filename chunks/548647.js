@@ -1,29 +1,29 @@
-n.d(s, {
+s.d(n, {
   n: function() {
     return _
   }
 });
-var a = n(470079),
-  l = n(442837),
-  t = n(626135),
-  i = n(236289),
-  o = n(451284),
-  r = n(613734),
-  c = n(800530),
-  d = n(981631);
+var a = s(470079),
+  t = s(442837),
+  l = s(626135),
+  i = s(236289),
+  o = s(451284),
+  r = s(613734),
+  c = s(800530),
+  d = s(981631);
 let _ = () => {
-  let e = (0, l.e7)([i.Z], () => i.Z.getAppealClassificationId()),
-    s = (0, r.YG)(null != e ? e : d.lds),
-    n = (0, o.P)(),
-    _ = (0, l.e7)([i.Z], () => i.Z.getIsDsaEligible());
+  let e = (0, t.e7)([i.Z], () => i.Z.getAppealClassificationId()),
+    n = (0, r.YG)(null != e ? e : d.lds),
+    s = (0, o.P)(),
+    _ = (0, t.e7)([i.Z], () => i.Z.getIsDsaEligible());
   return a.useCallback(a => {
-    t.default.track(d.rMx.SAFETY_HUB_ACTION, {
+    l.default.track(d.rMx.SAFETY_HUB_ACTION, {
       action: a,
-      account_standing: n.state,
+      account_standing: s.state,
       classification_ids: null != e ? [Number(e)] : null,
       source: c.s.AppealIngestion,
       is_dsa_eligible: _,
-      violation_type: s.violationType
+      violation_type: n.violationType
     })
-  }, [n.state, e, s, _])
+  }, [s.state, e, n, _])
 }

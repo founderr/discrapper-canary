@@ -1,81 +1,81 @@
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return c
   }
 }), n(47120);
-var o = n(735250),
-  s = n(470079),
-  r = n(481060),
-  l = n(689938),
-  a = n(129333);
+var r = n(735250),
+  o = n(470079),
+  a = n(481060),
+  s = n(689938),
+  l = n(129333);
 
-function i(e) {
+function c(e) {
   let {
     onConfirm: t,
     onClose: n,
-    validationText: i,
-    errorText: c,
+    validationText: c,
+    errorText: i,
     header: u,
     className: d,
     cancelText: x,
     confirmText: h,
-    instructionText: m,
-    transitionState: p,
+    instructionText: p,
+    transitionState: m,
     children: C
-  } = e, [j, f] = s.useState(""), [N, g] = s.useState(null), M = s.Children.count(C) > 0 ? (0, o.jsx)(r.Card, {
-    type: r.Card.Types.WARNING,
-    className: a.card,
-    children: (0, o.jsx)(r.Text, {
-      className: a.warning,
+  } = e, [g, j] = o.useState(""), [f, N] = o.useState(null), M = o.Children.count(C) > 0 ? (0, r.jsx)(a.Card, {
+    type: a.Card.Types.WARNING,
+    className: l.card,
+    children: (0, r.jsx)(a.Text, {
+      className: l.warning,
       variant: "text-md/normal",
       children: C
     })
   }) : null;
-  return (0, o.jsx)(r.ModalRoot, {
-    transitionState: p,
+  return (0, r.jsx)(a.ModalRoot, {
+    transitionState: m,
     className: d,
-    children: (0, o.jsxs)("form", {
+    children: (0, r.jsxs)("form", {
       onSubmit: function(e) {
-        if (e.preventDefault(), j.toLowerCase() !== i.toLowerCase()) {
-          g(c);
+        if (e.preventDefault(), g.toLowerCase() !== c.toLowerCase()) {
+          N(i);
           return
         }
         null == t || t(), n()
       },
-      children: [(0, o.jsx)(r.ModalHeader, {
+      children: [(0, r.jsx)(a.ModalHeader, {
         separator: !1,
-        children: (0, o.jsx)(r.Heading, {
+        children: (0, r.jsx)(a.Heading, {
           variant: "heading-lg/semibold",
           children: u
         })
-      }), (0, o.jsxs)(r.ModalContent, {
-        children: [M, (0, o.jsxs)(r.FormItem, {
-          title: m,
-          className: a.spacing,
-          children: [(0, o.jsx)(r.TextInput, {
+      }), (0, r.jsxs)(a.ModalContent, {
+        children: [M, (0, r.jsxs)(a.FormItem, {
+          title: p,
+          className: l.spacing,
+          children: [(0, r.jsx)(a.TextInput, {
             id: "text-entry-confirm",
             type: "text",
-            value: j,
+            value: g,
             autoComplete: "off",
-            onChange: f,
+            onChange: j,
             autoFocus: !0
-          }), null != N && "" !== N ? (0, o.jsx)(r.Text, {
+          }), null != f && "" !== f ? (0, r.jsx)(a.Text, {
             color: "text-danger",
             variant: "text-xs/normal",
-            className: a.error,
-            children: N
+            className: l.error,
+            children: f
           }) : null]
         })]
-      }), (0, o.jsxs)(r.ModalFooter, {
-        children: [(0, o.jsx)(r.Button, {
+      }), (0, r.jsxs)(a.ModalFooter, {
+        children: [(0, r.jsx)(a.Button, {
           type: "submit",
-          color: r.Button.Colors.RED,
-          children: null != h ? h : l.Z.Messages.CONFIRM
-        }), (0, o.jsx)(r.Button, {
+          color: a.Button.Colors.RED,
+          children: null != h ? h : s.Z.Messages.CONFIRM
+        }), (0, r.jsx)(a.Button, {
           onClick: n,
-          look: r.Button.Looks.LINK,
-          color: r.Button.Colors.PRIMARY,
-          children: null != x ? x : l.Z.Messages.CANCEL
+          look: a.Button.Looks.LINK,
+          color: a.Button.Colors.PRIMARY,
+          children: null != x ? x : s.Z.Messages.CANCEL
         })]
       })]
     })

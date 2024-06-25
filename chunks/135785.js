@@ -1,52 +1,52 @@
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(481060),
-  l = s(230711),
-  o = s(63063),
-  c = s(74538),
-  E = s(140465),
-  _ = s(474936),
-  u = s(981631),
-  d = s(689938),
-  T = s(724991);
+var s = n(735250);
+n(470079);
+var a = n(120356),
+  r = n.n(a),
+  i = n(481060),
+  l = n(230711),
+  o = n(63063),
+  c = n(74538),
+  d = n(140465),
+  _ = n(474936),
+  E = n(981631),
+  u = n(689938),
+  T = n(724991);
 t.Z = e => {
-  let t, s, {
+  let t, n, {
       premiumSubscription: a,
       className: I,
       isFullscreen: R = !1,
-      textColor: A
+      textColor: C
     } = e,
-    N = (0, E.Nx)();
+    g = (0, d.Nx)();
   if (null == a) return null;
-  let C = null != a ? c.ZP.getPremiumPlanItem(a) : null;
-  if (c.ZP.isBoostOnlySubscription(a) ? t = d.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != C && (t = c.ZP.getDisplayPremiumType(C.planId)), null == t) return null;
-  let g = () => l.Z.open(u.oAB.SUBSCRIPTIONS),
-    m = (null != C ? c.ZP.getSkuIdForPlan(C.planId) : null) === _.Si.TIER_1;
-  return s = null != A ? A : N || R ? "always-white" : "text-normal", (0, n.jsxs)(r.Card, {
-    className: i()(T.container, I, {
+  let p = null != a ? c.ZP.getPremiumPlanItem(a) : null;
+  if (c.ZP.isBoostOnlySubscription(a) ? t = u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != p && (t = c.ZP.getDisplayPremiumType(p.planId)), null == t) return null;
+  let A = () => l.Z.open(E.oAB.SUBSCRIPTIONS),
+    N = (null != p ? c.ZP.getSkuIdForPlan(p.planId) : null) === _.Si.TIER_1;
+  return n = null != C ? C : g || R ? "always-white" : "text-normal", (0, s.jsxs)(i.Card, {
+    className: r()(T.container, I, {
       [T.lightTextLink]: R,
-      [T.centerText]: N
+      [T.centerText]: g
     }),
-    type: r.Card.Types.CUSTOM,
-    children: [(0, n.jsx)(r.CircleExclamationPointIcon, {
+    type: i.Card.Types.CUSTOM,
+    children: [(0, s.jsx)(i.CircleExclamationPointIcon, {
       size: "custom",
       width: 20,
       height: 20,
       color: "currentColor",
-      className: i()(T.icon, {
-        [T.lightThemeColorOnly]: N || R
+      className: r()(T.icon, {
+        [T.lightThemeColorOnly]: g || R
       })
-    }), (0, n.jsx)(r.Text, {
+    }), (0, s.jsx)(i.Text, {
       variant: "text-sm/medium",
-      color: s,
-      children: m ? d.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
-        helpdeskArticle: o.Z.getArticleURL(u.BhN.PREMIUM_DETAILS),
-        onSubscriptionsClick: g
-      }) : d.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
+      color: n,
+      children: N ? u.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+        helpdeskArticle: o.Z.getArticleURL(E.BhN.PREMIUM_DETAILS),
+        onSubscriptionsClick: A
+      }) : u.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
         subscriptionName: t,
-        onSubscriptionsClick: g
+        onSubscriptionsClick: A
       })
     })]
   })

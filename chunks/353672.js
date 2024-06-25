@@ -1,44 +1,44 @@
-t.d(n, {
+s.d(t, {
   Z: function() {
-    return c
+    return i
   }
 });
-var s = t(735250);
-t(470079);
-var o = t(120356),
-  r = t.n(o),
-  a = t(481060),
-  i = t(583427);
+var o = s(735250);
+s(470079);
+var T = s(120356),
+  n = s.n(T),
+  a = s(481060),
+  l = s(583427);
 
-function c(e) {
+function i(e) {
   let {
-    tips: n,
-    className: t,
-    headerText: o
+    tips: t,
+    className: s,
+    headerText: T
   } = e;
-  return (0, s.jsxs)("div", {
-    className: r()(i.tipsSection, t),
-    children: [(0, s.jsx)("div", {
-      className: i.tipsHeader,
-      children: (0, s.jsx)(a.Heading, {
+  return (0, o.jsxs)("div", {
+    className: n()(l.tipsSection, s),
+    children: [(0, o.jsx)("div", {
+      className: l.tipsHeader,
+      children: (0, o.jsx)(a.Heading, {
         variant: "heading-lg/bold",
-        className: i.headerText,
-        children: o
+        className: l.headerText,
+        children: T
       })
-    }), (0, s.jsx)("ul", {
-      className: i.tipsList,
-      children: n.map((e, n) => (0, s.jsxs)("li", {
-        className: i.tipRow,
-        children: [(0, s.jsx)(a.Heading, {
+    }), (0, o.jsx)("ul", {
+      className: l.tipsList,
+      children: t.map((e, t) => (0, o.jsxs)("li", {
+        className: l.tipRow,
+        children: [(0, o.jsx)(a.Heading, {
           variant: "heading-md/semibold",
           color: "text-brand",
-          className: i.tipNumber,
-          children: n + 1
-        }), (0, s.jsx)(a.Text, {
+          className: l.tipNumber,
+          children: t + 1
+        }), (0, o.jsx)(a.Text, {
           variant: "text-sm/medium",
           children: e
         })]
-      }, "safety-tips-".concat(n)))
+      }, "safety-tips-".concat(t)))
     })]
   })
 }

@@ -14,10 +14,10 @@ var i = n(735250),
   I = n(819758),
   T = n(392552),
   h = n(784222),
-  S = n(926243),
-  f = n(149203),
-  N = n(981631),
-  A = n(689938),
+  f = n(926243),
+  S = n(149203),
+  A = n(981631),
+  N = n(689938),
   m = n(688623);
 t.Z = e => {
   let {
@@ -25,8 +25,8 @@ t.Z = e => {
     emojiSize: n,
     onSelect: s,
     onInspect: O,
-    surrogateCodePoint: R,
-    getEmojiItemProps: p,
+    surrogateCodePoint: p,
+    getEmojiItemProps: R,
     getEmojiRowProps: g,
     isScrolling: C,
     isUsingKeyboardNavigation: v,
@@ -40,17 +40,17 @@ t.Z = e => {
     isBurstReaction: G,
     inNitroLockedSection: w
   } = e, {
-    enabled: B
+    enabled: x
   } = T.Z.useExperiment({
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), x = c.kJ.getState(), [k, V] = r.useState(x.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
+  }), B = c.kJ.getState(), [k, V] = r.useState(B.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
   r.useEffect(() => c.kJ.useStore.subscribe(e => V(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.DZ.loadIfNecessary()
   }, []);
-  let Y = n === f.Su.LARGE,
-    j = n === f.Su.MEDIUM,
+  let Y = n === S.Su.LARGE,
+    j = n === S.Su.MEDIUM,
     W = e => {
       let t = "".concat(e.rowIndex, "c").concat(e.columnIndex);
       switch (e.type) {
@@ -62,7 +62,7 @@ t.Z = e => {
             t.stopPropagation(), !C.current && !v.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
-            }), d.Z.open(e.guildId, N.pNK.EMOJI, N.jXE.EMOJI_PICKER_POPOUT))
+            }), d.Z.open(e.guildId, A.pNK.EMOJI, A.jXE.EMOJI_PICKER_POPOUT))
           }, c = () => {
             !C.current && !v.current && O(e)
           };
@@ -76,13 +76,13 @@ t.Z = e => {
               tabIndex: E,
               onFocus: I,
               ...T
-            } = null !== (e = p(l, L)) && void 0 !== e ? e : {};
+            } = null !== (e = R(l, L)) && void 0 !== e ? e : {};
             return (0, r.createElement)("li", {
               ...T,
               key: t
             }, (0, i.jsx)(a.FocusRing, {
               children: (0, i.jsx)("button", {
-                "aria-label": A.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                "aria-label": N.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                 ref: d,
                 className: o()(m.emojiItem, {
                   [m.emojiItemLarge]: Y,
@@ -113,20 +113,20 @@ t.Z = e => {
             columnIndex: r,
             visibleRowIndex: o
           } = e, a = k.rowIndex === o && k.columnIndex === r;
-          return (0, i.jsx)(S.Z, {
+          return (0, i.jsx)(f.Z, {
             rowIndex: L,
             descriptor: e,
             emojiItemKey: t,
             isInspected: a,
             isScrolling: C,
             isUsingKeyboardNavigation: v,
-            surrogateCodePoint: R,
+            surrogateCodePoint: p,
             allowAnimatedEmoji: D,
             selectedItemClassName: U,
             onSelect: s,
             onInspect: O,
             channelGuildId: P,
-            getEmojiItemProps: p,
+            getEmojiItemProps: R,
             isMediumSize: j,
             isLargeSize: Y,
             pulseItemKey: Z,
@@ -149,9 +149,9 @@ t.Z = e => {
       ref: F,
       children: e.map(W)
     });
-  if (y !== f.En.TOP_GUILD_EMOJI) return K(t);
-  let z = t.filter(e => !!B && e.type === h.ld.CREATE_EMOJI || e.subCategory === f.t0.TOP_GUILD_EMOJI || e.subCategory === f.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-    q = t.filter(e => e.subCategory === f.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+  if (y !== S.En.TOP_GUILD_EMOJI) return K(t);
+  let z = t.filter(e => !!x && e.type === h.ld.CREATE_EMOJI || e.subCategory === S.t0.TOP_GUILD_EMOJI || e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+    q = t.filter(e => e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
   return 0 === q.length ? K(t) : (0, i.jsxs)("div", {
     className: m.topEmojiSectionContainer,
     children: [(0, i.jsx)("div", {
@@ -178,7 +178,7 @@ t.Z = e => {
         }), (0, i.jsx)(a.Text, {
           variant: "text-xs/semibold",
           color: "always-white",
-          children: A.Z.Messages.NEW
+          children: N.Z.Messages.NEW
         })]
       })]
     })]

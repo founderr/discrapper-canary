@@ -1,66 +1,66 @@
 n.d(t, {
   Z: function() {
-    return I
+    return E
   }
 }), n(47120), n(653041);
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  r = n(481060),
-  a = n(110924),
+var i = n(735250),
+  l = n(470079),
+  r = n(442837),
+  a = n(481060),
+  s = n(110924),
   o = n(693546),
-  u = n(863249),
-  c = n(937111),
+  c = n(863249),
+  u = n(937111),
   d = n(914010),
   h = n(289090),
   p = n(727258),
-  g = n(234383),
-  m = n(179809),
-  C = n(773182),
-  E = n(588275),
-  f = n(689938),
-  _ = n(388555);
+  f = n(234383),
+  _ = n(179809),
+  g = n(773182),
+  m = n(588275),
+  C = n(689938),
+  I = n(388555);
 
-function I(e) {
+function E(e) {
   let {
     onActivate: t
-  } = e, [n, I] = i.useState(!1), N = (0, s.e7)([d.Z], () => d.Z.getGuildId()), Z = (0, s.e7)([c.Z], () => c.Z.hasFetchedRequestToJoinGuilds), S = (0, g.Z)(), x = (0, a.Z)(N), L = i.useMemo(() => {
+  } = e, [n, E] = l.useState(!1), N = (0, r.e7)([d.Z], () => d.Z.getGuildId()), x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds), S = (0, f.Z)(), Z = (0, s.Z)(N), v = l.useMemo(() => {
     let e = (0, p.qQ)({
       folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
-      folderName: f.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
+      folderName: C.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
       expanded: n,
       guildIds: []
     });
     for (let t of S) e.children.push((0, p.Mg)(t, e.id));
     return e
   }, [S, n]);
-  i.useEffect(() => {
-    n && !Z && o.Z.fetchRequestToJoinGuilds()
-  }, [n, Z]);
+  l.useEffect(() => {
+    n && !x && o.Z.fetchRequestToJoinGuilds()
+  }, [n, x]);
   let T = null != N && S.includes(N);
-  return (i.useEffect(() => {
-    !n && T && x !== N && I(!0)
-  }, [n, T, x, N]), 0 === S.length) ? null : (0, l.jsx)(C.TH, {
+  return (l.useEffect(() => {
+    !n && T && Z !== N && E(!0)
+  }, [n, T, Z, N]), 0 === S.length) ? null : (0, i.jsx)(g.TH, {
     onActivate: t,
-    children: (0, l.jsx)(m.Z, {
-      folderNode: L,
+    children: (0, i.jsx)(_.Z, {
+      folderNode: v,
       expanded: n,
       useCircleMask: !n && !T,
       selected: T,
       draggable: !1,
       sorting: !1,
       onExpandCollapse: () => {
-        I(!n), u.Z.clearCoachmark()
+        E(!n), c.Z.clearCoachmark()
       },
-      folderIconContent: (0, l.jsx)(r.HourglassIcon, {
+      folderIconContent: (0, i.jsx)(a.HourglassIcon, {
         size: "custom",
         color: "currentColor",
         width: 24,
         height: 24,
-        className: _.pendingIcon
+        className: I.pendingIcon
       }),
       renderChildNode: function(e) {
-        return e.type !== p.eD.GUILD ? null : (0, l.jsx)(E.Z, {
+        return e.type !== p.eD.GUILD ? null : (0, i.jsx)(m.Z, {
           guildNode: e
         }, e.id)
       }

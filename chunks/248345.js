@@ -25,11 +25,11 @@ function E(e) {
     onClose: T,
     analyticsParams: h
   } = e, {
-    analyticsLocations: S
+    analyticsLocations: f
   } = (0, o.ZP)(), {
-    trackUserProfileAction: f,
-    ...N
-  } = (0, l.KZ)(), A = (0, r.e7)([a.Z], () => null != a.Z.getAnyStreamForUser(n.id));
+    trackUserProfileAction: S,
+    ...A
+  } = (0, l.KZ)(), N = (0, r.e7)([a.Z], () => null != a.Z.getAnyStreamForUser(n.id));
   return (0, i.jsx)(_.Z, {
     children: (0, i.jsx)(s.Z, {
       type: s.P.USER_POPOUT_V2,
@@ -41,16 +41,16 @@ function E(e) {
       source: c.Sbl.PROFILE_POPOUT,
       onOpenGameProfile: T,
       onAction: () => {
-        f({
+        S({
           action: "JOIN_ACTIVITY"
         }), (0, u.Ac)({
-          activityType: A ? c.IIU.STREAMING : null == t ? void 0 : t.type,
+          activityType: N ? c.IIU.STREAMING : null == t ? void 0 : t.type,
           activityName: null == t ? void 0 : t.name,
           activityPlatform: null == t ? void 0 : t.platform,
           activitySessionId: null == t ? void 0 : t.session_id,
           applicationId: null == t ? void 0 : t.application_id,
-          analyticsLocations: S,
-          ...N
+          analyticsLocations: f,
+          ...A
         }), null == T || T()
       },
       actionColor: d.buttonColor,

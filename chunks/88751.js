@@ -8,19 +8,19 @@ var i, r, s, o, a, l, u = n(392711),
   I = n(984933),
   T = n(271383),
   h = n(430824),
-  S = n(594174),
-  f = n(979651),
-  N = n(700785),
-  A = n(146085),
+  f = n(594174),
+  S = n(979651),
+  A = n(700785),
+  N = n(146085),
   m = n(590415);
 (s = i || (i = {})).SPEAKER = "speaker", s.MODERATOR = "moderator";
 let O = {},
-  R = {
+  p = {
     speaker: !1,
     moderator: !1
   };
 
-function p(e, t) {
+function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   null == O[t] && (O[t] = {});
   let i = function(e, t) {
@@ -29,14 +29,14 @@ function p(e, t) {
       o = E.Z.getChannel(t),
       a = null == o ? void 0 : o.getGuildId(),
       l = h.Z.getGuild(a);
-    if (null == l || null == o || !o.isGuildStageVoice()) return R;
+    if (null == l || null == o || !o.isGuildStageVoice()) return p;
     return {
       speaker: function(e, t) {
-        let n = f.Z.getVoiceStateForChannel(t, e);
+        let n = S.Z.getVoiceStateForChannel(t, e);
         return (0, m.gf)(n) === m.xO.ON_STAGE
       }(e, t),
-      moderator: s ? (n = e, i = l, r = o, N.BT({
-        permission: A.yP,
+      moderator: s ? (n = e, i = l, r = o, A.BT({
+        permission: N.yP,
         user: n,
         context: i,
         overwrites: r.permissionOverwrites,
@@ -86,7 +86,7 @@ function v(e) {
 }
 class L extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(T.ZP, E.Z, h.Z, S.default, f.Z)
+    this.waitFor(T.ZP, E.Z, h.Z, f.default, S.Z)
   }
   isSpeaker(e, t) {
     return this.getPermissionsForUser(e, t).speaker
@@ -102,10 +102,10 @@ class L extends(r = c.ZP.Store) {
   getPermissionsForUser(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (null == e || null == t) return R;
+    if (null == e || null == t) return p;
     let r = null === (n = O[t]) || void 0 === n ? void 0 : n[e];
-    if (null != r) return i && null == r.moderator ? p(e, t, !0) : r;
-    return p(e, t, i)
+    if (null != r) return i && null == r.moderator ? R(e, t, !0) : r;
+    return R(e, t, i)
   }
 }
 l = "StageChannelRoleStore", (a = "displayName") in(o = L) ? Object.defineProperty(o, a, {

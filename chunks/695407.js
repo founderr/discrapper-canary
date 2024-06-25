@@ -20,10 +20,10 @@ let E = r.forwardRef(function(e, t) {
     query: I,
     onChange: T,
     loading: h = !1,
-    disabled: S = !1,
-    placeholder: f = c.Z.Messages.SEARCH,
-    "aria-label": N
-  } = e, A = r.useRef(null), m = r.useRef(null);
+    disabled: f = !1,
+    placeholder: S = c.Z.Messages.SEARCH,
+    "aria-label": A
+  } = e, N = r.useRef(null), m = r.useRef(null);
   r.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
@@ -79,7 +79,7 @@ let E = r.forwardRef(function(e, t) {
   }));
   return (0, i.jsx)(l.t, {
     focusTarget: m,
-    ringTarget: A,
+    ringTarget: N,
     offset: {
       top: 2,
       bottom: 2,
@@ -88,7 +88,7 @@ let E = r.forwardRef(function(e, t) {
     },
     children: (0, i.jsxs)("div", {
       className: d.container,
-      ref: A,
+      ref: N,
       children: [(0, i.jsx)("input", {
         role: "searchbox",
         "aria-busy": h,
@@ -96,9 +96,9 @@ let E = r.forwardRef(function(e, t) {
         className: d.input,
         value: I,
         onChange: e => T(e.currentTarget.value),
-        "aria-label": N,
-        placeholder: f,
-        disabled: S
+        "aria-label": A,
+        placeholder: S,
+        disabled: f
       }), O]
     })
   })

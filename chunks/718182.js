@@ -1,66 +1,66 @@
-var s, r, i, l, a = n(735250),
+var s, i, r, a, l = n(735250),
   o = n(470079),
-  u = n(525654),
-  c = n.n(u),
+  c = n(525654),
+  u = n.n(c),
   d = n(442837),
-  E = n(893776),
-  _ = n(129293),
-  h = n(388905),
-  I = n(108427),
-  N = n(314897),
-  p = n(981631),
-  g = n(689938),
-  m = n(331651);
+  _ = n(893776),
+  E = n(129293),
+  I = n(388905),
+  h = n(108427),
+  p = n(314897),
+  g = n(981631),
+  f = n(689938),
+  N = n(331651);
 d.ZP.initialize();
-class T extends(l = o.PureComponent) {
+class m extends(a = o.PureComponent) {
   componentDidMount() {
-    let e = (0, _.Z)(this.props.location);
-    null != e && E.Z.authorizeIPAddress(e), (0, I.e)("authorize_ip")
+    let e = (0, E.Z)(this.props.location);
+    null != e && _.Z.authorizeIPAddress(e), (0, h.e)("authorize_ip")
   }
   renderLoginButton() {
-    if ("Android" === c().os.family || "iOS" === c().os.family) return null;
+    if ("Android" === u().os.family || "iOS" === u().os.family) return null;
     let {
       transitionTo: e
     } = this.props;
-    return (0, a.jsx)(h.zx, {
-      onClick: () => e(p.Z5c.LOGIN),
-      children: g.Z.Messages._LOGIN
+    return (0, l.jsx)(I.zx, {
+      onClick: () => e(g.Z5c.LOGIN),
+      children: f.Z.Messages._LOGIN
     })
   }
   renderFailed() {
-    return (0, a.jsxs)(h.ZP, {
-      children: [(0, a.jsx)("img", {
+    return (0, l.jsxs)(I.ZP, {
+      children: [(0, l.jsx)("img", {
         alt: "",
         src: n(211095),
-        className: m.marginBottom20
-      }), (0, a.jsx)(h.Dx, {
-        className: m.marginBottom8,
-        children: g.Z.Messages.AUTHORIZATION_EXPIRED
-      }), (0, a.jsx)(h.DK, {
-        className: m.marginBottom40,
-        children: g.Z.Messages._AUTH_EXPIRED_SUGGESTION
+        className: N.marginBottom20
+      }), (0, l.jsx)(I.Dx, {
+        className: N.marginBottom8,
+        children: f.Z.Messages.AUTHORIZATION_EXPIRED
+      }), (0, l.jsx)(I.DK, {
+        className: N.marginBottom40,
+        children: f.Z.Messages._AUTH_EXPIRED_SUGGESTION
       }), this.renderLoginButton()]
     })
   }
   renderSucceeded() {
-    return (0, a.jsxs)(h.ZP, {
-      children: [(0, a.jsx)("img", {
+    return (0, l.jsxs)(I.ZP, {
+      children: [(0, l.jsx)("img", {
         alt: "",
         src: n(640356),
-        className: m.marginBottom20
-      }), (0, a.jsx)(h.Dx, {
-        className: m.marginBottom8,
-        children: g.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
-      }), (0, a.jsx)(h.DK, {
-        className: m.marginBottom40,
-        children: g.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
+        className: N.marginBottom20
+      }), (0, l.jsx)(I.Dx, {
+        className: N.marginBottom8,
+        children: f.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
+      }), (0, l.jsx)(I.DK, {
+        className: N.marginBottom40,
+        children: f.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
       }), this.renderLoginButton()]
     })
   }
   renderDefault() {
-    return (0, a.jsxs)(h.ZP, {
-      children: [(0, a.jsx)(h.Hh, {}), (0, a.jsx)(h.Dx, {
-        children: g.Z.Messages.AUTHORIZING
+    return (0, l.jsxs)(I.ZP, {
+      children: [(0, l.jsx)(I.Hh, {}), (0, l.jsx)(I.Dx, {
+        children: f.Z.Messages.AUTHORIZING
       })]
     })
   }
@@ -72,14 +72,14 @@ class T extends(l = o.PureComponent) {
     return e ? this.renderFailed() : t ? this.renderSucceeded() : this.renderDefault()
   }
 }
-s = T, r = "defaultProps", i = {
+s = m, i = "defaultProps", r = {
   transitionTo: e => n.g.location.assign(e)
-}, r in s ? Object.defineProperty(s, r, {
-  value: i,
+}, i in s ? Object.defineProperty(s, i, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = i, t.Z = d.ZP.connectStores([N.default], () => ({
-  verifyFailed: N.default.didVerifyFail(),
-  verifySucceeded: N.default.didVerifySucceed()
-}))(T)
+}) : s[i] = r, t.Z = d.ZP.connectStores([p.default], () => ({
+  verifyFailed: p.default.didVerifyFail(),
+  verifySucceeded: p.default.didVerifySucceed()
+}))(m)

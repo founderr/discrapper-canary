@@ -1,17 +1,17 @@
 n(757143), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(442837),
   o = n(481060),
   c = n(771340),
   u = n(903223),
   d = n(285952),
   h = n(689938),
-  m = n(46319);
+  p = n(46319);
 
-function E(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,41 +19,41 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = {
+let _ = {
     position: "bottom",
     autoInvert: !1
   },
-  g = e => {
+  f = e => {
     let {
       region: t,
-      className: n = m.regionSelectName
-    } = e, i = t.name.replace(/ \(VIP\)$/, "");
-    return (0, l.jsx)("div", {
+      className: n = p.regionSelectName
+    } = e, a = t.name.replace(/ \(VIP\)$/, "");
+    return (0, i.jsx)("div", {
       className: n,
-      children: i
+      children: a
     })
   };
-class f extends i.PureComponent {
+class E extends a.PureComponent {
   render() {
     let {
       region: e,
       selected: t
     } = this.props;
-    return (0, l.jsxs)(d.Z, {
+    return (0, i.jsxs)(d.Z, {
       align: d.Z.Align.CENTER,
-      className: a()({
+      className: s()({
         selected: t
       }),
-      children: [(0, l.jsx)(g, {
+      children: [(0, i.jsx)(f, {
         region: e,
-        className: m.regionSelectName
-      }), t ? (0, l.jsx)("i", {
-        className: m.check
+        className: p.regionSelectName
+      }), t ? (0, i.jsx)("i", {
+        className: p.check
       }) : null]
     })
   }
 }
-class C extends i.PureComponent {
+class g extends a.PureComponent {
   componentDidMount() {
     null == this.props.regions && c.Z.fetchRegions(null)
   }
@@ -67,26 +67,26 @@ class C extends i.PureComponent {
         label: t.name,
         value: t
       },
-      i = e.filter(e => !e.deprecated && !e.hidden).map(e => ({
+      a = e.filter(e => !e.deprecated && !e.hidden).map(e => ({
         label: e.name,
         value: e,
         key: e.id
       }));
-    return (0, l.jsx)(o.QuickSelect, {
+    return (0, i.jsx)(o.QuickSelect, {
       label: h.Z.Messages.REGION,
-      options: i,
+      options: a,
       value: n,
       onChange: this.handleChangeVoiceRegion,
       renderOption: this.renderOption,
-      popoutProps: p,
-      popoutClassName: m.regionSelectPopout
+      popoutProps: _,
+      popoutClassName: p.regionSelectPopout
     })
   }
   constructor(...e) {
-    super(...e), E(this, "renderOption", (e, t) => (0, l.jsx)(f, {
+    super(...e), m(this, "renderOption", (e, t) => (0, i.jsx)(E, {
       region: e.value,
       selected: t
-    }, e.value.id)), E(this, "getSelectedRegion", () => {
+    }, e.value.id)), m(this, "getSelectedRegion", () => {
       var e;
       let {
         regions: t,
@@ -107,7 +107,7 @@ class C extends i.PureComponent {
         deprecated: !1,
         hidden: !1
       }
-    }), E(this, "handleChangeVoiceRegion", e => {
+    }), m(this, "handleChangeVoiceRegion", e => {
       let {
         value: t
       } = e, {
@@ -119,4 +119,4 @@ class C extends i.PureComponent {
 }
 t.Z = r.ZP.connectStores([u.Z], () => ({
   regions: u.Z.getRegions(null)
-}))(C)
+}))(g)

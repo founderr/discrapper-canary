@@ -4,33 +4,33 @@ t.d(n, {
   }
 }), t(47120);
 var i = t(470079),
-  l = t(373793),
+  a = t(373793),
   s = t(442837),
-  a = t(911969),
-  r = t(282923),
-  o = t(905753);
+  l = t(911969),
+  o = t(282923),
+  r = t(905753);
 
 function c() {
-  let e = (0, s.cj)([o.Z], () => {
+  let e = (0, s.cj)([r.Z], () => {
       var e;
-      return Object.values(null !== (e = o.Z.getCommands()) && void 0 !== e ? e : {})
+      return Object.values(null !== (e = r.Z.getCommands()) && void 0 !== e ? e : {})
     }),
     [n, t] = i.useState(""),
     c = i.useMemo(() => e.filter(e => {
       var n;
-      return (null == e.integration_types || e.integration_types.includes(l.Y.GUILD_INSTALL)) && (null == e.contexts || (null === (n = e.contexts) || void 0 === n ? void 0 : n.includes(a.D.GUILD)))
+      return (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL)) && (null == e.contexts || (null === (n = e.contexts) || void 0 === n ? void 0 : n.includes(l.D.GUILD)))
     }), [e]),
     u = i.useMemo(() => [...c].sort((e, n) => {
-      let t = a.yU.CHAT + 1,
+      let t = l.yU.CHAT + 1,
         i = n.type > t ? t : n.type,
-        l = i - (e.type > t ? t : e.type);
-      return 0 !== l ? l : e.name.localeCompare(n.name)
+        a = i - (e.type > t ? t : e.type);
+      return 0 !== a ? a : e.name.localeCompare(n.name)
     }), [c]),
-    I = i.useMemo(() => n.startsWith("/") ? u.filter(e => e.type === a.yU.CHAT) : u, [n, u]),
-    N = i.useMemo(() => n.startsWith("/") ? n.substring(1) : n, [n]);
+    I = i.useMemo(() => n.startsWith("/") ? u.filter(e => e.type === l.yU.CHAT) : u, [n, u]),
+    m = i.useMemo(() => n.startsWith("/") ? n.substring(1) : n, [n]);
   return {
     query: n,
-    results: i.useMemo(() => (0, r.B)(I, d, N), [I, N]),
+    results: i.useMemo(() => (0, o.B)(I, d, m), [I, m]),
     setQuery: t,
     unfilteredCount: e.length
   }

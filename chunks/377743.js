@@ -1,45 +1,45 @@
 n.d(t, {
   Z: function() {
-    return _
+    return h
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(100527),
-  l = n(906732),
-  a = n(82950),
-  r = n(26323),
+var s = n(100527),
+  a = n(906732),
+  r = n(82950),
+  l = n(26323),
   o = n(267642),
   c = n(981631),
-  u = n(921944),
-  d = n(30513),
-  E = n(689938),
-  h = n(420569);
+  d = n(921944),
+  u = n(30513),
+  _ = n(689938),
+  E = n(420569);
 
-function _(e) {
+function h(e) {
   let {
     guild: t,
     markAsDismissed: n
-  } = e, _ = (0, o.KK)(t, c.Eu4.TIER_2), {
+  } = e, h = (0, o.KK)(t, c.Eu4.TIER_2), {
     analyticsLocations: I
-  } = (0, l.ZP)(i.Z.GUILD_BANNER_NOTICE);
-  return (0, s.jsx)(a.Z, {
+  } = (0, a.ZP)(s.Z.GUILD_BANNER_NOTICE);
+  return (0, i.jsx)(r.Z, {
     guild: t,
-    onDismissed: () => n(u.L.UNKNOWN),
-    cta: E.Z.Messages.GUILD_BANNER_NOTICE_CTA,
-    message: E.Z.Messages.GUILD_BANNER_NOTICE.format({
-      boostsNeeded: _
+    onDismissed: () => n(d.L.UNKNOWN),
+    cta: _.Z.Messages.GUILD_BANNER_NOTICE_CTA,
+    message: _.Z.Messages.GUILD_BANNER_NOTICE.format({
+      boostsNeeded: h
     }),
     type: c.vID.GUILD_BANNER,
-    image: h,
-    onClick: () => (0, r.Z)({
+    image: E,
+    onClick: () => (0, l.Z)({
       analyticsLocations: I,
       analyticsSourceLocation: {
         section: c.jXE.CHANNEL_NOTICE,
         object: c.qAy.SERVER_BANNER_TOOLTIP
       },
       guild: t,
-      perks: (0, d.XO)()
+      perks: (0, u.XO)()
     }),
     imageMarginTop: 15,
     imageMarginX: 22

@@ -1,120 +1,120 @@
-t(47120);
-var n = t(735250),
-  s = t(470079),
-  a = t(120356),
-  o = t.n(a),
-  i = t(392711),
-  r = t(498607),
-  C = t.n(r),
-  c = t(399606),
-  d = t(692547),
-  u = t(481060),
-  E = t(700582),
-  m = t(745735),
-  _ = t(906732),
-  M = t(715903),
-  h = t(69882),
-  x = t(189357),
-  T = t(493892),
-  L = t(433355),
-  H = t(430824),
-  g = t(496675),
-  A = t(594174),
-  I = t(373791),
-  N = t(203893),
-  R = t(777288),
-  p = t(5192),
-  S = t(709054),
-  Z = t(51144),
-  j = t(815790),
-  v = t(588215),
-  f = t(241559),
-  D = t(893966),
-  b = t(685244),
-  O = t(16829),
-  V = t(256003),
-  B = t(472596),
-  U = t(285173),
-  F = t(981631),
-  k = t(689938),
-  w = t(405811);
-let y = s.memo(function(e) {
+l(47120);
+var n = l(735250),
+  a = l(470079),
+  o = l(120356),
+  s = l.n(o),
+  i = l(392711),
+  r = l(498607),
+  C = l.n(r),
+  c = l(399606),
+  d = l(692547),
+  u = l(481060),
+  m = l(700582),
+  _ = l(745735),
+  E = l(906732),
+  h = l(715903),
+  M = l(69882),
+  x = l(189357),
+  b = l(493892),
+  T = l(433355),
+  L = l(430824),
+  g = l(496675),
+  I = l(594174),
+  p = l(373791),
+  H = l(203893),
+  f = l(777288),
+  A = l(5192),
+  N = l(709054),
+  R = l(51144),
+  S = l(815790),
+  Z = l(588215),
+  j = l(241559),
+  v = l(893966),
+  D = l(685244),
+  O = l(16829),
+  B = l(256003),
+  V = l(472596),
+  U = l(285173),
+  w = l(981631),
+  k = l(689938),
+  F = l(405811);
+let y = a.memo(function(e) {
   let {
-    member: l
-  } = e, t = s.useMemo(() => (0, h.J)(l.communicationDisabledUntil), [l.communicationDisabledUntil]), a = s.useMemo(() => null == l.communicationDisabledUntil ? new Date : new Date(l.communicationDisabledUntil), [l.communicationDisabledUntil]);
+    member: t
+  } = e, l = a.useMemo(() => (0, M.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), o = a.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
   return (0, n.jsxs)("div", {
-    className: o()(w.flagContainer),
-    children: [l.hasUnusualDmActivity && (0, n.jsx)(u.Tooltip, {
+    className: s()(F.flagContainer),
+    children: [t.hasUnusualDmActivity && (0, n.jsx)(u.Tooltip, {
       text: k.Z.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP,
       children: e => {
         let {
-          onMouseEnter: l,
-          onMouseLeave: t
+          onMouseEnter: t,
+          onMouseLeave: l
         } = e;
         return (0, n.jsx)(u.ChatAlertIcon, {
           size: "custom",
           width: 20,
           height: 20,
-          onMouseEnter: l,
-          onMouseLeave: t,
+          onMouseEnter: t,
+          onMouseLeave: l,
           color: d.Z.colors.TEXT_MUTED.css
         })
       }
-    }), t && (0, n.jsx)(u.Tooltip, {
+    }), l && (0, n.jsx)(u.Tooltip, {
       "aria-label": k.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
       allowOverflow: !0,
       text: (0, n.jsxs)("div", {
-        className: w.communicationDisabledTooltip,
+        className: F.communicationDisabledTooltip,
         children: [(0, n.jsx)("div", {
           children: k.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
-        }), (0, n.jsx)(I.Z, {
-          deadline: a,
+        }), (0, n.jsx)(p.Z, {
+          deadline: o,
           showUnits: !0,
           stopAtOneSec: !0
         })]
       }),
       children: e => {
         let {
-          onMouseEnter: l,
-          onMouseLeave: t
+          onMouseEnter: t,
+          onMouseLeave: l
         } = e;
         return (0, n.jsx)(u.ClockWarningIcon, {
           size: "custom",
           width: 20,
           height: 20,
-          onMouseEnter: l,
-          onMouseLeave: t,
+          onMouseEnter: t,
+          onMouseLeave: l,
           color: d.Z.colors.TEXT_DANGER.css
         })
       }
-    }), (0, T.He)(l.userId) && (0, n.jsx)(u.Tooltip, {
+    }), (0, b.He)(t.userId) && (0, n.jsx)(u.Tooltip, {
       text: k.Z.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
       children: e => {
         let {
-          onMouseEnter: l,
-          onMouseLeave: t
+          onMouseEnter: t,
+          onMouseLeave: l
         } = e;
-        return (0, n.jsx)(N.Z, {
+        return (0, n.jsx)(H.Z, {
           width: 20,
           height: 20,
-          onMouseEnter: l,
-          onMouseLeave: t,
+          onMouseEnter: t,
+          onMouseLeave: l,
           color: d.Z.colors.TEXT_DANGER.css
         })
       }
-    }), (0, M.EY)(l) && (0, n.jsx)(u.Tooltip, {
+    }), (0, h.EY)(t) && (0, n.jsx)(u.Tooltip, {
       text: k.Z.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
       children: e => {
         let {
-          onMouseEnter: l,
-          onMouseLeave: t
+          onMouseEnter: t,
+          onMouseLeave: l
         } = e;
         return (0, n.jsx)(u.ChatXIcon, {
           size: "custom",
           width: 20,
           height: 20,
-          onMouseEnter: l,
-          onMouseLeave: t,
+          onMouseEnter: t,
+          onMouseLeave: l,
           color: d.Z.colors.TEXT_MUTED.css
         })
       }
@@ -124,54 +124,54 @@ let y = s.memo(function(e) {
 
 function P(e) {
   let {
-    member: l
-  } = e, t = (0, c.e7)([H.Z], () => H.Z.getRoles(l.guildId)), a = s.useMemo(() => null == l.highestRoleId ? l.roles : l.roles.filter(e => null != e && e !== l.highestRoleId).sort((e, l) => {
-    var n, s, a, o;
-    return null !== (o = null !== (a = null === (n = t[l]) || void 0 === n ? void 0 : n.position) && void 0 !== a ? a : 0 - (null === (s = t[e]) || void 0 === s ? void 0 : s.position)) && void 0 !== o ? o : 0
-  }), [l.roles, l.highestRoleId, t]);
-  return 0 === a.length ? null : (0, n.jsx)("div", {
-    className: w.roleTooltipItemContainer,
-    children: a.map(e => (0, n.jsx)(U.Z, {
-      className: o()(w.roleTooltipItem),
-      role: t[e],
-      guildId: l.guildId
+    member: t
+  } = e, l = (0, c.e7)([L.Z], () => L.Z.getRoles(t.guildId)), o = a.useMemo(() => null == t.highestRoleId ? t.roles : t.roles.filter(e => null != e && e !== t.highestRoleId).sort((e, t) => {
+    var n, a, o, s;
+    return null !== (s = null !== (o = null === (n = l[t]) || void 0 === n ? void 0 : n.position) && void 0 !== o ? o : 0 - (null === (a = l[e]) || void 0 === a ? void 0 : a.position)) && void 0 !== s ? s : 0
+  }), [t.roles, t.highestRoleId, l]);
+  return 0 === o.length ? null : (0, n.jsx)("div", {
+    className: F.roleTooltipItemContainer,
+    children: o.map(e => (0, n.jsx)(U.Z, {
+      className: s()(F.roleTooltipItem),
+      role: l[e],
+      guildId: t.guildId
     }, e))
   })
 }
-let Y = s.memo(function(e) {
+let Y = a.memo(function(e) {
     let {
-      member: l,
-      highestRole: t
-    } = e, a = (0, c.e7)([H.Z], () => H.Z.getGuild(l.guildId), [l.guildId]), [i, r] = s.useState(!1), C = l.roles.length - 1, d = s.useMemo(() => new Intl.NumberFormat(k.Z.getLocale()).format(C), [C]), E = (0, B.qr)(l), m = (0, c.e7)([g.Z], () => g.Z.can(F.Plq.MANAGE_ROLES, a), [a]), _ = s.useCallback(e => () => {
+      member: t,
+      highestRole: l
+    } = e, o = (0, c.e7)([L.Z], () => L.Z.getGuild(t.guildId), [t.guildId]), [i, r] = a.useState(!1), C = t.roles.length - 1, d = a.useMemo(() => new Intl.NumberFormat(k.Z.getLocale()).format(C), [C]), m = (0, V.qr)(t), _ = (0, c.e7)([g.Z], () => g.Z.can(w.Plq.MANAGE_ROLES, o), [o]), E = a.useCallback(e => () => {
       r(!0), null == e || e()
-    }, []), M = s.useCallback(e => () => {
+    }, []), h = a.useCallback(e => () => {
       r(!1), null == e || e()
     }, []);
-    return null == a ? null : (0, n.jsxs)("div", {
-      className: o()(w.roleContainer),
-      children: [null != t && (0, n.jsx)(U.Z, {
-        className: o()(w.roleTooltipItem, w.highestRole),
-        role: t,
-        guildId: l.guildId
+    return null == o ? null : (0, n.jsxs)("div", {
+      className: s()(F.roleContainer),
+      children: [null != l && (0, n.jsx)(U.Z, {
+        className: s()(F.roleTooltipItem, F.highestRole),
+        role: l,
+        guildId: t.guildId
       }), C > 0 && (0, n.jsx)(u.Tooltip, {
         "aria-label": k.Z.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP,
-        tooltipContentClassName: w.roleTooltip,
+        tooltipContentClassName: F.roleTooltip,
         allowOverflow: !0,
         text: (0, n.jsx)("div", {
-          className: w.roleTooltipSafetyContainer,
+          className: F.roleTooltipSafetyContainer,
           children: i ? (0, n.jsx)(P, {
-            member: l
+            member: t
           }) : k.Z.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP
         }),
         children: e => {
           let {
-            onMouseEnter: l,
-            onMouseLeave: t
+            onMouseEnter: t,
+            onMouseLeave: l
           } = e;
           return (0, n.jsx)(u.Clickable, {
-            className: o()(w.otherRoles),
-            onMouseEnter: _(l),
-            onMouseLeave: M(t),
+            className: s()(F.otherRoles),
+            onMouseEnter: E(t),
+            onMouseLeave: h(l),
             children: (0, n.jsxs)(u.Text, {
               variant: "text-xs/medium",
               color: "header-primary",
@@ -179,22 +179,22 @@ let Y = s.memo(function(e) {
             })
           })
         }
-      }), m && (0, n.jsx)(u.Tooltip, {
+      }), _ && (0, n.jsx)(u.Tooltip, {
         text: k.Z.Messages.MEMBER_SAFETY_TABLE_ADD_ROLES_TOOLTIP,
         children: e => {
           let {
-            onMouseEnter: l,
-            onMouseLeave: t
+            onMouseEnter: t,
+            onMouseLeave: l
           } = e;
           return (0, n.jsx)(u.Clickable, {
-            className: o()(w.otherRoles, w.addRoleContainer),
-            onClick: E,
-            onMouseEnter: l,
-            onMouseLeave: t,
+            className: s()(F.otherRoles, F.addRoleContainer),
+            onClick: m,
+            onMouseEnter: t,
+            onMouseLeave: l,
             children: (0, n.jsx)(u.PlusSmallIcon, {
               size: "custom",
               color: "currentColor",
-              className: o()(w.addRoleIcon),
+              className: s()(F.addRoleIcon),
               width: 16,
               height: 16
             })
@@ -203,39 +203,39 @@ let Y = s.memo(function(e) {
       })]
     })
   }),
-  G = s.memo(function(e) {
-    var l;
+  G = a.memo(function(e) {
+    var t;
     let {
-      member: t,
-      user: a
+      member: l,
+      user: o
     } = e, {
       analyticsLocations: i
-    } = (0, _.ZP)(), r = s.useCallback(e => {
-      if (null != t) e.stopPropagation(), e.preventDefault(), (0, B.RE)(t, i)
-    }, [t, i]);
-    return null == a || null == t ? null : (0, n.jsxs)("div", {
-      className: o()(w.memberNameContainer),
+    } = (0, E.ZP)(), r = a.useCallback(e => {
+      if (null != l) e.stopPropagation(), e.preventDefault(), (0, V.RE)(l, i)
+    }, [l, i]);
+    return null == o || null == l ? null : (0, n.jsxs)("div", {
+      className: s()(F.memberNameContainer),
       children: [(0, n.jsx)(u.Clickable, {
-        className: o()(w.memberAvatar),
+        className: s()(F.memberAvatar),
         onClick: r,
-        children: (0, n.jsx)(E.Z, {
-          user: a
+        children: (0, n.jsx)(m.Z, {
+          user: o
         })
       }), (0, n.jsx)("div", {
-        className: o()(w.memberName),
+        className: s()(F.memberName),
         children: (0, n.jsx)(u.Text, {
           variant: "text-sm/medium",
           children: (0, n.jsx)(u.Clickable, {
             onClick: r,
             children: (0, n.jsx)(u.NameWithRole, {
-              name: p.ZP.getName(t.guildId, null, a),
-              color: null !== (l = t.colorString) && void 0 !== l ? l : void 0,
-              className: o()(w.memberNameText)
+              name: A.ZP.getName(l.guildId, null, o),
+              color: null !== (t = l.colorString) && void 0 !== t ? t : void 0,
+              className: s()(F.memberNameText)
             })
           })
         })
       }), (0, n.jsx)("div", {
-        className: o()(w.memberGlobalName),
+        className: s()(F.memberGlobalName),
         children: (0, n.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
@@ -243,7 +243,7 @@ let Y = s.memo(function(e) {
           children: (0, n.jsx)(u.Clickable, {
             onClick: r,
             tag: "span",
-            children: Z.ZP.getUserTag(a)
+            children: R.ZP.getUserTag(o)
           })
         })
       })]
@@ -251,34 +251,34 @@ let Y = s.memo(function(e) {
   });
 
 function z(e) {
-  let l = null == e ? null : (0, j.fv)(e, j.jq.JOINED_AT);
+  let t = null == e ? null : (0, S.fv)(e, S.jq.JOINED_AT);
   return {
-    short: l,
-    long: new Date(null != e ? e : 0).toLocaleDateString(k.Z.getLocale(), j.UG)
+    short: t,
+    long: new Date(null != e ? e : 0).toLocaleDateString(k.Z.getLocale(), S.UG)
   }
 }
 
 function q(e) {
   let {
-    member: l,
-    showLongDate: t,
-    isSortedBy: a
-  } = e, [i, r] = s.useState(null);
-  s.useEffect(() => {
-    r(z(l.joinedAtTimestamp))
-  }, [l.joinedAtTimestamp]), (0, m.Z)(() => {
-    r(z(l.joinedAtTimestamp))
+    member: t,
+    showLongDate: l,
+    isSortedBy: o
+  } = e, [i, r] = a.useState(null);
+  a.useEffect(() => {
+    r(z(t.joinedAtTimestamp))
+  }, [t.joinedAtTimestamp]), (0, _.Z)(() => {
+    r(z(t.joinedAtTimestamp))
   }, 1e4);
-  let C = a ? "text-brand" : "text-normal";
-  return (null == i ? void 0 : i.short) == null ? null : t ? (0, n.jsx)("div", {
-    className: o()(w.__invalid_joinedAtContainer),
+  let C = o ? "text-brand" : "text-normal";
+  return (null == i ? void 0 : i.short) == null ? null : l ? (0, n.jsx)("div", {
+    className: s()(F.__invalid_joinedAtContainer),
     children: (0, n.jsx)(u.Text, {
       variant: "text-sm/medium",
       color: C,
       children: i.long
     })
   }) : (0, n.jsx)("div", {
-    className: o()(w.__invalid_joinedAtContainer),
+    className: s()(F.__invalid_joinedAtContainer),
     children: (0, n.jsx)(u.Tooltip, {
       align: "left",
       text: i.long,
@@ -291,23 +291,23 @@ function q(e) {
     })
   })
 }
-let J = s.memo(function(e) {
+let W = a.memo(function(e) {
     let {
-      member: l,
-      showLongDate: t,
-      isSortedBy: a
+      member: t,
+      showLongDate: l,
+      isSortedBy: o
     } = e, {
-      accountCreationDateShort: o,
+      accountCreationDateShort: s,
       accountCreationDateLong: i
-    } = s.useMemo(() => {
-      let e = S.default.extractTimestamp(l.userId),
-        t = (0, j.fv)(e, j.jq.ACCOUNT_AGE);
+    } = a.useMemo(() => {
+      let e = N.default.extractTimestamp(t.userId),
+        l = (0, S.fv)(e, S.jq.ACCOUNT_AGE);
       return {
-        accountCreationDateShort: t,
-        accountCreationDateLong: new Date(e).toLocaleDateString(k.Z.getLocale(), j.I)
+        accountCreationDateShort: l,
+        accountCreationDateLong: new Date(e).toLocaleDateString(k.Z.getLocale(), S.I)
       }
-    }, [l.userId]), r = a ? "text-brand" : "text-normal";
-    return t ? (0, n.jsx)(u.Text, {
+    }, [t.userId]), r = o ? "text-brand" : "text-normal";
+    return l ? (0, n.jsx)(u.Text, {
       variant: "text-sm/medium",
       color: r,
       children: i
@@ -318,116 +318,116 @@ let J = s.memo(function(e) {
         ...e,
         variant: "text-sm/medium",
         color: r,
-        children: o
+        children: s
       })
     })
   }),
-  W = s.memo(function(e) {
+  J = a.memo(function(e) {
     let {
-      member: l,
-      user: t,
-      highestRole: a,
+      member: t,
+      user: l,
+      highestRole: o,
       isHoldingAdvancedInfoKey: i,
       onOpenModerationMenu: r,
       onOpenProfileMenu: d,
-      compact: E
-    } = e, m = (0, c.e7)([g.Z, H.Z], () => g.Z.can(F.Plq.MANAGE_GUILD, H.Z.getGuild(l.guildId)), [l.guildId]), {
-      selectedUserIds: _,
-      addUsers: M,
-      removeUser: h
-    } = (0, V.Z)(l.guildId), T = (0, f.xC)(l.guildId), L = (0, f.hB)(l.guildId, T, l.userId), A = (0, x.ms)(l.guildId), I = (0, c.e7)([D.Z], () => {
+      compact: m
+    } = e, _ = (0, c.e7)([g.Z, L.Z], () => g.Z.can(w.Plq.MANAGE_GUILD, L.Z.getGuild(t.guildId)), [t.guildId]), {
+      selectedUserIds: E,
+      addUsers: h,
+      removeUser: M
+    } = (0, B.Z)(t.guildId), b = (0, j.xC)(t.guildId), T = (0, j.hB)(t.guildId, b, t.userId), I = (0, x.ms)(t.guildId), p = (0, c.e7)([v.Z], () => {
       var e;
-      return null !== (e = D.Z.getSearchStateByGuildId(l.guildId).selectedSort) && void 0 !== e ? e : v.d$.ORDER_BY_UNSPECIFIED
-    }, [l.guildId], C()), N = s.useCallback(e => {
-      if (e.stopPropagation(), e.preventDefault(), null != l && !!L) _.has(l.userId) ? h(l.userId) : M([l.userId])
-    }, [M, L, l, h, _]), p = I === v.d$.ORDER_BY_GUILD_JOINED_AT_ASC, S = I === v.d$.ORDER_BY_USER_ID_ASC || I === v.d$.ORDER_BY_USER_ID_DESC;
+      return null !== (e = v.Z.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : Z.d$.ORDER_BY_UNSPECIFIED
+    }, [t.guildId], C()), H = a.useCallback(e => {
+      if (e.stopPropagation(), e.preventDefault(), null != t && !!T) E.has(t.userId) ? M(t.userId) : h([t.userId])
+    }, [h, T, t, M, E]), A = p === Z.d$.ORDER_BY_GUILD_JOINED_AT_ASC, N = p === Z.d$.ORDER_BY_USER_ID_ASC || p === Z.d$.ORDER_BY_USER_ID_DESC;
     return (0, n.jsxs)(n.Fragment, {
-      children: [T && (0, n.jsx)(u.Tooltip, {
-        tooltipClassName: w.disabledActionTooltip,
-        shouldShow: !L,
+      children: [b && (0, n.jsx)(u.Tooltip, {
+        tooltipClassName: F.disabledActionTooltip,
+        shouldShow: !T,
         text: k.Z.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
         children: e => (0, n.jsx)("td", {
           ...e,
           children: (0, n.jsx)("div", {
-            className: o()(w.__invalid_checkbox, w.xsmallCol),
+            className: s()(F.__invalid_checkbox, F.xsmallCol),
             children: (0, n.jsx)(u.Clickable, {
-              onClick: N,
+              onClick: H,
               children: (0, n.jsx)(u.Checkbox, {
                 type: u.Checkbox.Types.INVERTED,
-                value: _.has(l.userId),
-                disabled: !L
+                value: E.has(t.userId),
+                disabled: !T
               })
             })
           })
         })
       }), (0, n.jsx)("td", {
-        className: o()({
-          [w.compact]: E
+        className: s()({
+          [F.compact]: m
         }),
         children: (0, n.jsx)(G, {
-          member: l,
-          user: t
+          member: t,
+          user: l
         })
       }), (0, n.jsx)("td", {
-        className: o()(w.smallCol, {
-          [w.compact]: E
+        className: s()(F.smallCol, {
+          [F.compact]: m
         }),
         children: (0, n.jsx)(q, {
           showLongDate: i,
-          member: l,
-          isSortedBy: p
+          member: t,
+          isSortedBy: A
         })
       }), (0, n.jsx)("td", {
-        className: o()(w.smallCol, {
-          [w.compact]: E
+        className: s()(F.smallCol, {
+          [F.compact]: m
         }),
-        children: (0, n.jsx)(J, {
+        children: (0, n.jsx)(W, {
           showLongDate: i,
-          member: l,
-          isSortedBy: S
+          member: t,
+          isSortedBy: N
         })
-      }), m && (0, n.jsx)("td", {
-        className: o()(w.smallCol, {
-          [w.compact]: E
+      }), _ && (0, n.jsx)("td", {
+        className: s()(F.smallCol, {
+          [F.compact]: m
         }),
         children: (0, n.jsx)(O.ZP, {
-          userId: l.userId,
-          guildId: l.guildId
+          userId: t.userId,
+          guildId: t.guildId
         })
       }), (0, n.jsx)("td", {
-        className: o()(w.mediumCol, {
-          [w.compact]: E
+        className: s()(F.mediumCol, {
+          [F.compact]: m
         }),
         children: (0, n.jsx)(Y, {
-          member: l,
-          highestRole: a
+          member: t,
+          highestRole: o
         })
       }), (0, n.jsx)("td", {
-        className: o()(w.smallCol, {
-          [w.compact]: E
+        className: s()(F.smallCol, {
+          [F.compact]: m
         }),
         children: (0, n.jsx)(y, {
-          member: l
+          member: t
         })
       }), (0, n.jsx)("td", {
-        className: o()(w.smallCol, {
-          [w.compact]: E
+        className: s()(F.smallCol, {
+          [F.compact]: m
         }),
         children: (0, n.jsxs)("div", {
-          className: o()(w.actionCell),
+          className: s()(F.actionCell),
           children: [(0, n.jsx)(u.Tooltip, {
-            text: A ? k.Z.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : k.Z.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
+            text: I ? k.Z.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : k.Z.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
             children: e => {
               let {
-                onMouseEnter: l,
-                onMouseLeave: t
+                onMouseEnter: t,
+                onMouseLeave: l
               } = e;
               return (0, n.jsx)(u.Clickable, {
-                onMouseEnter: l,
-                onMouseLeave: t,
+                onMouseEnter: t,
+                onMouseLeave: l,
                 onClick: d,
-                className: o()(w.button),
-                children: A ? (0, n.jsx)(R.Z, {
+                className: s()(F.button),
+                children: I ? (0, n.jsx)(f.Z, {
                   width: K,
                   height: K
                 }) : (0, n.jsx)(u.UserIcon, {
@@ -442,14 +442,14 @@ let J = s.memo(function(e) {
             text: k.Z.Messages.MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP,
             children: e => {
               let {
-                onMouseEnter: l,
-                onMouseLeave: t
+                onMouseEnter: t,
+                onMouseLeave: l
               } = e;
               return (0, n.jsx)(u.Clickable, {
-                onMouseEnter: l,
-                onMouseLeave: t,
+                onMouseEnter: t,
+                onMouseLeave: l,
                 onClick: r,
-                className: o()(w.button),
+                className: s()(F.button),
                 children: (0, n.jsx)(u.MoreVerticalIcon, {
                   size: "custom",
                   color: "currentColor",
@@ -465,39 +465,39 @@ let J = s.memo(function(e) {
   }),
   K = 18,
   $ = ["sourceInviteCode", "joinSourceType", "inviterId", "integrationType", "joinedAt", "joinedAtTimestamp"];
-l.Z = s.memo(function(e) {
+t.Z = a.memo(function(e) {
   let {
-    userId: l,
-    guildId: t,
-    style: a,
+    userId: t,
+    guildId: l,
+    style: o,
     onSelect: r,
     rowSelected: d,
     isLoading: u = !1,
-    isHoldingAdvancedInfoKey: E = !1,
-    compact: m = !1
-  } = e, _ = (0, c.e7)([L.ZP], () => L.ZP.getGuildSidebarState(t), [t]), M = (null == _ ? void 0 : _.details.userId) === l, h = (0, c.e7)([D.Z], () => D.Z.getEnhancedMember(t, l), [t, l]), x = (0, B.zq)(h), T = (0, c.e7)([A.default], () => A.default.getUser(l), [l]), H = (0, B.RN)(null != h ? h : void 0), g = s.useCallback(e => {
-    e.stopPropagation(), e.preventDefault(), H(e)
-  }, [H]), I = s.useCallback(e => {
-    if (e.stopPropagation(), e.preventDefault(), null != h) null == r || r(h)
-  }, [r, h]), N = s.useCallback(e => {
-    if (e.stopPropagation(), e.preventDefault(), null != h) null == r || r(h)
-  }, [h, r]), R = s.useCallback((e, l) => C()((0, i.omit)(e, $), (0, i.omit)(l, $)), []);
-  return null == h ? null : (0, n.jsx)(b.Z, {
+    isHoldingAdvancedInfoKey: m = !1,
+    compact: _ = !1
+  } = e, E = (0, c.e7)([T.ZP], () => T.ZP.getGuildSidebarState(l), [l]), h = (null == E ? void 0 : E.details.userId) === t, M = (0, c.e7)([v.Z], () => v.Z.getEnhancedMember(l, t), [l, t]), x = (0, V.zq)(M), b = (0, c.e7)([I.default], () => I.default.getUser(t), [t]), L = (0, V.RN)(null != M ? M : void 0), g = a.useCallback(e => {
+    e.stopPropagation(), e.preventDefault(), L(e)
+  }, [L]), p = a.useCallback(e => {
+    if (e.stopPropagation(), e.preventDefault(), null != M) null == r || r(M)
+  }, [r, M]), H = a.useCallback(e => {
+    if (e.stopPropagation(), e.preventDefault(), null != M) null == r || r(M)
+  }, [M, r]), f = a.useCallback((e, t) => C()((0, i.omit)(e, $), (0, i.omit)(t, $)), []);
+  return null == M ? null : (0, n.jsx)(D.Z, {
     role: "row",
-    value: h,
-    style: a,
-    className: o()(w.roundedRow, w.memberRowContainer, d && w.selected, M && w.memberSelected, u && w.loading),
-    equalityFn: R,
-    onClick: I,
+    value: M,
+    style: o,
+    className: s()(F.roundedRow, F.memberRowContainer, d && F.selected, h && F.memberSelected, u && F.loading),
+    equalityFn: f,
+    onClick: p,
     onContextMenu: g,
-    children: (0, n.jsx)(W, {
-      member: h,
-      user: T,
+    children: (0, n.jsx)(J, {
+      member: M,
+      user: b,
       highestRole: x,
-      isHoldingAdvancedInfoKey: E,
+      isHoldingAdvancedInfoKey: m,
       onOpenModerationMenu: g,
-      onOpenProfileMenu: N,
-      compact: m
+      onOpenProfileMenu: H,
+      compact: _
     })
   })
 })

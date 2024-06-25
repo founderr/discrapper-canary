@@ -10,10 +10,10 @@ n.d(t, {
     return T
   },
   SJ: function() {
-    return S
+    return f
   },
   bG: function() {
-    return f
+    return S
   },
   eg: function() {
     return I
@@ -115,14 +115,14 @@ function h(e) {
   }
 }
 
-function S(e) {
+function f(e) {
   let {
     children: t
   } = e;
   return t(T())
 }
 
-function f(e) {
+function S(e) {
   let {
     children: t,
     navigator: n

@@ -1,5 +1,5 @@
 n(47120);
-var s = n(570140);
+var i = n(570140);
 t.Z = {
   setEnabled(e) {
     this.update({
@@ -7,7 +7,7 @@ t.Z = {
     })
   },
   update(e) {
-    for (let t of Object.keys(e)) s.Z.dispatch({
+    for (let t of Object.keys(e)) i.Z.dispatch({
       type: "STREAMER_MODE_UPDATE",
       key: t,
       value: e[t]

@@ -3,32 +3,32 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(933557),
-  r = n(689938),
-  a = n(101212);
+var l = n(481060),
+  r = n(933557),
+  a = n(689938),
+  s = n(101212);
 
 function o(e) {
   let {
     channel: t,
     category: n,
     ...o
-  } = e, u = (0, s.ZP)(t, !0), c = (0, s.ZP)(n);
-  return (0, l.jsx)(i.ConfirmModal, {
-    header: r.Z.Messages.CONFIRM_CHANNEL_DRAG_TITLE,
-    confirmText: r.Z.Messages.SYNC_PERMISSIONS,
-    cancelText: r.Z.Messages.KEEP_PERMISSIONS,
-    confirmButtonColor: i.Button.Colors.BRAND,
+  } = e, c = (0, r.ZP)(t, !0), u = (0, r.ZP)(n);
+  return (0, i.jsx)(l.ConfirmModal, {
+    header: a.Z.Messages.CONFIRM_CHANNEL_DRAG_TITLE,
+    confirmText: a.Z.Messages.SYNC_PERMISSIONS,
+    cancelText: a.Z.Messages.KEEP_PERMISSIONS,
+    confirmButtonColor: l.Button.Colors.BRAND,
     ...o,
-    children: (0, l.jsx)(i.Text, {
+    children: (0, i.jsx)(l.Text, {
       variant: "text-md/normal",
-      className: a.message,
+      className: s.message,
       selectable: !1,
-      children: r.Z.Messages.SYNC_PERMISSIONS_EXPLANATION.format({
-        channelName: u,
-        categoryName: c
+      children: a.Z.Messages.SYNC_PERMISSIONS_EXPLANATION.format({
+        channelName: c,
+        categoryName: u
       })
     })
   })

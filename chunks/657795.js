@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return p
+    return R
   }
 });
 var i = n(735250),
@@ -18,29 +18,29 @@ var i = n(735250),
   I = n(626135),
   T = n(453070),
   h = n(926491),
-  S = n(419922),
-  f = n(27733),
-  N = n(611480),
-  A = n(981631),
+  f = n(419922),
+  S = n(27733),
+  A = n(611480),
+  N = n(981631),
   m = n(474936),
   O = n(689938),
-  R = n(317510);
+  p = n(317510);
 
-function p(e) {
+function R(e) {
   var t, n, s;
   let {
-    className: p,
+    className: R,
     onClose: g
   } = e;
   (0, T.fP)();
   let {
     analyticsLocations: C
-  } = (0, _.ZP)(u.Z.EMPTY_STATE), v = (0, a.Wu)([h.Z], () => N.Wt.map(e => h.Z.getStickerById(e)));
+  } = (0, _.ZP)(u.Z.EMPTY_STATE), v = (0, a.Wu)([h.Z], () => A.Wt.map(e => h.Z.getStickerById(e)));
   r.useEffect(() => {
-    I.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
+    I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
       type: m.cd.EMPTY_STICKER_PICKER_UPSELL,
       source: {
-        section: A.jXE.EMPTY_STICKER_PICKER_UPSELL
+        section: N.jXE.EMPTY_STICKER_PICKER_UPSELL
       },
       location_stack: C
     })
@@ -50,8 +50,8 @@ function p(e) {
     M = null != L || null != D,
     P = (null == L ? void 0 : null === (t = L.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0;
   return (0, i.jsxs)("div", {
-    className: o()(R.emptyState, p, {
-      [R.unifyTrialUpsell]: M
+    className: o()(p.emptyState, R, {
+      [p.unifyTrialUpsell]: M
     }),
     children: [M ? (0, i.jsx)(E.ZP, {
       discountOffer: D,
@@ -62,24 +62,24 @@ function p(e) {
       children: O.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
     }) : (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(l.Heading, {
-        className: R.header,
+        className: p.header,
         variant: "heading-xl/semibold",
         children: O.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
       }), (0, i.jsx)(l.Text, {
-        className: R.subtitle,
+        className: p.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: O.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
       }), (0, i.jsx)("div", {
-        className: R.stickersRow,
-        children: v.filter(e => null != e).map(e => (0, i.jsx)(S.ZP, {
+        className: p.stickersRow,
+        children: v.filter(e => null != e).map(e => (0, i.jsx)(f.ZP, {
           sticker: e,
-          className: R.sticker,
+          className: p.sticker,
           size: 80
         }, null == e ? void 0 : e.id))
       })]
-    }), !M && (0, i.jsx)(f.Z, {
-      analyticsSection: A.jXE.EXPRESSION_PICKER,
+    }), !M && (0, i.jsx)(S.Z, {
+      analyticsSection: N.jXE.EXPRESSION_PICKER,
       buttonText: M ? P ? O.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })

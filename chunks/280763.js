@@ -3,17 +3,17 @@ n.d(t, {
     return I
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  l = n.n(s),
   r = n(748780),
   o = n(399606),
   c = n(607070),
-  u = n(641051),
-  d = n(329461),
-  E = n(495295);
-class _ extends i.PureComponent {
+  d = n(641051),
+  u = n(329461),
+  _ = n(495295);
+class E extends a.PureComponent {
   componentDidUpdate(e) {
     e.count < this.props.count && !this.props.reducedMotion && r.Z.sequence([r.Z.timing(this.animationScale, {
       toValue: 1.8,
@@ -28,8 +28,8 @@ class _ extends i.PureComponent {
       count: e,
       className: t
     } = this.props;
-    return 0 === e ? null : (0, s.jsx)(r.Z.div, {
-      className: a()(E.badge, t),
+    return 0 === e ? null : (0, i.jsx)(r.Z.div, {
+      className: l()(_.badge, t),
       style: {
         transform: [{
           scale: this.animationScale
@@ -39,13 +39,13 @@ class _ extends i.PureComponent {
     })
   }
   constructor(...e) {
-    var t, n, s;
-    super(...e), t = this, n = "animationScale", s = new r.Z.Value(1), n in t ? Object.defineProperty(t, n, {
-      value: s,
+    var t, n, i;
+    super(...e), t = this, n = "animationScale", i = new r.Z.Value(1), n in t ? Object.defineProperty(t, n, {
+      value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = s
+    }) : t[n] = i
   }
 }
 
@@ -54,14 +54,14 @@ function I(e) {
     className: t
   } = e, {
     showReminders: n
-  } = u.Z.useExperiment({
+  } = d.Z.useExperiment({
     location: "f79435_1"
   }, {
     autoTrackExposure: !1
-  }), i = (0, o.e7)([d.Z], () => n ? d.Z.getOverdueMessageReminderCount() : 0, [n]), l = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
-  return n ? (0, s.jsx)(_, {
-    count: i,
+  }), a = (0, o.e7)([u.Z], () => n ? u.Z.getOverdueMessageReminderCount() : 0, [n]), s = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
+  return n ? (0, i.jsx)(E, {
+    count: a,
     className: t,
-    reducedMotion: l
+    reducedMotion: s
   }) : null
 }

@@ -1,25 +1,25 @@
 n.d(t, {
   a: function() {
-    return a
+    return l
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(135172);
-let a = e => {
+var a = n(481060),
+  s = n(135172);
+let l = e => {
   let {
     text: t,
     icon: n,
-    onClick: a
+    onClick: l
   } = e;
-  return (0, s.jsxs)(i.Button, {
-    className: l.button,
-    innerClassName: l.buttonInner,
-    onClick: a,
-    children: [(0, s.jsx)(n, {
+  return (0, i.jsxs)(a.Button, {
+    className: s.button,
+    innerClassName: s.buttonInner,
+    onClick: l,
+    children: [(0, i.jsx)(n, {
       color: "currentColor"
-    }), (0, s.jsx)(i.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-md/semibold",
       color: "none",
       children: t

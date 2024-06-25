@@ -1,30 +1,30 @@
-l.d(n, {
+t.d(n, {
   Z: function() {
-    return a
+    return r
   }
-}), l(653041);
-var t = l(470079),
-  i = l(399606),
-  s = l(45966);
+}), t(653041);
+var l = t(470079),
+  a = t(399606),
+  i = t(45966);
 
-function a(e) {
-  let n = (0, i.Wu)([s.Z], () => s.Z.getEnabledOnboardingPrompts(e));
-  return t.useMemo(() => {
+function r(e) {
+  let n = (0, a.Wu)([i.Z], () => i.Z.getEnabledOnboardingPrompts(e));
+  return l.useMemo(() => {
     let e = 0,
-      l = [],
       t = [],
-      i = [],
-      s = [];
-    for (var a = 0; a < n.length; a++) {
-      let r = n[a];
-      r.isNew ? l.push(r) : r.hasNewAnswers ? (t.push(r), e += r.options.filter(e => e.isUnseen).length) : r.inOnboarding ? s.push(r) : i.push(r)
+      l = [],
+      a = [],
+      i = [];
+    for (var r = 0; r < n.length; r++) {
+      let s = n[r];
+      s.isNew ? t.push(s) : s.hasNewAnswers ? (l.push(s), e += s.options.filter(e => e.isUnseen).length) : s.inOnboarding ? i.push(s) : a.push(s)
     }
     return {
       onboardingPromptsRaw: n,
-      newOnboardingPrompts: l,
-      onboardingPromptsWithNewAnswers: t,
+      newOnboardingPrompts: t,
+      onboardingPromptsWithNewAnswers: l,
       newAnswersCount: e,
-      onboardingPrompts: i.concat(s)
+      onboardingPrompts: a.concat(i)
     }
   }, [n])
 }

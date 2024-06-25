@@ -3,32 +3,32 @@ n.d(t, {
     return d
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(704215),
-  r = n(481060),
-  a = n(566840),
+var i = n(735250),
+  l = n(470079),
+  r = n(704215),
+  a = n(481060),
+  s = n(566840),
   o = n(434479),
-  u = n(527379),
-  c = n(689938);
+  c = n(527379),
+  u = n(689938);
 
 function d(e) {
   let {
     guild: t,
     selected: n
-  } = e, d = i.useCallback(() => {
-    (0, u._X)(t.id)
-  }, [t.id]), h = (0, a.XL)(t.id, s.z.MEMBERS_LAUNCH_UPSELL);
-  return (0, l.jsx)("div", {
+  } = e, d = l.useCallback(() => {
+    (0, c._X)(t.id)
+  }, [t.id]), h = (0, s.XL)(t.id, r.z.MEMBERS_LAUNCH_UPSELL);
+  return (0, i.jsx)("div", {
     ref: h,
-    children: (0, l.jsx)(o.m, {
+    children: (0, i.jsx)(o.m, {
       id: "members-".concat(t.id),
-      renderIcon: e => (0, l.jsx)(r.GroupIcon, {
+      renderIcon: e => (0, i.jsx)(a.GroupIcon, {
         size: "md",
         color: "currentColor",
         className: e
       }),
-      text: c.Z.Messages.MEMBER_SAFETY_CHANNEL_TITLE,
+      text: u.Z.Messages.MEMBER_SAFETY_CHANNEL_TITLE,
       selected: n,
       onClick: d
     })

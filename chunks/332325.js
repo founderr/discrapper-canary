@@ -1,6 +1,6 @@
-var n, a;
-s.d(t, {
+var s, n;
+t.d(a, {
   Z: function() {
-    return n
+    return s
   }
-}), (a = n || (n = {})).MY_GAMES = "MY_GAMES", a.CLIPS = "CLIPS", a.OVERLAY = "OVERLAY", a.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"
+}), (n = s || (s = {})).MY_GAMES = "MY_GAMES", n.CLIPS = "CLIPS", n.OVERLAY = "OVERLAY", n.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"

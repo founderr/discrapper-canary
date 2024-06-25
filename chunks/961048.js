@@ -3,19 +3,19 @@ n.d(t, {
     return r
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(871499),
-  a = n(689938);
+var a = n(481060),
+  l = n(871499),
+  s = n(689938);
 
 function r(e) {
   let {
     ...t
   } = e;
-  return (0, l.jsx)(s.Z, {
-    label: a.Z.Messages.MORE,
-    iconComponent: i.MoreHorizontalIcon,
+  return (0, i.jsx)(l.Z, {
+    label: s.Z.Messages.MORE,
+    iconComponent: a.MoreHorizontalIcon,
     tooltipPosition: "bottom",
     ...t
   })

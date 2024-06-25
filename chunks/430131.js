@@ -1,42 +1,42 @@
 t.d(s, {
   Z: function() {
-    return _
+    return E
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(442837),
-  a = t(481060),
-  l = t(993413),
-  r = t(496675),
-  o = t(52597),
+var a = t(442837),
+  i = t(481060),
+  r = t(993413),
+  o = t(496675),
+  l = t(52597),
   c = t(981631),
-  E = t(689938),
-  d = t(946269);
+  d = t(689938),
+  _ = t(946269);
 
-function _(e) {
+function E(e) {
   let {
     errors: s,
     pendingNick: t,
-    currentNick: _,
-    username: T,
-    guild: S
-  } = e, u = null != t ? t : _, I = (0, i.e7)([r.Z], () => r.Z.can(c.Plq.CHANGE_NICKNAME, S) || r.Z.can(c.Plq.MANAGE_NICKNAMES, S));
-  return (0, n.jsxs)(l.Z, {
-    title: E.Z.Messages.SERVER_NICKNAME,
+    currentNick: E,
+    username: u,
+    guild: T
+  } = e, S = null != t ? t : E, I = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
+  return (0, n.jsxs)(r.Z, {
+    title: d.Z.Messages.SERVER_NICKNAME,
     errors: s,
-    children: [(0, n.jsx)(a.TextInput, {
-      value: null != u ? u : "",
-      placeholder: T,
+    children: [(0, n.jsx)(i.TextInput, {
+      value: null != S ? S : "",
+      placeholder: u,
       maxLength: c.l$U,
       onChange: function(e) {
-        (0, o.wi)(e, _)
+        (0, l.wi)(e, E)
       },
       disabled: !I
-    }), !I && (0, n.jsx)(a.FormText, {
-      className: d.nicknameDisabled,
-      type: a.FormText.Types.DESCRIPTION,
-      children: E.Z.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED
+    }), !I && (0, n.jsx)(i.FormText, {
+      className: _.nicknameDisabled,
+      type: i.FormText.Types.DESCRIPTION,
+      children: d.Z.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED
     })]
   })
 }

@@ -25,8 +25,8 @@ function I(e) {
     mutualFriends: I
   } = (0, l.Z)(t.id), {
     mutualGuilds: T
-  } = (0, u.Z)(t.id), h = null != I && I.length > 0, S = null != T && T.length > 0, f = h && S ? "text-xs/normal" : "text-sm/normal";
-  return h || S ? (0, i.jsxs)("div", {
+  } = (0, u.Z)(t.id), h = null != I && I.length > 0, f = null != T && T.length > 0, S = h && f ? "text-xs/normal" : "text-sm/normal";
+  return h || f ? (0, i.jsxs)("div", {
     className: E.mutuals,
     children: [h ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
@@ -44,16 +44,16 @@ function I(e) {
         disableUsernameTooltip: !0
       }), (0, i.jsx)(r.Text, {
         className: E.text,
-        variant: f,
+        variant: S,
         color: "interactive-normal",
         children: d.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
           count: I.length
         })
       })]
-    }) : null, h && S ? (0, i.jsx)("div", {
+    }) : null, h && f ? (0, i.jsx)("div", {
       "aria-hidden": "true",
       className: E.spacer
-    }) : null, S ? (0, i.jsxs)(r.Clickable, {
+    }) : null, f ? (0, i.jsxs)(r.Clickable, {
       className: E.section,
       onClick: () => n(_.oh.MUTUAL_GUILDS),
       children: [!h && (0, i.jsx)(o.Z, {
@@ -69,7 +69,7 @@ function I(e) {
         disableGuildNameTooltip: !0
       }), (0, i.jsx)(r.Text, {
         className: E.text,
-        variant: f,
+        variant: S,
         color: "interactive-normal",
         children: d.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
           count: T.length

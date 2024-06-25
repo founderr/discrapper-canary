@@ -1,26 +1,26 @@
 t.d(s, {
   Z: function() {
-    return r
+    return o
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(481060),
-  a = t(689938),
-  l = t(351155);
+var a = t(481060),
+  i = t(689938),
+  r = t(351155);
 
-function r(e) {
+function o(e) {
   let {
     count: s
   } = e;
   return (0, n.jsxs)("div", {
-    className: l.countContainer,
+    className: r.countContainer,
     children: [(0, n.jsx)("div", {
-      className: l.dot
-    }), (0, n.jsx)(i.Text, {
+      className: r.dot
+    }), (0, n.jsx)(a.Text, {
       variant: "text-xs/medium",
       color: "header-secondary",
-      children: a.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+      children: i.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
         count: s
       })
     })]

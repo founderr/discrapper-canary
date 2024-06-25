@@ -44,11 +44,11 @@ function d(e, t, n) {
           name: r
         })
       }
-      let S = e.recipients.map(t.getUser).filter(l.lm).map(e => {
+      let f = e.recipients.map(t.getUser).filter(l.lm).map(e => {
         var t;
         return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : u.ZP.getName(e)
       });
-      if (S.length > 0) return S.join(", ");
+      if (f.length > 0) return f.join(", ");
       return c.Z.Messages.GROUP_DM_ALONE.format({
         name: u.ZP.getName(t.getCurrentUser())
       });

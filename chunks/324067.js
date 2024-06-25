@@ -10,16 +10,16 @@ var i, r, s, o, a = n(442837),
   I = n(430824),
   T = n(981631);
 let h = null,
-  S = {},
-  f = null;
+  f = {},
+  S = null;
 
-function N() {
+function A() {
   return {
     _categories: [],
     null: []
   }
 }
-let A = N();
+let N = A();
 
 function m(e, t) {
   e.index = t
@@ -27,7 +27,7 @@ function m(e, t) {
 
 function O(e) {
   let t = E.ZP.getChannels(e),
-    n = N(),
+    n = A(),
     i = e => {
       var t;
       let {
@@ -46,20 +46,20 @@ function O(e) {
       channel: t,
       index: -1
     }), n[t.id] = []
-  }), t[E.sH].forEach(i), t[E.Zb].forEach(i), (0, u.Z)(n._categories, n).forEach(m), S[e] = n, n
+  }), t[E.sH].forEach(i), t[E.Zb].forEach(i), (0, u.Z)(n._categories, n).forEach(m), f[e] = n, n
 }
 
-function R() {
-  S = {}, null != h && O(h)
+function p() {
+  f = {}, null != h && O(h)
 }
 
-function p(e) {
+function R(e) {
   let {
     guild: {
       id: t
     }
   } = e;
-  S[t] = void 0, h === t && O(t)
+  f[t] = void 0, h === t && O(t)
 }
 
 function g(e) {
@@ -69,20 +69,20 @@ function g(e) {
     }
   } = e;
   if (null == t) return !1;
-  S[t] = void 0, h === t && O(t)
+  f[t] = void 0, h === t && O(t)
 }
 
 function C(e) {
   let {
     guildId: t
   } = e;
-  S[t] = void 0, t === h && O(t)
+  f[t] = void 0, t === h && O(t)
 }
 
 function v(e, t) {
-  if (f = t, null == e || null == e.getGuildId()) return !1;
+  if (S = t, null == e || null == e.getGuildId()) return !1;
   let n = e.getGuildId();
-  return null != n && (S[n] = void 0, n === h && O(n), !0)
+  return null != n && (f[n] = void 0, n === h && O(n), !0)
 }
 
 function L() {
@@ -94,9 +94,9 @@ class D extends(i = a.ZP.Store) {
   }
   getCategories(e) {
     return null != e ? function(e) {
-      let t = S[e];
+      let t = f[e];
       return null != t ? t : O(e)
-    }(e) : A
+    }(e) : N
   }
 }
 o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
@@ -109,21 +109,21 @@ o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(
     let {
       guildId: t
     } = e;
-    if (h = null != t ? t : null, null == t || null != S[t]) return !1;
+    if (h = null != t ? t : null, null == t || null != f[t]) return !1;
     O(t)
   },
-  CONNECTION_OPEN: R,
-  OVERLAY_INITIALIZE: R,
-  CACHE_LOADED_LAZY: R,
-  GUILD_CREATE: p,
-  GUILD_UPDATE: p,
+  CONNECTION_OPEN: p,
+  OVERLAY_INITIALIZE: p,
+  CACHE_LOADED_LAZY: p,
+  GUILD_CREATE: R,
+  GUILD_UPDATE: R,
   GUILD_DELETE: function(e) {
     let {
       guild: {
         id: t
       }
     } = e;
-    delete S[t]
+    delete f[t]
   },
   CHANNEL_CREATE: g,
   CHANNEL_DELETE: g,
@@ -134,7 +134,7 @@ o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(
     for (let {
         guild_id: e
       }
-      of t) null != e && (S[e] = void 0, n = !0, h === e && O(e));
+      of t) null != e && (f[e] = void 0, n = !0, h === e && O(e));
     return n
   },
   GUILD_MEMBER_UPDATE: function(e) {
@@ -143,7 +143,7 @@ o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(
       user: n
     } = e;
     if (c.default.getId() !== n.id) return !1;
-    S[t] = void 0, t === h && O(t)
+    f[t] = void 0, t === h && O(t)
   },
   CURRENT_USER_UPDATE: function() {
     if (null == h) return !1;
@@ -158,7 +158,7 @@ o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(
     let {
       channelId: t
     } = e;
-    return null == t && null != f ? v(d.Z.getChannel(f), null) : v(d.Z.getChannel(t), t)
+    return null == t && null != S ? v(d.Z.getChannel(S), null) : v(d.Z.getChannel(t), t)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {

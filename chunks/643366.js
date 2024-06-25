@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
   Y: function() {
     return u
   }
@@ -7,17 +7,17 @@ var a = n(470079),
   r = n(110924),
   o = n(626135),
   s = n(497350),
-  l = n(981631);
+  c = n(981631);
 
-function u(e) {
-  let t = (0, r.Z)(e);
+function u(t) {
+  let e = (0, r.Z)(t);
   a.useEffect(() => {
-    if (e === t) return;
+    if (t === e) return;
     let n = null;
-    "user-code-input" !== e.type && (n = (0, s.B)(e.userCodeData.clientId)), o.default.track(l.rMx.DEVICE_LINK_STEP, {
-      previous_step: null == t ? void 0 : t.type,
-      current_step: e.type,
+    "user-code-input" !== t.type && (n = (0, s.B)(t.userCodeData.clientId)), o.default.track(c.rMx.DEVICE_LINK_STEP, {
+      previous_step: null == e ? void 0 : e.type,
+      current_step: t.type,
       platform_type: n
     })
-  }, [t, e])
+  }, [e, t])
 }

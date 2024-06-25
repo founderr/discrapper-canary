@@ -1,5 +1,5 @@
-var s = n(286543),
-  l = n(956656)(function(e, t) {
-    return s(e, 1, t)
+var a = n(286543),
+  s = n(956656)(function(e, t) {
+    return a(e, 1, t)
   });
-e.exports = l
+e.exports = s

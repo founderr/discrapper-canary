@@ -1,4 +1,4 @@
-t.r(e.exports = {
+n.r(e.exports = {
   cardIcon: "cardIcon_c829b4",
   visa: "visa_c829b4",
   amex: "amex_c829b4",

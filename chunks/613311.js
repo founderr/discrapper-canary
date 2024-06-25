@@ -1,36 +1,36 @@
 n(411104), n(724458), n(653041), n(733860), n(47120), n(789020);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(442837),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(442837),
   o = n(846519),
   c = n(780384),
-  u = n(481060),
-  d = n(570140),
-  E = n(659429),
-  h = n(496929),
-  _ = n(558381),
+  d = n(481060),
+  u = n(570140),
+  _ = n(659429),
+  E = n(496929),
+  h = n(558381),
   I = n(410575),
   m = n(224336),
-  T = n(730749),
+  p = n(730749),
   g = n(666743),
-  p = n(115130),
-  N = n(812206),
-  S = n(252618),
-  C = n(100159),
-  A = n(646288),
-  f = n(984370),
+  T = n(115130),
+  C = n(812206),
+  f = n(252618),
+  S = n(100159),
+  N = n(646288),
+  A = n(984370),
   Z = n(706454),
   L = n(210887),
-  O = n(430824),
-  v = n(496675),
+  v = n(430824),
+  O = n(496675),
   R = n(525395),
-  P = n(558314),
-  x = n(580130),
-  M = n(55563),
-  D = n(551428),
-  b = n(695103),
+  x = n(558314),
+  P = n(580130),
+  b = n(55563),
+  M = n(551428),
+  D = n(695103),
   y = n(451478),
   j = n(378720),
   U = n(285952),
@@ -42,8 +42,8 @@ var s = n(735250),
   V = n(73346),
   F = n(3570),
   Y = n(689796),
-  z = n(15470),
-  W = n(506648),
+  W = n(15470),
+  z = n(506648),
   K = n(449275),
   q = n(445986),
   Q = n(119520),
@@ -53,11 +53,11 @@ var s = n(735250),
   ee = n(125930),
   et = n(178071),
   en = n(176055),
-  es = n(843445),
-  ei = n(981631),
-  el = n(186901),
-  ea = n(689938),
-  er = n(91060);
+  ei = n(843445),
+  es = n(981631),
+  ea = n(186901),
+  er = n(689938),
+  el = n(91060);
 
 function eo(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -67,7 +67,7 @@ function eo(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class ec extends i.PureComponent {
+class ec extends s.PureComponent {
   get isChannelType() {
     return null != this.props.channel
   }
@@ -76,38 +76,38 @@ class ec extends i.PureComponent {
       sku: e,
       storeListing: t,
       isFetchingEntitlements: n,
-      shouldFetchStatistics: s,
-      didFetchEntitlements: i,
-      location: l,
-      fetchStoreListing: a
+      shouldFetchStatistics: i,
+      didFetchEntitlements: s,
+      location: a,
+      fetchStoreListing: r
     } = this.props;
-    if (null != l.state) {
+    if (null != a.state) {
       let {
         analyticsSource: e,
         analyticsProperties: t
-      } = l.state;
+      } = a.state;
       this._analyticsSource = e, this._extraAnalyticsProperties = t
-    } else this._analyticsSource = ei.SaU;
-    (null == t || t.isSlimDirectoryVersion()) && a(), null != e && (!n && !i && (0, h.yD)(e.applicationId), s && d.Z.wait(() => (0, E.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug()
+    } else this._analyticsSource = es.SaU;
+    (null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !s && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug()
   }
   componentDidUpdate(e) {
     let {
       locale: t,
       sku: n,
-      shouldFetchStatistics: s,
-      skuId: i,
-      storeListingId: l,
-      slug: a,
-      storeListing: r,
+      shouldFetchStatistics: i,
+      skuId: s,
+      storeListingId: a,
+      slug: r,
+      storeListing: l,
       fetchStoreListing: o
     } = this.props;
-    if (r !== e.storeListing && null != r && (0, F.s)(el.jE.STORE_LISTING, {
-        skuId: i,
-        slug: a
-      }), (t !== e.locale || i !== e.skuId) && o(), s && !e.shouldFetchStatistics) {
+    if (l !== e.storeListing && null != l && (0, F.s)(ea.jE.STORE_LISTING, {
+        skuId: s,
+        slug: r
+      }), (t !== e.locale || s !== e.skuId) && o(), i && !e.shouldFetchStatistics) {
       if (null == n) throw Error("Unexpected missing sku");
-      d.Z.wait(() => (0, E.$)(n.applicationId))
-    }(i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug()
+      u.Z.wait(() => (0, _.$)(n.applicationId))
+    }(s !== e.skuId || a !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug()
   }
   componentWillUnmount() {
     this.showCopyLinkTextTimeout.stop();
@@ -117,7 +117,7 @@ class ec extends i.PureComponent {
         loadDate: t
       }
     } = this.props;
-    null != t && w.default.track(ei.rMx.STORE_LISTING_EXITED, {
+    null != t && w.default.track(es.rMx.STORE_LISTING_EXITED, {
       load_id: e,
       duration_ms: Date.now() - t
     })
@@ -128,52 +128,52 @@ class ec extends i.PureComponent {
       sku: e,
       storeListing: t,
       hasFetchedNews: n,
-      analyticsContext: s
+      analyticsContext: i
     } = this.props;
     if (this._trackedViewed || null == e || null == t || null == t.description || !(this.isChannelType || n)) return;
-    let i = t.carouselItems.reduce((e, t) => (null != t.assetId ? e.images++ : e.videos++, e), {
+    let s = t.carouselItems.reduce((e, t) => (null != t.assetId ? e.images++ : e.videos++, e), {
       images: 0,
       videos: 0
     });
-    w.default.track(ei.rMx.STORE_LISTING_VIEWED, {
+    w.default.track(es.rMx.STORE_LISTING_VIEWED, {
       ...this._extraAnalyticsProperties,
-      load_id: s.loadId,
+      load_id: i.loadId,
       has_description: null != t.description && t.description.length > 0,
       has_staff_review: null != t.staffNotes,
-      carousel_image_count: i.images,
-      carousel_video_count: i.videos,
-      location: s.location.page,
+      carousel_image_count: s.images,
+      carousel_video_count: s.videos,
+      location: i.location.page,
       source: this._analyticsSource,
-      ...(0, C.Z)(e, !0)
+      ...(0, S.Z)(e, !0)
     }), this._trackedViewed = !0
   }
   renderHeader(e, t) {
     let {
       channel: n,
-      isAuthenticated: l
+      isAuthenticated: a
     } = this.props;
-    return (0, s.jsx)(f.Z, {
-      isAuthenticated: l,
+    return (0, i.jsx)(A.Z, {
+      isAuthenticated: a,
       toolbar: this.renderHeaderToolbar(e, t),
-      children: null != n ? (0, s.jsxs)(i.Fragment, {
-        children: [(0, s.jsx)(f.Z.Icon, {
-          icon: u.TagIcon,
-          "aria-label": ea.Z.Messages.STORE_CHANNEL
-        }), (0, s.jsx)(f.Z.Title, {
+      children: null != n ? (0, i.jsxs)(s.Fragment, {
+        children: [(0, i.jsx)(A.Z.Icon, {
+          icon: d.TagIcon,
+          "aria-label": er.Z.Messages.STORE_CHANNEL
+        }), (0, i.jsx)(A.Z.Title, {
           children: n.name
         })]
-      }) : null != t && t.premium ? (0, s.jsxs)(i.Fragment, {
-        children: [(0, s.jsx)(f.Z.Icon, {
-          icon: u.NitroWheelIcon,
-          "aria-label": ea.Z.Messages.PREMIUM
-        }), (0, s.jsx)($.Z, {
+      }) : null != t && t.premium ? (0, i.jsxs)(s.Fragment, {
+        children: [(0, i.jsx)(A.Z.Icon, {
+          icon: d.NitroWheelIcon,
+          "aria-label": er.Z.Messages.PREMIUM
+        }), (0, i.jsx)($.Z, {
           sku: t
         })]
-      }) : null != t ? (0, s.jsxs)(i.Fragment, {
-        children: [(0, s.jsx)(f.Z.Icon, {
-          icon: u.TagIcon,
-          "aria-label": ea.Z.Messages.STORE_CHANNEL
-        }), (0, s.jsx)(f.Z.Title, {
+      }) : null != t ? (0, i.jsxs)(s.Fragment, {
+        children: [(0, i.jsx)(A.Z.Icon, {
+          icon: d.TagIcon,
+          "aria-label": er.Z.Messages.STORE_CHANNEL
+        }), (0, i.jsx)(A.Z.Title, {
           children: t.name
         })]
       }) : null
@@ -181,120 +181,120 @@ class ec extends i.PureComponent {
   }
   parseMediaItems(e, t, n) {
     let {
-      assetId: s,
-      youtubeVideoId: i
+      assetId: i,
+      youtubeVideoId: s
     } = t;
-    if (null != s) {
-      let t = n.find(e => e.id === s);
+    if (null != i) {
+      let t = n.find(e => e.id === i);
       if (null != t) {
         let {
           width: n,
-          height: s
+          height: i
         } = t;
-        if (null == n || null == s) throw Error("ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined");
+        if (null == n || null == i) throw Error("ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined");
         return t.mimeType.startsWith("video/") ? {
-          type: ei.s9s.VIDEO,
+          type: es.s9s.VIDEO,
           thumbnailSrc: (0, V._W)(e.id, t, 1024, "webp"),
           src: (0, V._W)(e.id, t),
-          height: s,
+          height: i,
           width: n
         } : {
-          type: ei.s9s.IMG,
+          type: es.s9s.IMG,
           src: (0, V._W)(e.id, t, 1024),
-          height: s,
+          height: i,
           width: n
         }
       }
     }
-    if (null != i) return {
-      type: ei.s9s.YOUTUBE_VIDEO,
-      youtubeVideoId: i
+    if (null != s) return {
+      type: es.s9s.YOUTUBE_VIDEO,
+      youtubeVideoId: s
     };
     throw Error("Store carousel item must have one of assetId or youtubeVideoId")
   }
   renderHeaderAssets(e, t, n) {
     let {
-      theme: i
-    } = this.props, l = t.headerBackground, a = (0, c.ap)(i) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
-    return null == l || null == a ? (0, s.jsx)("div", {
-      className: er.noHeaderSpacer
-    }) : (0, s.jsxs)("div", {
-      className: er.headerAssets,
-      children: [(0, s.jsx)("div", {
-        className: er.headerBackground,
+      theme: s
+    } = this.props, a = t.headerBackground, r = (0, c.ap)(s) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
+    return null == a || null == r ? (0, i.jsx)("div", {
+      className: el.noHeaderSpacer
+    }) : (0, i.jsxs)("div", {
+      className: el.headerAssets,
+      children: [(0, i.jsx)("div", {
+        className: el.headerBackground,
         style: {
-          backgroundImage: "url(".concat((0, V._W)(e.id, l, 1024, "png"), ")")
+          backgroundImage: "url(".concat((0, V._W)(e.id, a, 1024, "png"), ")")
         }
-      }), (0, s.jsx)("img", {
-        className: er.headerLogo,
-        src: (0, V._W)(e.id, a, 1024, "png"),
+      }), (0, i.jsx)("img", {
+        className: el.headerLogo,
+        src: (0, V._W)(e.id, r, 1024, "png"),
         alt: n.name
       })]
     })
   }
   renderWhyYouMightLikeThis(e, t) {
-    return (0, s.jsx)(J.Z, {
+    return (0, i.jsx)(J.Z, {
       sku: e,
       storeListing: t,
-      className: er.whyYouMightLikeIt
+      className: el.whyYouMightLikeIt
     })
   }
   renderVerifiedGuildInvite(e, t) {
     if (null == e.guild) return null;
     let {
       channel: n,
-      pageSize: i
+      pageSize: s
     } = this.props;
-    return (0, s.jsx)(en.Z, {
+    return (0, i.jsx)(en.Z, {
       skuId: t.id,
       guild: e.guild,
-      className: er.guildInvite,
+      className: el.guildInvite,
       inChannel: null != n,
-      pageSize: i
+      pageSize: s
     })
   }
   renderFeatures(e) {
-    return (0, s.jsx)(W.Z, {
+    return (0, i.jsx)(z.Z, {
       sku: e
     })
   }
   renderSystemRequirements(e) {
-    return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length ? null : (0, s.jsx)(ee.Z, {
-      className: er.systemRequirements,
+    return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length ? null : (0, i.jsx)(ee.Z, {
+      className: el.systemRequirements,
       systemRequirements: e.systemRequirements,
       pageSize: this.props.pageSize
     })
   }
   renderDescription(e, t, n) {
     let {
-      description: l
+      description: a
     } = t;
-    if (null == l) throw Error("Rendering ApplicationStoreListing without description");
-    return (0, s.jsxs)(i.Fragment, {
-      children: [(0, s.jsx)(j.Z, {
+    if (null == a) throw Error("Rendering ApplicationStoreListing without description");
+    return (0, i.jsxs)(s.Fragment, {
+      children: [(0, i.jsx)(j.Z, {
         tag: "h1",
-        children: ea.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
+        children: er.Z.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: n.name
         })
-      }), (0, s.jsx)(m.Z, {}), (0, s.jsx)(z.Z, {
+      }), (0, i.jsx)(m.Z, {}), (0, i.jsx)(W.Z, {
         applicationId: e.id,
         blurb: t.summary,
-        description: l,
-        className: er.description,
+        description: a,
+        className: el.description,
         assets: t.assets
       })]
     })
   }
   renderApplicationContentRating(e) {
-    return (0, s.jsx)(Y.Z, {
+    return (0, i.jsx)(Y.Z, {
       sku: e,
-      className: er.contentRating
+      className: el.contentRating
     })
   }
   renderApplicationLegalInfo(e) {
-    return (0, s.jsx)(K.Z, {
+    return (0, i.jsx)(K.Z, {
       sku: e,
-      className: er.legalInfo
+      className: el.legalInfo
     })
   }
   renderJsonLD() {
@@ -304,22 +304,22 @@ class ec extends i.PureComponent {
       application: n
     } = this.props;
     if (null == e || null == t || null == n) return null;
-    let i = [],
-      l = n.getSplashURL(1024);
-    null != l && i.push(l), null != t.headerLogoLightTheme && i.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, "jpg"));
-    let a = G.Z.Product({
+    let s = [],
+      a = n.getSplashURL(1024);
+    null != a && s.push(a), null != t.headerLogoLightTheme && s.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, "jpg"));
+    let r = G.Z.Product({
         name: e.name,
         description: null != e.summary && "" !== e.summary ? e.summary : t.tagline,
-        image: G.Z.Product.Image(i),
+        image: G.Z.Product.Image(s),
         sku: e.id
       }),
-      r = e.getPrice();
-    if (null != r) {
+      l = e.getPrice();
+    if (null != l) {
       let {
         amount: e,
         currency: t
-      } = r;
-      a.offers = G.Z.Offer({
+      } = l;
+      r.offers = G.Z.Offer({
         priceCurrency: t.toUpperCase(),
         price: (0, H.T4)(e, t, {
           style: "decimal"
@@ -327,30 +327,30 @@ class ec extends i.PureComponent {
       })
     }
     let o = G.Z.ItemPage({
-      mainEntity: a
+      mainEntity: r
     });
-    return (0, s.jsx)(G.Z, {
+    return (0, i.jsx)(G.Z, {
       data: o
     })
   }
   renderSmall(e, t, n) {
-    return (0, s.jsxs)("div", {
-      className: a()(er.listing, er.listingSmall),
+    return (0, i.jsxs)("div", {
+      className: r()(el.listing, el.listingSmall),
       children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
     })
   }
   renderLarge(e, t, n) {
-    return (0, s.jsxs)("div", {
-      className: er.listing,
-      children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), (0, s.jsx)("div", {
-        className: er.listingLarge,
-        children: (0, s.jsxs)("div", {
-          className: er.body,
-          children: [(0, s.jsxs)("div", {
-            className: er.leftColumn,
+    return (0, i.jsxs)("div", {
+      className: el.listing,
+      children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), (0, i.jsx)("div", {
+        className: el.listingLarge,
+        children: (0, i.jsxs)("div", {
+          className: el.body,
+          children: [(0, i.jsxs)("div", {
+            className: el.leftColumn,
             children: [this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
-          }), (0, s.jsxs)("div", {
-            className: er.rightColumn,
+          }), (0, i.jsxs)("div", {
+            className: el.rightColumn,
             children: [this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n)]
           })]
         })
@@ -362,44 +362,44 @@ class ec extends i.PureComponent {
       application: e,
       sku: t,
       storeListing: n,
-      matureAgree: l,
-      isAuthenticated: a
+      matureAgree: a,
+      isAuthenticated: r
     } = this.props;
-    if (null == e || null == t || null == n || n.isSlimDirectoryVersion()) return (0, s.jsxs)(i.Fragment, {
-      children: [this.renderHeader(e, t), (0, s.jsx)(U.Z, {
+    if (null == e || null == t || null == n || n.isSlimDirectoryVersion()) return (0, i.jsxs)(s.Fragment, {
+      children: [this.renderHeader(e, t), (0, i.jsx)(U.Z, {
         align: U.Z.Align.CENTER,
         justify: U.Z.Justify.CENTER,
-        children: (0, s.jsx)(u.Spinner, {
-          className: er.spinner
+        children: (0, i.jsx)(d.Spinner, {
+          className: el.spinner
         })
       })]
     });
-    if (!l && t.showAgeGate) {
-      let n = a ? null : (0, s.jsx)("div", {
-        className: er.gatedListing,
+    if (!a && t.showAgeGate) {
+      let n = r ? null : (0, i.jsx)("div", {
+        className: el.gatedListing,
         children: this.renderListing()
       });
-      return (0, s.jsxs)(i.Fragment, {
-        children: [(0, s.jsx)(S.yY, {
+      return (0, i.jsxs)(s.Fragment, {
+        children: [(0, i.jsx)(f.yY, {
           location: e.name
-        }), this.renderJsonLD(), this.renderHeader(e, t), (0, s.jsx)(Q.Z, {
+        }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(Q.Z, {
           game: e
         }), n]
       })
     }
-    return a ? (0, s.jsxs)("div", {
-      className: er.listingWrapper,
-      children: [(0, s.jsx)(S.yY, {
+    return r ? (0, i.jsxs)("div", {
+      className: el.listingWrapper,
+      children: [(0, i.jsx)(f.yY, {
         location: e.name
-      }), this.renderJsonLD(), (0, s.jsx)(I.Z, {
-        section: ei.jXE.NAVIGATION,
+      }), this.renderJsonLD(), (0, i.jsx)(I.Z, {
+        section: es.jXE.NAVIGATION,
         children: this.renderHeader(e, t)
-      }), (0, s.jsx)(I.Z, {
-        section: ei.jXE.BODY,
+      }), (0, i.jsx)(I.Z, {
+        section: es.jXE.BODY,
         children: this.renderListing()
       })]
-    }) : (0, s.jsxs)("div", {
-      children: [(0, s.jsx)(S.yY, {
+    }) : (0, i.jsxs)("div", {
+      children: [(0, i.jsx)(f.yY, {
         location: e.name
       }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
     })
@@ -410,12 +410,12 @@ class ec extends i.PureComponent {
       showLinkCopied: !1
     }), eo(this, "trackCarouselScroll", (e, t, n) => {
       let {
-        sku: s
+        sku: i
       } = this.props;
-      null != s && w.default.track(ei.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-        ...(0, C.Z)(s),
+      null != i && w.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
+        ...(0, S.Z)(i),
         card_index: n,
-        card_type: e.type === ei.s9s.IMG ? "image" : "video"
+        card_type: e.type === es.s9s.IMG ? "image" : "video"
       })
     }), eo(this, "copyCurrentUrl", () => {
       var e;
@@ -436,15 +436,15 @@ class ec extends i.PureComponent {
         channel: e,
         guild: t
       } = this.props;
-      null != e && null != t && (0, u.openModalLazy)(async () => {
+      null != e && null != t && (0, d.openModalLazy)(async () => {
         let {
-          default: i
-        } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, 560114));
-        return n => (0, s.jsx)(i, {
+          default: s
+        } = await Promise.all([n.e("7654"), n.e("30135")]).then(n.bind(n, 560114));
+        return n => (0, i.jsx)(s, {
           ...n,
           guild: t,
           channel: e,
-          source: ei.t4x.GUILD_CHANNELS
+          source: es.t4x.GUILD_CHANNELS
         })
       })
     }), eo(this, "renderInviteLink", () => {
@@ -452,43 +452,43 @@ class ec extends i.PureComponent {
         channel: e,
         guild: t
       } = this.props;
-      return null != e && null != t && (v.Z.can(ei.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode) ? (0, s.jsx)(u.Button, {
-        "aria-label": ea.Z.Messages.CREATE_INSTANT_INVITE,
-        look: u.Button.Looks.BLANK,
-        size: u.Button.Sizes.NONE,
+      return null != e && null != t && (O.Z.can(es.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode) ? (0, i.jsx)(d.Button, {
+        "aria-label": er.Z.Messages.CREATE_INSTANT_INVITE,
+        look: d.Button.Looks.BLANK,
+        size: d.Button.Sizes.NONE,
         onClick: this.handleCreateInstantInvite,
-        className: er.link,
-        children: (0, s.jsx)(u.LinkIcon, {
+        className: el.link,
+        children: (0, i.jsx)(d.LinkIcon, {
           size: "md",
           color: "currentColor",
-          className: er.linkIcon
+          className: el.linkIcon
         })
       }) : null
     }), eo(this, "renderCopyLink", () => {
       let {
         showLinkCopied: e
       } = this.state;
-      return this.isChannelType ? this.renderInviteLink() : (0, s.jsx)(u.Tooltip, {
-        text: e ? ea.Z.Messages.APPLICATION_STORE_LINK_COPIED : null,
+      return this.isChannelType ? this.renderInviteLink() : (0, i.jsx)(d.Tooltip, {
+        text: e ? er.Z.Messages.APPLICATION_STORE_LINK_COPIED : null,
         position: "left",
         forceOpen: e,
         children: t => {
           let {
             onMouseEnter: n,
-            onMouseLeave: i
+            onMouseLeave: s
           } = t;
-          return (0, s.jsx)(u.Button, {
-            "aria-label": e ? ea.Z.Messages.APPLICATION_STORE_LINK_COPIED : ea.Z.Messages.COPY_LINK,
-            look: u.Button.Looks.BLANK,
-            size: u.Button.Sizes.NONE,
+          return (0, i.jsx)(d.Button, {
+            "aria-label": e ? er.Z.Messages.APPLICATION_STORE_LINK_COPIED : er.Z.Messages.COPY_LINK,
+            look: d.Button.Looks.BLANK,
+            size: d.Button.Sizes.NONE,
             onClick: this.copyCurrentUrl,
             onMouseEnter: n,
-            onMouseLeave: i,
-            className: er.link,
-            children: (0, s.jsx)(u.LinkIcon, {
+            onMouseLeave: s,
+            className: el.link,
+            children: (0, i.jsx)(d.LinkIcon, {
               size: "md",
               color: "currentColor",
-              className: er.linkIcon
+              className: el.linkIcon
             })
           })
         }
@@ -496,49 +496,49 @@ class ec extends i.PureComponent {
     }), eo(this, "renderHeaderToolbar", (e, t) => {
       let {
         isInTestMode: n,
-        slug: i,
-        storeListing: l,
+        slug: s,
+        storeListing: a,
         analyticsContext: {
-          location: r
+          location: l
         }
       } = this.props, {
         showHeaderPurchaseUnit: o
       } = this.state;
-      return (0, s.jsxs)("div", {
-        className: er.headerBarListing,
-        children: [(0, s.jsx)("div", {
-          className: er.headerSection,
-          children: n && null != t ? (0, s.jsx)(et.Z, {
+      return (0, i.jsxs)("div", {
+        className: el.headerBarListing,
+        children: [(0, i.jsx)("div", {
+          className: el.headerSection,
+          children: n && null != t ? (0, i.jsx)(et.Z, {
             size: et.y.Sizes.MIN,
             dropdownSize: et.y.DropdownSizes.MEDIUM,
             look: et.y.Looks.OUTLINED,
             color: et.y.Colors.RED,
             skuId: t.id,
-            className: er.testModeSelectButton,
-            currentStoreListingId: null != l ? l.id : null,
+            className: el.testModeSelectButton,
+            currentStoreListingId: null != a ? a.id : null,
             onStoreListingSelect: e => {
-              null != t && (0, _.yt)(t.id, {
-                slug: i,
+              null != t && (0, h.yt)(t.id, {
+                slug: s,
                 analyticsSource: {
-                  page: r.page,
-                  section: ei.jXE.NAVIGATION,
+                  page: l.page,
+                  section: es.jXE.NAVIGATION,
                   object: null
                 },
                 storeListingId: e.id
               })
             }
           }) : null
-        }), (0, s.jsx)("div", {
-          className: er.headerSection,
-          children: (0, s.jsxs)("div", {
-            className: a()(er.headerPurchase, {
-              [er.active]: o
+        }), (0, i.jsx)("div", {
+          className: el.headerSection,
+          children: (0, i.jsxs)("div", {
+            className: r()(el.headerPurchase, {
+              [el.active]: o
             }),
-            children: [null != t ? (0, A.Z)(t) : null, null != e && null != t ? (0, s.jsx)("div", {
+            children: [null != t ? (0, N.Z)(t) : null, null != e && null != t ? (0, i.jsx)("div", {
               children: "deprecated!"
-            }) : null, (0, s.jsx)(X.Z, {
+            }) : null, (0, i.jsx)(X.Z, {
               messageStyle: X.G.SHORT,
-              className: er.purchaseError
+              className: el.purchaseError
             })]
           })
         }), this.renderCopyLink()]
@@ -547,15 +547,15 @@ class ec extends i.PureComponent {
       if (0 === t.carouselItems.length) return null;
       let {
         pageSize: n,
-        isFocused: i
+        isFocused: s
       } = this.props;
-      return (0, s.jsx)(I.Z, {
-        section: ei.jXE.HERO,
-        children: (0, s.jsx)(q.Z, {
+      return (0, i.jsx)(I.Z, {
+        section: es.jXE.HERO,
+        children: (0, i.jsx)(q.Z, {
           pageSize: n,
           items: t.carouselItems.map(n => this.parseMediaItems(e, n, t.assets)),
           autoplayInterval: 8e3,
-          paused: !i,
+          paused: !s,
           onIntentionalChange: this.trackCarouselScroll
         })
       })
@@ -564,50 +564,50 @@ class ec extends i.PureComponent {
         application: e,
         storeListing: t,
         sku: n,
-        pageSize: i
+        pageSize: s
       } = this.props;
-      return null == e || null == n || null == t || t.isSlimDirectoryVersion() ? (0, s.jsx)(U.Z, {
+      return null == e || null == n || null == t || t.isSlimDirectoryVersion() ? (0, i.jsx)(U.Z, {
         align: U.Z.Align.CENTER,
         justify: U.Z.Justify.CENTER,
-        children: (0, s.jsx)(u.Spinner, {})
-      }) : i === es.b.SMALL ? this.renderSmall(e, t, n) : this.renderLarge(e, t, n)
+        children: (0, i.jsx)(d.Spinner, {})
+      }) : s === ei.b.SMALL ? this.renderSmall(e, t, n) : this.renderLarge(e, t, n)
     })
   }
 }
-t.Z = (0, T.Z)((0, g.Z)(r.ZP.connectStores([P.Z, L.Z, Z.default, y.Z, D.Z, M.Z, b.Z, p.Z, N.Z, R.Z, O.Z, x.Z], e => {
-  let t, n, s, {
-    inputSkuId: i,
-    applicationId: l,
-    storeListingId: a,
-    isAuthenticated: r,
+t.Z = (0, p.Z)((0, g.Z)(l.ZP.connectStores([x.Z, L.Z, Z.default, y.Z, M.Z, b.Z, D.Z, T.Z, C.Z, R.Z, v.Z, P.Z], e => {
+  let t, n, i, {
+    inputSkuId: s,
+    applicationId: a,
+    storeListingId: r,
+    isAuthenticated: l,
     channel: o
   } = e;
-  if (null == l) {
-    if (null == i) throw Error("Needs applicationId or skuId");
-    t = i, null != (l = null != (n = M.Z.get(i)) ? n.applicationId : null) && (s = N.Z.getApplication(l))
-  } else if (null == i) {
-    if (null == l) throw Error("Needs applicationId or skuId");
-    null != (s = N.Z.getApplication(l)) && (t = s.destinationSkuId), n = null != t ? M.Z.get(t) : null
-  }(null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
-  let c = null != l && (b.Z.inTestModeForApplication(l) || p.Z.inDevModeForApplication(l));
+  if (null == a) {
+    if (null == s) throw Error("Needs applicationId or skuId");
+    t = s, null != (a = null != (n = b.Z.get(s)) ? n.applicationId : null) && (i = C.Z.getApplication(a))
+  } else if (null == s) {
+    if (null == a) throw Error("Needs applicationId or skuId");
+    null != (i = C.Z.getApplication(a)) && (t = i.destinationSkuId), n = null != t ? b.Z.get(t) : null
+  }(null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, es.l4R.STICKER_PACK) && (n = null);
+  let c = null != a && (D.Z.inTestModeForApplication(a) || T.Z.inDevModeForApplication(a));
   return {
     skuId: t,
-    application: null != l ? N.Z.getApplication(l) : null,
-    isFetchingEntitlements: null != l && x.Z.applicationIdsFetching.has(l),
-    didFetchEntitlements: null != l && x.Z.applicationIdsFetched.has(l),
-    shouldFetchStatistics: r && null != l && R.Z.shouldFetchStatisticsForApplication(l),
+    application: null != a ? C.Z.getApplication(a) : null,
+    isFetchingEntitlements: null != a && P.Z.applicationIdsFetching.has(a),
+    didFetchEntitlements: null != a && P.Z.applicationIdsFetched.has(a),
+    shouldFetchStatistics: l && null != a && R.Z.shouldFetchStatisticsForApplication(a),
     sku: n,
     isFocused: y.Z.isFocused(),
-    storeListing: D.Z.getStoreListing({
-      storeListingId: a,
+    storeListing: M.Z.getStoreListing({
+      storeListingId: r,
       skuId: t,
       channelId: null != o ? o.id : null,
       isTestMode: c
     }),
-    isInTestMode: null != l && c,
-    matureAgree: P.Z.didMatureAgree,
+    isInTestMode: null != a && c,
+    matureAgree: x.Z.didMatureAgree,
     theme: L.Z.theme,
     locale: Z.default.locale,
-    guild: null != o ? O.Z.getGuild(o.getGuildId()) : null
+    guild: null != o ? v.Z.getGuild(o.getGuildId()) : null
   }
 })(ec)))

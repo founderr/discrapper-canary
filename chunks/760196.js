@@ -24,20 +24,20 @@ t.Z = r.memo(e => {
   } = (0, a.cj)([l.Z], () => ({
     activeCommandOption: l.Z.getActiveOption(t.id),
     activeCommandOptionStates: l.Z.getOptionStates(t.id)
-  })), S = (0, d.e)(t), f = (0, u.__)(r, t, {
+  })), f = (0, d.e)(t), S = (0, u.__)(r, t, {
     location: "ChannelTextAreaBars"
-  }), N = [];
-  return (null != r && (f && N.push((0, i.jsx)(c.Z, {
+  }), A = [];
+  return (null != r && (S && A.push((0, i.jsx)(c.Z, {
     activeCommand: r
-  })), N.push((0, i.jsx)(_.Z, {
+  })), A.push((0, i.jsx)(_.Z, {
     activeCommand: r,
     activeOption: null != T ? T : null,
     optionStates: h
-  }))), null != s && N.push((0, i.jsx)(E.Z, {
+  }))), null != s && A.push((0, i.jsx)(E.Z, {
     reply: s,
     chatInputType: n
-  })), S && N.push((0, i.jsx)(d.V, {})), 0 === (N = N.map((e, t) => {
-    let n = t === N.length - 1;
+  })), f && A.push((0, i.jsx)(d.V, {})), 0 === (A = A.map((e, t) => {
+    let n = t === A.length - 1;
     return (0, i.jsx)("div", {
       className: o()({
         [I.stackedAttachedBar]: !n
@@ -46,6 +46,6 @@ t.Z = r.memo(e => {
     }, t)
   })).length) ? null : (0, i.jsx)("div", {
     className: I.attachedBars,
-    children: N
+    children: A
   })
 })

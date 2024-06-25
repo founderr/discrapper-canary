@@ -1,97 +1,97 @@
 t.d(n, {
   Z: function() {
-    return A
+    return C
   }
 }), t(653041), t(47120);
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(149765),
-  a = t(442837),
-  r = t(481060),
-  o = t(749210),
+  l = t(442837),
+  o = t(481060),
+  r = t(749210),
   c = t(412899),
   d = t(995648),
   u = t(422559),
   I = t(598077),
-  N = t(271383),
-  E = t(430824),
-  T = t(467679),
-  m = t(285952),
-  _ = t(823379),
+  m = t(271383),
+  _ = t(430824),
+  N = t(467679),
+  E = t(285952),
+  T = t(823379),
   h = t(700785),
-  g = t(689938),
-  O = t(645874);
+  p = t(689938),
+  g = t(645874);
 
-function A(e) {
+function C(e) {
   var n;
   let {
     guild: t,
-    applicationIntegration: A
-  } = e, x = (0, a.e7)([E.Z], () => E.Z.getRoles(t.id)), {
-    application: C
-  } = A, S = null != C.bot ? new I.Z(C.bot) : null, p = (0, a.e7)([N.ZP], () => null != S ? N.ZP.getMember(t.id, S.id) : null, [S, t]), R = null == S ? void 0 : S.id;
-  l.useEffect(() => {
-    if (null != R) o.Z.requestMembersById(t.id, R)
-  }, [t.id, R]);
-  let Z = l.useMemo(() => {
+    applicationIntegration: C
+  } = e, f = (0, l.e7)([_.Z], () => _.Z.getRoles(t.id)), {
+    application: x
+  } = C, O = null != x.bot ? new I.Z(x.bot) : null, S = (0, l.e7)([m.ZP], () => null != O ? m.ZP.getMember(t.id, O.id) : null, [O, t]), A = null == O ? void 0 : O.id;
+  a.useEffect(() => {
+    if (null != A) r.Z.requestMembersById(t.id, A)
+  }, [t.id, A]);
+  let R = a.useMemo(() => {
     var e, n, i;
-    let l = x[t.getEveryoneRoleId()],
-      a = null !== (n = null == p ? void 0 : null === (e = p.roles) || void 0 === e ? void 0 : e.map(e => x[e]).filter(_.lm)) && void 0 !== n ? n : [],
-      r = null !== (i = null == l ? void 0 : l.permissions) && void 0 !== i ? i : h.Hn;
-    for (let e of a) r = s.IH(r, e.permissions);
-    return r
-  }, [t, x, p]);
-  return null == S ? null : (0, i.jsx)(r.Card, {
+    let a = f[t.getEveryoneRoleId()],
+      l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map(e => f[e]).filter(T.lm)) && void 0 !== n ? n : [],
+      o = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
+    for (let e of l) o = s.IH(o, e.permissions);
+    return o
+  }, [t, f, S]);
+  return null == O ? null : (0, i.jsx)(o.Card, {
     editable: !0,
-    className: O.card,
-    children: (0, i.jsxs)(m.Z, {
-      direction: m.Z.Direction.VERTICAL,
-      children: [(0, i.jsxs)(m.Z, {
-        align: m.Z.Align.CENTER,
+    className: g.card,
+    children: (0, i.jsxs)(E.Z, {
+      direction: E.Z.Direction.VERTICAL,
+      children: [(0, i.jsxs)(E.Z, {
+        align: E.Z.Align.CENTER,
         children: [(0, i.jsx)("img", {
           alt: "",
-          src: S.getAvatarURL(t.id, 32),
-          className: O.iconWrapper
-        }), (0, i.jsx)(r.Text, {
+          src: O.getAvatarURL(t.id, 32),
+          className: g.iconWrapper
+        }), (0, i.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-sm/normal",
-          children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
-            user: S
+          children: p.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
+            user: O
           })
-        }), (0, i.jsx)(T.Z, {
-          className: O.tag,
-          verified: S.isVerifiedBot()
+        }), (0, i.jsx)(N.Z, {
+          className: g.tag,
+          verified: O.isVerifiedBot()
         })]
-      }), function(e, n, t, l) {
-        let a = [],
-          o = [];
-        for (let e of u.VY) s.e$(l, e) ? a.push(e) : o.push(e);
+      }), function(e, n, t, a) {
+        let l = [],
+          r = [];
+        for (let e of u.VY) s.e$(a, e) ? l.push(e) : r.push(e);
         return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(r.FormDivider, {
-            className: O.divider
+          children: [(0, i.jsx)(o.FormDivider, {
+            className: g.divider
           }), t.length > 0 ? (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(r.FormTitle, {
-              className: O.permissionHeader,
-              children: g.Z.Messages.ROLES_LIST.format({
+            children: [(0, i.jsx)(o.FormTitle, {
+              className: g.permissionHeader,
+              children: p.Z.Messages.ROLES_LIST.format({
                 numRoles: t.length
               })
             }), (0, i.jsx)(c.ZP, {
-              className: O.rolePills,
+              className: g.rolePills,
               user: e,
               guild: n,
               userRoles: t,
               wrap: !1,
               readOnly: !0
             })]
-          }) : null, a.length > 0 || o.length > 0 ? (0, i.jsx)(d.Z, {
-            className: O.permissionList,
-            grantedPermissions: a,
-            grantedPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
-            disabledPermissions: o,
-            disabledPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
+          }) : null, l.length > 0 || r.length > 0 ? (0, i.jsx)(d.Z, {
+            className: g.permissionList,
+            grantedPermissions: l,
+            grantedPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
+            disabledPermissions: r,
+            disabledPermissionsHeader: p.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
           }) : null]
         })
-      }(S, t, null !== (n = null == p ? void 0 : p.roles) && void 0 !== n ? n : [], Z)]
+      }(O, t, null !== (n = null == S ? void 0 : S.roles) && void 0 !== n ? n : [], R)]
     })
   })
 }

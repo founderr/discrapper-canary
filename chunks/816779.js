@@ -1,16 +1,16 @@
 n(47120), n(653041);
-var l, i = n(735250),
-  s = n(470079),
-  r = n(120356),
-  a = n.n(r),
+var i, l = n(735250),
+  r = n(470079),
+  a = n(120356),
+  s = n.n(a),
   o = n(954955),
-  u = n.n(o),
-  c = n(748780),
+  c = n.n(o),
+  u = n(748780),
   d = n(902704),
   h = n(481060),
   p = n(740933);
 
-function g(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,11 +18,11 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let m = {
+let _ = {
   friction: 10,
   tension: 300
 };
-class C extends s.Component {
+class g extends r.Component {
   shouldComponentUpdate(e, t) {
     return !(0, d.Z)(this.props, e, ["animate"]) || !(0, d.Z)(this.state, t)
   }
@@ -52,9 +52,9 @@ class C extends s.Component {
       return
     }
     this._timeout = setTimeout(() => {
-      c.Z.spring(e, {
+      u.Z.spring(e, {
         toValue: 0,
-        ...m
+        ..._
       }).start()
     }, 100)
   }
@@ -66,9 +66,9 @@ class C extends s.Component {
       e.setValue(1);
       return
     }
-    c.Z.spring(e, {
+    u.Z.spring(e, {
       toValue: 1,
-      ...m
+      ..._
     }).start()
   }
   render() {
@@ -76,14 +76,14 @@ class C extends s.Component {
       className: e,
       text: t,
       hide: n,
-      onClick: l
+      onClick: i
     } = this.props;
-    return (0, i.jsx)(c.Z.div, {
-      className: a()(p.bar, e),
-      onClick: l,
+    return (0, l.jsx)(u.Z.div, {
+      className: s()(p.bar, e),
+      onClick: i,
       style: this.getAnimatedStyle(),
       "aria-hidden": n,
-      children: (0, i.jsx)("span", {
+      children: (0, l.jsx)("span", {
         className: p.text,
         children: t
       })
@@ -105,13 +105,13 @@ class C extends s.Component {
     }
   }
   constructor(e) {
-    super(e), g(this, "_timeout", void 0), this.state = {
-      translateY: new c.Z.Value,
+    super(e), f(this, "_timeout", void 0), this.state = {
+      translateY: new u.Z.Value,
       reduceMotion: !1
     }
   }
 }
-class E extends(l = s.PureComponent) {
+class m extends(i = r.PureComponent) {
   componentDidMount() {
     this.calculateState()
   }
@@ -127,85 +127,85 @@ class E extends(l = s.PureComponent) {
       mention: t
     } = this.state, {
       textMention: n,
-      textUnread: l,
-      reverse: s,
-      className: r,
+      textUnread: i,
+      reverse: r,
+      className: a,
       barClassName: o,
-      hide: u,
-      animate: c
+      hide: c,
+      animate: u
     } = this.props, {
       reducedMotion: d
     } = this.context;
-    return (0, i.jsx)("div", {
-      className: null != r ? r : void 0,
-      children: (0, i.jsx)(C, {
-        hide: !0 === u || null == e && null == t,
-        className: a()(o, null != t ? p.mention : p.unread),
-        text: null != t ? n : l,
-        reverse: s,
-        animate: c && !d.enabled,
+    return (0, l.jsx)("div", {
+      className: null != a ? a : void 0,
+      children: (0, l.jsx)(g, {
+        hide: !0 === c || null == e && null == t,
+        className: s()(o, null != t ? p.mention : p.unread),
+        text: null != t ? n : i,
+        reverse: r,
+        animate: u && !d.enabled,
         onClick: this.handleClick
       })
     })
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), f(this, "state", {
       unread: null,
       mention: null
-    }), g(this, "calculateState", u()(() => {
+    }), f(this, "calculateState", c()(() => {
       let {
         items: e,
         expandedFolders: t,
         isVisible: n,
-        isUnread: l,
-        isMentioned: i,
-        reverse: s,
-        onCalculate: r
-      } = this.props, a = null, o = null, u = [];
+        isUnread: i,
+        isMentioned: l,
+        reverse: r,
+        onCalculate: a
+      } = this.props, s = null, o = null, c = [];
       e.forEach(e => {
-        "string" == typeof e ? u.push(e) : "object" == typeof e && null != e.folderId ? null != t && t.has(e.folderId) ? (u.push("folder:".concat(e.folderId)), e.guildIds.forEach(e => u.push(e))) : u.push(e.guildIds) : u.push(e.guildIds[0])
+        "string" == typeof e ? c.push(e) : "object" == typeof e && null != e.folderId ? null != t && t.has(e.folderId) ? (c.push("folder:".concat(e.folderId)), e.guildIds.forEach(e => c.push(e))) : c.push(e.guildIds) : c.push(e.guildIds[0])
       });
-      let c = e => {
-          null == a && i(e, s, u) && (a = e), null == o && l(e, s, u) && (o = e)
+      let u = e => {
+          null == s && l(e, r, c) && (s = e), null == o && i(e, r, c) && (o = e)
         },
-        d = s ? u.length - 1 : 0,
-        h = u[d];
+        d = r ? c.length - 1 : 0,
+        h = c[d];
       for (; null != h;) {
         if ("string" == typeof h) {
-          if (n(h, s, u)) break;
-          c(h)
+          if (n(h, r, c)) break;
+          u(h)
         } else {
           let e = !1;
           for (let t of h) {
-            if (n(t, s, u)) {
+            if (n(t, r, c)) {
               e = !0;
               break
             }
-            c(t)
+            u(t)
           }
           if (e) break
         }
-        d += s ? -1 : 1, h = u[d]
+        d += r ? -1 : 1, h = c[d]
       }
-      null != r && r(a, o, s), this.setState({
-        mention: a,
+      null != a && a(s, o, r), this.setState({
+        mention: s,
         unread: o
       })
-    }, 200)), g(this, "handleClick", e => {
+    }, 200)), f(this, "handleClick", e => {
       e.preventDefault(), e.stopPropagation();
       let {
         unread: t,
         mention: n
       } = this.state, {
-        onJumpTo: l
-      } = this.props, i = null != n ? n : t;
-      null != i && l(i, [n, t])
+        onJumpTo: i
+      } = this.props, l = null != n ? n : t;
+      null != l && i(l, [n, t])
     })
   }
 }
-g(E, "contextType", h.AccessibilityPreferencesContext), g(E, "defaultProps", {
+f(m, "contextType", h.AccessibilityPreferencesContext), f(m, "defaultProps", {
   className: p.container,
   reverse: !1,
   hide: !1,
   animate: !0
-}), t.Z = E
+}), t.Z = m

@@ -3,67 +3,67 @@ t.d(n, {
     return C
   }
 }), t(653041), t(47120);
-var a, r, s, i, l = t(392711),
-  o = t.n(l),
+var a, r, i, s, o = t(392711),
+  l = t.n(o),
   c = t(442837),
   d = t(570140),
   u = t(823379),
   m = t(731455),
-  h = t(689938);
+  f = t(689938);
 
 function C(e, n) {
-  return o().isEqual(e.map(e => [e.categoryId, e.name]), n.map(e => [e.categoryId, e.name]))
+  return l().isEqual(e.map(e => [e.categoryId, e.name]), n.map(e => [e.categoryId, e.name]))
 }
-let x = null,
-  f = [],
-  E = [],
-  T = {};
-class _ extends(a = c.ZP.Store) {
+let _ = null,
+  h = [],
+  x = [],
+  g = {};
+class p extends(a = c.ZP.Store) {
   getPrimaryCategories() {
-    return f
+    return h
   }
   getDiscoveryCategories() {
-    let e = m.L3.map(e => E.find(n => n.categoryId === e)).filter(u.lm);
+    let e = m.L3.map(e => x.find(n => n.categoryId === e)).filter(u.lm);
     return [{
       categoryId: m.Hk,
-      name: h.Z.Messages.HOME
+      name: f.Z.Messages.HOME
     }, ...e]
   }
   getClanDiscoveryCategories() {
-    let e = m.L3.map(e => E.find(n => n.categoryId === e)).filter(u.lm);
+    let e = m.L3.map(e => x.find(n => n.categoryId === e)).filter(u.lm);
     return [{
       categoryId: m.Hk,
-      name: h.Z.Messages.COMMUNITIES
+      name: f.Z.Messages.COMMUNITIES
     }, ...e]
   }
   getAllCategories() {
-    return E
-  }
-  getFetchedLocale() {
     return x
   }
+  getFetchedLocale() {
+    return _
+  }
   getCategoryName(e) {
-    return e === m.Hk ? h.Z.Messages.HOME : T[e]
+    return e === m.Hk ? f.Z.Messages.HOME : g[e]
   }
 }
-i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
-  value: i,
+s = "GuildDiscoveryCategoryStore", (i = "displayName") in(r = p) ? Object.defineProperty(r, i, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = i, n.Z = new _(d.Z, {
+}) : r[i] = s, n.Z = new p(d.Z, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let n, {
         categories: t,
         locale: a
       } = e,
       r = [],
-      s = [];
+      i = [];
     if (t.sort((e, n) => e.name < n.name ? -1 : 1).forEach(e => {
         let {
           id: t,
           name: a,
-          is_primary: i
+          is_primary: s
         } = e;
         if (t !== m.o3) {
           if (t === m.dc) {
@@ -72,13 +72,13 @@ i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.define
               name: a
             };
             return
-          }!0 === i && r.push({
+          }!0 === s && r.push({
             categoryId: t,
             name: a
-          }), s.push({
+          }), i.push({
             categoryId: t,
             name: a
-          }), T[t] = a
+          }), g[t] = a
         }
       }), null != n) {
       let {
@@ -88,8 +88,8 @@ i = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = _) ? Object.define
       r.push({
         categoryId: e,
         name: t
-      }), T[e] = t
+      }), g[e] = t
     }
-    x = a, f = r, E = s
+    _ = a, h = r, x = i
   }
 })

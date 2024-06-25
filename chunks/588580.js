@@ -1,8 +1,8 @@
 n.d(t, {
   a: function() {
-    return s
+    return l
   }
 });
-var l = n(442837),
-  i = n(317381);
-let s = () => (0, l.e7)([i.ZP], () => i.ZP.getState().shouldShowNewActivityIndicator)
+var i = n(442837),
+  a = n(317381);
+let l = () => (0, i.e7)([a.ZP], () => a.ZP.getState().shouldShowNewActivityIndicator)

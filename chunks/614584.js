@@ -1,73 +1,73 @@
 n.d(t, {
   Z: function() {
-    return Z
+    return v
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(25209),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(25209),
   r = n(39154),
   o = n(35125),
   c = n(905405),
   u = n(628238),
   d = n(499401),
   h = n(693912),
-  m = n(869765),
-  E = n(699516),
-  p = n(512665),
-  g = n(352736),
-  f = n(937889),
-  C = n(739566),
-  _ = n(507418),
+  p = n(869765),
+  m = n(699516),
+  _ = n(512665),
+  f = n(352736),
+  E = n(937889),
+  g = n(739566),
+  C = n(507418),
   I = n(348238),
   x = n(981631),
   T = n(689938);
-let N = i.memo(function(e) {
+let N = a.memo(function(e) {
   var t;
   let {
     baseMessage: n,
     referencedMessage: N,
-    channel: Z,
+    channel: v,
     compact: S = !1,
-    referencedUsernameProfile: v,
+    referencedUsernameProfile: Z,
     referencedAvatarProfile: A,
     setPopout: M
-  } = e, R = N.state === m.Y.LOADED ? N.message : void 0, j = (0, C.Uj)(R), L = (0, c.p)(), O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = i.useMemo(() => {
-    if (null == R) return null;
-    let e = (0, r.Z)(R);
+  } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, g.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+    if (null == b) return null;
+    let e = (0, r.Z)(b);
     if (e.type === x.uaV.USER_JOIN) {
-      let t = g.Z.getWelcomeMessageKind(Z.guild_id);
-      return (0, a.Rp)(g.Z.getSystemMessageUserJoin(e.id, t).astFormat({
-        username: null != j ? j.nick : e.author.username,
+      let t = f.Z.getWelcomeMessageKind(v.guild_id);
+      return (0, s.Rp)(f.Z.getSystemMessageUserJoin(e.id, t).astFormat({
+        username: null != R ? R.nick : e.author.username,
         usernameHook: e => e
       }))
     }
-    if (e.type === x.uaV.ROLE_SUBSCRIPTION_PURCHASE) return (0, a.Rp)((0, o.PA)({
-      username: null != j ? j.nick : e.author.username,
-      guildId: null == Z ? void 0 : Z.guild_id,
+    if (e.type === x.uaV.ROLE_SUBSCRIPTION_PURCHASE) return (0, s.Rp)((0, o.PA)({
+      username: null != R ? R.nick : e.author.username,
+      guildId: null == v ? void 0 : v.guild_id,
       roleSubscriptionData: e.roleSubscriptionData
     }));
-    if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, a.Rp)((0, d.Y)({
+    if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, s.Rp)((0, d.Y)({
       application: null == e ? void 0 : e.application,
-      username: null == j ? void 0 : j.nick
+      username: null == R ? void 0 : R.nick
     }));
-    else if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED) return (0, a.Rp)((0, h.B2)({
+    else if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED) return (0, s.Rp)((0, h.B2)({
       application: null == e ? void 0 : e.application,
-      username: null == j ? void 0 : j.nick
+      username: null == R ? void 0 : R.nick
     }));
-    else if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED) return (0, a.Rp)((0, h.hj)({
+    else if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED) return (0, s.Rp)((0, h.hj)({
       application: null == e ? void 0 : e.application,
-      username: null == j ? void 0 : j.nick
+      username: null == R ? void 0 : R.nick
     }));
     else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== e.content ? e.content : T.Z.Messages.DEADCHAT_PROMPT_1;
     if (null != e.content && "" !== e.content) {
       let t = {
           formatInline: !0,
           allowLinks: !0,
-          shouldFilterKeywords: L
+          shouldFilterKeywords: j
         },
-        n = e.isFirstMessageInForumPost(Z) ? {
+        n = e.isFirstMessageInForumPost(v) ? {
           ...t,
           noStyleAndInteraction: !0,
           allowHeading: !0,
@@ -75,55 +75,55 @@ let N = i.memo(function(e) {
         } : {
           ...t,
           formatInline: !0,
-          allowHeading: O,
-          allowList: O
+          allowHeading: L,
+          allowList: L
         };
-      return (0, f.ZP)(e, n).content
+      return (0, E.ZP)(e, n).content
     }
     return null
-  }, [R, j, Z, O, L]), y = (0, s.e7)([E.Z], () => null != R && E.Z.isBlockedForMessage(R), [R]), b = (0, I.wq)(null == R ? void 0 : R.author.id, Z.id), D = (0, I.$3)(n, R, y), U = (0, I.Wl)(R, Z, v, M), k = (0, I.rY)(A, M), w = i.useCallback(() => M({
+  }, [b, R, v, L, j]), O = (0, l.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [M]), H = (0, C.Uj)(n);
-  return (0, l.jsx)(p.Z, {
-    repliedAuthor: j,
+  }), [M]), B = (0, g.Uj)(n);
+  return (0, i.jsx)(_.Z, {
+    repliedAuthor: R,
     baseMessage: n,
-    channel: Z,
-    baseAuthor: H,
+    channel: v,
+    baseAuthor: B,
     referencedMessage: N,
     content: P,
     compact: S,
-    isReplyAuthorBlocked: y,
+    isReplyAuthorBlocked: O,
     showAvatarPopout: A,
-    showUsernamePopout: v,
-    renderPopout: _.Z,
-    onClickAvatar: k,
-    onClickUsername: U,
+    showUsernamePopout: Z,
+    renderPopout: C.Z,
+    onClickAvatar: U,
+    onClickUsername: k,
     onClickReply: D,
-    onContextMenu: b,
+    onContextMenu: y,
     onPopoutRequestClose: w
   })
 });
 
-function Z(e, t, n, i, s) {
+function v(e, t, n, a, l) {
   let {
-    message: a,
+    message: s,
     channel: r,
     compact: o
   } = e, {
     referencedUsernameProfile: c,
     referencedAvatarProfile: u
-  } = n, d = a.type === x.uaV.REPLY && null != i && (0, l.jsx)(N, {
-    baseMessage: a,
-    replyReference: i,
-    referencedMessage: s,
+  } = n, d = s.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
+    baseMessage: s,
+    replyReference: a,
+    referencedMessage: l,
     channel: r,
     compact: o,
     setPopout: t,
     referencedUsernameProfile: c,
     referencedAvatarProfile: u
   });
-  return (0, l.jsx)(l.Fragment, {
+  return (0, i.jsx)(i.Fragment, {
     children: d
   })
 }

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   B_: function() {
-    return A
+    return N
   },
   MO: function() {
     return d
   },
   k5: function() {
-    return f
+    return S
   },
   q5: function() {
     return E
@@ -53,15 +53,15 @@ function h(e) {
   return !!(null != t && d(t)) && I(t)
 }
 
-function S(e) {
+function f(e) {
   var t;
   return h(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(h)) || h(e.video)
 }
 
-function f(e) {
-  return e.attachments.some(T) || e.embeds.some(S)
+function S(e) {
+  return e.attachments.some(T) || e.embeds.some(f)
 }
-async function N(e) {
+async function A(e) {
   let t = await r.tn.post({
     url: l.ANM.ATTACHMENTS_REFRESH_URLS,
     body: {
@@ -70,12 +70,12 @@ async function N(e) {
   });
   return t.ok ? t.body.refreshed_urls[0].refreshed : void 0
 }
-async function A(e) {
+async function N(e) {
   if (!a.l.getCurrentConfig({
       location: "link_clicked"
     }).enabled) return e;
   let t = o.Z.toURLSafe(e);
   if (null == t || !I(t)) return e;
-  let n = await N(e);
+  let n = await A(e);
   return null != n ? n : e
 }

@@ -1,12 +1,12 @@
 n(47120);
 var i = n(735250),
   s = n(470079),
-  a = n(442837),
-  l = n(570140),
-  o = n(607070),
+  o = n(442837),
+  a = n(570140),
+  l = n(607070),
   r = n(222677),
-  u = n(695346),
-  c = n(960020),
+  c = n(695346),
+  u = n(960020),
   d = n(347904),
   h = n(620652),
   m = n(815605),
@@ -16,41 +16,41 @@ t.Z = s.memo(function(e) {
   let {
     channelId: t,
     messageId: n,
-    emoji: T,
-    useChatFontScaling: f,
-    color: v,
-    count: E
-  } = e, I = (0, a.e7)([c.Z], () => c.Z.getEffectForEmojiId(t, n, T)), N = f ? g : p, x = s.useMemo(() => (0, m.Zn)(T, v, t, {
-    key: I,
+    emoji: f,
+    useChatFontScaling: T,
+    color: _,
+    count: v
+  } = e, b = (0, o.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, f)), E = T ? g : p, I = s.useMemo(() => (0, m.Zn)(f, _, t, {
+    key: b,
     messageId: n
-  }), [v, I, T, t, n]), [S, C] = s.useState(!1), R = (0, a.e7)([o.Z], () => o.Z.useReducedMotion), Z = u.Yk.useSetting(), _ = s.useCallback(() => {
-    l.Z.dispatch({
+  }), [_, b, f, t, n]), [x, C] = s.useState(!1), R = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), S = c.Yk.useSetting(), N = s.useCallback(() => {
+    a.Z.dispatch({
       type: "BURST_REACTION_EFFECT_CLEAR",
       channelId: t,
       messageId: n,
-      emoji: T
+      emoji: f
     })
-  }, [T, t, n]);
+  }, [f, t, n]);
   return (s.useEffect(() => {
     let e = () => {
-      if (S) return;
-      let e = (0, d.vJ)("".concat(Date.now()).concat(t).concat(n).concat(T.name)) % 10;
-      (e += E > 4 ? 4 : E - 1) > 7 && (C(!0), (0, r.T6)({
+      if (x) return;
+      let e = (0, d.vJ)("".concat(Date.now()).concat(t).concat(n).concat(f.name)) % 10;
+      (e += v > 4 ? 4 : v - 1) > 7 && (C(!0), (0, r.T6)({
         channelId: t,
         messageId: n,
-        emoji: T,
-        key: c.I.RANDOM
+        emoji: f,
+        key: u.I.RANDOM
       }))
     };
-    if (S || R && !Z || !Z) return;
+    if (x || R && !S || !S) return;
     e();
     let i = setInterval(e, 5e3);
     return () => {
       clearInterval(i)
     }
-  }, [Z, t, E, T, T.name, S, n, R]), null == I) ? null : (0, i.jsx)(h.Z, {
-    className: N.effect,
-    effect: x,
-    onComplete: _
+  }, [S, t, v, f, f.name, x, n, R]), null == b) ? null : (0, i.jsx)(h.Z, {
+    className: E.effect,
+    effect: I,
+    onComplete: N
   })
 })

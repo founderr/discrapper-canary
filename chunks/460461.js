@@ -1,49 +1,49 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   J: function() {
-    return v
+    return D
   }
-}), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648), t(627494), t(757143);
-var n = t(735250),
-  i = t(470079),
-  l = t(442837),
-  a = t(692547),
-  r = t(481060),
-  o = t(225433),
-  c = t(484614),
-  d = t(852860),
-  u = t(296386),
-  E = t(150192),
-  _ = t(688465),
-  I = t(134432),
-  T = t(813197),
-  N = t(208567),
-  m = t(496675),
-  S = t(315507),
-  h = t(987134),
-  g = t(768581),
-  C = t(63063),
-  x = t(434404),
-  R = t(999382),
-  L = t(450474),
-  O = t(190287),
-  A = t(981631),
-  p = t(731455),
-  M = t(689938),
-  f = t(659124);
-let D = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
-  v = () => {
+}), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(627494), n(757143);
+var s = n(735250),
+  a = n(470079),
+  i = n(442837),
+  r = n(692547),
+  l = n(481060),
+  o = n(225433),
+  c = n(484614),
+  d = n(852860),
+  u = n(296386),
+  _ = n(150192),
+  E = n(688465),
+  I = n(134432),
+  T = n(813197),
+  m = n(208567),
+  N = n(496675),
+  S = n(315507),
+  h = n(987134),
+  g = n(768581),
+  C = n(63063),
+  x = n(434404),
+  p = n(999382),
+  R = n(450474),
+  f = n(190287),
+  L = n(981631),
+  O = n(731455),
+  A = n(689938),
+  M = n(659124);
+let v = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
+  D = () => {
     let {
       guild: e,
-      guildMetadata: s,
-      submitting: t
-    } = (0, l.cj)([R.Z], () => ({
-      submitting: R.Z.isSubmitting(),
-      guild: R.Z.getGuild(),
-      guildMetadata: R.Z.getMetadata()
+      guildMetadata: t,
+      submitting: n
+    } = (0, i.cj)([p.Z], () => ({
+      submitting: p.Z.isSubmitting(),
+      guild: p.Z.getGuild(),
+      guildMetadata: p.Z.getMetadata()
     }));
-    return (0, n.jsx)(d.Z, {
-      submitting: t,
+    return (0, s.jsx)(d.Z, {
+      submitting: n,
       onReset: () => {
         if (null != e) x.Z.init(e.id)
       },
@@ -53,470 +53,470 @@ let D = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
           description: e.description
         }), u.Vv({
           guildId: e.id,
-          primaryCategoryId: s.primaryCategoryId,
-          keywords: s.keywords,
-          emojiDiscoverabilityEnabled: s.emojiDiscoverabilityEnabled,
-          partnerActionedTimestamp: s.partnerActionedTimestamp,
-          partnerApplicationTimestamp: s.partnerApplicationTimestamp,
-          isPublished: s.isPublished,
-          reasonsToJoin: s.reasonsToJoin,
-          socialLinks: s.socialLinks.filter(e => e),
-          about: s.about
+          primaryCategoryId: t.primaryCategoryId,
+          keywords: t.keywords,
+          emojiDiscoverabilityEnabled: t.emojiDiscoverabilityEnabled,
+          partnerActionedTimestamp: t.partnerActionedTimestamp,
+          partnerApplicationTimestamp: t.partnerApplicationTimestamp,
+          isPublished: t.isPublished,
+          reasonsToJoin: t.reasonsToJoin,
+          socialLinks: t.socialLinks.filter(e => e),
+          about: t.about
         })
       }
     })
   },
   j = () => {
     var e;
-    let s = i.useRef(null),
-      t = (0, l.e7)([R.Z], () => R.Z.getGuild()),
-      [d, v] = i.useState(!1);
-    i.useEffect(() => {
-      !d && null != t && (u.le(), u.aC(t.id), u.i3(t.id), v(!0))
-    }, [t, d]);
+    let t = a.useRef(null),
+      n = (0, i.e7)([p.Z], () => p.Z.getGuild()),
+      [d, D] = a.useState(!1);
+    a.useEffect(() => {
+      !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), D(!0))
+    }, [n, d]);
     let {
       canManageGuild: j
-    } = (0, l.cj)([m.Z], () => ({
-      canManageGuild: m.Z.can(A.Plq.MANAGE_GUILD, t)
-    })), Z = (0, l.e7)([R.Z], () => R.Z.isGuildMetadataLoaded()), U = (0, l.e7)([R.Z], () => null != t ? R.Z.getMetadata() : null), G = (0, l.e7)([R.Z], () => null != t && (null == U ? void 0 : U.isPublished) ? R.Z.getSlug() : null), [P, b] = i.useState([!0]), [B, y] = i.useState(!0), [F, k] = i.useState([!1]), [H, w] = i.useState([""]), V = e => {
-      let s = Object.entries(p.zo).filter(e => !H.includes(e[1].presentation)).map(e => ({
+    } = (0, i.cj)([N.Z], () => ({
+      canManageGuild: N.Z.can(L.Plq.MANAGE_GUILD, n)
+    })), Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()), b = (0, i.e7)([p.Z], () => null != n ? p.Z.getMetadata() : null), U = (0, i.e7)([p.Z], () => null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null), [G, P] = a.useState([!0]), [B, y] = a.useState(!0), [F, k] = a.useState([!1]), [w, H] = a.useState([""]), V = e => {
+      let t = Object.entries(O.zo).filter(e => !w.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
       }));
-      return null == e || "" === e ? s : s.concat({
+      return null == e || "" === e ? t : t.concat({
         label: e,
         value: e
       })
     }, Y = e => {
       try {
-        var s, t, n, i;
-        let l = new URL(e).hostname.split(".");
-        if (3 === l.length && "bandcamp" === l[1].toLowerCase()) return p.zo.bandcamp.presentation;
-        let a = null !== (t = null === (s = l.shift()) || void 0 === s ? void 0 : s.toLowerCase()) && void 0 !== t ? t : "";
-        if ("www" === a && (a = null !== (i = null === (n = l.shift()) || void 0 === n ? void 0 : n.toLowerCase()) && void 0 !== i ? i : ""), a in p.zo) return p.zo[a].presentation;
+        var t, n, s, a;
+        let i = new URL(e).hostname.split(".");
+        if (3 === i.length && "bandcamp" === i[1].toLowerCase()) return O.zo.bandcamp.presentation;
+        let r = null !== (n = null === (t = i.shift()) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== n ? n : "";
+        if ("www" === r && (r = null !== (a = null === (s = i.shift()) || void 0 === s ? void 0 : s.toLowerCase()) && void 0 !== a ? a : ""), r in O.zo) return O.zo[r].presentation;
         return null
       } catch {
         return null
       }
     };
-    i.useEffect(() => {
-      if (null !== U) {
+    a.useEffect(() => {
+      if (null !== b) {
         let e = [],
-          s = [];
-        U.socialLinks.forEach((t, n) => {
-          if ("" !== t) {
-            let i = Y(t);
-            null !== i ? (s[n] = i, e[n] = !0) : e[n] = !1
-          } else e[n] = !0
-        }), w(s), b(e), y(e.every(e => !0 === e))
+          t = [];
+        b.socialLinks.forEach((n, s) => {
+          if ("" !== n) {
+            let a = Y(n);
+            null !== a ? (t[s] = a, e[s] = !0) : e[s] = !1
+          } else e[s] = !0
+        }), H(t), P(e), y(e.every(e => !0 === e))
       }
-    }, [U]);
-    let W = (0, l.e7)([R.Z], () => null != t ? R.Z.getErrors() : null),
-      z = (0, l.e7)([E.Z], () => E.Z.getPrimaryCategories(), [], E.j);
-    if (null == t || null == U) return null;
+    }, [b]);
+    let W = (0, i.e7)([p.Z], () => null != n ? p.Z.getErrors() : null),
+      z = (0, i.e7)([_.Z], () => _.Z.getPrimaryCategories(), [], _.j);
+    if (null == n || null == b) return null;
     let K = e => {
         x.Z.updateGuild({
           discoverySplash: e
         })
       },
       q = e => {
-        var s;
-        (null == t ? void 0 : t.id) != null && u.TA(null == t ? void 0 : t.id, null !== (s = null == e ? void 0 : e.value) && void 0 !== s ? s : p.o3)
+        var t;
+        (null == n ? void 0 : n.id) != null && u.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : O.o3)
       },
       X = e => {
-        var s;
+        var t;
         x.Z.updateGuild({
-          description: null !== (s = null == e ? void 0 : e.replaceAll("\n", "")) && void 0 !== s ? s : ""
+          description: null !== (t = null == e ? void 0 : e.replaceAll("\n", "")) && void 0 !== t ? t : ""
         })
       },
       Q = e => {
-        u.mA(t.id, e)
+        u.mA(n.id, e)
       },
       J = e => {
-        u.W1(t.id, e), e ? u.Vv({
-          guildId: t.id,
-          primaryCategoryId: U.primaryCategoryId,
-          keywords: U.keywords,
-          emojiDiscoverabilityEnabled: U.emojiDiscoverabilityEnabled,
-          partnerActionedTimestamp: U.partnerActionedTimestamp,
-          partnerApplicationTimestamp: U.partnerApplicationTimestamp,
+        u.W1(n.id, e), e ? u.Vv({
+          guildId: n.id,
+          primaryCategoryId: b.primaryCategoryId,
+          keywords: b.keywords,
+          emojiDiscoverabilityEnabled: b.emojiDiscoverabilityEnabled,
+          partnerActionedTimestamp: b.partnerActionedTimestamp,
+          partnerApplicationTimestamp: b.partnerApplicationTimestamp,
           isPublished: !0,
-          reasonsToJoin: U.reasonsToJoin,
-          socialLinks: U.socialLinks,
-          about: U.about
+          reasonsToJoin: b.reasonsToJoin,
+          socialLinks: b.socialLinks,
+          about: b.about
         }) : u.Vv({
-          guildId: t.id,
-          primaryCategoryId: U.primaryCategoryId,
-          keywords: U.keywords,
-          emojiDiscoverabilityEnabled: U.emojiDiscoverabilityEnabled,
-          partnerActionedTimestamp: U.partnerActionedTimestamp,
-          partnerApplicationTimestamp: U.partnerApplicationTimestamp,
+          guildId: n.id,
+          primaryCategoryId: b.primaryCategoryId,
+          keywords: b.keywords,
+          emojiDiscoverabilityEnabled: b.emojiDiscoverabilityEnabled,
+          partnerActionedTimestamp: b.partnerActionedTimestamp,
+          partnerApplicationTimestamp: b.partnerApplicationTimestamp,
           isPublished: !1,
-          reasonsToJoin: U.reasonsToJoin,
-          socialLinks: U.socialLinks,
-          about: U.about
-        }), x.Z.saveGuild(t.id, {
-          discoverySplash: t.discoverySplash,
-          description: t.description
+          reasonsToJoin: b.reasonsToJoin,
+          socialLinks: b.socialLinks,
+          about: b.about
+        }), x.Z.saveGuild(n.id, {
+          discoverySplash: n.discoverySplash,
+          description: n.description
         })
       },
       $ = () => {
-        if (U.socialLinks.length < 9) {
-          let e = [...U.socialLinks];
-          u.t$(t.id, e.concat("")), w(H.concat(""))
+        if (b.socialLinks.length < 9) {
+          let e = [...b.socialLinks];
+          u.t$(n.id, e.concat("")), H(w.concat(""))
         }
       },
-      ee = (e, s) => {
-        let n = [...U.socialLinks],
-          i = [...H],
-          l = [...P];
-        i[s] = e, n[s] = p.zo[e].baseUrl, l[s] = !0, b(l), w(i), y(l.every(e => !0 === e)), u.t$(t.id, n)
+      ee = (e, t) => {
+        let s = [...b.socialLinks],
+          a = [...w],
+          i = [...G];
+        a[t] = e, s[t] = O.zo[e].baseUrl, i[t] = !0, P(i), H(a), y(i.every(e => !0 === e)), u.t$(n.id, s)
       },
-      es = (e, s) => {
-        let n = [...U.socialLinks],
-          i = n[s],
-          l = e;
-        0 === i.length && l.length > 1 && !1 === RegExp("^https?:").test(l) && (l = "https://" + l), n[s] = l, u.t$(t.id, n)
-      },
-      et = e => {
-        let s = [...F];
-        s.splice(e, 1), k(s);
-        let n = [...P];
-        n.splice(e, 1), b(n);
-        let i = [...H];
-        i.splice(e, 1), w(i);
-        let l = [...U.socialLinks];
-        l.splice(e, 1), u.t$(t.id, l)
+      et = (e, t) => {
+        let s = [...b.socialLinks],
+          a = s[t],
+          i = e;
+        0 === a.length && i.length > 1 && !1 === RegExp("^https?:").test(i) && (i = "https://" + i), s[t] = i, u.t$(n.id, s)
       },
       en = e => {
-        let {
-          reason: s = "",
-          emoji_name: t = ""
-        } = e;
-        return null !== s && s.length >= 10 && s.length <= 128 && null !== t
+        let t = [...F];
+        t.splice(e, 1), k(t);
+        let s = [...G];
+        s.splice(e, 1), P(s);
+        let a = [...w];
+        a.splice(e, 1), H(a);
+        let i = [...b.socialLinks];
+        i.splice(e, 1), u.t$(n.id, i)
       },
-      ei = e => {
+      es = e => {
         let {
-          reason: s = "",
-          emoji_name: t = ""
+          reason: t = "",
+          emoji_name: n = ""
         } = e;
-        return (null === s || "" === s) && null === t
+        return null !== t && t.length >= 10 && t.length <= 128 && null !== n
       },
-      el = [{
-        title: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REQUIREMENTS,
+      ea = e => {
+        let {
+          reason: t = "",
+          emoji_name: n = ""
+        } = e;
+        return (null === t || "" === t) && null === n
+      },
+      ei = [{
+        title: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REQUIREMENTS,
         items: [{
-          description: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_UPLOAD_COVER_IMAGE,
-          completed: null !== t.discoverySplash && "" !== t.discoverySplash
+          description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_UPLOAD_COVER_IMAGE,
+          completed: null !== n.discoverySplash && "" !== n.discoverySplash
         }, {
-          description: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_SHORT_DESCRIPTION,
-          completed: null !== t.description && "" !== t.description
+          description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_SHORT_DESCRIPTION,
+          completed: null !== n.description && "" !== n.description
         }, {
-          description: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_ABOUT,
-          completed: null !== U.about && U.about.length >= 300 && U.about.length <= 2400
+          description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_ABOUT,
+          completed: null !== b.about && b.about.length >= 300 && b.about.length <= 2400
         }, {
-          description: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REASONS,
-          completed: null !== U.reasonsToJoin && U.reasonsToJoin.every(e => ei(e) || en(e)) && U.reasonsToJoin.filter(en).length >= 2
+          description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REASONS,
+          completed: null !== b.reasonsToJoin && b.reasonsToJoin.every(e => ea(e) || es(e)) && b.reasonsToJoin.filter(es).length >= 2
         }]
       }],
-      ea = z.map(e => ({
+      er = z.map(e => ({
         label: e.name,
         value: e.categoryId
       })),
-      er = (e, s) => {
-        let t = [...F];
-        t[e] = s, k(t)
+      el = (e, t) => {
+        let n = [...F];
+        n[e] = t, k(n)
       };
-    return (0, n.jsx)("div", {
-      className: f.settingsColumn,
-      children: (0, n.jsx)("div", {
-        className: f.settingsContainer,
-        children: (0, n.jsx)(r.ScrollerAuto, {
-          className: f.settingsScroller,
-          children: (0, n.jsx)("main", {
-            ref: s,
-            className: f.settingsContent,
-            children: (0, n.jsx)(r.FocusRingScope, {
-              containerRef: s,
-              children: (0, n.jsxs)("div", {
-                className: f.container,
-                children: [(0, n.jsxs)(r.FormSection, {
-                  className: f.mainContent,
-                  title: (0, n.jsxs)("div", {
-                    children: [M.Z.Messages.DISCOVERY_LANDING_PAGE, " ", (0, n.jsx)(_.Z, {
-                      className: f.betaTag
+    return (0, s.jsx)("div", {
+      className: M.settingsColumn,
+      children: (0, s.jsx)("div", {
+        className: M.settingsContainer,
+        children: (0, s.jsx)(l.ScrollerAuto, {
+          className: M.settingsScroller,
+          children: (0, s.jsx)("main", {
+            ref: t,
+            className: M.settingsContent,
+            children: (0, s.jsx)(l.FocusRingScope, {
+              containerRef: t,
+              children: (0, s.jsxs)("div", {
+                className: M.container,
+                children: [(0, s.jsxs)(l.FormSection, {
+                  className: M.mainContent,
+                  title: (0, s.jsxs)("div", {
+                    children: [A.Z.Messages.DISCOVERY_LANDING_PAGE, " ", (0, s.jsx)(E.Z, {
+                      className: M.betaTag
                     })]
                   }),
-                  tag: r.FormTitleTags.H1,
-                  children: [(0, n.jsxs)(r.FormText, {
-                    className: f.tabMainDescription,
-                    type: r.FormTextTypes.DESCRIPTION,
-                    children: [M.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({
+                  tag: l.FormTitleTags.H1,
+                  children: [(0, s.jsxs)(l.FormText, {
+                    className: M.tabMainDescription,
+                    type: l.FormTextTypes.DESCRIPTION,
+                    children: [A.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({
                       discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT
-                    }), " ", M.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({
-                      learnMoreURL: C.Z.getArticleURL(A.BhN.SERVER_WEB_PAGES)
+                    }), " ", A.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({
+                      learnMoreURL: C.Z.getArticleURL(L.BhN.SERVER_WEB_PAGES)
                     })]
                   }), (() => {
-                    if (!U.isPublished || null == G) return;
-                    let e = D + G;
-                    return (0, n.jsx)(n.Fragment, {
-                      children: (0, n.jsxs)(r.FormSection, {
-                        className: f.noDividerFormSection,
-                        children: [(0, n.jsx)(r.FormTitle, {
-                          className: f.formTitle,
-                          children: M.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_TITLE
-                        }), (0, n.jsx)(c.Z, {
+                    if (!b.isPublished || null == U) return;
+                    let e = v + U;
+                    return (0, s.jsx)(s.Fragment, {
+                      children: (0, s.jsxs)(l.FormSection, {
+                        className: M.noDividerFormSection,
+                        children: [(0, s.jsx)(l.FormTitle, {
+                          className: M.formTitle,
+                          children: A.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_TITLE
+                        }), (0, s.jsx)(c.Z, {
                           value: e
-                        }), (0, n.jsx)(r.Button, {
-                          className: f.viewPageButton,
-                          size: r.Button.Sizes.SMALL,
-                          color: r.Button.Colors.BRAND,
+                        }), (0, s.jsx)(l.Button, {
+                          className: M.viewPageButton,
+                          size: l.Button.Sizes.SMALL,
+                          color: l.Button.Colors.BRAND,
                           onClick: () => window.open(e),
-                          children: M.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_VIEW_PAGE_BUTTON
+                          children: A.Z.Messages.DISCOVERY_LANDING_PAGE_PUBLISHED_URL_VIEW_PAGE_BUTTON
                         })]
                       })
                     })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: f.divider
+                  })(), (0, s.jsx)(l.FormDivider, {
+                    className: M.divider
                   }), (() => {
-                    if (null != t) return (0, n.jsxs)(n.Fragment, {
-                      children: [(0, n.jsxs)(r.FormSection, {
-                        children: [(0, n.jsx)(r.FormTitle, {
-                          className: f.formTitle,
-                          children: M.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_TITLE
-                        }), (0, n.jsx)(r.FormText, {
-                          type: r.FormTextTypes.DESCRIPTION,
-                          className: f.description,
-                          children: M.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
+                    if (null != n) return (0, s.jsxs)(s.Fragment, {
+                      children: [(0, s.jsxs)(l.FormSection, {
+                        children: [(0, s.jsx)(l.FormTitle, {
+                          className: M.formTitle,
+                          children: A.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_TITLE
+                        }), (0, s.jsx)(l.FormText, {
+                          type: l.FormTextTypes.DESCRIPTION,
+                          className: M.description,
+                          children: A.Z.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
                         })]
-                      }), (0, n.jsx)(h.Z, {
-                        value: U.primaryCategoryId === p.o3 ? null : null == U ? void 0 : U.primaryCategoryId,
-                        placeholder: M.Z.Messages.SELECT,
-                        options: ea,
+                      }), (0, s.jsx)(h.Z, {
+                        value: b.primaryCategoryId === O.o3 ? null : null == b ? void 0 : b.primaryCategoryId,
+                        placeholder: A.Z.Messages.SELECT,
+                        options: er,
                         onChange: q,
                         disabled: !j,
                         searchable: !0,
                         clearable: !0
-                      }), (0, n.jsxs)(r.FormSection, {
-                        className: f.noDividerFormSection,
-                        children: [(0, n.jsx)(r.FormTitle, {
-                          className: f.formTitle,
-                          children: M.Z.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
-                        }), (0, n.jsx)(L.Z, {
-                          guild: t,
-                          guildMetadata: U,
+                      }), (0, s.jsxs)(l.FormSection, {
+                        className: M.noDividerFormSection,
+                        children: [(0, s.jsx)(l.FormTitle, {
+                          className: M.formTitle,
+                          children: A.Z.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
+                        }), (0, s.jsx)(R.Z, {
+                          guild: n,
+                          guildMetadata: b,
                           disabled: !j
                         })]
-                      }), (null == W ? void 0 : W.category) != null ? (0, n.jsx)(r.Text, {
+                      }), (null == W ? void 0 : W.category) != null ? (0, s.jsx)(l.Text, {
                         color: "text-danger",
-                        className: f.error,
+                        className: M.error,
                         variant: "text-sm/normal",
                         children: W.category
                       }) : null]
                     })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: f.divider
+                  })(), (0, s.jsx)(l.FormDivider, {
+                    className: M.divider
                   }), (() => {
-                    if (null != t) return (0, n.jsxs)(n.Fragment, {
-                      children: [(0, n.jsxs)(r.FormSection, {
-                        className: f.twoColumnFormSection,
-                        children: [(0, n.jsxs)("div", {
-                          children: [(0, n.jsx)(r.FormTitle, {
-                            className: f.formTitle,
-                            children: M.Z.Messages.FORM_LABEL_DISCOVERY_COVER_IMAGE
-                          }), (0, n.jsx)(r.FormText, {
-                            type: r.FormTextTypes.DESCRIPTION,
-                            className: f.formDescription,
-                            children: M.Z.Messages.DISCOVERY_LANDING_PAGE_COVER_IMAGE_DESCRIPTION
-                          }), (0, n.jsxs)(r.Button, {
-                            size: r.Button.Sizes.SMALL,
-                            color: r.Button.Colors.PRIMARY,
-                            children: [M.Z.Messages.UPLOAD_BACKGROUND, (0, n.jsx)(T.ZP, {
+                    if (null != n) return (0, s.jsxs)(s.Fragment, {
+                      children: [(0, s.jsxs)(l.FormSection, {
+                        className: M.twoColumnFormSection,
+                        children: [(0, s.jsxs)("div", {
+                          children: [(0, s.jsx)(l.FormTitle, {
+                            className: M.formTitle,
+                            children: A.Z.Messages.FORM_LABEL_DISCOVERY_COVER_IMAGE
+                          }), (0, s.jsx)(l.FormText, {
+                            type: l.FormTextTypes.DESCRIPTION,
+                            className: M.formDescription,
+                            children: A.Z.Messages.DISCOVERY_LANDING_PAGE_COVER_IMAGE_DESCRIPTION
+                          }), (0, s.jsxs)(l.Button, {
+                            size: l.Button.Sizes.SMALL,
+                            color: l.Button.Colors.PRIMARY,
+                            children: [A.Z.Messages.UPLOAD_BACKGROUND, (0, s.jsx)(T.ZP, {
                               disabled: !j,
                               onChange: K
                             })]
                           })]
-                        }), (0, n.jsx)(N.Z, {
-                          image: t.discoverySplash,
+                        }), (0, s.jsx)(m.Z, {
+                          image: n.discoverySplash,
                           makeURL: e => g.ZP.getGuildDiscoverySplashURL({
-                            id: t.id,
+                            id: n.id,
                             splash: e,
                             size: 512 * (0, I.x_)()
                           }),
                           disabled: !j,
                           onChange: K,
-                          hint: M.Z.Messages.CHANGE_SPLASH,
-                          imageClassName: f.imageUploaderInnerSquare,
+                          hint: A.Z.Messages.CHANGE_SPLASH,
+                          imageClassName: M.imageUploaderInnerSquare,
                           hideSize: !0
                         })]
-                      }), (null == W ? void 0 : W.discovery_splash) != null ? (0, n.jsx)(r.Text, {
+                      }), (null == W ? void 0 : W.discovery_splash) != null ? (0, s.jsx)(l.Text, {
                         color: "text-danger",
                         variant: "text-sm/normal",
                         children: W.discovery_splash
                       }) : null]
                     })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: f.divider
-                  }), (0, n.jsxs)(r.FormSection, {
-                    children: [(0, n.jsx)(r.FormTitle, {
-                      className: f.formTitle,
-                      children: M.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
-                    }), (0, n.jsx)(r.FormText, {
-                      className: f.description,
-                      type: r.FormTextTypes.DESCRIPTION,
-                      children: M.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION
-                    }), (0, n.jsx)(r.TextArea, {
-                      value: null !== t.description ? t.description : "",
-                      placeholder: M.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION_HINT,
+                  })(), (0, s.jsx)(l.FormDivider, {
+                    className: M.divider
+                  }), (0, s.jsxs)(l.FormSection, {
+                    children: [(0, s.jsx)(l.FormTitle, {
+                      className: M.formTitle,
+                      children: A.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
+                    }), (0, s.jsx)(l.FormText, {
+                      className: M.description,
+                      type: l.FormTextTypes.DESCRIPTION,
+                      children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION
+                    }), (0, s.jsx)(l.TextArea, {
+                      value: null !== n.description ? n.description : "",
+                      placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION_HINT,
                       onChange: X,
                       maxLength: 120,
                       disabled: !j
                     })]
-                  }), (0, n.jsx)(r.FormDivider, {
-                    className: f.divider
+                  }), (0, s.jsx)(l.FormDivider, {
+                    className: M.divider
                   }), (() => {
-                    if (null == U) return null;
-                    let e = 0 === U.reasonsToJoin.length ? [, , , , ].fill({
+                    if (null == b) return null;
+                    let e = 0 === b.reasonsToJoin.length ? [, , , , ].fill({
                       reason: "",
                       emoji_name: null
-                    }) : U.reasonsToJoin;
-                    return (0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: f.formTitle,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        type: r.FormTextTypes.DESCRIPTION,
-                        className: f.description,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_DESCRIPTION
-                      }), (0, n.jsx)("div", {
-                        className: f.reasonToJoin,
-                        children: (0, n.jsx)(O.Z, {
+                    }) : b.reasonsToJoin;
+                    return (0, s.jsxs)(l.FormSection, {
+                      children: [(0, s.jsx)(l.FormTitle, {
+                        className: M.formTitle,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_TITLE
+                      }), (0, s.jsx)(l.FormText, {
+                        type: l.FormTextTypes.DESCRIPTION,
+                        className: M.description,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_DESCRIPTION
+                      }), (0, s.jsx)("div", {
+                        className: M.reasonToJoin,
+                        children: (0, s.jsx)(f.Z, {
                           reasonMinLength: 10,
                           reasonMaxLength: 128,
-                          guildId: t.id,
+                          guildId: n.id,
                           reasons: e
                         })
-                      }), (null == W ? void 0 : W.reasons_to_join) != null ? (0, n.jsx)(r.Text, {
+                      }), (null == W ? void 0 : W.reasons_to_join) != null ? (0, s.jsx)(l.Text, {
                         color: "text-danger",
                         variant: "text-sm/normal",
                         children: W.reasons_to_join
                       }) : null]
                     })
-                  })(), (0, n.jsx)(r.FormDivider, {
-                    className: f.divider
-                  }), (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: f.formTitle,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        className: f.description,
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_DESCRIPTION
-                      }), (0, n.jsx)(r.TextArea, {
+                  })(), (0, s.jsx)(l.FormDivider, {
+                    className: M.divider
+                  }), (0, s.jsxs)(s.Fragment, {
+                    children: [(0, s.jsxs)(l.FormSection, {
+                      children: [(0, s.jsx)(l.FormTitle, {
+                        className: M.formTitle,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_TITLE
+                      }), (0, s.jsx)(l.FormText, {
+                        className: M.description,
+                        type: l.FormTextTypes.DESCRIPTION,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_DESCRIPTION
+                      }), (0, s.jsx)(l.TextArea, {
                         showCharacterCount: !0,
-                        className: f.textArea,
-                        value: U.about,
-                        placeholder: M.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_HINT,
+                        className: M.textArea,
+                        value: b.about,
+                        placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_ABOUT_HINT,
                         onChange: Q,
                         minLength: 300,
                         maxLength: 2400,
                         disabled: !j,
-                        defaultDirty: (null === (e = U.about) || void 0 === e ? void 0 : e.length) > 0
+                        defaultDirty: (null === (e = b.about) || void 0 === e ? void 0 : e.length) > 0
                       }, "text-area-".concat(Z))]
-                    }), (null == W ? void 0 : W.about) != null ? (0, n.jsx)(r.Text, {
+                    }), (null == W ? void 0 : W.about) != null ? (0, s.jsx)(l.Text, {
                       color: "text-danger",
                       variant: "text-sm/normal",
                       children: W.about
                     }) : null]
-                  }), (0, n.jsx)(r.FormDivider, {
-                    className: f.divider
-                  }), (0, n.jsx)(n.Fragment, {
-                    children: (0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: f.formTitle,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        className: f.description,
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DESCRIPTION
-                      }), U.socialLinks.map((e, s) => (0, n.jsxs)("div", {
-                        className: f.socialLinksContainer,
-                        onMouseOver: () => er(s, !0),
-                        onFocus: () => er(s, !0),
-                        onMouseOut: () => er(s, !1),
-                        onBlur: () => er(s, !1),
-                        children: [(0, n.jsx)(r.SingleSelect, {
-                          className: U.isPublished ? f.socialLinksDropdownMax : f.socialLinksDropdownMin,
-                          options: V(H[s]),
-                          placeholder: M.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
-                          value: H[s],
-                          onChange: e => ee(e, s),
+                  }), (0, s.jsx)(l.FormDivider, {
+                    className: M.divider
+                  }), (0, s.jsx)(s.Fragment, {
+                    children: (0, s.jsxs)(l.FormSection, {
+                      children: [(0, s.jsx)(l.FormTitle, {
+                        className: M.formTitle,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_TITLE
+                      }), (0, s.jsx)(l.FormText, {
+                        className: M.description,
+                        type: l.FormTextTypes.DESCRIPTION,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DESCRIPTION
+                      }), b.socialLinks.map((e, t) => (0, s.jsxs)("div", {
+                        className: M.socialLinksContainer,
+                        onMouseOver: () => el(t, !0),
+                        onFocus: () => el(t, !0),
+                        onMouseOut: () => el(t, !1),
+                        onBlur: () => el(t, !1),
+                        children: [(0, s.jsx)(l.SingleSelect, {
+                          className: b.isPublished ? M.socialLinksDropdownMax : M.socialLinksDropdownMin,
+                          options: V(w[t]),
+                          placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
+                          value: w[t],
+                          onChange: e => ee(e, t),
                           isDisabled: !j
-                        }, "dropdown-" + s), (0, n.jsx)(r.TextInput, {
+                        }, "dropdown-" + t), (0, s.jsx)(l.TextInput, {
                           value: e,
-                          className: U.isPublished ? f.socialLinksMax : f.socialLinksMin,
-                          onChange: e => es(e, s),
-                          placeholder: M.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
+                          className: b.isPublished ? M.socialLinksMax : M.socialLinksMin,
+                          onChange: e => et(e, t),
+                          placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
                           maxLength: 150,
                           disabled: !j
-                        }, "link-" + s), P[s] ? (0, n.jsx)(r.CircleCheckIcon, {
+                        }, "link-" + t), G[t] ? (0, s.jsx)(l.CircleCheckIcon, {
                           size: "custom",
-                          className: U.isPublished ? f.validationButtonMax : f.validationButtonMin,
-                          color: a.Z.unsafe_rawColors.GREEN_230.css,
+                          className: b.isPublished ? M.validationButtonMax : M.validationButtonMin,
+                          color: r.Z.unsafe_rawColors.GREEN_230.css,
                           width: 20,
                           height: 20
-                        }, "validation-passed-" + s) : (0, n.jsx)(r.CircleXIcon, {
+                        }, "validation-passed-" + t) : (0, s.jsx)(l.CircleXIcon, {
                           size: "custom",
-                          className: U.isPublished ? f.validationButtonMax : f.validationButtonMin,
-                          color: a.Z.unsafe_rawColors.RED_400.css,
+                          className: b.isPublished ? M.validationButtonMax : M.validationButtonMin,
+                          color: r.Z.unsafe_rawColors.RED_400.css,
                           width: 20,
                           height: 20
-                        }, "validation-failed-" + s), j && (0, n.jsx)(o.Z, {
-                          className: F[s] ? U.isPublished ? f.deleteButtonMax : f.deleteButtonMin : U.isPublished ? f.deleteButtonHiddenMax : f.deleteButtonHiddenMin,
-                          onClick: () => et(s)
-                        }, "delete-button-" + s)]
-                      }, "social-container-" + s)), (null == W ? void 0 : W.social_links) != null ? (0, n.jsx)(r.Text, {
+                        }, "validation-failed-" + t), j && (0, s.jsx)(o.Z, {
+                          className: F[t] ? b.isPublished ? M.deleteButtonMax : M.deleteButtonMin : b.isPublished ? M.deleteButtonHiddenMax : M.deleteButtonHiddenMin,
+                          onClick: () => en(t)
+                        }, "delete-button-" + t)]
+                      }, "social-container-" + t)), (null == W ? void 0 : W.social_links) != null ? (0, s.jsx)(l.Text, {
                         color: "text-danger",
                         variant: "text-sm/normal",
                         children: W.social_links
-                      }) : null, (0, n.jsx)(r.Button, {
-                        size: r.Button.Sizes.SMALL,
-                        color: r.Button.Colors.PRIMARY,
+                      }) : null, (0, s.jsx)(l.Button, {
+                        size: l.Button.Sizes.SMALL,
+                        color: l.Button.Colors.PRIMARY,
                         onClick: $,
-                        disabled: !j || U.socialLinks.length >= 9,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_BUTTON_ADD_ANOTHER
+                        disabled: !j || b.socialLinks.length >= 9,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_BUTTON_ADD_ANOTHER
                       })]
                     })
-                  }), U.isPublished && (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsx)(r.FormDivider, {
-                      className: f.divider
-                    }), (0, n.jsxs)(r.FormSection, {
-                      children: [(0, n.jsx)(r.FormTitle, {
-                        className: f.formTitle,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_TITLE
-                      }), (0, n.jsx)(r.FormText, {
-                        className: f.description,
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_DESCRIPTION
-                      }), (0, n.jsx)(r.Button, {
-                        size: r.Button.Sizes.SMALL,
-                        color: r.Button.Colors.RED,
+                  }), b.isPublished && (0, s.jsxs)(s.Fragment, {
+                    children: [(0, s.jsx)(l.FormDivider, {
+                      className: M.divider
+                    }), (0, s.jsxs)(l.FormSection, {
+                      children: [(0, s.jsx)(l.FormTitle, {
+                        className: M.formTitle,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_TITLE
+                      }), (0, s.jsx)(l.FormText, {
+                        className: M.description,
+                        type: l.FormTextTypes.DESCRIPTION,
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_DESCRIPTION
+                      }), (0, s.jsx)(l.Button, {
+                        size: l.Button.Sizes.SMALL,
+                        color: l.Button.Colors.RED,
                         onClick: () => J(!1),
                         disabled: !j,
-                        children: M.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON
+                        children: A.Z.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON
                       })]
                     })]
-                  }), (null == W ? void 0 : W.is_published) != null ? (0, n.jsx)(r.Text, {
+                  }), (null == W ? void 0 : W.is_published) != null ? (0, s.jsx)(l.Text, {
                     color: "text-danger",
                     variant: "text-sm/normal",
                     children: W.is_published
                   }) : null]
-                }), !U.isPublished && (0, n.jsx)("div", {
-                  className: f.checklist,
-                  children: (0, n.jsx)(S.Z, {
-                    title: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
-                    children: el,
-                    buttonLabel: M.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,
+                }), !b.isPublished && (0, s.jsx)("div", {
+                  className: M.checklist,
+                  children: (0, s.jsx)(S.Z, {
+                    title: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
+                    children: ei,
+                    buttonLabel: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,
                     buttonCallback: () => J(!0),
                     disabled: !j || !B
                   })
@@ -528,4 +528,4 @@ let D = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       })
     })
   };
-s.Z = () => null == (0, l.e7)([R.Z], () => R.Z.getGuild()) ? null : (0, n.jsx)(j, {})
+t.Z = () => null == (0, i.e7)([p.Z], () => p.Z.getGuild()) ? null : (0, s.jsx)(j, {})

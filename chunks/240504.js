@@ -1,7 +1,7 @@
-var s, i = n(442837),
-  l = n(570140);
+var i, s = n(442837),
+  a = n(570140);
 
-function a(e, t, n) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -9,7 +9,7 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let r = 12 * n(70956).Z.Millis.HOUR,
+let l = 12 * n(70956).Z.Millis.HOUR,
   o = {
     profileThemesRelevanceExceeded: null,
     savedAt: null
@@ -17,36 +17,36 @@ let r = 12 * n(70956).Z.Millis.HOUR,
   c = {
     hasFetchedRelevance: !1
   },
-  u = o,
-  d = c;
-class E extends(s = i.ZP.PersistedStore) {
+  d = o,
+  u = c;
+class _ extends(i = s.ZP.PersistedStore) {
   initialize(e) {
-    d = c, u = o;
+    u = c, d = o;
     let t = new Date;
-    null != e && null != e.savedAt && t.getTime() - e.savedAt < r && (u = e)
+    null != e && null != e.savedAt && t.getTime() - e.savedAt < l && (d = e)
   }
   get hasFetchedRelevance() {
-    return d.hasFetchedRelevance
+    return u.hasFetchedRelevance
   }
   get profileThemesRelevanceExceeded() {
-    return u.profileThemesRelevanceExceeded
+    return d.profileThemesRelevanceExceeded
   }
   getState() {
-    return u
+    return d
   }
 }
-a(E, "displayName", "PerksRelevanceStore"), a(E, "persistKey", "PerksRelevanceStore"), t.Z = new E(l.Z, {
+r(_, "displayName", "PerksRelevanceStore"), r(_, "persistKey", "PerksRelevanceStore"), t.Z = new _(a.Z, {
   BILLING_PERKS_RELEVANCE_FETCH_START: function() {
-    d.hasFetchedRelevance = !0
+    u.hasFetchedRelevance = !0
   },
   BILLING_PERKS_RELEVANCE_FETCH_SUCCESS: function(e) {
     let {
       res: t
     } = e;
-    null != t && (u.profileThemesRelevanceExceeded = t.eligible, u.savedAt = new Date().getTime())
+    null != t && (d.profileThemesRelevanceExceeded = t.eligible, d.savedAt = new Date().getTime())
   },
   BILLING_PERKS_RELEVANCE_FETCH_FAIL: function() {},
   LOGOUT: function() {
-    d = c, u = o
+    u = c, d = o
   }
 })

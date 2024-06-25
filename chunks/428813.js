@@ -1,42 +1,42 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
     return u
   }
 });
-var l = t(735250);
-t(470079);
-var n = t(442837),
-  i = t(270394),
-  a = t(388610),
-  r = t(430824),
-  o = t(496675),
-  d = t(246946),
-  c = t(981631);
+var n = s(735250);
+s(470079);
+var l = s(442837),
+  a = s(270394),
+  i = s(388610),
+  r = s(430824),
+  o = s(496675),
+  d = s(246946),
+  c = s(981631);
 
 function u() {
-  let e = (0, n.e7)([d.Z], () => d.Z.hideInstantInvites),
+  let e = (0, l.e7)([d.Z], () => d.Z.hideInstantInvites),
     {
-      channel: s,
-      guild: t
-    } = (0, n.cj)([a.Z, r.Z], () => {
+      channel: t,
+      guild: s
+    } = (0, l.cj)([i.Z, r.Z], () => {
       let {
         channel: e
-      } = a.Z.getProps(), s = null != e ? r.Z.getGuild(e.getGuildId()) : null;
+      } = i.Z.getProps(), t = null != e ? r.Z.getGuild(e.getGuildId()) : null;
       return {
         channel: e,
-        guild: s
+        guild: t
       }
     }, []),
-    u = (0, n.e7)([o.Z], () => null != s && o.Z.can(c.Plq.CREATE_INSTANT_INVITE, s), [s]),
+    u = (0, l.e7)([o.Z], () => null != t && o.Z.can(c.Plq.CREATE_INSTANT_INVITE, t), [t]),
     {
       invites: h,
       loading: m
-    } = (0, n.cj)([a.Z], () => a.Z.getInvites(), []);
-  return (0, l.jsx)(i.Z, {
+    } = (0, l.cj)([i.Z], () => i.Z.getInvites(), []);
+  return (0, n.jsx)(a.Z, {
     invites: h,
     loading: m,
-    guild: t,
-    channel: s,
+    guild: s,
+    channel: t,
     canCreateInvites: u,
     hide: e
   })

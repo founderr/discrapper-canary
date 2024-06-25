@@ -1,32 +1,32 @@
-l.d(n, {
+t.d(e, {
   Z: function() {
-    return c
+    return u
   }
 });
-var t = l(735250);
-l(470079);
-var i = l(120356),
-  r = l.n(i),
-  s = l(689938),
-  a = l(620725),
-  o = l(296507),
-  u = l(866402);
+var i = t(735250);
+t(470079);
+var l = t(120356),
+  s = t.n(l),
+  a = t(689938),
+  r = t(620725),
+  c = t(296507),
+  o = t(866402);
 
-function c(e) {
+function u(n) {
   let {
-    className: n,
-    children: l
-  } = e;
-  return (0, t.jsxs)("div", {
-    className: r()(a.container, n),
-    children: [(0, t.jsx)("img", {
-      alt: s.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-      src: u,
-      className: r()(a.sparkleIcon, a.sparkleBottom)
-    }), l, (0, t.jsx)("img", {
-      alt: s.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+    className: e,
+    children: t
+  } = n;
+  return (0, i.jsxs)("div", {
+    className: s()(r.container, e),
+    children: [(0, i.jsx)("img", {
+      alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
       src: o,
-      className: r()(a.sparkleIcon, a.sparkleTop)
+      className: s()(r.sparkleIcon, r.sparkleBottom)
+    }), t, (0, i.jsx)("img", {
+      alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+      src: c,
+      className: s()(r.sparkleIcon, r.sparkleTop)
     })]
   })
 }

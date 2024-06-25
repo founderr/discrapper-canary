@@ -1,31 +1,31 @@
 n(47120);
-var s = n(470079),
-  i = n(442837),
-  l = n(704215),
-  a = n(243778),
-  r = n(594174),
+var i = n(470079),
+  s = n(442837),
+  a = n(704215),
+  r = n(243778),
+  l = n(594174),
   o = n(51144),
   c = n(683167),
-  u = n(302800),
-  d = n(921944);
+  d = n(302800),
+  u = n(921944);
 t.Z = () => {
-  let e = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
+  let e = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
     t = (0, c.I)("useCollectiblesShopTabNewBadge"),
-    n = s.useMemo(() => {
+    n = i.useMemo(() => {
       if ((0, o.Fc)(e)) {
-        if (t === u.LM.TIDE) return [l.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
-        if (t === u.LM.ARCADE) return [l.z.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
-        else if (t === u.LM.RETRO_AND_PIRATES) return [l.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
-        else if (t === u.LM.GALAXY) return [l.z.COLLECTIBLES_SHOP_GALAXY_COACHTIP]
+        if (t === d.LM.TIDE) return [a.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
+        if (t === d.LM.ARCADE) return [a.z.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
+        else if (t === d.LM.RETRO_AND_PIRATES) return [a.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
+        else if (t === d.LM.GALAXY) return [a.z.COLLECTIBLES_SHOP_GALAXY_COACHTIP]
       }
       return []
     }, [e, t]),
-    [E, h] = (0, a.U)(n, void 0, !0),
-    _ = null != E ? u.QQ[E] : null;
+    [_, E] = (0, r.U)(n, void 0, !0),
+    h = null != _ ? d.QQ[_] : null;
   return {
-    collectiblesShopTabNewBadgeDisplayOptions: _,
+    collectiblesShopTabNewBadgeDisplayOptions: h,
     dismissCollectiblesShopTabNewBadge: () => {
-      null != _ && h(d.L.AUTO)
+      null != h && E(u.L.AUTO)
     }
   }
 }

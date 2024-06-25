@@ -3,82 +3,82 @@ n.d(t, {
     return S
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  a = n(974674),
+var i = n(735250),
+  a = n(470079),
+  l = n(442837),
+  s = n(974674),
   r = n(481060),
   o = n(420660),
   c = n(100527),
   u = n(906732),
   d = n(233440),
   h = n(199902),
-  m = n(158776),
-  E = n(998502),
-  p = n(785717),
-  g = n(204197),
-  f = n(78675),
-  C = n(438163),
-  _ = n(652853),
+  p = n(158776),
+  m = n(998502),
+  _ = n(785717),
+  f = n(204197),
+  E = n(78675),
+  g = n(438163),
+  C = n(652853),
   I = n(228168),
   x = n(981631),
   T = n(775784);
-let N = E.ZP.getEnableHardwareAcceleration() ? a.Xo : a.qE,
-  Z = r.AvatarSizes.SIZE_80;
+let N = m.ZP.getEnableHardwareAcceleration() ? s.Xo : s.qE,
+  v = r.AvatarSizes.SIZE_80;
 
 function S(e) {
   let {
     user: t,
     displayProfile: n,
-    channel: a,
-    isHovering: E,
+    channel: s,
+    isHovering: m,
     onOpenProfile: S
   } = e, {
-    theme: v
-  } = (0, _.z)(), {
+    theme: Z
+  } = (0, C.z)(), {
     analyticsLocations: A
   } = (0, u.ZP)(c.Z.AVATAR), {
     trackUserProfileAction: M
-  } = (0, p.KZ)(), R = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
-    avatarSrc: j,
-    eventHandlers: L,
-    avatarDecorationSrc: O
-  } = (0, g.Z)({
+  } = (0, _.KZ)(), b = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
+    avatarSrc: R,
+    eventHandlers: j,
+    avatarDecorationSrc: L
+  } = (0, f.Z)({
     user: t,
-    size: Z,
-    animateOnHover: !E
-  }), P = i.useMemo(() => (0, d.W)(t, a.id), [t, a.id]), {
-    status: y,
-    customStatusActivity: b,
+    size: v,
+    animateOnHover: !m
+  }), P = a.useMemo(() => (0, d.W)(t, s.id), [t, s.id]), {
+    status: O,
+    customStatusActivity: y,
     isMobileOnline: D
-  } = (0, s.cj)([h.Z, m.Z], () => {
+  } = (0, l.cj)([h.Z, p.Z], () => {
     let e = null != h.Z.getAnyStreamForUser(t.id),
-      n = m.Z.findActivity(t.id, t => {
+      n = p.Z.findActivity(t.id, t => {
         let {
           type: n
         } = t;
         return e ? n === x.IIU.PLAYING : n !== x.IIU.CUSTOM_STATUS
       });
     return {
-      status: (0, o.Z)(n) ? r.StatusTypes.STREAMING : m.Z.getStatus(t.id),
-      customStatusActivity: m.Z.findActivity(t.id, e => {
+      status: (0, o.Z)(n) ? r.StatusTypes.STREAMING : p.Z.getStatus(t.id),
+      customStatusActivity: p.Z.findActivity(t.id, e => {
         let {
           type: t
         } = e;
         return t === x.IIU.CUSTOM_STATUS
       }),
-      isMobileOnline: m.Z.isMobileOnline(t.id)
+      isMobileOnline: p.Z.isMobileOnline(t.id)
     }
   });
-  return (0, l.jsxs)("header", {
+  return (0, i.jsxs)("header", {
     className: T.header,
-    children: [(0, l.jsx)(f.Z, {
+    children: [(0, i.jsx)(E.Z, {
       user: t,
       displayProfile: n,
       profileType: I.y0.PANEL,
-      animateOnHover: !E
-    }), (0, l.jsx)(r.Clickable, {
-      ...L,
+      animateOnHover: !m
+    }), (0, i.jsx)(r.Clickable, {
+      ...j,
       className: T.clickable,
       onClick: () => {
         M({
@@ -86,21 +86,21 @@ function S(e) {
           analyticsLocations: A
         }), null == S || S()
       },
-      children: (0, l.jsx)(N, {
-        src: j,
-        avatarDecoration: O,
-        size: Z,
+      children: (0, i.jsx)(N, {
+        src: R,
+        avatarDecoration: L,
+        size: v,
         imageClassName: T.overlay,
-        status: P || t.isNonUserBot() ? r.StatusTypes.UNKNOWN : y,
-        statusBackdropColor: R && !P ? (0, r.getStatusBackdropColor)(v) : void 0,
+        status: P || t.isNonUserBot() ? r.StatusTypes.UNKNOWN : O,
+        statusBackdropColor: b && !P ? (0, r.getStatusBackdropColor)(Z) : void 0,
         "aria-label": t.username,
         isMobile: D,
         statusTooltip: !0,
         statusTooltipDelay: I.vB
       })
-    }), (0, l.jsx)(C.J, {
+    }), (0, i.jsx)(g.J, {
       user: t,
-      statusActivity: b,
+      statusActivity: y,
       profileType: I.y0.PANEL
     })]
   })

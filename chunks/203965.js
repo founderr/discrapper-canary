@@ -3,23 +3,23 @@ n.d(t, {
     return c
   }
 }), n(47120);
-var s = n(470079),
-  i = n(442837),
-  l = n(904245),
-  a = n(592125),
+var i = n(470079),
+  a = n(442837),
+  s = n(904245),
+  l = n(592125),
   r = n(375954),
   o = n(822893);
 
 function c(e) {
-  let t = (0, i.Wu)([a.Z, r.Z], () => e.filter(e => null != a.Z.getChannel(e.channelId)).map(e => r.Z.getMessage(e.channelId, e.messageId)).filter(e => null != e)),
+  let t = (0, a.Wu)([l.Z, r.Z], () => e.filter(e => null != l.Z.getChannel(e.channelId)).map(e => r.Z.getMessage(e.channelId, e.messageId)).filter(e => null != e)),
     n = e.filter(e => null == r.Z.getMessage(e.channelId, e.messageId)),
-    [c, u] = s.useState(0 === n.length);
-  return s.useEffect(() => {
+    [c, d] = i.useState(0 === n.length);
+  return i.useEffect(() => {
     (0, o.sE)()
-  }, []), s.useEffect(() => {
+  }, []), i.useEffect(() => {
     if (!c) n.forEach(e => {
       try {
-        l.Z.fetchMessages({
+        s.Z.fetchMessages({
           channelId: e.channelId,
           limit: 1,
           jump: {
@@ -29,6 +29,6 @@ function c(e) {
           }
         })
       } catch {}
-    }), u(!0)
+    }), d(!0)
   }, [n, c]), t
 }

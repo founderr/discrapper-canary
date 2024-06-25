@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return f
   }
 }), n(47120), n(757143);
 var i = n(470079),
@@ -141,6 +141,6 @@ function h(e, t, n, i) {
   })
 }
 
-function S(e, t, n, r) {
+function f(e, t, n, r) {
   i.useImperativeHandle(e, () => I(t, n, r), [t, n, r])
 }

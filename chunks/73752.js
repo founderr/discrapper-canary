@@ -1,4 +1,4 @@
-let l = (0, n(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2021-04_longer_group_dm_invites",
   label: "Longer Group DM Invites",
@@ -13,4 +13,4 @@ let l = (0, n(818083).B)({
     }
   }]
 });
-t.Z = l
+t.Z = i

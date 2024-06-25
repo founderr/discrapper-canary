@@ -10,7 +10,7 @@ n.d(t, {
     return E
   },
   jU: function() {
-    return S
+    return f
   },
   nG: function() {
     return T
@@ -59,6 +59,6 @@ function h(e) {
   return (0, r.e7)([o.Z, l.Z], () => null != e && l.Z.can(d.Plq.MUTE_MEMBERS, o.Z.getChannel(e)), [e])
 }
 
-function S(e) {
+function f(e) {
   return !!(null != e && e.isGuildStageVoice() && s.Z.isLurking(e.guild_id) && c.Z.isPublic(e.id)) && l.Z.can(_.gl, e)
 }

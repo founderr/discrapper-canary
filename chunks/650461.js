@@ -1,30 +1,30 @@
-e.d(_, {
+E.d(_, {
   Wg: function() {
-    return M
+    return i
   }
-}), e(47120);
-var T, s = e(470079),
-  I = e(392711),
-  A = e.n(I),
-  n = e(442837),
-  N = e(570140),
-  t = e(944163),
-  r = e(709054),
-  a = e(116175),
-  L = e(308083);
+}), E(47120);
+var s, T = E(470079),
+  I = E(392711),
+  n = E.n(I),
+  A = E(442837),
+  t = E(570140),
+  a = E(944163),
+  r = E(709054),
+  N = E(116175),
+  L = E(308083);
 
-function D(E, _, e) {
-  return _ in E ? Object.defineProperty(E, _, {
-    value: e,
+function S(e, _, E) {
+  return _ in e ? Object.defineProperty(e, _, {
+    value: E,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : E[_] = e, E
+  }) : e[_] = E, e
 }
-let S = new Map,
-  U = new Map,
-  l = !1,
-  O = Object.freeze({
+let D = new Map,
+  l = new Map,
+  U = !1,
+  G = Object.freeze({
     gameApplicationIds: new Set,
     playstyle: L.zv.NONE,
     interests: new Set,
@@ -32,9 +32,9 @@ let S = new Map,
     wildcardDescriptors: [L.U6, L.U6, L.U6],
     tag: "",
     verificationForm: {
-      ...t.t
+      ...a.t
     },
-    badgeKind: a.ZD.SWORD,
+    badgeKind: N.ZD.SWORD,
     badgePrimaryColor: void 0,
     badgeSecondaryColor: void 0,
     banner: L.qC.NIGHT_SKY,
@@ -45,148 +45,148 @@ let S = new Map,
     requiredGameId: void 0
   });
 
-function G() {
-  let E = A().cloneDeep(O);
-  return E.badgeKind = (0, a.lP)(), E.banner = (0, L.i1)(), E
+function O() {
+  let e = n().cloneDeep(G);
+  return e.badgeKind = (0, N.lP)(), e.banner = (0, L.i1)(), e
 }
 
-function M() {
-  return s.useState(() => G())[0]
+function i() {
+  return T.useState(() => O())[0]
 }
 
-function R(E) {
+function M(e) {
   var _;
-  return null !== (_ = S.get(E)) && void 0 !== _ ? _ : G()
+  return null !== (_ = D.get(e)) && void 0 !== _ ? _ : O()
 }
 
-function u(E, _) {
-  let e = R(E);
-  S.set(E, {
-    ...e,
+function R(e, _) {
+  let E = M(e);
+  D.set(e, {
+    ...E,
     ..._
   });
-  let T = U.get(E);
-  if (null != T) {
-    let e = {
-      ...T
+  let s = l.get(e);
+  if (null != s) {
+    let E = {
+      ...s
     };
-    Object.keys(_).forEach(E => {
-      delete e[E]
-    }), U.set(E, e)
+    Object.keys(_).forEach(e => {
+      delete E[e]
+    }), l.set(e, E)
   }
 }
-class i extends(T = n.ZP.PersistedStore) {
-  initialize(E) {
-    null != E && r.default.keys(E.progressByGuild).forEach(_ => {
-      var e, T, s, I, A;
-      S.set(_, {
-        gameApplicationIds: new Set((e = E.progressByGuild[_]).gameApplicationIds),
-        playstyle: e.playstyle,
-        interests: new Set(e.interests),
-        description: e.description,
-        wildcardDescriptors: null !== (T = e.wildcardDescriptors) && void 0 !== T ? T : [L.U6, L.U6, L.U6],
-        tag: e.tag,
-        verificationForm: null !== (s = e.verificationForm) && void 0 !== s ? s : {
-          ...t.t
+class o extends(s = A.ZP.PersistedStore) {
+  initialize(e) {
+    null != e && r.default.keys(e.progressByGuild).forEach(_ => {
+      var E, s, T, I, n;
+      D.set(_, {
+        gameApplicationIds: new Set((E = e.progressByGuild[_]).gameApplicationIds),
+        playstyle: E.playstyle,
+        interests: new Set(E.interests),
+        description: E.description,
+        wildcardDescriptors: null !== (s = E.wildcardDescriptors) && void 0 !== s ? s : [L.U6, L.U6, L.U6],
+        tag: E.tag,
+        verificationForm: null !== (T = E.verificationForm) && void 0 !== T ? T : {
+          ...a.t
         },
-        badgeKind: null !== (I = e.badgeKind) && void 0 !== I ? I : a.ZD.SWORD,
-        badgePrimaryColor: e.badgePrimaryColor,
-        badgeSecondaryColor: e.badgeSecondaryColor,
-        banner: null !== (A = e.banner) && void 0 !== A ? A : L.qC.NIGHT_SKY,
-        brandPrimaryColor: e.brandPrimaryColor,
-        brandSecondaryColor: e.brandSecondaryColor,
-        currentStep: e.currentStep,
-        furthestStep: e.furthestStep,
-        requiredGameId: e.requiredGameId
+        badgeKind: null !== (I = E.badgeKind) && void 0 !== I ? I : N.ZD.SWORD,
+        badgePrimaryColor: E.badgePrimaryColor,
+        badgeSecondaryColor: E.badgeSecondaryColor,
+        banner: null !== (n = E.banner) && void 0 !== n ? n : L.qC.NIGHT_SKY,
+        brandPrimaryColor: E.brandPrimaryColor,
+        brandSecondaryColor: E.brandSecondaryColor,
+        currentStep: E.currentStep,
+        furthestStep: E.furthestStep,
+        requiredGameId: E.requiredGameId
       })
     })
   }
   getState() {
-    let E = {};
-    return S.forEach((_, e) => {
-      var T;
-      E[e] = {
-        gameApplicationIds: Array.from((T = _).gameApplicationIds),
-        playstyle: T.playstyle,
-        interests: Array.from(T.interests),
-        description: T.description,
-        wildcardDescriptors: T.wildcardDescriptors,
-        tag: T.tag,
-        verificationForm: T.verificationForm,
-        badgeKind: T.badgeKind,
-        badgePrimaryColor: T.badgePrimaryColor,
-        badgeSecondaryColor: T.badgeSecondaryColor,
-        banner: T.banner,
-        brandPrimaryColor: T.brandPrimaryColor,
-        brandSecondaryColor: T.brandSecondaryColor,
-        currentStep: T.currentStep,
-        furthestStep: T.furthestStep,
-        requiredGameId: T.requiredGameId
+    let e = {};
+    return D.forEach((_, E) => {
+      var s;
+      e[E] = {
+        gameApplicationIds: Array.from((s = _).gameApplicationIds),
+        playstyle: s.playstyle,
+        interests: Array.from(s.interests),
+        description: s.description,
+        wildcardDescriptors: s.wildcardDescriptors,
+        tag: s.tag,
+        verificationForm: s.verificationForm,
+        badgeKind: s.badgeKind,
+        badgePrimaryColor: s.badgePrimaryColor,
+        badgeSecondaryColor: s.badgeSecondaryColor,
+        banner: s.banner,
+        brandPrimaryColor: s.brandPrimaryColor,
+        brandSecondaryColor: s.brandSecondaryColor,
+        currentStep: s.currentStep,
+        furthestStep: s.furthestStep,
+        requiredGameId: s.requiredGameId
       }
     }), {
-      progressByGuild: E
+      progressByGuild: e
     }
   }
-  getStateForGuild(E) {
+  getStateForGuild(e) {
     return {
-      progress: S.get(E),
-      errors: U.get(E),
-      submitting: l
+      progress: D.get(e),
+      errors: l.get(e),
+      submitting: U
     }
   }
   getGuildIds() {
-    return [...S.keys()]
+    return [...D.keys()]
   }
 }
-D(i, "displayName", "ClanSetupStore"), D(i, "persistKey", "ClanSetupStore"), _.ZP = new i(N.Z, {
+S(o, "displayName", "ClanSetupStore"), S(o, "persistKey", "ClanSetupStore"), _.ZP = new o(t.Z, {
   CLAN_SETUP_RESET: function() {
-    S.clear(), U.clear()
+    D.clear(), l.clear()
   },
-  CLAN_SETUP_UPDATE: function(E) {
+  CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: _,
-      updates: e
-    } = E;
-    u(_, e)
+      updates: E
+    } = e;
+    R(_, E)
   },
-  CLAN_SETUP_SUBMIT: function(E) {
+  CLAN_SETUP_SUBMIT: function(e) {
     let {
       guildId: _
-    } = E;
-    l = !0, U.delete(_)
+    } = e;
+    U = !0, l.delete(_)
   },
-  CLAN_SETUP_SUCCESS: function(E) {
+  CLAN_SETUP_SUCCESS: function(e) {
     let {
       guildId: _
-    } = E;
-    l = !1, S.delete(_), U.delete(_)
+    } = e;
+    U = !1, D.delete(_), l.delete(_)
   },
-  CLAN_SETUP_ERROR: function(E) {
+  CLAN_SETUP_ERROR: function(e) {
     let {
       guildId: _,
-      error: e
-    } = E;
-    l = !1, U.set(_, {
-      gameApplicationIds: e.getFirstFieldErrorMessage("game_application_ids"),
-      playstyle: e.getFirstFieldErrorMessage("play_style"),
-      description: e.getFirstFieldErrorMessage("description"),
-      wildcardDescriptors: e.getFirstFieldErrorMessage("wildcard_descriptors"),
-      interests: e.getFirstFieldErrorMessage("search_terms"),
-      tag: e.getFirstFieldErrorMessage("tag"),
-      verificationForm: e.getFirstFieldErrorMessage(["verification_form", "form_fields"])
+      error: E
+    } = e;
+    U = !1, l.set(_, {
+      gameApplicationIds: E.getFirstFieldErrorMessage("game_application_ids"),
+      playstyle: E.getFirstFieldErrorMessage("play_style"),
+      description: E.getFirstFieldErrorMessage("description"),
+      wildcardDescriptors: E.getFirstFieldErrorMessage("wildcard_descriptors"),
+      interests: E.getFirstFieldErrorMessage("search_terms"),
+      tag: E.getFirstFieldErrorMessage("tag"),
+      verificationForm: E.getFirstFieldErrorMessage(["verification_form", "form_fields"])
     })
   },
-  MEMBER_VERIFICATION_FORM_UPDATE: function(E) {
+  MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
     let _;
     let {
-      form: e,
-      guildId: T,
-      isLocalUpdate: s
-    } = E;
-    s && (_ = null == e ? t.t : {
-      ...R(T).verificationForm,
-      ...e
-    }, u(T, {
+      form: E,
+      guildId: s,
+      isLocalUpdate: T
+    } = e;
+    T && (_ = null == E ? a.t : {
+      ...M(s).verificationForm,
+      ...E
+    }, R(s, {
       verificationForm: _
     }))
   }

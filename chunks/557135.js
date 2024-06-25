@@ -19,16 +19,16 @@ t.Z = {
       channel: t,
       connected: T,
       needSubscriptionToAccess: h,
-      locked: S = !1,
-      routeDirectlyToChannel: f = !1,
-      bypassChangeModal: N,
-      bypassGuildIdCheck: A = !1
+      locked: f = !1,
+      routeDirectlyToChannel: S = !1,
+      bypassChangeModal: A,
+      bypassGuildIdCheck: N = !1
     } = e;
     t.isThread() && (await u.Z.unarchiveThreadIfNecessary(t.id), !l.Z.hasJoined(t.id) && await u.Z.joinThread(t, "Join Voice"));
     let m = o.Z.getRemoteSessionId(),
       O = d.Z.getVoiceStateForSession(_.default.getId(), m),
-      R = (null == O ? void 0 : O.channelId) === t.id || c.Z.getChannelId() === d.Z.getCurrentClientVoiceChannelId(t.guild_id);
-    return !N && !S && (0, E._)(t) ? new Promise(e => {
+      p = (null == O ? void 0 : O.channelId) === t.id || c.Z.getChannelId() === d.Z.getCurrentClientVoiceChannelId(t.guild_id);
+    return !A && !f && (0, E._)(t) ? new Promise(e => {
       (0, r.openModalLazy)(async () => {
         let {
           default: r
@@ -39,18 +39,18 @@ t.Z = {
             channel: t,
             connected: T,
             needSubscriptionToAccess: h,
-            routeDirectlyToChannel: f,
-            locked: S,
+            routeDirectlyToChannel: S,
+            locked: f,
             bypassChangeModal: !0
           })),
           ...n
         })
       })
-    }) : (!S && !T && s.default.selectVoiceChannel(t.id), !__OVERLAY__ && (T || R || h || f) && ! function(e) {
+    }) : (!f && !T && s.default.selectVoiceChannel(t.id), !__OVERLAY__ && (T || p || h || S) && ! function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.getGuildId();
       if (null == n && !t) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
       (0, a.uL)(I.Z5c.CHANNEL(n, e.id))
-    }(t, A), !0)
+    }(t, N), !0)
   }
 }

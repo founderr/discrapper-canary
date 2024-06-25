@@ -7,7 +7,7 @@ n.d(t, {
     return E
   },
   jC: function() {
-    return S
+    return f
   },
   oh: function() {
     return u
@@ -22,7 +22,7 @@ n.d(t, {
 var i, r, s, o, a, l, u, _, c, d, E, I, T = n(981631);
 let h = 300;
 
-function S(e) {
+function f(e) {
   let {
     API_ENDPOINT: t,
     CDN_HOST: n

@@ -1,33 +1,33 @@
-var s, r, i, l, a = n(442837),
+var s, i, r, a, l = n(442837),
   o = n(570140);
-let u = !1,
-  c = null,
+let c = !1,
+  u = null,
   d = null;
-class E extends(l = a.ZP.Store) {
+class _ extends(a = l.ZP.Store) {
   getState() {
     return {
-      verifySuccess: u,
-      verifyErrors: c,
+      verifySuccess: c,
+      verifyErrors: u,
       redirectGuildId: d
     }
   }
 }
-i = "HubEmailVerificationStore", (r = "displayName") in(s = E) ? Object.defineProperty(s, r, {
-  value: i,
+r = "HubEmailVerificationStore", (i = "displayName") in(s = _) ? Object.defineProperty(s, i, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = i, t.Z = new E(o.Z, {
+}) : s[i] = r, t.Z = new _(o.Z, {
   HUB_VERIFY_EMAIL_SUCCESS: function(e) {
     let {
       guildId: t
     } = e;
-    u = !0, c = null, d = t
+    c = !0, u = null, d = t
   },
   HUB_VERIFY_EMAIL_FAILURE: function(e) {
     let {
       errors: t
     } = e;
-    u = !1, c = t
+    c = !1, u = t
   }
 })

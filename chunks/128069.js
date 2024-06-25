@@ -32,15 +32,15 @@ let h = Object.freeze({
     exp_month: "expirationDate",
     exp_year: "expirationDate"
   }),
-  S = Object.freeze({
+  f = Object.freeze({
     line_1: "line1",
     line_2: "line2",
     postal_code: "postalCode"
   });
 (_ = o || (o = {})).CARD = "card", _.ADDRESS = "address";
-let f = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
-  N = new Set(["cardNumber", "cvc", "expirationDate", "name", "postalCode", "country", "line1", "city", "state"]),
-  A = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
+let S = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
+  A = new Set(["cardNumber", "cvc", "expirationDate", "name", "postalCode", "country", "line1", "city", "state"]),
+  N = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
 
 function m(e) {
   var t, n, i, r, s;
@@ -61,14 +61,14 @@ class O extends E.Z {
       if (e.has(t)) return !0
   }
   hasCardError() {
-    return 2 === (0, d._)().bucket ? this._isInFieldSet(N) : this._isInFieldSet(f)
+    return 2 === (0, d._)().bucket ? this._isInFieldSet(A) : this._isInFieldSet(S)
   }
   hasAddressError() {
-    return this._isInFieldSet(A)
+    return this._isInFieldSet(N)
   }
   constructor(e, t) {
     for (let n in super(e, t), T(this, "paymentId", null), 100027 === this.code ? this.message = I.Z.Messages.BILLING_ERROR_NEGATIVE_INVOICE_AMOUNT : 50048 === this.code ? this.message = I.Z.Messages.BILLING_PAYMENT_SOURCE_INVALID : 100002 === this.code ? this.message = I.Z.Messages.BILLING_ERROR_UNKNOWN_PAYMENT_SOURCE : 100042 === this.code ? this.message = I.Z.Messages.BILLING_ERROR_PENDING_PAYMENT : 100078 === this.code ? this.message = I.Z.Messages.BILLING_TRIAL_REDEMPTION_DISABLED : 100096 === this.code ? this.message = I.Z.Messages.BILLING_BUNDLE_ALREADY_PURCHASED : 100097 === this.code ? this.message = I.Z.Messages.BILLING_BUNDLE_PARTIALLY_OWNED : 429 === this.status ? this.message = I.Z.Messages.BILLING_ERROR_RATE_LIMIT : 0 === this.code ? this.message = I.Z.Messages.BILLING_ERROR_GENERIC : 400 === this.status && null != this.fields.captcha_key && (this.message = I.Z.Messages.BILLING_ERROR_INVALID_CAPTCHA_RESPONSE), this.fields) {
-      let e = h[n] || S[n];
+      let e = h[n] || f[n];
       if (null != e) {
         let t = this.fields[n];
         delete this.fields[n], this.fields[e] = t
@@ -77,4 +77,4 @@ class O extends E.Z {
     null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id)
   }
 }
-T(O, "ErrorCodes", i), T(O, "Fields", r), T(O, "Sections", o), T(O, "CARD_ERRORS", f), T(O, "ADDRESS_ERRORS", A), t.ZP = O
+T(O, "ErrorCodes", i), T(O, "Fields", r), T(O, "Sections", o), T(O, "CARD_ERRORS", S), T(O, "ADDRESS_ERRORS", N), t.ZP = O

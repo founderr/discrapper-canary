@@ -3,60 +3,60 @@ n.d(t, {
     return I
   }
 });
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(58540),
+var i = n(735250),
+  a = n(470079),
+  s = n(442837),
+  l = n(58540),
   r = n(905405),
   o = n(937889),
   c = n(123145),
-  u = n(699516),
-  d = n(512665),
-  E = n(768760),
-  _ = n(250050);
+  d = n(699516),
+  u = n(512665),
+  _ = n(768760),
+  E = n(250050);
 
 function I(e) {
   let {
     message: t,
     channel: n
-  } = e, I = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), T = (0, r.p)(), m = i.useMemo(() => ({
+  } = e, I = (0, s.e7)([d.Z], () => d.Z.isBlockedForMessage(t)), m = (0, r.p)(), T = a.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
-  (0, a.$)(m);
-  let N = i.useMemo(() => null != t.content && "" !== t.content ? (0, o.ZP)(t, {
+  (0, l.$)(T);
+  let h = a.useMemo(() => null != t.content && "" !== t.content ? (0, o.ZP)(t, {
     formatInline: !0,
-    shouldFilterKeywords: T
-  }).content : null, [t, T]);
-  return (0, s.jsxs)("div", {
-    className: _.threadMessageAccessory,
-    children: [(0, s.jsx)("img", {
+    shouldFilterKeywords: m
+  }).content : null, [t, m]);
+  return (0, i.jsxs)("div", {
+    className: E.threadMessageAccessory,
+    children: [(0, i.jsx)("img", {
       alt: "",
       src: t.author.getAvatarURL(n.guild_id, 16),
-      className: _.threadMessageAccessoryAvatar
-    }), (0, s.jsx)(c.Z, {
+      className: E.threadMessageAccessoryAvatar
+    }), (0, i.jsx)(c.Z, {
       message: t,
       channel: n,
       compact: !0
-    }), (0, s.jsx)("div", {
-      className: _.threadMessageAccessoryPreview,
+    }), (0, i.jsx)("div", {
+      className: E.threadMessageAccessoryPreview,
       children: function(e, t, n) {
         let {
-          contentPlaceholder: i,
-          renderedContent: l,
-          leadingIcon: a,
+          contentPlaceholder: a,
+          renderedContent: s,
+          leadingIcon: l,
           trailingIcon: r
-        } = (0, d.f)(e, t, n, _.threadMessageAccessoryContent, {
-          trailingIconClass: _.threadMessageAccessoryContentTrailingIcon,
-          leadingIconClass: _.threadMessageAccessoryContentLeadingIcon,
-          iconSize: E.WW
+        } = (0, u.f)(e, t, n, E.threadMessageAccessoryContent, {
+          trailingIconClass: E.threadMessageAccessoryContentTrailingIcon,
+          leadingIconClass: E.threadMessageAccessoryContentLeadingIcon,
+          iconSize: _.WW
         });
-        return (0, s.jsxs)(s.Fragment, {
-          children: [a, null != l ? l : (0, s.jsx)("span", {
-            className: _.threadMessageAccessoryPlaceholder,
-            children: i
+        return (0, i.jsxs)(i.Fragment, {
+          children: [l, null != s ? s : (0, i.jsx)("span", {
+            className: E.threadMessageAccessoryPlaceholder,
+            children: a
           }), r]
         })
-      }(t, N, I)
+      }(t, h, I)
     })]
   })
 }

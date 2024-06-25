@@ -1,86 +1,86 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return I
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(442837),
-  l = t(481060),
-  a = t(430824),
-  r = t(496675),
-  o = t(556012),
-  c = t(273504),
-  d = t(981631),
-  u = t(590433),
-  E = t(689938),
-  _ = t(716054);
+var s = n(735250);
+n(470079);
+var a = n(442837),
+  i = n(481060),
+  r = n(430824),
+  l = n(496675),
+  o = n(556012),
+  c = n(273504),
+  d = n(981631),
+  u = n(590433),
+  _ = n(689938),
+  E = n(716054);
 
 function I(e) {
-  var s;
+  var t;
   let {
-    action: t,
+    action: n,
     triggerType: I,
     guildId: T,
-    toggled: N,
-    onToggleAction: m
-  } = e, S = e => () => m(e), h = (0, o.c)(t.type, t, I), g = null === (s = t.metadata) || void 0 === s ? void 0 : s.durationSeconds, C = null != g ? (0, u.L9)(g) : null, x = (0, i.e7)([r.Z, a.Z], () => r.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(T)), [T]);
+    toggled: m,
+    onToggleAction: N
+  } = e, S = e => () => N(e), h = (0, o.c)(n.type, n, I), g = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds, C = null != g ? (0, u.L9)(g) : null, x = (0, a.e7)([l.Z, r.Z], () => l.Z.can(d.Plq.MODERATE_MEMBERS, r.Z.getGuild(T)), [T]);
   if (null == h) return null;
   let {
-    headerText: R,
-    descriptionText: L,
-    icon: O
+    headerText: p,
+    descriptionText: R,
+    icon: f
   } = h;
-  return (0, n.jsxs)("div", {
-    className: _.actionContainer,
-    children: [(0, n.jsx)("div", {
-      className: _.actionIconContainer,
-      children: (0, n.jsx)(O, {
+  return (0, s.jsxs)("div", {
+    className: E.actionContainer,
+    children: [(0, s.jsx)("div", {
+      className: E.actionIconContainer,
+      children: (0, s.jsx)(f, {
         size: "md",
         color: "currentColor",
-        className: _.actionIcon
+        className: E.actionIcon
       })
-    }), (0, n.jsxs)("div", {
-      className: _.actionTextContainer,
-      children: [(0, n.jsx)(l.Heading, {
+    }), (0, s.jsxs)("div", {
+      className: E.actionTextContainer,
+      children: [(0, s.jsx)(i.Heading, {
         variant: "heading-sm/semibold",
+        children: p
+      }), (0, s.jsx)(i.Text, {
+        color: "interactive-normal",
+        variant: "text-xs/medium",
         children: R
-      }), (0, n.jsx)(l.Text, {
+      }), m && (0, s.jsxs)(i.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: L
-      }), N && (0, n.jsxs)(l.Text, {
-        color: "interactive-normal",
-        variant: "text-xs/medium",
-        children: [function(e, s) {
-          if (null === s) return null;
-          if (e === c.fX.MENTION_SPAM) return E.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({
-            friendlyDurationString: s
+        children: [function(e, t) {
+          if (null === t) return null;
+          if (e === c.fX.MENTION_SPAM) return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({
+            friendlyDurationString: t
           });
-          return E.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({
-            friendlyDurationString: s
+          return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({
+            friendlyDurationString: t
           })
-        }(I, C), x && (0, n.jsx)(l.Clickable, {
+        }(I, C), x && (0, s.jsx)(i.Clickable, {
           onClick: S(!0),
-          className: _.editChannel,
+          className: E.editChannel,
           tag: "span",
           role: "link",
-          children: E.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_UPDATE_DURATION
+          children: _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_UPDATE_DURATION
         })]
       })]
-    }), (0, n.jsx)(l.Tooltip, {
-      text: E.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.format(),
-      "aria-label": E.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.plainFormat(),
+    }), (0, s.jsx)(i.Tooltip, {
+      text: _.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.format(),
+      "aria-label": _.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.plainFormat(),
       shouldShow: !x,
-      children: e => (0, n.jsx)("div", {
+      children: e => (0, s.jsx)("div", {
         ...e,
-        children: (0, n.jsx)(l.Checkbox, {
-          type: l.Checkbox.Types.INVERTED,
-          value: N,
+        children: (0, s.jsx)(i.Checkbox, {
+          type: i.Checkbox.Types.INVERTED,
+          value: m,
           onChange: S(!1),
           disabled: !x,
-          className: _.__invalid_actionCheckbox
+          className: E.__invalid_actionCheckbox
         })
       })
     })]

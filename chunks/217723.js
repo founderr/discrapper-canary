@@ -1,59 +1,59 @@
-t.r(e), t.d(e, {
+o.r(t), o.d(t, {
   default: function() {
-    return d
+    return c
   }
-}), t(47120);
-var s = t(735250),
-  o = t(470079),
-  l = t(481060),
-  n = t(153124),
-  i = t(689938),
-  r = t(6464);
+}), o(47120);
+var a = o(735250),
+  s = o(470079),
+  l = o(481060),
+  n = o(153124),
+  i = o(689938),
+  d = o(6464);
 
-function d(a) {
+function c(e) {
   let {
-    transitionState: e,
-    onConfirm: t,
-    onClose: d,
-    onDismiss: c
-  } = a, [u, h] = o.useState(!1), C = (0, n.Dt)(), M = async () => {
+    transitionState: t,
+    onConfirm: o,
+    onClose: c,
+    onDismiss: r
+  } = e, [u, h] = s.useState(!1), m = (0, n.Dt)(), C = async () => {
     if (!u) {
       h(!0);
       try {
-        await t()
-      } catch (a) {} finally {
+        await o()
+      } catch (e) {} finally {
         h(!1)
       }
-      d()
+      c()
     }
   };
-  return (0, s.jsxs)(l.ModalRoot, {
-    transitionState: e,
-    "aria-labelledby": C,
+  return (0, a.jsxs)(l.ModalRoot, {
+    transitionState: t,
+    "aria-labelledby": m,
     size: l.ModalSize.SMALL,
-    children: [(0, s.jsxs)(l.ModalContent, {
-      children: [(0, s.jsx)(l.ModalCloseButton, {
+    children: [(0, a.jsxs)(l.ModalContent, {
+      children: [(0, a.jsx)(l.ModalCloseButton, {
         onClick: () => {
-          c(), d()
+          r(), c()
         },
-        className: r.closeButton
-      }), (0, s.jsx)(l.Heading, {
-        id: C,
+        className: d.closeButton
+      }), (0, a.jsx)(l.Heading, {
+        id: m,
         variant: "heading-lg/extrabold",
         color: "header-primary",
-        className: r.modalTitle,
+        className: d.modalTitle,
         children: i.Z.Messages.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_TITLE
-      }), (0, s.jsx)(l.Text, {
+      }), (0, a.jsx)(l.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        className: r.modalBody,
+        className: d.modalBody,
         children: i.Z.Messages.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_BODY
       })]
-    }), (0, s.jsx)(l.ModalFooter, {
-      children: (0, s.jsx)(l.Button, {
+    }), (0, a.jsx)(l.ModalFooter, {
+      children: (0, a.jsx)(l.Button, {
         type: "submit",
         color: l.Button.Colors.BRAND,
-        onClick: M,
+        onClick: C,
         submitting: u,
         children: i.Z.Messages.CONFIRM
       })

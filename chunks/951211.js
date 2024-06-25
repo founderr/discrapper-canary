@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-    return m
+    return p
   },
   r: function() {
-    return l
+    return i
   }
 }), n(653041);
-var l, i, s = n(481060),
-  a = n(620662),
+var i, a, l = n(481060),
+  s = n(620662),
   r = n(933557),
   o = n(377171),
   c = n(699516),
@@ -15,75 +15,75 @@ var l, i, s = n(481060),
   d = n(981631),
   h = n(689938);
 
-function m(e) {
+function p(e) {
   let {
     canAttachFiles: t,
     canStartThreads: n,
-    useSlate: l,
-    canUseApplicationCommands: i,
-    hasClips: m,
-    channel: E,
-    activities: p,
-    newClipsCount: g,
-    canPostPolls: f,
-    canLaunchActivities: C,
-    appContext: _
+    useSlate: i,
+    canUseApplicationCommands: a,
+    hasClips: p,
+    channel: m,
+    activities: _,
+    newClipsCount: f,
+    canPostPolls: E,
+    canLaunchActivities: g,
+    appContext: C
   } = e, I = [];
   return t && (I.push({
     type: "UPLOAD_A_FILE",
-    icon: s.FileUpIcon,
+    icon: l.FileUpIcon,
     display: h.Z.Messages.CHAT_ATTACH_UPLOAD_A_FILE
   }), I.push({
     type: "UPLOAD_TEXT_AS_FILE",
-    icon: s.FileUpIcon,
+    icon: l.FileUpIcon,
     display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), m && t && _ !== d.IlC.POPOUT && I.push({
+  })), p && t && C !== d.IlC.POPOUT && I.push({
     type: "CLIPS",
-    icon: s.ClipsIcon,
+    icon: l.ClipsIcon,
     display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
-    badgeVal: g,
+    badgeVal: f,
     badgeColor: o.Z.BG_BRAND
   }), n && I.push({
     type: "CREATE_THREAD",
-    icon: s.ThreadPlusIcon,
+    icon: l.ThreadPlusIcon,
     display: h.Z.Messages.CREATE_THREAD
-  }), f && I.push({
+  }), E && I.push({
     type: "POLL",
-    icon: s.PollsIcon,
+    icon: l.PollsIcon,
     display: h.Z.Messages.CREATE_POLL
-  }), l && i && I.push({
+  }), i && a && I.push({
     type: "SLASH_COMMAND",
-    icon: s.AppsIcon,
+    icon: l.AppsIcon,
     display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
-  }), C && I.push({
+  }), g && I.push({
     type: "ACTIVITY",
-    icon: s.ActivitiesIcon,
+    icon: l.ActivitiesIcon,
     display: h.Z.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
-  }), p.forEach(e => {
-    if (!(0, a.Z)(e, d.xjy.EMBEDDED)) e.type === d.IIU.PLAYING && (0, a.Z)(e, d.xjy.JOIN) && I.push({
+  }), _.forEach(e => {
+    if (!(0, s.Z)(e, d.xjy.EMBEDDED)) e.type === d.IIU.PLAYING && (0, s.Z)(e, d.xjy.JOIN) && I.push({
       type: "INVITE_TO_GAME",
-      icon: s.DpadIcon,
+      icon: l.DpadIcon,
       display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-        channel: (0, r.F6)(E, u.default, c.Z, !0),
+        channel: (0, r.F6)(m, u.default, c.Z, !0),
         game: null != e ? e.name : ""
       }),
       activity: e
-    }), e.type === d.IIU.LISTENING && (0, a.Z)(e, d.xjy.SYNC) && I.push({
+    }), e.type === d.IIU.LISTENING && (0, s.Z)(e, d.xjy.SYNC) && I.push({
       type: "INVITE_TO_LISTEN",
-      icon: s.UserPlayIcon,
+      icon: l.UserPlayIcon,
       display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-        channel: (0, r.F6)(E, u.default, c.Z, !0),
+        channel: (0, r.F6)(m, u.default, c.Z, !0),
         name: null != e ? e.name : ""
       }),
       activity: e
-    }), e.type === d.IIU.WATCHING && (0, a.Z)(e, d.xjy.SYNC) && I.push({
+    }), e.type === d.IIU.WATCHING && (0, s.Z)(e, d.xjy.SYNC) && I.push({
       type: "INVITE_TO_WATCH",
-      icon: s.EyeIcon,
+      icon: l.EyeIcon,
       display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-        channel: (0, r.F6)(E, u.default, c.Z, !0),
+        channel: (0, r.F6)(m, u.default, c.Z, !0),
         name: null != e ? e.name : ""
       }),
       activity: e
     })
   }), I
-}(i = l || (l = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", i.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", i.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", i.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", i.INVITE_TO_WATCH = "INVITE_TO_WATCH", i.CREATE_THREAD = "CREATE_THREAD", i.SLASH_COMMAND = "SLASH_COMMAND", i.CLIPS = "CLIPS", i.POLL = "POLL", i.ACTIVITY = "ACTIVITY"
+}(a = i || (i = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", a.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", a.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", a.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", a.INVITE_TO_WATCH = "INVITE_TO_WATCH", a.CREATE_THREAD = "CREATE_THREAD", a.SLASH_COMMAND = "SLASH_COMMAND", a.CLIPS = "CLIPS", a.POLL = "POLL", a.ACTIVITY = "ACTIVITY"

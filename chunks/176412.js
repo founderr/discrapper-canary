@@ -40,11 +40,11 @@ function d(e, t, n) {
       }
     }),
     h = i.ButtonColors.BRAND,
-    S = c.Z.Messages.LAUNCH;
-  return I === s.JS.JOIN ? (h = i.ButtonColors.GREEN, S = c.Z.Messages.JOIN_ACTIVITY) : I === s.JS.LEAVE && (h = i.ButtonColors.RED, S = c.Z.Messages.LEAVE), {
+    f = c.Z.Messages.LAUNCH;
+  return I === s.JS.JOIN ? (h = i.ButtonColors.GREEN, f = c.Z.Messages.JOIN_ACTIVITY) : I === s.JS.LEAVE && (h = i.ButtonColors.RED, f = c.Z.Messages.LEAVE), {
     onActivityItemSelected: T,
     activityAction: I,
     buttonColor: h,
-    buttonText: S
+    buttonText: f
   }
 }

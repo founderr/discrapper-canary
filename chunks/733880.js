@@ -1,22 +1,22 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  r = n.n(s),
-  a = n(481060),
+var i = n(735250),
+  l = n(470079),
+  r = n(120356),
+  a = n.n(r),
+  s = n(481060),
   o = n(161632);
-let u = i.forwardRef(function(e, t) {
+let c = l.forwardRef(function(e, t) {
   let {
     className: n,
-    focusProps: i,
-    ...s
+    focusProps: l,
+    ...r
   } = e;
-  return (0, l.jsx)(a.FocusRing, {
-    ...i,
-    children: (0, l.jsx)("li", {
-      className: r()(n, o.container),
-      ...s,
+  return (0, i.jsx)(s.FocusRing, {
+    ...l,
+    children: (0, i.jsx)("li", {
+      className: a()(n, o.container),
+      ...r,
       ref: t
     })
   })
 });
-t.Z = u
+t.Z = c

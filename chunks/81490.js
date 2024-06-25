@@ -1,11 +1,11 @@
 "use strict";
 n(47120);
-var s = n(470079),
-  l = n(796075),
-  a = n(481060);
-let r = "undefined" == typeof ResizeObserver ? l.d : ResizeObserver,
+var a = n(470079),
+  s = n(796075),
+  r = n(481060);
+let l = "undefined" == typeof ResizeObserver ? s.d : ResizeObserver,
   i = new Map,
-  o = new r(e => {
+  o = new l(e => {
     e.forEach(e => {
       var t;
       let {
@@ -15,15 +15,15 @@ let r = "undefined" == typeof ResizeObserver ? l.d : ResizeObserver,
     })
   });
 t.Z = () => {
-  let e = s.useRef(null),
-    [t, n] = s.useState(400),
-    l = s.useCallback(() => {
+  let e = a.useRef(null),
+    [t, n] = a.useState(400),
+    s = a.useCallback(() => {
       null !== e.current && n(e.current.clientWidth)
     }, [n, e]);
-  return (0, a.useResizeObserverSubscription)({
+  return (0, r.useResizeObserverSubscription)({
     ref: e,
     key: "forum-container",
-    onUpdate: l,
+    onUpdate: s,
     resizeObserver: o,
     listenerMap: i
   }), {

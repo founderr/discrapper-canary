@@ -1,34 +1,34 @@
 t.d(s, {
   Z: function() {
-    return M
+    return p
   }
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(442837),
-  r = t(481060),
-  o = t(846027),
+var a = t(120356),
+  i = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  l = t(846027),
   c = t(230711),
-  E = t(825209),
-  d = t(131951),
-  _ = t(285952),
-  T = t(153124),
-  S = t(358085),
-  u = t(962100),
+  d = t(825209),
+  _ = t(131951),
+  E = t(285952),
+  u = t(153124),
+  T = t(358085),
+  S = t(962100),
   I = t(981631),
   N = t(689938),
-  A = t(972633),
-  C = t(331651);
-let O = !S.isPlatformEmbedded,
-  m = (0, T.hQ)();
+  C = t(972633),
+  A = t(331651);
+let m = !T.isPlatformEmbedded,
+  O = (0, u.hQ)();
 
-function h(e) {
+function g(e) {
   let {
     value: s
   } = e;
-  s === I.pM4.PUSH_TO_TALK && O && (0, r.openModalLazy)(async () => {
+  s === I.pM4.PUSH_TO_TALK && m && (0, o.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.resolve().then(t.bind(t, 468026));
@@ -36,14 +36,14 @@ function h(e) {
       title: N.Z.Messages.PTT_LIMITED_TITLE,
       confirmText: N.Z.Messages.DOWNLOAD,
       cancelText: N.Z.Messages.OKAY,
-      onConfirm: () => (0, u.y)("PTT Limited Modal"),
+      onConfirm: () => (0, S.y)("PTT Limited Modal"),
       body: N.Z.Messages.PTT_LIMITED_BODY,
       ...s
     })
-  }), o.Z.setMode(s)
+  }), l.Z.setMode(s)
 }
 
-function g(e) {
+function h(e) {
   return e >= 1e3 ? (e /= 1e3, "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), " ms")
 }
 
@@ -52,51 +52,51 @@ function R(e) {
       inputMode: t
     } = e,
     {
-      shortcut: i,
-      delay: T
-    } = (0, l.cj)([d.Z], () => d.Z.getModeOptions());
-  return s = S.isPlatformEmbedded || t !== I.pM4.PUSH_TO_TALK ? (0, n.jsx)(r.FormText, {
-    type: r.FormText.Types.DESCRIPTION,
-    className: a()(A.pttToolsMessage, C.marginBottom8),
+      shortcut: a,
+      delay: u
+    } = (0, r.cj)([_.Z], () => _.Z.getModeOptions());
+  return s = T.isPlatformEmbedded || t !== I.pM4.PUSH_TO_TALK ? (0, n.jsx)(o.FormText, {
+    type: o.FormText.Types.DESCRIPTION,
+    className: i()(C.pttToolsMessage, A.marginBottom8),
     children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
       onClick: () => c.Z.setSection(I.oAB.KEYBINDS)
     })
-  }) : (0, n.jsx)(r.FormText, {
-    type: r.FormText.Types.DESCRIPTION,
-    className: a()(A.pttToolsMessage, A.pttToolsWarning, C.marginBottom8),
+  }) : (0, n.jsx)(o.FormText, {
+    type: o.FormText.Types.DESCRIPTION,
+    className: i()(C.pttToolsMessage, C.pttToolsWarning, A.marginBottom8),
     children: N.Z.Messages.PTT_LIMITED_WARNING.format({
-      onDownloadClick: () => (0, u.y)("Help Text PTT")
+      onDownloadClick: () => (0, S.y)("Help Text PTT")
     })
   }), (0, n.jsxs)("div", {
-    className: A.pttTools,
-    children: [(0, n.jsxs)(_.Z, {
-      children: [(0, n.jsx)(_.Z.Child, {
+    className: C.pttTools,
+    children: [(0, n.jsxs)(E.Z, {
+      children: [(0, n.jsx)(E.Z.Child, {
         basis: "50%",
-        children: (0, n.jsx)(r.FormItem, {
+        children: (0, n.jsx)(o.FormItem, {
           title: N.Z.Messages.FORM_LABEL_SHORTCUT,
-          children: (0, n.jsx)(E.Z, {
-            defaultValue: i,
-            onChange: e => o.Z.setMode(t, {
+          children: (0, n.jsx)(d.Z, {
+            defaultValue: a,
+            onChange: e => l.Z.setMode(t, {
               shortcut: e
             })
           })
         })
-      }), (0, n.jsx)(_.Z.Child, {
+      }), (0, n.jsx)(E.Z.Child, {
         basis: "50%",
-        children: (0, n.jsxs)(r.FormItem, {
-          children: [(0, n.jsx)(r.FormTitle, {
-            id: m,
-            tag: r.FormTitleTags.H5,
-            className: C.marginBottom8,
+        children: (0, n.jsxs)(o.FormItem, {
+          children: [(0, n.jsx)(o.FormTitle, {
+            id: O,
+            tag: o.FormTitleTags.H5,
+            className: A.marginBottom8,
             children: N.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
-          }), (0, n.jsx)(r.Slider, {
-            initialValue: T,
-            onValueChange: e => o.Z.setMode(t, {
+          }), (0, n.jsx)(o.Slider, {
+            initialValue: u,
+            onValueChange: e => l.Z.setMode(t, {
               delay: e
             }),
-            onValueRender: g,
+            onValueRender: h,
             maxValue: I.qhL,
-            "aria-labelledby": m
+            "aria-labelledby": O
           })]
         })
       })]
@@ -104,21 +104,21 @@ function R(e) {
   })
 }
 
-function M() {
-  let e = (0, l.e7)([d.Z], () => d.Z.getMode()),
+function p() {
+  let e = (0, r.e7)([_.Z], () => _.Z.getMode()),
     s = [{
       value: I.pM4.VOICE_ACTIVITY,
       name: N.Z.Messages.INPUT_MODE_VAD
     }, {
       value: I.pM4.PUSH_TO_TALK,
-      name: O ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
+      name: m ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
     }];
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(r.FormItem, {
+    children: [(0, n.jsx)(o.FormItem, {
       title: N.Z.Messages.FORM_LABEL_INPUT_MODE,
-      className: C.marginBottom20,
-      children: (0, n.jsx)(r.RadioGroup, {
-        onChange: h,
+      className: A.marginBottom20,
+      children: (0, n.jsx)(o.RadioGroup, {
+        onChange: g,
         options: s,
         value: e
       })

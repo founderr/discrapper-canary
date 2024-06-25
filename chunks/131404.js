@@ -21,16 +21,16 @@ var a = t(481060),
   C = t(62420),
   S = t(455395),
   g = t(581052),
-  m = t(875252),
-  x = t(122074),
-  h = t(819403),
+  x = t(875252),
+  h = t(122074),
+  m = t(819403),
   O = t(777658),
   R = t(858488),
   U = t(185457),
   p = t(570870),
   v = t(389052),
-  P = t(24311),
-  j = t(794973),
+  j = t(24311),
+  P = t(794973),
   G = t(332576),
   y = t(710631),
   b = t(558924),
@@ -53,28 +53,28 @@ n.default = (0, u.Z)((0, r.Z)(function(e) {
     context: B,
     onSelect: W,
     onHeightUpdate: H
-  } = e, X = (0, D.Z)(n.id, null), q = (0, P.Z)(n, B), Q = (0, U.Z)({
+  } = e, X = (0, D.Z)(n.id, null), q = (0, j.Z)(n, B), Q = (0, U.Z)({
     user: n,
     context: B
   }), J = (0, R.Z)({
     user: n
-  }), $ = (0, V.Z)(n.id), ee = (0, j.Z)(t.id, r), en = (0, y.Z)({
+  }), $ = (0, V.Z)(n.id), ee = (0, P.Z)(t.id, r), en = (0, y.Z)({
     user: n
   }), et = (0, o.Z)(null, n), ei = (0, F.Z)(n.id), ea = (0, b.Z)(n.id, t.id), el = (0, O.Z)(n), er = (0, L.Z)(n.id), eu = (0, I.P)(n.id, t.id), es = (0, G.Z)(n.id, t.id), eo = (0, v.Z)({
     user: n
-  }), ed = (0, N.ZP)(t), ec = (0, x.Uf)(k.aIL, t.id, "trailing"), e_ = (0, T.Z)({
+  }), ed = (0, N.ZP)(t), ec = (0, h.Uf)(k.aIL, t.id, "trailing"), e_ = (0, T.Z)({
     id: n.id,
     label: Y.Z.Messages.COPY_ID_USER
   }), eM = (0, T.Z)({
     id: t.id,
     label: Y.Z.Messages.COPY_ID_CHANNEL
-  }), eI = (0, E.Z)(t), ef = (0, _.Z)(n.id), eE = (0, c.Z)(t.id), eN = (0, h.Z)(n), eT = (0, M.Z)(n.id), eZ = (0, p.Z)({
+  }), eI = (0, E.Z)(t), ef = (0, _.Z)(n.id), eE = (0, c.Z)(t.id), eN = (0, m.Z)(n), eT = (0, M.Z)(n.id), eZ = (0, p.Z)({
     commandType: s.yU.USER,
     commandTargetId: n.id,
     channel: t,
     guildId: void 0,
     onHeightUpdate: H
-  }), eA = (0, Z.l)(t), eC = (0, Z.P)(t), eS = (0, A.Z)(t), eg = (0, C.Z)(t), em = (0, g.V)(t), ex = (0, S.i)(t), eh = (0, m.H)(t), eO = t.isManaged(), eR = n.isNonUserBot();
+  }), eA = (0, Z.l)(t), eC = (0, Z.P)(t), eS = (0, A.Z)(t), eg = (0, C.Z)(t), ex = (0, g.V)(t), eh = (0, S.i)(t), em = (0, x.H)(t), eO = t.isManaged(), eR = n.isNonUserBot();
   return (0, i.jsxs)(a.Menu, {
     navId: "user-context",
     onClose: l.Zy,
@@ -83,11 +83,11 @@ n.default = (0, u.Z)((0, r.Z)(function(e) {
     children: [(0, i.jsx)(a.MenuGroup, {
       children: !(eR && !(0, f.Z)(t.id)) && eI
     }), (0, i.jsx)(a.MenuGroup, {
+      children: ex
+    }), (0, i.jsx)(a.MenuGroup, {
       children: em
     }), (0, i.jsx)(a.MenuGroup, {
       children: eh
-    }), (0, i.jsx)(a.MenuGroup, {
-      children: ex
     }), (0, i.jsxs)(a.MenuGroup, {
       children: [eA, eS, eg]
     }), (0, i.jsx)(a.MenuGroup, {

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   $w: function() {
-    return S
+    return f
   },
   Bh: function() {
     return T
   },
   Gx: function() {
-    return N
+    return A
   },
   TA: function() {
     return E
@@ -19,7 +19,7 @@ n.d(t, {
     return h
   },
   i7: function() {
-    return f
+    return S
   },
   rD: function() {
     return _
@@ -107,13 +107,13 @@ function h(e, t, n) {
   })
 }
 
-function S(e) {
+function f(e) {
   o.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, {
     is_animated: d(e)
   })
 }
 
-function f(e) {
+function S(e) {
   if (null == e) return {
     oneofKind: void 0
   };
@@ -136,7 +136,7 @@ function f(e) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   if (null == e || void 0 === e.oneofKind) return null;
   switch (e.oneofKind) {
     case "customAsset":

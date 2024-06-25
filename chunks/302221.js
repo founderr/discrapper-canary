@@ -4,7 +4,7 @@ n.d(t, {
     return E
   },
   BM: function() {
-    return A
+    return N
   },
   Cj: function() {
     return o
@@ -13,7 +13,7 @@ n.d(t, {
     return _
   },
   YD: function() {
-    return S
+    return f
   },
   aD: function() {
     return l
@@ -31,7 +31,7 @@ n.d(t, {
     return u
   },
   xj: function() {
-    return N
+    return A
   }
 }), n(653041);
 var i = n(866442);
@@ -205,7 +205,7 @@ function h(e) {
   return I(_.hue, _.saturation, _.lightness)
 }
 
-function S(e) {
+function f(e) {
   return e.slice(0, 3).map(e => {
     var t;
     return {
@@ -241,16 +241,16 @@ function S(e) {
         v: 0
       }
     }
-  }).sort(f)[0].hex
+  }).sort(S)[0].hex
 }
 
-function f(e, t) {
+function S(e, t) {
   let n = e.hsv,
     i = t.hsv;
   return i.s + i.v - (n.s + n.v)
 }
 
-function N(e) {
+function A(e) {
   var t;
   let {
     colorRGB: n,
@@ -262,7 +262,7 @@ function N(e) {
   return null === (t = I(r.hue, r.saturation * i, r.lightness)) || void 0 === t ? void 0 : t.toHexString()
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   let i = parseInt(e.substring(1, 3), 16),
     r = parseInt(e.substring(3, 5), 16),
     s = parseInt(e.substring(5, 7), 16),

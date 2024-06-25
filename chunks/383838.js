@@ -33,11 +33,11 @@ function E(e) {
       className: I,
       iconClassName: T,
       title: h,
-      body: S,
-      style: f,
-      align: N = a.Z.Align.START
+      body: f,
+      style: S,
+      align: A = a.Z.Align.START
     } = e,
-    A = a.Z.Direction.HORIZONTAL;
+    N = a.Z.Direction.HORIZONTAL;
   if (null != c) {
     let {
       position: e,
@@ -51,16 +51,16 @@ function E(e) {
         className: s()(_.icon, T),
         ...n
       })
-    }), e === d.RIGHT && (A = a.Z.Direction.HORIZONTAL_REVERSE)
+    }), e === d.RIGHT && (N = a.Z.Direction.HORIZONTAL_REVERSE)
   } else null != E && (n = E);
   let m = !0;
   return r === o.Z.Types.PRIMARY && (m = !1), (0, i.jsx)(o.Z, {
     className: s()(_.formNotice, I),
     type: r,
-    style: f,
+    style: S,
     children: (0, i.jsxs)(a.Z, {
-      direction: A,
-      align: N,
+      direction: N,
+      align: A,
       children: [t, (0, i.jsxs)(a.Z.Child, {
         children: [null != h && "" !== h ? (0, i.jsx)(u.v, {
           tag: u.R.H5,
@@ -73,7 +73,7 @@ function E(e) {
           className: s()(_.formNoticeBody, {
             [_.whiteText]: m
           }),
-          children: S
+          children: f
         }), n]
       })]
     })

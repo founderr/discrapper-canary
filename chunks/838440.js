@@ -24,10 +24,10 @@ function T(e) {
     type: n,
     content: T,
     stickers: h,
-    uploads: S,
-    channel: f,
-    restrictMentions: N = !0,
-    respectCooldown: A = !0
+    uploads: f,
+    channel: S,
+    restrictMentions: A = !0,
+    respectCooldown: N = !0
   } = e, m = d.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
     var t, n, u;
@@ -35,26 +35,26 @@ function T(e) {
       openWarningPopout: d,
       type: T,
       content: h,
-      stickers: S,
-      uploads: f,
-      channel: N,
-      restrictMentions: A,
+      stickers: f,
+      uploads: S,
+      channel: A,
+      restrictMentions: N,
       respectCooldown: m,
       userCanUsePremiumMessageLength: O,
-      resolve: R
+      resolve: p
     } = e;
-    if (0 === h.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == f || 0 === f.length)) {
-      R({
+    if (0 === h.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == f || 0 === f.length) && (null == S || 0 === S.length)) {
+      p({
         valid: !1,
         failureReason: E.zYc.EMPTY_MESSAGE
       });
       return
     }
-    let p = O ? E.en1 : E.J6R;
-    if (h.length > p) {
-      if (O || null == N) {
+    let R = O ? E.en1 : E.J6R;
+    if (h.length > R) {
+      if (O || null == A) {
         ;
-        n = h.length, u = p, (0, r.openModal)(e => (0, i.jsx)(o.default, {
+        n = h.length, u = R, (0, r.openModal)(e => (0, i.jsx)(o.default, {
           title: I.Z.Messages.MESSAGE_TOO_LONG_HEADER,
           body: I.Z.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: n,
@@ -68,18 +68,18 @@ function T(e) {
         })
       } else s.Z.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
-        channel: N,
+        channel: A,
         content: h
       });
-      R({
+      p({
         valid: !1,
         failureReason: E.zYc.MESSAGE_TOO_LONG
       });
       return
     }
-    if (null != N) {
-      if (null != N.getGuildId() && m && l.Z.getSlowmodeCooldownGuess(N.id) > 0) {
-        R({
+    if (null != A) {
+      if (null != A.getGuildId() && m && l.Z.getSlowmodeCooldownGuess(A.id) > 0) {
+        p({
           valid: !1,
           failureReason: E.zYc.SLOWMODE_COOLDOWN
         });
@@ -92,16 +92,16 @@ function T(e) {
             animation: n
           }
           of c.$) {
-          let i = e(h, N, A);
+          let i = e(h, A, N);
           if (!1 !== i) {
             d({
               analyticsType: t,
-              channel: N,
-              onCancel: () => R({
+              channel: A,
+              onCancel: () => p({
                 valid: !1,
                 failureReason: E.zYc.SHOUTING_CANCELLED
               }),
-              onConfirm: () => R({
+              onConfirm: () => p({
                 valid: !0
               }),
               popoutText: i,
@@ -119,13 +119,13 @@ function T(e) {
         ...e
       }), {
         onCloseRequest: E.dG4
-      }), R({
+      }), p({
         valid: !1,
         failureReason: E.zYc.RATE_LIMITED
       });
       return
     }
-    R({
+    p({
       valid: !0
     })
   })({
@@ -133,10 +133,10 @@ function T(e) {
     type: n,
     content: T,
     stickers: h,
-    uploads: S,
-    channel: f,
-    restrictMentions: N,
-    respectCooldown: A,
+    uploads: f,
+    channel: S,
+    restrictMentions: A,
+    respectCooldown: N,
     userCanUsePremiumMessageLength: m,
     resolve: e
   }))

@@ -1,45 +1,45 @@
 n.d(t, {
   Z: function() {
-    return p
+    return _
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(512722),
-  s = n.n(i),
-  a = n(392711),
-  r = n.n(a),
+var a = n(512722),
+  l = n.n(a),
+  s = n(392711),
+  r = n.n(s),
   o = n(970731),
   c = n(981631),
   u = n(689938),
   d = n(623829),
   h = n(480032),
-  m = n(699352);
-let E = null;
+  p = n(699352);
+let m = null;
 
-function p(e) {
+function _(e) {
   let {
     onDismiss: t,
     onAccept: n,
-    popoutPosition: i,
-    gameConsoleAccounts: a
+    popoutPosition: a,
+    gameConsoleAccounts: s
   } = e;
-  s()(a.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == E || null == a.find(e => e.type === E)) && (E = r().shuffle(a)[0].type);
-  let p = null,
-    g = null;
-  switch (E) {
+  l()(s.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == m || null == s.find(e => e.type === m)) && (m = r().shuffle(s)[0].type);
+  let _ = null,
+    f = null;
+  switch (m) {
     case c.ABu.XBOX:
-      p = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, g = m;
+      _ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, f = p;
       break;
     case c.ABu.PLAYSTATION:
     case c.ABu.PLAYSTATION_STAGING:
-      p = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, g = h
+      _ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, f = h
   }
-  return (0, l.jsx)(o.ZP, {
+  return (0, i.jsx)(o.ZP, {
     header: u.Z.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
-    content: p,
-    asset: (0, l.jsx)("img", {
-      src: g,
+    content: _,
+    asset: (0, i.jsx)("img", {
+      src: f,
       alt: "",
       className: d.art
     }),
@@ -48,6 +48,6 @@ function p(e) {
     markAsDismissed: t,
     buttonCTA: u.Z.Messages.CONSOLE_NUX_TOOLTIP_ACCEPT,
     secondaryButtonCTA: u.Z.Messages.CONSOLE_NUX_TOOLTIP_DISMISS,
-    caretPosition: "top" === i ? o.DF.BOTTOM_LEFT : o.DF.TOP_LEFT
+    caretPosition: "top" === a ? o.DF.BOTTOM_LEFT : o.DF.TOP_LEFT
   })
 }

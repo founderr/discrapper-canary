@@ -1,33 +1,33 @@
 n.d(t, {
   Z: function() {
-    return E
+    return m
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(816782),
+var a = n(442837),
+  l = n(481060),
+  s = n(816782),
   r = n(318661),
   o = n(57048),
   c = n(87728),
   u = n(433355),
   d = n(502568),
   h = n(981631),
-  m = n(689938);
+  p = n(689938);
 
-function E(e) {
+function m(e) {
   let {
     channel: t,
     showCallOrActivityPanel: n
-  } = e, E = (0, i.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())), p = (0, r.ZP)(t.getRecipientId()), g = (0, c.Z)(), f = E === h.ULH.PROFILE && !g;
-  return (0, l.jsx)(d.JO, {
-    disabled: g || n,
-    tooltip: g || n ? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : f ? m.Z.Messages.HIDE_USER_PROFILE : m.Z.Messages.SHOW_USER_PROFILE,
-    icon: s.UserCircleStatusIcon,
+  } = e, m = (0, a.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())), _ = (0, r.ZP)(t.getRecipientId()), f = (0, c.Z)(), E = m === h.ULH.PROFILE && !f;
+  return (0, i.jsx)(d.JO, {
+    disabled: f || n,
+    tooltip: f || n ? p.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : E ? p.Z.Messages.HIDE_USER_PROFILE : p.Z.Messages.SHOW_USER_PROFILE,
+    icon: l.UserCircleStatusIcon,
     onClick: () => {
-      (0, o.a)(p, !f), a.Z.toggleProfilePanelSection()
+      (0, o.a)(_, !E), s.Z.toggleProfilePanelSection()
     },
-    selected: f && !g && !n
+    selected: E && !f && !n
   })
 }

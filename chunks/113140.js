@@ -1,85 +1,85 @@
-o.r(s), o.d(s, {
+a.r(e), a.d(e, {
   default: function() {
     return d
   }
 });
-var n = o(735250);
-o(470079);
-var a = o(481060),
-  t = o(153124),
-  l = o(471253),
-  c = o(939863),
-  r = o(689938),
-  i = o(604845);
+var o = a(735250);
+a(470079);
+var c = a(481060),
+  s = a(153124),
+  t = a(471253),
+  l = a(939863),
+  i = a(689938),
+  r = a(604845);
 
-function d(e) {
+function d(n) {
   let {
-    transitionState: s,
-    onClose: o,
+    transitionState: e,
+    onClose: a,
     channel: d
-  } = e, h = (0, t.Dt)(), u = e => {
-    (0, l.RK)(d, e), o()
+  } = n, h = (0, s.Dt)(), u = n => {
+    (0, t.RK)(d, n), a()
   };
-  return (0, n.jsx)(a.ModalRoot, {
-    size: a.ModalSize.SMALL,
-    transitionState: s,
+  return (0, o.jsx)(c.ModalRoot, {
+    size: c.ModalSize.SMALL,
+    transitionState: e,
     "aria-labelledby": h,
-    className: i.container,
-    children: (0, n.jsxs)(a.ModalContent, {
-      className: i.content,
-      children: [(0, n.jsx)(c.Z, {
-        children: (0, n.jsx)("div", {
-          className: i.iconBackground,
-          children: (0, n.jsx)(a.MicrophoneIcon, {
+    className: r.container,
+    children: (0, o.jsxs)(c.ModalContent, {
+      className: r.content,
+      children: [(0, o.jsx)(l.Z, {
+        children: (0, o.jsx)("div", {
+          className: r.iconBackground,
+          children: (0, o.jsx)(c.MicrophoneIcon, {
             size: "custom",
             color: "currentColor",
             height: 40,
             width: 40,
-            className: i.icon
+            className: r.icon
           })
         })
-      }), (0, n.jsx)(a.Heading, {
-        className: i.header,
+      }), (0, o.jsx)(c.Heading, {
+        className: r.header,
         variant: "heading-lg/semibold",
-        children: r.Z.Messages.STAGE_SPEAK_INVITE_HEADER
-      }), (0, n.jsx)(a.Text, {
+        children: i.Z.Messages.STAGE_SPEAK_INVITE_HEADER
+      }), (0, o.jsx)(c.Text, {
         color: "header-secondary",
-        className: i.description,
+        className: r.description,
         variant: "text-sm/normal",
-        children: r.Z.Messages.STAGE_SPEAK_INVITE_MODAL.format({
-          stageChannelHook: () => (0, n.jsxs)("div", {
-            className: i.channel,
-            children: [(0, n.jsx)(a.StageIcon, {
+        children: i.Z.Messages.STAGE_SPEAK_INVITE_MODAL.format({
+          stageChannelHook: () => (0, o.jsxs)("div", {
+            className: r.channel,
+            children: [(0, o.jsx)(c.StageIcon, {
               size: "custom",
               color: "currentColor",
               height: 14,
               width: 14,
-              className: i.channelIcon
-            }), (0, n.jsx)(a.Text, {
-              className: i.channelName,
+              className: r.channelIcon
+            }), (0, o.jsx)(c.Text, {
+              className: r.channelName,
               variant: "text-sm/normal",
               children: d.name
             })]
           })
         })
-      }), (0, n.jsx)(a.Button, {
+      }), (0, o.jsx)(c.Button, {
         fullWidth: !0,
-        color: a.Button.Colors.GREEN,
+        color: c.Button.Colors.GREEN,
         onClick: () => u(!1),
-        className: i.button,
-        children: r.Z.Messages.ACCEPT
-      }), (0, n.jsx)(a.Button, {
+        className: r.button,
+        children: i.Z.Messages.ACCEPT
+      }), (0, o.jsx)(c.Button, {
         fullWidth: !0,
-        color: a.Button.Colors.RED,
+        color: c.Button.Colors.RED,
         onClick: () => u(!0),
-        className: i.button,
-        children: r.Z.Messages.DECLINE
-      }), (0, n.jsx)(a.Button, {
+        className: r.button,
+        children: i.Z.Messages.DECLINE
+      }), (0, o.jsx)(c.Button, {
         fullWidth: !0,
-        color: a.Button.Colors.PRIMARY,
-        look: a.Button.Looks.LINK,
-        onClick: o,
-        children: r.Z.Messages.NOT_NOW
+        color: c.Button.Colors.PRIMARY,
+        look: c.Button.Looks.LINK,
+        onClick: a,
+        children: i.Z.Messages.NOT_NOW
       })]
     })
   })

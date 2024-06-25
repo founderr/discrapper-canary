@@ -8,18 +8,18 @@ var s, o, a, l, u = n(392711),
 let I = [],
   T = !1;
 let h = I,
-  S = {},
-  f = null;
-let N = 0,
-  A = e => {
+  f = {},
+  S = null;
+let A = 0,
+  N = e => {
     h = (0, u.cloneDeep)(e);
     let t = {};
     h.forEach(e => {
       t[e.id] = (0, d.isAndroid)() ? (0, E.Q)(e) : e
-    }), S = t
+    }), f = t
   },
   m = () => {
-    T = !1, A(I), f = null, r = void 0
+    T = !1, N(I), S = null, r = void 0
   };
 class O extends(l = _.ZP.Store) {
   get isFetching() {
@@ -32,7 +32,7 @@ class O extends(l = _.ZP.Store) {
     return h
   }
   get tryItOutId() {
-    return f
+    return S
   }
   canFetch() {
     return null == r || Date.now() >= r
@@ -41,7 +41,7 @@ class O extends(l = _.ZP.Store) {
     return null != r && null == i
   }
   getProfileEffectById(e) {
-    return null != e ? S[e] : void 0
+    return null != e ? f[e] : void 0
   }
 }
 a = "ProfileEffectStore", (o = "displayName") in(s = O) ? Object.defineProperty(s, o, {
@@ -57,19 +57,19 @@ a = "ProfileEffectStore", (o = "displayName") in(s = O) ? Object.defineProperty(
     let {
       profileEffects: t
     } = e;
-    T = !1, i = void 0, r = Date.now() + 3e5, N = 0, A(0 === t.length ? I : t)
+    T = !1, i = void 0, r = Date.now() + 3e5, A = 0, N(0 === t.length ? I : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** N, 36e5), ++N, A(I)
+    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** A, 36e5), ++A, N(I)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {
       id: t
     } = e;
-    f = t
+    S = t
   },
   LOGOUT: e => {
     m()

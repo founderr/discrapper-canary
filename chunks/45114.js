@@ -4,22 +4,22 @@ n.d(t, {
     return T
   },
   ES: function() {
-    return N
+    return A
   },
   FT: function() {
-    return f
+    return S
   },
   In: function() {
     return c
   },
   Ju: function() {
-    return S
+    return f
   },
   U6: function() {
     return d
   },
   YJ: function() {
-    return A
+    return N
   },
   iV: function() {
     return I
@@ -115,7 +115,7 @@ function h(e, t) {
   })
 }
 
-function S(e, t, n) {
+function f(e, t, n) {
   i.Z.dispatch({
     type: "GUILD_FEATURE_ACK",
     id: e,
@@ -125,7 +125,7 @@ function S(e, t, n) {
   })
 }
 
-function f(e, t) {
+function S(e, t) {
   var n;
   if (null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) i.Z.dispatch({
     type: "USER_NON_CHANNEL_ACK",
@@ -135,14 +135,14 @@ function f(e, t) {
   })
 }
 
-function N(e) {
+function A(e) {
   i.Z.dispatch({
     type: "MESSAGE_REQUEST_ACK",
     ackedId: e
   })
 }
 
-function A() {
+function N() {
   i.Z.dispatch({
     type: "MESSAGE_REQUEST_CLEAR_ACK"
   })

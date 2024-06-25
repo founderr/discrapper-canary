@@ -1,13 +1,13 @@
 n.d(t, {
   U: function() {
-    return i
+    return s
   }
 });
-var s = n(735250);
+var i = n(735250);
 
-function i() {
-  return (0, s.jsx)("div", {
-    children: (0, s.jsx)("h1", {
+function s() {
+  return (0, i.jsx)("div", {
+    children: (0, i.jsx)("h1", {
       children: "Servers"
     })
   })

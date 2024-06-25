@@ -1,16 +1,16 @@
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(913527),
-  l = n.n(i),
-  a = n(481060),
+var a = n(913527),
+  s = n.n(a),
+  l = n(481060),
   r = n(730417),
   o = n(921944),
   c = n(689938),
-  u = n(983209);
-let d = (e, t) => ({
+  d = n(983209);
+let u = (e, t) => ({
   bodyText: c.Z.Messages.DROPS_BANNER_NOTICE.format({
     gameName: e.title,
-    endDate: l()(e.endDate, "YYYY-MM-DD HH:mm").format("MMM Do"),
+    endDate: s()(e.endDate, "YYYY-MM-DD HH:mm").format("MMM Do"),
     streamLengthRequirement: t
   }),
   articleUrl: e.articleUrl
@@ -19,23 +19,23 @@ t.Z = e => {
   let {
     noticeType: t,
     markAsDismissed: n,
-    partnerGame: i
-  } = e, l = (0, r.au)(i);
-  if (null == l) return null;
+    partnerGame: a
+  } = e, s = (0, r.au)(a);
+  if (null == s) return null;
   let {
-    bodyText: E,
-    articleUrl: _
-  } = d(l.drop, l.config.streamLengthRequirement);
-  return (0, s.jsxs)(a.Notice, {
-    className: u.colorGuildBlue,
-    children: [E, (0, s.jsx)(a.NoticeButtonAnchor, {
-      href: _,
+    bodyText: _,
+    articleUrl: E
+  } = u(s.drop, s.config.streamLengthRequirement);
+  return (0, i.jsxs)(l.Notice, {
+    className: d.colorGuildBlue,
+    children: [_, (0, i.jsx)(l.NoticeButtonAnchor, {
+      href: E,
       target: "_blank",
       onClick: () => {
         n(o.L.PRIMARY)
       },
       children: c.Z.Messages.LEARN_MORE
-    }), (0, s.jsx)(a.NoticeCloseButton, {
+    }), (0, i.jsx)(l.NoticeCloseButton, {
       onClick: () => {
         n(o.L.DISMISS)
       },

@@ -1,6 +1,6 @@
-var l;
+var i;
 n.d(t, {
   r: function() {
-    return l
+    return i
   }
-}), (l || (l = {})).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"
+}), (i || (i = {})).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"

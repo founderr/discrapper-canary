@@ -1,61 +1,61 @@
-l.d(n, {
+t.d(n, {
   Z: function() {
-    return d
+    return u
   }
-}), l(653041);
-var t = l(735250),
-  i = l(470079),
-  r = l(120356),
-  s = l.n(r),
-  a = l(481060),
-  o = l(765305),
-  u = l(689938),
-  c = l(235098);
+}), t(653041);
+var i = t(735250),
+  l = t(470079),
+  a = t(120356),
+  r = t.n(a),
+  o = t(481060),
+  c = t(765305),
+  s = t(689938),
+  d = t(235098);
 
-function d(e) {
+function u(e) {
   let {
     onClose: n,
-    selectedTab: l,
-    onTabSelected: r,
-    userCount: d,
-    hasBanner: v,
-    isHub: h = !1
-  } = e, E = i.useRef(null);
-  i.useEffect(() => {
-    var e, n, l;
-    return null === (l = E.current) || void 0 === l ? void 0 : null === (n = l.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n)
+    selectedTab: t,
+    onTabSelected: a,
+    userCount: u,
+    hasBanner: _,
+    isHub: f = !1
+  } = e, g = l.useRef(null);
+  l.useEffect(() => {
+    var e, n, t;
+    return null === (t = g.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n)
   }, []);
-  let g = u.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
-      userCount: d
+  let v = s.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
+      userCount: u
     }),
-    f = [(0, t.jsx)(a.TabBar.Item, {
-      className: c.tabBarItem,
-      id: o.fL.EVENT_INFO,
-      children: u.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
+    h = [(0, i.jsx)(o.TabBar.Item, {
+      className: d.tabBarItem,
+      id: c.fL.EVENT_INFO,
+      children: s.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
     }, "event-details")];
-  return !h && f.push((0, t.jsx)(a.TabBar.Item, {
-    className: c.tabBarItem,
-    id: o.fL.RSVP_LIST,
-    children: g
-  }, "is-hub")), (0, t.jsxs)("div", {
-    className: c.container,
-    children: [(0, t.jsx)(a.Clickable, {
-      ref: E,
+  return !f && h.push((0, i.jsx)(o.TabBar.Item, {
+    className: d.tabBarItem,
+    id: c.fL.RSVP_LIST,
+    children: v
+  }, "is-hub")), (0, i.jsxs)("div", {
+    className: d.container,
+    children: [(0, i.jsx)(o.Clickable, {
+      ref: g,
       onClick: n,
-      className: c.closeButton,
-      "aria-label": u.Z.Messages.CLOSE,
-      children: (0, t.jsx)(a.CloseSmallIcon, {
+      className: d.closeButton,
+      "aria-label": s.Z.Messages.CLOSE,
+      children: (0, i.jsx)(o.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: s()(c.closeIcon, v && c.closeIconBanner)
+        className: r()(d.closeIcon, _ && d.closeIconBanner)
       })
-    }), (0, t.jsx)(a.TabBar, {
-      className: c.tabBar,
-      "aria-label": u.Z.Messages.OPTIONS,
-      selectedItem: l,
+    }), (0, i.jsx)(o.TabBar, {
+      className: d.tabBar,
+      "aria-label": s.Z.Messages.OPTIONS,
+      selectedItem: t,
       type: "top",
-      onItemSelect: r,
-      children: f
+      onItemSelect: a,
+      children: h
     })]
   })
 }

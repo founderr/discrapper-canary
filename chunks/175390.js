@@ -1,69 +1,69 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
     return m
   }
 });
-var n = t(735250);
-t(470079);
-var r = t(399606),
-  i = t(481060),
-  l = t(607070),
-  o = t(357352),
-  a = t(623488),
-  c = t(695346),
-  d = t(937615),
-  C = t(506071),
-  u = t(724598),
-  _ = t(629481),
-  x = t(981631),
-  I = t(689938),
-  h = t(421305);
+var r = n(735250);
+n(470079);
+var s = n(399606),
+  i = n(481060),
+  o = n(607070),
+  a = n(357352),
+  l = n(623488),
+  c = n(695346),
+  d = n(937615),
+  C = n(506071),
+  u = n(724598),
+  _ = n(629481),
+  x = n(981631),
+  f = n(689938),
+  I = n(421305);
 
-function L() {
+function p() {
   let e = c.QK.useSetting(),
-    s = (0, C.n)(),
-    t = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
-    i = s && e && !t ? (0, o.b)("server_products/storefront/question-mark.gif") : (0, o.b)("server_products/storefront/question-mark.png");
-  return (0, n.jsxs)("div", {
-    className: h.previewListingCard,
-    children: [(0, n.jsx)(a.Z, {
+    t = (0, C.n)(),
+    n = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+    i = t && e && !n ? (0, a.b)("server_products/storefront/question-mark.gif") : (0, a.b)("server_products/storefront/question-mark.png");
+  return (0, r.jsxs)("div", {
+    className: I.previewListingCard,
+    children: [(0, r.jsx)(l.Z, {
       role: void 0,
       ctaComponent: null,
-      imageUrl: (0, o.b)("server_products/storefront/preview-thumbnail.png"),
-      name: I.Z.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
-      description: I.Z.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
+      imageUrl: (0, a.b)("server_products/storefront/preview-thumbnail.png"),
+      name: f.Z.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
+      description: f.Z.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
       formattedPrice: (0, d.T4)(0, x.pKx.USD, {
         localeMatcher: "best fit",
         style: "currency",
         maximumSignificantDigits: 1
       }),
       shouldShowFullDescriptionButton: !1,
-      productType: I.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
+      productType: f.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
       onTapCard: () => null,
       hideRoleTag: !0,
       lineClamp: 3,
       thumbnailHeight: 197,
       cardWidth: 332,
       descriptionTextVariant: "text-xs/normal"
-    }), (0, n.jsx)("img", {
-      className: h.questionMark,
+    }), (0, r.jsx)("img", {
+      className: I.questionMark,
       alt: "",
       src: i
     })]
   })
 }
 
-function E() {
-  return (0, n.jsxs)("div", {
-    className: h.learnMoreTipContainer,
-    children: [(0, n.jsx)(i.CircleInformationIcon, {
+function h() {
+  return (0, r.jsxs)("div", {
+    className: I.learnMoreTipContainer,
+    children: [(0, r.jsx)(i.CircleInformationIcon, {
       size: "md",
       color: "currentColor",
-      className: h.infoCircle
-    }), (0, n.jsx)(i.Text, {
+      className: I.infoCircle
+    }), (0, r.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
-      children: I.Z.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
+      children: f.Z.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
         learnMoreLink: _.P4
       })
     })]
@@ -72,16 +72,16 @@ function E() {
 
 function m(e) {
   let {
-    guildId: s
+    guildId: t
   } = e;
-  return (0, n.jsxs)("div", {
-    className: h.previewContentContainer,
-    children: [(0, n.jsxs)("div", {
-      className: h.previewContent,
-      children: [(0, n.jsx)(L, {}), (0, n.jsx)(u.Z, {
-        guildId: s,
+  return (0, r.jsxs)("div", {
+    className: I.previewContentContainer,
+    children: [(0, r.jsxs)("div", {
+      className: I.previewContent,
+      children: [(0, r.jsx)(p, {}), (0, r.jsx)(u.Z, {
+        guildId: t,
         showCTA: !0
       })]
-    }), (0, n.jsx)(E, {})]
+    }), (0, r.jsx)(h, {})]
   })
 }

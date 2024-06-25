@@ -5,51 +5,51 @@ t.d(s, {
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(481060),
-  r = t(208049),
-  o = t(242291),
+var a = t(120356),
+  i = t.n(a),
+  r = t(481060),
+  o = t(208049),
+  l = t(242291),
   c = t(153124),
-  E = t(63063),
-  d = t(36703),
-  _ = t(981631),
-  T = t(689938),
-  S = t(824379);
-let u = (0, c.hQ)();
+  d = t(63063),
+  _ = t(36703),
+  E = t(981631),
+  u = t(689938),
+  T = t(824379);
+let S = (0, c.hQ)();
 
 function I() {
-  let e = (0, o.pI)();
+  let e = (0, l.pI)();
   return (0, n.jsxs)("div", {
-    className: a()(S.soundboardRow),
+    className: i()(T.soundboardRow),
     children: [(0, n.jsxs)("div", {
-      className: a()(S.soundboardColumn, S.leftColumn),
-      children: [(0, n.jsx)(l.FormTitle, {
-        tag: l.FormTitleTags.H5,
-        className: S.soundboardTitle,
-        children: T.Z.Messages.USER_SETTINGS_SOUNDBOARD
-      }), (0, n.jsx)(l.Text, {
+      className: i()(T.soundboardColumn, T.leftColumn),
+      children: [(0, n.jsx)(r.FormTitle, {
+        tag: r.FormTitleTags.H5,
+        className: T.soundboardTitle,
+        children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD
+      }), (0, n.jsx)(r.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: T.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({
-          helpCenterArticle: E.Z.getArticleURL(_.BhN.SOUNDBOARD)
+        children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({
+          helpCenterArticle: d.Z.getArticleURL(E.BhN.SOUNDBOARD)
         })
       })]
     }), (0, n.jsxs)("div", {
-      className: a()(S.soundboardColumn, S.__invalid_rightColumn),
-      children: [(0, n.jsx)(l.FormTitle, {
-        id: u,
-        tag: l.FormTitleTags.H5,
-        className: S.soundboardSubtitle,
-        children: T.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
-      }), (0, n.jsx)(l.Slider, {
-        initialValue: (0, d.P)(e),
+      className: i()(T.soundboardColumn, T.__invalid_rightColumn),
+      children: [(0, n.jsx)(r.FormTitle, {
+        id: S,
+        tag: r.FormTitleTags.H5,
+        className: T.soundboardSubtitle,
+        children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
+      }), (0, n.jsx)(r.Slider, {
+        initialValue: (0, _.P)(e),
         maxValue: 100,
         onValueRender: e => "".concat(e.toFixed(0), "%"),
         asValueChanges: function(s) {
-          e = (0, d.A)(s), (0, r.xz)(e)
+          e = (0, _.A)(s), (0, o.xz)(e)
         },
-        "aria-labelledby": u
+        "aria-labelledby": S
       })]
     })]
   })

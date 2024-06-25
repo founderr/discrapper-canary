@@ -18,10 +18,10 @@ var i = n(735250),
   I = n(251625),
   T = n(985375),
   h = n(132748),
-  S = n(353903),
-  f = n(215016),
-  N = n(981631),
-  A = n(689938),
+  f = n(353903),
+  S = n(215016),
+  A = n(981631),
+  N = n(689938),
   m = n(53995);
 
 function O(e, t, n) {
@@ -32,10 +32,10 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = (e, t) => (0, i.jsx)(S.G0, {
+let p = (e, t) => (0, i.jsx)(f.G0, {
   columns: e
 }, t);
-class p extends r.PureComponent {
+class R extends r.PureComponent {
   componentDidMount() {
     0 === this.props.trendingCategories.length && (0, c.Tg)()
   }
@@ -50,7 +50,7 @@ class p extends r.PureComponent {
     } = e;
     return (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsx)("div", {
-        className: s === N.wI2.FAVORITES ? m.categoryFadeBlurple : m.categoryFade
+        className: s === A.wI2.FAVORITES ? m.categoryFadeBlurple : m.categoryFade
       }), (0, i.jsxs)("div", {
         className: m.categoryText,
         children: [null != n ? (0, i.jsx)(n, {
@@ -82,8 +82,8 @@ class p extends r.PureComponent {
         var t;
         let n = o().sample(o().values(e));
         return {
-          type: N.wI2.FAVORITES,
-          name: A.Z.Messages.CATEGORY_FAVORITE,
+          type: A.wI2.FAVORITES,
+          name: N.Z.Messages.CATEGORY_FAVORITE,
           icon: _.StarIcon,
           src: null != n ? n.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
           format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : l.EO.IMAGE
@@ -129,7 +129,7 @@ class p extends r.PureComponent {
       } = this.props, {
         focusedId: _
       } = this.state;
-      return (0, i.jsx)(f.iR, {
+      return (0, i.jsx)(S.iR, {
         format: s.format,
         color: u.Z.unsafe_rawColors.PRIMARY_800.css,
         src: s.src,
@@ -146,10 +146,10 @@ class p extends r.PureComponent {
       let {
         trendingCategories: r
       } = this.props;
-      return 0 === r.length ? (0, i.jsx)(S.u$, {
+      return 0 === r.length ? (0, i.jsx)(f.u$, {
         columns: e,
         width: t,
-        renderColumn: R
+        renderColumn: p
       }) : (0, i.jsx)(_.MasonryList, {
         ref: this._masonryRef,
         fade: !0,
@@ -179,8 +179,8 @@ class p extends r.PureComponent {
 function g(e) {
   let t = (0, a.e7)([E.Z], () => E.Z.getTrendingCategories()),
     n = (0, T.gG)(),
-    r = (0, f.PY)();
-  return (0, i.jsx)(p, {
+    r = (0, S.PY)();
+  return (0, i.jsx)(R, {
     ...e,
     ...r,
     trendingCategories: t,

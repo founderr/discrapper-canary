@@ -1,53 +1,53 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(481060),
   o = n(368666),
   c = n(14338),
   u = n(546552);
-t.Z = i.memo(function(e) {
+t.Z = a.memo(function(e) {
   let {
     label: t,
     participantCount: n,
-    onClick: i,
-    className: s,
+    onClick: a,
+    className: l,
     collapsed: d,
     speakers: h,
-    channel: m,
-    isStreamLive: E
+    channel: p,
+    isStreamLive: m
   } = e;
-  return (0, l.jsxs)(r.Clickable, {
-    onClick: i,
-    className: a()(u.container, s),
-    children: [null == h ? (0, l.jsx)(r.GroupIcon, {
+  return (0, i.jsxs)(r.Clickable, {
+    onClick: a,
+    className: s()(u.container, l),
+    children: [null == h ? (0, i.jsx)(r.GroupIcon, {
       size: "custom",
       color: "currentColor",
       width: 20,
       height: 20,
       className: u.micIcon
-    }) : (0, l.jsx)(r.MicrophoneIcon, {
+    }) : (0, i.jsx)(r.MicrophoneIcon, {
       size: "custom",
       color: "currentColor",
       width: 20,
       height: 20,
       className: u.micIcon
-    }), (0, l.jsxs)(r.Text, {
+    }), (0, i.jsxs)(r.Text, {
       color: "header-primary",
       variant: "text-md/semibold",
       className: u.text,
       children: [t, " — ", n]
-    }), d && null != m && null != h && h.length > 0 && (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(c.Z, {
-        channel: m,
+    }), d && null != p && null != h && h.length > 0 && (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)(c.Z, {
+        channel: p,
         speakers: h
-      }), E && (0, l.jsx)(o.ZP, {})]
-    }), (0, l.jsx)(r.ChevronSmallDownIcon, {
+      }), m && (0, i.jsx)(o.ZP, {})]
+    }), (0, i.jsx)(r.ChevronSmallDownIcon, {
       size: "custom",
       color: "currentColor",
       width: 20,
       height: 20,
-      className: a()(u.downIcon, {
+      className: s()(u.downIcon, {
         [u.upIcon]: d
       })
     })]

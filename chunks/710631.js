@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return R
+    return N
   }
 }), t(653041), t(47120);
 var l = t(735250),
@@ -21,13 +21,13 @@ var l = t(735250),
   I = t(981631),
   m = t(689938);
 
-function N(e, n) {
+function R(e, n) {
   u.Z.ensurePrivateChannel(e).then(e => {
     null != c.Z.getChannel(e) && d.Z.sendInvite(e, n, "context_menu", null)
   })
 }
 
-function R(e) {
+function N(e) {
   let {
     user: n,
     guildId: t,
@@ -39,11 +39,11 @@ function R(e) {
       let l = E.Z.getGuild(e);
       null != l && (0, o.b)(M.Z, l) && l.id !== t && n.push(l)
     }), n
-  }, [t]), [R, C] = i.useState({});
+  }, [t]), [N, C] = i.useState({});
   return (null == d ? void 0 : d.id) === n.id || n.bot || 0 === c.length || f.Z.isBlocked(n.id) ? null : (0, l.jsx)(r.MenuItem, {
     id: "invite-to-server",
     label: m.Z.Messages.INVITE_TO_SERVER,
-    children: c.map(e => R[e.id] ? (0, l.jsx)(r.MenuItem, {
+    children: c.map(e => N[e.id] ? (0, l.jsx)(r.MenuItem, {
       id: e.id,
       disabled: !0,
       label: m.Z.Messages.INVITE_SENT
@@ -55,16 +55,16 @@ function R(e) {
           let t = Z.ZP.getDefaultChannel(e.id, !0, I.Plq.CREATE_INSTANT_INVITE);
           if (null != t) {
             if (C({
-                ...R,
+                ...N,
                 [e.id]: !0
               }), !M.Z.can(I.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
-              N(n, e.vanityURLCode);
+              R(n, e.vanityURLCode);
               return
             }
             s.Z.createInvite(t.id, {
               max_uses: 1,
               unique: !0
-            }, "User Invite Context Menu").then(e => N(n, e.code))
+            }, "User Invite Context Menu").then(e => R(n, e.code))
           }
         }(e, n.id)
       }

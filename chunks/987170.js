@@ -79,7 +79,7 @@ function d(e) {
     }
   }
 
-  function S(t, n) {
+  function f(t, n) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
       r = null != i.disable && i.disable,
       s = _(e.kind, e.id, t),
@@ -106,23 +106,23 @@ function d(e) {
         E = !1 !== a.autoTrackExposure,
         T = _(e.kind, e.id, t),
         h = null == a.trackExposureOptions ? void 0 : (0, r.Z)(null !== (s = a.trackExposureOptions) && void 0 !== s ? s : {}),
-        f = null !== (o = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== o && o,
+        S = null !== (o = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== o && o,
         [
-          [N, A, m], O
+          [A, N, m], O
         ] = (0, i.useState)(() => {
           let t = null == T || l ? u.NZ.NOT_ELIGIBLE : T.bucket;
           return [c(e, t, d, T), t, null == T ? -1 : T.revision]
         }),
-        R = (0, r.Z)(t);
+        p = (0, r.Z)(t);
       return (0, i.useEffect)(() => {
-        if (!l && (!!E || !!f)) I(R, h, !1 === E)
-      }, [l, E, R, h, A, m, f]), (0, i.useEffect)(() => S(R, (e, t, n) => {
+        if (!l && (!!E || !!S)) I(p, h, !1 === E)
+      }, [l, E, p, h, N, m, S]), (0, i.useEffect)(() => f(p, (e, t, n) => {
         O(i => i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n])
       }, {
         disable: l
-      }), [l, R]), N
+      }), [l, p]), A
     },
-    subscribe: S,
+    subscribe: f,
     trackExposure: T,
     getCurrentConfig: function(t) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {

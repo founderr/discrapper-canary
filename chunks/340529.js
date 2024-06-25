@@ -1,75 +1,75 @@
-t.d(s, {
+n.d(t, {
   z: function() {
-    return j
+    return T
   }
 });
-var n = t(735250);
-t(470079);
-var r = t(120356),
-  i = t.n(r),
-  l = t(399606),
-  o = t(433517),
-  a = t(481060),
-  c = t(607070),
-  d = t(357352),
-  C = t(703656),
-  u = t(652515),
-  _ = t(847033),
-  x = t(544978),
-  I = t(307537),
-  h = t(987513),
-  L = t(895737),
-  E = t(629481),
-  m = t(981631),
-  S = t(176505),
-  p = t(689938),
-  R = t(965729);
+var r = n(735250);
+n(470079);
+var s = n(120356),
+  i = n.n(s),
+  o = n(399606),
+  a = n(433517),
+  l = n(481060),
+  c = n(607070),
+  d = n(357352),
+  C = n(703656),
+  u = n(652515),
+  _ = n(847033),
+  x = n(544978),
+  f = n(307537),
+  I = n(987513),
+  p = n(895737),
+  h = n(629481),
+  m = n(981631),
+  L = n(176505),
+  E = n(689938),
+  S = n(965729);
 
-function T(e) {
+function g(e) {
   let {
-    icon: s,
-    title: t,
-    body: r,
-    selected: l,
-    disabled: o = !1,
+    icon: t,
+    title: n,
+    body: s,
+    selected: o,
+    disabled: a = !1,
     onClick: c,
     onPreviewDismiss: d,
     isNew: C = !1
   } = e;
-  return (0, n.jsxs)(a.ClickableContainer, {
-    onClick: o ? void 0 : c,
-    "aria-disabled": o,
-    className: i()(R.tab, {
-      [R.selected]: l,
-      [R.tabDisabled]: o,
-      [R.preview]: !l && null != d
+  return (0, r.jsxs)(l.ClickableContainer, {
+    onClick: a ? void 0 : c,
+    "aria-disabled": a,
+    className: i()(S.tab, {
+      [S.selected]: o,
+      [S.tabDisabled]: a,
+      [S.preview]: !o && null != d
     }),
-    "aria-label": t,
-    children: [(0, n.jsx)("div", {
-      className: R.iconContainer,
-      children: s
-    }), (0, n.jsx)(a.Spacer, {
+    "aria-label": n,
+    children: [(0, r.jsx)("div", {
+      className: S.iconContainer,
+      children: t
+    }), (0, r.jsx)(l.Spacer, {
       size: 8,
       horizontal: !0
-    }), (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(a.Text, {
+    }), (0, r.jsxs)("div", {
+      children: [(0, r.jsx)(l.Text, {
         variant: "text-sm/semibold",
-        color: l ? "always-white" : "header-primary",
-        children: t
-      }), (0, n.jsx)(a.Text, {
+        color: o ? "always-white" : "header-primary",
+        children: n
+      }), (0, r.jsx)(l.Text, {
         variant: "text-xs/normal",
-        color: l ? "always-white" : o ? "text-muted" : "header-primary",
-        children: r
+        color: o ? "always-white" : a ? "text-muted" : "header-primary",
+        children: s
       })]
-    }), C && (0, n.jsx)(a.TextBadge, {
-      color: a.tokens.unsafe_rawColors.BRAND_260.css,
-      className: R.newBadge,
-      text: p.Z.Messages.NEW
-    }), null != d && (0, n.jsx)(a.Clickable, {
-      className: R.tabPreviewClose,
+    }), C && (0, r.jsx)(l.TextBadge, {
+      color: l.tokens.unsafe_rawColors.BRAND_260.css,
+      className: S.newBadge,
+      text: E.Z.Messages.NEW
+    }), null != d && (0, r.jsx)(l.Clickable, {
+      className: S.tabPreviewClose,
       onClick: d,
-      "aria-label": p.Z.Messages.DISMISS,
-      children: (0, n.jsx)(a.CircleXIcon, {
+      "aria-label": E.Z.Messages.DISMISS,
+      children: (0, r.jsx)(l.CircleXIcon, {
         size: "xs",
         color: "currentColor"
       })
@@ -77,80 +77,80 @@ function T(e) {
   })
 }
 
-function j(e) {
+function T(e) {
   let {
-    guild: s
-  } = e, t = (0, u.RF)(s.id, "guild_shop_category_selector"), {
-    selectedTab: r,
+    guild: t
+  } = e, n = (0, u.RF)(t.id, "guild_shop_category_selector"), {
+    selectedTab: s,
     setSelectedTab: i,
-    categoryTabs: j,
-    handlePreviewDismiss: g
-  } = (0, _.m)(), v = "false" === o.K.get(E.Hr, "false"), P = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), O = j.map(e => {
+    categoryTabs: T,
+    handlePreviewDismiss: v
+  } = (0, _.m)(), R = "false" === a.K.get(h.Hr, "false"), j = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), P = T.map(e => {
     switch (e) {
       case x.y.GUILD_PRODUCTS:
-        return (0, n.jsx)(T, {
-          icon: (0, n.jsx)(I.Z, {
+        return (0, r.jsx)(g, {
+          icon: (0, r.jsx)(f.Z, {
             width: 20,
             height: 20
           }),
-          title: p.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
-          body: p.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_BODY,
-          selected: r === x.y.GUILD_PRODUCTS,
+          title: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
+          body: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_BODY,
+          selected: s === x.y.GUILD_PRODUCTS,
           onClick: () => i(x.y.GUILD_PRODUCTS)
         }, e);
       case x.y.GUILD_ROLE_SUBSCRIPTIONS:
-        return (0, n.jsx)(T, {
-          icon: (0, n.jsx)(h.Z, {
+        return (0, r.jsx)(g, {
+          icon: (0, r.jsx)(I.Z, {
             width: 20,
             height: 20
           }),
-          title: p.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-          body: t ? p.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY_AFTER_CONSOLIDATION : p.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY.format({
-            openRoleSubPage: () => (0, C.uL)(m.Z5c.CHANNEL(s.id, S.oC.ROLE_SUBSCRIPTIONS))
+          title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+          body: n ? E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY_AFTER_CONSOLIDATION : E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY.format({
+            openRoleSubPage: () => (0, C.uL)(m.Z5c.CHANNEL(t.id, L.oC.ROLE_SUBSCRIPTIONS))
           }),
-          disabled: !t,
-          selected: r === x.y.GUILD_ROLE_SUBSCRIPTIONS,
+          disabled: !n,
+          selected: s === x.y.GUILD_ROLE_SUBSCRIPTIONS,
           onClick: () => i(x.y.GUILD_ROLE_SUBSCRIPTIONS)
         }, e);
       case x.y.GUILD_PRODUCTS_PREVIEW:
-        return (0, n.jsx)(T, {
-          icon: v ? (0, n.jsx)("img", {
-            src: P ? (0, d.b)("server_products/storefront/question-mark.png") : (0, d.b)("server_products/storefront/question-mark.gif"),
-            className: R.questionMark,
+        return (0, r.jsx)(g, {
+          icon: R ? (0, r.jsx)("img", {
+            src: j ? (0, d.b)("server_products/storefront/question-mark.png") : (0, d.b)("server_products/storefront/question-mark.gif"),
+            className: S.questionMark,
             alt: ""
-          }) : (0, n.jsx)(a.GiftIcon, {
+          }) : (0, r.jsx)(l.GiftIcon, {
             size: "custom",
             color: "currentColor",
             width: 20,
             height: 20
           }),
-          title: p.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
-          body: p.Z.Messages.GUILD_STORE_PREVIEW_TAB_SELECTOR_BODY,
-          selected: r === x.y.GUILD_PRODUCTS_PREVIEW,
+          title: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
+          body: E.Z.Messages.GUILD_STORE_PREVIEW_TAB_SELECTOR_BODY,
+          selected: s === x.y.GUILD_PRODUCTS_PREVIEW,
           onClick: () => {
-            i(x.y.GUILD_PRODUCTS_PREVIEW), o.K.set(E.Hr, "true")
+            i(x.y.GUILD_PRODUCTS_PREVIEW), a.K.set(h.Hr, "true")
           },
-          onPreviewDismiss: g,
-          isNew: v
+          onPreviewDismiss: v,
+          isNew: R
         }, e);
       default:
         return null
     }
   });
-  return (0, n.jsxs)("div", {
-    className: R.container,
-    children: [(0, n.jsx)(a.Heading, {
+  return (0, r.jsxs)("div", {
+    className: S.container,
+    children: [(0, r.jsx)(l.Heading, {
       variant: "heading-sm/bold",
-      className: R.header,
-      children: p.Z.Messages.GUILD_SHOP_SUPPORT_SERVER_HEADER
-    }), (0, n.jsx)(a.Spacer, {
+      className: S.header,
+      children: E.Z.Messages.GUILD_SHOP_SUPPORT_SERVER_HEADER
+    }), (0, r.jsx)(l.Spacer, {
       size: 12
-    }), (0, n.jsxs)("div", {
-      className: R.filters,
-      children: [(0, n.jsx)("div", {
-        className: R.tabs,
-        children: O
-      }), r === x.y.GUILD_PRODUCTS && (0, n.jsx)(L.Z, {})]
+    }), (0, r.jsxs)("div", {
+      className: S.filters,
+      children: [(0, r.jsx)("div", {
+        className: S.tabs,
+        children: P
+      }), s === x.y.GUILD_PRODUCTS && (0, r.jsx)(p.Z, {})]
     })]
   })
 }

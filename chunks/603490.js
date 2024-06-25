@@ -3,11 +3,11 @@ n.d(t, {
     return d
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(873546),
-  s = n(481060),
-  a = n(130402),
+var a = n(873546),
+  l = n(481060),
+  s = n(130402),
   r = n(404975),
   o = n(185923),
   c = n(689938),
@@ -19,30 +19,30 @@ function d(e) {
     message: n,
     togglePopout: d,
     renderEmojiPicker: h,
-    shouldShow: m
+    shouldShow: p
   } = e;
-  return (0, l.jsx)(s.Popout, {
+  return (0, i.jsx)(l.Popout, {
     renderPopout: e => {
       let {
-        closePopout: l
+        closePopout: i
       } = e;
-      return h(t, n, l, !1)
+      return h(t, n, i, !1)
     },
-    shouldShow: m,
+    shouldShow: p,
     onRequestClose: d,
-    position: i.tq ? "top" : "left",
-    align: i.tq ? "center" : "top",
+    position: a.tq ? "top" : "left",
+    align: a.tq ? "center" : "top",
     children: (e, t) => {
       let {
         onClick: n,
-        ...i
+        ...a
       } = e, {
         isShown: h
       } = t;
-      return (0, l.jsx)(s.Tooltip, {
+      return (0, i.jsx)(l.Tooltip, {
         disableTooltipPointerEvents: !1,
         text: c.Z.Messages.ADD_REACTION,
-        color: s.TooltipColors.PRIMARY,
+        color: l.TooltipColors.PRIMARY,
         "aria-label": c.Z.Messages.ADD_REACTION,
         hideOnClick: !0,
         tooltipClassName: u.tooltip,
@@ -50,20 +50,20 @@ function d(e) {
           let {
             onMouseEnter: t,
             onMouseLeave: n,
-            onClick: m
+            onClick: p
           } = e;
-          return (0, l.jsx)(r.zx, {
+          return (0, i.jsx)(r.zx, {
             onMouseEnter: () => {
-              null == t || t(), (0, a.x)(o.qR.MessageContextMenuMouseEntered)
+              null == t || t(), (0, s.x)(o.qR.MessageContextMenuMouseEntered)
             },
             onMouseLeave: n,
             onClick: () => {
-              d(), null == m || m()
+              d(), null == p || p()
             },
             "aria-label": c.Z.Messages.ADD_REACTION,
             selected: h,
-            ...i,
-            children: (0, l.jsx)(s.ReactionIcon, {
+            ...a,
+            children: (0, i.jsx)(l.ReactionIcon, {
               size: "sm",
               color: "currentColor",
               className: u.icon

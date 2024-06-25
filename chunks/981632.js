@@ -1,50 +1,50 @@
 n.d(t, {
   Z: function() {
-    return _
+    return u
   }
 }), n(47120), n(411104);
-var r = n(735250),
-  a = n(470079),
-  s = n(442837),
-  u = n(481060),
-  l = n(607070),
-  i = n(409302),
-  E = n(474936);
+var a = n(735250),
+  r = n(470079),
+  i = n(442837),
+  l = n(481060),
+  s = n(607070),
+  d = n(409302),
+  o = n(474936);
 
-function _(e) {
+function u(e) {
   let {
     giftStyle: t,
     className: n,
-    shouldAnimate: _ = !0,
+    shouldAnimate: u = !0,
     defaultAnimationState: c,
-    idleAnimationState: O
-  } = e, C = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), [A, d] = a.useState(c), o = a.useRef((0, i._)(t, A)), [N, I] = a.useState(null == O), [f, R] = a.useState(!1), [L, P] = a.useState(-1), h = () => {
-    o.current = (0, i._)(t, A), P(e => e + 1)
-  }, S = () => {
-    I(!1), R(!0), P(-1), d(c)
+    idleAnimationState: f
+  } = e, h = (0, i.e7)([s.Z], () => s.Z.useReducedMotion), [m, _] = r.useState(c), b = r.useRef((0, d._)(t, m)), [g, p] = r.useState(null == f), [k, x] = r.useState(!1), [C, E] = r.useState(-1), S = () => {
+    b.current = (0, d._)(t, m), E(e => e + 1)
+  }, O = () => {
+    p(!1), x(!0), E(-1), _(c)
   };
-  a.useEffect(() => {
-    null == O && d(c)
-  }, [O, c]), a.useEffect(() => {
-    if (null != O && L >= 0) {
-      S();
+  r.useEffect(() => {
+    null == f && _(c)
+  }, [f, c]), r.useEffect(() => {
+    if (null != f && C >= 0) {
+      O();
       return
     }
-    h()
-  }, [t, O]), a.useEffect(() => {
-    (!f || null == O) && h()
-  }, [A]), a.useEffect(() => {
-    f && (I(null == O), R(!1), h())
-  }, [f]);
-  if (!E.Cj.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
-  return (0, r.jsx)(u.LottieAnimation, {
-    importData: o.current,
-    shouldAnimate: !C && _,
+    S()
+  }, [t, f]), r.useEffect(() => {
+    (!k || null == f) && S()
+  }, [m]), r.useEffect(() => {
+    k && (p(null == f), x(!1), S())
+  }, [k]);
+  if (!o.Cj.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
+  return (0, a.jsx)(l.LottieAnimation, {
+    importData: b.current,
+    shouldAnimate: !h && u,
     className: n,
-    versionKey: L,
-    onComplete: null != O ? () => {
-      null != O && (d(O), I(!0))
+    versionKey: C,
+    onComplete: null != f ? () => {
+      null != f && (_(f), p(!0))
     } : void 0,
-    loop: N
+    loop: g
   })
 }

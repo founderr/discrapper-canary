@@ -1,29 +1,29 @@
-l.d(n, {
+n.d(t, {
   Z: function() {
     return o
   }
 });
-var t = l(735250);
-l(470079);
-var i = l(481060),
-  a = l(239091),
-  s = l(299206),
-  r = l(689938);
+var i = n(735250);
+n(470079);
+var a = n(481060),
+  l = n(239091),
+  s = n(299206),
+  r = n(689938);
 
 function o(e) {
   let {
-    application: n,
-    onSelect: l
+    application: t,
+    onSelect: n
   } = e, o = (0, s.Z)({
-    id: n.id,
+    id: t.id,
     label: r.Z.Messages.COPY_ID
   });
-  return (0, t.jsx)(i.Menu, {
+  return (0, i.jsx)(a.Menu, {
     navId: "activity-shelf-item-context",
-    onClose: a.Zy,
+    onClose: l.Zy,
     "aria-label": r.Z.Messages.ACTIVITY_SHELF_ITEM_ACTIONS_MENU_LABEL,
-    onSelect: l,
-    children: (0, t.jsx)(i.MenuGroup, {
+    onSelect: n,
+    children: (0, i.jsx)(a.MenuGroup, {
       children: o
     }, "developer-actions")
   })

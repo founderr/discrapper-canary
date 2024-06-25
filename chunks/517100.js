@@ -9,70 +9,70 @@ var i, r, s, o, a = n(442837),
   I = n(314897),
   T = n(981631),
   h = n(65154);
-let S = Date.now(),
-  f = !1,
-  N = !1,
+let f = Date.now(),
+  S = !1,
   A = !1,
+  N = !1,
   m = !1,
   O = !1;
 
-function R() {
-  return A || m || (0, E.isAndroid)() && O
+function p() {
+  return N || m || (0, E.isAndroid)() && O
 }
 
-function p() {
-  Date.now() - S > T.OSm || R() ? f || l.Z.dispatch({
+function R() {
+  Date.now() - f > T.OSm || p() ? S || l.Z.dispatch({
     type: "IDLE",
     idle: !0,
-    idleSince: S
-  }) : f && l.Z.dispatch({
+    idleSince: f
+  }) : S && l.Z.dispatch({
     type: "IDLE",
     idle: !1
-  }), Date.now() - S > Math.min(c.CM.getSetting() * d.Z.Millis.SECOND, T.OSm) || R() ? N || l.Z.dispatch({
+  }), Date.now() - f > Math.min(c.CM.getSetting() * d.Z.Millis.SECOND, T.OSm) || p() ? A || l.Z.dispatch({
     type: "AFK",
     afk: !0
-  }) : N && l.Z.dispatch({
+  }) : A && l.Z.dispatch({
     type: "AFK",
     afk: !1
   })
 }!__OVERLAY__ && (E.isPlatformEmbedded && (null === _.Z || void 0 === _.Z ? void 0 : _.Z.remotePowerMonitor) != null ? (! function e() {
   var t;
   let n = t => {
-    S = Math.max(Date.now() - t, S), p(), setTimeout(e, 10 * d.Z.Millis.SECOND)
+    f = Math.max(Date.now() - t, f), R(), setTimeout(e, 10 * d.Z.Millis.SECOND)
   };
   if ((null === _.Z || void 0 === _.Z ? void 0 : null === (t = _.Z.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
     let e = _.Z.remotePowerMonitor.getSystemIdleTimeMs();
     e instanceof Promise ? e.then(n) : n(e)
   }
 }(), _.Z.remotePowerMonitor.on("resume", () => {
-  A = !1, g({})
+  N = !1, g({})
 }), _.Z.remotePowerMonitor.on("suspend", () => {
-  A = !0, g({}), u.default.disconnect()
+  N = !0, g({}), u.default.disconnect()
 }), _.Z.remotePowerMonitor.on("lock-screen", () => {
   m = !0, g({})
 }), _.Z.remotePowerMonitor.on("unlock-screen", () => {
   m = !1, g({})
-})) : setInterval(p, .25 * T.OSm));
+})) : setInterval(R, .25 * T.OSm));
 
 function g(e) {
   let {
     timestamp: t,
     type: n
   } = e, i = "OVERLAY_SET_NOT_IDLE" === n && null != t;
-  return (!i || !(t <= S)) && (S = i ? t : Date.now(), __OVERLAY__ ? l.Z.dispatch({
+  return (!i || !(t <= f)) && (f = i ? t : Date.now(), __OVERLAY__ ? l.Z.dispatch({
     type: "OVERLAY_SET_NOT_IDLE",
-    timestamp: S
-  }) : p(), !1)
+    timestamp: f
+  }) : R(), !1)
 }
 class C extends(o = a.ZP.Store) {
   isIdle() {
-    return f
+    return S
   }
   isAFK() {
-    return N
+    return A
   }
   getIdleSince() {
-    return f ? S : null
+    return S ? f : null
   }
 }
 s = "IdleStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
@@ -82,10 +82,10 @@ s = "IdleStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
   writable: !0
 }) : i[r] = s, t.Z = new C(l.Z, {
   IDLE: function(e) {
-    f = e.idle
+    S = e.idle
   },
   AFK: function(e) {
-    N = e.afk
+    A = e.afk
   },
   SPEAKING: function(e) {
     let {
@@ -98,7 +98,7 @@ s = "IdleStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
     let {
       state: t
     } = e;
-    return O = t === T.$7l.BACKGROUND, S = Date.now(), p(), !1
+    return O = t === T.$7l.BACKGROUND, f = Date.now(), R(), !1
   },
   OVERLAY_SET_NOT_IDLE: g,
   CHANNEL_SELECT: g,

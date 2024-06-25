@@ -5,10 +5,10 @@ n.r(e), n.d(e, {
 }), n(757143);
 var o = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(153124),
-  r = n(988158),
-  l = n(689938),
+var a = n(481060),
+  s = n(153124),
+  l = n(988158),
+  r = n(689938),
   i = n(578590);
 
 function c(t) {
@@ -17,81 +17,81 @@ function c(t) {
     trustUrl: n,
     isProtocol: c,
     onConfirm: d,
-    onClose: u,
-    transitionState: _
-  } = t, x = (0, a.Dt)(), {
-    protocol: m,
-    hostname: M,
-    theRestOfTheUrl: h,
-    shouldTrustUrl: E,
-    setShouldTrustUrl: T,
-    handleConfirm: R
-  } = (0, r.X)({
+    onClose: _,
+    transitionState: u
+  } = t, x = (0, s.Dt)(), {
+    protocol: h,
+    hostname: m,
+    theRestOfTheUrl: M,
+    shouldTrustUrl: T,
+    setShouldTrustUrl: E,
+    handleConfirm: C
+  } = (0, l.X)({
     url: e,
     trustUrl: n,
     onConfirm: d,
-    onClose: u
+    onClose: _
   });
-  return (0, o.jsxs)(s.ModalRoot, {
-    size: s.ModalSize.DYNAMIC,
-    transitionState: _,
+  return (0, o.jsxs)(a.ModalRoot, {
+    size: a.ModalSize.DYNAMIC,
+    transitionState: u,
     "aria-labelledby": x,
-    children: [(0, o.jsxs)(s.ModalContent, {
-      children: [(0, o.jsx)(s.Heading, {
+    children: [(0, o.jsxs)(a.ModalContent, {
+      children: [(0, o.jsx)(a.Heading, {
         id: x,
         variant: "heading-xl/bold",
         className: i.title,
-        children: l.Z.Messages.MASKED_LINK_ALERT_V2_HEADER
-      }), (0, o.jsx)(s.Text, {
+        children: r.Z.Messages.MASKED_LINK_ALERT_V2_HEADER
+      }), (0, o.jsx)(a.Text, {
         className: i.warningText,
         variant: "text-md/normal",
-        children: c ? l.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_PROTOCOL.format({}) : l.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_WEBSITE
-      }), (0, o.jsxs)(s.Scroller, {
+        children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_PROTOCOL.format({}) : r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_WEBSITE
+      }), (0, o.jsxs)(a.Scroller, {
         className: i.linkCalloutContainer,
-        children: [(0, o.jsxs)(s.Text, {
+        children: [(0, o.jsxs)(a.Text, {
           tag: "span",
           variant: c ? "text-md/semibold" : "text-md/normal",
           color: c ? "text-normal" : "text-muted",
-          children: [m, "//"]
-        }), (0, o.jsx)(s.Text, {
+          children: [h, "//"]
+        }), (0, o.jsx)(a.Text, {
           tag: "span",
           variant: c ? "text-md/normal" : "text-md/semibold",
           color: c ? "text-muted" : "text-normal",
-          children: M
-        }), (0, o.jsx)(s.Text, {
+          children: m
+        }), (0, o.jsx)(a.Text, {
           tag: "span",
           variant: "text-md/normal",
           color: "text-muted",
-          children: h
+          children: M
         })]
-      }), (0, o.jsx)(s.Checkbox, {
+      }), (0, o.jsx)(a.Checkbox, {
         className: i.checkbox,
-        type: s.Checkbox.Types.INVERTED,
-        value: E,
-        onChange: (t, e) => T(e),
-        children: (0, o.jsx)(s.Text, {
+        type: a.Checkbox.Types.INVERTED,
+        value: T,
+        onChange: (t, e) => E(e),
+        children: (0, o.jsx)(a.Text, {
           variant: "text-sm/normal",
-          children: c ? l.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_PROTOCOL.format({
-            protocol: m.replace(":", "")
-          }) : l.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_WEBSITE.format({
-            domain: M
+          children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_PROTOCOL.format({
+            protocol: h.replace(":", "")
+          }) : r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_WEBSITE.format({
+            domain: m
           })
         })
       })]
-    }), (0, o.jsxs)(s.ModalFooter, {
-      children: [(0, o.jsx)(s.Button, {
+    }), (0, o.jsxs)(a.ModalFooter, {
+      children: [(0, o.jsx)(a.Button, {
         type: "button",
-        size: s.Button.Sizes.MEDIUM,
-        color: s.Button.Colors.BRAND,
-        onClick: R,
-        children: c ? l.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_PROTOCOL : l.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_WEBSITE
-      }), (0, o.jsx)(s.Button, {
+        size: a.Button.Sizes.MEDIUM,
+        color: a.Button.Colors.BRAND,
+        onClick: C,
+        children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_PROTOCOL : r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_WEBSITE
+      }), (0, o.jsx)(a.Button, {
         type: "button",
-        size: s.Button.Sizes.MEDIUM,
-        color: s.Button.Colors.PRIMARY,
-        onClick: u,
-        look: s.ButtonLooks.LINK,
-        children: l.Z.Messages.GO_BACK
+        size: a.Button.Sizes.MEDIUM,
+        color: a.Button.Colors.PRIMARY,
+        onClick: _,
+        look: a.ButtonLooks.LINK,
+        children: r.Z.Messages.GO_BACK
       })]
     })]
   })

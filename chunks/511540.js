@@ -1,6 +1,6 @@
-n.d(t, {
+n.d(e, {
   c: function() {
-    return l
+    return c
   }
 }), n(47120);
 var a = n(470079),
@@ -8,27 +8,27 @@ var a = n(470079),
   o = n(828878),
   s = n(689938);
 
-function l(e, t, n) {
-  let [l, u] = a.useState(!1), [i, c] = a.useState(null), d = a.useCallback(async () => {
+function c(t, e, n) {
+  let [c, u] = a.useState(!1), [l, i] = a.useState(null), d = a.useCallback(async () => {
     try {
       u(!0);
-      let n = await (0, r.tV)(e);
-      u(!1), t({
-        userCode: e,
+      let n = await (0, r.tV)(t);
+      u(!1), e({
+        userCode: t,
         clientId: n.body.client_id,
         scopes: n.body.scopes,
         twoWayLinkCode: n.body.two_way_link_code
       })
-    } catch (e) {
+    } catch (t) {
       var a;
-      c(429 === (a = null == e ? void 0 : e.status) ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT : 404 === a || 400 === a ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE : s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN), u(!1), (null == e ? void 0 : e.status) === 401 && n()
+      i(429 === (a = null == t ? void 0 : t.status) ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT : 404 === a || 400 === a ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE : s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN), u(!1), (null == t ? void 0 : t.status) === 401 && n()
     }
-  }, [e, t, n]);
+  }, [t, e, n]);
   return a.useEffect(() => {
-    e.length === o.A.USER_CODE_LENGTH ? d() : c(null)
-  }, [e, d]), {
+    t.length === o.A.USER_CODE_LENGTH ? d() : i(null)
+  }, [t, d]), {
     manualSubmit: d,
-    error: i,
-    submitting: l
+    error: l,
+    submitting: c
   }
 }

@@ -22,14 +22,14 @@ var i, r, s = n(735250),
   I = n(318661),
   T = n(792125),
   h = n(783097),
-  S = n(695676),
-  f = n(176412),
-  N = n(753972),
-  A = n(231338),
+  f = n(695676),
+  S = n(176412),
+  A = n(753972),
+  N = n(231338),
   m = n(689938),
   O = n(599632);
 
-function R(e) {
+function p(e) {
   let {
     application: t,
     look: n = "large_banner",
@@ -43,11 +43,11 @@ function R(e) {
     description: I
   } = o.useMemo(() => (0, h.sl)(t, {
     botIconFirst: !0
-  }), [t]), S = (0, E.ZP)(c, "");
+  }), [t]), f = (0, E.ZP)(c, "");
   return "icon" === n ? (0, s.jsx)(u.Clickable, {
     className: l()(O.container, O.iconCard),
     onClick: r,
-    children: null != c && (0, s.jsx)(N.Z, {
+    children: null != c && (0, s.jsx)(A.Z, {
       src: c,
       className: O.iconCard,
       "aria-hidden": !0
@@ -62,14 +62,14 @@ function R(e) {
       }),
       children: [(0, s.jsx)("span", {
         className: a,
-        children: (0, s.jsx)(p, {
+        children: (0, s.jsx)(R, {
           application: t,
-          fallbackColor: S
+          fallbackColor: f
         })
       }), i && (0, s.jsx)("div", {
         className: O.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, T.Q)(A.BR.DARK),
+          className: (0, T.Q)(N.BR.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
           children: m.Z.Messages.APP_DIRECTORY_PARTNER
@@ -80,7 +80,7 @@ function R(e) {
       }) : null]
     }), (0, s.jsxs)("div", {
       className: O.appDetailsContainer,
-      children: [null != c && (0, s.jsx)(N.Z, {
+      children: [null != c && (0, s.jsx)(A.Z, {
         src: c,
         className: O.icon,
         "aria-hidden": !0
@@ -102,7 +102,7 @@ function R(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     application: t,
     fallbackColor: n
@@ -158,12 +158,12 @@ function C(e) {
 function v(e) {
   let {
     pushHistory: t
-  } = (0, S.hH)();
-  return (0, s.jsx)(R, {
+  } = (0, f.hH)();
+  return (0, s.jsx)(p, {
     ...e,
     onClick: n => {
       n.stopPropagation(), t({
-        type: S.gc.APPLICATION,
+        type: f.gc.APPLICATION,
         application: e.application
       })
     }
@@ -183,12 +183,12 @@ function L(e) {
     activityAction: a,
     buttonColor: l,
     buttonText: c
-  } = (0, f.P)(t, n, i);
-  return a === _.JS.START ? (0, s.jsx)(R, {
+  } = (0, S.P)(t, n, i);
+  return a === _.JS.START ? (0, s.jsx)(p, {
     ...r,
     application: n,
     onClick: o
-  }) : (0, s.jsx)(R, {
+  }) : (0, s.jsx)(p, {
     ...r,
     application: n,
     onClick: e => {

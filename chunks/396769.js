@@ -3,11 +3,11 @@ n.d(t, {
     return r
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(285952),
-  a = n(701612);
+var a = n(481060),
+  l = n(285952),
+  s = n(701612);
 
 function r(e) {
   let {
@@ -15,17 +15,17 @@ function r(e) {
     onClick: n,
     label: r
   } = e;
-  return (0, l.jsx)(i.Button, {
-    look: i.Button.Looks.BLANK,
-    size: i.Button.Sizes.MIN,
-    className: a.button,
+  return (0, i.jsx)(a.Button, {
+    look: a.Button.Looks.BLANK,
+    size: a.Button.Sizes.MIN,
+    className: s.button,
     onClick: n,
-    children: (0, l.jsxs)(s.Z, {
-      align: s.Z.Align.CENTER,
-      children: [(0, l.jsx)("div", {
-        className: a.buttonIcon,
+    children: (0, i.jsxs)(l.Z, {
+      align: l.Z.Align.CENTER,
+      children: [(0, i.jsx)("div", {
+        className: s.buttonIcon,
         children: t
-      }), (0, l.jsx)(i.Text, {
+      }), (0, i.jsx)(a.Text, {
         variant: "text-md/normal",
         color: "none",
         children: r

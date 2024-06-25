@@ -1,96 +1,96 @@
-t.r(n), t.d(n, {
+o.r(n), o.d(n, {
   default: function() {
-    return h
+    return _
   },
   openInteractionModal: function() {
-    return f
+    return m
   }
 });
-var l = t(735250);
-t(470079);
-var i = t(481060),
-  o = t(474333),
-  r = t(154921),
-  a = t(970184),
-  s = t(471073),
-  u = t(293979),
-  d = t(954654),
-  c = t(689938),
-  p = t(975701);
+var t = o(735250);
+o(470079);
+var i = o(481060),
+  a = o(474333),
+  r = o(154921),
+  l = o(970184),
+  d = o(471073),
+  c = o(293979),
+  s = o(954654),
+  u = o(689938),
+  f = o(975701);
 
-function h(e) {
+function _(e) {
   let {
     title: n,
-    onClose: t,
-    transitionState: h
+    onClose: o,
+    transitionState: _
   } = e, {
-    components: f,
-    applicationIconURL: I,
-    applicationName: m,
-    submissionState: g,
-    error: v,
+    components: m,
+    applicationIconURL: p,
+    applicationName: b,
+    submissionState: I,
+    error: h,
     validators: C,
-    onSubmit: S
-  } = (0, u.X9)(e, t);
-  return (0, l.jsx)("form", {
+    onSubmit: g
+  } = (0, c.X9)(e, o);
+  return (0, t.jsx)("form", {
     onSubmit: e => {
-      e.preventDefault(), S()
+      e.preventDefault(), g()
     },
-    children: (0, l.jsxs)(i.ModalRoot, {
-      transitionState: h,
-      children: [(0, l.jsxs)(i.ModalHeader, {
+    children: (0, t.jsxs)(i.ModalRoot, {
+      transitionState: _,
+      children: [(0, t.jsxs)(i.ModalHeader, {
         separator: !1,
-        children: [(0, l.jsx)(i.Avatar, {
-          src: I,
+        children: [(0, t.jsx)(i.Avatar, {
+          src: p,
           size: i.AvatarSizes.SIZE_24,
-          "aria-label": m,
-          className: p.applicationIcon
-        }), (0, l.jsx)(r.Z, {
+          "aria-label": b,
+          className: f.applicationIcon
+        }), (0, t.jsx)(r.Z, {
           color: r.Z.Colors.HEADER_PRIMARY,
           size: r.Z.Sizes.SIZE_24,
           children: n
-        }), (0, l.jsx)(i.ModalCloseButton, {
-          onClick: t,
-          className: p.closeButton
+        }), (0, t.jsx)(i.ModalCloseButton, {
+          onClick: o,
+          className: f.closeButton
         })]
-      }), (0, l.jsxs)(i.ModalContent, {
-        children: [null != v && "" !== v ? (0, l.jsx)(o.Z, {
-          messageType: o.Q.ERROR,
-          className: p.submissionWarning,
-          children: v
-        }) : null, (0, l.jsx)(o.Z, {
-          messageType: o.Q.WARNING,
-          className: p.submissionWarning,
-          children: c.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
-            applicationName: m
+      }), (0, t.jsxs)(i.ModalContent, {
+        children: [null != h && "" !== h ? (0, t.jsx)(a.Z, {
+          messageType: a.Q.ERROR,
+          className: f.submissionWarning,
+          children: h
+        }) : null, (0, t.jsx)(a.Z, {
+          messageType: a.Q.WARNING,
+          className: f.submissionWarning,
+          children: u.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
+            applicationName: b
           })
-        }), (0, l.jsx)(i.FormSection, {
-          children: (0, l.jsx)(a.Il, {
+        }), (0, t.jsx)(i.FormSection, {
+          children: (0, t.jsx)(l.Il, {
             modal: e,
             validators: C,
-            children: (0, d.xX)(f)
+            children: (0, s.xX)(m)
           })
         })]
-      }), (0, l.jsxs)(i.ModalFooter, {
-        children: [(0, l.jsx)(i.Button, {
+      }), (0, t.jsxs)(i.ModalFooter, {
+        children: [(0, t.jsx)(i.Button, {
           type: "submit",
           color: i.Button.Colors.BRAND,
           size: i.Button.Sizes.MEDIUM,
-          submitting: g === s.i.IN_FLIGHT,
-          children: c.Z.Messages.SUBMIT
-        }), (0, l.jsx)(i.Button, {
+          submitting: I === d.i.IN_FLIGHT,
+          children: u.Z.Messages.SUBMIT
+        }), (0, t.jsx)(i.Button, {
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,
-          onClick: t,
-          children: c.Z.Messages.CANCEL
+          onClick: o,
+          children: u.Z.Messages.CANCEL
         })]
       })]
     })
   })
 }
 
-function f(e) {
-  (0, i.openModal)(n => (0, l.jsx)(h, {
+function m(e) {
+  (0, i.openModal)(n => (0, t.jsx)(_, {
     ...n,
     ...e
   }))

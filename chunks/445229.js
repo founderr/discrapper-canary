@@ -1,30 +1,30 @@
 a.d(t, {
   Z: function() {
-    return h
+    return b
   }
 });
 var n = a(735250),
   l = a(470079),
-  r = a(120356),
-  i = a.n(r),
-  s = a(442837),
-  o = a(481060),
+  i = a(120356),
+  r = a.n(i),
+  o = a(442837),
+  s = a(481060),
   u = a(99690),
   d = a(594174),
   c = a(823379),
   m = a(5192),
-  v = a(689938),
-  f = a(396458);
+  p = a(689938),
+  v = a(396458);
 
-function p(e) {
+function f(e) {
   let {
     user: t
   } = e, a = m.ZP.useName(null, null, t);
   return (0, n.jsxs)("div", {
-    className: f.userItem,
+    className: v.userItem,
     children: [(0, n.jsx)(u.Z, {
       user: t
-    }), (0, n.jsx)(o.Text, {
+    }), (0, n.jsx)(s.Text, {
       color: "header-primary",
       variant: "text-sm/medium",
       children: a
@@ -32,42 +32,42 @@ function p(e) {
   })
 }
 
-function h(e) {
+function b(e) {
   let {
     clip: t,
     className: a
-  } = e, r = (0, s.Wu)([d.default], () => t.users.map(d.default.getUser).filter(c.lm)), u = l.useCallback(e => {
+  } = e, i = (0, o.Wu)([d.default], () => t.users.map(d.default.getUser).filter(c.lm)), u = l.useCallback(e => {
     let {
       row: t
-    } = e, a = r[t];
-    return null == a ? null : (0, n.jsx)(p, {
+    } = e, a = i[t];
+    return null == a ? null : (0, n.jsx)(f, {
       user: a
     }, t)
-  }, [r]);
+  }, [i]);
   return (0, n.jsxs)("div", {
-    className: i()(a, f.root),
+    className: r()(a, v.root),
     children: [(0, n.jsx)("div", {
-      className: f.__invalid_header,
-      children: (0, n.jsxs)(o.FormTitle, {
-        className: f.title,
-        children: [v.Z.Messages.CLIPS_EDIT_USER_LIST_TITLE, (0, n.jsxs)("div", {
-          className: f.userCountPill,
-          children: [(0, n.jsx)(o.Text, {
+      className: v.__invalid_header,
+      children: (0, n.jsxs)(s.FormTitle, {
+        className: v.title,
+        children: [p.Z.Messages.CLIPS_EDIT_USER_LIST_TITLE, (0, n.jsxs)("div", {
+          className: v.userCountPill,
+          children: [(0, n.jsx)(s.Text, {
             color: "text-normal",
             variant: "text-xs/medium",
-            children: r.length
-          }), (0, n.jsx)(o.FriendsIcon, {
+            children: i.length
+          }), (0, n.jsx)(s.FriendsIcon, {
             size: "xs",
             color: "currentColor",
-            className: f.userCountIcon
+            className: v.userCountIcon
           })]
         })]
       })
-    }), (0, n.jsx)(o.List, {
-      className: f.__invalid_userList,
+    }), (0, n.jsx)(s.List, {
+      className: v.__invalid_userList,
       sectionHeight: 0,
       rowHeight: 40,
-      sections: [r.length],
+      sections: [i.length],
       renderRow: u
     })]
   })

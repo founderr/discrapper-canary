@@ -4,7 +4,7 @@ n.d(t, {
     return V
   },
   Rc: function() {
-    return x
+    return B
   },
   W1: function() {
     return H
@@ -40,7 +40,7 @@ n.d(t, {
     return D
   },
   xc: function() {
-    return B
+    return x
   }
 });
 var i = n(512722),
@@ -57,14 +57,14 @@ var i = n(512722),
   I = n(592125),
   T = n(430824),
   h = n(944486),
-  S = n(979651),
-  f = n(934415),
-  N = n(70956),
-  A = n(557457),
+  f = n(979651),
+  S = n(934415),
+  A = n(70956),
+  N = n(557457),
   m = n(573261),
   O = n(26151),
-  R = n(493683),
-  p = n(475179),
+  p = n(493683),
+  R = n(475179),
   g = n(287734),
   C = n(981631),
   v = n(70722);
@@ -91,7 +91,7 @@ function D(e, t) {
 
 function M(e, t) {
   let n = I.Z.getChannel(t);
-  return r()(null != n, "Cannot join a null voice channel"), !S.Z.isInChannel(t) && (0, f.rY)(n, S.Z, T.Z)
+  return r()(null != n, "Cannot join a null voice channel"), !f.Z.isInChannel(t) && (0, S.rY)(n, f.Z, T.Z)
 }
 
 function P(e, t) {
@@ -112,7 +112,7 @@ function P(e, t) {
     type: "STREAM_WATCH",
     streamKey: r,
     allowMultiple: s
-  }), !s && (null == t || !t.noFocus) && p.Z.selectParticipant(e.channelId, r)
+  }), !s && (null == t || !t.noFocus) && R.Z.selectParticipant(e.channelId, r)
 }
 
 function y(e, t) {
@@ -178,14 +178,14 @@ async function w(e, t, n) {
     })
   } catch (t) {
     let e;
-    429 === t.status && (e = t.body.retry_after * N.Z.Millis.SECOND), a.Z.dispatch({
+    429 === t.status && (e = t.body.retry_after * A.Z.Millis.SECOND), a.Z.dispatch({
       type: "STREAM_PREVIEW_FETCH_FAIL",
       streamKey: i,
       retryAfter: e
     })
   }
 }
-async function B(e) {
+async function x(e) {
   try {
     await m.Z.post({
       url: C.ANM.STREAM_NOTIFY(e),
@@ -197,8 +197,8 @@ async function B(e) {
   } catch (e) {}
 }
 
-function x(e) {
-  (0, A.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
+function B(e) {
+  (0, N.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })
@@ -234,7 +234,7 @@ function Z(e) {
       sourceId: i,
       sourceName: r
     }
-  }), null == t ? R.Z.createBroadcastPrivateChannel() : L(null, t, {
+  }), null == t ? p.Z.createBroadcastPrivateChannel() : L(null, t, {
     pid: n,
     sourceId: i,
     sourceName: r
@@ -245,7 +245,7 @@ function H(e, t) {
   let n = E.default.getId(),
     i = (0, u.my)(t),
     r = h.Z.getVoiceChannelId();
-  null != r && r !== e && g.default.disconnect(), R.Z.addRecipient(e, n, void 0, () => {
+  null != r && r !== e && g.default.disconnect(), p.Z.addRecipient(e, n, void 0, () => {
     O.Z.call(e, !1, !1, null, () => {
       U(i)
     })

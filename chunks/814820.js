@@ -1,74 +1,74 @@
 n.d(t, {
   f: function() {
-    return S
+    return p
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  s = n(442837),
+  l = n(481060),
   r = n(541716),
   o = n(419922),
   c = n(665906),
-  u = n(271383),
-  d = n(430824),
-  E = n(496675),
-  _ = n(594174),
+  d = n(271383),
+  u = n(430824),
+  _ = n(496675),
+  E = n(594174),
   I = n(838440),
-  T = n(779139),
-  m = n(981631),
-  N = n(689938),
-  h = n(18716);
-let C = e => {
+  m = n(779139),
+  T = n(981631),
+  h = n(689938),
+  N = n(18716);
+let f = e => {
     let {
       channel: t,
       message: n
-    } = e, [l, c] = i.useState(!1), u = (0, T.y6)(n.id), d = i.useCallback(() => {
+    } = e, [s, c] = a.useState(!1), d = (0, m.y6)(n.id), u = a.useCallback(() => {
       (0, I.v)({
         type: r.I.FORM,
         content: "",
         channel: t
       }).then(e => {
         let {
-          valid: s
+          valid: i
         } = e;
-        if (!!s)(0, T.TZ)(t, n, u.id)
+        if (!!i)(0, m.TZ)(t, n, d.id)
       })
-    }, [t, n, u]);
-    return (0, s.jsx)("div", {
-      className: h.welcomeCTA,
-      children: (0, s.jsxs)(a.Button, {
-        className: h.welcomeCTAButtonOuter,
-        innerClassName: h.welcomeCTAButton,
-        color: a.ButtonColors.PRIMARY,
+    }, [t, n, d]);
+    return (0, i.jsx)("div", {
+      className: N.welcomeCTA,
+      children: (0, i.jsxs)(l.Button, {
+        className: N.welcomeCTAButtonOuter,
+        innerClassName: N.welcomeCTAButton,
+        color: l.ButtonColors.PRIMARY,
         onMouseEnter: () => c(!0),
         onMouseLeave: () => c(!1),
-        onClick: d,
-        children: [(0, s.jsx)(o.ZP, {
-          className: h.welcomeCTASticker,
-          isInteracting: l,
-          sticker: u,
+        onClick: u,
+        children: [(0, i.jsx)(o.ZP, {
+          className: N.welcomeCTASticker,
+          isInteracting: s,
+          sticker: d,
           size: 28
-        }), N.Z.Messages.WELCOME_CTA_LABEL]
+        }), h.Z.Messages.WELCOME_CTA_LABEL]
       })
     })
   },
-  S = e => {
+  p = e => {
     let {
       message: t,
       channel: n
-    } = e, i = n.getGuildId(), a = (0, l.e7)([_.default, E.Z, d.Z, u.ZP], () => {
+    } = e, a = n.getGuildId(), l = (0, s.e7)([E.default, _.Z, u.Z, d.ZP], () => {
       var e;
-      let s = _.default.getCurrentUser(),
-        l = (0, c.xl)(n),
-        a = E.Z.can(m.Plq.SEND_MESSAGES, n),
-        r = null != i && null != s && (null === (e = u.ZP.getMember(i, s.id)) || void 0 === e ? void 0 : e.isPending),
+      let i = E.default.getCurrentUser(),
+        s = (0, c.xl)(n),
+        l = _.Z.can(T.Plq.SEND_MESSAGES, n),
+        r = null != a && null != i && (null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
-        I = d.Z.getGuild(i),
-        T = null != I && (I.systemChannelFlags & m.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-      return a && !l && !r && !o && T
+        I = u.Z.getGuild(a),
+        m = null != I && (I.systemChannelFlags & T.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+      return l && !s && !r && !o && m
     });
-    return null != i && a ? (0, s.jsx)(C, {
+    return null != a && l ? (0, i.jsx)(f, {
       message: t,
       channel: n
     }) : null

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 }), n(733860), n(653041), n(411104), n(47120);
 var i = n(512722),
@@ -26,8 +26,8 @@ function T(e, t, n) {
   }) : e[t] = n, e
 }
 let h = "RPC_STORE_WAIT",
-  S = [];
-class f {
+  f = [];
+class S {
   registerTransport(e) {
     e.on("connect", e => this.handleConnect(e)), e.on("request", (e, t) => this.handleRequest(e, t)), e.on("disconnect", (e, t) => this.handleDisconnect(e, t))
   }
@@ -170,7 +170,7 @@ class f {
   }
   dispatchToSubscriptions(e, t, n, i) {
     var r;
-    if (!(null != i && "" !== i && (r = i, S.includes(r) || (S.unshift(r), S.splice(50), 0)))) this.subscriptions.forEach(i => {
+    if (!(null != i && "" !== i && (r = i, f.includes(r) || (f.unshift(r), f.splice(50), 0)))) this.subscriptions.forEach(i => {
       var r, s, a;
       if (i.evt !== e) return;
       if (("function" != typeof t || !!t(i)) && ("object" != typeof t || (s = t, a = null !== (r = i.args) && void 0 !== r ? r : {}, !!o().isEqual(s, o().pick(a, Object.keys(s)))))) this.dispatch(i.socket, null, I.Etm.DISPATCH, i.evt, n)

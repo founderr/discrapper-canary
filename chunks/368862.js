@@ -19,7 +19,7 @@ function h(e) {
   } = e;
   return "includes_inactive:".concat(t)
 }
-class S extends(l = c.ZP.Store) {
+class f extends(l = c.ZP.Store) {
   getLastFetchTimeMs(e) {
     let {
       includesInactive: t
@@ -45,12 +45,12 @@ class S extends(l = c.ZP.Store) {
     })]
   }
 }
-o = void 0, (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
+o = void 0, (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new S(d.Z, {
+}) : r[s] = o, t.Z = new f(d.Z, {
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(e) {
     let {
       includesInactive: t

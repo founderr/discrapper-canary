@@ -1,42 +1,42 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return c
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(449226),
-  a = t(231338),
-  r = t(689938),
-  o = t(609191);
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(449226),
+  r = n(231338),
+  l = n(689938),
+  o = n(609191);
 
 function c(e) {
   let {
-    title: s,
-    details: t
+    title: t,
+    details: n
   } = e;
-  return (0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: o.simpleItemWrapper,
-    children: [(0, n.jsxs)("div", {
+    children: [(0, s.jsxs)("div", {
       className: o.itemContent,
-      children: [(0, n.jsx)(i.Heading, {
+      children: [(0, s.jsx)(a.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: s
-      }), "string" == typeof t ? (0, n.jsx)(i.Text, {
+        children: t
+      }), "string" == typeof n ? (0, s.jsx)(a.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: t
-      }) : t]
-    }), (0, n.jsx)(i.Tooltip, {
+        children: n
+      }) : n]
+    }), (0, s.jsx)(a.Tooltip, {
       tooltipContentClassName: o.tooltip,
-      text: r.Z.Messages.GUILD_SETTINGS_SAFETY_ON_BY_DEFAULT,
-      children: e => (0, n.jsx)(l.Z, {
+      text: l.Z.Messages.GUILD_SETTINGS_SAFETY_ON_BY_DEFAULT,
+      children: e => (0, s.jsx)(i.Z, {
         checked: !0,
         disabled: !0,
-        onChange: a.dG,
+        onChange: r.dG,
         className: o.bringToFront,
         tooltipProps: e
       })

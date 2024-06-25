@@ -4,10 +4,10 @@ n.d(t, {
     return I
   },
   E7: function() {
-    return f
+    return S
   },
   MV: function() {
-    return N
+    return A
   },
   b_: function() {
     return h
@@ -56,13 +56,13 @@ function T(e, t) {
   let T = u.Z.getChannel(a),
     h = null != T && T.isBroadcastChannel();
   if (null == T || i !== T.ownerId || !h) return;
-  let S = function(e) {
+  let f = function(e) {
     var t;
     let n = I(s.ZP.getGameForPID(e)),
       i = _.Z.getGameByName(n);
     return null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : "0"
   }(t);
-  null != S && ! function(e) {
+  null != f && ! function(e) {
     let t = l.default.getId(),
       n = l.default.getSessionId();
     null != t && null != n && r.Z.dispatch({
@@ -72,7 +72,7 @@ function T(e, t) {
   }({
     sessionId: E,
     userId: d,
-    applicationId: S,
+    applicationId: f,
     channelId: T.id,
     streamKey: e
   })
@@ -84,7 +84,7 @@ function h() {
   })
 }
 
-function S(e) {
+function f(e) {
   let t = {};
   e.forEach(e => {
     t[e] = -1
@@ -93,7 +93,7 @@ function S(e) {
     data: t
   })
 }
-async function f() {
+async function S() {
   let e = d.Z.getUserIdsToValidate();
   try {
     let t = await i.tn.get({
@@ -111,12 +111,12 @@ async function f() {
         type: "BROADCASTER_BUCKETS_RECEIVED",
         data: n
       })
-    } else S(e)
+    } else f(e)
   } catch (t) {
-    S(e)
+    f(e)
   }
 }
-async function N() {
+async function A() {
   let e = d.Z.getBroadcastsToValidateChannels().filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== e.length) try {
     let t = await i.tn.get({

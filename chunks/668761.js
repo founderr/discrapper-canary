@@ -10,10 +10,10 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(481060),
-  l = n(312839),
+  a = n(312839),
   o = n(556296),
-  a = n(454902),
-  r = n(13140),
+  r = n(454902),
+  l = n(13140),
   c = n(981631),
   d = n(987650),
   u = n(689938);
@@ -22,13 +22,13 @@ function h() {
   let {
     trackView: e,
     trackClick: t
-  } = (0, l.R)(d.n0.ClipsReminderNotification, {
+  } = (0, a.R)(d.n0.ClipsReminderNotification, {
     notif_type: d.n0.ClipsReminderNotification
   }), n = o.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
   if (null == n) return null;
-  let h = r.BB(n.shortcut, !0);
+  let h = l.BB(n.shortcut, !0);
   return {
-    colorScheme: a.IC.PRIMARY,
+    colorScheme: r.IC.PRIMARY,
     title: u.Z.Messages.CLIPS_REMINDER_NOTIFICATION_TITLE.format({
       keybind: h,
       keybindHook: () => (0, i.jsx)("span", {
@@ -57,11 +57,11 @@ function p(e) {
   let {
     trackView: t,
     trackClick: n
-  } = (0, l.R)(d.n0.ClipsNotification, {
+  } = (0, a.R)(d.n0.ClipsNotification, {
     notif_type: d.n0.ClipsNotification
   });
   return {
-    colorScheme: a.IC.PRIMARY,
+    colorScheme: r.IC.PRIMARY,
     title: e,
     icon: (0, i.jsx)(s.ClipsIcon, {
       size: "xs",

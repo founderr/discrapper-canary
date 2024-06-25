@@ -14,10 +14,10 @@ var i = n(735250),
   I = n(70956),
   T = n(36703),
   h = n(347312),
-  S = n(981631),
-  f = n(689938),
-  N = n(30157);
-let A = r.lazy(() => Promise.all([n.e("26460"), n.e("89792")]).then(n.bind(n, 711635)));
+  f = n(981631),
+  S = n(689938),
+  A = n(30157);
+let N = r.lazy(() => Promise.all([n.e("26460"), n.e("89792")]).then(n.bind(n, 711635)));
 
 function m(e) {
   let {
@@ -27,14 +27,14 @@ function m(e) {
   } = e, s = null == n ? "--:--" : t ? (0, c.yv)(Math.ceil(n - r)) : (0, c.yv)(Math.ceil(n));
   return (0, i.jsx)(l.Text, {
     variant: "text-sm/normal",
-    className: N.duration,
+    className: A.duration,
     tabularNumbers: !0,
     children: s
   })
 }
 t.Z = r.memo(function(e) {
-  var t, n, s, c, O, R;
-  let p, {
+  var t, n, s, c, O, p;
+  let R, {
       src: g,
       volume: C = 1,
       onVolumeChange: v,
@@ -48,7 +48,7 @@ t.Z = r.memo(function(e) {
       onError: G
     } = e,
     w = r.useRef(null),
-    [B, x] = r.useState(0),
+    [x, B] = r.useState(0),
     [k, V] = r.useState(M),
     [Z, H] = r.useState(!1),
     [F, Y] = r.useState(!1),
@@ -92,13 +92,13 @@ t.Z = r.memo(function(e) {
       W(!0)
     }, []),
     eu = r.useCallback(() => {
-      W(!1), B === k && ei()
-    }, [B, k, ei]),
+      W(!1), x === k && ei()
+    }, [x, k, ei]),
     e_ = r.useCallback(e => {
       let t = w.current;
       if (null == k || null == t) return;
       let n = e * k;
-      x(n), t.currentTime = n, z(!0), clearTimeout($.current), $.current = void 0
+      B(n), t.currentTime = n, z(!0), clearTimeout($.current), $.current = void 0
     }, [k]);
   r.useEffect(() => {
     !K && F && z(!0)
@@ -108,14 +108,14 @@ t.Z = r.memo(function(e) {
     if (K || F) {
       if (F) {
         var e, t;
-        ec.current = performance.now(), null == U || U(!1, B, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * I.Z.Millis.SECOND)
+        ec.current = performance.now(), null == U || U(!1, x, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * I.Z.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = ec.current;
-        null == b || b(B, null != t ? (e - t) / 1e3 : 0), ec.current = null
+        null == b || b(x, null != t ? (e - t) / 1e3 : 0), ec.current = null
       }
     }
-  }, [F]), t = w, n = F, s = x, r.useEffect(() => {
+  }, [F]), t = w, n = F, s = B, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -124,26 +124,26 @@ t.Z = r.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, s]), c = g, O = F, R = Y, r.useEffect(() => {
-    if (!!O) return E.S.dispatch(S.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, {
+  }, [t, n, s]), c = g, O = F, p = Y, r.useEffect(() => {
+    if (!!O) return E.S.dispatch(f.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: c
-    }), E.S.subscribe(S.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-      E.S.unsubscribe(S.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+    }), E.S.subscribe(f.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+      E.S.unsubscribe(f.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e)
     };
 
     function e(e) {
       let {
         src: t
       } = e;
-      if (c !== t) R(!1)
+      if (c !== t) p(!1)
     }
-  }, [c, O, R]);
+  }, [c, O, p]);
   let ed = F ? l.PauseIcon : l.PlayIcon,
-    eE = F ? f.Z.Messages.PAUSE : f.Z.Messages.PLAY;
-  "Safari" === platform.name ? p = (0, i.jsx)(r.Suspense, {
-    children: (0, i.jsx)(A, {
+    eE = F ? S.Z.Messages.PAUSE : S.Z.Messages.PLAY;
+  "Safari" === platform.name ? R = (0, i.jsx)(r.Suspense, {
+    children: (0, i.jsx)(N, {
       ref: w,
-      className: N.audioElement,
+      className: A.audioElement,
       src: g,
       preload: q,
       playing: F && !j,
@@ -153,9 +153,9 @@ t.Z = r.memo(function(e) {
       muted: Z,
       volume: Q
     })
-  }) : p = (0, i.jsx)(_.Z, {
+  }) : R = (0, i.jsx)(_.Z, {
     ref: w,
-    className: N.audioElement,
+    className: A.audioElement,
     controls: !1,
     preload: q,
     onEnded: er,
@@ -173,24 +173,24 @@ t.Z = r.memo(function(e) {
       enabled: eT
     } = (0, l.useRedesignIconContext)();
   return (0, i.jsxs)("div", {
-    className: o()(N.container, {
-      [N.playing]: F
+    className: o()(A.container, {
+      [A.playing]: F
     }),
     onMouseEnter: et,
     children: [(0, i.jsx)("div", {
-      className: N.rippleContainer,
+      className: A.rippleContainer,
       children: (0, i.jsx)("div", {
-        className: o()(N.ripple, {
-          [N.reducedMotion]: eI
+        className: o()(A.ripple, {
+          [A.reducedMotion]: eI
         })
       })
     }), (0, i.jsx)(l.Clickable, {
-      className: N.playButtonContainer,
+      className: A.playButtonContainer,
       onClick: ee,
       "aria-label": eE,
       children: (0, i.jsx)(ed, {
-        className: o()(N.playIcon, {
-          [N.oldPlayIconSpacing]: !eT && !F
+        className: o()(A.playIcon, {
+          [A.oldPlayIconSpacing]: !eT && !F
         }),
         size: "custom",
         color: "currentColor",
@@ -198,9 +198,9 @@ t.Z = r.memo(function(e) {
         height: 18
       })
     }), (0, i.jsx)(h.Z, {
-      className: N.waveform,
+      className: A.waveform,
       waveform: D,
-      currentTime: B,
+      currentTime: x,
       duration: null != k ? k : 1,
       playing: F,
       played: K,
@@ -209,12 +209,12 @@ t.Z = r.memo(function(e) {
       onDragEnd: eu
     }), (0, i.jsx)(m, {
       played: K,
-      currentTime: B,
+      currentTime: x,
       duration: k
     }), (0, i.jsx)(d.Z, {
-      className: N.volumeButton,
-      iconClassName: N.volumeButtonIcon,
-      sliderWrapperClassName: N.volumeSlider,
+      className: A.volumeButton,
+      iconClassName: A.volumeButtonIcon,
+      sliderWrapperClassName: A.volumeSlider,
       muted: Z,
       value: (0, T.P)(Q, 1),
       minValue: 0,
@@ -224,6 +224,6 @@ t.Z = r.memo(function(e) {
       onToggleMute: ea,
       onVolumeShow: P,
       onVolumeHide: y
-    }), p]
+    }), R]
   })
 })

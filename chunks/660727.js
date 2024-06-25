@@ -1,153 +1,153 @@
-i.r(a), i(47120);
-var o, l, n = i(735250),
-  s = i(470079),
-  t = i(120356),
-  r = i.n(t),
-  c = i(77866),
-  d = i(481060),
-  u = i(907040),
-  p = i(906411),
-  m = i(813197),
-  v = i(984933),
-  I = i(153124),
-  N = i(768581),
-  j = i(956664),
-  _ = i(185923),
-  b = i(689938),
-  f = i(488436),
-  h = i(84717);
-(l = o || (o = {})).TAB_ID_FILE_UPLOAD = "tab-id-role-icon-file-upload", l.TAB_ID_EMOJI = "tab-id-role-icon-emoji";
+o.r(a), o(47120);
+var n, t, l = o(735250),
+  i = o(470079),
+  s = o(120356),
+  r = o.n(s),
+  d = o(77866),
+  c = o(481060),
+  u = o(907040),
+  p = o(906411),
+  v = o(813197),
+  f = o(984933),
+  I = o(153124),
+  _ = o(768581),
+  b = o(956664),
+  m = o(185923),
+  N = o(689938),
+  j = o(488436),
+  O = o(84717);
+(t = n || (n = {})).TAB_ID_FILE_UPLOAD = "tab-id-role-icon-file-upload", t.TAB_ID_EMOJI = "tab-id-role-icon-emoji";
 
 function x() {
   return [{
-    name: b.Z.Messages.IMAGES,
+    name: N.Z.Messages.IMAGES,
     extensions: ["jpg", "jpeg", "png"]
   }]
 }
-async function O(e) {
-  let a = (0, N.gT)({
+async function h(e) {
+  let a = (0, _.gT)({
       id: e.id,
       animated: !1,
       size: 48,
       forcePNG: !0
     }),
-    i = await fetch(a),
-    o = await i.blob();
-  return await (0, j.fD)(o)
+    o = await fetch(a),
+    n = await o.blob();
+  return await (0, b.fD)(n)
 }
 a.default = function(e) {
   let {
     guildId: a,
-    onUploadIcon: i,
-    onSelectUnicodeEmoji: o,
-    onClose: l,
-    transitionState: t
-  } = e, N = (0, I.Dt)(), j = v.ZP.getDefaultChannel(a), [E, B] = s.useState("tab-id-role-icon-file-upload"), [L, g] = s.useState(!1), C = (0, c.Z)(x);
-  return s.useEffect(() => {
-    g(!1)
-  }, [E]), (0, n.jsx)(d.ModalRoot, {
-    transitionState: t,
-    "aria-labelledby": N,
-    size: d.ModalSize.MEDIUM,
-    className: f.modalRoot,
-    children: (0, n.jsxs)("div", {
-      className: f.contentWrapper,
-      children: [(0, n.jsx)("nav", {
-        className: r()(f.nav, {
-          [f.navUploadSelected]: "tab-id-role-icon-file-upload" === E
+    onUploadIcon: o,
+    onSelectUnicodeEmoji: n,
+    onClose: t,
+    transitionState: s
+  } = e, _ = (0, I.Dt)(), b = f.ZP.getDefaultChannel(a), [B, C] = i.useState("tab-id-role-icon-file-upload"), [E, L] = i.useState(!1), g = (0, d.Z)(x);
+  return i.useEffect(() => {
+    L(!1)
+  }, [B]), (0, l.jsx)(c.ModalRoot, {
+    transitionState: s,
+    "aria-labelledby": _,
+    size: c.ModalSize.MEDIUM,
+    className: j.modalRoot,
+    children: (0, l.jsxs)("div", {
+      className: j.contentWrapper,
+      children: [(0, l.jsx)("nav", {
+        className: r()(j.nav, {
+          [j.navUploadSelected]: "tab-id-role-icon-file-upload" === B
         }),
-        children: (0, n.jsxs)("div", {
-          className: f.navList,
+        children: (0, l.jsxs)("div", {
+          className: j.navList,
           role: "tablist",
           "aria-label": "Expression Picker",
-          children: [(0, n.jsx)("div", {
-            className: f.navItem,
+          children: [(0, l.jsx)("div", {
+            className: j.navItem,
             role: "tab",
             "aria-controls": "tab-id-role-icon-file-upload",
-            "aria-selected": "tab-id-role-icon-file-upload" === E,
-            children: (0, n.jsx)(d.Button, {
+            "aria-selected": "tab-id-role-icon-file-upload" === B,
+            children: (0, l.jsx)(c.Button, {
               onClick: () => {
-                B("tab-id-role-icon-file-upload")
+                C("tab-id-role-icon-file-upload")
               },
               "aria-current": "page",
-              className: r()(f.navButton, {
-                [f.navButtonActive]: "tab-id-role-icon-file-upload" === E
+              className: r()(j.navButton, {
+                [j.navButtonActive]: "tab-id-role-icon-file-upload" === B
               }),
-              look: d.Button.Looks.BLANK,
-              size: d.Button.Sizes.NONE,
-              children: b.Z.Messages.ROLE_ICON_TAB_UPLOAD_IMAGE
+              look: c.Button.Looks.BLANK,
+              size: c.Button.Sizes.NONE,
+              children: N.Z.Messages.ROLE_ICON_TAB_UPLOAD_IMAGE
             })
-          }), (0, n.jsx)("div", {
-            className: f.navItem,
+          }), (0, l.jsx)("div", {
+            className: j.navItem,
             role: "tab",
             "aria-controls": "tab-id-role-icon-emoji",
-            "aria-selected": "tab-id-role-icon-emoji" === E,
-            children: (0, n.jsx)(d.Button, {
+            "aria-selected": "tab-id-role-icon-emoji" === B,
+            children: (0, l.jsx)(c.Button, {
               onClick: () => {
-                B("tab-id-role-icon-emoji")
+                C("tab-id-role-icon-emoji")
               },
               "aria-current": "page",
-              className: r()(f.navButton, {
-                [f.navButtonActive]: "tab-id-role-icon-emoji" === E
+              className: r()(j.navButton, {
+                [j.navButtonActive]: "tab-id-role-icon-emoji" === B
               }),
-              look: d.Button.Looks.BLANK,
-              size: d.Button.Sizes.NONE,
-              children: b.Z.Messages.ROLE_ICON_TAB_EMOJI
+              look: c.Button.Looks.BLANK,
+              size: c.Button.Sizes.NONE,
+              children: N.Z.Messages.ROLE_ICON_TAB_EMOJI
             })
           })]
         })
-      }), "tab-id-role-icon-file-upload" === E ? (0, n.jsx)(d.ModalContent, {
-        children: (0, n.jsxs)("div", {
-          className: f.uploadContainer,
-          children: [(0, n.jsxs)("div", {
-            className: f.uploadIconOuterContainer,
-            children: [(0, n.jsx)("img", {
-              src: h,
+      }), "tab-id-role-icon-file-upload" === B ? (0, l.jsx)(c.ModalContent, {
+        children: (0, l.jsxs)("div", {
+          className: j.uploadContainer,
+          children: [(0, l.jsxs)("div", {
+            className: j.uploadIconOuterContainer,
+            children: [(0, l.jsx)("img", {
+              src: O,
               alt: "sparkles"
-            }), (0, n.jsx)("div", {
-              className: f.uploadIconInnerContainer,
-              children: (0, n.jsx)(d.ImagePlusIcon, {
+            }), (0, l.jsx)("div", {
+              className: j.uploadIconInnerContainer,
+              children: (0, l.jsx)(c.ImagePlusIcon, {
                 size: "md",
                 color: "currentColor",
-                className: f.uploadIcon
+                className: j.uploadIcon
               })
             })]
-          }), (0, n.jsx)("div", {
-            className: f.uploadInfo,
-            children: b.Z.Messages.ROLE_ICON_UPLOAD_FILES_INFO
-          }), (0, n.jsxs)(d.Button, {
-            size: d.Button.Sizes.SMALL,
-            children: [b.Z.Messages.ROLE_ICON_UPLOAD_BROWSE_FILES, (0, n.jsx)(m.ZP, {
+          }), (0, l.jsx)("div", {
+            className: j.uploadInfo,
+            children: N.Z.Messages.ROLE_ICON_UPLOAD_FILES_INFO
+          }), (0, l.jsxs)(c.Button, {
+            size: c.Button.Sizes.SMALL,
+            children: [N.Z.Messages.ROLE_ICON_UPLOAD_BROWSE_FILES, (0, l.jsx)(v.ZP, {
               onChange: e => {
-                g(!1), i(e), l()
+                L(!1), o(e), t()
               },
               onFileSizeError: () => {
-                g(!0)
+                L(!0)
               },
               maxFileSizeBytes: 256e3,
               multiple: !1,
-              filters: C
+              filters: g
             })]
-          }), L ? (0, n.jsx)(d.Text, {
-            className: f.uploadError,
+          }), E ? (0, l.jsx)(c.Text, {
+            className: j.uploadError,
             color: "text-danger",
             variant: "text-sm/normal",
-            children: b.Z.Messages.ROLE_ICON_UPLOAD_FILE_TOO_BIG
+            children: N.Z.Messages.ROLE_ICON_UPLOAD_FILE_TOO_BIG
           }) : null]
         })
-      }) : null, "tab-id-role-icon-emoji" === E ? (0, n.jsx)(u.Z, {
+      }) : null, "tab-id-role-icon-emoji" === B ? (0, l.jsx)(u.Z, {
         hasTabWrapper: !0,
-        closePopout: () => l(),
+        closePopout: () => t(),
         onSelectEmoji: async e => {
-          if ((null == e ? void 0 : e.id) != null)(null == e ? void 0 : e.type) === p.B.GUILD && i(await O(e));
+          if ((null == e ? void 0 : e.id) != null)(null == e ? void 0 : e.type) === p.B.GUILD && o(await h(e));
           else if ((null == e ? void 0 : e.surrogates) != null) {
-            var a, n;
-            o(null !== (n = null === (a = e.defaultDiversityChild) || void 0 === a ? void 0 : a.surrogates) && void 0 !== n ? n : e.surrogates)
+            var a, l;
+            n(null !== (l = null === (a = e.defaultDiversityChild) || void 0 === a ? void 0 : a.surrogates) && void 0 !== l ? l : e.surrogates)
           }
-          l()
+          t()
         },
-        pickerIntention: _.Hz.COMMUNITY_CONTENT,
-        channel: j
+        pickerIntention: m.Hz.COMMUNITY_CONTENT,
+        channel: b
       }) : null]
     })
   })

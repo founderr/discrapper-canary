@@ -1,52 +1,52 @@
-a.r(e), a.d(e, {
+s.r(e), s.d(e, {
   default: function() {
-    return o
+    return l
   }
 });
-var t = a(735250);
-a(470079);
-var n = a(481060),
-  l = a(689938),
-  c = a(422182),
-  i = a(134519);
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  o = s(689938),
+  c = s(422182),
+  i = s(134519);
 
-function o(s) {
+function l(t) {
   let {
     transitionState: e,
-    onClose: a
-  } = s;
-  return (0, t.jsxs)(n.ModalRoot, {
+    onClose: s
+  } = t;
+  return (0, n.jsxs)(a.ModalRoot, {
     transitionState: e,
     className: c.root,
-    children: [(0, t.jsxs)(n.ModalHeader, {
+    children: [(0, n.jsxs)(a.ModalHeader, {
       separator: !1,
       className: c.noScroll,
-      children: [(0, t.jsx)(n.ModalCloseButton, {
+      children: [(0, n.jsx)(a.ModalCloseButton, {
         className: c.closeButton,
-        onClick: a
-      }), (0, t.jsx)("div", {
+        onClick: s
+      }), (0, n.jsx)("div", {
         className: c.imageContainer,
-        children: (0, t.jsx)("img", {
+        children: (0, n.jsx)("img", {
           src: i,
           className: c.image,
           alt: ""
         })
       })]
-    }), (0, t.jsx)(n.ModalContent, {
-      children: (0, t.jsxs)("div", {
+    }), (0, n.jsx)(a.ModalContent, {
+      children: (0, n.jsxs)("div", {
         className: c.content,
-        children: [(0, t.jsx)(n.Heading, {
+        children: [(0, n.jsx)(a.Heading, {
           variant: "heading-xl/semibold",
           className: c.title,
-          children: l.Z.Messages.INVITE_PERMISSION_MODAL_TITLE
-        }), (0, t.jsx)(n.Text, {
+          children: o.Z.Messages.INVITE_PERMISSION_MODAL_TITLE
+        }), (0, n.jsx)(a.Text, {
           variant: "text-md/normal",
           className: c.text,
-          children: l.Z.Messages.INVITE_PERMISSION_MODAL_TEXT
-        }), (0, t.jsx)(n.Button, {
+          children: o.Z.Messages.INVITE_PERMISSION_MODAL_TEXT
+        }), (0, n.jsx)(a.Button, {
           className: c.button,
-          onClick: a,
-          children: l.Z.Messages.GOT_IT
+          onClick: s,
+          children: o.Z.Messages.GOT_IT
         })]
       })
     })]

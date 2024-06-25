@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   ED: function() {
-    return A
+    return N
   },
   Ox: function() {
     return m
@@ -10,7 +10,7 @@ n.d(t, {
     return T
   },
   o5: function() {
-    return N
+    return A
   },
   pV: function() {
     return O
@@ -138,7 +138,7 @@ async function h(e) {
     throw new l.HF(e)
   }
 }
-async function S(e) {
+async function f(e) {
   let {
     subscriptionId: t,
     preventFetch: n
@@ -151,7 +151,7 @@ async function S(e) {
   return u.Z.createInvoiceFromServer(i.body)
 }
 
-function f(e, t) {
+function S(e, t) {
   let {
     preventFetch: n = !1
   } = e, [r, s] = (0, i.useState)(null), [a, l] = (0, i.useState)(null), u = (0, o.e7)([_.ZP], () => _.ZP.getSubscriptions());
@@ -172,12 +172,12 @@ function f(e, t) {
   }, [n, t, u]), [r, a]
 }
 
-function N(e) {
+function A(e) {
   let t = (0, i.useCallback)(() => h(e), [JSON.stringify(e)]);
-  return f(e, t)
+  return S(e, t)
 }
 
-function A(e) {
+function N(e) {
   if ("subscriptionId" in e && null == e.subscriptionId) {
     let {
       subscriptionId: t,
@@ -186,12 +186,12 @@ function A(e) {
     e = n
   }
   let t = (0, i.useCallback)(() => "subscriptionId" in e ? T(e) : "items" in e ? I(e) : null, [JSON.stringify(e)]);
-  return f(e, t)
+  return S(e, t)
 }
 
 function m(e) {
-  let t = (0, i.useCallback)(() => S(e), [JSON.stringify(e)]);
-  return f(e, t)
+  let t = (0, i.useCallback)(() => f(e), [JSON.stringify(e)]);
+  return S(e, t)
 }
 
 function O(e) {

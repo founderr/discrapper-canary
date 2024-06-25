@@ -5,8 +5,8 @@ var l = n(735250),
   s = n(481060),
   u = n(933557),
   a = n(156699),
-  E = n(734893),
-  d = n(693196),
+  d = n(734893),
+  E = n(693196),
   o = n(66999),
   c = n(575830),
   N = n(554747),
@@ -26,26 +26,26 @@ t.default = e => {
     transitionState: L
   } = e, O = (0, u.ZP)(t, !0), M = t.id, m = t.isForumPost(), v = (0, i.e7)([Z.Z], () => Z.Z.getGuild(t.getGuildId())), A = (0, N.u1)(M), {
     isSubscriptionGated: S
-  } = (0, o.Z)(t.id), P = (0, c.Z)(v, t), [G, x] = r.useState(), U = (0, i.e7)([f.default], () => t.isOwner(f.default.getId()), [t]), p = (0, i.e7)([g.Z], () => g.Z.can(t.isThread() ? C.Plq.MANAGE_THREADS : C.Plq.MANAGE_CHANNELS, t), [t]), H = (0, i.e7)([T.Z], () => {
+  } = (0, o.Z)(t.id), x = (0, c.Z)(v, t), [P, G] = r.useState(), U = (0, i.e7)([f.default], () => t.isOwner(f.default.getId()), [t]), p = (0, i.e7)([g.Z], () => g.Z.can(t.isThread() ? C.Plq.MANAGE_THREADS : C.Plq.MANAGE_CHANNELS, t), [t]), H = (0, i.e7)([T.Z], () => {
     var e;
     return null !== (e = T.Z.getCount(t.id)) && void 0 !== e ? e : 0
   }, [t.id]), R = m && (p || U && H < 1), B = A.length > 0 && (t.type === C.d4z.GUILD_VOICE || t.type === C.d4z.GUILD_STAGE_VOICE);
   if (r.useEffect(() => {
       (async () => {
         if (!await (0, a.C)(t.getGuildId(), M)) {
-          x(E.j.DEFAULT);
+          G(d.j.DEFAULT);
           return
         }
-        let e = await (0, d.T)(t.getGuildId(), M);
+        let e = await (0, E.T)(t.getGuildId(), M);
         if (null != e) {
-          x(e);
+          G(e);
           return
         }
       })()
-    }, [t, M]), null != G) {
+    }, [t, M]), null != P) {
     let e;
     let t = D.Z.Messages.DELETE_DEFAULT_CHANNEL_BODY;
-    return e = G === E.j.TODO ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : G === E.j.RESOURCE ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : D.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING, (0, l.jsxs)(s.ModalRoot, {
+    return e = P === d.j.TODO ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : P === d.j.RESOURCE ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : D.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING, (0, l.jsxs)(s.ModalRoot, {
       transitionState: L,
       "aria-label": D.Z.Messages.CANNOT_DELETE_CHANNEL,
       children: [(0, l.jsx)(s.ModalHeader, {
@@ -134,11 +134,11 @@ t.default = e => {
           channelName: O
         })
       };
-      else if (S && P > 0) return {
+      else if (S && x > 0) return {
         deleteText: D.Z.Messages.DELETE_CHANNEL,
         deleteBody: D.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format({
           channelName: O,
-          numGuildRoleSubscriptionMembers: P
+          numGuildRoleSubscriptionMembers: x
         })
       };
       return {

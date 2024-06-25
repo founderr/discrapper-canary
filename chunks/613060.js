@@ -1,7 +1,7 @@
-var l, i = n(442837),
-  s = n(570140);
+var i, l = n(442837),
+  r = n(570140);
 
-function r(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -9,25 +9,25 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let a = {};
-class o extends(l = i.ZP.PersistedStore) {
+let s = {};
+class o extends(i = l.ZP.PersistedStore) {
   initialize(e) {
     null != e && Object.keys(e).forEach(t => {
-      "number" == typeof e[t] && (a[t] = e[t])
+      "number" == typeof e[t] && (s[t] = e[t])
     })
   }
   getState() {
-    return a
+    return s
   }
   hasViewed(e) {
-    return null != a[e]
+    return null != s[e]
   }
 }
-r(o, "displayName", "ViewHistoryStore"), r(o, "persistKey", "ViewHistoryStore"), t.Z = new o(s.Z, {
+a(o, "displayName", "ViewHistoryStore"), a(o, "persistKey", "ViewHistoryStore"), t.Z = new o(r.Z, {
   VIEW_HISTORY_MARK_VIEW: function(e) {
     let {
       key: t
     } = e;
-    a[t] = Date.now()
+    s[t] = Date.now()
   }
 })

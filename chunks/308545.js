@@ -6,10 +6,10 @@ t.d(n, {
 var a = t(735250);
 t(470079);
 var r = t(249849),
-  s = t(907561),
-  i = t(689938),
-  l = t(444816);
-let o = ["#2d456e", "#395788", "#486ead", "#4f7ac2", "#5989d9", "#729bdd", "#96b3e3", "#b5c9e9", "#e0e0e2"],
+  i = t(907561),
+  s = t(689938),
+  o = t(444816);
+let l = ["#2d456e", "#395788", "#486ead", "#4f7ac2", "#5989d9", "#729bdd", "#96b3e3", "#b5c9e9", "#e0e0e2"],
   c = ["#f7931e"],
   d = [.05, .09, .15, .2, .25, .33, .44, .57, .95],
   u = [{
@@ -41,7 +41,7 @@ let o = ["#2d456e", "#395788", "#486ead", "#4f7ac2", "#5989d9", "#729bdd", "#96b
     tint: 1
   }],
   m = [.4],
-  h = [{
+  f = [{
     base: 1,
     tint: 5
   }];
@@ -51,37 +51,37 @@ function C(e) {
     width: n,
     height: t,
     primaryTintColor: C,
-    secondaryTintColor: x,
-    ...f
+    secondaryTintColor: _,
+    ...h
   } = e, {
-    primaryColorsTransformed: E,
-    secondaryColorsTransformed: T
+    primaryColorsTransformed: x,
+    secondaryColorsTransformed: g
   } = (0, r.s)({
-    primaryBaseColors: o,
+    primaryBaseColors: l,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
     secondaryBaseColors: c,
-    secondaryTintColor: x,
+    secondaryTintColor: _,
     secondaryTintLuminances: m,
-    secondaryLuminanceWeights: h
+    secondaryLuminanceWeights: f
   }), {
-    styleContent: _,
-    containerId: I
-  } = (0, s.bC)(E, T);
+    styleContent: p,
+    containerId: T
+  } = (0, i.bC)(x, g);
   return (0, a.jsxs)("svg", {
-    ...f,
-    "aria-label": i.Z.Messages.CLAN_LOOK_BANNER,
+    ...h,
+    "aria-label": s.Z.Messages.CLAN_LOOK_BANNER,
     width: n,
     height: t,
-    viewBox: "0 0 ".concat(s.Km, " ").concat(s.md),
+    viewBox: "0 0 ".concat(i.Km, " ").concat(i.md),
     children: [(0, a.jsx)("defs", {
       children: (0, a.jsx)("style", {
-        children: _
+        children: p
       })
     }), (0, a.jsx)("use", {
-      href: "".concat(l, "#wrapper-layer"),
-      id: I
+      href: "".concat(o, "#wrapper-layer"),
+      id: T
     })]
   })
 }

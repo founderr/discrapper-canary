@@ -1,7 +1,7 @@
-n.exports = function(n, E, e, t) {
-  for (var I = -1, _ = null == n ? 0 : n.length; ++I < _;) {
-    var N = n[I];
-    E(t, N, e(N), n)
+e.exports = function(e, t, n, E) {
+  for (var _ = -1, i = null == e ? 0 : e.length; ++_ < i;) {
+    var r = e[_];
+    t(E, r, n(r), e)
   }
-  return t
+  return E
 }

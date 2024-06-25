@@ -3,148 +3,148 @@ n.d(t, {
     return c
   },
   l7: function() {
-    return u
+    return d
   },
   p: function() {
-    return d
+    return u
   }
 }), n(47120), n(653041);
-var s = n(735250),
-  o = n(470079),
+var o = n(735250),
+  s = n(470079),
   r = n(699581),
   a = n(920906),
-  l = n(130653),
-  i = n(743294);
-let c = o.createContext({
+  i = n(130653),
+  l = n(743294);
+let c = s.createContext({
     registerComponent: () => {},
     unregisterComponent: () => {},
     animatedComponents: {},
-    expandedContentRef: o.createRef(),
-    collapsedContentRef: o.createRef(),
+    expandedContentRef: s.createRef(),
+    collapsedContentRef: s.createRef(),
     recalculateAnimationPositions: () => {},
     animatedComponentProps: [],
     expansionSpring: null,
     isExpansionAnimationComplete: !1
   }),
-  u = o.forwardRef(function(e, t) {
+  d = s.forwardRef(function(e, t) {
     let {
       children: n,
-      id: i,
-      inState: u,
-      isTextTransition: d = !1
+      id: l,
+      inState: d,
+      isTextTransition: u = !1
     } = e, {
       isExpansionAnimationComplete: p,
-      recalculateAnimationPositions: x,
-      registerComponent: m,
+      recalculateAnimationPositions: m,
+      registerComponent: x,
       unregisterComponent: g,
-      expansionSpring: h
-    } = o.useContext(c), C = o.useRef(null), f = o.useRef(null), E = o.useContext(l.T);
-    o.useEffect(() => {
-      x()
-    }, [x]), o.useEffect(() => {
+      expansionSpring: f
+    } = s.useContext(c), C = s.useRef(null), h = s.useRef(null), _ = s.useContext(i.T);
+    s.useEffect(() => {
+      m()
+    }, [m]), s.useEffect(() => {
       let e = C.current;
-      return null != e && m(e, i, u), () => {
-        null != e && g(i, u)
+      return null != e && x(e, l, d), () => {
+        null != e && g(l, d)
       }
-    }, [i, u, m, g]);
-    let S = document.getElementById(E ? "quest-bar-v2-preview-" + i : "quest-bar-v2-" + i),
-      v = null;
-    return null == S ? v = null : d && null != h ? v = (0, s.jsxs)(s.Fragment, {
-      children: ["collapsed" === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
+    }, [l, d, x, g]);
+    let E = document.getElementById(_ ? "quest-bar-v2-preview-" + l : "quest-bar-v2-" + l),
+      S = null;
+    return null == E ? S = null : u && null != f ? S = (0, o.jsxs)(o.Fragment, {
+      children: ["collapsed" === d && (0, r.createPortal)((0, o.jsx)(a.animated.div, {
         style: {
           position: "absolute",
-          opacity: h.to({
+          opacity: f.to({
             range: [0, 1],
             output: [1, 0]
           })
         },
-        children: n(f)
-      }), S), "expanded" === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
+        children: n(h)
+      }), E), "expanded" === d && (0, r.createPortal)((0, o.jsx)(a.animated.div, {
         style: {
           position: "absolute",
-          opacity: h.to({
+          opacity: f.to({
             range: [0, 1],
             output: [0, 1]
           })
         },
-        children: n(f)
-      }), S)]
-    }) : "collapsed" === u && (v = (0, r.createPortal)(n(f), S)), (0, s.jsxs)("div", {
+        children: n(h)
+      }), E)]
+    }) : "collapsed" === d && (S = (0, r.createPortal)(n(h), E)), (0, o.jsxs)("div", {
       style: {
-        opacity: null == S || p ? 1 : 0
+        opacity: null == E || p ? 1 : 0
       },
       ref: t,
-      children: [n(C), !p && v]
+      children: [n(C), !p && S]
     })
   }),
-  d = e => {
+  u = e => {
     let {
       children: t,
       expandedContentRef: n,
       collapsedContentRef: r,
       expansionSpring: a,
-      isExpansionAnimationComplete: l
-    } = e, [u, d] = o.useState({}), [p, x] = o.useState([]), m = o.useCallback((e, t, n) => {
-      d(s => {
-        var o;
-        let r = null !== (o = s[t]) && void 0 !== o ? o : {
+      isExpansionAnimationComplete: i
+    } = e, [d, u] = s.useState({}), [p, m] = s.useState([]), x = s.useCallback((e, t, n) => {
+      u(o => {
+        var s;
+        let r = null !== (s = o[t]) && void 0 !== s ? s : {
           expanded: null,
           collapsed: null
         };
         return {
-          ...s,
+          ...o,
           [t]: {
             ...r,
             [n]: e
           }
         }
       })
-    }, []), g = o.useCallback((e, t) => {
-      d(n => {
-        var s;
-        let o = null !== (s = n[e]) && void 0 !== s ? s : {
+    }, []), g = s.useCallback((e, t) => {
+      u(n => {
+        var o;
+        let s = null !== (o = n[e]) && void 0 !== o ? o : {
           expanded: null,
           collapsed: null
         };
-        return o[t] = null, {
+        return s[t] = null, {
           ...n,
-          [e]: o
+          [e]: s
         }
       })
-    }, []), h = o.useCallback(() => {
+    }, []), f = s.useCallback(() => {
       let e = [];
-      for (let t in u) {
-        if (null == u[t] || null == n.current || null == r.current) continue;
-        let s = u[t].collapsed,
-          o = u[t].expanded;
-        if (null == s || null == o) continue;
-        let a = o.getBoundingClientRect().top - n.current.getBoundingClientRect().top + i.Li,
-          l = s.getBoundingClientRect().top - r.current.getBoundingClientRect().top,
-          c = o.getBoundingClientRect().left - n.current.getBoundingClientRect().left + i.Li,
-          d = s.getBoundingClientRect().left - r.current.getBoundingClientRect().left,
-          p = -o.getBoundingClientRect().right + n.current.getBoundingClientRect().right + i.Li,
-          x = -s.getBoundingClientRect().right + r.current.getBoundingClientRect().right;
+      for (let t in d) {
+        if (null == d[t] || null == n.current || null == r.current) continue;
+        let o = d[t].collapsed,
+          s = d[t].expanded;
+        if (null == o || null == s) continue;
+        let a = s.getBoundingClientRect().top - n.current.getBoundingClientRect().top + l.Li,
+          i = o.getBoundingClientRect().top - r.current.getBoundingClientRect().top,
+          c = s.getBoundingClientRect().left - n.current.getBoundingClientRect().left + l.Li,
+          u = o.getBoundingClientRect().left - r.current.getBoundingClientRect().left,
+          p = -s.getBoundingClientRect().right + n.current.getBoundingClientRect().right + l.Li,
+          m = -o.getBoundingClientRect().right + r.current.getBoundingClientRect().right;
         e.push({
           id: t,
-          collapsedLeft: d,
+          collapsedLeft: u,
           expandedLeft: c,
-          collapsedRight: x,
+          collapsedRight: m,
           expandedRight: p,
-          collapsedTop: l,
+          collapsedTop: i,
           expandedTop: a
         })
       }
-      x(e)
-    }, [u, n, r, x]);
-    return (0, s.jsx)(c.Provider, {
+      m(e)
+    }, [d, n, r, m]);
+    return (0, o.jsx)(c.Provider, {
       value: {
-        isExpansionAnimationComplete: l,
-        registerComponent: m,
+        isExpansionAnimationComplete: i,
+        registerComponent: x,
         unregisterComponent: g,
-        animatedComponents: u,
+        animatedComponents: d,
         expandedContentRef: n,
         collapsedContentRef: r,
-        recalculateAnimationPositions: h,
+        recalculateAnimationPositions: f,
         animatedComponentProps: p,
         expansionSpring: a
       },

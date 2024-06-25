@@ -41,7 +41,7 @@ function T() {
 function h() {
   return .2 * (u - l)
 }
-class S extends s.Z {
+class f extends s.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -56,4 +56,4 @@ class S extends s.Z {
     }) : t[n] = i
   }
 }
-t.Z = new S
+t.Z = new f

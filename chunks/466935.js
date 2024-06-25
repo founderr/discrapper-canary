@@ -1,53 +1,53 @@
 n.d(t, {
   Z: function() {
-    return f
+    return C
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  r = n(481060),
-  a = n(970606),
+var i = n(735250),
+  l = n(470079),
+  r = n(442837),
+  a = n(481060),
+  s = n(970606),
   o = n(693546),
-  u = n(826581),
-  c = n(246364),
+  c = n(826581),
+  u = n(246364),
   d = n(98493),
   h = n(703656),
   p = n(669405),
-  g = n(434479),
-  m = n(981631),
-  C = n(176505),
-  E = n(689938);
+  f = n(434479),
+  _ = n(981631),
+  g = n(176505),
+  m = n(689938);
 
-function f(e) {
+function C(e) {
   let {
     guild: t,
     selected: n
-  } = e, f = (0, s.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)), _ = null != f ? f : 0;
-  return i.useEffect(() => {
+  } = e, C = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)), I = null != C ? C : 0;
+  return l.useEffect(() => {
     o.Z.fetchGuildJoinRequests({
       guildId: t.id,
-      status: c.wB.SUBMITTED,
+      status: u.wB.SUBMITTED,
       limit: d.p
     })
-  }, [t.id]), (0, l.jsx)(g.m, {
+  }, [t.id]), (0, i.jsx)(f.m, {
     id: "application-review-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(p.Z, {
+    renderIcon: e => (0, i.jsx)(p.Z, {
       className: e,
       width: 24,
       height: 24
     }),
-    text: E.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
+    text: m.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
     selected: n,
     onClick: () => {
-      (0, a.Q2)({
+      (0, s.Q2)({
         guildId: t.id,
-        source: m.jXE.CHANNEL_LIST,
-        tab: C.oC.MEMBER_APPLICATIONS
-      }), (0, h.uL)(m.Z5c.CHANNEL(t.id, C.oC.MEMBER_APPLICATIONS))
+        source: _.jXE.CHANNEL_LIST,
+        tab: g.oC.MEMBER_APPLICATIONS
+      }), (0, h.uL)(_.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS))
     },
-    trailing: _ > 0 ? (0, l.jsx)(r.NumberBadge, {
-      count: _
+    trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, {
+      count: I
     }) : null
   })
 }

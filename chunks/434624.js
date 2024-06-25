@@ -1,99 +1,99 @@
 n.d(t, {
   l: function() {
-    return N
+    return h
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  l = n.n(s),
   r = n(866442),
   o = n(596454),
   c = n(434650),
-  u = n(56314),
-  d = n(18732),
-  E = n(566006),
-  _ = n(287151),
+  d = n(56314),
+  u = n(18732),
+  _ = n(566006),
+  E = n(287151),
   I = n(704963),
-  T = n(667671);
-let m = i.memo(function(e) {
+  m = n(667671);
+let T = a.memo(function(e) {
     let t, n, {
-        useChatFontScaling: i,
-        hideEmoji: l,
+        useChatFontScaling: a,
+        hideEmoji: s,
         emoji: c,
-        className: m,
-        count: N,
-        me: h,
-        me_burst: C,
-        burst_count: S,
-        burst_colors: A,
+        className: T,
+        count: h,
+        me: N,
+        me_burst: f,
+        burst_count: p,
+        burst_colors: C,
         readOnly: g,
-        isLurking: p,
-        isGuest: f,
+        isLurking: S,
+        isGuest: A,
         isPendingMember: R,
-        type: O
+        type: x
       } = e,
-      M = O === E.O.BURST,
-      x = (0, _.y4)(h, C, O),
-      v = (0, u.v)(M && null != A ? A : []),
-      L = i ? T : I,
-      Z = M ? S : N,
-      P = (0, d.y)(Z, _.aO),
-      D = {};
-    if (M && null != v) {
-      var j;
+      O = x === _.O.BURST,
+      M = (0, E.y4)(N, f, x),
+      v = (0, d.v)(O && null != C ? C : []),
+      L = a ? m : I,
+      Z = O ? p : h,
+      P = (0, u.y)(Z, E.aO),
+      b = {};
+    if (O && null != v) {
+      var D;
       let {
         accentColor: e,
-        backgroundColor: s,
-        opacity: i
-      } = v, l = null !== (j = (0, r.wK)(null != s ? s : "", i)) && void 0 !== j ? j : "";
-      x && (D.borderColor = s), D.background = l, t = e, n = e
+        backgroundColor: i,
+        opacity: a
+      } = v, s = null !== (D = (0, r.wK)(null != i ? i : "", a)) && void 0 !== D ? D : "";
+      M && (b.borderColor = i), b.background = s, t = e, n = e
     }
-    let U = {
+    let j = {
       minWidth: P,
       color: t,
       borderColor: n
     };
-    return (0, s.jsxs)("div", {
-      className: a()(L.reaction, L.reactionInner, m, {
-        [L.reactionMe]: x,
-        [L.reactionReadOnly]: g && !p && !R && !f
+    return (0, i.jsxs)("div", {
+      className: l()(L.reaction, L.reactionInner, T, {
+        [L.reactionMe]: M,
+        [L.reactionReadOnly]: g && !S && !R && !A
       }),
-      style: D,
-      children: [(0, s.jsx)(o.Z, {
-        className: a()({
-          [L.hideEmoji]: l
+      style: b,
+      children: [(0, i.jsx)(o.Z, {
+        className: l()({
+          [L.hideEmoji]: s
         }),
         emojiId: c.id,
         emojiName: c.name,
         size: "reaction",
-        animated: M && c.animated
-      }), (0, s.jsx)("div", {
+        animated: O && c.animated
+      }), (0, i.jsx)("div", {
         className: L.reactionCount,
-        style: U,
+        style: j,
         children: Z
       })]
     })
   }),
-  N = i.memo(function(e) {
+  h = a.memo(function(e) {
     let {
       showImmediate: t,
       reactions: n,
-      ...l
-    } = e, [a, r] = i.useState(!1), [o, u] = i.useTransition(), d = i.useCallback(e => {
-      e && !a && !o && u(() => {
+      ...s
+    } = e, [l, r] = a.useState(!1), [o, d] = a.useTransition(), u = a.useCallback(e => {
+      e && !l && !o && d(() => {
         r(!0)
       })
-    }, [a, o]), I = (0, c.O)(d), T = a && !o || t ? _.le : m;
-    return (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)("div", {
+    }, [l, o]), I = (0, c.O)(u), m = l && !o || t ? E.le : T;
+    return (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)("div", {
         ref: I
       }), n.map(e => {
         var t, n;
-        return (0, s.jsx)(T, {
-          ...l,
+        return (0, i.jsx)(m, {
+          ...s,
           ...e
-        }, (t = e, "".concat(t.type === E.O.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
+        }, (t = e, "".concat(t.type === _.O.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
       })]
     })
   })

@@ -1,30 +1,30 @@
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(920906),
-  l = n(442837),
-  a = n(536442),
-  r = n(984933),
+var s = n(920906),
+  a = n(442837),
+  r = n(536442),
+  l = n(984933),
   o = n(496675),
   c = n(51382),
-  u = n(91326),
-  d = n(503856),
-  E = n(981631);
+  d = n(91326),
+  u = n(503856),
+  _ = n(981631);
 
-function h(e) {
+function E(e) {
   let {
     channel: t,
     guild: n
-  } = e, r = (0, l.e7)([a.qc], () => a.qc.hasHotspot(a.v6.HUB_STUDY_ROOM_NOTICE)), o = (0, d.r)(t.guild_id), E = (0, i.useSpring)({
+  } = e, l = (0, a.e7)([r.qc], () => r.qc.hasHotspot(r.v6.HUB_STUDY_ROOM_NOTICE)), o = (0, u.r)(t.guild_id), _ = (0, s.useSpring)({
     maxHeight: o ? 0 : 300,
     overflow: "hidden",
     delay: 400
   });
-  return (0, s.jsx)(i.animated.div, {
-    style: E,
-    children: r ? (0, s.jsx)(c.Z, {
+  return (0, i.jsx)(s.animated.div, {
+    style: _,
+    children: l ? (0, i.jsx)(c.Z, {
       channel: t,
       guild: n
-    }) : (0, s.jsx)(u.Z, {
+    }) : (0, i.jsx)(d.Z, {
       name: "\uD83D\uDCDA☕ ".concat(t.name),
       channel: t
     })
@@ -33,8 +33,8 @@ function h(e) {
 t.Z = function(e) {
   let {
     guild: t
-  } = e, n = (0, l.e7)([r.ZP], () => r.ZP.getChannels(t.id)[r.Zb][0]), i = (0, l.e7)([o.Z], () => null != n && o.Z.can(E.Plq.CONNECT, n.channel));
-  return t.hasFeature(E.oNc.HUB) && null != n && i ? (0, s.jsx)(h, {
+  } = e, n = (0, a.e7)([l.ZP], () => l.ZP.getChannels(t.id)[l.Zb][0]), s = (0, a.e7)([o.Z], () => null != n && o.Z.can(_.Plq.CONNECT, n.channel));
+  return t.hasFeature(_.oNc.HUB) && null != n && s ? (0, i.jsx)(E, {
     channel: n.channel,
     guild: t
   }) : null

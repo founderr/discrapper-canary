@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(496158),
   T = n(676161),
   h = n(660090),
-  S = n(783097),
-  f = n(870205),
-  N = n(981631),
-  A = n(689079),
+  f = n(783097),
+  S = n(870205),
+  A = n(981631),
+  N = n(689079),
   m = n(689938),
   O = n(271047);
 
-function R(e) {
+function p(e) {
   var t, n;
   let {
     channel: o,
@@ -38,7 +38,7 @@ function R(e) {
       command: l,
       section: _,
       location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW
-    }), d.S.dispatch(N.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+    }), d.S.dispatch(A.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: o.id
     })
   }, [o, l, _]), h = (null !== (n = null === (t = l.options) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0;
@@ -57,7 +57,7 @@ function R(e) {
         lineClamp: 1,
         children: l.displayDescription
       })]
-    }), h ? (0, i.jsx)(s.F, {}) : (0, i.jsx)(p, {
+    }), h ? (0, i.jsx)(s.F, {}) : (0, i.jsx)(R, {
       channel: o,
       command: l,
       sectionName: I
@@ -65,7 +65,7 @@ function R(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     channel: t,
     command: n,
@@ -73,7 +73,7 @@ function p(e) {
   } = e, l = (0, I.D)(t), [u, _] = r.useState(!1), c = r.useCallback(async e => {
     e.stopPropagation();
     try {
-      await (0, S.Y$)({
+      await (0, f.Y$)({
         command: n,
         optionValues: {},
         context: l,
@@ -120,7 +120,7 @@ function g(e) {
       }), l]
     }), (0, i.jsx)("ul", {
       className: O.commandContainer,
-      children: n.map(e => (0, i.jsx)(R, {
+      children: n.map(e => (0, i.jsx)(p, {
         channel: t,
         command: e,
         section: r,
@@ -144,13 +144,13 @@ function C(e) {
     commandType: l.yU.CHAT
   }, {
     placeholderCount: 0,
-    limit: A.tn,
+    limit: N.tn,
     includeFrecency: !0
   }), d = null !== (t = c.find(e => e.id === s.id)) && void 0 !== t ? t : null, {
     sortOrder: E,
     setSortOrder: I,
-    commands: S,
-    canSort: N
+    commands: f,
+    canSort: A
   } = (0, h.Z)({
     sectionId: s.id,
     commandsByActiveSection: u
@@ -158,9 +158,9 @@ function C(e) {
   r.useEffect(() => {
     a(s.id)
   }, [s.id, a]);
-  let R = (0, T.Z)({
+  let p = (0, T.Z)({
     channel: n,
-    commands: S,
+    commands: f,
     limit: 5
   });
   return (0, i.jsxs)("ul", {
@@ -168,16 +168,16 @@ function C(e) {
     children: [(0, i.jsx)(g, {
       channel: n,
       section: d,
-      commands: R,
+      commands: p,
       headerName: m.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
       sectionName: o
     }), (0, i.jsx)(g, {
       channel: n,
       section: d,
-      commands: S,
+      commands: f,
       headerName: m.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
       sectionName: o,
-      children: N && (0, i.jsx)(f.Z, {
+      children: A && (0, i.jsx)(S.Z, {
         sortOrder: E,
         onSortOptionClick: I
       })

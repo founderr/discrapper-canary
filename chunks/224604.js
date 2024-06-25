@@ -1,39 +1,39 @@
-n.r(s), n.d(s, {
+i.r(t), i.d(t, {
   ActivityAgeGateModal: function() {
     return r
   }
 });
-var t = n(735250);
-n(470079);
-var i = n(481060),
-  o = n(499371),
-  a = n(689938),
-  c = n(735134);
+var n = i(735250);
+i(470079);
+var s = i(481060),
+  a = i(499371),
+  o = i(689938),
+  c = i(735134);
 
 function r(e) {
   let {
-    application: s,
-    onAgree: n,
+    application: t,
+    onAgree: i,
     onClose: r,
     onDisagree: l,
     ...d
   } = e;
-  return (0, t.jsx)(i.ModalRoot, {
+  return (0, n.jsx)(s.ModalRoot, {
     ...d,
-    children: (0, t.jsx)("div", {
-      children: (0, t.jsx)(o.Z, {
+    children: (0, n.jsx)("div", {
+      children: (0, n.jsx)(a.Z, {
         onAgree: () => {
-          n(), r()
+          i(), r()
         },
         onDisagree: () => {
           l(), r()
         },
-        title: a.Z.Messages.EMBEDDED_ACTIVITIES_AGE_GATED_TITLE,
-        description: a.Z.Messages.EMBEDDED_ACTIVITIES_AGE_GATED_DESCRIPTION.format({
-          applicationName: s.name
+        title: o.Z.Messages.EMBEDDED_ACTIVITIES_AGE_GATED_TITLE,
+        description: o.Z.Messages.EMBEDDED_ACTIVITIES_AGE_GATED_DESCRIPTION.format({
+          applicationName: t.name
         }),
-        agreement: a.Z.Messages.NSFW_ACCEPT,
-        disagreement: a.Z.Messages.NSFW_DECLINE,
+        agreement: o.Z.Messages.NSFW_ACCEPT,
+        disagreement: o.Z.Messages.NSFW_DECLINE,
         imageClassName: c.image
       })
     })

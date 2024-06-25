@@ -1,24 +1,24 @@
 n(47120);
-var s = n(570140),
-  i = n(457330),
-  l = n(726542),
-  a = n(231757),
-  r = n(553795),
+var i = n(570140),
+  s = n(457330),
+  a = n(726542),
+  r = n(231757),
+  l = n(553795),
   o = n(585483),
   c = n(996106),
-  u = n(914946),
-  d = n(452426),
-  E = n(186901),
-  h = n(981631),
-  _ = n(701488),
+  d = n(914946),
+  u = n(452426),
+  _ = n(186901),
+  E = n(981631),
+  h = n(701488),
   I = n(231338);
-let m = new Set([_.Fu, _.JT]);
+let m = new Set([h.Fu, h.JT]);
 t.Z = {
   [I.Et.GET_PROVIDER_ACCESS_TOKEN]: {
     scope: {
-      [E.Gp.ANY]: [E.wE]
+      [_.Gp.ANY]: [_.wE]
     },
-    validation: e => (0, d.Z)(e).required().keys({
+    validation: e => (0, u.Z)(e).required().keys({
       provider: e.string().required(),
       connection_redirect: e.string()
     }),
@@ -27,50 +27,50 @@ t.Z = {
         socket: t,
         args: {
           provider: n,
-          connection_redirect: d
+          connection_redirect: u
         }
       } = e;
-      (0, u.bu)(t.transport);
-      let E = (0, u._f)(t.application),
-        _ = l.Z.get(n);
-      if (null == _) throw new c.Z({
+      (0, d.bu)(t.transport);
+      let _ = (0, d._f)(t.application),
+        h = a.Z.get(n);
+      if (null == h) throw new c.Z({
         errorCode: I.lT.INVALID_PROVIDER
       }, 'Platform not found for provider "'.concat(n, '"'));
-      if (n === h.ABu.AMAZON_MUSIC) {
-        if (!m.has(E)) throw new c.Z({
+      if (n === E.ABu.AMAZON_MUSIC) {
+        if (!m.has(_)) throw new c.Z({
           errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION
         }, "Command not available for this application")
       } else throw new c.Z({
         errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION
       }, "Command not available for this application");
       return new Promise(async (e, t) => {
-        let l = r.Z.getAccount(null, n);
-        if (null == l) {
-          function u(t) {
+        let a = l.Z.getAccount(null, n);
+        if (null == a) {
+          function d(t) {
             var n;
-            if (null == _) return;
-            let s = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === _.type);
-            null != s && (e({
-              access_token: s.access_token
+            if (null == h) return;
+            let i = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === h.type);
+            null != i && (e({
+              access_token: i.access_token
             }), m())
           }
 
-          function E() {
+          function _() {
             t(new c.Z({
               errorCode: I.lT.OAUTH2_ERROR
             }, 'OAuth2 setup for "'.concat(n, '" failed'))), m()
           }
 
           function m() {
-            s.Z.unsubscribe("USER_CONNECTIONS_UPDATE", u), o.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E)
+            i.Z.unsubscribe("USER_CONNECTIONS_UPDATE", d), o.S.unsubscribe(E.CkL.CONNECTIONS_CALLBACK_ERROR, _)
           }
-          s.Z.subscribe("USER_CONNECTIONS_UPDATE", u), o.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E), (0, a.Z)({
-            platformType: _.type,
-            location: h.Sbl.ACTIVITY_RPC,
-            successRedirect: d
+          i.Z.subscribe("USER_CONNECTIONS_UPDATE", d), o.S.subscribe(E.CkL.CONNECTIONS_CALLBACK_ERROR, _), (0, r.Z)({
+            platformType: h.type,
+            location: E.Sbl.ACTIVITY_RPC,
+            successRedirect: u
           })
         } else try {
-          let t = await i.Z.refreshAccessToken(_.type, l.id);
+          let t = await s.Z.refreshAccessToken(h.type, a.id);
           if (null == t) throw new c.Z({
             errorCode: I.lT.OAUTH2_ERROR
           }, "Refreshing access token did not return a new access token");

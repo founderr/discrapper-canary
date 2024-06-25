@@ -1,42 +1,42 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(442837),
   o = n(481060),
   c = n(499254),
   u = n(541099),
   d = n(827498),
   h = n(314734),
-  m = n(689938),
-  E = n(840884);
-t.Z = i.memo(i.forwardRef(function(e, t) {
-  let [n, s] = i.useState(!1), p = (0, r.e7)([u.Z], () => u.Z.shouldShowPopup()), g = i.useCallback(() => {
-    p ? c.y() : c._(d._b.TEXT)
-  }, [p]), f = () => {
-    s(!0)
-  }, C = () => {
-    s(!1)
+  p = n(689938),
+  m = n(840884);
+t.Z = a.memo(a.forwardRef(function(e, t) {
+  let [n, l] = a.useState(!1), _ = (0, r.e7)([u.Z], () => u.Z.shouldShowPopup()), f = a.useCallback(() => {
+    _ ? c.y() : c._(d._b.TEXT)
+  }, [_]), E = () => {
+    l(!0)
+  }, g = () => {
+    l(!1)
   };
-  return (0, l.jsx)(o.Tooltip, {
-    text: m.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
-    children: e => (0, l.jsx)("div", {
+  return (0, i.jsx)(o.Tooltip, {
+    text: p.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
+    children: e => (0, i.jsx)("div", {
       ref: t,
       ...e,
-      className: a()(E.buttonContainer, h.t4),
-      children: (0, l.jsx)(o.Button, {
+      className: s()(m.buttonContainer, h.t4),
+      children: (0, i.jsx)(o.Button, {
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.NONE,
         tabIndex: 0,
-        className: E.button,
-        onClick: g,
-        onMouseEnter: f,
-        onMouseOver: f,
-        onMouseLeave: C,
-        onFocus: f,
-        onBlur: C,
-        "aria-label": m.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
+        className: m.button,
+        onClick: f,
+        onMouseEnter: E,
+        onMouseOver: E,
+        onMouseLeave: g,
+        onFocus: E,
+        onBlur: g,
+        "aria-label": p.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
         focusProps: {
           offset: {
             top: 4,
@@ -45,9 +45,9 @@ t.Z = i.memo(i.forwardRef(function(e, t) {
             right: -4
           }
         },
-        innerClassName: E.buttonContents,
-        children: (0, l.jsx)(o.AppsIcon, {
-          className: a()(n ? E.iconHovered : E.iconUnhovered)
+        innerClassName: m.buttonContents,
+        children: (0, i.jsx)(o.AppsIcon, {
+          className: s()(n ? m.iconHovered : m.iconUnhovered)
         })
       })
     })

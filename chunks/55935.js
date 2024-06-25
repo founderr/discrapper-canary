@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Hg: function() {
-    return f
+    return S
   },
   KC: function() {
     return c
@@ -10,7 +10,7 @@ n.d(t, {
     return m
   },
   TD: function() {
-    return A
+    return N
   },
   Xf: function() {
     return T
@@ -54,21 +54,21 @@ function E(e, t) {
   let n = h(e).locale(),
     i = "".concat(n, ":").concat(t),
     r = l[i];
-  return null == r && (r = l[i] = (0, s.Z)(t)), r(S(e))
+  return null == r && (r = l[i] = (0, s.Z)(t)), r(f(e))
 }
 
 function I(e) {
   let t;
   let n = r().localeData(),
     i = r()(),
-    s = _(S(e), i.toDate());
+    s = _(f(e), i.toDate());
   return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, h(e), i)))
 }
 
 function T(e) {
   let t = r().localeData(),
     n = r()(),
-    i = _(S(e), n.toDate());
+    i = _(f(e), n.toDate());
   if (0 === i) return E(e, t.longDateFormat("LT"));
   if (-1 === i) return E(e, t.calendar("lastDay", h(e), n));
   if (i > -7) return E(e, "dddd");
@@ -79,11 +79,11 @@ function h(e) {
   return r().isMoment(e) ? e : r()(e)
 }
 
-function S(e) {
+function f(e) {
   return r().isMoment(e) ? e.toDate() : e
 }
 
-function f(e) {
+function S(e) {
   let t;
   let n = r().localeData(),
     i = new Date,
@@ -93,7 +93,7 @@ function f(e) {
 o.default.addChangeListener(() => {
   l = Object.create(null)
 });
-let N = [{
+let A = [{
   key: "days",
   millisecondsInUnit: 864e5
 }, {
@@ -107,7 +107,7 @@ let N = [{
   millisecondsInUnit: 1e3
 }];
 
-function A(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = {
       days: 0,
@@ -117,7 +117,7 @@ function A(e, t) {
     };
   if (e > t || n && Number(e) + 1200 > Number(t)) return i;
   let r = Number(t) - Number(e);
-  return N.forEach(e => {
+  return A.forEach(e => {
     let {
       key: t,
       millisecondsInUnit: n

@@ -1,16 +1,16 @@
 n.d(t, {
   Z: function() {
-    return s
+    return l
   }
 });
-var l = n(927923),
-  i = n(689938);
+var i = n(927923),
+  a = n(689938);
 
-function s(e) {
+function l(e) {
   switch (e) {
-    case l.YE.XBOX:
-      return i.Z.Messages.XBOX_REMOTE_CONNECTED_RAW;
-    case l.YE.PLAYSTATION:
-      return i.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW
+    case i.YE.XBOX:
+      return a.Z.Messages.XBOX_REMOTE_CONNECTED_RAW;
+    case i.YE.PLAYSTATION:
+      return a.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW
   }
 }

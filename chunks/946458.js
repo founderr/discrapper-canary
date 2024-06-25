@@ -1,66 +1,66 @@
-o.d(i, {
+t.d(o, {
   Z: function() {
     return r
   }
 });
-var t = o(735250);
-o(470079);
-var s = o(442837),
-  l = o(481060),
-  a = o(596454),
-  n = o(339085),
-  d = o(158176);
+var i = t(735250);
+t(470079);
+var a = t(442837),
+  n = t(481060),
+  l = t(596454),
+  s = t(339085),
+  d = t(158176);
 
 function r(e) {
   let {
-    reactionEmoji: i
-  } = e, o = (0, s.e7)([n.Z], () => (null == i ? void 0 : i.emojiId) != null ? n.Z.getUsableCustomEmojiById(i.emojiId) : null);
-  return (0, t.jsxs)("div", {
+    reactionEmoji: o
+  } = e, t = (0, a.e7)([s.Z], () => (null == o ? void 0 : o.emojiId) != null ? s.Z.getUsableCustomEmojiById(o.emojiId) : null);
+  return (0, i.jsxs)("div", {
     className: d.container,
-    children: [(0, t.jsxs)("div", {
+    children: [(0, i.jsxs)("div", {
       className: d.body,
-      children: [(0, t.jsxs)("div", {
+      children: [(0, i.jsxs)("div", {
         className: d.placeholderLines,
-        children: [(0, t.jsx)(c, {
+        children: [(0, i.jsx)(c, {
           width: "100%",
           marginBottom: 8
-        }), (0, t.jsx)(c, {
+        }), (0, i.jsx)(c, {
           width: "80%",
           marginBottom: 16
-        }), (0, t.jsx)(c, {
+        }), (0, i.jsx)(c, {
           width: "50%",
           marginBottom: 8
-        }), (0, t.jsx)(c, {
+        }), (0, i.jsx)(c, {
           width: "60%",
           marginBottom: 16
         })]
-      }), (0, t.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: d.placeholderMedia
       })]
-    }), (0, t.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       className: d.footer,
-      children: [(0, t.jsxs)("div", {
+      children: [(0, i.jsxs)("div", {
         className: d.reaction,
-        children: [null != i ? (0, t.jsx)(a.Z, {
+        children: [null != o ? (0, i.jsx)(l.Z, {
           className: d.reactionEmote,
-          emojiId: i.emojiId,
-          emojiName: i.emojiName,
-          animated: !!(null == o ? void 0 : o.animated)
-        }) : (0, t.jsx)(l.ReactionIcon, {
+          emojiId: o.emojiId,
+          emojiName: o.emojiName,
+          animated: !!(null == t ? void 0 : t.animated)
+        }) : (0, i.jsx)(n.ReactionIcon, {
           size: "sm",
           color: "currentColor",
           className: d.reactionEmote
-        }), (0, t.jsx)(l.Text, {
+        }), (0, i.jsx)(n.Text, {
           variant: "text-sm/semibold",
           color: "interactive-normal",
           children: 17
         })]
-      }), (0, t.jsx)(c, {
+      }), (0, i.jsx)(c, {
         width: "24px",
         marginBottom: 0
-      }), (0, t.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: d.dot
-      }), (0, t.jsx)(c, {
+      }), (0, i.jsx)(c, {
         width: "24px",
         marginBottom: 0
       })]
@@ -70,14 +70,14 @@ function r(e) {
 
 function c(e) {
   let {
-    width: i,
-    marginBottom: o
+    width: o,
+    marginBottom: t
   } = e;
-  return (0, t.jsx)("div", {
+  return (0, i.jsx)("div", {
     className: d.placeholderLine,
     style: {
-      width: i,
-      marginBottom: o
+      width: o,
+      marginBottom: t
     }
   })
 }

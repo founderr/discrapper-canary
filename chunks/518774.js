@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   _: function() {
-    return S
+    return f
   }
 }), n(47120);
 var i, r = n(735250),
@@ -25,7 +25,7 @@ function E(e, t, n) {
 let I = 80,
   T = 132,
   h = 80;
-class S extends(i = s.PureComponent) {
+class f extends(i = s.PureComponent) {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -52,10 +52,10 @@ class S extends(i = s.PureComponent) {
       dockedRect: _
     } = this.props, d = Math.round(n), E = Math.round(a - r - this._height), I = Math.round(i), T = Math.round(o - s - this._width), h = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != _) {
-      var S, f;
+      var f, S;
       return {
-        y: (null !== (S = null == _ ? void 0 : _.y) && void 0 !== S ? S : 0) - h,
-        x: null !== (f = null == _ ? void 0 : _.x) && void 0 !== f ? f : 0
+        y: (null !== (f = null == _ ? void 0 : _.y) && void 0 !== f ? f : 0) - h,
+        x: null !== (S = null == _ ? void 0 : _.x) && void 0 !== S ? S : 0
       }
     }
     switch (e) {
@@ -197,7 +197,7 @@ class S extends(i = s.PureComponent) {
     })
   }
 }
-E(S, "defaultProps", {
+E(f, "defaultProps", {
   hidden: !1,
   roundCorners: !0
 });
@@ -224,7 +224,7 @@ t.Z = s.memo(e => {
           ...e.props
         }, "pipWindow-".concat(e.id))
       });
-      return (0, r.jsx)(S, {
+      return (0, r.jsx)(f, {
         appContext: u,
         position: t.position,
         id: t.id,

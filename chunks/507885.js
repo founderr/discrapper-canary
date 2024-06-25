@@ -1,9 +1,9 @@
 n(47120);
-var s, i = n(442837),
-  l = n(570140),
-  a = n(701488);
+var i, s = n(442837),
+  a = n(570140),
+  r = n(701488);
 
-function r(e, t, n) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -12,8 +12,8 @@ function r(e, t, n) {
   }) : e[t] = n, e
 }
 let o = new Set,
-  c = new Set([a.ES.DISCORD_TURNS_8]);
-class u extends(s = i.ZP.PersistedStore) {
+  c = new Set([r.ES.DISCORD_TURNS_8]);
+class d extends(i = s.ZP.PersistedStore) {
   initialize(e) {
     null != e && (Array.isArray(e.acknowledged) && (o = new Set(e.acknowledged)), Array.isArray(e.opened) && (c = new Set(e.opened)))
   }
@@ -36,7 +36,7 @@ class u extends(s = i.ZP.PersistedStore) {
     return o.has(e)
   }
 }
-r(u, "displayName", "ActivitiesWhatsNewStore"), r(u, "persistKey", "ActivitiesWhatsNewStore"), t.Z = new u(l.Z, {
+l(d, "displayName", "ActivitiesWhatsNewStore"), l(d, "persistKey", "ActivitiesWhatsNewStore"), t.Z = new d(a.Z, {
   ACTIVITIES_WHATS_NEW_ACKNOWLEDGE_SECTION: function(e) {
     let {
       section: t

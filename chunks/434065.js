@@ -1,9 +1,9 @@
 t.d(n, {
   r: function() {
-    return l
+    return r
   }
 });
-let l = (0, t(652874).Z)(e => ({
+let r = (0, t(652874).Z)(e => ({
   favoriteAdded: !1,
   notifyFavoriteAdded: () => e({
     favoriteAdded: !0

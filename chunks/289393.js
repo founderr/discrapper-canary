@@ -19,34 +19,34 @@ function h(e) {
   return "subscription_listing:".concat(e)
 }
 
-function S(e) {
+function f(e) {
   return "application:".concat(e)
 }
 
-function f(e) {
+function S(e) {
   return "plan:".concat(e)
 }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
-let N = new d.h(e => [T(e.guild_id), ...e.subscription_listings_ids.map(h)], e => e.id),
-  A = new d.h(e => [S(e.application_id), f(e.subscription_plans[0].id)], e => e.id),
+let A = new d.h(e => [T(e.guild_id), ...e.subscription_listings_ids.map(h)], e => e.id),
+  N = new d.h(e => [f(e.application_id), S(e.subscription_plans[0].id)], e => e.id),
   m = {},
   O = new Set,
-  R = {},
   p = {},
+  R = {},
   g = {},
   C = {},
   v = new Map;
 
 function L(e) {
-  return N.values(T(e))
+  return A.values(T(e))
 }
 
 function D(e) {
   var t;
-  for (let n of (N.set(e.id, e), v.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) M(n)
+  for (let n of (A.set(e.id, e), v.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) M(n)
 }
 
 function M(e) {
-  A.set(e.id, e)
+  N.set(e.id, e)
 }
 let P = [];
 class y extends(r = c.ZP.Store) {
@@ -58,32 +58,32 @@ class y extends(r = c.ZP.Store) {
     return O.has(e)
   }
   getSubscriptionGroupListing(e) {
-    return N.get(e)
+    return A.get(e)
   }
   getSubscriptionGroupListingsForGuild(e) {
     return L(e)
   }
   getSubscriptionGroupListingForSubscriptionListing(e) {
-    let t = N.values(h(e));
+    let t = A.values(h(e));
     return _()(t.length <= 1, "Found multiple group listings for listing"), t[0]
   }
   getSubscriptionListing(e) {
-    return A.get(e)
+    return N.get(e)
   }
   getSubscriptionListingsForGuild(e) {
     var t;
     let n = null === (t = this.getSubscriptionGroupListingsForGuild(e)[0]) || void 0 === t ? void 0 : t.application_id;
-    return null != n ? A.values(S(n)) : P
+    return null != n ? N.values(f(n)) : P
   }
   getSubscriptionListingForPlan(e) {
-    let t = A.values(f(e));
+    let t = N.values(S(e));
     return _()(t.length <= 1, "Found multiple listings for plan"), t[0]
   }
   getSubscriptionSettings(e) {
-    return R[e]
+    return p[e]
   }
   getSubscriptionTrial(e) {
-    return p[e]
+    return R[e]
   }
   getMonetizationRestrictions(e) {
     return g[e]
@@ -103,20 +103,20 @@ l = "GuildRoleSubscriptionsStore", (a = "displayName") in(o = y) ? Object.define
   writable: !0
 }) : o[a] = l, t.Z = new y(E.Z, {
   CONNECTION_OPEN: function() {
-    N.clear(), A.clear(), m = {}, O.clear(), R = {}, p = {}, g = {}, C = {}, v.clear()
+    A.clear(), N.clear(), m = {}, O.clear(), p = {}, R = {}, g = {}, C = {}, v.clear()
   },
   GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function(e) {
     let {
       settings: t
     } = e;
-    R[t.guild_id] = t
+    p[t.guild_id] = t
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: function(e) {
     let {
       guildId: t
     } = e;
     for (let e of (m[t] = 1, L(t)))
-      for (let t of (N.delete(e.id), e.subscription_listings_ids)) A.delete(t)
+      for (let t of (A.delete(e.id), e.subscription_listings_ids)) N.delete(t)
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function(e) {
     let {
@@ -126,7 +126,7 @@ l = "GuildRoleSubscriptionsStore", (a = "displayName") in(o = y) ? Object.define
       subscriptionTrials: r
     } = e;
     for (let e of (m[t] = 2, n)) D(e);
-    for (let e of (R[t] = i, r)) p[e.id] = e
+    for (let e of (p[t] = i, r)) R[e.id] = e
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function(e) {
     let {
@@ -144,7 +144,7 @@ l = "GuildRoleSubscriptionsStore", (a = "displayName") in(o = y) ? Object.define
     let {
       groupListingId: t
     } = e;
-    N.delete(t)
+    A.delete(t)
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: function(e) {
     let {
@@ -175,13 +175,13 @@ l = "GuildRoleSubscriptionsStore", (a = "displayName") in(o = y) ? Object.define
     let {
       listingId: t
     } = e;
-    return A.delete(t)
+    return N.delete(t)
   },
   GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL: function(e) {
     let {
       subscriptionTrial: t
     } = e;
-    p[t.id] = t
+    R[t.id] = t
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function(e) {
     let {

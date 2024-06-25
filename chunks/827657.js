@@ -1,23 +1,23 @@
-t.d(l, {
+l.d(t, {
   Z: function() {
-    return E
+    return m
   }
 });
-var n = t(735250),
-  s = t(470079),
-  a = t(120356),
-  o = t.n(a),
-  i = t(481060),
-  r = t(693580),
-  C = t(472596),
-  c = t(918192),
-  d = t(689938),
-  u = t(851156);
+var n = l(735250),
+  a = l(470079),
+  o = l(120356),
+  s = l.n(o),
+  i = l(481060),
+  r = l(693580),
+  C = l(472596),
+  c = l(918192),
+  d = l(689938),
+  u = l(851156);
 
-function E(e) {
+function m(e) {
   let {
-    searchState: l
-  } = e, t = s.useMemo(() => ({
+    searchState: t
+  } = e, l = a.useMemo(() => ({
     [C.po.LOADING]: null,
     [C.po.SUCCESS_STILL_INDEXING]: {
       icon: (0, n.jsx)(r.Z, {}),
@@ -28,16 +28,16 @@ function E(e) {
       message: d.Z.Messages.MEMBER_SAFETY_TABLE_NO_RESULTS
     },
     [C.po.SUCCESS_FULL]: null
-  }), [])[l];
-  return null == t ? null : (0, n.jsxs)("div", {
-    className: o()(u.noResultsContainer),
+  }), [])[t];
+  return null == l ? null : (0, n.jsxs)("div", {
+    className: s()(u.noResultsContainer),
     children: [(0, n.jsx)("div", {
-      className: o()(u.__invalid_noResultsIconContainer),
-      children: t.icon
+      className: s()(u.__invalid_noResultsIconContainer),
+      children: l.icon
     }), (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: t.message
+      children: l.message
     })]
   })
 }

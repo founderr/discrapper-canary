@@ -1,25 +1,25 @@
 n.d(t, {
   Z: function() {
-    return i
+    return l
   }
 });
-var s = n(735250),
-  o = n(470079),
+var o = n(735250),
+  s = n(470079),
   r = n(920906),
   a = n(130653),
-  l = n(613087);
+  i = n(613087);
 
-function i(e) {
+function l(e) {
   let {
     expansionSpring: t,
     isExpanded: n
   } = e, {
-    animatedComponentProps: i,
+    animatedComponentProps: l,
     recalculateAnimationPositions: c
-  } = o.useContext(l.B$), u = o.useContext(a.T);
-  return o.useEffect(() => {
+  } = s.useContext(i.B$), d = s.useContext(a.T);
+  return s.useEffect(() => {
     c()
-  }, [c, n]), (0, s.jsx)("div", {
+  }, [c, n]), (0, o.jsx)("div", {
     style: {
       overflow: "hidden",
       position: "absolute",
@@ -28,29 +28,29 @@ function i(e) {
       width: "100%",
       height: "100%"
     },
-    children: i.map(e => {
+    children: l.map(e => {
       let {
         id: n,
-        collapsedLeft: o,
+        collapsedLeft: s,
         expandedLeft: a,
-        collapsedTop: l,
-        expandedTop: i,
+        collapsedTop: i,
+        expandedTop: l,
         collapsedRight: c,
-        expandedRight: d
+        expandedRight: u
       } = e;
-      return (0, s.jsx)(r.animated.div, {
-        id: u ? "quest-bar-v2-preview-" + n : "quest-bar-v2-" + n,
+      return (0, o.jsx)(r.animated.div, {
+        id: d ? "quest-bar-v2-preview-" + n : "quest-bar-v2-" + n,
         style: {
           zIndex: 2,
           position: "absolute",
           top: t.to({
             range: [0, 1],
-            output: [l, i]
+            output: [i, l]
           }),
-          right: Math.min(c, d),
+          right: Math.min(c, u),
           left: t.to({
             range: [0, 1],
-            output: [o, a]
+            output: [s, a]
           })
         }
       }, n)

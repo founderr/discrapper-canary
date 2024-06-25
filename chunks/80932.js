@@ -7,19 +7,19 @@ n.d(t, {
     return m
   },
   RE: function() {
-    return R
+    return p
   },
   Xe: function() {
     return L
   },
   dv: function() {
-    return p
+    return R
   },
   rS: function() {
     return O
   },
   t0: function() {
-    return A
+    return N
   }
 }), n(47120), n(653041);
 var i = n(392711),
@@ -36,14 +36,14 @@ var i = n(392711),
   I = n(486472),
   T = n(823379),
   h = n(668781),
-  S = n(981631),
-  f = n(526761),
-  N = n(689938);
+  f = n(981631),
+  S = n(526761),
+  A = n(689938);
 
-function A(e) {
+function N(e) {
   E.hW.updateAsync("textAndImages", t => {
     t.diversitySurrogate = o.Gm.create(), t.diversitySurrogate.value = e
-  }, f.fy.FREQUENT_USER_ACTION)
+  }, S.fy.FREQUENT_USER_ACTION)
 }
 
 function m(e) {
@@ -51,7 +51,7 @@ function m(e) {
     type: "EMOJI_FETCH",
     guildId: e
   }), s.tn.get({
-    url: S.ANM.GUILD_EMOJIS(e),
+    url: f.ANM.GUILD_EMOJIS(e),
     oldFormErrors: !0
   }).then(t => a.Z.dispatch({
     type: "EMOJI_FETCH_SUCCESS",
@@ -74,7 +74,7 @@ function O(e) {
     type: "EMOJI_UPLOAD_START",
     guildId: t
   }), s.tn.post({
-    url: S.ANM.GUILD_EMOJIS(t),
+    url: f.ANM.GUILD_EMOJIS(t),
     body: {
       image: n,
       name: i,
@@ -90,17 +90,17 @@ function O(e) {
   }), Promise.reject(e)))
 }
 
-function R(e, t) {
+function p(e, t) {
   return a.Z.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
     emojiId: t
   }), s.tn.del({
-    url: S.ANM.GUILD_EMOJI(e, t),
+    url: f.ANM.GUILD_EMOJI(e, t),
     oldFormErrors: !0
   })
 }
-async function p(e) {
+async function R(e) {
   let {
     guildId: t,
     emojiId: n,
@@ -109,7 +109,7 @@ async function p(e) {
   } = e;
   try {
     return await s.tn.patch({
-      url: S.ANM.GUILD_EMOJI(t, n),
+      url: f.ANM.GUILD_EMOJI(t, n),
       body: {
         name: i,
         roles: r
@@ -137,12 +137,12 @@ function C(e) {
 
 function v(e) {
   let t = C(e);
-  if (null != t) E.DZ.updateAsync("favoriteEmojis", e => (e.emojis = g(e.emojis), r().size(e.emojis) >= f.oX) ? (h.Z.show({
-    title: N.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-    body: N.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-      count: f.oX
+  if (null != t) E.DZ.updateAsync("favoriteEmojis", e => (e.emojis = g(e.emojis), r().size(e.emojis) >= S.oX) ? (h.Z.show({
+    title: A.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: A.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+      count: S.oX
     })
-  }), !1) : !e.emojis.includes(t) && void e.emojis.push(t), f.fy.INFREQUENT_USER_ACTION)
+  }), !1) : !e.emojis.includes(t) && void e.emojis.push(t), S.fy.INFREQUENT_USER_ACTION)
 }
 
 function L(e) {
@@ -150,5 +150,5 @@ function L(e) {
   if (null != t) E.DZ.updateAsync("favoriteEmojis", e => {
     if (e.emojis = g(e.emojis), !e.emojis.includes(t)) return !1;
     e.emojis = e.emojis.filter(e => t !== e)
-  }, f.fy.INFREQUENT_USER_ACTION)
+  }, S.fy.INFREQUENT_USER_ACTION)
 }

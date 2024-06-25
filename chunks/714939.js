@@ -1,47 +1,47 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return o
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(481060),
-  l = t(259580),
-  a = t(689938),
-  r = t(355302);
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(259580),
+  r = n(689938),
+  l = n(355302);
 
 function o(e) {
   let {
-    role: s,
-    onClick: t
+    role: t,
+    onClick: n
   } = e;
-  return (0, n.jsxs)(i.Clickable, {
-    className: r.container,
-    onClick: t,
-    children: [(0, n.jsx)("div", {
-      className: r.icon,
-      children: (0, n.jsx)(i.GroupIcon, {
+  return (0, s.jsxs)(a.Clickable, {
+    className: l.container,
+    onClick: n,
+    children: [(0, s.jsx)("div", {
+      className: l.icon,
+      children: (0, s.jsx)(a.GroupIcon, {
         size: "custom",
         color: "currentColor",
         width: 20,
         height: 20
       })
-    }), (0, n.jsxs)("div", {
-      className: r.description,
-      children: [(0, n.jsx)(i.Text, {
-        className: r.label,
+    }), (0, s.jsxs)("div", {
+      className: l.description,
+      children: [(0, s.jsx)(a.Text, {
+        className: l.label,
         color: "none",
         variant: "text-md/bold",
-        children: a.Z.Messages.ROLE_EVERYONE_LABEL
-      }), (0, n.jsxs)(i.Text, {
+        children: r.Z.Messages.ROLE_EVERYONE_LABEL
+      }), (0, s.jsxs)(a.Text, {
         color: "none",
         variant: "text-xs/normal",
-        children: [s.name, " • ", a.Z.Messages.ROLE_EVERYONE_DESCRIPTION]
+        children: [t.name, " • ", r.Z.Messages.ROLE_EVERYONE_DESCRIPTION]
       })]
-    }), (0, n.jsx)(l.Z, {
-      className: r.arrow,
-      direction: l.Z.Directions.RIGHT
+    }), (0, s.jsx)(i.Z, {
+      className: l.arrow,
+      direction: i.Z.Directions.RIGHT
     })]
   })
 }

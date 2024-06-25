@@ -1,84 +1,84 @@
 n.d(t, {
   Z: function() {
-    return f
+    return E
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(40851),
+var a = n(442837),
+  l = n(481060),
+  s = n(40851),
   r = n(889161),
   o = n(390322),
   c = n(871499),
   u = n(592125),
   d = n(15274),
   h = n(482241),
-  m = n(389303),
-  E = n(554747),
-  p = n(689938),
-  g = n(791671);
+  p = n(389303),
+  m = n(554747),
+  _ = n(689938),
+  f = n(791671);
 
-function f(e) {
+function E(e) {
   let {
     channelId: t,
     onClick: n
-  } = e, f = (0, a.bp)(), C = (0, E.qY)(t), _ = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), {
+  } = e, E = (0, s.bp)(), g = (0, m.qY)(t), C = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]), {
     canManageGuildEvent: I
-  } = (0, r.XJ)(_), x = I(C);
-  if (null == C) return null;
+  } = (0, r.XJ)(C), x = I(g);
+  if (null == g) return null;
   let T = () => {
-      if (null != _ && (0, m.Z)(_)) {
-        (0, d.lC)(_, f);
+      if (null != C && (0, p.Z)(C)) {
+        (0, d.lC)(C, E);
         return
       }
       n()
     },
     N = () => {
-      h.Z.endEvent(C.id, C.guild_id)
+      h.Z.endEvent(g.id, g.guild_id)
     };
-  return x ? (0, l.jsx)(s.Popout, {
+  return x ? (0, i.jsx)(l.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
       } = e;
-      return (0, l.jsx)(o.Z, {
-        children: (0, l.jsx)(s.Menu, {
+      return (0, i.jsx)(o.Z, {
+        children: (0, i.jsx)(l.Menu, {
           navId: "exit-options",
           onSelect: () => {},
-          "aria-label": p.Z.Messages.DISCONNECT_MENU,
+          "aria-label": _.Z.Messages.DISCONNECT_MENU,
           onClose: t,
-          children: (0, l.jsx)(s.MenuItem, {
+          children: (0, i.jsx)(l.MenuItem, {
             id: "end-voice-event",
             color: "danger",
             action: N,
-            label: p.Z.Messages.END_EVENT,
-            icon: s.CircleXIcon
+            label: _.Z.Messages.END_EVENT,
+            icon: l.CircleXIcon
           })
         })
       })
     },
     align: "center",
     position: "top",
-    animation: s.Popout.Animation.FADE,
+    animation: l.Popout.Animation.FADE,
     children: e => {
       let {
         onClick: t
       } = e;
-      return (0, l.jsx)(c.d, {
-        label: p.Z.Messages.DISCONNECT_SELF,
+      return (0, i.jsx)(c.d, {
+        label: _.Z.Messages.DISCONNECT_SELF,
         color: "red",
-        iconComponent: s.PhoneHangUpIcon,
+        iconComponent: l.PhoneHangUpIcon,
         onClick: T,
         onPopoutClick: t,
-        className: g.buttonSpacing
+        className: f.buttonSpacing
       })
     }
-  }) : (0, l.jsx)(c.d, {
-    className: g.buttonSpacing,
-    label: p.Z.Messages.DISCONNECT_SELF,
+  }) : (0, i.jsx)(c.d, {
+    className: f.buttonSpacing,
+    label: _.Z.Messages.DISCONNECT_SELF,
     color: "red",
-    iconComponent: s.PhoneHangUpIcon,
+    iconComponent: l.PhoneHangUpIcon,
     onClick: n
   })
 }

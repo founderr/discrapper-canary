@@ -1,33 +1,33 @@
-s(47120);
-var n = s(470079);
+n(47120);
+var s = n(470079);
 t.Z = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
-    [t, s] = n.useState(!1),
-    [a, i] = n.useState(0),
-    [r, l] = n.useState(!1),
-    [o, c] = n.useState(0);
-  return n.useEffect(() => {
+    [t, n] = s.useState(!1),
+    [a, r] = s.useState(0),
+    [i, l] = s.useState(!1),
+    [o, c] = s.useState(0);
+  return s.useEffect(() => {
     a >= e && (l(!0), c(Math.floor(a / e)));
     let t = setTimeout(() => {
-      i(0)
+      r(0)
     }, 1e3);
     return () => clearTimeout(t)
-  }, [a, e]), n.useEffect(() => {
+  }, [a, e]), s.useEffect(() => {
     if (!t) {
       let e = setTimeout(() => {
         l(!1), c(0)
       }, 1e3);
       return () => clearTimeout(e)
     }
-    i(e => e + 1)
+    r(e => e + 1)
   }, [t]), {
     onHover: () => {
-      s(!0)
+      n(!0)
     },
     onUnhover: () => {
-      s(!1)
+      n(!1)
     },
-    isEasterEggTriggered: r,
+    isEasterEggTriggered: i,
     easterEggLevel: o
   }
 }

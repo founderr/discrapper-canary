@@ -2,26 +2,26 @@
 n(47120);
 var i = n(735250),
   s = n(470079),
-  l = n(442837),
+  a = n(442837),
   o = n(481060),
-  a = n(13245),
-  r = n(237997),
+  r = n(13245),
+  l = n(237997),
   c = n(153124),
   d = n(766032),
   u = n(987650),
   h = n(981631),
   p = n(689938),
   f = n(852853);
-let E = Object.values(u.wF).map(e => 100 * e),
+let _ = Object.values(u.wF).map(e => 100 * e),
   g = (0, c.hQ)();
 class m extends s.PureComponent {
   handleUpdateBackgroundOpacity(e) {
-    a.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), a.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, {
+    r.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, {
       text_opacity_slider: e
     })
   }
   handlePreviewBackgroundOpacity(e) {
-    a.Z.setTextWidgetOpacity((0, d.Z)(e / 100))
+    r.Z.setTextWidgetOpacity((0, d.Z)(e / 100))
   }
   render() {
     return (0, i.jsxs)("div", {
@@ -37,12 +37,12 @@ class m extends s.PureComponent {
           mini: !0,
           initialValue: this.initialValue,
           defaultValue: this.initialValue,
-          minValue: E[0],
-          maxValue: E[E.length - 1],
+          minValue: _[0],
+          maxValue: _[_.length - 1],
           handleSize: 10,
           onValueChange: this.handleUpdateBackgroundOpacity,
           asValueChanges: this.handlePreviewBackgroundOpacity,
-          markers: E,
+          markers: _,
           onMarkerRender: h.dG4,
           equidistant: !0,
           stickToMarkers: !0,
@@ -61,6 +61,6 @@ class m extends s.PureComponent {
     }) : t[n] = i
   }
 }
-t.Z = l.ZP.connectStores([r.Z], () => ({
-  opacity: r.Z.getTextWidgetOpacity()
+t.Z = a.ZP.connectStores([l.Z], () => ({
+  opacity: l.Z.getTextWidgetOpacity()
 }))(m)

@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return R
+    return j
   },
   _: function() {
-    return j
+    return M
   }
 }), n(47120);
-var s = n(735250),
-  l = n(470079),
-  a = n(512722),
-  r = n.n(a),
+var a = n(735250),
+  s = n(470079),
+  r = n(512722),
+  l = n.n(r),
   i = n(920906),
   o = n(442837),
   c = n(481060),
@@ -18,20 +18,20 @@ var s = n(735250),
   u = n(607070),
   m = n(541716),
   h = n(859235),
-  g = n(898463),
-  x = n(592125),
-  _ = n(703558),
-  E = n(117530),
+  _ = n(898463),
+  g = n(592125),
+  x = n(703558),
+  C = n(117530),
   f = n(585483),
-  C = n(127654),
+  p = n(127654),
   T = n(228392),
-  N = n(981631),
-  I = n(344479);
-let S = {
+  I = n(981631),
+  E = n(344479);
+let N = {
     scale: .95,
     opacity: 0
   },
-  p = {
+  b = {
     scale: 1,
     opacity: 1
   },
@@ -39,20 +39,20 @@ let S = {
     scale: 1,
     opacity: 1
   },
-  M = {
+  S = {
     tension: 2400,
     friction: 52
   };
 
-function j(e) {
+function M(e) {
   let {
     channelId: t,
     onClick: n,
-    onClose: a,
+    onClose: r,
     onMouseEnter: i
-  } = e, u = l.useRef(null), m = (0, o.e7)([x.Z], () => x.Z.getChannel(t), [t]);
-  return r()(null != m, "Forum Channel is null"), (0, s.jsxs)(c.Clickable, {
-    className: I.uploadInput,
+  } = e, u = s.useRef(null), m = (0, o.e7)([g.Z], () => g.Z.getChannel(t), [t]);
+  return l()(null != m, "Forum Channel is null"), (0, a.jsxs)(c.Clickable, {
+    className: E.uploadInput,
     onMouseEnter: i,
     onClick: () => {
       (0, T.N3)({
@@ -67,23 +67,23 @@ function j(e) {
         })
       }
     },
-    children: [(0, s.jsx)(d.Z, {
-      className: I.fileInput,
+    children: [(0, a.jsx)(d.Z, {
+      className: E.fileInput,
       ref: u,
       onChange: e => {
-        null == a || a(), (0, C.d)(e.currentTarget.files, m, _.d.FirstThreadMessage, {
+        null == r || r(), (0, p.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, {
           requireConfirm: !0
-        }), f.S.dispatch(N.CkL.TEXTAREA_FOCUS), e.currentTarget.value = null
+        }), f.S.dispatch(I.CkL.TEXTAREA_FOCUS), e.currentTarget.value = null
       },
       multiple: m.rateLimitPerUser <= 0,
       tabIndex: -1,
       "aria-hidden": !0
-    }), (0, s.jsx)(c.ImagePlusIcon, {
+    }), (0, a.jsx)(c.ImagePlusIcon, {
       size: "custom",
       color: "currentColor",
       width: 28,
       height: 28,
-      className: I.uploadIcon
+      className: E.uploadIcon
     })]
   })
 }
@@ -92,39 +92,39 @@ function A(e) {
   let {
     channelId: t,
     closePopout: n
-  } = e, [a, r] = l.useState(!1), {
+  } = e, [r, l] = s.useState(!1), {
     reducedMotion: d
-  } = l.useContext(c.AccessibilityPreferencesContext), x = (0, i.useSpring)({
-    from: d.enabled ? p : S,
+  } = s.useContext(c.AccessibilityPreferencesContext), g = (0, i.useSpring)({
+    from: d.enabled ? b : N,
     to: v,
-    config: M
-  }), _ = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled), f = (0, o.e7)([E.Z], () => E.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
-  return (0, s.jsx)(i.animated.div, {
-    className: I.popoutContainer,
+    config: S
+  }), x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled), f = (0, o.e7)([C.Z], () => C.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
+  return (0, a.jsx)(i.animated.div, {
+    className: E.popoutContainer,
     onMouseLeave: () => {
-      !a && n()
+      !r && n()
     },
-    style: x,
-    children: (0, s.jsxs)(c.ScrollerThin, {
+    style: g,
+    children: (0, a.jsxs)(c.ScrollerThin, {
       orientation: "horizontal",
-      className: I.popout,
+      className: E.popout,
       paddingFix: !1,
       fade: !0,
-      children: [(0, s.jsx)(j, {
+      children: [(0, a.jsx)(M, {
         channelId: t,
         onClick: () => {
-          r(!0)
+          l(!0)
         },
         onClose: () => {
-          r(!1), n()
+          l(!1), n()
         }
-      }), (0, s.jsx)("div", {
-        className: I.uploads,
-        children: f.map(e => (0, s.jsx)(g.Z, {
+      }), (0, a.jsx)("div", {
+        className: E.uploads,
+        children: f.map(e => (0, a.jsx)(_.Z, {
           channelId: t,
           draftType: m.I.CREATE_FORUM_POST.drafts.type,
           upload: e,
-          keyboardModeEnabled: _,
+          keyboardModeEnabled: x,
           hideFileName: !0,
           size: h.q.SMALL
         }, e.id))
@@ -133,34 +133,34 @@ function A(e) {
   })
 }
 
-function R(e) {
+function j(e) {
   let {
     channelId: t
-  } = e, [n, a] = l.useState(!1), r = (0, o.e7)([E.Z], () => E.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type)), i = r.length, c = i > 0;
-  l.useEffect(() => {
-    n && !c && a(!1)
+  } = e, [n, r] = s.useState(!1), l = (0, o.e7)([C.Z], () => C.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type)), i = l.length, c = i > 0;
+  s.useEffect(() => {
+    n && !c && r(!1)
   }, [n, c]);
   let d = () => {
-    c && a(!0)
+    c && r(!0)
   };
-  return (0, s.jsxs)("div", {
-    className: I.container,
-    children: [c ? (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(g.r, {
-        upload: r[0],
+  return (0, a.jsxs)("div", {
+    className: E.container,
+    children: [c ? (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(_.r, {
+        upload: l[0],
         size: h.q.SMALL,
         onMouseEnter: d
-      }), !n && (0, s.jsx)("div", {
-        className: I.badge,
+      }), !n && (0, a.jsx)("div", {
+        className: E.badge,
         children: i
       })]
-    }) : (0, s.jsx)(j, {
+    }) : (0, a.jsx)(M, {
       onMouseEnter: d,
       channelId: t
-    }), n && (0, s.jsx)(A, {
+    }), n && (0, a.jsx)(A, {
       channelId: t,
       closePopout: () => {
-        a(!1)
+        r(!1)
       }
     })]
   })

@@ -1,19 +1,19 @@
-var s, i, l, a, r = n(442837),
+var i, a, s, l, r = n(442837),
   o = n(570140);
 let c = {
   matureAgree: !1
 };
-class u extends(a = r.ZP.Store) {
+class d extends(l = r.ZP.Store) {
   get didMatureAgree() {
     return c.matureAgree
   }
 }
-l = "ApplicationStoreSettingsStore", (i = "displayName") in(s = u) ? Object.defineProperty(s, i, {
-  value: l,
+s = "ApplicationStoreSettingsStore", (a = "displayName") in(i = d) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = l, t.Z = new u(o.Z, {
+}) : i[a] = s, t.Z = new d(o.Z, {
   APPLICATION_STORE_MATURE_AGREE: function() {
     c.matureAgree = !0
   }

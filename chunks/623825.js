@@ -1,16 +1,16 @@
 n.d(t, {
   K: function() {
-    return l
+    return i
   },
   N: function() {
-    return i
+    return a
   }
 });
 
-function l(e) {
+function i(e) {
   return e <= 220
 }
 
-function i(e) {
+function a(e) {
   return e <= 124
 }

@@ -1,172 +1,172 @@
-t(47120), t(411104);
-var a = t(934951),
-  n = t(266067),
-  i = t(38618),
-  l = t(57132),
-  o = t(215355),
-  c = t(777639),
-  s = t(311163),
-  d = t(272423),
-  u = t(781157),
-  h = t(700615),
-  m = t(905423),
-  g = t(703656),
-  p = t(981631);
+n(47120), n(411104);
+var i = n(934951),
+  o = n(266067),
+  r = n(38618),
+  a = n(57132),
+  l = n(215355),
+  s = n(777639),
+  c = n(311163),
+  u = n(272423),
+  d = n(781157),
+  h = n(700615),
+  g = n(905423),
+  f = n(703656),
+  m = n(981631);
 
-function b(e, r, t) {
-  return r in e ? Object.defineProperty(e, r, {
-    value: t,
+function p(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[r] = t, e
+  }) : e[t] = n, e
 }
-r.Z = new class e {
+t.Z = new class e {
   initialize() {
-    this.cleanup(), this.unlistenHistory = (0, g.s1)().listen(this.handleRouteChange);
+    this.cleanup(), this.unlistenHistory = (0, f.s1)().listen(this.handleRouteChange);
     let {
       pathname: e
-    } = (0, g.s1)().location;
-    m.Z.getState().resetPath(e), this.unlistenKeyboardChange = m.Z.subscribe(this.handleKeybindRouteChange), i.Z.addChangeListener(this.handleConnectionChange)
+    } = (0, f.s1)().location;
+    g.Z.getState().resetPath(e), this.unlistenKeyboardChange = g.Z.subscribe(this.handleKeybindRouteChange), r.Z.addChangeListener(this.handleConnectionChange)
   }
-  convertRouteToNavigation(e, r) {
-    var t, a, i;
+  convertRouteToNavigation(e, t) {
+    var n, i, r;
     let {
-      pathname: m
-    } = e, g = (0, c.D)(), b = (0, l.cn)(), {
-      mergeTabs: y
-    } = (0, o.LI)({
+      pathname: g
+    } = e, f = (0, s.D)(), p = (0, a.cn)(), {
+      mergeTabs: _
+    } = (0, l.LI)({
       location: "convertRouteToNavigation"
     });
-    if (null == g || !g.isReady()) return;
-    let x = e.navigationReplace,
-      f = null !== (t = e.useScreen) && void 0 !== t && t;
-    if (b && (0, u.x7)() && m === p.Z5c.ME) {
-      (0, d.vp)({
+    if (null == f || !f.isReady()) return;
+    let b = e.navigationReplace,
+      v = null !== (n = e.useScreen) && void 0 !== n && n;
+    if (p && (0, d.x7)() && g === m.Z5c.ME) {
+      (0, u.vp)({
         screen: "messages",
-        resetRoot: x
+        resetRoot: b
       });
       return
     }
-    if (b && m === p.Z5c.NOTIFICATIONS) {
-      (0, d.vp)({
+    if (p && g === m.Z5c.NOTIFICATIONS) {
+      (0, u.vp)({
         screen: "notifications",
-        resetRoot: x
+        resetRoot: b
       });
       return
     }
-    if (m.startsWith("/channels/")) {
-      let e = (0, n.LX)(m, {
-          path: p.Z5c.CHANNEL(":guildId", ":channelId?", ":messageId?")
+    if (g.startsWith("/channels/")) {
+      let e = (0, o.LX)(g, {
+          path: m.Z5c.CHANNEL(":guildId", ":channelId?", ":messageId?")
         }),
-        r = (0, n.LX)(m, {
-          path: "".concat(p.Z5c.CHANNEL(":guildId", ":channelId?")).concat(p.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(":voiceGuildId", ":voiceChannelId", ":voiceMessageId?"))
+        t = (0, o.LX)(g, {
+          path: "".concat(m.Z5c.CHANNEL(":guildId", ":channelId?")).concat(m.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(":voiceGuildId", ":voiceChannelId", ":voiceMessageId?"))
         });
-      if (!b) {
-        let e = g.getRootState();
-        (null == e ? void 0 : null === (i = e.routes) || void 0 === i ? void 0 : null === (a = i[0]) || void 0 === a ? void 0 : a.name) !== "panels" && (0, d.H)();
+      if (!p) {
+        let e = f.getRootState();
+        (null == e ? void 0 : null === (r = e.routes) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.name) !== "panels" && (0, u.H)();
         return
       }
-      if (null != r) {
+      if (null != t) {
         let {
           voiceGuildId: e,
-          voiceChannelId: t,
-          voiceMessageId: a
-        } = r.params;
-        !(0, h.ur)() && (0, d.k4)({
-          channelId: t,
+          voiceChannelId: n,
+          voiceMessageId: i
+        } = t.params;
+        !(0, h.ur)() && (0, u.k4)({
+          channelId: n,
           guildId: e,
-          messageId: a,
-          replaceChannelAndFixRoot: x,
-          useScreen: f
+          messageId: i,
+          replaceChannelAndFixRoot: b,
+          useScreen: v
         });
         return
       }
       if (null != e) {
         let {
-          channelId: r,
-          guildId: t,
-          messageId: a
+          channelId: t,
+          guildId: n,
+          messageId: i
         } = e.params;
-        if (!(0, u.x7)() && !y) {
-          (0, d.vp)({
+        if (!(0, d.x7)() && !_) {
+          (0, u.vp)({
             screen: "guilds",
-            guildId: t,
-            resetRoot: x
+            guildId: n,
+            resetRoot: b
           });
           return
         }
-        if ((0, u.JH)()) {
-          let [e, a] = (0, s.Z)(g.getCurrentRoute());
-          if (e === t && a === r) return
+        if ((0, d.JH)()) {
+          let [e, i] = (0, c.Z)(f.getCurrentRoute());
+          if (e === n && i === t) return
         }
-        null == r || (0, u.Z0)(t) && !1 !== x ? t !== p.ME || y ? (0, d.vp)({
+        null == t || (0, d.Z0)(n) && !1 !== b ? n !== m.ME || _ ? (0, u.vp)({
           screen: "guilds",
-          guildId: t,
-          channelId: (0, u.JH)() ? r : void 0,
-          resetRoot: x
-        }) : (0, d.vp)({
+          guildId: n,
+          channelId: (0, d.JH)() ? t : void 0,
+          resetRoot: b
+        }) : (0, u.vp)({
           screen: "messages",
-          resetRoot: x
-        }) : null != t && (0, d.k4)({
-          channelId: r,
-          guildId: t,
-          messageId: a,
-          replaceChannelAndFixRoot: x,
-          useScreen: f
+          resetRoot: b
+        }) : null != n && (0, u.k4)({
+          channelId: t,
+          guildId: n,
+          messageId: i,
+          replaceChannelAndFixRoot: b,
+          useScreen: v
         })
       }
       return
     }
-    if (m.startsWith("/member-verification/")) {
-      let e = (0, n.LX)(m, {
-        path: p.Z5c.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?")
+    if (g.startsWith("/member-verification/")) {
+      let e = (0, o.LX)(g, {
+        path: m.Z5c.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?")
       });
-      null != e && (0, d.fA)(e.params.guildId, e.params.inviteCode);
+      null != e && (0, u.fA)(e.params.guildId, e.params.inviteCode);
       return
     }
-    if (m.startsWith("/login") || m.startsWith("/register")) {
-      (0, d.Bj)();
+    if (g.startsWith("/login") || g.startsWith("/register")) {
+      (0, u.Bj)();
       return
     }
-    if (m.startsWith("/account-standing")) {
-      g.navigate({
+    if (g.startsWith("/account-standing")) {
+      f.navigate({
         name: "account-standing",
         params: void 0
       });
       return
     }
-    b && (0, d.vp)({
+    p && (0, u.vp)({
       screen: "messages",
-      resetRoot: x
+      resetRoot: b
     })
   }
-  executeRouteRewrites(e, r) {
+  executeRouteRewrites(e, t) {
     if (this.routeChangeCount += 1, this.routeChangeCount < 10)
-      for (let t of this.rewrites) {
-        let n = (0, g.s1)().location.pathname,
-          i = t(e, r);
-        if (null != i) return (0, a.n_)({
+      for (let n of this.rewrites) {
+        let o = (0, f.s1)().location.pathname,
+          r = n(e, t);
+        if (null != r) return (0, i.n_)({
           message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
           data: {
-            replacePath: i.path,
-            previousPath: n
+            replacePath: r.path,
+            previousPath: o
           }
-        }), (0, g.dL)(i.path, i.state), !0
+        }), (0, f.dL)(r.path, r.state), !0
       } else throw Error("RouteManager: Something has gone horribly wrong with rewrites");
     return !1
   }
   cleanup() {
-    var e, r;
-    null === (e = this.unlistenHistory) || void 0 === e || e.call(this), this.unlistenHistory = void 0, null === (r = this.unlistenKeyboardChange) || void 0 === r || r.call(this), this.unlistenKeyboardChange = void 0, i.Z.removeChangeListener(this.handleConnectionChange)
+    var e, t;
+    null === (e = this.unlistenHistory) || void 0 === e || e.call(this), this.unlistenHistory = void 0, null === (t = this.unlistenKeyboardChange) || void 0 === t || t.call(this), this.unlistenKeyboardChange = void 0, r.Z.removeChangeListener(this.handleConnectionChange)
   }
   addRouteChangeListener(e) {
-    return null != this.unlistenHistory && e((0, g.s1)().location, "REPLACE"), this.listeners.add(e), () => this.removeRouteChangeListener(e)
+    return null != this.unlistenHistory && e((0, f.s1)().location, "REPLACE"), this.listeners.add(e), () => this.removeRouteChangeListener(e)
   }
   addRouteRewriter(e) {
     if (null != this.unlistenHistory) {
-      let r = e((0, g.s1)().location, (0, g.s1)().action);
-      null != r && (0, g.dL)(r.path, r.state)
+      let t = e((0, f.s1)().location, (0, f.s1)().action);
+      null != t && (0, f.dL)(t.path, t.state)
     }
     return this.rewrites.add(e), () => this.removeRouteRewriter(e)
   }
@@ -177,31 +177,31 @@ r.Z = new class e {
     this.rewrites.delete(e)
   }
   getHistory() {
-    return (0, g.s1)()
+    return (0, f.s1)()
   }
   constructor() {
-    b(this, "unlistenHistory", void 0), b(this, "unlistenKeyboardChange", void 0), b(this, "rewrites", new Set), b(this, "listeners", new Set), b(this, "routeChangeCount", 0), b(this, "timer", -1), b(this, "connected", !1), b(this, "handleConnectionChange", () => {
-      let e = i.Z.isConnected(),
-        r = e && !this.connected;
-      this.connected = e, r && (this.routeChangeCount = 0, this.executeRouteRewrites((0, g.s1)().location, "REPLACE"))
-    }), b(this, "handleRouteChange", (e, r) => {
-      if (this.executeRouteRewrites(e, r)) return;
-      let t = m.Z.getState();
-      for (let a of (t.basePath !== e.pathname && t.resetPath(e.pathname), this.listeners)) try {
-        a(e, r)
+    p(this, "unlistenHistory", void 0), p(this, "unlistenKeyboardChange", void 0), p(this, "rewrites", new Set), p(this, "listeners", new Set), p(this, "routeChangeCount", 0), p(this, "timer", -1), p(this, "connected", !1), p(this, "handleConnectionChange", () => {
+      let e = r.Z.isConnected(),
+        t = e && !this.connected;
+      this.connected = e, t && (this.routeChangeCount = 0, this.executeRouteRewrites((0, f.s1)().location, "REPLACE"))
+    }), p(this, "handleRouteChange", (e, t) => {
+      if (this.executeRouteRewrites(e, t)) return;
+      let n = g.Z.getState();
+      for (let i of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners)) try {
+        i(e, t)
       } catch (e) {
         console.warn("RouteManager.listen: A route listener has caused an error", e.message)
       }
-      this.convertRouteToNavigation(e, r), this.routeChangeCount = 0
-    }), b(this, "handleKeybindRouteChange", e => {
+      this.convertRouteToNavigation(e, t), this.routeChangeCount = 0
+    }), p(this, "handleKeybindRouteChange", e => {
       let {
-        path: r
+        path: t
       } = e;
-      null != r ? (clearTimeout(this.timer), this.timer = setTimeout(this.flushRoute, 200)) : null == r && clearTimeout(this.timer)
-    }), b(this, "flushRoute", () => {
+      null != t ? (clearTimeout(this.timer), this.timer = setTimeout(this.flushRoute, 200)) : null == t && clearTimeout(this.timer)
+    }), p(this, "flushRoute", () => {
       clearTimeout(this.timer);
-      let e = m.Z.getState();
-      null != e.path && (0, g.uL)(e.path)
+      let e = g.Z.getState();
+      null != e.path && (0, f.uL)(e.path)
     })
   }
 }

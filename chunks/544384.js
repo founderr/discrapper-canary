@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   E: function() {
-    return N
+    return A
   },
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -22,10 +22,10 @@ var r = n(442837),
   I = n(5192),
   T = n(358085),
   h = n(981631),
-  S = n(65154),
-  f = n(689938);
+  f = n(65154),
+  S = n(689938);
 
-function N(e, t, n) {
+function A(e, t, n) {
   let i = (0, r.e7)([a.Z], () => a.Z.getSelectedParticipantId(e.id)),
     s = (0, r.e7)([c.Z], () => null != i ? c.Z.getActiveStreamForStreamKey(i) : null, [i]);
   return (0, r.Wu)([E.default], () => {
@@ -37,7 +37,7 @@ function N(e, t, n) {
   }, [e, s, n, t])
 }
 
-function A(e) {
+function N(e) {
   var t;
   let {
     channel: n,
@@ -46,29 +46,29 @@ function A(e) {
     hideSelfOptions: c = !1,
     showReportOption: E = !1,
     handleGoLive: I,
-    onClose: A,
+    onClose: N,
     onSelect: m,
     appContext: O = h.IlC.APP
-  } = e, R = d.Z.supports(S.AN.DESKTOP_CAPTURE_APPLICATIONS), p = null !== (t = a.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, g = N(n, r, a), C = (0, u.Z)(p, O), v = (0, l.Z)(p, O, h.VqG), L = null == p ? (0, i.jsx)(s.MenuItem, {
+  } = e, p = d.Z.supports(f.AN.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = a.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, g = A(n, r, a), C = (0, u.Z)(R, O), v = (0, l.Z)(R, O, h.VqG), L = null == R ? (0, i.jsx)(s.MenuItem, {
     id: "share-your-screen",
-    label: f.Z.Messages.SHARE_YOUR_SCREEN,
+    label: S.Z.Messages.SHARE_YOUR_SCREEN,
     icon: s.ScreenArrowIcon,
     action: I
   }) : (0, i.jsxs)(i.Fragment, {
     children: [T.isPlatformEmbedded ? (0, i.jsx)(s.MenuItem, {
       id: "stream-settings",
-      label: f.Z.Messages.SCREENSHARE_STREAM_QUALITY,
+      label: S.Z.Messages.SCREENSHARE_STREAM_QUALITY,
       children: C
-    }) : null, E ? v : null, R ? (0, i.jsx)(s.MenuItem, {
+    }) : null, E ? v : null, p ? (0, i.jsx)(s.MenuItem, {
       id: "change-windows",
-      label: f.Z.Messages.SCREENSHARE_CHANGE_WINDOWS,
+      label: S.Z.Messages.SCREENSHARE_CHANGE_WINDOWS,
       icon: s.ScreenArrowIcon,
       action: I
     }) : null, (0, i.jsx)(s.MenuItem, {
       id: "stop-streaming",
-      label: f.Z.Messages.STOP_STREAMING,
+      label: S.Z.Messages.STOP_STREAMING,
       icon: s.ScreenXIcon,
-      action: () => (0, _.Z)(p)
+      action: () => (0, _.Z)(R)
     })]
   });
   return (0, i.jsx)(o.Z, {
@@ -76,8 +76,8 @@ function A(e) {
     children: (0, i.jsxs)(s.Menu, {
       onSelect: m,
       navId: "manage-streams",
-      onClose: A,
-      "aria-label": null != p ? f.Z.Messages.STOP_STREAMING : f.Z.Messages.SHARE_YOUR_SCREEN,
+      onClose: N,
+      "aria-label": null != R ? S.Z.Messages.STOP_STREAMING : S.Z.Messages.SHARE_YOUR_SCREEN,
       children: [(0, i.jsx)(s.MenuGroup, {
         children: g.map(e => {
           let {
@@ -86,7 +86,7 @@ function A(e) {
           } = e;
           return (0, i.jsx)(s.MenuItem, {
             id: t.ownerId,
-            label: f.Z.Messages.STOP_WATCHING_USER.format({
+            label: S.Z.Messages.STOP_WATCHING_USER.format({
               username: n
             }),
             icon: s.ScreenXIcon,

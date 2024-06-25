@@ -1,48 +1,48 @@
 n.d(t, {
   Z: function() {
-    return d
+    return u
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  l = n(481060),
-  a = n(739566),
+var a = n(442837),
+  s = n(481060),
+  l = n(739566),
   r = n(592125),
   o = n(702346),
   c = n(689938),
-  u = n(54441);
+  d = n(54441);
 
-function d(e) {
+function u(e) {
   var t;
   let {
     message: n,
-    compact: d,
-    usernameHook: E,
-    onClickThread: _,
+    compact: u,
+    usernameHook: _,
+    onClickThread: E,
     onClickViewThreads: I,
-    onContextMenuThread: T
-  } = e, m = (0, a.ZP)(n), N = E(m), h = (0, i.e7)([r.Z], () => {
+    onContextMenuThread: m
+  } = e, T = (0, l.ZP)(n), h = _(T), N = (0, a.e7)([r.Z], () => {
     var e;
     return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
-  }), C = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-    actorName: m.nick,
-    actorHook: N,
-    threadName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.content,
+  }), f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+    actorName: T.nick,
+    actorHook: h,
+    threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
-      onClick: _,
-      onContextMenu: T
+      onClick: E,
+      onContextMenu: m
     },
     viewThreadsOnClick: I
   });
-  return (0, s.jsx)(o.Z, {
-    iconNode: (0, s.jsx)(l.ThreadIcon, {
+  return (0, i.jsx)(o.Z, {
+    iconNode: (0, i.jsx)(s.ThreadIcon, {
       size: "md",
       color: "currentColor",
-      className: u.icon
+      className: d.icon
     }),
     timestamp: n.timestamp,
-    compact: d,
-    children: C
+    compact: u,
+    children: f
   })
 }

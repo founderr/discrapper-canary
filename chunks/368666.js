@@ -1,28 +1,28 @@
 n.d(t, {
   eE: function() {
-    return _
+    return E
   },
   jZ: function() {
-    return i
+    return a
   }
 });
-var s, i, l = n(735250);
+var i, a, s = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var l = n(120356),
+  r = n.n(l),
   o = n(692547),
   c = n(481060),
-  u = n(689938),
-  d = n(733564);
-(s = i || (i = {})).RED = "RED", s.GRAY = "GRAY";
-let E = {
-    LARGE: d.liveLarge,
-    SMALL: d.liveSmall
+  d = n(689938),
+  u = n(733564);
+(i = a || (a = {})).RED = "RED", i.GRAY = "GRAY";
+let _ = {
+    LARGE: u.liveLarge,
+    SMALL: u.liveSmall
   },
-  _ = {
-    [c.BadgeShapes.ROUND]: d.liveShapeRound,
-    [c.BadgeShapes.ROUND_LEFT]: d.liveShapeRoundLeft,
-    [c.BadgeShapes.ROUND_RIGHT]: d.liveShapeRoundRight,
+  E = {
+    [c.BadgeShapes.ROUND]: u.liveShapeRound,
+    [c.BadgeShapes.ROUND_LEFT]: u.liveShapeRoundLeft,
+    [c.BadgeShapes.ROUND_RIGHT]: u.liveShapeRoundRight,
     [c.BadgeShapes.SQUARE]: ""
   };
 
@@ -30,22 +30,22 @@ function I(e) {
   let {
     className: t,
     style: n,
-    shape: s = c.BadgeShapes.ROUND,
-    look: i = "RED",
-    size: a = E.LARGE
+    shape: i = c.BadgeShapes.ROUND,
+    look: a = "RED",
+    size: l = _.LARGE
   } = e;
-  return "RED" === i ? (0, l.jsx)(c.TextBadge, {
-    text: u.Z.Messages.LIVE,
-    className: r()(t, d.live, a),
+  return "RED" === a ? (0, s.jsx)(c.TextBadge, {
+    text: d.Z.Messages.LIVE,
+    className: r()(t, u.live, l),
     color: o.Z.unsafe_rawColors.RED_400.css,
-    shape: _[s],
+    shape: E[i],
     style: n
-  }) : (0, l.jsx)(c.TextBadge, {
-    text: u.Z.Messages.LIVE,
-    className: r()(t, d.live, a, d.grey),
+  }) : (0, s.jsx)(c.TextBadge, {
+    text: d.Z.Messages.LIVE,
+    className: r()(t, u.live, l, u.grey),
     disableColor: !0,
-    shape: _[s],
+    shape: E[i],
     style: n
   })
 }
-I.Looks = i, I.Sizes = E, t.ZP = I
+I.Looks = a, I.Sizes = _, t.ZP = I

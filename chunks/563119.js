@@ -14,7 +14,7 @@ var r = n(704215),
   I = n(689938),
   T = n(261025);
 let h = "game_console_alert_modal",
-  S = "game_console_ptt_alert_modal";
+  f = "game_console_ptt_alert_modal";
 t.Z = {
   maybeShowPTTAlert(e) {
     if (u.Z.getMode() !== E.pM4.PUSH_TO_TALK || (0, l.un)(r.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
@@ -34,8 +34,8 @@ t.Z = {
           onConfirm: n,
           titleClassName: T.title
         });
-      (0, s.nf)(S) ? (0, s.o)(S, a) : (0, s.h7)(a, {
-        modalKey: S
+      (0, s.nf)(f) ? (0, s.o)(f, a) : (0, s.h7)(a, {
+        modalKey: f
       })
     })
   },

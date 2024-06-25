@@ -1,32 +1,32 @@
-n.d(t, {
+a.d(t, {
   D: function() {
-    return C
+    return f
   }
-}), n(47120);
-var a = n(735250),
-  l = n(470079),
-  i = n(557533),
-  s = n.n(i),
-  r = n(39383),
-  o = n.n(r),
-  c = n(608863),
-  d = n(66037),
-  u = n(643103),
-  h = n(34211),
-  p = n(231338),
-  m = n(431138),
-  N = n(202437);
+}), a(47120);
+var n = a(735250),
+  i = a(470079),
+  r = a(557533),
+  l = a.n(r),
+  o = a(39383),
+  s = a.n(o),
+  c = a(608863),
+  d = a(66037),
+  u = a(643103),
+  p = a(34211),
+  h = a(231338),
+  m = a(431138),
+  N = a(202437);
 
-function k(e, t, n) {
+function k(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-let g = p.j_.MAIN_NAVIGATION_MENU;
-class C extends l.PureComponent {
+let _ = h.j_.MAIN_NAVIGATION_MENU;
+class f extends i.PureComponent {
   componentDidMount() {
     window.addEventListener("keydown", this.handleKeyDown)
   }
@@ -37,70 +37,70 @@ class C extends l.PureComponent {
     let {
       className: e,
       NavigationMessages: t,
-      TrackClick: n,
-      onChangeLocale: l,
-      avoidRouter: i,
-      openNavAriaLabel: r,
-      hideNavAriaLabel: o
+      TrackClick: a,
+      onChangeLocale: i,
+      avoidRouter: r,
+      openNavAriaLabel: o,
+      hideNavAriaLabel: s
     } = this.props, {
       menuOpen: k
     } = this.state;
-    return (0, a.jsx)("header", {
-      className: s()(N.header, e),
-      children: (0, a.jsxs)("nav", {
+    return (0, n.jsx)("header", {
+      className: l()(N.header, e),
+      children: (0, n.jsxs)("nav", {
         className: N.headerInner,
-        children: [(0, a.jsx)(n, {
+        children: [(0, n.jsx)(a, {
           tag: "div",
-          eventName: g,
+          eventName: _,
           className: N.headerLogo,
           data: {
             linkClicked: "logo"
           },
-          children: (0, a.jsx)(d.Z, {
-            avoidRouter: i,
+          children: (0, n.jsx)(d.Z, {
+            avoidRouter: r,
             className: N.logoWrapper,
-            to: p.am.INDEX,
-            from: p.j_.MAIN_NAVIGATION_MENU,
-            children: (0, a.jsx)("img", {
+            to: h.am.INDEX,
+            from: h.j_.MAIN_NAVIGATION_MENU,
+            children: (0, n.jsx)("img", {
               className: N.logo,
               src: m.r.ASSET_LOGO_DISCORD_SVG,
               alt: "Discord",
               itemProp: "logo"
             })
           })
-        }), (0, a.jsx)(n, {
+        }), (0, n.jsx)(a, {
           tag: "div",
           className: N.hamburgerButton,
-          eventName: g,
+          eventName: _,
           data: {
             linkClicked: "mobile-menu"
           },
-          children: (0, a.jsx)(c.r, {
+          children: (0, n.jsx)(c.r, {
             open: k,
             "aria-haspopup": "true",
-            "aria-label": k ? o : r,
+            "aria-label": k ? s : o,
             "aria-expanded": k,
             "aria-controls": this._mainNavId,
             onClick: this.toggleMenu
           })
-        }), (0, a.jsxs)("ul", {
+        }), (0, n.jsxs)("ul", {
           className: k ? N.headerNavOpen : N.headerNav,
-          children: [(0, a.jsx)(h.o, {
-            avoidRouter: i,
-            TrackClick: n,
+          children: [(0, n.jsx)(p.o, {
+            avoidRouter: r,
+            TrackClick: a,
             styles: N,
             isMobile: !0,
             isVisible: k,
             NavigationMessages: t
-          }), (0, a.jsx)(u.p, {
-            onChange: l
+          }), (0, n.jsx)(u.p, {
+            onChange: i
           })]
         })]
       })
     })
   }
   constructor(...e) {
-    super(...e), k(this, "_mainNavId", o()("mainNav")), k(this, "state", {
+    super(...e), k(this, "_mainNavId", s()("mainNav")), k(this, "state", {
       menuOpen: !1
     }), k(this, "toggleMenu", () => {
       this.setState({

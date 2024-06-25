@@ -3,11 +3,11 @@ n.d(t, {
     return u
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(692547),
-  s = n(481060),
-  a = n(40851),
+var a = n(692547),
+  l = n(481060),
+  s = n(40851),
   r = n(881824),
   o = n(688641),
   c = n(689938);
@@ -17,17 +17,17 @@ function u(e) {
     className: t,
     channel: n,
     highlight: u
-  } = e, d = (0, a.bp)();
-  return (0, l.jsx)(o.Z, {
+  } = e, d = (0, s.bp)();
+  return (0, i.jsx)(o.Z, {
     highlight: null != u && u,
     className: t,
-    icon: (0, l.jsx)(s.StageIcon, {
+    icon: (0, i.jsx)(l.StageIcon, {
       size: "custom",
       color: "currentColor",
       height: 20,
       width: 20
     }),
-    color: i.Z.unsafe_rawColors.GREEN_360.css,
+    color: a.Z.unsafe_rawColors.GREEN_360.css,
     title: c.Z.Messages.STAGE_CHANNEL_START_TITLE,
     description: c.Z.Messages.STAGE_CHANNEL_START_SUBTITLE,
     onClick: function() {

@@ -1,6 +1,6 @@
-var s, i;
+var i, s;
 n.d(t, {
   S: function() {
-    return s
+    return i
   }
-}), (i = s || (s = {})).SERVERS = "servers", i.APPS = "apps", i.QUESTS = "quests", i.SHOP = "shop"
+}), (s = i || (i = {})).SERVERS = "servers", s.APPS = "apps", s.QUESTS = "quests", s.SHOP = "shop"

@@ -1,4 +1,4 @@
-let n = (0, s(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-01_guild_onboarding_includes_rules",
   label: "Guild Onboarding includes rules experience",
@@ -13,4 +13,4 @@ let n = (0, s(818083).B)({
     }
   }]
 });
-t.Z = n
+t.Z = s

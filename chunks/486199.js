@@ -5,11 +5,11 @@ t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var l = t(120356),
-  s = t.n(l),
-  a = t(481060),
-  r = t(285952),
-  o = t(727218),
+var a = t(120356),
+  s = t.n(a),
+  l = t(481060),
+  o = t(285952),
+  r = t(727218),
   c = t(689938),
   d = t(397264);
 
@@ -17,57 +17,57 @@ function u(e) {
   let {
     name: n,
     description: t,
-    icon: l,
+    icon: a,
     imageSrc: u,
     iconBackgroundColor: I,
-    iconClassName: N,
-    details: E,
-    detailsClassName: T,
-    isHeader: m,
-    isPremium: _
+    iconClassName: m,
+    details: _,
+    detailsClassName: N,
+    isHeader: E,
+    isPremium: T
   } = e;
-  return (0, i.jsxs)(r.Z, {
-    justify: r.Z.Justify.CENTER,
+  return (0, i.jsxs)(o.Z, {
+    justify: o.Z.Justify.CENTER,
     className: d.wrapper,
-    children: [null != l || null != u ? (0, i.jsx)(r.Z.Child, {
+    children: [null != a || null != u ? (0, i.jsx)(o.Z.Child, {
       shrink: 0,
       grow: 0,
-      children: function(e, n, t, l) {
+      children: function(e, n, t, a) {
         if (null != n) return (0, i.jsx)("img", {
           alt: "",
           src: n,
-          className: s()(d.iconWrapper, l)
+          className: s()(d.iconWrapper, a)
         });
-        let a = null;
-        return null != e && (a = "string" == typeof e ? (0, i.jsx)("img", {
+        let l = null;
+        return null != e && (l = "string" == typeof e ? (0, i.jsx)("img", {
           alt: "",
           src: e,
-          className: s()(d.icon, l)
+          className: s()(d.icon, a)
         }) : (0, i.jsx)(e, {
-          className: s()(d.icon, l),
+          className: s()(d.icon, a),
           color: "currentColor"
-        })), (0, i.jsx)(r.Z, {
-          align: r.Z.Align.CENTER,
-          justify: r.Z.Justify.CENTER,
+        })), (0, i.jsx)(o.Z, {
+          align: o.Z.Align.CENTER,
+          justify: o.Z.Justify.CENTER,
           style: {
             backgroundColor: t
           },
           className: d.iconWrapper,
-          children: a
+          children: l
         })
-      }(l, u, I, N)
+      }(a, u, I, m)
     }) : null, function(e) {
       let {
         name: n,
         description: t,
-        details: l,
+        details: a,
         detailsClassName: u,
         isHeader: I,
-        isPremium: N
-      } = e, E = null == l ? void 0 : l.map((e, n) => {
+        isPremium: m
+      } = e, _ = null == a ? void 0 : a.map((e, n) => {
         let {
           icon: t,
-          text: l
+          text: a
         } = e;
         return (0, i.jsxs)("div", {
           className: s()(d.detailsWrapper, I ? d.headerDetailsWrapper : null),
@@ -75,46 +75,46 @@ function u(e) {
             size: "xs",
             color: "currentColor",
             className: d.detailsIcon
-          }) : null, (0, i.jsx)(a.Text, {
+          }) : null, (0, i.jsx)(l.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             className: u,
-            children: l
+            children: a
           })]
         }, n)
       });
-      return (0, i.jsxs)(r.Z, {
-        direction: r.Z.Direction.VERTICAL,
-        children: [(0, i.jsxs)(o.Z, {
-          size: I ? o.Z.Sizes.SIZE_24 : o.Z.Sizes.SIZE_16,
+      return (0, i.jsxs)(o.Z, {
+        direction: o.Z.Direction.VERTICAL,
+        children: [(0, i.jsxs)(r.Z, {
+          size: I ? r.Z.Sizes.SIZE_24 : r.Z.Sizes.SIZE_16,
           className: I ? d.header : d.secondaryHeader,
-          children: [n, N && (0, i.jsx)(a.Tooltip, {
+          children: [n, m && (0, i.jsx)(l.Tooltip, {
             text: c.Z.Messages.APPLICATION_SUBSCRIPTION_PREMIUM,
-            children: e => (0, i.jsx)(a.TicketIcon, {
+            children: e => (0, i.jsx)(l.TicketIcon, {
               size: "xs",
               color: "currentColor",
               ...e,
               className: d.premiumIcon
             })
           })]
-        }), null != t ? (0, i.jsx)(a.Text, {
+        }), null != t ? (0, i.jsx)(l.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
           children: t
-        }) : null, (0, i.jsx)(r.Z, {
-          direction: r.Z.Direction.HORIZONTAL,
-          align: r.Z.Align.CENTER,
-          wrap: r.Z.Wrap.WRAP,
-          children: E
+        }) : null, (0, i.jsx)(o.Z, {
+          direction: o.Z.Direction.HORIZONTAL,
+          align: o.Z.Align.CENTER,
+          wrap: o.Z.Wrap.WRAP,
+          children: _
         })]
       })
     }({
       name: n,
       description: t,
-      details: E,
-      detailsClassName: T,
-      isHeader: m,
-      isPremium: _
+      details: _,
+      detailsClassName: N,
+      isHeader: E,
+      isPremium: T
     })]
   })
 }

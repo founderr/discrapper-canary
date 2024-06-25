@@ -7,30 +7,30 @@ var o, a, l, u, _ = n(772848),
   I = n(570140),
   T = n(899742),
   h = n(598077),
-  S = n(12647),
-  f = n(358085),
-  N = n(374023);
-let A = "BrowserHandoffStore",
+  f = n(12647),
+  S = n(358085),
+  A = n(374023);
+let N = "BrowserHandoffStore",
   m = !1,
   O = new E.V7;
 
-function R() {
-  null != i && null != r && (window.open("".concat(i, "&key=").concat(r)), S.Z.focus(null, !0))
+function p() {
+  null != i && null != r && (window.open("".concat(i, "&key=").concat(r)), f.Z.focus(null, !0))
 }
 
-function p() {
-  r = null, O.stop(), m = !1, d.K.set(A, m)
+function R() {
+  r = null, O.stop(), m = !1, d.K.set(N, m)
 }
 
 function g() {
-  p()
+  R()
 }
 class C extends(u = c.ZP.Store) {
   initialize() {
-    !1 !== d.K.get(A) && (m = f.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+    !1 !== d.K.get(N) && (m = S.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
   }
   isHandoffAvailable() {
-    return !N.s.isDisallowPopupsSet() && m
+    return !A.s.isDisallowPopupsSet() && m
   }
   get user() {
     return s
@@ -46,11 +46,11 @@ l = "BrowserHandoffStore", (a = "displayName") in(o = C) ? Object.defineProperty
   writable: !0
 }) : o[a] = l, t.Z = new C(I.Z, {
   RPC_SERVER_READY: function(e) {
-    i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), R()
+    i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), p()
   },
   BROWSER_HANDOFF_BEGIN: function(e) {
     if (null != r) return !1;
-    r = (0, _.Z)(), O.start(e.timeout, () => (0, T.lx)()), R()
+    r = (0, _.Z)(), O.start(e.timeout, () => (0, T.lx)()), p()
   },
   BROWSER_HANDOFF_FROM_APP: function(e) {
     let {
@@ -61,7 +61,7 @@ l = "BrowserHandoffStore", (a = "displayName") in(o = C) ? Object.defineProperty
     if (null == t || null == n) return !1;
     m = !0, O.start(i, () => (0, T.lx)())
   },
-  BROWSER_HANDOFF_UNAVAILABLE: p,
+  BROWSER_HANDOFF_UNAVAILABLE: R,
   BROWSER_HANDOFF_SET_USER: function(e) {
     s = new h.Z(e.user)
   },

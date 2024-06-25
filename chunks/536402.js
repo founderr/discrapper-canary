@@ -1,6 +1,6 @@
-var T, s;
-e.d(_, {
+var s, T;
+E.d(_, {
   w: function() {
-    return T
+    return s
   }
-}), e(47120), (s = T || (T = {})).MESSAGE = "message", s.FORUM_POST = "forum_post", s.MESSAGE_BUNDLE = "message_bundle", s.CONVERSATION = "conversation"
+}), E(47120), (T = s || (s = {})).MESSAGE = "message", T.FORUM_POST = "forum_post", T.MESSAGE_BUNDLE = "message_bundle", T.CONVERSATION = "conversation"

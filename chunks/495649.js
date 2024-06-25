@@ -22,9 +22,9 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = null,
-  f = null;
-class N extends i.Z {
+let f = null,
+  S = null;
+class A extends i.Z {
   constructor(...e) {
     super(...e), h(this, "actions", {
       GUILD_DELETE: e => this.handleGuildDelete(e),
@@ -32,16 +32,16 @@ class N extends i.Z {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
     }), h(this, "handleConnectionOpen", e => {
       var t;
-      null != (S = null !== (t = null != S ? S : a.Z.getGuildId()) && void 0 !== t ? t : null) && this._openOnboardingIfIncomplete(S)
+      null != (f = null !== (t = null != f ? f : a.Z.getGuildId()) && void 0 !== t ? t : null) && this._openOnboardingIfIncomplete(f)
     }), h(this, "handleChannelSelect", e => {
       let {
         guildId: t,
         channelId: n
       } = e;
-      if (S === t && f === n) return;
-      if (S = null != t ? t : null, f = null != n ? n : null, null == S || null == f) return;
+      if (f === t && S === n) return;
+      if (f = null != t ? t : null, S = null != n ? n : null, null == f || null == S) return;
       let i = o.Z.getGuild(t);
-      null != i && i.hasFeature(E.oNc.COMMUNITY) && c.Z.shouldFetchPrompts(S, 8 * l.Z.Millis.HOUR) && (0, _.rj)(S), this._openOnboardingIfIncomplete(S, n)
+      null != i && i.hasFeature(E.oNc.COMMUNITY) && c.Z.shouldFetchPrompts(f, 8 * l.Z.Millis.HOUR) && (0, _.rj)(f), this._openOnboardingIfIncomplete(f, n)
     }), h(this, "handleGuildDelete", e => {
       let {
         guild: t
@@ -62,4 +62,4 @@ class N extends i.Z {
     })
   }
 }
-t.Z = new N
+t.Z = new A

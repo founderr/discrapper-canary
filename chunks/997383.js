@@ -18,14 +18,14 @@ var i = n(392711),
   I = n(699516),
   T = n(594174),
   h = n(483360),
-  S = n(892880),
-  f = n(591759),
-  N = n(279779),
-  A = n(620490),
+  f = n(892880),
+  S = n(591759),
+  A = n(279779),
+  N = n(620490),
   m = n(727785),
   O = n(981631);
 
-function R(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,7 +33,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = Object.freeze({});
+let R = Object.freeze({});
 
 function g(e, t) {
   var n, i;
@@ -81,7 +81,7 @@ function g(e, t) {
 }
 class C {
   createSearchContext() {
-    null == this.userSearchContext && (this.userSearchContext = N.Z.getSearchContext(this.parseUserResults, this._limit))
+    null == this.userSearchContext && (this.userSearchContext = A.Z.getSearchContext(this.parseUserResults, this._limit))
   }
   setLimit(e) {
     let {
@@ -190,7 +190,7 @@ class C {
     let {
       userFilters: r
     } = this.options;
-    void 0 !== t && S.Z.requestMembers(t, e, 100), i.setLimit(n), i.setQuery(e, r, this._userBlacklist, g(m.h8.USER, this.options))
+    void 0 !== t && f.Z.requestMembers(t, e, 100), i.setLimit(n), i.setQuery(e, r, this._userBlacklist, g(m.h8.USER, this.options))
   }
   queryGroupDMs(e, t) {
     if (!this._include(m.h8.GROUP_DM)) return [];
@@ -225,15 +225,15 @@ class C {
       pathname: r,
       hostname: s = "",
       host: a
-    } = n, l = f.Z.isDiscordHostname(s) || window.location.host === a;
-    return null !== r && l && f.Z.isAppRoute(r) ? [{
+    } = n, l = S.Z.isDiscordHostname(s) || window.location.host === a;
+    return null !== r && l && S.Z.isAppRoute(r) ? [{
       type: m.h8.LINK,
       record: _.Z.fromPath(r),
       score: 1
     }] : []
   }
-  constructor(e, t, n = 100, i = p) {
-    R(this, "query", ""), R(this, "options", p), R(this, "results", []), R(this, "_userResults", []), R(this, "_groupDMResults", []), R(this, "_textChannelResults", []), R(this, "_voiceChannelResults", []), R(this, "_guildResults", []), R(this, "_applicationResults", []), R(this, "_linkResults", []), R(this, "_asyncTimeout", void 0), R(this, "userSearchContext", void 0), R(this, "onResultsChange", void 0), R(this, "resultTypes", void 0), R(this, "_userBlacklist", null), R(this, "_limit", void 0), R(this, "parseUserResults", e => {
+  constructor(e, t, n = 100, i = R) {
+    p(this, "query", ""), p(this, "options", R), p(this, "results", []), p(this, "_userResults", []), p(this, "_groupDMResults", []), p(this, "_textChannelResults", []), p(this, "_voiceChannelResults", []), p(this, "_guildResults", []), p(this, "_applicationResults", []), p(this, "_linkResults", []), p(this, "_asyncTimeout", void 0), p(this, "userSearchContext", void 0), p(this, "onResultsChange", void 0), p(this, "resultTypes", void 0), p(this, "_userBlacklist", null), p(this, "_limit", void 0), p(this, "parseUserResults", e => {
       let {
         results: t
       } = e;
@@ -258,8 +258,8 @@ class C {
         }
         this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults()
       }
-    }), R(this, "updateAllResults", () => {
-      clearTimeout(this._asyncTimeout), this.results = r()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults]).uniqBy(e => "".concat(e.type, "-").concat(e.record.id)).sort(A.Z).value(), this.onResultsChange(this.results, this.query)
+    }), p(this, "updateAllResults", () => {
+      clearTimeout(this._asyncTimeout), this.results = r()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults]).uniqBy(e => "".concat(e.type, "-").concat(e.record.id)).sort(N.Z).value(), this.onResultsChange(this.results, this.query)
     }), this.onResultsChange = e, this.setOptions(i, !0), this._limit = n, this.createSearchContext(), this.setResultTypes(t)
   }
 }

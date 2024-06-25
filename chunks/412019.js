@@ -1,53 +1,53 @@
-i.d(n, {
+a.d(n, {
   O: function() {
     return d
   }
 });
-var a = i(735250);
-i(470079);
-var l = i(481060),
-  t = i(447003),
-  s = i(687352),
-  r = i(409216),
-  o = i(823379),
-  u = i(619915),
-  c = i(426910);
+var i = a(735250);
+a(470079);
+var t = a(481060),
+  l = a(447003),
+  s = a(687352),
+  r = a(409216),
+  o = a(823379),
+  c = a(619915),
+  u = a(426910);
 
 function d(e) {
   let {
     channel: n,
-    users: i
-  } = e, d = (0, u.ZP)(n);
-  return (0, a.jsxs)("div", {
-    className: c.channelInfo,
-    children: [(0, t.Z)(n) ? (0, a.jsx)(l.VoiceLockIcon, {
+    users: a
+  } = e, d = (0, c.ZP)(n);
+  return (0, i.jsxs)("div", {
+    className: u.channelInfo,
+    children: [(0, l.Z)(n) ? (0, i.jsx)(t.VoiceLockIcon, {
       size: "md",
       color: "currentColor",
-      className: c.speakerIcon
-    }) : (0, a.jsx)(l.VoiceNormalIcon, {
+      className: u.speakerIcon
+    }) : (0, i.jsx)(t.VoiceNormalIcon, {
       size: "md",
       color: "currentColor",
-      className: c.speakerIcon
-    }), (0, a.jsx)("div", {
-      className: c.channelName,
+      className: u.speakerIcon
+    }), (0, i.jsx)("div", {
+      className: u.channelName,
       children: n.name
-    }), d.length > 0 ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)("div", {
-        className: c.divider
-      }), (0, a.jsx)(s.Z, {
+    }), d.length > 0 ? (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)("div", {
+        className: u.divider
+      }), (0, i.jsx)(s.Z, {
         embeddedApps: d,
-        className: c.channelItemActivities
-      }), (0, a.jsx)("div", {
-        className: c.channelActivitiesText,
+        className: u.channelItemActivities
+      }), (0, i.jsx)("div", {
+        className: u.channelActivitiesText,
         children: d.map(e => {
           var n;
           return null === (n = e.application) || void 0 === n ? void 0 : n.name
         }).filter(o.lm).join(", ")
       })]
-    }) : null, (0, a.jsx)("div", {
-      className: c.voiceUserContainer,
-      children: (0, a.jsx)(r.Z, {
-        users: i,
+    }) : null, (0, i.jsx)("div", {
+      className: u.voiceUserContainer,
+      children: (0, i.jsx)(r.Z, {
+        users: a,
         max: 4
       })
     })]

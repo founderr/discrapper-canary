@@ -6,69 +6,69 @@ n.d(t, {
     return d
   },
   Bo: function() {
-    return g
+    return f
   },
   Df: function() {
     return h
   },
   LT: function() {
-    return f
+    return E
   },
   ZZ: function() {
-    return m
+    return p
   },
   cV: function() {
     return u
   },
   fW: function() {
-    return p
+    return _
   },
   gr: function() {
-    return E
+    return m
   },
   oW: function() {
     return o
   }
 });
-var l = n(261470),
-  i = n(544891),
-  s = n(570140),
-  a = n(292793),
+var i = n(261470),
+  a = n(544891),
+  l = n(570140),
+  s = n(292793),
   r = n(981631);
 
-function o(e, t, n, l, i) {
-  s.Z.dispatch({
+function o(e, t, n, i, a) {
+  l.Z.dispatch({
     type: "SHARED_CANVAS_DRAW_LINE_POINT",
     channelId: e,
     userId: n,
     lineId: t,
-    streamerId: l,
-    point: i
+    streamerId: i,
+    point: a
   })
 }
 
-function c(e, t, n, l) {
-  return i.tn.post({
+function c(e, t, n, i) {
+  return a.tn.post({
     url: r.ANM.SHARED_CANVAS_LINES(e, n),
     body: {
       line_id: t,
-      points: l
+      points: i
     }
   })
 }
 
-function u(e, t, n, l) {
-  s.Z.dispatch({
+function u(e, t, n, i) {
+  l.Z.dispatch({
     type: "SHARED_CANVAS_UPDATE_LINE_POINTS",
     userId: t,
     lineId: e,
-    newPoints: l,
+    newPoints: i,
     streamerId: n
   })
 }
 
 function d(e, t, n) {
-  return i.tn.post({
+  return a.tn.post({
     url: r.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
     body: {
       emoji_hose: n
@@ -77,14 +77,14 @@ function d(e, t, n) {
 }
 
 function h(e, t, n) {
-  i.tn.del({
+  a.tn.del({
     url: r.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
-    backoff: new l.Z
+    backoff: new i.Z
   })
 }
 
-function m(e, t) {
-  t.state = a.f.STOP, s.Z.dispatch({
+function p(e, t) {
+  t.state = s.f.STOP, l.Z.dispatch({
     type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
     emojiHose: t,
     userId: t.userId,
@@ -92,8 +92,8 @@ function m(e, t) {
   })
 }
 
-function E(e, t, n) {
-  s.Z.dispatch({
+function m(e, t, n) {
+  l.Z.dispatch({
     type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
     emojiHose: e,
     userId: t,
@@ -101,23 +101,23 @@ function E(e, t, n) {
   })
 }
 
-function p(e, t) {
-  s.Z.dispatch({
+function _(e, t) {
+  l.Z.dispatch({
     type: "SHARED_CANVAS_CLEAR_DRAWABLES",
     drawables: e,
     streamerId: t
   })
 }
 
-function g(e) {
-  s.Z.dispatch({
+function f(e) {
+  l.Z.dispatch({
     type: "SHARED_CANVAS_SET_DRAW_MODE",
     drawMode: e
   })
 }
 
-function f() {
-  s.Z.dispatch({
+function E() {
+  l.Z.dispatch({
     type: "TOGGLE_OVERLAY_CANVAS"
   })
 }

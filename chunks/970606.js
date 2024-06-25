@@ -4,7 +4,7 @@ n.d(t, {
     return h
   },
   B3: function() {
-    return f
+    return S
   },
   EK: function() {
     return g
@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   Oe: function() {
-    return N
+    return A
   },
   Pq: function() {
     return C
@@ -28,16 +28,16 @@ n.d(t, {
     return L
   },
   Qh: function() {
-    return A
+    return N
   },
   TE: function() {
-    return R
+    return p
   },
   Vr: function() {
     return d
   },
   _9: function() {
-    return p
+    return R
   },
   aC: function() {
     return v
@@ -46,7 +46,7 @@ n.d(t, {
     return M
   },
   dx: function() {
-    return S
+    return f
   },
   hx: function() {
     return E
@@ -145,20 +145,20 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   a.default.track(u.rMx.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, {
     guild_id: e
   })
 }
 
-function f(e, t) {
+function S(e, t) {
   a.default.track(u.rMx.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
     guild_id: e,
     enable_tag: t
   })
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   a.default.track(u.rMx.CLAN_DISCOVERY_VIEWED, {
     guild_ids: e,
     section: t,
@@ -168,7 +168,7 @@ function N(e, t, n) {
   })
 }
 
-function A(e) {
+function N(e) {
   switch (e) {
     case l.Wy.GAMES:
       return "games";
@@ -209,7 +209,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     guildId: t,
     location: n
@@ -220,7 +220,7 @@ function R(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     guildId: t,
     location: n

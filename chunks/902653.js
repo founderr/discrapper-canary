@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return m
   },
   WebAudioSound: function() {
-    return A
+    return N
   },
   playGiftSound: function() {
-    return f
+    return S
   }
 }), n(47120), n(411104);
 var i, r, s = n(392711),
@@ -34,17 +34,17 @@ async function h(e) {
   let t = await fetch(n(451343)("./".concat(e, ".mp3"))).then(e => e.arrayBuffer());
   return (0, a.N)().decodeAudioData(t)
 }
-async function S(e) {
+async function f(e) {
   let t = T.get(e);
   return null == t && (t = h(e), T.set(e, t)), await t
 }
 
-function f(e, t) {
+function S(e, t) {
   let n = new Audio((0, l.Z)(e));
   n.volume = (0, u.Z)(t), n.play()
 }
 
-function N() {
+function A() {
   if (null != window.navigator.mediaDevices) window.navigator.mediaDevices.enumerateDevices().then(e => {
     let t = _.Z.getOutputDevices(),
       n = o()(t).sortBy(e => e.index).findIndex(e => e.id === _.Z.getOutputDeviceId()),
@@ -56,8 +56,8 @@ function N() {
     I = E
   })
 }
-c.isPlatformEmbedded && (_.Z.addChangeListener(N), N());
-class A {
+c.isPlatformEmbedded && (_.Z.addChangeListener(A), A());
+class N {
   get volume() {
     return this._volume
   }
@@ -158,7 +158,7 @@ class m {
   async _ensureAudio() {
     if (null == this._ensureAudioPromise) {
       let e = Math.min(_.Z.getOutputVolume() / 100 * this._volume, 1);
-      this._ensureAudioPromise = S(this.name).then(t => null == t ? Promise.reject(Error("Failed to load audio: ".concat(this.name))) : (this._audioContext = (0, a.N)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, c.isPlatformEmbedded && this._audioContext.setSinkId(I), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
+      this._ensureAudioPromise = f(this.name).then(t => null == t ? Promise.reject(Error("Failed to load audio: ".concat(this.name))) : (this._audioContext = (0, a.N)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, c.isPlatformEmbedded && this._audioContext.setSinkId(I), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
         context: this._audioContext,
         gainNode: this._gain,
         source: this._source

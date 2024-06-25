@@ -4,7 +4,7 @@ n.d(t, {
     return z
   },
   HH: function() {
-    return B
+    return x
   },
   Hc: function() {
     return j
@@ -58,7 +58,7 @@ n.d(t, {
     return K
   },
   zj: function() {
-    return x
+    return B
   }
 }), n(789020);
 var i, r, s, o, a, l, u, _, c = n(286379),
@@ -67,14 +67,14 @@ var i, r, s, o, a, l, u, _, c = n(286379),
   I = n(768494),
   T = n(797614),
   h = n(182274),
-  S = n(695346),
-  f = n(592125),
-  N = n(699516),
-  A = n(594174),
+  f = n(695346),
+  S = n(592125),
+  A = n(699516),
+  N = n(594174),
   m = n(626135),
   O = n(630388),
-  R = n(948561),
-  p = n(651530),
+  p = n(948561),
+  R = n(651530),
   g = n(719548),
   C = n(981631),
   v = n(973005);
@@ -106,7 +106,7 @@ let L = {
       isFriend: i = !1
     } = e;
     if (null != t && t !== d.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-    let r = A.default.getCurrentUser();
+    let r = N.default.getCurrentUser();
     return (null == r ? void 0 : r.nsfwAllowed) === !1 ? b({
       isDm: n,
       isFriend: i
@@ -121,7 +121,7 @@ let L = {
       isFriend: n = !1
     } = e;
     if (!t) return d.Q4.SHOW;
-    let i = S.UP.getSetting();
+    let i = f.UP.getSetting();
     return n ? L[i] : D[i]
   },
   b = e => {
@@ -130,11 +130,11 @@ let L = {
       isFriend: n = !1
     } = e;
     if (!t) return d.Q4.BLUR;
-    let i = S.UP.getSetting();
+    let i = f.UP.getSetting();
     return n ? M[i] : P[i]
   },
   G = () => {
-    let e = S.Sh.getSetting();
+    let e = f.Sh.getSetting();
     return {
       explicitContentGuilds: y({
         setting: null == e ? void 0 : e.explicitContentGuilds
@@ -155,23 +155,23 @@ function w(e) {
   return e === d.Q4.BLUR || e === d.Q4.BLOCK
 }
 
-function B(e) {
+function x(e) {
   var t;
-  if (!(0, p.Kh)()) return !1;
-  let n = A.default.getCurrentUser();
+  if (!(0, R.Kh)()) return !1;
+  let n = N.default.getCurrentUser();
   if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
   let {
     explicitContentGuilds: i,
     explicitContentFriendDm: r,
     explicitContentNonFriendDm: s
-  } = G(), o = f.Z.getChannel(e.channel_id);
+  } = G(), o = S.Z.getChannel(e.channel_id);
   if (null == o) return !1;
-  if (o.isDM() || o.isGroupDM()) return null != e.author && N.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
+  if (o.isDM() || o.isGroupDM()) return null != e.author && A.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
-let x = e => {
+let B = e => {
   let t = G();
-  S.Sh.updateSetting({
+  f.Sh.updateSetting({
     ...t,
     ...e
   })
@@ -194,7 +194,7 @@ function k(e, t) {
 }
 
 function V(e) {
-  return B(e) ? {
+  return x(e) ? {
     obscuredAttachments: e.attachments.filter(e => k({
       type: 0,
       media: e
@@ -225,7 +225,7 @@ function F(e) {
     context: r
   } = e;
   if (null == n || null == i) return;
-  let s = f.Z.getChannel(n);
+  let s = S.Z.getChannel(n);
   m.default.track(C.rMx.EXPLICIT_MEDIA_ACTION, {
     action: t,
     guild_id: null == s ? void 0 : s.guild_id,
@@ -253,14 +253,14 @@ function j(e) {
     embedIds: l
   } = e;
   if (null == s || null == o || (null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == l ? void 0 : l.length) && void 0 !== n ? n : 0) === 0) return;
-  let u = f.Z.getChannel(s);
+  let u = S.Z.getChannel(s);
   m.default.track(C.rMx.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
     channel_id: s,
     guild_id: null == u ? void 0 : u.guild_id,
     message_id: o,
     embed_ids: l,
     user_is_underage: (0, h.U)(),
-    scan_timeout_duration: R.b2,
+    scan_timeout_duration: p.b2,
     attachment_ids_v2: a
   }), T.Z.increment({
     name: c.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
@@ -279,7 +279,7 @@ function W(e) {
     numOfEmbedsPendingScan: s
   } = e;
   if (null == t) return;
-  let o = f.Z.getChannel(t);
+  let o = S.Z.getChannel(t);
   m.default.track(C.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
     channel_id: t,
     guild_id: null == o ? void 0 : o.guild_id,
@@ -304,7 +304,7 @@ function K(e) {
     numOfExplicitEmbeds: o
   } = e;
   if (null == n) return;
-  let a = f.Z.getChannel(n);
+  let a = S.Z.getChannel(n);
   m.default.track(C.rMx.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
     message_id: t,
     channel_id: n,

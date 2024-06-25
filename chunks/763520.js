@@ -1,50 +1,50 @@
 n.d(t, {
   m: function() {
-    return l
+    return i
   },
   o: function() {
-    return g
+    return f
   }
 }), n(47120);
-var l, i, s = n(259443),
-  a = n(379649),
+var i, a, l = n(259443),
+  s = n(379649),
   r = n(314897),
   o = n(592125),
   c = n(866960),
   u = n(19780),
   d = n(979651),
   h = n(626135),
-  m = n(981631);
+  p = n(981631);
 
-function E(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(i = l || (l = {})).SELF_VIDEO = "self_video", i.SELF_STREAM = "self_stream", i.REMOTE_VIDEO = "remote_video", i.REMOTE_STREAM = "remote_stream", i.CHANGE_VIDEO_BACKGROUND = "change_video_background", i.VIDEO_PLAYER = "video_player", i.REPLAY_VIDEO_STREAM = "replay_video_stream";
-let p = new Map;
-class g {
+}(a = i || (i = {})).SELF_VIDEO = "self_video", a.SELF_STREAM = "self_stream", a.REMOTE_VIDEO = "remote_video", a.REMOTE_STREAM = "remote_stream", a.CHANGE_VIDEO_BACKGROUND = "change_video_background", a.VIDEO_PLAYER = "video_player", a.REPLAY_VIDEO_STREAM = "replay_video_stream";
+let _ = new Map;
+class f {
   onSpinnerStarted() {
-    null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, a.zO)())
+    null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, s.zO)())
   }
   trackSpinnerDuration(e, t, n) {
     if (null == this.spinnerVisibleStart) return;
-    let l = function(e) {
+    let i = function(e) {
         var t;
-        let n = (null !== (t = p.get(e)) && void 0 !== t ? t : 0) + 1;
-        return p.set(e, n), n
+        let n = (null !== (t = _.get(e)) && void 0 !== t ? t : 0) + 1;
+        return _.set(e, n), n
       }(n),
-      i = (0, a.zO)() - this.spinnerVisibleStart;
-    if (this.spinnerVisibleStart = null, i < 0) {
-      this.logger.warn("spinner duration is negative: ".concat(i, " ms\n        [").concat(e, ", count for stream: ").concat(l, "]"));
+      a = (0, s.zO)() - this.spinnerVisibleStart;
+    if (this.spinnerVisibleStart = null, a < 0) {
+      this.logger.warn("spinner duration is negative: ".concat(a, " ms\n        [").concat(e, ", count for stream: ").concat(i, "]"));
       return
     }
-    this.logger.info("spinner visible for ".concat(i, " ms\n      [").concat(e, ", count for stream: ").concat(l, "]"));
-    let s = u.Z.getGuildId(),
-      E = d.Z.getUserVoiceChannelId(s, r.default.getId()),
-      g = function(e) {
+    this.logger.info("spinner visible for ".concat(a, " ms\n      [").concat(e, ", count for stream: ").concat(i, "]"));
+    let l = u.Z.getGuildId(),
+      m = d.Z.getUserVoiceChannelId(l, r.default.getId()),
+      f = function(e) {
         if (null != e) {
           if (e.isGuildVoice()) return "guild_voice";
           if (e.isGuildStageVoice()) return "is_stage_channel";
@@ -52,16 +52,16 @@ class g {
           if (e.isGroupDM()) return "group_dm"
         }
         return null
-      }(o.Z.getChannel(E));
-    h.default.track(m.rMx.VIDEO_SPINNER_SHOWN_V2, {
+      }(o.Z.getChannel(m));
+    h.default.track(p.rMx.VIDEO_SPINNER_SHOWN_V2, {
       video_spinner_context: e,
-      duration_video_spinner_visible_ms: i,
+      duration_video_spinner_visible_ms: a,
       rtc_connection_id: u.Z.getRTCConnectionId(),
       media_session_id: u.Z.getMediaSessionId(),
-      event_count_for_stream: l,
-      guild_id: s,
-      channel_id: E,
-      channel_type: g,
+      event_count_for_stream: i,
+      guild_id: l,
+      channel_id: m,
+      channel_type: f,
       spinning_user_id: t,
       connection_type: c.Z.getType(),
       effective_connection_speed: c.Z.getEffectiveConnectionSpeed(),
@@ -69,6 +69,6 @@ class g {
     })
   }
   constructor(e) {
-    E(this, "logger", void 0), E(this, "spinnerVisibleStart", null), this.logger = new s.Y(e)
+    m(this, "logger", void 0), m(this, "spinnerVisibleStart", null), this.logger = new l.Y(e)
   }
 }

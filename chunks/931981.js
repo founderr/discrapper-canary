@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   V: function() {
-    return N
+    return A
   },
   e: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i, r = n(735250);
@@ -40,16 +40,16 @@ class h extends(i = s.ZP.PersistedStore) {
   }
 }
 I(h, "displayName", "PTOStore"), I(h, "persistKey", "PTOStore");
-let S = new h(a.Z, {}),
-  f = e => (0, s.e7)([u.ZP, c.default, S], () => {
+let f = new h(a.Z, {}),
+  S = e => (0, s.e7)([u.ZP, c.default, f], () => {
     let t = c.default.getCurrentUser();
     if (null == t || !t.isStaff() || !e.isDM()) return !1;
     let n = c.default.getUser(e.getRecipientId());
     if (!(null == n ? void 0 : n.isStaff())) return !1;
     let i = u.ZP.getNicknames(n.id).some(e => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
-    return i ? !S.hasId(n.id) && i : (T.delete(n.id) && S.emitChange(), !1)
+    return i ? !f.hasId(n.id) && i : (T.delete(n.id) && f.emitChange(), !1)
   }),
-  N = () => (0, r.jsxs)("div", {
+  A = () => (0, r.jsxs)("div", {
     className: E.bar,
     children: [d.Z.Messages.STAFF_PTO_NOTICE, (0, r.jsx)(o.Clickable, {
       className: E.closeButton,
@@ -57,7 +57,7 @@ let S = new h(a.Z, {}),
         let e = _.Z.getChannelId();
         if (null == e) return;
         let t = l.Z.getChannel(e);
-        null != t && t.isPrivate() && !T.has(t.getRecipientId()) && (T.add(t.getRecipientId()), S.emitChange())
+        null != t && t.isPrivate() && !T.has(t.getRecipientId()) && (T.add(t.getRecipientId()), f.emitChange())
       },
       children: (0, r.jsx)(o.CircleXIcon, {
         size: "md",

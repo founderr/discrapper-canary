@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
   buttonContainer: "buttonContainer_b00055",
   button: "button_b00055",
   buttonInner: "buttonInner_b00055",

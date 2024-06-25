@@ -1,20 +1,20 @@
 n.d(t, {
   Z: function() {
-    return T
+    return m
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  l = n.n(i),
-  a = n(481060),
+var a = n(120356),
+  s = n.n(a),
+  l = n(481060),
   r = n(592125),
   o = n(944486),
   c = n(471253),
-  u = n(623633),
-  d = n(930180),
-  E = n(689938),
-  _ = n(905185);
+  d = n(623633),
+  u = n(930180),
+  _ = n(689938),
+  E = n(905185);
 
 function I(e) {
   let t = o.Z.getVoiceChannelId();
@@ -23,49 +23,49 @@ function I(e) {
   if (null != n)(0, c.RK)(n, e)
 }
 
-function T() {
+function m() {
   var e;
-  let t = (0, u.Z)(),
-    n = null !== (e = (0, d._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
-  return null == t ? null : (0, s.jsxs)(a.Notice, {
-    className: _.container,
-    color: a.NoticeColors.DEFAULT,
-    children: [(0, s.jsx)("div", {
-      children: E.Z.Messages.STAGE_SPEAK_INVITE_HEADER
-    }), n > 0 ? (0, s.jsxs)("div", {
-      className: _.blocked,
-      children: [(0, s.jsx)(a.DenyIcon, {
+  let t = (0, d.Z)(),
+    n = null !== (e = (0, u._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
+  return null == t ? null : (0, i.jsxs)(l.Notice, {
+    className: E.container,
+    color: l.NoticeColors.DEFAULT,
+    children: [(0, i.jsx)("div", {
+      children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER
+    }), n > 0 ? (0, i.jsxs)("div", {
+      className: E.blocked,
+      children: [(0, i.jsx)(l.DenyIcon, {
         size: "xxs",
         color: "currentColor",
-        className: _.blockedIcon
-      }), (0, s.jsx)("div", {
-        className: _.blockedText,
-        children: E.Z.Messages.STAGE_SPEAK_INVITE_HEADER_BLOCKED_USERS.format({
+        className: E.blockedIcon
+      }), (0, i.jsx)("div", {
+        className: E.blockedText,
+        children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER_BLOCKED_USERS.format({
           number: n
         })
       })]
-    }) : null, (0, s.jsx)(a.Button, {
-      className: l()(_.__invalid_button, _.acceptButton),
-      size: a.Button.Sizes.MIN,
-      color: a.Button.Colors.WHITE,
+    }) : null, (0, i.jsx)(l.Button, {
+      className: s()(E.__invalid_button, E.acceptButton),
+      size: l.Button.Sizes.MIN,
+      color: l.Button.Colors.WHITE,
       onClick: () => I(!1),
-      children: (0, s.jsx)(a.Text, {
-        className: _.acceptText,
+      children: (0, i.jsx)(l.Text, {
+        className: E.acceptText,
         variant: "text-xs/normal",
         color: "none",
-        children: E.Z.Messages.STAGE_SPEAK_INVITE_ACCEPT
+        children: _.Z.Messages.STAGE_SPEAK_INVITE_ACCEPT
       })
-    }), (0, s.jsx)(a.Button, {
-      className: l()(_.__invalid_button, _.declineButton),
-      look: a.Button.Looks.OUTLINED,
-      size: a.Button.Sizes.MIN,
-      color: a.Button.Colors.WHITE,
+    }), (0, i.jsx)(l.Button, {
+      className: s()(E.__invalid_button, E.declineButton),
+      look: l.Button.Looks.OUTLINED,
+      size: l.Button.Sizes.MIN,
+      color: l.Button.Colors.WHITE,
       onClick: () => I(!0),
-      children: (0, s.jsx)(a.Text, {
-        className: _.declineText,
+      children: (0, i.jsx)(l.Text, {
+        className: E.declineText,
         variant: "text-xs/normal",
         color: "none",
-        children: E.Z.Messages.STAGE_SPEAK_INVITE_DECLINE
+        children: _.Z.Messages.STAGE_SPEAK_INVITE_DECLINE
       })
     })]
   })

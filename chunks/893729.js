@@ -1,12 +1,12 @@
 t.d(n, {
   Z: function() {
-    return p
+    return m
   }
 });
 var i = t(735250),
   r = t(470079),
-  l = t(120356),
-  o = t.n(l),
+  o = t(120356),
+  l = t.n(o),
   u = t(442837),
   s = t(518738),
   a = t(786761),
@@ -17,20 +17,20 @@ var i = t(735250),
   E = t(792125),
   I = t(981631),
   g = t(689938),
-  S = t(580219);
+  p = t(580219);
 
-function p(e) {
+function m(e) {
   var n;
   let {
     guildId: t,
-    role: l,
-    theme: p,
-    content: m = g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
+    role: o,
+    theme: m,
+    content: S = g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
     className: C
-  } = e, T = (0, u.e7)([_.default], () => _.default.getCurrentUser()), N = f.ZP.useName(t, null, T), A = (0, s.Kz)(l), v = r.useMemo(() => (0, a.e5)({
+  } = e, T = (0, u.e7)([_.default], () => _.default.getCurrentUser()), N = f.ZP.useName(t, null, T), h = (0, s.Kz)(o), v = r.useMemo(() => (0, a.e5)({
     ...(0, c.ZP)({
       channelId: "0",
-      content: m,
+      content: S,
       tts: void 0,
       type: void 0,
       messageReference: void 0,
@@ -39,16 +39,16 @@ function p(e) {
     }),
     state: I.yb.SENT,
     id: "0"
-  }), [T, m]), h = {
+  }), [T, S]), A = {
     nick: N,
-    colorString: null !== (n = l.colorString) && void 0 !== n ? n : void 0
+    colorString: null !== (n = o.colorString) && void 0 !== n ? n : void 0
   };
   return (0, i.jsx)("div", {
-    className: o()((0, E.Q)(p), S.container, C),
+    className: l()((0, E.Q)(m), p.container, C),
     children: (0, i.jsx)(d.Z, {
       hideTimestamp: !0,
-      author: h,
-      roleIcon: A,
+      author: A,
+      roleIcon: h,
       message: v,
       isGroupStart: !0,
       disableInteraction: !0

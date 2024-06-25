@@ -4,78 +4,78 @@ t.d(s, {
   }
 });
 var n = t(735250),
-  i = t(470079),
-  a = t(442837),
-  l = t(704215),
-  r = t(481060),
-  o = t(906732),
+  a = t(470079),
+  i = t(442837),
+  r = t(704215),
+  o = t(481060),
+  l = t(906732),
   c = t(605236),
-  E = t(441167),
-  d = t(695346),
-  _ = t(131951),
-  T = t(924557),
-  S = t(435064),
-  u = t(779618),
+  d = t(441167),
+  _ = t(695346),
+  E = t(131951),
+  u = t(924557),
+  T = t(435064),
+  S = t(779618),
   I = t(39604),
   N = t(703288),
-  A = t(491758),
-  C = t(183632),
-  O = t(689938),
-  m = t(513830),
-  h = t(655714),
-  g = t(331651);
+  C = t(491758),
+  A = t(183632),
+  m = t(689938),
+  O = t(513830),
+  g = t(655714),
+  h = t(331651);
 
 function R(e) {
   let {
     className: s,
     showHeader: t = !0
-  } = e, R = d.tU.useSetting(), {
-    enableViewerClipping: M
-  } = E.Z.useExperiment({
+  } = e, R = _.tU.useSetting(), {
+    enableViewerClipping: p
+  } = d.Z.useExperiment({
     location: "Clips Settings"
   }, {
     autoTrackExposure: !1
   }), {
     analyticsLocations: x
-  } = (0, o.ZP)(), D = (0, T.Go)(), {
-    viewerClipsEnabled: p
-  } = (0, a.cj)([S.Z], () => S.Z.getSettings()), L = (0, u.Z)(_.Z);
-  return i.useEffect(() => {
-    (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG)
-  }), (0, n.jsxs)(o.Gt, {
+  } = (0, l.ZP)(), M = (0, u.Go)(), {
+    viewerClipsEnabled: D
+  } = (0, i.cj)([T.Z], () => T.Z.getSettings()), f = (0, S.Z)(E.Z);
+  return a.useEffect(() => {
+    (0, c.EW)(r.z.CLIPS_SETTINGS_BETA_TAG)
+  }), (0, n.jsxs)(l.Gt, {
     value: x,
-    children: [(D || t) && (0, n.jsx)(r.FormSection, {
+    children: [(M || t) && (0, n.jsx)(o.FormSection, {
       className: s,
-      tag: r.FormTitleTags.H1,
+      tag: o.FormTitleTags.H1,
       title: t ? (0, n.jsxs)("div", {
-        className: m.headerContainer,
-        children: [O.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
+        className: O.headerContainer,
+        children: [m.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
       }) : null,
-      children: D && (0, n.jsxs)("form", {
+      children: M && (0, n.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, n.jsx)(A.Z, {}), (0, n.jsx)(C.Z, {})]
+        children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(A.Z, {})]
       })
-    }), D && (0, n.jsx)(r.FormDivider, {}), (0, n.jsxs)(r.FormSection, {
-      className: t || D ? g.marginTop20 : s,
-      children: [(0, n.jsx)(r.FormSwitch, {
+    }), M && (0, n.jsx)(o.FormDivider, {}), (0, n.jsxs)(o.FormSection, {
+      className: t || M ? h.marginTop20 : s,
+      children: [(0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: h.formItem,
+        className: g.formItem,
         value: R,
-        note: O.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        note: m.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => I.yg({
           allowVoiceRecording: e
         }),
-        children: O.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), M && L && (0, n.jsx)(r.FormSwitch, {
+        children: m.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+      }), p && f && (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: h.formItem,
-        value: p,
-        note: O.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        className: g.formItem,
+        value: D,
+        note: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.yl({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: O.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

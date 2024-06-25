@@ -1,99 +1,99 @@
 n(47120), n(411104), n(789020);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(243814),
-  l = n(45792),
-  a = n(481060),
-  r = n(278323),
+var s = n(243814),
+  a = n(45792),
+  r = n(481060),
+  l = n(278323),
   o = n(988298),
   c = n(224706),
-  u = n(45114),
-  d = n(479531),
-  E = n(40851),
-  h = n(566620),
-  _ = n(596223),
+  d = n(45114),
+  u = n(479531),
+  _ = n(40851),
+  E = n(566620),
+  h = n(596223),
   I = n(838195),
   m = n(928518),
-  T = n(592125),
+  p = n(592125),
   g = n(293273),
-  p = n(885110),
-  N = n(451478),
-  S = n(630388),
-  C = n(823379),
-  A = n(591759),
-  f = n(228488),
+  T = n(885110),
+  C = n(451478),
+  f = n(630388),
+  S = n(823379),
+  N = n(591759),
+  A = n(228488),
   Z = n(996106),
   L = n(914946),
-  O = n(452426),
-  v = n(561205),
+  v = n(452426),
+  O = n(561205),
   R = n(600027),
-  P = n(852926),
-  x = n(186901),
-  M = n(981631);
-async function D(e, t, n, s) {
-  let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-    l = g.Z.getApplicationActivity(t);
-  if (null == l || null == l.secrets || !(0, L.t9)(s, l.party, l.secrets)) throw new Z.Z({
-    errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY
+  x = n(852926),
+  P = n(186901),
+  b = n(981631);
+async function M(e, t, n, i) {
+  let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+    a = g.Z.getApplicationActivity(t);
+  if (null == a || null == a.secrets || !(0, L.t9)(i, a.party, a.secrets)) throw new Z.Z({
+    errorCode: b.lTL.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-  let a = (0, _.Z)(l, p.Z);
-  if (a) {
+  let r = (0, h.Z)(a, T.Z);
+  if (r) {
     let {
       lock: t
-    } = (0, P.s0)(e);
-    return (0, o.h7)(l, a).then(() => {
+    } = (0, x.s0)(e);
+    return (0, o.h7)(a, r).then(() => {
       throw t(), new Z.Z({
-        errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY
+        errorCode: b.lTL.NO_ELIGIBLE_ACTIVITY
       }, "No eligible activity for application. Ensure user does have have privacy enabled.")
     })
   }
-  await r.Z.sendActivityInviteUser({
+  await l.Z.sendActivityInviteUser({
     userId: n,
-    type: s,
-    activity: l,
-    content: i,
+    type: i,
+    activity: a,
+    content: s,
     location: "In-Game Invite"
   })
 }
 t.Z = {
-  [M.Etm.SEND_ACTIVITY_JOIN_INVITE]: {
+  [b.Etm.SEND_ACTIVITY_JOIN_INVITE]: {
     scope: {
-      [x.Gp.ANY]: [i.x.RPC, x.lH]
+      [P.Gp.ANY]: [s.x.RPC, P.lH]
     },
     handler(e) {
       let {
         socket: t,
         args: {
           user_id: n,
-          pid: s
+          pid: i
         }
-      } = e, i = t.application.id;
-      if (null == i) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
+      } = e, s = t.application.id;
+      if (null == s) throw new Z.Z({
+        errorCode: b.lTL.INVALID_COMMAND
       }, "No application.");
-      return D(s, i, n, M.mFx.JOIN)
+      return M(i, s, n, b.mFx.JOIN)
     }
   },
-  [M.Etm.CLOSE_ACTIVITY_JOIN_REQUEST]: {
+  [b.Etm.CLOSE_ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [x.Gp.ANY]: [i.x.RPC, x.lH]
+      [P.Gp.ANY]: [s.x.RPC, P.lH]
     },
     handler(e) {
       let {
         args: {
           user_id: t
         }
-      } = e, n = T.Z.getDMFromUserId(t);
-      null != n && (0, u.In)(n, !0, !0)
+      } = e, n = p.Z.getDMFromUserId(t);
+      null != n && (0, d.In)(n, !0, !0)
     }
   },
-  [M.Etm.ACTIVITY_INVITE_USER]: {
+  [b.Etm.ACTIVITY_INVITE_USER]: {
     scope: {
-      [x.Gp.ANY]: [i.x.RPC, x.lH]
+      [P.Gp.ANY]: [s.x.RPC, P.lH]
     },
-    validation: e => (0, O.Z)(e).required().keys({
+    validation: e => (0, v.Z)(e).required().keys({
       user_id: e.string().required(),
-      type: e.number().required().valid([M.mFx.JOIN]),
+      type: e.number().required().valid([b.mFx.JOIN]),
       content: e.string().min(0).max(1024),
       pid: e.number().min(0).required()
     }),
@@ -102,23 +102,23 @@ t.Z = {
         socket: t,
         args: {
           type: n,
-          user_id: s,
-          content: i,
-          pid: l
+          user_id: i,
+          content: s,
+          pid: a
         }
-      } = e, a = t.application.id;
-      if (null == a) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
+      } = e, r = t.application.id;
+      if (null == r) throw new Z.Z({
+        errorCode: b.lTL.INVALID_COMMAND
       }, "No application.");
-      return D(l, a, s, n, i)
+      return M(a, r, i, n, s)
     }
   },
-  [M.Etm.ACCEPT_ACTIVITY_INVITE]: {
+  [b.Etm.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
-      [x.Gp.ANY]: [i.x.RPC, x.lH]
+      [P.Gp.ANY]: [s.x.RPC, P.lH]
     },
-    validation: e => (0, O.Z)(e).required().keys({
-      type: e.number().required().valid([M.mFx.JOIN]),
+    validation: e => (0, v.Z)(e).required().keys({
+      type: e.number().required().valid([b.mFx.JOIN]),
       user_id: e.string().required(),
       session_id: e.string().required(),
       channel_id: e.string().required(),
@@ -129,141 +129,141 @@ t.Z = {
         socket: t,
         args: {
           type: n,
-          user_id: s,
-          session_id: i,
-          channel_id: l,
-          message_id: a
+          user_id: i,
+          session_id: s,
+          channel_id: a,
+          message_id: r
         }
-      } = e, r = t.application.id;
-      if (null == r) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
+      } = e, l = t.application.id;
+      if (null == l) throw new Z.Z({
+        errorCode: b.lTL.INVALID_COMMAND
       }, "No application.");
       let o = Promise.resolve(!1);
-      if (n === M.mFx.JOIN) o = c.Z.join({
-        userId: s,
-        sessionId: i,
-        applicationId: r,
-        channelId: l,
-        messageId: a
+      if (n === b.mFx.JOIN) o = c.Z.join({
+        userId: i,
+        sessionId: s,
+        applicationId: l,
+        channelId: a,
+        messageId: r
       });
       return o.then(e => {
         if (!e) throw new Z.Z({
-          errorCode: M.lTL.INVALID_INVITE
+          errorCode: b.lTL.INVALID_INVITE
         }, "Invite is expired or invalid.")
       })
     }
   },
-  [M.Etm.OPEN_INVITE_DIALOG]: {
+  [b.Etm.OPEN_INVITE_DIALOG]: {
     scope: {
-      [x.Gp.ANY]: [i.x.RPC, x.lH, x.wE]
+      [P.Gp.ANY]: [s.x.RPC, P.lH, P.wE]
     },
     handler(e) {
       let {
         socket: t
       } = e, {
-        channel: i,
-        guild: l
-      } = (0, R.T)(), r = m.Z.getWindow(M.KJ3.CHANNEL_CALL_POPOUT);
-      (null == r ? void 0 : r.closed) && (r = null);
-      let o = null != r ? M.IlC.POPOUT : M.IlC.APP;
-      (0, f.Pr)({}, null == r ? void 0 : r.document), (0, a.openModalLazy)(async () => {
+        channel: s,
+        guild: a
+      } = (0, R.T)(), l = m.Z.getWindow(b.KJ3.CHANNEL_CALL_POPOUT);
+      (null == l ? void 0 : l.closed) && (l = null);
+      let o = null != l ? b.IlC.POPOUT : b.IlC.APP;
+      (0, A.Pr)({}, null == l ? void 0 : l.document), (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, 560114));
-        return n => (0, s.jsx)(e, {
+        } = await Promise.all([n.e("7654"), n.e("30135")]).then(n.bind(n, 560114));
+        return n => (0, i.jsx)(e, {
           ...n,
-          guild: l,
-          channel: i,
+          guild: a,
+          channel: s,
           applicationId: t.application.id,
-          analyticsLocation: M.Sbl.ACTIVITY_RPC,
-          source: M.t4x.ACTIVITY_INVITE
+          analyticsLocation: b.Sbl.ACTIVITY_RPC,
+          source: b.t4x.ACTIVITY_INVITE
         })
       }, {
-        contextKey: o === M.IlC.POPOUT ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
+        contextKey: o === b.IlC.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
       })
     }
   },
-  [M.Etm.INITIATE_IMAGE_UPLOAD]: (0, l.S)(M.Etm.INITIATE_IMAGE_UPLOAD, {
+  [b.Etm.INITIATE_IMAGE_UPLOAD]: (0, a.S)(b.Etm.INITIATE_IMAGE_UPLOAD, {
     scope: {
-      [x.Gp.ANY]: [i.x.RPC, x.lH, x.wE]
+      [P.Gp.ANY]: [s.x.RPC, P.lH, P.wE]
     },
     handler(e) {
       var t;
       let {
         socket: n
-      } = e, s = n.application.id;
-      if (null == s) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
-      }, "No application.");
-      let i = null === (t = (0, v.Z)()) || void 0 === t ? void 0 : t.id;
+      } = e, i = n.application.id;
       if (null == i) throw new Z.Z({
-        errorCode: M.lTL.UNKNOWN_ERROR
+        errorCode: b.lTL.INVALID_COMMAND
+      }, "No application.");
+      let s = null === (t = (0, O.Z)()) || void 0 === t ? void 0 : t.id;
+      if (null == s) throw new Z.Z({
+        errorCode: b.lTL.UNKNOWN_ERROR
       }, "Unable to find selected channel");
       return new Promise((e, t) => {
         ! function(e, t) {
           var n;
-          let s = N.Z.getLastFocusedWindowId(),
-            i = null == s ? null : null === (n = (0, E.g0)(s)) || void 0 === n ? void 0 : n.renderWindow;
-          if (null == i) throw new Z.Z({
-            errorCode: M.lTL.UNKNOWN_ERROR
+          let i = C.Z.getLastFocusedWindowId(),
+            s = null == i ? null : null === (n = (0, _.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
+          if (null == s) throw new Z.Z({
+            errorCode: b.lTL.UNKNOWN_ERROR
           }, "No valid window found");
-          let l = i.document.createElement("input");
-          l.style.display = "none", l.type = "file", l.accept = "image/jpeg, image/jpg, image/png, image/gif";
-          let a = () => {
-            (null == l.files || 0 === l.files.length) && t(), i.document.body.removeEventListener("focus", a, !0), setTimeout(() => {
-              i.document.body.removeChild(l)
+          let a = s.document.createElement("input");
+          a.style.display = "none", a.type = "file", a.accept = "image/jpeg, image/jpg, image/png, image/gif";
+          let r = () => {
+            (null == a.files || 0 === a.files.length) && t(), s.document.body.removeEventListener("focus", r, !0), setTimeout(() => {
+              s.document.body.removeChild(a)
             }, 1e3)
           };
-          l.addEventListener("change", () => {
-            (0, C.lm)(l.files) && e(l.files[0]), a()
-          }), l.addEventListener("cancel", () => {
-            a()
-          }), i.document.body.addEventListener("focus", a, !0), i.document.body.appendChild(l), l.click()
+          a.addEventListener("change", () => {
+            (0, S.lm)(a.files) && e(a.files[0]), r()
+          }), a.addEventListener("cancel", () => {
+            r()
+          }), s.document.body.addEventListener("focus", r, !0), s.document.body.appendChild(a), a.click()
         }(async n => {
-          let l = await (0, h.kv)(s, i, n);
-          (0, C.lm)(l) && (0, C.lm)(l.url) && !(l instanceof d.Z) ? e({
-            image_url: l.url
-          }): t(l)
+          let a = await (0, E.kv)(i, s, n);
+          (0, S.lm)(a) && (0, S.lm)(a.url) && !(a instanceof u.Z) ? e({
+            image_url: a.url
+          }): t(a)
         }, () => t(Error("Upload canceled")))
       }).catch(e => {
         var t;
         throw new Z.Z({
-          errorCode: M.lTL.UNKNOWN_ERROR
+          errorCode: b.lTL.UNKNOWN_ERROR
         }, null !== (t = null == e ? void 0 : e.message) && void 0 !== t ? t : "Failed to upload image")
       })
     }
   }),
-  [M.Etm.OPEN_SHARE_MOMENT_DIALOG]: (0, l.S)(M.Etm.OPEN_SHARE_MOMENT_DIALOG, {
+  [b.Etm.OPEN_SHARE_MOMENT_DIALOG]: (0, a.S)(b.Etm.OPEN_SHARE_MOMENT_DIALOG, {
     scope: {
-      [x.Gp.ANY]: [x.wE]
+      [P.Gp.ANY]: [P.wE]
     },
     handler(e) {
       var t;
       let {
         socket: n,
         args: {
-          mediaUrl: s
+          mediaUrl: i
         }
       } = e;
       (0, L.bu)(n.transport);
-      let i = n.application.id;
-      if (null == i) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
+      let s = n.application.id;
+      if (null == s) throw new Z.Z({
+        errorCode: b.lTL.INVALID_COMMAND
       }, "No application.");
-      if (!(0, S.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
+      if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, b.udG.EMBEDDED)) throw new Z.Z({
+        errorCode: b.lTL.INVALID_COMMAND
       }, "This application cannot access this API");
-      let l = (0, v.Z)();
-      if (null == l) throw new Z.Z({
-        errorCode: M.lTL.INVALID_COMMAND
+      let a = (0, O.Z)();
+      if (null == a) throw new Z.Z({
+        errorCode: b.lTL.INVALID_COMMAND
       }, "No channel found");
-      if (!A.Z.isDiscordCdnUrl(s)) throw new Z.Z({
-        errorCode: M.lTL.INVALID_PAYLOAD
+      if (!N.Z.isDiscordCdnUrl(i)) throw new Z.Z({
+        errorCode: b.lTL.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
       (0, I.Z)({
-        applicationId: i,
-        channelId: l.id,
-        mediaUrl: s
+        applicationId: s,
+        channelId: a.id,
+        mediaUrl: i
       })
     }
   })

@@ -1,19 +1,19 @@
 "use strict";
 var i = n(735250),
   s = n(470079),
-  l = n(442837),
+  a = n(442837),
   o = n(831218),
-  a = n(840780),
-  r = n(51596),
+  r = n(840780),
+  l = n(51596),
   c = n(905423),
   d = n(237997),
   u = n(145597),
   h = n(981631),
   p = n(689938),
   f = n(349363);
-let E = () => (0, r.$Z)("DM_SEARCH");
+let _ = () => (0, l.$Z)("DM_SEARCH");
 t.Z = s.memo(function() {
-  let e = (0, l.e7)([d.Z], () => d.Z.isUILocked((0, u.QF)()) ? "true" : "false"),
+  let e = (0, a.e7)([d.Z], () => d.Z.isUILocked((0, u.QF)()) ? "true" : "false"),
     t = (0, c.Z)(e => {
       let {
         channelId: t
@@ -27,7 +27,7 @@ t.Z = s.memo(function() {
       children: (0, i.jsx)("button", {
         type: "button",
         className: f.searchBarComponent,
-        onClick: E,
+        onClick: _,
         children: p.Z.Messages.DM_SEARCH_PLACEHOLDER
       })
     }), (0, i.jsx)(o.Z, {
@@ -38,7 +38,7 @@ t.Z = s.memo(function() {
     }), (0, i.jsx)("section", {
       className: f.panels,
       "aria-label": p.Z.Messages.ACCOUNT_A11Y_LABEL,
-      children: (0, i.jsx)(a.Z, {
+      children: (0, i.jsx)(r.Z, {
         guildId: null
       })
     })]

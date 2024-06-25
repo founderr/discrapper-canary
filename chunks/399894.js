@@ -1,10 +1,10 @@
 "use strict";
-var s = n(735250);
+var a = n(735250);
 n(470079);
-var l = n(120356),
-  a = n.n(l),
-  r = n(913527),
-  i = n.n(r),
+var s = n(120356),
+  r = n.n(s),
+  l = n(913527),
+  i = n.n(l),
   o = n(481060),
   c = n(70956),
   d = n(689938),
@@ -13,17 +13,17 @@ t.Z = e => {
   let {
     rateLimitPerUser: t,
     slowmodeCooldownGuess: n,
-    isBypassSlowmode: l,
-    leadingIcon: r = !1
+    isBypassSlowmode: s,
+    leadingIcon: l = !1
   } = e, m = "", h = "";
   if (t >= c.Z.Seconds.HOUR) {
     let e = Math.floor(t / c.Z.Seconds.HOUR),
       n = Math.floor((t - e * c.Z.Seconds.HOUR) / c.Z.Seconds.MINUTE),
-      s = t - e * c.Z.Seconds.HOUR - n * c.Z.Seconds.MINUTE;
+      a = t - e * c.Z.Seconds.HOUR - n * c.Z.Seconds.MINUTE;
     h = d.Z.Messages.FORUM_SLOWMODE_DESC_HOURS.format({
       hours: e,
       minutes: n,
-      seconds: s
+      seconds: a
     })
   } else if (t >= 60) {
     let e = Math.floor(t / 60);
@@ -34,7 +34,7 @@ t.Z = e => {
   } else h = d.Z.Messages.FORUM_SLOWMODE_DESC.format({
     seconds: t
   });
-  if (!l && n > 0) {
+  if (!s && n > 0) {
     let e = i().duration(n);
     if (n > c.Z.Millis.HOUR) {
       let t = "".concat(e.minutes()).padStart(2, "0"),
@@ -44,28 +44,28 @@ t.Z = e => {
       let t = "".concat(e.seconds()).padStart(2, "0");
       m = "".concat(e.minutes(), ":").concat(t)
     }
-  } else m = l ? d.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : d.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT;
-  let g = (0, s.jsx)(o.Text, {
+  } else m = s ? d.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : d.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT;
+  let _ = (0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: m
     }),
-    x = (0, s.jsx)(o.TimerIcon, {
+    g = (0, a.jsx)(o.TimerIcon, {
       size: "xs",
       color: "currentColor",
-      className: a()(u.slowModeIcon, {
-        [u.leadingIcon]: r
+      className: r()(u.slowModeIcon, {
+        [u.leadingIcon]: l
       })
     });
-  return (0, s.jsx)(o.Tooltip, {
+  return (0, a.jsx)(o.Tooltip, {
     text: h,
-    children: e => (0, s.jsx)("div", {
+    children: e => (0, a.jsx)("div", {
       className: u.cooldownWrapper,
       ...e,
-      children: r ? (0, s.jsxs)(s.Fragment, {
-        children: [x, g]
-      }) : (0, s.jsxs)(s.Fragment, {
-        children: [g, x]
+      children: l ? (0, a.jsxs)(a.Fragment, {
+        children: [g, _]
+      }) : (0, a.jsxs)(a.Fragment, {
+        children: [_, g]
       })
     })
   })

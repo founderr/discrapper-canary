@@ -3,20 +3,20 @@ n.d(t, {
     return r
   },
   Fq: function() {
-    return a
-  },
-  Ks: function() {
-    return l
-  },
-  q2: function() {
     return s
   },
-  qh: function() {
+  Ks: function() {
     return i
+  },
+  q2: function() {
+    return l
+  },
+  qh: function() {
+    return a
   }
 });
-let l = 80,
-  i = 48,
-  s = 3,
-  a = 500,
+let i = 80,
+  a = 48,
+  l = 3,
+  s = 500,
   r = 5e3

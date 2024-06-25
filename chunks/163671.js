@@ -3,10 +3,10 @@ n.d(t, {
     return l
   }
 });
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  i = n.n(r),
+var s = n(120356),
+  i = n.n(s),
   a = n(388905),
   o = n(835234);
 
@@ -14,13 +14,13 @@ function l(e) {
   let {
     children: t,
     className: n,
-    ...r
+    ...s
   } = e, l = t();
-  return (0, s.jsx)(a.ZP, {
-    ...r,
+  return (0, r.jsx)(a.ZP, {
+    ...s,
     className: i()(n, o.container),
     contentClassName: o.content,
-    children: l.map((e, t) => (0, s.jsx)("div", {
+    children: l.map((e, t) => (0, r.jsx)("div", {
       className: o.column,
       style: {
         flexBasis: "".concat(100 / l.length, "%")

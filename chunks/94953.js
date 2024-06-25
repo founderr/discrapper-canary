@@ -27,31 +27,31 @@ function g(e) {
     analyticsLocations: L,
     context: T,
     icon: A
-  } = e, h = (0, a.e7)([_.Z], () => _.Z.getGuild(n), [n]), f = (0, a.e7)([c.default], () => c.default.getId()), Z = (0, a.e7)([N.default], () => N.default.getUser(t)), O = (0, a.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n, t), [n, t]), m = i.useMemo(() => ({
+  } = e, h = (0, a.e7)([_.Z], () => _.Z.getGuild(n), [n]), f = (0, a.e7)([c.default], () => c.default.getId()), Z = (0, a.e7)([N.default], () => N.default.getUser(t)), O = (0, a.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n, t), [n, t]), p = i.useMemo(() => ({
     [n]: [t]
-  }), [n, t]), p = (0, d.EJ)(h);
-  (0, u.$)(m);
-  let C = T === I.IlC.POPOUT,
+  }), [n, t]), C = (0, d.EJ)(h);
+  (0, u.$)(p);
+  let m = T === I.IlC.POPOUT,
     x = f === t,
     [G, b] = (0, a.Wu)([M.Z], () => {
       if (null == h) return [!1, !1];
       let e = f === t && (M.Z.can(I.Plq.CHANGE_NICKNAME, h) || M.Z.can(I.Plq.MANAGE_NICKNAMES, h));
       return [e, M.Z.canManageUser(I.Plq.MANAGE_NICKNAMES, t, h)]
     }, [f, t, h]),
-    P = i.useCallback((e, n) => () => {
+    U = i.useCallback((e, n) => () => {
       (0, r.nE)(e, n, o.Z.CONTEXT_MENU)
     }, []);
-  return null != h && !C && (G || b || x) && null != Z && !O && p && Z.isStaff() ? (0, s.jsxs)(s.Fragment, {
+  return null != h && !m && (G || b || x) && null != Z && !O && C && Z.isStaff() ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(l.MenuItem, {
       id: "adopt-clan-identity",
       label: S.Z.Messages.CLAN_ADOPT_CLAN_IDENTITY,
       icon: A,
-      action: P(n, !0)
+      action: U(n, !0)
     }), (0, s.jsx)(l.MenuItem, {
       id: "deadopt-clan-identity",
       label: S.Z.Messages.CLAN_CLEAR_CLAN_IDENTITY,
       icon: A,
-      action: P(null, null)
+      action: U(null, null)
     })]
   }) : null
 }

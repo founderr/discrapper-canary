@@ -1,21 +1,21 @@
 n.d(t, {
   g: function() {
-    return f
+    return E
   }
 }), n(47120), n(757143);
-var l = n(302454),
-  i = n.n(l),
-  s = n(969812),
-  a = n(904245),
+var i = n(302454),
+  a = n.n(i),
+  l = n(969812),
+  s = n(904245),
   r = n(367907),
   o = n(339085),
   c = n(222677),
   u = n(995774),
   d = n(695346),
   h = n(375954),
-  m = n(981631);
-let E = /\\([*?+/])/g,
-  p = {
+  p = n(981631);
+let m = /\\([*?+/])/g,
+  _ = {
     tts: {
       action: () => ({
         tts: d.OW.getSetting()
@@ -46,44 +46,44 @@ let E = /\\([*?+/])/g,
         let {
           channel: n
         } = t;
-        if (null != n.guild_id) return s.Z.changeNickname(n.guild_id, n.id, m.ME, e), {
+        if (null != n.guild_id) return l.Z.changeNickname(n.guild_id, n.id, p.ME, e), {
           content: ""
         }
       }
     },
     reaction: {
-      match: i().anyScopeRegex(/^\+:(.+?): *$/),
+      match: a().anyScopeRegex(/^\+:(.+?): *$/),
       action(e, t) {
         let {
           isEdit: n,
-          channel: l
+          channel: i
         } = t;
-        if (n || !h.Z.hasPresent(l.id)) return;
-        let i = h.Z.getMessages(l.id).last();
-        if (null == i || null == i.id) return;
-        let s = o.Z.getDisambiguatedEmojiContext(l.guild_id).getByName(e.trim().slice(2, -1));
-        if (null != s) return (0, c.rU)(l.id, i.id, (0, u.g1)(s)), {
+        if (n || !h.Z.hasPresent(i.id)) return;
+        let a = h.Z.getMessages(i.id).last();
+        if (null == a || null == a.id) return;
+        let l = o.Z.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
+        if (null != l) return (0, c.rU)(i.id, a.id, (0, u.g1)(l)), {
           content: ""
         }
       }
     },
     searchReplace: {
-      match: i().anyScopeRegex(/^s\/((?:.+?)[^\\]|.)\/(.*)/),
+      match: a().anyScopeRegex(/^s\/((?:.+?)[^\\]|.)\/(.*)/),
       action(e, t) {
         var n;
         let {
-          isEdit: l,
-          channel: i
+          isEdit: i,
+          channel: a
         } = t;
-        if (l) return;
-        let s = h.Z.getLastEditableMessage(i.id);
-        if (null == s || null == s.id) return {
+        if (i) return;
+        let l = h.Z.getLastEditableMessage(a.id);
+        if (null == l || null == l.id) return {
           content: ""
         };
         let [, r, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
-        r = r.replace(E, (e, t) => t), o = o.replace(E, (e, t) => t);
-        let c = s.content.replace(r, o);
-        return (null == c || "" === c) && 0 === s.attachments.length ? a.Z.deleteMessage(i.id, s.id) : e !== s.content && a.Z.editMessage(i.id, s.id, {
+        r = r.replace(m, (e, t) => t), o = o.replace(m, (e, t) => t);
+        let c = l.content.replace(r, o);
+        return (null == c || "" === c) && 0 === l.attachments.length ? s.Z.deleteMessage(a.id, l.id) : e !== l.content && s.Z.editMessage(a.id, l.id, {
           content: c
         }), {
           content: ""
@@ -92,29 +92,29 @@ let E = /\\([*?+/])/g,
     },
     spoiler: {
       action: e => ({
-        content: (0, m.XmY)(e).trim()
+        content: (0, p.XmY)(e).trim()
       })
     }
   };
 
-function g(e, t, n, l) {
-  return r.ZP.trackWithMetadata(m.rMx.SLASH_COMMAND_USED, {
+function f(e, t, n, i) {
+  return r.ZP.trackWithMetadata(p.rMx.SLASH_COMMAND_USED, {
     command: e
-  }), t.action(n, l)
+  }), t.action(n, i)
 }
 
-function f(e, t) {
-  for (let l in p) {
-    let i = p[l];
-    if (null != i.match) {
+function E(e, t) {
+  for (let i in _) {
+    let a = _[i];
+    if (null != a.match) {
       var n;
-      if (null === (n = i.match.regex) || void 0 === n ? void 0 : n.test(e)) return g(l, i, e, t);
+      if (null === (n = a.match.regex) || void 0 === n ? void 0 : n.test(e)) return f(i, a, e, t);
       continue
     }
     if (d.dN.getSetting() && "/" === e[0]) {
       let n = e.split(" ");
-      if (l === n[0].slice(1) && null != i.action) return g(l, i, n.slice(1).join(" "), t)
+      if (i === n[0].slice(1) && null != a.action) return f(i, a, n.slice(1).join(" "), t)
     }
   }
 }
-Object.setPrototypeOf(p, null)
+Object.setPrototypeOf(_, null)

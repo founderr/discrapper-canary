@@ -10,9 +10,9 @@ var n = s(735250),
   d = s(277390),
   u = s(287880),
   h = s(689938),
-  g = s(167217);
+  f = s(167217);
 
-function f(e, t, s) {
+function g(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -28,13 +28,13 @@ let p = e => {
     children: a
   } = e;
   return (0, n.jsxs)(c.Z, {
-    className: g.spacing,
+    className: f.spacing,
     children: [(0, n.jsx)(c.Z, {
       grow: 0,
       shrink: 0,
       basis: "156px",
       justify: c.Z.Justify.CENTER,
-      className: g.image,
+      className: f.image,
       children: t
     }), (0, n.jsx)(c.Z, {
       direction: c.Z.Direction.VERTICAL,
@@ -42,7 +42,7 @@ let p = e => {
       children: (0, n.jsxs)("div", {
         children: [(0, n.jsx)(i.FormTitle, {
           tag: "h5",
-          className: g.headerSpacing,
+          className: f.headerSpacing,
           children: s
         }), (0, n.jsx)(i.FormText, {
           type: i.FormText.Types.DESCRIPTION,
@@ -61,15 +61,15 @@ class m extends r.PureComponent {
     } = this.props, {
       totpSecret: a,
       code: o,
-      isVerifying: f
-    } = this.state, m = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, x = (0, u.U0)(null != m ? m : "", a), v = (0, n.jsx)("form", {
+      isVerifying: g
+    } = this.state, m = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, x = (0, u.U0)(null != m ? m : "", a), _ = (0, n.jsx)("form", {
       onSubmit: this.handleActivate,
       children: (0, n.jsxs)(c.Z, {
-        className: g.inputContainer,
+        className: f.inputContainer,
         align: c.Z.Align.START,
         children: [(0, n.jsx)(i.TextInput, {
           value: o,
-          className: g.input,
+          className: f.input,
           placeholder: "000 000",
           maxLength: 7,
           autoComplete: "one-time-code",
@@ -81,7 +81,7 @@ class m extends r.PureComponent {
           shrink: 0,
           children: (0, n.jsx)(i.Button, {
             type: "submit",
-            submitting: f,
+            submitting: g,
             children: h.Z.Messages.TWO_FA_ACTIVATE
           })
         })]
@@ -90,7 +90,7 @@ class m extends r.PureComponent {
     return (0, n.jsxs)(i.ModalRoot, {
       transitionState: t,
       size: i.ModalSize.DYNAMIC,
-      className: g.customWidth,
+      className: f.customWidth,
       children: [(0, n.jsxs)(i.ModalHeader, {
         separator: !1,
         children: [(0, n.jsxs)(c.Z.Child, {
@@ -101,7 +101,7 @@ class m extends r.PureComponent {
             children: h.Z.Messages.TWO_FA_ENABLE
           }), (0, n.jsx)(i.Text, {
             variant: "text-xs/normal",
-            className: g.subHeader,
+            className: f.subHeader,
             children: h.Z.Messages.TWO_FA_ENABLE_SUBHEADER
           })]
         }), (0, n.jsx)(c.Z.Child, {
@@ -124,7 +124,7 @@ class m extends r.PureComponent {
             authyURL: "https://www.authy.com/"
           })
         }), (0, n.jsx)(i.FormDivider, {
-          className: g.divider
+          className: f.divider
         }), (0, n.jsx)(p, {
           image: (0, n.jsx)(d.ZP, {
             text: x
@@ -132,20 +132,20 @@ class m extends r.PureComponent {
           label: h.Z.Messages.TWO_FA_QR_LABEL,
           text: h.Z.Messages.TWO_FA_QR_BODY,
           children: (0, n.jsxs)("div", {
-            className: g.topSpacing,
+            className: f.topSpacing,
             children: [(0, n.jsx)(i.FormTitle, {
               tag: "h5",
-              className: g.headerSpacing,
+              className: f.headerSpacing,
               children: h.Z.Messages.TWO_FA_KEY
             }), (0, n.jsx)(i.Text, {
               variant: "text-md/normal",
-              className: g.secret,
+              className: f.secret,
               selectable: !0,
               children: a
             })]
           })
         }), (0, n.jsx)(i.FormDivider, {
-          className: g.divider
+          className: f.divider
         }), (0, n.jsx)(p, {
           image: (0, n.jsx)("img", {
             alt: "",
@@ -153,22 +153,22 @@ class m extends r.PureComponent {
           }),
           label: h.Z.Messages._TWO_FA_LOGIN_LABEL,
           text: h.Z.Messages.TWO_FA_LOGIN_BODY,
-          children: v
+          children: _
         })]
       })]
     })
   }
   constructor(...e) {
-    super(...e), f(this, "state", {
+    super(...e), g(this, "state", {
       code: "",
       totpSecret: (0, u.bV)(),
       error: null,
       isVerifying: !1
-    }), f(this, "handleCodeChange", e => {
+    }), g(this, "handleCodeChange", e => {
       this.setState({
         code: e
       })
-    }), f(this, "handleActivate", e => {
+    }), g(this, "handleActivate", e => {
       e.preventDefault();
       let {
         password: t,
@@ -190,7 +190,7 @@ class m extends r.PureComponent {
         error: e.body.message,
         isVerifying: !1
       }))
-    }), f(this, "handleActivateSuccess", () => {
+    }), g(this, "handleActivateSuccess", () => {
       let {
         onClose: e,
         handleEnableMFASuccess: t

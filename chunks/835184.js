@@ -3,9 +3,9 @@ var l, r = n(442837),
   s = n(314897),
   u = n(924301),
   a = n(658041),
-  E = n(765305);
+  d = n(765305);
 
-function d(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -52,7 +52,7 @@ class _ extends(l = r.ZP.PersistedStore) {
     }
   }
 }
-d(_, "displayName", "UpcomingEventNoticesStore"), d(_, "persistKey", "UpcomingEventNotices"), t.Z = new _(i.Z, {
+E(_, "displayName", "UpcomingEventNoticesStore"), E(_, "persistKey", "UpcomingEventNotices"), t.Z = new _(i.Z, {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function(e) {
     let {
       eventId: t
@@ -65,7 +65,7 @@ d(_, "displayName", "UpcomingEventNoticesStore"), d(_, "persistKey", "UpcomingEv
     let {
       guildScheduledEvent: t
     } = e;
-    (t.status === E.p1.CANCELED || t.status === E.p1.COMPLETED) && N(t.id)
+    (t.status === d.p1.CANCELED || t.status === d.p1.COMPLETED) && N(t.id)
   },
   GUILD_SCHEDULED_EVENT_DELETE: function(e) {
     let {
@@ -80,9 +80,9 @@ d(_, "displayName", "UpcomingEventNoticesStore"), d(_, "persistKey", "UpcomingEv
     } = e;
     if (t !== s.default.getId()) return;
     let l = u.ZP.getGuildScheduledEvent(n);
-    if (null == l || l.status !== E.p1.SCHEDULED || null != o[n]) return;
+    if (null == l || l.status !== d.p1.SCHEDULED || null != o[n]) return;
     let r = c[n];
-    if ((0, a.M)(l, void 0, r, !1) === E.X_.NEW_EVENT) {
+    if ((0, a.M)(l, void 0, r, !1) === d.X_.NEW_EVENT) {
       let e = {
         ...o
       };

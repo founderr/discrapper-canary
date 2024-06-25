@@ -1,21 +1,21 @@
 n.d(t, {
   Q3: function() {
-    return c
-  },
-  Zl: function() {
     return u
   },
-  mC: function() {
-    return s
+  Zl: function() {
+    return c
   },
-  mU: function() {
+  mC: function() {
     return r
   },
-  qJ: function() {
+  mU: function() {
     return a
   },
+  qJ: function() {
+    return s
+  },
   u9: function() {
-    return i
+    return l
   },
   xQ: function() {
     return o
@@ -24,24 +24,24 @@ n.d(t, {
     return d
   }
 });
-var l = n(704215);
+var i = n(704215);
 
-function i(e) {
+function l(e) {
   return "user" === e.type
 }
 
-function s(e) {
+function r(e) {
   return "guild" === e.type
 }
 
-function r(e) {
+function a(e) {
   return JSON.stringify({
     playstyle: e.playstyle,
     acknowledgeCap: e.acknowledgeCap,
     acknowledgeScreen: e.acknowledgeScreen
   })
 }
-let a = {
+let s = {
     key: "valorant-user",
     type: "user",
     title: "Preview new features for Valorant players on Discord",
@@ -50,7 +50,7 @@ let a = {
     question: "Which feature are you interested in the most?",
     questionMargin: 150,
     backgroundAssetUrl: "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
-    dismissibleContent: l.z.GAME_ONE_USER_SIGNUPS,
+    dismissibleContent: i.z.GAME_ONE_USER_SIGNUPS,
     options: [{
       key: "clan",
       icon: "compass",
@@ -80,7 +80,7 @@ let a = {
     question: "Interested? Pick one to sign up for updates and early access:",
     questionMargin: 110,
     backgroundAssetUrl: "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
-    dismissibleContent: l.z.GAME_ONE_USER_SIGNUPS,
+    dismissibleContent: i.z.GAME_ONE_USER_SIGNUPS,
     options: [{
       key: "clan",
       icon: "compass",
@@ -101,7 +101,7 @@ let a = {
       type: "email"
     }]
   },
-  u = {
+  c = {
     key: "genshin-user",
     type: "user",
     title: "Preview new features for Genshin Impact players on Discord",
@@ -110,7 +110,7 @@ let a = {
     question: "Which feature are you interested in the most?",
     questionMargin: 150,
     backgroundAssetUrl: "https://cdn.discordapp.com/assets/signups/Genshin_Background.png",
-    dismissibleContent: l.z.GENSHIN_USER_SIGNUPS,
+    dismissibleContent: i.z.GENSHIN_USER_SIGNUPS,
     options: [{
       key: "clan",
       icon: "compass",
@@ -131,7 +131,7 @@ let a = {
       type: "email"
     }]
   },
-  c = {
+  u = {
     key: "genshin-admin",
     type: "guild",
     title: "Interested in recruiting more Genshin Impact players for your server?",
@@ -140,7 +140,7 @@ let a = {
     question: "Interested? Pick one to sign up for updates and early access:",
     questionMargin: 80,
     backgroundAssetUrl: "https://cdn.discordapp.com/assets/signups/Genshin_Background.png",
-    dismissibleContent: l.z.GENSHIN_USER_SIGNUPS,
+    dismissibleContent: i.z.GENSHIN_USER_SIGNUPS,
     options: [{
       key: "clan",
       icon: "compass",

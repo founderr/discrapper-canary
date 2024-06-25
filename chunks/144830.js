@@ -35,7 +35,7 @@ let h = {
     MONTHS: e => e / 60 / 24 / 31,
     YEARS: e => e / 60 / 24 / 365
   },
-  S = [{
+  f = [{
     unit: "NONE",
     max: 0
   }, {
@@ -60,11 +60,11 @@ let h = {
     unit: "YEARS",
     max: 1 / 0
   }],
-  f = e => (t, n) => null == n ? "" : e().format({
+  S = e => (t, n) => null == n ? "" : e().format({
     time: t,
     ...n
   }),
-  N = {
+  A = {
     ACTIVITY_FEED: {
       START: {
         SECONDS: () => I.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -102,10 +102,10 @@ let h = {
     },
     ACTIVITY_FEED_NEW: {
       START: {
-        SECONDS: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-        MINUTES: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-        HOURS: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-        DAYS: f(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+        SECONDS: S(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+        MINUTES: S(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+        HOURS: S(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+        DAYS: S(() => I.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
       },
       END: {
         SECONDS: e => I.Z.Messages.DURATION_SECONDS_AGO.format({
@@ -191,22 +191,22 @@ let h = {
     }
   };
 
-function A(e, t) {
-  let n = S.findIndex(t => {
+function N(e, t) {
+  let n = f.findIndex(t => {
       let {
         max: n,
         unit: i
       } = t;
       return "NONE" === i && e === n || e < n
     }),
-    i = d().findLast(S, e => {
+    i = d().findLast(f, e => {
       let {
         unit: n
       } = e;
       return t(n)
     }, n);
   if (null != i) return i.unit;
-  let r = S.find(e => {
+  let r = f.find(e => {
     let {
       unit: n
     } = e;
@@ -216,7 +216,7 @@ function A(e, t) {
 }
 
 function m(e, t) {
-  let n = null != e ? A(e, e => t.includes(e)) : "NONE",
+  let n = null != e ? N(e, e => t.includes(e)) : "NONE",
     i = null != n ? h[n] : null;
   return {
     unit: n,
@@ -253,8 +253,8 @@ function O(e) {
       return null != e ? r = i - e : null != t && (r = i - t), Math.abs(r) / 1e3 / 60
     }
     getTimeUnit(e, t, n) {
-      let i = A(e, e => (function(e, t, n) {
-        let i = N[n];
+      let i = N(e, e => (function(e, t, n) {
+        let i = A[n];
         if (null != i) {
           let n = i[t];
           if (null != n) return null != n[e]
@@ -289,7 +289,7 @@ function O(e) {
       } = this.state, o = this.getType();
       if (null == o) return null;
       let a = this.getTimeUnit(s, t, o),
-        l = N[t][o];
+        l = A[t][o];
       if (null == l) return null;
       let _ = l[a],
         c = Math.floor(this.transformTime(a, s));

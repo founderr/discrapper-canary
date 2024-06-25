@@ -1,19 +1,19 @@
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(706454),
-  l = s(78839),
-  o = s(985754),
-  c = s(222727),
-  E = s(474494),
-  _ = s(981631),
-  u = s(129824);
+var s = n(735250);
+n(470079);
+var a = n(442837),
+  r = n(481060),
+  i = n(706454),
+  l = n(78839),
+  o = n(985754),
+  c = n(222727),
+  d = n(474494),
+  _ = n(981631),
+  E = n(129824);
 t.Z = function(e) {
   let {
     localizedPricingPromo: t
-  } = e, s = t.countryCode, d = (0, a.e7)([r.default], () => r.default.locale);
-  (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, s);
+  } = e, n = t.countryCode, u = (0, a.e7)([i.default], () => i.default.locale);
+  (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, n);
   let T = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
     {
       localizedPricingBannerBody: I
@@ -21,19 +21,19 @@ t.Z = function(e) {
       localizedPricingPromo: t,
       subscription: T,
       forceSingleLine: !0,
-      userLocale: d
+      userLocale: u
     });
-  return (0, n.jsxs)("div", {
-    className: u.bannerContainer,
-    children: [(0, n.jsx)(E.Z, {
-      className: u.badge,
-      countryCode: s
-    }), (0, n.jsx)("div", {
-      className: u.bannerBodyContainer,
-      children: (0, n.jsx)(i.Text, {
+  return (0, s.jsxs)("div", {
+    className: E.bannerContainer,
+    children: [(0, s.jsx)(d.Z, {
+      className: E.badge,
+      countryCode: n
+    }), (0, s.jsx)("div", {
+      className: E.bannerBodyContainer,
+      children: (0, s.jsx)(r.Text, {
         color: "none",
         variant: "text-md/normal",
-        className: u.bannerBody,
+        className: E.bannerBody,
         children: I
       })
     })]

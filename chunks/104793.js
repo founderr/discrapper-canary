@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Ft: function() {
-    return f
+    return S
   },
   ML: function() {
     return O
@@ -25,19 +25,19 @@ var i, r, s = n(512722),
   I = n(581364),
   T = n(807169),
   h = n(689079),
-  S = n(981631);
+  f = n(981631);
 
-function f(e, t, n) {
+function S(e, t, n) {
   var i;
   let {
     context: r,
     commandType: s,
     allowNsfw: _,
-    computedPermissions: f,
-    userId: N,
-    roleIds: A,
-    isImpersonating: R,
-    hasBaseAccessPermissions: p
+    computedPermissions: S,
+    userId: A,
+    roleIds: N,
+    isImpersonating: p,
+    hasBaseAccessPermissions: R
   } = t, {
     applicationAllowedForUser: g,
     applicationAllowedForChannel: C,
@@ -60,8 +60,8 @@ function f(e, t, n) {
   }
   if (e.applicationId === h.bi.BUILT_IN) return 0;
   let P = (0, T.ny)(r);
-  if (null == P || l.e$(f, S.Plq.ADMINISTRATOR) || L && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(a.Y.USER_INSTALL))) return 0;
-  if (!p && v && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
+  if (null == P || l.e$(S, f.Plq.ADMINISTRATOR) || L && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(a.Y.USER_INSTALL))) return 0;
+  if (!R && v && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
   if (r instanceof c.Sf) {
     o()(void 0 !== C, "missing applicationAllowedForChannel");
     let t = m(e.permissions, r, P);
@@ -73,21 +73,21 @@ function f(e, t, n) {
         return !1 === e
       }(C)) return 6
   }
-  let y = O(e.permissions, P, N, A, R);
+  let y = O(e.permissions, P, A, N, p);
   return function(e) {
     return !0 === e
   }(y) ? 0 : function(e) {
     return !1 === e
   }(y) ? 7 : function(e) {
     return !1 === e
-  }(g) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, I.BO) && l.e$(f, e.defaultMemberPermissions)) ? 7 : 0
-}
-
-function N(e) {
-  return !0 === e
+  }(g) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, I.BO) && l.e$(S, e.defaultMemberPermissions)) ? 7 : 0
 }
 
 function A(e) {
+  return !0 === e
+}
+
+function N(e) {
   return !1 === e
 }
 

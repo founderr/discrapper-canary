@@ -1,9 +1,9 @@
-var s, i, o, r, l = n(735250),
-  a = n(470079),
+var o, r, i, s, a = n(735250),
+  l = n(470079),
   c = n(120356),
   u = n.n(c),
-  h = n(481060),
-  p = n(67095);
+  p = n(481060),
+  h = n(67095);
 let d = {
     UP: "up",
     RIGHT: "right",
@@ -11,29 +11,29 @@ let d = {
     LEFT: "left"
   },
   g = {
-    [d.UP]: p.up,
-    [d.RIGHT]: p.right,
-    [d.DOWN]: p.down,
-    [d.LEFT]: p.left
+    [d.UP]: h.up,
+    [d.RIGHT]: h.right,
+    [d.DOWN]: h.down,
+    [d.LEFT]: h.left
   };
-class m extends(r = a.PureComponent) {
+class f extends(s = l.PureComponent) {
   render() {
     let {
       direction: t,
       className: e
     } = this.props;
-    return (0, l.jsx)(h.ArrowSmallUpIcon, {
+    return (0, a.jsx)(p.ArrowSmallUpIcon, {
       size: "md",
       color: "currentColor",
-      className: u()(p.__invalid_arrow, e, {
+      className: u()(h.__invalid_arrow, e, {
         [g[t]]: !0
       })
     })
   }
 }
-s = m, i = "Directions", o = d, i in s ? Object.defineProperty(s, i, {
-  value: o,
+o = f, r = "Directions", i = d, r in o ? Object.defineProperty(o, r, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = o, e.Z = m
+}) : o[r] = i, e.Z = f

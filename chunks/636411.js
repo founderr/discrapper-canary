@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return f
+    return S
   }
 });
 var i = n(735250);
@@ -19,68 +19,68 @@ var r = n(120356),
   I = n(981631),
   T = n(474936),
   h = n(689938),
-  S = n(35801);
+  f = n(35801);
 
-function f(e) {
+function S(e) {
   var t, n;
   let {
     onDismiss: r
-  } = e, f = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), N = h.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, A = (0, _.N)(), m = (0, u.Ng)(), O = (null == A ? void 0 : A.subscription_trial) != null || null != m, R = {
+  } = e, S = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), A = h.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, N = (0, _.N)(), m = (0, u.Ng)(), O = (null == N ? void 0 : N.subscription_trial) != null || null != m, p = {
     object: I.qAy.BUTTON_CTA,
     section: I.jXE.SUPER_REACTION_PICKER
   };
   return (0, i.jsxs)("div", {
-    className: S.wrapper,
+    className: f.wrapper,
     children: [(0, i.jsx)(a.Clickable, {
       onClick: r,
-      className: S.closeButton,
+      className: f.closeButton,
       "aria-label": h.Z.Messages.DISMISS,
       children: (0, i.jsx)(a.CloseSmallIcon, {
         size: "md",
         color: "currentColor"
       })
     }), (0, i.jsxs)("div", {
-      className: S.content,
+      className: f.content,
       children: [(0, i.jsx)("div", {
-        className: S.contentFill,
+        className: f.contentFill,
         children: (0, i.jsx)(E.Z, {
-          className: s()(S.banner, {
-            [S.hasTrialOffer]: O
+          className: s()(f.banner, {
+            [f.hasTrialOffer]: O
           }),
           src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",
           loop: !0,
-          autoPlay: !f,
+          autoPlay: !S,
           muted: !0,
           controls: !0
         })
       }), O ? (0, i.jsx)(c.ZP, {
         type: T.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-        subscriptionTier: null !== (n = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : T.Si.TIER_2,
+        subscriptionTier: null !== (n = null == N ? void 0 : null === (t = N.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : T.Si.TIER_2,
         headingText: h.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
-        analyticsLocationObject: R,
+        analyticsLocationObject: p,
         discountOffer: m,
-        trialOffer: A,
-        children: N
+        trialOffer: N,
+        children: A
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsxs)("div", {
-          className: S.header,
+          className: f.header,
           children: [(0, i.jsx)(a.NitroWheelIcon, {
             size: "custom",
             color: "currentColor",
-            className: S.nitroWheel,
+            className: f.nitroWheel,
             width: 32,
             height: 32
           }), (0, i.jsx)(a.Heading, {
-            className: S.headerText,
+            className: f.headerText,
             variant: "heading-xl/bold",
             children: h.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
           })]
         }), (0, i.jsx)(a.Text, {
-          className: S.subheaderText,
+          className: f.subheaderText,
           variant: "text-md/normal",
-          children: N
+          children: A
         }), (0, i.jsx)("div", {
-          className: S.ctaActionWrapper,
+          className: f.ctaActionWrapper,
           children: (0, i.jsx)(d.Z, {
             subscriptionTier: T.Si.TIER_2,
             buttonText: h.Z.Messages.UNLOCK_WITH_NITRO

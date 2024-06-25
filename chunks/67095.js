@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
   up: "up_e8866f",
   right: "right_e8866f",
   down: "down_e8866f",

@@ -5,214 +5,214 @@ t.d(s, {
 });
 var n = t(735250);
 t(470079);
-var i = t(120356),
-  a = t.n(i),
-  l = t(481060),
-  r = t(100527),
-  o = t(906732),
+var a = t(120356),
+  i = t.n(a),
+  r = t(481060),
+  o = t(100527),
+  l = t(906732),
   c = t(454585),
-  E = t(921801),
-  d = t(626135),
-  _ = t(695346),
-  T = t(726985),
-  S = t(981631),
-  u = t(689938),
+  d = t(921801),
+  _ = t(626135),
+  E = t(695346),
+  u = t(726985),
+  T = t(981631),
+  S = t(689938),
   I = t(331651);
 
 function N() {
-  let e = _.up.useSetting(),
-    s = _.fq.useSetting(),
-    t = _.R$.useSetting(),
-    i = _.cC.useSetting(),
-    N = _.vF.useSetting(),
-    A = _.H1.useSetting(),
-    C = _.ev.useSetting(),
-    O = _.x4.useSetting(),
-    m = _.RS.useSetting(),
-    h = _.NA.useSetting(),
-    g = _.nc.useSetting(),
+  let e = E.up.useSetting(),
+    s = E.fq.useSetting(),
+    t = E.R$.useSetting(),
+    a = E.cC.useSetting(),
+    N = E.vF.useSetting(),
+    C = E.H1.useSetting(),
+    A = E.ev.useSetting(),
+    m = E.x4.useSetting(),
+    O = E.RS.useSetting(),
+    g = E.NA.useSetting(),
+    h = E.nc.useSetting(),
     {
       analyticsLocations: R
-    } = (0, o.ZP)(r.Z.TEXT_AND_IMAGES);
-  return (0, n.jsxs)(l.FormSection, {
-    tag: l.FormTitleTags.H1,
-    title: u.Z.Messages.CHAT,
-    children: [(0, n.jsxs)(E.F, {
-      setting: T.s6.CHAT_INLINE_MEDIA,
-      children: [(0, n.jsx)(l.FormTitle, {
+    } = (0, l.ZP)(o.Z.TEXT_AND_IMAGES);
+  return (0, n.jsxs)(r.FormSection, {
+    tag: r.FormTitleTags.H1,
+    title: S.Z.Messages.CHAT,
+    children: [(0, n.jsxs)(d.F, {
+      setting: u.s6.CHAT_INLINE_MEDIA,
+      children: [(0, n.jsx)(r.FormTitle, {
         className: I.marginBottom8,
-        children: u.Z.Messages.INLINE_MEDIA_LABEL
-      }), (0, n.jsx)(E.F, {
-        setting: T.s6.CHAT_INLINE_MEDIA_LINKS,
-        children: (0, n.jsx)(l.FormSwitch, {
-          className: a()(I.marginTop8, I.marginBottom20),
-          value: m,
-          onChange: _.RS.updateSetting,
-          children: u.Z.Messages.INLINE_EMBED_MEDIA
-        })
-      }), (0, n.jsx)(E.F, {
-        setting: T.s6.CHAT_INLINE_MEDIA_UPLOADS,
-        children: (0, n.jsx)(l.FormSwitch, {
-          className: a()(I.marginTop8, I.marginBottom20),
+        children: S.Z.Messages.INLINE_MEDIA_LABEL
+      }), (0, n.jsx)(d.F, {
+        setting: u.s6.CHAT_INLINE_MEDIA_LINKS,
+        children: (0, n.jsx)(r.FormSwitch, {
+          className: i()(I.marginTop8, I.marginBottom20),
           value: O,
-          note: u.Z.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
+          onChange: E.RS.updateSetting,
+          children: S.Z.Messages.INLINE_EMBED_MEDIA
+        })
+      }), (0, n.jsx)(d.F, {
+        setting: u.s6.CHAT_INLINE_MEDIA_UPLOADS,
+        children: (0, n.jsx)(r.FormSwitch, {
+          className: i()(I.marginTop8, I.marginBottom20),
+          value: m,
+          note: S.Z.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
             maxSize: 10
           }),
-          onChange: _.x4.updateSetting,
-          children: u.Z.Messages.INLINE_ATTACHMENT_MEDIA
+          onChange: E.x4.updateSetting,
+          children: S.Z.Messages.INLINE_ATTACHMENT_MEDIA
         })
-      }), (0, n.jsx)(E.F, {
-        setting: T.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
-        children: (0, n.jsx)(l.FormSwitch, {
-          className: a()(I.marginTop8, I.marginBottom40),
-          value: A,
-          note: u.Z.Messages.IMAGE_DESCRIPTION_HELP,
-          onChange: _.H1.updateSetting,
-          children: u.Z.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
-        })
-      })]
-    }), (0, n.jsxs)(E.F, {
-      setting: T.s6.CHAT_EMBEDS,
-      children: [(0, n.jsx)(l.FormTitle, {
-        className: I.marginBottom8,
-        children: u.Z.Messages.RENDER_EMBEDS_LABEL
-      }), (0, n.jsx)(E.F, {
-        setting: T.s6.CHAT_EMBEDS_LINK_PREVIEWS,
-        children: (0, n.jsx)(l.FormSwitch, {
-          className: a()(I.marginTop8, I.marginBottom40),
-          value: h,
-          onChange: _.NA.updateSetting,
-          children: u.Z.Messages.RENDER_EMBEDS
-        })
-      })]
-    }), (0, n.jsxs)(E.F, {
-      setting: T.s6.CHAT_EMOJI,
-      children: [(0, n.jsx)(l.FormTitle, {
-        className: I.marginBottom8,
-        children: u.Z.Messages.EMOJI
-      }), (0, n.jsx)(E.F, {
-        setting: T.s6.CHAT_EMOJI_REACTIONS,
-        children: (0, n.jsx)(l.FormSwitch, {
-          className: a()(I.marginTop8, I.marginBottom20),
-          value: g,
-          onChange: _.nc.updateSetting,
-          children: u.Z.Messages.RENDER_REACTIONS
-        })
-      }), (0, n.jsx)(E.F, {
-        setting: T.s6.CHAT_EMOJI_EMOTICONS,
-        children: (0, n.jsx)(l.FormSwitch, {
-          className: I.marginBottom40,
+      }), (0, n.jsx)(d.F, {
+        setting: u.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
+        children: (0, n.jsx)(r.FormSwitch, {
+          className: i()(I.marginTop8, I.marginBottom40),
           value: C,
-          note: c.Z.parse(u.Z.Messages.CONVERT_EMOTICONS_HELP),
-          onChange: _.ev.updateSetting,
-          children: u.Z.Messages.CONVERT_EMOTICONS
+          note: S.Z.Messages.IMAGE_DESCRIPTION_HELP,
+          onChange: E.H1.updateSetting,
+          children: S.Z.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
         })
       })]
-    }), (0, n.jsx)(E.F, {
-      setting: T.s6.CHAT_STICKERS,
-      children: (0, n.jsxs)(l.FormSection, {
+    }), (0, n.jsxs)(d.F, {
+      setting: u.s6.CHAT_EMBEDS,
+      children: [(0, n.jsx)(r.FormTitle, {
         className: I.marginBottom8,
-        children: [(0, n.jsx)(l.FormTitle, {
+        children: S.Z.Messages.RENDER_EMBEDS_LABEL
+      }), (0, n.jsx)(d.F, {
+        setting: u.s6.CHAT_EMBEDS_LINK_PREVIEWS,
+        children: (0, n.jsx)(r.FormSwitch, {
+          className: i()(I.marginTop8, I.marginBottom40),
+          value: g,
+          onChange: E.NA.updateSetting,
+          children: S.Z.Messages.RENDER_EMBEDS
+        })
+      })]
+    }), (0, n.jsxs)(d.F, {
+      setting: u.s6.CHAT_EMOJI,
+      children: [(0, n.jsx)(r.FormTitle, {
+        className: I.marginBottom8,
+        children: S.Z.Messages.EMOJI
+      }), (0, n.jsx)(d.F, {
+        setting: u.s6.CHAT_EMOJI_REACTIONS,
+        children: (0, n.jsx)(r.FormSwitch, {
+          className: i()(I.marginTop8, I.marginBottom20),
+          value: h,
+          onChange: E.nc.updateSetting,
+          children: S.Z.Messages.RENDER_REACTIONS
+        })
+      }), (0, n.jsx)(d.F, {
+        setting: u.s6.CHAT_EMOJI_EMOTICONS,
+        children: (0, n.jsx)(r.FormSwitch, {
+          className: I.marginBottom40,
+          value: A,
+          note: c.Z.parse(S.Z.Messages.CONVERT_EMOTICONS_HELP),
+          onChange: E.ev.updateSetting,
+          children: S.Z.Messages.CONVERT_EMOTICONS
+        })
+      })]
+    }), (0, n.jsx)(d.F, {
+      setting: u.s6.CHAT_STICKERS,
+      children: (0, n.jsxs)(r.FormSection, {
+        className: I.marginBottom8,
+        children: [(0, n.jsx)(r.FormTitle, {
           className: I.marginBottom8,
-          children: u.Z.Messages.STICKERS_AUTO_PLAY_HEADING
-        }), (0, n.jsx)(E.F, {
-          setting: T.s6.CHAT_STICKERS_SUGGESTIONS,
-          children: (0, n.jsx)(l.FormSwitch, {
-            className: a()(I.marginTop8, I.marginBottom20),
+          children: S.Z.Messages.STICKERS_AUTO_PLAY_HEADING
+        }), (0, n.jsx)(d.F, {
+          setting: u.s6.CHAT_STICKERS_SUGGESTIONS,
+          children: (0, n.jsx)(r.FormSwitch, {
+            className: i()(I.marginTop8, I.marginBottom20),
             value: e,
-            note: u.Z.Messages.AUTO_SUGGEST_STICKERS_DESCRIPTION,
+            note: S.Z.Messages.AUTO_SUGGEST_STICKERS_DESCRIPTION,
             onChange: s => {
-              d.default.track(S.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+              _.default.track(T.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                 enabled: !e,
                 location: {
-                  section: S.jXE.SETTINGS_TEXT_AND_IMAGES
+                  section: T.jXE.SETTINGS_TEXT_AND_IMAGES
                 },
                 location_stack: R
-              }), _.up.updateSetting(!e)
+              }), E.up.updateSetting(!e)
             },
-            children: u.Z.Messages.AUTO_SUGGEST_STICKERS
+            children: S.Z.Messages.AUTO_SUGGEST_STICKERS
           })
-        }), (0, n.jsx)(E.F, {
-          setting: T.s6.CHAT_STICKERS_AUTOCOMPLETE,
-          children: (0, n.jsx)(l.FormSwitch, {
+        }), (0, n.jsx)(d.F, {
+          setting: u.s6.CHAT_STICKERS_AUTOCOMPLETE,
+          children: (0, n.jsx)(r.FormSwitch, {
             className: I.marginBottom40,
             value: s,
-            note: u.Z.Messages.INCLUDE_STICKER_RESULTS_IN_AUTOCOMPLETE,
+            note: S.Z.Messages.INCLUDE_STICKER_RESULTS_IN_AUTOCOMPLETE,
             onChange: e => {
-              d.default.track(S.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+              _.default.track(T.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                 enabled: e,
                 location: {
-                  section: S.jXE.SETTINGS_TEXT_AND_IMAGES
+                  section: T.jXE.SETTINGS_TEXT_AND_IMAGES
                 },
                 location_stack: R
-              }), _.fq.updateSetting(e)
+              }), E.fq.updateSetting(e)
             },
-            children: u.Z.Messages.STICKERS_IN_AUTOCOMPLETE
+            children: S.Z.Messages.STICKERS_IN_AUTOCOMPLETE
           })
         })]
       })
-    }), (0, n.jsx)(E.F, {
-      setting: T.s6.CHAT_TEXT_BOX,
-      children: (0, n.jsxs)(l.FormSection, {
+    }), (0, n.jsx)(d.F, {
+      setting: u.s6.CHAT_TEXT_BOX,
+      children: (0, n.jsxs)(r.FormSection, {
         className: I.marginBottom8,
-        children: [(0, n.jsx)(l.FormTitle, {
+        children: [(0, n.jsx)(r.FormTitle, {
           className: I.marginBottom8,
-          children: u.Z.Messages.FORM_LABEL_USE_RICH_CHAT_BOX
-        }), (0, n.jsx)(E.F, {
-          setting: T.s6.CHAT_TEXT_BOX_PREVIEW,
-          children: (0, n.jsx)(l.FormSwitch, {
-            className: a()(I.marginTop8, I.marginBottom40),
+          children: S.Z.Messages.FORM_LABEL_USE_RICH_CHAT_BOX
+        }), (0, n.jsx)(d.F, {
+          setting: u.s6.CHAT_TEXT_BOX_PREVIEW,
+          children: (0, n.jsx)(r.FormSwitch, {
+            className: i()(I.marginTop8, I.marginBottom40),
             value: t,
             onChange: e => {
-              d.default.track(S.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+              _.default.track(T.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                 enabled: e,
                 location: {
-                  section: S.jXE.SETTINGS_TEXT_AND_IMAGES
+                  section: T.jXE.SETTINGS_TEXT_AND_IMAGES
                 }
-              }), _.R$.updateSetting(e)
+              }), E.R$.updateSetting(e)
             },
-            children: u.Z.Messages.PREVIEW_MARKDOWN_DESCRIPTION
+            children: S.Z.Messages.PREVIEW_MARKDOWN_DESCRIPTION
           })
         })]
       })
-    }), (0, n.jsx)(E.F, {
-      setting: T.s6.CHAT_THREADS,
-      children: (0, n.jsxs)(l.FormSection, {
+    }), (0, n.jsx)(d.F, {
+      setting: u.s6.CHAT_THREADS,
+      children: (0, n.jsxs)(r.FormSection, {
         className: I.marginBottom40,
-        children: [(0, n.jsx)(l.FormTitle, {
+        children: [(0, n.jsx)(r.FormTitle, {
           className: I.marginBottom8,
-          children: u.Z.Messages.THREADS
-        }), (0, n.jsx)(E.F, {
-          setting: T.s6.CHAT_THREADS_SPLIT_VIEW,
-          children: (0, n.jsx)(l.FormSwitch, {
+          children: S.Z.Messages.THREADS
+        }), (0, n.jsx)(d.F, {
+          setting: u.s6.CHAT_THREADS_SPLIT_VIEW,
+          children: (0, n.jsx)(r.FormSwitch, {
             className: I.marginTop8,
             value: N,
-            onChange: _.vF.updateSetting,
-            children: u.Z.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
+            onChange: E.vF.updateSetting,
+            children: S.Z.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
           })
         })]
       })
-    }), (0, n.jsx)(E.F, {
-      setting: T.s6.CHAT_SPOILERS,
-      children: (0, n.jsxs)(l.FormItem, {
-        title: u.Z.Messages.SHOW_SPOILER_CONTENT,
-        children: [(0, n.jsx)(l.FormText, {
-          type: l.FormText.Types.DESCRIPTION,
+    }), (0, n.jsx)(d.F, {
+      setting: u.s6.CHAT_SPOILERS,
+      children: (0, n.jsxs)(r.FormItem, {
+        title: S.Z.Messages.SHOW_SPOILER_CONTENT,
+        children: [(0, n.jsx)(r.FormText, {
+          type: r.FormText.Types.DESCRIPTION,
           className: I.marginBottom8,
-          children: u.Z.Messages.SHOW_SPOILER_CONTENT_HELP
-        }), (0, n.jsx)(l.RadioGroup, {
+          children: S.Z.Messages.SHOW_SPOILER_CONTENT_HELP
+        }), (0, n.jsx)(r.RadioGroup, {
           options: [{
-            name: u.Z.Messages.SHOW_SPOILER_ON_CLICK,
-            value: S.A2N.ON_CLICK
+            name: S.Z.Messages.SHOW_SPOILER_ON_CLICK,
+            value: T.A2N.ON_CLICK
           }, {
-            name: u.Z.Messages.SHOW_SPOILER_ON_SERVERS_I_MOD,
-            value: S.A2N.IF_MODERATOR
+            name: S.Z.Messages.SHOW_SPOILER_ON_SERVERS_I_MOD,
+            value: T.A2N.IF_MODERATOR
           }, {
-            name: u.Z.Messages.SHOW_SPOILER_ALWAYS,
-            value: S.A2N.ALWAYS
+            name: S.Z.Messages.SHOW_SPOILER_ALWAYS,
+            value: T.A2N.ALWAYS
           }],
-          onChange: e => _.cC.updateSetting(e.value),
-          value: i
+          onChange: e => E.cC.updateSetting(e.value),
+          value: a
         })]
       })
     })]

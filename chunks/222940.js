@@ -1,70 +1,70 @@
 n.d(t, {
   Z: function() {
-    return _
+    return E
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(399606),
-  a = n(846519),
+var i = n(735250),
+  a = n(470079),
+  s = n(399606),
+  l = n(846519),
   r = n(481060),
   o = n(317632),
   c = n(174767),
-  u = n(594174),
-  d = n(689938),
-  E = n(573688);
+  d = n(594174),
+  u = n(689938),
+  _ = n(573688);
 
-function _(e) {
+function E(e) {
   let {
     inboxIconRef: t,
     recentsPopoutShown: n
-  } = e, [_, I] = i.useState(!1), T = (0, l.e7)([o.Z], () => o.Z.getLastUnseenInvite()), m = (0, l.e7)([u.default], () => null != T ? u.default.getUser(T.inviter_id) : null);
-  return (i.useEffect(() => {
+  } = e, [E, I] = a.useState(!1), m = (0, s.e7)([o.Z], () => o.Z.getLastUnseenInvite()), T = (0, s.e7)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
+  return (a.useEffect(() => {
     n && I(!1)
-  }, [n]), i.useEffect(() => {
-    if (null == T) {
+  }, [n]), a.useEffect(() => {
+    if (null == m) {
       I(!1);
       return
-    }(0, c.Br)(T), I(!0);
-    let e = new a.V7;
+    }(0, c.Br)(m), I(!0);
+    let e = new l.V7;
     return e.start(5e3, () => {
       I(!1)
     }), () => {
       e.stop()
     }
-  }, [T]), _ && null != T && null != m) ? (0, s.jsxs)(r.TooltipLayer, {
-    tooltipClassName: E.tooltip,
-    tooltipContentClassName: E.tooltipContent,
+  }, [m]), E && null != m && null != T) ? (0, i.jsxs)(r.TooltipLayer, {
+    tooltipClassName: _.tooltip,
+    tooltipContentClassName: _.tooltipContent,
     targetElementRef: t,
     position: "bottom",
     color: r.TooltipColors.BLACK,
-    children: [(0, s.jsxs)("div", {
-      className: E.iconContainer,
-      children: [(0, s.jsx)("img", {
-        className: E.inviteImage,
-        src: T.application_asset,
+    children: [(0, i.jsxs)("div", {
+      className: _.iconContainer,
+      children: [(0, i.jsx)("img", {
+        className: _.inviteImage,
+        src: m.application_asset,
         alt: "Game Invite"
-      }), (0, s.jsx)("div", {
-        className: E.offsetAvatarContainer,
-        children: (0, s.jsx)(r.Avatar, {
+      }), (0, i.jsx)("div", {
+        className: _.offsetAvatarContainer,
+        children: (0, i.jsx)(r.Avatar, {
           "aria-label": "Inviter",
-          className: E.inviterImage,
-          src: m.getAvatarURL(null, 24),
+          className: _.inviterImage,
+          src: T.getAvatarURL(null, 24),
           size: r.AvatarSizes.SIZE_24
         })
       })]
-    }), (0, s.jsxs)("div", {
-      className: E.titleContainer,
-      children: [(0, s.jsx)(r.Text, {
-        className: E.__invalid_title,
+    }), (0, i.jsxs)("div", {
+      className: _.titleContainer,
+      children: [(0, i.jsx)(r.Text, {
+        className: _.__invalid_title,
         variant: "text-xs/semibold",
-        children: d.Z.Messages.GAME_INVITES_INVITE_FROM.format({
-          username: m.username
+        children: u.Z.Messages.GAME_INVITES_INVITE_FROM.format({
+          username: T.username
         })
-      }), (0, s.jsx)(r.Text, {
-        className: E.__invalid_subtitle,
+      }), (0, i.jsx)(r.Text, {
+        className: _.__invalid_subtitle,
         variant: "text-xxs/medium",
-        children: T.application_name
+        children: m.application_name
       })]
     })]
   }) : null

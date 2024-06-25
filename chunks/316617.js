@@ -13,46 +13,46 @@ var i = n(735250),
   I = n(512665),
   T = n(768760),
   h = n(689938),
-  S = n(309480);
+  f = n(309480);
 t.Z = e => {
   let {
     message: t
-  } = e, n = (0, l.ZP)(t), f = (0, s.e7)([_.Z], () => _.Z.getChannel(t.channel_id)), N = r.useMemo(() => (0, a.Z)(t), [t]), {
-    content: A
-  } = (0, u.Z)(N, {
+  } = e, n = (0, l.ZP)(t), S = (0, s.e7)([_.Z], () => _.Z.getChannel(t.channel_id)), A = r.useMemo(() => (0, a.Z)(t), [t]), {
+    content: N
+  } = (0, u.Z)(A, {
     hideSimpleEmbedContent: !1
   }), m = r.useCallback(() => {
     let {
       leadingIcon: e,
       trailingIcon: n
-    } = (0, I.f)(t, A, !1, "", {
-      leadingIconClass: S.attachmentIcon,
-      trailingIconClass: S.attachmentIcon,
+    } = (0, I.f)(t, N, !1, "", {
+      leadingIconClass: f.attachmentIcon,
+      trailingIconClass: f.attachmentIcon,
       iconSize: T.WW
-    }), r = null == A || "" === A || Array.isArray(A) && 0 === A.length;
+    }), r = null == N || "" === N || Array.isArray(N) && 0 === N.length;
     return (0, i.jsxs)("div", {
-      className: S.contentContainer,
+      className: f.contentContainer,
       children: [e, r ? n : (0, i.jsx)(d.ZP, {
         message: t,
-        content: A
+        content: N
       })]
     })
-  }, [t, A]);
-  return null == f ? null : (0, i.jsxs)("div", {
-    className: S.container,
+  }, [t, N]);
+  return null == S ? null : (0, i.jsxs)("div", {
+    className: f.container,
     children: [(0, i.jsx)(o.Heading, {
-      className: S.header,
+      className: f.header,
       variant: "heading-sm/semibold",
       children: h.Z.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
     }), (0, i.jsx)(o.Scroller, {
-      className: S.messagePreviewContainer,
+      className: f.messagePreviewContainer,
       children: (0, i.jsx)(c.Z, {
         childrenMessageContent: m(),
         childrenHeader: (0, i.jsx)(E.ZP, {
           message: t,
-          channel: f,
+          channel: S,
           author: n,
-          guildId: f.guild_id
+          guildId: S.guild_id
         }),
         disableInteraction: !0
       })

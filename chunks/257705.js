@@ -22,30 +22,30 @@ function u(e, t) {
       paddingFix: I = !0,
       fade: T = !1,
       onScroll: h,
-      style: S,
-      ...f
-    } = s, N = r.useRef(null), A = (0, l.tT)({
+      style: f,
+      ...S
+    } = s, A = r.useRef(null), N = (0, l.tT)({
       paddingFix: I,
       orientation: E,
       dir: d,
       className: c,
-      scrollerRef: N,
+      scrollerRef: A,
       specs: n
     });
     return (0, i.jsx)("div", {
       ref: e => {
-        "function" == typeof u ? u(e) : null != u && (u.current = e), N.current = e
+        "function" == typeof u ? u(e) : null != u && (u.current = e), A.current = e
       },
       className: o()(c, {
         [e]: !0,
         [t]: T
       }),
-      style: (0, l.uT)(S, E),
+      style: (0, l.uT)(f, E),
       dir: d,
-      ...f,
+      ...S,
       children: (0, i.jsxs)(a.Jc, {
-        containerRef: N,
-        children: [_, A]
+        containerRef: A,
+        children: [_, N]
       })
     })
   })

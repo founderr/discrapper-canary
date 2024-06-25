@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Wc: function() {
-    return S
+    return f
   },
   Ye: function() {
-    return f
+    return S
   },
   bp: function() {
     return h
@@ -58,14 +58,14 @@ function h(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   return null == e.maxResolution || null == e.maxFrameRate ? null : {
     maxFrameRate: e.maxFrameRate,
     maxResolution: e.maxResolution
   }
 }
 
-function f(e, t, n) {
+function S(e, t, n) {
   var _, c, d;
   let E = (_ = e, c = t, d = n, l.ND.find(e => (null == e.preset || e.preset === _) && e.resolution === c && e.fps === d)),
     I = s.default.getCurrentUser(),

@@ -1,19 +1,19 @@
 n.d(t, {
   H: function() {
-    return T
+    return f
   },
   v: function() {
-    return f
+    return T
   }
 }), n(47120);
 var i = n(512722),
   s = n.n(i),
-  a = n(652874),
-  l = n(313361),
-  o = n(683860),
+  o = n(652874),
+  a = n(313361),
+  l = n(683860),
   r = n(442837),
-  u = n(592125),
-  c = n(559241);
+  c = n(592125),
+  u = n(559241);
 
 function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -25,8 +25,8 @@ function d(e, t, n) {
 }
 let h = new Set,
   m = {
-    layoutType: l.X.LIST,
-    sortOrder: o.z.CREATION_DATE,
+    layoutType: a.X.LIST,
+    sortOrder: l.z.CREATION_DATE,
     tagFilter: h,
     scrollPosition: 0
   };
@@ -50,7 +50,7 @@ class p {
         channelStates: t
       } = this.get(), n = t[e];
       if (null == n) {
-        let t = u.Z.getChannel(e);
+        let t = c.Z.getChannel(e);
         s()(null != t, "[Forum Channel Store] The channel should not be missing."), n = {
           layoutType: t.getDefaultLayout(),
           sortOrder: t.getDefaultSortOrder(),
@@ -65,15 +65,15 @@ class p {
     }, this.setTagFilter = (e, t) => {
       this.setChannelState(e, {
         tagFilter: t
-      }), c.Z.setFilterTagIds(t)
+      }), u.Z.setFilterTagIds(t)
     }, this.setSortOrder = (e, t) => {
       this.setChannelState(e, {
         sortOrder: t
-      }), c.Z.setSortOrder(t)
+      }), u.Z.setSortOrder(t)
     }, this.setLayoutType = (e, t) => {
       this.setChannelState(e, {
         layoutType: t
-      }), c.Z.setLayout(t)
+      }), u.Z.setLayout(t)
     }, this.setScrollPosition = (e, t) => {
       this.setChannelState(e, {
         scrollPosition: t
@@ -81,9 +81,9 @@ class p {
     }
   }
 }
-let g = (0, a.Z)((e, t) => new p(e, t)),
-  T = e => {
+let g = (0, o.Z)((e, t) => new p(e, t)),
+  f = e => {
     let t = g();
-    return null == (0, r.e7)([u.Z], () => u.Z.getChannel(e)) ? m : t.getChannelState(e)
+    return null == (0, r.e7)([c.Z], () => c.Z.getChannel(e)) ? m : t.getChannelState(e)
   },
-  f = () => g
+  T = () => g

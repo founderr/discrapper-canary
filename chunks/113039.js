@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   HR: function() {
-    return S
+    return f
   },
   L5: function() {
     return h
@@ -25,7 +25,7 @@ function h(e, t) {
   return e.type === d.uaV.VOICE_HANGOUT_INVITE ? "" : e.hasFlag(d.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t
 }
 
-function S(e, t) {
+function f(e, t) {
   var n, i;
   let {
     message: r
@@ -41,22 +41,22 @@ t.ZP = r.memo(function(e) {
     message: s,
     children: a,
     content: u,
-    onUpdate: S,
-    contentRef: f
-  } = e, N = s.isEdited(), A = s.state === d.yb.SEND_FAILED, m = s.state === d.yb.SENDING, O = s.isCommandType(), R = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), p = r.useRef(!1);
+    onUpdate: f,
+    contentRef: S
+  } = e, A = s.isEdited(), N = s.state === d.yb.SEND_FAILED, m = s.state === d.yb.SENDING, O = s.isCommandType(), p = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), R = r.useRef(!1);
   return r.useLayoutEffect(() => {
-    p.current ? null != S && S() : p.current = !0
-  }, [S, s.content, u, R, a]), (0, i.jsxs)("div", {
+    R.current ? null != f && f() : R.current = !0
+  }, [f, s.content, u, p, a]), (0, i.jsxs)("div", {
     id: (0, _.ut)(s),
-    ref: f,
+    ref: S,
     className: o()(n, I.markup, {
       [T.messageContent]: !0,
       [T.isSending]: m && !O,
       [T.markupRtl]: "rtl" === l()(s.content),
-      [T.isFailed]: A,
+      [T.isFailed]: N,
       [T.isUnsupported]: s.isUnsupported
     }),
-    children: [null != a ? a : h(s, u), N && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
+    children: [null != a ? a : h(s, u), A && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
       children: [" ", (0, i.jsx)(c.Z, {
         timestamp: s.editedTimestamp,
         isEdited: !0,
@@ -68,4 +68,4 @@ t.ZP = r.memo(function(e) {
       })]
     })]
   })
-}, S)
+}, f)

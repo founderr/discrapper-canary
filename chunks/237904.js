@@ -1,18 +1,18 @@
-var l, i, s, a, r, o, c = n(442837),
+var i, a, l, s, r, o, c = n(442837),
   u = n(570140);
-(l = r || (r = {})).FAILED = "failed", l.SUCCEEDED = "succeeded";
+(i = r || (r = {})).FAILED = "failed", i.SUCCEEDED = "succeeded";
 let d = {};
 class h extends(o = c.ZP.Store) {
   getFollowerStatsForChannel(e) {
     return d[e]
   }
 }
-a = "ChannelFollowerStatsStore", (s = "displayName") in(i = h) ? Object.defineProperty(i, s, {
-  value: a,
+s = "ChannelFollowerStatsStore", (l = "displayName") in(a = h) ? Object.defineProperty(a, l, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = new h(u.Z, {
+}) : a[l] = s, t.Z = new h(u.Z, {
   CONNECTION_OPEN: function() {
     d = {}
   },
