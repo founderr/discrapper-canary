@@ -9,7 +9,11 @@ n.d(t, {
   },
   e9: function() {
     return o
+  },
+  t4: function() {
+    return a
   }
 }), (r = i || (i = {}))[r.POPULAR = 0] = "POPULAR", r[r.ALPHABETICAL = 1] = "ALPHABETICAL";
 let s = "app-launcher-element",
-  o = "app-launcher-modal"
+  o = "app-launcher-modal",
+  a = "app-launcher-entrypoint"

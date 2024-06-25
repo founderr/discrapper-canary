@@ -1,26 +1,42 @@
+n(47120);
 var l = n(735250),
   i = n(470079),
-  s = n(442837),
-  a = n(481060),
-  r = n(160620),
-  o = n(499254),
-  c = n(541099),
-  u = n(827498),
-  d = n(840884);
+  s = n(120356),
+  a = n.n(s),
+  r = n(442837),
+  o = n(481060),
+  c = n(499254),
+  u = n(541099),
+  d = n(827498),
+  h = n(314734),
+  m = n(689938),
+  p = n(840884);
 t.Z = i.memo(i.forwardRef(function(e, t) {
-  let n = (0, s.e7)([c.Z], () => c.Z.shouldShowPopup()),
-    h = i.useCallback(() => {
-      n ? o.y() : o._(u._.TEXT)
-    }, [n]);
-  return (0, l.jsx)(a.Tooltip, {
-    text: "Use an App",
+  let [n, s] = i.useState(!1), E = (0, r.e7)([u.Z], () => u.Z.shouldShowPopup()), g = i.useCallback(() => {
+    E ? c.y() : c._(d._.TEXT)
+  }, [E]), f = () => {
+    s(!0)
+  }, C = () => {
+    s(!1)
+  };
+  return (0, l.jsx)(o.Tooltip, {
+    text: m.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
     children: e => (0, l.jsx)("div", {
       ref: t,
       ...e,
-      className: d.buttonContainer,
-      children: (0, l.jsx)(r.Z, {
-        onClick: h,
+      className: a()(p.buttonContainer, h.t4),
+      children: (0, l.jsx)(o.Button, {
+        look: o.Button.Looks.BLANK,
+        size: o.Button.Sizes.NONE,
         tabIndex: 0,
+        className: p.button,
+        onClick: g,
+        onMouseEnter: f,
+        onMouseOver: f,
+        onMouseLeave: C,
+        onFocus: f,
+        onBlur: C,
+        "aria-label": m.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
         focusProps: {
           offset: {
             top: 4,
@@ -28,7 +44,11 @@ t.Z = i.memo(i.forwardRef(function(e, t) {
             left: -4,
             right: -4
           }
-        }
+        },
+        innerClassName: p.buttonContents,
+        children: (0, l.jsx)(o.AppsIcon, {
+          className: a()(n ? p.iconHovered : p.iconUnhovered)
+        })
       })
     })
   })

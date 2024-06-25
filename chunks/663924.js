@@ -32,7 +32,7 @@ function f(e) {
     if ((0, s.k)(i) && null != i.closest("." + T.Jh)) return;
     for (;
       (0, s.k)(i);) {
-      if (i === S.current) return;
+      if (i === S.current || i.classList.contains(T.t4)) return;
       i = i.parentNode
     }
     d.y();

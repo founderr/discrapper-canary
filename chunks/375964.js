@@ -552,6 +552,7 @@ e.exports = Object.freeze({
   APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD: "Activities cannot be launched in Threads at this time",
   APP_LAUNCHER_GLOBAL_SEARCH_COACHMARK_TITLE: "Find New Apps",
   APP_LAUNCHER_GLOBAL_SEARCH_COACHMARK_DESCRIPTION: "Discover games, music, and other fun things to do with friends!",
+  APP_LAUNCHER_USE_APP_TOOLTIP: "Use an App",
   READY: "Ready",
   CONNECTING: "Connecting…",
   CONNECTING_PROBLEMS_CTA: "Connection problems? Let us know!",
