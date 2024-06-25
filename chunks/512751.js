@@ -1,15 +1,14 @@
-"use strict";
 n.d(t, {
   o: function() {
-    return o
+    return a
   }
 });
-var i = n(399606),
-  r = n(592125),
+var l = n(399606),
+  i = n(592125),
   s = n(587100);
 
-function o(e) {
-  let t = (0, i.e7)([r.Z], () => r.Z.getChannel(e)),
+function a(e) {
+  let t = (0, l.e7)([i.Z], () => i.Z.getChannel(e)),
     {
       enabled: n
     } = s.Z.useExperiment({

@@ -12,7 +12,7 @@ var l, i, s = n(735250),
   d = n(38371),
   h = n(599625),
   m = n(13484);
-(i = l || (l = {}))[i.MutualFriendsList = 0] = "MutualFriendsList", i[i.MutualGuildList = 1] = "MutualGuildList", i[i.AppsList = 2] = "AppsList";
+(i = l || (l = {}))[i.MutualFriendsList = 0] = "MutualFriendsList", i[i.MutualGuildList = 1] = "MutualGuildList";
 t.Z = e => {
   let {
     header: t,
@@ -20,8 +20,8 @@ t.Z = e => {
     itemType: l = 1,
     isLoadingHeader: i,
     isLoadingContents: r,
-    loadingContentsCount: p = 0,
-    className: E,
+    loadingContentsCount: E = 0,
+    className: p,
     onExpand: g,
     onHover: f,
     onFocus: C
@@ -32,7 +32,7 @@ t.Z = e => {
     })
   });
   return (0, s.jsxs)("div", {
-    className: E,
+    className: p,
     children: [(0, s.jsx)(c.Button, {
       className: h.collapseBtn,
       innerClassName: h.collapseBtnContent,
@@ -61,7 +61,7 @@ t.Z = e => {
         [h.isCollapsed]: _
       }),
       children: r ? Array.from({
-        length: p
+        length: E
       }).map((e, t) => (0, s.jsxs)("div", {
         className: o()({
           [m.mutualFriendItem]: 0 === l,

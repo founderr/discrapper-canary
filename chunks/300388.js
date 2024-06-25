@@ -15,7 +15,6 @@ e.exports = {
   pencilContainer: "pencilContainer_c3e427",
   pencilContainerDark: "pencilContainerDark_c3e427 pencilContainer_c3e427",
   editIcon: "editIcon_c3e427",
-  closeIcon: "closeIcon_c3e427",
   premiumIconTooltipContent: "premiumIconTooltipContent_c3e427",
   premiumIconWrapper: "premiumIconWrapper_c3e427",
   visible: "visible_c3e427",

@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(906732),
   h = n(556084),
   m = n(280234),
-  p = n(484459),
-  E = n(103575),
+  E = n(484459),
+  p = n(103575),
   g = n(158776),
   f = n(699516),
   C = n(111583),
@@ -57,10 +57,10 @@ function D(e) {
     })
   };
   return (0, l.jsx)(r.Popout, {
-    preload: () => (0, p.W)(t, {
+    preload: () => (0, E.W)(t, {
       channelId: i.id
     }),
-    renderPopout: e => (0, l.jsx)(E.Z, {
+    renderPopout: e => (0, l.jsx)(p.Z, {
       ...e,
       location: "PrivateChannelRecipients",
       userId: t.id,
@@ -120,10 +120,10 @@ function U(e) {
     botIconFirst: !0
   });
   return null != d ? (0, l.jsx)(r.Popout, {
-    preload: () => (0, p.W)(d.id, h, {
+    preload: () => (0, E.W)(d.id, h, {
       channelId: c.id
     }),
-    renderPopout: e => (0, l.jsx)(E.Z, {
+    renderPopout: e => (0, l.jsx)(p.Z, {
       ...e,
       location: "PrivateChannelRecipients",
       userId: d.id,
@@ -178,7 +178,7 @@ function w(e) {
   } = e, s = _.default.getCurrentUser(), o = null == s ? void 0 : s.isStaff(), {
     analyticsLocations: c
   } = (0, d.ZP)(u.Z.MEMBER_LIST), {
-    shouldTrackRecentlyOnlineExposure: E,
+    shouldTrackRecentlyOnlineExposure: p,
     listItems: C
   } = function(e) {
     let {
@@ -236,7 +236,7 @@ function w(e) {
       }
     }, [e, t], k)
   }(t);
-  E && m.Z.trackExposure({
+  p && m.Z.trackExposure({
     location: "private_channel_recipients"
   });
   let {
@@ -250,7 +250,7 @@ function w(e) {
   });
   i.useEffect(() => {
     if (o)
-      for (let e of C)(0, p.W)(e.user, {
+      for (let e of C)(0, E.W)(e.user, {
         dispatchWait: !0,
         channelId: t.id
       })
@@ -294,7 +294,7 @@ function w(e) {
               (0, r.openModalLazy)(async () => {
                 let {
                   default: e
-                } = await Promise.resolve().then(n.bind(n, 422677));
+                } = await Promise.all([n.e("99387"), n.e("4536")]).then(n.bind(n, 422677));
                 return n => (0, l.jsx)(e, {
                   ...n,
                   channelId: t.id

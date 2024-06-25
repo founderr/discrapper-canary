@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, {
   j: function() {
-    return u
+    return c
   }
 }), n(47120);
-var i = n(470079),
-  r = n(442837),
+var l = n(470079),
+  i = n(442837),
   s = n(512751),
-  o = n(57132),
-  a = n(943209),
-  l = n(628566);
+  a = n(57132),
+  r = n(943209),
+  o = n(628566);
 
-function u(e) {
+function c(e) {
   let {
     channelId: t
   } = e;
-  (0, o.SO)();
+  (0, a.SO)();
   let n = (0, s.o)(t),
     {
-      installedIntegrations: u,
-      applicationsShelf: _,
-      integrationsFetchState: c,
-      applicationsShelfFetchState: d
-    } = (0, r.cj)([l.Z], () => ({
-      installedIntegrations: l.Z.getIntegrations(t),
-      applicationsShelf: l.Z.getApplicationsShelf(),
-      integrationsFetchState: l.Z.getIntegrationsFetchState(t),
-      applicationsShelfFetchState: l.Z.getApplicationsShelfFetchState()
+      installedIntegrations: c,
+      applicationsShelf: u,
+      integrationsFetchState: d,
+      applicationsShelfFetchState: h
+    } = (0, i.cj)([o.Z], () => ({
+      installedIntegrations: o.Z.getIntegrations(t),
+      applicationsShelf: o.Z.getApplicationsShelf(),
+      integrationsFetchState: o.Z.getIntegrationsFetchState(t),
+      applicationsShelfFetchState: o.Z.getApplicationsShelfFetchState()
     }));
-  i.useEffect(() => {
-    n && ((c === l.M.NOT_FETCHED || c === l.M.FETCH_FAILED) && (0, a.Yz)(t), (d === l.M.NOT_FETCHED || d === l.M.FETCH_FAILED) && (0, a.Rh)())
-  }, [n, t, c, d]);
-  let E = new Set(u.map(e => e.application.id));
+  l.useEffect(() => {
+    n && ((d === o.M.NOT_FETCHED || d === o.M.FETCH_FAILED) && (0, r.Yz)(t), (h === o.M.NOT_FETCHED || h === o.M.FETCH_FAILED) && (0, r.Rh)())
+  }, [n, t, d, h]);
+  let m = new Set(c.map(e => e.application.id));
   return {
-    installedIntegrations: u,
-    availableApplications: _.filter(e => !E.has(e.id)),
-    applicationsShelf: _,
-    fetched: c !== l.M.NOT_FETCHED && c !== l.M.FETCHING && d !== l.M.NOT_FETCHED && d !== l.M.FETCHING,
+    installedIntegrations: c,
+    availableApplications: u.filter(e => !m.has(e.id)),
+    applicationsShelf: u,
+    fetched: d !== o.M.NOT_FETCHED && d !== o.M.FETCHING && h !== o.M.NOT_FETCHED && h !== o.M.FETCHING,
     appsInGDMEnabled: n
   }
 }
