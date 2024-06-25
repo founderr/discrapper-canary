@@ -25,6 +25,5 @@ e.exports = {
   rewardTileExpirationTooltip: "rewardTileExpirationTooltip_d7df05",
   inHouseButton: "inHouseButton_d7df05",
   inHouseIcon: "inHouseIcon_d7df05",
-  refreshIcon: "refreshIcon_d7df05",
-  refreshIconErrorState: "refreshIconErrorState_d7df05"
+  refreshIcon: "refreshIcon_d7df05"
 }

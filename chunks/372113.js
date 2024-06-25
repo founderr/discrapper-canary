@@ -63,19 +63,19 @@ function y(e) {
     useReducedMotion: n
   } = e, [s, i] = a.useState([]), r = (0, O.g2)({
     useReducedMotion: n,
-    className: o()(D.refreshIcon, s.length > 0 ? D.refreshIconErrorState : void 0)
-  }), c = async () => {
+    className: D.refreshIcon
+  }), o = async () => {
     r.startAnimation(), i((await (0, N.CS)(t.id)).errorHints), r.stopAnimation()
-  }, d = () => {
+  }, c = () => {
     (0, m._3)({
       questId: t.id,
       questContent: S.jn.GIFT_INVENTORY_FOR_YOU,
       questContentCTA: m.jZ.DEFIBRILLATOR
-    }), c()
+    }), o()
   }, {
-    rawTooltipText: E,
-    renderTooltipText: _,
-    buttonText: I
+    rawTooltipText: d,
+    renderTooltipText: E,
+    buttonText: _
   } = a.useMemo(() => {
     let e = p.r.build(t.config).application.name,
       n = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST),
@@ -104,20 +104,20 @@ function y(e) {
     }
   }, [t, s]);
   return (0, l.jsx)(u.Tooltip, {
-    "aria-label": E,
-    text: _(),
+    "aria-label": d,
+    text: E(),
     tooltipContentClassName: s.length > 0 ? D.ctaTooltipErrorText : D.ctaTooltipText,
     children: e => (0, l.jsx)(u.Button, {
       ...e,
       wrapperClassName: D.ctaButtonWrapper,
       color: s.length > 0 ? u.ButtonColors.RED : u.ButtonColors.PRIMARY,
-      onClick: d,
+      onClick: c,
       children: (0, l.jsxs)("div", {
         className: D.ctaButtonInner,
-        children: [I, r.render()]
+        children: [_, r.render()]
       })
     })
-  }, E)
+  }, d)
 }
 
 function B(e) {
