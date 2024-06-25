@@ -1,6 +1,6 @@
 n.d(t, {
   r: function() {
-    return T
+    return m
   }
 });
 var s = n(933557),
@@ -11,11 +11,12 @@ var s = n(933557),
   o = n(699516),
   c = n(594174),
   u = n(768581),
-  d = n(55935);
+  d = n(55935),
+  E = n(631184);
 n(978003);
-var E = n(689938);
+var _ = n(689938);
 
-function _(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +25,7 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 
-function I(e, t) {
+function T(e, t) {
   return {
     originLabel: e.name,
     originIconUrl: u.ZP.getGuildIconURL({
@@ -34,72 +35,80 @@ function I(e, t) {
       canAnimate: !1
     }),
     timestampLabel: t,
-    accessibilityLabel: E.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+    accessibilityLabel: _.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
       origin: e.name,
       timestamp: t
     })
   }
 }
-class T {
+class m {
   getForwardInfo() {
-    var e, t, n, u, _;
-    let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
-      m = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-      N = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
-      h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Z,
-      C = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
-      S = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
+    var e, t, n, u, I;
+    let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
+      N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+      h = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
+      C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Z,
+      S = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
+      A = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
       {
-        snapshotIndex: A,
-        parentMessage: g,
-        messageSnapshot: p
+        snapshotIndex: g,
+        parentMessage: p,
+        messageSnapshot: f
       } = this,
-      f = (0, d.Xf)(p.message.timestamp),
-      R = T.getChannel(this.parentMessage.channel_id);
-    if (null != R && R.guild_id === (null === (e = g.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
-      let e = T.getChannel(null === (u = g.messageReference) || void 0 === u ? void 0 : u.channel_id);
+      {
+        showForwardBreadcrumb: R
+      } = E.u.getCurrentConfig({
+        location: "MessageForward"
+      });
+    if (!R) return {
+      snapshotIndex: g
+    };
+    let O = (0, d.Xf)(f.message.timestamp),
+      M = m.getChannel(this.parentMessage.channel_id);
+    if (null != M && M.guild_id === (null === (e = p.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+      let e = m.getChannel(null === (u = p.messageReference) || void 0 === u ? void 0 : u.channel_id);
       if (null == e) {
-        let e = C.getGuild(R.guild_id);
+        let e = S.getGuild(M.guild_id);
         return null == e ? {
-          snapshotIndex: A
+          snapshotIndex: g
         } : {
-          snapshotIndex: A,
-          footerInfo: I(e, f)
+          snapshotIndex: g,
+          footerInfo: T(e, O)
         }
       }
-      if (!h.can(e.accessPermissions, e)) return {
-        snapshotIndex: A
+      if (!C.can(e.accessPermissions, e)) return {
+        snapshotIndex: g
       };
-      let t = (0, s.F6)(e, m, N, !0);
+      let t = (0, s.F6)(e, N, h, !0);
       return {
-        snapshotIndex: A,
+        snapshotIndex: g,
         footerInfo: {
           originLabel: t,
-          timestampLabel: f,
-          accessibilityLabel: E.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+          timestampLabel: O,
+          accessibilityLabel: _.Z.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
             origin: t,
-            timestamp: f
+            timestamp: O
           })
         }
       }
     }
-    let O = null === (t = g.messageReference) || void 0 === t ? void 0 : t.guild_id;
-    if (null == O) return {
-      snapshotIndex: A
+    let x = null === (t = p.messageReference) || void 0 === t ? void 0 : t.guild_id;
+    if (null == x) return {
+      snapshotIndex: g
     };
-    let M = null !== (_ = C.getGuild(O)) && void 0 !== _ ? _ : S.getGuild(O);
-    if (null == M) return {
-      snapshotIndex: A
+    let v = null !== (I = S.getGuild(x)) && void 0 !== I ? I : A.getGuild(x);
+    if (null == v) return {
+      snapshotIndex: g
     };
-    let x = T.getChannel(null === (n = g.messageReference) || void 0 === n ? void 0 : n.channel_id);
-    return null == x || h.can(x.accessPermissions, x) ? {
-      snapshotIndex: A,
-      footerInfo: I(M, f)
+    let L = m.getChannel(null === (n = p.messageReference) || void 0 === n ? void 0 : n.channel_id);
+    return null == L || C.can(L.accessPermissions, L) ? {
+      snapshotIndex: g,
+      footerInfo: T(v, O)
     } : {
-      snapshotIndex: A
+      snapshotIndex: g
     }
   }
   constructor(e, t, n) {
-    _(this, "parentMessage", void 0), _(this, "messageSnapshot", void 0), _(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
+    I(this, "parentMessage", void 0), I(this, "messageSnapshot", void 0), I(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
   }
 }
