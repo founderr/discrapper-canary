@@ -15,10 +15,10 @@ function r(e) {
 }
 n.d(t, {
   U2: function() {
-    return f
+    return p
   },
   wz: function() {
-    return p
+    return f
   }
 });
 var i = "copy",
@@ -133,10 +133,10 @@ var _ = {
     clientExtensionResults: l(E, e => e.getClientExtensionResults())
   };
 
-function p(e) {
+function f(e) {
   return o(s, _, e)
 }
-async function f(e) {
+async function p(e) {
   let t = await navigator.credentials.get(e);
   return t.toJSON = () => o(r, g, t), t
 }

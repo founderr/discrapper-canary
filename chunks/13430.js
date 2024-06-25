@@ -18,9 +18,9 @@ let E = l()().localeData().months(),
     value: e + 1,
     label: E[e]
   })),
-  p = /[a-zA-Z0-9]/;
+  f = /[a-zA-Z0-9]/;
 
-function f(e) {
+function p(e) {
   let {
     options: t,
     selectOption: n,
@@ -33,7 +33,7 @@ function f(e) {
     }
   }, [a, o]);
   let l = r.useCallback(e => {
-    if (p.test(e.key)) {
+    if (f.test(e.key)) {
       let s = "".concat(a).concat(e.key.toLowerCase()),
         r = t.find(e => e.label.toLowerCase().startsWith(s));
       null != r && n(r.value), o(s)
@@ -67,7 +67,7 @@ let N = r.forwardRef(function(e, t) {
     wrapperClassName: i,
     onChange: o,
     onPopulated: E,
-    error: p,
+    error: f,
     autoFocus: N,
     required: I
   } = e, {
@@ -95,7 +95,7 @@ let N = r.forwardRef(function(e, t) {
   r.useEffect(() => {
     o((null == O ? void 0 : O.isValid()) ? O : null)
   }, [O, o]);
-  let v = p;
+  let v = f;
   null != O && !O.isValid() && (v = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
   let Z = function() {
       let e = new Date().getFullYear(),
@@ -110,16 +110,16 @@ let N = r.forwardRef(function(e, t) {
         }))
       }, [e]), t.current
     }(),
-    [L, b] = r.useState(N ? 0 : -1),
-    M = r.useRef(null),
+    [L, M] = r.useState(N ? 0 : -1),
+    b = r.useRef(null),
     y = r.useRef(null),
     D = r.useRef(null),
     P = r.useMemo(m, []),
-    w = r.useCallback(() => {
+    j = r.useCallback(() => {
       var e, t, n, s;
       switch (null === (e = P[L]) || void 0 === e ? void 0 : e.type) {
         case "day":
-          null === (t = M.current) || void 0 === t || t.focus();
+          null === (t = b.current) || void 0 === t || t.focus();
           break;
         case "month":
           null === (n = y.current) || void 0 === n || n.focus();
@@ -127,30 +127,30 @@ let N = r.forwardRef(function(e, t) {
         case "year":
           null === (s = D.current) || void 0 === s || s.focus()
       }
-    }, [L, M, y, D, P]);
+    }, [L, b, y, D, P]);
   r.useEffect(() => {
-    setTimeout(w, 500)
+    setTimeout(j, 500)
   }, []), r.useEffect(() => {
     if (L >= P.length) {
       null == E || E();
       return
     }
-    w()
-  }, [L, w]);
-  let j = [];
+    j()
+  }, [L, j]);
+  let w = [];
   for (let e = 0; e < 3; e++) {
     let {
       type: t
     } = P[e];
     switch (t) {
       case "day":
-        j.push({
+        w.push({
           key: "day",
-          input: (0, s.jsx)(f, {
+          input: (0, s.jsx)(p, {
             options: _,
             selectOption: R,
             children: (0, s.jsx)(u.Z, {
-              ref: M,
+              ref: b,
               className: h.__invalid_inputDay,
               "aria-label": d.Z.Messages.AGE_GATE_DOB_DAY,
               menuPlacement: u.Z.MenuPlacements.TOP,
@@ -164,7 +164,7 @@ let N = r.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                R(n), b(e + 1)
+                R(n), M(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -172,9 +172,9 @@ let N = r.forwardRef(function(e, t) {
         });
         break;
       case "month":
-        j.push({
+        w.push({
           key: "month",
-          input: (0, s.jsx)(f, {
+          input: (0, s.jsx)(p, {
             options: g,
             selectOption: C,
             children: (0, s.jsx)(u.Z, {
@@ -192,7 +192,7 @@ let N = r.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                C(n), b(e + 1)
+                C(n), M(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -200,9 +200,9 @@ let N = r.forwardRef(function(e, t) {
         });
         break;
       case "year":
-        j.push({
+        w.push({
           key: "year",
-          input: (0, s.jsx)(f, {
+          input: (0, s.jsx)(p, {
             options: Z,
             selectOption: x,
             children: (0, s.jsx)(u.Z, {
@@ -220,7 +220,7 @@ let N = r.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                x(n), b(e + 1)
+                x(n), M(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -237,7 +237,7 @@ let N = r.forwardRef(function(e, t) {
       children: d.Z.Messages.AGE_GATE_DATE_OF_BIRTH
     }), (0, s.jsx)("div", {
       className: h.inputs,
-      children: j.map((e, t) => {
+      children: w.map((e, t) => {
         let {
           key: n,
           input: r

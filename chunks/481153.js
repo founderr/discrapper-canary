@@ -11,8 +11,8 @@ var s = n(735250),
   E = n(594174),
   _ = n(509545),
   g = n(55563),
-  p = n(366695),
-  f = n(296848),
+  f = n(366695),
+  p = n(296848),
   m = n(981631),
   N = n(474936),
   I = n(689938),
@@ -27,7 +27,7 @@ t.Z = o.ZP.connectStores([g.Z, c.Z, _.Z, E.default], e => {
   } = t;
   return {
     sku: n,
-    subscriptionPlan: null != s ? (0, f.oE)(s) : null,
+    subscriptionPlan: null != s ? (0, p.oE)(s) : null,
     application: c.Z.getApplication(n.applicationId),
     gifter: E.default.getUser(t.userId)
   }
@@ -65,8 +65,8 @@ t.Z = o.ZP.connectStores([g.Z, c.Z, _.Z, E.default], e => {
         children: _
       }), (0, s.jsxs)(u.Dx, {
         className: a()(T.marginTop8, R.flexCenter),
-        children: [o.productLine !== m.POd.COLLECTIBLES && (0, s.jsx)(p.Z, {
-          size: p.Z.Sizes.MEDIUM,
+        children: [o.productLine !== m.POd.COLLECTIBLES && (0, s.jsx)(f.Z, {
+          size: f.Z.Sizes.MEDIUM,
           className: A.applicationIcon,
           game: c,
           skuId: o.id

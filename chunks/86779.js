@@ -10,8 +10,8 @@ var s, r, i = n(735250),
   E = n(570140),
   _ = n(893776),
   g = n(375964),
-  p = n(314897),
-  f = n(626135),
+  f = n(314897),
+  p = n(626135),
   m = n(70956),
   N = n(970648),
   I = n(981631),
@@ -26,7 +26,7 @@ let S = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
     d.K.remove(R), d.K.remove(T)
   };
 t.Z = () => {
-  let e = (0, c.e7)([p.default], () => p.default.getFingerprint()),
+  let e = (0, c.e7)([f.default], () => f.default.getFingerprint()),
     {
       fingerprint: t,
       handoff_token: n
@@ -40,7 +40,7 @@ t.Z = () => {
     })
   }, [s, e]);
   let [m, v] = a.useState(null), Z = a.useCallback(e => {
-    v(e), f.default.track(I.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
+    v(e), p.default.track(I.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
       reason: e,
       fingerprint: (0, l.K)(r)
     }, {
@@ -60,7 +60,7 @@ t.Z = () => {
           handoff_token: n
         }
       }).then(e => _.Z.loginToken(e.body.token, !1)).then(() => {
-        f.default.track(I.rMx.LOGIN_SUCCESSFUL, {
+        p.default.track(I.rMx.LOGIN_SUCCESSFUL, {
           source: I.uRl.MOBILE_WEB_HANDOFF,
           is_new_user: !1,
           fingerprint: (0, l.K)(r)
@@ -74,7 +74,7 @@ t.Z = () => {
         O()
       })
     }, [n, L, m, r, Z]), null == r) return null;
-  let b = (() => {
+  let M = (() => {
     if (null == m) return (0, i.jsxs)(i.Fragment, {
       children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)("br", {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
     });
@@ -86,13 +86,13 @@ t.Z = () => {
     children: (0, i.jsx)(h.Text, {
       color: "interactive-normal",
       variant: "text-sm/semibold",
-      children: b
+      children: M
     })
   }) : (0, i.jsxs)("div", {
     className: A.container,
     children: [(0, i.jsx)(h.Text, {
       variant: "text-sm/semibold",
-      children: b
+      children: M
     }), (0, i.jsx)(h.Button, {
       color: h.Button.Colors.BRAND_INVERTED,
       onClick: () => {
@@ -102,7 +102,7 @@ t.Z = () => {
           n = new URLSearchParams(window.location.search);
         n.delete("fingerprint"), n.delete("handoff_token");
         let s = new URLSearchParams;
-        s.set("redirect", encodeURIComponent(window.location.pathname + n.toString())), s.set("key", e), s.set("fingerprint", r), t.search = s.toString(), f.default.track(I.rMx.DEEP_LINK_CLICKED, {
+        s.set("redirect", encodeURIComponent(window.location.pathname + n.toString())), s.set("key", e), s.set("fingerprint", r), t.search = s.toString(), p.default.track(I.rMx.DEEP_LINK_CLICKED, {
           fingerprint: (0, l.K)(r),
           source: "mobile_web_handoff",
           destination: I.x0X

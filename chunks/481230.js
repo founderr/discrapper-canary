@@ -1,6 +1,6 @@
 n.d(t, {
   R$: function() {
-    return p
+    return f
   },
   ZP: function() {
     return g
@@ -25,21 +25,21 @@ function g(e) {
     giftCodeSKUId: n = null,
     ...s
   } = e;
-  return p({
+  return f({
     ...s,
     invite: t,
     giftCodeSKUId: n
   })
 }
 
-function p(e) {
+function f(e) {
   let {
     email: t,
     phoneToken: n,
     username: s,
     globalName: g,
-    consent: p,
-    password: f,
+    consent: f,
+    password: p,
     guildTemplateCode: m,
     birthday: N,
     invite: I = null,
@@ -67,9 +67,9 @@ function p(e) {
       email: t,
       username: s,
       global_name: g,
-      password: f,
+      password: p,
       invite: I,
-      consent: p,
+      consent: f,
       phone_token: n,
       date_of_birth: null == N ? void 0 : N.format("YYYY-MM-DD"),
       gift_code_sku_id: A,

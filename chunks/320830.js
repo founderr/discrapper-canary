@@ -23,7 +23,7 @@ let _ = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     START: 0,
     END: 1
   },
-  p = {
+  f = {
     friction: 10,
     tension: 130
   };
@@ -47,7 +47,7 @@ t.Z = function(e) {
     animateTo(e, t) {
       o.Z.spring(this.anim, {
         toValue: e,
-        ...p
+        ...f
       }).start(t)
     }
     getAnimatedStyle(e) {

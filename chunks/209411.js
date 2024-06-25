@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return f
   }
 }), n(47120), n(773603);
 var s = n(735250),
@@ -17,7 +17,7 @@ var s = n(735250),
   _ = n(981631),
   g = n(176505);
 
-function p(e) {
+function f(e) {
   let t = r.useCallback(t => {
       if (function(e) {
           var t;
@@ -33,13 +33,13 @@ function p(e) {
     }, [e.transitionTo]),
     {
       isAuthenticated: n,
-      loginStatus: p
+      loginStatus: f
     } = (0, o.cj)([h.default], () => ({
       isAuthenticated: h.default.isAuthenticated(),
       loginStatus: h.default.getLoginStatus()
     })),
     {
-      location: f,
+      location: p,
       redirectTo: m
     } = e,
     [N, I] = r.useState(n);
@@ -57,11 +57,11 @@ function p(e) {
     }), I(!1)
   }
   return (r.useEffect(() => {
-    if (null != f) {
+    if (null != p) {
       let {
         handoff_key: e,
         handoff_token: t
-      } = (0, i.parse)(f.search);
+      } = (0, i.parse)(p.search);
       if (null != e && null != t) {
         let n = null != m ? (0, u.L)(m) : void 0;
         N ? l.Z.logout(null).finally(() => {
@@ -77,7 +77,7 @@ function p(e) {
         })
       }
     }
-  }, []), N || p === _.u34.LOGGING_IN) ? (0, s.jsx)(E.q, {}) : (0, s.jsx)(E.Z, {
+  }, []), N || f === _.u34.LOGGING_IN) ? (0, s.jsx)(E.q, {}) : (0, s.jsx)(E.Z, {
     ...e,
     transitionTo: t
   })

@@ -12,12 +12,12 @@ var r = n(735250),
   E = n(133853),
   _ = n(568154),
   g = n(353926),
-  p = n(703656),
-  f = n(981631),
+  f = n(703656),
+  p = n(981631),
   m = n(453931);
 let N = n(575703),
   I = n(2984),
-  A = [f.Z5c.LOGIN, f.Z5c.LOGIN_HANDOFF, f.Z5c.REGISTER, f.Z5c.INVITE(""), f.Z5c.GIFT_CODE(""), f.Z5c.GUILD_TEMPLATE_LOGIN(""), f.Z5c.GUILD_TEMPLATE(""), f.Z5c.DISABLE_EMAIL_NOTIFICATIONS, f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, f.Z5c.BILLING_PREMIUM_SUBSCRIBE, f.Z5c.BILLING_PAYMENT_SOURCES_CREATE, f.Z5c.BILLING_PAYMENTS, f.Z5c.BILLING_PREMIUM_SWITCH_PLAN, f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, f.Z5c.VERIFY, f.Z5c.VERIFY_HUB_EMAIL, f.Z5c.REJECT_IP, f.Z5c.REJECT_MFA, f.Z5c.AUTHORIZE_IP, f.Z5c.AUTHORIZE_PAYMENT, f.Z5c.RESET, f.Z5c.HANDOFF, f.Z5c.REPORT, f.Z5c.REPORT_SECOND_LOOK];
+  A = [p.Z5c.LOGIN, p.Z5c.LOGIN_HANDOFF, p.Z5c.REGISTER, p.Z5c.INVITE(""), p.Z5c.GIFT_CODE(""), p.Z5c.GUILD_TEMPLATE_LOGIN(""), p.Z5c.GUILD_TEMPLATE(""), p.Z5c.DISABLE_EMAIL_NOTIFICATIONS, p.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, p.Z5c.BILLING_PREMIUM_SUBSCRIBE, p.Z5c.BILLING_PAYMENT_SOURCES_CREATE, p.Z5c.BILLING_PAYMENTS, p.Z5c.BILLING_PREMIUM_SWITCH_PLAN, p.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, p.Z5c.VERIFY, p.Z5c.VERIFY_HUB_EMAIL, p.Z5c.REJECT_IP, p.Z5c.REJECT_MFA, p.Z5c.AUTHORIZE_IP, p.Z5c.AUTHORIZE_PAYMENT, p.Z5c.RESET, p.Z5c.HANDOFF, p.Z5c.REPORT, p.Z5c.REPORT_SECOND_LOOK];
 
 function R(e) {
   return A.some(t => e.startsWith(t))
@@ -61,14 +61,14 @@ class S extends i.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (R(e))(0, p.uL)(e, t);
+    if (R(e))(0, f.uL)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    R(e) ? (0, p.dL)(e) : window.location = e
+    R(e) ? (0, f.dL)(e) : window.location = e
   }
   renderDefault() {
     let {
@@ -76,8 +76,8 @@ class S extends i.Component {
     } = this.props, t = (0, r.jsx)(h.Z, {
       component: i.Fragment,
       children: i.Children.map(this.props.children, e => i.cloneElement(e, {
-        transitionTo: p.uL,
-        replaceWith: p.dL
+        transitionTo: f.uL,
+        replaceWith: f.dL
       }))
     });
     return (0, r.jsx)("div", {

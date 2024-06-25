@@ -15,8 +15,8 @@ var s, r = n(735250),
   E = n(481060),
   _ = n(893776),
   g = n(899370),
-  p = n(224841),
-  f = n(13430),
+  f = n(224841),
+  p = n(13430),
   m = n(213609),
   N = n(882037),
   I = n(201207),
@@ -30,13 +30,13 @@ var s, r = n(735250),
   v = n(100159),
   Z = n(473855),
   L = n(726745),
-  b = n(929809),
-  M = n(541692),
+  M = n(929809),
+  b = n(541692),
   y = n(986197),
   D = n(135200),
   P = n(219496),
-  w = n(794099),
-  j = n(807369),
+  j = n(794099),
+  w = n(807369),
   U = n(180529),
   G = n(108427),
   k = n(314897),
@@ -141,7 +141,7 @@ class eo extends(s = i.PureComponent) {
       this.setState({
         isRateLimited: !1
       })
-    }))), s && !e.authenticated && ((0, b.c)($.M5.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
+    }))), s && !e.authenticated && ((0, M.c)($.M5.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
     let l = X.E.FULL;
     r || this.hasError("date_of_birth") ? l = X.E.AGE_GATE : null != i && (null != i.guild || null != i.channel) && (l = X.E.INVITE), a(l)
   }
@@ -168,13 +168,13 @@ class eo extends(s = i.PureComponent) {
       onRegister: c,
       usernameSuggestion: u,
       isMobileWebInviteRegistration: d
-    } = this.props, h = null != a ? a.code : null, E = null != l ? l.skuId : null, _ = N.MD.getState(), g = (0, W.Ew)(u) ? null : t === u, p = J.a ? await (0, O.K)(t) : t, f = J.a ? await (0, O.K)(n) : n;
+    } = this.props, h = null != a ? a.code : null, E = null != l ? l.skuId : null, _ = N.MD.getState(), g = (0, W.Ew)(u) ? null : t === u, f = J.a ? await (0, O.K)(t) : t, p = J.a ? await (0, O.K)(n) : n;
     z.S.dispatch(Q.CkL.WAVE_EMPHASIZE);
     try {
       d || null == a ? await (0, A.R$)({
         email: e,
-        username: p,
-        globalName: f,
+        username: f,
+        globalName: p,
         consent: r,
         password: s,
         invite: h,
@@ -188,7 +188,7 @@ class eo extends(s = i.PureComponent) {
         invite: h,
         giftCodeSKUId: E,
         usedUsernameSuggestion: g,
-        globalName: f
+        globalName: p
       }), null == c || c()
     } catch (e) {}
   }
@@ -415,7 +415,7 @@ class eo extends(s = i.PureComponent) {
       emailClientError: h,
       usernameClientError: _,
       passwordClientError: g,
-      dateOfBirthClientError: p
+      dateOfBirthClientError: f
     } = this.state, {
       registering: m,
       consentRequired: N,
@@ -433,12 +433,12 @@ class eo extends(s = i.PureComponent) {
       } = {},
       hasLoggedInAccounts: L,
       registrationCopyExperimentConfig: {
-        hasCopyAboveButton: b
+        hasCopyAboveButton: M
       }
     } = this.props, {
-      subText: M,
+      subText: b,
       consentText: P
-    } = this.renderConsentComponents(), w = this.renderErrorMessage(), j = (0, r.jsx)(E.Tooltip, {
+    } = this.renderConsentComponents(), j = this.renderErrorMessage(), w = (0, r.jsx)(E.Tooltip, {
       text: !c && N ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
       children: e => (0, r.jsx)("div", {
         className: es.marginTop20,
@@ -541,16 +541,16 @@ class eo extends(s = i.PureComponent) {
           this.passwordRef = e
         },
         required: !0
-      }), (0, r.jsx)(f.Z, {
+      }), (0, r.jsx)(p.Z, {
         label: et.Z.Messages.AGE_GATE_YOUR_BIRTHDAY,
         wrapperClassName: es.marginTop20,
         name: "date_of_birth",
         onChange: this.handleBirthdayChange,
         ref: this.dateOfBirthRef,
-        error: null != p ? p : ea(Z),
+        error: null != f ? f : ea(Z),
         value: u,
         required: !0
-      }), b && M, (0, r.jsx)(S.Z, {}), j, w, P, !b && M, J.a ? null : (0, r.jsx)(R.zx, {
+      }), M && b, (0, r.jsx)(S.Z, {}), w, j, P, !M && b, J.a ? null : (0, r.jsx)(R.zx, {
         look: I ? R.zx.Looks.FILLED : R.zx.Looks.LINK,
         color: I ? R.zx.Colors.PRIMARY : R.zx.Colors.LINK,
         onClick: this.handleGotoLogin,
@@ -597,7 +597,7 @@ class eo extends(s = i.PureComponent) {
       isUnderage: e,
       isMobileWebInviteRegistration: t
     } = this.props;
-    if (e || this.hasError("date_of_birth")) return (0, r.jsx)(p.Z, {});
+    if (e || this.hasError("date_of_birth")) return (0, r.jsx)(f.Z, {});
     let {
       invite: n,
       giftCode: s,
@@ -715,16 +715,16 @@ class eo extends(s = i.PureComponent) {
 }
 
 function el(e) {
-  let t = (0, d.cj)([F.Z, k.default, g.Z, M.Z, L.Z], () => ({
+  let t = (0, d.cj)([F.Z, k.default, g.Z, b.Z, L.Z], () => ({
       consentRequired: F.Z.getAuthenticationConsentRequired(),
       registering: k.default.getRegisterStatus() === Q.$ib.REGISTERING,
       apiErrors: k.default.getErrors(),
       authenticated: k.default.isAuthenticated(),
       isUnderage: g.Z.isUnderageAnonymous(),
-      country: M.Z.getCountryCode(),
+      country: b.Z.getCountryCode(),
       hasLoggedInAccounts: L.Z.getHasLoggedInAccounts()
     })),
-    n = (0, w.F4)(),
+    n = (0, j.F4)(),
     s = (0, d.e7)([D.Z], () => D.Z.registrationUsernameSuggestion()),
     [a, o] = i.useState(X.E.FULL);
   return (0, m.Z)({
@@ -757,7 +757,7 @@ function ec(e) {
       isUsernameFocused: o,
       onClickSuggestion: l
     } = e,
-    u = (0, j.a)(n, a, !0),
+    u = (0, w.a)(n, a, !0),
     d = a && n.length > 0;
   return t = d ? (0, c.EQ)(u).with({
     type: P.K.ERROR,
