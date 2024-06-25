@@ -738,8 +738,7 @@ let eB = () => {
       [eP.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
         section: eZ.oAB.VOICE,
         searchableTitles: [ev.Z.Messages.ECHO_CANCELLATION],
-        parent: eP.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-        predicate: () => U.Z.getEchoCancellation()
+        parent: eP.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
       },
       [eP.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
         section: eZ.oAB.VOICE,
