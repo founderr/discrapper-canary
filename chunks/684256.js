@@ -26,7 +26,7 @@ function c(e) {
     location: "AppLauncherApplicationListViewScreen"
   }, {
     autoTrackExposure: !1
-  }), T = r.useMemo(() => n === a._.TEXT || I ? l.kA : l.qR, [I, n]);
+  }), T = r.useMemo(() => n === a._b.TEXT || I ? l.kA : l.qR, [I, n]);
   return (0, i.jsxs)("div", {
     className: _.container,
     children: [(0, i.jsxs)("div", {

@@ -44,7 +44,15 @@ function R(e) {
   } = o.useMemo(() => (0, h.sl)(t, {
     botIconFirst: !0
   }), [t]), S = (0, E.ZP)(c, "");
-  return (0, s.jsxs)(u.Clickable, {
+  return "icon" === n ? (0, s.jsx)(u.Clickable, {
+    className: l()(O.container, O.iconCard),
+    onClick: r,
+    children: null != c && (0, s.jsx)(N.Z, {
+      src: c,
+      className: O.iconCard,
+      "aria-hidden": !0
+    })
+  }) : (0, s.jsxs)(u.Clickable, {
     className: O.container,
     onClick: r,
     children: [(0, s.jsxs)("div", {
@@ -200,4 +208,4 @@ function L(e) {
       })
     })
   })
-}(r = i || (i = {})).NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner"
+}(r = i || (i = {})).ICON = "icon", r.NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner"

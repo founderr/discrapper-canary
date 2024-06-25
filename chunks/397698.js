@@ -19,7 +19,7 @@ function u(e) {
   } = e;
   u && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
   let d = u ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-  return (0, a.y)(), (0, a._)(r._.VOICE), (0, i.openModalLazy)(async () => {
+  return (0, a.y)(), (0, a._)(r._b.VOICE), (0, i.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("81056")]).then(n.bind(n, 743161));

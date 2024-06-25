@@ -56,22 +56,22 @@ function P(e) {
   } = (0, S.pe)({
     channel: t,
     query: n,
-    searchesActivities: s === h._.VOICE || l,
-    searchesCommands: s === h._.TEXT,
-    searchesBots: s === h._.TEXT
+    searchesActivities: s === h._b.VOICE || l,
+    searchesCommands: s === h._b.TEXT,
+    searchesBots: s === h._b.TEXT
   }), {
     fetchState: f,
     applicationResults: N
   } = (0, S.Q2)({
     query: n,
     channel: t,
-    fetches: s !== h._.VOICE
+    fetches: s !== h._b.VOICE
   }), A = null == f || f === E.M.FETCHING, m = r.useMemo(() => {
     let e = I.map(e => ({
       application: e,
       installOnDemand: !1
     }));
-    if (s === h._.VOICE) return e;
+    if (s === h._b.VOICE) return e;
     let t = new Set(I.map(e => {
       let {
         id: t
@@ -85,7 +85,7 @@ function P(e) {
   }, [s, N, I]);
   return u ? (0, i.jsx)(G, {}) : _ ? (0, i.jsx)(w, {
     searchQuery: n,
-    textContent: s === h._.TEXT ? p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+    textContent: s === h._b.TEXT ? p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)("div", {
     children: [d && (0, i.jsx)(U, {
       channel: t,
@@ -114,16 +114,16 @@ function y(e) {
     channel: t,
     query: n,
     commandLimit: 10,
-    searchesCommands: s === h._.TEXT,
-    searchesBots: s === h._.TEXT,
-    searchesActivities: s === h._.VOICE || o
+    searchesCommands: s === h._b.TEXT,
+    searchesBots: s === h._b.TEXT,
+    searchesActivities: s === h._b.VOICE || o
   }), E = r.useMemo(() => c.map(e => ({
     application: e,
     installOnDemand: !1
   })), [c]);
   return a ? (0, i.jsx)(G, {}) : l ? (0, i.jsx)(w, {
     searchQuery: n,
-    textContent: s === h._.TEXT ? p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+    textContent: s === h._b.TEXT ? p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)("div", {
     children: [_ && (0, i.jsx)(U, {
       channel: t,

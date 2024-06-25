@@ -22,7 +22,7 @@ s.default = t.memo(function(e) {
     ...a,
     children: (0, o.jsx)(d.Z, {
       channel: s,
-      entrypoint: r._.VOICE
+      entrypoint: r._b.VOICE
     })
   })
 })

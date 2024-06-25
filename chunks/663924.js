@@ -46,7 +46,7 @@ function f(e) {
   }, [m, A]), (0, i.jsx)(I.Z, {
     drawerRef: S,
     channel: t,
-    entrypoint: E._.TEXT
+    entrypoint: E._b.TEXT
   })
 }
 t.Z = r.memo(function(e) {

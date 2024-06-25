@@ -10,11 +10,11 @@ var l = n(735250),
   d = n(827498),
   h = n(314734),
   m = n(689938),
-  p = n(840884);
+  E = n(840884);
 t.Z = i.memo(i.forwardRef(function(e, t) {
-  let [n, s] = i.useState(!1), E = (0, r.e7)([u.Z], () => u.Z.shouldShowPopup()), g = i.useCallback(() => {
-    E ? c.y() : c._(d._.TEXT)
-  }, [E]), f = () => {
+  let [n, s] = i.useState(!1), p = (0, r.e7)([u.Z], () => u.Z.shouldShowPopup()), g = i.useCallback(() => {
+    p ? c.y() : c._(d._b.TEXT)
+  }, [p]), f = () => {
     s(!0)
   }, C = () => {
     s(!1)
@@ -24,12 +24,12 @@ t.Z = i.memo(i.forwardRef(function(e, t) {
     children: e => (0, l.jsx)("div", {
       ref: t,
       ...e,
-      className: a()(p.buttonContainer, h.t4),
+      className: a()(E.buttonContainer, h.t4),
       children: (0, l.jsx)(o.Button, {
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.NONE,
         tabIndex: 0,
-        className: p.button,
+        className: E.button,
         onClick: g,
         onMouseEnter: f,
         onMouseOver: f,
@@ -45,9 +45,9 @@ t.Z = i.memo(i.forwardRef(function(e, t) {
             right: -4
           }
         },
-        innerClassName: p.buttonContents,
+        innerClassName: E.buttonContents,
         children: (0, l.jsx)(o.AppsIcon, {
-          className: a()(n ? p.iconHovered : p.iconUnhovered)
+          className: a()(n ? E.iconHovered : E.iconUnhovered)
         })
       })
     })

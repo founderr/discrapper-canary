@@ -4,19 +4,19 @@ var i, r, s, o, a = n(442837),
   u = n(827498);
 let _ = {
   show: !1,
-  entrypoint: u._.NONE
+  entrypoint: u._b.NONE
 };
 
 function c() {
-  return _.show = !1, _.entrypoint = u._.NONE, !0
+  return _.show = !1, _.entrypoint = u._b.NONE, !0
 }
 class d extends(o = a.ZP.Store) {
   initialize() {}
   shouldShowPopup() {
-    return _.show && _.entrypoint === u._.TEXT
+    return _.show && _.entrypoint === u._b.TEXT
   }
   shouldShowModal() {
-    return _.show && _.entrypoint === u._.VOICE
+    return _.show && _.entrypoint === u._b.VOICE
   }
   entrypoint() {
     return _.entrypoint
