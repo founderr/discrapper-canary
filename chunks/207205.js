@@ -1,47 +1,48 @@
 "use strict";
 n.d(t, {
   $U: function() {
-    return _
-  },
-  es: function() {
-    return l
-  },
-  rK: function() {
     return c
   },
-  wV: function() {
+  em: function() {
     return u
+  },
+  rK: function() {
+    return d
+  },
+  wV: function() {
+    return _
   }
-}), n(653041), n(724458), n(47120), n(442837), n(638395);
+}), n(47120), n(724458), n(653041), n(442837), n(638395);
 var i = n(786761);
 n(375954);
 var r = n(306680),
   s = n(709054),
   o = n(505369);
-n(109911), n(265164);
-var a = n(761080);
-async function l(e, t) {
-  let n = [];
-  for (let i = 0; i < t.length && (null == e[t[i].id] && n.push(t[i]), !(n.length >= 15)); i++);
-  if (n.length > 0) {
-    let e = n.filter(e => e.type === a.Rr.MESSAGE).map(e => ({
-        channel_id: e.data.channel_id,
-        message_id: e.data.message_id
-      })),
-      t = n.filter(e => e.type === a.Rr.SUMMARY).map(e => ({
-        guild_id: e.data.guild_id,
-        channel_id: e.data.channel_id,
-        summary_id: e.data.summary_id
-      })),
-      i = n.filter(e => e.type === a.Rr.ACTIVITY).map(e => ({
-        user_id: e.data.user_id,
-        outbox_content_id: e.data.outbox_content_id
-      }));
-    await o.Z.fetchHydrated(e, t, i)
-  }
+n(109911);
+var a = n(265164),
+  l = n(761080);
+async function u(e, t, n) {
+  let i = a.Z.getHydratedItems(),
+    r = e.slice(t, n);
+  if (0 === r.length) return;
+  let s = r.filter(e => null == i[e.id]),
+    u = s.filter(e => e.type === l.Rr.MESSAGE).map(e => ({
+      channel_id: e.data.channel_id,
+      message_id: e.data.message_id
+    })),
+    _ = s.filter(e => e.type === l.Rr.SUMMARY).map(e => ({
+      guild_id: e.data.guild_id,
+      channel_id: e.data.channel_id,
+      summary_id: e.data.summary_id
+    })),
+    c = s.filter(e => e.type === l.Rr.ACTIVITY).map(e => ({
+      user_id: e.data.user_id,
+      outbox_content_id: e.data.outbox_content_id
+    }));
+  await o.Z.fetchHydrated(u, _, c, t, n)
 }
 
-function u(e, t) {
+function _(e, t) {
   let n = [],
     r = [],
     s = 0;
@@ -86,11 +87,11 @@ function u(e, t) {
   }
 }
 
-function _(e, t) {
+function c(e, t) {
   let n = r.ZP.ackMessageId(e);
   return null != n && s.default.extractTimestamp(t) > s.default.extractTimestamp(n)
 }
 
-function c(e) {
+function d(e) {
   return !1
 }

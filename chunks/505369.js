@@ -21,27 +21,45 @@ t.Z = {
       s.Z.captureException(e)
     }
   },
-  async fetchHydrated(e, t, n) {
-    if (!!(0, o.rK)("fetchHydrated")) try {
-      let s = await i.tn.post({
-        url: a.ANM.GRAVITY_ITEMS_HYDRATE,
-        body: {
-          message_items: e,
-          summary_items: t,
-          activity_items: n
-        }
-      });
-      r.Z.dispatch({
-        type: "LOAD_GRAVITY_HYDRATED",
-        requestMessageItems: e,
-        requestSummaryItems: t,
-        requestActivityItems: n,
-        messageItems: s.body.message_items,
-        summaryItems: s.body.summary_items,
-        activityItems: s.body.activity_items
-      })
-    } catch (e) {
-      s.Z.captureException(e)
+  async fetchHydrated(e, t, n, l, u) {
+    if (!!(0, o.rK)("fetchHydrated")) {
+      if (0 === e.length && 0 === t.length && 0 === n.length) {
+        r.Z.dispatch({
+          type: "LOAD_GRAVITY_HYDRATED",
+          requestMessageItems: e,
+          requestSummaryItems: t,
+          requestActivityItems: n,
+          messageItems: [],
+          summaryItems: [],
+          activityItems: [],
+          startingIndex: l,
+          endingIndex: u
+        });
+        return
+      }
+      try {
+        let s = await i.tn.post({
+          url: a.ANM.GRAVITY_ITEMS_HYDRATE,
+          body: {
+            message_items: e,
+            summary_items: t,
+            activity_items: n
+          }
+        });
+        r.Z.dispatch({
+          type: "LOAD_GRAVITY_HYDRATED",
+          requestMessageItems: e,
+          requestSummaryItems: t,
+          requestActivityItems: n,
+          messageItems: s.body.message_items,
+          summaryItems: s.body.summary_items,
+          activityItems: s.body.activity_items,
+          startingIndex: l,
+          endingIndex: u
+        })
+      } catch (e) {
+        s.Z.captureException(e)
+      }
     }
   },
   async getGuildChannelScores() {
@@ -58,10 +76,8 @@ t.Z = {
     }
   },
   reloadICYMITab() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     r.Z.dispatch({
-      type: "RELOAD_GRAVITY",
-      versionOnly: e
+      type: "RELOAD_GRAVITY"
     })
   },
   openICYMITab() {

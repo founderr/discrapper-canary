@@ -42,32 +42,38 @@ let p = [],
   G = !1,
   w = 0,
   x = !1,
-  B = 0;
+  B = 0,
+  k = [],
+  V = [],
+  Z = 0;
 
-function k() {
-  p = g, g = [], w++, V(p)
-}
-
-function V(e) {
-  let t = [],
-    n = [];
-  if (e.forEach(e => {
-      let i = null != N.Z.getReadTimestamp(e.id);
-      e.type === S.Rr.MESSAGE ? i = i || !(0, A.$U)(e.data.channel_id, e.data.message_id) : e.type === S.Rr.SUMMARY && (i = i || !(0, A.$U)(e.data.channel_id, e.data.summary_id)), i ? t.push(e) : n.push(e)
-    }), null != C.load_id) {
-    var i;
+function H() {
+  let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+  if (g.length > 0 && (p = g, g = []), w++, e) {
+    let [e, t] = F(p);
+    k = e, V = t
+  }
+  if (null != C.load_id && g.length > 0) {
+    var t;
     T.default.track(m.rMx.FEED_LOADED, {
       ...C,
-      unread_feed_item_ids: n.map(e => e.id),
-      read_feed_item_ids: t.map(e => e.id),
+      unread_feed_item_ids: k.map(e => e.id),
+      read_feed_item_ids: V.map(e => e.id),
       home_session_id: "gravity"
-    }), R = null !== (i = C.load_id) && void 0 !== i ? i : null, C = {}
-  }
-  let r = [...n, ...t];
-  (0, A.es)(D, r)
+    }), R = null !== (t = C.load_id) && void 0 !== t ? t : null, C = {}
+  }(0, A.em)([...k, ...V], 0, S.xy)
 }
 
-function Z(e) {
+function F(e) {
+  let t = [],
+    n = [];
+  return e.forEach(e => {
+    let i = null != N.Z.getReadTimestamp(e.id);
+    e.type === S.Rr.MESSAGE ? i = i || !(0, A.$U)(e.data.channel_id, e.data.message_id) : e.type === S.Rr.SUMMARY && (i = i || !(0, A.$U)(e.data.channel_id, e.data.summary_id)), i ? t.push(e) : n.push(e)
+  }), [n, t.sort((e, t) => N.Z.compare(e.id, t.id))]
+}
+
+function Y(e) {
   let {
     type: t,
     messageId: n,
@@ -79,7 +85,17 @@ function Z(e) {
   let a = _.default.getId() === i;
   "MESSAGE_REACTION_ADD" === t ? o.message = o.message.addReaction(r, a, e.colors, s) : o.message = o.message.removeReaction(r, a, s)
 }
-class H extends(i = o.ZP.PersistedStore) {
+
+function j(e) {
+  let {
+    channelId: t
+  } = e, n = [], i = [];
+  if (k.forEach((e, r) => {
+      r > Z && (e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e)
+    }), 0 === n.length) return !1;
+  k = i.sort((e, t) => N.Z.compare(e.id, t.id)), V = [...V, ...n]
+}
+class W extends(i = o.ZP.PersistedStore) {
   initialize(e) {
     if (this.waitFor(d.Z, c.Z, E.ZP, l.Z, I.ZP, _.default, N.Z), this.syncWith([E.ZP], () => (function() {
         if (!(0, A.rK)("GravityStore-recomputeMentionStates")) return !1;
@@ -134,6 +150,15 @@ class H extends(i = o.ZP.PersistedStore) {
   getHydratedItems() {
     return D
   }
+  getUnreadDisplayItems() {
+    return k
+  }
+  getReadDisplayItems() {
+    return V
+  }
+  getNextIndexToHydrate() {
+    return Z
+  }
   getMissingItems() {
     return M
   }
@@ -181,7 +206,7 @@ class H extends(i = o.ZP.PersistedStore) {
     }
   }
 }
-O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = new H(a.Z, {
+O(W, "displayName", "GravityStore"), O(W, "persistKey", "GravityStore"), t.Z = new W(a.Z, {
   LOGOUT: function() {
     return !1
   },
@@ -222,73 +247,79 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
       loadId: n,
       startTime: i
     } = e;
-    g = function(e) {
-      let t = e.filter(e => S.zd.has(e.type));
-      t.sort((e, t) => t.score - e.score);
-      let n = t.filter(e => e.score >= 20 && e.score < 40),
-        i = t.filter(e => e.score >= 40),
-        r = [],
-        o = {},
-        a = {},
-        l = 0,
-        u = 0,
-        _ = 0;
-      for (;;) {
-        if (_++, l >= i.length) {
-          for (; 0 !== Object.keys(o).length;) {
-            ;
-            Object.keys(o).forEach(e => {
-              o[e].length > 0 ? r.push(o[e].shift()) : delete o[e]
-            })
-          }
-          break
-        }
-        let e = null;
-        if (Object.keys(o).forEach(t => {
-            let n = o[t][0];
-            if (null == n) return;
-            let i = a[t];
-            if (null == i && (null == e || e.score < n.score)) {
-              e = n;
-              return
+    if (g = function(e) {
+        let t = e.filter(e => S.zd.has(e.type));
+        t.sort((e, t) => t.score - e.score);
+        let n = t.filter(e => e.score >= 20 && e.score < 40),
+          i = t.filter(e => e.score >= 40),
+          r = [],
+          o = {},
+          a = {},
+          l = 0,
+          u = 0,
+          _ = 0;
+        for (;;) {
+          if (_++, l >= i.length) {
+            for (; 0 !== Object.keys(o).length;) {
+              ;
+              Object.keys(o).forEach(e => {
+                o[e].length > 0 ? r.push(o[e].shift()) : delete o[e]
+              })
             }
-            r.length >= i + 3 && (null == e || e.score < n.score) && (e = n)
-          }), null != e) {
-          s()(e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY, "Invalid item type");
-          let t = e.data.guild_id;
-          a[t] = r.length, r.push(e), o[t].shift();
-          continue
+            break
+          }
+          let e = null;
+          if (Object.keys(o).forEach(t => {
+              let n = o[t][0];
+              if (null == n) return;
+              let i = a[t];
+              if (null == i && (null == e || e.score < n.score)) {
+                e = n;
+                return
+              }
+              r.length >= i + 3 && (null == e || e.score < n.score) && (e = n)
+            }), null != e) {
+            s()(e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY, "Invalid item type");
+            let t = e.data.guild_id;
+            a[t] = r.length, r.push(e), o[t].shift();
+            continue
+          }
+          let t = !0;
+          if (_ % 7 == 0 && u < n.length ? (e = n[u], u++, t = !1) : (e = i[l], l++), e.type !== S.Rr.MESSAGE && e.type !== S.Rr.SUMMARY) {
+            r.push(e);
+            continue
+          }
+          if (null == a[e.data.guild_id]) {
+            a[e.data.guild_id] = r.length, o[e.data.guild_id] = [], r.push(e);
+            continue
+          } {
+            let n = a[e.data.guild_id];
+            r.length < n + 3 ? t ? o[e.data.guild_id].push(e) : u-- : o[e.data.guild_id].length > 0 ? (a[e.data.guild_id] = r.length, r.push(o[e.data.guild_id].shift()), o[e.data.guild_id].push(e)) : (a[e.data.guild_id] = r.length, r.push(e))
+          }
         }
-        let t = !0;
-        if (_ % 7 == 0 && u < n.length ? (e = n[u], u++, t = !1) : (e = i[l], l++), e.type !== S.Rr.MESSAGE && e.type !== S.Rr.SUMMARY) {
-          r.push(e);
-          continue
-        }
-        if (null == a[e.data.guild_id]) {
-          a[e.data.guild_id] = r.length, o[e.data.guild_id] = [], r.push(e);
-          continue
-        } {
-          let n = a[e.data.guild_id];
-          r.length < n + 3 ? t ? o[e.data.guild_id].push(e) : u-- : o[e.data.guild_id].length > 0 ? (a[e.data.guild_id] = r.length, r.push(o[e.data.guild_id].shift()), o[e.data.guild_id].push(e)) : (a[e.data.guild_id] = r.length, r.push(e))
-        }
-      }
-      return r
-    }(t), ! function() {
-      let e = new Set;
-      g.forEach(t => {
-        e.add(t.id)
-      }), Object.values(v).forEach(t => {
-        e.has(t.id) || f.default.age(t.id) > h.Z.Millis.DAY || t.type === S.Rr.MESSAGE && I.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete v[t.id] : !e.has(t.id) && (g.unshift(t), e.add(t.id))
-      }), g.forEach(e => {
-        L[e.id] = e
-      })
-    }(), U = {}, g.forEach(e => {
-      e.type === S.Rr.MESSAGE && e.data.channel_type === m.d4z.GUILD_ANNOUNCEMENT && e.data.has_mention && 0 > f.default.compare(E.ZP.ackMessageId(e.data.channel_id), e.data.message_id) && (null == U[e.data.channel_id] && (U[e.data.channel_id] = 0), U[e.data.channel_id]++, b.add(e.data.guild_id))
-    }), G = !0, C = {
-      load_id: n,
-      load_time_millis: Date.now() - i,
-      feed_item_ids: g.map(e => e.id)
-    }, 0 === w && (g.length > 0 && (0 === p.length || p[0].id !== g[0].id) ? (x = !0, V(p), V(g)) : k())
+        return r
+      }(t), ! function() {
+        let e = new Set;
+        g.forEach(t => {
+          e.add(t.id)
+        }), Object.values(v).forEach(t => {
+          e.has(t.id) || f.default.age(t.id) > h.Z.Millis.DAY || t.type === S.Rr.MESSAGE && I.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id) ? delete v[t.id] : !e.has(t.id) && (g.unshift(t), e.add(t.id))
+        }), g.forEach(e => {
+          L[e.id] = e
+        })
+      }(), U = {}, g.forEach(e => {
+        e.type === S.Rr.MESSAGE && e.data.channel_type === m.d4z.GUILD_ANNOUNCEMENT && e.data.has_mention && 0 > f.default.compare(E.ZP.ackMessageId(e.data.channel_id), e.data.message_id) && (null == U[e.data.channel_id] && (U[e.data.channel_id] = 0), U[e.data.channel_id]++, b.add(e.data.guild_id))
+      }), G = !0, C = {
+        load_id: n,
+        load_time_millis: Date.now() - i,
+        feed_item_ids: g.map(e => e.id)
+      }, 0 === w) {
+      if (g.length > 0 && (0 === p.length || p[0].id !== g[0].id)) {
+        x = !0;
+        let [e, t] = F(g);
+        k = e, V = t, (0, A.em)([...k, ...V], 0, S.xy)
+      } else H()
+    }
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
     let {
@@ -297,19 +328,21 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
       activityItems: i,
       requestMessageItems: r,
       requestSummaryItems: s,
-      requestActivityItems: o
+      requestActivityItems: o,
+      startingIndex: a,
+      endingIndex: l
     } = e;
     D = {
       ...D
     };
-    let a = r.filter(e => null == t.find(t => t.message.id === e.message_id)),
-      l = s.filter(e => null == n.find(t => t.id === e.summary_id)),
-      _ = o.filter(e => null == i.find(t => t.id === e.outbox_content_id));
-    a.forEach(e => {
+    let _ = r.filter(e => null == t.find(t => t.message.id === e.message_id)),
+      c = s.filter(e => null == n.find(t => t.id === e.summary_id)),
+      E = o.filter(e => null == i.find(t => t.id === e.outbox_content_id));
+    _.forEach(e => {
       M[e.message_id] = !0
-    }), l.forEach(e => {
+    }), c.forEach(e => {
       M[e.summary_id] = !0
-    }), _.forEach(e => {
+    }), E.forEach(e => {
       M[e.outbox_content_id] = !0
     }), t.forEach(e => {
       let t = L[e.message.id];
@@ -338,7 +371,7 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
         ...t,
         activity: e
       }
-    })
+    }), a === Z && (Z = l)
   },
   LOAD_GRAVITY_CUSTOM_SCORES: function(e) {
     let {
@@ -353,7 +386,7 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
       guildId: n,
       guildScore: i
     } = e;
-    null != i && (P[n] = i), null == t || t.forEach(e => {
+    null != i && (P[n] = i, i < 0 && (p = p.filter(e => e.type === S.Rr.MESSAGE && e.data.guild_id !== n), k = k.filter(e => e.type === S.Rr.MESSAGE && e.data.guild_id !== n), V = V.filter(e => e.type === S.Rr.MESSAGE && e.data.guild_id !== n), g = g.filter(e => e.type === S.Rr.MESSAGE && e.data.guild_id !== n))), null == t || t.forEach(e => {
       let {
         channelId: t,
         score: i
@@ -361,24 +394,17 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
       null == y[n] && (y[n] = {}), y[n][t] = i
     })
   },
-  RELOAD_GRAVITY: function(e) {
-    let {
-      versionOnly: t
-    } = e;
-    if (t) {
-      w++;
-      return
-    }
+  RELOAD_GRAVITY: function() {
     if (0 === g.length) return !1;
-    k()
+    H()
   },
   GRAVITY_TAB_OPENED: function() {
-    x && (k(), x = !1), B < 5 && B++
+    x && (H(!1), x = !1), B < 5 && B++
   },
   GRAVITY_FEEDBACK_GIVEN: function() {
     B = 6
   },
-  MESSAGE_REACTION_ADD: Z,
+  MESSAGE_REACTION_ADD: Y,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       messageId: t,
@@ -388,7 +414,7 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
     let r = _.default.getId();
     i.message = i.message.addReactionBatch(n, r)
   },
-  MESSAGE_REACTION_REMOVE: Z,
+  MESSAGE_REACTION_REMOVE: Y,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       messageId: t
@@ -403,5 +429,7 @@ O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = n
     } = e, i = D[t];
     if (null == i || i.type !== S.Rr.MESSAGE) return !1;
     i.message = i.message.removeReactionsForEmoji(n)
-  }
+  },
+  CHANNEL_ACK: j,
+  MESSAGE_ACK: j
 })

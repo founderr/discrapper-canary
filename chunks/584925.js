@@ -28,6 +28,11 @@ class u extends(i = r.ZP.DeviceSettingsStore) {
   getReadTimestamp(e) {
     return l.readIdToTimestampMap[e]
   }
+  compare(e, t) {
+    let n = l.readIdToTimestampMap[e],
+      i = l.readIdToTimestampMap[t];
+    return null == n && null == i ? 0 : null == n ? 1 : null == i ? -1 : n - i
+  }
   getState() {
     return l
   }
@@ -41,7 +46,7 @@ o(u, "displayName", "GravityUnreadStateStore"), o(u, "persistKey", "GravityUnrea
       items: t
     } = e;
     t.forEach(e => {
-      null != e && (l.readIdToTimestampMap[e.id] = e.timestamp)
+      null != e && null == l.readIdToTimestampMap[e.id] && (l.readIdToTimestampMap[e.id] = e.timestamp)
     })
   }
 })
