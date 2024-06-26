@@ -133,8 +133,8 @@ let r = {
     inlineRequire: () => n(950143).Z
   },
   HangStatusManager: {
-    actions: ["VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
-    inlineRequire: () => n(500272).Z,
+    actions: ["POST_CONNECTION_OPEN", "VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
+    inlineRequire: () => n(669750).Z,
     hasStoreChangeListeners: !0
   },
   InteractionModalManager: {

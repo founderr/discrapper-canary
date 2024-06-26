@@ -91,6 +91,17 @@ d(T, "displayName", "HangStatusStore"), d(T, "persistKey", "HangStatusStore"), t
       emoji: n
     }
   },
+  DELETE_INVALID_HANG_STATUSES: function(e) {
+    let {
+      statuses: t
+    } = e, n = [...E.recentCustomStatuses];
+    t.forEach(e => {
+      let {
+        status: t,
+        emoji: o
+      } = e, a = n.findIndex(e => e.status === t && l().isEqual(e.emoji, o)); - 1 !== a && n.splice(a, 1), t === (null == r ? void 0 : r.status) && l().isEqual(o, null == r ? void 0 : r.emoji) && (i = null, r = null, E.currentDefaultStatus = null, s = null)
+    }), E.recentCustomStatuses = n
+  },
   CLEAR_HANG_STATUS: function(e) {
     let {
       saveAsDefault: t
