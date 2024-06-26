@@ -24,7 +24,10 @@ function m(e) {
     f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)),
     E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)),
     g = u.ZP.useUserTag(m),
-    C = (0, s.m$)(e.channel.id);
+    C = (0, s.m$)({
+      channelId: e.channel.id,
+      location: "HeaderBarDirectMessageV2"
+    });
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.HiddenVisually, {
       children: h.Z.Messages.DIRECT_MESSAGE

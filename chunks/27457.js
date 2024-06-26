@@ -138,7 +138,11 @@ let ei = a.memo(e => {
   } = (0, o.cj)([k.Z], () => ({
     hangStatusActivity: eW && null != eS ? k.Z.findActivity(eS, e => e.type === Q.IIU.HANG_STATUS) : null,
     gameActivity: eY && null != eS ? k.Z.findActivity(eS, e => null != e.application_id && e.type === Q.IIU.PLAYING) : null
-  }), [eW, eS, eY]), eX = (0, o.e7)([y.Z], () => (null == eq ? void 0 : eq.application_id) != null ? y.Z.getDetectableGame(eq.application_id) : null), eQ = (0, o.e7)([p.Z], () => null != eX && (null == eq ? void 0 : eq.application_id) != null ? p.Z.getApplication(null == eq ? void 0 : eq.application_id) : void 0), eJ = (0, R.wV)(eS, er.id);
+  }), [eW, eS, eY]), eX = (0, o.e7)([y.Z], () => (null == eq ? void 0 : eq.application_id) != null ? y.Z.getDetectableGame(eq.application_id) : null), eQ = (0, o.e7)([p.Z], () => null != eX && (null == eq ? void 0 : eq.application_id) != null ? p.Z.getApplication(null == eq ? void 0 : eq.application_id) : void 0), eJ = (0, R.wV)({
+    userId: eS,
+    channelId: er.id,
+    location: "CallTile"
+  });
   a.useEffect(() => {
     eT(e_)
   }, [e_]);

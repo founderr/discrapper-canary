@@ -21,32 +21,46 @@ function u(e) {
 }
 
 function d(e) {
-  let t = (0, c.J)(e),
-    n = (0, a.e7)([r.Z], () => {
-      var t;
-      return (null === (t = r.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice()) === !0
-    });
-  return t && !n
+  let {
+    channelId: t,
+    location: n
+  } = e, i = (0, c.J)({
+    channelId: t,
+    location: n
+  }), l = (0, a.e7)([r.Z], () => {
+    var e;
+    return (null === (e = r.Z.getChannel(t)) || void 0 === e ? void 0 : e.isGuildStageVoice()) === !0
+  });
+  return i && !l
 }
 
 function h(e, t) {
   return !1
 }
 
-function p(e, t) {
-  var n, i;
-  let l = u(t),
-    r = d(t),
-    o = (0, a.e7)([s.default], () => s.default.getId());
-  return r && l.has(o) && null != e && l.has(e) && (n = 0, i = 0, !1)
+function p(e) {
+  var t, n;
+  let {
+    userId: i,
+    channelId: l,
+    location: r
+  } = e, o = u(l), c = d({
+    channelId: l,
+    location: r
+  }), h = (0, a.e7)([s.default], () => s.default.getId());
+  return c && o.has(h) && null != i && o.has(i) && (t = 0, n = 0, !1)
 }
 
 function m(e) {
-  let t = u(e),
-    n = d(e),
-    l = (0, a.e7)([s.default], () => s.default.getId());
-  return i.useMemo(() => !!(n && t.has(l)) && Array.from(t).every(e => {
+  let {
+    channelId: t,
+    location: n
+  } = e, l = u(t), r = d({
+    channelId: t,
+    location: n
+  }), o = (0, a.e7)([s.default], () => s.default.getId());
+  return i.useMemo(() => !!(r && l.has(o)) && Array.from(l).every(e => {
     var t, n;
-    return t = 0, n = 0, e === l
-  }), [e, l, n, t])
+    return t = 0, n = 0, e === o
+  }), [t, o, r, l])
 }

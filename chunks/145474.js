@@ -5,22 +5,27 @@ t.d(n, {
 });
 var i = t(735250),
   r = t(470079),
-  l = t(442837),
-  u = t(481060),
+  u = t(442837),
+  l = t(481060),
   a = t(352954),
   o = t(441894),
-  s = t(314897),
-  d = t(689938);
+  d = t(314897),
+  s = t(689938);
 
-function c(e, n) {
-  let t = (0, o.J)(n),
-    c = (0, l.e7)([s.default], () => s.default.getId() === e),
-    E = r.useCallback(() => {
-      a.Z.openSecureFramesUserVerificationModal(e, n)
-    }, [n, e]);
-  return !t || c ? null : (0, i.jsx)(u.MenuItem, {
+function c(e) {
+  let {
+    userId: n,
+    channelId: t,
+    location: c
+  } = e, E = (0, o.J)({
+    channelId: t,
+    location: c
+  }), _ = (0, u.e7)([d.default], () => d.default.getId() === n), I = r.useCallback(() => {
+    a.Z.openSecureFramesUserVerificationModal(n, t)
+  }, [t, n]);
+  return !E || _ ? null : (0, i.jsx)(l.MenuItem, {
     id: "secure-frames-user-verification",
-    label: d.Z.Messages.E2EE_VIEW_VERIFICATION_CODE,
-    action: E
+    label: s.Z.Messages.E2EE_VIEW_VERIFICATION_CODE,
+    action: I
   })
 }

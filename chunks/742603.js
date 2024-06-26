@@ -193,7 +193,10 @@ function V(e) {
       modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
     })
   }
-  let F = (0, T.m$)(t.id);
+  let F = (0, T.m$)({
+    channelId: t.id,
+    location: "ChannelCallHeader"
+  });
   return (0, i.jsxs)("div", {
     className: U.subtitleContainer,
     children: [(0, i.jsxs)(Z.ZP, {

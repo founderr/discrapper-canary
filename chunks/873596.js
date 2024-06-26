@@ -61,7 +61,10 @@ function m(e) {
     isOverlay: n,
     lobbyId: l,
     closePopout: r
-  } = e, a = (0, u.J)(t) ? p.Z.Messages.E2EE_END_TO_END_ENCRYPTED : p.Z.Messages.SECURE_CONNECTION;
+  } = e, a = (0, u.J)({
+    channelId: t,
+    location: "RTCConnectionDebugPanelContainer"
+  }) ? p.Z.Messages.E2EE_END_TO_END_ENCRYPTED : p.Z.Messages.SECURE_CONNECTION;
   return n ? (0, i.jsx)(_, {
     lobbyId: l,
     closePopout: r,
@@ -114,7 +117,10 @@ function C(e) {
 }
 
 function I(e) {
-  return (0, u.J)(e.channelId) ? (0, i.jsx)(C, {
+  return (0, u.J)({
+    channelId: e.channelId,
+    location: "RTCConnectionPopout"
+  }) ? (0, i.jsx)(C, {
     ...e
   }) : (0, i.jsx)("div", {
     className: f.debugPanelStandalone,

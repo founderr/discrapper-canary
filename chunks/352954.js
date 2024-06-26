@@ -1,40 +1,44 @@
-var i = t(735250);
+t(411104);
+var n = t(735250);
 t(470079);
-var r = t(481060),
-  l = t(689938);
-n.Z = {
-  openSecureFramesUserVerificationModal: function(e, n) {
-    (0, r.openModalLazy)(async () => {
-      let r = (await t.e("33397").then(t.bind(t, 963410))).default;
-      return t => (0, i.jsx)(r, {
+var a = t(481060),
+  i = t(689938);
+s.Z = {
+  openSecureFramesUserVerificationModal: function(e, s) {
+    (0, a.openModalLazy)(async () => {
+      let a = (await t.e("33397").then(t.bind(t, 963410))).default;
+      return t => (0, n.jsx)(a, {
         userId: e,
-        channelId: n,
+        channelId: s,
         ...t
       })
     })
   },
   openSecureFramesUpdateConfirmation: function(e) {
     let {
-      title: n,
-      subtitle: u,
-      onConfirm: a
+      title: s,
+      subtitle: r,
+      onConfirm: o
     } = e;
-    (0, r.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         ConfirmModal: e
       } = await Promise.resolve().then(t.bind(t, 481060));
-      return t => (0, i.jsx)(e, {
-        header: n,
-        confirmText: l.Z.Messages.CONFIRM,
-        cancelText: l.Z.Messages.CANCEL,
-        onConfirm: a,
+      return t => (0, n.jsx)(e, {
+        header: s,
+        confirmText: i.Z.Messages.CONFIRM,
+        cancelText: i.Z.Messages.CANCEL,
+        onConfirm: o,
         ...t,
-        children: (0, i.jsx)(r.Text, {
+        children: (0, n.jsx)(a.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: u
+          children: r
         })
       })
     })
+  },
+  handleSecureFramesUserVerificationLink: function(e) {
+    throw Error("handleSecureFramesUserVerificationLink not implemented")
   }
 }

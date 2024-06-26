@@ -29,7 +29,7 @@ function o(e, n, o) {
   }) : o.isDM() ? (0, r.jW)(e, async () => {
     let {
       default: e
-    } = await Promise.all([t.e("79695"), t.e("32006"), t.e("8540"), t.e("22036"), t.e("56826"), t.e("42844")]).then(t.bind(t, 131404));
+    } = await Promise.all([t.e("79695"), t.e("32006"), t.e("53917"), t.e("22036"), t.e("56826"), t.e("42844")]).then(t.bind(t, 131404));
     return t => (0, i.jsx)(e, {
       ...t,
       user: n,
