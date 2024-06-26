@@ -104,7 +104,7 @@ function E(e) {
         children: [(0, o.jsx)(l.Text, {
           color: "header-secondary",
           variant: "text-xxs/normal",
-          children: e.type === g.ABu.XBOX ? C.Z.Messages.QUESTS_XBOX_ID : C.Z.Messages.QUESTS_PSN_ONLINE_ID
+          children: e.type === g.ABu.XBOX ? C.Z.Messages.QUESTS_XBOX_ID : C.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
         }), (0, o.jsx)(l.Text, {
           color: "header-secondary",
           variant: "text-xxs/normal",
