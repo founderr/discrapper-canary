@@ -49,8 +49,7 @@ function S(e) {
     animateOnHover: !m
   }), P = a.useMemo(() => (0, d.W)(t, s.id), [t, s.id]), {
     status: O,
-    customStatusActivity: y,
-    isMobileOnline: D
+    isMobileOnline: y
   } = (0, l.cj)([h.Z, p.Z], () => {
     let e = null != h.Z.getAnyStreamForUser(t.id),
       n = p.Z.findActivity(t.id, t => {
@@ -61,12 +60,6 @@ function S(e) {
       });
     return {
       status: (0, o.Z)(n) ? r.StatusTypes.STREAMING : p.Z.getStatus(t.id),
-      customStatusActivity: p.Z.findActivity(t.id, e => {
-        let {
-          type: t
-        } = e;
-        return t === x.IIU.CUSTOM_STATUS
-      }),
       isMobileOnline: p.Z.isMobileOnline(t.id)
     }
   });
@@ -94,13 +87,12 @@ function S(e) {
         status: P || t.isNonUserBot() ? r.StatusTypes.UNKNOWN : O,
         statusBackdropColor: b && !P ? (0, r.getStatusBackdropColor)(Z) : void 0,
         "aria-label": t.username,
-        isMobile: D,
+        isMobile: y,
         statusTooltip: !0,
         statusTooltipDelay: I.vB
       })
-    }), (0, i.jsx)(g.J, {
+    }), (0, i.jsx)(g.Z, {
       user: t,
-      statusActivity: y,
       profileType: I.y0.PANEL
     })]
   })

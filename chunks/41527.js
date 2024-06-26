@@ -1,114 +1,106 @@
 i.d(n, {
   Z: function() {
-    return T
+    return N
   }
 }), i(47120);
 var t = i(735250);
 i(470079);
-var s = i(442837),
-  o = i(481060),
-  l = i(100527),
-  a = i(906732),
-  r = i(158776),
-  d = i(5192),
-  c = i(785717),
-  u = i(318661),
-  I = i(741308),
-  f = i(681837),
-  E = i(502762),
-  _ = i(530),
-  S = i(544989),
-  Z = i(272510),
-  m = i(740021),
-  v = i(616140),
-  x = i(29530),
-  h = i(228168),
-  g = i(981631),
-  N = i(689938),
-  p = i(327570);
+var s = i(481060),
+  o = i(100527),
+  l = i(906732),
+  a = i(5192),
+  r = i(785717),
+  d = i(318661),
+  c = i(741308),
+  u = i(681837),
+  I = i(502762),
+  f = i(530),
+  E = i(544989),
+  _ = i(272510),
+  Z = i(740021),
+  S = i(616140),
+  m = i(29530),
+  v = i(228168),
+  x = i(981631),
+  h = i(689938),
+  g = i(327570);
 
-function T(e) {
+function N(e) {
   let {
     user: n,
     currentUser: i,
-    guildId: T,
-    channelId: C,
-    messageId: R,
-    roleId: A,
-    initialSection: M,
-    initialSubsection: j,
-    transitionState: U,
-    onClose: P,
-    sourceAnalyticsLocations: L = []
-  } = e, O = T === g.ME ? void 0 : T, y = (0, u.ZP)(n.id, O), {
-    analyticsLocations: b
-  } = (0, a.ZP)([...L, l.Z.SIMPLIFIED_PROFILE_MODAL]), D = (0, s.e7)([r.Z], () => r.Z.findActivity(n.id, e => {
-    let {
-      type: n
-    } = e;
-    return n === g.IIU.CUSTOM_STATUS
-  })), F = (0, x.Z)(n);
-  return (0, t.jsx)(a.Gt, {
-    value: b,
-    children: (0, t.jsx)(c.Mt, {
+    guildId: N,
+    channelId: p,
+    messageId: T,
+    roleId: C,
+    initialSection: R,
+    initialSubsection: A,
+    transitionState: j,
+    onClose: M,
+    sourceAnalyticsLocations: U = []
+  } = e, P = N === x.ME ? void 0 : N, L = (0, d.ZP)(n.id, P), {
+    analyticsLocations: O
+  } = (0, l.ZP)([...U, o.Z.SIMPLIFIED_PROFILE_MODAL]), y = (0, m.Z)(n);
+  return (0, t.jsx)(l.Gt, {
+    value: O,
+    children: (0, t.jsx)(r.Mt, {
       layout: "SIMPLIFIED_MODAL",
       userId: n.id,
-      guildId: O,
-      channelId: C,
-      messageId: R,
-      roleId: A,
+      guildId: P,
+      channelId: p,
+      messageId: T,
+      roleId: C,
       showGuildProfile: !0,
-      children: (0, t.jsx)(o.ModalRoot, {
-        transitionState: U,
-        className: p.root,
+      children: (0, t.jsx)(s.ModalRoot, {
+        transitionState: j,
+        className: g.root,
         hideShadow: !0,
-        "aria-label": N.Z.Messages.USER_PROFILE_MODAL,
-        children: (0, t.jsxs)(E.Z, {
+        "aria-label": h.Z.Messages.USER_PROFILE_MODAL,
+        children: (0, t.jsxs)(I.Z, {
           user: n,
-          displayProfile: y,
-          profileType: h.y0.FULL_SIZE,
-          children: [(0, t.jsx)(S.Z, {
-            profileType: h.y0.FULL_SIZE,
-            children: (0, t.jsx)(Z.Z, {
+          displayProfile: L,
+          profileType: v.y0.FULL_SIZE,
+          children: [(0, t.jsx)(E.Z, {
+            profileType: v.y0.FULL_SIZE,
+            children: (0, t.jsx)(_.Z, {
               user: n,
-              profileType: h.y0.FULL_SIZE,
-              guildId: O
+              profileType: v.y0.FULL_SIZE,
+              guildId: P
             })
-          }), (0, t.jsx)(m.Z, {
+          }), (0, t.jsx)(Z.Z, {
             user: n,
-            displayProfile: y,
-            guildId: O,
-            channelId: C,
+            displayProfile: L,
+            guildId: P,
+            channelId: p,
             activity: void 0,
-            customStatusActivity: D,
-            transitionState: U,
-            onClose: P
+            transitionState: j,
+            onClose: M
           }), (0, t.jsxs)("div", {
-            className: p.body,
-            children: [(0, t.jsx)(_.Z, {
+            className: g.body,
+            children: [(0, t.jsx)(f.Z, {
               user: n,
-              profileType: h.y0.FULL_SIZE,
-              nickname: d.ZP.getName(O, C, n),
-              pronouns: null == y ? void 0 : y.pronouns,
+              profileType: v.y0.FULL_SIZE,
+              nickname: a.ZP.getName(P, p, n),
+              pronouns: null == L ? void 0 : L.pronouns,
               nicknameVariant: "heading-xl/bold",
-              nicknameIcons: (0, t.jsx)(f.Z, {
+              nicknameIcons: (0, t.jsx)(u.Z, {
                 userId: n.id
               }),
-              tags: (0, t.jsx)(I.Z, {
-                displayProfile: y,
-                profileType: h.y0.FULL_SIZE,
-                onClose: P
+              tags: (0, t.jsx)(c.Z, {
+                displayProfile: L,
+                profileType: v.y0.FULL_SIZE,
+                onClose: M
               })
-            }), (0, t.jsx)(E.Z.Overlay, {
-              className: p.overlay,
-              children: (0, t.jsx)(v.Z, {
+            }), (0, t.jsx)(I.Z.Overlay, {
+              className: g.overlay,
+              children: (0, t.jsx)(S.Z, {
                 user: n,
                 currentUser: i,
-                displayProfile: y,
-                items: F,
-                initialSection: M,
-                initialSubsection: j,
-                onClose: P
+                displayProfile: L,
+                items: y,
+                initialSection: R,
+                initialSubsection: A,
+                onClose: M
               })
             })]
           })]
