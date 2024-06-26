@@ -18,9 +18,9 @@ var i = n(735250),
   m = n(696068),
   x = n(361213),
   I = n(952561),
-  h = n(778569),
-  _ = n(182906),
-  f = n(513202),
+  f = n(778569),
+  h = n(182906),
+  _ = n(513202),
   T = n(412019),
   C = n(431136),
   E = n(226799),
@@ -42,12 +42,12 @@ function N(e) {
       guildId: g
     })
   }, [g]);
-  let _ = (0, h.Z)({
+  let h = (0, f.Z)({
       applicationId: null != n ? n : "",
       size: 2048
     }),
-    f = (0, l.e7)([c.Z], () => c.Z.getChannel(v)),
-    T = (0, p.T)(null != g ? g : null, n, f);
+    _ = (0, l.e7)([c.Z], () => c.Z.getChannel(v)),
+    T = (0, p.T)(null != g ? g : null, n, _);
   if (null == T) return null;
   let C = null != T.activity.activity_preview_video_asset_id ? (0, x.Z)(n, T.activity.activity_preview_video_asset_id) : null,
     N = E.o[n],
@@ -76,7 +76,7 @@ function N(e) {
                 muted: !0,
                 className: j.heroVideo,
                 src: C,
-                poster: _.url
+                poster: h.url
               })
             }) : null, (0, i.jsx)("div", {
               className: j.detailsTitle,
@@ -150,27 +150,27 @@ function M(e) {
     activityItem: d,
     onLaunch: u,
     channelId: p
-  } = e, x = (0, h.Z)({
+  } = e, x = (0, f.Z)({
     applicationId: d.application.id,
     size: 2048
   }), {
     analyticsLocations: E
   } = (0, o.ZP)(), N = (0, I.Z)(), [M, A] = a.useState(null !== (t = (0, v.$)({
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== t ? t : void 0), [Z, b] = a.useState(null !== (r = (0, m.d)({
+  })) && void 0 !== t ? t : void 0), [b, Z] = a.useState(null !== (r = (0, m.d)({
     guildId: M,
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), y = (0, l.e7)([c.Z], () => c.Z.getChannel(Z), [Z]), D = (0, v.W)(), L = (0, m.F)(M), O = a.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), y = (0, l.e7)([c.Z], () => c.Z.getChannel(b), [b]), D = (0, v.W)(), L = (0, m.F)(M), O = a.useCallback(() => {
     var e;
-    if (null != Z)(0, g.Z)({
+    if (null != b)(0, g.Z)({
       targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: N,
-      channelId: Z,
+      channelId: b,
       guildId: M,
-      embeddedActivitiesManager: f.Z,
+      embeddedActivitiesManager: _.Z,
       analyticsLocations: E
     }).then(u)
-  }, [d, E, N, u, Z, M]), B = a.useCallback(() => {
+  }, [d, E, N, u, b, M]), B = a.useCallback(() => {
     (0, s.openModalLazy)(async () => {
       let {
         default: e
@@ -181,10 +181,10 @@ function M(e) {
         analyticsLocations: E
       })
     })
-  }, [d, E]), V = null == y || null != y.guild_id && !(null != M && null != Z && D.some(e => e.value === M) && L.some(e => e.value.channel.id === Z)) && !0;
+  }, [d, E]), V = null == y || null != y.guild_id && !(null != M && null != b && D.some(e => e.value === M) && L.some(e => e.value.channel.id === b)) && !0;
   return (0, i.jsxs)("div", {
     className: j.launcherInnerContainer,
-    children: [(0, i.jsx)(_.Z, {
+    children: [(0, i.jsx)(h.Z, {
       applicationName: d.application.name,
       imageBackground: x,
       imageClassName: j.launchImage,
@@ -214,7 +214,7 @@ function M(e) {
         isSelected: e => e === M,
         select: e => {
           var t;
-          A(e), b(null !== (t = (0, m.d)({
+          A(e), Z(null !== (t = (0, m.d)({
             guildId: e
           })) && void 0 !== t ? t : void 0)
         },
@@ -227,13 +227,13 @@ function M(e) {
           let {
             channel: t
           } = e;
-          return t.id === Z
+          return t.id === b
         },
         select: e => {
           let {
             channel: t
           } = e;
-          return b(t.id)
+          return Z(t.id)
         },
         serialize: e => {
           let {
@@ -242,7 +242,7 @@ function M(e) {
           return t.id
         },
         renderOptionValue: () => {
-          let e = L.find(e => e.value.channel.id === Z);
+          let e = L.find(e => e.value.channel.id === b);
           return null == e ? null : (0, i.jsx)(T.O, {
             channel: e.value.channel,
             users: e.value.users

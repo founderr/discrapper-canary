@@ -1,8 +1,8 @@
 n(627341);
 var r = n(735250),
-  i = n(470079),
-  s = n(120356),
-  l = n.n(s),
+  s = n(470079),
+  i = n(120356),
+  l = n.n(i),
   o = n(278074),
   a = n(831209),
   c = n(399606),
@@ -22,15 +22,15 @@ let C = () => 80,
     let {
       children: t,
       className: n,
-      isSelected: i = !1,
-      ...s
+      isSelected: s = !1,
+      ...i
     } = e;
     return (0, r.jsx)(d.Clickable, {
       className: l()(g.effectGridItem, n, {
-        [g.selected]: i
+        [g.selected]: s
       }),
-      ...s,
-      onClick: s.onSelect,
+      ...i,
+      onClick: i.onSelect,
       children: t
     })
   },
@@ -38,17 +38,17 @@ let C = () => 80,
     var t;
     let {
       user: n,
-      profileEffect: s,
+      profileEffect: i,
       innerRef: l,
       section: o,
       isSelected: u,
       ...h
-    } = e, C = (0, p.V)(s.id), Z = (0, c.e7)([f.Z], () => {
-      let e = f.Z.getProduct(s.skuId);
+    } = e, C = (0, p.V)(i.id), Z = (0, c.e7)([f.Z], () => {
+      let e = f.Z.getProduct(i.skuId);
       return (0, m.G1)(e)
-    }), P = (0, m.Yq)(s.skuId), A = i.useRef(null), {
-      accessibilityLabel: T,
-      thumbnailPreviewSrc: N,
+    }), P = (0, m.Yq)(i.skuId), A = s.useRef(null), {
+      accessibilityLabel: N,
+      thumbnailPreviewSrc: T,
       title: S
     } = null !== (t = null == C ? void 0 : C.config) && void 0 !== t ? t : {}, j = E.ZP.canUseCollectibles(n), R = o === _.$0.PREMIUM_PURCHASE && !j;
     return (0, r.jsxs)(x, {
@@ -58,11 +58,11 @@ let C = () => 80,
       ...h,
       children: [(0, r.jsx)("img", {
         src: v,
-        alt: T,
+        alt: N,
         className: g.presetEffectBackground
       }), (0, r.jsx)("img", {
         className: g.presetEffectImg,
-        src: N,
+        src: T,
         alt: S
       }), o === _.$0.PURCHASE || o === _.$0.PREMIUM_PURCHASE && j ? null : P ? (0, r.jsx)(d.PremiumBadge, {
         className: g.newBadge,
@@ -92,13 +92,13 @@ t.Z = e => {
   let {
     user: t,
     guild: n,
-    pendingProfileEffect: i,
-    selectedProfileEffectRef: s,
+    pendingProfileEffect: s,
+    selectedProfileEffectRef: i,
     onSelect: l,
     onClose: a
   } = e, c = () => {
     a(), (0, u.jN)(h.S9g.COLLECTIBLES_SHOP)
-  }, f = (0, _.ZP)(), m = null != i;
+  }, f = (0, _.ZP)(), m = null != s;
   return (0, r.jsx)("section", {
     className: g.section,
     children: (0, r.jsx)(d.MasonryList, {
@@ -150,7 +150,7 @@ t.Z = e => {
             children: I.Z.Messages.COLLECTIBLES_SHOP
           })]
         }, E)).otherwise(e => {
-          let n = i === e.id;
+          let n = s === e.id;
           return (0, r.jsx)(Z, {
             user: t,
             style: {
@@ -158,7 +158,7 @@ t.Z = e => {
             },
             section: p,
             profileEffect: e,
-            innerRef: n ? s : void 0,
+            innerRef: n ? i : void 0,
             isSelected: n,
             onSelect: () => l(e.id)
           }, E)

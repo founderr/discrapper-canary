@@ -55,9 +55,9 @@ function I(e) {
     isSendingMessage: C
   } = (0, h.wD)(), I = (0, r.e7)([o.Z], () => o.Z.useReducedMotion), T = s.useRef(null), {
     selectedSkuId: g
-  } = (0, m.usePaymentContext)(), S = (0, r.e7)([d.Z], () => d.Z.getProduct(g)), {
-    confettiColors: A
-  } = (0, c.Z)(null == S ? void 0 : S.styles);
+  } = (0, m.usePaymentContext)(), N = (0, r.e7)([d.Z], () => d.Z.getProduct(g)), {
+    confettiColors: S
+  } = (0, c.Z)(null == N ? void 0 : N.styles);
   return n ? (0, a.jsxs)("div", {
     ref: T,
     children: [(0, a.jsx)(v.Z, {
@@ -71,8 +71,8 @@ function I(e) {
     }), !e.hideConfetti && !I && (0, a.jsx)(u.Z, {
       confettiTarget: T.current,
       confettiCanvas: e.confettiCanvas,
-      sprites: (0, f.vK)(null == S ? void 0 : S.categorySkuId),
-      colors: null == A ? void 0 : A.map(e => e.toHexString())
+      sprites: (0, f.vK)(null == N ? void 0 : N.categorySkuId),
+      colors: null == S ? void 0 : S.map(e => e.toHexString())
     })]
   }) : (0, a.jsx)(x, {
     ...e

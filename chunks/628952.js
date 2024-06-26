@@ -68,7 +68,7 @@ n.Z = e => {
     giftRecipientError: f
   } = (0, u.wD)(), I = (0, r.e7)([m.default], () => m.default.getCurrentUser());
   if (null == d || null == t) return null;
-  let [S] = d.items, A = null != c && c.id !== (null == I ? void 0 : I.id);
+  let [N] = d.items, S = null != c && c.id !== (null == I ? void 0 : I.id);
   return (0, a.jsxs)("div", {
     className: s,
     children: [(0, a.jsxs)("div", {
@@ -76,14 +76,14 @@ n.Z = e => {
       children: [(0, a.jsx)(o.FormTitle, {
         className: x.previewTitle,
         children: C.Z.Messages.COLLECTIBLES_GIFT_LABEL
-      }), A && (0, a.jsx)(o.Popout, {
+      }), S && (0, a.jsx)(o.Popout, {
         preload: () => (0, h.Z)(c.id, c.getAvatarURL(null, 80)),
         renderPopout: e => (0, a.jsx)(E.Z, {
           ...e,
           user: c,
           pendingAvatar: c.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
-          pendingAvatarDecoration: S.type === l.Z.AVATAR_DECORATION ? S : null,
-          pendingProfileEffectId: S.type === l.Z.PROFILE_EFFECT ? S.id : null,
+          pendingAvatarDecoration: N.type === l.Z.AVATAR_DECORATION ? N : null,
+          pendingProfileEffectId: N.type === l.Z.PROFILE_EFFECT ? N.id : null,
           canUsePremiumCustomization: !0,
           disabledInputs: !0
         }),
@@ -103,10 +103,10 @@ n.Z = e => {
       className: i()(x.previewContainer, {
         [x.previewContainerError]: null != f
       }),
-      children: [S.type === l.Z.AVATAR_DECORATION && (0, a.jsx)(T, {
-        avatarDecoration: S
-      }), S.type === l.Z.PROFILE_EFFECT && (0, a.jsx)(g, {
-        profileEffect: S
+      children: [N.type === l.Z.AVATAR_DECORATION && (0, a.jsx)(T, {
+        avatarDecoration: N
+      }), N.type === l.Z.PROFILE_EFFECT && (0, a.jsx)(g, {
+        profileEffect: N
       }), (0, a.jsxs)("div", {
         className: x.previewTextContainer,
         children: [(0, a.jsx)(o.Text, {
@@ -115,7 +115,7 @@ n.Z = e => {
         }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
           color: "header-secondary",
-          children: S.type === l.Z.AVATAR_DECORATION ? C.Z.Messages.USER_SETTINGS_AVATAR_DECORATION : S.type === l.Z.PROFILE_EFFECT ? C.Z.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+          children: N.type === l.Z.AVATAR_DECORATION ? C.Z.Messages.USER_SETTINGS_AVATAR_DECORATION : N.type === l.Z.PROFILE_EFFECT ? C.Z.Messages.USER_SETTINGS_PROFILE_EFFECT : null
         })]
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/semibold",

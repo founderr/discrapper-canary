@@ -63,10 +63,10 @@ function g(e) {
     setCustomGiftMessage: m,
     giftRecipientError: I,
     validatingGiftRecipient: g,
-    giftRecipient: S
+    giftRecipient: N
   } = (0, f.wD)(), {
-    selectedSkuId: A,
-    selectedSkuPricePreview: N
+    selectedSkuId: S,
+    selectedSkuPricePreview: A
   } = (0, h.usePaymentContext)(), _ = (0, s.e7)([u.default], () => u.default.getCurrentUser());
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(v.C3, {
@@ -80,7 +80,7 @@ function g(e) {
         }), (0, a.jsxs)("div", {
           className: x.bodyColumnRight,
           children: [(0, a.jsx)(r.Z, {
-            selectedSkuId: A,
+            selectedSkuId: S,
             className: x.sendTo
           }), (0, a.jsx)(o.Z, {
             sectionTitle: C.Z.Messages.GIFT_OPTIONAL_MESSAGE,
@@ -91,8 +91,8 @@ function g(e) {
             className: x.customGiftMessageWrapper,
             innerClassName: x.customGiftMessage
           }), (0, a.jsx)(l.Z, {
-            selectedSkuId: A,
-            selectedSkuPricePreview: N,
+            selectedSkuId: S,
+            selectedSkuPricePreview: A,
             className: x.giftPreview
           })]
         })]
@@ -104,7 +104,7 @@ function g(e) {
         children: (0, a.jsx)(T, {
           onStepChange: n,
           onBackClick: t,
-          disabled: null != I || null == S || S.id === (null == _ ? void 0 : _.id) || c.length > p.$n,
+          disabled: null != I || null == N || N.id === (null == _ ? void 0 : _.id) || c.length > p.$n,
           loading: g
         })
       })

@@ -23,7 +23,7 @@ function I(e) {
       type: n
     } = e;
     return n !== c.IIU.CUSTOM_STATUS
-  })), S = null === (n = (0, a.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === n ? void 0 : n.length, Z = null === (i = (0, r.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, m = [{
+  })), Z = null === (n = (0, a.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === n ? void 0 : n.length, S = null === (i = (0, r.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, m = [{
     section: d.oh.USER_INFO,
     text: u.Z.Messages.USER_PROFILE_ABOUT_ME
   }];
@@ -32,12 +32,12 @@ function I(e) {
     text: u.Z.Messages.USER_PROFILE_ACTIVITY
   }), I.id !== (null == f ? void 0 : f.id) && (m.push({
     section: d.oh.MUTUAL_FRIENDS,
-    text: (0, t.EQ)(S).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: (0, t.EQ)(Z).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }), m.push({
     section: d.oh.MUTUAL_GUILDS,
-    text: (0, t.EQ)(Z).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, t.EQ)(S).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
   })), m

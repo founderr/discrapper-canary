@@ -16,8 +16,8 @@ var t = i(735250),
   f = i(543595),
   E = i(785717),
   _ = i(221292),
-  S = i(981631),
-  Z = i(110957),
+  Z = i(981631),
+  S = i(110957),
   m = i(667589);
 
 function v(e) {
@@ -26,16 +26,16 @@ function v(e) {
     type: i,
     showActions: o,
     onClose: v
-  } = e, x = (0, a.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(n.id)), g = s.useMemo(() => h.filter(e => e.type !== S.IIU.CUSTOM_STATUS), [h]), N = s.useMemo(() => x ? g.find(e => e.type === S.IIU.PLAYING) : null, [g, x]), p = s.useMemo(() => g.filter(e => e !== N), [N, g]), {
+  } = e, x = (0, a.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(n.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(n.id)), g = s.useMemo(() => h.filter(e => e.type !== Z.IIU.CUSTOM_STATUS), [h]), N = s.useMemo(() => x ? g.find(e => e.type === Z.IIU.PLAYING) : null, [g, x]), p = s.useMemo(() => g.filter(e => e !== N), [N, g]), {
     analyticsLocations: T,
     newestAnalyticsLocation: C
   } = (0, c.ZP)(), {
     trackUserProfileAction: R,
     ...A
-  } = (0, E.KZ)(), M = {
+  } = (0, E.KZ)(), j = {
     location: {
-      page: S.ZY5.USER_PROFILE,
-      section: S.jXE.PROFILE_MODAL
+      page: Z.ZY5.USER_PROFILE,
+      section: Z.jXE.PROFILE_MODAL
     }
   };
   return (0, t.jsxs)(r.ScrollerThin, {
@@ -45,18 +45,18 @@ function v(e) {
       type: i,
       user: n,
       source: C,
-      className: Z.userProfileActivity,
+      className: S.userProfileActivity,
       showChannelDetails: i === f.Y.SIMPLIFIED_PROFILE,
       activity: N,
-      actionColor: Z.actionColor,
-      analyticsParams: M,
+      actionColor: S.actionColor,
+      analyticsParams: j,
       showActions: o,
       onOpenGameProfile: v,
       onAction: () => {
         R({
           action: "JOIN_ACTIVITY"
         }), (0, _.Ac)({
-          activityType: S.IIU.STREAMING,
+          activityType: Z.IIU.STREAMING,
           activityName: null == N ? void 0 : N.name,
           activityPlatform: null == N ? void 0 : N.platform,
           activitySessionId: null == N ? void 0 : N.session_id,
@@ -71,10 +71,10 @@ function v(e) {
       user: n,
       useStoreStream: !1,
       source: C,
-      className: l()(Z.userProfileActivity, i === f.Y.SIMPLIFIED_PROFILE && Z.simplifiedProfileActivity),
+      className: l()(S.userProfileActivity, i === f.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
       showChannelDetails: i === f.Y.SIMPLIFIED_PROFILE,
-      actionColor: Z.actionColor,
-      analyticsParams: M,
+      actionColor: S.actionColor,
+      analyticsParams: j,
       showActions: o,
       onOpenGameProfile: v,
       onAction: () => {

@@ -6,8 +6,8 @@ t.d(n, {
 var a = t(735250);
 t(470079);
 var s = t(481060),
-  r = t(499033),
-  l = t(665906),
+  l = t(499033),
+  r = t(665906),
   i = t(689938),
   o = t(435042);
 
@@ -16,7 +16,7 @@ function c(e) {
     channel: n,
     header: t,
     startThread: c
-  } = e, d = (0, l.NE)(n), u = (0, l.Xu)(n);
+  } = e, d = (0, r.NE)(n), u = (0, r.Xu)(n);
   return (0, a.jsxs)("div", {
     className: o.container,
     children: [(0, a.jsxs)("div", {
@@ -29,7 +29,7 @@ function c(e) {
           width: 36,
           height: 36
         })
-      }), (0, a.jsx)(r.Z, {
+      }), (0, a.jsx)(l.Z, {
         className: o.stars
       })]
     }), (0, a.jsx)(s.Heading, {

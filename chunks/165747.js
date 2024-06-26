@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(993409),
-  s = n(901952),
+var s = n(993409),
+  i = n(901952),
   l = n(689938),
   o = n(472375);
 
@@ -18,7 +18,7 @@ function a(e) {
   } = e;
   return n ? (0, r.jsx)("footer", {
     className: o.footer,
-    children: !a && (0, r.jsx)(i.Z, {
+    children: !a && (0, r.jsx)(s.Z, {
       variant: "text",
       text: l.Z.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON,
       fullWidth: !0
@@ -26,7 +26,7 @@ function a(e) {
   }) : (0, r.jsx)("footer", {
     inert: "",
     className: o.footer,
-    children: (0, r.jsx)(s.Z, {
+    children: (0, r.jsx)(i.Z, {
       user: t
     })
   })

@@ -16,8 +16,8 @@ var t = i(735250),
   f = i(785717),
   E = i(648067),
   _ = i(588822),
-  S = i(900927),
-  Z = i(652853),
+  Z = i(900927),
+  S = i(652853),
   m = i(335191),
   v = i(988246),
   x = i(689938),
@@ -34,7 +34,7 @@ function g(e) {
     trackUserProfileAction: T
   } = (0, f.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
     theme: R
-  } = (0, Z.z)(), A = (0, o.e7)([u.default], () => u.default.locale), M = (0, d.Z)("user_profile"), j = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.Z)(i.id), U = (0, E.Z)(i.id), P = s.useRef(null);
+  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), j = (0, d.Z)("user_profile"), M = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.Z)(i.id), U = (0, E.Z)(i.id), P = s.useRef(null);
   return (s.useLayoutEffect(() => {
     if (p) {
       var e;
@@ -45,7 +45,7 @@ function g(e) {
     className: h.infoScroller,
     children: [(0, t.jsxs)("div", {
       className: h.userInfoSection,
-      children: [j && (0, t.jsxs)(t.Fragment, {
+      children: [M && (0, t.jsxs)(t.Fragment, {
         children: [(0, t.jsx)(l.Heading, {
           variant: "eyebrow",
           className: h.userInfoSectionHeader,
@@ -60,11 +60,11 @@ function g(e) {
           variant: "eyebrow",
           className: h.userInfoSectionHeader,
           children: x.Z.Messages.USER_PROFILE_MEMBER_SINCE
-        }), (0, t.jsx)(S.Z, {
+        }), (0, t.jsx)(Z.Z, {
           userId: i.id,
           textClassName: h.userInfoText
         })]
-      }), M && (0, t.jsx)("div", {
+      }), j && (0, t.jsx)("div", {
         className: h.clans,
         children: (0, t.jsx)("div", {
           className: h.userInfoText,

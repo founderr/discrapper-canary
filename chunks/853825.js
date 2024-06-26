@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-    return j
+    return M
   }
 }), i(47120);
 var t = i(735250),
@@ -16,8 +16,8 @@ var t = i(735250),
   f = i(318661),
   E = i(721987),
   _ = i(204197),
-  S = i(78675),
-  Z = i(741308),
+  Z = i(78675),
+  S = i(741308),
   m = i(588822),
   v = i(900927),
   x = i(678738),
@@ -29,14 +29,14 @@ var t = i(735250),
   C = i(327570),
   R = i(143599),
   A = i(784204);
-let M = u.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+let j = u.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
-function j(e) {
+function M(e) {
   let {
     user: n,
     guildId: i,
     channelId: u,
-    messageId: j,
+    messageId: M,
     roleId: U,
     transitionState: P,
     onClose: L,
@@ -64,7 +64,7 @@ function j(e) {
       userId: n.id,
       guildId: b,
       channelId: u,
-      messageId: j,
+      messageId: M,
       roleId: U,
       showGuildProfile: !0,
       children: (0, t.jsxs)(o.ModalRoot, {
@@ -78,7 +78,7 @@ function j(e) {
           profileType: N.y0.FULL_SIZE,
           ref: k,
           children: [(0, t.jsxs)("header", {
-            children: [(0, t.jsx)(S.Z, {
+            children: [(0, t.jsx)(Z.Z, {
               user: n,
               displayProfile: D,
               profileType: N.y0.FULL_SIZE,
@@ -87,7 +87,7 @@ function j(e) {
               className: C.headerInner,
               children: (0, t.jsx)("div", {
                 ...G,
-                children: (0, t.jsx)(M, {
+                children: (0, t.jsx)(j, {
                   src: B,
                   avatarDecoration: w,
                   size: o.AvatarSizes.SIZE_120,
@@ -109,7 +109,7 @@ function j(e) {
               nickname: c.ZP.getName(b, u, n),
               pronouns: null == D ? void 0 : D.pronouns,
               nicknameVariant: "heading-xl/bold",
-              tags: (0, t.jsx)(Z.Z, {
+              tags: (0, t.jsx)(S.Z, {
                 displayProfile: D,
                 profileType: N.y0.FULL_SIZE,
                 onClose: L

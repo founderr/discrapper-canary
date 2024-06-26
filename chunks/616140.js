@@ -16,8 +16,8 @@ var t = i(735250),
   f = i(944546),
   E = i(470900),
   _ = i(988246),
-  S = i(834534),
-  Z = i(228168),
+  Z = i(834534),
+  S = i(228168),
   m = i(784204);
 
 function v(e) {
@@ -29,20 +29,20 @@ function v(e) {
     displayProfile: l,
     onClose: a
   } = e;
-  return n === Z.oh.ACTIVITY ? (0, t.jsx)(u.Z, {
+  return n === S.oh.ACTIVITY ? (0, t.jsx)(u.Z, {
     showActions: (null == o ? void 0 : o.id) !== s.id,
     user: s,
     type: d.Y.SIMPLIFIED_PROFILE,
     onClose: a
-  }) : n === Z.oh.MUTUAL_FRIENDS ? (0, t.jsx)(f.Z, {
+  }) : n === S.oh.MUTUAL_FRIENDS ? (0, t.jsx)(f.Z, {
     user: s,
     onClose: a
-  }) : n === Z.oh.MUTUAL_GUILDS ? (0, t.jsx)(E.Z, {
+  }) : n === S.oh.MUTUAL_GUILDS ? (0, t.jsx)(E.Z, {
     user: s,
     onClose: a
-  }) : n === Z.oh.BOT_DATA_ACCESS ? (0, t.jsx)(I.Z, {
+  }) : n === S.oh.BOT_DATA_ACCESS ? (0, t.jsx)(I.Z, {
     user: s
-  }) : (0, t.jsx)(S.Z, {
+  }) : (0, t.jsx)(Z.Z, {
     user: s,
     currentUser: o,
     displayProfile: l,
@@ -58,8 +58,8 @@ function x(e) {
     currentUser: u,
     displayProfile: I,
     items: f,
-    initialSection: E = Z.oh.USER_INFO,
-    initialSubsection: S,
+    initialSection: E = S.oh.USER_INFO,
+    initialSubsection: Z,
     onClose: x
   } = e, {
     trackUserProfileAction: h
@@ -72,8 +72,8 @@ function x(e) {
         section: n
       } = e;
       return n === E
-    })) || void 0 === n ? void 0 : n.section) && void 0 !== i ? i : Z.oh.USER_INFO,
-    subsection: S
+    })) || void 0 === n ? void 0 : n.section) && void 0 !== i ? i : S.oh.USER_INFO,
+    subsection: Z
   }), C = s.useCallback(e => {
     h({
       action: "PRESS_SECTION",

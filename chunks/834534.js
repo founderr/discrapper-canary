@@ -17,8 +17,8 @@ var s = i(442837),
   f = i(588822),
   E = i(900927),
   _ = i(678738),
-  S = i(652853),
-  Z = i(335191),
+  Z = i(652853),
+  S = i(335191),
   m = i(351707),
   v = i(228168),
   x = i(689938),
@@ -33,9 +33,9 @@ function g(e) {
     onClose: p
   } = e, {
     theme: T
-  } = (0, S.z)(), {
+  } = (0, Z.z)(), {
     trackUserProfileAction: C
-  } = (0, c.KZ)(), R = null == g ? void 0 : g.guildId, A = (0, s.e7)([r.Z], () => null != R ? r.Z.getGuild(R) : null), M = (0, s.e7)([d.Z], () => d.Z.getGuildId()), j = (0, s.e7)([a.default], () => a.default.locale), U = (0, I.Z)(n.id), P = (0, u.Z)(n.id);
+  } = (0, c.KZ)(), R = null == g ? void 0 : g.guildId, A = (0, s.e7)([r.Z], () => null != R ? r.Z.getGuild(R) : null), j = (0, s.e7)([d.Z], () => d.Z.getGuildId()), M = (0, s.e7)([a.default], () => a.default.locale), U = (0, I.Z)(n.id), P = (0, u.Z)(n.id);
   return (0, t.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: h.scroller,
@@ -56,25 +56,25 @@ function g(e) {
       })
     }), U.length > 0 && (0, t.jsx)(_.Z, {
       title: x.Z.Messages.CONNECTIONS,
-      children: (0, t.jsx)(Z.OA, {
+      children: (0, t.jsx)(S.OA, {
         connectedAccounts: U,
         className: h.connections,
         userId: n.id,
         theme: T,
-        locale: j
+        locale: M
       })
     }), P.length > 0 && (0, t.jsx)(_.Z, {
       title: x.Z.Messages.APPS,
-      children: P.map(e => (0, t.jsx)(Z.tH, {
+      children: P.map(e => (0, t.jsx)(S.tH, {
         className: h.appsConnections,
         applicationRoleConnection: e,
-        locale: j,
+        locale: M,
         onApplicationClicked: () => {
           C({
             action: "PRESS_APP_CONNECTION"
           }), p()
         },
-        selectedGuildId: null != M ? M : void 0
+        selectedGuildId: null != j ? j : void 0
       }, e.application.id))
     }), (0, t.jsx)(_.Z, {
       title: x.Z.Messages.NOTE,

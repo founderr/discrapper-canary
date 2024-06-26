@@ -23,8 +23,8 @@ function _(e) {
     user: i,
     relationshipType: s,
     friendToken: _,
-    originalFriendingEnabled: S = !1,
-    improvedFriendingEnabled: Z = !1,
+    originalFriendingEnabled: Z = !1,
+    improvedFriendingEnabled: S = !1,
     onClose: m
   } = e, {
     newestAnalyticsLocation: v
@@ -37,7 +37,7 @@ function _(e) {
       action: "SEND_MESSAGE"
     }), a.Z.openPrivateChannel(i.id, !1, !1, v), m()
   };
-  if (Z) return s === I.OGo.FRIEND || i.bot ? (0, t.jsx)(u.Z, {
+  if (S) return s === I.OGo.FRIEND || i.bot ? (0, t.jsx)(u.Z, {
     variant: "text",
     text: f.Z.Messages.SEND_DM,
     icon: l.ChatIcon,
@@ -103,7 +103,7 @@ function _(e) {
       }
     })]
   });
-  if (s === I.OGo.FRIEND || i.bot) return S ? (0, t.jsx)(u.Z, {
+  if (s === I.OGo.FRIEND || i.bot) return Z ? (0, t.jsx)(u.Z, {
     variant: "text",
     text: f.Z.Messages.SEND_DM,
     color: o()(l.Button.Colors.PRIMARY, E.color),
@@ -120,7 +120,7 @@ function _(e) {
     color: l.Button.Colors.GREEN,
     disabled: !0
   });
-  if (s === I.OGo.PENDING_INCOMING) return S ? (0, t.jsx)(u.Z, {
+  if (s === I.OGo.PENDING_INCOMING) return Z ? (0, t.jsx)(u.Z, {
     variant: "text",
     text: f.Z.Messages.SEND_DM,
     color: o()(l.Button.Colors.PRIMARY, E.color),

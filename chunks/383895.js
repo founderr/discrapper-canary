@@ -11,14 +11,14 @@ var n = a(735250),
   m = a(142550),
   h = a(201133),
   x = a(693824),
-  g = a(919394),
-  E = a(91140),
+  E = a(919394),
+  g = a(91140),
   I = a(297781),
   v = a(359110),
   _ = a(592125),
-  p = a(594174),
-  A = a(5192),
-  M = a(689938),
+  A = a(594174),
+  M = a(5192),
+  p = a(689938),
   N = a(777450),
   j = a(997844);
 let O = e => {
@@ -32,8 +32,8 @@ let O = e => {
       let e = await d.Z.getOrEnsurePrivateChannel(l.author_id),
         n = _.Z.getChannel(e);
       o()(null != n, "DM channel cannot be null");
-      let s = await (0, g.QC)(l, n, x.kH.Base64),
-        t = await (0, g.QC)(l, n, x.kH.CloudUpload);
+      let s = await (0, E.QC)(l, n, x.kH.Base64),
+        t = await (0, E.QC)(l, n, x.kH.CloudUpload);
       c(s), a(t)
     })()
   }, [l, a]), (0, n.jsxs)("div", {
@@ -43,7 +43,7 @@ let O = e => {
     }), null != r && (0, n.jsx)("img", {
       className: N.reactReplyPreview,
       src: r,
-      alt: M.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
+      alt: p.Z.Messages.GAME_PROFILE_GAME_REACT_REPLY_ALT.format({
         userName: t,
         gameName: l.extra.game_name
       })
@@ -56,11 +56,11 @@ l.Z = e => {
     channel: a,
     style: t = {},
     onClose: r
-  } = e, x = p.default.getUser(l.author_id), {
-    nick: g,
+  } = e, x = A.default.getUser(l.author_id), {
+    nick: E,
     avatar: T
   } = s.useMemo(() => {
-    let e = A.ZP.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, x);
+    let e = M.ZP.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, x);
     return {
       nick: e,
       avatar: null == x ? void 0 : x.getAvatarURL(null == a ? void 0 : a.guild_id, 48, !1)
@@ -75,8 +75,8 @@ l.Z = e => {
       children: [(0, n.jsx)("img", {
         className: N.avatar,
         src: T,
-        alt: M.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
-          userName: g
+        alt: p.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
+          userName: E
         })
       }), (0, n.jsx)("div", {
         className: i()(N.playerInfo),
@@ -86,10 +86,10 @@ l.Z = e => {
             variant: "text-sm/bold",
             color: "text-normal",
             lineClamp: 1,
-            children: [g.slice(0, 18), " ", g.length > 18 ? "..." : ""]
+            children: [E.slice(0, 18), " ", E.length > 18 ? "..." : ""]
           }), (0, n.jsx)(I.Gk, {
             location: I.Gt.CARD,
-            children: E.W.slice(0, 2).map((e, a) => (0, n.jsx)(e, {
+            children: g.W.slice(0, 2).map((e, a) => (0, n.jsx)(e, {
               entry: l
             }, a))
           })]
@@ -120,11 +120,11 @@ l.Z = e => {
           popoutBody: (0, n.jsx)(O, {
             entry: l,
             setGeneratedImage: L,
-            nickName: g
+            nickName: E
           }),
           replyHeaderText: "",
-          replyPlaceholder: M.Z.Messages.QUICK_DM_USER.format({
-            name: g
+          replyPlaceholder: p.Z.Messages.QUICK_DM_USER.format({
+            name: E
           })
         }
       })

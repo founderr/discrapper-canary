@@ -5,8 +5,8 @@ t.d(n, {
 });
 var a = t(735250),
   s = t(470079),
-  r = t(120356),
-  l = t.n(r),
+  l = t(120356),
+  r = t.n(l),
   i = t(481060),
   o = t(487894),
   c = t(300234),
@@ -17,7 +17,7 @@ function h(e) {
   let {
     channel: n,
     threadIds: t,
-    startThread: r,
+    startThread: l,
     goToThread: h
   } = e, m = s.useCallback(e => (0, a.jsx)(c.Z, {
     threadId: t[e.row],
@@ -26,9 +26,9 @@ function h(e) {
   return 0 === t.length ? (0, a.jsx)(o.Z, {
     channel: n,
     header: d.Z.Messages.THREAD_BROWSER_EMPTY_STATE_HEADER,
-    startThread: r
+    startThread: l
   }) : (0, a.jsx)(i.List, {
-    className: l()(u.list, u.activeThreadsList),
+    className: r()(u.list, u.activeThreadsList),
     fade: !0,
     sections: [t.length],
     sectionHeight: 0,

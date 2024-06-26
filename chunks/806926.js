@@ -17,8 +17,8 @@ var s = i(442837),
   f = i(616140),
   E = i(107194),
   _ = i(228168),
-  S = i(981631),
-  Z = i(327570);
+  Z = i(981631),
+  S = i(327570);
 
 function m(e) {
   var n;
@@ -41,7 +41,7 @@ function m(e) {
     currentUser: m
   });
   return (0, t.jsxs)("div", {
-    className: Z.body,
+    className: S.body,
     children: [(0, t.jsx)(I.Z, {
       user: i,
       profileType: _.y0.FULL_SIZE,
@@ -56,17 +56,17 @@ function m(e) {
         profileType: _.y0.FULL_SIZE,
         onClose: p
       })
-    }), (R || C) && T === S.OGo.PENDING_INCOMING && (0, t.jsx)(u.Z.Overlay, {
-      className: Z.friendRequestBannerOverlay,
+    }), (R || C) && T === Z.OGo.PENDING_INCOMING && (0, t.jsx)(u.Z.Overlay, {
+      className: S.friendRequestBannerOverlay,
       children: (0, t.jsx)(c.Z, {
         user: i,
         guildId: null !== (n = null == x ? void 0 : x.guildId) && void 0 !== n ? n : void 0,
         channelId: v,
         friendToken: N,
-        className: Z.friendRequestBanner
+        className: S.friendRequestBanner
       })
     }), (0, t.jsx)(u.Z.Overlay, {
-      className: Z.overlay,
+      className: S.overlay,
       children: (0, t.jsx)(f.Z, {
         user: i,
         currentUser: m,

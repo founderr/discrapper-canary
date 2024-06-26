@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(78675),
+var s = n(481060),
+  i = n(78675),
   l = n(654904),
   o = n(486324),
   a = n(228168),
@@ -24,8 +24,8 @@ function u(e) {
     isTryItOutFlow: p,
     disabledInputs: _,
     onUpsellClick: h
-  } = e, I = f || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1, g = I ? i.PencilIcon : i.NitroWheelIcon;
-  return (0, r.jsx)(s.Z, {
+  } = e, I = f || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1, g = I ? s.PencilIcon : s.NitroWheelIcon;
+  return (0, r.jsx)(i.Z, {
     user: t,
     displayProfile: n,
     guildId: u,
@@ -33,7 +33,7 @@ function u(e) {
     pendingBanner: m,
     hasProfileEffect: E,
     canUsePremiumCustomization: f,
-    children: !_ && (0, r.jsxs)(i.Clickable, {
+    children: !_ && (0, r.jsxs)(s.Clickable, {
       onClick: () => {
         if (!I) {
           null == h || h();
@@ -44,7 +44,7 @@ function u(e) {
       children: [(0, r.jsx)(g, {
         size: "xs",
         color: "white"
-      }), (0, r.jsx)(i.Heading, {
+      }), (0, r.jsx)(s.Heading, {
         variant: "text-sm/medium",
         color: "always-white",
         children: I ? c.Z.Messages.CHANGE_BANNER : c.Z.Messages.USER_SETTINGS_UNLOCK_BANNER

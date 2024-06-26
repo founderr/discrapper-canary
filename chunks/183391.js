@@ -11,8 +11,8 @@ var n = a(735250),
   m = a(768581),
   h = a(981631),
   x = a(689938),
-  g = a(997844);
-let E = [r.p.OFFICIAL, r.p.TWITTER, r.p.YOUTUBE],
+  E = a(997844);
+let g = [r.p.OFFICIAL, r.p.TWITTER, r.p.YOUTUBE],
   I = e => {
     let {
       invite: l
@@ -29,20 +29,20 @@ let E = [r.p.OFFICIAL, r.p.TWITTER, r.p.YOUTUBE],
       size: 32
     });
     return (0, n.jsxs)("div", {
-      className: i()(g.column),
+      className: i()(E.column),
       children: [(0, n.jsx)(o.Text, {
         variant: "text-xs/semibold",
         children: x.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
       }), (0, n.jsxs)("div", {
-        className: i()(g.row, g.gapMd),
+        className: i()(E.row, E.gapMd),
         children: [(0, n.jsx)("img", {
-          className: g.icon,
+          className: E.icon,
           src: r,
           alt: x.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
             guildName: s.name
           })
         }), (0, n.jsxs)("div", {
-          className: i()(g.gapNone),
+          className: i()(E.gapNone),
           children: [(0, n.jsx)(o.Text, {
             variant: "text-sm/normal",
             children: s.name
@@ -90,19 +90,19 @@ l.Z = e => {
     let {
       category: l
     } = e;
-    return E.includes(l)
+    return g.includes(l)
   }).sort((e, l) => e.category - l.category);
   return (0, n.jsxs)("div", {
-    className: i()(g.column),
+    className: i()(E.column),
     children: [null != t && (0, n.jsx)(I, {
       invite: t
     }), (0, n.jsxs)("div", {
-      className: i()(g.column, g.gapSm),
+      className: i()(E.column, E.gapSm),
       children: [(0, n.jsx)(o.Text, {
         variant: "text-xs/semibold",
         children: x.Z.Messages.GAME_PROFILE_LINKS
       }), (0, n.jsx)("div", {
-        className: g.row,
+        className: E.row,
         children: u.map(e => {
           let {
             category: l,

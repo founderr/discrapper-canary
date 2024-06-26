@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return A
+    return S
   }
 }), t(47120);
 var a = t(735250),
@@ -23,18 +23,18 @@ var a = t(735250),
   I = t(981631),
   T = t(302800),
   g = t(231338),
-  S = t(99178);
+  N = t(99178);
 
-function A(e) {
+function S(e) {
   let {
     onClose: n,
     onComplete: t,
     onStepChange: i,
-    transitionState: A,
-    loadId: N,
+    transitionState: S,
+    loadId: A,
     skuId: _,
-    isGift: Z = !1,
-    giftRecipient: j,
+    isGift: j = !1,
+    giftRecipient: Z,
     giftMessage: P,
     analyticsLocations: y,
     returnRef: O
@@ -53,35 +53,35 @@ function A(e) {
       hideConfetti: null != w
     }),
     options: {
-      bodyClassName: S.modalOverrideBody,
-      sliderBodyClassName: S.modalOverrideSliderBody
+      bodyClassName: N.modalOverrideBody,
+      sliderBodyClassName: N.modalOverrideSliderBody
     }
   }], [M, L, w]);
   return (0, a.jsxs)(d.Gt, {
     value: M,
     children: [(0, a.jsx)(r.O_, {
       ref: k,
-      className: S.confettiCanvas,
+      className: N.confettiCanvas,
       environment: R.current
     }), null != w && (0, a.jsx)("img", {
       src: w.confettiAssetSrc,
-      className: l()(S.customConfetti, {
-        [S.hidden]: !b
+      className: l()(N.customConfetti, {
+        [N.hidden]: !b
       }),
       style: w.style,
       alt: "",
       "aria-hidden": !0
     }), (0, a.jsx)(u.PaymentContextProvider, {
-      loadId: N,
+      loadId: A,
       stepConfigs: G,
       applicationId: I.XAJ,
       skuIDs: [_],
-      isGift: Z,
+      isGift: j,
       activeSubscription: null,
       purchaseType: g.GZ.ONE_TIME,
       children: (0, a.jsx)(c.KB, {
-        isGift: Z,
-        giftRecipient: j,
+        isGift: j,
+        giftRecipient: Z,
         giftMessage: P,
         children: (0, a.jsx)(f.PaymentModal, {
           onClose: F,
@@ -90,8 +90,8 @@ function A(e) {
           skuId: _,
           initialPlanId: null,
           analyticsLocations: M,
-          transitionState: A,
-          renderHeader: (e, n, t) => Z ? (0, a.jsx)(m.Z, {
+          transitionState: S,
+          renderHeader: (e, n, t) => j ? (0, a.jsx)(m.Z, {
             step: t,
             onClose: () => n(!1)
           }) : (0, a.jsx)(x.Z, {

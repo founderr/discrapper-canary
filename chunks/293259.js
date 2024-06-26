@@ -16,8 +16,8 @@ var t = i(735250),
   f = i(998502),
   E = i(785717),
   _ = i(621853),
-  S = i(204197),
-  Z = i(735336),
+  Z = i(204197),
+  S = i(735336),
   m = i(520978),
   v = i(184325),
   x = i(652853),
@@ -34,8 +34,8 @@ function A(e) {
     displayProfile: n,
     user: f,
     guildId: A,
-    channelId: M,
-    friendToken: j,
+    channelId: j,
+    friendToken: M,
     className: U,
     isStreaming: P,
     hasProfileEffect: L,
@@ -48,13 +48,13 @@ function A(e) {
     avatarSrc: k,
     eventHandlers: Y,
     avatarDecorationSrc: V
-  } = (0, S.Z)({
+  } = (0, Z.Z)({
     user: f,
     size: C
-  }), H = s.useMemo(() => (0, d.W)(f, M), [f, M]);
+  }), H = s.useMemo(() => (0, d.W)(f, j), [f, j]);
   return (0, t.jsxs)("header", {
     className: U,
-    children: [(0, t.jsx)(Z.Z, {
+    children: [(0, t.jsx)(S.Z, {
       displayProfile: n,
       onClose: O,
       user: f,
@@ -105,7 +105,7 @@ function A(e) {
             user: f,
             isCurrentUser: B,
             relationshipType: y,
-            friendToken: j,
+            friendToken: M,
             onClose: O
           }), B || f.isNonUserBot() ? null : (0, t.jsx)(a.Clickable, {
             focusProps: {

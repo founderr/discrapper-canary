@@ -1,7 +1,7 @@
 var r = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
+var s = n(442837),
+  i = n(481060),
   l = n(809206),
   o = n(597688),
   a = n(884697),
@@ -26,22 +26,22 @@ let Z = e => {
       pendingProfileEffectRecord: l,
       product: c,
       purchase: d
-    } = e, u = (0, i.e7)([g.default], () => g.default.getCurrentUser()), f = (0, i.e7)([o.Z], () => o.Z.getProduct(null == l ? void 0 : l.skuId)), m = (0, i.e7)([p.default], () => p.default.locale), E = v.ZP.canUseCollectibles(u), _ = (0, a.qS)(d), h = (0, a.G1)(c), I = P(!E && _, h, E);
+    } = e, u = (0, s.e7)([g.default], () => g.default.getCurrentUser()), f = (0, s.e7)([o.Z], () => o.Z.getProduct(null == l ? void 0 : l.skuId)), m = (0, s.e7)([p.default], () => p.default.locale), E = v.ZP.canUseCollectibles(u), _ = (0, a.qS)(d), h = (0, a.G1)(c), I = P(!E && _, h, E);
     return null != l ? (0, r.jsx)("div", {
       className: n ? x.effectDescriptionNoGradient : x.effectDescriptionBorderWithGradient,
       children: (0, r.jsxs)("div", {
         className: x.effectDescriptionContainer,
-        children: [(0, r.jsx)(s.Text, {
+        children: [(0, r.jsx)(i.Text, {
           color: "header-primary",
           variant: "text-sm/semibold",
           className: x.effectName,
           children: null !== (t = null == d ? void 0 : d.name) && void 0 !== t ? t : null == f ? void 0 : f.name
-        }), (0, r.jsx)(s.Text, {
+        }), (0, r.jsx)(i.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
           className: x.effectDescription,
           children: null != d ? d.summary : I
-        }), null != d && (0, r.jsxs)(s.Text, {
+        }), null != d && (0, r.jsxs)(i.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
           className: x.effectPurchasedAt,
@@ -62,7 +62,7 @@ t.Z = e => {
   var t;
   let {
     user: n,
-    pendingProfileEffectRecord: s,
+    pendingProfileEffectRecord: i,
     canApplySelectedChange: o,
     product: a,
     purchase: p,
@@ -71,31 +71,31 @@ t.Z = e => {
     pendingGlobalName: C,
     pendingNickname: P,
     pendingPronouns: A,
-    pendingBio: T,
-    pendingBanner: N,
+    pendingBio: N,
+    pendingBanner: T,
     pendingAvatar: S,
     pendingAvatarDecoration: j,
     pendingThemeColors: R,
     pendingAccentColor: M
-  } = (0, i.cj)([d.Z, I.Z], () => ({
+  } = (0, s.cj)([d.Z, I.Z], () => ({
     pendingNickname: void 0,
     pendingGlobalName: void 0,
     pendingAccentColor: void 0,
     ...null != g ? d.Z.getAllPending() : I.Z.getAllPending()
-  })), O = v.ZP.isPremium(n), b = v.ZP.canUsePremiumProfileCustomization(n), y = (0, E.ZP)(n.id), B = !!(null == y ? void 0 : y.getPreviewBio(T).value), L = {
+  })), O = v.ZP.isPremium(n), b = v.ZP.canUsePremiumProfileCustomization(n), y = (0, E.ZP)(n.id), B = !!(null == y ? void 0 : y.getPreviewBio(N).value), L = {
     user: n,
     guild: g,
     pendingGlobalName: C,
     pendingNickname: P,
     pendingPronouns: A,
-    pendingBio: _.dN.useSetting() && null != T ? u.ZP.parse(void 0, T).content : T,
-    pendingBanner: N,
+    pendingBio: _.dN.useSetting() && null != N ? u.ZP.parse(void 0, N).content : N,
+    pendingBanner: T,
     useLargeBanner: !0,
     pendingAvatar: S,
     pendingAvatarDecoration: j,
     pendingThemeColors: R,
     pendingAccentColor: M,
-    pendingProfileEffectId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : null,
+    pendingProfileEffectId: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : null,
     hideFakeActivity: B,
     canUsePremiumCustomization: b,
     onUpsellClick: h.Z,
@@ -110,7 +110,7 @@ t.Z = e => {
       hideCustomStatus: !0
     }), !1, (0, r.jsx)(Z, {
       effectIsOwned: o,
-      pendingProfileEffectRecord: s,
+      pendingProfileEffectRecord: i,
       product: a,
       purchase: p,
       userIsPremium: O

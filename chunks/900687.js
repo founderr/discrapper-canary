@@ -21,8 +21,8 @@ function I(e) {
     guildId: f,
     friendToken: E,
     canDM: _,
-    relationshipType: S,
-    originalFriendingEnabled: Z = !1,
+    relationshipType: Z,
+    originalFriendingEnabled: S = !1,
     improvedFriendingEnabled: m = !1,
     viewProfileItem: v,
     onClose: x
@@ -39,8 +39,8 @@ function I(e) {
       } = await i.e("29136").then(i.bind(i, 193646));
       return i => (0, t.jsx)(e, {
         ...i,
-        originalFriendingEnabled: Z,
-        relationshipType: S,
+        originalFriendingEnabled: S,
+        relationshipType: Z,
         viewProfileItem: v,
         user: n,
         isCurrentUser: I,
@@ -52,12 +52,12 @@ function I(e) {
   }
   return (0, t.jsxs)("div", {
     className: u.buttons,
-    children: [(Z || m) && (0, t.jsxs)(t.Fragment, {
+    children: [(S || m) && (0, t.jsxs)(t.Fragment, {
       children: [(0, t.jsx)(d.Z, {
         user: n,
         isCurrentUser: I,
-        relationshipType: S,
-        originalFriendingEnabled: Z,
+        relationshipType: Z,
+        originalFriendingEnabled: S,
         improvedFriendingEnabled: m,
         friendToken: E,
         onClose: x
@@ -66,7 +66,7 @@ function I(e) {
         guildId: f,
         profileType: c.y0.FULL_SIZE,
         onClose: x
-      }), !n.isNonUserBot() && Z ? (0, t.jsx)(s.Clickable, {
+      }), !n.isNonUserBot() && S ? (0, t.jsx)(s.Clickable, {
         focusProps: {
           offset: {
             left: 8
@@ -79,7 +79,7 @@ function I(e) {
           className: u.additionalActionsIcon
         })
       }) : null]
-    }), !Z && !m && (_ ? (0, t.jsx)(r.Z, {
+    }), !S && !m && (_ ? (0, t.jsx)(r.Z, {
       user: n,
       onClose: x
     }) : (0, t.jsx)(a.Z, {
