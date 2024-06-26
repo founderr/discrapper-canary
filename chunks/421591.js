@@ -3,37 +3,35 @@ n(47120);
 var i = n(735250),
   r = n(470079),
   s = n(367907),
-  o = n(566860),
-  a = n(596359),
-  l = n(541099),
-  u = n(695676),
-  _ = n(173790),
-  c = n(361917),
-  d = n(684256),
-  E = n(981631),
-  I = n(987421);
+  o = n(541099),
+  a = n(695676),
+  l = n(173790),
+  u = n(361917),
+  _ = n(684256),
+  c = n(981631),
+  d = n(987421);
 t.Z = r.memo(function(e) {
   let t, {
       drawerRef: n,
-      channel: T,
-      entrypoint: h
+      channel: E,
+      entrypoint: I
     } = e,
-    [f, S] = r.useState("");
+    [T, h] = r.useState("");
   r.useEffect(() => {
-    (0, s.yw)(E.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-      source: h,
+    (0, s.yw)(c.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+      source: I,
       location: "app_launcher"
     })
-  }, [h]);
+  }, [I]);
   let {
-    history: N,
-    setHistory: A,
-    currentView: m,
-    pushHistory: O,
-    goBack: p
+    history: f,
+    setHistory: S,
+    currentView: N,
+    pushHistory: A,
+    goBack: m
   } = function() {
     let [e, t] = r.useState([{
-      type: u.gc.HOME
+      type: a.gc.HOME
     }]), n = e[e.length - 1];
     return {
       history: e,
@@ -49,70 +47,56 @@ t.Z = r.memo(function(e) {
       }
     }
   }();
-  r.useEffect(() => {
-    let e = Date.now();
-    return () => {
-      (0, s.yw)(E.rMx.APP_LAUNCHER_CLOSED, {
-        reason: l.Z.closeReason(),
-        time_spent: Date.now() - e,
-        source: h
-      })
-    }
-  }, [h]);
-  let R = o.K.useExperiment({
-      location: "App Launcher Root"
-    }, {
-      autoTrackExposure: !0
-    }),
-    g = a.$.useExperiment({
-      location: "App Launcher Root"
-    }, {
-      autoTrackExposure: !0
-    });
-  switch (null == m ? void 0 : m.type) {
-    case u.gc.HOME:
-      t = (0, i.jsx)(c.Z, {
-        channel: T,
-        entrypoint: h,
-        searchQuery: f,
-        setSearchQuery: S,
-        enableRecommendations: R.recommendationsEnabled,
-        enableRecents: R.recentsDropdownEnabled,
-        enableGlobalSearch: g.enabled
+  switch (r.useEffect(() => {
+      let e = Date.now();
+      return () => {
+        (0, s.yw)(c.rMx.APP_LAUNCHER_CLOSED, {
+          reason: o.Z.closeReason(),
+          time_spent: Date.now() - e,
+          source: I
+        })
+      }
+    }, [I]), null == N ? void 0 : N.type) {
+    case a.gc.HOME:
+      t = (0, i.jsx)(u.Z, {
+        channel: E,
+        entrypoint: I,
+        searchQuery: T,
+        setSearchQuery: h
       });
       break;
-    case u.gc.LIST:
-      t = (0, i.jsx)(d.Z, {
-        channel: T,
-        entrypoint: h,
-        title: m.title,
-        look: m.look,
-        items: m.items,
-        sectionName: m.sectionName
-      });
-      break;
-    case u.gc.APPLICATION:
+    case a.gc.LIST:
       t = (0, i.jsx)(_.Z, {
-        channel: T,
-        application: m.application,
-        sectionName: m.sectionName
+        channel: E,
+        entrypoint: I,
+        title: N.title,
+        look: N.look,
+        items: N.items,
+        sectionName: N.sectionName
+      });
+      break;
+    case a.gc.APPLICATION:
+      t = (0, i.jsx)(l.Z, {
+        channel: E,
+        application: N.application,
+        sectionName: N.sectionName
       });
       break;
     default:
       t = null
   }
   return (0, i.jsx)("div", {
-    className: I.drawerSizingWrapper,
+    className: d.drawerSizingWrapper,
     ref: n,
     children: (0, i.jsx)("div", {
-      className: I.contentWrapper,
-      children: (0, i.jsx)(u.uX.Provider, {
+      className: d.contentWrapper,
+      children: (0, i.jsx)(a.uX.Provider, {
         value: {
-          history: N,
-          setHistory: A,
-          currentView: m,
-          pushHistory: O,
-          goBack: p
+          history: f,
+          setHistory: S,
+          currentView: N,
+          pushHistory: A,
+          goBack: m
         },
         children: t
       })

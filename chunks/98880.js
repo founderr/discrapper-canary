@@ -3,11 +3,14 @@ n.d(t, {
   U4: function() {
     return i
   },
-  kA: function() {
+  cG: function() {
     return M
   },
-  qR: function() {
+  kA: function() {
     return P
+  },
+  qR: function() {
+    return y
   }
 }), n(411104);
 var i, r, s = n(735250),
@@ -156,42 +159,44 @@ function D(e) {
     alt: "",
     className: g.bannerImage
   })
-}(r = i || (i = {})).ICON = "icon", r.NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner";
+}
 
 function M(e) {
-  let t = function(e) {
-    let {
+  let {
+    application: t,
+    sectionName: n,
+    resultsPosition: i,
+    query: r,
+    installOnDemand: s
+  } = e, {
+    pushHistory: a
+  } = (0, N.hH)();
+  return o.useCallback(e => {
+    e.stopPropagation(), (0, E.yw)(O.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+      application_id: t.id,
+      section_name: n,
+      search_results_position: i,
+      source: f.Z.entrypoint(),
+      location,
+      query: r
+    }), a({
+      type: N.gc.APPLICATION,
       application: t,
-      sectionName: n,
-      resultsPosition: i,
-      query: r,
-      installOnDemand: s
-    } = e, {
-      pushHistory: a
-    } = (0, N.hH)();
-    return o.useCallback(e => {
-      e.stopPropagation(), (0, E.yw)(O.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
-        application_id: t.id,
-        section_name: n,
-        search_results_position: i,
-        source: f.Z.entrypoint(),
-        location,
-        query: r
-      }), a({
-        type: N.gc.APPLICATION,
-        application: t,
-        installOnDemand: s,
-        sectionName: n
-      })
-    }, [t, s, a, r, i, n])
-  }(e);
+      installOnDemand: s,
+      sectionName: n
+    })
+  }, [t, s, a, r, i, n])
+}
+
+function P(e) {
+  let t = M(e);
   return (0, s.jsx)(C, {
     ...e,
     onClick: t
   })
 }
 
-function P(e) {
+function y(e) {
   let {
     channel: t,
     application: n,
@@ -230,4 +235,4 @@ function P(e) {
       })
     })
   })
-}
+}(r = i || (i = {})).ICON = "icon", r.NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner"

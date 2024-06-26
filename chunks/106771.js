@@ -9,25 +9,26 @@ var i = n(735250),
   s = n(481060),
   o = n(783097),
   a = n(753972),
-  l = n(421948);
+  l = n(451684);
 
 function u(e) {
+  var t;
   let {
-    command: t,
-    application: n,
-    onClick: u
+    command: n,
+    application: u,
+    onClick: _
   } = e, {
-    iconURL: _,
-    name: c,
-    description: d
-  } = r.useMemo(() => (0, o.sl)(n, {
+    iconURL: c,
+    name: d,
+    description: E
+  } = r.useMemo(() => (0, o.sl)(u, {
     botIconFirst: !0
-  }), [n]);
+  }), [u]);
   return (0, i.jsxs)(s.Clickable, {
     className: l.container,
-    onClick: u,
-    children: [null != _ && (0, i.jsx)(a.Z, {
-      src: _,
+    onClick: _,
+    children: [null != c && (0, i.jsx)(a.Z, {
+      src: c,
       className: l.icon,
       "aria-hidden": !0
     }), (0, i.jsxs)("div", {
@@ -36,19 +37,19 @@ function u(e) {
         variant: "heading-md/semibold",
         color: "header-primary",
         lineClamp: 1,
-        children: t.displayName
+        children: null !== (t = null == n ? void 0 : n.displayName) && void 0 !== t ? t : d
       }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
         color: "text-secondary",
         lineClamp: 1,
-        children: d
+        children: E
       })]
-    }), (0, i.jsx)(s.Text, {
+    }), null != n ? (0, i.jsx)(s.Text, {
       className: l.cmdAppName,
       variant: "text-sm/normal",
       color: "text-secondary",
-      children: c
-    }), (0, i.jsx)("div", {
+      children: d
+    }) : null, (0, i.jsx)("div", {
       className: l.underline
     })]
   })

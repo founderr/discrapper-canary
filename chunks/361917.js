@@ -55,46 +55,43 @@ function k(e) {
     channel: t,
     entrypoint: n,
     searchQuery: s,
-    setSearchQuery: o,
-    enableRecommendations: a,
-    enableRecents: l,
-    enableGlobalSearch: u
-  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === R._b.TEXT && l, T = n === R._b.TEXT, h = n === R._b.TEXT && a, f = n === R._b.VOICE, S = h || T, N = n === R._b.TEXT;
+    setSearchQuery: o
+  } = e, a = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), l = n === R._b.TEXT, u = n === R._b.TEXT, c = n === R._b.TEXT, I = n === R._b.VOICE, T = c || u, h = n === R._b.TEXT;
   r.useEffect(() => {
-    c && (0, E.w1)({
+    a && (0, E.w1)({
       guildId: t.getGuildId(),
       force: !0
     })
-  }, [c, t]);
-  let A = s.length > 0;
+  }, [a, t]);
+  let f = s.length > 0;
   return (0, i.jsxs)("div", {
     className: G.container,
     children: [(0, i.jsx)(V, {
       searchQuery: s,
       setSearchQuery: o,
-      placeholder: N ? b.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : b.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+      placeholder: h ? b.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : b.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
     }), (0, i.jsx)(_.Scroller, {
       className: G.scrollableContent,
       fade: !0,
-      children: A ? (0, i.jsx)("div", {
+      children: f ? (0, i.jsx)("div", {
         children: (0, i.jsx)(P.Z, {
           channel: t,
           query: s,
           entrypoint: n,
-          enableGlobalSearch: u,
-          enableActivitiesSearch: c
+          enableGlobalSearch: n === R._b.TEXT,
+          enableActivitiesSearch: a
         })
       }) : (0, i.jsxs)("div", {
-        children: [I && (0, i.jsx)(Z, {
+        children: [l && (0, i.jsx)(Z, {
           channel: t,
           entrypoint: n
-        }), T && (0, i.jsx)(F, {
+        }), u && (0, i.jsx)(F, {
           channel: t
-        }), h && (0, i.jsx)(Y, {
+        }), c && (0, i.jsx)(Y, {
           channel: t
-        }), f && (0, i.jsx)(H, {
+        }), I && (0, i.jsx)(H, {
           channel: t
-        }), S && (0, i.jsx)(M.Z, {})]
+        }), T && (0, i.jsx)(M.Z, {})]
       })
     })]
   })
