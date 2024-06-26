@@ -32,8 +32,8 @@ var r = n(735250),
   k = n(937510),
   A = n(853748),
   P = n(426171),
-  Z = n(823941),
-  y = n(752053),
+  y = n(823941),
+  Z = n(752053),
   M = n(963102),
   w = n(128185),
   D = n(508498),
@@ -148,7 +148,7 @@ function ee(e) {
         idleAnimationState: h.S.IDLE,
         giftStyle: X.Cj.BOX
       })
-    }), (0, r.jsx)(Z.Z, {
+    }), (0, r.jsx)(y.Z, {
       category: t,
       hideLimitedTimeBadge: null != m,
       index: u
@@ -178,7 +178,7 @@ t.default = function(e) {
     onClose: x
   } = (0, D.Db)(), O = (0, l.e7)([v.default], () => v.default.getCurrentUser()), k = T.ZP.canUseCollectibles(O), {
     categories: A,
-    isFetchingCategories: Z,
+    isFetchingCategories: y,
     error: H,
     refreshCategories: V
   } = (0, B.Z)();
@@ -189,7 +189,7 @@ t.default = function(e) {
     [et, en] = a.useState(!1);
   (0, P.Kp)({
     categories: A,
-    isFetchingCategories: Z,
+    isFetchingCategories: y,
     isLayer: g,
     initialItemCardRef: Q
   });
@@ -273,10 +273,10 @@ t.default = function(e) {
             className: o()($.page, {
               [$.pageFullscreen]: t
             }),
-            children: [eu && (0, r.jsx)(w.h, {
+            children: [eu && q.length > 0 && (0, r.jsx)(w.h, {
               categories: q,
               handleScrollToCategory: ed
-            }), Z ? (0, r.jsx)(F.Z, {}) : H ? (0, r.jsx)(y.Z, {
+            }), y ? (0, r.jsx)(F.Z, {}) : H ? (0, r.jsx)(Z.Z, {
               onRetry: es
             }) : (0, r.jsx)("div", {
               className: $.categories,

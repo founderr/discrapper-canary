@@ -93,49 +93,49 @@ function h(e) {
   let {
     categories: t,
     handleScrollToCategory: n
-  } = e, o = a.useMemo(() => (0, _.yc)(), []), {
-    analyticsLocations: d
-  } = (0, i.cj)([f.Z], () => f.Z.getAnalytics()), {
+  } = e, o = a.useMemo(() => {
+    let e = {};
+    for (let n of t) e[n.skuId] = n;
+    return e
+  }, [t]), d = a.useMemo(() => (0, _.yc)(o), [o]), {
     analyticsLocations: u
-  } = (0, l.ZP)([...d, c.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), h = a.useCallback((e, t) => {
+  } = (0, i.cj)([f.Z], () => f.Z.getAnalytics()), {
+    analyticsLocations: h
+  } = (0, l.ZP)([...u, c.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), x = a.useCallback((e, t) => {
     let r = e.cta;
     p.default.track(C.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
-      location_stack: u,
+      location_stack: h,
       slide_id: e.id,
       slide_index: t,
       sku_id: null == r ? void 0 : r.categorySkuId
     }), (null == r ? void 0 : r.categorySkuId) != null && n(r.categorySkuId)
-  }, [u, n]), x = (0, i.e7)([s.Z], () => s.Z.useReducedMotion), I = a.useMemo(() => {
-    let e = {};
-    for (let n of t) e[n.skuId] = n.summary;
-    return e
-  }, [t]), E = a.useCallback((e, t) => {
-    var n;
-    let a = null === (n = e.cta) || void 0 === n ? void 0 : n.categorySkuId,
-      i = null != a ? I[a] : void 0;
+  }, [h, n]), I = (0, i.e7)([s.Z], () => s.Z.useReducedMotion), E = a.useCallback((e, t) => {
+    var n, a;
+    let i = null === (n = e.cta) || void 0 === n ? void 0 : n.categorySkuId,
+      s = null != i ? null === (a = o[i]) || void 0 === a ? void 0 : a.summary : void 0;
     return (0, r.jsx)(m, {
       config: e,
-      text: i,
-      handleCTAClick: h,
-      reducedMotion: x,
+      text: s,
+      handleCTAClick: x,
+      reducedMotion: I,
       index: t
     })
-  }, [I, h, x]), v = a.useCallback(e => {
+  }, [o, x, I]), v = a.useCallback(e => {
     var t;
-    return null === (t = o[e]) || void 0 === t ? void 0 : t.id
-  }, [o]);
+    return null === (t = d[e]) || void 0 === t ? void 0 : t.id
+  }, [d]);
   return (0, r.jsx)("div", {
     className: b.carouselContainer,
     children: (0, r.jsx)(g.U, {
       carouselId: "collectibles_shop_header_carousel",
       className: b.carousel,
-      items: o,
+      items: d,
       renderItem: E,
       getItemId: v,
       controlsClassName: b.paginationControls,
       paginationButtonClassName: b.paginationButton,
       delay: 6e3,
-      analyticsLocations: u,
+      analyticsLocations: h,
       unidirectional: !0
     })
   })

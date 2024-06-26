@@ -46,9 +46,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     cta: {
       label: j,
       categorySkuId: r.T.TIDE
-    },
-    start: new Date("2024-06-26T18:00:00Z"),
-    end: new Date("2024-07-27T03:59:00Z")
+    }
   }, {
     id: "category_anime",
     backgroundStaticSrc: p,
@@ -105,14 +103,11 @@ let T = () => o.Z.Messages.LIMITED_TIME,
       categorySkuId: r.T.CYBERPUNK
     }
   }],
-  R = () => {
-    let e = new Date;
-    return B.filter(t => {
-      let n = null == t.start || e >= t.start,
-        r = null != t.end && e > t.end;
-      return n && !r
-    })
-  },
+  R = e => B.filter(t => {
+    var n;
+    let r = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
+    return null == r || null != e[r]
+  }),
   k = (e, t) => {
     let {
       overflowSrcStatic: n,
