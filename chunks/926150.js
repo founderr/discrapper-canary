@@ -1,75 +1,88 @@
 n.d(t, {
   Z: function() {
-    return C
+    return N
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(442837),
-  l = n(246946),
-  s = n(5192),
-  r = n(741308),
-  o = n(588822),
-  c = n(681837),
-  u = n(900927),
-  d = n(724593),
-  h = n(678738),
-  p = n(502762),
-  m = n(530),
-  _ = n(580512),
-  f = n(228168),
-  E = n(689938),
-  g = n(77540);
+  l = n(699516),
+  s = n(246946),
+  r = n(5192),
+  o = n(824572),
+  c = n(741308),
+  u = n(588822),
+  d = n(681837),
+  h = n(91433),
+  p = n(900927),
+  m = n(724593),
+  _ = n(678738),
+  f = n(502762),
+  E = n(530),
+  g = n(580512),
+  C = n(228168),
+  I = n(981631),
+  x = n(689938),
+  T = n(77540);
 
-function C(e) {
+function N(e) {
   let {
     user: t,
     displayProfile: n,
-    channelId: C,
-    isHovering: I,
-    onOpenProfile: x
-  } = e, T = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation);
+    channelId: N,
+    isHovering: v,
+    onOpenProfile: S
+  } = e, {
+    improvedPanelFriendingEnabled: Z
+  } = (0, o.O)({
+    location: "SimplifiedProfilePanelBody"
+  }), A = (0, a.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), M = (0, a.e7)([s.Z], () => s.Z.hidePersonalInformation);
   return (0, i.jsxs)("div", {
-    className: g.body,
-    children: [(0, i.jsx)(m.Z, {
+    className: T.body,
+    children: [(0, i.jsx)(E.Z, {
       user: t,
-      profileType: f.y0.PANEL,
-      nickname: s.ZP.getName(null, C, t),
+      profileType: C.y0.PANEL,
+      nickname: r.ZP.getName(null, N, t),
       pronouns: null == n ? void 0 : n.pronouns,
-      onOpenProfile: x,
-      tags: (0, i.jsx)(r.Z, {
+      onOpenProfile: S,
+      tags: (0, i.jsx)(c.Z, {
         displayProfile: n,
-        profileType: f.y0.PANEL
+        profileType: C.y0.PANEL
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(c.Z, {
+        children: [(0, i.jsx)(d.Z, {
           userId: t.id
-        }), !T && (0, i.jsx)(d.Z, {
+        }), !M && (0, i.jsx)(m.Z, {
           user: t,
-          isHovering: I,
-          onOpenProfile: () => x({
-            subsection: f.Tb.NOTE
+          isHovering: v,
+          onOpenProfile: () => S({
+            subsection: C.Tb.NOTE
           })
         })]
       })
-    }), (0, i.jsx)(_.Z, {
+    }), Z && A === I.OGo.PENDING_INCOMING && (0, i.jsx)(f.Z.Overlay, {
+      children: (0, i.jsx)(h.Z, {
+        user: t,
+        channelId: N
+      })
+    }), (0, i.jsx)(g.Z, {
       user: t,
-      channelId: C
-    }), (0, i.jsxs)(p.Z.Overlay, {
-      className: g.overlay,
-      children: [!T && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== "" && (0, i.jsx)(h.Z, {
-        title: E.Z.Messages.USER_POPOUT_ABOUT_ME,
-        headingColor: "header-primary",
-        children: (0, i.jsx)(o.Z, {
-          userBio: n.bio,
-          animateOnHover: !0,
-          isHovering: I,
-          userId: t.id
-        })
-      }), (0, i.jsx)(h.Z, {
-        title: E.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+      channelId: N
+    }), (0, i.jsxs)(f.Z.Overlay, {
+      className: T.overlay,
+      children: [!M && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== "" && (0, i.jsx)(_.Z, {
+        title: x.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: "header-primary",
         children: (0, i.jsx)(u.Z, {
+          userBio: n.bio,
+          animateOnHover: !0,
+          isHovering: v,
+          userId: t.id
+        })
+      }), (0, i.jsx)(_.Z, {
+        title: x.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+        headingColor: "header-primary",
+        children: (0, i.jsx)(p.Z, {
           userId: t.id
         })
       })]
