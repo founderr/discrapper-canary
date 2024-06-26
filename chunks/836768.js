@@ -11,6 +11,10 @@ let l = (0, i.Z)((0, s.tJ)(e => ({
   selectedPage: r.S.SERVERS,
   setSelectedPage: t => e({
     selectedPage: t
+  }),
+  selectedServerTab: "gaming",
+  setSelectedServerTab: t => e({
+    selectedServerTab: t
   })
 }), {
   name: "global-discovery",
