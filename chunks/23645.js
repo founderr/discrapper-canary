@@ -1,52 +1,51 @@
-"use strict";
-n.d(t, {
+t.d(s, {
   Z: function() {
-    return i
+    return o
   }
-}), n(47120);
-var o = n(470079),
-  r = n(817080),
-  s = n(579806),
-  a = n(358085);
-class i extends o.Component {
+}), t(47120);
+var n = t(470079),
+  a = t(817080),
+  i = t(579806),
+  r = t(358085);
+class o extends n.Component {
   getFileContents() {
     let {
       fileContents: e
     } = this.props;
     return "function" == typeof e && (e = e()), e
   }
-  downloadNative(e, t) {
-    s.Z.fileManager.saveWithDialog(e, t)
+  downloadNative(e, s) {
+    i.Z.fileManager.saveWithDialog(e, s)
   }
-  downloadHtml5(e, t) {
-    let n = new Blob([e], {
+  downloadHtml5(e, s) {
+    let t = new Blob([e], {
       type: this.props.contentType
     });
-    (0, r.saveAs)(n, t)
+    (0, a.saveAs)(t, s)
   }
   render() {
     let {
       children: e
-    } = this.props, t = o.Children.only(e);
-    return o.cloneElement(t, {
+    } = this.props, s = n.Children.only(e);
+    return n.cloneElement(s, {
       onClick: this.handleFileDownload
     })
   }
   constructor(...e) {
-    var t, n, o;
-    super(...e), t = this, n = "handleFileDownload", o = e => {
+    var s, t, n;
+    super(...e), s = this, t = "handleFileDownload", n = e => {
       e.preventDefault();
-      let t = this.getFileContents(),
+      let s = this.getFileContents(),
         {
-          fileName: n,
-          onDownload: o
+          fileName: t,
+          onDownload: n
         } = this.props;
-      a.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == o || o()
-    }, n in t ? Object.defineProperty(t, n, {
-      value: o,
+      r.isPlatformEmbedded ? this.downloadNative(s, t) : this.downloadHtml5(s, t), null == n || n()
+    }, t in s ? Object.defineProperty(s, t, {
+      value: n,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = o
+    }) : s[t] = n
   }
 }

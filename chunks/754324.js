@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   stepBody: "stepBody_dcb6d5",
   bodyColumnMiddle: "bodyColumnMiddle_dcb6d5",

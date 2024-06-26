@@ -7,16 +7,16 @@ var a = n(735250),
   r = n(470079),
   o = n(481060),
   t = n(197115),
-  s = n(25373),
+  s = n(921813),
   l = n(318661),
-  u = n(721987),
-  c = n(153124),
+  c = n(721987),
+  u = n(153124),
   d = n(626135),
   v = n(981631),
-  m = n(486324),
-  p = n(474936),
-  I = n(689938),
-  f = n(495598);
+  f = n(486324),
+  m = n(474936),
+  p = n(689938),
+  I = n(495598);
 
 function A(e) {
   let {
@@ -27,21 +27,21 @@ function A(e) {
     uploadType: _,
     onSubscribe: T,
     onClose: h
-  } = e, Z = (0, c.Dt)(), x = (0, l.ZP)(i.id, n), {
+  } = e, Z = (0, u.Dt)(), x = (0, l.ZP)(i.id, n), {
     primaryColor: P,
     secondaryColor: N
-  } = (0, u.Z)({
+  } = (0, c.Z)({
     user: i,
     displayProfile: x,
-    pendingAvatar: _ === m.pC.AVATAR ? E : void 0,
+    pendingAvatar: _ === f.pC.AVATAR ? E : void 0,
     isPreview: !0
   });
   return r.useEffect(() => {
     d.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: p.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL
+      type: m.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL
     })
   }, []), (0, a.jsxs)(o.ModalRoot, {
-    className: f.modalRoot,
+    className: I.modalRoot,
     transitionState: A,
     size: o.ModalSize.SMALL,
     "aria-labelledby": Z,
@@ -50,19 +50,19 @@ function A(e) {
       user: i,
       canUsePremiumCustomization: !0,
       disabledInputs: !0,
-      pendingAvatar: _ === m.pC.AVATAR ? E : void 0,
-      pendingBanner: _ === m.pC.BANNER ? E : void 0,
+      pendingAvatar: _ === f.pC.AVATAR ? E : void 0,
+      pendingBanner: _ === f.pC.BANNER ? E : void 0,
       pendingThemeColors: [P, N]
     }), (0, a.jsxs)("div", {
-      className: f.upsellSection,
+      className: I.upsellSection,
       children: [(0, a.jsx)(o.Text, {
-        className: f.joinText,
+        className: I.joinText,
         variant: "text-sm/normal",
-        children: _ === m.pC.AVATAR ? I.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : I.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
+        children: _ === f.pC.AVATAR ? p.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : p.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
       }), (0, a.jsx)(t.Z, {
-        buttonText: I.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
-        subscriptionTier: p.Si.TIER_2,
-        className: f.premiumSubscribeButton,
+        buttonText: p.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
+        subscriptionTier: m.Si.TIER_2,
+        className: I.premiumSubscribeButton,
         size: o.Button.Sizes.SMALL,
         premiumModalAnalyticsLocation: {
           section: v.jXE.SETTINGS_EDIT_PROFILE,
@@ -76,7 +76,7 @@ function A(e) {
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.FILLED,
-        children: I.Z.Messages.PREMIUM_PREVIEW_EXIT
+        children: p.Z.Messages.PREMIUM_PREVIEW_EXIT
       })]
     })]
   })

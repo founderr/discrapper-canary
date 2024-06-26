@@ -31,7 +31,7 @@ function _(e) {
     pendingPronouns: x,
     isTryItOutFlow: Z,
     hideBioSection: P
-  } = e, A = (0, i.e7)([u.ZP], () => null == h ? null : u.ZP.getMember(h.id, n.id)), T = (0, i.e7)([f.Z], () => f.Z.hidePersonalInformation), N = (0, s.Z)("SimplifiedProfileCustomizationPreviewBody"), S = null == _ ? void 0 : null === (t = _.getPreviewBio(C)) || void 0 === t ? void 0 : t.value, j = null != x ? x : null == _ ? void 0 : _.pronouns, R = (0, m.Ly)({
+  } = e, A = (0, i.e7)([u.ZP], () => null == h ? null : u.ZP.getMember(h.id, n.id)), T = (0, i.e7)([f.Z], () => f.Z.hidePersonalInformation), N = (0, s.Z)("ProfileCustomizationPreviewBody"), S = null == _ ? void 0 : null === (t = _.getPreviewBio(C)) || void 0 === t ? void 0 : t.value, j = null != x ? x : null == _ ? void 0 : _.pronouns, R = (0, m.Ly)({
     pendingNickname: g,
     pendingGlobalName: v,
     user: n,

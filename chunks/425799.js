@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return A
+    return m
   }
 }), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
 var n = t(735250),
@@ -11,7 +11,7 @@ var n = t(735250),
   l = t(481060),
   c = t(53281),
   d = t(410030),
-  _ = t(25373),
+  _ = t(921813),
   E = t(680295),
   u = t(594174),
   T = t(572004),
@@ -20,10 +20,10 @@ var n = t(735250),
   N = t(334428),
   C = t(844593);
 
-function A() {
+function m() {
   let e = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
     [s, t] = a.useState(!0),
-    [A, m] = a.useState([]),
+    [m, A] = a.useState([]),
     O = a.useRef(null),
     [g, h] = a.useState(!1),
     [R, p] = a.useState(!1),
@@ -43,7 +43,7 @@ function A() {
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: x ? (0, S.Tp)(A) : A,
+          effects: x ? (0, S.Tp)(m) : m,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -63,7 +63,7 @@ function A() {
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: x ? (0, S.Tp)(A) : A,
+          effects: x ? (0, S.Tp)(m) : m,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -115,8 +115,8 @@ function A() {
               t = new FileReader;
             t.onload = async e => {
               if (null == e.target || "string" != typeof e.target.result) return;
-              let t = await (0, S.Xv)(URL.createObjectURL(s), s, A.length);
-              m(e => [...e, t])
+              let t = await (0, S.Xv)(URL.createObjectURL(s), s, m.length);
+              A(e => [...e, t])
             }, t.readAsDataURL(s)
           },
           multiple: !1
@@ -125,7 +125,7 @@ function A() {
         variant: "text-sm/semibold",
         children: "Make sure to upload the bottommost layer first!"
       })]
-    }), A.map((e, s) => (0, n.jsxs)("div", {
+    }), m.map((e, s) => (0, n.jsxs)("div", {
       style: {
         marginBottom: 8,
         color: D ? "white" : "black"
@@ -146,7 +146,7 @@ function A() {
           color: l.ButtonColors.RED,
           look: l.ButtonLooks.LINK,
           onClick: () => {
-            m(s => s.filter(s => s !== e))
+            A(s => s.filter(s => s !== e))
           },
           children: "Remove"
         })]
@@ -157,7 +157,7 @@ function A() {
         value: e.start,
         className: I.numberInput,
         onChange: e => {
-          m(t => {
+          A(t => {
             let n = [...t],
               a = t[s];
             return a.start = +e.target.value, n[s] = a, n
@@ -170,7 +170,7 @@ function A() {
         value: e.duration,
         className: I.numberInput,
         onChange: e => {
-          m(t => {
+          A(t => {
             let n = [...t],
               a = t[s];
             return a.duration = +e.target.value, n[s] = a, n
@@ -183,7 +183,7 @@ function A() {
         checked: e.loop,
         className: I.checkBox,
         onChange: e => {
-          m(t => {
+          A(t => {
             let n = [...t],
               a = t[s];
             return a.loop = e.target.checked, n[s] = a, n
@@ -197,7 +197,7 @@ function A() {
           value: e.loopDelay,
           className: I.checkBox,
           onChange: e => {
-            m(t => {
+            A(t => {
               let n = [...t],
                 a = t[s];
               return a.loopDelay = +e.target.value, n[s] = a, n
@@ -212,7 +212,7 @@ function A() {
         className: I.checkBox,
         disabled: !0,
         onChange: e => {
-          m(t => {
+          A(t => {
             let n = [...t],
               a = t[s];
             return a.zIndex = +e.target.value, n[s] = a, n
@@ -225,7 +225,7 @@ function A() {
         color: l.ButtonColors.RED,
         look: l.ButtonLooks.LINK,
         onClick: () => {
-          m([])
+          A([])
         },
         children: "Clear Assets"
       }), (0, n.jsx)(l.Button, {
@@ -237,7 +237,7 @@ function A() {
       }), (0, n.jsx)(l.Button, {
         color: l.ButtonColors.BRAND,
         onClick: () => {
-          (0, T.JG)((0, S.HV)(A, "proto")), (0, l.showToast)((0, l.createToast)("Copied to clipboard!", l.ToastType.SUCCESS))
+          (0, T.JG)((0, S.HV)(m, "proto")), (0, l.showToast)((0, l.createToast)("Copied to clipboard!", l.ToastType.SUCCESS))
         },
         children: "Export"
       })]

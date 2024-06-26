@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   avatarDecoration: "avatarDecoration_b74403",
   profileEffectContainer: "profileEffectContainer_b74403",

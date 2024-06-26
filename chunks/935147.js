@@ -19,11 +19,11 @@ var n = t(735250),
   I = t(197115),
   N = t(350327),
   C = t(996073),
-  A = t(25990),
-  m = t(626135),
+  m = t(25990),
+  A = t(626135),
   O = t(74538),
   g = t(296810),
-  h = t(25373),
+  h = t(921813),
   R = t(433411),
   p = t(532432),
   x = t(504983),
@@ -53,10 +53,10 @@ function j(e) {
     tryItOutBanner: K,
     tryItOutAvatarDecoration: z,
     tryItOutProfileEffectId: Q
-  } = (0, i.cj)([A.Z], () => {
-    let e = A.Z.getAllPending(),
-      s = A.Z.getErrors(),
-      t = A.Z.getAllTryItOut();
+  } = (0, i.cj)([m.Z], () => {
+    let e = m.Z.getAllPending(),
+      s = m.Z.getErrors(),
+      t = m.Z.getAllTryItOut();
     return {
       ...e,
       ...t,
@@ -69,7 +69,7 @@ function j(e) {
     sourceAnalyticsLocations: ee
   } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
   a.useEffect(() => {
-    m.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
+    A.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
       type: P.cd.PREMIUM_PROFILE_TRY_IT_OUT,
       location: {
         page: L.ZY5.USER_SETTINGS

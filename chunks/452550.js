@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   wrapper: "wrapper_d2da9c",
   disabledSelected: "disabledSelected_d2da9c",

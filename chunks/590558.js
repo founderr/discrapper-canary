@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   headerContainer: "headerContainer_bab8b6",
   closeButton: "closeButton_bab8b6",

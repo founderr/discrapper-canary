@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   modalOverrideBody: "modalOverrideBody_e84a32",
   modalOverrideSliderBody: "modalOverrideSliderBody_e84a32",

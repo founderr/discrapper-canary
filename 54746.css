@@ -33280,6 +33280,10 @@ h3.improved_f017d0:after {
     width: 100%
 }
 
+.repliedTextPreview_ec86aa .repliedTextContent_ec86aa a {
+    word-break: break-all
+}
+
 .repliedTextPreview_ec86aa {
     display: flex;
     max-height: 1.25em
