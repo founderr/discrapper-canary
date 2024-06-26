@@ -20,8 +20,8 @@ var a = t(990547),
   I = t(163379),
   N = t(703288),
   C = t(574755),
-  m = t(425799),
-  A = t(377171),
+  A = t(425799),
+  m = t(377171),
   O = t(621628),
   g = t(18438),
   h = t(778825),
@@ -74,8 +74,8 @@ var a = t(990547),
   eI = t(327885),
   eN = t(595242),
   eC = t(301121),
-  em = t(463153),
-  eA = t(36192),
+  eA = t(463153),
+  em = t(36192),
   eO = t(338345),
   eg = t(400287),
   eh = t(554042),
@@ -118,12 +118,13 @@ let ej = () => {
       showGiftNitro: eK,
       isStricterMessageRequestsEnabled: ez,
       hasLibraryApplication: eQ,
-      hasTOTPEnabled: eX
+      hasTOTPEnabled: eX,
+      canBroadcastActivity: eq
     } = e;
     return Object.freeze({
       [ef.s6.SEARCH_NO_RESULTS]: {
         section: E.ID.CUSTOM,
-        element: em.Z,
+        element: eA.Z,
         predicate: () => ey
       },
       [ef.s6.ACCOUNT]: {
@@ -424,7 +425,7 @@ let ej = () => {
         badgeCount: eB,
         newIndicator: (0, n.jsx)(o.TextBadge, {
           text: ev.Z.Messages.NEW,
-          color: A.Z.BG_BRAND
+          color: m.Z.BG_BRAND
         }),
         newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
       },
@@ -439,7 +440,7 @@ let ej = () => {
         searchableTitles: [ev.Z.Messages.AUTH_SESSIONS],
         label: ev.Z.Messages.AUTH_SESSIONS,
         ariaLabel: ev.Z.Messages.AUTH_SESSIONS,
-        element: eA.Z,
+        element: em.Z,
         newIndicatorDismissibleContentTypes: [i.z.AUTH_SESSIONS_NEW],
         predicate: () => Y.Z.getCurrentConfig({
           location: "9f7d84_1"
@@ -1162,12 +1163,23 @@ let ej = () => {
       [ef.s6.ACTIVITY_PRIVACY_STATUS]: {
         section: eV ? eL.oAB.GAMES : eL.oAB.ACTIVITY_PRIVACY,
         searchableTitles: [ev.Z.Messages.ACTIVITY_STATUS],
-        parent: eV ? ef.s6.GAMES : ef.s6.ACTIVITY_PRIVACY
+        parent: eV ? ef.s6.GAMES_ACTIVITY_PRIVACY : ef.s6.ACTIVITY_PRIVACY
       },
       [ef.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
         section: eV ? eL.oAB.GAMES : eL.oAB.ACTIVITY_PRIVACY,
         searchableTitles: [ev.Z.Messages.ACTIVITY_PARTY_PRIVACY],
-        parent: eV ? ef.s6.GAMES : ef.s6.ACTIVITY_PRIVACY
+        parent: eV ? ef.s6.GAMES_ACTIVITY_PRIVACY : ef.s6.ACTIVITY_PRIVACY
+      },
+      [ef.s6.ACTIVITY_PRIVACY_BROADCASTING]: {
+        section: eV ? eL.oAB.GAMES : eL.oAB.ACTIVITY_PRIVACY,
+        searchableTitles: [ev.Z.Messages.BROADCASTING_SETTINGS],
+        parent: eV ? ef.s6.GAMES_ACTIVITY_PRIVACY : ef.s6.ACTIVITY_PRIVACY,
+        predicate: () => eq
+      },
+      [ef.s6.ACTIVITY_PRIVACY_TOS]: {
+        section: eV ? eL.oAB.GAMES : eL.oAB.ACTIVITY_PRIVACY,
+        searchableTitles: [ef.CF],
+        parent: eV ? ef.s6.GAMES_ACTIVITY_PRIVACY : ef.s6.ACTIVITY_PRIVACY
       },
       [ef.s6.REGISTERED_GAMES]: {
         section: eL.oAB.REGISTERED_GAMES,
@@ -1398,7 +1410,7 @@ let ej = () => {
         section: eL.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
         searchableTitles: ["Profile Effects Preview Tool"],
         label: "Profile Effects Preview Tool",
-        element: m.Z,
+        element: A.Z,
         predicate: () => b.Z.isDeveloper
       },
       [ef.s6.QUEST_PREVIEW_TOOL]: {
