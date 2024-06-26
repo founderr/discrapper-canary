@@ -23,12 +23,12 @@ function S(e) {
     onClose: t,
     openStreamUpsellModal: s,
     glow: S = !1
-  } = e, h = {
+  } = e, g = {
     section: d.jXE.STREAM_SETTINGS,
     object: d.qAy.PREMIUM_UPSELL_BANNER,
     objectType: d.Qqv.BUY
   }, {
-    activated: g
+    activated: h
   } = (0, o.k)(i.q.STREAM_HIGH_QUALITY);
   return (0, l.jsxs)("div", {
     className: a()(_.upsellBanner, _.enhancedBanner, {
@@ -42,16 +42,16 @@ function S(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: a()(_.upsellText, _.enhancedUpsellText),
-        children: null != n ? n : g ? (0, l.jsxs)(l.Fragment, {
+        children: null != n ? n : h ? (0, l.jsxs)(l.Fragment, {
           children: [E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY, " ", E.Z.Messages.LEARN_MORE_CLICK.format({
             onClick: () => s({
-              analyticsLocation: h,
+              analyticsLocation: g,
               onClose: t
             })
           })]
         }) : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
           onClick: () => s({
-            analyticsLocation: h,
+            analyticsLocation: g,
             onClose: t
           })
         })
@@ -64,7 +64,7 @@ function S(e) {
         subscriptionTier: m.Si.TIER_2,
         buttonText: E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
         size: r.Button.Sizes.TINY,
-        premiumModalAnalyticsLocation: h
+        premiumModalAnalyticsLocation: g
       })
     })]
   })

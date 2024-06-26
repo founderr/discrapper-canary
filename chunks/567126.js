@@ -16,8 +16,8 @@ var l = t(735250),
   E = t(224706),
   _ = t(594190),
   S = t(569984),
-  h = t(918701),
-  g = t(977156),
+  g = t(918701),
+  h = t(977156),
   C = t(433811),
   Z = t(131951),
   N = t(449224),
@@ -25,10 +25,10 @@ var l = t(735250),
   x = t(643095),
   f = t(358085),
   A = t(463727),
-  T = t(855403),
-  R = t(989941),
-  v = t(958707),
-  L = t(133179),
+  R = t(855403),
+  T = t(989941),
+  L = t(958707),
+  v = t(133179),
   M = t(46140),
   p = t(65154),
   O = t(689938),
@@ -90,9 +90,9 @@ async function D() {
 }
 
 function G(e) {
-  let n = (0, f.isWindows)() ? (0, R.Z)(_.ZP, N.Z) : null,
+  let n = (0, f.isWindows)() ? (0, T.Z)(_.ZP, N.Z) : null,
     t = _.ZP.getRunningGames();
-  return null != n && (0, T.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, T.Z)(e.id, n.windowHandle)) ? 1 : 0
+  return null != n && (0, R.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, R.Z)(e.id, n.windowHandle)) ? 1 : 0
 }
 
 function U(e) {
@@ -103,17 +103,17 @@ function U(e) {
     enableGoLiveCaptureCard: a
   } = A.Z.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = Z.Z.supports(p.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), k = s.useRef(null), V = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
-    let l = (0, g.Zy)({
+  }), r = Z.Z.supports(p.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), V = s.useRef(null), k = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
+    let l = (0, h.Zy)({
       location: M.dr.STREAM_SOURCE_SELECT
     });
     return s.useMemo(() => {
       if (null == t || !l) return null;
       for (let l of t) {
         var s, a;
-        let t = n.find(e => (0, T.Z)(l.id, e.windowHandle));
+        let t = n.find(e => (0, R.Z)(l.id, e.windowHandle));
         if ((null == t ? void 0 : t.id) == null) continue;
-        let i = (0, h.lQ)(e, t.id);
+        let i = (0, g.lQ)(e, t.id);
         if (null != i && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = i.userStatus) || void 0 === a ? void 0 : a.completedAt) == null) return {
           source: l,
           quest: i
@@ -123,7 +123,7 @@ function U(e) {
     }, [l, e, n, t])
   }((0, u.e7)([S.Z], () => S.Z.quests), H, N), F = s.useMemo(() => null == N ? null : [...N].sort((e, n) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)), [W, N]);
   s.useEffect(() => {
-    let e = V.current;
+    let e = k.current;
     return P().then(e => {
       let {
         screenSources: n,
@@ -145,7 +145,7 @@ function U(e) {
   let z = s.useCallback(e => {
       if (null !== e) {
         var n;
-        k.current = e, y((n = !e.isScrolledToTop(), n))
+        V.current = e, y((n = !e.isScrolledToTop(), n))
       }
     }, []),
     K = function(e) {
@@ -155,7 +155,7 @@ function U(e) {
         case o.vA.SCREEN:
           return c;
         case o.vA.CAMERA:
-          return R
+          return T
       }
     }(b);
   if (null == K) return (0, l.jsx)(I.Z, {
@@ -173,7 +173,7 @@ function U(e) {
         [j.selected]: a
       }),
       onClick: () => t(e, null),
-      children: (0, l.jsx)(L.Z, {
+      children: (0, l.jsx)(v.Z, {
         source: e,
         selectedSource: n
       }, e.id)
@@ -181,13 +181,13 @@ function U(e) {
   });
 
   function Q() {
-    let e = k.current;
+    let e = V.current;
     null != e && y(!e.isScrolledToTop())
   }
   return (0, l.jsxs)(s.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: j.segmentContainer,
-      children: [(0, l.jsx)(v.Z, {
+      children: [(0, l.jsx)(L.Z, {
         separator: B
       }), (0, l.jsx)(m.SegmentedControl, {
         options: function() {

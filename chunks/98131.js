@@ -12,8 +12,8 @@ var l = t(735250),
   E = t(556296),
   _ = t(63063),
   S = t(13140),
-  h = t(435064),
-  g = t(894694),
+  g = t(435064),
+  h = t(894694),
   C = t(39604),
   Z = t(981631),
   N = t(921944),
@@ -26,17 +26,17 @@ let A = e => {
     isAnimationDone: t,
     guildId: a,
     children: i
-  } = e, E = (0, r.e7)([h.Z], () => h.Z.getHardwareClassification()), S = E === g.x.MEETS_MINIMUM || E === g.x.UNKNOWN, f = E === g.x.BELOW_MINIMUM, A = t && (S || f) && !n, [T, R] = (0, d.c)(A ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = T === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, E = (0, r.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === h.x.MEETS_MINIMUM || E === h.x.UNKNOWN, f = E === h.x.BELOW_MINIMUM, A = t && (S || f) && !n, [R, T] = (0, d.c)(A ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), L = R === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   s.useEffect(() => {
     n && (0, c.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
     })
   }, [n]);
-  let L = (e, n) => {
-    e.stopPropagation(), e.preventDefault(), null == n || n(), R(N.L.UNKNOWN)
+  let v = (e, n) => {
+    e.stopPropagation(), e.preventDefault(), null == n || n(), T(N.L.UNKNOWN)
   };
   return (0, l.jsx)(u.Popout, {
-    shouldShow: v,
+    shouldShow: L,
     position: "right",
     align: "center",
     renderPopout: e => {
@@ -71,10 +71,10 @@ let A = e => {
             clipsEnabled: !0,
             guildId: a,
             trackAnalytics: !0
-          }), L(e)
+          }), v(e)
         },
         onClose: e => {
-          L(e, n)
+          v(e, n)
         }
       })
     },
@@ -85,7 +85,7 @@ n.Z = function(e) {
   let {
     isAnimationDone: n,
     guildId: t
-  } = e, s = (0, r.e7)([h.Z], () => h.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(Z.kg4.SAVE_CLIP));
+  } = e, s = (0, r.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(Z.kg4.SAVE_CLIP));
   i()(null != a, "Clips keybind should be set");
   let o = S.BB(a.shortcut, !0);
   return (0, l.jsx)(u.FormItem, {

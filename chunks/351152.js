@@ -17,8 +17,8 @@ var s = t(120356),
   E = t(771845),
   _ = t(346656),
   S = t(259580),
-  h = t(382182),
-  g = t(148381),
+  g = t(382182),
+  h = t(148381),
   C = t(689938),
   Z = t(278768),
   N = t(96499);
@@ -31,7 +31,7 @@ function I(e) {
     let {
       channel: n
     } = e;
-    return (0, h.JL)(n, d.Z, m.Z)
+    return (0, g.JL)(n, d.Z, m.Z)
   }));
   return null != s && a ? (0, l.jsxs)(u.Clickable, {
     onClick: () => t(n),
@@ -55,7 +55,7 @@ function x(e) {
   let {
     onSelectGuild: n
   } = e, t = (0, o.e7)([E.ZP], () => E.ZP.getGuildFolders());
-  return (0, l.jsx)(g.Z, {
+  return (0, l.jsx)(h.Z, {
     title: C.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
     scrollerClassName: a()(N.guildScroller, Z.marginBottom),
     children: r().flatMap(t, e => {

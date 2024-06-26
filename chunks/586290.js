@@ -16,8 +16,8 @@ var l = t(735250),
   E = t(537135),
   _ = t(176940),
   S = t(689938),
-  h = t(83750),
-  g = t(278768),
+  g = t(83750),
+  h = t(278768),
   C = t(331651);
 
 function Z(e) {
@@ -40,15 +40,15 @@ function Z(e) {
   return null != N && a(N), (0, l.jsx)(s.Fragment, {
     children: (0, l.jsxs)(d.FormItem, {
       title: "Capture Device",
-      className: g.modalContent,
+      className: h.modalContent,
       children: [(0, l.jsx)(d.FormItem, {
         className: C.marginTop8,
         children: (0, l.jsxs)(E.Z, {
           children: [(0, l.jsx)("span", {
-            className: h.ellipsisText,
+            className: g.ellipsisText,
             children: n.name
           }), (0, l.jsx)(d.Button, {
-            className: h.changeButton,
+            className: g.changeButton,
             color: d.Button.Colors.PRIMARY,
             size: d.Button.Sizes.SMALL,
             onClick: t,
