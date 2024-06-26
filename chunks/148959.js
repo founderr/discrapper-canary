@@ -30,7 +30,10 @@ class d extends a.Z {
     this.audioSSRC = e, this.videoStreams = t, this.update()
   }
   setGoLiveStreamDowngraded(e) {
-    this.throttleDowngradeChanges ? this.throttledSetStreamDowngraded(e) : this.setStreamDowngradedInternal(e)
+    e !== this.downgraded && (this.throttleDowngradeChanges ? this.throttledSetStreamDowngraded(e) : this.setStreamDowngradedInternal(e))
+  }
+  isDowngraded() {
+    return this.downgraded
   }
   setSimulcastDebugOverride(e) {
     this.debugQualityOverride = e, this.update()
@@ -58,7 +61,7 @@ class d extends a.Z {
     this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, n), this.emit("requested-streams-update", t)
   }
   setStreamDowngradedInternal(e) {
-    e !== this.downgraded && (this.downgraded = e, this.update())
+    this.downgraded = e, this.update()
   }
   getQualityConfig() {
     let e = o().minBy(this.videoStreams, e => e.quality),

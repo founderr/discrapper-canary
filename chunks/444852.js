@@ -105,18 +105,19 @@ class M extends a.Z {
   }
   updateStats(e) {
     for (let {
-        connection: n,
-        stats: i
+        connection: o,
+        stats: a
       }
       of e)
-      if (n === this._connection) {
-        let e = i.transport.inboundBitrateEstimate;
+      if (o === this._connection) {
+        let e = a.transport.inboundBitrateEstimate;
         if (null != e) {
           if (e > 1e8) break;
           if (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 15 && this._bandwidthSamples.shift(), 15 === this._bandwidthSamples.length) {
-            var t;
-            let e = r().mean(this._bandwidthSamples);
-            null === (t = this._goLiveQualityManager) || void 0 === t || t.setGoLiveStreamDowngraded(e < 1e6)
+            var t, n, i, s;
+            let e = r().mean(this._bandwidthSamples),
+              o = null !== (n = null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.isDowngraded()) && void 0 !== n && n;
+            o && e > 2e6 ? null === (i = this._goLiveQualityManager) || void 0 === i || i.setGoLiveStreamDowngraded(!1) : !o && e < 1e6 && (null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!0))
           }
           break
         }
