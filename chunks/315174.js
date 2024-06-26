@@ -125,8 +125,8 @@ t.ZP = l.memo(function(e) {
     animationOverlayHeight: b,
     children: M,
     headerClassName: R,
-    communityInfoVisible: O,
-    hasSubheader: y
+    communityInfoVisible: y,
+    hasSubheader: O
   } = e, P = L.hasFeature(_.oNc.ANIMATED_BANNER), j = (0, u.Z)(L), D = !j && L.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && P && !Z, [G, w] = l.useState(!1), k = l.useRef(), B = l.useRef(null), V = l.useRef(), H = d.QK.getSetting();
   l.useEffect(() => {
     if (U && n && !k.current && H) return w(!0), V.current = setTimeout(() => {
@@ -153,7 +153,7 @@ t.ZP = l.memo(function(e) {
         [m.selected]: null != N && v,
         [m.hasBanner]: F(),
         [m.bannerVisible]: n,
-        [m.communityInfoVisible]: !j && O || y && D
+        [m.communityInfoVisible]: !j && y || O && D
       }),
       onMouseDown: S,
       onContextMenu: x,
@@ -193,7 +193,7 @@ t.ZP = l.memo(function(e) {
           guild: L,
           controller: r,
           hasBanner: null != A,
-          hasSubheader: null != y && y
+          hasSubheader: null != O && O
         })]
       }), null != A ? (0, i.jsx)(C, {
         guild: L,

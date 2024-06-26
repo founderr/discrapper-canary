@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(919285),
   T = n(118470),
   C = n(413307),
-  f = n(849688),
-  S = n(374023),
+  S = n(849688),
+  f = n(374023),
   N = n(661599),
   A = n(923608),
   Z = n(617899),
@@ -155,11 +155,11 @@ t.Z = e => {
         guild: t
       });
     case O.R.SIGNUP:
-      return (0, i.jsx)(f.Z, {
+      return (0, i.jsx)(S.Z, {
         guild: t
       })
   }
-  return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, {
+  return f.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, {
     guild: e.guild
   })
 }

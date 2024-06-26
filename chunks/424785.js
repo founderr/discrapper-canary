@@ -33,8 +33,8 @@ var l = n(120356),
   b = n(306680),
   M = n(9156),
   R = n(979651),
-  O = n(514342),
-  y = n(934415),
+  y = n(514342),
+  O = n(934415),
   P = n(98597),
   j = n(648501),
   D = n(473403),
@@ -65,7 +65,7 @@ class F extends P.ZP {
     let {
       channel: e
     } = this.props;
-    return (0, y.rY)(e, R.Z, T.Z)
+    return (0, O.rY)(e, R.Z, T.Z)
   }
   getModeClass() {
     let {
@@ -265,7 +265,7 @@ class F extends P.ZP {
     }), H(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
-      return null == t ? null : (0, i.jsx)(O.Z, {
+      return null == t ? null : (0, i.jsx)(y.Z, {
         children: t
       })
     })
@@ -298,7 +298,7 @@ function Y(e) {
   }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, S.ZP)(n.id), _ = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id), [n.id]), g = (0, I.Rk)(n.id, E.pV.AUDIENCE), {
     isSubscriptionGated: m,
     needSubscriptionToAccess: C
-  } = (0, f.Z)(n.id), T = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)), R = (0, x.xJ)(n.id), O = (0, j.Z)({
+  } = (0, f.Z)(n.id), T = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)), R = (0, x.xJ)(n.id), y = (0, j.Z)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: s,
@@ -306,7 +306,7 @@ function Y(e) {
     isSubscriptionGated: m,
     needSubscriptionToAccess: C,
     enableConnectedUserLimit: R || n.userLimit > 0 && n.userLimit < G.xGv
-  }), y = e.connected && null == O;
+  }), O = e.connected && null == y;
   return (0, i.jsx)(W, {
     categoryCollapsed: h,
     connectAction: p,
@@ -318,8 +318,8 @@ function Y(e) {
     ...d,
     ...e,
     isFavoriteSuggestion: r && !T,
-    forceShowButtons: y,
-    channelInfo: O,
+    forceShowButtons: O,
+    channelInfo: y,
     resolvedUnreadSetting: u
   })
 }

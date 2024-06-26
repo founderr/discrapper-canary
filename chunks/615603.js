@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(594174),
   N = t(78839),
   C = t(267642),
-  m = t(74538),
-  A = t(283029),
+  A = t(74538),
+  m = t(283029),
   O = t(357956),
   g = t(275909),
   h = t(981631),
@@ -114,7 +114,7 @@ s.Z = function(e) {
     }
   }, [i]), j = null != E ? (0, d.G)(E, L) : 0, U = Math.max(0, j - P.length), B = v > j, G = j === i.length, F = G ? U : 1, V = a.useMemo(() => {
     let e = [];
-    for (let s = 0; s < F; s++) e.push((0, n.jsx)(A.Z, {
+    for (let s = 0; s < F; s++) e.push((0, n.jsx)(m.Z, {
       className: x.headerBoostGem,
       useReducedMotion: O
     }, s));
@@ -126,7 +126,7 @@ s.Z = function(e) {
     numUnappliedGuildBoostSlots: H
   }) : p.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
     numUnappliedGuildBoostSlots: H
-  }), m.ZP.isPremium(g) ? t = G && 1 === H && y ? L.skuId === R.Ft.FREE_GUILD_BOOST_1_MONTH ? p.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+  }), A.ZP.isPremium(g) ? t = G && 1 === H && y ? L.skuId === R.Ft.FREE_GUILD_BOOST_1_MONTH ? p.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
     numUnappliedGuildBoostSlots: H,
     learnMoreHook: (e, s) => (0, n.jsx)(l.Clickable, {
       className: x.headerLearnMoreLink,

@@ -23,21 +23,21 @@ t.Z = s.memo(function(e) {
     loaded: g,
     clans: T,
     searchResult: C,
-    searchCriteria: f
-  } = (0, _.Qc)(20), S = (0, E.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(f.games), [f.games]), A = s.useCallback(e => {
+    searchCriteria: S
+  } = (0, _.Qc)(20), f = (0, E.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(S.games), [S.games]), A = s.useCallback(e => {
     var t;
     return (0, i.jsx)(u.ZP, {
       clan: e,
       className: p.card,
-      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, f),
-      traitsToHighlight: S,
+      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, S),
+      traitsToHighlight: f,
       source: m.jXE.DISCOVER_SEARCH,
       prioritizedGameIds: N,
       onlyAnimateIconOnHover: !0
     }, e.id)
-  }, [f, S, N]), Z = s.useMemo(() => null != C && (0, I.Pw)(C) ? T : [], [T, C]), L = s.useCallback(e => {
-    e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), "top_picks", f)
-  }, [Z, f]);
+  }, [S, f, N]), Z = s.useMemo(() => null != C && (0, I.Pw)(C) ? T : [], [T, C]), L = s.useCallback(e => {
+    e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), "top_picks", S)
+  }, [Z, S]);
   return 0 !== T.length && g ? (0, i.jsx)(o.$, {
     onChange: L,
     threshold: .25,

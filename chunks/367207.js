@@ -29,8 +29,8 @@ var l = n(392711),
   b = n(11352),
   M = n(474936),
   R = n(981631),
-  O = n(354459),
-  y = n(37113),
+  y = n(354459),
+  O = n(37113),
   P = n(689938);
 
 function j(e, t, n) {
@@ -161,12 +161,12 @@ class D extends c.Z {
           sendNitroMessage: s
         } = (0, x.TD)(a),
         c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : R.Eu4.NONE;
-      if (!!s && !(c >= R.Eu4.TIER_2) && (null == r ? void 0 : r.type) === O.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
+      if (!!s && !(c >= R.Eu4.TIER_2) && (null == r ? void 0 : r.type) === y.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
         if (e !== this._lastStreamingChannelId) {
           this._lastStreamingChannelId = e;
           let n = P.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
             nickname: r.userNick,
-            resolution: (0, y.o6)(r.maxResolution.height),
+            resolution: (0, O.o6)(r.maxResolution.height),
             fps: (0, I.bp)(r.maxFrameRate)
           });
           o.Z.sendNitroSystemMessage(e, n), m.default.track(R.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {

@@ -40,8 +40,8 @@ function L(e) {
     defaultFolderName: b,
     useCircleMask: M = !1,
     draggable: R = !1,
-    sorting: O = !1,
-    onDragStart: y,
+    sorting: y = !1,
+    onDragStart: O,
     onDragEnd: P,
     onExpandCollapse: j,
     onContextMenu: D,
@@ -53,13 +53,13 @@ function L(e) {
     children: B
   } = t, [V, H] = l.useState(!1), [F, W] = l.useState(!1), Y = V || F;
   l.useEffect(() => {
-    O && H(!1)
-  }, [O]);
+    y && H(!1)
+  }, [y]);
   let [{
     dragging: z
   }, K] = (0, s.c)({
     type: f.eD.FOLDER,
-    item: () => (null == y || y(), {
+    item: () => (null == O || O(), {
       type: f.eD.FOLDER,
       nodeId: t.id
     }),
@@ -95,7 +95,7 @@ function L(e) {
       className: S.pill
     }), (0, i.jsx)(E.Z, {
       text: J,
-      disabled: O,
+      disabled: y,
       selected: r,
       disableWrapper: !0,
       children: (0, i.jsx)("div", {
@@ -108,7 +108,7 @@ function L(e) {
           folderNode: t,
           expanded: u,
           forceCircular: M,
-          sorting: O,
+          sorting: y,
           mediaState: _,
           mentionCount: L,
           tooltipName: J,

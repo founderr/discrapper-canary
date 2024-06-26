@@ -25,8 +25,8 @@ var i, l, r, a = n(735250),
   b = n(153124),
   M = n(151827),
   R = n(515753),
-  O = n(981631),
-  y = n(689938),
+  y = n(981631),
+  O = n(689938),
   P = n(367358);
 
 function j(e, t, n) {
@@ -234,7 +234,7 @@ class U extends(l = s.Component) {
           children: i => (0, a.jsx)(_.List, {
             fade: !0,
             innerRole: r,
-            innerAriaLabel: y.Z.Messages.DIRECT_MESSAGES,
+            innerAriaLabel: O.Z.Messages.DIRECT_MESSAGES,
             innerTag: "ul",
             ref: e => {
               var t;
@@ -282,7 +282,7 @@ class U extends(l = s.Component) {
           num_users_visible: a.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.Z.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
         ...u,
         ...(0, C.X)(),
         changelog_dm_visible: c
@@ -295,7 +295,7 @@ class U extends(l = s.Component) {
     }), j(this, "handleScroll", c()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && f.Z.updateChannelListScroll(O.ME, e.scrollTop)
+        null != e && f.Z.updateChannelListScroll(y.ME, e.scrollTop)
       }
     }, 100)), j(this, "renderDM", (e, t) => {
       let {
@@ -339,9 +339,9 @@ class U extends(l = s.Component) {
         className: P.privateChannelsHeaderContainer,
         children: [(0, a.jsx)("span", {
           className: P.headerText,
-          children: y.Z.Messages.DIRECT_MESSAGES
+          children: O.Z.Messages.DIRECT_MESSAGES
         }), (0, a.jsx)(N.Z, {
-          tooltip: y.Z.Messages.CREATE_DM,
+          tooltip: O.Z.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
           iconClassName: P.privateChannelRecipientsInviteButtonIcon,
@@ -371,7 +371,7 @@ t.Z = e => {
       t = (0, S.tU)(e, [x.Z, Z.Z]);
     return (0, I.Ce)(t)
   }, []), _ = (0, h.cj)([g.Z, v.Z, T.Z], () => ({
-    theme: v.Z.darkSidebar ? O.BRd.DARK : n,
+    theme: v.Z.darkSidebar ? y.BRd.DARK : n,
     keyboardModeEnabled: g.Z.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion()
   })), f = s.useRef(null), m = s.useCallback(e => {

@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(666743),
   T = n(115130),
   C = n(812206),
-  f = n(252618),
-  S = n(100159),
+  S = n(252618),
+  f = n(100159),
   N = n(646288),
   A = n(984370),
   Z = n(706454),
@@ -144,7 +144,7 @@ class ec extends s.PureComponent {
       carousel_video_count: s.videos,
       location: i.location.page,
       source: this._analyticsSource,
-      ...(0, S.Z)(e, !0)
+      ...(0, f.Z)(e, !0)
     }), this._trackedViewed = !0
   }
   renderHeader(e, t) {
@@ -380,7 +380,7 @@ class ec extends s.PureComponent {
         children: this.renderListing()
       });
       return (0, i.jsxs)(s.Fragment, {
-        children: [(0, i.jsx)(f.yY, {
+        children: [(0, i.jsx)(S.yY, {
           location: e.name
         }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(Q.Z, {
           game: e
@@ -389,7 +389,7 @@ class ec extends s.PureComponent {
     }
     return r ? (0, i.jsxs)("div", {
       className: el.listingWrapper,
-      children: [(0, i.jsx)(f.yY, {
+      children: [(0, i.jsx)(S.yY, {
         location: e.name
       }), this.renderJsonLD(), (0, i.jsx)(I.Z, {
         section: es.jXE.NAVIGATION,
@@ -399,7 +399,7 @@ class ec extends s.PureComponent {
         children: this.renderListing()
       })]
     }) : (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(f.yY, {
+      children: [(0, i.jsx)(S.yY, {
         location: e.name
       }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
     })
@@ -413,7 +413,7 @@ class ec extends s.PureComponent {
         sku: i
       } = this.props;
       null != i && w.default.track(es.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-        ...(0, S.Z)(i),
+        ...(0, f.Z)(i),
         card_index: n,
         card_type: e.type === es.s9s.IMG ? "image" : "video"
       })

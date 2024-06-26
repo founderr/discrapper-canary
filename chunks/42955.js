@@ -18,9 +18,9 @@ var n, a = t(654861),
   I = t(399002),
   N = t(369541),
   C = t(981631),
-  m = t(65154);
+  A = t(65154);
 
-function A(e, s, t) {
+function m(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -99,7 +99,7 @@ class g extends r.EventEmitter {
       this.logger.info("Connected to RTC server.");
       let t = [{
         rid: "100",
-        type: m.Tr.TEST,
+        type: A.Tr.TEST,
         quality: 100
       }];
       e.identify({
@@ -150,7 +150,7 @@ class g extends r.EventEmitter {
   _handleClientDisconnect(e) {}
   _handleCodecs(e, s) {
     let t = this._connection;
-    null != t && null != this.protocol ? (t.setCodecs(null != e && "" !== e ? e : m.ad.OPUS, "TEST"), this.emit("ready")) : this.logger.warn("Cannot set codecs on connection with protocol:", this.protocol)
+    null != t && null != this.protocol ? (t.setCodecs(null != e && "" !== e ? e : A.ad.OPUS, "TEST"), this.emit("ready")) : this.logger.warn("Cannot set codecs on connection with protocol:", this.protocol)
   }
   _handleSpeedTest(e, s) {
     let t = this._connection;
@@ -204,22 +204,22 @@ class g extends r.EventEmitter {
     if (this.logger.info("RTC media connection state change: ".concat(this.state, " => ").concat(t)), e !== this._socket) return;
     let n = this.state;
     switch (t) {
-      case m.$j.DISCONNECTED:
+      case A.$j.DISCONNECTED:
         this.setState(C.hes.RTC_DISCONNECTED);
         break;
-      case m.$j.CONNECTING:
+      case A.$j.CONNECTING:
         this.setState(C.hes.RTC_CONNECTING);
         break;
-      case m.$j.CONNECTED:
+      case A.$j.CONNECTED:
         this.setState(C.hes.RTC_CONNECTED);
         break;
-      case m.$j.NO_ROUTE:
+      case A.$j.NO_ROUTE:
         this.setState(C.hes.NO_ROUTE);
         break;
-      case m.$j.ICE_CHECKING:
+      case A.$j.ICE_CHECKING:
         this.setState(C.hes.ICE_CHECKING);
         break;
-      case m.$j.DTLS_CONNECTING:
+      case A.$j.DTLS_CONNECTING:
         this.setState(C.hes.DTLS_CONNECTING)
     }
     n === C.hes.RTC_CONNECTING && this.state === C.hes.RTC_DISCONNECTED ? this.reconnect() : this.state === C.hes.NO_ROUTE && this._backoff.fail(this.reconnect)
@@ -241,7 +241,7 @@ class g extends r.EventEmitter {
     endpoint: n,
     token: a
   }) {
-    super(), A(this, "userId", void 0), A(this, "sessionId", void 0), A(this, "rtcServerId", void 0), A(this, "_endpoint", void 0), A(this, "hostname", void 0), A(this, "mediaEnginePort", void 0), A(this, "mediaEngineAddress", void 0), A(this, "token", void 0), A(this, "protocol", void 0), A(this, "state", void 0), A(this, "_socket", void 0), A(this, "_connection", void 0), A(this, "_destroyed", void 0), A(this, "_speedTestState", void 0), A(this, "_speedTestDirection", void 0), A(this, "_speedTestParams", void 0), A(this, "_rtcConnectionId", void 0), A(this, "_backoff", void 0), A(this, "logger", void 0), A(this, "_networkOverhead", void 0), A(this, "reconnect", () => {
+    super(), m(this, "userId", void 0), m(this, "sessionId", void 0), m(this, "rtcServerId", void 0), m(this, "_endpoint", void 0), m(this, "hostname", void 0), m(this, "mediaEnginePort", void 0), m(this, "mediaEngineAddress", void 0), m(this, "token", void 0), m(this, "protocol", void 0), m(this, "state", void 0), m(this, "_socket", void 0), m(this, "_connection", void 0), m(this, "_destroyed", void 0), m(this, "_speedTestState", void 0), m(this, "_speedTestDirection", void 0), m(this, "_speedTestParams", void 0), m(this, "_rtcConnectionId", void 0), m(this, "_backoff", void 0), m(this, "logger", void 0), m(this, "_networkOverhead", void 0), m(this, "reconnect", () => {
       let e = this._socket;
       null != e && (e.close(), e.connect())
     }), this._rtcConnectionId = (0, l.Z)(), this.logger = new E.Z("RTCSpeedTestRTCConnection(".concat(t, ")")), this.userId = e, this.sessionId = s, this.rtcServerId = t, this.mediaEnginePort = null, this.mediaEngineAddress = null, this._speedTestState = null, this._speedTestDirection = null, this._speedTestParams = null, this.state = C.hes.AWAITING_ENDPOINT, this._socket = null, this.token = a, this._destroyed = !1, this._connection = null, this._backoff = new c.Z(1 * T.Z.Millis.SECOND, 10 * T.Z.Millis.SECOND), n = "".concat(O, "//").concat(n), (0, S.isAndroid)() && (n = (n = n.replace(".gg", ".media")).replace(":80", ":443"));

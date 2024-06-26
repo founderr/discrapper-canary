@@ -28,8 +28,8 @@ var i = n(735250),
   b = n(796974),
   M = n(271383),
   R = n(430824),
-  O = n(771845),
-  y = n(358085),
+  y = n(771845),
+  O = n(358085),
   P = n(709054),
   j = n(792125),
   D = n(727258),
@@ -63,7 +63,7 @@ function ei(e, t, n) {
   }) : e[t] = n, e
 }
 let el = 56,
-  er = (0, y.isWindows)() ? 4 : (0, y.isMac)() ? 0 : 12,
+  er = (0, O.isWindows)() ? 4 : (0, O.isMac)() ? 0 : 12,
   ea = el - 16,
   es = er + 10;
 class eo {
@@ -151,12 +151,12 @@ class eo {
 
 function ec(e) {
   let {
-    disableAppDownload: t = y.isPlatformEmbedded,
+    disableAppDownload: t = O.isPlatformEmbedded,
     isOverlay: n = !1,
     className: r,
     themeOverride: s
-  } = e, [o] = (0, p.Wu)([O.ZP], () => {
-    let e = O.ZP.getGuildsTree();
+  } = e, [o] = (0, p.Wu)([y.ZP], () => {
+    let e = y.ZP.getGuildsTree();
     return [e, e.version]
   }), c = (0, p.e7)([T.Z], () => T.Z.lurkingGuildIds()), h = l.useMemo(() => n ? [] : c, [c, n]), _ = (0, p.Wu)([R.Z, M.ZP], () => P.default.keys(R.Z.getGuilds()).filter(e => M.ZP.isCurrentUserGuest(e))), m = h.concat(_), C = (0, p.e7)([N.Z], () => N.Z.isFullscreenInContext()), ei = (0, p.e7)([R.Z], () => R.Z.getGeoRestrictedGuilds()), [el, er] = l.useState(!1), ea = l.useCallback(() => er(!0), []), es = l.useCallback(() => er(!1), []), ec = l.useRef(!1), [eu] = l.useState(() => new f.V7), ed = l.useRef(null), eh = l.useRef(null), [ep, e_] = l.useState(!1), {
     guilds: ef,
@@ -181,12 +181,12 @@ function ec(e) {
   }, eZ), [o, eZ]), {
     analyticsLocations: eR
   } = (0, E.ZP)(I.Z.GUILDS_LIST), {
-    pathname: eO
-  } = (0, u.TH)(), ey = eO.startsWith(ee.Z5c.GUILD_DISCOVERY), eP = eO.startsWith(ee.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+    pathname: ey
+  } = (0, u.TH)(), eO = ey.startsWith(ee.Z5c.GUILD_DISCOVERY), eP = ey.startsWith(ee.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
   l.useLayoutEffect(() => {
     if (!ec.current) {
       if (0 !== o.size) {
-        if (ey) eM.scrollToGuild(null, !1);
+        if (eO) eM.scrollToGuild(null, !1);
         else {
           let {
             scrollTop: e
@@ -290,7 +290,7 @@ function ec(e) {
             lastTargetNode: eD[eD.length - 1]
           }), n || em || eI ? null : (0, i.jsx)(F.Z, {
             ref: eM.guildDiscoveryRef,
-            selected: ey
+            selected: eO
           }), (0, i.jsx)(q.Z, {}), t ? null : (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(K.Z, {}), (0, i.jsx)(k.Z, {})]
           })]
@@ -298,7 +298,7 @@ function ec(e) {
           hideGradient: ep,
           children: (0, i.jsx)(F.Z, {
             ref: eM.guildDiscoveryRef,
-            selected: ey,
+            selected: eO,
             className: en.fixedDiscoveryIcon
           })
         }) : null : (0, i.jsx)(W.LW, {
@@ -311,7 +311,7 @@ function ec(e) {
               } = e;
               return (0, i.jsx)(F.Z, {
                 ref: eM.guildDiscoveryRef,
-                selected: ey,
+                selected: eO,
                 className: en.fixedDiscoveryIcon,
                 onClick: t
               })

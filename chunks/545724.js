@@ -20,15 +20,15 @@ t.Z = function(e) {
     isActive: p,
     onOtherHover: g,
     className: T
-  } = e, [C, f] = s.useState(!1), [S, N] = s.useState(!1), A = () => {
-    f(!0), m && !p && !S && (null == g || g())
+  } = e, [C, S] = s.useState(!1), [f, N] = s.useState(!1), A = () => {
+    S(!0), m && !p && !f && (null == g || g())
   }, Z = () => {
-    f(!1)
+    S(!1)
   }, L = (e, t) => {
     if (null != t) N(!0), (0, d.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("61035")]).then(n.bind(n, 881351));
+      } = await Promise.all([n.e("79695"), n.e("17400"), n.e("61035")]).then(n.bind(n, 881351));
       return n => (0, i.jsx)(e, {
         ...n,
         user: t
@@ -48,7 +48,7 @@ t.Z = function(e) {
       },
       children: (0, i.jsx)(l.Z.div, {
         className: r()(_.messageRequestItem, T, {
-          [_.active]: p || S,
+          [_.active]: p || f,
           [_.firstItem]: 0 === t
         }),
         onContextMenu: e => L(e, E),
@@ -60,7 +60,7 @@ t.Z = function(e) {
           opacity: 1
         },
         ...e,
-        children: a(C || p || S)
+        children: a(C || p || f)
       })
     })
   })

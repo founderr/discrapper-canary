@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return m
+    return A
   }
 }), t(47120);
 var n = t(735250);
@@ -21,12 +21,12 @@ var a = t(392711),
   N = t(216430),
   C = t(331651);
 
-function m() {
+function A() {
   let e, s;
   let a = (0, r.e7)([u.Z], () => u.Z.theme),
     {
-      canSetInputDevice: m,
-      canSetOutputDevice: A,
+      canSetInputDevice: A,
+      canSetOutputDevice: m,
       inputDeviceId: O,
       outputDeviceId: g
     } = (0, r.cj)([_.Z], () => ({
@@ -37,13 +37,13 @@ function m() {
     })),
     h = (0, r.e7)([_.Z], () => _.Z.getInputDevices()),
     R = (0, r.e7)([_.Z], () => _.Z.getOutputDevices());
-  !m && (e = (0, n.jsx)(l.FormText, {
+  !A && (e = (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
     className: C.marginTop8,
     children: I.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.y)("Help Text Input Devices")
     })
-  })), !A && (s = (0, n.jsx)(l.FormText, {
+  })), !m && (s = (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
     className: C.marginTop8,
     children: I.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({

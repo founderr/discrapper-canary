@@ -30,8 +30,8 @@ function g(e, n, g) {
     T = (0, o.Xb)(m);
   if ((null == N ? void 0 : N.id) === e.id) return [C];
   if (null == R || null == m || null == N) return [];
-  let v = T || m.ownerId === N.id && m.type === f.d4z.PRIVATE_THREAD;
-  return [v ? (0, l.jsx)(r.MenuItem, {
+  let A = T || m.ownerId === N.id && m.type === f.d4z.PRIVATE_THREAD;
+  return [A ? (0, l.jsx)(r.MenuItem, {
     id: "remove",
     label: m.isForumPost() ? _.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
       user: e.username
@@ -42,7 +42,7 @@ function g(e, n, g) {
     action: () => d.Z.removeMember(m, e.id, "Context Menu")
   }) : null, E.Z.canManageUser(f.Plq.KICK_MEMBERS, e, R) ? (0, l.jsx)(r.MenuItem, {
     id: "kick",
-    label: v ? _.Z.Messages.KICK_USER_FROM_SERVER.format({
+    label: A ? _.Z.Messages.KICK_USER_FROM_SERVER.format({
       user: e.username
     }) : _.Z.Messages.KICK_USER.format({
       user: e.username
@@ -60,7 +60,7 @@ function g(e, n, g) {
     })
   }) : null, E.Z.canManageUser(f.Plq.BAN_MEMBERS, e, R) ? (0, l.jsx)(r.MenuItem, {
     id: "ban",
-    label: v ? _.Z.Messages.BAN_USER_FROM_SERVER.format({
+    label: A ? _.Z.Messages.BAN_USER_FROM_SERVER.format({
       user: e.username
     }) : _.Z.Messages.BAN_USER.format({
       user: e.username

@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(209613),
   T = n(325708),
   C = n(320149),
-  f = n(252618),
-  S = n(605236),
+  S = n(252618),
+  f = n(605236),
   N = n(243778),
   A = n(984370),
   Z = n(797614),
@@ -83,7 +83,7 @@ function es() {
     C = s.useCallback(() => {
       I(n.map(e => e.channel.id))
     }, [n, I]),
-    f = s.useCallback(e => {
+    S = s.useCallback(e => {
       var t, s;
       let {
         row: l
@@ -99,7 +99,7 @@ function es() {
         hasSingleMessageRequest: a
       }, d)
     }, [a, n, T]),
-    S = s.useCallback(() => (0, i.jsxs)(y.Z, {
+    f = s.useCallback(() => (0, i.jsxs)(y.Z, {
       className: en.sectionTitle,
       children: [t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -146,8 +146,8 @@ function es() {
           paddingBottom: 24,
           sectionHeight: X.oi,
           rowHeight: X.WN,
-          renderSection: S,
-          renderRow: f,
+          renderSection: f,
+          renderRow: S,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -195,7 +195,7 @@ let er = function(e) {
       n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
       a = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
     return s.useEffect(() => {
-      (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, f.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, i.jsx)(N.Z, {
       contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -265,7 +265,7 @@ let ec = (0, I.Z)(function(e) {
     null != I && !p && g && m && ((0, L.Kh)(I), v.Z.closeChannelSidebar(b.uZ))
   }, [I, g, m, p]);
   let [T, C] = s.useState(X.pS.REQUESTS);
-  return (0, f.Tt)({
+  return (0, S.Tt)({
     location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {

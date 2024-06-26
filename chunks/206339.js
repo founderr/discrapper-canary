@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(960359),
   N = t(730417),
   C = t(524347),
-  m = t(454585),
-  A = t(163684),
+  A = t(454585),
+  m = t(163684),
   O = t(178100),
   g = t(518638),
   h = t(725727),
@@ -49,18 +49,18 @@ function F(e) {
     I = (0, S.ZP)(),
     N = (0, g.Pz)(t.id, I),
     C = null != i,
-    A = (0, O.Z)(t, C);
+    m = (0, O.Z)(t, C);
   C && c ? s = B.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
-    endDate: A,
+    endDate: m,
     onClickDetails: T
   }) : C && !c ? s = B.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
-    endDate: A,
+    endDate: m,
     onClickDetails: T
   }) : !C && c ? s = B.Z.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
-    endDate: A,
+    endDate: m,
     onClickDetails: T
   }) : !C && !c && (s = B.Z.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
-    endDate: A,
+    endDate: m,
     onClickDetails: T
   }));
   let h = C ? B.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : B.Z.Messages.PROMOTION_CARD_ACTION_CLAIM,
@@ -106,7 +106,7 @@ function F(e) {
         className: G.promotionLegalese,
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: m.Z.parse(M, !1, {
+        children: A.Z.parse(M, !1, {
           allowLinks: !0
         })
       })]
@@ -132,11 +132,11 @@ s.Z = function() {
     }),
     i = (0, c.e7)([D.default], () => P.ZP.isPremium(D.default.getCurrentUser())),
     o = l().groupBy(s, e => (0, L.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-    [S, m] = a.useState(!1),
+    [S, A] = a.useState(!1),
     O = (0, c.e7)([C.Z], () => C.Z.userStatus);
   a.useEffect(() => {
     _.Z.wait(() => {
-      (0, E.Qv)().then(() => m(!0))
+      (0, E.Qv)().then(() => A(!0))
     })
   }, []);
   let g = (0, N.dy)();
@@ -155,7 +155,7 @@ s.Z = function() {
       addClaimedOutboundPromotionCode: w
     } = (0, h.lG)(),
     W = Y.length + H.length > 0,
-    K = A.g.useExperiment({
+    K = m.g.useExperiment({
       location: "EntitlementGifts"
     }, {
       autoTrackExposure: !i,

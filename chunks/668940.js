@@ -32,7 +32,7 @@ let C = e => {
         return g.fW.Discover
     }
   },
-  f = () => {
+  S = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -42,7 +42,7 @@ let C = e => {
     })), n = (0, _.Z)(l.Z.QUEST_HOME_PAGE), o = (0, s.e7)([h.Z], () => h.Z.getDiscoveryCategories(), [], h.j), p = null == o ? void 0 : o.map(e => ({
       ...e,
       icon: C(e.categoryId)
-    })), f = e => {
+    })), S = e => {
       (0, r.uY)(e, !0), d.Z.closeSidebar(), t && (0, r.AQ)()
     };
     return (0, i.jsxs)(a.Scroller, {
@@ -50,15 +50,15 @@ let C = e => {
         text: T.Z.Messages.DISCOVER
       }), (0, i.jsx)(I.Z, {
         categories: p,
-        handleCategorySelect: f,
+        handleCategorySelect: S,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), (0, i.jsx)(c.Z, {
-        handleCategorySelect: f,
+        handleCategorySelect: S,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), n && (0, i.jsx)(u.Z, {
-        onClick: () => f(g.Gj.Quests),
+        onClick: () => S(g.Gj.Quests),
         isSelected: e === g.Gj.Quests
       })]
     })
@@ -72,5 +72,5 @@ t.Z = function() {
   }), t = e.length > 0, {
     clanDiscoveryEnabled: n
   } = (0, o.nk)("guild_discovery_sidebar");
-  return t || n ? (0, i.jsx)(p.Z, {}) : (0, i.jsx)(f, {})
+  return t || n ? (0, i.jsx)(p.Z, {}) : (0, i.jsx)(S, {})
 }

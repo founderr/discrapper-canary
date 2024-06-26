@@ -16,8 +16,8 @@ var i, s = n(735250),
   g = n(900849),
   T = n(940627),
   C = n(806519),
-  f = n(981631),
-  S = n(689938),
+  S = n(981631),
+  f = n(689938),
   N = n(785196),
   A = n(129512),
   Z = n(330065),
@@ -35,9 +35,9 @@ class O extends(i = a.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return L;
     switch (e) {
-      case f.BRd.DARK:
+      case S.BRd.DARK:
         return A;
-      case f.BRd.LIGHT:
+      case S.BRd.LIGHT:
         return Z
     }
   }
@@ -59,7 +59,7 @@ class O extends(i = a.PureComponent) {
       presenceCount: O,
       memberCount: R,
       keywords: x
-    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), b = p.ZP.getGuildDiscoverySplashURL({
+    } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB), b = p.ZP.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, I.x_)()
@@ -183,7 +183,7 @@ class O extends(i = a.PureComponent) {
                   }), (0, s.jsx)(c.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                       membersOnline: O
                     })
                   })]
@@ -194,7 +194,7 @@ class O extends(i = a.PureComponent) {
                   }), (0, s.jsx)(c.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                       count: R
                     })
                   })]

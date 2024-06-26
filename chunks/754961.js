@@ -28,7 +28,7 @@ function I(e) {
     animate: I,
     fillBackgroundColor: m,
     hasError: p
-  } = e, g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), C = s.useMemo(() => (0, u.j1)(m, T.hex()), [m, T]), f = null != C, S = (0, l.useSpring)({
+  } = e, g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), C = s.useMemo(() => (0, u.j1)(m, T.hex()), [m, T]), S = null != C, f = (0, l.useSpring)({
     transform: _ ? "translateX(0%)" : "translateX(-100%)",
     config: {
       ...l.config.stiff,
@@ -71,11 +71,11 @@ function I(e) {
         className: h.progressStep,
         children: (0, i.jsx)(l.animated.div, {
           style: {
-            ...S,
+            ...f,
             ...C
           },
           className: r()(h.progressStepFill, {
-            [h.customProgressStepFill]: f
+            [h.customProgressStepFill]: S
           })
         })
       })]

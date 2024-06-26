@@ -79,8 +79,8 @@ function R(e) {
     A = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForGuild(e)),
     R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
-      guildHasVoice: O,
-      guildHasVideo: y,
+      guildHasVoice: y,
+      guildHasVideo: O,
       selectedVoiceChannelHasVideo: P
     } = (0, s.cj)([Z.Z, C.Z, N.Z, E.Z, x.Z], () => {
       var t;
@@ -143,7 +143,7 @@ function R(e) {
         return !1
       })(),
       D = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (c = !0, u = (null == l ? void 0 : l.channel_id) === s, h = Z, m = b, I = T, E = D) : (c = O, u = null != l, h = S, m = y, I = L, E = M), {
+    return o ? (c = !0, u = (null == l ? void 0 : l.channel_id) === s, h = Z, m = b, I = T, E = D) : (c = y, u = null != l, h = S, m = O, I = L, E = M), {
       audio: c,
       video: m,
       screenshare: I,
@@ -153,5 +153,5 @@ function R(e) {
       gaming: a,
       isCurrentUserConnected: o || Z
     }
-  }, [j, A, a, l, e, R, n, y, O, P])
+  }, [j, A, a, l, e, R, n, O, y, P])
 }

@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(853872),
   N = t(78839),
   C = t(783739),
-  m = t(981631),
-  A = t(76676);
+  A = t(981631),
+  m = t(76676);
 
 function O() {
   a.useEffect(() => {
     c.Z.wait(() => {
-      d.jg(), d.tZ(), (0, _.X8)(), (0, E.Y2)(null, null, m.JjL.DISCOVERY), (0, _.tH)(!0)
+      d.jg(), d.tZ(), (0, _.X8)(), (0, E.Y2)(null, null, A.JjL.DISCOVERY), (0, _.tH)(!0)
     })
   }, []);
   let {
@@ -36,17 +36,17 @@ function O() {
     premiumSubscription: N.ZP.getPremiumTypeSubscription()
   })), t = (0, u.V)(), i = (0, o.e7)([I.Z], () => I.Z.hasFetchedPaymentSources), O = (0, o.e7)([S.Z], () => S.Z.isFetchingCurrentUserAppliedBoosts);
   return ((0, T.JR)(), e && t && i && !O) ? (0, n.jsxs)("div", {
-    className: A.container,
+    className: m.container,
     children: [(0, n.jsx)("div", {
-      className: A.background
+      className: m.background
     }), (0, n.jsx)("div", {
-      className: A.content,
+      className: m.content,
       children: (0, n.jsx)(C.Z, {
         premiumSubscription: s
       })
     })]
   }) : (0, n.jsx)("div", {
-    className: r()(A.container, A.loading),
+    className: r()(m.container, m.loading),
     children: (0, n.jsx)(l.Spinner, {})
   })
 }

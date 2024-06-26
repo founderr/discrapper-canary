@@ -17,8 +17,8 @@ var i = n(392711),
   g = n(914946),
   T = n(238679),
   C = n(452426),
-  f = n(295424),
-  S = n(222263),
+  S = n(295424),
+  f = n(222263),
   N = n(863141),
   A = n(186901),
   Z = n(981631);
@@ -344,7 +344,7 @@ let x = {
         } = e, s = {
           currentGuildMember: u.ZP.getSelfMember(t)
         };
-        return null != s.currentGuildMember && (null == n || !(0, r.Z)(s, n)) && i((0, S.Z)(s.currentGuildMember)), s
+        return null != s.currentGuildMember && (null == n || !(0, r.Z)(s, n)) && i((0, f.Z)(s.currentGuildMember)), s
       }
     }
   },
@@ -373,7 +373,7 @@ let x = {
       let {
         prevState: i,
         dispatch: a
-      } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, f.Z)(u) : null, E = null == r ? void 0 : r.sourceName, h = {
+      } = e, r = c.Z.getStreamerActiveStreamMetadata(), d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null, u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null, _ = null != u ? (0, S.Z)(u) : null, E = null == r ? void 0 : r.sourceName, h = {
         active: null != r,
         pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
         application: (n = null != _, n) ? {

@@ -44,13 +44,13 @@ function b() {
     }),
     M = (0, d.Z)() && null != n,
     R = (0, l.e7)([x.Z], () => null != x.Z.getBroadcast()),
-    O = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
+    y = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
   if (!M && !R) return null;
   if (u.Z.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !b) return null;
-  let y = [];
-  M && y.push(r.z.BROADCASTING_BROADCASTER_TOOLTIP);
+  let O = [];
+  M && O.push(r.z.BROADCASTING_BROADCASTER_TOOLTIP);
   let P = () => {
       o.ZP.trackWithMetadata(T.rMx.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
@@ -58,7 +58,7 @@ function b() {
     },
     j = () => {
       if (M) {
-        let i = O.find(e => e.ownerId === t);
+        let i = y.find(e => e.ownerId === t);
         null == i ? (0, _.X)(A.Z.Messages.START_BROADCASTING, A.Z.Messages.START_BROADCASTING_CTA, () => {
           (0, s.tE)({
             pid: null == n ? void 0 : n.pid,
@@ -82,7 +82,7 @@ function b() {
       markAsDismissed: e
     });
   return (0, i.jsx)(f.Z, {
-    contentTypes: y,
+    contentTypes: O,
     bypassAutoDismiss: !0,
     children: e => {
       let {

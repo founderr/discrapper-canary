@@ -24,15 +24,15 @@ var i = n(735250),
   g = n(304231),
   T = n(895068),
   C = n(490610),
-  f = n(981631),
-  S = n(689938),
+  S = n(981631),
+  f = n(689938),
   N = n(698829);
 let A = (e, t) => {
   switch (e) {
     case m.hz.GENSHIN:
-      return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
+      return t === S.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
     case m.hz.VALORANT:
-      return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight
+      return t === S.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -54,16 +54,16 @@ function Z() {
       }
     }),
     C = (0, _.ZP)(),
-    S = s.useMemo(() => A(e, C), [e, C]),
+    f = s.useMemo(() => A(e, C), [e, C]),
     Z = s.useCallback(e => {
       h(e.currentTarget.scrollTop)
     }, [h]),
     L = s.useMemo(() => {
       switch (e) {
         case m.hz.GENSHIN:
-          return C === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
+          return C === S.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
         case m.hz.VALORANT:
-          return C === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight
+          return C === S.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight
       }
     }, [e, C]),
     v = (0, d.useToken)(d.tokens.colors.BG_MOD_STRONG);
@@ -95,7 +95,7 @@ function Z() {
               opacity: p.scrollHeight.to([100, 364], [1, 0])
             },
             children: [(0, i.jsx)("div", {
-              className: S
+              className: f
             }), (0, i.jsx)("div", {
               className: N.backgroundImageBlur
             })]
@@ -164,8 +164,8 @@ function L() {
           })
         })]
       }), (0, i.jsx)(C.Z, {
-        title: S.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-        subtitle: I ? S.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+        title: f.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+        subtitle: I ? f.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
       })]
     })
   })

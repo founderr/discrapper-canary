@@ -27,8 +27,8 @@ function C(e) {
     isHovering: n,
     onCtxMenuClose: a,
     onCtxMenuOpen: C,
-    onCtxMenuSelect: f
-  } = e, S = (0, h.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? p.BRd.DARK : p.BRd.LIGHT, Z = A === p.BRd.DARK, L = s.useMemo(() => (0, h.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, h.Mi)(t, E.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), P = s.useRef(null);
+    onCtxMenuSelect: S
+  } = e, f = (0, h.ph)(t), N = (0, d.ZP)(), A = (0, o.wj)(N) ? p.BRd.DARK : p.BRd.LIGHT, Z = A === p.BRd.DARK, L = s.useMemo(() => (0, h.nP)(t.config.assets.questBarHero), [t]), v = s.useContext(l.S).reducedMotion.enabled, O = (0, h.Mi)(t, E.jn.GIFT_INVENTORY_FOR_YOU), R = (0, _.tP)(t), x = s.useRef(n), P = s.useRef(null);
   return s.useEffect(() => {
     if (L && null != P.current) return x.current !== n && (n ? P.current.play() : (P.current.pause(), P.current.currentTime = 0)), x.current = n, () => {
       var e;
@@ -49,8 +49,8 @@ function C(e) {
             className: T.heroAsset,
             controls: !1,
             children: (0, i.jsx)("source", {
-              src: S,
-              type: (0, h.mN)(S)
+              src: f,
+              type: (0, h.mN)(f)
             })
           }))
         }) : (0, i.jsx)(I.Fl, {
@@ -59,7 +59,7 @@ function C(e) {
             ref: e,
             alt: "",
             className: T.heroAsset,
-            src: S
+            src: f
           })
         })
       }), (0, i.jsx)("div", {
@@ -84,7 +84,7 @@ function C(e) {
             }), (0, i.jsx)(m.r, {
               onOpen: C,
               onClose: a,
-              onSelect: f,
+              onSelect: S,
               questContent: E.jn.QUEST_HOME_DESKTOP,
               quest: t,
               hideLearnMore: !0,

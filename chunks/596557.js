@@ -27,9 +27,9 @@ function I(e) {
       var t;
       (0, d.Qd)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS)
     }, [e]),
-    f = s.useRef(!1);
+    S = s.useRef(!1);
   s.useEffect(() => {
-    if (T && !f.current) {
+    if (T && !S.current) {
       var t;
       (0, r.openModalLazy)(async () => {
         let {
@@ -46,7 +46,7 @@ function I(e) {
       }), o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
         type: a.C[a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
         guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
-      }), f.current = !0
+      }), S.current = !0
     }
   }, [m, e, C, p, T])
 }

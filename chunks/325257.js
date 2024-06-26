@@ -35,7 +35,7 @@ let R = {
   }
 };
 
-function O(e, t) {
+function y(e, t) {
   (0, p.jW)(e, async () => {
     let {
       default: e
@@ -47,7 +47,7 @@ function O(e, t) {
   })
 }
 t.Z = l.memo(function(e) {
-  var t, n, r, p, y;
+  var t, n, r, p, O;
   let {
     guildNode: P,
     setRef: j,
@@ -61,7 +61,7 @@ t.Z = l.memo(function(e) {
     mediaState: H,
     unavailable: F = !1,
     badge: W = 0,
-    contextMenu: Y = O,
+    contextMenu: Y = y,
     draggable: z = !1,
     sorting: K = !1,
     preloadOnClick: q = !0,
@@ -73,7 +73,7 @@ t.Z = l.memo(function(e) {
   null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
     guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
-  let et = null !== (y = e.lowerBadgeSize) && void 0 !== y ? y : {
+  let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : {
       width: (0, d.getBadgeWidthForValue)(W)
     },
     [{

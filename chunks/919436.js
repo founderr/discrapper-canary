@@ -202,7 +202,7 @@ class R extends(i = r.PureComponent) {
       null != i ? (0, u.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("79695"), n.e("32006"), n.e("56826"), n.e("4562")]).then(n.bind(n, 131404));
+        } = await Promise.all([n.e("79695"), n.e("17400"), n.e("56826"), n.e("4562")]).then(n.bind(n, 131404));
         return n => (0, l.jsx)(e, {
           ...n,
           channel: t,

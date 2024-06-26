@@ -22,8 +22,8 @@ var i, s, a = n(470079),
   g = n(541566),
   T = n(192513),
   C = n(255791),
-  f = n(70956),
-  S = n(267642),
+  S = n(70956),
+  f = n(267642),
   N = n(981631);
 
 function A(e) {
@@ -47,7 +47,7 @@ function A(e) {
     v = (0, r.e7)([p.Z], () => p.Z.can(N.Plq.ADMINISTRATOR, e)),
     O = null != s && Date.now() - s <= N.Dge,
     R = null != e ? e.premiumSubscriberCount : 0,
-    x = (0, S.rF)(R, n) !== N.Eu4.NONE,
+    x = (0, f.rF)(R, n) !== N.Eu4.NONE,
     P = null != i && Date.now() - i <= 432e5,
     b = !P && !O && v && x,
     M = (0, c.m)(n),
@@ -67,7 +67,7 @@ function A(e) {
       let e = -1;
       return b && (e = window.setTimeout(() => {
         null != n && (0, l.C0)(n)
-      }, 30 * Math.random() * f.Z.Millis.SECOND)), () => {
+      }, 30 * Math.random() * S.Z.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
     }, [n, b]), Z) return 0;

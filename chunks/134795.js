@@ -26,7 +26,7 @@ function E(e) {
     isTryItOutFlow: I = !1,
     forcedDivider: N,
     withHighlight: C = !1
-  } = e, m = C ? r.ShinyButton : r.Button;
+  } = e, A = C ? r.ShinyButton : r.Button;
   return (0, n.jsx)(l.Z, {
     className: u,
     title: d.Z.Messages.USER_SETTINGS_PROFILE_BANNER,
@@ -36,7 +36,7 @@ function E(e) {
     forcedDivider: N,
     children: (0, n.jsxs)("div", {
       className: _.buttonsContainer,
-      children: [(0, n.jsx)(m, {
+      children: [(0, n.jsx)(A, {
         className: i()({
           [_.buttonHighlighted]: C
         }),

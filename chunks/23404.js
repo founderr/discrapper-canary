@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(566078),
   T = n(602667),
   C = n(611855),
-  f = n(670638),
-  S = n(667105),
+  S = n(670638),
+  f = n(667105),
   N = n(860151),
   A = n(46140),
   Z = n(981631),
@@ -79,7 +79,7 @@ t.Z = function(e) {
       questContent: m.jn.ACTIVITY_PANEL,
       questContentCTA: _.jZ.LEARN_MORE
     }), d.Z.open(Z.oAB.INVENTORY)
-  }, [o]), j = (0, S.hf)({
+  }, [o]), j = (0, f.hf)({
     quest: o,
     location: m.jn.ACTIVITY_PANEL
   }), U = (0, h.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, k = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null;
@@ -107,7 +107,7 @@ t.Z = function(e) {
             quest: o
           }) : (0, i.jsx)(C.Z, {
             textOpacity: .5
-          }), (0, i.jsx)(f.r, {
+          }), (0, i.jsx)(S.r, {
             quest: o,
             questContent: m.jn.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

@@ -20,8 +20,8 @@ var r = n(91192),
   g = n(647265),
   T = n(650032),
   C = n(104494),
-  f = n(639119),
-  S = n(655525),
+  S = n(639119),
+  f = n(655525),
   N = n(314684),
   A = n(52188),
   Z = n(248042),
@@ -49,7 +49,7 @@ let G = e => {
     H = (0, l.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
     V = (0, m.Qo)(B, H),
     F = (0, r.JA)("nitro"),
-    Y = (0, f.N)(),
+    Y = (0, S.N)(),
     W = (0, C.Ng)(),
     z = (0, l.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == Y,
     K = (0, Z.Vi)(),
@@ -73,7 +73,7 @@ let G = e => {
       showTabForOtherReasons: et
     });
   if (!(et = et || null != B && null != ee && Date.now() - ee.getTime() > es)) return null;
-  Q ? (n = (0, a.jsx)(x.g, {}), i = 2) : K ? (n = (0, a.jsx)(S.Z, {
+  Q ? (n = (0, a.jsx)(x.g, {}), i = 2) : K ? (n = (0, a.jsx)(f.Z, {
     isNitroTab: !0
   }), i = 0) : null != X ? (n = (0, a.jsx)(x.Z, {
     copy: X

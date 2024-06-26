@@ -3,7 +3,7 @@ n.d(t, {
     return R
   },
   aR: function() {
-    return O
+    return y
   }
 }), n(47120);
 var i = n(735250),
@@ -57,8 +57,8 @@ let b = (0, N.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     })
   },
   R = 57,
-  O = 57 + b,
-  y = {
+  y = 57 + b,
+  O = {
     tension: 180,
     friction: 80
   };
@@ -71,14 +71,14 @@ t.ZP = e => {
   } = (0, g.ZP)(_.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: u,
     id: m
-  } = t, N = (0, E.rF)(u, m), b = (0, E.FZ)(N, t.id), R = null == b, O = null != b ? b : N, P = (0, c.e7)([S.Z], () => {
+  } = t, N = (0, E.rF)(u, m), b = (0, E.FZ)(N, t.id), R = null == b, y = null != b ? b : N, P = (0, c.e7)([S.Z], () => {
     var e;
     return null !== (e = S.Z.getCountForGuild(m)) && void 0 !== e ? e : 0
   }), j = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), D = (0, c.e7)([C.Z], () => C.Z.can(T.Plq.MANAGE_GUILD, t));
   l.useEffect(() => {
     P !== u && (0, x.v)(m, u)
   }, [m, P, u]);
-  let U = "".concat(Math.min(100, u / (0, E.vn)(t.id)[O] * 100), "%"),
+  let U = "".concat(Math.min(100, u / (0, E.vn)(t.id)[y] * 100), "%"),
     {
       current: G
     } = l.useRef(U),
@@ -89,7 +89,7 @@ t.ZP = e => {
       to: {
         width: U
       },
-      config: y,
+      config: O,
       immediate: j
     },
     [k, B] = (0, s.useSpring)(() => w),
@@ -113,20 +113,20 @@ t.ZP = e => {
       })
     },
     H = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
-      levelName: (0, E.e9)(O)
+      levelName: (0, E.e9)(y)
     }),
     F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
       numBoosts: u,
-      numTotal: (0, E.vn)(t.id)[O]
+      numTotal: (0, E.vn)(t.id)[y]
     });
-  R && (H = (0, E.e9)(O), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  R && (H = (0, E.e9)(y), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: u
   }));
   let W = (0, o.JA)("boosts-".concat(t.id));
   return (0, i.jsx)("li", {
     children: (0, i.jsx)(d.Tooltip, {
       text: R ? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
-        levelName: (0, E.nW)(O)
+        levelName: (0, E.nW)(y)
       }),
       color: d.Tooltip.Colors.BLACK,
       position: "top",

@@ -25,8 +25,8 @@ var i, s, a = n(735250),
   g = n(192079),
   T = n(427679),
   C = n(448206),
-  f = n(496675),
-  S = n(938475),
+  S = n(496675),
+  f = n(938475),
   N = n(602623),
   A = n(626135),
   Z = n(823379),
@@ -116,7 +116,7 @@ function V(e) {
   let {
     guildEvent: t,
     channel: n
-  } = e, i = (0, c.Wu)([S.ZP], () => S.ZP.getVoiceStatesForChannel(n).map(e => {
+  } = e, i = (0, c.Wu)([f.ZP], () => f.ZP.getVoiceStatesForChannel(n).map(e => {
     let {
       user: t
     } = e;
@@ -367,7 +367,7 @@ function Q(e) {
     channel: t,
     speakers: n,
     voiceType: i
-  } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), u = (0, c.e7)([f.Z], () => f.Z.can(w.Plq.CONNECT, t)), _ = (0, C.Z)(t.id), E = k.Z.Messages.JOIN;
+  } = e, s = t.getGuildId(), l = r.useMemo(() => n.slice(0, 3), [n]), u = (0, c.e7)([S.Z], () => S.Z.can(w.Plq.CONNECT, t)), _ = (0, C.Z)(t.id), E = k.Z.Messages.JOIN;
   switch (i) {
     case 1:
       E = k.Z.Messages.JOIN;

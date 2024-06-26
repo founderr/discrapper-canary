@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return m
+    return A
   }
 }), t(47120);
 var n, a, i = t(735250),
@@ -19,19 +19,19 @@ var n, a, i = t(735250),
 let C = /^\d+$|^$/;
 (a = n || (n = {})).LOCALHOST = "localhost", a.PROXY = "proxy";
 
-function m(e) {
+function A(e) {
   let {
     onClose: s,
     transitionState: t
   } = e, {
     authorizedApplicationId: n,
     authorizationError: a,
-    authorizing: m
+    authorizing: A
   } = (0, o.cj)([E.Z], () => ({
     authorizedApplicationId: E.Z.testModeApplicationId,
     authorizationError: E.Z.error,
     authorizing: E.Z.isFetchingAuthorization
-  })), [A, O] = r.useState(null != n ? n : ""), [g, h] = r.useState("8080"), [R, p] = r.useState("localhost"), x = (0, T.Dt)(), M = C.test(A);
+  })), [m, O] = r.useState(null != n ? n : ""), [g, h] = r.useState("8080"), [R, p] = r.useState("localhost"), x = (0, T.Dt)(), M = C.test(m);
   async function D() {
     d.q$();
     let e = function(e, s, t) {
@@ -42,11 +42,11 @@ function m(e) {
         case "proxy":
           return (0, _.Z)(t)
       }
-    }(R, g, A);
-    null != await d.Wt(A, e) && s()
+    }(R, g, m);
+    null != await d.Wt(m, e) && s()
   }
   r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-  let f = null != n && n === A,
+  let f = null != n && n === m,
     L = f ? function() {
       d.mc(), O(""), p(null)
     } : D;
@@ -85,19 +85,19 @@ function m(e) {
             title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, i.jsx)(l.TextInput, {
-              value: A,
+              value: m,
               maxLength: 19,
               error: M ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
                 O(e)
               },
-              disabled: m
+              disabled: A
             })
           }), (0, i.jsx)(l.FormItem, {
             className: I.inputWrapper,
             title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, i.jsx)(l.SingleSelect, {
-              isDisabled: !M || "" === A,
+              isDisabled: !M || "" === m,
               value: R,
               options: [{
                 value: "localhost",
@@ -121,12 +121,12 @@ function m(e) {
               value: g,
               maxLength: 5,
               onChange: e => h(e),
-              disabled: m
+              disabled: A
             })
           }), (0, i.jsx)(l.Button, {
-            submitting: m,
+            submitting: A,
             type: "submit",
-            disabled: !M || 0 === A.length || "localhost" === R && 0 === g.length,
+            disabled: !M || 0 === m.length || "localhost" === R && 0 === g.length,
             color: f ? l.Button.Colors.RED : l.Button.Colors.GREEN,
             children: f ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]

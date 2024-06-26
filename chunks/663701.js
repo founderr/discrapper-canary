@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(770471),
   T = n(158631),
   C = n(143614),
-  f = n(463119),
-  S = n(377171),
+  S = n(463119),
+  f = n(377171),
   N = n(243778),
   A = n(922409),
   Z = n(899740),
@@ -73,7 +73,7 @@ let q = e => {
       ...n,
       ...s,
       children: [r.length > 0 && l && (0, i.jsx)(E.TextBadge, {
-        color: S.Z.BG_BRAND,
+        color: f.Z.BG_BRAND,
         text: (0, i.jsxs)("div", {
           className: K.broadcastingBadge,
           children: [(0, i.jsx)(B.Z, {
@@ -137,7 +137,7 @@ let q = e => {
       t = (0, Z.T)();
     return e > 0 ? (0, i.jsx)(E.NumberBadge, {
       count: e,
-      color: 0 === t ? S.Z.ICON_MUTED : void 0
+      color: 0 === t ? f.Z.ICON_MUTED : void 0
     }) : null
   },
   $ = e => {
@@ -209,7 +209,7 @@ let q = e => {
         } = e;
         return t === u.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(E.TextBadge, {
           text: z.Z.Messages.NEW,
-          color: S.Z.BG_BRAND
+          color: f.Z.BG_BRAND
         }) : null
       }
     })
@@ -300,7 +300,7 @@ let es = e => {
         }
       }, "activities") : null, (0, i.jsx)($, {
         selected: null == u ? null != s && s.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS
-      }, "message-requests"), (0, i.jsx)(f.i, {
+      }, "message-requests"), (0, i.jsx)(S.i, {
         selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

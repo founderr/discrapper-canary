@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(706454),
   T = n(215427),
   C = n(820254),
-  f = n(838949),
-  S = n(70956),
+  S = n(838949),
+  f = n(70956),
   N = n(358085),
   A = n(557177),
   Z = n(998502),
@@ -57,7 +57,7 @@ class x extends s.PureComponent {
     } = this.props, d = r && n && !i && !s;
     if (e.soundpack !== l && (this._connectedSound = this.createSound()), e.connected !== r || d) {
       if (r && null != this.videoRef) {
-        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * S.Z.Millis.SECOND), 600);
+        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * f.Z.Millis.SECOND), 600);
         clearTimeout(this._noProblemsTimeout), u.K.get(L.wli) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: r
@@ -99,7 +99,7 @@ class x extends s.PureComponent {
         },
         children: [(0, i.jsxs)("div", {
           className: O.content,
-          children: [(0, i.jsx)(f.Z, {
+          children: [(0, i.jsx)(S.Z, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,

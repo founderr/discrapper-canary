@@ -68,8 +68,8 @@ var i, s = n(729594),
   g = n(131951),
   T = n(375954),
   C = n(158776),
-  f = n(594174),
-  S = n(979651),
+  S = n(594174),
+  f = n(979651),
   N = n(70956),
   A = n(5192),
   Z = n(226951),
@@ -112,8 +112,8 @@ function G(e, t) {
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
-      a = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
+    let s = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
+      a = Object.values(f.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -165,7 +165,7 @@ function k(e, t, n) {
     selfDeaf: r,
     suppress: l,
     userId: o
-  } = n, c = f.default.getUser(o);
+  } = n, c = S.default.getUser(o);
   if (null == c) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.ZP.getName(e, t, c),
@@ -184,7 +184,7 @@ function k(e, t, n) {
 }
 
 function B(e, t, n) {
-  let i = f.default.getUser(t);
+  let i = S.default.getUser(t);
   return {
     type: e,
     user: null != i ? (0, v.Z)(i) : null,

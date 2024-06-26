@@ -26,8 +26,8 @@ function N() {
     a = E.cC.useSetting(),
     N = E.vF.useSetting(),
     C = E.H1.useSetting(),
-    m = E.ev.useSetting(),
-    A = E.x4.useSetting(),
+    A = E.ev.useSetting(),
+    m = E.x4.useSetting(),
     O = E.RS.useSetting(),
     g = E.NA.useSetting(),
     h = E.nc.useSetting(),
@@ -54,7 +54,7 @@ function N() {
         setting: u.s6.CHAT_INLINE_MEDIA_UPLOADS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(I.marginTop8, I.marginBottom20),
-          value: A,
+          value: m,
           note: S.Z.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
             maxSize: 10
           }),
@@ -102,7 +102,7 @@ function N() {
         setting: u.s6.CHAT_EMOJI_EMOTICONS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: I.marginBottom40,
-          value: m,
+          value: A,
           note: c.Z.parse(S.Z.Messages.CONVERT_EMOTICONS_HELP),
           onChange: E.ev.updateSetting,
           children: S.Z.Messages.CONVERT_EMOTICONS

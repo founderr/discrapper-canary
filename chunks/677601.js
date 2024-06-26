@@ -372,7 +372,7 @@ class eU extends a.PureComponent {
               return (0, _.jW)(t, async () => {
                 let {
                   default: e
-                } = await Promise.all([n.e("79695"), n.e("32006"), n.e("22036"), n.e("56826"), n.e("4793")]).then(n.bind(n, 131404));
+                } = await Promise.all([n.e("79695"), n.e("17400"), n.e("22036"), n.e("56826"), n.e("4793")]).then(n.bind(n, 131404));
                 return t => (0, i.jsx)(e, {
                   ...t,
                   showChannelCallItems: !0,
@@ -386,7 +386,7 @@ class eU extends a.PureComponent {
               return (0, _.jW)(t, async () => {
                 let {
                   default: e
-                } = await Promise.all([n.e("79695"), n.e("32006"), n.e("60677"), n.e("84979")]).then(n.bind(n, 354589));
+                } = await Promise.all([n.e("79695"), n.e("17400"), n.e("60677"), n.e("84979")]).then(n.bind(n, 354589));
                 return t => (0, i.jsx)(e, {
                   ...t,
                   showChannelCallItems: !0,
@@ -402,7 +402,7 @@ class eU extends a.PureComponent {
               return o()(null != h, "GuildID null for guild voice channel"), (0, _.jW)(t, async () => {
                 let {
                   default: e
-                } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
+                } = await Promise.all([n.e("79695"), n.e("17400"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
                 return t => (0, i.jsx)(e, {
                   ...t,
                   showMediaItems: !0,

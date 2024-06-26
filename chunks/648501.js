@@ -38,8 +38,8 @@ function L(e) {
     voiceStates: b,
     enableConnectedUserLimit: M,
     enableActivities: R,
-    isSubscriptionGated: O,
-    needSubscriptionToAccess: y,
+    isSubscriptionGated: y,
+    needSubscriptionToAccess: O,
     isNewChannel: P,
     muted: j,
     resolvedUnreadSetting: D
@@ -55,8 +55,8 @@ function L(e) {
   if ((0, C.Z)(U)) return (0, i.jsx)(x.Z, {
     mentionsCount: U
   });
-  if ((0, c.O)(O)) return (0, i.jsx)(c.Z, {
-    locked: y
+  if ((0, c.O)(y)) return (0, i.jsx)(c.Z, {
+    locked: O
   });
   if (P) return (0, i.jsx)(a.TextBadge, {
     text: v.Z.Messages.NEW,

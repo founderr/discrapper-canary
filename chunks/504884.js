@@ -25,11 +25,11 @@ function C(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }(a = n || (n = {})).DEFAULT = "DEFAULT", a.RECORDING = "RECORDING";
-let m = {
+let A = {
   DEFAULT: N.__invalid_default,
   RECORDING: N.recording
 };
-class A extends r.PureComponent {
+class m extends r.PureComponent {
   componentWillUnmount() {
     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
   }
@@ -65,7 +65,7 @@ class A extends r.PureComponent {
         onClick: this.handleClick,
         onMouseDown: this.handleMouseDown,
         ref: this._containerRef,
-        className: l()(N.recorderContainer, m[s], {
+        className: l()(N.recorderContainer, A[s], {
           [N.hasValue]: r,
           [N.containerDisabled]: n
         }),
@@ -128,4 +128,4 @@ class A extends r.PureComponent {
     })
   }
 }
-s.Z = A
+s.Z = m

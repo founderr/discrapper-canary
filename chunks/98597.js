@@ -139,7 +139,7 @@ function R(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     channel: t
   } = e, n = () => {
@@ -161,7 +161,7 @@ function O(e) {
   })
 }
 
-function y(e) {
+function O(e) {
   let {
     channel: t
   } = e, n = () => {
@@ -196,12 +196,12 @@ class P extends(a = o.PureComponent) {
     })
   }
   renderRemoveSuggestionButton() {
-    return (0, s.jsx)(O, {
+    return (0, s.jsx)(y, {
       ...this.props
     })
   }
   renderAcceptSuggestionButton() {
-    return (0, s.jsx)(y, {
+    return (0, s.jsx)(O, {
       ...this.props
     })
   }

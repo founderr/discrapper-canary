@@ -26,8 +26,8 @@ function p(e) {
     renderModalProps: g,
     analyticsLocations: T,
     analyticsLocation: C,
-    isLightTheme: f
-  } = e, S = "AnnouncementModalVariant1_".concat(s.z[Number(p.dismissKey)]), {
+    isLightTheme: S
+  } = e, f = "AnnouncementModalVariant1_".concat(s.z[Number(p.dismissKey)]), {
     onClose: N
   } = g, A = null != p.button && "" !== p.button.copy ? p.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = p.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = p.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
     (0, o.uL)(E.Z5c.APPLICATION_STORE), N()
@@ -52,13 +52,13 @@ function p(e) {
     })
   }) : void 0, O = {
     type: "video",
-    src: f ? p.heroArtVideoLinkLightTheme : p.videoLink
+    src: S ? p.heroArtVideoLinkLightTheme : p.videoLink
   };
   ("" !== p.heroArtImageLinkDarkTheme || "" !== p.heroArtImageLinkLightTheme) && (O = {
     type: "image",
-    src: f ? p.heroArtImageLinkLightTheme : p.heroArtImageLinkDarkTheme
+    src: S ? p.heroArtImageLinkLightTheme : p.heroArtImageLinkDarkTheme
   });
-  let R = f ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+  let R = S ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
     x = "" !== p.modalTopPill ? () => (0, i.jsx)(u.Cy, {
       text: p.modalTopPill,
       className: I.modalTopPill,
@@ -74,10 +74,10 @@ function p(e) {
     featureCards: p.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: f ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: S ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
-    changeLogId: S,
+    changeLogId: f,
     button: () => {
       let e = Date.now();
       return (0, i.jsxs)(r.ShinyButton, {
@@ -87,10 +87,10 @@ function p(e) {
         size: r.Button.Sizes.SMALL,
         onClick: () => {
           c.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: S,
+            change_log_id: f,
             cta_type: Z,
             seconds_open: Math.round((Date.now() - e) / 1e3),
-            target: S
+            target: f
           }), L()
         },
         children: [(0, i.jsx)("img", {

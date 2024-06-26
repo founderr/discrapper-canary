@@ -38,7 +38,7 @@ function N() {
       onChange: i,
       onClear: () => i("")
     }), r.length > 0 ? r.map(s => {
-      let t = s.experiment.type === T.xY.GUILD ? m : C;
+      let t = s.experiment.type === T.xY.GUILD ? A : C;
       return (0, n.jsx)(t, {
         experiment: s.experiment,
         experimentId: s.id,
@@ -60,16 +60,16 @@ function C(e) {
     experiment: t,
     experimentId: i,
     overrideDescriptor: _
-  } = e, [E, u] = a.useState(null != _), [N, C] = a.useState(!1), m = a.useCallback(() => {
+  } = e, [E, u] = a.useState(null != _), [N, C] = a.useState(!1), A = a.useCallback(() => {
     u(e => !e)
-  }, []), A = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)), O = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)), g = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.USER, i), e => {
+  }, []), m = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)), O = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)), g = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.USER, i), e => {
     let [s, t] = e;
     return -t
   }).map(e => {
     let [s, t] = e;
     return "".concat(new Date(t).toLocaleString(), " (").concat(s, ")")
   })), h = (0, n.jsx)(l.Clickable, {
-    onClick: m,
+    onClick: A,
     children: (0, n.jsxs)(l.FormTitle, {
       tag: l.FormTitleTags.H3,
       className: S.title,
@@ -112,7 +112,7 @@ function C(e) {
         className: S.description,
         children: [(0, n.jsxs)(l.FormText, {
           type: l.FormTextTypes.DESCRIPTION,
-          children: ["Current assigned to bucket ", null !== (s = null == A ? void 0 : A.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
+          children: ["Current assigned to bucket ", null !== (s = null == m ? void 0 : m.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
         }), null == O ? (0, n.jsx)(l.FormText, {
           type: l.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -161,14 +161,14 @@ function C(e) {
   })
 }
 
-function m(e) {
+function A(e) {
   let {
     experiment: s,
     experimentId: t,
     overrideDescriptor: i
-  } = e, [E, u] = a.useState(null != i), [N, C] = a.useState(!1), m = a.useCallback(() => {
+  } = e, [E, u] = a.useState(null != i), [N, C] = a.useState(!1), A = a.useCallback(() => {
     u(e => !e)
-  }, []), A = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)), O = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.GUILD, t), e => {
+  }, []), m = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)), O = (0, o.e7)([d.Z], () => r().sortBy(d.Z.getRecentExposures(T.xY.GUILD, t), e => {
     let [s, t] = e;
     return -t
   }).map(e => {
@@ -186,7 +186,7 @@ function m(e) {
     }
     return [n, r()(s).keys().map(Number).sort().map(e => "".concat(s[e], " guilds in bucket ").concat(e)).join(", ")]
   }), R = (0, n.jsx)(l.Clickable, {
-    onClick: m,
+    onClick: A,
     children: (0, n.jsxs)(l.FormTitle, {
       tag: l.FormTitleTags.H3,
       className: S.title,
@@ -230,7 +230,7 @@ function m(e) {
         children: [(0, n.jsxs)(l.FormText, {
           type: l.FormTextTypes.DESCRIPTION,
           children: ["Current Assignments: ", h]
-        }), null == A ? (0, n.jsx)(l.FormText, {
+        }), null == m ? (0, n.jsx)(l.FormText, {
           type: l.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
         }) : null]
@@ -250,7 +250,7 @@ function m(e) {
         }), (0, n.jsx)(l.Text, {
           variant: "code",
           className: S.pre,
-          children: null == A ? "None" : JSON.stringify(A, void 0, 2)
+          children: null == m ? "None" : JSON.stringify(m, void 0, 2)
         }), (0, n.jsx)(l.FormTitle, {
           tag: "h5",
           className: S.debugTitle,

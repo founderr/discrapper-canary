@@ -24,8 +24,8 @@ t.Z = (0, u.Z)(e => {
     guildId: g,
     channelId: T,
     prompt: C,
-    disableGuildSelect: f,
-    disclosures: S,
+    disableGuildSelect: S,
+    disclosures: f,
     integrationType: N
   } = e, A = "OAuth2Authorize_".concat(n, "_").concat(g, "_").concat(T), Z = null != N ? null == o ? void 0 : o.get(N) : void 0, L = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : r.Z.getApplication(n);
   return new Promise((e, t) => {
@@ -42,7 +42,7 @@ t.Z = (0, u.Z)(e => {
       authorizations: o,
       clientId: n,
       scopes: null != c ? c : [],
-      disclosures: null != S ? S : [],
+      disclosures: null != f ? f : [],
       callback: r,
       responseType: E,
       redirectUri: h,
@@ -53,7 +53,7 @@ t.Z = (0, u.Z)(e => {
       guildId: g,
       channelId: T,
       prompt: C,
-      disableGuildSelect: "boolean" == typeof f ? f : "true" === f,
+      disableGuildSelect: "boolean" == typeof S ? S : "true" === S,
       integrationType: N
     }), {
       modalKey: A,

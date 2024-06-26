@@ -40,7 +40,7 @@ function C(e) {
   } = e;
   delete I[t.id], delete m[t.id]
 }
-class f extends(i = c.ZP.Store) {
+class S extends(i = c.ZP.Store) {
   getActiveChannelsFetchStatus(e) {
     return p[e]
   }
@@ -55,12 +55,12 @@ class f extends(i = c.ZP.Store) {
     return null == h[e] && !(null === (t = p[e]) || void 0 === t ? void 0 : t.loading)
   }
 }
-r = "ActiveChannelsStore", (a = "displayName") in(s = f) ? Object.defineProperty(s, a, {
+r = "ActiveChannelsStore", (a = "displayName") in(s = S) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, new f(d.Z, {
+}) : s[a] = r, new S(d.Z, {
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,

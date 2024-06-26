@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(353093),
   T = n(603839),
   C = n(430824),
-  f = n(725568),
-  S = n(231467),
+  S = n(725568),
+  f = n(231467),
   N = n(207796),
   A = n(316553),
   Z = n(273254),
@@ -203,7 +203,7 @@ t.Z = s.memo(function(e) {
       !o && ((0, I._9)({
         guildId: x,
         location: E.Z.CLAN_DISCOVERY
-      }), (0, f.q4)(e => {
+      }), (0, S.q4)(e => {
         let {
           closeLayer: t
         } = e;
@@ -335,7 +335,7 @@ t.Z = s.memo(function(e) {
           ...W,
           ...Y
         },
-        children: (0, i.jsx)(S.xV, {
+        children: (0, i.jsx)(f.xV, {
           clan: H[0],
           className: R.clanCardOuterLeft
         })
@@ -345,7 +345,7 @@ t.Z = s.memo(function(e) {
           ...z,
           ...Y
         },
-        children: (0, i.jsx)(S.xV, {
+        children: (0, i.jsx)(f.xV, {
           clan: H[1],
           className: R.clanCardInnerLeft
         })
@@ -360,7 +360,7 @@ t.Z = s.memo(function(e) {
             },
             children: (0, i.jsx)(l.animated.div, {
               style: X,
-              children: (0, i.jsx)(S.xV, {
+              children: (0, i.jsx)(f.xV, {
                 clan: B,
                 className: R.clanCardCenter,
                 bannerUrl: (0, g.pY)(H[4].id, H[4].bannerHash)
@@ -374,7 +374,7 @@ t.Z = s.memo(function(e) {
           ...K,
           ...Y
         },
-        children: (0, i.jsx)(S.xV, {
+        children: (0, i.jsx)(f.xV, {
           clan: H[2],
           className: R.clanCardInnerRight
         })
@@ -384,7 +384,7 @@ t.Z = s.memo(function(e) {
           ...q,
           ...Y
         },
-        children: (0, i.jsx)(S.xV, {
+        children: (0, i.jsx)(f.xV, {
           clan: H[3],
           className: R.clanCardOuterRight
         })

@@ -28,11 +28,11 @@ let I = {},
   g = {},
   T = {},
   C = {},
-  f = {
+  S = {
     id: null,
     justChanged: !1
   },
-  S = {
+  f = {
     id: null,
     justChanged: !1
   },
@@ -72,13 +72,13 @@ class L extends(i = r.ZP.DeviceSettingsStore) {
     return g
   }
   get lastInputSystemDevice() {
-    return f
+    return S
   }
   get outputDevices() {
     return T
   }
   get lastOutputSystemDevice() {
-    return S
+    return f
   }
 }
 h(L, "displayName", "ConnectedDeviceStore"), h(L, "persistKey", "ConnectedDeviceStore"), t.Z = new L(l.Z, {
@@ -87,19 +87,19 @@ h(L, "displayName", "ConnectedDeviceStore"), h(L, "persistKey", "ConnectedDevice
       inputDevices: t,
       outputDevices: n
     } = e, i = {};
-    f.justChanged = !1, t.forEach(e => {
+    S.justChanged = !1, t.forEach(e => {
       if (i[A(e)] = e.id, e.id === E.w5) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== f.id && (f.justChanged = !0), f.id = n
+        n !== S.id && (S.justChanged = !0), S.id = n
       }
     });
     let s = {};
-    if (S.justChanged = !1, n.forEach(e => {
+    if (f.justChanged = !1, n.forEach(e => {
         if (s[A(e)] = e.id, e.id === E.w5) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-          n !== S.id && (S.justChanged = !0), S.id = n
+          n !== f.id && (f.justChanged = !0), f.id = n
         }
       }), !p) {
       g = i, T = s, p = !0;

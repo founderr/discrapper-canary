@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(556296),
   N = t(924557),
   C = t(435064),
-  m = t(894694),
-  A = t(779618),
+  A = t(894694),
+  m = t(779618),
   O = t(39604),
   g = t(442334),
   h = t(356659),
@@ -50,7 +50,7 @@ function P() {
     }, {
       autoTrackExposure: !1
     }),
-    U = (0, A.Z)(S.Z),
+    U = (0, m.Z)(S.Z),
     {
       showClipsHeaderEntrypoint: B
     } = N.NV.useExperiment({
@@ -133,7 +133,7 @@ function P() {
             scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), v === m.x.BELOW_MINIMUM ? (0, n.jsx)(T.Z, {
+      }), v === A.x.BELOW_MINIMUM ? (0, n.jsx)(T.Z, {
         look: T.z.WARNING,
         className: f.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS

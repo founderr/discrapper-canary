@@ -47,7 +47,7 @@ function x(e) {
         };
       return l.forEach(e => r(e, !0)), l.forEach(e => r(e, !1)), i
     }, [t, n, e])
-  }((0, m.h)(n, !0)), b = (0, g.j)(), M = l.useRef(null), [R, O] = l.useState(void 0), y = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
+  }((0, m.h)(n, !0)), b = (0, g.j)(), M = l.useRef(null), [R, y] = l.useState(void 0), O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
     analyticsLocations: P
   } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL), j = l.useCallback(e => {
     (0, f.GN)(e, n.id, P), L()
@@ -65,13 +65,13 @@ function x(e) {
     properties: {
       source: T,
       guild_id: t,
-      media_session_id: y
+      media_session_id: O
     }
   }, {
     disableTrack: !v
   });
   let D = l.useCallback(e => {
-      M.current = e, O(null == e ? void 0 : e.soundId)
+      M.current = e, y(null == e ? void 0 : e.soundId)
     }, []),
     U = l.useCallback(e => {
       if (null == e) {

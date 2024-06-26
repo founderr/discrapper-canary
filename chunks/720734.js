@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(941129),
   T = n(83200),
   C = n(634894),
-  f = n(586902),
-  S = n(515550),
+  S = n(586902),
+  f = n(515550),
   N = n(1585),
   A = n(304761),
   Z = n(865427),
@@ -75,8 +75,8 @@ var i = n(735250),
   eg = n(546591),
   eT = n(976401),
   eC = n(333454),
-  ef = n(864441),
-  eS = n(626135),
+  eS = n(864441),
+  ef = n(626135),
   eN = n(768581),
   eA = n(572004),
   eZ = n(70956),
@@ -153,7 +153,7 @@ class eU extends s.PureComponent {
     })), (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
         className: eM.panelTitleContainer,
-        children: (0, i.jsx)(ef.Z, {
+        children: (0, i.jsx)(eS.Z, {
           children: l
         })
       }), (0, i.jsx)("div", {
@@ -368,7 +368,7 @@ class eU extends s.PureComponent {
                   position: "top",
                   align: "center",
                   shouldShow: !0,
-                  renderPopout: () => (0, i.jsx)(S.Z, {
+                  renderPopout: () => (0, i.jsx)(f.Z, {
                     markAsDismissed: n
                   }),
                   children: this.renderSettingsGear
@@ -473,7 +473,7 @@ class eU extends s.PureComponent {
       (0, eA.JG)(ev.ZP.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), eS.default.track(eR.rMx.TEXT_COPIED, {
+      })), ef.default.track(eR.rMx.TEXT_COPIED, {
         type: "User Tag"
       });
       let i = {
@@ -552,7 +552,7 @@ function eG() {
       streaming: null != eE.Z.findActivity(e => e.type === eR.IIU.STREAMING),
       status: eE.Z.getStatus()
     })),
-    _ = (0, f.Z)({
+    _ = (0, S.Z)({
       userId: r
     }),
     I = ev.ZP.useUserTag(n, {
@@ -564,7 +564,7 @@ function eG() {
       return null != e ? ec.Z.getChannel(e) : null
     }),
     {
-      mute: S,
+      mute: f,
       selfMute: N,
       suppress: L
     } = (0, el.Z)(p),
@@ -631,14 +631,14 @@ function eG() {
     } = (0, W._)({
       location: "AccountConnected"
     }),
-    ef = {
+    eS = {
       avatar: [],
       settings: []
     };
-  return !y && (eT && ef.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (ef.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), V && K === (null === (t = (0, G.BS)(eP.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ef.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), X && J && ef.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === et ? ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eg && ef.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && ef.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), es && ef.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eC && ef.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && ef.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
+  return !y && (eT && eS.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), a && (eS.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), V && K === (null === (t = (0, G.BS)(eP.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eS.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), X && J && eS.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), $ && (1 === et ? eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eg && eS.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), en && eS.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), es && eS.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eC && eS.settings.push(o.z.PRIDE_ICONS_COACHMARK), ea && eS.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, i.jsx)(eU, {
     currentUser: n,
     customStatusActivity: c,
-    dismissibleContents: ef,
+    dismissibleContents: eS,
     userTag: I,
     hidePrivateData: m,
     occluded: y,
@@ -646,7 +646,7 @@ function eG() {
     selfDeaf: v,
     selfMute: N,
     serverDeaf: O,
-    serverMute: S,
+    serverMute: f,
     speaking: _,
     speakingWhileMuted: P,
     status: u,

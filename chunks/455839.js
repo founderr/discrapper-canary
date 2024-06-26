@@ -37,7 +37,7 @@ function h(e) {
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
-  }), f = () => {
+  }), S = () => {
     (0, r.Zy)(), null == I || I()
   };
   return (0, i.jsxs)(a.Menu, {
@@ -50,7 +50,7 @@ function h(e) {
         id: "report-guild-discovery-listing",
         label: E.Z.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
-          (0, o.lt)(t), f()
+          (0, o.lt)(t), S()
         },
         icon: a.FlagIcon,
         color: "danger"

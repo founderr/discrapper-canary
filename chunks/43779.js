@@ -29,7 +29,7 @@ function I(e) {
     location: n,
     useV2Variants: !0,
     taskDetails: p
-  }), C = !(0, o.zi)(t), f = s.useCallback(() => (0, i.jsx)(a.Text, {
+  }), C = !(0, o.zi)(t), S = s.useCallback(() => (0, i.jsx)(a.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
@@ -67,7 +67,7 @@ function I(e) {
             color: "header-primary",
             className: h.header,
             children: E.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: f
+              rewardHook: S
             })
           })
         }), null != T ? (0, i.jsx)(a.Text, {

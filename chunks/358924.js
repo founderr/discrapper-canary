@@ -15,8 +15,8 @@ var i, s, a = n(735250),
   g = n(833664),
   T = n(503438),
   C = n(420660),
-  f = n(74433),
-  S = n(952561),
+  S = n(74433),
+  f = n(952561),
   N = n(513202),
   A = n(906732),
   Z = n(812206),
@@ -462,7 +462,7 @@ en.Header = et, en.Body = e => {
         children: (0, v.P9)(E)
       })
     })]
-  }), I = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
+  }), I = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
   return (0, a.jsxs)(J, {
     children: [(0, a.jsxs)("div", {
       className: W.applicationStreamingSection,
@@ -484,7 +484,7 @@ en.Header = et, en.Body = e => {
     channel: n,
     guildId: i,
     participants: s
-  } = e, l = (0, S.Z)(), [o, d] = r.useState(null), _ = t.application_id;
+  } = e, l = (0, f.Z)(), [o, d] = r.useState(null), _ = t.application_id;
   r.useEffect(() => {
     if (null != _)(0, k.fetchAssetIds)(_, ["embedded_background"]).then(e => {
       let [t] = e;

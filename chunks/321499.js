@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(526761),
   N = t(65154),
   C = t(689938),
-  m = t(331651);
-let A = t(651714),
+  A = t(331651);
+let m = t(651714),
   O = t(297166);
 
 function g() {
@@ -30,7 +30,7 @@ function g() {
     experimentalEncoders: _.Z.getExperimentalEncoders()
   }));
   return "stable" !== u.ZP.releaseChannel && _.Z.isExperimentalEncodersSupported() ? (0, n.jsx)(c.FormSwitch, {
-    className: r()(m.marginTop8, m.marginBottom20),
+    className: r()(A.marginTop8, A.marginBottom20),
     value: e,
     onChange: e => d.Z.setExperimentalEncoders(e),
     disabled: !1,
@@ -52,13 +52,13 @@ function h() {
     u = a.useRef(null);
   return (0, S.Z)(u, I.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(c.FormSection, {
-      className: m.marginBottom20,
+      className: A.marginBottom20,
       title: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
       children: (0, n.jsx)(c.FormNotice, {
-        className: m.marginBottom20,
+        className: A.marginBottom20,
         type: c.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, l.ap)(e) ? A : O,
+          src: (0, l.ap)(e) ? m : O,
           width: 70,
           height: 40
         },
@@ -66,10 +66,10 @@ function h() {
         body: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
     }), (0, n.jsxs)(c.FormSection, {
-      className: m.marginBottom20,
+      className: A.marginBottom20,
       title: C.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
       children: [i && (0, n.jsx)(c.FormSwitch, {
-        className: r()(m.marginTop8, m.marginBottom20),
+        className: r()(A.marginTop8, A.marginBottom20),
         value: s,
         onChange: e => d.Z.setOpenH264(e),
         disabled: !1,
@@ -80,7 +80,7 @@ function h() {
         },
         ref: u
       }), (0, n.jsx)(c.FormSwitch, {
-        className: r()(m.marginTop8, m.marginBottom20),
+        className: r()(A.marginTop8, A.marginBottom20),
         value: t,
         onChange: e => d.Z.setHardwareEncoding(e),
         note: C.Z.Messages.FORM_HELP_HARDWARE_ENCODING,

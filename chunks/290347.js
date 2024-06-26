@@ -21,7 +21,7 @@ var i = n(735250),
   g = n(981631),
   T = n(921944),
   C = n(437738);
-let f = e => {
+let S = e => {
     let {
       tagText: t,
       className: n
@@ -31,7 +31,7 @@ let f = e => {
       text: t
     })
   },
-  S = e => {
+  f = e => {
     let {
       header: t,
       subHeader: n,
@@ -43,7 +43,7 @@ let f = e => {
       className: r()(C.featureCard, {
         [C.wideStyle]: l
       }),
-      children: [null != a ? (0, i.jsx)(f, {
+      children: [null != a ? (0, i.jsx)(S, {
         tagText: a,
         className: C.featureCardTag
       }) : null, (0, i.jsx)("img", {
@@ -71,7 +71,7 @@ function N(e) {
     className: t,
     renderModalProps: n,
     heroArt: a,
-    heroArtClassName: f,
+    heroArtClassName: S,
     modalDismissibleContent: N,
     modalTopExtra: A,
     header: Z,
@@ -135,7 +135,7 @@ function N(e) {
         className: r()(C.headerText, L),
         children: Z
       }), "video" === a.type ? (0, i.jsx)(I.Z, {
-        className: r()(C.video, f),
+        className: r()(C.video, S),
         autoPlay: !j,
         loop: !0,
         muted: !0,
@@ -159,7 +159,7 @@ function N(e) {
         },
         disablePictureInPicture: !0
       }) : "embed" === a.type ? (0, i.jsx)(_.BC, {
-        className: r()(C.video, f),
+        className: r()(C.video, S),
         allowFullScreen: !1,
         href: a.href,
         thumbnail: a.thumbnail,
@@ -178,7 +178,7 @@ function N(e) {
         }
       }) : "image" === a.type ? (0, i.jsx)("img", {
         alt: "",
-        className: r()(C.video, f),
+        className: r()(C.video, S),
         src: a.src
       }) : null, (0, i.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
@@ -188,7 +188,7 @@ function N(e) {
         className: r()(C.featureCardGroup, {
           [C.wideStyle]: y
         }),
-        children: R.map((e, t) => (0, i.jsx)(S, {
+        children: R.map((e, t) => (0, i.jsx)(f, {
           ...e,
           wideStyle: y
         }, "".concat(e.header, "_").concat(t)))

@@ -17,13 +17,13 @@ var n, a, i = t(735250),
   I = t(431369),
   N = t(210887),
   C = t(78839),
-  m = t(285952),
-  A = t(74538),
+  A = t(285952),
+  m = t(74538),
   O = t(689938),
   g = t(634554);
 async function h(e, s, t, n) {
   await (0, u.bG)(t), await (0, E.Mg)(e, {
-    items: (0, A.MY)(e, s)
+    items: (0, m.MY)(e, s)
   }, n)
 }
 
@@ -49,13 +49,13 @@ function R(e) {
       className: g.body,
       children: O.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
     }), (0, i.jsxs)(_.ModalFooter, {
-      justify: m.Z.Justify.START,
+      justify: A.Z.Justify.START,
       children: [(0, i.jsx)(_.Button, {
         onClick: async () => {
           try {
             E(!0);
             let e = (0, I.g)(s, 1);
-            l()((0, A.uV)(e) <= (0, A.uV)(s.additionalPlans), "Uncanceling should not increase the number of guild subscriptions"), await h(s, e, t, T), n()
+            l()((0, m.uV)(e) <= (0, m.uV)(s.additionalPlans), "Uncanceling should not increase the number of guild subscriptions"), await h(s, e, t, T), n()
           } catch (e) {
             E(!1)
           }

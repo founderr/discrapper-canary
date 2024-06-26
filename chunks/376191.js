@@ -22,25 +22,25 @@ var s = n(442837),
   g = n(332712),
   T = n(81471),
   C = n(689938),
-  f = n(272e3);
-let S = e => {
+  S = n(272e3);
+let f = e => {
     let {
       userId: t
     } = e, n = (0, g._)(t);
     return null == n || 0 === n.length ? (0, i.jsx)(a.Text, {
-      className: f.mutualGuilds,
+      className: S.mutualGuilds,
       variant: "text-sm/normal",
       color: "text-muted",
       children: C.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
     }) : (0, i.jsxs)("div", {
-      className: f.mutualGuildsContainer,
+      className: S.mutualGuildsContainer,
       children: [(0, i.jsx)(_.Z, {
         guilds: n,
         maxGuilds: 3,
         size: o.Vj.Sizes.SMOL,
         hideOverflowCount: !0
       }), (0, i.jsx)(a.Text, {
-        className: f.mutualGuilds,
+        className: S.mutualGuilds,
         variant: "text-sm/normal",
         color: "text-muted",
         children: C.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
@@ -66,24 +66,24 @@ function A(e) {
   });
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(N, {
-      className: f.avatar,
+      className: S.avatar,
       src: (0, u.x)(n, 40, A),
       avatarDecoration: L,
       size: a.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == o ? void 0 : o.username) && void 0 !== t ? t : C.Z.Messages.UNKNOWN_USER
     }), (0, i.jsxs)("div", {
-      className: f.userPreview,
+      className: S.userPreview,
       children: [(0, i.jsxs)("div", {
-        className: f.userContainerWithPreview,
+        className: S.userContainerWithPreview,
         children: [(0, i.jsx)(r.Z, {
           nick: g,
           user: o,
           showAccountIdentifier: !0,
-          className: f.tagContainer,
-          usernameClass: f.username,
-          discriminatorClass: null != I.ZP.getGlobalName(o) ? f.globalName : f.discriminator
+          className: S.tagContainer,
+          usernameClass: S.username,
+          discriminatorClass: null != I.ZP.getGlobalName(o) ? S.globalName : S.discriminator
         }), (0, i.jsx)(a.Text, {
-          className: f.timestampWithPreview,
+          className: S.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
           children: Z
@@ -93,7 +93,7 @@ function A(e) {
           channel: n
         }),
         forceHover: _,
-        children: (0, i.jsx)(S, {
+        children: (0, i.jsx)(f, {
           userId: o.id
         })
       })]

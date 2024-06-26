@@ -1,6 +1,6 @@
 n.d(t, {
   D: function() {
-    return f
+    return S
   }
 }), n(47120);
 var i = n(735250),
@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(731455),
   T = n(689938),
   C = n(946496);
-let f = 12,
-  S = () => {
+let S = 12,
+  f = () => {
     let e = (0, u.s1)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? l.parse(e) : {}
   },
@@ -85,7 +85,7 @@ t.Z = e => {
     total: G
   } = n, [w, k] = s.useState(!1), {
     tag: B
-  } = S(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
+  } = f(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
     d.bR(a, {
       categoryId: n ? g.Hk : R,
       preferredLocale: l.code,
@@ -104,7 +104,7 @@ t.Z = e => {
     let {
       offset: e,
       tag: t
-    } = S(), n = null != e ? Math.floor(parseInt(e, 10) / f) + 1 : 1;
+    } = f(), n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
     V(!!t), 1 === n && k(!0)
   }, [a]);
   let z = R === g.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -148,16 +148,16 @@ t.Z = e => {
       categoryId: R,
       categoryName: x,
       onClick: () => {
-        d.uY(g.Hk), Y(0, f, !0)
+        d.uY(g.Hk), Y(0, S, !0)
       }
     }) : (0, i.jsx)("div", {
       className: C.results,
       children: (0, i.jsx)(I.Z, {
-        pageSize: f,
+        pageSize: S,
         totalCount: G,
         resetCurrentPage: w,
         onPageChange: e => {
-          Y((e - 1) * f, f), W()
+          Y((e - 1) * S, S), W()
         },
         children: e => {
           let {
@@ -168,7 +168,7 @@ t.Z = e => {
             children: [(0, i.jsx)(p.Z, {
               guilds: j,
               loading: U,
-              loadingPlaceholderCount: f,
+              loadingPlaceholderCount: S,
               onViewGuild: P,
               loadingGuildId: v,
               theme: O,

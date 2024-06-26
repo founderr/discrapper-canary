@@ -14,8 +14,8 @@ var n, a = t(735250),
   I = t(823379),
   N = t(464179),
   C = t(211667),
-  m = t(244526),
-  A = t(689938),
+  A = t(244526),
+  m = t(689938),
   O = t(191150);
 
 function g(e, s, t) {
@@ -58,7 +58,7 @@ class R extends(n = i.PureComponent) {
       children: [(0, a.jsx)(d.Text, {
         className: O.sectionHeader,
         variant: "text-sm/normal",
-        children: A.Z.Messages.BILLING_ADDRESS
+        children: m.Z.Messages.BILLING_ADDRESS
       }), (0, a.jsx)(N.ZP, {
         ...e,
         mode: N.ZP.Modes.EDIT,
@@ -80,7 +80,7 @@ class R extends(n = i.PureComponent) {
       children: [(0, a.jsx)(d.Text, {
         className: O.sectionHeader,
         variant: "text-sm/normal",
-        children: A.Z.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
+        children: m.Z.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
       }), (0, a.jsx)(C.Z, {
         expirationDate: t,
         onCardInfoChange: this.handleExpirationDateUpdate,
@@ -104,7 +104,7 @@ class R extends(n = i.PureComponent) {
         children: (0, a.jsxs)("div", {
           className: O.disabledTooltipWrapper,
           children: [t ? (0, a.jsx)(d.Tooltip, {
-            text: A.Z.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
+            text: m.Z.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
             children: e => (0, a.jsx)("div", {
               "aria-hidden": !0,
               className: O.disabledTooltipTarget,
@@ -118,7 +118,7 @@ class R extends(n = i.PureComponent) {
             look: d.Button.Looks.OUTLINED,
             color: d.Button.Colors.RED,
             size: l.tq ? d.ButtonSizes.SMALL : d.ButtonSizes.MEDIUM,
-            children: l.tq ? A.Z.Messages.DELETE : A.Z.Messages.PAYMENT_SOURCE_DELETE
+            children: l.tq ? m.Z.Messages.DELETE : m.Z.Messages.PAYMENT_SOURCE_DELETE
           })]
         })
       }), (0, a.jsxs)("div", {
@@ -130,14 +130,14 @@ class R extends(n = i.PureComponent) {
           look: d.Button.Looks.LINK,
           color: d.Button.Colors.PRIMARY,
           size: l.tq ? d.ButtonSizes.SMALL : d.ButtonSizes.MEDIUM,
-          children: A.Z.Messages.CANCEL
+          children: m.Z.Messages.CANCEL
         }), (0, a.jsx)(d.Button, {
           submitting: e,
           disabled: !n || s || !i,
           type: "submit",
           color: d.Button.Colors.GREEN,
           size: l.tq ? d.ButtonSizes.SMALL : d.ButtonSizes.MEDIUM,
-          children: A.Z.Messages.SAVE
+          children: m.Z.Messages.SAVE
         })]
       })]
     })
@@ -160,7 +160,7 @@ class R extends(n = i.PureComponent) {
         noValidate: !0,
         children: [this.renderError(), (0, a.jsxs)("div", {
           className: O.__invalid_paymentSection,
-          children: [(0, a.jsx)(m.Z, {
+          children: [(0, a.jsx)(A.Z, {
             paymentSource: e,
             isDefault: s,
             isForSubscription: i,
@@ -169,12 +169,12 @@ class R extends(n = i.PureComponent) {
             showPaymentSourceIcon: !0
           }), e.invalid ? (0, a.jsx)("div", {
             className: O.errorSubText,
-            children: A.Z.Messages.PAYMENT_SOURCE_INVALID_HELP
+            children: m.Z.Messages.PAYMENT_SOURCE_INVALID_HELP
           }) : null, (0, a.jsx)("div", {
             className: O.subText,
-            children: l ? A.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({
+            children: l ? m.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({
               paypalURL: "https://www.paypal.com"
-            }) : A.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
+            }) : m.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
           })]
         }), this.renderCardExpirationSection(), this.renderBillingAddressSection(), (0, a.jsx)(d.Checkbox, {
           name: h,
@@ -185,7 +185,7 @@ class R extends(n = i.PureComponent) {
           children: (0, a.jsx)(d.Text, {
             className: O.defaultCheckboxLabel,
             variant: "text-sm/normal",
-            children: A.Z.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
+            children: m.Z.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
           })
         }), (0, a.jsx)(d.FormDivider, {}), this.renderActions()]
       })

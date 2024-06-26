@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(894939),
   N = t(321499),
   C = t(710808),
-  m = t(625205),
-  A = t(325808),
+  A = t(625205),
+  m = t(325808),
   O = t(823087),
   g = t(546997),
   h = t(167540),
@@ -84,7 +84,7 @@ function U() {
     title: P.Z.Messages.VOICE_SETTINGS,
     children: [(0, n.jsx)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_DEVICES,
-      children: (0, n.jsx)(m.Z, {})
+      children: (0, n.jsx)(A.Z, {})
     }), (0, n.jsx)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
       children: (0, n.jsx)(x.Z, {})
@@ -101,7 +101,7 @@ function U() {
       })]
     }), (0, n.jsx)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_INPUT_MODE,
-      children: (0, n.jsx)(A.Z, {})
+      children: (0, n.jsx)(m.Z, {})
     }), (0, n.jsxs)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_SENSITIVITY,
       children: [e === L.pM.VOICE_ACTIVITY && (0, n.jsx)(p.Z, {}), (0, n.jsx)(l.FormDivider, {

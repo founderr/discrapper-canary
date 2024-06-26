@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(39604),
   N = t(703288),
   C = t(491758),
-  m = t(183632),
-  A = t(689938),
+  A = t(183632),
+  m = t(689938),
   O = t(513830),
   g = t(655714),
   h = t(331651);
@@ -49,11 +49,11 @@ function R(e) {
       tag: o.FormTitleTags.H1,
       title: t ? (0, n.jsxs)("div", {
         className: O.headerContainer,
-        children: [A.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
+        children: [m.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
       }) : null,
       children: M && (0, n.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(m.Z, {})]
+        children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(A.Z, {})]
       })
     }), M && (0, n.jsx)(o.FormDivider, {}), (0, n.jsxs)(o.FormSection, {
       className: t || M ? h.marginTop20 : s,
@@ -61,21 +61,21 @@ function R(e) {
         hideBorder: !0,
         className: g.formItem,
         value: R,
-        note: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        note: m.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => I.yg({
           allowVoiceRecording: e
         }),
-        children: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+        children: m.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }), p && f && (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
         className: g.formItem,
         value: D,
-        note: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        note: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.yl({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

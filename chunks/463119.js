@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(377171),
   T = n(633302),
   C = n(153066),
-  f = n(335131),
-  S = n(141594),
+  S = n(335131),
+  f = n(141594),
   N = n(302800),
   A = n(981631),
   Z = n(689938),
@@ -47,7 +47,7 @@ let v = e => {
       ...c
     } = e, u = (0, l.JA)("shop"), E = I.Z.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: h
-    } = (0, m.ZP)(E), p = s.useCallback(() => (0, f.mK)({
+    } = (0, m.ZP)(E), p = s.useCallback(() => (0, S.mK)({
       openInLayer: !1,
       analyticsSource: E,
       analyticsLocations: h
@@ -175,7 +175,7 @@ let v = e => {
       locationState: n
     } = e, {
       collectiblesShopTabNewBadgeDisplayOptions: s
-    } = (0, S.Z)();
+    } = (0, f.Z)();
     if (null != s) switch (s.type) {
       case N.k2.TOOLTIP:
         return (0, i.jsx)(P, {

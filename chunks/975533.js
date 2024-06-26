@@ -16,8 +16,8 @@ var i = n(570140),
   g = n(131951),
   T = n(246946),
   C = n(808506),
-  f = n(237997),
-  S = n(626135),
+  S = n(237997),
+  f = n(626135),
   N = n(554174),
   A = n(981631),
   Z = n(65154);
@@ -101,7 +101,7 @@ let L = {
   [A.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, N.Z)();
-      if (null != t) e ? a.Z.setUILocked(!f.Z.isUILocked(t), t) : a.Z.setInputLocked(!C.Z.isInputLocked(t), t)
+      if (null != t) e ? a.Z.setUILocked(!S.Z.isUILocked(t), t) : a.Z.setInputLocked(!C.Z.isInputLocked(t), t)
     },
     keyEvents: {
       keyup: !0,
@@ -112,7 +112,7 @@ let L = {
     onTrigger() {
       let e = C.Z.getFocusedPID(),
         t = null != e;
-      null != e && t && f.Z.isPinned(A.Odu.TEXT) && C.Z.isReady(e) && C.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET)
+      null != e && t && S.Z.isPinned(A.Odu.TEXT) && C.Z.isReady(e) && C.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -161,7 +161,7 @@ let L = {
     onTrigger: () => {
       if (!(0, I.D)()) return;
       let e = (0, N.Z)();
-      null != e && (f.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e))
+      null != e && (S.Z.isUILocked(e) ? (0, m.IN)(!0, e) : (0, m.oZ)(e))
     },
     keyEvents: {
       keyup: !0,
@@ -184,7 +184,7 @@ let L = {
   },
   [A.kg4.SAVE_CLIP]: {
     onTrigger: () => {
-      (0, d.ln)() && (S.default.track(A.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)())
+      (0, d.ln)() && (f.default.track(A.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)())
     },
     keyEvents: {
       keyup: !1,

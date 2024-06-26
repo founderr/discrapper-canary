@@ -12,8 +12,8 @@ var i, s, a, r, l, o = n(442837),
   g = n(314897),
   T = n(77498),
   C = n(283595),
-  f = n(19780),
-  S = n(944486),
+  S = n(19780),
+  f = n(944486),
   N = n(981631);
 let A = "ActivityTrackingStore",
   Z = 30 * m.Z.Millis.MINUTE,
@@ -35,9 +35,9 @@ function P(e) {
     i = null != e.updatedAt ? n - e.updatedAt : 0;
   i > Z + L && (i = 0);
   let s = (0, p.OT)(e.applicationId, C.Z),
-    a = S.Z.getVoiceChannelId(),
+    a = f.Z.getVoiceChannelId(),
     r = g.default.getSessionId(),
-    l = f.Z.getMediaSessionId();
+    l = S.Z.getMediaSessionId();
   _.Z.updateActivity({
     applicationId: e.applicationId,
     distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,

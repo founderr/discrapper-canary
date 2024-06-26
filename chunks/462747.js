@@ -215,7 +215,7 @@ function L(e) {
         (0, c.jW)(e, async () => {
           let {
             default: e
-          } = await Promise.all([t.e("79695"), t.e("32006"), t.e("13660")]).then(t.bind(t, 881351));
+          } = await Promise.all([t.e("79695"), t.e("17400"), t.e("13660")]).then(t.bind(t, 881351));
           return t => (0, i.jsx)(e, {
             ...t,
             user: n

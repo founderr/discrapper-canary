@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(451478),
   T = n(390697),
   C = n(434184),
-  f = n(701861),
-  S = n(437314),
+  S = n(701861),
+  f = n(437314),
   N = n(696577),
   A = n(163417),
   Z = n(492347),
@@ -53,7 +53,7 @@ t.Z = function(e) {
   }, [j, t]), k = P.filter(t, j[t]);
   if (0 === k.length && "" === j[t]) return (0, i.jsxs)("div", {
     className: x.emptyStateContainer,
-    children: [t === O.pJs.ONLINE && (0, i.jsx)(I.Z, {}), (0, i.jsx)(S.Z, {
+    children: [t === O.pJs.ONLINE && (0, i.jsx)(I.Z, {}), (0, i.jsx)(f.Z, {
       type: t,
       onClick: () => {
         c.Z.setSection(O.pJs.ADD_FRIEND)
@@ -115,8 +115,8 @@ t.Z = function(e) {
         })]
       }), H ? (0, i.jsx)("div", {
         className: x.emptyStateContainer,
-        children: (0, i.jsx)(S.Z, {
-          type: S.j.SECTION_NO_RESULTS
+        children: (0, i.jsx)(f.Z, {
+          type: f.j.SECTION_NO_RESULTS
         }, b)
       }) : (0, i.jsx)(A.Z, {
         relationshipCount: D,
@@ -141,7 +141,7 @@ t.Z = function(e) {
             case O.pJs.ONLINE:
             case O.pJs.ALL:
             default:
-              return (0, i.jsx)(f.Z, {
+              return (0, i.jsx)(S.Z, {
                 ...e,
                 isFocused: M
               })

@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(51144),
   N = t(760373),
   C = t(689938),
-  m = t(134774),
-  A = t(331651);
+  A = t(134774),
+  m = t(331651);
 
 function O(e) {
   let {
@@ -34,15 +34,15 @@ function O(e) {
   return a.useEffect(() => {
     (0, o.PR)(s)
   }, [s]), (0, n.jsxs)("div", {
-    className: m.section,
+    className: A.section,
     children: [null != c && (0, n.jsx)(l.Z, {
-      className: m.avatar,
+      className: A.avatar,
       user: c,
       size: r.AvatarSizes.SIZE_40
     }), (0, n.jsxs)("div", {
-      className: m.text,
+      className: A.text,
       children: [(0, n.jsx)(r.Clickable, {
-        className: m.username,
+        className: A.username,
         onClick: S,
         children: (0, n.jsx)(r.Text, {
           variant: "text-md/semibold",
@@ -58,7 +58,7 @@ function O(e) {
       })]
     }), (0, n.jsx)(r.Clickable, {
       onClick: E,
-      className: m.sectionIconContainer,
+      className: A.sectionIconContainer,
       children: (0, n.jsx)(r.TrashIcon, {
         size: "xs"
       })
@@ -78,7 +78,7 @@ function g(e) {
   return (0, n.jsxs)("div", {
     className: s,
     children: [(0, n.jsxs)("div", {
-      className: m.text,
+      className: A.text,
       children: [(0, n.jsx)(r.Text, {
         variant: "text-sm/semibold",
         color: "interactive-active",
@@ -91,7 +91,7 @@ function g(e) {
         children: l
       })]
     }), (0, n.jsx)(r.Clickable, {
-      className: m.icon,
+      className: A.icon,
       onClick: c,
       children: (0, n.jsx)(r.CloseSmallIcon, {
         size: "md",
@@ -109,18 +109,18 @@ function h(e) {
     children: t.map(e => {
       let t = s[e];
       return (0, n.jsxs)("div", {
-        className: m.item,
+        className: A.item,
         children: [(0, n.jsx)(O, {
           userId: e,
           count: t.length
         }), t.map((s, i) => (0, n.jsxs)(a.Fragment, {
           children: [(0, n.jsx)(g, {
-            className: m.row,
+            className: A.row,
             userId: e,
             index: i,
             verification: s
           }), i !== t.length - 1 && (0, n.jsx)("div", {
-            className: m.divider
+            className: A.divider
           })]
         }, "".concat(i, "-").concat(s.timestamp)))]
       }, e)
@@ -142,14 +142,14 @@ function R() {
       title: C.Z.Messages.E2EE_END_TO_END_ENCRYPTION,
       children: [(0, n.jsx)(r.FormText, {
         type: r.FormTextTypes.DESCRIPTION,
-        className: A.marginBottom20,
+        className: m.marginBottom20,
         children: C.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({
           helpArticle: N.l4
         })
       }), (0, n.jsxs)(r.FormItem, {
         children: [(0, n.jsx)(r.FormTitle, {
           tag: r.FormTitleTags.H5,
-          className: A.marginBottom8,
+          className: m.marginBottom8,
           children: C.Z.Messages.E2EE_VERIFICATION_CODES
         }), (0, n.jsx)(r.FormSwitch, {
           value: e,
@@ -161,10 +161,10 @@ function R() {
         })]
       })]
     }), (0, n.jsxs)(r.FormItem, {
-      className: A.marginBottom20,
+      className: m.marginBottom20,
       children: [(0, n.jsx)(r.FormTitle, {
         tag: r.FormTitleTags.H5,
-        className: A.marginBottom8,
+        className: m.marginBottom8,
         children: C.Z.Messages.E2EE_VERIFIED_DEVICES
       }), (0, n.jsx)(r.FormText, {
         type: r.FormTextTypes.DESCRIPTION,

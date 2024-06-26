@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(497321),
   N = t(468026),
   C = t(566620),
-  m = t(317381),
-  A = t(979200),
+  A = t(317381),
+  m = t(979200),
   O = t(713938),
   g = t(881998),
   h = t(246946),
@@ -207,7 +207,7 @@ let U = e => {
                   children: e
                 })]
               }, s)), null == i ? void 0 : i.map((s, t) => {
-                let a = (0, A.PM)(s);
+                let a = (0, m.PM)(s);
                 return null != a ? (0, n.jsxs)("li", {
                   className: r()(Z.permission, v.marginTop8),
                   children: [(0, n.jsx)(U, {
@@ -228,7 +228,7 @@ let U = e => {
 s.Z = () => {
   let e = (0, d.e7)([h.Z], () => h.Z.hidePersonalInformation),
     s = (0, d.e7)([g.Z], () => g.Z.getApps()),
-    i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
+    i = (0, d.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities());
   a.useEffect(() => {
     T.Z.fetch()
   }, []);
@@ -274,7 +274,7 @@ s.Z = () => {
         children: s
       })]
     }),
-    A = a.useMemo(() => {
+    m = a.useMemo(() => {
       let e = o.trim().toLowerCase();
       return "" === e || null == s ? s : s.length < 100 ? s.filter(s => l()(e, s.application.name.toLowerCase())) : s.filter(s => s.application.name.toLowerCase().includes(e))
     }, [s, o]);
@@ -288,13 +288,13 @@ s.Z = () => {
         title: P.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
         body: P.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
-      children: null == s || null == A ? (0, n.jsx)(u.Spinner, {
+      children: null == s || null == m ? (0, n.jsx)(u.Spinner, {
         className: v.marginTop20,
         type: u.Spinner.Type.SPINNING_CIRCLE
-      }) : 0 === s.length ? N(P.Z.Messages.NO_AUTHORIZED_APPS_NOTE, P.Z.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, n.jsxs)(n.Fragment, {
+      }) : 0 === s.length ? N(P.Z.Messages.NO_AUTHORIZED_APPS_NOTE, P.Z.Messages.NO_AUTHORIZED_APPS) : 0 === m.length ? (0, n.jsxs)(n.Fragment, {
         children: [S(), N(null, P.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, n.jsxs)(n.Fragment, {
-        children: [S(), A.sort((e, s) => e.application.name.localeCompare(s.application.name)).map(e => (0, n.jsx)(B, {
+        children: [S(), m.sort((e, s) => e.application.name.localeCompare(s.application.name)).map(e => (0, n.jsx)(B, {
           onDelete: () => r(e),
           ...e
         }, e.id))]

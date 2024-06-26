@@ -20,15 +20,15 @@ var a = t(120356),
   I = t(981631),
   N = t(689938),
   C = t(972633),
-  m = t(331651);
-let A = !T.isPlatformEmbedded,
+  A = t(331651);
+let m = !T.isPlatformEmbedded,
   O = (0, u.hQ)();
 
 function g(e) {
   let {
     value: s
   } = e;
-  s === I.pM4.PUSH_TO_TALK && A && (0, o.openModalLazy)(async () => {
+  s === I.pM4.PUSH_TO_TALK && m && (0, o.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.resolve().then(t.bind(t, 468026));
@@ -57,13 +57,13 @@ function R(e) {
     } = (0, r.cj)([_.Z], () => _.Z.getModeOptions());
   return s = T.isPlatformEmbedded || t !== I.pM4.PUSH_TO_TALK ? (0, n.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: i()(C.pttToolsMessage, m.marginBottom8),
+    className: i()(C.pttToolsMessage, A.marginBottom8),
     children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
       onClick: () => c.Z.setSection(I.oAB.KEYBINDS)
     })
   }) : (0, n.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: i()(C.pttToolsMessage, C.pttToolsWarning, m.marginBottom8),
+    className: i()(C.pttToolsMessage, C.pttToolsWarning, A.marginBottom8),
     children: N.Z.Messages.PTT_LIMITED_WARNING.format({
       onDownloadClick: () => (0, S.y)("Help Text PTT")
     })
@@ -87,7 +87,7 @@ function R(e) {
           children: [(0, n.jsx)(o.FormTitle, {
             id: O,
             tag: o.FormTitleTags.H5,
-            className: m.marginBottom8,
+            className: A.marginBottom8,
             children: N.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
           }), (0, n.jsx)(o.Slider, {
             initialValue: u,
@@ -111,12 +111,12 @@ function p() {
       name: N.Z.Messages.INPUT_MODE_VAD
     }, {
       value: I.pM4.PUSH_TO_TALK,
-      name: A ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
+      name: m ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
     }];
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.FormItem, {
       title: N.Z.Messages.FORM_LABEL_INPUT_MODE,
-      className: m.marginBottom20,
+      className: A.marginBottom20,
       children: (0, n.jsx)(o.RadioGroup, {
         onChange: g,
         options: s,

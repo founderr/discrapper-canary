@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(925549),
   T = n(284056),
   C = n(730749),
-  f = n(2052),
-  S = n(40851),
+  S = n(2052),
+  f = n(40851),
   N = n(317381),
   A = n(596040),
   Z = n(588580),
@@ -71,8 +71,8 @@ var i = n(735250),
   eg = n(699516),
   eT = n(594174),
   eC = n(979651),
-  ef = n(938475),
-  eS = n(285952),
+  eS = n(938475),
+  ef = n(285952),
   eN = n(976401),
   eA = n(333454),
   eZ = n(626135),
@@ -140,8 +140,8 @@ function eU() {
       tag: I.FormTitleTags.H5,
       className: r()(eD.marginBottom8, eD.marginTop20),
       children: eb.Z.Messages.NOISE_CANCELLATION_POPOUT_FOOTER
-    }), (0, i.jsxs)(eS.Z, {
-      justify: eS.Z.Justify.BETWEEN,
+    }), (0, i.jsxs)(ef.Z, {
+      justify: ef.Z.Justify.BETWEEN,
       className: eM.__invalid_footer,
       children: [(0, i.jsx)(I.Anchor, {
         href: ex.EYA.KRISP,
@@ -180,7 +180,7 @@ function ew(e) {
     limit: h
   } = (0, en.Z)(t), p = s.useCallback(() => {
     (0, ea.Z)()
-  }, []), g = (0, S.bp)(), T = s.useCallback(e => {
+  }, []), g = (0, f.bp)(), T = s.useCallback(e => {
     if (eI.Z.isVideoEnabled() === e) return;
     let n = () => {
       var n;
@@ -188,7 +188,7 @@ function ew(e) {
     };
     e ? (0, eo.Z)(n, g) : n()
   }, [t, g]), C = c || n || u, {
-    Component: f,
+    Component: S,
     play: A,
     events: Z
   } = (0, E.o)(l.enabled ? "disable" : "enable");
@@ -207,7 +207,7 @@ function ew(e) {
         label: s,
         iconComponent: a,
         ...l
-      } = e, o = (0, i.jsx)(f, {
+      } = e, o = (0, i.jsx)(S, {
         size: "custom",
         width: 20,
         height: 20,
@@ -266,8 +266,8 @@ function ew(e) {
               innerClassName: eM.buttonContents,
               wrapperClassName: eM.button,
               fullWidth: !0,
-              children: C ? o : (0, i.jsxs)(eS.Z, {
-                align: eS.Z.Align.CENTER,
+              children: C ? o : (0, i.jsxs)(ef.Z, {
+                align: ef.Z.Align.CENTER,
                 children: [o, eb.Z.Messages.VIDEO]
               })
             })
@@ -282,13 +282,13 @@ function ek(e) {
   let {
     channel: t,
     enableActivities: n
-  } = e, s = (0, S.bp)(), {
+  } = e, s = (0, f.bp)(), {
     analyticsLocations: a
   } = (0, P.ZP)(), l = s === ex.IlC.POPOUT, o = (0, L.KF)(t.id), c = (0, L.g5)(o), [_] = (0, d.e7)([N.ZP], () => null != t.id && "" !== t.id ? N.ZP.getEmbeddedActivitiesForChannel(t.id) : N.i6), {
     userInActivity: E
   } = (0, d.cj)([N.ZP], () => ({
     userInActivity: null != N.ZP.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, f.O)(), m = (0, Z.a)(), p = o !== L.jy.CAN_LAUNCH, {
+  })), h = (0, S.O)(), m = (0, Z.a)(), p = o !== L.jy.CAN_LAUNCH, {
     Component: g,
     events: T
   } = (0, u.s)();
@@ -356,8 +356,8 @@ function eB(e) {
     T = u.find(e => e.ownerId === (null == c ? void 0 : c.id)),
     C = (0, es.E)(n, c, u);
   t = null == T ? a ? g : er.Z : () => (0, w.Z)(T);
-  let f = null != T || C.length > 0,
-    S = E ? eb.Z.Messages.SHARE_YOUR_SCREEN : eb.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
+  let S = null != T || C.length > 0,
+    f = E ? eb.Z.Messages.SHARE_YOUR_SCREEN : eb.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
     A = m || l || p,
     Z = null != T,
     {
@@ -395,20 +395,20 @@ function eB(e) {
         ...a
       } = e;
       return (0, i.jsx)(I.Tooltip, {
-        text: S,
+        text: f,
         children: e => (0, i.jsx)(I.Button, {
           ...e,
           size: I.Button.Sizes.SMALL,
           onClick: i => {
             var s;
-            f ? n(i) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
+            S ? n(i) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
           },
           disabled: !E || o,
           className: r()(eM.button, eM.buttonColor, {
             [eM.buttonActive]: null != T,
             [eM.disabled]: !E || o
           }),
-          ...f ? a : null,
+          ...S ? a : null,
           onMouseEnter: () => {
             var t;
             null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), v.onMouseEnter()
@@ -419,8 +419,8 @@ function eB(e) {
           },
           innerClassName: eM.buttonContents,
           wrapperClassName: eM.button,
-          children: A ? R : (0, i.jsxs)(eS.Z, {
-            align: eS.Z.Align.CENTER,
+          children: A ? R : (0, i.jsxs)(ef.Z, {
+            align: ef.Z.Align.CENTER,
             children: [R, eb.Z.Messages.GO_LIVE_SHARE_SCREEN]
           })
         })
@@ -573,13 +573,13 @@ class eH extends s.PureComponent {
       shouldShow: n,
       children: () => (0, i.jsxs)("div", {
         className: eM.container,
-        children: [(0, i.jsxs)(eS.Z, {
+        children: [(0, i.jsxs)(ef.Z, {
           className: eM.connection,
-          align: eS.Z.Align.CENTER,
+          align: ef.Z.Align.CENTER,
           children: [(0, i.jsx)("div", {
             className: eM.inner,
             children: this.renderConnectionStatus()
-          }), (0, i.jsxs)(eS.Z, {
+          }), (0, i.jsxs)(ef.Z, {
             grow: 0,
             shrink: 0,
             children: [t ? this.renderNoiseCancellation() : null, (0, i.jsx)(eO.Z, {
@@ -710,10 +710,10 @@ t.Z = (0, C.Z)(function(e) {
     g = (0, d.e7)([H.Z], () => H.Z.isViewingRoles(c)),
     T = (0, d.e7)([em.Z], () => g && !em.Z.can(ex.Plq.VIEW_CHANNEL, o), [g, o]),
     C = ee.Fg.useSetting(),
-    [f, S, N] = (0, d.Wu)([ef.ZP, z.Z], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [z.Z.getMutableParticipants(o.id, K.pV.SPEAKER), z.Z.getParticipantsVersion(o.id), null] : [null, null, null != o ? ef.ZP.getVoiceStatesForChannel(o) : null], [o]),
+    [S, f, N] = (0, d.Wu)([eS.ZP, z.Z], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [z.Z.getMutableParticipants(o.id, K.pV.SPEAKER), z.Z.getParticipantsVersion(o.id), null] : [null, null, null != o ? eS.ZP.getVoiceStatesForChannel(o) : null], [o]),
     Z = s.useMemo(() => {
       var e, t;
-      return null !== (t = null !== (e = null == f ? void 0 : f.map(e => {
+      return null !== (t = null !== (e = null == S ? void 0 : S.map(e => {
         let {
           user: t,
           userNick: n,
@@ -725,7 +725,7 @@ t.Z = (0, C.Z)(function(e) {
           voiceState: i
         }
       })) && void 0 !== e ? e : N) && void 0 !== t ? t : []
-    }, [f, S, N]),
+    }, [S, f, N]),
     [L, O] = s.useState(!1);
   s.useEffect(() => {
     (g || T) && O(!1)

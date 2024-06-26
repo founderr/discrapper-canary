@@ -14,7 +14,7 @@ var n = t(735250),
   I = t(981631),
   N = t(689938),
   C = t(415324);
-class m extends a.PureComponent {
+class A extends a.PureComponent {
   renderIntroHeader() {
     let {
       houseMembership: e
@@ -65,4 +65,4 @@ s.Z = o.ZP.connectStores([u.default, E.Z], () => {
     isClaimed: e.isClaimed(),
     isVerified: e.verified
   }
-})(m)
+})(A)

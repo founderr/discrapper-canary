@@ -27,7 +27,7 @@ function m(e) {
     T && (h(!1), p(!1))
   }, [T]);
   let C = d && (m || E),
-    f = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
+    S = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
       className: I.tooltipContentWrapper,
       onClick: c,
       onMouseEnter: () => {
@@ -41,7 +41,7 @@ function m(e) {
       }), l]
     }), [l, c, T]);
   return (0, i.jsx)(o.Tooltip, {
-    text: f,
+    text: S,
     position: "bottom",
     "aria-label": a,
     shouldShow: C,

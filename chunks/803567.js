@@ -18,8 +18,8 @@ var r = t(120356),
   I = t(153124),
   N = t(626135),
   C = t(63063),
-  m = t(210887),
-  A = t(726985),
+  A = t(210887),
+  m = t(726985),
   O = t(981631),
   g = t(689938),
   h = t(331651);
@@ -45,7 +45,7 @@ function D(e) {
 }
 
 function f() {
-  let e = (0, l.e7)([m.Z], () => m.Z.theme),
+  let e = (0, l.e7)([A.Z], () => A.Z.theme),
     {
       noiseCancellation: s,
       noiseSuppression: t,
@@ -135,7 +135,7 @@ function L() {
       type: d.FormText.Types.DESCRIPTION,
       children: g.Z.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
     }), (0, i.jsx)(E.F, {
-      setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+      setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
       children: (0, i.jsx)(d.FormSwitch, {
         className: o()(h.marginTop8, h.marginBottom20),
         value: t,
@@ -147,10 +147,10 @@ function L() {
         children: g.Z.Messages.ECHO_CANCELLATION
       })
     }), (0, i.jsx)(E.F, {
-      setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+      setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
       children: (0, i.jsx)(f, {})
     }), (0, i.jsx)(E.F, {
-      setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+      setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
       children: (0, i.jsx)(d.FormSwitch, {
         value: r,
         onChange: s => _.Z.setMode(e, {
@@ -161,7 +161,7 @@ function L() {
         children: g.Z.Messages.ADVANCED_VOICE_ACTIVITY
       })
     }), (0, i.jsx)(E.F, {
-      setting: A.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+      setting: m.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
       children: (0, i.jsx)(d.FormSwitch, {
         className: "",
         value: n,

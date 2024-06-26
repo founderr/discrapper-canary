@@ -28,8 +28,8 @@ var i = n(735250),
   b = n(730417),
   M = n(524347),
   R = n(853197),
-  O = n(616360),
-  y = n(858064),
+  y = n(616360),
+  O = n(858064),
   P = n(594190),
   j = n(569545),
   D = n(382182),
@@ -150,7 +150,7 @@ class ex extends l.PureComponent {
       position: "top",
       align: "center",
       onRequestClose: l,
-      renderPopout: () => (0, i.jsx)(y.Z, {
+      renderPopout: () => (0, i.jsx)(O.Z, {
         partnerGame: t,
         tooltipAction: e,
         onClose: l
@@ -160,7 +160,7 @@ class ex extends l.PureComponent {
           "aria-label": eC.Z.Messages.DROPS_ENABLED,
           tooltipText: n ? null : eC.Z.Messages.DROPS_ENABLED,
           onClick: this.handleClickDropsButton,
-          icon: O.Z
+          icon: y.Z
         })]
       })
     })
@@ -483,7 +483,7 @@ t.Z = (0, C.Z)(function(e) {
     if (null != _ && null != _.id) return _.id;
     if (null != a && null != a.id) return a.id;
     if (null != x) return x.applicationId
-  }()) && void 0 !== t ? t : ""]), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, v.Z)() && null != a, G = (0, c.e7)([en.default, $.Z], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), w = (0, V.Z)(null == s ? void 0 : s.id, r);
+  }()) && void 0 !== t ? t : ""]), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), y = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, O = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, v.Z)() && null != a, G = (0, c.e7)([en.default, $.Z], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), w = (0, V.Z)(null == s ? void 0 : s.id, r);
   return (0, i.jsx)(ex, {
     ...l,
     guildId: n,
@@ -497,13 +497,13 @@ t.Z = (0, C.Z)(function(e) {
     runningGame: a,
     application: T,
     useReducedMotion: f,
-    isStreaming: O,
+    isStreaming: y,
     channel: d,
     canStream: Z,
     dropsTooltipAction: g,
     stream: p,
     streamMetadata: _,
-    broadcast: y,
+    broadcast: O,
     canStartBroadcast: j,
     channelName: G,
     guildForConnectedChannel: h,

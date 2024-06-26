@@ -46,7 +46,7 @@ function C() {
   })
 }
 
-function f(e) {
+function S(e) {
   let {
     selectedGame: t
   } = e, n = (0, I.J)({
@@ -62,7 +62,7 @@ function f(e) {
   })
 }
 
-function S(e) {
+function f(e) {
   return e.toString()
 }
 t.Z = s.memo(function(e) {
@@ -127,7 +127,7 @@ t.Z = s.memo(function(e) {
         case 1:
           return (0, i.jsx)(C, {});
         case 2:
-          return (0, i.jsx)(f, {
+          return (0, i.jsx)(S, {
             selectedGame: t
           })
       }
@@ -142,7 +142,7 @@ t.Z = s.memo(function(e) {
         currentStep: N,
         items: U,
         renderItem: G,
-        getItemKey: S
+        getItemKey: f
       })
     }), (0, i.jsxs)(a.animated.div, {
       className: p.footer,

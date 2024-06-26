@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(825682),
   T = n(170245),
   C = n(981631),
-  f = n(65154),
-  S = n(689938),
+  S = n(65154),
+  f = n(689938),
   N = n(53485);
 
 function A(e, t, n) {
@@ -38,39 +38,39 @@ function Z(e) {
     u.Z.removeFriend(t.id, {
       location: "Friends"
     })
-  }, a = (0, l.e7)([h.Z], () => h.Z.supports(f.AN.VIDEO));
+  }, a = (0, l.e7)([h.Z], () => h.Z.supports(S.AN.VIDEO));
   return (0, i.jsxs)(o.Menu, {
     navId: "friend-row",
-    "aria-label": S.Z.Messages.USER_ACTIONS_MENU_LABEL,
+    "aria-label": f.Z.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: d.Zy,
     onSelect: n,
     children: [a ? (0, i.jsx)(o.MenuItem, {
       id: "start-video-call",
-      label: S.Z.Messages.START_VIDEO_CALL,
+      label: f.Z.Messages.START_VIDEO_CALL,
       action: function() {
         c.Z.openPrivateChannel(t.id, !0, !0)
       }
     }) : null, (0, i.jsx)(o.MenuItem, {
       id: "start-voice-call",
-      label: S.Z.Messages.START_VOICE_CALL,
+      label: f.Z.Messages.START_VOICE_CALL,
       action: () => {
         c.Z.openPrivateChannel(t.id, !0)
       }
     }), (0, i.jsx)(o.MenuItem, {
       id: "remove-friend",
-      label: S.Z.Messages.REMOVE_FRIEND,
+      label: f.Z.Messages.REMOVE_FRIEND,
       action: () => {
         (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
-          header: S.Z.Messages.REMOVE_FRIEND_TITLE.format({
+          header: f.Z.Messages.REMOVE_FRIEND_TITLE.format({
             name: I.ZP.getName(t)
           }),
-          confirmText: S.Z.Messages.REMOVE_FRIEND,
-          cancelText: S.Z.Messages.CANCEL,
+          confirmText: f.Z.Messages.REMOVE_FRIEND,
+          cancelText: f.Z.Messages.CANCEL,
           onConfirm: s,
           ...e,
           children: (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: S.Z.Messages.REMOVE_FRIEND_BODY.format({
+            children: f.Z.Messages.REMOVE_FRIEND_BODY.format({
               name: I.ZP.getName(t)
             })
           })
@@ -127,12 +127,12 @@ class L extends s.PureComponent {
           className: N.actions,
           children: [(0, i.jsx)(m.Z, {
             icon: o.ChatIcon,
-            tooltip: S.Z.Messages.SEND_DM,
+            tooltip: f.Z.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }), (0, i.jsx)(m.Z, {
             icon: o.MoreVerticalIcon,
-            tooltip: S.Z.Messages.MORE,
+            tooltip: f.Z.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t
           })]

@@ -36,8 +36,8 @@ function S(e) {
     N = (0, r.e7)([l.Z], () => {
       if (null != S) return l.Z.getGuild(S.guildId)
     }, [S]),
-    [C, m] = n.useState(!1),
-    A = null == t ? void 0 : function(e) {
+    [C, A] = n.useState(!1),
+    m = null == t ? void 0 : function(e) {
       let {
         listing: s,
         subscription: t
@@ -59,9 +59,9 @@ function S(e) {
     application: I,
     guild: N,
     expanded: C,
-    handleToggleExpanded: () => m(e => !e),
+    handleToggleExpanded: () => A(e => !e),
     listing: t,
     groupListing: a,
-    subscriptionInfo: A
+    subscriptionInfo: m
   }
 }

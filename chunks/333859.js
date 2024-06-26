@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(474936),
   N = t(689938),
   C = t(152593),
-  m = t(331651);
-let A = () => {
+  A = t(331651);
+let m = () => {
     o.Z.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, l.xf)()
@@ -42,7 +42,7 @@ let A = () => {
           className: C.tryItOutButtons,
           children: [(0, n.jsx)(r.Button, {
             color: s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
-            onClick: () => A(),
+            onClick: () => m(),
             children: N.Z.Messages.APP_ICON_PREVIEW_TITLE
           }), s ? (0, n.jsx)(u.Z, {
             subscriptionTier: I.Si.TIER_2,
@@ -50,7 +50,7 @@ let A = () => {
           }) : null]
         })
       }), (0, n.jsx)(r.FormDivider, {
-        className: m.marginTop20
+        className: A.marginTop20
       })]
     })
   }

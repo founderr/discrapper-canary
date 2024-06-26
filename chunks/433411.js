@@ -25,8 +25,8 @@ function N(e) {
     className: i,
     sectionTitle: E,
     forcedDivider: N = !1,
-    withTutorial: m = !1,
-    isTryItOutFlow: A = !1
+    withTutorial: A = !1,
+    isTryItOutFlow: m = !1
   } = e, {
     analyticsLocations: O
   } = (0, l.ZP)(), g = null != t, {
@@ -36,9 +36,9 @@ function N(e) {
     pendingErrors: x
   } = (0, u.$U)(s, t), M = (0, _.Z)("enable_avatar_decoration_uploads"), D = a.useCallback(() => (0, d.ps)({
     analyticsLocations: O,
-    isTryItOutFlow: A,
+    isTryItOutFlow: m,
     guild: t
-  }), [O, A, t]), f = A || void 0 !== p ? null != p : (g ? R : h) != null, L = m ? o.ShinyButton : o.Button;
+  }), [O, m, t]), f = m || void 0 !== p ? null != p : (g ? R : h) != null, L = A ? o.ShinyButton : o.Button;
   return (0, n.jsxs)(T.Z, {
     className: i,
     forcedDivider: N,
@@ -51,7 +51,7 @@ function N(e) {
         size: o.Button.Sizes.SMALL,
         onClick: D,
         className: r()({
-          [I.buttonHighlighted]: m
+          [I.buttonHighlighted]: A
         }),
         children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), f && (0, n.jsx)(o.Button, {

@@ -20,8 +20,8 @@ var a = t(512722),
   I = t(556296),
   N = t(808506),
   C = t(237997),
-  m = t(739563),
-  A = t(626135);
+  A = t(739563),
+  m = t(626135);
 t(63063);
 var O = t(13140),
   g = t(981631),
@@ -90,21 +90,21 @@ function D(e) {
   }), j = (0, u.$1)();
 
   function U(e) {
-    _.Z.setEnabled(e, r), A.default.track(g.rMx.OVERLAY_TOGGLED, {
+    _.Z.setEnabled(e, r), m.default.track(g.rMx.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - global"
     })
   }
 
   function B(e) {
-    _.Z.setEnabled(a, e), A.default.track(g.rMx.OVERLAY_TOGGLED, {
+    _.Z.setEnabled(a, e), m.default.track(g.rMx.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - legacy"
     })
   }
   return ! function() {
     let e = x(p);
-    !o().isEqual(e, p) && (A.default.track(g.rMx.OVERLAY_SETTINGS_UPDATED, e), p = e)
+    !o().isEqual(e, p) && (m.default.track(g.rMx.OVERLAY_SETTINGS_UPDATED, e), p = e)
   }(), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(c.FormSection, {
       className: s,
@@ -229,7 +229,7 @@ function D(e) {
         title: h.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
         children: (0, n.jsx)("div", {
           className: R.notificationSettings,
-          children: (0, n.jsx)(m.Z, {
+          children: (0, n.jsx)(A.Z, {
             position: L,
             onChange: (e, s) => _.Z.setNotificationPositionMode(s)
           })

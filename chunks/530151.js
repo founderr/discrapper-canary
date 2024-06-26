@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(112724),
   T = n(812206),
   C = n(44315),
-  f = n(210887),
-  S = n(283595),
+  S = n(210887),
+  f = n(283595),
   N = n(417363),
   A = n(941128),
   Z = n(451478),
@@ -637,18 +637,18 @@ function et(e, t, n, i) {
       branchId: l,
       state: c,
       application: o,
-      libraryApplication: S.Z.getLibraryApplication(r, l),
+      libraryApplication: f.Z.getLibraryApplication(r, l),
       finished: t,
       index: a
     }), e
   }, [])
 }
-t.Z = (0, g.Z)(c.ZP.connectStores([T.Z, N.Z, A.Z, f.Z, Z.Z], () => {
+t.Z = (0, g.Z)(c.ZP.connectStores([T.Z, N.Z, A.Z, S.Z, Z.Z], () => {
   let e = et(A.Z.activeItems, !1, T.Z, N.Z);
   return {
     applications: [...e, ...et(A.Z.finishedItems, !0, T.Z, N.Z)],
     paused: A.Z.paused,
     isFocused: Z.Z.isFocused(),
-    theme: f.Z.theme
+    theme: S.Z.theme
   }
 })((0, p.Z)(ee)))

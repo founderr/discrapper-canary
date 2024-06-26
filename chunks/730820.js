@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(607018),
   N = t(778764),
   C = t(314897),
-  m = t(325067),
-  A = t(594174),
+  A = t(325067),
+  m = t(594174),
   O = t(285952),
   g = t(572004),
   h = t(287880),
@@ -296,7 +296,7 @@ class b extends a.PureComponent {
         onConfirm: () => c.Z.disable()
       })
     }), Z(this, "generateBackupCodes", async () => {
-      let e = m.Z.getVerificationKey();
+      let e = A.Z.getVerificationKey();
       await c.Z.confirmViewBackupCodes(e, !0)
     }), Z(this, "sendMFABackupCodesVerificationKeyEmail", () => {
       (0, l.openModal)(e => (0, n.jsx)(u.default, {
@@ -360,10 +360,10 @@ class b extends a.PureComponent {
 }
 
 function j(e) {
-  let s = (0, o.e7)([A.default], () => A.default.getCurrentUser());
+  let s = (0, o.e7)([m.default], () => m.default.getCurrentUser());
   r()(null != s, "TwoFactorAuth: currentUser cannot be undefined");
-  let t = (0, o.cj)([m.Z, C.default], () => ({
-    togglingSMS: m.Z.togglingSMS,
+  let t = (0, o.cj)([A.Z, C.default], () => ({
+    togglingSMS: A.Z.togglingSMS,
     hasTOTPEnabled: C.default.hasTOTPEnabled()
   }));
   return (0, n.jsx)(b, {

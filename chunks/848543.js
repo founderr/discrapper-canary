@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(242291),
   T = n(458263),
   C = n(603074),
-  f = n(981631),
-  S = n(921944),
+  S = n(981631),
+  f = n(921944),
   N = n(689938),
   A = n(707747);
 
@@ -92,7 +92,7 @@ function Z(e) {
         disabled: P,
         onClick: () => {
           var t, n;
-          null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!b), B()
+          null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(f.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!b), B()
         },
         onMouseEnter: t => {
           var n, i;
@@ -117,7 +117,7 @@ function Z(e) {
     !P && M(!b)
   }, [P, b]);
   return (0, p.yp)({
-    event: f.CkL.TOGGLE_SOUNDBOARD,
+    event: S.CkL.TOGGLE_SOUNDBOARD,
     handler: Y
   }), (0, i.jsx)(E.Gt, {
     value: G,

@@ -169,7 +169,7 @@ class e9 extends a.PureComponent {
     o()(null != a, "Missing user in Channel.openDMContextMenu"), (0, E.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("22036"), n.e("56826"), n.e("4793")]).then(n.bind(n, 131404));
+      } = await Promise.all([n.e("79695"), n.e("17400"), n.e("22036"), n.e("56826"), n.e("4793")]).then(n.bind(n, 131404));
       return n => (0, i.jsx)(e, {
         ...n,
         user: a,

@@ -108,7 +108,7 @@ function C(e) {
   return e
 }
 
-function f(e, t, n, s) {
+function S(e, t, n, s) {
   return (0, i.jsx)(T, {
     item: t,
     state: n,
@@ -121,7 +121,7 @@ t.Z = s.memo(function(e) {
   } = e, n = s.useMemo(() => null != g[t] ? [t] : [], [t]);
   return (0, i.jsx)(o.TransitionGroup, {
     items: n,
-    renderItem: f,
+    renderItem: S,
     getItemKey: C
   })
 })

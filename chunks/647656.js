@@ -80,13 +80,13 @@ t.Z = {
       let {
         assets: T,
         party: C,
-        secrets: f,
-        timestamps: S,
+        secrets: S,
+        timestamps: f,
         buttons: N,
         type: A
       } = _;
-      if ((null == A || A !== h.IIU.PLAYING && !p) && (_.type = h.IIU.PLAYING), null != f) {
-        let e = s().values(f).filter(e => !!e);
+      if ((null == A || A !== h.IIU.PLAYING && !p) && (_.type = h.IIU.PLAYING), null != S) {
+        let e = s().values(S).filter(e => !!e);
         if (null != C && s().intersection(e, [C.id]).length > 0 && !I.includes(i.application.id)) throw new d.Z({
           errorCode: h.lTL.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
@@ -99,8 +99,8 @@ t.Z = {
       }
       if (null != N && (_.metadata = {
           button_urls: N.map(e => e.url)
-        }, _.buttons = N.map(e => e.label)), null != S)
-        for (let e of Object.keys(S)) Date.now().toString().length - S[e].toString().length > 2 && (S[e] = Math.floor(S[e] * c.Z.Millis.SECOND));
+        }, _.buttons = N.map(e => e.label)), null != f)
+        for (let e of Object.keys(f)) Date.now().toString().length - f[e].toString().length > 2 && (f[e] = Math.floor(f[e] * c.Z.Millis.SECOND));
       if (null == T) n = Promise.resolve([]);
       else {
         if (null == i.application || null == i.application.id) throw Error();

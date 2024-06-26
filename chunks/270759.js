@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(199104),
   T = n(108427),
   C = n(210887),
-  f = n(974042),
-  S = n(153124),
+  S = n(974042),
+  f = n(153124),
   N = n(792125),
   A = n(666286),
   Z = n(596957),
@@ -55,10 +55,10 @@ t.Z = function(e) {
     {
       section: P,
       pendingCount: b
-    } = (0, c.cj)([f.ZP], () => f.ZP.getState()),
+    } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
     M = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
-    D = (0, S.Dt)(),
-    y = (0, S.Dt)();
+    D = (0, f.Dt)(),
+    y = (0, f.Dt)();
   return (0, i.jsxs)("main", {
     className: R.container,
     "aria-label": O.Z.Messages.FRIENDS,

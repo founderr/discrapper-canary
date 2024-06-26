@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(627845),
   N = t(514361),
   C = t(605236),
-  m = t(786761),
-  A = t(3148),
+  A = t(786761),
+  m = t(3148),
   O = t(739566),
   g = t(753206),
   h = t(837741),
@@ -61,36 +61,36 @@ let H = {
   K = "1337",
   z = e => {
     let s = 0;
-    return [(0, m.e5)({
-      ...(0, A.ZP)({
+    return [(0, A.e5)({
+      ...(0, m.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: U.yb.SENT,
       id: "".concat(s++)
-    }), (0, m.e5)({
-      ...(0, A.ZP)({
+    }), (0, A.e5)({
+      ...(0, m.ZP)({
         channelId: K,
         content: (0, c.wj)(e) ? F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: U.yb.SENT,
       id: "".concat(s++)
-    }), (0, m.e5)({
-      ...(0, A.ZP)({
+    }), (0, A.e5)({
+      ...(0, m.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: U.yb.SENT,
       id: "".concat(s++)
-    }), (0, m.e5)({
-      ...(0, A.ZP)({
+    }), (0, A.e5)({
+      ...(0, m.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: U.yb.SENT,
       id: "".concat(s++)
-    }), (0, m.e5)({
-      ...(0, A.ZP)({
+    }), (0, A.e5)({
+      ...(0, m.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),

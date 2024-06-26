@@ -17,8 +17,8 @@ var n, a, i = t(735250),
   I = t(431369),
   N = t(55610),
   C = t(653798),
-  m = t(311821),
-  A = t(42818),
+  A = t(311821),
+  m = t(42818),
   O = t(314884),
   g = t(509545),
   h = t(78839),
@@ -177,7 +177,7 @@ function j(e) {
           value: (0, M.og)((0, M.T4)(y, a.currency), Y, H),
           className: Z.invoiceCancelRow
         }), null != B && B.length > 0 ? (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(C.KU, {}), (0, i.jsx)(A.nd, {
+          children: [(0, i.jsx)(C.KU, {}), (0, i.jsx)(m.nd, {
             premiumSubscription: a,
             renewalInvoice: G,
             isUpdate: !0
@@ -198,7 +198,7 @@ function j(e) {
           }
         },
         children: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON
-      }), (0, i.jsx)(m.Z, {
+      }), (0, i.jsx)(A.Z, {
         onClick: l
       })]
     })]

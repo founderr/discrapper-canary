@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(432632),
   T = n(35313),
   C = n(284019),
-  f = n(672775),
-  S = n(601463),
+  S = n(672775),
+  f = n(601463),
   N = n(192565),
   A = n(641037),
   Z = n(689938),
@@ -184,7 +184,7 @@ function O(e) {
             className: r()(L.navigationContainer, {
               [L.elevatedNavigationContainer]: !k
             }),
-            children: (0, i.jsx)(f.Z, {
+            children: (0, i.jsx)(S.Z, {
               steps: M,
               progress: R,
               updateCurrentStep: z,
@@ -205,7 +205,7 @@ function O(e) {
           className: r()(L.sidebar, {
             [L.sidebarResponsive]: k
           }),
-          children: (0, i.jsx)(S.Z, {
+          children: (0, i.jsx)(f.Z, {
             guildId: t,
             signed: D,
             setSigned: k ? void 0 : y,

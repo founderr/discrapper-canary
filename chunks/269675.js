@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(730647),
   T = n(772021),
   C = n(396828),
-  f = n(475413),
-  S = n(20967),
+  S = n(475413),
+  f = n(20967),
   N = n(504762),
   A = n(807152),
   Z = n(176505),
@@ -46,8 +46,8 @@ function O(e) {
     }, []), s.useEffect(() => {
       j && !a.tq && (0, u.M)(t, Z.oC.ROLE_SUBSCRIPTIONS)
     }, [t, j]), a.tq && j) {
-    let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
-    return (0, i.jsx)(S.z, {
+    let e = null == n ? f.J.NOT_GUILD_MEMBER : f.J.GUILD_NOT_ELIGIBLE;
+    return (0, i.jsx)(f.z, {
       errorType: e
     })
   }
@@ -70,7 +70,7 @@ function O(e) {
         className: v.scroller,
         children: (0, i.jsx)("div", {
           className: v.scrollerContent,
-          children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(f.Z, {
+          children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(S.Z, {
             guild: n
           })
         })

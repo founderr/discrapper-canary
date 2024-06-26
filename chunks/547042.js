@@ -23,8 +23,8 @@ var i, s, a = n(735250),
   T = n(689938),
   C = n(372064);
 (i = s || (s = {})).BOOSTING = "BOOSTING", i.NITRO = "NITRO", i.BASH_OUT = "BASH_OUT", i.GAME_NIGHT = "GAME_NIGHT";
-let f = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
-  S = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
+let S = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+  f = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   N = e => {
     let {
       channelId: t,
@@ -45,11 +45,11 @@ let f = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: _.Z.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: S, videoUrl: f, ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: T.Z.Messages.DISMISS
+            analyticsLocation: _.Z.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: f, videoUrl: S, ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: T.Z.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: _.Z.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: S, videoUrl: f, ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: T.Z.Messages.DISMISS
+            analyticsLocation: _.Z.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: f, videoUrl: S, ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: T.Z.Messages.DISMISS
           };
         case "BASH_OUT":
           return {

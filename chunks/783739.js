@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(296533),
   N = t(901750),
   C = t(112863),
-  m = t(701157),
-  A = t(912152),
+  A = t(701157),
+  m = t(912152),
   O = t(615603),
   g = t(474936),
   h = t(703079);
@@ -37,7 +37,7 @@ function R(e) {
       hasAppliedGuildBoosts: P,
       isUserPremiumTier2: x,
       subscriptionIsPausedOrPausePending: v
-    }), (0, n.jsx)(A.Z, {
+    }), (0, n.jsx)(m.Z, {
       hasAppliedGuildBoosts: P,
       isUserPremiumTier2: x,
       hasGuildAffinitiesOrInGuild: f,
@@ -50,7 +50,7 @@ function R(e) {
       premiumSubscription: s
     }), (0, n.jsx)(O.Z, {
       guildBoostSlots: R
-    }), (0, n.jsx)(m.Z, {
+    }), (0, n.jsx)(A.Z, {
       hasAppliedGuildBoosts: P,
       subscriptionIsPausedOrPausePending: v
     }), (0, n.jsx)(c.Z, {

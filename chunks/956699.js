@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(491428),
   N = t(225433),
   C = t(484614),
-  m = t(386506),
-  A = t(865427),
+  A = t(386506),
+  m = t(865427),
   O = t(802098),
   g = t(663993),
   h = t(38618),
@@ -138,7 +138,7 @@ class w extends a.Component {
     this.setState({
       loading: !0
     });
-    let e = await (0, A.Ce)();
+    let e = await (0, m.Ce)();
     this.setState({
       loading: !1,
       buildOverrides: e,
@@ -391,7 +391,7 @@ class w extends a.Component {
       this.setState({
         saving: !0
       });
-      let s = await (0, m.aD)(e);
+      let s = await (0, A.aD)(e);
       if (200 === s.status) {
         let e = s.body;
         this.setState({
@@ -742,7 +742,7 @@ class W extends a.Component {
       }
       this.setStatusMessage(null);
       let e = this.generatePayload(),
-        s = await (0, m.M3)(e);
+        s = await (0, A.M3)(e);
       !1 !== s.error ? this.setStatusMessage(JSON.stringify(s.error), f.Z.Colors.STATUS_RED) : (this.setState({
         publicLink: s.url.toString()
       }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", f.Z.Colors.STATUS_YELLOW))

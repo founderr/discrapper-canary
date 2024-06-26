@@ -29,16 +29,16 @@ function p(e) {
     })
   }, []), C = s.useCallback(() => {
     c.Z.closeChannelSidebar(d.uZ)
-  }, []), f = s.useCallback(() => {
+  }, []), S = s.useCallback(() => {
     c.Z.closeChannelSidebar(d.uZ), g && (0, o.Kh)(p.id)
   }, [p.id, g]), {
-    acceptMessageRequest: S,
+    acceptMessageRequest: f,
     isAcceptLoading: N,
     isUserProfileLoading: A,
     isOptimisticAccepted: Z
   } = (0, _.m)({
     user: n,
-    onAcceptSuccess: f,
+    onAcceptSuccess: S,
     onRejectSuccess: C,
     onError: T
   }), L = N || A, v = L || Z;
@@ -55,7 +55,7 @@ function p(e) {
         color: r.ButtonColors.PRIMARY,
         size: r.Button.Sizes.SMALL,
         onClick: e => {
-          S(p.id), e.stopPropagation()
+          f(p.id), e.stopPropagation()
         },
         disabled: v,
         submitting: L,

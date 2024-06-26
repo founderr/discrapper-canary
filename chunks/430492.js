@@ -110,7 +110,7 @@ s.ZP = function(e) {
     drop: I,
     platform: N,
     transitionState: C
-  } = e, m = (0, c.Dt)(), [A, O] = a.useState();
+  } = e, A = (0, c.Dt)(), [m, O] = a.useState();
   a.useEffect(() => {
     null == l && o.Z.wait(async () => {
       await (0, d.dN)(I.dropsQuestId)
@@ -119,7 +119,7 @@ s.ZP = function(e) {
   let g = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
   return (0, n.jsx)(r.ModalRoot, {
     transitionState: C,
-    "aria-labelledby": m,
+    "aria-labelledby": A,
     children: (0, n.jsx)(n.Fragment, {
       children: (() => {
         if (null != l) return (0, n.jsx)(S, {
@@ -166,7 +166,7 @@ s.ZP = function(e) {
                     value: e,
                     label: (0, E.Un)(e)
                   })),
-                  value: a ? g[0] : A,
+                  value: a ? g[0] : m,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
                   look: e ? r.SelectLooks.FILLED : r.SelectLooks.CUSTOM
@@ -185,9 +185,9 @@ s.ZP = function(e) {
                     let {
                       default: e
                     } = await t.e("5004").then(t.bind(t, 233070));
-                    return t => (void 0 !== A || a) && (0, n.jsx)(e, {
+                    return t => (void 0 !== m || a) && (0, n.jsx)(e, {
                       ...t,
-                      platform: void 0 === A ? g[0] : A,
+                      platform: void 0 === m ? g[0] : m,
                       code: l,
                       dropsQuestId: I.dropsQuestId,
                       closeParentModal: s,
@@ -195,7 +195,7 @@ s.ZP = function(e) {
                     })
                   })
                 },
-                disabled: void 0 === A && !a,
+                disabled: void 0 === m && !a,
                 children: u.Z.Messages.UNLOCK_CODE
               }), e ? (0, n.jsx)(r.Button, {
                 onClick: s,

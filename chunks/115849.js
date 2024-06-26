@@ -26,9 +26,9 @@ let g = {
   },
   T = (0, u.hQ)(),
   C = "".concat(T, "-decription"),
-  f = "".concat(T, "-error");
+  S = "".concat(T, "-error");
 
-function S(e, t) {
+function f(e, t) {
   switch (t.type) {
     case "RESET":
       return g;
@@ -50,7 +50,7 @@ function S(e, t) {
 function N() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, a] = s.useReducer(S, g),
+    [n, a] = s.useReducer(f, g),
     {
       canSend: l,
       hint: u,
@@ -145,7 +145,7 @@ function N() {
           placeholder: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != A || void 0,
-          "aria-describedby": null != A ? f : C
+          "aria-describedby": null != A ? S : C
         }), null != u && (0, i.jsx)("div", {
           className: m.addFriendHint,
           "aria-hidden": !0,
@@ -159,7 +159,7 @@ function N() {
       })
     }), null != A && (0, i.jsx)(c.FormText, {
       role: "alert",
-      id: f,
+      id: S,
       type: c.FormText.Types.ERROR,
       className: p.marginTop8,
       children: A

@@ -77,7 +77,7 @@ function T() {
     b = (0, o.Wu)([f.default], () => A.map(e => f.default.getUser(e)), [A]),
     M = (0, o.Wu)([f.default], () => L.map(e => f.default.getUser(e)), [L]),
     R = v(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
-  let O = (e = Z, t = T, 0 === e.length ? null : (0, i.jsxs)("div", {
+  let y = (e = Z, t = T, 0 === e.length ? null : (0, i.jsxs)("div", {
       className: S.row,
       children: [(0, i.jsx)(c.StageIcon, {
         size: "lg",
@@ -100,10 +100,10 @@ function T() {
         })]
       })]
     })),
-    y = v(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
+    O = v(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
     P = v(c.ActivitiesIcon, b);
   return (0, i.jsxs)(i.Fragment, {
-    children: [O, R, y, P]
+    children: [y, R, O, P]
   })
 }
 

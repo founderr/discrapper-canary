@@ -26,8 +26,8 @@ function g(e) {
     status: g,
     isFocused: T
   } = e, C = s.useContext(u.AnalyticsContext), {
-    analyticsLocations: f
-  } = (0, o.ZP)(), S = e => {
+    analyticsLocations: S
+  } = (0, o.ZP)(), f = e => {
     e.stopPropagation(), l.Z.cancelFriendRequest(t.id, {
       location: "Friends"
     })
@@ -44,7 +44,7 @@ function g(e) {
     user: t,
     onClick: () => (0, c.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: f,
+      sourceAnalyticsLocations: S,
       analyticsLocation: C.location
     }),
     children: e => {
@@ -66,14 +66,14 @@ function g(e) {
           icon: r.CloseSmallIcon,
           actionType: _.Z.ActionTypes.DENY,
           tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: S,
+          onClick: f,
           shouldHighlight: e
         })]
       }) : (0, i.jsx)(_.Z, {
         icon: r.CloseSmallIcon,
         actionType: _.Z.ActionTypes.DENY,
         tooltip: m.Z.Messages.FRIEND_REQUEST_CANCEL,
-        onClick: S,
+        onClick: f,
         shouldHighlight: e
       });
       return (0, i.jsxs)("div", {

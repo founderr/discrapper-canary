@@ -20,8 +20,8 @@ var i, s = n(735250),
   g = n(117496),
   T = n(150192),
   C = n(731455),
-  f = n(981631),
-  S = n(689938),
+  S = n(981631),
+  f = n(689938),
   N = n(627716);
 
 function A(e, t, n) {
@@ -67,7 +67,7 @@ class v extends(i = a.PureComponent) {
       query: s,
       isHandlingTagSearch: a
     } = this.state, r = this.context;
-    if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
+    if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
       let l = n !== C.Hk ? n : null;
       Z({
         loadId: e,
@@ -110,7 +110,7 @@ class v extends(i = a.PureComponent) {
     })
   }
   componentWillUnmount() {
-    I.S.unsubscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput)
+    I.S.unsubscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput)
   }
   renderSearchOptions() {
     var e;
@@ -148,7 +148,7 @@ class v extends(i = a.PureComponent) {
         let [n, i] = t;
         return (0, s.jsx)(L, {
           categoryId: n,
-          name: n === C.Hk ? S.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+          name: n === C.Hk ? f.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === n,
           count: i
@@ -178,7 +178,7 @@ class v extends(i = a.PureComponent) {
             inputClassName: i ? void 0 : N.searchBoxInput,
             closeIconClassName: i ? void 0 : N.closeIcon,
             searchIconClassName: i ? void 0 : N.searchIcon,
-            label: S.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+            label: f.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
             placeholder: n,
             onChange: this.handleQueryChanged,
             onClear: this.handleQueryCleared,
@@ -186,7 +186,7 @@ class v extends(i = a.PureComponent) {
             onBlur: this.handleSearchBlurred,
             onKeyPress: this.handleSearchKeyPress,
             autoFocus: !i,
-            cta: t && null != e && e.length > 1 ? S.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            cta: t && null != e && e.length > 1 ? f.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })
         }), i ? this.renderSearchOptions() : null]
       }), i ? this.renderCategories() : null]
@@ -230,7 +230,7 @@ class v extends(i = a.PureComponent) {
         loadId: i,
         currentCategoryId: s
       } = this.props, a = s !== C.Hk ? s : null;
-      this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({
+      this.canSearch(t) && n && e.charCode === S.yXg.ENTER ? (m.tI(i, a), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === S.yXg.ENTER && this.setState({
         isSearching: !1
       })
     }), A(this, "handleQueryChanged", e => {

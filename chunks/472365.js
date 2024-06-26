@@ -32,8 +32,8 @@ var i = n(735250),
   b = n(981631),
   M = n(474936),
   R = n(689938),
-  O = n(71044),
-  y = n(331651);
+  y = n(71044),
+  O = n(331651);
 
 function P() {
   let {
@@ -59,16 +59,16 @@ function P() {
       },
       analyticsLocations: e
     }),
-    className: O.experimentUpsellError,
+    className: y.experimentUpsellError,
     children: [(0, i.jsx)(o.NitroWheelIcon, {
       size: "md",
-      className: O.experimentUpsellIcon,
+      className: y.experimentUpsellIcon,
       color: I.JX.PREMIUM_TIER_2
     }), (0, i.jsx)("span", {
-      className: O.experimentUpsellText,
+      className: y.experimentUpsellText,
       children: R.Z.Messages.GUILD_CAP_UPSELL_TOOLTIP
     }), (0, i.jsx)("span", {
-      className: O.experimentGetNitro,
+      className: y.experimentGetNitro,
       children: R.Z.Messages.GUILD_CAP_UPSELL_GET_NITRO
     })]
   })
@@ -80,17 +80,17 @@ function j(e) {
   } = e;
   return (0, i.jsxs)("div", {
     "aria-hidden": "true",
-    className: a()(O.iconContainer, t),
+    className: a()(y.iconContainer, t),
     children: [(0, i.jsx)(N.Z, {
-      className: O.iconSparklePlus
+      className: y.iconSparklePlus
     }), (0, i.jsx)(o.LinkIcon, {
       size: "custom",
       color: "currentColor",
-      className: O.iconLink,
+      className: y.iconLink,
       width: 40,
       height: 40
     }), (0, i.jsx)(x.Z, {
-      className: O.iconSparkleStar
+      className: y.iconSparkleStar
     })]
   })
 }
@@ -108,16 +108,16 @@ function D(e) {
       "aria-labelledby": n,
       transitionState: t,
       children: (0, i.jsxs)(o.ModalContent, {
-        className: O.errorContent,
+        className: y.errorContent,
         children: [(0, i.jsx)(j, {
-          className: O.errorImage
+          className: y.errorImage
         }), (0, i.jsx)(o.Heading, {
           id: n,
           variant: "heading-xl/semibold",
           color: "header-primary",
           children: R.Z.Messages.INVITE_MODAL_ERROR_INVALID_TITLE
         }), (0, i.jsx)("div", {
-          className: O.errorBody,
+          className: y.errorBody,
           children: R.Z.Messages.INVITE_MODAL_ERROR_INVALID_BODY
         }), (0, i.jsx)(h.zx, {
           size: h.zx.Sizes.LARGE,
@@ -181,25 +181,25 @@ function U(e) {
       size: o.ModalSize.DYNAMIC,
       "aria-labelledby": x,
       transitionState: r,
-      className: O.container,
+      className: y.container,
       children: [(0, i.jsx)("div", {
-        className: O.contentWrapper,
+        className: y.contentWrapper,
         children: (0, i.jsx)(o.Scroller, {
-          className: O.scroller,
+          className: y.scroller,
           children: (0, i.jsxs)(C.Z, {
-            className: O.inviteContent,
+            className: y.inviteContent,
             direction: C.Z.Direction.VERTICAL,
             justify: C.Z.Justify.BETWEEN,
             children: [(0, i.jsx)("div", {
               id: x,
-              className: y.marginBottom20,
+              className: O.marginBottom20,
               children: (0, i.jsx)(c.Z, {
                 invite: f,
                 disableUser: k,
                 error: I
               })
             }), B && null != j ? (0, i.jsx)("div", {
-              className: a()(y.marginBottom20, O.stage),
+              className: a()(O.marginBottom20, y.stage),
               children: (0, i.jsx)(p.Z, {
                 isCard: !0,
                 stageInstance: f.stage_instance,
@@ -226,7 +226,7 @@ function U(e) {
                   })
                 }
               }) : (0, i.jsxs)("div", {
-                className: O.buttonGroup,
+                className: y.buttonGroup,
                 children: [(0, i.jsx)(h.zx, {
                   size: h.zx.Sizes.LARGE,
                   onClick: M,
@@ -241,10 +241,10 @@ function U(e) {
                 })]
               }), (0, i.jsx)(C.Z, {
                 justify: C.Z.Justify.CENTER,
-                className: y.marginTop8,
+                className: O.marginTop8,
                 children: (0, i.jsx)(h.zx, {
                   look: h.zx.Looks.LINK,
-                  className: O.noThanksButton,
+                  className: y.noThanksButton,
                   onClick: function() {
                     L.Z.close()
                   },
@@ -256,7 +256,7 @@ function U(e) {
           })
         })
       }), null != n && (0, i.jsx)("div", {
-        className: O.inviteSplash,
+        className: y.inviteSplash,
         style: {
           backgroundImage: "url(".concat(n, ")")
         }

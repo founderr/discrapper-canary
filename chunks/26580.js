@@ -99,32 +99,32 @@ let _ = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     } = e, {
       ref: p,
       width: g
-    } = (0, o.Z)(), [T, C] = s.useState(null), f = t.filter(e => !_.includes(e.toLowerCase()));
+    } = (0, o.Z)(), [T, C] = s.useState(null), S = t.filter(e => !_.includes(e.toLowerCase()));
     return s.useLayoutEffect(() => {
       if (null == p.current || null == g || 0 === g) return;
       let e = 0,
         t = 0,
         n = g - 40 - 4;
-      for (let i = 0; i < f.length && (t += p.current.children[i].clientWidth + 4, i === f.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
+      for (let i = 0; i < S.length && (t += p.current.children[i].clientWidth + 4, i === S.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
         ;
         e++
       }
-      C(t => e <= f.length ? e : t)
-    }, [g, p, f]), (0, i.jsxs)("ul", {
+      C(t => e <= S.length ? e : t)
+    }, [g, p, S]), (0, i.jsxs)("ul", {
       ref: p,
       className: r()(u.tagContainer, a, {
         [u.invisible]: null == T
       }),
-      children: [f.map((e, t) => (0, i.jsx)(E, {
+      children: [S.map((e, t) => (0, i.jsx)(E, {
         className: l,
         onClick: () => n(e),
         hide: null != T && t >= T,
         text: e
-      }, e)), !c && null != T && T < f.length && (0, i.jsx)(I, {
+      }, e)), !c && null != T && T < S.length && (0, i.jsx)(I, {
         className: l,
         onTagClick: n,
-        tags: f.slice(T),
-        count: f.length - T,
+        tags: S.slice(T),
+        count: S.length - T,
         guildId: d,
         section: h
       })]

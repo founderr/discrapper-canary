@@ -32,8 +32,8 @@ var i = n(735250),
   b = n(880080),
   M = n(780570),
   R = n(557177),
-  O = n(278464),
-  y = n(682662),
+  y = n(278464),
+  O = n(682662),
   P = n(662146),
   j = n(674552),
   D = n(981631),
@@ -61,7 +61,7 @@ function V(e) {
     badge: h,
     link: _,
     showProgressBadge: f
-  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, M] = l.useState(0), [O, U] = l.useState(!1), {
+  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, M] = l.useState(0), [y, U] = l.useState(!1), {
     canViewBroadcasts: V
   } = p.Z.useExperiment({
     location: "home_button_no_track"
@@ -136,7 +136,7 @@ function V(e) {
         U(!1)
       },
       spacing: 8,
-      shouldShow: O,
+      shouldShow: y,
       children: () => Q
     }) : null;
   return (0, i.jsx)("div", {
@@ -153,7 +153,7 @@ function V(e) {
       inlineSpecs: B,
       tutorialId: "friends-list",
       position: "right",
-      children: (0, i.jsxs)(y.H, {
+      children: (0, i.jsxs)(O.H, {
         children: [(0, i.jsx)(b.Z, {
           selected: t,
           hovered: N,
@@ -171,7 +171,7 @@ function V(e) {
 }
 
 function H() {
-  let e = (0, O.n)(),
+  let e = (0, y.n)(),
     t = (0, a.e7)([L.Z, T.Z], () => {
       let e = (0, c.E)(L.Z.activeItems, T.Z),
         {

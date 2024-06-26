@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(727813),
   T = n(355350),
   C = n(307947),
-  f = n(125855),
-  S = n(687683),
+  S = n(125855),
+  f = n(687683),
   N = n(981631),
   A = n(689938),
   Z = n(964058);
@@ -60,7 +60,7 @@ function L() {
       let {
         row: l
       } = e, o = t[l], c = null === (s = t[l + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, i.jsx)(f.Z, {
+      return (0, i.jsx)(S.Z, {
         index: l,
         className: r()({
           [Z.selected]: null != O && O === d,
@@ -94,7 +94,7 @@ function L() {
       }) : null]
     }, "message-requests-spam-title"), [n, P, L]);
   return 0 === t.length ? (0, i.jsx)(C.Z, {
-    section: S.pS.SPAM
+    section: f.pS.SPAM
   }) : (0, i.jsx)(l.bG, {
     navigator: v,
     children: (0, i.jsx)(l.SJ, {
@@ -114,8 +114,8 @@ function L() {
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: S.oi,
-          rowHeight: S.WN,
+          sectionHeight: f.oi,
+          rowHeight: f.WN,
           renderSection: M,
           renderRow: b,
           sections: [t.length],

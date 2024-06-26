@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(299206),
   N = t(295474),
   C = t(144114),
-  m = t(918505),
-  A = t(332473),
+  A = t(918505),
+  m = t(332473),
   O = t(921801),
   g = t(290421),
   h = t(318661),
@@ -48,7 +48,7 @@ function Y(e) {
   let {
     className: o,
     user: l
-  } = e, c = a.useRef(null), E = (0, m.o9)(), u = (0, A.b)(), T = (0, N.gS)(), S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null, [I, C] = a.useState(!1);
+  } = e, c = a.useRef(null), E = (0, A.o9)(), u = (0, m.b)(), T = (0, N.gS)(), S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null, [I, C] = a.useState(!1);
   a.useEffect(() => {
     C(null != c.current && c.current.scrollWidth > c.current.clientWidth)
   }, [l.username]);

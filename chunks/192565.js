@@ -40,7 +40,7 @@ function C(e) {
     handleClanUpdate: s.useCallback(t => l._9(e, t), [e])
   }
 }
-let f = {
+let S = {
   [g.Wy.GAMES]: function(e) {
     let {
       guildId: t
@@ -174,12 +174,12 @@ let f = {
   }
 };
 
-function S(e) {
+function f(e) {
   return e.currentStep.toString()
 }
 
 function N(e) {
-  let t = f[e.currentStep];
+  let t = S[e.currentStep];
   return (0, i.jsx)(t, {
     guildId: e.guildId
   })
@@ -199,6 +199,6 @@ function A(e) {
     currentStep: r,
     items: l,
     renderItem: N,
-    getItemKey: S
+    getItemKey: f
   })
 }

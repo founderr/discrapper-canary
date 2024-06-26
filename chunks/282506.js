@@ -23,7 +23,7 @@ function C() {
   s.Z.wait(() => a.xv(t)), null === (e = h.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), i = null
 }
 
-function f() {
+function S() {
   let e = h.Z.getChannelId(),
     t = i === e;
   return function() {
@@ -49,12 +49,12 @@ function f() {
     })), null === (t = h.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), i = e
   }(e))
 }
-class S extends r.Z {
+class f extends r.Z {
   _initialize() {
-    I.Z.addChangeListener(f), m.Z.addChangeListener(f), h.Z.addChangeListener(f), p.Z.addChangeListener(f), u.Z.addChangeListener(f), c.Z.addChangeListener(f), o.Z.addChangeListener(f), _.Z.addChangeListener(f), l.ZP.addChangeListener(f)
+    I.Z.addChangeListener(S), m.Z.addChangeListener(S), h.Z.addChangeListener(S), p.Z.addChangeListener(S), u.Z.addChangeListener(S), c.Z.addChangeListener(S), o.Z.addChangeListener(S), _.Z.addChangeListener(S), l.ZP.addChangeListener(S)
   }
   _terminate() {
-    I.Z.removeChangeListener(f), m.Z.removeChangeListener(f), h.Z.removeChangeListener(f), p.Z.removeChangeListener(f), u.Z.removeChangeListener(f), c.Z.removeChangeListener(f), o.Z.removeChangeListener(f), _.Z.removeChangeListener(f), l.ZP.removeChangeListener(f)
+    I.Z.removeChangeListener(S), m.Z.removeChangeListener(S), h.Z.removeChangeListener(S), p.Z.removeChangeListener(S), u.Z.removeChangeListener(S), c.Z.removeChangeListener(S), o.Z.removeChangeListener(S), _.Z.removeChangeListener(S), l.ZP.removeChangeListener(S)
   }
 }
-t.Z = new S
+t.Z = new f

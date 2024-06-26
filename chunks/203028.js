@@ -52,7 +52,7 @@ function m(e) {
     }
   }(t), {
     subtitle: C,
-    icon: f
+    icon: S
   } = function(e) {
     var t;
     let {
@@ -60,12 +60,12 @@ function m(e) {
       partiedMembers: d,
       voiceChannels: m,
       currentActivities: p
-    } = e, g = s.length, T = d.length - g, C = p[0], f = null == C ? void 0 : C.activity, S = null == C ? void 0 : C.startedPlayingTime, N = {
-      name: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ""
+    } = e, g = s.length, T = d.length - g, C = p[0], S = null == C ? void 0 : C.activity, f = null == C ? void 0 : C.startedPlayingTime, N = {
+      name: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : ""
     };
-    if ((0, r.Z)(f) && null != f) return {
+    if ((0, r.Z)(S) && null != S) return {
       subtitle: (0, i.jsx)(c.ZP, {
-        start: S,
+        start: f,
         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
         messageProps: N
       }),
@@ -75,15 +75,15 @@ function m(e) {
       let {
         game: e
       } = C;
-      if (null == f) return {
+      if (null == S) return {
         subtitle: null,
         icon: null
       };
-      let t = u.dc(f);
+      let t = u.dc(S);
       if (null != t) return t;
-      switch (f.type) {
+      switch (S.type) {
         case h.IIU.PLAYING:
-          if ((0, o.Z)(f)) return {
+          if ((0, o.Z)(S)) return {
             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, i.jsx)(_.Z.Header.Icon, {
               src: _.Z.Header.Icon.Src.XBOX
@@ -91,7 +91,7 @@ function m(e) {
           };
           return {
             subtitle: (0, i.jsx)(c.ZP, {
-              start: S,
+              start: f,
               location: c.ZP.Locations.ACTIVITY_FEED_NEW,
               messageProps: N
             }), icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, {
@@ -106,7 +106,7 @@ function m(e) {
           };
         case h.IIU.LISTENING:
           let s;
-          return s = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, {
+          return s = (0, l.Z)(S) ? (0, i.jsx)(_.Z.Header.Icon, {
             src: _.Z.Header.Icon.Src.SPOTIFY
           }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
             src: e.getIconURL(E.Z)
@@ -114,7 +114,7 @@ function m(e) {
             src: n(211827)
           }), {
             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-              name: f.name
+              name: S.name
             }),
             icon: s
           };
@@ -185,7 +185,7 @@ function m(e) {
     guildId: null == p ? void 0 : p.id,
     title: T,
     subtitle: C,
-    icon: f,
+    icon: S,
     onContextMenu: e => s(e, g.user)
   })
 }

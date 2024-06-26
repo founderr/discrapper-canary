@@ -23,7 +23,7 @@ var i = n(735250),
 let C = {
     offset: 2
   },
-  f = {
+  S = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
@@ -51,12 +51,12 @@ let C = {
     }
   };
 
-function S(e) {
+function f(e) {
   var t, s;
   let {
     channel: a,
     user: h,
-    nick: S,
+    nick: f,
     mute: N,
     deaf: A,
     serverMute: Z,
@@ -64,7 +64,7 @@ function S(e) {
   } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
     userId: h.id,
     checkSoundSharing: !0
-  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), P = null != S ? S : m.ZP.getName(h), {
+  }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), P = null != f ? f : m.ZP.getName(h), {
     icon: b,
     colorize: M,
     getStatus: D
@@ -76,11 +76,11 @@ function S(e) {
       mute: s,
       localMute: a
     } = e;
-    if (t) return f.serverDeaf;
-    if (n) return f.deaf;
-    if (i) return f.serverMute;
-    else if (a) return f.localMute;
-    else if (s) return f.mute
+    if (t) return S.serverDeaf;
+    if (n) return S.deaf;
+    if (i) return S.serverMute;
+    else if (a) return S.localMute;
+    else if (s) return S.mute
   }({
     serverDeaf: L,
     deaf: A,
@@ -96,7 +96,7 @@ function S(e) {
     null != R ? (0, c.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
+      } = await Promise.all([n.e("79695"), n.e("17400"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
       return t => (0, i.jsx)(e, {
         ...t,
         user: h,
@@ -107,7 +107,7 @@ function S(e) {
     }) : (0, c.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("61035")]).then(n.bind(n, 881351));
+      } = await Promise.all([n.e("79695"), n.e("17400"), n.e("61035")]).then(n.bind(n, 881351));
       return t => (0, i.jsx)(e, {
         ...t,
         user: h,
@@ -199,7 +199,7 @@ function N(e) {
           nick: s,
           voiceState: a
         } = e;
-        return t.id !== E ? (0, i.jsx)(S, {
+        return t.id !== E ? (0, i.jsx)(f, {
           channel: n,
           user: t,
           nick: s,

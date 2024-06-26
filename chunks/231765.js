@@ -15,8 +15,8 @@ var n, a, i, r, o = t(735250),
   I = t(585483),
   N = t(557177),
   C = t(57562),
-  m = t(955204),
-  A = t(64078),
+  A = t(955204),
+  m = t(64078),
   O = t(351780),
   g = t(954794),
   h = t(112843),
@@ -113,7 +113,7 @@ function B(e) {
     value: s,
     note: x.Z.Messages.POGGERMODE_ENABLE_DESCRIPTION,
     onChange: e => {
-      !e && (0, C.T)(m.hn.DISABLE_POGGERMODE), e && (!t || a) ? (0, E.openModal)(e => (0, o.jsx)(E.ConfirmModal, {
+      !e && (0, C.T)(A.hn.DISABLE_POGGERMODE), e && (!t || a) ? (0, E.openModal)(e => (0, o.jsx)(E.ConfirmModal, {
         header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
         confirmText: x.Z.Messages.ENABLE,
         cancelText: x.Z.Messages.CANCEL,
@@ -266,7 +266,7 @@ function V(e) {
     },
     updateSettings: i
   } = e, r = (0, d.e7)([T.Z], () => T.Z.useReducedMotion), l = !s || !t || r, c = (e, s) => {
-    null != e.shakeIntensity && e.shakeIntensity > n && (0, C.T)(m.hn.MORE), i(e, s)
+    null != e.shakeIntensity && e.shakeIntensity > n && (0, C.T)(A.hn.MORE), i(e, s)
   };
   return (0, o.jsxs)(E.FormSection, {
     tag: E.FormTitleTags.H1,
@@ -402,7 +402,7 @@ function k(e) {
       }
     },
     u = (e, s) => {
-      if (_(e), (0, A.AI)(e), null == s) return;
+      if (_(e), (0, m.AI)(e), null == s) return;
       let t = c(n.confettiEnabled, e.confettiEnabled, n.enabled, e.enabled);
       0 === s && t && r.fire(a.x, a.y, {
         settings: e
@@ -474,7 +474,7 @@ function K() {
     }, 500);
     return () => clearTimeout(s)
   }, [e]), l.useEffect(() => {
-    Math.random() > .99 && (0, C.T)(m.hn.VISITOR_100)
+    Math.random() > .99 && (0, C.T)(A.hn.VISITOR_100)
   }, []), (0, o.jsxs)(o.Fragment, {
     children: [(0, o.jsx)(S.Z, {
       className: M.slideAnimator,

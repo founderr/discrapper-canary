@@ -31,9 +31,9 @@ var i, l = n(735250),
   b = n(670512),
   M = n(981631),
   R = n(689938),
-  O = n(163282);
+  y = n(163282);
 
-function y(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,12 +43,12 @@ function y(e, t, n) {
 }
 let P = 10,
   j = () => (0, l.jsxs)("div", {
-    className: O.emptyState,
+    className: y.emptyState,
     children: [(0, l.jsx)("div", {
-      className: O.emptyStateNote,
+      className: y.emptyStateNote,
       children: R.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, l.jsx)("div", {
-      className: O.emptyStateCTA,
+      className: y.emptyStateCTA,
       children: (0, l.jsx)(u.Anchor, {
         href: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
         children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -61,13 +61,13 @@ class D extends(i = r.Component) {
     return (0, l.jsx)(S.$W, {
       ...this.props,
       children: (0, l.jsx)("div", {
-        className: O.miscContainer,
+        className: y.miscContainer,
         children: null != e ? e.name : null
       })
     })
   }
 }
-y(D, "defaultProps", {
+O(D, "defaultProps", {
   unread: !1
 });
 let U = c.ZP.connectStores([I.ZP, g.Z], e => {
@@ -119,7 +119,7 @@ function V(e, t, n) {
     text: n,
     children: e => (0, l.jsx)("span", {
       ...e,
-      className: O.autocompleteQuerySymbol,
+      className: y.autocompleteQuerySymbol,
       children: t
     })
   }, e)
@@ -165,7 +165,7 @@ class H extends r.PureComponent {
     } = this.state, i = t.length > 0 && "" !== n;
     return (0, l.jsx)(u.FocusRing, {
       children: (0, l.jsx)("input", {
-        className: O.input,
+        className: y.input,
         "aria-label": R.Z.Messages.QUICK_SWITCHER,
         ref: this.inputRef,
         type: "text",
@@ -201,7 +201,7 @@ class H extends r.PureComponent {
       rowHeight: 34,
       paddingBottom: P,
       sections: [t.length],
-      className: O.scroller,
+      className: y.scroller,
       renderRow: this.renderRow,
       renderSection: this.renderSection
     })
@@ -216,8 +216,8 @@ class H extends r.PureComponent {
   }
   renderProtip() {
     return (0, l.jsx)(x.Z, {
-      className: s()(O.protip, {
-        [O.hasContent]: this.state.query.length > 0
+      className: s()(y.protip, {
+        [y.hasContent]: this.state.query.length > 0
       }),
       type: x.Z.Types.INLINE,
       children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
@@ -245,36 +245,36 @@ class H extends r.PureComponent {
       "aria-label": R.Z.Messages.QUICK_SWITCHER,
       size: u.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
-      className: s()(O.container, o.tq && O.mobileContainer),
+      className: s()(y.container, o.tq && y.mobileContainer),
       fullscreenOnMobile: !1,
       children: (0, l.jsxs)("div", {
-        className: s()(O.quickswitcher, o.tq && O.mobileQuickswitcher),
+        className: s()(y.quickswitcher, o.tq && y.mobileQuickswitcher),
         onMouseMove: this.handleMouseMove,
         children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
       })
     })
   }
   constructor(...e) {
-    super(...e), y(this, "scrollerRef", r.createRef()), y(this, "inputRef", r.createRef()), y(this, "_listId", (0, Z.hQ)()), y(this, "state", {
+    super(...e), O(this, "scrollerRef", r.createRef()), O(this, "inputRef", r.createRef()), O(this, "_listId", (0, Z.hQ)()), O(this, "state", {
       query: this.props.query,
       mouseFocusDisabled: !0
-    }), y(this, "handleInputChange", () => {
+    }), O(this, "handleInputChange", () => {
       let {
         current: e
       } = this.inputRef;
       null != e && this.search(e.value)
-    }), y(this, "handleMouseMove", () => {
+    }), O(this, "handleMouseMove", () => {
       let {
         mouseFocusDisabled: e
       } = this.state;
       if (!1 !== e) this.setState({
         mouseFocusDisabled: !1
       })
-    }), y(this, "focusResult", e => {
+    }), O(this, "focusResult", e => {
       if (!this.state.mouseFocusDisabled)(0, L.tF)(this.props.results.indexOf(e))
-    }), y(this, "selectResult", e => {
+    }), O(this, "selectResult", e => {
       (0, L.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL)
-    }), y(this, "handleContextMenu", e => {
+    }), O(this, "handleContextMenu", e => {
       let t = this.props.results[this.props.selectedIndex];
       switch (t.type) {
         case _.h8.GUILD:
@@ -376,7 +376,7 @@ class H extends r.PureComponent {
           return (0, d.jW)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("79695"), n.e("32006"), n.e("61035")]).then(n.bind(n, 881351));
+            } = await Promise.all([n.e("79695"), n.e("17400"), n.e("61035")]).then(n.bind(n, 881351));
             return n => (0, l.jsx)(e, {
               ...n,
               user: t.record,
@@ -384,7 +384,7 @@ class H extends r.PureComponent {
             })
           })
       }
-    }), y(this, "handleKeyDown", e => {
+    }), O(this, "handleKeyDown", e => {
       let {
         mouseFocusDisabled: t,
         query: n
@@ -430,7 +430,7 @@ class H extends r.PureComponent {
           return
       }
       e.preventDefault(), (0, L.tF)(r)
-    }), y(this, "renderRow", e => {
+    }), O(this, "renderRow", e => {
       let {
         row: t
       } = e, n = this.props.results[t], {

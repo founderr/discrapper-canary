@@ -17,8 +17,8 @@ var i = n(735250),
   g = n(100527),
   T = n(963202),
   C = n(252618),
-  f = n(440190),
-  S = n(5955),
+  S = n(440190),
+  f = n(5955),
   N = n(121711),
   A = n(709158),
   Z = n(703656),
@@ -290,7 +290,7 @@ class X extends s.PureComponent {
     }, {
       autoTrackExposure: !1
     }), h = l === F.Hk ? null === (e = c[Y.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
-    if (l === F.U) return (0, i.jsx)(S.Z, {
+    if (l === F.U) return (0, i.jsx)(f.Z, {
       loadId: this.loadId
     });
     let I = l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
@@ -476,10 +476,10 @@ function $(e) {
     fetching: n,
     loadId: s,
     recommendedGuilds: a
-  } = (0, _.cj)([f.Z], () => ({
-    recommendedGuilds: f.Z.getRecommendedGuilds(),
-    loadId: f.Z.getLoadId(),
-    fetching: f.Z.isFetching()
+  } = (0, _.cj)([S.Z], () => ({
+    recommendedGuilds: S.Z.getRecommendedGuilds(),
+    loadId: S.Z.getLoadId(),
+    fetching: S.Z.isFetching()
   }));
   return (0, i.jsx)(J, {
     searchRoute: t,

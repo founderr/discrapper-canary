@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(957730),
   N = t(296810),
   C = t(921813),
-  m = t(935147),
-  A = t(246946),
+  A = t(935147),
+  m = t(246946),
   O = t(25990),
   g = t(594174),
   h = t(74538),
@@ -36,7 +36,7 @@ function M() {
   a.useEffect(() => {
     (0, c.In)(e.id)
   }, [e.id]);
-  let s = (0, o.e7)([A.Z], () => A.Z.hidePersonalInformation),
+  let s = (0, o.e7)([m.Z], () => m.Z.hidePersonalInformation),
     {
       pendingBio: t,
       ...i
@@ -65,7 +65,7 @@ function M() {
         ...i
       }),
       children: (0, n.jsx)(x.Z, {})
-    }), !D && (0, n.jsx)(m.Z, {
+    }), !D && (0, n.jsx)(A.Z, {
       user: e
     })]
   })

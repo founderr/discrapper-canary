@@ -30,8 +30,8 @@ function u(e) {
     } = a,
     N = S && !r,
     C = r ? "header-primary" : "text-muted",
-    m = r ? "header-secondary" : "text-muted",
-    A = o()(t),
+    A = r ? "header-secondary" : "text-muted",
+    m = o()(t),
     O = null != I && r,
     g = O ? l.Clickable : "div";
   return (0, n.jsxs)(g, {
@@ -52,14 +52,14 @@ function u(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: E.unlocked,
-        children: (0, c.Y4)(A)
+        children: (0, c.Y4)(m)
       }), (0, n.jsx)(l.Text, {
         variant: "text-md/medium",
         color: C,
         children: u()
       }), (0, n.jsx)(l.Text, {
         variant: "text-xs/normal",
-        color: m,
+        color: A,
         children: N ? "?????" : T()
       })]
     })]

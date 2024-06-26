@@ -32,7 +32,7 @@ t.Z = l.forwardRef(function(e, t) {
     art: b,
     isPremiumEarlyAccess: M = !1,
     maxWidth: R = 280
-  } = e, O = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [y, P] = l.useState(!1), {
+  } = e, y = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [O, P] = l.useState(!1), {
     ref: j,
     width: D
   } = (0, o.Z)();
@@ -45,8 +45,8 @@ t.Z = l.forwardRef(function(e, t) {
   return l.useEffect(() => {
     var e, t;
     let n = (null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !y && n > R && P(!0)
-  }, [y, D, j, R]), l.useEffect(() => {
+    !O && n > R && P(!0)
+  }, [O, D, j, R]), l.useEffect(() => {
     (0, c.kk)(T)
   }, [T]), (0, i.jsx)("div", {
     className: N,
@@ -91,11 +91,11 @@ t.Z = l.forwardRef(function(e, t) {
         }) : n]
       }), (0, i.jsx)("div", {
         ref: j,
-        className: y || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+        className: O || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
         children: null != I ? (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(s.Button, {
             className: p.button,
-            size: O,
+            size: y,
             onClick: e => {
               null == E || E(e), I(e), U(d.L.PRIMARY)
             },
@@ -103,7 +103,7 @@ t.Z = l.forwardRef(function(e, t) {
             children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, i.jsx)(s.Button, {
             className: p.button,
-            size: O,
+            size: y,
             onClick: e => {
               null == E || E(e), U(d.L.DISMISS)
             },

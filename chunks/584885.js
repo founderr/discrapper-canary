@@ -30,15 +30,15 @@ t.Z = e => {
     analyticsContext: g,
     theme: T,
     onViewGuild: C,
-    fetchGuilds: f,
-    onGuildCardSeen: S,
+    fetchGuilds: S,
+    onGuildCardSeen: f,
     currentCategoryId: N,
     loadId: A,
     onTagClick: Z,
     showMoreCards: L = !1
   } = e;
   s.useEffect(() => {
-    r.Z.wait(() => f())
+    r.Z.wait(() => S())
   }, [N]);
   let v = (0, u.Z)(L ? I : h),
     {
@@ -75,7 +75,7 @@ t.Z = e => {
     guild: e,
     onView: b,
     theme: T,
-    onGuildCardSeen: S,
+    onGuildCardSeen: f,
     onTagClick: Z
   }, e.id));
   return (0, i.jsx)("section", {

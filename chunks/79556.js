@@ -34,7 +34,7 @@ var l = n(120356),
   M = n(647086),
   R = n(47705);
 
-function O(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -42,7 +42,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class y extends v.ZP {
+class O extends v.ZP {
   componentWillUnmount() {
     this.resetTextChannelPopoutTimers()
   }
@@ -125,10 +125,10 @@ class y extends v.ZP {
     return g ? d(h(A)) : A
   }
   constructor(...e) {
-    super(...e), O(this, "state", {
+    super(...e), y(this, "state", {
       shouldShowThreadsPopout: !1,
       shouldShowActivities: !1
-    }), O(this, "enterTimer", 0), O(this, "exitTimer", 0), O(this, "handleMouseEnter", () => {
+    }), y(this, "enterTimer", 0), y(this, "exitTimer", 0), y(this, "handleMouseEnter", () => {
       if (!!this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps) this.resetTextChannelPopoutTimers(), this.enterTimer = setTimeout(() => {
         null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({
           shouldShowActivities: !0
@@ -136,7 +136,7 @@ class y extends v.ZP {
           shouldShowThreadsPopout: !0
         })
       }, 200)
-    }), O(this, "handleMouseLeave", () => {
+    }), y(this, "handleMouseLeave", () => {
       this.resetTextChannelPopoutTimers(), this.exitTimer = setTimeout(() => {
         this.state.shouldShowActivities && this.setState({
           shouldShowActivities: !1
@@ -144,23 +144,23 @@ class y extends v.ZP {
           shouldShowThreadsPopout: !1
         })
       }, 250)
-    }), O(this, "handleThreadsPopoutClose", () => {
+    }), y(this, "handleThreadsPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowThreadsPopout: !1
       })
-    }), O(this, "handleActivitiesPopoutClose", () => {
+    }), y(this, "handleActivitiesPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowActivities: !1
       })
-    }), O(this, "handleClosePopout", () => {
+    }), y(this, "handleClosePopout", () => {
       this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose()
-    }), O(this, "handleMouseDown", () => {
+    }), y(this, "handleMouseDown", () => {
       this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
       let {
         channel: e
       } = this.props, t = e.getGuildId();
       o.Z.preload(null != t ? t : b.ME, e.id)
-    }), O(this, "renderPopout", e => {
+    }), y(this, "renderPopout", e => {
       let {
         channel: t,
         sorting: n,
@@ -175,7 +175,7 @@ class y extends v.ZP {
         ...e,
         channel: this.props.channel
       })
-    }), O(this, "handleContextMenu", e => {
+    }), y(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props;
@@ -197,7 +197,7 @@ class y extends v.ZP {
         null != l && (0, c.jW)(e, async () => {
           let {
             default: e
-          } = await Promise.all([n.e("79695"), n.e("32006"), n.e("56826"), n.e("4562")]).then(n.bind(n, 131404));
+          } = await Promise.all([n.e("79695"), n.e("17400"), n.e("56826"), n.e("4562")]).then(n.bind(n, 131404));
           return n => (0, i.jsx)(e, {
             ...n,
             user: l,
@@ -221,7 +221,7 @@ class y extends v.ZP {
     })
   }
 }
-let P = (0, u.B)(y);
+let P = (0, u.B)(O);
 
 function j(e) {
   let {
@@ -250,7 +250,7 @@ function j(e) {
   } = (0, f.Z)(t.id), A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)), R = (0, a.e7)([S.default], () => {
     let e = S.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-  }, [t]), O = (0, d.NX)(t.id, !1, "webGuildTextChannel"), y = (0, T.Z)({
+  }, [t]), y = (0, d.NX)(t.id, !1, "webGuildTextChannel"), O = (0, T.Z)({
     channel: t,
     isChannelCollapsed: !1,
     isChannelSelected: o,
@@ -258,7 +258,7 @@ function j(e) {
     needSubscriptionToAccess: v,
     isNewChannel: Z,
     muted: s,
-    enableActivities: O,
+    enableActivities: y,
     resolvedUnreadSetting: _
   }), j = (0, h.ZP)(t);
   return (0, i.jsx)(P, {
@@ -272,10 +272,10 @@ function j(e) {
     isNewChannel: Z && e.canBeNewChannel,
     isFavoriteSuggestion: r && !A,
     canShowThreadPreviewForUser: R,
-    channelInfo: y,
+    channelInfo: O,
     embeddedApps: j,
     resolvedUnreadSetting: _,
-    hasChannelInfo: null != y,
-    enableActivities: O
+    hasChannelInfo: null != O,
+    enableActivities: y
   })
 }

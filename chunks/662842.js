@@ -19,8 +19,8 @@ var i, s, a = n(735250),
   g = n(151864),
   T = n(725436),
   C = n(497656),
-  f = n(554747),
-  S = n(230900),
+  S = n(554747),
+  f = n(230900),
   N = n(854698),
   A = n(703656),
   Z = n(922482),
@@ -43,7 +43,7 @@ function w(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, i = (0, C.y)(t.id), s = (0, f.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = e, i = (0, C.y)(t.id), s = (0, S.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
     isStageNoticeHidden: w,
     isEventNoticeHidden: k
   } = (0, c.cj)([g.Z], () => ({
@@ -173,7 +173,7 @@ function w(e) {
         }
       }
       if (t.entity_type === j.WX.EXTERNAL) {
-        let e = (0, S.cS)(t);
+        let e = (0, f.cS)(t);
         if (null == e) return {
           noticeType: null
         };

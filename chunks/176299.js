@@ -21,8 +21,8 @@ var i = n(735250),
   g = n(765717),
   T = n(358221),
   C = n(823748),
-  f = n(626421),
-  S = n(118379),
+  S = n(626421),
+  f = n(118379),
   N = n(652515),
   A = n(544978),
   Z = n(194729),
@@ -88,13 +88,13 @@ let eg = () => (0, i.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: eg
   }),
-  ef = (0, c.Un)({
+  eS = (0, c.Un)({
     createPromise: () => n.e("60493").then(n.bind(n, 231588)),
     webpackId: 231588,
     name: "GuildHomePage",
     renderLoader: eg
   }),
-  eS = (0, c.Un)({
+  ef = (0, c.Un)({
     createPromise: () => Promise.all([n.e("85552"), n.e("44400")]).then(n.bind(n, 545918)),
     webpackId: 545918,
     name: "MemberSafetyPage",
@@ -153,7 +153,7 @@ let eg = () => (0, i.jsx)("div", {
           guildId: s
         });
       case eh.oC.GUILD_HOME:
-        return (0, i.jsx)(ef, {
+        return (0, i.jsx)(eS, {
           guildId: s
         });
       case eh.oC.CHANNEL_BROWSER:
@@ -171,7 +171,7 @@ let eg = () => (0, i.jsx)("div", {
           selectedSection: eI.l7.CUSTOMIZE
         });
       case eh.oC.MEMBER_SAFETY:
-        return (0, i.jsx)(eS, {
+        return (0, i.jsx)(ef, {
           guildId: s
         });
       default:
@@ -250,7 +250,7 @@ let eO = e => (0, i.jsx)(eZ, {
   ey = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
-      return (0, i.jsx)(S.Z, {
+      return (0, i.jsx)(f.Z, {
         isFullScreen: e,
         ...t
       })
@@ -389,7 +389,7 @@ function eV() {
           className: ep.base,
           children: [d.tq ? null : (0, i.jsx)(eo.Z, {}), (0, i.jsxs)("div", {
             className: ep.content,
-            children: [(0, i.jsx)(f.Z, {}), (0, i.jsx)(eH, {
+            children: [(0, i.jsx)(S.Z, {}), (0, i.jsx)(eH, {
               hasNotice: t,
               sidebarTheme: n,
               hideSidebar: a || r || c || _ || m || !E

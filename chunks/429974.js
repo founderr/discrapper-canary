@@ -19,8 +19,8 @@ async function p(e) {
     userId: g,
     section: T,
     subsection: C,
-    guildId: f = h.ME,
-    channelId: S,
+    guildId: S = h.ME,
+    channelId: f,
     friendToken: N,
     analyticsLocation: A,
     ...Z
@@ -45,18 +45,18 @@ async function p(e) {
     return t => (0, i.jsx)(e, {
       location: "handleOpenUserProfileModal",
       user: L,
-      guildId: f,
+      guildId: S,
       friendToken: N,
       initialSection: T,
       initialSubsection: C,
-      channelId: S,
+      channelId: f,
       ...t,
       ...Z
     })
   }), _.default.track(h.rMx.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: f !== h.ME ? f : null,
-    channel_id: S,
+    guild_id: S !== h.ME ? S : null,
+    channel_id: f,
     other_user_id: g,
     application_id: null !== (a = null == O ? void 0 : O.application_id) && void 0 !== a ? a : null,
     application_name: null == O ? void 0 : O.name,

@@ -53,7 +53,7 @@ t.Z = l.memo(function(e) {
     isSelectedVoice: A,
     isLast: M,
     withGuildIcon: R
-  } = e, O = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), y = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
+  } = e, y = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
     unread: P,
     mentionCount: j
   } = (0, o.cj)([f.ZP], () => ({
@@ -74,7 +74,7 @@ t.Z = l.memo(function(e) {
         channel: l
       })
     })
-  }, [t.id]), k = null == O ? 0 : O.length, {
+  }, [t.id]), k = null == y ? 0 : y.length, {
     role: B,
     ...V
   } = (0, s.JA)(t.id), H = l.useRef(null), F = j > 0 ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -135,7 +135,7 @@ t.Z = l.memo(function(e) {
               className: L.children,
               children: [k > 0 && t.userLimit > 0 ? (0, i.jsx)(E.Z, {
                 userCount: k,
-                video: y,
+                video: O,
                 channel: t
               }) : null, (0, I.Z)(j) ? (0, i.jsx)(N.Z, {
                 mentionsCount: j
@@ -148,7 +148,7 @@ t.Z = l.memo(function(e) {
       channel: t,
       collapsed: !A,
       collapsedMax: 6,
-      voiceStates: O,
+      voiceStates: y,
       location: S.Sbl.GUILD_CHANNEL_LIST
     })]
   })

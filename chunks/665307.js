@@ -20,8 +20,8 @@ var i, s = n(735250),
   g = n(799777),
   T = n(285952),
   C = n(366695),
-  f = n(366966),
-  S = n(151011),
+  S = n(366966),
+  f = n(151011),
   N = n(626135),
   A = n(780570),
   Z = n(624138),
@@ -111,9 +111,9 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: R.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(f.ZP, {
+      return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(S.ZP, {
         end: e.lastPlayed,
-        location: f.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
+        location: S.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
       }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(T.Z, {
         align: T.Z.Align.CENTER,
         className: l()({
@@ -314,7 +314,7 @@ class U extends(i = a.PureComponent) {
       highlightedApplicationKey: o
     } = this.state;
     return (0, s.jsxs)(a.Fragment, {
-      children: [n.length > 0 ? (0, s.jsx)(S.Z, {
+      children: [n.length > 0 ? (0, s.jsx)(f.Z, {
         columns: y,
         data: n,
         sortData: !1,

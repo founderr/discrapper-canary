@@ -20,8 +20,8 @@ var i, s, a, r, l = n(735250),
   g = n(931515),
   T = n(207796),
   C = n(526282),
-  f = n(777734),
-  S = n(976757),
+  S = n(777734),
+  f = n(976757),
   N = n(981631),
   A = n(689938),
   Z = n(920040);
@@ -62,9 +62,9 @@ function v(e) {
     trailing: !0
   });
   o.useEffect(() => {
-    if (null != v && !!(0, S.Pw)(v))(!(null != x && (0, S.Pw)(x)) || !(x.loadedAt >= v.loadedAt)) && (0, I.Oe)(v.items.map(e => e.id), "top_picks", O)
+    if (null != v && !!(0, f.Pw)(v))(!(null != x && (0, f.Pw)(x)) || !(x.loadedAt >= v.loadedAt)) && (0, I.Oe)(v.items.map(e => e.id), "top_picks", O)
   }, [O, v, x, k, n]), o.useEffect(() => {
-    !n && (0, S.Pw)(v) && setTimeout(() => k())
+    !n && (0, f.Pw)(v) && setTimeout(() => k())
   }, [k, n, v]);
   let H = o.useMemo(() => (function(e, t, n) {
       if (null == e) return [];
@@ -143,7 +143,7 @@ function v(e) {
         case "upsell":
           return (0, l.jsx)(C.Z, {});
         case "top_picks":
-          return (0, l.jsx)(f.Z, {
+          return (0, l.jsx)(S.Z, {
             ref: w,
             icon: (0, l.jsx)(u.TrophyIcon, {
               color: "currentColor"
@@ -158,7 +158,7 @@ function v(e) {
           });
         default:
           if (null === n) return null;
-          return (0, l.jsx)(f.Z, {
+          return (0, l.jsx)(S.Z, {
             title: n,
             subtitle: i,
             style: {

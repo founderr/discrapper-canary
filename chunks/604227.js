@@ -17,12 +17,12 @@ var a = t(525654),
 function E() {
   var e, s, t, a, E, u;
   let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    S = "305251",
-    I = (e = "834e663e1d4ae15707a0c733a54a760c17224f9c", e.substring(0, 7)),
+    S = "305303",
+    I = (e = "a390f6c8380a05b987a07d1d3c6d32eb57e40a6b", e.substring(0, 7)),
     N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
     C = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
-    m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
-    A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
+    A = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
+    m = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
     O = function() {
       var e;
       let s = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
@@ -32,7 +32,7 @@ function E() {
       return s.includes("Windows 10") && void 0 !== r && r >= 22e3 && (s = s.replace("Windows 10", "Windows 11")), s.includes("OS X 10.15.7") && void 0 !== n && n >= 20 && (s = "macOS ".concat(n - 9)), "".concat(s, " (").concat(t, ")")
     }(),
     g = [T, S, "(".concat(I, ")")];
-  return null != N && (g.push("Host ".concat(N)), null != m && g.push(m.toLowerCase()), null != C && g.push("(".concat(C, ")"))), g.push("Build Override: ".concat(null != A ? A.id : "N/A")), null != O && g.push(O), (0, n.jsx)(c.o, {
+  return null != N && (g.push("Host ".concat(N)), null != A && g.push(A.toLowerCase()), null != C && g.push("(".concat(C, ")"))), g.push("Build Override: ".concat(null != m ? m.id : "N/A")), null != O && g.push(O), (0, n.jsx)(c.o, {
     copyValue: g.join(" "),
     disableCopy: !1,
     copyTooltip: d.Z.Messages.COPY_VERSION,
@@ -54,9 +54,9 @@ function E() {
           className: _.line,
           variant: "text-xs/normal",
           color: "text-muted",
-          children: ["Host ", N, " ", null != m ? (0, n.jsxs)("span", {
+          children: ["Host ", N, " ", null != A ? (0, n.jsxs)("span", {
             className: _.appArch,
-            children: [m.toLowerCase(), " "]
+            children: [A.toLowerCase(), " "]
           }) : null, null != C ? (0, n.jsxs)("span", {
             children: ["(", C, ")"]
           }) : null]

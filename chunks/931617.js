@@ -51,7 +51,7 @@ function m(e, n) {
     {
       userRoles: C,
       isGuildMember: T,
-      canManageRoles: v
+      canManageRoles: A
     } = (0, a.cj)([c.ZP, E.Z], () => {
       let t = c.ZP.getMember(n, e);
       return {
@@ -61,10 +61,10 @@ function m(e, n) {
       }
     }, [e, n, g]);
   if (__OVERLAY__ || null == C || null == g || !T) return null;
-  let A = E.Z.getHighestRole(g),
+  let v = E.Z.getHighestRole(g),
     O = Object.values(m).filter(e => !(0, s.pM)(g.id, e.id)),
-    x = v ? O.map(t => {
-      let i = t.managed || !E.Z.isRoleHigher(g, A, t),
+    x = A ? O.map(t => {
+      let i = t.managed || !E.Z.isRoleHigher(g, v, t),
         a = -1 !== C.indexOf(t.id);
       return i && !a ? null : (0, l.jsx)(r.MenuCheckboxItem, {
         id: t.id,

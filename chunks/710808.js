@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(726985),
   N = t(981631),
   C = t(65154),
-  m = t(689938),
-  A = t(331651);
+  A = t(689938),
+  m = t(331651);
 async function O() {
   let e = await c.Z.fileManager.getModulePath(),
     s = c.Z.fileManager.join(e, "discord_voice");
@@ -29,15 +29,15 @@ async function O() {
 
 function g(e) {
   (0, r.openModal)(s => (0, n.jsx)(r.ConfirmModal, {
-    header: m.Z.Messages.SET_DEBUG_LOGGING,
-    confirmText: m.Z.Messages.OKAY,
-    cancelText: m.Z.Messages.CANCEL,
+    header: A.Z.Messages.SET_DEBUG_LOGGING,
+    confirmText: A.Z.Messages.OKAY,
+    cancelText: A.Z.Messages.CANCEL,
     onCancel: s.onClose,
     onConfirm: () => o.Z.setDebugLogging(e),
     ...s,
     children: (0, n.jsx)(r.Text, {
       variant: "text-md/normal",
-      children: m.Z.Messages.SET_DEBUG_LOGGING_BODY
+      children: A.Z.Messages.SET_DEBUG_LOGGING_BODY
     })
   }))
 }
@@ -60,12 +60,12 @@ function h() {
           message: "User Live Dump"
         }
       }), await (0, d.E)(N.GU0.RTC), ! function() {
-        let e = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
-          s = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
+        let e = A.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
+          s = A.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
           header: e,
           confirmButtonColor: r.Button.Colors.BRAND,
-          confirmText: m.Z.Messages.OKAY,
+          confirmText: A.Z.Messages.OKAY,
           ...t,
           children: (0, n.jsx)(r.Text, {
             variant: "text-md/normal",
@@ -75,12 +75,12 @@ function h() {
       }()
     } catch (e) {
       ! function(e) {
-        let s = m.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
-          t = null != e ? e : m.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
+        let s = A.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
+          t = null != e ? e : A.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
         (0, r.openModal)(e => (0, n.jsx)(r.ConfirmModal, {
           header: s,
           confirmButtonColor: r.Button.Colors.BRAND,
-          confirmText: m.Z.Messages.OKAY,
+          confirmText: A.Z.Messages.OKAY,
           ...e,
           children: (0, n.jsx)(r.Text, {
             variant: "text-md/normal",
@@ -91,15 +91,15 @@ function h() {
     }
   }
   return (0, n.jsxs)(r.FormSection, {
-    className: A.marginBottom40,
-    title: m.Z.Messages.FORM_LABEL_DEBUG,
+    className: m.marginBottom40,
+    title: A.Z.Messages.FORM_LABEL_DEBUG,
     children: [(0, n.jsx)(_.F, {
       setting: I.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
       children: (0, n.jsx)(r.FormSwitch, {
         value: c,
         onChange: e => o.Z.setAecDump(e),
-        note: m.Z.Messages.FORM_HELP_AEC_DUMP,
-        children: m.Z.Messages.FORM_CHECKBOX_AEC_DUMP
+        note: A.Z.Messages.FORM_HELP_AEC_DUMP,
+        children: A.Z.Messages.FORM_CHECKBOX_AEC_DUMP
       })
     }), (0, n.jsxs)(_.F, {
       setting: I.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
@@ -107,23 +107,23 @@ function h() {
         hideBorder: !0,
         value: h,
         onChange: e => l.TC(e),
-        note: m.Z.Messages.FORM_HELP_CONNECTION_LOG,
-        children: m.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG
+        note: A.Z.Messages.FORM_HELP_CONNECTION_LOG,
+        children: A.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, n.jsx)(r.FormItem, {
         children: (0, n.jsx)(T.Z, {
-          className: A.marginBottom20,
+          className: m.marginBottom20,
           children: (0, n.jsx)(T.Z.Child, {
             grow: 0,
             shrink: 0,
             children: (0, n.jsx)(r.Button, {
               size: r.Button.Sizes.SMALL,
               onClick: () => l.z4(),
-              children: m.Z.Messages.OPEN_CONNECTION_REPLAY
+              children: A.Z.Messages.OPEN_CONNECTION_REPLAY
             })
           })
         })
       }), (0, n.jsx)(r.FormDivider, {
-        className: A.marginBottom20
+        className: m.marginBottom20
       })]
     }), (0, n.jsxs)(_.F, {
       setting: I.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
@@ -131,8 +131,8 @@ function h() {
         hideBorder: !0,
         value: t,
         onChange: g,
-        note: m.Z.Messages.FORM_HELP_DEBUG_LOGGING,
-        children: m.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
+        note: A.Z.Messages.FORM_HELP_DEBUG_LOGGING,
+        children: A.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
       }), (0, n.jsx)(r.FormItem, {
         children: (0, n.jsxs)(T.Z, {
           children: [(0, n.jsx)(T.Z.Child, {
@@ -142,7 +142,7 @@ function h() {
               disabled: e,
               size: r.Button.Sizes.SMALL,
               onClick: R,
-              children: m.Z.Messages.UPLOAD
+              children: A.Z.Messages.UPLOAD
             })
           }), (0, n.jsx)(T.Z.Child, {
             grow: 0,
@@ -150,7 +150,7 @@ function h() {
             children: (0, n.jsx)(r.Button, {
               size: r.Button.Sizes.SMALL,
               onClick: O,
-              children: m.Z.Messages.SHOW_FOLDER
+              children: A.Z.Messages.SHOW_FOLDER
             })
           })]
         })

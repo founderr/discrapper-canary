@@ -34,8 +34,8 @@ var i, l = n(735250),
   b = n(796974),
   M = n(984933),
   R = n(914010),
-  O = n(153124),
-  y = n(540126),
+  y = n(153124),
+  O = n(540126),
   P = n(734307),
   j = n(854444),
   D = n(688265),
@@ -140,7 +140,7 @@ class ec extends(i = r.PureComponent) {
         section: i,
         row: l
       } = n;
-      if (i < y.wd || e.isPlaceholderRow(i, l)) return !1;
+      if (i < O.wd || e.isPlaceholderRow(i, l)) return !1;
       let r = e.getChannelFromSectionRow(i, l);
       if (null == r) return !1;
       let {
@@ -247,7 +247,7 @@ class ec extends(i = r.PureComponent) {
       showNewUnreadsBar: n
     } = this.props;
     return (0, l.jsx)(r.Fragment, {
-      children: (0, l.jsx)(O.FG, {
+      children: (0, l.jsx)(y.FG, {
         children: i => (0, l.jsx)(d.HeadingLevel, {
           component: (0, l.jsx)(d.HiddenVisually, {
             children: (0, l.jsx)(d.H, {
@@ -411,7 +411,7 @@ class ec extends(i = r.PureComponent) {
         selectedVoiceChannelId: r,
         selectedGuildId: a
       } = this.props, s = ei.Vf;
-      if (e === y.zm) {
+      if (e === O.zm) {
         let e = n.getCommunitySection();
         return e.isEmpty() ? 0 : e.getRow(t) === en.f.GUILD_PREMIUM_PROGRESS_BAR ? e.getRows().length > 1 ? I.aR : I.PD : s
       }
@@ -498,7 +498,7 @@ class ec extends(i = r.PureComponent) {
         optInEnabled: _,
         withGuildIcon: f
       } = this.props;
-      if (t === y.zm) {
+      if (t === O.zm) {
         let e = u.getCommunitySection(),
           t = e.getRow(n);
         if (null == t) return null;
@@ -569,7 +569,7 @@ class ec extends(i = r.PureComponent) {
       let {
         category: m,
         channel: C
-      } = g, x = m instanceof y.VR, S = C.record, Z = "".concat(t).concat(C.id);
+      } = g, x = m instanceof O.VR, S = C.record, Z = "".concat(t).concat(C.id);
       switch (S.type) {
         case el.d4z.GUILD_ANNOUNCEMENT:
         case el.d4z.GUILD_TEXT:
@@ -682,8 +682,8 @@ class ec extends(i = r.PureComponent) {
       let {
         guildChannels: r
       } = this.props;
-      if (e !== y.zm) {
-        if (null == t) return e === y.p2 ? "favorites-header" : e === r.recentsSectionNumber ? "recents-header" : e === r.voiceChannelsSectionNumber ? "voice-channels" : e === y.wd ? "uncategorized-header" : null === (l = r.getNamedCategoryFromSection(e)) || void 0 === l ? void 0 : l.id;
+      if (e !== O.zm) {
+        if (null == t) return e === O.p2 ? "favorites-header" : e === r.recentsSectionNumber ? "recents-header" : e === r.voiceChannelsSectionNumber ? "voice-channels" : e === O.wd ? "uncategorized-header" : null === (l = r.getNamedCategoryFromSection(e)) || void 0 === l ? void 0 : l.id;
         if (!r.isPlaceholderRow(e, t)) return null === (i = r.getChannelFromSectionRow(e, t)) || void 0 === i ? void 0 : null === (n = i.channel) || void 0 === n ? void 0 : n.id
       }
     }), eo(this, "testShouldSkipTutorial", () => {

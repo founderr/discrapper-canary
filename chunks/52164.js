@@ -33,15 +33,15 @@ function N(e) {
   });
   if (null == N) return null;
   let C = t ? I.finePrintWithOverheadSeparator : I.finePrint,
-    m = N.invoiceItems.find(e => {
+    A = N.invoiceItems.find(e => {
       let {
         subscriptionPlanId: s
       } = e;
       return (0, d.uZ)(s)
     });
-  if (null == m) return null;
-  let A = m.subscriptionPlanId,
-    O = c.Z.get(A);
+  if (null == A) return null;
+  let m = A.subscriptionPlanId,
+    O = c.Z.get(m);
   i()(null != O, "Missing plan");
   let g = (0, _.T4)(N.total, N.currency),
     h = "";
