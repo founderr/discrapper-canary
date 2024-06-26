@@ -279,14 +279,15 @@ function D(e) {
   return null == e ? void 0 : e.id === h.bi.BUILT_IN ? I.ub.BUILT_IN : e.id === h.bi.FRECENCY ? I.ub.FRECENCY : I.ub.APP
 }
 
-function M(e) {
-  var t, n;
+function M(e, t) {
+  var n, i;
   return {
     type: I.Qi.APPLICATION,
     id: e.id,
-    name: null !== (n = null == e ? void 0 : null === (t = e.bot) || void 0 === t ? void 0 : t.username) && void 0 !== n ? n : e.name,
+    name: null !== (i = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.username) && void 0 !== i ? i : e.name,
     icon: e.icon,
-    application: e
+    application: e,
+    isUserApp: null != t && t
   }
 }
 

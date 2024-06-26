@@ -16,19 +16,26 @@ function u(e, t) {
     o.DZ.loadIfNecessary()
   }, []);
   let n = (0, r.e7)([l.Z], () => l.Z.getApplicationFrecencyWithoutLoadingLatest()),
-    u = i.useMemo(() => null == t ? void 0 : t.filter(t => !e.some(e => e.id === t.application.id)), [e, t]);
+    u = i.useMemo(() => null == t || 0 === t.length ? e : e.map(e => {
+      var n;
+      return {
+        ...e,
+        isUserApp: null !== (n = null == t ? void 0 : t.some(t => t.application.id === e.id)) && void 0 !== n && n
+      }
+    }), [e, t]),
+    _ = i.useMemo(() => null == t ? void 0 : t.filter(t => !e.some(e => e.id === t.application.id)), [e, t]);
   return i.useMemo(() => {
-    var t;
-    null == u || u.forEach(e => {
+    var e;
+    null == _ || _.forEach(e => {
       let t = a.default.extractTimestamp(e.id);
       null == n.getEntry(e.application.id) && n.track(e.application.id, t)
     }), n.compute();
-    let i = null !== (t = null == u ? void 0 : u.map(e => (0, s.X0)(e.application))) && void 0 !== t ? t : [],
-      r = [...e];
-    return r.push(...i), r.sort((e, t) => {
+    let t = null !== (e = null == _ ? void 0 : _.map(e => (0, s.X0)(e.application, !0))) && void 0 !== e ? e : [],
+      i = [...u];
+    return i.push(...t), i.sort((e, t) => {
       var i, r;
       let s = (null !== (i = n.getScore(t.id)) && void 0 !== i ? i : 0) - (null !== (r = n.getScore(e.id)) && void 0 !== r ? r : 0);
       return 0 !== s ? s : e.name.localeCompare(t.name)
-    }), r
-  }, [e, n, u])
+    }), i
+  }, [u, n, _])
 }

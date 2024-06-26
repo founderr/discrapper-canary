@@ -39,7 +39,7 @@ function I(e, t) {
           return e && null !== (n = null === (t = _.Z.getApps()) || void 0 === t ? void 0 : t.filter(e => e.scopes.includes(r.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : []
         }, [e]),
         a = t.filter(e => e.id !== c.bi.FRECENCY && e.id !== c.bi.BUILT_IN);
-      return (0, u.h)(a, null != n ? n : [])
+      return (0, u.h)(a, e ? n : [])
     }(t, n)
   }
 }
