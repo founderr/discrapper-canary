@@ -9,8 +9,8 @@ var E, _, s = t(25209),
   N = t(314897),
   A = t(592125),
   o = t(430824),
-  I = t(594174),
-  c = t(5192),
+  c = t(594174),
+  I = t(5192),
   O = t(709054),
   T = t(981631),
   d = t(689938);
@@ -72,16 +72,16 @@ n.Z = {
   stringify: function(e, n) {
     var t, E, _, O;
     let C = null === (t = e.mentions) || void 0 === t ? void 0 : t[0],
-      R = null != C && "string" != typeof C ? I.default.getUser(C.id) : void 0,
+      R = null != C && "string" != typeof C ? c.default.getUser(C.id) : void 0,
       L = e.channel_id,
-      g = c.ZP.getName(null, L, e.author);
+      g = I.ZP.getName(null, L, e.author);
     switch (e.type) {
       case T.uaV.RECIPIENT_ADD:
         if (null == R) return;
         return (0, s.Rp)(d.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD.astFormat({
           username: g,
           usernameOnClick: T.dG4,
-          otherUsername: c.ZP.getName(null, L, R),
+          otherUsername: I.ZP.getName(null, L, R),
           otherUsernameOnClick: T.dG4
         }));
       case T.uaV.RECIPIENT_REMOVE:
@@ -94,7 +94,7 @@ n.Z = {
         return (0, s.Rp)(d.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE.astFormat({
           username: g,
           usernameOnClick: T.dG4,
-          otherUsername: c.ZP.getName(null, L, R),
+          otherUsername: I.ZP.getName(null, L, R),
           otherUsernameOnClick: T.dG4
         }));
       case T.uaV.CALL:

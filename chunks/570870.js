@@ -41,7 +41,7 @@ n.Z = e => {
       limit: N.lr
     }),
     {
-      sections: v
+      sections: G
     } = r.useMemo(() => {
       let e = {};
       return g.forEach(n => {
@@ -50,13 +50,13 @@ n.Z = e => {
         sections: e
       }
     }, [g]),
-    G = r.useRef(m.current);
+    v = r.useRef(m.current);
   r.useEffect(() => {
-    m.current !== G.current && (G.current = m.current, null == O || O())
+    m.current !== v.current && (v.current = m.current, null == O || O())
   }, [m, O]);
   let y = r.useCallback(e => {
     l()(null != f, "menu item should not show if channel is null");
-    let n = v[e.applicationId],
+    let n = G[e.applicationId],
       t = null != n ? (0, c.ky)(n) : void 0;
     return (0, i.jsx)(o.MenuItem, {
       id: e.id,
@@ -81,7 +81,7 @@ n.Z = e => {
         })
       }
     }, e.id)
-  }, [f, Z, u, v]);
+  }, [f, Z, u, G]);
   return m.current ? n = (0, i.jsx)(o.MenuItem, {
     id: "menu-commands-placeholder",
     render: () => (0, i.jsx)(E.Z, {}),

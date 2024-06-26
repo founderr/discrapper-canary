@@ -26,8 +26,8 @@ var r = t(442837),
   C = t(389052),
   g = t(24311),
   m = t(332576),
-  v = t(710631),
-  G = t(297047),
+  G = t(710631),
+  v = t(297047),
   y = t(88966),
   D = t(712301),
   U = t(991307),
@@ -55,7 +55,7 @@ n.default = (0, o.Z)((0, a.Z)(function(e) {
     page: x.ZY5.GUILD_CHANNEL,
     section: x.jXE.CHAT_USERNAME,
     object: x.qAy.CONTEXT_MENU_ITEM
-  }, q = (0, P.Z)(n.id, t, a.id), z = (0, G.Z)(n, t, j), Q = (0, y.Z)(n.id, j), X = (0, H.Z)(n.id), $ = (0, g.Z)({
+  }, q = (0, P.Z)(n.id, t, a.id), z = (0, v.Z)(n, t, j), Q = (0, y.Z)(n.id, j), X = (0, H.Z)(n.id), $ = (0, g.Z)({
     user: n,
     context: j
   }), J = (0, Z.Z)({
@@ -73,7 +73,7 @@ n.default = (0, o.Z)((0, a.Z)(function(e) {
     userId: n.id,
     analyticsLocation: Y,
     context: j
-  }), eu = (0, v.Z)({
+  }), eu = (0, G.Z)({
     user: n,
     guildId: t
   }), el = (0, s.Z)(null, n), ea = (0, O.Z)(n), eo = (0, C.Z)({

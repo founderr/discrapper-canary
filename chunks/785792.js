@@ -5,28 +5,28 @@ n.d(t, {
 });
 var r = n(735250),
   o = n(470079),
-  l = n(120356),
-  s = n.n(l),
-  i = n(481060),
-  u = n(727857);
+  i = n(120356),
+  l = n.n(i),
+  u = n(481060),
+  a = n(727857);
 
 function c(e) {
   let {
     chunks: t,
     columns: n,
-    className: l
+    className: i
   } = e, c = o.useMemo(() => ({
     "--secure-frames-columns": n
   }), [n]);
   return (0, r.jsx)("div", {
     style: c,
-    className: s()(u.code, l),
+    className: l()(a.code, i),
     children: t.map((e, t) => (0, r.jsx)("div", {
-      className: s()(u.chunk, {
-        [u.divider]: t > n - 1
+      className: l()(a.chunk, {
+        [a.divider]: t > n - 1
       }),
-      children: (0, r.jsx)(i.Text, {
-        className: u.codeText,
+      children: (0, r.jsx)(u.Text, {
+        className: a.codeText,
         variant: "code",
         color: "text-normal",
         children: e

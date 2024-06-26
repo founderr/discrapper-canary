@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return x
+    return v
   }
 });
 var i = n(735250);
@@ -16,20 +16,20 @@ var s = n(120356),
   h = n(248042),
   m = n(924540),
   p = n(351402),
-  b = n(170671),
-  f = n(474936),
+  f = n(170671),
+  b = n(474936),
   S = n(751008);
 
-function x(e) {
+function v(e) {
   let t, {
       decoration: n,
       label: s,
-      isSelected: x
+      isSelected: v
     } = e,
-    v = (0, c.N)(),
+    x = (0, c.N)(),
     g = (0, a.Ng)(),
     N = (0, h.Vi)(),
-    j = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == v && null == n,
+    j = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == x && null == n,
     {
       enabled: C
     } = o._.useExperiment({
@@ -37,29 +37,29 @@ function x(e) {
     }, {
       autoTrackExposure: !1
     }),
-    T = C && (null == v ? void 0 : v.trial_id) === f.a7;
+    E = C && (null == x ? void 0 : x.trial_id) === b.a7;
   return t = N ? (0, i.jsx)(u.Z, {}) : null != g ? (0, i.jsx)(m.GN, {
-    isTabSelected: x,
+    isTabSelected: v,
     userDiscount: g,
     includesAmountOff: !1
-  }) : null == v || T ? null != n ? n : j ? (0, i.jsx)(d.k, {
+  }) : null == x || E ? null != n ? n : j ? (0, i.jsx)(d.k, {
     entryPoint: d.U.SettingsMenu
-  }) : (0, i.jsx)(b.Z, {
-    isSelected: x
+  }) : (0, i.jsx)(f.Z, {
+    isSelected: v
   }) : (0, i.jsx)(m.$H, {
-    isTabSelected: x,
-    trialOffer: v
+    isTabSelected: v,
+    trialOffer: x
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
       className: l()(S.premiumLabel, {
-        [S.selected]: (x || j) && !N
+        [S.selected]: (v || j) && !N
       }),
       children: [s, t]
     }), (0, i.jsx)("div", {
       className: l()(S.background, {
-        [S.auPromo]: j && !x,
-        [S.auPromoSelected]: j && x,
-        [S.selectedBackground]: !j && !N && x
+        [S.auPromo]: j && !v,
+        [S.auPromoSelected]: j && v,
+        [S.selectedBackground]: !j && !N && v
       })
     })]
   })

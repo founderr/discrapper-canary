@@ -56,7 +56,7 @@ function f(e) {
     var e, t, n, o;
     g ? T && (null === (o = f.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = f.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [T, g]);
-  let v = s.useCallback(() => {
+  let N = s.useCallback(() => {
     _(!0)
   }, []);
   return null == E || S ? (0, o.jsx)("div", {
@@ -68,7 +68,7 @@ function f(e) {
     className: a()(m.lottieAnimationBackgroundWrapper, r),
     children: (0, o.jsx)(d.LottieAnimation, {
       ref: f,
-      onComplete: v,
+      onComplete: N,
       importData: () => E,
       shouldAnimate: !h && T,
       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
