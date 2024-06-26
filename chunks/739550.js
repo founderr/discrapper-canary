@@ -24,6 +24,7 @@ e.exports = {
   addStatusIconColor: "addStatusIconColor_d0a252",
   editIcon: "editIcon_d0a252",
   singleLineAlign: "singleLineAlign_d0a252",
+  expandable: "expandable_d0a252",
   editGradient: "editGradient_d0a252",
   editGradientEmojiOnly: "editGradientEmojiOnly_d0a252",
   editClickable: "editClickable_d0a252",

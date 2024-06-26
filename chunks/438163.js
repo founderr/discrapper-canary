@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return D
+    return P
   }
 }), n(47120);
 var i = n(735250),
@@ -28,9 +28,11 @@ var i = n(735250),
   R = n(981631),
   g = n(689938),
   C = n(739550);
-let v = "text-sm/medium";
+let v = "text-sm/medium",
+  L = 36,
+  D = 144;
 
-function L(e) {
+function M(e) {
   let {
     statusActivity: t,
     profileType: s,
@@ -41,81 +43,85 @@ function L(e) {
   } = e, {
     analyticsLocations: R
   } = (0, h.ZP)(T.Z.PROFILE_CUSTOM_STATUS), {
-    trackUserProfileAction: L
-  } = (0, m.KZ)(), D = (0, l.e7)([I.Z], () => I.Z.useReducedMotion), [M, P] = r.useState(!0), [y] = r.useState(() => new u.V7), U = r.useRef(null), b = r.useRef(null), G = r.useRef(null), w = r.useRef(null), x = r.useRef(null), B = (0, E.Z)(x), {
-    emoji: k,
-    state: V
-  } = null != t ? t : {}, Z = null != V && "" !== V ? V : null, H = null != Z && Z.length > 0, F = null != k, Y = F && !H, j = F || H, W = f && !j, K = f && j, [z, q] = r.useState(Y);
+    trackUserProfileAction: M
+  } = (0, m.KZ)(), P = (0, l.e7)([I.Z], () => I.Z.useReducedMotion), [y, U] = r.useState(!0), [b] = r.useState(() => new u.V7), G = r.useRef(null), w = r.useRef(null), x = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = (0, E.Z)(k), {
+    emoji: Z,
+    state: H
+  } = null != t ? t : {}, F = null != H && "" !== H ? H : null, Y = null != F && F.length > 0, j = null != Z, W = j && !Y, K = j || Y, z = f && !K, q = f && K, [X, Q] = r.useState(W ? 1 : 0), J = 1 === X, $ = X > 2;
   r.useLayoutEffect(() => {
-    if (null == U.current || Y) return;
-    let e = Math.floor(U.current.getBoundingClientRect().height);
-    if (q(Y || e <= 18), S) {
-      var t, n, i, r;
-      b.current = null !== (i = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, w.current = null !== (r = null === (n = G.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
+    if (null != G.current && !W) {
+      if (Q(Math.ceil(Math.floor(G.current.getBoundingClientRect().height) / 18)), S) {
+        var e, t, n, i;
+        w.current = null !== (n = null === (e = G.current) || void 0 === e ? void 0 : e.getBoundingClientRect().height) && void 0 !== n ? n : D, B.current = null !== (i = null === (t = x.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : L
+      }
     }
-  }, [S, Y]);
+  }, [S, W]);
   let [{
-    maxHeight: X,
-    editIconOpacity: Q
-  }, J] = (0, a.useSpring)(() => ({
-    maxHeight: "".concat(36, "px"),
+    maxHeight: ee,
+    editIconOpacity: et
+  }, en] = (0, a.useSpring)(() => ({
+    maxHeight: "".concat(L, "px"),
     editIconOpacity: 0,
     config: {
       clamp: !0,
-      immediate: D,
+      immediate: P,
       duration: 150
     }
   }));
-  if (r.useEffect(() => () => y.stop(), [y]), !j && !W) return null;
-  let $ = e => {
+  if (r.useEffect(() => () => b.stop(), [b]), !K && !z) return null;
+  let ei = e => {
       var t, n;
-      if (e) {
-        let e = Math.min(null !== (t = b.current) && void 0 !== t ? t : 144, 144);
-        J({
-          maxHeight: "".concat(e, "px"),
-          editIconOpacity: 1,
-          delay: 300
-        })
-      } else {
-        let e = Math.min(null !== (n = w.current) && void 0 !== n ? n : 36, 36);
-        J({
-          maxHeight: "".concat(e, "px"),
-          editIconOpacity: 0,
-          delay: 0
+      if (!!$) {
+        if (e) {
+          let e = Math.min(null !== (t = w.current) && void 0 !== t ? t : D, D);
+          en({
+            maxHeight: "".concat(e, "px"),
+            editIconOpacity: 1,
+            delay: 300
+          })
+        } else {
+          let e = Math.min(null !== (n = B.current) && void 0 !== n ? n : L, L);
+          en({
+            maxHeight: "".concat(e, "px"),
+            editIconOpacity: 0,
+            delay: 0
+          })
+        }
+        b.start(e ? 300 : 150, () => {
+          U(!e)
         })
       }
-      y.start(e ? 300 : 150, () => {
-        P(!e)
-      })
     },
-    ee = () => K ? (0, i.jsxs)(a.animated.div, {
-      style: {
-        opacity: Q
-      },
-      className: C.editIcon,
+    er = () => q ? (0, i.jsxs)(a.animated.div, {
+      style: $ ? {
+        opacity: et
+      } : void 0,
+      className: o()(C.editIcon, {
+        [C.expandable]: $
+      }),
       children: [(0, i.jsx)("div", {
-        className: o()(C.editGradient, Y && C.editGradientEmojiOnly)
+        className: o()(C.editGradient, W && C.editGradientEmojiOnly)
       }), (0, i.jsx)(c.Clickable, {
-        className: o()(C.editClickable, Y && C.editClickableEmojiOnly),
-        onClick: er,
+        className: o()(C.editClickable, W && C.editClickableEmojiOnly),
+        onClick: el,
         children: (0, i.jsx)(_.v, {
           size: "xs"
         })
       })]
     }) : null,
-    et = () => F ? (0, i.jsx)(d.I, {
-      className: H ? C.statusEmojiInline : C.statusEmojiOnly,
-      emoji: k,
+    es = () => j ? (0, i.jsx)(d.I, {
+      className: Y ? C.statusEmojiInline : C.statusEmojiOnly,
+      emoji: Z,
       animate: N,
       hideTooltip: !1,
       tooltipDelay: p.vB
     }) : null,
-    en = () => H ? (0, i.jsx)(c.Text, {
+    eo = () => Y ? (0, i.jsx)(c.Text, {
       variant: v,
       className: C.statusText,
-      children: Z
+      children: F
     }) : null,
-    ei = () => (0, i.jsxs)("div", {
+    ea = () => (0, i.jsxs)("div", {
       className: C.content,
       children: [(0, i.jsx)(c.CirclePlusIcon, {
         className: C.addStatusIcon,
@@ -126,8 +132,8 @@ function L(e) {
         children: g.Z.Messages.USER_SETTINGS_ADD_STATUS
       })]
     }),
-    er = () => {
-      L({
+    el = () => {
+      M({
         action: "PRESS_SET_CUSTOM_STATUS"
       }), null == A || A(), (0, c.openModalLazy)(async () => {
         let {
@@ -139,77 +145,77 @@ function L(e) {
         })
       })
     },
-    es = {
+    eu = {
       [C.biteSize]: s === p.y0.BITE_SIZE,
       [C.fullSize]: s === p.y0.FULL_SIZE,
       [C.panel]: s === p.y0.PANEL
     },
-    eo = o()(C.statusBubbleOuter, es, {
-      [C.statusBubbleShape]: !H && F || !z,
-      [C.statusBubbleSingleLineWithTextShape]: z && H || W,
-      [C.statusBubbleOuterAddStatusCursor]: W
+    e_ = o()(C.statusBubbleOuter, eu, {
+      [C.statusBubbleShape]: !Y && j || !J,
+      [C.statusBubbleSingleLineWithTextShape]: J && Y || z,
+      [C.statusBubbleOuterAddStatusCursor]: z
     }),
-    ea = o()(C.statusBubble, {
-      [C.statusBubbleShape]: !H && F || !z,
-      [C.statusBubbleSingleLineWithTextShape]: z && H || W,
-      [C.statusBubbleEmojiOnlyPadding]: Y,
-      [C.statusBubbleWithTextPadding]: H || W,
-      [C.statusBubbleWithTextMinWidth]: H,
-      [C.statusBubbleCopyStatusCursor]: j
+    ec = o()(C.statusBubble, {
+      [C.statusBubbleShape]: !Y && j || !J,
+      [C.statusBubbleSingleLineWithTextShape]: J && Y || z,
+      [C.statusBubbleEmojiOnlyPadding]: W,
+      [C.statusBubbleWithTextPadding]: Y || z,
+      [C.statusBubbleWithTextMinWidth]: Y,
+      [C.statusBubbleCopyStatusCursor]: K
     });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
-      className: o()(C.invisibleContainer, es),
+      className: o()(C.invisibleContainer, eu),
       children: (0, i.jsx)("div", {
-        className: eo,
+        className: e_,
         children: (0, i.jsxs)("span", {
-          className: ea,
-          children: [W && ei(), j && (0, i.jsxs)("div", {
+          className: ec,
+          children: [z && ea(), K && (0, i.jsxs)("div", {
             className: o()(C.content, C.clamp, C.placeholderWidth, {
               [C.panel]: s === p.y0.PANEL
             }),
-            ref: G,
-            children: [et(), en()]
-          }), j && (0, i.jsxs)("div", {
+            ref: x,
+            children: [es(), eo()]
+          }), K && (0, i.jsxs)("div", {
             className: o()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, {
               [C.panel]: s === p.y0.PANEL
             }),
-            ref: U,
-            children: [et(), en()]
+            ref: G,
+            children: [es(), eo()]
           })]
         })
       })
     }), (0, i.jsxs)("div", {
-      className: o()(C.visibleContainer, es),
-      ref: x,
+      className: o()(C.visibleContainer, eu),
+      ref: k,
       children: [(0, i.jsx)(O.Z, {
-        isHovering: B,
+        isHovering: V,
         location: "UserProfileCustomStatusBubble",
         className: C.reactReplyBar
       }), (0, i.jsx)(c.Clickable, {
         tabIndex: 0,
-        className: eo,
-        onFocus: () => $(!0),
+        className: e_,
+        onFocus: () => ei(!0),
         onBlur: e => {
-          !e.currentTarget.contains(e.relatedTarget) && $(!1)
+          !e.currentTarget.contains(e.relatedTarget) && ei(!1)
         },
-        onMouseEnter: () => $(!0),
-        onMouseLeave: () => $(!1),
-        onClick: W ? er : void 0,
+        onMouseEnter: () => ei(!0),
+        onMouseLeave: () => ei(!1),
+        onClick: z ? el : void 0,
         children: (0, i.jsxs)("span", {
-          className: ea,
-          children: [W && ei(), j && (() => {
+          className: ec,
+          children: [z && ea(), K && (() => {
             let e = o()(C.content, {
-              [C.clamp]: M,
-              [C.unclamp]: !M,
-              [C.singleLineAlign]: z
+              [C.clamp]: y,
+              [C.unclamp]: !y,
+              [C.singleLineAlign]: J
             });
             return (0, i.jsxs)(a.animated.div, {
               style: {
-                maxHeight: X
+                maxHeight: ee
               },
               className: e,
-              children: [ee(), et(), en()]
+              children: [er(), es(), eo()]
             })
           })()]
         })
@@ -218,7 +224,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function P(e) {
   let {
     user: t,
     ...n
@@ -232,7 +238,7 @@ function D(e) {
   } = (0, A.K)({
     location: "UserProfileCustomStatusBubble"
   }), u = r && a;
-  return (0, i.jsx)(L, {
+  return (0, i.jsx)(M, {
     canModifyStatus: u,
     statusActivity: u ? s : o,
     ...n
