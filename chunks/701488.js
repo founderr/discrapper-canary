@@ -1,7 +1,10 @@
 "use strict";
 n.d(t, {
   AC: function() {
-    return er
+    return es
+  },
+  Cw: function() {
+    return ee
   },
   ES: function() {
     return _
@@ -10,7 +13,7 @@ n.d(t, {
     return Z
   },
   Es: function() {
-    return ee
+    return et
   },
   Ev: function() {
     return v
@@ -46,16 +49,16 @@ n.d(t, {
     return $
   },
   OF: function() {
-    return e_
+    return ec
   },
   P9: function() {
-    return ei
+    return er
   },
   PD: function() {
     return B
   },
   Pc: function() {
-    return es
+    return eo
   },
   S4: function() {
     return s
@@ -64,7 +67,7 @@ n.d(t, {
     return W
   },
   Si: function() {
-    return et
+    return en
   },
   V5: function() {
     return U
@@ -94,7 +97,7 @@ n.d(t, {
     return P
   },
   eB: function() {
-    return en
+    return ei
   },
   f9: function() {
     return q
@@ -127,13 +130,13 @@ n.d(t, {
     return L
   },
   um: function() {
-    return eo
+    return ea
   },
   wP: function() {
-    return eu
+    return e_
   },
   wT: function() {
-    return el
+    return eu
   },
   xK: function() {
     return l
@@ -170,36 +173,37 @@ let g = 160,
   Q = "1234546995360694434",
   J = "1214629548377768066",
   $ = "235088799074484224",
-  ee = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
-  et = {
+  ee = "1187013846746005515",
+  et = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
+  en = {
     SMALL: 64,
     LARGE: 160
   },
-  en = ["in_development", "activities_team", "employee_release"],
-  ei = [H, q, V, z];
+  ei = ["in_development", "activities_team", "employee_release"],
+  er = [H, q, V, z];
 (E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (h = o || (o = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", h.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", h.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", h.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (f = a || (a = {}))[f.NO_UPDATE = 0] = "NO_UPDATE", f[f.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", f[f.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", f[f.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", f[f.USER_JOINED = 4] = "USER_JOINED", f[f.USER_LEFT = 5] = "USER_LEFT", f[f.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (S = l || (l = {}))[S.UNLOCKED = 1] = "UNLOCKED", S[S.PORTRAIT = 2] = "PORTRAIT", S[S.LANDSCAPE = 3] = "LANDSCAPE", (N = u || (u = {}))[N.DIRECTORY = 0] = "DIRECTORY", N[N.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", N[N.DETAIL_PAGE = 2] = "DETAIL_PAGE";
-let er = "activity-shelf",
-  es = new Set(["755600276941176913", D, M, k]),
-  eo = new Set([D, M, k]);
+let es = "activity-shelf",
+  eo = new Set(["755600276941176913", D, M, k]),
+  ea = new Set([D, M, k]);
 (A = _ || (_ = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", A.GDM_ACTIVITIES = "GDM_ACTIVITIES", A.PUTT_PARTY = "PUTT_PARTY", A.JAMSPACE_OLD = "JAMSPACE", A.JAMSPACE = "JAMSPACE2", A.POKER = "POKER", A.FREE = "FREE", (m = c || (c = {}))[m.PORTRAIT = 0] = "PORTRAIT", m[m.LANDSCAPE = 1] = "LANDSCAPE", (O = d || (d = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
-let ea = {
+let el = {
     label_type: p.ww.NONE,
     release_phase: "",
     label_until: null
   },
-  el = {
+  eu = {
     application_id: "",
     requires_age_gate: !1,
     default_orientation_lock_state: 1,
     tablet_default_orientation_lock_state: 1,
     supported_platforms: [p.C3.WEB],
     client_platform_config: {
-      [p.C3.WEB]: ea,
-      [p.C3.IOS]: ea,
-      [p.C3.ANDROID]: ea
+      [p.C3.WEB]: el,
+      [p.C3.IOS]: el,
+      [p.C3.ANDROID]: el
     },
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  eu = [R.d4z.GUILD_TEXT, R.d4z.DM, R.d4z.GROUP_DM],
-  e_ = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
+  e_ = [R.d4z.GUILD_TEXT, R.d4z.DM, R.d4z.GROUP_DM],
+  ec = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
