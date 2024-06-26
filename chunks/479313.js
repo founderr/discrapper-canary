@@ -208,6 +208,13 @@ let v = 12633 == n.j ? {
   setSummaryFeedback: p,
   updateVisibleMessages: O,
   setSelectedSummary: m,
+  setGravitySelectedSummary: function(e, t) {
+    l.Z.dispatch({
+      type: "SET_GRAVITY_SELECTED_SUMMARY",
+      channelId: e,
+      summaryId: null != t ? t : null
+    })
+  },
   setHighlightedSummary: N,
   fetchSummaries: S,
   fetchSummariesBulk: g,

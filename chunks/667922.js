@@ -30,11 +30,11 @@ function _(e, n) {
     channel: n,
     intention: m.Hz.REACTION
   })).slice(0, 12).map((a, r) => {
-    var o, c, d;
+    var o, c;
     return (0, i.jsx)(l.MenuItem, {
       color: "default",
-      id: null !== (d = null !== (c = null !== (o = a.id) && void 0 !== o ? o : a.optionallyDiverseSequence) && void 0 !== c ? c : a.name) && void 0 !== d ? d : ":".concat(a.name, ":"),
-      label: null == a.id ? a.name : ":".concat(a.name, ":"),
+      id: null !== (c = null !== (o = a.id) && void 0 !== o ? o : a.optionallyDiverseSequence) && void 0 !== c ? c : a.name,
+      label: ":".concat(a.name, ":"),
       imageUrl: e => {
         var n;
         let {
