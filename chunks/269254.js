@@ -1,33 +1,46 @@
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return E
   }
 });
-var i = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(481060),
-  u = n(239091),
-  l = n(519110),
-  r = n(689938);
+var i = n(828214),
+  l = n(481060),
+  s = n(239091),
+  u = n(299206),
+  o = n(519110),
+  r = n(695346),
+  c = n(572004),
+  I = n(691251),
+  d = n(689938);
 
-function o(e) {
+function E(e) {
   let {
     target: t,
     onSelect: n
-  } = e, o = (0, l.Z)({
-    type: t.getAttribute("data-type"),
-    id: t.getAttribute("data-id"),
-    name: t.getAttribute("data-name"),
+  } = e, E = t.getAttribute("data-type"), M = t.getAttribute("data-id"), S = t.getAttribute("data-name"), g = t.getAttribute("data-surrogates"), b = "true" === t.getAttribute("data-animated"), f = r.Sb.useSetting(), O = (0, o.Z)({
+    type: E,
+    id: M,
+    name: S,
     isInExpressionPicker: !0
+  }), Z = null != g && (0, a.jsx)(i.sN, {
+    id: "copy",
+    label: d.Z.Messages.COPY_EMOJI,
+    action: () => (0, c.JG)(g)
+  }), C = (0, u.Z)({
+    id: M,
+    shiftId: E === I.S.EMOJI ? "<".concat(b ? "a" : "", ":").concat(null == S ? void 0 : S.split("~")[0], ":").concat(M, ">") : void 0,
+    label: E === I.S.STICKER ? d.Z.Messages.COPY_ID_STICKER : d.Z.Messages.COPY_ID_EMOJI
   });
-  return (0, i.jsx)(a.Menu, {
+  return (0, a.jsx)(l.Menu, {
     navId: "expression-picker",
-    onClose: u.Zy,
-    "aria-label": r.Z.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
+    onClose: s.Zy,
+    "aria-label": d.Z.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
     onSelect: n,
     className: "context-menu",
-    children: (0, i.jsx)(a.MenuGroup, {
-      children: o
+    children: (0, a.jsxs)(l.MenuGroup, {
+      children: [O, c.wS && f ? null != Z ? Z : C : null]
     })
   })
 }

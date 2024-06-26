@@ -56,6 +56,8 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         "data-type": I.S.EMOJI,
         "data-id": r.id,
         "data-name": r.name,
+        "data-surrogates": "surrogates" in r ? r.surrogates : null,
+        "data-animated": r.animated ? "true" : null,
         ref: t,
         children: (0, i.jsx)(N.Z, {
           "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = A.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
