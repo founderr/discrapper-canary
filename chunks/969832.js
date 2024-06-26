@@ -25,16 +25,16 @@ function h(e) {
     copyMetaData: h,
     copyTooltip: f,
     copyTooltipDelay: S = 500,
-    children: A,
-    disableCopy: N,
+    children: N,
+    disableCopy: A,
     showCopyIcon: m,
     "aria-label": O,
     onCopy: p
   } = e, [R, g] = o.useState(0), [C, v] = o.useState(!1), [L, D] = o.useState(!1);
   if (o.useEffect(() => (i = new u.V7, r = new u.V7, function() {
       i.stop(), r.stop()
-    }), []), !d.wS || N) return (0, s.jsx)(s.Fragment, {
-    children: A
+    }), []), !d.wS || A) return (0, s.jsx)(s.Fragment, {
+    children: N
   });
   let M = [I.Z.Messages.COPY_SUCCESS_1, I.Z.Messages.COPY_SUCCESS_2, I.Z.Messages.COPY_SUCCESS_3, I.Z.Messages.COPY_SUCCESS_4, I.Z.Messages.COPY_SUCCESS_5, I.Z.Messages.COPY_SUCCESS_6, I.Z.Messages.COPY_SUCCESS_7, I.Z.Messages.COPY_SUCCESS_8, I.Z.Messages.COPY_SUCCESS_9, I.Z.Messages.COPY_SUCCESS_10, I.Z.Messages.COPY_SUCCESS_11],
     P = Math.min(Math.max(R - 1, 0), M.length - 1),
@@ -82,7 +82,7 @@ function h(e) {
           className: l()(n, T.copiableWrapper),
           children: [(0, s.jsx)("div", {
             className: T.childWrapper,
-            children: A
+            children: N
           }), m ? (0, s.jsx)("div", {
             className: T.__invalid_copyIconWrapper,
             children: (0, s.jsx)(_.CopyIcon, {

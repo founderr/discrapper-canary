@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   ED: function() {
-    return N
+    return A
   },
   Ox: function() {
     return m
@@ -10,7 +10,7 @@ n.d(t, {
     return T
   },
   o5: function() {
-    return A
+    return N
   },
   pV: function() {
     return O
@@ -172,12 +172,12 @@ function S(e, t) {
   }, [n, t, u]), [r, a]
 }
 
-function A(e) {
+function N(e) {
   let t = (0, i.useCallback)(() => h(e), [JSON.stringify(e)]);
   return S(e, t)
 }
 
-function N(e) {
+function A(e) {
   if ("subscriptionId" in e && null == e.subscriptionId) {
     let {
       subscriptionId: t,

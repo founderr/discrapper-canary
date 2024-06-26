@@ -29,8 +29,8 @@ function I(e) {
   } = (0, c.KZ)(), {
     newestAnalyticsLocation: S
   } = (0, l.ZP)(), {
-    originalFriendingEnabled: A,
-    improvedFriendingEnabled: N
+    originalFriendingEnabled: N,
+    improvedFriendingEnabled: A
   } = (0, _.V)({
     location: "UserProfileIncomingFriendRequestBanner"
   });
@@ -46,9 +46,9 @@ function I(e) {
       children: [(0, i.jsx)(o.Button, {
         look: o.Button.Looks.FILLED,
         color: s()({
-          [o.Button.Colors.GREEN]: A,
-          [o.Button.Colors.BRAND]: N,
-          [E.color]: N
+          [o.Button.Colors.GREEN]: N,
+          [o.Button.Colors.BRAND]: A,
+          [E.color]: A
         }),
         size: o.Button.Sizes.SMALL,
         className: E.button,

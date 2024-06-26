@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(509275),
   f = n(204197),
   S = n(594174),
-  A = n(467679),
-  N = n(681426),
+  N = n(467679),
+  A = n(681426),
   m = n(709586),
   O = n(360048),
   p = n(624138),
@@ -81,12 +81,12 @@ t.Z = function(e) {
   }), ef = r.useMemo(() => ({
     source: C.jXE.MEMBER_LIST,
     tagUserId: eo
-  }), [eo]), [eS, eA] = r.useState(!1);
+  }), [eo]), [eS, eN] = r.useState(!1);
   r.useEffect(() => {
-    n && eA(!1)
+    n && eN(!1)
   }, [n]);
-  let eN = (0, E.Fr)(x),
-    em = null != eN && !el && n && !eS && (0, I.dl)(eN),
+  let eA = (0, E.Fr)(x),
+    em = null != eA && !el && n && !eS && (0, I.dl)(eA),
     eO = () => {
       ec(!0)
     },
@@ -116,7 +116,7 @@ t.Z = function(e) {
         hideEmoji: !t,
         hideTooltip: !0,
         user: G,
-        hasQuest: null != eN && (0, I.dl)(eN)
+        hasQuest: null != eA && (0, I.dl)(eA)
       })
     },
     eC = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
@@ -143,7 +143,7 @@ t.Z = function(e) {
     }),
     eL = () => {
       let e = (null == G ? void 0 : G.isClyde()) ? v.Hb.AI : v.Hb.BOT;
-      return null != G && G.bot ? (0, i.jsx)(A.Z, {
+      return null != G && G.bot ? (0, i.jsx)(N.Z, {
         className: M.botTag,
         type: e,
         verified: G.isVerifiedBot()
@@ -191,16 +191,16 @@ t.Z = function(e) {
     }),
     ey = k === C.Skl.OFFLINE,
     eU = null != j;
-  return null == G ? (0, i.jsx)(N.Z, {
+  return null == G ? (0, i.jsx)(A.Z, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: M.placeholder
   }) : (0, i.jsx)(l.Popout, {
     renderPopout: e => (0, i.jsx)(T.Z, {
-      quest: eN,
+      quest: eA,
       memberListItemRef: eu,
       applicationStream: B,
       ...e,
-      closePopout: () => eA(!0)
+      closePopout: () => eN(!0)
     }),
     position: "bottom",
     shouldShow: em,

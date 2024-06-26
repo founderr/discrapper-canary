@@ -49,8 +49,8 @@ t.Z = o.memo(function(e) {
     children: h,
     onClick: f,
     isActive: S,
-    onMouseEnter: A,
-    onMouseLeave: N,
+    onMouseEnter: N,
+    onMouseLeave: A,
     onFocus: m,
     onBlur: O,
     pulse: p,
@@ -95,8 +95,8 @@ t.Z = o.memo(function(e) {
       [I.pulseButton]: p
     }),
     onClick: f,
-    onMouseEnter: A,
-    onMouseLeave: N,
+    onMouseEnter: N,
+    onMouseLeave: A,
     onFocus: m,
     onBlur: O,
     focusProps: {

@@ -21,8 +21,8 @@ var i, r, s = n(735250),
   h = n(906732),
   f = n(540059),
   S = n(605236),
-  A = n(837741),
-  N = n(98278),
+  N = n(837741),
+  A = n(98278),
   m = n(639119),
   O = n(165583),
   p = n(587446),
@@ -106,7 +106,7 @@ let Z = Object.freeze({
       type: "EDITOR",
       isPreview: !0
     }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-      onPremiumClick: N.z
+      onPremiumClick: A.z
     })).with({
       type: "EDITOR",
       isCoachmark: !0
@@ -116,7 +116,7 @@ let Z = Object.freeze({
     }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
       isPreview: !0
     }, () => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
-      onPremiumClick: N.z
+      onPremiumClick: A.z
     })).otherwise(() => k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
     return (0, s.jsx)(d.Heading, {
       variant: "text-sm/normal",
@@ -201,7 +201,7 @@ W.Basic = e => {
     return [M.Z.isPreview, M.Z.isCoachmark, null === (e = M.Z.gradientPreset) || void 0 === e ? void 0 : e.id]
   }), [L, U] = o.useState(!1), [x, B] = o.useState(-1), Z = (0, _.e7)([I.Z], () => I.Z.useReducedMotion), {
     enabled: W
-  } = (0, A.J)({
+  } = (0, N.J)({
     location: "GradientSelectors"
   }), K = (null === (i = (0, m.N)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === G.Si.TIER_2, z = o.useMemo(() => e => {
     let t = y.sJ.get(e.id),
@@ -243,7 +243,7 @@ W.Basic = e => {
       type: G.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       subscriptionTier: G.Si.TIER_2,
       children: k.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-        onPremiumClick: N.z
+        onPremiumClick: A.z
       })
     }) : (0, s.jsxs)("div", {
       className: V.header,

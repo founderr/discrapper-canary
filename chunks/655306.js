@@ -34,8 +34,8 @@ let f = {
     any: 100
   },
   S = 30 * c.Z.Millis.SECOND,
-  A = 120 * c.Z.Millis.SECOND,
-  N = -1 !== (0, _.hY)();
+  N = 120 * c.Z.Millis.SECOND,
+  A = -1 !== (0, _.hY)();
 (r = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", r.Update = "update";
 class m extends s.Z {
   getWantsLevel() {
@@ -137,7 +137,7 @@ class m extends s.Z {
     return e
   }
   getOffscreenTimeoutMs() {
-    return this.isStageChannel ? A : S
+    return this.isStageChannel ? N : S
   }
   getSimulcastOverrideQuality(e) {
     return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : T.Z.NO_OVERRIDE
@@ -200,7 +200,7 @@ class m extends s.Z {
         var i;
         (null === (i = r.connection) || void 0 === i ? void 0 : i.getLocalMute(e)) && (n[t] = 0)
       }
-      return N ? r.latestWants : (null != r.connection && !(0, l.Z)(r.latestWants, n) && (r.latestWants = n, r.emit("update", n)), n)
+      return A ? r.latestWants : (null != r.connection && !(0, l.Z)(r.latestWants, n) && (r.latestWants = n, r.emit("update", n)), n)
     }, this.delayedCall = new u.sW(100, this.update), this.offscreenTimeout = new u.V7, E.Z.subscribe(() => {
       this.update()
     })

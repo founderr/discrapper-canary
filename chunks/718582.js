@@ -57,8 +57,8 @@ var i, r, s = n(470079),
   h = n(557135),
   f = n(471445),
   S = n(66999),
-  A = n(15274),
-  N = n(924301),
+  N = n(15274),
+  A = n(924301),
   m = n(230900),
   O = n(703656),
   p = n(881824),
@@ -161,7 +161,7 @@ function er(e) {
       });
       return [...e, ...Object.values(v.Z.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
     }, [t]),
-    E = (0, l.e7)([N.ZP, M.Z], () => N.ZP.getGuildScheduledEventsForGuild(t).filter(e => (0, N.xt)(e)).map(e => {
+    E = (0, l.e7)([A.ZP, M.Z], () => A.ZP.getGuildScheduledEventsForGuild(t).filter(e => (0, A.xt)(e)).map(e => {
       var t;
       return {
         category: j.L.EVENT,
@@ -190,7 +190,7 @@ function er(e) {
         }) && t !== e.afkChannelId && _.includes(t)
       })
     }, [f, I, _, h, e.afkChannelId]),
-    A = (0, l.e7)([c.ZP, B.Z, D.Z, G.Z, M.Z], () => S.map(e => {
+    N = (0, l.e7)([c.ZP, B.Z, D.Z, G.Z, M.Z], () => S.map(e => {
       var t;
       let n = D.Z.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
         i = f[e].filter(Z.lm),
@@ -237,7 +237,7 @@ function er(e) {
     m = (0, l.e7)([P.Z], () => P.Z.hasConsented(W.pjP.PERSONALIZATION)),
     O = (0, l.e7)([L.Z], () => L.Z.getUserAffinities()),
     p = m && O.length > 0,
-    R = [...A, ...E];
+    R = [...N, ...E];
   return r !== R.length && R.length > 0 && (i((function(e) {
     let t = [...e],
       n = t[0].category,
@@ -446,7 +446,7 @@ function ec(e, t, n) {
       };
     case j.L.EVENT:
       return () => {
-        e_(e, t, n, "card"), (0, A.bO)({
+        e_(e, t, n, "card"), (0, N.bO)({
           eventId: e.event.id
         })
       };
@@ -496,7 +496,7 @@ function eI(e, t) {
           entity_type: r
         } = t, s = M.Z.getChannel(n);
         if (null == n || null == s || !b.Z.can(W.Plq.CONNECT, s)) {
-          (0, A.bO)({
+          (0, N.bO)({
             eventId: t.id
           });
           return

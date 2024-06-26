@@ -54,18 +54,18 @@ t.Z = {
       durationMin: h,
       durationMax: f,
       ...S
-    } = n, A = t._value, N = E(n.duration, h, f), m = E(n.toValue, s, o), O = i[I](t, {
+    } = n, N = t._value, A = E(n.duration, h, f), m = E(n.toValue, s, o), O = i[I](t, {
       ...S,
       toValue: m,
       tension: a,
       friction: l,
-      duration: N
+      duration: A
     }), p = O;
     if (_ || c) {
       let e = E(n.duration, h, f);
       r = i[I](t, {
         ...S,
-        toValue: _ ? A : -m,
+        toValue: _ ? N : -m,
         tension: a,
         friction: l,
         duration: e

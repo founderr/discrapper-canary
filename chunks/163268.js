@@ -69,8 +69,8 @@ var i, r, s, o, a, l, u, _, c = n(286379),
   h = n(182274),
   f = n(695346),
   S = n(592125),
-  A = n(699516),
-  N = n(594174),
+  N = n(699516),
+  A = n(594174),
   m = n(626135),
   O = n(630388),
   p = n(948561),
@@ -106,7 +106,7 @@ let L = {
       isFriend: i = !1
     } = e;
     if (null != t && t !== d.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-    let r = N.default.getCurrentUser();
+    let r = A.default.getCurrentUser();
     return (null == r ? void 0 : r.nsfwAllowed) === !1 ? b({
       isDm: n,
       isFriend: i
@@ -158,7 +158,7 @@ function w(e) {
 function x(e) {
   var t;
   if (!(0, R.Kh)()) return !1;
-  let n = N.default.getCurrentUser();
+  let n = A.default.getCurrentUser();
   if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
   let {
     explicitContentGuilds: i,
@@ -166,7 +166,7 @@ function x(e) {
     explicitContentNonFriendDm: s
   } = G(), o = S.Z.getChannel(e.channel_id);
   if (null == o) return !1;
-  if (o.isDM() || o.isGroupDM()) return null != e.author && A.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
+  if (o.isDM() || o.isGroupDM()) return null != e.author && N.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
 let B = e => {

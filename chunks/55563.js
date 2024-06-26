@@ -16,11 +16,11 @@ function S(e) {
   T.set(e.id, c.Z.createFromServer(e)), E.delete(e.id), I.delete(e.id), !h.has(e.application_id) && h.set(e.application_id, new Set), h.get(e.application_id).add(e.id)
 }
 
-function A(e) {
+function N(e) {
   S(e)
 }
 
-function N(e) {
+function A(e) {
   S(e.sku), null != e.child_skus && e.child_skus.forEach(e => S(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => S(e))
 }
 
@@ -70,13 +70,13 @@ a = "SKUStore", (o = "displayName") in(s = R) ? Object.defineProperty(s, o, {
     let {
       storeListings: t
     } = e;
-    for (let e of t) N(e)
+    for (let e of t) A(e)
   },
   STORE_LISTING_FETCH_SUCCESS: function(e) {
     let {
       storeListing: t
     } = e;
-    N(t)
+    A(t)
   },
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {

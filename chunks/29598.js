@@ -29,11 +29,11 @@ let _ = (e, t, n) => {
     } = e, {
       joinedEmojiSourceGuildRecord: a,
       emoji: c
-    } = (0, r.cj)([o.Z, s.Z], () => _(o.Z, s.Z, t)), d = null != a, E = null != a && a.hasFeature(u.oNc.DISCOVERABLE), I = (!d || E) && null != t, [T, h] = i.useState(I), f = null != a ? l.Z.createFromGuildRecord(a) : null, [S, A] = i.useState(f);
+    } = (0, r.cj)([o.Z, s.Z], () => _(o.Z, s.Z, t)), d = null != a, E = null != a && a.hasFeature(u.oNc.DISCOVERABLE), I = (!d || E) && null != t, [T, h] = i.useState(I), f = null != a ? l.Z.createFromGuildRecord(a) : null, [S, N] = i.useState(f);
     return i.useEffect(() => {
       null == n || n();
       let e = async () => {
-        A(null != t ? await l.Z.getGuildFromEmojiId(t) : null), h(!1), null == n || n()
+        N(null != t ? await l.Z.getGuildFromEmojiId(t) : null), h(!1), null == n || n()
       };
       if (I) {
         e();

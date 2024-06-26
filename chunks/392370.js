@@ -23,9 +23,9 @@ var i = n(470079),
   h = n(822245),
   f = n(631827),
   S = n(783097),
-  A = n(689079);
+  N = n(689079);
 
-function N(e, t) {
+function A(e, t) {
   let n = h.Z.getScoreWithoutLoadingLatest(e.id);
   return h.Z.getScoreWithoutLoadingLatest(t.id) - n
 }
@@ -65,7 +65,7 @@ function p(e) {
       let u = null !== (n = null === (e = a.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {},
         _ = null !== (i = null === (t = l.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {},
         d = [...Object.keys(u), ...Object.keys(_).filter(e => !(e in u))];
-      s && d.push(A.bi.BUILT_IN);
+      s && d.push(N.bi.BUILT_IN);
       let E = [],
         I = {};
       for (let e of d) {
@@ -298,7 +298,7 @@ function p(e) {
           return null !== (i = null == r ? void 0 : r.includes(e.toLocaleLowerCase())) && void 0 !== i && i
         }
       }(e)],
-      sortComparers: [N, m]
+      sortComparers: [A, m]
     })
   }, [I, T, o, t, n, g, C]), M = L.length > 0, P = D.length > 0;
   return {

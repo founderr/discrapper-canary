@@ -21,7 +21,7 @@ function c(e) {
     pendingThemeColors: I,
     pendingAvatar: T,
     isPreview: h
-  } = e, f = (0, s.ZP)(), S = (0, r.e7)([o.Z], () => o.Z.syncProfileThemeWithUserTheme), A = null != T ? T : null == d ? void 0 : d.getAvatarURL(null == E ? void 0 : E.guildId, 80), N = (0, l.Sl)(_.Ilk.PRIMARY_530).hex, [m, O] = (0, a.Cf)(A, N, !1);
+  } = e, f = (0, s.ZP)(), S = (0, r.e7)([o.Z], () => o.Z.syncProfileThemeWithUserTheme), N = null != T ? T : null == d ? void 0 : d.getAvatarURL(null == E ? void 0 : E.guildId, 80), A = (0, l.Sl)(_.Ilk.PRIMARY_530).hex, [m, O] = (0, a.Cf)(N, A, !1);
   if (!(null == E ? void 0 : E.canEditThemes) && !h) return {
     theme: f,
     primaryColor: null,

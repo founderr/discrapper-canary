@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(530),
   f = n(790711),
   S = n(580512),
-  A = n(67152),
-  N = n(579285),
+  N = n(67152),
+  A = n(579285),
   m = n(287612),
   O = n(228168),
   p = n(981631),
@@ -84,7 +84,7 @@ function g(e) {
       userId: t.id,
       inline: !1,
       profileViewedAnalytics: G
-    }), (0, i.jsx)(A.Z, {
+    }), (0, i.jsx)(N.Z, {
       user: t,
       bio: null == g ? void 0 : g.bio,
       hidePersonalInformation: U,
@@ -94,7 +94,7 @@ function g(e) {
       guild: C,
       channelId: D,
       onClose: M
-    }), null != C && (0, i.jsx)(N.Z, {
+    }), null != C && (0, i.jsx)(A.Z, {
       user: t,
       currentUser: n,
       guild: C,

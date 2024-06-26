@@ -25,8 +25,8 @@ var r, s, o, a, l = n(392711),
   h = n(726542),
   f = n(710845),
   S = n(630699),
-  A = n(855403),
-  N = n(454991),
+  N = n(855403),
+  A = n(454991),
   m = n(77498),
   O = n(283595),
   p = n(417363),
@@ -194,7 +194,7 @@ function er(e) {
       overlayMethod: U.gl.Disabled
     }
   }
-  let n = S.H() && (0, M.VS)() && !N.v.legacyEnabled,
+  let n = S.H() && (0, M.VS)() && !A.v.legacyEnabled,
     i = n ? U.gl.OutOfProcess : U.gl.Hook,
     r = W.enableOverlay[ei(e)];
   if (null != r) return {
@@ -459,7 +459,7 @@ class eE extends(r = d.ZP.Store) {
   }
   getObservedAppNameForWindow(e) {
     var t, n;
-    return null !== (n = null === (t = F.find(t => (0, A.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+    return null !== (n = null === (t = F.find(t => (0, N.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
   }
   get canShowAdminWarning() {
     return x

@@ -12,7 +12,7 @@ var r, s, o, a, l = n(442837),
 let h = "BlockedDomainStore",
   f = "BlockedDomainRevision",
   S = null;
-class A extends(r = l.ZP.Store) {
+class N extends(r = l.ZP.Store) {
   initialize() {
     i = null, u.K.get(h) && (u.K.remove(f), u.K.remove(h))
   }
@@ -42,12 +42,12 @@ class A extends(r = l.ZP.Store) {
     }), o) : null
   }
 }
-a = "BlockedDomainStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, o, {
+a = "BlockedDomainStore", (o = "displayName") in(s = N) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new A(_.Z, {
+}) : s[o] = a, t.Z = new N(_.Z, {
   BLOCKED_DOMAIN_LIST_FETCHED: function(e) {
     let {
       list: t,

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(650774),
   f = n(430824),
   S = n(283595),
-  A = n(496675),
-  N = n(699516),
+  N = n(496675),
+  A = n(699516),
   m = n(944486),
   O = n(594174),
   p = n(979651),
@@ -77,7 +77,7 @@ function H(e) {
     activity: H,
     channelId: et,
     application: es
-  }), ea = (0, s.e7)([I.Z, f.Z, h.Z, N.Z, m.Z, p.Z, A.Z], () => null != F ? eo === U.Fw.CAN_JOIN : null != H ? (0, P.Z)({
+  }), ea = (0, s.e7)([I.Z, f.Z, h.Z, A.Z, m.Z, p.Z, N.Z], () => null != F ? eo === U.Fw.CAN_JOIN : null != H ? (0, P.Z)({
     user: Y,
     activity: H,
     application: es,
@@ -87,10 +87,10 @@ function H(e) {
     ChannelStore: I.Z,
     GuildStore: f.Z,
     GuildMemberCountStore: h.Z,
-    RelationshipStore: N.Z,
+    RelationshipStore: A.Z,
     SelectedChannelStore: m.Z,
     VoiceStateStore: p.Z,
-    PermissionStore: A.Z
+    PermissionStore: N.Z
   }) : void 0), el = (0, s.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == F ? void 0 : F.applicationId) && e.channelId === (null == F ? void 0 : F.channelId))), eu = (0, w.Z)(), e_ = (0, _.O)(), ec = !C.isPlatformEmbedded;
   if (!((0, b.Z)(H, V.xjy.JOIN) || W) || null == ee) return null;
   let ed = !$ || W && !el,

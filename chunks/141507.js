@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(768581),
   f = n(392552),
   S = n(543241),
-  A = n(199257),
-  N = n(880949),
+  N = n(199257),
+  A = n(880949),
   m = n(784222),
   O = n(149203),
   p = n(689938),
@@ -75,7 +75,7 @@ let C = e => {
       k = (0, S.C1)(L, g(b) ? b : null),
       {
         newlyAddedEmojis: V
-      } = (0, A.Z)(L, D),
+      } = (0, N.Z)(L, D),
       Z = b.id,
       H = (null == U ? void 0 : U.type) === m.ld.EMOJI ? U.subCategory : O.t0.NONE;
     if (r.useEffect(() => {
@@ -111,7 +111,7 @@ let C = e => {
       className: R.icon,
       colorClass: R.icon
     });
-    let Y = null != G ? (0, i.jsx)(N.Z, {
+    let Y = null != G ? (0, i.jsx)(A.Z, {
         className: R.__invalid_guildIcon,
         guild: G,
         shouldAnimate: !x && w

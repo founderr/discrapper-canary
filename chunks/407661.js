@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250),
@@ -21,7 +21,7 @@ var i = n(735250),
   f = n(689938),
   S = n(520759);
 
-function A(e) {
+function N(e) {
   let {
     channel: t,
     message: n,
@@ -61,7 +61,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     reply: t,
     chatInputType: n
@@ -71,7 +71,7 @@ function N(e) {
     shouldMention: u,
     showMentionToggle: I
   } = t, {
-    nick: N,
+    nick: A,
     colorString: m,
     colorRoleName: O
   } = (0, _.ZP)(s), p = function(e, t) {
@@ -114,7 +114,7 @@ function N(e) {
             children: f.Z.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
                 className: S.name,
-                name: N,
+                name: A,
                 color: m,
                 roleName: O
               }, t)
@@ -169,7 +169,7 @@ function N(e) {
             })
           })]
         })]
-      }), g && (0, i.jsx)(A, {
+      }), g && (0, i.jsx)(N, {
         channel: r,
         message: s,
         replyChainLength: p

@@ -39,13 +39,13 @@ let I = {
     }
   };
 
-function A() {
+function N() {
   h && (I.client = {
     desktop: u.aH.DEFAULT,
     coachmarkImpressions: 2
   }), T = !1
 }
-class N extends(i = r.ZP.PersistedStore) {
+class A extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     null != e && (I = e), this.waitFor(o.default), this.syncWith([o.default], f)
   }
@@ -63,7 +63,7 @@ class N extends(i = r.ZP.PersistedStore) {
     return null == I ? void 0 : null === (e = I.client) || void 0 === e ? void 0 : e.desktop
   }
 }
-E(N, "displayName", "AppIconPersistedStoreState"), E(N, "persistKey", "AppIconPersistedStoreState"), t.Z = new N(s.Z, {
+E(A, "displayName", "AppIconPersistedStoreState"), E(A, "persistKey", "AppIconPersistedStoreState"), t.Z = new A(s.Z, {
   APP_ICON_UPDATED: function(e) {
     let {
       id: t
@@ -73,11 +73,11 @@ E(N, "displayName", "AppIconPersistedStoreState"), E(N, "persistKey", "AppIconPe
   APP_ICON_EDITOR_OPEN: function() {
     T = !0
   },
-  APP_ICON_EDITOR_CLOSE: A,
+  APP_ICON_EDITOR_CLOSE: N,
   APP_ICON_TRACK_IMPRESSION: function(e) {
     let {
       markAsDismissed: t
     } = e;
-    I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(c.L.UNKNOWN), A())
+    I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(c.L.UNKNOWN), N())
   }
 })

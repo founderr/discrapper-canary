@@ -16,12 +16,12 @@ var i = n(392711),
   h = n(725380),
   f = n(340332),
   S = n(675478),
-  A = n(65154);
-let N = e => "AudioContextSettingsMigrated:".concat(e),
-  m = e => e === A.Yn.STREAM ? s.h.STREAM : s.h.USER;
+  N = n(65154);
+let A = e => "AudioContextSettingsMigrated:".concat(e),
+  m = e => e === N.Yn.STREAM ? s.h.STREAM : s.h.USER;
 
 function O() {
-  (0, T.R)() && (a.K.get(N(d.default.getId())) || S.hW.updateAsync("audioContextSettings", e => {
+  (0, T.R)() && (a.K.get(A(d.default.getId())) || S.hW.updateAsync("audioContextSettings", e => {
     let t = !1;
     for (let [n, i] of Object.entries(E.Z.getState().settingsByContext)) {
       let r = (0, f.z)(n);
@@ -47,7 +47,7 @@ function O() {
         null == s[n] && (t = !0, s[n] = i)
       }
     }
-    return a.K.set(N(d.default.getId()), !0), t
+    return a.K.set(A(d.default.getId()), !0), t
   }, S.fy.AUTOMATED))
 }
 let p = r().debounce(() => {

@@ -11,8 +11,8 @@ var i, r, s, o, a = n(348327),
   h = n(565799),
   f = n(501655),
   S = n(750154),
-  A = n(427679),
-  N = n(71275),
+  N = n(427679),
+  A = n(71275),
   m = n(157925),
   O = n(981631);
 let p = null;
@@ -22,7 +22,7 @@ function R() {
     var e, t, n, i, r, s, o;
     let a = I.Z.getVoiceChannelId();
     if (null == a) return null;
-    let l = A.Z.getStageInstanceByChannel(a);
+    let l = N.Z.getStageInstanceByChannel(a);
     if (null == l) return null;
     let u = c.Z.getChannel(a);
     if (null == u || !T.oz(O.Plq.VIEW_CHANNEL, u)) return null;
@@ -38,7 +38,7 @@ function R() {
     return {
       application_id: m.gD,
       name: null !== (r = null !== (i = l.topic) && void 0 !== i ? i : u.topic) && void 0 !== r ? r : u.name,
-      type: (0, N.xJ)(u.id) ? O.IIU.WATCHING : O.IIU.LISTENING,
+      type: (0, A.xJ)(u.id) ? O.IIU.WATCHING : O.IIU.LISTENING,
       timestamps: {
         start: null !== (s = null == R ? void 0 : null === (n = R.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== s ? s : new Date().getTime()
       },
@@ -56,7 +56,7 @@ function R() {
 }
 class g extends(o = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z, I.Z, A.Z, E.Z)
+    this.waitFor(c.Z, I.Z, N.Z, E.Z)
   }
   getActivity() {
     return p

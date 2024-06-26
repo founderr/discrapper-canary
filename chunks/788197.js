@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(835473),
   f = n(199902),
   S = n(271383),
-  A = n(430824),
-  N = n(158776),
+  N = n(430824),
+  A = n(158776),
   m = n(699516),
   O = n(626135),
   p = n(785717),
@@ -61,29 +61,29 @@ function B(e) {
   } = (0, I.ZP)([...W, E.Z.PROFILE_POPOUT]), z = r.useRef(null), q = (0, C.ZP)(t.id, n), X = (0, l.Z)(z), Q = (0, s.e7)([R.Z], () => {
     var e;
     return null === (e = R.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), J = (0, s.e7)([A.Z], () => null != n ? A.Z.getGuild(n) : null), $ = (0, s.e7)([S.ZP], () => null != n ? S.ZP.getMember(n, t.id) : null), ee = t.isNonUserBot(), {
+  }), J = (0, s.e7)([N.Z], () => null != n ? N.Z.getGuild(n) : null), $ = (0, s.e7)([S.ZP], () => null != n ? S.ZP.getMember(n, t.id) : null), ee = t.isNonUserBot(), {
     activity: et,
     customStatusActivity: en,
     status: ei,
     isMobile: er,
     isApplicationStreaming: es
-  } = (0, s.cj)([f.Z, N.Z], () => {
+  } = (0, s.cj)([f.Z, A.Z], () => {
     let e = null != f.Z.getAnyStreamForUser(t.id);
     return {
-      activity: N.Z.findActivity(t.id, t => {
+      activity: A.Z.findActivity(t.id, t => {
         let {
           type: n
         } = t;
         return e ? n === b.IIU.PLAYING : n !== b.IIU.CUSTOM_STATUS
       }),
-      customStatusActivity: N.Z.findActivity(t.id, e => {
+      customStatusActivity: A.Z.findActivity(t.id, e => {
         let {
           type: t
         } = e;
         return t === b.IIU.CUSTOM_STATUS
       }),
-      status: ee ? null : N.Z.getStatus(t.id),
-      isMobile: N.Z.isMobileOnline(t.id),
+      status: ee ? null : A.Z.getStatus(t.id),
+      isMobile: A.Z.isMobileOnline(t.id),
       isApplicationStreaming: e
     }
   }), [eo, ea] = r.useState(!1), el = r.useMemo(() => null != n ? {

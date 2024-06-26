@@ -24,7 +24,7 @@ function h(e, t, n) {
 }
 let f = null,
   S = null;
-class A extends i.Z {
+class N extends i.Z {
   constructor(...e) {
     super(...e), h(this, "actions", {
       GUILD_DELETE: e => this.handleGuildDelete(e),
@@ -62,4 +62,4 @@ class A extends i.Z {
     })
   }
 }
-t.Z = new A
+t.Z = new N

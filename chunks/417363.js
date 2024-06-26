@@ -11,8 +11,8 @@ var i, r, s, o, a, l = n(392711),
   h = n(129542),
   f = n(70956),
   S = n(780570),
-  A = n(358085),
-  N = n(804739),
+  N = n(358085),
+  A = n(804739),
   m = n(941128),
   O = n(391690),
   p = n(981631);
@@ -96,7 +96,7 @@ class H extends(r = _.ZP.Store) {
     return null != n && null != n.storage && !!n.storage.sync
   }
   isLaunchable(e, t) {
-    if (!(0, N.Q)()) return !1;
+    if (!(0, A.Q)()) return !1;
     let n = g[(0, S.Tu)(e, t)];
     return null != n && n.type === p.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
   }
@@ -170,7 +170,7 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
               case p.DJE.COMPLETE: {
                 let e;
                 let S = {},
-                  N = null;
+                  A = null;
                 if (I) e = p.vxO.REPAIRING;
                 else if (null == t) e = p.vxO.INSTALL_REQUIRED;
                 else if (T && (t !== n || null != i && 0 !== u().difference(i, r).length)) e = p.vxO.UPDATE_REQUIRED;
@@ -188,12 +188,12 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                           name: r,
                           working_dir: s
                         } = n, o = d.Z.fileManager.join(e, i);
-                        (0, A.isMac)() && !o.startsWith(C) && (o = "".concat(C).concat(o)), t = null != s ? d.Z.fileManager.join(e, s) : d.Z.fileManager.dirname(o), S[r] = {
+                        (0, N.isMac)() && !o.startsWith(C) && (o = "".concat(C).concat(o)), t = null != s ? d.Z.fileManager.join(e, s) : d.Z.fileManager.dirname(o), S[r] = {
                           ...n,
                           id: r,
                           fullExecutablePath: o,
                           fullWorkingDir: t
-                        }, null == N && (N = r)
+                        }, null == A && (A = r)
                       }
                   } else if (null != a) {
                     t === p.QR$.WIN64 && null == a[t] && (t = p.QR$.WIN32);
@@ -209,7 +209,7 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                         fullExecutablePath: d.Z.fileManager.join(e, i),
                         fullWorkingDir: e,
                         platforms: [t]
-                      }, N = r
+                      }, A = r
                     }
                   }
                 }
@@ -224,7 +224,7 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                   installPath: c,
                   installedSize: E,
                   launchOptions: S,
-                  defaultLaunchOptionId: N,
+                  defaultLaunchOptionId: A,
                   shouldPatch: T,
                   storage: _
                 }
@@ -239,10 +239,10 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                   progress: h,
                   total: f,
                   paused: S
-                } = e.state, A = l.type;
+                } = e.state, N = l.type;
                 return {
-                  type: a = A === p.f07.UNINSTALLING ? p.vxO.UNINSTALLING : I ? p.vxO.REPAIRING : null == t ? p.vxO.INSTALLING : p.vxO.UPDATING,
-                  stage: A,
+                  type: a = N === p.f07.UNINSTALLING ? p.vxO.UNINSTALLING : I ? p.vxO.REPAIRING : null == t ? p.vxO.INSTALLING : p.vxO.UPDATING,
+                  stage: N,
                   applicationId: s,
                   branchId: o,
                   buildId: t,

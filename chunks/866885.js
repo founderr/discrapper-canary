@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(703656),
   f = n(607187),
   S = n(937995),
-  A = n(366050),
-  N = n(944486),
+  N = n(366050),
+  A = n(944486),
   m = n(594174),
   O = n(566620),
   p = n(317381),
@@ -39,14 +39,14 @@ function w(e) {
   let {
     channel: s,
     isLoading: L
-  } = e, [w, x] = r.useState(!1), B = (0, a.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(s.id)), k = (0, a.e7)([p.ZP], () => p.ZP.getActivityPanelMode()), V = (0, E.q)(null == B ? void 0 : B.applicationId), Z = null == B ? void 0 : B.launchId, H = (0, a.e7)([N.Z], () => N.Z.getChannelId() === s.id), {
+  } = e, [w, x] = r.useState(!1), B = (0, a.e7)([p.ZP], () => p.ZP.getSelfEmbeddedActivityForChannel(s.id)), k = (0, a.e7)([p.ZP], () => p.ZP.getActivityPanelMode()), V = (0, E.q)(null == B ? void 0 : B.applicationId), Z = null == B ? void 0 : B.launchId, H = (0, a.e7)([A.Z], () => A.Z.getChannelId() === s.id), {
     dockedRect: F,
     isHidden: Y
-  } = (0, a.cj)([A.Z], () => {
-    let e = A.Z.pipWindow;
+  } = (0, a.cj)([N.Z], () => {
+    let e = N.Z.pipWindow;
     return {
-      dockedRect: null != e ? A.Z.getDockedRect(e.id) : null,
-      isHidden: A.Z.isEmbeddedActivityHidden()
+      dockedRect: null != e ? N.Z.getDockedRect(e.id) : null,
+      isHidden: N.Z.isEmbeddedActivityHidden()
     }
   }), j = (0, a.e7)([T.Z], () => T.Z.getWindow(P.KJ3.CHANNEL_CALL_POPOUT)), {
     activityParticipant: W,
@@ -56,7 +56,7 @@ function w(e) {
     activityParticipant: null != B ? I.Z.getParticipant(s.id, B.applicationId) : null,
     selectedParticipant: I.Z.getSelectedParticipant(s.id),
     participantsOpen: I.Z.getParticipantsOpen(s.id)
-  })), q = H || null != j, X = (0, g.Z)(s.id), Q = X && (null == K ? void 0 : K.type) !== y.fO.ACTIVITY, J = !X && k === M.Ez.PIP, $ = (!q || q && (Q || J) && null == F) && !Y, ee = $ && null != A.Z.pipVideoWindow && null != A.Z.pipActivityWindow;
+  })), q = H || null != j, X = (0, g.Z)(s.id), Q = X && (null == K ? void 0 : K.type) !== y.fO.ACTIVITY, J = !X && k === M.Ez.PIP, $ = (!q || q && (Q || J) && null == F) && !Y, ee = $ && null != N.Z.pipVideoWindow && null != N.Z.pipActivityWindow;
 
   function et() {
     var e;

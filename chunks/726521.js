@@ -25,7 +25,7 @@ n.d(t, {
     return E
   },
   pX: function() {
-    return N
+    return A
   },
   sq: function() {
     return I
@@ -34,7 +34,7 @@ n.d(t, {
     return R
   },
   zd: function() {
-    return A
+    return N
   }
 });
 var i = n(367907),
@@ -116,7 +116,7 @@ function S(e, t) {
     record: e
   }, {}, t, void 0, !1)
 }
-async function A(e, t) {
+async function N(e, t) {
   try {
     await (0, _.ox)({
       name: u.b.FIRST_DM,
@@ -127,7 +127,7 @@ async function A(e, t) {
   } catch {}
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   g(u.b.USER, {
     reported_user_id: e.id
   }), (0, c.m)({

@@ -56,21 +56,21 @@ function S(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
-function A(e, t) {
+function N(e, t) {
   return "".concat(e, ":").concat(t)
 }
-class N {
+class A {
   static empty() {
-    return new N({})
+    return new A({})
   }
   put(e, t, n, i) {
     if ("" === i) {
       let i = {
         ...this.state
       };
-      return delete i[S(e, t, n)], new N(i)
+      return delete i[S(e, t, n)], new A(i)
     }
-    return new N({
+    return new A({
       [S(e, t, n)]: i,
       ...this.state
     })
@@ -83,7 +83,7 @@ class N {
     d(this, "state", void 0), this.state = e
   }
 }
-let m = N.empty(),
+let m = A.empty(),
   O = !1,
   p = null;
 
@@ -128,7 +128,7 @@ class L extends(i = r.ZP.Store) {
     return O
   }
   getSimulcastDebugOverride(e, t) {
-    let n = A(e, t);
+    let n = N(e, t);
     return h.has(n) ? h.get(n) : c.Z.NO_OVERRIDE
   }
 }
@@ -224,7 +224,7 @@ d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
       context: n,
       quality: i
     } = e;
-    h.set(A(t, n), i)
+    h.set(N(t, n), i)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     null != e.channelId && (C(), h.clear())

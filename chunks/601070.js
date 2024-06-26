@@ -12,8 +12,8 @@ var i, r, s, o, a = n(392711),
   h = n(709054),
   f = n(344185),
   S = n(569471),
-  A = n(819168),
-  N = n(176505);
+  N = n(819168),
+  A = n(176505);
 let m = {},
   O = {},
   p = {},
@@ -184,9 +184,9 @@ function V() {
 function Z(e) {
   let t = I.ZP.getMentionCount(e.id) > 0,
     n = I.ZP.hasUnread(e.id) && !S.Z.isMuted(e.id),
-    i = e.hasFlag(N.zZ.PINNED),
+    i = e.hasFlag(A.zZ.PINNED),
     r = e.isActiveThread(),
-    s = r && (0, A.Z)(e) > Date.now();
+    s = r && (0, N.Z)(e) > Date.now();
   return {
     isUnread: (r || i) && n || t,
     isRelevant: s || i || n || t,
@@ -202,7 +202,7 @@ function H(e, t) {
         type: "THREAD_UPDATE",
         channel: t
       })
-    }, (0, A.Z)(e) - Date.now() + 1)
+    }, (0, N.Z)(e) - Date.now() + 1)
   }(e)
 }
 

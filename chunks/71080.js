@@ -4,7 +4,7 @@ n.d(t, {
     return f
   },
   IG: function() {
-    return A
+    return N
   },
   aC: function() {
     return a
@@ -26,7 +26,7 @@ var i, r, s, o, a, l, u, _, c = n(230711),
 let f = 20,
   S = "channelPermissionSettingsAdvancedModeOn";
 
-function A(e, t, n, i) {
+function N(e, t, n, i) {
   let r = e.type;
   return {
     [T.Plq.VIEW_CHANNEL.toString()]: {

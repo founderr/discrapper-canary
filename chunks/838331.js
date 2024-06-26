@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   A7: function() {
-    return N
+    return A
   },
   hQ: function() {
     return R
@@ -29,12 +29,12 @@ var i = n(735250),
   h = n(689938),
   f = n(326375);
 let S = "data-listbox-item-id",
-  A = Object.freeze({
+  N = Object.freeze({
     STANDARD: f.selected,
     BRAND: f.selectedBrand
   });
 
-function N(e) {
+function A(e) {
   let [t, n] = r.useState(() => new Set(e));
   return [t, r.useCallback(e => {
     n(t => {
@@ -69,8 +69,8 @@ function R(e) {
     onChange: u,
     className: _,
     listClassName: T,
-    "aria-label": A,
-    multiSelect: N = !1,
+    "aria-label": N,
+    multiSelect: A = !1,
     autoFocus: m = !1,
     maxVisibleItems: R = 5,
     itemToString: g = O,
@@ -130,7 +130,7 @@ function R(e) {
         return (0, i.jsxs)("div", {
           ref: n,
           role: "combobox",
-          "aria-label": A,
+          "aria-label": N,
           "aria-expanded": D,
           "aria-controls": D ? y : void 0,
           "aria-owns": y,
@@ -175,7 +175,7 @@ function R(e) {
                 style: {
                   maxHeight: 46 * R
                 },
-                "aria-multiselectable": N,
+                "aria-multiselectable": A,
                 id: y,
                 ref: U,
                 className: o()(f.list, T, {
@@ -207,21 +207,21 @@ function C(e) {
     value: n,
     children: s,
     disabled: a = !1,
-    selectedColor: u = A.STANDARD,
+    selectedColor: u = N.STANDARD,
     ...c
   } = e, {
     activeDescendant: d,
     selected: E,
     setSelected: I,
     itemToString: T
-  } = r.useContext(p), h = T(n), N = d === h, m = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n), O = (0, l.JA)(h);
+  } = r.useContext(p), h = T(n), A = d === h, m = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n), O = (0, l.JA)(h);
   return (0, i.jsx)(_.P, {
     tag: "li",
     id: h,
     onClick: () => a ? null : I(n),
     [S]: n,
     className: o()(f.item, {
-      [f.focused]: N,
+      [f.focused]: A,
       [u]: m,
       [f.disabled]: a
     }),
@@ -235,7 +235,7 @@ function C(e) {
     })
   })
 }
-C.Colors = A, C.Label = function(e) {
+C.Colors = N, C.Label = function(e) {
   let {
     children: t
   } = e;

@@ -84,7 +84,7 @@ function S(e) {
       throw Error("Unrecognized DeviceType ".concat(n, "."))
   }
 }!(0, u.isMac)() && (T["223"] = "`"), Object.freeze(T);
-let A = [
+let N = [
     ["META", "⌘"],
     ["RIGHT META", "RIGHT ⌘"],
     ["SHIFT", "⇧"],
@@ -108,13 +108,13 @@ let A = [
     ["TAB", "⇥"],
     ["SPACE", "␣"]
   ],
-  N = e => {
-    for (let [t, n] of A)
+  A = e => {
+    for (let [t, n] of N)
       if (t === e.toUpperCase()) return n;
     return e
   },
   m = e => {
-    for (let [t, n] of A)
+    for (let [t, n] of N)
       if (n === e.toUpperCase()) return t.toLowerCase();
     return e
   },
@@ -166,5 +166,5 @@ function g(e) {
       if (t === _.MoX.GAMEPAD_BUTTON) return "gamepad".concat(n);
       else return "dev".concat(t, ",").concat(n)
     }).filter(l.lm);
-  return t ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(N) : i).join(" + ").toUpperCase() : i.join("+")
+  return t ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(A) : i).join(" + ").toUpperCase() : i.join("+")
 }

@@ -20,8 +20,8 @@ var i = n(990547),
   h = n(703656),
   f = n(314897),
   S = n(592125),
-  A = n(664915),
-  N = n(984933),
+  N = n(664915),
+  A = n(984933),
   m = n(430824),
   O = n(944486),
   p = n(914010),
@@ -383,7 +383,7 @@ t.Z = {
     })
   },
   toggleGuildFolderExpand(e) {
-    let t = A.Z.isFolderExpanded(e);
+    let t = N.Z.isFolderExpanded(e);
     g.default.track(M.rMx.GUILD_FOLDER_CLICKED, {
       source: "sidebar",
       action: t ? "collapsed" : "expanded"
@@ -427,11 +427,11 @@ t.Z = {
       (0, h.uL)(M.Z5c.FRIENDS);
       return
     }
-    let t = N.ZP.getDefaultChannel(e);
+    let t = A.ZP.getDefaultChannel(e);
     null == t || t.isNSFW() ? (0, h.uL)(M.Z5c.FRIENDS) : (0, h.uL)(M.Z5c.CHANNEL(e, t.id))
   },
   escapeToDefaultChannel(e) {
-    let t = N.ZP.getDefaultChannel(e);
+    let t = A.ZP.getDefaultChannel(e);
     null != t ? (0, h.uL)(M.Z5c.CHANNEL(e, t.id)) : (0, h.uL)(M.Z5c.FRIENDS)
   },
   async fetchApplications(e, t) {

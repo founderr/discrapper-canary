@@ -26,8 +26,8 @@ function I(e) {
     hint: h,
     subtext: f,
     hasSubmenu: S,
-    disabled: A,
-    isFocused: N,
+    disabled: N,
+    isFocused: A,
     menuItemProps: m,
     action: O,
     onClose: p,
@@ -44,16 +44,16 @@ function I(e) {
     !(e.shiftKey && L) && !D && p(), e.persist(), null == y || y(), requestAnimationFrame(() => O(e))
   }, [O, p, y, L, D]);
   return r.useEffect(() => {
-    N && ((0, _.F)(U), null == R || R())
-  }, [N, R]), (0, i.jsxs)(a.P, {
+    A && ((0, _.F)(U), null == R || R())
+  }, [A, R]), (0, i.jsxs)(a.P, {
     innerRef: U,
     className: o()(E.item, E.labelContainer, d._[t], g, {
-      [E.disabled]: A,
-      [E.focused]: N,
-      [null != C ? C : ""]: N
+      [E.disabled]: N,
+      [E.focused]: A,
+      [null != C ? C : ""]: A
     }),
-    onClick: A ? void 0 : b,
-    "aria-disabled": A,
+    onClick: N ? void 0 : b,
+    "aria-disabled": N,
     ...m,
     "data-menu-item": "true",
     children: [I && null != s && (0, i.jsx)("div", {
@@ -62,7 +62,7 @@ function I(e) {
         color: "currentColor",
         ...M,
         className: o()(E.icon, null == M ? void 0 : M.className),
-        isFocused: N
+        isFocused: A
       })
     }), (0, i.jsxs)("div", {
       className: E.label,
@@ -79,7 +79,7 @@ function I(e) {
         color: "currentColor",
         ...M,
         className: o()(E.icon, null == M ? void 0 : M.className),
-        isFocused: N
+        isFocused: A
       })
     }), null != T && (0, i.jsx)("div", {
       className: E.imageContainer,

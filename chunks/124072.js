@@ -21,8 +21,8 @@ t.Z = e => {
     h(!0), null == d || d(e)
   }, [h, d]), S = r.useCallback(e => {
     h(!1), null == E || E(e)
-  }, [h, E]), A = {};
-  return null != s && (A = {
+  }, [h, E]), N = {};
+  return null != s && (N = {
     color: (0, a.Rf)(s),
     backgroundColor: T ? (0, a.br)(s, .3) : (0, a.br)(s, .1)
   }), (0, i.jsx)(l.Clickable, {
@@ -34,7 +34,7 @@ t.Z = e => {
     }),
     onMouseEnter: f,
     onMouseLeave: S,
-    style: A,
+    style: N,
     tabIndex: null != I.onClick ? 0 : -1,
     children: null != c ? (0, i.jsx)(u.Z, {
       iconType: c,

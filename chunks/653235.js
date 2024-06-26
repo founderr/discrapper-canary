@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(132748),
   f = n(353903),
   S = n(215016),
-  A = n(981631),
-  N = n(689938),
+  N = n(981631),
+  A = n(689938),
   m = n(53995);
 
 function O(e, t, n) {
@@ -50,7 +50,7 @@ class R extends r.PureComponent {
     } = e;
     return (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsx)("div", {
-        className: s === A.wI2.FAVORITES ? m.categoryFadeBlurple : m.categoryFade
+        className: s === N.wI2.FAVORITES ? m.categoryFadeBlurple : m.categoryFade
       }), (0, i.jsxs)("div", {
         className: m.categoryText,
         children: [null != n ? (0, i.jsx)(n, {
@@ -82,8 +82,8 @@ class R extends r.PureComponent {
         var t;
         let n = o().sample(o().values(e));
         return {
-          type: A.wI2.FAVORITES,
-          name: N.Z.Messages.CATEGORY_FAVORITE,
+          type: N.wI2.FAVORITES,
+          name: A.Z.Messages.CATEGORY_FAVORITE,
           icon: _.StarIcon,
           src: null != n ? n.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
           format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : l.EO.IMAGE

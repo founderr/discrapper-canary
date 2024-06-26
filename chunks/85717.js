@@ -14,8 +14,8 @@ var o = n(493683),
   h = n(944486),
   f = n(885110),
   S = n(67212),
-  A = n(770471),
-  N = n(757454),
+  N = n(770471),
+  A = n(757454),
   m = n(158631),
   O = n(981631);
 let p = [];
@@ -25,13 +25,13 @@ class R extends u.Z {
     if (null == e) return;
     let {
       canBroadcast: t
-    } = A.Z.getCurrentConfig({
+    } = N.Z.getCurrentConfig({
       location: "handle_running_games_change"
     }, {
       autoTrackExposure: !1
     }), n = f.Z.getBroadcast(), i = (0, S.Ds)(e), r = null != T.Z.getGameByName(i), s = (0, m.dD)();
     if (!t || null != n || !d.xd.getSetting() || !r || !s || null != p.find(t => t.pid === e.pid)) return;
-    if (p = _.ZP.getRunningGames(), !(0, N.Q)()) return;
+    if (p = _.ZP.getRunningGames(), !(0, A.Q)()) return;
     let o = h.Z.getVoiceChannelId();
     (0, l.tE)({
       pid: e.pid,

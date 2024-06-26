@@ -95,12 +95,12 @@ function E(e) {
   let h = Math.min(d.length - 1, s.length - 1),
     f = d[Math.max(0, h)],
     S = s.length > 4,
-    A = s.length - 3,
-    N = A >= 10 ? 1 : 2,
+    N = s.length - 3,
+    A = N >= 10 ? 1 : 2,
     m = f.map((e, t) => {
       let r = s[t];
       if (null == r) return null;
-      let a = S && t === N;
+      let a = S && t === A;
       return (0, i.jsx)("div", {
         className: o()(c.avatarContainer),
         style: {
@@ -108,7 +108,7 @@ function E(e) {
           transform: "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scale(").concat(e.scale, ")")
         },
         children: a ? (0, i.jsx)(I, {
-          count: A
+          count: N
         }) : (0, i.jsx)(T, {
           guildId: n,
           user: r

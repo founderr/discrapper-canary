@@ -85,13 +85,13 @@ function S(e) {
                 I = i && 0 === o.length,
                 h = (_ ? o.slice(1) : o).length % 2 == 1,
                 S = h && (null == u || "" === u || null != u.match(f)),
-                A = S && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
+                N = S && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: d,
                 isStyledCodeBlockLine: I,
-                lang: h || _ ? A : r,
+                lang: h || _ ? N : r,
                 hljsTypes: null,
                 closesCodeBlock: _,
                 opensCodeBlock: h,
@@ -125,7 +125,7 @@ function S(e) {
                         o = [],
                         a = 0,
                         l = 0;
-                      for (; null != (r = A.exec(s));) {
+                      for (; null != (r = N.exec(s));) {
                         let t = r.index + r[0].length,
                           n = r.index - l;
                         r.index > l && (e.length > 0 && o.push({
@@ -175,13 +175,13 @@ function S(e) {
     }), n = c.bN.richValue(e)), t()
   }, e
 }
-let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-  N = {
+let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+  A = {
     max: 1 / 0,
     maxAge: 1 * o.Z.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  m = new(s())(N);
+  m = new(s())(A);
 
 function O(e, t) {
   let n = 0;

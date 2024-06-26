@@ -24,11 +24,11 @@ async function S(e) {
   let {
     channelId: n,
     applicationId: S,
-    launchId: A,
-    inputApplication: N,
+    launchId: N,
+    inputApplication: A,
     analyticsLocations: m,
     embeddedActivitiesManager: O
-  } = e, p = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === S && (null == A || e.launchId === A)), R = N;
+  } = e, p = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === S && (null == N || e.launchId === N)), R = A;
   if (null == R) {
     let e = await r.Z.fetchApplication(S);
     R = a.Z.createFromServer(e)

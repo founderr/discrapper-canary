@@ -24,12 +24,12 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = {
+let N = {
     side: f.side,
     top: f.top,
     "top-pill": f.topPill
   },
-  N = l.forwardRef(function(e, t) {
+  A = l.forwardRef(function(e, t) {
     let {
       children: n,
       id: i,
@@ -176,7 +176,7 @@ class R extends(s = l.Component) {
     } = this.props;
     return (0, a.jsx)("div", {
       ref: this.tabBarRef,
-      className: _()(e, A[n]),
+      className: _()(e, N[n]),
       style: i,
       role: "tablist",
       "aria-orientation": s,
@@ -263,4 +263,4 @@ S(R, "Header", function(e) {
     className: f.separator,
     style: t
   })
-}), S(R, "Panel", N)
+}), S(R, "Panel", A)

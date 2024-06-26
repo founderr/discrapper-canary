@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(367907),
   f = n(399654),
   S = n(844439),
-  A = n(10718),
-  N = n(148958),
+  N = n(10718),
+  A = n(148958),
   m = n(424602),
   O = n(827498),
   p = n(87005),
@@ -57,24 +57,24 @@ function x(e) {
     enableRecommendations: a,
     enableRecents: l,
     enableGlobalSearch: u
-  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === O._b.TEXT && l, T = n === O._b.TEXT, h = n === O._b.TEXT && a, f = n === O._b.VOICE, S = h || T, A = n === O._b.TEXT;
+  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === O._b.TEXT && l, T = n === O._b.TEXT, h = n === O._b.TEXT && a, f = n === O._b.VOICE, S = h || T, N = n === O._b.TEXT;
   r.useEffect(() => {
     c && (0, E.w1)({
       guildId: t.getGuildId(),
       force: !0
     })
   }, [c, t]);
-  let N = s.length > 0;
+  let A = s.length > 0;
   return (0, i.jsxs)("div", {
     className: U.container,
     children: [(0, i.jsx)(B, {
       searchQuery: s,
       setSearchQuery: o,
-      placeholder: A ? y.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : y.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+      placeholder: N ? y.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : y.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
     }), (0, i.jsx)(_.Scroller, {
       className: U.scrollableContent,
       fade: !0,
-      children: N ? (0, i.jsx)("div", {
+      children: A ? (0, i.jsx)("div", {
         children: (0, i.jsx)(D.Z, {
           channel: t,
           query: s,
@@ -217,7 +217,7 @@ function Z(e) {
     sectionDescriptors: n,
     filterSection: s,
     loading: a
-  } = A.wi(t, {
+  } = N.wi(t, {
     commandType: c.yU.CHAT
   }, {
     placeholderCount: 0,
@@ -228,7 +228,7 @@ function Z(e) {
     s(P.bi.FRECENCY)
   }, [s]);
   let l = r.useMemo(() => n.filter(e => e.id !== P.bi.FRECENCY && e.id !== P.bi.BUILT_IN), [n]),
-    u = (0, N.h)(l),
+    u = (0, A.h)(l),
     _ = r.useMemo(() => o().compact(u.map(e => {
       let {
         application: t

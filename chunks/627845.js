@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   b: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -22,7 +22,7 @@ let d = window.matchMedia("(prefers-reduced-motion: reduce)"),
   f = window.matchMedia("(forced-colors: active)"),
   S = 5;
 
-function A() {
+function N() {
   return "windows" === (0, l.getOS)()
 }
 t.Z = {
@@ -61,7 +61,7 @@ t.Z = {
   handleSystemColorPreferencesChanged() {
     let e;
     T.matches ? e = c.BRd.DARK : h.matches && (e = c.BRd.LIGHT);
-    let t = (!l.isPlatformEmbedded || A()) && f.matches ? "active" : "none";
+    let t = (!l.isPlatformEmbedded || N()) && f.matches ? "active" : "none";
     s.Z.wait(() => {
       u.Ej(e, t)
     })

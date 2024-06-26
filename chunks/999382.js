@@ -5,8 +5,8 @@ var c, d, E, I, T = n(392711),
   h = n.n(T),
   f = n(913527),
   S = n.n(f),
-  A = n(442837),
-  N = n(544891),
+  N = n(442837),
+  A = n(544891),
   m = n(433517),
   O = n(570140),
   p = n(749210),
@@ -91,7 +91,7 @@ function es(e) {
       location: "7f0c91_1"
     });
     !e && p.Z.fetchGuildBans(a.id)
-  } else if (i === U.pNK.INSTANT_INVITES) N.tn.get({
+  } else if (i === U.pNK.INSTANT_INVITES) A.tn.get({
     url: U.ANM.GUILD_INSTANT_INVITES(a.id),
     oldFormErrors: !0
   }).then(e => {
@@ -100,7 +100,7 @@ function es(e) {
       invites: e.body
     })
   });
-  else if (i === U.pNK.WIDGET) N.tn.get({
+  else if (i === U.pNK.WIDGET) A.tn.get({
     url: U.ANM.GUILD_WIDGET(a.id),
     oldFormErrors: !0
   }).then(e => {
@@ -112,7 +112,7 @@ function es(e) {
   });
   else if (i === U.pNK.INTEGRATIONS || i === U.pNK.ROLES) {
     if (l = null, t !== e.section) return ea(e)
-  } else i === U.pNK.MEMBERS ? l = a.getEveryoneRoleId() : i === U.pNK.VANITY_URL ? N.tn.get({
+  } else i === U.pNK.MEMBERS ? l = a.getEveryoneRoleId() : i === U.pNK.VANITY_URL ? A.tn.get({
     url: U.ANM.GUILD_VANITY_URL(a.id),
     oldFormErrors: !0
   }).then(e => {
@@ -155,7 +155,7 @@ function ea(e) {
   if (null == a || k !== U.QZA.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== a.id) return !1;
   (0, y.i)(a.id)
 }
-class el extends(c = A.ZP.Store) {
+class el extends(c = N.ZP.Store) {
   initialize() {
     this.waitFor(L.Z, D.default)
   }

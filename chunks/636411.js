@@ -25,7 +25,7 @@ function S(e) {
   var t, n;
   let {
     onDismiss: r
-  } = e, S = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), A = h.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, N = (0, _.N)(), m = (0, u.Ng)(), O = (null == N ? void 0 : N.subscription_trial) != null || null != m, p = {
+  } = e, S = (0, o.e7)([l.Z], () => l.Z.useReducedMotion), N = h.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, A = (0, _.N)(), m = (0, u.Ng)(), O = (null == A ? void 0 : A.subscription_trial) != null || null != m, p = {
     object: I.qAy.BUTTON_CTA,
     section: I.jXE.SUPER_REACTION_PICKER
   };
@@ -55,12 +55,12 @@ function S(e) {
         })
       }), O ? (0, i.jsx)(c.ZP, {
         type: T.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-        subscriptionTier: null !== (n = null == N ? void 0 : null === (t = N.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : T.Si.TIER_2,
+        subscriptionTier: null !== (n = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : T.Si.TIER_2,
         headingText: h.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
         analyticsLocationObject: p,
         discountOffer: m,
-        trialOffer: N,
-        children: A
+        trialOffer: A,
+        children: N
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsxs)("div", {
           className: f.header,
@@ -78,7 +78,7 @@ function S(e) {
         }), (0, i.jsx)(a.Text, {
           className: f.subheaderText,
           variant: "text-md/normal",
-          children: A
+          children: N
         }), (0, i.jsx)("div", {
           className: f.ctaActionWrapper,
           children: (0, i.jsx)(d.Z, {

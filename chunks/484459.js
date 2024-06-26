@@ -39,8 +39,8 @@ async function I(e, t) {
     withMutualFriendsCount: h = !1,
     withMutualFriends: f = !1,
     friendToken: S,
-    preloadUserBanner: A = !0,
-    dispatchWait: N = !1,
+    preloadUserBanner: N = !0,
+    dispatchWait: A = !1,
     guildId: m,
     channelId: O,
     abortSignal: p
@@ -56,13 +56,13 @@ async function I(e, t) {
     v = c.Z.getMutualFriends(e),
     L = c.Z.getMutualFriendsCount(e),
     D = c.Z.isFetchingProfile(e),
-    M = A ? d.Z : void 0,
+    M = N ? d.Z : void 0,
     P = null == C && T,
     y = null == v && f,
     U = null == L && h,
     b = null != m && null == g,
     G = Date.now() - (null !== (E = null == R ? void 0 : R.lastFetched) && void 0 !== E ? E : 0) >= 6e4;
-  if (!!(!D && (P || U || y)) || !!b || !!G) N ? await i.Z.wait(() => (0, r.In)(e, {
+  if (!!(!D && (P || U || y)) || !!b || !!G) A ? await i.Z.wait(() => (0, r.In)(e, {
     withMutualGuilds: T,
     withMutualFriends: f,
     withMutualFriendsCount: h,

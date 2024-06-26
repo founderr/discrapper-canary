@@ -26,8 +26,8 @@ function I(e) {
     onFocus: h,
     size: f = u.AvatarSizes.SIZE_24,
     hideOverflowCount: S = !1,
-    disableUsernameTooltip: A = !1
-  } = e, [N, m] = r.useState(!1);
+    disableUsernameTooltip: N = !1
+  } = e, [A, m] = r.useState(!1);
 
   function O() {
     return (0, i.jsx)(u.Dialog, {
@@ -58,7 +58,7 @@ function I(e) {
     children: function() {
       let e = l()(I).take(a).map(e => {
           let t = d.ZP.getName(e);
-          return A ? (0, i.jsx)("div", {
+          return N ? (0, i.jsx)("div", {
             className: o()(E.avatar, s),
             children: (0, i.jsx)(u.Avatar, {
               src: e.getAvatarURL(T, 24),
@@ -78,7 +78,7 @@ function I(e) {
         t = I.length - a;
       return t > 0 && !S && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
         renderPopout: O,
-        shouldShow: N,
+        shouldShow: A,
         position: "bottom",
         onRequestClose: () => m(!1),
         children: () => (0, i.jsxs)(u.Button, {

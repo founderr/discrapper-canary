@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(156361),
   f = n(695464),
   S = n(153124),
-  A = n(555573),
-  N = n(10718),
+  N = n(555573),
+  A = n(10718),
   m = n(367790),
   O = n(895924),
   p = n(581364),
@@ -54,7 +54,7 @@ t.Z = r.forwardRef(function(e, t) {
     filteredSectionId: W,
     scrollDown: K,
     filterSection: z
-  } = N.wi(n, {
+  } = A.wi(n, {
     commandType: _.yU.CHAT,
     builtIns: s ? m.D.ONLY_TEXT : m.D.ALLOW,
     applicationCommands: !s
@@ -100,7 +100,7 @@ t.Z = r.forwardRef(function(e, t) {
       } else z(e.id)
     }, [z, W]),
     ee = r.useCallback((e, t, i) => {
-      A.Po({
+      N.Po({
         channelId: n.id,
         command: e,
         section: t,

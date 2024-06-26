@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(906732),
   f = n(594174),
   S = n(751009),
-  A = n(785717),
-  N = n(825801),
+  N = n(785717),
+  A = n(825801),
   m = n(228168),
   O = n(689938),
   p = n(739550);
@@ -43,7 +43,7 @@ function g(e) {
     analyticsLocations: M
   } = (0, h.ZP)(T.Z.PROFILE_CUSTOM_STATUS), {
     trackUserProfileAction: P
-  } = (0, A.KZ)(), y = (0, l.e7)([f.default], () => f.default.getCurrentUser()), U = t.id === (null == y ? void 0 : y.id), b = (0, l.e7)([I.Z], () => I.Z.useReducedMotion), [G, w] = r.useState(!0), [x] = r.useState(() => new u.V7), B = r.useRef(null), k = r.useRef(null), V = r.useRef(null), Z = r.useRef(null), H = r.useRef(null), F = (0, E.Z)(H), Y = (null == s ? void 0 : s.state) != null && "" !== s.state ? s.state : null, j = null != Y && Y.length > 0, {
+  } = (0, N.KZ)(), y = (0, l.e7)([f.default], () => f.default.getCurrentUser()), U = t.id === (null == y ? void 0 : y.id), b = (0, l.e7)([I.Z], () => I.Z.useReducedMotion), [G, w] = r.useState(!0), [x] = r.useState(() => new u.V7), B = r.useRef(null), k = r.useRef(null), V = r.useRef(null), Z = r.useRef(null), H = r.useRef(null), F = (0, E.Z)(H), Y = (null == s ? void 0 : s.state) != null && "" !== s.state ? s.state : null, j = null != Y && Y.length > 0, {
     emoji: W
   } = null != s ? s : {}, K = null != W, z = K && !j, q = K || j, X = U && !q && D, Q = U && q && D, [J, $] = r.useState(z);
   r.useLayoutEffect(() => {
@@ -182,7 +182,7 @@ function g(e) {
     }), (0, i.jsxs)("div", {
       className: o()(p.visibleContainer, eu),
       ref: H,
-      children: [(0, i.jsx)(N.Z, {
+      children: [(0, i.jsx)(A.Z, {
         isHovering: F,
         location: "UserProfileCustomStatusBubble",
         className: p.reactReplyBar

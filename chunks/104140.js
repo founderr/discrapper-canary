@@ -26,12 +26,12 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = {
+let N = {
     friction: 13,
     tension: 240,
     duration: 150
   },
-  N = {
+  A = {
     duration: 150,
     friction: 3
   },
@@ -160,11 +160,11 @@ class C extends(r = o.Component) {
     t && !e.selected ? null == r || r.update({
       spring: 1,
       immediate: !1,
-      config: A
+      config: N
     }).start() : !t && e.selected && (null == r || r.update({
       spring: 0,
       immediate: !1,
-      config: N
+      config: A
     }).start()), null != n && null == e.lowerBadge ? null == s || s.update({
       spring: 1,
       immediate: !document.hasFocus(),
@@ -239,10 +239,10 @@ class C extends(r = o.Component) {
       lowerBadgeMask: E,
       upperBadgeMask: T,
       focused: S,
-      hasRenderedBadge: A,
-      renderComplex: N
+      hasRenderedBadge: N,
+      renderComplex: A
     } = this.state;
-    if (!N) return (0, s.jsx)("div", {
+    if (!A) return (0, s.jsx)("div", {
       className: l()(t, {
         [f.wrapperSimple]: !0,
         [f.simpleFocused]: S
@@ -293,7 +293,7 @@ class C extends(r = o.Component) {
           }), (0, s.jsx)(d.animated.path, {
             d: this.getPathInterpolation(),
             id: p
-          }), A ? (0, s.jsx)(d.animated.rect, {
+          }), N ? (0, s.jsx)(d.animated.rect, {
             id: m,
             x: 28,
             y: -4,
@@ -302,7 +302,7 @@ class C extends(r = o.Component) {
             rx: 12,
             ry: 12,
             transform: this.getBadgePositionInterpolation(T, -1)
-          }) : null, A ? (0, s.jsx)(d.animated.rect, {
+          }) : null, N ? (0, s.jsx)(d.animated.rect, {
             id: O,
             x: 48 - (v + 8) + 4,
             y: 48 - (L + 8) + 4,
@@ -328,7 +328,7 @@ class C extends(r = o.Component) {
             className: l()({
               [f.isHighlighted]: _
             })
-          }), A ? (0, s.jsxs)(s.Fragment, {
+          }), N ? (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)("use", {
               href: "#".concat(m),
               fill: "black"
@@ -337,7 +337,7 @@ class C extends(r = o.Component) {
               fill: "black"
             })]
           }) : null]
-        }), A ? (0, s.jsxs)("mask", {
+        }), N ? (0, s.jsxs)("mask", {
           id: g,
           children: [(0, s.jsx)("rect", {
             width: "150%",

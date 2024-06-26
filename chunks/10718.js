@@ -4,7 +4,7 @@ n.d(t, {
     return f
   },
   JT: function() {
-    return A
+    return N
   },
   Nk: function() {
     return T
@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   YZ: function() {
-    return N
+    return A
   },
   wi: function() {
     return S
@@ -145,7 +145,7 @@ function S(e, t, n) {
   }, [_, u, T, c, I, S])
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   let {
     descriptors: i,
     commands: r,
@@ -159,7 +159,7 @@ function A(e, t, n) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = (0, l.PL)(!0, !0),
     r = (0, l.em)(e, !0, !0);
   return i.useMemo(() => {

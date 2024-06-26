@@ -23,8 +23,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = [],
-  N = new(a())({
+let N = [],
+  A = new(a())({
     max: h.zb
   }),
   m = new _.Z({
@@ -45,7 +45,7 @@ function O() {
   m.overwriteHistory((t = null != n ? n : {}, s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  }))), A)
+  }))), N)
 }
 
 function p() {
@@ -56,22 +56,22 @@ function p() {
 }
 class R extends(i = l.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(d.default, I.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && N.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (A = e.playedEventsPendingFlush), this.syncWith([c.Z], O)
+    this.waitFor(d.default, I.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && A.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (N = e.playedEventsPendingFlush), this.syncWith([c.Z], O)
   }
   getState() {
     return {
-      recentlyHeardCache: N.dump(),
-      playedEventsPendingFlush: A
+      recentlyHeardCache: A.dump(),
+      playedEventsPendingFlush: N
     }
   }
   hasPendingUsage() {
-    return A.length > 0
+    return N.length > 0
   }
   get playedSoundHistory() {
     return m.usageHistory
   }
   get recentlyHeardSoundIds() {
-    return N.values()
+    return A.values()
   }
   get frecentlyPlayedSounds() {
     return m.frequently
@@ -86,7 +86,7 @@ S(R, "displayName", "SoundboardEventStore"), S(R, "persistKey", "SoundboardEvent
     if (!p()) return;
     let i = t.soundId.toString();
     n === T.YQ.SOUNDBOARD && function(e) {
-      m.track(e), A.push({
+      m.track(e), N.push({
         key: e,
         timestamp: Date.now()
       }), m.compute()
@@ -110,7 +110,7 @@ S(R, "displayName", "SoundboardEventStore"), S(R, "persistKey", "SoundboardEvent
         if (null != t.find(t => t.soundId.toString() === e)) return !0;
       return !1
     }(r) && function(e) {
-      N.set(e, e)
+      A.set(e, e)
     }(r)
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
@@ -120,6 +120,6 @@ S(R, "displayName", "SoundboardEventStore"), S(R, "persistKey", "SoundboardEvent
       },
       wasSaved: n
     } = e;
-    p() && t === f.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (A = [])
+    p() && t === f.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (N = [])
   }
 })

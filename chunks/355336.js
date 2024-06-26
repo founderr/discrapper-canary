@@ -33,8 +33,8 @@ function _(e, t) {
       dir: h = "ltr",
       fade: f = !1,
       customTheme: S = !1,
-      style: A,
-      ...N
+      style: N,
+      ...A
     } = t, m = r.useRef(null), O = r.useRef(null), [p, R] = r.useState(!1), {
       scrollerRef: g,
       getScrollerState: C
@@ -71,10 +71,10 @@ function _(e, t) {
         [u.managedReactiveScroller]: !0,
         [u.scrolling]: p && f
       }),
-      style: A,
+      style: N,
       dir: h,
       onScroll: L,
-      ...N,
+      ...A,
       children: (0, i.jsx)(a.J, {
         containerRef: O,
         children: (0, i.jsxs)("div", {

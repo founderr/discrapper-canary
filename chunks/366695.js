@@ -81,12 +81,12 @@ let d = {
       color: "currentColor",
       className: s()(c.gameIcon, S, h)
     });
-    let A = null == r ? void 0 : r.name,
-      N = null != A && "" !== A ? _.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-        applicationName: A
+    let N = null == r ? void 0 : r.name,
+      A = null != N && "" !== N ? _.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: N
       }) : _.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
     return (0, i.jsx)("img", {
-      alt: N,
+      alt: A,
       src: t,
       className: s()(c.gameIcon, S, h)
     })

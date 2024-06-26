@@ -48,7 +48,7 @@ function S() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class A extends(i = o.ZP.PersistedStore) {
+class N extends(i = o.ZP.PersistedStore) {
   initialize(e) {
     this.waitFor(c.Z), null != e && (I = e), this.syncWith([c.Z], f), this.syncWith([u.Z], S)
   }
@@ -62,7 +62,7 @@ class A extends(i = o.ZP.PersistedStore) {
     return T
   }
 }
-E(A, "displayName", "StickersPersistedStore"), E(A, "persistKey", "StickersPersistedStoreV2"), t.Z = new A(a.Z, {
+E(N, "displayName", "StickersPersistedStore"), E(N, "persistKey", "StickersPersistedStoreV2"), t.Z = new N(a.Z, {
   STICKER_TRACK_USAGE: e => {
     let {
       stickerIds: t

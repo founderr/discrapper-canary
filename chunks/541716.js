@@ -357,7 +357,7 @@ let a = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  A = {
+  N = {
     analyticsName: "rules_input",
     drafts: {
       type: o.d.ChannelMessage
@@ -371,7 +371,7 @@ let a = {
     },
     showCharacterCount: !0
   },
-  N = {
+  A = {
     analyticsName: "forum_channel_guidelines",
     drafts: {
       type: o.d.ChannelMessage
@@ -401,10 +401,10 @@ let a = {
     USER_PROFILE: h,
     PROFILE_BIO_INPUT: f,
     CUSTOM_GIFT: S,
-    RULES_INPUT: A,
+    RULES_INPUT: N,
     CREATE_FORUM_POST: I,
     CREATE_POLL: T,
-    FORUM_CHANNEL_GUIDELINES: N,
+    FORUM_CHANNEL_GUIDELINES: A,
     ATOMIC_REACTOR_REPLY_INPUT: {
       analyticsName: "atomic_reator_reply_input",
       drafts: {

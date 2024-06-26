@@ -16,8 +16,8 @@ var i = n(544891),
   h = n(73346),
   f = n(26151),
   S = n(287734),
-  A = n(981631),
-  N = n(689938);
+  N = n(981631),
+  A = n(689938);
 t.Z = {
   async openPrivateChannel(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -34,7 +34,7 @@ t.Z = {
     }
     try {
       let e = await i.tn.post({
-        url: A.ANM.USER_CHANNELS,
+        url: N.ANM.USER_CHANNELS,
         body: {
           recipients: o
         },
@@ -48,32 +48,32 @@ t.Z = {
       return a(t), e.body.id
     } catch (e) {
       var l;
-      throw (null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === A.evJ.QUARANTINED && (0, _.default)(), e
+      throw (null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === N.evJ.QUARANTINED && (0, _.default)(), e
     }
   },
   async createBroadcastPrivateChannel() {
     try {
       let e = await i.tn.post({
-          url: A.ANM.BROADCAST_PRIVATE_CHANNEL
+          url: N.ANM.BROADCAST_PRIVATE_CHANNEL
         }),
         t = (0, d.q_)(e.body);
       return f.Z.call(t.id, !1, !1, null), e.body.id
     } catch (t) {
       var e;
-      throw (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === A.evJ.QUARANTINED && (0, _.default)(), t
+      throw (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === N.evJ.QUARANTINED && (0, _.default)(), t
     }
   },
   _openCachedDMChannel(e, t) {
     let n = E.Z.getDMFromUserId(e),
       i = null != n ? E.Z.getChannel(n) : null;
-    return null != i ? (null == t || t(), null != (0, u.PP)() ? (0, c.uL)(A.Z5c.CHANNEL(A.ME, i.id), {
+    return null != i ? (null == t || t(), null != (0, u.PP)() ? (0, c.uL)(N.Z5c.CHANNEL(N.ME, i.id), {
       navigationReplace: !0
     }) : S.default.selectPrivateChannel(i.id), i) : null
   },
   async ensurePrivateChannel(e) {
     let t = this._getRecipients(e),
       n = await i.tn.post({
-        url: A.ANM.USER_CHANNELS,
+        url: N.ANM.USER_CHANNELS,
         body: {
           recipients: t
         },
@@ -90,7 +90,7 @@ t.Z = {
     return null != t ? t : await this.ensurePrivateChannel(e)
   },
   async getDMChannel(e) {
-    let t = await i.tn.get(A.ANM.DM_CHANNEL(e)),
+    let t = await i.tn.get(N.ANM.DM_CHANNEL(e)),
       n = (0, d.q_)(t.body);
     return s.Z.dispatch({
       type: "CHANNEL_CREATE",
@@ -103,14 +103,14 @@ t.Z = {
     return s.Z.dispatch({
       type: "CHANNEL_CREATE",
       channel: t
-    }), null != (0, u.PP)() ? (0, c.uL)(A.Z5c.CHANNEL(A.ME, t.id), {
+    }), null != (0, u.PP)() ? (0, c.uL)(N.Z5c.CHANNEL(N.ME, t.id), {
       navigationReplace: !0
     }) : S.default.selectPrivateChannel(t.id), t
   },
   closePrivateChannel(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return (0, a.Z)(e) && T.default.track(A.rMx.CHANGE_LOG_DM_REMOVED, {
+    return (0, a.Z)(e) && T.default.track(N.rMx.CHANGE_LOG_DM_REMOVED, {
       last_changelog_id: o.Z.latestChangelogId(),
       unread_count: I.ZP.getUnreadCount(e)
     }), s.Z.dispatch({
@@ -121,45 +121,45 @@ t.Z = {
         parent_id: void 0
       },
       silent: n
-    }), t && !__OVERLAY__ && (0, c.uL)(A.Z5c.FRIENDS), i.tn.del({
-      url: A.ANM.CHANNEL(e),
+    }), t && !__OVERLAY__ && (0, c.uL)(N.Z5c.FRIENDS), i.tn.del({
+      url: N.ANM.CHANNEL(e),
       query: {
         silent: n
       },
       oldFormErrors: !0
     }).then(() => {
-      r.uv.announce(N.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED)
+      r.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED)
     }).catch(() => {
-      r.uv.announce(N.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
+      r.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
     })
   },
   updatePermissionOverwrite: (e, t) => i.tn.put({
-    url: A.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
+    url: N.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
     body: t,
     oldFormErrors: !0
   }),
   clearPermissionOverwrite: (e, t) => i.tn.del({
-    url: A.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
+    url: N.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
     oldFormErrors: !0
   }),
   addRecipient(e, t, n, s) {
     return i.tn.put({
-      url: A.ANM.CHANNEL_RECIPIENT(e, t),
+      url: N.ANM.CHANNEL_RECIPIENT(e, t),
       context: {
         location: n
       },
       oldFormErrors: !0
-    }).then(t => (r.uv.announce(N.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == s || s(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (r.uv.announce(N.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
+    }).then(t => (r.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == s || s(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (r.uv.announce(A.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
   },
   addRecipients(e, t, n, i) {
     return this.addRecipient(e, t[0], n, i).then(e => Promise.all(t.slice(1).map(t => this.addRecipient(e, t, n))).then(() => e))
   },
   removeRecipient: (e, t) => i.tn.del({
-    url: A.ANM.CHANNEL_RECIPIENT(e, t),
+    url: N.ANM.CHANNEL_RECIPIENT(e, t),
     oldFormErrors: !0
   }),
   setDMOwner: (e, t) => i.tn.patch({
-    url: A.ANM.CHANNEL(e),
+    url: N.ANM.CHANNEL(e),
     body: {
       owner: t
     },
@@ -168,7 +168,7 @@ t.Z = {
   async setName(e, t) {
     let n = E.Z.getChannel(e),
       r = await i.tn.patch({
-        url: A.ANM.CHANNEL(e),
+        url: N.ANM.CHANNEL(e),
         body: {
           name: t
         },
@@ -180,7 +180,7 @@ t.Z = {
   setIcon(e, t) {
     let n = E.Z.getChannel(e);
     i.tn.patch({
-      url: A.ANM.CHANNEL(e),
+      url: N.ANM.CHANNEL(e),
       body: {
         icon: t
       },
@@ -191,19 +191,19 @@ t.Z = {
     })
   },
   convertToGuild: e => i.tn.post({
-    url: A.ANM.CHANNEL_CONVERT(e),
+    url: N.ANM.CHANNEL_CONVERT(e),
     oldFormErrors: !0
   }),
   preload(e, t) {
     s.Z.dispatch({
       type: "CHANNEL_PRELOAD",
-      guildId: e === A.ME ? null : e,
+      guildId: e === N.ME ? null : e,
       channelId: t,
-      context: A.e3s
+      context: N.e3s
     })
   },
   fetchChannelStoreListing(e, t) {
-    let n = null != t ? A.ANM.CHANNEL_STORE_LISTING_SKU(e, t) : A.ANM.CHANNEL_STORE_LISTING(e);
+    let n = null != t ? N.ANM.CHANNEL_STORE_LISTING_SKU(e, t) : N.ANM.CHANNEL_STORE_LISTING(e);
     return (0, h.Kb)(n).then(t => {
       s.Z.dispatch({
         type: "STORE_LISTING_FETCH_SUCCESS",
@@ -214,13 +214,13 @@ t.Z = {
   },
   async createTextChannel(e, t, n, r) {
     let s = {
-      type: A.d4z.GUILD_TEXT,
+      type: N.d4z.GUILD_TEXT,
       name: t,
       permission_overwrites: []
     };
     null != n && (s.parent_id = n), null != r && (s.topic = r);
     let o = await i.tn.post({
-      url: A.ANM.GUILD_CHANNELS(e),
+      url: N.ANM.GUILD_CHANNELS(e),
       body: s,
       oldFormErrors: !0
     });

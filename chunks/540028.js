@@ -18,7 +18,7 @@ var r = n(442837),
   f = n(689938),
   S = n(910310);
 
-function A(e) {
+function N(e) {
   let {
     closePopout: t,
     idle: n,
@@ -27,8 +27,8 @@ function A(e) {
     onSelect: S
   } = e;
   n && t();
-  let A = (0, r.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(I)),
-    N = (0, r.e7)([E.Z], () => E.Z.pipWindow),
+  let N = (0, r.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(I)),
+    A = (0, r.e7)([E.Z], () => E.Z.pipWindow),
     m = (0, r.e7)([c.Z], () => c.Z.getSelectedParticipant(I)),
     O = (0, r.e7)([c.Z], () => c.Z.getStreamParticipants(I));
   return (0, i.jsx)(o.Menu, {
@@ -40,11 +40,11 @@ function A(e) {
       let e = s.find(e => e.component === T.NYg.EMBED_IFRAME),
         t = s.find(e => e.component === T.NYg.VIDEO),
         n = [];
-      return null != e && (null == N ? void 0 : N.id) !== e.id && n.push({
+      return null != e && (null == A ? void 0 : A.id) !== e.id && n.push({
         pipWindow: e
       }), null != t && O.forEach(e => {
         let i = d.Z.getActiveStreamForApplicationStream(e.stream),
-          r = e.id === (null == m ? void 0 : m.id) && (null == N ? void 0 : N.id) === t.id;
+          r = e.id === (null == m ? void 0 : m.id) && (null == A ? void 0 : A.id) === t.id;
         null != i && !r && n.push({
           pipWindow: t,
           participant: e,
@@ -56,9 +56,9 @@ function A(e) {
       let n = e.pipWindow.id,
         r = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
         s = function(e) {
-          if (e.pipWindow.component === T.NYg.EMBED_IFRAME && null != A) {
+          if (e.pipWindow.component === T.NYg.EMBED_IFRAME && null != N) {
             var t;
-            let e = null === (t = _.Z.getApplication(A.applicationId)) || void 0 === t ? void 0 : t.name;
+            let e = null === (t = _.Z.getApplication(N.applicationId)) || void 0 === t ? void 0 : t.name;
             return null == e ? f.Z.Messages.SWITCH_PIP_TO_ACTIVITY : f.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
               activityName: e
             })
@@ -72,7 +72,7 @@ function A(e) {
         id: u,
         label: s,
         action: () => (function(e) {
-          (null == N ? void 0 : N.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
+          (null == A ? void 0 : A.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
           let t = e.participant;
           null != t && t.type !== h.fO.ACTIVITY && a.Z.selectParticipant(I, t.id)
         })(e)
@@ -90,7 +90,7 @@ t.Z = function(e) {
   }), u = 1 === a.length && a[0].component === T.NYg.EMBED_IFRAME || 0 === l.length, _ = 1 === a.length && l.length <= 1;
   return u || _ ? null : (0, i.jsx)(o.Popout, {
     position: "bottom",
-    renderPopout: e => (0, i.jsx)(A, {
+    renderPopout: e => (0, i.jsx)(N, {
       voiceChannelId: t,
       pipWindows: a,
       idle: n,

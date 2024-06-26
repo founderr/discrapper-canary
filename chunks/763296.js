@@ -10,8 +10,8 @@ var i, r, s, o, a, l, u = n(392711),
   h = n(626135),
   f = n(36703),
   S = n(709054),
-  A = n(710111),
-  N = n(981631),
+  N = n(710111),
+  A = n(981631),
   m = n(526761);
 (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
 let O = new Map,
@@ -30,7 +30,7 @@ function M(e) {
   null != n && null != i && -1 !== i ? (n[i] = t, O.set(t.guildId, [...n])) : null != n && (null == n || n.push(t), O.set(t.guildId, [...n]))
 }
 let P = _().debounce(e => {
-  h.default.track(N.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
+  h.default.track(A.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
     volume: Math.round((0, f.P)(e))
   }), E.kU.updateSetting({
     volume: e
@@ -170,7 +170,7 @@ l = "SoundboardStore", (a = "displayName") in(o = U) ? Object.defineProperty(o, 
     let {
       soundboardSounds: t
     } = e;
-    O.set(A.X8, t), g = 2
+    O.set(N.X8, t), g = 2
   },
   SOUNDBOARD_SOUNDS_RECEIVED: function(e) {
     let {

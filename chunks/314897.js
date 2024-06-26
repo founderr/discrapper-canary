@@ -11,8 +11,8 @@ var s, o, a, l, u = n(512722),
   h = n(570140),
   f = n(911969),
   S = n(109728),
-  A = n(670890),
-  N = n(569611),
+  N = n(670890),
+  A = n(569611),
   m = n(710845),
   O = n(703656),
   p = n(786213),
@@ -146,11 +146,11 @@ function ef(e) {
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
   }), L.Z.clearAll();
-  N.ZH(), C.Z.clearUser(), T.K.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE, j = D.$ib.NONE, z = "", $ = "", X = null, q = !1, ee = !1, et = !1, en = {}, ei = {}, el = !1
+  A.ZH(), C.Z.clearUser(), T.K.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE, j = D.$ib.NONE, z = "", $ = "", X = null, q = !1, ee = !1, et = !1, en = {}, ei = {}, el = !1
 }
 class eS extends(s = E.ZP.Store) {
   initialize() {
-    w = T.K.get(G), x = T.K.get(b), eo = T.K.get("login_cache"), null == c.getToken() && ec(), this.addChangeListener(() => (0, A.u)(w))
+    w = T.K.get(G), x = T.K.get(b), eo = T.K.get("login_cache"), null == c.getToken() && ec(), this.addChangeListener(() => (0, N.u)(w))
   }
   getEmail() {
     return x

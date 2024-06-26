@@ -53,7 +53,7 @@ let f = e => {
       })
     })
   },
-  A = e => {
+  N = e => {
     let {
       reason: t = d.wk.SPOILER,
       className: n,
@@ -79,7 +79,7 @@ let f = e => {
         return (0, E.vE)(t)
     }
   },
-  N = e => {
+  A = e => {
     let {
       obscureReason: t,
       isVisible: n,
@@ -145,14 +145,14 @@ class O extends(r = a.PureComponent) {
           }),
           role: I ? "presentation" : "button",
           tabIndex: I ? -1 : 0,
-          children: [I || t ? null : (0, o.jsx)(A, {
+          children: [I || t ? null : (0, o.jsx)(N, {
             reason: s,
             isSingleMosaicItem: a
           }), (0, o.jsx)("div", {
             "aria-hidden": !I,
             className: T.spoilerInnerContainer,
             children: e(!I)
-          }), (0, o.jsx)(N, {
+          }), (0, o.jsx)(A, {
             obscureReason: s,
             isVisible: _,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -169,7 +169,7 @@ class O extends(r = a.PureComponent) {
           }),
           role: I ? "presentation" : "button",
           tabIndex: I ? -1 : 0,
-          children: [I || t ? null : (0, o.jsx)(A, {
+          children: [I || t ? null : (0, o.jsx)(N, {
             reason: s,
             isSingleMosaicItem: a
           }), (0, o.jsx)("div", {
@@ -205,14 +205,14 @@ class O extends(r = a.PureComponent) {
           }),
           role: _ ? "presentation" : "button",
           tabIndex: _ ? -1 : 0,
-          children: [_ ? null : (0, o.jsx)(A, {
+          children: [_ ? null : (0, o.jsx)(N, {
             reason: s,
             isSingleMosaicItem: i
           }), (0, o.jsx)("div", {
             "aria-hidden": !_,
             className: T.spoilerInnerContainer,
             children: e(!_)
-          }), (0, o.jsx)(N, {
+          }), (0, o.jsx)(A, {
             obscureReason: s,
             isVisible: a,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -228,7 +228,7 @@ class O extends(r = a.PureComponent) {
           style: n,
           role: _ ? "presentation" : "button",
           tabIndex: _ ? -1 : 0,
-          children: [_ ? null : (0, o.jsx)(A, {
+          children: [_ ? null : (0, o.jsx)(N, {
             reason: s,
             className: T.embed
           }), (0, o.jsx)("div", {

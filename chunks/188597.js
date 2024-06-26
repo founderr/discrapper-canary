@@ -10,7 +10,7 @@ n.d(t, {
     return f
   },
   qn: function() {
-    return A
+    return N
   },
   rQ: function() {
     return i
@@ -58,9 +58,9 @@ let S = async e => {
       customId: r,
       componentId: o
     },
-    onFailure: (e, t) => N(I, e, t)
+    onFailure: (e, t) => A(I, e, t)
   }), null != f && (0, d.B0)(n, S, f, o);
-  let A = {
+  let N = {
     type: l.B8.MESSAGE_COMPONENT,
     nonce: S,
     guild_id: T,
@@ -85,12 +85,12 @@ let S = async e => {
   };
   await s.tn.post({
     url: h.ANM.INTERACTIONS,
-    body: A,
+    body: N,
     timeout: 3e3
   }, e => {
     m(S, e, a, I, T)
   })
-}, A = async e => {
+}, N = async e => {
   let {
     applicationId: t,
     channelId: n,
@@ -120,7 +120,7 @@ let S = async e => {
   }, e => {
     m(o, e, t, n, i)
   })
-}, N = (e, t, n) => {
+}, A = (e, t, n) => {
   null == n && null != t && a.Z.sendClydeError(e, t)
 }, m = (e, t, n, i, r) => {
   if (!t.ok) {

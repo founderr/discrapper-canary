@@ -39,9 +39,9 @@ let I = (e, t) => {
       themeOverride: h,
       children: f,
       forceShowPremium: S = !1,
-      showOutOfBoundaryComponents: A = !1
+      showOutOfBoundaryComponents: N = !1
     } = e, {
-      theme: N,
+      theme: A,
       primaryColor: m,
       secondaryColor: O
     } = (0, l.Z)({
@@ -53,19 +53,19 @@ let I = (e, t) => {
       profileThemeStyle: p,
       profileThemeClassName: R
     } = (0, u.Z)({
-      theme: null != h ? h : N,
+      theme: null != h ? h : A,
       primaryColor: m,
       secondaryColor: O
     }), g = (null == r ? void 0 : r.canEditThemes) || S, C = null !== d && ((null == r ? void 0 : r.banner) != null || void 0 !== d);
     return (0, i.jsx)("div", {
-      className: o()(I(s, g), A ? E.showOutOfBoundaryComponents : void 0, R, a),
+      className: o()(I(s, g), N ? E.showOutOfBoundaryComponents : void 0, R, a),
       style: p,
       ref: t,
       children: (0, i.jsx)("div", {
         className: T(s, g, C),
         children: (0, i.jsx)(c.X, {
           profileType: s,
-          theme: null != h ? h : N,
+          theme: null != h ? h : A,
           primaryColor: m,
           secondaryColor: O,
           children: f

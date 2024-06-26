@@ -1,9 +1,9 @@
 n.d(t, {
   EK: function() {
-    return C
+    return f
   },
   GX: function() {
-    return f
+    return C
   },
   eQ: function() {
     return x
@@ -65,7 +65,7 @@ function g(e, t) {
   }) : m.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 
-function f() {
+function C() {
   let [{
     spring: e
   }, t] = (0, s.useSpring)(() => ({
@@ -84,7 +84,7 @@ function f() {
   }
 }
 
-function C(e) {
+function f(e) {
   var t;
   let n = null !== (t = (0, a.i6)()) && void 0 !== t ? t : 0,
     o = "var(--green-330)",

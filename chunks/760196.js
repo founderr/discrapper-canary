@@ -26,18 +26,18 @@ t.Z = r.memo(e => {
     activeCommandOptionStates: l.Z.getOptionStates(t.id)
   })), f = (0, d.e)(t), S = (0, u.__)(r, t, {
     location: "ChannelTextAreaBars"
-  }), A = [];
-  return (null != r && (S && A.push((0, i.jsx)(c.Z, {
+  }), N = [];
+  return (null != r && (S && N.push((0, i.jsx)(c.Z, {
     activeCommand: r
-  })), A.push((0, i.jsx)(_.Z, {
+  })), N.push((0, i.jsx)(_.Z, {
     activeCommand: r,
     activeOption: null != T ? T : null,
     optionStates: h
-  }))), null != s && A.push((0, i.jsx)(E.Z, {
+  }))), null != s && N.push((0, i.jsx)(E.Z, {
     reply: s,
     chatInputType: n
-  })), f && A.push((0, i.jsx)(d.V, {})), 0 === (A = A.map((e, t) => {
-    let n = t === A.length - 1;
+  })), f && N.push((0, i.jsx)(d.V, {})), 0 === (N = N.map((e, t) => {
+    let n = t === N.length - 1;
     return (0, i.jsx)("div", {
       className: o()({
         [I.stackedAttachedBar]: !n
@@ -46,6 +46,6 @@ t.Z = r.memo(e => {
     }, t)
   })).length) ? null : (0, i.jsx)("div", {
     className: I.attachedBars,
-    children: A
+    children: N
   })
 })

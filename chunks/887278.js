@@ -4,10 +4,10 @@ n.d(t, {
     return f
   },
   YT: function() {
-    return A
+    return N
   },
   pn: function() {
-    return N
+    return A
   }
 }), n(411104);
 var i, r, s = n(570140),
@@ -51,7 +51,7 @@ async function S() {
   }(e), e
 }(r = i || (i = {}))[r.None = 0] = "None", r[r.EnableCrashReporting = 1] = "EnableCrashReporting", r[r.EnableCrashTrigger = 2] = "EnableCrashTrigger";
 
-function A(e, t) {
+function N(e, t) {
   return S().then(n => {
     var i;
     let r = null === (i = l.ZP.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
@@ -80,7 +80,7 @@ function A(e, t) {
   })
 }
 
-function N(e) {
+function A(e) {
   return S().then(t => {
     t.cancelAttachToProcess(e)
   })

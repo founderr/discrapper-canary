@@ -12,8 +12,8 @@ var i, r, s, o, a = n(149765),
   h = n(160404),
   f = n(592125),
   S = n(271383),
-  A = n(430824),
-  N = n(594174),
+  N = n(430824),
+  A = n(594174),
   m = n(981631);
 let O = {},
   p = new Set;
@@ -26,7 +26,7 @@ function R(e) {
   } = e;
   return !!(0, I.Z)(n) && (!!(i || (0, I.h)(null != n ? n : void 0) || function(e, t) {
     if (null == e) return !1;
-    let n = N.default.getCurrentUser();
+    let n = A.default.getCurrentUser();
     if (null == n) return !1;
     let i = S.ZP.getMember(t, n.id);
     return null != i && i.roles.includes(e.id)
@@ -37,7 +37,7 @@ function g(e, t) {
   if (!t.hasFeature(m.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(m.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
   let n = h.Z.isViewingServerShop(t.id);
   for (let i of Object.keys(e.permissionOverwrites)) {
-    let r = A.Z.getRole(t.id, i);
+    let r = N.Z.getRole(t.id, i);
     if (!R({
         guildId: t.id,
         role: r,
@@ -46,11 +46,11 @@ function g(e, t) {
     let s = e.permissionOverwrites[i];
     if ((0, T.TG)(e, s)) return !0
   }
-  let i = A.Z.getRole(t.id, t.getEveryoneRoleId()),
+  let i = N.Z.getRole(t.id, t.getEveryoneRoleId()),
     r = null != i && !a.e$(i.permissions, m.Plq.VIEW_CHANNEL),
     s = (0, T.wB)(e, e.permissionOverwrites[t.id]);
   if (r && !s) {
-    for (let e of Object.values(A.Z.getRoles(t.id)))
+    for (let e of Object.values(N.Z.getRoles(t.id)))
       if (R({
           guildId: t.id,
           role: e,
@@ -65,7 +65,7 @@ function C(e, t) {
   if (null == n) return !1;
   let i = f.Z.getChannel(t);
   if (null == i) return !1;
-  let r = A.Z.getGuild(i.getGuildId());
+  let r = N.Z.getGuild(i.getGuildId());
   if (null == r) return !1;
   let s = n.has(t),
     o = g(i, r);
@@ -98,7 +98,7 @@ function M(e) {
 }
 class P extends(i = l.ZP.Store) {
   initialize() {
-    this.waitFor(A.Z, f.Z, h.Z), d.Zo.subscribe({
+    this.waitFor(N.Z, f.Z, h.Z), d.Zo.subscribe({
       location: "1"
     }, () => v())
   }
@@ -106,7 +106,7 @@ class P extends(i = l.ZP.Store) {
     if (null == e) return !1;
     let n = O[e];
     return null == n && (! function(e) {
-      let t = A.Z.getGuild(e);
+      let t = N.Z.getGuild(e);
       if (null == t) return;
       let n = O[e] = new Set;
       if (!t.hasFeature(m.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || !(0, E.kT)(e) && !(0, _.Rw)(t)) return;

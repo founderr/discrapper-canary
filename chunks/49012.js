@@ -23,8 +23,8 @@ var i = n(302454),
   h = n(540709),
   f = n(881706),
   S = n(592125),
-  A = n(430824),
-  N = n(20303),
+  N = n(430824),
+  A = n(20303),
   m = n(902676),
   O = n(375954),
   p = n(699516),
@@ -70,7 +70,7 @@ function D(e, t) {
     let e = O.Z.getMessage(P, M),
       t = S.Z.getBasicChannel(P);
     U = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
-    let n = A.Z.getGuild(U),
+    let n = N.Z.getGuild(U),
       i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.iLy.IS_CROSSPOST)) && null != U;
     i && (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null ? (G = e.messageReference.message_id, w = e.messageReference.channel_id, x = e.messageReference.guild_id) : x = U;
     let r = (null == t ? void 0 : t.type) === C.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(C.oNc.COMMUNITY)) === !0,
@@ -79,7 +79,7 @@ function D(e, t) {
   }
   if (null != P) {
     let e = S.Z.getChannel(P),
-      t = A.Z.getGuild(null == e ? void 0 : e.getGuildId());
+      t = N.Z.getGuild(null == e ? void 0 : e.getGuildId());
     null != e && null != t && t.hasFeature(C.oNc.DISCOVERABLE) && g.default.track(C.rMx.URL_CLICKED, {
       url_domain: (0, m.F)(y),
       guild_id: t.id,
@@ -127,7 +127,7 @@ function D(e, t) {
   let H = "function" == typeof p ? p() : p,
     F = (0, m.E)(y),
     Y = !("http:" === F || "https:" === F);
-  if (!Y && (H || N.Z.isTrustedDomain(y)) || Y && N.Z.isTrustedProtocol(y)) {
+  if (!Y && (H || A.Z.isTrustedDomain(y)) || Y && A.Z.isTrustedProtocol(y)) {
     null == t || null != D && D ? Z() : b && E.Z.trackAnnouncementMessageLinkClicked({
       messageId: G,
       channelId: P,

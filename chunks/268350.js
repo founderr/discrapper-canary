@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $p: function() {
-    return N
+    return A
   },
   FQ: function() {
-    return A
+    return N
   },
   Il: function() {
     return m
@@ -50,7 +50,7 @@ var i = n(392711),
   h = n(981631),
   f = n(526761),
   S = n(689938);
-let A = async (e, t) => {
+let N = async (e, t) => {
   let {
     body: n
   } = await (0, I.Kb)(h.ANM.STICKER_PACK(e));
@@ -60,7 +60,7 @@ let A = async (e, t) => {
     pack: n,
     ingestStickers: t
   }), n
-}, N = async function() {
+}, A = async function() {
   let {
     locale: e = u.default.locale
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};

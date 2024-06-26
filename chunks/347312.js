@@ -20,9 +20,9 @@ var i = n(735250),
 let h = I.e3 / 1e3,
   f = 6,
   S = 2,
-  A = [0, 0, 0, 0, 0];
+  N = [0, 0, 0, 0, 0];
 
-function N(e) {
+function A(e) {
   let {
     showAll: t,
     currentTime: n,
@@ -102,7 +102,7 @@ function R(e) {
           }
           return (0, d.Z)(e, t)
         }
-      }(null != n ? n : [], i)) && void 0 !== e ? e : A
+      }(null != n ? n : [], i)) && void 0 !== e ? e : N
     }, [n, i])
   }(n, D), U = r.useRef(S), b = r.useRef(R), G = r.useRef(null), w = window.devicePixelRatio, {
     lastBackgroundFillColor: x,
@@ -131,7 +131,7 @@ function R(e) {
     }
   }(S, R);
   r.useEffect(() => {
-    let e = N({
+    let e = A({
       showAll: !S,
       currentTime: s,
       duration: c,
@@ -141,7 +141,7 @@ function R(e) {
   }, [y]), r.useEffect(() => {
     let e = P.current;
     if (null == e) return;
-    let t = N({
+    let t = A({
       showAll: !S,
       currentTime: s,
       duration: c,

@@ -30,8 +30,8 @@ var r = n(120356),
   h = n(922745),
   f = n(871499),
   S = n(402113),
-  A = n(800965),
-  N = n(157813),
+  N = n(800965),
+  A = n(157813),
   m = n(25827),
   O = n(131951),
   p = n(285952),
@@ -65,7 +65,7 @@ function y(e) {
     applicationId: s,
     onMouseDown: a,
     onMouseMove: f,
-    onMouseLeave: N,
+    onMouseLeave: A,
     onJumpToChannel: R,
     idle: L,
     selectedParticipant: P
@@ -76,7 +76,7 @@ function y(e) {
     className: M.videoControls,
     onMouseMove: f,
     onMouseDown: a,
-    onMouseLeave: N,
+    onMouseLeave: A,
     children: [(0, i.jsx)("div", {
       className: M.topControls,
       children: (0, i.jsx)(h.r, {
@@ -116,7 +116,7 @@ function y(e) {
         justify: p.Z.Justify.END,
         basis: "50%",
         align: p.Z.Align.CENTER,
-        children: [y ? null : (0, i.jsx)(A.Z, {
+        children: [y ? null : (0, i.jsx)(N.Z, {
           className: D.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
@@ -183,7 +183,7 @@ function b(e) {
     participantsOpen: n,
     showToggleParticipants: r
   } = e;
-  return r ? (0, i.jsx)(N.Z, {
+  return r ? (0, i.jsx)(A.Z, {
     channelId: t,
     isParticipantsOpen: n,
     className: D.participantsButton
@@ -203,7 +203,7 @@ function G(e) {
     onToggleHeight: E,
     isExpanded: I,
     hideExpandedButton: f
-  } = e, A = (0, _.Z)([u])[0];
+  } = e, N = (0, _.Z)([u])[0];
   return (0, i.jsx)("div", {
     className: D.pipHeader,
     onMouseMove: r,
@@ -220,7 +220,7 @@ function G(e) {
       }), l && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(h.r, {
           idle: !l,
-          title: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : c.name,
+          title: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : c.name,
           onJumpToChannel: d,
           preventIdleComponent: T.Z
         }), (0, i.jsxs)("div", {

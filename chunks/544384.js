@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   E: function() {
-    return A
+    return N
   },
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -25,7 +25,7 @@ var r = n(442837),
   f = n(65154),
   S = n(689938);
 
-function A(e, t, n) {
+function N(e, t, n) {
   let i = (0, r.e7)([a.Z], () => a.Z.getSelectedParticipantId(e.id)),
     s = (0, r.e7)([c.Z], () => null != i ? c.Z.getActiveStreamForStreamKey(i) : null, [i]);
   return (0, r.Wu)([E.default], () => {
@@ -37,7 +37,7 @@ function A(e, t, n) {
   }, [e, s, n, t])
 }
 
-function N(e) {
+function A(e) {
   var t;
   let {
     channel: n,
@@ -46,10 +46,10 @@ function N(e) {
     hideSelfOptions: c = !1,
     showReportOption: E = !1,
     handleGoLive: I,
-    onClose: N,
+    onClose: A,
     onSelect: m,
     appContext: O = h.IlC.APP
-  } = e, p = d.Z.supports(f.AN.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = a.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, g = A(n, r, a), C = (0, u.Z)(R, O), v = (0, l.Z)(R, O, h.VqG), L = null == R ? (0, i.jsx)(s.MenuItem, {
+  } = e, p = d.Z.supports(f.AN.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = a.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, g = N(n, r, a), C = (0, u.Z)(R, O), v = (0, l.Z)(R, O, h.VqG), L = null == R ? (0, i.jsx)(s.MenuItem, {
     id: "share-your-screen",
     label: S.Z.Messages.SHARE_YOUR_SCREEN,
     icon: s.ScreenArrowIcon,
@@ -76,7 +76,7 @@ function N(e) {
     children: (0, i.jsxs)(s.Menu, {
       onSelect: m,
       navId: "manage-streams",
-      onClose: N,
+      onClose: A,
       "aria-label": null != R ? S.Z.Messages.STOP_STREAMING : S.Z.Messages.SHARE_YOUR_SCREEN,
       children: [(0, i.jsx)(s.MenuGroup, {
         children: g.map(e => {

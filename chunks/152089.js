@@ -34,8 +34,8 @@ function _(e) {
     hidePersonalInformation: h,
     type: f,
     emojiIntention: S,
-    editorRef: A,
-    onSendMessage: N,
+    editorRef: N,
+    onSendMessage: A,
     onSendSticker: m,
     setValue: O
   } = e, p = {
@@ -53,18 +53,18 @@ function _(e) {
     hidePersonalInformation: !0 === h,
     chatInputType: f,
     emojiIntention: S,
-    sendMessage: N,
+    sendMessage: A,
     sendSticker: m,
     insertText: (e, t) => {
       var n;
-      null === (n = A.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
+      null === (n = N.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
     },
     replaceText: (e, t) => {
       O(e, null != t ? t : (0, s.JM)(e))
     },
     getCommandOptionValues: () => {
       var e;
-      return null === (e = A.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
+      return null === (e = N.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
     }
   };
   if (null != n) {
@@ -101,8 +101,8 @@ function d(e) {
     optionText: d
   } = e, E = null;
   for (let e of a.R) {
-    var I, T, h, f, S, A;
-    let N = a.W[e];
+    var I, T, h, f, S, N;
+    let A = a.W[e];
     if (e === l.eq.GIFS || e === l.eq.CHOICES) {
       if (i.commands === l.L8.OLD_BUILT_INS) {
         if (c({
@@ -115,7 +115,7 @@ function d(e) {
           })) {
           E = {
             type: e,
-            typeInfo: N,
+            typeInfo: A,
             query: _
           };
           break
@@ -129,7 +129,7 @@ function d(e) {
           options: i
         })) return {
         type: e,
-        typeInfo: N,
+        typeInfo: A,
         query: d
       }
     } else if (e === l.eq.COMMANDS && i.commands !== l.L8.OLD_BUILT_INS) {
@@ -143,8 +143,8 @@ function d(e) {
         })) {
         E = {
           type: e,
-          typeInfo: N,
-          query: _.substring(null !== (T = null === (I = N.sentinel) || void 0 === I ? void 0 : I.length) && void 0 !== T ? T : 0)
+          typeInfo: A,
+          query: _.substring(null !== (T = null === (I = A.sentinel) || void 0 === I ? void 0 : I.length) && void 0 !== T ? T : 0)
         };
         break
       }
@@ -159,7 +159,7 @@ function d(e) {
         })) {
         E = {
           type: e,
-          typeInfo: N,
+          typeInfo: A,
           query: _
         };
         break
@@ -175,8 +175,8 @@ function d(e) {
         })) {
         E = {
           type: e,
-          typeInfo: N,
-          query: r.substring(null !== (f = null === (h = N.sentinel) || void 0 === h ? void 0 : h.length) && void 0 !== f ? f : 0)
+          typeInfo: A,
+          query: r.substring(null !== (f = null === (h = A.sentinel) || void 0 === h ? void 0 : h.length) && void 0 !== f ? f : 0)
         };
         break
       }
@@ -190,8 +190,8 @@ function d(e) {
       })) {
       E = {
         type: e,
-        typeInfo: N,
-        query: r.substring(null !== (A = null === (S = N.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== A ? A : 0)
+        typeInfo: A,
+        query: r.substring(null !== (N = null === (S = A.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== N ? N : 0)
       };
       break
     }

@@ -37,7 +37,7 @@ function f(e) {
     icon: t.icon,
     bot: t.bot,
     size: 24
-  }), f = (0, o.ap)((0, l.ZP)()), S = r.useRef(null), A = r.useRef(null), N = r.useRef(null), m = (0, a.useToken)(a.tokens.colors.BG_BASE_PRIMARY).hex(), O = (0, u.ZP)("number" == typeof T ? "" : T, null != m ? m : ""), p = r.useMemo(() => {
+  }), f = (0, o.ap)((0, l.ZP)()), S = r.useRef(null), N = r.useRef(null), A = r.useRef(null), m = (0, a.useToken)(a.tokens.colors.BG_BASE_PRIMARY).hex(), O = (0, u.ZP)("number" == typeof T ? "" : T, null != m ? m : ""), p = r.useMemo(() => {
     var e, t;
     let n = (0, s.compact)([c.Z.parseHexString(O), c.Z.parseHexString(f ? "#000000" : "#ffffff")]);
     return null !== (t = null === (e = (0, d.k8)({
@@ -45,11 +45,11 @@ function f(e) {
       ratio: 5,
       saturationFactor: .6
     })) || void 0 === e ? void 0 : e.toHexString()) && void 0 !== t ? t : O
-  }, [O, f]), R = h(S), g = h(A), C = r.useCallback(() => {
+  }, [O, f]), R = h(S), g = h(N), C = r.useCallback(() => {
     var e, t, i, r, o, a, l, u, _;
     let c = n.current,
       d = S.current,
-      E = N.current,
+      E = A.current,
       I = parseInt(null !== (e = null == R ? void 0 : R.height) && void 0 !== e ? e : ""),
       T = parseInt(null !== (t = null == g ? void 0 : g.height) && void 0 !== t ? t : "");
     if (null != c && null != d && null != E && !isNaN(I) && !isNaN(T)) {
@@ -59,8 +59,8 @@ function f(e) {
         n = 0 !== c.clientHeight ? c.clientHeight : T + 20,
         h = T - I,
         S = (0, s.clamp)(t - n, h + 1, T + 20);
-      let A = (r = e, (o = h) === (a = S) ? 1 : (0, s.clamp)((r - o) / (a - o), 0, 1));
-      d.style.filter = "brightness(".concat(1 + ((f ? 1.4 : .6) - (l = 1)) * A, ")"), d.style.backgroundColor = "color-mix(in oklab,".concat(O, " ").concat((1 - A) * 100, "%, ").concat(p, ")"), E.style.opacity = "".concat(0 + (1 - (u = 0)) * A), E.style.transform = "translateY(".concat((_ = I / 4) + (0 - _) * A, "px)")
+      let N = (r = e, (o = h) === (a = S) ? 1 : (0, s.clamp)((r - o) / (a - o), 0, 1));
+      d.style.filter = "brightness(".concat(1 + ((f ? 1.4 : .6) - (l = 1)) * N, ")"), d.style.backgroundColor = "color-mix(in oklab,".concat(O, " ").concat((1 - N) * 100, "%, ").concat(p, ")"), E.style.opacity = "".concat(0 + (1 - (u = 0)) * N), E.style.transform = "translateY(".concat((_ = I / 4) + (0 - _) * N, "px)")
     }
   }, [p, O, null == g ? void 0 : g.height, f, n, null == R ? void 0 : R.height]);
   return r.useEffect(() => {
@@ -88,14 +88,14 @@ function f(e) {
       }), (0, i.jsx)("div", {
         className: I.nameContainer,
         children: (0, i.jsx)(a.Heading, {
-          ref: N,
+          ref: A,
           className: I.textApplicationName,
           variant: "heading-md/extrabold",
           children: t.name
         })
       })]
     }), (0, i.jsx)("div", {
-      ref: A,
+      ref: N,
       className: I.bannerBackground,
       style: {
         backgroundColor: O

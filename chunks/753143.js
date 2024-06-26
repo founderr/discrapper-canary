@@ -31,8 +31,8 @@ function l(e) {
     paddingBottom: I = 0,
     getScrollerState: T,
     getAnchorId: h
-  } = e, f = (0, s.Z)(), S = (0, i.useRef)(a), [A] = (0, i.useState)(() => new r.Z), {
-    dirty: N,
+  } = e, f = (0, s.Z)(), S = (0, i.useRef)(a), [N] = (0, i.useState)(() => new r.Z), {
+    dirty: A,
     chunkStart: m,
     chunkEnd: O,
     forceUpdateOnChunkChange: p
@@ -63,7 +63,7 @@ function l(e) {
       let e = Math.max(0, m * d);
       return null != _ && e < _
     }, [d, m, _]),
-    L = (0, i.useMemo)(() => N > 0 ? S.current : (A.mergeProps({
+    L = (0, i.useMemo)(() => A > 0 ? S.current : (N.mergeProps({
       sectionHeight: n,
       rowHeight: l,
       footerHeight: u,
@@ -72,10 +72,10 @@ function l(e) {
       paddingTop: E,
       sections: t,
       getAnchorId: h
-    }), A.compute(Math.max(0, m * d), O * d)), [N, m, O, n, l, u, c, I, E, t, A, d, h]);
+    }), N.compute(Math.max(0, m * d), O * d)), [A, m, O, n, l, u, c, I, E, t, N, d, h]);
   return (0, i.useLayoutEffect)(() => void(S.current = L)), {
     ...L,
-    listComputer: A,
+    listComputer: N,
     forceUpdateOnChunkChange: p,
     anchor: g,
     isSidebarVisible: v

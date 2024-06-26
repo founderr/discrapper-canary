@@ -16,8 +16,8 @@ var i = n(278074),
   h = n(960904),
   f = n(830121),
   S = n(710845),
-  A = n(163268),
-  N = n(38618),
+  N = n(163268),
+  A = n(38618),
   m = n(687516),
   O = n(539573),
   p = n(826581),
@@ -242,8 +242,8 @@ let ef = {
         message: ec.Z.Messages.SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE,
         messageName: "BOT_GUILD_EXPLICIT_CONTENT"
       })), l = (0, y.r)();
-      eS.sendBotMessage(e, s, a, l), (0, A.aP)({
-        action: A.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
+      eS.sendBotMessage(e, s, a, l), (0, N.aP)({
+        action: N.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
         messageId: l,
         channelId: e,
         context: n
@@ -343,7 +343,7 @@ let ef = {
         isPreload: _,
         skipLocalFetch: c,
         truncate: d
-      } = e, E = K.Z.getChannel(t), I = N.Z.isConnectedOrOverlay(), T = Date.now();
+      } = e, E = K.Z.getChannel(t), I = A.Z.isConnectedOrOverlay(), T = Date.now();
       if (null != E && E.type === el.d4z.GUILD_STORE) return !1;
       if (t === eu.V) return;
       if (ed.log("Fetching messages for ".concat(t, " between ").concat(n, " and ").concat(i, ". jump=").concat(JSON.stringify(l))), eS._tryFetchMessagesCached({
@@ -365,8 +365,8 @@ let ef = {
         type: "LOAD_MESSAGES"
       });
       let S = null == h ? void 0 : h.messageId,
-        A = new eT;
-      return !c && this.fetchLocalMessages(t, n, i, s, A), r.tn.get({
+        N = new eT;
+      return !c && this.fetchLocalMessages(t, n, i, s, N), r.tn.get({
         url: el.ANM.MESSAGES(t),
         query: {
           before: n,
@@ -397,7 +397,7 @@ let ef = {
             r[0].id === e && (E = !1)
           }
         }
-        ed.log("Fetched ".concat(r.length, " messages for ").concat(t, " isBefore:").concat(a, " isAfter:").concat(u)), A.markComplete(), o.Z.dispatch({
+        ed.log("Fetched ".concat(r.length, " messages for ").concat(t, " isBefore:").concat(a, " isAfter:").concat(u)), N.markComplete(), o.Z.dispatch({
           type: "LOAD_MESSAGES_SUCCESS",
           channelId: t,
           messages: r,
@@ -407,7 +407,7 @@ let ef = {
           hasMoreAfter: E,
           limit: s,
           jump: l,
-          isStale: !I || N.Z.lastTimeConnectedChanged() >= T,
+          isStale: !I || A.Z.lastTimeConnectedChanged() >= T,
           truncate: d
         })
       }), !0), () => (ed.log("Failed to fetch messages for ".concat(t)), o.Z.dispatch({
@@ -433,7 +433,7 @@ let ef = {
         return
       }
       if (ed.log("fetched ".concat(E.messages.length, " messages from local database (channel_id: ").concat(e, ", remote_fetch_completed: ").concat(r.completed, ")")), Y.Z.addLocalMessages(e, E.messages.length), !r.completed && E.messages.length > 0) {
-        let t = E.messages.length >= i && E.connectionId === N.Z.lastTimeConnectedChanged();
+        let t = E.messages.length >= i && E.connectionId === A.Z.lastTimeConnectedChanged();
         o.Z.dispatch({
           type: "LOCAL_MESSAGES_LOADED",
           guildId: s.guild_id,
@@ -638,8 +638,8 @@ let ef = {
           tts: S = !1
         } = t,
         {
-          activityAction: A,
-          location: N,
+          activityAction: N,
+          location: A,
           suggestedInvite: m,
           stickerIds: g,
           messageReference: C,
@@ -650,7 +650,7 @@ let ef = {
         [F, Y] = (0, H.Z)(_);
       F && (_ = Y, V = (0, en.pj)(V, el.iLy.SUPPRESS_NOTIFICATIONS));
       let j = (null === (i = n.messageReference) || void 0 === i ? void 0 : i.type) === el.Uvt.FORWARD;
-      if ("" === _ && null == A && null == g && null == b && !j) return Promise.resolve();
+      if ("" === _ && null == N && null == g && null == b && !j) return Promise.resolve();
       let z = null != C ? el.uaV.REPLY : el.uaV.DEFAULT,
         q = null !== (s = n.nonce) && void 0 !== s ? s : (0, y.r)();
       if (!1 !== n.eagerDispatch) {
@@ -687,16 +687,16 @@ let ef = {
           flags: V
         }
       };
-      if (null != A) {
-        let e = A.type === el.mFx.JOIN_REQUEST ? null == A ? void 0 : A.activity.session_id : W.default.getSessionId();
+      if (null != N) {
+        let e = N.type === el.mFx.JOIN_REQUEST ? null == N ? void 0 : N.activity.session_id : W.default.getSessionId();
         if (null != e) {
           let t = {
-              type: A.type,
+              type: N.type,
               session_id: e
             },
             {
               activity: n
-            } = A;
+            } = N;
           null != n.party && null != n.party.id && (t.party_id = n.party.id), Q.message.application_id = n.application_id, Q.message.activity = t
         }
       }
@@ -802,7 +802,7 @@ let ef = {
               content: _,
               channelId: e,
               messageId: a.body.id,
-              location: null != N ? N : "chat_input",
+              location: null != A ? A : "chat_input",
               suggested: m
             }), ! function(e, t, n, i, r) {
               (0, ei.Q_)(e).forEach(e => {
@@ -817,7 +817,7 @@ let ef = {
                   automatic_send: r
                 })
               })
-            }(_, e, a.body.id, null != N ? N : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser), t(a)
+            }(_, e, a.body.id, null != A ? A : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser), t(a)
           } else {
             var S;
             ed.log("Failed to send message", {

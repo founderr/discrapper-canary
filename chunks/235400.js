@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(166625),
   f = n(594174),
   S = n(626135),
-  A = n(74538),
-  N = n(864106),
+  N = n(74538),
+  A = n(864106),
   m = n(240781),
   O = n(818611),
   p = n(981631),
@@ -52,11 +52,11 @@ function v(e) {
     var e, t;
     if (null != E) return E;
     let i = (0, c.iC)(s, n);
-    return null != f ? null !== (e = i.find(e => e.id === f)) && void 0 !== e ? e : null : void 0 !== v ? v : null == D ? null : null !== (t = i.find(e => (0, N.sr)(e, D))) && void 0 !== t ? t : null
+    return null != f ? null !== (e = i.find(e => e.id === f)) && void 0 !== e ? e : null : void 0 !== v ? v : null == D ? null : null !== (t = i.find(e => (0, A.sr)(e, D))) && void 0 !== t ? t : null
   }), {
     product: y,
     purchase: U
-  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = A.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), x = (0, N.sr)(M, void 0 === v ? D : v), B = () => {
+  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), x = (0, A.sr)(M, void 0 === v ? D : v), B = () => {
     L(M), u()
   }, k = r.useCallback(e => {
     u(), (0, _.mK)({
@@ -106,7 +106,7 @@ function v(e) {
         children: g.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, i.jsx)(T.Z, {
         subscriptionTier: R.Si.TIER_2,
-        buttonText: A.ZP.isPremium(t) ? g.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : g.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+        buttonText: N.ZP.isPremium(t) ? g.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : g.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
       }), (0, i.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.PRIMARY,
@@ -126,8 +126,8 @@ function L(e) {
     initialSelectedDecoration: I,
     initialSelectedDecorationId: T,
     isTryItOutFlow: h,
-    guild: A
-  } = e, N = (0, o.e7)([f.default], () => f.default.getCurrentUser()), {
+    guild: N
+  } = e, A = (0, o.e7)([f.default], () => f.default.getCurrentUser()), {
     analyticsLocations: m
   } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL), {
     categories: O,
@@ -145,7 +145,7 @@ function L(e) {
       categories: [...O.values()],
       itemTypes: [s.Z.AVATAR_DECORATION]
     })
-  }, [O]), null == N ? null : (0, i.jsx)(u.Gt, {
+  }, [O]), null == A ? null : (0, i.jsx)(u.Gt, {
     value: m,
     children: (0, i.jsx)(a.ModalRoot, {
       transitionState: t,
@@ -155,8 +155,8 @@ function L(e) {
         className: C.spinner,
         type: a.Spinner.Type.SPINNING_CIRCLE
       }) : (0, i.jsx)(v, {
-        user: N,
-        guild: A,
+        user: A,
+        guild: N,
         categories: O,
         purchases: R,
         analyticsLocations: m,

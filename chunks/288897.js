@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(77224),
   f = n(135223),
   S = n(704875),
-  A = n(653309),
-  N = n(214262),
+  N = n(653309),
+  A = n(214262),
   m = n(622322);
 
 function O(e, t, n) {
@@ -82,7 +82,7 @@ class p extends r.PureComponent {
     } = this.props, {
       attributes: s,
       children: o
-    } = e, a = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, A.Z)(n, e);
+    } = e, a = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, N.Z)(n, e);
     return null != a ? a : (0, i.jsx)("span", {
       ...s,
       children: o
@@ -300,21 +300,21 @@ class p extends r.PureComponent {
       decorateExtra: h,
       renderExtraElement: f,
       renderExtraLeaf: S,
-      ...A
+      ...N
     } = this.props;
     return (0, i.jsxs)("div", {
       ref: this.containerRef,
       className: n,
       children: [this.state.showPlaceholder ? (0, i.jsx)("div", {
-        className: o()(N.placeholder, t),
+        className: o()(A.placeholder, t),
         "aria-hidden": !0,
         children: l
       }) : null, (0, i.jsx)(a.mH, {
         editor: e,
         value: [...this.state.initialValue],
         children: (0, i.jsx)(a.CX, {
-          ...A,
-          className: o()(m.markup, N.editor, t),
+          ...N,
+          className: o()(m.markup, A.editor, t),
           decorate: this.decorate,
           renderElement: this.renderElement,
           renderLeaf: this.renderLeaf,

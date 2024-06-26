@@ -23,11 +23,11 @@ var i = n(735250),
   h = n(981631),
   f = n(689938),
   S = n(142544);
-let A = (0, E.kt)({
+let N = (0, E.kt)({
     id: "1",
     type: h.d4z.DM
   }),
-  N = r.forwardRef(function(e, t) {
+  A = r.forwardRef(function(e, t) {
     let {
       placeholder: n,
       headerText: r,
@@ -75,8 +75,8 @@ function m(e) {
     onFocus: E,
     channel: I,
     className: h
-  } = e, [f, N] = r.useState(""), [m, O] = r.useState((0, _.JM)("")), p = () => {
-    N(""), O((0, _.JM)(""))
+  } = e, [f, A] = r.useState(""), [m, O] = r.useState((0, _.JM)("")), p = () => {
+    A(""), O((0, _.JM)(""))
   }, R = u.I.ATOMIC_REACTOR_REPLY_INPUT, g = r.useRef(null);
   return (0, i.jsx)(c.Z, {
     ref: g,
@@ -86,9 +86,9 @@ function m(e) {
     showRemainingCharsAfterCount: -1,
     allowNewLines: !1,
     maxCharacterCount: T.z,
-    channel: null != I ? I : A,
+    channel: null != I ? I : N,
     onChange: (e, t, n) => {
-      N(t), O(n)
+      A(t), O(n)
     },
     type: a ? {
       ...R,
@@ -154,7 +154,7 @@ let O = (e, t) => {
         ref: _,
         children: (0, i.jsx)(d.$, {
           messageId: h.lds,
-          channel: A,
+          channel: N,
           closePopout: () => {
             u(!1)
           },
@@ -205,7 +205,7 @@ t.ZP = e => {
             reply: null
           }), c(!1)
         }
-      }), u && (0, i.jsx)(N, {
+      }), u && (0, i.jsx)(A, {
         hide: () => c(!1),
         ref: d,
         headerText: n,

@@ -13,13 +13,13 @@ n.d(t, {
     return p
   },
   e7: function() {
-    return N
+    return A
   },
   wv: function() {
     return m
   },
   yK: function() {
-    return A
+    return N
   }
 });
 var i = n(470079),
@@ -87,7 +87,7 @@ async function S(e) {
   })
 }
 
-function A(e, t) {
+function N(e, t) {
   l.Z.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -95,7 +95,7 @@ function A(e, t) {
   })
 }
 
-function N() {
+function A() {
   l.Z.dispatch({
     type: "TOGGLE_TOPICS_BAR"
   })
@@ -208,7 +208,7 @@ let v = 12633 == n.j ? {
   setSummaryFeedback: p,
   updateVisibleMessages: O,
   setSelectedSummary: m,
-  setHighlightedSummary: A,
+  setHighlightedSummary: N,
   fetchSummaries: S,
   fetchSummariesBulk: g,
   useChannelSummaries: function(e) {

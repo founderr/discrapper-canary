@@ -21,15 +21,15 @@ var r = n(120356),
   h = n(835225),
   f = n(939039),
   S = n(117795),
-  A = n(358085),
-  N = n(792125),
+  N = n(358085),
+  A = n(792125),
   m = n(998502),
   O = n(689938),
   p = n(204172);
 let R = e => m.ZP.close(e),
   g = e => m.ZP.minimize(e),
   C = (e, t) => {
-    (0, A.isMac)() && !t.altKey ? m.ZP.fullscreen(e) : m.ZP.maximize(e)
+    (0, N.isMac)() && !t.altKey ? m.ZP.fullscreen(e) : m.ZP.maximize(e)
   },
   v = e => {
     let {
@@ -38,7 +38,7 @@ let R = e => m.ZP.close(e),
       hasOpenLayer: r
     } = e;
     return (0, i.jsxs)("div", {
-      className: s()(p.typeWindows, (0, N.Q)(n), {
+      className: s()(p.typeWindows, (0, A.Q)(n), {
         [p.withBackgroundOverride]: !r
       }),
       children: [(0, i.jsx)("div", {
@@ -74,7 +74,7 @@ let R = e => m.ZP.close(e),
       hasOpenLayer: l
     } = e;
     return (0, i.jsxs)(a.Clickable, {
-      className: s()(r ? p.typeMacOSWithFrame : p.typeMacOS, t ? p.focused : p.unfocused, (0, N.Q)(o), {
+      className: s()(r ? p.typeMacOSWithFrame : p.typeMacOS, t ? p.focused : p.unfocused, (0, A.Q)(o), {
         [p.withBackgroundOverride]: !l
       }),
       onDoubleClick: () => m.ZP.maximize(n),
@@ -127,13 +127,13 @@ function D(e) {
   } = e, u = (0, _.bp)(), d = (0, o.e7)([c.Z], () => c.Z.isFullscreenInContext(u)), E = (0, l.Z)();
   if (d) return null;
   switch (n) {
-    case A.PlatformTypes.WINDOWS:
+    case N.PlatformTypes.WINDOWS:
       return (0, i.jsx)(v, {
         windowKey: r,
         themeOverride: a,
         hasOpenLayer: E
       });
-    case A.PlatformTypes.OSX:
+    case N.PlatformTypes.OSX:
       return (0, i.jsx)(L, {
         focused: t,
         windowKey: r,

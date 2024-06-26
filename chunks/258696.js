@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(594174),
   f = n(74538),
   S = n(94161),
-  A = n(9277),
-  N = n(897291),
+  N = n(9277),
+  A = n(897291),
   m = n(764794),
   O = n(241553),
   p = n(319417),
@@ -43,13 +43,13 @@ function v(e) {
   }, [o]), s && o ? (0, i.jsx)(O.Z, {
     disabled: t,
     channel: n
-  }) : (0, i.jsx)(N.Z, {
+  }) : (0, i.jsx)(A.Z, {
     disabled: t,
     channel: n
   })
 }
 t.Z = r.memo(function(e) {
-  var t, n, r, d, N, O, L, D;
+  var t, n, r, d, A, O, L, D;
   let {
     type: M,
     disabled: P,
@@ -88,7 +88,7 @@ t.Z = r.memo(function(e) {
       r = c.Z.getRecipientEligibility(t);
     return [F && i && r, r]
   });
-  return (!s.tq && (y.isDM() && (null === (N = M.gifts) || void 0 === N ? void 0 : N.button) != null && null == k && (f.ZP.isPremiumExactly(Y, g.p9.TIER_2) && z && E.Z.trackExposure({
+  return (!s.tq && (y.isDM() && (null === (A = M.gifts) || void 0 === A ? void 0 : A.button) != null && null == k && (f.ZP.isPremiumExactly(Y, g.p9.TIER_2) && z && E.Z.trackExposure({
     location: "dc120b_5"
   }), K && H.push((0, i.jsx)(m.Z, {
     disabled: P,
@@ -98,7 +98,7 @@ t.Z = r.memo(function(e) {
   }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == k && !Z && H.push((0, i.jsx)(v, {
     disabled: P,
     channel: y
-  }, "gift")), (null === (L = M.gifs) || void 0 === L ? void 0 : L.button) != null && null == k && H.push((0, i.jsx)(A.Z, {
+  }, "gift")), (null === (L = M.gifs) || void 0 === L ? void 0 : L.button) != null && null == k && H.push((0, i.jsx)(N.Z, {
     disabled: P,
     type: M
   }, "gif")), (null === (D = M.stickers) || void 0 === D ? void 0 : D.button) != null && null == k && H.push((0, i.jsx)(R.Z, {

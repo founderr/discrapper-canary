@@ -157,13 +157,13 @@ class _ {
       let {
         previous: f,
         current: S,
-        currentTimestampMs: A,
-        previousTimestampMs: N,
+        currentTimestampMs: N,
+        previousTimestampMs: A,
         numRateSamples: m
       } = h;
-      if (void 0 !== N && A > N) {
+      if (void 0 !== A && N > A) {
         var t, n, i, r, s, o, a, l, u, _, c, d, E, I;
-        let O = A - N,
+        let O = N - A,
           p = {
             userId: T,
             silent: null !== (n = S.silent) && void 0 !== n ? n : 0 - (null !== (t = f.silent) && void 0 !== t ? t : 0),
@@ -181,7 +181,7 @@ class _ {
           };
         p.normal + p.merged + p.expanded + p.accelerated + p.preemptiveExpanded > 0 && e.push(p)
       }
-      this.periodicInboundStats[T].accelerateRateSum = 0, this.periodicInboundStats[T].expandRateSum = 0, this.periodicInboundStats[T].preemptiveExpandRateSum = 0, this.periodicInboundStats[T].speechExpandRateSum = 0, this.periodicInboundStats[T].numRateSamples = 0, this.periodicInboundStats[T].previous = S, this.periodicInboundStats[T].previousTimestampMs = A
+      this.periodicInboundStats[T].accelerateRateSum = 0, this.periodicInboundStats[T].expandRateSum = 0, this.periodicInboundStats[T].preemptiveExpandRateSum = 0, this.periodicInboundStats[T].speechExpandRateSum = 0, this.periodicInboundStats[T].numRateSamples = 0, this.periodicInboundStats[T].previous = S, this.periodicInboundStats[T].previousTimestampMs = N
     }
     return e
   }
@@ -218,7 +218,7 @@ class _ {
       }), r().forEach(e.rtp.inbound, (t, n) => {
         r().forEach(t, t => {
           if ("audio" === t.type) {
-            var i, s, o, a, l, u, _, c, d, E, I, T, h, f, S, A, N;
+            var i, s, o, a, l, u, _, c, d, E, I, T, h, f, S, N, A;
             let m = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
               O = t.packetsReceived,
               p = t.packetsLost,
@@ -298,8 +298,8 @@ class _ {
               current: D,
               accelerateRateSum: null !== (f = t.accelerateRate) && void 0 !== f ? f : 0,
               expandRateSum: null !== (S = t.expandRate) && void 0 !== S ? S : 0,
-              preemptiveExpandRateSum: null !== (A = t.preemptiveExpandRate) && void 0 !== A ? A : 0,
-              speechExpandRateSum: null !== (N = t.speechExpandRate) && void 0 !== N ? N : 0,
+              preemptiveExpandRateSum: null !== (N = t.preemptiveExpandRate) && void 0 !== N ? N : 0,
+              speechExpandRateSum: null !== (A = t.speechExpandRate) && void 0 !== A ? A : 0,
               numRateSamples: 1
             }
           }

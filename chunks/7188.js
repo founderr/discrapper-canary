@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(618158),
   f = n(871499),
   S = n(981631),
-  A = n(474936),
-  N = n(689938),
+  N = n(474936),
+  A = n(689938),
   m = n(416555);
 
 function O(e) {
@@ -55,7 +55,7 @@ function R(e) {
     hideBadges: t = !1,
     stream: n,
     ...E
-  } = e, I = (0, s.e7)([d.default], () => T.ZP.isPremium(d.default.getCurrentUser(), A.p9.TIER_1)), m = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)), R = r.useMemo(() => null != n ? [n] : [], [n]), g = (0, a.zW)(null == m ? void 0 : m.id), C = r.useCallback(() => {
+  } = e, I = (0, s.e7)([d.default], () => T.ZP.isPremium(d.default.getCurrentUser(), N.p9.TIER_1)), m = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)), R = r.useMemo(() => null != n ? [n] : [], [n]), g = (0, a.zW)(null == m ? void 0 : m.id), C = r.useCallback(() => {
     null != m && (0, _.Z)(m.getGuildId(), m.id, S.jXE.STREAM_SETTINGS)
   }, [m]);
   if (null == n || null == m) return null;
@@ -82,7 +82,7 @@ function R(e) {
     animation: o.Popout.Animation.FADE,
     children: e => (0, i.jsx)(f.Z, {
       ...e,
-      label: N.Z.Messages.STREAMER_SETTINGS_TITLE,
+      label: A.Z.Messages.STREAMER_SETTINGS_TITLE,
       iconComponent: v,
       ...E
     })

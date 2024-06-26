@@ -16,15 +16,15 @@ var i = n(108131),
 let h = new u.Z("EntityVersionsManager");
 class f extends a.Z {
   _initialize() {
-    o.Z.subscribe("CONNECTION_OPEN", A)
+    o.Z.subscribe("CONNECTION_OPEN", N)
   }
   _terminate() {
-    o.Z.unsubscribe("CONNECTION_OPEN", A)
+    o.Z.unsubscribe("CONNECTION_OPEN", N)
   }
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      GUILD_CREATE: N,
+      GUILD_CREATE: A,
       DELETED_ENTITY_IDS: S
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
@@ -83,13 +83,13 @@ function S(e) {
   })
 }
 
-function A() {
+function N() {
   l.Z.getAll().then(e => {
     e.forEach(e => m(e))
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     guild: t
   } = e;

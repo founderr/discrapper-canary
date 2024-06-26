@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(926491),
   f = n(419922),
   S = n(27733),
-  A = n(611480),
-  N = n(981631),
+  N = n(611480),
+  A = n(981631),
   m = n(474936),
   O = n(689938),
   p = n(317510);
@@ -35,12 +35,12 @@ function R(e) {
   (0, T.fP)();
   let {
     analyticsLocations: C
-  } = (0, _.ZP)(u.Z.EMPTY_STATE), v = (0, a.Wu)([h.Z], () => A.Wt.map(e => h.Z.getStickerById(e)));
+  } = (0, _.ZP)(u.Z.EMPTY_STATE), v = (0, a.Wu)([h.Z], () => N.Wt.map(e => h.Z.getStickerById(e)));
   r.useEffect(() => {
-    I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+    I.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
       type: m.cd.EMPTY_STICKER_PICKER_UPSELL,
       source: {
-        section: N.jXE.EMPTY_STICKER_PICKER_UPSELL
+        section: A.jXE.EMPTY_STICKER_PICKER_UPSELL
       },
       location_stack: C
     })
@@ -79,7 +79,7 @@ function R(e) {
         }, null == e ? void 0 : e.id))
       })]
     }), !M && (0, i.jsx)(S.Z, {
-      analyticsSection: N.jXE.EXPRESSION_PICKER,
+      analyticsSection: A.jXE.EXPRESSION_PICKER,
       buttonText: M ? P ? O.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })

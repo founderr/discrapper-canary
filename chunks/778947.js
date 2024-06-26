@@ -26,8 +26,8 @@ var i = n(735250),
   h = n(453687),
   f = n(304176),
   S = n(98278),
-  A = n(869765),
-  N = n(243317),
+  N = n(869765),
+  A = n(243317),
   m = n(621853),
   O = n(484459),
   p = n(204197),
@@ -225,8 +225,8 @@ function j(e) {
       author: h,
       compact: f = !1,
       subscribeToGroupId: S,
-      animate: A = !0,
-      onContextMenu: N,
+      animate: N = !0,
+      onContextMenu: A,
       onClickAvatar: m,
       onPopoutRequestClose: g,
       showAvatarPopout: C
@@ -245,7 +245,7 @@ function j(e) {
       user: b,
       guildId: o,
       size: x,
-      animateOnHover: null != S ? !v : !A,
+      animateOnHover: null != S ? !v : !N,
       showPending: !0
     }), H = T.isInteractionPlaceholder(), F = r.useMemo(() => {
       var e, t;
@@ -282,7 +282,7 @@ function j(e) {
           avatarDecorationSrc: k,
           compact: f,
           onClick: m,
-          onContextMenu: N,
+          onContextMenu: A,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,
           showCommunicationDisabledStyles: E,
@@ -297,7 +297,7 @@ function j(e) {
         avatarDecorationSrc: k,
         compact: f,
         onClick: m,
-        onContextMenu: N,
+        onContextMenu: A,
         onMouseDown: void 0,
         onKeyDown: void 0,
         showCommunicationDisabledStyles: E,
@@ -355,14 +355,14 @@ function j(e) {
     messageId: t.id
   }, "connections"));
   let ea = [];
-  (0, P.yE)(t.flags, w.iLy.SUPPRESS_NOTIFICATIONS) && ea.push((0, i.jsx)(N.Z, {}, "suppress-notifications"));
+  (0, P.yE)(t.flags, w.iLy.SUPPRESS_NOTIFICATIONS) && ea.push((0, i.jsx)(A.Z, {}, "suppress-notifications"));
   let el = {};
   el[G.a.SYSTEM_TAG] = et, el[G.a.BADGES] = en;
   let eu = Z(e, K, el),
     e_ = (0, h.XX)(t, k),
     ec = (0, h.Dv)(t),
     ed = F ? "".concat(e_) : "".concat(e_, " ").concat(ec),
-    eE = (null == n ? void 0 : n.state) === A.Y.LOADED ? (0, h.Gq)(t) : void 0;
+    eE = (null == n ? void 0 : n.state) === N.Y.LOADED ? (0, h.Gq)(t) : void 0;
   return (0, i.jsx)(H, {
     message: t,
     avatar: J,

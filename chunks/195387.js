@@ -27,20 +27,20 @@ function f(e) {
     channelId: f,
     onClose: S
   } = e, {
-    trackUserProfileAction: A
+    trackUserProfileAction: N
   } = (0, d.KZ)(), {
-    newestAnalyticsLocation: N
+    newestAnalyticsLocation: A
   } = (0, o.ZP)(), m = (0, r.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)), O = (0, l.ms)(null != n ? n : null, !0), p = (0, r.e7)([c.Z], () => null != f ? f : c.Z.getChannelId(n, !0), [f, n]);
   return null == n || !O || m ? null : (0, i.jsx)(E.Z, {
     variant: "banner",
     icon: s.ModerationIcon,
     text: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
     onClick: () => {
-      u.Z.close(), A({
+      u.Z.close(), N({
         action: "PRESS_MOD_VIEW"
       }), (0, a.r)(n, t.id, null != p ? p : I.oC.MEMBER_SAFETY, {
         modViewPanel: T.k.INFO,
-        sourceLocation: N
+        sourceLocation: A
       }), null == S || S()
     }
   })

@@ -13,7 +13,7 @@ let T = !1,
   f = !1,
   S = {};
 
-function A(e) {
+function N(e) {
   var t;
   let n = E.default.getCurrentUser();
   if (null == n) return !1;
@@ -21,12 +21,12 @@ function A(e) {
   return null != d.Z.getVoiceChannelId() && c.Z.isVideoEnabled() && null != i
 }
 
-function N() {
-  h !== d.Z.getVoiceChannelId() && (f = !1), A() && (f = !0), h = d.Z.getVoiceChannelId()
+function A() {
+  h !== d.Z.getVoiceChannelId() && (f = !1), N() && (f = !0), h = d.Z.getVoiceChannelId()
 }
 class m extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], N)
+    this.waitFor(_.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], A)
   }
   get videoFilterAssets() {
     return S
@@ -74,7 +74,7 @@ o = "VideoBackgroundStore", (s = "displayName") in(r = m) ? Object.definePropert
     let {
       backgroundOption: t
     } = e;
-    A(t) && (f = !0)
+    N(t) && (f = !0)
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
     let {

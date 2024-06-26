@@ -49,13 +49,13 @@ n.d(t, {
     return m
   },
   sX: function() {
-    return N
+    return A
   },
   u: function() {
     return o
   },
   ut: function() {
-    return A
+    return N
   },
   vJ: function() {
     return l
@@ -77,8 +77,8 @@ let l = 568,
   h = 600,
   f = 17 / 6,
   S = 16 / 9,
-  A = 2.5,
-  N = 4,
+  N = 2.5,
+  A = 4,
   m = 568 / (17 / 6),
   O = 568 / (16 / 9),
   p = 227.2,

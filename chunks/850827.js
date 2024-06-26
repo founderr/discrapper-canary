@@ -16,8 +16,8 @@ var r = n(120356),
   h = n(285952),
   f = n(543595),
   S = n(503438),
-  A = n(802856),
-  N = n(606925),
+  N = n(802856),
+  A = n(606925),
   m = n(719216),
   O = n(429589),
   p = n(276149),
@@ -58,13 +58,13 @@ t.Z = (0, _.Z)(e => {
     wrap: q ? h.Z.Wrap.WRAP : h.Z.Wrap.NO_WRAP,
     className: s()(_, P.buttonsWrapper, q ? P.vertical : P.horizontal),
     children: (() => {
-      if ((0, A.Z)(t)) return (0, i.jsx)(N.Z, {
+      if ((0, N.Z)(t)) return (0, i.jsx)(A.Z, {
         platform: c.Z.get(M.ABu.XBOX),
         look: w,
         color: G,
         onAction: B
       }, "ConnectPlatformActivityButton");
-      if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5) return (0, i.jsx)(N.Z, {
+      if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5) return (0, i.jsx)(A.Z, {
         look: w,
         color: G,
         platform: c.Z.get(M.ABu.PLAYSTATION),

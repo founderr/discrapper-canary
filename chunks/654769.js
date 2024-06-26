@@ -23,12 +23,12 @@ function h(e, t, n) {
 }
 let f = d.isPlatformEmbedded && (0, d.isWindows)(),
   S = f && 10 > parseFloat(l.Z.os.release),
-  A = !0;
+  N = !0;
 if (f && !S) {
   let [e, , t] = l.Z.os.release.split(".");
-  A = parseInt(e) > 10 || parseInt(t) >= 15063
+  N = parseInt(e) > 10 || parseInt(t) >= 15063
 }
-let N = f && A || "Chrome" === a().name && 47 > parseFloat(a().version) || "Firefox" === a().name && 52 > parseFloat(a().version),
+let A = f && N || "Chrome" === a().name && 47 > parseFloat(a().version) || "Firefox" === a().name && 52 > parseFloat(a().version),
   m = s().throttle(E.GN, 1e3, {
     leading: !0
   });
@@ -106,7 +106,7 @@ t.Z = {
     return (null === (o = r.onShown) || void 0 === o || o.call(r), !r.omitViewTracking && c.default.track(T.rMx.NOTIFICATION_VIEWED, i), E.onclick = () => {
       var e;
       d.isPlatformEmbedded ? I.ZP.focus() : (window.focus(), E.close()), !r.omitClickTracking && c.default.track(T.rMx.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
-    }, N && setTimeout(() => E.close(), 5e3), A) ? E : {
+    }, A && setTimeout(() => E.close(), 5e3), N) ? E : {
       close() {
         var e;
         null == E || null === (e = E.onclose) || void 0 === e || e.call(E)

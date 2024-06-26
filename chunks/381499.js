@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   D5: function() {
-    return A
+    return N
   },
   Gm: function() {
     return m
@@ -345,8 +345,8 @@ class S extends a.C {
     }])
   }
 }
-let A = new S;
-class N extends a.C {
+let N = new S;
+class A extends a.C {
   internalJsonWrite(e, t) {
     return e.value
   }
@@ -391,7 +391,7 @@ class N extends a.C {
     }])
   }
 }
-let m = new N;
+let m = new A;
 class O extends a.C {
   internalJsonWrite(e, t) {
     return this.refJsonWriter.scalar(12, e.value, "value", !1, !0)

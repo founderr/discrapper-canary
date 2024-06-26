@@ -16,9 +16,9 @@ var i = n(735250),
   h = n(981631),
   f = n(474936),
   S = n(689938),
-  A = n(164940);
-let N = "premiumRetentionEmojiPickerNotice",
-  m = l.K.get(N);
+  N = n(164940);
+let A = "premiumRetentionEmojiPickerNotice",
+  m = l.K.get(A);
 t.Z = e => {
   let {
     closePopout: t,
@@ -38,13 +38,13 @@ t.Z = e => {
   if (m === C) return null;
   let v = I.ZP.getPremiumType(p.planId) === f.p9.TIER_0 ? E.JX.PREMIUM_TIER_0 : I.ZP.getPremiumType(p.planId) === f.p9.TIER_1 ? E.JX.PREMIUM_TIER_1 : E.JX.PREMIUM_TIER_2;
   return (0, i.jsxs)("div", {
-    className: A.premiumRetentionNotice,
+    className: N.premiumRetentionNotice,
     children: [(0, i.jsx)(u.NitroWheelIcon, {
       size: "md",
-      className: A.premiumRetentionNoticeIcon,
+      className: N.premiumRetentionNoticeIcon,
       color: v
     }), (0, i.jsxs)("div", {
-      className: A.premiumRetentionNoticeContent,
+      className: N.premiumRetentionNoticeContent,
       children: [(0, i.jsx)(u.Text, {
         variant: "text-xs/normal",
         children: S.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
@@ -61,12 +61,12 @@ t.Z = e => {
       })]
     }), (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        l.K.set(N, C), m = C, O(!0)
+        l.K.set(A, C), m = C, O(!0)
       },
       children: (0, i.jsx)(u.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: A.premiumRetentionNoticeClose
+        className: N.premiumRetentionNoticeClose
       })
     })]
   })

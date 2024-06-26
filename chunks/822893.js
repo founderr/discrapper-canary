@@ -36,7 +36,7 @@ function I(e, t) {
     skipped: !1,
     reason: "adding",
     rating: "".concat(c.Z.getMessageReminders().length)
-  }), N([{
+  }), A([{
     messageId: e.id,
     channelId: e.channel_id,
     savedAt: new Date,
@@ -73,7 +73,7 @@ function T(e, t) {
     rating: "".concat(c.Z.getMessageReminders().length)
   });
   let n = c.Z.getMessageReminders().find(t => t.messageId === e);
-  if (null != n) N([{
+  if (null != n) A([{
     ...n,
     savedAt: new Date,
     dueAt: t
@@ -97,7 +97,7 @@ function f(e) {
     skipped: !1,
     reason: "complete and clear immediately",
     rating: "".concat(c.Z.getMessageReminders().length)
-  }), N([], c.Z.getMessageReminders().filter(t => t.messageId === e))
+  }), A([], c.Z.getMessageReminders().filter(t => t.messageId === e))
 }
 
 function S() {
@@ -107,10 +107,10 @@ function S() {
     rating: "".concat(c.Z.getMessageReminders().length)
   });
   let e = c.Z.getMessageReminders();
-  e.some(e => e.complete) && N([], e.filter(e => e.complete))
+  e.some(e => e.complete) && A([], e.filter(e => e.complete))
 }
 
-function A(e) {
+function N(e) {
   _.default.track(E.rMx.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "updated_from_server",
@@ -121,7 +121,7 @@ function A(e) {
   })
 }
 
-function N(e, t) {
+function A(e, t) {
   (0 !== e.length || 0 !== t.length) && i.tn.post({
     url: E.ANM.SAVED_MESSAGES,
     body: {
@@ -129,7 +129,7 @@ function N(e, t) {
       removed: t.map(d.cu)
     }
   }).then(e => {
-    A(e.body.saved_messages.map(d.lY))
+    N(e.body.saved_messages.map(d.lY))
   })
 }
 
@@ -137,6 +137,6 @@ function m() {
   return c.Z.recentlyFetched() ? Promise.resolve() : i.tn.get({
     url: E.ANM.SAVED_MESSAGES
   }).then(e => {
-    A(e.body.saved_messages.map(d.lY))
+    N(e.body.saved_messages.map(d.lY))
   })
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Y: function() {
-    return N
+    return A
   },
   c: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(735250),
@@ -23,7 +23,7 @@ var i = n(735250),
   h = n(185923),
   f = n(474936),
   S = n(950110);
-let A = e => {
+let N = e => {
     var t;
     let {
       node: n,
@@ -77,13 +77,13 @@ let A = e => {
       children: f
     }) : f()
   },
-  N = e => {
+  A = e => {
     let {
       node: t,
       isInteracting: n,
       tooltipPosition: s = I.b_.position,
       enableClick: _ = !0
-    } = e, [f, A] = r.useState(String(Date.now())), [N, O] = r.useState(!1), [p, R] = r.useState(!1), g = function() {
+    } = e, [f, N] = r.useState(String(Date.now())), [A, O] = r.useState(!1), [p, R] = r.useState(!1), g = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, i.jsx)(u.Z, {
         ...e,
@@ -117,7 +117,7 @@ let A = e => {
           O(!1), R(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          N && (d.default.track(T.rMx.CLOSE_POPOUT, {
+          A && (d.default.track(T.rMx.CLOSE_POPOUT, {
             nonce: C
           }), O(!1))
         },
@@ -142,7 +142,7 @@ let A = e => {
       renderPopout: e => (0, i.jsx)(E.vk, {
         ...e,
         node: t,
-        refreshPositionKey: () => A(String(Date.now())),
+        refreshPositionKey: () => N(String(Date.now())),
         nonce: C
       }),
       positionKey: f,

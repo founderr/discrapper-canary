@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i = n(735250),
@@ -38,16 +38,16 @@ let S = e => {
     align: T,
     impressionName: f,
     impressionProperties: S
-  } = e, A = r.useRef(null), N = r.useMemo(() => ({
+  } = e, N = r.useRef(null), A = r.useMemo(() => ({
     current: u
   }), [u]);
   r.useEffect(() => {
     var e, t;
-    let i = (0, s.findDOMNode)(A.current);
+    let i = (0, s.findDOMNode)(N.current);
     if (null == i) return;
     let r = e => {
       let t = e.target,
-        i = (0, s.findDOMNode)(A.current);
+        i = (0, s.findDOMNode)(N.current);
       if (!(null != i && (0, l.referencePortalAwareContains)(i, t))) window.getSelection().removeAllRanges(), n()
     };
     return null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
@@ -61,7 +61,7 @@ let S = e => {
     return null === (e = m.current) || void 0 === e ? void 0 : e.call(m)
   }, []), r.useLayoutEffect(() => {
     var e;
-    null === (e = A.current) || void 0 === e || e.updatePosition()
+    null === (e = N.current) || void 0 === e || e.updatePosition()
   }), (0, c.Z)({
     type: o.ImpressionTypes.MENU,
     name: f,
@@ -77,17 +77,17 @@ let S = e => {
   return (0, i.jsx)(I.W5, {
     onMount: p,
     onUnmount: R,
-    targetRef: N,
+    targetRef: A,
     overrideTargetRect: d,
     position: null != E ? E : "right",
     align: null != T ? T : "top",
     autoInvert: !0,
-    ref: A,
+    ref: N,
     nudgeAlignIntoViewport: !0,
     children: t
   })
 };
-class A extends r.PureComponent {
+class N extends r.PureComponent {
   componentDidMount() {
     let {
       renderLazy: e,
@@ -173,7 +173,7 @@ class A extends r.PureComponent {
   }
 }
 
-function N() {
+function A() {
   let {
     contextMenu: e,
     version: t,
@@ -186,7 +186,7 @@ function N() {
     appContext: o,
     renderWindow: l
   } = r.useContext(_.ZP);
-  return (0, i.jsx)(A, {
+  return (0, i.jsx)(N, {
     appContext: o,
     renderWindow: l,
     ...e,

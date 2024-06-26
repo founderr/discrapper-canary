@@ -11,8 +11,8 @@ var o = n(735250),
   m = n(670638),
   x = n(341907),
   g = n(898170),
-  f = n(689938),
-  C = n(247192);
+  C = n(689938),
+  f = n(247192);
 t.Z = e => {
   let {
     quest: t,
@@ -35,8 +35,8 @@ t.Z = e => {
     })
   }, [t]), A = T && v;
   return (0, o.jsxs)(i.animated.div, {
-    className: a()(C.wrapper, {
-      [C.interactable]: A
+    className: a()(f.wrapper, {
+      [f.interactable]: A
     }),
     style: {
       margin: r.to({
@@ -70,7 +70,7 @@ t.Z = e => {
       backdropFilter: r.to([0, 1], [0, 1]).to(e => "blur(".concat(10 * e, "px) brightness(").concat(1 - e / 5, ")"))
     },
     children: [(0, o.jsx)(i.animated.div, {
-      className: C.backgroundWrapper,
+      className: f.backgroundWrapper,
       style: {
         opacity: r.to({
           range: [0, 1],
@@ -86,14 +86,14 @@ t.Z = e => {
         })
       },
       children: (0, o.jsx)(g.Z, {
-        className: C.background,
-        animationClassName: C.backgroundAnimation,
+        className: f.background,
+        animationClassName: f.backgroundAnimation,
         quest: t,
         useReducedMotion: S
       })
     }), (0, o.jsx)(i.animated.img, {
       alt: "",
-      className: C.wreathIcon,
+      className: f.wreathIcon,
       style: {
         opacity: r.to({
           range: [0, 1],
@@ -115,7 +115,7 @@ t.Z = e => {
       children: (0, o.jsx)(l.Clickable, {
         onClick: j,
         className: a()({
-          [C.logo]: A
+          [f.logo]: A
         }),
         children: (0, o.jsx)(p.Z, {
           quest: t,
@@ -123,7 +123,7 @@ t.Z = e => {
         })
       })
     }), (0, o.jsx)(i.animated.div, {
-      className: C.questAvailable,
+      className: f.questAvailable,
       style: {
         opacity: r.to({
           range: [0, 1],
@@ -137,11 +137,11 @@ t.Z = e => {
       children: (0, o.jsx)(l.Text, {
         color: "always-white",
         variant: "text-xs/medium",
-        className: C.questAvailableText,
-        children: f.Z.Messages.QUEST_AVAILABLE
+        className: f.questAvailableText,
+        children: C.Z.Messages.QUEST_AVAILABLE
       })
     }), (0, o.jsxs)(i.animated.div, {
-      className: C.promotedBadgeWrapper,
+      className: f.promotedBadgeWrapper,
       style: {
         opacity: r.to({
           range: [0, 1],
@@ -149,15 +149,15 @@ t.Z = e => {
         })
       },
       children: [(0, o.jsxs)(l.Clickable, {
-        className: C.promotedBadge,
+        className: f.promotedBadge,
         onClick: N,
         children: [(0, o.jsx)(l.Text, {
           color: "always-white",
           variant: "text-xs/normal",
-          children: f.Z.Messages.QUESTS_PROMOTED
+          children: C.Z.Messages.QUESTS_PROMOTED
         }), (0, o.jsx)(l.CircleQuestionIcon, {
           color: l.tokens.colors.WHITE,
-          className: C.promotedBadgeIcon
+          className: f.promotedBadgeIcon
         })]
       }), (0, o.jsx)(m.r, {
         onOpen: _,
@@ -169,12 +169,12 @@ t.Z = e => {
         showShareLink: !0,
         children: e => (0, o.jsx)(l.Clickable, {
           ...e,
-          className: C.submenuWrapper,
-          "aria-label": f.Z.Messages.ACTIONS,
+          className: f.submenuWrapper,
+          "aria-label": C.Z.Messages.ACTIONS,
           children: (0, o.jsx)(l.MoreHorizontalIcon, {
             size: "md",
             color: "currentColor",
-            className: a()(C.submenuIcon, C.white)
+            className: a()(f.submenuIcon, f.white)
           })
         })
       })]

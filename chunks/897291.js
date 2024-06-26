@@ -21,10 +21,10 @@ t.Z = r.memo(function(e) {
   } = (0, l.ZP)(a.Z.GIFT_BUTTON), h = (0, c.Ft)(n), {
     Component: f,
     events: S,
-    play: A
+    play: N
   } = (0, s.$)();
   if (t) return null;
-  let N = () => (0, u.Z)({
+  let A = () => (0, u.Z)({
     isGift: !0,
     giftRecipient: null === h ? void 0 : h,
     initialPlanId: null,
@@ -46,7 +46,7 @@ t.Z = r.memo(function(e) {
       "aria-label": I.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
       "aria-haspopup": "dialog",
       onClick: () => {
-        N(), A()
+        A(), N()
       },
       ...S,
       children: (0, i.jsx)(f, {

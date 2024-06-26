@@ -24,8 +24,8 @@ var i, r, s = n(735250),
   h = n(783097),
   f = n(695676),
   S = n(176412),
-  A = n(753972),
-  N = n(231338),
+  N = n(753972),
+  A = n(231338),
   m = n(689938),
   O = n(599632);
 
@@ -47,7 +47,7 @@ function p(e) {
   return "icon" === n ? (0, s.jsx)(u.Clickable, {
     className: l()(O.container, O.iconCard),
     onClick: r,
-    children: null != c && (0, s.jsx)(A.Z, {
+    children: null != c && (0, s.jsx)(N.Z, {
       src: c,
       className: O.iconCard,
       "aria-hidden": !0
@@ -69,7 +69,7 @@ function p(e) {
       }), i && (0, s.jsx)("div", {
         className: O.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, T.Q)(N.BR.DARK),
+          className: (0, T.Q)(A.BR.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
           children: m.Z.Messages.APP_DIRECTORY_PARTNER
@@ -80,7 +80,7 @@ function p(e) {
       }) : null]
     }), (0, s.jsxs)("div", {
       className: O.appDetailsContainer,
-      children: [null != c && (0, s.jsx)(A.Z, {
+      children: [null != c && (0, s.jsx)(N.Z, {
         src: c,
         className: O.icon,
         "aria-hidden": !0

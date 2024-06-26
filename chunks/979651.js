@@ -11,8 +11,8 @@ var s, o, a, l, u = n(392711),
 let h = 0,
   f = 0,
   S = {},
-  A = new Set,
-  N = new Map,
+  N = new Set,
+  A = new Map,
   m = {},
   O = {},
   p = {},
@@ -38,7 +38,7 @@ function v(e) {
 
 function L(e) {
   var t;
-  return null !== (t = N.get(e)) && void 0 !== t ? t : new Set
+  return null !== (t = A.get(e)) && void 0 !== t ? t : new Set
 }
 
 function D(e, t, n) {
@@ -47,10 +47,10 @@ function D(e, t, n) {
     s = n(r);
   return r === s ? [!1, s, r] : (null != r && (delete i[t], null != r.channelId && (delete C(m, r.channelId)[t], delete C(O, r.channelId)[t]), null != r.sessionId && delete C(p, t)[r.sessionId], ! function(e, t) {
     let n = L(e);
-    if (!!n.has(t))(n = new Set(n)).delete(t), 0 === n.size ? N.delete(e) : N.set(e, n)
+    if (!!n.has(t))(n = new Set(n)).delete(t), 0 === n.size ? A.delete(e) : A.set(e, n)
   }(null != e ? e : I.ME, t)), null != s && (i[t] = s, null != s.channelId && (C(m, s.channelId)[t] = s, s.selfVideo && (C(O, s.channelId)[t] = s, ! function(e, t) {
     let n = L(e);
-    if (!n.has(t))(n = new Set(n)).add(t), N.set(e, n)
+    if (!n.has(t))(n = new Set(n)).add(t), A.set(e, n)
   }(null != e ? e : I.ME, t))), null != s.sessionId && (C(p, t)[s.sessionId] = s)), [!0, s, r])
 }
 
@@ -125,7 +125,7 @@ class y extends(s = c.ZP.Store) {
   }
   getUsersWithVideo(e) {
     var t;
-    return null !== (t = N.get(e)) && void 0 !== t ? t : A
+    return null !== (t = A.get(e)) && void 0 !== t ? t : N
   }
   isCurrentClientInVoiceChannel() {
     var e;
@@ -160,10 +160,10 @@ l = "VoiceStateStore", (a = "displayName") in(o = y) ? Object.defineProperty(o, 
       user: t,
       sessionId: n
     } = e, s = null != i && i !== t.id;
-    return s && (S = {}, m = {}, p = {}, O = {}, N.clear()), i = t.id, r = n, s
+    return s && (S = {}, m = {}, p = {}, O = {}, A.clear()), i = t.id, r = n, s
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function() {
-    S = {}, m = {}, p = {}, O = {}, N.clear()
+    S = {}, m = {}, p = {}, O = {}, A.clear()
   },
   OVERLAY_INITIALIZE: function(e) {
     let {

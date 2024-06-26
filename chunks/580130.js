@@ -12,8 +12,8 @@ let T = {},
   h = {},
   f = {},
   S = {},
-  A = !1,
   N = !1,
+  A = !1,
   m = new Set,
   O = new Set,
   p = {};
@@ -54,10 +54,10 @@ class v extends(i = u.yh) {
     return n
   }
   get fetchingAllEntitlements() {
-    return A
+    return N
   }
   get fetchedAllEntitlements() {
-    return N
+    return A
   }
   get applicationIdsFetching() {
     return m
@@ -149,18 +149,18 @@ o = "EntitlementStore", (s = "displayName") in(r = v) ? Object.defineProperty(r,
     }(e.entitlement)
   },
   LOGOUT: function() {
-    T = {}, f = {}, S = {}, A = !1, N = !1, m = new Set, O = new Set
+    T = {}, f = {}, S = {}, N = !1, A = !1, m = new Set, O = new Set
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function() {
-    A = !0
+    N = !0
   },
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    for (let e of (N = !0, A = !1, t)) R(e)
+    for (let e of (A = !0, N = !1, t)) R(e)
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
-    N = !1, A = !1
+    A = !1, N = !1
   }
 })

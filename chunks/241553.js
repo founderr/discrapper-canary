@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(963249),
   f = n(646476),
   S = n(819640),
-  A = n(594174),
-  N = n(147915),
+  N = n(594174),
+  A = n(147915),
   m = n(965645),
   O = n(362061),
   p = n(70956),
@@ -132,7 +132,7 @@ t.Z = r.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: s
-  } = (0, E.ZP)(d.Z.GIFT_BUTTON), [l, c] = r.useState(!1), m = (0, o.e7)([S.Z], () => !(null === S.Z || void 0 === S.Z ? void 0 : S.Z.hasLayers())), O = (0, o.e7)([A.default], () => A.default.getCurrentUser()), p = null != O ? R.default.age(O.id) : 0, y = !t && m && p >= G, {
+  } = (0, E.ZP)(d.Z.GIFT_BUTTON), [l, c] = r.useState(!1), m = (0, o.e7)([S.Z], () => !(null === S.Z || void 0 === S.Z ? void 0 : S.Z.hasLayers())), O = (0, o.e7)([N.default], () => N.default.getCurrentUser()), p = null != O ? R.default.age(O.id) : 0, y = !t && m && p >= G, {
     enabled: U
   } = f.RO.useExperiment({
     location: "ChannelPremiumGiftButton"
@@ -170,7 +170,7 @@ t.Z = r.memo(function(e) {
         onDMCheckItOutClick: H,
         markAsDismissed: x,
         isDM: Z
-      }), (0, i.jsx)(N.Z, {
+      }), (0, i.jsx)(A.Z, {
         innerClassName: P.button,
         "aria-label": D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         isActive: !1,

@@ -15,13 +15,13 @@ let p = s.forwardRef(function(e, t) {
     isExpanded: m,
     isExpansionAnimationComplete: x,
     quest: g
-  } = e, f = s.useRef(null), C = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
+  } = e, C = s.useRef(null), f = (null === (n = g.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
   return (0, o.jsxs)(i.animated.div, {
     ref: t,
     "aria-hidden": m && x,
     className: a()(r, u.contentCollapsed, {
       [u.contentCollapsedExpanded]: m,
-      [u.contentCollapsedAccepted]: C
+      [u.contentCollapsedAccepted]: f
     }),
     style: {
       opacity: p.to({
@@ -29,20 +29,20 @@ let p = s.forwardRef(function(e, t) {
         output: [1, 0]
       })
     },
-    children: [C ? (0, o.jsx)("div", {
+    children: [f ? (0, o.jsx)("div", {
       className: u.postEnrollmentBackground,
       style: {
         backgroundImage: "linear-gradient(90deg, ".concat(d.aY, ", ").concat(d.v6, ")")
       }
     }) : null, (0, o.jsx)(l.Z, {
-      progressBarRef: f,
+      progressBarRef: C,
       quest: g,
       isExpanded: m
     }), (0, o.jsx)("div", {
       className: u.contentCollapsedWrapper,
-      children: C ? (0, o.jsx)(c.Z, {
+      children: f ? (0, o.jsx)(c.Z, {
         quest: g,
-        progressBarRef: f,
+        progressBarRef: C,
         isExpanded: !1
       }) : null
     })]

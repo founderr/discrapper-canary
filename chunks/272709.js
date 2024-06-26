@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(427679),
   f = n(543882),
   S = n(592125),
-  A = n(496675),
-  N = n(594174),
+  N = n(496675),
+  A = n(594174),
   m = n(979651),
   O = n(366695),
   p = n(806519),
@@ -173,13 +173,13 @@ function k(e) {
               className: w.streamPreview
             }), e(w.liveBadge)]
           });
-          let s = r.map(e => N.default.getUser(e)).filter(e => null != e);
+          let s = r.map(e => A.default.getUser(e)).filter(e => null != e);
           return (0, i.jsx)(g.Z, {
             guildId: t,
             users: s
           })
         }
-        let E = s.map(e => N.default.getUser(e)).filter(e => null != e);
+        let E = s.map(e => A.default.getUser(e)).filter(e => null != e);
         return (0, i.jsx)(g.Z, {
           guildId: t,
           users: E
@@ -275,9 +275,9 @@ function k(e) {
       case y.L.EVENT:
         let {
           event: f
-        } = e, A = (0, C.NZ)(f), N = null == A ? void 0 : A.IconComponent, m = null == A ? void 0 : A.locationName;
-        if (null != N && null != m) return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(N, {
+        } = e, N = (0, C.NZ)(f), A = null == N ? void 0 : N.IconComponent, m = null == N ? void 0 : N.locationName;
+        if (null != A && null != m) return (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)(A, {
             className: w.categoryIcon
           }), (0, i.jsx)(u.Text, {
             variant: "text-xs/medium",
@@ -424,7 +424,7 @@ function k(e) {
     if (null == (o = a ? e.event.channel_id : s === y.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId) && !a) return;
     let l = null != o && m.Z.isInChannel(o),
       _ = a && (e.event.entity_type === b.WX.EXTERNAL || e.event.entity_type === b.WX.NONE) ? G.Z.Messages.VIEW : l ? G.Z.Messages.GUILD_POPOUT_JOINED : G.Z.Messages.JOIN,
-      c = (null === (r = S.Z.getChannel(o)) || void 0 === r ? void 0 : r.isGuildVocal()) && !A.Z.can(U.Plq.CONNECT, S.Z.getChannel(o)),
+      c = (null === (r = S.Z.getChannel(o)) || void 0 === r ? void 0 : r.isGuildVocal()) && !N.Z.can(U.Plq.CONNECT, S.Z.getChannel(o)),
       d = (0, C.DE)(e, t),
       E = (0, i.jsxs)(u.Button, {
         size: u.Button.Sizes.MIN,

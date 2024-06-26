@@ -16,7 +16,7 @@ var o = n(735250),
   m = n(46140),
   x = n(689938),
   g = n(347051);
-let f = e => {
+let C = e => {
     let {
       quest: t
     } = e;
@@ -33,7 +33,7 @@ let f = e => {
       })
     })
   },
-  C = e => {
+  f = e => {
     let {
       quest: t
     } = e;
@@ -103,10 +103,10 @@ let f = e => {
       useReducedMotion: s,
       isExpanded: r
     });
-    if (l) return (0, o.jsx)(C, {
+    if (l) return (0, o.jsx)(f, {
       quest: n
     });
-    if (!a && !(0, c.zK)(n, m.S7.IN_HOUSE_CONSOLE_QUEST)) return (0, o.jsx)(f, {
+    if (!a && !(0, c.zK)(n, m.S7.IN_HOUSE_CONSOLE_QUEST)) return (0, o.jsx)(C, {
       quest: n
     });
     return null

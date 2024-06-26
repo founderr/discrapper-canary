@@ -12,8 +12,8 @@ var i, r, s, o, a = n(392711),
   h = n(160404),
   f = n(786761),
   S = n(418476),
-  A = n(739566),
-  N = n(995774),
+  N = n(739566),
+  A = n(995774),
   m = n(706454),
   O = n(630388),
   p = n(709054),
@@ -66,7 +66,7 @@ function H(e) {
     emoji: s,
     reactionType: o
   } = e, a = c.Z.get(n);
-  if (null == a || !(0, N.sm)(e)) return !1;
+  if (null == a || !(0, A.sm)(e)) return !1;
   let l = R.default.getId() === r;
   a = a.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, o) : n.removeReaction(s, l, o)), c.Z.commit(a)
 }

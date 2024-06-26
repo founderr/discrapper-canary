@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Zm: function() {
-    return A
+    return N
   },
   aq: function() {
     return R
@@ -10,7 +10,7 @@ n.d(t, {
     return S
   },
   mL: function() {
-    return N
+    return A
   },
   og: function() {
     return p
@@ -47,7 +47,7 @@ function S(e, t) {
   }), m(e)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = I.Z.getData(e);
   null != n && n.type === t.type && (E.default.track(h.rMx.VIEW_AS_ROLES_SELECTED, {
     num_roles: Object.keys(n.roles).length,
@@ -63,7 +63,7 @@ function A(e, t) {
   }), m(e))
 }
 
-function N(e) {
+function A(e) {
   i.Z.dispatch({
     type: "IMPERSONATE_STOP",
     guildId: e
@@ -81,7 +81,7 @@ function m(e) {
 
 function O(e, t, n) {
   let i = new Set(d.ZP.getOptedInChannels(e));
-  t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), A(e, {
+  t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), N(e, {
     type: T.z.NEW_MEMBER,
     optInChannels: i
   })
@@ -101,14 +101,14 @@ function p(e, t) {
     })
   }(e, t);
   let i = {};
-  t.forEach(e => i[e] = n[e]), A(e, {
+  t.forEach(e => i[e] = n[e]), N(e, {
     type: T.z.NEW_MEMBER,
     roles: i
   })
 }
 
 function R(e, t) {
-  A(e, {
+  N(e, {
     type: T.z.NEW_MEMBER,
     ...t
   })

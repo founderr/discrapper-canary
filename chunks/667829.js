@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(476326),
   f = n(998698),
   S = n(710845),
-  A = n(117530),
-  N = n(459273),
+  N = n(117530),
+  A = n(459273),
   m = n(403182),
   O = n(541716),
   p = n(752305),
@@ -178,7 +178,7 @@ class b extends r.Component {
       channel: h,
       type: f,
       fontSize: S,
-      useSlate: A,
+      useSlate: N,
       spellcheckEnabled: m,
       useNewSlashCommands: R,
       canOnlyUseTextCommands: v,
@@ -196,7 +196,7 @@ class b extends r.Component {
     } = this.state, Z = {
       channel: h,
       className: o()(D, M.textArea, {
-        [M.textAreaSlate]: A,
+        [M.textAreaSlate]: N,
         [M.textAreaDisabled]: _ || k
       }),
       id: P,
@@ -237,7 +237,7 @@ class b extends r.Component {
       "aria-describedby": w,
       "aria-labelledby": x,
       "aria-autocomplete": "list"
-    }, H = A ? (0, i.jsx)(C.Z, {
+    }, H = N ? (0, i.jsx)(C.Z, {
       ref: this.ref,
       ...Z,
       type: f,
@@ -250,10 +250,10 @@ class b extends r.Component {
       value: _ ? "" : l
     });
     return (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(N.d9, {
+      children: [(0, i.jsx)(A.d9, {
         event: L.CkL.INSERT_TEXT,
         handler: this.handleInsertText
-      }), (0, i.jsx)(N.d9, {
+      }), (0, i.jsx)(A.d9, {
         event: L.CkL.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
@@ -420,7 +420,7 @@ class b extends r.Component {
           u = null,
           _ = f.Z.getActiveOption(t.id);
         if (null != (u = (null == _ ? void 0 : _.type) === T.jw.ATTACHMENT ? _ : null === (s = a.options) || void 0 === s ? void 0 : s.find(e => {
-            if (e.type === T.jw.ATTACHMENT) return null == A.Z.getUpload(t.id, e.name, l)
+            if (e.type === T.jw.ATTACHMENT) return null == N.Z.getUpload(t.id, e.name, l)
           }))) I.Z.setFile({
           channelId: t.id,
           id: u.name,

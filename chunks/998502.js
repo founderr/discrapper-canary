@@ -15,8 +15,8 @@ var i, r, s, o, a, l, u, _, c = n(512722),
   h = n(593472),
   f = n(358085),
   S = n(591759),
-  A = n(981631),
-  N = n(413135).Buffer;
+  N = n(981631),
+  A = n(413135).Buffer;
 let m = window.DiscordNative,
   O = ["jpg", "jpeg", "png"],
   p = null,
@@ -75,7 +75,7 @@ function P(e) {
     try {
       n = this.requireModule("discord_overlay2")
     } catch (e) {}
-    n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), m.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== T.K.get(E.SV) && this.supportsFeature(A.eRX.USER_DATA_CACHE) && m.userDataCache.cacheUserData(T.K.stringify()), null == m || null === (t = m.window) || void 0 === t || t.close(null == m ? void 0 : null === (e = m.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
+    n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), m.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== T.K.get(E.SV) && this.supportsFeature(N.eRX.USER_DATA_CACHE) && m.userDataCache.cacheUserData(T.K.stringify()), null == m || null === (t = m.window) || void 0 === t || t.close(null == m ? void 0 : null === (e = m.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
   },
   inputEventRegister(e, t, n, i) {
     !Array.isArray(t) && (t = t.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), t.map(e => {
@@ -196,7 +196,7 @@ function P(e) {
   async copyImage(e) {
     d()(f.isPlatformEmbedded, "Copy image method called outside native app"), d()("function" == typeof m.clipboard.copyImage, "Copy image not supported");
     let t = await D(e);
-    m.clipboard.copyImage(N.from(t), e)
+    m.clipboard.copyImage(A.from(t), e)
   },
   async saveImage(e) {
     var t;
@@ -205,7 +205,7 @@ function P(e) {
     if (null == n) return;
     let i = null !== (t = n.pathname.split("/").pop()) && void 0 !== t ? t : "unknown",
       r = await D(e),
-      s = N.from(r);
+      s = A.from(r);
     m.fileManager.saveWithDialog(s, i)
   },
   async saveFile(e, t) {
@@ -215,7 +215,7 @@ function P(e) {
     if (null == i) return;
     let r = null !== (n = null != t ? t : i.pathname.split("/").pop()) && void 0 !== n ? n : "unknown",
       s = await D(e),
-      o = N.from(s);
+      o = A.from(s);
     m.fileManager.saveWithDialog(o, r)
   },
   canCopyImage() {

@@ -4,7 +4,7 @@ n.d(t, {
     return g
   },
   t: function() {
-    return N
+    return A
   }
 }), n(47120), n(411104);
 var i, r = n(735250),
@@ -30,13 +30,13 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = new WeakMap;
+let N = new WeakMap;
 
-function N(e, t) {
+function A(e, t) {
   if (e.contains(t)) return !0;
   let n = (0, I.Z)(t, f.layer);
   for (; null != n;) {
-    let t = A.get(n);
+    let t = N.get(n);
     if (null == t) break;
     if (e.contains(t)) return !0;
     n = (0, I.Z)(t, f.layer)
@@ -311,7 +311,7 @@ class g extends(i = s.Component) {
       ...this.calculateState()
     });
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), null != n.current && A.set(r, n.current), d.S.subscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), d.S.subscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+    u()(null != r, "Missing elementRef"), null != n.current && N.set(r, n.current), d.S.subscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), d.S.subscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
   }
   componentDidUpdate(e, t) {
     if ((m(e) !== m(this.props) || ! function(e, t) {
@@ -326,7 +326,7 @@ class g extends(i = s.Component) {
   componentWillUnmount() {
     var e, t, n, i;
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), A.delete(r), d.S.unsubscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), d.S.unsubscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
+    u()(null != r, "Missing elementRef"), N.delete(r), d.S.unsubscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), d.S.unsubscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
   }
   render() {
     let {

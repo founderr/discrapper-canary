@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return _
   },
   addExtraAnalyticsDecorator: function() {
-    return N
+    return A
   },
   debugLogEvent: function() {
     return v
@@ -46,10 +46,10 @@ let h = i.createContext({
   }),
   f = {},
   S = performance.now(),
-  A = [];
+  N = [];
 
-function N(e) {
-  A.push(e)
+function A(e) {
+  N.push(e)
 }
 let m = {
   [E.rMx.APP_OPENED]: {
@@ -294,7 +294,7 @@ function C(e) {
     utmCampaign: _,
     utmContent: d
   } = f;
-  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : _, o.utm_content = null !== (r = o.utm_content) && void 0 !== r ? r : d, A.forEach(e => e(o)), o
+  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : _, o.utm_content = null !== (r = o.utm_content) && void 0 !== r ? r : d, N.forEach(e => e(o)), o
 }
 
 function v(e, t) {

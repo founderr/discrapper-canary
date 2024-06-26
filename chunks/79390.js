@@ -10,7 +10,7 @@ n.d(t, {
     return p
   },
   Uu: function() {
-    return N
+    return A
   },
   _N: function() {
     return R
@@ -53,9 +53,9 @@ var i = n(392711),
   h = n(5192),
   f = n(489887),
   S = n(981631),
-  A = n(689938);
+  N = n(689938);
 
-function N() {
+function A() {
   return {
     text: void 0,
     image: void 0,
@@ -135,7 +135,7 @@ function D(e) {
     let o = null !== (s = null === (r = e.embeds[0]) || void 0 === r ? void 0 : null === (i = r.fields) || void 0 === i ? void 0 : null === (n = i.find(e => "poll_question_text" === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== s ? s : "";
     return null != t ? (0, a.aF)(o, t) : o
   }(e, f.Dv);
-  return A.Z.Messages.POLL_RESULT_REPLY_TEXT.format({
+  return N.Z.Messages.POLL_RESULT_REPLY_TEXT.format({
     title: t
   })
 }
@@ -170,27 +170,27 @@ function P(e, t, n) {
     }(o, n);
   return 0 === E.length ? "" : function(e, t) {
     let n = Math.max(0, t - e.length);
-    if (1 === e.length) return n > 0 ? A.Z.Messages.POLL_VOTES_TOOLTIP_1_N.format({
+    if (1 === e.length) return n > 0 ? N.Z.Messages.POLL_VOTES_TOOLTIP_1_N.format({
       a: e[0],
       n: n.toLocaleString()
     }) : e[0];
-    if (2 === e.length) return n > 0 ? A.Z.Messages.POLL_VOTES_TOOLTIP_2_N.format({
+    if (2 === e.length) return n > 0 ? N.Z.Messages.POLL_VOTES_TOOLTIP_2_N.format({
       a: e[0],
       b: e[1],
       n: n.toLocaleString()
-    }) : A.Z.Messages.POLL_VOTES_TOOLTIP_2.format({
+    }) : N.Z.Messages.POLL_VOTES_TOOLTIP_2.format({
       a: e[0],
       b: e[1]
     });
-    if (3 !== e.length) return A.Z.Messages.POLL_VOTES_TOOLTIP_N.format({
+    if (3 !== e.length) return N.Z.Messages.POLL_VOTES_TOOLTIP_N.format({
       n: n.toLocaleString()
     });
-    else return n > 0 ? A.Z.Messages.POLL_VOTES_TOOLTIP_3_N.format({
+    else return n > 0 ? N.Z.Messages.POLL_VOTES_TOOLTIP_3_N.format({
       a: e[0],
       b: e[1],
       c: e[2],
       n: n.toLocaleString()
-    }) : A.Z.Messages.POLL_VOTES_TOOLTIP_3.format({
+    }) : N.Z.Messages.POLL_VOTES_TOOLTIP_3.format({
       a: e[0],
       b: e[1],
       c: e[2]

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(768581),
   f = n(888778),
   S = n(943217),
-  A = n(793397),
-  N = n(300388);
+  N = n(793397),
+  A = n(300388);
 
 function m(e) {
   var t;
@@ -41,7 +41,7 @@ function m(e) {
   } = (0, f.Z)({
     displayProfile: s,
     pendingBanner: p,
-    size: (0, A.e7)(O),
+    size: (0, N.e7)(O),
     canAnimate: g || !y ? D : P
   }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), x = (0, a._i)((0, c.ZP)(n.getAvatarURL(m, w), G, !1)), B = (0, d.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : x).hsl;
   return (0, i.jsx)(S.Z, {
@@ -51,7 +51,7 @@ function m(e) {
     hasBanner: null != U,
     hasProfileEffect: C,
     children: (0, i.jsxs)("div", {
-      className: o()(N.banner, N.divider, (0, A.Ae)({
+      className: o()(A.banner, A.divider, (0, N.Ae)({
         profileType: O,
         user: {
           hasBanner: null != U,
@@ -66,7 +66,7 @@ function m(e) {
         backgroundColor: b !== f.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : B
       },
       children: [!y && (0, h.F8)(U) && (0, i.jsx)(T.Z, {
-        className: N.gifTag
+        className: A.gifTag
       }), R]
     })
   })

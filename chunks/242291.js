@@ -41,8 +41,8 @@ var i = n(399606),
   h = n(208049),
   f = n(763296),
   S = n(697426),
-  A = n(641015),
-  N = n(893663),
+  N = n(641015),
+  A = n(893663),
   m = n(710111),
   O = n(981631);
 
@@ -67,8 +67,8 @@ function C(e, t, n) {
 async function v(e) {
   let t = d.default.getCurrentUser(),
     n = (0, s.Z)(),
-    i = (0, N.k9)(e);
-  if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, A.D)()) return;
+    i = (0, A.k9)(e);
+  if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, N.D)()) return;
   await (0, h.w)();
   let r = i.guildId === m.hY ? m.X8 : i.guildId,
     o = f.Z.getSound(r, i.soundId);

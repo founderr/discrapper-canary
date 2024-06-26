@@ -8,7 +8,7 @@ n.d(t, {
     return h
   },
   N6: function() {
-    return N
+    return A
   },
   Su: function() {
     return o
@@ -32,7 +32,7 @@ n.d(t, {
     return T
   },
   kV: function() {
-    return A
+    return N
   },
   t0: function() {
     return s
@@ -54,9 +54,9 @@ let E = "emoji-picker-tab-panel",
   h = "soundboard-picker-tab",
   f = "gif-picker-tab-panel",
   S = "gif-picker-tab",
-  A = {
+  N = {
     reaction: 32,
     default: 44,
     jumbo: 96
   },
-  N = 9
+  A = 9

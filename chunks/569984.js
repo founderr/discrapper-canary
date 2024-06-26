@@ -1,8 +1,8 @@
 "use strict";
 let i, r, s, o, a, l, u, _, c, d, E, I;
 n(47120);
-var T, h, f, S, A = n(906280),
-  N = n.n(A),
+var T, h, f, S, N = n(906280),
+  A = n.n(N),
   m = n(887003),
   O = n(442837),
   p = n(570140),
@@ -129,7 +129,7 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let n = new Map(r);
     for (let e of (r = new Map, t)) {
       var s, o;
-      let t = N()(e),
+      let t = A()(e),
         i = n.get(t.id),
         a = (null === (s = t.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && null == t.userStatus.completedAt;
       if ((null == i ? void 0 : i.userStatus) != null && null != t.userStatus && a) {

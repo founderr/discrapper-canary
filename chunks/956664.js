@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Bo: function() {
-    return N
+    return A
   },
   Dc: function() {
     return c
@@ -10,7 +10,7 @@ n.d(t, {
     return h
   },
   QB: function() {
-    return A
+    return N
   },
   Tj: function() {
     return u
@@ -138,11 +138,11 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let t = e.split(";base64,");
   return r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
 }
-async function N(e, t, n) {
+async function A(e, t, n) {
   let i = m(e);
   return new File([await i.arrayBuffer()], t, {
     type: n

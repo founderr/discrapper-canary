@@ -26,8 +26,8 @@ function f(e) {
     currentUser: n,
     displayProfile: f,
     guild: S,
-    isHovering: A,
-    onOpenProfile: N,
+    isHovering: N,
+    onOpenProfile: A,
     channelId: m,
     onClose: O
   } = e, p = o.ZP.getName(null == S ? void 0 : S.id, m, t), R = (0, r.e7)([s.Z], () => s.Z.hidePersonalInformation);
@@ -36,7 +36,7 @@ function f(e) {
     children: [(0, i.jsx)(_.Z, {
       user: t,
       profileType: T.y0.BITE_SIZE,
-      onOpenProfile: N,
+      onOpenProfile: A,
       nickname: p,
       pronouns: null == f ? void 0 : f.pronouns,
       tags: (0, i.jsx)(a.Z, {
@@ -49,15 +49,15 @@ function f(e) {
           userId: t.id
         }), !R && (0, i.jsx)(u.Z, {
           user: t,
-          isHovering: A,
-          onOpenProfile: () => N({
+          isHovering: N,
+          onOpenProfile: () => A({
             subsection: T.Tb.NOTE
           })
         })]
       })
     }), (0, i.jsx)(I.Z, {
       user: t,
-      onOpenProfile: e => N({
+      onOpenProfile: e => A({
         section: e
       })
     }), (0, i.jsx)(d.Z, {
@@ -74,7 +74,7 @@ function f(e) {
       user: t,
       currentUser: n,
       guild: S,
-      onOpenProfile: () => N({
+      onOpenProfile: () => A({
         subsection: T.Tb.ROLES
       })
     })]

@@ -14,8 +14,8 @@ var i, r, s = n(259443),
   h = n(626135),
   f = n(998502),
   S = n(830917),
-  A = n(554174),
-  N = n(938038),
+  N = n(554174),
+  A = n(938038),
   m = n(981631),
   O = n(987650);
 
@@ -200,8 +200,8 @@ class L {
       s = parseInt(r[0], 10),
       o = isNaN(s) ? l.Jx.UNKNOWN : s;
     isNaN(s) && R.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(r), i);
-    let a = N.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
-    N.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, o);
+    let a = A.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
+    A.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, o);
     let u = {
       screentype_unknown_duration: i[l.Jx.UNKNOWN],
       screentype_windowed_duration: i[l.Jx.WINDOWED],
@@ -459,7 +459,7 @@ function B(e) {
 }
 
 function k(e) {
-  null != (0, A.Z)() && (R.verbose("AUDIO_TOGGLE_SELF_MUTE", e), D.handleMuteToggled())
+  null != (0, N.Z)() && (R.verbose("AUDIO_TOGGLE_SELF_MUTE", e), D.handleMuteToggled())
 }
 
 function V(e) {

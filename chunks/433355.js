@@ -4,7 +4,7 @@ n.d(t, {
     return L
   },
   uZ: function() {
-    return N
+    return A
   }
 });
 var i, r = n(873546),
@@ -23,7 +23,7 @@ var i, r = n(873546),
   f = n(176505),
   S = n(231338);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,7 +31,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = "message_requests",
+let A = "message_requests",
   m = !1,
   O = !1,
   p = !0,
@@ -118,7 +118,7 @@ class y extends(i = s.ZP.PersistedStore) {
     return null == i ? null : i.type === a.tI.VIEW_THREAD || i.type === a.tI.VIEW_CHANNEL ? null === (t = i.details) || void 0 === t ? void 0 : t.initialMessageId : null
   }
 }
-A(y, "displayName", "ChannelSectionStore"), A(y, "persistKey", "ChannelSectionStore2"), t.ZP = new y(o.Z, {
+N(y, "displayName", "ChannelSectionStore"), N(y, "persistKey", "ChannelSectionStore2"), t.ZP = new y(o.Z, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
     O && (O = D(O)), m = D(m)
   },

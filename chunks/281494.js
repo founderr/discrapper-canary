@@ -4,7 +4,7 @@ n.d(t, {
     return f
   },
   Eo: function() {
-    return N
+    return A
   },
   Fe: function() {
     return i
@@ -22,7 +22,7 @@ n.d(t, {
     return h
   },
   jy: function() {
-    return A
+    return N
   }
 }), n(47120), n(653041);
 var i, r, s, o, a = n(544891),
@@ -125,7 +125,7 @@ let f = () => (l.Z.dispatch({
       recipientId: e
     })
   }));
-async function A(e) {
+async function N(e) {
   let t = [],
     n = new Map;
   for (let r of e) try {
@@ -144,7 +144,7 @@ async function A(e) {
     userTrialOffers: t
   }), n
 }
-async function N(e) {
+async function A(e) {
   try {
     var t;
     let n = await a.tn.post({

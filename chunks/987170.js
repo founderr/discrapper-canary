@@ -108,7 +108,7 @@ function d(e) {
         h = null == a.trackExposureOptions ? void 0 : (0, r.Z)(null !== (s = a.trackExposureOptions) && void 0 !== s ? s : {}),
         S = null !== (o = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== o && o,
         [
-          [A, N, m], O
+          [N, A, m], O
         ] = (0, i.useState)(() => {
           let t = null == T || l ? u.NZ.NOT_ELIGIBLE : T.bucket;
           return [c(e, t, d, T), t, null == T ? -1 : T.revision]
@@ -116,11 +116,11 @@ function d(e) {
         p = (0, r.Z)(t);
       return (0, i.useEffect)(() => {
         if (!l && (!!E || !!S)) I(p, h, !1 === E)
-      }, [l, E, p, h, N, m, S]), (0, i.useEffect)(() => f(p, (e, t, n) => {
+      }, [l, E, p, h, A, m, S]), (0, i.useEffect)(() => f(p, (e, t, n) => {
         O(i => i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n])
       }, {
         disable: l
-      }), [l, p]), A
+      }), [l, p]), N
     },
     subscribe: f,
     trackExposure: T,

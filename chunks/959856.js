@@ -20,8 +20,8 @@ var i = n(264344),
   h = n(740197),
   f = n(548820),
   S = n(579237),
-  A = n(582168),
-  N = n(825040),
+  N = n(582168),
+  A = n(825040),
   m = n(65154),
   O = n(436620);
 
@@ -254,7 +254,7 @@ class g extends o.Z {
     e([])
   }
   constructor() {
-    super(), p(this, "Video", N.Z), p(this, "Camera", A.Z), p(this, "_audioContext", null), p(this, "outputVolume", m.Qx), p(this, "sourceId", m.w5), p(this, "sinkId", m.w5), p(this, "enabled", !1), p(this, "connections", new Set), p(this, "interacted", !1), p(this, "loopback", null), p(this, "voiceActivityInput", null), p(this, "pendingDesktopInputs", {}), p(this, "enablePromise", null), p(this, "handleActiveSinksChange", (e, t) => {
+    super(), p(this, "Video", A.Z), p(this, "Camera", N.Z), p(this, "_audioContext", null), p(this, "outputVolume", m.Qx), p(this, "sourceId", m.w5), p(this, "sinkId", m.w5), p(this, "enabled", !1), p(this, "connections", new Set), p(this, "interacted", !1), p(this, "loopback", null), p(this, "voiceActivityInput", null), p(this, "pendingDesktopInputs", {}), p(this, "enablePromise", null), p(this, "handleActiveSinksChange", (e, t) => {
       this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t))
     }), p(this, "handleNewListener", e => {
       switch (e) {

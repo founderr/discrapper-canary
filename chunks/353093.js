@@ -13,7 +13,7 @@ n.d(t, {
     return f
   },
   f6: function() {
-    return A
+    return N
   },
   ky: function() {
     return m
@@ -69,7 +69,7 @@ function f(e, t) {
 function S(e, t) {
   return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled || !1
 }
-let A = (e, t) => {
+let N = (e, t) => {
     if (0 === e.length) return null;
     if (1 === e.length) return e[1];
     if (2 === e.length) return E.Z.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
@@ -94,7 +94,7 @@ let A = (e, t) => {
       })
     }
   },
-  N = {
+  A = {
     [c.NC.SIZE_12]: 16,
     [c.NC.SIZE_16]: 16,
     [c.NC.SIZE_24]: 24,
@@ -108,7 +108,7 @@ function m(e, t) {
   let {
     CDN_HOST: i
   } = window.GLOBAL_ENV;
-  if (null != i) return "".concat(location.protocol, "//").concat(i, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(N[n])
+  if (null != i) return "".concat(location.protocol, "//").concat(i, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(A[n])
 }
 
 function O(e, t) {

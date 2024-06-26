@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(981631),
   f = n(474936),
   S = n(689938),
-  A = n(573809);
+  N = n(573809);
 t.Z = r.memo(function(e) {
   let {
     disabled: t,
     referralsRemaining: n,
-    channel: N,
+    channel: A,
     isResending: m
   } = e, {
     enabled: O
@@ -31,14 +31,14 @@ t.Z = r.memo(function(e) {
     autoTrackExposure: !0
   }), p = O ? S.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : m ? S.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.Z.Messages.SHARE_NITRO_TOOLTIP, R = O ? S.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [g, C] = r.useState(!1), [v, L] = r.useState(!1), D = (0, a.Z)(null, () => L(!1)), {
     analyticsLocations: M
-  } = (0, _.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON), P = N.isDM() && void 0 !== N.recipients ? N.recipients[0] : null, y = (0, l.ZP)();
+  } = (0, _.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON), P = A.isDM() && void 0 !== A.recipients ? A.recipients[0] : null, y = (0, l.ZP)();
   return t ? null : (0, i.jsxs)("div", {
     ref: D,
-    className: A.buttonContainer,
+    className: N.buttonContainer,
     children: [(0, i.jsx)(d.Z, {
       shouldShowPopout: v,
       referralsRemaining: n,
-      channel: N,
+      channel: A,
       onClose: () => L(!1),
       isResending: m
     }), (0, i.jsx)(s.u, {
@@ -58,7 +58,7 @@ t.Z = r.memo(function(e) {
         },
         children: (0, i.jsx)(E.Z, {
           ...e,
-          innerClassName: A.button,
+          innerClassName: N.button,
           isActive: v,
           "aria-label": null != R ? R : p,
           "aria-haspopup": "dialog",

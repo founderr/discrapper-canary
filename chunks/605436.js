@@ -22,13 +22,13 @@ n.d(t, {
     return j
   },
   W: function() {
-    return N
+    return A
   },
   Wx: function() {
     return v
   },
   X0: function() {
-    return A
+    return N
   },
   Yh: function() {
     return V
@@ -87,7 +87,7 @@ function S(e) {
   return i.e$(e.permissions, h.Plq.ADMINISTRATOR)
 }
 
-function A(e) {
+function N(e) {
   var t, n;
   let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   let o = (n = e, i.e$(n.permissions, h.Plq.ADMINISTRATOR) ? T.aC.ADMINISTRATOR : T.aC.ROLE);
@@ -102,7 +102,7 @@ function A(e) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = S(e) ? 0 : 1,
     i = S(t) ? 0 : 1;
   return n !== i ? n - i : t.position - e.position
@@ -141,18 +141,18 @@ function g(e, t) {
 
 function C(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !S(t) && O(n, t.id, i) && g(e, t) && r(t.name)).sort(N).map(e => A(e))
+  return Object.values(t).filter(t => !S(t) && O(n, t.id, i) && g(e, t) && r(t.name)).sort(A).map(e => N(e))
 }
 
 function v(e, t, n, r) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !S(t) && O(n, t.id, r) && g(e, t) && s(t.name)).sort(N).map(e => A(e, i.e$(e.permissions, r)))
+  return Object.values(t).filter(t => !S(t) && O(n, t.id, r) && g(e, t) && s(t.name)).sort(A).map(e => N(e, i.e$(e.permissions, r)))
 }
 
 function L(e, t, n, i, r) {
   var s, o, a, l, u;
   let _ = [];
-  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => S(e) || !O(a, e.id, l, u) && g(s, e))).sort(N).map(e => A(e))).length ? m(f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
+  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => S(e) || !O(a, e.id, l, u) && g(s, e))).sort(A).map(e => N(e))).length ? m(f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
 }
 
 function D(e, t, n, r, s) {
@@ -161,7 +161,7 @@ function D(e, t, n, r, s) {
   return 0 === (c = (o = e, a = t, l = n, u = r, _ = s, Object.values(a).filter(e => {
     var t;
     return S(e) || !O(l, e.id, u, _) && g(o, e) || i.e$(i.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-  })).sort(N).map(e => A(e, i.e$(e.permissions, r)))).length ? m(f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
+  })).sort(A).map(e => N(e, i.e$(e.permissions, r)))).length ? m(f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
 }
 
 function M(e, t) {

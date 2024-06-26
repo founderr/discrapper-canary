@@ -16,12 +16,12 @@ var r = n(392711),
   h = n(689938),
   f = n(535175),
   S = n(239840);
-let A = {
+let N = {
     results: {
       choices: []
     }
   },
-  N = {
+  A = {
     results: {
       choices: [],
       isLoading: !0
@@ -54,7 +54,7 @@ let A = {
     queryResults(e, t, n, i, r) {
       var s;
       let o = u.Z.getActiveOption(e.id);
-      if (null == o) return A;
+      if (null == o) return N;
       if (o.autocomplete) {
         if (r) {
           let r = u.Z.getActiveCommand(e.id);
@@ -73,7 +73,7 @@ let A = {
         }
         if (l.Z.getLastErrored(e.id)) return O;
         let s = l.Z.getAutocompleteChoices(e.id, o.name, n);
-        return null == s ? N : {
+        return null == s ? A : {
           results: {
             choices: s
           }

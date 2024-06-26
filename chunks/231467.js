@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(114487),
   f = n(214715),
   S = n(550271),
-  A = n(246364),
-  N = n(937111),
+  N = n(246364),
+  A = n(937111),
   m = n(703656),
   O = n(271383),
   p = n(594174),
@@ -164,8 +164,8 @@ function G(e) {
     prioritizedGameIds: d,
     className: E,
     showBrandingFooter: f = !1,
-    bannerUrl: A,
-    onlyAnimateIconOnHover: N = !1,
+    bannerUrl: N,
+    onlyAnimateIconOnHover: A = !1,
     hasPendingJoinRequest: m = !1,
     atMaxMemberCapacity: O = !1
   } = e, {
@@ -182,7 +182,7 @@ function G(e) {
     V(!1)
   }, []), W = D.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: n.memberCount
-  }), K = null != A ? A : (0, I.pY)(n.id, w), z = null == s && null == K ? {
+  }), K = null != N ? N : (0, I.pY)(n.id, w), z = null == s && null == K ? {
     background: "linear-gradient(90deg, ".concat(v, ", ").concat(G, ")")
   } : void 0, q = null != s ? s : null != K ? (0, i.jsx)("img", {
     alt: D.Z.Messages.CLAN_LOOK_BANNER,
@@ -224,7 +224,7 @@ function G(e) {
                 guildName: n.name,
                 guildIcon: n.icon,
                 iconSize: 64,
-                animate: !N || k
+                animate: !A || k
               })
             })
           }), (0, i.jsx)("div", {
@@ -329,11 +329,11 @@ t.ZP = 12633 == n.j ? function(e) {
     affinity: E,
     index: I,
     source: T
-  } = o, h = (0, l.e7)([p.default], () => p.default.getCurrentUser()), f = (0, l.e7)([O.ZP], () => O.ZP.isMember(_.id, null == h ? void 0 : h.id), [_, h]), S = (0, l.e7)([N.Z], () => {
+  } = o, h = (0, l.e7)([p.default], () => p.default.getCurrentUser()), f = (0, l.e7)([O.ZP], () => O.ZP.isMember(_.id, null == h ? void 0 : h.id), [_, h]), S = (0, l.e7)([A.Z], () => {
     var e;
-    return (null === (e = N.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === A.wB.SUBMITTED
+    return (null === (e = A.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED
   }), R = _.memberCount >= L.Du, g = r.useCallback(() => {
-    let e = null != N.Z.getRequest(_.id);
+    let e = null != A.Z.getRequest(_.id);
     if ((0, c.EK)({
         guildId: _.id,
         isMember: f,

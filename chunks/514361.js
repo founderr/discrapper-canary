@@ -14,8 +14,8 @@ var s, o = n(442837),
   h = n(131704),
   f = n(592125),
   S = n(594174),
-  A = n(74538),
-  N = n(51144),
+  N = n(74538),
+  A = n(51144),
   m = n(47760),
   O = n(469115),
   p = n(874893);
@@ -40,7 +40,7 @@ function D() {
   C && (i = void 0), v = !1, g = !1
 }
 let M = () => {
-    C = !A.ZP.canUseClientThemes(S.default.getCurrentUser())
+    C = !N.ZP.canUseClientThemes(S.default.getCurrentUser())
   },
   P = () => {
     let e = I.L1.getSetting().backgroundGradientPresetId;
@@ -136,7 +136,7 @@ R(U, "displayName", "ClientThemesBackgroundStore"), R(U, "persistKey", "ClientTh
       channelId: t,
       guildId: n
     } = e, i = S.default.getCurrentUser();
-    if (null == t || null == n || (0, u.un)(a.z.CLIENT_THEMES_COACHMARK) || !(0, N.Fc)(i)) return;
+    if (null == t || null == n || (0, u.un)(a.z.CLIENT_THEMES_COACHMARK) || !(0, A.Fc)(i)) return;
     let r = f.Z.getChannel(t);
     null != r && (0, h.zi)(r.type) && (v = !0, function() {
       g = !0

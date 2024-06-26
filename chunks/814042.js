@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(27733),
   f = n(981631),
   S = n(474936),
-  A = n(689938),
-  N = n(30785),
+  N = n(689938),
+  A = n(30785),
   m = n(867250);
 let O = () => (0, T.f)(!1),
   p = e => {
@@ -43,8 +43,8 @@ let O = () => (0, T.f)(!1),
       C = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_0,
       v = null != R || null != g;
     return (0, i.jsxs)("div", {
-      className: o()(N.upsellWrapper, {
-        [N.unifyTrialUpsell]: v
+      className: o()(A.upsellWrapper, {
+        [A.unifyTrialUpsell]: v
       }),
       children: [v ? (0, i.jsx)(d.ZP, {
         trialOffer: R,
@@ -52,34 +52,34 @@ let O = () => (0, T.f)(!1),
         onClose: O,
         type: S.cd.STICKER_PICKER_UPSELL,
         subscriptionTier: null !== (s = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : S.Si.TIER_2,
-        children: C ? A.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
+        children: C ? N.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
           planName: (0, I.aq)(S.Xh.PREMIUM_MONTH_TIER_0),
           onClick: T
-        }) : A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
+        }) : N.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
           onClick: T
         })
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
-          className: N.upsellImage,
+          className: A.upsellImage,
           src: m,
-          alt: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
+          alt: N.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
         }), (0, i.jsx)(a.Text, {
-          className: N.upsellTitle,
+          className: A.upsellTitle,
           color: "header-primary",
           variant: "text-lg/semibold",
-          children: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
+          children: N.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
         }), (0, i.jsx)(a.Text, {
-          className: N.upsellDescription,
+          className: A.upsellDescription,
           variant: "text-md/normal",
-          children: A.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
+          children: N.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
             onClick: T
           })
         })]
       }), !v && (0, i.jsx)(h.Z, {
         analyticsSection: f.jXE.EXPRESSION_PICKER,
-        buttonText: v ? C ? A.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+        buttonText: v ? C ? N.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : N.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
       }), (0, i.jsx)(a.Clickable, {
-        className: N.upsellClose,
+        className: A.upsellClose,
         onClick: O,
         children: (0, i.jsx)(a.CloseSmallIcon, {
           size: "md",

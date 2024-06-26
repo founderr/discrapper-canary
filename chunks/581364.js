@@ -25,13 +25,13 @@ n.d(t, {
     return P
   },
   Z8: function() {
-    return A
+    return N
   },
   bD: function() {
     return R
   },
   nG: function() {
-    return N
+    return A
   },
   qJ: function() {
     return U
@@ -61,7 +61,7 @@ var E = n(703558),
   f = n(981631),
   S = n(231338);
 
-function A(e) {
+function N(e) {
   var t, n, i;
   let r, {
     rootCommand: s,
@@ -135,7 +135,7 @@ function A(e) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   return l().flatMap(e, e => (o()(null != e.id, "Missing command id"), function e(t) {
     var n, i;
     let {
@@ -146,14 +146,14 @@ function N(e, t) {
       useKeyedPermissions: l
     } = t;
     if (s.hasOwnProperty("id")) {
-      if (null == s.options || 0 === s.options.length) return [A({
+      if (null == s.options || 0 === s.options.length) return [N({
         rootCommand: r,
         command: s,
         applicationId: o,
         subCommandPath: a,
         useKeyedPermissions: l
       })]
-    } else if (s.type !== _.jw.SUB_COMMAND && s.type !== _.jw.SUB_COMMAND_GROUP && (null == s.options || 0 === s.options.length)) return [A({
+    } else if (s.type !== _.jw.SUB_COMMAND && s.type !== _.jw.SUB_COMMAND_GROUP && (null == s.options || 0 === s.options.length)) return [N({
       rootCommand: r,
       command: s,
       applicationId: o,
@@ -175,7 +175,7 @@ function N(e, t) {
       useKeyedPermissions: l
     }));
     let d = s.options.filter(e => e.type === _.jw.SUB_COMMAND);
-    for (let e = 0; e < d.length; e++) u.push(A({
+    for (let e = 0; e < d.length; e++) u.push(N({
       rootCommand: r,
       command: d[e],
       applicationId: o,
@@ -186,7 +186,7 @@ function N(e, t) {
       }]),
       useKeyedPermissions: l
     }));
-    return 0 === c.length && 0 === d.length && u.push(A({
+    return 0 === c.length && 0 === d.length && u.push(N({
       rootCommand: r,
       command: s,
       applicationId: o,

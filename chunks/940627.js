@@ -24,7 +24,7 @@ class h extends o.PureComponent {
       badgeColor: h,
       iconClassName: f,
       flowerStarClassName: S
-    } = this.props, A = function(e) {
+    } = this.props, N = function(e) {
       switch (e) {
         case 2:
           return I.Z.Messages.GUILD_VERIFIED;
@@ -48,7 +48,7 @@ class h extends o.PureComponent {
       color: o,
       position: a,
       delay: d,
-      text: A,
+      text: N,
       children: o => 5 === e || 4 === e ? (0, s.jsx)("div", {
         ...o,
         className: l()(n, i),

@@ -19,11 +19,11 @@ t.Z = function(e) {
     isInline: I = !0,
     id: T,
     isEdited: h = !1
-  } = e, f = (0, l.Hg)(c), S = r ? (0, l.vc)(c, "LT") : (0, l.Y4)(c), A = r ? (0, a.Z)(S) : null, N = h ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+  } = e, f = (0, l.Hg)(c), S = r ? (0, l.vc)(c, "LT") : (0, l.Y4)(c), N = r ? (0, a.Z)(S) : null, A = h ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
     timeFormatted: f
   }) : f;
   return (0, i.jsx)("span", {
-    className: s()(n, A, {
+    className: s()(n, N, {
       [_.timestamp]: !0,
       [_.timestampVisibleOnHover]: d,
       [_.timestampInline]: I,
@@ -31,7 +31,7 @@ t.Z = function(e) {
     }),
     children: (0, i.jsx)(o.Tooltip, {
       text: (0, l.vc)(c, "LLLL"),
-      "aria-label": N,
+      "aria-label": A,
       tooltipClassName: _.timestampTooltip,
       delay: 750,
       children: e => (0, i.jsx)("time", {

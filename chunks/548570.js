@@ -20,8 +20,8 @@ var i = n(512722),
   h = n(250407),
   f = n(710845),
   S = n(797614),
-  A = n(218543),
-  N = n(857192),
+  N = n(218543),
+  A = n(857192),
   m = n(626135),
   O = n(12647),
   p = n(70956),
@@ -162,12 +162,12 @@ class W extends y.Z {
             t: s,
             d: o
           } = k.unpack(e);
-        if (i !== y.j.DISPATCH && a.Z.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.j[i])), N.default.isLoggingGatewayEvents) {
+        if (i !== y.j.DISPATCH && a.Z.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.j[i])), A.default.isLoggingGatewayEvents) {
           let e = [i];
           i === y.j.DISPATCH && e.push(s), e.push(o), B.verboseDangerously("<~", ...e)
         }
         let l = Date.now() - n;
-        switch ("READY" === s ? A.Z.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? A.Z.parseReadySupplemental.set(n, l) : l > 10 && a.Z.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
+        switch ("READY" === s ? N.Z.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? N.Z.parseReadySupplemental.set(n, l) : l > 10 && a.Z.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
           case y.j.HELLO:
             this._clearHelloTimeout(), this._handleHello(o);
             break;
@@ -501,7 +501,7 @@ class W extends y.Z {
   }
   constructor() {
     super(), x(this, "gatewayBackoff", void 0), x(this, "handleIdentify", void 0), x(this, "dispatchExceptionBackoff", new o.Z(1e3, F)), x(this, "dispatchSuccessTimer", 0), x(this, "connectionState_", void 0), x(this, "webSocket", void 0), x(this, "seq", void 0), x(this, "sessionId", void 0), x(this, "token", void 0), x(this, "initialHeartbeatTimeout", void 0), x(this, "expeditedHeartbeatTimeout", void 0), x(this, "heartbeatInterval", void 0), x(this, "helloTimeout", void 0), x(this, "heartbeater", void 0), x(this, "lastHeartbeatTime", void 0), x(this, "lastHeartbeatAckTime", void 0), x(this, "heartbeatAck", void 0), x(this, "connectionStartTime", void 0), x(this, "identifyStartTime", void 0), x(this, "nextReconnectIsImmediate", void 0), x(this, "compressionHandler", void 0), x(this, "hasConnectedOnce", void 0), x(this, "isFastConnect", void 0), x(this, "didForceClearGuildHashes", !1), x(this, "identifyUncompressedByteSize", 0), x(this, "identifyCompressedByteSize", 0), x(this, "analytics", {}), x(this, "identifyCount", 0), x(this, "resumeUrl", null), x(this, "iosGoingAwayEventCount", 0), x(this, "dispatcher", void 0), x(this, "send", (e, t, n) => {
-      N.default.isLoggingGatewayEvents && B.verboseDangerously("~>", e, t);
+      A.default.isLoggingGatewayEvents && B.verboseDangerously("~>", e, t);
       let i = k.pack({
         op: e,
         d: t

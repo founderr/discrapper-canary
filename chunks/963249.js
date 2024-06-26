@@ -25,8 +25,8 @@ function T(e) {
     onClose: h,
     onComplete: f,
     onSubscriptionConfirmation: S,
-    analyticsLocations: A,
-    analyticsObject: N,
+    analyticsLocations: N,
+    analyticsObject: A,
     analyticsLocation: m,
     analyticsSourceLocation: O,
     isGift: p = !1,
@@ -68,8 +68,8 @@ function T(e) {
           G = !0, null == f || f(), !p && (0, l.H)(!0)
         },
         onSubscriptionConfirmation: S,
-        analyticsLocations: A,
-        analyticsObject: N,
+        analyticsLocations: N,
+        analyticsObject: A,
         analyticsLocation: m,
         analyticsSourceLocation: O,
         trialId: C,
@@ -89,13 +89,13 @@ function T(e) {
       !G && _.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
         load_id: w,
         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
-        location: null != m ? m : N,
+        location: null != m ? m : A,
         source: O,
         subscription_type: E.NYc.PREMIUM,
         is_gift: p,
         eligible_for_trial: null != C,
         application_id: D,
-        location_stack: A
+        location_stack: N
       }), (0, o.fw)(), (0, a.p)(), null == h || h(G), G && (null == S || S())
     }
   })

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(401460),
   f = n(441319),
   S = n(921944),
-  A = n(526761),
-  N = n(689938),
+  N = n(526761),
+  A = n(689938),
   m = n(776327);
 
 function O(e) {
@@ -30,7 +30,7 @@ function O(e) {
     disabled: n,
     renderCTAButtons: O
   } = e, [p, R] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), g = r.useRef(null);
-  (0, d.Z)(g, A.h1.CUSTOM_APP_ICONS);
+  (0, d.Z)(g, N.h1.CUSTOM_APP_ICONS);
   let C = (0, E.Dt)(),
     v = (0, o.useRadioGroup)({
       orientation: "horizontal",
@@ -95,13 +95,13 @@ function O(e) {
               className: m.title,
               children: [(0, i.jsx)(o.Heading, {
                 variant: "text-md/medium",
-                children: N.Z.Messages.APP_ICON_SETTINGS_TITLE
+                children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
               }), (0, i.jsx)(c.Z, {
                 className: m.premiumIcon
               })]
             }), (0, i.jsx)(o.Heading, {
               variant: "text-sm/normal",
-              children: N.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
+              children: A.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]
           }), null == O ? void 0 : O()]
         }), (0, i.jsx)("div", {

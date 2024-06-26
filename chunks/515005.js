@@ -15,8 +15,8 @@ var i = n(735250),
   h = n(378233),
   f = n(419922),
   S = n(490095),
-  A = n(981631),
-  N = n(689938),
+  N = n(981631),
+  A = n(689938),
   m = n(613892);
 let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
   p = (0, l.Mg)(m.__invalid_stickerPickerPreviewPadding),
@@ -85,8 +85,8 @@ let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
                 onFocus: null != b ? b : R,
                 onMouseMove: R,
                 onClick: () => {
-                  e.type === T.al.CREATE_STICKER && (E.default.track(A.rMx.OPEN_MODAL, {
-                    type: A.jXE.CREATE_STICKER_MODAL,
+                  e.type === T.al.CREATE_STICKER && (E.default.track(N.rMx.OPEN_MODAL, {
+                    type: N.jXE.CREATE_STICKER_MODAL,
                     location: Z
                   }), (0, u.openModalLazy)(async () => {
                     let {
@@ -111,7 +111,7 @@ let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
                 }), (0, i.jsx)(u.Text, {
                   color: "interactive-active",
                   variant: "text-xs/normal",
-                  children: N.Z.Messages.STICKER_PICKER_CREATE_STICKER
+                  children: A.Z.Messages.STICKER_PICKER_CREATE_STICKER
                 })]
               })
             }, e.guild_id);

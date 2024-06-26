@@ -31,7 +31,7 @@ function S(e) {
   return null == t && (t = f[e] = {}), t
 }
 
-function A(e) {
+function N(e) {
   let {
     type: t,
     channelId: n,
@@ -49,11 +49,11 @@ function A(e) {
       timestamp: Date.now(),
       draft: i
     }
-  } else N(n, r);
+  } else A(n, r);
   return "DRAFT_SAVE" === t
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.default.getId();
   if (null == n) return !1;
   let i = S(n),
@@ -85,7 +85,7 @@ class p extends(r = l.ZP.PersistedStore) {
       for (let [e, t] of c.default.entries(f))
         for (let [n, i] of c.default.entries(t)) {
           let t = i[0];
-          null != t && ("" === t.draft || "" === t.draft.trim()) && N(n, 0, e)
+          null != t && ("" === t.draft || "" === t.draft.trim()) && A(n, 0, e)
         }
     }(), this.waitFor(d.default, E.Z, I.Z)
   }
@@ -190,17 +190,17 @@ T(p, "displayName", "DraftStore"), T(p, "persistKey", "DraftStore"), T(p, "migra
           timestamp: Date.now(),
           draft: n
         }
-      }), N(t.parent_id, 1), N(t.parent_id, 2)
+      }), A(t.parent_id, 1), A(t.parent_id, 2)
     }
   },
-  DRAFT_SAVE: A,
-  DRAFT_CHANGE: A,
+  DRAFT_SAVE: N,
+  DRAFT_CHANGE: N,
   DRAFT_CLEAR: function(e) {
     let {
       channelId: t,
       draftType: n
     } = e;
-    return N(t, n)
+    return A(t, n)
   },
   THREAD_SETTINGS_DRAFT_CHANGE: function(e) {
     let {

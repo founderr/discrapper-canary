@@ -20,8 +20,8 @@ let u = r.memo(r.forwardRef((e, t) => {
     rowCountBySection: h,
     rowHeight: f,
     sectionMarginBottom: S,
-    sectionHeaderHeight: A,
-    sectionFooterHeight: N,
+    sectionHeaderHeight: N,
+    sectionFooterHeight: A,
     listHeaderHeight: m,
     stickyHeaders: O = !1,
     className: p,
@@ -44,13 +44,13 @@ let u = r.memo(r.forwardRef((e, t) => {
       sectionRowIndex: t
     }) : f, [f]),
     x = r.useCallback(e => {
-      let t = "function" == typeof A ? A(e) : A;
-      return null == t ? 0 : t
-    }, [A]),
-    B = r.useCallback(e => {
       let t = "function" == typeof N ? N(e) : N;
       return null == t ? 0 : t
     }, [N]),
+    B = r.useCallback(e => {
+      let t = "function" == typeof A ? A(e) : A;
+      return null == t ? 0 : t
+    }, [A]),
     k = r.useCallback(e => {
       let t = "function" == typeof S ? S(e) : S;
       return null == t ? 0 : t
@@ -254,9 +254,9 @@ let u = r.memo(r.forwardRef((e, t) => {
           else break;
           h += i, f++, t++
         }
-        let A = o + u + h,
-          N = A + I >= L && A <= e;
-        null != E && N && a.push(E(r)), null != c ? i.push(c(r, a)) : i = [...i, ...a]
+        let N = o + u + h,
+          A = N + I >= L && N <= e;
+        null != E && A && a.push(E(r)), null != c ? i.push(c(r, a)) : i = [...i, ...a]
       } else break
     }
     return {

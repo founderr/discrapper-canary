@@ -12,12 +12,12 @@ var r, s, o, a, l = n(442837),
   h = n(981631),
   f = n(647086);
 let S = {},
-  A = {},
-  N = !1,
+  N = {},
+  A = !1,
   m = [];
 
 function O(e) {
-  for (let t of (A = {}, S = {}, i = 0, e)) i++, A[t.id] = d.cL(t), S[t.id] = t.roles
+  for (let t of (N = {}, S = {}, i = 0, e)) i++, N[t.id] = d.cL(t), S[t.id] = t.roles
 }
 
 function p(e) {
@@ -34,19 +34,19 @@ function p(e) {
 let R = Object.freeze({});
 class g extends(r = l.ZP.Store) {
   getGuild(e) {
-    return null == e ? void 0 : e === h.I_8 ? f.g : A[e]
+    return null == e ? void 0 : e === h.I_8 ? f.g : N[e]
   }
   getGuilds() {
-    return A
+    return N
   }
   getGuildIds() {
-    return I.default.keys(A)
+    return I.default.keys(N)
   }
   getGuildCount() {
     return i
   }
   isLoaded() {
-    return N
+    return A
   }
   getGeoRestrictedGuilds() {
     return m
@@ -72,17 +72,17 @@ a = "GuildStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
   BACKGROUND_SYNC: function(e) {
     for (let n of e.guilds) {
       var t;
-      let e = A[n.id];
+      let e = N[n.id];
       if (null == e || "unavailable" === n.data_mode) return;
-      A[n.id] = d.sp(n, e), S[n.id] = "partial" === n.data_mode ? d.EO(n.id, null !== (t = S[n.id]) && void 0 !== t ? t : R, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles)
+      N[n.id] = d.sp(n, e), S[n.id] = "partial" === n.data_mode ? d.EO(n.id, null !== (t = S[n.id]) && void 0 !== t ? t : R, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles)
     }
-    i = Object.keys(A).length
+    i = Object.keys(N).length
   },
   CONNECTION_OPEN: function(e) {
-    N = !0;
-    let t = A;
-    A = {}, S = {}, i = 0, e.guilds.forEach(e => {
-      i++, A[e.id] = d.wD(e, t[e.id]), S[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles
+    A = !0;
+    let t = N;
+    N = {}, S = {}, i = 0, e.guilds.forEach(e => {
+      i++, N[e.id] = d.wD(e, t[e.id]), S[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles
     });
     let n = !1;
     if (m.length !== e.geoRestrictedGuilds.length) n = !0;
@@ -95,8 +95,8 @@ a = "GuildStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
-    A = {}, S = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
-      i++, A[e.id] = new c.ZP(e)
+    N = {}, S = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
+      i++, N[e.id] = new c.ZP(e)
     }), S = e.allGuildsRoles
   },
   CACHE_LOADED: function(e) {
@@ -107,16 +107,16 @@ a = "GuildStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
     O(e.guilds)
   },
   GUILD_CREATE: function(e) {
-    let t = d.wD(e.guild, A[e.guild.id]);
-    null == A[t.id] && i++, A = {
-      ...A,
+    let t = d.wD(e.guild, N[e.guild.id]);
+    null == N[t.id] && i++, N = {
+      ...N,
       [t.id]: t
     }, S[t.id] = e.guild.roles instanceof Array ? E.C5(t.id, e.guild.roles) : e.guild.roles
   },
   GUILD_UPDATE: function(e) {
-    let t = d.di(e.guild, A[e.guild.id]);
-    null == A[t.id] && i++, A = {
-      ...A,
+    let t = d.di(e.guild, N[e.guild.id]);
+    null == N[t.id] && i++, N = {
+      ...N,
       [t.id]: t
     }, S[t.id] = E.C5(t.id, e.guild.roles)
   },
@@ -128,10 +128,10 @@ a = "GuildStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
       m.splice(n, 1), m = [...m];
       return
     }
-    if (null == A[t.id] || t.unavailable) return !1;
-    A = {
-      ...A
-    }, delete A[t.id], S[t.id] = void 0, i--
+    if (null == N[t.id] || t.unavailable) return !1;
+    N = {
+      ...N
+    }, delete N[t.id], S[t.id] = void 0, i--
   },
   GUILD_ROLE_CREATE: p,
   GUILD_ROLE_UPDATE: p,
@@ -150,12 +150,12 @@ a = "GuildStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
       guildId: t,
       joinedAt: n,
       user: i
-    } = e, r = T.default.getId(), s = A[t];
+    } = e, r = T.default.getId(), s = N[t];
     if (r !== i.id || null == s) return !1;
     let o = "string" == typeof n ? new Date(n) : n;
     if (o === s.joinedAt || null == o) return !1;
-    A = {
-      ...A,
+    N = {
+      ...N,
       [t]: s.updateJoinedAt(o)
     }
   },

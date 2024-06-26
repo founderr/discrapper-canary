@@ -33,7 +33,7 @@ function S(e) {
   }) : null
 }
 
-function A(e) {
+function N(e) {
   let {
     subHead: t,
     buildDetails: n,
@@ -70,7 +70,7 @@ t.Z = e => {
   let {
     loading: a = !1,
     currentOverrides: c,
-    linkMeta: N,
+    linkMeta: A,
     url: m,
     applyBuildOverride: O,
     clearBuildOverride: p
@@ -81,7 +81,7 @@ t.Z = e => {
   }, [p, R]);
   return (0, i.jsxs)("div", {
     className: f.wrapper,
-    children: [(t = N, n = m, s = a, (0, i.jsxs)(u.Text, {
+    children: [(t = A, n = m, s = a, (0, i.jsxs)(u.Text, {
       variant: "text-xs/normal",
       className: f.titleRegion,
       children: [(0, i.jsx)("strong", {
@@ -129,7 +129,7 @@ t.Z = e => {
         !E.isPlatformEmbedded && T.push("discord_marketing", "discord_developers");
         let f = (0, I.Z)(a, T);
         if (!f.valid) return function(e) {
-          return A({
+          return N({
             subHead: h.Z.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
             buttonColor: u.Button.Colors.TRANSPARENT,
             buttonText: "Invalid",
@@ -140,11 +140,11 @@ t.Z = e => {
         l()(null != a, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
         let {
           discord_web: S,
-          discord_developers: N
-        } = a.targetBuildOverride, m = null != S ? S : N;
+          discord_developers: A
+        } = a.targetBuildOverride, m = null != S ? S : A;
         if (l()(null != m, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved"), t = m, null == (n = o) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type) r = h.Z.Messages.BUILD_OVERRIDE_APPLY, i = _, s = u.Button.Colors.GREEN;
         else r = h.Z.Messages.BUILD_OVERRIDE_CLEAR, i = c, s = u.Button.Colors.RED;
-        return A({
+        return N({
           subHead: h.Z.Messages.BUILD_OVERRIDE_ID,
           buildDetails: m.id,
           buttonClick: i,
@@ -154,7 +154,7 @@ t.Z = e => {
         })
       }({
         currentOverrides: c,
-        linkMeta: N,
+        linkMeta: A,
         applyBuildOverride: C,
         clearBuildOverride: v,
         submitting: R

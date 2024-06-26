@@ -16,8 +16,8 @@ let T = E.YN.GLOBAL_FEED,
   h = new Map,
   f = new Set,
   S = new Map,
-  A = null,
-  N = (0, i.debounce)(c.y, 3e3, {
+  N = null,
+  A = (0, i.debounce)(c.y, 3e3, {
     trailing: !0
   });
 
@@ -54,9 +54,9 @@ function R(e) {
 function g() {
   if (R(T), !p(T)) return;
   let e = d.Z.getFeed(T);
-  if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == A) return;
+  if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == N) return;
   let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
-    n = Math.max(0, null == A ? 0 : new Date(A).getTime() - Date.now(), t);
+    n = Math.max(0, null == N ? 0 : new Date(N).getTime() - Date.now(), t);
   m(T, {
     loading: !1,
     nextFetchDate: new Date(Date.now() + n)
@@ -81,7 +81,7 @@ async function C(e) {
       feed: n
     }), S.set(e, 0), f.delete(e), m(e, {
       loading: !1
-    }), e === T && (A = null, g())
+    }), e === T && (N = null, g())
   } catch (s) {
     var n;
     let i = null !== (n = S.get(e)) && void 0 !== n ? n : 0;
@@ -115,7 +115,7 @@ function D(e) {
   let {
     refreshAfterMs: t
   } = e, n = d.Z.getFeed(T);
-  if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) A = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString(), g()
+  if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) N = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString(), g()
 }
 
 function M(e) {
@@ -124,7 +124,7 @@ function M(e) {
     connectionId: n,
     track: i
   } = e;
-  if (null != n && !!(0, _.Dy)("ContentInventoryManager.handleSpotifyNewTrack"))(null === (t = a.Z.getAccount(n, I.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && N(n, i)
+  if (null != n && !!(0, _.Dy)("ContentInventoryManager.handleSpotifyNewTrack"))(null === (t = a.Z.getAccount(n, I.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && A(n, i)
 }
 
 function P() {

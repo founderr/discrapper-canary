@@ -28,7 +28,7 @@ n.d(t, {
     return C
   },
   is: function() {
-    return A
+    return N
   },
   kP: function() {
     return P
@@ -43,7 +43,7 @@ n.d(t, {
     return g
   },
   xw: function() {
-    return N
+    return A
   }
 }), n(411104);
 var i = n(990547),
@@ -92,12 +92,12 @@ async function S(e) {
     errorHints: []
   }
 }
-async function A(e) {
+async function N(e) {
   await r.tn.post({
     url: h.ANM.QUEST_ON_CONSOLE_STOP(e)
   })
 }
-async function N() {
+async function A() {
   if (!_.Z.isFetchingCurrentQuests) {
     s.Z.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"

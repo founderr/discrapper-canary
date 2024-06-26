@@ -62,8 +62,8 @@ let T = (0, c.B)({
   }),
   f = new l.Y("GatewayZstdStore");
 let S = !1,
-  A = 0,
-  N = !0;
+  N = 0,
+  A = !0;
 
 function m() {
   return null == i && (i = (0, E.NF)() && (0, E.MF)()), i
@@ -80,7 +80,7 @@ function O() {
     t = e.useZstd;
   e.doVerification && (t = h.getCurrentConfig({
     location: "GatewayZstdStore"
-  }).useZstd), p(t), A = 0
+  }).useZstd), p(t), N = 0
 }
 
 function p(e) {
@@ -97,10 +97,10 @@ class R extends(a = u.ZP.Store) {
     return m()
   }
   enableFailureTracking() {
-    N = !0
+    A = !0
   }
   disableFailureTracking() {
-    N = !1
+    A = !1
   }
 }
 o = "GatewayZstdStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
@@ -114,7 +114,7 @@ o = "GatewayZstdStore", (s = "displayName") in(r = R) ? Object.defineProperty(r,
     let {
       code: t
     } = e;
-    if (!!m() && !!N && 1e3 !== t)(A += 1) > 3 && (f.error("Disabling zstd due to consecutive errors"), p(!1), S = !0)
+    if (!!m() && !!A && 1e3 !== t)(N += 1) > 3 && (f.error("Disabling zstd due to consecutive errors"), p(!1), S = !0)
   },
   CONNECTION_RESUMED: O
 })

@@ -30,7 +30,7 @@ function S(e) {
   } = e, u = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == u ? null : (0, i.jsxs)("div", {
     className: f.buttons,
-    children: [(0, i.jsx)(A, {
+    children: [(0, i.jsx)(N, {
       slateEditor: u,
       markdownSyntax: "bold",
       children: (0, i.jsx)(l.BoldIcon, {
@@ -38,7 +38,7 @@ function S(e) {
         color: "currentColor",
         className: o()(f.icon, s)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: u,
       markdownSyntax: "italics",
       children: (0, i.jsx)(l.ItalicIcon, {
@@ -46,7 +46,7 @@ function S(e) {
         color: "currentColor",
         className: o()(f.icon, s)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: u,
       markdownSyntax: "strikethrough",
       children: (0, i.jsx)(l.StrikethroughIcon, {
@@ -56,7 +56,7 @@ function S(e) {
       })
     }), (0, i.jsx)("div", {
       className: o()(f.divider, a)
-    }), !(null == r ? void 0 : r.disableBlockQuotes) && (0, i.jsx)(N, {
+    }), !(null == r ? void 0 : r.disableBlockQuotes) && (0, i.jsx)(A, {
       slateEditor: u,
       blockType: "blockQuote",
       children: (0, i.jsx)(l.QuoteIcon, {
@@ -64,7 +64,7 @@ function S(e) {
         color: "currentColor",
         className: o()(f.icon, s)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: u,
       markdownSyntax: "inlineCode",
       children: (0, i.jsx)(l.AngleBracketsIcon, {
@@ -74,7 +74,7 @@ function S(e) {
         color: "currentColor",
         className: o()(f.icon, s)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: u,
       markdownSyntax: "spoiler",
       children: (0, i.jsx)(l.EyeIcon, {
@@ -86,7 +86,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     slateEditor: t,
     markdownSyntax: n,
@@ -106,7 +106,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     blockType: t,
     slateEditor: n,
@@ -143,16 +143,16 @@ t.Z = r.forwardRef(function(e, t) {
     editorRef: s,
     containerRef: o,
     options: l
-  } = e, d = r.useRef(null), [E, I] = r.useState(!1), h = r.useRef(), A = r.useContext(u.ZP), N = r.useCallback(() => {
+  } = e, d = r.useRef(null), [E, I] = r.useState(!1), h = r.useRef(), N = r.useContext(u.ZP), A = r.useCallback(() => {
     I(!1), clearTimeout(h.current)
   }, []), O = r.useCallback(e => {
     var t;
-    let n = A.renderWindow;
-    !(e.target instanceof n.Node && (null === (t = d.current) || void 0 === t ? void 0 : t.contains(e.target))) && N()
-  }, [A, N]), p = r.useCallback(e => {
-    let t = A.renderWindow;
+    let n = N.renderWindow;
+    !(e.target instanceof n.Node && (null === (t = d.current) || void 0 === t ? void 0 : t.contains(e.target))) && A()
+  }, [N, A]), p = r.useCallback(e => {
+    let t = N.renderWindow;
     if (e.target instanceof t.Element) {
-      if (0 !== e.button) N();
+      if (0 !== e.button) A();
       else {
         var n;
         let i = e.target instanceof t.Node && (null === (n = d.current) || void 0 === n ? void 0 : n.contains(e.target));
@@ -163,16 +163,16 @@ t.Z = r.forwardRef(function(e, t) {
           I(i || null != n && null != r && r.contains(n))
         }, 100)
       }
-    } else N()
-  }, [A, o, N]);
+    } else A()
+  }, [N, o, A]);
   r.useImperativeHandle(t, () => ({
-    hide: N
-  }), [N]), r.useEffect(() => {
-    let e = A.renderWindow;
-    return e.document.addEventListener("keydown", N), e.document.addEventListener("mousedown", O), e.document.addEventListener("mouseup", p), e.addEventListener("focus", N), e.addEventListener("blur", N), () => {
-      e.document.removeEventListener("keydown", N), e.document.removeEventListener("mousedown", O), e.document.removeEventListener("mouseup", p), e.removeEventListener("focus", N), e.removeEventListener("blur", N), clearTimeout(h.current)
+    hide: A
+  }), [A]), r.useEffect(() => {
+    let e = N.renderWindow;
+    return e.document.addEventListener("keydown", A), e.document.addEventListener("mousedown", O), e.document.addEventListener("mouseup", p), e.addEventListener("focus", A), e.addEventListener("blur", A), () => {
+      e.document.removeEventListener("keydown", A), e.document.removeEventListener("mousedown", O), e.document.removeEventListener("mouseup", p), e.removeEventListener("focus", A), e.removeEventListener("blur", A), clearTimeout(h.current)
     }
-  }, [A, N, O, p]);
+  }, [N, A, O, p]);
   let {
     x: R,
     y: g
@@ -199,11 +199,11 @@ t.Z = r.forwardRef(function(e, t) {
     h.setStart(u.anchorNode, u.anchorOffset), h.setEnd(u.focusNode, u.focusOffset);
     let f = h.getBoundingClientRect(),
       S = c.x === I.x,
-      A = S ? f.x : Math.min(c.x, I.x),
-      N = S ? f.x + f.width : Math.max(c.x, I.x),
+      N = S ? f.x : Math.min(c.x, I.x),
+      A = S ? f.x + f.width : Math.max(c.x, I.x),
       m = null !== (i = null === (n = o.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== i ? i : 0;
     return {
-      x: A + (N - A) / 2,
+      x: N + (A - N) / 2,
       y: Math.max(m, Math.min(I.y, c.y))
     }
   }, [o, E, s]), [C, v] = r.useState(0), [L, D] = r.useState(0);

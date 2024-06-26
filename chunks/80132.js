@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -21,14 +21,14 @@ var r = n(120356),
   h = n(228168),
   f = n(981631),
   S = n(689938),
-  A = n(255693);
+  N = n(255693);
 
-function N(e) {
+function A(e) {
   let {
     badges: t,
     className: n,
     badgeClassName: r,
-    onClose: N
+    onClose: A
   } = e, {
     analyticsLocations: m
   } = (0, u.ZP)(l.Z.BADGE), {
@@ -36,7 +36,7 @@ function N(e) {
     ...p
   } = (0, E.KZ)();
   return (0, i.jsx)("div", {
-    className: s()(A.container, n),
+    className: s()(N.container, n),
     "aria-label": S.Z.Messages.PROFILE_USER_BADGES,
     role: "group",
     children: t.map(e => (0, i.jsx)(o.TooltipContainer, {
@@ -54,7 +54,7 @@ function N(e) {
           let n = null != e.link ? (0, a.default)(e.link, {
             analyticsLocations: m
           }) : null;
-          if (null != n) return null == N || N(), n(t)
+          if (null != n) return null == A || A(), n(t)
         },
         onMouseEnter: () => {
           e.id === T.i && d.default.track(f.rMx.QUEST_CONTENT_VIEWED, {
@@ -72,7 +72,7 @@ function N(e) {
           alt: " ",
           "aria-hidden": !0,
           src: (0, h.jC)(e.icon),
-          className: s()(A.badge, r)
+          className: s()(N.badge, r)
         })
       })
     }, e.id))

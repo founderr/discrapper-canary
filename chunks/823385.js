@@ -15,8 +15,8 @@ var r, s = n(392711),
   h = n(314897),
   f = n(592125),
   S = n(703558),
-  A = n(984933),
-  N = n(271383),
+  N = n(984933),
+  A = n(271383),
   m = n(430824),
   O = n(496675),
   p = n(306680),
@@ -118,7 +118,7 @@ function W(e, t) {
             limit: 100,
             fuzzy: !0,
             filter: () => !0,
-            type: A.Zb
+            type: N.Zb
           })
       }
       let r = [],
@@ -142,7 +142,7 @@ function W(e, t) {
       a.length > 0 && r.push((0, _.o6)(M.Z.Messages.QUICKSWITCHER_DRAFTS), ...a);
       let l = p.ZP.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => Y(e)).filter(L.lm).reverse();
       if (l.length > 0 && (r.push((0, _.o6)(M.Z.Messages.QUICKSWITCHER_MENTIONS)), r = r.concat(l)), null != n) {
-        let e = A.ZP.getSelectableChannelIds(n).filter(e => {
+        let e = N.ZP.getSelectableChannelIds(n).filter(e => {
           let t = f.Z.getChannel(e);
           return !(null == t || e === i || H.includes(e) || C.ZP.isChannelMuted(t.guild_id, e) || null != t.parent_id && C.ZP.isChannelMuted(t.guild_id, t.parent_id)) && (0, E.d)(t)
         }).map(e => Y(e)).filter(e => e);
@@ -193,7 +193,7 @@ function K() {
 class z extends(r = a.ZP.PersistedStore) {
   initialize(e) {
     var t;
-    this.waitFor(N.ZP, m.Z, f.Z), this.syncWith([T.Z], () => !0), G = l.K.get(y) || !1, H = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []
+    this.waitFor(A.ZP, m.Z, f.Z), this.syncWith([T.Z], () => !0), G = l.K.get(y) || !1, H = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []
   }
   getState() {
     return {

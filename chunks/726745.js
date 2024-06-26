@@ -42,7 +42,7 @@ function S(e, t) {
     });
   null != i && (i.tokenStatus = t, T = n)
 }
-class A extends(o = u.ZP.PersistedStore) {
+class N extends(o = u.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t;
@@ -91,7 +91,7 @@ class A extends(o = u.ZP.PersistedStore) {
     return h
   }
 }
-I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"), I(A, "migrations", [e => {
+I(N, "displayName", "MultiAccountStore"), I(N, "persistKey", "MultiAccountStore"), I(N, "migrations", [e => {
   if (null != e) {
     var t;
     return {
@@ -103,7 +103,7 @@ I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"
     users: [],
     canUseMultiAccountMobile: !1
   }
-}]), t.Z = new A(_.Z, {
+}]), t.Z = new N(_.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t

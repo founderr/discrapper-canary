@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(502762),
   f = n(530),
   S = n(513099),
-  A = n(228168),
-  N = n(472375);
+  N = n(228168),
+  A = n(472375);
 
 function m(e) {
   let {
@@ -53,14 +53,14 @@ function m(e) {
         children: [(0, i.jsxs)(h.Z, {
           user: t,
           displayProfile: v,
-          profileType: A.y0.BITE_SIZE,
+          profileType: N.y0.BITE_SIZE,
           children: [(0, i.jsxs)("header", {
-            className: N.header,
+            className: A.header,
             children: [(0, i.jsx)(E.Z, {
               user: t,
               displayProfile: v,
               guildId: n,
-              profileType: A.y0.BITE_SIZE,
+              profileType: N.y0.BITE_SIZE,
               hasProfileEffect: (null == v ? void 0 : v.profileEffectId) != null
             }), (0, i.jsx)(S.Z, {
               user: t,
@@ -69,14 +69,14 @@ function m(e) {
               channelId: m
             })]
           }), (0, i.jsxs)("div", {
-            className: N.body,
+            className: A.body,
             children: [(0, i.jsx)(f.Z, {
               user: t,
-              profileType: A.y0.BITE_SIZE,
+              profileType: N.y0.BITE_SIZE,
               nickname: _.ZP.getName(n, m, t),
               tags: (0, i.jsx)(I.Z, {
                 displayProfile: v,
-                profileType: A.y0.BITE_SIZE,
+                profileType: N.y0.BITE_SIZE,
                 onClose: g
               })
             }), (0, i.jsx)(T.Z, {
@@ -86,7 +86,7 @@ function m(e) {
               textColor: "header-primary"
             })]
           }), (0, i.jsx)("footer", {
-            className: N.footer
+            className: A.footer
           })]
         }), (null == v ? void 0 : v.profileEffectId) != null && (0, i.jsx)(u.Z, {
           profileEffectId: null == v ? void 0 : v.profileEffectId,

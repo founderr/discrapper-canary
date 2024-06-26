@@ -25,10 +25,10 @@ function a(e) {
     onMouseDown: h,
     onMouseLeave: f,
     buttonProps: S,
-    "aria-label": A
-  } = e, N = r.useRef(null);
+    "aria-label": N
+  } = e, A = r.useRef(null);
   return (0, i.jsxs)(t, {
-    ref: N,
+    ref: A,
     className: a,
     onClick: u,
     onMouseOver: T,
@@ -38,11 +38,11 @@ function a(e) {
     children: [(0, i.jsx)(s.P, {
       ...S,
       focusProps: {
-        ringTarget: N,
+        ringTarget: A,
         ...l
       },
       className: o.focusTarget,
-      "aria-label": A,
+      "aria-label": N,
       onClick: e => {
         e.stopPropagation(), null == u || u(e)
       },

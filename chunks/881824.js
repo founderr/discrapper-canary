@@ -7,10 +7,10 @@ n.d(t, {
     return I
   },
   Gy: function() {
-    return N
+    return A
   },
   R5: function() {
-    return A
+    return N
   },
   T: function() {
     return E
@@ -100,7 +100,7 @@ function S(e) {
   return !a.ZP.isModerator(t, e) && n > 0
 }
 
-function A(e, t) {
+function N(e, t) {
   var _;
   let c = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   t !== e.id && (0, u.Ku)(!0), _ = e, (0, s.Kh)(_.id), t !== e.id && c && ! function(e) {
@@ -121,7 +121,7 @@ function A(e, t) {
   }(e)
 }
 
-function N(e, t) {
+function A(e, t) {
   return (0, r.ZD)(async () => {
     let {
       default: r

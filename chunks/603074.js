@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250),
@@ -20,14 +20,14 @@ var i = n(735250),
   h = n(208049),
   f = n(763296),
   S = n(526617),
-  A = n(761326);
+  N = n(761326);
 
-function N(e) {
+function A(e) {
   let {
     guildId: t,
     channel: n,
     containerWidth: s,
-    onClose: N,
+    onClose: A,
     onSelect: m,
     analyticsSource: O,
     suppressPlaySound: p,
@@ -54,14 +54,14 @@ function N(e) {
   }, []), (0, i.jsx)(c.Gt, {
     value: U,
     children: (0, i.jsx)(u.Dialog, {
-      className: o()(A.picker, {
-        [A.fetching]: P,
-        [A.autoWidth]: C
+      className: o()(N.picker, {
+        [N.fetching]: P,
+        [N.autoWidth]: C
       }),
       children: P ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(S.Z, {
         guildId: t,
         channel: n,
-        onClose: N,
+        onClose: A,
         onSelect: m,
         containerWidth: s,
         suppressPlaySound: p,

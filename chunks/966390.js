@@ -16,8 +16,8 @@ var i = n(481060),
   h = n(786761),
   f = n(3148),
   S = n(48854),
-  A = n(785359),
-  N = n(79390),
+  N = n(785359),
+  A = n(79390),
   m = n(623292),
   O = n(807092),
   p = n(467798),
@@ -59,7 +59,7 @@ async function M(e) {
       messageReference: x.message_reference,
       flags: x.flags,
       nonce: V,
-      poll: (0, N.x9)(U.poll)
+      poll: (0, A.x9)(U.poll)
     });
   return (x.nonce = V, G.on("start", e => {
     c = (0, h.e5)({
@@ -84,7 +84,7 @@ async function M(e) {
         channelId: d,
         file: e,
         messageRecord: c
-      }), (0, A.x)({
+      }), (0, N.x)({
         fileItems: e.items,
         failureCode: t,
         errorMessage: null == i ? void 0 : i.msg
@@ -195,7 +195,7 @@ t.Z = {
           type: "UPLOAD_FAIL",
           channelId: n,
           file: t
-        }), (0, A.x)({
+        }), (0, N.x)({
           fileItems: t.items,
           failureCode: c
         }), c === L.evJ.EXPLICIT_CONTENT) {

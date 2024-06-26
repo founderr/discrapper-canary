@@ -12,8 +12,8 @@ var i, r, s, o, a = n(658722),
   h = n(594190),
   f = n(592745),
   S = n(706454),
-  A = n(757266),
-  N = n(77498),
+  N = n(757266),
+  A = n(77498),
   m = n(283595),
   O = n(246946),
   p = n(230307),
@@ -72,7 +72,7 @@ function z() {
     t = {},
     n = new Set,
     i = h.ZP.getGamesSeen(!1, !1).map(e => {
-      let n = N.Z.getGameByGameData(e);
+      let n = A.Z.getGameByGameData(e);
       return null != n ? (t[n.id] = e.lastFocused * v.Z.Millis.SECOND, n.id) : null
     }),
     r = Object.values(m.Z.getAllLibraryApplications()).map(i => (function(e, t, n, i, r) {
@@ -95,7 +95,7 @@ function z() {
           LibraryApplicationStore: m.Z,
           LaunchableGameStore: f.Z,
           DispatchApplicationStore: g.Z,
-          ConnectedAppsStore: A.Z,
+          ConnectedAppsStore: N.Z,
           applicationId: e.id,
           branchId: e.branchId
         }),
@@ -120,7 +120,7 @@ function z() {
           LibraryApplicationStore: m.Z,
           LaunchableGameStore: f.Z,
           DispatchApplicationStore: g.Z,
-          ConnectedAppsStore: A.Z,
+          ConnectedAppsStore: N.Z,
           applicationId: e,
           branchId: null
         }),
@@ -130,11 +130,11 @@ function z() {
         defaultAction: null
       }
     })(i, n, t, e)).filter(D.lm), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
-  return k = null != N.Z.lastFetched && m.Z.fetched, !_().isEqual(s, x) && (x = s, P.isPlatformEmbedded && y.ZP.setSystemTrayApplications(F(x).map(e => e.application).slice(0, 5)), !0)
+  return k = null != A.Z.lastFetched && m.Z.fetched, !_().isEqual(s, x) && (x = s, P.isPlatformEmbedded && y.ZP.setSystemTrayApplications(F(x).map(e => e.application).slice(0, 5)), !0)
 }
 class q extends(i = E.ZP.Store) {
   initialize() {
-    this.syncWith([T.Z, N.Z, f.Z, h.ZP, g.Z, C.Z, m.Z, p.Z, O.Z, A.Z], z, 200), this.syncWith([R.Z, S.default], () => !0)
+    this.syncWith([T.Z, A.Z, f.Z, h.ZP, g.Z, C.Z, m.Z, p.Z, O.Z, N.Z], z, 200), this.syncWith([R.Z, S.default], () => !0)
   }
   get applicationFilterQuery() {
     return B

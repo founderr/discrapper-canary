@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(342656),
   f = n(621853),
   S = n(652853),
-  A = n(421486),
-  N = n(138394),
+  N = n(421486),
+  A = n(138394),
   m = n(790711),
   O = n(248345),
   p = n(337125),
@@ -91,7 +91,7 @@ function w(e) {
       nickname: T.ZP.getName(B),
       pronouns: null
     }), (0, i.jsxs)(l.HeadingLevel, {
-      children: [(0, i.jsx)(N.Z, {
+      children: [(0, i.jsx)(A.Z, {
         className: G.divider
       }), (0, i.jsx)(l.AdvancedScroller, {
         className: o()(G.scroller, {
@@ -144,7 +144,7 @@ function w(e) {
       children: [(0, i.jsx)(v.Z, {
         className: G.customStatusSection,
         customStatusActivity: x
-      }), (0, i.jsx)(N.Z, {
+      }), (0, i.jsx)(A.Z, {
         className: G.divider
       }), (0, i.jsxs)(l.AdvancedScroller, {
         className: o()(G.scroller, {
@@ -160,7 +160,7 @@ function w(e) {
           bio: null == k ? void 0 : k.bio,
           guild: V,
           hidePersonalInformation: q
-        }), eo && (0, i.jsx)(A.ZP, {
+        }), eo && (0, i.jsx)(N.ZP, {
           className: G.profileMutuals,
           user: B,
           onClose: F

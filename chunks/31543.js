@@ -17,11 +17,11 @@ let I = r.forwardRef(function(e, t) {
     channel: T
   } = e, h = (0, _.fQ)(T), f = r.useRef(null), {
     searchQuery: S,
-    isSearchSuggestion: A
+    isSearchSuggestion: N
   } = (0, u.Iu)(e => ({
     searchQuery: e.searchQuery,
     isSearchSuggestion: e.isSearchSuggestion
-  }), s.Z), N = l.ZN.useStore(e => e.searchPlaceholder), m = l.ZN.useStore(e => e.inspectedExpressionPosition, s.Z), O = r.useCallback(e => {
+  }), s.Z), A = l.ZN.useStore(e => e.searchPlaceholder), m = l.ZN.useStore(e => e.inspectedExpressionPosition, s.Z), O = r.useCallback(e => {
     var t;
     l.ZN.setActiveCategoryIndex("" === e ? 0 : c.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
   }, [I]), p = r.useCallback(() => {
@@ -33,11 +33,11 @@ let I = r.forwardRef(function(e, t) {
       return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
     }
   })), r.useLayoutEffect(() => {
-    if (A) {
+    if (N) {
       var e;
       null === (e = f.current) || void 0 === e || e.focus()
     }
-  }, [A]), (0, i.jsx)("div", {
+  }, [N]), (0, i.jsx)("div", {
     className: E.wrapper,
     children: (0, i.jsx)(a.ZP, {
       autoFocus: h,
@@ -45,7 +45,7 @@ let I = r.forwardRef(function(e, t) {
       query: S,
       ref: f,
       size: a.ZP.Sizes.MEDIUM,
-      placeholder: null != N ? N : h ? d.Z.Messages.SEARCH_FOR_STICKERS : d.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
+      placeholder: null != A ? A : h ? d.Z.Messages.SEARCH_FOR_STICKERS : d.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
       onClear: p,
       onKeyDown: n,
       onQueryChange: O,

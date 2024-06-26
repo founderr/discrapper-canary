@@ -9,8 +9,8 @@ var o, a, l, u, _ = n(772848),
   h = n(598077),
   f = n(12647),
   S = n(358085),
-  A = n(374023);
-let N = "BrowserHandoffStore",
+  N = n(374023);
+let A = "BrowserHandoffStore",
   m = !1,
   O = new E.V7;
 
@@ -19,7 +19,7 @@ function p() {
 }
 
 function R() {
-  r = null, O.stop(), m = !1, d.K.set(N, m)
+  r = null, O.stop(), m = !1, d.K.set(A, m)
 }
 
 function g() {
@@ -27,10 +27,10 @@ function g() {
 }
 class C extends(u = c.ZP.Store) {
   initialize() {
-    !1 !== d.K.get(N) && (m = S.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+    !1 !== d.K.get(A) && (m = S.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
   }
   isHandoffAvailable() {
-    return !A.s.isDisallowPopupsSet() && m
+    return !N.s.isDisallowPopupsSet() && m
   }
   get user() {
     return s

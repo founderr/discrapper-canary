@@ -19,8 +19,8 @@ let u = r.forwardRef(function(e, t) {
     renderEmptySearchState: h,
     rowCount: f,
     rowCountBySection: S,
-    rowHeight: A,
-    sectionHeaderHeight: N,
+    rowHeight: N,
+    sectionHeaderHeight: A,
     sectionFooterHeight: m
   } = e, O = r.useRef(!1), p = r.useRef(null), R = (0, o.Iu)(e => e.searchQuery), g = n.useStore(e => e.activeCategoryIndex), C = (0, a.Qs)({
     activeCategoryIndex: g,
@@ -82,8 +82,8 @@ let u = r.forwardRef(function(e, t) {
       renderSectionFooter: I,
       rowCount: f,
       rowCountBySection: S,
-      rowHeight: A,
-      sectionHeaderHeight: N,
+      rowHeight: N,
+      sectionHeaderHeight: A,
       sectionFooterHeight: m,
       stickyHeaders: !0,
       ref: p

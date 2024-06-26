@@ -25,7 +25,7 @@ n.d(t, {
     return b
   },
   Xu: function() {
-    return N
+    return A
   },
   Y: function() {
     return G
@@ -34,7 +34,7 @@ n.d(t, {
     return m
   },
   ki: function() {
-    return A
+    return N
   },
   kn: function() {
     return D
@@ -86,19 +86,19 @@ function S(e, t) {
   }, [e]), e, t)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = e.isForumLikeChannel() ? h.Plq.SEND_MESSAGES : s.$e(h.Plq.CREATE_PUBLIC_THREADS, h.Plq.READ_MESSAGE_HISTORY);
   return O(E.Z.can(n, e), e, t)
 }
 
-function N(e) {
+function A(e) {
   let t = (0, o.e7)([E.Z], () => E.Z.can(s.$e(h.Plq.CREATE_PRIVATE_THREADS), e), [e]);
   return e.type === h.d4z.GUILD_TEXT && O(t, e)
 }
 
 function m(e) {
   let t = S(e),
-    n = N(e);
+    n = A(e);
   return t || n
 }
 

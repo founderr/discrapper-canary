@@ -20,8 +20,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a = s || (s = {})).REQUIRED = "REQUIRED", a.OPTIONAL = "OPTIONAL", a.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
-let A = "migrated",
-  N = {
+let N = "migrated",
+  A = {
     [f.Odu.GUILDS]: {
       minSize: {
         width: 312,
@@ -125,7 +125,7 @@ function m(e, t) {
 
 function O(e) {
   var t;
-  return null === (t = N[e]) || void 0 === t ? void 0 : t.defaultSettings
+  return null === (t = A[e]) || void 0 === t ? void 0 : t.defaultSettings
 }
 class p extends(o = c.ZP.PersistedStore) {
   initialize(e) {
@@ -142,7 +142,7 @@ class p extends(o = c.ZP.PersistedStore) {
     }(e.widgets)) : (i = {}, r = {});
     let t = !1,
       n = [];
-    u().forEach(N, (e, t) => {
+    u().forEach(A, (e, t) => {
       "REQUIRED" === e.layoutPolicy && n.push(t)
     }), u().forEach(i, (e, s) => {
       let o = this.getWidgetsForLayout(s),
@@ -205,7 +205,7 @@ class p extends(o = c.ZP.PersistedStore) {
     }, [])
   }
   getWidgetConfig(e) {
-    return N[e]
+    return A[e]
   }
   getWidgetDefaultSettings(e) {
     return O(e)
@@ -215,7 +215,7 @@ class p extends(o = c.ZP.PersistedStore) {
     return null != t ? t.type : ""
   }
   getRegisteredWidgets() {
-    return N
+    return A
   }
   getDefaultLayout(e) {
     let t = [];
@@ -249,7 +249,7 @@ S(p, "displayName", "LayoutStore"), S(p, "persistKey", "LayoutStore"), S(p, "mig
           s = null != n ? n[e] : null,
           o = {
             id: e,
-            layoutId: A,
+            layoutId: N,
             type: e,
             anchor: r || {
               top: -1,
@@ -268,8 +268,8 @@ S(p, "displayName", "LayoutStore"), S(p, "persistKey", "LayoutStore"), S(p, "mig
       });
     return {
       layouts: [
-        [A, {
-          id: A,
+        [N, {
+          id: N,
           widgets: r
         }]
       ],
@@ -289,7 +289,7 @@ S(p, "displayName", "LayoutStore"), S(p, "persistKey", "LayoutStore"), S(p, "mig
     return !i.has(t)
   }), s = Array.from(t).filter(e => {
     let [t] = e;
-    return t !== A
+    return t !== N
   });
   return s.forEach(e => {
     let [t, n] = e, i = null, s = null;
@@ -338,7 +338,7 @@ S(p, "displayName", "LayoutStore"), S(p, "persistKey", "LayoutStore"), S(p, "mig
     let o = [];
     n.forEach((e, t) => {
       let n = function(e) {
-          let t = i[A];
+          let t = i[N];
           if (null != t)
             for (let n of t.widgets) {
               let t = r[n];
@@ -423,7 +423,7 @@ S(p, "displayName", "LayoutStore"), S(p, "persistKey", "LayoutStore"), S(p, "mig
     r = {
       ...r
     }, delete r[t], u().forEach(i, (e, n) => {
-      if (n === A) return;
+      if (n === N) return;
       let r = e.widgets.indexOf(t);
       if (r >= 0) {
         let t = [...e.widgets];

@@ -41,8 +41,8 @@ var i = n(392711),
   h = n(496675),
   f = n(158776),
   S = n(19780),
-  A = n(306680),
-  N = n(944486),
+  N = n(306680),
+  A = n(944486),
   m = n(914010),
   O = n(9156),
   p = n(979651),
@@ -137,7 +137,7 @@ function G(e) {
   if (R.default.isThrottled(e)) return;
   let l = !("location" in o) || o.location !== L.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
     u = "guild_id" in o ? o.guild_id : l ? m.Z.getGuildId() : null,
-    c = "channel_id" in o ? o.channel_id : l ? N.Z.getChannelId(u) : null,
+    c = "channel_id" in o ? o.channel_id : l ? A.Z.getChannelId(u) : null,
     d = _.Z.getChannel(c);
   let E = (t = d, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (r = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== r ? r : null);
   let I = {
@@ -162,7 +162,7 @@ function w(e) {
   if (null == n) return {
     channel_id: e
   };
-  let i = A.ZP.getSnapshot(e, 10 * g.Z.Millis.SECOND);
+  let i = N.ZP.getSnapshot(e, 10 * g.Z.Millis.SECOND);
   return {
     channel_id: e,
     channel_was_unread: i.unread,

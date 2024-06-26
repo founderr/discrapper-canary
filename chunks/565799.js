@@ -12,8 +12,8 @@ var i, r, s, o, a = n(348327),
   h = n(314897),
   f = n(592125),
   S = n(430824),
-  A = n(496675),
-  N = n(699516),
+  N = n(496675),
+  A = n(699516),
   m = n(606304),
   O = n(594174),
   p = n(979651),
@@ -127,7 +127,7 @@ function j(e) {
 let W = [];
 class K extends(i = c.ZP.Store) {
   initialize() {
-    this.waitFor(h.default, O.default, f.Z, m.Z, p.Z, A.Z, R.ZP, S.Z, C.ZP, N.Z, v.Z, T.Z)
+    this.waitFor(h.default, O.default, f.Z, m.Z, p.Z, N.Z, R.ZP, S.Z, C.ZP, A.Z, v.Z, T.Z)
   }
   getParticipantsVersion(e) {
     var t, n;

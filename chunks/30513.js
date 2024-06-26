@@ -98,12 +98,12 @@ let _ = () => ({
     icon: s.Z,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
-  A = () => ({
+  N = () => ({
     icon: o.Z,
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
   }),
-  N = () => ({
+  A = () => ({
     icon: r.ShieldUserIcon,
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
@@ -160,5 +160,5 @@ function M() {
 }
 
 function P() {
-  return [A(), N(), S(), m()]
+  return [N(), A(), S(), m()]
 }

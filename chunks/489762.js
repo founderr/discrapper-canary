@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(691251),
   f = n(98528),
   S = n(551058),
-  A = n(695346),
-  N = n(430824),
+  N = n(695346),
+  A = n(430824),
   m = n(594174),
   O = n(695464),
   p = n(626135),
@@ -144,7 +144,7 @@ let V = (0, R.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       channel: g,
       currentUser: y
     }), [H, F] = r.useState(!1), Y = r.useCallback(e => {
-      A._O.updateSetting(Array.from(e))
+      N._O.updateSetting(Array.from(e))
     }, []), j = r.useCallback(e => {
       let t = h[e];
       return null != t ? (0, i.jsx)(U.Z, {
@@ -233,7 +233,7 @@ let V = (0, R.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           }, "header-".concat(n.id));
         case L.Ih.GUILD:
         case L.Ih.EMPTY_GUILD_UPSELL: {
-          let e = N.Z.getGuild(n.id);
+          let e = A.Z.getGuild(n.id);
           if (null == e) return null;
           return (0, i.jsx)(S.Z, {
             className: B.packHeader,
@@ -311,8 +311,8 @@ let V = (0, R.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       getStickerRowProps: E,
       gutterWidth: h,
       isUsingKeyboardNavigation: S,
-      onSelectSticker: A,
-      rowCount: N,
+      onSelectSticker: N,
+      rowCount: A,
       rowCountBySection: m,
       stickersCategories: p,
       stickersGrid: R,
@@ -333,7 +333,7 @@ let V = (0, R.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       stickersGrid: R,
       isScrolling: C,
       isUsingKeyboardNavigation: S,
-      onSelectSticker: A,
+      onSelectSticker: N,
       getStickerItemProps: _,
       getStickerRowProps: E,
       gutterWidth: h,
@@ -408,7 +408,7 @@ let V = (0, R.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           renderSection: null == l ? w : void 0,
           renderSectionHeader: F,
           renderSectionFooter: Z,
-          rowCount: N,
+          rowCount: A,
           rowCountBySection: m,
           rowHeight: a > V ? $ : ee,
           sectionHeaderHeight: Y,

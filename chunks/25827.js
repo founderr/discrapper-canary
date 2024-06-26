@@ -34,7 +34,7 @@ function d(e) {
     {
       Component: f,
       play: S,
-      events: A
+      events: N
     } = (0, a.o)(I || n ? "disable" : "enable");
   return r.useEffect(() => () => S(), [n, S]), (0, i.jsx)(i.Fragment, {
     children: d({
@@ -44,8 +44,8 @@ function d(e) {
       iconComponent: f,
       label: t,
       unavailable: s,
-      onMouseEnter: I ? void 0 : A.onMouseEnter,
-      onMouseLeave: I ? void 0 : A.onMouseLeave
+      onMouseEnter: I ? void 0 : N.onMouseEnter,
+      onMouseLeave: I ? void 0 : N.onMouseLeave
     })
   })
 }
@@ -65,7 +65,7 @@ function E(e) {
     centerButton: h = !1,
     onPopoutClick: f,
     ...S
-  } = e, A = h ? _.d : _.Z;
+  } = e, N = h ? _.d : _.Z;
   return (0, i.jsx)(d, {
     enabled: t,
     join: n,
@@ -83,7 +83,7 @@ function E(e) {
         onMouseLeave: s,
         ...a
       } = e;
-      return (0, i.jsx)(A, {
+      return (0, i.jsx)(N, {
         ...a,
         ...S,
         onMouseEnter: e => {

@@ -307,12 +307,12 @@ let _ = {
     let n = (t.top + t.bottom) / 2;
     return e.top <= n && e.bottom >= n
   },
-  A = (e, t, n) => {
+  N = (e, t, n) => {
     let i = _.toDOMRange(e, t).getBoundingClientRect(),
       r = _.toDOMRange(e, n).getBoundingClientRect();
     return S(i, r) && S(r, i)
   },
-  N = (e, t, n, i) => {
+  A = (e, t, n, i) => {
     let r = {
         anchor: t,
         focus: t
@@ -321,12 +321,12 @@ let _ = {
       o = n.length,
       a = Math.floor((s + o) / 2);
     for (; a !== s;)
-      if (A(e, {
+      if (N(e, {
           anchor: n[a],
           focus: n[a]
         }, r) ? i ? o = a : s = a : i ? s = a : o = a, a = Math.floor((s + o) / 2), !i && a === n.length - 2 && o === n.length - 1) {
         let t = n[n.length - 1];
-        A(e, {
+        N(e, {
           anchor: t,
           focus: t
         }, r) && (a = o)
@@ -349,11 +349,11 @@ let _ = {
         a = Array.from(_.positions(e, {
           at: o
         })),
-        l = N(e, t, a, !0);
+        l = A(e, t, a, !0);
       if (n && T.equals(t, l) && !T.isAtEnd(t, r)) {
         let n = _.after(e, t);
         if (null == n) return l;
-        l = N(e, n, a, !0)
+        l = A(e, n, a, !0)
       }
       return l
     },
@@ -373,11 +373,11 @@ let _ = {
         a = Array.from(_.positions(e, {
           at: o
         })),
-        l = N(e, t, a, !1);
+        l = A(e, t, a, !1);
       if (n && T.equals(t, l) && !T.isAtEnd(t, r)) {
         let n = _.after(e, t);
         if (null == n) return l;
-        l = N(e, n, a, !1)
+        l = A(e, n, a, !1)
       }
       return l
     },

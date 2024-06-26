@@ -37,7 +37,7 @@ n.d(t, {
     return g
   },
   p: function() {
-    return A
+    return N
   },
   p1: function() {
     return i
@@ -52,7 +52,7 @@ n.d(t, {
     return s
   },
   wm: function() {
-    return N
+    return A
   },
   zV: function() {
     return P
@@ -63,8 +63,8 @@ n.d(t, {
 }), n(47120);
 var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f = n(70956),
   S = n(981631);
-let A = 100,
-  N = 1e3,
+let N = 100,
+  A = 1e3,
   m = 100,
   O = "Guild Events Modal",
   p = "-1";

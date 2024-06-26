@@ -32,8 +32,8 @@ var i = n(735250),
   h = n(738774),
   f = n(29598),
   S = n(400106),
-  A = n(944386),
-  N = n(889564),
+  N = n(944386),
+  A = n(889564),
   m = n(687476),
   O = n(761966),
   p = n(563927),
@@ -67,7 +67,7 @@ let W = () => ({
     let {
       node: t
     } = e;
-    (0, A.u)({
+    (0, N.u)({
       emojiId: t.emojiId,
       currentGuildId: L.Z.getGuildId()
     });
@@ -250,8 +250,8 @@ let W = () => ({
         isUnusableRoleSubscriptionEmoji: !1,
         userIsRoleSubscriber: !1
       } : {
-        isRoleSubscriptionEmoji: N.yH(P),
-        isUnusableRoleSubscriptionEmoji: N.Fv(P, null != x ? x : void 0),
+        isRoleSubscriptionEmoji: A.yH(P),
+        isUnusableRoleSubscriptionEmoji: A.Fv(P, null != x ? x : void 0),
         userIsRoleSubscriber: m.Z.getUserSubscriptionRoles(P.guildId).size > 0
       }, [P, x]),
       ei = !!et && (0, h.Ol)(null == P ? void 0 : P.guildId),
@@ -288,7 +288,7 @@ let W = () => ({
       }),
       ea = X && et && !ei && (K && ee || !K),
       el = eo.emojiDescription,
-      eu = (0, A.u)({
+      eu = (0, N.u)({
         emojiId: u.emojiId,
         currentGuildId: es,
         popoutData: eo,

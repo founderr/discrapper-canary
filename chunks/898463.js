@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(810090),
   f = n(956664),
   S = n(709054),
-  A = n(273031),
-  N = n(859235),
+  N = n(273031),
+  A = n(859235),
   m = n(689938),
   O = n(886939);
 let p = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
@@ -39,7 +39,7 @@ function R(e) {
   return (0, i.jsx)(T.a.Provider, {
     value: !n,
     children: (0, i.jsx)(T.Z, {
-      containerStyles: o === N.q.CLIP ? {
+      containerStyles: o === A.q.CLIP ? {
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
         boxShadow: "none"
@@ -69,12 +69,12 @@ function g(e) {
     file: t,
     alt: n,
     spoiler: s,
-    size: a = N.q.MEDIUM,
+    size: a = A.q.MEDIUM,
     onMouseEnter: u
   } = e, [_, c] = r.useState(), [d, E] = r.useState({
     width: 0,
     height: 0
-  }), I = a === N.q.SMALL;
+  }), I = a === A.q.SMALL;
   r.useEffect(() => {
     if (null == t || !1 === p.includes(t.type)) return;
     let e = URL.createObjectURL(t);
@@ -141,7 +141,7 @@ function C(e) {
     file: t,
     alt: n,
     spoiler: s,
-    size: a = N.q.MEDIUM,
+    size: a = A.q.MEDIUM,
     onMouseEnter: l,
     onVideoLoadError: u
   } = e, [_, c] = r.useState(), d = r.useRef(null);
@@ -163,7 +163,7 @@ function C(e) {
         src: _,
         className: o()(O.media, {
           [O.spoiler]: e,
-          [O.sizeClip]: a === N.q.CLIP
+          [O.sizeClip]: a === A.q.CLIP
         }),
         onError: u,
         preload: "none",
@@ -177,9 +177,9 @@ function v(e) {
   var t;
   let {
     upload: n,
-    size: s = N.q.MEDIUM,
+    size: s = A.q.MEDIUM,
     onMouseEnter: a
-  } = e, [l, u] = r.useState(!1), _ = s === N.q.SMALL;
+  } = e, [l, u] = r.useState(!1), _ = s === A.q.SMALL;
   return n.isImage && n.item.platform === c.ow.WEB ? (0, i.jsx)(g, {
     file: n.item.file,
     alt: n.description,
@@ -216,11 +216,11 @@ function L(e) {
     upload: s,
     keyboardModeEnabled: c,
     label: T,
-    size: h = N.q.MEDIUM,
+    size: h = A.q.MEDIUM,
     canEdit: f = !0,
     hideFileName: p = !1,
     clip: R
-  } = e, g = null != R, C = (h = g ? N.q.CLIP : h) === N.q.SMALL, L = (0, a.e7)([I.Z], () => {
+  } = e, g = null != R, C = (h = g ? A.q.CLIP : h) === A.q.SMALL, L = (0, a.e7)([I.Z], () => {
     var e;
     return null === (e = I.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
   }), D = e => {
@@ -243,9 +243,9 @@ function L(e) {
       }
     }))
   };
-  return (0, i.jsxs)(N.Z, {
+  return (0, i.jsxs)(A.Z, {
     actions: (0, i.jsxs)(r.Fragment, {
-      children: [f ? (0, i.jsx)(A.Z, {
+      children: [f ? (0, i.jsx)(N.Z, {
         className: o()({
           [O.action]: C
         }),
@@ -266,7 +266,7 @@ function L(e) {
             [O.actionBarIcon]: C
           })
         })
-      }) : null, f && !g ? (0, i.jsx)(A.Z, {
+      }) : null, f && !g ? (0, i.jsx)(N.Z, {
         className: o()({
           [O.action]: C
         }),
@@ -279,7 +279,7 @@ function L(e) {
             [O.actionBarIcon]: C
           })
         })
-      }) : null, (0, i.jsx)(A.Z, {
+      }) : null, (0, i.jsx)(N.Z, {
         className: o()({
           [O.action]: C
         }),

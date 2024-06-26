@@ -4,13 +4,13 @@ n.d(t, {
     return O
   },
   BP: function() {
-    return N
+    return A
   },
   MC: function() {
     return R
   },
   dn: function() {
-    return A
+    return N
   },
   hL: function() {
     return p
@@ -37,7 +37,7 @@ var i, r, s = n(278074),
   f = n(981631),
   S = n(689938);
 (r = i || (i = {})).SPOILER = "spoiler", r.EXPLICIT_CONTENT = "explicit_content", r.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-let A = (e, t) => {
+let N = (e, t) => {
     let {
       spoiler: n,
       flags: i = 0,
@@ -49,7 +49,7 @@ let A = (e, t) => {
     }
     return n || (0, T.yE)(i, f.J0y.IS_SPOILER) ? "spoiler" : null
   },
-  N = (e, t, n, i, r) => {
+  A = (e, t, n, i, r) => {
     let {
       flags: s = 0,
       contentScanVersion: o

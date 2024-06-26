@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return g
   },
   getAssetFromImageURL: function() {
-    return A
+    return N
   },
   getAssetIds: function() {
     return C
   },
   getAssetImage: function() {
-    return N
+    return A
   },
   getAssets: function() {
     return m
@@ -68,12 +68,12 @@ async function S(e) {
   }), a.Z.getApplicationAssets(e)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = h[e].serialize(t);
   return n ? "".concat(e, ":").concat(n.toString()) : null
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   if (null != t && t.includes(":")) {
     let [e, i] = t.split(":");
     if (e === _.ABu.TWITCH) {
@@ -126,7 +126,7 @@ function p(e, t) {
       let r = e[i];
       if (null == r) continue;
       let s = Object.prototype.hasOwnProperty.call(f, r) ? f[r] : void 0;
-      null != s && (t[i] = A("mp", s), n++)
+      null != s && (t[i] = N("mp", s), n++)
     }
   return n === e.length
 }

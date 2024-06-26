@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(123145),
   f = n(223021),
   S = n(79390),
-  A = n(869765),
-  N = n(403132),
+  N = n(869765),
+  A = n(403132),
   m = n(378233),
   O = n(768581),
   p = n(55935),
@@ -85,8 +85,8 @@ function y(e, t, n, r, s) {
       iconSize: h
     } = s,
     f = null == t || "" === t || Array.isArray(t) && 0 === t.length,
-    A = (0, m.cv)(c).length > 0,
-    N = null != c.interaction,
+    N = (0, m.cv)(c).length > 0,
+    A = null != c.interaction,
     O = c.hasFlag(v.iLy.IS_VOICE_MESSAGE),
     p = c.isPoll(),
     R = c.type === v.uaV.POLL_RESULT;
@@ -101,7 +101,7 @@ function y(e, t, n, r, s) {
     if (p) {
       var C, D;
       a = null == c ? void 0 : null === (D = c.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text
-    } else R ? o = (0, S.N4)(c) : A ? o = L.Z.Messages.REPLY_QUOTE_STICKER : N ? o = L.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = L.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = L.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(u.ImageIcon, {
+    } else R ? o = (0, S.N4)(c) : N ? o = L.Z.Messages.REPLY_QUOTE_STICKER : A ? o = L.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = L.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = L.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(u.ImageIcon, {
       size: "custom",
       color: "currentColor",
       className: I,
@@ -113,13 +113,13 @@ function y(e, t, n, r, s) {
     content: t,
     className: r
   });
-  return A ? l = (0, i.jsx)(u.StickerSmallIcon, {
+  return N ? l = (0, i.jsx)(u.StickerSmallIcon, {
     size: "custom",
     color: "currentColor",
     className: I,
     width: h,
     height: h
-  }) : N ? l = (0, i.jsx)(u.SlashBoxIcon, {
+  }) : A ? l = (0, i.jsx)(u.SlashBoxIcon, {
     size: "custom",
     color: "currentColor",
     className: I,
@@ -153,7 +153,7 @@ function U(e) {
     baseMessage: a,
     referencedMessage: d,
     renderPopout: E
-  } = e, S = r.useMemo(() => null != E && d.state === A.Y.LOADED ? e => E(e, d.message) : void 0, [d, E]), m = function(e, t, n) {
+  } = e, S = r.useMemo(() => null != E && d.state === N.Y.LOADED ? e => E(e, d.message) : void 0, [d, E]), m = function(e, t, n) {
     let {
       referencedMessage: r,
       compact: s,
@@ -166,7 +166,7 @@ function U(e) {
     } = e, {
       analyticsLocations: h
     } = (0, c.ZP)(_.Z.AVATAR);
-    if (s || r.state !== A.Y.LOADED || a) return (0, i.jsx)("div", {
+    if (s || r.state !== N.Y.LOADED || a) return (0, i.jsx)("div", {
       className: D.replyBadge,
       children: (0, i.jsx)(M, {
         className: D.replyIcon
@@ -225,12 +225,12 @@ function U(e) {
       onClickUsername: a,
       onContextMenu: l,
       onPopoutRequestClose: u
-    } = e, _ = (null == s ? void 0 : s.state) === A.Y.LOADED ? s.message : void 0;
+    } = e, _ = (null == s ? void 0 : s.state) === N.Y.LOADED ? s.message : void 0;
     return null == _ || _.type === v.uaV.USER_JOIN || _.type === v.uaV.ROLE_SUBSCRIPTION_PURCHASE || _.type === v.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || _.type === v.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || _.type === v.uaV.GUILD_GAMING_STATS_PROMPT || _.type === v.uaV.POLL_RESULT ? null : (0, i.jsx)(h.Z, {
       message: _,
       channel: r,
       compact: !0,
-      withMentionPrefix: (0, N.Z)(n, _),
+      withMentionPrefix: (0, A.Z)(n, _),
       showPopout: o,
       renderPopout: t,
       onClick: a,
@@ -243,9 +243,9 @@ function U(e) {
       content: t,
       referencedMessage: n,
       isReplyAuthorBlocked: r
-    } = e, s = n.state !== A.Y.DELETED ? e.onClickReply : void 0;
+    } = e, s = n.state !== N.Y.DELETED ? e.onClickReply : void 0;
     switch (n.state) {
-      case A.Y.LOADED: {
+      case N.Y.LOADED: {
         let {
           contentPlaceholder: e,
           renderedContent: a,
@@ -269,7 +269,7 @@ function U(e) {
           }), l]
         })
       }
-      case A.Y.NOT_LOADED:
+      case N.Y.NOT_LOADED:
         return (0, i.jsx)(u.Clickable, {
           className: o()(D.repliedTextPreview, D.clickable),
           onClick: s,
@@ -278,7 +278,7 @@ function U(e) {
             children: L.Z.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
           })
         });
-      case A.Y.DELETED:
+      case N.Y.DELETED:
         return (0, i.jsx)("div", {
           className: D.repliedTextPreview,
           children: (0, i.jsx)("span", {

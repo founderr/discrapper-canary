@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(367907),
   f = n(158631),
   S = n(552740),
-  A = n(358221),
-  N = n(414910),
+  N = n(358221),
+  A = n(414910),
   m = n(221888),
   O = n(933557),
   p = n(569545),
@@ -129,7 +129,7 @@ class ea extends r.PureComponent {
       channel: e
     } = this.props;
     j.default.track(en.rMx.VIDEO_LAYOUT_TOGGLED, {
-      video_layout: A.Z.getLayout(e.id),
+      video_layout: N.Z.getLayout(e.id),
       ...(0, h.AB)(e.id)
     })
   }
@@ -315,10 +315,10 @@ class ea extends r.PureComponent {
     })
   }
 }
-t.Z = c.ZP.connectStores([B.Z, A.Z, x.default, Z.Z, H.Z, w.Z, F.Z], e => {
+t.Z = c.ZP.connectStores([B.Z, N.Z, x.default, Z.Z, H.Z, w.Z, F.Z], e => {
   let {
     channel: t
-  } = e, n = Z.Z.getSpeaker(t.id), i = A.Z.getParticipant(t.id, n), r = _()(B.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, N.Z)(i.type)) : null, a = !s && B.Z.isVideoEnabled(), l = (0, R.Z)(B.Z), u = x.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, f.tA)(t.id);
+  } = e, n = Z.Z.getSpeaker(t.id), i = N.Z.getParticipant(t.id, n), r = _()(B.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, A.Z)(i.type)) : null, a = !s && B.Z.isVideoEnabled(), l = (0, R.Z)(B.Z), u = x.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, f.tA)(t.id);
   return {
     channel: t,
     streamId: o,

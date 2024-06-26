@@ -16,9 +16,9 @@ var r = n(348327),
   h = n(430824),
   f = n(412788),
   S = n(9156),
-  A = n(594174);
+  N = n(594174);
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -145,7 +145,7 @@ function M(e) {
     guildId: t,
     joinedAt: n,
     user: i
-  } = e, r = A.default.getCurrentUser(), s = h.Z.getGuild(t);
+  } = e, r = N.default.getCurrentUser(), s = h.Z.getGuild(t);
   if ((null == r ? void 0 : r.id) !== i.id || null == s) return !1;
   let o = "string" == typeof n ? new Date(n) : n;
   return o !== s.joinedAt && null != o && R()
@@ -239,7 +239,7 @@ class k extends f.Z {
       TOGGLE_GUILD_FOLDER_EXPAND: P,
       SET_GUILD_FOLDER_EXPANDED: y,
       GUILD_FOLDER_COLLAPSE: U
-    }), N(this, "loadCache", () => {
+    }), A(this, "loadCache", () => {
       let e = this.readSnapshot(k.LATEST_SNAPSHOT_VERSION),
         t = null == e ? void 0 : e.tree;
       if (null != t)
@@ -247,4 +247,4 @@ class k extends f.Z {
     })
   }
 }
-N(k, "displayName", "SortedGuildStore"), N(k, "LATEST_SNAPSHOT_VERSION", 1), t.ZP = new k
+A(k, "displayName", "SortedGuildStore"), A(k, "LATEST_SNAPSHOT_VERSION", 1), t.ZP = new k

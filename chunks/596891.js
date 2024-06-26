@@ -20,8 +20,8 @@ t.Z = e => {
   let {
     userId: t,
     reportId: n,
-    reportName: A,
-    showBlock: N,
+    reportName: N,
+    showBlock: A,
     showMute: m
   } = e, O = _.Z.getDMFromUserId(t), p = (0, s.e7)([d.ZP], () => null == O ? null : d.ZP.isChannelMuted(null, O)), [R, g] = r.useState(null != p && p), [C, v] = r.useState(!1), L = (0, s.e7)([E.default], () => E.default.getUser(t), [t]), D = (0, s.e7)([c.Z], () => c.Z.getRelationshipType(t), [t]) === h.OGo.BLOCKED;
   r.useEffect(() => {
@@ -47,17 +47,17 @@ t.Z = e => {
         muted: !0
       }, I.ZB.Muted))
     }, [O, t, n]),
-    y = A === T.b.USER,
+    y = N === T.b.USER,
     U = y ? f.Z.Messages.REPORTS_MUTE_USER_ELEMENT_DESCRIPTION : f.Z.Messages.MOBILE_REPORTS_MUTE_ELEMENT_DESCRIPTION,
     b = y ? f.Z.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION,
     G = y ? f.Z.Messages.REPORTS_BLOCK_AND_MUTE_USER_ELEMENT_DESCRIPTION : f.Z.Messages.MOBILE_REPORTS_BLOCK_AND_MUTE_ELEMENT_DESCRIPTION,
-    w = m || N;
+    w = m || A;
   return null != L && w ? (0, i.jsxs)("div", {
     className: S.container,
     children: [(0, i.jsx)(o.Text, {
       className: S.description,
       variant: "text-sm/normal",
-      children: N && m ? G : N ? b : U
+      children: A && m ? G : A ? b : U
     }), (0, i.jsxs)("div", {
       className: S.userContainer,
       children: [(0, i.jsxs)("div", {
@@ -83,7 +83,7 @@ t.Z = e => {
           size: o.Button.Sizes.SMALL,
           color: o.Button.Colors.PRIMARY,
           children: R ? f.Z.Messages.MUTED : f.Z.Messages.MUTE
-        }), N && (0, i.jsx)(o.Button, {
+        }), A && (0, i.jsx)(o.Button, {
           onClick: M,
           disabled: C,
           size: o.Button.Sizes.SMALL,

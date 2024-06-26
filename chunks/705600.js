@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(210887),
   f = n(271383),
   S = n(594174),
-  A = n(267642),
-  N = n(797717),
+  N = n(267642),
+  A = n(797717),
   m = n(672752),
   O = n(665786),
   p = n(697725),
@@ -94,7 +94,7 @@ function L(e) {
       }), (0, i.jsx)(_.Text, {
         variant: "text-xs/semibold",
         color: "always-white",
-        children: A.nW(t.premiumTier)
+        children: N.nW(t.premiumTier)
       })]
     }), (0, i.jsx)("div", {
       className: o()(C.tooltipPremiumFooterSegment),
@@ -180,7 +180,7 @@ function M(e) {
   let t, n, {
       guild: s,
       tooltipColor: l = _.Tooltip.Colors.BRAND,
-      tooltipPosition: A,
+      tooltipPosition: N,
       className: m,
       flowerStarClassName: O,
       iconClassName: p,
@@ -212,7 +212,7 @@ function M(e) {
     let e = (0, c.ky)(s.id, null === (B = s.clan) || void 0 === B ? void 0 : B.badge, M);
     return (0, i.jsx)(_.Tooltip, {
       color: l,
-      position: A,
+      position: N,
       "aria-label": y,
       text: (0, i.jsx)(D, {
         badgeType: w,
@@ -245,7 +245,7 @@ function M(e) {
     K = (0, u.wj)(b) ? V : Z;
   return t = null != t ? t : W, n = null != n ? n : K, (0, i.jsx)(_.Tooltip, {
     color: l,
-    position: A,
+    position: N,
     "aria-label": y,
     text: (0, i.jsx)(D, {
       badgeType: w,
@@ -254,7 +254,7 @@ function M(e) {
     tooltipContentClassName: C.tooltipRemovePadding,
     children: e => (0, i.jsx)(_.Clickable, {
       onClick: x,
-      children: (0, i.jsx)(N.Z, {
+      children: (0, i.jsx)(A.Z, {
         ...e,
         className: m,
         flowerStarClassName: O,

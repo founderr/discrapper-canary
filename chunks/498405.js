@@ -34,8 +34,8 @@ function a(e) {
   }, [n]);
   let {
     focusPath: T
-  } = d, [h, f] = i.useState(!1), [S, A] = i.useState(!1), [{
-    onItemFocusMemoizer: N,
+  } = d, [h, f] = i.useState(!1), [S, N] = i.useState(!1), [{
+    onItemFocusMemoizer: A,
     onItemMouseEnterMemoizer: m
   }] = i.useState(() => ({
     onItemFocusMemoizer: new o.$o(e => () => {
@@ -45,7 +45,7 @@ function a(e) {
       })
     }),
     onItemMouseEnterMemoizer: new o.$o(e => () => {
-      A(!1), E({
+      N(!1), E({
         type: r.B.SET_FOCUS_PATH,
         path: e.split("--")
       })
@@ -73,7 +73,7 @@ function a(e) {
       case s.Us.NAVIGATE_DOWN:
       case s.Us.NAVIGATE_IN:
       case s.Us.NAVIGATE_OUT:
-        e.preventDefault(), e.stopPropagation(), A(!0), I({
+        e.preventDefault(), e.stopPropagation(), N(!0), I({
           type: n
         });
         return;
@@ -81,7 +81,7 @@ function a(e) {
         var i, r, a, u, d;
         if (e.repeat) return;
         if (e.target.tabIndex >= 0) return;
-        if (e.preventDefault(), e.stopPropagation(), A(!1), I({
+        if (e.preventDefault(), e.stopPropagation(), N(!1), I({
             type: n
           }), null != l) {
           l(T);
@@ -135,10 +135,10 @@ function a(e) {
       role: r,
       id: (0, o.qR)(t, s),
       tabIndex: -1,
-      onFocus: N.get(s),
+      onFocus: A.get(s),
       onMouseEnter: m.get(s)
     }
-  }, [t, C, N, m]);
+  }, [t, C, A, m]);
   return i.useMemo(() => ({
     dispatch: I,
     getContainerProps: v,

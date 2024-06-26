@@ -40,7 +40,7 @@ var i, r, s = n(544891),
   f = n(981631),
   S = n(689938);
 
-function A(e, t, n) {
+function N(e, t, n) {
   let {
     status: i,
     body: r
@@ -63,7 +63,7 @@ function A(e, t, n) {
   return !0
 }
 
-function N(e, t, n, i, r) {
+function A(e, t, n, i, r) {
   var s, o;
   a.Z.dispatch({
     type: e,
@@ -139,7 +139,7 @@ async function p(e, t, n) {
     return
   }
   let E = await L(n, a);
-  return N("MESSAGE_REACTION_ADD", e, t, n, {
+  return A("MESSAGE_REACTION_ADD", e, t, n, {
     burst: a,
     colors: E
   }), await _.Z.unarchiveThreadIfNecessary(e), s.tn.put({
@@ -168,12 +168,12 @@ async function p(e, t, n) {
       name: n.name
     }))
   }).catch(r => {
-    A(r, () => p(e, t, n, i, {
+    N(r, () => p(e, t, n, i, {
       burst: a,
       isRetry: !0
     }), {
       isRetry: c
-    }) && (N("MESSAGE_REACTION_REMOVE", e, t, n, {
+    }) && (A("MESSAGE_REACTION_REMOVE", e, t, n, {
       burst: a
     }), a ? o.uv.announce(S.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
       name: n.name
@@ -204,7 +204,7 @@ async function g(e, t, n) {
     url: f.ANM.REMOVE_REACTIONS(e, t),
     oldFormErrors: !0
   }).catch(n => {
-    A(n, () => g(e, t, {
+    N(n, () => g(e, t, {
       isRetry: !0
     }), {
       isRetry: i
@@ -219,7 +219,7 @@ async function C(e, t, n, i) {
     url: f.ANM.REMOVE_EMOJI_REACTIONS(e, t, o),
     oldFormErrors: !0
   }).catch(i => {
-    A(i, () => C(e, t, n, {
+    N(i, () => C(e, t, n, {
       isRetry: !0
     }), {
       isRetry: r
@@ -231,7 +231,7 @@ async function v(e, t, n, i) {
     a = arguments.length > 5 ? arguments[5] : void 0,
     l = null != a && !!a.burst,
     c = null != a && !!a.isRetry;
-  N("MESSAGE_REACTION_REMOVE", e, t, n, {
+  A("MESSAGE_REACTION_REMOVE", e, t, n, {
     userId: i,
     burst: l
   }), await _.Z.unarchiveThreadIfNecessary(e), s.tn.del({
@@ -255,14 +255,14 @@ async function v(e, t, n, i) {
       name: n.name
     }))
   }).catch(async s => {
-    if (A(s, () => v(e, t, n, i, r, {
+    if (N(s, () => v(e, t, n, i, r, {
         burst: l,
         isRetry: !0
       }), {
         isRetry: c
       })) {
       let r = await L(n, l);
-      N("MESSAGE_REACTION_ADD", e, t, n, {
+      A("MESSAGE_REACTION_ADD", e, t, n, {
         userId: i,
         burst: l,
         colors: r

@@ -28,8 +28,8 @@ function h(e, t, n) {
 }
 let f = "scientist:triggered",
   S = "exerimentOverrides",
-  A = "userExperimentOverrides",
-  N = "guildExperimentOverrides",
+  N = "userExperimentOverrides",
+  A = "guildExperimentOverrides",
   m = new u.Z("ExperimentStore"),
   O = !1,
   p = {},
@@ -280,7 +280,7 @@ function Q(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  a.K.remove(f), !t && (a.K.remove(S), a.K.remove(A), a.K.remove(N), M = {}, P = {}), v = {}, g = [], p = {}, O = !1
+  a.K.remove(f), !t && (a.K.remove(S), a.K.remove(N), a.K.remove(A), M = {}, P = {}), v = {}, g = [], p = {}, O = !1
 }
 
 function J() {
@@ -289,7 +289,7 @@ function J() {
 
 function $() {
   try {
-    a.K.set(A, M)
+    a.K.set(N, M)
   } catch (e) {
     m.error("Error saving user experiment overrides, unsaved data will be lost", e), d.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
       module: "discord_app",
@@ -297,7 +297,7 @@ function $() {
     })
   }
   try {
-    a.K.set(N, P)
+    a.K.set(A, P)
   } catch (e) {
     m.error("Error saving guild experiment overrides, unsaved data will be lost", e), d.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
       module: "discord_app",
@@ -395,7 +395,7 @@ class er extends c.Z {
       return i && ee(t), t
     }(), ! function() {
       var e, t, n;
-      let i = [null !== (e = a.K.get(S)) && void 0 !== e ? e : {}, null !== (t = a.K.get(A)) && void 0 !== t ? t : {}, null !== (n = a.K.get(N)) && void 0 !== n ? n : {}];
+      let i = [null !== (e = a.K.get(S)) && void 0 !== e ? e : {}, null !== (t = a.K.get(N)) && void 0 !== t ? t : {}, null !== (n = a.K.get(A)) && void 0 !== n ? n : {}];
       M = {}, P = {};
       let s = !r().isEmpty(i[0]);
       for (let e of i)

@@ -11,8 +11,8 @@ let E = d.QZA.CLOSED,
   h = {},
   f = {},
   S = {},
-  A = null,
   N = null,
+  A = null,
   m = !1,
   O = !1,
   p = null,
@@ -26,8 +26,8 @@ function D(e) {
   var t, n, i, r, s, o;
   let a = c.default.getCurrentUser();
   if (null == a) return M();
-  T = null !== (t = e.section) && void 0 !== t ? t : T, v = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (h[T] = e.subsection), null != e.scrollPosition && null != T && (f[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = d.QZA.OPEN, S = {}, N = {
-    ...A = {
+  T = null !== (t = e.section) && void 0 !== t ? t : T, v = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (h[T] = e.subsection), null != e.scrollPosition && null != T && (f[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = d.QZA.OPEN, S = {}, A = {
+    ...N = {
       [d.oAB.ACCOUNT]: {
         userId: a.id,
         username: a.username,
@@ -43,7 +43,7 @@ function D(e) {
 }
 
 function M() {
-  E = d.QZA.CLOSED, m = !1, A = null, v = null, N = null, I = null, T = null, h = {}, f = {}, R = null, g = null, C = [], L = null
+  E = d.QZA.CLOSED, m = !1, N = null, v = null, A = null, I = null, T = null, h = {}, f = {}, R = null, g = null, C = [], L = null
 }
 
 function P() {
@@ -54,7 +54,7 @@ class y extends(o = u.ZP.Store) {
     this.waitFor(c.default)
   }
   hasChanges() {
-    return null != N && null != A && (!!this.isOpen() || p === d.cII.USER_SETTINGS) && !l().isEqual(N, A)
+    return null != A && null != N && (!!this.isOpen() || p === d.cII.USER_SETTINGS) && !l().isEqual(A, N)
   }
   isOpen() {
     return m
@@ -80,7 +80,7 @@ class y extends(o = u.ZP.Store) {
       section: T,
       subsection: null != T ? h[T] : null,
       scrollPosition: null != T ? f[T] : null,
-      settings: N,
+      settings: A,
       errors: S,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: O,
@@ -134,9 +134,9 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
     let {
       settings: t
     } = e;
-    null == N && (N = {});
-    let n = N[d.oAB.ACCOUNT];
-    N[d.oAB.ACCOUNT] = {
+    null == A && (A = {});
+    let n = A[d.oAB.ACCOUNT];
+    A[d.oAB.ACCOUNT] = {
       ...n,
       ...t
     }
@@ -144,8 +144,8 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
   USER_SETTINGS_MODAL_SUBMIT_COMPLETE: P,
   USER_SETTINGS_MODAL_RESET: function() {
     let e = c.default.getCurrentUser();
-    P(), null != e && (N = {
-      ...A = {
+    P(), null != e && (A = {
+      ...N = {
         [d.oAB.ACCOUNT]: {
           userId: e.id,
           username: e.username,

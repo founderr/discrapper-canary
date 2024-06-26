@@ -29,8 +29,8 @@ var i = n(735250),
   h = n(44315),
   f = n(502568),
   S = n(534828),
-  A = n(981631),
-  N = n(689938),
+  N = n(981631),
+  A = n(689938),
   m = n(19857);
 let O = () => Promise.resolve();
 
@@ -69,7 +69,7 @@ function p(e) {
         colorClass: m.colorPickerDropperFg,
         width: 14,
         height: 14,
-        color: (0, h.Lq)(S ? A.Ilk.WHITE_500 : A.Ilk.BLACK_500)
+        color: (0, h.Lq)(S ? N.Ilk.WHITE_500 : N.Ilk.BLACK_500)
       }) : null, function() {
         let e = 16,
           t = 16;
@@ -77,7 +77,7 @@ function p(e) {
           size: "custom",
           width: e,
           height: t,
-          color: (0, h.Lq)(S ? A.Ilk.WHITE_500 : A.Ilk.BLACK_500)
+          color: (0, h.Lq)(S ? N.Ilk.WHITE_500 : N.Ilk.BLACK_500)
         })
       }()]
     })
@@ -126,7 +126,7 @@ let C = r.memo(function(e) {
     suggestedColors: l,
     middle: d,
     footer: h,
-    showEyeDropper: A,
+    showEyeDropper: N,
     wrapperComponentType: O,
     className: p
   } = e, R = (0, T.Z)(), g = function(e) {
@@ -201,9 +201,9 @@ let C = r.memo(function(e) {
         color: D.pending.hsl
       }), d, (0, i.jsxs)("div", {
         className: m.customColorPickerInputContainer,
-        children: [A && null != R && (0, i.jsx)(f.JO, {
+        children: [N && null != R && (0, i.jsx)(f.JO, {
           onClick: y,
-          tooltip: N.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+          tooltip: A.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: "top",
           className: m.customColorPickerEyeDropper,
           icon: I.EyeDropperIcon
@@ -226,7 +226,7 @@ let C = r.memo(function(e) {
       }), h]
     }), w = null != O ? O : c.V;
   return (0, i.jsx)(w, {
-    "aria-label": N.Z.Messages.PICK_A_COLOR,
+    "aria-label": A.Z.Messages.PICK_A_COLOR,
     className: o()(m.customColorPicker, p),
     children: G
   })

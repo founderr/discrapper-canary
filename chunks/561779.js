@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   i: function() {
-    return N
+    return A
   }
 }), n(724458), n(411104);
 var i, r, s, o = n(735250),
@@ -39,7 +39,7 @@ function S(e, t) {
   return null
 }(s = i || (i = {}))[s.ABOVE = 0] = "ABOVE", s[s.BELOW = 1] = "BELOW";
 
-function A(e) {
+function N(e) {
   return {
     value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
     initialValueProp: e.initialValue,
@@ -81,10 +81,10 @@ function A(e) {
     }(e)
   }
 }
-class N extends(r = a.PureComponent) {
+class A extends(r = a.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.initialValue !== t.initialValueProp ? {
-      ...A(e),
+      ...N(e),
       active: t.active
     } : null
   }
@@ -113,8 +113,8 @@ class N extends(r = a.PureComponent) {
       disabled: d,
       stickToMarkers: f,
       className: S,
-      children: A,
-      barStyles: N,
+      children: N,
+      barStyles: A,
       fillStyles: m,
       mini: O,
       hideBubble: p,
@@ -189,7 +189,7 @@ class N extends(r = a.PureComponent) {
           children: k
         }), (0, o.jsx)("div", {
           className: u()(h.bar, D),
-          style: N,
+          style: A,
           children: (0, o.jsx)("div", {
             className: h.barFill,
             style: {
@@ -197,7 +197,7 @@ class N extends(r = a.PureComponent) {
               width: B
             }
           })
-        }), A, (0, o.jsx)("div", {
+        }), N, (0, o.jsx)("div", {
           className: h.track,
           children: (0, o.jsx)(I.u, {
             color: I.u.Colors.GREY,
@@ -403,11 +403,11 @@ class N extends(r = a.PureComponent) {
     }), this.state = {
       active: !1,
       focused: !1,
-      ...A(e)
+      ...N(e)
     }
   }
 }
-f(N, "defaultProps", {
+f(A, "defaultProps", {
   initialValue: 10,
   minValue: 0,
   maxValue: 100,

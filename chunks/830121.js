@@ -31,8 +31,8 @@ var d = n(701190),
   h = n(981631);
 let f = /^\/([a-zA-Z0-9-]+)$/,
   S = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-  A = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-  N = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+  N = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+  A = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   m = /^\/application-directory\/([0-9-]+)\/?$/,
   O = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
   p = /^\/activities\/([0-9-]+)\/?$/,
@@ -130,7 +130,7 @@ function Z(e) {
       d.Z.getInvite(e);
       a(T.g.INVITE, e)
     }(null == s ? void 0 : s.match(f)) != null && a(T.g.TEMPLATE, s.substring(1));
-    let l = null == o ? void 0 : o.match(A);
+    let l = null == o ? void 0 : o.match(N);
     if (null != l) {
       let e = l[1].toUpperCase();
       if (e === T.g.INVITE) {
@@ -140,7 +140,7 @@ function Z(e) {
     }(null == o ? void 0 : o.match(S)) != null && a(T.g.CHANNEL_LINK, o.replace("/channels/", ""));
     let u = function(e) {
       if (null == e) return null;
-      let t = e.match(N);
+      let t = e.match(A);
       return null != t && t.length >= 4 ? {
         guildId: t[1],
         guildEventId: t[2],

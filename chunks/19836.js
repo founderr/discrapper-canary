@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -22,7 +22,7 @@ var r = n(120356),
   f = n(820499),
   S = n(546136);
 
-function A(e) {
+function N(e) {
   let {
     guildName: t
   } = e;
@@ -38,11 +38,11 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     guild: t,
     bio: r,
-    hidePersonalInformation: N,
+    hidePersonalInformation: A,
     isUsingGuildBio: m,
     lastSection: O = !1,
     animateOnHover: p = !1,
@@ -52,7 +52,7 @@ function N(e) {
   } = e, {
     location: v
   } = (0, l.O)(), L = (0, o.e7)([_.default], () => _.default.getCurrentUser()), D = d.ZP.canUsePremiumGuildMemberProfile(L), M = (0, u.Z)(C);
-  return (N || null == r || "" === r) && !M ? null : (0, i.jsxs)(I.Z, {
+  return (A || null == r || "" === r) && !M ? null : (0, i.jsxs)(I.Z, {
     lastSection: O,
     children: [(0, i.jsxs)(a.Heading, {
       variant: "eyebrow",
@@ -63,7 +63,7 @@ function N(e) {
         "aria-label": h.Z.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, i.jsx)(A, {
+        text: (0, i.jsx)(N, {
           guildName: t.name
         }),
         children: e => (0, i.jsx)(c.Z, {

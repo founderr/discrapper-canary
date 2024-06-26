@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(639119),
   f = n(631771),
   S = n(790527),
-  A = n(474936),
-  N = n(981631),
+  N = n(474936),
+  A = n(981631),
   m = n(731994),
   O = n(689938),
   p = n(165160);
@@ -37,7 +37,7 @@ function R(e) {
   }, {
     autoTrackExposure: !L,
     disable: L
-  }), M = g === N.BRd.LIGHT ? "light" : "dark", P = D ? (0, i.jsx)("img", {
+  }), M = g === A.BRd.LIGHT ? "light" : "dark", P = D ? (0, i.jsx)("img", {
     className: p.updatedArt,
     alt: "File Upload Nitro Perk",
     src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(M, ".png")
@@ -52,12 +52,12 @@ function R(e) {
         maxSize: t
       });
     switch (null == R ? void 0 : R.premiumType) {
-      case A.p9.TIER_0:
+      case N.p9.TIER_0:
         n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
           maxSize: t
         });
         break;
-      case A.p9.TIER_1:
+      case N.p9.TIER_1:
         n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
           maxSize: t
         })
@@ -82,7 +82,7 @@ function R(e) {
     artElement: P,
     artContainerClassName: D ? p.updatedArtContainer : p.artContainer,
     enableArtBoxShadow: !1,
-    type: A.cd.UPLOAD_ERROR_UPSELL,
+    type: N.cd.UPLOAD_ERROR_UPSELL,
     title: O.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
     body: b,
     context: O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
@@ -90,16 +90,16 @@ function R(e) {
     }),
     glowUp: U,
     analyticsLocation: {
-      section: N.jXE.FILE_UPLOAD_POPOUT
+      section: A.jXE.FILE_UPLOAD_POPOUT
     },
     onClose: t,
-    subscriptionTier: A.Si.TIER_2,
+    subscriptionTier: N.Si.TIER_2,
     secondaryCTA: D ? O.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
     onSecondaryClick: D ? function() {
-      (0, l.Z)(), t(), d.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
-        location_section: N.jXE.FILE_UPLOAD_UPSELL_MODAL,
-        location_object: N.qAy.NAVIGATION_LINK
-      }), (0, u.uL)(N.Z5c.APPLICATION_STORE)
+      (0, l.Z)(), t(), d.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
+        location_section: A.jXE.FILE_UPLOAD_UPSELL_MODAL,
+        location_object: A.qAy.NAVIGATION_LINK
+      }), (0, u.uL)(A.Z5c.APPLICATION_STORE)
     } : void 0,
     showEnhancedUpsell: D,
     ...n

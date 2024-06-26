@@ -57,10 +57,10 @@ let _ = (e, t) => ({
 function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return e.map((e, n) => (function e(t, n, r) {
-    var o, c, d, I, h, f, S, A;
+    var o, c, d, I, h, f, S, N;
     if (!E(t.type)) return null;
     let {
-      includeEmojiSrc: N
+      includeEmojiSrc: A
     } = n;
     switch (t.type) {
       case i.re.ACTION_ROW: {
@@ -75,7 +75,7 @@ function I(e) {
         }
       }
       case i.re.BUTTON: {
-        let e = null != t.emoji ? _(t.emoji, N) : void 0;
+        let e = null != t.emoji ? _(t.emoji, A) : void 0;
         return {
           type: i.re.BUTTON,
           id: T(r),
@@ -96,7 +96,7 @@ function I(e) {
             value: e.value,
             default: e.default,
             description: e.description,
-            emoji: null != e.emoji ? _(e.emoji, N) : void 0
+            emoji: null != e.emoji ? _(e.emoji, A) : void 0
           })), placeholder: null !== (o = t.placeholder) && void 0 !== o ? o : u.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values
         };
       case i.re.INPUT_TEXT:
@@ -133,7 +133,7 @@ function I(e) {
         };
       case i.re.SEPARATOR:
         return {
-          type: i.re.SEPARATOR, id: T(r), divider: null === (S = t.divider) || void 0 === S || S, spacing: null !== (A = t.spacing) && void 0 !== A ? A : i.US.SMALL
+          type: i.re.SEPARATOR, id: T(r), divider: null === (S = t.divider) || void 0 === S || S, spacing: null !== (N = t.spacing) && void 0 !== N ? N : i.US.SMALL
         };
       default:
         return null

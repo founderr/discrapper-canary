@@ -20,8 +20,8 @@ let _ = r.forwardRef(function(e, t) {
     to: h,
     avatarClassName: f,
     selectedClassName: S,
-    innerClassName: A,
-    wrapContent: N,
+    innerClassName: N,
+    wrapContent: A,
     highlighted: m,
     focusProps: O,
     ...p
@@ -33,9 +33,9 @@ let _ = r.forwardRef(function(e, t) {
     [u.clickable]: !I && (null != h || null != E)
   }), p["aria-selected"] = null !== (n = p["aria-selected"]) && void 0 !== n ? n : I;
   let R = (0, i.jsxs)("div", {
-    className: o()(A, u.layout, {
+    className: o()(N, u.layout, {
       [u.muted]: !I && T,
-      [u.wrappedLayout]: N
+      [u.wrappedLayout]: A
     }),
     children: [(0, i.jsx)("div", {
       className: o()(u.avatar, f),
@@ -46,7 +46,7 @@ let _ = r.forwardRef(function(e, t) {
         className: u.nameAndDecorators,
         children: [(0, i.jsx)("div", {
           className: o()(u.name, {
-            [u.wrappedName]: N
+            [u.wrappedName]: A
           }),
           children: s
         }), d]

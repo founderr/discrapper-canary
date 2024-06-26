@@ -36,11 +36,11 @@ function S(e, t) {
   return t.map(t => e + t)
 }
 
-function A(e) {
+function N(e) {
   return e.split("-")[1]
 }(o = i || (i = {}))[o.FAILED = 0] = "FAILED", o[o.UNFETCHED = 1] = "UNFETCHED", o[o.PENDING = 2] = "PENDING", o[o.SUCCEEDED = 3] = "SUCCEEDED", o[o.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
-function N(e, t) {
+function A(e, t) {
   e.forEach(e => {
     h[e] = t
   })
@@ -104,9 +104,9 @@ function g(e) {
 }
 async function C(e, t) {
   let n = S(e, t),
-    i = n.filter(e => h[e] <= 1).map(A);
+    i = n.filter(e => h[e] <= 1).map(N);
   if (0 === i.length) return [];
-  N(n, 2);
+  A(n, 2);
   try {
     let t = await u.tn.post({
       url: I.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
@@ -114,7 +114,7 @@ async function C(e, t) {
         user_ids: i
       }
     });
-    if (!Array.isArray(t.body)) return N(n, 0), [];
+    if (!Array.isArray(t.body)) return A(n, 0), [];
     let r = t.body.map(g),
       s = [];
     r.forEach(e => {
@@ -126,9 +126,9 @@ async function C(e, t) {
     let o = S(e, s),
       a = i.filter(e => !s.includes(e)),
       l = S(e, a);
-    return N(o, 3), N(l, 0), r
+    return A(o, 3), A(l, 0), r
   } catch (e) {
-    N(n, 0)
+    A(n, 0)
   }
   return []
 }

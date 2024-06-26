@@ -35,8 +35,8 @@ var i = n(470079),
   h = n(888369),
   f = n(430824),
   S = n(771845),
-  A = n(9156),
-  N = n(626135),
+  N = n(9156),
+  A = n(626135),
   m = n(630388),
   O = n(823379),
   p = n(960048),
@@ -68,7 +68,7 @@ function b(e, t) {
           overrideMode: r,
           messagePain: u.messages === D.XR.High,
           visitsALot: a,
-          muted: A.ZP.isMuted(e.id) && !A.ZP.isTemporarilyMuted(e.id)
+          muted: N.ZP.isMuted(e.id) && !N.ZP.isTemporarilyMuted(e.id)
         }
       }(r, n, e, t, a[r.id]);
       return i
@@ -131,12 +131,12 @@ function w() {
     t = {};
   for (let r of e) {
     var n, i;
-    let e = null !== (i = (null !== (n = A.ZP.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
+    let e = null !== (i = (null !== (n = N.ZP.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
     e = (0, m.mB)(e, y.vc.UNREADS_ALL_MESSAGES, !0), e = (0, m.mB)(e, y.vc.UNREADS_ONLY_MENTIONS, !1), t[r.id] = {
       flags: e
     }
   }
-  k(t), N.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+  k(t), A.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
     auto_migrated: !0,
     num_unread_guids_after: e.filter(e => h.default.hasUnread(e.id)).length
   })
@@ -159,7 +159,7 @@ function x(e) {
   }
 }
 async function B(e, t) {
-  if (A.ZP.useNewNotifications) {
+  if (N.ZP.useNewNotifications) {
     u.Z.show({
       title: "Info",
       body: "It looks like you are already using the new notifications system so skipping saving any changes this time because that will almost certainly mess up your account!"
@@ -179,10 +179,10 @@ async function B(e, t) {
       }),
       n = {
         num_unread_guilds_before: R.default.keys(e).filter(e => h.default.hasUnread(e)).length,
-        unmuted_server_ids: t.filter(e => A.ZP.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
+        unmuted_server_ids: t.filter(e => N.ZP.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
       };
     return () => {
-      N.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+      A.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
         ...n,
         auto_migrated: !0,
         pre_selected_server_ids: Object.values(e).filter(e => e.mode === D.AR.UseGreyDot).map(e => e.guildId),
@@ -203,7 +203,7 @@ async function B(e, t) {
     let t = {};
     for (let n of Object.values(e)) {
       var i, r;
-      let e = null !== (i = A.ZP.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
+      let e = null !== (i = N.ZP.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
         s = {};
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
@@ -262,8 +262,8 @@ async function Z() {
   }() && (0, g.dt)(e): (0, g.$U)("Backup from ".concat(new Date().toLocaleDateString()))
 }
 async function H() {
-  a.K.set("turnedOffNewNotifications", !0), N.default.track(M.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
-    num_guilds_with_new_setting: Object.values(f.Z.getGuilds()).filter(e => A.ZP.resolveGuildUnreadSetting(e) === P.i.ONLY_MENTIONS).length
+  a.K.set("turnedOffNewNotifications", !0), A.default.track(M.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
+    num_guilds_with_new_setting: Object.values(f.Z.getGuilds()).filter(e => N.ZP.resolveGuildUnreadSetting(e) === P.i.ONLY_MENTIONS).length
   });
   let e = await (0, g.Tn)(),
     t = s().sortBy(e, e => new Date(e.recorded_at).getTime());

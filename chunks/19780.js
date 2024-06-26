@@ -11,8 +11,8 @@ var s, o, a, l, u = n(442837),
   h = n(314897),
   f = n(938475),
   S = n(981631),
-  A = n(65154);
-let N = [],
+  N = n(65154);
+let A = [],
   m = null,
   O = null,
   p = null,
@@ -44,7 +44,7 @@ function v(e, t) {
       userId: n,
       streamId: i,
       rtcServerId: r,
-      context: A.Yn.DEFAULT
+      context: N.Yn.DEFAULT
     }))
   }), s.on(c.z.Ping, (e, t) => {
     _.Z.wait(() => _.Z.dispatch({
@@ -165,7 +165,7 @@ class y extends(s = u.ZP.Store) {
     return null != i ? i.quality : S.IE4.UNKNOWN
   }
   getPings() {
-    return null != i ? i.getPings() : N
+    return null != i ? i.getPings() : A
   }
   getAveragePing() {
     return null != i ? null == i ? void 0 : i.getAveragePing() : 0

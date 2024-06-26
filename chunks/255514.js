@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(320596),
   f = n(273514),
   S = n(995712),
-  A = n(234937),
-  N = n(473121),
+  N = n(234937),
+  A = n(473121),
   m = n(449413),
   O = n(266080),
   p = n(316617),
@@ -116,7 +116,7 @@ t.Z = e => {
       className: y.header,
       children: [(0, i.jsx)(C.Z, {
         element: U(t, "success")
-      }), (0, i.jsx)(N.Z, {
+      }), (0, i.jsx)(A.Z, {
         node: t
       }), (0, i.jsx)(m.Z, {
         node: t
@@ -159,7 +159,7 @@ t.Z = e => {
         reportId: V
       }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(g.Z, {
         stageInstance: n.record
-      }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(A.Z, {
+      }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(N.Z, {
         event: n.record
       }), null != U(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, i.jsx)(f.Z, {
         entry: n.record

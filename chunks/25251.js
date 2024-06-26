@@ -10,8 +10,8 @@ let I = [],
 let h = I,
   f = {},
   S = null;
-let A = 0,
-  N = e => {
+let N = 0,
+  A = e => {
     h = (0, u.cloneDeep)(e);
     let t = {};
     h.forEach(e => {
@@ -19,7 +19,7 @@ let A = 0,
     }), f = t
   },
   m = () => {
-    T = !1, N(I), S = null, r = void 0
+    T = !1, A(I), S = null, r = void 0
   };
 class O extends(l = _.ZP.Store) {
   get isFetching() {
@@ -57,13 +57,13 @@ a = "ProfileEffectStore", (o = "displayName") in(s = O) ? Object.defineProperty(
     let {
       profileEffects: t
     } = e;
-    T = !1, i = void 0, r = Date.now() + 3e5, A = 0, N(0 === t.length ? I : t)
+    T = !1, i = void 0, r = Date.now() + 3e5, N = 0, A(0 === t.length ? I : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** A, 36e5), ++A, N(I)
+    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** N, 36e5), ++N, A(I)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {

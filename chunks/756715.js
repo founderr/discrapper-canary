@@ -26,8 +26,8 @@ function E(e) {
     useDefaultUnderlineStyles: h = !0,
     title: f,
     style: S,
-    focusProps: A,
-    ...N
+    focusProps: N,
+    ...A
   } = e;
   null != t && null == n && (n = _.X.getDefaultLinkInterceptor(t));
   let m = r.useContext(a.g),
@@ -44,15 +44,15 @@ function E(e) {
     };
   return (null != t && !(0, c.B)(t) && (O.rel = "noreferrer noopener", O.target = "_blank"), m && delete O.href, null != n) ? (0, i.jsx)(l.P, {
     tag: "a",
-    ...N,
+    ...A,
     ...O,
     onClick: n,
-    focusProps: A,
+    focusProps: N,
     children: E
   }) : (0, i.jsx)(u.t, {
-    ...A,
+    ...N,
     children: (0, i.jsx)("a", {
-      ...N,
+      ...A,
       ...O,
       children: E
     })

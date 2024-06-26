@@ -26,8 +26,8 @@ let E = {
   h = null,
   f = "",
   S = "",
-  A = [],
   N = [],
+  A = [],
   m = [],
   O = [];
 
@@ -45,10 +45,10 @@ class R extends(i = a.ZP.Store) {
     return S
   }
   getResultItems() {
-    return A
+    return N
   }
   getTrendingCategories() {
-    return N
+    return A
   }
   getSelectedFormat() {
     return T
@@ -70,11 +70,11 @@ o = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
     h = e.analyticsID
   },
   GIF_PICKER_QUERY: function(e) {
-    "" === (f = e.query) && (S = "", A = [], m = [])
+    "" === (f = e.query) && (S = "", N = [], m = [])
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
     if (null != e.query && f === S) return !1;
-    null != e.query && (S = e.query), A = e.items.map(e => {
+    null != e.query && (S = e.query), N = e.items.map(e => {
       let {
         width: t,
         height: n,
@@ -117,11 +117,11 @@ o = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       query: t
     } = e;
     if (null == t) return !1;
-    S = t, A = []
+    S = t, N = []
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
     let t = e.trendingCategories;
-    N = [...null != e.trendingGIFPreview ? [{
+    A = [...null != e.trendingGIFPreview ? [{
       type: c.wI2.TRENDING_GIFS,
       icon: u.I,
       name: d.Z.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,

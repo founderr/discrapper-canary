@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(672752),
   f = n(626135),
   S = n(981631),
-  A = n(474936),
-  N = n(689938),
+  N = n(474936),
+  A = n(689938),
   m = n(415088);
 
 function O() {
@@ -47,7 +47,7 @@ function p(e) {
     return (null == e ? void 0 : e.isPrivate()) ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL
   }), {
     analyticsLocations: g
-  } = (0, _.ZP)(u.Z.PREMIUM_UPSELL), C = (0, c.Ng)(), v = (0, d.N)(), L = (0, c.Wp)(C, A.Si.TIER_2), D = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.Si.TIER_2;
+  } = (0, _.ZP)(u.Z.PREMIUM_UPSELL), C = (0, c.Ng)(), v = (0, d.N)(), L = (0, c.Wp)(C, N.Si.TIER_2), D = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.Si.TIER_2;
   return (r.useEffect(() => {
     f.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
       type: "longer messages inline",
@@ -58,19 +58,19 @@ function p(e) {
       location_stack: g
     })
   }, [R, g]), (D || L) && p < 0) ? (0, i.jsx)(E.ZP, {
-    type: A.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
-    subscriptionTier: A.Si.TIER_2,
+    type: N.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
+    subscriptionTier: N.Si.TIER_2,
     context: p,
     discountOffer: C,
     trialOffer: v,
-    children: N.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+    children: A.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
       onLearnMore: O
     })
   }) : s ? (0, i.jsx)(l.Clickable, {
     className: m.iconOnly,
     onClick: () => O(),
     children: (0, i.jsx)(l.Tooltip, {
-      text: N.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+      text: A.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
       position: "top",
       children: e => (0, i.jsx)(l.NitroWheelIcon, {
         size: "md",
@@ -88,7 +88,7 @@ function p(e) {
     }), (0, i.jsx)(l.Text, {
       className: m.text,
       variant: "text-sm/normal",
-      children: N.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+      children: A.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
         onLearnMore: O
       })
     })]

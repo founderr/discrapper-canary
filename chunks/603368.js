@@ -10,7 +10,7 @@ n.d(t, {
     return S
   },
   nj: function() {
-    return A
+    return N
   },
   pX: function() {
     return h
@@ -114,7 +114,7 @@ function S(e, t) {
   }).hex(), [e, n, r, s])
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "top left",
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : .3,
     r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "50%";

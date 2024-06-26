@@ -21,8 +21,8 @@ var r = n(990547),
   h = n(981631),
   f = n(176505),
   S = n(689938),
-  A = n(707093);
-let N = () => {
+  N = n(707093);
+let A = () => {
   let e = (0, l.ZP)();
   return (0, o.ap)(e) ? n(537381) : n(341048)
 };
@@ -32,7 +32,7 @@ function m(e) {
     onClose: t,
     guildId: n,
     emojiId: o
-  } = e, l = N(), {
+  } = e, l = A(), {
     analyticsLocations: m
   } = (0, _.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
   (0, c.Z)({
@@ -51,39 +51,39 @@ function m(e) {
     }),
     g = p ? S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
   return (0, i.jsxs)("div", {
-    className: A.container,
+    className: N.container,
     children: [(0, i.jsx)("div", {
-      className: A.background
+      className: N.background
     }), (0, i.jsxs)("div", {
-      className: A.content,
+      className: N.content,
       children: [(0, i.jsx)(a.Button, {
         look: a.Button.Looks.BLANK,
         size: a.Button.Sizes.ICON,
-        className: A.closeButton,
+        className: N.closeButton,
         onClick: t,
         children: (0, i.jsx)(a.CloseSmallIcon, {
           size: "xs",
           color: "currentColor",
           "aria-label": S.Z.Messages.CLOSE,
-          className: A.closeButtonIcon
+          className: N.closeButtonIcon
         })
       }), (0, i.jsx)("img", {
         alt: "",
         src: l,
-        className: A.upsellImage
+        className: N.upsellImage
       }), (0, i.jsx)(a.Spacer, {
         size: 22
       }), (0, i.jsx)(a.Heading, {
         color: "header-primary",
         variant: "heading-lg/extrabold",
-        className: A.header,
+        className: N.header,
         children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
       }), (0, i.jsx)(a.Spacer, {
         size: 4
       }), (0, i.jsx)(a.Text, {
         color: "header-secondary",
         variant: "text-md/normal",
-        className: A.description,
+        className: N.description,
         children: R
       }), (0, i.jsx)(a.Spacer, {
         size: 24

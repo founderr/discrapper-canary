@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(74538),
   f = n(706667),
   S = n(409673),
-  A = n(981631),
-  N = n(474936),
+  N = n(981631),
+  A = n(474936),
   m = n(689938),
   O = n(439316),
   p = n(538100);
@@ -37,7 +37,7 @@ function R(e) {
     location: M
   } = (0, u.O)(), P = r.useMemo(() => ({
     ...M,
-    section: A.jXE.SOUNDBOARD_SOUND_PICKER
+    section: N.jXE.SOUNDBOARD_SOUND_PICKER
   }), [M]), {
     analyticsLocations: y
   } = (0, d.ZP)(c.Z.PREMIUM_UPSELL), {
@@ -48,20 +48,20 @@ function R(e) {
     tooltipPosition: "left"
   }), G = (0, a.ap)(v) ? n(537381) : n(341048);
   r.useEffect(() => {
-    T.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: N.cd.SOUND_PICKER_SOUND_CLICKED,
+    T.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+      type: A.cd.SOUND_PICKER_SOUND_CLICKED,
       is_external: !0,
       location: {
         ...P,
-        object: A.qAy.SOUNDBOARD_SOUND
+        object: N.qAy.SOUNDBOARD_SOUND
       },
       location_stack: y,
-      sku_id: h.ZP.getSkuIdForPremiumType(N.p9.TIER_2)
+      sku_id: h.ZP.getSkuIdForPremiumType(A.p9.TIER_2)
     })
   }, [y, P]);
   let w = r.useCallback(() => {
-    T.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
-      location_section: A.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL
+    T.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+      location_section: N.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL
     }), (0, E.z)(), R()
   }, [R]);
   return (0, i.jsxs)("div", {
@@ -93,11 +93,11 @@ function R(e) {
         className: O.previewButtonContainer,
         children: b
       }), (0, i.jsx)(I.Z, {
-        subscriptionTier: N.Si.TIER_2,
+        subscriptionTier: A.Si.TIER_2,
         submitting: L,
         premiumModalAnalyticsLocation: {
-          section: A.jXE.SOUNDBOARD_SOUND_PICKER,
-          object: A.qAy.BUTTON_CTA
+          section: N.jXE.SOUNDBOARD_SOUND_PICKER,
+          object: N.qAy.BUTTON_CTA
         },
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.GREEN,

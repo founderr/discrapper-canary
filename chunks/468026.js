@@ -19,8 +19,8 @@ t.default = e => {
     className: h,
     confirmColor: f,
     confirmText: S = d.Z.Messages.OKAY,
-    secondaryConfirmText: A,
-    onCancel: N,
+    secondaryConfirmText: N,
+    onCancel: A,
     onClose: m,
     onConfirm: O,
     onConfirmSecondary: p,
@@ -33,7 +33,7 @@ t.default = e => {
     size: o.zx.Sizes.LARGE,
     color: o.zx.Colors.PRIMARY,
     onClick: () => {
-      null == m || m(), null == N || N()
+      null == m || m(), null == A || A()
     },
     className: E.secondaryButton,
     children: T
@@ -44,7 +44,7 @@ t.default = e => {
     className: s()(E.primaryButton, null != t ? E.gutter : null),
     autoFocus: !0,
     children: S
-  })), null != A && "" !== A && (r = (0, i.jsx)(a.P, {
+  })), null != N && "" !== N && (r = (0, i.jsx)(a.P, {
     onClick: () => {
       null == m || m(), null == p || p()
     },
@@ -52,7 +52,7 @@ t.default = e => {
     children: (0, i.jsx)(_.x, {
       className: E.secondaryAction,
       variant: "text-xs/normal",
-      children: A
+      children: N
     })
   })), (0, i.jsx)(u.Y0, {
     transitionState: g,

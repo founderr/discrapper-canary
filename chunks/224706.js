@@ -16,8 +16,8 @@ var i = n(664751),
   h = n(626135),
   f = n(630388),
   S = n(877481),
-  A = n(358085),
-  N = n(278323),
+  N = n(358085),
+  A = n(278323),
   m = n(58642),
   O = n(254854),
   p = n(981631),
@@ -258,7 +258,7 @@ t.Z = {
       url: p.ANM.UNVERIFIED_APPLICATIONS,
       body: {
         name: i,
-        os: (0, A.getPlatformName)(),
+        os: (0, N.getPlatformName)(),
         icon: r,
         distributor_application: (t = l, n = _, null == t || "" === t ? null : {
           distributor: t,
@@ -328,7 +328,7 @@ t.Z = {
       applicationId: i
     });
     try {
-      let e = await N.Z.getJoinSecret(t, n, i, r, s);
+      let e = await A.Z.getJoinSecret(t, n, i, r, s);
       return C({
         applicationId: i,
         secret: e,

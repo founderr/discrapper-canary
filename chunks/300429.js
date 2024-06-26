@@ -45,13 +45,13 @@ function S(e, t) {
   f(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * d.Z.Millis.SECOND + 100)
 }
 
-function A(e) {
+function N(e) {
   let {
     file: t
   } = e, n = E.Z.getChannel(t.channelId);
   return null != n && f(n, 0, 0)
 }
-class N extends(r = u.ZP.Store) {
+class A extends(r = u.ZP.Store) {
   initialize() {
     this.waitFor(E.Z)
   }
@@ -60,12 +60,12 @@ class N extends(r = u.ZP.Store) {
     return null != n ? n.cooldownMs : 0
   }
 }
-l = "SlowmodeStore", (a = "displayName") in(o = N) ? Object.defineProperty(o, a, {
+l = "SlowmodeStore", (a = "displayName") in(o = A) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new N(c.Z, {
+}) : o[a] = l, t.Z = new A(c.Z, {
   SLOWMODE_RESET_COOLDOWN: function(e) {
     let {
       channelId: t,
@@ -88,8 +88,8 @@ l = "SlowmodeStore", (a = "displayName") in(o = N) ? Object.defineProperty(o, a,
     } = e;
     return S(t, 0)
   },
-  UPLOAD_FAIL: A,
-  UPLOAD_CANCEL_REQUEST: A,
+  UPLOAD_FAIL: N,
+  UPLOAD_CANCEL_REQUEST: N,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t

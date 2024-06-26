@@ -34,8 +34,8 @@ function S(e, t, n) {
     commandType: s,
     allowNsfw: _,
     computedPermissions: S,
-    userId: A,
-    roleIds: N,
+    userId: N,
+    roleIds: A,
     isImpersonating: p,
     hasBaseAccessPermissions: R
   } = t, {
@@ -73,7 +73,7 @@ function S(e, t, n) {
         return !1 === e
       }(C)) return 6
   }
-  let y = O(e.permissions, P, A, N, p);
+  let y = O(e.permissions, P, N, A, p);
   return function(e) {
     return !0 === e
   }(y) ? 0 : function(e) {
@@ -83,11 +83,11 @@ function S(e, t, n) {
   }(g) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, I.BO) && l.e$(S, e.defaultMemberPermissions)) ? 7 : 0
 }
 
-function A(e) {
+function N(e) {
   return !0 === e
 }
 
-function N(e) {
+function A(e) {
   return !1 === e
 }
 

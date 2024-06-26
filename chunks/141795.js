@@ -21,8 +21,8 @@ var i, r, s = n(392711),
   h = n(70956),
   f = n(960048),
   S = n(861990),
-  A = n(476326),
-  N = n(983544),
+  N = n(476326),
+  A = n(983544),
   m = n(981631);
 
 function O(e, t, n) {
@@ -41,7 +41,7 @@ class g {
     O(this, "numChunks", void 0), O(this, "totalRequestCount", void 0), O(this, "timing", {}), O(this, "compressAndExtractDisabled", void 0), O(this, "fileAlreadyPrepped", void 0), O(this, "imageCompressionQuality", void 0), O(this, "videoCompressionQuality", void 0), O(this, "convertedMimeType", void 0), O(this, "sourceMediaWidth", void 0), O(this, "sourceMediaHeight", void 0), O(this, "sourceMediaFormat", void 0), O(this, "sourceVideoBitrate", void 0)
   }
 }
-class C extends A.ZP {
+class C extends N.ZP {
   static fromJson(e) {
     let {
       item: t,
@@ -55,7 +55,7 @@ class C extends A.ZP {
     }), s
   }
   retryOpts() {
-    return this.item.platform === A.ow.REACT_NATIVE ? {
+    return this.item.platform === N.ow.REACT_NATIVE ? {
       timeout: 1 * h.Z.Millis.HOUR,
       backoff: new a.Z(.5 * h.Z.Millis.SECOND, 30 * h.Z.Millis.MINUTE),
       retries: 12
@@ -95,7 +95,7 @@ class C extends A.ZP {
   }
   async prepareChunkUploadItem() {
     let e, t, n;
-    if (this.item.platform === A.ow.REACT_NATIVE) {
+    if (this.item.platform === N.ow.REACT_NATIVE) {
       let i = this.item;
       if (e = null != i.mimeType && "" !== i.mimeType ? i.mimeType : "application/octet-stream", null == i.size || 0 === i.size || isNaN(i.size)) try {
         t = await (0, S.Fm)(i.uri)
@@ -110,7 +110,7 @@ class C extends A.ZP {
     }
   }
   async getChunk(e, t, n) {
-    return this.item.platform !== A.ow.REACT_NATIVE ? this.item.file.slice(e, t) : null != n ? n.slice(e, t) : await (0, S.U4)(this.item.uri, e, t)
+    return this.item.platform !== N.ow.REACT_NATIVE ? this.item.file.slice(e, t) : null != n ? n.slice(e, t) : await (0, S.U4)(this.item.uri, e, t)
   }
   async uploadChunk(e) {
     let t = {
@@ -152,7 +152,7 @@ class C extends A.ZP {
   uploadFileToCloud() {
     let e, t;
     if (null == this.responseUrl) throw Error("_uploadFileToCloud - responseUrl is not set");
-    p.log("Uploading ".concat(this.id)), this.item.platform === A.ow.REACT_NATIVE ? t = null != (e = {
+    p.log("Uploading ".concat(this.id)), this.item.platform === N.ow.REACT_NATIVE ? t = null != (e = {
       type: this.item.mimeType,
       uri: this.item.uri,
       name: this.item.filename
@@ -193,7 +193,7 @@ class C extends A.ZP {
       return
     }
     let i = await R.getUploadPayload(this),
-      r = (0, N.F)(this.item.target);
+      r = (0, A.F)(this.item.target);
     if (null == i.filename || "" === i.filename || 0 === this.currentSize) {
       p.error("File does not have a filename or size is 0.", JSON.stringify(i)), this.handleError(m.evJ.INVALID_FILE_ASSET);
       return
@@ -237,7 +237,7 @@ class C extends A.ZP {
   }
   async reactNativeCompressAndExtractData() {
     var e;
-    if (!(0, N.F)(this.item.target).shouldReactNativeCompressUploads) return this.uploadAnalytics.compressAndExtractDisabled = !0, p.log("reactNativeCompressAndExtractData() disabled by upload target"), this;
+    if (!(0, A.F)(this.item.target).shouldReactNativeCompressUploads) return this.uploadAnalytics.compressAndExtractDisabled = !0, p.log("reactNativeCompressAndExtractData() disabled by upload target"), this;
     if (!0 === this.reactNativeFilePrepped) return this.uploadAnalytics.fileAlreadyPrepped = !0, p.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id)), this;
     p.log("Starting compression/conversion for ".concat(this.id));
     let t = await this.trackTime("compressTimeMs", async () => {
@@ -248,7 +248,7 @@ class C extends A.ZP {
     let n = t.uri,
       i = t.file.name,
       r = t.file.type;
-    if ((0, A.rG)(t.file) && (this.uploadAnalytics.imageCompressionQuality = t.file.imageCompressionQuality, this.uploadAnalytics.videoCompressionQuality = t.file.videoCompressionQuality, this.uploadAnalytics.convertedMimeType = t.file.type, void 0 !== t.file.videoMetadata && (this.uploadAnalytics.sourceMediaWidth = t.file.videoMetadata.width, this.uploadAnalytics.sourceMediaHeight = t.file.videoMetadata.height, this.uploadAnalytics.sourceMediaFormat = t.file.videoMetadata.format, this.uploadAnalytics.sourceVideoBitrate = t.file.videoMetadata.bitrate)), this.filename = i, null == i || null == n || null == r) throw p.error("Insufficient file data: ".concat({
+    if ((0, N.rG)(t.file) && (this.uploadAnalytics.imageCompressionQuality = t.file.imageCompressionQuality, this.uploadAnalytics.videoCompressionQuality = t.file.videoCompressionQuality, this.uploadAnalytics.convertedMimeType = t.file.type, void 0 !== t.file.videoMetadata && (this.uploadAnalytics.sourceMediaWidth = t.file.videoMetadata.width, this.uploadAnalytics.sourceMediaHeight = t.file.videoMetadata.height, this.uploadAnalytics.sourceMediaFormat = t.file.videoMetadata.format, this.uploadAnalytics.sourceVideoBitrate = t.file.videoMetadata.bitrate)), this.filename = i, null == i || null == n || null == r) throw p.error("Insufficient file data: ".concat({
       filename: i,
       uri: n,
       mimeType: r
@@ -284,7 +284,7 @@ class C extends A.ZP {
   }
   async delete() {
     if (null == this.uploadedFilename) return;
-    let e = (0, N.F)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
+    let e = (0, A.F)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
     try {
       await l.tn.del(e)
     } catch {}

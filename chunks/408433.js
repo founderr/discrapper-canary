@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   dY: function() {
-    return N
+    return A
   },
   kC: function() {
     return S
@@ -10,7 +10,7 @@ n.d(t, {
     return m
   },
   o3: function() {
-    return A
+    return N
   },
   vP: function() {
     return O
@@ -122,7 +122,7 @@ function S(e, t, n) {
   return i
 }
 
-function A(e) {
+function N(e) {
   let t = new Map,
     n = [];
   return e.forEach(e => {
@@ -139,7 +139,7 @@ function A(e) {
   }), n
 }
 
-function N(e) {
+function A(e) {
   let {
     image: t,
     video: n,

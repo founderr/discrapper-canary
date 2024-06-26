@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(660090),
   f = n(783097),
   S = n(870205),
-  A = n(981631),
-  N = n(689079),
+  N = n(981631),
+  A = n(689079),
   m = n(689938),
   O = n(271047);
 
@@ -38,7 +38,7 @@ function p(e) {
       command: l,
       section: _,
       location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW
-    }), d.S.dispatch(A.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+    }), d.S.dispatch(N.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: o.id
     })
   }, [o, l, _]), h = (null !== (n = null === (t = l.options) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0;
@@ -144,13 +144,13 @@ function C(e) {
     commandType: l.yU.CHAT
   }, {
     placeholderCount: 0,
-    limit: N.tn,
+    limit: A.tn,
     includeFrecency: !0
   }), d = null !== (t = c.find(e => e.id === s.id)) && void 0 !== t ? t : null, {
     sortOrder: E,
     setSortOrder: I,
     commands: f,
-    canSort: A
+    canSort: N
   } = (0, h.Z)({
     sectionId: s.id,
     commandsByActiveSection: u
@@ -177,7 +177,7 @@ function C(e) {
       commands: f,
       headerName: m.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
       sectionName: o,
-      children: A && (0, i.jsx)(S.Z, {
+      children: N && (0, i.jsx)(S.Z, {
         sortOrder: E,
         onSortOptionClick: I
       })

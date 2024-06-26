@@ -12,8 +12,8 @@ let T = {},
   h = {},
   f = {},
   S = 0,
-  A = 0,
   N = 0,
+  A = 0,
   m = 0;
 
 function O() {
@@ -21,7 +21,7 @@ function O() {
   let {
     [I.OGo.PENDING_INCOMING]: e = 0, [I.OGo.PENDING_OUTGOING]: t = 0, [I.OGo.FRIEND]: n = 0
   } = l().countBy(Object.values(T), e => e);
-  S = e, A = t, N = n
+  S = e, N = t, A = n
 }
 class p extends(i = u.ZP.Store) {
   initialize() {
@@ -45,10 +45,10 @@ class p extends(i = u.ZP.Store) {
     return S
   }
   getOutgoingCount() {
-    return A
+    return N
   }
   getFriendCount() {
-    return N
+    return A
   }
   getRelationshipCount() {
     return m

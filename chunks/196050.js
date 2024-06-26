@@ -18,7 +18,7 @@ t.Z = e => {
     focusProps: T,
     onClick: h,
     ...f
-  } = e, S = r.useMemo(() => s.X.getDefaultLinkInterceptor(t), [t]), A = r.useCallback(e => {
+  } = e, S = r.useMemo(() => s.X.getDefaultLinkInterceptor(t), [t]), N = r.useCallback(e => {
     a.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
       attachment_type: null == E ? void 0 : E[0],
       attachment_subtype: null == E ? void 0 : E[1]
@@ -26,7 +26,7 @@ t.Z = e => {
   }, [S, E, h]);
   return null != I ? (0, i.jsx)(o.Anchor, {
     href: t,
-    onClick: A,
+    onClick: N,
     target: d,
     rel: c,
     className: n,
@@ -36,7 +36,7 @@ t.Z = e => {
     children: I
   }) : (0, i.jsx)(o.Anchor, {
     href: t,
-    onClick: A,
+    onClick: N,
     target: d,
     rel: c,
     className: n,

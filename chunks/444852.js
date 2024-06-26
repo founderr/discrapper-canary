@@ -23,8 +23,8 @@ var i = n(392711),
   h = n(592125),
   f = n(131951),
   S = n(866960),
-  A = n(19780),
-  N = n(936349),
+  N = n(19780),
+  A = n(936349),
   m = n(704806),
   O = n(626135),
   p = n(756315),
@@ -135,8 +135,8 @@ class M extends a.Z {
         var i;
         null === (i = this._connection) || void 0 === i || i.on(s.Sh.ScreenshareFinish, (e, t, n, i, r, s, o, a, l, u, _, c, I, T, h, f) => {
           let S = this.getMediaSessionId(),
-            A = this.getRTCConnectionId(),
-            N = this.getGoLiveSource();
+            N = this.getRTCConnectionId(),
+            A = this.getGoLiveSource();
           (0, m.q)().then(m => {
             var p, R, g;
             let L = null;
@@ -157,7 +157,7 @@ class M extends a.Z {
               }
             }
             let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != s ? s : 0) + (null != u ? u : 0) + (null != f ? f : 0) + (null != h ? h : 0),
-              M = (null == N ? void 0 : null === (p = N.desktopSource) || void 0 === p ? void 0 : p.sourcePid) != null ? E.ZP.getGameForPID(N.desktopSource.sourcePid) : null,
+              M = (null == A ? void 0 : null === (p = A.desktopSource) || void 0 === p ? void 0 : p.sourcePid) != null ? E.ZP.getGameForPID(A.desktopSource.sourcePid) : null,
               {
                 gameName: P,
                 gameId: y,
@@ -180,12 +180,12 @@ class M extends a.Z {
               total_frames: D,
               desktop_capturer_type: _,
               media_session_id: S,
-              rtc_connection_id: A,
+              rtc_connection_id: N,
               context: v.Yn.STREAM,
               screens: c,
               windows: I,
               activity: T,
-              soundshare_session: null !== (g = null == N ? void 0 : null === (R = N.desktopSource) || void 0 === R ? void 0 : R.soundshareSession) && void 0 !== g ? g : void 0,
+              soundshare_session: null !== (g = null == A ? void 0 : null === (R = A.desktopSource) || void 0 === R ? void 0 : R.soundshareSession) && void 0 !== g ? g : void 0,
               share_game_name: P,
               share_game_id: y,
               share_game_exe: U,
@@ -220,7 +220,7 @@ class M extends a.Z {
     } = this.analyticsContext, {
       ownerId: s,
       guildId: o
-    } = this._streamContext, a = N.Z.getRegion(A.Z.getHostname()), l = I.xd.getSetting(), {
+    } = this._streamContext, a = A.Z.getRegion(N.Z.getHostname()), l = I.xd.getSetting(), {
       gameName: u,
       gameId: _,
       exe: c,

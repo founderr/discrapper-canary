@@ -20,8 +20,8 @@ var i, r, s, o = n(735250),
   h = n(866960),
   f = n(626135),
   S = n(768581),
-  A = n(956664),
-  N = n(311715),
+  N = n(956664),
+  A = n(311715),
   m = n(768760),
   O = n(981631);
 
@@ -107,12 +107,12 @@ class C extends(r = a.Component) {
       mediaLayoutType: r,
       useFullWidth: s
     } = this.props;
-    return r === m.hV.MOSAIC && s ? (0, A.rn)({
+    return r === m.hV.MOSAIC && s ? (0, N.rn)({
       width: e,
       height: t,
       maxWidth: n,
       maxHeight: i
-    }) : (0, A.Dc)({
+    }) : (0, N.Dc)({
       width: e,
       height: t,
       maxWidth: n,
@@ -155,8 +155,8 @@ class C extends(r = a.Component) {
       height: h,
       minWidth: f,
       minHeight: S,
-      maxWidth: A,
-      maxHeight: N,
+      maxWidth: N,
+      maxHeight: A,
       onClick: m,
       renderAccessory: p,
       tabIndex: R,
@@ -168,7 +168,7 @@ class C extends(r = a.Component) {
       readyState: M,
       hasMouseOver: P,
       hasFocus: y
-    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(T * b), null != f ? f : 0, null != A ? A : 1 / 0), w = (0, l.clamp)(Math.round(h * b), null != S ? S : 0, null != N ? N : 1 / 0), x = {
+    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(T * b), null != f ? f : 0, null != N ? N : 1 / 0), w = (0, l.clamp)(Math.round(h * b), null != S ? S : 0, null != A ? A : 1 / 0), x = {
       alt: e,
       readyState: M,
       onContextMenu: null != r ? r : void 0,
@@ -292,7 +292,7 @@ class C extends(r = a.Component) {
         width: r,
         height: s
       } = this.props;
-      (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, A.Dc)({
+      (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, N.Dc)({
         width: r,
         height: s,
         maxWidth: n,
@@ -338,7 +338,7 @@ class C extends(r = a.Component) {
         hasMouseOver: e,
         hasFocus: t
       } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
-      return this.props.shouldRenderAccessory ? e || t ? n : (0, o.jsx)(N.Z, {}) : null
+      return this.props.shouldRenderAccessory ? e || t ? n : (0, o.jsx)(A.Z, {}) : null
     }), (0, E.Vv)(this.getSrc(this.getRatio(), C.isAnimated(this.props))) && (this.state.readyState = O.zo9.READY), this.imageLoadAnalyticsEnabled = v.getCurrentConfig({
       location: "lazy_image"
     }).enabled

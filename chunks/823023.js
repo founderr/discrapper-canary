@@ -67,10 +67,10 @@ function I(e) {
     placeholderVersion: c,
     placeholderStyle: I,
     children: T
-  } = e, h = t === l.zo9.LOADING, [f] = r.useState(h), [S, A] = r.useState(!1), N = (0, a.L)(_, c, f);
+  } = e, h = t === l.zo9.LOADING, [f] = r.useState(h), [S, N] = r.useState(!1), A = (0, a.L)(_, c, f);
   r.useEffect(() => {
     let e = setTimeout(() => {
-      A(!0)
+      N(!0)
     }, 2e3);
     return () => {
       clearTimeout(e)
@@ -82,9 +82,9 @@ function I(e) {
     style: {
       aspectRatio: n
     },
-    children: [T, null != N && (0, i.jsx)(E, {
+    children: [T, null != A && (0, i.jsx)(E, {
       readyState: t,
-      placeholderImg: N,
+      placeholderImg: A,
       placeholderStyle: I
     }), m((e, t) => t && (0, i.jsx)(s.animated.div, {
       style: e,

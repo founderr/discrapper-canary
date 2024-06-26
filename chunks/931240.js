@@ -10,7 +10,7 @@ n.d(t, {
     return c
   },
   Zx: function() {
-    return N
+    return A
   },
   _9: function() {
     return I
@@ -25,7 +25,7 @@ n.d(t, {
     return d
   },
   nr: function() {
-    return A
+    return N
   },
   sv: function() {
     return _
@@ -198,7 +198,7 @@ async function S(e, t) {
     }), e
   }
 }
-async function A(e) {
+async function N(e) {
   try {
     await i.tn.post({
       url: l.ANM.DISABLE_CLAN(e)
@@ -207,7 +207,7 @@ async function A(e) {
     throw e
   }
 }
-async function N(e) {
+async function A(e) {
   try {
     await i.tn.post({
       url: l.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e)

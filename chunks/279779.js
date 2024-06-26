@@ -31,11 +31,11 @@ function S(e) {
   return null != h.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), d.Z.isFriend(e.id) && (t.isFriend = !0, t.friendNickname = d.Z.getNickname(e.id)), t
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   null != e && (e[t] = null != n && "" !== n ? n : null)
 }
 
-function N(e) {
+function A(e) {
   let t = [];
   if (null == e || !(0, u.hv)(e.type)) return t;
   let {
@@ -43,7 +43,7 @@ function N(e) {
   } = e;
   return n.forEach(n => {
     let i = S(E.default.getUser(n));
-    null != e && A(i, e.id), t.push(i)
+    null != e && N(i, e.id), t.push(i)
   }), t
 }
 
@@ -51,7 +51,7 @@ function m(e, t) {
   let n = [];
   return e.forEach(e => {
     let i = S(e.user);
-    null != i && (A(i, t, e.nick), n.push(i))
+    null != i && (N(i, t, e.nick), n.push(i))
   }), n
 }(r = i || (i = {})).UPDATE_USERS = "UPDATE_USERS", r.USER_RESULTS = "USER_RESULTS", r.QUERY_SET = "QUERY_SET", r.QUERY_CLEAR = "QUERY_CLEAR";
 class O {
@@ -186,7 +186,7 @@ class p extends l.Z {
           for (let n of T.default.keys(t)) {
             let r = i.get(n),
               s = t[n];
-            if (null != r && null != s && null != s.nick) A(r, e, s.nick), i.set(n, r)
+            if (null != r && null != s && null != s.nick) N(r, e, s.nick), i.set(n, r)
           }
       }
       this.updateUsers(Array.from(i.values())), i.clear()
@@ -214,7 +214,7 @@ class p extends l.Z {
         user: n,
         nick: i
       } = e, r = S(n);
-      null != r && (A(r, t, i), this.updateUsers([r]))
+      null != r && (N(r, t, i), this.updateUsers([r]))
     }), f(this, "_handlePassiveUpdateV2", e => {
       this.updateUsers(m(e.members, e.guildId))
     }), f(this, "_handleRelationshipAdd", e => {
@@ -231,19 +231,19 @@ class p extends l.Z {
         channel: {
           id: t
         }
-      } = e, n = N(_.Z.getChannel(t));
+      } = e, n = A(_.Z.getChannel(t));
       if (0 === n.length) return;
       let i = S(E.default.getCurrentUser());
-      A(i, t), n.push(i), this.updateUsers(n)
+      N(i, t), n.push(i), this.updateUsers(n)
     }), f(this, "_handleDMUpdates", e => {
       let {
         channels: t
       } = e;
       for (let e of t) {
-        let t = N(_.Z.getChannel(e.id));
+        let t = A(_.Z.getChannel(e.id));
         if (0 === t.length) continue;
         let n = S(E.default.getCurrentUser());
-        A(n, e.id), t.push(n), this.updateUsers(t)
+        N(n, e.id), t.push(n), this.updateUsers(t)
       }
     }), f(this, "_handleRecipientChanges", e => {
       let {
@@ -253,7 +253,7 @@ class p extends l.Z {
       } = e;
       if (!i) return;
       let r = S(n);
-      A(r, t), this.updateUsers([r])
+      N(r, t), this.updateUsers([r])
     })
   }
 }

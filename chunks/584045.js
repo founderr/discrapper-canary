@@ -26,8 +26,8 @@ function f(e) {
     nickname: s,
     pronouns: f,
     usernameIcon: S,
-    identityCTA: A,
-    className: N,
+    identityCTA: N,
+    className: A,
     isTryItOut: m = !1,
     lastSection: O
   } = e, p = (0, u.Z)("username"), R = r.useMemo(() => ({
@@ -35,7 +35,7 @@ function f(e) {
     tagUserId: t.id
   }), [t.id]);
   return (0, i.jsxs)(E.Z, {
-    className: o()(h.container, N),
+    className: o()(h.container, A),
     lastSection: O,
     children: [(0, i.jsxs)("div", {
       className: n ? h.copiableNameTag : void 0,
@@ -64,7 +64,7 @@ function f(e) {
             usernameClass: null == s ? h.userTagUsernameNoNickname : h.userTagUsernameBase,
             discriminatorClass: null == s ? h.userTagDiscriminatorNoNickname : h.discrimBase,
             botClass: null == s ? h.headerBotTag : h.headerBotTagWithNickname
-          }), A]
+          }), N]
         })
       }), null != f && "" !== f && (0, i.jsx)(a.Tooltip, {
         text: T.Z.Messages.USER_PROFILE_PRONOUNS,

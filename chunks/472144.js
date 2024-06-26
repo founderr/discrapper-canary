@@ -12,10 +12,10 @@ t.Z = s.forwardRef((e, t) => {
   } = e, d = (0, r.EK)(n > 0), u = s / 2, p = s / 2 - i / 2, m = 2 * Math.PI * p, x = m - n * m, g = {
     strokeDasharray: "".concat(m, " ").concat(m),
     strokeDashoffset: x
-  }, f = {
+  }, C = {
     strokeDasharray: "".concat(m, " ").concat(m),
     strokeDashoffset: -n * m
-  }, C = {
+  }, f = {
     boxShadow: "0 0 30px 0px ".concat(d.glow)
   };
   return (0, o.jsxs)("div", {
@@ -23,7 +23,7 @@ t.Z = s.forwardRef((e, t) => {
     ref: t,
     children: [(0, o.jsx)("div", {
       className: a.inner,
-      style: C,
+      style: f,
       children: c
     }), (0, o.jsxs)("svg", {
       className: a.progressBar,
@@ -68,7 +68,7 @@ t.Z = s.forwardRef((e, t) => {
         cx: u,
         cy: u,
         stroke: "url(#linear)",
-        style: f
+        style: C
       }), (0, o.jsx)("circle", {
         className: a.progress,
         strokeWidth: i,

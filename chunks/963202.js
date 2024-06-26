@@ -16,7 +16,7 @@ n.d(t, {
     return h
   },
   nk: function() {
-    return N
+    return A
   }
 }), n(653041);
 var i = n(442837),
@@ -195,7 +195,7 @@ let S = (0, r.B)({
       }
     }]
   }),
-  A = (0, r.B)({
+  N = (0, r.B)({
     kind: "user",
     id: "2024-05_clans_genshin_pilot",
     label: "Clans Genshin Pilot",
@@ -213,7 +213,7 @@ let S = (0, r.B)({
     }]
   });
 
-function N(e) {
+function A(e) {
   var t, n;
   let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     r = S.useExperiment({
@@ -221,7 +221,7 @@ function N(e) {
     }, {
       autoTrackExposure: i
     }),
-    s = A.useExperiment({
+    s = N.useExperiment({
       location: e
     }, {
       autoTrackExposure: i

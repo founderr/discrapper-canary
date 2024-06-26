@@ -20,8 +20,8 @@ var i = n(729594),
   h = n(336197),
   f = n(540709),
   S = n(881706),
-  A = n(701190),
-  N = n(944486),
+  N = n(701190),
+  A = n(944486),
   m = n(914010),
   O = n(771845),
   p = n(626135),
@@ -38,7 +38,7 @@ async function C(e, t) {
 }
 async function v(e) {
   var t;
-  let n = A.Z.getInvite(e.code);
+  let n = N.Z.getInvite(e.code);
   if (null == n) {
     let {
       invite: t
@@ -75,7 +75,7 @@ function D(e) {
       application_id: i,
       device_platform: r.tq ? "mobile_web" : "desktop_web",
       guild_id: s,
-      channel_id: N.Z.getChannelId()
+      channel_id: A.Z.getChannelId()
     }), Promise.resolve().then(n.bind(n, 147890)).then(e => {
       let {
         goToAppDirectory: t
@@ -103,15 +103,15 @@ function D(e) {
     }), !0
   };
   let {
-    path: A,
+    path: N,
     hostname: O = "",
     host: C,
     query: D,
     hash: M
   } = i.parse(e), P = R.Z.isDiscordHostname(O) || R.Z.isDiscordLocalhost(C, O);
-  if (P && (null == A ? void 0 : A.startsWith("/application-directory"))) {
+  if (P && (null == N ? void 0 : N.startsWith("/application-directory"))) {
     let e;
-    let t = A.split("/"),
+    let t = N.split("/"),
       [, , i, s] = t;
     5 === t.length && (e = t[4]);
     let o = null != i && (0, l.BH)(i) ? i : void 0;
@@ -127,7 +127,7 @@ function D(e) {
         application_id: o,
         device_platform: r.tq ? "mobile_web" : "desktop_web",
         guild_id: c,
-        channel_id: N.Z.getChannelId()
+        channel_id: A.Z.getChannelId()
       })), Promise.resolve().then(n.bind(n, 147890)).then(t => {
         let {
           goToAppDirectory: n
@@ -145,19 +145,19 @@ function D(e) {
       }), !0
     }
   }
-  if (null != A && P && R.Z.isAppRoute(A)) {
+  if (null != N && P && R.Z.isAppRoute(N)) {
     let e = {};
-    return null != D && (e.search = D), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, h.Z)(A, Object.keys(e).length > 0 ? e : null), !0)
+    return null != D && (e.search = D), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, h.Z)(N, Object.keys(e).length > 0 ? e : null), !0)
   }
-  if (null != A && P) {
+  if (null != N && P) {
     let {
       getOAuth2AuthorizeProps: t,
       openOAuth2ModalWithCreateGuildModal: i
     } = n(69580), r = t(e);
     if (null != r) return e => (null == e || e.preventDefault(), i(r), !0)
   }
-  let y = (0, T.Ao)(A);
-  if (null != A && P && null != y) return e => {
+  let y = (0, T.Ao)(N);
+  if (null != N && P && null != y) return e => {
     null == e || e.preventDefault();
     let t = m.Z.getGuildId();
     null != y.guildId && "" !== y.guildId && y.guildId !== t && (0, h.Z)(g.Z5c.CHANNEL(y.guildId));
@@ -166,10 +166,10 @@ function D(e) {
       eventId: n.id
     }), !0
   };
-  if (P && (null == A ? void 0 : A.startsWith("/settings/"))) {
+  if (P && (null == N ? void 0 : N.startsWith("/settings/"))) {
     let {
       default: e
-    } = n(357269), t = e(A);
+    } = n(357269), t = e(N);
     if (null != t) return e => (null == e || e.preventDefault(), a.Z.open(t.section, t.subsection, {
       openWithoutBackstack: !1,
       impressionSource: t.source,

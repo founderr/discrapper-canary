@@ -11,8 +11,8 @@ var s, o, a, l, u = n(348327),
   h = n(860852),
   f = n(768419),
   S = n(695346),
-  A = n(581883),
-  N = n(131704),
+  N = n(581883),
+  A = n(131704),
   m = n(780570),
   O = n(314897),
   p = n(77498),
@@ -82,7 +82,7 @@ function F() {
 }
 class Y extends(s = E.ZP.Store) {
   initialize() {
-    this.waitFor(R.Z, A.Z, C.Z, L.Z, g.Z, p.Z), this.syncWith([C.Z], Z)
+    this.waitFor(R.Z, N.Z, C.Z, L.Z, g.Z, p.Z), this.syncWith([C.Z], Z)
   }
   getLocalPresence() {
     return {
@@ -161,6 +161,6 @@ l = "SelfPresenceStore", (a = "displayName") in(o = Y) ? Object.defineProperty(o
     let {
       channel: t
     } = e;
-    t instanceof N.Sf && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === O.default.getId() && (i = void 0, r = void 0)
+    t instanceof A.Sf && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === O.default.getId() && (i = void 0, r = void 0)
   }
 })

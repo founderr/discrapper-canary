@@ -21,10 +21,10 @@ let {
 } = d.V, {
   Spacing: S
 } = E.V, {
-  Modules: A
-} = _.V, N = l()(h, e => r()(e)), m = {
+  Modules: N
+} = _.V, A = l()(h, e => r()(e)), m = {
   themes: I,
-  modules: A,
+  modules: N,
   colors: l()(T, (e, t) => ({
     css: g(t),
     resolve(t) {
@@ -33,13 +33,13 @@ let {
         r = n.opacity;
       if (1 === r) return m.unsafe_rawColors[i].resolve(t);
       {
-        let e = N[i];
+        let e = A[i];
         return 0 !== e.alpha() && 1 !== r && (e = e.alpha(r)), O(e, t.saturation)
       }
     }
   })),
   unsafe_rawColors: l()(h, (e, t) => {
-    let n = N[t];
+    let n = A[t];
     return {
       css: g(t),
       resolve: e => O(n, e.saturation)

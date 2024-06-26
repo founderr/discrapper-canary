@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(300284),
   f = n(695346),
   S = n(314897),
-  A = n(430824),
-  N = n(594174),
+  N = n(430824),
+  A = n(594174),
   m = n(451478),
   O = n(311715),
   p = n(626135),
@@ -59,8 +59,8 @@ function B(e) {
     type: t,
     shown: s,
     onClick: a
-  } = e, u = (0, l.e7)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = e, u = (0, l.e7)([A.default], () => {
+    let e = A.default.getCurrentUser();
     return g.ZP.canUsePremiumProfileCustomization(e)
   }), I = r.useRef(!1), {
     analyticsLocations: T
@@ -156,20 +156,20 @@ function V(e) {
     displayProfile: c,
     onClose: d,
     guildId: E,
-    profileType: N,
+    profileType: A,
     isHovering: p,
     animateOnHover: w,
     allowEdit: x = !0,
     showPremiumBadgeUpsell: V = !0,
     hasProfileEffect: Z = !1
-  } = e, H = (0, l.e7)([A.Z], () => A.Z.getGuild(E)), F = (0, l.e7)([S.default], () => S.default.getId()) === s.id && x, Y = g.ZP.isPremiumAtLeast(null == c ? void 0 : c.premiumType, U.p9.TIER_2), {
+  } = e, H = (0, l.e7)([N.Z], () => N.Z.getGuild(E)), F = (0, l.e7)([S.default], () => S.default.getId()) === s.id && x, Y = g.ZP.isPremiumAtLeast(null == c ? void 0 : c.premiumType, U.p9.TIER_2), {
     trackUserProfileAction: j
   } = (0, C.KZ)(), [W, K] = r.useState(!1), z = (0, l.e7)([m.Z], () => m.Z.isFocused()), q = f.QK.getSetting(), {
     bannerSrc: X,
     status: Q
   } = (0, v.Z)({
     displayProfile: c,
-    size: (0, D.e7)(N),
+    size: (0, D.e7)(A),
     canAnimate: w || !q ? W : z
   }), J = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), $ = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), ee = (0, a._i)((0, I.ZP)(s.getAvatarURL(E, $), J, !1)), et = (0, T.Z)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, h.Z)({
     analyticsLocation: {
@@ -180,12 +180,12 @@ function V(e) {
   return (0, i.jsx)(L.Z, {
     isPremium: Y,
     hasThemeColors: null !== (n = null == c ? void 0 : c.canEditThemes) && void 0 !== n && n,
-    profileType: N,
+    profileType: A,
     hasBanner: null != X,
     hasProfileEffect: Z,
     children: (0, i.jsxs)("div", {
       className: o()(G.banner, (0, D.Ae)({
-        profileType: N,
+        profileType: A,
         user: {
           hasBanner: null != X,
           isPremium: Y,
@@ -202,7 +202,7 @@ function V(e) {
       },
       children: [F ? null == H ? (0, i.jsx)(k, {
         darkenOnHover: Z && p,
-        profileType: N,
+        profileType: A,
         profileLabel: b.Z.Messages.EDIT_PROFILE,
         icon: "pencil",
         onClick: () => {
@@ -228,10 +228,10 @@ function V(e) {
           profileLabel: b.Z.Messages.EDIT_PROFILE,
           icon: "pencil",
           ...e,
-          profileType: N
+          profileType: A
         })
-      }) : V && null != X && N !== P.y0.SETTINGS ? (0, i.jsx)(B, {
-        type: N,
+      }) : V && null != X && A !== P.y0.SETTINGS ? (0, i.jsx)(B, {
+        type: A,
         shown: void 0 === p ? W : p,
         onClick: () => {
           j({

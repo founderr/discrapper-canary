@@ -43,7 +43,7 @@ function S(e, t) {
     i = E.get(e);
   return null != i && (t !== i.commandId || n !== i.optionName) && (null != t && t !== i.commandId && (i.optionNameToLastResults.clear(), i.optionNameToNonce.clear(), i.optionNameToLastQuery.clear(), i.optionNameToAutocompleteQueries.clear()), i.lastErrored = !1, i.commandId = t, i.optionName = n, !0)
 }
-class A extends(i = a.ZP.Store) {
+class N extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(_.Z)
   }
@@ -61,12 +61,12 @@ class A extends(i = a.ZP.Store) {
     return T(e).lastResponseNonce
   }
 }
-o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new A(l.Z, {
+}) : r[s] = o, t.Z = new N(l.Z, {
   CONNECTION_OPEN: h,
   LOGOUT: h,
   CHANNEL_SELECT: h,

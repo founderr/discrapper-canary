@@ -34,7 +34,7 @@ n.d(t, {
     return g
   },
   p3: function() {
-    return A
+    return N
   },
   wC: function() {
     return S
@@ -73,14 +73,14 @@ function S(e) {
   return n && i && r
 }
 
-function A(e, t) {
+function N(e, t) {
   var n;
   if (null == e || !e.hasFeature(I.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
   let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
   return _.yE(i, T.q.STARTED_ONBOARDING) && !_.yE(i, T.q.COMPLETED_ONBOARDING)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let i = new Set;
   e.forEach(e => {
     e.options.forEach(e => {
@@ -96,7 +96,7 @@ function N(e, t, n) {
 }
 
 function m(e, t, n) {
-  return N(t, n, a.ZP.getChannels(e)[a.sH].map(e => {
+  return A(t, n, a.ZP.getChannels(e)[a.sH].map(e => {
     let {
       channel: t
     } = e;
@@ -105,7 +105,7 @@ function m(e, t, n) {
 }
 
 function O(e, t, n) {
-  return N(t, n, (0, i.e7)([a.ZP], () => a.ZP.getChannels(e))[a.sH].map(e => {
+  return A(t, n, (0, i.e7)([a.ZP], () => a.ZP.getChannels(e))[a.sH].map(e => {
     let {
       channel: t
     } = e;

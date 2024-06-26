@@ -65,26 +65,26 @@ t.Z = e => {
     overrideDiscriminator: u,
     forcePomelo: d,
     ...E
-  } = e, h = (0, o.e7)([l.Z], () => l.Z.hidePersonalInformation), f = h || t || n.isNonUserBot(), S = n.toString(), A = c.ZP.getName(n), N = s ? S : null != r ? r : A, m = n.isPomelo() || d;
-  if (m || N !== S) {
-    let e = N === S && m && s ? c.ZP.getUserTag(n, {
+  } = e, h = (0, o.e7)([l.Z], () => l.Z.hidePersonalInformation), f = h || t || n.isNonUserBot(), S = n.toString(), N = c.ZP.getName(n), A = s ? S : null != r ? r : N, m = n.isPomelo() || d;
+  if (m || A !== S) {
+    let e = A === S && m && s ? c.ZP.getUserTag(n, {
         forcePomelo: d
-      }) : N,
+      }) : A,
       t = a && e !== "@".concat(S) ? c.ZP.getUserTag(n) : void 0;
     return (0, i.jsx)(T, {
       primary: e,
       secondary: t,
       botVerified: n.isVerifiedBot(),
       botType: I(n),
-      showStreamerModeTooltip: h && e !== A,
+      showStreamerModeTooltip: h && e !== N,
       ...E
     })
   }
   return (0, i.jsx)(_.Z, {
-    name: N,
+    name: A,
     botType: I(n),
     botVerified: n.isVerifiedBot(),
-    discriminator: f || N !== S ? null : null != u ? u : n.discriminator,
+    discriminator: f || A !== S ? null : null != u ? u : n.discriminator,
     ...E
   })
 }

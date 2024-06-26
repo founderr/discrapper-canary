@@ -26,8 +26,8 @@ function T(e) {
     stickers: h,
     uploads: f,
     channel: S,
-    restrictMentions: A = !0,
-    respectCooldown: N = !0
+    restrictMentions: N = !0,
+    respectCooldown: A = !0
   } = e, m = d.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
     var t, n, u;
@@ -37,8 +37,8 @@ function T(e) {
       content: h,
       stickers: f,
       uploads: S,
-      channel: A,
-      restrictMentions: N,
+      channel: N,
+      restrictMentions: A,
       respectCooldown: m,
       userCanUsePremiumMessageLength: O,
       resolve: p
@@ -52,7 +52,7 @@ function T(e) {
     }
     let R = O ? E.en1 : E.J6R;
     if (h.length > R) {
-      if (O || null == A) {
+      if (O || null == N) {
         ;
         n = h.length, u = R, (0, r.openModal)(e => (0, i.jsx)(o.default, {
           title: I.Z.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -68,7 +68,7 @@ function T(e) {
         })
       } else s.Z.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
-        channel: A,
+        channel: N,
         content: h
       });
       p({
@@ -77,8 +77,8 @@ function T(e) {
       });
       return
     }
-    if (null != A) {
-      if (null != A.getGuildId() && m && l.Z.getSlowmodeCooldownGuess(A.id) > 0) {
+    if (null != N) {
+      if (null != N.getGuildId() && m && l.Z.getSlowmodeCooldownGuess(N.id) > 0) {
         p({
           valid: !1,
           failureReason: E.zYc.SLOWMODE_COOLDOWN
@@ -92,11 +92,11 @@ function T(e) {
             animation: n
           }
           of c.$) {
-          let i = e(h, A, N);
+          let i = e(h, N, A);
           if (!1 !== i) {
             d({
               analyticsType: t,
-              channel: A,
+              channel: N,
               onCancel: () => p({
                 valid: !1,
                 failureReason: E.zYc.SHOUTING_CANCELLED
@@ -135,8 +135,8 @@ function T(e) {
     stickers: h,
     uploads: f,
     channel: S,
-    restrictMentions: A,
-    respectCooldown: N,
+    restrictMentions: N,
+    respectCooldown: A,
     userCanUsePremiumMessageLength: m,
     resolve: e
   }))

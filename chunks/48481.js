@@ -19,13 +19,13 @@ n.d(t, {
     return I
   },
   re: function() {
-    return A
+    return N
   },
   tU: function() {
     return R
   },
   u0: function() {
-    return N
+    return A
   },
   uL: function() {
     return O
@@ -80,20 +80,20 @@ function S(e, t) {
   return (0, r.m)(e.toBinary(t))
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   for (let e in t = {
       ...t
     }, n) delete t[e];
   return e.mergePartial(t, n), t
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   return (null == t || "null" === t) && (t = c.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t])
 }
 
 function m(e, t, n, i) {
   var r, s, o;
-  return r = e, s = t, o = e => O(e, n, i), null == r.guilds && (r.guilds = l.os.create()), N(r.guilds, s, o)
+  return r = e, s = t, o = e => O(e, n, i), null == r.guilds && (r.guilds = l.os.create()), A(r.guilds, s, o)
 }
 
 function O(e, t, n) {

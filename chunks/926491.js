@@ -12,8 +12,8 @@ var i, r, s, o, a = n(956067),
   h = n(430824),
   f = n(70956),
   S = n(373228),
-  A = n(378233);
-let N = 2,
+  N = n(378233);
+let A = 2,
   m = new Map,
   O = new Map,
   p = null,
@@ -26,10 +26,10 @@ let N = 2,
   },
   D = f.Z.Millis.HOUR,
   M = async () => {
-    if (0 !== N) return;
+    if (0 !== A) return;
     let e = _.Z.database();
     if (null == e) return;
-    N = 2;
+    A = 2;
     let t = await (0, c.gs)("StickerStore.loadSavedGuildStickers", () => a.Z.timeAsync("\uD83D\uDCBE", "loadSavedGuildStickers", () => d.Z.getAsync(e)));
     if (null != t) u.Z.dispatch({
       type: "CACHED_STICKERS_LOADED",
@@ -48,7 +48,7 @@ let N = 2,
       type: S.MO.STICKER_NAME,
       value: e.name.trim().toLocaleLowerCase()
     };
-    if ((0, A.jl)(e)) {
+    if ((0, N.jl)(e)) {
       let t = R.find(t => t.id === e.pack_id),
         r = [i, ...(null != n ? n : "").split(",").map(e => ({
           type: S.MO.TAG,
@@ -58,7 +58,7 @@ let N = 2,
         type: S.MO.PACK_NAME,
         value: t.name
       }), p.set(e.id, r)
-    } else if ((0, A.J8)(e) && null != n) {
+    } else if ((0, N.J8)(e) && null != n) {
       let r = E.ZP.getByName(n),
         s = [i, {
           type: S.MO.TAG,
@@ -107,10 +107,10 @@ class w extends(i = l.ZP.Store) {
     this.waitFor(_.Z, T.Z, h.Z)
   }
   get isLoaded() {
-    return 0 !== N
+    return 0 !== A
   }
   get loadState() {
-    return N
+    return A
   }
   get stickerMetadata() {
     return M(), null == p && (p = new Map, b()), p
@@ -153,19 +153,19 @@ o = "StickersStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
   writable: !0
 }) : r[s] = o, t.Z = new w(u.Z, {
   BACKGROUND_SYNC: () => {
-    p = null, O = new Map, v = new Map, N = 0
+    p = null, O = new Map, v = new Map, A = 0
   },
   CONNECTION_OPEN: e => {
     let {
       guilds: t
     } = e;
-    p = null, O = new Map, v = new Map, t.forEach(G), N = t.every(e => null != e.stickers) ? 1 : 0
+    p = null, O = new Map, v = new Map, t.forEach(G), A = t.every(e => null != e.stickers) ? 1 : 0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    if (!I.Z.isLurking(t.id)) G(t), 1 === N && null == t.stickers && null != t.stickerUpdates && (N = 0)
+    if (!I.Z.isLurking(t.id)) G(t), 1 === A && null == t.stickers && null != t.stickerUpdates && (A = 0)
   },
   GUILD_DELETE: function(e) {
     var t;
@@ -177,7 +177,7 @@ o = "StickersStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
     }), v.delete(n.id), v = new Map(v)
   },
   LOGOUT: () => {
-    N = 0, R = [], O.clear(), m.clear(), p = null, v.clear(), v = new Map(v), C = !1, g = null
+    A = 0, R = [], O.clear(), m.clear(), p = null, v.clear(), v = new Map(v), C = !1, g = null
   },
   STICKER_PACKS_FETCH_START: () => {
     C = !0
@@ -224,7 +224,7 @@ o = "StickersStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
     } = e, r = e => {
       let t;
       let n = O.get(e.id);
-      return null != n && (0, A.J8)(n) && (t = null != n.user ? n.user : void 0), {
+      return null != n && (0, N.J8)(n) && (t = null != n.user ? n.user : void 0), {
         ...e,
         user: t
       }

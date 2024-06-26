@@ -21,8 +21,8 @@ var r = n(693789),
   h = n(496675),
   f = n(156361),
   S = n(226951),
-  A = n(877565),
-  N = n(590921),
+  N = n(877565),
+  A = n(590921),
   m = n(665692),
   O = n(689079),
   p = n(689938),
@@ -46,16 +46,16 @@ function C() {
 let v = {
   sentinel: m.GI,
   stores: [d.Z, u.ZP, h.Z],
-  matches: (e, t, n, i, r) => r.commands !== N.L8.DISABLED && null == d.Z.getActiveCommand(e.id) && (i || r.commands !== N.L8.OLD_BUILT_INS),
+  matches: (e, t, n, i, r) => r.commands !== A.L8.DISABLED && null == d.Z.getActiveCommand(e.id) && (i || r.commands !== A.L8.OLD_BUILT_INS),
   queryResults(e, t, n, i, r) {
-    if (0 === n.length && i.commands !== N.L8.OLD_BUILT_INS) return g;
-    if (i.commands === N.L8.OLD_BUILT_INS) {
+    if (0 === n.length && i.commands !== A.L8.OLD_BUILT_INS) return g;
+    if (i.commands === A.L8.OLD_BUILT_INS) {
       let i = (0, l.Kh)(o.yU.CHAT, !1, !1),
         r = RegExp("^".concat(S.Z.escape(n)), "i"),
         s = (0, I.Dd)(i, r, {
           channel: e,
           guild: t
-        }, N.AQ),
+        }, A.AQ),
         a = l.Tm[O.bi.BUILT_IN];
       return 0 === s.length ? g : {
         results: {
@@ -74,8 +74,8 @@ let v = {
         commandType: o.yU.CHAT,
         text: s.text
       }, {
-        limit: N.AQ,
-        placeholderCount: N.YP,
+        limit: A.AQ,
+        placeholderCount: A.YP,
         scoreMethod: c.p.COMMAND_OR_APPLICATION,
         allowFetch: r
       });
@@ -88,7 +88,7 @@ let v = {
     }
     return 0 === d.length ? g : {
       results: {
-        entries: d.slice(0, N.AQ).map(e => ({
+        entries: d.slice(0, A.AQ).map(e => ({
           command: e,
           section: null == u ? void 0 : u.find(t => t.id === e.applicationId)
         }))
@@ -106,8 +106,8 @@ let v = {
       options: a,
       onHover: l,
       onClick: u
-    } = e, _ = (0, T.hV)(s, o), c = a.commands === N.L8.OLD_BUILT_INS;
-    return (0, A.HI)({
+    } = e, _ = (0, T.hV)(s, o), c = a.commands === A.L8.OLD_BUILT_INS;
+    return (0, N.HI)({
       query: _.text,
       selectedIndex: n,
       autocompletes: t,
@@ -159,7 +159,7 @@ let v = {
       section: _
     } = t[n];
     if (u.inputType === E.iw.PLACEHOLDER) return null;
-    if (r.commands === N.L8.OLD_BUILT_INS) r.insertText(function(e) {
+    if (r.commands === A.L8.OLD_BUILT_INS) r.insertText(function(e) {
       return "".concat(m.GI).concat(e.name)
     }(u));
     else {
@@ -173,7 +173,7 @@ let v = {
       })
     }
     return {
-      type: N.z2.COMMAND
+      type: A.z2.COMMAND
     }
   }
 };

@@ -51,7 +51,7 @@ function f(e) {
         children: [(0, i.jsx)(a.x, {
           variant: "text-sm/semibold",
           children: I.Z.Messages.OVERVIEW
-        }), (0, i.jsx)(A, {
+        }), (0, i.jsx)(N, {
           application: r
         })]
       }) : null]
@@ -88,7 +88,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     application: t
   } = e, [n, _] = r.useState(!1), c = r.useMemo(() => {

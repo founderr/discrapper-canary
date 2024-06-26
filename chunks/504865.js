@@ -17,9 +17,9 @@ var r = n(120356),
   f = n(689938),
   S = n(339959);
 t.Z = function(e) {
-  var t, n, r, A;
+  var t, n, r, N;
   let {
-    subscriptionTier: N,
+    subscriptionTier: A,
     interval: m = h.rV.MONTH,
     className: O,
     isGift: p = !1,
@@ -32,16 +32,16 @@ t.Z = function(e) {
     priceOptions: null != g ? g : {
       currency: "null"
     },
-    preventFetch: null == v || null == g || null != L || N !== h.Si.TIER_2 || m !== h.rV.YEAR,
+    preventFetch: null == v || null == g || null != L || A !== h.Si.TIER_2 || m !== h.rV.YEAR,
     selectedSkuId: h.Si.TIER_2,
     planGroup: h.Y1,
     activeSubscription: M
-  }), y = null == P ? void 0 : null === (A = P.invoiceItems) || void 0 === A ? void 0 : null === (r = A.find(e => e.subscriptionPlanId === h.Xh.PREMIUM_YEAR_TIER_2)) || void 0 === r ? void 0 : null === (n = r.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === l.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
+  }), y = null == P ? void 0 : null === (N = P.invoiceItems) || void 0 === N ? void 0 : null === (r = N.find(e => e.subscriptionPlanId === h.Xh.PREMIUM_YEAR_TIER_2)) || void 0 === r ? void 0 : null === (n = r.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === l.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
   if (!D) return (0, i.jsx)(a.Spinner, {
     type: a.Spinner.Type.PULSING_ELLIPSIS,
     className: S.priceSpinner
   });
-  let U = u.Z.getForSkuAndInterval((0, c.Wz)(N), m),
+  let U = u.Z.getForSkuAndInterval((0, c.Wz)(A), m),
     b = null != y ? (0, c.aS)(h.Xh.PREMIUM_YEAR_TIER_2, !1, p, g) : null,
     G = null != U ? (0, c.gy)(U, g, !1, p) : null;
   return (0, i.jsx)(a.Heading, {

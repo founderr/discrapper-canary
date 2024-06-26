@@ -23,11 +23,11 @@ function I(e) {
     guildId: n,
     textClassName: I,
     tooltipDelay: T
-  } = e, h = (0, r.e7)([a.default], () => a.default.locale), f = (0, r.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), S = (0, r.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), A = (0, o.FI)(c.default.extractTimestamp(t), h), N = (0, o.FI)(null == S ? void 0 : S.joinedAt, h);
+  } = e, h = (0, r.e7)([a.default], () => a.default.locale), f = (0, r.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), S = (0, r.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), N = (0, o.FI)(c.default.extractTimestamp(t), h), A = (0, o.FI)(null == S ? void 0 : S.joinedAt, h);
   return null == f || null == S ? (0, i.jsx)(s.Text, {
     variant: "text-sm/normal",
     className: I,
-    children: A
+    children: N
   }) : (0, i.jsxs)("div", {
     className: E.memberSinceWrapper,
     children: [(0, i.jsxs)("div", {
@@ -46,7 +46,7 @@ function I(e) {
       }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
         className: I,
-        children: A
+        children: N
       })]
     }), (0, i.jsx)("div", {
       className: E.divider
@@ -63,7 +63,7 @@ function I(e) {
       }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
         className: I,
-        children: N
+        children: A
       })]
     })]
   })

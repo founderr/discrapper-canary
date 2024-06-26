@@ -20,9 +20,9 @@ var i = n(735250),
   h = n(981631),
   f = n(689938),
   S = n(214932),
-  A = n(331651);
+  N = n(331651);
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -150,7 +150,7 @@ class p extends r.Component {
                 children: f.Z.Messages.UPLOAD_AREA_FILENAME
               })
             }), (0, i.jsx)(a.TextInput, {
-              className: o()(S.channelTextAreaUpload, A.marginTop8),
+              className: o()(S.channelTextAreaUpload, N.marginTop8),
               value: this.state.filename,
               onChange: e => this.setState({
                 filename: e
@@ -165,7 +165,7 @@ class p extends r.Component {
                   children: f.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                 })
               }), (0, i.jsx)(a.TextInput, {
-                className: o()(S.channelTextAreaUpload, A.marginTop8),
+                className: o()(S.channelTextAreaUpload, N.marginTop8),
                 placeholder: f.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                 value: this.state.description,
                 onChange: e => this.setState({
@@ -176,7 +176,7 @@ class p extends r.Component {
                 }
               })]
             }) : null, !0 !== s && (0, i.jsx)(a.Checkbox, {
-              className: A.marginBottom20,
+              className: N.marginBottom20,
               value: l,
               onChange: (e, t) => this.setState({
                 hasSpoiler: t
@@ -213,16 +213,16 @@ class p extends r.Component {
   }
   constructor(e) {
     var t, n, i, r, s, o;
-    super(e), N(this, "cancelAll", () => {
+    super(e), A(this, "cancelAll", () => {
       l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose()
-    }), N(this, "cancel", () => {
+    }), A(this, "cancel", () => {
       this.props.onClose()
-    }), N(this, "handleTextChange", (e, t, n) => {
+    }), A(this, "handleTextChange", (e, t, n) => {
       this.setState({
         textValue: t,
         richValue: n
       })
-    }), N(this, "handleSubmit", () => {
+    }), A(this, "handleSubmit", () => {
       let {
         upload: e,
         onClose: t,

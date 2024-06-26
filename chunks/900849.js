@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Az: function() {
-    return N
+    return A
   },
   Eg: function() {
     return C
@@ -22,7 +22,7 @@ n.d(t, {
     return h
   },
   Zt: function() {
-    return A
+    return N
   },
   c6: function() {
     return R
@@ -149,7 +149,7 @@ function S(e) {
   }
 }
 
-function A(e) {
+function N(e) {
   let {
     loadId: t,
     gamesYouPlayGuilds: n,
@@ -168,7 +168,7 @@ function A(e) {
   })
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   E.default.track(I.rMx.GUILD_DISCOVERY_EXITED, {
     load_id: e,

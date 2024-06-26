@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return R
   },
   users: function() {
-    return A
+    return N
   }
 }), n(47120), n(789020), n(724458), n(51350), n(653041);
 var i = n(348327),
@@ -37,19 +37,19 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = {},
-  N = 0,
+let N = {},
+  A = 0,
   m = "47835198259242069";
 
 function O(e, t, n) {
   let i = e;
-  i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), A[e.id] = i;
+  i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), N[e.id] = i;
   let r = e !== i;
-  return r && N++, r
+  return r && A++, r
 }
 
 function p(e, t) {
-  return !r()(e.clan, t.clan) && (null == e.clan || null != t.clan) && (e.clan = (0, h.yi)(t.clan), A[e.id] = e, !0)
+  return !r()(e.clan, t.clan) && (null == e.clan || null != t.clan) && (e.clan = (0, h.yi)(t.clan), N[e.id] = e, !0)
 }
 
 function R(e) {
@@ -79,7 +79,7 @@ function g(e) {
 
 function C(e) {
   let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    i = A[e.id],
+    i = N[e.id],
     s = void 0 !== e.id && e.id === E.default.getId();
   if (null == i) void 0 !== (t = (i = new _.Z(e)).premiumType) && s && (i.premiumType = v((0, u.QI)(i), i.premiumType));
   else if (n) {
@@ -104,8 +104,8 @@ function C(e) {
       return t
     }(i, n), i = i.merge(n)
   }(0, u.jX)((0, u.QI)(i), t, i.premiumType);
-  let a = A[e.id] !== i;
-  return A[e.id] = i, a && N++, a
+  let a = N[e.id] !== i;
+  return N[e.id] = i, a && A++, a
 }
 
 function v(e, t) {
@@ -145,10 +145,10 @@ function M(e) {
     C(e)
   }), i.forEach(e => {
     e.members.forEach(t => {
-      let n = A[t.user.id];
+      let n = N[t.user.id];
       null != n && (O(n, e.id, t.avatar), p(n, t.user))
     })
-  }), null != A[E.default.getId()] && (A[m] = new _.Z({
+  }), null != N[E.default.getId()] && (N[m] = new _.Z({
     id: m,
     username: "Wumpus",
     discriminator: "0",
@@ -164,7 +164,7 @@ function P(e) {
   } = e;
   t.forEach(e => {
     e.members.forEach(t => {
-      let n = A[t.user.id];
+      let n = N[t.user.id];
       null != n && (O(n, e.id, t.avatar), p(n, t.user))
     })
   }), null == n || n.forEach(e => {
@@ -182,7 +182,7 @@ function y(e) {
 function U(e) {
   if (null != e.users)
     for (let t of e.users) {
-      if (!(t.id in A && y(t))) A[t.id] = new _.Z(t)
+      if (!(t.id in N && y(t))) N[t.id] = new _.Z(t)
     }
 }
 
@@ -276,7 +276,7 @@ function F(e) {
     } = e;
     if (null == t) return;
     C(t);
-    let r = A[t.id],
+    let r = N[t.id],
       s = null == i ? void 0 : i.avatar;
     null != r && null != s && O(r, n, s)
   })
@@ -303,8 +303,8 @@ function W(e) {
     message: t
   } = e;
   if (L(t, !0), null != t.flags && c.yE(t.flags, T.iLy.URGENT)) {
-    let e = A[E.default.getId()];
-    return null != e && (A[E.default.getId()] = e.set("flags", c.mB(e.flags, T.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
+    let e = N[E.default.getId()];
+    return null != e && (N[E.default.getId()] = e.set("flags", c.mB(e.flags, T.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
   }
   return !1
 }
@@ -335,7 +335,7 @@ function X(e) {
     updates: t
   } = e;
   return t.map(e => {
-    let t = A[e.user.id];
+    let t = N[e.user.id];
     if (null == t) return !1;
     let n = q.reduce((n, i) => {
       if (e.user.hasOwnProperty(i)) {
@@ -344,7 +344,7 @@ function X(e) {
       }
       return n
     }, !1);
-    return !!n && (A[t.id] = t, n)
+    return !!n && (N[t.id] = t, n)
   }).some(e => e)
 }
 
@@ -372,7 +372,7 @@ function ee(e) {
 
 function et(e) {
   let t = C(e.user),
-    n = A[e.user.id];
+    n = N[e.user.id];
   if (null == n) return t;
   let {
     avatar: i,
@@ -390,7 +390,7 @@ function en(e) {
       var n;
       let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
       if (null == t) continue;
-      let i = A[t.id];
+      let i = N[t.id];
       if (null == i) continue;
       p(i, t)
     } return !1
@@ -402,7 +402,7 @@ function ei(e) {
   } = e, n = !1;
   for (let e of t) n = e.members.reduce((t, n) => {
     let i = C(n.user),
-      r = A[n.user.id];
+      r = N[n.user.id];
     if (null == r) return i || t;
     let {
       avatar: s
@@ -414,14 +414,14 @@ function ei(e) {
 
 function er(e) {
   let t = !1;
-  for (let n of e.members) C(n.user) && (t = !0), null != A[n.user.id] && O(A[n.user.id], e.guildId, n.avatar) && (t = !0);
+  for (let n of e.members) C(n.user) && (t = !0), null != N[n.user.id] && O(N[n.user.id], e.guildId, n.avatar) && (t = !0);
   return t
 }
 
 function es(e) {
   var t;
   let n = !1;
-  for (let i of null !== (t = e.users) && void 0 !== t ? t : []) !Object.hasOwn(A, i.id) && (n = C(i) || n);
+  for (let i of null !== (t = e.users) && void 0 !== t ? t : []) !Object.hasOwn(N, i.id) && (n = C(i) || n);
   return n
 }
 
@@ -465,7 +465,7 @@ function el(e) {
       discriminator: s,
       bot: o
     });
-    let l = A[n];
+    let l = N[n];
     null != l && O(l, t.id, a)
   })
 }
@@ -497,7 +497,7 @@ function eE(e) {
     users: t
   } = e;
   t.forEach(e => {
-    null == A[e.id] && (A[e.id] = new _.Z(e))
+    null == N[e.id] && (N[e.id] = new _.Z(e))
   })
 }
 
@@ -544,14 +544,14 @@ function eS(e) {
   D((0, l.F)(t))
 }
 
-function eA(e) {
+function eN(e) {
   let {
     integration: t
   } = e;
   D((0, l.F)(t))
 }
 
-function eN(e) {
+function eA(e) {
   let {
     users: t,
     familyCenterTeenActivity: n
@@ -617,10 +617,10 @@ class eC extends I.Z {
   handleLoadCache(e) {
     let t = this.readSnapshot(eC.LATEST_SNAPSHOT_VERSION);
     if (null != t)
-      for (let e of t.users) A[e.id] = new _.Z(e);
+      for (let e of t.users) N[e.id] = new _.Z(e);
     if (null != e.users)
       for (let t of e.users) {
-        if (!(t.id in A && y(t))) A[t.id] = new _.Z(t)
+        if (!(t.id in N && y(t))) N[t.id] = new _.Z(t)
       }
     for (let t of [e.privateChannels, e.initialGuildChannels])
       for (let e of t) {
@@ -629,21 +629,21 @@ class eC extends I.Z {
       }
   }
   getUserStoreVersion() {
-    return N
-  }
-  getUser(e) {
-    if (null != e) return A[e]
-  }
-  getUsers() {
     return A
   }
+  getUser(e) {
+    if (null != e) return N[e]
+  }
+  getUsers() {
+    return N
+  }
   forEach(e) {
-    for (let t in A)
-      if (!1 === e(A[t])) break
+    for (let t in N)
+      if (!1 === e(N[t])) break
   }
   findByTag(e, t) {
-    for (let n in A) {
-      let i = A[n];
+    for (let n in N) {
+      let i = N[n];
       if (null != t && i.username === e && i.discriminator === t) return i;
       if (null == t && i.username === e && i.isPomelo()) return i
     }
@@ -651,14 +651,14 @@ class eC extends I.Z {
   filter(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = [];
-    for (let t in A) {
-      let i = A[t];
+    for (let t in N) {
+      let i = N[t];
       e(i) && n.push(i)
     }
     return t && n.sort((e, t) => e.username > t.username ? 1 : e.username < t.username ? -1 : 0), n
   }
   getCurrentUser() {
-    return A[E.default.getId()]
+    return N[E.default.getId()]
   }
   constructor() {
     super({
@@ -715,8 +715,8 @@ class eC extends I.Z {
       LOCAL_MESSAGES_LOADED: es,
       FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: ef,
       PRIVATE_CHANNEL_INTEGRATION_CREATE: eS,
-      PRIVATE_CHANNEL_INTEGRATION_UPDATE: eA,
-      FAMILY_CENTER_INITIAL_LOAD: eN,
+      PRIVATE_CHANNEL_INTEGRATION_UPDATE: eN,
+      FAMILY_CENTER_INITIAL_LOAD: eA,
       FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: em,
       FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: ep,
       FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eR,

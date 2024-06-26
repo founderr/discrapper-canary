@@ -18,8 +18,8 @@ var i, r, s = n(735250),
   h = n(196050),
   f = n(27268),
   S = n(259773),
-  A = n(80618),
-  N = n(181058),
+  N = n(80618),
+  A = n(181058),
   m = n(810090),
   O = n(626135),
   p = n(70956),
@@ -144,7 +144,7 @@ class k extends(i = o.Component) {
       onClick: r,
       tabIndex: o ? -1 : 0,
       "aria-label": D.Z.Messages.PLAY_AGAIN,
-      children: (0, s.jsx)(N.Z, {
+      children: (0, s.jsx)(A.Z, {
         className: M.controlIcon
       }, "replay")
     }) : (0, s.jsx)(d.Clickable, {
@@ -194,7 +194,7 @@ class k extends(i = o.Component) {
         ref: this.setDurationRef
       }), (0, s.jsx)("div", {
         className: P.flex,
-        children: (0, s.jsx)(A.Z, {
+        children: (0, s.jsx)(N.Z, {
           ref: this.setVolumeButtonRef,
           muted: r,
           value: I,
@@ -680,15 +680,15 @@ class Y extends(r = o.PureComponent) {
         muted: T,
         playing: h,
         fullscreen: S,
-        volume: A,
-        dragging: N
+        volume: N,
+        dragging: A
       }
     } = this, m = this.getWidth();
     return d || n || t === G.AUDIO ? (0, s.jsx)(k, {
       buffers: u,
       currentTime: _,
       duration: c,
-      volume: (0, R.P)(A, 1),
+      volume: (0, R.P)(N, 1),
       hide: t === G.VIDEO && E,
       muted: T,
       autoPlay: n,
@@ -703,7 +703,7 @@ class Y extends(r = o.PureComponent) {
       onControlsShow: l,
       onControlsHide: a,
       playing: h,
-      dragging: N,
+      dragging: A,
       type: t,
       ref: this.controlsRef,
       width: S ? window.screen.width : m,

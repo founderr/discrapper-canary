@@ -11,8 +11,8 @@ var s, o, a, l, u = n(512722),
   h = n(594190),
   f = n(444852),
   S = n(569545),
-  A = n(687516),
-  N = n(139656),
+  N = n(687516),
+  A = n(139656),
   m = n(358085),
   O = n(199902),
   p = n(314897),
@@ -60,7 +60,7 @@ function k() {
 }
 class V extends(s = E.ZP.Store) {
   getActiveStreamKey() {
-    return (0, N.Z)(g.Z) ? r : null
+    return (0, A.Z)(g.Z) ? r : null
   }
   getAllActiveStreamKeys() {
     return Object.keys(G)
@@ -69,7 +69,7 @@ class V extends(s = E.ZP.Store) {
     return G[e]
   }
   getStatsHistory(e, t, n) {
-    if (!(0, N.Z)(g.Z) || null == t) return null;
+    if (!(0, A.Z)(g.Z) || null == t) return null;
     if (n) {
       let n = O.Z.getActiveStreamForUser(t, e);
       if (null == n || 0 === O.Z.getViewerIds(n).length) return null
@@ -100,7 +100,7 @@ class V extends(s = E.ZP.Store) {
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, N.Z)(g.Z)) return L.IE4.UNKNOWN;
+    if (!(0, A.Z)(g.Z)) return L.IE4.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? G[e] : null;
     return null != t ? t.quality : L.IE4.UNKNOWN
@@ -211,7 +211,7 @@ l = "StreamRTCConnectionStore", (a = "displayName") in(o = V) ? Object.definePro
       var l, u, c;
       null == y[t] && (P[t] = null);
       let e = (0, S.my)(t);
-      null == P[t] && null == U[t] && (P[t] = (0, A.L2)(e, C.Z));
+      null == P[t] && null == U[t] && (P[t] = (0, N.L2)(e, C.Z));
       let r = R.Z.getChannel(e.channelId),
         d = null != r && r.isBroadcastChannel(),
         E = new f.A({

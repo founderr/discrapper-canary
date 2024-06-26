@@ -30,12 +30,12 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = Object.freeze([]),
-  N = {};
+let N = Object.freeze([]),
+  A = {};
 
 function m(e) {
-  let t = N[e];
-  return null == t && (t = new C(e), N[e] = t), t
+  let t = A[e];
+  return null == t && (t = new C(e), A[e] = t), t
 }
 
 function O(e, t) {
@@ -135,7 +135,7 @@ class C {
   getVoiceStatesForChannel(e) {
     this.processPending();
     let t = this._voiceStates.values(e);
-    return 0 === t.length ? A : t
+    return 0 === t.length ? N : t
   }
   countVoiceStatesForChannel(e) {
     return this.processPending(), this._voiceStates.size(e)
@@ -167,11 +167,11 @@ class C {
 }
 
 function v() {
-  return s().reduce(N, (e, t) => t.updateUsers() || e, !1)
+  return s().reduce(A, (e, t) => t.updateUsers() || e, !1)
 }
 
 function L() {
-  N = {};
+  A = {};
   let e = I.Z.getAllVoiceStates();
   T.default.keys(e).forEach(t => {
     Object.keys(e[t]).forEach(e => {
@@ -187,7 +187,7 @@ class D extends(i = o.ZP.Store) {
     return m(null != e ? e : f.ME).getVoiceStates()
   }
   getAllVoiceStates() {
-    return N
+    return A
   }
   getVoiceStatesForChannel(e) {
     let t = e.getGuildId(),
@@ -209,7 +209,7 @@ class D extends(i = o.ZP.Store) {
 }
 S(D, "displayName", "SortedVoiceStateStore"), t.ZP = new D(l.Z, {
   CONNECTION_OPEN: function() {
-    N = {}
+    A = {}
   },
   OVERLAY_INITIALIZE: function() {
     L()
@@ -243,18 +243,18 @@ S(D, "displayName", "SortedVoiceStateStore"), t.ZP = new D(l.Z, {
     let {
       guild: t
     } = e;
-    delete N[t.id]
+    delete A[t.id]
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete N[t.id]
+    delete A[t.id]
   },
   PASSIVE_UPDATE_V2: function(e) {
     var t, n;
     let i = !1,
-      r = new Set(null === (t = N[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
+      r = new Set(null === (t = A[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
       s = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId)),
       o = new Set(e.removedVoiceStateUsers);
     for (let t of new Set([...r, ...s])) i = m(e.guildId).updateVoiceState(t) || i;

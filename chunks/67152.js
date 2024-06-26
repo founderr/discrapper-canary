@@ -22,8 +22,8 @@ t.Z = r.memo(function(e) {
     messageId: f,
     roleId: S
   } = (0, a.KZ)(), {
-    analyticsLocations: A
-  } = (0, o.ZP)(), [N, m] = r.useState(!1);
+    analyticsLocations: N
+  } = (0, o.ZP)(), [A, m] = r.useState(!1);
   return I || null == E || "" === E ? null : (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
       ref: e => {
@@ -35,7 +35,7 @@ t.Z = r.memo(function(e) {
         setLineClamp: !1,
         textColor: "header-primary"
       })
-    }), N && (0, i.jsx)(s.Button, {
+    }), A && (0, i.jsx)(s.Button, {
       look: s.Button.Looks.BLANK,
       size: s.Button.Sizes.NONE,
       className: d.viewFullBio,
@@ -50,7 +50,7 @@ t.Z = r.memo(function(e) {
           analyticsLocation: {
             section: _.jXE.BITE_SIZE_PROFILE_POPOUT
           },
-          sourceAnalyticsLocations: A
+          sourceAnalyticsLocations: N
         })
       },
       children: (0, i.jsx)(s.Text, {

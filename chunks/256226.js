@@ -16,7 +16,7 @@ var i = n(735250),
   f = n(689938),
   S = n(491136);
 t.Z = r.forwardRef(function(e, t) {
-  var s, A, N;
+  var s, N, A;
   let m;
   let {
     canRemove: O,
@@ -44,7 +44,7 @@ t.Z = r.forwardRef(function(e, t) {
         label: f.Z.Messages.COPY_ID_ROLE
       })
     })
-  }, [R.id]), G = (0, c.useToken)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (A = R.colorString) && void 0 !== A ? A : G, x = null !== (N = (0, l.wK)(w, .6)) && void 0 !== N ? N : void 0, B = _.Z.unsafe_rawColors.WHITE_500.css, k = (0, l._i)(w);
+  }, [R.id]), G = (0, c.useToken)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (N = R.colorString) && void 0 !== N ? N : G, x = null !== (A = (0, l.wK)(w, .6)) && void 0 !== A ? A : void 0, B = _.Z.unsafe_rawColors.WHITE_500.css, k = (0, l._i)(w);
   null != k && .3 > (0, l.Bd)(k) && (B = _.Z.unsafe_rawColors.PRIMARY_630.css), m = U ? (0, i.jsx)(I.Z, {
     className: S.roleFlowerStar,
     iconClassName: O ? S.roleVerifiedIcon : void 0,

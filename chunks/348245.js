@@ -16,8 +16,8 @@ var r = n(266067),
   h = n(131704),
   f = n(433355),
   S = n(592125),
-  A = n(430824),
-  N = n(306680),
+  N = n(430824),
+  A = n(306680),
   m = n(944486),
   O = n(914010),
   p = n(70956),
@@ -72,7 +72,7 @@ function P(e) {
     focusTargetId: null
   }), d.Z.commit(f));
   let m = s;
-  if (!a || I.Z.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : T && M.log("Skipping fetch because no other conditions matched") : null == t || null != A.Z.getGuild(t) ? m = !0 : T && M.log("Skipping fetch we are connected and have loaded messages") : m = !0, (0, E.Z)(n) && N.ZP.hasUnread(n) && (m = !0), m) {
+  if (!a || I.Z.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : T && M.log("Skipping fetch because no other conditions matched") : null == t || null != N.Z.getGuild(t) ? m = !0 : T && M.log("Skipping fetch we are connected and have loaded messages") : m = !0, (0, E.Z)(n) && A.ZP.hasUnread(n) && (m = !0), m) {
     if (d.Z.commit(f.mutate({
         loadingMore: !0
       })), null != r) u.Z.jumpToMessage({
@@ -84,7 +84,7 @@ function P(e) {
       jumpType: l
     });
     else if ((null == h ? void 0 : h.isThread()) && function(e) {
-        if (N.ZP.hasOpenedThread(e)) return !1;
+        if (A.ZP.hasOpenedThread(e)) return !1;
         if (null == i) {
           var t;
           i = null !== (t = o.K.get(U, {})) && void 0 !== t ? t : {}
@@ -104,8 +104,8 @@ function P(e) {
       isPreload: a,
       skipLocalFetch: c
     });
-    else if ((null == h ? void 0 : h.isThread()) && N.ZP.hasTrackedUnread(h.id) && !f.ready) {
-      let e = N.ZP.getTrackedAckMessageId(h.id);
+    else if ((null == h ? void 0 : h.isThread()) && A.ZP.hasTrackedUnread(h.id) && !f.ready) {
+      let e = A.ZP.getTrackedAckMessageId(h.id);
       M.log("Jumping to most recent message in thread ".concat(h.id, " - ").concat(e)), u.Z.fetchMessages({
         channelId: n,
         limit: C.AQB,

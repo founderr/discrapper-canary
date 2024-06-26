@@ -23,14 +23,14 @@ var i = n(735250),
   h = n(589530),
   f = n(981631),
   S = n(689938),
-  A = n(626729);
+  N = n(626729);
 
-function N(e) {
+function A(e) {
   let {
     onClose: t
   } = e, n = r.useRef(null);
   return (0, i.jsx)("div", {
-    className: A.mobileCloseWrapper,
+    className: N.mobileCloseWrapper,
     ref: n,
     children: (0, i.jsx)(l.FocusRingScope, {
       containerRef: n,
@@ -57,19 +57,19 @@ let m = e => {
     children: (0, i.jsx)(E.Z, {
       type: E.Z.Types.ATTACHMENT,
       reason: _.wk.EXPLICIT_CONTENT,
-      className: A.obscureContainer,
+      className: N.obscureContainer,
       obscured: !0,
       isSingleMosaicItem: !0,
       obscurityControlClassName: o()({
-        [A.controlsOffset]: n && l
+        [N.controlsOffset]: n && l
       }),
       onToggleObscurity: e => {
         e.stopPropagation(), e.nativeEvent.stopPropagation(), u(e => !e)
       },
       children: e => (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)("div", {
-          className: o()(A.obscureWrapper, {
-            [A.obscure]: e
+          className: o()(N.obscureWrapper, {
+            [N.obscure]: e
           }),
           children: t(e)
         })
@@ -89,13 +89,13 @@ function O(e) {
     href: t,
     target: "_blank",
     rel: "noreferrer noopener",
-    className: A.downloadLink,
+    className: N.downloadLink,
     children: S.Z.Messages.OPEN_IN_BROWSER
   }), o = r({
-    className: A.forward
+    className: N.forward
   });
   return null == s && null == o ? null : (0, i.jsxs)("div", {
-    className: A.optionsContainer,
+    className: N.optionsContainer,
     children: [s, o]
   })
 }
@@ -132,8 +132,8 @@ function p(e) {
     e.stopPropagation(), e.preventDefault()
   } : L.onContextMenu;
   return (0, i.jsxs)("div", {
-    className: A.wrapper,
-    children: [P ? (0, i.jsx)(N, {
+    className: N.wrapper,
+    children: [P ? (0, i.jsx)(A, {
       onClose: g
     }) : null, (0, i.jsx)(m, {
       isObscured: v,
@@ -179,8 +179,8 @@ function R(e) {
     e.stopPropagation(), e.preventDefault()
   } : E.onContextMenu;
   return (0, i.jsxs)("div", {
-    className: o()(A.wrapper, A.videoWrapper),
-    children: [S ? (0, i.jsx)(N, {
+    className: o()(N.wrapper, N.videoWrapper),
+    children: [S ? (0, i.jsx)(A, {
       onClose: s
     }) : null, (0, i.jsx)(m, {
       hasMediaControls: !0,

@@ -15,8 +15,8 @@ var i, r = n(392711),
   h = n(973542),
   f = n(889564),
   S = n(687476),
-  A = n(978519),
-  N = n(706454),
+  N = n(978519),
+  A = n(706454),
   m = n(581883),
   O = n(271383),
   p = n(93093),
@@ -311,7 +311,7 @@ function ea(e, t) {
   if (es(e), en.clear(e), null == t) return;
   let n = C.default.getCurrentUser();
   if (null == n) return;
-  let i = (0, A.r)(e);
+  let i = (0, N.r)(e);
   q[e] = new Y(e, n.id, t, i)
 }
 
@@ -353,7 +353,7 @@ function e_(e) {
 }
 class ec extends(i = u.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(d.Z, p.Z, O.ZP, R.Z, N.default, S.Z, G.Z, C.default), null != e && (F = e), this.syncWith([m.Z], el)
+    this.waitFor(d.Z, p.Z, O.ZP, R.Z, A.default, S.Z, G.Z, C.default), null != e && (F = e), this.syncWith([m.Z], el)
   }
   getState() {
     return F
@@ -552,7 +552,7 @@ Z(ec, "displayName", "EmojiStore"), Z(ec, "persistKey", "EmojiStoreV2"), t.Z = n
       },
       wasSaved: n
     } = e;
-    if (T.Z.setEmojiLocale(N.default.locale), t !== V.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (T.Z.setEmojiLocale(A.default.locale), t !== V.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     F.pendingUsages = []
   },
   GUILD_ROLE_CREATE: e_,

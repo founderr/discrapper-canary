@@ -12,8 +12,8 @@ var i, r, s, o, a = n(512722),
   h = n(569545),
   f = n(199902),
   S = n(314897),
-  A = n(523746),
-  N = n(592125),
+  N = n(523746),
+  A = n(592125),
   m = n(944486),
   O = n(606304),
   p = n(594174),
@@ -83,7 +83,7 @@ function Y(e) {
 
 function j(e) {
   var t;
-  let n = N.Z.getChannel(e),
+  let n = A.Z.getChannel(e),
     i = (null == n ? void 0 : n.isDM()) ? v.dF.AUTO : v.dF.NONE;
   return null !== (t = U[e]) && void 0 !== t ? t : [i, v.dF.NONE]
 }
@@ -186,11 +186,11 @@ function ei(e) {
 
 function er(e) {
   var t;
-  return !!(null === (t = N.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
+  return !!(null === (t = A.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
 }
 class es extends(i = c.ZP.Store) {
   initialize() {
-    this.waitFor(f.Z, S.default, A.Z, N.Z, E.ZP, m.Z, O.Z, p.default, R.Z, g.Z), this.syncWith([E.ZP], J), this.syncWith([T.Z], Q)
+    this.waitFor(f.Z, S.default, N.Z, A.Z, E.ZP, m.Z, O.Z, p.default, R.Z, g.Z), this.syncWith([E.ZP], J), this.syncWith([T.Z], Q)
   }
   getParticipantsVersion(e) {
     return H(e).version
@@ -257,7 +257,7 @@ class es extends(i = c.ZP.Store) {
     var t, n;
     let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.IlC.APP;
     if (__OVERLAY__) return L.AEg.NORMAL;
-    let r = N.Z.getChannel(e),
+    let r = A.Z.getChannel(e),
       s = er(e) || (null == r ? void 0 : r.isBroadcastChannel());
     return null !== (n = null === (t = w[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : s ? L.AEg.NO_CHAT : L.AEg.NORMAL
   }
@@ -297,7 +297,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
     let {
       channelId: t,
       messageId: n
-    } = e, i = Q(), r = N.Z.getChannel(t);
+    } = e, i = Q(), r = A.Z.getChannel(t);
     return null == t || null == n || (null == r ? void 0 : r.type) !== L.d4z.GUILD_VOICE && (null == r ? void 0 : r.type) !== L.d4z.GUILD_STAGE_VOICE || k[t] ? i : (k[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: Q,
@@ -469,7 +469,7 @@ o = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       guild: t
     } = e, n = [];
     if (_().forEach(P, e => {
-        let i = N.Z.getChannel(e);
+        let i = A.Z.getChannel(e);
         (null == i || i.getGuildId() === t.id) && n.push(e)
       }), 0 === n.length) return !1;
     _().forEach(n, e => X(e))

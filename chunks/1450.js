@@ -15,8 +15,8 @@ var i = n(735250),
   h = n(430824),
   f = n(267642),
   S = n(981631),
-  A = n(30513),
-  N = n(689938),
+  N = n(30513),
+  A = n(689938),
   m = n(678976);
 t.Z = e => {
   let {
@@ -50,7 +50,7 @@ t.Z = e => {
       color: "interactive-normal",
       className: m.body,
       variant: "text-sm/normal",
-      children: N.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
+      children: A.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
         count: (0, f.A3)(S.Eu4.TIER_1)
       })
     }), (0, i.jsx)(l.Button, {
@@ -61,10 +61,10 @@ t.Z = e => {
           analyticsLocations: g,
           analyticsSourceLocation: R,
           guild: C,
-          perks: (0, A.hC)()
+          perks: (0, N.hC)()
         })
       },
-      children: N.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
+      children: A.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
     })]
   }) : (0, i.jsxs)("div", {
     className: o()(m.upsell, t),
@@ -78,14 +78,14 @@ t.Z = e => {
       color: "interactive-normal",
       className: m.body,
       variant: "text-sm/normal",
-      children: N.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
+      children: A.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
     }), (0, i.jsx)(l.Button, {
       look: l.Button.Looks.LINK,
       color: l.Button.Colors.LINK,
       onClick: () => {
         (0, d._Q)(), I.Z.open(n, S.pNK.STICKERS, R)
       },
-      children: N.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
+      children: A.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
     })]
   }) : null
 }

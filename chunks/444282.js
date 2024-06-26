@@ -25,13 +25,13 @@ function S(e) {
     channelId: t,
     option: n,
     keyboardModeEnabled: s
-  } = e, S = r.useRef(null), [A, N] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
-    N(!0)
+  } = e, S = r.useRef(null), [N, A] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
+    A(!0)
   }, []), R = r.useCallback(() => {
-    N(!1)
+    A(!1)
   }, []), g = r.useCallback(e => {
     var i;
-    N(!1);
+    A(!1);
     let r = {
       id: n.name,
       file: null === (i = e.dataTransfer) || void 0 === i ? void 0 : i.files[0],
@@ -78,13 +78,13 @@ function S(e) {
       }
     },
     className: o()(h.emptyOption, {
-      [h.emptyOptionActive]: A
+      [h.emptyOptionActive]: N
     }),
     draftType: c.d.SlashCommand,
     ref: O,
     children: [(0, i.jsx)("span", {
       className: o()(h.optionName, {
-        [h.optionNameActive]: A
+        [h.optionNameActive]: N
       }),
       children: n.name
     }), (0, i.jsx)(a.Clickable, {

@@ -16,10 +16,10 @@ n.d(t, {
     return C
   },
   ef: function() {
-    return N
+    return A
   },
   s6: function() {
-    return A
+    return N
   },
   sh: function() {
     return D
@@ -48,7 +48,7 @@ function S(e, t) {
     remote_platform: null === (i = _.Z.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
 }
-async function A() {
+async function N() {
   let e = I.Z.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
   o.Z.dispatch({
@@ -70,7 +70,7 @@ async function A() {
   }
 }
 
-function N(e) {
+function A(e) {
   o.Z.dispatch({
     type: "REMOTE_SESSION_CONNECT",
     sessionId: e
@@ -100,7 +100,7 @@ function O(e) {
     payload: {
       type: "DISCONNECT"
     }
-  }), S("DISCONNECT", e), A()
+  }), S("DISCONNECT", e), N()
 }
 
 function p(e, t, n, i) {
@@ -226,7 +226,7 @@ async function L(e, t, n) {
   })
 }
 async function D(e, t, n) {
-  await E.Z.maybeShowPTTAlert(e), await A();
+  await E.Z.maybeShowPTTAlert(e), await N();
   let i = await R();
   await v(e, t, n, i), (0, T.Z)(n.id, e)
 }

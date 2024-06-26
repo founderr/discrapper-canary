@@ -20,7 +20,7 @@ var i, r = n(735250),
   f = n(506071),
   S = n(149203);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends(i = s.PureComponent) {
+class A extends(i = s.PureComponent) {
   componentWillUnmount() {
     var e;
     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -101,14 +101,14 @@ class N extends(i = s.PureComponent) {
     }))
   }
   constructor(...e) {
-    super(...e), A(this, "state", {
+    super(...e), N(this, "state", {
       hover: !1
-    }), A(this, "key", void 0), A(this, "cancelLoadImage", void 0), A(this, "onError", () => {
+    }), N(this, "key", void 0), N(this, "cancelLoadImage", void 0), N(this, "onError", () => {
       let e = this.getSrc();
       null != e && (this.cancelLoadImage = (0, c.po)(e, e => {
         !e && (this.key = Date.now(), this.forceUpdate())
       }))
-    }), A(this, "onMouseEnter", e => {
+    }), N(this, "onMouseEnter", e => {
       this.setState({
         hover: !0
       });
@@ -116,7 +116,7 @@ class N extends(i = s.PureComponent) {
         onMouseEnter: t
       } = this.props;
       null != t && t(e)
-    }), A(this, "onMouseLeave", e => {
+    }), N(this, "onMouseLeave", e => {
       this.setState({
         hover: !1
       });
@@ -127,7 +127,7 @@ class N extends(i = s.PureComponent) {
     })
   }
 }
-A(N, "defaultProps", {
+N(A, "defaultProps", {
   isInteracting: !1
 });
 let m = function(e) {
@@ -205,7 +205,7 @@ let m = function(e) {
       })
     }
   }
-}(N);
+}(A);
 
 function O(e) {
   let t = d.Yk.useSetting(),

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   B1: function() {
-    return N
+    return A
   },
   DR: function() {
     return d
@@ -13,7 +13,7 @@ n.d(t, {
     return m
   },
   fK: function() {
-    return A
+    return N
   },
   jr: function() {
     return S
@@ -127,7 +127,7 @@ let c = e => {
         error: t
       }), new o.Hx(t)
     }
-  }, A = async e => {
+  }, N = async e => {
     r.Z.dispatch({
       type: "COLLECTIBLES_CLAIM",
       skuId: e
@@ -152,7 +152,7 @@ let c = e => {
         error: t
       }), new o.Hx(t)
     }
-  }, N = async (e, t) => {
+  }, A = async (e, t) => {
     try {
       return (await i.tn.get({
         url: _.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,

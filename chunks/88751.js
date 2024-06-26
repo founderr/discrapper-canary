@@ -10,8 +10,8 @@ var i, r, s, o, a, l, u = n(392711),
   h = n(430824),
   f = n(594174),
   S = n(979651),
-  A = n(700785),
-  N = n(146085),
+  N = n(700785),
+  A = n(146085),
   m = n(590415);
 (s = i || (i = {})).SPEAKER = "speaker", s.MODERATOR = "moderator";
 let O = {},
@@ -35,8 +35,8 @@ function R(e, t) {
         let n = S.Z.getVoiceStateForChannel(t, e);
         return (0, m.gf)(n) === m.xO.ON_STAGE
       }(e, t),
-      moderator: s ? (n = e, i = l, r = o, A.BT({
-        permission: N.yP,
+      moderator: s ? (n = e, i = l, r = o, N.BT({
+        permission: A.yP,
         user: n,
         context: i,
         overwrites: r.permissionOverwrites,

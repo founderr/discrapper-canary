@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(272510),
   f = n(171368),
   S = n(215633),
-  A = n(23293),
-  N = n(777887),
+  N = n(23293),
+  A = n(777887),
   m = n(228168);
 
 function O(e) {
@@ -77,13 +77,13 @@ function O(e) {
               profileType: m.y0.BITE_SIZE,
               guildId: O
             })
-          }), (0, i.jsx)(A.Z, {
+          }), (0, i.jsx)(N.Z, {
             user: t,
             displayProfile: P,
             guildId: O,
             channelId: p,
             onOpenProfile: L ? void 0 : w
-          }), (0, i.jsx)(N.Z, {
+          }), (0, i.jsx)(A.Z, {
             user: t,
             currentUser: n,
             displayProfile: P,

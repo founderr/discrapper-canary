@@ -32,7 +32,7 @@ function S(e) {
   return t ? n.sort((e, t) => c.default.compare(e.sound.soundId, t.sound.soundId)) : n
 }
 
-function A(e) {
+function N(e) {
   let {
     sections: t,
     guildIds: n,
@@ -60,7 +60,7 @@ function A(e) {
   })
 }
 
-function N(e, t) {
+function A(e, t) {
   var n;
   let i = null !== (n = t.get(f.X8)) && void 0 !== n ? n : f.Hy;
   e.push({
@@ -99,24 +99,24 @@ function m(e) {
   }(), P = (0, r.Wu)([E.Z], () => E.Z.recentlyHeardSoundIds);
   return i.useMemo(() => {
     let e = [];
-    return n ? (N(e, f), {
+    return n ? (A(e, f), {
       categories: e,
       isFetching: O
-    }) : (A({
+    }) : (N({
       sections: e,
       guildIds: p,
       allSounds: f,
       potentialSoundIdsForSection: Array.from(m),
       sectionType: T.bg.FAVORITES,
       sortById: !0
-    }), L && A({
+    }), L && N({
       sections: e,
       guildIds: p,
       allSounds: f,
       potentialSoundIdsForSection: P,
       sectionType: T.bg.RECENTLY_HEARD,
       sortById: !1
-    }), D && A({
+    }), D && N({
       sections: e,
       guildIds: p,
       allSounds: f,
@@ -142,7 +142,7 @@ function m(e) {
         key: t.id,
         items: a
       })
-    }(e, C, v, f, t), !g && N(e, f), ! function(e, t, n, i) {
+    }(e, C, v, f, t), !g && A(e, f), ! function(e, t, n, i) {
       for (let s of t) {
         var r;
         if (s.id === n) continue;
@@ -156,7 +156,7 @@ function m(e) {
           items: t
         })
       }
-    }(e, R, null == C ? void 0 : C.id, f), g && N(e, f), {
+    }(e, R, null == C ? void 0 : C.id, f), g && A(e, f), {
       categories: e,
       isFetching: O
     })

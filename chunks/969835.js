@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(502762),
   f = n(544989),
   S = n(481932),
-  A = n(195387),
-  N = n(272510),
+  N = n(195387),
+  A = n(272510),
   m = n(171368),
   O = n(958120),
   p = n(215633),
@@ -88,7 +88,7 @@ function v(e) {
           profileType: g.y0.BITE_SIZE,
           children: [(0, i.jsxs)(f.Z, {
             profileType: g.y0.BITE_SIZE,
-            children: [(0, i.jsx)(A.Z, {
+            children: [(0, i.jsx)(N.Z, {
               user: t,
               guildId: v,
               channelId: L,
@@ -97,7 +97,7 @@ function v(e) {
               profileType: g.y0.BITE_SIZE,
               user: t,
               acceptFriendRequestColor: G ? o.tokens.colors.BUTTON_OUTLINE_POSITIVE_BORDER : null
-            }), (0, i.jsx)(N.Z, {
+            }), (0, i.jsx)(A.Z, {
               user: t,
               profileType: g.y0.BITE_SIZE,
               guildId: v,

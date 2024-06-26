@@ -27,8 +27,8 @@ function c(e) {
       onCancel: h,
       onClose: f,
       onCloseCallback: S,
-      bodyClassName: A,
-      transitionState: N,
+      bodyClassName: N,
+      transitionState: A,
       loading: m = !1,
       confirmButtonColor: O = a.zx.Colors.RED,
       focusCancel: p = !1
@@ -65,7 +65,7 @@ function c(e) {
     children: d
   })), (0, i.jsxs)(u.Y0, {
     className: I,
-    transitionState: N,
+    transitionState: A,
     children: [null != s ? (0, i.jsx)(u.xB, {
       separator: !1,
       children: (0, i.jsx)(l.X, {
@@ -73,7 +73,7 @@ function c(e) {
         children: s
       })
     }) : null, (0, i.jsx)(u.hz, {
-      className: o()(_.content, A),
+      className: o()(_.content, N),
       children: c
     }), (0, i.jsxs)(u.mz, {
       children: [n, t]

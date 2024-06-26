@@ -12,9 +12,9 @@ var i, r, s, o, a = n(442837),
 let h = new Map,
   f = null,
   S = null,
-  A = null;
+  N = null;
 
-function N(e, t) {
+function A(e, t) {
   let n = h.get(e);
   if (null == n) return !1;
   let i = n.delete(t);
@@ -45,7 +45,7 @@ function p(e) {
     user: t,
     sessionId: n
   } = e;
-  f = t.id, S = n, A = null
+  f = t.id, S = n, N = null
 }
 class R extends(i = a.ZP.Store) {
   initialize() {
@@ -145,8 +145,8 @@ o = "SpeakingStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s,
         userId: n,
         channelId: i,
         sessionId: r
-      } = t, s = !1, o = A;
-      return n === f && r === S && (A = null != i ? i : null), o !== A && (s = h.delete(T.Yn.DEFAULT) || s), null == i ? s = n === f && r === S ? h.delete(T.Yn.DEFAULT) || s : N(T.Yn.DEFAULT, n) || s : n === f && r !== S ? s = h.delete(T.Yn.DEFAULT) || s : n !== f && i !== d.Z.getChannelId() && (s = N(T.Yn.DEFAULT, n) || s), s || e
+      } = t, s = !1, o = N;
+      return n === f && r === S && (N = null != i ? i : null), o !== N && (s = h.delete(T.Yn.DEFAULT) || s), null == i ? s = n === f && r === S ? h.delete(T.Yn.DEFAULT) || s : A(T.Yn.DEFAULT, n) || s : n === f && r !== S ? s = h.delete(T.Yn.DEFAULT) || s : n !== f && i !== d.Z.getChannelId() && (s = A(T.Yn.DEFAULT, n) || s), s || e
     }, !1)
   }
 })

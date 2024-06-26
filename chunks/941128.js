@@ -8,8 +8,8 @@ var i, r, s, o, a, l, u, _, c = n(392711),
   h = n(51025),
   f = n(594190),
   S = n(314897),
-  A = n(173747),
-  N = n(780570),
+  N = n(173747),
+  A = n(780570),
   m = n(830168),
   O = n(358085),
   p = n(417363),
@@ -47,7 +47,7 @@ function B() {
     } = e, {
       applicationId: s,
       branchId: o
-    } = (0, N.CP)(i);
+    } = (0, A.CP)(i);
     if (t = s, n = o, (null == P || P.applicationId !== t || P.branchId !== n) && (null == y || y.applicationId !== t || y.branchId !== n)) {
       let e = S.default.getToken(),
         t = S.default.getId();
@@ -58,12 +58,12 @@ function B() {
 }
 
 function k(e, t) {
-  let n = (0, N.Tu)(e, t);
+  let n = (0, A.Tu)(e, t);
   return L.findIndex(e => e.comboId === n)
 }
 
 function V(e, t, n, i) {
-  let r = (0, N.Tu)(e, t),
+  let r = (0, A.Tu)(e, t),
     s = {
       comboId: r,
       action: i
@@ -74,7 +74,7 @@ function V(e, t, n, i) {
 }
 
 function Z(e, t) {
-  let n = (0, N.Tu)(e, t),
+  let n = (0, A.Tu)(e, t),
     i = D.indexOf(n); - 1 !== i && D.splice(i, 1);
   let r = k(e, t); - 1 !== r && (L.splice(r, 1), x()), B()
 }
@@ -91,7 +91,7 @@ function F(e) {
   let {
     applicationId: t,
     branchId: n
-  } = e, i = (0, N.Tu)(t, n), r = D.indexOf(i); - 1 !== r && D.splice(r, 1)
+  } = e, i = (0, A.Tu)(t, n), r = D.indexOf(i); - 1 !== r && D.splice(r, 1)
 }
 
 function Y() {
@@ -124,11 +124,11 @@ class W extends(s = E.ZP.Store) {
       let {
         comboId: t
       } = e;
-      return (0, N.CP)(t)
+      return (0, A.CP)(t)
     })
   }
   get finishedItems() {
-    return D.map(N.CP)
+    return D.map(A.CP)
   }
   get paused() {
     return M
@@ -151,7 +151,7 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
       applicationId: t,
       branchId: n
     } = e;
-    b.set((0, N.Tu)(t, n), "Install"), V(t, n, !1, "Patch")
+    b.set((0, A.Tu)(t, n), "Install"), V(t, n, !1, "Patch")
   },
   DISPATCH_APPLICATION_UPDATE: function(e) {
     let {
@@ -170,7 +170,7 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
       applicationId: t,
       branchId: n
     } = e;
-    b.set((0, N.Tu)(t, n), "Repair"), V(t, n, !1, "Repair")
+    b.set((0, A.Tu)(t, n), "Repair"), V(t, n, !1, "Repair")
   },
   DISPATCH_APPLICATION_MOVE_UP: function(e) {
     let {
@@ -195,7 +195,7 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
       } = e, {
         applicationId: n,
         branchId: r
-      } = (0, N.CP)(t), s = p.Z.getState(n, r), o = A.Z.getTargetBuildId(n, r), a = A.Z.getTargetManifests(n, r);
+      } = (0, A.CP)(t), s = p.Z.getState(n, r), o = N.Z.getTargetBuildId(n, r), a = N.Z.getTargetManifests(n, r);
       if (null != s && s.type === R.vxO.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === o && d().isEqual(s.manifestIds, s.targetManifestIds) && d().isEqual(s.manifestIds, a)) {
         if (D.push(t), b.has(t)) {
           switch (b.get(t)) {

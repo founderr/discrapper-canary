@@ -7,7 +7,7 @@ n.d(t, {
     return S
   },
   MV: function() {
-    return A
+    return N
   },
   b_: function() {
     return h
@@ -116,7 +116,7 @@ async function S() {
     f(e)
   }
 }
-async function A() {
+async function N() {
   let e = d.Z.getBroadcastsToValidateChannels().filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== e.length) try {
     let t = await i.tn.get({

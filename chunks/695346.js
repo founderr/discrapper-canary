@@ -28,7 +28,7 @@ n.d(t, {
     return R
   },
   L1: function() {
-    return eA
+    return eN
   },
   MI: function() {
     return ea
@@ -49,7 +49,7 @@ n.d(t, {
     return P
   },
   QK: function() {
-    return eN
+    return eA
   },
   QZ: function() {
     return S
@@ -136,7 +136,7 @@ n.d(t, {
     return T
   },
   fv: function() {
-    return A
+    return N
   },
   gw: function() {
     return ey
@@ -262,11 +262,11 @@ let S = (0, a.Zc)("notifications", "quietMode", e => {
   }, e => s.D5.create({
     value: !!e
   })),
-  A = (0, a.Zc)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
-  N = [],
-  m = (0, a.Zc)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : N, e => e),
-  O = (0, a.Zc)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : N, e => e),
-  p = (0, a.Zc)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : N, e => e),
+  N = (0, a.Zc)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
+  A = [],
+  m = (0, a.Zc)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : A, e => e),
+  O = (0, a.Zc)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : A, e => e),
+  p = (0, a.Zc)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : A, e => e),
   R = (0, a.Zc)("textAndImages", "viewImageDescriptions", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
@@ -506,7 +506,7 @@ let ef = new Set([o.Z.ALL, o.Z.UNREADS, o.Z.NONE]);
   value: e
 }));
 let eS = (0, a.KM)((0, a.Zc)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
-  eA = (0, a.Zc)("appearance", "clientThemeSettings", e => {
+  eN = (0, a.Zc)("appearance", "clientThemeSettings", e => {
     var t;
     return {
       backgroundGradientPresetId: null == e ? void 0 : null === (t = e.backgroundGradientPresetId) || void 0 === t ? void 0 : t.value
@@ -516,7 +516,7 @@ let eS = (0, a.KM)((0, a.Zc)("appearance", "developerMode", e => null != e && e,
       value: e.backgroundGradientPresetId
     }) : void 0
   })),
-  eN = (0, a.R2)((0, a.KM)((0, a.Zc)("textAndImages", "gifAutoPlay", e => {
+  eA = (0, a.R2)((0, a.KM)((0, a.Zc)("textAndImages", "gifAutoPlay", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => s.D5.create({

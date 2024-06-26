@@ -39,7 +39,7 @@ function E(e, t, n) {
       }, e)
     }
   }, [h, t, I, S, n]);
-  let A = i.useCallback((e, n) => {
+  let N = i.useCallback((e, n) => {
     null != h && (0, _.EW)(h, {
       dismissAction: e,
       groupName: t,
@@ -47,5 +47,5 @@ function E(e, t, n) {
       forceTrack: n
     })
   }, [h, t, I]);
-  return [f && null != h ? h : null, A]
+  return [f && null != h ? h : null, N]
 }

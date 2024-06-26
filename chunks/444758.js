@@ -15,8 +15,8 @@ var i = n(302454),
   h = n(624138),
   f = n(699450),
   S = n(594199),
-  A = n(981631),
-  N = n(689938);
+  N = n(981631),
+  A = n(689938);
 let m = e => {
   let t = u.Z.getChannel(e);
   return null == t ? void 0 : t.getGuildId()
@@ -123,8 +123,8 @@ function L(e, t, n, i, r) {
     originalLink: r,
     inContent: null == s || o ? null : [O(s)],
     content: [p({
-      name: N.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
-      type: A.d4z.UNKNOWN,
+      name: A.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(),
+      type: N.d4z.UNKNOWN,
       iconType: "text"
     }, "italics")]
   }
@@ -134,8 +134,8 @@ function D(e, t, n, i) {
   if (!e.canViewChannel) return function(e, t) {
     let n = {
       type: "channel",
-      content: [v(e.roleSubscriptionGated ? e.name : N.Z.Messages.NO_ACCESS)],
-      channelType: e.roleSubscriptionGated ? e.type : A.d4z.UNKNOWN,
+      content: [v(e.roleSubscriptionGated ? e.name : A.Z.Messages.NO_ACCESS)],
+      channelType: e.roleSubscriptionGated ? e.type : N.d4z.UNKNOWN,
       iconType: "locked"
     };
     return {
@@ -160,11 +160,11 @@ function D(e, t, n, i) {
     var o;
     if (e.isDm) return {
       ...r,
-      guildId: A.ME,
+      guildId: N.ME,
       inContent: [p(e)],
       content: [R(!1)]
     };
-    return null != (o = i) ? C(o) : v("#".concat(N.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+    return null != (o = i) ? C(o) : v("#".concat(A.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
   }
   let a = e.guildId === n;
   return {

@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(607070),
   f = n(238302),
   S = n(703656),
-  A = n(483444),
-  N = n(599250),
+  N = n(483444),
+  A = n(599250),
   m = n(74538),
   O = n(960048),
   p = n(98278),
@@ -77,9 +77,9 @@ function U(e) {
         size: "md",
         color: "currentColor",
         className: M.logoIcon
-      }), E === v.Si.TIER_0 && (0, i.jsx)(N.Z, {
+      }), E === v.Si.TIER_0 && (0, i.jsx)(A.Z, {
         className: M.logoWordmark
-      }), E === v.Si.TIER_2 && (0, i.jsx)(A.Z, {
+      }), E === v.Si.TIER_2 && (0, i.jsx)(N.Z, {
         className: M.logoWordmark
       })]
     }), (0, i.jsx)(I.Text, {
@@ -242,8 +242,8 @@ function k(e) {
     onClose: a,
     type: u,
     subscriptionTier: _,
-    analyticsLocationObject: A,
-    trialOffer: N,
+    analyticsLocationObject: N,
+    trialOffer: A,
     discountOffer: p
   } = e, R = (0, c.e7)([h.Z], () => h.Z.useReducedMotion), g = (0, T.ZP)();
   switch (u) {
@@ -267,7 +267,7 @@ function k(e) {
             color: "header-primary",
             children: D.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
           }), (0, i.jsx)(U, {
-            trialOffer: N,
+            trialOffer: A,
             discountOffer: p,
             children: D.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
               planName: (0, m.jP)(_),
@@ -281,7 +281,7 @@ function k(e) {
             section: L.jXE.EXPRESSION_PICKER,
             object: L.qAy.BUTTON_CTA
           },
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p
         })]
       });
@@ -298,7 +298,7 @@ function k(e) {
             color: "header-primary",
             children: D.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
           }), (0, i.jsx)(U, {
-            trialOffer: N,
+            trialOffer: A,
             discountOffer: p,
             children: D.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
               planName: (0, m.jP)(_),
@@ -312,7 +312,7 @@ function k(e) {
             section: L.jXE.EXPRESSION_PICKER,
             object: L.qAy.BUTTON_CTA
           },
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p
         })]
       });
@@ -331,7 +331,7 @@ function k(e) {
             color: "header-primary",
             children: D.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
           }), (0, i.jsx)(U, {
-            trialOffer: N,
+            trialOffer: A,
             discountOffer: p,
             children: D.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format({
               planName: (0, m.jP)(_),
@@ -345,7 +345,7 @@ function k(e) {
             section: L.jXE.EMOJI_PICKER_POPOUT,
             object: L.qAy.BUTTON_CTA
           },
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p
         })]
       });
@@ -398,7 +398,7 @@ function k(e) {
             variant: "text-md/normal",
             children: r
           }), (0, i.jsx)(U, {
-            trialOffer: N,
+            trialOffer: A,
             discountOffer: p,
             children: y
           })]
@@ -415,7 +415,7 @@ function k(e) {
           variant: "text-md/normal",
           children: r
         }), (0, i.jsx)(U, {
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p,
           children: D.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
             planName: (0, m.jP)(_),
@@ -424,15 +424,15 @@ function k(e) {
         }), (0, i.jsx)(b, {
           className: M.upsellButton,
           subscriptionTier: _,
-          analyticsLocationObject: A,
+          analyticsLocationObject: N,
           onClose: a,
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p
         })]
       });
     case v.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
       return l()(null != s, "You must specify children for this upsell type"), (0, i.jsx)(U, {
-        trialOffer: N,
+        trialOffer: A,
         discountOffer: p,
         children: D.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
           onClick: () => {
@@ -457,7 +457,7 @@ function k(e) {
         }), (0, i.jsx)("div", {
           className: M.divider
         }), (0, i.jsx)(U, {
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p,
           className: M.messageLengthBrandedContainer,
           subscriptionTier: _,
@@ -469,9 +469,9 @@ function k(e) {
           })
         }), (0, i.jsx)(b, {
           subscriptionTier: _,
-          analyticsLocationObject: A,
+          analyticsLocationObject: N,
           onClose: a,
-          trialOffer: N,
+          trialOffer: A,
           discountOffer: p
         })]
       });
@@ -487,7 +487,7 @@ function k(e) {
     case v.cd.EMOJI_PICKER_EMOJI_CLICKED:
     case v.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
       return (0, i.jsx)(B, {
-        trialOffer: N,
+        trialOffer: A,
         discountOffer: p,
         headingText: t,
         context: r,
@@ -498,7 +498,7 @@ function k(e) {
         headingText: t,
         context: r,
         children: s,
-        trialOffer: N,
+        trialOffer: A,
         discountOffer: p
       })
   }

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(131951),
   f = n(594174),
   S = n(981631),
-  A = n(37113),
-  N = n(65154),
+  N = n(37113),
+  A = n(65154),
   m = n(689938);
 
 function O(e, t) {
@@ -42,11 +42,11 @@ function O(e, t) {
       if (null != g) {
         let e = {
           qualityOptions: {
-            preset: A.tI.PRESET_CUSTOM,
+            preset: N.tI.PRESET_CUSTOM,
             resolution: r,
             frameRate: s
           },
-          context: N.Yn.STREAM
+          context: A.Yn.STREAM
         };
         null != g.desktopSource ? e.desktopSettings = {
           sourceId: g.desktopSource.id,
@@ -76,12 +76,12 @@ function O(e, t) {
     }
   }, [t, L, g, D]);
   if (null == e) return null;
-  let y = O === A.tI.PRESET_DOCUMENTS ? A.ws.FPS_30 : R,
-    U = A.af.map(e => {
+  let y = O === N.tI.PRESET_DOCUMENTS ? N.ws.FPS_30 : R,
+    U = N.af.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, _.Z)(A.tI.PRESET_CUSTOM, p, t, C, v);
+      } = e, r = (0, _.Z)(N.tI.PRESET_CUSTOM, p, t, C, v);
       return D && !M && (r = !1), (0, i.jsx)(a.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
@@ -90,11 +90,11 @@ function O(e, t) {
         action: () => P(r, p, t, S.Qqv.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
-    b = A.km.map(e => {
+    b = N.km.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, _.Z)(A.tI.PRESET_CUSTOM, t, y, C, v);
+      } = e, r = (0, _.Z)(N.tI.PRESET_CUSTOM, t, y, C, v);
       return D && !M && (r = !1), (0, i.jsx)(a.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),

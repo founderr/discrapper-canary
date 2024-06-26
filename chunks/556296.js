@@ -19,8 +19,8 @@ var r, s = n(879443),
   h = n(710845),
   f = n(658785),
   S = n(131951),
-  A = n(626135),
-  N = n(358085),
+  N = n(626135),
+  A = n(358085),
   m = n(998502),
   O = n(13140),
   p = n(808506),
@@ -76,7 +76,7 @@ function V(e) {
 }
 
 function Z(e) {
-  if (N.isPlatformEmbedded) m.ZP.inputEventUnregister(parseInt(e, 10));
+  if (A.isPlatformEmbedded) m.ZP.inputEventUnregister(parseInt(e, 10));
   else if (P[e]) {
     let t = y[e],
       n = G[t.action];
@@ -99,7 +99,7 @@ function H(e) {
   let r = e.id,
     s = G[n].keyEvents;
   e.action === R.kg4.TOGGLE_MUTE && k(), ! function(e, t, n, i) {
-    if (N.isPlatformEmbedded) m.ZP.inputEventRegister(parseInt(e), t, n, i);
+    if (A.isPlatformEmbedded) m.ZP.inputEventRegister(parseInt(e), t, n, i);
     else {
       Z(e);
       let r = l()(new(o())(document));
@@ -146,13 +146,13 @@ function j(e) {
   y = {
     ...y,
     [t.id]: t
-  }, !__OVERLAY__ && (A.default.track(R.rMx.USER_SETTINGS_KEYBIND_UPDATED, {
+  }, !__OVERLAY__ && (N.default.track(R.rMx.USER_SETTINGS_KEYBIND_UPDATED, {
     keybind_action: t.action,
     keybind_is_bound: !0,
     keybind_has_shortcut: t.shortcut.length > 0
-  }), t.action === R.kg4.TOGGLE_OVERLAY_INPUT_LOCK ? A.default.track(R.rMx.OVERLAY_SETTINGS_UPDATED, {
+  }), t.action === R.kg4.TOGGLE_OVERLAY_INPUT_LOCK ? N.default.track(R.rMx.OVERLAY_SETTINGS_UPDATED, {
     hotkey: t.action === R.kg4.TOGGLE_OVERLAY_INPUT_LOCK ? (0, O.BB)(t.shortcut) : null
-  }) : t.action === R.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && A.default.track(R.rMx.OVERLAY_SETTINGS_UPDATED, {
+  }) : t.action === R.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && N.default.track(R.rMx.OVERLAY_SETTINGS_UPDATED, {
     text_activation_hotkey: t.action === R.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, O.BB)(t.shortcut) : null
   })), H(t)
 }
@@ -268,7 +268,7 @@ L(q, "displayName", "KeybindsStore"), L(q, "persistKey", "keybinds"), L(q, "migr
     keybinds: t = e
   } = e;
   return d().reduce(t, (e, t, n) => {
-    if ((0, N.isLinux)() && t.action === R.kg4.SOUNDBOARD_HOLD) {
+    if ((0, A.isLinux)() && t.action === R.kg4.SOUNDBOARD_HOLD) {
       let n = t.shortcut.map(e => e[1]),
         i = (0, O.Kd)("`").map(e => e[1]);
       if (_()(n, i)) return e
@@ -314,7 +314,7 @@ L(q, "displayName", "KeybindsStore"), L(q, "persistKey", "keybinds"), L(q, "migr
     let {
       id: t
     } = e, n = y[t];
-    !__OVERLAY__ && A.default.track(R.rMx.USER_SETTINGS_KEYBIND_UPDATED, {
+    !__OVERLAY__ && N.default.track(R.rMx.USER_SETTINGS_KEYBIND_UPDATED, {
       keybind_action: n.action,
       keybind_is_bound: !1,
       keybind_has_shortcut: !1

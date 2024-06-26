@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   T: function() {
-    return N
+    return A
   },
   v: function() {
-    return A
+    return N
   }
 }), n(390547), n(724458), n(653041), n(47120), n(411104);
 var i = n(735250),
@@ -24,15 +24,15 @@ var i = n(735250),
   f = n(788314),
   S = n(639897);
 
-function A(e) {
+function N(e) {
   var t;
   let {
     navId: n,
     variant: s = "flexible",
     hideScroller: a = !1,
     className: d,
-    children: A,
-    onClose: N,
+    children: N,
+    onClose: A,
     onSelect: O
   } = e, p = function e(t) {
     return (function e(t) {
@@ -104,7 +104,7 @@ function A(e) {
       }), t;
       throw Error("Menu API only allows Items and groups of Items as children. Received ".concat(null !== (r = null !== (i = null == n ? void 0 : n.type) && void 0 !== i ? i : n) && void 0 !== r ? r : typeof n, " (").concat(typeof n, ") instead"))
     }, [])
-  }(A), R = function e(t) {
+  }(N), R = function e(t) {
     return t.reduce((t, n) => n.navigable ? (t.push({
       key: n.key,
       children: "item" === n.type && null != n.children ? e(n.children) : void 0
@@ -116,7 +116,7 @@ function A(e) {
       navId: n,
       items: g.current,
       initialFocusPath: I.Z.keyboardModeEnabled && null != C ? [C] : [],
-      closeMenu: N
+      closeMenu: A
     });
   r.useEffect(() => {
     v.isUsingKeyboardNavigation ? !I.Z.keyboardModeEnabled && (0, E.Qj)() : I.Z.keyboardModeEnabled && (0, E.rf)()
@@ -141,7 +141,7 @@ function A(e) {
           }),
           isFocused: !1,
           onFocus: () => {},
-          onClose: N
+          onClose: A
         }), p.length > 0 && function e(t, n, r, s) {
           let o = 0,
             a = [];
@@ -270,13 +270,13 @@ function A(e) {
             }
             return t
           }, [])
-        }(p, v, [], N)]
+        }(p, v, [], A)]
       })
     })
   })
 }
 
-function N() {
+function A() {
   return (0, i.jsx)("div", {
     className: o()(S.menu, S.loader, S.flexible),
     children: (0, i.jsx)(d.$, {})

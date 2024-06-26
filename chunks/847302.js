@@ -45,24 +45,24 @@ function f(e, t, n) {
 function S(e, t, n) {
   let i = d.bN.areStylesDisabled(e);
   for (let r of d.bN.blocks(e))
-    if (T.has(r[0].type)) i ? N(e, r, !0, null) : A(e, r, t, n);
+    if (T.has(r[0].type)) i ? A(e, r, !0, null) : N(e, r, t, n);
     else {
       let [s, o] = r;
       for (let r = s.children.length - 1; r >= 0; r--) {
         let a = s.children[r];
         if (h.has(a.type)) {
           let s = [a, d.C0.child(o, r)];
-          i ? N(e, s, !0, null) : A(e, s, t, n)
+          i ? A(e, s, !0, null) : N(e, s, t, n)
         }
       }
     }
 }
 
-function A(e, t, n, i) {
+function N(e, t, n, i) {
   var s;
   let o = "line" === t[0].type && (null === (s = t[0].codeBlockState) || void 0 === s ? void 0 : s.isInCodeBlock) === !0,
     l = d.q.markdown(t[0], n);
-  N(e, t, o, l) && (t = d.q.updateElement(e, t), l = d.q.markdown(t[0], n)), !o && (m(e, t, i, l) && (t = d.q.updateElement(e, t), l = d.q.markdown(t[0], n)), function(e, t, n, i, s) {
+  A(e, t, o, l) && (t = d.q.updateElement(e, t), l = d.q.markdown(t[0], n)), !o && (m(e, t, i, l) && (t = d.q.updateElement(e, t), l = d.q.markdown(t[0], n)), function(e, t, n, i, s) {
     let [o, l] = t, u = !1;
     for (let _ = o.children.length - 1; _ >= 0; _--) {
       let I;
@@ -103,7 +103,7 @@ function A(e, t, n, i) {
   }(e, t, n, i, l))
 }
 
-function N(e, t, n, i) {
+function A(e, t, n, i) {
   let [r, s] = t, o = !1;
   for (let t = r.children.length - 1; t >= 0; t--) {
     let a = r.children[t],

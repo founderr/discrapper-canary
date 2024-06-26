@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i = n(735250),
@@ -25,7 +25,7 @@ let S = {
   friction: 70
 };
 
-function A(e) {
+function N(e) {
   let {
     tooltipText: t,
     headingText: n,
@@ -52,12 +52,12 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     checked: t,
     onClick: n,
     id: s = "burst-reaction-toggle-button"
-  } = e, N = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), m = E.default.getCurrentUser(), O = null == m || (0, I.I5)(m) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [p, R] = (0, d.U)(O), [g, C] = r.useState(!1), [v, L] = (0, a.useSpring)(() => ({})), D = (0, a.animated)(_.SuperReactionIcon);
+  } = e, A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), m = E.default.getCurrentUser(), O = null == m || (0, I.I5)(m) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [p, R] = (0, d.U)(O), [g, C] = r.useState(!1), [v, L] = (0, a.useSpring)(() => ({})), D = (0, a.animated)(_.SuperReactionIcon);
   r.useEffect(() => {
     let e = p === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
     e && (R(T.L.DISMISS), setTimeout(() => C(e), 200))
@@ -66,7 +66,7 @@ function N(e) {
     P = g ? h.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, i.jsxs)(_.TooltipContainer, {
     position: "top",
-    text: (0, i.jsx)(A, {
+    text: (0, i.jsx)(N, {
       textColor: "always-white",
       tooltipText: M,
       headingText: P
@@ -98,9 +98,9 @@ function N(e) {
       }),
       children: [t ? (0, i.jsx)(_.Shine, {
         className: f.shine,
-        shinePaused: N
+        shinePaused: A
       }) : null, (0, i.jsx)(D, {
-        style: N ? void 0 : v,
+        style: A ? void 0 : v,
         size: "custom",
         width: 20,
         height: 20,

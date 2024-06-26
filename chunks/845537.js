@@ -48,8 +48,8 @@ var r = n(442837),
   h = n(246946),
   f = n(594174),
   S = n(934415),
-  A = n(5192),
-  N = n(51144),
+  N = n(5192),
+  A = n(51144),
   m = n(377668),
   O = n(689938),
   p = n(126077),
@@ -106,7 +106,7 @@ function L(e) {
     id: t,
     guildId: n,
     channelId: o
-  } = e, l = (0, r.e7)([f.default], () => f.default.getUser(t)), u = (0, r.e7)([h.Z], () => h.Z.hidePersonalInformation), _ = A.ZP.useName(n, o, l), c = (0, i.jsx)(d.Z, {
+  } = e, l = (0, r.e7)([f.default], () => f.default.getUser(t)), u = (0, r.e7)([h.Z], () => h.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), c = (0, i.jsx)(d.Z, {
     children: null == _ ? "<@".concat(t, ">") : "@".concat(_)
   });
   if (null != l) {
@@ -119,7 +119,7 @@ function L(e) {
           animate: !0,
           size: s.AvatarSizes.SIZE_16,
           className: p.avatar
-        }), N.ZP.getUserTag(l, {
+        }), A.ZP.getUserTag(l, {
           mode: "username",
           identifiable: u ? "never" : "always"
         }), (0, i.jsx)("span", {
@@ -129,7 +129,7 @@ function L(e) {
       }),
       delay: 750,
       position: "top",
-      "aria-label": N.ZP.getUserTag(l, {
+      "aria-label": A.ZP.getUserTag(l, {
         decoration: "never"
       }),
       children: e => (0, i.jsx)(s.Clickable, {

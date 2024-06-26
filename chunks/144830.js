@@ -64,7 +64,7 @@ let h = {
     time: t,
     ...n
   }),
-  A = {
+  N = {
     ACTIVITY_FEED: {
       START: {
         SECONDS: () => I.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -191,7 +191,7 @@ let h = {
     }
   };
 
-function N(e, t) {
+function A(e, t) {
   let n = f.findIndex(t => {
       let {
         max: n,
@@ -216,7 +216,7 @@ function N(e, t) {
 }
 
 function m(e, t) {
-  let n = null != e ? N(e, e => t.includes(e)) : "NONE",
+  let n = null != e ? A(e, e => t.includes(e)) : "NONE",
     i = null != n ? h[n] : null;
   return {
     unit: n,
@@ -253,8 +253,8 @@ function O(e) {
       return null != e ? r = i - e : null != t && (r = i - t), Math.abs(r) / 1e3 / 60
     }
     getTimeUnit(e, t, n) {
-      let i = N(e, e => (function(e, t, n) {
-        let i = A[n];
+      let i = A(e, e => (function(e, t, n) {
+        let i = N[n];
         if (null != i) {
           let n = i[t];
           if (null != n) return null != n[e]
@@ -289,7 +289,7 @@ function O(e) {
       } = this.state, o = this.getType();
       if (null == o) return null;
       let a = this.getTimeUnit(s, t, o),
-        l = A[t][o];
+        l = N[t][o];
       if (null == l) return null;
       let _ = l[a],
         c = Math.floor(this.transformTime(a, s));

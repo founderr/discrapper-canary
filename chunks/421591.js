@@ -39,7 +39,7 @@ t.Z = r.memo(function(e) {
         }
       }
     }(),
-    [A, N] = r.useState(""),
+    [N, A] = r.useState(""),
     m = s.K.useExperiment({
       location: "App Launcher Root"
     }, {
@@ -55,8 +55,8 @@ t.Z = r.memo(function(e) {
       t = (0, i.jsx)(u.Z, {
         channel: d,
         entrypoint: E,
-        searchQuery: A,
-        setSearchQuery: N,
+        searchQuery: N,
+        setSearchQuery: A,
         enableRecommendations: m.recommendationsEnabled,
         enableRecents: m.recentsDropdownEnabled,
         enableGlobalSearch: O.enabled

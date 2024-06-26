@@ -22,8 +22,8 @@ var i, r = n(735250),
   h = n(933557),
   f = n(471445),
   S = n(511618),
-  A = n(926491),
-  N = n(378233),
+  N = n(926491),
+  A = n(378233),
   m = n(430824),
   O = n(699516),
   p = n(594174),
@@ -393,7 +393,7 @@ P(w, "Generic", class e extends G {
     } = this.props, {
       hovered: l
     } = this.state;
-    return (0, N.jl)(a) ? n = null === (e = A.Z.getStickerPack(a.pack_id)) || void 0 === e ? void 0 : e.name : (0, N.J8)(a) && (n = null === (t = m.Z.getGuild(a.guild_id)) || void 0 === t ? void 0 : t.name), (0, r.jsxs)(C.RX, {
+    return (0, A.jl)(a) ? n = null === (e = N.Z.getStickerPack(a.pack_id)) || void 0 === e ? void 0 : e.name : (0, A.J8)(a) && (n = null === (t = m.Z.getGuild(a.guild_id)) || void 0 === t ? void 0 : t.name), (0, r.jsxs)(C.RX, {
       children: [(0, r.jsx)(C.Tw, {
         children: s(a, l || !0 === o)
       }), (0, r.jsxs)(C.z5, {

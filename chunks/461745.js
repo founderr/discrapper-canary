@@ -76,7 +76,7 @@ let S = e => {
     })
   })
 };
-class A extends(r = a.Component) {
+class N extends(r = a.Component) {
   componentDidUpdate(e) {
     let {
       focusAfterReady: t,
@@ -172,8 +172,8 @@ class A extends(r = a.Component) {
       tags: E,
       onActivate: h,
       className: f,
-      inputProps: A,
-      focusAfterReady: N
+      inputProps: N,
+      focusAfterReady: A
     } = this.props, m = null != t && t.length > 0, O = !1, p = [];
     return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => p.push((0, o.jsxs)(_.Anchor, {
       focusProps: {
@@ -239,10 +239,10 @@ class A extends(r = a.Component) {
             onFocus: this.handleFocus,
             disabled: r,
             "aria-disabled": r,
-            autoFocus: !N && e,
+            autoFocus: !A && e,
             onMouseDown: h,
             ...this.defaultInputProps,
-            ...A
+            ...N
           }), null != s ? (0, o.jsx)(S, {
             size: a,
             themeOverride: i,
@@ -308,7 +308,7 @@ class A extends(r = a.Component) {
     })
   }
 }
-h(A, "Sizes", f), h(A, "defaultProps", {
+h(N, "Sizes", f), h(N, "defaultProps", {
   size: f.SMALL,
   query: "",
   sections: [],
@@ -320,4 +320,4 @@ h(A, "Sizes", f), h(A, "defaultProps", {
   autoFocus: !1,
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
-}), t.ZP = A
+}), t.ZP = N

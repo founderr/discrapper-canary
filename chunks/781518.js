@@ -7,7 +7,7 @@ n.d(t, {
     return h
   },
   Tu: function() {
-    return N
+    return A
   },
   am: function() {
     return function e(t, n, i) {
@@ -27,7 +27,7 @@ n.d(t, {
     return f
   },
   k1: function() {
-    return A
+    return N
   },
   rC: function() {
     return E
@@ -161,7 +161,7 @@ function S(e, t) {
   }), e))
 }
 
-function A() {
+function N() {
   if (!u.Z.isProtocolRegistered())(0, l.isDesktop)() && a.Z.isProtocolRegistered(_.M5).then(e => {
     s.Z.dispatch({
       type: "SPOTIFY_SET_PROTOCOL_REGISTERED",
@@ -170,7 +170,7 @@ function A() {
   })
 }
 
-function N(e, t) {
+function A(e, t) {
   s.Z.dispatch({
     type: "SPOTIFY_SET_ACTIVE_DEVICE",
     accountId: e,

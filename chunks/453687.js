@@ -63,13 +63,13 @@ function d(e, t, n) {
     h = e.hasFlag(s.iLy.HAS_THREAD),
     f = d || E || I || T || h || e.type === s.uaV.THREAD_CREATED,
     S = d && e.content === e.embeds[0].url && e.embeds[0].type === s.hBH.GIFV,
-    A = e.type !== s.uaV.DEFAULT || !S && "" !== e.content,
-    N = (0, r.Z)(e),
-    m = !N && (null == n ? void 0 : n.hasTimestamp) !== !1,
+    N = e.type !== s.uaV.DEFAULT || !S && "" !== e.content,
+    A = (0, r.Z)(e),
+    m = !A && (null == n ? void 0 : n.hasTimestamp) !== !1,
     O = l(e, t),
     p = a(e),
-    R = N ? "" : "".concat(_ ? p : O, " ").concat(i.Z0);
-  if (A) {
+    R = A ? "" : "".concat(_ ? p : O, " ").concat(i.Z0);
+  if (N) {
     let t = o(e);
     R += " ".concat(t)
   }

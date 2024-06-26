@@ -12,8 +12,8 @@ let I = new Set([E.ABu.CONTACTS]),
   h = [],
   f = [],
   S = {},
-  A = {},
   N = {},
+  A = {},
   m = e => {
     h = e.filter(e => !I.has(e.type) && _.Z.isSupported(e.type)), f = e.filter(e => I.has(e.type)), T = !1
   };
@@ -22,7 +22,7 @@ class O extends(i = a.ZP.Store) {
     return S[e] || !1
   }
   joinErrorMessage(e) {
-    return N[e]
+    return A[e]
   }
   isFetching() {
     return T
@@ -40,7 +40,7 @@ class O extends(i = a.ZP.Store) {
     return f.find(t => t.type === e)
   }
   isSuggestedAccountType(e) {
-    return A[e] || !1
+    return N[e] || !1
   }
 }
 o = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -75,6 +75,6 @@ o = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.definePrope
     null != i && (s.revoked = i), null != r && (s.accessToken = r)
   },
   USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function(e) {
-    N[e.integrationId] = void 0 !== e.error ? e.error : ""
+    A[e.integrationId] = void 0 !== e.error ? e.error : ""
   }
 })

@@ -14,8 +14,8 @@ var i, r, s = n(735250),
   h = n(906732),
   f = n(570220),
   S = n(28546),
-  A = n(285651),
-  N = n(926491),
+  N = n(285651),
+  A = n(926491),
   m = n(373228),
   O = n(378233),
   p = n(419922),
@@ -71,7 +71,7 @@ function B(e) {
       size: G,
       sticker: o,
       className: U.__invalid_sticker
-    }), i !== A.eb.SENDABLE && (0, s.jsx)(R.Z, {
+    }), i !== N.eb.SENDABLE && (0, s.jsx)(R.Z, {
       size: 14
     })]
   })
@@ -185,9 +185,9 @@ t.Z = o.memo(function(e) {
         if (L.default.track(P.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
             sticker_id: e.id,
             suggestion_trigger: j
-          }), t === A.eb.SENDABLE) G(!0), a(e, m.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y("");
+          }), t === N.eb.SENDABLE) G(!0), a(e, m.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y("");
         else if ((0, O.jl)(e)) {
-          let t = N.Z.getStickerPack(e.pack_id);
+          let t = A.Z.getStickerPack(e.pack_id);
           null != t && (0, g.Z)({
             stickerPack: t,
             analyticsLocations: J

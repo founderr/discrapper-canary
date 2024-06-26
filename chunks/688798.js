@@ -16,8 +16,8 @@ var i = n(913527),
   h = n(306680),
   f = n(709054),
   S = n(839627),
-  A = n(802098),
-  N = n(128014),
+  N = n(802098),
+  A = n(128014),
   m = n(163379),
   O = n(596401),
   p = n(981631),
@@ -79,7 +79,7 @@ class v extends _.Z {
             min_version: s
           }] of Object.entries(e)) s <= t && s > n && (n = s, i = r);
         return i
-      }(r, (0, N.b)());
+      }(r, (0, A.b)());
       if (s.Z.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
           config: i.body,
@@ -90,15 +90,15 @@ class v extends _.Z {
         return
       }
       if (!0 !== r[a].show_on_startup) return;
-      let l = A.Z.lastSeenChangelogId(),
-        _ = A.Z.lastSeenChangelogDate();
+      let l = N.Z.lastSeenChangelogId(),
+        _ = N.Z.lastSeenChangelogDate();
       if (null != l && 0 >= f.default.compare(a, l)) return;
       let c = await o.Z.fetchChangelog(a, E.default.locale);
       if (null != c) {
-        if (null == _ || null == A.Z.lastSeenChangelogDate()) {
+        if (null == _ || null == N.Z.lastSeenChangelogDate()) {
           o.Z.markChangelogAsSeen(a, c.date);
           return
-        }!A.Z.isLocked() && new Date(c.date) > new Date(_) && (0, m.Z)()
+        }!N.Z.isLocked() && new Date(c.date) > new Date(_) && (0, m.Z)()
       }
     })
   }

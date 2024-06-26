@@ -16,8 +16,8 @@ var i = n(512722),
   h = n(254238),
   f = n(607214),
   S = n(258609),
-  A = n(565473),
-  N = n(444092),
+  N = n(565473),
+  A = n(444092),
   m = n(927923),
   O = n(65154),
   p = n(689938);
@@ -57,7 +57,7 @@ class v extends l.Z {
         return e.find(e => {
           let n = m.al.has(e.clientInfo.os),
             i = null != I.Z.getVoiceStateForSession(_.default.getId(), e.sessionId),
-            r = null == t || (0, A.y)(t.type) === e.clientInfo.os;
+            r = null == t || (0, N.y)(t.type) === e.clientInfo.os;
           return n && r && i
         })
       }(e);
@@ -124,7 +124,7 @@ class v extends l.Z {
       let s = S.Z.getAwaitingRemoteSessionInfo();
       if ((null == s ? void 0 : s.commandId) !== n) return;
       let o = S.Z.getDevice(s.type, null !== (t = s.deviceId) && void 0 !== t ? t : ""),
-        a = (0, N.Z)(null != o ? o : {
+        a = (0, A.Z)(null != o ? o : {
           id: "id",
           platform: p.Z.Messages.STATUS_UNKNOWN,
           name: p.Z.Messages.STATUS_UNKNOWN

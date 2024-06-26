@@ -35,8 +35,8 @@ var i, r, s, o = n(470079),
   h = n(706454),
   f = n(675478),
   S = n(592125),
-  A = n(430824),
-  N = n(594174),
+  N = n(430824),
+  A = n(594174),
   m = n(626135),
   O = n(254711),
   p = n(700089),
@@ -179,7 +179,7 @@ class z extends(i = _.ZP.Store) {
     return e in this.indices
   }
   query(e, t, n) {
-    if (null == N.default.getCurrentUser()) return k;
+    if (null == A.default.getCurrentUser()) return k;
     let i = this.getContextState(e),
       r = this.getUserState(),
       s = this.getApplicationState(n.applicationId),
@@ -271,7 +271,7 @@ let q = new z(c.Z, {
     let {
       target: i,
       index: r
-    } = e, s = null === (t = N.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+    } = e, s = null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
     if (null == s) return !1;
     let o = {},
       a = {},
@@ -279,7 +279,7 @@ let q = new z(c.Z, {
     for (let e of r.applications) {
       if (null == e.bot && null != e.bot_id) {
         a[e.bot_id] = e.id;
-        let t = N.default.getUser(e.bot_id);
+        let t = A.default.getUser(e.bot_id);
         null != t ? e.bot = t : l.add(e.bot_id)
       } else null != e.bot && (a[e.bot.id] = e.id);
       let t = {
@@ -574,7 +574,7 @@ function en(e) {
     allowApplicationCommands: T = !0,
     singleApplicationId: h,
     allowEmptySections: S = !1,
-    scoreMethod: N = C.p.NONE,
+    scoreMethod: A = C.p.NONE,
     sortOptions: m = ee
   } = e, {
     commandType: p
@@ -583,7 +583,7 @@ function en(e) {
     query: g,
     splitQuery: v,
     allowEmptySections: S,
-    scoreMethod: N
+    scoreMethod: A
   }, U = null !== (r = null === (t = u.result) || void 0 === t ? void 0 : t.sections) && void 0 !== r ? r : {}, b = null !== (s = null === (n = _.result) || void 0 === n ? void 0 : n.sections) && void 0 !== s ? s : {}, G = new Set;
   if (T) {
     if (a.hasBaseAccessPermissions)
@@ -625,7 +625,7 @@ function en(e) {
     null != u && M.push(u)
   }
   if (m.applications.useFrecency && f.DZ.loadIfNecessary(), M.sort((e, t) => {
-      if (m.applications.useScore && N === C.p.APPLICATION_ONLY) {
+      if (m.applications.useScore && A === C.p.APPLICATION_ONLY) {
         var n, i, r, s;
         let o = null !== (r = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== r ? r : Number.MAX_VALUE,
           a = null !== (s = null === (i = t.data[0]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : Number.MAX_VALUE;
@@ -645,9 +645,9 @@ function en(e) {
     ...t,
     section: e.section
   })));
-  if (N === C.p.COMMAND_ONLY || N === C.p.COMMAND_OR_APPLICATION) {
+  if (A === C.p.COMMAND_ONLY || A === C.p.COMMAND_OR_APPLICATION) {
     let e = a.context,
-      t = A.Z.getGuild(a.context.guild_id);
+      t = N.Z.getGuild(a.context.guild_id);
     m.commands.useFrecency && f.DZ.loadIfNecessary(), x.sort((n, i) => {
       if (m.commands.useScore) {
         var r, s;
@@ -749,7 +749,7 @@ function ei(e, t, n, i, r) {
 
 function er(e) {
   var t;
-  return null != e.guild_id || e.type === y.d4z.DM && (null === (t = N.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0
+  return null != e.guild_id || e.type === y.d4z.DM && (null === (t = A.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0
 }
 
 function es(e) {

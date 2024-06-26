@@ -20,8 +20,8 @@ var r = n(658722),
   h = n(285651),
   f = n(822179),
   S = n(926491),
-  A = n(373228),
-  N = n(601070),
+  N = n(373228),
+  A = n(601070),
   m = n(675478),
   O = n(131704),
   p = n(598077),
@@ -102,10 +102,10 @@ function er(e) {
     allowSnowflake: o
   } = e, a = b.default.getUsers(), u = U.Z.getGuildId(), _ = t.toLocaleLowerCase(), c = (0, Z.Fv)(_), d = [], E = [], I = n.length, T = 0, h = 0;
   for (; T < I;) {
-    var f, S, A, N, m, O, R, g, v;
+    var f, S, N, A, m, O, R, g, v;
     let e, i;
     let l = n[T];
-    l instanceof p.Z ? (i = l, e = null === (S = C.ZP.getNick(u, i.id)) || void 0 === S ? void 0 : S.toLocaleLowerCase()) : (e = null === (A = l.nick) || void 0 === A ? void 0 : A.toLocaleLowerCase(), i = a[l.userId]);
+    l instanceof p.Z ? (i = l, e = null === (S = C.ZP.getNick(u, i.id)) || void 0 === S ? void 0 : S.toLocaleLowerCase()) : (e = null === (N = l.nick) || void 0 === N ? void 0 : N.toLocaleLowerCase(), i = a[l.userId]);
     let I = null === (f = H.ZP.getGlobalName(i)) || void 0 === f ? void 0 : f.toLocaleLowerCase();
     if (null == r || r(i)) {
       let n = i.username.toLocaleLowerCase(),
@@ -119,7 +119,7 @@ function er(e) {
         type: Y.h8.USER,
         record: i,
         score: 10,
-        comparator: null !== (N = null != I ? I : e) && void 0 !== N ? N : n,
+        comparator: null !== (A = null != I ? I : e) && void 0 !== A ? A : n,
         sortable: null !== (m = null != T ? T : l) && void 0 !== m ? m : r
       }) : a.substring(0, c.length) === c || (null == u ? void 0 : u.substring(0, c.length)) === c || (null == f ? void 0 : f.substring(0, c.length)) === c ? d.push({
         type: Y.h8.USER,
@@ -312,12 +312,12 @@ t.ZP = {
         }
         return n
       }(n, c);
-    t = null != i ? a()(g.ZP.getChannels(i)[_]).map(e => e.channel).concat(N.Z.computeAllActiveJoinedThreads(i)).value() : a()(R.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(N.Z.computeAllActiveJoinedThreads()).value();
+    t = null != i ? a()(g.ZP.getChannels(i)[_]).map(e => e.channel).concat(A.Z.computeAllActiveJoinedThreads(i)).value() : a()(R.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(A.Z.computeAllActiveJoinedThreads()).value();
     let h = {},
       f = [];
     for (let e of t) {
-      var S, A, m, p, C;
-      if (S = _, A = e.type, m = null != i, !(S === A || (m || (0, O.Km)(A)) && (S === g.sH ? (0, O.r8)(A) || (0, O.bw)(A) : S === g.Zb && (0, O.bw)(A))) || (0, O.Km)(e.type) && !D.Z.can(d ? e.accessPermissions : F.Plq.VIEW_CHANNEL, e) || !o(e)) continue;
+      var S, N, m, p, C;
+      if (S = _, N = e.type, m = null != i, !(S === N || (m || (0, O.Km)(N)) && (S === g.sH ? (0, O.r8)(N) || (0, O.bw)(N) : S === g.Zb && (0, O.bw)(N))) || (0, O.Km)(e.type) && !D.Z.can(d ? e.accessPermissions : F.Plq.VIEW_CHANNEL, e) || !o(e)) continue;
       let t = [...T],
         r = e.name.toLocaleLowerCase(),
         a = I && n === e.id,
@@ -522,10 +522,10 @@ t.ZP = {
         S.push(e)
       }), h += S.length)
     }
-    let A = [];
-    return !n.isPrivate() && i && l && (h < d && s()(f, Q().test) && (A.push(Q()), h += 1), r && h < d && s()(f, J().test) && A.push(J())), {
+    let N = [];
+    return !n.isPrivate() && i && l && (h < d && s()(f, Q().test) && (N.push(Q()), h += 1), r && h < d && s()(f, J().test) && N.push(J())), {
       users: T,
-      globals: A,
+      globals: N,
       roles: S
     }
   },
@@ -723,20 +723,20 @@ t.ZP = {
             value: r
           } = n, s = function(e) {
             switch (e) {
-              case A.MO.STICKER_NAME:
+              case N.MO.STICKER_NAME:
                 return 11;
-              case A.MO.CORRELATED_EMOJI:
+              case N.MO.CORRELATED_EMOJI:
                 return 6;
-              case A.MO.TAG:
+              case N.MO.TAG:
                 return 1;
-              case A.MO.GUILD_NAME:
-              case A.MO.PACK_NAME:
+              case N.MO.GUILD_NAME:
+              case N.MO.PACK_NAME:
                 return 8;
               default:
                 return 1
             }
           }(i), o = 0;
-          t ? r === e ? o = 10 * s : _.test(r) ? o = 7 * s : (i === A.MO.GUILD_NAME || i === A.MO.PACK_NAME || i === A.MO.STICKER_NAME) && c.test(r) && (o = 5 * s) : r === e && (o = 10 * s, d = r), o > u && (u = o, d = r)
+          t ? r === e ? o = 10 * s : _.test(r) ? o = 7 * s : (i === N.MO.GUILD_NAME || i === N.MO.PACK_NAME || i === N.MO.STICKER_NAME) && c.test(r) && (o = 5 * s) : r === e && (o = 10 * s, d = r), o > u && (u = o, d = r)
         }
         let I = f.Z.stickerFrecencyWithoutFetchingLatest.getScore(a);
         null != I && (u *= I / 100), u > 0 && null != d && !o.has(E.id) && (o.add(E.id), l.push({

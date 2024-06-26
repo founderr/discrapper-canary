@@ -19,8 +19,8 @@ var i, r = n(735250),
   h = n(768760),
   f = n(689938),
   S = n(278919),
-  A = n(167969),
-  N = n(557256);
+  N = n(167969),
+  A = n(557256);
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,9 +42,9 @@ class O extends(i = s.PureComponent) {
       placeholderVersion: l,
       alt: _,
       width: E,
-      height: A,
-      maxWidth: N = E,
-      maxHeight: m = A,
+      height: N,
+      maxWidth: A = E,
+      maxHeight: m = N,
       minWidth: O,
       minHeight: g,
       mediaLayoutType: C,
@@ -59,11 +59,11 @@ class O extends(i = s.PureComponent) {
       useFullWidth: G = !1,
       ...w
     } = this.props;
-    if (1 === E && 1 === A) return null;
+    if (1 === E && 1 === N) return null;
     let x = (0, d.Tj)({
         width: E,
-        height: A,
-        maxWidth: N,
+        height: N,
+        maxWidth: A,
         maxHeight: m,
         minWidth: O,
         minHeight: g
@@ -166,7 +166,7 @@ function p(e) {
       }
     }(t, n),
     children: (0, r.jsx)("img", {
-      src: (0, l.ap)(s) ? N : A,
+      src: (0, l.ap)(s) ? A : N,
       className: S.imageError,
       alt: null != i ? i : f.Z.Messages.IMAGE
     })

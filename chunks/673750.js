@@ -23,8 +23,8 @@ var T = n(873741),
   h = n(314897),
   f = n(866960),
   S = n(70956),
-  A = n(403182),
-  N = n(651655),
+  N = n(403182),
+  A = n(651655),
   m = n(861990),
   O = n(141795),
   p = n(981631);
@@ -43,7 +43,7 @@ let C = e => 0 === e.type,
   v = e => 1 === e.type,
   L = e => C(e) ? e.message.nonce : v(e) ? e.message.messageId : e.message.data.id,
   D = [1 * S.Z.Millis.MINUTE, 5 * S.Z.Millis.MINUTE];
-class M extends N.Z {
+class M extends A.Z {
   isFull() {
     return this.queue.length >= this.maxSize
   }
@@ -226,7 +226,7 @@ class M extends N.Z {
         this.requests.set(a, f), e.on("progress", e => {
           let {
             total: t
-          } = e, n = (0, A.dg)(r);
+          } = e, n = (0, N.dg)(r);
           null != t && t > n && (this.cancelRequest(a), null == d || d(n))
         })
       }

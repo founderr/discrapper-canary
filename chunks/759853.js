@@ -16,19 +16,19 @@ t.Z = e => {
   var t;
   let {
     quest: n,
-    progressBarRef: f,
-    isExpanded: C
+    progressBarRef: C,
+    isExpanded: f
   } = e, {
     completionSpring: h,
     startCompletionAnimation: _
   } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = s.useRef(!1), T = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), v = s.useRef(null), N = (0, i.e7)([d.Z], () => d.Z.hasLayers()), j = (0, l.Z)(N), [A, B] = s.useState(null), [b, R] = s.useState(null), y = s.useRef(new r.qA({
     gravity: 0,
     wind: 0
-  })), M = (0, r.uR)(A, b), U = s.useCallback(() => {
+  })), I = (0, r.uR)(A, b), O = s.useCallback(() => {
     if (T) return;
-    let e = f.current,
+    let e = C.current,
       t = v.current;
-    if (null != t && null != e && M.isReady) {
+    if (null != t && null != e && I.isReady) {
       var n, o, s, r;
       let {
         x: a,
@@ -37,7 +37,7 @@ t.Z = e => {
         x: l,
         y: c
       } = t.getBoundingClientRect();
-      M.createMultipleConfetti((n = a - l, o = i - c, s = e.clientHeight, r = e.clientWidth, {
+      I.createMultipleConfetti((n = a - l, o = i - c, s = e.clientHeight, r = e.clientWidth, {
         ...p.We,
         position: {
           type: "static-random",
@@ -77,16 +77,16 @@ t.Z = e => {
         }
       }), 100)
     }
-  }, [f, v, M, T]), I = (0, l.Z)(C);
+  }, [C, v, I, T]), M = (0, l.Z)(f);
   return (s.useEffect(() => {
-    E && C && !I && (_(), U())
-  }, [C, E, _, U, I]), s.useEffect(() => {
+    E && f && !M && (_(), O())
+  }, [f, E, _, O, M]), s.useEffect(() => {
     E && !N && j && setTimeout(() => {
-      _(), U()
+      _(), O()
     }, 200)
-  }, [E, j, N, _, U]), s.useEffect(() => {
-    if (!!M.isReady) !S.current && E && (_(), U()), S.current = E
-  }, [E, S, U, _, M]), T) ? null : (0, o.jsxs)("div", {
+  }, [E, j, N, _, O]), s.useEffect(() => {
+    if (!!I.isReady) !S.current && E && (_(), O()), S.current = E
+  }, [E, S, O, _, I]), T) ? null : (0, o.jsxs)("div", {
     className: m.wrapper,
     "aria-hidden": "true",
     ref: v,

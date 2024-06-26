@@ -22,7 +22,7 @@ n.d(t, {
     return c
   },
   Zt: function() {
-    return N
+    return A
   },
   cq: function() {
     return d
@@ -40,7 +40,7 @@ n.d(t, {
     return h
   },
   o2: function() {
-    return A
+    return N
   },
   oL: function() {
     return _
@@ -129,14 +129,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_SATURATION",
     saturation: e
   })
 }
 
-function N(e) {
+function A(e) {
   let t = o.Z.useReducedMotion;
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",

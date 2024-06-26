@@ -34,8 +34,8 @@ let T = ["http:", "https:", "discord:"],
   h = [c.b.TEXT, c.b.UNDERLINE, c.b.STRONG, c.b.ITALICS, c.b.STRIKETHROUGH, c.b.INLINE_CODE, c.b.SPOILER, c.b.LINE_BREAK, c.b.TIMESTAMP],
   f = [...h, c.b.EMOJI, c.b.CUSTOM_EMOJI],
   S = [c.b.LIST, c.b.HEADING, c.b.BLOCK_QUOTE, c.b.SUBTEXT],
-  A = [c.b.TEXT],
-  N = [c.b.UNDERLINE, c.b.STRONG, c.b.ITALICS, c.b.STRIKETHROUGH, c.b.INLINE_CODE, c.b.SPOILER, c.b.LINE_BREAK, c.b.TIMESTAMP, c.b.EMOJI, c.b.CUSTOM_EMOJI, c.b.LIST, c.b.HEADING, c.b.BLOCK_QUOTE, c.b.SUBTEXT];
+  N = [c.b.TEXT],
+  A = [c.b.UNDERLINE, c.b.STRONG, c.b.ITALICS, c.b.STRIKETHROUGH, c.b.INLINE_CODE, c.b.SPOILER, c.b.LINE_BREAK, c.b.TIMESTAMP, c.b.EMOJI, c.b.CUSTOM_EMOJI, c.b.LIST, c.b.HEADING, c.b.BLOCK_QUOTE, c.b.SUBTEXT];
 
 function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -87,7 +87,7 @@ t.ZP = {
       },
       P = n.allowEmojiLinks ? f : h,
       y = [...P, ...S],
-      U = [...A, ...N],
+      U = [...N, ...A],
       b = m(t(g, M), y, [c.b.EMOJI]),
       G = m(t(C, M), U);
     if (null == b || null == G || 0 === (function e(t) {

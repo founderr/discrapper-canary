@@ -12,8 +12,8 @@ let E = null,
   h = new Map,
   f = new Set,
   S = !1,
-  A = new Set,
   N = new Set,
+  A = new Set,
   m = {},
   O = 0,
   p = null,
@@ -25,7 +25,7 @@ let E = null,
   D = () => !0;
 
 function M(e) {
-  A.add(e)
+  N.add(e)
 }
 
 function P(e) {
@@ -38,9 +38,9 @@ function P(e) {
 function y(e) {
   let t = e.type === a.u.PREMIUM_REFERRAL ? e.content : null;
   if (null == t) return !1;
-  if (!N.has(t) && !A.has(t)) {
+  if (!A.has(t) && !N.has(t)) {
     var n;
-    n = t, A.add(n), u.Z.wait(() => (0, c.IB)(t).catch(d.VqG))
+    n = t, N.add(n), u.Z.wait(() => (0, c.IB)(t).catch(d.VqG))
   }
 }
 class U extends(i = l.ZP.Store) {
@@ -69,7 +69,7 @@ class U extends(i = l.ZP.Store) {
     return m[e]
   }
   isResolving(e) {
-    return A.has(e)
+    return N.has(e)
   }
   getEligibleUsers() {
     return R
@@ -104,9 +104,9 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
       userTrialOfferId: t,
       recipientId: n
     } = e;
-    if (!S && (0, c.C$)(), !f.has(n) && (0, c.Ve)(n), !A.has(t)) {
+    if (!S && (0, c.C$)(), !f.has(n) && (0, c.Ve)(n), !N.has(t)) {
       var i;
-      i = t, A.add(i), u.Z.wait(() => (0, c.IB)(t).catch(d.VqG))
+      i = t, N.add(i), u.Z.wait(() => (0, c.IB)(t).catch(d.VqG))
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
@@ -162,13 +162,13 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
     let {
       userTrialOffer: t
     } = e;
-    null != t && (A.delete(t.id), N.add(t.id), m[t.id] = t)
+    null != t && (N.delete(t.id), A.add(t.id), m[t.id] = t)
   },
   BILLING_REFERRAL_RESOLVE_FAIL: function(e) {
     let {
       userTrialOfferId: t
     } = e;
-    A.delete(t), N.add(t)
+    N.delete(t), A.add(t)
   },
   REFERRALS_FETCH_ELIGIBLE_USER_START: function() {
     g = !0
@@ -192,6 +192,6 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
   },
   LOAD_MESSAGES_AROUND_SUCCESS: P,
   LOGOUT: function() {
-    E = null, I = {}, T = [], f = new Set, S = !1, A = new Set, N = new Set, m = {}, O = 0, p = null, R = [], g = !1, C = 0, v = !1, L = null, h = new Map
+    E = null, I = {}, T = [], f = new Set, S = !1, N = new Set, A = new Set, m = {}, O = 0, p = null, R = [], g = !1, C = 0, v = !1, L = null, h = new Map
   }
 })

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(197115),
   f = n(587446),
   S = n(594174),
-  A = n(626135),
-  N = n(74538),
+  N = n(626135),
+  A = n(74538),
   m = n(327943),
   O = n(539873),
   p = n(981631),
@@ -36,12 +36,12 @@ let L = () => {
   },
   D = () => {
     var e, t, n;
-    let r = (0, a.e7)([S.default], () => N.ZP.isPremium(S.default.getCurrentUser())),
+    let r = (0, a.e7)([S.default], () => A.ZP.isPremium(S.default.getCurrentUser())),
       s = (0, T.N)(),
       o = (null == s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === g.Si.TIER_2;
     return (0, i.jsx)(h.Z, {
       size: l.Button.Sizes.MEDIUM,
-      buttonText: r ? C.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : o ? (0, N.Rt)({
+      buttonText: r ? C.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : o ? (0, A.Rt)({
         intervalType: null == s ? void 0 : null === (t = s.subscription_trial) || void 0 === t ? void 0 : t.interval,
         intervalCount: null == s ? void 0 : null === (n = s.subscription_trial) || void 0 === n ? void 0 : n.interval_count
       }) : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
@@ -110,7 +110,7 @@ function y(e) {
     shouldEditorAnimate: t && !d.Z.useReducedMotion
   }));
   r.useEffect(() => {
-    if (!!_) A.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+    if (!!_) N.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
       type: g.cd.APP_ICON_UPSELL,
       location_stack: s
     })

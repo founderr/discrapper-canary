@@ -36,8 +36,8 @@ var i, r, s = n(735250),
   h = n(952265),
   f = n(21340),
   S = n(922770),
-  A = n(893776),
-  N = n(434650),
+  N = n(893776),
+  A = n(434650),
   m = n(367907),
   O = n(702493),
   p = n(728345),
@@ -175,8 +175,8 @@ function en(e) {
       isTrustedName: eh = !1,
       isEmbeddedFlow: ef = !1,
       inApp: eS = !1,
-      callback: eA,
-      callbackWithoutPost: eN,
+      callback: eN,
+      callbackWithoutPost: eA,
       onClose: em,
       disclosures: eO
     } = e,
@@ -184,7 +184,7 @@ function en(e) {
     eR = (0, u.TH)(),
     eg = (0, I.e7)([C.Z], () => C.Z.hasLoadedExperiments);
   o.useEffect(() => {
-    P.default.isAuthenticated() && !eg && A.Z.getExperiments()
+    P.default.isAuthenticated() && !eg && N.Z.getExperiments()
   }, [eg]);
   let [eC, ev] = o.useState(null), [eL, eD] = o.useState(null), [eM, eP] = o.useState(null), [ey, eU] = o.useState(!1), [eb, eG] = o.useState(!eE), ew = null == eC ? void 0 : eC.guilds, [ex, eB] = o.useState(null != eu ? eu : null), [ek, eV] = o.useState(null != e_ ? e_ : null), [eZ, eH] = o.useState(y.Hn), eF = o.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new M.Z(eC.user) : null, [null == eC ? void 0 : eC.user]), eY = o.useMemo(() => null == ew ? void 0 : ew.find(e => e.id === ex), [ew, ex]), [ej, eW] = o.useState(null), eK = o.useMemo(() => {
     var e;
@@ -250,12 +250,12 @@ function en(e) {
     }
   }, [W, eR, eO, e2, eP, e4, eD]);
   let e7 = o.useCallback(async e => {
-      if (null != eN) {
-        eN(e);
+      if (null != eA) {
+        eA(e);
         return
       }
       if (!e && !eT) {
-        null != eA && (eA({
+        null != eN && (eN({
           application: null == eC ? void 0 : eC.application,
           guild: eY
         }), null == em || em());
@@ -282,7 +282,7 @@ function en(e) {
           guildId: ej === c.Y.GUILD_INSTALL && null != ex ? ex : void 0,
           channelId: ej === c.Y.GUILD_INSTALL && null != ek ? ek : void 0
         });
-        if (e && await (0, R.x9)(W, e1), null != eA) eA({
+        if (e && await (0, R.x9)(W, e1), null != eN) eN({
           application: null == eC ? void 0 : eC.application,
           location: t.location,
           guild: eY
@@ -303,7 +303,7 @@ function en(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? eP(Error(e.message)) : eP(e), eD(1), eU(!1)
       }
-    }, [eN, eT, eA, null == eC ? void 0 : eC.application, eY, em, W, eQ, $, ee, et, en, ei, er, e$, eZ, ex, ej, ek, e1]),
+    }, [eA, eT, eN, null == eC ? void 0 : eC.application, eY, em, W, eQ, $, ee, et, en, ei, er, e$, eZ, ex, ej, ek, e1]),
     e5 = o.useRef(!1),
     e6 = o.useCallback(async () => {
       if (!P.default.isAuthenticated()) {
@@ -369,7 +369,7 @@ function en(e) {
   let e9 = o.useCallback(e => {
       e && eG(!0)
     }, []),
-    te = (0, N.O)(e9);
+    te = (0, A.O)(e9);
   if (eM instanceof Error) return {
     body: (0, s.jsx)(K.Lk, {
       message: eM.message

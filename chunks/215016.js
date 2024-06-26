@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(40851),
   f = n(29909),
   S = n(132748),
-  A = n(981631),
-  N = n(689938),
+  N = n(981631),
+  A = n(689938),
   m = n(13122);
 
 function O(e, t, n) {
@@ -185,7 +185,7 @@ class y extends r.PureComponent {
       resultType: e,
       data: t
     } = this.props;
-    e === A.wI2.FAVORITES && ((0, E.t1)(A.wI2.FAVORITES), (0, E.hM)(t, A.wI2.FAVORITES, {
+    e === N.wI2.FAVORITES && ((0, E.t1)(N.wI2.FAVORITES), (0, E.hM)(t, N.wI2.FAVORITES, {
       limit: null
     }))
   }
@@ -235,15 +235,15 @@ class y extends r.PureComponent {
       fade: !0,
       children: (0, i.jsxs)("div", {
         className: m.emptyHints,
-        children: [this.renderEmptyFavorite(N.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(N.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(N.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({
+        children: [this.renderEmptyFavorite(A.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(A.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(A.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({
           length: 15
         }).map((e, t) => (0, i.jsx)(r.Fragment, {
           children: this.renderEmptyFavorite()
-        }, t)), this.renderEmptyFavorite(N.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({
+        }, t)), this.renderEmptyFavorite(A.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({
           length: 16
         }).map((e, t) => (0, i.jsx)(r.Fragment, {
           children: this.renderEmptyFavorite()
-        }, t)), this.renderEmptyFavorite(N.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
+        }, t)), this.renderEmptyFavorite(A.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
       })
     })
   }
@@ -254,8 +254,8 @@ class y extends r.PureComponent {
       query: n,
       resultType: r
     } = this.props;
-    return 0 === e.length && t === n && r !== A.wI2.TRENDING_GIFS ? r === A.wI2.FAVORITES ? this.renderEmptyFavorites() : (0, i.jsx)(T.Z, {
-      message: N.Z.Messages.NO_GIF_SEARCH_RESULTS,
+    return 0 === e.length && t === n && r !== N.wI2.TRENDING_GIFS ? r === N.wI2.FAVORITES ? this.renderEmptyFavorites() : (0, i.jsx)(T.Z, {
+      message: A.Z.Messages.NO_GIF_SEARCH_RESULTS,
       className: m.noResults
     }) : (0, i.jsx)(I.Z, {
       getItemGrid: this.getItemGrid,
@@ -343,7 +343,7 @@ class y extends r.PureComponent {
         children: o.length > 0 ? (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)("div", {
             className: m.endText,
-            children: N.Z.Messages.GIF_PICKER_RELATED_SEARCH
+            children: A.Z.Messages.GIF_PICKER_RELATED_SEARCH
           }), (0, i.jsx)("div", {
             className: m.searchSuggestions,
             children: o.map(e => (0, i.jsx)(d.Button, {
@@ -366,7 +366,7 @@ class y extends r.PureComponent {
         query: o,
         resultType: a
       } = this.props;
-      return 0 === r.length && (s !== o || a === A.wI2.TRENDING_GIFS) ? (0, i.jsx)(d.MasonryList, {
+      return 0 === r.length && (s !== o || a === N.wI2.TRENDING_GIFS) ? (0, i.jsx)(d.MasonryList, {
         fade: !0,
         className: m.results,
         sections: [g.length],

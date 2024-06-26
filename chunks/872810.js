@@ -59,8 +59,8 @@ var i = n(512722),
   h = n(944486),
   f = n(979651),
   S = n(934415),
-  A = n(70956),
-  N = n(557457),
+  N = n(70956),
+  A = n(557457),
   m = n(573261),
   O = n(26151),
   p = n(493683),
@@ -178,7 +178,7 @@ async function w(e, t, n) {
     })
   } catch (t) {
     let e;
-    429 === t.status && (e = t.body.retry_after * A.Z.Millis.SECOND), a.Z.dispatch({
+    429 === t.status && (e = t.body.retry_after * N.Z.Millis.SECOND), a.Z.dispatch({
       type: "STREAM_PREVIEW_FETCH_FAIL",
       streamKey: i,
       retryAfter: e
@@ -198,7 +198,7 @@ async function x(e) {
 }
 
 function B(e) {
-  (0, N.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
+  (0, A.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })

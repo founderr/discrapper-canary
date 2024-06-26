@@ -27,9 +27,9 @@ function f(e) {
     acceptFriendRequestColor: f,
     profileType: S
   } = e, {
-    trackUserProfileAction: A
+    trackUserProfileAction: N
   } = (0, d.KZ)(), {
-    originalFriendingEnabled: N,
+    originalFriendingEnabled: A,
     improvedFriendingEnabled: m
   } = (0, c.V)({
     location: "UserProfileFriendRequestBannerButtons"
@@ -40,7 +40,7 @@ function f(e) {
     user: t,
     color: "danger",
     location: g,
-    onAction: () => A({
+    onAction: () => N({
       action: "REMOVE_FRIEND",
       analyticsLocations: R
     })
@@ -66,7 +66,7 @@ function f(e) {
       ...e
     })
   });
-  if (p === T.OGo.PENDING_INCOMING) return m && S === I.y0.FULL_SIZE ? null : (m || N) && S !== I.y0.PANEL ? (0, i.jsx)(E.Z, {
+  if (p === T.OGo.PENDING_INCOMING) return m && S === I.y0.FULL_SIZE ? null : (m || A) && S !== I.y0.PANEL ? (0, i.jsx)(E.Z, {
     variant: "banner",
     icon: s.UserClockIcon,
     text: h.Z.Messages.FRIENDS_SECTION_PENDING,
@@ -80,7 +80,7 @@ function f(e) {
       }),
       text: h.Z.Messages.ACCEPT_FRIEND_REQUEST,
       onClick: () => {
-        A({
+        N({
           action: "ACCEPT_FRIEND_REQUEST"
         }), o.Z.addRelationship({
           userId: t.id,
@@ -95,7 +95,7 @@ function f(e) {
       icon: s.CloseSmallIcon,
       text: h.Z.Messages.IGNORE_FRIEND_REQUEST,
       onClick: () => {
-        A({
+        N({
           action: "IGNORE_FRIEND_REQUEST"
         }), o.Z.cancelFriendRequest(t.id, {
           location: g
@@ -106,14 +106,14 @@ function f(e) {
   return p === T.OGo.PENDING_OUTGOING && (!m || m && S === I.y0.BITE_SIZE) ? (0, i.jsx)(E.Z, {
     variant: "banner",
     icon: s.UserClockIcon,
-    text: m || N ? h.Z.Messages.FRIENDS_SECTION_PENDING : h.Z.Messages.REQUEST_SENT,
+    text: m || A ? h.Z.Messages.FRIENDS_SECTION_PENDING : h.Z.Messages.REQUEST_SENT,
     disabled: !0
   }) : !m || m && S === I.y0.BITE_SIZE ? (0, i.jsx)(E.Z, {
     variant: "banner",
     icon: s.UserPlusIcon,
     text: h.Z.Messages.ADD_FRIEND,
     onClick: () => {
-      A({
+      N({
         action: "SEND_FRIEND_REQUEST"
       }), o.Z.addRelationship({
         userId: t.id,

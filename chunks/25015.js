@@ -24,8 +24,8 @@ function c(e, t) {
     allowLinks: h = !1,
     allowDevLinks: f = !1,
     allowSubtext: S = !1,
-    previewLinkTarget: A = !1,
-    viewingChannelId: N
+    previewLinkTarget: N = !1,
+    viewingChannelId: A
   } = t, m = (0, r.p)();
   return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isUnsupported ? {
     content: u.Z.Messages.MESSAGE_UNSUPPORTED,
@@ -44,8 +44,8 @@ function c(e, t) {
     allowLinks: h,
     allowSubtext: S,
     allowDevLinks: f,
-    previewLinkTarget: A,
+    previewLinkTarget: N,
     shouldFilterKeywords: m,
-    viewingChannelId: N
-  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, c, d, E, I, T, h, A, S, m])
+    viewingChannelId: A
+  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, c, d, E, I, T, h, N, S, m])
 }

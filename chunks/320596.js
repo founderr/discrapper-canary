@@ -24,17 +24,17 @@ let c = e => {
   } = e, S = r.useRef(o.Z.reactParserFor({
     ...o.Z.defaultRules,
     link: a.s
-  })), [A, N] = r.useState(""), [m, O] = r.useState("");
+  })), [N, A] = r.useState(""), [m, O] = r.useState("");
   r.useEffect(() => {
     var e;
-    N(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
+    A(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
   }, [h]);
   let p = r.useCallback(e => {
     let t = null != I ? new RegExp(I) : null;
     null != t && null == t.exec(e) ? (O(l.Z.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), T({
       value: e,
       isValid: !1
-    })) : null != e && (O(""), N(e), T({
+    })) : null != e && (O(""), A(e), T({
       value: e,
       isValid: !0
     }))
@@ -53,7 +53,7 @@ let c = e => {
     }), (0, i.jsx)(s.TextArea, {
       maxLength: E,
       onChange: p,
-      value: A,
+      value: N,
       error: m,
       rows: d,
       placeholder: c,

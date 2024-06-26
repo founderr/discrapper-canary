@@ -27,8 +27,8 @@ let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         ...f
       } = e,
       S = "",
-      A = {};
-    if (null != E && (1 === E ? S = _.lineClamp1 : (S = _.lineClamp2Plus, A = {
+      N = {};
+    if (null != E && (1 === E ? S = _.lineClamp1 : (S = _.lineClamp2Plus, N = {
         lineClamp: E,
         WebkitLineClamp: E
       })), void 0 !== I) switch (I) {
@@ -42,12 +42,12 @@ let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         n = "white";
         break;
       default:
-        var N;
-        n = null === (N = u.Z.colors[d[I]]) || void 0 === N ? void 0 : N.css
+        var A;
+        n = null === (A = u.Z.colors[d[I]]) || void 0 === A ? void 0 : A.css
     }
     let m = {
       color: n,
-      ...A,
+      ...N,
       ...f.style
     };
     return (0, i.jsx)(s, {

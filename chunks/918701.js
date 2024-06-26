@@ -23,7 +23,7 @@ n.d(t, {
     return K
   },
   Gh: function() {
-    return eA
+    return eN
   },
   Gs: function() {
     return Z
@@ -71,7 +71,7 @@ n.d(t, {
     return x
   },
   il: function() {
-    return eN
+    return eA
   },
   j8: function() {
     return B
@@ -141,8 +141,8 @@ var c = n(572004),
   h = n(960048),
   f = n(617136),
   S = n(687744),
-  A = n(497505),
-  N = n(242755),
+  N = n(497505),
+  A = n(242755),
   m = n(566078),
   O = n(312046),
   p = n(46140),
@@ -242,7 +242,7 @@ function y(e) {
             let t = {};
             for (let n in e) {
               let i = parseInt(n);
-              A.xw.has(i) && (t[i] = e[n])
+              N.xw.has(i) && (t[i] = e[n])
             }
             return t
           }(t.reward_redemption_instructions_by_platform),
@@ -255,7 +255,7 @@ function y(e) {
         },
         rewardsConfig: (0, S.Q)(e.rewards_config),
         rewardCodeExpiresAt: e.reward_code_expires_at,
-        rewardCodePlatforms: e.reward_code_platforms.filter(e => A.xw.has(e)),
+        rewardCodePlatforms: e.reward_code_platforms.filter(e => N.xw.has(e)),
         assets: {
           rewardTile: (i = e.assets).reward_tile,
           hero: i.hero,
@@ -357,15 +357,15 @@ function Y(e, t) {
 }
 let j = e => {
   switch (e) {
-    case A.y$.XBOX:
+    case N.y$.XBOX:
       return R.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
-    case A.y$.PLAYSTATION:
+    case N.y$.PLAYSTATION:
       return R.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION;
-    case A.y$.SWITCH:
+    case N.y$.SWITCH:
       return R.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
-    case A.y$.PC:
+    case N.y$.PC:
       return R.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
-    case A.y$.CROSS_PLATFORM:
+    case N.y$.CROSS_PLATFORM:
       return R.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM
   }
 };
@@ -389,12 +389,12 @@ function W(e) {
 }
 
 function K(e) {
-  return e === A.jn.QUEST_BAR_V2 || Object.keys(p.a_).includes(A.jn[e])
+  return e === N.jn.QUEST_BAR_V2 || Object.keys(p.a_).includes(N.jn[e])
 }
 
 function z(e, t) {
   if (!K(t)) return !1;
-  let n = A.jn[t];
+  let n = N.jn[t];
   return (0, E.yE)(e.dismissedQuestContent, p.a_[n])
 }
 
@@ -522,7 +522,7 @@ function el(e) {
   } = e;
   return null != t && ea({
     quest: t
-  }) && (0, N.J)({
+  }) && (0, A.J)({
     location: n
   })
 }
@@ -558,7 +558,7 @@ function ed(e) {
     taskDetails: s
   } = e, o = n.config.messages.gameTitle, a = m.r.build(n.config).defaultReward.messages.nameWithArticle, {
     targetMinutes: l
-  } = null != s ? s : eN({
+  } = null != s ? s : eA({
     quest: n,
     location: i
   }), u = e_(n, p.S7.IN_HOUSE_CONSOLE_QUEST), _ = X(n.config), c = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
@@ -674,7 +674,7 @@ let eI = (e, t) => {
       quest: i
     })
   },
-  eA = e => (0, s.EQ)(e).with({
+  eN = e => (0, s.EQ)(e).with({
     config: {
       configVersion: 1
     }
@@ -686,7 +686,7 @@ let eI = (e, t) => {
     quest: e,
     consoleOnly: !0
   }) : null).exhaustive(),
-  eN = e => {
+  eA = e => {
     let {
       quest: t,
       location: n

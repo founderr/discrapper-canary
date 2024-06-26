@@ -20,8 +20,8 @@ var i = n(668781),
   h = n(307091),
   f = n(374065),
   S = n(917107),
-  A = n(89425),
-  N = n(275920),
+  N = n(89425),
+  A = n(275920),
   m = n(197386),
   O = n(701488),
   p = n(981631),
@@ -67,12 +67,12 @@ async function g(e) {
   let w = (0, S.Z)(v),
     x = O.wP.includes(b.type);
   if (w) {
-    if (!await (0, A.Z)({
+    if (!await (0, N.Z)({
         channelId: v,
         bypassChangeModal: null != g
       })) return !1
   } else if (!(0, d.WS)(b, !0, "handleStartEmbeddedActivity") || !x) return !1;
-  return I.J$(v, U.id, M), (0, m.Z)(L, v), (0, N.Z)({
+  return I.J$(v, U.id, M), (0, m.Z)(L, v), (0, A.Z)({
     type: p.q5t.LAUNCH,
     userId: y.id,
     applicationId: U.id,

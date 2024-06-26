@@ -2,10 +2,10 @@
 let i;
 n.d(t, {
   RI: function() {
-    return A
+    return N
   },
   jy: function() {
-    return N
+    return A
   }
 });
 var r = n(570140),
@@ -24,12 +24,12 @@ var r = n(570140),
   f = n(958185),
   S = n(981631);
 
-function A(e) {
+function N(e) {
   let t = null != e ? e : i;
   null != t && _.Z.isOpen(t) && r.Z.wait(() => s.Cp(t))
 }
 
-function N(e) {
+function A(e) {
   let t = null != e ? e : i;
   null != t && _.Z.isOpen(t) && r.Z.wait(() => s.$Z(t))
 }
@@ -53,7 +53,7 @@ function O() {
   return (0, f.Z)({
     LayerStore: u.Z,
     PopoutWindowStore: a.Z
-  }) ? A() : N()
+  }) ? N() : A()
 }
 class p extends o.Z {
   _initialize() {

@@ -4,7 +4,7 @@ n.d(t, {
     return g
   },
   LO: function() {
-    return A
+    return N
   },
   S1: function() {
     return f
@@ -19,7 +19,7 @@ n.d(t, {
     return C
   },
   cG: function() {
-    return N
+    return A
   },
   li: function() {
     return m
@@ -80,7 +80,7 @@ function S() {
   E.Z.destroy()
 }
 
-function A(e) {
+function N(e) {
   let {
     application: t,
     branchId: n,
@@ -110,7 +110,7 @@ function A(e) {
   })
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   (0, I.l)(e.id, t).then(() => {
     r.Z.dispatch({
       type: "DISPATCH_APPLICATION_REPAIR",

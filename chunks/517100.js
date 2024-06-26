@@ -11,13 +11,13 @@ var i, r, s, o, a = n(442837),
   h = n(65154);
 let f = Date.now(),
   S = !1,
-  A = !1,
   N = !1,
+  A = !1,
   m = !1,
   O = !1;
 
 function p() {
-  return N || m || (0, E.isAndroid)() && O
+  return A || m || (0, E.isAndroid)() && O
 }
 
 function R() {
@@ -28,10 +28,10 @@ function R() {
   }) : S && l.Z.dispatch({
     type: "IDLE",
     idle: !1
-  }), Date.now() - f > Math.min(c.CM.getSetting() * d.Z.Millis.SECOND, T.OSm) || p() ? A || l.Z.dispatch({
+  }), Date.now() - f > Math.min(c.CM.getSetting() * d.Z.Millis.SECOND, T.OSm) || p() ? N || l.Z.dispatch({
     type: "AFK",
     afk: !0
-  }) : A && l.Z.dispatch({
+  }) : N && l.Z.dispatch({
     type: "AFK",
     afk: !1
   })
@@ -45,9 +45,9 @@ function R() {
     e instanceof Promise ? e.then(n) : n(e)
   }
 }(), _.Z.remotePowerMonitor.on("resume", () => {
-  N = !1, g({})
+  A = !1, g({})
 }), _.Z.remotePowerMonitor.on("suspend", () => {
-  N = !0, g({}), u.default.disconnect()
+  A = !0, g({}), u.default.disconnect()
 }), _.Z.remotePowerMonitor.on("lock-screen", () => {
   m = !0, g({})
 }), _.Z.remotePowerMonitor.on("unlock-screen", () => {
@@ -69,7 +69,7 @@ class C extends(o = a.ZP.Store) {
     return S
   }
   isAFK() {
-    return A
+    return N
   }
   getIdleSince() {
     return S ? f : null
@@ -85,7 +85,7 @@ s = "IdleStore", (r = "displayName") in(i = C) ? Object.defineProperty(i, r, {
     S = e.idle
   },
   AFK: function(e) {
-    A = e.afk
+    N = e.afk
   },
   SPEAKING: function(e) {
     let {

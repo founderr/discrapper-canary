@@ -48,9 +48,9 @@ class E extends(i = s.PureComponent) {
     } = this.props, {
       hovered: f,
       focused: S,
-      dragging: A
-    } = this.state, N = l.VoiceNormalIcon;
-    return o || I === d ? N = l.VoiceXIcon : I < E / 2 && (N = l.VoiceLowIcon), (0, r.jsxs)("div", {
+      dragging: N
+    } = this.state, A = l.VoiceNormalIcon;
+    return o || I === d ? A = l.VoiceXIcon : I < E / 2 && (A = l.VoiceLowIcon), (0, r.jsxs)("div", {
       className: a()(t, c.container),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({
@@ -73,7 +73,7 @@ class E extends(i = s.PureComponent) {
       onKeyDown: this.handleKeyDown,
       children: [(0, r.jsx)("div", {
         className: a()(c.volumeButtonSlider, n, {
-          [c.sliderVisible]: f || S || A
+          [c.sliderVisible]: f || S || N
         }),
         onMouseEnter: () => {
           clearTimeout(this._hoverTimeout), this.setState({
@@ -101,7 +101,7 @@ class E extends(i = s.PureComponent) {
         size: l.Button.Sizes.NONE,
         look: l.Button.Looks.BLANK,
         onClick: this.handleToggleMute,
-        children: (0, r.jsx)(N, {
+        children: (0, r.jsx)(A, {
           className: e
         })
       })]

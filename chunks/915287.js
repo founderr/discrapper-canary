@@ -32,8 +32,8 @@ function d(e, t, n, s) {
       onScroll: h,
       onResize: f = null,
       onContentResize: S = null,
-      dir: A = "ltr",
-      sections: N,
+      dir: N = "ltr",
+      sections: A,
       sectionHeight: m,
       rowHeight: O,
       footerHeight: p = 0,
@@ -70,7 +70,7 @@ function d(e, t, n, s) {
       className: T,
       specs: a,
       orientation: "vertical",
-      dir: A
+      dir: N
     });
     let {
       spacerTop: ee,
@@ -81,7 +81,7 @@ function d(e, t, n, s) {
       forceUpdateOnChunkChange: es,
       anchor: eo
     } = (0, _.aU)({
-      sections: N,
+      sections: A,
       sectionHeight: m,
       rowHeight: O,
       footerHeight: p,
@@ -138,7 +138,7 @@ function d(e, t, n, s) {
           }
           return [0, 0]
         }, [])
-      }(N);
+      }(A);
     r.useImperativeHandle(I, () => ({
       getScrollerNode: () => Q.current,
       getScrollerState: $,

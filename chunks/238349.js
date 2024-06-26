@@ -16,8 +16,8 @@ var r, s, o, a, l = n(392711),
   h = n(592125),
   f = n(306680),
   S = n(944486),
-  A = n(823379),
-  N = n(709054),
+  N = n(823379),
+  A = n(709054),
   m = n(882252);
 let O = [],
   p = null,
@@ -42,8 +42,8 @@ function w(e) {
   return function(t, n) {
     if ((0, m.yv)(t)) return -1;
     if ((0, m.yv)(n)) return 1;
-    if (e === _.z.LATEST_ACTIVITY) return N.default.compare(G(n), G(t));
-    else return N.default.compare(n, t)
+    if (e === _.z.LATEST_ACTIVITY) return A.default.compare(G(n), G(t));
+    else return A.default.compare(n, t)
   }
 }
 
@@ -103,7 +103,7 @@ class Z extends(r = c.ZP.Store) {
   }
   getThreadIds(e, t, n) {
     let i = e !== R,
-      r = !(0, A.OL)(n, g),
+      r = !(0, N.OL)(n, g),
       s = t !== C;
     return R = e, g = n, C = t, i ? V({
       refreshThreadIds: !0

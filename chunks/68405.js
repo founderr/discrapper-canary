@@ -53,8 +53,8 @@ var i = n(392711),
   h = n(591759),
   f = n(668781),
   S = n(981631),
-  A = n(526761),
-  N = n(689938);
+  N = n(526761),
+  A = n(689938);
 let m = /-/g;
 
 function O(e) {
@@ -264,15 +264,15 @@ function b(e) {
     if (t.gifs[U(e.url)] = {
         ...e,
         order: i + 1
-      }, a.wK.toBinary(t).length > A.vY) return f.Z.show({
-      title: N.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: N.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
+      }, a.wK.toBinary(t).length > N.vY) return f.Z.show({
+      title: A.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+      body: A.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
     }), !1;
     let s = r().size(t.gifs);
     s > 2 && (t.hideTooltip = !0), I.default.track(S.rMx.GIF_FAVORITED, {
       total_num_favorited: s
     })
-  }, A.fy.INFREQUENT_USER_ACTION)
+  }, N.fy.INFREQUENT_USER_ACTION)
 }
 
 function G(e) {
@@ -280,5 +280,5 @@ function G(e) {
     e in t.gifs ? delete t.gifs[e] : delete t.gifs[U(e)], I.default.track(S.rMx.GIF_UNFAVORITED, {
       total_num_favorited: r().size(t.gifs)
     })
-  }, A.fy.INFREQUENT_USER_ACTION)
+  }, N.fy.INFREQUENT_USER_ACTION)
 }

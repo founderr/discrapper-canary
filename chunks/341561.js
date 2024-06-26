@@ -17,14 +17,14 @@ var r = n(952265),
   f = n(689938),
   S = n(611032);
 
-function A(e, t) {
+function N(e, t) {
   return (0, i.jsx)(u.ZP, {
     sticker: e,
     isInteracting: t,
     size: 40
   })
 }
-let N = {
+let A = {
   sentinel: T.Iv,
   stores: [a.Z],
   matches: (e, t, n, i, r) => n.length > 1,
@@ -143,7 +143,7 @@ let N = {
             sticker: n
           } = e;
           return {
-            renderSticker: A,
+            renderSticker: N,
             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
             sticker: n,
             key: n.id
@@ -205,4 +205,4 @@ let N = {
     }
   }
 };
-t.Z = N
+t.Z = A

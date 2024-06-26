@@ -22,10 +22,10 @@ function S(e) {
     parentModalKey: u
   } = e, f = r.useRef(null), {
     renderWindow: S,
-    windowDispatch: A
-  } = r.useContext(l.ZP), N = null != u, m = (0, o.Jw)(null != u ? u : ""), O = r.useCallback(e => {
+    windowDispatch: N
+  } = r.useContext(l.ZP), A = null != u, m = (0, o.Jw)(null != u ? u : ""), O = r.useCallback(e => {
     var t;
-    if (!N && (0, o.$s)() || N && !(m && n)) return;
+    if (!A && (0, o.$s)() || A && !(m && n)) return;
     let {
       target: i
     } = e;
@@ -38,12 +38,12 @@ function S(e) {
     d.y();
     let r = null === (t = (0, c.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
     (null == r || "BODY" === r.tagName) && _.S.dispatchToLastSubscribed(h.CkL.TEXTAREA_FOCUS)
-  }, [n, m, N]);
-  return r.useLayoutEffect(() => (S.addEventListener("mousedown", O), S.addEventListener("contextmenu", O), A.subscribe(h.CkL.POPOUT_CLOSE, d.y), () => {
-    S.removeEventListener("mousedown", O), S.removeEventListener("contextmenu", O), A.unsubscribe(h.CkL.POPOUT_CLOSE, d.y)
-  }), [O, S, A]), (0, a.useFocusLock)(f), r.useEffect(() => {
-    (!N && (0, o.$s)() || N && !m) && d.y()
-  }, [m, N]), (0, i.jsx)(I.Z, {
+  }, [n, m, A]);
+  return r.useLayoutEffect(() => (S.addEventListener("mousedown", O), S.addEventListener("contextmenu", O), N.subscribe(h.CkL.POPOUT_CLOSE, d.y), () => {
+    S.removeEventListener("mousedown", O), S.removeEventListener("contextmenu", O), N.unsubscribe(h.CkL.POPOUT_CLOSE, d.y)
+  }), [O, S, N]), (0, a.useFocusLock)(f), r.useEffect(() => {
+    (!A && (0, o.$s)() || A && !m) && d.y()
+  }, [m, A]), (0, i.jsx)(I.Z, {
     drawerRef: f,
     channel: t,
     entrypoint: E._b.TEXT

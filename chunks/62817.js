@@ -21,7 +21,7 @@ function S(e, t) {
   return null != n && (c[e] = n.filter(e => e.id !== t), delete d[t], delete E[t], n.length !== c[e].length)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = c[e];
   if (null == n) return !1;
   c[e] = n.map(e => e.id === t.id ? {
@@ -34,7 +34,7 @@ function A(e, t) {
     ...t
   })
 }
-class N extends(i = a.ZP.Store) {
+class A extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(u.Z)
   }
@@ -52,12 +52,12 @@ class N extends(i = a.ZP.Store) {
     if (null != e) return T[e]
   }
 }
-o = "UploadStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "UploadStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new N(l.Z, {
+}) : r[s] = o, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function() {
     T = {}
   },
@@ -88,14 +88,14 @@ o = "UploadStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
       channelId: t,
       file: n
     } = e;
-    A(t, n)
+    N(t, n)
   },
   UPLOAD_PROGRESS: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    A(t, n)
+    N(t, n)
   },
   UPLOAD_COMPLETE: function(e) {
     let {
@@ -134,7 +134,7 @@ o = "UploadStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
       channelId: t,
       file: n
     } = e, i = E[n.id];
-    null != i && h(i.nonce, n), A(t, n)
+    null != i && h(i.nonce, n), N(t, n)
   },
   UPLOAD_RESTORE_FAILED_UPLOAD: function(e) {
     let {

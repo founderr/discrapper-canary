@@ -4,10 +4,10 @@ n.d(t, {
     return T
   },
   UV: function() {
-    return N
+    return A
   },
   WR: function() {
-    return A
+    return N
   },
   lr: function() {
     return f
@@ -83,7 +83,7 @@ let h = () => {
       e = null !== (t = n.body.offer) && void 0 !== t ? t : null
     } catch (e) {}
     return e
-  }, A = e => {
+  }, N = e => {
     let [t, n] = i.useState(!1), [r, s] = i.useState(!1), [o, a] = i.useState(null);
     if (e) return {
       churnUserDiscountOffer: o,
@@ -100,7 +100,7 @@ let h = () => {
       churnUserDiscountOffer: o,
       isFetchingChurnDiscountOffer: r
     }
-  }, N = () => {
+  }, A = () => {
     let {
       enabled: e
     } = _.Z.useExperiment({

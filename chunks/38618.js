@@ -12,8 +12,8 @@ var i, r, s, o, a = n(392711),
   h = n(523746),
   f = n(592125),
   S = n(131951),
-  A = n(19780),
-  N = n(936349),
+  N = n(19780),
+  A = n(936349),
   m = n(944486),
   O = n(885110),
   p = n(959457),
@@ -43,7 +43,7 @@ async function x(e) {
         guildId: e.getGuildId(),
         channelId: n
       })
-    } else A.Z.setLastSessionVoiceChannelId(null != n ? n : null), c.default.selectVoiceChannel(null)
+    } else N.Z.setLastSessionVoiceChannelId(null != n ? n : null), c.default.selectVoiceChannel(null)
   }
   C.GC.update(t, !0), G = !1
 }
@@ -219,7 +219,7 @@ o = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
     if (C.Wb.isSessionEstablished()) {
       var r, s;
       let e = null != n ? null === (r = f.Z.getChannel(i)) || void 0 === r ? void 0 : r.rtcRegion : null === (s = h.Z.getCall(i)) || void 0 === s ? void 0 : s.region;
-      C.Wb.streamCreate(t, n, i, null != e ? e : N.Z.getPreferredRegion())
+      C.Wb.streamCreate(t, n, i, null != e ? e : A.Z.getPreferredRegion())
     }
     return !1
   },
@@ -284,7 +284,7 @@ o = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
     if (C.Wb.connectionState !== g.Z.WILL_RECONNECT) C.Wb.resetSocketOnError(e.args)
   },
   RTC_SPEED_TEST_START_TEST: function() {
-    return C.Wb.isSessionEstablished() && C.Wb.speedTestCreate(N.Z.getPreferredRegion()), !1
+    return C.Wb.isSessionEstablished() && C.Wb.speedTestCreate(A.Z.getPreferredRegion()), !1
   },
   RTC_SPEED_TEST_STOP_TEST: function() {
     return C.Wb.isSessionEstablished() && C.Wb.speedTestDelete(), !1

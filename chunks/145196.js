@@ -68,7 +68,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     url: t,
     fileName: n,
@@ -107,7 +107,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     language: t,
     setLanguage: n
@@ -225,11 +225,11 @@ function O(e) {
         })]
       }) : null, (0, i.jsx)("div", {
         className: T.footerGap
-      }), (0, i.jsx)(A, {
+      }), (0, i.jsx)(N, {
         url: n,
         fileName: r,
         fileSize: s
-      }), (0, i.jsx)(N, {
+      }), (0, i.jsx)(A, {
         language: E,
         setLanguage: h
       })]
@@ -270,11 +270,11 @@ function p(e) {
         variant: "text-sm/normal",
         children: [(0, i.jsx)("div", {
           className: T.footerGap
-        }), (0, i.jsx)(A, {
+        }), (0, i.jsx)(N, {
           url: t,
           fileName: n,
           fileSize: s
-        }), (0, i.jsx)(N, {
+        }), (0, i.jsx)(A, {
           language: d,
           setLanguage: E
         })]
@@ -294,7 +294,7 @@ t.Z = r.memo(function(e) {
   } = e, [c, E] = r.useState(!1), [I, h] = r.useState(n.split(".").slice(-1)[0]), {
     fileContents: f,
     bytesLeft: S,
-    hadError: A
+    hadError: N
   } = function(e, t) {
     let [n, i] = r.useState(!1), [s, o] = r.useState(null), [a, l] = r.useState(1);
     return r.useEffect(() => {
@@ -332,7 +332,7 @@ t.Z = r.memo(function(e) {
       hadError: n
     }
   }(t, a);
-  return A ? (0, i.jsx)(d.Z, {
+  return N ? (0, i.jsx)(d.Z, {
     url: t,
     fileName: n,
     fileSize: s,

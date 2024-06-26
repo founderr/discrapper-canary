@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
     return i
   },
   getNativePlatform: function() {
-    return A
+    return N
   },
   getOS: function() {
-    return N
+    return A
   },
   getPlatform: function() {
     return f
@@ -96,7 +96,7 @@ function S() {
   return a
 }
 
-function A() {
+function N() {
   switch (a) {
     case "ios":
     case "android":
@@ -106,7 +106,7 @@ function A() {
   }
 }
 
-function N() {
+function A() {
   let {
     userAgent: e
   } = window.navigator;

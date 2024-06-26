@@ -47,8 +47,8 @@ var i = n(470079),
   h = n(822179),
   f = n(926491),
   S = n(373228),
-  A = n(378233),
-  N = n(981631),
+  N = n(378233),
+  A = n(981631),
   m = n(689938);
 let O = e => {
     C();
@@ -59,7 +59,7 @@ let O = e => {
   },
   p = e => {
     let t = o.Wp.useSetting();
-    return (0, A.WD)(t, e)
+    return (0, N.WD)(t, e)
   },
   R = e => {
     let {
@@ -79,11 +79,11 @@ let O = e => {
         T = [],
         h = 0,
         f = 0,
-        N = 0;
+        A = 0;
       if (0 !== o) {
         let i = function(t, n) {
           let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = (0, A.J8)(t[0]) ? l.Z.getGuild(t[0].guild_id) : void 0,
+            r = (0, N.J8)(t[0]) ? l.Z.getGuild(t[0].guild_id) : void 0,
             {
               canCreateExpressions: o
             } = (0, s.Gw)(r),
@@ -100,11 +100,11 @@ let O = e => {
               l = t.slice(o, a).map((e, t) => ({
                 type: S.al.STICKER,
                 sticker: e,
-                packId: (0, A.jl)(e) ? e.pack_id : "TODO - fix",
+                packId: (0, N.jl)(e) ? e.pack_id : "TODO - fix",
                 gridSectionIndex: f,
                 rowIndex: h,
                 columnIndex: t,
-                visibleRowIndex: N,
+                visibleRowIndex: A,
                 category: n
               }));
             f > O && f > _ && null != r && p > t.length && l.push({
@@ -114,8 +114,8 @@ let O = e => {
               gridSectionIndex: f,
               rowIndex: h,
               columnIndex: l.length,
-              visibleRowIndex: N
-            }), !i && (N++, T.push(l), E.push(l.length)), h++
+              visibleRowIndex: A
+            }), !i && (A++, T.push(l), E.push(l.length)), h++
           }
           f++
         };
@@ -183,7 +183,7 @@ let O = e => {
           name: t.name,
           stickers: []
         }), null != o && !E.BT({
-          permission: N.Plq.USE_EXTERNAL_EMOJIS,
+          permission: A.Plq.USE_EXTERNAL_EMOJIS,
           user: o,
           context: e
         }) && (i = i.filter(t => t.id === e.getGuildId()))
@@ -225,7 +225,7 @@ let y = e => {
       a = v(e);
     return i.useMemo(() => {
       var i;
-      let r = n.map(A.z),
+      let r = n.map(N.z),
         l = {
           type: S.Ih.FAVORITE,
           id: S.Ih.FAVORITE,
@@ -237,11 +237,11 @@ let y = e => {
         id: S.Ih.RECENT,
         name: m.Z.Messages.STICKER_CATEGORY_RECENT,
         stickers: null !== (i = null == s ? void 0 : s.filter(t => {
-          if ((0, A.J8)(t)) {
+          if ((0, N.J8)(t)) {
             var i, r;
             return null !== (r = null === (i = f.Z.getStickersByGuildId(t.guild_id)) || void 0 === i ? void 0 : i.some(e => e.id === t.id)) && void 0 !== r && r && (0, I.cO)(t, o, e) !== I.eb.NONSENDABLE
           }
-          if ((0, A.jl)(t)) return n.some(e => e.id === t.pack_id)
+          if ((0, N.jl)(t)) return n.some(e => e.id === t.pack_id)
         })) && void 0 !== i ? i : []
       }, ...a, ...r]
     }, [n, t, s, a, o, e])
@@ -251,7 +251,7 @@ let y = e => {
       n = (0, r.e7)([f.Z], () => f.Z.getStickerById(e.id)),
       [s, o] = i.useState(!0),
       [a, l] = i.useState(!1),
-      u = (0, A.J8)(e) || (0, A.jl)(e);
+      u = (0, N.J8)(e) || (0, N.jl)(e);
     return (i.useEffect(() => {
       (async () => {
         if (t && !u && null == n && s && !a) {

@@ -50,24 +50,24 @@ let f = r.memo(function(e) {
       onMouseEnter: E,
       textVariant: T = "text-xs/semibold",
       textColor: S = "text-normal",
-      badgeSize: A = I.NC.SIZE_12,
-      inline: N = !0
+      badgeSize: N = I.NC.SIZE_12,
+      inline: A = !0
     } = e;
     return (0, d.Z)("base_clan_tag_chiplet") ? (0, i.jsx)(l.Clickable, {
       tag: "span",
       tabIndex: null == _ ? -1 : void 0,
       onClick: _,
       onMouseEnter: E,
-      className: o()(h.chipletContainerInner, N && h.chipletContainerInline, null != _ && h.clickable, s),
+      className: o()(h.chipletContainerInner, A && h.chipletContainerInline, null != _ && h.clickable, s),
       children: (0, i.jsxs)(l.Text, {
         variant: T,
         color: S,
         tag: "span",
         className: o()(h.text, a),
         children: [null != r && "string" == typeof r ? (0, i.jsx)(f, {
-          src: (0, c.ky)(t, r, A),
+          src: (0, c.ky)(t, r, N),
           tag: null == n ? void 0 : n.toString(),
-          size: A,
+          size: N,
           className: u
         }) : r, (0, i.jsx)("span", {
           className: h.unselectable,
@@ -76,14 +76,14 @@ let f = r.memo(function(e) {
       })
     }) : null
   }),
-  A = r.memo(function(e) {
+  N = r.memo(function(e) {
     var t, n;
     let {
       clan: s,
       userId: o,
       children: c,
       profileViewedAnalytics: d
-    } = e, I = (0, a.e7)([u.default], () => u.default.getUser(o), [o]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : s, [f, S] = (0, _.L_)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
+    } = e, I = (0, a.e7)([u.default], () => u.default.getUser(o), [o]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : s, [f, S] = (0, _.L_)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), N = r.useCallback(() => {
       S()
     }, [S]);
     return (0, i.jsx)(l.Popout, {
@@ -111,7 +111,7 @@ let f = r.memo(function(e) {
         },
         onMouseEnter: () => {
           var t;
-          A(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
+          N(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
         },
         children: c
       })
@@ -130,7 +130,7 @@ t.ZP = r.memo(function(e) {
     disableGuildProfile: I = !1,
     inline: T = !0,
     profileViewedAnalytics: f
-  } = e, N = (0, a.e7)([u.default], () => u.default.getUser(r), [r]), m = null !== (t = null == N ? void 0 : N.clan) && void 0 !== t ? t : n, {
+  } = e, A = (0, a.e7)([u.default], () => u.default.getUser(r), [r]), m = null !== (t = null == A ? void 0 : A.clan) && void 0 !== t ? t : n, {
     tag: O,
     badge: p,
     guildId: R
@@ -144,7 +144,7 @@ t.ZP = r.memo(function(e) {
     textColor: d,
     badgeSize: E,
     inline: T
-  }) : (0, i.jsx)(A, {
+  }) : (0, i.jsx)(N, {
     clan: m,
     userId: r,
     profileViewedAnalytics: f,

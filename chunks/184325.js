@@ -22,8 +22,8 @@ var o = n(120356),
   h = n(785717),
   f = n(221292),
   S = n(290421),
-  A = n(318661),
-  N = n(228168),
+  N = n(318661),
+  A = n(228168),
   m = n(981631),
   O = n(689938),
   p = n(131010),
@@ -39,14 +39,14 @@ function g(e) {
     isTryItOutFlow: g,
     onBadgeClick: C,
     size: v = 0
-  } = e, L = (0, A.ZP)(t.id, n), {
+  } = e, L = (0, N.ZP)(t.id, n), {
     analyticsLocations: D
   } = (0, c.ZP)(_.Z.BADGE), {
     trackUserProfileAction: M,
     ...P
   } = (0, h.KZ)(), y = (0, S.Z)(L).map(e => ({
     ...e,
-    src: (0, N.jC)(e.icon)
+    src: (0, A.jC)(e.icon)
   }));
   if (t.isClyde()) return (0, s.jsx)("div", {
     className: a()(i, p.container, p.clydeBadgeList),

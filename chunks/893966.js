@@ -12,11 +12,11 @@ var i, r, s, o, a = n(442837),
   h = n(44715),
   f = n(327999),
   S = n(981631);
-let A = !1,
-  N = {};
+let N = !1,
+  A = {};
 
 function m(e) {
-  return null == N[e] && (N[e] = new I.P(e)), N[e]
+  return null == A[e] && (A[e] = new I.P(e)), A[e]
 }
 
 function O(e) {
@@ -116,9 +116,9 @@ o = "MemberSafetyStore", (s = "displayName") in(r = v) ? Object.defineProperty(r
 }) : r[s] = o;
 let L = new v(l.Z, {
   CONNECTION_OPEN: function(e) {
-    return A ? A = !1 : ! function() {
+    return N ? N = !1 : ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      for (let t in N) O(t, e)
+      for (let t in A) O(t, e)
     }(!0), C(e)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -130,7 +130,7 @@ let L = new v(l.Z, {
       members: n
     } = e;
     if (null == t || null == c.Z.getGuild(t)) return !1;
-    A = !0;
+    N = !0;
     let i = m(t),
       r = [];
     for (let e of n) null == i.getMember(e.userId) && r.push(e);
@@ -140,7 +140,7 @@ let L = new v(l.Z, {
     let {
       guildMembers: t
     } = e, n = !1;
-    return A = !0, E.default.entries(t).forEach(e => {
+    return N = !0, E.default.entries(t).forEach(e => {
       let [t, i] = e;
       n = m(t).updateClientMembers(Object.values(i)) || n
     }), n
@@ -323,9 +323,9 @@ let L = new v(l.Z, {
     }, {
       memberIds: [],
       memberSupplementals: []
-    }), A = (0, h.Qu)(u, I);
+    }), N = (0, h.Qu)(u, I);
     (0, f.nf)(u, E);
-    let N = d.updateSearchedMembersByMemberIds(E);
+    let A = d.updateSearchedMembersByMemberIds(E);
     _.length > 0 && (a = _[0], l = _[_.length - 1]);
     let [O] = d.updatePaginationState({
       totalResultsCount: c,
@@ -340,7 +340,7 @@ let L = new v(l.Z, {
         })
       }
     }, !1);
-    return A || N || O
+    return N || A || O
   },
   MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function(e) {
     let {

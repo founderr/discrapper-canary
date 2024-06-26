@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(530618),
   f = n(454585),
   S = n(164946),
-  A = n(166625),
-  N = n(25990),
+  N = n(166625),
+  A = n(25990),
   m = n(594174),
   O = n(810090),
   p = n(272008),
@@ -39,7 +39,7 @@ var i = n(735250),
   y = n(789002);
 
 function U() {
-  let e = N.Z.getAllPending(),
+  let e = A.Z.getAllPending(),
     t = (0, S.ED)(e);
   return (0, c.Mn)(t).finally(c.si)
 }
@@ -54,16 +54,16 @@ function b(e) {
     reward: E,
     decoration: I,
     onUseNow: T
-  } = e, f = r.useRef(null), [S, A] = r.useState(null), N = r.useRef(new a.qA), O = (0, u.e7)([d.Z], () => d.Z.useReducedMotion), C = (0, u.e7)([m.default], () => m.default.getCurrentUser()), L = (0, g.j8)(l), M = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [y, U] = r.useState(M ? "claimed" : "loading");
+  } = e, f = r.useRef(null), [S, N] = r.useState(null), A = r.useRef(new a.qA), O = (0, u.e7)([d.Z], () => d.Z.useReducedMotion), C = (0, u.e7)([m.default], () => m.default.getCurrentUser()), L = (0, g.j8)(l), M = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [y, U] = r.useState(M ? "claimed" : "loading");
   r.useEffect(() => {
     !M && (0, p.QB)(l.id, R.y$.CROSS_PLATFORM, c).then(() => U("claimed")).catch(() => U("error"))
   }, [l, c, M]);
   let b = null == C || null == I || "loading" === y;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(a.O_, {
-      ref: A,
+      ref: N,
       className: P.confettiCanvas,
-      environment: N.current
+      environment: A.current
     }), (0, i.jsx)("div", {
       ref: f,
       children: (0, i.jsx)(_.ModalRoot, {
@@ -204,7 +204,7 @@ function w(e) {
     let {
       product: t,
       isFetching: n
-    } = (0, T.T)(e), {} = (0, A.Z)({}), i = r.useMemo(() => {
+    } = (0, T.T)(e), {} = (0, N.Z)({}), i = r.useMemo(() => {
       if (null == t || n) return null;
       let e = t.items.find(e => e.type === l.Z.AVATAR_DECORATION);
       return null == e ? null : e

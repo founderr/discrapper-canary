@@ -12,8 +12,8 @@ var i, r, s, o, a = n(348327),
   h = n(594190),
   f = n(106301),
   S = n(406066),
-  A = n(768419),
-  N = n(695346),
+  N = n(768419),
+  A = n(695346),
   m = n(581883),
   O = n(199902),
   p = n(272053),
@@ -25,7 +25,7 @@ let v = [],
 
 function D() {
   let e = [],
-    t = N.Ok.getSetting();
+    t = A.Ok.getSetting();
   null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.I)(t));
   let n = S.Z.getActivities();
   e.push(...n);
@@ -67,7 +67,7 @@ function D() {
       }
     })
   }
-  let D = A.Z.getActivity();
+  let D = N.Z.getActivity();
   null != D && e.push({
     type: g.IIU.LISTENING,
     ...D
@@ -86,7 +86,7 @@ function D() {
 }
 class M extends(i = c.ZP.Store) {
   initialize() {
-    this.waitFor(h.ZP, E.ZP, p.Z, O.Z, A.Z, m.Z, f.Z, R.Z), this.syncWith([S.Z, f.Z], () => D())
+    this.waitFor(h.ZP, E.ZP, p.Z, O.Z, N.Z, m.Z, f.Z, R.Z), this.syncWith([S.Z, f.Z], () => D())
   }
   getActivities() {
     return v

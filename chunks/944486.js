@@ -10,8 +10,8 @@ var _, c, d, E, I = n(392711),
   h = n(442837),
   f = n(433517),
   S = n(570140),
-  A = n(57132),
-  N = n(781157),
+  N = n(57132),
+  A = n(781157),
   m = n(703656),
   O = n(131704),
   p = n(823379),
@@ -89,7 +89,7 @@ function F(e, t) {
   }
   let n = null != v.Z.getGuild(t) ? t : null,
     i = !1;
-  a === e && (a = null, i = !0), !(0, A.cn)() && (U[x(n)] === e && (U[x(n)] = k(x(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[x(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
+  a === e && (a = null, i = !0), !(0, N.cn)() && (U[x(n)] === e && (U[x(n)] = k(x(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[x(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
 }
 
 function Y(e) {
@@ -167,7 +167,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
       channelId: n
     } = e;
     if (void 0 === t) return !1;
-    null == n && (!(0, A.cn)() || (0, N.Z0)(t)) && (n = k(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[x(t)] !== n && (b[x(t)] = U[x(t)], U[x(t)] = s), B()
+    null == n && (!(0, N.cn)() || (0, A.Z0)(t)) && (n = k(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[x(t)] !== n && (b[x(t)] = U[x(t)], U[x(t)] = s), B()
   },
   CHANNEL_CREATE: function(e) {
     let {

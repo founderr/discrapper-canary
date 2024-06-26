@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   G: function() {
-    return A
+    return N
   },
   S: function() {
     return S
@@ -34,10 +34,10 @@ function S(e, t) {
   let l = null === (n = u.Z.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
     T = null != l ? o.E.toDate(l) : void 0,
     S = null != T ? r()().diff(T, "days") : null,
-    A = h.indexOf(t);
-  if (-1 === A || !(null == S || S > f[A]) || h.find(e => !(0, a.un)(e)) !== t) return !1;
+    N = h.indexOf(t);
+  if (-1 === N || !(null == S || S > f[N]) || h.find(e => !(0, a.un)(e)) !== t) return !1;
   let {
-    showLifecycleUpsells: N
+    showLifecycleUpsells: A
   } = d.Z.getCurrentConfig({
     guildId: e,
     location: "7f5b67_1"
@@ -45,10 +45,10 @@ function S(e, t) {
     disable: s || !(0, E.wC)(e),
     autoTrackExposure: !0
   });
-  return N
+  return A
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = o.E.now();
   l.hW.updateAsync("userContent", e => {
     e.guildOnboardingUpsellDismissedAt = n

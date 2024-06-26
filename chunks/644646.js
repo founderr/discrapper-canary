@@ -20,8 +20,8 @@ t.Z = function(e) {
     className: t,
     quest: n,
     autoplay: s = !0,
-    learnMoreStyle: A = null
-  } = e, N = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), m = (0, E.gO)(n), O = r.useMemo(() => (0, E.nP)(m.name), [m.name]), p = r.useCallback(t => {
+    learnMoreStyle: N = null
+  } = e, A = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), m = (0, E.gO)(n), O = r.useMemo(() => (0, E.nP)(m.name), [m.name]), p = r.useCallback(t => {
     var i;
     (0, d._3)({
       questId: n.id,
@@ -32,15 +32,15 @@ t.Z = function(e) {
   }, [n.id, e]), R = r.useRef(null), g = r.useRef(s);
   r.useEffect(() => {
     var e, t;
-    O && !N && null != R.current && (s && !g.current ? null === (e = R.current) || void 0 === e || e.play() : !s && g.current && (null === (t = R.current) || void 0 === t || t.pause()), g.current = s)
-  }, [s, O, N]);
+    O && !A && null != R.current && (s && !g.current ? null === (e = R.current) || void 0 === e || e.play() : !s && g.current && (null === (t = R.current) || void 0 === t || t.pause()), g.current = s)
+  }, [s, O, A]);
   let C = O ? (0, i.jsx)(T.Fl, {
     id: "QuestRewardTile_rewardTileAnimated",
     children: e => (0, i.jsx)(c.Z, {
       ref: t => {
         e.current = t, R.current = t
       },
-      autoPlay: !N && s,
+      autoPlay: !A && s,
       loop: !0,
       muted: !0,
       playsInline: !0,
@@ -60,18 +60,18 @@ t.Z = function(e) {
       src: m.url
     })
   });
-  return null == A ? (0, i.jsx)("div", {
+  return null == N ? (0, i.jsx)("div", {
     className: o()(S.questRewardTile, t),
     children: C
   }) : (0, i.jsxs)(l.Clickable, {
     className: o()(S.questRewardTile, S.questRewardTileInteractive, t),
     onClick: p,
-    children: ["text" === A && (0, i.jsx)(l.Text, {
+    children: ["text" === N && (0, i.jsx)(l.Text, {
       color: "always-white",
       variant: "text-xs/normal",
       className: S.questRewardTileDetailsLearnMore,
       children: f.Z.Messages.QUESTS_LEARN_MORE_STACKED.format()
-    }), "icon" === A && (0, i.jsx)("div", {
+    }), "icon" === N && (0, i.jsx)("div", {
       className: S.questRewardTileDetailsLearnMore,
       children: (0, i.jsx)(l.CircleInformationIcon, {
         size: "xxs",

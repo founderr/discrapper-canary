@@ -4,7 +4,7 @@ n.d(t, {
     return i
   },
   cm: function() {
-    return A
+    return N
   }
 }), n(653041), n(47120);
 var i, r, s = n(498607),
@@ -39,7 +39,7 @@ function f(e) {
 function S() {
   return new a.h(h, f)
 }(r = i || (i = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", r.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", r.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
-class A {
+class N {
   reset() {
     this._membersMap.clear(), this._membersMap = S(), this.resetNewMemberTimestamp()
   }

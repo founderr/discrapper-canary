@@ -12,8 +12,8 @@ var r, s, o, a, l = n(392711),
   h = n(768419),
   f = n(314897),
   S = n(439170),
-  A = n(433355),
-  N = n(592125),
+  N = n(433355),
+  A = n(592125),
   m = n(486472),
   O = n(271383),
   p = n(430824),
@@ -34,7 +34,7 @@ function M(e, t) {
   let n = {};
   D.forEach(r => {
     var s;
-    r !== v.Z.getGuildId() && r !== R.Z.getGuildId() && r !== (null === (s = N.Z.getChannel(C.Z.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.h)(r).shouldPrioritizeSubscription && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
+    r !== v.Z.getGuildId() && r !== R.Z.getGuildId() && r !== (null === (s = A.Z.getChannel(C.Z.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.h)(r).shouldPrioritizeSubscription && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
   }), !u().isEmpty(n) && c.Z.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: n
@@ -42,12 +42,12 @@ function M(e, t) {
 }
 
 function P(e, t) {
-  return D.subscribeToGuild(e), null != t && A.ZP.getSection(t) === L.ULH.MEMBERS && y(e, t, d.KV)
+  return D.subscribeToGuild(e), null != t && N.ZP.getSection(t) === L.ULH.MEMBERS && y(e, t, d.KV)
 }
 
 function y(e, t, n) {
   if (t === S.oL) return D.subscribeChannel(e, t, n);
-  let i = N.Z.getChannel(t);
+  let i = A.Z.getChannel(t);
   if (null == i) return !1;
   let r = i.getGuildId();
   return (r !== e && e === L.I_8 && D.subscribeToGuild(r), null != i && i.isThread()) ? i.type === L.d4z.ANNOUNCEMENT_THREAD ? D.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && D.subscribeThreadMemberList(r, t, C.Z.getChannelId()) : D.subscribeChannel(r, t, n)
@@ -103,7 +103,7 @@ function w() {
 }
 class x extends(r = _.ZP.Store) {
   initialize() {
-    this.waitFor(N.Z, p.Z, v.Z, C.Z, R.Z, f.default, A.ZP, E.Z, I.Z), this.syncWith([h.Z], w), this.syncWith([A.ZP], G)
+    this.waitFor(A.Z, p.Z, v.Z, C.Z, R.Z, f.default, N.ZP, E.Z, I.Z), this.syncWith([h.Z], w), this.syncWith([N.ZP], G)
   }
   getSubscribedThreadIds() {
     return D.getSubscribedThreadIds()

@@ -26,8 +26,8 @@ var i = n(735250),
   h = n(275759),
   f = n(323588),
   S = n(753194),
-  A = n(598077),
-  N = n(671533),
+  N = n(598077),
+  A = n(671533),
   m = n(49012),
   O = n(981631),
   p = n(856651),
@@ -39,7 +39,7 @@ function C(e) {
   let r, s, _, {
     connectedAccount: E,
     theme: I,
-    locale: A,
+    locale: N,
     userId: C,
     className: v,
     showMetadata: L,
@@ -47,7 +47,7 @@ function C(e) {
   } = e;
   null == L && (L = !0);
   let M = null !== (n = E.metadata) && void 0 !== n ? n : {},
-    P = L ? (0, h.FI)(M[p.PC.CREATED_AT], A) : null,
+    P = L ? (0, h.FI)(M[p.PC.CREATED_AT], N) : null,
     y = (0, u.useToken)(a.Z.unsafe_rawColors.TWITTER).hex(),
     U = R.Z.Messages.CONNECTION_VERIFIED;
   if (L) switch (E.type) {
@@ -87,9 +87,9 @@ function C(e) {
         trusted: (null == b ? void 0 : b.type) !== O.ABu.DOMAIN
       }, e)
     },
-    children: (0, i.jsx)(N.Z, {
+    children: (0, i.jsx)(A.Z, {
       className: g.connectedAccountOpenIcon,
-      direction: N.Z.Directions.RIGHT
+      direction: A.Z.Directions.RIGHT
     })
   }));
   let w = (0, u.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
@@ -203,7 +203,7 @@ function v(e) {
             applicationHook: () => (0, i.jsxs)("div", {
               className: g.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(_.Z, {
-                user: new A.Z(t.application.bot),
+                user: new N.Z(t.application.bot),
                 size: u.AvatarSizes.SIZE_16
               }) : null, (0, i.jsx)(u.Text, {
                 variant: "text-xs/normal",

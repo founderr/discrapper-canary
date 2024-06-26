@@ -25,11 +25,11 @@ function I(e) {
     filteredSectionId: T,
     onSectionClick: h,
     applicationCommandListRef: f
-  } = e, S = r.useRef(null), A = r.useCallback((e, t) => {
+  } = e, S = r.useRef(null), N = r.useCallback((e, t) => {
     var n;
     let i = 8;
     return (null === (n = s[t + 1]) || void 0 === n ? void 0 : n.type) === _.Qi.BUILT_IN && (i += 8), 32 + i
-  }, [s]), N = r.useCallback((e, t) => {
+  }, [s]), A = r.useCallback((e, t) => {
     var n;
     if (!t) return 0 === e ? 0 : 8;
     return (null === (n = s[e + 1]) || void 0 === n ? void 0 : n.type) === _.Qi.BUILT_IN ? 0 : 8
@@ -83,9 +83,9 @@ function I(e) {
       className: d.list,
       renderCategoryListItem: m,
       rowCount: s.length,
-      categoryHeight: A,
+      categoryHeight: N,
       listPadding: E,
-      getScrollOffsetForIndex: N
+      getScrollOffsetForIndex: A
     })
   })
 }

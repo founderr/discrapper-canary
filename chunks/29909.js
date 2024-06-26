@@ -19,7 +19,7 @@ t.Z = r.memo(function(e) {
     url: I,
     format: T,
     className: h
-  } = e, [f, S] = r.useState(!1), A = (0, u.hb)((0, l.iy)(I)), N = A ? d.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : d.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, m = A ? a.StarIcon : a.StarOutlineIcon;
+  } = e, [f, S] = r.useState(!1), N = (0, u.hb)((0, l.iy)(I)), A = N ? d.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : d.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, m = N ? a.StarIcon : a.StarOutlineIcon;
   r.useEffect(() => {
     if (!f) return;
     let e = setTimeout(() => {
@@ -28,7 +28,7 @@ t.Z = r.memo(function(e) {
     return () => clearTimeout(e)
   }, [f]);
   let O = e => {
-    e.preventDefault(), e.stopPropagation(), S(!0), A ? (0, l.PF)(I) : ((0, l.uL)({
+    e.preventDefault(), e.stopPropagation(), S(!0), N ? (0, l.PF)(I) : ((0, l.uL)({
       url: I,
       src: s,
       width: t,
@@ -37,11 +37,11 @@ t.Z = r.memo(function(e) {
     }), _.S.dispatch(c.CkL.FAVORITE_GIF))
   };
   return (0, i.jsx)(a.Tooltip, {
-    text: N,
+    text: A,
     children: e => (0, i.jsx)(a.Clickable, {
       ...e,
       className: o()(h, E.size, E.gifFavoriteButton, {
-        [E.selected]: A,
+        [E.selected]: N,
         [E.showPulse]: f
       }),
       onMouseDown: e => e.preventDefault(),

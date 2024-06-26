@@ -35,9 +35,9 @@ function E(e) {
       title: h,
       body: f,
       style: S,
-      align: A = a.Z.Align.START
+      align: N = a.Z.Align.START
     } = e,
-    N = a.Z.Direction.HORIZONTAL;
+    A = a.Z.Direction.HORIZONTAL;
   if (null != c) {
     let {
       position: e,
@@ -51,7 +51,7 @@ function E(e) {
         className: s()(_.icon, T),
         ...n
       })
-    }), e === d.RIGHT && (N = a.Z.Direction.HORIZONTAL_REVERSE)
+    }), e === d.RIGHT && (A = a.Z.Direction.HORIZONTAL_REVERSE)
   } else null != E && (n = E);
   let m = !0;
   return r === o.Z.Types.PRIMARY && (m = !1), (0, i.jsx)(o.Z, {
@@ -59,8 +59,8 @@ function E(e) {
     type: r,
     style: S,
     children: (0, i.jsxs)(a.Z, {
-      direction: N,
-      align: A,
+      direction: A,
+      align: N,
       children: [t, (0, i.jsxs)(a.Z.Child, {
         children: [null != h && "" !== h ? (0, i.jsx)(u.v, {
           tag: u.R.H5,

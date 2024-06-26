@@ -21,8 +21,8 @@ let T = [],
       userId: e
     })
   },
-  A = [],
-  N = 10 * d.Z.Millis.SECOND,
+  N = [],
+  A = 10 * d.Z.Millis.SECOND,
   m = (0, l.debounce)(() => {
     let e = (0, E.cX)(f);
     _.uv.announce(e, "polite"), f = []
@@ -76,10 +76,10 @@ a = "VoiceChannelEffectsStore", (o = "displayName") in(s = O) ? Object.definePro
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
     let e = new Date;
-    if ((A = [e, ...A].slice(0, 20)).length >= 20) {
-      let t = A[A.length - 1],
+    if ((N = [e, ...N].slice(0, 20)).length >= 20) {
+      let t = N[N.length - 1],
         n = e.getTime() - t.getTime();
-      n < N && (i = new Date(e.getTime() + N - n))
+      n < A && (i = new Date(e.getTime() + A - n))
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: e => {

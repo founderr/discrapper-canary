@@ -4,7 +4,7 @@ n.d(t, {
     return m
   },
   be: function() {
-    return N
+    return A
   },
   g4: function() {
     return S
@@ -65,7 +65,7 @@ function S(e, t, n) {
   return E
 }
 
-function A(e) {
+function N(e) {
   let t = c.n.getState().editStateIdsForGroup[e],
     n = c.n.getState().listings,
     i = new Set;
@@ -87,8 +87,8 @@ function A(e) {
   return r
 }
 
-function N(e) {
-  let t = A(e);
+function A(e) {
+  let t = N(e);
   h[e] = t, t.forEach(e => {
     let t = e.set("flags", T.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     o.Z.dispatch({
@@ -100,7 +100,7 @@ function N(e) {
 
 function m(e) {
   var t;
-  (null !== (t = h[e]) && void 0 !== t ? t : A(e)).forEach(e => {
+  (null !== (t = h[e]) && void 0 !== t ? t : N(e)).forEach(e => {
     o.Z.dispatch({
       type: "CHANNEL_DELETE",
       channel: e

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   baseRules: function() {
-    return N
+    return A
   },
   customRules: function() {
     return m
@@ -25,7 +25,7 @@ let f = l().defaultRules.link,
   S = {
     section: T.jXE.SETTINGS_CHANGELOG
   },
-  A = e => {
+  N = e => {
     var t, n;
     let {
       level: i,
@@ -37,7 +37,7 @@ let f = l().defaultRules.link,
       className: o()(...(t = l, null == (n = a) ? [] : n.split(" ").map(e => t[e])))
     }, s)
   },
-  N = null != d.Z ? d.Z.defaultRules : null,
+  A = null != d.Z ? d.Z.defaultRules : null,
   m = {
     link: {
       parse(e, t, n) {
@@ -77,7 +77,7 @@ let f = l().defaultRules.link,
       }, n.key)
     },
     lheading: e => ({
-      react: (t, n, r) => (0, i.jsx)(A, {
+      react: (t, n, r) => (0, i.jsx)(N, {
         level: t.level,
         className: t.className,
         styleSheet: e,
@@ -85,7 +85,7 @@ let f = l().defaultRules.link,
       }, r.key)
     }),
     heading: {
-      react: (e, t, n) => (0, i.jsx)(A, {
+      react: (e, t, n) => (0, i.jsx)(N, {
         level: e.level,
         children: t(e.content, n)
       }, n.key)
@@ -100,7 +100,7 @@ let f = l().defaultRules.link,
       }
     },
     blockQuote: {
-      react: null == N ? void 0 : N.blockQuote.react
+      react: null == A ? void 0 : A.blockQuote.react
     },
     paragraph: {
       react: (e, t, n) => (0, i.jsx)("p", {

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(335131),
   f = n(597688),
   S = n(884697),
-  A = n(731896),
-  N = n(594174),
+  N = n(731896),
+  A = n(594174),
   m = n(74538),
   O = n(436478),
   p = n(921944),
@@ -92,14 +92,14 @@ t.ZP = e => {
     height: x
   } = (0, _.Z)(), B = r.useMemo(() => ({
     top: "-".concat((null != x ? x : L) + 6, "px")
-  }), [x]), k = (0, l.e7)([N.default], () => N.default.getCurrentUser()), V = m.ZP.canUseCollectibles(k), {
+  }), [x]), k = (0, l.e7)([A.default], () => A.default.getCurrentUser()), V = m.ZP.canUseCollectibles(k), {
     setUpsellSource: Z,
     reset: H
   } = (0, O.k)();
   r.useEffect(() => (Z(U), () => {
     H()
   }), [Z, U, H]);
-  let F = (0, A.V)(null == s ? void 0 : s.profileEffectId),
+  let F = (0, N.V)(null == s ? void 0 : s.profileEffectId),
     [Y, j] = (0, l.Wu)([f.Z], () => {
       var e;
       return [(0, S.G1)(f.Z.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, S.G1)(f.Z.getProduct(null == F ? void 0 : F.skuId))]

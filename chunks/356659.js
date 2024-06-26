@@ -76,10 +76,10 @@ n.d(t, {
     return U
   },
   mg: function() {
-    return N
+    return A
   },
   nU: function() {
-    return A
+    return N
   },
   wD: function() {
     return D
@@ -103,8 +103,8 @@ let E = "alt+c",
   h = e => "Discord_Clip_".concat(e, ".mp4"),
   f = 3,
   S = 1,
-  A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-  N = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+  N = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+  A = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   m = /(Apple M[12].*)/,
   O = .1,
   p = 25,

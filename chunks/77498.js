@@ -22,8 +22,8 @@ let I = "GameStoreReportedGames",
   h = {},
   f = {},
   S = null !== (r = a.K.get(I)) && void 0 !== r ? r : {},
-  A = "";
-let N = null;
+  N = "";
+let A = null;
 
 function m(e) {
   return {
@@ -48,11 +48,11 @@ function O(e) {
 class p extends(s = o.ZP.PersistedStore) {
   initialize(e) {
     var t;
-    null != e && (null != e.detectableGamesEtag && (A = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => O(e)))
+    null != e && (null != e.detectableGamesEtag && (N = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => O(e)))
   }
   getState() {
     return (0, d.isDesktop)() ? {
-      detectableGamesEtag: A,
+      detectableGamesEtag: N,
       detectableGames: T.values()
     } : {
       detectableGamesEtag: "",
@@ -77,10 +77,10 @@ class p extends(s = o.ZP.PersistedStore) {
     return !0 === i
   }
   get detectableGamesEtag() {
-    return A
+    return N
   }
   get lastFetched() {
-    return N
+    return A
   }
   getGameByExecutable(e) {
     return f[e]
@@ -139,7 +139,7 @@ E(p, "displayName", "GameStore"), E(p, "persistKey", "GameStore"), E(p, "migrati
       games: t,
       etag: n
     } = e;
-    for (let e of (null != n && A !== n && (A = n), t)) O(function(e) {
+    for (let e of (null != n && N !== n && (N = n), t)) O(function(e) {
       var t, n, i, r, s, o;
       return {
         id: e.id,
@@ -153,6 +153,6 @@ E(p, "displayName", "GameStore"), E(p, "persistKey", "GameStore"), E(p, "migrati
         supportsOutOfProcessOverlay: c.Z.supportsOutOfProcessOverlay(e.overlay_methods)
       }
     }(e));
-    i = void 0, N = Date.now()
+    i = void 0, A = Date.now()
   }
 })

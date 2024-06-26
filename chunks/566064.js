@@ -31,11 +31,11 @@ function _(e) {
     enabled: h = !0,
     onDispatch: f,
     autoFocusElement: S = !0,
-    useVirtualFocus: A = !1
-  } = e, N = i.useCallback((e, t) => {
+    useVirtualFocus: N = !1
+  } = e, A = i.useCallback((e, t) => {
     let n = (0, r.Z)(e, t);
     return null != f && f(e, n, t), n
-  }, [f]), [m, O] = i.useReducer(N, {
+  }, [f]), [m, O] = i.useReducer(A, {
     focusedX: _,
     focusedY: c,
     columnCounts: n
@@ -63,9 +63,9 @@ function _(e) {
         maintainFocusPosition: h,
         enabled: f,
         autoFocusElement: S,
-        useVirtualFocus: A
-      } = e, N = i.useRef();
-      N.current = f;
+        useVirtualFocus: N
+      } = e, A = i.useRef();
+      A.current = f;
       let m = u(l(t, _, c)),
         [O, p] = i.useState(!1),
         [R, g] = i.useState(!1),
@@ -82,7 +82,7 @@ function _(e) {
         }));
       i.useEffect(() => () => L.clean(), [L]);
       let D = i.useCallback(e => {
-          if (!N.current || !S) return !1;
+          if (!A.current || !S) return !1;
           e.focus()
         }, [S]),
         M = i.useCallback((e, n) => {
@@ -120,7 +120,7 @@ function _(e) {
         null != n && D(n)
       }, [t, y, O, D, _, c]);
       let b = i.useCallback(e => {
-        N.current && null == e && U(!0)
+        A.current && null == e && U(!0)
       }, []);
       i.useEffect(() => {
         O && R && null != m && (D(m), g(!1))
@@ -128,8 +128,8 @@ function _(e) {
         O && (!C && M(_, c), v(!1))
       }, [_, c]);
       let G = i.useCallback(e => {
-          if (!N.current) return;
-          if (!A && a.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
+          if (!A.current) return;
+          if (!N && a.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
             e.preventDefault(), e.stopPropagation(), P();
             return
           }
@@ -225,6 +225,6 @@ function _(e) {
       maintainFocusPosition: T,
       enabled: h,
       autoFocusElement: S,
-      useVirtualFocus: A
+      useVirtualFocus: N
     })
 }

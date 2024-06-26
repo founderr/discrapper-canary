@@ -82,8 +82,8 @@ function f(e) {
     fullWidth: a = !1,
     grow: f = !0,
     disabled: S = !1,
-    submitting: A = !1,
-    type: N = "button",
+    submitting: N = !1,
+    type: A = "button",
     style: m,
     wrapperClassName: O,
     className: p,
@@ -103,7 +103,7 @@ function f(e) {
     submittingStartedLabel: x,
     submittingFinishedLabel: B,
     ...k
-  } = e, V = S || A, Z = V && (null != D || null != M), H = function(e, t) {
+  } = e, V = S || N, Z = V && (null != D || null != M), H = function(e, t) {
     var n, i, r, s;
     let o = null == e ? void 0 : e.offset;
     if (t === E.LINK || t === E.BLANK) return o;
@@ -117,15 +117,15 @@ function f(e) {
     }
   }(G, t), F = r.useRef(!1);
   r.useEffect(() => {
-    !0 === A && (F.current = !0, l.u.announce(null != x ? x : c.Z.Messages.A11Y_LOADING_STARTED)), !1 === A && !0 === F.current && l.u.announce(null != B ? B : c.Z.Messages.A11Y_LOADING_FINISHED)
-  }, [A, x, B]);
+    !0 === N && (F.current = !0, l.u.announce(null != x ? x : c.Z.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === F.current && l.u.announce(null != B ? B : c.Z.Messages.A11Y_LOADING_FINISHED)
+  }, [N, x, B]);
   let Y = (0, i.jsx)(u.t, {
     ...G,
     offset: H,
     children: (0, i.jsxs)("button", {
       ...V ? null : k,
       "aria-label": w,
-      "aria-busy": !!A || void 0,
+      "aria-busy": !!N || void 0,
       ref: b,
       onClick: V ? e => e.preventDefault() : g,
       onDoubleClick: V ? e => e.preventDefault() : C,
@@ -134,7 +134,7 @@ function f(e) {
       onMouseEnter: D,
       onMouseLeave: M,
       onKeyDown: S ? void 0 : P,
-      type: N,
+      type: A,
       disabled: S,
       style: m,
       rel: U,
@@ -144,10 +144,10 @@ function f(e) {
         size: s,
         fullWidth: a,
         grow: f,
-        submitting: A,
+        submitting: N,
         disabled: S
       }), Z ? null : O),
-      children: [A && !S ? (0, i.jsx)(_.$, {
+      children: [N && !S ? (0, i.jsx)(_.$, {
         type: _.$.Type.PULSING_ELLIPSIS,
         className: d.spinner,
         itemClassName: d.spinnerItem
@@ -183,8 +183,8 @@ function S(e) {
     to: h,
     onClick: f,
     onMouseDown: S,
-    onMouseUp: A,
-    children: N,
+    onMouseUp: N,
+    children: A,
     rel: m,
     ...O
   } = e;
@@ -192,7 +192,7 @@ function S(e) {
     ...O,
     to: h,
     onClick: f,
-    onMouseUp: A,
+    onMouseUp: N,
     onMouseDown: S,
     style: u,
     rel: m,
@@ -202,7 +202,7 @@ function S(e) {
     }),
     children: (0, i.jsx)("span", {
       className: o()(d.contents, c),
-      children: N
+      children: A
     })
   })
 }

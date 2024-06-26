@@ -11,8 +11,8 @@ var i, r, s, o, a, l, u = n(392711),
   f = n(860852);
 (s = i || (i = {}))[s.INVALID = 0] = "INVALID", s[s.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", s[s.VALID = 2] = "VALID";
 let S = new Set,
-  A = new Set,
   N = new Set,
+  A = new Set,
   m = [],
   O = e => "user:".concat(e),
   p = e => "channel:".concat(e),
@@ -27,7 +27,7 @@ function C(e, t, n) {
   if (null == t) {
     let t = g.get(e);
     return !!(null != t && (0, u.isEqual)(t.source, n)) && (g.delete(e), void 0)
-  }!S.has(e) && !A.has(e) && (N.add(e), m = [...N]);
+  }!S.has(e) && !N.has(e) && (A.add(e), m = [...A]);
   let i = (0, f.tI)(t, e, n);
   g.set(e, i)
 }
@@ -120,7 +120,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
       data: t
     } = e;
     T.default.keys(t).forEach(e => {
-      h.g.includes(t[e]) ? S.add(e) : A.add(e), N.clear(), m = [...N];
+      h.g.includes(t[e]) ? S.add(e) : N.add(e), A.clear(), m = [...A];
       let n = g.get(e);
       null != n && (g.delete(e), g.set(e, n))
     })
@@ -172,6 +172,6 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
     })
   },
   LOGOUT: function() {
-    S.clear(), A.clear(), N.clear(), m = [], g.clear()
+    S.clear(), N.clear(), A.clear(), m = [], g.clear()
   }
 })

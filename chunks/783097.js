@@ -16,7 +16,7 @@ n.d(t, {
     return h
   },
   sl: function() {
-    return A
+    return N
   },
   ye: function() {
     return f
@@ -94,7 +94,7 @@ function S(e) {
   return I()
 }
 
-function A(e) {
+function N(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       fakeAppIconURL: n,

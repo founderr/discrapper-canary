@@ -28,8 +28,8 @@ function I(e) {
     newestAnalyticsLocation: f
   } = (0, o.ZP)(), {
     trackUserProfileAction: S,
-    ...A
-  } = (0, _.KZ)(), N = (0, r.e7)([u.default], () => u.default.getCurrentUser()), {
+    ...N
+  } = (0, _.KZ)(), A = (0, r.e7)([u.default], () => u.default.getCurrentUser()), {
     isApplicationStreaming: m,
     activity: O
   } = (0, r.cj)([a.Z, l.Z], () => {
@@ -68,10 +68,10 @@ function I(e) {
         activitySessionId: null == O ? void 0 : O.session_id,
         applicationId: null == O ? void 0 : O.application_id,
         analyticsLocations: h,
-        ...A
+        ...N
       }), null == T || T()
     },
-    showActions: t.id !== (null == N ? void 0 : N.id),
+    showActions: t.id !== (null == A ? void 0 : A.id),
     actionColor: E.buttonColor,
     showChannelDetails: !0
   })

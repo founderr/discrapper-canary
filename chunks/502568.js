@@ -32,8 +32,8 @@ let E = e => {
       onClick: h,
       onContextMenu: f,
       tooltip: S = null,
-      tooltipColor: A,
-      tooltipPosition: N = "bottom",
+      tooltipColor: N,
+      tooltipPosition: A = "bottom",
       tooltipDisabled: m,
       hideOnClick: O = !0,
       role: p,
@@ -55,15 +55,15 @@ let E = e => {
     }), M = R;
     return null == M && "string" == typeof S && (M = S), (0, i.jsx)(u.Tooltip, {
       text: S,
-      color: A,
-      position: N,
+      color: N,
+      position: A,
       hideOnClick: O,
       shouldShow: !m,
       children: e => {
         let {
           onMouseEnter: S,
-          onMouseLeave: A,
-          onFocus: N,
+          onMouseLeave: N,
+          onFocus: A,
           onBlur: m
         } = e;
         return null == h ? (0, i.jsx)("div", {
@@ -80,8 +80,8 @@ let E = e => {
             color: null != _ ? _ : "currentColor",
             "aria-hidden": g,
             onMouseEnter: S,
-            onMouseLeave: A,
-            onFocus: N,
+            onMouseLeave: N,
+            onFocus: A,
             onBlur: m
           })
         }) : (0, i.jsxs)(u.Clickable, {
@@ -89,8 +89,8 @@ let E = e => {
           onClick: a ? void 0 : h,
           onContextMenu: a ? void 0 : f,
           onMouseEnter: S,
-          onMouseLeave: A,
-          onFocus: N,
+          onMouseLeave: N,
+          onFocus: A,
           onBlur: m,
           className: o()(t, {
             [d.iconWrapper]: !0,
@@ -134,20 +134,20 @@ let E = e => {
       "aria-labelledby": h,
       role: f,
       scrollable: S,
-      transparent: A = !1
-    } = e, N = r.useRef(null), m = r.useContext(_.Z);
+      transparent: N = !1
+    } = e, A = r.useRef(null), m = r.useContext(_.Z);
     return (0, i.jsx)("section", {
       className: o()(t, d.container, {
-        [d.themed]: !A,
-        [d.transparent]: A,
+        [d.themed]: !N,
+        [d.transparent]: N,
         [d.themedMobile]: l.tq
       }),
       "aria-label": T,
       "aria-labelledby": h,
       role: f,
-      ref: N,
+      ref: A,
       children: (0, i.jsxs)(u.FocusRingScope, {
-        containerRef: N,
+        containerRef: A,
         children: [(0, i.jsxs)("div", {
           className: d.upperContainer,
           children: [(0, i.jsxs)("div", {

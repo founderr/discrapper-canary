@@ -24,16 +24,16 @@ function S(e) {
   return "plan:".concat(e)
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   return "entitlement:".concat(e, ":").concat(n, ":").concat(t)
 }
 
-function N(e, t) {
+function A(e, t) {
   return "entitlement:".concat(t, ":").concat(e)
 }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
 let m = new d.h(e => [f(e.application_id), ...e.subscription_listings_ids.map(h)], e => e.id),
   O = new d.h(e => [f(e.application_id), S(e.subscription_plans[0].id)], e => e.id),
-  p = new d.h(e => [A(e.applicationId, e.isValid(null, T.Z), e.guildId), N(e.isValid(null, T.Z), e.guildId)], e => e.id),
+  p = new d.h(e => [N(e.applicationId, e.isValid(null, T.Z), e.guildId), A(e.isValid(null, T.Z), e.guildId)], e => e.id),
   R = {},
   g = {};
 
@@ -79,11 +79,11 @@ class L extends(r = c.yh) {
   }
   getApplicationEntitlementsForGuild(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    return p.values(A(e, n, t))
+    return p.values(N(e, n, t))
   }
   getEntitlementsForGuild(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return p.values(N(t, e))
+    return p.values(A(t, e))
   }
 }
 l = "ApplicationSubscriptionStore", (a = "displayName") in(o = L) ? Object.defineProperty(o, a, {

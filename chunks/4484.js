@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(925994),
   f = n(436660),
   S = n(887490),
-  A = n(194625),
-  N = n(77188),
+  N = n(194625),
+  A = n(77188),
   m = n(230554),
   O = n(780748),
   p = n(464581),
@@ -106,17 +106,17 @@ t.Z = r.forwardRef(function(e, t) {
         eh.current = !0
       } else e.onChange()
     }
-  }, [P.id, P.guild_id, et]), eA = r.useCallback(() => {
+  }, [P.id, P.guild_id, et]), eN = r.useCallback(() => {
     eT.current = !1
-  }, []), eN = r.useCallback(() => {
+  }, []), eA = r.useCallback(() => {
     eT.current = !0
-  }, []), em = (0, N.Z)({
+  }, []), em = (0, A.Z)({
     channel: P,
     chatInputType: s,
     canUseCommands: $,
     canOnlyUseTextCommands: ee,
-    onChangeStart: eA,
-    onChangeEnd: eN,
+    onChangeStart: eN,
+    onChangeEnd: eA,
     updateState: eS
   }), eO = r.useCallback((e, t) => {
     let n = E.tM(em, e, P.id),
@@ -194,7 +194,7 @@ t.Z = r.forwardRef(function(e, t) {
     };
     return _.Z.addChangeListener(e), () => _.Z.removeChangeListener(e)
   }, [P, em, eO]);
-  let eM = r.useCallback((e, t) => (0, A.Z)(e, t), []),
+  let eM = r.useCallback((e, t) => (0, N.Z)(e, t), []),
     eP = r.useCallback(e => (0, v.Z)(em, e, P.id), [P.id, em]),
     ey = r.useCallback(e => (0, L.Z)(e), []);
   return (0, i.jsxs)(i.Fragment, {

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(470079),
@@ -21,8 +21,8 @@ var i = n(470079),
   f = n(377668),
   S = n(185923);
 
-function A(e, t, n) {
-  var A, N, m, O, p, R, g;
+function N(e, t, n) {
+  var N, A, m, O, p, R, g;
   let {
     channel: C,
     type: v
@@ -53,12 +53,12 @@ function A(e, t, n) {
     scrollerRef: n,
     state: L,
     onFocus: e => Z.setSelectedIndex(e)
-  }), k = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), V = {
+  }), k = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentWord(), V = {
     ...e,
     navigator: B,
     activeCommand: w,
     activeCommandOption: x,
-    canMentionUsers: null !== (p = null === (N = v.users) || void 0 === N ? void 0 : N.allowMentioning) && void 0 !== p && p,
+    canMentionUsers: null !== (p = null === (A = v.users) || void 0 === A ? void 0 : A.allowMentioning) && void 0 !== p && p,
     canMentionEveryone: b,
     canMentionClyde: y,
     hidePersonalInformation: G,

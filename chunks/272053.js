@@ -23,8 +23,8 @@ function h(e, t, n) {
 }
 let f = 1 * d.Z.Millis.MINUTE,
   S = e => "https://youtube.com/watch?v=".concat(e),
-  A = 5 * d.Z.Millis.MINUTE,
-  N = /live_user_(.*)-\{width\}/,
+  N = 5 * d.Z.Millis.MINUTE,
+  A = /live_user_(.*)-\{width\}/,
   m = null,
   O = 0,
   p = null,
@@ -84,7 +84,7 @@ let L = new class e {
       } = l, I = {
         large_image: null != u && null !== (i = (0, c.getAssetFromImageURL)(T.ABu.TWITCH, u)) && void 0 !== i ? i : void 0
       }, h = await v(d, t), f = _.Z.get(T.ABu.TWITCH);
-      let S = null !== (s = u, r = null === (o = N.exec(s)) || void 0 === o ? void 0 : o[1]) && void 0 !== r ? r : e.name;
+      let S = null !== (s = u, r = null === (o = A.exec(s)) || void 0 === o ? void 0 : o[1]) && void 0 !== r ? r : e.name;
       return {
         url: null === (n = f.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(f, {
           id: e.id,
@@ -149,7 +149,7 @@ let L = new class e {
     null != this._nextCheck && clearTimeout(this._nextCheck);
     let t = [T.ABu.TWITCH],
       n = Date.now();
-    O <= n && (t.push(T.ABu.YOUTUBE), O = n + A), Promise.allSettled(e.filter(e => t.includes(e.type)).map(e => e.type === T.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))).then(e => {
+    O <= n && (t.push(T.ABu.YOUTUBE), O = n + N), Promise.allSettled(e.filter(e => t.includes(e.type)).map(e => e.type === T.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))).then(e => {
       if (this._started) {
         var t;
         let n = null === (t = e.find(e => "fulfilled" === e.status && null != e.value)) || void 0 === t ? void 0 : t.value;

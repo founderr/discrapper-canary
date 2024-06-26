@@ -16,16 +16,16 @@ let T = new i.V7,
   h = new i.V7,
   f = 5 * d.Z.Millis.SECOND,
   S = 12 * d.Z.Millis.SECOND,
-  A = null;
+  N = null;
 
-function N(e, t) {
+function A(e, t) {
   if (_.Z.getVoiceChannelId() !== e) return !1;
   let n = l.Z.getChannel(e);
   if (null == n || !n.isDM() && !n.isGuildStageVoice() || null != o.Z.getActiveStreamForUser(t, n.getGuildId())) return !1;
   let i = o.Z.getStreamForUser(t, n.getGuildId());
   if (null == i) return !1;
   let r = (0, E.V9)(i);
-  return r !== A && (A = r, (0, s.rn)(i, {
+  return r !== N && (N = r, (0, s.rn)(i, {
     noFocus: !0
   }), !0)
 }
@@ -76,14 +76,14 @@ t.Z = {
         channelId: t
       } = e;
       if (null == t) return;
-      A = null;
+      N = null;
       let n = o.Z.getAllApplicationStreamsForChannel(t).filter(e => {
         let {
           ownerId: t
         } = e;
         return t !== a.default.getId()
       })[0];
-      null != n && N(t, n.ownerId)
+      null != n && A(t, n.ownerId)
     }), r.Z.subscribe("VOICE_STATE_UPDATES", e => {
       let {
         voiceStates: t
@@ -96,7 +96,7 @@ t.Z = {
           selfStream: r
         } = e;
         if (t !== a.default.getId() && null != n) {
-          if (r && N(n, t)) return;
+          if (r && A(n, t)) return;
           let e = o.Z.getActiveStreamForUser(t, i);
           if (null != e && e.channelId === n && (!r && e.state !== I.jm8.ENDED && T.start(18e4, () => (0, s.aP)((0, E.V9)(e), !1)), r && e.state === I.jm8.ENDED)) {
             T.stop();

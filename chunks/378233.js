@@ -59,7 +59,7 @@ let {
   PROJECT_ENV: T,
   ASSET_ENDPOINT: h,
   CDN_HOST: f
-} = window.GLOBAL_ENV, S = Object.values(_.og), A = decodeURIComponent(d.ANM.STICKER_ASSET("[\\d]+", "(".concat(S.join("|"), ")"))), N = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(I, ")(").concat(A, ")"), "ig"), m = RegExp("".concat(location.protocol).concat(E, "(").concat(A, ")"), "ig"), O = e => {
+} = window.GLOBAL_ENV, S = Object.values(_.og), N = decodeURIComponent(d.ANM.STICKER_ASSET("[\\d]+", "(".concat(S.join("|"), ")"))), A = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(I, ")(").concat(N, ")"), "ig"), m = RegExp("".concat(location.protocol).concat(E, "(").concat(N, ")"), "ig"), O = e => {
   if (null != e.cover_sticker_id) {
     let t = e.stickers.find(t => t.id === e.cover_sticker_id);
     if (null != t) return t
@@ -114,7 +114,7 @@ let {
   if (null == i) return null;
   let s = a.$k ? "webp" : "png";
   return n = null != f ? "".concat(location.protocol, "//").concat(f, "/app-assets/").concat(c.Ks, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(d.ANM.STORE_ASSET(c.Ks, i, s)), null != t && (n += "?size=".concat((0, r.oO)(t))), n
-}, L = e => e.match("development" !== T ? N : m), D = e => e.stickers.some(e => {
+}, L = e => e.match("development" !== T ? A : m), D = e => e.stickers.some(e => {
   let {
     format_type: t
   } = e;

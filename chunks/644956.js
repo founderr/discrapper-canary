@@ -21,8 +21,8 @@ var r = n(120356),
   h = n(818083),
   f = n(480608),
   S = n(124072),
-  A = n(484459),
-  N = n(103575),
+  N = n(484459),
+  A = n(103575),
   m = n(592125),
   O = n(271383),
   p = n(430824),
@@ -97,11 +97,11 @@ function P(e) {
           }).map(e => {
             let r = R.default.getUser(e.userId);
             return (0, i.jsx)(_.Popout, {
-              preload: () => (0, A.W)(r.id, r.getAvatarURL(t.guild_id, 80), {
+              preload: () => (0, N.W)(r.id, r.getAvatarURL(t.guild_id, 80), {
                 guildId: t.guild_id,
                 channelId: t.id
               }),
-              renderPopout: n => (0, i.jsx)(N.Z, {
+              renderPopout: n => (0, i.jsx)(A.Z, {
                 ...n,
                 location: "RoleMention",
                 userId: e.userId,

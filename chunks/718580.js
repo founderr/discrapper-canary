@@ -42,8 +42,8 @@ function h(e) {
 function f(e) {
   var t, n, h, f, S;
   let {
-    contentDisplay: A,
-    fadeInOut: N = !1,
+    contentDisplay: N,
+    fadeInOut: A = !1,
     ...m
   } = e, O = {}, {
     analyticsLocations: p
@@ -138,7 +138,7 @@ function f(e) {
         ref: t === R ? P : null,
         style: {
           position: "absolute",
-          display: A,
+          display: N,
           flexDirection: "column",
           backfaceVisibility: "hidden",
           width: a.tq ? "100%" : B,
@@ -146,7 +146,7 @@ function f(e) {
           ...v.enabled ? o : {
             left: e.value.to(T("left", x)),
             right: e.value.to(T("right", x)),
-            ...N && o
+            ...A && o
           }
         },
         children: O[t].children

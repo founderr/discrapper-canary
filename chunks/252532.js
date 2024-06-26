@@ -22,10 +22,10 @@ function _(e) {
     avatarOverride: E
   } = e, [I, T] = i.useState(!1), h = (0, r.e7)([s.Z], () => s.Z.useReducedMotion), f = (0, r.e7)([l.Z], () => l.Z.isFocused()) && (I || !h && !d), {
     pendingAvatar: S
-  } = (0, u.Z)({}), A = void 0 !== E ? E : c ? S : void 0, N = (0, r.e7)([a.ZP], () => null != n && null != t ? a.ZP.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, o.SG)(A, N, t, {
+  } = (0, u.Z)({}), N = void 0 !== E ? E : c ? S : void 0, A = (0, r.e7)([a.ZP], () => null != n && null != t ? a.ZP.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, o.SG)(N, A, t, {
     canAnimate: f,
     size: _
-  }) : void 0, [A, N, t, f, _]), O = i.useCallback(() => T(!0), []);
+  }) : void 0, [N, A, t, f, _]), O = i.useCallback(() => T(!0), []);
   return {
     avatarSrc: m,
     isAvatarAnimating: f,

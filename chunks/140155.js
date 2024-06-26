@@ -64,13 +64,13 @@ function S(e) {
   }
 }
 
-function A(e) {
+function N(e) {
   let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? S(e.item) : e.item;
   if (!T.initialized || !h(t) || T.notifCenterIds.has(t.id)) return !1;
   T.notifCenterIds.add(t.id), T.notifCenterItems = [t, ...T.notifCenterItems], T.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id))
 }
 
-function N(e, t) {
+function A(e, t) {
   T.notifCenterItems = T.notifCenterItems.map(n => e.includes(n.id) ? {
     ...n,
     acked: t
@@ -169,13 +169,13 @@ let R = new p(s.Z, {
     let {
       ids: t
     } = e;
-    N(t, !0)
+    A(t, !0)
   },
   NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function(e) {
     let {
       ids: t
     } = e;
-    N(t, !1)
+    A(t, !1)
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
     let {
@@ -183,7 +183,7 @@ let R = new p(s.Z, {
     } = e;
     O(t)
   },
-  NOTIFICATION_CENTER_ITEM_CREATE: A,
+  NOTIFICATION_CENTER_ITEM_CREATE: N,
   NOTIFICATION_CENTER_ITEM_DELETE: function(e) {
     let {
       id: t
@@ -191,7 +191,7 @@ let R = new p(s.Z, {
     if (!T.notifCenterIds.has(t)) return !1;
     T.notifCenterIds.delete(t), T.notifCenterItems = T.notifCenterItems.filter(e => e.id !== t)
   },
-  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: A,
+  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: N,
   LOAD_NOTIFICATION_CENTER_ITEMS: function() {
     T.loading = !0
   },

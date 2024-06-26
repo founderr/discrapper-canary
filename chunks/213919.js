@@ -5,13 +5,13 @@ n.r(t), n.d(t, {
     return g
   },
   getToken: function() {
-    return N
+    return A
   },
   hideToken: function() {
     return O
   },
   init: function() {
-    return A
+    return N
   },
   removeToken: function() {
     return R
@@ -67,7 +67,7 @@ function S(e) {
   return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(a) ? "".concat(a).concat(u.encryptString(e)) : e
 }
 
-function A() {
+function N() {
   if (T) return;
   r = s.K.get(o.B1), E = s.K.get(o.XM) || {};
   let {
@@ -86,8 +86,8 @@ function A() {
   })), T = !0
 }
 
-function N(e) {
-  return (A(), null != e) ? d[e] : i
+function A(e) {
+  return (N(), null != e) ? d[e] : i
 }
 
 function m(e, t) {

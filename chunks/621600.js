@@ -28,7 +28,7 @@ n.d(t, {
     return p
   },
   sK: function() {
-    return N
+    return A
   },
   wK: function() {
     return g
@@ -86,10 +86,10 @@ function S(e, t, n, i, r) {
     },
     _ = u(n),
     c = u(O(e), t),
-    I = A(_, c, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    I = N(_, c, "RETURN_PREVIOUS_WHEN_CHANGED"),
     h = null !== (s = I("guild_flags")) && void 0 !== s ? s : 0,
     S = (null !== (o = c.guild_flags) && void 0 !== o ? o : 0) ^ h,
-    N = 0 === (0, d.M1)(S, T.vc.OPT_IN_CHANNELS_OFF, T.vc.OPT_IN_CHANNELS_ON);
+    A = 0 === (0, d.M1)(S, T.vc.OPT_IN_CHANNELS_OFF, T.vc.OPT_IN_CHANNELS_ON);
   a.ZP.trackWithMetadata(E.rMx.NOTIFICATION_SETTINGS_UPDATED, {
     ...c,
     ...l.Z.getStats(e),
@@ -105,17 +105,17 @@ function S(e, t, n, i, r) {
     guild_receive_mobile_push_old: I("guild_receive_mobile_push"),
     guild_scheduled_events_muted_old: I("guild_scheduled_events_muted"),
     guild_message_notification_settings_old: I("guild_message_notification_settings"),
-    is_opt_in_only_change: N
+    is_opt_in_only_change: A
   })
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   return i => {
     if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0
   }
 }
 
-function N(e) {
+function A(e) {
   return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null
 }
 
@@ -132,12 +132,12 @@ function m(e, t, n, i, r, s) {
         channel_is_overridden: a,
         channel_flags: null !== (i = r.flags) && void 0 !== i ? i : null == t ? void 0 : t.channel_flags,
         channel_message_notification_settings: o,
-        channel_muted_until: N(r.mute_config)
+        channel_muted_until: A(r.mute_config)
       }
     },
     m = S(i),
     O = S(R(e, t), n),
-    p = A(m, O, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    p = N(m, O, "RETURN_PREVIOUS_WHEN_CHANGED"),
     g = u.Z.getChannel(t),
     C = null !== (c = p("channel_flags")) && void 0 !== c ? c : 0,
     v = (null !== (I = O.channel_flags) && void 0 !== I ? I : 0) ^ C,

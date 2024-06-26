@@ -22,8 +22,8 @@ var i, r = n(392711),
   h = n(430824),
   f = n(594174),
   S = n(981631),
-  A = n(468788),
-  N = n(490897),
+  N = n(468788),
+  A = n(490897),
   m = n(526761);
 
 function O(e, t, n) {
@@ -199,7 +199,7 @@ function K(e) {
 }
 
 function z(e) {
-  g = E.yE(e.flags, A.c.USE_NEW_NOTIFICATIONS), C = E.yE(e.flags, A.c.MENTION_ON_ALL_MESSAGES), v = e
+  g = E.yE(e.flags, N.c.USE_NEW_NOTIFICATIONS), C = E.yE(e.flags, N.c.MENTION_ON_ALL_MESSAGES), v = e
 }
 
 function q(e) {
@@ -303,15 +303,15 @@ class J extends(i = o.ZP.PersistedStore) {
     return this.getMessageNotifications(e.guild_id)
   }
   resolveUnreadSetting(e) {
-    if (d.Ec.has(e.type) || (0, d.hv)(e.type) || !Q()) return N.i.ALL_MESSAGES;
+    if (d.Ec.has(e.type) || (0, d.hv)(e.type) || !Q()) return A.i.ALL_MESSAGES;
     let t = this.getChannelUnreadSetting(e.guild_id, e.id);
-    if (t !== N.i.UNSET) return t;
+    if (t !== A.i.UNSET) return t;
     if (null != e.parent_id) {
       let t = this.getChannelUnreadSetting(e.guild_id, e.parent_id);
-      if (t !== N.i.UNSET) return t
+      if (t !== A.i.UNSET) return t
     }
     let n = this.getGuildUnreadSetting(e.guild_id);
-    return n !== N.i.UNSET ? n : this.resolvedMessageNotifications(e) === S.bL.ALL_MESSAGES ? N.i.ALL_MESSAGES : N.i.ONLY_MENTIONS
+    return n !== A.i.UNSET ? n : this.resolvedMessageNotifications(e) === S.bL.ALL_MESSAGES ? A.i.ALL_MESSAGES : A.i.ONLY_MENTIONS
   }
   isGuildOrCategoryOrChannelMuted(e, t) {
     return this.isMuted(e) || this.isCategoryMuted(e, t) || this.isChannelMuted(e, t)
@@ -413,20 +413,20 @@ class J extends(i = o.ZP.PersistedStore) {
     return g
   }
   getGuildUnreadSetting(e) {
-    if (!Q()) return N.i.ALL_MESSAGES;
+    if (!Q()) return A.i.ALL_MESSAGES;
     let t = this.getGuildFlags(e);
-    return E.yE(t, m.vc.UNREADS_ALL_MESSAGES) ? N.i.ALL_MESSAGES : E.yE(t, m.vc.UNREADS_ONLY_MENTIONS) ? N.i.ONLY_MENTIONS : N.i.UNSET
+    return E.yE(t, m.vc.UNREADS_ALL_MESSAGES) ? A.i.ALL_MESSAGES : E.yE(t, m.vc.UNREADS_ONLY_MENTIONS) ? A.i.ONLY_MENTIONS : A.i.UNSET
   }
   resolveGuildUnreadSetting(e) {
     let t = this.getGuildFlags(e.id);
-    return !Q() || E.yE(t, m.vc.UNREADS_ALL_MESSAGES) ? N.i.ALL_MESSAGES : E.yE(t, m.vc.UNREADS_ONLY_MENTIONS) ? N.i.ONLY_MENTIONS : e.defaultMessageNotifications === S.bL.ALL_MESSAGES ? N.i.ALL_MESSAGES : N.i.ONLY_MENTIONS
+    return !Q() || E.yE(t, m.vc.UNREADS_ALL_MESSAGES) ? A.i.ALL_MESSAGES : E.yE(t, m.vc.UNREADS_ONLY_MENTIONS) ? A.i.ONLY_MENTIONS : e.defaultMessageNotifications === S.bL.ALL_MESSAGES ? A.i.ALL_MESSAGES : A.i.ONLY_MENTIONS
   }
   getChannelRecordUnreadSetting(e) {
     return this.getChannelUnreadSetting(e.guild_id, e.id)
   }
   getChannelUnreadSetting(e, t) {
     let n = this.getChannelIdFlags(e, t);
-    return E.yE(n, m.ic.UNREADS_ALL_MESSAGES) ? N.i.ALL_MESSAGES : E.yE(n, m.ic.UNREADS_ONLY_MENTIONS) ? N.i.ONLY_MENTIONS : N.i.UNSET
+    return E.yE(n, m.ic.UNREADS_ALL_MESSAGES) ? A.i.ALL_MESSAGES : E.yE(n, m.ic.UNREADS_ONLY_MENTIONS) ? A.i.ONLY_MENTIONS : A.i.UNSET
   }
 }
 O(J, "displayName", "UserGuildSettingsStore"), O(J, "persistKey", "collapsedGuilds");

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(912893),
   f = n(430824),
   S = n(358085),
-  A = n(288406),
-  N = n(689938),
+  N = n(288406),
+  A = n(689938),
   m = n(688623);
 let O = (e, t) => "".concat(e, ":").concat(t),
   p = r.forwardRef(function(e, t) {
@@ -57,11 +57,11 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         "data-id": r.id,
         "data-name": r.name,
         ref: t,
-        children: (0, i.jsx)(A.Z, {
-          "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = N.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
+        children: (0, i.jsx)(N.Z, {
+          "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = A.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: n,
             guildName: L.name
-          })), s) ? N.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), s) ? A.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: n
           }) : n),
           columnIndex: h,
@@ -84,7 +84,7 @@ function R(e) {
     rowIndex: d,
     channelGuildId: I,
     onInspect: f,
-    onSelect: A,
+    onSelect: N,
     isScrolling: m,
     isUsingKeyboardNavigation: R,
     showEmojiFavoriteTooltip: g,
@@ -108,7 +108,7 @@ function R(e) {
   } = t, K = e => {
     if (e.stopPropagation(), m.current || R.current) return;
     let n = e.altKey;
-    n && !c.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(F) && U(s), (0, T.Kw)(T.v6.FAVORITE_EMOJI_TOOLTIP), A(t, {
+    n && !c.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(F) && U(s), (0, T.Kw)(T.v6.FAVORITE_EMOJI_TOOLTIP), N(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: n
     })
@@ -171,7 +171,7 @@ function R(e) {
     }))
   };
   return g ? (0, i.jsx)(l.Tooltip, {
-    text: N.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+    text: A.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
       key: (0, S.isMac)() ? "Opt" : "Alt"
     }),
     position: "top",

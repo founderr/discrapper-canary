@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(153850),
   f = n(482207),
   S = n(436896),
-  A = n(590921),
-  N = n(606992),
+  N = n(590921),
+  A = n(606992),
   m = n(51062),
   O = n(918559),
   p = n(90558);
@@ -44,7 +44,7 @@ t.Z = r.forwardRef(function(e, t) {
     location: "6e9811_2"
   }, {
     autoTrackExposure: !1
-  }), V = (0, N.Z)({
+  }), V = (0, A.Z)({
     editorHeight: D,
     type: L,
     state: b,
@@ -75,7 +75,7 @@ t.Z = r.forwardRef(function(e, t) {
       [p.autocompleteTop]: Z
     },
     j = 490;
-  null != V && (j = (null === (R = L.autocomplete) || void 0 === R ? void 0 : R.small) ? 200 : (null === (g = b.query) || void 0 === g ? void 0 : g.type) === A.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
+  null != V && (j = (null === (R = L.autocomplete) || void 0 === R ? void 0 : R.small) ? 200 : (null === (g = b.query) || void 0 === g ? void 0 : g.type) === N.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
   let W = (0, i.jsx)(I.ZP, {
     id: P,
     className: o()(p.autocomplete, Y),

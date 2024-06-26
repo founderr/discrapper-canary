@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(63063),
   f = n(281494),
   S = n(790368),
-  A = n(474936),
-  N = n(981631),
+  N = n(474936),
+  A = n(981631),
   m = n(689938),
   O = n(752423),
   p = n(751599),
@@ -77,9 +77,9 @@ let v = async (e, t, n) => {
         className: O.confirmationShareButton,
         submitting: u,
         onClick: () => {
-          v(s, t, c), I.default.track(N.rMx.SHARE_NITRO_FLOW_STEPS, {
+          v(s, t, c), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: a,
-            step: A.fz.FLOW_COMPLETED,
+            step: N.fz.FLOW_COMPLETED,
             other_user_id: Number(s)
           })
         },
@@ -144,7 +144,7 @@ function D(e) {
             className: o()(O.learnMore, {
               [O.learnMoreResendUnderlinedText]: a
             }),
-            href: h.Z.getArticleURL(N.BhN.SHARE_NITRO_FAQ),
+            href: h.Z.getArticleURL(A.BhN.SHARE_NITRO_FAQ),
             children: a ? m.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : m.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
               count: t
             })
@@ -168,9 +168,9 @@ function D(e) {
         className: O.generalShareButton,
         submitting: f,
         onClick: () => {
-          a ? v(D, s, g) : (c(!0), I.default.track(N.rMx.SHARE_NITRO_FLOW_STEPS, {
+          a ? v(D, s, g) : (c(!0), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
-            step: A.fz.FLOW_STARTED,
+            step: N.fz.FLOW_STARTED,
             other_user_id: Number(D)
           }))
         },

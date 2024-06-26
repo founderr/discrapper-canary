@@ -24,7 +24,7 @@ var i = n(735250),
   f = n(981631),
   S = n(812709);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,7 +32,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = [d.ZP, E.ZP];
+let A = [d.ZP, E.ZP];
 class m extends r.PureComponent {
   render() {
     let {
@@ -54,11 +54,11 @@ class m extends r.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), A(this, "state", {
+    super(...e), N(this, "state", {
       transitionState: null
-    }), A(this, "componentWillAppear", e => {
+    }), N(this, "componentWillAppear", e => {
       this.componentWillEnter(e)
-    }), A(this, "componentWillEnter", e => {
+    }), N(this, "componentWillEnter", e => {
       let {
         instant: t
       } = this.props;
@@ -69,7 +69,7 @@ class m extends r.PureComponent {
           transitionState: h.Dv.ENTERED
         }), e()
       }, t ? 0 : h.CT)
-    }), A(this, "componentWillLeave", e => {
+    }), N(this, "componentWillLeave", e => {
       let {
         instant: t
       } = this.props;
@@ -80,7 +80,7 @@ class m extends r.PureComponent {
           transitionState: h.Dv.EXITED
         }), e()
       }, t ? 0 : h.CT)
-    }), A(this, "close", () => new Promise(e => {
+    }), N(this, "close", () => new Promise(e => {
       this.props.closeModal(this.props.modalKey), setTimeout(() => e(), h.CT)
     }))
   }
@@ -116,10 +116,10 @@ function R() {
     a = r.useCallback(t => {
       (0, T.Mr)(t, e)
     }, [e]),
-    c = N.map(e => t.some(t => t.Layer === e || null == t.Layer && e === d.ZP));
+    c = A.map(e => t.some(t => t.Layer === e || null == t.Layer && e === d.ZP));
   return (0, i.jsxs)(u.W, {
     component: r.Fragment,
-    children: [N.map((e, n) => {
+    children: [A.map((e, n) => {
       var r;
       let s = l().findLast(t, t => t.Layer === e || null == t.Layer && e === d.ZP);
       return (0, i.jsx)(_.Backdrop, {

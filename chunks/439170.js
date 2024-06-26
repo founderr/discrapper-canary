@@ -23,8 +23,8 @@ var i, r, s, o = n(392711),
   h = n(700785),
   f = n(199902),
   S = n(314897),
-  A = n(592125),
-  N = n(650774),
+  N = n(592125),
+  A = n(650774),
   m = n(271383),
   O = n(430824),
   p = n(158776),
@@ -101,7 +101,7 @@ function y(e, t, n) {
 }
 
 function U(e) {
-  let t = A.Z.getChannel(e);
+  let t = N.Z.getChannel(e);
   return null == t ? D : null == t.memberListId ? function(e) {
     return h.oz(C.Plq.VIEW_CHANNEL, e) ? D : u().v3(a()(e.permissionOverwrites).reduce((e, t) => {
       let {
@@ -286,7 +286,7 @@ function k() {
 }
 class V extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(g.default, O.Z, A.Z, m.ZP, p.Z, R.Z, S.default, N.Z, f.Z, E.Z), this.syncWith([R.Z], k), this.syncWith([f.Z], B)
+    this.waitFor(g.default, O.Z, N.Z, m.ZP, p.Z, R.Z, S.default, A.Z, f.Z, E.Z), this.syncWith([R.Z], k), this.syncWith([f.Z], B)
   }
   getProps(e, t) {
     let n = G.get(e, U(t));

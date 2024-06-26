@@ -66,8 +66,8 @@ var i, r, s = n(735250),
   h = n(431279),
   f = n(794295),
   S = n(593472),
-  A = n(110924),
-  N = n(688465),
+  N = n(110924),
+  A = n(688465),
   m = n(479313),
   O = n(765104),
   p = n(505953),
@@ -410,7 +410,7 @@ function er(e) {
   } = o.useContext(U.G), [f, R] = o.useState(null), g = o.useRef(null), [L, D] = o.useState(null), M = o.useRef(null), P = (0, d.Wu)([O.Z], () => {
     var e;
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
-  }, [r]), y = (0, A.Z)(P);
+  }, [r]), y = (0, N.Z)(P);
   o.useEffect(() => {
     !_().isEqual(y, P) && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: P.length,
@@ -609,7 +609,7 @@ function er(e) {
             color: "header-primary",
             lineClamp: 1,
             children: F.Z.Messages.SUMMARIES
-          }), (0, s.jsx)(N.Z, {
+          }), (0, s.jsx)(A.Z, {
             className: Y.summariesBetaTag
           })]
         }), (0, s.jsx)(E.Clickable, {
@@ -648,7 +648,7 @@ function eo(e) {
   } = o.useContext(U.G), [T, h] = o.useState(null), f = o.useRef(null), [R, g] = o.useState(null), C = o.useRef(null), L = (0, d.Wu)([O.Z], () => {
     var e;
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
-  }, [r]), D = (0, A.Z)(L);
+  }, [r]), D = (0, N.Z)(L);
   o.useEffect(() => {
     !_().isEqual(D, L) && G.default.track(k.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: L.length,
@@ -849,7 +849,7 @@ function eo(e) {
             color: "header-primary",
             lineClamp: 1,
             children: F.Z.Messages.SUMMARIES
-          }), (0, s.jsx)(N.Z, {
+          }), (0, s.jsx)(A.Z, {
             className: Y.summariesBetaTag
           })]
         }), (0, s.jsx)(E.Clickable, {

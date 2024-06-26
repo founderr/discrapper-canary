@@ -15,41 +15,41 @@ t.Z = function(e) {
     isExpansionAnimationComplete: m,
     onCtxMenuOpened: x,
     onCtxMenuClosed: g,
-    onCtxMenuSelection: f,
-    quest: C,
+    onCtxMenuSelection: C,
+    quest: f,
     useReducedMotion: h
-  } = e, _ = s.useRef(null), E = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
+  } = e, _ = s.useRef(null), E = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
   return (0, o.jsxs)(a.p, {
     expandedContentRef: n,
     collapsedContentRef: _,
     expansionSpring: u,
     isExpansionAnimationComplete: m,
     children: [!E && (0, o.jsx)(r.Z, {
-      quest: C,
+      quest: f,
       expansionSpring: u,
       useReducedMotion: h,
       isExpanded: p,
       isExpansionAnimationComplete: m,
       onCtxMenuOpen: x,
       onCtxMenuClose: g,
-      onCtxMenuSelect: f
+      onCtxMenuSelect: C
     }), (0, o.jsx)(i.Z, {
       ref: _,
       className: d.content,
       expansionSpring: u,
       isExpanded: p,
       isExpansionAnimationComplete: m,
-      quest: C,
+      quest: f,
       useReducedMotion: h
     }), (0, o.jsx)(l.Z, {
       expansionSpring: u,
       className: d.content,
       onCtxMenuOpen: x,
       onCtxMenuClose: g,
-      onCtxMenuSelect: f,
+      onCtxMenuSelect: C,
       isExpanded: p,
       isExpansionAnimationComplete: m,
-      quest: C,
+      quest: f,
       useReducedMotion: h,
       ref: n
     }), (0, o.jsx)(c.Z, {

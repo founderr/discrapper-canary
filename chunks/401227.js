@@ -28,8 +28,8 @@ t.Z = function(e) {
     active: h,
     onClick: f,
     "aria-controls": S,
-    focusProps: A
-  } = e, [N, m] = r.useState(!1), [O, p] = r.useState(50), R = N || h, g = (0, _.l)(E, "emojiButton", R ? "Hovered" : "Normal");
+    focusProps: N
+  } = e, [A, m] = r.useState(!1), [O, p] = r.useState(50), R = A || h, g = (0, _.l)(E, "emojiButton", R ? "Hovered" : "Normal");
   let C = (t = O, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
@@ -58,7 +58,7 @@ t.Z = function(e) {
     "aria-controls": S,
     "aria-expanded": h,
     "aria-haspopup": "dialog",
-    focusProps: A,
+    focusProps: N,
     children: null != T ? T() : (0, i.jsx)(a.Spring, {
       config: I,
       to: {

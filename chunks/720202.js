@@ -41,14 +41,14 @@ function S(e) {
   return null != i && null != i.guild_id && f(i.guild_id, n)
 }
 
-function A(e) {
+function N(e) {
   let {
     guildId: t,
     messages: n
   } = e;
   return null != t && f(t, l().flatten(n))
 }
-class N extends(i = u.ZP.Store) {
+class A extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(d.Z, E.ZP)
   }
@@ -56,12 +56,12 @@ class N extends(i = u.ZP.Store) {
     h(e, t)
   }
 }
-o = "GuildMemberRequesterStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "GuildMemberRequesterStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new N(_.Z, {
+}) : r[s] = o, t.Z = new A(_.Z, {
   CONNECTION_CLOSED: T,
   CONNECTION_OPEN: T,
   CONNECTION_RESUMED: function() {
@@ -76,8 +76,8 @@ o = "GuildMemberRequesterStore", (s = "displayName") in(r = N) ? Object.definePr
     }), null != e.notFound && e.notFound.forEach(t => I.acknowledge(e.guildId, t));
     return !1
   },
-  SEARCH_FINISH: A,
-  MOD_VIEW_SEARCH_FINISH: A,
+  SEARCH_FINISH: N,
+  MOD_VIEW_SEARCH_FINISH: N,
   LOCAL_MESSAGES_LOADED: S,
   LOAD_MESSAGES_SUCCESS: S,
   LOAD_MESSAGES_AROUND_SUCCESS: S,

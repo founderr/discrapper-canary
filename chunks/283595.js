@@ -16,8 +16,8 @@ function S() {
   var e;
   return null !== (e = _.K.get(f)) && void 0 !== e ? e : {}
 }
-let A = !1,
-  N = {},
+let N = !1,
+  A = {},
   m = {},
   O = new Set,
   p = {},
@@ -41,7 +41,7 @@ function v() {
 function L(e) {
   for (let t of e) {
     let e = d.Z.createFromServer(t);
-    N[(0, I.Tu)(e.id, e.branchId)] = e
+    A[(0, I.Tu)(e.id, e.branchId)] = e
   }
 }
 
@@ -49,19 +49,19 @@ function D(e) {
   let {
     libraryApplication: t
   } = e, n = d.Z.createFromServer(t), i = (0, I.Tu)(n.id, n.branchId);
-  N[i] = n, O.delete(i)
+  A[i] = n, O.delete(i)
 }
 
 function M(e, t) {
   var n;
   let i = (0, I.Tu)(e, t);
-  return null !== (n = N[i]) && void 0 !== n ? n : m[i]
+  return null !== (n = A[i]) && void 0 !== n ? n : m[i]
 }
 
 function P() {
   return {
     ...m,
-    ...N
+    ...A
   }
 }
 class y extends(i = u.ZP.Store) {
@@ -100,7 +100,7 @@ class y extends(i = u.ZP.Store) {
     if (null != n) {
       var i;
       let r = (0, I.Tu)(e, n),
-        s = null !== (i = N[r]) && void 0 !== i ? i : m[r];
+        s = null !== (i = A[r]) && void 0 !== i ? i : m[r];
       if (null != s && (0, I.Je)(s) && (t || !s.isHidden())) return s
     }
     let r = P();
@@ -117,7 +117,7 @@ class y extends(i = u.ZP.Store) {
     return R[(0, I.Tu)(e, t)]
   }
   get fetched() {
-    return A
+    return N
   }
   get entitledBranchIds() {
     return l()(P()).values().filter(e => (0, I.Je)(e)).map(e => e.branchId).value()
@@ -127,7 +127,7 @@ class y extends(i = u.ZP.Store) {
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
-      if (A) return setImmediate(e), !1
+      if (N) return setImmediate(e), !1
     })
   }
 }
@@ -138,13 +138,13 @@ o = "LibraryApplicationStore", (s = "displayName") in(r = y) ? Object.defineProp
   writable: !0
 }) : r[s] = o, t.Z = new y(c.Z, {
   LOGOUT: function() {
-    A = !1
+    N = !1
   },
   LIBRARY_FETCH_SUCCESS: function(e) {
     let {
       libraryApplications: t
     } = e;
-    N = {}, L(t), A = !0
+    A = {}, L(t), N = !0
   },
   SKU_PURCHASE_SUCCESS: function(e) {
     let {

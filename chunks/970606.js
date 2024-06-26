@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   Oe: function() {
-    return A
+    return N
   },
   Pq: function() {
     return C
@@ -28,7 +28,7 @@ n.d(t, {
     return L
   },
   Qh: function() {
-    return N
+    return A
   },
   TE: function() {
     return p
@@ -158,7 +158,7 @@ function S(e, t) {
   })
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   a.default.track(u.rMx.CLAN_DISCOVERY_VIEWED, {
     guild_ids: e,
     section: t,
@@ -168,7 +168,7 @@ function A(e, t, n) {
   })
 }
 
-function N(e) {
+function A(e) {
   switch (e) {
     case l.Wy.GAMES:
       return "games";

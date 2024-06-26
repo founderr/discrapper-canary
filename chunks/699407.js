@@ -41,10 +41,10 @@ let d = 1500,
       getFingerprint: o,
       getSessionId: _ = f,
       TRACKING_URL: S,
-      drainTimeoutOverride: A,
-      waitFor: N
+      drainTimeoutOverride: N,
+      waitFor: A
     } = e;
-    d = null != A ? A : 1500;
+    d = null != N ? N : 1500;
 
     function m() {
       return 0 !== h.length && (null != r ? null != i : null != o())
@@ -132,7 +132,7 @@ let d = 1500,
     };
     class g extends l.yh {
       initialize() {
-        null != N && this.waitFor(...N)
+        null != A && this.waitFor(...A)
       }
       constructor(...e) {
         super(...e), c(this, "submitEventsImmediately", R)

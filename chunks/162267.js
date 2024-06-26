@@ -45,9 +45,9 @@ function d(e) {
         return null !== (n = e[i.id]) && void 0 !== n ? n : f.length
       })
     }, [n, f]),
-    A = (0, a.Z)(S);
+    N = (0, a.Z)(S);
   return {
-    mutualGuilds: null != S ? S : A,
+    mutualGuilds: null != S ? S : N,
     isFetching: d
   }
 }

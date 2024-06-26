@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(104494),
   f = n(639119),
   S = n(165583),
-  A = n(197115),
-  N = n(302945),
+  N = n(197115),
+  A = n(302945),
   m = n(631771),
   O = n(474936),
   p = n(981631),
@@ -126,7 +126,7 @@ function v(e) {
             }, x),
             variant: "heading-xl/bold",
             children: v
-          }), eo ? (0, i.jsx)(N.Z, {
+          }), eo ? (0, i.jsx)(A.Z, {
             affinities: es
           }) : void 0, J, (0, i.jsx)(l.Text, {
             variant: "text-md/normal",
@@ -171,7 +171,7 @@ function v(e) {
               percent: en.discount.amount
             }))
           }
-          return (0, i.jsx)(A.Z, {
+          return (0, i.jsx)(N.Z, {
             showGradient: Q,
             premiumModalAnalyticsLocation: P,
             subscriptionTier: K,

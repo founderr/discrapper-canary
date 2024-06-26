@@ -33,8 +33,8 @@ function l(e) {
     sectionGutter: h,
     padding: f,
     paddingVertical: S,
-    paddingHorizontal: A,
-    dir: N
+    paddingHorizontal: N,
+    dir: A
   } = e, m = (0, s.Z)(), O = (0, i.useRef)(a), [p] = (0, i.useState)(() => new r.ZP), R = d(), g = Math.min(null != E ? E : 1 / 0, R.offsetWidth), C = null != E ? Math.max(0, R.offsetWidth - E) : 0, {
     dirty: v,
     chunkStart: L,
@@ -57,10 +57,10 @@ function l(e) {
     sectionGutter: h,
     padding: f,
     paddingVertical: S,
-    paddingHorizontal: A,
+    paddingHorizontal: N,
     marginLeft: C / 2,
-    dir: N
-  }), p.computeVisibleSections(Math.max(0, L * c), D * c), p.getState()), [v, p, t, n, l, u, _, L, D, c, I, T, h, f, S, A, g, N]), {
+    dir: A
+  }), p.computeVisibleSections(Math.max(0, L * c), D * c), p.getState()), [v, p, t, n, l, u, _, L, D, c, I, T, h, f, S, N, g, A]), {
     ...O.current,
     masonryComputer: p,
     forceUpdateOnChunkChange: M,

@@ -11,22 +11,22 @@ n.r(t), n.d(t, {
     return S.A
   },
   ImpressionNames: function() {
-    return A.z
+    return N.z
   },
   ImpressionSchema: function() {
-    return A.ImpressionSchema
+    return N.ImpressionSchema
   },
   ImpressionTypes: function() {
     return S.n
   },
   NetworkActionNames: function() {
-    return A.a
+    return N.a
   },
   StandardAnalyticsLocation: function() {
     return S.StandardAnalyticsLocation
   },
   StandardAnalyticsSchemaNameMap: function() {
-    return A.StandardAnalyticsSchemaNameMap
+    return N.StandardAnalyticsSchemaNameMap
   },
   TypedEventProperties: function() {
     return S.TypedEventProperties
@@ -75,8 +75,8 @@ var s, o = n(348327),
   h = n(947486),
   f = n(699407),
   S = n(20281),
-  A = n(525769);
-let N = "deviceProperties",
+  N = n(525769);
+let A = "deviceProperties",
   m = "referralProperties",
   O = {},
   p = {},
@@ -193,7 +193,7 @@ function P(e) {
 }
 if (null == i) try {
   let e, t, n;
-  e = E.K.get(N), null == e && (e = function() {
+  e = E.K.get(A), null == e && (e = function() {
     let e = {},
       t = L();
     return e.os = t, e.browser = function() {
@@ -217,7 +217,7 @@ if (null == i) try {
       else if (/Gecko/.test(e)) return "Mozilla";
       else return ""
     }(), e.device = D(), e.system_locale = (0, d.qf)(), e
-  }(), E.K.set(N, e)), t = E.K.get(m), null == t && (t = M(), E.K.set(m, t)), n = I.x.get(m), null == n && (n = function(e, t) {
+  }(), E.K.set(A, e)), t = E.K.get(m), null == t && (t = M(), E.K.set(m, t)), n = I.x.get(m), null == n && (n = function(e, t) {
     let n = {};
     return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
   }(M(), "_current"), I.x.set(m, n)), i = {
@@ -251,7 +251,7 @@ y(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "305042", "305042"), 10);
+  let s = parseInt((n = "305104", "305104"), 10);
   !isNaN(s) && (i.client_build_number = s);
   let o = null == R ? void 0 : null === (e = (t = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(o) && (i.native_build_number = o), i.client_event_source = function() {

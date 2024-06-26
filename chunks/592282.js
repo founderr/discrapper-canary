@@ -26,17 +26,17 @@ function I(e) {
     isFocused: h,
     menuItemProps: f,
     action: S,
-    className: A,
-    focusedClassName: N
+    className: N,
+    focusedClassName: A
   } = e, m = r.useRef(null);
   return r.useEffect(() => {
     h && (0, u.F)(m)
   }, [h]), (0, i.jsxs)(a.P, {
     innerRef: m,
-    className: o()(E.item, E.labelContainer, d._[t], A, {
+    className: o()(E.item, E.labelContainer, d._[t], N, {
       [E.disabled]: T,
       [E.focused]: h,
-      [null != N ? N : ""]: h
+      [null != A ? A : ""]: h
     }),
     onClick: T ? void 0 : S,
     ...f,

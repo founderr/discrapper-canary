@@ -12,8 +12,8 @@ var i, r, s, o, a = n(348327),
   h = n(314897),
   f = n(594174),
   S = n(981631);
-let A = Object.freeze([]),
-  N = {},
+let N = Object.freeze([]),
+  A = {},
   m = {},
   O = {},
   p = {},
@@ -21,7 +21,7 @@ let A = Object.freeze([]),
   g = {};
 
 function C(e, t) {
-  let n = N[e];
+  let n = A[e];
   return null != n ? n[t] : null
 }
 let v = e => {
@@ -46,13 +46,13 @@ function D(e, t) {
 }
 
 function M(e) {
-  if (delete m[e], delete O[e], delete p[e], null == N[e]) return;
-  let [t] = _().sortBy(N[e], e => -e.timestamp);
-  t.status !== S.Skl.OFFLINE ? (m[e] = t.status, O[e] = t.activities, null != t.clientStatus && (p[e] = t.clientStatus), delete g[e]) : (_().every(N[e], e => e.status === S.Skl.OFFLINE) && delete N[e], g[e] = Date.now())
+  if (delete m[e], delete O[e], delete p[e], null == A[e]) return;
+  let [t] = _().sortBy(A[e], e => -e.timestamp);
+  t.status !== S.Skl.OFFLINE ? (m[e] = t.status, O[e] = t.activities, null != t.clientStatus && (p[e] = t.clientStatus), delete g[e]) : (_().every(A[e], e => e.status === S.Skl.OFFLINE) && delete A[e], g[e] = Date.now())
 }
 
 function P(e) {
-  let t = N[e];
+  let t = A[e];
   if (null == t) return;
   let n = _().maxBy(Object.values(t), e => e.timestamp);
   n.status !== S.Skl.OFFLINE && (m[e] = n.status, O[e] = n.activities, null != n.clientStatus && (p[e] = n.clientStatus))
@@ -67,15 +67,15 @@ function y(e) {
     activities: s
   } = e;
   if (n === h.default.getId()) return !1;
-  let o = N[n];
+  let o = A[n];
   if (null == o) {
     if (i === S.Skl.OFFLINE) return !1;
-    o = N[n] = {}
+    o = A[n] = {}
   }
   if (i === S.Skl.OFFLINE) o[t] = {
     status: i,
     clientStatus: r,
-    activities: A,
+    activities: N,
     timestamp: Date.now()
   };
   else {
@@ -101,15 +101,15 @@ function U(e) {
     timestamp: o
   } = e;
   if (n === h.default.getId()) return;
-  let a = N[n];
+  let a = A[n];
   if (null == a) {
     if (i === S.Skl.OFFLINE) return;
-    a = N[n] = {}
+    a = A[n] = {}
   }
   if (i === S.Skl.OFFLINE) a[t] = {
     status: i,
     clientStatus: r,
-    activities: A,
+    activities: N,
     timestamp: Date.now()
   };
   else {
@@ -125,13 +125,13 @@ function U(e) {
 
 function b(e, t) {
   if (t === h.default.getId()) return !1;
-  let n = N[t];
+  let n = A[t];
   if (null == n || null == n[e]) return !1;
-  delete n[e], 0 === Object.keys(n).length && delete N[t], M(t)
+  delete n[e], 0 === Object.keys(n).length && delete A[t], M(t)
 }
 
 function G(e) {
-  for (let t of T.default.keys(N)) b(e, t)
+  for (let t of T.default.keys(A)) b(e, t)
 }
 class w extends(i = c.ZP.Store) {
   initialize() {
@@ -154,10 +154,10 @@ class w extends(i = c.ZP.Store) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if (null == t) {
       var n;
-      return null !== (n = O[e]) && void 0 !== n ? n : A
+      return null !== (n = O[e]) && void 0 !== n ? n : N
     }
     let i = C(e, t);
-    return null == i || null == i.activities ? A : i.activities
+    return null == i || null == i.activities ? N : i.activities
   }
   getPrimaryActivity(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -198,7 +198,7 @@ class w extends(i = c.ZP.Store) {
   }
   getState() {
     return {
-      presencesForGuilds: N,
+      presencesForGuilds: A,
       statuses: m,
       activities: O,
       activityMetadata: R,
@@ -221,7 +221,7 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
       guilds: t,
       presences: n
     } = e, i = h.default.getId();
-    N = {}, R = {}, g = {}, m = {
+    A = {}, R = {}, g = {}, m = {
       [i]: m[i]
     }, O = {
       [i]: O[i]
@@ -268,7 +268,7 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
     let {
       presences: t
     } = e;
-    N = t.presencesForGuilds, m = t.statuses, O = t.activities, R = t.activityMetadata
+    A = t.presencesForGuilds, m = t.statuses, O = t.activities, R = t.activityMetadata
   },
   GUILD_CREATE: function(e) {
     let {

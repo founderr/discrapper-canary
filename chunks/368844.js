@@ -49,16 +49,16 @@ function S(e) {
   return null != e && null != e && (0, o.NU)(e.filename) && null != e.proxy_url
 }
 
-function A(e) {
+function N(e) {
   return f(e) || S(e)
 }(r = i || (i = {})).EMBED = "embed", r.ATTACHMENT = "attachment";
 
-function N(e) {
+function A(e) {
   return function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.x4.getSetting();
     if (!t) return [];
     let n = null == e ? void 0 : e.attachments;
-    return null == e || null == n ? [] : n.filter(A).map((e, t) => {
+    return null == e || null == n ? [] : n.filter(N).map((e, t) => {
       let {
         proxy_url: n,
         url: i,
@@ -141,19 +141,19 @@ function O(e, t) {
 }
 
 function p(e, t) {
-  let n = N(e);
+  let n = A(e);
   return [...n, ...m(e, t)]
 }
 
 function R(e, t) {
   var n, i;
-  let r = N(e),
+  let r = A(e),
     s = m(e, t);
   return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : s[0]) && void 0 !== i ? i : null
 }
 
 function g(e, t) {
-  let n = N(e),
+  let n = A(e),
     i = m(e, t);
   return null == n[0] && null != i[0]
 }

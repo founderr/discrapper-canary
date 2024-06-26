@@ -26,11 +26,11 @@ function S(e) {
   }
 }
 
-function A(e) {
+function N(e) {
   let t = (0, d.E)(e);
   return h.has(t)
 }
-class N extends(r = l.ZP.Store) {
+class A extends(r = l.ZP.Store) {
   initialize() {
     var e;
     let t = null !== (e = u.K.get(I)) && void 0 !== e ? e : {};
@@ -47,15 +47,15 @@ class N extends(r = l.ZP.Store) {
     return S(e)
   }
   isTrustedProtocol(e) {
-    return A(e)
+    return N(e)
   }
 }
-a = "MaskedLinkStore", (o = "displayName") in(s = N) ? Object.defineProperty(s, o, {
+a = "MaskedLinkStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new N(_.Z, {
+}) : s[o] = a, t.Z = new A(_.Z, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function(e) {
     let {
       url: t
@@ -70,7 +70,7 @@ a = "MaskedLinkStore", (o = "displayName") in(s = N) ? Object.defineProperty(s, 
     let {
       url: t
     } = e;
-    if (A(t)) return !1;
+    if (N(t)) return !1;
     h.add((0, d.E)(t)), u.K.set(I, {
       trustedDomains: T,
       trustedProtocols: h

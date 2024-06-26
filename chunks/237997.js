@@ -15,8 +15,8 @@ var i, r = n(442837),
   h = n(358085),
   f = n(998502),
   S = n(145597),
-  A = n(451478),
-  N = n(981631),
+  N = n(451478),
+  A = n(981631),
   m = n(987650);
 
 function O(e, t, n) {
@@ -30,11 +30,11 @@ function O(e, t, n) {
 let p = Object.freeze({
     selectedGuildId: null,
     selectedChannelId: null,
-    displayUserMode: N.OYC.ALWAYS,
-    displayNameMode: N.wC$.ALWAYS,
-    avatarSizeMode: N.ipw.LARGE,
-    notificationPositionMode: N._vf.TOP_LEFT,
-    textChatNotifications: N.Ypu.ENABLED,
+    displayUserMode: A.OYC.ALWAYS,
+    displayNameMode: A.wC$.ALWAYS,
+    avatarSizeMode: A.ipw.LARGE,
+    notificationPositionMode: A._vf.TOP_LEFT,
+    textChatNotifications: A.Ypu.ENABLED,
     disableExternalLinkAlert: !1,
     disablePinTutorial: !1,
     showKeybindIndicators: !0,
@@ -78,10 +78,10 @@ function k() {
 function V(e) {
   let t = (0, S.QF)();
   if (null == e.pid || e.pid === t) switch (e.type) {
-    case N.BmY.STORAGE_SYNC:
+    case A.BmY.STORAGE_SYNC:
       r.ZP.PersistedStore.initializeAll(e.states);
       break;
-    case N.BmY.DISPATCH:
+    case A.BmY.DISPATCH:
       null != e.payloads && (M = !0, e.payloads.forEach(e => (function(e) {
         var t, n, i, r, s, a;
         if ("OVERLAY_INITIALIZE" === e.type && (null == (t = e).version && 1 === S.Tq || t.version === S.Tq || (o.Z.dispatch({
@@ -200,7 +200,7 @@ class Z extends(i = r.ZP.PersistedStore) {
     return G.notificationPositionMode
   }
   getTextChatNotificationMode() {
-    return G.notificationPositionMode === N._vf.DISABLED ? N.Ypu.DISABLED : G.textChatNotifications
+    return G.notificationPositionMode === A._vf.DISABLED ? A.Ypu.DISABLED : G.textChatNotifications
   }
   get showKeybindIndicators() {
     return null == G.showKeybindIndicators || G.showKeybindIndicators
@@ -267,14 +267,14 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
           channelId: n
         } = e;
         return null != n && ((0, l.lW)({
-          type: N.BmY.DISPATCH,
+          type: A.BmY.DISPATCH,
           pid: (0, S.QF)(),
           token: (0, S.Ht)(),
           payloads: [{
             type: "CHANNEL_PRELOAD",
-            guildId: t === N.ME ? null : t,
+            guildId: t === A.ME ? null : t,
             channelId: n,
-            context: N.e3s
+            context: A.e3s
           }, {
             type: "OVERLAY_SELECT_CHANNEL",
             guildId: t,
@@ -283,13 +283,13 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
         }), !1)
       }
       return (0, l.lW)({
-        type: N.BmY.DISPATCH,
+        type: A.BmY.DISPATCH,
         pid: (0, S.QF)(),
         token: (0, S.Ht)(),
         payloads: [e]
       }), !w.has(e.type)
     }), (0, l.Ty)(V, (0, S.Ht)()), (0, l.$j)(), (0, l.lW)({
-      type: N.BmY.CONNECT,
+      type: A.BmY.CONNECT,
       pid: (0, S.QF)(),
       token: (0, S.Ht)()
     })
@@ -400,7 +400,7 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
   },
   WINDOW_RESIZED: function() {
     if (__OVERLAY__) {
-      let e = A.Z.windowSize();
+      let e = N.Z.windowSize();
       !(0, S.Te)(e) && (U = !1)
     }
   },

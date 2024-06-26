@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   J: function() {
-    return N
+    return A
   }
 }), n(47120), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
@@ -21,18 +21,18 @@ var i = n(735250),
   f = n(981631),
   S = n(972216);
 
-function A(e) {
+function N(e) {
   let {
     url: t,
     className: n,
     style: s,
     onLoad: o,
     shouldRefocus: S,
-    queryParams: A,
-    allowPopups: N = !1,
+    queryParams: N,
+    allowPopups: A = !1,
     referrerPolicy: m = "origin"
   } = e, O = (0, u.e7)([_.Z], () => _.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT)), p = (0, a.useMemoOne)(() => (0, l.Z)(), [t]), R = r.useRef(null), g = (0, I.Z)(R, S, null == O ? window : O), C = {
-    ...A,
+    ...N,
     frame_id: p,
     platform: h.S4.DESKTOP
   }, [v, L] = r.useState(!1), D = d.Z.theme, M = {
@@ -63,14 +63,14 @@ function A(e) {
       null == o || o(e.target), R.current = e.target, g(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, C], null != t ? t : "")
     },
     sandbox: (0, T.Z)({
-      allowPopups: N
+      allowPopups: A
     }),
     className: n,
     src: "".concat(t, "?").concat(new URLSearchParams(C))
   }) : null
 }
 
-function N(e) {
+function A(e) {
   let {
     onLoad: t
   } = e, [n, s] = r.useState(!1), a = r.useCallback(e => {
@@ -82,7 +82,7 @@ function N(e) {
       className: o()(S.fillParent, S.iframePlaceholder)
     }), (0, i.jsx)("div", {
       className: o()(S.fillParent, n ? void 0 : S.hiddenIframeContainer),
-      children: (0, i.jsx)(A, {
+      children: (0, i.jsx)(N, {
         ...e,
         onLoad: a
       })

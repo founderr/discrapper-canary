@@ -22,7 +22,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = {
+let N = {
     SMOL: "Smol",
     MINI: "Mini",
     SMALLER: "Smaller",
@@ -32,25 +32,25 @@ let A = {
     LARGER: "Larger",
     XLARGE: "XLarge"
   },
-  N = {
-    [A.SMOL]: 16,
-    [A.MINI]: 20,
-    [A.SMALLER]: 24,
-    [A.SMALL]: 30,
-    [A.MEDIUM]: 40,
-    [A.LARGE]: 50,
-    [A.LARGER]: 64,
-    [A.XLARGE]: 100
+  A = {
+    [N.SMOL]: 16,
+    [N.MINI]: 20,
+    [N.SMALLER]: 24,
+    [N.SMALL]: 30,
+    [N.MEDIUM]: 40,
+    [N.LARGE]: 50,
+    [N.LARGER]: 64,
+    [N.XLARGE]: 100
   },
   m = {
-    [A.SMOL]: [10, 10, 8, 6, 6, 4],
-    [A.MINI]: [12, 12, 10, 10, 8, 6, 4],
-    [A.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-    [A.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-    [A.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-    [A.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-    [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-    [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+    [N.SMOL]: [10, 10, 8, 6, 6, 4],
+    [N.MINI]: [12, 12, 10, 10, 8, 6, 4],
+    [N.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+    [N.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+    [N.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+    [N.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+    [N.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+    [N.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
 class O extends s.PureComponent {
   renderAcronym() {
@@ -94,8 +94,8 @@ class O extends s.PureComponent {
       onClick: I,
       to: h,
       badgeStrokeColor: S,
-      animate: A,
-      tabIndex: N,
+      animate: N,
+      tabIndex: A,
       iconSrc: O,
       "aria-hidden": p,
       ...R
@@ -112,7 +112,7 @@ class O extends s.PureComponent {
         ...u
       } : u,
       onClick: null != h || null == I ? void 0 : I,
-      tabIndex: N,
+      tabIndex: A,
       ...R,
       children: [this.renderAcronym(), this.renderBadge()]
     })
@@ -165,7 +165,7 @@ let p = u.ZP.connectStores([E.Z], e => {
   return {
     style: {
       ...r,
-      backgroundImage: (0, I.rv)(null != i ? i : t.getIconURL(N[s], n && E.Z.isFocused()))
+      backgroundImage: (0, I.rv)(null != i ? i : t.getIconURL(A[s], n && E.Z.isFocused()))
     }
   }
 })((0, d.N)(e => (0, r.jsx)(O, {
@@ -178,8 +178,8 @@ class R extends(i = s.PureComponent) {
     })
   }
 }
-S(R, "Sizes", A), S(R, "defaultProps", {
-  size: A.LARGE,
+S(R, "Sizes", N), S(R, "defaultProps", {
+  size: N.LARGE,
   textScale: 1,
   showBadge: !1,
   showTooltip: !1,

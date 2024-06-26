@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(430824),
   f = n(806519),
   S = n(626135),
-  A = n(74538),
-  N = n(998502),
+  N = n(74538),
+  A = n(998502),
   m = n(785717),
   O = n(621853),
   p = n(204197),
@@ -71,7 +71,7 @@ function w(e) {
     })]
   })
 }
-let x = N.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+let x = A.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
 function B(e) {
   let {
@@ -84,20 +84,20 @@ function B(e) {
     guildId: E,
     channelId: T,
     onClose: h,
-    disableUserProfileLink: N,
+    disableUserProfileLink: A,
     profileType: O,
     animateOnHover: R,
     hasProfileEffect: C,
     statusTooltipDelay: w
   } = e, {
     theme: B
-  } = (0, v.z)(), k = r.useContext(S.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = A.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
+  } = (0, v.z)(), k = r.useContext(S.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = N.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
     analyticsLocations: F
   } = (0, c.ZP)(), {
     trackUserProfileAction: Y,
     messageId: j,
     roleId: W
-  } = (0, m.KZ)(), K = N || t.isClyde(), {
+  } = (0, m.KZ)(), K = A || t.isClyde(), {
     avatarDecorationSrc: z,
     avatarSrc: q,
     eventHandlers: X

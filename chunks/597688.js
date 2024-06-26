@@ -11,10 +11,10 @@ let I = new Map,
   h = I,
   f = T,
   S = !1,
-  A = new Set;
-let N = {},
+  N = new Set;
+let A = {},
   m = () => {
-    h = I, f = T, r = void 0, S = !1, A = new Set, i = void 0, N = {}
+    h = I, f = T, r = void 0, S = !1, N = new Set, i = void 0, A = {}
   };
 class O extends(s = _.ZP.Store) {
   initialize() {
@@ -24,7 +24,7 @@ class O extends(s = _.ZP.Store) {
     return S
   }
   isFetchingProduct(e) {
-    return null != e && A.has(e)
+    return null != e && N.has(e)
   }
   get error() {
     return i
@@ -33,7 +33,7 @@ class O extends(s = _.ZP.Store) {
     return r
   }
   get lastFetchOptions() {
-    return N
+    return A
   }
   get categories() {
     return h
@@ -59,7 +59,7 @@ l = "CollectiblesCategoryStore", (a = "displayName") in(o = O) ? Object.definePr
   writable: !0
 }) : o[a] = l, t.Z = new O(c.Z, {
   COLLECTIBLES_CATEGORIES_FETCH: e => {
-    S = !0, i = void 0, N = e.options
+    S = !0, i = void 0, A = e.options
   },
   COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
     0 === e.categories.length ? (h = I, f = T) : !(0, u.isEqual)([...h.values()], e.categories) && (h = new Map(e.categories.map(e => [e.skuId, e])), f = new Map((0, E.Cs)(h).map(e => [e.skuId, e]))), r = Date.now(), S = !1, i = void 0
@@ -68,27 +68,27 @@ l = "CollectiblesCategoryStore", (a = "displayName") in(o = O) ? Object.definePr
     let {
       error: t
     } = e;
-    h = I, f = T, S = !1, A = new Set, i = t
+    h = I, f = T, S = !1, N = new Set, i = t
   },
   COLLECTIBLES_PRODUCT_FETCH: e => {
     let {
       skuId: t
     } = e;
-    (A = new Set(A)).add(t), i = void 0
+    (N = new Set(N)).add(t), i = void 0
   },
   COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
     let {
       skuId: t,
       product: n
     } = e;
-    f.set(t, n), (A = new Set(A)).delete(t), i = void 0
+    f.set(t, n), (N = new Set(N)).delete(t), i = void 0
   },
   COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
     let {
       skuId: t,
       error: n
     } = e;
-    (A = new Set(A)).delete(t), i = n
+    (N = new Set(N)).delete(t), i = n
   },
   LOGOUT: m
 })

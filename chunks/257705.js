@@ -24,17 +24,17 @@ function u(e, t) {
       onScroll: h,
       style: f,
       ...S
-    } = s, A = r.useRef(null), N = (0, l.tT)({
+    } = s, N = r.useRef(null), A = (0, l.tT)({
       paddingFix: I,
       orientation: E,
       dir: d,
       className: c,
-      scrollerRef: A,
+      scrollerRef: N,
       specs: n
     });
     return (0, i.jsx)("div", {
       ref: e => {
-        "function" == typeof u ? u(e) : null != u && (u.current = e), A.current = e
+        "function" == typeof u ? u(e) : null != u && (u.current = e), N.current = e
       },
       className: o()(c, {
         [e]: !0,
@@ -44,8 +44,8 @@ function u(e, t) {
       dir: d,
       ...S,
       children: (0, i.jsxs)(a.Jc, {
-        containerRef: A,
-        children: [_, N]
+        containerRef: N,
+        children: [_, A]
       })
     })
   })

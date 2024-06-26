@@ -12,8 +12,8 @@ var i, r, s, o, a = n(392711),
   h = n(195663),
   f = n(131704),
   S = n(601964),
-  A = n(598077),
-  N = n(386438),
+  N = n(598077),
+  A = n(386438),
   m = n(700785),
   O = n(592125),
   p = n(683301),
@@ -202,16 +202,16 @@ class K extends(i = _.ZP.Store) {
     return u.e$(s, e)
   }
   canBasicChannel(e, t, n, i, r) {
-    return "basicPermissions" in t ? N.Z.has(t.basicPermissions, e) : u.e$(W(t, n, i, r), N.Z.asBigFlag(e))
+    return "basicPermissions" in t ? A.Z.has(t.basicPermissions, e) : u.e$(W(t, n, i, r), A.Z.asBigFlag(e))
   }
   computePermissions(e, t, n, i) {
     return W(e, t, n, i)
   }
   computeBasicPermissions(e) {
-    return "basicPermissions" in e ? e.basicPermissions : N.Z.asBasicFlag(W(e))
+    return "basicPermissions" in e ? e.basicPermissions : A.Z.asBasicFlag(W(e))
   }
   canManageUser(e, t, n) {
-    let i = t instanceof A.Z ? t.id : t;
+    let i = t instanceof N.Z ? t.id : t;
     if (n.isOwner(i)) return !1;
     let r = C.default.getCurrentUser();
     if (!this.can(e, n)) return !1;

@@ -19,11 +19,11 @@ t.Z = e => {
   } = (0, r.Rf)({
     quest: t,
     location: u.dr.QUESTS_BAR
-  }), g = (0, d.eQ)(t), f = (0, d.vf)(t, m), C = m ? "expanded" : "collapsed";
+  }), g = (0, d.eQ)(t), C = (0, d.vf)(t, m), f = m ? "expanded" : "collapsed";
   return (0, o.jsxs)("div", {
     className: p.questProgressWrapper,
     children: [(0, o.jsx)(l.l7, {
-      inState: C,
+      inState: f,
       id: "progress-bar",
       ref: n,
       children: e => (0, o.jsx)(c.Z, {
@@ -40,7 +40,7 @@ t.Z = e => {
       })
     }), (0, o.jsxs)("div", {
       children: [(0, o.jsx)(l.l7, {
-        inState: C,
+        inState: f,
         id: "progress-title",
         children: e => (0, o.jsx)(s.Text, {
           ref: e,
@@ -50,7 +50,7 @@ t.Z = e => {
           children: g
         })
       }), (0, o.jsx)(l.l7, {
-        inState: C,
+        inState: f,
         id: "progress-subtitle",
         isTextTransition: !0,
         children: e => (0, o.jsx)(s.Text, {
@@ -58,7 +58,7 @@ t.Z = e => {
           className: p.questProgressHint,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: f
+          children: C
         })
       })]
     })]

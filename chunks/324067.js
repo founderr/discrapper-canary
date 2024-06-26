@@ -13,13 +13,13 @@ let h = null,
   f = {},
   S = null;
 
-function A() {
+function N() {
   return {
     _categories: [],
     null: []
   }
 }
-let N = A();
+let A = N();
 
 function m(e, t) {
   e.index = t
@@ -27,7 +27,7 @@ function m(e, t) {
 
 function O(e) {
   let t = E.ZP.getChannels(e),
-    n = A(),
+    n = N(),
     i = e => {
       var t;
       let {
@@ -96,7 +96,7 @@ class D extends(i = a.ZP.Store) {
     return null != e ? function(e) {
       let t = f[e];
       return null != t ? t : O(e)
-    }(e) : N
+    }(e) : A
   }
 }
 o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {

@@ -7,7 +7,7 @@ n.d(t, {
     return O
   },
   U4: function() {
-    return A
+    return N
   },
   Ye: function() {
     return T.Z
@@ -16,7 +16,7 @@ n.d(t, {
     return m
   },
   q: function() {
-    return N
+    return A
   }
 }), n(789020);
 var i = n(913527),
@@ -39,7 +39,7 @@ function S() {
   (0, o.yw)(f.rMx.THREAD_BROWSER_TAB_CHANGED)
 }
 
-function A() {
+function N() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
   (0, o.yw)(f.rMx.OPEN_MODAL, {
     type: "Thread Browser",
@@ -47,7 +47,7 @@ function A() {
   })
 }
 
-function N() {
+function A() {
   _.default.track(f.rMx.OPEN_POPOUT, {
     type: "Active Threads Popout"
   })
@@ -68,8 +68,8 @@ function m(e, t) {
     },
     T = null !== (n = I.Z.flags(e.id)) && void 0 !== n ? n : 0,
     S = E(T),
-    A = I.Z.isMuted(e.id),
-    N = (0, d.sK)(I.Z.getMuteConfig(e.id)),
+    N = I.Z.isMuted(e.id),
+    A = (0, d.sK)(I.Z.getMuteConfig(e.id)),
     {
       can_send_message: m,
       ...O
@@ -85,10 +85,10 @@ function m(e, t) {
       old_thread_notification_setting: S,
       new_thread_notification_setting: null != t.flags ? E(t.flags) : S,
       parent_notification_setting: l.channel_message_notification_settings,
-      old_thread_is_muted: A,
-      new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : A,
-      old_thread_muted_until: N,
-      new_thread_muted_until: null != t.mute_config ? (0, d.sK)(t.mute_config) : N
+      old_thread_is_muted: N,
+      new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : N,
+      old_thread_muted_until: A,
+      new_thread_muted_until: null != t.mute_config ? (0, d.sK)(t.mute_config) : A
     };
   _.default.track(f.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, p)
 }

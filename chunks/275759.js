@@ -10,10 +10,10 @@ n.d(t, {
     return h
   },
   Ur: function() {
-    return N
+    return A
   },
   kQ: function() {
-    return A
+    return N
   },
   n_: function() {
     return S
@@ -273,14 +273,14 @@ function S(e) {
   return o
 }
 
-function A(e, t) {
+function N(e, t) {
   return Object.values(t).some(e => {
     var t;
     return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
   })
 }
 
-function N(e) {
+function A(e) {
   var t, n;
   let {
     guildMember: i,

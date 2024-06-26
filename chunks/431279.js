@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i, r = n(735250),
@@ -27,7 +27,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class A extends(i = s.PureComponent) {
+class N extends(i = s.PureComponent) {
   render() {
     let {
       appContext: e,
@@ -65,8 +65,8 @@ class A extends(i = s.PureComponent) {
         width: d,
         height: E,
         animated: S,
-        children: A,
-        renderLinkComponent: N,
+        children: N,
+        renderLinkComponent: A,
         renderForwardComponent: m,
         isWindowFocused: O,
         shouldHideMediaOptions: p = !1
@@ -77,9 +77,9 @@ class A extends(i = s.PureComponent) {
         width: d,
         height: E,
         animated: S,
-        children: A,
+        children: N,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: N,
+        renderLinkComponent: A,
         renderForwardComponent: m,
         onContextMenu: p ? e => {
           e.stopPropagation(), e.preventDefault()
@@ -107,16 +107,16 @@ class A extends(i = s.PureComponent) {
   }
 }
 
-function N(e) {
+function A(e) {
   let t = (0, l.bp)(),
     n = (0, E.n)();
-  return (0, r.jsx)(A, {
+  return (0, r.jsx)(N, {
     ...e,
     isWindowFocused: n,
     appContext: t
   })
 }
-S(A, "defaultProps", {
+S(N, "defaultProps", {
   shouldLink: !0,
   autoPlay: !1,
   animated: !1

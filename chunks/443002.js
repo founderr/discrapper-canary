@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(808189),
   f = n(362948),
   S = n(245004),
-  A = n(383881),
-  N = n(981631),
+  N = n(383881),
+  A = n(981631),
   m = n(689938),
   O = n(106510);
 t.Z = function(e) {
@@ -28,8 +28,8 @@ t.Z = function(e) {
   } = e, [R, g] = r.useState(!0), C = r.useRef(!1), v = (0, s.Z)(() => Date.now()), {
     analyticsLocations: L
   } = (0, u.ZP)(), D = r.useCallback(() => {
-    p(), _.default.track(N.rMx.MODAL_DISMISSED, {
-      type: N.ZY5.PREMIUM_GUILD_USER_MODAL,
+    p(), _.default.track(A.rMx.MODAL_DISMISSED, {
+      type: A.ZY5.PREMIUM_GUILD_USER_MODAL,
       location_stack: L,
       location_section: t.section,
       location_object: t.object,
@@ -37,8 +37,8 @@ t.Z = function(e) {
       duration_open_ms: Date.now() - v
     })
   }, [p, t, L, v, n.id]), M = r.useCallback(e => {
-    e && !C.current && (_.default.track(N.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-      type: N.ZY5.PREMIUM_GUILD_USER_MODAL,
+    e && !C.current && (_.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+      type: A.ZY5.PREMIUM_GUILD_USER_MODAL,
       location_stack: L,
       location_section: t.section,
       location_object: t.object,
@@ -46,8 +46,8 @@ t.Z = function(e) {
     }), C.current = !0)
   }, [t, L, n.id]);
   return r.useEffect(() => {
-    _.default.track(N.rMx.OPEN_MODAL, {
-      type: N.ZY5.PREMIUM_GUILD_USER_MODAL,
+    _.default.track(A.rMx.OPEN_MODAL, {
+      type: A.ZY5.PREMIUM_GUILD_USER_MODAL,
       location_stack: L,
       location_section: t.section,
       location_object: t.object,
@@ -89,7 +89,7 @@ t.Z = function(e) {
           }), (0, i.jsx)(h.Z, {
             guild: n
           })]
-        }), (0, i.jsx)(A.O, {})]
+        }), (0, i.jsx)(N.O, {})]
       }), (0, i.jsx)("div", {
         className: O.middleBodyContentWrapper,
         children: (0, i.jsx)(S.Z, {})
@@ -101,7 +101,7 @@ t.Z = function(e) {
             className: O.tierComparisonTable,
             guild: n
           }), (0, i.jsx)(c.Z, {}), (0, i.jsx)(E.Z, {})]
-        }), (0, i.jsx)(A.A, {}), (0, i.jsx)("div", {
+        }), (0, i.jsx)(N.A, {}), (0, i.jsx)("div", {
           className: O.lowerBodyBackgroundImage
         })]
       }), (0, i.jsx)(o.$, {

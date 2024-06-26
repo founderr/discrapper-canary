@@ -13,8 +13,8 @@ var s, o, a, l, u, _, c = n(807864),
   h = n(765250),
   f = n(13245),
   S = n(287734),
-  A = n(579806),
-  N = n(887278),
+  N = n(579806),
+  A = n(887278),
   m = n(490029),
   O = n(710845),
   p = n(594190),
@@ -76,7 +76,7 @@ function en(e, t) {
     if (null == t ? k.delete(e) : k.set(e, t), null == t || "CRASHED" === t) {
       var r;
       j = null;
-      let e = null === A.Z || void 0 === A.Z ? void 0 : null === (r = A.Z.fileManager) || void 0 === r ? void 0 : r.uploadDiscordHookCrashes;
+      let e = null === N.Z || void 0 === N.Z ? void 0 : null === (r = N.Z.fileManager) || void 0 === r ? void 0 : r.uploadDiscordHookCrashes;
       null != e && e().then(e => {
         if (!!Array.isArray(e) && 0 !== e.length)
           for (let l of (J.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
@@ -121,7 +121,7 @@ async function er(e) {
   $ = "attach.getOverlayModule";
   let n = await eu();
   $ = "attach.transitionOverlayPIDStatus", en(e, "ATTACHING"), $ = "attach.attachToProcess";
-  let i = await N.YT(e);
+  let i = await A.YT(e);
   null == i ? ($ = "attach.transitionOverlayPIDStatus (CONNECTING)", en(e, "CONNECTING", "ATTACHING"), $ = "attach.reconcileHostProcess", await ei(n), n.connectProcess(e)) : ($ = "attach.transitionOverlayPIDStatus (HOOK_FAILED)", en(e, "HOOK_FAILED", "ATTACHING"), J.warn("Could not hook to pid=".concat(e, ", error=").concat(i)))
 }
 async function es(e) {
@@ -131,7 +131,7 @@ async function es(e) {
   }
   $ = "detach.getOverlayModule";
   let t = await eu();
-  $ = "detach.transitionOverlayPIDStatus", en(e, null), e !== G.Js && ($ = "detach.cancelAttachToProcess", N.pn(e), $ = "detach.disconnectProcess", t.disconnectProcess(e)), $ = "detach.reconcileHostProcess", await ei(t)
+  $ = "detach.transitionOverlayPIDStatus", en(e, null), e !== G.Js && ($ = "detach.cancelAttachToProcess", A.pn(e), $ = "detach.disconnectProcess", t.disconnectProcess(e)), $ = "detach.reconcileHostProcess", await ei(t)
 }
 async function eo(e) {
   var t;
@@ -218,16 +218,16 @@ async function e_(e) {
   var t, n, i, r, s, o, a;
   try {
     let t = await el() + "&oop=true&pid=".concat(e);
-    await (null === A.Z || void 0 === A.Z ? void 0 : null === (r = A.Z.globalOverlay) || void 0 === r ? void 0 : null === (i = r.openWindow) || void 0 === i ? void 0 : i.call(r, t))
+    await (null === N.Z || void 0 === N.Z ? void 0 : null === (r = N.Z.globalOverlay) || void 0 === r ? void 0 : null === (i = r.openWindow) || void 0 === i ? void 0 : i.call(r, t))
   } catch (e) {
-    J.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === A.Z || void 0 === A.Z || null === (o = A.Z.window) || void 0 === o || o.close(null === A.Z || void 0 === A.Z ? void 0 : null === (s = A.Z.globalOverlay) || void 0 === s ? void 0 : s.WINDOW_KEY)
+    J.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === N.Z || void 0 === N.Z || null === (o = N.Z.window) || void 0 === o || o.close(null === N.Z || void 0 === N.Z ? void 0 : null === (s = N.Z.globalOverlay) || void 0 === s ? void 0 : s.WINDOW_KEY)
   }
-  return W = e, null !== (a = await (null === A.Z || void 0 === A.Z ? void 0 : null === (n = A.Z.window) || void 0 === n ? void 0 : n.getNativeHandle(null === A.Z || void 0 === A.Z ? void 0 : null === (t = A.Z.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== a ? a : ""
+  return W = e, null !== (a = await (null === N.Z || void 0 === N.Z ? void 0 : null === (n = N.Z.window) || void 0 === n ? void 0 : n.getNativeHandle(null === N.Z || void 0 === N.Z ? void 0 : null === (t = N.Z.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== a ? a : ""
 }
 
 function ec() {
   var e, t;
-  null === A.Z || void 0 === A.Z || null === (t = A.Z.window) || void 0 === t || t.close(null === A.Z || void 0 === A.Z ? void 0 : null === (e = A.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), W = null
+  null === N.Z || void 0 === N.Z || null === (t = N.Z.window) || void 0 === t || t.close(null === N.Z || void 0 === N.Z ? void 0 : null === (e = N.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), W = null
 }
 
 function ed(e) {
@@ -298,7 +298,7 @@ function eS(e, t, n) {
   }), P.default.track(w.rMx.OVERLAY_HOOK_RESULT, o), J.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), o), t ? en(e, "CONNECTED", "CONNECTING") : en(e, "CONNECT_FAILED", "CONNECTING")
 }
 
-function eA() {
+function eN() {
   let e = v.default.getToken(),
     t = v.default.getId();
   if (null != e) m.lW({
@@ -312,7 +312,7 @@ function eA() {
     }]
   })
 }
-async function eN(e) {
+async function eA(e) {
   let t = await eu();
   null != j && j !== G.Js && t.sendCommand(j, {
     message: "intercept_input",
@@ -324,8 +324,8 @@ function em(e) {
   if (e) {
     let t = p.ZP.getVisibleGame(),
       n = null == t ? null : p.ZP.getGameOverlayStatus(t);
-    (null == n ? void 0 : n.overlayMethod) === x.gl.OutOfProcess ? eN(e) : setTimeout(() => eN(e), 200)
-  } else eN(e)
+    (null == n ? void 0 : n.overlayMethod) === x.gl.OutOfProcess ? eA(e) : setTimeout(() => eA(e), 200)
+  } else eA(e)
 }
 let eO = null;
 
@@ -404,7 +404,7 @@ function eL(e) {
 }
 class eD extends(o = d.ZP.Store) {
   initialize() {
-    if (!(!x.iP || __OVERLAY__)) this.waitFor(p.ZP, v.default), m.sr(eL, ev), v.default.addChangeListener(eA), eT(R.v.enabled, R.v.legacyEnabled), E.Z.addInterceptor(eg)
+    if (!(!x.iP || __OVERLAY__)) this.waitFor(p.ZP, v.default), m.sr(eL, ev), v.default.addChangeListener(eN), eT(R.v.enabled, R.v.legacyEnabled), E.Z.addInterceptor(eg)
   }
   isInputLocked(e) {
     return !z.has(e)
@@ -512,7 +512,7 @@ let eM = new eD(E.Z, __OVERLAY__ ? {
     } = e;
     K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams;
-    n.append("build_id", "1fdf39d1193662ce1849eb7415d6ec771e8b6fc2"), n.append("rpc", String(t)), n.append("rpc_auth_token", K), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
+    n.append("build_id", "943ad104f3ac957124c9652a538252be5dc01818"), n.append("rpc", String(t)), n.append("rpc_auth_token", K), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
     let {

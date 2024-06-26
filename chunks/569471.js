@@ -17,10 +17,10 @@ function f(e) {
 
 function S(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(A)
+  null === (t = e.threads) || void 0 === t || t.forEach(N)
 }
 
-function A(e) {
+function N(e) {
   d.AW.has(e.type) && null != e.member && (I[e.id] = {
     threadId: e.id,
     guildId: e.guild_id,
@@ -28,10 +28,10 @@ function A(e) {
     muted: e.member.muted,
     muteConfig: e.member.muteConfig,
     joinTimestamp: new Date(e.member.joinTimestamp)
-  }, N(e.id))
+  }, A(e.id))
 }
 
-function N(e) {
+function A(e) {
   let t = I[e];
   T.clearTimer(e), !0 === t.muted ? ((h = new Set(h)).add(e), T.setTimer(e, t.muteConfig, () => {
     I[e].muted = !1, (h = new Set(h)).delete(e), p.emitChange()
@@ -51,7 +51,7 @@ function m(e) {
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, N(e.id)
+    }, A(e.id)
   })
 }
 class O extends(i = u.ZP.Store) {
@@ -117,7 +117,7 @@ let p = new O(_.Z, {
     let {
       channel: t
     } = e;
-    A(t)
+    N(t)
   },
   THREAD_LIST_SYNC: m,
   SEARCH_FINISH: m,
@@ -142,7 +142,7 @@ let p = new O(_.Z, {
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, N(e.id)
+    }, A(e.id)
   },
   THREAD_MEMBER_LOCAL_UPDATE: function(e) {
     let {
@@ -178,7 +178,7 @@ let p = new O(_.Z, {
         muted: t.muted,
         muteConfig: t.muteConfig,
         joinTimestamp: new Date(t.joinTimestamp)
-      }, N(e.id), i = !0)
+      }, A(e.id), i = !0)
     }), i
   }
 });

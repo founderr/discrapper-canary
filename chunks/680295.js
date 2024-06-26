@@ -30,13 +30,13 @@ let S = e => {
       restartMethod: I,
       urlQueryString: h,
       profileEffectConfig: S,
-      noBorderRadius: A = !1,
-      introDelay: N = _.lG
+      noBorderRadius: N = !1,
+      introDelay: A = _.lG
     } = e, m = r.useRef(null), [O, p] = r.useState([]);
     (0, T.Z)(S);
     let [R, g] = r.useState(0), [C, v] = r.useState(0), {
       accessibilityLabel: L
-    } = S, [D, M] = r.useState(-N), {
+    } = S, [D, M] = r.useState(-A), {
       stop: P,
       reset: y,
       ticking: U
@@ -44,7 +44,7 @@ let S = e => {
       M(t => t + e)
     });
     r.useEffect(() => {
-      M(-N), p((0, E.H)(S.effects))
+      M(-A), p((0, E.H)(S.effects))
     }, [S]), r.useEffect(() => {
       let e = 0,
         t = 1 / 0;
@@ -62,7 +62,7 @@ let S = e => {
         [f.hovered]: a && l
       }),
       children: (0, i.jsx)("div", {
-        className: A ? f.innerNoRadius : f.inner,
+        className: N ? f.innerNoRadius : f.inner,
         children: O.map((e, r) => {
           var s, o, a, l, d, E, I, T;
           if (!U.current) {
@@ -110,7 +110,7 @@ let S = e => {
       })
     })
   },
-  A = e => {
+  N = e => {
     let {
       config: t,
       useThumbnail: n,
@@ -147,7 +147,7 @@ t.Z = e => {
     {
       preset: _
     } = (0, h.Z)(e.profileEffectId, () => o(!1));
-  return null != _ && (t || e.shopPreview || _.config.animationType !== c.Q.INTERMITTENT) ? !t && e.shopPreview || !t && _.config.animationType === c.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, i.jsx)(A, {
+  return null != _ && (t || e.shopPreview || _.config.animationType !== c.Q.INTERMITTENT) ? !t && e.shopPreview || !t && _.config.animationType === c.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, i.jsx)(N, {
     useThumbnail: e.useThumbnail,
     config: _.config,
     bannerAdjustment: e.bannerAdjustment,

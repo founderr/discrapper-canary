@@ -4,7 +4,7 @@ n.d(t, {
     return E
   },
   BM: function() {
-    return N
+    return A
   },
   Cj: function() {
     return o
@@ -31,7 +31,7 @@ n.d(t, {
     return u
   },
   xj: function() {
-    return A
+    return N
   }
 }), n(653041);
 var i = n(866442);
@@ -250,7 +250,7 @@ function S(e, t) {
   return i.s + i.v - (n.s + n.v)
 }
 
-function A(e) {
+function N(e) {
   var t;
   let {
     colorRGB: n,
@@ -262,7 +262,7 @@ function A(e) {
   return null === (t = I(r.hue, r.saturation * i, r.lightness)) || void 0 === t ? void 0 : t.toHexString()
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let i = parseInt(e.substring(1, 3), 16),
     r = parseInt(e.substring(3, 5), 16),
     s = parseInt(e.substring(5, 7), 16),

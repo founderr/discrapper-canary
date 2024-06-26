@@ -22,13 +22,13 @@ n.d(t, {
     return m
   },
   km: function() {
-    return N
+    return A
   },
   no: function() {
     return I
   },
   o6: function() {
-    return A
+    return N
   },
   tI: function() {
     return s
@@ -184,10 +184,10 @@ function h(e, t) {
 }
 let f = [h(720), h(1080), h(1440), h(0, () => c.Z.Messages.SCREENSHARE_SOURCE)],
   S = [h(720), h(1080), h(1440)],
-  A = e => 0 === e ? c.Z.Messages.SCREENSHARE_SOURCE : c.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+  N = e => 0 === e ? c.Z.Messages.SCREENSHARE_SOURCE : c.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
     resolution: e
   }),
-  N = [h(480, () => A(480)), h(720, () => A(720)), h(1080, () => A(1080)), h(1440, () => A(1440)), h(0, () => A(0))],
+  A = [h(480, () => N(480)), h(720, () => N(720)), h(1080, () => N(1080)), h(1440, () => N(1440)), h(0, () => N(0))],
   m = [h(15), h(30), h(60)],
   O = [h(15, () => c.Z.Messages.STREAM_FPS_OPTION.format({
     value: 15

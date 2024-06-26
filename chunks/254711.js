@@ -23,8 +23,8 @@ var i = n(512722),
   h = n(928477),
   f = n(665906),
   S = n(695346),
-  A = n(592125),
-  N = n(496675),
+  N = n(592125),
+  A = n(496675),
   m = n(594174),
   O = n(70956),
   p = n(51144),
@@ -176,7 +176,7 @@ let D = n(227419).Z,
       let {
         channel: t
       } = e;
-      return !t.isPrivate() && S.OW.getSetting() && N.Z.can(C.Plq.SEND_TTS_MESSAGES, t)
+      return !t.isPrivate() && S.OW.getSetting() && A.Z.can(C.Plq.SEND_TTS_MESSAGES, t)
     },
     execute: e => {
       var t;
@@ -277,7 +277,7 @@ let D = n(227419).Z,
       let {
         channel: t
       } = e;
-      return !t.isPrivate() && (N.Z.can(C.Plq.CHANGE_NICKNAME, t) || N.Z.can(C.Plq.MANAGE_NICKNAMES, t))
+      return !t.isPrivate() && (A.Z.can(C.Plq.CHANGE_NICKNAME, t) || A.Z.can(C.Plq.MANAGE_NICKNAMES, t))
     },
     execute: (e, t) => {
       var n;
@@ -378,7 +378,7 @@ let D = n(227419).Z,
       let {
         guild: t
       } = e;
-      return N.Z.can(C.Plq.KICK_MEMBERS, t)
+      return A.Z.can(C.Plq.KICK_MEMBERS, t)
     },
     execute: (e, t) => {
       var n;
@@ -388,7 +388,7 @@ let D = n(227419).Z,
       } = t;
       if (null == i) return;
       let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
-      if (!N.Z.canManageUser(C.Plq.KICK_MEMBERS, s, i)) {
+      if (!A.Z.canManageUser(C.Plq.KICK_MEMBERS, s, i)) {
         c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_KICK_UNABLE);
         return
       }(async () => {
@@ -484,7 +484,7 @@ let D = n(227419).Z,
       let {
         guild: t
       } = e;
-      return N.Z.can(C.Plq.BAN_MEMBERS, t)
+      return A.Z.can(C.Plq.BAN_MEMBERS, t)
     },
     execute: (e, t) => {
       var n;
@@ -494,7 +494,7 @@ let D = n(227419).Z,
       } = t;
       if (null == i) return;
       let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
-      if (!N.Z.canManageUser(C.Plq.BAN_MEMBERS, s, i)) {
+      if (!A.Z.canManageUser(C.Plq.BAN_MEMBERS, s, i)) {
         c.Z.sendBotMessage(r.id, L.Z.Messages.COMMAND_BAN_UNABLE);
         return
       }(async () => {
@@ -568,7 +568,7 @@ let D = n(227419).Z,
       let {
         guild: t
       } = e;
-      return N.Z.can(C.Plq.MODERATE_MEMBERS, t)
+      return A.Z.can(C.Plq.MODERATE_MEMBERS, t)
     },
     execute: (e, t) => {
       let {
@@ -647,7 +647,7 @@ let D = n(227419).Z,
       } = t, s = M(e, "user"), o = null !== (n = M(e, "message")) && void 0 !== n ? n : "";
       (async () => {
         await u.Z.openPrivateChannel(s).then(e => {
-          let t = A.Z.getChannel(e);
+          let t = N.Z.getChannel(e);
           r()(null != t, "Newly created PrivateChannel is null"), c.Z.sendMessage(t.id, I.ZP.parse(t, o))
         })
       })().catch(() => {

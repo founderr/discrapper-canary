@@ -17,27 +17,27 @@ var i = n(735250),
 t.Z = e => {
   let {
     message: t
-  } = e, n = (0, l.ZP)(t), S = (0, s.e7)([_.Z], () => _.Z.getChannel(t.channel_id)), A = r.useMemo(() => (0, a.Z)(t), [t]), {
-    content: N
-  } = (0, u.Z)(A, {
+  } = e, n = (0, l.ZP)(t), S = (0, s.e7)([_.Z], () => _.Z.getChannel(t.channel_id)), N = r.useMemo(() => (0, a.Z)(t), [t]), {
+    content: A
+  } = (0, u.Z)(N, {
     hideSimpleEmbedContent: !1
   }), m = r.useCallback(() => {
     let {
       leadingIcon: e,
       trailingIcon: n
-    } = (0, I.f)(t, N, !1, "", {
+    } = (0, I.f)(t, A, !1, "", {
       leadingIconClass: f.attachmentIcon,
       trailingIconClass: f.attachmentIcon,
       iconSize: T.WW
-    }), r = null == N || "" === N || Array.isArray(N) && 0 === N.length;
+    }), r = null == A || "" === A || Array.isArray(A) && 0 === A.length;
     return (0, i.jsxs)("div", {
       className: f.contentContainer,
       children: [e, r ? n : (0, i.jsx)(d.ZP, {
         message: t,
-        content: N
+        content: A
       })]
     })
-  }, [t, N]);
+  }, [t, A]);
   return null == S ? null : (0, i.jsxs)("div", {
     className: f.container,
     children: [(0, i.jsx)(o.Heading, {

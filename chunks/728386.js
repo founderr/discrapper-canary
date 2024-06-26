@@ -16,18 +16,18 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   let {
     disabled: n,
     type: s
-  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), f = r.useContext(u.ZP), [S, A] = r.useState(!1), N = T === d.X1.STICKER, m = r.useCallback(() => {
+  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), f = r.useContext(u.ZP), [S, N] = r.useState(!1), A = T === d.X1.STICKER, m = r.useCallback(() => {
     (0, _.RO)(d.X1.STICKER, s)
   }, [s]);
   r.useEffect(() => {
     let e = () => {
         requestAnimationFrame(() => {
-          A(!0)
+          N(!0)
         })
       },
       t = () => {
         requestAnimationFrame(() => {
-          A(!1)
+          N(!1)
         })
       };
     return f.addListener("sticker-suggestions-shown", e), f.addListener("sticker-suggestions-hidden", t), () => {
@@ -44,15 +44,15 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     ref: t,
     children: (0, i.jsx)(c.Z, {
       innerClassName: o()(I.button, I.stickerButton, {
-        [I.stickerButtonTilted]: S && !N
+        [I.stickerButtonTilted]: S && !A
       }),
       ...p,
       onClick: () => {
         m(), R()
       },
-      isActive: N,
+      isActive: A,
       "aria-label": E.Z.Messages.STICKER_BUTTON_LABEL,
-      "aria-expanded": N,
+      "aria-expanded": A,
       "aria-haspopup": "dialog",
       "aria-controls": h,
       sparkle: !1,

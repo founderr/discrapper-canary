@@ -17,9 +17,9 @@ var i = n(913527),
 let f = null,
   S = !1;
 
-function A(e) {
+function N(e) {
   let t = a.Z.createFromServer(e.entitlement);
-  (0, I._k)(t) ? N({
+  (0, I._k)(t) ? A({
     forceRefresh: !0
   }): (0, I.YE)(t) && null != E.Z.getTenureRewardStatusForRewardId(t.skuId) && s.Z.dispatch({
     type: "USER_TENURE_REWARD_STATUS_DELETE",
@@ -27,7 +27,7 @@ function A(e) {
   })
 }
 
-function N() {
+function A() {
   let {
     forceRefresh: e = !1
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -74,7 +74,7 @@ async function m() {
     let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_3_MONTHS);
     if ((null == t ? void 0 : t.redeemable_at) == null) return;
     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-    null != n && n > 0 && (f = setTimeout(N, n))
+    null != n && n > 0 && (f = setTimeout(A, n))
   })())
 }
 
@@ -87,12 +87,12 @@ function p() {
 }
 
 function R() {
-  N()
+  A()
 }
 class g extends o.Z {
   forceRefreshIfOutdated() {
     let e = E.Z.getState();
-    null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && N({
+    null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && A({
       forceRefresh: !0
     })
   }
@@ -101,10 +101,10 @@ class g extends o.Z {
     super(...e), t = this, n = "actions", i = {
       POST_CONNECTION_OPEN: R,
       CONNECTION_CLOSED: p,
-      ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => N(),
-      ENTITLEMENT_CREATE: A,
-      ENTITLEMENT_UPDATE: () => N(),
-      ENTITLEMENT_DELETE: () => N(),
+      ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => A(),
+      ENTITLEMENT_CREATE: N,
+      ENTITLEMENT_UPDATE: () => A(),
+      ENTITLEMENT_DELETE: () => A(),
       LOGOUT: O
     }, n in t ? Object.defineProperty(t, n, {
       value: i,

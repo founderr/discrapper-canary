@@ -4,7 +4,7 @@ n.d(t, {
     return S
   },
   T4: function() {
-    return A
+    return N
   },
   bG: function() {
     return m
@@ -19,7 +19,7 @@ n.d(t, {
     return f
   },
   yC: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i = n(261470),
@@ -115,7 +115,7 @@ async function S() {
     categories: n.body
   })
 }
-async function A(e) {
+async function N(e) {
   var t;
   let {
     applicationId: n,
@@ -167,7 +167,7 @@ async function A(e) {
     }
   }
 }
-async function N(e) {
+async function A(e) {
   var t;
   let {
     query: n,

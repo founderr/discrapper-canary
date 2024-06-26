@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(223135),
   f = n(695346),
   S = n(314897),
-  A = n(592125),
-  N = n(496675),
+  N = n(592125),
+  A = n(496675),
   m = n(158776),
   O = n(979651),
   p = n(6074),
@@ -98,9 +98,9 @@ t.Z = e => {
     hideEmoji: D = !1,
     user: M,
     hasQuest: P
-  } = e, y = null != n ? n.find(e => e.type === R.IIU.CUSTOM_STATUS) : null, U = (0, a.e7)([S.default], () => S.default.getId() === (null == M ? void 0 : M.id)), b = (0, a.e7)([T.Z], () => U ? T.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === R.IIU.HANG_STATUS) : null), G = (0, a.e7)([O.Z, A.Z], () => {
+  } = e, y = null != n ? n.find(e => e.type === R.IIU.CUSTOM_STATUS) : null, U = (0, a.e7)([S.default], () => S.default.getId() === (null == M ? void 0 : M.id)), b = (0, a.e7)([T.Z], () => U ? T.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === R.IIU.HANG_STATUS) : null), G = (0, a.e7)([O.Z, N.Z], () => {
     var e;
-    return null != b && null != M ? A.Z.getChannel(null === (e = O.Z.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != b && null != M ? N.Z.getChannel(null === (e = O.Z.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
     enableHangStatus: w
   } = I.n.useExperiment({
@@ -108,7 +108,7 @@ t.Z = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), x = (0, d.Sl)(R.Ilk.BRAND_345), B = null, k = w && null != b && N.Z.can(R.Plq.CONNECT, G);
+  }), x = (0, d.Sl)(R.Ilk.BRAND_345), B = null, k = w && null != b && A.Z.can(R.Plq.CONNECT, G);
   k ? B = (0, i.jsx)(h.Z, {
     className: u,
     hangStatusActivity: b

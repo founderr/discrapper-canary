@@ -21,8 +21,8 @@ t.Z = e => {
     buttonText: h,
     targetBoostedGuildTier: f,
     onClose: S = () => {},
-    closeLayer: A = () => {},
-    pauseAnimation: N = !1,
+    closeLayer: N = () => {},
+    pauseAnimation: A = !1,
     applicationId: m,
     handleSubscribeModalClose: O,
     withHighlight: p = !1,
@@ -37,7 +37,7 @@ t.Z = e => {
       guild: s,
       numberOfBoostsToAdd: D,
       onClose: S,
-      closeLayer: A,
+      closeLayer: N,
       inPopout: C,
       applicationId: m,
       handleSubscribeModalClose: O
@@ -58,7 +58,7 @@ t.Z = e => {
       ...e,
       disabled: !0,
       size: a.Button.Sizes.SMALL,
-      pauseAnimation: N,
+      pauseAnimation: A,
       ...R,
       children: U
     })
@@ -70,7 +70,7 @@ t.Z = e => {
     }),
     submitting: v,
     onClick: P,
-    pauseAnimation: N,
+    pauseAnimation: A,
     children: U
   })
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   U5: function() {
-    return N
+    return A
   },
   pp: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(442837),
@@ -50,14 +50,14 @@ function S() {
   n || h ? n && (f.pause(), h = !1) : (f.volume = T(o.Z.getOutputVolume()), f.loop(), h = !0)
 }
 
-function A(e) {
+function N(e) {
   let t = (0, i.e7)([a.Z], () => a.Z.getVoiceChannelId() === e),
     n = null != (0, c.w8)(e, d.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
     r = (0, i.e7)([E.Z], () => E.Z.getStageInstanceByChannel(e));
   return t && null == r && !n
 }
 
-function N(e) {
+function A(e) {
   let t = a.Z.getVoiceChannelId() === e,
     n = null != _.Z.getMutableParticipants(e, d.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
     i = E.Z.getStageInstanceByChannel(e);

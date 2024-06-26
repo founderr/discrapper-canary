@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(827498),
   f = n(392370),
   S = n(695676),
-  A = n(41558),
-  N = n(299722),
+  N = n(41558),
+  A = n(299722),
   m = n(667906),
   O = n(79984),
   p = n(981631),
@@ -61,12 +61,12 @@ function P(e) {
     searchesBots: s === h._b.TEXT
   }), {
     fetchState: S,
-    applicationResults: A
+    applicationResults: N
   } = (0, f.Q2)({
     query: n,
     channel: t,
     fetches: s !== h._b.VOICE
-  }), N = null == S || S === E.M.FETCHING, m = r.useMemo(() => {
+  }), A = null == S || S === E.M.FETCHING, m = r.useMemo(() => {
     let e = I.map(e => ({
       application: e,
       installOnDemand: !1
@@ -78,11 +78,11 @@ function P(e) {
       } = e;
       return t
     }));
-    return [...e, ...o().compact(A.map(e => e.type === a.s.CONNECTION || t.has(e.data.id) ? null : {
+    return [...e, ...o().compact(N.map(e => e.type === a.s.CONNECTION || t.has(e.data.id) ? null : {
       application: e.data,
       installOnDemand: !0
     }))]
-  }, [s, A, I]);
+  }, [s, N, I]);
   return u ? (0, i.jsx)(G, {}) : _ ? (0, i.jsx)(w, {
     searchQuery: n,
     textContent: s === h._b.TEXT ? R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : R.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
@@ -92,7 +92,7 @@ function P(e) {
       commandResults: c
     }), T && (0, i.jsx)(b, {
       applicationResults: m,
-      includePlaceholder: N
+      includePlaceholder: A
     })]
   })
 }
@@ -140,7 +140,7 @@ function U(e) {
     commandResults: n
   } = e;
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(A.Z, {
+    children: [(0, i.jsx)(N.Z, {
       title: R.Z.Messages.COMMANDS
     }), (0, i.jsx)("div", {
       className: g.sectionContentContainer,
@@ -178,7 +178,7 @@ function b(e) {
     pushHistory: r
   } = (0, S.hH)();
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(A.Z, {
+    children: [(0, i.jsx)(N.Z, {
       title: R.Z.Messages.APPS
     }), (0, i.jsxs)("div", {
       className: g.sectionContentContainer,
@@ -187,7 +187,7 @@ function b(e) {
           application: t,
           installOnDemand: n
         } = e;
-        return (0, i.jsx)(N.Z, {
+        return (0, i.jsx)(A.Z, {
           application: t,
           onClick: e => {
             e.stopPropagation(), r({
@@ -204,12 +204,12 @@ function b(e) {
 
 function G() {
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(A.Z, {
+    children: [(0, i.jsx)(N.Z, {
       title: R.Z.Messages.COMMANDS
     }), (0, i.jsx)("div", {
       className: g.sectionContentContainer,
       children: L.map(e => (0, i.jsx)(O.Z, {}, e))
-    }), (0, i.jsx)(A.Z, {
+    }), (0, i.jsx)(N.Z, {
       title: R.Z.Messages.APPS
     }), (0, i.jsx)("div", {
       className: g.sectionContentContainer,

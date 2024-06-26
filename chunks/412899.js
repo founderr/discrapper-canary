@@ -23,8 +23,8 @@ var i = n(735250),
   h = n(239091),
   f = n(749210),
   S = n(112724),
-  A = n(607070),
-  N = n(605436),
+  N = n(607070),
+  A = n(605436),
   m = n(134433),
   O = n(518738),
   p = n(434404),
@@ -87,7 +87,7 @@ let B = r.forwardRef(function(e, t) {
     canRemove: c,
     className: f,
     role: S,
-    onRemove: N,
+    onRemove: A,
     guildId: p,
     disableBorderColor: R,
     onMouseDown: g
@@ -98,7 +98,7 @@ let B = r.forwardRef(function(e, t) {
     roleId: S.id,
     size: 16,
     guildId: p
-  }), D = (0, E.e7)([A.Z], () => A.Z.roleStyle), P = (null === (s = S.tags) || void 0 === s ? void 0 : s.guild_connections) === null, y = r.useCallback(e => {
+  }), D = (0, E.e7)([N.Z], () => N.Z.roleStyle), P = (null === (s = S.tags) || void 0 === s ? void 0 : s.guild_connections) === null, y = r.useCallback(e => {
     (0, h.jW)(e, async () => {
       let {
         default: e
@@ -142,7 +142,7 @@ let B = r.forwardRef(function(e, t) {
       ...v,
       children: [(0, i.jsxs)(T.Clickable, {
         className: o()(c && G.roleRemoveButtonCanRemove, G.roleRemoveButton),
-        onClick: c ? N : void 0,
+        onClick: c ? A : void 0,
         tabIndex: c ? C : -1,
         focusProps: {
           focusClassName: G.roleRemoveIconFocused
@@ -211,7 +211,7 @@ function V(e) {
     roleClassName: s,
     addButtonClassName: a,
     addButtonIconClassName: l
-  } = e, u = (0, _.JA)("overflow-add-roles-".concat(n.id)), c = (0, E.e7)([A.Z], () => A.Z.roleStyle), d = C.Z.getHighestRole(t), I = R.ZP.getMember(t.id, n.id), h = e => (0, N.Gy)(t.id, e.id) && !e.managed && C.Z.isRoleHigher(t, d, e) && (null == I || -1 === I.roles.indexOf(e.id));
+  } = e, u = (0, _.JA)("overflow-add-roles-".concat(n.id)), c = (0, E.e7)([N.Z], () => N.Z.roleStyle), d = C.Z.getHighestRole(t), I = R.ZP.getMember(t.id, n.id), h = e => (0, A.Gy)(t.id, e.id) && !e.managed && C.Z.isRoleHigher(t, d, e) && (null == I || -1 === I.roles.indexOf(e.id));
   return (0, i.jsx)(T.Popout, {
     renderPopout: e => {
       let {
@@ -256,8 +256,8 @@ function Z(e) {
     className: T,
     readOnly: h,
     roleClassName: S,
-    disableBorderColor: A
-  } = e, N = r.useRef({}), m = r.useCallback(e => {
+    disableBorderColor: N
+  } = e, A = r.useRef({}), m = r.useCallback(e => {
     var t;
     let i = a.filter(t => t !== e.id);
     (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? f.Z.unassignGuildRoleConnection(s.id, e.id) : p.Z.updateMemberRoles(s.id, n.id, i, [], [e.id])
@@ -280,7 +280,7 @@ function Z(e) {
       n = I - 30 - 4;
     for (let i = 0; i < M.length; i++) {
       let r = M[i],
-        s = N.current[r.id];
+        s = A.current[r.id];
       if (null != s) {
         if ((t += s.offsetWidth + 4) > n) break;
         e++
@@ -309,10 +309,10 @@ function Z(e) {
         onRemove: () => m(e),
         ref: t => {
           var n, i;
-          return n = e.id, void(null != (i = t) ? N.current[n] = i : delete N.current[n])
+          return n = e.id, void(null != (i = t) ? A.current[n] = i : delete A.current[n])
         },
         guildId: s.id,
-        disableBorderColor: A
+        disableBorderColor: N
       }, e.id)
     });
   return null != R && 0 !== y ? t = (0, i.jsx)(k, {

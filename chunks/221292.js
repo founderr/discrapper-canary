@@ -49,7 +49,7 @@ let h = e => {
     return t === T.Sk.ONLINE && n ? "".concat(t, "-mobile") : t === T.Sk.ONLINE ? "".concat(t, "-desktop") : t
   },
   S = e => null == e ? e : Object.keys(I.IIU)[Object.values(I.IIU).indexOf(e)],
-  A = e => {
+  N = e => {
     var t, n;
     let {
       layout: i,
@@ -89,7 +89,7 @@ let h = e => {
       is_bot_profile: _.bot
     }
   },
-  N = e => {
+  A = e => {
     var t, n;
     return null == e ? {} : {
       related_user_id: e,
@@ -116,13 +116,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_ACTION, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...A({
+      ...N({
         layout: _,
         userId: t,
         guildId: n,
         showGuildProfile: a
       }),
-      ...N(t),
+      ...A(t),
       location_stack: l,
       profile_action: c,
       profile_section: d,
@@ -148,13 +148,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_ACTIVITY_JOINED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...A({
+      ...N({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...N(t),
+      ...A(t),
       location_stack: o,
       activity_type: null != T ? "VOICE" : S(l),
       activity_name: _,
@@ -177,13 +177,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_BADGE_PRESSED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...A({
+      ...N({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...N(t),
+      ...A(t),
       location_stack: o,
       badge: l
     })
@@ -201,13 +201,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_BADGE_HOVERED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...A({
+      ...N({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...N(t),
+      ...A(t),
       location_stack: o,
       badge: l
     })

@@ -36,10 +36,10 @@ function T(e) {
     theme: t,
     primaryColor: n,
     secondaryColor: r
-  } = e, [T, h] = (0, a.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.syncProfileThemeWithUserTheme]), f = (0, E.fq)(t), S = (0, E.wu)(t, n, h), A = (0, E.lM)(t, n), N = (0, E.e4)(t, r), m = h ? null == f ? void 0 : f.overlaySyncedWithUserTheme : null == f ? void 0 : f.overlay;
+  } = e, [T, h] = (0, a.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.syncProfileThemeWithUserTheme]), f = (0, E.fq)(t), S = (0, E.wu)(t, n, h), N = (0, E.lM)(t, n), A = (0, E.e4)(t, r), m = h ? null == f ? void 0 : f.overlaySyncedWithUserTheme : null == f ? void 0 : f.overlay;
   return {
     profileThemeStyle: (0, i.useMemo)(() => {
-      if (null == n || null == r || null == f || null == S || null == A || null == N || null == m) return I;
+      if (null == n || null == r || null == f || null == S || null == N || null == A || null == m) return I;
       let e = (e, t) => (0, o.ho)(e, T, null, t);
       return {
         "--profile-gradient-primary-color": e(n),
@@ -49,9 +49,9 @@ function T(e) {
         "--profile-avatar-border-color": e(S),
         "--profile-body-background-color": f.sectionBox,
         "--profile-body-background-hover": f.profileBodyBackgroundHover,
-        "--profile-body-divider-color": e(A, f.dividerOpacity),
-        "--profile-body-border-color": e(A, .12),
-        "--profile-message-input-border-color": e(N),
+        "--profile-body-divider-color": e(N, f.dividerOpacity),
+        "--profile-body-border-color": e(N, .12),
+        "--profile-message-input-border-color": e(A),
         "--profile-note-background-color": f.noteBackgroundColor,
         "--profile-role-pill-background-color": f.rolePillBackgroundColor,
         "--profile-role-pill-border-color": f.rolePillBorderColor,
@@ -63,7 +63,7 @@ function T(e) {
           textMixAmount: 25
         })
       }
-    }, [n, r, f, S, A, N, m, t, T]),
+    }, [n, r, f, S, N, A, m, t, T]),
     profileThemeClassName: s()((0, d.Q)(t), {
       [c.e3]: null != n,
       "custom-profile-theme": null != n

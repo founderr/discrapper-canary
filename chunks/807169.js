@@ -4,7 +4,7 @@ n.d(t, {
     return f
   },
   Vh: function() {
-    return N
+    return A
   },
   k: function() {
     return h
@@ -33,14 +33,14 @@ function h(e, t) {
   let T = m(E = e instanceof u.Sf && e.isThread() ? null !== (r = c.Z.getChannel(e.parent_id)) && void 0 !== r ? r : e : e),
     h = l.xM.getSetting(),
     f = _.default.getId(),
-    N = null !== (s = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== s && s,
+    A = null !== (s = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== s && s,
     O = null != T && null !== (o = null === (i = d.ZP.getMember(T, f)) || void 0 === i ? void 0 : i.roles) && void 0 !== o ? o : [],
     p = a.Z.isViewingRoles(T),
     {
       computedPermissions: R,
       hasBaseAccessPermissions: g,
       hasSendMessagesPermission: C
-    } = A(E, e instanceof u.Sf && e.isThread());
+    } = N(E, e instanceof u.Sf && e.isThread());
   return {
     context: E,
     userId: f,
@@ -50,7 +50,7 @@ function h(e, t) {
     computedPermissions: R,
     hasBaseAccessPermissions: g,
     hasSendMessagesPermission: C,
-    allowNsfw: S(E, N, h)
+    allowNsfw: S(E, A, h)
   }
 }
 
@@ -79,7 +79,7 @@ function f(e, t) {
       computedPermissions: i,
       hasBaseAccessPermissions: r,
       hasSendMessagesPermission: s
-    } = A(n, e instanceof u.Sf && e.isThread());
+    } = N(n, e instanceof u.Sf && e.isThread());
     return {
       context: n,
       userId: E,
@@ -98,7 +98,7 @@ function S(e, t, n) {
   return !!t && (!(e instanceof u.Sf) || (null != e.guild_id ? e.nsfw : n))
 }
 
-function A(e, t) {
+function N(e, t) {
   let n, i;
   if (e instanceof u.Sf && e.isPrivate()) return {
     computedPermissions: r.vB(0),
@@ -113,7 +113,7 @@ function A(e, t) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   return e instanceof u.Sf && null == e.guild_id ? e.type === T.d4z.DM && e.getRecipientId() === t ? o.D.BOT_DM : o.D.PRIVATE_CHANNEL : o.D.GUILD
 }
 

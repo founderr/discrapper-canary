@@ -11,8 +11,8 @@ var r, s, o, a, l = n(569048),
   h = n(758449),
   f = n(245335);
 let S = {},
-  A = {},
   N = {},
+  A = {},
   m = {},
   O = !1,
   p = !1,
@@ -25,7 +25,7 @@ class g extends(a = I.ZP.Store) {
       targetUserId: r,
       targetApplicationId: s
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return i === f.Iq.STREAM && null != r ? null === (t = A[e]) || void 0 === t ? void 0 : t[r] : i === f.Iq.EMBEDDED_APPLICATION && null != s ? null === (n = N[e]) || void 0 === n ? void 0 : n[s] : S[e]
+    return i === f.Iq.STREAM && null != r ? null === (t = N[e]) || void 0 === t ? void 0 : t[r] : i === f.Iq.EMBEDDED_APPLICATION && null != s ? null === (n = A[e]) || void 0 === n ? void 0 : n[s] : S[e]
   }
   getFriendInvite() {
     return i
@@ -44,13 +44,13 @@ o = "InstantInviteStore", (s = "displayName") in(r = g) ? Object.defineProperty(
   writable: !0
 }) : r[s] = o, t.Z = new g(T.Z, {
   CONNECTION_OPEN: function() {
-    S = {}, A = {}, N = {}, m = {}, i = null, p = !1, R = !1, O = !1
+    S = {}, N = {}, A = {}, m = {}, i = null, p = !1, R = !1, O = !1
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    delete S[t.id], delete A[t.id], delete N[t.id]
+    delete S[t.id], delete N[t.id], delete A[t.id]
   },
   FRIEND_INVITE_CREATE_SUCCESS: function(e) {
     var t;
@@ -70,7 +70,7 @@ o = "InstantInviteStore", (s = "displayName") in(r = g) ? Object.defineProperty(
       channelId: t,
       invite: n
     } = e, i = h.Z.createFromServer(n);
-    i.targetType === f.Iq.STREAM && null != i.targetUser ? (null == A[t] && (A[t] = {}), A[t][String(i.targetUser.id)] = i) : i.targetType === f.Iq.EMBEDDED_APPLICATION && null != i.targetApplication ? (null == N[t] && (N[t] = {}), N[t][i.targetApplication.id] = i) : S[t] = i
+    i.targetType === f.Iq.STREAM && null != i.targetUser ? (null == N[t] && (N[t] = {}), N[t][String(i.targetUser.id)] = i) : i.targetType === f.Iq.EMBEDDED_APPLICATION && null != i.targetApplication ? (null == A[t] && (A[t] = {}), A[t][i.targetApplication.id] = i) : S[t] = i
   },
   INSTANT_INVITE_CREATE_FAILURE: function(e) {
     let {

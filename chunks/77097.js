@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(621853),
   f = n(335191),
   S = n(171368),
-  A = n(659101),
-  N = n(228168),
+  N = n(659101),
+  A = n(228168),
   m = n(981631),
   O = n(689938),
   p = n(19320),
@@ -86,7 +86,7 @@ function g(e) {
             guildId: null == L ? void 0 : L.id,
             messageId: U,
             roleId: b,
-            section: N.oh.USER_INFO_CONNECTIONS,
+            section: A.oh.USER_INFO_CONNECTIONS,
             sourceAnalyticsLocations: y,
             analyticsLocation: {
               section: m.jXE.PROFILE_POPOUT
@@ -117,7 +117,7 @@ function g(e) {
         locale: H
       }, e.application.id))
     })]
-  })), null == s && null == g) ? null : (0, i.jsxs)(A.Z, {
+  })), null == s && null == g) ? null : (0, i.jsxs)(N.Z, {
     children: [g, s]
   })
 }

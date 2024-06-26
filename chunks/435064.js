@@ -23,8 +23,8 @@ function T(e, t, n) {
 let h = "default",
   f = [],
   S = [],
-  A = [],
-  N = 0,
+  N = [],
+  A = 0,
   m = null,
   O = null,
   p = {},
@@ -71,7 +71,7 @@ class M extends(i = r.ZP.DeviceSettingsStore) {
     return S
   }
   getPendingClips() {
-    return A
+    return N
   }
   getUserAgnosticState() {
     return L
@@ -105,7 +105,7 @@ class M extends(i = r.ZP.DeviceSettingsStore) {
     return L.hardwareClassificationVersion
   }
   getIsAtMaxSaveClipOperations() {
-    return N >= d.Kw
+    return A >= d.Kw
   }
   getLastClipsError() {
     return R
@@ -235,7 +235,7 @@ let P = new M(s.Z, {
     let {
       clip: i
     } = e;
-    N = Math.max(N - 1, 0), O = {
+    A = Math.max(A - 1, 0), O = {
       applicationName: i.applicationName,
       ended: !1,
       ...O,
@@ -243,7 +243,7 @@ let P = new M(s.Z, {
     }, L = {
       ...L,
       newClipIds: [...null !== (n = L.newClipIds) && void 0 !== n ? n : [], i.id]
-    }, A = A.filter(e => {
+    }, N = N.filter(e => {
       let {
         id: t
       } = e;
@@ -254,13 +254,13 @@ let P = new M(s.Z, {
     let {
       clip: t
     } = e;
-    A = [t, ...A]
+    N = [t, ...N]
   },
   CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function(e) {
     let {
       clipId: t
     } = e;
-    A = A.filter(e => {
+    N = N.filter(e => {
       let {
         id: n
       } = e;
@@ -273,7 +273,7 @@ let P = new M(s.Z, {
       streamKey: n,
       thumbnail: i
     } = e;
-    if (N += 1, L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === d.X9.DECOUPLED, null != n && null != i) {
+    if (A += 1, L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === d.X9.DECOUPLED, null != n && null != i) {
       var r;
       let e = Date.now();
       g = null != g ? g : e, C[n] = [...null !== (r = C[n]) && void 0 !== r ? r : [], {
@@ -283,7 +283,7 @@ let P = new M(s.Z, {
     }
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    N = Math.max(N - 1, 0)
+    A = Math.max(A - 1, 0)
   },
   CLIPS_SAVE_ANIMATION_END: function(e) {
     let {

@@ -8,8 +8,8 @@ let T = !1,
   h = !1,
   f = !1,
   S = !1,
-  A = !1,
-  N = null,
+  N = !1,
+  A = null,
   m = null,
   O = !1,
   p = !1;
@@ -27,15 +27,15 @@ function C() {
 }
 
 function v() {
-  A = !0
+  N = !0
 }
 
 function L() {
-  A = !1
+  N = !1
 }
 class D extends(_ = c.ZP.Store) {
   get isBusy() {
-    return T || h || A || f
+    return T || h || N || f
   }
   get isUpdatingPaymentSource() {
     return h
@@ -53,7 +53,7 @@ class D extends(_ = c.ZP.Store) {
     return null != i
   }
   get editSourceError() {
-    return N
+    return A
   }
   get removeSourceError() {
     return m
@@ -123,10 +123,10 @@ u = "BillingInfoStore", (l = "displayName") in(a = D) ? Object.defineProperty(a,
     let {
       error: t
     } = e;
-    h = !1, N = t
+    h = !1, A = t
   },
   BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR: function() {
-    N = null
+    A = null
   },
   BILLING_PAYMENT_SOURCES_FETCH_START: function(e) {
     let {
@@ -172,7 +172,7 @@ u = "BillingInfoStore", (l = "displayName") in(a = D) ? Object.defineProperty(a,
     o = null, p = !0
   },
   LOGOUT: function() {
-    i = void 0, s = void 0, r = void 0, O = !1, o = null, m = null, N = null
+    i = void 0, s = void 0, r = void 0, O = !1, o = null, m = null, A = null
   },
   CONNECTION_OPEN: e => {
     let {

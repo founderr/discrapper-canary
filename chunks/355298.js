@@ -65,14 +65,14 @@ function S(e) {
   return !!a.has(t.id) && (a.delete(t.id), !0)
 }
 
-function A(e) {
+function N(e) {
   let {
     messageRequestChannelIds: t
   } = e;
   t.forEach(e => a.add(e))
 }
 
-function N(e) {
+function A(e) {
   let {
     countryCode: t
   } = e;
@@ -115,11 +115,11 @@ class m extends s.Z {
       CONNECTION_OPEN: I,
       CONNECTION_OPEN_SUPPLEMENTAL: I,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      OVERLAY_INITIALIZE: A,
+      OVERLAY_INITIALIZE: N,
       CHANNEL_CREATE: h,
       CHANNEL_UPDATES: f,
       CHANNEL_DELETE: S,
-      SET_LOCATION_METADATA: N,
+      SET_LOCATION_METADATA: A,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: T
     })
   }

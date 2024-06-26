@@ -25,8 +25,8 @@ function _(e) {
     emptySearchPlaceholder: h,
     renderEmptyState: f,
     renderRow: S,
-    renderSection: A,
-    renderSectionHeader: N,
+    renderSection: N,
+    renderSectionHeader: A,
     renderSectionFooter: m,
     renderInspector: O,
     renderEmptySearchState: p,
@@ -76,7 +76,7 @@ function _(e) {
     isUsingKeyboardNavigation: J.current,
     gutterWidth: K,
     rowIndex: e
-  }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e)), [F, z, q, K, J, S, c]), ee = r.useCallback(e => null == A ? void 0 : A(t[e]), [t, A]), et = r.useCallback(e => null == N ? void 0 : N(t[e], e), [t, N]), en = r.useCallback(e => null == m ? void 0 : m(t[e]), [t, m]), ei = r.useCallback(() => {
+  }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e)), [F, z, q, K, J, S, c]), ee = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), et = r.useCallback(e => null == A ? void 0 : A(t[e], e), [t, A]), en = r.useCallback(e => null == m ? void 0 : m(t[e]), [t, m]), ei = r.useCallback(() => {
     var e;
     return null == O ? void 0 : O(null == F ? void 0 : null === (e = F[Z.rowIndex]) || void 0 === e ? void 0 : e[Z.columnIndex])
   }, [F, Z.columnIndex, Z.rowIndex, O]);
@@ -117,8 +117,8 @@ function _(e) {
           hasSearchResults: I,
           listPadding: y,
           renderRow: $,
-          renderSection: null != A ? ee : void 0,
-          renderSectionHeader: null != N ? et : void 0,
+          renderSection: null != N ? ee : void 0,
+          renderSectionHeader: null != A ? et : void 0,
           renderSectionFooter: null != m ? en : void 0,
           renderInspector: null != O ? ei : void 0,
           renderEmptySearchState: p,

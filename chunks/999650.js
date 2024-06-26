@@ -27,8 +27,8 @@ var i, r, s = n(658722),
   h = n(914010),
   f = n(246946),
   S = n(594174),
-  A = n(483360),
-  N = n(226951),
+  N = n(483360),
+  A = n(226951),
   m = n(51144),
   O = n(981631),
   p = n(689938);
@@ -159,19 +159,19 @@ function F(e, t) {
     };
   switch (s) {
     case O.aib.GUILD:
-      n = A.ZP.queryGuildUsers({
+      n = N.ZP.queryGuildUsers({
         ...o,
         guildId: t
       });
       break;
     case O.aib.CHANNEL:
-      n = A.ZP.queryChannelUsers({
+      n = N.ZP.queryChannelUsers({
         ...o,
         channelId: t
       });
       break;
     case O.aib.DMS:
-      n = A.ZP.queryUsers(e, i, !0, r, () => !0);
+      n = N.ZP.queryUsers(e, i, !0, r, () => !0);
       break;
     default:
       return []
@@ -253,7 +253,7 @@ function z() {
         getAutocompletions: (e, t, i) => H(e, i, n)
       },
       [O.dCx.ANSWER_HAS]: {
-        regex: RegExp("(?:\\s*-?(".concat(n.map(e => N.Z.escape(e)).join("|"), "))"), "i"),
+        regex: RegExp("(?:\\s*-?(".concat(n.map(e => A.Z.escape(e)).join("|"), "))"), "i"),
         follows: [O.dCx.FILTER_HAS],
         validator: B,
         componentType: "ANSWER",
@@ -335,12 +335,12 @@ function z() {
         validator: Y,
         getAutocompletions(e, t, n) {
           "#" === e[0] && (e = e.substring(1));
-          let i = A.ZP.queryChannels({
+          let i = N.ZP.queryChannels({
             query: e,
             type: d.sH,
             guildId: t,
             limit: 1 / 0
-          }).concat(A.ZP.queryChannels({
+          }).concat(N.ZP.queryChannels({
             query: e,
             type: d.Zb,
             guildId: t,

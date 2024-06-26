@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(624138),
   f = n(453070),
   S = n(926491),
-  A = n(373228),
-  N = n(378233),
+  N = n(373228),
+  A = n(378233),
   m = n(419922),
   O = n(981631),
   p = n(957825),
@@ -42,9 +42,9 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     } = e, E = (0, u.O)(), h = (0, d.Iu)(e => "" !== e.searchQuery), f = r.useCallback((e, s, a) => {
       var u, c;
       let d;
-      let f = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === A.Ih.FAVORITE,
+      let f = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === N.Ih.FAVORITE,
         C = f ? 1 : 0,
-        L = (null === (c = n[C]) || void 0 === c ? void 0 : c.type) === A.Ih.RECENT,
+        L = (null === (c = n[C]) || void 0 === c ? void 0 : c.type) === N.Ih.RECENT,
         M = n.length > 0,
         P = n.length;
       if (0 === s && f) return (0, i.jsx)("div", {
@@ -90,11 +90,11 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
       let y = t === s,
         U = n[s],
         b = n[s + 1],
-        G = null != b && U.type === A.Ih.GUILD && b.type !== A.Ih.GUILD,
-        w = U.type === A.Ih.PACK,
+        G = null != b && U.type === N.Ih.GUILD && b.type !== N.Ih.GUILD,
+        w = U.type === N.Ih.PACK,
         x = "",
         B = null;
-      if (U.type === A.Ih.GUILD || U.type === A.Ih.EMPTY_GUILD_UPSELL) {
+      if (U.type === N.Ih.GUILD || U.type === N.Ih.EMPTY_GUILD_UPSELL) {
         let e = I.Z.getGuild(U.id);
         null != e && (d = e.id, x = e.name, B = (0, i.jsx)(_.Z, {
           guild: e,
@@ -105,7 +105,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         null != e && (x = e.name, B = (0, i.jsx)(m.ZP, {
           disableAnimation: !y || h,
           size: v,
-          sticker: (0, N.Zt)(e)
+          sticker: (0, A.Zt)(e)
         }))
       }
       return (0, i.jsxs)(r.Fragment, {
@@ -125,7 +125,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 [g.firstPartyCategorySelected]: !h && y && w
               }),
               onClick: () => {
-                U.type === A.Ih.PACK && T.default.track(O.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                U.type === N.Ih.PACK && T.default.track(O.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                   location: null == E ? void 0 : E.location,
                   tab: p.X1.STICKER,
                   sticker_pack_id: U.id,
@@ -142,7 +142,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     }, [t, E, h, n]), C = r.useCallback((e, t) => t ? U : 0, []), P = r.useCallback((e, t) => {
       let i = n[t],
         r = n[t + 1];
-      return v + (null != r && i.type === A.Ih.GUILD && r.type !== A.Ih.GUILD ? b : L)
+      return v + (null != r && i.type === N.Ih.GUILD && r.type !== N.Ih.GUILD ? b : L)
     }, [n]);
     return {
       getScrollOffsetForIndex: C,
@@ -168,22 +168,22 @@ t.Z = e => {
     hasFirstPartyStickerPacks: S
   } = r.useMemo(() => {
     var e, t;
-    let n = d.filter(e => e.type === A.Ih.GUILD).length,
-      i = (null === (e = d[0]) || void 0 === e ? void 0 : e.type) === A.Ih.RECENT,
-      r = n + (i ? 1 : 0) + ((null === (t = d[0]) || void 0 === t ? void 0 : t.type) === A.Ih.FAVORITE ? 1 : 0),
+    let n = d.filter(e => e.type === N.Ih.GUILD).length,
+      i = (null === (e = d[0]) || void 0 === e ? void 0 : e.type) === N.Ih.RECENT,
+      r = n + (i ? 1 : 0) + ((null === (t = d[0]) || void 0 === t ? void 0 : t.type) === N.Ih.FAVORITE ? 1 : 0),
       s = r * (v + L) - L + b;
     return {
       firstStandardStickerCategoryIndex: r + 1,
       firstStandardStickerCategoryOffsetTop: s,
       guildCategoryCount: n,
-      hasFirstPartyStickerPacks: null != d.find(e => e.type === A.Ih.PACK)
+      hasFirstPartyStickerPacks: null != d.find(e => e.type === N.Ih.PACK)
     }
   }, [d]);
   r.useLayoutEffect(() => {
     u(h >= 7)
   }, [h]);
   let {
-    renderCategoryListItem: N,
+    renderCategoryListItem: A,
     rowHeight: m,
     onScroll: O
   } = G({
@@ -203,7 +203,7 @@ t.Z = e => {
     store: c.ZN,
     listPadding: y,
     onScroll: O,
-    renderCategoryListItem: N,
+    renderCategoryListItem: A,
     rowCount: d.length,
     categories: d,
     categoryHeight: m,

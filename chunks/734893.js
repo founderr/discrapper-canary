@@ -28,7 +28,7 @@ n.d(t, {
     return C
   },
   cq: function() {
-    return N
+    return A
   },
   j: function() {
     return o
@@ -61,7 +61,7 @@ n.d(t, {
     return m
   },
   x3: function() {
-    return A
+    return N
   }
 });
 var i, r, s, o, a = n(592125),
@@ -76,9 +76,9 @@ let c = 7,
   h = 1,
   f = 30,
   S = 200,
-  A = 7;
+  N = 7;
 
-function N(e) {
+function A(e) {
   var t;
   return {
     channelId: e.channel_id,
@@ -119,7 +119,7 @@ function O(e) {
   } = e, s = {
     authorIds: t.author_ids,
     message: t.message
-  }, o = n.filter(e => (0, l.lm)(a.Z.getChannel(e.channel_id))).map(N);
+  }, o = n.filter(e => (0, l.lm)(a.Z.getChannel(e.channel_id))).map(A);
   return {
     welcomeMessage: s,
     newMemberActions: o,

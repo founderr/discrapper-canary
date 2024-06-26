@@ -65,7 +65,7 @@ let f = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, A = async (e, t) => {
+}, N = async (e, t) => {
   let {
     body: n
   } = await i.tn.patch({
@@ -84,7 +84,7 @@ let f = async (e, t) => {
       formFields: n.form_fields
     }
   })
-}, N = async (e, t) => {
+}, A = async (e, t) => {
   await i.tn.patch({
     url: T.ANM.GUILD_MEMBER_VERIFICATION(e),
     body: {
@@ -161,7 +161,7 @@ t.Z = {
       isLocalUpdate: !0
     })
   },
-  updateVerificationFormDescription: A,
+  updateVerificationFormDescription: N,
   updateVerificationFormDescriptionLocal: (e, t) => {
     r.Z.dispatch({
       type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -172,7 +172,7 @@ t.Z = {
       isLocalUpdate: !0
     })
   },
-  enableVerificationForm: N,
+  enableVerificationForm: A,
   submitVerificationForm: m,
   clearCoachmark: function() {
     r.Z.dispatch({

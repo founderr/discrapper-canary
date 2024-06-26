@@ -20,12 +20,12 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   let {
     disabled: n,
     type: s
-  } = e, [A, N] = r.useState(!1), m = (0, l.e7)([d.Z], () => {
+  } = e, [N, A] = r.useState(!1), m = (0, l.e7)([d.Z], () => {
     var e, t;
-    return A && Object.values(null !== (t = null === (e = d.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
+    return N && Object.values(null !== (t = null === (e = d.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
   }), [O, p, R] = (0, c.Iu)(e => [e.activeView, e.activeViewType, e.pickerId], a.Z), g = r.useRef(0), C = r.useCallback(() => {
-    N(!0), clearTimeout(g.current), g.current = setTimeout(() => {
-      N(!1), g.current = 0
+    A(!0), clearTimeout(g.current), g.current = setTimeout(() => {
+      A(!1), g.current = 0
     }, 2e3)
   }, []);
   (0, I.yp)({
@@ -57,7 +57,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           v(), M()
         },
         isActive: P,
-        pulse: A,
+        pulse: N,
         "aria-label": f.Z.Messages.GIF_BUTTON_LABEL,
         "aria-expanded": P,
         "aria-haspopup": "dialog",

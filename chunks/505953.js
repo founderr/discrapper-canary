@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(765104),
   f = n(477291),
   S = n(478758),
-  A = n(789707),
-  N = n(981631),
+  N = n(789707),
+  A = n(981631),
   m = n(531578),
   O = n(735840);
 
@@ -29,7 +29,7 @@ function p(e) {
   let {
     summary: t,
     channel: c,
-    members: A,
+    members: N,
     guildId: p,
     unread: R,
     onClick: g
@@ -39,7 +39,7 @@ function p(e) {
       channel: c,
       rating: n
     })
-  }, P = _.Z.can(N.Plq.MANAGE_MESSAGES, c);
+  }, P = _.Z.can(A.Plq.MANAGE_MESSAGES, c);
   return (0, i.jsxs)(o.Clickable, {
     className: O.container,
     onClick: g,
@@ -83,7 +83,7 @@ function p(e) {
           color: "interactive-normal",
           variant: "text-xs/normal",
           children: t.count
-        }), A.length > 0 && (0, i.jsxs)(i.Fragment, {
+        }), N.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(l.Z, {
             height: 4,
             width: 4,
@@ -91,11 +91,11 @@ function p(e) {
             className: O.dot
           }), (0, i.jsx)(S.Z, {
             partySize: {
-              knownSize: A.length,
-              totalSize: A.length
+              knownSize: N.length,
+              totalSize: N.length
             },
             maxAvatarsShown: 3,
-            members: A,
+            members: N,
             guildId: p
           })]
         })]
@@ -141,7 +141,7 @@ function R(e) {
   } = e, u = (0, s.e7)([c.ZP], () => c.ZP.getOldestUnreadMessageId(o.id)), _ = r.useCallback(e => {
     a(e), l(!1)
   }, [a, l]);
-  return t.length < 1 ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(i.Fragment, {
+  return t.length < 1 ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)(i.Fragment, {
     children: t.map((e, t) => {
       var r;
       let s = null !== (r = n[t]) && void 0 !== r ? r : [];

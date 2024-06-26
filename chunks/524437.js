@@ -70,14 +70,14 @@ n.d(t, {
     return eg
   }
 }), n(47120), n(411104), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(653041);
-var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f, S, A, N, m = n(230367),
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f, S, N, A, m = n(230367),
   O = n(320215),
   p = n(240773),
   R = n(495852),
   g = n(381499),
   C = n(835913),
   v = n(397696);
-(d = i || (i = {}))[d.UNSPECIFIED = 0] = "UNSPECIFIED", d[d.MENTIONS = 1] = "MENTIONS", d[d.UNREADS = 2] = "UNREADS", d[d.TODOS = 3] = "TODOS", d[d.FOR_YOU = 4] = "FOR_YOU", d[d.GAME_INVITES = 5] = "GAME_INVITES", (E = r || (r = {}))[E.NO_PROGRESS = 0] = "NO_PROGRESS", E[E.JOIN_GUILD = 1] = "JOIN_GUILD", E[E.INVITE_USER = 2] = "INVITE_USER", E[E.CONTACT_SYNC = 4] = "CONTACT_SYNC", (I = s || (s = {}))[I.NO_GUILD_ONBOARDING = 0] = "NO_GUILD_ONBOARDING", I[I.GUILD_NOTICE_SHOWN = 1] = "GUILD_NOTICE_SHOWN", I[I.GUILD_NOTICE_CLEARED = 2] = "GUILD_NOTICE_CLEARED", (T = o || (o = {}))[T.UNSET_EXPLICIT_CONTENT_REDACTION = 0] = "UNSET_EXPLICIT_CONTENT_REDACTION", T[T.SHOW = 1] = "SHOW", T[T.BLUR = 2] = "BLUR", T[T.BLOCK = 3] = "BLOCK", (h = a || (a = {}))[h.DEFAULT_UNSET = 0] = "DEFAULT_UNSET", h[h.DISABLED = 1] = "DISABLED", h[h.NON_FRIENDS = 2] = "NON_FRIENDS", h[h.FRIENDS_AND_NON_FRIENDS = 3] = "FRIENDS_AND_NON_FRIENDS", (f = l || (l = {}))[f.OFF = 0] = "OFF", f[f.ON_FOR_LARGE_GUILDS = 1] = "ON_FOR_LARGE_GUILDS", (S = u || (u = {}))[S.UNSET = 0] = "UNSET", S[S.DARK = 1] = "DARK", S[S.LIGHT = 2] = "LIGHT", S[S.DARKER = 3] = "DARKER", S[S.MIDNIGHT = 4] = "MIDNIGHT", (A = _ || (_ = {}))[A.MINT_APPLE = 0] = "MINT_APPLE", A[A.CITRUS_SHERBERT = 1] = "CITRUS_SHERBERT", A[A.RETRO_RAINCLOUD = 2] = "RETRO_RAINCLOUD", A[A.HANAMI = 3] = "HANAMI", A[A.SUNRISE = 4] = "SUNRISE", A[A.COTTON_CANDY = 5] = "COTTON_CANDY", A[A.LOFI_VIBES = 6] = "LOFI_VIBES", A[A.DESERT_KHAKI = 7] = "DESERT_KHAKI", A[A.SUNSET = 8] = "SUNSET", A[A.CHROMA_GLOW = 9] = "CHROMA_GLOW", A[A.FOREST = 10] = "FOREST", A[A.CRIMSON_MOON = 11] = "CRIMSON_MOON", A[A.MIDNIGHT_BLURPLE = 12] = "MIDNIGHT_BLURPLE", A[A.MARS = 13] = "MARS", A[A.DUSK = 14] = "DUSK", A[A.UNDER_THE_SEA = 15] = "UNDER_THE_SEA", A[A.EASTER_EGG = 16] = "EASTER_EGG", A[A.RETRO_STORM = 17] = "RETRO_STORM", A[A.NEON_NIGHTS = 18] = "NEON_NIGHTS", A[A.SEPIA = 19] = "SEPIA", A[A.STRAWBERRY_LEMONADE = 20] = "STRAWBERRY_LEMONADE", A[A.AURORA = 21] = "AURORA", A[A.BLURPLE_TWILIGHT = 22] = "BLURPLE_TWILIGHT", (N = c || (c = {}))[N.UNSET_FAVORITE_CHANNEL_TYPE = 0] = "UNSET_FAVORITE_CHANNEL_TYPE", N[N.REFERENCE_ORIGINAL = 1] = "REFERENCE_ORIGINAL", N[N.CATEGORY = 2] = "CATEGORY";
+(d = i || (i = {}))[d.UNSPECIFIED = 0] = "UNSPECIFIED", d[d.MENTIONS = 1] = "MENTIONS", d[d.UNREADS = 2] = "UNREADS", d[d.TODOS = 3] = "TODOS", d[d.FOR_YOU = 4] = "FOR_YOU", d[d.GAME_INVITES = 5] = "GAME_INVITES", (E = r || (r = {}))[E.NO_PROGRESS = 0] = "NO_PROGRESS", E[E.JOIN_GUILD = 1] = "JOIN_GUILD", E[E.INVITE_USER = 2] = "INVITE_USER", E[E.CONTACT_SYNC = 4] = "CONTACT_SYNC", (I = s || (s = {}))[I.NO_GUILD_ONBOARDING = 0] = "NO_GUILD_ONBOARDING", I[I.GUILD_NOTICE_SHOWN = 1] = "GUILD_NOTICE_SHOWN", I[I.GUILD_NOTICE_CLEARED = 2] = "GUILD_NOTICE_CLEARED", (T = o || (o = {}))[T.UNSET_EXPLICIT_CONTENT_REDACTION = 0] = "UNSET_EXPLICIT_CONTENT_REDACTION", T[T.SHOW = 1] = "SHOW", T[T.BLUR = 2] = "BLUR", T[T.BLOCK = 3] = "BLOCK", (h = a || (a = {}))[h.DEFAULT_UNSET = 0] = "DEFAULT_UNSET", h[h.DISABLED = 1] = "DISABLED", h[h.NON_FRIENDS = 2] = "NON_FRIENDS", h[h.FRIENDS_AND_NON_FRIENDS = 3] = "FRIENDS_AND_NON_FRIENDS", (f = l || (l = {}))[f.OFF = 0] = "OFF", f[f.ON_FOR_LARGE_GUILDS = 1] = "ON_FOR_LARGE_GUILDS", (S = u || (u = {}))[S.UNSET = 0] = "UNSET", S[S.DARK = 1] = "DARK", S[S.LIGHT = 2] = "LIGHT", S[S.DARKER = 3] = "DARKER", S[S.MIDNIGHT = 4] = "MIDNIGHT", (N = _ || (_ = {}))[N.MINT_APPLE = 0] = "MINT_APPLE", N[N.CITRUS_SHERBERT = 1] = "CITRUS_SHERBERT", N[N.RETRO_RAINCLOUD = 2] = "RETRO_RAINCLOUD", N[N.HANAMI = 3] = "HANAMI", N[N.SUNRISE = 4] = "SUNRISE", N[N.COTTON_CANDY = 5] = "COTTON_CANDY", N[N.LOFI_VIBES = 6] = "LOFI_VIBES", N[N.DESERT_KHAKI = 7] = "DESERT_KHAKI", N[N.SUNSET = 8] = "SUNSET", N[N.CHROMA_GLOW = 9] = "CHROMA_GLOW", N[N.FOREST = 10] = "FOREST", N[N.CRIMSON_MOON = 11] = "CRIMSON_MOON", N[N.MIDNIGHT_BLURPLE = 12] = "MIDNIGHT_BLURPLE", N[N.MARS = 13] = "MARS", N[N.DUSK = 14] = "DUSK", N[N.UNDER_THE_SEA = 15] = "UNDER_THE_SEA", N[N.EASTER_EGG = 16] = "EASTER_EGG", N[N.RETRO_STORM = 17] = "RETRO_STORM", N[N.NEON_NIGHTS = 18] = "NEON_NIGHTS", N[N.SEPIA = 19] = "SEPIA", N[N.STRAWBERRY_LEMONADE = 20] = "STRAWBERRY_LEMONADE", N[N.AURORA = 21] = "AURORA", N[N.BLURPLE_TWILIGHT = 22] = "BLURPLE_TWILIGHT", (A = c || (c = {}))[A.UNSET_FAVORITE_CHANNEL_TYPE = 0] = "UNSET_FAVORITE_CHANNEL_TYPE", A[A.REFERENCE_ORIGINAL = 1] = "REFERENCE_ORIGINAL", A[A.CATEGORY = 2] = "CATEGORY";
 class L extends R.C {
   create(e) {
     let t = {};
@@ -129,7 +129,7 @@ class L extends R.C {
           r.localization = eT.internalBinaryRead(e, e.uint32(), n, r.localization);
           break;
         case 13:
-          r.appearance = eA.internalBinaryRead(e, e.uint32(), n, r.appearance);
+          r.appearance = eN.internalBinaryRead(e, e.uint32(), n, r.appearance);
           break;
         case 14:
           r.guildFolders = ep.internalBinaryRead(e, e.uint32(), n, r.guildFolders);
@@ -159,7 +159,7 @@ class L extends R.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    e.versions && v.L.internalBinaryWrite(e.versions, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.guilds && U.internalBinaryWrite(e.guilds, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.userContent && F.internalBinaryWrite(e.userContent, t.tag(4, m.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.textAndImages && et.internalBinaryWrite(e.textAndImages, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.notifications && ei.internalBinaryWrite(e.notifications, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.privacy && es.internalBinaryWrite(e.privacy, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.debug && ea.internalBinaryWrite(e.debug, t.tag(9, m.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, m.TD.LengthDelimited).fork(), n).join(), e.status && ec.internalBinaryWrite(e.status, t.tag(11, m.TD.LengthDelimited).fork(), n).join(), e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, m.TD.LengthDelimited).fork(), n).join(), e.appearance && eA.internalBinaryWrite(e.appearance, t.tag(13, m.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ep.internalBinaryWrite(e.guildFolders, t.tag(14, m.TD.LengthDelimited).fork(), n).join(), e.favorites && ev.internalBinaryWrite(e.favorites, t.tag(15, m.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eU.internalBinaryWrite(e.audioContextSettings, t.tag(16, m.TD.LengthDelimited).fork(), n).join(), e.communities && eG.internalBinaryWrite(e.communities, t.tag(17, m.TD.LengthDelimited).fork(), n).join(), e.broadcast && eZ.internalBinaryWrite(e.broadcast, t.tag(18, m.TD.LengthDelimited).fork(), n).join(), e.clips && eF.internalBinaryWrite(e.clips, t.tag(19, m.TD.LengthDelimited).fork(), n).join();
+    e.versions && v.L.internalBinaryWrite(e.versions, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.guilds && U.internalBinaryWrite(e.guilds, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.userContent && F.internalBinaryWrite(e.userContent, t.tag(4, m.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.textAndImages && et.internalBinaryWrite(e.textAndImages, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.notifications && ei.internalBinaryWrite(e.notifications, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.privacy && es.internalBinaryWrite(e.privacy, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.debug && ea.internalBinaryWrite(e.debug, t.tag(9, m.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, m.TD.LengthDelimited).fork(), n).join(), e.status && ec.internalBinaryWrite(e.status, t.tag(11, m.TD.LengthDelimited).fork(), n).join(), e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, m.TD.LengthDelimited).fork(), n).join(), e.appearance && eN.internalBinaryWrite(e.appearance, t.tag(13, m.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ep.internalBinaryWrite(e.guildFolders, t.tag(14, m.TD.LengthDelimited).fork(), n).join(), e.favorites && ev.internalBinaryWrite(e.favorites, t.tag(15, m.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eU.internalBinaryWrite(e.audioContextSettings, t.tag(16, m.TD.LengthDelimited).fork(), n).join(), e.communities && eG.internalBinaryWrite(e.communities, t.tag(17, m.TD.LengthDelimited).fork(), n).join(), e.broadcast && eZ.internalBinaryWrite(e.broadcast, t.tag(18, m.TD.LengthDelimited).fork(), n).join(), e.clips && eF.internalBinaryWrite(e.clips, t.tag(19, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -228,7 +228,7 @@ class L extends R.C {
       no: 13,
       name: "appearance",
       kind: "message",
-      T: () => eA
+      T: () => eN
     }, {
       no: 14,
       name: "guild_folders",
@@ -2116,8 +2116,8 @@ class eS extends R.C {
     }])
   }
 }
-let eA = new eS;
-class eN extends R.C {
+let eN = new eS;
+class eA extends R.C {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, p.C, {
@@ -2154,7 +2154,7 @@ class eN extends R.C {
     }])
   }
 }
-let em = new eN;
+let em = new eA;
 class eO extends R.C {
   create(e) {
     let t = {

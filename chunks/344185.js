@@ -22,16 +22,16 @@ function f(e) {
 }
 
 function S(e) {
-  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => c.AW.has(e.type)).forEach(t => A(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
+  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => c.AW.has(e.type)).forEach(t => N(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = I[e],
     i = t.parent_id;
   !(i in n) && (n[i] = {}), I[e][i][t.id] = h(t)
 }
 
-function N(e) {
+function A(e) {
   var t, n;
   let {
     channel: i
@@ -108,7 +108,7 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
       channels: t
     } = e;
     I = {}, l()(t).filter(e => c.Ec.has(e.type)).groupBy("guild_id").forEach((e, t) => {
-      I[t] = {}, e.forEach(e => A(t, e))
+      I[t] = {}, e.forEach(e => N(t, e))
     })
   },
   GUILD_CREATE: function(e) {
@@ -123,8 +123,8 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
     } = e;
     f(t.id)
   },
-  THREAD_CREATE: N,
-  THREAD_UPDATE: N,
+  THREAD_CREATE: A,
+  THREAD_UPDATE: A,
   THREAD_LIST_SYNC: function(e) {
     let {
       guildId: t,
@@ -136,7 +136,7 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
       }, I[t]) I[t][e] = {
       ...I[t][e]
     };
-    n.forEach(e => A(t, e))
+    n.forEach(e => N(t, e))
   },
   THREAD_DELETE: function(e) {
     let {

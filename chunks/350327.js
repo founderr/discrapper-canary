@@ -16,7 +16,7 @@ n.d(t, {
     return E
   },
   c_: function() {
-    return N
+    return A
   },
   f4: function() {
     return O
@@ -31,7 +31,7 @@ n.d(t, {
     return p
   },
   z5: function() {
-    return A
+    return N
   }
 });
 var i = n(544891),
@@ -126,14 +126,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function N(e) {
+function A(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e

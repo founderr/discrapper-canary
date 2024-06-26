@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(703558),
   f = n(117530),
   S = n(132338),
-  A = n(459273),
-  N = n(444282),
+  N = n(459273),
+  A = n(444282),
   m = n(898463),
   O = n(981631),
   p = n(547857),
@@ -61,7 +61,7 @@ function C(e) {
   let b = r.useCallback(() => {
     C.focusFirstVisibleItem()
   }, [C]);
-  return ((0, A.yp)({
+  return ((0, N.yp)({
     event: O.CkL.FOCUS_ATTACHMENT_AREA,
     handler: b
   }), r.useEffect(() => {
@@ -86,7 +86,7 @@ function C(e) {
             ref: r,
             ...a,
             className: o()(p.channelAttachmentArea, R.scrollbarGhost),
-            children: L ? P.map(e => (0, i.jsx)(N.Z, {
+            children: L ? P.map(e => (0, i.jsx)(A.Z, {
               channelId: t,
               keyboardModeEnabled: s,
               option: e

@@ -49,7 +49,7 @@ function a(e) {
     footer: S
   } = e;
   if (null == S && (null == s || 0 === s.length)) return null;
-  let A = null == s ? void 0 : s.map((e, t) => {
+  let N = null == s ? void 0 : s.map((e, t) => {
     let i = t + T,
       s = d(e, i);
     return (0, r.createElement)(c, {
@@ -69,6 +69,6 @@ function a(e) {
       getQuery: E,
       headerClassName: h,
       headerTrailingContent: f
-    }) : null, A, S]
+    }) : null, N, S]
   }, I)
 }

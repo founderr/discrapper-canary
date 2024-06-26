@@ -27,8 +27,8 @@ function c(e) {
     isTryItOut: h,
     onOpenProfile: f,
     nicknameVariant: S = "heading-lg/bold",
-    pronounsVariant: A = "text-sm/medium"
-  } = e, N = {
+    pronounsVariant: N = "text-sm/medium"
+  } = e, A = {
     [_.biteSize]: n === l.y0.BITE_SIZE,
     [_.fullSize]: n === l.y0.FULL_SIZE,
     [_.panel]: n === l.y0.PANEL
@@ -42,15 +42,15 @@ function c(e) {
     children: [(0, i.jsxs)("div", {
       className: _.usernameRow,
       children: [m((0, i.jsx)(o.Heading, {
-        className: s()(_.nickname, N),
+        className: s()(_.nickname, A),
         variant: S,
         children: d
       })), null != E && (0, i.jsx)("div", {
-        className: s()(_.nicknameIcons, N),
+        className: s()(_.nicknameIcons, A),
         children: E
       })]
     }), (0, i.jsxs)("div", {
-      className: s()(_.tags, N, O && _.tagsWithPronouns),
+      className: s()(_.tags, A, O && _.tagsWithPronouns),
       children: [m((0, i.jsx)(a.Z, {
         user: t,
         usernameIcon: r,
@@ -69,7 +69,7 @@ function c(e) {
           text: u.Z.Messages.USER_PROFILE_PRONOUNS,
           delay: l.vB,
           children: (0, i.jsx)(o.Text, {
-            variant: A,
+            variant: N,
             className: _.pronouns,
             color: "header-primary",
             children: I

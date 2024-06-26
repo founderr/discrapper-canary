@@ -23,8 +23,8 @@ var i = n(512722),
   h = n(633302),
   f = n(603721),
   S = n(188597),
-  A = n(3148),
-  N = n(346479),
+  N = n(3148),
+  A = n(346479),
   m = n(706454),
   O = n(430824),
   p = n(117530),
@@ -60,7 +60,7 @@ let B = (e, t) => {
     return t || n ? t : null
   };
 async function Z(e) {
-  var t, n, i, o, l, _, c, I, T, h, f, S, A, O, R;
+  var t, n, i, o, l, _, c, I, T, h, f, S, N, O, R;
   let {
     command: g,
     optionValues: C,
@@ -75,7 +75,7 @@ async function Z(e) {
     context: v,
     command: g,
     commandOrigin: b
-  }), await N.Z.unarchiveThreadIfNecessary(v.channel.id);
+  }), await A.Z.unarchiveThreadIfNecessary(v.channel.id);
   let x = [],
     Z = [],
     F = (0, U.D7)(b);
@@ -156,7 +156,7 @@ async function Z(e) {
             if ((0, U.BH)(a.text)) n = a.text.trim();
             else {
               let e = (0, E.K)(a.text, null === (S = v.guild) || void 0 === S ? void 0 : S.id, v.channel.id);
-              (null == e ? void 0 : e.type) === "userMention" ? n = e.userId: (null == e ? void 0 : e.type) === "roleMention" ? n = e.roleId : (null == e ? void 0 : e.type) === "textMention" && "@everyone" === e.text ? n = null === (A = v.guild) || void 0 === A ? void 0 : A.id : r()(!1, "Failed to resolve ".concat(a.text))
+              (null == e ? void 0 : e.type) === "userMention" ? n = e.userId: (null == e ? void 0 : e.type) === "roleMention" ? n = e.roleId : (null == e ? void 0 : e.type) === "textMention" && "@everyone" === e.text ? n = null === (N = v.guild) || void 0 === N ? void 0 : N.id : r()(!1, "Failed to resolve ".concat(a.text))
             }
           }
           break;
@@ -267,14 +267,14 @@ let H = e => {
     } = e, {
       channel: T,
       guild: h
-    } = r, S = T.id, N = null == h ? void 0 : h.id, m = P.Nk(r.channel, i.type, n);
+    } = r, S = T.id, A = null == h ? void 0 : h.id, m = P.Nk(r.channel, i.type, n);
     if (null == m) return;
     let O = null === (t = m.application) || void 0 === t ? void 0 : t.bot;
     if (null == O && null != m.botId) try {
       await l.PR(m.botId)
     } catch {}
     let p = {
-      ...(0, A.ZP)({
+      ...(0, N.ZP)({
         channelId: S,
         content: "",
         type: i.type === u.yU.CHAT ? G.uaV.CHAT_INPUT_COMMAND : G.uaV.CONTEXT_MENU_COMMAND,
@@ -292,7 +292,7 @@ let H = e => {
         name: i.name,
         name_localized: d,
         type: u.B8.APPLICATION_COMMAND,
-        user: (0, A.pe)(R.default.getCurrentUser())
+        user: (0, N.pe)(R.default.getCurrentUser())
       },
       interaction_data: i
     };
@@ -310,7 +310,7 @@ let H = e => {
       C = {
         applicationId: n,
         channelId: S,
-        guildId: N,
+        guildId: A,
         data: i,
         nonce: p.id,
         attachments: a,
@@ -328,7 +328,7 @@ let H = e => {
         interactionType: u.B8.APPLICATION_COMMAND,
         channelId: S
       }
-    }), null != a ? K(a, C.nonce, N, _).then(e => {
+    }), null != a ? K(a, C.nonce, A, _).then(e => {
       if (!!e) j(C, c)
     }) : j(C, c)
   };

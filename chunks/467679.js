@@ -45,9 +45,9 @@ let c = e => {
       h = u.Z.Messages.APP_TAG
   }
   let S = r === l.Hb.ORIGINAL_POSTER,
-    A = r === l.Hb.REMIX,
-    N = null;
-  d && (N = (0, i.jsx)(o.u, {
+    N = r === l.Hb.REMIX,
+    A = null;
+  d && (A = (0, i.jsx)(o.u, {
     text: f,
     align: "center",
     position: "top",
@@ -61,9 +61,9 @@ let c = e => {
     ...e,
     className: s()(c, t, I ? _.rem : _.px, {
       [_.botTagOP]: S,
-      [_.botTagRemix]: A
+      [_.botTagRemix]: N
     }),
-    children: [E ? null : N, T, (0, i.jsx)("span", {
+    children: [E ? null : A, T, (0, i.jsx)("span", {
       className: _.botText,
       children: h
     })]

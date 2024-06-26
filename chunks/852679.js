@@ -24,8 +24,8 @@ async function I(e) {
     guildId: h,
     closeLayer: f,
     onCloseModal: S,
-    totalNumberOfSlotsToAssign: A = 1,
-    disablePremiumUpsell: N,
+    totalNumberOfSlotsToAssign: N = 1,
+    disablePremiumUpsell: A,
     onSubscriptionConfirmation: m,
     inPopout: O,
     applicationId: p
@@ -61,9 +61,9 @@ async function I(e) {
         analyticsLocation: I,
         analyticsSourceLocation: null != T ? T : I,
         guildId: h,
-        totalNumberOfSlotsToAssign: A,
+        totalNumberOfSlotsToAssign: N,
         closeGuildPerksModal: f,
-        disablePremiumUpsell: N,
+        disablePremiumUpsell: A,
         onSubscriptionConfirmation: m,
         applicationId: p
       })

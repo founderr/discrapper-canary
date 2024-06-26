@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(954017),
   f = n(314091),
   S = n(159244),
-  A = n(574176),
-  N = n(952164),
+  N = n(574176),
+  A = n(952164),
   m = n(199902),
   O = n(592125),
   p = n(430824),
@@ -78,7 +78,7 @@ t.Z = function(e) {
     return O.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: G
-  } = A.n.useExperiment({
+  } = N.n.useExperiment({
     guildId: null == b ? void 0 : b.guild_id,
     location: "UserActivityContainer"
   }, {
@@ -150,8 +150,8 @@ t.Z = function(e) {
         }
       })]
     }) : null,
-    onOpenSpotifyTrack: N.aG,
-    onOpenSpotifyArtist: N.d$,
-    onOpenSpotifyAlbum: N.Z5
+    onOpenSpotifyTrack: A.aG,
+    onOpenSpotifyArtist: A.d$,
+    onOpenSpotifyAlbum: A.Z5
   }) : null
 }

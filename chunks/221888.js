@@ -20,18 +20,18 @@ var i = n(735250),
   h = n(321148),
   f = n(823379),
   S = n(5192),
-  A = n(354459),
-  N = n(981631),
+  N = n(354459),
+  A = n(981631),
   m = n(689938),
   O = n(530175);
 
 function p(e, t) {
   switch (e) {
-    case A.fO.ACTIVITY:
+    case N.fO.ACTIVITY:
       return m.Z.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
         numUsers: t
       });
-    case A.fO.STREAM:
+    case N.fO.STREAM:
       return m.Z.Messages.SPECTATORS.format({
         numViewers: t
       });
@@ -115,11 +115,11 @@ function v(e) {
     disableInteraction: m = !1,
     maxVisibleUsers: p = 3
   } = e, [v, L] = r.useState(!1), D = r.useRef(new _.sW(150, () => L(!1))), M = (0, u.Wu)([I.Z, T.default], () => {
-    if (a.type === A.fO.STREAM) {
+    if (a.type === N.fO.STREAM) {
       let e = I.Z.getViewerIds(a.id);
       return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(f.lm) : C
     }
-    return a.type === A.fO.ACTIVITY ? a.participants.length > 0 ? Array.from(a.participants).map(e => T.default.getUser(e.userId)).filter(f.lm) : C : C
+    return a.type === N.fO.ACTIVITY ? a.participants.length > 0 ? Array.from(a.participants).map(e => T.default.getUser(e.userId)).filter(f.lm) : C : C
   }, [a]), P = r.useCallback(() => {
     D.current.cancel(), L(!0)
   }, []), y = r.useCallback(() => {
@@ -156,7 +156,7 @@ function v(e) {
     className: O.overflow,
     children: ["+", M.length - p + 1]
   }, "overflow")), (0, i.jsx)(E.Z, {
-    section: N.jXE.STREAM_VIEWER_POPOUT,
+    section: A.jXE.STREAM_VIEWER_POPOUT,
     children: (0, i.jsx)("div", {
       onMouseEnter: P,
       onMouseLeave: y,

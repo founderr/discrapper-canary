@@ -40,7 +40,7 @@ n.d(t, {
     return S
   },
   Vn: function() {
-    return N
+    return A
   },
   ab: function() {
     return p
@@ -58,7 +58,7 @@ n.d(t, {
     return G
   },
   nH: function() {
-    return A
+    return N
   },
   qs: function() {
     return I
@@ -174,7 +174,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     guildId: t,
     channelId: n
@@ -188,7 +188,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   var t, n, r, s;
   let {
     guildId: l,

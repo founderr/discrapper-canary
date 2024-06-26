@@ -7,7 +7,7 @@ n.d(t, {
     return T
   },
   Gx: function() {
-    return A
+    return N
   },
   TA: function() {
     return E
@@ -136,7 +136,7 @@ function S(e) {
   }
 }
 
-function A(e, t) {
+function N(e, t) {
   if (null == e || void 0 === e.oneofKind) return null;
   switch (e.oneofKind) {
     case "customAsset":

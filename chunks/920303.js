@@ -16,8 +16,8 @@ var r, s, o, a, l = n(392711),
   h = n(592125),
   f = n(306680),
   S = n(823379),
-  A = n(709054),
-  N = n(569471);
+  N = n(709054),
+  A = n(569471);
 let m = 25,
   O = !1,
   p = !0,
@@ -47,9 +47,9 @@ function y() {
     if (e || null == n) return !0;
     {
       let e = null == t ? null : P(t, v);
-      return null != e && A.default.compare(e, n) >= 0
+      return null != e && N.default.compare(e, n) >= 0
     }
-  }).sort((e, t) => A.default.compare(P(e, v), P(t, v))).map(e => e.id).reverse().value()
+  }).sort((e, t) => N.default.compare(P(e, v), P(t, v))).map(e => e.id).reverse().value()
 }
 
 function U(e) {
@@ -59,7 +59,7 @@ function U(e) {
 let b = [];
 class G extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(h.Z, N.Z, f.ZP)
+    this.waitFor(h.Z, A.Z, f.ZP)
   }
   get canLoadMore() {
     return R && !O && !g

@@ -30,8 +30,8 @@ let E = e => {
       ariaLabel: h,
       className: f,
       style: S,
-      to: A,
-      onClick: N,
+      to: N,
+      onClick: A,
       selected: m = !1,
       ...O
     } = e,
@@ -41,17 +41,17 @@ let E = e => {
     n = null !== (R = c[(t = (0, u.Zg)(T)).length - 1]) && void 0 !== R ? R : c[c.length - 1]
   }
   let g = r.useCallback(e => {
-    if (null == A);
-    else if ("string" == typeof A) p.push(A);
+    if (null == N);
+    else if ("string" == typeof N) p.push(N);
     else {
       let {
         pathname: e = "",
         state: t
-      } = A;
+      } = N;
       p.push(e, t)
     }
-    null != N && N(e)
-  }, [p, A, N]);
+    null != A && A(e)
+  }, [p, N, A]);
   return (0, i.jsxs)(l.Clickable, {
     ...O,
     onClick: g,

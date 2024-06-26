@@ -28,8 +28,8 @@ t.Z = o.forwardRef(function(e, t) {
     className: r,
     children: o,
     actions: a,
-    handleEditModal: A,
-    keyboardModeEnabled: N,
+    handleEditModal: N,
+    keyboardModeEnabled: A,
     onKeyDown: m,
     draftType: O,
     size: p = 1
@@ -46,13 +46,13 @@ t.Z = o.forwardRef(function(e, t) {
       onFocus: C,
       onBlur: v,
       onKeyDown: e => {
-        if (!!N) {
+        if (!!A) {
           switch (e.which) {
             case T.yXg.D:
               e.preventDefault(), c.Z.remove(i, n, O);
               return;
             case T.yXg.E:
-              null != A && (e.preventDefault(), A(e));
+              null != N && (e.preventDefault(), N(e));
               return;
             case T.yXg.BACKSPACE:
               e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, O)) : (e.preventDefault(), c.Z.remove(i, n, O));

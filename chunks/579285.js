@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(430824),
   f = n(496675),
   S = n(700785),
-  A = n(785717),
-  N = n(256226),
+  N = n(785717),
+  A = n(256226),
   m = n(314172),
   O = n(981631),
   p = n(689938),
@@ -36,7 +36,7 @@ let g = (0, E.Z)(function(e) {
     highestRole: I,
     canManageRoles: T,
     width: f,
-    onAddRole: A,
+    onAddRole: N,
     onRemoveRole: g,
     onOpenProfile: C
   } = e;
@@ -94,7 +94,7 @@ let g = (0, E.Z)(function(e) {
     }),
     H = y.map((e, r) => {
       var o;
-      return (0, i.jsx)(N.Z, {
+      return (0, i.jsx)(A.Z, {
         role: e,
         guildId: s.id,
         style: {
@@ -136,7 +136,7 @@ let g = (0, E.Z)(function(e) {
             guild: s,
             guildMember: d,
             highestRole: I,
-            onAddRole: A
+            onAddRole: N
           })]
         })
       }
@@ -152,7 +152,7 @@ function C(e) {
     onOpenProfile: o
   } = e, {
     trackUserProfileAction: a
-  } = (0, A.KZ)(), l = (0, _.e7)([T.ZP], () => T.ZP.getMember(s.id, t.id)), u = null == l ? void 0 : l.roles, c = null == u || 0 === u.length, E = S.e9(s, n.id), [h] = (0, _.Wu)([f.Z], () => [f.Z.can(O.Plq.MANAGE_ROLES, s), null != s ? f.Z.getGuildVersion(s.id) : null]), N = r.useCallback(e => {
+  } = (0, N.KZ)(), l = (0, _.e7)([T.ZP], () => T.ZP.getMember(s.id, t.id)), u = null == l ? void 0 : l.roles, c = null == u || 0 === u.length, E = S.e9(s, n.id), [h] = (0, _.Wu)([f.Z], () => [f.Z.can(O.Plq.MANAGE_ROLES, s), null != s ? f.Z.getGuildVersion(s.id) : null]), A = r.useCallback(e => {
     var n, i;
     a({
       action: "REMOVE_ROLE"
@@ -175,7 +175,7 @@ function C(e) {
       highestRole: E,
       canManageRoles: h,
       onAddRole: m,
-      onRemoveRole: N,
+      onRemoveRole: A,
       onOpenProfile: o
     })
   })

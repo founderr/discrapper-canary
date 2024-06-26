@@ -40,8 +40,8 @@ function h() {
     n = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
     h = (0, u._O)(),
     f = (0, r.e7)([a.Z], () => a.Z.hasAnyUnexpiredOffer()),
-    [S, A] = i.useState(!1),
-    [N, m] = i.useState([]);
+    [S, N] = i.useState(!1),
+    [A, m] = i.useState([]);
   i.useEffect(() => {
     null != e && s.Z.wait(() => d.ZP.markOutboundPromotionsSeen())
   }, [e]);
@@ -67,9 +67,9 @@ function h() {
   }, [e, R]), i.useEffect(() => {
     s.Z.wait(() => {
       (0, c.t8)().then(e => {
-        m(e), A(!0)
+        m(e), N(!0)
       }).catch(() => {
-        m([]), A(!0)
+        m([]), N(!0)
       })
     })
   }, []);
@@ -78,14 +78,14 @@ function h() {
       code: e,
       promotion: t
     }
-    of N) g[t.id] = e;
+    of A) g[t.id] = e;
   let C = new Set(t.map(e => {
       let {
         id: t
       } = e;
       return t
     })),
-    v = N.filter(e => {
+    v = A.filter(e => {
       let {
         promotion: t
       } = e;

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(998502),
   f = n(785717),
   S = n(204197),
-  A = n(652853),
-  N = n(228168),
+  N = n(652853),
+  A = n(228168),
   m = n(981631),
   O = n(474936),
   p = n(148443);
@@ -38,7 +38,7 @@ function C(e) {
     onOpenProfile: v
   } = e, {
     theme: L
-  } = (0, A.z)(), {
+  } = (0, N.z)(), {
     analyticsLocations: D
   } = (0, c.ZP)(_.Z.AVATAR), {
     trackUserProfileAction: M
@@ -76,7 +76,7 @@ function C(e) {
     statusBackdropColor: P && !y ? (0, l.getStatusBackdropColor)(L) : void 0,
     isMobile: b,
     statusTooltip: !0,
-    statusTooltipDelay: N.vB
+    statusTooltipDelay: A.vB
   });
   return null == v ? (0, i.jsx)("div", {
     ...x,

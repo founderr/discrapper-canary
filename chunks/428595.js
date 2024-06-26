@@ -16,8 +16,8 @@ var i = n(392711),
   h = n(444758),
   f = n(723454),
   S = n(772096),
-  A = n(800927),
-  N = n(945884),
+  N = n(800927),
+  A = n(945884),
   m = n(594199),
   O = n(97734),
   p = n(660199),
@@ -346,8 +346,8 @@ let b = e => {
       })
     },
     heading: f.Z,
-    list: A.Z,
-    subtext: N.Z
+    list: N.Z,
+    subtext: A.Z
   },
   x = (0, R.Z)([w, O.Z]),
   B = r().omit(x, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext"]),

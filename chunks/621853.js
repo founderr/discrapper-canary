@@ -24,12 +24,12 @@ let I = new Set,
   h = {},
   f = {},
   S = {},
-  A = {},
   N = {},
+  A = {},
   m = !1;
 
 function O() {
-  I.clear(), T.clear(), h = {}, f = {}, S = {}, A = {}, N = {}, m = !1
+  I.clear(), T.clear(), h = {}, f = {}, S = {}, N = {}, A = {}, m = !1
 }
 
 function p(e) {
@@ -60,17 +60,17 @@ function g(e) {
 }
 
 function C(e) {
-  T.delete(e.userId), S[e.userId] = g(e.mutualFriends), A[e.userId] = e.mutualFriends.length
+  T.delete(e.userId), S[e.userId] = g(e.mutualFriends), N[e.userId] = e.mutualFriends.length
 }
 
 function v() {
-  if (0 === Object.keys(N).length) return !1;
-  N = {}
+  if (0 === Object.keys(A).length) return !1;
+  A = {}
 }
 
 function L(e) {
-  if (null == N[e.user.id]) return !1;
-  delete N[e.user.id]
+  if (null == A[e.user.id]) return !1;
+  delete A[e.user.id]
 }
 
 function D(e) {
@@ -86,16 +86,16 @@ function D(e) {
         guild: r,
         nick: i
       })
-    }), N[e.user.id] = d.ZP.getFlattenedGuildIds().filter(e => null != t[e]).map(e => ({
+    }), A[e.user.id] = d.ZP.getFlattenedGuildIds().filter(e => null != t[e]).map(e => ({
       guild: t[e].guild,
       nick: t[e].nick
     }))
   }
   if (null != e.mutual_friends_count) {
     let t = e.mutual_friends_count;
-    A[e.user.id] = t
+    N[e.user.id] = t
   }
-  null != e.mutual_friends && (S[e.user.id] = g(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
+  null != e.mutual_friends && (S[e.user.id] = g(e.mutual_friends), N[e.user.id] = e.mutual_friends.length);
   let L = null !== (c = e.premium_since) && void 0 !== c ? c : null,
     D = e.application;
   if (h[e.user.id] = {
@@ -268,10 +268,10 @@ class x extends c.Z {
     return S[e]
   }
   getMutualFriendsCount(e) {
-    return A[e]
+    return N[e]
   }
   getMutualGuilds(e) {
-    return N[e]
+    return A[e]
   }
   takeSnapshot() {
     let e = l.default.getId();

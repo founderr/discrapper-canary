@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(628692),
   f = n(590956),
   S = n(703656),
-  A = n(430824),
-  N = n(68588),
+  N = n(430824),
+  A = n(68588),
   m = n(572004),
   O = n(900849),
   p = n(746878),
@@ -135,8 +135,8 @@ let w = {
     }, n.key)
   },
   spoiler: {
-    react: (e, t, n) => (0, i.jsx)(N.Z, {
-      type: N.Z.Types.TEXT,
+    react: (e, t, n) => (0, i.jsx)(A.Z, {
+      type: A.Z.Types.TEXT,
       inline: n.formatInline,
       renderTextElement: (e, t) => null == e || e.type !== u.Z || t ? e : r.cloneElement(e, {
         tabIndex: -1
@@ -155,7 +155,7 @@ let w = {
     react(e, t, n) {
       let r = () => {
         ! function(e, t) {
-          let n = A.Z.getGuild(e);
+          let n = N.Z.getGuild(e);
           if (null == e || null == n || !n.hasFeature(M.oNc.COMMUNITY)) return;
           let i = {
               home: P.oC.GUILD_HOME,
@@ -163,7 +163,7 @@ let w = {
               customize: P.oC.CUSTOMIZE_COMMUNITY,
               guide: P.oC.GUILD_HOME
             } [t],
-            r = A.Z.getGuild(e);
+            r = N.Z.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
             O.Ub(e, {}, {
               channelId: i
@@ -245,7 +245,7 @@ let w = {
   },
   guild: {
     react: (e, t, n) => {
-      let r = A.Z.getGuild(e.guildId);
+      let r = N.Z.getGuild(e.guildId);
       return (0, i.jsx)(E.Z, {
         guild: r,
         children: (0, p.S)(e, t, n)

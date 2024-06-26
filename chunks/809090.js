@@ -26,8 +26,8 @@ function d(e) {
     onBlur: h,
     onMouseOver: f,
     onMouseLeave: S,
-    ...A
-  } = e, [N, m] = r.useState(!1), O = r.useCallback(() => {
+    ...N
+  } = e, [A, m] = r.useState(!1), O = r.useCallback(() => {
     m(!0), null == T || T()
   }, [T]), p = r.useCallback(() => {
     m(!1), null == h || h()
@@ -49,7 +49,7 @@ function d(e) {
     return c
   }, [t, s]);
   return (0, i.jsx)("div", {
-    ...A,
+    ...N,
     className: o()(_.wrapper, E, {
       [_.selectable]: I,
       [_.selected]: I && n
@@ -60,7 +60,7 @@ function d(e) {
     onMouseLeave: g,
     children: (0, i.jsx)(a.ZP, {
       className: _.mask,
-      mask: I && (n || N) ? a.QS.SQUIRCLE : a.QS.AVATAR_DEFAULT,
+      mask: I && (n || A) ? a.QS.SQUIRCLE : a.QS.AVATAR_DEFAULT,
       width: s,
       height: d,
       children: (0, i.jsx)("img", {

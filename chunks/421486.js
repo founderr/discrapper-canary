@@ -15,8 +15,8 @@ n(5192);
 var h = n(342656),
   f = n(785717),
   S = n(726059),
-  A = n(162267),
-  N = n(171368),
+  N = n(162267),
+  A = n(171368),
   m = n(228168),
   O = n(689938),
   p = n(647114);
@@ -34,7 +34,7 @@ let R = o.memo(function(e) {
   } = e, {
     analyticsLocations: S
   } = (0, c.ZP)(), {
-    guildId: A,
+    guildId: N,
     channelId: R,
     messageId: g,
     roleId: C
@@ -64,17 +64,17 @@ let R = o.memo(function(e) {
       G((null === (e = P.current) || void 0 === e ? void 0 : e.clientHeight) > 19), U(!0)
     }
   }, []), x = o.useCallback(e => () => {
-    (0, N.openUserProfileModal)({
+    (0, A.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: S,
-      guildId: A,
+      guildId: N,
       channelId: R,
       messageId: g,
       roleId: C,
       section: e,
       analyticsLocation: a
     }), null == r || r()
-  }, [a, S, r, t.id, A, R, g, C]);
+  }, [a, S, r, t.id, N, R, g, C]);
   o.useEffect(() => {
     w()
   }, [w, D]);
@@ -146,18 +146,18 @@ t.ZP = o.memo(function(e) {
     sourceAnaylticsLocations: a
   } = e, {
     analyticsLocations: d
-  } = (0, c.ZP)(), E = null !== (n = null !== (t = null == a ? void 0 : a[0]) && void 0 !== t ? t : null == d ? void 0 : d[0]) && void 0 !== n ? n : null, T = (0, u.e7)([I.default], () => I.default.getId()), f = i.id === T, N = i.bot || f, {
+  } = (0, c.ZP)(), E = null !== (n = null !== (t = null == a ? void 0 : a[0]) && void 0 !== t ? t : null == d ? void 0 : d[0]) && void 0 !== n ? n : null, T = (0, u.e7)([I.default], () => I.default.getId()), f = i.id === T, A = i.bot || f, {
     enabled: m
   } = (0, h.qI)({
     autoTrackExposure: !1,
     location: E,
-    disable: N
+    disable: A
   }), {
     mutualGuilds: g
-  } = (0, A.Z)(i.id), {
+  } = (0, N.Z)(i.id), {
     mutualFriends: C
   } = (0, S.Z)(i.id);
-  return !m || N || (null == C || 0 === C.length) && (null == g || 0 === g.length) ? null : (0, s.jsxs)("div", {
+  return !m || A || (null == C || 0 === C.length) && (null == g || 0 === g.length) ? null : (0, s.jsxs)("div", {
     className: l()(p.mainContainer, o),
     children: [(0, s.jsx)(_.Heading, {
       variant: "eyebrow",

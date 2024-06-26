@@ -27,8 +27,8 @@ var i, r, s = n(442837),
   h = n(361213),
   f = n(716600),
   S = n(952561),
-  A = n(778569),
-  N = n(701488);
+  N = n(778569),
+  A = n(701488);
 (r = i || (i = {}))[r.START = 0] = "START", r[r.JOIN = 1] = "JOIN", r[r.LEAVE = 2] = "LEAVE";
 
 function m(e) {
@@ -44,7 +44,7 @@ function m(e) {
   } = e, {
     application: c,
     activity: d
-  } = t, E = d.client_platform_config[(0, T.Z)((0, _.getOS)())], f = null != E.label_until && Date.now() < Date.parse(E.label_until), S = (0, A.Z)({
+  } = t, E = d.client_platform_config[(0, T.Z)((0, _.getOS)())], f = null != E.label_until && Date.now() < Date.parse(E.label_until), S = (0, N.Z)({
     applicationId: c.id,
     size: u,
     names: l
@@ -63,7 +63,7 @@ function m(e) {
     locationObject: r,
     embeddedActivitiesManager: a,
     onActivityItemSelectedProp: s
-  }), v = t.activity.client_platform_config[(0, T.Z)((0, _.getOS)())].release_phase, L = N.eB.includes(v) ? v.replace("_", " ").replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
+  }), v = t.activity.client_platform_config[(0, T.Z)((0, _.getOS)())].release_phase, L = A.eB.includes(v) ? v.replace("_", " ").replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
   return {
     imageBackground: S,
     videoUrl: m,

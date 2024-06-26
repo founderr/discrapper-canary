@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return f
   },
   setTrackedOpenedFromExternalEntrypoint: function() {
-    return A
+    return N
   },
   useApplicationDirectoryHistory: function() {
     return E
@@ -105,7 +105,7 @@ function S() {
   })
 }
 
-function A(e) {
+function N(e) {
   d.setState({
     trackedOpenedFromExternalEntrypoint: e
   })

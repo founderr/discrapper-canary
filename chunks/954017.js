@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   sendReactionToActivity: function() {
-    return A
+    return N
   },
   sendReplyToActivity: function() {
-    return N
+    return A
   }
 });
 var i = n(512722),
@@ -23,7 +23,7 @@ var i = n(512722),
   h = n(314091),
   f = n(981631),
   S = n(689938);
-let A = async e => {
+let N = async e => {
   let {
     reaction: t,
     altText: n,
@@ -35,7 +35,7 @@ let A = async e => {
     user: i.user,
     reaction: t
   })
-}, N = async e => {
+}, A = async e => {
   let {
     reply: t,
     altText: n,

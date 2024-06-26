@@ -15,8 +15,8 @@ var T = n(12647),
   h = n(358085),
   f = n(238514),
   S = n(740492),
-  A = n(581883),
-  N = n(874893),
+  N = n(581883),
+  A = n(874893),
   m = n(981631),
   O = n(469115);
 
@@ -38,10 +38,10 @@ function v() {
     if (__OVERLAY__) return m.BRd.DARK;
     if (c.Z.syncForcedColors && "active" === c.Z.systemForcedColors && null != i) return i;
     let n = S.ZP.useSystemTheme;
-    if (n === N.K.ON && null != i) return i;
+    if (n === A.K.ON && null != i) return i;
     let r = null === (e = f.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
     if (null != r) return r;
-    let s = null === (t = A.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
+    let s = null === (t = N.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
     if (null == s) return R;
     if (!E.i.getCurrentConfig({
         location: "ThemeStore"
@@ -76,7 +76,7 @@ function M() {
 }
 class P extends(s = o.ZP.PersistedStore) {
   initialize(e) {
-    (null == e ? void 0 : e.theme) != null && (R = e.theme), this.waitFor(S.ZP, f.Z, A.Z, c.Z)
+    (null == e ? void 0 : e.theme) != null && (R = e.theme), this.waitFor(S.ZP, f.Z, N.Z, c.Z)
   }
   getState() {
     return {

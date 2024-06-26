@@ -26,8 +26,8 @@ var i = n(392711),
   h = n(818143),
   f = n(666475),
   S = n(591304),
-  A = n(73375),
-  N = n(328664),
+  N = n(73375),
+  A = n(328664),
   m = n(328259),
   O = n(19009),
   p = n(234912),
@@ -50,7 +50,7 @@ let M = 60,
     isPremium: !0
   }, {
     id: L.Ru.MANGA,
-    iconSource: N,
+    iconSource: A,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_MANGA
   }, {
@@ -140,7 +140,7 @@ let M = 60,
     name: D.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
   }, {
     id: L.Ru.IN_RAINBOWS,
-    iconSource: A,
+    iconSource: N,
     isPremium: !0,
     name: D.Z.Messages.APP_ICON_IN_RAINBOWS
   }, {

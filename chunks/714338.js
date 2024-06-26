@@ -16,8 +16,8 @@ let d = {},
   h = (0, _.isMac)() ? "cmd" : "ctrl",
   f = (0, _.isMac)() ? "opt" : "alt",
   S = (0, _.isMac)() ? "return" : "enter",
-  A = [...a.u.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", h)),
-  N = () => [],
+  N = [...a.u.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", h)),
+  A = () => [],
   m = [];
 
 function O(e) {
@@ -35,8 +35,8 @@ function p(e, t) {
 function R(e) {
   for (let [t, n] of Object.entries(e)) {
     if (null == n) continue;
-    let e = N();
-    !_.isPlatformEmbedded && (e = e.concat(A));
+    let e = A();
+    !_.isPlatformEmbedded && (e = e.concat(N));
     let i = n.binds.filter(t => (t = t.replace("mod", h), 0 > e.indexOf(t)));
     if (0 === i.length) continue;
     let r = n.comboKeysBindGlobal ? T.bindGlobal : T.bind;
@@ -54,7 +54,7 @@ function R(e) {
   altKey: f,
   returnKey: S,
   setGetKeybindList(e) {
-    N = e
+    A = e
   },
   checkDupes(e) {
     let t = new Set,

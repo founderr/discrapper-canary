@@ -16,8 +16,8 @@ var i = n(392711),
   h = n(626135),
   f = n(630388),
   S = n(823379),
-  A = n(960048),
-  N = n(709054),
+  N = n(960048),
+  A = n(709054),
   m = n(45966),
   O = n(637853),
   p = n(816436),
@@ -50,7 +50,7 @@ function v(e) {
       prompts_seen: t.body.onboarding_prompts_seen,
       options_seen: t.body.onboarding_responses_seen
     })
-  }).catch(e => A.Z.captureException(e)) : s.tn.put({
+  }).catch(e => N.Z.captureException(e)) : s.tn.put({
     url: R.ANM.GUILD_ONBOARDING_RESPONSES(e),
     body: {
       onboarding_responses: r.map(e => e.id),
@@ -65,7 +65,7 @@ function v(e) {
       prompts_seen: t.body.onboarding_prompts_seen,
       options_seen: t.body.onboarding_responses_seen
     })
-  }).catch(e => A.Z.captureException(e))
+  }).catch(e => N.Z.captureException(e))
 }
 t.Z = {
   selectOption(e, t, n, i) {
@@ -103,9 +103,9 @@ t.Z = {
       s = (0, O.dX)(i),
       o = m.Z.getEnabled(e) ? m.Z.getDefaultChannelIds(e) : [],
       [u, d] = (0, O.Ee)(e, t, o),
-      A = [...s, ...o],
-      L = A.map(e => E.Z.getChannel(e)).filter(S.lm),
-      D = (0, p.v)(e, new Set(A), L, !0).length,
+      N = [...s, ...o],
+      L = N.map(e => E.Z.getChannel(e)).filter(S.lm),
+      D = (0, p.v)(e, new Set(N), L, !0).length,
       M = null == n ? [] : n.options.map(e => e.id);
     if (h.default.track(R.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
         ...(0, l.hH)(e),
@@ -119,8 +119,8 @@ t.Z = {
         channels_granted: D,
         guild_onboarding_covered_channel_ids: u.map(e => e.id),
         guild_onboarding_uncovered_channel_ids: d.map(e => e.id)
-      }), (0, a.Ju)(e, C.W.GUILD_ONBOARDING_QUESTION, N.default.fromTimestamp(Date.now())), v(e, !0), c.Z.isFullServerPreview(e)) {
-      (0, _.zS)(e, A, []), (0, _.aq)(e, {
+      }), (0, a.Ju)(e, C.W.GUILD_ONBOARDING_QUESTION, A.default.fromTimestamp(Date.now())), v(e, !0), c.Z.isFullServerPreview(e)) {
+      (0, _.zS)(e, N, []), (0, _.aq)(e, {
         optInEnabled: !0
       }), (0, _.og)(e, Array.from(r));
       let t = T.default.getCurrentUser();

@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(592125),
   f = n(699516),
   S = n(51144),
-  A = n(838440),
-  N = n(981631),
+  N = n(838440),
+  A = n(981631),
   m = n(689938),
   O = n(151915);
 
@@ -36,7 +36,7 @@ function p(e) {
     if ("Enter" === e.key) {
       e.preventDefault(), l()(null != R.current, "Keypress on Input when not mounted");
       let n = R.current.value.trim();
-      return (0, A.v)({
+      return (0, N.v)({
         type: I.I.NORMAL,
         content: n,
         channel: null
@@ -50,7 +50,7 @@ function p(e) {
         }), null == p || p()
       }), !0
     }
-    e.which === N.yXg.SPACE && e.stopPropagation()
+    e.which === A.yXg.SPACE && e.stopPropagation()
   }, [t, p]), v = g ? m.Z.Messages.QUICK_DM_BLOCKED : m.Z.Messages.QUICK_DM_USER.format({
     name: S.ZP.getName(t)
   });

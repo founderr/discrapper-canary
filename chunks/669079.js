@@ -69,8 +69,8 @@ var i, r, s = n(278074),
   h = n(226951),
   f = n(73346),
   S = n(981631),
-  A = n(474936),
-  N = n(689938);
+  N = n(474936),
+  A = n(689938);
 let m = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   O = [m, ...["discordapp.com/gifts", "discord.com/gifts"].map(e => h.Z.escape(e))].join("|"),
   p = RegExp("(?: |^|https?://)(?:".concat(O, ")/([a-z0-9-]+)"), "gi"),
@@ -164,34 +164,34 @@ function H(e, t, n, i, r, s, o) {
 function F(e, t, n) {
   switch (e) {
     case S.wZ8.ERROR:
-      return N.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
+      return A.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
     case S.wZ8.SUCCESS:
-      return t.isSubscription ? N.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
+      return t.isSubscription ? A.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
         skuName: n.name
-      }) : N.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
+      }) : A.Z.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
     case S.wZ8.CONFIRM:
     default:
-      return t.isSubscription ? N.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
+      return t.isSubscription ? A.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
         skuName: n.name
-      }) : N.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
+      }) : A.Z.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
   }
 }
 
 function Y(e, t, n) {
   switch (e) {
     case S.wZ8.ERROR:
-      return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
+      return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
     case S.wZ8.SUCCESS:
-      if (__OVERLAY__) return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
-      if (t.isSubscription) return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
-      return N.Z.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
+      if (__OVERLAY__) return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
+      if (t.isSubscription) return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
+      return A.Z.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
     case S.wZ8.OPEN:
-      return N.Z.Messages.GIFT_OPEN_PROMPT;
+      return A.Z.Messages.GIFT_OPEN_PROMPT;
     case S.wZ8.CONFIRM:
     default:
-      if (null != n && n) return N.Z.Messages.GIFT_CODE_AUTH_ACCEPT;
-      if (null != t.giftStyle) return t.isClaimed ? N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
-      return t.isSubscription ? N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : N.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
+      if (null != n && n) return A.Z.Messages.GIFT_CODE_AUTH_ACCEPT;
+      if (null != t.giftStyle) return t.isClaimed ? A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
+      return t.isSubscription ? A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : A.Z.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
   }
 }
 
@@ -213,70 +213,70 @@ function j(e) {
       if (null != u) {
         var _;
         return _ = u, (0, s.EQ)(_).with({
-          interval: A.rV.MONTH,
-          premiumSubscriptionType: A.p9.TIER_2
-        }, () => N.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
-          timeInterval: N.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
+          interval: N.rV.MONTH,
+          premiumSubscriptionType: N.p9.TIER_2
+        }, () => A.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
+          timeInterval: A.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
         })).with({
-          interval: A.rV.YEAR,
-          premiumSubscriptionType: A.p9.TIER_2
-        }, () => N.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
-          timeInterval: N.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+          interval: N.rV.YEAR,
+          premiumSubscriptionType: N.p9.TIER_2
+        }, () => A.Z.Messages.PREMIUM_FEATURES_TIER_2.format({
+          timeInterval: A.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
         })).with({
-          interval: A.rV.MONTH,
-          premiumSubscriptionType: A.p9.TIER_1
-        }, () => N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
+          interval: N.rV.MONTH,
+          premiumSubscriptionType: N.p9.TIER_1
+        }, () => A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
           intervalCount: _.intervalCount
         })).with({
-          interval: A.rV.YEAR,
-          premiumSubscriptionType: A.p9.TIER_1
-        }, () => N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
+          interval: N.rV.YEAR,
+          premiumSubscriptionType: N.p9.TIER_1
+        }, () => A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
           intervalCount: _.intervalCount
-        })).otherwise(() => N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
+        })).otherwise(() => A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
       }
-      return N.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
+      return A.Z.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
         skuName: n.name
       });
     case S.wZ8.CONFIRM:
     default:
-      if (null != u) return (u.interval === A.rV.MONTH ? N.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : N.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM).format({
+      if (null != u) return (u.interval === N.rV.MONTH ? A.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : A.Z.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM).format({
         skuName: n.name,
         intervalCount: u.intervalCount
       });
-      return N.Z.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
+      return A.Z.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
         skuName: n.name
       })
   }
 }
 
 function W(e, t, n, i, r) {
-  let s = N.Z.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
+  let s = A.Z.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
     onGoToLibrary: r
   });
   return null != (n || i ? void 0 : e) ? s : null == t ? null : function(e, t) {
     switch (e.code) {
       case S.evJ.INVALID_GIFT_SELF_REDEMPTION:
-        return N.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
+        return A.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
       case S.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-        return N.Z.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
+        return A.Z.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
       case S.evJ.INVALID_GIFT_REDEMPTION_OWNED:
-        return N.Z.Messages.GIFT_ERROR_OWNED;
+        return A.Z.Messages.GIFT_ERROR_OWNED;
       case S.evJ.UNKNOWN_GIFT_CODE:
-        return N.Z.Messages.GIFT_CONFIRMATION_BODY_INVALID;
+        return A.Z.Messages.GIFT_CONFIRMATION_BODY_INVALID;
       case S.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-        return N.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-          planName: (0, T.M5)(t, A.p9.TIER_2) ? N.Z.Messages.PREMIUM_TIER_2 : N.Z.Messages.PREMIUM_TIER_1
+        return A.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
+          planName: (0, T.M5)(t, N.p9.TIER_2) ? A.Z.Messages.PREMIUM_TIER_2 : A.Z.Messages.PREMIUM_TIER_1
         });
       case S.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-        return N.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
+        return A.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
       case S.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-        return N.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
+        return A.Z.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
       case S.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-        return N.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
+        return A.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
       case S.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-        return N.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
+        return A.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
       default:
-        return N.Z.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
+        return A.Z.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
     }
   }(t, c.default.getCurrentUser())
 }

@@ -21,8 +21,8 @@ var i, r, s = n(735250),
   h = n(372900),
   f = n(463396),
   S = n(477734),
-  A = n(484459),
-  N = n(467679),
+  N = n(484459),
+  A = n(467679),
   m = n(768581),
   O = n(51063),
   p = n(981631),
@@ -32,9 +32,9 @@ function g(e) {
   let {
     compact: t
   } = e;
-  return (0, s.jsx)(N.Z, {
+  return (0, s.jsx)(A.Z, {
     className: t ? R.botTagCompact : R.botTagCozy,
-    type: N.Z.Types.REMIX,
+    type: A.Z.Types.REMIX,
     useRemSizes: !0
   })
 }
@@ -45,7 +45,7 @@ function C(e) {
       author: i,
       message: r,
       channel: a,
-      userOverride: N,
+      userOverride: A,
       compact: C = !1,
       withMentionPrefix: v = !1,
       showPopout: L = !1,
@@ -95,8 +95,8 @@ function C(e) {
     }) : null, [C, j, i.clan, x, r.author.id]);
   n = null != U && null != L ? (0, s.jsx)(c.Popout, {
     preload: H ? void 0 : function() {
-      let e = null != N ? N : r.author;
-      return (0, A.W)(e.id, null != i.guildMemberAvatar && null != x ? (0, m.JM)({
+      let e = null != A ? A : r.author;
+      return (0, N.W)(e.id, null != i.guildMemberAvatar && null != x ? (0, m.JM)({
         guildId: x,
         userId: e.id,
         avatar: i.guildMemberAvatar,

@@ -12,25 +12,25 @@ var i, r, s, o, a = n(913527),
   h = n(246364),
   f = n(937111),
   S = n(981631);
-let A = new Map,
-  N = {};
+let N = new Map,
+  A = {};
 
 function m(e) {
-  return N[e]
+  return A[e]
 }
 
 function O(e, t) {
-  N[e] = t, A.set(e, l()())
+  A[e] = t, N.set(e, l()())
 }
 
 function p(e, t, n) {
   if (t !== n && null != t) {
     if (t === h.wB.SUBMITTED) {
-      let t = N[e];
+      let t = A[e];
       O(e, t + 1)
     }
     if (n === h.wB.SUBMITTED) {
-      let t = N[e];
+      let t = A[e];
       O(e, Math.max(0, t - 1))
     }
   }
@@ -79,14 +79,14 @@ class k extends(i = u.ZP.Store) {
     return (0, T.bk)(t) ? M.values(n) : (0, T.Nd)(t) ? D.values(n) : L.values(n)
   }
   getSubmittedGuildJoinRequestTotal(e) {
-    return N[e]
+    return A[e]
   }
   isFetching() {
     return R
   }
   hasFetched(e) {
-    if (!A.has(e)) return !1;
-    let t = A.get(e);
+    if (!N.has(e)) return !1;
+    let t = N.get(e);
     return null != t && l()().diff(t, "seconds") < B
   }
   getSelectedApplicationTab(e) {

@@ -16,20 +16,20 @@ t.Z = e => {
   } = e, E = (0, r.e7)([_.default], () => _.default.getCurrentUser()), I = (0, r.e7)([l.ZP], () => null != d && null != E ? l.ZP.getMember(d, E.id) : null), T = null != I ? I.avatarDecoration : null == E ? void 0 : E.avatarDecoration, h = (0, s.Z)(n), {
     pendingAvatar: f,
     pendingAvatarDecoration: S,
-    pendingErrors: A
+    pendingErrors: N
   } = (0, r.cj)([u.Z, o.Z], () => ({
     pendingAvatar: t ? u.Z.getTryItOutAvatar() : null != d ? o.Z.getPendingAvatar() : u.Z.getPendingAvatar(),
     pendingAvatarDecoration: t ? u.Z.getTryItOutAvatarDecoration() : null != d ? o.Z.getPendingAvatarDecoration() : u.Z.getPendingAvatarDecoration(),
     pendingErrors: null != d ? o.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
-  })), N = (0, i.useCallback)(e => (0, a.Jw)(e, null == E ? void 0 : E.avatar), [null == E ? void 0 : E.avatar]), m = (0, i.useCallback)(e => {
+  })), A = (0, i.useCallback)(e => (0, a.Jw)(e, null == E ? void 0 : E.avatar), [null == E ? void 0 : E.avatar]), m = (0, i.useCallback)(e => {
     (0, a.PO)(d, e), null != e && h(e)
   }, [h, d]);
   return {
     pendingAvatar: f,
     pendingAvatarDecoration: S,
-    setPendingAvatar: t ? c.c_ : N,
+    setPendingAvatar: t ? c.c_ : A,
     setPendingAvatarDecoration: t ? c.Xz : m,
     savedAvatarDecoration: T,
-    pendingErrors: A
+    pendingErrors: N
   }
 }

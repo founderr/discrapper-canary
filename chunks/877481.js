@@ -16,12 +16,12 @@ var i = n(274616),
 let h = new r.Z("Games"),
   f = {},
   S = 0,
-  A = null;
+  N = null;
 
-function N() {
-  return null != A ? Promise.resolve(A) : (0, d.isDesktop)() ? I.ZP.ensureModule("discord_game_utils").then(() => {
+function A() {
+  return null != N ? Promise.resolve(N) : (0, d.isDesktop)() ? I.ZP.ensureModule("discord_game_utils").then(() => {
     let e = I.ZP.getGameUtils();
-    return null != e && null != e.findLaunchable ? (A = e, e) : Promise.reject(Error("game utils not found"))
+    return null != e && null != e.findLaunchable ? (N = e, e) : Promise.reject(Error("game utils not found"))
   }) : Promise.reject(Error("not desktop client"))
 }
 
@@ -53,7 +53,7 @@ async function p(e) {
     }))), 0 === e.length) throw Error("No remaining launchable queries");
   let t = Date.now();
   t > S && (S = t + 36e5, f = {});
-  let n = await N();
+  let n = await A();
   for (let t of e) {
     let e = f[t.id];
     if (null != e) return e;
@@ -119,7 +119,7 @@ t.Z = {
       return c.Z.launch(E, I, S.name, i)
     })
   },
-  removeShortcuts: e => (0, d.isWindows)() ? N().then(t => {
+  removeShortcuts: e => (0, d.isWindows)() ? A().then(t => {
     var n, i;
     return null !== (i = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i
   }) : Promise.resolve(!1),
@@ -127,7 +127,7 @@ t.Z = {
     if (null == r || !(0, d.isWindows)()) return Promise.resolve(!1);
     let s = "discord:///library/".concat(i, "/launch"),
       o = "".concat(r, "\\icon.ico");
-    return N().then(i => {
+    return A().then(i => {
       var r, a;
       return null !== (a = null === (r = i.createShortcuts) || void 0 === r ? void 0 : r.call(i, e, t, n, s, o)) && void 0 !== a && a
     })
@@ -141,12 +141,12 @@ t.Z = {
       id: e
     }).then(g)
   },
-  isProtocolRegistered: e => N().then(t => {
+  isProtocolRegistered: e => A().then(t => {
     var n, i;
     return null !== (i = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i
   }),
   setRecentGames(e) {
-    N().then(t => {
+    A().then(t => {
       var n;
       return null === (n = t.setRecentGames) || void 0 === n ? void 0 : n.call(t, e)
     }).catch(() => {})

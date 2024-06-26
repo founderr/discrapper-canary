@@ -12,22 +12,22 @@ let I = {},
   h = null,
   f = null,
   S = null,
-  A = "lastChangeLogDate",
-  N = null,
+  N = "lastChangeLogDate",
+  A = null,
   m = null,
   O = new Set;
 
 function p() {
-  N = c.l4.getSetting()
+  A = c.l4.getSetting()
 }
 class R extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(_.default, d.Z), this.syncWith([_.default], () => !0), this.syncWith([d.Z], p);
-    let e = l.K.get(A);
+    let e = l.K.get(N);
     if (null != e) try {
       m = new Date(e)
     } catch {
-      l.K.remove(A)
+      l.K.remove(N)
     }
   }
   getChangelog(e, t) {
@@ -51,7 +51,7 @@ class R extends(i = a.ZP.Store) {
     return f
   }
   lastSeenChangelogId() {
-    return N
+    return A
   }
   lastSeenChangelogDate() {
     return m
@@ -60,7 +60,7 @@ class R extends(i = a.ZP.Store) {
     return {
       changelogConfig: S,
       loadedChangelogs: T,
-      lastSeenChangelogId: N,
+      lastSeenChangelogId: A,
       lastSeenChangelogDate: m
     }
   }
@@ -127,6 +127,6 @@ o = "ChangelogStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s
     let {
       changelogDate: t
     } = e;
-    m = new Date(t), l.K.set(A, t)
+    m = new Date(t), l.K.set(N, t)
   }
 })

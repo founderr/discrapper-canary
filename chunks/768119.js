@@ -12,9 +12,9 @@ var r, s, o, a, l = n(392711),
   h = n(430824),
   f = n(981631);
 let S = {},
-  A = !1;
+  N = !1;
 
-function N(e) {
+function A(e) {
   return null == S[e] && (S[e] = {
     searchId: e,
     searchType: m(e),
@@ -74,7 +74,7 @@ function L(e) {
 
 function D(e) {
   if (e === C) return !1;
-  null != e && null == S[e] && N(e), C = e
+  null != e && null == S[e] && A(e), C = e
 }
 class M extends(r = _.ZP.Store) {
   initialize() {
@@ -89,7 +89,7 @@ class M extends(r = _.ZP.Store) {
     R = !!c.K.get("tokenized")
   }
   isOpen() {
-    return A
+    return N
   }
   getCurrentSearchModalType() {
     return i
@@ -189,7 +189,7 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
       queryString: i,
       searchId: r,
       query: s
-    } = e, o = N(r);
+    } = e, o = A(r);
     null != o.searchFetcher && (o.searchFetcher.cancel(), o.searchFetcher = null);
     let a = o.searchType,
       l = new E.ZP(r, a, s);
@@ -238,13 +238,13 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
   SEARCH_INDEXING: function(e) {
     let {
       searchId: t
-    } = e, n = N(t);
+    } = e, n = A(t);
     n.isIndexing = !0, n.isHistoricalIndexing = !0, n.isSearching = !1
   },
   SEARCH_FINISH: function(e) {
     let {
       searchId: t
-    } = e, n = N(t);
+    } = e, n = A(t);
     n.isSearching = !1, n.isIndexing = !1, n.isHistoricalIndexing = e.doingHistoricalIndex || !1, n.searchFetcher = null, n.totalResults = e.totalResults, n.hasError = e.hasError, n.analyticsId = e.analyticsId, n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0, n.showNoResultsAlt = .05 > Math.random(), n.rawResults = e.messages, null == n.query && (n.hasError = !0)
   },
   SEARCH_EDITOR_STATE_CLEAR: L,
@@ -252,21 +252,21 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
     let {
       searchId: t
     } = e;
-    null != t && N(t)
+    null != t && A(t)
   },
   SEARCH_EDITOR_STATE_CHANGE: function(e) {
     let {
       searchId: t,
       editorState: n
     } = e;
-    N(t).editorState = n
+    A(t).editorState = n
   },
   SEARCH_SET_SHOW_BLOCKED_RESULTS: function(e) {
     let {
       searchId: t,
       showBlocked: n
     } = e;
-    N(t).showBlockedResults = n
+    A(t).showBlockedResults = n
   },
   SEARCH_SCREEN_OPEN: function(e) {
     let {
@@ -317,9 +317,9 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
       searchId: t,
       searchType: n
     } = e;
-    null != t && (C = t), A = !0, i = n
+    null != t && (C = t), N = !0, i = n
   },
   SEARCH_MODAL_CLOSE: function() {
-    A = !1, i = void 0
+    N = !1, i = void 0
   }
 })

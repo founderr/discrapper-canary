@@ -37,7 +37,7 @@ n.d(t, {
     return h
   },
   kX: function() {
-    return A
+    return N
   },
   o_: function() {
     return S
@@ -52,7 +52,7 @@ n.d(t, {
     return g
   },
   z: function() {
-    return N
+    return A
   }
 }), n(789020), n(411104);
 var i = n(81825),
@@ -140,11 +140,11 @@ class u extends i.Z {
           ...i
         });
       case a.HeQ.GRABPAY_MY:
-        return new A({
+        return new N({
           ...i
         });
       case a.HeQ.MOMO_WALLET:
-        return new N({
+        return new A({
           ...i
         });
       case a.HeQ.KAKAOPAY:
@@ -192,9 +192,9 @@ class u extends i.Z {
       case a.HeQ.GCASH:
         return new S(e);
       case a.HeQ.GRABPAY_MY:
-        return new A(e);
-      case a.HeQ.MOMO_WALLET:
         return new N(e);
+      case a.HeQ.MOMO_WALLET:
+        return new A(e);
       case a.HeQ.VENMO:
         return new m(e);
       case a.HeQ.KAKAOPAY:
@@ -285,12 +285,12 @@ class S extends u {
     if (super(e), e.type !== a.HeQ.GCASH) throw Error("Cannot instantiate GcashSourceRecord with type: ".concat(e.type, ", must be ").concat(a.HeQ.GCASH))
   }
 }
-class A extends u {
+class N extends u {
   constructor(e) {
     if (super(e), e.type !== a.HeQ.GRABPAY_MY) throw Error("Cannot instantiate GrabPayMySourceRecord with type: ".concat(e.type, ", must be ").concat(a.HeQ.GRABPAY_MY))
   }
 }
-class N extends u {
+class A extends u {
   constructor(e) {
     if (super(e), e.type !== a.HeQ.MOMO_WALLET) throw Error("Cannot instantiate MomoWalletSourceRecord with type: ".concat(e.type, ", must be ").concat(a.HeQ.MOMO_WALLET))
   }

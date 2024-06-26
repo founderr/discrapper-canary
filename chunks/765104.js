@@ -7,8 +7,8 @@ var a, l, u, _, c, d, E = n(392711),
   h = n(570140),
   f = n(902840),
   S = n(212819),
-  A = n(353926),
-  N = n(823385),
+  N = n(353926),
+  A = n(823385),
   m = n(592125),
   O = n(430824),
   p = n(306680),
@@ -34,7 +34,7 @@ let P = {},
   B = [];
 
 function k() {
-  x = N.Z.getProps().results.filter(e => e.type === S.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+  x = A.Z.getProps().results.filter(e => e.type === S.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
 class V extends(l = T.ZP.PersistedStore) {
   getState() {
@@ -44,7 +44,7 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   initialize(e) {
     var t;
-    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, R.Z, O.Z, A.Z), this.syncWith([N.Z], k)
+    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, R.Z, O.Z, N.Z), this.syncWith([A.Z], k)
   }
   allSummaries() {
     return P

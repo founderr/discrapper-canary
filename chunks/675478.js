@@ -48,7 +48,7 @@ var i = n(512722),
   f = n(526761),
   S = n(981631);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -56,7 +56,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = "UserSettingsProtoLastWriteTimes",
+let A = "UserSettingsProtoLastWriteTimes",
   m = Date.now();
 c.Z.subscribe("CONNECTION_OPEN", () => {
   Date.now()
@@ -131,8 +131,8 @@ class O {
   }
   saveLastSendTime() {
     var e;
-    let t = null !== (e = _.K.get(N)) && void 0 !== e ? e : {};
-    t[this.type] = Date.now(), _.K.set(N, t)
+    let t = null !== (e = _.K.get(A)) && void 0 !== e ? e : {};
+    t[this.type] = Date.now(), _.K.set(A, t)
   }
   async loadIfNecessary(e) {
     if (__OVERLAY__) {
@@ -220,7 +220,7 @@ class O {
     })
   }
   constructor(e, t) {
-    A(this, "ProtoClass", void 0), A(this, "type", void 0), A(this, "logger", void 0), A(this, "beforeSendCallbacks", void 0), A(this, "lastSendTime", void 0), A(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
+    N(this, "ProtoClass", void 0), N(this, "type", void 0), N(this, "logger", void 0), N(this, "beforeSendCallbacks", void 0), N(this, "lastSendTime", void 0), N(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
       r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Persisting proto");
       let {
         editInfo: e

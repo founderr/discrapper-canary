@@ -45,10 +45,10 @@ t.Z = e => {
         s(n), null == o || o(n)
       },
       S = d ? "pointerup" : "mouseup",
-      A = d ? "pointermove" : "mousemove",
-      N = n.current.ownerDocument;
-    return N.addEventListener(S, f), N.addEventListener(A, a), () => {
-      N.removeEventListener(S, f), N.removeEventListener(A, a), t.cancel()
+      N = d ? "pointermove" : "mousemove",
+      A = n.current.ownerDocument;
+    return A.addEventListener(S, f), A.addEventListener(N, a), () => {
+      A.removeEventListener(S, f), A.removeEventListener(N, a), t.cancel()
     }
   }, [E, s, r, i, c, n, _, o, d]), a.useCallback(e => {
     let t = 1 === u(c);

@@ -37,7 +37,7 @@ n.d(t, {
     return W
   },
   Pv: function() {
-    return A
+    return N
   },
   Sq: function() {
     return p
@@ -103,7 +103,7 @@ n.d(t, {
     return v
   },
   q2: function() {
-    return N
+    return A
   },
   qC: function() {
     return r
@@ -132,8 +132,8 @@ var i, r, s, o, a, l, u, _, c = n(392711),
   h = n(689938);
 let f = 200,
   S = 4,
-  A = "ClanSetupModal",
-  N = "ClanSettingsModal",
+  N = "ClanSetupModal",
+  A = "ClanSettingsModal",
   m = 20,
   O = 30,
   p = 24,

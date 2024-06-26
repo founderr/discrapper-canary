@@ -4,7 +4,7 @@ n.d(t, {
     return $
   },
   AW: function() {
-    return N
+    return A
   },
   CG: function() {
     return ea
@@ -79,7 +79,7 @@ n.d(t, {
     return eL
   },
   mn: function() {
-    return eN
+    return eA
   },
   nl: function() {
     return eE
@@ -94,7 +94,7 @@ n.d(t, {
     return eR
   },
   r8: function() {
-    return A
+    return N
   },
   sR: function() {
     return U
@@ -149,10 +149,10 @@ function f(e, t, n) {
 }
 let S = new Set([T.d4z.GUILD_TEXT, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.GUILD_STORE, T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD, T.d4z.GUILD_DIRECTORY, T.d4z.GUILD_FORUM, T.d4z.GUILD_MEDIA, T.d4z.DM, T.d4z.GROUP_DM]);
 
-function A(e) {
+function N(e) {
   return S.has(e)
 }
-let N = new Set([T.d4z.DM, T.d4z.GROUP_DM, T.d4z.GUILD_TEXT, T.d4z.GUILD_VOICE, T.d4z.GUILD_STAGE_VOICE, T.d4z.GUILD_CATEGORY, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.GUILD_STORE, T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD, T.d4z.GUILD_DIRECTORY, T.d4z.GUILD_FORUM, T.d4z.GUILD_MEDIA]),
+let A = new Set([T.d4z.DM, T.d4z.GROUP_DM, T.d4z.GUILD_TEXT, T.d4z.GUILD_VOICE, T.d4z.GUILD_STAGE_VOICE, T.d4z.GUILD_CATEGORY, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.GUILD_STORE, T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD, T.d4z.GUILD_DIRECTORY, T.d4z.GUILD_FORUM, T.d4z.GUILD_MEDIA]),
   m = new Set([T.d4z.GUILD_TEXT, T.d4z.GUILD_ANNOUNCEMENT, T.d4z.ANNOUNCEMENT_THREAD, T.d4z.PUBLIC_THREAD, T.d4z.PRIVATE_THREAD]);
 
 function O(e) {
@@ -634,18 +634,18 @@ class ef {
   }
 }
 let eS = new ef,
-  eA = new ef;
-class eN extends ed {
+  eN = new ef;
+class eA extends ed {
   static sortRecipients(e, t) {
     let n = eS.getOrCompute(t);
     return [...null != e ? e : []].sort((e, t) => {
-      let i = eA.getOrCompute(e.id);
-      return (i ^ n) - (eA.getOrCompute(t.id) ^ n)
+      let i = eN.getOrCompute(e.id);
+      return (i ^ n) - (eN.getOrCompute(t.id) ^ n)
     })
   }
   static fromServer(e) {
     var t, n;
-    let i = eN.sortRecipients(e.recipients, e.id),
+    let i = eA.sortRecipients(e.recipients, e.id),
       r = {
         application_id: e.application_id,
         flags_: e.flags,
@@ -665,7 +665,7 @@ class eN extends ed {
         safetyWarnings: e.safety_warnings,
         type: null != e.type ? e.type : T.d4z.DM
       };
-    return (0, _.gh)(r, eN)
+    return (0, _.gh)(r, eA)
   }
   isSystemDM() {
     let e = this.rawRecipients[0];
@@ -690,10 +690,10 @@ class eN extends ed {
   }
   constructor(e) {
     var t, n;
-    super(e), this.application_id = e.application_id, this.flags_ = e.flags_, this.icon = e.icon, this.isMessageRequest = e.isMessageRequest, this.isMessageRequestTimestamp = e.isMessageRequestTimestamp, this.isSpam = e.isSpam, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.nicks = e.nicks, this.ownerId = e.ownerId, this.rawRecipients = eN.sortRecipients(e.rawRecipients, this.id), this.recipients = [...null !== (t = e.recipients) && void 0 !== t ? t : []].sort(I.default.compare), this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []
+    super(e), this.application_id = e.application_id, this.flags_ = e.flags_, this.icon = e.icon, this.isMessageRequest = e.isMessageRequest, this.isMessageRequestTimestamp = e.isMessageRequestTimestamp, this.isSpam = e.isSpam, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.nicks = e.nicks, this.ownerId = e.ownerId, this.rawRecipients = eA.sortRecipients(e.rawRecipients, this.id), this.recipients = [...null !== (t = e.recipients) && void 0 !== t ? t : []].sort(I.default.compare), this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []
   }
 }
-class em extends eN {}
+class em extends eA {}
 class eO extends ed {
   static fromServer(e, t) {
     var n, i, r, s, o;
@@ -742,8 +742,8 @@ class eO extends ed {
   }
 }
 let ep = {
-  [T.d4z.DM]: eN.fromServer,
-  [T.d4z.GROUP_DM]: eN.fromServer,
+  [T.d4z.DM]: eA.fromServer,
+  [T.d4z.GROUP_DM]: eA.fromServer,
   [T.d4z.GUILD_TEXT]: eT.fromServer,
   [T.d4z.GUILD_VOICE]: eI.fromServer,
   [T.d4z.GUILD_STAGE_VOICE]: eI.fromServer,
@@ -768,7 +768,7 @@ function eg(e) {
 }
 let eC = {
   [T.d4z.DM]: em,
-  [T.d4z.GROUP_DM]: class e extends eN {},
+  [T.d4z.GROUP_DM]: class e extends eA {},
   [T.d4z.GUILD_TEXT]: class e extends eT {},
   [T.d4z.GUILD_VOICE]: class e extends eI {},
   [T.d4z.GUILD_STAGE_VOICE]: class e extends eI {},

@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(784222),
   f = n(926243),
   S = n(149203),
-  A = n(981631),
-  N = n(689938),
+  N = n(981631),
+  A = n(689938),
   m = n(688623);
 t.Z = e => {
   let {
@@ -62,7 +62,7 @@ t.Z = e => {
             t.stopPropagation(), !C.current && !v.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
-            }), d.Z.open(e.guildId, A.pNK.EMOJI, A.jXE.EMOJI_PICKER_POPOUT))
+            }), d.Z.open(e.guildId, N.pNK.EMOJI, N.jXE.EMOJI_PICKER_POPOUT))
           }, c = () => {
             !C.current && !v.current && O(e)
           };
@@ -82,7 +82,7 @@ t.Z = e => {
               key: t
             }, (0, i.jsx)(a.FocusRing, {
               children: (0, i.jsx)("button", {
-                "aria-label": N.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                "aria-label": A.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                 ref: d,
                 className: o()(m.emojiItem, {
                   [m.emojiItemLarge]: Y,
@@ -178,7 +178,7 @@ t.Z = e => {
         }), (0, i.jsx)(a.Text, {
           variant: "text-xs/semibold",
           color: "always-white",
-          children: N.Z.Messages.NEW
+          children: A.Z.Messages.NEW
         })]
       })]
     })]

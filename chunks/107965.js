@@ -70,7 +70,7 @@ class N {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "1fdf39d1193662ce1849eb7415d6ec771e8b6fc2" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "943ad104f3ac957124c9652a538252be5dc01818" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, l.fD)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : m;
         if (Date.now() - T > t) return a.K.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)

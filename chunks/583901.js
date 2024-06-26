@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   DR: function() {
-    return N
+    return A
   },
   bD: function() {
-    return A
+    return N
   },
   oK: function() {
     return f
@@ -74,12 +74,12 @@ function S(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     theme: t,
     isSelected: n,
     onSelect: r
-  } = e, d = (0, a.e7)([c.Z], () => c.Z.systemPrefersColorScheme), f = e => (0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css, A = (0, o.EQ)({
+  } = e, d = (0, a.e7)([c.Z], () => c.Z.systemPrefersColorScheme), f = e => (0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css, N = (0, o.EQ)({
     theme: t,
     systemPrefersColorScheme: d
   }).with({
@@ -93,12 +93,12 @@ function A(e) {
     theme: I.BRd.DARKER
   }, () => h.darkerIcon).with({
     theme: I.BRd.MIDNIGHT
-  }, () => h.midnightIcon).otherwise(() => h.darkIcon), N = (0, o.EQ)(t).with(I.BRd.LIGHT, () => T.Z.Messages.THEME_LIGHT).with(I.BRd.DARK, () => T.Z.Messages.THEME_DARK).with(I.BRd.DARKER, () => "Darker").with(I.BRd.MIDNIGHT, () => T.Z.Messages.THEME_MIDNIGHT).with("system", () => T.Z.Messages.THEME_SYSTEM).exhaustive(), m = (0, _.useRedesignIconContext)().enabled;
+  }, () => h.midnightIcon).otherwise(() => h.darkIcon), A = (0, o.EQ)(t).with(I.BRd.LIGHT, () => T.Z.Messages.THEME_LIGHT).with(I.BRd.DARK, () => T.Z.Messages.THEME_DARK).with(I.BRd.DARKER, () => "Darker").with(I.BRd.MIDNIGHT, () => T.Z.Messages.THEME_MIDNIGHT).with("system", () => T.Z.Messages.THEME_SYSTEM).exhaustive(), m = (0, _.useRedesignIconContext)().enabled;
   return (0, i.jsx)(S, {
     onSelect: r,
     isSelected: n,
-    name: N,
-    className: s()(h.defaultThemeSelection, A),
+    name: A,
+    className: s()(h.defaultThemeSelection, N),
     children: "system" === t && (0, i.jsx)("div", {
       className: h.iconWrapper,
       children: m ? (0, i.jsx)(_.RefreshIcon, {
@@ -110,7 +110,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     preset: t,
     isSelected: n,

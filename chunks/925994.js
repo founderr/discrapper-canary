@@ -66,7 +66,7 @@ function h(e, t) {
   let T = d > 0 && I.aj.isType(e[d - 1], "blockQuote"),
     h = I.aj.isType(e[d], "blockQuote"),
     S = I.aj.isType(e[E], "blockQuote"),
-    A = [];
+    N = [];
   for (let t = d; t <= E; t++) {
     let n = e[t];
     if (l && I.LC.isText(n) && 0 === n.text.length) continue;
@@ -85,9 +85,9 @@ function h(e, t) {
         allowBlockQuotePrefix: null == s || null == o || !T && (!h || S),
         preventEmojiSurrogates: _
       });
-    (!l || u.length > 0) && A.push(u)
+    (!l || u.length > 0) && N.push(u)
   }
-  return A.join(a)
+  return N.join(a)
 }
 
 function f(e, t) {

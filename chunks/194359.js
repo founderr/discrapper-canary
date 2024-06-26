@@ -15,18 +15,18 @@ var i, r, s = n(544891),
   f = n(981631),
   S = n(689938);
 
-function A(e) {
+function N(e) {
   (0, h.Zy)(), T.Z.show(e)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let {
     status: i,
     body: r
   } = e, s = r && r.code;
   switch (i) {
     case 429:
-      0 === t && A({
+      0 === t && N({
         title: S.Z.Messages.FRIEND_REQUEST_RATE_LIMITED_HEADER,
         body: S.Z.Messages.FRIEND_REQUEST_RATE_LIMITED_BODY,
         confirmText: S.Z.Messages.FRIEND_REQUEST_RATE_LIMITED_BUTTON
@@ -34,7 +34,7 @@ function N(e, t, n) {
       break;
     case 403:
       if (s === f.evJ.EMAIL_VERIFICATION_REQUIRED) {
-        A({
+        N({
           title: S.Z.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_HEADER,
           body: S.Z.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BODY,
           confirmText: S.Z.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BUTTON,
@@ -49,7 +49,7 @@ function N(e, t, n) {
       else if ((0, c.b)(i, s)) break;
       else if (0 === t) {
         let e = null != n ? (0, E.NF)(s || 0, n) : S.Z.Messages.POMELO_ADD_FRIEND_ERROR;
-        A({
+        N({
           title: S.Z.Messages.FRIEND_REQUEST_FAILED_HEADER,
           body: e,
           confirmText: S.Z.Messages.OKAY
@@ -76,7 +76,7 @@ let m = {
       context: n,
       oldFormErrors: !0
     }).catch(e => {
-      N(e, r, t)
+      A(e, r, t)
     })
   },
   addRelationship(e, t) {
@@ -101,7 +101,7 @@ let m = {
     }).then(() => {
       null == t || t()
     }).catch(e => {
-      N(e, u, I.ZP.getUserTag(_))
+      A(e, u, I.ZP.getUserTag(_))
     })
   },
   acceptFriendRequest: e => m.addRelationship(e, function() {

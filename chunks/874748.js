@@ -33,8 +33,8 @@ function d(e) {
   } = e;
   if (null == u) return null;
   let S = (0, l.EY)(u.thumbnail),
-    A = !f && u.has_media_attachment,
-    N = f ? c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+    N = !f && u.has_media_attachment,
+    A = f ? c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
     m = null != T ? a.ZP.getName(u.guild_id, u.channel_id, T) : void 0,
     O = null == T ? void 0 : T.getAvatarURL(null == d ? void 0 : d.id, 40);
   (null == O || h !== u.guild_id) && (O = o.ZP.getGuildIconURL({
@@ -50,14 +50,14 @@ function d(e) {
         width: n
       } = e;
       return null != t && null != n && t >= n
-    }(u.thumbnail) && !A,
+    }(u.thumbnail) && !N,
     R = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(_._j));
   return {
     title: null !== (r = u.title) && void 0 !== r ? r : "",
     subtitle: u.description,
-    ctaText: N,
+    ctaText: A,
     coverImage: S,
-    coverImageOverlayText: A ? c.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+    coverImageOverlayText: N ? c.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
     parentChannelId: u.parent_channel_id,
     threadId: u.channel_id,
     postThread: I,
@@ -69,7 +69,7 @@ function d(e) {
     authorName: m,
     channelName: null == E ? void 0 : E.name,
     avatarUrl: O,
-    shouldShowBlurredThumbnailImage: A,
+    shouldShowBlurredThumbnailImage: N,
     shouldContainMediaWithBackground: p,
     shouldSpoiler: R,
     obscureAwaitingScan: !1,

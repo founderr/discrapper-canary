@@ -56,8 +56,8 @@ var i = n(990547),
   h = n(314897),
   f = n(592125),
   S = n(944486),
-  A = n(594174),
-  N = n(823379),
+  N = n(594174),
+  A = n(823379),
   m = n(573261),
   O = n(867176),
   p = n(317381),
@@ -164,7 +164,7 @@ function y(e) {
     showFeedback: o
   });
   let u = E.Z.getSelectedParticipantId(i),
-    _ = null === (n = A.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+    _ = null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
   if (null != p.ZP.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != _ && "" !== _) u === r && a.Z.selectParticipant(i, null)
 }
 
@@ -237,7 +237,7 @@ async function x(e) {
   let {
     guildId: a,
     force: l = !1
-  } = e, u = p.ZP.getShelfActivities(a), _ = u.map(e => d.Z.getApplication(e.application_id)).filter(N.lm);
+  } = e, u = p.ZP.getShelfActivities(a), _ = u.map(e => d.Z.getApplication(e.application_id)).filter(A.lm);
   if (!l && !p.ZP.shouldFetchShelf(a)) {
     if (null === (t = p.ZP.getShelfFetchStatus(a)) || void 0 === t ? void 0 : t.isFetching) {
       let e, t;

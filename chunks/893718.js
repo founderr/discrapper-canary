@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(607070),
   f = n(100527),
   S = n(906732),
-  A = n(424602),
-  N = n(541099),
+  N = n(424602),
+  A = n(541099),
   m = n(663924),
   O = n(998698),
   p = n(271668),
@@ -61,7 +61,7 @@ var i = n(735250),
   ea = n(957825),
   el = n(573809);
 t.Z = r.memo(r.forwardRef(function(e, t) {
-  var s, l, eu, e_, ec, ed, eE, eI, eT, eh, ef, eS, eA, eN;
+  var s, l, eu, e_, ec, ed, eE, eI, eT, eh, ef, eS, eN, eA;
   let {
     textValue: em,
     richValue: eO,
@@ -197,7 +197,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   }(ey, ta);
   let {
     eventEmitter: tS,
-    handleEditorSelectionChanged: tA
+    handleEditorSelectionChanged: tN
   } = function(e, t, n) {
     let [i] = r.useState(() => new a.EventEmitter);
     return r.useEffect(() => {
@@ -209,7 +209,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       }
     }
   }(e9, em, eO), {
-    submitting: tN,
+    submitting: tA,
     submit: tm,
     handleSubmit: tO
   } = function(e, t, s, o) {
@@ -217,9 +217,9 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       var h, f, S;
       if (a) return;
       l(!0);
-      let A = null !== (f = null === (h = b.Z.getStickerPreview(o, t.drafts.type)) || void 0 === h ? void 0 : h.map(e => e.id)) && void 0 !== f ? f : [],
-        N = null !== (S = F.Z.getUploads(o, t.drafts.type)) && void 0 !== S ? S : [];
-      if (null == _ && !d && !E && (0, M.CB)(N, o)) {
+      let N = null !== (f = null === (h = b.Z.getStickerPreview(o, t.drafts.type)) || void 0 === h ? void 0 : h.map(e => e.id)) && void 0 !== f ? f : [],
+        A = null !== (S = F.Z.getUploads(o, t.drafts.type)) && void 0 !== S ? S : [];
+      if (null == _ && !d && !E && (0, M.CB)(A, o)) {
         l(!1), (0, I.openModalLazy)(async () => {
           let {
             default: e
@@ -227,7 +227,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           return t => (0, i.jsx)(e, {
             ...t,
             threadId: o,
-            attachments: N,
+            attachments: A,
             sendMessage: () => u(r, void 0, void 0, void 0, !0)
           })
         });
@@ -235,8 +235,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       }
       e({
         value: r,
-        uploads: N,
-        stickers: A,
+        uploads: A,
+        stickers: N,
         command: _,
         commandOptionValues: c,
         isGif: d
@@ -287,11 +287,11 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     var t, n;
     ef === q.I.CREATE_FORUM_POST ? null === (n = eS.current) || void 0 === n || n.insertGIF(e) : eh(e.url, void 0, void 0, !0), (0, v._Q)(), null === (t = eS.current) || void 0 === t || t.focus()
   }, [eS, eh, ef]));
-  let tv = (eA = e9, r.useCallback(function(e, t) {
+  let tv = (eN = e9, r.useCallback(function(e, t) {
       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = eA.current;
+        i = eN.current;
       null != e && null != i && i.insertEmoji(e, t, n), t && (0, v._Q)()
-    }, [eA])),
+    }, [eN])),
     tL = function(e) {
       let {
         editorRef: t,
@@ -324,10 +324,10 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       chatInputType: ey,
       submit: eF
     });
-  let tD = (eN = e9, r.useCallback(e => {
-      let t = eN.current;
+  let tD = (eA = e9, r.useCallback(e => {
+      let t = eA.current;
       null != e && null != t && t.insertSound(e), (0, v._Q)()
-    }, [eN])),
+    }, [eA])),
     tM = r.useCallback(() => {
       var e;
       return null == tt ? void 0 : null === (e = tt.current) || void 0 === e ? void 0 : e.hide()
@@ -391,15 +391,15 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
         handleOuterClick: a
       }
     }(ey, tS, e9),
-    tV = A.T.useExperiment({
+    tV = N.T.useExperiment({
       location: "chat_input"
     }, {
       autoTrackExposure: !0
     }).enabled,
-    tZ = (0, E.e7)([N.Z], () => N.Z.shouldShowPopup(), []);
+    tZ = (0, E.e7)([A.Z], () => A.Z.shouldShowPopup(), []);
   (0, z.S)(tS, eP.guild_id, eP.id);
   let tH = null != ex,
-    tF = ta && !((ts || to) && t_) || tN && (null === (l = ey.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
+    tF = ta && !((ts || to) && t_) || tA && (null === (l = ey.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
     tY = null,
     tj = null;
   null != ti ? tY = null == ew ? void 0 : ew(ti, tr, el.attachButton) : (!ta || tu) && (tY = null == eb ? void 0 : eb(tH, el.attachButton), tV && (tj = null == eG ? void 0 : eG({
@@ -499,7 +499,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
                   onTab: tU,
                   onEnter: tb,
                   onMoveSelection: tG,
-                  onSelectionChanged: tA,
+                  onSelectionChanged: tN,
                   onMaybeShowAutocomplete: tR,
                   onHideAutocomplete: tg,
                   promptToUpload: eY,

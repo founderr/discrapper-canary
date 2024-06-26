@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   xk: function() {
-    return N
+    return A
   }
 }), n(47120), n(653041);
 var i, r, s, o, a, l, u = n(512722),
@@ -15,9 +15,9 @@ var I = n(570140),
   h = n(314897),
   f = n(230307),
   S = n(981631),
-  A = n(731455);
+  N = n(731455);
 (s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
-let N = {
+let A = {
     guilds: [],
     total: 0,
     offset: 0,
@@ -27,25 +27,25 @@ let N = {
   },
   m = {
     [S.Lcj.FEATURED]: {
-      ...N
+      ...A
     },
     [S.Lcj.GAMES_YOU_PLAY]: {
-      ...N
+      ...A
     },
     [S.Lcj.MISC]: {
-      ...N
+      ...A
     },
     [S.Lcj.SEARCH]: {},
-    [A.Hk]: {
-      ...N
+    [N.Hk]: {
+      ...A
     }
   },
   O = "",
   p = !1,
   R = "unset",
   g = null,
-  C = A.Hk,
-  v = A.Hk,
+  C = N.Hk,
+  v = N.Hk,
   L = null,
   D = [],
   M = (0, T.P)(),
@@ -165,7 +165,7 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
     p = !1, m = {
       ...m,
       [t]: {
-        ...N,
+        ...A,
         loading: !1
       }
     }
@@ -177,7 +177,7 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
     p = !0, m = {
       ...m,
       [t]: {
-        ...N,
+        ...A,
         ...m[t],
         loading: !0
       }
@@ -193,7 +193,7 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
     m = {
       ...m,
       [t]: {
-        ...N,
+        ...A,
         guilds: i,
         loading: !1,
         isFirstLoad: !1
@@ -207,7 +207,7 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
     p = !1, m = {
       ...m,
       [t]: {
-        ...N,
+        ...A,
         loading: !1
       }
     }
@@ -304,7 +304,7 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
     if (null != n) {
       var s;
       let e = null !== (s = n["categories.id"]) && void 0 !== s ? s : {};
-      delete e[A.o3], r = Object.entries(e).map(e => {
+      delete e[N.o3], r = Object.entries(e).map(e => {
         let [t, n] = e;
         return [parseInt(t, 10), n]
       }).sort((e, t) => t[1] - e[1]).slice(0, 7)
@@ -316,7 +316,7 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
         [i]: {
           ...m[S.Lcj.SEARCH][i],
           resultCounts: [
-            [A.Hk, Math.min(A.lA, t)], ...r
+            [N.Hk, Math.min(N.lA, t)], ...r
           ]
         }
       }
@@ -350,6 +350,6 @@ l = "GuildDiscoveryStore", (a = "displayName") in(o = U) ? Object.defineProperty
     let {
       forClanDiscovery: t
     } = e;
-    t && (C = A.Gj.Clans, v = A.Gj.Clans, P = !0)
+    t && (C = N.Gj.Clans, v = N.Gj.Clans, P = !0)
   }
 })

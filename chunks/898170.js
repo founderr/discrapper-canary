@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return C
+    return f
   }
 }), n(47120), n(724458);
 var o = n(735250),
@@ -19,7 +19,7 @@ let x = [0, .5, 1],
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   };
-async function f(e, t) {
+async function C(e, t) {
   let o = (await n.e("30166").then(n.t.bind(n, 235630, 19))).default;
   return function(e, t, n) {
     for (let o in t) {
@@ -34,14 +34,14 @@ async function f(e, t) {
   }(o, g, t), o
 }
 
-function C(e) {
+function f(e) {
   var t;
   let {
     animationClassName: n,
     className: r,
     quest: i,
     useReducedMotion: l
-  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = s.useRef(null), [h, _] = s.useState(!1), E = s.useMemo(() => {
+  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), f = s.useRef(null), [h, _] = s.useState(!1), E = s.useMemo(() => {
     if (null == i) return null;
     let e = (0, p.oo)(i.config.colors.primary),
       t = {
@@ -50,11 +50,11 @@ function C(e) {
         b: e.b / 255
       },
       n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-    return f(i.id, n)
+    return C(i.id, n)
   }, [i]), S = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !l && g;
   s.useEffect(() => {
     var e, t, n, o;
-    g ? T && (null === (o = C.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+    g ? T && (null === (o = f.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = f.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [T, g]);
   let v = s.useCallback(() => {
     _(!0)
@@ -67,7 +67,7 @@ function C(e) {
   }) : (0, o.jsx)("div", {
     className: a()(m.lottieAnimationBackgroundWrapper, r),
     children: (0, o.jsx)(d.LottieAnimation, {
-      ref: C,
+      ref: f,
       onComplete: v,
       importData: () => E,
       shouldAnimate: !h && T,

@@ -52,19 +52,19 @@ let S = new _.h(e => {
     } = e, r = [t];
     return null != n && r.push(n), r.push(h.GUILD_EVENT(t)), null != i && r.push(h.CHANNEL_EVENT(i)), U(e) && (r.push(h.EVENT_ACTIVE), r.push(h.GUILD_EVENT_ACTIVE(t)), null != i && r.push(h.CHANNEL_EVENT_ACTIVE(i))), b(e) && (r.push(h.EVENT_UPCOMING), r.push(h.GUILD_EVENT_UPCOMING(t)), null != i && r.push(h.CHANNEL_EVENT_UPCOMING(i))), r
   }, f),
-  A = 0,
-  N = [],
+  N = 0,
+  A = [],
   m = "SERIES",
   O = {},
   p = {};
 
 function R(e) {
-  S.set(e.id, e), A += 1
+  S.set(e.id, e), N += 1
 }
 
 function g(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  S.delete(e), delete O[e], t && delete p[e], A += 1
+  S.delete(e), delete O[e], t && delete p[e], N += 1
 }
 
 function C(e) {
@@ -83,7 +83,7 @@ function v(e) {
       r = null !== (n = null === (t = p[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : 0,
       s = null != e.guild_scheduled_event_exception_id && e.response === T.gv.UNINTERESTED || null == e.guild_scheduled_event_exception_id && e.response === T.gv.INTERESTED ? 1 : -1;
     D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, r + s)
-  }(e), n && (A += 1)
+  }(e), n && (N += 1)
 }
 
 function L(e) {
@@ -98,7 +98,7 @@ function L(e) {
       r = null !== (n = null === (t = p[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : 0,
       s = null != e.guild_scheduled_event_exception_id && e.response === T.gv.UNINTERESTED || null == e.guild_scheduled_event_exception_id && e.response === T.gv.INTERESTED ? -1 : 1;
     D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, r + s)
-  }(e), s && (A += 1))
+  }(e), s && (N += 1))
 }
 
 function D(e, t, n) {
@@ -157,7 +157,7 @@ class w extends(i = u.ZP.Store) {
     return S.values(e)
   }
   getRsvpVersion() {
-    return A
+    return N
   }
   getRsvp(e, t, n) {
     var i, r;
@@ -208,7 +208,7 @@ o = "GuildScheduledEventStore", (s = "displayName") in(r = w) ? Object.definePro
     let {
       guilds: t
     } = e;
-    return S.clear(), A = 0, O = {}, p = {}, N.forEach(R), t.forEach(e => e.guild_scheduled_events.forEach(e => R(e))), !0
+    return S.clear(), N = 0, O = {}, p = {}, A.forEach(R), t.forEach(e => e.guild_scheduled_events.forEach(e => R(e))), !0
   },
   GUILD_CREATE: function(e) {
     let {
@@ -283,13 +283,13 @@ o = "GuildScheduledEventStore", (s = "displayName") in(r = w) ? Object.definePro
     let {
       guildScheduledEventUsers: t
     } = e;
-    return t.forEach(e => v(e, !1, !1)), A += 1, !0
+    return t.forEach(e => v(e, !1, !1)), N += 1, !0
   },
   GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: function(e) {
     let {
       guildScheduledEventUsers: t
     } = e;
-    return t.forEach(e => v(e, !1, !1)), A += 1, !0
+    return t.forEach(e => v(e, !1, !1)), N += 1, !0
   },
   GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: function(e) {
     let {

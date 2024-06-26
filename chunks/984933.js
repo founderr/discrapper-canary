@@ -19,8 +19,8 @@ var i, r, s, o, a = n(392711),
   h = n(131704),
   f = n(700785),
   S = n(314897),
-  A = n(592125),
-  N = n(271383),
+  N = n(592125),
+  A = n(271383),
   m = n(430824),
   O = n(496675),
   p = n(699516),
@@ -81,7 +81,7 @@ function H(e) {
           let e = {},
             t = I.Z.getFavoriteChannels();
           for (let n in t) {
-            let i = A.Z.getChannel(n);
+            let i = N.Z.getChannel(n);
             if (null == i) continue;
             let r = t[n],
               s = (0, T.r)(t, r, i);
@@ -93,7 +93,7 @@ function H(e) {
           return e
         }();
         let t = {},
-          n = A.Z.getMutableGuildChannelsForGuild(e);
+          n = N.Z.getMutableGuildChannelsForGuild(e);
         for (let e in n) t[e] = {
           channel: n[e],
           comparator: n[e].position
@@ -193,7 +193,7 @@ function z() {
 }
 class q extends(i = _.ZP.Store) {
   initialize() {
-    this.waitFor(m.Z, N.ZP, A.Z, O.Z, S.default, d.Z, I.Z), this.syncWith([I.Z], z)
+    this.waitFor(m.Z, A.ZP, N.Z, O.Z, S.default, d.Z, I.Z), this.syncWith([I.Z], z)
   }
   getAllGuilds() {
     return M
@@ -325,10 +325,10 @@ o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r
     let {
       channelId: t
     } = e;
-    return null == t && null != U ? K(A.Z.getChannel(U), null) : K(A.Z.getChannel(t), t)
+    return null == t && null != U ? K(N.Z.getChannel(U), null) : K(N.Z.getChannel(t), t)
   },
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-    let t = A.Z.getBasicChannel(e.id);
+    let t = N.Z.getBasicChannel(e.id);
     null != t && null != t.guild_id && H(t.guild_id)
   },
   VOICE_STATE_UPDATES: function(e) {
@@ -340,7 +340,7 @@ o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r
         channelId: n,
         sessionId: i
       } = t;
-      return S.default.getSessionId() !== i ? e : K(A.Z.getChannel(n), n) || e
+      return S.default.getSessionId() !== i ? e : K(N.Z.getChannel(n), n) || e
     }, !1)
   }
 })

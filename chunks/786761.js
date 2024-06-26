@@ -32,9 +32,9 @@ n(358085), n(51144);
 var f = n(572804);
 n(739566);
 var S = n(959517),
-  A = n(981631);
+  N = n(981631);
 n(689938);
-let N = new c.Z({
+let A = new c.Z({
   id: "???",
   username: "???"
 });
@@ -58,14 +58,14 @@ function O(e) {
   let {
     reactions: R,
     interactionData: g
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, v = m(e), M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (o = e.mention_roles) && void 0 !== o ? o : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], U = e.message_reference, b = e.type === A.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content);
-  let G = null == (S = e).author ? N : null != S.webhook_id ? new c.Z(S.author) : null !== (O = I.default.getUser(S.author.id)) && void 0 !== O ? O : new c.Z(S.author),
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, v = m(e), M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (o = e.mention_roles) && void 0 !== o ? o : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], U = e.message_reference, b = e.type === N.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content);
+  let G = null == (S = e).author ? A : null != S.webhook_id ? new c.Z(S.author) : null !== (O = I.default.getUser(S.author.id)) && void 0 !== O ? O : new c.Z(S.author),
     w = null == e ? void 0 : e.gift_info,
     x = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-    B = e.type === A.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-    k = e.type === A.uaV.PREMIUM_REFERRAL ? e.content : void 0,
+    B = e.type === N.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+    k = e.type === N.uaV.PREMIUM_REFERRAL ? e.content : void 0,
     V = e.content;
-  return e.type === A.uaV.PREMIUM_REFERRAL && (V = ""), p = 0, new _.ZP({
+  return e.type === N.uaV.PREMIUM_REFERRAL && (V = ""), p = 0, new _.ZP({
     ...e,
     ...v.toJS(),
     author: G,

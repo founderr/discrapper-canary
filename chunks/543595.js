@@ -17,8 +17,8 @@ var i, r, s, o = n(735250),
   h = n(726542),
   f = n(740265),
   S = n(122810),
-  A = n(833664),
-  N = n(503438),
+  N = n(833664),
+  A = n(503438),
   m = n(802856),
   O = n(420660),
   p = n(774073),
@@ -77,7 +77,7 @@ function K(e) {
   let {
     activity: t
   } = e, n = null;
-  return (0, N.Z)(t) && (n = k.ABu.SPOTIFY), null != t.platform && [k.M7m.PS4, k.M7m.PS5].includes(t.platform) && (n = k.ABu.PLAYSTATION), n
+  return (0, A.Z)(t) && (n = k.ABu.SPOTIFY), null != t.platform && [k.M7m.PS4, k.M7m.PS5].includes(t.platform) && (n = k.ABu.PLAYSTATION), n
 }
 
 function z(e) {
@@ -201,7 +201,7 @@ class q extends(r = a.PureComponent) {
     } = e;
     if (null == _ || null == _.large_image && null == _.small_image) return null;
     (0, O.Z)(e) && (r = Y[l]);
-    let d = (0, N.Z)(e),
+    let d = (0, A.Z)(e),
       I = null != _.large_image ? (0, o.jsx)("img", {
         alt: null !== (t = _.large_text) && void 0 !== t ? t : "",
         src: j(c, _.large_image, null != r ? r : [V.Si.LARGE, V.Si.LARGE]),
@@ -310,13 +310,13 @@ class q extends(r = a.PureComponent) {
       type: s
     } = e;
     if (s === k.IIU.CUSTOM_STATUS) return null;
-    let a = (0, A.Z)(e),
+    let a = (0, N.Z)(e),
       l = e.name,
       _ = l;
     if (s === k.IIU.HANG_STATUS ? _ = (0, R.O8)(e) : a && null != n ? _ = (0, o.jsx)("span", {
         className: H.activityName,
         children: _
-      }) : !a && (l = r, _ = r, (0, N.Z)(e) && null != e.sync_id && null != r ? _ = (0, o.jsx)(E.Anchor, {
+      }) : !a && (l = r, _ = r, (0, A.Z)(e) && null != e.sync_id && null != r ? _ = (0, o.jsx)(E.Anchor, {
         className: H.bodyLink,
         onClick: this.handleOpenSpotifyTrack,
         children: r
@@ -345,8 +345,8 @@ class q extends(r = a.PureComponent) {
     }) : null, t = null != r ? () => {
       (0, C.X)(r.id)
     } : void 0;
-    else if (!(0, A.Z)(e)) {
-      if (a = s = i, (0, N.Z)(e) && null != i) s = Z.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+    else if (!(0, N.Z)(e)) {
+      if (a = s = i, (0, A.Z)(e) && null != i) s = Z.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: a,
         artistsHook: (t, n) => (0, o.jsx)(x.Z, {
           artists: i,
@@ -369,7 +369,7 @@ class q extends(r = a.PureComponent) {
       children: s
     }) : (0, o.jsx)("div", {
       title: null != a ? a : void 0,
-      className: (0, O.Z)(e) || (0, N.Z)(e) ? H.detailsWrap : H.details,
+      className: (0, O.Z)(e) || (0, A.Z)(e) ? H.detailsWrap : H.details,
       children: s
     })
   }
@@ -380,12 +380,12 @@ class q extends(r = a.PureComponent) {
       channel: i
     } = this.props;
     return n && null != t ? null == i ? (0, o.jsx)("div", {
-      className: (0, O.Z)(e) || (0, N.Z)(e) ? H.detailsWrap : H.details,
+      className: (0, O.Z)(e) || (0, A.Z)(e) ? H.detailsWrap : H.details,
       children: Z.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
         guildName: t.name
       })
     }) : (0, o.jsxs)("div", {
-      className: u()((0, O.Z)(e) || (0, N.Z)(e) ? H.detailsWrap : H.details, H.guildDetails),
+      className: u()((0, O.Z)(e) || (0, A.Z)(e) ? H.detailsWrap : H.details, H.guildDetails),
       children: [(0, o.jsx)(b.Z, {
         guild: t,
         size: b.Z.Sizes.SMOL,
@@ -409,7 +409,7 @@ class q extends(r = a.PureComponent) {
     let {
       activityGuild: t
     } = this.props;
-    if (!(0, A.Z)(e) || (0, N.Z)(e)) return null;
+    if (!(0, N.Z)(e) || (0, A.Z)(e)) return null;
     let {
       timestamps: n
     } = e;
@@ -423,7 +423,7 @@ class q extends(r = a.PureComponent) {
     })
   }
   renderTimeBar(e) {
-    if (!(0, N.Z)(e)) return null;
+    if (!(0, A.Z)(e)) return null;
     let {
       timestamps: t
     } = e;
@@ -447,7 +447,7 @@ class q extends(r = a.PureComponent) {
       party: a,
       assets: l
     } = e, u = s, _ = u;
-    return (!(0, A.Z)(e) && (_ = u = null == l ? void 0 : l.large_text, (0, N.Z)(e) && null != u && (u = Z.Z.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+    return (!(0, N.Z)(e) && (_ = u = null == l ? void 0 : l.large_text, (0, A.Z)(e) && null != u && (u = Z.Z.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
       album: _,
       albumHook: (t, n) => null != e.sync_id && null != _ ? (0, o.jsx)(E.Anchor, {
         className: H.bodyLink,
@@ -492,13 +492,13 @@ class q extends(r = a.PureComponent) {
       f = !1;
     (0, m.Z)(c) ? (e = this.renderXboxImage(), f = !0) : null == (e = this.renderImage(c)) && (f = null != (e = this.renderGameImage(c)));
     let S = this.renderName(c),
-      A = this.renderDetails(c),
-      N = this.renderState(c, s),
+      N = this.renderDetails(c),
+      A = this.renderState(c, s),
       O = this.renderTimePlayed(c),
       p = this.renderChannelDetails(c),
       R = null != i ? i() : null,
       g = this.renderTimeBar(c),
-      C = ![e, S, A, N, O, g, R].some(e => null != e);
+      C = ![e, S, N, A, O, g, R].some(e => null != e);
     return (0, o.jsxs)("div", {
       className: u()(this.getTypeClass("activity"), r),
       children: [this.renderHeader(C), (0, o.jsx)("div", {
@@ -523,7 +523,7 @@ class q extends(r = a.PureComponent) {
                   }
                 }), null == l || l()
               } : void 0,
-              children: [S, A, N, O]
+              children: [S, N, A, O]
             }), p, d || h ? null : g, T ? R : null]
           }), I ? (0, o.jsx)("div", {
             className: H.actions,

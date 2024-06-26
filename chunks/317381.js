@@ -19,8 +19,8 @@ var r, s = n(442837),
   h = n(613611),
   f = n(761122),
   S = n(917107),
-  A = n(918559),
-  N = n(981631);
+  N = n(918559),
+  A = n(981631);
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -49,8 +49,8 @@ let O = {
   U = new Map,
   b = new Map,
   G = new Map;
-let w = A.Ez.DISCONNECTED,
-  x = A.MI.RESIZABLE;
+let w = N.Ez.DISCONNECTED,
+  x = N.MI.RESIZABLE;
 
 function B(e) {
   return null != e ? e : "0"
@@ -70,9 +70,9 @@ function k(e) {
   } = e, f = (0, T.Z)(a);
   if (null == f) return;
   let S = c.map(e => e.userId),
-    A = l.default.getId(),
-    m = S.some(e => e === A),
-    O = null === (t = c.find(e => e.userId === A)) || void 0 === t ? void 0 : t.sessionId,
+    N = l.default.getId(),
+    m = S.some(e => e === N),
+    O = null === (t = c.find(e => e.userId === N)) || void 0 === t ? void 0 : t.sessionId,
     p = c.some(e => (0, h.J)(e)),
     L = null == _,
     D = R.get(a),
@@ -92,12 +92,12 @@ function k(e) {
     ...D,
     ...M
   });
-  null != D && s === D.channelId && a === (null == D ? void 0 : D.applicationId) && (!m && Array.from(D.userIds).some(e => e === A) || !L && !p) ? v.get(s) === a ? v.delete(s) : (R.delete(a), d.S.dispatch(N.CkL.RELEASE_ACTIVITY_WEB_VIEW)) : m && (null == D || D.applicationId !== a || D.channelId !== s) && (O === l.default.getSessionId() && !L || (0, I.$)("EmbeddedActivitiesStore")) && (Z({
+  null != D && s === D.channelId && a === (null == D ? void 0 : D.applicationId) && (!m && Array.from(D.userIds).some(e => e === N) || !L && !p) ? v.get(s) === a ? v.delete(s) : (R.delete(a), d.S.dispatch(A.CkL.RELEASE_ACTIVITY_WEB_VIEW)) : m && (null == D || D.applicationId !== a || D.channelId !== s) && (O === l.default.getSessionId() && !L || (0, I.$)("EmbeddedActivitiesStore")) && (Z({
     channelId: s,
     applicationId: a,
     launchId: u,
     compositeInstanceId: _
-  }), d.S.dispatch(N.CkL.OPEN_EMBEDDED_ACTIVITY, {
+  }), d.S.dispatch(A.CkL.OPEN_EMBEDDED_ACTIVITY, {
     channelId: s
   }));
   let P = (null !== (n = C.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== a),
@@ -149,7 +149,7 @@ function Z(e) {
     connectedSince: Date.now(),
     launchId: o,
     compositeInstanceId: a
-  }), w = i !== _.Z.getChannelId() || (0, S.Z)(r) ? A.Ez.PIP : A.Ez.PANEL, G.set(F(r, s), Date.now())
+  }), w = i !== _.Z.getChannelId() || (0, S.Z)(r) ? N.Ez.PIP : N.Ez.PANEL, G.set(F(r, s), Date.now())
 }
 
 function H() {
@@ -522,7 +522,7 @@ let j = new Y(o.Z, {
     let {
       channelId: t
     } = e;
-    i !== t && w === A.Ez.PANEL && (w = A.Ez.PIP)
+    i !== t && w === N.Ez.PANEL && (w = N.Ez.PIP)
   },
   EMBEDDED_ACTIVITY_DISCONNECT: function(e) {
     let {
@@ -533,7 +533,7 @@ let j = new Y(o.Z, {
     i && v.set(t, n)
   },
   CONNECTION_INTERRUPTED: function(e) {
-    e.code === N.$VG.CLOSE_ABNORMAL && (i = void 0, R.clear(), L = !1, w = A.Ez.DISCONNECTED)
+    e.code === A.$VG.CLOSE_ABNORMAL && (i = void 0, R.clear(), L = !1, w = N.Ez.DISCONNECTED)
   },
   CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
     let {

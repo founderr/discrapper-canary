@@ -37,8 +37,8 @@ let u = null,
     "1f3ff": 4
   },
   S = ["\uD83C\uDFFB", "\uD83C\uDFFC", "\uD83C\uDFFD", "\uD83C\uDFFE", "\uD83C\uDFFF"],
-  A = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-  N = n(523558),
+  N = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
+  A = n(523558),
   m = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
   O = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
 for (let e = 0; e < S.length; e++) {
@@ -224,7 +224,7 @@ t.ZP = {
     return _[e]
   },
   translateInlineEmojiToSurrogates: function(e) {
-    return e.replace(A, (e, t) => P(t, e))
+    return e.replace(N, (e, t) => P(t, e))
   },
   maybeTranslateSurrogatesToInlineEmoji: function(e) {
     if (!m.test(e)) return null;
@@ -241,7 +241,7 @@ t.ZP = {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
       i = n;
-    return Object.prototype.hasOwnProperty.call(N, e) && (i = N[e]), t ? ":".concat(i, ":") : i
+    return Object.prototype.hasOwnProperty.call(A, e) && (i = A[e]), t ? ":".concat(i, ":") : i
   },
   convertSurrogateToBase: function(e) {
     return g(y(S.reduce((e, t) => e.replace(t, ""), e), !1))
@@ -251,7 +251,7 @@ t.ZP = {
   numDiversitySprites: T,
   numNonDiversitySprites: h,
   EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
-  EMOJI_NAME_AND_DIVERSITY_RE: A,
+  EMOJI_NAME_AND_DIVERSITY_RE: N,
   EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
   hasSurrogates: function(e) {
     return r().toArray(e).some(e => null != E[e])

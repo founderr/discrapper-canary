@@ -4,7 +4,7 @@ n.d(t, {
     return p
   },
   QP: function() {
-    return A
+    return N
   },
   ob: function() {
     return g
@@ -28,7 +28,7 @@ var i, r, s = n(735250),
   f = n(247194);
 let S = (0, T.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 (r = i || (i = {}))[r.ENTERING = 1] = "ENTERING", r[r.ENTERED = 2] = "ENTERED", r[r.EXITING = 3] = "EXITING", r[r.EXITED = 4] = "EXITED";
-let A = (0, c.Z)(e => ({
+let N = (0, c.Z)(e => ({
   fullScreenLayers: [],
   addLayer: t => e(e => {
     let {
@@ -40,7 +40,7 @@ let A = (0, c.Z)(e => ({
   })
 }));
 
-function N(e) {
+function A(e) {
   let {
     item: t
   } = e, n = o.useRef(null);
@@ -89,13 +89,13 @@ let m = {
 function p() {
   let {
     reducedMotion: e
-  } = o.useContext(E.AccessibilityPreferencesContext), t = e.enabled ? O : m, n = A(e => e.fullScreenLayers);
+  } = o.useContext(E.AccessibilityPreferencesContext), t = e.enabled ? O : m, n = N(e => e.fullScreenLayers);
   return (0, s.jsx)(u.Z, {
     children: n.map(e => (0, s.jsx)(_.Z, {
       classNames: t,
       timeout: S,
       onEntered: () => {
-        A.setState({
+        N.setState({
           fullScreenLayers: n.map(t => t.key === e.key ? {
             ...t,
             transitionState: 2
@@ -103,7 +103,7 @@ function p() {
         })
       },
       unmountOnExit: !0,
-      children: (0, s.jsx)(N, {
+      children: (0, s.jsx)(A, {
         item: e
       })
     }, e.key))
@@ -117,7 +117,7 @@ function R(e) {
       Layer: i
     } = t,
     r = null != n ? n : l()();
-  return A.setState(t => ({
+  return N.setState(t => ({
     fullScreenLayers: [...t.fullScreenLayers, {
       key: r,
       transitionState: 1,
@@ -128,7 +128,7 @@ function R(e) {
 }
 
 function g(e) {
-  A.setState(t => ({
+  N.setState(t => ({
     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
   }))
 }

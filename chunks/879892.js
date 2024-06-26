@@ -24,8 +24,8 @@ async function h(e) {
     analyticsLocation: h,
     analyticsSourceLocation: f,
     numberOfBoostsToAdd: S,
-    onClose: A,
-    closeLayer: N,
+    onClose: N,
+    closeLayer: A,
     onSubscriptionConfirmation: m,
     guild: O,
     handleSubscribeModalClose: p,
@@ -59,7 +59,7 @@ async function h(e) {
   let M = (0, d.vx)(u.Z.boostSlots),
     P = M.length,
     y = e => {
-      null == A || A(), null == p || p(e)
+      null == N || N(), null == p || p(e)
     };
   if (P > 0 && (null == S || P >= S)) {
     let e;
@@ -95,7 +95,7 @@ async function h(e) {
     analyticsSourceLocation: f,
     guildId: O.id,
     closeLayer: () => {
-      null == A || A(), null == N || N(), c.default.track(I.rMx.MODAL_DISMISSED, {
+      null == N || N(), null == A || A(), c.default.track(I.rMx.MODAL_DISMISSED, {
         type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
         location_section: h.section
       })

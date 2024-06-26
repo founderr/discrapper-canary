@@ -20,8 +20,8 @@ var i = n(525654),
   h = n(972830),
   f = n(305325),
   S = n(281956),
-  A = n(931261),
-  N = n(15274),
+  N = n(931261),
+  A = n(15274),
   m = n(924301),
   O = n(82085),
   p = n(264229),
@@ -81,7 +81,7 @@ function $(e) {
   } = i, a = P.Z.getChannel(i.id), l = function(e, t, n) {
     var i, r;
     if ((null == n ? void 0 : n.targetType) === z.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return W.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, A.s)(e)) return W.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, N.s)(e)) return W.oC.GUILD_HOME;
     let s = P.Z.getChannel(t.id);
     return x.Z.can(j.Plq.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = y.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
   }(t, i, r), {
@@ -135,7 +135,7 @@ let ee = function(e, t) {
           let e = {
             guildScheduledEventId: t.id
           };
-          null != n && (e.welcomeModalChannelId = n), (0, N.P3)(t, e)
+          null != n && (e.welcomeModalChannelId = n), (0, A.P3)(t, e)
         })
       }(t), !1) : ($({
         guildId: null !== (i = r.getGuildId()) && void 0 !== i ? i : j.ME,

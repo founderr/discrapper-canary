@@ -14,8 +14,8 @@ var i, r, s = n(147913),
   h = n(918701),
   f = n(242755),
   S = n(432945),
-  A = n(5881),
-  N = n(566078),
+  N = n(5881),
+  A = n(566078),
   m = n(46140),
   O = n(70722);
 
@@ -30,7 +30,7 @@ function p(e, t, n) {
 let R = 1 * E.Z.Millis.MINUTE,
   g = 1 * E.Z.Millis.SECOND,
   C = 1 * E.Z.Millis.SECOND,
-  v = (0, A.T)({
+  v = (0, N.T)({
     location: m.dr.QUESTS_MANAGER
   }),
   L = e => (0, l.V9)({
@@ -74,18 +74,18 @@ function U(e) {
   } = (0, l.my)(i), o = P(s), _ = T.Z.quests.get(n);
   if (null == _ || !y(_)) return "STOP";
   let c = null === (t = D()) || void 0 === t ? void 0 : t.config,
-    d = null != u.Z.getRTCStream(i) && null != c && N.r.build(c).application.id === r && o,
+    d = null != u.Z.getRTCStream(i) && null != c && A.r.build(c).application.id === r && o,
     {
       quest: E,
       activity: I
     } = b(),
     f = null == E ? void 0 : E.config,
-    S = null != f && (null == E ? void 0 : E.id) === n && N.r.build(f).application.id === r && o && (null == I ? void 0 : I.channelId) === s,
-    A = a.ZP.getRunningGames().map(e => e.id),
+    S = null != f && (null == E ? void 0 : E.id) === n && A.r.build(f).application.id === r && o && (null == I ? void 0 : I.channelId) === s,
+    N = a.ZP.getRunningGames().map(e => e.id),
     O = (0, h.$H)({
       quest: _,
       location: m.dr.QUESTS_MANAGER
-    }) && A.includes(r);
+    }) && N.includes(r);
   return d || S || O ? "BEAT" : "BEAT_TERMINAL"
 }
 
@@ -194,7 +194,7 @@ class G extends s.Z {
           this.terminateOptimisticProgressUpdateInterval(e);
           return
         }
-        let a = N.r.build(o.config),
+        let a = A.r.build(o.config),
           l = o.userStatus,
           u = this.lastOptimisticallyUpdatedProgressMap.get(e);
         if ("BEAT" !== U({
@@ -244,7 +244,7 @@ class G extends s.Z {
       if (null != n && null != i && i.id === t && y(i)) {
         v.log("handleEnrollmentSuccess - initiating heartbeat for stream"), this.initiateHeartbeat({
           streamKey: (0, l.V9)(n),
-          applicationId: N.r.build(i.config).application.id,
+          applicationId: A.r.build(i.config).application.id,
           questId: i.id
         });
         return
@@ -256,7 +256,7 @@ class G extends s.Z {
       if (null != s && null != r && y(r) && r.id === t) {
         v.log("handleEnrollmentSuccess - initiating heartbeat for activity"), this.initiateHeartbeat({
           streamKey: L(s.channelId),
-          applicationId: N.r.build(r.config).application.id,
+          applicationId: A.r.build(r.config).application.id,
           questId: r.id
         });
         return
@@ -272,7 +272,7 @@ class G extends s.Z {
           let e = L(t.id);
           this.initiateHeartbeat({
             streamKey: e,
-            applicationId: N.r.build(t.config).application.id,
+            applicationId: A.r.build(t.config).application.id,
             questId: t.id
           })
         }
@@ -303,14 +303,14 @@ class G extends s.Z {
             location: m.dr.QUESTS_MANAGER
           })) {
           let t = L(e.id),
-            i = n.includes(N.r.build(e.config).application.id),
+            i = n.includes(A.r.build(e.config).application.id),
             r = !this.streamKeyToHeartbeatState.has(t) && i;
           this.streamKeyToHeartbeatState.has(t) && !i ? this.terminateHeartbeat({
             streamKey: t,
             sendTerminalHeartbeat: !0
           }) : r && (v.log("handleQuestsFetchCurrentQuestsSuccess - initiating heartbeat for playtime task"), this.initiateHeartbeat({
             streamKey: t,
-            applicationId: N.r.build(e.config).application.id,
+            applicationId: A.r.build(e.config).application.id,
             questId: e.id
           }))
         }
@@ -337,7 +337,7 @@ class G extends s.Z {
           location: m.dr.QUESTS_MANAGER
         }) && !this.streamKeyToHeartbeatState.has(n) && (v.log("handleRunningGamesChange - initiating heartbeat for playtime task"), this.initiateHeartbeat({
           streamKey: n,
-          applicationId: N.r.build(t.config).application.id,
+          applicationId: A.r.build(t.config).application.id,
           questId: t.id
         }))
       }), t.forEach(e => {
@@ -384,7 +384,7 @@ class G extends s.Z {
         sendTerminalHeartbeat: !0
       }) : s && (v.log("handleVoiceStateChange - initiating heartbeat for stream task"), this.initiateHeartbeat({
         streamKey: t,
-        applicationId: N.r.build(i.config).application.id,
+        applicationId: A.r.build(i.config).application.id,
         questId: i.id
       }))
     }), p(this, "handleEmbeddedActivityUpdate", e => {
@@ -397,7 +397,7 @@ class G extends s.Z {
         sendTerminalHeartbeat: !0
       }) : s && (v.log("handleRunningGamesChange - initiating heartbeat for activity task"), this.initiateHeartbeat({
         streamKey: i,
-        applicationId: N.r.build(t.config).application.id,
+        applicationId: A.r.build(t.config).application.id,
         questId: t.id
       }))
     }), p(this, "handleStreamCreate", e => {
@@ -421,7 +421,7 @@ class G extends s.Z {
         location: m.dr.QUESTS_MANAGER
       }) && !this.streamKeyToHeartbeatState.has(t) && (v.log("handleStreamCreate - initiating heartbeat for stream task"), this.initiateHeartbeat({
         streamKey: t,
-        applicationId: N.r.build(r.config).application.id,
+        applicationId: A.r.build(r.config).application.id,
         questId: r.id
       }))
     }), p(this, "handleStreamStart", e => {
@@ -443,7 +443,7 @@ class G extends s.Z {
         location: m.dr.QUESTS_MANAGER
       }) && !this.streamKeyToHeartbeatState.has(s) && (v.log("handleStreamStart - initiating heartbeat for stream task"), this.initiateHeartbeat({
         streamKey: s,
-        applicationId: N.r.build(r.config).application.id,
+        applicationId: A.r.build(r.config).application.id,
         questId: r.id
       }))
     }), p(this, "handleStreamClose", e => {

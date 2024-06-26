@@ -4,7 +4,7 @@ n.d(t, {
     return T
   },
   BU: function() {
-    return A
+    return N
   },
   Fr: function() {
     return g
@@ -22,7 +22,7 @@ n.d(t, {
     return p
   },
   cl: function() {
-    return N
+    return A
   },
   g9: function() {
     return h
@@ -203,11 +203,11 @@ function S(e, t) {
   }), n.filter(e => e)
 }
 
-function A(e) {
+function N(e) {
   return e.reduce((e, t) => null == t ? e : t.results.length + e, 0)
 }
 
-function N(e) {
+function A(e) {
   return null == e ? "" : e.map(e => e.getFullMatch()).join("")
 }
 let m = new s.ZP;

@@ -25,7 +25,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class A extends T.Z {
+class N extends T.Z {
   _initialize() {
     l.Z.init()
   }
@@ -136,4 +136,4 @@ class A extends T.Z {
     })
   }
 }
-t.Z = new A
+t.Z = new N

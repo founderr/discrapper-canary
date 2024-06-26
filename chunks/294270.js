@@ -19,8 +19,8 @@ let E = 15 * l.Z.Millis.SECOND,
     return "".concat(e, ":").concat(t, ":").concat(n)
   },
   S = new s.V7,
-  A = [],
-  N = {},
+  N = [],
+  A = {},
   m = (0, u.tu)("highfive_whistle", "highfive_whistle", .6),
   O = (0, u.tu)("highfive_clap", "highfive_clap", .6);
 
@@ -35,20 +35,20 @@ function p(e) {
       var i;
       let r = f(t, n);
       if (null != c.Z.getWaitingHighFive(n, t)) return;
-      let [o, a] = null !== (i = Object.entries(N).find(e => {
+      let [o, a] = null !== (i = Object.entries(A).find(e => {
         let [t] = e;
         return t !== r
       })) && void 0 !== i ? i : [];
-      if (null != o && null != a) a.cancel(), O.play(), delete N[o], (0, _.Ym)(o.split(":")[0], t, n, e);
+      if (null != o && null != a) a.cancel(), O.play(), delete A[o], (0, _.Ym)(o.split(":")[0], t, n, e);
       else {
         (0, _._g)(e, t, n), m.play();
         let i = new s.sW(I, () => {
-          delete N[t], (0, _.Gd)(t, n)
+          delete A[t], (0, _.Gd)(t, n)
         });
-        N[t] = i, i.delay()
+        A[t] = i, i.delay()
       }
     }(t.name, i, n);
-    i === o && (A = [...A, t.name].slice(-1 * h), r().isEqual(A, T) ? (m.play(), S.stop(), A = [], (0, _.ME)(!l)) : S.start(E, () => A = []))
+    i === o && (N = [...N, t.name].slice(-1 * h), r().isEqual(N, T) ? (m.play(), S.stop(), N = [], (0, _.ME)(!l)) : S.start(E, () => N = []))
   }
 }
 
@@ -58,13 +58,13 @@ function R(e) {
     waitingUserId: n,
     channelId: i
   } = e, r = f("".concat(t).concat(n), i, !0);
-  N[r] = new s.sW(550, () => {
-    delete N[r], (0, _.hu)(t, n, i)
-  }), N[r].delay()
+  A[r] = new s.sW(550, () => {
+    delete A[r], (0, _.hu)(t, n, i)
+  }), A[r].delay()
 }
 class g extends o.Z {
   _terminate() {
-    Object.values(N).forEach(e => e.cancel()), N = {}
+    Object.values(A).forEach(e => e.cancel()), A = {}
   }
   constructor(...e) {
     var t, n, i;

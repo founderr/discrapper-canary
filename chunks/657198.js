@@ -52,7 +52,7 @@ function S(e, t, n) {
         children: s
       });
     case "applicationCommandOption":
-      return (0, i.jsx)(A, {
+      return (0, i.jsx)(N, {
         attributes: r,
         channelId: n,
         element: o,
@@ -62,15 +62,15 @@ function S(e, t, n) {
       return null
   }
 }
-let A = e => {
+let N = e => {
   let t, {
       channelId: n,
       element: s,
       attributes: E,
       children: S
     } = e,
-    A = (0, a.vt)(),
-    N = (0, a.UE)(),
+    N = (0, a.vt)(),
+    A = (0, a.UE)(),
     m = (0, a._7)(),
     {
       optionType: O,
@@ -86,8 +86,8 @@ let A = e => {
     g = s.children[s.children.length - 1],
     C = null != g && T.LC.isText(g) && g.text.endsWith("\n"),
     v = o()(f.inlineElement, f.optionPill, {
-      [f.selectedPill]: N && A,
-      [f.erroredPill]: (!N || !A) && p
+      [f.selectedPill]: A && N,
+      [f.erroredPill]: (!A || !N) && p
     }),
     L = r.useCallback(() => {
       !T.bN.isVoid(m, s) && I.Q.selectCommandOption(m, s.optionName, !0)
