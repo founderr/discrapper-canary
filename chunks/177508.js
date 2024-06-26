@@ -34,11 +34,29 @@ function E() {
         className: r()("theme-light", c.section),
         children: e
       })]
-    }), (0, n.jsx)(u, {})]
+    }), (0, n.jsx)(u, {}), (0, n.jsx)(T, {})]
   })
 }
 
 function u() {
+  return (0, n.jsxs)("div", {
+    className: c.shinyButtonExamples,
+    children: [(0, n.jsx)(l.ShinyButton, {
+      size: l.Button.Sizes.MEDIUM,
+      shineSize: l.ShinyButton.ShineSizes.SMALL,
+      onClick: () => {},
+      children: "Shiny Button"
+    }), (0, n.jsx)(l.ShinyButton, {
+      size: l.Button.Sizes.MEDIUM,
+      shineSize: l.ShinyButton.ShineSizes.SMALL,
+      onlyShineOnHover: !0,
+      onClick: () => {},
+      children: "Shine on Hover"
+    })]
+  })
+}
+
+function T() {
   let [e, s] = a.useState(null), [t, i] = a.useState(null), [r, d] = a.useState([]), [_, E] = a.useState([]), [u, T] = a.useState([]);
   return (0, n.jsxs)("div", {
     className: c.searchableSelectExamples,

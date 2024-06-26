@@ -1,16 +1,17 @@
 n(47120);
-var i = n(735250),
-  l = n(470079),
-  r = n(120356),
-  a = n.n(r),
-  s = n(748780),
-  o = n(846519),
-  c = n(585483),
-  u = n(981631),
-  d = n(689938),
-  h = n(97124);
+var i, l = n(735250),
+  r = n(470079),
+  a = n(120356),
+  s = n.n(a),
+  o = n(748780),
+  c = n(846519),
+  u = n(481060),
+  d = n(585483),
+  h = n(981631),
+  p = n(689938),
+  _ = n(97124);
 
-function p(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,18 +19,18 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = {
+let g = {
   friction: 15,
   tension: 100
 };
-class f extends l.PureComponent {
+class m extends(i = r.PureComponent) {
   componentDidMount() {
     this.setState({
       shown: !0
-    }), c.S.subscribe(u.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
+    }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
   }
   componentWillUnmount() {
-    this.focusTimeout.stop(), c.S.unsubscribe(u.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
+    this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus)
   }
   componentDidUpdate() {
     let {
@@ -38,48 +39,51 @@ class f extends l.PureComponent {
     !e && this.springTo(0)
   }
   springTo(e) {
-    s.Z.spring(this.state.translateY, {
+    let {
+      reducedMotion: t
+    } = this.context;
+    !0 !== t.enabled && o.Z.spring(this.state.translateY, {
       toValue: Math.min(e, 250),
-      ..._
+      ...g
     }).start()
   }
   renderArrowGroup(e) {
-    return (0, i.jsxs)("div", {
-      className: a()(h.arrowGroup, e),
-      children: [(0, i.jsx)(s.Z.div, {
-        className: a()(h.arrowContainer, h.horizontal),
+    return (0, l.jsxs)("div", {
+      className: s()(_.arrowGroup, e),
+      children: [(0, l.jsx)(o.Z.div, {
+        className: s()(_.arrowContainer, _.horizontal),
         style: this.getStyle(),
-        children: (0, i.jsx)("img", {
+        children: (0, l.jsx)("img", {
           alt: "",
           src: n(403756),
-          className: h.arrowIcon
+          className: _.arrowIcon
         })
-      }), (0, i.jsx)("div", {
-        className: a()(h.arrowContainer, h.diag1),
-        children: (0, i.jsx)("img", {
+      }), (0, l.jsx)("div", {
+        className: s()(_.arrowContainer, _.diag1),
+        children: (0, l.jsx)("img", {
           alt: "",
           src: n(536404),
-          className: h.arrowIcon
+          className: _.arrowIcon
         })
-      }), (0, i.jsx)("div", {
-        className: a()(h.arrowContainer, h.diag2),
-        children: (0, i.jsx)("img", {
+      }), (0, l.jsx)("div", {
+        className: s()(_.arrowContainer, _.diag2),
+        children: (0, l.jsx)("img", {
           alt: "",
           src: n(569347),
-          className: h.arrowIcon
+          className: _.arrowIcon
         })
       })]
     })
   }
   renderContent() {
-    return (0, i.jsxs)("div", {
-      className: h.tutorialMessages,
-      children: [(0, i.jsx)("div", {
-        className: h.searchMessage,
-        children: d.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SEARCH
-      }), (0, i.jsx)("div", {
-        className: h.selectMessage,
-        children: d.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SELECT
+    return (0, l.jsxs)("div", {
+      className: _.tutorialMessages,
+      children: [(0, l.jsx)("div", {
+        className: _.searchMessage,
+        children: p.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SEARCH
+      }), (0, l.jsx)("div", {
+        className: _.selectMessage,
+        children: p.Z.Messages.QUICKSWITCHER_TUTORIAL_MESSAGE_SELECT
       })]
     })
   }
@@ -89,17 +93,21 @@ class f extends l.PureComponent {
     } = this.props, {
       shown: t
     } = this.state;
-    return (0, i.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       ref: this.rootRef,
-      className: a()(h.tutorial, {
-        [h.shown]: t,
-        [h.hasQuery]: e
+      className: s()(_.tutorial, {
+        [_.shown]: t,
+        [_.hasQuery]: e
       }),
-      children: [this.renderContent(), this.renderArrowGroup(h.__invalid_left), this.renderArrowGroup(h.right)]
+      children: [this.renderContent(), this.renderArrowGroup(_.__invalid_left), this.renderArrowGroup(_.right)]
     })
   }
   getStyle() {
-    return {
+    let {
+      reducedMotion: e
+    } = this.context;
+    return !0 === e.enabled ? {} : {
+      opacity: 1,
       transform: [{
         translateY: this.state.translateY.interpolate({
           inputRange: [0, 250],
@@ -111,10 +119,10 @@ class f extends l.PureComponent {
     }
   }
   constructor(...e) {
-    super(...e), p(this, "state", {
+    super(...e), f(this, "state", {
       shown: !1,
-      translateY: new s.Z.Value(0)
-    }), p(this, "rootRef", l.createRef()), p(this, "focusTimeout", new o.V7), p(this, "handleResultFocus", e => {
+      translateY: new o.Z.Value(0)
+    }), f(this, "rootRef", r.createRef()), f(this, "focusTimeout", new c.V7), f(this, "handleResultFocus", e => {
       let {
         node: t
       } = e;
@@ -131,4 +139,4 @@ class f extends l.PureComponent {
     })
   }
 }
-t.Z = f
+f(m, "contextType", u.AccessibilityPreferencesContext), t.Z = m
