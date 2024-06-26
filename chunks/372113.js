@@ -262,7 +262,7 @@ t.Z = e => {
     else return 0
   }(t), g = f >= 1, x = f >= 3, O = f >= 4, D = (0, C.Xv)(t.config), y = (0, M.uq)(n), k = n === p.jn.QUESTS_EMBED, G = r || _, {
     xboxAndPlaystationAccounts: F
-  } = (0, N.z6)(), w = (0, N.t5)(t, L.dr.QUESTS_CARD), V = g && !O && y, H = F.length > 0, Y = (0, c.e7)([E.default], () => E.default.locale), W = y && D, z = l && !x, K = (0, s.jsx)(R.Z, {
+  } = (0, N.z6)(), w = (0, N.t5)(t, L.dr.QUESTS_CARD, n), V = g && !O && y, H = F.length > 0, Y = (0, c.e7)([E.default], () => E.default.locale), W = y && D, z = l && !x, K = (0, s.jsx)(R.Z, {
     autoplay: a,
     className: o()(b.gridImg, {
       [b.questRewardGiftInventory]: y && "lg" === i,

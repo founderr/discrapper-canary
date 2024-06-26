@@ -85,7 +85,7 @@ t.Z = e => {
     ref: F,
     width: w,
     scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, p.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, x.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, O.dr.QUESTS_CARD), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, p.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, x.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, O.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"

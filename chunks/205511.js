@@ -12,8 +12,8 @@ var o = n(735250),
   m = n(497505),
   x = n(918701),
   g = n(566078),
-  f = n(667105),
-  C = n(585857),
+  C = n(667105),
+  f = n(585857),
   h = n(693900),
   _ = n(46140),
   E = n(689938),
@@ -53,14 +53,14 @@ function v(e) {
   let {
     quest: t,
     useReducedMotion: n
-  } = e, [r, a] = s.useState([]), i = (0, f.g2)({
+  } = e, [r, a] = s.useState([]), i = (0, C.g2)({
     useReducedMotion: n,
     className: S.microphoneUnitRefreshIcon
   }), c = async () => {
     i.startAnimation(), a((await (0, u.CS)(t.id)).errorHints), i.stopAnimation()
   }, {
     header: p,
-    renderBody: C
+    renderBody: f
   } = s.useMemo(() => {
     let e = r.length > 0,
       n = () => (0, o.jsx)("div", {
@@ -121,7 +121,7 @@ function v(e) {
         },
         children: i.render()
       })]
-    }), C()]
+    }), f()]
   })
 }
 
@@ -145,7 +145,7 @@ t.Z = function(e) {
     steps: d,
     hasConnectedAccounts: u,
     isProgressingQuestForLaunchedGame: m,
-    isQuestComplete: f
+    isQuestComplete: C
   } = s.useMemo(() => {
     var e;
     let n = a.xboxAndPlaystationAccounts.length > 0,
@@ -155,8 +155,9 @@ t.Z = function(e) {
       c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
     return {
       steps: [{
-        renderContent: () => (0, o.jsx)(C.Q, {
-          ...a
+        renderContent: () => (0, o.jsx)(f.Q, {
+          ...a,
+          quest: t
         }),
         isComplete: n || s || c
       }, {
@@ -197,7 +198,7 @@ t.Z = function(e) {
             hasNextStep: t < d.length - 1,
             children: e.renderContent()
           }, t))
-        }), u && !m && !f && (0, o.jsx)(v, {
+        }), u && !m && !C && (0, o.jsx)(v, {
           useReducedMotion: n,
           quest: t
         })]
