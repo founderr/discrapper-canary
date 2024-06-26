@@ -546,19 +546,17 @@ function eu(e) {
     onClickSubtitle: p,
     ...m
   } = e, {
-    entry: _,
-    channel: f
-  } = m, E = (0, V.d)(_), g = (0, v.ZP)({
+    entry: _
+  } = m, f = (0, V.d)(_), E = (0, v.ZP)({
     location: "ContentPopout",
-    applicationId: E ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0
-  }) && E ? () => {
+    applicationId: f ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0
+  }) && f ? () => {
     (0, h.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("7613"), n.e("55799")]).then(n.bind(n, 644941));
       return t => (0, i.jsx)(e, {
         applicationId: _.extra.application_id,
-        channel: f,
         ...t
       })
     })
@@ -572,7 +570,7 @@ function eu(e) {
       children: [(0, i.jsx)("div", {
         className: et.popoutThumbnailContainer,
         children: (0, i.jsx)(ec, {
-          onClick: g,
+          onClick: E,
           children: (0, i.jsx)(X.f, {
             size: 72,
             alt: s,
@@ -586,7 +584,7 @@ function eu(e) {
         horizontal: !0
       }), (0, i.jsxs)("div", {
         children: [(0, i.jsx)(ec, {
-          onClick: null != d ? d : g,
+          onClick: null != d ? d : E,
           children: (0, i.jsx)(h.Heading, {
             variant: "heading-md/medium",
             className: et.popoutTextPrimary,
@@ -594,7 +592,7 @@ function eu(e) {
             children: r
           })
         }), null != o ? (0, i.jsx)(ec, {
-          onClick: null != p ? p : g,
+          onClick: null != p ? p : E,
           children: (0, i.jsx)(h.Text, {
             variant: "text-md/normal",
             className: et.popoutTextSecondary,
