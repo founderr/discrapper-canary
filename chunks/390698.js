@@ -33,7 +33,7 @@ let l = e => {
         })
       }), (0, r.jsx)(o.Text, {
         variant: "text-md/semibold",
-        children: s.Z.Messages.COLLECTIBLES_ALREADY_OWNED
+        children: s.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
       })]
     })
   }) : (0, r.jsx)(o.Text, {
