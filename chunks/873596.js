@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return I
+    return N
   }
 }), n(47120);
 var i = n(735250),
@@ -10,13 +10,15 @@ var i = n(735250),
   s = n(19780),
   o = n(362446),
   c = n(153124),
-  u = n(441894),
-  d = n(160038),
-  h = n(586646),
-  p = n(689938),
-  _ = n(228233);
+  u = n(571826),
+  d = n(441894),
+  h = n(160038),
+  p = n(586646),
+  _ = n(760373),
+  f = n(689938),
+  g = n(228233);
 
-function f(e) {
+function m(e) {
   let {
     lobbyId: t,
     connectionTypeText: n,
@@ -29,14 +31,14 @@ function f(e) {
     pings: o.Z.getPings(),
     outboundLossRate: o.Z.getOutboundLossRate(t)
   }));
-  return (0, i.jsx)(d.Z, {
+  return (0, i.jsx)(h.Z, {
     ...a,
     closePopout: l,
     connectionTypeText: n
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     closePopout: t,
     connectionTypeText: n
@@ -48,65 +50,72 @@ function g(e) {
     outboundLossRate: s.Z.getOutboundLossRate(),
     pings: s.Z.getPings()
   }));
-  return (0, i.jsx)(d.Z, {
+  return (0, i.jsx)(h.Z, {
     ...l,
     closePopout: t,
     connectionTypeText: n
   })
 }
 
-function m(e) {
+function I(e) {
   let {
     channelId: t,
     isOverlay: n,
     lobbyId: l,
     closePopout: r
-  } = e, a = (0, u.J)({
+  } = e, a = (0, d.J)({
     channelId: t,
     location: "RTCConnectionDebugPanelContainer"
-  }) ? p.Z.Messages.E2EE_END_TO_END_ENCRYPTED : p.Z.Messages.SECURE_CONNECTION;
-  return n ? (0, i.jsx)(f, {
+  }) ? f.Z.Messages.E2EE_END_TO_END_ENCRYPTED : f.Z.Messages.SECURE_CONNECTION;
+  return n ? (0, i.jsx)(m, {
     lobbyId: l,
     closePopout: r,
     connectionTypeText: a
-  }) : (0, i.jsx)(g, {
+  }) : (0, i.jsx)(C, {
     closePopout: r,
     connectionTypeText: a
   })
 }
 
-function C(e) {
-  let [t, n] = l.useState("rtc_debug_panel"), r = (0, c.Dt)(), s = l.useMemo(() => {
+function E(e) {
+  let [t, n] = l.useState(_.tu.RTC_DEBUG_PANEL), r = (0, c.Dt)(), s = l.useMemo(() => {
     switch (t) {
-      case "rtc_debug_panel":
-        return (0, i.jsx)(m, {
+      case _.tu.RTC_DEBUG_PANEL:
+        return (0, i.jsx)(I, {
           ...e
         });
-      case "rtc_secure_frames":
-        return (0, i.jsx)(h.Z, {})
+      case _.tu.RTC_SECURE_FRAMES:
+        return (0, i.jsx)(p.Z, {
+          channelId: e.channelId
+        })
     }
   }, [e, t]);
-  return (0, i.jsxs)("div", {
-    className: _.container,
+  return l.useEffect(() => {
+    (0, u.sN)({
+      channelId: e.channelId,
+      selectedTab: t
+    })
+  }, [e.channelId, t]), (0, i.jsxs)("div", {
+    className: g.container,
     children: [(0, i.jsx)(a.Heading, {
-      className: _.title,
+      className: g.title,
       variant: "heading-lg/bold",
       color: "header-primary",
-      children: p.Z.Messages.E2EE_VOICE_DETAILS
+      children: f.Z.Messages.E2EE_VOICE_DETAILS
     }), (0, i.jsxs)(a.TabBar, {
-      className: _.tabs,
+      className: g.tabs,
       selectedItem: t,
       type: "top",
       look: "brand",
       onItemSelect: n,
       children: [(0, i.jsx)(a.TabBar.Item, {
-        id: "rtc_debug_panel",
-        className: _.tabBarItem,
-        children: p.Z.Messages.E2EE_CONNECTION
+        id: _.tu.RTC_DEBUG_PANEL,
+        className: g.tabBarItem,
+        children: f.Z.Messages.E2EE_CONNECTION
       }), (0, i.jsx)(a.TabBar.Item, {
-        id: "rtc_secure_frames",
-        className: _.tabBarItem,
-        children: p.Z.Messages.E2EE_PRIVACY
+        id: _.tu.RTC_SECURE_FRAMES,
+        className: g.tabBarItem,
+        children: f.Z.Messages.E2EE_PRIVACY
       })]
     }), (0, i.jsx)(a.TabBar.Panel, {
       id: t,
@@ -116,17 +125,17 @@ function C(e) {
   })
 }
 
-function I(e) {
-  return (0, u.J)({
+function N(e) {
+  return (0, d.J)({
     channelId: e.channelId,
     location: "RTCConnectionPopout"
-  }) ? (0, i.jsx)(C, {
+  }) ? (0, i.jsx)(E, {
     ...e
   }) : (0, i.jsx)("div", {
-    className: _.debugPanelStandalone,
+    className: g.debugPanelStandalone,
     children: (0, i.jsx)("section", {
-      className: _.debugPanelSection,
-      children: (0, i.jsx)(m, {
+      className: g.debugPanelSection,
+      children: (0, i.jsx)(I, {
         ...e
       })
     })

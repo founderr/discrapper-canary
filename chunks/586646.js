@@ -1,65 +1,72 @@
 n.d(t, {
   Z: function() {
-    return p
+    return f
   }
 });
-var i = n(735250);
-n(470079);
-var l = n(442837),
-  r = n(481060),
-  a = n(19780),
-  s = n(436055),
-  o = n(785792),
-  c = n(190054),
-  u = n(760373),
-  d = n(689938),
-  h = n(294903);
+var i = n(735250),
+  l = n(470079),
+  r = n(442837),
+  a = n(481060),
+  s = n(19780),
+  o = n(571826),
+  c = n(436055),
+  u = n(785792),
+  d = n(190054),
+  h = n(760373),
+  p = n(689938),
+  _ = n(294903);
 
-function p() {
-  let e = (0, l.e7)([a.Z], () => {
-      var e;
-      return null === (e = a.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator
-    }),
-    t = (0, s.E)({
-      codeBase64: e,
-      chunkSize: u.y6,
-      desiredLength: u.YP
-    });
+function f(e) {
+  let {
+    channelId: t
+  } = e, n = (0, r.e7)([s.Z], () => {
+    var e;
+    return null === (e = s.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator
+  }), f = (0, c.E)({
+    codeBase64: n,
+    chunkSize: h.y6,
+    desiredLength: h.YP
+  }), g = l.useCallback(() => {
+    (0, o.PM)({
+      channelId: t
+    })
+  }, [t]);
   return (0, i.jsxs)("div", {
-    className: h.container,
+    className: _.container,
     children: [(0, i.jsxs)("div", {
-      className: h.tag,
-      children: [(0, i.jsx)(r.LockIcon, {
+      className: _.tag,
+      children: [(0, i.jsx)(a.LockIcon, {
         size: "xxs",
-        color: r.tokens.colors.STATUS_POSITIVE
-      }), (0, i.jsx)(r.Text, {
+        color: a.tokens.colors.STATUS_POSITIVE
+      }), (0, i.jsx)(a.Text, {
         variant: "text-xs/medium",
         color: "status-positive",
-        children: d.Z.Messages.E2EE_END_TO_END_ENCRYPTED
+        children: p.Z.Messages.E2EE_END_TO_END_ENCRYPTED
       })]
-    }), (0, i.jsx)(r.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-xs/normal",
       color: "text-secondary",
-      children: d.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
+      children: p.Z.Messages.E2EE_RTC_PANEL_CALL_VERIFICATION_SUBTITLE
     }), (0, i.jsxs)("div", {
-      className: h.header,
-      children: [(0, i.jsx)(r.Heading, {
+      className: _.header,
+      children: [(0, i.jsx)(a.Heading, {
         variant: "text-sm/bold",
         color: "header-primary",
-        children: d.Z.Messages.E2EE_VOICE_PRIVACY_CODE
-      }), null != t && (0, i.jsx)(c.H, {
-        chunks: t,
-        color: r.tokens.colors.INTERACTIVE_NORMAL.css
+        children: p.Z.Messages.E2EE_VOICE_PRIVACY_CODE
+      }), null != f && (0, i.jsx)(d.H, {
+        chunks: f,
+        color: a.tokens.colors.INTERACTIVE_NORMAL.css,
+        onCopy: g
       })]
-    }), null != t && (0, i.jsx)(o.b, {
-      className: h.code,
-      chunks: t,
-      columns: u.WK
-    }), (0, i.jsx)(r.Text, {
+    }), null != f && (0, i.jsx)(u.b, {
+      className: _.code,
+      chunks: f,
+      columns: h.WK
+    }), (0, i.jsx)(a.Text, {
       variant: "text-xs/normal",
       color: "text-secondary",
-      children: d.Z.Messages.E2EE_CALL_VERIFICATION_FOOTER_TEXT.format({
-        helpArticle: u.l4
+      children: p.Z.Messages.E2EE_CALL_VERIFICATION_FOOTER_TEXT.format({
+        helpArticle: h.l4
       })
     })]
   })

@@ -1,44 +1,48 @@
-var i, r;
+var i, r, u, l;
 t.d(n, {
   $J: function() {
-    return l
+    return o
   },
   HK: function() {
-    return I
+    return N
   },
   KN: function() {
-    return E
+    return I
   },
   WK: function() {
-    return s
+    return E
   },
   YP: function() {
-    return d
-  },
-  ak: function() {
-    return _
-  },
-  iQ: function() {
     return c
   },
-  l4: function() {
-    return u
+  ak: function() {
+    return T
   },
-  s9: function() {
+  iQ: function() {
+    return _
+  },
+  l4: function() {
     return a
   },
+  s9: function() {
+    return d
+  },
+  tu: function() {
+    return r
+  },
   y6: function() {
-    return o
+    return s
   }
 });
-let u = "",
-  l = "",
-  a = "",
-  o = 5,
-  d = 30,
-  s = 3,
-  c = 5,
-  E = 60,
-  _ = 4;
-(r = i || (i = {})).MATCH = "match", r.OTHER_USER_ALREADY_VERIFIED = "other_user_already_verified", r.MISMATCH = "mismatch", r.UNABLE_TO_VERIFY = "unable_to_verify", r.OTHER_USER_DISCONNECTED = "other_user_disconnected", r.CURRENT_USER_DISCONNECTED = "current_user_disconnected";
-let I = 100
+let a = "",
+  o = "",
+  d = "",
+  s = 5,
+  c = 30,
+  E = 3,
+  _ = 5,
+  I = 60,
+  T = 4;
+(u = i || (i = {})).MATCH = "match", u.OTHER_USER_ALREADY_VERIFIED = "other_user_already_verified", u.MISMATCH = "mismatch", u.UNABLE_TO_VERIFY = "unable_to_verify", u.OTHER_USER_DISCONNECTED = "other_user_disconnected", u.CURRENT_USER_DISCONNECTED = "current_user_disconnected";
+let N = 100;
+(l = r || (r = {})).RTC_DEBUG_PANEL = "rtc_debug_panel", l.RTC_SECURE_FRAMES = "rtc_secure_frames"
