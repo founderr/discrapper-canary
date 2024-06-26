@@ -400,6 +400,8 @@ class eA extends r.PureComponent {
   componentDidUpdate(e) {
     e.defaultGuildsRestricted !== this.props.defaultGuildsRestricted && this.setState({
       defaultGuildsRestricted: this.props.defaultGuildsRestricted
+    }), null != this.props.subsection && e.subsection !== this.props.subsection && this.setState({
+      selectedTab: this.props.subsection
     })
   }
   showGuildRestrictionModal(e) {
@@ -800,36 +802,30 @@ class eA extends r.PureComponent {
   render() {
     let {
       safetyHubFetchError: e,
-      subsection: s,
-      guildPrivacySettingsEnabled: t,
-      searchFilter: n,
-      isSecureFramesEnabled: a
+      guildPrivacySettingsEnabled: s,
+      searchFilter: t,
+      isSecureFramesEnabled: n
     } = this.props, {
-      selectedTab: r
-    } = this.state;
-    null != s && this.setState({
-      selectedTab: s
-    });
-    let o = e => s => s === e,
-      c = !1;
-    null != n && null == n.find(o(ea.s6.PRIVACY_USER_SETTINGS)) && null != n.find(o(ea.s6.PRIVACY_ACCOUNT_STANDING)) && (this.setState({
+      selectedTab: a
+    } = this.state, r = e => s => s === e, o = !1;
+    null != t && null == t.find(r(ea.s6.PRIVACY_USER_SETTINGS)) && null != t.find(r(ea.s6.PRIVACY_ACCOUNT_STANDING)) && (this.setState({
       selectedTab: er.SU.ACCOUNT_STANDING
-    }), c = !0);
-    let d = r === er.SU.ACCOUNT_STANDING && null != e;
+    }), o = !0);
+    let c = a === er.SU.ACCOUNT_STANDING && null != e;
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsxs)(S.TabBar, {
         className: el.settingsTabBar,
         "aria-label": eo.Z.Messages.SAFETY_HUB_PAGE_TITLE,
-        selectedItem: r,
+        selectedItem: a,
         type: "top",
         look: "brand",
         onItemSelect: this.handleTabSelect,
-        children: [c ? null : (0, i.jsx)(S.TabBar.Item, {
+        children: [o ? null : (0, i.jsx)(S.TabBar.Item, {
           className: el.settingsTabBarItem,
           id: er.SU.SETTINGS,
           "aria-label": eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
           children: eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS
-        }), t && !c ? (0, i.jsx)(S.TabBar.Item, {
+        }), s && !o ? (0, i.jsx)(S.TabBar.Item, {
           className: el.settingsTabBarItem,
           id: er.SU.GUILD_SETTINGS,
           "aria-label": eo.Z.Messages.PRIVACY_AND_SAFETY_GUILD_TAB_TITLE,
@@ -839,20 +835,20 @@ class eA extends r.PureComponent {
           id: er.SU.ACCOUNT_STANDING,
           "aria-label": eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
           children: eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2
-        }), a ? (0, i.jsx)(S.TabBar.Item, {
+        }), n ? (0, i.jsx)(S.TabBar.Item, {
           className: el.settingsTabBarItem,
           id: er.SU.ENCRYPTION,
           "aria-label": eo.Z.Messages.E2EE_ENCRYPTION,
           children: eo.Z.Messages.E2EE_ENCRYPTION
         }) : null]
       }), (0, i.jsx)(S.TabBar.Panel, {
-        id: r,
+        id: a,
         "aria-labelledby": (0, H.hQ)(),
         className: l()(el.contentPanel, {
-          [el.contentPanelNagbar]: d
+          [el.contentPanelNagbar]: c
         }),
         children: (0, i.jsx)("div", {
-          children: this.SETTINGS_TABS[r]()
+          children: this.SETTINGS_TABS[a]()
         })
       })]
     })
@@ -928,13 +924,14 @@ class eA extends r.PureComponent {
       })
     });
     let {
-      defaultGuildsRestricted: s
+      defaultGuildsRestricted: s,
+      subsection: t
     } = e;
     this.state = {
       defaultGuildsRestricted: s,
       currentHarvestRequest: null,
       requestingHarvest: !0,
-      selectedTab: er.SU.SETTINGS
+      selectedTab: null != t ? t : er.SU.SETTINGS
     }
   }
 }
