@@ -7,8 +7,8 @@ var a = n(735250);
 n(470079);
 var i = n(828214),
   l = n(481060),
-  s = n(239091),
-  u = n(299206),
+  u = n(239091),
+  s = n(299206),
   o = n(519110),
   r = n(695346),
   c = n(572004),
@@ -24,18 +24,18 @@ function E(e) {
     id: M,
     name: S,
     isInExpressionPicker: !0
-  }), Z = null != g && (0, a.jsx)(i.sN, {
+  }), Z = null != g ? (0, a.jsx)(i.sN, {
     id: "copy",
     label: d.Z.Messages.COPY_EMOJI,
     action: () => (0, c.JG)(g)
-  }), C = (0, u.Z)({
+  }) : null, C = (0, s.Z)({
     id: M,
     shiftId: E === I.S.EMOJI ? "<".concat(b ? "a" : "", ":").concat(null == S ? void 0 : S.split("~")[0], ":").concat(M, ">") : void 0,
     label: E === I.S.STICKER ? d.Z.Messages.COPY_ID_STICKER : d.Z.Messages.COPY_ID_EMOJI
   });
   return (0, a.jsx)(l.Menu, {
     navId: "expression-picker",
-    onClose: s.Zy,
+    onClose: u.Zy,
     "aria-label": d.Z.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
     onSelect: n,
     className: "context-menu",
