@@ -53,14 +53,14 @@ let Z = a.forwardRef(function() {
         analyticsLocations: o
       }
     }),
-    A = (0, u.Z)(n),
-    P = (0, u.Z)(Z),
-    h = (0, I.Z7)(),
+    h = (0, u.Z)(n),
+    A = (0, u.Z)(Z),
+    P = (0, I.Z7)(),
     {
       analyticsLocations: M
     } = (0, b.ZP)(d.Z.USER_SETTINGS);
   a.useEffect(() => {
-    if (!!(null != n && (n !== A || Z !== P))) ! function(e) {
+    if (!!(null != n && (n !== h || Z !== A))) ! function(e) {
       let {
         destinationPane: t,
         originPane: n = null,
@@ -80,13 +80,13 @@ let Z = a.forwardRef(function() {
       })
     }({
       destinationPane: n,
-      originPane: null != A ? A : null,
+      originPane: null != h ? h : null,
       source: B,
       subsection: Z,
       locationStack: G,
-      searchQuery: "" !== h ? h : null
+      searchQuery: "" !== P ? P : null
     })
-  }, [n, A, Z, P, B, G, h]);
+  }, [n, h, Z, A, B, G, P]);
   let x = (0, N.eA)({
       location: "user_settings"
     }),
@@ -117,7 +117,8 @@ let Z = a.forwardRef(function() {
         onClose: i.xf,
         sections: H,
         isEligibleForPomelo: w,
-        questsForBadge: y
+        questsForBadge: y,
+        isUserSettingsSearchEnabled: x
       })
     })
   })

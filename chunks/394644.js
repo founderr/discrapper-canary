@@ -31,8 +31,8 @@ var n = t(470079),
   I = t(725727),
   N = t(977156),
   C = t(237292),
-  A = t(314897),
-  m = t(283595),
+  m = t(314897),
+  A = t(283595),
   O = t(663389),
   g = t(594174),
   h = t(202527),
@@ -47,7 +47,7 @@ var n = t(470079),
 function P(e) {
   let s = [{
       header: L.Z.Messages.USER_SETTINGS,
-      settings: [D.s6.SEARCH_BAR, D.s6.ACCOUNT, D.s6.GAMES, D.s6.PROFILE_CUSTOMIZATION, D.s6.PRIVACY_AND_SAFETY, D.s6.PRIVACY_FAMILY_CENTER, D.s6.AUTHORIZED_APPS, D.s6.SESSIONS, D.s6.CONNECTIONS, D.s6.CLIPS, D.s6.FRIEND_REQUESTS]
+      settings: [D.s6.ACCOUNT, D.s6.GAMES, D.s6.PROFILE_CUSTOMIZATION, D.s6.PRIVACY_AND_SAFETY, D.s6.PRIVACY_FAMILY_CENTER, D.s6.AUTHORIZED_APPS, D.s6.SESSIONS, D.s6.CONNECTIONS, D.s6.CLIPS, D.s6.FRIEND_REQUESTS]
     }, {
       header: L.Z.Messages.BILLING_SETTINGS,
       divider: !0,
@@ -109,7 +109,7 @@ function Z() {
     location: "UserSettingsInventory"
   }, {
     autoTrackExposure: !0
-  }), y = (0, a.e7)([m.Z], () => m.Z.hasLibraryApplication()), Y = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), H = (0, E.Z)();
+  }), y = (0, a.e7)([A.Z], () => A.Z.hasLibraryApplication()), Y = (0, a.e7)([m.default], () => m.default.hasTOTPEnabled()), H = (0, E.Z)();
   return (0, R.i)({
     unseenGiftCount: t,
     showPrepaidPaymentPastDueWarning: n,
@@ -210,7 +210,7 @@ function b(e, s) {
         ...s[e],
         tabPredicate: () => {
           var s, t, a;
-          return null == n || (s = e, t = n, a = o, s === D.s6.SEARCH_BAR || s === D.s6.SEARCH_NO_RESULTS && 0 === t.size || a.has(s) || t.has(s))
+          return null == n || (s = e, t = n, a = o, s === D.s6.SEARCH_NO_RESULTS && 0 === t.size || a.has(s) || t.has(s))
         },
         searchFilterCount: !t || (null == n ? void 0 : n.has(e)) ? void 0 : o.get(e)
       })
@@ -238,7 +238,7 @@ function U(e) {
         location: "settings"
       }), s = P(e);
       return n.useMemo(() => [{
-        header: L.Z.Messages.USER_SETTINGS,
+        header: L.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
         settings: [...s.map(e => {
           let {
             settings: s

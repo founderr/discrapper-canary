@@ -1,37 +1,38 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return l
+    return a
   }
 });
-var n = t(735250),
-  a = t(470079),
-  i = t(461745),
-  r = t(128277),
-  o = t(689938);
+var i = n(735250),
+  s = n(470079),
+  l = n(461745),
+  r = n(128277),
+  o = n(689938);
 
-function l() {
-  let e = (0, r.Z7)(),
-    s = a.useCallback((e, s) => {
-      s.stopPropagation(), s.preventDefault(), (0, r.QH)(e)
-    }, []),
-    t = a.useCallback(() => {
-      (0, r.QH)(!1), (0, r.yN)("")
-    }, []);
-  return (0, n.jsx)("div", {
+function a(e) {
+  let {
+    style: t
+  } = e, n = (0, r.Z7)(), a = s.useCallback((e, t) => {
+    t.stopPropagation(), t.preventDefault(), (0, r.QH)(e)
+  }, []), c = s.useCallback(() => {
+    (0, r.QH)(!1), (0, r.yN)("")
+  }, []);
+  return (0, i.jsx)("div", {
     style: {
       marginBottom: "8px"
     },
-    children: (0, n.jsx)(i.ZP, {
-      size: i.ZP.Sizes.MEDIUM,
-      query: e,
-      onClear: t,
+    children: (0, i.jsx)(l.ZP, {
+      size: l.ZP.Sizes.MEDIUM,
+      query: n,
+      onClear: c,
       onQueryChange: r.yN,
       placeholder: o.Z.Messages.SEARCH,
+      className: t,
       inputProps: {
         "aria-label": o.Z.Messages.USER_SETTINGS_SEARCH_BAR,
         "aria-expanded": !0,
-        onFocus: e => s(!0, e),
-        onBlur: e => s(!1, e)
+        onFocus: e => a(!0, e),
+        onBlur: e => a(!1, e)
       }
     })
   })
