@@ -17527,6 +17527,8 @@ e.exports = Object.freeze({
   GAME_PROFILE_GAME_ICON_ALT: "Game icon for {game}",
   GAME_PROFILE_GAME_ARTWORK_ALT: "Game artwork for {game}",
   GAME_PROFILE_GUILD_ICON_ALT: "Icon for the {guildName} discord server",
+  GAME_PROFILE_GAME_REACT_REPLY_ALT: "Preview of {userName}'s activity playing {gameName}",
+  GAME_PROFILE_USER_AVATAR_ALT: "{userName}'s Discord avatar.",
   LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER: "Non-refundable. By clicking pay, you agree to our [Paid Services Terms]({paidURL})",
   LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE: "There was a problem with your payment",
   LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION: "Recheck your payment information, then try again.",

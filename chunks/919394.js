@@ -19,8 +19,8 @@ var l = t(512722),
   _ = t(706454),
   f = t(594174),
   T = t(70956),
-  m = t(709054),
-  v = t(561308),
+  v = t(709054),
+  m = t(561308),
   N = t(206295),
   x = t(737583),
   I = t(438226),
@@ -43,34 +43,34 @@ let M = (e, n) => ({
         iconPath: g.NM,
         text: n
       }],
-      l = m.default.extractTimestamp(e.extra.application_id);
+      l = v.default.extractTimestamp(e.extra.application_id);
     if (7 >= o()().diff(o()(l), "days") && t.push({
         iconPath: g.As,
         text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
-      }), (0, v.Ol)(e) && t.push({
+      }), (0, m.Ol)(e) && t.push({
         iconPath: g.fO,
         text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
-      }), (0, v.q_)(e)) {
-      let n = (0, v.vU)(e);
+      }), (0, m.q_)(e)) {
+      let n = (0, m.vU)(e);
       t.push({
         iconPath: g.t1,
         text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
           days: n
         })
       })
-    }(0, v.ig)(e) === i.o.GLOBAL && t.push({
+    }(0, m.ig)(e) === i.o.GLOBAL && t.push({
       iconPath: g.Op,
       text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
     });
-    let a = (0, v.dw)(e);
+    let a = (0, m.dw)(e);
     if (null != a && t.push({
         iconPath: g.Z,
-        text: (0, v.GE)(a)
-      }), (0, v.V5)(e) && t.push({
+        text: (0, m.GE)(a)
+      }), (0, m.V5)(e) && t.push({
         iconPath: g.Md,
-        text: (0, v.kr)(e) ? (0, v.z5)(e) : (0, v.nB)(e)
-      }), (0, v.Jd)(e)) {
-      let n = (0, v.yA)(e);
+        text: (0, m.kr)(e) ? (0, m.z5)(e) : (0, m.nB)(e)
+      }), (0, m.Jd)(e)) {
+      let n = (0, m.yA)(e);
       if (null != n) {
         let e = h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
           hours: Math.round(n / T.Z.Seconds.HOUR)
@@ -184,36 +184,41 @@ let M = (e, n) => ({
         channelId: i
       }
     })
-  }, Z = async (e, n) => {
-    let t = e.extra.game_name,
-      l = u.Z.getApplication(e.extra.application_id),
-      r = null == l ? void 0 : l.getIconURL(128),
-      o = f.default.getUser(e.author_id);
-    a()(null != o, "Author must not be null"), await (0, c.vM)(null != r ? r : "");
-    let i = [null == o ? void 0 : o.getAvatarURL(n.guild_id, 128)],
-      s = M(i, r),
-      T = _.default.locale,
-      m = (0, v.yh)(e, T),
-      {
-        primaryColor: x,
-        secondaryColor: g
-      } = (0, N.w)(null != r ? r : ""),
-      h = (0, I.HV)(e, n, o);
-    return await (0, E.f)({
-      assetsToLoad: s,
-      drawImage: n => C(n, {
-        timestamp: m,
-        colors: [x, g],
-        description: h,
-        entry: e,
-        numAvatars: i.length
-      }),
-      exportConfigs: {
-        format: d.kH.CloudUpload,
-        quality: 1,
-        fileName: "user-reacting-to-".concat(t, ".png").toLowerCase(),
-        fileType: "png",
-        channelId: n.id
-      }
-    })
+  };
+async function Z(e, n, t) {
+  let l = e.extra.game_name,
+    r = u.Z.getApplication(e.extra.application_id),
+    o = null == r ? void 0 : r.getIconURL(128),
+    i = f.default.getUser(e.author_id);
+  a()(null != i, "Author must not be null"), await (0, c.vM)(null != o ? o : "");
+  let s = [null == i ? void 0 : i.getAvatarURL(n.guild_id, 128)],
+    T = M(s, o),
+    v = _.default.locale,
+    x = (0, m.yh)(e, v),
+    {
+      primaryColor: g,
+      secondaryColor: h
+    } = (0, N.w)(null != o ? o : ""),
+    A = (0, I.HV)(e, n, i),
+    R = {
+      format: t,
+      quality: 1,
+      fileName: "user-reacting-to-".concat(l, ".png").toLowerCase(),
+      fileType: "png"
+    };
+  if (t === d.kH.CloudUpload) {
+    var Z;
+    R.channelId = null !== (Z = n.id) && void 0 !== Z ? Z : ""
   }
+  return await (0, E.f)({
+    assetsToLoad: T,
+    drawImage: n => C(n, {
+      timestamp: x,
+      colors: [g, h],
+      description: A,
+      entry: e,
+      numAvatars: s.length
+    }),
+    exportConfigs: R
+  })
+}

@@ -116,12 +116,14 @@ t.Z = function(e) {
       }), Y && (0, i.jsx)(I.ZP, {
         showReact: !0,
         showReply: !0,
-        replyHeaderText: M.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
-          activity: t.name
-        }),
-        replyPlaceholder: M.Z.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: "@".concat(n.globalName)
-        }),
+        popoutProps: {
+          replyHeaderText: M.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
+            activity: t.name
+          }),
+          replyPlaceholder: M.Z.Messages.TEXTAREA_PLACEHOLDER.format({
+            channel: "@".concat(n.globalName)
+          })
+        },
         onInteraction: e => {
           let {
             interactionType: i,

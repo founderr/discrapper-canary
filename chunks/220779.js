@@ -34,15 +34,16 @@ let N = (0, E.kt)({
       onEnter: s,
       showPopout: u,
       children: _,
-      hide: c
-    } = e, d = (0, l.ZP)();
+      body: c,
+      hide: d
+    } = e, E = (0, l.ZP)();
     return (0, i.jsx)(a.Popout, {
       align: "right",
       position: "bottom",
       shouldShow: u,
       disablePointerEvents: !1,
       renderPopout: () => (0, i.jsx)("div", {
-        className: o()([S.reply, "theme-".concat(d)]),
+        className: o()([S.reply, "theme-".concat(E)]),
         ref: t,
         children: (0, i.jsx)(a.FocusLock, {
           containerRef: t,
@@ -51,9 +52,9 @@ let N = (0, E.kt)({
               variant: "text-xs/bold",
               className: S.replyHeader,
               children: null != r ? r : f.Z.Messages.CHAT
-            }), (0, i.jsx)(m, {
+            }), c, (0, i.jsx)(m, {
               onEnter: e => {
-                s(e), c()
+                s(e), d()
               },
               placeholder: null != n ? n : f.Z.Messages.CHAT
             })]
@@ -182,15 +183,18 @@ let O = (e, t) => {
 t.ZP = e => {
   let {
     onInteraction: t,
-    replyHeaderText: n,
-    replyPlaceholder: s,
-    showReact: l = !0,
-    showReply: u = !0
-  } = e, [_, c] = r.useState(!1), d = r.useRef(null);
-  return O(() => c(!1), d), (0, i.jsx)(i.Fragment, {
+    showReact: n = !0,
+    showReply: s = !0,
+    popoutProps: l = {}
+  } = e, {
+    replyHeaderText: u,
+    replyPlaceholder: _,
+    popoutBody: c
+  } = l, [d, E] = r.useState(!1), I = r.useRef(null);
+  return O(() => E(!1), I), (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: S.reactions,
-      children: [l && (0, i.jsx)(p, {
+      children: [n && (0, i.jsx)(p, {
         onSelectEmoji: e => {
           null != e && t({
             interactionType: T.L.ReactSubmit,
@@ -203,14 +207,15 @@ t.ZP = e => {
             interactionType: T.L.ReactBegin,
             emoji: null,
             reply: null
-          }), c(!1)
+          }), E(!1)
         }
-      }), u && (0, i.jsx)(A, {
-        hide: () => c(!1),
-        ref: d,
-        headerText: n,
-        placeholder: s,
-        showPopout: _,
+      }), s && (0, i.jsx)(A, {
+        hide: () => E(!1),
+        ref: I,
+        headerText: u,
+        placeholder: _,
+        showPopout: d,
+        body: c,
         onEnter: e => {
           t({
             interactionType: T.L.ReplySubmit,
@@ -228,7 +233,7 @@ t.ZP = e => {
                 interactionType: T.L.ReplyBegin,
                 emoji: null,
                 reply: null
-              }), c(!0)
+              }), E(!0)
             },
             children: (0, i.jsx)(a.ArrowAngleLeftUpIcon, {})
           })
