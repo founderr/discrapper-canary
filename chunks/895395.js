@@ -1,9 +1,9 @@
 n.d(t, {
   Z: function() {
-    return y
+    return L
   },
   d: function() {
-    return D
+    return O
   }
 }), n(47120);
 var i = n(735250),
@@ -21,94 +21,117 @@ var i = n(735250),
   m = n(792125),
   x = n(867176),
   I = n(115130),
-  h = n(566620),
+  f = n(566620),
+  h = n(520599),
   _ = n(127255),
-  f = n(880308),
-  T = n(451576),
-  C = n(439934),
-  E = n(701488),
-  S = n(981631),
-  j = n(689938),
-  N = n(644620),
-  M = n(497263);
-let A = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-  Z = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-  b = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+  T = n(880308),
+  C = n(451576),
+  E = n(439934),
+  S = n(701488),
+  j = n(981631),
+  N = n(689938),
+  M = n(644620),
+  A = n(497263),
+  b = n(932463);
+let Z = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+  y = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+  D = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
-function y(e) {
+function L(e) {
   let {
     channel: t,
     guildId: n,
     locationObject: l,
     onClose: r,
     onActivityItemVisible: c,
-    scrollerRef: E
-  } = e, [y, D] = a.useState(0), L = (0, _.Z)({
+    scrollerRef: S
+  } = e, [L, O] = a.useState(0), B = (0, _.Z)({
     guildId: n,
     enableFilter: !0,
     channel: t
-  }), O = (0, o.e7)([v.default], () => v.default.getCurrentUser()), B = (0, o.e7)([p.Z], () => p.Z.getGuild(n), [n]), {
-    analyticsLocations: V
-  } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY), R = (0, T.Z)(null == t ? void 0 : t.id), k = (0, x.vp)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
-    isDeveloperActivityShelfEnabled: H,
-    filter: F
+  }), V = (0, o.e7)([v.default], () => v.default.getCurrentUser()), R = (0, o.e7)([p.Z], () => p.Z.getGuild(n), [n]), {
+    analyticsLocations: k
+  } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY), H = (0, C.Z)(null == t ? void 0 : t.id), P = (0, x.vp)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
+    enableAmazonMusicShelfPoster: F
+  } = h.p.useExperiment({
+    location: "ActivitiesShelf"
+  }, {
+    autoTrackExposure: !0
+  }), {
+    isDeveloperActivityShelfEnabled: U,
+    filter: Y
   } = (0, o.cj)([I.Z], () => ({
     filter: I.Z.getFilter(),
     isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
   }));
   if (a.useEffect(() => {
-      let e = E.current;
+      let e = S.current;
       if (null != e) return e.addEventListener("scroll", t, !1), () => {
         if (null != e) e.removeEventListener("scroll", t, !1)
       };
 
       function t() {
         var e, t;
-        D(null !== (t = null === (e = E.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
+        O(null !== (t = null === (e = S.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
       }
-    }, [E]), a.useEffect(() => {
-      (R || null != n) && (0, h.w1)({
+    }, [S]), a.useEffect(() => {
+      (H || null != n) && (0, f.w1)({
         guildId: n,
         force: !0
       })
-    }, [n, R]), (0, f.g)(), null == B && !R || null == O) return null;
-  let P = L.length > 0;
+    }, [n, H]), (0, T.g)(), null == R && !H || null == V) return null;
+  let w = B.length > 0;
   return (0, i.jsx)(g.Gt, {
-    value: V,
+    value: k,
     children: (0, i.jsxs)("div", {
-      className: N.scrollContainer,
-      children: [P ? (0, i.jsx)("div", {
-        className: N.scrollBackgroundContainer,
+      className: M.scrollContainer,
+      children: [w ? (0, i.jsx)("div", {
+        className: M.scrollBackgroundContainer,
         style: {
-          top: -y
+          top: -L
         },
         children: (0, i.jsx)("div", {
-          className: s()(N.scrollTierBackground),
+          className: s()(M.scrollTierBackground),
           style: {
             height: (e => {
               let t = 1 === e.length;
-              return A + Math.ceil(e.length / 2) * (t ? b : Z)
-            })(L)
+              return Z + Math.ceil(e.length / 2) * (t ? D : y)
+            })(B)
           }
         })
       }) : null, (0, i.jsxs)(d.Scroller, {
-        ref: E,
-        className: N.scroller,
+        ref: S,
+        className: M.scroller,
         children: [function() {
-          if (k) {
-            let e = j.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITIES_AVAILABLE_IN_TEXT,
+          if (F) {
+            let e = N.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT;
+            return (0, i.jsxs)(i.Fragment, {
+              children: [(0, i.jsx)("div", {
+                className: M.poster,
+                children: (0, i.jsx)("img", {
+                  className: M.posterBackground,
+                  src: b,
+                  alt: e
+                })
+              }), (0, i.jsx)("div", {
+                className: M.posterDivider
+              })]
+            })
+          }
+          if (P) {
+            let e = N.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITIES_AVAILABLE_IN_TEXT,
               t = Math.min(Math.max(Math.ceil(1660 / e.length), 32), 48);
             return (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsxs)("div", {
-                className: N.poster,
+                className: M.poster,
                 children: [(0, i.jsx)("img", {
-                  className: N.posterBackground,
-                  src: M,
+                  className: M.posterBackground,
+                  src: A,
                   alt: e
                 }), (0, i.jsx)("div", {
-                  className: N.posterTextParent,
+                  className: M.posterTextParent,
                   children: (0, i.jsx)(d.Text, {
-                    className: s()((0, m.Q)(S.BRd.DARK), N.posterText),
+                    className: s()((0, m.Q)(j.BRd.DARK), M.posterText),
                     variant: "display-sm",
                     style: {
                       fontSize: t
@@ -117,17 +140,17 @@ function y(e) {
                   })
                 })]
               }), (0, i.jsx)("div", {
-                className: N.posterDivider
+                className: M.posterDivider
               })]
             })
           }
           return null
-        }(), P ? (0, i.jsx)("div", {
-          className: N.scrollSection,
+        }(), w ? (0, i.jsx)("div", {
+          className: M.scrollSection,
           children: (0, i.jsx)("div", {
-            className: s()(N.shelf),
-            children: L.map(e => (0, i.jsx)(C.Z, {
-              large: 1 === L.length,
+            className: s()(M.shelf),
+            children: B.map(e => (0, i.jsx)(E.Z, {
+              large: 1 === B.length,
               activityItem: e,
               channel: t,
               guildId: n,
@@ -139,14 +162,14 @@ function y(e) {
               }
             }, "activity-shelf-item-".concat(e.application.id)))
           })
-        }) : H && F.length > 0 ? (0, i.jsx)(d.Text, {
+        }) : U && Y.length > 0 ? (0, i.jsx)(d.Text, {
           variant: "text-md/normal",
-          className: N.filterError,
-          children: j.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
-            filter: F
+          className: M.filterError,
+          children: N.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
+            filter: Y
           })
         }) : (0, i.jsx)("div", {
-          className: N.spinnerContainer,
+          className: M.spinnerContainer,
           children: (0, i.jsx)(d.Spinner, {})
         })]
       })]
@@ -154,11 +177,11 @@ function y(e) {
   })
 }
 
-function D() {
+function O() {
   return (0, i.jsx)(d.Text, {
     variant: "text-sm/normal",
-    children: j.Z.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({
-      surveyURL: E.Es
+    children: N.Z.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({
+      surveyURL: S.Es
     })
   })
 }
