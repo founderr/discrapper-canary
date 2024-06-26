@@ -1,34 +1,31 @@
 "use strict";
 n.d(t, {
-  U5: function() {
-    return a
-  },
-  Vx: function() {
-    return _
-  },
-  qW: function() {
-    return u
-  },
-  qs: function() {
-    return o
-  },
-  ul: function() {
+  NR: function() {
     return s
   },
-  vt: function() {
+  Ob: function() {
     return l
+  },
+  ZI: function() {
+    return o
+  },
+  m1: function() {
+    return u
+  },
+  uc: function() {
+    return a
   }
 });
 var i = n(987170),
   r = n(987338);
 let s = (0, i.Z)({
     kind: "user",
-    id: "2024-06_ctp_app_open_vanilla",
-    label: "CTP app open - A/A test - Vanilla",
+    id: "2024-06_ctp_voice_call_vanilla",
+    label: "CTP voice call - A/A test - Vanilla",
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.POST_CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.VOICE_CALL,
     treatments: [{
       id: 1,
       label: "Treatment",
@@ -39,12 +36,12 @@ let s = (0, i.Z)({
   }),
   o = (0, i.Z)({
     kind: "user",
-    id: "2024-06_ctp_app_open_filters",
-    label: "CTP app open - A/A test - Filters",
+    id: "2024-06_ctp_voice_call_filters",
+    label: "CTP voice call - A/A test - Filters",
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.POST_CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.VOICE_CALL,
     treatments: [{
       id: 1,
       label: "Treatment",
@@ -55,12 +52,12 @@ let s = (0, i.Z)({
   }),
   a = (0, i.Z)({
     kind: "user",
-    id: "2024-06_ctp_app_open_multiple_buckets",
-    label: "CTP app open - A/A test - Multiple buckets",
+    id: "2024-06_ctp_voice_call_multiple_buckets",
+    label: "CTP voice call - A/A test - Multiple buckets",
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.POST_CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.VOICE_CALL,
     treatments: [{
       id: 1,
       label: "Treatment 1",
@@ -77,12 +74,12 @@ let s = (0, i.Z)({
   }),
   l = (0, i.Z)({
     kind: "user",
-    id: "2024-06_ctp_app_open_everyone",
-    label: "CTP app open - A/A test - Everyone",
+    id: "2024-06_ctp_voice_call_everyone",
+    label: "CTP voice call - A/A test - Everyone",
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.POST_CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.VOICE_CALL,
     treatments: [{
       id: 1,
       label: "Treatment",
@@ -93,27 +90,12 @@ let s = (0, i.Z)({
   }),
   u = (0, i.Z)({
     kind: "user",
-    id: "2024-06_ctp_app_open_uneven_buckets",
-    label: "CTP app open - A/A test - Uneven buckets",
+    id: "2024-06_ctp_voice_call_uneven_buckets",
+    label: "CTP voice call - A/A test - Uneven buckets",
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.POST_CONNECTION_OPEN,
-    treatments: [{
-      id: 1,
-      label: "Treatment",
-      config: {
-        doSomething: !0
-      }
-    }]
-  }),
-  _ = (0, i.Z)({
-    kind: "user",
-    id: "2024-06_ctp_delta_vanilla",
-    label: "CTP Delta Vanilla - A/A test",
-    defaultConfig: {
-      doSomething: !1
-    },
+    commonTriggerPoint: r.$P.VOICE_CALL,
     treatments: [{
       id: 1,
       label: "Treatment",
