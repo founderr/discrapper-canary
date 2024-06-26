@@ -156,7 +156,7 @@ class w extends(i = l.PureComponent) {
         isStreaming: n,
         showHangStatus: i
       } = this.props;
-      (n || i) && (null == t || t(e.id))
+      (n || i) && !this.state.userPopoutOpen && (null == t || t(e.id))
     }), D(this, "handleHoverHangStatus", e => {
       let {
         previewIsOpen: t
@@ -196,7 +196,7 @@ class w extends(i = l.PureComponent) {
       (0, h.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
+        } = await Promise.all([n.e("79695"), n.e("17400"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
         return n => (0, a.jsx)(e, {
           ...n,
           user: i,
