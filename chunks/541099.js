@@ -4,11 +4,15 @@ var i, r, s, o, a = n(442837),
   u = n(827498);
 let _ = {
   show: !1,
-  entrypoint: u._b.NONE
+  entrypoint: u._b.NONE,
+  closeReason: u.ti.DISMISSED
 };
 
-function c() {
-  return _.show = !1, _.entrypoint = u._b.NONE, !0
+function c(e) {
+  let {
+    closeReason: t = u.ti.DISMISSED
+  } = e;
+  return _.show = !1, _.entrypoint = u._b.NONE, _.closeReason = t, !0
 }
 class d extends(o = a.ZP.Store) {
   initialize() {}
@@ -21,6 +25,21 @@ class d extends(o = a.ZP.Store) {
   entrypoint() {
     return _.entrypoint
   }
+  closeReason() {
+    return _.closeReason
+  }
+}
+
+function E() {
+  c({
+    closeReason: u.ti.DISMISSED
+  })
+}
+
+function I() {
+  c({
+    closeReason: u.ti.COMMAND
+  })
 }
 s = "AppLauncherStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
@@ -32,12 +51,12 @@ s = "AppLauncherStore", (r = "displayName") in(i = d) ? Object.defineProperty(i,
     let {
       entrypoint: t
     } = e;
-    return _.show = !0, _.entrypoint = t, !0
+    return _.show = !0, _.entrypoint = t, _.closeReason = u.ti.DISMISSED, !0
   },
   APP_LAUNCHER_DISMISS: c,
-  CONNECTION_OPEN: c,
-  LOGOUT: c,
-  CHANNEL_SELECT: c,
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: c,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: c
+  CONNECTION_OPEN: E,
+  LOGOUT: E,
+  CHANNEL_SELECT: E,
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: I,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: I
 })

@@ -13,7 +13,7 @@ var i = n(735250),
   m = n(840884);
 t.Z = a.memo(a.forwardRef(function(e, t) {
   let [n, l] = a.useState(!1), _ = (0, r.e7)([u.Z], () => u.Z.shouldShowPopup()), f = a.useCallback(() => {
-    _ ? c.y() : c._(d._b.TEXT)
+    _ ? c.y(d.ti.DISMISSED) : c._(d._b.TEXT)
   }, [_]), E = () => {
     l(!0)
   }, g = () => {

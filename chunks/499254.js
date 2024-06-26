@@ -16,8 +16,9 @@ function r(e) {
   })
 }
 
-function s() {
+function s(e) {
   i.Z.dispatch({
-    type: "APP_LAUNCHER_DISMISS"
+    type: "APP_LAUNCHER_DISMISS",
+    closeReason: e
   })
 }

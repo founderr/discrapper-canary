@@ -4,10 +4,10 @@ n.d(t, {
     return i
   },
   kA: function() {
-    return v
+    return M
   },
   qR: function() {
-    return L
+    return P
   }
 }), n(411104);
 var i, r, s = n(735250),
@@ -18,18 +18,21 @@ var i, r, s = n(735250),
   _ = n(542094),
   c = n(778569),
   d = n(182906),
-  E = n(220082),
-  I = n(318661),
-  T = n(792125),
-  h = n(783097),
-  f = n(695676),
-  S = n(176412),
-  N = n(753972),
-  A = n(231338),
-  m = n(689938),
-  O = n(599632);
+  E = n(367907),
+  I = n(220082),
+  T = n(318661),
+  h = n(792125),
+  f = n(541099),
+  S = n(783097),
+  N = n(695676),
+  A = n(176412),
+  m = n(753972),
+  O = n(981631),
+  p = n(231338),
+  R = n(689938),
+  g = n(599632);
 
-function p(e) {
+function C(e) {
   let {
     application: t,
     look: n = "large_banner",
@@ -40,52 +43,52 @@ function p(e) {
   } = e, {
     iconURL: c,
     name: d,
-    description: I
-  } = o.useMemo(() => (0, h.sl)(t, {
+    description: E
+  } = o.useMemo(() => (0, S.sl)(t, {
     botIconFirst: !0
-  }), [t]), f = (0, E.ZP)(c, "");
+  }), [t]), T = (0, I.ZP)(c, "");
   return "icon" === n ? (0, s.jsx)(u.Clickable, {
-    className: l()(O.container, O.iconCard),
+    className: l()(g.container, g.iconCard),
     onClick: r,
-    children: null != c && (0, s.jsx)(N.Z, {
+    children: null != c && (0, s.jsx)(m.Z, {
       src: c,
-      className: O.iconCard,
+      className: g.iconCard,
       "aria-hidden": !0
     })
   }) : (0, s.jsxs)(u.Clickable, {
-    className: O.container,
+    className: g.container,
     onClick: r,
     children: [(0, s.jsxs)("div", {
-      className: l()(O.bannerImageContainer, {
-        [O.mediumBanner]: "medium_banner" === n,
-        [O.largeBanner]: "large_banner" === n
+      className: l()(g.bannerImageContainer, {
+        [g.mediumBanner]: "medium_banner" === n,
+        [g.largeBanner]: "large_banner" === n
       }),
       children: [(0, s.jsx)("span", {
         className: a,
-        children: (0, s.jsx)(R, {
+        children: (0, s.jsx)(v, {
           application: t,
-          fallbackColor: f
+          fallbackColor: T
         })
       }), i && (0, s.jsx)("div", {
-        className: O.partnerLabelWrapper,
+        className: g.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, T.Q)(A.BR.DARK),
+          className: (0, h.Q)(p.BR.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
-          children: m.Z.Messages.APP_DIRECTORY_PARTNER
+          children: R.Z.Messages.APP_DIRECTORY_PARTNER
         })
       }), "large_banner" === n || "medium_banner" === n ? (0, s.jsx)("div", {
-        className: O.bannerImageChildContainer,
+        className: g.bannerImageChildContainer,
         children: _
       }) : null]
     }), (0, s.jsxs)("div", {
-      className: O.appDetailsContainer,
-      children: [null != c && (0, s.jsx)(N.Z, {
+      className: g.appDetailsContainer,
+      children: [null != c && (0, s.jsx)(m.Z, {
         src: c,
-        className: O.icon,
+        className: g.icon,
         "aria-hidden": !0
       }), (0, s.jsxs)("div", {
-        className: O.appDetails,
+        className: g.appDetails,
         children: [(0, s.jsx)(u.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
@@ -95,37 +98,37 @@ function p(e) {
           variant: "text-sm/normal",
           color: "text-secondary",
           lineClamp: 1,
-          children: I
+          children: E
         })]
       })]
     })]
   })
 }
 
-function R(e) {
+function v(e) {
   let {
     application: t,
     fallbackColor: n
   } = e;
-  if ((0, h.BQ)(t)) {
-    if ((0, h.ye)({
+  if ((0, S.BQ)(t)) {
+    if ((0, S.ye)({
         application: t
-      })) return (0, s.jsx)(g, {
+      })) return (0, s.jsx)(L, {
       application: t
     });
-    if (null != t.bot) return (0, s.jsx)(C, {
+    if (null != t.bot) return (0, s.jsx)(D, {
       bot: t.bot
     })
   }
   return (0, s.jsx)("div", {
-    className: O.bannerImage,
+    className: g.bannerImage,
     style: {
       backgroundColor: n
     }
   })
 }
 
-function g(e) {
+function L(e) {
   let {
     application: t
   } = e, n = (0, c.Z)({
@@ -136,76 +139,95 @@ function g(e) {
   return (0, s.jsx)(d.Z, {
     imageBackground: n,
     applicationName: t.name,
-    imageClassName: O.bannerImage,
-    imageNotFoundClassName: O.bannerImage
+    imageClassName: g.bannerImage,
+    imageNotFoundClassName: g.bannerImage
   })
 }
 
-function C(e) {
+function D(e) {
   let {
     bot: t
-  } = e, n = (0, I.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
+  } = e, n = (0, T.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
     canAnimate: !1,
     size: 600
   }), [n]);
   return (0, s.jsx)("img", {
     src: i,
     alt: "",
-    className: O.bannerImage
+    className: g.bannerImage
   })
-}
+}(r = i || (i = {})).ICON = "icon", r.NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner";
 
-function v(e) {
-  let {
-    pushHistory: t
-  } = (0, f.hH)();
-  return (0, s.jsx)(p, {
-    ...e,
-    onClick: n => {
-      n.stopPropagation(), t({
-        type: f.gc.APPLICATION,
-        application: e.application
+function M(e) {
+  let t = function(e) {
+    let {
+      application: t,
+      sectionName: n,
+      resultsPosition: i,
+      query: r,
+      installOnDemand: s
+    } = e, {
+      pushHistory: a
+    } = (0, N.hH)();
+    return o.useCallback(e => {
+      e.stopPropagation(), (0, E.yw)(O.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+        application_id: t.id,
+        section_name: n,
+        search_results_position: i,
+        source: f.Z.entrypoint(),
+        location,
+        query: r
+      }), a({
+        type: N.gc.APPLICATION,
+        application: t,
+        installOnDemand: s,
+        sectionName: n
       })
-    }
+    }, [t, s, a, r, i, n])
+  }(e);
+  return (0, s.jsx)(C, {
+    ...e,
+    onClick: t
   })
 }
 
-function L(e) {
+function P(e) {
   let {
     channel: t,
     application: n,
-    sectionName: i,
-    ...r
+    location: i,
+    sectionName: r,
+    ...o
   } = e;
-  if (!(0, h.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
+  if (!(0, S.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
   let {
-    onActivityItemSelected: o,
-    activityAction: a,
-    buttonColor: l,
-    buttonText: c
-  } = (0, S.P)(t, n, i);
-  return a === _.JS.START ? (0, s.jsx)(p, {
-    ...r,
+    onActivityItemSelected: a,
+    activityAction: l,
+    buttonColor: c,
+    buttonText: d
+  } = (0, A.P)(t, n, i, r);
+  return l === _.JS.START ? (0, s.jsx)(C, {
+    ...o,
     application: n,
-    onClick: o
-  }) : (0, s.jsx)(p, {
-    ...r,
+    onClick: a
+  }) : (0, s.jsx)(C, {
+    ...o,
     application: n,
     onClick: e => {
       e.stopPropagation()
     },
-    bannerImageStyle: O.darkenBannerImage,
+    bannerImageStyle: g.darkenBannerImage,
     children: (0, s.jsx)("div", {
-      className: O.voiceLauncherAppCardContainer,
+      className: g.voiceLauncherAppCardContainer,
       children: (0, s.jsx)(u.Button, {
-        className: O.voiceLauncherAppCardButton,
+        className: g.voiceLauncherAppCardButton,
         type: "submit",
         size: u.Button.Sizes.LARGE,
-        color: l,
+        color: c,
         disabled: !1,
-        onClick: o,
-        children: c
+        onClick: a,
+        children: d
       })
     })
   })
-}(r = i || (i = {})).ICON = "icon", r.NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner"
+}

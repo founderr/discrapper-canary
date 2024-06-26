@@ -31,23 +31,31 @@ function T(e) {
     initialValues: s,
     location: o,
     triggerSection: a,
-    queryLength: l
-  } = e, u = I(n);
-  if ((null == i ? void 0 : i.id) === (null === (t = u.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
-  u.activeCommand = i, u.activeCommandSection = r, u.activeOptionName = null, u.preferredCommandId = null, u.initialValues = null != s ? s : {};
-  let _ = {};
+    queryLength: l,
+    sectionName: u,
+    query: _,
+    searchResultsPosition: d,
+    source: E
+  } = e, T = I(n);
+  if ((null == i ? void 0 : i.id) === (null === (t = T.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
+  T.activeCommand = i, T.activeCommandSection = r, T.activeOptionName = null, T.preferredCommandId = null, T.initialValues = null != s ? s : {};
+  let h = {};
   return (null == i ? void 0 : i.options) != null && i.options.forEach(e => {
-    _[e.name] = {
+    h[e.name] = {
       isActive: !1,
       hasValue: !1,
       lastValidationResult: null,
       optionValue: null
     }
-  }), u.optionStates = _, null != i && (0, c.qJ)({
+  }), T.optionStates = h, null != i && (0, c.qJ)({
     command: i,
     location: o,
     triggerSection: a,
-    queryLength: l
+    queryLength: l,
+    sectionName: u,
+    query: _,
+    searchResultsPosition: d,
+    source: E
   }), !0
 }
 

@@ -33,7 +33,8 @@ function d(e) {
   if (h && f) {
     null != t && (0, l.Z)({
       openInPopout: _,
-      channel: t
+      channel: t,
+      analyticsLocation: N
     });
     return
   }

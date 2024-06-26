@@ -318,7 +318,8 @@ function U(e) {
     queryLength: o,
     sectionName: a,
     query: l,
-    searchResultsPosition: u
+    searchResultsPosition: u,
+    source: _
   } = e;
   (0, c.yw)(f.rMx.APPLICATION_COMMAND_SELECTED, {
     command_id: null !== (n = null === (t = i.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : i.id,
@@ -329,6 +330,7 @@ function U(e) {
     command_text_length: i.displayName.length,
     section_name: a,
     query: l,
-    search_results_position: u
+    search_results_position: u,
+    source: _
   })
 }

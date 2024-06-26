@@ -38,7 +38,11 @@ function E(e) {
     location: s,
     initialValues: a,
     triggerSection: l,
-    queryLength: u
+    queryLength: u,
+    sectionName: _,
+    query: d,
+    searchResultsPosition: E,
+    source: I
   } = e;
   null != n && r()(n.inputType !== c.iw.PLACEHOLDER, "command should not be placeholder"), o.Z.dispatch({
     type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
@@ -48,7 +52,11 @@ function E(e) {
     initialValues: a,
     location: s,
     triggerSection: l,
-    queryLength: u
+    queryLength: u,
+    sectionName: _,
+    query: d,
+    searchResultsPosition: E,
+    source: I
   })
 }
 
