@@ -13,7 +13,7 @@ var i = n(470079),
 let u = e => !1 === e.themes.includes(r.i.EROTIC) && null != e.summary && e.summary.length > 0,
   _ = e => {
     let t = a.Z.getGame(e);
-    return null != t && !1 === t.themes.includes(r.i.EROTIC) && null != t.summary && t.summary.length > 0
+    return null != t && !1 === t.themes.includes(r.i.EROTIC) && null != t.firstReleaseDate && null != t.coverImageUrl && t.coverImageUrl.length > 0 && null != t.summary && t.summary.length > 0
   };
 t.ZP = e => {
   let {
