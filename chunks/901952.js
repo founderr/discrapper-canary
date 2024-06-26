@@ -70,7 +70,6 @@ function L(e) {
   return h ? (0, i.jsx)(m.Z, {
     fullWidth: !0,
     variant: "text",
-    look: a.Button.Looks.BLANK,
     color: o()(a.Button.Colors.BRAND, R.color),
     onClick: () => {
       T({
