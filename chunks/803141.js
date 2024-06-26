@@ -1,12 +1,13 @@
 "use strict";
-n(47120);
+n(47120), n(653041);
 var i = n(412788),
-  r = n(131681),
-  s = n(932941),
-  o = n(363072),
-  a = n(526761);
+  r = n(594174),
+  s = n(131681),
+  o = n(932941),
+  a = n(363072),
+  l = n(526761);
 
-function l(e, t, n) {
+function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -14,60 +15,64 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let u = null;
-
-function _() {
-  let e = (0, r.U)() ? [...s.pF, ...s.wq, ...s.$u] : [];
-  (u = new o.B).addWords(e)
-}
+let _ = null;
 
 function c() {
-  _()
+  let e = (0, s.U)() ? [...o.pF, ...o.wq, ...o.$u] : [],
+    t = r.default.getCurrentUser();
+  if (null == t ? void 0 : t.isStaff()) {
+    let t = n(932941).Bk;
+    e.push(...t)
+  }(_ = new a.B).addWords(e)
 }
 
 function d() {
-  _()
+  c()
 }
 
-function E(e) {
+function E() {
+  c()
+}
+
+function I(e) {
   let {
     local: t,
     settings: n
   } = e;
-  if (!t || n.type !== a.yP.PRELOADED_USER_SETTINGS) return !1;
-  null != u && u.clear(), _()
+  if (!t || n.type !== l.yP.PRELOADED_USER_SETTINGS) return !1;
+  null != _ && _.clear(), c()
 }
-class I extends i.Z {
+class T extends i.Z {
   loadCache() {
-    let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
-    null != e && (u = null != e.keywordTrie ? o.B.fromSnapshot(e.keywordTrie) : null)
+    let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
+    null != e && (_ = null != e.keywordTrie ? a.B.fromSnapshot(e.keywordTrie) : null)
   }
   takeSnapshot() {
     return {
-      version: I.LATEST_SNAPSHOT_VERSION,
+      version: T.LATEST_SNAPSHOT_VERSION,
       data: {
-        keywordTrie: u
+        keywordTrie: _
       }
     }
   }
   getKeywordTrie() {
-    return u
+    return _
   }
   initializeForKeywordTests() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      null == u && (u = new o.B), u.addWords(e)
+      null == _ && (_ = new a.B), _.addWords(e)
     }(e)
   }
   constructor() {
     super({
-      CONNECTION_OPEN: c,
-      CONNECTION_OPEN_SUPPLEMENTAL: c,
+      CONNECTION_OPEN: d,
+      CONNECTION_OPEN_SUPPLEMENTAL: d,
       CACHE_LOADED: () => this.loadCache(),
-      OVERLAY_INITIALIZE: d,
-      USER_SETTINGS_PROTO_UPDATE: E
+      OVERLAY_INITIALIZE: E,
+      USER_SETTINGS_PROTO_UPDATE: I
     })
   }
 }
-l(I, "displayName", "KeywordFilterStore"), l(I, "LATEST_SNAPSHOT_VERSION", 2), t.Z = new I
+u(T, "displayName", "KeywordFilterStore"), u(T, "LATEST_SNAPSHOT_VERSION", 2), t.Z = new T
