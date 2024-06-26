@@ -1,85 +1,85 @@
-var n, o, a, l, r = t(392711),
-  s = t.n(r),
+var n, a, i, r, o = t(392711),
+  l = t.n(o),
   c = t(213919),
   d = t(442837),
-  u = t(570140);
-let _ = !1,
-  E = [],
-  M = "",
-  A = "",
-  b = !1,
-  C = {
+  _ = t(570140);
+let E = !1,
+  u = [],
+  T = "",
+  S = "",
+  I = !1,
+  N = {
     viewNonce: "",
     regenerateNonce: ""
   };
-class h extends(l = d.ZP.Store) {
+class C extends(r = d.ZP.Store) {
   getVerificationKey() {
-    return M
+    return T
   }
   getBackupCodes() {
-    return E
+    return u
   }
   get togglingSMS() {
-    return _
+    return E
   }
   getNonces() {
-    return C
+    return N
   }
   get emailToken() {
-    return A
+    return S
   }
   get hasSeenBackupPrompt() {
-    return b
+    return I
   }
 }
-a = "MFAStore", (o = "displayName") in(n = h) ? Object.defineProperty(n, o, {
-  value: a,
+i = "MFAStore", (a = "displayName") in(n = C) ? Object.defineProperty(n, a, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[o] = a, i.Z = new h(u.Z, {
+}) : n[a] = i, s.Z = new C(_.Z, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
-      token: i,
+      token: s,
       codes: t
     } = e;
-    void 0 !== i && c.setToken(i), E = t
+    void 0 !== s && c.setToken(s), u = t
   },
   MFA_ENABLE_EMAIL_TOKEN: function(e) {
     let {
-      token: i
+      token: s
     } = e;
-    A = i
+    S = s
   },
   MFA_DISABLE_SUCCESS: function(e) {
     let {
-      token: i
+      token: s
     } = e;
-    c.setToken(i)
+    c.setToken(s)
   },
   MFA_SMS_TOGGLE: function() {
-    _ = !0
+    E = !0
   },
   MFA_SMS_TOGGLE_COMPLETE: function() {
-    _ = !1
+    E = !1
   },
   MFA_CLEAR_BACKUP_CODES: function() {
-    E = []
+    u = []
   },
   MFA_VIEW_BACKUP_CODES: function(e) {
     let {
-      codes: i,
+      codes: s,
       key: t
     } = e;
-    E = s().sortBy(i, "code"), M = t
+    u = l().sortBy(s, "code"), T = t
   },
   MFA_SEND_VERIFICATION_KEY: function(e) {
     let {
-      nonces: i
+      nonces: s
     } = e;
-    C = i
+    N = s
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function() {
-    b = !0
+    I = !0
   }
 })

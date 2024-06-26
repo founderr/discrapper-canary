@@ -1,6 +1,6 @@
 t.r(s), t.d(s, {
   ConnectedPrivacySettings: function() {
-    return m
+    return A
   },
   PrivacySettingSurfaces: function() {
     return n
@@ -9,7 +9,7 @@ t.r(s), t.d(s, {
     return C
   },
   default: function() {
-    return A
+    return m
   }
 }), t(47120);
 var n, a, i = t(735250),
@@ -117,7 +117,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function m(e) {
   let {
     guild: s,
     transitionState: t,
@@ -134,7 +134,7 @@ function A(e) {
       })
     }), (0, i.jsx)(o.ModalContent, {
       className: N.content,
-      children: (0, i.jsx)(m, {
+      children: (0, i.jsx)(A, {
         guild: s,
         ingress: "server_privacy_modal"
       })
@@ -147,7 +147,7 @@ function A(e) {
   })
 }
 
-function m(e) {
+function A(e) {
   let {
     guild: s,
     ingress: t = "server_privacy_modal"
@@ -172,7 +172,7 @@ function m(e) {
       ingress: t,
       guild_id: n
     })
-  }, [n, t]), A = r.useCallback(e => {
+  }, [n, t]), m = r.useCallback(e => {
     let s = new Set((0, E.gl)());
     e ? s.delete(n) : s.add(n), c.zA.updateSetting(Array.from(s)), d.default.track(u.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
       action: T.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
@@ -188,7 +188,7 @@ function m(e) {
     isGuildActivityJoiningRestricted: _,
     handleActivityJoiningRestrictedGuildChange: N,
     isGuildMessageRequestRestricted: o,
-    handleMessageRequestRestrictedGuildChange: A,
+    handleMessageRequestRestrictedGuildChange: m,
     guild: s
   })
 }(a = n || (n = {})).USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety", a.SERVER_PRIVACY_MODAL = "server_privacy_modal"

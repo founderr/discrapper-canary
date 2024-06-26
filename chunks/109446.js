@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(601070),
   h = n(91159),
   p = n(488131),
-  f = n(496675),
-  _ = n(306680),
+  _ = n(496675),
+  f = n(306680),
   g = n(594174),
   m = n(768581),
   C = n(709054),
@@ -27,11 +27,11 @@ var i = n(735250),
 function S(e) {
   let {
     channel: t
-  } = e, r = (0, s.Wu)([d.Z, _.ZP, f.Z], () => {
+  } = e, r = (0, s.Wu)([d.Z, f.ZP, _.Z], () => {
     let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-    return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && f.Z.can(I.Plq.VIEW_CHANNEL, t)).sort((e, t) => {
-      let n = _.ZP.lastMessageId(e.id),
-        i = _.ZP.lastMessageId(t.id);
+    return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && _.Z.can(I.Plq.VIEW_CHANNEL, t)).sort((e, t) => {
+      let n = f.ZP.lastMessageId(e.id),
+        i = f.ZP.lastMessageId(t.id);
       return C.default.compare(n, i)
     }).reverse().value()
   }), c = t.isForumLikeChannel() ? 5 : 3;

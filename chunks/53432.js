@@ -10,8 +10,8 @@ var r = t(442837),
   c = t(153867),
   i = t(857595),
   l = t(607070),
-  u = t(906732),
-  s = t(705262),
+  s = t(906732),
+  u = t(705262),
   d = t(540059),
   _ = t(210887),
   S = t(740492),
@@ -24,7 +24,7 @@ function g() {
   let e = E.jU.useSetting(),
     {
       analyticsLocations: n
-    } = (0, u.ZP)(),
+    } = (0, s.ZP)(),
     {
       theme: t,
       useSystemTheme: g,
@@ -42,7 +42,7 @@ function g() {
       disabled: b,
       checked: g === m.K.ON ? "system" === e : e === t,
       action: () => {
-        (0, s.Yk)({
+        (0, u.Yk)({
           isPersisted: !0,
           analyticsLocations: n,
           themeName: "default ".concat(e)

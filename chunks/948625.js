@@ -8,8 +8,8 @@ n.d(t, {
   }
 });
 var r = n(180650),
-  a = n(44315),
-  i = n(981631),
+  i = n(44315),
+  a = n(981631),
   o = n(689938),
   s = n(994745),
   c = n(341364),
@@ -39,7 +39,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     backgroundStaticSrc: S,
     overflowSrcStatic: v,
     logoSrc: E,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, i.Lq)(a.Ilk.WHITE_100),
     badge: {
       label: T
     },
@@ -55,7 +55,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     overflowSrcAnimatedBackground: d,
     overflowSrcAnimated: l,
     logoSrc: c,
-    textColor: (0, a.Lq)(i.Ilk.BLACK_500),
+    textColor: (0, i.Lq)(a.Ilk.BLACK_500),
     badge: {
       label: L
     },
@@ -68,7 +68,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     backgroundStaticSrc: I,
     backgroundVideoSrc: h,
     logoSrc: x,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, i.Lq)(a.Ilk.WHITE_100),
     badge: {
       label: N
     },
@@ -81,7 +81,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     backgroundStaticSrc: m,
     overflowSrcStatic: b,
     logoSrc: C,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, i.Lq)(a.Ilk.WHITE_100),
     badge: {
       label: O
     },
@@ -94,7 +94,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     backgroundStaticSrc: _,
     backgroundVideoSrc: f,
     logoSrc: g,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, i.Lq)(a.Ilk.WHITE_100),
     badge: {
       label: L
     },
@@ -112,7 +112,7 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     let {
       overflowSrcStatic: n,
       overflowSrcAnimated: r,
-      overflowSrcAnimatedBackground: a
+      overflowSrcAnimatedBackground: i
     } = e;
-    return null == n ? [] : t || null == r ? [n] : null == a ? [r] : [a, r]
+    return null == n ? [] : t || null == r ? [n] : null == i ? [r] : [i, r]
   }

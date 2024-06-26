@@ -3,10 +3,10 @@ t.d(n, {
     return x
   },
   Zb: function() {
-    return m
+    return v
   },
   e$: function() {
-    return v
+    return m
   },
   ll: function() {
     return I
@@ -27,7 +27,7 @@ var a = t(120356),
   f = t(687694),
   T = t(41899);
 
-function m(e) {
+function v(e) {
   let {
     children: n,
     selected: t
@@ -54,7 +54,7 @@ function m(e) {
   })
 }
 
-function v(e) {
+function m(e) {
   let {
     children: n
   } = e;
@@ -98,8 +98,8 @@ function x(e) {
     entry: a,
     maxAvatars: r = 3
   } = e, d = a.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
-    displayParticipants: m,
-    numOtherParticipants: v
+    displayParticipants: v,
+    numOtherParticipants: m
   } = (0, _.Z)(a, r), x = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), I = (0, o.e7)([s.Z], () => {
     var e;
     return (null == x ? void 0 : x.colorRoleId) != null ? null === (e = s.Z.getRole(n, x.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
@@ -110,20 +110,20 @@ function x(e) {
   return (0, l.jsxs)("div", {
     className: T.userSection,
     children: [(0, l.jsx)(N, {
-      users: m,
+      users: v,
       guildId: n
     }), (0, l.jsx)(i.NameWithRole, {
       color: null != g ? g : void 0,
       roleName: I,
       name: h,
       className: T.userName
-    }), v > 0 ? (0, l.jsx)("div", {
+    }), m > 0 ? (0, l.jsx)("div", {
       className: T.additionalParticipantBadge,
       children: (0, l.jsxs)(i.Text, {
         variant: "text-xxs/medium",
         color: "text-normal",
         className: T.additionalParticipantBadgeText,
-        children: ["+", v]
+        children: ["+", m]
       })
     }) : null]
   })

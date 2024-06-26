@@ -1,6 +1,6 @@
 "use strict";
 n(627341);
-var r, a, i = n(735250);
+var r, i, a = n(735250);
 n(470079);
 var o = n(120356),
   s = n.n(o),
@@ -11,21 +11,21 @@ var o = n(120356),
   p = n(884697),
   f = n(689938),
   g = n(833417);
-(a = r || (r = {})).BANNER = "banner", a.MODAL = "modal", a.CARD = "card";
+(i = r || (r = {})).BANNER = "banner", i.MODAL = "modal", i.CARD = "card";
 t.Z = e => {
   let {
     category: t,
     display: n,
     className: r
-  } = e, a = (0, u.ZP)();
+  } = e, i = (0, u.ZP)();
   if (null == t.unpublishedAt) return null;
   let o = (0, p.OT)(t.unpublishedAt);
 
   function _(e) {
-    return (0, i.jsx)(d.TextBadge, {
+    return (0, a.jsx)(d.TextBadge, {
       disableColor: !0,
       text: e,
-      className: s()((0, l.wj)(a) ? g.badgeDark : g.badgeLight, r)
+      className: s()((0, l.wj)(i) ? g.badgeDark : g.badgeLight, r)
     })
   }
   return (0, c.EQ)([n, o > 1]).with(["card", !0], () => null).with(["banner", !0], () => _(f.Z.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({

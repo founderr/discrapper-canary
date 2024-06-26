@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return A
+    return m
   }
 }), t(724458);
 var n = t(735250),
@@ -34,7 +34,7 @@ function C(e) {
   })
 }
 
-function A() {
+function m() {
   let e = (0, o.e7)([d.Z], () => d.Z.getSubsection()),
     s = a.createRef(),
     {
@@ -48,8 +48,8 @@ function A() {
       null == s || null === (t = s.current) || void 0 === t || t.scrollIntoView(!0)
     }
   }, [i, s, e]);
-  let A = u.M0.reduce((e, s) => e || !!t[s], !1),
-    m = {
+  let m = u.M0.reduce((e, s) => e || !!t[s], !1),
+    A = {
       [u.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
       [u.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
       [u.$Z.UPDATES_AND_ANNOUNCEMENTS]: T.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -69,7 +69,7 @@ function A() {
           category: s,
           label: a,
           subLabel: i
-        } = e, r = m[s], o = (0, n.jsx)(C, {
+        } = e, r = A[s], o = (0, n.jsx)(C, {
           label: a(),
           subLabel: i(),
           enabled: t[s],
@@ -86,7 +86,7 @@ function A() {
         setting: T.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
         children: [(0, n.jsx)(l.Button, {
           className: I.marketingUnsubscribeButton,
-          disabled: !A,
+          disabled: !m,
           look: l.ButtonLooks.LINK,
           color: l.ButtonColors.LINK,
           onClick: _.oc,

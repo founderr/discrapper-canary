@@ -18,11 +18,11 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = {
+let _ = {
     PRIMARY: () => !0,
     SECONDARY: () => !0
   },
-  _ = () => (0, i.jsxs)("div", {
+  f = () => (0, i.jsxs)("div", {
     className: h.symbol,
     children: [(0, i.jsx)("div", {
       className: h.symbolBackground
@@ -39,10 +39,10 @@ class g extends l.PureComponent {
       this.setState({
         renderSecondary: !0
       })
-    }, 120), this._doneTimeout = setTimeout(this.done, 1e3), f.PRIMARY()
+    }, 120), this._doneTimeout = setTimeout(this.done, 1e3), _.PRIMARY()
   }
   componentDidUpdate(e, t) {
-    this.state.renderSecondary && !t.renderSecondary && f.SECONDARY()
+    this.state.renderSecondary && !t.renderSecondary && _.SECONDARY()
   }
   componentWillUnmount() {
     clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout)
@@ -196,7 +196,7 @@ class C extends l.PureComponent {
         })
       } else this.setTimeout(this.addSymbol, 750)
     }), p(this, "addSymbol", () => {
-      this.children = [(0, i.jsx)(_, {}, "symbol")], this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3)
+      this.children = [(0, i.jsx)(f, {}, "symbol")], this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3)
     }), p(this, "delayedClose", () => {
       this.props.onClose()
     })

@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(19780),
   h = n(709054),
   p = n(208049),
-  f = n(763296),
-  _ = n(242291),
+  _ = n(763296),
+  f = n(242291),
   g = n(174470),
   m = n(549771),
   C = n(964398),
@@ -34,7 +34,7 @@ function x(e) {
     analyticsSource: T,
     onClose: L
   } = e, A = function(e) {
-    let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
+    let [t, n] = (0, a.Wu)([_.Z], () => [_.Z.getSounds(), _.Z.getFavorites()]);
     return l.useMemo(() => {
       let i = [],
         l = [...e, E.X8],
@@ -47,10 +47,10 @@ function x(e) {
         };
       return l.forEach(e => r(e, !0)), l.forEach(e => r(e, !1)), i
     }, [t, n, e])
-  }((0, m.h)(n, !0)), b = (0, g.j)(), M = l.useRef(null), [R, y] = l.useState(void 0), O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
+  }((0, m.h)(n, !0)), b = (0, g.j)(), M = l.useRef(null), [R, O] = l.useState(void 0), y = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
     analyticsLocations: P
   } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL), j = l.useCallback(e => {
-    (0, _.GN)(e, n.id, P), L()
+    (0, f.GN)(e, n.id, P), L()
   }, [P, n.id, L]);
   l.useEffect(() => {
     p.w(), u.DZ.loadIfNecessary()
@@ -65,13 +65,13 @@ function x(e) {
     properties: {
       source: T,
       guild_id: t,
-      media_session_id: O
+      media_session_id: y
     }
   }, {
     disableTrack: !v
   });
   let D = l.useCallback(e => {
-      M.current = e, y(null == e ? void 0 : e.soundId)
+      M.current = e, O(null == e ? void 0 : e.soundId)
     }, []),
     U = l.useCallback(e => {
       if (null == e) {

@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(797717),
   N = t(546591),
   C = t(626135),
-  A = t(251625),
-  m = t(358085),
+  m = t(251625),
+  A = t(358085),
   O = t(210887),
   g = t(981631),
   h = t(689938),
@@ -28,7 +28,7 @@ var n = t(735250),
 let f = o.ZP.connectStores([O.Z], () => ({
     theme: O.Z.theme
   }))(c.EmptyState),
-  L = (0, m.isWindows)();
+  L = (0, A.isWindows)();
 
 function P(e) {
   let {
@@ -75,19 +75,19 @@ function Z(e) {
     rawGame: t,
     nowPlaying: i = !1,
     isOverride: u
-  } = e, A = (0, o.cj)([T.Z, E.ZP, S.Z], () => (0, E.FZ)(t)), [m, O] = a.useState(!1), [p, D] = a.useState(null !== (s = A.name) && void 0 !== s ? s : "???"), f = r()(x.flexCenter, {
+  } = e, m = (0, o.cj)([T.Z, E.ZP, S.Z], () => (0, E.FZ)(t)), [A, O] = a.useState(!1), [p, D] = a.useState(null !== (s = m.name) && void 0 !== s ? s : "???"), f = r()(x.flexCenter, {
     [R.game]: !i,
     [R.activeGame]: i,
     [M.card]: !i,
-    [R.nowPlaying]: null != A && i
+    [R.nowPlaying]: null != m && i
   });
 
   function P() {
-    d.Z.deleteEntry(A)
+    d.Z.deleteEntry(m)
   }
 
   function Z() {
-    A.name !== p && d.Z.editName(A, p)
+    m.name !== p && d.Z.editName(m, p)
   }
 
   function v(e) {
@@ -95,28 +95,28 @@ function Z(e) {
   }
 
   function b() {
-    d.Z.toggleDetection(A)
+    d.Z.toggleDetection(m)
   }
 
   function j() {
-    if (m) return;
-    let e = null != A.id ? T.Z.getDetectableGame(A.id) : null;
+    if (A) return;
+    let e = null != m.id ? T.Z.getDetectableGame(m.id) : null;
     C.default.track(g.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
       application_id: null == e ? void 0 : e.id,
-      game_name: A.name
+      game_name: m.name
     }), (0, c.showToast)((0, c.createToast)(h.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
-      gameName: A.name
+      gameName: m.name
     }), c.ToastType.SUCCESS)), O(!0)
   }
   return (0, n.jsxs)("div", {
     className: f,
     children: [(0, n.jsxs)("div", {
       className: r()(R.gameNameLastPlayed, x.vertical),
-      children: [A.verified && !u ? (0, n.jsxs)("div", {
+      children: [m.verified && !u ? (0, n.jsxs)("div", {
         className: R.detectedApplication,
         children: [(0, n.jsx)("div", {
           className: R.gameName,
-          children: A.name
+          children: m.name
         }), (0, n.jsx)(c.Tooltip, {
           text: h.Z.Messages.SETTINGS_GAMES_VERIFIED_ICON,
           children: e => (0, n.jsx)(I.Z, {
@@ -145,7 +145,7 @@ function Z(e) {
         let {
           played: s,
           exePath: t
-        } = A;
+        } = m;
         return i ? e = h.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != s && "" !== s && (e = h.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
           when: s
         })), (0, n.jsx)("div", {
@@ -156,7 +156,7 @@ function Z(e) {
           })
         })
       }()]
-    }), u ? null : m ? null : (0, n.jsx)("div", {
+    }), u ? null : A ? null : (0, n.jsx)("div", {
       className: r()(x.flexCenter, x.noWrap, x.justifyBetween, R.toggleContainer),
       children: (0, n.jsx)(c.Tooltip, {
         text: h.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
@@ -183,7 +183,7 @@ function Z(e) {
     }), function() {
       let {
         detectable: e
-      } = A, s = e ? (0, n.jsx)(c.EyeIcon, {
+      } = m, s = e ? (0, n.jsx)(c.EyeIcon, {
         size: "md",
         color: "currentColor",
         className: R.toggleIconOn,
@@ -219,7 +219,7 @@ function Z(e) {
       let {
         overlay: e,
         overlayWarn: s
-      } = A, t = e ? (0, n.jsx)(c.ScreenIcon, {
+      } = m, t = e ? (0, n.jsx)(c.ScreenIcon, {
         size: "md",
         color: "currentColor",
         className: R.toggleIconOn,
@@ -250,7 +250,7 @@ function Z(e) {
               className: R.toggleIcon,
               onClick: () => {
                 var s;
-                return s = !e, void d.Z.toggleOverlay(A, s)
+                return s = !e, void d.Z.toggleOverlay(m, s)
               },
               onMouseEnter: a,
               onMouseLeave: i,
@@ -296,7 +296,7 @@ function b(e) {
     }), s]
   })
 }
-let j = (0, A.oH)(function() {
+let j = (0, m.oH)(function() {
   for (var e = arguments.length, s = Array(e), t = 0; t < e; t++) s[t] = arguments[t];
   return new Set(s.map(e => e.exePath))
 });

@@ -15,8 +15,8 @@ var l = n(442837),
   d = n(594174),
   h = n(153124),
   p = n(436088),
-  f = n(51144),
-  _ = n(603592),
+  _ = n(51144),
+  f = n(603592),
   g = n(674552),
   m = n(689938);
 
@@ -26,7 +26,7 @@ function C() {
     [n, C] = (0, l.Wu)([u.Z, o.Z], () => [o.Z.getChannel(u.Z.getVoiceChannelId()), u.Z.getCurrentlySelectedChannelId(null)]),
     I = (0, l.e7)([c.ZP], () => null != n ? c.ZP.getMentionCount(n.id) : 0),
     E = (0, l.e7)([d.default], () => d.default.getUser(null == n ? void 0 : n.ownerId)),
-    N = null !== (e = f.ZP.getGlobalName(E)) && void 0 !== e ? e : f.ZP.getUserTag(E),
+    N = null !== (e = _.ZP.getGlobalName(E)) && void 0 !== e ? e : _.ZP.getUserTag(E),
     {
       canViewBroadcasts: x
     } = s.Z.useExperiment({
@@ -36,7 +36,7 @@ function C() {
     }),
     S = null == n ? void 0 : n.isBroadcastChannel(),
     Z = S && C === (null == n ? void 0 : n.id);
-  return S && x ? (0, i.jsx)(_.Z, {
+  return S && x ? (0, i.jsx)(f.Z, {
     id: t,
     onClick: () => {
       S && null != n && a.default.selectPrivateChannel(n.id)

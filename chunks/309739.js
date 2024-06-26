@@ -21,7 +21,7 @@ var a = t(481060),
   N = t(707534),
   C = t(331651);
 
-function A() {
+function m() {
   let e = u.G6.useSetting(),
     s = u.Wz.useSetting(),
     t = _.isPlatformEmbedded ? I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
@@ -69,7 +69,7 @@ function A() {
   })
 }
 
-function m() {
+function A() {
   let e = u.cP.useSetting(),
     s = u.Ou.useSetting();
   return (0, n.jsx)(l.F, {
@@ -146,6 +146,6 @@ function h(e) {
     className: s,
     tag: a.FormTitleTags.H1,
     title: t ? I.Z.Messages.ACTIVITY_PRIVACY : null,
-    children: [(0, n.jsx)(A, {}), (0, n.jsx)(m, {}), r && (0, n.jsx)(O, {}), (0, n.jsx)(g, {})]
+    children: [(0, n.jsx)(m, {}), (0, n.jsx)(A, {}), r && (0, n.jsx)(O, {}), (0, n.jsx)(g, {})]
   })
 }

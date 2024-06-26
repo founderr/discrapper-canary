@@ -9,8 +9,8 @@ var i, l = n(735250),
   d = n(358221),
   h = n(43267),
   p = n(933557),
-  f = n(93687),
-  _ = n(266076),
+  _ = n(93687),
+  f = n(266076),
   g = n(199902),
   m = n(19780),
   C = n(306680),
@@ -129,14 +129,14 @@ class R extends(i = r.PureComponent) {
       unread: h,
       isGDMFacepileEnabled: p
     } = this.props, {
-      hovered: f,
+      hovered: _,
       animating: g
     } = this.state, m = e.isMultiUserDM() && null == e.icon && p;
     return (0, l.jsx)(a.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, l.jsxs)(S.H, {
         children: [(0, l.jsx)(x.Z, {
-          hovered: !g && f,
+          hovered: !g && _,
           selected: !g && n,
           unread: !g && h,
           className: L.pill
@@ -144,7 +144,7 @@ class R extends(i = r.PureComponent) {
           text: null != t ? t : "",
           selected: n,
           children: (0, l.jsx)(c.BlobMask, {
-            selected: n || f,
+            selected: n || _,
             lowerBadge: i > 0 ? (0, v.Ne)(i) : null,
             upperBadge: (0, v.Or)({
               audio: r,
@@ -165,12 +165,12 @@ class R extends(i = r.PureComponent) {
                 onMouseLeave: () => this.setState({
                   hovered: !1
                 }),
-                selected: n || f,
+                selected: n || _,
                 ariaLabel: null != t ? t : "",
                 onContextMenu: this.handleContextMenu,
                 icon: m ? void 0 : this.getChannelIcon(),
                 backgroundStyle: m ? "on-hover" : "always",
-                children: m ? (0, l.jsx)(_.Z, {
+                children: m ? (0, l.jsx)(f.Z, {
                   channel: e,
                   size: c.AvatarSizes.SIZE_48,
                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -236,15 +236,15 @@ A(R, "defaultProps", {
     u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
     {
       isFacepileEnabled: h
-    } = f.Z.useExperiment({
+    } = _.Z.useExperiment({
       location: "unread_direct_message"
     }, {
       autoTrackExposure: !1
     }),
-    _ = r === n,
+    f = r === n,
     E = !1,
     N = !1;
-  return _ && (E = a === T.WtW.VOICE, N = a === T.WtW.VIDEO), (0, l.jsx)(R, {
+  return f && (E = a === T.WtW.VOICE, N = a === T.WtW.VIDEO), (0, l.jsx)(R, {
     ...e,
     ref: t,
     channelName: i,
@@ -254,7 +254,7 @@ A(R, "defaultProps", {
     audio: E,
     video: N,
     stream: s,
-    isCurrentUserInThisDMCall: _,
+    isCurrentUserInThisDMCall: f,
     isGDMFacepileEnabled: h
   })
 })

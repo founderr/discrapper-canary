@@ -12,8 +12,8 @@ var i, l, r = n(735250),
   d = n(392711),
   h = n.n(d),
   p = n(748780),
-  f = n(442837),
-  _ = n(215569),
+  _ = n(442837),
+  f = n(215569),
   g = n(481060),
   m = n(612226),
   C = n(951483),
@@ -58,7 +58,7 @@ function b(e) {
 let M = 1e3 / 60,
   R = [m.Q2.MESSAGE, m.Q2.NAVIGATION, m.Q2.VOICE_AND_VIDEO, m.Q2.CHAT, m.Q2.MISCELLANEOUS];
 
-function y() {
+function O() {
   let e = a.useMemo(() => h()((0, m.Rv)()).groupBy(e => e.group).value(), []);
   return (0, r.jsx)("div", {
     className: T.keyboardShortcutList,
@@ -100,7 +100,7 @@ function y() {
     })
   })
 }
-class O extends a.PureComponent {
+class y extends a.PureComponent {
   componentDidMount() {
     this.lastInputedKeys = [], N.S.subscribe(Z.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(Z.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
@@ -163,7 +163,7 @@ class O extends a.PureComponent {
         ref: this.scrollerRef,
         fade: !0,
         children: (0, r.jsx)(g.HeadingLevel, {
-          children: (0, r.jsx)(y, {})
+          children: (0, r.jsx)(O, {})
         })
       })]
     })
@@ -320,7 +320,7 @@ function j(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, m.Rv)(), []), c = (0, f.e7)([E.Z], () => E.Z.keyboardModeEnabled);
+  } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, m.Rv)(), []), c = (0, _.e7)([E.Z], () => E.Z.keyboardModeEnabled);
   return (0, r.jsx)(g.ModalRoot, {
     className: o()(T.noBackground, {
       [T.noShadow]: i
@@ -328,11 +328,11 @@ function j(e) {
     size: g.ModalSize.DYNAMIC,
     "aria-label": v.Z.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, r.jsx)(_.W, {
+    children: (0, r.jsx)(f.W, {
       component: "div",
       children: i ? (0, r.jsx)(S.Z, {
         onClose: n
-      }, "raging-demo") : (0, r.jsx)(O, {
+      }, "raging-demo") : (0, r.jsx)(y, {
         content: s,
         keyboardModeEnabled: c,
         activateRagingDemon: function() {

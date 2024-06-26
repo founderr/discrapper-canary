@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return em
+    return eA
   }
 }), t(47120), t(733860), t(773603);
 var n, a, i = t(735250),
@@ -17,8 +17,8 @@ var n, a, i = t(735250),
   I = t(570140),
   N = t(668781),
   C = t(409700),
-  A = t(809206),
-  m = t(230711),
+  m = t(809206),
+  A = t(230711),
   O = t(241420),
   g = t(651530),
   h = t(163268),
@@ -383,9 +383,9 @@ function eC(e) {
     body: s
   })
 }
-class eA extends r.PureComponent {
+class em extends r.PureComponent {
   componentDidMount() {
-    (0, C.I)(), (0, A.ol)().then(e => {
+    (0, C.I)(), (0, m.ol)().then(e => {
       let s = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -665,7 +665,7 @@ class eA extends r.PureComponent {
           className: ec.marginBottom20,
           children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
             onClick: () => {
-              m.Z.setSection(ei.oAB.ACCOUNT)
+              A.Z.setSection(ei.oAB.ACCOUNT)
             }
           })
         }), (0, i.jsx)(S.FormDivider, {
@@ -901,7 +901,7 @@ class eA extends r.PureComponent {
           this.setState({
             requestingHarvest: !0
           }, () => {
-            (0, A.V3)(e).then(e => {
+            (0, m.V3)(e).then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
               }), N.Z.show({
@@ -939,7 +939,7 @@ class eA extends r.PureComponent {
   }
 }
 
-function em() {
+function eA() {
   let e = (0, u.e7)([y.default], () => {
       let e = y.default.getCurrentUser();
       return d()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
@@ -969,7 +969,7 @@ function em() {
     } = P.c.useExperiment({
       location: "PrivacySafetySettings"
     });
-  return (0, i.jsx)(eA, {
+  return (0, i.jsx)(em, {
     currentUser: e,
     defaultGuildsRestricted: X.iG.useSetting(),
     nonSpamRetrainingOptIn: X.kJ.useSetting(),

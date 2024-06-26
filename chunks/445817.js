@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return m
+    return A
   }
 }), t(47120);
 var n = t(735250),
@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(689938),
   N = t(350043);
 let C = 387,
-  A = 218;
+  m = 218;
 
-function m(e) {
+function A(e) {
   let {
     previewEnabled: s,
     onEnablePreview: t
-  } = e, m = u.Z.getCameraComponent(), [O, g] = a.useState((0, c.P)(T.default.getCurrentUser())), h = a.useRef(!1), R = a.useRef(O), p = (0, l.O)(), x = (0, i.e7)([u.Z], () => Object.values(u.Z.getVideoDevices()).length > 0);
+  } = e, A = u.Z.getCameraComponent(), [O, g] = a.useState((0, c.P)(T.default.getCurrentUser())), h = a.useRef(!1), R = a.useRef(O), p = (0, l.O)(), x = (0, i.e7)([u.Z], () => Object.values(u.Z.getVideoDevices()).length > 0);
   return a.useEffect(() => () => {
     h.current && o.Z.wait(() => (0, d.Up)(R.current))
   }, []), (0, n.jsx)(E.Z, {
@@ -39,10 +39,10 @@ function m(e) {
       className: N.cameraWrapper,
       children: (0, n.jsxs)("div", {
         className: N.camera,
-        children: [(0, n.jsx)(m, {
+        children: [(0, n.jsx)(A, {
           deviceId: e,
           width: C,
-          height: A,
+          height: m,
           disabled: !s
         }), (0, n.jsx)(E.S, {})]
       })

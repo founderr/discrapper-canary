@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   o = n(481060),
   s = n(884697),
   c = n(409116),
@@ -20,13 +20,13 @@ function f(e) {
   let {
     product: t,
     isPremiumUser: n,
-    discount: a,
+    discount: i,
     className: f,
     nitroUpsell: g = !1
   } = e, _ = (0, s.ql)(t, d.tuJ.DEFAULT);
   if (null == _) return null;
   if (_.amount <= 0) return (0, r.jsx)("div", {
-    className: i()(p.priceTagsContainer, f),
+    className: a()(p.priceTagsContainer, f),
     children: (0, r.jsx)(c.F, {
       price: _
     })
@@ -35,21 +35,21 @@ function f(e) {
     b = !n && !(0, s.x6)(t),
     m = (0, s.x6)(t) && n ? {
       ..._,
-      amount: a.original
+      amount: i.original
     } : _;
   return (0, r.jsxs)("div", {
-    className: i()(p.priceTagsContainer, f),
+    className: a()(p.priceTagsContainer, f),
     children: [(0, r.jsx)(c.F, {
       price: m,
-      discount: n ? s.f_ : a,
-      className: i()(p.price, {
+      discount: n ? s.f_ : i,
+      className: a()(p.price, {
         [p.striked]: n,
         [p.dimmed]: n,
         [p.fullPrice]: b
       })
     }), null != C && (0, r.jsx)(c.F, {
       price: C,
-      discount: n ? a : s.f_,
+      discount: n ? i : s.f_,
       renderPrice: g ? e => (0, r.jsx)(o.Text, {
         variant: "text-xs/medium",
         children: u.Z.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
@@ -61,7 +61,7 @@ function f(e) {
       }) : b ? e => u.Z.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
-      className: i()(p.price, {
+      className: a()(p.price, {
         [p.dimmed]: !n,
         [p.fullPrice]: b
       }),
@@ -77,7 +77,7 @@ function f(e) {
             size: "md",
             color: "currentColor",
             ...t,
-            className: i()(p.premiumIcon, {
+            className: a()(p.premiumIcon, {
               [p.fullPrice]: b
             })
           })

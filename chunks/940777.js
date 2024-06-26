@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return y
+    return O
   }
 }), n(47120), n(724458), n(653041);
 var i = n(735250),
@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(239091),
   h = n(317381),
   p = n(682662),
-  f = n(674552),
-  _ = n(593364),
+  _ = n(674552),
+  f = n(593364),
   g = n(905423),
   m = n(199902),
   C = n(592125),
@@ -39,13 +39,13 @@ let R = {
   }
 };
 
-function y() {
+function O() {
   let e = (0, s.Ie)("favorites"),
     {
       favoriteAdded: t,
       clearFavoriteAdded: r
     } = (0, Z.up)(),
-    [y, O] = l.useState(!1),
+    [O, y] = l.useState(!1),
     {
       favoriteServerMuted: P,
       favoriteChannels: j
@@ -81,31 +81,31 @@ function y() {
         u = !1,
         d = !1,
         p = !1,
-        _ = !1;
-      return n ? (u = !r, d = r, p = i, _ = s) : (p = l, _ = c), (0, f.Or)({
+        f = !1;
+      return n ? (u = !r, d = r, p = i, f = s) : (p = l, f = c), (0, _.Or)({
         audio: u,
         video: d,
         screenshare: p,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: _
+        activity: f
       })
     }(j),
-    V = w > 0 ? (0, _.N)(w) : null,
+    V = w > 0 ? (0, f.N)(w) : null,
     H = l.useCallback(() => {
       r()
     }, [r]);
   return (0, i.jsxs)(p.H, {
     children: [(0, i.jsx)(N.Z, {
       selected: G,
-      hovered: y,
+      hovered: O,
       unread: k && !P,
       className: M.pill
     }), (0, i.jsx)(L.Z, {
       onShow: H,
       children: (0, i.jsx)(T.S, {
         children: (0, i.jsx)(c.BlobMask, {
-          selected: G || y,
+          selected: G || O,
           upperBadge: B,
           lowerBadge: V,
           children: (0, i.jsx)(c.NavItem, {
@@ -118,9 +118,9 @@ function y() {
               pathname: A.Z5c.CHANNEL(A.I_8, D),
               state: R
             },
-            selected: G || y,
-            onMouseEnter: () => O(!0),
-            onMouseLeave: () => O(!1),
+            selected: G || O,
+            onMouseEnter: () => y(!0),
+            onMouseLeave: () => y(!1),
             onMouseDown: function() {
               if (null != U) u.Z.preload(U.guild_id, U.id)
             },

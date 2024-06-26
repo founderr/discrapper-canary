@@ -3,10 +3,10 @@ n.d(t, {
     return p
   },
   Ny: function() {
-    return f
+    return _
   },
   Or: function() {
-    return _
+    return f
   },
   jt: function() {
     return g
@@ -31,7 +31,7 @@ function p(e, t) {
   })
 }
 
-function f() {
+function _() {
   return (0, i.jsx)(a.IconBadge, {
     icon: (0, a.makeIconCompat)(c.Z),
     disableColor: !0,
@@ -39,7 +39,7 @@ function f() {
   })
 }
 
-function _(e) {
+function f(e) {
   let t, {
       audio: n,
       video: i,

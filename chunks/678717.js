@@ -31,8 +31,8 @@ var x = r(392750),
   S = r(246992),
   T = r(442954),
   I = r(702904),
-  Z = r(178821),
-  E = r(248526),
+  E = r(178821),
+  Z = r(248526),
   R = r(958328),
   O = r(514866),
   B = r(678639),
@@ -44,7 +44,7 @@ var x = r(392750),
   G = r(999707),
   H = r(719556);
 
-function z(e) {
+function F(e) {
   let {
     resizableNode: t,
     onResize: r,
@@ -62,7 +62,7 @@ function z(e) {
   })
 }
 
-function F() {
+function z() {
   var e;
   let t = n.useMemo(() => {
       let e = [{
@@ -89,7 +89,7 @@ function F() {
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(E.Z, {})
+        render: () => (0, a.jsx)(Z.Z, {})
       })), m.Z.isDeveloper && (e.push({
         id: "clans",
         name: "Clans",
@@ -97,7 +97,7 @@ function F() {
       }), e.push({
         id: "performance",
         name: "Performance",
-        render: () => (0, a.jsx)(Z.Z, {})
+        render: () => (0, a.jsx)(E.Z, {})
       })), e.push({
         id: "colors",
         name: "Colors",
@@ -207,13 +207,13 @@ function U() {
       minWidth: f.h,
       width: r
     },
-    children: [(0, a.jsx)(z, {
+    children: [(0, a.jsx)(F, {
       resizableNode: e,
       onResize: i,
       onResizeEnd: l
     }), (0, a.jsx)("div", {
       className: G.sidebarContent,
-      children: (0, a.jsx)(F, {})
+      children: (0, a.jsx)(z, {})
     })]
   })
 }
@@ -224,7 +224,7 @@ function V() {
     className: o()(G.container, G.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
       className: G.sidebarContent,
-      children: (0, a.jsx)(F, {})
+      children: (0, a.jsx)(z, {})
     })
   }) : (0, a.jsx)("div", {
     className: G.container,

@@ -174,7 +174,7 @@ function j(e) {
       experiments: i,
       guildExperiments: r
     } = e;
-  t && W(i, r), n(185745).Vx.trackExposure(), O = !0
+  t && W(i, r), n(598984).Vx.trackExposure(), O = !0
 }
 
 function W(e, t) {

@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(607070),
   h = n(492162),
   p = n(451478),
-  f = n(409216),
-  _ = n(934415),
+  _ = n(409216),
+  f = n(934415),
   g = n(968847),
   m = n(689938),
   C = n(953248);
@@ -31,7 +31,7 @@ function E(e) {
     jumpToVoiceChannels: r
   } = e, s = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, h.Z)(n.id), d = l.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), r()
-  }, [r]), p = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], g = (0, _.c4)({
+  }, [r]), p = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], g = (0, f.c4)({
     channels: p,
     selectedChannelId: null,
     selectedVoiceChannelId: null,
@@ -53,7 +53,7 @@ function E(e) {
       children: m.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
         count: g.length
       })
-    }), (0, i.jsx)(f.Z, {
+    }), (0, i.jsx)(_.Z, {
       guildId: n.id,
       className: C.voiceChannelsUsers,
       users: g.slice(0, 4),
@@ -72,13 +72,13 @@ function N(e) {
     jumpToVoiceChannels: c,
     jumpToChannel: h
   } = e, {
-    bottomBar: f,
-    topBar: _
+    bottomBar: _,
+    topBar: f
   } = (0, o.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)), N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), x = (0, o.e7)([p.Z], () => p.Z.isFocused()), {
     mode: S,
     mentionCount: Z,
     targetChannelId: v
-  } = "bottom" === t ? f : _, T = S === g.x.HIDDEN, L = (0, s.useSpring)({
+  } = "bottom" === t ? _ : f, T = S === g.x.HIDDEN, L = (0, s.useSpring)({
     to: {
       transform: T ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },

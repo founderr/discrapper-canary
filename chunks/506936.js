@@ -13,8 +13,8 @@ var a = n(442837),
   d = n(607744),
   h = n(594174),
   p = n(153124),
-  f = n(981631),
-  _ = n(815660),
+  _ = n(981631),
+  f = n(815660),
   g = n(689938),
   m = n(319081);
 (i = l || (l = {}))[i.VOICE = 0] = "VOICE";
@@ -31,9 +31,9 @@ t.Z = e => {
     newMember: S
   } = (0, a.e7)([d.Z], () => d.Z.getCheck(i), [i]), Z = 0 === t ? g.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, v = null, T = null;
   return (0 === t && (I ? (v = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, T = g.Z.Messages.CLAIM_ACCOUNT) : N ? (v = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, T = g.Z.Messages.VERIFY_PHONE) : E ? (v = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, T = g.Z.Messages.RESEND_VERIFICATION_EMAIL) : S ? (v = g.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
-    min: f.YeM.MEMBER_AGE
+    min: _.YeM.MEMBER_AGE
   }), T = g.Z.Messages.OKAY) : x && (v = g.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
-    min: f.YeM.ACCOUNT_AGE
+    min: _.YeM.ACCOUNT_AGE
   }), T = g.Z.Messages.OKAY)), null == Z || null == v) ? null : (0, r.jsxs)(s.Dialog, {
     className: m.container,
     "aria-labelledby": C,
@@ -64,7 +64,7 @@ t.Z = e => {
                 ...t
               })
             }, {
-              modalKey: _.M
+              modalKey: f.M
             }) : E && (o.Z.verifyResend(), (0, s.openModal)(e => {
               var t;
               return (0, r.jsx)(s.ConfirmModal, {

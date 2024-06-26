@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   o = n(481060),
   s = n(689938),
   c = n(219199);
@@ -22,7 +22,7 @@ let l = e => {
     align: "left",
     text: s.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
     children: e => (0, r.jsxs)("div", {
-      className: i()(c.partialOwnStateContainer, t),
+      className: a()(c.partialOwnStateContainer, t),
       ...e,
       children: [(0, r.jsx)("span", {
         className: c.iconWrapper,

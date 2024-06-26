@@ -1,8 +1,8 @@
 "use strict";
 var r = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   o = n(4477),
   s = n(12900),
   c = n(423839),
@@ -14,14 +14,14 @@ t.Z = () => (0, r.jsx)("div", {
   children: u.map(e => (0, r.jsxs)("div", {
     className: o.cardsContainer,
     children: [(0, r.jsx)("div", {
-      className: i()(c.skeleton, s.shopBanner),
+      className: a()(c.skeleton, s.shopBanner),
       children: (0, r.jsx)("div", {
         className: c.bannerBody
       })
     }), Array.from({
       length: e
     }, (e, t) => t).map(e => (0, r.jsx)("div", {
-      className: i()(c.skeleton, l.shopCard),
+      className: a()(c.skeleton, l.shopCard),
       children: (0, r.jsxs)("div", {
         className: c.cardBody,
         children: [(0, r.jsx)("div", {

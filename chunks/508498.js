@@ -4,7 +4,7 @@ n.d(t, {
     return d
   }
 }), n(610138), n(216116), n(78328), n(815648), n(47120);
-var r, a, i = n(470079),
+var r, i, a = n(470079),
   o = n(266067),
   s = n(37234),
   c = n(703656),
@@ -13,9 +13,9 @@ var r, a, i = n(470079),
 function d() {
   let {
     search: e
-  } = (0, o.TH)(), t = (0, o.UO)(), n = i.useMemo(() => new URLSearchParams(e), [e]).get("source"), r = null != n ? parseInt(n, 10) : null;
+  } = (0, o.TH)(), t = (0, o.UO)(), n = a.useMemo(() => new URLSearchParams(e), [e]).get("source"), r = null != n ? parseInt(n, 10) : null;
   return {
-    onClose: i.useCallback(() => {
+    onClose: a.useCallback(() => {
       if (0 === r) {
         (0, c.op)(), (0, s.jN)(l.S9g.USER_SETTINGS);
         return
@@ -28,4 +28,4 @@ function d() {
     source: r,
     ...t
   }
-}(a = r || (r = {}))[a.SETTINGS = 0] = "SETTINGS", a[a.CHANGELOG = 1] = "CHANGELOG", a[a.DM_LIST = 2] = "DM_LIST"
+}(i = r || (r = {}))[i.SETTINGS = 0] = "SETTINGS", i[i.CHANGELOG = 1] = "CHANGELOG", i[i.DM_LIST = 2] = "DM_LIST"

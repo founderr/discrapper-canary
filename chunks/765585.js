@@ -14,8 +14,8 @@ t.Z = l.forwardRef(function(e, t) {
   let {
     body: n,
     header: r,
-    artClassName: f,
-    headerClassName: _,
+    artClassName: _,
+    headerClassName: f,
     contentClassName: g,
     tryItText: m,
     dismissText: C,
@@ -32,7 +32,7 @@ t.Z = l.forwardRef(function(e, t) {
     art: b,
     isPremiumEarlyAccess: M = !1,
     maxWidth: R = 280
-  } = e, y = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [O, P] = l.useState(!1), {
+  } = e, O = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [y, P] = l.useState(!1), {
     ref: j,
     width: D
   } = (0, o.Z)();
@@ -45,26 +45,26 @@ t.Z = l.forwardRef(function(e, t) {
   return l.useEffect(() => {
     var e, t;
     let n = (null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !O && n > R && P(!0)
-  }, [O, D, j, R]), l.useEffect(() => {
+    !y && n > R && P(!0)
+  }, [y, D, j, R]), l.useEffect(() => {
     (0, c.kk)(T)
   }, [T]), (0, i.jsx)("div", {
     className: N,
     ref: t,
     children: (0, i.jsxs)("div", {
       className: a()(p.content, g, {
-        [p.contentNoArt]: null == f || x,
+        [p.contentNoArt]: null == _ || x,
         [p.contentPremium]: S || M
       }),
       children: [(0, i.jsxs)("div", {
-        className: a()(f, x ? p.artInline : p.artAbsolute),
+        className: a()(_, x ? p.artInline : p.artAbsolute),
         children: [v && (0, i.jsx)(u.Z, {
           className: p.gifTag
         }), b]
       }), (0, i.jsxs)("div", {
         className: p.body,
         children: [(0, i.jsxs)(s.Heading, {
-          className: a()(S ? p.headerWithPremiumIcon : p.header, _),
+          className: a()(S ? p.headerWithPremiumIcon : p.header, f),
           variant: "heading-md/bold",
           color: "always-white",
           children: [S && !M ? (0, i.jsx)(s.NitroWheelIcon, {
@@ -91,11 +91,11 @@ t.Z = l.forwardRef(function(e, t) {
         }) : n]
       }), (0, i.jsx)("div", {
         ref: j,
-        className: O || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+        className: y || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
         children: null != I ? (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(s.Button, {
             className: p.button,
-            size: y,
+            size: O,
             onClick: e => {
               null == E || E(e), I(e), U(d.L.PRIMARY)
             },
@@ -103,7 +103,7 @@ t.Z = l.forwardRef(function(e, t) {
             children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, i.jsx)(s.Button, {
             className: p.button,
-            size: y,
+            size: O,
             onClick: e => {
               null == E || E(e), U(d.L.DISMISS)
             },

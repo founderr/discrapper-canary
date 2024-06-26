@@ -24,8 +24,8 @@ function E(e) {
 }
 let _ = (0, r.Z)(E),
   f = e => {
-    var n, t, r, f, T, m;
-    let v = (0, a.e7)([o.default], () => o.default.locale),
+    var n, t, r, f, T, v;
+    let m = (0, a.e7)([o.default], () => o.default.locale),
       N = (0, a.e7)([i.default], () => i.default.getUser(e.author_id)),
       {
         activity: x,
@@ -42,14 +42,14 @@ let _ = (0, r.Z)(E),
     };
     let A = null != I && (null === (t = x.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(I.id, x.assets.large_image, [d.Si.LARGE, d.Si.LARGE]) : void 0,
       C = null !== (T = null === (r = x.assets) || void 0 === r ? void 0 : r.large_text) && void 0 !== T ? T : void 0,
-      R = null !== (m = x.name) && void 0 !== m ? m : e.extra.game_name,
+      R = null !== (v = x.name) && void 0 !== v ? v : e.extra.game_name,
       Z = x.details,
       S = x.state,
       p = x.party,
       O = null != x.timestamps ? (0, l.jsx)(_, {
         timestamps: x.timestamps
       }) : (0, l.jsx)(E, {
-        message: (0, c.yh)(e, v)
+        message: (0, c.yh)(e, m)
       });
     return {
       iconUrl: null != A ? A : M,

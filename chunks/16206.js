@@ -1,12 +1,12 @@
 n.d(s, {
   Z: function() {
-    return i
+    return a
   }
 });
 var r = n(981631),
   t = n(689938);
 
-function i(e) {
+function a(e) {
   if (null == e) return null;
   switch (e.type) {
     case r.d4z.GUILD_ANNOUNCEMENT:

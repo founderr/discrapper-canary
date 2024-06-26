@@ -1,8 +1,8 @@
 "use strict";
 var r = n(735250);
 n(470079);
-var a = n(780384),
-  i = n(481060),
+var i = n(780384),
+  a = n(481060),
   o = n(410030),
   s = n(689938),
   c = n(82783),
@@ -16,19 +16,19 @@ t.Z = e => {
     className: c.wrapper,
     children: [(0, r.jsx)("img", {
       className: c.__invalid_loadIssueImg,
-      src: (0, a.wj)(n) ? l : d,
+      src: (0, i.wj)(n) ? l : d,
       alt: ""
-    }), (0, r.jsx)(i.Heading, {
+    }), (0, r.jsx)(a.Heading, {
       className: c.heading1,
       variant: "heading-xl/semibold",
       children: s.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-    }), (0, r.jsx)(i.Text, {
+    }), (0, r.jsx)(a.Text, {
       variant: "text-md/normal",
       children: s.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-    }), (0, r.jsx)(i.Button, {
+    }), (0, r.jsx)(a.Button, {
       className: c.reload,
-      size: i.Button.Sizes.MEDIUM,
-      color: i.Button.Colors.BRAND,
+      size: a.Button.Sizes.MEDIUM,
+      color: a.Button.Colors.BRAND,
       onClick: t,
       children: s.Z.Messages.ERRORS_RELOAD
     })]

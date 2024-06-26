@@ -10,8 +10,8 @@ var i = n(735250),
   d = n(695346),
   h = n(131951),
   p = n(626135),
-  f = n(572004),
-  _ = n(63063),
+  _ = n(572004),
+  f = n(63063),
   g = n(476221),
   m = n(981631),
   C = n(65154),
@@ -35,7 +35,7 @@ let N = () => {
       }
       return n
     }).filter(e => e.length > 0);
-    (0, f.JG)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(I.Z.Messages.COPIED, o.ToastType.SUCCESS))
+    (0, _.JG)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(I.Z.Messages.COPIED, o.ToastType.SUCCESS))
   })
 };
 t.Z = function(e) {
@@ -102,7 +102,7 @@ t.Z = function(e) {
       connectionState: r,
       connectionTypeText: s
     } = e,
-    f = d.Sb.getSetting(),
+    _ = d.Sb.getSetting(),
     x = {
       [m.hes.AWAITING_ENDPOINT]: I.Z.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
         url: m.yXt.STATUS
@@ -112,14 +112,14 @@ t.Z = function(e) {
       [m.hes.DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
       [m.hes.RTC_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
       [m.hes.ICE_CHECKING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: _.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
+        url: f.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
       }),
       [m.hes.DTLS_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: _.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
+        url: f.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
       }),
       [m.hes.RTC_CONNECTED]: n,
       [m.hes.NO_ROUTE]: I.Z.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-        url: _.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
+        url: f.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
       }),
       [m.hes.RTC_DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED
     } [r];
@@ -138,7 +138,7 @@ t.Z = function(e) {
           color: o.tokens.colors.TEXT_POSITIVE.css,
           className: E.__invalid_icon
         }), s]
-      }), f && h.Z.supports(C.AN.DIAGNOSTICS) && !__OVERLAY__ && (0, i.jsxs)(i.Fragment, {
+      }), _ && h.Z.supports(C.AN.DIAGNOSTICS) && !__OVERLAY__ && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsxs)(o.Anchor, {
           className: a()(E.debugButton, E.textWithIcon),
           onClick: t,
@@ -157,9 +157,9 @@ t.Z = function(e) {
             className: E.__invalid_icon
           })]
         })]
-      }), !f && !__OVERLAY__ && (0, i.jsx)(o.Anchor, {
+      }), !_ && !__OVERLAY__ && (0, i.jsx)(o.Anchor, {
         className: E.debugButton,
-        href: _.Z.getArticleURL(m.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+        href: f.Z.getArticleURL(m.BhN.VOICE_VIDEO_TROUBLESHOOTING),
         children: I.Z.Messages.LEARN_MORE
       })]
     })]

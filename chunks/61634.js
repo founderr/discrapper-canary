@@ -14,8 +14,8 @@ var i = n(470079),
   d = n(317381),
   h = n(554747),
   p = n(146085),
-  f = n(427679),
-  _ = n(131704),
+  _ = n(427679),
+  f = n(131704),
   g = n(199902),
   m = n(314897),
   C = n(592125),
@@ -79,8 +79,8 @@ function R(e) {
     A = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForGuild(e)),
     R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
-      guildHasVoice: y,
-      guildHasVideo: O,
+      guildHasVoice: O,
+      guildHasVideo: y,
       selectedVoiceChannelHasVideo: P
     } = (0, s.cj)([Z.Z, C.Z, N.Z, E.Z, x.Z], () => {
       var t;
@@ -106,7 +106,7 @@ function R(e) {
       }
     }, [e, n]),
     j = m.default.getId();
-  return (0, s.cj)([x.Z, g.Z, f.Z, C.Z, N.Z, d.ZP], () => {
+  return (0, s.cj)([x.Z, g.Z, _.Z, C.Z, N.Z, d.ZP], () => {
     var t, i, r;
     let s = x.Z.getVoiceChannelId(),
       o = (null === (t = C.Z.getChannel(s)) || void 0 === t ? void 0 : t.guild_id) === e,
@@ -126,7 +126,7 @@ function R(e) {
       gaming: a,
       isCurrentUserConnected: !1
     };
-    let S = v.default.keys(f.Z.getStageInstancesByGuild(e)).some(e => {
+    let S = v.default.keys(_.Z.getStageInstancesByGuild(e)).some(e => {
         let t = C.Z.getChannel(e);
         return null != t && N.Z.can(p.gl, t)
       }),
@@ -138,12 +138,12 @@ function R(e) {
         if (R) return A.length > 0;
         for (let e of A) {
           let t = C.Z.getChannel(e.channelId);
-          if (null != t && (0, _.vd)(t.type)) return !0
+          if (null != t && (0, f.vd)(t.type)) return !0
         }
         return !1
       })(),
       D = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (c = !0, u = (null == l ? void 0 : l.channel_id) === s, h = Z, m = b, I = T, E = D) : (c = y, u = null != l, h = S, m = O, I = L, E = M), {
+    return o ? (c = !0, u = (null == l ? void 0 : l.channel_id) === s, h = Z, m = b, I = T, E = D) : (c = O, u = null != l, h = S, m = y, I = L, E = M), {
       audio: c,
       video: m,
       screenshare: I,
@@ -153,5 +153,5 @@ function R(e) {
       gaming: a,
       isCurrentUserConnected: o || Z
     }
-  }, [j, A, a, l, e, R, n, O, y, P])
+  }, [j, A, a, l, e, R, n, y, O, P])
 }

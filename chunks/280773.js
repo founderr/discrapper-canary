@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   n: function() {
-    return a
+    return i
   }
 });
 let r = (0, n(818083).B)({
@@ -19,6 +19,6 @@ let r = (0, n(818083).B)({
       }
     }]
   }),
-  a = e => r.useExperiment({
+  i = e => r.useExperiment({
     location: e
   })

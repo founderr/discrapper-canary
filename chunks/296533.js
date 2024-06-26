@@ -22,8 +22,8 @@ var n = t(735250),
   I = t(357956),
   N = t(275909),
   C = t(300037),
-  A = t(981631),
-  m = t(474936),
+  m = t(981631),
+  A = t(474936),
   O = t(689938),
   g = t(307493);
 
@@ -43,24 +43,24 @@ function h(e) {
       date: new Date(e)
     })
   }, [t, l, c]), _ = a.useMemo(() => (function(e) {
-    if (null == e || e === A.Eu4.NONE) return "";
+    if (null == e || e === m.Eu4.NONE) return "";
     let s = [O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({
-      numEmojiSlots: m.HO[e].limits.emoji
+      numEmojiSlots: A.HO[e].limits.emoji
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({
-      numStickerSlots: m.HO[e].limits.stickers
+      numStickerSlots: A.HO[e].limits.stickers
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_SOUNDBOARD_SLOTS.format({
-      numSoundboardSlots: m.HO[e].limits.soundboardSounds
+      numSoundboardSlots: A.HO[e].limits.soundboardSounds
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STREAM_QUALITY.format({
-      resolution: m.HO[e].limits.screenShareQualityResolution,
-      framerate: m.HO[e].limits.screenShareQualityFramerate
+      resolution: A.HO[e].limits.screenShareQualityResolution,
+      framerate: A.HO[e].limits.screenShareQualityFramerate
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_AUDIO_QUALITY.format({
-      bitrate: m.HO[e].limits.bitrate / 1e3
+      bitrate: A.HO[e].limits.bitrate / 1e3
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_UPLOAD_SIZE_LIMIT.format({
-      filesize: m.HO[e].limits.fileSize / 1024 / 1024
+      filesize: A.HO[e].limits.fileSize / 1024 / 1024
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VIDEO_STAGE_SEATS.format({
-      numVideoStageSeats: m.HO[e].limits.stageVideoUsers
+      numVideoStageSeats: A.HO[e].limits.stageVideoUsers
     }), O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_ANIMATED_GUILD_ICON, O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_INVITE_BACKGROUND];
-    e >= A.Eu4.TIER_2 && (s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= A.Eu4.TIER_3 && s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
+    e >= m.Eu4.TIER_2 && (s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= m.Eu4.TIER_3 && s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
     let t = s[Math.floor(Math.random() * s.length)];
     return O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({
       perk: t
@@ -76,7 +76,7 @@ function h(e) {
       opacity: 0
     }
   });
-  return l || s === A.Eu4.NONE ? (0, n.jsx)("div", {
+  return l || s === m.Eu4.NONE ? (0, n.jsx)("div", {
     className: g.boostDescriptionInnerContainer,
     children: (0, n.jsx)(o.Text, {
       variant: "text-sm/medium",
@@ -102,25 +102,25 @@ function R(e) {
     hasCancelableGuildBoostSlot: c,
     showAltText: _,
     isLastGuildBoostSlot: E
-  } = e, u = (0, r.e7)([l.Z], () => l.Z.useReducedMotion), S = a.useMemo(() => null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null, [t]), C = a.useMemo(() => null != S && S > new Date, [S]), A = (0, T.tl)(t);
+  } = e, u = (0, r.e7)([l.Z], () => l.Z.useReducedMotion), S = a.useMemo(() => null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null, [t]), C = a.useMemo(() => null != S && S > new Date, [S]), m = (0, T.tl)(t);
   return (0, n.jsxs)("div", {
     className: g.boostContainer,
     children: [(0, n.jsxs)("div", {
       className: g.boostInnerContainer,
       children: [(0, n.jsx)(N.Z, {
-        isCanceled: A,
+        isCanceled: m,
         hasCooldown: C,
         useReducedMotion: u
       }), (0, n.jsx)("div", {
         className: g.boostDescriptionContainer,
-        children: null != S && C && !A ? (0, n.jsx)(I.Z, {
+        children: null != S && C && !m ? (0, n.jsx)(I.Z, {
           className: g.boostDescriptionInnerContainer,
           cooldown: S.getTime()
         }) : (0, n.jsx)(h, {
           guildTier: s,
           guildBoostSlot: t,
           showAltText: _,
-          isCanceled: A,
+          isCanceled: m,
           premiumSubscription: i
         })
       }), (0, n.jsx)(o.Popout, {

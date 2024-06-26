@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(682662),
   h = n(662146),
   p = n(678513),
-  f = n(981631),
-  _ = n(689938),
+  _ = n(981631),
+  f = n(689938),
   g = n(316148);
 
 function m(e) {
@@ -53,12 +53,12 @@ function m(e) {
       children: t.tooltipHeader
     }), (0, i.jsx)(a.Text, {
       variant: "text-xs/normal",
-      children: _.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
+      children: f.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
     })]
   }), E = (0, c.Fg)();
   return (0, i.jsxs)(d.H, {
     children: [(0, i.jsx)(a.ThemeContextProvider, {
-      theme: f.BRd.DARK,
+      theme: _.BRd.DARK,
       children: (0, i.jsx)(h.Z, {
         text: I,
         tooltipClass: g.tooltip,

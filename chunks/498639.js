@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(584825),
   N = t(305342),
   C = t(333867),
-  A = t(963249),
-  m = t(87484),
+  m = t(963249),
+  A = t(87484),
   O = t(197115),
   g = t(911367),
   h = t(430824),
@@ -116,7 +116,7 @@ s.Z = function() {
           }],
           onChange: e => I(e)
         }), (0, n.jsx)(o.Button, {
-          onClick: () => (0, A.Z)({
+          onClick: () => (0, m.Z)({
             subscriptionTier: t,
             analyticsLocations: V
           }),
@@ -290,7 +290,7 @@ s.Z = function() {
           value: K,
           onChange: e => z(e)
         }), (0, n.jsx)(o.Button, {
-          onClick: () => (0, m.Z)({
+          onClick: () => (0, A.Z)({
             applicationId: w,
             skuId: K,
             analyticsLocations: V

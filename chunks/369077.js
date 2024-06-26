@@ -23,8 +23,8 @@ var d = t(594174),
   I = t(114487),
   N = t(219039),
   C = t(979264),
-  A = t(308083),
-  m = t(981631),
+  m = t(308083),
+  A = t(981631),
   O = t(689938),
   g = t(879678);
 
@@ -39,10 +39,10 @@ function h(e) {
     guildIcon: _,
     guildIconSize: E,
     memberCount: u
-  } = e, T = a.useRef(null), [S, m] = a.useState(!1);
+  } = e, T = a.useRef(null), [S, A] = a.useState(!1);
   return a.useEffect(() => {
     let e = T.current;
-    null != e && null != e.offsetWidth && null != e.scrollWidth && m(e.offsetWidth < e.scrollWidth)
+    null != e && null != e.offsetWidth && null != e.scrollWidth && A(e.offsetWidth < e.scrollWidth)
   }, []), (0, n.jsxs)("div", {
     className: r()(g.container, s),
     children: [(0, n.jsxs)("div", {
@@ -78,7 +78,7 @@ function h(e) {
         clanTag: t,
         clanBadge: i,
         onClick: o,
-        badgeSize: A.NC.SIZE_16,
+        badgeSize: m.NC.SIZE_16,
         textColor: "interactive-normal",
         textVariant: "text-sm/semibold",
         badgeClassName: g.badge
@@ -96,11 +96,11 @@ function R(e) {
     guildIcon: S,
     clan: I,
     userId: N
-  } = e, C = (0, T.C)(), A = (0, o.e7)([d.default], () => {
+  } = e, C = (0, T.C)(), m = (0, o.e7)([d.default], () => {
     var e;
     return (0, u.vh)(null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
   }), R = a.useMemo(() => {
-    if (i !== A) {
+    if (i !== m) {
       if (C.has(i)) return () => {
         (0, l.openModal)(e => (0, n.jsx)(l.ConfirmModal, {
           ...e,
@@ -121,13 +121,13 @@ function R(e) {
       };
       if (null != I) return () => {
         (0, E.q)(i, I, {
-          source: m.jXE.USER_PROFILE,
+          source: A.jXE.USER_PROFILE,
           location: c.Z.CLAN_TAG,
           tagUserId: N
         })
       }
     }
-  }, [C, I, A, i, r, N]);
+  }, [C, I, m, i, r, N]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(l.Heading, {
       className: g.header,

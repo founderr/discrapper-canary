@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(454585),
   h = n(514342),
   p = n(626135),
-  f = n(981631),
-  _ = n(689938),
+  _ = n(981631),
+  f = n(689938),
   g = n(387592),
   m = n(622322);
 
@@ -30,7 +30,7 @@ function C(e) {
     allowChannelTopic: N
   } = e, x = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)), S = null != x && x.length > 0, Z = (0, c.Z)(t, !0), v = (!E || !!N) && Z, T = null != C && C.length > 0;
   l.useEffect(() => {
-    S && p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+    S && p.default.track(_.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
@@ -57,7 +57,7 @@ function C(e) {
     children: [(0, i.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,
-      children: _.Z.Messages.VOICE_CHANNEL_SET_STATUS
+      children: f.Z.Messages.VOICE_CHANNEL_SET_STATUS
     }), (0, i.jsx)(o.PencilIcon, {
       size: "custom",
       color: "currentColor",

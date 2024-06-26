@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return u
+    return s
   }
 });
 var o = t(735250);
@@ -11,7 +11,7 @@ var r = t(442837),
   i = t(246946),
   l = t(689938);
 
-function u() {
+function s() {
   let e = (0, r.e7)([i.Z], () => i.Z.enabled, []);
   return (0, o.jsx)(a.MenuCheckboxItem, {
     id: "streamer-mode-toggle",

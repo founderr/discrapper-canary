@@ -30,11 +30,11 @@ function h() {
         channel: n
       }, n.id)
     }),
-    f = null == n && null != h ? e[h] : null,
-    _ = (0, s.Dd)(null == f ? void 0 : f.id);
-  return null != f && !_ && p.unshift((0, i.jsx)(d.Z, {
-    channel: f
-  }, f.id)), (0, i.jsx)(a.W, {
+    _ = null == n && null != h ? e[h] : null,
+    f = (0, s.Dd)(null == _ ? void 0 : _.id);
+  return null != _ && !f && p.unshift((0, i.jsx)(d.Z, {
+    channel: _
+  }, _.id)), (0, i.jsx)(a.W, {
     component: l.Fragment,
     children: p
   })

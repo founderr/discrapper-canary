@@ -1,9 +1,9 @@
-var r, t, i, a, l = n(735250),
+var r, t, a, i, l = n(735250),
   c = n(470079),
   o = n(120356),
   d = n.n(o),
   u = n(592804);
-class h extends(a = c.PureComponent) {
+class h extends(i = c.PureComponent) {
   render() {
     let {
       tag: e,
@@ -11,10 +11,10 @@ class h extends(a = c.PureComponent) {
       hoverText: n,
       className: r,
       forceHover: t,
-      ...i
+      ...a
     } = this.props;
     return (0, l.jsxs)("div", {
-      ...i,
+      ...a,
       className: d()(r, u.hoverRoll, {
         [u.disabled]: null == n,
         [u.forceHover]: t
@@ -29,12 +29,12 @@ class h extends(a = c.PureComponent) {
     })
   }
 }
-i = {
+a = {
   tag: "div",
   forceHover: !1
 }, (t = "defaultProps") in(r = h) ? Object.defineProperty(r, t, {
-  value: i,
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[t] = i, s.Z = h
+}) : r[t] = a, s.Z = h

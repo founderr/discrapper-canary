@@ -1,16 +1,16 @@
 t.d(n, {
   q: function() {
-    return u
+    return l
   },
   z: function() {
-    return l
+    return u
   }
 });
 var i = t(735250);
 t(470079);
 var r = t(481060);
 
-function l(e, n, l) {
+function u(e, n, u) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r
@@ -18,13 +18,13 @@ function l(e, n, l) {
     return t => (0, i.jsx)(r, {
       guildId: e,
       userId: n,
-      anaylticsLocations: l,
+      anaylticsLocations: u,
       ...t
     })
   })
 }
 
-function u(e, n, l) {
+function l(e, n, u) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r
@@ -32,7 +32,7 @@ function u(e, n, l) {
     return t => (0, i.jsx)(r, {
       guildId: e,
       userId: n,
-      anaylticsLocations: l,
+      anaylticsLocations: u,
       ...t
     })
   })

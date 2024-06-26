@@ -23,18 +23,18 @@ let v = e => {
     isHighlighted: a,
     user: v,
     forCollectedModal: C,
-    profileEffectClassName: h
+    profileEffectClassName: E
   } = e, {
-    firstProfileEffect: E,
+    firstProfileEffect: h,
     firstAvatarDecoration: b
-  } = (0, d.R)(t), m = (0, s.ZP)(), y = (0, l.ap)(m);
+  } = (0, d.R)(t), m = (0, s.ZP)(), T = (0, l.ap)(m);
   return (0, r.jsxs)("div", {
     className: f.container,
-    children: [null != E ? (0, r.jsx)("div", {
-      className: o()(f.profileEffectShopPreview, h),
+    children: [null != h ? (0, r.jsx)("div", {
+      className: o()(f.profileEffectShopPreview, E),
       children: (0, r.jsx)(c.Z, {
         isHovering: a,
-        profileEffectId: E.id,
+        profileEffectId: h.id,
         isPurchased: n,
         forCollectedModal: C,
         removeSetHeight: !0
@@ -47,7 +47,7 @@ let v = e => {
         avatarSize: i.AvatarSizes.SIZE_120,
         isPurchased: n,
         isHighlighted: a,
-        avatarPlaceholderSrc: y ? g : p
+        avatarPlaceholderSrc: T ? g : p
       })
     }) : null]
   })

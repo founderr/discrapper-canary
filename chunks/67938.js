@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   o = n(442837),
   s = n(481060),
   c = n(607070),
@@ -45,7 +45,7 @@ function b(e) {
     category: t
   } = e, n = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
   return (0, r.jsxs)("div", {
-    className: i()(l.banner),
+    className: a()(l.banner),
     "aria-label": t.name,
     children: [(0, r.jsxs)("div", {
       className: l.mainContent,
@@ -71,12 +71,12 @@ function b(e) {
       })]
     }), (0, r.jsx)("img", {
       src: _,
-      className: i()(l.overflowImage, l.overflowRight),
+      className: a()(l.overflowImage, l.overflowRight),
       alt: "",
       "aria-hidden": !0
     }), (0, r.jsx)("img", {
       src: g,
-      className: i()(l.overflowImage, l.overflowLeft),
+      className: a()(l.overflowImage, l.overflowLeft),
       alt: "",
       "aria-hidden": !0
     })]

@@ -13,8 +13,8 @@ var i, l = n(735250),
   d = n(239091),
   h = n(134616),
   p = n(714338),
-  f = n(212819),
-  _ = n(14429),
+  _ = n(212819),
+  f = n(14429),
   g = n(592125),
   m = n(888369),
   C = n(430824),
@@ -31,9 +31,9 @@ var i, l = n(735250),
   b = n(670512),
   M = n(981631),
   R = n(689938),
-  y = n(163282);
+  O = n(163282);
 
-function O(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,12 +43,12 @@ function O(e, t, n) {
 }
 let P = 10,
   j = () => (0, l.jsxs)("div", {
-    className: y.emptyState,
+    className: O.emptyState,
     children: [(0, l.jsx)("div", {
-      className: y.emptyStateNote,
+      className: O.emptyStateNote,
       children: R.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, l.jsx)("div", {
-      className: y.emptyStateCTA,
+      className: O.emptyStateCTA,
       children: (0, l.jsx)(u.Anchor, {
         href: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
         children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -61,13 +61,13 @@ class D extends(i = r.Component) {
     return (0, l.jsx)(S.$W, {
       ...this.props,
       children: (0, l.jsx)("div", {
-        className: y.miscContainer,
+        className: O.miscContainer,
         children: null != e ? e.name : null
       })
     })
   }
 }
-O(D, "defaultProps", {
+y(D, "defaultProps", {
   unread: !1
 });
 let U = c.ZP.connectStores([I.ZP, g.Z], e => {
@@ -119,7 +119,7 @@ function V(e, t, n) {
     text: n,
     children: e => (0, l.jsx)("span", {
       ...e,
-      className: y.autocompleteQuerySymbol,
+      className: O.autocompleteQuerySymbol,
       children: t
     })
   }, e)
@@ -165,7 +165,7 @@ class H extends r.PureComponent {
     } = this.state, i = t.length > 0 && "" !== n;
     return (0, l.jsx)(u.FocusRing, {
       children: (0, l.jsx)("input", {
-        className: y.input,
+        className: O.input,
         "aria-label": R.Z.Messages.QUICK_SWITCHER,
         ref: this.inputRef,
         type: "text",
@@ -201,7 +201,7 @@ class H extends r.PureComponent {
       rowHeight: 34,
       paddingBottom: P,
       sections: [t.length],
-      className: y.scroller,
+      className: O.scroller,
       renderRow: this.renderRow,
       renderSection: this.renderSection
     })
@@ -216,15 +216,15 @@ class H extends r.PureComponent {
   }
   renderProtip() {
     return (0, l.jsx)(x.Z, {
-      className: s()(y.protip, {
-        [y.hasContent]: this.state.query.length > 0
+      className: s()(O.protip, {
+        [O.hasContent]: this.state.query.length > 0
       }),
       type: x.Z.Types.INLINE,
       children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => V(t, f.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => V(t, f.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => V(t, f.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => V(t, f.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => V(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => V(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => V(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
         helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
       })
     })
@@ -245,39 +245,39 @@ class H extends r.PureComponent {
       "aria-label": R.Z.Messages.QUICK_SWITCHER,
       size: u.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
-      className: s()(y.container, o.tq && y.mobileContainer),
+      className: s()(O.container, o.tq && O.mobileContainer),
       fullscreenOnMobile: !1,
       children: (0, l.jsxs)("div", {
-        className: s()(y.quickswitcher, o.tq && y.mobileQuickswitcher),
+        className: s()(O.quickswitcher, o.tq && O.mobileQuickswitcher),
         onMouseMove: this.handleMouseMove,
         children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
       })
     })
   }
   constructor(...e) {
-    super(...e), O(this, "scrollerRef", r.createRef()), O(this, "inputRef", r.createRef()), O(this, "_listId", (0, Z.hQ)()), O(this, "state", {
+    super(...e), y(this, "scrollerRef", r.createRef()), y(this, "inputRef", r.createRef()), y(this, "_listId", (0, Z.hQ)()), y(this, "state", {
       query: this.props.query,
       mouseFocusDisabled: !0
-    }), O(this, "handleInputChange", () => {
+    }), y(this, "handleInputChange", () => {
       let {
         current: e
       } = this.inputRef;
       null != e && this.search(e.value)
-    }), O(this, "handleMouseMove", () => {
+    }), y(this, "handleMouseMove", () => {
       let {
         mouseFocusDisabled: e
       } = this.state;
       if (!1 !== e) this.setState({
         mouseFocusDisabled: !1
       })
-    }), O(this, "focusResult", e => {
+    }), y(this, "focusResult", e => {
       if (!this.state.mouseFocusDisabled)(0, L.tF)(this.props.results.indexOf(e))
-    }), O(this, "selectResult", e => {
-      (0, L.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL)
-    }), O(this, "handleContextMenu", e => {
+    }), y(this, "selectResult", e => {
+      (0, L.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL)
+    }), y(this, "handleContextMenu", e => {
       let t = this.props.results[this.props.selectedIndex];
       switch (t.type) {
-        case f.h8.GUILD:
+        case _.h8.GUILD:
           return (0, d.jW)(e, async () => {
             let {
               default: e
@@ -289,8 +289,8 @@ class H extends r.PureComponent {
               hideSettings: !0
             })
           });
-        case f.h8.TEXT_CHANNEL:
-        case f.h8.VOICE_CHANNEL:
+        case _.h8.TEXT_CHANNEL:
+        case _.h8.VOICE_CHANNEL:
           let i = t.record,
             r = C.Z.getGuild(i.getGuildId());
           if (null == r) return;
@@ -360,7 +360,7 @@ class H extends r.PureComponent {
               })
           }
           break;
-        case f.h8.GROUP_DM:
+        case _.h8.GROUP_DM:
           return (0, d.jW)(e, async () => {
             let {
               default: e
@@ -372,7 +372,7 @@ class H extends r.PureComponent {
               onSelect: L.Cp
             })
           });
-        case f.h8.USER:
+        case _.h8.USER:
           return (0, d.jW)(e, async () => {
             let {
               default: e
@@ -384,7 +384,7 @@ class H extends r.PureComponent {
             })
           })
       }
-    }), O(this, "handleKeyDown", e => {
+    }), y(this, "handleKeyDown", e => {
       let {
         mouseFocusDisabled: t,
         query: n
@@ -413,41 +413,41 @@ class H extends r.PureComponent {
           return
         }
         case "arrowup":
-          r = (0, f.gJ)(f.a8.UP, r, i);
+          r = (0, _.gJ)(_.a8.UP, r, i);
           break;
         case "arrowdown":
-          r = (0, f.gJ)(f.a8.DOWN, r, i);
+          r = (0, _.gJ)(_.a8.DOWN, r, i);
           break;
         case "n":
           if (!e.ctrlKey) return;
-          r = (0, f.gJ)(f.a8.DOWN, r, i);
+          r = (0, _.gJ)(_.a8.DOWN, r, i);
           break;
         case "p":
           if (!e.ctrlKey) return;
-          r = (0, f.gJ)(f.a8.UP, r, i);
+          r = (0, _.gJ)(_.a8.UP, r, i);
           break;
         default:
           return
       }
       e.preventDefault(), (0, L.tF)(r)
-    }), O(this, "renderRow", e => {
+    }), y(this, "renderRow", e => {
       let {
         row: t
       } = e, n = this.props.results[t], {
         selectedIndex: i
       } = this.props, {
         showScores: r
-      } = _.Z.getCurrentConfig({
+      } = f.Z.getCurrentConfig({
         location: "62f4be_1"
       }, {
         autoTrackExposure: !1
       });
       switch (n.type) {
-        case f.h8.HEADER:
+        case _.h8.HEADER:
           return (0, l.jsx)(S.h4, {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.TEXT_CHANNEL:
+        case _.h8.TEXT_CHANNEL:
           return (0, l.jsx)(U, {
             id: this.getRowId(t),
             focused: i >= 0 && t === i,
@@ -458,7 +458,7 @@ class H extends r.PureComponent {
             channel: n.record,
             score: r ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.VOICE_CHANNEL:
+        case _.h8.VOICE_CHANNEL:
           return (0, l.jsx)(G, {
             id: this.getRowId(t),
             focused: i >= 0 && t === i,
@@ -469,7 +469,7 @@ class H extends r.PureComponent {
             channel: n.record,
             score: r ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.GUILD:
+        case _.h8.GUILD:
           return (0, l.jsx)(w, {
             id: this.getRowId(t),
             focused: i >= 0 && t === i,
@@ -480,7 +480,7 @@ class H extends r.PureComponent {
             guild: n.record,
             score: r ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.USER:
+        case _.h8.USER:
           return (0, l.jsx)(B, {
             id: this.getRowId(t),
             focused: i >= 0 && t === i,
@@ -492,7 +492,7 @@ class H extends r.PureComponent {
             comparator: n.comparator,
             score: r ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.GROUP_DM:
+        case _.h8.GROUP_DM:
           return (0, l.jsx)(k, {
             id: this.getRowId(t),
             focused: i >= 0 && t === i,
@@ -503,7 +503,7 @@ class H extends r.PureComponent {
             channel: n.record,
             score: r ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.APPLICATION:
+        case _.h8.APPLICATION:
           return (0, l.jsx)(S.Mx, {
             id: this.getRowId(t),
             focused: i >= 0 && t === i,
@@ -512,7 +512,7 @@ class H extends r.PureComponent {
             onFocus: this.focusNode,
             application: n.record
           }, "".concat(n.type, "-").concat(n.record.id));
-        case f.h8.LINK:
+        case _.h8.LINK:
           return (0, l.jsx)(S.rU, {
             focused: i >= 0 && t === i,
             onClick: () => this.selectResult(n),

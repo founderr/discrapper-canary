@@ -10,8 +10,8 @@ var i = n(735250),
   d = n(481060),
   h = n(493683),
   p = n(239091),
-  f = n(153867),
-  _ = n(35225),
+  _ = n(153867),
+  f = n(35225),
   g = n(703656),
   m = n(769654),
   C = n(271383),
@@ -35,7 +35,7 @@ let R = {
   }
 };
 
-function y(e, t) {
+function O(e, t) {
   (0, p.jW)(e, async () => {
     let {
       default: e
@@ -47,7 +47,7 @@ function y(e, t) {
   })
 }
 t.Z = l.memo(function(e) {
-  var t, n, r, p, O;
+  var t, n, r, p, y;
   let {
     guildNode: P,
     setRef: j,
@@ -61,7 +61,7 @@ t.Z = l.memo(function(e) {
     mediaState: H,
     unavailable: F = !1,
     badge: W = 0,
-    contextMenu: Y = y,
+    contextMenu: Y = O,
     draggable: z = !1,
     sorting: K = !1,
     preloadOnClick: q = !0,
@@ -73,7 +73,7 @@ t.Z = l.memo(function(e) {
   null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
     guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
-  let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : {
+  let et = null !== (y = e.lowerBadgeSize) && void 0 !== y ? y : {
       width: (0, d.getBadgeWidthForValue)(W)
     },
     [{
@@ -87,7 +87,7 @@ t.Z = l.memo(function(e) {
         nodeId: P.id
       }),
       end() {
-        null == U || U(), (0, f.V1)(I.ZP.getCompatibleGuildFolders())
+        null == U || U(), (0, _.V1)(I.ZP.getCompatibleGuildFolders())
       },
       collect: e => ({
         dragging: e.isDragging()
@@ -110,15 +110,15 @@ t.Z = l.memo(function(e) {
         state: R
       })
     }, [J, G]),
-    ef = l.useCallback(() => {
+    e_ = l.useCallback(() => {
       if (null != G || null == w || F || !q) return;
-      let e = (0, _.V)(w.id);
+      let e = (0, f.V)(w.id);
       if (null != e) h.Z.preload(w.id, e)
     }, [G, w, F, q]),
-    e_ = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)),
+    ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)),
     eg = l.useCallback(e => {
-      null != w && !e_ && Y(e, w)
-    }, [w, Y, e_]),
+      null != w && !ef && Y(e, w)
+    }, [w, Y, ef]),
     em = l.useCallback(e => {
       if ("ArrowLeft" === e.key && null != X) {
         var t;
@@ -159,7 +159,7 @@ t.Z = l.memo(function(e) {
       onMouseLeave: function() {
         K || ea(!1)
       },
-      onMouseDown: ef,
+      onMouseDown: e_,
       onContextMenu: eg,
       onKeyDown: em,
       icon: w.getIconURL(96, es && k),

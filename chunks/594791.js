@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return u
+    return s
   }
 });
 var o = t(735250);
@@ -11,7 +11,7 @@ var r = t(481060),
   i = t(981631),
   l = t(689938);
 
-function u() {
+function s() {
   let e = c.dN.useSetting(),
     n = c.R$.useSetting();
   return e ? null : (0, o.jsx)(r.MenuCheckboxItem, {

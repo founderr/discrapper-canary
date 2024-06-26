@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(358085),
   N = t(210887),
   C = t(981631),
-  A = t(689938),
-  m = t(81378);
+  m = t(689938),
+  A = t(81378);
 let O = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
@@ -90,7 +90,7 @@ function h() {
       "" === e || null == e ? (P(O[0].value), f(null)) : null != s ? P(s.value) : (P("custom"), f(e))
     }, [f, P]);
   return (0, n.jsx)("div", {
-    className: m.fullscreen,
+    className: A.fullscreen,
     style: {
       "--playground-font-family": "mono" === l ? "gg mono" : "gg sans",
       "--playground-font-style": "italic" === l ? "italic" : "normal"
@@ -98,7 +98,7 @@ function h() {
     children: (0, n.jsxs)(c.FormSection, {
       tag: c.FormTitleTags.H1,
       children: [(0, n.jsxs)("div", {
-        className: m.toolbar,
+        className: A.toolbar,
         children: [(0, n.jsxs)("div", {
           children: [(0, n.jsxs)(c.Text, {
             tag: "div",
@@ -119,14 +119,14 @@ function h() {
           }) : null]
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.SingleSelect, {
-            className: m.select,
+            className: A.select,
             options: O,
             onChange: e => Z(e),
             value: L
           })
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)("div", {
-            className: m.input,
+            className: A.input,
             children: (0, n.jsx)(c.TextInput, {
               placeholder: "Enter custom input...",
               value: null != D ? D : "",
@@ -136,13 +136,13 @@ function h() {
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.RadioGroup, {
             withTransparentBackground: !0,
-            className: m.theme,
+            className: A.theme,
             orientation: "horizontal",
             options: [{
-              name: A.Z.Messages.THEME_DARK,
+              name: m.Z.Messages.THEME_DARK,
               value: C.BRd.DARK
             }, {
-              name: A.Z.Messages.THEME_LIGHT,
+              name: m.Z.Messages.THEME_LIGHT,
               value: C.BRd.LIGHT
             }],
             onChange: e => {
@@ -155,7 +155,7 @@ function h() {
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.RadioGroup, {
             withTransparentBackground: !0,
-            className: m.theme,
+            className: A.theme,
             orientation: "horizontal",
             options: [{
               name: "Upright",
@@ -177,16 +177,16 @@ function h() {
           keybind: "ESC"
         })]
       }), (0, n.jsxs)("div", {
-        className: m.textGrid,
+        className: A.textGrid,
         children: [(0, n.jsx)("div", {}), R.map(e => (0, n.jsx)("div", {
-          className: m.columnHeading,
+          className: A.columnHeading,
           children: (0, n.jsx)(c.Heading, {
             variant: "eyebrow",
             children: e
           })
         }, e)), [10, 12, 14, 15, 16, 18, 20, 24].map(e => (0, n.jsxs)(a.Fragment, {
           children: [(0, n.jsxs)("div", {
-            className: m.fontSize,
+            className: A.fontSize,
             children: [(0, n.jsxs)(c.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
@@ -199,11 +199,11 @@ function h() {
             var t;
             let a = null !== (t = "custom" === L ? D : L) && void 0 !== t ? t : "";
             return (0, n.jsx)("div", {
-              className: m.textSample,
+              className: A.textSample,
               children: (0, n.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(s),
-                className: r()(m.text, {
-                  [m.breakAnywhere]: !a.includes(" ")
+                className: r()(A.text, {
+                  [A.breakAnywhere]: !a.includes(" ")
                 }),
                 style: {
                   fontSize: e,

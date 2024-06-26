@@ -1,6 +1,6 @@
 n.d(t, {
   S: function() {
-    return _
+    return f
   }
 });
 var i = n(735250),
@@ -15,7 +15,7 @@ var i = n(735250),
   h = n(907934),
   p = n(721690);
 
-function f() {
+function _() {
   return (0, i.jsx)("div", {
     className: a()(h.row, h.rowGuildName),
     children: (0, i.jsx)("span", {
@@ -24,7 +24,7 @@ function f() {
     })
   })
 }
-let _ = l.memo(function(e) {
+let f = l.memo(function(e) {
   let {
     "aria-label": t = !1,
     children: n
@@ -51,7 +51,7 @@ let _ = l.memo(function(e) {
     spacing: 20,
     position: "right",
     align: "center",
-    text: (0, i.jsx)(f, {}),
+    text: (0, i.jsx)(_, {}),
     "aria-label": t,
     tooltipClassName: p.listItemTooltip,
     children: e => (0, i.jsx)("div", {

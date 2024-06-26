@@ -17,8 +17,8 @@ var i = n(735250),
   d = n(626135),
   h = n(727258),
   p = n(662146),
-  f = n(981631),
-  _ = n(689938),
+  _ = n(981631),
+  f = n(689938),
   g = n(798314);
 
 function m(e) {
@@ -44,7 +44,7 @@ function C(e, t) {
       let {
         nodeId: l
       } = e;
-      i && t.type !== h.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i)
+      i && t.type !== h.eD.FOLDER && d.default.track(_.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i)
     },
     collect: e => ({
       canDrop: e.canDrop(),
@@ -62,15 +62,15 @@ function I(e) {
   } = e, o = l.useMemo(() => C([h.eD.GUILD, h.eD.FOLDER], n, s, r), [n, s, r]), [{
     canDrop: u,
     isOver: d
-  }, p] = (0, c.L)(o), f = m([
+  }, p] = (0, c.L)(o), _ = m([
     [u, g.autoPointerEvents],
     [d, g.dragOver]
   ]);
   return (0, i.jsx)("div", {
     ref: e => {
-      f.current = e, p(e)
+      _.current = e, p(e)
     },
-    "data-dnd-name": _.Z.Messages.DND_DROP_ABOVE.format({
+    "data-dnd-name": f.Z.Messages.DND_DROP_ABOVE.format({
       itemName: t
     }),
     className: a()(g.target)
@@ -103,7 +103,7 @@ function E(e) {
       ref: e => {
         d.current = e, u(e)
       },
-      "data-dnd-name": _.Z.Messages.DND_DROP_COMBINE.format({
+      "data-dnd-name": f.Z.Messages.DND_DROP_COMBINE.format({
         itemName: t
       }),
       className: a()(g.centerTarget, {})

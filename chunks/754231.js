@@ -14,13 +14,13 @@ var i = n(735250),
   d = n(672938),
   h = n(936195),
   p = n(727218),
-  f = n(602623),
-  _ = n(81063),
+  _ = n(602623),
+  f = n(81063),
   g = n(768581),
   m = n(823379),
   C = n(51144),
   I = n(328979);
-let E = f.u.SIZE_24;
+let E = _.u.SIZE_24;
 
 function N(e) {
   var t, n;
@@ -47,14 +47,14 @@ function N(e) {
     })
   }(s) : null;
   let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
-    f = (0, c.Z)(r),
-    m = f ? I.spotifyLargeImage : I.applicationLargeImage,
+    _ = (0, c.Z)(r),
+    m = _ ? I.spotifyLargeImage : I.applicationLargeImage,
     C = null != p ? (0, i.jsx)("img", {
       alt: null !== (n = d.large_text) && void 0 !== n ? n : "",
-      src: (0, _.getAssetImage)(h, p, [128, 128]),
+      src: (0, f.getAssetImage)(h, p, [128, 128]),
       className: m
     }) : null;
-  return f && null != u ? (C = (0, i.jsx)(o.Clickable, {
+  return _ && null != u ? (C = (0, i.jsx)(o.Clickable, {
     className: I.clickable,
     onClick: () => {
       u(r, a.id)
@@ -157,7 +157,7 @@ function T(e) {
     sortedVoiceStates: d,
     onOpenSpotifyTrack: h,
     onOpenSpotifyArtist: p,
-    onOpenSpotifyAlbum: _
+    onOpenSpotifyAlbum: f
   } = e, g = [];
   null != n ? g = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != d && (g = d.map(e => e.user.id));
   let T = (0, s.Wu)([u.default], () => g.map(e => u.default.getUser(e)).filter(m.lm)),
@@ -177,7 +177,7 @@ function T(e) {
         activity: t,
         user: r,
         embeddedApp: n,
-        onOpenSpotifyAlbum: _
+        onOpenSpotifyAlbum: f
       }), (0, i.jsxs)("div", {
         className: I.detailsAndAvatarsContainer,
         children: [(0, i.jsx)(x, {
@@ -190,7 +190,7 @@ function T(e) {
           onOpenSpotifyArtist: p
         }), (0, i.jsx)(Z, {
           activity: t
-        }), g.length > 0 && (0, i.jsx)(f.Z, {
+        }), g.length > 0 && (0, i.jsx)(_.Z, {
           className: I.usersSummary,
           guildId: a.guild_id,
           users: T,

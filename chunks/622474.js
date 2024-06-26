@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(430492),
   N = t(688465),
   C = t(594174),
-  A = t(55935),
-  m = t(702512),
+  m = t(55935),
+  A = t(702512),
   O = t(689938),
   g = t(612011);
 let h = "YYYY-MM-DD HH:mm";
@@ -41,9 +41,9 @@ function R(e) {
     endDate: I,
     dropsQuestId: N,
     assets: C,
-    articleUrl: A
-  } = s, m = (0, S.EW)(N);
-  if (null == m) return null;
+    articleUrl: m
+  } = s, A = (0, S.EW)(N);
+  if (null == A) return null;
   let h = () => {
     (0, T.RJ)(N).then(() => {
       E.Z.wait(async () => {
@@ -105,14 +105,14 @@ function R(e) {
           color: "text-muted",
           variant: "text-sm/normal",
           className: g.dropCriteriaText,
-          children: m.messages.giftInfo()
+          children: A.messages.giftInfo()
         })
       }), (0, n.jsx)(_.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
         className: g.dropLearnMore,
         children: O.Z.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: A
+          faqUrl: m
         })
       })]
     })]
@@ -124,7 +124,7 @@ function p(e) {
     drop: s,
     code: t,
     platform: i
-  } = e, [o, c] = a.useState(!1), d = void 0 !== t, E = (0, A.vc)(l()(s.endDate), "LL"), u = O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [o, c] = a.useState(!1), d = void 0 !== t, E = (0, m.vc)(l()(s.endDate), "LL"), u = O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: E
   }), T = d ? O.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : O.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, S = a.useCallback(() => c(!1), []);
   return (0, n.jsxs)(n.Fragment, {
@@ -231,7 +231,7 @@ s.Z = function(e) {
     }), (0, n.jsx)("div", {
       className: g.dropsHelpText,
       children: O.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: m.n4
+        blogURL: A.n4
       })
     })]
   }) : 0 === i.length && 0 === r.length ? null : (0, n.jsxs)(_.FormSection, {

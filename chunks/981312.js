@@ -1,13 +1,13 @@
 t.d(n, {
   U: function() {
-    return a
+    return u
   }
 });
 var E = t(442837),
   _ = t(594174),
   s = t(699816);
 
-function a(e) {
+function u(e) {
   let n = (0, E.e7)([_.default], () => {
       var e;
       return null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed

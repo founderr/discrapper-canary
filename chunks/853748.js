@@ -5,9 +5,9 @@ n.d(t, {
   }
 }), n(653041);
 var r = n(735250),
-  a = n(470079),
-  i = n(120356),
-  o = n.n(i),
+  i = n(470079),
+  a = n(120356),
+  o = n.n(a),
   s = n(920906),
   c = n(873546),
   l = n(399606),
@@ -24,14 +24,14 @@ function b(e) {
     endDate: t
   } = e, {
     days: n,
-    hours: a,
-    minutes: i,
+    hours: i,
+    minutes: a,
     seconds: o
   } = (0, u.Z)(t), s = function(e, t, n, r) {
-    let a = (e, t) => "".concat(e.toString().padStart(2, "0")).concat(t),
-      i = [];
-    return e > 0 && i.push(a(e, f.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || i.length > 0) && i.push(a(t, f.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || i.length > 0) && i.push(a(n, f.Z.Messages.COUNTDOWN_UNITS_MINUTES)), i.push(a(r, f.Z.Messages.COUNTDOWN_UNITS_SECONDS)), i.join(":")
-  }(n, a, i, o);
+    let i = (e, t) => "".concat(e.toString().padStart(2, "0")).concat(t),
+      a = [];
+    return e > 0 && a.push(i(e, f.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(i(t, f.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(i(n, f.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(i(r, f.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(":")
+  }(n, i, a, o);
   return (0, r.jsx)(d.Text, {
     variant: "heading-md/medium",
     className: g.countdown,
@@ -43,12 +43,12 @@ function b(e) {
     })
   })
 }
-let m = a.memo(function(e) {
+let m = i.memo(function(e) {
   let {
     unpublishedAt: t,
     isVisible: n,
-    displayOptions: a,
-    isFullScreen: i
+    displayOptions: i,
+    isFullScreen: a
   } = e, u = (0, l.e7)([p.Z], () => p.Z.useReducedMotion), f = (0, s.useSpring)({
     transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),
     opacity: n ? 1 : 0,
@@ -59,18 +59,18 @@ let m = a.memo(function(e) {
     immediate: u
   });
   return (0, r.jsxs)(s.animated.div, {
-    className: o()([g.countDownWrapper, i && g.fullScreenWrapper, c.tq && g.mobileWrapper]),
+    className: o()([g.countDownWrapper, a && g.fullScreenWrapper, c.tq && g.mobileWrapper]),
     role: "status",
     style: {
-      ...a.style,
+      ...i.style,
       ...f
     },
     children: [(0, r.jsx)(d.Text, {
       variant: "text-md/medium",
       className: g.countdownLabel,
-      children: a.label()
-    }), null != a.iconSrc && (0, r.jsx)("img", {
-      src: a.iconSrc,
+      children: i.label()
+    }), null != i.iconSrc && (0, r.jsx)("img", {
+      src: i.iconSrc,
       className: g.countdownIcon,
       alt: "",
       "aria-hidden": !0

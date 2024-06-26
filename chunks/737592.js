@@ -10,8 +10,8 @@ var l = n(120356),
   d = n(952164),
   h = n(131704),
   p = n(314897),
-  f = n(594174),
-  _ = n(409216),
+  _ = n(594174),
+  f = n(409216),
   g = n(768581),
   m = n(51144),
   C = n(754231),
@@ -44,7 +44,7 @@ function N(e) {
     members: t,
     guildId: n
   } = e;
-  return (0, i.jsx)(_.Z, {
+  return (0, i.jsx)(f.Z, {
     className: I.partyMembers,
     guildId: n,
     users: t,
@@ -67,15 +67,15 @@ t.Z = e => {
     members: l,
     embeddedApp: r,
     onAction: s
-  } = e, _ = null != r, g = _ ? Array.from(r.embeddedActivity.userIds) : [], m = (0, a.e7)([f.default, p.default], () => {
-    if (_) return f.default.getUser(g[0]);
+  } = e, f = null != r, g = f ? Array.from(r.embeddedActivity.userIds) : [], m = (0, a.e7)([_.default, p.default], () => {
+    if (f) return _.default.getUser(g[0]);
     if (null != l) {
       var e, t;
       return l.length <= 0 ? null : null !== (t = null === (e = l.find(e => e.user.id !== p.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user
     }
   });
   if (null == m) return null;
-  let E = _ || (0, c.Z)(n),
+  let E = f || (0, c.Z)(n),
     x = (0, h.vd)(t.type);
   return (0, i.jsxs)("div", {
     className: I.activity,
@@ -100,7 +100,7 @@ t.Z = e => {
           guildId: t.guild_id,
           members: l
         }) : void 0,
-        isEmbedded: _
+        isEmbedded: f
       })
     }), (0, i.jsx)("div", {
       className: I.activityActionsContainer,
@@ -113,7 +113,7 @@ t.Z = e => {
         channelId: t.id,
         color: I.button,
         onAction: s,
-        isEmbedded: _
+        isEmbedded: f
       })
     })]
   })

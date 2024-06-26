@@ -16,18 +16,18 @@ var i = n(735250),
 function h(e) {
   let {
     guildId: t
-  } = e, n = l.useMemo(() => (0, c.Mg)(t), [t]), h = (0, r.e7)([s.Z], () => s.Z.getGuild(t)), p = (0, r.e7)([o.Z], () => o.Z.isFocused()), f = t === (0, a.Z)(e => {
+  } = e, n = l.useMemo(() => (0, c.Mg)(t), [t]), h = (0, r.e7)([s.Z], () => s.Z.getGuild(t)), p = (0, r.e7)([o.Z], () => o.Z.isFocused()), _ = t === (0, a.Z)(e => {
     let {
       guildId: t
     } = e;
     return t
-  }), _ = (0, u.Z)(t);
+  }), f = (0, u.Z)(t);
   return null == h ? null : (0, i.jsx)(d.Z, {
     guildNode: n,
     guild: h,
     animatable: p,
-    selected: f,
+    selected: _,
     draggable: !1,
-    mediaState: _
+    mediaState: f
   })
 }

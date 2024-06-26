@@ -15,8 +15,8 @@ var l = n(442837),
   d = n(601070),
   h = n(430824),
   p = n(496675),
-  f = n(306680),
-  _ = n(979651),
+  _ = n(306680),
+  f = n(979651),
   g = n(968358),
   m = n(790901),
   C = n(714794),
@@ -38,12 +38,12 @@ function L(e) {
     voiceStates: b,
     enableConnectedUserLimit: M,
     enableActivities: R,
-    isSubscriptionGated: y,
-    needSubscriptionToAccess: O,
+    isSubscriptionGated: O,
+    needSubscriptionToAccess: y,
     isNewChannel: P,
     muted: j,
     resolvedUnreadSetting: D
-  } = e, U = (0, l.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)), G = (0, s.ZP)(n), w = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)), k = (0, l.e7)([_.Z], () => _.Z.hasVideo(n.id)), B = (0, u.PK)(n.id) && n.isGuildStageVoice(), V = (0, I.ZP)({
+  } = e, U = (0, l.e7)([_.ZP], () => _.ZP.getMentionCount(n.id)), G = (0, s.ZP)(n), w = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)), k = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)), B = (0, u.PK)(n.id) && n.isGuildStageVoice(), V = (0, I.ZP)({
     channel: n,
     locked: w,
     video: k || B,
@@ -55,8 +55,8 @@ function L(e) {
   if ((0, C.Z)(U)) return (0, i.jsx)(x.Z, {
     mentionsCount: U
   });
-  if ((0, c.O)(y)) return (0, i.jsx)(c.Z, {
-    locked: O
+  if ((0, c.O)(O)) return (0, i.jsx)(c.Z, {
+    locked: y
   });
   if (P) return (0, i.jsx)(a.TextBadge, {
     text: v.Z.Messages.NEW,

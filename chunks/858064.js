@@ -15,29 +15,29 @@ var l = n(442837),
   d = n(702512),
   h = n(981631),
   p = n(689938),
-  f = n(201032);
-let _ = (e, t, n) => {
+  _ = n(201032);
+let f = (e, t, n) => {
   let i = t.assets.tooltipSrc;
   switch (e) {
     case d._e.STREAM_CTA:
       return {
         header: p.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
           gameName: t.title
-        }), body: t.messages.enrollmentTooltip(n), imgSrc: i, imgStyle: f.dropImgPreStreamNotice
+        }), body: t.messages.enrollmentTooltip(n), imgSrc: i, imgStyle: _.dropImgPreStreamNotice
       };
     case d._e.TRACK_PROGRESS:
       return {
         header: p.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
           gameName: t.title
-        }), body: "", imgSrc: i, imgStyle: f.dropImgProgressTracker
+        }), body: "", imgSrc: i, imgStyle: _.dropImgProgressTracker
       };
     case d._e.QUEST_COMPLETION:
       return {
-        header: p.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER, body: t.messages.completionTooltip(n), imgSrc: i, imgStyle: f.dropImgQuestCompletion
+        header: p.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER, body: t.messages.completionTooltip(n), imgSrc: i, imgStyle: _.dropImgQuestCompletion
       };
     case d._e.LOADING_INITIAL_PROGRESS:
       return {
-        header: "", body: "", imgSrc: i, imgStyle: f.dropImgPreStreamNotice
+        header: "", body: "", imgSrc: i, imgStyle: _.dropImgPreStreamNotice
       }
   }
 };
@@ -50,17 +50,17 @@ function g(e) {
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(r.Text, {
       variant: "text-sm/bold",
-      className: f.progressBarCount,
+      className: _.progressBarCount,
       children: p.Z.Messages.DROPS_STREAM_PROGRESS_INDICATOR.format({
         minutesStreamed: s,
         streamLengthRequirement: t
       })
     }), (0, i.jsx)("div", {
-      className: f.progressBarContainer,
+      className: _.progressBarContainer,
       children: (0, i.jsx)("div", {
-        className: f.progressBarOuter,
+        className: _.progressBarOuter,
         children: (0, i.jsx)("div", {
-          className: f.progressBarInner,
+          className: _.progressBarInner,
           style: {
             width: "".concat(a, "%")
           }
@@ -68,7 +68,7 @@ function g(e) {
       })
     }), (0, i.jsxs)(r.Text, {
       variant: "text-xs/medium",
-      className: f.viewerCount,
+      className: _.viewerCount,
       children: ["*", p.Z.Messages.DROPS_REQUIRE_NUM_VIEWERS.format({
         numViewers: n
       }), "*"]
@@ -93,7 +93,7 @@ function m(e) {
     body: S,
     imgSrc: Z,
     imgStyle: v
-  } = _(n, N, I), T = () => {
+  } = f(n, N, I), T = () => {
     o.default.track(h.rMx.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
       user_id: C,
       drops_quest_id: N.dropsQuestId,
@@ -105,24 +105,24 @@ function m(e) {
     t()
   };
   return (0, i.jsxs)("div", {
-    className: f.container,
+    className: _.container,
     children: [(0, i.jsx)("img", {
       src: Z,
       alt: "",
       className: v
     }), (0, i.jsx)(r.Clickable, {
-      className: f.__invalid_buttonClose,
+      className: _.__invalid_buttonClose,
       "aria-label": p.Z.Messages.CLOSE,
       onClick: L,
       children: (0, i.jsx)(r.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
-        className: f.closeIcon
+        className: _.closeIcon
       })
     }), n === d._e.LOADING_INITIAL_PROGRESS ? (0, i.jsx)(r.Spinner, {
-      className: f.spinner
+      className: _.spinner
     }) : (0, i.jsx)(r.Heading, {
-      className: f.title,
+      className: _.title,
       variant: "heading-md/extrabold",
       children: x
     }), n === d._e.TRACK_PROGRESS ? (0, i.jsx)(g, {
@@ -130,7 +130,7 @@ function m(e) {
       viewerCountRequirement: E
     }) : (0, i.jsx)(r.Text, {
       variant: "text-sm/medium",
-      className: f.subTitle,
+      className: _.subTitle,
       children: S
     }), n === d._e.QUEST_COMPLETION ? (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(r.Button, {
@@ -141,8 +141,8 @@ function m(e) {
         },
         children: p.Z.Messages.REDEEM
       }), (0, i.jsx)(r.Button, {
-        className: f.linkButtonContainer,
-        innerClassName: f.linkButton,
+        className: _.linkButtonContainer,
+        innerClassName: _.linkButton,
         onClick: L,
         look: r.Button.Looks.LINK,
         fullWidth: !0,
@@ -157,7 +157,7 @@ function m(e) {
       },
       children: p.Z.Messages.LEARN_MORE
     }), (0, i.jsx)("div", {
-      className: f.pointer
+      className: _.pointer
     })]
   })
 }

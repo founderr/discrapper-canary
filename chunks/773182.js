@@ -23,8 +23,8 @@ var i = n(735250),
   d = n(350810),
   h = n(110924),
   p = n(100527),
-  f = n(970606),
-  _ = n(963202),
+  _ = n(970606),
+  f = n(963202),
   g = n(824991),
   m = n(243778),
   C = n(863249),
@@ -46,8 +46,8 @@ function T(e) {
     onClick: c,
     children: h,
     isEligibleForUpsell: p = !0,
-    withInviteIcon: f = !0
-  } = e, _ = (0, s.TH)(), [C, I] = (0, m.U)([r], S.R.SIDEBAR), Z = C !== r, T = (0, d.Z)(), L = p && !T && !Z && _.pathname !== N.Z5c.GUILD_DISCOVERY;
+    withInviteIcon: _ = !0
+  } = e, f = (0, s.TH)(), [C, I] = (0, m.U)([r], S.R.SIDEBAR), Z = C !== r, T = (0, d.Z)(), L = p && !T && !Z && f.pathname !== N.Z5c.GUILD_DISCOVERY;
   l.useEffect(() => {
     L && o()
   }, [L, o]);
@@ -88,7 +88,7 @@ function T(e) {
             })
           }), (0, i.jsxs)("div", {
             className: v.popoutContent,
-            children: [f && (0, i.jsx)(g.YV, {}), (0, i.jsx)(g.aF, {
+            children: [_ && (0, i.jsx)(g.YV, {}), (0, i.jsx)(g.aF, {
               title: t
             }), (0, i.jsx)(g.To, {
               message: n
@@ -119,11 +119,11 @@ function L(e) {
     defaultGameId: t,
     children: n
   } = e, r = l.useCallback(() => {
-    (0, f.tv)({
+    (0, _.tv)({
       location: p.Z.GUILDS_LIST
     })
   }, []), a = l.useCallback(() => {
-    (0, f.GS)({
+    (0, _.GS)({
       location: p.Z.GUILDS_LIST
     })
   }, []), [s, o] = l.useMemo(() => {
@@ -154,15 +154,15 @@ function A(e) {
     children: n
   } = e, {
     guilds: r
-  } = (0, _.C3)({
+  } = (0, f.C3)({
     location: "GuildsBarClanAdminUpsellPopout",
     includeConverted: !1
   }), a = r.length > 0, s = l.useCallback(() => {
-    (0, f.TE)({
+    (0, _.TE)({
       location: p.Z.GUILDS_LIST
     })
   }, []), o = l.useCallback(() => {
-    (0, f._9)({
+    (0, _._9)({
       location: p.Z.GUILDS_LIST
     })
   }, []), [u, d] = l.useMemo(() => {

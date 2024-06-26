@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(612226),
   N = t(714338),
   C = t(924557),
-  A = t(74299),
-  m = t(131951),
+  m = t(74299),
+  A = t(131951),
   O = t(556296),
   g = t(808506),
   h = t(285952),
@@ -387,7 +387,7 @@ class y extends a.PureComponent {
 
 function Y() {
   let e = (0, c.e7)([O.Z], () => O.Z.getState()),
-    s = (0, c.e7)([m.Z], () => (0, A.Z)(m.Z)),
+    s = (0, c.e7)([A.Z], () => (0, m.Z)(A.Z)),
     t = (0, c.e7)([g.Z], () => g.Z.isSupported()),
     a = (0, C.Go)();
   return (0, n.jsx)(y, {

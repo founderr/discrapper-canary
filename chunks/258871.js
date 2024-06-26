@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(944486),
   h = n(147754),
   p = n(688438),
-  f = n(981631),
-  _ = n(689938);
+  _ = n(981631),
+  f = n(689938);
 let g = [{
   key: "EVENTS",
   renderIcon: e => (0, i.jsx)(a.CalendarIcon, {
@@ -22,9 +22,9 @@ let g = [{
     let {
       numEvents: t
     } = e;
-    return t > 0 ? _.Z.Messages.GUILD_EVENTS_PLURAL.format({
+    return t > 0 ? f.Z.Messages.GUILD_EVENTS_PLURAL.format({
       number: t
-    }) : _.Z.Messages.GUILD_EVENTS
+    }) : f.Z.Messages.GUILD_EVENTS
   },
   handler: e => (0, a.openModalLazy)(async () => {
     let {
@@ -42,7 +42,7 @@ let g = [{
     color: "currentColor",
     className: e
   }),
-  getName: () => _.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+  getName: () => f.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
   handler: (e, t) => (0, u.XU)(e.id, t.id)
 }, {
   key: "ADD_SERVERS",
@@ -51,7 +51,7 @@ let g = [{
     color: "currentColor",
     className: e
   }),
-  getName: () => _.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
+  getName: () => f.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
   handler: (e, t) => (0, a.openModalLazy)(async () => {
     let {
       default: l
@@ -68,7 +68,7 @@ let g = [{
   renderIcon: e => (0, i.jsx)(a.GroupPlusIcon, {
     className: e
   }),
-  getName: () => _.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+  getName: () => f.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
   handler: (e, t) => (0, a.openModalLazy)(async () => {
     let {
       default: l
@@ -77,7 +77,7 @@ let g = [{
       ...n,
       guild: e,
       channel: t,
-      source: f.t4x.HUB_SIDEBAR
+      source: _.t4x.HUB_SIDEBAR
     })
   })
 }];
@@ -99,7 +99,7 @@ t.Z = e => {
     location: "543af8_2"
   }, {
     autoTrackExposure: !1
-  }), f = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), _ = l.useMemo(() => ({
+  }), _ = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), f = l.useMemo(() => ({
     numEvents: a.length
   }), [a.length]), m = (0, p.t)(n);
   return (0, i.jsx)(i.Fragment, {
@@ -115,8 +115,8 @@ t.Z = e => {
       return (0, i.jsx)(o.m, {
         id: d,
         renderIcon: s,
-        text: r(_),
-        selected: f && "JOIN_SERVERS" === l,
+        text: r(f),
+        selected: _ && "JOIN_SERVERS" === l,
         onClick: null != n ? () => a(t, n) : void 0,
         trailing: "JOIN_SERVERS" === l && m > 0 ? (0, c.N)(m) : null
       }, d)

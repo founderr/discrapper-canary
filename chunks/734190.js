@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(239091),
   h = n(569471),
   p = n(488131),
-  f = n(592125),
-  _ = n(306680),
+  _ = n(592125),
+  f = n(306680),
   g = n(979651),
   m = n(938475),
   C = n(514342),
@@ -53,18 +53,18 @@ t.Z = l.memo(function(e) {
     isSelectedVoice: A,
     isLast: M,
     withGuildIcon: R
-  } = e, y = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
+  } = e, O = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), y = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
     unread: P,
     mentionCount: j
-  } = (0, o.cj)([_.ZP], () => ({
-    unread: _.ZP.hasUnread(t.id),
-    mentionCount: _.ZP.getMentionCount(t.id)
+  } = (0, o.cj)([f.ZP], () => ({
+    unread: f.ZP.hasUnread(t.id),
+    mentionCount: f.ZP.getMentionCount(t.id)
   })), D = (0, o.e7)([h.Z], () => h.Z.isMuted(t.id)), U = l.useCallback(e => {
     (0, p.ok)(t, !e.shiftKey, Z.on.CHANNEL_LIST)
   }, [t]), G = l.useCallback(() => {
     u.Z.preload(t.guild_id, t.id)
   }, [t.guild_id, t.id]), w = l.useCallback(e => {
-    let l = f.Z.getChannel(t.id);
+    let l = _.Z.getChannel(t.id);
     null != l && (0, d.jW)(e, async () => {
       let {
         default: e
@@ -74,7 +74,7 @@ t.Z = l.memo(function(e) {
         channel: l
       })
     })
-  }, [t.id]), k = null == y ? 0 : y.length, {
+  }, [t.id]), k = null == O ? 0 : O.length, {
     role: B,
     ...V
   } = (0, s.JA)(t.id), H = l.useRef(null), F = j > 0 ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -135,7 +135,7 @@ t.Z = l.memo(function(e) {
               className: L.children,
               children: [k > 0 && t.userLimit > 0 ? (0, i.jsx)(E.Z, {
                 userCount: k,
-                video: O,
+                video: y,
                 channel: t
               }) : null, (0, I.Z)(j) ? (0, i.jsx)(N.Z, {
                 mentionsCount: j
@@ -148,7 +148,7 @@ t.Z = l.memo(function(e) {
       channel: t,
       collapsed: !A,
       collapsedMax: 6,
-      voiceStates: y,
+      voiceStates: O,
       location: S.Sbl.GUILD_CHANNEL_LIST
     })]
   })

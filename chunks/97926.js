@@ -29,9 +29,9 @@ s.Z = () => {
     fetchPolicy: "cache-and-network"
   }), t = (0, l.EH)(), N = (0, o.q)({
     location: E.dr.USER_SETTINGS_GIFT_INVENTORY
-  }), [C, A] = a.useState(!0), [m, O] = a.useState([]), [g, h] = a.useState([]), R = a.useMemo(() => C ? s ? "unsorted" : "pending_sort" : "sorted", [C, s]);
+  }), [C, m] = a.useState(!0), [A, O] = a.useState([]), [g, h] = a.useState([]), R = a.useMemo(() => C ? s ? "unsorted" : "pending_sort" : "sorted", [C, s]);
   a.useEffect(() => {
-    A(!0)
+    m(!0)
   }, [s, t]), a.useEffect(() => {
     if ("pending_sort" === R) {
       let {
@@ -71,11 +71,11 @@ s.Z = () => {
             if (N && C) return 0;
             if (N) return -1;
             if (C) return 1;
-            let A = (0, d.Mi)(e, c.jn.GIFT_INVENTORY_FOR_YOU),
-              m = (0, d.Mi)(s, c.jn.GIFT_INVENTORY_FOR_YOU);
-            if (A && !S && !l && m && !I && !u) return 0;
-            if (A && !S && !l) return -1;
-            if (m && !I && !u) return 1;
+            let m = (0, d.Mi)(e, c.jn.GIFT_INVENTORY_FOR_YOU),
+              A = (0, d.Mi)(s, c.jn.GIFT_INVENTORY_FOR_YOU);
+            if (m && !S && !l && A && !I && !u) return 0;
+            if (m && !S && !l) return -1;
+            if (A && !I && !u) return 1;
             let O = l && _,
               g = u && T;
             return O && !g ? 1 : !O && g ? -1 : 0
@@ -98,7 +98,7 @@ s.Z = () => {
         let a = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null;
         return !(null !== (n = t.get(e.id)) && void 0 !== n && n) || a
       }));
-      O(s), h(n), A(!1)
+      O(s), h(n), m(!1)
     }
   }, [e, t, R]);
   let p = g.every(e => {
@@ -109,7 +109,7 @@ s.Z = () => {
   });
   return s || "sorted" !== R ? (0, n.jsx)(i.Spinner, {
     className: S.spinner
-  }) : 0 === m.length ? null : (0, n.jsx)(i.FormSection, {
+  }) : 0 === A.length ? null : (0, n.jsx)(i.FormSection, {
     className: S.questsContainer,
     children: (0, n.jsxs)(i.HeadingLevel, {
       component: (0, n.jsxs)("div", {
@@ -157,7 +157,7 @@ s.Z = () => {
             initiallyExpanded: !p
           }, e))]
         }, a)
-      }) : m.map((e, s) => (0, n.jsx)(_.D, {
+      }) : A.map((e, s) => (0, n.jsx)(_.D, {
         questId: e,
         location: c.jn.GIFT_INVENTORY_FOR_YOU,
         contentPosition: s

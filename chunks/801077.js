@@ -6,8 +6,8 @@ var i, l, r, a, s = n(392711),
   d = n(782769),
   h = n(527805),
   p = n(841784),
-  f = n(503438),
-  _ = n(802856),
+  _ = n(503438),
+  f = n(802856),
   g = n(420660),
   m = n(728345),
   C = n(812206),
@@ -24,8 +24,8 @@ var i, l, r, a, s = n(392711),
   b = n(480294),
   M = n(831506),
   R = n(731290),
-  y = n(430824),
-  O = n(496675),
+  O = n(430824),
+  y = n(496675),
   P = n(158776),
   j = n(699516),
   D = n(594174),
@@ -73,14 +73,14 @@ function X(e) {
 }
 
 function $(e) {
-  if ((0, f.Z)(e)) return Z.r9;
+  if ((0, _.Z)(e)) return Z.r9;
   let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
-  return null != t ? t : (0, _.Z)(e) ? Q(e.name) : (0, g.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t)
+  return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, g.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t)
 }
 
 function ee(e) {
   let t = U.Z.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && O.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
     channelId: t.channelId
   }) ? t.channelId : null
 }
@@ -92,8 +92,8 @@ function et(e) {
 function en(e, t, n) {
   var i, l, r, a, s, c;
   let u;
-  let f = D.default.getCurrentUser(),
-    _ = null !== (i = null == f ? void 0 : f.nsfwAllowed) && void 0 !== i && i,
+  let _ = D.default.getCurrentUser(),
+    f = null !== (i = null == _ ? void 0 : _.nsfwAllowed) && void 0 !== i && i,
     g = t.map(e => e.id),
     m = t.filter(t => e.has(t.id)),
     E = !1,
@@ -104,7 +104,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = L.Z.getAnyStreamForUser(e.id),
       i = A.Z.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == i ? void 0 : i.isNSFW()) && (!_ || !R.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+    if ((null == i ? void 0 : i.isNSFW()) && (!f || !R.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
     let s = q(e.id);
     if (null != n && w.push({
         stream: n,
@@ -130,12 +130,12 @@ function en(e, t, n) {
           userId: e.id,
           application: u,
           channelId: null === (r = U.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
-          currentUser: f,
+          currentUser: _,
           isActivitiesEnabledForCurrentPlatform: t,
           ChannelStore: A.Z,
           VoiceStateStore: U.Z,
-          PermissionStore: O.Z,
-          GuildStore: y.Z
+          PermissionStore: y.Z,
+          GuildStore: O.Z
         }) !== h.Fw.CAN_JOIN) continue
     } else if (null == g) continue;
     if (!x.JE(s) || null == u || b.has(u.id)) continue;
@@ -165,7 +165,7 @@ function en(e, t, n) {
     let n = ee(e.id),
       i = A.Z.getChannel(n),
       l = null != i ? i.getGuildId() : null,
-      r = y.Z.getGuild(l);
+      r = O.Z.getGuild(l);
     if (H.has(l) && V.has(n) || null == i || null == r || i.id === r.afkChannelId) null == i && (u = null, k = !0);
     else {
       let e = o()(U.Z.getVoiceStatesForChannel(i.id)).map(e => {
@@ -236,7 +236,7 @@ function er() {
 }
 class ea extends(i = c.ZP.Store) {
   initialize() {
-    this.syncWith([D.default, C.Z, P.Z, M.Z, U.Z, L.Z, j.Z, b.Z, S.Z], er), this.waitFor(E.Z, y.Z, C.Z, D.default, S.Z)
+    this.syncWith([D.default, C.Z, P.Z, M.Z, U.Z, L.Z, j.Z, b.Z, S.Z], er), this.waitFor(E.Z, O.Z, C.Z, D.default, S.Z)
   }
   get currentActivityParties() {
     return V

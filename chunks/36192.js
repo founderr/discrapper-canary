@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(246946),
   N = t(594174),
   C = t(460562),
-  A = t(823379),
-  m = t(981631),
+  m = t(823379),
+  A = t(981631),
   O = t(921944),
   g = t(689938),
   h = t(522636);
@@ -40,9 +40,9 @@ function R() {
       clearTimeout(e), (0, u.$Z)()
     }
   }, []);
-  let A = () => {
+  let m = () => {
       l.tn.post({
-        url: m.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG
+        url: A.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
     [R, M] = a.useState(new Set);
@@ -122,7 +122,7 @@ function R() {
           return (0, n.jsx)(d.Button, {
             size: d.Button.Sizes.SMALL,
             color: d.Button.Colors.PRIMARY,
-            onClick: A,
+            onClick: m,
             onMouseEnter: s,
             onMouseLeave: t,
             children: "Trigger Suspicious Sessions Notification"
@@ -143,7 +143,7 @@ function p(e) {
     useChecks: S
   } = e, I = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip, N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform, {
     text: C,
-    icon: m
+    icon: A
   } = function(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
       case null:
@@ -162,12 +162,12 @@ function p(e) {
           text: e, icon: d.ScreenIcon
         }
     }
-  }(null === (i = l.client_info) || void 0 === i ? void 0 : i.os), O = c ? null : (0, T.p)(l.approx_last_used_time), R = [C, N].filter(A.lm), p = [I, O].filter(A.lm);
+  }(null === (i = l.client_info) || void 0 === i ? void 0 : i.os), O = c ? null : (0, T.p)(l.approx_last_used_time), R = [C, N].filter(m.lm), p = [I, O].filter(m.lm);
   return (0, n.jsxs)("div", {
     className: r()(h.session, c ? h.currentSession : null),
     children: [(0, n.jsx)("div", {
       className: h.sessionIcon,
-      children: (0, n.jsx)(m, {
+      children: (0, n.jsx)(A, {
         size: "md",
         color: "currentColor"
       })
@@ -244,7 +244,7 @@ function x() {
         color: "text-muted",
         children: (0, n.jsx)("span", {
           children: g.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
-            onClick: () => _.Z.setSection(m.oAB.ACCOUNT)
+            onClick: () => _.Z.setSection(A.oAB.ACCOUNT)
           })
         })
       })]

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return u
+    return s
   }
 });
 var o = t(735250);
@@ -11,7 +11,7 @@ var r = t(442837),
   i = t(607070),
   l = t(689938);
 
-function u() {
+function s() {
   let {
     saturation: e,
     useReducedMotion: n,
@@ -20,7 +20,7 @@ function u() {
     saturation: i.Z.saturation,
     useReducedMotion: i.Z.useReducedMotion,
     roleStyle: i.Z.roleStyle
-  })), u = [{
+  })), s = [{
     name: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_USERNAME_LABEL,
     value: "username"
   }, {
@@ -53,7 +53,7 @@ function u() {
     children: (0, o.jsx)(a.MenuItem, {
       id: "role-colors",
       label: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
-      children: u.map(e => {
+      children: s.map(e => {
         let {
           name: n,
           value: r

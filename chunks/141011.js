@@ -17,25 +17,25 @@ t.Z = e => {
     className: g,
     style: v,
     children: C,
-    blur: h = !1
-  } = e, E = (0, i.e7)([c.Z], () => c.Z.saturation), b = a.useMemo(() => {
+    blur: E = !1
+  } = e, h = (0, i.e7)([c.Z], () => c.Z.saturation), b = a.useMemo(() => {
     if (null == t) return v;
     let e = (0, u.uV)(t, {
         size: n,
         format: "jpg"
       }),
-      r = h ? {
+      r = E ? {
         filter: "blur(2px)",
         transform: "scale(1.02)"
       } : {};
-    if (1 === E) return {
+    if (1 === h) return {
       ...v,
       backgroundImage: o ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
       backgroundBlendMode: "multiply",
       backgroundSize: "cover",
       ...r
     };
-    let a = (0, d.aD)(s.ZP.unsafe_rawColors.BLACK_500, 1 - E);
+    let a = (0, d.aD)(s.ZP.unsafe_rawColors.BLACK_500, 1 - h);
     return {
       ...v,
       backgroundImage: "linear-gradient(".concat(a, ", ").concat(a, "), url(").concat(e, ")"),
@@ -43,7 +43,7 @@ t.Z = e => {
       backgroundSize: "cover",
       ...r
     }
-  }, [t, n, E, v, h, o]);
+  }, [t, n, h, v, E, o]);
   return (0, r.jsx)("div", {
     className: l()(p.banner, g),
     style: b,

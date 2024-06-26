@@ -24,21 +24,21 @@ let g = d.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
       isPurchased: d = !1,
       avatarSize: v = i.AvatarSizes.SIZE_152,
       avatarPlaceholderSrc: C
-    } = e, h = (0, s.y9)(v), E = (0, u.c)("AvatarDecorationPreview"), {
+    } = e, E = (0, s.y9)(v), h = (0, u.c)("AvatarDecorationPreview"), {
       avatarDecorationSrc: b,
       eventHandlers: m,
-      avatarPlaceholderSrc: y
+      avatarPlaceholderSrc: T
     } = (0, c.Z)({
       user: n,
       avatarDecorationOverride: (null == t ? void 0 : t.type) === l.Z.AVATAR_DECORATION ? t : void 0,
-      size: h,
+      size: E,
       onlyAnimateOnHover: !a
     });
     return (0, r.jsx)(g, {
       ...m,
       avatarDecoration: b,
-      src: E && a ? null == n ? void 0 : n.getAvatarURL(void 0, 152, !0) : null != C ? C : y,
-      imageClassName: E && a ? p.fadeInAvatarImg : void 0,
+      src: h && a ? null == n ? void 0 : n.getAvatarURL(void 0, 152, !0) : null != C ? C : T,
+      imageClassName: h && a ? p.fadeInAvatarImg : void 0,
       className: o()(p.avatar, {
         [p.avatarPurchased]: d
       }),

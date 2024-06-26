@@ -1,7 +1,7 @@
 var E, _, s = t(25209),
-  a = t(97797),
-  u = t(35125),
-  r = t(786761),
+  u = t(97797),
+  r = t(35125),
+  a = t(786761),
   i = t(739566),
   l = t(499401),
   M = t(693912),
@@ -10,8 +10,8 @@ var E, _, s = t(25209),
   A = t(592125),
   o = t(430824),
   I = t(594174),
-  O = t(5192),
-  c = t(709054),
+  c = t(5192),
+  O = t(709054),
   T = t(981631),
   d = t(689938);
 let C = {
@@ -45,7 +45,7 @@ let R = () => [d.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, d.Z.Messa
 
 function D(e, n) {
   let t = Z(n),
-    E = c.default.extractTimestamp(e) % t.length;
+    E = O.default.extractTimestamp(e) % t.length;
   return t[E]
 }
 
@@ -70,18 +70,18 @@ function p(e) {
 }
 n.Z = {
   stringify: function(e, n) {
-    var t, E, _, c;
+    var t, E, _, O;
     let C = null === (t = e.mentions) || void 0 === t ? void 0 : t[0],
       R = null != C && "string" != typeof C ? I.default.getUser(C.id) : void 0,
       L = e.channel_id,
-      g = O.ZP.getName(null, L, e.author);
+      g = c.ZP.getName(null, L, e.author);
     switch (e.type) {
       case T.uaV.RECIPIENT_ADD:
         if (null == R) return;
         return (0, s.Rp)(d.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD.astFormat({
           username: g,
           usernameOnClick: T.dG4,
-          otherUsername: O.ZP.getName(null, L, R),
+          otherUsername: c.ZP.getName(null, L, R),
           otherUsernameOnClick: T.dG4
         }));
       case T.uaV.RECIPIENT_REMOVE:
@@ -94,7 +94,7 @@ n.Z = {
         return (0, s.Rp)(d.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE.astFormat({
           username: g,
           usernameOnClick: T.dG4,
-          otherUsername: O.ZP.getName(null, L, R),
+          otherUsername: c.ZP.getName(null, L, R),
           otherUsernameOnClick: T.dG4
         }));
       case T.uaV.CALL:
@@ -143,20 +143,20 @@ n.Z = {
         });
       case T.uaV.ROLE_SUBSCRIPTION_PURCHASE:
         if (e instanceof S.ZP) return null;
-        return (0, s.Rp)((0, u.vp)({
+        return (0, s.Rp)((0, r.vp)({
           username: g,
           guildId: n.guild_id,
           roleSubscriptionData: e.role_subscription_data
         }));
       case T.uaV.PURCHASE_NOTIFICATION:
         if (e instanceof S.ZP || (null === (_ = e.purchase_notification) || void 0 === _ ? void 0 : null === (E = _.guild_product_purchase) || void 0 === E ? void 0 : E.product_name) == null) return null;
-        return (0, s.Rp)((0, a.i)({
+        return (0, s.Rp)((0, u.i)({
           username: g,
           productName: e.purchase_notification.guild_product_purchase.product_name
         }));
       case T.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
         if (e instanceof S.ZP) return null;
-        let h = (0, i.ZH)((0, r.e5)(e));
+        let h = (0, i.ZH)((0, a.e5)(e));
         return (0, s.Rp)((0, l.Y)({
           application: e.application,
           username: h.nick
@@ -165,16 +165,16 @@ n.Z = {
         if (e instanceof S.ZP) return null;
         return (0, s.Rp)((0, M.B2)({
           application: e.application,
-          username: (0, i.ZH)((0, r.e5)(e)).nick
+          username: (0, i.ZH)((0, a.e5)(e)).nick
         }));
       case T.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
         if (e instanceof S.ZP) return null;
         return (0, s.Rp)((0, M.hj)({
           application: e.application,
-          username: (0, i.ZH)((0, r.e5)(e)).nick
+          username: (0, i.ZH)((0, a.e5)(e)).nick
         }));
       case T.uaV.AUTO_MODERATION_ACTION:
-        if (null === (c = e.embeds) || void 0 === c ? void 0 : c.some(e => {
+        if (null === (O = e.embeds) || void 0 === O ? void 0 : O.some(e => {
             let {
               type: n
             } = e;
@@ -218,7 +218,7 @@ n.Z = {
   },
   getSystemMessageUserJoin: function(e, n) {
     let t = f(n),
-      E = c.default.extractTimestamp(e) % t.length;
+      E = O.default.extractTimestamp(e) % t.length;
     return t[E]
   },
   getSystemMessageUserJoinMobile: D,

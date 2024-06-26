@@ -5,8 +5,8 @@ n.d(t, {
   }
 });
 var r = n(735250),
-  a = n(470079),
-  i = n(481060),
+  i = n(470079),
+  a = n(481060),
   o = n(906732),
   s = n(963249),
   c = n(474936),
@@ -16,8 +16,8 @@ let d = e => {
     text: t
   } = e, {
     analyticsLocations: n
-  } = (0, o.ZP)(), d = a.useRef(null);
-  return (0, r.jsx)(i.Clickable, {
+  } = (0, o.ZP)(), d = i.useRef(null);
+  return (0, r.jsx)(a.Clickable, {
     className: l.subscribeNow,
     innerRef: d,
     onClick: () => {

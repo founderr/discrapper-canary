@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(984933),
   h = n(496675),
   p = n(98597),
-  f = n(473403),
-  _ = n(981631),
+  _ = n(473403),
+  f = n(981631),
   g = n(490897),
   m = n(47705);
 let C = (0, c.B)(function(e) {
@@ -28,7 +28,7 @@ let C = (0, c.B)(function(e) {
   } = e, v = (0, s.e7)([u.Z, d.ZP], () => {
     let e = d.ZP.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : u.Z.getChannel(e[0])
-  }), T = (0, s.e7)([u.Z], () => u.Z.getChannel(null == v ? void 0 : v.parent_id)), L = r === (null == v ? void 0 : v.id), A = (0, s.e7)([h.Z], () => null != T ? h.Z.can(_.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(_.Plq.MANAGE_CHANNELS, t)), b = l.useCallback(e => {
+  }), T = (0, s.e7)([u.Z], () => u.Z.getChannel(null == v ? void 0 : v.parent_id)), L = r === (null == v ? void 0 : v.id), A = (0, s.e7)([h.Z], () => null != T ? h.Z.can(f.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(f.Plq.MANAGE_CHANNELS, t)), b = l.useCallback(e => {
     null != v && (0, o.jW)(e, async () => {
       let {
         default: e
@@ -42,13 +42,13 @@ let C = (0, c.B)(function(e) {
   if (null == v) return null;
   let M = (0, p.jo)(c, N),
     R = (0, p.CN)(v, I, E),
-    y = (0, i.jsx)("div", {
+    O = (0, i.jsx)("div", {
       className: a()(M, {
         [m.disabled]: R,
         [m.selected]: L
       }),
       "data-dnd-name": v.name,
-      children: (0, i.jsxs)(f.Z, {
+      children: (0, i.jsxs)(_.Z, {
         className: m.iconVisibility,
         channel: v,
         guild: t,
@@ -66,6 +66,6 @@ let C = (0, c.B)(function(e) {
         })]
       })
     });
-  return A && (y = S(x(y))), y
+  return A && (O = S(x(O))), O
 });
 t.Z = C

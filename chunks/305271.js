@@ -5,10 +5,10 @@ n.d(t, {
   }
 });
 var r = n(470079),
-  a = n(626135),
-  i = n(981631);
+  i = n(626135),
+  a = n(981631);
 let o = (e, t) => {
-  let n = r.useCallback((n, r) => a.default.track(i.rMx.SLIDE_CAROUSEL_ITEM_VIEWED, {
+  let n = r.useCallback((n, r) => i.default.track(a.rMx.SLIDE_CAROUSEL_ITEM_VIEWED, {
     carousel_id: e,
     slide_id: null != r ? r : n.toString(),
     slide_index: n,
@@ -16,7 +16,7 @@ let o = (e, t) => {
   }), [e, t]);
   return {
     trackSlideView: n,
-    trackPagination: r.useCallback((n, r, o, s) => a.default.track(i.rMx.SLIDE_CAROUSEL_PAGINATION_CLICKED, {
+    trackPagination: r.useCallback((n, r, o, s) => i.default.track(a.rMx.SLIDE_CAROUSEL_PAGINATION_CLICKED, {
       carousel_id: e,
       current_slide_index: r,
       next_slide_index: n,

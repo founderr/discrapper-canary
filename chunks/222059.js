@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(864682),
   h = n(67212),
   p = n(770471),
-  f = n(292584),
-  _ = n(835865),
+  _ = n(292584),
+  f = n(835865),
   g = n(456541),
   m = n(143614),
   C = n(544803),
@@ -32,8 +32,8 @@ var i = n(735250),
   b = n(880080),
   M = n(780570),
   R = n(557177),
-  y = n(278464),
-  O = n(682662),
+  O = n(278464),
+  y = n(682662),
   P = n(662146),
   j = n(674552),
   D = n(981631),
@@ -59,9 +59,9 @@ function V(e) {
     selected: t,
     user: n,
     badge: h,
-    link: f,
-    showProgressBadge: _
-  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, M] = l.useState(0), [y, U] = l.useState(!1), {
+    link: _,
+    showProgressBadge: f
+  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, M] = l.useState(0), [O, U] = l.useState(!1), {
     canViewBroadcasts: V
   } = p.Z.useExperiment({
     location: "home_button_no_track"
@@ -79,7 +79,7 @@ function V(e) {
     location: "home_button"
   });
   let K = null;
-  !t && _ ? K = (0, i.jsx)(c.Z, {
+  !t && f ? K = (0, i.jsx)(c.Z, {
     className: k.downloadProgress,
     determineOwnVisibility: !1
   }) : F && (K = (0, i.jsx)(A.Z, {
@@ -110,7 +110,7 @@ function V(e) {
         ariaLabel: w.Z.Messages.DIRECT_MESSAGES,
         ...W,
         to: {
-          pathname: f,
+          pathname: _,
           state: {
             analyticsSource: {
               page: D.ZY5.GUILD_CHANNEL,
@@ -136,7 +136,7 @@ function V(e) {
         U(!1)
       },
       spacing: 8,
-      shouldShow: y,
+      shouldShow: O,
       children: () => Q
     }) : null;
   return (0, i.jsx)("div", {
@@ -153,7 +153,7 @@ function V(e) {
       inlineSpecs: B,
       tutorialId: "friends-list",
       position: "right",
-      children: (0, i.jsxs)(O.H, {
+      children: (0, i.jsxs)(y.H, {
         children: [(0, i.jsx)(b.Z, {
           selected: t,
           hovered: N,
@@ -171,7 +171,7 @@ function V(e) {
 }
 
 function H() {
-  let e = (0, y.n)(),
+  let e = (0, O.n)(),
     t = (0, a.e7)([L.Z, T.Z], () => {
       let e = (0, c.E)(L.Z.activeItems, T.Z),
         {
@@ -181,7 +181,7 @@ function H() {
         i = M.xI(n, t);
       return i > 0 && i < 100
     }),
-    n = (0, a.e7)([f.Z], () => f.Z.getUserIdsToValidate()),
+    n = (0, a.e7)([_.Z], () => _.Z.getUserIdsToValidate()),
     r = (0, a.e7)([N.Z], () => N.Z.getPendingCount()),
     s = Object.keys(U.nG),
     {
@@ -198,7 +198,7 @@ function H() {
     C = m === d && d > 0 && r + g === 0;
   l.useEffect(() => {
     n.length > 0 && (0, h.E7)()
-  }, [n]), (0, _.Z)();
+  }, [n]), (0, f.Z)();
   let E = v.Z.getHomeLink();
   return C && (E = D.Z5c.APPLICATION_STORE), (0, i.jsx)(V, {
     selected: e,

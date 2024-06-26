@@ -20,8 +20,8 @@ var a = t(512722),
   I = t(532432),
   N = t(349177),
   C = t(872736),
-  A = t(134795),
-  m = t(610966),
+  m = t(134795),
+  A = t(610966),
   O = t(513901),
   g = t(451392),
   h = t(906364),
@@ -103,7 +103,7 @@ function Z() {
       user: U,
       sectionTitle: L.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), K ? (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(A.Z, {
+      children: [(0, n.jsx)(m.Z, {
         showRemoveBannerButton: Q,
         errors: w.banner,
         onBannerChange: R.g_,
@@ -115,7 +115,7 @@ function Z() {
         onThemeColorsChange: R.z5,
         forcedDivider: !0
       })]
-    }) : (0, n.jsx)(m.Z, {
+    }) : (0, n.jsx)(A.Z, {
       user: U,
       savedUserColor: null == B ? void 0 : B.accentColor,
       pendingColor: H,

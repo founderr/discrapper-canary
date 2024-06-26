@@ -21,12 +21,12 @@ function h(e) {
     className: l,
     innerClassName: h,
     renderIcon: p,
-    text: f,
-    selected: _,
+    text: _,
+    selected: f,
     trailing: g,
     showUnread: m = !1,
     ...C
-  } = e, I = (0, a.JA)(n), E = null !== (t = (0, s.q)(f)) && void 0 !== t ? t : "";
+  } = e, I = (0, a.JA)(n), E = null !== (t = (0, s.q)(_)) && void 0 !== t ? t : "";
   return (0, i.jsx)("li", {
     children: (0, i.jsxs)(o.ClickableContainer, {
       ...C,
@@ -48,7 +48,7 @@ function h(e) {
         e.stopPropagation()
       },
       className: r()(u.containerDefault, d.wrapper, {
-        [d.modeSelected]: _
+        [d.modeSelected]: f
       }, l),
       children: [m ? (0, i.jsx)("div", {
         className: r()(d.unread, d.unreadImportant)
@@ -62,7 +62,7 @@ function h(e) {
           }), (0, i.jsx)("div", {
             className: d.name,
             "aria-hidden": !0,
-            children: f
+            children: _
           }), g]
         })
       })]

@@ -6,7 +6,7 @@ n.d(t, {
     return C
   },
   YV: function() {
-    return _
+    return f
   },
   ZP: function() {
     return I
@@ -26,18 +26,18 @@ var i = n(735250),
   d = n(981631),
   h = n(921944),
   p = n(689938),
-  f = n(228741);
+  _ = n(228741);
 
-function _() {
+function f() {
   return (0, i.jsxs)("div", {
-    className: f.inviteContainer,
+    className: _.inviteContainer,
     children: [(0, i.jsx)(r.EnvelopeIcon, {
       size: "xxs",
       color: "currentColor",
-      className: f.envelope
+      className: _.envelope
     }), (0, i.jsx)(r.Text, {
       variant: "text-xs/bold",
-      className: f.invite,
+      className: _.invite,
       children: p.Z.Messages.CLAN_UPSELL_INVITE
     })]
   })
@@ -51,7 +51,7 @@ function g(e) {
     children: (0, i.jsx)(r.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: f.title,
+      className: _.title,
       children: t
     })
   })
@@ -64,7 +64,7 @@ function m(e) {
   return (0, i.jsx)(r.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: f.message,
+    className: _.message,
     children: t
   })
 }
@@ -78,7 +78,7 @@ function C(e) {
     look: r.ButtonLooks.FILLED,
     size: r.ButtonSizes.SMALL,
     color: r.ButtonColors.BRAND,
-    className: f.button,
+    className: _.button,
     onClick: t,
     children: (0, i.jsx)(r.Text, {
       variant: "text-sm/semibold",
@@ -100,13 +100,13 @@ function I(e) {
       location: a.Z.GUILD_CHANNEL_LIST
     })
   }, [t.id]);
-  let _ = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+  let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
     I = l.useCallback(() => (0, i.jsx)(m, {
       message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
     }), []),
     E = l.useCallback(() => (0, i.jsx)(g, {
-      title: _
-    }), [_]),
+      title: f
+    }), [f]),
     N = l.useCallback(() => {
       (0, c._9)({
         guildId: t.id,
@@ -117,7 +117,7 @@ function I(e) {
       onClick: N
     }), [N]);
   return (0, i.jsx)(s.Z, {
-    className: f.notice,
+    className: _.notice,
     guild: t,
     onDismissed: () => n(h.L.DISMISS),
     title: E,

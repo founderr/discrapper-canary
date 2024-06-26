@@ -14,14 +14,14 @@ var i = n(735250),
   d = n(683301),
   h = n(603592),
   p = n(981631),
-  f = n(731455),
-  _ = n(689938),
+  _ = n(731455),
+  f = n(689938),
   g = n(356131);
 
 function m() {
   let e = window.location.pathname.startsWith(p.Z5c.GUILD_DISCOVERY),
-    t = d.ZP.getCurrentCategoryId() === f.Gj.Clans;
-  e && !t && ((0, s.AQ)(), (0, s.uY)(f.Hk, !0));
+    t = d.ZP.getCurrentCategoryId() === _.Gj.Clans;
+  e && !t && ((0, s.AQ)(), (0, s.uY)(_.Hk, !0));
   let n = (0, u.s1)().location.search;
   (0, u.uL)(p.Z5c.GUILD_DISCOVERY, {
     search: n
@@ -35,13 +35,13 @@ let C = l.forwardRef(function(e, t) {
     onClick: u
   } = e, {
     clanDiscoveryEnabled: d
-  } = (0, o.nk)("guild_discovery"), p = (0, c.wE)(r.z.NEW_GAMING_DISCOVERY_NOTIF), f = {
+  } = (0, o.nk)("guild_discovery"), p = (0, c.wE)(r.z.NEW_GAMING_DISCOVERY_NOTIF), _ = {
     lowerBadgeSize: {
       width: 12,
       height: 12
     }
   };
-  return d && !p && (f.lowerBadge = (0, i.jsx)("div", {
+  return d && !p && (_.lowerBadge = (0, i.jsx)("div", {
     className: g.guildNotif
   })), (0, i.jsx)(h.Z, {
     id: "guild-discover-button",
@@ -49,9 +49,9 @@ let C = l.forwardRef(function(e, t) {
     className: s,
     onClick: null != u ? u : m,
     selected: n,
-    tooltip: null != l ? l : _.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+    tooltip: null != l ? l : f.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
     icon: a.CompassIcon,
-    ...f
+    ..._
   })
 });
 t.Z = C

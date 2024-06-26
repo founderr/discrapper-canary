@@ -10,8 +10,8 @@ var i = n(735250),
   d = n(695346),
   h = n(768581),
   p = n(358555),
-  f = n(981631),
-  _ = n(647086),
+  _ = n(981631),
+  f = n(647086),
   g = n(689938),
   m = n(92617);
 
@@ -63,7 +63,7 @@ function I(e) {
     hasSubheader: r
   } = e, {
     value: o
-  } = n.springs, u = t.hasFeature(f.oNc.DISCOVERABLE), d = (0, i.jsx)("div", {
+  } = n.springs, u = t.hasFeature(_.oNc.DISCOVERABLE), d = (0, i.jsx)("div", {
     className: m.communityInfo,
     children: u && (0, i.jsx)(c.Tooltip, {
       text: g.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
@@ -125,9 +125,9 @@ t.ZP = l.memo(function(e) {
     animationOverlayHeight: b,
     children: M,
     headerClassName: R,
-    communityInfoVisible: y,
-    hasSubheader: O
-  } = e, P = L.hasFeature(f.oNc.ANIMATED_BANNER), j = (0, u.Z)(L), D = !j && L.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && P && !Z, [G, w] = l.useState(!1), k = l.useRef(), B = l.useRef(null), V = l.useRef(), H = d.QK.getSetting();
+    communityInfoVisible: O,
+    hasSubheader: y
+  } = e, P = L.hasFeature(_.oNc.ANIMATED_BANNER), j = (0, u.Z)(L), D = !j && L.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && P && !Z, [G, w] = l.useState(!1), k = l.useRef(), B = l.useRef(null), V = l.useRef(), H = d.QK.getSetting();
   l.useEffect(() => {
     if (U && n && !k.current && H) return w(!0), V.current = setTimeout(() => {
       w(!1)
@@ -153,7 +153,7 @@ t.ZP = l.memo(function(e) {
         [m.selected]: null != N && v,
         [m.hasBanner]: F(),
         [m.bannerVisible]: n,
-        [m.communityInfoVisible]: !j && y || O && D
+        [m.communityInfoVisible]: !j && O || y && D
       }),
       onMouseDown: S,
       onContextMenu: x,
@@ -167,7 +167,7 @@ t.ZP = l.memo(function(e) {
           children: [(0, i.jsx)(p.Z, {
             guild: L,
             isBannerVisible: n
-          }), L.id === _._ && (0, i.jsx)(E, {}), (0, i.jsx)(c.Heading, {
+          }), L.id === f._ && (0, i.jsx)(E, {}), (0, i.jsx)(c.Heading, {
             variant: "text-md/semibold",
             lineClamp: 1,
             className: m.name,
@@ -193,7 +193,7 @@ t.ZP = l.memo(function(e) {
           guild: L,
           controller: r,
           hasBanner: null != A,
-          hasSubheader: null != O && O
+          hasSubheader: null != y && y
         })]
       }), null != A ? (0, i.jsx)(C, {
         guild: L,

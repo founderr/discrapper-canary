@@ -26,8 +26,8 @@ function C() {
     autoToggle: s,
     hideInstantInvites: a,
     hidePersonalInformation: C,
-    disableSounds: A,
-    disableNotifications: m,
+    disableSounds: m,
+    disableNotifications: A,
     enableContentProtection: O
   } = (0, r.cj)([_.Z], () => ({
     ..._.Z.getSettings()
@@ -99,7 +99,7 @@ function C() {
       }), (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: A,
+          value: m,
           onChange: e => g("disableSounds", e),
           note: S.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
           children: S.Z.Messages.DISABLE_SOUNDS_LABEL
@@ -107,7 +107,7 @@ function C() {
       }), (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: m,
+          value: A,
           onChange: e => g("disableNotifications", e),
           note: S.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
           children: S.Z.Messages.DISABLE_NOTIFICATIONS_LABEL

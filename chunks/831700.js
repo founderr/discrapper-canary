@@ -15,8 +15,8 @@ var l = n(120356),
   d = n(146773),
   h = n(888651),
   p = n(619915),
-  f = n(339340),
-  _ = n(201895),
+  _ = n(339340),
+  f = n(201895),
   g = n(718589),
   m = n(933557),
   C = n(557135),
@@ -33,8 +33,8 @@ var l = n(120356),
   b = n(695346),
   M = n(592125),
   R = n(430824),
-  y = n(607744),
-  O = n(496675),
+  O = n(607744),
+  y = n(496675),
   P = n(306680),
   j = n(9156),
   D = n(979651),
@@ -145,7 +145,7 @@ class q extends G.ZP {
       isUserOver: d,
       connectChannelDropTarget: h,
       connectChannelDragSource: p,
-      connectUserDropTarget: f,
+      connectUserDropTarget: _,
       connectDragPreview: m,
       canReorderChannel: C,
       canMoveMembers: I,
@@ -201,7 +201,7 @@ class q extends G.ZP {
                 },
                 connectDragPreview: m,
                 isFavoriteSuggestion: Z,
-                "aria-label": (0, _.ZP)({
+                "aria-label": (0, f.ZP)({
                   channel: e,
                   unread: l,
                   mentionCount: s,
@@ -222,7 +222,7 @@ class q extends G.ZP {
         })
       }), this.renderVoiceUsers()]
     });
-    return I && (M = f(M)), C && (M = h(p(M))), E && (M = (0, i.jsx)(A.Z, {
+    return I && (M = _(M)), C && (M = h(p(M))), E && (M = (0, i.jsx)(A.Z, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
@@ -301,7 +301,7 @@ class q extends G.ZP {
           ...t
         })
       }, {
-        modalKey: f.VOICE_CHANNEL_STATUS_MODAL_KEY
+        modalKey: _.VOICE_CHANNEL_STATUS_MODAL_KEY
       }))
     }), K(this, "renderPopout", () => {
       let {
@@ -387,18 +387,18 @@ function J(e) {
   } = e, u = (0, a.cj)([P.ZP], () => ({
     unread: P.ZP.hasUnread(n.id),
     mentionCount: P.ZP.getMentionCount(n.id)
-  })), d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)), h = (0, a.cj)([M.Z, y.Z, O.Z], () => {
+  })), d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)), h = (0, a.cj)([M.Z, O.Z, y.Z], () => {
     let e = M.Z.getChannel(n.parent_id),
-      i = y.Z.getCheck(n.guild_id);
+      i = O.Z.getCheck(n.guild_id);
     return {
-      canManageChannel: O.Z.can(F.Plq.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? O.Z.can(F.Plq.MANAGE_CHANNELS, e) : O.Z.can(F.Plq.MANAGE_CHANNELS, t))),
-      canMoveMembers: O.Z.can(F.Plq.MOVE_MEMBERS, n),
-      locked: !O.Z.can(F.Plq.CONNECT, n),
-      bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
+      canManageChannel: y.Z.can(F.Plq.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? y.Z.can(F.Plq.MANAGE_CHANNELS, e) : y.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+      canMoveMembers: y.Z.can(F.Plq.MOVE_MEMBERS, n),
+      locked: !y.Z.can(F.Plq.CONNECT, n),
+      bypassLimit: y.Z.can(F.Plq.MOVE_MEMBERS, n),
       unverifiedAccount: !i.canChat
     }
-  }), f = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), _ = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
+  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
     isSubscriptionGated: I,
     needSubscriptionToAccess: N
   } = (0, S.Z)(n.id), x = (0, E.Z)(), v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
@@ -421,9 +421,9 @@ function J(e) {
   }), U = L && null == R;
   return (0, i.jsx)(Q, {
     channelName: g,
-    embeddedApps: _,
+    embeddedApps: f,
     embeddedActivityType: F.IIU.PLAYING,
-    video: f,
+    video: _,
     hasActiveEvent: null != C,
     isSubscriptionGated: I,
     needSubscriptionToAccess: N,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return f
+    return _
   }
 }), n(47120), n(724458);
 var i = n(442837),
@@ -28,7 +28,7 @@ function p(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   let [t] = (0, i.e7)([u.Z, r.Z, l.Z], () => {
     let t;
     let n = (t = e === h.I_8 ? c.default.keys(l.Z.getFavoriteChannels()).map(e => r.Z.getChannel(e)).filter(s.lm).filter(e => e.isGuildStageVoice()) : u.Z.getChannels(e)).reduce((e, t) => {

@@ -7,8 +7,8 @@ var i, l, r, a = n(735250),
   d = n(924826),
   h = n(442837),
   p = n(902704),
-  f = n(481060),
-  _ = n(925549),
+  _ = n(481060),
+  f = n(925549),
   g = n(607070),
   m = n(367907),
   C = n(453542),
@@ -25,8 +25,8 @@ var i, l, r, a = n(735250),
   b = n(153124),
   M = n(151827),
   R = n(515753),
-  y = n(981631),
-  O = n(689938),
+  O = n(981631),
+  y = n(689938),
   P = n(367358);
 
 function j(e, t, n) {
@@ -230,11 +230,11 @@ class U extends(l = s.Component) {
           role: r,
           ...s
         } = i;
-        return (0, a.jsx)(f.FocusJumpSection, {
-          children: i => (0, a.jsx)(f.List, {
+        return (0, a.jsx)(_.FocusJumpSection, {
+          children: i => (0, a.jsx)(_.List, {
             fade: !0,
             innerRole: r,
-            innerAriaLabel: O.Z.Messages.DIRECT_MESSAGES,
+            innerAriaLabel: y.Z.Messages.DIRECT_MESSAGES,
             innerTag: "ul",
             ref: e => {
               var t;
@@ -282,7 +282,7 @@ class U extends(l = s.Component) {
           num_users_visible: a.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.Z.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
         ...u,
         ...(0, C.X)(),
         changelog_dm_visible: c
@@ -295,7 +295,7 @@ class U extends(l = s.Component) {
     }), j(this, "handleScroll", c()(() => {
       if (null != this._list) {
         let e = this._list.getScrollerNode();
-        null != e && _.Z.updateChannelListScroll(y.ME, e.scrollTop)
+        null != e && f.Z.updateChannelListScroll(O.ME, e.scrollTop)
       }
     }, 100)), j(this, "renderDM", (e, t) => {
       let {
@@ -339,13 +339,13 @@ class U extends(l = s.Component) {
         className: P.privateChannelsHeaderContainer,
         children: [(0, a.jsx)("span", {
           className: P.headerText,
-          children: O.Z.Messages.DIRECT_MESSAGES
+          children: y.Z.Messages.DIRECT_MESSAGES
         }), (0, a.jsx)(N.Z, {
-          tooltip: O.Z.Messages.CREATE_DM,
+          tooltip: y.Z.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
           iconClassName: P.privateChannelRecipientsInviteButtonIcon,
-          icon: f.PlusSmallIcon,
+          icon: _.PlusSmallIcon,
           subscribeToGlobalHotkey: !0
         })]
       }, t) : null
@@ -370,12 +370,12 @@ t.Z = e => {
     let e = A.Z.getPrivateChannelIds(),
       t = (0, S.tU)(e, [x.Z, Z.Z]);
     return (0, I.Ce)(t)
-  }, []), f = (0, h.cj)([g.Z, v.Z, T.Z], () => ({
-    theme: v.Z.darkSidebar ? y.BRd.DARK : n,
+  }, []), _ = (0, h.cj)([g.Z, v.Z, T.Z], () => ({
+    theme: v.Z.darkSidebar ? O.BRd.DARK : n,
     keyboardModeEnabled: g.Z.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion()
-  })), _ = s.useRef(null), m = s.useCallback(e => {
-    let t = _.current,
+  })), f = s.useRef(null), m = s.useCallback(e => {
+    let t = f.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
       node: n,
@@ -389,13 +389,13 @@ t.Z = e => {
       }
     })
   }, []), C = s.useCallback(() => new Promise(e => {
-    let t = _.current;
+    let t = f.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
   }), []), E = s.useCallback(() => new Promise(e => {
-    let t = _.current;
+    let t = f.current;
     if (null == t) return e();
     t.scrollToBottom({
       callback() {
@@ -404,7 +404,7 @@ t.Z = e => {
     })
   }), []), N = (0, b.Dt)(), L = (0, d.ZP)({
     id: "private-channels-".concat(N),
-    isEnabled: f.keyboardModeEnabled,
+    isEnabled: _.keyboardModeEnabled,
     scrollToStart: C,
     scrollToEnd: E,
     defaultFocused: (r + (l ? 1 : 0)).toString(),
@@ -415,12 +415,12 @@ t.Z = e => {
     children: (0, a.jsx)(U, {
       channels: c,
       privateChannelIds: p,
-      listRef: _,
+      listRef: f,
       theme: n,
       version: t,
       ...e,
       children: i,
-      ...f
+      ..._
     })
   })
 }

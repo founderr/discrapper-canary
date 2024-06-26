@@ -9,14 +9,14 @@ var i = n(735250),
   d = n(888369),
   h = n(430824),
   p = n(451478),
-  f = n(61634),
-  _ = n(325257),
+  _ = n(61634),
+  f = n(325257),
   g = n(849249);
 t.Z = l.memo(function(e) {
   let {
     guildNode: t,
     lowerBadge: n
-  } = e, m = t.id, C = (0, r.e7)([h.Z], () => h.Z.getGuild(m)), I = (0, s.E)(m), E = (0, r.e7)([p.Z], () => p.Z.isFocused()), N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(m)), x = (0, c.Z)(e => e.guildId), S = (0, f.Z)(m), {
+  } = e, m = t.id, C = (0, r.e7)([h.Z], () => h.Z.getGuild(m)), I = (0, s.E)(m), E = (0, r.e7)([p.Z], () => p.Z.isFocused()), N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(m)), x = (0, c.Z)(e => e.guildId), S = (0, _.Z)(m), {
     badge: Z,
     unread: v
   } = (0, r.cj)([d.default], () => ({
@@ -32,7 +32,7 @@ t.Z = l.memo(function(e) {
       height: 10
     })
   }) : null, [n, T]);
-  return (0, i.jsx)(_.Z, {
+  return (0, i.jsx)(f.Z, {
     ...e,
     guild: C,
     unavailable: N,

@@ -84,11 +84,11 @@ let h = [{
   }],
   p = h.length;
 
-function f(e, t, n) {
+function _(e, t, n) {
   let i = e * t;
   return e > .5 ? i - n : e < .5 ? i : i - n / 2
 }
-let _ = (e, t) => {
+let f = (e, t) => {
   let n = Math.abs(t.x),
     i = 180 / Math.PI * Math.atan2(Math.abs(t.y), n),
     l = e / 2 - 28.8;
@@ -112,7 +112,7 @@ t.Z = l.memo(function(e) {
   } = e, Z = l.useRef(null), v = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
     x: 0,
     y: 0
-  }), y = Math.abs(M.x) + Math.abs(M.y) > 0, O = l.useMemo(() => a().chunk(S, p), [S]), P = l.useCallback((e, t) => {
+  }), O = Math.abs(M.x) + Math.abs(M.y) > 0, y = l.useMemo(() => a().chunk(S, p), [S]), P = l.useCallback((e, t) => {
     null == v.current[A] ? v.current[A] = [] : v.current[A][t] = e
   }, [A]), j = l.useCallback((e, t) => {
     L.current = t, E(p * e + t)
@@ -134,7 +134,7 @@ t.Z = l.memo(function(e) {
       },
       l = i.x < 0,
       r = i.y < 0,
-      a = _(n, i),
+      a = f(n, i),
       s = l ? Math.max(i.x, -a.x) : Math.min(i.x, a.x);
     R({
       x: s / 2,
@@ -172,12 +172,12 @@ t.Z = l.memo(function(e) {
   }, 16), [I, G, D, j, A, n, t]), B = l.useCallback(e => {
     if (!x) return;
     let t = A + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < O.length && (null != L.current && (O[t].length > L.current ? j(t, L.current) : D()), b(t))
-  }, [x, A, O, j, D]), V = l.useMemo(() => O[A].map((e, l) => {
+    t >= 0 && t < y.length && (null != L.current && (y[t].length > L.current ? j(t, L.current) : D()), b(t))
+  }, [x, A, y, j, D]), V = l.useMemo(() => y[A].map((e, l) => {
     let r = h[l];
     if (null == r) throw Error("Too many items supplied ".concat(S.length, " expected max of ").concat(h.length));
-    let a = f(r.x, t, g),
-      s = f(r.y, n, m);
+    let a = _(r.x, t, g),
+      s = _(r.y, n, m);
     return (0, i.jsx)("div", {
       ref: e => P(e, l),
       className: u.chatWheelItem,
@@ -189,7 +189,7 @@ t.Z = l.memo(function(e) {
       },
       children: e
     }, l)
-  }), [O, A, t, g, n, m, S.length, P]);
+  }), [y, A, t, g, n, m, S.length, P]);
   return (0, i.jsx)(s.Clickable, {
     className: u.chatWheelMouseInput,
     onMouseMove: k,
@@ -250,7 +250,7 @@ t.Z = l.memo(function(e) {
             cx: 144,
             cy: 144,
             r: 28.8
-          }), y && (0, i.jsx)("circle", {
+          }), O && (0, i.jsx)("circle", {
             className: u.chatWheelCenter,
             cx: 144 + M.x,
             cy: 144 + M.y,
@@ -269,7 +269,7 @@ t.Z = l.memo(function(e) {
         className: u.innerContent,
         children: [C && (0, i.jsx)(d, {
           className: u.chatWheelDeadZoneIcon
-        }), x && O.length > 1 ? (0, i.jsx)("div", {
+        }), x && y.length > 1 ? (0, i.jsx)("div", {
           className: u.paginationHint,
           children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]

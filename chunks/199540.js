@@ -14,13 +14,13 @@ var i = n(735250),
   d = n(481060),
   h = n(430824),
   p = n(346656),
-  f = n(624138),
-  _ = n(674552),
+  _ = n(624138),
+  f = n(674552),
   g = n(981631),
   m = n(689938),
   C = n(248699);
-let I = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-  E = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
+let I = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  E = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 
 function N(e) {
   let {
@@ -50,8 +50,8 @@ function x(e) {
       children: h
     } = r,
     p = null != u ? u : g.Wyy,
-    f = h.map(e => e.id),
-    [_, m] = l.useState(!1),
+    _ = h.map(e => e.id),
+    [f, m] = l.useState(!1),
     [x, S] = l.useState(c),
     Z = c ? 0 : -E,
     v = (0, s.useSpring)({
@@ -66,8 +66,8 @@ function x(e) {
         m(!1), S(c)
       }
     }),
-    T = _ ? v : void 0;
-  return (_ || x) && (t = (0, i.jsx)(s.animated.div, {
+    T = f ? v : void 0;
+  return (f || x) && (t = (0, i.jsx)(s.animated.div, {
     style: T,
     className: C.expandedFolderIconWrapper,
     children: (0, i.jsx)(d.FolderIcon, {
@@ -77,10 +77,10 @@ function x(e) {
         color: (0, o.Rf)(p)
       }
     })
-  })), (_ || !x) && (n = (0, i.jsx)(s.animated.div, {
+  })), (f || !x) && (n = (0, i.jsx)(s.animated.div, {
     style: T,
     className: C.closedFolderIconWrapper,
-    children: f.slice(0, 4).map(e => (0, i.jsx)(N, {
+    children: _.slice(0, 4).map(e => (0, i.jsx)(N, {
       guildId: e,
       animate: a
     }, e))
@@ -105,7 +105,7 @@ function S(e) {
     tooltipName: u,
     folderGroupId: h,
     folderIconContent: p,
-    onClick: f,
+    onClick: _,
     onContextMenu: g,
     onHoverChange: I,
     onKeyDown: E,
@@ -117,7 +117,7 @@ function S(e) {
     s || v(!0), null == I || I(!0)
   }, [s, I]), L = l.useCallback(() => {
     s || v(!1), null == I || I(!1)
-  }, [s, I]), A = r || null == o ? null : (0, _.Or)(o), b = !r && c > 0 ? (0, _.Ne)(c) : null;
+  }, [s, I]), A = r || null == o ? null : (0, f.Or)(o), b = !r && c > 0 ? (0, f.Ne)(c) : null;
   return (0, i.jsx)(d.BlobMask, {
     selected: !n,
     upperBadge: A,
@@ -129,7 +129,7 @@ function S(e) {
       className: a()(C.folder, {
         [C.hover]: Z
       }),
-      onClick: f,
+      onClick: _,
       onContextMenu: g,
       onMouseEnter: T,
       onMouseLeave: L,

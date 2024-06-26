@@ -11,8 +11,8 @@ var s = n(120356),
   o = n(650032),
   a = n(104494),
   c = n(639119),
-  d = n(655525),
-  u = n(52188),
+  u = n(655525),
+  d = n(52188),
   h = n(248042),
   m = n(924540),
   p = n(351402),
@@ -38,12 +38,12 @@ function x(e) {
       autoTrackExposure: !1
     }),
     T = C && (null == v ? void 0 : v.trial_id) === f.a7;
-  return t = N ? (0, i.jsx)(d.Z, {}) : null != g ? (0, i.jsx)(m.GN, {
+  return t = N ? (0, i.jsx)(u.Z, {}) : null != g ? (0, i.jsx)(m.GN, {
     isTabSelected: x,
     userDiscount: g,
     includesAmountOff: !1
-  }) : null == v || T ? null != n ? n : j ? (0, i.jsx)(u.k, {
-    entryPoint: u.U.SettingsMenu
+  }) : null == v || T ? null != n ? n : j ? (0, i.jsx)(d.k, {
+    entryPoint: d.U.SettingsMenu
   }) : (0, i.jsx)(b.Z, {
     isSelected: x
   }) : (0, i.jsx)(m.$H, {

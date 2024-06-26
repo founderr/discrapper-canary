@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(471445),
   h = n(430824),
   p = n(496675),
-  f = n(158776),
-  _ = n(979651),
+  _ = n(158776),
+  f = n(979651),
   g = n(823379),
   m = n(355363),
   C = n(737592),
@@ -31,7 +31,7 @@ function v(e) {
   let {
     channel: h,
     guild: p,
-    onAction: _,
+    onAction: f,
     voiceStates: m,
     isChannelSelected: I,
     shouldShowSettingNudge: E
@@ -54,10 +54,10 @@ function v(e) {
     v = Array.from((0, o.uF)(N).values()),
     L = null !== (t = null == m ? void 0 : m.filter(g.lm)) && void 0 !== t ? t : [],
     A = e => t => [x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === x.IIU.LISTENING,
-    b = (0, r.e7)([f.Z], () => {
+    b = (0, r.e7)([_.Z], () => {
       let e = {};
       return L.forEach(t => {
-        let n = f.Z.findActivity(t.user.id, A(t));
+        let n = _.Z.findActivity(t.user.id, A(t));
         if (null != n && !(0, u.Z)(n)) {
           var i, l, r, a;
           let s = "".concat(null !== (l = n.application_id) && void 0 !== l ? l : "", ":").concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
@@ -83,7 +83,7 @@ function v(e) {
         embeddedApp: e,
         presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
         channel: h,
-        onAction: _
+        onAction: f
       }, t)
     }), b.map((e, t) => {
       let {
@@ -94,7 +94,7 @@ function v(e) {
         presenceActivity: l,
         channel: h,
         members: n,
-        onAction: _
+        onAction: f
       }, t)
     }), E && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
@@ -128,7 +128,7 @@ function T(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: l
-  } = e, a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)), s = (0, r.e7)([_.Z], () => _.Z.hasVideo(t.id)), o = (0, m.ZP)({
+  } = e, a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)), s = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)), o = (0, m.ZP)({
     channel: t,
     locked: a,
     video: s,

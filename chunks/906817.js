@@ -1,6 +1,6 @@
 n.d(t, {
   EM: function() {
-    return _
+    return f
   },
   WW: function() {
     return g
@@ -17,9 +17,9 @@ var i = n(735250),
   d = n(327530),
   h = n(981631),
   p = n(689938),
-  f = n(857100);
+  _ = n(857100);
 
-function _(e, t, n) {
+function f(e, t, n) {
   if (e === c.zm) return d.$k;
   if (e === c.wd) return t.hasFeature(h.oNc.HUB) ? 0 : d.$k;
   if (e === n.voiceChannelsSectionNumber) {
@@ -56,19 +56,19 @@ t.ZP = l.memo(function(e) {
   let {
     sectionIndex: t,
     guild: n,
-    guildChannels: _,
+    guildChannels: f,
     guildChannelsVersion: g,
     selectedChannelId: m,
     disableManageChannels: C
   } = e, {
     isFavoritesPerk: I
   } = (0, r.z)("ChannelListSection"), E = l.useCallback(() => {
-    let e = _.getCategoryFromSection(_.recentsSectionNumber);
+    let e = f.getCategoryFromSection(f.recentsSectionNumber);
     if (null == e) return;
     let t = null,
       i = e.getShownChannelAndThreadIds();
-    null != m && i.includes(m) && (t = (0, a.KY)(_)), (0, a.Uo)(n.id, i, t)
-  }, [n.id, m, _, g]);
+    null != m && i.includes(m) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t)
+  }, [n.id, m, f, g]);
   switch (t) {
     case c.zm:
       return (0, i.jsx)("div", {
@@ -87,19 +87,19 @@ t.ZP = l.memo(function(e) {
       return (0, i.jsx)(u.P, {
         name: I ? p.Z.Messages.PINNED_CHANNELS : p.Z.Messages.FAVORITES
       });
-    case _.recentsSectionNumber:
+    case f.recentsSectionNumber:
       return (0, i.jsx)(u.P, {
         name: p.Z.Messages.RECENTS_CATEGORY_HEADER,
         onDismiss: E
       });
-    case _.voiceChannelsSectionNumber: {
+    case f.voiceChannelsSectionNumber: {
       var N;
-      let e = _.getCategoryFromSection(_.voiceChannelsSectionNumber);
+      let e = f.getCategoryFromSection(f.voiceChannelsSectionNumber);
       if (null == e || e.isEmpty()) return null;
-      let n = null === (N = _.getChannelFromSectionRow(t, 0)) || void 0 === N ? void 0 : N.channel;
+      let n = null === (N = f.getChannelFromSectionRow(t, 0)) || void 0 === N ? void 0 : N.channel;
       return (0, i.jsxs)(l.Fragment, {
         children: [(0, i.jsx)("div", {
-          className: f.sectionDivider
+          className: _.sectionDivider
         }), (0, i.jsx)(u.rj, {
           category: e,
           channel: n
@@ -107,7 +107,7 @@ t.ZP = l.memo(function(e) {
       })
     }
     case c.wF: {
-      let e = _.getNamedCategoryFromSection(t);
+      let e = f.getNamedCategoryFromSection(t);
       if (null == e) return null;
       return (0, i.jsx)(u.ZP, {
         channel: e.record,
@@ -122,7 +122,7 @@ t.ZP = l.memo(function(e) {
       })
     }
     default: {
-      let e = _.getNamedCategoryFromSection(t);
+      let e = f.getNamedCategoryFromSection(t);
       if (null == e) return null;
       return (0, i.jsx)(u.ZP, {
         channel: e.record,

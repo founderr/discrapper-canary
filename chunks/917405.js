@@ -10,13 +10,13 @@ var i = n(735250),
   d = n(423516),
   h = n(981631),
   p = n(202589);
-let f = {
+let _ = {
     [h.IE4.UNKNOWN]: s.Tooltip.Colors.BLACK,
     [h.IE4.BAD]: s.Tooltip.Colors.RED,
     [h.IE4.AVERAGE]: s.Tooltip.Colors.YELLOW,
     [h.IE4.FINE]: s.Tooltip.Colors.GREEN
   },
-  _ = {
+  f = {
     [h.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
     [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
     [h.QKv.ERROR]: p.rtcConnectionStatusError
@@ -53,7 +53,7 @@ class m extends l.PureComponent {
         onClick: t,
         children: (0, i.jsx)(d.Z, {
           text: l,
-          className: _[n]
+          className: f[n]
         })
       })
     })
@@ -70,7 +70,7 @@ class m extends l.PureComponent {
     } = this.props;
     return r === h.hes.RTC_CONNECTED && (e = (0, i.jsx)(s.Tooltip, {
       text: t !== h.IE4.UNKNOWN && null != l ? "".concat(l.toFixed(0), " ms") : null,
-      color: f[t],
+      color: _[t],
       children: e => (0, i.jsx)(C, {
         quality: t,
         smallPing: n,

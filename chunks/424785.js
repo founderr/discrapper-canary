@@ -15,8 +15,8 @@ var l = n(120356),
   d = n(888651),
   h = n(201895),
   p = n(305325),
-  f = n(281956),
-  _ = n(66999),
+  _ = n(281956),
+  f = n(66999),
   g = n(506936),
   m = n(359110),
   C = n(922482),
@@ -33,8 +33,8 @@ var l = n(120356),
   b = n(306680),
   M = n(9156),
   R = n(979651),
-  y = n(514342),
-  O = n(934415),
+  O = n(514342),
+  y = n(934415),
   P = n(98597),
   j = n(648501),
   D = n(473403),
@@ -65,7 +65,7 @@ class F extends P.ZP {
     let {
       channel: e
     } = this.props;
-    return (0, O.rY)(e, R.Z, T.Z)
+    return (0, y.rY)(e, R.Z, T.Z)
   }
   getModeClass() {
     let {
@@ -109,8 +109,8 @@ class F extends P.ZP {
       connectDragPreview: u,
       canReorderChannel: d,
       canMoveMembers: p,
-      stageInstance: f,
-      isSubscriptionGated: _,
+      stageInstance: _,
+      isSubscriptionGated: f,
       needSubscriptionToAccess: g,
       unread: m,
       resolvedUnreadSetting: C,
@@ -140,7 +140,7 @@ class F extends P.ZP {
             return (0, i.jsxs)(D.Z, {
               className: B.iconVisibility,
               iconClassName: r()({
-                [V.iconLive]: null != f
+                [V.iconLive]: null != _
               }),
               channel: e,
               selected: !E && t,
@@ -163,7 +163,7 @@ class F extends P.ZP {
                 unread: m,
                 mentionCount: I,
                 userCount: x,
-                isSubscriptionGated: _,
+                isSubscriptionGated: f,
                 needSubscriptionToAccess: g
               }),
               ...c,
@@ -189,7 +189,7 @@ class F extends P.ZP {
         connected: n,
         unverifiedAccount: i
       } = this.props, l = e.getGuildId();
-      null != l && (0, f.n)(l) && (0, p.hk)(l), i && this.setState({
+      null != l && (0, _.n)(l) && (0, p.hk)(l), i && this.setState({
         shouldShowGuildVerificationPopout: !0
       }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, C.Cq)(e), !__OVERLAY__ && (0, m.Kh)(e.id)
     }), H(this, "handleClickChat", () => {
@@ -265,7 +265,7 @@ class F extends P.ZP {
     }), H(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
-      return null == t ? null : (0, i.jsx)(y.Z, {
+      return null == t ? null : (0, i.jsx)(O.Z, {
         children: t
       })
     })
@@ -295,10 +295,10 @@ function Y(e) {
       bypassLimit: A.Z.can(G.Plq.MOVE_MEMBERS, n),
       unverifiedAccount: !i.canChat
     }
-  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, S.ZP)(n.id), f = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id), [n.id]), g = (0, I.Rk)(n.id, E.pV.AUDIENCE), {
+  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, S.ZP)(n.id), _ = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id), [n.id]), g = (0, I.Rk)(n.id, E.pV.AUDIENCE), {
     isSubscriptionGated: m,
     needSubscriptionToAccess: C
-  } = (0, _.Z)(n.id), T = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)), R = (0, x.xJ)(n.id), y = (0, j.Z)({
+  } = (0, f.Z)(n.id), T = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)), R = (0, x.xJ)(n.id), O = (0, j.Z)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: s,
@@ -306,20 +306,20 @@ function Y(e) {
     isSubscriptionGated: m,
     needSubscriptionToAccess: C,
     enableConnectedUserLimit: R || n.userLimit > 0 && n.userLimit < G.xGv
-  }), O = e.connected && null == y;
+  }), y = e.connected && null == O;
   return (0, i.jsx)(W, {
     categoryCollapsed: h,
     connectAction: p,
     numAudience: g,
-    stageInstance: f,
+    stageInstance: _,
     isSubscriptionGated: m,
     needSubscriptionToAccess: C,
     ...c,
     ...d,
     ...e,
     isFavoriteSuggestion: r && !T,
-    forceShowButtons: O,
-    channelInfo: y,
+    forceShowButtons: y,
+    channelInfo: O,
     resolvedUnreadSetting: u
   })
 }

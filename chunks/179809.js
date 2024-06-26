@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(153867),
   h = n(771845),
   p = n(880080),
-  f = n(624138),
-  _ = n(727258),
+  _ = n(624138),
+  f = n(727258),
   g = n(199540),
   m = n(40153),
   C = n(252686),
@@ -24,9 +24,9 @@ var i = n(735250),
   N = n(689938),
   x = n(248699),
   S = n(784490);
-let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-  v = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-  T = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  v = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+  T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
 function L(e) {
   let {
@@ -34,14 +34,14 @@ function L(e) {
     setNodeRef: n,
     selected: r,
     expanded: u,
-    mediaState: f,
+    mediaState: _,
     mentionCount: L = 0,
     unread: A = !1,
     defaultFolderName: b,
     useCircleMask: M = !1,
     draggable: R = !1,
-    sorting: y = !1,
-    onDragStart: O,
+    sorting: O = !1,
+    onDragStart: y,
     onDragEnd: P,
     onExpandCollapse: j,
     onContextMenu: D,
@@ -53,14 +53,14 @@ function L(e) {
     children: B
   } = t, [V, H] = l.useState(!1), [F, W] = l.useState(!1), Y = V || F;
   l.useEffect(() => {
-    y && H(!1)
-  }, [y]);
+    O && H(!1)
+  }, [O]);
   let [{
     dragging: z
   }, K] = (0, s.c)({
-    type: _.eD.FOLDER,
-    item: () => (null == O || O(), {
-      type: _.eD.FOLDER,
+    type: f.eD.FOLDER,
+    item: () => (null == y || y(), {
+      type: f.eD.FOLDER,
       nodeId: t.id
     }),
     end() {
@@ -95,7 +95,7 @@ function L(e) {
       className: S.pill
     }), (0, i.jsx)(E.Z, {
       text: J,
-      disabled: y,
+      disabled: O,
       selected: r,
       disableWrapper: !0,
       children: (0, i.jsx)("div", {
@@ -108,8 +108,8 @@ function L(e) {
           folderNode: t,
           expanded: u,
           forceCircular: M,
-          sorting: y,
-          mediaState: f,
+          sorting: O,
+          mediaState: _,
           mentionCount: L,
           tooltipName: J,
           folderGroupId: $,

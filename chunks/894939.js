@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(331642),
   N = t(474333),
   C = t(63063),
-  A = t(581883),
-  m = t(918257),
+  m = t(581883),
+  A = t(918257),
   O = t(726985),
   g = t(981631),
   h = t(710111),
@@ -42,7 +42,7 @@ function M(e) {
 function D() {
   let {
     analyticsLocations: e
-  } = (0, l.ZP)(), [s, t] = a.useState(h.hY), o = (0, S.tT)(s), A = M(o), D = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), L = (null == o ? void 0 : o.type) === S.zx.GLOBAL, P = D && null != o && null == A;
+  } = (0, l.ZP)(), [s, t] = a.useState(h.hY), o = (0, S.tT)(s), m = M(o), D = (0, i.e7)([u.Z], () => u.Z.hasFetchedAllSounds()), L = (null == o ? void 0 : o.type) === S.zx.GLOBAL, P = D && null != o && null == m;
   a.useEffect(() => {
     P && (0, T.tt)({
       location: e
@@ -65,7 +65,7 @@ function D() {
     title: R.Z.Messages.SOUNDBOARD,
     children: [(0, n.jsx)(_.F, {
       setting: O.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-      children: (0, n.jsx)(m.Z, {})
+      children: (0, n.jsx)(A.Z, {})
     }), (0, n.jsxs)(_.F, {
       setting: O.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
       children: [(0, n.jsx)(r.FormDivider, {
@@ -102,7 +102,7 @@ function D() {
         }),
         forcedDivider: !0,
         children: [(0, n.jsx)(I.Z, {
-          sound: A,
+          sound: m,
           isGlobal: L,
           onSelect: t => {
             null == t ? (0, T.aC)(s, e) : (0, T.SZ)(s, t, e)
@@ -120,9 +120,9 @@ function D() {
 function f(e) {
   let {
     guildId: s
-  } = e, t = (0, i.e7)([A.Z], () => {
+  } = e, t = (0, i.e7)([m.Z], () => {
     var e, t, n;
-    return null === (n = A.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound
+    return null === (n = m.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound
   }), a = M(t);
   if (null == t || null == a) return null;
   let {

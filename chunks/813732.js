@@ -14,8 +14,8 @@ var n = t(735250),
   I = t(167354),
   N = t(15640),
   C = t(406174),
-  A = t(810762),
-  m = t(681833),
+  m = t(810762),
+  A = t(681833),
   O = t(856888),
   g = t(921801),
   h = t(246946),
@@ -90,7 +90,7 @@ s.Z = function() {
     (0, u.Y2)(), d.jg(), (0, _.X8)(), d.tZ()
   }), function() {
     T.Z.clearSubsection()
-  }), []), h.Z.enabled) ? (0, n.jsx)(S.Z, {}) : E && f ? L === G.cP ? (0, n.jsx)(A.Z, {
+  }), []), h.Z.enabled) ? (0, n.jsx)(S.Z, {}) : E && f ? L === G.cP ? (0, n.jsx)(m.Z, {
     onGoBack: () => T.Z.clearSubsection()
   }) : L === G.XZ ? (0, n.jsx)(O.Z, {
     onGoBack: () => T.Z.clearSubsection()
@@ -108,7 +108,7 @@ s.Z = function() {
         className: y.subscriptionDetails
       }), (0, n.jsx)(C.Z, {
         onClickManageSubscription: () => T.Z.setSection(B.oAB.SUBSCRIPTIONS, G.cP)
-      }), (0, n.jsx)(m.Z, {
+      }), (0, n.jsx)(A.Z, {
         onClickManageSubscription: () => {
           T.Z.setSection(B.oAB.SUBSCRIPTIONS, G.XZ), P.default.track(B.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }

@@ -23,8 +23,8 @@ var i = n(735250),
   d = n(239091),
   h = n(146773),
   p = n(680089),
-  f = n(430824),
-  _ = n(496675),
+  _ = n(430824),
+  f = n(496675),
   g = n(9156),
   m = n(514342),
   C = n(151827),
@@ -50,14 +50,14 @@ let v = l.memo(function(e) {
     } = e,
     b = (0, o.e7)([g.ZP], () => g.ZP.isChannelMuted(r.getGuildId(), r.id)),
     M = (0, o.e7)([p.Z], () => p.Z.isCollapsed(r.id)),
-    R = (0, o.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_CHANNELS, r));
+    R = (0, o.e7)([f.Z], () => f.Z.can(N.Plq.MANAGE_CHANNELS, r));
   t = null != T ? v > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
-  let y = l.useCallback(() => {
+  let O = l.useCallback(() => {
       M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id)
     }, [r.id, M]),
-    O = l.useCallback(e => {
+    y = l.useCallback(e => {
       if ("null" !== r.id) {
-        let t = f.Z.getGuild(r.getGuildId());
+        let t = _.Z.getGuild(r.getGuildId());
         null != t && (0, d.jW)(e, async () => {
           let {
             default: e
@@ -109,13 +109,13 @@ let v = l.memo(function(e) {
             [S.muted]: b,
             [S.clickable]: !0
           }),
-          onContextMenu: O,
+          onContextMenu: y,
           children: [(0, i.jsxs)(c.Clickable, {
             innerRef: G,
             className: S.mainContent,
             tabIndex: D,
             ...U,
-            onClick: y,
+            onClick: O,
             "aria-label": x.Z.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: r.name
             }),

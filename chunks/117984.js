@@ -9,10 +9,10 @@ n.d(t, {
     return p
   },
   kj: function() {
-    return I
+    return _
   },
   oC: function() {
-    return _
+    return I
   },
   s3: function() {
     return S
@@ -61,7 +61,7 @@ function E(e) {
   }
 }
 
-function I(e, t) {
+function _(e, t) {
   if (!s.Z.isFavorite(e)) r.hW.updateAsync("favorites", n => {
     n.favoriteChannels[e] = i.aV.create({
       nickname: "",
@@ -72,7 +72,7 @@ function I(e, t) {
   }, r.fy.FREQUENT_USER_ACTION)
 }
 
-function _(e) {
+function I(e) {
   let t = s.Z.getFavorite(e);
   if (null != t) r.hW.updateAsync("favorites", n => {
     if (delete n.favoriteChannels[e], t.type === i.Dd.CATEGORY)
@@ -100,7 +100,7 @@ function T(e) {
 }
 
 function N(e) {
-  _(e)
+  I(e)
 }
 
 function S(e) {

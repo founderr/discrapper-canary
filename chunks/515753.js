@@ -17,8 +17,8 @@ var i = n(735250),
   d = n(873546),
   h = n(442837),
   p = n(481060),
-  f = n(493683),
-  _ = n(239091),
+  _ = n(493683),
+  f = n(239091),
   g = n(420660),
   m = n(702321),
   C = n(201895),
@@ -35,8 +35,8 @@ var i = n(735250),
   b = n(199902),
   M = n(158776),
   R = n(306680),
-  y = n(111583),
-  O = n(9156),
+  O = n(111583),
+  y = n(9156),
   P = n(594174),
   j = n(467679),
   D = n(514342),
@@ -91,8 +91,8 @@ class Q extends l.Component {
       children: o,
       locationState: u,
       onClick: h,
-      className: f,
-      role: _,
+      className: _,
+      role: f,
       "aria-posinset": g,
       "aria-setsize": m,
       ...C
@@ -100,9 +100,9 @@ class Q extends l.Component {
     return (0, i.jsx)(G.Z, {
       className: a()(W.channel, {
         [W.fullWidth]: d.tq
-      }, f),
+      }, _),
       onClick: h,
-      role: _,
+      role: f,
       focusProps: {
         within: !0,
         ...z
@@ -147,7 +147,7 @@ function J(e) {
     activities: S,
     applicationStream: b,
     isTyping: M,
-    status: y,
+    status: O,
     isMobile: P,
     lastOnlineTimestamp: w,
     "aria-posinset": k,
@@ -160,10 +160,10 @@ function J(e) {
     user: d,
     size: p.AvatarSizes.SIZE_32,
     animateOnHover: !(s || J)
-  }), el = (0, h.e7)([O.ZP], () => O.ZP.isChannelMuted(t.getGuildId(), t.id)), er = (0, h.e7)([R.ZP], () => R.ZP.getMentionCount(t.id) > 0), ea = (0, E.ZP)(t), es = (0, h.e7)([x.Z], () => x.Z.isFavorite(t.id)), eo = null != S && S.length > 0, {
+  }), el = (0, h.e7)([y.ZP], () => y.ZP.isChannelMuted(t.getGuildId(), t.id)), er = (0, h.e7)([R.ZP], () => R.ZP.getMentionCount(t.id) > 0), ea = (0, E.ZP)(t), es = (0, h.e7)([x.Z], () => x.Z.isFavorite(t.id)), eo = null != S && S.length > 0, {
     isRecentlyOnlineShowable: ec,
     isRecentlyOnlineTrackable: eu
-  } = (0, v.$)(w), ed = !eo && y === H.Skl.OFFLINE && null != w;
+  } = (0, v.$)(w), ed = !eo && O === H.Skl.OFFLINE && null != w;
   l.useEffect(() => {
     eu && ed && v.Z.trackExposure({
       location: "private_channel"
@@ -175,12 +175,12 @@ function J(e) {
     ep = () => {
       X(!1)
     },
-    ef = function(e) {
+    e_ = function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      null != e && (e.preventDefault(), e.stopPropagation()), f.Z.closePrivateChannel(t.id, s, n)
+      null != e && (e.preventDefault(), e.stopPropagation()), _.Z.closePrivateChannel(t.id, s, n)
     },
-    e_ = () => {
-      f.Z.preload(H.ME, t.id)
+    ef = () => {
+      _.Z.preload(H.ME, t.id)
     },
     eg = e => {
       e.stopPropagation()
@@ -192,7 +192,7 @@ function J(e) {
       }
     },
     eC = e => {
-      t.isMultiUserDM() ? (0, _.jW)(e, async () => {
+      t.isMultiUserDM() ? (0, f.jW)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("79695"), n.e("25421")]).then(n.bind(n, 354741));
@@ -203,7 +203,7 @@ function J(e) {
         })
       }, {
         noBlurEvent: !0
-      }) : (0, _.jW)(e, async () => {
+      }) : (0, f.jW)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("79695"), n.e("32006"), n.e("56826"), n.e("4562")]).then(n.bind(n, 131404));
@@ -230,7 +230,7 @@ function J(e) {
       })), (0, p.openModal)(e => (0, i.jsx)(V.Z, {
         header: n,
         body: l,
-        onSubmit: ef,
+        onSubmit: e_,
         ...e
       }))
     },
@@ -274,18 +274,18 @@ function J(e) {
         recipients: t.recipients,
         size: e,
         isTyping: M,
-        status: y
+        status: O
       }) : (0, i.jsx)(Y, {
         ...ei,
         src: (0, I.x)(t),
         "aria-hidden": !0,
         size: e,
-        status: M ? H.Skl.ONLINE : y,
+        status: M ? H.Skl.ONLINE : O,
         isTyping: M
       });
       o()(null != d, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
       let n = null;
-      return !d.isSystemUser() && (n = (0, g.Z)(S) ? H.Skl.STREAMING : y), (0, i.jsx)(Y, {
+      return !d.isSystemUser() && (n = (0, g.Z)(S) ? H.Skl.STREAMING : O), (0, i.jsx)(Y, {
         ...ei,
         size: p.AvatarSizes.SIZE_32,
         src: et,
@@ -327,7 +327,7 @@ function J(e) {
         ref: ee,
         onMouseEnter: eh,
         onMouseLeave: ep,
-        onMouseDown: e_,
+        onMouseDown: ef,
         onContextMenu: eC,
         "aria-setsize": Q,
         "aria-posinset": k,
@@ -367,7 +367,7 @@ function J(e) {
             })
           }), es ? (0, i.jsx)(q, {}) : null, (0, i.jsx)(K, {
             "aria-label": ex ? F.Z.Messages.LEAVE_GROUP_DM : F.Z.Messages.CLOSE_DM,
-            onClick: ex ? eI : ef,
+            onClick: ex ? eI : e_,
             onMouseDown: eg
           })]
         })
@@ -410,12 +410,12 @@ t.ZP = e => {
       isMobile: null != u && M.Z.isMobileOnline(u),
       isRecentlyOnlineEnabled: c
     }
-  }, [t, u, a, c]), p = (0, h.e7)([P.default, y.Z], () => {
-    if (t.isMultiUserDM()) return !!s && w.default.keys(y.Z.getTypingUsers(t.id)).some(e => {
+  }, [t, u, a, c]), p = (0, h.e7)([P.default, O.Z], () => {
+    if (t.isMultiUserDM()) return !!s && w.default.keys(O.Z.getTypingUsers(t.id)).some(e => {
       var t;
       return e !== (null === (t = P.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
-    if (null != r) return y.Z.isTyping(t.id, t.getRecipientId());
+    if (null != r) return O.Z.isTyping(t.id, t.getRecipientId());
     return !1
   }, [t, r, s]);
   return t.isMultiUserDM() ? (0, i.jsx)(J, {

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return A
+    return m
   }
 });
 var n = t(735250),
@@ -20,13 +20,13 @@ var n = t(735250),
   N = t(689938),
   C = t(912768);
 
-function A(e) {
+function m(e) {
   let {
     user: s,
     guild: t,
     className: i,
-    sectionTitle: A,
-    forcedDivider: m = !1,
+    sectionTitle: m,
+    forcedDivider: A = !1,
     withTutorial: O = !1,
     showBorder: g = !1,
     isTryItOutFlow: h = !1,
@@ -51,10 +51,10 @@ function A(e) {
     Z = h || void 0 !== D ? null != D : null != p,
     v = O ? o.ShinyButton : o.Button;
   return (0, n.jsx)(u.Z, {
-    forcedDivider: m,
+    forcedDivider: A,
     borderType: T.Y.PREMIUM,
     hasBackground: !0,
-    title: A,
+    title: m,
     showBorder: g,
     errors: f,
     className: i,

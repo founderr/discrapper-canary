@@ -10,12 +10,12 @@ var i = n(735250),
   h = n(451478),
   p = n(816779);
 
-function f(e) {
+function _(e) {
   let t = c.Z.getChannel(e);
   return null != t && null != t.getGuildId() && !(t.isThread() ? o.Z.isMuted(t.id) : d.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, s.d)(t)
 }
 
-function _(e) {
+function f(e) {
   let t = c.Z.getChannel(e);
   if (null == t) return !1;
   let n = t.getGuildId();
@@ -36,8 +36,8 @@ t.Z = l.forwardRef(function(e, t) {
   return (0, i.jsx)(p.Z, {
     ref: t,
     ...o,
-    isUnread: f,
-    isMentioned: _,
+    isUnread: _,
+    isMentioned: f,
     items: c,
     animate: u
   })

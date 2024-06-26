@@ -26,12 +26,12 @@ function o(e) {
       timeStyle: "short"
     }, i.fontFamily = "gg sans", i.fontSize = 11, c.setColor(p), i.addDataSeries(c), i.updateEndDate(), o(i)
   }, [t, u, p, h, d, c]), c.setPoints(e.dataPoints), null == n || n.updateEndDate();
-  let f = {
+  let _ = {
     width: e.width,
     height: e.height
   };
   return (0, i.jsx)("canvas", {
-    style: f,
+    style: _,
     width: e.width,
     height: e.height,
     ref: t

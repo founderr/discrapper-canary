@@ -21,15 +21,15 @@ function h(e) {
     active: l,
     onAnimationStart: h,
     onAnimationRest: p
-  } = e, f = {}, _ = {};
-  f.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)", _.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)";
+  } = e, _ = {}, f = {};
+  _.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)", f.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)";
   let g = (0, o.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
     m = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
-  l && null == t.icon && (f.backgroundColor = g, _.backgroundColor = m);
+  l && null == t.icon && (_.backgroundColor = g, f.backgroundColor = m);
   let C = (0, a.useTransition)(n, {
-    from: f,
-    enter: _,
-    leave: f,
+    from: _,
+    enter: f,
+    leave: _,
     config: {
       duration: 100
     },

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return A
+    return m
   }
 }), t(47120);
 var n = t(735250),
@@ -20,8 +20,8 @@ var n = t(735250),
   N = t(689938),
   C = t(805807);
 
-function A() {
-  let [e] = a.useState(() => E.ZP.getEnableHardwareAcceleration()), s = u.bm.useSetting(), t = u.Sb.useSetting(), A = u.xU.useSetting(), m = (0, i.e7)([d.Z], () => d.Z.testModeApplicationId), O = a.useCallback(e => {
+function m() {
+  let [e] = a.useState(() => E.ZP.getEnableHardwareAcceleration()), s = u.bm.useSetting(), t = u.Sb.useSetting(), m = u.xU.useSetting(), A = (0, i.e7)([d.Z], () => d.Z.testModeApplicationId), O = a.useCallback(e => {
     u.bm.updateSetting(!e)
   }, []), g = a.useCallback(e => {
     e ? (0, o.openModal)(e => (0, n.jsx)(T.Z, {
@@ -74,7 +74,7 @@ function A() {
     }), (0, n.jsx)(c.F, {
       setting: S.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
       children: (0, n.jsx)(o.FormSwitch, {
-        value: null != m,
+        value: null != A,
         note: N.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
         onChange: g,
         children: N.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE
@@ -82,7 +82,7 @@ function A() {
     }), (0, n.jsx)(c.F, {
       setting: S.s6.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME,
       children: (0, n.jsx)(o.FormSwitch, {
-        value: !A,
+        value: !m,
         note: N.Z.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
           helpCenterLink: _.Z.getArticleURL(I.BhN.GUILD_HOME)
         }),

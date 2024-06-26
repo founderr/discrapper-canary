@@ -22,8 +22,8 @@ n.d(s, {
   }
 }), n(47120);
 var r, t = n(735250),
-  i = n(470079),
-  a = n(481060),
+  a = n(470079),
+  i = n(481060),
   l = n(43267),
   c = n(933557),
   o = n(471445),
@@ -35,8 +35,8 @@ var r, t = n(735250),
   N = n(51144),
   C = n(2093),
   x = n(366695),
-  f = n(346656),
-  E = n(409216),
+  E = n(346656),
+  f = n(409216),
   _ = n(689938),
   I = n(431172);
 
@@ -48,7 +48,7 @@ function g(e, s, n) {
     writable: !0
   }) : e[s] = n, e
 }
-class v extends i.PureComponent {
+class v extends a.PureComponent {
   componentDidMount() {
     let {
       focused: e,
@@ -73,12 +73,12 @@ class v extends i.PureComponent {
       children: s,
       score: n,
       onContextMenu: r,
-      id: i,
+      id: a,
       "aria-label": l
     } = this.props;
-    return (0, t.jsxs)(a.Clickable, {
+    return (0, t.jsxs)(i.Clickable, {
       role: "option",
-      id: i,
+      id: a,
       "aria-label": l,
       "aria-selected": e,
       focusProps: {
@@ -117,17 +117,17 @@ class v extends i.PureComponent {
     })
   }
 }
-class j extends i.Component {
+class j extends a.Component {
   renderIcon() {
     let {
       guild: e
     } = this.props;
     return (0, t.jsx)("div", {
       className: I.guildIconContainer,
-      children: (0, t.jsx)(f.Z, {
+      children: (0, t.jsx)(E.Z, {
         tabIndex: -1,
         guild: e,
-        size: f.Z.Sizes.MINI,
+        size: E.Z.Sizes.MINI,
         className: I.guildIcon
       })
     })
@@ -171,8 +171,8 @@ class j extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       id: l
     } = this.props;
     return (0, t.jsx)(v, {
@@ -182,13 +182,13 @@ class j extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       children: this.renderContent()
     })
   }
 }
-class M extends(r = i.Component) {
+class M extends(r = a.Component) {
   renderIcon() {
     var e;
     let {
@@ -212,7 +212,7 @@ class M extends(r = i.Component) {
     let {
       mentions: n,
       category: r,
-      channel: i
+      channel: a
     } = this.props;
     return null != n && n > 0 && (e = (0, t.jsx)(C.Z, {
       className: I.badge,
@@ -224,7 +224,7 @@ class M extends(r = i.Component) {
       className: I.name,
       children: [(0, t.jsx)("span", {
         className: I.match,
-        children: (0, c.F6)(i, m.default, p.Z)
+        children: (0, c.F6)(a, m.default, p.Z)
       }), e, this.renderVoiceStates(), s]
     })
   }
@@ -233,7 +233,7 @@ class M extends(r = i.Component) {
       voiceStates: e,
       channel: s
     } = this.props;
-    return null == e ? null : (0, t.jsx)(E.Z, {
+    return null == e ? null : (0, t.jsx)(f.Z, {
       className: I.voiceSummaryContainer,
       guildId: s.guild_id,
       users: e.map(e => {
@@ -279,8 +279,8 @@ class M extends(r = i.Component) {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       id: l
     } = this.props;
     return (0, t.jsx)(v, {
@@ -290,8 +290,8 @@ class M extends(r = i.Component) {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       children: this.renderContent()
     })
   }
@@ -299,16 +299,16 @@ class M extends(r = i.Component) {
 g(M, "defaultProps", {
   unread: !1
 });
-class L extends i.Component {
+class L extends a.Component {
   renderIcon() {
     let {
       channel: e
     } = this.props;
     return (0, t.jsx)("div", {
       className: I.dmIconContainer,
-      children: (0, t.jsx)(a.Avatar, {
+      children: (0, t.jsx)(i.Avatar, {
         src: (0, l.x)(e),
-        size: a.AvatarSizes.SIZE_20,
+        size: i.AvatarSizes.SIZE_20,
         "aria-hidden": !0
       })
     })
@@ -361,8 +361,8 @@ class L extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       id: l
     } = this.props;
     return (0, t.jsx)(v, {
@@ -372,23 +372,23 @@ class L extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       children: this.renderContent()
     })
   }
 }
-class A extends i.Component {
+class A extends a.Component {
   renderIcon() {
     let {
       user: e
     } = this.props;
     return (0, t.jsx)("div", {
       className: I.iconContainer,
-      children: (0, t.jsx)(a.Avatar, {
+      children: (0, t.jsx)(i.Avatar, {
         src: e.getAvatarURL(void 0, 20),
         "aria-hidden": !0,
-        size: a.AvatarSizes.SIZE_20
+        size: i.AvatarSizes.SIZE_20
       })
     })
   }
@@ -453,8 +453,8 @@ class A extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       id: l
     } = this.props;
     return (0, t.jsx)(v, {
@@ -464,13 +464,13 @@ class A extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       children: this.renderContent()
     })
   }
 }
-class Z extends i.Component {
+class Z extends a.Component {
   renderContent() {
     let {
       children: e,
@@ -498,10 +498,10 @@ class Z extends i.Component {
       onClick: s,
       onFocus: n,
       focused: r,
-      id: i
+      id: a
     } = this.props;
     return (0, t.jsx)(v, {
-      id: i,
+      id: a,
       onMouseEnter: e,
       onClick: s,
       onFocus: n,
@@ -510,7 +510,7 @@ class Z extends i.Component {
     })
   }
 }
-class b extends i.Component {
+class b extends a.Component {
   render() {
     return (0, t.jsx)("div", {
       className: I.__invalid_resultDefault,
@@ -524,20 +524,20 @@ class b extends i.Component {
     })
   }
 }
-class U extends i.Component {
+class U extends a.Component {
   renderContent() {
     let e, s;
     let {
       link: n,
       children: r
-    } = this.props, i = (0, u.Qj)(n.path);
-    return null == i || void 0 === i.messageId ? (e = _.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN, s = (0, t.jsx)(a.LinkIcon, {
+    } = this.props, a = (0, u.Qj)(n.path);
+    return null == a || void 0 === a.messageId ? (e = _.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN, s = (0, t.jsx)(i.LinkIcon, {
       size: "xs",
       color: "currentColor"
-    })) : (0, u.VO)(i) ? (e = _.Z.Messages.QUICKSWITCHER_LINK_MESSAGE, s = (0, t.jsx)(a.ChatArrowRightIcon, {
+    })) : (0, u.VO)(a) ? (e = _.Z.Messages.QUICKSWITCHER_LINK_MESSAGE, s = (0, t.jsx)(i.ChatArrowRightIcon, {
       size: "xs",
       color: "currentColor"
-    })) : (e = _.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS, s = (0, t.jsx)(a.LockIcon, {
+    })) : (e = _.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS, s = (0, t.jsx)(i.LockIcon, {
       size: "xs",
       color: "currentColor"
     })), (0, t.jsxs)("div", {
@@ -557,8 +557,8 @@ class U extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       id: l
     } = this.props;
     return (0, t.jsx)(v, {
@@ -567,8 +567,8 @@ class U extends i.Component {
       onClick: s,
       onFocus: n,
       onContextMenu: r,
-      focused: i,
-      score: a,
+      focused: a,
+      score: i,
       children: this.renderContent()
     })
   }

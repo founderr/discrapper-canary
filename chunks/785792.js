@@ -1,36 +1,36 @@
-t.d(n, {
+n.d(t, {
   b: function() {
     return c
   }
 });
-var r = t(735250),
-  o = t(470079),
-  u = t(120356),
-  l = t.n(u),
-  s = t(481060),
-  i = t(727857);
+var r = n(735250),
+  o = n(470079),
+  l = n(120356),
+  s = n.n(l),
+  i = n(481060),
+  u = n(727857);
 
 function c(e) {
   let {
-    chunks: n,
-    columns: t,
-    className: u
+    chunks: t,
+    columns: n,
+    className: l
   } = e, c = o.useMemo(() => ({
-    "--secure-frames-columns": t
-  }), [t]);
+    "--secure-frames-columns": n
+  }), [n]);
   return (0, r.jsx)("div", {
     style: c,
-    className: l()(i.code, u),
-    children: n.map((e, n) => (0, r.jsx)("div", {
-      className: l()(i.chunk, {
-        [i.divider]: n > t - 1
+    className: s()(u.code, l),
+    children: t.map((e, t) => (0, r.jsx)("div", {
+      className: s()(u.chunk, {
+        [u.divider]: t > n - 1
       }),
-      children: (0, r.jsx)(s.Text, {
-        className: i.codeText,
+      children: (0, r.jsx)(i.Text, {
+        className: u.codeText,
         variant: "code",
         color: "text-normal",
         children: e
       })
-    }, "".concat(e, "-").concat(n)))
+    }, "".concat(e, "-").concat(t)))
   })
 }

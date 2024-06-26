@@ -10,8 +10,8 @@ var i = n(735250),
   d = n(430824),
   h = n(823379),
   p = n(179809),
-  f = n(652376),
-  _ = n(981631);
+  _ = n(652376),
+  f = n(981631);
 t.Z = l.memo(function(e) {
   let {
     folderNode: t,
@@ -27,11 +27,11 @@ t.Z = l.memo(function(e) {
           n = d.Z.getGuild(t);
         return null != n ? n.name : null
       }).filter(h.lm),
-      n = 2 * _.dYL,
+      n = 2 * f.dYL,
       i = [];
     for (let e of t)(e.length < n || 0 === i.length) && (i.push(e), n -= e.length);
     return "".concat(i.join(", ")).concat(i.length < t.length ? ", ..." : "")
-  }(t), v = (0, f.Z)(t), {
+  }(t), v = (0, _.Z)(t), {
     mentionCount: T,
     unread: L
   } = (0, r.cj)([u.default], () => ({

@@ -15,8 +15,8 @@ var l = n(120356),
   d = n(607070),
   h = n(367907),
   p = n(357352),
-  f = n(652515),
-  _ = n(550951),
+  _ = n(652515),
+  f = n(550951),
   g = n(886176),
   m = n(605236),
   C = n(703656),
@@ -35,7 +35,7 @@ function A(e) {
     guildId: t,
     selected: n,
     handleClick: l
-  } = e, u = (0, f.RF)(t, "guild_shop_channel_row"), _ = (0, a.e7)([E.Z], () => E.Z.getGuild(t)), Z = (null == _ ? void 0 : _.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, A = "false" === o.K.get(v.tM, "false"), b = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
+  } = e, u = (0, _.RF)(t, "guild_shop_channel_row"), f = (0, a.e7)([E.Z], () => E.Z.getGuild(t)), Z = (null == f ? void 0 : f.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, A = "false" === o.K.get(v.tM, "false"), b = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
   return (0, i.jsx)(x.m, {
     id: "shop-".concat(t),
     className: r()(L.previewChannelRow, {
@@ -86,7 +86,7 @@ function b(e) {
   let {
     guild: t,
     selected: l
-  } = e, r = (0, _.g)(t, "guild_shop_channel_row"), a = () => {
+  } = e, r = (0, f.g)(t, "guild_shop_channel_row"), a = () => {
     o.K.set(v.tM, "true"), (0, C.uL)(S.Z5c.CHANNEL(t.id, Z.oC.GUILD_SHOP))
   };
   return r ? (0, i.jsx)(A, {

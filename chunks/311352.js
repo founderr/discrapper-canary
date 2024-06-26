@@ -10,8 +10,8 @@ var l = n(399606),
   d = n(976401),
   h = n(13140),
   p = n(924557),
-  f = n(435064),
-  _ = n(39604),
+  _ = n(435064),
+  f = n(39604),
   g = n(981631),
   m = n(689938),
   C = n(387764);
@@ -28,7 +28,7 @@ function I(e) {
 }
 
 function E() {
-  (0, _.C1)()
+  (0, f.C1)()
 }
 let N = e => {
   let {
@@ -93,9 +93,9 @@ t.Z = () => {
     {
       clipsEnabled: n,
       isAtMaxSavingClipsOperations: r
-    } = (0, l.cj)([f.Z], () => ({
-      clipsEnabled: f.Z.getSettings().clipsEnabled,
-      isAtMaxSavingClipsOperations: f.Z.getIsAtMaxSaveClipOperations()
+    } = (0, l.cj)([_.Z], () => ({
+      clipsEnabled: _.Z.getSettings().clipsEnabled,
+      isAtMaxSavingClipsOperations: _.Z.getIsAtMaxSaveClipOperations()
     })),
     s = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
   if (!(t && n) || null == s || e) return null;

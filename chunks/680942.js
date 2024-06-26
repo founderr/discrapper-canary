@@ -1,7 +1,7 @@
 "use strict";
 var r = n(735250),
-  a = n(470079),
-  i = n(481060),
+  i = n(470079),
+  a = n(481060),
   o = n(727637),
   s = n(906732),
   c = n(241553),
@@ -66,17 +66,17 @@ t.Z = e => {
     disableCustomColor: m = !1
   } = e, {
     analyticsLocations: h
-  } = (0, s.ZP)(), x = a.useRef(null), I = (0, o.Z)(x), E = m ? u.BR.DARK : u.BR.LIGHT;
-  return (0, d.x6)(t) ? null : (0, r.jsx)(i.Tooltip, {
+  } = (0, s.ZP)(), x = i.useRef(null), I = (0, o.Z)(x), E = m ? u.BR.DARK : u.BR.LIGHT;
+  return (0, d.x6)(t) ? null : (0, r.jsx)(a.Tooltip, {
     text: p.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: C,
-    children: e => (0, r.jsx)(i.Button, {
+    children: e => (0, r.jsx)(a.Button, {
       ...e,
       buttonRef: x,
       className: f.giftButton,
-      color: m ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
-      look: i.Button.Looks.FILLED,
-      size: i.ButtonSizes.ICON,
+      color: m ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
+      look: a.Button.Looks.FILLED,
+      size: a.ButtonSizes.ICON,
       innerClassName: f.giftButtonInner,
       "aria-label": p.Z.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
@@ -95,7 +95,7 @@ t.Z = e => {
         isContentDismissed: !0,
         themeOverride: E,
         boxColors: g
-      }) : (0, r.jsx)(i.GiftIcon, {
+      }) : (0, r.jsx)(a.GiftIcon, {
         size: "md",
         color: "currentColor"
       })

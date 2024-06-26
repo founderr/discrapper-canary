@@ -1,6 +1,6 @@
 t.d(s, {
   h: function() {
-    return m
+    return A
   }
 }), t(47120);
 var n = t(735250),
@@ -34,15 +34,15 @@ let C = e => {
       submitting: s
     }
   },
-  A = e => {
+  m = e => {
     var s;
     let {
       transitionState: t,
       groupListing: a,
       guildId: i,
       listing: l,
-      subscription: A,
-      onClose: m
+      subscription: m,
+      onClose: A
     } = e, O = (0, _.Dt)(), g = (0, u.YB)(i), h = (null == g ? void 0 : null === (s = g.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, E._W)(g.cover_image_asset.application_id, g.cover_image_asset, 440) : void 0, {
       analyticsLocations: R
     } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL), {
@@ -50,8 +50,8 @@ let C = e => {
       error: x,
       submitting: M
     } = C(R), D = async () => {
-      await p(A.id) && m()
-    }, f = l.role_benefits.benefits.filter(e => e.ref_type === S.Qs.CHANNEL), L = l.role_benefits.benefits.filter(e => e.ref_type === S.Qs.INTANGIBLE), P = r()(A.currentPeriodEnd).format("MMMM Do, YYYY"), Z = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+      await p(m.id) && A()
+    }, f = l.role_benefits.benefits.filter(e => e.ref_type === S.Qs.CHANNEL), L = l.role_benefits.benefits.filter(e => e.ref_type === S.Qs.INTANGIBLE), P = r()(m.currentPeriodEnd).format("MMMM Do, YYYY"), Z = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
       numChannels: f.length,
       numAdditionalBenefits: L.length,
       subscriptionEndDate: P
@@ -68,7 +68,7 @@ let C = e => {
         }), (0, n.jsx)(o.ModalCloseButton, {
           withCircleBackground: !0,
           className: N.closeButton,
-          onClick: m
+          onClick: A
         })]
       }), null != x ? (0, n.jsx)(o.FormErrorBlock, {
         children: x.message
@@ -99,14 +99,14 @@ let C = e => {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.WHITE,
           className: N.goBackButton,
-          onClick: m,
+          onClick: A,
           children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
         })]
       })]
     })
   },
-  m = e => {
-    (0, o.openModal)(s => (0, n.jsx)(A, {
+  A = e => {
+    (0, o.openModal)(s => (0, n.jsx)(m, {
       ...s,
       ...e
     }))

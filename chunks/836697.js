@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(914010),
   h = n(289090),
   p = n(727258),
-  f = n(234383),
-  _ = n(179809),
+  _ = n(234383),
+  f = n(179809),
   g = n(773182),
   m = n(588275),
   C = n(689938),
@@ -24,7 +24,7 @@ var i = n(735250),
 function E(e) {
   let {
     onActivate: t
-  } = e, [n, E] = l.useState(!1), N = (0, r.e7)([d.Z], () => d.Z.getGuildId()), x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds), S = (0, f.Z)(), Z = (0, s.Z)(N), v = l.useMemo(() => {
+  } = e, [n, E] = l.useState(!1), N = (0, r.e7)([d.Z], () => d.Z.getGuildId()), x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds), S = (0, _.Z)(), Z = (0, s.Z)(N), v = l.useMemo(() => {
     let e = (0, p.qQ)({
       folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: C.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
@@ -42,7 +42,7 @@ function E(e) {
     !n && T && Z !== N && E(!0)
   }, [n, T, Z, N]), 0 === S.length) ? null : (0, i.jsx)(g.TH, {
     onActivate: t,
-    children: (0, i.jsx)(_.Z, {
+    children: (0, i.jsx)(f.Z, {
       folderNode: v,
       expanded: n,
       useCircleMask: !n && !T,

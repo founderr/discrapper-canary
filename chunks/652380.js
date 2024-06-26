@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(210851),
   N = t(602683),
   C = t(916028),
-  A = t(15033),
-  m = t(899457),
+  m = t(15033),
+  A = t(899457),
   O = t(614771);
 
 function g(e, s, t) {
@@ -104,7 +104,7 @@ let M = {
 
 function D() {
   var e, s, t;
-  let [g, D] = a.useState(M), [f, L] = a.useState(m.a.UNENROLLED), [P, Z] = a.useState([]), [v, b] = a.useState(!1), [j, U] = a.useState(null);
+  let [g, D] = a.useState(M), [f, L] = a.useState(A.a.UNENROLLED), [P, Z] = a.useState([]), [v, b] = a.useState(!1), [j, U] = a.useState(null);
   let B = (t = g.config, (0, i.EQ)(t).with({
     configVersion: 1
   }, e => ({
@@ -338,7 +338,7 @@ function D() {
       className: O.fields,
       children: (0, n.jsx)("div", {
         className: O.fullWidthField,
-        children: (0, n.jsx)(A.Z, {
+        children: (0, n.jsx)(m.Z, {
           onChange: function(e) {
             var s, t;
             D({
@@ -381,16 +381,16 @@ function D() {
           onChange: y,
           value: g.config.colors.secondary
         })]
-      }), (0, n.jsx)(m.Z, {
+      }), (0, n.jsx)(A.Z, {
         onChange: function(e) {
           switch (L(e), e) {
-            case m.a.UNENROLLED:
+            case A.a.UNENROLLED:
               D({
                 ...g,
                 userStatus: null
               });
               break;
-            case m.a.ENROLLED:
+            case A.a.ENROLLED:
               D({
                 ...g,
                 userStatus: x({
@@ -398,7 +398,7 @@ function D() {
                 })
               });
               break;
-            case m.a.COMPLETED_25:
+            case A.a.COMPLETED_25:
               D({
                 ...g,
                 userStatus: x({
@@ -407,7 +407,7 @@ function D() {
                 })
               });
               break;
-            case m.a.COMPLETED_50:
+            case A.a.COMPLETED_50:
               D({
                 ...g,
                 userStatus: x({
@@ -416,7 +416,7 @@ function D() {
                 })
               });
               break;
-            case m.a.COMPLETED_75:
+            case A.a.COMPLETED_75:
               D({
                 ...g,
                 userStatus: x({
@@ -425,7 +425,7 @@ function D() {
                 })
               });
               break;
-            case m.a.COMPLETED_100:
+            case A.a.COMPLETED_100:
               D({
                 ...g,
                 userStatus: x({
@@ -435,7 +435,7 @@ function D() {
                 })
               });
               break;
-            case m.a.CLAIMED:
+            case A.a.CLAIMED:
               D({
                 ...g,
                 userStatus: x({

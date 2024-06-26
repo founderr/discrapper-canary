@@ -5,9 +5,9 @@ n.d(t, {
   }
 });
 var r = n(735250),
-  a = n(470079),
-  i = n(120356),
-  o = n.n(i),
+  i = n(470079),
+  a = n(120356),
+  o = n.n(a),
   s = n(425493),
   c = n(410030),
   l = n(984370),
@@ -23,17 +23,17 @@ function b(e) {
   let {
     isLayer: t,
     onClose: n,
-    isFullScreen: i = !1
+    isFullScreen: a = !1
   } = e;
   return (0, r.jsxs)(l.Z, {
     className: o()(C.headerBar, {
-      [C.fullscreenHeaderBar]: i
+      [C.fullscreenHeaderBar]: a
     }),
     innerClassname: C.shopLogoContainer,
-    toolbar: i ? null : (0, r.jsx)(a.Fragment, {}),
+    toolbar: a ? null : (0, r.jsx)(i.Fragment, {}),
     children: [(0, r.jsx)(u.Z, {
       className: C.shopLogo
-    }), i && (0, r.jsx)(s.Z, {
+    }), a && (0, r.jsx)(s.Z, {
       className: C.closeIcon,
       closeAction: t ? f.DR : n,
       keybind: "ESC"
@@ -45,7 +45,7 @@ function m(e) {
   let {
     isFullScreen: t,
     isLayer: n,
-    onClose: i
+    onClose: a
   } = e, {
     newShopLogoEnabled: u
   } = (0, g.O)({
@@ -53,20 +53,20 @@ function m(e) {
   }), m = (0, c.ZP)();
   return u ? (0, r.jsx)(b, {
     isLayer: n,
-    onClose: i,
+    onClose: a,
     isFullScreen: t
   }) : (0, r.jsxs)(l.Z, {
     className: o()((0, p.Q)(m), C.headerBar, {
       [C.fullscreenHeaderBar]: t
     }),
-    toolbar: t ? null : (0, r.jsx)(a.Fragment, {}),
+    toolbar: t ? null : (0, r.jsx)(i.Fragment, {}),
     children: [(0, r.jsx)(d.Z, {
       className: C.discordLogo
     }), (0, r.jsx)(l.Z.Title, {
       children: _.Z.Messages.COLLECTIBLES_SHOP
     }), t && (0, r.jsx)(s.Z, {
       className: C.closeIcon,
-      closeAction: n ? f.DR : i,
+      closeAction: n ? f.DR : a,
       keybind: "ESC"
     })]
   })

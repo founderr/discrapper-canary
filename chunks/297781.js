@@ -59,8 +59,8 @@ var l, a, r = t(735250),
   _ = t(442837),
   f = t(481060),
   T = t(70956),
-  m = t(709054),
-  v = t(719247),
+  v = t(709054),
+  m = t(719247),
   N = t(22211),
   x = t(561308),
   I = t(265048),
@@ -157,8 +157,8 @@ function p(e) {
       count: E,
       max: _
     }) : void 0,
-    m = null != T && null != s ? "".concat(s, " (").concat(T, ")") : null != s ? s : T;
-  return null == m ? null : (0, r.jsxs)("div", {
+    v = null != T && null != s ? "".concat(s, " (").concat(T, ")") : null != s ? s : T;
+  return null == v ? null : (0, r.jsxs)("div", {
     className: M.badgeContainer,
     children: [(0, r.jsx)(f.GroupIcon, {
       size: "xxs",
@@ -167,7 +167,7 @@ function p(e) {
       variant: "text-xs/normal",
       color: i,
       lineClamp: 1,
-      children: m
+      children: v
     })]
   })
 }
@@ -180,7 +180,7 @@ function O(e) {
     defaultTextColor: l,
     defaultIconColor: a,
     location: o
-  } = C(), i = 0 === o, u = (0, _.e7)([v.Z], () => v.Z.getMatchingActivity(t));
+  } = C(), i = 0 === o, u = (0, _.e7)([m.Z], () => m.Z.getMatchingActivity(t));
   if ((null == u ? void 0 : u.timestamps) == null) return null;
   let s = i ? f.tokens.colors.STATUS_POSITIVE : a,
     c = null === (n = u.timestamps) || void 0 === n ? void 0 : n.start;
@@ -314,7 +314,7 @@ function B(e) {
 function F(e) {
   let {
     entry: n
-  } = e, t = m.default.extractTimestamp(n.extra.application_id);
+  } = e, t = v.default.extractTimestamp(n.extra.application_id);
   return c()().diff(c()(t), "days") > 7 ? null : (0, r.jsx)(R, {
     Icon: f.StarShootingIcon,
     text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE

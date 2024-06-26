@@ -1,31 +1,31 @@
 n.d(s, {
   Z: function() {
-    return i
+    return a
   }
 });
 var r = n(735250);
 n(470079);
 var t = n(325767);
 
-function i(e) {
+function a(e) {
   let {
     width: s = 32,
     height: n = 32,
-    color: i = "currentColor",
-    ...a
+    color: a = "currentColor",
+    ...i
   } = e;
   return (0, r.jsxs)("svg", {
-    ...(0, t.Z)(a),
+    ...(0, t.Z)(i),
     width: s,
     height: n,
     viewBox: "0 0 12 12",
     fill: "none",
     children: [(0, r.jsx)("path", {
       d: "M7.25 1H4.75V7.25H7.25V1Z",
-      fill: i
+      fill: a
     }), (0, r.jsx)("path", {
       d: "M4.75 9.75C4.75 10.4167 5.33333 11 6 11C6.66667 11 7.25 10.4167 7.25 9.75C7.25 9.08333 6.66667 8.5 6 8.5C5.33333 8.5 4.75 9.08333 4.75 9.75Z",
-      fill: i
+      fill: a
     })]
   })
 }

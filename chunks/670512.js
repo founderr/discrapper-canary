@@ -18,11 +18,11 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = {
+let _ = {
   friction: 15,
   tension: 100
 };
-class _ extends l.PureComponent {
+class f extends l.PureComponent {
   componentDidMount() {
     this.setState({
       shown: !0
@@ -40,7 +40,7 @@ class _ extends l.PureComponent {
   springTo(e) {
     s.Z.spring(this.state.translateY, {
       toValue: Math.min(e, 250),
-      ...f
+      ..._
     }).start()
   }
   renderArrowGroup(e) {
@@ -131,4 +131,4 @@ class _ extends l.PureComponent {
     })
   }
 }
-t.Z = _
+t.Z = f

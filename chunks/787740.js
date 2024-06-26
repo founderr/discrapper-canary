@@ -6,16 +6,16 @@ n.d(s, {
 var r = n(735250);
 n(470079);
 var t = n(481060),
-  i = n(688465),
-  a = n(689938);
+  a = n(688465),
+  i = n(689938);
 
 function l(e) {
   let {
     className: s
   } = e;
   return (0, r.jsx)(t.Tooltip, {
-    text: a.Z.Messages.BROADCASTING_BETA_TOOLTIP_TEXT,
-    children: e => (0, r.jsx)(i.Z, {
+    text: i.Z.Messages.BROADCASTING_BETA_TOOLTIP_TEXT,
+    children: e => (0, r.jsx)(a.Z, {
       ...e,
       className: s
     })

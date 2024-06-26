@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(703656),
   h = n(594174),
   p = n(366695),
-  f = n(436088),
-  _ = n(51144),
+  _ = n(436088),
+  f = n(51144),
   g = n(158631),
   m = n(143614),
   C = n(787740),
@@ -28,7 +28,7 @@ function x(e) {
   let {
     userId: n,
     applicationId: l
-  } = e, a = (0, r.e7)([h.default], () => h.default.getUser(n)), o = null !== (t = _.ZP.getGlobalName(a)) && void 0 !== t ? t : _.ZP.getUserTag(a), c = (0, u.q)(l);
+  } = e, a = (0, r.e7)([h.default], () => h.default.getUser(n)), o = null !== (t = f.ZP.getGlobalName(a)) && void 0 !== t ? t : f.ZP.getUserTag(a), c = (0, u.q)(l);
   return null == a ? null : (0, i.jsxs)("div", {
     className: N.broadcast,
     children: [(0, i.jsxs)("div", {
@@ -71,7 +71,7 @@ function S(e) {
       className: N.header,
       children: [(0, i.jsxs)("div", {
         className: N.inline,
-        children: [(0, i.jsx)(f.Z, {
+        children: [(0, i.jsx)(_.Z, {
           color: a.Z.colors.HEADER_PRIMARY.css,
           height: 16,
           width: 16

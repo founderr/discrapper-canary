@@ -29,20 +29,20 @@ function C(e) {
     onBioChange: c,
     pendingBio: d,
     placeholder: C,
-    currentBio: A,
-    disabled: m = !1
-  } = e, [O, g] = a.useState(null != d ? d : A), [h, R] = a.useState((0, o.JM)(O)), p = a.useRef(!1);
+    currentBio: m,
+    disabled: A = !1
+  } = e, [O, g] = a.useState(null != d ? d : m), [h, R] = a.useState((0, o.JM)(O)), p = a.useRef(!1);
   return a.useEffect(() => {
     if (void 0 === d) {
-      let e = (0, o.JM)(A);
-      g(A), R(e)
+      let e = (0, o.JM)(m);
+      g(m), R(e)
     }
-  }, [d, A]), (0, n.jsxs)(_.Z, {
+  }, [d, m]), (0, n.jsxs)(_.Z, {
     title: s,
     titleId: S,
     description: u.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: t,
-    disabled: m,
+    disabled: A,
     children: [(0, n.jsx)(l.Z, {
       "aria-describedby": N,
       "aria-labelledby": S,

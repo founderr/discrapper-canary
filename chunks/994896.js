@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   O: function() {
-    return a
+    return i
   }
 });
 let r = (0, n(818083).B)({
@@ -39,7 +39,7 @@ let r = (0, n(818083).B)({
       }
     }]
   }),
-  a = e => {
+  i = e => {
     let {
       location: t
     } = e;

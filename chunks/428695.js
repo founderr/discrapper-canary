@@ -9,14 +9,14 @@ var i = n(735250),
   d = n(981631),
   h = n(689938),
   p = n(846756);
-let f = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
+let _ = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function(e) {
   let {
     guild: t,
     title: n,
     message: r,
     image: s,
-    type: _,
+    type: f,
     imageStyles: g,
     imageMarginX: m,
     imageMarginTop: C,
@@ -30,20 +30,20 @@ t.Z = function(e) {
     className: T
   } = e;
   l.useEffect(() => {
-    f(d.rMx.CHANNEL_NOTICE_VIEWED, {
-      notice_type: _,
+    _(d.rMx.CHANNEL_NOTICE_VIEWED, {
+      notice_type: f,
       guild_id: t.id
     })
-  }, [t.id, _]);
+  }, [t.id, f]);
   let L = null;
   "function" == typeof S ? L = S() : null != S && (L = (0, i.jsx)(o.Button, {
     className: p.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
-      null != _ && u.default.track(d.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+      null != f && u.default.track(d.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
         source: I,
         guild_id: t.id,
-        notice_type: _
+        notice_type: f
       }), null == x || x()
     },
     fullWidth: !0,
@@ -76,7 +76,7 @@ t.Z = function(e) {
     children: [!0 === E ? null : (0, i.jsx)(o.Clickable, {
       onClick: () => {
         c.ZP.trackWithMetadata(d.rMx.CHANNEL_NOTICE_CLOSED, {
-          notice_type: _
+          notice_type: f
         }), null == N || N()
       },
       className: p.close,

@@ -1,6 +1,6 @@
 r.d(t, {
   Z: function() {
-    return E
+    return Z
   }
 }), r(47120), r(724458), r(757143), r(390547), r(653041);
 var a = r(735250),
@@ -84,7 +84,7 @@ function I(e) {
   }), t
 }
 
-function Z(e, t) {
+function E(e, t) {
   let [r, a] = n.useState(() => {
     let r = h.K.get(e);
     return null != r ? r : t
@@ -94,13 +94,13 @@ function Z(e, t) {
   }, [e, r]), [r, a]
 }
 
-function E() {
+function Z() {
   let e = (0, y.Fg)(),
     [{
       rawPalette: t,
       semanticTokens: r
     }, i, l, s, h, m] = function(e, t) {
-      let [r, a] = Z("".concat(e, "-states"), [t]), [i, o] = Z("".concat(e, "-index"), 0), l = r[i], c = n.useCallback(e => {
+      let [r, a] = E("".concat(e, "-states"), [t]), [i, o] = E("".concat(e, "-index"), 0), l = r[i], c = n.useCallback(e => {
         a([e, ...r].slice(0, 20)), o(0)
       }, [o, a, r]), s = n.useCallback(() => {
         o(Math.min(r.length - 1, i + 1))
@@ -119,7 +119,7 @@ function E() {
       value: t,
       label: t
     }], []), [t]),
-    E = n.useCallback((e, a, n, o) => {
+    Z = n.useCallback((e, a, n, o) => {
       let l = d().cloneDeep(r);
       l[e][a] = {
         color: n,
@@ -335,7 +335,7 @@ function E() {
               value: l.color,
               options: I,
               onChange: r => {
-                E(t, e, r, l.opacity)
+                Z(t, e, r, l.opacity)
               },
               renderOptionPrefix: t => null == t ? null : (0, a.jsx)("div", {
                 style: {
@@ -354,7 +354,7 @@ function E() {
               },
               value: null === (i = l.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: r => {
-                "" !== r && E(t, e, l.color, parseFloat(r))
+                "" !== r && Z(t, e, l.color, parseFloat(r))
               }
             }), (0, a.jsx)(f.Clickable, {
               style: c ? {} : {
@@ -363,7 +363,7 @@ function E() {
               },
               onClick: () => {
                 var r;
-                c && E(t, e, o.color, null !== (r = o.opacity) && void 0 !== r ? r : 1)
+                c && Z(t, e, o.color, null !== (r = o.opacity) && void 0 !== r ? r : 1)
               },
               children: (0, a.jsx)(f.CloseSmallIcon, {
                 size: "xs",

@@ -14,8 +14,8 @@ var i = n(735250),
   d = n(98493),
   h = n(703656),
   p = n(669405),
-  f = n(434479),
-  _ = n(981631),
+  _ = n(434479),
+  f = n(981631),
   g = n(176505),
   m = n(689938);
 
@@ -30,7 +30,7 @@ function C(e) {
       status: u.wB.SUBMITTED,
       limit: d.p
     })
-  }, [t.id]), (0, i.jsx)(f.m, {
+  }, [t.id]), (0, i.jsx)(_.m, {
     id: "application-review-".concat(t.id),
     renderIcon: e => (0, i.jsx)(p.Z, {
       className: e,
@@ -42,9 +42,9 @@ function C(e) {
     onClick: () => {
       (0, s.Q2)({
         guildId: t.id,
-        source: _.jXE.CHANNEL_LIST,
+        source: f.jXE.CHANNEL_LIST,
         tab: g.oC.MEMBER_APPLICATIONS
-      }), (0, h.uL)(_.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS))
+      }), (0, h.uL)(f.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS))
     },
     trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, {
       count: I

@@ -19,8 +19,8 @@ var n = t(735250),
   I = t(25990),
   N = t(594174),
   C = t(585483),
-  A = t(16703),
-  m = t(785145),
+  m = t(16703),
+  A = t(785145),
   O = t(981631),
   g = t(526761),
   h = t(726985),
@@ -32,14 +32,14 @@ function x() {
     location: "profile_customization_auto"
   });
   let e = (0, i.e7)([_.Z], () => _.Z.getGuild()),
-    s = (0, A.Z)(),
+    s = (0, m.Z)(),
     t = (0, i.e7)([_.Z, I.Z], () => _.Z.showNotice() || I.Z.showNotice()),
     x = null != e ? e : s,
     M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
     {
       subsection: D,
       setSubsection: f
-    } = (0, m.Z)(),
+    } = (0, A.Z)(),
     {
       analyticsLocations: L
     } = (0, l.ZP)(),

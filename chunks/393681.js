@@ -15,8 +15,8 @@ var n = t(735250),
   I = t(952306),
   N = t(346585),
   C = t(347649),
-  A = t(332473),
-  m = t(303172),
+  m = t(332473),
+  A = t(303172),
   O = t(921801),
   g = t(484459),
   h = t(430824),
@@ -111,7 +111,7 @@ class k extends a.PureComponent {
         date: (0, N.IE)(this.props.locale)
       }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, n.jsx)(f.Z, {
         className: Y.noticeTextButton,
-        onClick: () => (0, m.Z)(V.Kq.USER_SETTINGS),
+        onClick: () => (0, A.Z)(V.Kq.USER_SETTINGS),
         children: y.Z.Messages.GET_STARTED
       })]
     }) : null
@@ -314,7 +314,7 @@ s.Z = () => {
     s = (0, c.e7)([R.Z], () => R.Z.getBackupCodes()),
     t = (0, c.e7)([p.Z], () => p.Z.hidePersonalInformation),
     a = (0, c.e7)([Z.Z], () => Z.Z.theme),
-    i = (0, A.b)(),
+    i = (0, m.b)(),
     r = (0, C.CC)(),
     o = (0, c.e7)([P.default], () => P.default.locale);
   return (0, n.jsx)(k, {

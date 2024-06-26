@@ -15,8 +15,8 @@ var l = n(442837),
   d = n(9156),
   h = n(434479),
   p = n(490897),
-  f = n(689938),
-  _ = n(359123);
+  _ = n(689938),
+  f = n(359123);
 
 function g(e) {
   let {
@@ -41,9 +41,9 @@ function g(e) {
     }), (0, o.EW)(r.z.GUILD_HEADER_EVENT_UPSELL)
   }
   let N = (0, c.ZP)(t.id),
-    x = N.length > 0 ? f.Z.Messages.GUILD_EVENTS_PLURAL.format({
+    x = N.length > 0 ? _.Z.Messages.GUILD_EVENTS_PLURAL.format({
       number: N.length
-    }) : f.Z.Messages.GUILD_EVENTS;
+    }) : _.Z.Messages.GUILD_EVENTS;
   return (0, i.jsx)(h.m, {
     id: "upcoming-events-".concat(t.id),
     renderIcon: e => (0, i.jsx)(a.CalendarIcon, {
@@ -67,7 +67,7 @@ function g(e) {
     },
     showUnread: m && !I,
     trailing: !I && C > 0 ? (0, i.jsx)(a.NumberBadge, {
-      className: _.numberBadge,
+      className: f.numberBadge,
       disableColor: !0,
       count: C
     }) : null

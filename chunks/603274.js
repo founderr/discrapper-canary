@@ -15,8 +15,8 @@ var l = n(120356),
   d = n(565799),
   h = n(501655),
   p = n(199902),
-  f = n(592125),
-  _ = n(594174),
+  _ = n(592125),
+  f = n(594174),
   g = n(938475),
   m = n(602623),
   C = n(823379),
@@ -43,7 +43,7 @@ function v(e, t) {
 
 function T() {
   var e, t;
-  let n = (0, o.Wu)([E.Z, f.Z], () => I.default.keys(E.Z.getFavoriteChannels()).map(e => f.Z.getChannel(e)).filter(C.lm)),
+  let n = (0, o.Wu)([E.Z, _.Z], () => I.default.keys(E.Z.getFavoriteChannels()).map(e => _.Z.getChannel(e)).filter(C.lm)),
     l = n.map(e => e.id),
     r = n.filter(e => e.type === N.d4z.GUILD_VOICE),
     a = n.filter(e => e.type === N.d4z.GUILD_STAGE_VOICE).map(e => e.id),
@@ -74,10 +74,10 @@ function T() {
       }
       return t
     }, [l]),
-    b = (0, o.Wu)([_.default], () => A.map(e => _.default.getUser(e)), [A]),
-    M = (0, o.Wu)([_.default], () => L.map(e => _.default.getUser(e)), [L]),
+    b = (0, o.Wu)([f.default], () => A.map(e => f.default.getUser(e)), [A]),
+    M = (0, o.Wu)([f.default], () => L.map(e => f.default.getUser(e)), [L]),
     R = v(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
-  let y = (e = Z, t = T, 0 === e.length ? null : (0, i.jsxs)("div", {
+  let O = (e = Z, t = T, 0 === e.length ? null : (0, i.jsxs)("div", {
       className: S.row,
       children: [(0, i.jsx)(c.StageIcon, {
         size: "lg",
@@ -100,10 +100,10 @@ function T() {
         })]
       })]
     })),
-    O = v(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
+    y = v(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
     P = v(c.ActivitiesIcon, b);
   return (0, i.jsxs)(i.Fragment, {
-    children: [y, R, O, P]
+    children: [O, R, y, P]
   })
 }
 
