@@ -22,6 +22,7 @@ function d(e) {
     shouldShow: p
   } = e;
   return (0, i.jsx)(l.Popout, {
+    animation: l.Popout.Animation.FADE,
     renderPopout: e => {
       let {
         closePopout: i

@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(347469),
   f = n(40851),
   S = n(367907),
-  A = n(907040),
-  N = n(455708),
+  N = n(907040),
+  A = n(455708),
   m = n(315744),
   O = n(603074),
   p = n(453070),
@@ -261,12 +261,13 @@ t.Z = r.memo(function(e) {
                 ref: e => {
                   $.current = e
                 }
-              }) : null, ei === P.X1.GIF && eE ? (0, i.jsx)(N.Z, {
+              }) : null, ei === P.X1.GIF && eE ? (0, i.jsx)(A.Z, {
                 onSelectGIF: C,
                 hideFavorites: l,
                 persistSearch: !0
-              }) : null, ei === P.X1.EMOJI ? (0, i.jsx)(A.Z, {
+              }) : null, ei === P.X1.EMOJI ? (0, i.jsx)(N.Z, {
                 hasTabWrapper: !0,
+                containerContext: eT ? N.v.TABS_EXPRESSION_PICKER : N.v.NO_TABS_EXPRESSION_PICKER,
                 persistSearch: !0,
                 channel: Y,
                 containerWidth: et,

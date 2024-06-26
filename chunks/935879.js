@@ -14,6 +14,5 @@ e.exports = {
   nitroBottomDivider: "nitroBottomDivider_a3bc57",
   upsellContainer: "upsellContainer_a3bc57",
   upsellText: "upsellText_a3bc57",
-  upsellLock: "upsellLock_a3bc57",
   upsellButton: "upsellButton_a3bc57"
 }
