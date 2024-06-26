@@ -179,7 +179,22 @@ class eU extends s.PureComponent {
     return (0, i.jsx)(p.Z, {
       object: eR.qAy.AVATAR,
       children: (0, i.jsx)(E.Popout, {
-        renderPopout: this.renderStatusPickerPopout,
+        renderPopout: e => {
+          let {
+            closePopout: t,
+            setPopoutRef: s
+          } = e;
+          return (0, i.jsx)("div", {
+            className: eM.accountProfilePopoutWrapper,
+            children: (0, i.jsx)(V.Z, {
+              currentUser: n,
+              setPopoutRef: s,
+              onClose: () => {
+                this.handleMouseLeave(), null == t || t()
+              }
+            })
+          })
+        },
         position: "top",
         align: "left",
         animation: E.Popout.Animation.FADE,
@@ -514,22 +529,6 @@ class eU extends s.PureComponent {
       }) : (this.setState({
         shouldShowSpeakingWhileMutedTooltip: !1
       }), this.speakingWhileMutedTooltipTimeout.stop())
-    }), eD(this, "renderStatusPickerPopout", e => {
-      let {
-        closePopout: t
-      } = e, {
-        currentUser: n
-      } = this.props;
-      return (0, i.jsx)("div", {
-        className: eM.accountProfilePopoutWrapper,
-        children: (0, i.jsx)(V.Z, {
-          userId: null == n ? void 0 : n.id,
-          user: n,
-          onClose: () => {
-            this.handleMouseLeave(), null == t || t()
-          }
-        })
-      })
     }), eD(this, "renderSettingsGear", () => (0, i.jsx)(ew, {
       isEligibleForPomelo: this.props.isEligibleForPomelo,
       webBuildOverride: this.props.webBuildOverride,
