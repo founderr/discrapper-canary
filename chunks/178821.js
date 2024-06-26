@@ -22,22 +22,25 @@ function m() {
     o = n.useRef(0),
     c = n.useRef(0),
     [, s] = n.useState({}),
-    m = n.useRef(null);
+    m = n.useRef(null),
+    [g, p] = n.useState(!0);
   n.useEffect(() => {
     let a = () => {
-      let n = performance.now(),
-        l = n - t.current;
-      if (t.current = n, i.current -= e.current[c.current], e.current[c.current] = l, i.current += l, o.current < h && (o.current += 1), c.current = (c.current + 1) % h, l > u) {
-        let e = 0 === o.current ? d : i.current / o.current,
-          t = Math.floor(l / Math.min(2 * d, e));
-        r.current += t
-      }
-      m.current = setTimeout(() => requestAnimationFrame(a), 12)
-    };
-    return requestAnimationFrame(a), () => {
-      e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, c.current = 0, null != m.current && clearTimeout(m.current)
+        let n = performance.now(),
+          l = n - t.current;
+        if (t.current = n, i.current -= e.current[c.current], e.current[c.current] = l, i.current += l, o.current < h && (o.current += 1), c.current = (c.current + 1) % h, l > u) {
+          let e = 0 === o.current ? d : i.current / o.current,
+            t = Math.min(2 * d, e),
+            a = Math.floor(l / (g ? t : d));
+          r.current += a
+        }
+        m.current = setTimeout(() => requestAnimationFrame(a), 12)
+      },
+      n = requestAnimationFrame(a);
+    return () => {
+      cancelAnimationFrame(n), e.current.fill(0), r.current = 0, i.current = 0, o.current = 0, c.current = 0, null != m.current && clearTimeout(m.current)
     }
-  }, []), n.useEffect(() => {
+  }, [g]), n.useEffect(() => {
     let e = setInterval(() => {
       s({})
     }, d);
@@ -45,8 +48,8 @@ function m() {
       clearInterval(e)
     }
   }, []);
-  let g = 0 === o.current ? 0 : i.current / o.current,
-    p = 0 === g ? 0 : d / g * 60;
+  let b = 0 === o.current ? 0 : i.current / o.current,
+    f = 0 === b ? 0 : d / b * 60;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsxs)(l.Text, {
       variant: "text-md/normal",
@@ -57,6 +60,23 @@ function m() {
         color: "text-primary",
         children: r.current
       })]
+    }), (0, a.jsx)(l.Tooltip, {
+      text: "Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.",
+      children: e => (0, a.jsx)("div", {
+        ...e,
+        children: (0, a.jsx)(l.Checkbox, {
+          value: g,
+          onChange: () => p(e => !e),
+          size: 12,
+          type: l.Checkbox.Types.INVERTED,
+          children: (0, a.jsx)(l.Text, {
+            tag: "span",
+            variant: "text-xs/normal",
+            color: "text-muted",
+            children: "Use Average Frame Time"
+          })
+        })
+      })
     }), (0, a.jsxs)(l.Text, {
       variant: "text-md/normal",
       color: "text-muted",
@@ -64,7 +84,7 @@ function m() {
         tag: "span",
         variant: "text-md/bold",
         color: "text-primary",
-        children: [g.toFixed(2), "ms"]
+        children: [b.toFixed(2), "ms"]
       })]
     }), (0, a.jsxs)(l.Text, {
       variant: "text-md/normal",
@@ -73,7 +93,7 @@ function m() {
         tag: "span",
         variant: "text-md/bold",
         color: "text-primary",
-        children: p.toFixed(2)
+        children: f.toFixed(2)
       })]
     }), (0, a.jsx)("hr", {}), (0, a.jsx)(l.Button, {
       size: l.Button.Sizes.SMALL,
