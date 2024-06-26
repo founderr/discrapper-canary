@@ -185,7 +185,7 @@ function O(e) {
   } = x.Z.useExperiment({
     location: "StreamButtonDemoOptInPopout"
   }, {
-    autoTrackExposure: l,
+    autoTrackExposure: !1,
     disable: !l
   }), c = a.useRef(!1);
   if (a.useEffect(() => {
