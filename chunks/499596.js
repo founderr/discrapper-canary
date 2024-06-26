@@ -9,7 +9,7 @@ var s = t(120356),
   a = t.n(s),
   i = t(481060),
   r = t(933557),
-  o = t(995123),
+  o = t(471445),
   u = t(602623),
   c = t(5192),
   d = t(689938),
@@ -69,7 +69,7 @@ function E(e) {
     max: 5,
     showUserPopout: !1
   }));
-  let S = (0, o.Z)(n);
+  let S = (0, o.KS)(n);
   return (0, l.jsxs)("div", {
     className: a()(m.channelInfo, {
       [m.selected]: s

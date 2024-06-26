@@ -16,7 +16,7 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(933557),
-  u = n(995123),
+  u = n(471445),
   d = n(266076),
   h = n(703656),
   p = n(699516),
@@ -45,7 +45,7 @@ function Z(e) {
     handleParentClick: E,
     handleParentContextMenu: g,
     renderFollowButton: I
-  } = e, Z = (0, u.Z)(t, r), {
+  } = e, Z = (0, u.KS)(t, r), {
     prefix: A,
     level: M
   } = function(e, t) {
@@ -149,7 +149,7 @@ function Z(e) {
     case N.d4z.PRIVATE_THREAD:
       let j = null;
       if (!h && null != l) {
-        let e = (0, u.Z)(l, r);
+        let e = (0, u.KS)(l, r);
         j = (0, i.jsxs)(a.Fragment, {
           children: [b(e, v.Z.Messages.TEXT_CHANNEL), (0, i.jsx)(x.Z.Title, {
             level: M,

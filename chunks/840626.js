@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   content: "content_aa99af",
   contentNoArt: "contentNoArt_aa99af",

@@ -12,7 +12,7 @@ var a = n(120356),
   o = n(239091),
   c = n(100527),
   u = n(906732),
-  d = n(995123),
+  d = n(471445),
   h = n(484459),
   p = n(103575),
   m = n(271383),
@@ -116,7 +116,7 @@ function N(e) {
   var t;
   let {
     channel: n
-  } = e, a = null !== (t = (0, d.Z)(n)) && void 0 !== t ? t : r.ThreadIcon;
+  } = e, a = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : r.ThreadIcon;
   return (0, i.jsxs)(E.ZP, {
     channelId: n.id,
     children: [(0, i.jsx)("div", {

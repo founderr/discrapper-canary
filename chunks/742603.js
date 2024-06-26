@@ -15,7 +15,7 @@ var a = n(120356),
   d = n(835473),
   h = n(12498),
   p = n(933557),
-  m = n(995123),
+  m = n(471445),
   _ = n(554747),
   f = n(854698),
   E = n(897669),
@@ -146,7 +146,7 @@ function V(e) {
   } = (0, s.cj)([M.Z], () => ({
     focusedParticipant: M.Z.getSelectedParticipant(t.id),
     participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), E = (0, p.ZP)(t), N = (0, m.Z)(t), [v] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), S = k.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), E = (0, p.ZP)(t), N = (0, m.KS)(t), [v] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), S = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? S = k.Z.Messages.DM : t.isGroupDM() && (S = k.Z.Messages.GROUP_DM);
   let R = (0, s.e7)([h.Z], () => h.Z.getChannelStatus(t)),
     L = t.isGuildVoice() && c && null != R && R.length > 0,

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   guildScroller: "guildScroller_f29418",
   guildRow: "guildRow_f29418",

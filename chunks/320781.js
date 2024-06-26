@@ -7,7 +7,7 @@ var i = n(735250);
 n(470079);
 var a = n(442837),
   l = n(481060),
-  s = n(995123),
+  s = n(471445),
   r = n(456269),
   o = n(660189),
   c = n(257511),
@@ -21,7 +21,7 @@ function p(e) {
     channel: n
   } = e, p = (0, r.eV)(n), {
     firstMessage: m
-  } = (0, a.cj)([o.Z], () => o.Z.getMessage(n.id)), _ = new Set((0, r.kn)(n, p)), f = null !== (t = (0, s.Z)(n)) && void 0 !== t ? t : l.ChatIcon;
+  } = (0, a.cj)([o.Z], () => o.Z.getMessage(n.id)), _ = new Set((0, r.kn)(n, p)), f = null !== (t = (0, s.KS)(n)) && void 0 !== t ? t : l.ChatIcon;
   return (0, i.jsxs)(u.ZP, {
     channelId: n.id,
     className: h.container,

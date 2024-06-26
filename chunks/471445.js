@@ -97,12 +97,12 @@ function I(e, t) {
     case c.d4z.GROUP_DM:
       return i.AtIcon;
     case c.d4z.PRIVATE_THREAD:
-      return i.TextLockIcon;
+      return i.ThreadLockIcon;
     case c.d4z.ANNOUNCEMENT_THREAD:
     case c.d4z.PUBLIC_THREAD:
-      if (e.isNSFW()) return i.TextWarningIcon;
+      if (e.isNSFW()) return i.ThreadWarningIcon;
       if (e.isForumPost()) return i.ChatIcon;
-      else return i.TextIcon;
+      else return i.ThreadIcon;
     case c.d4z.GUILD_TEXT:
       if (T) {
         if (e.isNSFW()) return i.TextWarningIcon;
@@ -160,9 +160,10 @@ function T(e) {
     case c.d4z.GROUP_DM:
       return i.AtIcon;
     case c.d4z.PRIVATE_THREAD:
-      return i.TextLockIcon;
+      return i.ThreadLockIcon;
     case c.d4z.ANNOUNCEMENT_THREAD:
     case c.d4z.PUBLIC_THREAD:
+      return i.ThreadIcon;
     case c.d4z.GUILD_TEXT:
     case c.d4z.GUILD_FORUM:
     case c.d4z.GUILD_MEDIA:

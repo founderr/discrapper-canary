@@ -5,26 +5,26 @@ t.d(n, {
 });
 var a = t(735250),
   s = t(470079),
-  r = t(442837),
-  l = t(481060),
+  l = t(442837),
+  r = t(481060),
   i = t(99690),
   o = t(58540),
-  c = t(995123),
+  c = t(471445),
   d = t(905405),
   u = t(937889),
   h = t(739566),
   m = t(271383),
   g = t(306680),
-  f = t(699516),
-  E = t(594174),
-  T = t(512665),
-  Z = t(709054),
-  I = t(51144),
-  x = t(144140),
+  E = t(699516),
+  f = t(594174),
+  Z = t(512665),
+  x = t(709054),
+  T = t(51144),
+  v = t(144140),
   _ = t(91159),
-  v = t(768760),
-  N = t(689938),
-  R = t(670914);
+  R = t(768760),
+  j = t(689938),
+  N = t(670914);
 
 function S(e) {
   return e.isActiveThread() ? (0, a.jsx)(A, {
@@ -37,28 +37,28 @@ function S(e) {
 function A(e) {
   let {
     channel: n
-  } = e, t = (0, r.e7)([x.Z], () => x.Z.getMostRecentMessage(n.id));
-  return null == t ? (0, a.jsx)(j, {
+  } = e, t = (0, l.e7)([v.Z], () => v.Z.getMostRecentMessage(n.id));
+  return null == t ? (0, a.jsx)(C, {
     channel: n
-  }) : (0, a.jsx)(C, {
+  }) : (0, a.jsx)(I, {
     channel: n,
     message: t
   })
 }
 
-function j(e) {
+function C(e) {
   let {
     channel: n
   } = e, t = (0, _.Ok)(n);
-  return (0, a.jsxs)(l.Text, {
-    className: R.subtext,
+  return (0, a.jsxs)(r.Text, {
+    className: N.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
-    children: [N.Z.Messages.THREAD_BROWSER_NO_RECENT_MESSAGES, "\xa0 • \xa0", (0, _.Ye)(t)]
+    children: [j.Z.Messages.THREAD_BROWSER_NO_RECENT_MESSAGES, "\xa0 • \xa0", (0, _.Ye)(t)]
   })
 }
 
-function C(e) {
+function I(e) {
   let {
     channel: n,
     message: t
@@ -66,50 +66,50 @@ function C(e) {
   (0, o.$)({
     [n.guild_id]: [t.author.id]
   });
-  let c = (0, r.e7)([E.default], () => {
+  let c = (0, l.e7)([f.default], () => {
       var e;
-      return null !== (e = E.default.getUser(t.author.id)) && void 0 !== e ? e : t.author
+      return null !== (e = f.default.getUser(t.author.id)) && void 0 !== e ? e : t.author
     }),
     {
       nick: m,
       colorString: g
     } = (0, h.ZP)(t),
-    I = (0, r.e7)([f.Z], () => f.Z.isBlockedForMessage(t)),
-    x = (0, d.p)(),
-    N = s.useMemo(() => {
+    T = (0, l.e7)([E.Z], () => E.Z.isBlockedForMessage(t)),
+    v = (0, d.p)(),
+    j = s.useMemo(() => {
       let e = null != t.content && "" !== t.content ? (0, u.ZP)(t, {
           formatInline: !0,
-          shouldFilterKeywords: x
+          shouldFilterKeywords: v
         }).content : null,
         {
           contentPlaceholder: n,
           renderedContent: s,
-          trailingIcon: r,
-          leadingIcon: l
-        } = (0, T.f)(t, e, I, R.messageContent, {
-          trailingIconClass: R.messageContentTrailingIcon,
-          leadingIconClass: R.messageContentLeadingIcon,
-          iconSize: v.WW
+          trailingIcon: l,
+          leadingIcon: r
+        } = (0, Z.f)(t, e, T, N.messageContent, {
+          trailingIconClass: N.messageContentTrailingIcon,
+          leadingIconClass: N.messageContentLeadingIcon,
+          iconSize: R.WW
         });
       return (0, a.jsxs)(a.Fragment, {
-        children: [l, null != s ? s : (0, a.jsx)("span", {
+        children: [r, null != s ? s : (0, a.jsx)("span", {
           children: n
-        }), r]
+        }), l]
       })
-    }, [t, I, x]);
-  return (0, a.jsxs)(l.Text, {
-    className: R.subtext,
+    }, [t, T, v]);
+  return (0, a.jsxs)(r.Text, {
+    className: N.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
     children: [(0, a.jsx)(i.Z, {
-      className: R.avatar,
+      className: N.avatar,
       user: c,
-      size: l.AvatarSizes.SIZE_16
-    }), (0, a.jsx)(l.NameWithRole, {
+      size: r.AvatarSizes.SIZE_16
+    }), (0, a.jsx)(r.NameWithRole, {
       name: m,
       color: g,
-      className: R.authorName
-    }), ":\xa0", N, "\xa0 • \xa0", (0, _.Ye)(Z.default.extractTimestamp(t.id))]
+      className: N.authorName
+    }), ":\xa0", j, "\xa0 • \xa0", (0, _.Ye)(x.default.extractTimestamp(t.id))]
   })
 }
 
@@ -117,47 +117,47 @@ function M(e) {
   var n, t, s;
   let {
     channel: d
-  } = e, u = (0, r.e7)([g.ZP], () => g.ZP.lastMessageId(d.id)), h = null == u ? new Date(null !== (t = null === (n = d.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== t ? t : Date.now()).getTime() : Z.default.extractTimestamp(u);
+  } = e, u = (0, l.e7)([g.ZP], () => g.ZP.lastMessageId(d.id)), h = null == u ? new Date(null !== (t = null === (n = d.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== t ? t : Date.now()).getTime() : x.default.extractTimestamp(u);
   (0, o.$)({
     [d.guild_id]: [d.ownerId]
   });
-  let f = (0, r.e7)([E.default], () => E.default.getUser(d.ownerId)),
-    T = (0, r.e7)([m.ZP], () => m.ZP.getMember(d.guild_id, d.ownerId)),
-    x = null !== (s = (0, c.Z)(d)) && void 0 !== s ? s : l.ThreadIcon;
-  return (0, a.jsx)(l.Text, {
-    className: R.subtext,
+  let E = (0, l.e7)([f.default], () => f.default.getUser(d.ownerId)),
+    Z = (0, l.e7)([m.ZP], () => m.ZP.getMember(d.guild_id, d.ownerId)),
+    v = null !== (s = (0, c.KS)(d)) && void 0 !== s ? s : r.ThreadIcon;
+  return (0, a.jsx)(r.Text, {
+    className: N.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
-    children: null == f ? (0, a.jsxs)(a.Fragment, {
+    children: null == E ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: R.noAvatarIcon,
-        children: (0, a.jsx)(x, {
+        className: N.noAvatarIcon,
+        children: (0, a.jsx)(v, {
           width: 10,
           height: 10,
           size: "custom",
           color: "currentColor"
         })
-      }), N.Z.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
+      }), j.Z.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
         time: (0, _.Ye)(h)
       })]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(i.Z, {
-        className: R.avatar,
-        user: f,
-        size: l.AvatarSizes.SIZE_16
-      }), N.Z.Messages.THREAD_BROWSER_STARTED_BY.format({
+        className: N.avatar,
+        user: E,
+        size: r.AvatarSizes.SIZE_16
+      }), j.Z.Messages.THREAD_BROWSER_STARTED_BY.format({
         authorHook(e, n) {
           var t, s;
-          return (0, a.jsx)(l.NameWithRole, {
-            className: R.startedByName,
-            color: null !== (t = null == T ? void 0 : T.colorString) && void 0 !== t ? t : void 0,
-            name: null !== (s = null == T ? void 0 : T.nick) && void 0 !== s ? s : I.ZP.getName(f)
+          return (0, a.jsx)(r.NameWithRole, {
+            className: N.startedByName,
+            color: null !== (t = null == Z ? void 0 : Z.colorString) && void 0 !== t ? t : void 0,
+            name: null !== (s = null == Z ? void 0 : Z.nick) && void 0 !== s ? s : T.ZP.getName(E)
           }, n)
         }
       }), (0, a.jsx)("span", {
-        className: R.bullet,
+        className: N.bullet,
         children: "•"
-      }), N.Z.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
+      }), j.Z.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
         time: (0, _.Ye)(h)
       })]
     })

@@ -13,7 +13,7 @@ var i = n(735250),
   u = n(963374),
   d = n(607070),
   h = n(933557),
-  p = n(995123),
+  p = n(471445),
   m = n(905405),
   _ = n(255269),
   f = n(937889),
@@ -180,7 +180,7 @@ function O(e) {
     if (e === S.Z.getChannelId()) return;
     let t = I.Z.getChannel(e);
     if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t))(0, g.Kh)(t.id)
-  }, []), w = null != l ? (0, h.F6)(l, Z.default, N.Z, !1) : "???", B = y && null != l.guild_id ? null === (t = x.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == l ? void 0 : l.parent_id) != null ? I.Z.getChannel(l.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.Z)(l)) && void 0 !== n ? n : s.TextIcon, F = null != H ? (0, p.Z)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, l), {
+  }, []), w = null != l ? (0, h.F6)(l, Z.default, N.Z, !1) : "???", B = y && null != l.guild_id ? null === (t = x.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == l ? void 0 : l.parent_id) != null ? I.Z.getChannel(l.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(l)) && void 0 !== n ? n : s.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, l), {
     content: z
   } = (0, f.ZP)({
     content: w,

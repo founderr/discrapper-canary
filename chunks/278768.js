@@ -1,3 +1,4 @@
+"use strict";
 n.r(e.exports = {
   modalSize: "modalSize_e1cc86",
   modalCloseButton: "modalCloseButton_e1cc86",
