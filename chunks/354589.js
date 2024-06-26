@@ -45,7 +45,10 @@ n.default = (0, l.Z)((0, t.Z)(function(e) {
     showModalItems: L = !0,
     onSelect: w,
     onHeightUpdate: k
-  } = e, y = (0, T.Z)(r.id, null), V = (0, S.Z)(r, null, l), z = (0, A.Z)(r.id, t.id), D = (0, j.Z)(r.id, l), W = (0, I.Z)(r, l), H = (0, v.Z)({
+  } = e, y = (0, T.Z)(r.id, null), V = (0, S.Z)(r, null, l), z = (0, A.Z)(r.id, t.id), D = (0, j.Z)(r.id, l), W = (0, I.Z)({
+    user: r,
+    context: l
+  }), H = (0, v.Z)({
     user: r,
     context: l
   }), K = (0, E.Z)({

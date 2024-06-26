@@ -19,28 +19,30 @@ function u(e) {
     icon: r,
     tooltipDelay: u,
     tooltipClassName: _,
-    className: c,
-    innerClassName: d,
-    ...E
-  } = e, I = {
+    tooltipContainerClassName: c,
+    className: d,
+    innerClassName: E,
+    ...I
+  } = e, T = {
     [l.text]: "text" === t,
     [l.icon]: "icon" === t,
     [l.banner]: "banner" === t
   };
   return (0, i.jsx)(a.TooltipContainer, {
     text: n,
-    "aria-label": E["aria-label"],
+    "aria-label": I["aria-label"],
     delay: u,
+    className: c,
     tooltipClassName: _,
     shouldShow: "text" !== t,
     children: (0, i.jsxs)(o.zx, {
-      className: s()(l.button, I, c),
-      innerClassName: s()(l.buttonInner, I, d),
-      color: s()(o.Tt.PRIMARY, l.color, I),
+      className: s()(l.button, T, d),
+      innerClassName: s()(l.buttonInner, T, E),
+      color: s()(o.Tt.PRIMARY, l.color, T),
       look: o.zx.Looks.FILLED,
       size: "text" === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
       grow: "text" === t,
-      ...E,
+      ...I,
       children: [null != r && (0, i.jsx)(r, {
         size: "xs",
         color: "currentColor"

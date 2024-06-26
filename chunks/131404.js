@@ -53,7 +53,10 @@ n.default = (0, u.Z)((0, l.Z)(function(e) {
     context: B,
     onSelect: W,
     onHeightUpdate: H
-  } = e, X = (0, F.Z)(n.id, null), q = (0, j.Z)(n, B), Q = (0, U.Z)({
+  } = e, X = (0, F.Z)(n.id, null), q = (0, j.Z)({
+    user: n,
+    context: B
+  }), Q = (0, U.Z)({
     user: n,
     context: B
   }), J = (0, R.Z)({

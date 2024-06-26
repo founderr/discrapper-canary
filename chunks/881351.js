@@ -28,7 +28,9 @@ e.default = (0, a.Z)((0, r.Z)(function(n) {
     showMediaItems: t = !1,
     mediaEngineContext: r,
     onSelect: a
-  } = n, d = (0, M.Z)(e.id), g = (0, I.Z)(e.id), p = (0, f.Z)(e), C = (0, T.Z)({
+  } = n, d = (0, M.Z)(e.id), g = (0, I.Z)(e.id), p = (0, f.Z)({
+    user: e
+  }), C = (0, T.Z)({
     user: e
   }), R = (0, E.Z)({
     user: e

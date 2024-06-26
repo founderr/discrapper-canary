@@ -55,7 +55,10 @@ n.default = (0, o.Z)((0, a.Z)(function(e) {
     page: x.ZY5.GUILD_CHANNEL,
     section: x.jXE.CHAT_USERNAME,
     object: x.qAy.CONTEXT_MENU_ITEM
-  }, q = (0, P.Z)(n.id, t, a.id), z = (0, G.Z)(n, t, j), Q = (0, y.Z)(n.id, j), X = (0, H.Z)(n.id), $ = (0, g.Z)(n, j), J = (0, Z.Z)({
+  }, q = (0, P.Z)(n.id, t, a.id), z = (0, G.Z)(n, t, j), Q = (0, y.Z)(n.id, j), X = (0, H.Z)(n.id), $ = (0, g.Z)({
+    user: n,
+    context: j
+  }), J = (0, Z.Z)({
     user: n,
     guildId: t,
     context: j

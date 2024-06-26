@@ -1,43 +1,50 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   Z: function() {
-    return M
+    return I
   }
 });
-var l = t(735250);
-t(470079);
-var i = t(442837),
-  a = t(481060),
-  r = t(493683),
-  u = t(740492),
-  s = t(314897),
-  d = t(592125),
-  o = t(699516),
-  c = t(944486),
-  Z = t(981631),
-  E = t(689938);
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(481060),
+  o = n(493683),
+  a = n(740492),
+  l = n(314897),
+  u = n(592125),
+  _ = n(699516),
+  c = n(944486),
+  d = n(981631),
+  E = n(689938);
 
-function M(e, n) {
-  let M = s.default.getId(),
-    f = n === Z.IlC.POPOUT,
-    _ = (0, i.e7)([c.Z, d.Z], () => c.Z.getVoiceChannelId() === d.Z.getDMFromUserId(e.id)),
-    g = (0, i.e7)([o.Z], () => o.Z.isBlocked(e.id));
-  if (M === e.id || f || _ || e.bot) return null;
-  let I = () => r.Z.openPrivateChannel(e.id, !0),
-    m = !u.ZP.disableCallUserConfirmationPrompt;
-  return (0, l.jsx)(a.MenuItem, {
-    id: "call",
-    label: E.Z.Messages.CALL,
-    action: m ? () => {
-      (0, a.openModalLazy)(async () => {
+function I(e) {
+  let {
+    user: t,
+    context: I,
+    label: T,
+    joinCallVideo: h,
+    id: f,
+    onCall: S
+  } = e, N = l.default.getId(), A = I === d.IlC.POPOUT, m = (0, r.e7)([c.Z, u.Z], () => c.Z.getVoiceChannelId() === u.Z.getDMFromUserId(t.id)), O = (0, r.e7)([_.Z], () => _.Z.isBlocked(t.id));
+  if (N === t.id || A || m || t.bot) return null;
+  let p = () => {
+      null == S || S(), o.Z.openPrivateChannel(t.id, !0, h)
+    },
+    R = !a.ZP.disableCallUserConfirmationPrompt;
+  return (0, i.jsx)(s.MenuItem, {
+    id: null != f ? f : "call",
+    label: null != T ? T : E.Z.Messages.CALL,
+    action: R ? () => {
+      (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await t.e("27157").then(t.bind(t, 736454));
-        return n => (0, l.jsx)(e, {
-          onSubmit: I,
-          ...n
+        } = await n.e("27157").then(n.bind(n, 736454));
+        return t => (0, i.jsx)(e, {
+          onSubmit: p,
+          ...t
         })
       })
-    } : I,
-    disabled: g
+    } : p,
+    disabled: O
   })
 }

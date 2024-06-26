@@ -21,12 +21,12 @@ var i = t(481060),
   N = t(297047),
   C = t(88966),
   T = t(712301),
-  v = t(520063),
-  A = t(725119),
+  A = t(520063),
+  v = t(725119),
   O = t(931617),
   x = t(332031),
   h = t(981631),
-  b = t(689938);
+  S = t(689938);
 n.default = (0, u.Z)((0, r.Z)(function(e) {
   let {
     user: n,
@@ -34,14 +34,17 @@ n.default = (0, u.Z)((0, r.Z)(function(e) {
     channel: r,
     context: u,
     onSelect: o,
-    onHeightUpdate: P
-  } = e, S = (0, A.Z)(n.id, t), p = (0, N.Z)(n, t, u), U = (0, C.Z)(n.id, u), j = (0, x.Z)(n.id), L = (0, m.Z)(n, u), D = (0, _.Z)({
+    onHeightUpdate: b
+  } = e, P = (0, v.Z)(n.id, t), p = (0, N.Z)(n, t, u), U = (0, C.Z)(n.id, u), j = (0, x.Z)(n.id), L = (0, m.Z)({
+    user: n,
+    context: u
+  }), D = (0, _.Z)({
     user: n,
     guildId: t,
     context: u
   }), G = (0, f.Z)({
     user: n
-  }), y = (0, Z.Z)({
+  }), F = (0, Z.Z)({
     guildId: t,
     userId: n.id,
     analyticsLocation: {
@@ -50,39 +53,39 @@ n.default = (0, u.Z)((0, r.Z)(function(e) {
       object: h.qAy.CONTEXT_MENU_ITEM
     },
     context: u
-  }), F = (0, R.Z)({
+  }), y = (0, R.Z)({
     user: n,
     guildId: t
   }), V = (0, d.Z)(null, n), k = (0, M.Z)(n), q = (0, I.Z)({
     user: n
-  }), B = (0, v.Z)(n, t, r.id), K = (0, O.Z)(n.id, t), H = (0, T.Z)(n, t), w = (0, c.Z)({
+  }), K = (0, A.Z)(n, t, r.id), B = (0, O.Z)(n.id, t), H = (0, T.Z)(n, t), w = (0, c.Z)({
     id: n.id,
-    label: b.Z.Messages.COPY_ID_USER
+    label: S.Z.Messages.COPY_ID_USER
   }), Y = (0, E.Z)(n), W = (0, g.Z)({
     commandType: s.yU.USER,
     commandTargetId: n.id,
     channel: r,
     guildId: t,
-    onHeightUpdate: P
+    onHeightUpdate: b
   }), z = n.isNonUserBot();
   return (0, l.jsxs)(i.Menu, {
     navId: "user-context",
     onClose: a.Zy,
-    "aria-label": b.Z.Messages.USER_ACTIONS_MENU_LABEL,
+    "aria-label": S.Z.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: o,
     children: [!z && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(i.MenuGroup, {
         children: Y
       }), (0, l.jsxs)(i.MenuGroup, {
-        children: [S, p, U, L, D, G, j]
+        children: [P, p, U, L, D, G, j]
       }), (0, l.jsx)(i.MenuGroup, {
         children: V
       }), (0, l.jsxs)(i.MenuGroup, {
-        children: [y, W, F, k, q]
+        children: [F, W, y, k, q]
       }), (0, l.jsx)(i.MenuGroup, {
-        children: B
+        children: K
       }), (0, l.jsxs)(i.MenuGroup, {
-        children: [K, H]
+        children: [B, H]
       })]
     }), (0, l.jsx)(i.MenuGroup, {
       children: w
