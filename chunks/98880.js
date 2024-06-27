@@ -21,12 +21,12 @@ var i, l, a = t(735250),
   d = t(778569),
   m = t(182906),
   p = t(367907),
-  h = t(220082),
-  N = t(318661),
+  E = t(220082),
+  h = t(318661),
   _ = t(792125),
-  E = t(541099),
-  C = t(783097),
-  A = t(695676),
+  N = t(541099),
+  A = t(783097),
+  C = t(695676),
   f = t(176412),
   x = t(753972),
   v = t(981631),
@@ -46,9 +46,9 @@ function T(e) {
     iconURL: d,
     name: m,
     description: p
-  } = r.useMemo(() => (0, C.sl)(n, {
+  } = r.useMemo(() => (0, A.sl)(n, {
     botIconFirst: !0
-  }), [n]), N = (0, h.ZP)(d, "");
+  }), [n]), h = (0, E.ZP)(d, "");
   return "icon" === t ? (0, a.jsx)(c.Clickable, {
     className: o()(P.container, P.iconCard),
     onClick: l,
@@ -69,7 +69,7 @@ function T(e) {
         className: s,
         children: (0, a.jsx)(M, {
           application: n,
-          fallbackColor: N
+          fallbackColor: h
         })
       }), i && (0, a.jsx)("div", {
         className: P.partnerLabelWrapper,
@@ -112,8 +112,8 @@ function M(e) {
     application: n,
     fallbackColor: t
   } = e;
-  if ((0, C.BQ)(n)) {
-    if ((0, C.ye)({
+  if ((0, A.BQ)(n)) {
+    if ((0, A.ye)({
         application: n
       })) return (0, a.jsx)(S, {
       application: n
@@ -149,7 +149,7 @@ function S(e) {
 function R(e) {
   let {
     bot: n
-  } = e, t = (0, N.ZP)(n.id), i = r.useMemo(() => null == t ? void 0 : t.getBannerURL({
+  } = e, t = (0, h.ZP)(n.id), i = r.useMemo(() => null == t ? void 0 : t.getBannerURL({
     canAnimate: !1,
     size: 600
   }), [t]);
@@ -169,17 +169,17 @@ function L(e) {
     installOnDemand: a
   } = e, {
     pushHistory: s
-  } = (0, A.hH)();
+  } = (0, C.hH)();
   return r.useCallback(e => {
     e.stopPropagation(), (0, p.yw)(v.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
       application_id: n.id,
       section_name: t,
       search_results_position: i,
-      source: E.Z.entrypoint(),
+      source: N.Z.entrypoint(),
       location,
       query: l
     }), s({
-      type: A.gc.APPLICATION,
+      type: C.gc.APPLICATION,
       application: n,
       installOnDemand: a,
       sectionName: t
@@ -203,7 +203,7 @@ function O(e) {
     sectionName: l,
     ...r
   } = e;
-  if (!(0, C.BQ)(t)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
+  if (!(0, A.BQ)(t)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
   let {
     onActivityItemSelected: s,
     activityAction: o,

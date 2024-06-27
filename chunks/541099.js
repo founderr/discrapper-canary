@@ -35,7 +35,7 @@ function p() {
   })
 }
 
-function h() {
+function E() {
   d({
     closeReason: c.ti.COMMAND
   })
@@ -56,6 +56,6 @@ a = "AppLauncherStore", (l = "displayName") in(i = m) ? Object.defineProperty(i,
   CONNECTION_OPEN: p,
   LOGOUT: p,
   CHANNEL_SELECT: p,
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: h
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: E,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: E
 })

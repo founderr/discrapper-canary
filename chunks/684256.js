@@ -19,15 +19,15 @@ function m(e) {
     entrypoint: t,
     title: m,
     look: p,
-    items: h,
-    sectionName: N
+    items: E,
+    sectionName: h
   } = e, {
     clickOnHomeActivityOpensAppDetail: _
   } = s.m1.getCurrentConfig({
     location: "AppLauncherApplicationListViewScreen"
   }, {
     autoTrackExposure: !1
-  }), E = l.useMemo(() => t === o._b.TEXT || _ ? c.kA : c.qR, [_, t]);
+  }), N = l.useMemo(() => t === o._b.TEXT || _ ? c.kA : c.qR, [_, t]);
   return (0, i.jsxs)("div", {
     className: d.container,
     children: [(0, i.jsxs)("div", {
@@ -42,17 +42,17 @@ function m(e) {
     }), (0, i.jsx)(a.Scroller, {
       children: (0, i.jsx)("div", {
         className: d.appGrid,
-        children: h.map(e => {
+        children: E.map(e => {
           let {
             application: t,
             isPartner: l
           } = e;
-          return (0, i.jsx)(E, {
+          return (0, i.jsx)(N, {
             channel: n,
             application: t,
             look: p,
             isPartner: l,
-            sectionName: N,
+            sectionName: h,
             location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL
           }, t.id)
         })

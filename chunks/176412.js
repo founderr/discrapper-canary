@@ -3,7 +3,7 @@ t.d(n, {
     return _
   },
   P: function() {
-    return N
+    return h
   }
 });
 var i = t(470079),
@@ -17,21 +17,21 @@ var i = t(470079),
   d = t(541099),
   m = t(827498),
   p = t(981631),
-  h = t(689938);
+  E = t(689938);
 
-function N(e, n, t, i) {
+function h(e, n, t, i) {
   var l;
-  let N = (0, r.O)(),
+  let h = (0, r.O)(),
     _ = (0, s.Qv)({
       applicationId: n.id,
       channelId: e.id
     }),
-    E = (0, s.w1)({
+    N = (0, s.w1)({
       applicationId: n.id,
       embeddedActivitiesManager: o.Z,
       channelId: e.id,
       guildId: null !== (l = e.getGuildId()) && void 0 !== l ? l : void 0,
-      locationObject: N.location,
+      locationObject: h.location,
       onActivityItemSelectedProp: e => {
         let {
           applicationId: n
@@ -45,13 +45,13 @@ function N(e, n, t, i) {
         })
       }
     }),
-    C = a.ButtonColors.BRAND,
-    A = h.Z.Messages.LAUNCH;
-  return _ === s.JS.JOIN ? (C = a.ButtonColors.GREEN, A = h.Z.Messages.JOIN_ACTIVITY) : _ === s.JS.LEAVE && (C = a.ButtonColors.RED, A = h.Z.Messages.LEAVE), {
-    onActivityItemSelected: E,
+    A = a.ButtonColors.BRAND,
+    C = E.Z.Messages.LAUNCH;
+  return _ === s.JS.JOIN ? (A = a.ButtonColors.GREEN, C = E.Z.Messages.JOIN_ACTIVITY) : _ === s.JS.LEAVE && (A = a.ButtonColors.RED, C = E.Z.Messages.LEAVE), {
+    onActivityItemSelected: N,
     activityAction: _,
-    buttonColor: C,
-    buttonText: A
+    buttonColor: A,
+    buttonText: C
   }
 }
 

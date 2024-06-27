@@ -33,7 +33,7 @@ function _(e) {
   }), (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("78594"), n.e("23919"), n.e("30565")]).then(n.bind(n, 743161));
+    } = await Promise.all([n.e("78594"), n.e("23919"), n.e("25211")]).then(n.bind(n, 743161));
     return n => (0, i.jsx)(e, {
       channel: t,
       ...n

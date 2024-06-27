@@ -14,8 +14,8 @@ var i = t(735250),
   d = t(753972),
   m = t(387658),
   p = t(536650),
-  h = t(675993),
-  N = t(789680);
+  E = t(675993),
+  h = t(789680);
 
 function _(e) {
   let {
@@ -28,7 +28,7 @@ function _(e) {
   if (!(0, u.BQ)(t)) throw Error("AppLauncherApplicationViewScreen was passed the Built-in App, which is not supported.");
   let c = l.useRef(null);
   return (0, i.jsxs)(r.ScrollerNone, {
-    className: N.container,
+    className: h.container,
     fade: !0,
     ref: c,
     children: [(0, i.jsx)(p.Z, {
@@ -36,11 +36,11 @@ function _(e) {
       scrollerRef: c
     }), (0, i.jsx)(d.Z, {
       application: t,
-      className: N.appIcon,
+      className: h.appIcon,
       size: 80
     }), (0, i.jsx)(a.Z, {
       size: 54
-    }), (0, i.jsx)(o ? E : C, {
+    }), (0, i.jsx)(o ? N : A, {
       channel: n,
       application: t,
       sectionName: s
@@ -52,7 +52,7 @@ function _(e) {
   })
 }
 
-function E(e) {
+function N(e) {
   let {
     channel: n,
     application: t,
@@ -65,7 +65,7 @@ function E(e) {
     size: 2048,
     names: ["embedded_cover"]
   }), u = null != a && null != a.activity.activity_preview_video_asset_id ? (0, o.Z)(t.id, a.activity.activity_preview_video_asset_id) : null;
-  return (0, i.jsx)(h.Z, {
+  return (0, i.jsx)(E.Z, {
     channel: n,
     application: t,
     imageCoverUrl: r.url,
@@ -74,13 +74,13 @@ function E(e) {
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     channel: n,
     application: t,
     sectionName: l
   } = e;
-  return (0, i.jsx)(h.Z, {
+  return (0, i.jsx)(E.Z, {
     channel: n,
     application: t,
     sectionName: l

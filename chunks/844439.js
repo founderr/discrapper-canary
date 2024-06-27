@@ -10,21 +10,21 @@ let d = {},
   m = {},
   p = {};
 
-function h(e) {
+function E(e) {
   let {
     location: n,
     channelId: t
   } = e;
   return "location:".concat(n, " channelId:").concat(t)
 }
-let N = Object.freeze([]);
+let h = Object.freeze([]);
 class _ extends(o = c.ZP.Store) {
   getLastFetchTimeMs(e) {
     let {
       location: n,
       channelId: t
     } = e;
-    return p[h({
+    return p[E({
       location: n,
       channelId: t
     })]
@@ -34,7 +34,7 @@ class _ extends(o = c.ZP.Store) {
       location: n,
       channelId: t
     } = e;
-    return m[h({
+    return m[E({
       location: n,
       channelId: t
     })]
@@ -45,10 +45,10 @@ class _ extends(o = c.ZP.Store) {
       location: t,
       channelId: i
     } = e;
-    return null !== (n = d[h({
+    return null !== (n = d[E({
       location: t,
       channelId: i
-    })]) && void 0 !== n ? n : N
+    })]) && void 0 !== n ? n : h
   }
 }
 r = void 0, (a = "displayName") in(l = _) ? Object.defineProperty(l, a, {
@@ -64,7 +64,7 @@ r = void 0, (a = "displayName") in(l = _) ? Object.defineProperty(l, a, {
     } = e;
     m = {
       ...m,
-      [h({
+      [E({
         location: n,
         channelId: t
       })]: 0
@@ -75,7 +75,7 @@ r = void 0, (a = "displayName") in(l = _) ? Object.defineProperty(l, a, {
       recommendations: n,
       location: t,
       channelId: i
-    } = e, l = h({
+    } = e, l = E({
       location: t,
       channelId: i
     });
@@ -99,7 +99,7 @@ r = void 0, (a = "displayName") in(l = _) ? Object.defineProperty(l, a, {
     } = e;
     m = {
       ...m,
-      [h({
+      [E({
         location: n,
         channelId: t
       })]: 2

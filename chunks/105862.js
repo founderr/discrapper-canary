@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return N
+    return h
   }
 });
 var i = t(735250),
@@ -14,11 +14,11 @@ var i = t(735250),
   d = t(689938),
   m = t(427010),
   p = t(983008),
-  h = t(478408);
+  E = t(478408);
 
-function N() {
+function h() {
   let e = (0, s.ZP)(),
-    n = (0, a.ap)(e) ? h : p,
+    n = (0, a.ap)(e) ? E : p,
     t = l.useCallback(() => {
       (0, o.Z)(c.Z.getArticleURL(u.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
     }, []);

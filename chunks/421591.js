@@ -12,19 +12,19 @@ var i = t(735250),
 n.Z = l.memo(l.forwardRef(function(e, n) {
   let t, {
       channel: p,
-      entrypoint: h
+      entrypoint: E
     } = e,
-    [N, _] = l.useState("");
+    [h, _] = l.useState("");
   l.useEffect(() => {
     (0, a.yw)(d.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-      source: h,
+      source: E,
       location: "app_launcher"
     })
-  }, [h]);
+  }, [E]);
   let {
-    history: E,
-    setHistory: C,
-    currentView: A,
+    history: N,
+    setHistory: A,
+    currentView: C,
     pushHistory: f,
     goBack: x
   } = function() {
@@ -51,33 +51,33 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
         (0, a.yw)(d.rMx.APP_LAUNCHER_CLOSED, {
           reason: r.Z.closeReason(),
           time_spent: Date.now() - e,
-          source: h
+          source: E
         })
       }
-    }, [h]), null == A ? void 0 : A.type) {
+    }, [E]), null == C ? void 0 : C.type) {
     case s.gc.HOME:
       t = (0, i.jsx)(c.Z, {
         channel: p,
-        entrypoint: h,
-        searchQuery: N,
+        entrypoint: E,
+        searchQuery: h,
         setSearchQuery: _
       });
       break;
     case s.gc.LIST:
       t = (0, i.jsx)(u.Z, {
         channel: p,
-        entrypoint: h,
-        title: A.title,
-        look: A.look,
-        items: A.items,
-        sectionName: A.sectionName
+        entrypoint: E,
+        title: C.title,
+        look: C.look,
+        items: C.items,
+        sectionName: C.sectionName
       });
       break;
     case s.gc.APPLICATION:
       t = (0, i.jsx)(o.Z, {
         channel: p,
-        application: A.application,
-        sectionName: A.sectionName
+        application: C.application,
+        sectionName: C.sectionName
       });
       break;
     default:
@@ -90,9 +90,9 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
       className: m.contentWrapper,
       children: (0, i.jsx)(s.uX.Provider, {
         value: {
-          history: E,
-          setHistory: C,
-          currentView: A,
+          history: N,
+          setHistory: A,
+          currentView: C,
           pushHistory: f,
           goBack: x
         },

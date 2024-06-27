@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return E
+    return N
   }
 }), t(47120);
 var i = t(735250),
@@ -14,11 +14,11 @@ var i = t(735250),
   d = t(283442),
   m = t(783097),
   p = t(591204),
-  h = t(689938),
-  N = t(589419),
+  E = t(689938),
+  h = t(589419),
   _ = t(622322);
 
-function E(e) {
+function N(e) {
   var n;
   let {
     channel: t,
@@ -28,29 +28,29 @@ function E(e) {
     sectionName: o
   } = e, c = null != a || null != r, d = (null !== (n = l.description) && void 0 !== n ? n : "").length > 0;
   return (0, i.jsxs)("div", {
-    className: N.container,
-    children: [(0, i.jsx)(C, {
+    className: h.container,
+    children: [(0, i.jsx)(A, {
       channel: t,
       application: l,
       sectionName: o
     }), c || d ? (0, i.jsxs)("div", {
-      className: N.profileAndVideoContainer,
+      className: h.profileAndVideoContainer,
       children: [c ? (0, i.jsx)("div", {
-        className: N.videoContainer,
+        className: h.videoContainer,
         children: (0, i.jsx)(u.Z, {
           loop: !0,
           autoPlay: !0,
           muted: !0,
-          className: d ? N.videoWithOverview : N.videoNoOverview,
+          className: d ? h.videoWithOverview : h.videoNoOverview,
           src: a,
           poster: r
         })
       }) : null, d ? (0, i.jsxs)("div", {
-        className: c ? N.overviewContainerWithVideo : N.overviewContainerNoVideo,
+        className: c ? h.overviewContainerWithVideo : h.overviewContainerNoVideo,
         children: [(0, i.jsx)(s.x, {
           variant: "text-sm/semibold",
-          children: h.Z.Messages.OVERVIEW
-        }), (0, i.jsx)(A, {
+          children: E.Z.Messages.OVERVIEW
+        }), (0, i.jsx)(C, {
           application: l
         })]
       }) : null]
@@ -58,7 +58,7 @@ function E(e) {
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     channel: n,
     application: t,
@@ -70,9 +70,9 @@ function C(e) {
     channel: n
   });
   return (0, i.jsx)("div", {
-    className: N.titleContainer,
+    className: h.titleContainer,
     children: (0, i.jsxs)("div", {
-      className: N.titleInnerContainer,
+      className: h.titleInnerContainer,
       children: [(0, i.jsx)(o.Heading, {
         variant: "heading-xl/extrabold",
         children: t.name
@@ -87,7 +87,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function C(e) {
   let {
     application: n
   } = e, [t, u] = l.useState(!1), d = l.useMemo(() => {
@@ -117,7 +117,7 @@ function A(e) {
       lineClamp: t ? void 0 : 3,
       children: d
     }), null != p && p >= 3 ? (0, i.jsxs)(o.Clickable, {
-      className: N.expandableDescriptionClickable,
+      className: h.expandableDescriptionClickable,
       onClick: () => {
         u(e => !e)
       },
@@ -125,7 +125,7 @@ function A(e) {
         ref: m,
         variant: "text-sm/semibold",
         color: "text-brand",
-        children: t ? h.Z.Messages.APP_LAUNCHER_SHOW_LESS : h.Z.Messages.APP_LAUNCHER_SHOW_MORE
+        children: t ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
       }), t ? (0, i.jsx)(r.u, {
         size: "sm",
         color: o.tokens.colors.TEXT_BRAND

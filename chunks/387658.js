@@ -14,12 +14,12 @@ var i = t(735250),
   d = t(895924),
   m = t(585483),
   p = t(499254),
-  h = t(541099),
-  N = t(827498),
+  E = t(541099),
+  h = t(827498),
   _ = t(496158),
-  E = t(676161),
-  C = t(660090),
-  A = t(783097),
+  N = t(676161),
+  A = t(660090),
+  C = t(783097),
   f = t(870205),
   x = t(981631),
   v = t(689079),
@@ -33,9 +33,9 @@ function P(e) {
     command: o,
     section: u,
     sectionName: _
-  } = e, E = l.useCallback(() => {
-    let e = h.Z.entrypoint();
-    p.y(N.ti.COMMAND), c.Po({
+  } = e, N = l.useCallback(() => {
+    let e = E.Z.entrypoint();
+    p.y(h.ti.COMMAND), c.Po({
       channelId: r.id,
       command: o,
       section: u,
@@ -45,10 +45,10 @@ function P(e) {
     }), m.S.dispatch(x.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: r.id
     })
-  }, [r.id, o, u, _]), C = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0;
+  }, [r.id, o, u, _]), A = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0;
   return (0, i.jsxs)(s.Clickable, {
     className: g.command,
-    onClick: E,
+    onClick: N,
     children: [(0, i.jsxs)("div", {
       className: g.commandTextContainer,
       children: [(0, i.jsx)(s.Text, {
@@ -61,7 +61,7 @@ function P(e) {
         lineClamp: 1,
         children: o.displayDescription
       })]
-    }), C ? (0, i.jsx)(a.F, {}) : (0, i.jsx)(T, {
+    }), A ? (0, i.jsx)(a.F, {}) : (0, i.jsx)(T, {
       channel: r,
       command: o,
       sectionName: _
@@ -77,12 +77,12 @@ function T(e) {
   } = e, o = (0, _.D)(n), [c, u] = l.useState(!1), d = l.useCallback(async e => {
     e.stopPropagation();
     try {
-      await (0, A.Y$)({
+      await (0, C.Y$)({
         command: t,
         optionValues: {},
         context: o,
         sectionName: a
-      }), p.y(N.ti.COMMAND)
+      }), p.y(h.ti.COMMAND)
     } finally {
       u(!1)
     }
@@ -152,19 +152,19 @@ function S(e) {
     includeFrecency: !0
   }), m = null !== (n = d.find(e => e.id === a.id)) && void 0 !== n ? n : null, {
     sortOrder: p,
-    setSortOrder: h,
-    commands: N,
+    setSortOrder: E,
+    commands: h,
     canSort: _
-  } = (0, C.Z)({
+  } = (0, A.Z)({
     sectionId: a.id,
     commandsByActiveSection: c
   });
   l.useEffect(() => {
     s(a.id)
   }, [a.id, s]);
-  let A = (0, E.Z)({
+  let C = (0, N.Z)({
     channel: t,
-    commands: N,
+    commands: h,
     limit: 5
   });
   return (0, i.jsxs)("ul", {
@@ -172,18 +172,18 @@ function S(e) {
     children: [(0, i.jsx)(M, {
       channel: t,
       section: m,
-      commands: A,
+      commands: C,
       headerName: I.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
       sectionName: r
     }), (0, i.jsx)(M, {
       channel: t,
       section: m,
-      commands: N,
+      commands: h,
       headerName: I.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
       sectionName: r,
       children: _ && (0, i.jsx)(f.Z, {
         sortOrder: p,
-        onSortOptionClick: h
+        onSortOptionClick: E
       })
     })]
   })

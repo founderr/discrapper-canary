@@ -1,24 +1,24 @@
 t.d(n, {
   $d: function() {
-    return N
+    return h
   },
   BQ: function() {
-    return h
+    return E
   },
   Wx: function() {
     return p
   },
   Y$: function() {
-    return C
+    return A
   },
   jD: function() {
     return _
   },
   sl: function() {
-    return A
+    return C
   },
   ye: function() {
-    return E
+    return N
   }
 }), t(789020);
 var i = t(668781),
@@ -35,27 +35,27 @@ let p = {
   id: d.bi.BUILT_IN
 };
 
-function h(e) {
+function E(e) {
   return e.id !== d.bi.BUILT_IN
 }
 
-function N(e) {
-  return h(e) ? e.name : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME
+function h(e) {
+  return E(e) ? e.name : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME
 }
 
 function _(e) {
-  return h(e) ? e.description : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+  return E(e) ? e.description : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
 }
 
-function E(e) {
+function N(e) {
   var n;
   let {
     application: t
   } = e;
-  return h(t) && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED)
+  return E(t) && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED)
 }
 
-function C(e) {
+function A(e) {
   let {
     command: n,
     optionValues: t,
@@ -65,7 +65,7 @@ function C(e) {
     sectionName: d
   } = e, {
     channel: p
-  } = o, h = async () => {
+  } = o, E = async () => {
     try {
       let i = await (0, r.Z)({
         command: n,
@@ -86,20 +86,20 @@ function C(e) {
         title: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
         body: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
         confirmText: m.Z.Messages.RETRY,
-        onConfirm: () => h()
+        onConfirm: () => E()
       }), e
     }
   };
-  return h()
+  return E()
 }
 
-function A(e) {
+function C(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       fakeAppIconURL: t,
       ...i
     } = n;
-  return h(e) ? {
+  return E(e) ? {
     iconURL: o.ZP.getApplicationIconURL({
       ...i,
       id: e.id,

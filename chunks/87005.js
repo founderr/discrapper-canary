@@ -1,6 +1,6 @@
 t.d(n, {
   f: function() {
-    return h
+    return E
   }
 }), t(47120);
 var i = t(470079),
@@ -22,7 +22,7 @@ let m = {
     includeFrecency: !0
   };
 
-function h(e, n) {
+function E(e, n) {
   let {
     sectionDescriptors: t,
     loading: s
