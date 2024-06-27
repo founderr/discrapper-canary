@@ -1,12 +1,15 @@
 n.d(t, {
-  Be: function() {
-    return E
-  },
   ZP: function() {
-    return g
+    return A
+  },
+  dL: function() {
+    return h
   },
   hC: function() {
-    return h
+    return E
+  },
+  hl: function() {
+    return f
   }
 }), n(47120), n(653041);
 var l = n(392711),
@@ -21,14 +24,25 @@ var l = n(392711),
   _ = n(981631);
 
 function h(e) {
-  return "".concat(e.type, "-").concat(e.id)
+  let t = r.Z.getChannel(e);
+  return (null == t ? void 0 : t.type) === _.d4z.DM ? {
+    type: "user",
+    id: t.recipients[0]
+  } : {
+    type: "channel",
+    id: e
+  }
 }
 
 function E(e) {
-  return "user" === e.type ? r.Z.getDMFromUserId(e.id) : e.id
+  return "".concat(e.type, "-").concat(e.id)
 }
 
 function f(e) {
+  return "user" === e.type ? r.Z.getDMFromUserId(e.id) : e.id
+}
+
+function S(e) {
   if ("user" !== e.type) return (0, i.Z)(e.id);
   {
     let t = o.default.getUser(e.id);
@@ -41,7 +55,7 @@ function f(e) {
 }
 n(689938);
 
-function S(e, t) {
+function I(e, t) {
   let n;
   let l = new Set;
   if (null != t)
@@ -60,14 +74,14 @@ function S(e, t) {
   return i
 }
 
-function I(e) {
+function g(e) {
   return e.filter(e => {
     var t;
     return (0, u.lm)(e) && (e.type === a.h8.HEADER || (0, d.o)(e) && ((t = e).type === a.h8.USER ? null != r.Z.getDMFromUserId(t.record.id) : t.type === a.h8.GROUP_DM || t.record.type !== _.d4z.GUILD_FORUM && t.record.type !== _.d4z.GUILD_MEDIA && c.Z.can(_.Plq.VIEW_CHANNEL, t.record) && c.Z.can(_.Plq.SEND_MESSAGES, t.record)))
   })
 }
 
-function g(e) {
+function A(e) {
   let {
     results: t,
     hasQuery: n,
@@ -78,13 +92,13 @@ function g(e) {
     pinnedDestinations: u,
     originDestination: d
   } = e;
-  if (n) return S(I(t));
-  let _ = null != u && u.length > 0 ? u.map(e => f(e)) : [],
+  if (n) return I(g(t));
+  let _ = null != u && u.length > 0 ? u.map(e => S(e)) : [],
     h = s.Z.getChannelHistory(),
     E = h.length > 0 ? h.map(e => (0, i.Z)(e)) : [],
-    g = r.length > 0 ? r.map(e => (0, i.Z)(e.id)) : [],
-    A = I([..._, null != c ? f(c) : null, ...E, ...g]),
+    f = r.length > 0 ? r.map(e => (0, i.Z)(e.id)) : [],
+    A = g([..._, null != c ? S(c) : null, ...E, ...f]),
     p = (null == o ? void 0 : o.find(e => (0, l.isEqual)(e, d))) != null,
     m = null == d || p ? [] : [d.id];
-  return null != a ? S(A.filter(e => e.type === a)) : S(A, m)
+  return null != a ? I(A.filter(e => e.type === a)) : I(A, m)
 }

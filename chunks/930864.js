@@ -33,10 +33,7 @@ function C(e) {
     onClose: N,
     onRequestSent: T,
     ...Z
-  } = e, [y, x] = a.useState(""), v = a.useMemo(() => ({
-    type: "channel",
-    id: t
-  }), [t]), [R, M] = a.useState(C), [P, D] = a.useState(!1), O = R.length, F = O >= A.G, G = (0, i.e7)([d.Z], () => d.Z.getMessage(t, n), [t, n]), U = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), j = (0, o.s)({
+  } = e, [y, x] = a.useState(""), v = a.useMemo(() => (0, c.dL)(t), [t]), [R, M] = a.useState(C), [D, P] = a.useState(!1), O = R.length, F = O >= A.G, G = (0, i.e7)([d.Z], () => d.Z.getMessage(t, n), [t, n]), U = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), j = (0, o.s)({
     searchText: y,
     selectedDestinations: R,
     originDestination: v
@@ -77,8 +74,8 @@ function C(e) {
         (0, s.showToast)((0, s.createToast)(p.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
         return
       }
-      D(!0);
-      let l = R.map(c.Be).filter(E.lm);
+      P(!0);
+      let l = R.map(c.hl).filter(E.lm);
       (0, g.mc)(), null == T || T(), 1 === l.length && (0, r.Kh)(l[0]);
       let a = await f.Z.sendForwards(e, l, L);
       if (a.every(e => {
@@ -160,7 +157,7 @@ function C(e) {
     }), B, (0, l.jsxs)(s.ModalFooter, {
       className: m.footer,
       children: [(0, l.jsx)(s.Button, {
-        submitting: P,
+        submitting: D,
         disabled: 0 === O,
         onClick: W,
         children: K
