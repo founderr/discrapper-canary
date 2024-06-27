@@ -1,3 +1,4 @@
+n(47120);
 var i = n(735250);
 n(470079);
 var s = n(570140),
@@ -23,10 +24,10 @@ let c = (0, r.Un)({
   });
 class _ extends a.Z {
   _initialize() {
-    s.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
+    s.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout), this.initializeStyleSheetObserver()
   }
   _terminate() {
-    s.Z.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
+    s.Z.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout), this.terminateStyleSheetObserver()
   }
   handleOpenChannelCallPopout(e) {
     let {
@@ -43,6 +44,24 @@ class _ extends a.Z {
       defaultHeight: 480
     })
   }
+  initializeStyleSheetObserver() {
+    this._observer = new MutationObserver(function(e) {
+      for (let t of e)
+        if ("childList" === t.type) {
+          for (let e of t.addedNodes)
+            if (e.nodeType === Node.ELEMENT_NODE && "LINK" === e.tagName && "stylesheet" === e.rel) {
+              let t = e.href,
+                n = e.integrity;
+              l.YS(t, n)
+            }
+        }
+    }), this._observer.observe(document.head, {
+      childList: !0
+    })
+  }
+  terminateStyleSheetObserver() {
+    null != this._observer && (this._observer.disconnect(), this._observer = null)
+  }
   handleOpenRTCDebugPopout() {
     l.bA(o.KJ3.RTC_DEBUG_POPOUT, e => (0, i.jsx)(u, {
       windowKey: e
@@ -50,6 +69,15 @@ class _ extends a.Z {
       defaultWidth: 854,
       defaultHeight: 480
     })
+  }
+  constructor(...e) {
+    var t, n, i;
+    super(...e), t = this, i = null, (n = "_observer") in t ? Object.defineProperty(t, n, {
+      value: null,
+      enumerable: !0,
+      configurable: !0,
+      writable: !0
+    }) : t[n] = i
   }
 }
 t.Z = new _

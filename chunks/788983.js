@@ -1,5 +1,8 @@
 "use strict";
 n.d(t, {
+  YS: function() {
+    return u
+  },
   bA: function() {
     return s
   },
@@ -52,5 +55,13 @@ function l(e, t) {
     type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
     alwaysOnTop: t,
     key: e
+  })
+}
+
+function u(e, t) {
+  return i.Z.dispatch({
+    type: "POPOUT_WINDOW_ADD_STYLESHEET",
+    url: e,
+    integrity: t
   })
 }

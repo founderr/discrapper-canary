@@ -27,7 +27,7 @@ let f = {},
   A = {},
   m = {},
   O = new Set,
-  p = () => M.emitChange(),
+  p = () => P.emitChange(),
   R = a().debounce(p, 150);
 
 function g(e) {
@@ -41,17 +41,25 @@ function g(e) {
   })
 }
 
-function C(e) {
+function C(e, t, n) {
+  let i = e.document,
+    r = "".concat(window.location.protocol, "//").concat(window.location.host);
+  if (!t.startsWith(r)) return;
+  let o = i.createElement("link");
+  o.href = t, o.rel = "stylesheet", o.integrity = n, s()(null != i.head, "Document head was null"), i.head.appendChild(o)
+}
+
+function v(e) {
   let t = N[e];
   null != t && (!t.closed && g(e), t.close(), ! function(e) {
     let t = N[e];
     s()(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", p), t.removeEventListener("blur", p), t.removeEventListener("resize", R);
     let n = A[e];
     s()(null != n, "Window root was null while unmounting"), n.unmount(), delete N[e], delete S[e], delete m[e], delete A[e]
-  }(e), M.emitChange())
+  }(e), P.emitChange())
 }
 
-function v(e) {
+function L(e) {
   let {
     data: t
   } = e;
@@ -69,32 +77,25 @@ function v(e) {
         }
         let i = t.document;
         (0, I.uF)(i, p), t.addEventListener("focus", p), t.addEventListener("blur", p), t.addEventListener("resize", R), ! function(e, t) {
-          let n = t.document,
-            i = document.querySelectorAll('link[rel="stylesheet"]'),
-            r = "".concat(window.location.protocol, "//").concat(window.location.host);
-          for (let e of i) {
-            if (!e.href.startsWith(r)) continue;
-            let t = n.createElement("link");
-            t.href = e.href, t.rel = e.rel, t.integrity = e.integrity, s()(null != n.head, "Document head was null"), n.head.appendChild(t)
-          }
+          for (let e of document.querySelectorAll('link[rel="stylesheet"]')) C(t, e.href, e.integrity)
         }(0, t);
         let r = (0, l.createRoot)(i.getElementById("app-mount"));
         s()(null != r, "No render target for popout!"), A[e] = r, r.render(n(e))
-      }(i), O.delete(i), M.emitChange()));
+      }(i), O.delete(i), P.emitChange()));
     case T.l9w.UNLOADED:
-      return C(n.key)
+      return v(n.key)
   }
 }
 
-function L() {
+function D() {
   for (let e of Object.keys(N)) {
     let t = N[e];
     null != t && t.close()
   }
 }
-class D extends(i = u.ZP.PersistedStore) {
+class M extends(i = u.ZP.PersistedStore) {
   initialize(e) {
-    window.addEventListener("message", v), window.addEventListener("beforeunload", L), f = null != e ? e : {}
+    window.addEventListener("message", L), window.addEventListener("beforeunload", D), f = null != e ? e : {}
   }
   getWindow(e) {
     return N[e]
@@ -126,11 +127,11 @@ class D extends(i = u.ZP.PersistedStore) {
     return f
   }
   unmountWindow(e) {
-    return C(e)
+    return v(e)
   }
 }
-h(D, "displayName", "PopoutWindowStore"), h(D, "persistKey", "PopoutWindowStore");
-let M = new D(_.Z, {
+h(M, "displayName", "PopoutWindowStore"), h(M, "persistKey", "PopoutWindowStore");
+let P = new M(_.Z, {
   POPOUT_WINDOW_OPEN: function(e) {
     let {
       key: t,
@@ -172,6 +173,13 @@ let M = new D(_.Z, {
     }(u));
     I.windowKey = t, null == I || I.focus(), N[t] = I, m[t] = i, d.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, _), S[t] = _, E.ZP.isAlwaysOnTop(t).then(e => S[t] = e)), O.add(t)
   },
+  POPOUT_WINDOW_ADD_STYLESHEET: function(e) {
+    let {
+      url: t,
+      integrity: n
+    } = e;
+    for (let e of Object.values(N)) null != e && !e.closed && C(e, t, n)
+  },
   POPOUT_WINDOW_CLOSE: function(e) {
     let {
       key: t
@@ -185,6 +193,6 @@ let M = new D(_.Z, {
     } = e;
     d.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, n), S[t] = n, E.ZP.isAlwaysOnTop(t).then(e => S[t] = e))
   },
-  LOGOUT: L
+  LOGOUT: D
 });
-t.Z = M
+t.Z = P
