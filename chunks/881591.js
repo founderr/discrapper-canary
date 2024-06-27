@@ -18,13 +18,13 @@ var i = n(735250),
   m = n(904245),
   T = n(43267),
   h = n(933557),
-  N = n(822893),
-  f = n(329461),
-  p = n(831267),
-  C = n(203965),
-  g = n(570907),
-  S = n(294218),
-  A = n(703656),
+  N = n(294218),
+  f = n(703656),
+  p = n(962796),
+  C = n(802463),
+  g = n(981014),
+  S = n(543666),
+  A = n(626086),
   R = n(695346),
   x = n(592125),
   O = n(430824),
@@ -47,12 +47,12 @@ function y(e) {
   let {
     setTab: t,
     closePopout: n
-  } = e, s = (0, u.e7)([f.Z], () => f.Z.getMessageReminders());
+  } = e, s = (0, u.e7)([C.Z], () => C.Z.getMessageReminders());
   a.useEffect(() => () => {
-    (0, N.Mf)()
+    (0, p.Mf)()
   }, []);
-  let [l, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), c = l ? s : o, d = c.filter(e => !(0, p.uX)(e));
-  return (0, C.N)(d), (0, i.jsxs)("div", {
+  let [l, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), c = l ? s : o, d = c.filter(e => !(0, g.uX)(e));
+  return (0, S.N)(d), (0, i.jsxs)("div", {
     className: D.container,
     children: [(0, i.jsx)(Z.Z, {
       tab: _.X.TODOS,
@@ -89,19 +89,19 @@ function B(e) {
   let t, {
       messageId: a
     } = e,
-    s = (0, u.e7)([f.Z], () => f.Z.getMessageReminders().find(e => e.messageId === a));
+    s = (0, u.e7)([C.Z], () => C.Z.getMessageReminders().find(e => e.messageId === a));
   o()(null != s, "should not be rendering a to-do message without a to-do message");
   let r = s.complete,
     c = (0, u.e7)([M.Z], () => M.Z.getMessage(s.channelId, s.messageId)),
     {
       message: _,
-      channel: p
-    } = (0, g.p)(s),
-    C = x.Z.getChannel(p.id),
-    L = (0, h.ZP)(C, !0),
-    Z = null != L ? L : p.name,
-    y = (0, u.e7)([O.Z], () => O.Z.getGuild(null == p ? void 0 : p.guild_id)),
-    B = null != p ? (0, T.x)(p) : null,
+      channel: g
+    } = (0, A.p)(s),
+    S = x.Z.getChannel(g.id),
+    L = (0, h.ZP)(S, !0),
+    Z = null != L ? L : g.name,
+    y = (0, u.e7)([O.Z], () => O.Z.getGuild(null == g ? void 0 : g.guild_id)),
+    B = null != g ? (0, T.x)(g) : null,
     k = null;
   return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", k = b.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d().duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
@@ -121,7 +121,7 @@ function B(e) {
             active: !0
           }) : (0, i.jsx)(E.Avatar, {
             "aria-hidden": !0,
-            src: null != B ? B : n(788429),
+            src: null != B ? B : n(187293),
             size: E.AvatarSizes.SIZE_32
           }), (0, i.jsx)(E.Text, {
             variant: "text-md/medium",
@@ -172,7 +172,7 @@ function B(e) {
           type: E.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, N.Y_)(s.messageId, t)
+            (0, p.Y_)(s.messageId, t)
           }
         })]
       })]
@@ -180,9 +180,9 @@ function B(e) {
       className: l()(j.messageContainer, D.unloadedMessage, {
         [D.disabledMessage]: r
       }),
-      children: [(0, i.jsx)(S.Z, {
+      children: [(0, i.jsx)(N.Z, {
         message: _,
-        channel: p,
+        channel: g,
         className: j.message,
         compact: R.jU.getSetting(),
         animateAvatar: !1,
@@ -211,7 +211,7 @@ function B(e) {
           })
         }) : null, (0, i.jsx)(E.Button, {
           onClick: () => {
-            (0, A.uL)(P.Z5c.CHANNEL(null == p ? void 0 : p.getGuildId(), s.channelId, s.messageId))
+            (0, f.uL)(P.Z5c.CHANNEL(null == g ? void 0 : g.getGuildId(), s.channelId, s.messageId))
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,
@@ -227,7 +227,7 @@ function B(e) {
 }
 
 function k() {
-  return (0, u.e7)([f.Z], () => f.Z.getMessageReminders().length > 0) ? null : (0, i.jsx)(L.Z, {
+  return (0, u.e7)([C.Z], () => C.Z.getMessageReminders().length > 0) ? null : (0, i.jsx)(L.Z, {
     Icon: E.DoubleCheckmarkLargeIcon,
     header: b.Z.Messages.MESSAGE_REMINDERS_EMPTY,
     tip: b.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP

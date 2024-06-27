@@ -200,12 +200,12 @@ let r = {
   },
   MessageRemindersManager: {
     actions: ["POST_CONNECTION_OPEN"],
-    inlineRequire: () => n(652244).Z,
+    inlineRequire: () => n(903707).Z,
     neverLoadBeforeConnectionOpen: !0
   },
   MessageRemindersNotificationManager: {
     actions: ["POST_CONNECTION_OPEN"],
-    inlineRequire: () => n(211040).Z,
+    inlineRequire: () => n(937603).Z,
     neverLoadBeforeConnectionOpen: !0
   },
   SearchManager: {

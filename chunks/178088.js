@@ -12,8 +12,8 @@ var i = n(735250),
   c = n(100527),
   d = n(906732),
   u = n(602478),
-  _ = n(641051),
-  E = n(360629),
+  _ = n(360629),
+  E = n(742989),
   I = n(675478),
   m = n(581883),
   T = n(585483),
@@ -73,11 +73,11 @@ function A(e) {
   a.useEffect(() => (T.S.subscribe(g.CkL.TOGGLE_INBOX_UNREADS_TAB, y), () => void T.S.unsubscribe(g.CkL.TOGGLE_INBOX_UNREADS_TAB, y)), [y]);
   let {
     showReminders: B
-  } = _.Z.useExperiment({
+  } = E.Z.useExperiment({
     location: "RecentsPopout"
   }, {
     autoTrackExposure: !1
-  }), k = (0, E.sv)(), {
+  }), k = (0, _.sv)(), {
     enabled: G
   } = u.Z.useExperiment({
     location: "RecentsPopout"

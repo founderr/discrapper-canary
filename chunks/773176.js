@@ -17,12 +17,12 @@ var i = n(735250),
   g = n(223606),
   C = n(188597),
   I = n(41776),
-  x = n(641051),
-  T = n(329461),
-  N = n(222677),
-  v = n(995774),
-  S = n(931651),
-  Z = n(280845),
+  x = n(222677),
+  T = n(995774),
+  N = n(931651),
+  v = n(280845),
+  S = n(742989),
+  Z = n(802463),
   A = n(665906),
   M = n(695346),
   b = n(314897),
@@ -151,9 +151,9 @@ function ee(e) {
     canEdit: m,
     canPublish: g,
     canReact: C,
-    canConfigureJoin: N,
-    canReply: v,
-    canStartThread: S,
+    canConfigureJoin: x,
+    canReply: T,
+    canStartThread: N,
     canViewThread: R,
     canForward: D,
     isExpanded: W,
@@ -176,29 +176,29 @@ function ee(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, u = (0, c.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]), d = (0, c.e7)([b.default], () => b.default.getId()), m = (0, A.$R)(t), _ = (0, A.Gu)(t), g = M.nc.useSetting(), C = M.Sb.useSetting(), N = (0, c.e7)([P.Z], () => null == t.guild_id || P.Z.canChatInGuild(t.guild_id), [t]), {
-      canManageMessages: v,
-      canAddNewReactions: S
+    } = n, u = (0, c.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]), d = (0, c.e7)([b.default], () => b.default.getId()), m = (0, A.$R)(t), _ = (0, A.Gu)(t), g = M.nc.useSetting(), C = M.Sb.useSetting(), x = (0, c.e7)([P.Z], () => null == t.guild_id || P.Z.canChatInGuild(t.guild_id), [t]), {
+      canManageMessages: T,
+      canAddNewReactions: N
     } = (0, c.cj)([O.Z], () => ({
-      canAddNewReactions: N && O.Z.can(Y.Plq.ADD_REACTIONS, t),
+      canAddNewReactions: x && O.Z.can(Y.Plq.ADD_REACTIONS, t),
       canManageMessages: O.Z.can(Y.Plq.MANAGE_MESSAGES, t)
-    }), [t, N]), R = (0, Z.U)(t, n), y = (0, A.NE)(t, n), D = (0, A.Ek)(n), k = (0, c.e7)([I.Z], () => null != t.guild_id && I.Z.isLurking(t.guild_id), [t]), V = (0, c.e7)([j.ZP], () => null != t.guild_id && j.ZP.isCurrentUserGuest(t.guild_id), [t]), F = o.id === d, W = (v || n.canDeleteOwnMessage(d)) && m && !Y.V$x.UNDELETABLE.has(n.type);
-    n.type === Y.uaV.AUTO_MODERATION_ACTION && (W = W && v);
+    }), [t, x]), R = (0, v.U)(t, n), y = (0, A.NE)(t, n), D = (0, A.Ek)(n), k = (0, c.e7)([I.Z], () => null != t.guild_id && I.Z.isLurking(t.guild_id), [t]), V = (0, c.e7)([j.ZP], () => null != t.guild_id && j.ZP.isCurrentUserGuest(t.guild_id), [t]), F = o.id === d, W = (T || n.canDeleteOwnMessage(d)) && m && !Y.V$x.UNDELETABLE.has(n.type);
+    n.type === Y.uaV.AUTO_MODERATION_ACTION && (W = W && T);
     let K = (0, w.a4)(n),
-      q = (0, H.Z)(n, t, v),
+      q = (0, H.Z)(n, t, T),
       X = !t.isSystemDM() && (0, B.Z)(n, d) && m && !_,
       {
         disableReactionCreates: Q
       } = (0, G.Z)({
         channel: t,
-        canChat: N,
+        canChat: x,
         renderReactions: g,
-        canAddNewReactions: S,
+        canAddNewReactions: N,
         isLurking: k,
         isGuest: V,
         isActiveChannelOrUnarchivableThread: m
       }),
-      J = t.type === Y.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Y.oNc.NEWS) && (F || v) && (0, p.Z)(n),
+      J = t.type === Y.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Y.oNc.NEWS) && (F || T) && (0, p.Z)(n),
       $ = t.getGuildId(),
       ee = null != $ && (n.type === Y.uaV.USER_JOIN || n.type === Y.uaV.GUILD_INVITE_REMINDER) && O.Z.canWithPartialContext(Y.Plq.MANAGE_GUILD, {
         guildId: $
@@ -213,12 +213,12 @@ function ee(e) {
       en = (0, E.a)(n),
       {
         showReminders: ei
-      } = x.Z.useExperiment({
+      } = S.Z.useExperiment({
         location: "9bfedc_1"
       }, {
         autoTrackExposure: !1
       }),
-      ea = (0, c.e7)([T.Z], () => null != T.Z.getMessageReminders().find(e => e.messageId === n.id)),
+      ea = (0, c.e7)([Z.Z], () => null != Z.Z.getMessageReminders().find(e => e.messageId === n.id)),
       el = (0, z.Z)(),
       es = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
     return {
@@ -281,7 +281,7 @@ function ee(e) {
         label: q.Z.Messages.COPY_LINK,
         icon: d.LinkIcon,
         onClick: V.fB
-      }) : null, N ? $({
+      }) : null, x ? $({
         key: "configure",
         channel: t,
         message: n,
@@ -309,14 +309,14 @@ function ee(e) {
         label: n.pinned ? q.Z.Messages.UNPIN_MESSAGE : q.Z.Messages.PIN_MESSAGE,
         icon: d.PinIcon,
         onClick: V.rY
-      }) : null, S && D ? $({
+      }) : null, N && D ? $({
         key: "thread",
         channel: t,
         message: n,
         label: q.Z.Messages.CREATE_THREAD,
         icon: d.ThreadIcon,
         onClick: V.gK
-      }) : null, v && m ? $({
+      }) : null, T && m ? $({
         key: "reply-self",
         channel: t,
         message: n,
@@ -331,7 +331,7 @@ function ee(e) {
       renderEmojiPicker: en,
       shouldShow: Q,
       isFocused: es
-    }) : null, v && !m ? $({
+    }) : null, T && !m ? $({
       key: "reply-other",
       channel: t,
       message: n,
@@ -355,14 +355,14 @@ function ee(e) {
       onTooltipShow: ef,
       onTooltipHide: eE,
       showNewBadge: !em && ep
-    }) : null, S && !D ? $({
+    }) : null, N && !D ? $({
       key: "thread",
       channel: t,
       message: n,
       label: q.Z.Messages.CREATE_THREAD,
       icon: d.ThreadIcon,
       onClick: V.gK
-    }) : null, !S && R ? $({
+    }) : null, !N && R ? $({
       key: "view-thread",
       channel: t,
       message: n,
@@ -458,17 +458,17 @@ function en(e, t, n) {
       ...a && {
         openPopoutType: "message_super_reaction_emoji_picker",
         page: null != e.getGuildId() ? Y.ZY5.GUILD_CHANNEL : Y.ZY5.DM_CHANNEL,
-        section: (0, v.s4)(e),
+        section: (0, T.s4)(e),
         object: Y.qAy.EMOJI_REACTION_PICKER_POPOUT
       }
     };
-  return (0, i.jsx)(S.$, {
+  return (0, i.jsx)(N.$, {
     channel: e,
     closePopout: n,
     onSelectEmoji: (i, a, l) => {
       ! function(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        null != e && (0, N.rU)(t.id, n.id, (0, v.g1)(e), void 0, {
+        null != e && (0, x.rU)(t.id, n.id, (0, T.g1)(e), void 0, {
           burst: i
         })
       }(i, e, t, l), a && (l ? o()(n, 150)() : n())

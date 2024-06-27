@@ -52,8 +52,8 @@ var i = t(332148),
   o = t(912332),
   u = t(434404);
 t(726521);
-var s = t(822893),
-  c = t(623292),
+var s = t(623292),
+  c = t(962796),
   d = t(488131),
   E = t(314897),
   f = t(592125),
@@ -114,7 +114,7 @@ function j(e, n) {
 function P(e, n, t) {
   let i = e.isPrivate(),
     a = n.author.id === E.default.getId();
-  (0, c.fE)({
+  (0, s.fE)({
     channel: e,
     message: n,
     shouldMention: !t.shiftKey && !a,
@@ -132,11 +132,11 @@ function L(e, n) {
 }
 
 function y(e, n) {
-  (0, s.BW)(n)
+  (0, c.BW)(n)
 }
 
 function D(e, n) {
-  (0, s.Kp)(n.id)
+  (0, c.Kp)(n.id)
 }
 
 function G(e, n) {

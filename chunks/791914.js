@@ -14,15 +14,15 @@ var a = n(120356),
   d = n(377171),
   u = n(317632),
   _ = n(602478),
-  E = n(641051),
-  I = n(329461),
-  m = n(360629),
+  E = n(360629),
+  I = n(742989),
+  m = n(802463),
   T = n(818186),
   h = n(689938),
   N = n(775132);
 
 function f(e) {
-  return (0, m.sv)() ? (0, i.jsx)(p, {
+  return (0, E.sv)() ? (0, i.jsx)(p, {
     ...e
   }) : (0, i.jsx)(C, {
     ...e
@@ -34,11 +34,11 @@ function p(e) {
     tab: t,
     setTab: n,
     children: a,
-    badgeState: m,
+    badgeState: E,
     closePopout: f
   } = e, {
     showReminders: p
-  } = E.Z.useExperiment({
+  } = I.Z.useExperiment({
     location: "RecentsHeader"
   }, {
     autoTrackExposure: !1
@@ -46,7 +46,7 @@ function p(e) {
     enabled: C
   } = _.Z.useExperiment({
     location: "RecentsHeader"
-  }), g = (0, l.e7)([u.Z], () => u.Z.getUnseenInviteCount()), S = (0, l.e7)([I.Z], () => I.Z.getMessageReminders()).length;
+  }), g = (0, l.e7)([u.Z], () => u.Z.getUnseenInviteCount()), S = (0, l.e7)([m.Z], () => m.Z.getMessageReminders()).length;
   return (0, i.jsxs)(c.h4, {
     className: s()(N.header, N.expanded),
     children: [(0, i.jsxs)("div", {
@@ -74,7 +74,7 @@ function p(e) {
           className: s()(N.tab, N.expanded, {
             [N.active]: t === r.X.FOR_YOU
           }),
-          children: [h.Z.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
+          children: [h.Z.Messages.FOR_YOU, (null == E ? void 0 : E.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
             color: d.Z.STATUS_DANGER,
             className: s()(N.iconBadge)
           }) : null]
@@ -127,11 +127,11 @@ function C(e) {
     children: a
   } = e, {
     showReminders: l
-  } = E.Z.useExperiment({
+  } = I.Z.useExperiment({
     location: "489e3f_2"
   }, {
     autoTrackExposure: !1
-  }), d = (0, m.sv)(), {
+  }), d = (0, E.sv)(), {
     enabled: u
   } = _.Z.useExperiment({
     location: "RecentsHeader"
