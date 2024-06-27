@@ -25,7 +25,7 @@ let s = (0, i.Z)({
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: r.$P.OPEN_USER_SETTINGS,
     treatments: [{
       id: 1,
       label: "Treatment",
@@ -41,7 +41,7 @@ let s = (0, i.Z)({
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: r.$P.OPEN_USER_SETTINGS,
     treatments: [{
       id: 1,
       label: "Treatment",
@@ -57,7 +57,7 @@ let s = (0, i.Z)({
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: r.$P.OPEN_USER_SETTINGS,
     treatments: [{
       id: 1,
       label: "Treatment 1",
@@ -79,7 +79,7 @@ let s = (0, i.Z)({
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: r.$P.OPEN_USER_SETTINGS,
     treatments: [{
       id: 1,
       label: "Treatment",
@@ -95,7 +95,7 @@ let s = (0, i.Z)({
     defaultConfig: {
       doSomething: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: r.$P.OPEN_USER_SETTINGS,
     treatments: [{
       id: 1,
       label: "Treatment",
