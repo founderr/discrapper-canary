@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return D
+    return M
   }
 }), n(411104), n(47120);
 var i = n(735250),
@@ -24,15 +24,16 @@ var i = n(735250),
   A = n(332390),
   m = n(785717),
   O = n(993409),
-  p = n(981631),
-  R = n(689938),
-  g = n(717633),
-  C = n(682583);
-let v = (0, h.kt)({
+  p = n(765365),
+  R = n(981631),
+  g = n(689938),
+  C = n(717633),
+  v = n(682583);
+let L = (0, h.kt)({
     id: "1",
-    type: p.d4z.DM
+    type: R.d4z.DM
   }),
-  L = async e => {
+  D = async e => {
     let {
       userId: t,
       content: n,
@@ -53,7 +54,7 @@ let v = (0, h.kt)({
     return u.Z.sendMessage(a.id, _)
   };
 
-function D(e) {
+function M(e) {
   let {
     user: t,
     guildId: n,
@@ -66,35 +67,39 @@ function D(e) {
     trackUserProfileAction: f
   } = (0, m.KZ)(), {
     messageCtaEnabled: N,
-    persistentCallCtaEnabled: p
+    activeInviteToCallCtaEnabled: R,
+    persistentCallCtaEnabled: M
   } = (0, A.l)({
     location: "BiteSizeProfileDirectMessageSection"
-  }), [D, M] = r.useState(""), [P, y] = r.useState((0, d.JM)(D)), U = r.useRef(!1), b = () => {
+  }), P = (0, p.Z)({
+    user: t,
+    onClose: u
+  }), [y, U] = r.useState(""), [b, G] = r.useState((0, d.JM)(y)), w = r.useRef(!1), x = () => {
     f({
       action: "SEND_MESSAGE"
     }), l.Z.openPrivateChannel(t.id, !1, !1, h), null == u || u()
-  }, G = (0, i.jsxs)("div", {
-    className: C.menuItemLabel,
+  }, B = (0, i.jsxs)("div", {
+    className: v.menuItemLabel,
     children: [(0, i.jsx)(a.PhoneCallIcon, {
       size: "xs"
-    }), " ", R.Z.Messages.START_VOICE_CALL]
-  }), w = (0, T.Z)({
+    }), " ", g.Z.Messages.START_VOICE_CALL]
+  }), k = (0, T.Z)({
     user: t,
-    label: G,
+    label: B,
     id: "voice-call",
     onCall: () => {
       f({
         action: "VOICE_CALL"
       }), null == u || u()
     }
-  }), x = (0, i.jsxs)("div", {
-    className: C.menuItemLabel,
+  }), V = (0, i.jsxs)("div", {
+    className: v.menuItemLabel,
     children: [(0, i.jsx)(a.VideoIcon, {
       size: "xs"
-    }), " ", R.Z.Messages.START_VIDEO_CALL]
-  }), B = (0, T.Z)({
+    }), " ", g.Z.Messages.START_VIDEO_CALL]
+  }), Z = (0, T.Z)({
     user: t,
-    label: x,
+    label: V,
     joinCallVideo: !0,
     id: "video-call",
     onCall: () => {
@@ -102,7 +107,7 @@ function D(e) {
         action: "VIDEO_CALL"
       }), null == u || u()
     }
-  }), k = (0, i.jsx)(_.Gt, {
+  }), H = (0, i.jsx)(_.Gt, {
     value: I,
     children: (0, i.jsx)(a.Popout, {
       position: "bottom",
@@ -114,9 +119,9 @@ function D(e) {
           navId: "user-profile-action-call-button",
           onSelect: void 0,
           onClose: t,
-          "aria-label": R.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
+          "aria-label": g.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
           children: (0, i.jsxs)(a.MenuGroup, {
-            children: [w, B]
+            children: [k, Z]
           })
         })
       },
@@ -134,57 +139,68 @@ function D(e) {
             }), t(e)
           },
           look: a.Button.Looks.BLANK,
-          className: C.engagementExpButton,
+          className: v.engagementExpButton,
           ...n,
           children: (0, i.jsxs)("div", {
-            className: C.engagementExpButtonInner,
+            className: v.engagementExpButtonInner,
             children: [(0, i.jsx)(a.PhoneCallIcon, {
               size: "xs",
               color: "currentColor"
-            }), R.Z.Messages.CALL]
+            }), g.Z.Messages.CALL]
           })
         })
       }
     })
   });
-  if (N) return p ? (0, i.jsxs)("div", {
-    className: C.ctaRow,
-    children: [k, (0, i.jsx)(O.Z, {
+  if (N) return R && null != P ? (0, i.jsxs)("div", {
+    className: v.ctaRow,
+    children: [(0, i.jsx)(O.Z, {
       fullWidth: !0,
       variant: "text",
-      color: o()(a.Button.Colors.BRAND, g.color),
-      onClick: b,
+      color: v.engagementExpButton,
+      tooltipContainerClassName: v.ctaTooltipContainer,
+      onClick: x,
       icon: a.ChatIcon,
-      text: R.Z.Messages.USER_PROFILE_MESSAGE,
-      tooltipContainerClassName: C.ctaTooltipContainer
+      text: g.Z.Messages.USER_PROFILE_MESSAGE
+    }), P]
+  }) : M ? (0, i.jsxs)("div", {
+    className: v.ctaRow,
+    children: [H, (0, i.jsx)(O.Z, {
+      fullWidth: !0,
+      variant: "text",
+      color: o()(a.Button.Colors.BRAND, C.color),
+      onClick: x,
+      icon: a.ChatIcon,
+      text: g.Z.Messages.USER_PROFILE_MESSAGE,
+      tooltipContainerClassName: v.ctaTooltipContainer
     })]
   }) : (0, i.jsx)(O.Z, {
     fullWidth: !0,
     variant: "text",
-    color: o()(a.Button.Colors.BRAND, g.color),
-    onClick: b,
+    color: o()(a.Button.Colors.BRAND, C.color),
+    onClick: x,
     icon: a.ChatIcon,
-    text: R.Z.Messages.USER_PROFILE_MESSAGE
+    text: g.Z.Messages.USER_PROFILE_MESSAGE
   });
   return (0, i.jsx)(E.Z, {
-    innerClassName: C.inner,
-    editorClassName: C.editor,
+    innerClassName: v.inner,
+    editorClassName: v.editor,
     type: c.I.USER_PROFILE,
-    placeholder: R.Z.Messages.QUICK_DM_USER.format({
+    placeholder: g.Z.Messages.QUICK_DM_USER.format({
       name: S.ZP.getName(n, s, t)
     }),
-    channel: v,
-    textValue: D,
-    richValue: P,
+    channel: L,
+    textValue: y,
+    richValue: b,
     onChange: (e, t, n) => {
-      if (t !== D) M(t), y(n)
+      if (t !== y) U(t), G(n)
     },
-    focused: U.current,
+    focused: w.current,
     onFocus: () => {
-      U.current = !0
+      w.current = !0
     },
     onBlur: () => {
-      U.current = !1
+      w.current = !1
     },
     onSubmit: async e => {
       let {
@@ -193,7 +209,7 @@ function D(e) {
       try {
         return f({
           action: "SEND_DIRECT_MESSAGE"
-        }), await L({
+        }), await D({
           userId: t.id,
           content: n.trim(),
           location: h
