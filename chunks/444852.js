@@ -104,24 +104,24 @@ class M extends a.Z {
     return this.analyticsContext.maxViewers
   }
   updateStats(e) {
+    var t, n, i, s, o, a;
     for (let {
-        connection: o,
-        stats: a
+        connection: t,
+        stats: n
       }
       of e)
-      if (o === this._connection) {
-        let e = a.transport.inboundBitrateEstimate;
+      if (t === this._connection) {
+        let e = n.transport.inboundBitrateEstimate;
         if (null != e) {
           if (e > 1e8) break;
           if (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 15 && this._bandwidthSamples.shift(), 15 === this._bandwidthSamples.length) {
-            var t, n, i, s;
             let e = r().mean(this._bandwidthSamples),
-              o = null !== (n = null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.isDowngraded()) && void 0 !== n && n;
-            o && e > 2e6 ? null === (i = this._goLiveQualityManager) || void 0 === i || i.setGoLiveStreamDowngraded(!1) : !o && e < 1e6 && (null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!0))
+              t = null !== (s = null === (i = this._goLiveQualityManager) || void 0 === i ? void 0 : i.isDowngraded()) && void 0 !== s && s;
+            t && e > 2e6 ? null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!1) : !t && e < 1e6 && (null === (a = this._goLiveQualityManager) || void 0 === a || a.setGoLiveStreamDowngraded(!0))
           }
           break
         }
-      }
+      } null === (n = this._videoQuality) || void 0 === n || n.setViewedSimulcastQuality(!(null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.isDowngraded()))
   }
   _initializeEvents() {
     let e = !1;
