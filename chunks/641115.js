@@ -67,8 +67,8 @@ function O(e) {
       type: s,
       selected: a,
       needsPremium: r,
-      analyticsLocation: o,
-      useGradient: u = !1,
+      needsDemo: o,
+      analyticsLocation: u,
       onClick: c,
       onClose: m,
       setIsHovering: E
@@ -88,26 +88,27 @@ function O(e) {
       onMouseLeave: () => E(!1),
       children: (0, l.jsx)(d.Text, {
         variant: "text-xs/bold",
-        className: i()(L.selectorNitroText, {
-          [L.enhancedSelectorNitroText]: u
-        }),
+        className: i()(L.selectorNitroText, L.enhancedSelectorNitroText),
         children: S
       })
     })
   }), t = () => M({
-    analyticsLocation: o,
+    analyticsLocation: u,
     onClose: m
   })) : (n = (0, l.jsx)("div", {
     className: L.textContainer,
     children: (0, l.jsx)(d.Text, {
       variant: "text-xs/normal",
-      className: L.selectorText,
+      className: i()(L.selectorText, {
+        [L.enhancedSelectorNitroText]: o
+      }),
       children: S
     })
   }), t = () => c(_)), {
     content: n,
     className: i()(L.selectorButton, {
       [L.selectorButtonSelected]: a,
+      [L.perksDemo]: o,
       [L.premiumUpsell]: r
     }),
     onClick: t
@@ -146,38 +147,39 @@ function j(e) {
     autoTrackExposure: !0,
     disable: !y || B
   });
-  let V = !U && !w || (0, Z.Ro)(u.q.STREAM_HIGH_QUALITY),
-    [k, H] = s.useState(!1),
-    W = D ? x.z8 : x.WC,
-    F = {
+  let V = (0, Z.So)(u.q.STREAM_HIGH_QUALITY),
+    k = !U && !w || V,
+    [H, W] = s.useState(!1),
+    F = D ? x.z8 : x.WC,
+    z = {
       ...b,
       section: f.jXE.STREAM_SETTINGS
     },
-    z = (0, l.jsx)(d.ButtonGroup, {
-      buttons: W.map(e => O({
+    K = (0, l.jsx)(d.ButtonGroup, {
+      buttons: F.map(e => O({
         type: e,
         selected: e.value === a,
         needsPremium: !(0, N.Z)(t, e.value, i, G, P),
-        analyticsLocation: F,
-        useGradient: !0,
+        needsDemo: V && e.value !== x.LY.RESOLUTION_720,
+        analyticsLocation: z,
         onClick: () => r(e.value),
         onClose: n,
-        setIsHovering: H
+        setIsHovering: W
       }))
     }),
-    K = (0, l.jsx)(d.ButtonGroup, {
+    Y = (0, l.jsx)(d.ButtonGroup, {
       buttons: x.k0.map(e => O({
         type: e,
         selected: e.value === i,
         needsPremium: !(0, N.Z)(t, a, e.value, G, P),
-        analyticsLocation: F,
-        useGradient: !0,
+        needsDemo: V && e.value === x.ws.FPS_60,
+        analyticsLocation: z,
         onClick: () => p(e.value),
         onClose: n,
-        setIsHovering: H
+        setIsHovering: W
       }))
     }),
-    Y = [{
+    Q = [{
       value: x.tI.PRESET_VIDEO,
       label: R.Z.Messages.STREAM_PRESET_VIDEO
     }, ...D ? [] : [{
@@ -187,7 +189,7 @@ function j(e) {
       value: x.tI.PRESET_CUSTOM,
       label: R.Z.Messages.STREAM_PRESET_CUSTOM
     }],
-    Q = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
+    J = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(C.Z, {
         children: (0, l.jsx)(d.FormItem, {
           title: R.Z.Messages.STREAM_RESOLUTION,
@@ -200,7 +202,7 @@ function j(e) {
             })
           })
         })
-      }), V ? (0, l.jsx)(I.Z, {
+      }), k ? (0, l.jsx)(I.Z, {
         message: R.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
         onClose: n,
         openStreamUpsellModal: M
@@ -211,21 +213,21 @@ function j(e) {
           title: R.Z.Messages.STREAM_RESOLUTION,
           className: L.settingsGroup,
           titleClassName: T.formItemTitleSlim,
-          children: z
+          children: K
         }), (0, l.jsx)(d.FormItem, {
           title: R.Z.Messages.SCREENSHARE_FRAME_RATE,
           className: L.settingsGroup,
           titleClassName: T.formItemTitleSlim,
-          children: K
+          children: Y
         })]
-      }), V ? (0, l.jsx)(I.Z, {
+      }), k ? (0, l.jsx)(I.Z, {
         onClose: n,
         openStreamUpsellModal: M,
-        glow: k
+        glow: H
       }) : null]
     });
   return (0, l.jsx)(m.Z, {
-    ...F,
+    ...z,
     children: (0, l.jsx)(d.FormItem, {
       title: R.Z.Messages.STREAM_QUALITY,
       titleClassName: T.formItemTitle,
@@ -235,9 +237,9 @@ function j(e) {
         children: [(0, l.jsx)(d.SingleSelect, {
           value: t,
           className: v.marginTop8,
-          options: Y,
+          options: Q,
           onChange: e => j(e)
-        }), Q]
+        }), J]
       })
     })
   })

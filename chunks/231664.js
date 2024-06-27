@@ -6,19 +6,12 @@ n.d(t, {
 var i = n(848246),
   l = n(442837),
   r = n(358221),
-  a = n(557457),
-  s = n(386542);
+  a = n(74538),
+  s = n(557457);
 
 function o(e, t) {
-  let n = (0, l.e7)([r.Z], () => null != e ? r.Z.getStreamParticipants(e).find(e => e.user.id === t) : void 0, [e, t]),
-    {
-      activated: o,
-      available: c,
-      hqStreamingState: {
-        hqStreamingIsEnabled: u
-      }
-    } = (0, s.k)(i.q.STREAM_HIGH_QUALITY);
-  if (!o || !c || !u) return;
-  let d = null != n ? (0, a.Wc)(n) : void 0;
-  return null != d ? "".concat((0, a.ml)(d.maxResolution), " ").concat((0, a.bp)(d.maxFrameRate)) : void 0
+  let n = (0, l.e7)([r.Z], () => null != e ? r.Z.getStreamParticipants(e).find(e => e.user.id === t) : void 0, [e, t]);
+  if ((0, a.So)(i.q.STREAM_HIGH_QUALITY)) return;
+  let o = null != n ? (0, s.Wc)(n) : void 0;
+  return null != o ? "".concat((0, s.ml)(o.maxResolution), " ").concat((0, s.bp)(o.maxFrameRate)) : void 0
 }

@@ -9,9 +9,9 @@ var s = t(120356),
   a = t.n(s),
   i = t(848246),
   r = t(481060),
-  o = t(386542),
-  u = t(197115),
-  c = t(672752),
+  o = t(197115),
+  u = t(672752),
+  c = t(74538),
   d = t(981631),
   m = t(474936),
   E = t(689938),
@@ -27,9 +27,7 @@ function S(e) {
     section: d.jXE.STREAM_SETTINGS,
     object: d.qAy.PREMIUM_UPSELL_BANNER,
     objectType: d.Qqv.BUY
-  }, {
-    activated: h
-  } = (0, o.k)(i.q.STREAM_HIGH_QUALITY);
+  }, h = (0, c.So)(i.q.STREAM_HIGH_QUALITY);
   return (0, l.jsxs)("div", {
     className: a()(_.upsellBanner, _.enhancedBanner, {
       [_.gradientGlow]: S
@@ -38,7 +36,7 @@ function S(e) {
       className: _.iconTextContainer,
       children: [(0, l.jsx)(r.NitroWheelIcon, {
         size: "md",
-        color: c.JX.PREMIUM_TIER_2
+        color: u.JX.PREMIUM_TIER_2
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: a()(_.upsellText, _.enhancedUpsellText),
@@ -58,7 +56,7 @@ function S(e) {
       })]
     }), (0, l.jsx)("div", {
       className: _.enhancedCTAs,
-      children: (0, l.jsx)(u.Z, {
+      children: (0, l.jsx)(o.Z, {
         className: a()(_.enhancedCTA, _.ctaGradientBackground),
         iconClassName: _.premiumIcon,
         subscriptionTier: m.Si.TIER_2,
