@@ -1,24 +1,9 @@
 "use strict";
-n.d(t, {
-  BS: function() {
-    return l
-  },
-  cu: function() {
-    return s
-  },
-  lY: function() {
-    return o
-  },
-  uX: function() {
-    return a
-  }
-});
-var i = n(70956),
-  r = n(689938);
 
-function s(e) {
+function i(e) {
   var t;
   return {
+    type: e.type,
     channel_id: e.channelId,
     message_id: e.messageId,
     saved_at: e.savedAt.toISOString(),
@@ -32,8 +17,9 @@ function s(e) {
   }
 }
 
-function o(e) {
+function r(e) {
   return {
+    type: e.type,
     channelId: e.channel_id,
     messageId: e.message_id,
     savedAt: new Date(e.saved_at),
@@ -47,22 +33,17 @@ function o(e) {
   }
 }
 
-function a(e) {
+function s(e) {
   return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
 }
-let l = [{
-  duration: i.Z.Millis.HOUR,
-  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
-}, {
-  duration: 2 * i.Z.Millis.HOUR,
-  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
-}, {
-  duration: 4 * i.Z.Millis.HOUR,
-  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
-}, {
-  duration: i.Z.Millis.DAY,
-  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
-}, {
-  duration: i.Z.Millis.WEEK,
-  getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
-}]
+n.d(t, {
+  cu: function() {
+    return i
+  },
+  lY: function() {
+    return r
+  },
+  uX: function() {
+    return s
+  }
+})
