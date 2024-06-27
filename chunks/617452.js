@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-  R: function() {
+  J: function() {
     return s
   },
   e: function() {
@@ -13,21 +13,21 @@ let i = (0, n(818083).B)({
     label: "Collectibles Shop Bundle",
     defaultConfig: {
       enabled: !1,
-      useNowForAllCollectedModals: !1
+      showToastAfterUseBundle: !1
     },
     treatments: [{
       id: 1,
       label: "Shop with bundle",
       config: {
         enabled: !0,
-        useNowForAllCollectedModals: !1
+        showToastAfterUseBundle: !1
       }
     }, {
       id: 2,
       label: "Bundle + Use Now Non-Bundle",
       config: {
         enabled: !0,
-        useNowForAllCollectedModals: !0
+        showToastAfterUseBundle: !0
       }
     }]
   }),
@@ -36,4 +36,4 @@ let i = (0, n(818083).B)({
   }).enabled,
   s = e => i.useExperiment({
     location: e
-  }).enabled
+  }).showToastAfterUseBundle
