@@ -1,18 +1,18 @@
 n.d(t, {
   Z: function() {
-    return r
+    return i
   }
 });
 var s = n(735250);
 n(470079);
 var a = n(325767);
 
-function r(e) {
+function i(e) {
   let {
     width: t = 80,
     height: n = 20,
-    color: r = "currentColor",
-    foreground: i,
+    color: i = "currentColor",
+    foreground: r,
     ...l
   } = e;
   return (0, s.jsxs)("svg", {
@@ -27,8 +27,8 @@ function r(e) {
       children: (0, s.jsx)("path", {
         d: "m0 0h8v20h-8zm4 2c-1.1045695 0-2 .8954305-2 2v12c0 1.1045695.8954305 2 2 2s2-.8954305 2-2v-12c0-1.1045695-.8954305-2-2-2z",
         fillRule: "evenodd",
-        fill: r,
-        className: i
+        fill: i,
+        className: r
       })
     }), (0, s.jsx)("rect", {
       fill: "url(#pill-frame-pattern)",

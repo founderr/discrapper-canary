@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(622535),
   o = n(481060),
   c = n(100527),
@@ -23,11 +23,11 @@ t.Z = () => {
   let e = a.useRef(null),
     [t, n] = a.useState(!1),
     {
-      analyticsLocations: r
+      analyticsLocations: i
     } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
     [S, f] = a.useState(!1);
   (0, E.FM)();
-  let h = (0, R.b)("SubscriberNitroHome");
+  let M = (0, R.b)("SubscriberNitroHome");
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(o.AdvancedScrollerAuto, {
       className: N.mainPageScroller,
@@ -35,14 +35,14 @@ t.Z = () => {
       children: (0, s.jsx)("div", {
         className: N.container,
         children: (0, s.jsxs)(d.Gt, {
-          value: r,
+          value: i,
           children: [(0, s.jsx)(I.Z, {
             className: N.heroHeading,
             location: C.MQ.HOME
           }), (0, s.jsx)(u.Z, {
             variant: C.R0.WHATS_NEW,
-            className: i()(N.whatsNew, {
-              [N.whatsNewWithOriginalHeroHeading]: !h
+            className: r()(N.whatsNew, {
+              [N.whatsNewWithOriginalHeroHeading]: !M
             }),
             noBackground: !0,
             leftAlignHeaders: !0
@@ -66,7 +66,7 @@ t.Z = () => {
           }), (0, s.jsx)(l.$, {
             onChange: e => {
               e && !S && (_.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                location_stack: r
+                location_stack: i
               }), f(!0))
             },
             children: (0, s.jsx)("div", {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return m
+    return I
   }
 });
 var i = n(735250),
@@ -19,10 +19,10 @@ let E = a.memo(function(e) {
     channel: n,
     referencedMessage: _,
     compact: E = !1
-  } = e, m = _.state === r.Y.LOADED ? _.message : void 0, I = (0, l.p)(), T = a.useMemo(() => (null == m ? void 0 : m.content) != null && "" !== m.content ? (0, d.ZP)(m, {
+  } = e, I = _.state === r.Y.LOADED ? _.message : void 0, m = (0, l.p)(), T = a.useMemo(() => (null == I ? void 0 : I.content) != null && "" !== I.content ? (0, d.ZP)(I, {
     formatInline: !0,
-    shouldFilterKeywords: I
-  }).content : null, [m, I]), h = (0, s.e7)([o.Z], () => null != m && o.Z.isBlockedForMessage(m), [m]), N = (0, u.Uj)(m), f = (0, u.Uj)(t);
+    shouldFilterKeywords: m
+  }).content : null, [I, m]), h = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), N = (0, u.Uj)(I), f = (0, u.Uj)(t);
   return (0, i.jsx)(c.Z, {
     repliedAuthor: N,
     baseAuthor: f,
@@ -35,7 +35,7 @@ let E = a.memo(function(e) {
   })
 });
 
-function m(e, t, n, a, s) {
+function I(e, t, n, a, s) {
   return e.type !== _.uaV.REPLY || null == n ? null : (0, i.jsx)(E, {
     baseMessage: e,
     channel: t,

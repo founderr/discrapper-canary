@@ -16,7 +16,7 @@ var i = n(933557),
 n(978003);
 var E = n(689938);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,7 +25,7 @@ function m(e, t, n) {
   }) : e[t] = n, e
 }
 
-function I(e, t) {
+function m(e, t) {
   return {
     originLabel: e.name,
     originIconUrl: d.ZP.getGuildIconURL({
@@ -43,7 +43,7 @@ function I(e, t) {
 }
 class T {
   getForwardInfo() {
-    var e, t, n, d, m;
+    var e, t, n, d, I;
     let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
       h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
       N = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
@@ -73,7 +73,7 @@ class T {
           snapshotIndex: g
         } : {
           snapshotIndex: g,
-          footerInfo: I(e, O)
+          footerInfo: m(e, O)
         }
       }
       if (!f.can(e.accessPermissions, e)) return {
@@ -96,19 +96,19 @@ class T {
     if (null == M) return {
       snapshotIndex: g
     };
-    let v = null !== (m = p.getGuild(M)) && void 0 !== m ? m : C.getGuild(M);
+    let v = null !== (I = p.getGuild(M)) && void 0 !== I ? I : C.getGuild(M);
     if (null == v) return {
       snapshotIndex: g
     };
     let L = T.getChannel(null === (n = S.messageReference) || void 0 === n ? void 0 : n.channel_id);
     return null == L || f.can(L.accessPermissions, L) ? {
       snapshotIndex: g,
-      footerInfo: I(v, O)
+      footerInfo: m(v, O)
     } : {
       snapshotIndex: g
     }
   }
   constructor(e, t, n) {
-    m(this, "parentMessage", void 0), m(this, "messageSnapshot", void 0), m(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
+    I(this, "parentMessage", void 0), I(this, "messageSnapshot", void 0), I(this, "snapshotIndex", void 0), this.parentMessage = e, this.messageSnapshot = t, this.snapshotIndex = n
   }
 }

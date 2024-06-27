@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(602667),
   _ = n(87894),
   E = n(372113),
-  m = n(206044),
-  I = n(266843),
+  I = n(206044),
+  m = n(266843),
   T = n(46140),
   h = n(441468);
 
@@ -49,14 +49,14 @@ function f(e) {
     containerRef: S,
     size: A,
     height: R
-  } = (0, I.h)([t]), O = (0, r.q)({
+  } = (0, m.h)([t]), O = (0, r.q)({
     location: T.dr.QUESTS_CARD
   }), {
     expansionSpring: x,
     isAnimating: M,
     isExpanded: v,
     toggleExpanded: L
-  } = (0, I.O)({
+  } = (0, m.O)({
     initiallyExpanded: !O || l || (0, _.iM)({
       location: n,
       quest: t
@@ -83,7 +83,7 @@ function f(e) {
         onMouseEnter: p,
         onBlur: C,
         onMouseLeave: C,
-        children: [(0, i.jsx)(m.Z, {
+        children: [(0, i.jsx)(I.Z, {
           isFocused: N,
           isQuestExpired: g,
           location: n,

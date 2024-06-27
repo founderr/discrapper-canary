@@ -16,24 +16,24 @@ function u(e) {
   let {
     type: t,
     onClick: n
-  } = e, [u, E] = a.useState(!1), m = (0, l.sv)(), I = () => {
+  } = e, [u, E] = a.useState(!1), I = (0, l.sv)(), m = () => {
     n(), r.default.track(c.rMx.INBOX_CHANNEL_ACKED, {
       marked_all_channels_as_read: !0,
       num_unread_channels_remaining: 0
     })
   }, T = e => {
-    e.shiftKey ? I() : E(!0)
+    e.shiftKey ? m() : E(!0)
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [u ? (0, i.jsx)(_, {
-      confirm: I,
+      confirm: m,
       cancel: () => E(!1)
     }) : null, "bottom-floating" === t ? (0, i.jsx)(o.a, {
       text: d.Z.Messages.MARK_ALL_AS_READ,
       icon: s.DoubleCheckmarkLargeIcon,
       onClick: T
     }) : (0, i.jsx)(s.CircleIconButton, {
-      tooltip: m ? d.Z.Messages.MARK_ALL_AS_READ : d.Z.Messages.UNREADS_MARK_READ,
+      tooltip: I ? d.Z.Messages.MARK_ALL_AS_READ : d.Z.Messages.UNREADS_MARK_READ,
       color: s.CircleIconButtonColors.SECONDARY,
       icon: (0, i.jsx)(s.DoubleCheckmarkLargeIcon, {
         size: "xs",

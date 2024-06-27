@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(393238),
   E = n(607070),
-  m = n(210887),
-  I = n(810090),
+  I = n(210887),
+  m = n(810090),
   T = n(572004),
   h = n(617136),
   N = n(113434),
@@ -27,7 +27,7 @@ var i = n(735250),
   M = n(689938),
   v = n(491829);
 let L = (0, r.animated)(u.ChevronSmallDownIcon),
-  Z = (0, r.animated)(I.Z),
+  Z = (0, r.animated)(m.Z),
   P = e => {
     let {
       quest: t,
@@ -70,7 +70,7 @@ t.Z = e => {
     isFocused: n,
     isQuestExpired: s,
     quest: d,
-    location: I,
+    location: m,
     size: T,
     expansionSpring: b,
     isAnimating: D,
@@ -85,7 +85,7 @@ t.Z = e => {
     ref: F,
     width: w,
     scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, p.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, O.uq)(I), Q = I === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, x.dr.QUESTS_CARD, I), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, p.nP)(d.config.assets.hero), [d]), z = a.useRef(null), K = (0, O.uq)(m), Q = m === f.jn.QUESTS_EMBED, q = (0, N.t5)(d, x.dr.QUESTS_CARD, m), X = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(d.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -96,7 +96,7 @@ t.Z = e => {
   }), ee = e => {
     e.stopPropagation(), e.currentTarget.blur(), B(), (0, h._3)({
       questId: d.id,
-      questContent: I,
+      questContent: m,
       questContentCTA: j ? h.jZ.COLLAPSE : h.jZ.EXPAND,
       questContentPosition: y
     })
@@ -165,7 +165,7 @@ t.Z = e => {
               className: v.headerCollapsedContentRewardWrapper,
               children: (0, i.jsx)(A.Z, {
                 quest: d,
-                questContent: I,
+                questContent: m,
                 className: v.headerCollapsedRewardTile
               })
             }), (0, i.jsxs)("div", {
@@ -241,7 +241,7 @@ t.Z = e => {
             })]
           }), !s && K && (0, i.jsx)(P, {
             quest: d,
-            location: I,
+            location: m,
             questContentPosition: y
           })]
         })]
@@ -254,7 +254,7 @@ t.Z = e => {
           }) : O.jc
         },
         children: [(0, i.jsx)(R.r, {
-          questContent: I,
+          questContent: m,
           quest: d,
           questContentPosition: y,
           shouldShowDisclosure: !0,
@@ -276,7 +276,7 @@ t.Z = e => {
               })
             })
           })
-        }), U && !(0, O.W_)(I) && (0, i.jsx)(u.Clickable, {
+        }), U && !(0, O.W_)(m) && (0, i.jsx)(u.Clickable, {
           onClick: ee,
           className: v.iconWrapper,
           "aria-label": j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,

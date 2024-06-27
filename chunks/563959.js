@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(594174),
   _ = n(702346),
   E = n(768581),
-  m = n(91047),
-  I = n(628566),
+  I = n(91047),
+  m = n(628566),
   T = n(693912),
   h = n(981631);
 
@@ -32,7 +32,7 @@ function N(e, t) {
         botIconFirst: !0
       }),
       h = u.default.getUser(null === (_ = a.bot) || void 0 === _ ? void 0 : _.id),
-      N = I.Z.getIntegration(e.id, a.id),
+      N = m.Z.getIntegration(e.id, a.id),
       f = e.isPrivate() && null != N ? t => {
         (0, l.jW)(t, async () => {
           let {
@@ -44,7 +44,7 @@ function N(e, t) {
             integration: N
           })
         })
-      } : null != h ? t => (0, m.Pv)(t, h, e) : void 0,
+      } : null != h ? t => (0, I.Pv)(t, h, e) : void 0,
       {
         bot: p
       } = a;

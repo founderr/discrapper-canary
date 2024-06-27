@@ -8,8 +8,8 @@ n.d(t, {
 });
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(873546),
   o = n(286379),
   c = n(399606),
@@ -28,10 +28,10 @@ var s = n(735250),
   m = n(695346),
   S = n(594174),
   f = n(153124),
-  h = n(626135),
-  M = n(792125),
-  x = n(280570),
-  b = n(914788),
+  M = n(626135),
+  h = n(792125),
+  b = n(280570),
+  x = n(914788),
   O = n(841409),
   P = n(652262),
   L = n(880257),
@@ -50,16 +50,16 @@ let w = {
     [U.dG.ACTIVITY]: () => (0, s.jsx)(Z.Z, {}),
     [U.dG.SETTINGS]: () => (0, s.jsx)(B.Z, {})
   },
-  F = {
+  V = {
     [U.dG.REQUESTS]: () => (0, s.jsx)(D.Z, {}),
     [U.dG.ACTIVITY]: () => (0, s.jsx)(Z.Z, {})
   };
 
-function V(e) {
+function F(e) {
   let {
     section: t,
     handleItemSelect: n
-  } = e, a = (0, v.gU)(), r = (0, L.Z)();
+  } = e, a = (0, v.gU)(), i = (0, L.Z)();
   return (0, s.jsxs)(_.TabBar, {
     className: k.settingsTabBar,
     "aria-label": y.Z.Messages.FAMILY_CENTER_TITLE,
@@ -79,7 +79,7 @@ function V(e) {
         className: k.badge,
         count: a
       }) : null]
-    }), r ? (0, s.jsx)(_.TabBar.Item, {
+    }), i ? (0, s.jsx)(_.TabBar.Item, {
       className: k.settingsTabBarItem,
       id: U.dG.SETTINGS,
       children: y.Z.Messages.SETTINGS
@@ -92,18 +92,18 @@ function W(e) {
     theme: t,
     section: n,
     handleItemSelect: a
-  } = e, r = (0, f.Dt)(), o = (0, v.gU)();
+  } = e, i = (0, f.Dt)(), o = (0, v.gU)();
   return (0, s.jsxs)(g.Z, {
-    className: i()((0, M.Q)(t), k.sidebarTabBar),
+    className: r()((0, h.Q)(t), k.sidebarTabBar),
     scrollable: l.tq,
     role: "navigation",
-    "aria-labelledby": r,
+    "aria-labelledby": i,
     toolbar: !0,
     children: [(0, s.jsx)(g.Z.Icon, {
       icon: _.GroupIcon,
       "aria-hidden": !0
     }), (0, s.jsx)(g.Z.Title, {
-      id: r,
+      id: i,
       children: y.Z.Messages.FAMILY_CENTER_TITLE
     }), (0, s.jsx)(g.Z.Divider, {}), (0, s.jsxs)(_.TabBar, {
       "aria-label": y.Z.Messages.FAMILY_CENTER_TITLE,
@@ -132,7 +132,7 @@ function K() {
   let e = (0, L.Z)(),
     t = (0, v.M8)(),
     n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-    r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()),
+    i = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()),
     l = (0, P.M)(),
     {
       selectedTab: E,
@@ -141,14 +141,14 @@ function K() {
     I = (0, f.Dt)(),
     g = S.default.getCurrentUser(),
     N = null != e,
-    m = r && null != g && !N;
+    m = i && null != g && !N;
   return (a.useEffect(() => {
-    (0, A.e)("family-center"), x.ZP.initialPageLoad(), !n && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+    (0, A.e)("family-center"), b.ZP.initialPageLoad(), !n && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: H.L.AUTO,
       forceTrack: !0
     })
   }, []), a.useEffect(() => {
-    r && N && (h.default.track(j.rMx.FAMILY_CENTER_VIEWED, {
+    i && N && (M.default.track(j.rMx.FAMILY_CENTER_VIEWED, {
       is_considered_adult: e,
       num_of_accepted_links: t,
       selected_teen_id: l,
@@ -157,12 +157,12 @@ function K() {
     }), p.Z.increment({
       name: o.V.FAMILY_CENTER_VIEW
     }))
-  }, [r, N]), m) ? ((0, u.mN)(G.L0.FAMILY_CENTER), null) : (0, s.jsxs)("main", {
-    className: i()(k.container),
+  }, [i, N]), m) ? ((0, u.mN)(G.L0.FAMILY_CENTER), null) : (0, s.jsxs)("main", {
+    className: r()(k.container),
     "aria-label": y.Z.Messages.FAMILY_CENTER_TITLE,
     children: [(0, s.jsx)(R.yY, {
       location: y.Z.Messages.FAMILY_CENTER_TITLE
-    }), (0, s.jsx)(V, {
+    }), (0, s.jsx)(F, {
       section: E,
       handleItemSelect: e => {
         T(e)
@@ -181,17 +181,17 @@ function K() {
 function Y() {
   let {
     analyticsLocations: e
-  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), g = (0, P.M)(), M = (0, c.e7)([N.Z], () => N.Z.theme), {
+  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), i = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([x.Z], () => x.Z.getIsInitialized()), g = (0, P.M)(), h = (0, c.e7)([N.Z], () => N.Z.theme), {
     selectedTab: Z,
     handleTabChange: D
-  } = (0, O.Z)(), B = (0, f.Dt)(), w = S.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
+  } = (0, O.Z)(), B = (0, f.Dt)(), w = S.default.getCurrentUser(), F = null != t, K = l && null != w && !F;
   if (a.useEffect(() => {
-      E.Y(j.Z5c.FAMILY_CENTER), (0, A.e)("family-center"), !b.Z.isLoading() && b.Z.canRefetch() && x.ZP.initialPageLoad(), !r && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+      E.Y(j.Z5c.FAMILY_CENTER), (0, A.e)("family-center"), !x.Z.isLoading() && x.Z.canRefetch() && b.ZP.initialPageLoad(), !i && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: H.L.AUTO,
         forceTrack: !0
       })
     }, []), a.useEffect(() => {
-      l && V && (h.default.track(j.rMx.FAMILY_CENTER_VIEWED, {
+      l && F && (M.default.track(j.rMx.FAMILY_CENTER_VIEWED, {
         is_considered_adult: t,
         num_of_accepted_links: n,
         selected_teen_id: g,
@@ -200,21 +200,21 @@ function Y() {
       }), p.Z.increment({
         name: o.V.FAMILY_CENTER_VIEW
       }))
-    }, [l, V]), a.useEffect(() => {
+    }, [l, F]), a.useEffect(() => {
       let e = m.Ex.getSetting();
       l && t && void 0 === e && m.Ex.updateSetting(!0)
     }, [l, t]), K) return (0, u.mN)(G.L0.FAMILY_CENTER), null;
   let Y = Z !== U.dG.SETTINGS ? Z : U.dG.ACTIVITY,
-    z = F[Y];
+    z = V[Y];
   return (0, s.jsx)(I.Gt, {
     value: e,
     children: (0, s.jsxs)("main", {
-      className: i()(k.container, k.containerSidenav),
+      className: r()(k.container, k.containerSidenav),
       "aria-label": y.Z.Messages.FAMILY_CENTER_TITLE,
       children: [(0, s.jsx)(R.yY, {
         location: y.Z.Messages.FAMILY_CENTER_TITLE
       }), (0, s.jsx)(W, {
-        theme: M,
+        theme: h,
         section: Y,
         handleItemSelect: e => {
           D(e)

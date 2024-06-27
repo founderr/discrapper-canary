@@ -33,7 +33,7 @@ function S(e) {
     icon: u.UserPlusIcon,
     title: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
     subtitle: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
-    beta: !0
+    beta: !1
   }, {
     type: a.Y.GUILD_INSTALL,
     icon: u.ServerIcon,

@@ -1,7 +1,7 @@
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(613828),
   o = n(435935),
   c = n(442837),
@@ -30,7 +30,7 @@ t.Z = () => {
       color: "text-muted",
       children: C.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, s.jsx)(d.FormSwitch, {
-      className: i()(p.marginTop8, p.marginBottom20),
+      className: r()(p.marginTop8, p.marginBottom20),
       value: e,
       note: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
@@ -66,7 +66,7 @@ t.Z = () => {
         })]
       })
     }) : null, (0, s.jsx)(d.FormSwitch, {
-      className: i()(p.marginTop20, p.marginBottom20),
+      className: r()(p.marginTop20, p.marginBottom20),
       value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
       note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,

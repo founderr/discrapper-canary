@@ -1,7 +1,7 @@
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(91192),
   o = n(481060),
   c = n(209613),
@@ -21,7 +21,7 @@ var s = n(735250),
   S = n(331651),
   f = n(926895);
 
-function h(e) {
+function M(e) {
   let {
     header: t,
     description: n,
@@ -53,11 +53,11 @@ function h(e) {
   })
 }
 
-function M() {
+function h() {
   return (0, s.jsxs)("div", {
-    className: i()(m.box, m.linkingBanner, m.linkingBannerParent),
+    className: r()(m.box, m.linkingBanner, m.linkingBannerParent),
     children: [(0, s.jsxs)("div", {
-      className: i()(m.linkingBannerUpper),
+      className: r()(m.linkingBannerUpper),
       children: [(0, s.jsxs)("div", {
         className: m.__invalid_header,
         children: [(0, s.jsx)(o.Heading, {
@@ -79,15 +79,15 @@ function M() {
       })]
     }), (0, s.jsxs)("div", {
       className: m.steps,
-      children: [(0, s.jsx)(h, {
+      children: [(0, s.jsx)(M, {
         header: N.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
         description: N.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
-      }), (0, s.jsx)(h, {
+      }), (0, s.jsx)(M, {
         header: N.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
         description: N.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
-      }), (0, s.jsx)(h, {
+      }), (0, s.jsx)(M, {
         header: N.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
         description: N.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
@@ -96,10 +96,10 @@ function M() {
   })
 }
 
-function x() {
+function b() {
   let e = (0, T.VM)();
   return (0, s.jsxs)("div", {
-    className: i()(m.box, m.linkingBanner),
+    className: r()(m.box, m.linkingBanner),
     children: [(0, s.jsxs)("div", {
       children: [(0, s.jsx)(o.Heading, {
         className: S.marginBottom8,
@@ -123,26 +123,26 @@ function x() {
   })
 }
 
-function b(e) {
+function x(e) {
   let {
     sectionType: t,
     sectionTitle: n,
-    requests: r
-  } = e, i = a.useRef(null), _ = "".concat(t, "-list"), E = (0, c.Z)(_), u = a.useCallback(e => {
+    requests: i
+  } = e, r = a.useRef(null), _ = "".concat(t, "-list"), E = (0, c.Z)(_), u = a.useCallback(e => {
     let {
       row: n,
       listIndex: a
-    } = e, i = r[n], l = a === r.length;
-    return null == i ? null : (0, s.jsx)(p.Z, {
-      userId: i.id,
+    } = e, r = i[n], l = a === i.length;
+    return null == r ? null : (0, s.jsx)(p.Z, {
+      userId: r.id,
       isLast: l,
       children: () => t === A.ne.ACTIVE ? (0, s.jsx)(C.u, {
-        user: i
+        user: r
       }) : (0, s.jsx)(g.B, {
-        user: i
+        user: r
       })
-    }, i.id)
-  }, [r, t]), T = a.useCallback(() => (0, s.jsx)(d.Z, {
+    }, r.id)
+  }, [i, t]), T = a.useCallback(() => (0, s.jsx)(d.Z, {
     className: m.__invalid_sectionTitle,
     children: (0, s.jsx)(o.Text, {
       className: S.marginBottom8,
@@ -168,13 +168,13 @@ function b(e) {
             innerAriaLabel: n,
             ref: e => {
               var n;
-              i.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
+              r.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             sectionHeight: A.zE,
             rowHeight: A.ip,
             renderSection: T,
             renderRow: u,
-            sections: [r.length],
+            sections: [i.length],
             chunkSize: 30,
             fade: !0,
             ...l
@@ -192,11 +192,11 @@ let O = () => {
         count: t.length,
         max: n
       },
-      r = (0, _.o)(N.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), N.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
+      i = (0, _.o)(N.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), N.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
     return (0, s.jsx)(s.Fragment, {
-      children: t.length > 0 ? (0, s.jsx)(b, {
+      children: t.length > 0 ? (0, s.jsx)(x, {
         sectionType: A.ne.ACTIVE,
-        sectionTitle: r,
+        sectionTitle: i,
         requests: t
       }) : (0, s.jsxs)("div", {
         className: m.section,
@@ -204,7 +204,7 @@ let O = () => {
           className: S.marginBottom8,
           variant: "eyebrow",
           color: "header-secondary",
-          children: r
+          children: i
         }), (0, s.jsx)("div", {
           className: m.box,
           children: (0, s.jsx)(I.Z, {
@@ -232,7 +232,7 @@ let O = () => {
     }) : null
   },
   L = () => (0, E.o)() ? (0, s.jsxs)("div", {
-    className: i()(m.__invalid_helpLineInfo, S.marginTop20),
+    className: r()(m.__invalid_helpLineInfo, S.marginTop20),
     children: [(0, s.jsx)(o.Heading, {
       className: m.supportHeader,
       variant: "heading-sm/semibold",
@@ -254,7 +254,7 @@ let O = () => {
       }), N.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
-    return 0 === e.length ? null : (0, s.jsx)(b, {
+    return 0 === e.length ? null : (0, s.jsx)(x, {
       sectionType: A.ne.PENDING,
       sectionTitle: t,
       requests: e
@@ -264,6 +264,6 @@ t.Z = () => {
   let e = (0, u.Z)();
   return (0, s.jsxs)("div", {
     className: m.container,
-    children: [e ? (0, s.jsx)(M, {}) : (0, s.jsx)(x, {}), (0, s.jsx)(O, {}), (0, s.jsx)(v, {}), (0, s.jsx)(P, {}), (0, s.jsx)(L, {})]
+    children: [e ? (0, s.jsx)(h, {}) : (0, s.jsx)(b, {}), (0, s.jsx)(O, {}), (0, s.jsx)(v, {}), (0, s.jsx)(P, {}), (0, s.jsx)(L, {})]
   })
 }

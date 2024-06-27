@@ -1,7 +1,7 @@
 n(653041);
 var s, a = n(442837),
-  r = n(570140),
-  i = n(381496),
+  i = n(570140),
+  r = n(381496),
   l = n(430824);
 
 function o(e, t, n) {
@@ -38,9 +38,9 @@ class _ extends(s = a.ZP.PersistedStore) {
     return 0 !== c.lastFetched
   }
 }
-o(_, "displayName", "GuildAffinitiesStore"), o(_, "persistKey", "GuildAffinitiesStore"), t.Z = new _(r.Z, {
+o(_, "displayName", "GuildAffinitiesStore"), o(_, "persistKey", "GuildAffinitiesStore"), t.Z = new _(i.Z, {
   CONNECTION_OPEN: function() {
-    return Date.now() - c.lastFetched > 864e5 && (0, i.j)(), !1
+    return Date.now() - c.lastFetched > 864e5 && (0, r.j)(), !1
   },
   LOAD_GUILD_AFFINITIES_SUCCESS: function(e) {
     let {

@@ -5,17 +5,17 @@ var i, a, s, l, r = n(735250),
   u = n(481060),
   _ = n(689938),
   E = n(405202);
-let m = {
+let I = {
   BLOCK: E.block,
   INLINE: E.inline
 };
-class I extends(l = o.PureComponent) {
+class m extends(l = o.PureComponent) {
   render() {
     let {
       children: e,
       className: t,
       textClassName: n,
-      type: i = m.BLOCK,
+      type: i = I.BLOCK,
       style: a
     } = this.props;
     return (0, r.jsxs)("div", {
@@ -35,9 +35,9 @@ class I extends(l = o.PureComponent) {
     })
   }
 }
-i = I, a = "Types", s = m, a in i ? Object.defineProperty(i, a, {
+i = m, a = "Types", s = I, a in i ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = I
+}) : i[a] = s, t.Z = m

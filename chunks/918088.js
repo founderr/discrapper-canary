@@ -23,8 +23,8 @@ var i = n(278074),
   u = n(271383),
   _ = n(375954),
   E = n(594174),
-  m = n(768581),
-  I = n(176354),
+  I = n(768581),
+  m = n(176354),
   T = n(358085),
   h = n(798628),
   N = n(79390),
@@ -85,8 +85,8 @@ function v(e, t) {
   } = e;
   if (null == r) return;
   let E = e.state === S.yb.SENT,
-    m = E ? null != l ? l : (0, g.H)(r.expiry) : "",
-    I = null == m && E,
+    I = E ? null != l ? l : (0, g.H)(r.expiry) : "",
+    m = null == I && E,
     {
       selectedAnswerIds: T,
       submitting: N,
@@ -102,7 +102,7 @@ function v(e, t) {
   let O = T.size > 0,
     x = C.some(e => !0 === e.me_vote),
     v = !f && x,
-    L = v || I || p,
+    L = v || m || p,
     Z = E && A && (!x || f || L),
     P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
     b = null != P ? u.ZP.getSelfMember(P) : null,
@@ -111,15 +111,15 @@ function v(e, t) {
   return {
     poll: r,
     canTapAnswers: Z,
-    canRemoveVote: v && E && !I,
+    canRemoveVote: v && E && !m,
     canShowVoteCounts: L,
     canSubmitVote: !N && O && !v && E && !D && !j,
-    expirationLabel: m,
+    expirationLabel: I,
     hasSelectedAnswer: O,
     hasVoted: v,
     hasVoteRecorded: x,
     isEditingVote: f,
-    isExpired: I,
+    isExpired: m,
     isInteractive: A,
     isSent: E,
     reactions: C,
@@ -210,7 +210,7 @@ function L(e, t) {
             id: null == e.id ? null : "".concat(e.id),
             name: e.name,
             displayName: null == e.id ? r.ZP.convertSurrogateToName(e.name) : e.name,
-            src: null == e.id ? I.ZP.getURL(e.name) : m.ZP.getEmojiURL({
+            src: null == e.id ? m.ZP.getURL(e.name) : I.ZP.getEmojiURL({
               id: e.id,
               animated: o,
               size: n

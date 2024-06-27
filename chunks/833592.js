@@ -9,10 +9,10 @@ n.d(t, {
     return E
   },
   jk: function() {
-    return m
+    return I
   },
   wt: function() {
-    return I
+    return m
   }
 });
 var i = n(990547),
@@ -37,7 +37,7 @@ function E() {
     type: "RESET_NOTIFICATION_CENTER"
   })
 }
-async function m(e, t) {
+async function I(e, t) {
   if (c.Z.loading) return;
   await l.Z.dispatch({
     type: "LOAD_NOTIFICATION_CENTER_ITEMS"
@@ -75,7 +75,7 @@ async function m(e, t) {
   }
 }
 
-function I(e) {
+function m(e) {
   null != e.local_id ? function(e) {
     l.Z.dispatch({
       type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK",

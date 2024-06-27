@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(911969),
   _ = n(376484),
   E = n(362604),
-  m = n(710845),
-  I = n(825829),
+  I = n(710845),
+  m = n(825829),
   T = n(623624),
   h = n(533694),
   N = n(182180),
@@ -64,8 +64,8 @@ var i = n(735250),
   eu = n(658975),
   e_ = n(147507),
   eE = n(585483),
-  em = n(5192),
-  eI = n(960048),
+  eI = n(5192),
+  em = n(960048),
   eT = n(709054),
   eh = n(937889),
   eN = n(818570),
@@ -137,7 +137,7 @@ let eO = Object.freeze({
       compact: a
     } = e, {
       author: l
-    } = t, r = t.getChannelId(), o = (0, s.e7)([k.default], () => k.default.getUser(t.mentions[0]), [t]), c = em.ZP.getName(null, r, o), d = (0, ef.l)({
+    } = t, r = t.getChannelId(), o = (0, s.e7)([k.default], () => k.default.getUser(t.mentions[0]), [t]), c = eI.ZP.getName(null, r, o), d = (0, ef.l)({
       user: l,
       channelId: r,
       guildId: n.guild_id,
@@ -209,7 +209,7 @@ let eO = Object.freeze({
     } = e, {
       id: r,
       author: o
-    } = t, d = P.default.getId(), u = t.getChannelId(), _ = (0, s.e7)([b.Z], () => b.Z.isCallActive(u, r), [u, r]), E = (0, s.e7)([G.Z], () => G.Z.getVoiceState(ep.ME, d)), m = !_ && null != t.call && !t.call.participants.includes(d), I = _ && (null == E || E.channelId !== u), T = a.useCallback(() => c.default.selectVoiceChannel(u), [u]), h = (0, ef.l)({
+    } = t, d = P.default.getId(), u = t.getChannelId(), _ = (0, s.e7)([b.Z], () => b.Z.isCallActive(u, r), [u, r]), E = (0, s.e7)([G.Z], () => G.Z.getVoiceState(ep.ME, d)), I = !_ && null != t.call && !t.call.participants.includes(d), m = _ && (null == E || E.channelId !== u), T = a.useCallback(() => c.default.selectVoiceChannel(u), [u]), h = (0, ef.l)({
       user: o,
       channelId: u,
       guildId: l.guild_id,
@@ -218,8 +218,8 @@ let eO = Object.freeze({
     return (0, i.jsx)(V.Z, {
       compact: n,
       message: t,
-      missed: m,
-      joinable: I,
+      missed: I,
+      joinable: m,
       usernameHook: h,
       onClickJoinCall: T
     })
@@ -348,26 +348,26 @@ let eO = Object.freeze({
         id: o
       },
       messageReference: c
-    } = t, u = t.getChannelId(), _ = (0, s.e7)([y.Z], () => y.Z.findActivity(o, e => e.type === ep.IIU.PLAYING), [o]), E = (0, s.e7)([D.Z], () => null != c ? D.Z.getChannel(c.channel_id) : null, [c]), m = null == c ? void 0 : c.guild_id, I = (0, ef.l)({
+    } = t, u = t.getChannelId(), _ = (0, s.e7)([y.Z], () => y.Z.findActivity(o, e => e.type === ep.IIU.PLAYING), [o]), E = (0, s.e7)([D.Z], () => null != c ? D.Z.getChannel(c.channel_id) : null, [c]), I = null == c ? void 0 : c.guild_id, m = (0, ef.l)({
       user: r,
       channelId: u,
       guildId: l.guild_id,
       messageId: t.id
     }), T = a.useCallback(() => {
-      if (null != E && null != m)(0, d.iV)({
+      if (null != E && null != I)(0, d.iV)({
         streamType: eC.lo.GUILD,
         ownerId: o,
         channelId: E.id,
-        guildId: m
+        guildId: I
       })
-    }, [o, E, m]);
+    }, [o, E, I]);
     return null != c && null != E && null != c.guild_id ? (0, i.jsx)(J.Z, {
       message: t,
       compact: n,
       channel: E,
       playingActivity: _,
       onJoinStream: T,
-      usernameHook: I
+      usernameHook: m
     }) : null
   },
   [ep.uaV.GUILD_DISCOVERY_DISQUALIFIED]: function(e) {
@@ -459,7 +459,7 @@ let eO = Object.freeze({
       compact: n,
       channel: a
     } = e;
-    return (0, I.nY)(t) ? (0, i.jsx)(w.Z, {
+    return (0, m.nY)(t) ? (0, i.jsx)(w.Z, {
       message: t,
       compact: n,
       channel: a
@@ -584,13 +584,13 @@ let eO = Object.freeze({
       channelId: r.id,
       guildId: r.guild_id,
       messageId: a.id
-    }), u = (0, s.e7)([U.Z], () => U.Z.can(ep.Plq.MUTE_MEMBERS, r)), _ = (0, s.e7)([x.Z], () => x.Z.getParticipant(r.id, a.author.id)), E = new Date(eT.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == _ ? void 0 : null === (t = _.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), m = u && (null == _ ? void 0 : _.rtsState) === M.xO.REQUESTED_TO_SPEAK && E;
+    }), u = (0, s.e7)([U.Z], () => U.Z.can(ep.Plq.MUTE_MEMBERS, r)), _ = (0, s.e7)([x.Z], () => x.Z.getParticipant(r.id, a.author.id)), E = new Date(eT.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == _ ? void 0 : null === (t = _.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), I = u && (null == _ ? void 0 : _.rtsState) === M.xO.REQUESTED_TO_SPEAK && E;
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(ei.Z, {
         message: a,
         compact: c,
         usernameHook: d
-      }), m ? (0, i.jsxs)(l.Button, {
+      }), I ? (0, i.jsxs)(l.Button, {
         wrapperClassName: eS.inviteToSpeakButtonWrapper,
         innerClassName: eS.inviteToSpeakButtonInner,
         look: l.Button.Looks.FILLED,
@@ -678,7 +678,7 @@ t.Z = a.memo(function(e) {
   } = t, r = eO[l];
   if (null == r) {
     var o;
-    return o = Error("unknown message type ".concat(t.type)), eI.Z.captureException(o), new m.Z("SystemMessage").error("", o), null
+    return o = Error("unknown message type ".concat(t.type)), em.Z.captureException(o), new I.Z("SystemMessage").error("", o), null
   }
   return (0, i.jsx)(F.ZP, {
     message: t,

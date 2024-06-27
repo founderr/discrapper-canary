@@ -6,16 +6,16 @@ n.d(t, {
     return a
   },
   e6: function() {
-    return r
+    return i
   },
   iq: function() {
-    return i
+    return r
   }
 }), n(757143);
 var s = n(441729);
 let a = null != window.speechSynthesis;
 
-function r(e, t) {
+function i(e, t) {
   let n = e.replace(/(https?:\/\/[^\s]+)/g, e => {
     let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
     return null != t ? t[1] : ""
@@ -25,7 +25,7 @@ function r(e, t) {
   return a.rate = s.Z.speechRate, a
 }
 
-function i(e, t) {
+function r(e, t) {
   a && (e.voice = t, speechSynthesis.speak(e))
 }
 

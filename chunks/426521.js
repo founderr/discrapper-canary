@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(695346),
   _ = n(598077),
   E = n(594174),
-  m = n(626135),
-  I = n(709054),
+  I = n(626135),
+  m = n(709054),
   T = n(591759),
   h = n(833592),
   N = n(497089),
@@ -129,7 +129,7 @@ let b = a.memo(function(e) {
             })
           } else await (0, o.Z)(i)
         }
-        m.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
+        I.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
           action_type: N.ud.CLICKED,
           notification_center_id: l.id,
           item_type: l.type,
@@ -170,7 +170,7 @@ let b = a.memo(function(e) {
           }) : null, (0, i.jsx)(s.Text, {
             variant: "text-xs/medium",
             color: E ? "text-muted" : "header-secondary",
-            children: (0, f.a3)(I.default.extractTimestamp(l.id))
+            children: (0, f.a3)(m.default.extractTimestamp(l.id))
           }), M]
         })]
       }), v ? null : (0, i.jsx)(A.z, {

@@ -6,8 +6,8 @@ var i, a, s, l, r = n(442837),
   u = n(57132),
   _ = n(483360),
   E = n(892880),
-  m = n(405656),
-  I = n(51144),
+  I = n(405656),
+  m = n(51144),
   T = n(271383),
   h = n(768119),
   N = n(246946),
@@ -58,7 +58,7 @@ function A(e, t) {
       let n = f.default.getUser(t.id);
       return null == n ? e : (e.push({
         id: n.id,
-        text: I.ZP.getUserTag(n),
+        text: m.ZP.getUserTag(n),
         user: n
       }), e)
     }, [])).length > t && (e.length = t), e
@@ -92,7 +92,7 @@ function R(e, t, n) {
       } = e;
       return {
         user: t,
-        text: I.ZP.getUserTag(t)
+        text: m.ZP.getUserTag(t)
       }
     })), i = e.results)
   } else {
@@ -154,7 +154,7 @@ function x(e, t) {
           results: [e, l, r]
         }
       }
-    }(e, t))), 5 > (0, m.BU)(i) && i.push(O(e)), i
+    }(e, t))), 5 > (0, I.BU)(i) && i.push(O(e)), i
   }(t.token, e) : t.type === p.Sap.EMPTY && (n.push(O(t.token)), (0, u.cn)(), n.push(function(e) {
     if (N.Z.hidePersonalInformation) return null;
     let t = h.Z.getHistory(e);
@@ -168,7 +168,7 @@ function x(e, t) {
 }
 
 function M() {
-  (0, m.WU)()
+  (0, I.WU)()
 }
 
 function v(e) {
@@ -234,8 +234,8 @@ let P = new Z(o.Z, {
         tokens: a,
         cursorScope: s
       } = e,
-      l = (0, m.cl)(a),
-      r = (0, m.qc)(s, a),
+      l = (0, I.cl)(a),
+      r = (0, I.qc)(s, a),
       o = null !== (t = C[i]) && void 0 !== t ? t : {},
       c = g[i],
       d = !0;

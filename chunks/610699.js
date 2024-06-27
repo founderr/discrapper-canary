@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(447543),
   E = n(317381),
-  m = n(778569),
-  I = n(182906),
+  I = n(778569),
+  m = n(182906),
   T = n(100527),
   h = n(906732),
   N = n(835473),
@@ -168,7 +168,7 @@ function k(e) {
     {
       analyticsLocations: J
     } = (0, h.ZP)(T.Z.INVITE_EMBED),
-    $ = (0, m.Z)({
+    $ = (0, I.Z)({
       applicationId: G.id,
       size: D,
       names: ["embedded_cover"]
@@ -197,7 +197,7 @@ function k(e) {
         [b.large]: w,
         [b.stacked]: H
       }),
-      children: (0, i.jsx)(I.Z, {
+      children: (0, i.jsx)(m.Z, {
         imageBackground: $,
         applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : "",
         imageClassName: l()(b.img, {

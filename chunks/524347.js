@@ -5,8 +5,8 @@ var i, a, s, l, r = n(913527),
   u = n(570140),
   _ = n(594190),
   E = n(569545),
-  m = n(314897),
-  I = n(70956),
+  I = n(314897),
+  m = n(70956),
   T = n(960359),
   h = n(853197),
   N = n(702512);
@@ -30,7 +30,7 @@ let f = null,
       completed: a,
       gameTitle: s
     } = R;
-    if (!(null == t || null == s || a || null == i || null == n || A.isStarted())) e ? (0, T.m0)(t, n, i.pid) : A.start(1 * I.Z.Millis.MINUTE, () => {
+    if (!(null == t || null == s || a || null == i || null == n || A.isStarted())) e ? (0, T.m0)(t, n, i.pid) : A.start(1 * m.Z.Millis.MINUTE, () => {
       (0, T.m0)(t, n, i.pid)
     })
   },
@@ -157,7 +157,7 @@ s = "DropsStore", (a = "displayName") in(i = v) ? Object.defineProperty(i, a, {
       streamType: n,
       guildId: i,
       channelId: a,
-      ownerId: m.default.getId()
+      ownerId: I.default.getId()
     });
     if (null == s) return;
     let r = _.ZP.getGameForPID(s);

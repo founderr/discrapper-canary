@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(867176),
   E = n(566620),
-  m = n(403404),
-  I = n(100527),
+  I = n(403404),
+  m = n(100527),
   T = n(906732),
   h = n(739566),
   N = n(223021),
@@ -59,7 +59,7 @@ function M(e) {
     channel: r
   } = e, {
     analyticsLocations: c
-  } = (0, T.ZP)(I.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, i.jsx)(f.Z, {
+  } = (0, T.ZP)(m.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, i.jsx)(f.Z, {
     ...e,
     location: "ExecutedCommand",
     channelId: r.id,
@@ -93,12 +93,12 @@ function M(e) {
           })
         });
         if (null != a.interaction) {
-          var m, I, T;
+          var I, m, T;
           let e = (0, h.ij)(a.interaction.user, r);
           n = null !== (T = p.ZP.getGuildMemberAvatarURL({
-            avatar: null !== (m = e.guildMemberAvatar) && void 0 !== m ? m : void 0,
+            avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
             userId: a.interaction.user.id,
-            guildId: null !== (I = null == r ? void 0 : r.guild_id) && void 0 !== I ? I : ""
+            guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
           })) && void 0 !== T ? T : void 0
         }
         let N = () => null != a.interaction && function(e) {
@@ -135,7 +135,7 @@ function M(e) {
           onRequestClose: E,
           children: N
         }) : N()
-      }(e, e => M(e, b.user, [I.Z.AVATAR])),
+      }(e, e => M(e, b.user, [m.Z.AVATAR])),
       n = function(e, t, n) {
         var a;
         let {
@@ -165,7 +165,7 @@ function M(e) {
   };
   if ((null == s ? void 0 : s.activityInstance) !== null) {
     let e = () => {
-      (0, m.Z)({
+      (0, I.Z)({
         channel: r,
         guildId: r.guild_id,
         locationObject: {

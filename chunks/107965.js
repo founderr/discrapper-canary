@@ -22,8 +22,8 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 let E = 1 * o.Z.Millis.HOUR,
-  m = 7 * o.Z.Millis.DAY,
-  I = 1 * o.Z.Millis.DAY,
+  I = 7 * o.Z.Millis.DAY,
+  m = 1 * o.Z.Millis.DAY,
   T = a.K.get("lastNonRequiredUpdateShown", Date.now()),
   h = new r.Z("AutoUpdateManager");
 class N {
@@ -70,9 +70,9 @@ class N {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "e9892608c5901eab22d9c0f09230bb5161ce756f" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "11a2447ee8df7722c45940745eb390e78186fb02" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, l.fD)()) return this._handleUpdateDownloaded(!1);
-        let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : I;
+        let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : m;
         if (Date.now() - T > t) return a.K.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
       }, () => this._handleUpdateError())
     }), _(this, "_handleUpdateNotAvailable", () => {

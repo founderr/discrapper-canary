@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  r = n.n(a),
-  i = n(481060),
+  i = n.n(a),
+  r = n(481060),
   l = n(927231);
 t.Z = e => {
   var t, n, a, o;
@@ -16,17 +16,17 @@ t.Z = e => {
     subtitleClassName: I
   } = e;
   return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(i.Heading, {
+    children: [(0, s.jsx)(r.Heading, {
       variant: "heading-xl/extrabold",
-      className: r()(l.cardHeading, u),
+      className: i()(l.cardHeading, u),
       children: c
     }), 0 !== T.length && (null == d || d(null == _ ? void 0 : _.subtitle)) && (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)("div", {
         className: I,
-        children: [(0, s.jsx)(i.Text, {
+        children: [(0, s.jsx)(r.Text, {
           variant: null !== (a = null == _ ? void 0 : null === (t = _.subtitle) || void 0 === t ? void 0 : t.textVariant) && void 0 !== a ? a : "text-sm/normal",
           children: T
-        }), null != E && (0, s.jsx)(i.Text, {
+        }), null != E && (0, s.jsx)(r.Text, {
           variant: null !== (o = null == _ ? void 0 : null === (n = _.description) || void 0 === n ? void 0 : n.textVariant) && void 0 !== o ? o : "text-sm/normal",
           children: (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)("br", {}), E]

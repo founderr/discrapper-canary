@@ -17,9 +17,9 @@ var i = n(735250),
 function E() {
   let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper),
     [t, E] = a.useState(!1),
-    [m, I] = a.useState(0),
+    [I, m] = a.useState(0),
     T = e => {
-      clearTimeout(m), I(setTimeout(() => {
+      clearTimeout(I), m(setTimeout(() => {
         E(e)
       }, 100))
     };

@@ -3,10 +3,10 @@ n.d(t, {
     return a
   },
   JP: function() {
-    return r
+    return i
   },
   YQ: function() {
-    return i
+    return r
   },
   as: function() {
     return l
@@ -28,10 +28,10 @@ let a = (0, s.B)({
       }
     }]
   }),
-  r = () => a.useExperiment({
+  i = () => a.useExperiment({
     location: "experiment_hook"
   }),
-  i = (0, s.B)({
+  r = (0, s.B)({
     kind: "user",
     id: "2023-09_whats_new_drop_2_flip",
     label: "What's New Drop 2",
@@ -46,6 +46,6 @@ let a = (0, s.B)({
       }
     }]
   }),
-  l = () => i.useExperiment({
+  l = () => r.useExperiment({
     location: "experiment_hook"
   })

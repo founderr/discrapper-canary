@@ -8,13 +8,13 @@ n.d(t, {
 });
 var s = n(399606),
   a = n(594174),
-  r = n(914788),
-  i = n(880257);
+  i = n(914788),
+  r = n(880257);
 let l = () => {
-    let e = (0, i.Z)();
-    return (0, s.e7)([r.Z, a.default], () => {
+    let e = (0, r.Z)();
+    return (0, s.e7)([i.Z, a.default], () => {
       if (!e) return a.default.getCurrentUser();
-      let t = r.Z.getSelectedTeenId();
+      let t = i.Z.getSelectedTeenId();
       if (null !== t) return a.default.getUser(t)
     })
   },

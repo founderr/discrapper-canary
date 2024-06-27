@@ -8,8 +8,8 @@ var i, a, s = n(735250),
   u = n(230711),
   _ = n(607070),
   E = n(706454),
-  m = n(63063),
-  I = n(930153),
+  I = n(63063),
+  m = n(930153),
   T = n(617136),
   h = n(272008),
   N = n(113434),
@@ -129,8 +129,8 @@ function y(e) {
     inGiftInventory: o,
     hasConsoleTasks: u,
     hasConsoleConnection: E,
-    waitingForConsoleConnection: m
-  } = e, I = n >= 1, N = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
+    waitingForConsoleConnection: I
+  } = e, m = n >= 1, N = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), R = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), x = function(e) {
     let {
       quest: t,
       progressState: n,
@@ -201,11 +201,11 @@ function y(e) {
     isInHouseQuest: R,
     location: a,
     isCollectibleQuest: i,
-    waitingForConsoleConnection: m,
+    waitingForConsoleConnection: I,
     questContentPosition: r,
     inGiftInventory: o
   });
-  if (u && I && E && !p && !N && o) return (0, s.jsx)(U, {
+  if (u && m && E && !p && !N && o) return (0, s.jsx)(U, {
     quest: t,
     useReducedMotion: S
   });
@@ -381,8 +381,8 @@ t.Z = e => {
             }
           }) : null != b && null != b.approximateCount ? Z.Z.Messages.QUEST_REWARD_TIERED.format({
             maxReward: b.messages.nameWithArticle,
-            maxRewardCount: (0, I.Bs)(b.approximateCount, d),
-            helpCenterLink: m.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
+            maxRewardCount: (0, m.Bs)(b.approximateCount, d),
+            helpCenterLink: I.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE)
           }) : null != P ? Z.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
             reward: M,
             duration: P

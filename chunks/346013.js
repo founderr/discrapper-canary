@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(399606),
   _ = n(481060),
   E = n(607070),
-  m = n(100527),
-  I = n(367907),
+  I = n(100527),
+  m = n(367907),
   T = n(1585),
   h = n(841762),
   N = n(336197),
@@ -59,7 +59,7 @@ function y(e) {
   }, [Y]), ei = a.useCallback(() => {
     Y(!1)
   }, [Y]), ea = a.useCallback(async () => {
-    null != k && ((0, I.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+    null != k && ((0, m.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: k.threadId,
       channel_id: B.id,
       can_access: k.canAccess,
@@ -152,7 +152,7 @@ function y(e) {
       }), (0, i.jsxs)("div", {
         className: j.descriptionFooter,
         children: [null != eo && (0, i.jsx)(_.Popout, {
-          renderPopout: e => el(e, [m.Z.AVATAR]),
+          renderPopout: e => el(e, [I.Z.AVATAR]),
           position: "right",
           spacing: 12,
           preload: null == k.authorId ? void 0 : es,
@@ -191,7 +191,7 @@ function y(e) {
             children: D.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
               authorName: k.authorName,
               authorNameHook: () => (0, i.jsx)(_.Popout, {
-                renderPopout: e => el(e, [m.Z.USERNAME]),
+                renderPopout: e => el(e, [I.Z.USERNAME]),
                 position: "right",
                 preload: null == k.authorId ? void 0 : es,
                 children: e => (0, i.jsx)(_.NameWithRoleAnchor, {

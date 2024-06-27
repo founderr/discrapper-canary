@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(271383),
   _ = n(496675),
   E = n(594174),
-  m = n(626135),
-  I = n(709054),
+  I = n(626135),
+  m = n(709054),
   T = n(838440),
   h = n(981631),
   N = n(975113);
@@ -25,7 +25,7 @@ function f(e) {
     assets: t,
     currentUser: n,
     message: i
-  } = e, a = (I.default.extractTimestamp(n.id) + I.default.extractTimestamp(i.id)) % t.length;
+  } = e, a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
   return t[a]
 }
 
@@ -38,7 +38,7 @@ function p(e) {
     stickers: u,
     event: _,
     eventProperties: E
-  } = e, [I, h] = a.useState(!1), p = a.useMemo(() => f({
+  } = e, [m, h] = a.useState(!1), p = a.useMemo(() => f({
     assets: u,
     currentUser: t,
     message: s
@@ -76,7 +76,7 @@ function p(e) {
         event: n,
         eventProperties: i
       } = e;
-      null != n && m.default.track(n, {
+      null != n && I.default.track(n, {
         ...i,
         sticker_id: t.id
       })
@@ -95,7 +95,7 @@ function p(e) {
     onClick: g,
     children: [(0, i.jsx)(c.ZP, {
       className: N.CTAMessageSticker,
-      isInteracting: I,
+      isInteracting: m,
       sticker: p,
       size: 28
     }), C]
@@ -110,7 +110,7 @@ function C(e) {
     stickers: l,
     event: r,
     eventProperties: o
-  } = e, c = E.default.getCurrentUser(), m = function(e) {
+  } = e, c = E.default.getCurrentUser(), I = function(e) {
     let {
       channel: t,
       message: n,
@@ -131,7 +131,7 @@ function C(e) {
     message: n,
     currentUser: c
   });
-  return null != c && m ? (0, i.jsx)("div", {
+  return null != c && I ? (0, i.jsx)("div", {
     className: N.CTAMessage,
     children: (0, i.jsx)(p, {
       currentUser: c,

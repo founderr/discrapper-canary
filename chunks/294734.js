@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(628238),
   _ = n(25015),
   E = n(438075),
-  m = n(695346),
-  I = n(592125),
+  I = n(695346),
+  m = n(592125),
   T = n(906467),
   h = n(430824),
   N = n(496675),
@@ -49,12 +49,12 @@ function M(e) {
     message: t,
     snapshot: n,
     index: u
-  } = e, _ = a.useMemo(() => new g.r(t, n, u), [t, n, u]), E = (0, l.e7)([I.Z, p.default, f.Z, N.Z, h.Z, d.Z], () => _.getForwardInfo(I.Z, p.default, f.Z, N.Z, h.Z, d.Z).footerInfo, [_], r.Z), m = a.useCallback(() => {
+  } = e, _ = a.useMemo(() => new g.r(t, n, u), [t, n, u]), E = (0, l.e7)([m.Z, p.default, f.Z, N.Z, h.Z, d.Z], () => _.getForwardInfo(m.Z, p.default, f.Z, N.Z, h.Z, d.Z).footerInfo, [_], r.Z), I = a.useCallback(() => {
     (0, S.Z)(t)
   }, [t]);
   return null == E ? null : (0, i.jsxs)(c.Clickable, {
     className: O.footerContainer,
-    onClick: m,
+    onClick: I,
     children: [null != E.originIconUrl ? (0, i.jsx)("img", {
       className: O.originIcon,
       src: E.originIconUrl,
@@ -77,7 +77,7 @@ function v(e) {
     message: n,
     snapshot: s,
     index: r
-  } = e, o = a.useMemo(() => (0, A.Z)(n, s), [n, s]), c = m.RS.useSetting(), d = m.NA.useSetting(), h = (0, l.e7)([T.Z], () => T.Z.isDeveloper), N = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+  } = e, o = a.useMemo(() => (0, A.Z)(n, s), [n, s]), c = I.RS.useSetting(), d = I.NA.useSetting(), h = (0, l.e7)([T.Z], () => T.Z.isDeveloper), N = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
     content: f,
     hasSpoilerEmbeds: p
   } = (0, _.Z)(o, {
@@ -89,7 +89,7 @@ function v(e) {
     allowLinks: !0,
     allowDevLinks: h,
     previewLinkTarget: !0
-  }), g = (0, l.e7)([I.Z], () => I.Z.getChannel(n.channel_id)), S = m.jU.useSetting();
+  }), g = (0, l.e7)([m.Z], () => m.Z.getChannel(n.channel_id)), S = I.jU.useSetting();
   return null == g ? null : (0, i.jsxs)("div", {
     className: O.container,
     children: [(0, i.jsx)("div", {

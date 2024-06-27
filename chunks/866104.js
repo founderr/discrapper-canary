@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(353254),
   _ = n(695346),
   E = n(271383),
-  m = n(594174),
-  I = n(346656),
+  I = n(594174),
+  m = n(346656),
   T = n(671533),
   h = n(810090),
   N = n(51144),
@@ -87,9 +87,9 @@ function M(e) {
   let {
     nickname: h,
     nickcolor: f
-  } = (s = T, (0, r.cj)([E.ZP, m.default], () => {
+  } = (s = T, (0, r.cj)([E.ZP, I.default], () => {
     var e, t;
-    let n = m.default.getCurrentUser();
+    let n = I.default.getCurrentUser();
     l()(null != n, "user cannot be null");
     let i = E.ZP.getMember(s, n.id);
     return {
@@ -129,9 +129,9 @@ function M(e) {
     children: [(0, i.jsxs)("div", {
       className: R.infoContainer,
       children: [(0, i.jsx)("div", {
-        children: (0, i.jsx)(I.Z, {
+        children: (0, i.jsx)(m.Z, {
           guild: u,
-          size: I.Z.Sizes.LARGER,
+          size: m.Z.Sizes.LARGER,
           iconSrc: null == u.icon || j ? (0, d.b)("server_products/storefront/default-guild-icon.jpg") : void 0
         })
       }), (0, i.jsx)(o.Spacer, {

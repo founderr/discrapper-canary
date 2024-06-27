@@ -13,8 +13,8 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(86357),
   E = n(914602),
-  m = n(568836),
-  I = n(730749),
+  I = n(568836),
+  m = n(730749),
   T = n(112724),
   h = n(812206),
   N = n(283595),
@@ -72,8 +72,8 @@ class x extends(i = s.Component) {
       width: n,
       fetchFailed: i,
       renderFallback: s
-    } = this.props, r = n > m.aL;
-    if (null == e || null == t) return i ? s() : (0, a.jsx)(m.OR, {
+    } = this.props, r = n > I.aL;
+    if (null == e || null == t) return i ? s() : (0, a.jsx)(I.OR, {
       isHorizontal: r
     });
     return e.productLine === S.POd.COLLECTIBLES ? (0, a.jsx)(d.Z, {
@@ -130,7 +130,7 @@ class x extends(i = s.Component) {
       } = this.props, {
         playing: o,
         muted: c
-      } = this.state, d = i > m.aL;
+      } = this.state, d = i > I.aL;
       return (0, a.jsx)(E.Z, {
         sku: e,
         storeListing: t,
@@ -196,6 +196,6 @@ function v(e) {
     libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let L = (0, T.Z)((0, I.Z)(x));
+let L = (0, T.Z)((0, m.Z)(x));
 t.Z = r.ZP.connectStores(M, v)(L);
-let Z = (0, I.Z)(r.ZP.connectStores(M, v)(x))
+let Z = (0, m.Z)(r.ZP.connectStores(M, v)(x))

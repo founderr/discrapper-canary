@@ -19,7 +19,7 @@ function u(e) {
     messageId: u,
     targetKind: _,
     embedIndex: E
-  } = e, m = a.useCallback(() => {
+  } = e, I = a.useCallback(() => {
     let e = r.Z.getMessage(n, u);
     if (null == e) return;
     let t = (0, o.j)(e, {
@@ -41,6 +41,6 @@ function u(e) {
       size: "xs",
       color: s.Z.colors.INTERACTIVE_NORMAL
     }),
-    onClick: m
+    onClick: I
   })
 }

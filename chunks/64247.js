@@ -19,14 +19,14 @@ function d(e) {
     onSelect: d,
     navId: u,
     label: _
-  } = e, E = (0, s.Z)(t, "Notifications Bell"), m = (0, l.Z)(t), I = (0, o.B)(t);
+  } = e, E = (0, s.Z)(t, "Notifications Bell"), I = (0, l.Z)(t), m = (0, o.B)(t);
   return (0, i.jsxs)(a.Menu, {
     navId: u,
     onClose: n,
     "aria-label": _,
     onSelect: d,
     children: [(0, i.jsxs)(a.MenuGroup, {
-      children: [t.isForumPost() ? E : null, m]
+      children: [t.isForumPost() ? E : null, I]
     }), (0, i.jsx)(a.MenuGroup, {
       children: (0, c.zb)().map(e => {
         let {
@@ -40,7 +40,7 @@ function d(e) {
           action: () => r.Z.setNotificationSettings(t, {
             flags: n
           }),
-          checked: n === I
+          checked: n === m
         }, n)
       })
     })]

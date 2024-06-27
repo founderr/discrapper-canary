@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(789978),
   o = n(748780),
   c = n(91192),
@@ -14,7 +14,7 @@ t.Z = e => {
   let {
     userId: t,
     children: n,
-    isLast: r,
+    isLast: i,
     className: T
   } = e, [I, R] = a.useState(!1), {
     analyticsLocations: C
@@ -42,8 +42,8 @@ t.Z = e => {
         style: {
           opacity: 1
         },
-        className: i()(u.rowItem, T, {
-          [u.last]: r,
+        className: r()(u.rowItem, T, {
+          [u.last]: i,
           [u.active]: I
         }),
         onMouseEnter: p,

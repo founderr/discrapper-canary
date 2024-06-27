@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(893776),
   _ = n(117266),
   E = n(37234),
-  m = n(254854),
-  I = n(195500),
+  I = n(254854),
+  m = n(195500),
   T = n(287734),
   h = n(205355),
   N = n(558381),
@@ -71,17 +71,17 @@ var i = n(735250),
   eu = n(474936),
   e_ = n(610674),
   eE = n(65154),
-  em = n(689938),
-  eI = n(596791);
+  eI = n(689938),
+  em = n(596791);
 let eT = () => (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DANGER,
     children: [(0, i.jsx)(c.NoticeCloseButton, {
       onClick: () => {
         eN(), (0, ec.b)()
       }
-    }), em.Z.Messages.NOTICE_NO_INPUT_DETECTED, (0, i.jsx)(c.NoticeButtonAnchor, {
+    }), eI.Z.Messages.NOTICE_NO_INPUT_DETECTED, (0, i.jsx)(c.NoticeButtonAnchor, {
       href: el.Z.getArticleURL(ed.BhN.NO_INPUT_DETECTED),
-      children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
+      children: eI.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
     })]
   }),
   eh = () => (0, i.jsxs)(c.Notice, {
@@ -90,22 +90,22 @@ let eT = () => (0, i.jsxs)(c.Notice, {
       onClick: () => {
         eN(), (0, ec.b)()
       }
-    }), em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, i.jsx)(c.NoticeButton, {
+    }), eI.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, i.jsx)(c.NoticeButton, {
       onClick: () => {
         (0, E.jN)(ed.S9g.USER_SETTINGS), g.Z.setSection(ed.oAB.VOICE)
       },
-      children: em.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
+      children: eI.Z.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
     })]
   });
 
 function eN(e) {
-  m.Z.dismiss(null != e ? {
+  I.Z.dismiss(null != e ? {
     untilAtLeast: l()(e)
   } : void 0)
 }
 let ef = 12633 == n.j ? a.memo(function() {
   var e, t, s;
-  let m = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
+  let I = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
     A = (0, o.e7)([$.Z], () => $.Z.getGuildId()),
     ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()),
     ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)),
@@ -167,7 +167,7 @@ let ef = 12633 == n.j ? a.memo(function() {
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => eN(eO),
           noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
-        }), em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
+        }), eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
           helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE)
         })]
       });
@@ -180,7 +180,7 @@ let ef = 12633 == n.j ? a.memo(function() {
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => eN(ex),
           noticeType: ed.kVF.WIN7_8_DEPRECATED_MESSAGE
-        }), em.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
+        }), eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
           helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN7_8_DEPRECATE)
         })]
       });
@@ -193,7 +193,7 @@ let ef = 12633 == n.j ? a.memo(function() {
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => eN(eM),
           noticeType: ed.kVF.MACOS_17_18_DEPRECATED_MESSAGE
-        }), em.Z.Messages.MACOS_DEPRECATED_WARNING.format({
+        }), eI.Z.Messages.MACOS_DEPRECATED_WARNING.format({
           helpCenterLink: el.Z.getArticleURL(ed.BhN.MACOS_17_18_DEPRECATE)
         })]
       });
@@ -226,16 +226,16 @@ let ef = 12633 == n.j ? a.memo(function() {
         color: c.NoticeColors.WARNING,
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => {
-            I.Z.clearRemoteDisconnectVoiceChannelId(), eN()
+            m.Z.clearRemoteDisconnectVoiceChannelId(), eN()
           },
           noticeType: ed.kVF.VOICE_DISABLED
-        }), em.Z.Messages.NOTICE_CONNECTION_CONFLICT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.NOTICE_CONNECTION_CONFLICT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           onClick: () => {
             let e = J.Z.getRemoteDisconnectVoiceChannelId();
             null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e)
           },
           noticeType: ed.kVF.VOICE_DISABLED,
-          children: em.Z.Messages.RECONNECT
+          children: eI.Z.Messages.RECONNECT
         })]
       });
     case ed.kVF.VOICE_CONNECTED_LAST_SESSION:
@@ -243,16 +243,16 @@ let ef = 12633 == n.j ? a.memo(function() {
         color: c.NoticeColors.DEFAULT,
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => {
-            I.Z.clearLastSessionVoiceChannelId(), eN()
+            m.Z.clearLastSessionVoiceChannelId(), eN()
           },
           noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION
-        }), em.Z.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           onClick: () => {
             let e = J.Z.getLastSessionVoiceChannelId();
             null != e && null != Q.Z.getChannel(e) && T.default.selectVoiceChannel(e)
           },
           noticeType: ed.kVF.VOICE_CONNECTED_LAST_SESSION,
-          children: em.Z.Messages.RECONNECT
+          children: eI.Z.Messages.RECONNECT
         })]
       });
     case ed.kVF.SPOTIFY_AUTO_PAUSED:
@@ -264,44 +264,44 @@ let ef = 12633 == n.j ? a.memo(function() {
           noticeType: ed.kVF.SPOTIFY_AUTO_PAUSED
         }), (0, i.jsx)("img", {
           alt: "",
-          className: eI.platformIcon,
+          className: em.platformIcon,
           src: ev.icon.whiteSVG
-        }), em.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           onClick: () => g.Z.open(ed.oAB.VOICE),
           noticeType: ed.kVF.SPOTIFY_AUTO_PAUSED,
-          children: em.Z.Messages.VOICE_SETTINGS
+          children: eI.Z.Messages.VOICE_SETTINGS
         }), (0, i.jsx)(c.Anchor, {
-          className: eI.textLinkSmall,
+          className: em.textLinkSmall,
           href: el.Z.getArticleURL(ed.BhN.SPOTIFY_AUTO_PAUSED),
           target: "_blank",
-          children: em.Z.Messages.NOTICE_WHATS_THIS
+          children: eI.Z.Messages.NOTICE_WHATS_THIS
         })]
       });
     case ed.kVF.UNCLAIMED_ACCOUNT:
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DEFAULT,
-        children: [em.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        children: [eI.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.UNCLAIMED_ACCOUNT,
           onClick: () => eg && null != A ? (0, j.hk)(A) : x.j(),
-          children: em.Z.Messages.CLAIM_ACCOUNT
+          children: eI.Z.Messages.CLAIM_ACCOUNT
         })]
       });
     case ed.kVF.UNVERIFIED_ACCOUNT:
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DEFAULT,
-        children: [em.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        children: [eI.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.UNVERIFIED_ACCOUNT,
           onClick: () => {
             u.Z.verifyResend(), d.Z.show({
-              title: em.Z.Messages.VERIFICATION_EMAIL_TITLE,
-              body: em.Z.Messages.VERIFICATION_EMAIL_BODY.format({
-                email: null == m ? void 0 : m.email
+              title: eI.Z.Messages.VERIFICATION_EMAIL_TITLE,
+              body: eI.Z.Messages.VERIFICATION_EMAIL_BODY.format({
+                email: null == I ? void 0 : I.email
               }),
-              secondaryConfirmText: em.Z.Messages.CHANGE_EMAIL,
+              secondaryConfirmText: eI.Z.Messages.CHANGE_EMAIL,
               onConfirmSecondary: x.j
             })
           },
-          children: em.Z.Messages.RESEND_EMAIL_SHORT
+          children: eI.Z.Messages.RESEND_EMAIL_SHORT
         })]
       });
     case ed.kVF.SCHEDULED_MAINTENANCE:
@@ -311,9 +311,9 @@ let ef = 12633 == n.j ? a.memo(function() {
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => h.Z.ackScheduledMaintenance(),
           noticeType: ed.kVF.SCHEDULED_MAINTENANCE
-        }), em.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ec.metadata), (0, i.jsx)(c.NoticeButtonAnchor, {
+        }), eI.Z.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ec.metadata), (0, i.jsx)(c.NoticeButtonAnchor, {
           href: "".concat(ed.yXt.STATUS, "/incidents/").concat(ec.metadata.id),
-          children: em.Z.Messages.LEARN_MORE
+          children: eI.Z.Messages.LEARN_MORE
         })]
       });
     case ed.kVF.NO_INPUT_DETECTED:
@@ -326,14 +326,14 @@ let ef = 12633 == n.j ? a.memo(function() {
       } = ec.metadata;
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DANGER,
-        children: [em.Z.Messages.NOTICE_HARDWARE_MUTE.format({
+        children: [eI.Z.Messages.NOTICE_HARDWARE_MUTE.format({
           vendorName: eL.name,
           modelName: eZ.name
         }), (0, i.jsx)(c.NoticeButtonAnchor, {
           href: eZ.url,
           target: "_blank",
           rel: "noreferrer noopener",
-          children: em.Z.Messages.SUPPORT
+          children: eI.Z.Messages.SUPPORT
         })]
       });
     case ed.kVF.STREAMER_MODE:
@@ -342,10 +342,10 @@ let ef = 12633 == n.j ? a.memo(function() {
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => eN(),
           noticeType: ed.kVF.STREAMER_MODE
-        }), em.Z.Messages.NOTICE_STREAMER_MODE_TEXT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.NOTICE_STREAMER_MODE_TEXT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           onClick: () => f.Z.setEnabled(!1),
           noticeType: ed.kVF.STREAMER_MODE,
-          children: em.Z.Messages.DISABLE
+          children: eI.Z.Messages.DISABLE
         })]
       });
     case ed.kVF.H264_DISABLED:
@@ -355,11 +355,11 @@ let ef = 12633 == n.j ? a.memo(function() {
           onClick: () => {
             eN()
           }
-        }), em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, i.jsx)(c.NoticeButton, {
+        }), eI.Z.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, i.jsx)(c.NoticeButton, {
           onClick: () => {
             (0, E.jN)(ed.S9g.USER_SETTINGS), g.Z.setSection(ed.oAB.VOICE)
           },
-          children: em.Z.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
+          children: eI.Z.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
         })]
       });
     case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
@@ -379,8 +379,8 @@ let ef = 12633 == n.j ? a.memo(function() {
         }), (0, i.jsx)(c.NitroWheelIcon, {
           size: "md",
           color: "currentColor",
-          className: eI.premiumIcon
-        }), em.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
+          className: em.premiumIcon
+        }), eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
           applicationName: ej.name,
           skuName: eD.name
         }), (0, i.jsx)(c.PrimaryCTANoticeButton, {
@@ -400,7 +400,7 @@ let ef = 12633 == n.j ? a.memo(function() {
             analyticsLocationObject: eU,
             context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
           }).then(() => _.Z(eD.id)),
-          children: em.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
+          children: eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
         })]
       });
     case ed.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
@@ -418,8 +418,8 @@ let ef = 12633 == n.j ? a.memo(function() {
         }), (0, i.jsx)(c.NitroWheelIcon, {
           size: "md",
           color: "currentColor",
-          className: eI.premiumIcon
-        }), em.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
+          className: em.premiumIcon
+        }), eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
           applicationName: a.name,
           skuName: n.name
         }), (0, i.jsx)(c.NoticeButton, {
@@ -431,7 +431,7 @@ let ef = 12633 == n.j ? a.memo(function() {
                 scrollRestoration: !1
               }
             },
-            children: em.Z.Messages.LEARN_MORE
+            children: eI.Z.Messages.LEARN_MORE
           })
         })]
       })
@@ -469,26 +469,26 @@ let ef = 12633 == n.j ? a.memo(function() {
           onClick: () => {
             eN()
           }
-        }), em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
+        }), eI.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
           guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : "this server"
         }), (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.SERVER_USAGE_SURVEY,
           onClick: () => {
-            window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == m ? void 0 : m.id, "&guild_id=").concat(null == ef ? void 0 : ef.id), "_blank"), eN()
+            window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == I ? void 0 : I.id, "&guild_id=").concat(null == ef ? void 0 : ef.id), "_blank"), eN()
           },
           additionalTrackingProps: {
             guild_id: null == ef ? void 0 : ef.id
           },
-          children: em.Z.Messages.SERVER_USAGE_SURVEY_CTA
+          children: eI.Z.Messages.SERVER_USAGE_SURVEY_CTA
         })]
       });
     case ed.kVF.CORRUPT_INSTALLATION:
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DANGER,
-        children: [em.Z.Messages.NOTICE_CORRUPT_INSTALLATION, (0, i.jsx)(c.NoticeButtonAnchor, {
+        children: [eI.Z.Messages.NOTICE_CORRUPT_INSTALLATION, (0, i.jsx)(c.NoticeButtonAnchor, {
           href: el.Z.getArticleURL(ed.BhN.CORRUPT_INSTALLATION),
           target: "_blank",
-          children: em.Z.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
+          children: eI.Z.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
         })]
       });
     case ed.kVF.VIDEO_UNSUPPORTED_BROWSER:
@@ -497,7 +497,7 @@ let ef = 12633 == n.j ? a.memo(function() {
         children: [(0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => eN(),
           noticeType: ed.kVF.VIDEO_UNSUPPORTED_BROWSER
-        }), em.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.VIDEO_UNSUPPORTED_BROWSER,
           onClick: () => {
             (0, c.openModalLazy)(async () => {
@@ -510,7 +510,7 @@ let ef = 12633 == n.j ? a.memo(function() {
               })
             })
           },
-          children: em.Z.Messages.DOWNLOAD
+          children: eI.Z.Messages.DOWNLOAD
         })]
       });
     case ed.kVF.DISPATCH_ERROR:
@@ -533,7 +533,7 @@ let ef = 12633 == n.j ? a.memo(function() {
               ...t
             })
           }),
-          children: em.Z.Messages.LEARN_MORE
+          children: eI.Z.Messages.LEARN_MORE
         })]
       });
     case ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
@@ -548,16 +548,16 @@ let ef = 12633 == n.j ? a.memo(function() {
           noticeType: ed.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
         }), (0, i.jsxs)(ea.Z, {
           justify: ea.Z.Justify.CENTER,
-          children: [null != eG ? em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+          children: [null != eG ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
             name: "".concat(eG),
             progress: "".concat(eB),
             total: "".concat(ek)
-          }) : em.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
+          }) : eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
             progress: "".concat(eB),
             total: "".concat(ek)
           }), (0, i.jsx)(c.Spinner, {
             type: c.Spinner.Type.PULSING_ELLIPSIS,
-            className: eI.ellipsis
+            className: em.ellipsis
           })]
         })]
       });
@@ -569,7 +569,7 @@ let ef = 12633 == n.j ? a.memo(function() {
           justify: ea.Z.Justify.CENTER,
           align: ea.Z.Align.CENTER,
           children: [(0, i.jsx)("div", {
-            children: em.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
+            children: eI.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
               applicationName: ec.metadata.applicationName
             })
           }), (0, i.jsx)(c.NoticeCloseButton, {
@@ -584,12 +584,12 @@ let ef = 12633 == n.j ? a.memo(function() {
           justify: ea.Z.Justify.CENTER,
           align: ea.Z.Align.CENTER,
           children: [(0, i.jsx)("div", {
-            children: em.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
+            children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
               applicationName: ec.metadata.applicationName
             })
           }), (0, i.jsx)(eo.Z, {
             dropdownSize: eo.E.DropdownSizes.SMALL,
-            className: eI.testModeSKUSelector,
+            className: em.testModeSKUSelector,
             color: eo.E.Colors.WHITE,
             look: eo.E.Looks.OUTLINED,
             size: eo.E.Sizes.MIN,
@@ -601,7 +601,7 @@ let ef = 12633 == n.j ? a.memo(function() {
               }
             }),
             applicationId: ec.metadata.applicationId,
-            children: em.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
+            children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
           }), (0, i.jsx)(c.NoticeCloseButton, {
             onClick: C.mc,
             noticeType: ed.kVF.APPLICATION_TEST_MODE
@@ -624,12 +624,12 @@ let ef = 12633 == n.j ? a.memo(function() {
         }), (0, i.jsx)(c.NitroWheelIcon, {
           size: "md",
           color: "currentColor",
-          className: eI.premiumIcon
-        }), eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
+          className: em.premiumIcon
+        }), eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
-        }) : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
+        }) : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
-        }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
+        }) : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
         }), (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.PREMIUM_UNCANCEL,
@@ -648,7 +648,7 @@ let ef = 12633 == n.j ? a.memo(function() {
               })
             })
           },
-          children: eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+          children: eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
         })]
       });
     case ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
@@ -662,14 +662,14 @@ let ef = 12633 == n.j ? a.memo(function() {
           onClick: () => {
             eN(ew)
           }
-        }), em.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
+        }), eI.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
           daysPastDue: eF
         }), (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
           onClick: () => {
             eN(ew), g.Z.open(ed.oAB.SUBSCRIPTIONS)
           },
-          children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
+          children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
         })]
       });
     case ed.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT:
@@ -681,13 +681,13 @@ let ef = 12633 == n.j ? a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
           onClick: () => {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(ed.oAB.SUBSCRIPTIONS)
           },
-          children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
+          children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ed.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT:
@@ -699,13 +699,13 @@ let ef = 12633 == n.j ? a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(ed.oAB.SUBSCRIPTIONS)
           },
-          children: em.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+          children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ed.kVF.PREMIUM_MISSING_PAYMENT:
@@ -717,11 +717,11 @@ let ef = 12633 == n.j ? a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
+        }), eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
-        }) : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
+        }) : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
-        }) : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
+        }) : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
         }), (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.PREMIUM_MISSING_PAYMENT,
@@ -729,12 +729,12 @@ let ef = 12633 == n.j ? a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(ed.oAB.SUBSCRIPTIONS)
           },
-          children: eA === eu.p9.TIER_1 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : em.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+          children: eA === eu.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ed.kVF.BACK_TO_PREVIOUS_SCREEN:
       return (0, i.jsx)(B.h, {
-        buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : em.Z.Messages.GO_BACK,
+        buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : eI.Z.Messages.GO_BACK,
         onGoBack: ec.callback,
         onDismiss: () => eN(),
         showCloseButton: !0
@@ -752,24 +752,24 @@ let ef = 12633 == n.j ? a.memo(function() {
     case ed.kVF.QUARANTINED:
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.CUSTOM,
-        className: eI.quarantineNotice,
-        children: [em.Z.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE, (0, i.jsx)(c.NoticeButtonAnchor, {
+        className: em.quarantineNotice,
+        children: [eI.Z.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE, (0, i.jsx)(c.NoticeButtonAnchor, {
           href: e_.Z,
           target: "_blank",
-          children: em.Z.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
+          children: eI.Z.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
         }), (0, i.jsx)(c.Anchor, {
           href: el.Z.getArticleURL(ed.BhN.QUARANTINE),
           target: "_blank",
-          className: eI.quarantineLearnMoreLink,
-          children: em.Z.Messages.LEARN_MORE
+          className: em.quarantineLearnMoreLink,
+          children: eI.Z.Messages.LEARN_MORE
         })]
       });
     case ed.kVF.BLOCKED_BY_PROXY:
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.WARNING,
-        children: [em.Z.Messages.BLOCKED_BY_PROXY_NOTICE, (0, i.jsx)(c.NoticeButtonAnchor, {
+        children: [eI.Z.Messages.BLOCKED_BY_PROXY_NOTICE, (0, i.jsx)(c.NoticeButtonAnchor, {
           href: "".concat(ed.yXt.STATUS),
-          children: em.Z.Messages.LEARN_MORE
+          children: eI.Z.Messages.LEARN_MORE
         }), (0, i.jsx)(c.NoticeCloseButton, {
           onClick: () => eN(),
           noticeType: ed.kVF.BLOCKED_BY_PROXY
@@ -778,11 +778,11 @@ let ef = 12633 == n.j ? a.memo(function() {
     case ed.kVF.DROPS_PROGRESS_INTERRUPTION:
       return (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DANGER,
-        children: [em.Z.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
+        children: [eI.Z.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
           gameTitle: ec.metadata.gameTitle
         }), (0, i.jsx)(c.NoticeButton, {
           onClick: ec.metadata.reloadCallback,
-          children: em.Z.Messages.ERRORS_RESTART_APP
+          children: eI.Z.Messages.ERRORS_RESTART_APP
         })]
       });
     case ed.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION:
@@ -796,16 +796,16 @@ let ef = 12633 == n.j ? a.memo(function() {
           onClick: () => {
             null != A && (0, b.T9)(A), eN(eV)
           }
-        }), em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, i.jsx)(c.NoticeButton, {
+        }), eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, i.jsx)(c.NoticeButton, {
           onClick: () => {
             null != A && (0, b.UE)(A, eH, () => {
               eN(eV), (0, b.T9)(A)
             })
           },
-          children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+          children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
         }), null != A ? (0, i.jsx)(c.NoticeButton, {
           onClick: () => k.Z.open(A, ed.pNK.GUILD_AUTOMOD, void 0, ed.KsC.AUTOMOD_MENTION_SPAM),
-          children: em.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+          children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
         }) : null]
       });
     case ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR:
@@ -816,7 +816,7 @@ let ef = 12633 == n.j ? a.memo(function() {
           onClick: () => {
             z.hZ(), eN()
           }
-        }), em.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE, (0, i.jsx)(c.PrimaryCTANoticeButton, {
+        }), eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE, (0, i.jsx)(c.PrimaryCTANoticeButton, {
           noticeType: ed.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
           onClick: () => {
             (0, c.openModalLazy)(async () => {
@@ -828,7 +828,7 @@ let ef = 12633 == n.j ? a.memo(function() {
               })
             }), z.hZ(), eN()
           },
-          children: em.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
+          children: eI.Z.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
         })]
       });
     case ed.kVF.PREMIUM_TIER_2_TRIAL_ENDING:
@@ -848,7 +848,7 @@ let ef = 12633 == n.j ? a.memo(function() {
             var e;
             (null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, W.nE)(ec.metadata.streamKey)
           }
-        }), em.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE]
+        }), eI.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE]
       });
     default:
       return null

@@ -11,8 +11,8 @@ var i, a, s, l = n(735250),
   u = n(58642),
   _ = n(2052),
   E = n(710845),
-  m = n(703656),
-  I = n(173747),
+  I = n(703656),
+  m = n(173747),
   T = n(7956),
   h = n(293245),
   N = n(417363),
@@ -201,7 +201,7 @@ class Z extends(a = r.Component) {
         let {
           libraryApplication: e
         } = this.props;
-        await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, m.uL)(R.Z5c.APPLICATION_LIBRARY)
+        await u.h(e.id, e.branchId, e.getFlags() & ~R.eHb.HIDDEN), (0, I.uL)(R.Z5c.APPLICATION_LIBRARY)
       } catch (e) {
         new E.Z("LibraryApplicationButton").error(e)
       }
@@ -232,7 +232,7 @@ class Z extends(a = r.Component) {
 function P(e) {
   let {
     libraryApplication: t
-  } = e, n = (0, _.O)(), [i, a] = (0, o.Wu)([N.Z, f.Z], () => [(0, T.i)(t, N.Z, f.Z), N.Z.getState(t.id, t.branchId)], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), r = (0, o.e7)([I.Z], () => I.Z.hasNoBuild(t.id, t.branchId), [t]);
+  } = e, n = (0, _.O)(), [i, a] = (0, o.Wu)([N.Z, f.Z], () => [(0, T.i)(t, N.Z, f.Z), N.Z.getState(t.id, t.branchId)], [t]), s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]), r = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
   return (0, l.jsx)(Z, {
     ...e,
     analyticsContext: n,

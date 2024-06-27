@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(442837),
   a = n(607070),
-  r = n(314684),
-  i = n(391110),
+  i = n(314684),
+  r = n(391110),
   l = n(678081);
 let o = {
     subtitle: {
@@ -22,10 +22,10 @@ let o = {
   },
   c = e => {
     let t = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-      n = (0, r.IB)() && !t,
+      n = (0, i.IB)() && !t,
       c = {
-        [i.zW.DEFAULT]: o,
-        [i.zW.REWARD]: {
+        [r.zW.DEFAULT]: o,
+        [r.zW.REWARD]: {
           subtitle: {
             onlyShowOnHover: !0,
             textVariant: "text-sm/semibold"
@@ -44,5 +44,5 @@ let o = {
           }
         }
       };
-    return null != e ? c[e] : c[i.zW.DEFAULT]
+    return null != e ? c[e] : c[r.zW.DEFAULT]
   }

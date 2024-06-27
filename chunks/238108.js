@@ -3,13 +3,13 @@ var s = n(470079);
 t.Z = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
     [t, n] = s.useState(!1),
-    [a, r] = s.useState(0),
-    [i, l] = s.useState(!1),
+    [a, i] = s.useState(0),
+    [r, l] = s.useState(!1),
     [o, c] = s.useState(0);
   return s.useEffect(() => {
     a >= e && (l(!0), c(Math.floor(a / e)));
     let t = setTimeout(() => {
-      r(0)
+      i(0)
     }, 1e3);
     return () => clearTimeout(t)
   }, [a, e]), s.useEffect(() => {
@@ -19,7 +19,7 @@ t.Z = function() {
       }, 1e3);
       return () => clearTimeout(e)
     }
-    r(e => e + 1)
+    i(e => e + 1)
   }, [t]), {
     onHover: () => {
       n(!0)
@@ -27,7 +27,7 @@ t.Z = function() {
     onUnhover: () => {
       n(!1)
     },
-    isEasterEggTriggered: i,
+    isEasterEggTriggered: r,
     easterEggLevel: o
   }
 }

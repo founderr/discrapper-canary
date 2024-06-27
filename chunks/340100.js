@@ -10,8 +10,8 @@ var a = n(120356),
   u = n(113434),
   _ = n(524824),
   E = n(330039),
-  m = n(46140),
-  I = n(567345);
+  I = n(46140),
+  m = n(567345);
 t.Z = function(e) {
   let {
     className: t,
@@ -22,34 +22,34 @@ t.Z = function(e) {
     percentComplete: N
   } = (0, u.Rf)({
     quest: a,
-    location: m.dr.QUEST_PROGRESS_BAR
+    location: I.dr.QUEST_PROGRESS_BAR
   }), f = 100 * N, p = (0, _.r)(a);
   return p && !T ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)("div", {
-    className: s()(I.wrapper, t),
+    className: s()(m.wrapper, t),
     style: {
       color: n.css
     },
     children: [(0, i.jsxs)("div", {
-      className: I.percentCompleteWrapper,
+      className: m.percentCompleteWrapper,
       children: [(0, i.jsx)(o.Text, {
         variant: "text-xs/semibold",
-        className: I.percentCompleteLabel,
+        className: m.percentCompleteLabel,
         color: "none",
         children: (0, d.T3)(h, N, {
           roundingMode: "floor"
         })
       }), (0, i.jsx)("div", {
-        className: I.percentCompleteLabelOffset,
+        className: m.percentCompleteLabelOffset,
         style: {
           width: "".concat(100 - f, "%")
         }
       })]
     }), (0, i.jsx)("div", {
-      className: I.progressBar,
+      className: m.progressBar,
       role: "progressbar",
       "aria-valuenow": f,
       children: (0, i.jsx)("div", {
-        className: I.progressBarFill,
+        className: m.progressBarFill,
         style: {
           width: "".concat(f, "%")
         }

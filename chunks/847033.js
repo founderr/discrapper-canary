@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(584825),
   _ = n(994592),
   E = n(160404),
-  m = n(703656),
-  I = n(984933),
+  I = n(703656),
+  m = n(984933),
   T = n(430824),
   h = n(626135),
   N = n(652515),
@@ -59,7 +59,7 @@ function O(e) {
         if (D === p.y.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), j(p.y.GUILD_ROLE_SUBSCRIPTIONS), t.action_taken = g.mz.DISMISS_TAB_PREVIEW;
         else {
           var n;
-          (0, m.dL)(S.Z5c.CHANNEL(l, null === (n = I.ZP.getDefaultChannel(l)) || void 0 === n ? void 0 : n.id)), t.action_taken = g.mz.DISMISS_FULL_PREVIEW
+          (0, I.dL)(S.Z5c.CHANNEL(l, null === (n = m.ZP.getDefaultChannel(l)) || void 0 === n ? void 0 : n.id)), t.action_taken = g.mz.DISMISS_FULL_PREVIEW
         }
         h.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, t)
       }

@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(442837),
   _ = n(481060),
   E = n(607070),
-  m = n(313889),
-  I = n(825829),
+  I = n(313889),
+  m = n(825829),
   T = n(226192),
   h = n(36459),
   N = n(336197),
@@ -108,21 +108,21 @@ function H(e) {
 
 function Y(e, t) {
   switch (e) {
-    case m.d.DELETE_USER_MESSAGE:
+    case I.d.DELETE_USER_MESSAGE:
       return (0, i.jsx)(_.TrashIcon, {
         size: "xs",
         color: "currentColor",
         className: G.alertActionIcon,
         ...t
       });
-    case m.d.SET_COMPLETED:
+    case I.d.SET_COMPLETED:
       return (0, i.jsx)(_.CheckmarkLargeIcon, {
         size: "xs",
         color: "currentColor",
         className: l()(G.alertActionIcon, G.alertActionSetCompletedIcon),
         ...t
       });
-    case m.d.SUBMIT_FEEDBACK:
+    case I.d.SUBMIT_FEEDBACK:
       return (0, i.jsx)(_.FlagIcon, {
         size: "xs",
         color: "currentColor",
@@ -149,17 +149,17 @@ function W(e) {
         l = "".concat(a, " ").concat(s.fromNow());
       try {
         switch (parseInt(e.actionType)) {
-          case m.d.DELETE_USER_MESSAGE:
+          case I.d.DELETE_USER_MESSAGE:
             return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
               userName: a,
               timestamp: s.fromNow()
             });
-          case m.d.SET_COMPLETED:
+          case I.d.SET_COMPLETED:
             return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
               userName: a,
               timestamp: s.fromNow()
             });
-          case m.d.SUBMIT_FEEDBACK:
+          case I.d.SUBMIT_FEEDBACK:
             return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
               userName: a,
               timestamp: s.fromNow()
@@ -213,7 +213,7 @@ let K = a.memo(function(e) {
       ...o
     }, c),
     E = O.default.getUser(r),
-    m = F(n, a),
+    I = F(n, a),
     T = w(a, E);
   if (null != E) {
     let e = (0, p.ij)(E, a),
@@ -223,7 +223,7 @@ let K = a.memo(function(e) {
         author: e,
         guildId: null == a ? void 0 : a.guild_id,
         compact: l,
-        ...m
+        ...I
       }, T);
     t = () => i
   }
@@ -232,7 +232,7 @@ let K = a.memo(function(e) {
     color: "header-primary",
     tag: "span",
     className: G.spanCorrection,
-    children: (0, I.Mq)(n, s, () => (0, i.jsx)("div", {
+    children: (0, m.Mq)(n, s, () => (0, i.jsx)("div", {
       className: G.channelNameContainer,
       children: (0, i.jsx)(M.Z, {
         channel: s,
@@ -275,7 +275,7 @@ function Q(e) {
     alertActionsExecution: et,
     quarantineType: en,
     interactionUserId: ei
-  } = (0, I.ZP)(s), ea = a.useMemo(() => (0, f.k$)(X, Q, r.id), [X, Q, r]), {
+  } = (0, m.ZP)(s), ea = a.useMemo(() => (0, f.k$)(X, Q, r.id), [X, Q, r]), {
     selected: es,
     ...el
   } = F(s, r), er = a.useCallback(() => {
@@ -283,8 +283,8 @@ function Q(e) {
   }, [s.id, X, W, r]), eo = a.useCallback(e => {
     if (null != J && null != Y) e.stopPropagation(), e.preventDefault(), (0, N.Z)(j.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J))
   }, [Y, J]), ec = a.useCallback(() => {
-    (0, h.Xx)(s.id, r, m.d.DELETE_USER_MESSAGE)
-  }, [r, s.id]), ed = (0, y.L9)(Number($)), eu = null != ee, e_ = B && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
+    (0, h.Xx)(s.id, r, I.d.DELETE_USER_MESSAGE)
+  }, [r, s.id]), ed = (0, y.L9)(Number($)), eu = null != ee, e_ = B && null != J && (null == et || !et.actions.hasOwnProperty(I.d.DELETE_USER_MESSAGE));
   return (0, i.jsx)("div", {
     onMouseEnter: p,
     onMouseLeave: C,
@@ -387,7 +387,7 @@ function Q(e) {
                     tag: "span",
                     className: G.titleCase,
                     children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({
-                      reason: (0, I.hU)(en)
+                      reason: (0, m.hU)(en)
                     })
                   })]
                 })]

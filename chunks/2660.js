@@ -14,9 +14,9 @@ t.Z = e => {
     isFocused: u
   } = e, _ = (0, a.e7)([r.default], () => r.default.getCurrentUser()), {
     avatarDecoration: E,
-    isFetching: m
+    isFetching: I
   } = (0, o.DU)(t);
-  return m ? (0, i.jsx)("div", {
+  return I ? (0, i.jsx)("div", {
     className: d.questsCollectibleReward,
     children: (0, i.jsx)(s.Spinner, {})
   }) : null == _ || null == E ? n : (0, i.jsx)("div", {

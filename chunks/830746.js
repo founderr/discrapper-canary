@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(399606),
-  r = n(481060),
-  i = n(594174),
+  i = n(481060),
+  r = n(594174),
   l = n(785681),
   o = n(780985),
   c = n(631885),
@@ -17,11 +17,11 @@ var a = n(399606),
 t.Z = () => {
   let e = (0, c.mq)(I.ne.ACTIVE),
     t = (0, o.c)(),
-    n = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
+    n = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
     g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
     p = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
     A = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
-    N = (0, r.useRedesignIconContext)().enabled;
+    N = (0, i.useRedesignIconContext)().enabled;
   return void 0 === n ? null : (0, s.jsxs)("div", {
     className: C.container,
     children: [(0, s.jsx)("div", {
@@ -31,15 +31,15 @@ t.Z = () => {
       className: C.featureCards,
       children: [(0, s.jsx)(u.Z, {
         iconClassName: C.chatCheckIcon,
-        icon: r.ChatCheckIcon,
+        icon: i.ChatCheckIcon,
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
         description: g
       }), (0, s.jsx)(u.Z, {
-        icon: r.EyeIcon,
+        icon: i.EyeIcon,
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
         description: p
       }), (0, s.jsx)(u.Z, {
-        icon: N ? r.QrCodeCameraIcon : (0, r.makeIconCompat)(T.Z),
+        icon: N ? i.QrCodeCameraIcon : (0, i.makeIconCompat)(T.Z),
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: A
       })]

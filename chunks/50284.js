@@ -17,17 +17,17 @@ async function _(e, t) {
   if (null == n) return;
   let _ = r.Z.getMessages(e),
     E = _.toArray().filter(e => 0 > d.default.compare(e.id, t)).sort((e, t) => d.default.compare(e.id, t.id)).reverse()[0],
-    m = null == E ? d.default.atPreviousMillisecond(t) : E.id,
-    I = 0;
+    I = null == E ? d.default.atPreviousMillisecond(t) : E.id,
+    m = 0;
   _.forAll(e => {
-    d.default.compare(e.id, m) > 0 && (0, o.Ex)(e, n) && I++
+    d.default.compare(e.id, I) > 0 && (0, o.Ex)(e, n) && m++
   });
   let T = l.Z.getChannel(e);
   null != T && T.isThread() && (T.isArchivedThread() && await s.Z.unarchiveThread(T, !1), !a.Z.hasJoined(e) && await s.Z.joinThread(T, "Mark Unread")), i.tn.post({
-    url: u.ANM.MESSAGE_ACK(e, m),
+    url: u.ANM.MESSAGE_ACK(e, I),
     body: {
       manual: !0,
-      mention_count: I
+      mention_count: m
     },
     oldFormErrors: !0
   })

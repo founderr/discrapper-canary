@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(442837),
   a = n(78839),
-  r = n(74538),
-  i = n(104494),
+  i = n(74538),
+  r = n(104494),
   l = n(639119),
   o = n(474936);
 
@@ -22,7 +22,7 @@ function c(e) {
     onNonTier2Subscriber: T,
     onTier2Subscriber: I,
     onCustomCriteria: R
-  } = e, C = (0, l.N)(), g = (0, i.Ng)(), p = (0, s.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()), A = r.ZP.getPremiumTypeFromSubscription(p);
+  } = e, C = (0, l.N)(), g = (0, r.Ng)(), p = (0, s.e7)([a.ZP], () => a.ZP.getPremiumTypeSubscription()), A = i.ZP.getPremiumTypeFromSubscription(p);
   if (null != R) {
     let e = R();
     if (null != e) return e

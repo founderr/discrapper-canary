@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  r = n.n(a),
-  i = n(920906),
+  i = n.n(a),
+  r = n(920906),
   l = n(399606),
   o = n(607070),
   c = n(104494),
@@ -18,7 +18,7 @@ t.Z = function(e) {
     isVisible: a,
     isFullscreen: R,
     subscriptionTier: C
-  } = e, g = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, p = (0, c.Ng)(), A = (0, c.Wp)(p, u.Si.TIER_2) ? u.Si.TIER_2 : void 0, N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, i.useSpring)({
+  } = e, g = null === (t = (0, d.N)()) || void 0 === t ? void 0 : t.subscription_trial, p = (0, c.Ng)(), A = (0, c.Wp)(p, u.Si.TIER_2) ? u.Si.TIER_2 : void 0, N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, r.useSpring)({
     transform: a ? "translateY(-100%)" : "translateY(0%)",
     opacity: a ? 1 : 0,
     config: {
@@ -29,8 +29,8 @@ t.Z = function(e) {
   }), S = {
     section: T.jXE.MARKETING_FLOATING_CTA
   };
-  return (0, s.jsx)(i.animated.div, {
-    className: r()(I.wrapper, {
+  return (0, s.jsx)(r.animated.div, {
+    className: i()(I.wrapper, {
       [I.fullscreenWrapper]: R,
       [I.invisible]: !a
     }),

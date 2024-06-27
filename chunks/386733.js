@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(442837),
   o = n(481060),
   c = n(232567),
@@ -21,22 +21,22 @@ var s = n(735250),
   m = n(689938),
   S = n(695314),
   f = n(691766);
-let h = e => {
+let M = e => {
     let {
       userRecord: t,
       placement: n
     } = e, {
       avatarSrc: a,
-      eventHandlers: r
+      eventHandlers: i
     } = (0, E.Z)({
       user: t,
       size: o.AvatarSizes.SIZE_32,
       animateOnHover: !0
-    }), i = null != t, l = i ? (0, s.jsx)(o.Avatar, {
+    }), r = null != t, l = r ? (0, s.jsx)(o.Avatar, {
       src: a,
       "aria-label": t.username,
       size: o.AvatarSizes.SIZE_32,
-      ...r
+      ...i
     }) : (0, s.jsx)(o.Heading, {
       variant: "heading-md/semibold",
       className: S.userAvatarProgressBarUnitNum,
@@ -44,7 +44,7 @@ let h = e => {
     });
     return (0, s.jsx)(o.Tooltip, {
       text: m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
-      shouldShow: !i,
+      shouldShow: !r,
       tooltipContentClassName: S.unsentTooltipContent,
       children: e => (0, s.jsx)("div", {
         className: S.userAvatarProgressBarUnit,
@@ -53,7 +53,7 @@ let h = e => {
       })
     })
   },
-  M = e => {
+  h = e => {
     let {
       numSentReferrals: t,
       placement: n
@@ -63,38 +63,38 @@ let h = e => {
       children: [(0, s.jsx)("div", {
         className: S.avatarProgressBarUnitConnectorBase
       }), (0, s.jsx)("div", {
-        className: i()({
+        className: r()({
           [S.fullHighlight]: t > n,
           [S.halfHighlight]: t === n
         })
       })]
     })
   },
-  x = e => {
+  b = e => {
     let {
       userRecords: t
-    } = e, n = t.length, a = n < 1 ? null : t[0], r = n < 2 ? null : t[1], i = n < 3 ? null : t[2];
+    } = e, n = t.length, a = n < 1 ? null : t[0], i = n < 2 ? null : t[1], r = n < 3 ? null : t[2];
     return (0, s.jsxs)("div", {
       className: S.userAvatarProgressBarContainer,
-      children: [(0, s.jsx)(h, {
+      children: [(0, s.jsx)(M, {
         userRecord: a,
         placement: 1
-      }), (0, s.jsx)(M, {
+      }), (0, s.jsx)(h, {
         numSentReferrals: n,
         placement: 1
-      }), (0, s.jsx)(h, {
-        userRecord: r,
-        placement: 2
       }), (0, s.jsx)(M, {
+        userRecord: i,
+        placement: 2
+      }), (0, s.jsx)(h, {
         numSentReferrals: n,
         placement: 2
-      }), (0, s.jsx)(h, {
-        userRecord: i,
+      }), (0, s.jsx)(M, {
+        userRecord: r,
         placement: 3
       })]
     })
   },
-  b = (e, t, n, s) => e ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
+  x = (e, t, n, s) => e ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
     helpdeskArticle: s
   }) : t ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
     numFriends: 3 - n,
@@ -106,19 +106,19 @@ let h = e => {
 t.Z = e => {
   let {
     isInSettings: t = !1
-  } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), E = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), h = a.useMemo(() => E.map(e => new u.Z(e)), [E]), {
-    subscriberHomeVariant: M
+  } = e, i = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), E = (0, l.Wu)([T.default], () => i.map(e => T.default.getUser(e)).filter(e => null != e)), M = a.useMemo(() => E.map(e => new u.Z(e)), [E]), {
+    subscriberHomeVariant: h
   } = g.g.useExperiment({
     location: "ReferralProgramProgressBar"
   }, {
     autoTrackExposure: !1
-  }), O = M === g.p.VARIANT_2;
+  }), O = h === g.p.VARIANT_2;
   a.useEffect(() => {
-    r.forEach(e => {
+    i.forEach(e => {
       (0, c.PR)(e)
     })
-  }, [r]);
-  let P = r.length,
+  }, [i]);
+  let P = i.length,
     L = 3 === P,
     v = R.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
     Z = L ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : m.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
@@ -142,7 +142,7 @@ t.Z = e => {
     children: [(0, s.jsx)(A.Z, {
       percentage: P / 3 * 100,
       progressCircleVariation: A.Q.NITRO_LOGO,
-      iconClassName: i()({
+      iconClassName: r()({
         [S.referralProgressBarIcon]: !t,
         [S.referralProgressBarIconSettings]: t
       })
@@ -152,20 +152,20 @@ t.Z = e => {
         variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
         className: S.expandedProgressBarHeader,
         children: Z
-      }), (0, s.jsx)(x, {
-        userRecords: h
+      }), (0, s.jsx)(b, {
+        userRecords: M
       }), (0, s.jsx)(o.Text, {
         variant: t ? "text-sm/normal" : "text-lg/medium",
-        children: b(L, P > 0, r.length, v)
+        children: x(L, P > 0, i.length, v)
       }), (0, s.jsxs)("div", {
-        className: i()(S.expandedProgressBarButtonContainer, {
+        className: r()(S.expandedProgressBarButtonContainer, {
           [S.expandedProgressBarButtonContainerMinLayout]: U && !t,
           [S.expandedProgressBarButtonContainerLayout]: !U && !t
         }),
         children: [!t && !O && (0, s.jsx)(p.Z, {
           color: o.ButtonColors.CUSTOM,
           buttonText: m.Z.Messages.GIFT_NITRO,
-          className: i()(S.expandedProgressBarGiftingCTA, {
+          className: r()(S.expandedProgressBarGiftingCTA, {
             [S.expandedProgressBarGiftingCTAMinLayout]: U && !t,
             [S.expandedProgressBarGiftingCTALayout]: !U && !t
           }),
@@ -204,12 +204,12 @@ t.Z = e => {
     value: D,
     children: (0, s.jsx)("div", {
       ref: B,
-      className: i()({
+      className: r()({
         [S.expandedProgressBarContainer]: !t,
         [S.expandedProgressBarContainerSettingsPage]: t,
         [S.expandedProgressBarContainerVariant1]: !O && !t,
         [S.expandedProgressBarContainerVariant2]: O && !t,
-        [S.allReferralsSentBorder]: 3 === r.length
+        [S.allReferralsSentBorder]: 3 === i.length
       }),
       children: H
     })

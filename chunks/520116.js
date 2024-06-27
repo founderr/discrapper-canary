@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(900164),
   _ = n(554838),
   E = n(493892),
-  m = n(37772),
-  I = n(695346),
+  I = n(37772),
+  m = n(695346),
   T = n(314897),
   h = n(496675),
   N = n(594174),
@@ -55,7 +55,7 @@ function x(e) {
       children: [(0, i.jsx)(C.Z, {
         className: R.jumpButton,
         onJump: e => u(e, s.id)
-      }), (0, i.jsx)(m.Z, {
+      }), (0, i.jsx)(I.Z, {
         id: s.id,
         message: s,
         channel: n,
@@ -77,12 +77,12 @@ function M(e) {
     channelRecord: s,
     gotoChannel: r
   } = e, {
-    enabled: m
+    enabled: I
   } = d.Z.useExperiment({
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), C = I.jU.useSetting(), O = (0, o.e7)([h.Z], () => h.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || l()(a.messages[0].timestamp).isSame(l()(), "day"), Z = null !== (n = null === (t = N.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
+  }), C = m.jU.useSetting(), O = (0, o.e7)([h.Z], () => h.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || l()(a.messages[0].timestamp).isSame(l()(), "day"), Z = null !== (n = null === (t = N.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
@@ -102,7 +102,7 @@ function M(e) {
           message: n,
           compact: C,
           isGroupStart: a,
-          treatSpam: !Z && m && (0, E.DQ)(n) && M,
+          treatSpam: !Z && I && (0, E.DQ)(n) && M,
           gotoChannel: r
         }, n.id))
       }

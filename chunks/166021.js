@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   a = n(470079),
-  r = n(120356),
-  i = n.n(r),
+  i = n(120356),
+  r = n.n(i),
   l = n(920906),
   o = n(481060),
   c = n(320319),
@@ -11,7 +11,7 @@ t.Z = e => {
   let {
     cards: t,
     className: n,
-    cardType: r
+    cardType: i
   } = e, _ = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [E, u] = a.useState(0), [T, I] = a.useState(_()), [R, C] = a.useState(!1), g = t.length;
   a.useEffect(() => {
     let e = () => {
@@ -37,7 +37,7 @@ t.Z = e => {
         onClick: R ? () => {
           u(e => 0 === e ? g - T : e - 1)
         } : void 0,
-        className: i()({
+        className: r()({
           [d.leftArrow]: R,
           [d.inactiveArrow]: !R
         }),
@@ -58,7 +58,7 @@ t.Z = e => {
             },
             children: (0, s.jsx)(c.Z, {
               ...t[n],
-              cardType: r
+              cardType: i
             }, "".concat(t[n].name, "_").concat(n, "_perks_card"))
           }, "".concat(t[n].name, "_").concat(n, "_animated_div"))
         })

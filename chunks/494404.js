@@ -20,8 +20,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(668781),
   E = n(904245),
-  m = n(724757),
-  I = n(294218),
+  I = n(724757),
+  m = n(294218),
   T = n(703656),
   h = n(210887),
   N = n(592125),
@@ -158,13 +158,13 @@ function j(e) {
     loading: r,
     loadMore: _,
     renderHeader: E,
-    renderEmptyState: I,
+    renderEmptyState: m,
     renderItem: T,
     getProTip: N,
     scrollerClassName: f,
     className: p,
     listName: v
-  } = e, Z = a.useRef(null), P = (0, m.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
     A.default.track(O.rMx.OPEN_POPOUT, {
       type: t
@@ -198,7 +198,7 @@ function j(e) {
     className: l()(M.emptyPlaceholder, M.loadingPlaceholder),
     children: (0, i.jsx)(u.Spinner, {})
   }, "spinner")] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, {
-    children: I(h.Z.theme)
+    children: m(h.Z.theme)
   }, "empty-state")) : (y = !1, U = [], o().each(n, e => {
     U.push(...T(e))
   }));
@@ -217,7 +217,7 @@ function j(e) {
     })
   }) : (0, i.jsx)("div", {
     className: M.scrollingFooterWrap,
-    children: I(h.Z.theme)
+    children: m(h.Z.theme)
   }));
   let k = null == N ? void 0 : N(),
     G = y && null != k ? (0, i.jsx)("div", {
@@ -279,7 +279,7 @@ function U(e) {
     loading: o,
     loadMore: c,
     onJump: u,
-    canCloseAllMessages: m = !1,
+    canCloseAllMessages: I = !1,
     renderHeader: h,
     renderEmptyState: p,
     renderMessage: C,
@@ -340,7 +340,7 @@ function U(e) {
       let a = [];
       return null == n ? [] : (a.push((0, i.jsxs)("div", {
         className: M.messageGroupWrapper,
-        children: [(0, i.jsx)(I.Z, {
+        children: [(0, i.jsx)(m.Z, {
           className: M.messageGroupCozy,
           message: t,
           channel: n
@@ -348,7 +348,7 @@ function U(e) {
           channel: s,
           message: t,
           jumping: L,
-          canCloseAllMessages: m,
+          canCloseAllMessages: I,
           jumpTo: Z,
           onCloseMessage: R
         })]

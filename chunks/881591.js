@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(442837),
   _ = n(524437),
   E = n(481060),
-  m = n(239091),
-  I = n(904245),
+  I = n(239091),
+  m = n(904245),
   T = n(43267),
   h = n(933557),
   N = n(294218),
@@ -151,7 +151,7 @@ function B(e) {
         children: [(0, i.jsx)(E.TooltipContainer, {
           text: b.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
           children: (0, i.jsx)(E.Clickable, {
-            onClick: e => (0, m.jW)(e, async () => {
+            onClick: e => (0, I.jW)(e, async () => {
               let {
                 default: e
               } = await n.e("6045").then(n.bind(n, 883150));
@@ -192,7 +192,7 @@ function B(e) {
         className: D.actions,
         children: [null == c ? (0, i.jsx)(E.Button, {
           onClick: () => {
-            I.Z.fetchMessages({
+            m.Z.fetchMessages({
               channelId: s.channelId,
               limit: 1,
               jump: {

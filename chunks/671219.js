@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(778087),
   _ = n(603721),
   E = n(124072),
-  m = n(739566),
-  I = n(171368),
+  I = n(739566),
+  m = n(171368),
   T = n(592125),
   h = n(430824),
   N = n(594174),
@@ -98,10 +98,10 @@ t.Z = a.memo(function(e) {
           let e = O.value.toString(),
             t = N.default.getUser(e);
           if (null != t) {
-            let e = (0, m.ij)(t, x);
+            let e = (0, I.ij)(t, x);
             g = (0, i.jsxs)(E.Z, {
               ...A,
-              onClick: () => (0, I.openUserProfileModal)({
+              onClick: () => (0, m.openUserProfileModal)({
                 userId: t.id,
                 guildId: x.guild_id,
                 channelId: x.id,
@@ -143,10 +143,10 @@ t.Z = a.memo(function(e) {
           else {
             let t = N.default.getUser(e);
             if (null != t) {
-              let e = (0, m.ij)(t, x);
+              let e = (0, I.ij)(t, x);
               g = (0, i.jsxs)(E.Z, {
                 ...A,
-                onClick: () => (0, I.openUserProfileModal)({
+                onClick: () => (0, m.openUserProfileModal)({
                   userId: t.id,
                   guildId: x.guild_id,
                   analyticsLocation: {

@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(594174),
   _ = n(502568),
   E = n(280763),
-  m = n(178088),
-  I = n(222940),
+  I = n(178088),
+  m = n(222940),
   T = n(490897),
   h = n(689938),
   N = n(673908);
@@ -32,7 +32,7 @@ function f(e) {
   }, {
     autoTrackExposure: !1
   }), R = (0, s.e7)([r.Z], () => A && r.Z.getUnseenInviteCount() > 0);
-  return (0, i.jsx)(m.k, {
+  return (0, i.jsx)(I.k, {
     onOpen: t,
     onClose: n,
     badgeState: {
@@ -43,7 +43,7 @@ function f(e) {
     children: (e, t, n) => (0, i.jsxs)("div", {
       ref: g,
       className: N.recentsIcon,
-      children: [A && (0, i.jsx)(I.Z, {
+      children: [A && (0, i.jsx)(m.Z, {
         inboxIconRef: g,
         recentsPopoutShown: t
       }), (0, i.jsx)(_.JO, {

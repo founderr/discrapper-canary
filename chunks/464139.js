@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(778947),
   _ = n(702346),
   E = n(787374),
-  m = n(674563),
-  I = n(689938),
+  I = n(674563),
+  m = n(689938),
   T = n(923255);
 
 function h(e) {
@@ -62,9 +62,9 @@ function h(e) {
               color: "text-brand",
               tag: "span",
               className: T.username,
-              children: I.Z.Messages.GUILD_AUTOMOD_USERNAME
+              children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, i.jsx)(d.Z, {
-              type: m.Hb.SYSTEM_DM,
+              type: I.Hb.SYSTEM_DM,
               className: T.systemTag
             })]
           }),
@@ -74,7 +74,7 @@ function h(e) {
           className: s()(T.__invalid_messageContent, {
             [T.compact]: a
           }),
-          children: I.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+          children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
             username: p.nick,
             usernameHook: C,
             guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ""

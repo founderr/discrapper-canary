@@ -19,8 +19,8 @@ var i, a, s, l, r = n(470079),
   u = n(392711),
   _ = n.n(u),
   E = n(570140),
-  m = n(904245),
-  I = n(45114),
+  I = n(904245),
+  m = n(45114),
   T = n(607070),
   h = n(853856),
   N = n(181945),
@@ -99,8 +99,8 @@ class V extends o.EventEmitter {
     })
   }
   loadChannelMessages(e) {
-    m.Z.clearChannel(e.channelId);
-    let t = m.Z.fetchMessages({
+    I.Z.clearChannel(e.channelId);
+    let t = I.Z.fetchMessages({
       channelId: e.channelId,
       limit: k.AQB,
       jump: {
@@ -167,7 +167,7 @@ class V extends o.EventEmitter {
         channelId: t,
         newestUnreadMessageId: n
       } = e;
-      if (E.Z.wait(() => I.In(t, !0, void 0, n, {
+      if (E.Z.wait(() => m.In(t, !0, void 0, n, {
           section: k.jXE.INBOX
         })), 1 === this.state.channels.length) {
         this.deleteChannel(t);
@@ -189,7 +189,7 @@ class V extends o.EventEmitter {
         channels: this.state.channels.filter(t => t.channelId !== e)
       }), this.maybeLoadMore()
     }, this.markAllRead = () => {
-      I.y5(this.state.channels.map(e => ({
+      m.y5(this.state.channels.map(e => ({
         channelId: e.channelId,
         messageId: e.newestUnreadMessageId
       }))), this.setState({

@@ -9,8 +9,8 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(276852),
   E = n(994339),
-  m = n(275920),
-  I = n(431583),
+  I = n(275920),
+  m = n(431583),
   T = n(592745),
   h = n(952164),
   N = n(768419),
@@ -105,7 +105,7 @@ class G extends(i = s.PureComponent) {
           applicationId: e.application_id,
           channelId: a,
           messageId: i.id
-        }), (0, m.Z)({
+        }), (0, I.Z)({
           type: U.q5t.JOIN,
           source: U.Sbl.MESSAGE_EMBED,
           userId: n,
@@ -141,7 +141,7 @@ class G extends(i = s.PureComponent) {
       } = this.props;
       null != e && null != t && d.Z_(e, t)
     }), B(this, "handleDownloadApp", () => {
-      (0, r.openModal)(e => (0, a.jsx)(I.default, {
+      (0, r.openModal)(e => (0, a.jsx)(m.default, {
         source: "Game Invite",
         ...e
       }))
@@ -196,8 +196,8 @@ class G extends(i = s.PureComponent) {
         className: u,
         channelId: _,
         message: E,
-        hideParty: m,
-        isSyncable: I,
+        hideParty: I,
+        isSyncable: m,
         isLaunchable: T,
         guildId: h
       } = this.props;
@@ -220,12 +220,12 @@ class G extends(i = s.PureComponent) {
         isLoading: o || this.state.sending,
         activityActionType: d,
         isInBrowser: !b.isPlatformEmbedded,
-        isSyncable: I,
+        isSyncable: m,
         isSender: c,
         channelId: _,
         guildId: null != h ? h : void 0,
         message: E,
-        hideParty: m,
+        hideParty: I,
         onJoin: this.handleJoin,
         onInvite: this.handleInvite,
         onSync: this.handleSync,
@@ -269,14 +269,14 @@ B(G, "defaultProps", {
     }),
     _ = null != t && N.Z.canPlay(t),
     E = N.Z.getSyncingWith(),
-    m = null != E && null != s && E.userId === s;
+    I = null != E && null != s && E.userId === s;
   return {
     analyticsLocations: n,
     partyMembers: u,
     connectedApplication: null != r ? S.Z.getApplication(r) : null,
     myPartyId: null != c && null != c.party ? c.party.id : null,
     isLaunching: d,
-    isSyncable: _ && !m,
+    isSyncable: _ && !I,
     isLaunchable: null != r && (0, D.t)({
       LibraryApplicationStore: O.Z,
       LaunchableGameStore: T.Z,

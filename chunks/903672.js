@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(796798),
   _ = n(198620),
   E = n(294218),
-  m = n(695346),
-  I = n(592125),
+  I = n(695346),
+  m = n(592125),
   T = n(731290),
   h = n(944486),
   N = n(455199),
@@ -48,7 +48,7 @@ function v(e) {
     onJump: n,
     badgeState: r,
     closePopout: E
-  } = e, m = (0, s.e7)([I.Z, h.Z], () => I.Z.getChannel(h.Z.getChannelId())), {
+  } = e, I = (0, s.e7)([m.Z, h.Z], () => m.Z.getChannel(h.Z.getChannelId())), {
     messages: T,
     hasMore: f,
     loading: C,
@@ -65,14 +65,14 @@ function v(e) {
   })), L = (0, d.Z)(g), P = (0, d.Z)(x), D = (0, d.Z)(v);
   a.useEffect(() => {
     if (!N.Z.hasLoadedEver) {
-      M(m, !0);
+      M(I, !0);
       return
-    }(null != L && g !== L || null != P && x !== P || null != D && v !== D) && M(m, !0)
-  }, [L, g, P, x, D, v, m, !0]);
+    }(null != L && g !== L || null != P && x !== P || null != D && v !== D) && M(I, !0)
+  }, [L, g, P, x, D, v, I, !0]);
   a.useEffect(() => {
     u.l.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(m, !0))
+    }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(I, !0))
   }, []), a.useEffect(() => () => {
     o.Z.truncateMentions(A.DJj)
   }, []);
@@ -92,13 +92,13 @@ function v(e) {
       onCloseMessage: function(e) {
         o.Z.deleteRecentMention(e.id)
       },
-      channel: m,
+      channel: I,
       messages: T,
       loading: C,
       hasMore: f,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        M(m, !0, null != T && T.length > 0 ? T[T.length - 1].id : null)
+        M(I, !0, null != T && T.length > 0 ? T[T.length - 1].id : null)
       },
       canCloseAllMessages: !0,
       renderHeader: j,
@@ -132,7 +132,7 @@ function P(e) {
     dismissible: a
   } = e;
   if (null == t) return null;
-  let s = I.Z.getChannel(t.channel_id);
+  let s = m.Z.getChannel(t.channel_id);
   if (null == s) return null;
   let l = T.Z.didAgree(s.getGuildId()),
     c = !!s.isNSFW() && !l;
@@ -161,7 +161,7 @@ function P(e) {
         channel: s,
         className: O.message,
         hideAccessories: c,
-        compact: m.jU.getSetting(),
+        compact: I.jU.getSetting(),
         animateAvatar: !1,
         focusProps: x,
         trackAnnouncementViews: !0

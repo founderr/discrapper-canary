@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(527805),
   _ = n(952561),
   E = n(513202),
-  m = n(100527),
-  I = n(906732),
+  I = n(100527),
+  m = n(906732),
   T = n(973616),
   h = n(314897),
   N = n(592125),
@@ -36,7 +36,7 @@ function x(e) {
     guildId: M
   } = e, [v, L] = a.useState(!1), {
     analyticsLocations: Z
-  } = (0, I.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(x)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : x, U = (0, s.e7)([h.default], () => h.default.getId()), {
+  } = (0, m.ZP)(I.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(x)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : x, U = (0, s.e7)([h.default], () => h.default.getId()), {
     embeddedActivity: y,
     currentEmbeddedActivity: B
   } = (0, s.cj)([o.ZP], () => ({

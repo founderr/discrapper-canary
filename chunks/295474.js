@@ -20,8 +20,8 @@ var i = n(470079),
   u = n(496675),
   _ = n(914010),
   E = n(715903),
-  m = n(981631),
-  I = n(372897),
+  I = n(981631),
+  m = n(372897),
   T = n(526761),
   h = n(689938);
 
@@ -47,7 +47,7 @@ function f(e) {
       l = c.ZP.getMember(i, s),
       r = (0, E.Ow)(null == l ? void 0 : l.flags);
     if (0 === r.size) return t;
-    if (r.has(I.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
+    if (r.has(m.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
       if (null == e) {
         var u;
         t.nick = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
@@ -55,7 +55,7 @@ function f(e) {
         })]
       } else t.nick = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME]
     }
-    return r.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
+    return r.has(m.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
   }, [e])
 }
 
@@ -68,16 +68,16 @@ function p(e) {
     openWithoutBackstack: _
   } = e, {
     analyticsLocations: E
-  } = (0, l.ZP)(), I = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]), h = (0, a.e7)([u.Z], () => null != I && u.Z.can(m.Plq.CHANGE_NICKNAME, I), [I]);
+  } = (0, l.ZP)(), m = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]), h = (0, a.e7)([u.Z], () => null != m && u.Z.can(I.Plq.CHANGE_NICKNAME, m), [m]);
   return [i.useCallback(() => {
-    if (null == I) return;
-    let e = m.oAB.PROFILE_CUSTOMIZATION,
+    if (null == m) return;
+    let e = I.oAB.PROFILE_CUSTOMIZATION,
       t = T.NB.GUILD;
-    h ? (0, r.Fq)(I, null != c ? c : E) : t = T.NB.USER_PROFILE, s.Z.open(e, t, {
+    h ? (0, r.Fq)(m, null != c ? c : E) : t = T.NB.USER_PROFILE, s.Z.open(e, t, {
       scrollPosition: n,
       analyticsLocation: o,
       analyticsLocations: c,
       openWithoutBackstack: _
     })
-  }, [h, n, o, c, _, I, E]), h]
+  }, [h, n, o, c, _, m, E]), h]
 }

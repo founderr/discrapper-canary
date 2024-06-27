@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(780384),
-  r = n(481060),
-  i = n(410030),
+  i = n(481060),
+  r = n(410030),
   l = n(74538),
   o = n(650032),
   c = n(104494),
@@ -17,12 +17,12 @@ let I = e => {
       subscriptionTier: n,
       shouldShowUpsells: s,
       trialDurationCopy: a,
-      isPersistentCTA: r,
-      shouldShowReferralTrialCopy: i,
+      isPersistentCTA: i,
+      shouldShowReferralTrialCopy: r,
       subscriptionTrial: o
     } = e;
-    if (t && i) return u.Z.Messages.REFERRAL_PROGRAM_START_TRIAL;
-    if (t && (n === E.Si.TIER_2 || r)) return (0, l.Rt)({
+    if (t && r) return u.Z.Messages.REFERRAL_PROGRAM_START_TRIAL;
+    if (t && (n === E.Si.TIER_2 || i)) return (0, l.Rt)({
       intervalType: null == o ? void 0 : o.interval,
       intervalCount: null == o ? void 0 : o.interval_count
     });
@@ -42,30 +42,30 @@ t.Z = e => {
     isPersistentCTA: g = !1,
     useShorterCTA: p = !1,
     ...A
-  } = e, N = (0, i.ZP)(), m = (0, a.wj)(N) || t, S = (0, d.N)(), f = null == S ? void 0 : S.subscription_trial, h = (0, l.a5)({
+  } = e, N = (0, r.ZP)(), m = (0, a.wj)(N) || t, S = (0, d.N)(), f = null == S ? void 0 : S.subscription_trial, M = (0, l.a5)({
     intervalType: null == f ? void 0 : f.interval,
     intervalCount: null == f ? void 0 : f.interval_count
-  }), M = (0, c.Ng)(), x = null != f && n === f.sku_id, {
-    enabled: b
+  }), h = (0, c.Ng)(), b = null != f && n === f.sku_id, {
+    enabled: x
   } = o._.useExperiment({
     location: "SubscribeButton"
   }, {
     autoTrackExposure: !1
-  }), O = b && (null == S ? void 0 : S.trial_id) === E.a7, P = C ? u.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, p, g, M.discount.amount) : I({
-    showTrialCTA: x,
+  }), O = x && (null == S ? void 0 : S.trial_id) === E.a7, P = C ? u.Z.Messages.BOGO_CLAIM_OFFER : null != h ? R(n, p, g, h.discount.amount) : I({
+    showTrialCTA: b,
     subscriptionTier: n,
     shouldShowUpsells: !1,
-    trialDurationCopy: h,
+    trialDurationCopy: M,
     isPersistentCTA: g,
     shouldShowReferralTrialCopy: O,
     subscriptionTrial: f
   });
   return (0, s.jsx)(_.Z, {
-    color: m ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
+    color: m ? i.ButtonColors.BRAND_INVERTED : i.ButtonColors.BRAND,
     buttonShineClassName: "buttonShineClassName" in A ? A.buttonShineClassName : m ? T.brandShine : void 0,
     trialId: null == f ? void 0 : f.id,
     buttonText: P,
-    buttonTextClassName: x ? T.freeTrialText : void 0,
+    buttonTextClassName: b ? T.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: n,
     ...A

@@ -1,6 +1,6 @@
 n.d(t, {
   M: function() {
-    return I
+    return m
   }
 }), n(411104);
 var i, a, s, l, r = n(735250),
@@ -11,11 +11,11 @@ var i, a, s, l, r = n(735250),
   _ = n(689938),
   E = n(634936);
 
-function m(e) {
+function I(e) {
   e.stopPropagation(), e.preventDefault()
 }
 
-function I(e, t, n) {
+function m(e, t, n) {
   return {
     id: "".concat(e, "-").concat(t),
     role: "option",
@@ -36,13 +36,13 @@ class T extends(i = o.PureComponent) {
       searchFavorites: c
     } = this.props;
     if (e || o) return null;
-    let m = -1 === i;
+    let I = -1 === i;
     return (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsxs)(u.Clickable, {
         className: d()(E.queryContainer, {
-          [E.focused]: m
+          [E.focused]: I
         }),
-        ...I(n, -1, m),
+        ...m(n, -1, I),
         onMouseEnter: l,
         onClick: a,
         children: [(0, r.jsx)("div", {
@@ -61,9 +61,9 @@ class T extends(i = o.PureComponent) {
         })]
       }), c && (0, r.jsxs)(u.Clickable, {
         className: d()(E.queryContainer, {
-          [E.focused]: m
+          [E.focused]: I
         }),
-        ...I(n, -1, m),
+        ...m(n, -1, I),
         onMouseEnter: l,
         onClick: s,
         children: [(0, r.jsx)("div", {
@@ -109,7 +109,7 @@ class T extends(i = o.PureComponent) {
       style: {
         width: i
       },
-      onMouseDown: m,
+      onMouseDown: I,
       role: "listbox",
       id: n,
       tabIndex: -1,

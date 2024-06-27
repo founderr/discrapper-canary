@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(481060),
-  r = n(785681),
-  i = n(841409),
+  i = n(785681),
+  r = n(841409),
   l = n(880257),
   o = n(631885),
   c = n(568671),
@@ -16,7 +16,7 @@ let I = () => {
     t = (0, l.Z)(),
     {
       handleTabChange: n
-    } = (0, i.Z)();
+    } = (0, r.Z)();
   return (0, o.VM)() || t && e.length > 0 ? null : (0, s.jsx)("div", {
     className: E.button,
     children: t ? (0, s.jsx)(a.Button, {
@@ -29,8 +29,8 @@ let I = () => {
 };
 t.Z = () => {
   let e = (0, l.Z)(),
-    t = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
-    n = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
+    t = (0, i.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
+    n = (0, i.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
       articleLink: "https://support.discord.com/hc/articles/14155060633623"
     }), _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({
       articleLink: "https://support.discord.com/hc/articles/14155043715735"

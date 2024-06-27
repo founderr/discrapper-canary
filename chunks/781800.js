@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(481060),
-  r = n(626135),
-  i = n(391110),
+  i = n(626135),
+  r = n(391110),
   l = n(981631),
   o = n(689938),
   c = n(455879);
@@ -17,9 +17,9 @@ t.Z = e => {
     shineSize: a.ShineSizes.SMALL,
     className: c.seeAllPerksButton,
     onClick: () => {
-      t(!0), r.default.track(l.rMx.NITRO_HOME_NAVIGATION, {
+      t(!0), i.default.track(l.rMx.NITRO_HOME_NAVIGATION, {
         current_component: n,
-        next_component: i.MQ.SEE_ALL,
+        next_component: r.MQ.SEE_ALL,
         interaction_component: "See All Button"
       })
     },

@@ -27,8 +27,8 @@ var i, a, s = n(735250),
   u = n(596454),
   _ = n(44315),
   E = n(377171),
-  m = n(695346),
-  I = n(261922),
+  I = n(695346),
+  m = n(261922),
   T = n(186523),
   h = n(553826),
   N = n(506071),
@@ -186,7 +186,7 @@ function b(e) {
   } = e, {
     channelId: d,
     messageId: u
-  } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, m = l.useCallback(() => {
+  } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, I = l.useCallback(() => {
     f.Z.handlePollAnswerTapped({
       channelId: d,
       messageId: u,
@@ -203,7 +203,7 @@ function b(e) {
     case 1:
       return (0, s.jsx)(Z, {
         className: o()(t, _),
-        onClick: m,
+        onClick: I,
         isSelected: E,
         hasSelectedAnyAnswer: a,
         isFirstAnswer: r,
@@ -212,7 +212,7 @@ function b(e) {
     case 2:
       return (0, s.jsx)(L, {
         className: o()(t, _),
-        onClick: m,
+        onClick: I,
         isSelected: E,
         isFirstAnswer: r,
         children: i
@@ -225,8 +225,8 @@ function D(e) {
   let {
     attachment: n,
     className: i
-  } = e, a = (0, N.n)(), l = m.QK.useSetting();
-  return (0, s.jsx)(I.Z, {
+  } = e, a = (0, N.n)(), l = I.QK.useSetting();
+  return (0, s.jsx)(m.Z, {
     className: i,
     imageClassName: O.attachmentImage,
     src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,

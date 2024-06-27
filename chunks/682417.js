@@ -16,15 +16,15 @@ function u(e) {
   var t, n, u;
   let _ = o.Z.getMessage(e.channelId, e.messageId),
     E = c.default.getUser(e.authorId),
-    m = r.Z.getChannel(e.channelId),
-    I = null != E ? E : new l.Z({
+    I = r.Z.getChannel(e.channelId),
+    m = null != E ? E : new l.Z({
       id: e.authorId,
       username: e.authorSummary
     }),
     T = new s.ZP({
       id: e.messageId,
       channel_id: e.channelId,
-      author: I,
+      author: m,
       content: e.messageSummary
     }),
     h = null == e.guildId ? new a.cE({
@@ -40,7 +40,7 @@ function u(e) {
       guild_id: e.guildId
     });
   return {
-    channel: null != m ? m : h,
+    channel: null != I ? I : h,
     message: null != _ ? _ : T
   }
 }

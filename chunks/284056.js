@@ -5,8 +5,8 @@ n.d(t, {
 }), n(47120);
 var s = n(735250),
   a = n(470079),
-  r = n(392711),
-  i = n.n(r),
+  i = n(392711),
+  r = n.n(i),
   l = n(442837),
   o = n(46973),
   c = n(846519),
@@ -42,8 +42,8 @@ class A extends a.PureComponent {
       inputVolume: n,
       outputDeviceName: s,
       outputVolume: a,
-      inputMode: r,
-      vadAutoThreshold: i,
+      inputMode: i,
+      vadAutoThreshold: r,
       vadThreshold: l,
       location: o,
       isDeafened: c
@@ -57,8 +57,8 @@ class A extends a.PureComponent {
       input_device_volume: n,
       output_device_name: s,
       output_device_volume: a,
-      input_mode: r,
-      input_sensitivity_is_automatic: i,
+      input_mode: i,
+      input_sensitivity_is_automatic: r,
       input_sensitivity_threshold: Math.round(l),
       location: o
     })
@@ -99,8 +99,8 @@ class A extends a.PureComponent {
       title: t,
       description: n,
       notchBackground: a,
-      buttonTest: r,
-      buttonStop: i,
+      buttonTest: i,
+      buttonStop: r,
       buttonClassName: l,
       buttonColor: o,
       isDeafened: c
@@ -135,7 +135,7 @@ class A extends a.PureComponent {
               size: d.Button.Sizes.SMALL,
               className: l,
               color: o,
-              children: _ ? i : r
+              children: _ ? r : i
             })
           }
         }), (0, s.jsx)(T.Z, {
@@ -179,7 +179,7 @@ class A extends a.PureComponent {
 t.Z = l.ZP.connectStores([u.Z, E.Z], () => {
   let e = E.Z.getInputDeviceId(),
     t = E.Z.getInputDevices(),
-    n = i().find(t, t => {
+    n = r().find(t, t => {
       let {
         id: n
       } = t;
@@ -187,7 +187,7 @@ t.Z = l.ZP.connectStores([u.Z, E.Z], () => {
     }),
     s = E.Z.getOutputDeviceId(),
     a = E.Z.getOutputDevices(),
-    r = i().find(a, e => {
+    i = r().find(a, e => {
       let {
         id: t
       } = e;
@@ -203,6 +203,6 @@ t.Z = l.ZP.connectStores([u.Z, E.Z], () => {
     isDeafened: E.Z.isSelfDeaf(),
     vadAutoThreshold: l.autoThreshold,
     inputDeviceName: null != n ? n.name : "",
-    outputDeviceName: null != r ? r.name : ""
+    outputDeviceName: null != i ? i.name : ""
   }
 })(A)

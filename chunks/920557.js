@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(542578),
   E = n(153124),
-  m = n(203143),
-  I = n(79390),
+  I = n(203143),
+  m = n(79390),
   T = n(839963),
   h = n(139256),
   N = n(294608),
@@ -32,13 +32,13 @@ function C(e) {
     channelId: c,
     messageId: d
   } = (0, N.pE)(), [T, h] = a.useState(""), [f, C] = a.useState(!1), g = "" !== T && f, S = a.useCallback(() => {
-    h((0, I.e1)(d, c, l))
+    h((0, m.e1)(d, c, l))
   }, [d, c, l]), A = a.useCallback(() => {
     S(), C(!0)
   }, [S]), R = a.useCallback(() => {
     C(!1)
   }, []), O = a.useCallback(() => {
-    (0, m.n)({
+    (0, I.n)({
       channelId: c,
       messageId: d,
       answerId: l

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(399606),
   a = n(780384),
-  r = n(230711),
-  i = n(410030),
+  i = n(230711),
+  r = n(410030),
   l = n(594174),
   o = n(74538),
   c = n(981631),
@@ -25,10 +25,10 @@ var s = n(399606),
   m = n(302036),
   S = n(994554),
   f = n(1549),
-  h = n(13327),
-  M = n(59137),
-  x = n(405991),
-  b = n(24615),
+  M = n(13327),
+  h = n(59137),
+  b = n(405991),
+  x = n(24615),
   O = n(193943),
   P = n(334347),
   L = n(943734),
@@ -41,7 +41,7 @@ let j = (e, t, n) => (0, a.wj)(e) ? t : n,
   G = e => {
     let {
       styles: t
-    } = e, n = (0, i.ZP)(), a = (0, s.e7)([l.default], () => {
+    } = e, n = (0, r.ZP)(), a = (0, s.e7)([l.default], () => {
       let e = l.default.getCurrentUser();
       return o.ZP.canUsePremiumProfileCustomization(e)
     }), G = _.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE;
@@ -62,7 +62,7 @@ let j = (e, t, n) => (0, a.wj)(e) ? t : n,
         title: _.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
         description: _.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
         className: t.clientThemesCard,
-        imageSource: b,
+        imageSource: x,
         imageClassName: t.clientThemesImage
       },
       customAppIcons: {
@@ -81,7 +81,7 @@ let j = (e, t, n) => (0, a.wj)(e) ? t : n,
         title: _.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            r.Z.open(c.oAB.PROFILE_CUSTOMIZATION, null, {
+            i.Z.open(c.oAB.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.Y_.TRY_IT_OUT,
               analyticsLocations: e
             })
@@ -153,7 +153,7 @@ let j = (e, t, n) => (0, a.wj)(e) ? t : n,
       superReactions: {
         title: _.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
         description: _.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-        imageSource: j(n, f, h),
+        imageSource: j(n, f, M),
         imageClassName: t.superReactionsImage
       },
       upload: {
@@ -169,7 +169,7 @@ let j = (e, t, n) => (0, a.wj)(e) ? t : n,
       videoBackground: {
         title: _.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
         description: _.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-        imageSource: j(n, M, x),
+        imageSource: j(n, h, b),
         imageClassName: t.videoBackgroundImage
       }
     }

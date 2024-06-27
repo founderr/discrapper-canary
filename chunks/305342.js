@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(351402),
   _ = n(153124),
   E = n(768581),
-  m = n(817460),
-  I = n(584825),
+  I = n(817460),
+  m = n(584825),
   T = n(290348),
   h = n(934826),
   N = n(768318),
@@ -39,25 +39,25 @@ let P = e => {
       guildId: s
     } = e, [l, r] = a.useState(!1), c = l ? t : t.slice(0, 5), d = t.length > 5, u = t.length - 5, E = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
       numTruncated: u
-    }), I = (0, _.Dt)();
+    }), m = (0, _.Dt)();
     return 0 === t.length ? null : (0, i.jsxs)("div", {
       className: Z.benefitsSection,
       children: [(0, i.jsx)(o.Heading, {
         variant: "text-xs/bold",
         color: "header-secondary",
         className: Z.sectionHeader,
-        id: I,
+        id: m,
         children: n
       }), (0, i.jsx)(o.Spacer, {
         size: 12
       }), (0, i.jsx)("ul", {
         className: Z.benefitsList,
-        "aria-labelledby": I,
+        "aria-labelledby": m,
         children: c.map((e, t) => (0, i.jsx)("li", {
           children: (0, i.jsx)(A.Z, {
             guildId: s,
             benefit: e
-          }, (0, m.ab)(e))
+          }, (0, I.ab)(e))
         }, t))
       }), d && (0, i.jsx)(j, {
         isViewAll: l,
@@ -179,7 +179,7 @@ t.Z = e => {
     guildId: s,
     groupListingId: _,
     analyticsLocation: E
-  } = e, f = (0, I.jO)(n), {
+  } = e, f = (0, m.jO)(n), {
     openModal: p,
     canOpenModal: C,
     cannotOpenReason: S,
@@ -197,7 +197,7 @@ t.Z = e => {
     children: [Q && (0, i.jsxs)("div", {
       className: l()(Z.tierTrialIndicator, Z.tierTopIndicator),
       children: [L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-        trialPeriodDuration: (0, m.iG)({
+        trialPeriodDuration: (0, I.iG)({
           interval: W.interval,
           interval_count: W.interval_count
         })

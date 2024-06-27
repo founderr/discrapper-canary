@@ -1,8 +1,8 @@
 n(47120);
 var s = n(392711),
   a = n.n(s),
-  r = n(710845),
-  i = n(581883),
+  i = n(710845),
+  r = n(581883),
   l = n(314897),
   o = n(287328),
   c = n(261875);
@@ -15,7 +15,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = new r.Z("UserSettingsProto");
+let _ = new i.Z("UserSettingsProto");
 t.Z = new class e {
   async getAll(e) {
     let t = performance.now(),
@@ -38,16 +38,16 @@ t.Z = new class e {
         t = c.Z.database(e);
       null == t || t.transaction(e => {
         var t, n;
-        let s = i.Z.computeState(),
+        let s = r.Z.computeState(),
           a = o.Z.userSettingsTransaction(e);
         for (let e in s) a.put({
           id: Number(e),
           value: s[e]
         });
-        let r = null !== (n = null === (t = i.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
+        let i = null !== (n = null === (t = r.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
         o.Z.nonGuildVersionsTransaction(e).put({
           id: "user_settings_version",
-          version: r
+          version: i
         })
       }, "handleUserSettingsProtoChange")
     }), d(this, "throttledOnChange", a().debounce(this.handleUserSettingsProtoChange, 0))

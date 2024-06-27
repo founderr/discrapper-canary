@@ -15,7 +15,7 @@ var a = n(430824),
   u = n(689938);
 
 function _(e) {
-  var t, n, _, E, m, I, T, h, N, f, p, C, g, S, A;
+  var t, n, _, E, I, m, T, h, N, f, p, C, g, S, A;
   let R = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : d.lds,
     O = o.ZP.getName(l.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
   switch (e.type) {
@@ -24,8 +24,8 @@ function _(e) {
         username: "**".concat(O, "**")
       });
     case c.O7.FRIEND_REQUESTS_GROUPED:
-      let x = o.ZP.getName(l.default.getUser(null === (m = e.other_users) || void 0 === m ? void 0 : null === (E = m[0]) || void 0 === E ? void 0 : E.id)),
-        M = o.ZP.getName(l.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (I = T[1]) || void 0 === I ? void 0 : I.id)),
+      let x = o.ZP.getName(l.default.getUser(null === (I = e.other_users) || void 0 === I ? void 0 : null === (E = I[0]) || void 0 === E ? void 0 : E.id)),
+        M = o.ZP.getName(l.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (m = T[1]) || void 0 === m ? void 0 : m.id)),
         v = Math.max((null !== (N = null === (h = e.other_users) || void 0 === h ? void 0 : h.length) && void 0 !== N ? N : 0) - 2, 0);
       return u.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
         user: x,

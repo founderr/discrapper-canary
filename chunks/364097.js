@@ -19,15 +19,15 @@ function E(e) {
   var t;
   let {
     code: E
-  } = e, m = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
-  if (null == m || m.state === c.Rj.RESOLVING) return (0, i.jsxs)(l.Z, {
+  } = e, I = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
+  if (null == I || I.state === c.Rj.RESOLVING) return (0, i.jsxs)(l.Z, {
     children: [(0, i.jsx)(l.Z.Header, {
       text: d.Z.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
     }), (0, i.jsx)(l.Z.Body, {
       resolving: !0
     })]
   });
-  if (m.state === c.Rj.EXPIRED) return (0, i.jsxs)(l.Z, {
+  if (I.state === c.Rj.EXPIRED) return (0, i.jsxs)(l.Z, {
     children: [(0, i.jsx)(l.Z.Header, {
       text: d.Z.Messages.GUILD_TEMPLATE_INVALID_TITLE
     }), (0, i.jsxs)(l.Z.Body, {
@@ -39,7 +39,7 @@ function E(e) {
       })]
     })]
   });
-  let I = __OVERLAY__ ? (0, i.jsx)(l.Z.Button, {
+  let m = __OVERLAY__ ? (0, i.jsx)(l.Z.Button, {
     isDisabled: !0,
     color: l.Z.Button.Colors.PRIMARY,
     children: d.Z.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
@@ -51,11 +51,11 @@ function E(e) {
         } = await Promise.all([n.e("10778"), n.e("22921")]).then(n.bind(n, 766775));
         return t => (0, i.jsx)(e, {
           ...t,
-          guildTemplate: m
+          guildTemplate: I
         })
       })
     },
-    submitting: m.state === c.Rj.ACCEPTING,
+    submitting: I.state === c.Rj.ACCEPTING,
     color: l.Z.Button.Colors.GREEN,
     children: d.Z.Messages.GUILD_TEMPLATE_OPEN
   });
@@ -68,12 +68,12 @@ function E(e) {
         children: [(0, i.jsx)(r.Z, {
           className: u.icon
         }), (0, i.jsx)(l.Z.Info, {
-          title: m.name,
+          title: I.name,
           children: d.Z.Messages.GUILD_TEMPLATE_USAGES.format({
-            usageCount: String(null !== (t = m.usageCount) && void 0 !== t ? t : 0)
+            usageCount: String(null !== (t = I.usageCount) && void 0 !== t ? t : 0)
           })
         })]
-      }), I]
+      }), m]
     })]
   })
 }

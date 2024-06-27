@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  r = n.n(a),
-  i = n(468194),
+  i = n.n(a),
+  r = n(468194),
   l = n(399606),
   o = n(481060),
   c = n(940627),
@@ -23,7 +23,7 @@ t.Z = e => {
     g = T[T.length - 1];
   if (null == n.icon && null != I) {
     var p;
-    g = null !== (p = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== p ? p : T[T.length - 1]
+    g = null !== (p = T[(C = (0, r.Zg)(I)).length - 1]) && void 0 !== p ? p : T[T.length - 1]
   }
   return (0, s.jsxs)("div", {
     className: u.container,
@@ -32,7 +32,7 @@ t.Z = e => {
         fontSize: g
       },
       children: [null != C ? (0, s.jsx)("div", {
-        className: r()(u.childWrapper, u.acronym),
+        className: i()(u.childWrapper, u.acronym),
         "aria-hidden": !0,
         children: C
       }) : null, null != R ? (0, s.jsx)(o.Avatar, {

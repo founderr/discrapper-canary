@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(933557),
   _ = n(471445),
   E = n(199902),
-  m = n(592125),
-  I = n(430824),
+  I = n(592125),
+  m = n(430824),
   T = n(158776),
   h = n(594174),
   N = n(2093),
@@ -97,7 +97,7 @@ function x(e) {
   let {
     channel: t,
     gotoChannel: n
-  } = e, a = (0, r.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
+  } = e, a = (0, r.e7)([m.Z], () => m.Z.getGuild(t.guild_id));
   return null == a ? null : (0, i.jsx)(f.Z, {
     "aria-hidden": !0,
     className: g.guildIcon,
@@ -114,7 +114,7 @@ function M(e) {
     channel: t,
     gotoChannel: n,
     mentionCount: a
-  } = e, l = (0, r.e7)([I.Z], () => I.Z.getGuild(t.guild_id)), c = (0, r.e7)([m.Z], () => m.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, l), E = (0, u.ZP)(t, !1), T = null == c ? null == l ? void 0 : l.name : "".concat(null == l ? void 0 : l.name, " › ").concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({
+  } = e, l = (0, r.e7)([m.Z], () => m.Z.getGuild(t.guild_id)), c = (0, r.e7)([I.Z], () => I.Z.getChannel(t.parent_id)), d = (0, _.KS)(t, l), E = (0, u.ZP)(t, !1), T = null == c ? null == l ? void 0 : l.name : "".concat(null == l ? void 0 : l.name, " › ").concat(c.name), h = t.isMultiUserDM() ? C.Z.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, i.jsx)(v, {
     channel: t

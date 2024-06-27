@@ -6,8 +6,8 @@ n.d(t, {
 var s = n(735250);
 n(470079);
 var a = n(780384),
-  r = n(481060),
-  i = n(410030),
+  i = n(481060),
+  r = n(410030),
   l = n(44315),
   o = n(889901),
   c = n(955204),
@@ -29,10 +29,10 @@ function T(e) {
   let {
     achievementId: n,
     unlocked: d,
-    size: T = r.AvatarSizes.SIZE_40
-  } = e, I = (0, i.ZP)(), R = (0, c.oX)(n);
+    size: T = i.AvatarSizes.SIZE_40
+  } = e, I = (0, r.ZP)(), R = (0, c.oX)(n);
   if (null == R) return null;
-  let C = (0, r.getAvatarSpecs)(T),
+  let C = (0, i.getAvatarSpecs)(T),
     {
       name: g,
       rarity: p
@@ -47,7 +47,7 @@ function T(e) {
       width: .4 * m,
       height: .4 * m
     },
-    h = {
+    M = {
       width: f.width + 1,
       height: f.height + 1,
       right: C.stroke + 1,
@@ -64,7 +64,7 @@ function T(e) {
     "aria-label": "".concat(null !== (t = g()) && void 0 !== t ? t : ""),
     children: [(0, s.jsx)("div", {
       className: _.trophyIconContainer,
-      children: (0, s.jsx)(r.TrophyIcon, {
+      children: (0, s.jsx)(i.TrophyIcon, {
         size: "custom",
         color: d ? A : (0, l.Lq)(N.trophy),
         width: m,
@@ -72,15 +72,15 @@ function T(e) {
       })
     }), !d && (0, s.jsx)("div", {
       className: _.lockContainer,
-      style: h,
-      children: (0, s.jsx)(r.LockIcon, {
+      style: M,
+      children: (0, s.jsx)(i.LockIcon, {
         size: "custom",
         color: (0, l.Lq)(N.locked),
         ...f
       })
     }), d && p === c.EP.LEGENDARY && (0, s.jsx)("div", {
       className: _.lockContainer,
-      style: h,
+      style: M,
       children: (0, s.jsx)(o.Z, {
         className: _.confettiIcon,
         ...f
@@ -88,4 +88,4 @@ function T(e) {
     })]
   })
 }
-T.Sizes = r.AvatarSizes
+T.Sizes = i.AvatarSizes

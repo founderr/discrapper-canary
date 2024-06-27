@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(442837),
-  r = n(481060),
-  i = n(706454),
+  i = n(481060),
+  r = n(706454),
   l = n(78839),
   o = n(985754),
   c = n(222727),
@@ -12,7 +12,7 @@ var a = n(442837),
 t.Z = function(e) {
   let {
     localizedPricingPromo: t
-  } = e, n = t.countryCode, u = (0, a.e7)([i.default], () => i.default.locale);
+  } = e, n = t.countryCode, u = (0, a.e7)([r.default], () => r.default.locale);
   (0, c.U)(_.jXE.SETTINGS_PREMIUM_BANNER, n);
   let T = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
     {
@@ -30,7 +30,7 @@ t.Z = function(e) {
       countryCode: n
     }), (0, s.jsx)("div", {
       className: E.bannerBodyContainer,
-      children: (0, s.jsx)(r.Text, {
+      children: (0, s.jsx)(i.Text, {
         color: "none",
         variant: "text-md/normal",
         className: E.bannerBody,

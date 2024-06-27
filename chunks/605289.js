@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  r = n.n(a),
-  i = n(442837),
+  i = n.n(a),
+  r = n(442837),
   l = n(481060),
   o = n(706454),
   c = n(78839),
@@ -17,9 +17,9 @@ t.Z = function(e) {
   let {
     localizedPricingPromo: t,
     smallGap: n
-  } = e, a = t.countryCode, C = (0, i.e7)([o.default], () => o.default.locale);
+  } = e, a = t.countryCode, C = (0, r.e7)([o.default], () => o.default.locale);
   (0, _.U)(I.jXE.SETTINGS_PREMIUM_BANNER, a);
-  let g = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+  let g = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
     {
       localizedPricingBannerHeader: p,
       localizedPricingBannerBody: A
@@ -30,12 +30,12 @@ t.Z = function(e) {
     }),
     N = a.toLowerCase() + "Banner";
   return (0, s.jsxs)("div", {
-    className: r()(R.bannerContainer, {
+    className: i()(R.bannerContainer, {
       [R.smallGap]: n,
       [R.bigGap]: !n
     }),
     children: [(0, s.jsx)("div", {
-      className: r()(R[N], R.bannerImageContainer)
+      className: i()(R[N], R.bannerImageContainer)
     }), (0, s.jsx)(l.Heading, {
       className: R.bannerHeading,
       variant: "heading-xl/semibold",

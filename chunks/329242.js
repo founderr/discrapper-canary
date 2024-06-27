@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  r = n.n(a),
-  i = n(481060),
+  i = n.n(a),
+  r = n(481060),
   l = n(51144),
   o = n(452183);
 t.Z = e => {
@@ -12,8 +12,8 @@ t.Z = e => {
   } = e, a = "\xa0(@".concat(l.ZP.getUserTag(t, {
     decoration: "never"
   }), ")");
-  return (0, s.jsxs)(i.Text, {
-    className: r()([o.text, {
+  return (0, s.jsxs)(r.Text, {
+    className: i()([o.text, {
       [o.fill]: n
     }]),
     variant: "text-md/medium",

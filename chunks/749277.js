@@ -15,8 +15,8 @@ var a = n(442837),
   u = n(231757),
   _ = n(674525),
   E = n(29458),
-  m = n(636629),
-  I = n(33885),
+  I = n(636629),
+  m = n(33885),
   T = n(963249),
   h = n(346585),
   N = n(303172),
@@ -51,7 +51,7 @@ let b = e => {
       } = e;
       switch (g) {
         case s.z.GUILD_ONBOARDING_UPSELL_NAGBAR:
-          return (0, i.jsx)(I.Z, {
+          return (0, i.jsx)(m.Z, {
             dismissCurrentNotice: () => S(x.L.UNKNOWN)
           });
         case s.z.NAGBAR_NOTICE_DOWNLOAD:
@@ -185,7 +185,7 @@ let b = e => {
           });
         case s.z.QUEST_1_GO_LIVE_BANNER:
           let O = null == D ? void 0 : null === (t = D.metadata) || void 0 === t ? void 0 : t.partnerGame;
-          return (0, i.jsx)(m.Z, {
+          return (0, i.jsx)(I.Z, {
             noticeType: b,
             markAsDismissed: () => S(x.L.UNKNOWN),
             partnerGame: O

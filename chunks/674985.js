@@ -1,19 +1,19 @@
-var s, a, r, i, l = n(442837),
+var s, a, i, r, l = n(442837),
   o = n(570140),
   c = n(594174),
   d = n(981631);
 let _ = null;
-class E extends(i = l.ZP.Store) {
+class E extends(r = l.ZP.Store) {
   getHouseMembership() {
     return _
   }
 }
-r = "HypeSquadStore", (a = "displayName") in(s = E) ? Object.defineProperty(s, a, {
-  value: r,
+i = "HypeSquadStore", (a = "displayName") in(s = E) ? Object.defineProperty(s, a, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new E(o.Z, {
+}) : s[a] = i, t.Z = new E(o.Z, {
   CONNECTION_OPEN: function() {
     let e = c.default.getCurrentUser();
     null != e && (e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? _ = d.gkr.HOUSE_1 : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? _ = d.gkr.HOUSE_2 : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (_ = d.gkr.HOUSE_3))

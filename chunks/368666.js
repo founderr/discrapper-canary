@@ -26,7 +26,7 @@ let _ = {
     [c.BadgeShapes.SQUARE]: ""
   };
 
-function m(e) {
+function I(e) {
   let {
     className: t,
     style: n,
@@ -48,4 +48,4 @@ function m(e) {
     style: n
   })
 }
-m.Looks = a, m.Sizes = _, t.ZP = m
+I.Looks = a, I.Sizes = _, t.ZP = I

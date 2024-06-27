@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(914010),
   _ = n(346656),
   E = n(626135),
-  m = n(528011),
-  I = n(666657),
+  I = n(528011),
+  m = n(666657),
   T = n(533244),
   h = n(981631),
   N = n(176505),
@@ -30,7 +30,7 @@ function C(e) {
     shouldShowIncidentActions: x,
     incidentData: M,
     isUnderLockdown: v
-  } = (0, m.mI)(R), L = (0, r.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != O && (0, o._X)(O.id), [O]);
+  } = (0, I.mI)(R), L = (0, r.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != O && (0, o._X)(O.id), [O]);
   if (null == O || null == M || !x) return null;
   let P = e => {
       if (e && L && A !== N.oC.MEMBER_SAFETY && Z()) {
@@ -41,7 +41,7 @@ function C(e) {
         return
       }(0, l.openModalLazy)(async () => {
         let e = {
-            source: I.Zu.NAGBAR,
+            source: m.Zu.NAGBAR,
             alertType: (0, T.T1)(M)
           },
           {

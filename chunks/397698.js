@@ -21,10 +21,10 @@ function _(e) {
     analyticsLocation: E
   } = e;
   _ && (0, s.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
-  let m = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  let I = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   (0, o.y)(c.ti.DISMISSED), (0, o._)(c._b.VOICE);
-  let I = t.id,
-    T = l.ZP.hasUnread(I) || l.ZP.getMentionCount(I) > 0;
+  let m = t.id,
+    T = l.ZP.hasUnread(m) || l.ZP.getMentionCount(m) > 0;
   return r.default.track(u.rMx.VOICE_PANEL_TAB_OPENED, {
     tab: "activities",
     location: E,
@@ -40,6 +40,6 @@ function _(e) {
     })
   }, {
     modalKey: d.e9,
-    contextKey: m
+    contextKey: I
   })
 }

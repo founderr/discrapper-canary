@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  r = n.n(a),
-  i = n(399606),
+  i = n.n(a),
+  r = n(399606),
   l = n(481060),
   o = n(78839),
   c = n(63063),
@@ -20,11 +20,11 @@ t.Z = function(e) {
     buttonClassName: n
   } = e, {
     promotion: a
-  } = (0, u.mq)(), g = (0, i.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription());
+  } = (0, u.mq)(), g = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription());
   if (!(0, _.Vi)()) return null;
   let p = new Date(a.endDate);
   return (0, s.jsx)("div", {
-    className: r()(C.banner, {
+    className: i()(C.banner, {
       [C.bannerFullscreen]: t
     }),
     children: (0, s.jsxs)("div", {

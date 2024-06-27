@@ -12,7 +12,7 @@ n.d(t, {
     return p
   },
   R9: function() {
-    return I
+    return m
   },
   Tn: function() {
     return f
@@ -33,7 +33,7 @@ n.d(t, {
     return E
   },
   wj: function() {
-    return m
+    return I
   },
   x8: function() {
     return A
@@ -59,7 +59,7 @@ function E(e) {
   return null
 }
 
-function m(e, t) {
+function I(e, t) {
   if (null == e) return !1;
   let n = r.Z.getGameByName(e);
   return !!(null != n && t.some(e => {
@@ -68,14 +68,14 @@ function m(e, t) {
   })) || !1
 }
 
-function I() {
+function m() {
   return Math.floor(Date.now() / 1e3) - d.kS
 }
 
 function T(e, t, n) {
   var i, a, s, l;
   if (null == g(e)) return !1;
-  let r = (i = t, a = d.RN[e], null !== (s = i.find(e => m(e.name, a))) && void 0 !== s ? s : null);
+  let r = (i = t, a = d.RN[e], null !== (s = i.find(e => I(e.name, a))) && void 0 !== s ? s : null);
   if (null != r) {
     ;
     let e = null !== (l = null == r ? void 0 : r.lastLaunched) && void 0 !== l ? l : 0;
@@ -85,7 +85,7 @@ function T(e, t, n) {
 }
 
 function h(e) {
-  return T(e, s.ZP.getGamesSeen(!1), I())
+  return T(e, s.ZP.getGamesSeen(!1), m())
 }
 
 function N(e, t) {

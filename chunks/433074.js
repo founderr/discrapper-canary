@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(914010),
   _ = n(594174),
   E = n(197409),
-  m = n(626135),
-  I = n(135431),
+  I = n(626135),
+  m = n(135431),
   T = n(674588),
   h = n(264043),
   N = n(132871),
@@ -38,7 +38,7 @@ function S(e) {
   a.useEffect(() => {
     (0, T.gZ)(S)
   }, [S]), a.useEffect(() => {
-    Z && x === h.M.FETCHED && m.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    Z && x === h.M.FETCHED && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: S,
       device_platform: s.tq ? "mobile_web" : "desktop_web",
       sender_user_id: A.author.id,
@@ -46,7 +46,7 @@ function S(e) {
       channel_id: A.channel_id
     })
   }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, x]), a.useEffect(() => {
-    Z && O && m.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+    Z && O && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: s.tq ? "mobile_web" : "desktop_web",
       sender_user_id: A.author.id,
       guild_id: v,
@@ -54,7 +54,7 @@ function S(e) {
     })
   }, [Z, v, O, A.author.id, A.channel_id]);
   let j = e => {
-    m.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+    I.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: S,
       device_platform: s.tq ? "mobile_web" : "desktop_web",
       clicked_section: e,
@@ -130,7 +130,7 @@ function S(e) {
         })]
       }), (0, i.jsx)(E.Z.Button, {
         onClick: () => {
-          if (null != R)(0, I.L)({
+          if (null != R)(0, m.L)({
             applicationId: S,
             customInstallUrl: R.custom_install_url,
             installParams: R.install_params,

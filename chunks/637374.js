@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(230711),
   _ = n(568836),
   E = n(730749),
-  m = n(112724),
-  I = n(607070),
+  I = n(112724),
+  m = n(607070),
   T = n(884697),
   h = n(479446),
   N = n(930114),
@@ -358,13 +358,13 @@ class V extends a.Component {
     })
   }
 }
-let H = (0, m.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([g.Z, O.Z, A.default, S.Z, R.Z, C.default, I.Z], e => {
+let H = (0, I.Z)((0, E.Z)(V));
+t.Z = c.ZP.connectStores([g.Z, O.Z, A.default, S.Z, R.Z, C.default, m.Z], e => {
   let {
     code: t,
     author: n,
     currentUser: i
-  } = e, a = g.Z.get(t), s = null != a ? O.Z.get(a.skuId) : null, l = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = I.Z.useReducedMotion;
+  } = e, a = g.Z.get(t), s = null != a ? O.Z.get(a.skuId) : null, l = null != a && null != a.userId ? A.default.getUser(a.userId) : null, r = m.Z.useReducedMotion;
   return {
     sku: s,
     giftCode: a,

@@ -14,13 +14,13 @@ var i = n(470079),
   u = n(914010),
   _ = n(594174),
   E = n(158222),
-  m = n(312146),
-  I = n(487554),
+  I = n(312146),
+  m = n(487554),
   T = n(874748),
   h = n(981631);
 
 function N(e, t) {
-  let n = (0, m.p$)(),
+  let n = (0, I.p$)(),
     N = (0, T.LR)(e),
     f = (0, a.e7)([c.ZP, r.default], () => {
       let e = r.default.getId();
@@ -35,9 +35,9 @@ function N(e, t) {
       user: R,
       selectedGuildId: O,
       canAccess: x
-    } = (0, a.cj)([I.Z, d.Z, o.Z, _.default, u.Z], () => {
+    } = (0, a.cj)([m.Z, d.Z, o.Z, _.default, u.Z], () => {
       var e;
-      let t = null === (e = I.Z.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
+      let t = null === (e = m.Z.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
         n = d.Z.getGuild(null == N ? void 0 : N.guildId),
         i = o.Z.getChannel(null == N ? void 0 : N.channelId),
         a = _.default.getUser(null == t ? void 0 : t.author_id),
@@ -68,8 +68,8 @@ function N(e, t) {
     }, [g, S, A, R, O, x]);
   return i.useEffect(() => {
     if ((null == N ? void 0 : N.threadId) != null) {
-      let e = I.Z.getEmbedFetchState(N.threadId);
-      !0 === n && e === I.M.NOT_FETCHED && (!f || !1 !== p) && (f || !C) && (0, E.xP)(null == N ? void 0 : N.threadId)
+      let e = m.Z.getEmbedFetchState(N.threadId);
+      !0 === n && e === m.M.NOT_FETCHED && (!f || !1 !== p) && (f || !C) && (0, E.xP)(null == N ? void 0 : N.threadId)
     }
   }, [N, n, f, p, C]), M
 }

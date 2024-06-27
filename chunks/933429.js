@@ -10,8 +10,8 @@ var i, a, s, l, r = n(913527),
   u = n(704215),
   _ = n(433517),
   E = n(570140),
-  m = n(579806),
-  I = n(726542),
+  I = n(579806),
+  m = n(726542),
   T = n(812206),
   h = n(223892),
   N = n(674525),
@@ -64,8 +64,8 @@ var i, a, s, l, r = n(913527),
   eu = n(215427),
   e_ = n(246946),
   eE = n(558724),
-  em = n(23434),
-  eI = n(594174),
+  eI = n(23434),
+  em = n(594174),
   eT = n(979651),
   eh = n(351402),
   eN = n(853872),
@@ -379,18 +379,18 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
       }
     },
     [eM.kVF.CONNECT_SPOTIFY]: {
-      predicate: () => !W.Z.hasConnectedAccount() && S.ZP.isObservedAppRunning(I.Z.get(eM.ABu.SPOTIFY).name) && !eV(eM.kVF.CONNECT_SPOTIFY)
+      predicate: () => !W.Z.hasConnectedAccount() && S.ZP.isObservedAppRunning(m.Z.get(eM.ABu.SPOTIFY).name) && !eV(eM.kVF.CONNECT_SPOTIFY)
     },
     [eM.kVF.WIN32_DEPRECATED_MESSAGE]: {
-      predicate: () => (null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.arch) === "ia32" && (null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === "win32",
+      predicate: () => (null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.arch) === "ia32" && (null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === "win32",
       metadata: () => ({
         dismissUntil: o()().add(5, "days").toDate()
       })
     },
     [eM.kVF.WIN7_8_DEPRECATED_MESSAGE]: {
       predicate: () => {
-        if ((null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === "win32") try {
-          return 10 > parseInt(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release.split(".")[0])
+        if ((null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === "win32") try {
+          return 10 > parseInt(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release.split(".")[0])
         } catch (e) {}
         return !1
       },
@@ -400,8 +400,8 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
     },
     [eM.kVF.MACOS_17_18_DEPRECATED_MESSAGE]: {
       predicate: () => {
-        if ((null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === "darwin") try {
-          return 19 > parseInt(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release.split(".")[0])
+        if ((null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === "darwin") try {
+          return 19 > parseInt(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release.split(".")[0])
         } catch (e) {}
         return !1
       },
@@ -655,7 +655,7 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
 function ez() {
   if (!A.Z.isConnected()) return !1;
   eG = null;
-  let e = eI.default.getCurrentUser();
+  let e = em.default.getCurrentUser();
   if (null == e) return !1;
   let t = ef.ZP.getPremiumSubscription(),
     n = eh.Z.isLocalizedPromoEnabled,
@@ -695,13 +695,13 @@ function eK() {
 }
 class eQ extends(i = c.ZP.Store) {
   initialize() {
-    this.syncWith([eE.Z, er.Z, et.Z, ed.Z, F.Z, ep.Z, X.Z, ee.Z, K.Z, M.Z, H.Z, Q.Z], ez), this.waitFor(eI.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, em.Z, W.Z, S.ZP, er.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, el.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z)
+    this.syncWith([eE.Z, er.Z, et.Z, ed.Z, F.Z, ep.Z, X.Z, ee.Z, K.Z, M.Z, H.Z, Q.Z], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, er.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, el.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z)
   }
   hasNotice() {
     return null != eG && null != eG.type
   }
   getNotice() {
-    return null == em.Z.getAction() ? eG : null
+    return null == eI.Z.getAction() ? eG : null
   }
   isNoticeDismissed(e) {
     return eV(e)

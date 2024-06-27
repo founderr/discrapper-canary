@@ -12,8 +12,8 @@ var i, a, s = n(735250),
   u = n(904245),
   _ = n(596454),
   E = n(377171),
-  m = n(702346),
-  I = n(809026),
+  I = n(702346),
+  m = n(809026),
   T = n(139256),
   h = n(489887),
   N = n(689938),
@@ -168,7 +168,7 @@ function A(e) {
     message: n,
     compact: i,
     disableInteraction: a = !1
-  } = e, r = n.embeds[0], o = l.useMemo(() => (0, I.Z)(r), [r]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : "", h.Dv), E = n.messageReference, T = l.useCallback(() => {
+  } = e, r = n.embeds[0], o = l.useMemo(() => (0, m.Z)(r), [r]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : "", h.Dv), E = n.messageReference, T = l.useCallback(() => {
     null != E && u.Z.jumpToMessage({
       channelId: E.channel_id,
       messageId: E.message_id,
@@ -177,7 +177,7 @@ function A(e) {
     })
   }, [n.id, E]);
   return null == o ? null : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(m.Z, {
+    children: [(0, s.jsx)(I.Z, {
       iconNode: (0, s.jsx)(d.PollsIcon, {
         size: "xs"
       }),

@@ -17,11 +17,11 @@ function d(e, t) {
     u = (0, l.cE)(d.getChannelId())[d.id],
     _ = (0, c.Z)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
     E = s.Yk.useSetting(),
-    m = (0, a.ZP)(),
-    I = null != t ? t : m;
+    I = (0, a.ZP)(),
+    m = null != t ? t : I;
   return i.useMemo(() => (0, o.ZP)(d, u, {
     animateEmoji: E,
-    theme: I,
+    theme: m,
     formattedExpirationLabel: _
-  }), [E, d, u, _, I])
+  }), [E, d, u, _, m])
 }
