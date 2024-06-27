@@ -33,21 +33,21 @@ t.Z = o.forwardRef(function(e, t) {
     art: y,
     isPremiumEarlyAccess: B = !1,
     maxWidth: P = 280
-  } = e, W = N ? c.Button.Sizes.LARGE : c.Button.Sizes.MAX, [R, O] = o.useState(!1), {
-    ref: k,
+  } = e, W = N ? c.Button.Sizes.LARGE : c.Button.Sizes.MAX, [R, k] = o.useState(!1), {
+    ref: O,
     width: L
   } = (0, l.Z)();
 
-  function U(e) {
+  function D(e) {
     (0, s.EW)(A, {
       dismissAction: e
     })
   }
   return o.useEffect(() => {
     var e, t;
-    let n = (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-    !R && n > P && O(!0)
-  }, [R, L, k, P]), o.useEffect(() => {
+    let n = (null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+    !R && n > P && k(!0)
+  }, [R, L, O, P]), o.useEffect(() => {
     (0, s.kk)(A)
   }, [A]), (0, r.jsx)("div", {
     className: T,
@@ -91,14 +91,14 @@ t.Z = o.forwardRef(function(e, t) {
           children: n
         }) : n]
       }), (0, r.jsx)("div", {
-        ref: k,
+        ref: O,
         className: R || !N ? _.buttonContainerVertical : _.buttonContainerHorizontal,
         children: null != x ? (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(c.Button, {
             className: _.button,
             size: W,
             onClick: e => {
-              null == I || I(e), x(e), U(d.L.PRIMARY)
+              null == I || I(e), x(e), D(d.L.PRIMARY)
             },
             color: v || B ? c.Button.Colors.BRAND_INVERTED : c.Button.Colors.WHITE,
             children: null != g ? g : f.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
@@ -106,7 +106,7 @@ t.Z = o.forwardRef(function(e, t) {
             className: _.button,
             size: W,
             onClick: e => {
-              null == I || I(e), U(d.L.DISMISS)
+              null == I || I(e), D(d.L.DISMISS)
             },
             color: v || B ? c.Button.Colors.WHITE : c.Button.Colors.BRAND,
             look: v || B ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
@@ -116,7 +116,7 @@ t.Z = o.forwardRef(function(e, t) {
           className: _.button,
           size: c.Button.Sizes.MAX,
           onClick: e => {
-            null == I || I(e), U(d.L.PRIMARY)
+            null == I || I(e), D(d.L.PRIMARY)
           },
           color: c.Button.Colors.WHITE,
           children: f.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM
