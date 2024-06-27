@@ -542,21 +542,22 @@ function eu(e) {
     subtitle: o,
     badges: c,
     children: u,
-    onClickTitle: d,
-    onClickSubtitle: p,
-    ...m
+    onClickThumbnail: d,
+    onClickTitle: p,
+    onClickSubtitle: m,
+    ..._
   } = e, {
-    entry: _
-  } = m, f = (0, V.d)(_), E = (0, v.ZP)({
+    entry: f
+  } = _, E = (0, V.d)(f), g = (0, v.ZP)({
     location: "ContentPopout",
-    applicationId: f ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0
-  }) && f ? () => {
+    applicationId: E ? null === (t = f.extra) || void 0 === t ? void 0 : t.application_id : void 0
+  }) && E ? () => {
     (0, h.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("7613"), n.e("55799")]).then(n.bind(n, 644941));
       return t => (0, i.jsx)(e, {
-        applicationId: _.extra.application_id,
+        applicationId: f.extra.application_id,
         ...t
       })
     })
@@ -564,13 +565,13 @@ function eu(e) {
   return (0, i.jsxs)(ei, {
     backgroundImgSrc: a,
     children: [(0, i.jsx)(eo, {
-      ...m
+      ..._
     }), (0, i.jsxs)("div", {
       className: et.popoutContentBody,
       children: [(0, i.jsx)("div", {
         className: et.popoutThumbnailContainer,
         children: (0, i.jsx)(ec, {
-          onClick: E,
+          onClick: null != d ? d : g,
           children: (0, i.jsx)(X.f, {
             size: 72,
             alt: s,
@@ -584,7 +585,7 @@ function eu(e) {
         horizontal: !0
       }), (0, i.jsxs)("div", {
         children: [(0, i.jsx)(ec, {
-          onClick: null != d ? d : E,
+          onClick: null != p ? p : g,
           children: (0, i.jsx)(h.Heading, {
             variant: "heading-md/medium",
             className: et.popoutTextPrimary,
@@ -592,7 +593,7 @@ function eu(e) {
             children: r
           })
         }), null != o ? (0, i.jsx)(ec, {
-          onClick: null != p ? p : E,
+          onClick: null != m ? m : g,
           children: (0, i.jsx)(h.Text, {
             variant: "text-md/normal",
             className: et.popoutTextSecondary,

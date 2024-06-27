@@ -87,101 +87,104 @@ function R(e) {
 
 function j(e) {
   var t, n, T;
-  let A, j, L, {
-      channel: P,
-      entry: O,
-      requestId: y,
-      closePopout: D
+  let A, j, L, P, {
+      channel: O,
+      entry: y,
+      requestId: D,
+      closePopout: k
     } = e,
     {
-      activity: k,
-      currentEntry: U,
-      artist: w,
-      imageUrl: B,
-      title: H,
-      user: G
-    } = (0, I.pi)(O),
+      activity: U,
+      currentEntry: w,
+      artist: B,
+      imageUrl: H,
+      title: G,
+      user: V
+    } = (0, I.pi)(y),
     {
-      primaryColor: V,
-      secondaryColor: F
-    } = (0, C.Z)(B),
-    W = (0, s.e7)([u.Z, m.default], () => (null == k ? void 0 : k.type) === v.IIU.LISTENING && null != G ? (0, h.Z)(u.Z, m.default, G, k) : void 0, [k, G], r.Z),
-    z = a.useCallback(() => {
+      primaryColor: F,
+      secondaryColor: W
+    } = (0, C.Z)(H),
+    z = (0, s.e7)([u.Z, m.default], () => (null == U ? void 0 : U.type) === v.IIU.LISTENING && null != V ? (0, h.Z)(u.Z, m.default, V, U) : void 0, [U, V], r.Z),
+    Y = a.useCallback(() => {
       var e;
-      if (null == P || null == G) return;
-      let t = null === (e = k.timestamps) || void 0 === e ? void 0 : e.start,
+      if (null == O || null == V) return;
+      let t = null === (e = U.timestamps) || void 0 === e ? void 0 : e.start,
         n = (0, E.T_)(null != t ? {
           start: t
-        } : O, Date.now());
+        } : y, Date.now());
       return (0, g.CR)({
-        user: G,
-        channel: P,
-        mediaImageSrc: B,
-        artist: w,
+        user: V,
+        channel: O,
+        mediaImageSrc: H,
+        artist: B,
         description: b({
-          artist: w,
-          media: H
-        }, P, G),
-        colors: [V, F],
+          artist: B,
+          media: G
+        }, O, V),
+        colors: [F, W],
         badges: (0, g.jE)({
           timestamp: n
         })
       })
-    }, [k, w, P, O, B, V, F, H, G]);
-  if (null == k || null == U) return null;
-  let Y = w,
-    K = [];
-  if (U.media.provider === l.p.SPOTIFY && (null == W ? void 0 : W.syncDisabled) === !1) {
+    }, [U, B, O, y, H, F, W, G, V]);
+  if (null == U || null == w) return null;
+  let K = B,
+    q = [];
+  if (w.media.provider === l.p.SPOTIFY && (null == z ? void 0 : z.syncDisabled) === !1) {
     A = () => {
-      (0, p.Z)(W, S.kG.USER_ACTIVITY_SYNC), D()
-    }, K.push((0, i.jsx)(x.Ll, {
+      (0, p.Z)(z, S.kG.USER_ACTIVITY_SYNC), k()
+    }, q.push((0, i.jsx)(x.Ll, {
       onClick: A,
       IconComponent: o.UserPlayIcon,
       children: Z.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG
     }, "listen-along"));
-    Y = (0, i.jsx)(_.Z, {
-      artists: w,
-      canOpen: null != k.sync_id,
+    K = (0, i.jsx)(_.Z, {
+      artists: B,
+      canOpen: null != U.sync_id,
       linkClassName: M.popoutTextSecondary,
       onOpenSpotifyArtist: e => {
-        (0, c.d$)(k, G.id, e)
+        (0, c.d$)(U, V.id, e)
       }
     }), j = () => {
-      (0, c.aG)(k)
-    }, L = (0, d.Z)(W, S.kG.USER_ACTIVITY_SYNC, null != P ? f.ZP.getNickname(P.guild_id, P.id, G) : void 0)
+      (0, c.aG)(U)
+    }, P = (0, d.Z)(z, S.kG.USER_ACTIVITY_SYNC, null != O ? f.ZP.getNickname(O.guild_id, O.id, V) : void 0), L = () => {
+      (0, c.Z5)(U, V.id)
+    }
   }
-  let q = (0, i.jsx)(x.wG, {
-    thumbnailSrc: B,
-    channel: P,
-    entry: O,
+  let X = (0, i.jsx)(x.wG, {
+    thumbnailSrc: H,
+    onClickThumbnail: L,
+    channel: O,
+    entry: y,
     headerIcons: (0, i.jsx)(N.Z, {
       onClick: A,
-      "aria-label": L,
-      provider: U.media.provider
+      "aria-label": P,
+      provider: w.media.provider
     }),
-    userDescription: (0, E.kr)(O) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-    title: H,
+    userDescription: (0, E.kr)(y) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+    title: G,
     onClickTitle: j,
-    subtitle: Y,
+    subtitle: K,
     badges: null,
-    children: (null === (t = k.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, i.jsx)(R, {
-      activity: k
+    children: (null === (t = U.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, i.jsx)(R, {
+      activity: U
     })
   });
   return (0, i.jsxs)(x.yR, {
-    children: [q, (0, i.jsx)(x.St, {
+    children: [X, (0, i.jsx)(x.St, {
       children: (0, i.jsx)(x.WT, {
-        closePopout: D,
-        user: G,
-        channel: P,
-        generateReactionImage: z,
-        reactionImageAltText: (n = w, T = G, Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
+        closePopout: k,
+        user: V,
+        channel: O,
+        generateReactionImage: Y,
+        reactionImageAltText: (n = B, T = V, Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
           username: T.username,
           activity: n
         })),
-        entry: O,
-        requestId: y,
-        buttons: K
+        entry: y,
+        requestId: D,
+        buttons: q
       })
     })]
   })
