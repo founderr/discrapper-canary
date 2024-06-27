@@ -10,9 +10,8 @@ var i = n(735250),
   _ = n(684256),
   c = n(981631),
   d = n(987421);
-t.Z = r.memo(function(e) {
-  let t, {
-      drawerRef: n,
+t.Z = r.memo(r.forwardRef(function(e, t) {
+  let n, {
       channel: E,
       entrypoint: I
     } = e,
@@ -58,7 +57,7 @@ t.Z = r.memo(function(e) {
       }
     }, [I]), null == N ? void 0 : N.type) {
     case a.gc.HOME:
-      t = (0, i.jsx)(u.Z, {
+      n = (0, i.jsx)(u.Z, {
         channel: E,
         entrypoint: I,
         searchQuery: T,
@@ -66,7 +65,7 @@ t.Z = r.memo(function(e) {
       });
       break;
     case a.gc.LIST:
-      t = (0, i.jsx)(_.Z, {
+      n = (0, i.jsx)(_.Z, {
         channel: E,
         entrypoint: I,
         title: N.title,
@@ -76,18 +75,18 @@ t.Z = r.memo(function(e) {
       });
       break;
     case a.gc.APPLICATION:
-      t = (0, i.jsx)(l.Z, {
+      n = (0, i.jsx)(l.Z, {
         channel: E,
         application: N.application,
         sectionName: N.sectionName
       });
       break;
     default:
-      t = null
+      n = null
   }
   return (0, i.jsx)("div", {
     className: d.drawerSizingWrapper,
-    ref: n,
+    ref: t,
     children: (0, i.jsx)("div", {
       className: d.contentWrapper,
       children: (0, i.jsx)(a.uX.Provider, {
@@ -98,8 +97,8 @@ t.Z = r.memo(function(e) {
           pushHistory: A,
           goBack: m
         },
-        children: t
+        children: n
       })
     })
   })
-})
+}))

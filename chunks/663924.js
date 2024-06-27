@@ -36,7 +36,11 @@ function N(e) {
     if ((0, s.k)(i) && null != i.closest("." + T.Jh)) return;
     for (;
       (0, s.k)(i);) {
-      if (i === d.current || i.classList.contains(T.t4)) return;
+      if (i === d.current) return;
+      if (i.classList.contains(T.t4)) {
+        e.preventDefault();
+        return
+      }
       i = i.parentNode
     }
     S();
@@ -48,7 +52,7 @@ function N(e) {
   }), [O, f, N]), (0, a.useFocusLock)(d), r.useEffect(() => {
     (!A && (0, o.$s)() || A && !m) && S()
   }, [m, A]), (0, i.jsx)(I.Z, {
-    drawerRef: d,
+    ref: d,
     channel: t,
     entrypoint: E._b.TEXT
   })
