@@ -99,8 +99,8 @@ function M(e) {
       className: o()(C.editIcon, {
         [C.expandable]: $
       }),
-      children: [(0, i.jsx)("div", {
-        className: o()(C.editGradient, W && C.editGradientEmojiOnly)
+      children: [!W && (0, i.jsx)("div", {
+        className: C.editGradient
       }), (0, i.jsx)(c.Clickable, {
         className: o()(C.editClickable, W && C.editClickableEmojiOnly),
         onClick: el,
