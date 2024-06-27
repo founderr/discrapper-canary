@@ -14,7 +14,21 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
       channel: p,
       entrypoint: E
     } = e,
-    [h, _] = l.useState("");
+    [h, _] = l.useState(""),
+    N = function(e) {
+      let [n, t] = l.useState(null), i = l.useRef(0);
+      return l.useEffect(() => {
+        null == n || n.scrollTo(0, 0)
+      }, [n, e]), l.useEffect(() => {
+        if (null != n) return n.scrollTo(0, i.current), n.addEventListener("scroll", e), () => {
+          n.removeEventListener("scroll", e, !1)
+        };
+
+        function e() {
+          if (null != n) i.current = n.scrollTop
+        }
+      }, [n]), t
+    }(h);
   l.useEffect(() => {
     (0, a.yw)(d.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
       source: E,
@@ -22,11 +36,11 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
     })
   }, [E]);
   let {
-    history: N,
-    setHistory: A,
-    currentView: C,
-    pushHistory: f,
-    goBack: x
+    history: A,
+    setHistory: C,
+    currentView: f,
+    pushHistory: x,
+    goBack: v
   } = function() {
     let [e, n] = l.useState([{
       type: s.gc.HOME
@@ -54,9 +68,10 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
           source: E
         })
       }
-    }, [E]), null == C ? void 0 : C.type) {
+    }, [E]), null == f ? void 0 : f.type) {
     case s.gc.HOME:
       t = (0, i.jsx)(c.Z, {
+        setScroller: N,
         channel: p,
         entrypoint: E,
         searchQuery: h,
@@ -67,17 +82,17 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
       t = (0, i.jsx)(u.Z, {
         channel: p,
         entrypoint: E,
-        title: C.title,
-        look: C.look,
-        items: C.items,
-        sectionName: C.sectionName
+        title: f.title,
+        look: f.look,
+        items: f.items,
+        sectionName: f.sectionName
       });
       break;
     case s.gc.APPLICATION:
       t = (0, i.jsx)(o.Z, {
         channel: p,
-        application: C.application,
-        sectionName: C.sectionName
+        application: f.application,
+        sectionName: f.sectionName
       });
       break;
     default:
@@ -90,11 +105,11 @@ n.Z = l.memo(l.forwardRef(function(e, n) {
       className: m.contentWrapper,
       children: (0, i.jsx)(s.uX.Provider, {
         value: {
-          history: N,
-          setHistory: A,
-          currentView: C,
-          pushHistory: f,
-          goBack: x
+          history: A,
+          setHistory: C,
+          currentView: f,
+          pushHistory: x,
+          goBack: v
         },
         children: t
       })

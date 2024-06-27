@@ -55,50 +55,52 @@ function B(e) {
     channel: n,
     entrypoint: t,
     searchQuery: a,
-    setSearchQuery: r
-  } = e, s = (0, m.NX)(n.id, !0, "AppLauncherHomeScreen"), o = t === g._b.TEXT, c = t === g._b.TEXT, d = t === g._b.TEXT, E = t === g._b.VOICE, h = d || c, _ = t === g._b.TEXT, [N, A] = z(o), [C, f] = z(c), [x, v] = z(d), [I, P] = z(d);
+    setSearchQuery: r,
+    setScroller: s
+  } = e, o = (0, m.NX)(n.id, !0, "AppLauncherHomeScreen"), c = t === g._b.TEXT, d = t === g._b.TEXT, E = t === g._b.TEXT, h = t === g._b.VOICE, _ = E || d, N = t === g._b.TEXT, [A, C] = z(c), [f, x] = z(d), [v, I] = z(E), [P, T] = z(E);
   l.useEffect(() => {
-    s && (0, p.w1)({
+    o && (0, p.w1)({
       guildId: n.getGuildId(),
       force: !0
     })
-  }, [s, n]);
-  let T = a.length > 0;
+  }, [o, n]);
+  let M = a.length > 0;
   return (0, i.jsxs)("div", {
     className: H.container,
     children: [(0, i.jsx)(w, {
       searchQuery: a,
       setSearchQuery: r,
-      placeholder: _ ? Z.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : Z.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+      placeholder: N ? Z.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : Z.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
     }), (0, i.jsx)(u.Scroller, {
+      ref: s,
       className: H.scrollableContent,
       fade: !0,
-      children: T ? (0, i.jsx)("div", {
+      children: M ? (0, i.jsx)("div", {
         children: (0, i.jsx)(O.Z, {
           channel: n,
           query: a,
           entrypoint: t,
           enableGlobalSearch: t === g._b.TEXT,
-          enableActivitiesSearch: s
+          enableActivitiesSearch: o
         })
-      }) : N && C && x && I ? (0, i.jsx)(R.A, {
+      }) : A && f && v && P ? (0, i.jsx)(R.A, {
         type: g.LG.HOME_EMPTY,
         textContent: t === g._b.TEXT ? Z.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_BODY : Z.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
       }) : (0, i.jsxs)("div", {
-        children: [o && (0, i.jsx)(V, {
+        children: [c && (0, i.jsx)(V, {
           channel: n,
           entrypoint: t,
-          onEmptyState: A
-        }), c && (0, i.jsx)(W, {
+          onEmptyState: C
+        }), d && (0, i.jsx)(W, {
           channel: n,
-          onEmptyState: f
-        }), d && (0, i.jsx)(Y, {
+          onEmptyState: x
+        }), E && (0, i.jsx)(Y, {
           channel: n,
-          onEmptyState: v
-        }), E && (0, i.jsx)(F, {
+          onEmptyState: I
+        }), h && (0, i.jsx)(F, {
           channel: n,
-          onEmptyState: P
-        }), h && (0, i.jsx)(j.Z, {})]
+          onEmptyState: T
+        }), _ && (0, i.jsx)(j.Z, {})]
       })
     })]
   })
