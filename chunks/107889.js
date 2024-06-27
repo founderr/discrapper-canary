@@ -17,16 +17,16 @@ var t = i(735250),
   E = i(785717),
   _ = i(318661),
   Z = i(502762),
-  S = i(544989),
-  m = i(481932),
+  m = i(544989),
+  S = i(481932),
   v = i(195387),
   x = i(272510),
   h = i(171368),
   g = i(806926),
   N = i(740021),
   p = i(228168),
-  T = i(981631),
-  C = i(689938),
+  C = i(981631),
+  T = i(689938),
   R = i(327570);
 
 function A(e) {
@@ -34,8 +34,8 @@ function A(e) {
     user: n,
     currentUser: i,
     guildId: A,
-    channelId: j,
-    messageId: M,
+    channelId: M,
+    messageId: j,
     roleId: U,
     friendToken: P,
     initialSection: L,
@@ -44,7 +44,7 @@ function A(e) {
     onClose: b,
     showGuildProfile: D = !0,
     sourceAnalyticsLocations: F = []
-  } = e, B = A === T.ME ? void 0 : A, {
+  } = e, B = A === C.ME ? void 0 : A, {
     analyticsLocations: G
   } = (0, d.ZP)([...F, r.Z.SIMPLIFIED_PROFILE_MODAL]), {
     originalFriendingEnabled: w
@@ -54,19 +54,19 @@ function A(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: n.id,
     guildId: B,
-    channelId: j,
-    messageId: M,
+    channelId: M,
+    messageId: j,
     roleId: U,
     showGuildProfile: D
   }), Y = (0, _.ZP)(n.id, D ? B : void 0), V = (0, _.ZP)(n.id, B), H = (0, o.e7)([u.Z], () => u.Z.findActivity(n.id, e => {
     let {
       type: n
     } = e;
-    return n !== T.IIU.CUSTOM_STATUS
+    return n !== C.IIU.CUSTOM_STATUS
   })), W = s.createRef(), z = (0, a.Z)(W), K = () => (null == V ? void 0 : V.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, t.jsx)(l.MenuItem, {
     id: "view-main-profile",
-    label: C.Z.Messages.VIEW_MAIN_PROFILE,
-    subtext: C.Z.Messages.AKA_DISPLAY_NAME.format({
+    label: T.Z.Messages.VIEW_MAIN_PROFILE,
+    subtext: T.Z.Messages.AKA_DISPLAY_NAME.format({
       displayName: I.ZP.getName(void 0, void 0, n)
     }),
     action: () => {
@@ -77,8 +77,8 @@ function A(e) {
         userId: n.id,
         showGuildProfile: !1,
         guildId: B,
-        channelId: j,
-        messageId: M,
+        channelId: M,
+        messageId: j,
         roleId: U,
         friendToken: P,
         sourceAnalyticsLocations: F
@@ -86,9 +86,9 @@ function A(e) {
     }
   }) : (0, t.jsx)(l.MenuItem, {
     id: "view-server-profile",
-    label: C.Z.Messages.VIEW_SERVER_PROFILE,
-    subtext: C.Z.Messages.AKA_DISPLAY_NAME.format({
-      displayName: I.ZP.getName(B, j, n)
+    label: T.Z.Messages.VIEW_SERVER_PROFILE,
+    subtext: T.Z.Messages.AKA_DISPLAY_NAME.format({
+      displayName: I.ZP.getName(B, M, n)
     }),
     action: () => {
       k({
@@ -98,8 +98,8 @@ function A(e) {
         userId: n.id,
         showGuildProfile: !0,
         guildId: B,
-        channelId: j,
-        messageId: M,
+        channelId: M,
+        messageId: j,
         roleId: U,
         friendToken: P,
         sourceAnalyticsLocations: F
@@ -112,36 +112,36 @@ function A(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: n.id,
       guildId: B,
-      channelId: j,
-      messageId: M,
+      channelId: M,
+      messageId: j,
       roleId: U,
       showGuildProfile: D,
       children: (0, t.jsxs)(l.ModalRoot, {
         transitionState: y,
         className: R.root,
         hideShadow: !0,
-        "aria-label": C.Z.Messages.USER_PROFILE_MODAL,
+        "aria-label": T.Z.Messages.USER_PROFILE_MODAL,
         children: [(0, t.jsxs)(Z.Z, {
           user: n,
           displayProfile: Y,
           profileType: p.y0.FULL_SIZE,
           ref: W,
-          children: [w ? (0, t.jsx)(S.Z, {
+          children: [w ? (0, t.jsx)(m.Z, {
             profileType: p.y0.FULL_SIZE,
             children: (0, t.jsx)(v.Z, {
               user: n,
               guildId: B,
-              channelId: j,
+              channelId: M,
               onClose: b
             })
-          }) : (0, t.jsxs)(S.Z, {
+          }) : (0, t.jsxs)(m.Z, {
             profileType: p.y0.FULL_SIZE,
             children: [(0, t.jsx)(v.Z, {
               user: n,
               guildId: B,
-              channelId: j,
+              channelId: M,
               onClose: b
-            }), (0, t.jsx)(m.Z, {
+            }), (0, t.jsx)(S.Z, {
               profileType: p.y0.FULL_SIZE,
               user: n,
               friendToken: P
@@ -155,7 +155,7 @@ function A(e) {
             user: n,
             displayProfile: Y,
             guildId: B,
-            channelId: j,
+            channelId: M,
             activity: H,
             transitionState: y,
             viewProfileItem: K(),
@@ -163,7 +163,7 @@ function A(e) {
           }), (0, t.jsx)(g.Z, {
             user: n,
             currentUser: i,
-            channelId: j,
+            channelId: M,
             displayProfile: Y,
             initialSection: L,
             initialSubsection: O,

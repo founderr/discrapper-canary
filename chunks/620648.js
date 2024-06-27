@@ -17,8 +17,8 @@ var t = i(735250),
   E = i(648067),
   _ = i(588822),
   Z = i(900927),
-  S = i(652853),
-  m = i(335191),
+  m = i(652853),
+  S = i(335191),
   v = i(988246),
   x = i(689938),
   h = i(420990);
@@ -31,21 +31,21 @@ function g(e) {
     autoFocusNote: N = !1,
     scrollToConnections: p = !1
   } = e, {
-    trackUserProfileAction: T
-  } = (0, f.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+    trackUserProfileAction: C
+  } = (0, f.KZ)(), T = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
     theme: R
-  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), j = (0, d.Z)("user_profile"), M = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.Z)(i.id), U = (0, E.Z)(i.id), P = s.useRef(null);
+  } = (0, m.z)(), A = (0, o.e7)([u.default], () => u.default.locale), M = (0, d.Z)("user_profile"), j = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.Z)(i.id), U = (0, E.Z)(i.id), P = s.useRef(null);
   return (s.useLayoutEffect(() => {
     if (p) {
       var e;
       null == P || null === (e = P.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [p]), C) ? (0, t.jsx)(v.Z, {}) : (0, t.jsxs)(l.ScrollerThin, {
+  }, [p]), T) ? (0, t.jsx)(v.Z, {}) : (0, t.jsxs)(l.ScrollerThin, {
     fade: !0,
     className: h.infoScroller,
     children: [(0, t.jsxs)("div", {
       className: h.userInfoSection,
-      children: [M && (0, t.jsxs)(t.Fragment, {
+      children: [j && (0, t.jsxs)(t.Fragment, {
         children: [(0, t.jsx)(l.Heading, {
           variant: "eyebrow",
           className: h.userInfoSectionHeader,
@@ -64,7 +64,7 @@ function g(e) {
           userId: i.id,
           textClassName: h.userInfoText
         })]
-      }), j && (0, t.jsx)("div", {
+      }), M && (0, t.jsx)("div", {
         className: h.clans,
         children: (0, t.jsx)("div", {
           className: h.userInfoText,
@@ -81,12 +81,12 @@ function g(e) {
           userId: i.id,
           autoFocus: N,
           className: h.note,
-          onUpdate: () => T({
+          onUpdate: () => C({
             action: "SET_NOTE"
           })
         })]
       })]
-    }), (0, t.jsx)(m.OA, {
+    }), (0, t.jsx)(S.OA, {
       ref: P,
       connectedAccounts: U,
       theme: R,

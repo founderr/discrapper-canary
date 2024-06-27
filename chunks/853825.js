@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-    return M
+    return j
   }
 }), i(47120);
 var t = i(735250),
@@ -17,26 +17,26 @@ var t = i(735250),
   E = i(721987),
   _ = i(204197),
   Z = i(78675),
-  S = i(741308),
-  m = i(588822),
+  m = i(741308),
+  S = i(588822),
   v = i(900927),
   x = i(678738),
   h = i(502762),
   g = i(530),
   N = i(228168),
   p = i(981631),
-  T = i(689938),
-  C = i(327570),
+  C = i(689938),
+  T = i(327570),
   R = i(143599),
   A = i(784204);
-let j = u.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+let M = u.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
-function M(e) {
+function j(e) {
   let {
     user: n,
     guildId: i,
     channelId: u,
-    messageId: M,
+    messageId: j,
     roleId: U,
     transitionState: P,
     onClose: L,
@@ -64,14 +64,14 @@ function M(e) {
       userId: n.id,
       guildId: b,
       channelId: u,
-      messageId: M,
+      messageId: j,
       roleId: U,
       showGuildProfile: !0,
       children: (0, t.jsxs)(o.ModalRoot, {
         transitionState: P,
-        className: C.root,
+        className: T.root,
         hideShadow: !0,
-        "aria-label": T.Z.Messages.USER_PROFILE_MODAL,
+        "aria-label": C.Z.Messages.USER_PROFILE_MODAL,
         children: [(0, t.jsxs)(h.Z, {
           user: n,
           displayProfile: D,
@@ -84,14 +84,14 @@ function M(e) {
               profileType: N.y0.FULL_SIZE,
               hasProfileEffect: (null == D ? void 0 : D.profileEffectId) != null
             }), (0, t.jsx)("div", {
-              className: C.headerInner,
+              className: T.headerInner,
               children: (0, t.jsx)("div", {
                 ...G,
-                children: (0, t.jsx)(j, {
+                children: (0, t.jsx)(M, {
                   src: B,
                   avatarDecoration: w,
                   size: o.AvatarSizes.SIZE_120,
-                  className: C.avatar,
+                  className: T.avatar,
                   status: void 0,
                   statusBackdropColor: (0, o.getStatusBackdropColor)(F),
                   "aria-label": n.username,
@@ -102,20 +102,20 @@ function M(e) {
               })
             })]
           }), (0, t.jsxs)("div", {
-            className: C.body,
+            className: T.body,
             children: [(0, t.jsx)(g.Z, {
               user: n,
               profileType: N.y0.FULL_SIZE,
               nickname: c.ZP.getName(b, u, n),
               pronouns: null == D ? void 0 : D.pronouns,
               nicknameVariant: "heading-xl/bold",
-              tags: (0, t.jsx)(S.Z, {
+              tags: (0, t.jsx)(m.Z, {
                 displayProfile: D,
                 profileType: N.y0.FULL_SIZE,
                 onClose: L
               })
             }), (0, t.jsx)(h.Z.Overlay, {
-              className: C.overlay,
+              className: T.overlay,
               children: (0, t.jsxs)("div", {
                 className: A.container,
                 children: [(0, t.jsx)(o.TabBar, {
@@ -126,21 +126,21 @@ function M(e) {
                   children: (0, t.jsx)(o.TabBar.Item, {
                     className: A.tabBarItem,
                     id: N.oh.USER_INFO,
-                    "aria-label": T.Z.Messages.USER_PROFILE_ABOUT_ME,
+                    "aria-label": C.Z.Messages.USER_PROFILE_ABOUT_ME,
                     children: (0, t.jsx)(o.Text, {
                       variant: "text-sm/normal",
-                      children: T.Z.Messages.USER_PROFILE_ABOUT_ME
+                      children: C.Z.Messages.USER_PROFILE_ABOUT_ME
                     })
                   }, N.oh.USER_INFO)
                 }), (0, t.jsxs)(o.ScrollerThin, {
                   fade: !0,
                   className: R.scroller,
-                  children: [(0, t.jsx)(m.Z, {
+                  children: [(0, t.jsx)(S.Z, {
                     userId: n.id,
                     userBio: null == D ? void 0 : D.bio,
                     setLineClamp: !1
                   }), (0, t.jsx)(x.Z, {
-                    title: T.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    title: C.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                     children: (0, t.jsx)(v.Z, {
                       userId: n.id,
                       guildId: b,

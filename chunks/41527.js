@@ -18,8 +18,8 @@ var s = i(481060),
   E = i(544989),
   _ = i(272510),
   Z = i(740021),
-  S = i(616140),
-  m = i(29530),
+  m = i(616140),
+  S = i(29530),
   v = i(228168),
   x = i(981631),
   h = i(689938),
@@ -31,16 +31,16 @@ function N(e) {
     currentUser: i,
     guildId: N,
     channelId: p,
-    messageId: T,
-    roleId: C,
+    messageId: C,
+    roleId: T,
     initialSection: R,
     initialSubsection: A,
-    transitionState: j,
-    onClose: M,
+    transitionState: M,
+    onClose: j,
     sourceAnalyticsLocations: U = []
   } = e, P = N === x.ME ? void 0 : N, L = (0, d.ZP)(n.id, P), {
     analyticsLocations: O
-  } = (0, l.ZP)([...U, o.Z.SIMPLIFIED_PROFILE_MODAL]), y = (0, m.Z)(n);
+  } = (0, l.ZP)([...U, o.Z.SIMPLIFIED_PROFILE_MODAL]), y = (0, S.Z)(n);
   return (0, t.jsx)(l.Gt, {
     value: O,
     children: (0, t.jsx)(r.Mt, {
@@ -48,11 +48,11 @@ function N(e) {
       userId: n.id,
       guildId: P,
       channelId: p,
-      messageId: T,
-      roleId: C,
+      messageId: C,
+      roleId: T,
       showGuildProfile: !0,
       children: (0, t.jsx)(s.ModalRoot, {
-        transitionState: j,
+        transitionState: M,
         className: g.root,
         hideShadow: !0,
         "aria-label": h.Z.Messages.USER_PROFILE_MODAL,
@@ -73,8 +73,8 @@ function N(e) {
             guildId: P,
             channelId: p,
             activity: void 0,
-            transitionState: j,
-            onClose: M
+            transitionState: M,
+            onClose: j
           }), (0, t.jsxs)("div", {
             className: g.body,
             children: [(0, t.jsx)(f.Z, {
@@ -89,18 +89,18 @@ function N(e) {
               tags: (0, t.jsx)(c.Z, {
                 displayProfile: L,
                 profileType: v.y0.FULL_SIZE,
-                onClose: M
+                onClose: j
               })
             }), (0, t.jsx)(I.Z.Overlay, {
               className: g.overlay,
-              children: (0, t.jsx)(S.Z, {
+              children: (0, t.jsx)(m.Z, {
                 user: n,
                 currentUser: i,
                 displayProfile: L,
                 items: y,
                 initialSection: R,
                 initialSubsection: A,
-                onClose: M
+                onClose: j
               })
             })]
           })]

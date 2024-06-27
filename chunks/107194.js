@@ -23,22 +23,22 @@ function I(e) {
       type: n
     } = e;
     return n !== c.IIU.CUSTOM_STATUS
-  })), Z = null === (n = (0, a.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === n ? void 0 : n.length, S = null === (i = (0, r.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, m = [{
+  })), Z = null === (n = (0, a.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualFriends) || void 0 === n ? void 0 : n.length, m = null === (i = (0, r.Z)(I.id, I.id !== (null == f ? void 0 : f.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, S = [{
     section: d.oh.USER_INFO,
     text: u.Z.Messages.USER_PROFILE_ABOUT_ME
   }];
-  return (null != E || null != _) && m.push({
+  return (null != E || null != _) && S.push({
     section: d.oh.ACTIVITY,
     text: u.Z.Messages.USER_PROFILE_ACTIVITY
-  }), I.id !== (null == f ? void 0 : f.id) && (m.push({
+  }), I.id !== (null == f ? void 0 : f.id) && (S.push({
     section: d.oh.MUTUAL_FRIENDS,
     text: (0, t.EQ)(Z).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
-  }), m.push({
+  }), S.push({
     section: d.oh.MUTUAL_GUILDS,
-    text: (0, t.EQ)(S).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, t.EQ)(m).with(void 0, () => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => u.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => u.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
-  })), m
+  })), S
 }

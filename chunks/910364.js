@@ -17,20 +17,20 @@ var t = i(735250),
   E = i(680295),
   _ = i(199902),
   Z = i(314897),
-  S = i(158776),
-  m = i(594174),
+  m = i(158776),
+  S = i(594174),
   v = i(785717),
   x = i(621853),
   h = i(318661),
   g = i(726059),
   N = i(162267),
   p = i(502762),
-  T = i(62154),
-  C = i(293259),
+  C = i(62154),
+  T = i(293259),
   R = i(725954),
   A = i(228168),
-  j = i(981631),
-  M = i(689938),
+  M = i(981631),
+  j = i(689938),
   U = i(307509);
 
 function P(e) {
@@ -55,27 +55,27 @@ function P(e) {
       children: [!s.isNonUserBot() || s.isClyde() || (0, f.Z)(s.id) ? (0, t.jsx)(l.TabBar.Item, {
         className: U.tabBarItem,
         id: A.oh.USER_INFO,
-        children: M.Z.Messages.USER_INFO
+        children: j.Z.Messages.USER_INFO
       }) : null, !s.bot && c ? (0, t.jsx)(l.TabBar.Item, {
         className: U.tabBarItem,
         id: A.oh.ACTIVITY,
-        children: M.Z.Messages.USER_PROFILE_ACTIVITY
+        children: j.Z.Messages.USER_PROFILE_ACTIVITY
       }) : null, s.bot || a ? null : (0, t.jsx)(l.TabBar.Item, {
         className: U.tabBarItem,
         id: A.oh.MUTUAL_FRIENDS,
-        children: null == I ? M.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : M.Z.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
+        children: null == I ? j.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : j.Z.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
           count: "".concat(I)
         })
       }), a || s.isClyde() || (0, f.Z)(s.id) ? null : (0, t.jsx)(l.TabBar.Item, {
         className: U.tabBarItem,
         id: A.oh.MUTUAL_GUILDS,
-        children: null == E ? M.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : M.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
+        children: null == E ? j.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : j.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
           count: "".concat(E)
         })
       }), s.bot && u ? (0, t.jsx)(l.TabBar.Item, {
         className: U.tabBarItem,
         id: A.oh.BOT_DATA_ACCESS,
-        children: M.Z.Messages.BOTS_DATA_ACCESS_TAB
+        children: j.Z.Messages.BOTS_DATA_ACCESS_TAB
       }) : null]
     })
   })
@@ -95,7 +95,7 @@ function L(e) {
     transitionState: F,
     sourceAnalyticsLocations: B = [],
     onClose: G
-  } = e, w = null !== (n = (0, o.e7)([m.default], () => m.default.getUser(x.id))) && void 0 !== n ? n : x, k = (0, h.ZP)(null !== (i = w.id) && void 0 !== i ? i : ""), {
+  } = e, w = null !== (n = (0, o.e7)([S.default], () => S.default.getUser(x.id))) && void 0 !== n ? n : x, k = (0, h.ZP)(null !== (i = w.id) && void 0 !== i ? i : ""), {
     analyticsLocations: Y
   } = (0, I.ZP)([...B, u.Z.PROFILE_MODAL]), V = (0, v.Q1)({
     layout: "MODAL",
@@ -110,7 +110,7 @@ function L(e) {
     [g]: [w.id]
   });
   let H = (0, o.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(w.id)),
-    W = (0, o.e7)([S.Z], () => S.Z.findActivity(w.id, e => e.type !== j.IIU.CUSTOM_STATUS)),
+    W = (0, o.e7)([m.Z], () => m.Z.findActivity(w.id, e => e.type !== M.IIU.CUSTOM_STATUS)),
     [z, K] = s.useState(!1),
     [Q, q] = s.useState(!w.isNonUserBot() || w.isClyde() || (0, f.Z)(w.id) ? b : A.oh.MUTUAL_GUILDS),
     J = (0, o.e7)([Z.default], () => Z.default.getId() === w.id),
@@ -137,18 +137,18 @@ function L(e) {
       roleId: O,
       showGuildProfile: !1,
       children: (0, t.jsx)(a.Z, {
-        section: j.jXE.PROFILE_MODAL,
+        section: M.jXE.PROFILE_MODAL,
         children: (0, t.jsxs)(l.ModalRoot, {
           transitionState: F,
           className: U.root,
           hideShadow: !0,
-          "aria-label": M.Z.Messages.USER_PROFILE_MODAL,
+          "aria-label": j.Z.Messages.USER_PROFILE_MODAL,
           children: [(0, t.jsxs)(p.Z, {
             user: w,
             displayProfile: k,
             profileType: A.y0.MODAL,
             ref: ee,
-            children: [(0, t.jsx)(C.Z, {
+            children: [(0, t.jsx)(T.Z, {
               className: U.topSection,
               displayProfile: k,
               user: w,
@@ -173,7 +173,7 @@ function L(e) {
                   isCurrentUser: J
                 }) : (0, t.jsx)("div", {
                   className: U.divider
-                }), (0, t.jsx)(T.Z, {
+                }), (0, t.jsx)(C.Z, {
                   displayProfile: k,
                   user: w,
                   autoFocusNote: D === A.Tb.NOTE && !z,

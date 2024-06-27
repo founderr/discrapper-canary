@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-    return m
+    return S
   }
 });
 var t = i(735250);
@@ -18,30 +18,30 @@ var s = i(442837),
   E = i(107194),
   _ = i(228168),
   Z = i(981631),
-  S = i(327570);
+  m = i(327570);
 
-function m(e) {
+function S(e) {
   var n;
   let {
     user: i,
-    currentUser: m,
+    currentUser: S,
     channelId: v,
     displayProfile: x,
     initialSection: h,
     initialSubsection: g,
     friendToken: N,
     onClose: p
-  } = e, T = (0, s.e7)([o.Z], () => o.Z.getRelationshipType(i.id)), {
-    originalFriendingEnabled: C,
+  } = e, C = (0, s.e7)([o.Z], () => o.Z.getRelationshipType(i.id)), {
+    originalFriendingEnabled: T,
     improvedFriendingEnabled: R
   } = (0, a.V)({
     location: "SimplifiedUserProfileModalBody"
   }), A = (0, E.Z)({
     user: i,
-    currentUser: m
+    currentUser: S
   });
   return (0, t.jsxs)("div", {
-    className: S.body,
+    className: m.body,
     children: [(0, t.jsx)(I.Z, {
       user: i,
       profileType: _.y0.FULL_SIZE,
@@ -56,20 +56,20 @@ function m(e) {
         profileType: _.y0.FULL_SIZE,
         onClose: p
       })
-    }), (R || C) && T === Z.OGo.PENDING_INCOMING && (0, t.jsx)(u.Z.Overlay, {
-      className: S.friendRequestBannerOverlay,
+    }), (R || T) && C === Z.OGo.PENDING_INCOMING && (0, t.jsx)(u.Z.Overlay, {
+      className: m.friendRequestBannerOverlay,
       children: (0, t.jsx)(c.Z, {
         user: i,
         guildId: null !== (n = null == x ? void 0 : x.guildId) && void 0 !== n ? n : void 0,
         channelId: v,
         friendToken: N,
-        className: S.friendRequestBanner
+        className: m.friendRequestBanner
       })
     }), (0, t.jsx)(u.Z.Overlay, {
-      className: S.overlay,
+      className: m.overlay,
       children: (0, t.jsx)(f.Z, {
         user: i,
-        currentUser: m,
+        currentUser: S,
         displayProfile: x,
         items: A,
         initialSection: h,

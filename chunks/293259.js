@@ -17,16 +17,16 @@ var t = i(735250),
   E = i(785717),
   _ = i(621853),
   Z = i(204197),
-  S = i(735336),
-  m = i(520978),
+  m = i(735336),
+  S = i(520978),
   v = i(184325),
   x = i(652853),
   h = i(225714),
   g = i(228168),
   N = i(231338),
   p = i(689938),
-  T = i(258125);
-let C = a.AvatarSizes.SIZE_120,
+  C = i(258125);
+let T = a.AvatarSizes.SIZE_120,
   R = f.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
@@ -34,8 +34,8 @@ function A(e) {
     displayProfile: n,
     user: f,
     guildId: A,
-    channelId: j,
-    friendToken: M,
+    channelId: M,
+    friendToken: j,
     className: U,
     isStreaming: P,
     hasProfileEffect: L,
@@ -50,25 +50,25 @@ function A(e) {
     avatarDecorationSrc: V
   } = (0, Z.Z)({
     user: f,
-    size: C
-  }), H = s.useMemo(() => (0, d.W)(f, j), [f, j]);
+    size: T
+  }), H = s.useMemo(() => (0, d.W)(f, M), [f, M]);
   return (0, t.jsxs)("header", {
     className: U,
-    children: [(0, t.jsx)(S.Z, {
+    children: [(0, t.jsx)(m.Z, {
       displayProfile: n,
       onClose: O,
       user: f,
       profileType: g.y0.MODAL,
       hasProfileEffect: L
     }), (0, t.jsxs)("div", {
-      className: T.header,
+      className: C.header,
       children: [(0, t.jsx)("div", {
         ...Y,
         children: (0, t.jsx)(R, {
           src: k,
           avatarDecoration: V,
-          size: C,
-          className: T.avatar,
+          size: T,
+          className: C.avatar,
           status: H ? N.Sk.UNKNOWN : P ? N.Sk.STREAMING : D,
           statusBackdropColor: (0, a.getStatusBackdropColor)(G),
           isMobile: b,
@@ -76,7 +76,7 @@ function A(e) {
           "aria-label": f.username
         })
       }), (0, t.jsxs)("div", {
-        className: T.headerTop,
+        className: C.headerTop,
         children: [(null == F ? void 0 : F.profileFetchFailed) && !f.isClyde() ? (0, t.jsx)(a.Tooltip, {
           text: p.Z.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
@@ -85,27 +85,27 @@ function A(e) {
             width: 20,
             height: 20,
             ...e,
-            className: T.warningCircleIcon,
+            className: C.warningCircleIcon,
             color: l.Z.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, t.jsx)(v.Z, {
           user: f,
-          className: T.badgeList,
+          className: C.badgeList,
           guildId: A,
           size: v.V.SIZE_24,
           shrinkAtCount: 8,
           shrinkToSize: v.V.SIZE_18,
           onBadgeClick: O
         }), (0, t.jsxs)("div", {
-          className: T.relationshipButtons,
-          children: [(null == F ? void 0 : F.application) != null && (0, t.jsx)(m.Z, {
-            className: T.applicationInstallButton,
+          className: C.relationshipButtons,
+          children: [(null == F ? void 0 : F.application) != null && (0, t.jsx)(S.Z, {
+            className: C.applicationInstallButton,
             application: F.application
           }), (0, t.jsx)(h.Z, {
             user: f,
             isCurrentUser: B,
             relationshipType: y,
-            friendToken: M,
+            friendToken: j,
             onClose: O
           }), B || f.isNonUserBot() ? null : (0, t.jsx)(a.Clickable, {
             focusProps: {
@@ -134,7 +134,7 @@ function A(e) {
             children: (0, t.jsx)(a.MoreVerticalIcon, {
               size: "md",
               color: "currentColor",
-              className: T.additionalActionsIcon
+              className: C.additionalActionsIcon
             })
           })]
         })]

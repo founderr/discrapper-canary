@@ -18,8 +18,8 @@ var s = i(442837),
   E = i(900927),
   _ = i(678738),
   Z = i(652853),
-  S = i(335191),
-  m = i(351707),
+  m = i(335191),
+  S = i(351707),
   v = i(228168),
   x = i(689938),
   h = i(143599);
@@ -32,17 +32,17 @@ function g(e) {
     subsection: N,
     onClose: p
   } = e, {
-    theme: T
+    theme: C
   } = (0, Z.z)(), {
-    trackUserProfileAction: C
-  } = (0, c.KZ)(), R = null == g ? void 0 : g.guildId, A = (0, s.e7)([r.Z], () => null != R ? r.Z.getGuild(R) : null), j = (0, s.e7)([d.Z], () => d.Z.getGuildId()), M = (0, s.e7)([a.default], () => a.default.locale), U = (0, I.Z)(n.id), P = (0, u.Z)(n.id);
+    trackUserProfileAction: T
+  } = (0, c.KZ)(), R = null == g ? void 0 : g.guildId, A = (0, s.e7)([r.Z], () => null != R ? r.Z.getGuild(R) : null), M = (0, s.e7)([d.Z], () => d.Z.getGuildId()), j = (0, s.e7)([a.default], () => a.default.locale), U = (0, I.Z)(n.id), P = (0, u.Z)(n.id);
   return (0, t.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: h.scroller,
     children: [(null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" && (0, t.jsx)(f.Z, {
       userBio: g.bio,
       setLineClamp: !1
-    }), null != A && (0, t.jsx)(m.Z, {
+    }), null != A && (0, t.jsx)(S.Z, {
       user: n,
       currentUser: i,
       guild: A,
@@ -56,25 +56,25 @@ function g(e) {
       })
     }), U.length > 0 && (0, t.jsx)(_.Z, {
       title: x.Z.Messages.CONNECTIONS,
-      children: (0, t.jsx)(S.OA, {
+      children: (0, t.jsx)(m.OA, {
         connectedAccounts: U,
         className: h.connections,
         userId: n.id,
-        theme: T,
-        locale: M
+        theme: C,
+        locale: j
       })
     }), P.length > 0 && (0, t.jsx)(_.Z, {
       title: x.Z.Messages.APPS,
-      children: P.map(e => (0, t.jsx)(S.tH, {
+      children: P.map(e => (0, t.jsx)(m.tH, {
         className: h.appsConnections,
         applicationRoleConnection: e,
-        locale: M,
+        locale: j,
         onApplicationClicked: () => {
-          C({
+          T({
             action: "PRESS_APP_CONNECTION"
           }), p()
         },
-        selectedGuildId: null != j ? j : void 0
+        selectedGuildId: null != M ? M : void 0
       }, e.application.id))
     }), (0, t.jsx)(_.Z, {
       title: x.Z.Messages.NOTE,
@@ -83,7 +83,7 @@ function g(e) {
         userId: n.id,
         className: h.note,
         autoFocus: N === v.Tb.NOTE,
-        onUpdate: () => C({
+        onUpdate: () => T({
           action: "SET_NOTE"
         })
       })
