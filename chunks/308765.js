@@ -198,9 +198,9 @@ let r = {
     actions: ["POST_CONNECTION_OPEN"],
     inlineRequire: () => n(70655).Z
   },
-  MessageRemindersManager: {
+  SavedMessagesManager: {
     actions: ["POST_CONNECTION_OPEN"],
-    inlineRequire: () => n(903707).Z,
+    inlineRequire: () => n(580506).Z,
     neverLoadBeforeConnectionOpen: !0
   },
   MessageRemindersNotificationManager: {
