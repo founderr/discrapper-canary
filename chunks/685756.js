@@ -93,7 +93,7 @@ class D extends I.Z {
     }, O);
     let e = this.webSocket = new WebSocket("".concat(this.url, "?v=").concat(7));
     e.binaryType = "arraybuffer", e.onopen = () => {
-      1 === this.connectionState ? this.emit("connect") : 5 === this.connectionState && this.doResumeOrClose(), this.connectionState = 4;
+      this.webSocketCloseTime = null, 1 === this.connectionState ? this.emit("connect") : 5 === this.connectionState && this.doResumeOrClose(), this.connectionState = 4;
       let e = Date.now() - this.connectionStartTime;
       this.logger.info("[CONNECTED] ".concat(this.url, " in ").concat(e, " ms")), this.emit("ping", Math.round(e / 2))
     }, e.onmessage = e => {
@@ -251,7 +251,7 @@ class D extends I.Z {
     this.backoff.succeed()
   }
   handleClose(e, t, n) {
-    if (this.connectionState = 0, e = e || !1, this.cleanupWebSocket(), 4004 === t || 4015 === t || 4011 === t || 4006 === t) return this.disconnect(e, t, n);
+    if (this.connectionState = 0, e = e || !1, this.webSocketCloseTime = performance.now(), this.cleanupWebSocket(), 4004 === t || 4015 === t || 4011 === t || 4006 === t) return this.disconnect(e, t, n);
     if (this.backoff.fails > 3) this.logger.warn("[WS CLOSED] Backoff exceed. Resetting."), this.disconnect(e, t, n);
     else {
       let i = this.backoff.fail(() => this.reconnect(e, t, n));
@@ -422,9 +422,11 @@ class D extends I.Z {
     this.heartbeatIntervalModifier = e
   }
   sendHeartbeatIfOverdue() {
-    if (null != this.heartbeatInterval && null != this.heartbeater && null != this.lastHeartbeatTime) performance.now() - this.lastHeartbeatTime > this.heartbeatInterval + p && (this.logger.info("Forcing heartbeat"), this.sendHeartbeat())
+    if (null == this.heartbeatInterval) return;
+    let e = performance.now();
+    this.backoff.pending && null == this.webSocket && null != this.webSocketCloseTime && e - this.webSocketCloseTime > this.backoff.current + p ? this.resetBackoff("Forcing reconnect") : null != this.heartbeater && null != this.lastHeartbeatTime && e - this.lastHeartbeatTime > this.heartbeatInterval + p && (this.logger.info("Forcing heartbeat"), this.sendHeartbeat())
   }
   constructor(e) {
-    super(), N(this, "url", void 0), N(this, "logger", new T.Z("RTCControlSocket")), N(this, "backoff", new E.Z(1e3, 5e3)), N(this, "webSocket", void 0), N(this, "connectionState", void 0), N(this, "heartbeatInterval", void 0), N(this, "helloTimeout", void 0), N(this, "heartbeater", void 0), N(this, "lastHeartbeatTime", void 0), N(this, "lastHeartbeatAckTime", void 0), N(this, "expeditedHeartbeatTimeout", void 0), N(this, "heartbeatAck", void 0), N(this, "heartbeatIntervalModifier", void 0), N(this, "connectionStartTime", void 0), N(this, "sessionId", void 0), N(this, "serverId", void 0), N(this, "token", void 0), N(this, "resumable", void 0), N(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
+    super(), N(this, "url", void 0), N(this, "logger", new T.Z("RTCControlSocket")), N(this, "backoff", new E.Z(1e3, 5e3)), N(this, "webSocket", void 0), N(this, "connectionState", void 0), N(this, "heartbeatInterval", void 0), N(this, "helloTimeout", void 0), N(this, "heartbeater", void 0), N(this, "lastHeartbeatTime", void 0), N(this, "lastHeartbeatAckTime", void 0), N(this, "expeditedHeartbeatTimeout", void 0), N(this, "heartbeatAck", void 0), N(this, "heartbeatIntervalModifier", void 0), N(this, "connectionStartTime", void 0), N(this, "webSocketCloseTime", void 0), N(this, "sessionId", void 0), N(this, "serverId", void 0), N(this, "token", void 0), N(this, "resumable", void 0), N(this, "serverVersion", 0), this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
   }
 }
