@@ -187,8 +187,11 @@ class K extends(i = o.ZP.PersistedStore) {
   }
   hasNewContent() {
     let e = 1 === w && x,
-      t = g.length > 0 && (0 === p.length || g[0].id !== p[0].id);
-    return G && (e || t)
+      t = 0,
+      n = new Set(p.map(e => e.id));
+    return g.forEach(e => {
+      if (!(t >= S.Lb)) !n.has(e.id) && t++
+    }), G && (e || t >= 3)
   }
   getSelectedSummary(e) {
     return null == B || B.channelId !== e ? null : B
@@ -320,6 +323,9 @@ O(K, "displayName", "GravityStore"), O(K, "persistKey", "GravityStore"), t.Z = n
         let [e, t] = Y(g);
         V = e, Z = t, (0, A.em)([...V, ...Z], 0, S.xy)
       } else F()
+    } else {
+      let [e, t] = Y(g);
+      (0, A.em)([...e, ...t], 0, S.xy)
     }
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
