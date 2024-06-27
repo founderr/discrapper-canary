@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-    return C
+    return R
   }
 }), i(47120);
 var t = i(735250);
@@ -14,85 +14,91 @@ var s = i(442837),
   c = i(158776),
   u = i(699516),
   I = i(998502),
-  f = i(877485),
-  E = i(505737),
-  _ = i(204197),
-  Z = i(78675),
+  f = i(332390),
+  E = i(877485),
+  _ = i(505737),
+  Z = i(204197),
+  m = i(78675),
   S = i(438163),
-  m = i(652853),
-  v = i(900687),
-  x = i(228168),
-  h = i(182294),
-  g = i(602091),
-  N = i(231338),
-  p = i(327570);
+  v = i(652853),
+  x = i(900687),
+  h = i(228168),
+  g = i(182294),
+  N = i(602091),
+  p = i(231338),
+  C = i(327570);
 let T = I.ZP.getEnableHardwareAcceleration() ? o.Xo : o.qE;
 
-function C(e) {
+function R(e) {
   let {
     user: n,
     displayProfile: i,
     activity: o,
     guildId: I,
-    channelId: C,
-    transitionState: R,
-    viewProfileItem: A,
+    channelId: R,
+    transitionState: A,
+    viewProfileItem: M,
     onClose: j
   } = e, {
-    theme: M
-  } = (0, m.z)(), U = (0, E.Z)(n.id, I), {
-    avatarSrc: P,
-    eventHandlers: L,
-    avatarDecorationSrc: O
-  } = (0, _.Z)({
+    theme: U
+  } = (0, v.z)(), P = (0, _.Z)(n.id, I), {
+    avatarSrc: L,
+    eventHandlers: O,
+    avatarDecorationSrc: y
+  } = (0, Z.Z)({
     user: n,
     guildId: null == i ? void 0 : i.guildId,
-    size: h.EF.SIZE_120
+    size: g.EF.SIZE_120
   }), {
-    originalFriendingEnabled: y,
-    improvedFriendingEnabled: b
-  } = (0, f.V)({
+    originalFriendingEnabled: b,
+    improvedFriendingEnabled: D
+  } = (0, E.V)({
     location: "SimplifiedUserProfileModalHeader"
-  }), D = (0, s.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), F = (0, s.e7)([d.default], () => d.default.getId() === n.id), [B, G] = (0, s.Wu)([c.Z], () => {
+  }), {
+    persistentCallCtaEnabled: F
+  } = (0, f.l)({
+    location: "SimplifiedUserProfileModalHeader"
+  }), B = (0, s.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), G = (0, s.e7)([d.default], () => d.default.getId() === n.id), [w, k] = (0, s.Wu)([c.Z], () => {
     let e = c.Z.isMobileOnline(n.id);
-    return (0, r.W)(n, C) ? [N.Sk.UNKNOWN, e] : (0, a.Z)(o) ? [N.Sk.STREAMING, e] : [c.Z.getStatus(n.id), e]
+    return (0, r.W)(n, R) ? [p.Sk.UNKNOWN, e] : (0, a.Z)(o) ? [p.Sk.STREAMING, e] : [c.Z.getStatus(n.id), e]
   });
   return (0, t.jsxs)("header", {
-    children: [(0, t.jsx)(Z.Z, {
+    children: [(0, t.jsx)(m.Z, {
       user: n,
       displayProfile: i,
-      profileType: x.y0.FULL_SIZE,
+      profileType: h.y0.FULL_SIZE,
       hasProfileEffect: (null == i ? void 0 : i.profileEffectId) != null
     }), (0, t.jsxs)("div", {
-      className: p.headerInner,
+      className: C.headerInner,
       children: [(0, t.jsx)("div", {
-        ...L,
+        ...O,
         children: (0, t.jsx)(T, {
-          src: P,
-          avatarDecoration: O,
-          size: h.EF.SIZE_120,
-          className: p.avatar,
-          status: B,
-          statusBackdropColor: (0, l.QF)(M),
+          src: L,
+          avatarDecoration: y,
+          size: g.EF.SIZE_120,
+          className: C.avatar,
+          status: w,
+          statusBackdropColor: (0, l.QF)(U),
           "aria-label": n.username,
-          isMobile: G,
+          isMobile: k,
           statusTooltip: !0,
-          statusTooltipDelay: x.vB
+          statusTooltipDelay: h.vB
         })
-      }), (0, t.jsx)(v.Z, {
+      }), (0, t.jsx)(x.Z, {
         user: n,
-        isCurrentUser: F,
+        isCurrentUser: G,
         guildId: I,
-        canDM: U,
-        relationshipType: D,
-        originalFriendingEnabled: y,
-        improvedFriendingEnabled: b,
-        viewProfileItem: A,
+        canDM: P,
+        relationshipType: B,
+        originalFriendingEnabled: b,
+        improvedFriendingEnabled: D,
+        persistentCallCtaEnabled: F,
+        viewProfileItem: M,
         onClose: j
       }), (0, t.jsx)(S.Z, {
         user: n,
-        profileType: x.y0.FULL_SIZE,
-        hasEntered: R === g.Dv.ENTERED,
+        profileType: h.y0.FULL_SIZE,
+        hasEntered: A === N.Dv.ENTERED,
         onClose: j
       })]
     })]

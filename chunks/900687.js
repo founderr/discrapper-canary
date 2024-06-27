@@ -22,16 +22,17 @@ function I(e) {
     friendToken: E,
     canDM: _,
     relationshipType: Z,
-    originalFriendingEnabled: S = !1,
-    improvedFriendingEnabled: m = !1,
-    viewProfileItem: v,
-    onClose: x
+    originalFriendingEnabled: m = !1,
+    improvedFriendingEnabled: S = !1,
+    persistentCallCtaEnabled: v = !1,
+    viewProfileItem: x,
+    onClose: h
   } = e, {
-    trackUserProfileAction: h
+    trackUserProfileAction: g
   } = (0, l.KZ)();
 
-  function g(e) {
-    h({
+  function N(e) {
+    g({
       action: "PRESS_OPTIONS"
     }), (0, o.jW)(e, async () => {
       let {
@@ -39,54 +40,55 @@ function I(e) {
       } = await i.e("29136").then(i.bind(i, 193646));
       return i => (0, t.jsx)(e, {
         ...i,
-        originalFriendingEnabled: S,
+        originalFriendingEnabled: m,
         relationshipType: Z,
-        viewProfileItem: v,
+        viewProfileItem: x,
         user: n,
         isCurrentUser: I,
         guildId: f,
-        trackUserProfileAction: h,
-        onClose: x
+        trackUserProfileAction: g,
+        onClose: h
       })
     })
   }
   return (0, t.jsxs)("div", {
     className: u.buttons,
-    children: [(S || m) && (0, t.jsxs)(t.Fragment, {
+    children: [(m || S) && (0, t.jsxs)(t.Fragment, {
       children: [(0, t.jsx)(d.Z, {
         user: n,
         isCurrentUser: I,
         relationshipType: Z,
-        originalFriendingEnabled: S,
-        improvedFriendingEnabled: m,
+        originalFriendingEnabled: m,
+        improvedFriendingEnabled: S,
+        persistentCallCtaEnabled: v,
         friendToken: E,
-        onClose: x
+        onClose: h
       }), I && (0, t.jsx)(a.Z, {
         user: n,
         guildId: f,
         profileType: c.y0.FULL_SIZE,
-        onClose: x
-      }), !n.isNonUserBot() && S ? (0, t.jsx)(s.Clickable, {
+        onClose: h
+      }), !n.isNonUserBot() && m ? (0, t.jsx)(s.Clickable, {
         focusProps: {
           offset: {
             left: 8
           }
         },
-        onClick: g,
+        onClick: N,
         children: (0, t.jsx)(s.MoreVerticalIcon, {
           size: "md",
           color: "currentColor",
           className: u.additionalActionsIcon
         })
       }) : null]
-    }), !S && !m && (_ ? (0, t.jsx)(r.Z, {
+    }), !m && !S && (_ ? (0, t.jsx)(r.Z, {
       user: n,
-      onClose: x
+      onClose: h
     }) : (0, t.jsx)(a.Z, {
       user: n,
       guildId: f,
       profileType: c.y0.FULL_SIZE,
-      onClose: x
+      onClose: h
     }))]
   })
 }
