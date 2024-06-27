@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   stickyBanner: "stickyBanner_e46a21",
   nameContainer: "nameContainer_e46a21",

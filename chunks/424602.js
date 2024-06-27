@@ -1,14 +1,13 @@
-"use strict";
 n.d(t, {
   T: function() {
-    return r
+    return a
   },
   m1: function() {
     return s
   }
 });
 var i = n(818083);
-let r = (0, i.B)({
+let a = (0, i.B)({
     kind: "user",
     id: "2023-11_app_launcher_desktop",
     label: "App Launcher - Desktop",

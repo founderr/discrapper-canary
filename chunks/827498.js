@@ -1,14 +1,13 @@
-"use strict";
-var i, r, s, o, a, l;
+var i, a, s, l, r, o;
 n.d(t, {
   G0: function() {
-    return _
+    return d
   },
   L3: function() {
-    return u
+    return c
   },
   LG: function() {
-    return r
+    return a
   },
   _b: function() {
     return i
@@ -16,8 +15,8 @@ n.d(t, {
   ti: function() {
     return s
   }
-}), (o = i || (i = {})).NONE = "NONE", o.TEXT = "TEXT", o.VOICE = "VOICE";
-let u = {
+}), (l = i || (i = {})).NONE = "NONE", l.TEXT = "TEXT", l.VOICE = "VOICE";
+let c = {
     SEARCH: "search",
     RECENT: "recent",
     INSTALLED: "installed",
@@ -27,8 +26,8 @@ let u = {
     NEW_TO_APPS: "new_to_apps",
     APPS_IN_THIS_SERVER: "apps_in_this_server"
   },
-  _ = {
+  d = {
     HOME: "home",
     APP_DETAIL: "app_detail"
   };
-(a = r || (r = {})).HOME_EMPTY = "home_empty", a.SEARCH_EMPTY = "search_empty", a.HOME_NO_PERMISSIONS = "home_no_permissions", a.COMMAND_NO_PERMISSIONS = "command_no_permissions", a.COMMAND_NOT_FOUND = "command_not_found", (l = s || (s = {}))[l.DISMISSED = 0] = "DISMISSED", l[l.COMMAND = 1] = "COMMAND", l[l.ACTIVITY = 2] = "ACTIVITY"
+(r = a || (a = {})).HOME_EMPTY = "home_empty", r.SEARCH_EMPTY = "search_empty", r.HOME_NO_PERMISSIONS = "home_no_permissions", r.COMMAND_NO_PERMISSIONS = "command_no_permissions", r.COMMAND_NOT_FOUND = "command_not_found", (o = s || (s = {}))[o.DISMISSED = 0] = "DISMISSED", o[o.COMMAND = 1] = "COMMAND", o[o.ACTIVITY = 2] = "ACTIVITY"

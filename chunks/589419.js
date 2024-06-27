@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   container: "container_e80fe9",
   profileAndVideoContainer: "profileAndVideoContainer_e80fe9",

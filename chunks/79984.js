@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return c
+    return d
   }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(442837),
-  l = n(481060),
-  u = n(607070),
-  _ = n(782915);
+var i = t(735250),
+  l = t(470079),
+  a = t(120356),
+  r = t.n(a),
+  s = t(442837),
+  o = t(481060),
+  c = t(607070),
+  u = t(782915);
 
-function c() {
-  let e = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+function d() {
+  let e = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
     {
-      styleLarge: t,
-      styleSmall: n
-    } = r.useMemo(() => ({
+      styleLarge: n,
+      styleSmall: t
+    } = l.useMemo(() => ({
       styleLarge: {
         width: "".concat(10 + 50 * Math.random(), "%")
       },
@@ -27,28 +26,28 @@ function c() {
       }
     }), []);
   return (0, i.jsxs)("div", {
-    className: o()(_.container, {
-      [_.noAnimation]: e
+    className: r()(u.container, {
+      [u.noAnimation]: e
     }),
     children: [(0, i.jsx)("div", {
-      className: _.iconPlaceholder
+      className: u.iconPlaceholder
     }), (0, i.jsxs)("div", {
-      className: _.textContainer,
+      className: u.textContainer,
       children: [(0, i.jsx)("div", {
-        className: _.textPlaceholder,
-        style: t,
-        children: (0, i.jsx)(l.Heading, {
-          className: _.hidden,
+        className: u.textPlaceholder,
+        style: n,
+        children: (0, i.jsx)(o.Heading, {
+          className: u.hidden,
           variant: "heading-md/semibold",
           color: "header-primary",
           lineClamp: 1,
           children: "_"
         })
       }), (0, i.jsx)("div", {
-        className: _.textPlaceholder,
-        style: n,
-        children: (0, i.jsx)(l.Text, {
-          className: _.hidden,
+        className: u.textPlaceholder,
+        style: t,
+        children: (0, i.jsx)(o.Text, {
+          className: u.hidden,
           variant: "text-sm/normal",
           color: "text-secondary",
           lineClamp: 1,
@@ -56,7 +55,7 @@ function c() {
         })
       })]
     }), (0, i.jsx)("div", {
-      className: _.underline
+      className: u.underline
     })]
   })
 }

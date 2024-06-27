@@ -1,65 +1,64 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return u
+    return c
   }
 });
-var i = n(735250),
-  r = n(481060),
-  s = n(984168),
-  o = n(314734),
-  a = n(689938),
-  l = n(506485);
+var i = t(735250),
+  l = t(481060),
+  a = t(984168),
+  r = t(314734),
+  s = t(689938),
+  o = t(506485);
 
-function u(e) {
-  let t, {
-    sortOrder: n,
-    onSortOptionClick: u
+function c(e) {
+  let n, {
+    sortOrder: t,
+    onSortOptionClick: c
   } = e;
-  switch (n) {
-    case o.bS.POPULAR:
-      t = a.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
+  switch (t) {
+    case r.bS.POPULAR:
+      n = s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
       break;
-    case o.bS.ALPHABETICAL:
-      t = a.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL
+    case r.bS.ALPHABETICAL:
+      n = s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL
   }
-  return (0, i.jsx)(r.Popout, {
+  return (0, i.jsx)(l.Popout, {
     renderPopout: e => {
       let {
-        closePopout: t
+        closePopout: n
       } = e;
-      return (0, i.jsx)(s.Z, {
-        sortOrder: n,
-        onSortOptionClick: u,
-        closePopout: t
+      return (0, i.jsx)(a.Z, {
+        sortOrder: t,
+        onSortOptionClick: c,
+        closePopout: n
       })
     },
     position: "bottom",
     align: "left",
-    children: (e, n) => {
+    children: (e, t) => {
       let {
-        isShown: s
-      } = n;
-      return (0, i.jsxs)(r.Button, {
+        isShown: a
+      } = t;
+      return (0, i.jsxs)(l.Button, {
         ...e,
-        size: r.Button.Sizes.MIN,
-        color: r.Button.Colors.CUSTOM,
-        className: l.sortDropdown,
-        innerClassName: l.sortDropdownInner,
-        "aria-label": a.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
-        children: [(0, i.jsx)(r.ArrowsUpDownIcon, {
+        size: l.Button.Sizes.MIN,
+        color: l.Button.Colors.CUSTOM,
+        className: o.sortDropdown,
+        innerClassName: o.sortDropdownInner,
+        "aria-label": s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
+        children: [(0, i.jsx)(l.ArrowsUpDownIcon, {
           size: "xs",
           color: "currentColor",
-          className: l.sortIconMargin
-        }), (0, i.jsx)(r.Text, {
+          className: o.sortIconMargin
+        }), (0, i.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-normal",
-          children: t
-        }), s ? (0, i.jsx)(r.ChevronSmallUpIcon, {
+          children: n
+        }), a ? (0, i.jsx)(l.ChevronSmallUpIcon, {
           size: "custom",
           color: "currentColor",
           width: 20
-        }) : (0, i.jsx)(r.ChevronSmallDownIcon, {
+        }) : (0, i.jsx)(l.ChevronSmallDownIcon, {
           size: "custom",
           color: "currentColor",
           width: 20

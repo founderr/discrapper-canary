@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   contentContainer: "contentContainer_f37ac2",
   commandListHeader: "commandListHeader_f37ac2",

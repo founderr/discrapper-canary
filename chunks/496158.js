@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   D: function() {
-    return s
+    return a
   }
 });
-var i = n(470079),
-  r = n(430824);
+var i = t(470079),
+  l = t(430824);
 
-function s(e) {
+function a(e) {
   return i.useMemo(() => {
-    var t;
+    var n;
     return {
-      channel: t = e,
-      guild: null != t.guild_id ? r.Z.getGuild(t.guild_id) : null
+      channel: n = e,
+      guild: null != n.guild_id ? l.Z.getGuild(n.guild_id) : null
     }
   }, [e])
 }

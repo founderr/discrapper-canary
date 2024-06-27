@@ -8,7 +8,6 @@ e.exports = {
   toastContainer: "toastContainer_a35965",
   emojiHotrailShareToChannel: "emojiHotrailShareToChannel_a35965",
   inputContainerShareToChannel: "inputContainerShareToChannel_a35965",
-  replyInputWrapper: "replyInputWrapper_a35965",
   primaryActionPopoutMessageCloseIcon: "primaryActionPopoutMessageCloseIcon_a35965",
   shareToChannelButton: "shareToChannelButton_a35965",
   popoutContentHeader: "popoutContentHeader_a35965",

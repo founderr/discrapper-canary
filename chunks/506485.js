@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   sortDropdown: "sortDropdown_fd3eaf",
   sortDropdownInner: "sortDropdownInner_fd3eaf",

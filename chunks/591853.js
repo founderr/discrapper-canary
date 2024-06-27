@@ -34,8 +34,8 @@ var c = n(442837),
   _ = n(287734),
   f = n(872810),
   E = n(607070),
-  g = n(220779),
-  C = n(201133),
+  C = n(220779),
+  g = n(201133),
   I = n(605236),
   x = n(543241),
   T = n(318374),
@@ -173,7 +173,7 @@ function es(e) {
         })
       },
       E = p ? ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
-      g = e => {
+      C = e => {
         let {
           children: t
         } = e;
@@ -191,10 +191,10 @@ function es(e) {
           children: t
         }, "voice-preview")
       },
-      C = (0, i.jsxs)(i.Fragment, {
+      g = (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsxs)("div", {
           className: et.voiceChannelPopoutReactorHeader,
-          children: [(0, i.jsx)(g, {
+          children: [(0, i.jsx)(C, {
             children: e => (0, i.jsxs)(h.Clickable, {
               ...e,
               "aria-label": ee.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
@@ -242,8 +242,8 @@ function es(e) {
         })]
       });
     return {
-      voiceBar: C,
-      joinVoiceButton: (0, i.jsx)(g, {
+      voiceBar: g,
+      joinVoiceButton: (0, i.jsx)(C, {
         children: e => (0, i.jsx)(eh, {
           ...e,
           color: h.Button.Colors.GREEN,
@@ -315,7 +315,7 @@ function es(e) {
         throw e
       }
     })(a.id);
-    o()(null != u, "Reaction image must be defined"), await (0, C.B)({
+    o()(null != u, "Reaction image must be defined"), await (0, g.B)({
       file: u,
       channel: a,
       altText: s,
@@ -343,7 +343,7 @@ function es(e) {
         children: [(0, i.jsx)(er, {
           channel: t,
           onClickSuggestion: ec
-        }), (0, i.jsx)(g.dE, {
+        }), (0, i.jsx)(C.dE, {
           onSelectEmoji: ec
         })]
       })
@@ -364,34 +364,31 @@ function es(e) {
           height: 20,
           color: d.Z.colors.ICON_PRIMARY
         })
-      }), (0, i.jsx)("div", {
-        className: et.replyInputWrapper,
-        children: (0, i.jsx)(g.A7, {
-          placeholder: ee.Z.Messages.TEXTAREA_PLACEHOLDER.format({
-            channel: T ? el : "@".concat(es)
-          }),
-          onEnter: eu,
-          setEditorRef: e => S(e),
-          channel: T ? t : void 0,
-          showEmojiButton: null != ep,
-          renderAttachButton: Z ? () => (0, i.jsx)(h.Tooltip, {
-            text: eo,
-            children: e => (0, i.jsx)(h.Clickable, {
-              ...e,
-              className: et.shareToChannelButton,
-              onClick: () => N(e => !e),
-              children: T ? (0, i.jsx)(h.TextIcon, {
-                size: "custom",
-                width: 20,
-                height: 20
-              }) : (0, i.jsx)(h.AtIcon, {
-                size: "custom",
-                width: 20,
-                height: 20
-              })
+      }), (0, i.jsx)(C.A7, {
+        placeholder: ee.Z.Messages.TEXTAREA_PLACEHOLDER.format({
+          channel: T ? el : "@".concat(es)
+        }),
+        onEnter: eu,
+        setEditorRef: e => S(e),
+        channel: T ? t : void 0,
+        showEmojiButton: null != ep,
+        renderAttachButton: Z ? () => (0, i.jsx)(h.Tooltip, {
+          text: eo,
+          children: e => (0, i.jsx)(h.Clickable, {
+            ...e,
+            className: et.shareToChannelButton,
+            onClick: () => N(e => !e),
+            children: T ? (0, i.jsx)(h.TextIcon, {
+              size: "custom",
+              width: 20,
+              height: 20
+            }) : (0, i.jsx)(h.AtIcon, {
+              size: "custom",
+              width: 20,
+              height: 20
             })
-          }) : void 0
-        })
+          })
+        }) : void 0
       })]
     }), !1 === ei && (0, i.jsxs)("div", {
       className: et.primaryActionPopoutActionButtons,
@@ -548,7 +545,7 @@ function eu(e) {
     ..._
   } = e, {
     entry: f
-  } = _, E = (0, V.d)(f), g = (0, v.ZP)({
+  } = _, E = (0, V.d)(f), C = (0, v.ZP)({
     location: "ContentPopout",
     applicationId: E ? null === (t = f.extra) || void 0 === t ? void 0 : t.application_id : void 0
   }) && E ? () => {
@@ -571,7 +568,7 @@ function eu(e) {
       children: [(0, i.jsx)("div", {
         className: et.popoutThumbnailContainer,
         children: (0, i.jsx)(ec, {
-          onClick: null != d ? d : g,
+          onClick: null != d ? d : C,
           children: (0, i.jsx)(X.f, {
             size: 72,
             alt: s,
@@ -585,7 +582,7 @@ function eu(e) {
         horizontal: !0
       }), (0, i.jsxs)("div", {
         children: [(0, i.jsx)(ec, {
-          onClick: null != p ? p : g,
+          onClick: null != p ? p : C,
           children: (0, i.jsx)(h.Heading, {
             variant: "heading-md/medium",
             className: et.popoutTextPrimary,
@@ -593,7 +590,7 @@ function eu(e) {
             children: r
           })
         }), null != o ? (0, i.jsx)(ec, {
-          onClick: null != m ? m : g,
+          onClick: null != m ? m : C,
           children: (0, i.jsx)(h.Text, {
             variant: "text-md/normal",
             className: et.popoutTextSecondary,

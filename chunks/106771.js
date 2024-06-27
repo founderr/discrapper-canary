@@ -1,56 +1,55 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return u
+    return c
   }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(481060),
-  o = n(783097),
-  a = n(753972),
-  l = n(451684);
+var i = t(735250),
+  l = t(470079),
+  a = t(481060),
+  r = t(783097),
+  s = t(753972),
+  o = t(451684);
 
-function u(e) {
-  var t;
+function c(e) {
+  var n;
   let {
-    command: n,
-    application: u,
-    onClick: _
+    command: t,
+    application: c,
+    onClick: u
   } = e, {
-    iconURL: c,
-    name: d,
-    description: E
-  } = r.useMemo(() => (0, o.sl)(u, {
+    iconURL: d,
+    name: m,
+    description: p
+  } = l.useMemo(() => (0, r.sl)(c, {
     botIconFirst: !0
-  }), [u]);
-  return (0, i.jsxs)(s.Clickable, {
-    className: l.container,
-    onClick: _,
-    children: [null != c && (0, i.jsx)(a.Z, {
-      src: c,
-      className: l.icon,
+  }), [c]);
+  return (0, i.jsxs)(a.Clickable, {
+    className: o.container,
+    onClick: u,
+    children: [null != d && (0, i.jsx)(s.Z, {
+      src: d,
+      className: o.icon,
       "aria-hidden": !0
     }), (0, i.jsxs)("div", {
-      className: l.cmdDetails,
-      children: [(0, i.jsx)(s.Heading, {
+      className: o.cmdDetails,
+      children: [(0, i.jsx)(a.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
         lineClamp: 1,
-        children: null !== (t = null == n ? void 0 : n.displayName) && void 0 !== t ? t : d
-      }), (0, i.jsx)(s.Text, {
+        children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : m
+      }), (0, i.jsx)(a.Text, {
         variant: "text-sm/normal",
         color: "text-secondary",
         lineClamp: 1,
-        children: E
+        children: p
       })]
-    }), null != n ? (0, i.jsx)(s.Text, {
-      className: l.cmdAppName,
+    }), null != t ? (0, i.jsx)(a.Text, {
+      className: o.cmdAppName,
       variant: "text-sm/normal",
       color: "text-secondary",
-      children: d
+      children: m
     }) : null, (0, i.jsx)("div", {
-      className: l.underline
+      className: o.underline
     })]
   })
 }

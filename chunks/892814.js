@@ -1,6 +1,5 @@
-"use strict";
 var i;
-n.d(t, {
+t.d(n, {
   I: function() {
     return i
   }

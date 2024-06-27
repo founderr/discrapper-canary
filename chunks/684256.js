@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return d
+    return m
   }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(481060),
-  o = n(895924),
-  a = n(424602),
-  l = n(827498),
-  u = n(98880),
-  _ = n(772606),
-  c = n(838246);
+var i = t(735250),
+  l = t(470079),
+  a = t(481060),
+  r = t(895924),
+  s = t(424602),
+  o = t(827498),
+  c = t(98880),
+  u = t(772606),
+  d = t(838246);
 
-function d(e) {
+function m(e) {
   let {
-    channel: t,
-    entrypoint: n,
-    title: d,
-    look: E,
-    items: I,
-    sectionName: T
+    channel: n,
+    entrypoint: t,
+    title: m,
+    look: p,
+    items: h,
+    sectionName: N
   } = e, {
-    clickOnHomeActivityOpensAppDetail: h
-  } = a.m1.getCurrentConfig({
+    clickOnHomeActivityOpensAppDetail: _
+  } = s.m1.getCurrentConfig({
     location: "AppLauncherApplicationListViewScreen"
   }, {
     autoTrackExposure: !1
-  }), f = r.useMemo(() => n === l._b.TEXT || h ? u.kA : u.qR, [h, n]);
+  }), E = l.useMemo(() => t === o._b.TEXT || _ ? c.kA : c.qR, [_, t]);
   return (0, i.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     children: [(0, i.jsxs)("div", {
-      className: c.header,
-      children: [(0, i.jsx)(_.Z, {
-        className: c.backButton
-      }), (0, i.jsx)(s.Heading, {
+      className: d.header,
+      children: [(0, i.jsx)(u.Z, {
+        className: d.backButton
+      }), (0, i.jsx)(a.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
-        children: d
+        children: m
       })]
-    }), (0, i.jsx)(s.Scroller, {
+    }), (0, i.jsx)(a.Scroller, {
       children: (0, i.jsx)("div", {
-        className: c.appGrid,
-        children: I.map(e => {
+        className: d.appGrid,
+        children: h.map(e => {
           let {
-            application: n,
-            isPartner: r
+            application: t,
+            isPartner: l
           } = e;
-          return (0, i.jsx)(f, {
-            channel: t,
-            application: n,
-            look: E,
-            isPartner: r,
-            sectionName: T,
-            location: o.Vh.APP_LAUNCHER_LIST_VIEW_ALL
-          }, n.id)
+          return (0, i.jsx)(E, {
+            channel: n,
+            application: t,
+            look: p,
+            isPartner: l,
+            sectionName: N,
+            location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL
+          }, t.id)
         })
       })
     })]

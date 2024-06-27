@@ -1,107 +1,106 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   $d: function() {
-    return T
-  },
-  BQ: function() {
-    return I
-  },
-  Wx: function() {
-    return E
-  },
-  Y$: function() {
-    return S
-  },
-  jD: function() {
-    return h
-  },
-  sl: function() {
     return N
   },
+  BQ: function() {
+    return h
+  },
+  Wx: function() {
+    return p
+  },
+  Y$: function() {
+    return C
+  },
+  jD: function() {
+    return _
+  },
+  sl: function() {
+    return A
+  },
   ye: function() {
-    return f
+    return E
   }
-}), n(789020);
-var i = n(668781),
-  r = n(904245),
-  s = n(895924),
-  o = n(667204),
-  a = n(957730),
-  l = n(768581),
-  u = n(630388),
-  _ = n(981631),
-  c = n(689079),
-  d = n(689938);
-let E = {
-  id: c.bi.BUILT_IN
+}), t(789020);
+var i = t(668781),
+  l = t(904245),
+  a = t(895924),
+  r = t(667204),
+  s = t(957730),
+  o = t(768581),
+  c = t(630388),
+  u = t(981631),
+  d = t(689079),
+  m = t(689938);
+let p = {
+  id: d.bi.BUILT_IN
 };
 
-function I(e) {
-  return e.id !== c.bi.BUILT_IN
-}
-
-function T(e) {
-  return I(e) ? e.name : d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME
-}
-
 function h(e) {
-  return I(e) ? e.description : d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
-}
-
-function f(e) {
-  var t;
-  let {
-    application: n
-  } = e;
-  return I(n) && (0, u.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED)
-}
-
-function S(e) {
-  let {
-    command: t,
-    optionValues: n,
-    context: l,
-    commandTargetId: u,
-    maxSizeCallback: _,
-    sectionName: c
-  } = e, {
-    channel: E
-  } = l, I = async () => {
-    try {
-      let i = await (0, o.Z)({
-        command: t,
-        optionValues: n,
-        context: l,
-        commandTargetId: u,
-        maxSizeCallback: _,
-        commandOrigin: s.bB.APPLICATION_LAUNCHER,
-        sectionName: c
-      });
-      if (t.inputType === s.iw.BUILT_IN_TEXT && null != i) {
-        var e;
-        let t = a.ZP.parse(E, i.content);
-        t.tts = null !== (e = i.tts) && void 0 !== e && e, r.Z.sendMessage(l.channel.id, t)
-      }
-    } catch (e) {
-      throw i.Z.show({
-        title: d.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
-        body: d.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
-        confirmText: d.Z.Messages.RETRY,
-        onConfirm: () => I()
-      }), e
-    }
-  };
-  return I()
+  return e.id !== d.bi.BUILT_IN
 }
 
 function N(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+  return h(e) ? e.name : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME
+}
+
+function _(e) {
+  return h(e) ? e.description : m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+}
+
+function E(e) {
+  var n;
+  let {
+    application: t
+  } = e;
+  return h(t) && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED)
+}
+
+function C(e) {
+  let {
+    command: n,
+    optionValues: t,
+    context: o,
+    commandTargetId: c,
+    maxSizeCallback: u,
+    sectionName: d
+  } = e, {
+    channel: p
+  } = o, h = async () => {
+    try {
+      let i = await (0, r.Z)({
+        command: n,
+        optionValues: t,
+        context: o,
+        commandTargetId: c,
+        maxSizeCallback: u,
+        commandOrigin: a.bB.APPLICATION_LAUNCHER,
+        sectionName: d
+      });
+      if (n.inputType === a.iw.BUILT_IN_TEXT && null != i) {
+        var e;
+        let n = s.ZP.parse(p, i.content);
+        n.tts = null !== (e = i.tts) && void 0 !== e && e, l.Z.sendMessage(o.channel.id, n)
+      }
+    } catch (e) {
+      throw i.Z.show({
+        title: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
+        body: m.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
+        confirmText: m.Z.Messages.RETRY,
+        onConfirm: () => h()
+      }), e
+    }
+  };
+  return h()
+}
+
+function A(e) {
+  let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
-      fakeAppIconURL: n,
+      fakeAppIconURL: t,
       ...i
-    } = t;
-  return I(e) ? {
-    iconURL: l.ZP.getApplicationIconURL({
+    } = n;
+  return h(e) ? {
+    iconURL: o.ZP.getApplicationIconURL({
       ...i,
       id: e.id,
       icon: e.icon,
@@ -110,8 +109,8 @@ function N(e) {
     name: e.name,
     description: e.description
   } : {
-    iconURL: null != n ? n : null,
-    name: d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
-    description: d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+    iconURL: null != t ? t : null,
+    name: m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+    description: m.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
   }
 }

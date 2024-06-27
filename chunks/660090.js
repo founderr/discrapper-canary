@@ -1,81 +1,80 @@
-"use strict";
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return a
+    return s
   }
-}), n(47120);
-var i = n(470079),
-  r = n(674588),
-  s = n(70956),
-  o = n(314734);
+}), t(47120);
+var i = t(470079),
+  l = t(674588),
+  a = t(70956),
+  r = t(314734);
 
-function a(e) {
+function s(e) {
   let {
-    sectionId: t,
-    commandsByActiveSection: n
-  } = e, [a, l] = i.useState(o.bS.ALPHABETICAL), u = i.useMemo(() => {
+    sectionId: n,
+    commandsByActiveSection: t
+  } = e, [s, o] = i.useState(r.bS.ALPHABETICAL), c = i.useMemo(() => {
     var e, i;
-    return null !== (i = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : []
-  }, [n, t]), {
-    popularSortedCommands: _,
-    canSort: c
+    return null !== (i = null === (e = t.find(e => e.section.id === n)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : []
+  }, [t, n]), {
+    popularSortedCommands: u,
+    canSort: d
   } = function(e) {
     let {
-      alphabeticalSortedCommands: t
+      alphabeticalSortedCommands: n
     } = e;
     return i.useMemo(() => {
-      if (t.length <= 1) return {
-        popularSortedCommands: t,
+      if (n.length <= 1) return {
+        popularSortedCommands: n,
         canSort: !1
       };
       let e = !1,
-        n = t.map((t, n) => (e = e || null != t.global_popularity_rank, {
-          command: t,
-          alphabeticalSortIndex: n
+        t = n.map((n, t) => (e = e || null != n.global_popularity_rank, {
+          command: n,
+          alphabeticalSortIndex: t
         }));
-      return e ? (n.sort((e, t) => {
-        let n = e.command.global_popularity_rank,
-          i = t.command.global_popularity_rank;
-        if (null != n && null != i) {
-          if (n !== i) return n - i
-        } else if (null != n) return -1;
+      return e ? (t.sort((e, n) => {
+        let t = e.command.global_popularity_rank,
+          i = n.command.global_popularity_rank;
+        if (null != t && null != i) {
+          if (t !== i) return t - i
+        } else if (null != t) return -1;
         else if (null != i) return 1;
-        return e.alphabeticalSortIndex - t.alphabeticalSortIndex
+        return e.alphabeticalSortIndex - n.alphabeticalSortIndex
       }), {
-        popularSortedCommands: n.map(e => {
+        popularSortedCommands: t.map(e => {
           let {
-            command: t
+            command: n
           } = e;
-          return t
+          return n
         }),
         canSort: !0
       }) : {
-        popularSortedCommands: t,
+        popularSortedCommands: n,
         canSort: !1
       }
-    }, [t])
+    }, [n])
   }({
-    alphabeticalSortedCommands: u
+    alphabeticalSortedCommands: c
   });
   i.useEffect(() => {
-    r.i6(t, {
-      dontRefetchMs: s.Z.Millis.DAY
+    l.i6(n, {
+      dontRefetchMs: a.Z.Millis.DAY
     })
-  }, [t]), i.useEffect(() => {
-    if (!!c) l(o.bS.POPULAR)
-  }, [c]);
-  let d = u;
-  switch (a) {
-    case o.bS.POPULAR:
-      d = _;
+  }, [n]), i.useEffect(() => {
+    if (!!d) o(r.bS.POPULAR)
+  }, [d]);
+  let m = c;
+  switch (s) {
+    case r.bS.POPULAR:
+      m = u;
       break;
-    case o.bS.ALPHABETICAL:
-      d = u
+    case r.bS.ALPHABETICAL:
+      m = c
   }
   return {
-    sortOrder: a,
-    setSortOrder: l,
-    commands: d,
-    canSort: c
+    sortOrder: s,
+    setSortOrder: o,
+    commands: m,
+    canSort: d
   }
 }

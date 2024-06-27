@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   container: "container_e5da8b",
   icon: "icon_e5da8b",
