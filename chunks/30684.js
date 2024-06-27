@@ -1,24 +1,32 @@
 var i, a, s, l, r = n(442837),
-  o = n(570140),
-  c = n(853872);
-let d = !1;
-class u extends(l = r.ZP.Store) {
-  isEligibleForNagbar() {
-    var e;
-    let t = null !== (e = c.Z.paymentSources) && void 0 !== e ? e : {};
-    return d && 0 !== Object.keys(t).length
+  o = n(570140);
+let c = !1,
+  d = !1,
+  u = !1;
+class _ extends(l = r.ZP.Store) {
+  getIsTargeted() {
+    return u
+  }
+  shouldFetchCheckoutRecovery() {
+    return !c && !d
   }
 }
-s = "CheckoutRecoveryStore", (a = "displayName") in(i = u) ? Object.defineProperty(i, a, {
+s = "CheckoutRecoveryStore", (a = "displayName") in(i = _) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new u(o.Z, {
-  CHECKOUT_RECOVERY_STATUS_FETCH: function(e) {
-    d = e.isEligibleForNagbar
+}) : i[a] = s, t.Z = new _(o.Z, {
+  CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function(e) {
+    d = !0, c = !1, u = e.isTargeted
   },
-  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function() {
-    d = !1
+  CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function() {
+    d = !0, c = !1
+  },
+  CHECKOUT_RECOVERY_STATUS_FETCH: function() {
+    c = !0
+  },
+  LOGOUT: function() {
+    c = !1, d = !1, u = !1
   }
 })
