@@ -23,8 +23,8 @@ class I extends(i = l.ZP.Store) {
   getOverdueMessageReminderCount() {
     return c.filter(e => null == e.dueAt || new Date > e.dueAt).length
   }
-  recentlyFetched() {
-    return new Date().getTime() - E < 1 * _.Z.Millis.MINUTE
+  getLastFetched() {
+    return E
   }
   hasSentNotification(e) {
     return d.has(e)
