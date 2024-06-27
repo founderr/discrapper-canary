@@ -28,6 +28,7 @@ t.Z = e => {
       ref: n,
       children: e => (0, o.jsx)(c.Z, {
         ref: e,
+        quest: t,
         percentComplete: x,
         size: 42,
         strokeWidth: 3,

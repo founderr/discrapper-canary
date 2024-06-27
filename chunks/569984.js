@@ -1,21 +1,21 @@
 "use strict";
-let i, r, s, o, a, l, u, _, c, d, E, I;
+let i, r, s, o, a, l, u, _, c, d, E, I, T;
 n(47120);
-var T, h, f, S, N = n(906280),
-  A = n.n(N),
-  m = n(887003),
-  O = n(442837),
-  p = n(570140),
-  R = n(497505),
-  g = n(918701),
-  C = n(5881),
-  v = n(46140);
+var h, f, S, N, A = n(906280),
+  m = n.n(A),
+  O = n(887003),
+  p = n(442837),
+  R = n(570140),
+  g = n(497505),
+  C = n(918701),
+  v = n(5881),
+  L = n(46140);
 
-function L() {
-  i = !1, r = new Map, s = 0, o = new Set, a = new Set, l = new Set, u = new Set, _ = new Set, c = new Map, d = new Map, E = new Map, I = null
+function D() {
+  i = !1, r = new Map, s = 0, o = new Set, a = new Set, l = new Set, u = new Set, _ = new Set, c = new Map, d = new Map, E = new Map, I = new Map, T = null
 }
 
-function D(e, t) {
+function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
       updateProgress: !1
     },
@@ -37,38 +37,38 @@ function D(e, t) {
   }
 }
 
-function M(e, t) {
+function P(e, t) {
   let n = new Map(c);
   n.set(e, t), c = n
 }
 
-function P(e, t) {
-  M(e, t);
+function y(e, t) {
+  P(e, t);
   let n = r.get(e),
     i = null == n ? void 0 : n.userStatus;
-  null != i && null == i.claimedAt && D(e, {
+  null != i && null == i.claimedAt && M(e, {
     userStatus: {
       ...i,
       claimedAt: t.claimedAt
     }
   })
 }
-L();
+D();
 
-function y(e) {
+function U(e) {
   null != E.get(e) && (E = new Map(E)).delete(e)
 }
 
-function U(e) {
+function b(e) {
   let t = new Set(o);
   t.delete(e), o = t
 }
 
-function b(e) {
+function G(e) {
   let t = new Set(_);
   t.delete(e), _ = t
 }
-class G extends(T = O.ZP.Store) {
+class w extends(h = p.ZP.Store) {
   get quests() {
     return r
   }
@@ -79,7 +79,7 @@ class G extends(T = O.ZP.Store) {
     return s
   }
   get questDeliveryOverride() {
-    return r.get(null != I ? I : "")
+    return r.get(null != T ? T : "")
   }
   isEnrolling(e) {
     return o.has(e)
@@ -105,18 +105,21 @@ class G extends(T = O.ZP.Store) {
   getStreamHeartbeatFailure(e) {
     return E.get(e)
   }
+  getQuestLastSuccessfulHeartbeat(e) {
+    return I.get(e)
+  }
   getQuest(e) {
     return r.get(e)
   }
 }
-S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
-  value: S,
+N = "QuestsStore", (S = "displayName") in(f = w) ? Object.defineProperty(f, S, {
+  value: N,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : h[f] = S, t.Z = new G(p.Z, {
+}) : f[S] = N, t.Z = new w(R.Z, {
   LOGOUT: function() {
-    L()
+    D()
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
     s = Date.now(), i = !0
@@ -129,7 +132,7 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let n = new Map(r);
     for (let e of (r = new Map, t)) {
       var s, o;
-      let t = A()(e),
+      let t = m()(e),
         i = n.get(t.id),
         a = (null === (s = t.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && null == t.userStatus.completedAt;
       if ((null == i ? void 0 : i.userStatus) != null && null != t.userStatus && a) {
@@ -140,8 +143,8 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
           null != e && null != i && e > i.value && (i.value = e)
         }
       }
-      r.set(t.id, t), t.targetedContent.includes(R.jn.QUEST_BAR) && (0, C.T)({
-        location: v.dr.QUESTS_STORE
+      r.set(t.id, t), t.targetedContent.includes(g.jn.QUEST_BAR) && (0, v.T)({
+        location: L.dr.QUESTS_STORE
       }).log("Delivered ".concat(t.config.messages.questName, " (").concat(t.id, ")"))
     }
   },
@@ -154,11 +157,11 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
       streamKey: n,
       userStatus: i
     } = e;
-    D(t, {
+    M(t, {
       userStatus: i
     }, {
       updateProgress: !0
-    }), y(n)
+    }), U(n), (I = new Map(I)).set(t, Date.now())
   },
   QUESTS_SEND_HEARTBEAT_FAILURE: function(e) {
     let {
@@ -181,15 +184,15 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let {
       enrolledQuestUserStatus: t
     } = e;
-    D(t.questId, {
+    M(t.questId, {
       userStatus: t
-    }), U(t.questId)
+    }), b(t.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    U(t)
+    b(t)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {
@@ -202,7 +205,7 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
       questId: t,
       rewardCode: n
     } = e, i = new Set(u);
-    i.delete(t), u = i, P(t, n)
+    i.delete(t), u = i, y(t, n)
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -221,7 +224,7 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
       questId: t,
       rewardCode: n
     } = e, i = new Set(a);
-    i.delete(t), a = i, P(t, n)
+    i.delete(t), a = i, y(t, n)
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -252,11 +255,11 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
           let {
             entitlements: n
           } = e, i = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-          return (null == i ? void 0 : i.tag) !== m.w.REWARD_CODE ? null : i.rewardCode
+          return (null == i ? void 0 : i.tag) !== O.w.REWARD_CODE ? null : i.rewardCode
         }({
           entitlements: t
         });
-        null != n && M(e, n), D(e, {
+        null != n && P(e, n), M(e, {
           userStatus: {
             ...s,
             claimedAt: t.claimedAt,
@@ -282,24 +285,24 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let {
       dismissedQuestUserStatus: t
     } = e;
-    D(t.questId, {
+    M(t.questId, {
       userStatus: t
-    }), b(t.questId)
+    }), G(t.questId)
   },
   QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    b(t)
+    G(t)
   },
   QUESTS_USER_STATUS_UPDATE: function(e) {
     let {
       user_status: t
     } = e;
-    (0, C.T)({
-      location: v.dr.QUESTS_STORE
-    }).log("Received user status update for ".concat(t.quest_id), t), D(t.quest_id, {
-      userStatus: (0, g.U3)(t)
+    (0, v.T)({
+      location: L.dr.QUESTS_STORE
+    }).log("Received user status update for ".concat(t.quest_id), t), M(t.quest_id, {
+      userStatus: (0, C.U3)(t)
     }, {
       updateProgress: !0
     })
@@ -308,19 +311,19 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let {
       streamKey: t
     } = e;
-    y(t)
+    U(t)
   },
   QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function(e) {
     let {
       streamKey: t
     } = e;
-    y(t)
+    U(t)
   },
   QUESTS_PREVIEW_UPDATE_SUCCESS: function(e) {
     let {
       previewQuestUserStatus: t
     } = e;
-    D(t.questId, {
+    M(t.questId, {
       userStatus: t
     }), null == t.claimedAt && (c = new Map(c)).delete(t.questId)
   },
@@ -328,7 +331,7 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let {
       userStatus: t
     } = e;
-    D(t.questId, {
+    M(t.questId, {
       userStatus: t
     }, {
       updateProgress: !0
@@ -338,6 +341,6 @@ S = "QuestsStore", (f = "displayName") in(h = G) ? Object.defineProperty(h, f, {
     let {
       questId: t
     } = e;
-    I = I === t ? null : t
+    T = T === t ? null : t
   }
 })

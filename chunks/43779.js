@@ -43,6 +43,7 @@ function I(e) {
       children: [g ? (0, i.jsx)("div", {
         className: h.progressWrapper,
         children: (0, i.jsx)(d.Z, {
+          quest: t,
           size: 76,
           percentComplete: p.percentComplete,
           children: (0, i.jsx)("div", {
