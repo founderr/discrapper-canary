@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(367907),
   f = n(158631),
   S = n(552740),
-  N = n(358221),
-  A = n(414910),
+  A = n(358221),
+  N = n(414910),
   m = n(221888),
   O = n(933557),
-  p = n(569545),
-  R = n(74299),
+  R = n(569545),
+  p = n(74299),
   g = n(863908),
   C = n(803647),
   v = n(788983),
@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(445062),
   G = n(7188),
   w = n(199902),
-  x = n(314897),
-  B = n(131951),
+  B = n(314897),
+  x = n(131951),
   k = n(699516),
   V = n(594174),
   Z = n(248402),
@@ -89,14 +89,14 @@ class ea extends r.PureComponent {
       activeSelfStream: t,
       participantOnScreen: n
     } = this.props;
-    return null != t && (null == n ? void 0 : n.id) === (0, p.V9)(t) && !e
+    return null != t && (null == n ? void 0 : n.id) === (0, R.V9)(t) && !e
   }
   get activeStreamForSelectedParticipant() {
     let {
       participantOnScreen: e,
       activeStreams: t
     } = this.props;
-    return (0, ei._5)(e) ? t.find(t => (0, p.V9)(t) === e.id) : null
+    return (0, ei._5)(e) ? t.find(t => (0, R.V9)(t) === e.id) : null
   }
   getScreenMessage() {
     let {
@@ -129,7 +129,7 @@ class ea extends r.PureComponent {
       channel: e
     } = this.props;
     j.default.track(en.rMx.VIDEO_LAYOUT_TOGGLED, {
-      video_layout: N.Z.getLayout(e.id),
+      video_layout: A.Z.getLayout(e.id),
       ...(0, h.AB)(e.id)
     })
   }
@@ -177,11 +177,11 @@ class ea extends r.PureComponent {
       streamId: t,
       participantOnScreen: n,
       isVideoEnabled: r
-    } = this.props, s = (0, O.F6)(e, V.default, k.Z), a = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === x.default.getId() && r, u = this.renderStreamState(), _ = null;
+    } = this.props, s = (0, O.F6)(e, V.default, k.Z), a = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), _ = null;
     return (null == n ? void 0 : n.type) !== ei.fO.ACTIVITY && (null != u ? _ = u : ((null == n ? void 0 : n.type) === ei.fO.USER || (null == n ? void 0 : n.type) === ei.fO.STREAM) && (_ = (0, i.jsx)(q.Z, {
       paused: this.streamerPaused,
       streamId: t,
-      component: B.Z.getVideoComponent(),
+      component: x.Z.getVideoComponent(),
       mirror: l,
       children: (0, i.jsx)(Y.Z, {
         size: d.AvatarSizes.SIZE_80,
@@ -306,7 +306,7 @@ class ea extends r.PureComponent {
         activeStreams: t
       } = this.props;
       l()((0, ei._5)(e), "Cannot render settings for non stream participant");
-      let n = t.find(t => (0, p.V9)(t) === e.id);
+      let n = t.find(t => (0, R.V9)(t) === e.id);
       return null == n || n.state === en.jm8.ENDED ? null : (0, i.jsx)(G.Z, {
         stream: n,
         className: er.rightTrayIcon,
@@ -315,10 +315,10 @@ class ea extends r.PureComponent {
     })
   }
 }
-t.Z = c.ZP.connectStores([B.Z, N.Z, x.default, Z.Z, H.Z, w.Z, F.Z], e => {
+t.Z = c.ZP.connectStores([x.Z, A.Z, B.default, Z.Z, H.Z, w.Z, F.Z], e => {
   let {
     channel: t
-  } = e, n = Z.Z.getSpeaker(t.id), i = N.Z.getParticipant(t.id, n), r = _()(B.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, A.Z)(i.type)) : null, a = !s && B.Z.isVideoEnabled(), l = (0, R.Z)(B.Z), u = x.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, f.tA)(t.id);
+  } = e, n = Z.Z.getSpeaker(t.id), i = A.Z.getParticipant(t.id, n), r = _()(x.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, N.Z)(i.type)) : null, a = !s && x.Z.isVideoEnabled(), l = (0, p.Z)(x.Z), u = B.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, f.tA)(t.id);
   return {
     channel: t,
     streamId: o,

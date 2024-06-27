@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Q4: function() {
-    return N
+    return A
   },
   Vv: function() {
     return h
@@ -107,7 +107,7 @@ function S(e) {
   return null !== (t = d.find(t => e <= t)) && void 0 !== t ? t : d[d.length - 1]
 }
 
-function N(e) {
+function A(e) {
   let {
     src: t,
     width: n,

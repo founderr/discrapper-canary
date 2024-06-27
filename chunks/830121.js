@@ -31,26 +31,26 @@ var d = n(701190),
   h = n(981631);
 let f = /^\/([a-zA-Z0-9-]+)$/,
   S = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-  N = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-  A = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+  A = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+  N = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   m = /^\/application-directory\/([0-9-]+)\/?$/,
   O = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
-  p = /^\/activities\/([0-9-]+)\/?$/,
-  R = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+  R = /^\/activities\/([0-9-]+)\/?$/,
+  p = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
   g = /^\/channels\/([0-9]+)\/shop$/,
   C = /^\/quests\/([0-9-]+)\/?$/,
   v = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-  L = x(window.GLOBAL_ENV.INVITE_HOST),
-  D = x(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-  M = x(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(h.$R1)),
-  P = x("//canary.".concat(h.$R1)),
-  y = x("//ptb.".concat(h.$R1)),
-  U = x("discordapp.com"),
-  b = x("discord.com"),
+  L = B(window.GLOBAL_ENV.INVITE_HOST),
+  D = B(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+  M = B(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(h.$R1)),
+  P = B("//canary.".concat(h.$R1)),
+  y = B("//ptb.".concat(h.$R1)),
+  U = B("discordapp.com"),
+  b = B("discord.com"),
   G = [E.Z.escape(null !== (r = L.host) && void 0 !== r ? r : ""), E.Z.escape(null !== (s = D.host) && void 0 !== s ? s : ""), E.Z.escape(null !== (o = M.host) && void 0 !== o ? o : ""), E.Z.escape(null !== (a = U.host) && void 0 !== a ? a : ""), E.Z.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
   w = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(G.join("|"), ")"), "g");
 
-function x(e) {
+function B(e) {
   if (null == e) return {
     host: null,
     pathPrefix: null
@@ -68,7 +68,7 @@ function x(e) {
   }
 }
 
-function B(e, t) {
+function x(e, t) {
   var n, i, r;
   if ((null === (n = t.host) || void 0 === n ? void 0 : n.replace(/^www[.]/i, "")) !== e.host) return null;
   let s = null !== (i = t.pathname) && void 0 !== i ? i : "",
@@ -80,7 +80,7 @@ function B(e, t) {
 
 function k(e) {
   var t, n, i, r;
-  return null !== (r = null !== (i = null !== (n = null !== (t = B(M, e)) && void 0 !== t ? t : B(P, e)) && void 0 !== n ? n : B(y, e)) && void 0 !== i ? i : B(U, e)) && void 0 !== r ? r : B(b, e)
+  return null !== (r = null !== (i = null !== (n = null !== (t = x(M, e)) && void 0 !== t ? t : x(P, e)) && void 0 !== n ? n : x(y, e)) && void 0 !== i ? i : x(U, e)) && void 0 !== r ? r : x(b, e)
 }
 
 function V(e) {
@@ -92,9 +92,9 @@ function V(e) {
     templateHostRemainingPath: null,
     primaryHostRemainingPath: null
   };
-  let o = B(L, s),
-    a = B(D, s),
-    l = null !== (r = null !== (i = null !== (n = null !== (t = B(M, s)) && void 0 !== t ? t : B(P, s)) && void 0 !== n ? n : B(y, s)) && void 0 !== i ? i : B(U, s)) && void 0 !== r ? r : B(b, s);
+  let o = x(L, s),
+    a = x(D, s),
+    l = null !== (r = null !== (i = null !== (n = null !== (t = x(M, s)) && void 0 !== t ? t : x(P, s)) && void 0 !== n ? n : x(y, s)) && void 0 !== i ? i : x(U, s)) && void 0 !== r ? r : x(b, s);
   return {
     url: s,
     inviteHostRemainingPath: o,
@@ -130,7 +130,7 @@ function Z(e) {
       d.Z.getInvite(e);
       a(T.g.INVITE, e)
     }(null == s ? void 0 : s.match(f)) != null && a(T.g.TEMPLATE, s.substring(1));
-    let l = null == o ? void 0 : o.match(N);
+    let l = null == o ? void 0 : o.match(A);
     if (null != l) {
       let e = l[1].toUpperCase();
       if (e === T.g.INVITE) {
@@ -140,7 +140,7 @@ function Z(e) {
     }(null == o ? void 0 : o.match(S)) != null && a(T.g.CHANNEL_LINK, o.replace("/channels/", ""));
     let u = function(e) {
       if (null == e) return null;
-      let t = e.match(A);
+      let t = e.match(N);
       return null != t && t.length >= 4 ? {
         guildId: t[1],
         guildEventId: t[2],
@@ -162,12 +162,12 @@ function Z(e) {
         a(T.g.APP_DIRECTORY_STOREFRONT_SKU, n)
       } else a(T.g.APP_DIRECTORY_STOREFRONT, e)
     }
-    let h = null == o ? void 0 : o.match(p);
+    let h = null == o ? void 0 : o.match(R);
     if (null != h) {
       let e = h[1];
       a(T.g.ACTIVITY_BOOKMARK, e)
     }
-    let C = null == o ? void 0 : o.match(R);
+    let C = null == o ? void 0 : o.match(p);
     null != C && a(T.g.GUILD_PRODUCT, "".concat(C[1], "-").concat(C[2]));
     let v = null == o ? void 0 : o.match(g);
     null != v && a(T.g.SERVER_SHOP, v[1]);

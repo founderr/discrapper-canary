@@ -4,16 +4,16 @@ n.d(t, {
     return O
   },
   WW: function() {
-    return A
+    return N
   },
   bE: function() {
-    return R
+    return p
   },
   n4: function() {
     return v
   },
   q8: function() {
-    return p
+    return R
   },
   t$: function() {
     return m
@@ -38,18 +38,18 @@ var i = n(683860),
   h = n(702225),
   f = n(981631),
   S = n(176505),
-  N = n(124368);
+  A = n(124368);
 
-function A(e) {
+function N(e) {
   return h.Z.getForumChannelSessionId(e)
 }
 
 function m(e) {
   switch (e) {
     case i.z.CREATION_DATE:
-      return N.SX.CREATION_DATE;
+      return A.SX.CREATION_DATE;
     case i.z.LATEST_ACTIVITY:
-      return N.SX.LATEST_ACTIVITY;
+      return A.SX.LATEST_ACTIVITY;
     default:
       throw Error("Unexpected sort order ".concat(e))
   }
@@ -59,7 +59,7 @@ function O(e) {
   return c.Z.getUploads(e, u.d.FirstThreadMessage).length
 }
 
-function p(e) {
+function R(e) {
   var t, n;
   let i = l.Z.getChannel(e);
   if (null == i) return [];
@@ -71,7 +71,7 @@ function p(e) {
   return Array.from(o).filter(e => a.has(e))
 }
 
-function R(e, t) {
+function p(e, t) {
   return Object.keys(r.Z.getThreadsForParent(e, t)).length
 }
 
@@ -98,7 +98,7 @@ function C(e) {
     forum_channel_can_create_post: _.Z.can(f.Plq.SEND_MESSAGES, a),
     forum_channel_filter_tag_ids: I.Z.getFilterTagIdsAnalytics(),
     forum_channel_sort_order: I.Z.getSortOrderAnalytics(a.id),
-    forum_channel_session_id: null != o ? o : A(a.id),
+    forum_channel_session_id: null != o ? o : N(a.id),
     forum_channel_layout: I.Z.getLayoutAnalytics(a.id),
     forum_channel_default_sort_order: a.defaultSortOrder,
     forum_channel_default_layout: a.defaultForumLayout

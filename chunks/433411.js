@@ -25,20 +25,20 @@ function N(e) {
     className: i,
     sectionTitle: E,
     forcedDivider: N = !1,
-    withTutorial: A = !1,
-    isTryItOutFlow: m = !1
+    withTutorial: m = !1,
+    isTryItOutFlow: A = !1
   } = e, {
-    analyticsLocations: O
-  } = (0, l.ZP)(), g = null != t, {
+    analyticsLocations: g
+  } = (0, l.ZP)(), O = null != t, {
     userAvatarDecoration: h,
-    guildAvatarDecoration: R,
-    pendingAvatarDecoration: p,
+    guildAvatarDecoration: p,
+    pendingAvatarDecoration: R,
     pendingErrors: x
   } = (0, u.$U)(s, t), M = (0, _.Z)("enable_avatar_decoration_uploads"), D = a.useCallback(() => (0, d.ps)({
-    analyticsLocations: O,
-    isTryItOutFlow: m,
+    analyticsLocations: g,
+    isTryItOutFlow: A,
     guild: t
-  }), [O, m, t]), f = m || void 0 !== p ? null != p : (g ? R : h) != null, L = A ? o.ShinyButton : o.Button;
+  }), [g, A, t]), f = A || void 0 !== R ? null != R : (O ? p : h) != null, L = m ? o.ShinyButton : o.Button;
   return (0, n.jsxs)(T.Z, {
     className: i,
     forcedDivider: N,
@@ -51,7 +51,7 @@ function N(e) {
         size: o.Button.Sizes.SMALL,
         onClick: D,
         className: r()({
-          [I.buttonHighlighted]: A
+          [I.buttonHighlighted]: m
         }),
         children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), f && (0, n.jsx)(o.Button, {

@@ -25,8 +25,8 @@ t.Z = a.memo(function(e) {
   let t, {
       title: h,
       onToggleExpand: E,
-      expanded: g,
-      expandedCount: C
+      expanded: C,
+      expandedCount: g
     } = e,
     I = (0, l.e7)([u.Z], () => u.Z.hidden),
     x = a.useCallback(e => {
@@ -44,11 +44,11 @@ t.Z = a.memo(function(e) {
     children: [(0, i.jsx)(s.HiddenVisually, {
       children: m.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
         title: h,
-        count: C
+        count: g
       })
     }), (0, i.jsxs)(s.Clickable, {
       onClick: e => {
-        if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.l)() : C > 3 ? E() : (0, p.dG4)()
+        if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.l)() : g > 3 ? E() : (0, p.dG4)()
       },
       onContextMenu: x,
       tag: "span",
@@ -57,11 +57,11 @@ t.Z = a.memo(function(e) {
       children: [(0, i.jsxs)("div", {
         className: _.header,
         children: [(0, i.jsxs)("span", {
-          children: [h, " — ", C]
+          children: [h, " — ", g]
         }), (0, i.jsx)(d.default, {})]
-      }), C <= 3 && !I ? null : (t = I ? (0, i.jsx)(s.ChevronSmallUpIcon, {
+      }), g <= 3 && !I ? null : (t = I ? (0, i.jsx)(s.ChevronSmallUpIcon, {
         className: _.toggleExpandIcon
-      }) : g ? (0, i.jsx)(s.ChevronSmallDownIcon, {
+      }) : C ? (0, i.jsx)(s.ChevronSmallDownIcon, {
         className: _.toggleExpandIcon
       }) : (0, i.jsx)(s.ChevronSmallRightIcon, {
         className: _.toggleExpandIcon

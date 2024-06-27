@@ -41,8 +41,8 @@ t.Z = function(e) {
     getScrollOffsetForIndex: h,
     categoryHeight: f,
     onScroll: S,
-    renderCategoryListItem: N,
-    rowCountBySection: A,
+    renderCategoryListItem: A,
+    rowCountBySection: N,
     renderSection: m
   } = e, O = u.useStore(e => e.activeCategoryIndex);
   c({
@@ -50,7 +50,7 @@ t.Z = function(e) {
     categoryListRef: t,
     getScrollOffsetForIndex: h
   });
-  let p = r.useCallback(e => {
+  let R = r.useCallback(e => {
       let {
         searchQuery: t
       } = l.Iu.getState();
@@ -60,7 +60,7 @@ t.Z = function(e) {
         null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
       }
     }, [n, u]),
-    R = r.useCallback(e => N(s[e], e, () => p(e), O === e), [O, s, p, N]),
+    p = r.useCallback(e => A(s[e], e, () => R(e), O === e), [O, s, R, A]),
     g = r.useMemo(() => "function" == typeof f ? e => f(s[e], e) : f, [s, f]);
   return (0, i.jsxs)("div", {
     className: o()(_.wrapper, E),
@@ -68,12 +68,12 @@ t.Z = function(e) {
       listPadding: I,
       onScroll: S,
       ref: t,
-      renderRow: R,
+      renderRow: p,
       rowCount: T,
       rowHeight: g,
       hideScrollbar: !0,
-      rowCountBySection: A,
+      rowCountBySection: N,
       renderSection: m
-    }), null == d ? void 0 : d(p)]
+    }), null == d ? void 0 : d(R)]
   })
 }

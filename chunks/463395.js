@@ -19,7 +19,7 @@ function S(e, t) {
   let n = I[e];
   null != n && n.forEach(e => delete T[e.id]), I[e] = t, t.forEach(e => T[e.id] = e)
 }
-class N extends(o = u.ZP.Store) {
+class A extends(o = u.ZP.Store) {
   initialize() {
     let e = _.K.get(E);
     null != e && l().forEach(e, (e, t) => {
@@ -63,12 +63,12 @@ class N extends(o = u.ZP.Store) {
     return h
   }
 }
-s = "CertifiedDeviceStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
+s = "CertifiedDeviceStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(c.Z, {
+}) : i[r] = s, t.Z = new A(c.Z, {
   CERTIFIED_DEVICES_SET: function(e) {
     let {
       applicationId: t,

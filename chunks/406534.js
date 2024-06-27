@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(359110),
   f = n(359119),
   E = n(13279),
-  g = n(248789),
-  C = n(88101),
+  C = n(248789),
+  g = n(88101),
   I = n(576954),
   x = n(765104),
   T = n(122707),
@@ -108,20 +108,20 @@ function $(e) {
     eh = U.length > 0 && (null === (t = U.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(b)),
     ep = (0, o.ts)(b),
     em = (0, l.e7)([x.Z], () => x.Z.shouldShowTopicsBar() && !eo),
-    e_ = (0, C.P)(b.id, q.zr),
+    e_ = (0, g.P)(b.id, q.zr),
     ef = (0, E.z)(b.id, q.zr),
     eE = (0, D.Z)(),
-    eg = null != e_ ? e_ : ef;
-  b.isDM() && null != eg && (n = eg.type === f.pj.STRANGER_DANGER ? (0, i.jsx)(I.M, {
+    eC = null != e_ ? e_ : ef;
+  b.isDM() && null != eC && (n = eC.type === f.pj.STRANGER_DANGER ? (0, i.jsx)(I.M, {
     channelId: b.id,
-    warningId: eg.id,
+    warningId: eC.id,
     senderId: b.getRecipientId()
-  }) : (0, i.jsx)(g.Y, {
+  }) : (0, i.jsx)(C.Y, {
     channelId: b.id,
-    warningId: eg.id,
+    warningId: eC.id,
     senderId: b.getRecipientId()
   }));
-  let eC = b.isForumPost() && !eh ? (0, i.jsx)(h.Z, {
+  let eg = b.isForumPost() && !eh ? (0, i.jsx)(h.Z, {
       postId: b.id
     }) : null,
     eI = (0, m.Z)(b.id);
@@ -348,7 +348,7 @@ function $(e) {
     channelStreamMarkup: eT,
     newMessagesBar: a,
     jumpToPresentBar: r,
-    forumPostActionBar: eC,
+    forumPostActionBar: eg,
     safetyWarningBanner: n
   }
 }

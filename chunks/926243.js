@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return R
+    return p
   }
 }), n(47120);
 var i = n(735250),
@@ -20,11 +20,11 @@ var i = n(735250),
   h = n(912893),
   f = n(430824),
   S = n(358085),
-  N = n(288406),
-  A = n(689938),
+  A = n(288406),
+  N = n(689938),
   m = n(688623);
 let O = (e, t) => "".concat(e, ":").concat(t),
-  p = r.forwardRef(function(e, t) {
+  R = r.forwardRef(function(e, t) {
     let n, {
         emoji: r,
         isFavorite: s,
@@ -36,8 +36,8 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         columnIndex: h,
         rowIndex: S,
         size: O,
-        surrogateCodePoint: p,
-        allowAnimatedEmoji: R,
+        surrogateCodePoint: R,
+        allowAnimatedEmoji: p,
         selectedItemClassName: g,
         inNitroLockedSection: C,
         ...v
@@ -59,26 +59,26 @@ let O = (e, t) => "".concat(e, ":").concat(t),
         "data-surrogates": "surrogates" in r ? r.surrogates : null,
         "data-animated": r.animated ? "true" : null,
         ref: t,
-        children: (0, i.jsx)(N.Z, {
-          "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = A.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
+        children: (0, i.jsx)(A.Z, {
+          "aria-label": (n = r.allNamesString, ((null == L ? void 0 : L.name) != null && (n = N.Z.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: n,
             guildName: L.name
-          })), s) ? A.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), s) ? N.Z.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: n
           }) : n),
           columnIndex: h,
           rowIndex: S,
           emoji: r,
           size: O,
-          surrogateCodePoint: p,
-          allowAnimatedEmoji: R,
+          surrogateCodePoint: R,
+          allowAnimatedEmoji: p,
           isLocked: E && !C
         })
       })
     })
   });
 
-function R(e) {
+function p(e) {
   let {
     descriptor: t,
     emojiItemKey: s,
@@ -86,9 +86,9 @@ function R(e) {
     rowIndex: d,
     channelGuildId: I,
     onInspect: f,
-    onSelect: N,
+    onSelect: A,
     isScrolling: m,
-    isUsingKeyboardNavigation: R,
+    isUsingKeyboardNavigation: p,
     showEmojiFavoriteTooltip: g,
     surrogateCodePoint: C,
     selectedItemClassName: v,
@@ -101,21 +101,21 @@ function R(e) {
     messageId: b,
     isBurstReaction: G,
     rowPosition: w,
-    inNitroLockedSection: x
-  } = e, [B, k] = r.useState(""), V = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), Z = (0, a.e7)([c.Z], () => c.Z.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+    inNitroLockedSection: B
+  } = e, [x, k] = r.useState(""), V = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), Z = (0, a.e7)([c.Z], () => c.Z.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
     emoji: F,
     size: Y,
     isDisabled: j,
     columnIndex: W
   } = t, K = e => {
-    if (e.stopPropagation(), m.current || R.current) return;
+    if (e.stopPropagation(), m.current || p.current) return;
     let n = e.altKey;
-    n && !c.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(F) && U(s), (0, T.Kw)(T.v6.FAVORITE_EMOJI_TOOLTIP), N(t, {
+    n && !c.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(F) && U(s), (0, T.Kw)(T.v6.FAVORITE_EMOJI_TOOLTIP), A(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: n
     })
   }, z = () => {
-    !m.current && !R.current && f(t)
+    !m.current && !p.current && f(t)
   }, q = e => {
     (0, u.jW)(e, async () => {
       let {
@@ -140,7 +140,7 @@ function R(e) {
       ..._,
       key: s,
       ref: H
-    }, B !== O(W, d) && (0, i.jsx)(p, {
+    }, x !== O(W, d) && (0, i.jsx)(R, {
       ref: a,
       emoji: F,
       isFavorite: Z.isFavoriteEmojiWithoutFetchingLatest(F),
@@ -169,11 +169,11 @@ function R(e) {
       size: Y,
       surrogateCodePoint: C,
       selectedItemClassName: v,
-      inNitroLockedSection: x
+      inNitroLockedSection: B
     }))
   };
   return g ? (0, i.jsx)(l.Tooltip, {
-    text: A.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+    text: N.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
       key: (0, S.isMac)() ? "Opt" : "Alt"
     }),
     position: "top",

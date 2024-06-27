@@ -4,7 +4,7 @@ n.d(t, {
     return v
   },
   DZ: function() {
-    return R
+    return p
   },
   PS: function() {
     return C
@@ -19,7 +19,7 @@ n.d(t, {
     return f.fy
   },
   hW: function() {
-    return p
+    return R
   },
   nm: function() {
     return L
@@ -48,7 +48,7 @@ var i = n(512722),
   f = n(526761),
   S = n(981631);
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -56,7 +56,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = "UserSettingsProtoLastWriteTimes",
+let N = "UserSettingsProtoLastWriteTimes",
   m = Date.now();
 c.Z.subscribe("CONNECTION_OPEN", () => {
   Date.now()
@@ -131,8 +131,8 @@ class O {
   }
   saveLastSendTime() {
     var e;
-    let t = null !== (e = _.K.get(A)) && void 0 !== e ? e : {};
-    t[this.type] = Date.now(), _.K.set(A, t)
+    let t = null !== (e = _.K.get(N)) && void 0 !== e ? e : {};
+    t[this.type] = Date.now(), _.K.set(N, t)
   }
   async loadIfNecessary(e) {
     if (__OVERLAY__) {
@@ -220,7 +220,7 @@ class O {
     })
   }
   constructor(e, t) {
-    N(this, "ProtoClass", void 0), N(this, "type", void 0), N(this, "logger", void 0), N(this, "beforeSendCallbacks", void 0), N(this, "lastSendTime", void 0), N(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
+    A(this, "ProtoClass", void 0), A(this, "type", void 0), A(this, "logger", void 0), A(this, "beforeSendCallbacks", void 0), A(this, "lastSendTime", void 0), A(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
       r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Persisting proto");
       let {
         editInfo: e
@@ -279,15 +279,15 @@ class O {
     }, this.logger = new s.Y(this.ProtoClass.typeName)
   }
 }
-let p = new O(u.o8, f.yP.PRELOADED_USER_SETTINGS),
-  R = new O(l.ji, f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let R = new O(u.o8, f.yP.PRELOADED_USER_SETTINGS),
+  p = new O(l.ji, f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
   g = {
-    [f.yP.PRELOADED_USER_SETTINGS]: p,
-    [f.yP.FRECENCY_AND_FAVORITES_SETTINGS]: R
+    [f.yP.PRELOADED_USER_SETTINGS]: R,
+    [f.yP.FRECENCY_AND_FAVORITES_SETTINGS]: p
   };
 
 function C(e, t, n) {
-  return p.updateAsync("guilds", n => (0, h.u0)(n, e, t), n)
+  return R.updateAsync("guilds", n => (0, h.u0)(n, e, t), n)
 }
 
 function v(e, t, n, i) {
@@ -295,27 +295,27 @@ function v(e, t, n, i) {
 }
 
 function L(e) {
-  return p.updateAsync("userContent", t => {
+  return R.updateAsync("userContent", t => {
     if ((0, E.jl)(t.dismissedContents, e)) return !1;
     t.dismissedContents = (0, E.GV)(t.dismissedContents, e)
   }, f.fy.INFREQUENT_USER_ACTION)
 }
 
 function D(e) {
-  return p.updateAsync("userContent", t => {
+  return R.updateAsync("userContent", t => {
     if (!(0, E.jl)(t.dismissedContents, e)) return !1;
     t.dismissedContents = (0, E.jx)(t.dismissedContents, e)
   }, f.fy.INFREQUENT_USER_ACTION)
 }
 
 function M() {
-  return p.updateAsync("userContent", e => {
+  return R.updateAsync("userContent", e => {
     e.dismissedContents = new Uint8Array
   }, f.fy.INFREQUENT_USER_ACTION)
 }
 
 function P() {
-  return p.updateAsync("userContent", e => {
+  return R.updateAsync("userContent", e => {
     let t = new Uint8Array;
     for (let e of Object.keys(a.z)) t = (0, E.GV)(t, a.z[e]);
     e.dismissedContents = t

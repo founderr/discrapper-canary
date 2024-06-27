@@ -56,20 +56,20 @@ var i = n(149765),
   h = n(709054),
   f = n(981631),
   S = n(474936),
-  N = n(689938);
+  A = n(689938);
 let {
-  GUILD_VOICE: A,
+  GUILD_VOICE: N,
   GUILD_CATEGORY: m,
   GUILD_STAGE_VOICE: O
 } = f.d4z;
 
-function p(e, t) {
+function R(e, t) {
   return e === t || e === m
 }
 
-function R(e, t, n) {
+function p(e, t, n) {
   let r = T.Hn;
-  return ((0, u.r8)(t) || t === m) && (r = i.IH(r, f.Plq.VIEW_CHANNEL)), (p(t, A) || p(t, O)) && (r = i.IH(r, f.Plq.VIEW_CHANNEL), r = i.IH(r, f.Plq.CONNECT)), {
+  return ((0, u.r8)(t) || t === m) && (r = i.IH(r, f.Plq.VIEW_CHANNEL)), (R(t, N) || R(t, O)) && (r = i.IH(r, f.Plq.VIEW_CHANNEL), r = i.IH(r, f.Plq.CONNECT)), {
     id: e,
     type: n,
     deny: T.Hn,
@@ -83,7 +83,7 @@ function g(e, t, n) {
   if (n.length > 0 || s) {
     var a, l, _;
     let n;
-    o.push((a = e, l = t, _ = r.BN.ROLE, n = T.Hn, ((0, u.r8)(l) || l === m) && (n = i.IH(n, f.Plq.VIEW_CHANNEL)), p(l, A) && (n = i.IH(n, f.Plq.VIEW_CHANNEL), n = i.IH(n, f.Plq.CONNECT)), {
+    o.push((a = e, l = t, _ = r.BN.ROLE, n = T.Hn, ((0, u.r8)(l) || l === m) && (n = i.IH(n, f.Plq.VIEW_CHANNEL)), R(l, N) && (n = i.IH(n, f.Plq.VIEW_CHANNEL), n = i.IH(n, f.Plq.CONNECT)), {
       id: a,
       type: _,
       allow: T.Hn,
@@ -91,16 +91,16 @@ function g(e, t, n) {
     }))
   }
   return n.forEach(e => {
-    o.push(R(e, t, r.BN.ROLE))
+    o.push(p(e, t, r.BN.ROLE))
   }), o
 }
 
 function C(e, t) {
-  return R(e, t, r.BN.MEMBER)
+  return p(e, t, r.BN.MEMBER)
 }
 
 function v(e, t) {
-  return R(e, t, r.BN.ROLE)
+  return p(e, t, r.BN.ROLE)
 }
 
 function L(e) {
@@ -166,25 +166,25 @@ function y(e) {
   } = e;
   switch (t) {
     case f.d4z.DM:
-      return N.Z.Messages.DM;
+      return A.Z.Messages.DM;
     case f.d4z.GROUP_DM:
-      return N.Z.Messages.GROUP_DM;
+      return A.Z.Messages.GROUP_DM;
     case f.d4z.GUILD_TEXT:
-      return N.Z.Messages.TEXT_CHANNEL;
+      return A.Z.Messages.TEXT_CHANNEL;
     case f.d4z.GUILD_FORUM:
-      return N.Z.Messages.FORUM_CHANNEL;
+      return A.Z.Messages.FORUM_CHANNEL;
     case f.d4z.GUILD_MEDIA:
-      return N.Z.Messages.MEDIA_CHANNEL;
+      return A.Z.Messages.MEDIA_CHANNEL;
     case f.d4z.GUILD_VOICE:
-      return N.Z.Messages.VOICE_CHANNEL;
+      return A.Z.Messages.VOICE_CHANNEL;
     case f.d4z.GUILD_STAGE_VOICE:
-      return N.Z.Messages.STAGE_CHANNEL;
+      return A.Z.Messages.STAGE_CHANNEL;
     case f.d4z.GUILD_ANNOUNCEMENT:
-      return N.Z.Messages.NEWS_CHANNEL;
+      return A.Z.Messages.NEWS_CHANNEL;
     case f.d4z.GUILD_STORE:
-      return N.Z.Messages.STORE_CHANNEL;
+      return A.Z.Messages.STORE_CHANNEL;
     case f.d4z.GUILD_CATEGORY:
-      return N.Z.Messages.CATEGORY;
+      return A.Z.Messages.CATEGORY;
     default:
       return null
   }

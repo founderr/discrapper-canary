@@ -146,23 +146,23 @@ function* u(e) {
   if (null == d) return;
   let h = s.bN.range(e, d),
     [f, S] = s.M8.edges(h),
-    N = s.bN.richValue(e),
-    A = I ? -1 : 1,
+    A = s.bN.richValue(e),
+    N = I ? -1 : 1,
     m = null !== (i = null === (t = f.path) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : 0,
-    O = null !== (r = null === (n = S.path) || void 0 === n ? void 0 : n[0]) && void 0 !== r ? r : N.length - 1,
-    p = I ? m : O,
-    R = I ? O : m;
+    O = null !== (r = null === (n = S.path) || void 0 === n ? void 0 : n[0]) && void 0 !== r ? r : A.length - 1,
+    R = I ? m : O,
+    p = I ? O : m;
   for (;;) {
-    let t = N[R],
-      n = null !== (u = R === m ? null === (o = f.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== u ? u : 0,
-      i = null !== (_ = R === O ? null === (a = S.path) || void 0 === a ? void 0 : a[1] : null) && void 0 !== _ ? _ : t.children.length - 1,
+    let t = A[p],
+      n = null !== (u = p === m ? null === (o = f.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== u ? u : 0,
+      i = null !== (_ = p === O ? null === (a = S.path) || void 0 === a ? void 0 : a[1] : null) && void 0 !== _ ? _ : t.children.length - 1,
       r = I ? i : n,
       d = I ? n : i,
       E = r;
     for (;;) {
       let n, i;
       let r = t.children[E],
-        o = [R, E];
+        o = [p, E];
       if (n = s.C0.equals(o, f.path) || s.C0.isAncestor(o, f.path) ? !I && s.bN.isEnd(e, f, o) ? null : f : s.bN.start(e, o), i = s.C0.equals(o, S.path) || s.C0.isAncestor(o, S.path) ? I && s.bN.isStart(e, S, o) ? null : S : s.bN.end(e, o), null != n && null != i) {
         if (s.LC.isText(r) && 0 === r.text.length) {
           let e = {
@@ -188,9 +188,9 @@ function* u(e) {
         }
       }
       if (E === d) break;
-      E += A
+      E += N
     }
-    if (R === p) break;
-    R += A
+    if (p === R) break;
+    p += N
   }
 }

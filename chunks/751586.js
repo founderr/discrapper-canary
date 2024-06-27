@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   K: function() {
-    return R
+    return p
   },
   y: function() {
-    return p
+    return R
   }
 }), n(47120);
 var i = n(735250),
@@ -23,14 +23,14 @@ var i = n(735250),
   h = n(589530),
   f = n(981631),
   S = n(689938),
-  N = n(626729);
+  A = n(626729);
 
-function A(e) {
+function N(e) {
   let {
     onClose: t
   } = e, n = r.useRef(null);
   return (0, i.jsx)("div", {
-    className: N.mobileCloseWrapper,
+    className: A.mobileCloseWrapper,
     ref: n,
     children: (0, i.jsx)(l.FocusRingScope, {
       containerRef: n,
@@ -57,19 +57,19 @@ let m = e => {
     children: (0, i.jsx)(E.Z, {
       type: E.Z.Types.ATTACHMENT,
       reason: _.wk.EXPLICIT_CONTENT,
-      className: N.obscureContainer,
+      className: A.obscureContainer,
       obscured: !0,
       isSingleMosaicItem: !0,
       obscurityControlClassName: o()({
-        [N.controlsOffset]: n && l
+        [A.controlsOffset]: n && l
       }),
       onToggleObscurity: e => {
         e.stopPropagation(), e.nativeEvent.stopPropagation(), u(e => !e)
       },
       children: e => (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)("div", {
-          className: o()(N.obscureWrapper, {
-            [N.obscure]: e
+          className: o()(A.obscureWrapper, {
+            [A.obscure]: e
           }),
           children: t(e)
         })
@@ -89,18 +89,18 @@ function O(e) {
     href: t,
     target: "_blank",
     rel: "noreferrer noopener",
-    className: N.downloadLink,
+    className: A.downloadLink,
     children: S.Z.Messages.OPEN_IN_BROWSER
   }), o = r({
-    className: N.forward
+    className: A.forward
   });
   return null == s && null == o ? null : (0, i.jsxs)("div", {
-    className: N.optionsContainer,
+    className: A.optionsContainer,
     children: [s, o]
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     src: t,
     original: n,
@@ -113,8 +113,8 @@ function p(e) {
     renderLinkComponent: E,
     renderForwardComponent: h,
     maxWidth: S,
-    maxHeight: p,
-    shouldAnimate: R,
+    maxHeight: R,
+    shouldAnimate: p,
     onClose: g,
     shouldHideMediaOptions: C = !1,
     obscure: v = !1,
@@ -132,8 +132,8 @@ function p(e) {
     e.stopPropagation(), e.preventDefault()
   } : L.onContextMenu;
   return (0, i.jsxs)("div", {
-    className: N.wrapper,
-    children: [P ? (0, i.jsx)(A, {
+    className: A.wrapper,
+    children: [P ? (0, i.jsx)(N, {
       onClose: g
     }) : null, (0, i.jsx)(m, {
       isObscured: v,
@@ -161,7 +161,7 @@ function p(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     src: t,
     width: n,
@@ -175,12 +175,12 @@ function R(e) {
   } = e, {
     width: I,
     height: f
-  } = (0, T.zp)(n, r), S = a.tq && null != s, p = _ ? e => {
+  } = (0, T.zp)(n, r), S = a.tq && null != s, R = _ ? e => {
     e.stopPropagation(), e.preventDefault()
   } : E.onContextMenu;
   return (0, i.jsxs)("div", {
-    className: o()(N.wrapper, N.videoWrapper),
-    children: [S ? (0, i.jsx)(A, {
+    className: o()(A.wrapper, A.videoWrapper),
+    children: [S ? (0, i.jsx)(N, {
       onClose: s
     }) : null, (0, i.jsx)(m, {
       hasMediaControls: !0,
@@ -198,7 +198,7 @@ function R(e) {
         onVolumeChange: h.jA,
         onMute: h.Zj,
         autoPlay: !e,
-        onContextMenu: p,
+        onContextMenu: R,
         ...E
       }, t)
     }), _ ? null : (0, i.jsx)(O, {

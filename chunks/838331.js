@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   A7: function() {
-    return A
+    return N
   },
   hQ: function() {
-    return R
+    return p
   },
   lo: function() {
     return C
@@ -29,12 +29,12 @@ var i = n(735250),
   h = n(689938),
   f = n(326375);
 let S = "data-listbox-item-id",
-  N = Object.freeze({
+  A = Object.freeze({
     STANDARD: f.selected,
     BRAND: f.selectedBrand
   });
 
-function A(e) {
+function N(e) {
   let [t, n] = r.useState(() => new Set(e));
   return [t, r.useCallback(e => {
     n(t => {
@@ -54,14 +54,14 @@ function m(e) {
 function O(e) {
   return String(e)
 }
-let p = r.createContext({
+let R = r.createContext({
   activeDescendant: null,
   selected: new Set,
   setSelected: () => null,
   itemToString: O
 });
 
-function R(e) {
+function p(e) {
   let {
     placeholder: t,
     children: n,
@@ -69,10 +69,10 @@ function R(e) {
     onChange: u,
     className: _,
     listClassName: T,
-    "aria-label": N,
-    multiSelect: A = !1,
+    "aria-label": A,
+    multiSelect: N = !1,
     autoFocus: m = !1,
-    maxVisibleItems: R = 5,
+    maxVisibleItems: p = 5,
     itemToString: g = O,
     showScrollbar: C = !1
   } = e, [v, L] = r.useState(""), [D] = r.useState(!0), [M, P] = r.useState(null), y = r.useId(), U = r.useRef(null);
@@ -87,14 +87,14 @@ function R(e) {
   let b = n(v),
     G = 0 === b.length,
     w = r.useId(),
-    x = r.useCallback(() => new Promise(e => {
+    B = r.useCallback(() => new Promise(e => {
       let t = U.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    B = r.useCallback(() => new Promise(e => {
+    x = r.useCallback(() => new Promise(e => {
       let t = U.current;
       if (null == t) return e();
       t.scrollToTop({
@@ -113,8 +113,8 @@ function R(e) {
       id: w,
       isEnabled: !0,
       useVirtualFocus: !0,
-      scrollToStart: x,
-      scrollToEnd: B,
+      scrollToStart: B,
+      scrollToEnd: x,
       setFocus: k
     }),
     Z = C ? d.Tv : d.lW;
@@ -130,7 +130,7 @@ function R(e) {
         return (0, i.jsxs)("div", {
           ref: n,
           role: "combobox",
-          "aria-label": N,
+          "aria-label": A,
           "aria-expanded": D,
           "aria-controls": D ? y : void 0,
           "aria-owns": y,
@@ -163,7 +163,7 @@ function R(e) {
                 variant: "text-md/normal",
                 children: h.Z.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
               })]
-            }) : (0, i.jsx)(p.Provider, {
+            }) : (0, i.jsx)(R.Provider, {
               value: {
                 activeDescendant: M,
                 selected: s,
@@ -173,9 +173,9 @@ function R(e) {
               children: (0, i.jsx)(Z, {
                 ...a,
                 style: {
-                  maxHeight: 46 * R
+                  maxHeight: 46 * p
                 },
-                "aria-multiselectable": A,
+                "aria-multiselectable": N,
                 id: y,
                 ref: U,
                 className: o()(f.list, T, {
@@ -207,21 +207,21 @@ function C(e) {
     value: n,
     children: s,
     disabled: a = !1,
-    selectedColor: u = N.STANDARD,
+    selectedColor: u = A.STANDARD,
     ...c
   } = e, {
     activeDescendant: d,
     selected: E,
     setSelected: I,
     itemToString: T
-  } = r.useContext(p), h = T(n), A = d === h, m = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n), O = (0, l.JA)(h);
+  } = r.useContext(R), h = T(n), N = d === h, m = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : E.has(n), O = (0, l.JA)(h);
   return (0, i.jsx)(_.P, {
     tag: "li",
     id: h,
     onClick: () => a ? null : I(n),
     [S]: n,
     className: o()(f.item, {
-      [f.focused]: A,
+      [f.focused]: N,
       [u]: m,
       [f.disabled]: a
     }),
@@ -235,7 +235,7 @@ function C(e) {
     })
   })
 }
-C.Colors = N, C.Label = function(e) {
+C.Colors = A, C.Label = function(e) {
   let {
     children: t
   } = e;
@@ -256,7 +256,7 @@ C.Colors = N, C.Label = function(e) {
     checked: t
   } = e, {
     selected: n
-  } = r.useContext(p), s = r.useContext(g);
+  } = r.useContext(R), s = r.useContext(g);
   return (0, i.jsx)("span", {
     className: f.itemCheckbox,
     children: (0, i.jsx)(u.X, {
@@ -269,7 +269,7 @@ C.Colors = N, C.Label = function(e) {
 }, C.Checkmark = function() {
   let {
     selected: e
-  } = r.useContext(p), t = r.useContext(g);
+  } = r.useContext(R), t = r.useContext(g);
   return e.has(t) ? (0, i.jsx)("span", {
     className: f.itemCheckbox,
     children: (0, i.jsx)(T.CircleCheckIcon, {

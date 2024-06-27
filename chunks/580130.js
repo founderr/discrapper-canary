@@ -12,14 +12,14 @@ let T = {},
   h = {},
   f = {},
   S = {},
-  N = !1,
   A = !1,
+  N = !1,
   m = new Set,
   O = new Set,
-  p = {};
+  R = {};
 
-function R(e) {
-  T[e.id] = c.Z.createFromServer(e), null == f[e.sku_id] && (f[e.sku_id] = new Set), null == S[e.application_id] && (S[e.application_id] = new Set), null != e.subscription_id && (null == p[e.subscription_id] && (p[e.subscription_id] = new Set), p[e.subscription_id].add(e.id)), S[e.application_id].add(e.id), f[e.sku_id].add(e.id)
+function p(e) {
+  T[e.id] = c.Z.createFromServer(e), null == f[e.sku_id] && (f[e.sku_id] = new Set), null == S[e.application_id] && (S[e.application_id] = new Set), null != e.subscription_id && (null == R[e.subscription_id] && (R[e.subscription_id] = new Set), R[e.subscription_id].add(e.id)), S[e.application_id].add(e.id), f[e.sku_id].add(e.id)
 }
 
 function g(e) {
@@ -27,7 +27,7 @@ function g(e) {
 }
 
 function C(e) {
-  return R(e.entitlement)
+  return p(e.entitlement)
 }
 class v extends(i = u.yh) {
   initialize() {
@@ -54,10 +54,10 @@ class v extends(i = u.yh) {
     return n
   }
   get fetchingAllEntitlements() {
-    return N
+    return A
   }
   get fetchedAllEntitlements() {
-    return A
+    return N
   }
   get applicationIdsFetching() {
     return m
@@ -72,7 +72,7 @@ class v extends(i = u.yh) {
     return this.fetchedAllEntitlements || null != e && this.applicationIdsFetched.has(e)
   }
   getForSubscription(e) {
-    let t = p[e];
+    let t = R[e];
     if (null == t) return null;
     let n = new Set;
     for (let e of t) n.add(T[e]);
@@ -111,7 +111,7 @@ o = "EntitlementStore", (s = "displayName") in(r = v) ? Object.defineProperty(r,
       applicationId: t,
       entitlements: n
     } = e;
-    for (let e of (m.delete(t), O.add(t), n)) !0 !== e.consumed && R(e)
+    for (let e of (m.delete(t), O.add(t), n)) !0 !== e.consumed && p(e)
   },
   ENTITLEMENT_FETCH_APPLICATION_FAIL: function() {},
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(e) {
@@ -124,7 +124,7 @@ o = "EntitlementStore", (s = "displayName") in(r = v) ? Object.defineProperty(r,
     let {
       entitlements: t
     } = e;
-    for (let e of t) R(e)
+    for (let e of t) p(e)
   },
   LIBRARY_FETCH_SUCCESS: function(e) {
     let {
@@ -132,7 +132,7 @@ o = "EntitlementStore", (s = "displayName") in(r = v) ? Object.defineProperty(r,
     } = e;
     for (let e of t)
       if (null != e.entitlements)
-        for (let t of e.entitlements) R(t)
+        for (let t of e.entitlements) p(t)
   },
   ENTITLEMENT_CREATE: C,
   ENTITLEMENT_UPDATE: C,
@@ -143,24 +143,24 @@ o = "EntitlementStore", (s = "displayName") in(r = v) ? Object.defineProperty(r,
       null != t && t.delete(e.id);
       let n = f[e.sku_id];
       if (null != n && n.delete(e.id), null != e.subscription_id) {
-        let t = p[e.subscription_id];
+        let t = R[e.subscription_id];
         null != t && t.delete(e.id)
       }
     }(e.entitlement)
   },
   LOGOUT: function() {
-    T = {}, f = {}, S = {}, N = !1, A = !1, m = new Set, O = new Set
+    T = {}, f = {}, S = {}, A = !1, N = !1, m = new Set, O = new Set
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function() {
-    N = !0
+    A = !0
   },
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    for (let e of (A = !0, N = !1, t)) R(e)
+    for (let e of (N = !0, A = !1, t)) p(e)
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
-    A = !1, N = !1
+    N = !1, A = !1
   }
 })

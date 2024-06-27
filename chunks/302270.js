@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(236091),
   f = n(623624),
   E = n(984370),
-  g = n(141321),
-  C = n(618158),
+  C = n(141321),
+  g = n(618158),
   I = n(390322),
   x = n(616286),
   T = n(961048),
@@ -50,7 +50,7 @@ function B(e) {
   } = e, p = (0, d.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), N = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: v,
     allowIdle: S
-  } = (0, C.Y)("popup");
+  } = (0, g.Y)("popup");
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(_.Z, {
       channelId: n.id
@@ -80,7 +80,7 @@ function B(e) {
       }
     }, "more-options-popout"), !t && (0, i.jsx)(m.Z, {
       className: w.button
-    }, "clips"), (0, i.jsx)(g.Z, {
+    }, "clips"), (0, i.jsx)(C.Z, {
       onOpen: v,
       onClose: S,
       className: w.button
@@ -114,7 +114,7 @@ function H(e) {
     channel: d,
     toggleRequestToSpeakSidebar: h,
     showRequestToSpeakSidebar: m
-  } = e, _ = (0, p.ZP)(d), g = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)), C = (0, M.Io)(d.id), I = (0, M.Rk)(d.id, b.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, y.Z)(d), O = (0, r.e7)([v.Z], () => v.Z.can(j.yP, d)), H = () => {
+  } = e, _ = (0, p.ZP)(d), C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)), g = (0, M.Io)(d.id), I = (0, M.Rk)(d.id, b.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, y.Z)(d), O = (0, r.e7)([v.Z], () => v.Z.can(j.yP, d)), H = () => {
     u.Z.updateStageVideoLimitBoostUpsellDismissed(d.id, !0), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
       guild_id: d.guild_id,
       type: k.cd.VIDEO_STAGE_LIMIT,
@@ -127,7 +127,7 @@ function H(e) {
       guild_id: d.guild_id,
       type: k.cd.VIDEO_STAGE_LIMIT,
       is_moderator: O,
-      listener_count: C + I
+      listener_count: g + I
     })
   }, [P]);
   let V = (0, i.jsxs)(S.ZP, {
@@ -145,11 +145,11 @@ function H(e) {
       disabled: !0,
       "aria-label": U.Z.Messages.STAGE_CHANNEL,
       className: w.icon,
-      color: null != g ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
+      color: null != C ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
     }), (0, i.jsx)(S.ZP.Title, {
       className: w.channelName,
       wrapperClassName: w.channelNameWrapper,
-      children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : _
+      children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : _
     }), (0, i.jsx)(S.ZP.Divider, {
       className: w.divider
     }), (0, i.jsxs)(S.ZP.Title, {
@@ -161,7 +161,7 @@ function H(e) {
         color: "header-secondary",
         className: w.speakerCount,
         children: U.Z.Messages.SPEAKING_COUNT.format({
-          count: C
+          count: g
         })
       }), (0, i.jsx)(c.GroupIcon, {
         size: "xs",

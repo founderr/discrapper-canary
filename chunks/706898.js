@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   n: function() {
-    return R
+    return p
   }
 }), n(757143), n(411104), n(47120);
 var i, r, s, o, a = n(735250),
@@ -24,12 +24,12 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = {
+let A = {
     side: f.side,
     top: f.top,
     "top-pill": f.topPill
   },
-  A = l.forwardRef(function(e, t) {
+  N = l.forwardRef(function(e, t) {
     let {
       children: n,
       id: i,
@@ -54,7 +54,7 @@ function O(e, t) {
   let n = {};
   return "Selected" === t ? (n.backgroundColor = e, n.color = E.Z.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, d.wK)(e, .1)), n.color = e, n)
 }(o = i || (i = {})).DEFAULT = "Default", o.HOVER = "Hover", o.SELECTED = "Selected";
-class p extends(r = l.Component) {
+class R extends(r = l.Component) {
   getStyle() {
     let {
       color: e,
@@ -159,12 +159,12 @@ class p extends(r = l.Component) {
     })
   }
 }
-S(p, "defaultProps", {
+S(R, "defaultProps", {
   disabled: !1,
   look: "grey",
   disableItemStyles: !1
 });
-class R extends(s = l.Component) {
+class p extends(s = l.Component) {
   render() {
     let {
       className: e,
@@ -176,7 +176,7 @@ class R extends(s = l.Component) {
     } = this.props;
     return (0, a.jsx)("div", {
       ref: this.tabBarRef,
-      className: _()(e, N[n]),
+      className: _()(e, A[n]),
       style: i,
       role: "tablist",
       "aria-orientation": s,
@@ -229,7 +229,7 @@ class R extends(s = l.Component) {
     })
   }
 }
-S(R, "Header", function(e) {
+S(p, "Header", function(e) {
   let {
     className: t,
     onClick: n,
@@ -255,7 +255,7 @@ S(R, "Header", function(e) {
       children: i
     })
   })
-}), S(R, "Item", p), S(R, "Separator", function(e) {
+}), S(p, "Item", R), S(p, "Separator", function(e) {
   let {
     style: t
   } = e;
@@ -263,4 +263,4 @@ S(R, "Header", function(e) {
     className: f.separator,
     style: t
   })
-}), S(R, "Panel", A)
+}), S(p, "Panel", N)

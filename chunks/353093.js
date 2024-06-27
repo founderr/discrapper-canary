@@ -13,13 +13,13 @@ n.d(t, {
     return f
   },
   f6: function() {
-    return N
+    return A
   },
   ky: function() {
     return m
   },
   p0: function() {
-    return p
+    return R
   },
   pY: function() {
     return O
@@ -69,7 +69,7 @@ function f(e, t) {
 function S(e, t) {
   return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled || !1
 }
-let N = (e, t) => {
+let A = (e, t) => {
     if (0 === e.length) return null;
     if (1 === e.length) return e[1];
     if (2 === e.length) return E.Z.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
@@ -94,7 +94,7 @@ let N = (e, t) => {
       })
     }
   },
-  A = {
+  N = {
     [c.NC.SIZE_12]: 16,
     [c.NC.SIZE_16]: 16,
     [c.NC.SIZE_24]: 24,
@@ -108,7 +108,7 @@ function m(e, t) {
   let {
     CDN_HOST: i
   } = window.GLOBAL_ENV;
-  if (null != i) return "".concat(location.protocol, "//").concat(i, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(A[n])
+  if (null != i) return "".concat(location.protocol, "//").concat(i, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(N[n])
 }
 
 function O(e, t) {
@@ -119,7 +119,7 @@ function O(e, t) {
   if (null != n) return "".concat(location.protocol, "//").concat(n, "/clan-banners/").concat(e, "/").concat(t, ".png?size=512")
 }
 
-function p(e, t) {
+function R(e, t) {
   let n = (0, s.e7)([o.Z], () => o.Z.hideTags),
     i = (0, s.e7)([u.default], () => u.default.getUser(e), [e]),
     r = (0, s.e7)([l.ZP], () => {

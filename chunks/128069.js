@@ -4,7 +4,7 @@ n.d(t, {
     return i
   },
   yD: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i, r, s, o, a, l, u, _, c = n(544891),
@@ -40,7 +40,7 @@ let T = Object.freeze({
 let f = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
   S = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
 
-function N(e) {
+function A(e) {
   var t, n, i, r, s;
   if ("string" != typeof e && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === c.f$) {
     if (!Array.isArray(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.errors) && (null == e ? void 0 : null === (r = e.body) || void 0 === r ? void 0 : null === (i = r.errors) || void 0 === i ? void 0 : i.billing_address) != null) {
@@ -51,9 +51,9 @@ function N(e) {
       delete e.body.errors.billing_address
     }(null === (s = e.body) || void 0 === s ? void 0 : s.errors) != null && (e.body = (0, c.J9)(e.body.errors))
   }
-  return new A(e)
+  return new N(e)
 }
-class A extends d.Z {
+class N extends d.Z {
   _isInFieldSet(e) {
     for (let t in this.fields)
       if (e.has(t)) return !0
@@ -75,4 +75,4 @@ class A extends d.Z {
     null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id)
   }
 }
-I(A, "ErrorCodes", i), I(A, "Fields", r), I(A, "Sections", o), I(A, "CARD_ERRORS", f), I(A, "ADDRESS_ERRORS", S), t.ZP = A
+I(N, "ErrorCodes", i), I(N, "Fields", r), I(N, "Sections", o), I(N, "CARD_ERRORS", f), I(N, "ADDRESS_ERRORS", S), t.ZP = N

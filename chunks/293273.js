@@ -12,12 +12,12 @@ var i, r, s, o, a = n(348327),
   h = n(594190),
   f = n(106301),
   S = n(406066),
-  N = n(768419),
-  A = n(695346),
+  A = n(768419),
+  N = n(695346),
   m = n(581883),
   O = n(199902),
-  p = n(272053),
-  R = n(77498),
+  R = n(272053),
+  p = n(77498),
   g = n(981631),
   C = n(689938);
 let v = [],
@@ -25,11 +25,11 @@ let v = [],
 
 function D() {
   let e = [],
-    t = A.Ok.getSetting();
+    t = N.Ok.getSetting();
   null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.I)(t));
   let n = S.Z.getActivities();
   e.push(...n);
-  let i = p.Z.getStream();
+  let i = R.Z.getStream();
   null != i && e.push({
     type: g.IIU.STREAMING,
     ...i
@@ -61,13 +61,13 @@ function D() {
     e.push({
       type: g.IIU.PLAYING,
       name: o.name,
-      application_id: null !== (m = o.id) && void 0 !== m ? m : null === (d = R.Z.getGameByName(o.name)) || void 0 === d ? void 0 : d.id,
+      application_id: null !== (m = o.id) && void 0 !== m ? m : null === (d = p.Z.getGameByName(o.name)) || void 0 === d ? void 0 : d.id,
       timestamps: {
         start: o.start
       }
     })
   }
-  let D = N.Z.getActivity();
+  let D = A.Z.getActivity();
   null != D && e.push({
     type: g.IIU.LISTENING,
     ...D
@@ -86,7 +86,7 @@ function D() {
 }
 class M extends(i = c.ZP.Store) {
   initialize() {
-    this.waitFor(h.ZP, E.ZP, p.Z, O.Z, N.Z, m.Z, f.Z, R.Z), this.syncWith([S.Z, f.Z], () => D())
+    this.waitFor(h.ZP, E.ZP, R.Z, O.Z, A.Z, m.Z, f.Z, p.Z), this.syncWith([S.Z, f.Z], () => D())
   }
   getActivities() {
     return v

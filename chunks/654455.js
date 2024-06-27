@@ -53,7 +53,7 @@ function S() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), I.pendingUsages)
 }
-class N extends(i = o.ZP.PersistedStore) {
+class A extends(i = o.ZP.PersistedStore) {
   initialize(e) {
     null != e && (I = e), this.syncWith([_.Z], S)
   }
@@ -74,7 +74,7 @@ class N extends(i = o.ZP.PersistedStore) {
     return T.frequently
   }
 }
-E(N, "displayName", "ApplicationCommandFrecencyStore"), E(N, "persistKey", "ApplicationCommandFrecencyV2"), t.ZP = new N(a.Z, {
+E(A, "displayName", "ApplicationCommandFrecencyStore"), E(A, "persistKey", "ApplicationCommandFrecencyV2"), t.ZP = new A(a.Z, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t,

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(933557),
   f = n(605436),
   E = n(185413),
-  g = n(434404),
-  C = n(454585),
+  C = n(434404),
+  g = n(454585),
   I = n(430824),
   x = n(496675),
   T = n(594174),
@@ -85,7 +85,7 @@ function P(e) {
     }), (0, i.jsx)(M.jz, {
       children: j.Z.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
-        topicHook: () => C.Z.parseTopic(t.topic, !0, {
+        topicHook: () => g.Z.parseTopic(t.topic, !0, {
           channelId: t.id
         })
       })
@@ -148,7 +148,7 @@ function P(e) {
           disabled: !w,
           verified: o,
           onClick: () => {
-            g.Z.open(t.guild_id, R.pNK.MEMBERS), g.Z.selectRole(e.id)
+            C.Z.open(t.guild_id, R.pNK.MEMBERS), C.Z.selectRole(e.id)
           }
         }, e.id) : (0, i.jsx)(v.Z, {
           className: s()(L.role, {

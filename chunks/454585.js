@@ -38,8 +38,8 @@ let c = {
   h = _(a.Z.EMBED_TITLE_RULES, [(0, o.Z)(c)]),
   f = _(a.Z.INLINE_REPLY_RULES, [(0, o.Z)(c)]),
   S = _(a.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(c)]),
-  N = _(a.Z.GUILD_EVENT_RULES, [(0, o.Z)(c)]),
-  A = _(a.Z.INLINE_REPLY_RULES, [(0, o.Z)({
+  A = _(a.Z.GUILD_EVENT_RULES, [(0, o.Z)(c)]),
+  N = _(a.Z.INLINE_REPLY_RULES, [(0, o.Z)({
     ...c,
     emoji: {
       height: 14,
@@ -55,7 +55,7 @@ let c = {
       width: 14
     }
   })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading", "subtext"),
-  p = {
+  R = {
     text: a.Z.RULES.text
   };
 t.Z = {
@@ -63,9 +63,9 @@ t.Z = {
   createReactRules: o.Z,
   defaultReactRuleOptions: c,
   defaultRules: d,
-  guildEventRules: N,
+  guildEventRules: A,
   notifCenterV2MessagePreviewRules: O,
-  lockscreenWidgetMessageRules: p,
+  lockscreenWidgetMessageRules: R,
   astParserFor: s._p,
   reactParserFor: s.w4,
   parse: s.w4(d),
@@ -74,10 +74,10 @@ t.Z = {
   parseEmbedTitle: s.w4(h),
   parseInlineReply: s.w4(f),
   parseGuildVerificationFormRule: s.w4(S),
-  parseGuildEventDescription: s.w4(N),
+  parseGuildEventDescription: s.w4(A),
   parseAutoModerationSystemMessage: s.w4(m),
   parseForumPostGuidelines: s.w4(E),
-  parseForumPostMostRecentMessage: s.w4(A),
+  parseForumPostMostRecentMessage: s.w4(N),
   parseNotifCenterMessagePreview: s.w4(O),
   parseToAST: s._p(d),
   parseTopicToAST: s._p(I),

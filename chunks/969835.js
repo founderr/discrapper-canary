@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(544989),
   f = n(481932),
   S = n(195387),
-  N = n(272510),
-  A = n(171368),
+  A = n(272510),
+  N = n(171368),
   m = n(958120),
   O = n(215633),
-  p = n(23293),
-  R = n(228168),
+  R = n(23293),
+  p = n(228168),
   g = n(689938);
 
 function C(e) {
@@ -49,12 +49,12 @@ function C(e) {
     channelId: v,
     messageId: L,
     roleId: D
-  }), w = (0, s.e7)([d.Z], () => null != C ? d.Z.getGuild(C) : null), x = (0, s.e7)([c.ZP], () => null != C ? c.ZP.getMember(C, t.id) : null), B = r.useRef(null), k = (0, I.ZP)(t.id, C), V = (0, a.Z)(B);
+  }), w = (0, s.e7)([d.Z], () => null != C ? d.Z.getGuild(C) : null), B = (0, s.e7)([c.ZP], () => null != C ? c.ZP.getMember(C, t.id) : null), x = r.useRef(null), k = (0, I.ZP)(t.id, C), V = (0, a.Z)(x);
   r.useEffect(() => {
-    null == P || P(null == B ? void 0 : B.current)
-  }, [B, P]);
+    null == P || P(null == x ? void 0 : x.current)
+  }, [x, P]);
   let Z = e => {
-    null == M || M(), (0, A.openUserProfileModal)({
+    null == M || M(), (0, N.openUserProfileModal)({
       sourceAnalyticsLocations: b,
       userId: t.id,
       guildId: C,
@@ -73,27 +73,27 @@ function C(e) {
       channelId: v,
       messageId: L,
       roleId: D,
-      shouldTrackViewOnMount: null == x || null != x.fullProfileLoadedTimestamp,
+      shouldTrackViewOnMount: null == B || null != B.fullProfileLoadedTimestamp,
       children: (0, i.jsxs)(o.Dialog, {
-        ref: B,
+        ref: x,
         "aria-label": t.username,
         children: [(0, i.jsxs)(T.Z, {
           user: t,
           displayProfile: k,
-          profileType: R.y0.BITE_SIZE,
+          profileType: p.y0.BITE_SIZE,
           children: [(0, i.jsxs)(h.Z, {
-            profileType: R.y0.BITE_SIZE,
+            profileType: p.y0.BITE_SIZE,
             children: [(0, i.jsx)(S.Z, {
               user: t,
               guildId: C,
               channelId: v,
               onClose: M
             }), (0, i.jsx)(f.Z, {
-              profileType: R.y0.BITE_SIZE,
+              profileType: p.y0.BITE_SIZE,
               user: t
-            }), (0, i.jsx)(N.Z, {
+            }), (0, i.jsx)(A.Z, {
               user: t,
-              profileType: R.y0.BITE_SIZE,
+              profileType: p.y0.BITE_SIZE,
               guildId: C,
               viewProfileItem: (0, i.jsx)(o.MenuItem, {
                 id: "view-profile",
@@ -106,7 +106,7 @@ function C(e) {
                 }
               })
             })]
-          }), (0, i.jsx)(p.Z, {
+          }), (0, i.jsx)(R.Z, {
             user: t,
             displayProfile: k,
             guildId: C,

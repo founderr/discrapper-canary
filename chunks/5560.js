@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(451478),
   f = n(486458),
   E = n(21825),
-  g = n(232495),
-  C = n(10401),
+  C = n(232495),
+  g = n(10401),
   I = n(427389);
 
 function x(e, t, n) {
@@ -81,7 +81,7 @@ class T extends a.PureComponent {
     let {
       tutorialId: e
     } = this.props;
-    return (0, g.k)(e)
+    return (0, C.k)(e)
   }
   render() {
     let {
@@ -101,10 +101,10 @@ class T extends a.PureComponent {
       popoutPosition: m
     } = l, {
       offsetX: _,
-      offsetY: g
-    } = this.state, C = {
+      offsetY: C
+    } = this.state, g = {
       left: null != _ ? a.x + _ : void 0,
-      top: null != g ? a.y + g : void 0
+      top: null != C ? a.y + C : void 0
     }, x = e => {
       let t = n && !e;
       return !0 !== u ? null : (0, i.jsxs)("div", {
@@ -147,7 +147,7 @@ class T extends a.PureComponent {
         return (0, i.jsx)(h.Clickable, {
           ...e,
           className: I.indicator,
-          style: C,
+          style: g,
           children: (0, i.jsxs)("div", {
             className: s()(I.animationContainer, T(n)),
             children: [x(n), (0, i.jsx)("div", {
@@ -175,10 +175,10 @@ t.Z = 12633 == n.j ? function() {
     tutorialData: t,
     windowFocused: n,
     shouldShowAny: a
-  } = (0, d.cj)([C.Z, _.Z, m.Z], () => ({
-    indicators: C.Z.getIndicators(),
-    tutorialData: C.Z.getData(),
-    shouldShowAny: C.Z.shouldShowAnyIndicators() && !m.Z.hasLayers(),
+  } = (0, d.cj)([g.Z, _.Z, m.Z], () => ({
+    indicators: g.Z.getIndicators(),
+    tutorialData: g.Z.getData(),
+    shouldShowAny: g.Z.shouldShowAnyIndicators() && !m.Z.hasLayers(),
     windowFocused: _.Z.isFocused()
   }));
   return a ? (0, i.jsx)(i.Fragment, {

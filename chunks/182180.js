@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(702346),
   _ = n(35125),
   E = n(626751),
-  I = n(891614),
-  m = n(981631),
+  m = n(891614),
+  I = n(981631),
   T = n(176505),
   h = n(689938),
   N = n(918624);
@@ -57,7 +57,7 @@ function p(e) {
     "aria-label": h.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
       username: a
     }),
-    children: [(0, i.jsx)(I.Z, {
+    children: [(0, i.jsx)(m.Z, {
       guildId: t,
       user: n,
       className: N.welcomeCardBadge
@@ -70,7 +70,7 @@ function p(e) {
 function C(e) {
   var t, s;
   let {
-    channel: I,
+    channel: m,
     message: h,
     compact: N
   } = e, f = (0, o.ZP)(h), C = function(e) {
@@ -85,18 +85,18 @@ function C(e) {
       messageId: i.id
     })(t), {
       analyticsLocations: u
-    } = (0, r.ZP)(l.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = i.roleSubscriptionData, I = a.useCallback(() => {
-      (0, d.uL)(m.Z5c.CHANNEL(s, T.oC.ROLE_SUBSCRIPTIONS), null, null, u), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id)
+    } = (0, r.ZP)(l.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = i.roleSubscriptionData, m = a.useCallback(() => {
+      (0, d.uL)(I.Z5c.CHANNEL(s, T.oC.ROLE_SUBSCRIPTIONS), null, null, u), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id)
     }, [s, n, i, E, u]);
     return null == E ? null : (0, _.Tn)({
       username: t.nick,
       usernameOnClickHandler: o,
-      roleSubscriptionOnClickHandler: I,
+      roleSubscriptionOnClickHandler: m,
       guildId: s,
       roleSubscriptionData: i.roleSubscriptionData
     })
   }({
-    channel: I,
+    channel: m,
     message: h,
     author: f
   }), g = (null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = h.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
@@ -107,11 +107,11 @@ function C(e) {
       compact: N,
       children: C
     }), g && (0, i.jsx)(p, {
-      guildId: I.guild_id,
+      guildId: m.guild_id,
       user: h.author,
       username: f.nick
     }), (0, i.jsx)(E.Z, {
-      channel: I,
+      channel: m,
       message: h
     })]
   })

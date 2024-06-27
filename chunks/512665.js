@@ -23,12 +23,12 @@ var i = n(735250),
   h = n(223021),
   f = n(79390),
   S = n(869765),
-  N = n(403132),
-  A = n(378233),
+  A = n(403132),
+  N = n(378233),
   m = n(768581),
   O = n(55935),
-  p = n(823379),
-  R = n(113039),
+  R = n(823379),
+  p = n(113039),
   g = n(768760),
   C = n(981631),
   v = n(689938),
@@ -84,10 +84,10 @@ function P(e, t, n, r, s) {
       iconSize: h
     } = s,
     S = null == t || "" === t || Array.isArray(t) && 0 === t.length,
-    N = (0, A.cv)(c).length > 0,
+    A = (0, N.cv)(c).length > 0,
     m = null != c.interaction,
     O = c.hasFlag(C.iLy.IS_VOICE_MESSAGE),
-    p = c.isPoll(),
+    R = c.isPoll(),
     g = c.type === C.uaV.POLL_RESULT;
   if ((0, d.Z)(e) && (_ = (0, i.jsx)(u.ChatArrowRightIcon, {
       size: "custom",
@@ -97,22 +97,22 @@ function P(e, t, n, r, s) {
     })), n) o = v.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
   else if (c.type === C.uaV.CHANNEL_PINNED_MESSAGE) o = v.Z.Messages.MESSAGE_PINNED;
   else if (S) {
-    if (p) {
+    if (R) {
       var L, D;
       a = null == c ? void 0 : null === (D = c.poll) || void 0 === D ? void 0 : null === (L = D.question) || void 0 === L ? void 0 : L.text
-    } else g ? o = (0, f.N4)(c) : N ? o = v.Z.Messages.REPLY_QUOTE_STICKER : m ? o = v.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = v.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = v.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(u.ImageIcon, {
+    } else g ? o = (0, f.N4)(c) : A ? o = v.Z.Messages.REPLY_QUOTE_STICKER : m ? o = v.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = v.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = v.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(u.ImageIcon, {
       size: "custom",
       color: "currentColor",
       className: I,
       width: h,
       height: h
     }))
-  } else a = (0, i.jsx)(R.ZP, {
+  } else a = (0, i.jsx)(p.ZP, {
     message: c,
     content: t,
     className: r
   });
-  return N ? l = (0, i.jsx)(u.StickerSmallIcon, {
+  return A ? l = (0, i.jsx)(u.StickerSmallIcon, {
     size: "custom",
     color: "currentColor",
     className: I,
@@ -152,7 +152,7 @@ function y(e) {
     baseMessage: a,
     referencedMessage: d,
     renderPopout: E
-  } = e, f = r.useMemo(() => null != E && d.state === S.Y.LOADED ? e => E(e, d.message) : void 0, [d, E]), A = function(e, t) {
+  } = e, f = r.useMemo(() => null != E && d.state === S.Y.LOADED ? e => E(e, d.message) : void 0, [d, E]), N = function(e, t) {
     let {
       referencedMessage: n,
       channel: r,
@@ -216,7 +216,7 @@ function y(e) {
       value: h,
       children: f()
     })
-  }(e, f), R = function(e, t) {
+  }(e, f), p = function(e, t) {
     let {
       baseMessage: n,
       channel: r,
@@ -230,7 +230,7 @@ function y(e) {
       message: _,
       channel: r,
       compact: !0,
-      withMentionPrefix: (0, N.Z)(n, _),
+      withMentionPrefix: (0, A.Z)(n, _),
       showPopout: o,
       renderPopout: t,
       onClick: a,
@@ -287,7 +287,7 @@ function y(e) {
           })
         });
       default:
-        (0, p.vE)(n)
+        (0, R.vE)(n)
     }
   }(e), U = r.useMemo(() => e.compact ? (0, h.Z)((0, O.vc)(l()(), "LT")) : null, [e.compact]);
   return null != n && null != s && (t = v.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
@@ -297,6 +297,6 @@ function y(e) {
     id: (0, I.Gq)(a),
     className: o()(L.repliedMessage, U),
     "aria-label": t,
-    children: [A, R, y]
+    children: [N, p, y]
   })
 }

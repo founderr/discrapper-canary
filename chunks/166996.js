@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return f
+    return p
   }
 }), n(47120), n(610138), n(216116), n(78328), n(815648);
 var a = n(735250),
@@ -15,17 +15,17 @@ var a = n(735250),
   _ = n(34674),
   g = n(132871),
   m = n(981631),
-  p = n(635463);
+  f = n(635463);
 
-function f(e) {
+function p(e) {
   let {
     currentCategoryId: t,
     className: n,
     countsByCategory: l,
-    onView: f
+    onView: p
   } = e, C = (0, g.useApplicationDirectoryHistory)(e => e.guildId), h = (0, c.e7)([u.Z], () => u.Z.getCategories()), x = i.useMemo(() => [(0, _.KQ)(), ...h], [h]), I = (0, g.getCurrentView)();
   return (0, a.jsx)(s.TabBar, {
-    className: r()(p.container, n),
+    className: r()(f.container, n),
     selectedItem: t,
     type: "top-pill",
     onItemSelect: e => {
@@ -36,7 +36,7 @@ function f(e) {
         category_id: n.id,
         current_page: null == I ? void 0 : I.type,
         guild_id: C
-      }), f(n)
+      }), p(n)
     },
     orientation: "vertical",
     children: x.map(e => {
@@ -44,8 +44,8 @@ function f(e) {
       let i = e.id,
         c = e.name,
         o = (0, _.tu)(e),
-        u = r()(p.category, {
-          [p.activeCategory]: t === i
+        u = r()(f.category, {
+          [f.activeCategory]: t === i
         }),
         g = new URLSearchParams;
       return g.set("category_id", i.toString()), (0, a.jsx)(s.TabBar.Item, {
@@ -56,13 +56,13 @@ function f(e) {
           href: "".concat(m.Z5c.APPLICATION_DIRECTORY_SEARCH, "?").concat(g),
           className: u,
           children: [(0, a.jsx)(o, {
-            className: p.icon,
+            className: f.icon,
             color: "currentColor"
           }), (0, a.jsx)(s.Text, {
             variant: "text-md/normal",
             children: c
           }), null != l ? (0, a.jsx)(s.Text, {
-            className: p.count,
+            className: f.count,
             variant: "text-md/normal",
             color: "text-muted",
             children: null !== (n = null == l ? void 0 : l[i]) && void 0 !== n ? n : 0

@@ -7,7 +7,7 @@ n.d(t, {
     return O
   },
   Mn: function() {
-    return N
+    return A
   },
   P6: function() {
     return D
@@ -16,7 +16,7 @@ n.d(t, {
     return S
   },
   UZ: function() {
-    return p
+    return R
   },
   V3: function() {
     return m
@@ -31,10 +31,10 @@ n.d(t, {
     return C
   },
   cV: function() {
-    return R
+    return p
   },
   ol: function() {
-    return A
+    return N
   },
   si: function() {
     return v
@@ -114,7 +114,7 @@ async function S(e) {
   }), t
 }
 
-function N(e) {
+function A(e) {
   let {
     username: t,
     discriminator: n,
@@ -170,7 +170,7 @@ function N(e) {
   }), e))
 }
 
-function A() {
+function N() {
   return i.tn.get({
     url: d.ANM.USER_HARVEST,
     oldFormErrors: !0
@@ -194,14 +194,14 @@ function O(e) {
   }), null == e ? s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : s.uv.announce(I.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
-function p(e) {
+function R(e) {
   o.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
     globalName: e
   })
 }
 
-function R(e) {
+function p(e) {
   o.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e

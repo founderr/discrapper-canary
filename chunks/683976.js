@@ -114,15 +114,15 @@ function h(e) {
     async scrollToStart() {},
     async scrollToEnd() {}
   }), {
-    ref: N,
-    ...A
+    ref: A,
+    ...N
   } = S.containerProps;
-  return (0, u.useFocusLock)(N), (0, i.jsx)(a.bG, {
+  return (0, u.useFocusLock)(A), (0, i.jsx)(a.bG, {
     navigator: S,
     children: (0, i.jsx)("div", {
-      ref: N,
+      ref: A,
       className: I,
-      ...A,
+      ...N,
       role: "listbox",
       children: r ? (0, i.jsx)(u.Scroller, {
         className: d.quickSelectScroller,

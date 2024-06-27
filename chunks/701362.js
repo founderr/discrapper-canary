@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(430824),
   f = n(496675),
   E = n(158776),
-  g = n(979651),
-  C = n(387204),
+  C = n(979651),
+  g = n(387204),
   I = n(626135),
   x = n(382182),
   T = n(687516),
@@ -104,8 +104,8 @@ class M extends a.PureComponent {
             channelId: n.channelId,
             className: A.activityActions,
             color: A.watchButton
-          }), (0, i.jsx)(C.Z, {
-            type: C.Z.Types.INLINE,
+          }), (0, i.jsx)(g.Z, {
+            type: g.Z.Types.INLINE,
             className: A.protip,
             children: __OVERLAY__ ? Z.Z.Messages.WATCH_STREAM_IN_APP : Z.Z.Messages.WATCH_STREAM_TIP
           })]
@@ -120,7 +120,7 @@ function b(e) {
     user: t,
     channel: n,
     ...l
-  } = e, [s, o] = (0, r.Wu)([g.Z, _.Z, f.Z, h.Z], () => (0, x.p9)(n, g.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), C = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
+  } = e, [s, o] = (0, r.Wu)([C.Z, _.Z, f.Z, h.Z], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
     [n.guild_id]: [t.id]
   }), [n.guild_id, t.id]);
   return (0, u.$)(v), (0, i.jsx)(M, {
@@ -131,7 +131,7 @@ function b(e) {
     streamApplication: I,
     stream: c,
     activeStream: d,
-    currentUserId: C,
+    currentUserId: g,
     activity: N
   })
 }

@@ -28,8 +28,8 @@ function E(e) {
     analyticsLocations: f
   } = (0, o.ZP)(), {
     trackUserProfileAction: S,
-    ...N
-  } = (0, l.KZ)(), A = (0, r.e7)([a.Z], () => null != a.Z.getAnyStreamForUser(n.id));
+    ...A
+  } = (0, l.KZ)(), N = (0, r.e7)([a.Z], () => null != a.Z.getAnyStreamForUser(n.id));
   return (0, i.jsx)(_.Z, {
     children: (0, i.jsx)(s.Z, {
       type: s.P.USER_POPOUT_V2,
@@ -44,13 +44,13 @@ function E(e) {
         S({
           action: "JOIN_ACTIVITY"
         }), (0, u.Ac)({
-          activityType: A ? c.IIU.STREAMING : null == t ? void 0 : t.type,
+          activityType: N ? c.IIU.STREAMING : null == t ? void 0 : t.type,
           activityName: null == t ? void 0 : t.name,
           activityPlatform: null == t ? void 0 : t.platform,
           activitySessionId: null == t ? void 0 : t.session_id,
           applicationId: null == t ? void 0 : t.application_id,
           analyticsLocations: f,
-          ...N
+          ...A
         }), null == T || T()
       },
       actionColor: d.buttonColor,

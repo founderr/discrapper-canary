@@ -48,12 +48,12 @@ var r = n(442837),
   h = n(246946),
   f = n(594174),
   S = n(934415),
-  N = n(5192),
-  A = n(51144),
+  A = n(5192),
+  N = n(51144),
   m = n(377668),
   O = n(689938),
-  p = n(126077),
-  R = n(622322);
+  R = n(126077),
+  p = n(622322);
 
 function g(e) {
   let {
@@ -106,30 +106,30 @@ function L(e) {
     id: t,
     guildId: n,
     channelId: o
-  } = e, l = (0, r.e7)([f.default], () => f.default.getUser(t)), u = (0, r.e7)([h.Z], () => h.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), c = (0, i.jsx)(d.Z, {
+  } = e, l = (0, r.e7)([f.default], () => f.default.getUser(t)), u = (0, r.e7)([h.Z], () => h.Z.hidePersonalInformation), _ = A.ZP.useName(n, o, l), c = (0, i.jsx)(d.Z, {
     children: null == _ ? "<@".concat(t, ">") : "@".concat(_)
   });
   if (null != l) {
     let e = u || l.isPomelo() ? null : "#".concat(l.discriminator);
     return (0, i.jsx)(s.Tooltip, {
       text: (0, i.jsxs)("div", {
-        className: p.userTooltip,
+        className: R.userTooltip,
         children: [(0, i.jsx)(a.Z, {
           user: l,
           animate: !0,
           size: s.AvatarSizes.SIZE_16,
-          className: p.avatar
-        }), A.ZP.getUserTag(l, {
+          className: R.avatar
+        }), N.ZP.getUserTag(l, {
           mode: "username",
           identifiable: u ? "never" : "always"
         }), (0, i.jsx)("span", {
-          className: p.discriminator,
+          className: R.discriminator,
           children: e
         })]
       }),
       delay: 750,
       position: "top",
-      "aria-label": A.ZP.getUserTag(l, {
+      "aria-label": N.ZP.getUserTag(l, {
         decoration: "never"
       }),
       children: e => (0, i.jsx)(s.Clickable, {
@@ -217,7 +217,7 @@ function b(e) {
     timestamp: t
   } = e;
   return (0, i.jsx)("span", {
-    className: R.timestamp,
+    className: p.timestamp,
     children: t.formatted
   })
 }

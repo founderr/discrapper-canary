@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(770471),
   _ = n(292584),
   f = n(835865),
-  g = n(456541),
-  m = n(143614),
+  m = n(456541),
+  g = n(143614),
   C = n(544803),
   I = n(899740),
   E = n(155409),
@@ -67,8 +67,8 @@ function V(e) {
     location: "home_button_no_track"
   }, {
     autoTrackExposure: !1
-  }), H = (0, m.Z)(), F = H.length > 0 && V;
-  (0, g.P)();
+  }), H = (0, g.Z)(), F = H.length > 0 && V;
+  (0, m.P)();
   let W = (0, r.Ie)("home"),
     Y = () => {
       T(null), M(0), clearTimeout(v)
@@ -193,9 +193,9 @@ function H() {
     })),
     d = o + u,
     p = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
-    g = (0, I.T)(),
-    m = r + d + g,
-    C = m === d && d > 0 && r + g === 0;
+    m = (0, I.T)(),
+    g = r + d + m,
+    C = g === d && d > 0 && r + m === 0;
   l.useEffect(() => {
     n.length > 0 && (0, h.E7)()
   }, [n]), (0, f.Z)();
@@ -204,7 +204,7 @@ function H() {
     selected: e,
     user: p,
     selectedChannelId: x.Z.getChannelId(D.ME),
-    badge: m,
+    badge: g,
     link: E,
     showProgressBadge: t
   })

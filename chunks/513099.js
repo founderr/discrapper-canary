@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(998502),
   f = n(785717),
   S = n(204197),
-  N = n(652853),
-  A = n(228168),
+  A = n(652853),
+  N = n(228168),
   m = n(981631),
   O = n(474936),
-  p = n(148443);
-let R = l.AvatarSizes.SIZE_80,
+  R = n(148443);
+let p = l.AvatarSizes.SIZE_80,
   g = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function C(e) {
@@ -38,7 +38,7 @@ function C(e) {
     onOpenProfile: v
   } = e, {
     theme: L
-  } = (0, N.z)(), {
+  } = (0, A.z)(), {
     analyticsLocations: D
   } = (0, c.ZP)(_.Z.AVATAR), {
     trackUserProfileAction: M
@@ -60,37 +60,37 @@ function C(e) {
   }), {
     avatarDecorationSrc: G,
     avatarSrc: w,
-    eventHandlers: x
+    eventHandlers: B
   } = (0, S.Z)({
     user: t,
     guildId: s,
-    size: R,
+    size: p,
     animateOnHover: C
-  }), B = (0, i.jsx)(g, {
+  }), x = (0, i.jsx)(g, {
     src: w,
     avatarDecoration: G,
-    size: R,
+    size: p,
     "aria-label": t.username,
-    imageClassName: null != v ? p.overlay : void 0,
+    imageClassName: null != v ? R.overlay : void 0,
     status: y ? m.Skl.UNKNOWN : U,
     statusBackdropColor: P && !y ? (0, l.getStatusBackdropColor)(L) : void 0,
     isMobile: b,
     statusTooltip: !0,
-    statusTooltipDelay: A.vB
+    statusTooltipDelay: N.vB
   });
   return null == v ? (0, i.jsx)("div", {
-    ...x,
-    className: p.avatar,
-    children: B
+    ...B,
+    className: R.avatar,
+    children: x
   }) : (0, i.jsx)(l.Clickable, {
-    ...x,
-    className: o()(p.avatar, p.clickable),
+    ...B,
+    className: o()(R.avatar, R.clickable),
     onClick: () => {
       M({
         action: "PRESS_VIEW_PROFILE",
         analyticsLocations: D
       }), null == v || v()
     },
-    children: B
+    children: x
   })
 }

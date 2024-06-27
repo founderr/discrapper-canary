@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(906732),
   f = n(676035),
   S = n(314897),
-  N = n(158776),
-  A = n(751009),
+  A = n(158776),
+  N = n(751009),
   m = n(785717),
   O = n(825801),
-  p = n(228168),
-  R = n(981631),
+  R = n(228168),
+  p = n(981631),
   g = n(689938),
   C = n(739550);
 let v = "text-sm/medium",
@@ -38,13 +38,13 @@ function M(e) {
     profileType: s,
     canModifyStatus: f = !1,
     hasEntered: S = !0,
-    animate: N = !0,
-    onClose: A
+    animate: A = !0,
+    onClose: N
   } = e, {
-    analyticsLocations: R
+    analyticsLocations: p
   } = (0, h.ZP)(T.Z.PROFILE_CUSTOM_STATUS), {
     trackUserProfileAction: M
-  } = (0, m.KZ)(), P = (0, l.e7)([I.Z], () => I.Z.useReducedMotion), [y, U] = r.useState(!0), [b] = r.useState(() => new u.V7), G = r.useRef(null), w = r.useRef(null), x = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = (0, E.Z)(k), {
+  } = (0, m.KZ)(), P = (0, l.e7)([I.Z], () => I.Z.useReducedMotion), [y, U] = r.useState(!0), [b] = r.useState(() => new u.V7), G = r.useRef(null), w = r.useRef(null), B = r.useRef(null), x = r.useRef(null), k = r.useRef(null), V = (0, E.Z)(k), {
     emoji: Z,
     state: H
   } = null != t ? t : {}, F = null != H && "" !== H ? H : null, Y = null != F && F.length > 0, j = null != Z, W = j && !Y, K = j || Y, z = f && !K, q = f && K, [X, Q] = r.useState(W ? 1 : 0), J = 1 === X, $ = X > 2;
@@ -52,7 +52,7 @@ function M(e) {
     if (null != G.current && !W) {
       if (Q(Math.ceil(Math.floor(G.current.getBoundingClientRect().height) / 18)), S) {
         var e, t, n, i;
-        w.current = null !== (n = null === (e = G.current) || void 0 === e ? void 0 : e.getBoundingClientRect().height) && void 0 !== n ? n : D, B.current = null !== (i = null === (t = x.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : L
+        w.current = null !== (n = null === (e = G.current) || void 0 === e ? void 0 : e.getBoundingClientRect().height) && void 0 !== n ? n : D, x.current = null !== (i = null === (t = B.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : L
       }
     }
   }, [S, W]);
@@ -80,7 +80,7 @@ function M(e) {
             delay: 300
           })
         } else {
-          let e = Math.min(null !== (n = B.current) && void 0 !== n ? n : L, L);
+          let e = Math.min(null !== (n = x.current) && void 0 !== n ? n : L, L);
           en({
             maxHeight: "".concat(e, "px"),
             editIconOpacity: 0,
@@ -112,9 +112,9 @@ function M(e) {
     es = () => j ? (0, i.jsx)(d.I, {
       className: Y ? C.statusEmojiInline : C.statusEmojiOnly,
       emoji: Z,
-      animate: N,
+      animate: A,
       hideTooltip: !1,
-      tooltipDelay: p.vB
+      tooltipDelay: R.vB
     }) : null,
     eo = () => Y ? (0, i.jsx)(c.Text, {
       variant: v,
@@ -135,20 +135,20 @@ function M(e) {
     el = () => {
       M({
         action: "PRESS_SET_CUSTOM_STATUS"
-      }), null == A || A(), (0, c.openModalLazy)(async () => {
+      }), null == N || N(), (0, c.openModalLazy)(async () => {
         let {
           default: e
         } = await n.e("51714").then(n.bind(n, 211065));
         return t => (0, i.jsx)(e, {
           ...t,
-          sourceAnalyticsLocations: R
+          sourceAnalyticsLocations: p
         })
       })
     },
     eu = {
-      [C.biteSize]: s === p.y0.BITE_SIZE,
-      [C.fullSize]: s === p.y0.FULL_SIZE,
-      [C.panel]: s === p.y0.PANEL
+      [C.biteSize]: s === R.y0.BITE_SIZE,
+      [C.fullSize]: s === R.y0.FULL_SIZE,
+      [C.panel]: s === R.y0.PANEL
     },
     e_ = o()(C.statusBubbleOuter, eu, {
       [C.statusBubbleShape]: !Y && j || !J,
@@ -172,13 +172,13 @@ function M(e) {
           className: ec,
           children: [z && ea(), K && (0, i.jsxs)("div", {
             className: o()(C.content, C.clamp, C.placeholderWidth, {
-              [C.panel]: s === p.y0.PANEL
+              [C.panel]: s === R.y0.PANEL
             }),
-            ref: x,
+            ref: B,
             children: [es(), eo()]
           }), K && (0, i.jsxs)("div", {
             className: o()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, {
-              [C.panel]: s === p.y0.PANEL
+              [C.panel]: s === R.y0.PANEL
             }),
             ref: G,
             children: [es(), eo()]
@@ -228,14 +228,14 @@ function P(e) {
   let {
     user: t,
     ...n
-  } = e, r = (0, l.e7)([S.default], () => S.default.getId() === t.id), s = (0, f.a)(), o = (0, l.e7)([N.Z], () => N.Z.findActivity(t.id, e => {
+  } = e, r = (0, l.e7)([S.default], () => S.default.getId() === t.id), s = (0, f.a)(), o = (0, l.e7)([A.Z], () => A.Z.findActivity(t.id, e => {
     let {
       type: t
     } = e;
-    return t === R.IIU.CUSTOM_STATUS
+    return t === p.IIU.CUSTOM_STATUS
   })), {
     modifyStatusEnabled: a
-  } = (0, A.K)({
+  } = (0, N.K)({
     location: "UserProfileCustomStatusBubble"
   }), u = r && a;
   return (0, i.jsx)(M, {

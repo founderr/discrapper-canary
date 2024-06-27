@@ -29,7 +29,7 @@ function h(e) {
       name: l.V.SAFETY_WARNING_VIEW
     })
   }, []);
-  let g = a.useCallback(() => {
+  let C = a.useCallback(() => {
     null == f || f(), (0, o.qc)({
       channelId: t,
       warningId: n,
@@ -69,7 +69,7 @@ function h(e) {
       }, t))
     }), (0, i.jsx)(s.Clickable, {
       className: u.closeButton,
-      onClick: g,
+      onClick: C,
       role: "button",
       "aria-label": c.Z.Messages.DISMISS,
       children: (0, i.jsx)(s.CloseSmallIcon, {

@@ -24,8 +24,8 @@ function u(e) {
     onReportSubmit: _,
     onMouseEnter: f,
     onMouseLeave: E
-  } = e, g = (0, r.Q)(t), C = (0, o.V)(n.id, t);
-  if (!g || null == C) return null;
+  } = e, C = (0, r.Q)(t), g = (0, o.V)(n.id, t);
+  if (!C || null == g) return null;
   let I = () => {
     null == _ || _(), l.Z.closePrivateChannel(n.id, p)
   };
@@ -33,9 +33,9 @@ function u(e) {
     className: d,
     size: u,
     color: a.Button.Colors.RED,
-    disabled: null == C,
+    disabled: null == g,
     onClick: () => {
-      null == m || m(), (0, s.WL)(C, I)
+      null == m || m(), (0, s.WL)(g, I)
     },
     onMouseEnter: f,
     onMouseLeave: E,

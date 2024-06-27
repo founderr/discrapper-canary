@@ -27,9 +27,9 @@ function l(e) {
     tooltip: h,
     loading: f,
     disabled: S,
-    onClick: N
-  } = (0, o.Ih)(t, n, l), A = () => {
-    null == I || I(), N()
+    onClick: A
+  } = (0, o.Ih)(t, n, l), N = () => {
+    null == I || I(), A()
   };
   return (0, i.jsx)(r.Tooltip, {
     text: h,
@@ -45,7 +45,7 @@ function l(e) {
         look: c,
         color: d,
         fullWidth: E,
-        onClick: A,
+        onClick: N,
         onMouseEnter: t,
         onMouseLeave: n,
         disabled: S,

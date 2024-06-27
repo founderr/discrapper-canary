@@ -26,13 +26,13 @@ function N() {
     a = E.cC.useSetting(),
     N = E.vF.useSetting(),
     C = E.H1.useSetting(),
-    A = E.ev.useSetting(),
-    m = E.x4.useSetting(),
-    O = E.RS.useSetting(),
-    g = E.NA.useSetting(),
+    m = E.ev.useSetting(),
+    A = E.x4.useSetting(),
+    g = E.RS.useSetting(),
+    O = E.NA.useSetting(),
     h = E.nc.useSetting(),
     {
-      analyticsLocations: R
+      analyticsLocations: p
     } = (0, l.ZP)(o.Z.TEXT_AND_IMAGES);
   return (0, n.jsxs)(r.FormSection, {
     tag: r.FormTitleTags.H1,
@@ -46,7 +46,7 @@ function N() {
         setting: u.s6.CHAT_INLINE_MEDIA_LINKS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(I.marginTop8, I.marginBottom20),
-          value: O,
+          value: g,
           onChange: E.RS.updateSetting,
           children: S.Z.Messages.INLINE_EMBED_MEDIA
         })
@@ -54,7 +54,7 @@ function N() {
         setting: u.s6.CHAT_INLINE_MEDIA_UPLOADS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(I.marginTop8, I.marginBottom20),
-          value: m,
+          value: A,
           note: S.Z.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
             maxSize: 10
           }),
@@ -80,7 +80,7 @@ function N() {
         setting: u.s6.CHAT_EMBEDS_LINK_PREVIEWS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: i()(I.marginTop8, I.marginBottom40),
-          value: g,
+          value: O,
           onChange: E.NA.updateSetting,
           children: S.Z.Messages.RENDER_EMBEDS
         })
@@ -102,7 +102,7 @@ function N() {
         setting: u.s6.CHAT_EMOJI_EMOTICONS,
         children: (0, n.jsx)(r.FormSwitch, {
           className: I.marginBottom40,
-          value: A,
+          value: m,
           note: c.Z.parse(S.Z.Messages.CONVERT_EMOTICONS_HELP),
           onChange: E.ev.updateSetting,
           children: S.Z.Messages.CONVERT_EMOTICONS
@@ -127,7 +127,7 @@ function N() {
                 location: {
                   section: T.jXE.SETTINGS_TEXT_AND_IMAGES
                 },
-                location_stack: R
+                location_stack: p
               }), E.up.updateSetting(!e)
             },
             children: S.Z.Messages.AUTO_SUGGEST_STICKERS
@@ -144,7 +144,7 @@ function N() {
                 location: {
                   section: T.jXE.SETTINGS_TEXT_AND_IMAGES
                 },
-                location_stack: R
+                location_stack: p
               }), E.fq.updateSetting(e)
             },
             children: S.Z.Messages.STICKERS_IN_AUTOCOMPLETE

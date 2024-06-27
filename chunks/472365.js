@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(792766),
   _ = n(451603),
   f = n(885714),
-  g = n(973616),
-  m = n(594174),
+  m = n(973616),
+  g = n(594174),
   C = n(285952),
   I = n(672752),
   E = n(153124),
@@ -134,9 +134,9 @@ function U(e) {
   let t, n, {
     transitionState: r
   } = e;
-  (0, s.e7)([m.default], () => {
+  (0, s.e7)([g.default], () => {
     var e;
-    return null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
+    return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
     invite: f,
@@ -165,7 +165,7 @@ function U(e) {
     inviter: G,
     target_application: w
   } = f, k = null != j, B = null != f.stage_instance, V = null == f.guild && null == f.channel && null != f.inviter;
-  if (null != w) t = null == j ? void 0 : j.name, n = g.Z.createFromServer(w).getCoverImageURL(1024);
+  if (null != w) t = null == j ? void 0 : j.name, n = m.Z.createFromServer(w).getCoverImageURL(1024);
   else if (null != j) t = j.name, n = Z.ZP.getGuildSplashURL({
     id: j.id,
     splash: j.splash

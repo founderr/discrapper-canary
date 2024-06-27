@@ -19,8 +19,8 @@ var i, a, s, l, r = n(470079),
   u = n(392711),
   _ = n.n(u),
   E = n(570140),
-  I = n(904245),
-  m = n(45114),
+  m = n(904245),
+  I = n(45114),
   T = n(607070),
   h = n(853856),
   N = n(181945),
@@ -31,8 +31,8 @@ var i, a, s, l, r = n(470079),
   S = n(723170),
   A = n(675478),
   R = n(581883),
-  x = n(131704),
-  O = n(592125),
+  O = n(131704),
+  x = n(592125),
   M = n(984933),
   v = n(731290),
   L = n(430824),
@@ -99,8 +99,8 @@ class V extends o.EventEmitter {
     })
   }
   loadChannelMessages(e) {
-    I.Z.clearChannel(e.channelId);
-    let t = I.Z.fetchMessages({
+    m.Z.clearChannel(e.channelId);
+    let t = m.Z.fetchMessages({
       channelId: e.channelId,
       limit: k.AQB,
       jump: {
@@ -167,7 +167,7 @@ class V extends o.EventEmitter {
         channelId: t,
         newestUnreadMessageId: n
       } = e;
-      if (E.Z.wait(() => m.In(t, !0, void 0, n, {
+      if (E.Z.wait(() => I.In(t, !0, void 0, n, {
           section: k.jXE.INBOX
         })), 1 === this.state.channels.length) {
         this.deleteChannel(t);
@@ -189,7 +189,7 @@ class V extends o.EventEmitter {
         channels: this.state.channels.filter(t => t.channelId !== e)
       }), this.maybeLoadMore()
     }, this.markAllRead = () => {
-      m.y5(this.state.channels.map(e => ({
+      I.y5(this.state.channels.map(e => ({
         channelId: e.channelId,
         messageId: e.newestUnreadMessageId
       }))), this.setState({
@@ -269,14 +269,14 @@ function Y() {
         i = null !== (t = null === (e = R.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
       for (let e in i)
         for (let t in i[e].channels) {
-          let a = O.Z.getChannel(t);
+          let a = x.Z.getChannel(t);
           (!(t in n) || (null == a ? void 0 : a.guild_id) === e) && (n[t] = i[e].channels[t].collapsedInInbox)
         }
       return n
     }(),
     t = function(e) {
       let t = [];
-      return O.Z.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), D.ZP.getFlattenedGuildIds().forEach(n => {
+      return x.Z.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), D.ZP.getFlattenedGuildIds().forEach(n => {
         if (null == n) return;
         let i = M.ZP.getSelectableChannelIds(n),
           a = p.Z.getActiveJoinedUnreadThreadsForGuild(n);
@@ -302,8 +302,8 @@ function Y() {
 
 function W(e, t, n, i) {
   if (null == i) return;
-  let a = O.Z.getChannel(i);
-  if (null == a || !x.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
+  let a = x.Z.getChannel(i);
+  if (null == a || !O.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
   if (a.isPrivate()) {
     if (0 === b.ZP.getMentionCount(i)) return
   } else if (!(0, f.d)(a) && 0 === b.ZP.getMentionCount(i)) return;
@@ -333,7 +333,7 @@ function W(e, t, n, i) {
     hasMentionsOrUnreads: c,
     mentionCount: o,
     sortOrder: function(e, t, n) {
-      let i = O.Z.getChannel(t);
+      let i = x.Z.getChannel(t);
       if (h.Z.isFavorite(t)) return 0;
       if (i.isPrivate()) return 1;
       if (b.ZP.getMentionCount(t) > 0) return 2;

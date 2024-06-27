@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return I
+    return m
   }
 });
 var i = n(735250);
@@ -74,7 +74,7 @@ function E(e) {
   })
 }
 
-function I(e) {
+function m(e) {
   let {
     isExpired: t,
     myAvatarUrl: n,

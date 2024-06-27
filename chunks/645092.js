@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return m
+    return I
   }
 });
 var i = n(735250);
@@ -15,14 +15,14 @@ var a = n(120356),
   u = n(787374),
   _ = n(674563),
   E = n(689938),
-  I = n(923255);
+  m = n(923255);
 
-function m(e) {
+function I(e) {
   let {
     message: t,
     compact: n,
     usernameHook: a
-  } = e, m = (0, r.ZP)(t), T = a(m), {
+  } = e, I = (0, r.ZP)(t), T = a(I), {
     avatarSrc: h,
     eventHandlers: {
       onMouseEnter: N,
@@ -33,45 +33,45 @@ function m(e) {
     onMouseEnter: N,
     onMouseLeave: f,
     children: (0, i.jsx)(d.Z, {
-      className: s()(I.mainContainer, {
-        [I.compact]: n
+      className: s()(m.mainContainer, {
+        [m.compact]: n
       }),
       iconNode: n ? null : (0, i.jsx)(u.S, {
         src: h
       }),
-      iconContainerClassName: I.iconContainer,
+      iconContainerClassName: m.iconContainer,
       compact: n,
       children: (0, i.jsxs)("div", {
-        className: s()(I.content, {
-          [I.compact]: n
+        className: s()(m.content, {
+          [m.compact]: n
         }),
         children: [(0, i.jsx)(c.nD, {
           message: t,
-          messageClassname: I.spanCorrection,
-          className: s()(I.usernameContainer, I.spanCorrection, {
-            [I.compact]: n
+          messageClassname: m.spanCorrection,
+          className: s()(m.usernameContainer, m.spanCorrection, {
+            [m.compact]: n
           }),
           username: (0, i.jsxs)("div", {
-            className: I.spanCorrection,
+            className: m.spanCorrection,
             children: [(0, i.jsx)(l.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: I.username,
+              className: m.username,
               children: E.Z.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, i.jsx)(o.Z, {
               type: _.Hb.SYSTEM_DM,
-              className: I.systemTag
+              className: m.systemTag
             })]
           }),
           compact: n,
           showTimestamp: !0
         }), (0, i.jsx)("div", {
-          className: s()(I.__invalid_messageContent, {
-            [I.compact]: n
+          className: s()(m.__invalid_messageContent, {
+            [m.compact]: n
           }),
           children: E.Z.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
-            username: m.nick,
+            username: I.nick,
             usernameHook: T
           })
         })]

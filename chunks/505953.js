@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return R
+    return p
   }
 }), n(47120);
 var i = n(735250),
@@ -20,18 +20,18 @@ var i = n(735250),
   h = n(765104),
   f = n(477291),
   S = n(478758),
-  N = n(789707),
-  A = n(981631),
+  A = n(789707),
+  N = n(981631),
   m = n(531578),
   O = n(735840);
 
-function p(e) {
+function R(e) {
   let {
     summary: t,
     channel: c,
-    members: N,
-    guildId: p,
-    unread: R,
+    members: A,
+    guildId: R,
+    unread: p,
     onClick: g
   } = e, [C, v] = r.useState(!1), L = (0, u.Ye)(T.default.extractTimestamp(t.startId)), D = (0, s.e7)([h.Z], () => h.Z.summaryFeedback(t)), M = (e, n) => {
     e.stopPropagation(), (0, f.Z)({
@@ -39,7 +39,7 @@ function p(e) {
       channel: c,
       rating: n
     })
-  }, P = _.Z.can(A.Plq.MANAGE_MESSAGES, c);
+  }, P = _.Z.can(N.Plq.MANAGE_MESSAGES, c);
   return (0, i.jsxs)(o.Clickable, {
     className: O.container,
     onClick: g,
@@ -58,7 +58,7 @@ function p(e) {
     onMouseLeave: () => v(!1),
     children: [(0, i.jsx)(I.Z, {
       hovered: C,
-      unread: R,
+      unread: p,
       className: O.unreadPill
     }), (0, i.jsx)("div", {
       className: O.rowHeader,
@@ -83,7 +83,7 @@ function p(e) {
           color: "interactive-normal",
           variant: "text-xs/normal",
           children: t.count
-        }), N.length > 0 && (0, i.jsxs)(i.Fragment, {
+        }), A.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(l.Z, {
             height: 4,
             width: 4,
@@ -91,12 +91,12 @@ function p(e) {
             className: O.dot
           }), (0, i.jsx)(S.Z, {
             partySize: {
-              knownSize: N.length,
-              totalSize: N.length
+              knownSize: A.length,
+              totalSize: A.length
             },
             maxAvatarsShown: 3,
-            members: N,
-            guildId: p
+            members: A,
+            guildId: R
           })]
         })]
       })
@@ -131,7 +131,7 @@ function p(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     summaries: t,
     summariesMembers: n,
@@ -141,11 +141,11 @@ function R(e) {
   } = e, u = (0, s.e7)([c.ZP], () => c.ZP.getOldestUnreadMessageId(o.id)), _ = r.useCallback(e => {
     a(e), l(!1)
   }, [a, l]);
-  return t.length < 1 ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)(i.Fragment, {
+  return t.length < 1 ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(i.Fragment, {
     children: t.map((e, t) => {
       var r;
       let s = null !== (r = n[t]) && void 0 !== r ? r : [];
-      return (0, i.jsx)(p, {
+      return (0, i.jsx)(R, {
         summary: e,
         channel: o,
         members: s,

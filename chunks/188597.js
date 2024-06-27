@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $s: function() {
-    return p
+    return R
   },
   Sg: function() {
     return m
@@ -10,7 +10,7 @@ n.d(t, {
     return f
   },
   qn: function() {
-    return N
+    return A
   },
   rQ: function() {
     return i
@@ -58,9 +58,9 @@ let S = async e => {
       customId: r,
       componentId: o
     },
-    onFailure: (e, t) => A(I, e, t)
+    onFailure: (e, t) => N(I, e, t)
   }), null != f && (0, d.B0)(n, S, f, o);
-  let N = {
+  let A = {
     type: l.B8.MESSAGE_COMPONENT,
     nonce: S,
     guild_id: T,
@@ -85,12 +85,12 @@ let S = async e => {
   };
   await s.tn.post({
     url: h.ANM.INTERACTIONS,
-    body: N,
+    body: A,
     timeout: 3e3
   }, e => {
     m(S, e, a, I, T)
   })
-}, N = async e => {
+}, A = async e => {
   let {
     applicationId: t,
     channelId: n,
@@ -120,7 +120,7 @@ let S = async e => {
   }, e => {
     m(o, e, t, n, i)
   })
-}, A = (e, t, n) => {
+}, N = (e, t, n) => {
   null == n && null != t && a.Z.sendClydeError(e, t)
 }, m = (e, t, n, i, r) => {
   if (!t.ok) {
@@ -159,7 +159,7 @@ let O = (e, t) => {
   else if (null != e.interaction && e.hasFlag(h.iLy.EPHEMERAL)) return 4
 };
 
-function p(e) {
+function R(e) {
   let t = e.options;
   for (;
     (null == t ? void 0 : t.length) === 1 && (t[0].type === l.jw.SUB_COMMAND_GROUP || t[0].type === l.jw.SUB_COMMAND);) t = t[0].options;

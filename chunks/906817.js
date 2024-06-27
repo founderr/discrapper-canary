@@ -3,7 +3,7 @@ n.d(t, {
     return f
   },
   WW: function() {
-    return g
+    return m
   }
 });
 var i = n(735250),
@@ -33,7 +33,7 @@ function f(e, t, n) {
   return d.Pw
 }
 
-function g(e, t) {
+function m(e, t) {
   switch (e) {
     case c.zm:
       return "hoisted-spacer";
@@ -57,8 +57,8 @@ t.ZP = l.memo(function(e) {
     sectionIndex: t,
     guild: n,
     guildChannels: f,
-    guildChannelsVersion: g,
-    selectedChannelId: m,
+    guildChannelsVersion: m,
+    selectedChannelId: g,
     disableManageChannels: C
   } = e, {
     isFavoritesPerk: I
@@ -67,8 +67,8 @@ t.ZP = l.memo(function(e) {
     if (null == e) return;
     let t = null,
       i = e.getShownChannelAndThreadIds();
-    null != m && i.includes(m) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t)
-  }, [n.id, m, f, g]);
+    null != g && i.includes(g) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t)
+  }, [n.id, g, f, m]);
   switch (t) {
     case c.zm:
       return (0, i.jsx)("div", {

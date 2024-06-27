@@ -15,13 +15,13 @@ var n = t(735250),
   I = t(497321),
   N = t(468026),
   C = t(566620),
-  A = t(317381),
-  m = t(979200),
-  O = t(713938),
-  g = t(881998),
+  m = t(317381),
+  A = t(979200),
+  g = t(713938),
+  O = t(881998),
   h = t(246946),
-  R = t(285952),
-  p = t(768581),
+  p = t(285952),
+  R = t(768581),
   x = t(49012),
   M = t(210887),
   D = t(436267),
@@ -54,7 +54,7 @@ function j(e) {
     })]
   })
 }
-let U = e => {
+let B = e => {
     let {
       disclosure: s
     } = e;
@@ -77,7 +77,7 @@ let U = e => {
       }
     }, [s])
   },
-  B = e => {
+  U = e => {
     let {
       scopes: s,
       application: t,
@@ -116,11 +116,11 @@ let U = e => {
       outline: !0,
       children: (0, n.jsxs)(u.HeadingLevel, {
         component: (() => {
-          let e = p.ZP.getApplicationIconURL({
+          let e = R.ZP.getApplicationIconURL({
               id: t.id,
               icon: t.icon
             }),
-            s = null != e ? (0, n.jsx)(R.Z.Child, {
+            s = null != e ? (0, n.jsx)(p.Z.Child, {
               className: Z.appAvatar,
               grow: 0,
               children: (0, n.jsx)("img", {
@@ -128,17 +128,17 @@ let U = e => {
                 alt: ""
               })
             }) : null;
-          return (0, n.jsxs)(R.Z, {
+          return (0, n.jsxs)(p.Z, {
             className: r()(Z.__invalid_header, v.marginBottom20),
-            children: [(0, n.jsxs)(R.Z, {
+            children: [(0, n.jsxs)(p.Z, {
               className: Z.headerInfo,
-              children: [s, (0, n.jsx)(R.Z.Child, {
+              children: [s, (0, n.jsx)(p.Z.Child, {
                 children: (0, n.jsx)(u.Heading, {
                   variant: "text-sm/semibold",
                   children: t.name
                 })
               })]
-            }), (0, n.jsx)(R.Z.Child, {
+            }), (0, n.jsx)(p.Z.Child, {
               wrap: !0,
               grow: 0,
               children: (0, n.jsx)(u.Button, {
@@ -193,7 +193,7 @@ let U = e => {
           })
         })(), (() => {
           let e = [];
-          for (let t of s) e.push((0, O.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(P.Z.Messages.SCOPE_DM_YOU);
+          for (let t of s) e.push((0, g.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(P.Z.Messages.SCOPE_DM_YOU);
           if (e.length > 0 || null != i && i.length > 0) return (0, n.jsx)(u.FormItem, {
             faded: !0,
             title: P.Z.Messages.PERMISSIONS,
@@ -207,10 +207,10 @@ let U = e => {
                   children: e
                 })]
               }, s)), null == i ? void 0 : i.map((s, t) => {
-                let a = (0, m.PM)(s);
+                let a = (0, A.PM)(s);
                 return null != a ? (0, n.jsxs)("li", {
                   className: r()(Z.permission, v.marginTop8),
-                  children: [(0, n.jsx)(U, {
+                  children: [(0, n.jsx)(B, {
                     disclosure: s
                   }), (0, n.jsx)(u.FormText, {
                     children: a
@@ -227,8 +227,8 @@ let U = e => {
   };
 s.Z = () => {
   let e = (0, d.e7)([h.Z], () => h.Z.hidePersonalInformation),
-    s = (0, d.e7)([g.Z], () => g.Z.getApps()),
-    i = (0, d.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities());
+    s = (0, d.e7)([O.Z], () => O.Z.getApps()),
+    i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
   a.useEffect(() => {
     T.Z.fetch()
   }, []);
@@ -274,7 +274,7 @@ s.Z = () => {
         children: s
       })]
     }),
-    m = a.useMemo(() => {
+    A = a.useMemo(() => {
       let e = o.trim().toLowerCase();
       return "" === e || null == s ? s : s.length < 100 ? s.filter(s => l()(e, s.application.name.toLowerCase())) : s.filter(s => s.application.name.toLowerCase().includes(e))
     }, [s, o]);
@@ -288,13 +288,13 @@ s.Z = () => {
         title: P.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
         body: P.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
-      children: null == s || null == m ? (0, n.jsx)(u.Spinner, {
+      children: null == s || null == A ? (0, n.jsx)(u.Spinner, {
         className: v.marginTop20,
         type: u.Spinner.Type.SPINNING_CIRCLE
-      }) : 0 === s.length ? N(P.Z.Messages.NO_AUTHORIZED_APPS_NOTE, P.Z.Messages.NO_AUTHORIZED_APPS) : 0 === m.length ? (0, n.jsxs)(n.Fragment, {
+      }) : 0 === s.length ? N(P.Z.Messages.NO_AUTHORIZED_APPS_NOTE, P.Z.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, n.jsxs)(n.Fragment, {
         children: [S(), N(null, P.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, n.jsxs)(n.Fragment, {
-        children: [S(), m.sort((e, s) => e.application.name.localeCompare(s.application.name)).map(e => (0, n.jsx)(B, {
+        children: [S(), A.sort((e, s) => e.application.name.localeCompare(s.application.name)).map(e => (0, n.jsx)(U, {
           onDelete: () => r(e),
           ...e
         }, e.id))]

@@ -11,12 +11,12 @@ var s, o, a, l, u = n(348327),
   h = n(860852),
   f = n(768419),
   S = n(695346),
-  N = n(581883),
-  A = n(131704),
+  A = n(581883),
+  N = n(131704),
   m = n(780570),
   O = n(314897),
-  p = n(77498),
-  R = n(517100),
+  R = n(77498),
+  p = n(517100),
   g = n(283595),
   C = n(293273),
   v = n(158776),
@@ -29,8 +29,8 @@ let M = !1,
   b = [],
   G = !1,
   w = !0,
-  x = Object.freeze([]),
-  B = [];
+  B = Object.freeze([]),
+  x = [];
 
 function k(e) {
   return (0, m.OT)(e, g.Z)
@@ -44,7 +44,7 @@ function V(e) {
       return !1;
     case D.IIU.PLAYING:
       return null != e.application_id ? k(e.application_id) : function(e) {
-        let t = p.Z.getGameByName(e);
+        let t = R.Z.getGameByName(e);
         return null != t ? k(t.id) : S.G6.getSetting()
       }(e.name);
     case D.IIU.STREAMING:
@@ -56,7 +56,7 @@ function V(e) {
 
 function Z() {
   var e;
-  if (U = null !== (e = R.Z.getIdleSince()) && void 0 !== e ? e : 0, G = R.Z.isAFK(), w) P = y, H();
+  if (U = null !== (e = p.Z.getIdleSince()) && void 0 !== e ? e : 0, G = p.Z.isAFK(), w) P = y, H();
   else if (M) P = D.Skl.INVISIBLE;
   else {
     let e = S.co.getSetting();
@@ -67,9 +67,9 @@ function Z() {
     n = w || P === D.Skl.INVISIBLE ? [] : C.Z.getActivities().filter(V);
   !_()(b, n) && (b = n, t = !0);
   let i = L.Z.getRemoteActivities();
-  if (x !== i && (x = i, t = !0), t) {
+  if (B !== i && (B = i, t = !0), t) {
     let e = b.find(e => e.type === D.IIU.CUSTOM_STATUS);
-    B = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...d()(x).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d().uniqBy(x, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    x = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...d()(B).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -78,11 +78,11 @@ function H() {
 }
 
 function F() {
-  w = !1, y = D.Skl.UNKNOWN, Z(), v.Z.setCurrentUserOnConnectionOpen(P, B)
+  w = !1, y = D.Skl.UNKNOWN, Z(), v.Z.setCurrentUserOnConnectionOpen(P, x)
 }
 class Y extends(s = E.ZP.Store) {
   initialize() {
-    this.waitFor(R.Z, N.Z, C.Z, L.Z, g.Z, p.Z), this.syncWith([C.Z], Z)
+    this.waitFor(p.Z, A.Z, C.Z, L.Z, g.Z, R.Z), this.syncWith([C.Z], Z)
   }
   getLocalPresence() {
     return {
@@ -98,11 +98,11 @@ class Y extends(s = E.ZP.Store) {
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? B : b
+    return e ? x : b
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? B[0] : b[0]
+    return e ? x[0] : b[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -161,6 +161,6 @@ l = "SelfPresenceStore", (a = "displayName") in(o = Y) ? Object.defineProperty(o
     let {
       channel: t
     } = e;
-    t instanceof A.Sf && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === O.default.getId() && (i = void 0, r = void 0)
+    t instanceof N.Sf && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === O.default.getId() && (i = void 0, r = void 0)
   }
 })

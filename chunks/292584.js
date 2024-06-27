@@ -11,15 +11,15 @@ var i, r, s, o, a, l, u = n(392711),
   f = n(860852);
 (s = i || (i = {}))[s.INVALID = 0] = "INVALID", s[s.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", s[s.VALID = 2] = "VALID";
 let S = new Set,
-  N = new Set,
   A = new Set,
+  N = new Set,
   m = [],
   O = e => "user:".concat(e),
-  p = e => "channel:".concat(e),
-  R = e => "validity:".concat(e),
+  R = e => "channel:".concat(e),
+  p = e => "validity:".concat(e),
   g = new c.h(function(e) {
     let t = S.has(e.userId) ? 1 : 0;
-    return null != e.viewers && (t = 2), [O(e.userId), p(e.channelId), R(t)]
+    return null != e.viewers && (t = 2), [O(e.userId), R(e.channelId), p(t)]
   }, e => e.channelId);
 
 function C(e, t, n) {
@@ -27,7 +27,7 @@ function C(e, t, n) {
   if (null == t) {
     let t = g.get(e);
     return !!(null != t && (0, u.isEqual)(t.source, n)) && (g.delete(e), void 0)
-  }!S.has(e) && !N.has(e) && (A.add(e), m = [...A]);
+  }!S.has(e) && !A.has(e) && (N.add(e), m = [...N]);
   let i = (0, f.tI)(t, e, n);
   g.set(e, i)
 }
@@ -42,13 +42,13 @@ function v(e) {
 }
 class L extends(r = _.ZP.Store) {
   getBroadcasts() {
-    return g.values(R(2))
+    return g.values(p(2))
   }
   getBroadcastsToValidateChannels() {
-    return g.values(R(1))
+    return g.values(p(1))
   }
   getBroadcastByChannel(e) {
-    return g.values(p(e))[0]
+    return g.values(R(e))[0]
   }
   getBroadcastByUser(e) {
     return g.get(e)
@@ -120,7 +120,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
       data: t
     } = e;
     T.default.keys(t).forEach(e => {
-      h.g.includes(t[e]) ? S.add(e) : N.add(e), A.clear(), m = [...A];
+      h.g.includes(t[e]) ? S.add(e) : A.add(e), N.clear(), m = [...N];
       let n = g.get(e);
       null != n && (g.delete(e), g.set(e, n))
     })
@@ -141,7 +141,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
     let {
       channelId: t,
       user: n
-    } = e, i = g.values(p(t))[0];
+    } = e, i = g.values(R(t))[0];
     if (null == i || null == i.viewers || i.viewers.some(e => e.id === n.id)) return !1;
     g.set(i.userId, {
       ...i,
@@ -152,7 +152,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
     let {
       channelId: t,
       user: n
-    } = e, i = g.values(p(t))[0];
+    } = e, i = g.values(R(t))[0];
     if (null == i || null == i.viewers) return !1;
     g.set(i.userId, {
       ...i,
@@ -163,7 +163,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
     var t;
     let {
       channel: n
-    } = e, i = g.values(p(n.id))[0];
+    } = e, i = g.values(R(n.id))[0];
     if (null == i) return !1;
     let r = null !== (t = n.rawRecipients) && void 0 !== t ? t : [];
     g.set(i.userId, {
@@ -172,6 +172,6 @@ l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o
     })
   },
   LOGOUT: function() {
-    S.clear(), N.clear(), A.clear(), m = [], g.clear()
+    S.clear(), A.clear(), N.clear(), m = [], g.clear()
   }
 })

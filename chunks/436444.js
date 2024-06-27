@@ -31,27 +31,27 @@ t.Z = function(e) {
     children: t,
     confettiTriggerRef: n,
     guild: r,
-    isProgressBarAnimationComplete: N,
-    setConfettiCount: A,
+    isProgressBarAnimationComplete: A,
+    setConfettiCount: N,
     setShouldFireConfetti: m,
     tier: O,
-    tierMarkerAnimationPosition: p
-  } = e, R = (0, a.e7)([u.Z], () => u.Z.useReducedMotion), {
+    tierMarkerAnimationPosition: R
+  } = e, p = (0, a.e7)([u.Z], () => u.Z.useReducedMotion), {
     analyticsLocations: g
-  } = (0, _.ZP)(), C = T.oCV[O] - r.premiumSubscriberCount, v = O <= p || N, L = v && O <= r.premiumTier, D = v && O < r.premiumTier, M = v && O === r.premiumTier, {
+  } = (0, _.ZP)(), C = T.oCV[O] - r.premiumSubscriberCount, v = O <= R || A, L = v && O <= r.premiumTier, D = v && O < r.premiumTier, M = v && O === r.premiumTier, {
     scaleFactor: P
   } = (0, o.useSpring)({
     from: {
       scaleFactor: 0
     },
     to: {
-      scaleFactor: p >= O || N && p + 1 === O || N && -1 === p && O === T.Eu4.NONE ? 1 : 0
+      scaleFactor: R >= O || A && R + 1 === O || A && -1 === R && O === T.Eu4.NONE ? 1 : 0
     },
     config: {
       tension: 360,
       friction: 12
     },
-    immediate: R
+    immediate: p
   }), y = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.animated.div, {
       className: f.progressBarMarkerIndicator,
@@ -116,7 +116,7 @@ t.Z = function(e) {
         className: f.boostedTierIconBackground
       }), L && O === T.Eu4.TIER_3 ? (0, i.jsx)(I.m, {
         confettiTriggerRef: n,
-        setConfettiCount: A,
+        setConfettiCount: N,
         setShouldFireConfetti: m,
         children: y
       }) : y, (0, i.jsxs)(l.Text, {

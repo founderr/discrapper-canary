@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(954017),
   f = n(314091),
   S = n(159244),
-  N = n(574176),
-  A = n(952164),
+  A = n(574176),
+  N = n(952164),
   m = n(199902),
   O = n(592125),
-  p = n(430824),
-  R = n(496675),
+  R = n(430824),
+  p = n(496675),
   g = n(979651),
   C = n(543595),
   v = n(626135),
@@ -78,25 +78,25 @@ t.Z = function(e) {
     return O.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: G
-  } = N.n.useExperiment({
+  } = A.n.useExperiment({
     guildId: null == b ? void 0 : b.guild_id,
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), w = (0, a.e7)([m.Z], () => s ? m.Z.getAnyStreamForUser(n.id) : null), x = G && R.Z.can(D.Plq.CONNECT, b), B = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && x ? b : null, k = (0, a.e7)([p.Z, g.Z, O.Z], () => {
+  }), w = (0, a.e7)([m.Z], () => s ? m.Z.getAnyStreamForUser(n.id) : null), B = G && p.Z.can(D.Plq.CONNECT, b), x = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B ? b : null, k = (0, a.e7)([R.Z, g.Z, O.Z], () => {
     var e, i;
-    return (0, u.Z)(t, D.xjy.EMBEDDED) ? p.Z.getGuild(null === (e = O.Z.getChannel(null === (i = g.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? p.Z.getGuild(B.getGuildId()) : null
-  }), V = (0, a.e7)([p.Z], () => null != w ? p.Z.getGuild(w.guildId) : null), Z = (0, a.e7)([d.Z], () => {
+    return (0, u.Z)(t, D.xjy.EMBEDDED) ? R.Z.getGuild(null === (e = O.Z.getChannel(null === (i = g.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != x ? R.Z.getGuild(x.getGuildId()) : null
+  }), V = (0, a.e7)([R.Z], () => null != w ? R.Z.getGuild(w.guildId) : null), Z = (0, a.e7)([d.Z], () => {
     if (null != t) return null != t.application_id ? d.Z.getApplication(t.application_id) : d.Z.getApplicationByName(t.name);
     return null
   }), H = (0, E.Z)(), F = (0, S.Z)(n), Y = H && null != t && F;
   return (r.useEffect(() => {
-    (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && x && v.default.track(D.rMx.VIEW_HANG_STATUS, {
+    (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B && v.default.track(D.rMx.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
-      guild_id: null == B ? void 0 : B.guild_id,
-      channel_id: null == B ? void 0 : B.id
+      guild_id: null == x ? void 0 : x.guild_id,
+      channel_id: null == x ? void 0 : x.id
     })
-  }, [null == t ? void 0 : t.type, x, B]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || x) ? (0, i.jsx)(C.Z, {
+  }, [null == t ? void 0 : t.type, B, x]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || B) ? (0, i.jsx)(C.Z, {
     ...U,
     activity: t,
     user: n,
@@ -152,8 +152,8 @@ t.Z = function(e) {
         }
       })]
     }) : null,
-    onOpenSpotifyTrack: A.aG,
-    onOpenSpotifyArtist: A.d$,
-    onOpenSpotifyAlbum: A.Z5
+    onOpenSpotifyTrack: N.aG,
+    onOpenSpotifyArtist: N.d$,
+    onOpenSpotifyAlbum: N.Z5
   }) : null
 }

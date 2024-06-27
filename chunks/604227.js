@@ -17,13 +17,13 @@ var a = t(525654),
 function E() {
   var e, s, t, a, E, u;
   let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    S = "305734",
-    I = (e = "f2584e5072b5f150f7149bb5a37fb9c74d8bdb95", e.substring(0, 7)),
+    S = "305846",
+    I = (e = "ed7283374a794f2ea560e78d3efc21bb894c824c", e.substring(0, 7)),
     N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
     C = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
-    A = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
-    m = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
-    O = function() {
+    m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
+    A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
+    g = function() {
       var e;
       let s = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
       if (null == s || null == o.Z) return null;
@@ -31,9 +31,9 @@ function E() {
         [n, a, r] = t.split(".").map(e => parseInt(e, 10));
       return s.includes("Windows 10") && void 0 !== r && r >= 22e3 && (s = s.replace("Windows 10", "Windows 11")), s.includes("OS X 10.15.7") && void 0 !== n && n >= 20 && (s = "macOS ".concat(n - 9)), "".concat(s, " (").concat(t, ")")
     }(),
-    g = [T, S, "(".concat(I, ")")];
-  return null != N && (g.push("Host ".concat(N)), null != A && g.push(A.toLowerCase()), null != C && g.push("(".concat(C, ")"))), g.push("Build Override: ".concat(null != m ? m.id : "N/A")), null != O && g.push(O), (0, n.jsx)(c.o, {
-    copyValue: g.join(" "),
+    O = [T, S, "(".concat(I, ")")];
+  return null != N && (O.push("Host ".concat(N)), null != m && O.push(m.toLowerCase()), null != C && O.push("(".concat(C, ")"))), O.push("Build Override: ".concat(null != A ? A.id : "N/A")), null != g && O.push(g), (0, n.jsx)(c.o, {
+    copyValue: O.join(" "),
     disableCopy: !1,
     copyTooltip: d.Z.Messages.COPY_VERSION,
     showCopyIcon: !1,
@@ -54,19 +54,19 @@ function E() {
           className: _.line,
           variant: "text-xs/normal",
           color: "text-muted",
-          children: ["Host ", N, " ", null != A ? (0, n.jsxs)("span", {
+          children: ["Host ", N, " ", null != m ? (0, n.jsxs)("span", {
             className: _.appArch,
-            children: [A.toLowerCase(), " "]
+            children: [m.toLowerCase(), " "]
           }) : null, null != C ? (0, n.jsxs)("span", {
             children: ["(", C, ")"]
           }) : null]
         }), " "]
-      }) : null, null != O ? (0, n.jsx)(r.Text, {
+      }) : null, null != g ? (0, n.jsx)(r.Text, {
         tag: "span",
         className: _.line,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: O
+        children: g
       }) : null]
     })
   })

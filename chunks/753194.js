@@ -25,14 +25,14 @@ function c(e) {
     } = e,
     [h, f] = (0, s.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
     S = (0, a.useToken)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
-    N = (0, r._i)(null != n ? n : S),
-    A = (0, r.ho)(N, !1, h ? f : null);
-  return t = null != d ? d : .3 > (0, r.Bd)(N) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(a.Tooltip, {
+    A = (0, r._i)(null != n ? n : S),
+    N = (0, r.ho)(A, !1, h ? f : null);
+  return t = null != d ? d : .3 > (0, r.Bd)(A) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(a.Tooltip, {
     text: null != T ? T : _.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
     children: e => (0, i.jsx)(u.Z, {
       ...e,
       className: E,
-      color: A,
+      color: N,
       size: c,
       children: (0, i.jsx)(a.CheckmarkSmallIcon, {
         size: "custom",

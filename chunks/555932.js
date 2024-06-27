@@ -20,7 +20,7 @@ let I = [c.Eu4.NONE, c.Eu4.TIER_1, c.Eu4.TIER_2, c.Eu4.TIER_3];
 function T(e) {
   let {
     guild: t
-  } = e, n = (0, o.e7)([a.Z], () => a.Z.useReducedMotion), [T, h] = r.useState(!1), [f, S] = r.useState(0), N = r.useRef(null), A = Math.min(c.Eu4.TIER_3, t.premiumTier + 1), m = c.oCV[t.premiumTier], O = c.oCV[A], p = (t.premiumSubscriberCount - m) / (O - m), R = _.P[t.premiumTier], g = _.P[A], C = t.premiumTier === c.Eu4.TIER_3, {
+  } = e, n = (0, o.e7)([a.Z], () => a.Z.useReducedMotion), [T, h] = r.useState(!1), [f, S] = r.useState(0), A = r.useRef(null), N = Math.min(c.Eu4.TIER_3, t.premiumTier + 1), m = c.oCV[t.premiumTier], O = c.oCV[N], R = (t.premiumSubscriberCount - m) / (O - m), p = _.P[t.premiumTier], g = _.P[N], C = t.premiumTier === c.Eu4.TIER_3, {
     progressBarFillWidthFactor: v,
     isProgressBarAnimationComplete: L,
     setShouldFireConfetti: D,
@@ -77,7 +77,7 @@ function T(e) {
       tierMarkerAnimationPosition: l
     }
   }({
-    fillFactor: C ? 1 : p * (g - R) + R,
+    fillFactor: C ? 1 : R * (g - p) + p,
     isRevealed: T || n,
     useReducedMotion: n,
     premiumTier: t.premiumTier,
@@ -116,7 +116,7 @@ function T(e) {
         className: E.progressBarTrack
       })]
     }), I.map(e => (0, i.jsx)(_.Z, {
-      confettiTriggerRef: N,
+      confettiTriggerRef: A,
       guild: t,
       isProgressBarAnimationComplete: L,
       setConfettiCount: S,
@@ -126,7 +126,7 @@ function T(e) {
       children: (0, l.nW)(e)
     }, e)), (0, i.jsx)(u.Z, {
       confettiCount: f,
-      confettiTriggerRef: N,
+      confettiTriggerRef: A,
       isFiring: M
     })]
   })

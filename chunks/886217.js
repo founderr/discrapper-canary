@@ -14,7 +14,7 @@ var i = n(735250),
   _ = n(591853),
   f = n(410441),
   E = n(689938);
-let g = (e, t, n, i) => {
+let C = (e, t, n, i) => {
     let a = function(e) {
         if (e === l._.WEEK) return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT
       }(i),
@@ -25,7 +25,7 @@ let g = (e, t, n, i) => {
       userName: s
     }).replaceAll("*", "")
   },
-  C = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
+  g = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
     username: t.username,
     artist: e.extra.artist.name
   });
@@ -44,7 +44,7 @@ t.Z = e => {
     secondaryColor: Z
   } = (0, h.Z)(T), A = (0, u.Nq)(n), M = a.useCallback(() => {
     if (null == v || !(0, o.Hi)(A, p.y9)) return;
-    let e = g(n, t, v, A);
+    let e = C(n, t, v, A);
     return (0, d.CR)({
       user: v,
       channel: t,
@@ -78,7 +78,7 @@ t.Z = e => {
         user: v,
         channel: t,
         generateReactionImage: M,
-        reactionImageAltText: C(n, v),
+        reactionImageAltText: g(n, v),
         entry: n,
         requestId: l
       })

@@ -16,8 +16,8 @@ let T = E.YN.GLOBAL_FEED,
   h = new Map,
   f = new Set,
   S = new Map,
-  N = null,
-  A = (0, i.debounce)(c.y, 3e3, {
+  A = null,
+  N = (0, i.debounce)(c.y, 3e3, {
     trailing: !0
   });
 
@@ -30,10 +30,10 @@ function m(e, t) {
 }
 
 function O() {
-  R(T)
+  p(T)
 }
 
-function p(e) {
+function R(e) {
   if (!(0, _.sA)("ContentInventoryManager") || f.has(e) || e === E.YN.GAME_PROFILE_FEED && void 0 !== d.Z.getFeed(e)) return !1;
   if (e === T) {
     if (d.Z.hidden || !u.Z.isFocused() || !o.Z.isConnected()) return !1;
@@ -43,7 +43,7 @@ function p(e) {
   return !0
 }
 
-function R(e) {
+function p(e) {
   m(e, {
     loading: !1
   });
@@ -52,11 +52,11 @@ function R(e) {
 }
 
 function g() {
-  if (R(T), !p(T)) return;
+  if (p(T), !R(T)) return;
   let e = d.Z.getFeed(T);
-  if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == N) return;
+  if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == A) return;
   let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
-    n = Math.max(0, null == N ? 0 : new Date(N).getTime() - Date.now(), t);
+    n = Math.max(0, null == A ? 0 : new Date(A).getTime() - Date.now(), t);
   m(T, {
     loading: !1,
     nextFetchDate: new Date(Date.now() + n)
@@ -66,7 +66,7 @@ async function C(e) {
   let {
     force: t = !1
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-  if (!!(p(e) || t)) try {
+  if (!!(R(e) || t)) try {
     let t = d.Z.getFeed(e);
     f.add(e), m(e, {
       loading: !0
@@ -81,7 +81,7 @@ async function C(e) {
       feed: n
     }), S.set(e, 0), f.delete(e), m(e, {
       loading: !1
-    }), e === T && (N = null, g())
+    }), e === T && (A = null, g())
   } catch (s) {
     var n;
     let i = null !== (n = S.get(e)) && void 0 !== n ? n : 0;
@@ -106,7 +106,7 @@ function L(e) {
   let {
     feedId: t
   } = e;
-  R(t), C(t, {
+  p(t), C(t, {
     force: !0
   })
 }
@@ -115,7 +115,7 @@ function D(e) {
   let {
     refreshAfterMs: t
   } = e, n = d.Z.getFeed(T);
-  if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) N = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString(), g()
+  if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) A = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString(), g()
 }
 
 function M(e) {
@@ -124,7 +124,7 @@ function M(e) {
     connectionId: n,
     track: i
   } = e;
-  if (null != n && !!(0, _.Dy)("ContentInventoryManager.handleSpotifyNewTrack"))(null === (t = a.Z.getAccount(n, I.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && A(n, i)
+  if (null != n && !!(0, _.Dy)("ContentInventoryManager.handleSpotifyNewTrack"))(null === (t = a.Z.getAccount(n, I.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && N(n, i)
 }
 
 function P() {

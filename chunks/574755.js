@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return R
+    return p
   }
 });
 var n = t(735250),
@@ -19,18 +19,18 @@ var n = t(735250),
   I = t(39604),
   N = t(703288),
   C = t(491758),
-  A = t(183632),
-  m = t(689938),
-  O = t(513830),
-  g = t(655714),
+  m = t(183632),
+  A = t(689938),
+  g = t(513830),
+  O = t(655714),
   h = t(331651);
 
-function R(e) {
+function p(e) {
   let {
     className: s,
     showHeader: t = !0
-  } = e, R = _.tU.useSetting(), {
-    enableViewerClipping: p
+  } = e, p = _.tU.useSetting(), {
+    enableViewerClipping: R
   } = d.Z.useExperiment({
     location: "Clips Settings"
   }, {
@@ -48,34 +48,34 @@ function R(e) {
       className: s,
       tag: o.FormTitleTags.H1,
       title: t ? (0, n.jsxs)("div", {
-        className: O.headerContainer,
-        children: [m.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
+        className: g.headerContainer,
+        children: [A.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
       }) : null,
       children: M && (0, n.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(A.Z, {})]
+        children: [(0, n.jsx)(C.Z, {}), (0, n.jsx)(m.Z, {})]
       })
     }), M && (0, n.jsx)(o.FormDivider, {}), (0, n.jsxs)(o.FormSection, {
       className: t || M ? h.marginTop20 : s,
       children: [(0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: g.formItem,
-        value: R,
-        note: m.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        className: O.formItem,
+        value: p,
+        note: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => I.yg({
           allowVoiceRecording: e
         }),
-        children: m.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), p && f && (0, n.jsx)(o.FormSwitch, {
+        children: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+      }), R && f && (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: g.formItem,
+        className: O.formItem,
         value: D,
-        note: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        note: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.yl({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: m.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

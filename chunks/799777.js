@@ -11,9 +11,9 @@ let I = "GameLibraryViewStore",
   h = E.iEv.LAST_PLAYED,
   f = !1,
   S = u().debounce(() => {
-    f = !1, A.emitChange()
+    f = !1, N.emitChange()
   }, 200);
-class N extends(a = _.ZP.Store) {
+class A extends(a = _.ZP.Store) {
   initialize() {
     var e;
     let t = null !== (e = c.K.get(I)) && void 0 !== e ? e : {};
@@ -32,13 +32,13 @@ class N extends(a = _.ZP.Store) {
     return f
   }
 }
-o = "GameLibraryViewStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "GameLibraryViewStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let A = new N(d.Z, {
+let N = new A(d.Z, {
   LIBRARY_TABLE_SORT_UPDATE: function(e) {
     let {
       direction: t,
@@ -57,4 +57,4 @@ let A = new N(d.Z, {
     n && (f = !0, S()), i = t
   }
 });
-t.Z = A
+t.Z = N

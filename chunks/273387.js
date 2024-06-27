@@ -10,7 +10,7 @@ let d = Object.freeze({}),
   _ = {},
   f = {},
   E = {};
-class g extends(i = r.ZP.Store) {
+class C extends(i = r.ZP.Store) {
   isFetching() {
     return h
   }
@@ -38,12 +38,12 @@ class g extends(i = r.ZP.Store) {
     return E[e]
   }
 }
-s = "GuildDirectoryStore", (l = "displayName") in(a = g) ? Object.defineProperty(a, l, {
+s = "GuildDirectoryStore", (l = "displayName") in(a = C) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.Z = new g(o.Z, {
+}) : a[l] = s, t.Z = new C(o.Z, {
   GUILD_DIRECTORY_FETCH_START: function() {
     h = !0
   },
@@ -118,30 +118,30 @@ s = "GuildDirectoryStore", (l = "displayName") in(a = g) ? Object.defineProperty
     let {
       channelId: h,
       entry: m
-    } = e, E = (0, c.MQ)(m), g = null === (t = p[h]) || void 0 === t ? void 0 : t[E.guildId];
+    } = e, E = (0, c.MQ)(m), C = null === (t = p[h]) || void 0 === t ? void 0 : t[E.guildId];
     p[h] = {
       ...p[h],
       [E.guildId]: {
-        ...g,
+        ...C,
         ...E
       }
     };
-    let C = null !== (a = null == g ? void 0 : g.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
+    let g = null !== (a = null == C ? void 0 : C.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
       I = null !== (l = E.primaryCategoryId) && void 0 !== l ? l : u.AR.UNCATEGORIZED,
-      x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[C]);
-    null != g && C !== I && delete x[E.guildId], _[h] = {
+      x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[g]);
+    null != C && g !== I && delete x[E.guildId], _[h] = {
       ..._[h],
-      [C]: x,
+      [g]: x,
       [I]: {
         ...null === (i = _[h]) || void 0 === i ? void 0 : i[I],
         [E.guildId]: {
-          ...g,
+          ...C,
           ...E
         }
       }
-    }, I !== C && null != f[h] && (f[h] = {
+    }, I !== g && null != f[h] && (f[h] = {
       ...f[h],
-      [C]: (null === (s = f[h]) || void 0 === s ? void 0 : s[C]) > 0 ? (null === (r = f[h]) || void 0 === r ? void 0 : r[C]) - 1 : 0,
+      [g]: (null === (s = f[h]) || void 0 === s ? void 0 : s[g]) > 0 ? (null === (r = f[h]) || void 0 === r ? void 0 : r[g]) - 1 : 0,
       [I]: (null !== (d = null === (o = f[h]) || void 0 === o ? void 0 : o[I]) && void 0 !== d ? d : 0) + 1
     })
   },

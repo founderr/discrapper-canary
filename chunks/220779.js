@@ -4,7 +4,7 @@ n.d(t, {
     return m
   },
   dE: function() {
-    return p
+    return R
   }
 }), n(47120);
 var i = n(735250),
@@ -23,11 +23,11 @@ var i = n(735250),
   h = n(981631),
   f = n(689938),
   S = n(142544);
-let N = (0, E.kt)({
+let A = (0, E.kt)({
     id: "1",
     type: h.d4z.DM
   }),
-  A = r.forwardRef(function(e, t) {
+  N = r.forwardRef(function(e, t) {
     let {
       placeholder: n,
       headerText: r,
@@ -76,9 +76,9 @@ function m(e) {
     onFocus: E,
     channel: I,
     className: h
-  } = e, [f, A] = r.useState(""), [m, O] = r.useState((0, _.JM)("")), p = () => {
-    A(""), O((0, _.JM)(""))
-  }, R = u.I.ATOMIC_REACTOR_REPLY_INPUT, g = r.useRef(null);
+  } = e, [f, N] = r.useState(""), [m, O] = r.useState((0, _.JM)("")), R = () => {
+    N(""), O((0, _.JM)(""))
+  }, p = u.I.ATOMIC_REACTOR_REPLY_INPUT, g = r.useRef(null);
   return (0, i.jsx)(c.Z, {
     ref: g,
     placeholder: t,
@@ -87,16 +87,16 @@ function m(e) {
     showRemainingCharsAfterCount: -1,
     allowNewLines: !1,
     maxCharacterCount: T.z,
-    channel: null != I ? I : N,
+    channel: null != I ? I : A,
     onChange: (e, t, n) => {
-      A(t), O(n)
+      N(t), O(n)
     },
     type: a ? {
-      ...R,
+      ...p,
       emojis: {
         button: !0
       }
-    } : R,
+    } : p,
     textValue: f,
     richValue: m,
     onSubmit: e => {
@@ -106,7 +106,7 @@ function m(e) {
       return t.length > T.z ? Promise.resolve({
         shouldClear: !1,
         shouldRefocus: !0
-      }) : (n(t), p(), Promise.resolve({
+      }) : (n(t), R(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !1
       }))
@@ -140,7 +140,7 @@ let O = (e, t) => {
       }
     }, [e, t])
   },
-  p = e => {
+  R = e => {
     let {
       onSelectEmoji: t,
       onClick: n
@@ -155,7 +155,7 @@ let O = (e, t) => {
         ref: _,
         children: (0, i.jsx)(d.$, {
           messageId: h.lds,
-          channel: N,
+          channel: A,
           closePopout: () => {
             u(!1)
           },
@@ -194,7 +194,7 @@ t.ZP = e => {
   return O(() => E(!1), I), (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: S.reactions,
-      children: [n && (0, i.jsx)(p, {
+      children: [n && (0, i.jsx)(R, {
         onSelectEmoji: e => {
           null != e && t({
             interactionType: T.L.ReactSubmit,
@@ -209,7 +209,7 @@ t.ZP = e => {
             reply: null
           }), E(!1)
         }
-      }), s && (0, i.jsx)(A, {
+      }), s && (0, i.jsx)(N, {
         hide: () => E(!1),
         ref: I,
         headerText: u,

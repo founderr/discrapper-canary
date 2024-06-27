@@ -22,8 +22,8 @@ function m(e) {
     if (null == e) return null;
     let t = new Date(e).getTime();
     return (0, o.fv)(t, o.jq.JOINED_AT)
-  }, []), g = a.useMemo(() => null == t ? null : E(f), [t, E, f]), C = a.useMemo(() => (0, r.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), I = a.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
-  return null != f || C ? (0, i.jsx)(s.FormItem, {
+  }, []), C = a.useMemo(() => null == t ? null : E(f), [t, E, f]), g = a.useMemo(() => (0, r.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), I = a.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
+  return null != f || g ? (0, i.jsx)(s.FormItem, {
     title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
     titleClassName: p.infoTitle,
     children: (0, i.jsxs)(d.WM, {
@@ -43,9 +43,9 @@ function m(e) {
         description: (0, i.jsx)(s.Text, {
           variant: "text-sm/semibold",
           color: "text-normal",
-          children: g
+          children: C
         })
-      }), C && null != I && (0, i.jsx)(d._2, {
+      }), g && null != I && (0, i.jsx)(d._2, {
         icon: (0, i.jsx)(s.ClockWarningIcon, {
           size: "custom",
           color: "currentColor",

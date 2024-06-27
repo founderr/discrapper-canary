@@ -312,12 +312,12 @@ class h extends o.Z {
         framesCodec: h,
         framesNetwork: f,
         packets: S,
-        packetsLost: N,
-        nackCount: A,
+        packetsLost: A,
+        nackCount: N,
         pliCount: m,
         qpSum: O,
-        pauseCount: p,
-        freezeCount: R,
+        pauseCount: R,
+        freezeCount: p,
         totalPausesDuration: g,
         totalFreezesDuration: C,
         totalFramesDuration: v,
@@ -330,25 +330,25 @@ class h extends o.Z {
         qualityDecodeErrors: b,
         qualityDecoderReboots: G,
         qualityScoreErrors: w,
-        qualityFrameDrops: x,
-        qualitySizeMismatches: B
+        qualityFrameDrops: B,
+        qualitySizeMismatches: x
       } = e.aggregatedProperties;
     return {
       ..._,
       avg_bitrate: i > 0 ? Math.round((null != c ? c : 0) * 8 / i) : 0,
       avg_fps: i > 0 ? Math.round((null != h ? h : 0) / i) : 0,
       num_bytes: c,
-      num_packets_lost: N,
+      num_packets_lost: A,
       num_packets: S,
       num_frames: f,
       num_frames_codec_error: T,
       time_to_first_frame_ms: e.timeToFirstFrame,
       num_frames_dropped: E,
-      num_nacks: A,
+      num_nacks: N,
       num_plis: m,
       qp_sum: O,
-      receiver_pause_count: p,
-      receiver_freeze_count: R,
+      receiver_pause_count: R,
+      receiver_freeze_count: p,
       receiver_total_pauses_duration: g,
       receiver_total_freezes_duration: C,
       receiver_total_frames_duration: v,
@@ -361,8 +361,8 @@ class h extends o.Z {
       encoder_quality_decode_errors: b,
       encoder_quality_decoder_reboots: G,
       encoder_quality_score_errors: w,
-      encoder_quality_frame_drops: x,
-      encoder_quality_size_mismatches: B
+      encoder_quality_frame_drops: B,
+      encoder_quality_size_mismatches: x
     }
   }
   receivedStats(e, t, n) {

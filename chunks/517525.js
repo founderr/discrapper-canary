@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(484459),
   f = n(594174),
   E = n(368666),
-  g = n(626135),
-  C = n(74538),
+  C = n(626135),
+  g = n(74538),
   I = n(557457),
   x = n(475674),
   T = n(981631),
@@ -80,7 +80,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         location: O
       } = (0, p.O)(),
       y = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-      D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
+      D = o && !g.ZP.isPremium(y, N.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y),
       k = a.useCallback(() => {
         D && P && (0, h.openModalLazy)(async () => {
           let {
@@ -93,7 +93,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         })
       }, [D, P, O]);
     if (a.useEffect(() => {
-        !Z && P && (g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+        !Z && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
           type: N.cd.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: l,
@@ -141,13 +141,13 @@ t.Z = e => {
     premiumIndicator: u
   } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {
     reducedMotion: f
-  } = a.useContext(h.AccessibilityPreferencesContext), g = n && null != m;
+  } = a.useContext(h.AccessibilityPreferencesContext), C = n && null != m;
   a.useEffect(() => {
     (0, _.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
       dispatchWait: !0
     })
   }, [t]);
-  let C = (0, r.useTransition)(g, {
+  let g = (0, r.useTransition)(C, {
       enter: {
         from: f.enabled ? b : A,
         to: f.enabled ? R : M
@@ -156,7 +156,7 @@ t.Z = e => {
       config: P
     }),
     x = (0, r.useSpring)({
-      to: g ? L : j,
+      to: C ? L : j,
       config: P
     });
   return (e => {
@@ -167,7 +167,7 @@ t.Z = e => {
     return (0, i.jsxs)("div", {
       className: s()(S.streamQualityIndicator, n),
       ...a,
-      children: [C((e, n) => n ? (0, i.jsx)(r.animated.div, {
+      children: [g((e, n) => n ? (0, i.jsx)(r.animated.div, {
         style: e,
         children: (0, i.jsx)(O, {
           className: S.liveQualityIndicator,
@@ -185,7 +185,7 @@ t.Z = e => {
         children: (0, i.jsx)(E.ZP, {
           look: E.jZ.RED,
           size: o,
-          shape: g ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
+          shape: C ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
         })
       })]
     })

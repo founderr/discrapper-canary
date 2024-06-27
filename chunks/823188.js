@@ -34,12 +34,12 @@ var d = n(120356),
   h = n(442837),
   f = n(692547),
   S = n(780384),
-  N = n(481060),
-  A = n(410030),
+  A = n(481060),
+  N = n(410030),
   m = n(100527),
   O = n(906732),
-  p = n(535322),
-  R = n(706454),
+  R = n(535322),
+  p = n(706454),
   g = n(594174),
   C = n(78839),
   v = n(709586),
@@ -52,8 +52,8 @@ var d = n(120356),
   b = n(140465),
   G = n(650032),
   w = n(104494),
-  x = n(639119),
-  B = n(230916),
+  B = n(639119),
+  x = n(230916),
   k = n(248042),
   V = n(504865),
   Z = n(63802),
@@ -78,7 +78,7 @@ function q(e) {
       [W.freeTrialPillTier2OldGradientFill]: 4 === i,
       [W.lightBackgroundPill]: 5 === i
     }),
-    children: (0, c.jsx)(N.Text, {
+    children: (0, c.jsx)(A.Text, {
       variant: "text-xs/bold",
       className: E()(W.freeTrialPillText, {
         [W.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
@@ -164,11 +164,11 @@ function Q(e) {
     children: [(0, c.jsx)(t, {
       className: W.icon,
       color: "currentColor"
-    }), (0, c.jsx)(N.Text, {
+    }), (0, c.jsx)(A.Text, {
       variant: null != s ? s : "text-md/normal",
       color: "always-white",
       children: n
-    }), i ? (0, c.jsx)(p.Z, {
+    }), i ? (0, c.jsx)(R.Z, {
       className: W.newTagItem,
       forceUseColorForSparkles: !0,
       shouldInheritBackgroundColor: !0,
@@ -183,7 +183,7 @@ function J(e) {
     defaultPriceString: n,
     subscriptionPlan: i,
     discountOffer: r
-  } = e, s = (0, B.A)(i);
+  } = e, s = (0, x.A)(i);
   return (0, c.jsx)(c.Fragment, {
     children: j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC.format({
       numMonths: null !== (t = r.discount.user_usage_limit) && void 0 !== t ? t : F.rt,
@@ -204,13 +204,13 @@ function $(e) {
     textVariant: a,
     className: l,
     shouldUseModifiedCopy: u
-  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), E = (0, b.t7)(), I = (0, b.lr)(), f = n === F.p9.TIER_0 ? F.Si.TIER_0 : F.Si.TIER_2, S = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : E ? F.p9.TIER_2 : null, A = (0, x.N)(), m = (0, w.Ng)(), O = null == A ? void 0 : A.subscription_trial;
+  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), E = (0, b.t7)(), I = (0, b.lr)(), f = n === F.p9.TIER_0 ? F.Si.TIER_0 : F.Si.TIER_2, S = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : E ? F.p9.TIER_2 : null, N = (0, B.N)(), m = (0, w.Ng)(), O = null == N ? void 0 : N.subscription_trial;
   if (!t && null != S && n === S && null != _ && null != _.planIdFromItems) {
     let e = null != _.trialEndsAt ? T()(null == _ ? void 0 : _.trialEndsAt).diff(T()(), "d") : 0,
       t = F.GP[_.planIdFromItems],
       n = y.ZP.formatPriceString(y.ZP.getDefaultPrice(t.id), t.interval);
     return (0, c.jsx)(c.Fragment, {
-      children: (0, c.jsx)(N.Heading, {
+      children: (0, c.jsx)(A.Heading, {
         variant: "heading-md/normal",
         color: "always-white",
         className: W.trialHeader,
@@ -236,13 +236,13 @@ function $(e) {
   if (!t && i) {
     let e = y.ZP.formatPriceString(y.ZP.getDefaultPrice(n === F.p9.TIER_0 ? F.Xh.PREMIUM_MONTH_TIER_0 : F.Xh.PREMIUM_MONTH_TIER_2), F.rV.MONTH);
     if (0 === r) {
-      var p, R, v, L;
-      return (0, c.jsx)(N.Heading, {
+      var R, p, v, L;
+      return (0, c.jsx)(A.Heading, {
         variant: "heading-md/normal",
         color: "always-white",
         className: W.trialHeader,
         children: j.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-          planName: (0, y.aq)(null !== (R = F.IW[null !== (p = null == O ? void 0 : O.sku_id) && void 0 !== p ? p : F.Si.NONE]) && void 0 !== R ? R : F.Xh.PREMIUM_MONTH_TIER_2),
+          planName: (0, y.aq)(null !== (p = F.IW[null !== (R = null == O ? void 0 : O.sku_id) && void 0 !== R ? R : F.Si.NONE]) && void 0 !== p ? p : F.Xh.PREMIUM_MONTH_TIER_2),
           duration: (0, y.if)({
             intervalType: null !== (v = null == O ? void 0 : O.interval) && void 0 !== v ? v : F.rV.DAY,
             intervalCount: null !== (L = null == O ? void 0 : O.interval_count) && void 0 !== L ? L : 30,
@@ -252,7 +252,7 @@ function $(e) {
         })
       })
     }
-    if (null != m) return (0, c.jsx)(N.Heading, {
+    if (null != m) return (0, c.jsx)(A.Heading, {
       variant: "heading-md/normal",
       color: "always-white",
       className: W.trialHeader,
@@ -289,12 +289,12 @@ function ee(e) {
   } = e;
   return t ? (0, c.jsxs)(c.Fragment, {
     children: [(0, c.jsx)(Q, {
-      Icon: N.CheckmarkLargeIcon,
+      Icon: A.CheckmarkLargeIcon,
       text: j.Z.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM,
       className: W.modifiedItem,
       textVariant: "text-sm/normal"
     }), (0, c.jsx)(Q, {
-      Icon: N.CheckmarkLargeIcon,
+      Icon: A.CheckmarkLargeIcon,
       text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, y.v9)(F.p9.TIER_0, {
           useSpace: !1
@@ -303,27 +303,27 @@ function ee(e) {
       className: W.modifiedItem,
       textVariant: "text-sm/normal"
     }), (0, c.jsx)(Q, {
-      Icon: N.CheckmarkLargeIcon,
+      Icon: A.CheckmarkLargeIcon,
       text: j.Z.Messages.PREMIUM_TRIAL_ACTION_SHEET_CUSTOM_APP_ICONS,
       className: W.modifiedItem,
       textVariant: "text-sm/normal"
     })]
   }) : (0, c.jsxs)(c.Fragment, {
     children: [(0, c.jsx)(Q, {
-      Icon: N.UploadIcon,
+      Icon: A.UploadIcon,
       text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
         maxUploadPremium: (0, y.v9)(F.p9.TIER_0, {
           useSpace: !1
         })
       })
     }), (0, c.jsx)(Q, {
-      Icon: N.ReactionIcon,
+      Icon: A.ReactionIcon,
       text: j.Z.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, c.jsx)(Q, {
-      Icon: N.SuperReactionIcon,
+      Icon: A.SuperReactionIcon,
       text: j.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, c.jsx)(Q, {
-      Icon: N.NitroWheelIcon,
+      Icon: A.NitroWheelIcon,
       text: j.Z.Messages.PREMIUM_TIER_NITRO_BADGE_ITEM
     })]
   })
@@ -340,11 +340,11 @@ function et(e) {
     isGift: a = !1,
     priceOptions: l,
     variant: u
-  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), I = (0, x.N)(), T = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id, f = (null == _ ? void 0 : _.trialId) != null, S = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : null, A = null != T || f;
+  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), I = (0, B.N)(), T = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id, f = (null == _ ? void 0 : _.trialId) != null, S = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : null, N = null != T || f;
   return (0, c.jsxs)("div", {
     className: E()(W.tier0, W.card, o, {
-      [W.withTier0Rim]: !a && A,
-      [W.withCardHover]: !a && A
+      [W.withTier0Rim]: !a && N,
+      [W.withCardHover]: !a && N
     }),
     children: [T === F.Si.TIER_0 ? (0, c.jsxs)(c.Fragment, {
       children: [(0, c.jsx)(X, {
@@ -356,7 +356,7 @@ function et(e) {
       })]
     }) : null, n ? (0, c.jsx)("div", {
       className: W.wumpusImageContainer,
-      children: (0, c.jsx)(N.Image, {
+      children: (0, c.jsx)(A.Image, {
         src: K,
         mediaLayoutType: Y.hV.RESPONSIVE,
         width: 270,
@@ -385,7 +385,7 @@ function et(e) {
           className: E()(W.title, W.modifiedTier0Title)
         }) : (0, c.jsx)(D.Z, {
           className: E()(W.title, W.tier0Title)
-        }), i && (0, c.jsx)(N.Text, {
+        }), i && (0, c.jsx)(A.Text, {
           variant: "display-md",
           color: "always-white",
           className: 2 === u ? W.modifiedSubHeaderSettings : W.modifiedSubHeaderStoreHome,
@@ -417,37 +417,37 @@ function en(e) {
     featureSet: t = 0,
     isModal: n = !1,
     isGift: i = !1
-  } = e, r = (0, h.e7)([R.default], () => R.default.locale), s = (0, h.e7)([U.Z], () => U.Z.affinities), o = n && !i && s.length > 0;
+  } = e, r = (0, h.e7)([p.default], () => p.default.locale), s = (0, h.e7)([U.Z], () => U.Z.affinities), o = n && !i && s.length > 0;
   switch (t) {
     case 1:
       return (0, c.jsxs)(c.Fragment, {
         children: [(0, c.jsx)(Q, {
-          Icon: (0, N.makeIconCompat)(v.Z),
+          Icon: (0, A.makeIconCompat)(v.Z),
           text: j.Z.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format({
             numBoosts: F.cb,
             percentageOff: (0, P.T3)(r, F.Rr / 100)
           })
         }), (0, c.jsx)(Q, {
-          Icon: N.UploadIcon,
+          Icon: A.UploadIcon,
           text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
             maxUploadPremium: (0, y.v9)(F.p9.TIER_2, {
               useSpace: !1
             })
           })
         }), (0, c.jsx)(Q, {
-          Icon: N.ReactionIcon,
+          Icon: A.ReactionIcon,
           text: j.Z.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
         }), (0, c.jsx)(Q, {
-          Icon: N.ScreenArrowIcon,
+          Icon: A.ScreenArrowIcon,
           text: j.Z.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
         }), (0, c.jsx)(Q, {
-          Icon: N.UserSquareIcon,
+          Icon: A.UserSquareIcon,
           text: j.Z.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM
         })]
       });
     case 2:
       return (0, c.jsxs)(c.Fragment, {
-        children: [(0, c.jsx)(N.Text, {
+        children: [(0, c.jsx)(A.Text, {
           variant: "text-sm/normal",
           color: "always-white",
           style: {
@@ -455,12 +455,12 @@ function en(e) {
           },
           children: j.Z.Messages.PREMIUM_TIER_2_DETAILS_SUBHEADER
         }), (0, c.jsx)(Q, {
-          Icon: N.CheckmarkLargeIcon,
+          Icon: A.CheckmarkLargeIcon,
           text: j.Z.Messages.MARKETING_PAGE_COMPARISON_TABLE_PROFILE_THEMES_V2,
           className: W.modifiedItem,
           textVariant: "text-sm/normal"
         }), (0, c.jsx)(Q, {
-          Icon: N.CheckmarkLargeIcon,
+          Icon: A.CheckmarkLargeIcon,
           text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
             maxUploadPremium: (0, y.v9)(F.p9.TIER_2, {
               useSpace: !1
@@ -469,12 +469,12 @@ function en(e) {
           className: W.modifiedItem,
           textVariant: "text-sm/normal"
         }), (0, c.jsx)(Q, {
-          Icon: N.CheckmarkLargeIcon,
+          Icon: A.CheckmarkLargeIcon,
           text: j.Z.Messages.PREMIUM_TIER_HD_STREAMING_ITEM,
           className: W.modifiedItem,
           textVariant: "text-sm/normal"
         }), (0, c.jsx)(Q, {
-          Icon: N.CheckmarkLargeIcon,
+          Icon: A.CheckmarkLargeIcon,
           text: j.Z.Messages.PREMIUM_TIER_2_FEATURE_THEMES_AND_MORE,
           className: W.modifiedItem,
           textVariant: "text-sm/normal"
@@ -483,26 +483,26 @@ function en(e) {
     default:
       return (0, c.jsxs)(c.Fragment, {
         children: [(0, c.jsx)(Q, {
-          Icon: N.UploadIcon,
+          Icon: A.UploadIcon,
           text: j.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
             maxUploadPremium: (0, y.v9)(F.p9.TIER_2, {
               useSpace: !1
             })
           })
         }), (0, c.jsx)(Q, {
-          Icon: N.ReactionIcon,
+          Icon: A.ReactionIcon,
           text: j.Z.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
         }), (0, c.jsx)(Q, {
-          Icon: N.SuperReactionIcon,
+          Icon: A.SuperReactionIcon,
           text: j.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
         }), (0, c.jsx)(Q, {
-          Icon: N.ScreenArrowIcon,
+          Icon: A.ScreenArrowIcon,
           text: j.Z.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
         }), (0, c.jsx)(Q, {
-          Icon: (0, N.makeIconCompat)(v.Z),
+          Icon: (0, A.makeIconCompat)(v.Z),
           text: j.Z.Messages.PREMIUM_TIER_SERVER_BOOST_ITEM
         }), (0, c.jsx)(Q, {
-          Icon: N.UserSquareIcon,
+          Icon: A.UserSquareIcon,
           text: j.Z.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM
         }), o && (0, c.jsx)(H.Z, {})]
       })
@@ -522,7 +522,7 @@ function ei(e) {
     isModal: u = !1,
     priceOptions: _,
     variant: d
-  } = e, I = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), T = (0, h.e7)([g.default], () => g.default.getCurrentUser()), f = (0, x.N)(), m = null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id, O = (null == I ? void 0 : I.trialId) != null ? null == T ? void 0 : T.premiumType : null, p = (0, b.Nx)(), R = (0, w.Ng)(), v = (0, b.t7)(), D = null != m || null != O ? 0 : null != R || v ? 1 : null, M = (0, k.Vi)(), P = !l && p, y = (0, k.W1)(), U = (0, S.ap)((0, A.ZP)()), B = U ? 5 : 2, {
+  } = e, I = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), T = (0, h.e7)([g.default], () => g.default.getCurrentUser()), f = (0, B.N)(), m = null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id, O = (null == I ? void 0 : I.trialId) != null ? null == T ? void 0 : T.premiumType : null, R = (0, b.Nx)(), p = (0, w.Ng)(), v = (0, b.t7)(), D = null != m || null != O ? 0 : null != p || v ? 1 : null, M = (0, k.Vi)(), P = !l && R, y = (0, k.W1)(), U = (0, S.ap)((0, N.ZP)()), x = U ? 5 : 2, {
     enabled: V
   } = G._.useExperiment({
     location: "Tier2Card"
@@ -536,13 +536,13 @@ function ei(e) {
       [W.withTier2Rim]: P,
       [W.withCardHover]: P
     }),
-    children: [!l && null != R && (0, w.Wp)(R, F.Si.TIER_2) && void 0 !== R.discount.amount ? (0, c.jsxs)(c.Fragment, {
+    children: [!l && null != p && (0, w.Wp)(p, F.Si.TIER_2) && void 0 !== p.discount.amount ? (0, c.jsxs)(c.Fragment, {
       children: [(0, c.jsx)(X, {
         text: v ? j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : j.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
-          percent: R.discount.amount
+          percent: p.discount.amount
         }),
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -550,7 +550,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: H,
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -558,7 +558,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: j.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -566,13 +566,13 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: x
       }), (0, c.jsx)("div", {
         className: K
       })]
     }), n ? (0, c.jsx)("div", {
       className: W.wumpusImageContainer,
-      children: (0, c.jsx)(N.Image, {
+      children: (0, c.jsx)(A.Image, {
         src: z,
         mediaLayoutType: Y.hV.RESPONSIVE,
         width: 270,
@@ -586,11 +586,11 @@ function ei(e) {
             [W.modifiedTier2Title]: i,
             [W.tier2Title]: !i
           })
-        }), !l && m !== F.Si.TIER_2 && M && (0, c.jsx)(N.Text, {
+        }), !l && m !== F.Si.TIER_2 && M && (0, c.jsx)(A.Text, {
           variant: "text-xs/bold",
           className: W.freeTrialPillInline,
           children: y
-        }), i && (0, c.jsx)(N.Text, {
+        }), i && (0, c.jsx)(A.Text, {
           variant: "display-md",
           color: "always-white",
           className: 2 === d ? W.modifiedSubHeaderSettings : W.modifiedSubHeaderStoreHome,
@@ -599,7 +599,7 @@ function ei(e) {
           isGift: l,
           premiumTier: F.p9.TIER_2,
           offerType: D,
-          offerTierMatchesCard: m === F.Si.TIER_2 || (0, w.Wp)(R, F.Si.TIER_2),
+          offerTierMatchesCard: m === F.Si.TIER_2 || (0, w.Wp)(p, F.Si.TIER_2),
           showYearlyPrice: s,
           priceOptions: _,
           textVariant: i ? "heading-lg/normal" : void 0,
@@ -613,7 +613,7 @@ function ei(e) {
           isGift: l
         })
       })]
-    }), r, l || m !== F.Si.TIER_2 && null == R ? null : (0, c.jsx)(Z.t, {
+    }), r, l || m !== F.Si.TIER_2 && null == p ? null : (0, c.jsx)(Z.t, {
       tier: F.p9.TIER_2
     })]
   })

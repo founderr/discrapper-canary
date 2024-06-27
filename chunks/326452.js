@@ -102,12 +102,12 @@ class f extends(i = s.PureComponent) {
       size: T,
       disabled: f,
       onChange: S,
-      onBlur: N,
-      onFocus: A,
+      onBlur: A,
+      onFocus: N,
       autoComplete: m,
       inputProps: O,
-      hideSearchIcon: p,
-      "aria-label": R = d.Z.Messages.SEARCH,
+      hideSearchIcon: R,
+      "aria-label": p = d.Z.Messages.SEARCH,
       ...g
     } = this.props;
     return (0, r.jsx)(u.t, {
@@ -123,8 +123,8 @@ class f extends(i = s.PureComponent) {
           className: E.inner,
           children: [(0, r.jsx)("input", {
             ...O,
-            onFocus: A,
-            onBlur: N,
+            onFocus: N,
+            onBlur: A,
             className: E.input,
             value: e,
             onChange: this.handleOnChange,
@@ -135,9 +135,9 @@ class f extends(i = s.PureComponent) {
             disabled: f,
             autoFocus: t,
             autoComplete: m,
-            "aria-label": R,
+            "aria-label": p,
             ref: this.inputRef
-          }), !p && (0, r.jsx)(h, {
+          }), !R && (0, r.jsx)(h, {
             size: T,
             hasContent: e.length > 0,
             onClear: n,

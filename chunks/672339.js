@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   FU: function() {
-    return A
+    return N
   },
   eH: function() {
     return m
   },
   wG: function() {
-    return N
+    return A
   }
 }), n(66153), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var i = n(512722),
@@ -87,7 +87,7 @@ async function S(e, t, n) {
     (0, u.Nm)()
   }
 }
-async function N(e, t) {
+async function A(e, t) {
   let {
     track: n = !0,
     location: i
@@ -96,7 +96,7 @@ async function N(e, t) {
     type: s.W$.INPUT_DEVICE
   }, e), n && (0, c.Bh)(e, i, "Enabled")
 }
-async function A(e, t, n) {
+async function N(e, t, n) {
   let {
     track: i = !0,
     location: r
@@ -111,7 +111,7 @@ function m() {
   let e = o.default.getCurrentUser();
   if (null == e) return;
   let t = (0, l.P)(e);
-  (0, E.Z)() && !_.Z.hasBeenApplied && null != t && N(t, {
+  (0, E.Z)() && !_.Z.hasBeenApplied && null != t && A(t, {
     track: !1
   }).catch(T.dG4)
 }

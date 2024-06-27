@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(132748),
   f = n(353903),
   S = n(215016),
-  N = n(981631),
-  A = n(689938),
+  A = n(981631),
+  N = n(689938),
   m = n(53995);
 
 function O(e, t, n) {
@@ -32,10 +32,10 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = (e, t) => (0, i.jsx)(f.G0, {
+let R = (e, t) => (0, i.jsx)(f.G0, {
   columns: e
 }, t);
-class R extends r.PureComponent {
+class p extends r.PureComponent {
   componentDidMount() {
     0 === this.props.trendingCategories.length && (0, c.Tg)()
   }
@@ -50,7 +50,7 @@ class R extends r.PureComponent {
     } = e;
     return (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsx)("div", {
-        className: s === N.wI2.FAVORITES ? m.categoryFadeBlurple : m.categoryFade
+        className: s === A.wI2.FAVORITES ? m.categoryFadeBlurple : m.categoryFade
       }), (0, i.jsxs)("div", {
         className: m.categoryText,
         children: [null != n ? (0, i.jsx)(n, {
@@ -82,8 +82,8 @@ class R extends r.PureComponent {
         var t;
         let n = o().sample(o().values(e));
         return {
-          type: N.wI2.FAVORITES,
-          name: A.Z.Messages.CATEGORY_FAVORITE,
+          type: A.wI2.FAVORITES,
+          name: N.Z.Messages.CATEGORY_FAVORITE,
           icon: _.StarIcon,
           src: null != n ? n.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
           format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : l.EO.IMAGE
@@ -149,7 +149,7 @@ class R extends r.PureComponent {
       return 0 === r.length ? (0, i.jsx)(f.u$, {
         columns: e,
         width: t,
-        renderColumn: p
+        renderColumn: R
       }) : (0, i.jsx)(_.MasonryList, {
         ref: this._masonryRef,
         fade: !0,
@@ -180,7 +180,7 @@ function g(e) {
   let t = (0, a.e7)([E.Z], () => E.Z.getTrendingCategories()),
     n = (0, T.gG)(),
     r = (0, S.PY)();
-  return (0, i.jsx)(R, {
+  return (0, i.jsx)(p, {
     ...e,
     ...r,
     trendingCategories: t,

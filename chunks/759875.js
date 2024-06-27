@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return s
+    return u
   }
 });
 var i = t(735250);
@@ -9,20 +9,20 @@ var a = t(481060),
   r = t(346610),
   l = t(868643),
   o = t(996861),
-  u = t(689938);
+  s = t(689938);
 
-function s(e, n) {
+function u(e, n) {
   let t = (0, l.a)(e),
     {
-      canForwardMessages: s
+      canForwardMessages: u
     } = r.w.useExperiment({
       location: "MessageActionsMenu"
     }, {
       autoTrackExposure: !1
     });
-  return t && s ? (0, i.jsx)(a.MenuItem, {
+  return t && u ? (0, i.jsx)(a.MenuItem, {
     id: "forward",
-    label: u.Z.Messages.MESSAGE_ACTION_FORWARD,
+    label: s.Z.Messages.MESSAGE_ACTION_FORWARD,
     icon: a.ChatArrowRightIcon,
     action: () => {
       (0, o.ts)(n, e)

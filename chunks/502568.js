@@ -32,12 +32,12 @@ let E = e => {
       onClick: h,
       onContextMenu: f,
       tooltip: S = null,
-      tooltipColor: N,
-      tooltipPosition: A = "bottom",
+      tooltipColor: A,
+      tooltipPosition: N = "bottom",
       tooltipDisabled: m,
       hideOnClick: O = !0,
-      role: p,
-      "aria-label": R,
+      role: R,
+      "aria-label": p,
       "aria-hidden": g,
       "aria-checked": C,
       "aria-expanded": v,
@@ -52,18 +52,18 @@ let E = e => {
       colorClass: null != E ? E : void 0,
       secondaryColorClass: null != I ? I : void 0,
       color: null != _ ? _ : "currentColor"
-    }), M = R;
+    }), M = p;
     return null == M && "string" == typeof S && (M = S), (0, i.jsx)(u.Tooltip, {
       text: S,
-      color: N,
-      position: A,
+      color: A,
+      position: N,
       hideOnClick: O,
       shouldShow: !m,
       children: e => {
         let {
           onMouseEnter: S,
-          onMouseLeave: N,
-          onFocus: A,
+          onMouseLeave: A,
+          onFocus: N,
           onBlur: m
         } = e;
         return null == h ? (0, i.jsx)("div", {
@@ -80,8 +80,8 @@ let E = e => {
             color: null != _ ? _ : "currentColor",
             "aria-hidden": g,
             onMouseEnter: S,
-            onMouseLeave: N,
-            onFocus: A,
+            onMouseLeave: A,
+            onFocus: N,
             onBlur: m
           })
         }) : (0, i.jsxs)(u.Clickable, {
@@ -89,15 +89,15 @@ let E = e => {
           onClick: a ? void 0 : h,
           onContextMenu: a ? void 0 : f,
           onMouseEnter: S,
-          onMouseLeave: N,
-          onFocus: A,
+          onMouseLeave: A,
+          onFocus: N,
           onBlur: m,
           className: o()(t, {
             [d.iconWrapper]: !0,
             [d.clickable]: !a && null != h,
             [d.selected]: s
           }),
-          role: p,
+          role: R,
           "aria-label": M,
           "aria-hidden": g,
           "aria-checked": C,
@@ -134,20 +134,20 @@ let E = e => {
       "aria-labelledby": h,
       role: f,
       scrollable: S,
-      transparent: N = !1
-    } = e, A = r.useRef(null), m = r.useContext(_.Z);
+      transparent: A = !1
+    } = e, N = r.useRef(null), m = r.useContext(_.Z);
     return (0, i.jsx)("section", {
       className: o()(t, d.container, {
-        [d.themed]: !N,
-        [d.transparent]: N,
+        [d.themed]: !A,
+        [d.transparent]: A,
         [d.themedMobile]: l.tq
       }),
       "aria-label": T,
       "aria-labelledby": h,
       role: f,
-      ref: A,
+      ref: N,
       children: (0, i.jsxs)(u.FocusRingScope, {
-        containerRef: A,
+        containerRef: N,
         children: [(0, i.jsxs)("div", {
           className: d.upperContainer,
           children: [(0, i.jsxs)("div", {

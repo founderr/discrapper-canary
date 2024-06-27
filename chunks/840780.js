@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(988298),
   _ = n(475179),
   f = n(925549),
-  g = n(872810),
-  m = n(438139),
+  m = n(872810),
+  g = n(438139),
   C = n(730749),
   I = n(607070),
   E = n(566620),
@@ -66,8 +66,8 @@ var i = n(735250),
   ep = n(793224),
   e_ = n(978769),
   ef = n(981631),
-  eg = n(918559),
-  em = n(702512),
+  em = n(918559),
+  eg = n(702512),
   eC = n(689938),
   eI = n(488320);
 
@@ -79,7 +79,7 @@ function eE(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let eN = (0, m.Z)(function(e) {
+let eN = (0, g.Z)(function(e) {
   let {
     message: t
   } = e;
@@ -385,7 +385,7 @@ class ex extends l.PureComponent {
         channel: t,
         runningGame: n
       } = this.props, i = null != t && (0, F.vd)(t.type) ? t : null;
-      null != i && null != n && (null == e ? (0, g.tE)({
+      null != i && null != n && (null == e ? (0, m.tE)({
         channelId: i.id,
         pid: n.pid
       }) : (0, Z.v$)((0, j.V9)(e), n.pid))
@@ -401,7 +401,7 @@ class ex extends l.PureComponent {
       }(0, h.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("79477"), n.e("39021")]).then(n.bind(n, 60594));
+        } = await Promise.all([n.e("79477"), n.e("44217")]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,
           selectSource: !1,
@@ -466,7 +466,7 @@ class ex extends l.PureComponent {
         channel: t,
         embeddedActivity: n
       } = this.props;
-      o()(null != t, "Channel is null during navigation click"), o()(null != n, "Activity null during navigation click"), (0, F.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, F.Qm)(t.type) && (0, E.tg)(eg.Ez.PANEL)
+      o()(null != t, "Channel is null during navigation click"), o()(null != n, "Activity null during navigation click"), (0, F.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, F.Qm)(t.type) && (0, E.tg)(em.Ez.PANEL)
     })
   }
 }
@@ -475,11 +475,11 @@ t.Z = (0, C.Z)(function(e) {
   let {
     guildId: n,
     ...l
-  } = e, r = (0, c.e7)([Y.default], () => Y.default.getId()), a = (0, c.e7)([P.ZP, ei.Z], () => (0, k.Z)(P.ZP, ei.Z)), s = (0, c.e7)([ee.Z, z.Z], () => z.Z.getChannel(ee.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([z.Z], () => z.Z.getChannel(o)), h = (0, c.e7)([q.Z], () => q.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([W.Z], () => [W.Z.getCurrentUserActiveStream(), W.Z.getStreamerActiveStreamMetadata()]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([M.Z], () => M.Z.getActivityPanelTooltipAction()), {
-    partnerGame: m,
+  } = e, r = (0, c.e7)([Y.default], () => Y.default.getId()), a = (0, c.e7)([P.ZP, ei.Z], () => (0, k.Z)(P.ZP, ei.Z)), s = (0, c.e7)([ee.Z, z.Z], () => z.Z.getChannel(ee.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([z.Z], () => z.Z.getChannel(o)), h = (0, c.e7)([q.Z], () => q.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([W.Z], () => [W.Z.getCurrentUserActiveStream(), W.Z.getStreamerActiveStreamMetadata()]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), m = (0, c.e7)([M.Z], () => M.Z.getActivityPanelTooltipAction()), {
+    partnerGame: g,
     dropsActivityPanelExperienceBlocked: C,
     showDropsSparkles: E
-  } = (0, b.c)(em.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), Z = (0, c.e7)([q.Z, J.Z, K.ZP], () => null != s ? D.JL(s, q.Z, J.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, J.Z).length > 0), [T] = (0, S.Z)([null !== (t = function() {
+  } = (0, b.c)(eg.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), Z = (0, c.e7)([q.Z, J.Z, K.ZP], () => null != s ? D.JL(s, q.Z, J.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, J.Z).length > 0), [T] = (0, S.Z)([null !== (t = function() {
     if (null != _ && null != _.id) return _.id;
     if (null != a && null != a.id) return a.id;
     if (null != x) return x.applicationId
@@ -491,7 +491,7 @@ t.Z = (0, C.Z)(function(e) {
     activity: R,
     embeddedActivity: x,
     showDropsSparkles: E,
-    dropsPartnerGame: m,
+    dropsPartnerGame: g,
     dropsActivityPanelExperienceBlocked: C,
     userId: r,
     runningGame: a,
@@ -500,7 +500,7 @@ t.Z = (0, C.Z)(function(e) {
     isStreaming: y,
     channel: d,
     canStream: Z,
-    dropsTooltipAction: g,
+    dropsTooltipAction: m,
     stream: p,
     streamMetadata: _,
     broadcast: O,

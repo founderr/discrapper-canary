@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(258609),
   f = n(382182),
   S = n(210887),
-  N = n(592125),
-  A = n(430824),
+  A = n(592125),
+  N = n(430824),
   m = n(496675),
   O = n(979651),
-  p = n(617136),
-  R = n(113434),
+  R = n(617136),
+  p = n(113434),
   g = n(497505),
   C = n(918701),
   v = n(602667),
@@ -34,44 +34,44 @@ var i = n(735250),
 let b = "11px";
 
 function G(e, t) {
-  return null != e && null != t && (0, f.p9)(t, O.Z, A.Z, m.Z, h.Z)[0]
+  return null != e && null != t && (0, f.p9)(t, O.Z, N.Z, m.Z, h.Z)[0]
 }
 t.Z = function(e) {
   var t, h, f;
   let {
-    quest: A,
+    quest: N,
     memberListItemRef: m,
     applicationStream: O,
     position: w,
-    closePopout: x,
-    updatePosition: B
-  } = e, k = (0, a.e7)([N.Z], () => {
+    closePopout: B,
+    updatePosition: x
+  } = e, k = (0, a.e7)([A.Z], () => {
     var e;
-    return null !== (e = N.Z.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
+    return null !== (e = A.Z.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
   }), V = (0, D.hf)({
-    quest: A,
+    quest: N,
     location: g.jn.MEMBERS_LIST
-  }), Z = (0, R.tP)(A), H = (null == A ? void 0 : null === (t = A.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, F = (null == A ? void 0 : null === (h = A.userStatus) || void 0 === h ? void 0 : h.enrolledAt) != null, Y = (null == A ? void 0 : null === (f = A.userStatus) || void 0 === f ? void 0 : f.completedAt) != null, j = (0, a.e7)([S.Z], () => S.Z.getState().theme), W = (0, l.wj)(j) ? P.BR.DARK : P.BR.LIGHT, K = (0, a.e7)([T.Z], () => T.Z.useReducedMotion), {
+  }), Z = (0, p.tP)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, F = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.enrolledAt) != null, Y = (null == N ? void 0 : null === (f = N.userStatus) || void 0 === f ? void 0 : f.completedAt) != null, j = (0, a.e7)([S.Z], () => S.Z.getState().theme), W = (0, l.wj)(j) ? P.BR.DARK : P.BR.LIGHT, K = (0, a.e7)([T.Z], () => T.Z.useReducedMotion), {
     ref: z,
     height: q
   } = (0, E.Z)(), [X, Q] = r.useState(K), J = (0, I.Aq)(), $ = (0, o.eg)();
   r.useEffect(() => {
     let e = $.current;
-    return null == e || e.addEventListener("scroll", x), () => {
-      null == e || e.removeEventListener("scroll", x)
+    return null == e || e.addEventListener("scroll", B), () => {
+      null == e || e.removeEventListener("scroll", B)
     }
-  }, [x, $]), r.useEffect(() => {
+  }, [B, $]), r.useEffect(() => {
     let e = $.current,
       t = m.current;
     if (null == e || null == t) return;
-    let n = new MutationObserver(() => B());
+    let n = new MutationObserver(() => x());
     return n.observe(e, {
       childList: !0,
       subtree: !0
     }), () => {
       n.disconnect()
     }
-  }, [m, $, B]);
+  }, [m, $, x]);
   let ee = (0, s.useSpring)({
       from: {
         height: 0
@@ -98,12 +98,12 @@ t.Z = function(e) {
       J.dispatch(M.CkL.POPOUT_CLOSE)
     },
     ei = "top" === w ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
-  if (null == A || Z || H && !G(O, k)) return null;
+  if (null == N || Z || H && !G(O, k)) return null;
   let er = () => {
-      (0, p._3)({
-        questId: A.id,
+      (0, R._3)({
+        questId: N.id,
         questContent: g.jn.MEMBERS_LIST,
-        questContentCTA: p.jZ.OPEN_DISCLOSURE,
+        questContentCTA: R.jZ.OPEN_DISCLOSURE,
         trackGuildAndChannelMetadata: !0
       }), (0, u.openModalLazy)(async () => {
         let {
@@ -112,15 +112,15 @@ t.Z = function(e) {
         return t => (0, i.jsx)(e, {
           ...t,
           questContent: g.jn.MEMBERS_LIST,
-          quest: A
+          quest: N
         })
       })
     },
     es = () => {
-      (0, p._3)({
-        questId: A.id,
+      (0, R._3)({
+        questId: N.id,
         questContent: g.jn.MEMBERS_LIST,
-        questContentCTA: p.jZ.LEARN_MORE,
+        questContentCTA: R.jZ.LEARN_MORE,
         trackGuildAndChannelMetadata: !0
       }), d.Z.open(M.oAB.INVENTORY)
     },
@@ -128,10 +128,10 @@ t.Z = function(e) {
       e.stopPropagation(), er()
     },
     ea = () => {
-      if (G(O, k) && null != k) return (0, p._3)({
-        questId: A.id,
+      if (G(O, k) && null != k) return (0, R._3)({
+        questId: N.id,
         questContent: g.jn.MEMBERS_LIST,
-        questContentCTA: p.jZ.WATCH_STREAM,
+        questContentCTA: R.jZ.WATCH_STREAM,
         trackGuildAndChannelMetadata: !0
       }), _.default.selectVoiceChannel(k.id), (0, c.iV)(O);
       es()
@@ -158,7 +158,7 @@ t.Z = function(e) {
       tileAssetType: "game"
     };
   return (0, i.jsx)(v.A, {
-    questOrQuests: A,
+    questOrQuests: N,
     questContent: g.jn.MEMBERS_LIST,
     trackGuildAndChannelMetadata: !0,
     children: e => {
@@ -200,7 +200,7 @@ t.Z = function(e) {
                   color: "text-muted",
                   className: U.helpText,
                   children: y.Z.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
-                    gamePublisher: A.config.messages.gamePublisher
+                    gamePublisher: N.config.messages.gamePublisher
                   })
                 }), (0, i.jsx)(u.CircleQuestionIcon, {
                   size: "custom",
@@ -219,14 +219,14 @@ t.Z = function(e) {
                   className: U.imgUnderlay
                 })), "game" === el.tileAssetType && (0, i.jsx)("img", {
                   alt: y.Z.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
-                    gameTitle: A.config.messages.gameTitle,
-                    gamePublisher: A.config.messages.gamePublisher
+                    gameTitle: N.config.messages.gameTitle,
+                    gamePublisher: N.config.messages.gamePublisher
                   }),
                   className: U.assetTile,
-                  src: (0, C.uo)(A, W)
+                  src: (0, C.uo)(N, W)
                 }), "reward" === el.tileAssetType && (0, i.jsx)(L.Z, {
                   className: U.assetTile,
-                  quest: A,
+                  quest: N,
                   questContent: g.jn.MEMBERS_LIST,
                   learnMoreStyle: "icon",
                   onClick: en

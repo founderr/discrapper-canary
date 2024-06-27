@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(768581),
   f = n(888778),
   S = n(943217),
-  N = n(793397),
-  A = n(300388);
+  A = n(793397),
+  N = n(300388);
 
 function m(e) {
   var t;
@@ -30,8 +30,8 @@ function m(e) {
     displayProfile: s,
     guildId: m,
     profileType: O,
-    pendingBanner: p,
-    children: R,
+    pendingBanner: R,
+    children: p,
     animateOnHover: g = !1,
     hasProfileEffect: C = !1,
     canUsePremiumCustomization: v = !1
@@ -40,10 +40,10 @@ function m(e) {
     status: b
   } = (0, f.Z)({
     displayProfile: s,
-    pendingBanner: p,
-    size: (0, N.e7)(O),
+    pendingBanner: R,
+    size: (0, A.e7)(O),
     canAnimate: g || !y ? D : P
-  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), x = (0, a._i)((0, c.ZP)(n.getAvatarURL(m, w), G, !1)), B = (0, d.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : x).hsl;
+  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), B = (0, a._i)((0, c.ZP)(n.getAvatarURL(m, w), G, !1)), x = (0, d.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : B).hsl;
   return (0, i.jsx)(S.Z, {
     isPremium: L,
     hasThemeColors: L,
@@ -51,7 +51,7 @@ function m(e) {
     hasBanner: null != U,
     hasProfileEffect: C,
     children: (0, i.jsxs)("div", {
-      className: o()(A.banner, A.divider, (0, N.Ae)({
+      className: o()(N.banner, N.divider, (0, A.Ae)({
         profileType: O,
         user: {
           hasBanner: null != U,
@@ -63,11 +63,11 @@ function m(e) {
       onMouseLeave: () => M(!1),
       style: {
         backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
-        backgroundColor: b !== f.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : B
+        backgroundColor: b !== f.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : x
       },
       children: [!y && (0, h.F8)(U) && (0, i.jsx)(T.Z, {
-        className: A.gifTag
-      }), R]
+        className: N.gifTag
+      }), p]
     })
   })
 }

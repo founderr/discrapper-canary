@@ -25,12 +25,12 @@ function T(e) {
     onClose: h,
     onComplete: f,
     onSubscriptionConfirmation: S,
-    analyticsLocations: N,
-    analyticsObject: A,
+    analyticsLocations: A,
+    analyticsObject: N,
     analyticsLocation: m,
     analyticsSourceLocation: O,
-    isGift: p = !1,
-    giftMessage: R,
+    isGift: R = !1,
+    giftMessage: p,
     subscriptionTier: g,
     trialId: C,
     postSuccessGuild: v,
@@ -41,7 +41,7 @@ function T(e) {
     returnRef: y,
     subscription: U,
     skipConfirm: b
-  } = null != e ? e : {}, G = !1, w = (0, r.Z)(), x = u.default.getCurrentUser(), B = (0, d.M5)(x, I.p9.TIER_2);
+  } = null != e ? e : {}, G = !1, w = (0, r.Z)(), B = u.default.getCurrentUser(), x = (0, d.M5)(B, I.p9.TIER_2);
   (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -56,20 +56,20 @@ function T(e) {
         loadId: w,
         subscriptionTier: g,
         skuId: (0, d.Wz)(g),
-        isGift: p,
-        giftMessage: R,
+        isGift: R,
+        giftMessage: p,
         giftRecipient: P,
         initialPlanId: t,
         followupSKUInfo: T,
         onClose: (e, t) => {
-          r(), null == h || h(e), e && (null == S || S(), !p && null != t && t === I.Si.TIER_2 && !B && c.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED))
+          r(), null == h || h(e), e && (null == S || S(), !R && null != t && t === I.Si.TIER_2 && !x && c.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
-          G = !0, null == f || f(), !p && (0, l.H)(!0)
+          G = !0, null == f || f(), !R && (0, l.H)(!0)
         },
         onSubscriptionConfirmation: S,
-        analyticsLocations: N,
-        analyticsObject: A,
+        analyticsLocations: A,
+        analyticsObject: N,
         analyticsLocation: m,
         analyticsSourceLocation: O,
         trialId: C,
@@ -89,13 +89,13 @@ function T(e) {
       !G && _.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
         load_id: w,
         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
-        location: null != m ? m : A,
+        location: null != m ? m : N,
         source: O,
         subscription_type: E.NYc.PREMIUM,
-        is_gift: p,
+        is_gift: R,
         eligible_for_trial: null != C,
         application_id: D,
-        location_stack: N
+        location_stack: A
       }), (0, o.fw)(), (0, a.p)(), null == h || h(G), G && (null == S || S())
     }
   })

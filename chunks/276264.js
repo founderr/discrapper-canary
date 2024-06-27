@@ -20,34 +20,34 @@ var i = n(735250),
   h = n(509275),
   f = n(204197),
   S = n(594174),
-  N = n(467679),
-  A = n(681426),
+  A = n(467679),
+  N = n(681426),
   m = n(709586),
   O = n(360048),
-  p = n(624138),
-  R = n(51144),
+  R = n(624138),
+  p = n(51144),
   g = n(788307),
   C = n(981631),
   v = n(674563),
   L = n(524484),
   D = n(689938),
   M = n(328e3);
-let P = (0, p.Mg)(a.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let P = (0, R.Mg)(a.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function(e) {
   var t;
   let {
     selected: n = !1,
     colorString: s,
     colorRoleName: a,
-    isOwner: p,
+    isOwner: R,
     ownerTooltipText: P,
     lostPermissionTooltipText: y,
     isTyping: U = !1,
     nick: b,
     user: G,
     currentUser: w,
-    activities: x,
-    applicationStream: B,
+    activities: B,
+    applicationStream: x,
     status: k,
     shouldAnimateStatus: V = !1,
     isMobile: Z,
@@ -69,7 +69,7 @@ t.Z = function(e) {
     id: ei,
     tabIndex: er,
     itemProps: es
-  } = e, eo = null == G ? void 0 : G.id, ea = R.ZP.useName(G), el = (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === eo, eu = r.useRef(null), [e_, ec] = r.useState(!1), [ed, eE] = r.useState(null), {
+  } = e, eo = null == G ? void 0 : G.id, ea = p.ZP.useName(G), el = (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === eo, eu = r.useRef(null), [e_, ec] = r.useState(!1), [ed, eE] = r.useState(null), {
     avatarDecorationSrc: eI,
     avatarSrc: eT,
     eventHandlers: eh
@@ -81,23 +81,23 @@ t.Z = function(e) {
   }), ef = r.useMemo(() => ({
     source: C.jXE.MEMBER_LIST,
     tagUserId: eo
-  }), [eo]), [eS, eN] = r.useState(!1);
+  }), [eo]), [eS, eA] = r.useState(!1);
   r.useEffect(() => {
-    n && eN(!1)
+    n && eA(!1)
   }, [n]);
-  let eA = (0, E.Fr)(x),
-    em = null != eA && !el && n && !eS && (0, I.dl)(eA),
+  let eN = (0, E.Fr)(B),
+    em = null != eN && !el && n && !eS && (0, I.dl)(eN),
     eO = () => {
       ec(!0)
     },
-    ep = () => {
+    eR = () => {
       ec(!1)
     },
-    eR = e => {
+    ep = e => {
       eE(e)
     },
     eg = () => {
-      let e = null != x ? x.find(e => e.type === C.IIU.CUSTOM_STATUS) : null,
+      let e = null != B ? B.find(e => e.type === C.IIU.CUSTOM_STATUS) : null,
         t = null != e && null != G && (0, c.Z)(e, G, F);
       if (null != j && null == e) {
         let e = (0, h.H)(j);
@@ -110,16 +110,16 @@ t.Z = function(e) {
         className: M.activity,
         textClassName: M.activityText,
         emojiClassName: M.activityEmoji,
-        activities: x,
-        applicationStream: B,
+        activities: B,
+        applicationStream: x,
         animate: e_,
         hideEmoji: !t,
         hideTooltip: !0,
         user: G,
-        hasQuest: null != eA && (0, I.dl)(eA)
+        hasQuest: null != eN && (0, I.dl)(eN)
       })
     },
-    eC = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
+    eC = () => null != R && R && null == y ? (0, i.jsx)(l.Tooltip, {
       text: null != P ? P : D.Z.Messages.GUILD_OWNER,
       children: e => (0, i.jsx)(l.CrownIcon, {
         size: "md",
@@ -143,7 +143,7 @@ t.Z = function(e) {
     }),
     eL = () => {
       let e = (null == G ? void 0 : G.isClyde()) ? v.Hb.AI : v.Hb.BOT;
-      return null != G && G.bot ? (0, i.jsx)(N.Z, {
+      return null != G && G.bot ? (0, i.jsx)(A.Z, {
         className: M.botTag,
         type: e,
         verified: G.isVerifiedBot()
@@ -154,7 +154,7 @@ t.Z = function(e) {
     }),
     eM = (e, t) => {
       let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.Z)(x) ? C.Skl.STREAMING : k;
+        r = (0, u.Z)(B) ? C.Skl.STREAMING : k;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eh,
@@ -166,7 +166,7 @@ t.Z = function(e) {
           "aria-label": e.username,
           statusTooltip: !0,
           avatarDecoration: eI,
-          typingIndicatorRef: eR
+          typingIndicatorRef: ep
         }), (0, i.jsx)(d.Z, {
           confettiSpawnRef: ed,
           shouldFire: U && null != w && e.id !== w.id,
@@ -191,16 +191,16 @@ t.Z = function(e) {
     }),
     ey = k === C.Skl.OFFLINE,
     eU = null != j;
-  return null == G ? (0, i.jsx)(A.Z, {
+  return null == G ? (0, i.jsx)(N.Z, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: M.placeholder
   }) : (0, i.jsx)(l.Popout, {
     renderPopout: e => (0, i.jsx)(T.Z, {
-      quest: eA,
+      quest: eN,
       memberListItemRef: eu,
-      applicationStream: B,
+      applicationStream: x,
       ...e,
-      closePopout: () => eN(!0)
+      closePopout: () => eA(!0)
     }),
     position: "bottom",
     shouldShow: em,
@@ -220,7 +220,7 @@ t.Z = function(e) {
       onMouseDown: K,
       onContextMenu: X,
       onMouseEnter: eO,
-      onMouseLeave: ep,
+      onMouseLeave: eR,
       name: null == y ? (0, i.jsx)("span", {
         className: M.username,
         children: eP()

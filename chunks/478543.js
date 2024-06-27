@@ -33,7 +33,7 @@ function S(e) {
   }) : null
 }
 
-function N(e) {
+function A(e) {
   let {
     subHead: t,
     buildDetails: n,
@@ -70,18 +70,18 @@ t.Z = e => {
   let {
     loading: a = !1,
     currentOverrides: c,
-    linkMeta: A,
+    linkMeta: N,
     url: m,
     applyBuildOverride: O,
-    clearBuildOverride: p
-  } = e, [R, g] = r.useState(!1), C = r.useCallback(() => {
-    if (!R) g(!0), O().catch(() => g(!1))
-  }, [O, R]), v = r.useCallback(() => {
-    if (!R) g(!0), p().catch(() => g(!1))
-  }, [p, R]);
+    clearBuildOverride: R
+  } = e, [p, g] = r.useState(!1), C = r.useCallback(() => {
+    if (!p) g(!0), O().catch(() => g(!1))
+  }, [O, p]), v = r.useCallback(() => {
+    if (!p) g(!0), R().catch(() => g(!1))
+  }, [R, p]);
   return (0, i.jsxs)("div", {
     className: f.wrapper,
-    children: [(t = A, n = m, s = a, (0, i.jsxs)(u.Text, {
+    children: [(t = N, n = m, s = a, (0, i.jsxs)(u.Text, {
       variant: "text-xs/normal",
       className: f.titleRegion,
       children: [(0, i.jsx)("strong", {
@@ -129,7 +129,7 @@ t.Z = e => {
         !E.isPlatformEmbedded && T.push("discord_marketing", "discord_developers");
         let f = (0, I.Z)(a, T);
         if (!f.valid) return function(e) {
-          return N({
+          return A({
             subHead: h.Z.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
             buttonColor: u.Button.Colors.TRANSPARENT,
             buttonText: "Invalid",
@@ -140,11 +140,11 @@ t.Z = e => {
         l()(null != a, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
         let {
           discord_web: S,
-          discord_developers: A
-        } = a.targetBuildOverride, m = null != S ? S : A;
+          discord_developers: N
+        } = a.targetBuildOverride, m = null != S ? S : N;
         if (l()(null != m, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved"), t = m, null == (n = o) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type) r = h.Z.Messages.BUILD_OVERRIDE_APPLY, i = _, s = u.Button.Colors.GREEN;
         else r = h.Z.Messages.BUILD_OVERRIDE_CLEAR, i = c, s = u.Button.Colors.RED;
-        return N({
+        return A({
           subHead: h.Z.Messages.BUILD_OVERRIDE_ID,
           buildDetails: m.id,
           buttonClick: i,
@@ -154,10 +154,10 @@ t.Z = e => {
         })
       }({
         currentOverrides: c,
-        linkMeta: A,
+        linkMeta: N,
         applyBuildOverride: C,
         clearBuildOverride: v,
-        submitting: R
+        submitting: p
       })]
     })]
   })

@@ -33,8 +33,8 @@ class d extends(i = s.Component) {
       forwardedRef: h,
       closeIconClassName: f,
       searchIconClassName: S,
-      cta: N
-    } = this.props, A = null != i && i.length > 0, m = null != h ? h : this._textInputRef;
+      cta: A
+    } = this.props, N = null != i && i.length > 0, m = null != h ? h : this._textInputRef;
     return (0, r.jsx)(l.FocusRing, {
       focusTarget: m,
       ringTarget: this._containerRef,
@@ -54,17 +54,17 @@ class d extends(i = s.Component) {
           onFocus: d,
           onBlur: E,
           onKeyPress: I,
-          value: A ? i : "",
+          value: N ? i : "",
           placeholder: n,
           autoFocus: e,
           "aria-label": t,
           autoComplete: T ? "on" : "off"
-        }), null != N ? (0, r.jsx)(l.Text, {
+        }), null != A ? (0, r.jsx)(l.Text, {
           color: "text-muted",
           variant: "text-xs/normal",
           className: _.cta,
-          children: N
-        }) : null, A ? (0, r.jsx)(l.Clickable, {
+          children: A
+        }) : null, N ? (0, r.jsx)(l.Clickable, {
           onClick: this.handleClear,
           className: _.clear,
           "aria-label": u.Z.Messages.SEARCH_CLEAR,

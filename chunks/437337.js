@@ -42,8 +42,8 @@ let E = {
       focusProps: f,
       innerRef: S
     } = e, {
-      reducedMotion: N
-    } = r.useContext(u.S), A = r.useRef(null), [m, O] = r.useState(!1), p = (0, c.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(), R = (0, c.d)(l.Z.unsafe_rawColors.GREEN_360).spring(), {
+      reducedMotion: A
+    } = r.useContext(u.S), N = r.useRef(null), [m, O] = r.useState(!1), R = (0, c.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(), p = (0, c.d)(l.Z.unsafe_rawColors.GREEN_360).spring(), {
       state: g,
       opacity: C
     } = (0, a.useSpring)({
@@ -66,7 +66,7 @@ let E = {
         style: {
           opacity: C,
           backgroundColor: g.to({
-            output: [p, R]
+            output: [R, p]
           })
         },
         children: [(0, i.jsxs)(a.animated.svg, {
@@ -122,12 +122,12 @@ let E = {
                 })
               })]
             })
-          }(g, p, R, N.enabled)]
+          }(g, R, p, A.enabled)]
         }), (0, i.jsx)("input", {
           id: t,
           type: "checkbox",
           ref: e => {
-            A.current = e, null != S && (S.current = e)
+            N.current = e, null != S && (S.current = e)
           },
           className: d.input,
           tabIndex: T ? -1 : 0,
@@ -136,7 +136,7 @@ let E = {
           },
           onKeyUp: function(e) {
             var t;
-            if (!T && !!m && !e.repeat) O(!1), "Enter" === e.key && (null === (t = A.current) || void 0 === t || t.click())
+            if (!T && !!m && !e.repeat) O(!1), "Enter" === e.key && (null === (t = N.current) || void 0 === t || t.click())
           },
           onChange: function(e) {
             O(!1), null == n || n(e.currentTarget.checked, e)

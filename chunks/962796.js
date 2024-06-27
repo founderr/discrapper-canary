@@ -3,13 +3,13 @@ n.d(t, {
     return _
   },
   Kp: function() {
-    return m
+    return I
   },
   Mf: function() {
     return T
   },
   Y_: function() {
-    return I
+    return m
   },
   dR: function() {
     return E
@@ -66,7 +66,7 @@ function E(e, t) {
   }], [n])
 }
 
-function I(e, t) {
+function m(e, t) {
   a.Z.dispatch({
     type: "MESSAGE_REMINDER_TOGGLE",
     messageId: e,
@@ -74,7 +74,7 @@ function I(e, t) {
   })
 }
 
-function m(e) {
+function I(e) {
   let t = u.Z.getMessageReminders();
   (0, d.L9)([], t.filter(t => t.messageId === e))
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   ZX: function() {
-    return A
+    return N
   },
   gt: function() {
     return m
@@ -24,11 +24,11 @@ let S = {
     default: f.shineDefault,
     small: f.shineSmall
   },
-  N = {
+  A = {
     default: f.shineInnerDefault,
     small: f.shineInnerSmall
   };
-class A extends(l = _.PureComponent) {
+class N extends(l = _.PureComponent) {
   render() {
     let {
       className: e,
@@ -46,7 +46,7 @@ class A extends(l = _.PureComponent) {
         justify: h.Z.Justify.CENTER,
         className: S[t],
         children: (0, u.jsx)("div", {
-          className: N[t]
+          className: A[t]
         })
       })
     })
@@ -54,7 +54,7 @@ class A extends(l = _.PureComponent) {
 }
 o = {
   shineSize: "default"
-}, (s = "defaultProps") in(r = A) ? Object.defineProperty(r, s, {
+}, (s = "defaultProps") in(r = N) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
@@ -72,14 +72,14 @@ let m = e => {
     buttonShineClassName: l,
     onlyShineOnHover: c,
     ...E
-  } = e, h = _.createRef(), S = (0, T.Z)(h), N = !i && !r && !0 !== s && (!c || S);
+  } = e, h = _.createRef(), S = (0, T.Z)(h), A = !i && !r && !0 !== s && (!c || S);
   return (0, u.jsxs)(I.Button, {
     buttonRef: h,
     ...E,
     className: d()(f.shinyButton, n),
     disabled: i,
     submitting: r,
-    children: [t, N ? (0, u.jsx)(A, {
+    children: [t, A ? (0, u.jsx)(N, {
       shinePaused: a,
       className: d()(f.buttonShine, c ? f.onlyShineOnHover : void 0, l),
       shineSize: o

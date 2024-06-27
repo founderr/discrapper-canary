@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   N: function() {
-    return N
+    return A
   }
 }), n(757143), n(47120);
 var i = n(623279),
@@ -103,7 +103,7 @@ let S = s().debounce((e, t) => {
   }(t);
   null != n && e.detectLanguage(n)
 }, 250);
-async function N() {
+async function A() {
   var e, t;
   let n = new f((null !== (e = await T.getAvailableDictionaries()) && void 0 !== e ? e : []).map(h).filter(_.lm));
   return t = n, null != document.body && document.body.addEventListener("beforeinput", e => S(t, e.target), !0), n

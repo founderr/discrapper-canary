@@ -21,16 +21,16 @@ var r = n(399606),
   h = n(358085),
   f = n(13140),
   S = n(763296),
-  N = n(981631),
-  A = n(689938),
+  A = n(981631),
+  N = n(689938),
   m = n(658147);
 
 function O(e) {
   let {
     soundboardSound: t,
     closePicker: O
-  } = e, p = (0, c.Iu)(e => e.searchQuery), R = (0, r.e7)([S.Z], () => null != t && S.Z.isFavoriteSound(t.soundId)), g = (0, r.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)), C = (0, r.e7)([l.Z], () => l.Z.useReducedMotion, []), v = (0, r.e7)([T.Z], () => T.Z.isFocused()), L = (0, r.e7)([I.Z], () => I.Z.getKeybindForAction(N.kg4.SOUNDBOARD_HOLD));
-  if (null != t && p.length > 0) return (0, i.jsx)(d.Z, {
+  } = e, R = (0, c.Iu)(e => e.searchQuery), p = (0, r.e7)([S.Z], () => null != t && S.Z.isFavoriteSound(t.soundId)), g = (0, r.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)), C = (0, r.e7)([l.Z], () => l.Z.useReducedMotion, []), v = (0, r.e7)([T.Z], () => T.Z.isFocused()), L = (0, r.e7)([I.Z], () => I.Z.getKeybindForAction(A.kg4.SOUNDBOARD_HOLD));
+  if (null != t && R.length > 0) return (0, i.jsx)(d.Z, {
     graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(a.Z, {
       emojiId: t.emojiId,
       emojiName: t.emojiName,
@@ -46,7 +46,7 @@ function O(e) {
     }) : null,
     titlePrimary: t.name,
     titleSecondary: null == g ? void 0 : g.name,
-    isFavorite: R
+    isFavorite: p
   });
   let D = () => {
       O(), (0, o.openModalLazy)(async () => {
@@ -59,7 +59,7 @@ function O(e) {
       })
     },
     M = (0, u.un)(s.z.SOUNDBOARD_KEYBIND_TIP),
-    P = null != L && (0, h.isWindows)() && !M ? A.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+    P = null != L && (0, h.isWindows)() && !M ? N.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
       keybind: (0, f.BB)(L.shortcut, !0),
       openSettingsHook: (e, t) => (0, i.jsx)(o.Anchor, {
         onClick: D,

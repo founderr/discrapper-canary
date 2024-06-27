@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $p: function() {
-    return A
+    return N
   },
   FQ: function() {
-    return N
+    return A
   },
   Il: function() {
     return m
@@ -16,7 +16,7 @@ n.d(t, {
     return D
   },
   Um: function() {
-    return p
+    return R
   },
   eu: function() {
     return C
@@ -25,7 +25,7 @@ n.d(t, {
     return M
   },
   lY: function() {
-    return R
+    return p
   },
   pk: function() {
     return O
@@ -50,7 +50,7 @@ var i = n(392711),
   h = n(981631),
   f = n(526761),
   S = n(689938);
-let N = async (e, t) => {
+let A = async (e, t) => {
   let {
     body: n
   } = await (0, I.Kb)(h.ANM.STICKER_PACK(e));
@@ -60,7 +60,7 @@ let N = async (e, t) => {
     pack: n,
     ingestStickers: t
   }), n
-}, A = async function() {
+}, N = async function() {
   let {
     locale: e = u.default.locale
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -108,11 +108,11 @@ let N = async (e, t) => {
       user: new c.Z(e.user)
     } : e)
   })
-}, p = async e => {
+}, R = async e => {
   await s.tn.del({
     url: h.ANM.GUILD_STICKER(e.guild_id, e.id)
   })
-}, R = async (e, t) => {
+}, p = async (e, t) => {
   let n = await s.tn.post({
     url: h.ANM.GUILD_STICKER_PACKS(e),
     body: t

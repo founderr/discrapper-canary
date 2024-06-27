@@ -28,18 +28,18 @@ t.Z = function(e) {
     active: h,
     onClick: f,
     "aria-controls": S,
-    focusProps: N
-  } = e, [A, m] = r.useState(!1), [O, p] = r.useState(50), R = A || h, g = (0, _.l)(E, "emojiButton", R ? "Hovered" : "Normal");
+    focusProps: A
+  } = e, [N, m] = r.useState(!1), [O, R] = r.useState(50), p = N || h, g = (0, _.l)(E, "emojiButton", p ? "Hovered" : "Normal");
   let C = (t = O, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
       "--custom-emoji-sprite-col": t % 20
     }),
     v = r.useCallback(() => {
-      if (R) return;
+      if (p) return;
       let e = Math.floor(77 * Math.random());
-      m(!0), p(e), (0, u.x)(c.qR.EmojiButtonMouseEntered)
-    }, [R, m, p]),
+      m(!0), R(e), (0, u.x)(c.qR.EmojiButtonMouseEntered)
+    }, [p, m, R]),
     L = r.useCallback(() => {
       m(!1)
     }, [m]),
@@ -58,11 +58,11 @@ t.Z = function(e) {
     "aria-controls": S,
     "aria-expanded": h,
     "aria-haspopup": "dialog",
-    focusProps: N,
+    focusProps: A,
     children: null != T ? T() : (0, i.jsx)(a.Spring, {
       config: I,
       to: {
-        value: R ? 1 : 0
+        value: p ? 1 : 0
       },
       children: e => {
         let {
@@ -75,9 +75,9 @@ t.Z = function(e) {
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
           children: [(0, i.jsx)("div", {
-            className: o()(E.sprite, E.spriteColored, R ? E.active : E.inactive)
+            className: o()(E.sprite, E.spriteColored, p ? E.active : E.inactive)
           }), (0, i.jsx)("div", {
-            className: o()(E.sprite, E.spriteGreyscale, R ? E.inactive : E.active)
+            className: o()(E.sprite, E.spriteGreyscale, p ? E.inactive : E.active)
           })]
         })
       }

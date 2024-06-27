@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(239091),
   f = n(941028),
   E = n(144144),
-  g = n(276264),
-  C = n(607070),
+  C = n(276264),
+  g = n(607070),
   I = n(100527),
   x = n(367907),
   T = n(906732),
@@ -59,7 +59,7 @@ function q(e, t, n) {
   }) : e[t] = n, e
 }
 let X = W.ZP.getEnableHardwareAcceleration(),
-  Q = 44 + g.x,
+  Q = 44 + C.x,
   J = {
     origin: {
       x: 38,
@@ -93,7 +93,7 @@ class $ extends a.Component {
       isMobileOnline: _,
       lastOnlineTimestamp: f,
       premiumSince: E,
-      ...C
+      ...g
     } = this.props, I = null != E ? new Date(E) : null;
     return (0, i.jsx)(m.Popout, {
       preload: () => (0, P.W)(l, {
@@ -108,7 +108,7 @@ class $ extends a.Component {
         let {
           isShown: E
         } = m;
-        return (0, i.jsx)(g.Z, {
+        return (0, i.jsx)(C.Z, {
           className: K.member,
           onContextMenu: this.renderUserContextMenu,
           shouldAnimateStatus: X,
@@ -128,7 +128,7 @@ class $ extends a.Component {
           isMobile: _,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: E,
-          itemProps: C,
+          itemProps: g,
           lastOnlineTimestamp: f,
           ...d
         })
@@ -250,7 +250,7 @@ function en(e) {
   let {
     index: t
   } = e, n = (0, c.JA)("".concat(t));
-  return (0, i.jsx)(g.Z, {
+  return (0, i.jsx)(C.Z, {
     itemProps: n
   })
 }
@@ -520,7 +520,7 @@ function ea(e) {
     className: n
   } = e, {
     analyticsLocations: l
-  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled), o = (0, h.cj)([y.ZP], () => y.ZP.getProps(t.guild_id, t.id)), {
+  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled), o = (0, h.cj)([y.ZP], () => y.ZP.getProps(t.guild_id, t.id)), {
     rows: d,
     groups: p,
     version: m,
@@ -548,7 +548,7 @@ function ea(e) {
         })
       }
     })
-  }, []), g = a.useCallback(() => new Promise(e => {
+  }, []), C = a.useCallback(() => new Promise(e => {
     let t = f.current;
     if (null == t) return e();
     t.scrollToTop({
@@ -566,7 +566,7 @@ function ea(e) {
     id: "members-".concat(t.id),
     setFocus: E,
     isEnabled: r,
-    scrollToStart: g,
+    scrollToStart: C,
     scrollToEnd: x
   }), v = (0, h.e7)([j.Z], () => j.Z.getPriorityGuilds().includes(t.guild_id));
   return (0, i.jsx)(T.Gt, {

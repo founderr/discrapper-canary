@@ -21,12 +21,12 @@ t.Z = e => {
     buttonText: h,
     targetBoostedGuildTier: f,
     onClose: S = () => {},
-    closeLayer: N = () => {},
-    pauseAnimation: A = !1,
+    closeLayer: A = () => {},
+    pauseAnimation: N = !1,
     applicationId: m,
     handleSubscribeModalClose: O,
-    withHighlight: p = !1,
-    ...R
+    withHighlight: R = !1,
+    ...p
   } = e, {
     analyticsLocations: g
   } = (0, u.ZP)(), C = (0, l.bp)() === E.IlC.POPOUT, [v, L] = r.useState(!1), D = null != f ? Math.max((0, c.KK)(s, f), 1) : 1, M = (0, c.aq)(), P = async () => {
@@ -37,7 +37,7 @@ t.Z = e => {
       guild: s,
       numberOfBoostsToAdd: D,
       onClose: S,
-      closeLayer: N,
+      closeLayer: A,
       inPopout: C,
       applicationId: m,
       handleSubscribeModalClose: O
@@ -51,26 +51,26 @@ t.Z = e => {
       size: "xs",
       className: T.lockIcon
     }), " ", U]
-  }), R.disabled = !0), null != M) ? (0, i.jsx)(a.Tooltip, {
+  }), p.disabled = !0), null != M) ? (0, i.jsx)(a.Tooltip, {
     text: M,
     "aria-label": !1,
     children: e => (0, i.jsx)(a.ShinyButton, {
       ...e,
       disabled: !0,
       size: a.Button.Sizes.SMALL,
-      pauseAnimation: A,
-      ...R,
+      pauseAnimation: N,
+      ...p,
       children: U
     })
   }) : (0, i.jsx)(a.ShinyButton, {
     size: a.Button.Sizes.SMALL,
-    ...R,
-    className: o()(R.className, {
-      [T.buttonHighlighted]: p
+    ...p,
+    className: o()(p.className, {
+      [T.buttonHighlighted]: R
     }),
     submitting: v,
     onClick: P,
-    pauseAnimation: A,
+    pauseAnimation: N,
     children: U
   })
 }

@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(27457),
   f = n(111248),
   E = n(312703),
-  g = n(796638),
-  C = n(981631),
+  C = n(796638),
+  g = n(981631),
   I = n(354459),
   x = n(858962),
   T = n(868999);
 let N = 16 / 9,
-  v = 8 + g.cF;
+  v = 8 + C.cF;
 
 function S(e) {
   let t, {
@@ -57,7 +57,7 @@ function S(e) {
     Q = D <= 2 * v + 144,
     J = L && !Q,
     $ = (0, o.Z)(J),
-    ee = k === C.AEg.MINIMUM || k === C.AEg.NORMAL,
+    ee = k === g.AEg.MINIMUM || k === g.AEg.NORMAL,
     et = !Q && (!ee || K),
     en = (0, m.Z)(et, 100),
     ei = 0;
@@ -83,9 +83,9 @@ function S(e) {
         clamp: !0
       },
       onStart: () => Y(!0),
-      onChange: () => p.S.dispatch(C.CkL.REMEASURE_TARGET),
+      onChange: () => p.S.dispatch(g.CkL.REMEASURE_TARGET),
       onRest: () => {
-        Y(!1), p.S.dispatch(C.CkL.REMEASURE_TARGET)
+        Y(!1), p.S.dispatch(g.CkL.REMEASURE_TARGET)
       }
     }),
     eu = (0, r.useSpring)({
@@ -134,7 +134,7 @@ function S(e) {
     {
       visibleParticipants: ef,
       participantTileWidth: eE
-    } = (0, g.ZB)(y, A);
+    } = (0, C.ZB)(y, A);
   return (0, i.jsxs)("div", {
     className: s()(T.root, x.flexCenter, P),
     children: [(0, i.jsxs)("div", {
@@ -203,7 +203,7 @@ function S(e) {
           opacity: ec.value,
           visibility: ec.value.to(e => 0 === e ? "hidden" : "visible")
         },
-        children: (0, i.jsx)(g.ZP, {
+        children: (0, i.jsx)(C.ZP, {
           channel: R,
           onClick: n,
           onContextMenu: l,

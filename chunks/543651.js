@@ -22,14 +22,14 @@ t.Z = function(e) {
     title: o,
     guildId: f,
     className: S
-  } = e, N = (0, _.q)(r), A = (0, l.Wu)([d.default], () => {
+  } = e, A = (0, _.q)(r), N = (0, l.Wu)([d.default], () => {
     var e;
     return null !== (e = n.map(e => d.default.getUser(e)).filter(I.lm)) && void 0 !== e ? e : []
-  }), m = null == N ? void 0 : N.name, O = a()(t).fromNow();
+  }), m = null == A ? void 0 : A.name, O = a()(t).fromNow();
   return null == t ? null : (0, i.jsxs)("div", {
     className: s()(S, h.container),
     children: [(0, i.jsx)(E.Z, {
-      game: N
+      game: A
     }), (0, i.jsxs)("div", {
       className: h.textSection,
       children: [null != o && "" !== o ? (0, i.jsx)(u.Text, {
@@ -50,9 +50,9 @@ t.Z = function(e) {
         color: "text-muted",
         className: h.__invalid_subtitle
       })]
-    }), null != A && A.length > 0 && (0, i.jsx)(c.Z, {
+    }), null != N && N.length > 0 && (0, i.jsx)(c.Z, {
       maxUsers: 4,
-      users: A,
+      users: N,
       className: h.__invalid_facePile,
       guildId: f
     })]

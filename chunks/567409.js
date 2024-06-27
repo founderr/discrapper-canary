@@ -1,6 +1,6 @@
 a.d(l, {
   Z: function() {
-    return x
+    return g
   }
 }), a(47120);
 var n = a(470079),
@@ -15,7 +15,7 @@ var n = a(470079),
 let m = new Set([i.s.PLAYED_GAME]),
   h = e => m.has(e.content_type);
 
-function x() {
+function g() {
   let e = (0, c.Z)(u.YN.GAME_PROFILE_FEED),
     l = (0, c.Z)(u.YN.GLOBAL_FEED),
     a = n.useMemo(() => t()(l).unionBy(e, e => e.id).filter(h).orderBy(e => d.default.extractTimestamp(e.id), "desc").uniqWith((e, l) => e.author_id === l.author_id && e.extra.application_id === l.extra.application_id).value(), [e, l]);

@@ -1,6 +1,6 @@
 t.r(s), t.d(s, {
   default: function() {
-    return B
+    return U
   }
 }), t(411104), t(47120);
 var n, a, i = t(735250),
@@ -17,13 +17,13 @@ var n, a, i = t(735250),
   I = t(431369),
   N = t(55610),
   C = t(653798),
-  A = t(311821),
-  m = t(42818),
-  O = t(314884),
-  g = t(509545),
+  m = t(311821),
+  A = t(42818),
+  g = t(314884),
+  O = t(509545),
   h = t(78839),
-  R = t(285952),
-  p = t(267642),
+  p = t(285952),
+  R = t(267642),
   x = t(74538),
   M = t(937615),
   D = t(518062),
@@ -65,7 +65,7 @@ function v(e) {
         fromBoostCancelModal: !0
       })]
     }), s.isPurchasedExternally ? null : (0, i.jsxs)(d.ModalFooter, {
-      justify: R.Z.Justify.START,
+      justify: p.Z.Justify.START,
       children: [(0, i.jsx)(d.Button, {
         onClick: n,
         children: P.Z.Messages.NEXT
@@ -79,8 +79,8 @@ function v(e) {
 }(a = n || (n = {}))[a.START = 1] = "START", a[a.PREVIEW = 2] = "PREVIEW", a[a.CONFIRM = 3] = "CONFIRM";
 async function b(e, s, t, n) {
   let a = null != n ? n : function() {
-    let e = Object.values(O.Z.boostSlots),
-      s = l().sortBy(e.filter(e => !(0, p.tl)(e)), e => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null])[0];
+    let e = Object.values(g.Z.boostSlots),
+      s = l().sortBy(e.filter(e => !(0, R.tl)(e)), e => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null])[0];
     return null != s ? s.id : null
   }();
   if (null == a) throw Error("No slot to cancel");
@@ -97,7 +97,7 @@ function j(e) {
     onBack: l,
     onNext: _,
     onClose: E
-  } = e, [N, O] = r.useState(!1), [h, p] = r.useMemo(() => {
+  } = e, [N, g] = r.useState(!1), [h, R] = r.useMemo(() => {
     try {
       return [(0, I.g)(a, -1), !1]
     } catch {
@@ -107,34 +107,34 @@ function j(e) {
     }
   }, [a]);
   r.useEffect(() => {
-    p && E()
-  }, [p]);
+    R && E()
+  }, [R]);
   let {
     premiumSubscriptionPlan: L,
     premiumGuildPlan: v
-  } = (0, c.cj)([g.Z], () => {
-    let e = g.Z.get(a.planId);
+  } = (0, c.cj)([O.Z], () => {
+    let e = O.Z.get(a.planId);
     return {
       premiumSubscriptionPlan: e,
-      premiumGuildPlan: null != e ? g.Z.getForSkuAndInterval((0, x.Wz)(f.Si.GUILD), e.interval, e.intervalCount) : null
+      premiumGuildPlan: null != e ? O.Z.getForSkuAndInterval((0, x.Wz)(f.Si.GUILD), e.interval, e.intervalCount) : null
     }
   }), {
     analyticsLocations: j
-  } = (0, T.ZP)(), [U] = (0, S.ED)({
+  } = (0, T.ZP)(), [B] = (0, S.ED)({
     subscriptionId: a.id,
     renewal: !0,
     currency: a.currency,
     paymentSourceId: a.paymentSourceId,
     analyticsLocations: j,
     analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
-  }), B = null != v ? (0, x.Zx)(a, null !== (n = null === (s = h[0]) || void 0 === s ? void 0 : s.quantity) && void 0 !== n ? n : 0, v.id) : null, [G] = (0, S.ED)({
+  }), U = null != v ? (0, x.Zx)(a, null !== (n = null === (s = h[0]) || void 0 === s ? void 0 : s.quantity) && void 0 !== n ? n : 0, v.id) : null, [G] = (0, S.ED)({
     subscriptionId: a.id,
-    items: B,
+    items: U,
     renewal: !0,
     analyticsLocations: j,
     analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
   });
-  if (null == G || null == L || null == v || null == U) return (0, i.jsx)(d.Spinner, {});
+  if (null == G || null == L || null == v || null == B) return (0, i.jsx)(d.Spinner, {});
   let F = a.items.some(e => {
       let {
         planId: s
@@ -152,7 +152,7 @@ function j(e) {
       } = e;
       return f.Z1.has(s)
     }),
-    y = F || V ? G.total - U.total : -U.total,
+    y = F || V ? G.total - B.total : -B.total,
     {
       interval: Y,
       intervalCount: H
@@ -176,8 +176,8 @@ function j(e) {
           }),
           value: (0, M.og)((0, M.T4)(y, a.currency), Y, H),
           className: Z.invoiceCancelRow
-        }), null != B && B.length > 0 ? (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(C.KU, {}), (0, i.jsx)(m.nd, {
+        }), null != U && U.length > 0 ? (0, i.jsxs)("div", {
+          children: [(0, i.jsx)(C.KU, {}), (0, i.jsx)(A.nd, {
             premiumSubscription: a,
             renewalInvoice: G,
             isUpdate: !0
@@ -185,27 +185,27 @@ function j(e) {
         }) : null]
       })]
     }), (0, i.jsxs)(d.ModalFooter, {
-      align: R.Z.Align.CENTER,
-      justify: R.Z.Justify.BETWEEN,
+      align: p.Z.Align.CENTER,
+      justify: p.Z.Justify.BETWEEN,
       children: [(0, i.jsx)(d.Button, {
         color: d.Button.Colors.RED,
         disabled: N,
         onClick: async () => {
           try {
-            O(!0), await b(a, h, j, o), _()
+            g(!0), await b(a, h, j, o), _()
           } catch {
-            O(!1)
+            g(!1)
           }
         },
         children: P.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON
-      }), (0, i.jsx)(A.Z, {
+      }), (0, i.jsx)(m.Z, {
         onClick: l
       })]
     })]
   })
 }
 
-function U(e) {
+function B(e) {
   let {
     premiumSubscription: s,
     onClose: t
@@ -237,7 +237,7 @@ function U(e) {
   })
 }
 
-function B(e) {
+function U(e) {
   let s, {
     guildBoostSlot: t,
     transitionState: n,
@@ -273,7 +273,7 @@ function B(e) {
       });
       break;
     case 3:
-      s = (0, i.jsx)(U, {
+      s = (0, i.jsx)(B, {
         premiumSubscription: o,
         onClose: a
       });

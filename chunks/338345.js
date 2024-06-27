@@ -26,12 +26,12 @@ function C() {
     autoToggle: s,
     hideInstantInvites: a,
     hidePersonalInformation: C,
-    disableSounds: A,
-    disableNotifications: m,
-    enableContentProtection: O
+    disableSounds: m,
+    disableNotifications: A,
+    enableContentProtection: g
   } = (0, r.cj)([_.Z], () => ({
     ..._.Z.getSettings()
-  })), g = (e, s) => {
+  })), O = (e, s) => {
     l.Z.update({
       [e]: s
     })
@@ -61,7 +61,7 @@ function C() {
       setting: u.s6.STREAMER_MODE_ENABLE,
       children: [(0, n.jsx)(o.FormSwitch, {
         value: e,
-        onChange: e => g("enabled", e),
+        onChange: e => O("enabled", e),
         note: S.Z.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
           onClick: () => {
             c.Z.setSection(T.oAB.KEYBINDS)
@@ -71,7 +71,7 @@ function C() {
       }), (() => {
         if (E.isPlatformEmbedded) return (0, n.jsx)(o.FormSwitch, {
           value: s,
-          onChange: e => g("autoToggle", e),
+          onChange: e => O("autoToggle", e),
           note: S.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
           children: S.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
         })
@@ -84,7 +84,7 @@ function C() {
         setting: u.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
         children: (0, n.jsx)(o.FormSwitch, {
           value: C,
-          onChange: e => g("hidePersonalInformation", e),
+          onChange: e => O("hidePersonalInformation", e),
           note: S.Z.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
           children: S.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL
         })
@@ -92,31 +92,31 @@ function C() {
         setting: u.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: a,
-          onChange: e => g("hideInstantInvites", e),
+          onChange: e => O("hideInstantInvites", e),
           note: S.Z.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
           children: S.Z.Messages.HIDE_INSTANT_INVITES_LABEL
         })
       }), (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: A,
-          onChange: e => g("disableSounds", e),
+          value: m,
+          onChange: e => O("disableSounds", e),
           note: S.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
           children: S.Z.Messages.DISABLE_SOUNDS_LABEL
         })
       }), (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: m,
-          onChange: e => g("disableNotifications", e),
+          value: A,
+          onChange: e => O("disableNotifications", e),
           note: S.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
           children: S.Z.Messages.DISABLE_NOTIFICATIONS_LABEL
         })
       }), (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: O,
-          onChange: e => g("enableContentProtection", e),
+          value: g,
+          onChange: e => O("enableContentProtection", e),
           note: S.Z.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
           children: S.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
         })

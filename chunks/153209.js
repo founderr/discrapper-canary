@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(11799),
   _ = n(632523),
   E = n(695346),
-  I = n(626135),
-  m = n(709054),
+  m = n(626135),
+  I = n(709054),
   T = n(791914),
   h = n(981631),
   N = n(689938),
@@ -46,14 +46,14 @@ function C(e) {
     items: C,
     loading: g,
     loadMore: S
-  } = (0, u.y6)(), A = (0, s.e7)([o.Z], () => o.Z.localItems), R = a.useMemo(() => [...[...C, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [C, A]), x = C.length > 0 ? C[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
-    if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
+  } = (0, u.y6)(), A = (0, s.e7)([o.Z], () => o.Z.localItems), R = a.useMemo(() => [...[...C, ...A].sort((e, t) => -1 * I.default.compare(e.id, t.id))], [C, A]), O = C.length > 0 ? C[0] : null, x = E.d$.useSetting(), M = a.useMemo(() => {
+    if (null != O && 0 >= I.default.compare(O.id, x)) return !1;
     for (let e of R) {
-      if (0 >= m.default.compare(e.id, O)) break;
-      if (!(0, d.r)(e, O)) return !0
+      if (0 >= I.default.compare(e.id, x)) break;
+      if (!(0, d.r)(e, x)) return !0
     }
     return !1
-  }, [x, O, R]);
+  }, [O, x, R]);
   return (0, i.jsxs)("div", {
     className: f.container,
     children: [(0, i.jsx)(T.Z, {
@@ -63,7 +63,7 @@ function C(e) {
       closePopout: r,
       children: M ? (0, i.jsx)(p, {
         onClick: () => {
-          null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, {
+          null != O && (E.d$.updateSetting(O.id), m.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, {
             action_type: c.ud.MARK_ALL_READ
           }))
         }

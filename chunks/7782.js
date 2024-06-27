@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(171368),
   f = n(433355),
   E = n(699516),
-  g = n(594174),
-  C = n(806519),
+  C = n(594174),
+  g = n(806519),
   I = n(768581),
   x = n(525541),
   T = n(981631),
@@ -41,9 +41,9 @@ let A = e => {
           alt: "",
           className: Z.avatar
         }, t);
-      return s ? r : (0, i.jsx)(C.ZP, {
+      return s ? r : (0, i.jsx)(g.ZP, {
         className: Z.avatarMask,
-        mask: C.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
+        mask: g.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
         width: 24,
         height: 24,
         children: r
@@ -84,7 +84,7 @@ let A = e => {
       relationshipType: n,
       userId: a,
       showingBanner: l
-    } = e, s = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
+    } = e, s = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
       o.Z.addRelationship({
         userId: a,
         context: {
@@ -197,17 +197,17 @@ let A = e => {
       isOptimisticAccepted: _,
       isOptimisticRejected: E
     } = (0, u.m)({
-      user: g.default.getUser(n),
+      user: C.default.getUser(n),
       onError: l,
       onAcceptSuccess: o,
       onRejectSuccess: s
-    }), C = h || m || _ || E;
+    }), g = h || m || _ || E;
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(r.Button, {
         className: Z.action,
         size: r.Button.Sizes.TINY,
         onClick: () => c(t),
-        disabled: C,
+        disabled: g,
         submitting: h,
         children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
       }), (0, i.jsx)(r.Button, {
@@ -215,7 +215,7 @@ let A = e => {
         size: r.Button.Sizes.TINY,
         onClick: () => d(t),
         color: r.Button.Colors.PRIMARY,
-        disabled: C,
+        disabled: g,
         submitting: m,
         children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
       })]

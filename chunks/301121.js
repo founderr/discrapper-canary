@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return em
+    return eA
   }
 }), t(47120), t(733860), t(773603);
 var n, a, i = t(735250),
@@ -17,13 +17,13 @@ var n, a, i = t(735250),
   I = t(570140),
   N = t(668781),
   C = t(409700),
-  A = t(809206),
-  m = t(230711),
-  O = t(241420),
-  g = t(651530),
+  m = t(809206),
+  A = t(230711),
+  g = t(241420),
+  O = t(651530),
   h = t(163268),
-  R = t(294602),
-  p = t(778825),
+  p = t(294602),
+  R = t(778825),
   x = t(856768),
   M = t(592204),
   D = t(712950),
@@ -34,8 +34,8 @@ var n, a, i = t(735250),
   v = t(518560),
   b = t(237292),
   j = t(604849),
-  U = t(278828),
-  B = t(921801),
+  B = t(278828),
+  U = t(921801),
   G = t(480294),
   F = t(430824),
   V = t(663389),
@@ -73,7 +73,7 @@ function ed(e, s, t) {
 }
 
 function e_() {
-  let e = (0, u.e7)([p.Z], () => p.Z.getGuild()),
+  let e = (0, u.e7)([R.Z], () => R.Z.getGuild()),
     s = (0, L.Z)(),
     t = null != e ? e : s;
   r.useEffect(() => {
@@ -90,7 +90,7 @@ function e_() {
       guild_id: null == e ? void 0 : e.id
     })
   }, []);
-  return null == t ? null : (0, i.jsx)(B.F, {
+  return null == t ? null : (0, i.jsx)(U.F, {
     setting: ea.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS,
     children: (0, i.jsxs)(S.FormSection, {
       tag: S.FormTitleTags.H1,
@@ -99,9 +99,9 @@ function e_() {
         className: el.guildSelector,
         guildId: t.id,
         onChange: n
-      }), (0, i.jsx)(O.ConnectedPrivacySettings, {
+      }), (0, i.jsx)(g.ConnectedPrivacySettings, {
         guild: t,
-        ingress: O.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+        ingress: g.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
       })]
     })
   })
@@ -115,7 +115,7 @@ function eE() {
     }),
     n = (0, j.c)(),
     a = (0, q.a)(en.to.DM_SAFETY_ALERTS);
-  return s || !t ? null : (0, i.jsxs)(B.F, {
+  return s || !t ? null : (0, i.jsxs)(U.F, {
     setting: ea.s6.PRIVACY_SAFETY_ALERTS,
     children: [(0, i.jsx)(S.FormSection, {
       ref: a,
@@ -131,7 +131,7 @@ function eE() {
           note: eo.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
             learnMoreLink: w.Z.getArticleURL(ei.BhN.SAFETY_ALERTS)
           }),
-          onChange: U.Q,
+          onChange: B.Q,
           hideBorder: !0,
           children: eo.Z.Messages.SAFETY_ALERTS_SETTING_TITLE
         }), (0, i.jsx)(J.Z, {
@@ -203,7 +203,7 @@ function eS() {
       explicitContentGuilds: t,
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: a
-    } = (0, R.B)(),
+    } = (0, p.B)(),
     r = (0, q.a)(en.to.DM_SAFETY_ALERTS),
     o = [{
       value: T.Q4.BLUR,
@@ -383,9 +383,9 @@ function eC(e) {
     body: s
   })
 }
-class eA extends r.PureComponent {
+class em extends r.PureComponent {
   componentDidMount() {
-    (0, C.I)(), (0, A.ol)().then(e => {
+    (0, C.I)(), (0, m.ol)().then(e => {
       let s = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -480,10 +480,10 @@ class eA extends r.PureComponent {
       children: [(0, i.jsxs)(S.FormSection, {
         tag: S.FormTitleTags.H3,
         className: ec.marginBottom20,
-        children: [(0, i.jsx)(B.F, {
+        children: [(0, i.jsx)(U.F, {
           setting: ea.s6.PRIVACY_SENSITIVE_MEDIA,
           children: (0, i.jsx)(eS, {})
-        }), (0, i.jsxs)(B.F, {
+        }), (0, i.jsxs)(U.F, {
           setting: ea.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
           children: [(0, i.jsxs)(S.FormItem, {
             tag: S.FormTitleTags.H5,
@@ -549,7 +549,7 @@ class eA extends r.PureComponent {
         tag: S.FormTitleTags.H5,
         className: ec.marginBottom8,
         children: eo.Z.Messages.USER_KEYWORD_FILTERS_TITLE
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_KEYWORD_FILTER,
         children: (0, i.jsx)(S.FormSwitch, {
           value: this.props.keywordFilter,
@@ -580,7 +580,7 @@ class eA extends r.PureComponent {
         tag: S.FormTitleTags.H5,
         className: ec.marginBottom8,
         children: eo.Z.Messages.USER_DM_SETTINGS
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS,
         children: (0, i.jsx)(S.FormSwitch, {
           value: !n,
@@ -588,7 +588,7 @@ class eA extends r.PureComponent {
           onChange: this.handleChangeDefaultGuildsRestricted,
           children: eo.Z.Messages.NEW_GUILDS_DM_ALLOWED
         })
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS,
         children: (0, i.jsx)(S.FormSwitch, {
           value: !!a && e,
@@ -597,10 +597,10 @@ class eA extends r.PureComponent {
           onChange: X.DC.updateSetting,
           children: eo.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER
         })
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS,
         children: (0, i.jsx)(eT, {})
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS,
         children: (0, i.jsx)(S.FormSwitch, {
           value: !!a && t,
@@ -624,7 +624,7 @@ class eA extends r.PureComponent {
         tag: S.FormTitleTags.H5,
         className: ec.marginBottom8,
         children: eo.Z.Messages.DATA_PRIVACY_CONTROLS
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_DATA_IMPROVE_DISCORD,
         children: (0, i.jsx)(S.FormSwitch, {
           value: e,
@@ -634,7 +634,7 @@ class eA extends r.PureComponent {
           onChange: this.handleUsageStatisticsChange,
           children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
         })
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_DATA_PERSONALIZE,
         children: (0, i.jsx)(S.FormSwitch, {
           value: s,
@@ -644,7 +644,7 @@ class eA extends r.PureComponent {
           onChange: this.handlePersonalizationChange,
           children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
         })
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_DATA_QUESTS,
         children: (0, i.jsx)(S.FormSwitch, {
           value: !t,
@@ -656,7 +656,7 @@ class eA extends r.PureComponent {
             children: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT
           })
         })
-      }), (0, i.jsxs)(B.F, {
+      }), (0, i.jsxs)(U.F, {
         setting: ea.s6.PRIVACY_DATA_BASIC_SERVICE,
         children: [(0, i.jsx)(S.FormTitle, {
           tag: S.FormTitleTags.H3,
@@ -667,13 +667,13 @@ class eA extends r.PureComponent {
           className: ec.marginBottom20,
           children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
             onClick: () => {
-              m.Z.setSection(ei.oAB.ACCOUNT)
+              A.Z.setSection(ei.oAB.ACCOUNT)
             }
           })
         }), (0, i.jsx)(S.FormDivider, {
           className: ec.marginBottom20
         })]
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_DATA_REQUEST,
         children: this.renderHarvestRequest()
       })]
@@ -781,19 +781,19 @@ class eA extends r.PureComponent {
     return (0, i.jsxs)(S.FormSection, {
       tag: S.FormTitleTags.H1,
       title: eo.Z.Messages.PRIVACY_AND_SAFETY,
-      children: [this.renderDMSafety(), (0, i.jsx)(B.F, {
+      children: [this.renderDMSafety(), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_KEYWORD_FILTER,
         children: this.renderKeywordFiltering()
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS,
         children: this.renderServerPrivacy()
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_DATA_PRIVACY,
         children: e ? this.renderDataPrivacy() : null
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_TERMS_POLICY,
         children: this.renderPrivacyAndTermsNote()
-      }), (0, i.jsx)(B.F, {
+      }), (0, i.jsx)(U.F, {
         setting: ea.s6.PRIVACY_STAFF_ONLY,
         children: this.renderStaffOnlySettings()
       })]
@@ -897,7 +897,7 @@ class eA extends r.PureComponent {
           this.setState({
             requestingHarvest: !0
           }, () => {
-            (0, A.V3)(e).then(e => {
+            (0, m.V3)(e).then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
               }), N.Z.show({
@@ -936,7 +936,7 @@ class eA extends r.PureComponent {
   }
 }
 
-function em() {
+function eA() {
   let e = (0, u.e7)([y.default], () => {
       let e = y.default.getCurrentUser();
       return d()(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
@@ -948,7 +948,7 @@ function em() {
     })),
     t = (0, u.e7)([Z.Z], () => Z.Z.getFetchError()),
     n = (0, u.e7)([V.Z], () => V.Z.getSubsection()),
-    a = (0, g.yh)(),
+    a = (0, O.yh)(),
     r = (0, M.Xo)({
       location: "web_user_privacy_and_safety_settings"
     }),
@@ -966,7 +966,7 @@ function em() {
     } = P.c.useExperiment({
       location: "PrivacySafetySettings"
     });
-  return (0, i.jsx)(eA, {
+  return (0, i.jsx)(em, {
     currentUser: e,
     defaultGuildsRestricted: X.iG.useSetting(),
     nonSpamRetrainingOptIn: X.kJ.useSetting(),

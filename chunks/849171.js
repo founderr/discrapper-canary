@@ -19,8 +19,8 @@ var i, a, l = n(735250),
   _ = n(527805),
   f = n(716600),
   E = n(952561),
-  g = n(778569),
-  C = n(563218),
+  C = n(778569),
+  g = n(563218),
   I = n(513202),
   x = n(318891),
   T = n(719296),
@@ -75,10 +75,10 @@ function U(e) {
     application: r,
     currentEmbeddedApplication: f,
     channel: E,
-    width: g
+    width: C
   } = e;
-  let C = (i = g) > 400 ? 2 : i > 300 ? 1 : 0;
-  let [x] = (a = g) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, c.Wu)([R.default, M.default], () => Array.from(s).map(e => (0, m.J)(e, M.default) ? null : R.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
+  let g = (i = C) > 400 ? 2 : i > 300 ? 1 : 0;
+  let [x] = (a = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, c.Wu)([R.default, M.default], () => Array.from(s).map(e => (0, m.J)(e, M.default) ? null : R.default.getUser(e.userId)).filter(L.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: v
   } = (0, S.ZP)(), Z = (0, d.O)(), A = P.ZP.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, _.s5)({
     userId: null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -94,8 +94,8 @@ function U(e) {
       users: T
     }), (0, l.jsx)(u.Text, {
       className: o()(y.subheader, {
-        [y.small]: 0 === C,
-        [y.medium]: 1 === C
+        [y.small]: 0 === g,
+        [y.medium]: 1 === g
       }),
       variant: "text-sm/normal",
       children: T.length > 1 ? O.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -106,8 +106,8 @@ function U(e) {
       })
     }), (0, l.jsx)(u.Text, {
       className: o()(y.header, {
-        [y.small]: 0 === C,
-        [y.medium]: 1 === C
+        [y.small]: 0 === g,
+        [y.medium]: 1 === g
       }),
       variant: "text-sm/normal",
       children: r.name
@@ -133,7 +133,7 @@ function U(e) {
             case 0:
               return u.Button.Sizes.SMALL
           }
-        }(C),
+        }(g),
         className: y.button,
         color: u.Button.Colors.PRIMARY,
         children: O.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -155,7 +155,7 @@ function w(e) {
     id: u
   } = t, d = (0, f.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, p = (0, E.Z)(), [m] = (0, Z.Z)([u]), {
     url: _
-  } = (0, g.Z)({
+  } = (0, C.Z)({
     applicationId: u,
     names: D,
     size: 1024
@@ -173,7 +173,7 @@ function w(e) {
     children: (0, l.jsx)("div", {
       className: y.container,
       children: (0, l.jsxs)(l.Fragment, {
-        children: [I && (0, l.jsx)(C.Z, {
+        children: [I && (0, l.jsx)(g.Z, {
           className: y.iframe,
           embedId: (0, T.Z)(r.id, u)
         }), M && null != m && null != _ && "" !== _ ? (0, l.jsx)("img", {

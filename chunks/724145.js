@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(906732),
   f = n(639119),
   S = n(197115),
-  N = n(587446),
-  A = n(594174),
+  A = n(587446),
+  N = n(594174),
   m = n(626135),
   O = n(74538),
-  p = n(238302),
-  R = n(514361),
+  R = n(238302),
+  p = n(514361),
   g = n(572397),
   C = n(705262),
   v = n(981631),
@@ -37,7 +37,7 @@ let y = () => (0, i.jsx)("div", {
     className: P.editorHeader,
     children: (0, i.jsxs)("div", {
       className: P.bannerUpsell,
-      children: [(0, i.jsx)(N.Z, {
+      children: [(0, i.jsx)(A.Z, {
         className: P.premiumIcon
       }), (0, i.jsx)(_.Heading, {
         variant: "heading-md/bold",
@@ -55,7 +55,7 @@ let y = () => (0, i.jsx)("div", {
       children: [(0, i.jsx)(_.Clickable, {
         className: P.closeCircleButton,
         onClick: () => {
-          null != t && t(L.L.DISMISS), n(v.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, p.my)()
+          null != t && t(L.L.DISMISS), n(v.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, R.my)()
         },
         children: (0, i.jsx)(_.CircleXIcon, {
           size: "md",
@@ -75,13 +75,13 @@ let y = () => (0, i.jsx)("div", {
       markAsDismissed: o
     } = e, {
       analyticsLocations: a
-    } = (0, h.ZP)(T.Z.CLIENT_THEMES_EDITOR), [d, E] = (0, l.Wu)([A.default, R.Z], () => [R.Z.gradientPreset, O.ZP.isPremium(A.default.getCurrentUser())]), I = (0, f.N)(), N = (0, O.Rt)({
+    } = (0, h.ZP)(T.Z.CLIENT_THEMES_EDITOR), [d, E] = (0, l.Wu)([N.default, p.Z], () => [p.Z.gradientPreset, O.ZP.isPremium(N.default.getCurrentUser())]), I = (0, f.N)(), A = (0, O.Rt)({
       intervalType: null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.interval,
       intervalCount: null == I ? void 0 : null === (n = I.subscription_trial) || void 0 === n ? void 0 : n.interval_count
     });
     return (0, i.jsx)(S.Z, {
       size: _.Button.Sizes.MEDIUM,
-      buttonText: E ? M.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == I ? void 0 : null === (r = I.subscription_trial) || void 0 === r ? void 0 : r.sku_id) === D.Si.TIER_2 ? N : M.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+      buttonText: E ? M.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == I ? void 0 : null === (r = I.subscription_trial) || void 0 === r ? void 0 : r.sku_id) === D.Si.TIER_2 ? A : M.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
       subscriptionTier: D.Si.TIER_2,
       onSubscribeModalClose: e => {
         if (!e) return;
@@ -102,9 +102,9 @@ let y = () => (0, i.jsx)("div", {
     } = e, {
       isPreview: n,
       isCoachmark: s
-    } = (0, l.cj)([R.Z], () => ({
-      isPreview: R.Z.isPreview,
-      isCoachmark: R.Z.isCoachmark
+    } = (0, l.cj)([p.Z], () => ({
+      isPreview: p.Z.isPreview,
+      isCoachmark: p.Z.isCoachmark
     })), [o, u] = r.useState(!1), c = (0, g.q)(), E = (0, a.EQ)({
       isPreview: n,
       isCoachmark: s,
@@ -126,7 +126,7 @@ let y = () => (0, i.jsx)("div", {
       }), (0, i.jsx)(_.Button, {
         className: P.footerButton,
         onClick: () => {
-          null != t && t(L.L.DISMISS), c(v.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, p.my)(), !s && d.Z.open()
+          null != t && t(L.L.DISMISS), c(v.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, R.my)(), !s && d.Z.open()
         },
         color: _.Button.Colors.PRIMARY,
         size: _.Button.Sizes.MEDIUM,
@@ -145,11 +145,11 @@ function w(e) {
     isCoachmark: a,
     isEditorOpen: u,
     shouldEditorAnimate: c
-  } = (0, l.cj)([R.Z, I.Z], () => ({
-    isPreview: R.Z.isPreview,
-    isCoachmark: R.Z.isCoachmark,
-    isEditorOpen: R.Z.isEditorOpen,
-    shouldEditorAnimate: R.Z.isCoachmark && !I.Z.useReducedMotion
+  } = (0, l.cj)([p.Z, I.Z], () => ({
+    isPreview: p.Z.isPreview,
+    isCoachmark: p.Z.isCoachmark,
+    isEditorOpen: p.Z.isEditorOpen,
+    shouldEditorAnimate: p.Z.isCoachmark && !I.Z.useReducedMotion
   })), d = (0, g.q)();
   r.useEffect(() => d(v.rMx.CLIENT_THEME_PREVIEW_VIEWED), [d]), r.useEffect(() => {
     if (!!s) m.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {

@@ -29,11 +29,11 @@ function f(e) {
     } = e,
     f = (0, l.e7)([o.Z], () => o.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
     E = (0, h.Z)(),
-    g = (0, l.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-  if (null != E && !(0, d.Z)(E.channelId) && g === p.Ez.PANEL) t = window;
+    C = (0, l.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+  if (null != E && !(0, d.Z)(E.channelId) && C === p.Ez.PANEL) t = window;
   else {
-    var C;
-    t = null !== (C = null == f ? void 0 : f.window) && void 0 !== C ? C : window
+    var g;
+    t = null !== (g = null == f ? void 0 : f.window) && void 0 !== g ? g : window
   }
   let I = a.useRef(null),
     x = a.useMemo(() => {

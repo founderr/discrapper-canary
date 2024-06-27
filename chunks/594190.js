@@ -25,12 +25,12 @@ var r, s, o, a, l = n(392711),
   h = n(726542),
   f = n(710845),
   S = n(630699),
-  N = n(855403),
-  A = n(454991),
+  A = n(855403),
+  N = n(454991),
   m = n(77498),
   O = n(283595),
-  p = n(417363),
-  R = n(626135),
+  R = n(417363),
+  p = n(626135),
   g = n(70956),
   C = n(877481),
   v = n(823379),
@@ -117,8 +117,8 @@ let b = new f.Z("RunningGameStore"),
     }],
     name: h.Z.get(y.ABu.SPOTIFY).name
   }],
-  x = !0,
-  B = new Set,
+  B = !0,
+  x = new Set,
   k = [],
   V = [],
   Z = [],
@@ -194,7 +194,7 @@ function er(e) {
       overlayMethod: U.gl.Disabled
     }
   }
-  let n = S.H() && (0, M.VS)() && !A.v.legacyEnabled,
+  let n = S.H() && (0, M.VS)() && !N.v.legacyEnabled,
     i = n ? U.gl.OutOfProcess : U.gl.Hook,
     r = W.enableOverlay[ei(e)];
   if (null != r) return {
@@ -248,9 +248,9 @@ function eu() {
   return k = u().values(O.Z.libraryApplications).reduce((t, n) => {
     let i = m.Z.getDetectableGame(n.id);
     if (null == i) return t;
-    for (let r of p.Z.getLaunchOptions(n.id, n.branchId)) {
+    for (let r of R.Z.getLaunchOptions(n.id, n.branchId)) {
       let s = "".concat(n.id, ":").concat(n.branchId);
-      !B.has(s) && (e = !0, B.add(s));
+      !x.has(s) && (e = !0, x.add(s));
       let {
         fullExecutablePath: o
       } = r, a = o.replace(/\\/g, "/").toLowerCase();
@@ -383,7 +383,7 @@ class eE extends(r = d.ZP.Store) {
         W.gameOverrides[t] = e
       }), W.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, W.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, e_(), Array.isArray(r.gamesSeen))
       for (let e of r.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, s = !0);
-    ec(r.gamesSeen), this.waitFor(m.Z), this.syncWith([O.Z, m.Z, p.Z], u().throttle(eu, 1e3)), s && ea()
+    ec(r.gamesSeen), this.waitFor(m.Z), this.syncWith([O.Z, m.Z, R.Z], u().throttle(eu, 1e3)), s && ea()
   }
   getVisibleGame() {
     return null == H || eo(H) ? H : null
@@ -459,10 +459,10 @@ class eE extends(r = d.ZP.Store) {
   }
   getObservedAppNameForWindow(e) {
     var t, n;
-    return null !== (n = null === (t = F.find(t => (0, N.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+    return null !== (n = null === (t = F.find(t => (0, A.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
   }
   get canShowAdminWarning() {
-    return x
+    return B
   }
   isDetectionEnabled(e) {
     return es(e)
@@ -481,7 +481,7 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
     V = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-    x = !1
+    B = !1
   },
   PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
     let {
@@ -517,7 +517,7 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
     if (W.enableOverlay[ei(e.game)] = e.newEnabledValue, ea(), !__OVERLAY__) {
       let t = null != e.game.id ? m.Z.getDetectableGame(e.game.id) : null;
-      null != t && R.default.track(y.rMx.OVERLAY_TOGGLED, {
+      null != t && p.default.track(y.rMx.OVERLAY_TOGGLED, {
         enabled: e.newEnabledValue,
         setting_type: "overlay toggled - game",
         application_id: t.id,
@@ -529,7 +529,7 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
     let {
       game: t
     } = e, n = es(t);
-    W.enableDetection[ei(t)] = !n, ea(), R.default.track(y.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
+    W.enableDetection[ei(t)] = !n, ea(), p.default.track(y.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
       enabled: !n
     })
   },

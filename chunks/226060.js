@@ -15,8 +15,8 @@ var a = n(512722),
   u = n(267101),
   _ = n(240864),
   E = n(57949),
-  I = n(400916),
-  m = n(689938);
+  m = n(400916),
+  I = n(689938);
 
 function T(e) {
   let {
@@ -25,12 +25,12 @@ function T(e) {
     sourceAnalyticsLocations: a
   } = e, T = (0, l.e7)([_.Z], () => _.Z.getGuildProduct(n)), h = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]), N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), f = (0, d.n)();
   if (s()(null != h, "guild cannot be null"), s()(null != T, "guildProductListing cannot be null"), (0, u.SO)(h)) return (0, i.jsx)(r.Tooltip, {
-    text: m.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
+    text: I.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
     children: e => (0, i.jsx)(r.Button, {
       ...e,
       color: r.Button.Colors.BRAND,
       disabled: !0,
-      children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+      children: I.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
     })
   });
   if (!T.has_entitlement) return (0, i.jsx)(r.ShinyButton, {
@@ -41,14 +41,14 @@ function T(e) {
       guildId: h.id,
       sourceAnalyticsLocations: a
     }),
-    children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+    children: I.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
   });
-  return null != T.attachments ? (0, i.jsx)(I.Z, {
+  return null != T.attachments ? (0, i.jsx)(m.Z, {
     guildId: h.id,
     productId: T.id
   }) : (0, i.jsx)(r.Button, {
     color: r.Button.Colors.PRIMARY,
     disabled: !0,
-    children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASED
+    children: I.Z.Messages.GUILD_PRODUCT_CARD_PURCHASED
   })
 }

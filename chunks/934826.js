@@ -43,13 +43,13 @@ function u(e) {
       }
     }),
     E = null == _ ? void 0 : _.subscription_plans[0],
-    I = null == E ? void 0 : E.id,
-    m = null == E ? void 0 : E.sku_id,
-    T = (0, a.e7)([l.Z], () => null != I ? l.Z.get(I) : null),
+    m = null == E ? void 0 : E.id,
+    I = null == E ? void 0 : E.sku_id,
+    T = (0, a.e7)([l.Z], () => null != m ? l.Z.get(m) : null),
     h = null == _ ? void 0 : _.soft_deleted;
   return i.useEffect(() => {
-    null == T && null != m && !l.Z.isFetchingForSKU(m) && (0, s.GZ)(m, void 0, void 0, h)
-  }, [T, m, h]), {
+    null == T && null != I && !l.Z.isFetchingForSKU(I) && (0, s.GZ)(I, void 0, void 0, h)
+  }, [T, I, h]), {
     activeSubscription: u,
     activeSubscriptionListing: _,
     activeSubscriptionPlanFromStore: T

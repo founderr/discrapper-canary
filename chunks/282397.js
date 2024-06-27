@@ -16,15 +16,15 @@ function S(e) {
   if (null == e) return !1;
   let n = T[e];
   if (null == n) return !1;
-  null === (t = n.onSuccess) || void 0 === t || t.call(n), N(e)
+  null === (t = n.onSuccess) || void 0 === t || t.call(n), A(e)
 }
 
-function N(e) {
+function A(e) {
   delete T[e];
   let t = f[e];
   null != t && delete h[t], delete f[e]
 }
-class A extends(s = u.ZP.Store) {
+class N extends(s = u.ZP.Store) {
   getInteraction(e) {
     let t = h[e.id];
     return null != t ? T[t] : null
@@ -48,12 +48,12 @@ class A extends(s = u.ZP.Store) {
     return i
   }
 }
-l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o, a, {
+l = "InteractionStore", (a = "displayName") in(o = N) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new A(_.Z, {
+}) : o[a] = l, t.Z = new N(_.Z, {
   LOGOUT: function() {
     T = {}, h = {}, f = {}
   },
@@ -103,7 +103,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
     if (null == n) return !1;
     let s = T[n];
     if (null == s) return !1;
-    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === c.B8.APPLICATION_COMMAND ? N(n) : T[n] = {
+    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === c.B8.APPLICATION_COMMAND ? A(n) : T[n] = {
       ...s,
       state: I.F.FAILED,
       errorCode: i,
@@ -119,7 +119,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
       var n;
       let e = T[t.nonce];
       if (null == e) return !1;
-      null === (n = e.onSuccess) || void 0 === n || n.call(e), N(t.nonce)
+      null === (n = e.onSuccess) || void 0 === n || n.call(e), A(t.nonce)
     }
   },
   CHANNEL_SELECT: function(e) {
@@ -127,7 +127,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
       channelId: t
     } = e;
     if (null == E.Z.getChannel(t)) return !1;
-    for (let [e, t] of Object.entries(T)) t.state === I.F.FAILED && N(e)
+    for (let [e, t] of Object.entries(T)) t.state === I.F.FAILED && A(e)
   },
   INTERACTION_IFRAME_MODAL_CREATE: function(e) {
     let {

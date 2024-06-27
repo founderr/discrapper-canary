@@ -34,8 +34,8 @@ var x = r(392750),
   E = r(178821),
   Z = r(248526),
   R = r(958328),
-  O = r(514866),
-  B = r(678639),
+  B = r(514866),
+  O = r(678639),
   P = r(351930),
   L = r(771751),
   A = r(596768),
@@ -76,7 +76,7 @@ function z() {
       }, {
         id: "stores",
         name: "Stores",
-        render: () => (0, a.jsx)(B.Z, {})
+        render: () => (0, a.jsx)(O.Z, {})
       }, {
         id: "dispatcher",
         name: "Dispatcher",
@@ -85,7 +85,7 @@ function z() {
       return m.Z.isDeveloper && (e.push({
         id: "quick_actions",
         name: "Quick Actions",
-        render: () => (0, a.jsx)(O.Z, {})
+        render: () => (0, a.jsx)(B.Z, {})
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",

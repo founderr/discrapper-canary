@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(472596),
   f = n(987707),
   E = n(501801),
-  g = n(271383),
-  C = n(430824),
+  C = n(271383),
+  g = n(430824),
   I = n(274730),
   x = n(5192),
   T = n(776767),
@@ -35,7 +35,7 @@ function A(e) {
     guild: l
   } = e, {
     analyticsLocations: r
-  } = (0, h.ZP)(), d = p.nm(t), f = p.QM(t), C = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([g.ZP], () => null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), A = a.useCallback(e => t => {
+  } = (0, h.ZP)(), d = p.nm(t), f = p.QM(t), g = p.of(t), I = p.J5(t), T = (0, m.LJ)(t.id), Z = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), A = a.useCallback(e => t => {
     t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r)
   }, [r]), M = a.useCallback(() => null == t.user ? null : (0, i.jsx)(u.Tooltip, {
     text: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
@@ -86,7 +86,7 @@ function A(e) {
           children: T
         })
       })]
-    }), null != C && (0, i.jsx)("div", {
+    }), null != g && (0, i.jsx)("div", {
       className: v.auditLogSecondaryContainer,
       children: (0, i.jsxs)("div", {
         className: v.auditLogReason,
@@ -94,10 +94,10 @@ function A(e) {
           variant: "text-sm/normal",
           color: "text-muted",
           tag: "span",
-          children: C
+          children: g
         })]
       })
-    }), null == C && null != I && (0, i.jsx)("div", {
+    }), null == g && null != I && (0, i.jsx)("div", {
       className: v.auditLogSecondaryContainer,
       children: (0, i.jsxs)("div", {
         className: v.auditLogSecondary,
@@ -108,7 +108,7 @@ function A(e) {
           children: I
         })]
       })
-    }), null == C && null == I && (0, i.jsx)("div", {
+    }), null == g && null == I && (0, i.jsx)("div", {
       className: v.auditLogSecondaryContainer,
       children: (0, i.jsx)("div", {
         className: v.auditLogSecondary,
@@ -131,7 +131,7 @@ function A(e) {
 function M(e) {
   let {
     member: t
-  } = e, n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]), l = (0, c.e7)([f.Z], () => {
+  } = e, n = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]), l = (0, c.e7)([f.Z], () => {
     let e = f.Z.logs;
     return null == e || null == n ? [] : I._$(e, n)
   }, [n]);

@@ -16,12 +16,12 @@ var i = n(735250),
   f = n(689938),
   S = n(491136);
 t.Z = r.forwardRef(function(e, t) {
-  var s, N, A;
+  var s, A, N;
   let m;
   let {
     canRemove: O,
-    className: p,
-    role: R,
+    className: R,
+    role: p,
     onRemove: g,
     guildId: C,
     disableBorderColor: v,
@@ -29,23 +29,23 @@ t.Z = r.forwardRef(function(e, t) {
   } = e, {
     tabIndex: D,
     ...M
-  } = (0, a.JA)(R.id), P = (0, T.p9)({
-    roleId: R.id,
+  } = (0, a.JA)(p.id), P = (0, T.p9)({
+    roleId: p.id,
     size: 16,
     guildId: C
-  }), y = (0, u.e7)([E.Z], () => E.Z.roleStyle), U = (null === (s = R.tags) || void 0 === s ? void 0 : s.guild_connections) === null, b = r.useCallback(e => {
+  }), y = (0, u.e7)([E.Z], () => E.Z.roleStyle), U = (null === (s = p.tags) || void 0 === s ? void 0 : s.guild_connections) === null, b = r.useCallback(e => {
     (0, d.jW)(e, async () => {
       let {
         default: e
       } = await n.e("5396").then(n.bind(n, 731646));
       return t => (0, i.jsx)(e, {
         ...t,
-        id: R.id,
+        id: p.id,
         label: f.Z.Messages.COPY_ID_ROLE
       })
     })
-  }, [R.id]), G = (0, c.useToken)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (N = R.colorString) && void 0 !== N ? N : G, x = null !== (A = (0, l.wK)(w, .6)) && void 0 !== A ? A : void 0, B = _.Z.unsafe_rawColors.WHITE_500.css, k = (0, l._i)(w);
-  null != k && .3 > (0, l.Bd)(k) && (B = _.Z.unsafe_rawColors.PRIMARY_630.css), m = U ? (0, i.jsx)(I.Z, {
+  }, [p.id]), G = (0, c.useToken)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (A = p.colorString) && void 0 !== A ? A : G, B = null !== (N = (0, l.wK)(w, .6)) && void 0 !== N ? N : void 0, x = _.Z.unsafe_rawColors.WHITE_500.css, k = (0, l._i)(w);
+  null != k && .3 > (0, l.Bd)(k) && (x = _.Z.unsafe_rawColors.PRIMARY_630.css), m = U ? (0, i.jsx)(I.Z, {
     className: S.roleFlowerStar,
     iconClassName: O ? S.roleVerifiedIcon : void 0,
     color: w,
@@ -62,18 +62,18 @@ t.Z = r.forwardRef(function(e, t) {
   let V = r.useMemo(() => {
     var t;
     return {
-      borderColor: v ? void 0 : x,
+      borderColor: v ? void 0 : B,
       ...null !== (t = e.style) && void 0 !== t ? t : {}
     }
-  }, [x, v, e.style]);
+  }, [B, v, e.style]);
   return (0, i.jsx)(c.FocusRing, {
     children: (0, i.jsxs)("div", {
       ref: t,
-      className: o()(S.role, p),
+      className: o()(S.role, R),
       style: V,
       onContextMenu: b,
       onMouseDown: L,
-      "aria-label": R.name,
+      "aria-label": p.name,
       tabIndex: D,
       ...M,
       children: [O ? (0, i.jsx)(c.TooltipContainer, {
@@ -87,11 +87,11 @@ t.Z = r.forwardRef(function(e, t) {
           },
           "aria-hidden": !1,
           "aria-label": f.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
-            roleName: R.name
+            roleName: p.name
           }),
           children: [m, (0, i.jsx)(c.CloseSmallIcon, {
             size: "md",
-            color: B,
+            color: x,
             className: S.roleRemoveIcon,
             "aria-hidden": !0
           })]
@@ -104,7 +104,7 @@ t.Z = r.forwardRef(function(e, t) {
         },
         "aria-hidden": !0,
         "aria-label": f.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
-          roleName: R.name
+          roleName: p.name
         }),
         children: m
       }), null != P ? (0, i.jsx)(h.Z, {
@@ -117,7 +117,7 @@ t.Z = r.forwardRef(function(e, t) {
         children: (0, i.jsx)(c.Text, {
           variant: "text-xs/medium",
           className: S.roleNameOverflow,
-          children: R.name
+          children: p.name
         })
       })]
     })

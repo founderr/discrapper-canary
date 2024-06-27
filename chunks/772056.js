@@ -24,11 +24,11 @@ t.Z = e => {
     className: _,
     onExpand: f,
     onHover: E,
-    onFocus: g
-  } = e, [C, I] = s.useState(!0), x = (0, l.jsx)("div", {
+    onFocus: C
+  } = e, [g, I] = s.useState(!0), x = (0, l.jsx)("div", {
     className: h.iconWrapper,
     children: (0, l.jsx)(u.Z, {
-      direction: C ? u.Z.Directions.RIGHT : u.Z.Directions.DOWN
+      direction: g ? u.Z.Directions.RIGHT : u.Z.Directions.DOWN
     })
   });
   return (0, l.jsxs)("div", {
@@ -38,9 +38,9 @@ t.Z = e => {
       innerClassName: h.collapseBtnContent,
       color: c.ButtonColors.CUSTOM,
       onMouseEnter: E,
-      onFocus: g,
+      onFocus: C,
       onClick: () => {
-        I(!C), C && (null == f || f())
+        I(!g), g && (null == f || f())
       },
       children: a ? (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(d.ZT, {
@@ -58,7 +58,7 @@ t.Z = e => {
       })
     }), (0, l.jsx)("ul", {
       className: o()(h.connectionList, {
-        [h.isCollapsed]: C
+        [h.isCollapsed]: g
       }),
       children: r ? Array.from({
         length: m

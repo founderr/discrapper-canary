@@ -1,6 +1,6 @@
 n.d(t, {
   n: function() {
-    return m
+    return I
   }
 }), n(411104);
 var i = n(735250);
@@ -29,7 +29,7 @@ let E = {
   }
 };
 
-function I(e) {
+function m(e) {
   let {
     operatingSystem: t,
     className: n
@@ -44,7 +44,7 @@ function I(e) {
     })
   })
 }
-let m = e => {
+let I = e => {
   let {
     systems: t,
     className: n,
@@ -52,7 +52,7 @@ let m = e => {
   } = e;
   return (0, i.jsx)("div", {
     className: s()(_.OSSection, n),
-    children: t.map(e => (0, i.jsx)(I, {
+    children: t.map(e => (0, i.jsx)(m, {
       operatingSystem: e,
       className: s()(_.purchaseUnitOperatingSystem, a)
     }, e))

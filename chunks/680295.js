@@ -30,13 +30,13 @@ let S = e => {
       restartMethod: I,
       urlQueryString: h,
       profileEffectConfig: S,
-      noBorderRadius: N = !1,
-      introDelay: A = _.lG
-    } = e, m = r.useRef(null), [O, p] = r.useState([]);
+      noBorderRadius: A = !1,
+      introDelay: N = _.lG
+    } = e, m = r.useRef(null), [O, R] = r.useState([]);
     (0, T.Z)(S);
-    let [R, g] = r.useState(0), [C, v] = r.useState(0), {
+    let [p, g] = r.useState(0), [C, v] = r.useState(0), {
       accessibilityLabel: L
-    } = S, [D, M] = r.useState(-A), {
+    } = S, [D, M] = r.useState(-N), {
       stop: P,
       reset: y,
       ticking: U
@@ -44,7 +44,7 @@ let S = e => {
       M(t => t + e)
     });
     r.useEffect(() => {
-      M(-A), p((0, E.H)(S.effects))
+      M(-N), R((0, E.H)(S.effects))
     }, [S]), r.useEffect(() => {
       let e = 0,
         t = 1 / 0;
@@ -55,14 +55,14 @@ let S = e => {
     }, [v, O]);
     let [b, G] = r.useState(!1);
     return r.useEffect(() => {
-      !0 !== u && !a && (P(), M(0)), !a && b && U.current && (P(), M(0)), s && a && !U.current && (y(), S.animationType === c.Q.PERSISTENT ? M(I === c.j.FromStart ? 0 : R) : M(0))
-    }, [a, b, R, s, P, y, U, S.animationType, u, I]), (0, i.jsx)("div", {
+      !0 !== u && !a && (P(), M(0)), !a && b && U.current && (P(), M(0)), s && a && !U.current && (y(), S.animationType === c.Q.PERSISTENT ? M(I === c.j.FromStart ? 0 : p) : M(0))
+    }, [a, b, p, s, P, y, U, S.animationType, u, I]), (0, i.jsx)("div", {
       ref: m,
       className: o()(f.profileEffects, {
         [f.hovered]: a && l
       }),
       children: (0, i.jsx)("div", {
-        className: N ? f.innerNoRadius : f.inner,
+        className: A ? f.innerNoRadius : f.inner,
         children: O.map((e, r) => {
           var s, o, a, l, d, E, I, T;
           if (!U.current) {
@@ -110,7 +110,7 @@ let S = e => {
       })
     })
   },
-  N = e => {
+  A = e => {
     let {
       config: t,
       useThumbnail: n,
@@ -147,7 +147,7 @@ t.Z = e => {
     {
       preset: _
     } = (0, h.Z)(e.profileEffectId, () => o(!1));
-  return null != _ && (t || e.shopPreview || _.config.animationType !== c.Q.INTERMITTENT) ? !t && e.shopPreview || !t && _.config.animationType === c.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, i.jsx)(N, {
+  return null != _ && (t || e.shopPreview || _.config.animationType !== c.Q.INTERMITTENT) ? !t && e.shopPreview || !t && _.config.animationType === c.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, i.jsx)(A, {
     useThumbnail: e.useThumbnail,
     config: _.config,
     bannerAdjustment: e.bannerAdjustment,

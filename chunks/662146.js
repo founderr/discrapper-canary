@@ -22,7 +22,7 @@ function c(e) {
     forceOpen: p,
     selected: _ = !1,
     tooltipClass: f,
-    tooltipContentClass: g
+    tooltipContentClass: m
   } = e;
   return (0, i.jsx)(s.Tooltip, {
     shouldShow: h,
@@ -34,7 +34,7 @@ function c(e) {
     color: r,
     "aria-label": !1,
     tooltipClassName: a()(o.listItemTooltip, f),
-    tooltipContentClassName: g,
+    tooltipContentClassName: m,
     children: e => c ? l.cloneElement(l.Children.only(t), {
       ...e
     }) : (0, i.jsx)("div", {

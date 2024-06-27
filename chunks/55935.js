@@ -10,7 +10,7 @@ n.d(t, {
     return m
   },
   TD: function() {
-    return A
+    return N
   },
   Xf: function() {
     return T
@@ -93,7 +93,7 @@ function S(e) {
 o.default.addChangeListener(() => {
   l = Object.create(null)
 });
-let N = [{
+let A = [{
   key: "days",
   millisecondsInUnit: 864e5
 }, {
@@ -107,7 +107,7 @@ let N = [{
   millisecondsInUnit: 1e3
 }];
 
-function A(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = {
       days: 0,
@@ -117,7 +117,7 @@ function A(e, t) {
     };
   if (e > t || n && Number(e) + 1200 > Number(t)) return i;
   let r = Number(t) - Number(e);
-  return N.forEach(e => {
+  return A.forEach(e => {
     let {
       key: t,
       millisecondsInUnit: n

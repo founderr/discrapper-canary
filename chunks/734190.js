@@ -11,8 +11,8 @@ var i = n(735250),
   p = n(488131),
   _ = n(592125),
   f = n(306680),
-  g = n(979651),
-  m = n(938475),
+  m = n(979651),
+  g = n(938475),
   C = n(514342),
   I = n(714794),
   E = n(135724),
@@ -53,7 +53,7 @@ t.Z = l.memo(function(e) {
     isSelectedVoice: A,
     isLast: M,
     withGuildIcon: R
-  } = e, y = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
+  } = e, y = (0, o.e7)([g.ZP], () => g.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)), {
     unread: P,
     mentionCount: j
   } = (0, o.cj)([f.ZP], () => ({

@@ -1,6 +1,6 @@
 n.d(t, {
   o: function() {
-    return I
+    return m
   }
 });
 var i = n(735250);
@@ -29,7 +29,7 @@ function E() {
   })
 }
 
-function I() {
+function m() {
   let {
     containerRef: e,
     size: t

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return u
+    return l
   }
 });
 var s = n(735250);
@@ -11,7 +11,7 @@ var r = n(120356),
   c = n(673591),
   a = n(326618);
 
-function u(e) {
+function l(e) {
   let {
     isNitroTab: t = !1
   } = e, n = (0, i.Vi)(), r = (0, i.W1)();

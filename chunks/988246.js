@@ -5,17 +5,17 @@ i.d(n, {
 });
 var t = i(735250);
 i(470079);
-var s = i(689938),
-  o = i(667589);
+var o = i(689938),
+  s = i(667589);
 
 function l() {
   return (0, t.jsxs)("div", {
-    className: o.empty,
+    className: s.empty,
     children: [(0, t.jsx)("div", {
-      className: o.emptyIconStreamerMode
+      className: s.emptyIconStreamerMode
     }), (0, t.jsx)("div", {
-      className: o.emptyText,
-      children: s.Z.Messages.STREAMER_MODE_ENABLED
+      className: s.emptyText,
+      children: o.Z.Messages.STREAMER_MODE_ENABLED
     })]
   })
 }

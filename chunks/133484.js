@@ -24,15 +24,15 @@ function C(e) {
     user: s,
     showOverlay: t,
     children: C
-  } = e, A = (0, r.ZP)(), {
-    analyticsLocations: m
+  } = e, m = (0, r.ZP)(), {
+    analyticsLocations: A
   } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
   return (a.useEffect(() => {
     t && d.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
-      location_stack: m,
+      location_stack: A,
       type: u.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
     })
-  }, [t, m]), t) ? (0, n.jsxs)("div", {
+  }, [t, A]), t) ? (0, n.jsxs)("div", {
     className: S.upsellOverlayContainer,
     children: [(0, n.jsx)("div", {
       children: C
@@ -48,7 +48,7 @@ function C(e) {
             case E.BRd.LIGHT:
               return N
           }
-        }(A)
+        }(m)
       }), (0, n.jsxs)("div", {
         className: S.upsellTextContainer,
         children: [(0, n.jsx)(i.Text, {

@@ -6,13 +6,13 @@ t.d(s, {
     return v
   },
   VO: function() {
-    return U
+    return B
   },
   ji: function() {
     return F
   },
   q8: function() {
-    return B
+    return U
   }
 }), t(639576), t(536091), t(47120), t(653041);
 var n = t(470079),
@@ -31,13 +31,13 @@ var n = t(470079),
   I = t(160913),
   N = t(725727),
   C = t(977156),
-  A = t(237292),
-  m = t(314897),
-  O = t(283595),
-  g = t(663389),
+  m = t(237292),
+  A = t(314897),
+  g = t(283595),
+  O = t(663389),
   h = t(594174),
-  R = t(202527),
-  p = t(620163),
+  p = t(202527),
+  R = t(620163),
   x = t(295545),
   M = t(168308),
   D = t(839469),
@@ -79,7 +79,7 @@ function v() {
   var e, s;
   let t = (0, N.YO)().length,
     n = (0, I.U)(),
-    r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource),
+    r = (0, a.e7)([O.Z], () => O.Z.getProps().impressionSource),
     D = (0, T.gU)(),
     f = (0, M.bC)(),
     P = (0, d.Go)(),
@@ -94,13 +94,13 @@ function v() {
   });
   let {
     shouldMergeGameSettings: b
-  } = R.b.useExperiment({
+  } = p.b.useExperiment({
     location: "settings"
   }), j = (0, x.eA)({
     location: "settings"
-  }), U = (0, E.Xo)({
+  }), B = (0, E.Xo)({
     location: "settings"
-  }), B = null !== (s = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s, G = (0, A.y0)({
+  }), U = null !== (s = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s, G = (0, m.y0)({
     location: "settings"
   }), F = (0, l.Q)(), V = (0, C.Zy)({
     location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY
@@ -110,14 +110,14 @@ function v() {
     location: "UserSettingsInventory"
   }, {
     autoTrackExposure: !0
-  }), Y = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()), H = (0, a.e7)([m.default], () => m.default.hasTOTPEnabled()), {
+  }), Y = (0, a.e7)([g.Z], () => g.Z.hasLibraryApplication()), H = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
     canBroadcast: k
   } = c.Z.useExperiment({
     location: "user_settings_activity_privacy"
   }, {
     autoTrackExposure: !0
   }), w = (0, u.Z)();
-  return (0, p.i)({
+  return (0, R.i)({
     unseenGiftCount: t,
     showPrepaidPaymentPastDueWarning: n,
     impressionSource: r,
@@ -126,8 +126,8 @@ function v() {
     isClipsBetaTagShowing: Z === i.z.CLIPS_SETTINGS_BETA_TAG,
     shouldMergeGameSettings: b,
     isUserSettingsSearchEnabled: j,
-    isKeywordFilteringEnabled: U,
-    isStaff: B,
+    isKeywordFilteringEnabled: B,
+    isStaff: U,
     isInappropriateConversationWarningEnabled: G,
     paymentsBlocked: F,
     isEligibleForQuests: V,
@@ -226,23 +226,23 @@ function j(e, s) {
   }), a
 }
 
-function U() {
+function B() {
   let e = v(),
     {
       shouldMergeGameSettings: s
-    } = R.b.useExperiment({
+    } = p.b.useExperiment({
       location: "settings"
     }),
     t = n.useMemo(() => Z(s), [s]);
   return n.useMemo(() => j(t, e), [t, e])
 }
 
-function B(e) {
+function U(e) {
   let s = v(),
     t = function() {
       let {
         shouldMergeGameSettings: e
-      } = R.b.useExperiment({
+      } = p.b.useExperiment({
         location: "settings"
       }), s = Z(e);
       return n.useMemo(() => [{

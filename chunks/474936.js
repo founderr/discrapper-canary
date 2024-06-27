@@ -4,7 +4,7 @@ n.d(t, {
     return eo
   },
   $8: function() {
-    return eB
+    return ex
   },
   $e: function() {
     return Y
@@ -34,7 +34,7 @@ n.d(t, {
     return a
   },
   ET: function() {
-    return ep
+    return eR
   },
   EZ: function() {
     return E
@@ -49,7 +49,7 @@ n.d(t, {
     return eV
   },
   Hk: function() {
-    return eA
+    return eN
   },
   IW: function() {
     return $
@@ -91,13 +91,13 @@ n.d(t, {
     return r
   },
   T7: function() {
-    return N
+    return A
   },
   TD: function() {
     return eY
   },
   TL: function() {
-    return eN
+    return eA
   },
   Tp: function() {
     return eW
@@ -169,7 +169,7 @@ n.d(t, {
     return eE
   },
   fz: function() {
-    return A
+    return N
   },
   gW: function() {
     return eP
@@ -181,7 +181,7 @@ n.d(t, {
     return c
   },
   hs: function() {
-    return eR
+    return ep
   },
   i_: function() {
     return eT
@@ -217,7 +217,7 @@ n.d(t, {
     return i
   },
   pH: function() {
-    return ex
+    return eB
   },
   pj: function() {
     return en
@@ -253,7 +253,7 @@ n.d(t, {
     return el
   }
 }), n(47120);
-var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f, S, N, A, m, O, p, R, g, C, v, L, D, M, P, y, U, b, G, w, x, B, k = n(981631),
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f, S, A, N, m, O, R, p, g, C, v, L, D, M, P, y, U, b, G, w, B, x, k = n(981631),
   V = n(185923);
 (m = i || (i = {}))[m.TIER_1 = 1] = "TIER_1", m[m.TIER_2 = 2] = "TIER_2", m[m.TIER_0 = 3] = "TIER_0";
 let Z = void 0,
@@ -286,7 +286,7 @@ let W = ["628379670982688768", "978380684370378762", "521846918637420545", "5218
     "628379670982688768": 2,
     "521842865731534868": 2
   });
-(p = s || (s = {})).NONE_MONTH = "628379151761408000", p.NONE_YEAR = "628381571568631808", p.PREMIUM_MONTH_TIER_0 = "978380692553465866", p.PREMIUM_YEAR_TIER_0 = "1024422698568122368", p.PREMIUM_MONTH_TIER_1 = "511651871736201216", p.PREMIUM_YEAR_TIER_1 = "511651876987469824", p.PREMIUM_MONTH_TIER_2 = "511651880837840896", p.PREMIUM_YEAR_TIER_2 = "511651885459963904", p.PREMIUM_MONTH_GUILD = "590665532894740483", p.PREMIUM_YEAR_GUILD = "590665538238152709", p.NONE_3_MONTH = "944265614527037440", p.NONE_6_MONTH = "944265636643602432", p.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", p.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", p.PREMIUM_3_MONTH_GUILD = "944037355453415424", p.PREMIUM_6_MONTH_GUILD = "944037391444738048", p.PREMIUM_MONTH_LEGACY = "511651856145973248", p.PREMIUM_YEAR_LEGACY = "511651860671627264";
+(R = s || (s = {})).NONE_MONTH = "628379151761408000", R.NONE_YEAR = "628381571568631808", R.PREMIUM_MONTH_TIER_0 = "978380692553465866", R.PREMIUM_YEAR_TIER_0 = "1024422698568122368", R.PREMIUM_MONTH_TIER_1 = "511651871736201216", R.PREMIUM_YEAR_TIER_1 = "511651876987469824", R.PREMIUM_MONTH_TIER_2 = "511651880837840896", R.PREMIUM_YEAR_TIER_2 = "511651885459963904", R.PREMIUM_MONTH_GUILD = "590665532894740483", R.PREMIUM_YEAR_GUILD = "590665538238152709", R.NONE_3_MONTH = "944265614527037440", R.NONE_6_MONTH = "944265636643602432", R.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", R.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", R.PREMIUM_3_MONTH_GUILD = "944037355453415424", R.PREMIUM_6_MONTH_GUILD = "944037391444738048", R.PREMIUM_MONTH_LEGACY = "511651856145973248", R.PREMIUM_YEAR_LEGACY = "511651860671627264";
 let z = new Set(["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904", "511651856145973248", "511651860671627264"]),
   q = new Set(["511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"]),
   X = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
@@ -308,7 +308,7 @@ let z = new Set(["978380692553465866", "1024422698568122368", "51165187173620121
     "590663762298667008": void 0,
     "521842865731534868": void 0
   });
-(R = o || (o = {}))[R.MONTH = 1] = "MONTH", R[R.YEAR = 2] = "YEAR", R[R.DAY = 3] = "DAY", (g = a || (a = {}))[g.DAY = 1] = "DAY", g[g.WEEK = 2] = "WEEK", g[g.MONTH = 3] = "MONTH", g[g.YEAR = 4] = "YEAR";
+(p = o || (o = {}))[p.MONTH = 1] = "MONTH", p[p.YEAR = 2] = "YEAR", p[p.DAY = 3] = "DAY", (g = a || (a = {}))[g.DAY = 1] = "DAY", g[g.WEEK = 2] = "WEEK", g[g.MONTH = 3] = "MONTH", g[g.YEAR = 4] = "YEAR";
 let et = Object.freeze({
     "628379151761408000": {
       id: "628379151761408000",
@@ -464,12 +464,12 @@ let et = Object.freeze({
   eh = "902329034132684800",
   ef = "983601860436819968",
   eS = "983601860436819969",
-  eN = "984244797441048577",
-  eA = "1215818925846036480",
+  eA = "984244797441048577",
+  eN = "1215818925846036480",
   em = "1004850445463584768",
   eO = "1073698058383917056",
-  ep = "1070132870233980928",
-  eR = "1150904354090532864",
+  eR = "1070132870233980928",
+  ep = "1150904354090532864",
   eg = "1199128659810582528",
   eC = "1204865493622587392",
   ev = "1204867673024888832",
@@ -500,24 +500,24 @@ let et = Object.freeze({
       id: eS,
       skus: ["521847234246082599"]
     },
-    [eN]: {
-      id: eN,
+    [eA]: {
+      id: eA,
       skus: ["521847234246082599"]
     },
     [em]: {
       id: em,
       skus: ["521847234246082599"]
     },
-    [ep]: {
-      id: ep,
+    [eR]: {
+      id: eR,
       skus: ["978380684370378762"]
     },
     [eO]: {
       id: eO,
       skus: ["521847234246082599"]
     },
-    [eA]: {
-      id: eA,
+    [eN]: {
+      id: eN,
       skus: ["521847234246082599"]
     }
   });
@@ -529,17 +529,17 @@ let eG = Object.freeze({
     "590663762298667008": 4
   }),
   ew = 52428800,
-  ex = {
+  eB = {
     [k.Eu4.NONE]: 5,
     [k.Eu4.TIER_1]: 10,
     [k.Eu4.TIER_2]: 15,
     [k.Eu4.TIER_3]: 30
   },
-  eB = {
-    [k.Eu4.NONE]: ex[k.Eu4.NONE],
-    [k.Eu4.TIER_1]: ex[k.Eu4.NONE] + ex[k.Eu4.TIER_1],
-    [k.Eu4.TIER_2]: ex[k.Eu4.NONE] + ex[k.Eu4.TIER_1] + ex[k.Eu4.TIER_2],
-    [k.Eu4.TIER_3]: ex[k.Eu4.NONE] + ex[k.Eu4.TIER_1] + ex[k.Eu4.TIER_2] + ex[k.Eu4.TIER_3]
+  ex = {
+    [k.Eu4.NONE]: eB[k.Eu4.NONE],
+    [k.Eu4.TIER_1]: eB[k.Eu4.NONE] + eB[k.Eu4.TIER_1],
+    [k.Eu4.TIER_2]: eB[k.Eu4.NONE] + eB[k.Eu4.TIER_1] + eB[k.Eu4.TIER_2],
+    [k.Eu4.TIER_3]: eB[k.Eu4.NONE] + eB[k.Eu4.TIER_1] + eB[k.Eu4.TIER_2] + eB[k.Eu4.TIER_3]
   },
   ek = {
     [k.Eu4.NONE]: 8,
@@ -558,7 +558,7 @@ let eG = Object.freeze({
         screenShareQualityResolution: "720p",
         soundboardSounds: ek[k.Eu4.NONE],
         maxConcurrentActivities: 2,
-        stickers: eB[k.Eu4.NONE],
+        stickers: ex[k.Eu4.NONE],
         stageVideoUsers: k.B9o
       }
     },
@@ -572,7 +572,7 @@ let eG = Object.freeze({
         screenShareQualityResolution: "720p",
         soundboardSounds: ek[k.Eu4.TIER_1],
         maxConcurrentActivities: 3,
-        stickers: eB[k.Eu4.TIER_1],
+        stickers: ex[k.Eu4.TIER_1],
         stageVideoUsers: k.B9o
       }
     },
@@ -586,7 +586,7 @@ let eG = Object.freeze({
         screenShareQualityResolution: "1080p",
         soundboardSounds: ek[k.Eu4.TIER_2],
         maxConcurrentActivities: 5,
-        stickers: eB[k.Eu4.TIER_2],
+        stickers: ex[k.Eu4.TIER_2],
         stageVideoUsers: k.eez
       }
     },
@@ -600,7 +600,7 @@ let eG = Object.freeze({
         screenShareQualityResolution: "1080p",
         soundboardSounds: ek[k.Eu4.TIER_3],
         maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-        stickers: eB[k.Eu4.TIER_3],
+        stickers: ex[k.Eu4.TIER_3],
         stageVideoUsers: k.RcX
       }
     }
@@ -636,7 +636,7 @@ let eY = Object.freeze({
       fileSize: 524288e3
     }
   });
-(G = f || (f = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = S || (S = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (x = N || (N = {})).BOOST = "boost", x.DISMISS = "dismiss", (B = A || (A = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", B.BADGE_CLICKED = "share_nitro_badge_clicked", B.FLOW_STARTED = "share_nitro_flow_started", B.FLOW_COMPLETED = "share_nitro_flow_completed";
+(G = f || (f = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = S || (S = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = A || (A = {})).BOOST = "boost", B.DISMISS = "dismiss", (x = N || (N = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", x.BADGE_CLICKED = "share_nitro_badge_clicked", x.FLOW_STARTED = "share_nitro_flow_started", x.FLOW_COMPLETED = "share_nitro_flow_completed";
 let eW = new Set(["PL", "TR"]),
   eK = [1, 2, 3],
   ez = [4, 5, 7, 6],

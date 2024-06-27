@@ -19,20 +19,20 @@ function r(e) {
       channel: _
     } = e,
     E = (0, a.ZP)(r),
-    I = E.nick,
-    m = o(E),
+    m = E.nick,
+    I = o(E),
     T = (0, a.Sw)(c, _);
   if (null != T && null != d) {
     let e = d(T);
     t = l.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
-      username: I,
-      usernameHook: m,
+      username: m,
+      usernameHook: I,
       otherUsername: T.nick,
       otherUsernameHook: e
     })
   } else t = l.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
-    username: I,
-    usernameHook: m
+    username: m,
+    usernameHook: I
   });
   return (0, i.jsx)(s.Z, {
     icon: n(474019),

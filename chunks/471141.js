@@ -26,7 +26,7 @@ function E(e) {
     style: h,
     note: f,
     children: S
-  } = e, N = r.useRef(null), A = r.useRef(null), m = r.useId(), O = (0, i.jsx)(l.r, {
+  } = e, A = r.useRef(null), N = r.useRef(null), m = r.useId(), O = (0, i.jsx)(l.r, {
     id: m,
     checked: t,
     onChange: I,
@@ -34,7 +34,7 @@ function E(e) {
     focusProps: {
       enabled: !1
     },
-    innerRef: N
+    innerRef: A
   });
   return (0, i.jsxs)("div", {
     style: h,
@@ -44,11 +44,11 @@ function E(e) {
     children: [(0, i.jsx)(a.t, {
       within: !0,
       offset: -4,
-      focusTarget: N,
-      ringTarget: A,
+      focusTarget: A,
+      ringTarget: N,
       children: (0, i.jsxs)("div", {
         className: d.labelRow,
-        ref: A,
+        ref: N,
         children: [(0, i.jsx)("label", {
           htmlFor: m,
           className: d.title,

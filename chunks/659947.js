@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return p
+    return R
   }
 }), t(653041), t(47120);
 var n = t(735250),
@@ -20,15 +20,15 @@ var n = t(735250),
   N = t(284921);
 
 function C() {}
-let A = [S.h8.VOICE_CHANNEL];
+let m = [S.h8.VOICE_CHANNEL];
 
-function m(e) {
+function A(e) {
   e.setOptions({
     voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0)
 }
 
-function O(e) {
+function g(e) {
   let {
     height: s
   } = e;
@@ -39,19 +39,19 @@ function O(e) {
   })
 }
 
-function g() {
-  return (0, n.jsx)(O, {
+function O() {
+  return (0, n.jsx)(g, {
     height: 16
   }, "footer")
 }
 
 function h() {
-  return (0, n.jsx)(O, {
+  return (0, n.jsx)(g, {
     height: 8
   }, "header")
 }
 
-function R() {
+function p() {
   return (0, n.jsx)("div", {
     className: N.voiceListSearchEmpty,
     children: (0, n.jsx)(r.Text, {
@@ -63,7 +63,7 @@ function R() {
   })
 }
 
-function p(e) {
+function R(e) {
   var s, t;
   let {
     keybind: i
@@ -110,8 +110,8 @@ function x(e) {
     onClose: t,
     onSelect: o
   } = e, u = a.useId(), C = a.useRef(null), {
-    mouseFocusEnabled: O,
-    enableMouseFocus: p,
+    mouseFocusEnabled: g,
+    enableMouseFocus: R,
     disableMouseFocus: x
   } = function() {
     let e = a.useRef(!1),
@@ -132,8 +132,8 @@ function x(e) {
     queryResults: f
   } = (0, l.Z)({
     visible: !0,
-    autocompleterResultTypes: A,
-    autocompleterBeforeCreateSearchContext: m
+    autocompleterResultTypes: m,
+    autocompleterBeforeCreateSearchContext: A
   }), L = function(e) {
     let s = "" !== e,
       t = (0, i.Wu)([d.ZP, c.Z, E.Z], () => {
@@ -177,7 +177,7 @@ function x(e) {
     })();
   return (0, n.jsx)("div", {
     className: N.voiceModalContainer,
-    onMouseMove: p,
+    onMouseMove: R,
     children: (0, n.jsxs)(r.ModalRoot, {
       transitionState: s,
       size: r.ModalSize.MEDIUM,
@@ -218,7 +218,7 @@ function x(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === v && "" !== M && (0, n.jsx)(R, {}), (v > 0 || "" === M) && (0, n.jsx)(r.ListThin, {
+      }), 0 === v && "" !== M && (0, n.jsx)(p, {}), (v > 0 || "" === M) && (0, n.jsx)(r.ListThin, {
         innerId: u,
         innerRole: "listbox",
         "aria-label": I.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
@@ -240,7 +240,7 @@ function x(e) {
             channel: a,
             category: i,
             focused: P === s,
-            onMouseEnter: () => O.current && Z(s),
+            onMouseEnter: () => g.current && Z(s),
             onClick: () => {
               o(a.id), t()
             },
@@ -252,7 +252,7 @@ function x(e) {
           }, a.id)
         },
         renderListHeader: h,
-        renderFooter: g,
+        renderFooter: O,
         sectionHeight: 0,
         rowHeight: 34,
         className: N.voiceChannelList,

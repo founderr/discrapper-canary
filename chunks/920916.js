@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return w
   },
   openCollectibleRewardModal: function() {
-    return x
+    return B
   }
 }), n(773603), n(47120);
 var i = n(735250),
@@ -23,12 +23,12 @@ var i = n(735250),
   h = n(530618),
   f = n(454585),
   S = n(164946),
-  N = n(166625),
-  A = n(25990),
+  A = n(166625),
+  N = n(25990),
   m = n(594174),
   O = n(810090),
-  p = n(272008),
-  R = n(497505),
+  R = n(272008),
+  p = n(497505),
   g = n(918701),
   C = n(566078),
   v = n(114732),
@@ -39,7 +39,7 @@ var i = n(735250),
   y = n(789002);
 
 function U() {
-  let e = A.Z.getAllPending(),
+  let e = N.Z.getAllPending(),
     t = (0, S.ED)(e);
   return (0, c.Mn)(t).finally(c.si)
 }
@@ -54,16 +54,16 @@ function b(e) {
     reward: E,
     decoration: I,
     onUseNow: T
-  } = e, f = r.useRef(null), [S, N] = r.useState(null), A = r.useRef(new a.qA), O = (0, u.e7)([d.Z], () => d.Z.useReducedMotion), C = (0, u.e7)([m.default], () => m.default.getCurrentUser()), L = (0, g.j8)(l), M = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [y, U] = r.useState(M ? "claimed" : "loading");
+  } = e, f = r.useRef(null), [S, A] = r.useState(null), N = r.useRef(new a.qA), O = (0, u.e7)([d.Z], () => d.Z.useReducedMotion), C = (0, u.e7)([m.default], () => m.default.getCurrentUser()), L = (0, g.j8)(l), M = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [y, U] = r.useState(M ? "claimed" : "loading");
   r.useEffect(() => {
-    !M && (0, p.QB)(l.id, R.y$.CROSS_PLATFORM, c).then(() => U("claimed")).catch(() => U("error"))
+    !M && (0, R.QB)(l.id, p.y$.CROSS_PLATFORM, c).then(() => U("claimed")).catch(() => U("error"))
   }, [l, c, M]);
   let b = null == C || null == I || "loading" === y;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(a.O_, {
-      ref: N,
+      ref: A,
       className: P.confettiCanvas,
-      environment: A.current
+      environment: N.current
     }), (0, i.jsx)("div", {
       ref: f,
       children: (0, i.jsx)(_.ModalRoot, {
@@ -113,7 +113,7 @@ function G(e) {
     isSaving: u,
     onClose: c,
     onConfirm: d
-  } = e, E = (0, g.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), T = C.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM], h = (0, g.Kr)(t.config), S = null == h ? M.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
+  } = e, E = (0, g.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), T = C.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[p.y$.CROSS_PLATFORM], h = (0, g.Kr)(t.config), S = null == h ? M.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
     decorationName: s
   }) : M.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY_WITH_EXPIRATION.format({
     decorationName: s,
@@ -204,7 +204,7 @@ function w(e) {
     let {
       product: t,
       isFetching: n
-    } = (0, T.T)(e), {} = (0, N.Z)({}), i = r.useMemo(() => {
+    } = (0, T.T)(e), {} = (0, A.Z)({}), i = r.useMemo(() => {
       if (null == t || n) return null;
       let e = t.items.find(e => e.type === l.Z.AVATAR_DECORATION);
       return null == e ? null : e
@@ -230,7 +230,7 @@ function w(e) {
   })
 }
 
-function x(e, t) {
+function B(e, t) {
   (0, _.openModalLazy)(async () => {
     let {
       default: r

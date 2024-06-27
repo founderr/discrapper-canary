@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(317632),
   _ = n(602478),
   E = n(360629),
-  I = n(742989),
-  m = n(802463),
+  m = n(742989),
+  I = n(802463),
   T = n(818186),
   h = n(689938),
   N = n(775132);
@@ -38,7 +38,7 @@ function p(e) {
     closePopout: f
   } = e, {
     showReminders: p
-  } = I.Z.useExperiment({
+  } = m.Z.useExperiment({
     location: "RecentsHeader"
   }, {
     autoTrackExposure: !1
@@ -46,7 +46,7 @@ function p(e) {
     enabled: C
   } = _.Z.useExperiment({
     location: "RecentsHeader"
-  }), g = (0, l.e7)([u.Z], () => u.Z.getUnseenInviteCount()), S = (0, l.e7)([m.Z], () => m.Z.getMessageReminders()).length;
+  }), g = (0, l.e7)([u.Z], () => u.Z.getUnseenInviteCount()), S = (0, l.e7)([I.Z], () => I.Z.getMessageReminders()).length;
   return (0, i.jsxs)(c.h4, {
     className: s()(N.header, N.expanded),
     children: [(0, i.jsxs)("div", {
@@ -127,7 +127,7 @@ function C(e) {
     children: a
   } = e, {
     showReminders: l
-  } = I.Z.useExperiment({
+  } = m.Z.useExperiment({
     location: "489e3f_2"
   }, {
     autoTrackExposure: !1

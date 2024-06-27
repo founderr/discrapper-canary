@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(401460),
   f = n(441319),
   S = n(921944),
-  N = n(526761),
-  A = n(689938),
+  A = n(526761),
+  N = n(689938),
   m = n(776327);
 
 function O(e) {
@@ -29,8 +29,8 @@ function O(e) {
     className: t,
     disabled: n,
     renderCTAButtons: O
-  } = e, [p, R] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), g = r.useRef(null);
-  (0, d.Z)(g, N.h1.CUSTOM_APP_ICONS);
+  } = e, [R, p] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), g = r.useRef(null);
+  (0, d.Z)(g, A.h1.CUSTOM_APP_ICONS);
   let C = (0, E.Dt)(),
     v = (0, o.useRadioGroup)({
       orientation: "horizontal",
@@ -91,17 +91,17 @@ function O(e) {
           className: m.header,
           children: [(0, i.jsxs)("div", {
             className: m.headings,
-            children: [R ? null : (0, i.jsxs)("div", {
+            children: [p ? null : (0, i.jsxs)("div", {
               className: m.title,
               children: [(0, i.jsx)(o.Heading, {
                 variant: "text-md/medium",
-                children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
+                children: N.Z.Messages.APP_ICON_SETTINGS_TITLE
               }), (0, i.jsx)(c.Z, {
                 className: m.premiumIcon
               })]
             }), (0, i.jsx)(o.Heading, {
               variant: "text-sm/normal",
-              children: A.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
+              children: N.Z.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]
           }), null == O ? void 0 : O()]
         }), (0, i.jsx)("div", {
@@ -114,7 +114,7 @@ function O(e) {
             return y(t, n)
           }).map((e, t) => (0, i.jsx)(h.Z, {
             icon: e,
-            isSelected: p === e.id,
+            isSelected: R === e.id,
             onSelect: e => L(e),
             disabled: n,
             tabIndex: 0 !== t || n ? void 0 : 0,

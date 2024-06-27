@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(735250),
@@ -38,16 +38,16 @@ let S = e => {
     align: T,
     impressionName: f,
     impressionProperties: S
-  } = e, N = r.useRef(null), A = r.useMemo(() => ({
+  } = e, A = r.useRef(null), N = r.useMemo(() => ({
     current: u
   }), [u]);
   r.useEffect(() => {
     var e, t;
-    let i = (0, s.findDOMNode)(N.current);
+    let i = (0, s.findDOMNode)(A.current);
     if (null == i) return;
     let r = e => {
       let t = e.target,
-        i = (0, s.findDOMNode)(N.current);
+        i = (0, s.findDOMNode)(A.current);
       if (!(null != i && (0, l.referencePortalAwareContains)(i, t))) window.getSelection().removeAllRanges(), n()
     };
     return null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
@@ -61,33 +61,33 @@ let S = e => {
     return null === (e = m.current) || void 0 === e ? void 0 : e.call(m)
   }, []), r.useLayoutEffect(() => {
     var e;
-    null === (e = N.current) || void 0 === e || e.updatePosition()
+    null === (e = A.current) || void 0 === e || e.updatePosition()
   }), (0, c.Z)({
     type: o.ImpressionTypes.MENU,
     name: f,
     properties: S
   });
   let O = (0, _.Aq)(),
-    p = r.useCallback(() => {
+    R = r.useCallback(() => {
       O.dispatch(h.CkL.POPOUT_SHOW)
     }, [O]),
-    R = r.useCallback(() => {
+    p = r.useCallback(() => {
       O.dispatch(h.CkL.POPOUT_HIDE)
     }, [O]);
   return (0, i.jsx)(I.W5, {
-    onMount: p,
-    onUnmount: R,
-    targetRef: A,
+    onMount: R,
+    onUnmount: p,
+    targetRef: N,
     overrideTargetRect: d,
     position: null != E ? E : "right",
     align: null != T ? T : "top",
     autoInvert: !0,
-    ref: N,
+    ref: A,
     nudgeAlignIntoViewport: !0,
     children: t
   })
 };
-class N extends r.PureComponent {
+class A extends r.PureComponent {
   componentDidMount() {
     let {
       renderLazy: e,
@@ -173,7 +173,7 @@ class N extends r.PureComponent {
   }
 }
 
-function A() {
+function N() {
   let {
     contextMenu: e,
     version: t,
@@ -186,7 +186,7 @@ function A() {
     appContext: o,
     renderWindow: l
   } = r.useContext(_.ZP);
-  return (0, i.jsx)(N, {
+  return (0, i.jsx)(A, {
     appContext: o,
     renderWindow: l,
     ...e,

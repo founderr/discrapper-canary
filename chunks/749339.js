@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return u
+    return s
   }
 });
 var i = t(735250);
@@ -10,7 +10,7 @@ var a = t(481060),
   l = t(572004),
   o = t(689938);
 
-function u(e) {
+function s(e) {
   return l.wS ? (0, i.jsx)(a.MenuItem, {
     id: "copy-text",
     label: o.Z.Messages.COPY_TEXT,

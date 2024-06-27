@@ -20,18 +20,18 @@ var i = n(735250),
   h = n(131704),
   f = n(592125),
   S = n(5192),
-  N = n(838440),
-  A = n(332390),
+  A = n(838440),
+  N = n(332390),
   m = n(785717),
   O = n(993409),
-  p = n(765365),
-  R = n(981631),
+  R = n(765365),
+  p = n(981631),
   g = n(689938),
   C = n(717633),
   v = n(682583);
 let L = (0, h.kt)({
     id: "1",
-    type: R.d4z.DM
+    type: p.d4z.DM
   }),
   D = async e => {
     let {
@@ -41,7 +41,7 @@ let L = (0, h.kt)({
     } = e, {
       valid: r,
       failureReason: s
-    } = await (0, N.v)({
+    } = await (0, A.v)({
       type: c.I.NORMAL,
       content: n,
       channel: null
@@ -66,26 +66,26 @@ function M(e) {
   } = (0, _.ZP)(), {
     trackUserProfileAction: f
   } = (0, m.KZ)(), {
-    messageCtaEnabled: N,
-    activeInviteToCallCtaEnabled: R,
+    messageCtaEnabled: A,
+    activeInviteToCallCtaEnabled: p,
     persistentCallCtaEnabled: M
-  } = (0, A.l)({
+  } = (0, N.l)({
     location: "BiteSizeProfileDirectMessageSection"
-  }), P = (0, p.Z)({
+  }), P = (0, R.Z)({
     user: t,
     onClose: u
-  }), [y, U] = r.useState(""), [b, G] = r.useState((0, d.JM)(y)), w = r.useRef(!1), x = () => {
+  }), [y, U] = r.useState(""), [b, G] = r.useState((0, d.JM)(y)), w = r.useRef(!1), B = () => {
     f({
       action: "SEND_MESSAGE"
     }), l.Z.openPrivateChannel(t.id, !1, !1, h), null == u || u()
-  }, B = (0, i.jsxs)("div", {
+  }, x = (0, i.jsxs)("div", {
     className: v.menuItemLabel,
     children: [(0, i.jsx)(a.PhoneCallIcon, {
       size: "xs"
     }), " ", g.Z.Messages.START_VOICE_CALL]
   }), k = (0, T.Z)({
     user: t,
-    label: B,
+    label: x,
     id: "voice-call",
     onCall: () => {
       f({
@@ -152,14 +152,14 @@ function M(e) {
       }
     })
   });
-  if (N) return R && null != P ? (0, i.jsxs)("div", {
+  if (A) return p && null != P ? (0, i.jsxs)("div", {
     className: v.ctaRow,
     children: [(0, i.jsx)(O.Z, {
       fullWidth: !0,
       variant: "text",
       color: v.engagementExpButton,
       tooltipContainerClassName: v.ctaTooltipContainer,
-      onClick: x,
+      onClick: B,
       icon: a.ChatIcon,
       text: g.Z.Messages.USER_PROFILE_MESSAGE
     }), P]
@@ -169,7 +169,7 @@ function M(e) {
       fullWidth: !0,
       variant: "text",
       color: o()(a.Button.Colors.BRAND, C.color),
-      onClick: x,
+      onClick: B,
       icon: a.ChatIcon,
       text: g.Z.Messages.USER_PROFILE_MESSAGE,
       tooltipContainerClassName: v.ctaTooltipContainer
@@ -178,7 +178,7 @@ function M(e) {
     fullWidth: !0,
     variant: "text",
     color: o()(a.Button.Colors.BRAND, C.color),
-    onClick: x,
+    onClick: B,
     icon: a.ChatIcon,
     text: g.Z.Messages.USER_PROFILE_MESSAGE
   });

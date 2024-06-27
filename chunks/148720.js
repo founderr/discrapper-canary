@@ -24,21 +24,21 @@ async function S(e) {
   let {
     channelId: n,
     applicationId: S,
-    launchId: N,
-    inputApplication: A,
+    launchId: A,
+    inputApplication: N,
     analyticsLocations: m,
     embeddedActivitiesManager: O
-  } = e, p = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === S && (null == N || e.launchId === N)), R = A;
-  if (null == R) {
+  } = e, R = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === S && (null == A || e.launchId === A)), p = N;
+  if (null == p) {
     let e = await r.Z.fetchApplication(S);
-    R = a.Z.createFromServer(e)
+    p = a.Z.createFromServer(e)
   }
-  if (null == p || null == R) return;
+  if (null == R || null == p) return;
   let g = c.default.getCurrentUser(),
     C = l.Z.getChannel(n),
     v = (0, h.ZP)({
       userId: null == g ? void 0 : g.id,
-      application: R,
+      application: p,
       channelId: n,
       currentUser: g,
       isActivitiesEnabledForCurrentPlatform: (0, T.a)(C),
@@ -96,8 +96,8 @@ async function S(e) {
   }({
     embeddedActivityJoinability: v,
     handleCanJoin: async function e() {
-      if (null != p) await (0, I.Z)({
-        applicationId: p.applicationId,
+      if (null != R) await (0, I.Z)({
+        applicationId: R.applicationId,
         currentEmbeddedApplication: M,
         activityChannelId: n,
         locationObject: {},

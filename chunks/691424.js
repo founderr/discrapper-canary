@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return x
+    return B
   }
 }), n(47120);
 var i = n(735250),
@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(628692),
   f = n(590956),
   S = n(703656),
-  N = n(430824),
-  A = n(68588),
+  A = n(430824),
+  N = n(68588),
   m = n(572004),
   O = n(900849),
-  p = n(746878),
-  R = n(285063),
+  R = n(746878),
+  p = n(285063),
   g = n(943362),
   C = n(551452),
   v = n(69626),
@@ -89,14 +89,14 @@ let w = {
   inlineCode: {
     react: (e, t, n) => (0, i.jsx)("code", {
       className: "inline",
-      children: (0, p.S)(e, t, n)
+      children: (0, R.S)(e, t, n)
     }, n.key)
   },
   codeBlock: {
     react(e, t, r) {
       let s = () => (0, i.jsx)("code", {
         className: o()(U.scrollbarGhostHairline, "hljs"),
-        children: (0, p.S)(e, t, r)
+        children: (0, R.S)(e, t, r)
       });
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
@@ -135,8 +135,8 @@ let w = {
     }, n.key)
   },
   spoiler: {
-    react: (e, t, n) => (0, i.jsx)(A.Z, {
-      type: A.Z.Types.TEXT,
+    react: (e, t, n) => (0, i.jsx)(N.Z, {
+      type: N.Z.Types.TEXT,
       inline: n.formatInline,
       renderTextElement: (e, t) => null == e || e.type !== u.Z || t ? e : r.cloneElement(e, {
         tabIndex: -1
@@ -155,7 +155,7 @@ let w = {
     react(e, t, n) {
       let r = () => {
         ! function(e, t) {
-          let n = N.Z.getGuild(e);
+          let n = A.Z.getGuild(e);
           if (null == e || null == n || !n.hasFeature(M.oNc.COMMUNITY)) return;
           let i = {
               home: P.oC.GUILD_HOME,
@@ -163,7 +163,7 @@ let w = {
               customize: P.oC.CUSTOMIZE_COMMUNITY,
               guide: P.oC.GUILD_HOME
             } [t],
-            r = N.Z.getGuild(e);
+            r = A.Z.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
             O.Ub(e, {}, {
               channelId: i
@@ -172,7 +172,7 @@ let w = {
           }(0, S.uL)(M.Z5c.CHANNEL(e, i))
         }(e.guildId, e.channelId)
       };
-      if (!(0, p.k)(e.channelId)) return null;
+      if (!(0, R.k)(e.channelId)) return null;
       let s = "".concat(e.channelId);
       switch (e.channelId) {
         case P.HY.GUILD_HOME:
@@ -207,7 +207,7 @@ let w = {
     }
   },
   timestamp: {
-    react: (e, t, n) => (0, i.jsx)(R.Z, {
+    react: (e, t, n) => (0, i.jsx)(p.Z, {
       node: e
     }, n.key)
   },
@@ -245,17 +245,17 @@ let w = {
   },
   guild: {
     react: (e, t, n) => {
-      let r = N.Z.getGuild(e.guildId);
+      let r = A.Z.getGuild(e.guildId);
       return (0, i.jsx)(E.Z, {
         guild: r,
-        children: (0, p.S)(e, t, n)
+        children: (0, R.S)(e, t, n)
       }, n.key)
     }
   },
   channel: {
     react: (e, t, n) => (0, i.jsx)(d.Z, {
       iconType: e.iconType,
-      children: (0, p.S)(e, t, n)
+      children: (0, R.S)(e, t, n)
     }, n.key)
   },
   message: {
@@ -269,7 +269,7 @@ let w = {
   }
 };
 
-function x(e) {
+function B(e) {
   return {
     ...w,
     link: (0, D.Z)(e),

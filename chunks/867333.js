@@ -26,11 +26,11 @@ function I(e) {
     isFocused: h,
     menuItemProps: f,
     action: S
-  } = e, N = r.useRef(null);
+  } = e, A = r.useRef(null);
   return r.useEffect(() => {
-    h && (0, u.F)(N)
+    h && (0, u.F)(A)
   }, [h]), (0, i.jsxs)(a.P, {
-    innerRef: N,
+    innerRef: A,
     className: o()(E.item, E.labelContainer, d._[t], {
       [E.disabled]: T,
       [E.focused]: h

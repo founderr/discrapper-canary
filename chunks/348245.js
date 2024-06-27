@@ -16,12 +16,12 @@ var r = n(266067),
   h = n(131704),
   f = n(433355),
   S = n(592125),
-  N = n(430824),
-  A = n(306680),
+  A = n(430824),
+  N = n(306680),
   m = n(944486),
   O = n(914010),
-  p = n(70956),
-  R = n(796798),
+  R = n(70956),
+  p = n(796798),
   g = n(198620),
   C = n(981631),
   v = n(176505),
@@ -62,7 +62,7 @@ function P(e) {
     return
   }
   let f = d.Z.getOrCreate(n);
-  R.l.getCurrentConfig({
+  p.l.getCurrentConfig({
     location: "fetch_messages"
   }).enabled && f.some(g.k5) && (M.log("Found expired attachment link, clearing messages"), d.Z.clear(n), f = d.Z.getOrCreate(n)), null != f.jumpTargetId && null == r && (f = f.mutate({
     jumpTargetId: null,
@@ -72,7 +72,7 @@ function P(e) {
     focusTargetId: null
   }), d.Z.commit(f));
   let m = s;
-  if (!a || I.Z.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : T && M.log("Skipping fetch because no other conditions matched") : null == t || null != N.Z.getGuild(t) ? m = !0 : T && M.log("Skipping fetch we are connected and have loaded messages") : m = !0, (0, E.Z)(n) && A.ZP.hasUnread(n) && (m = !0), m) {
+  if (!a || I.Z.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : T && M.log("Skipping fetch because no other conditions matched") : null == t || null != A.Z.getGuild(t) ? m = !0 : T && M.log("Skipping fetch we are connected and have loaded messages") : m = !0, (0, E.Z)(n) && N.ZP.hasUnread(n) && (m = !0), m) {
     if (d.Z.commit(f.mutate({
         loadingMore: !0
       })), null != r) u.Z.jumpToMessage({
@@ -84,7 +84,7 @@ function P(e) {
       jumpType: l
     });
     else if ((null == h ? void 0 : h.isThread()) && function(e) {
-        if (A.ZP.hasOpenedThread(e)) return !1;
+        if (N.ZP.hasOpenedThread(e)) return !1;
         if (null == i) {
           var t;
           i = null !== (t = o.K.get(U, {})) && void 0 !== t ? t : {}
@@ -104,8 +104,8 @@ function P(e) {
       isPreload: a,
       skipLocalFetch: c
     });
-    else if ((null == h ? void 0 : h.isThread()) && A.ZP.hasTrackedUnread(h.id) && !f.ready) {
-      let e = A.ZP.getTrackedAckMessageId(h.id);
+    else if ((null == h ? void 0 : h.isThread()) && N.ZP.hasTrackedUnread(h.id) && !f.ready) {
+      let e = N.ZP.getTrackedAckMessageId(h.id);
       M.log("Jumping to most recent message in thread ".concat(h.id, " - ").concat(e)), u.Z.fetchMessages({
         channelId: n,
         limit: C.AQB,
@@ -128,7 +128,7 @@ function P(e) {
     })
   }
 }
-let y = 90 * p.Z.Millis.DAY,
+let y = 90 * R.Z.Millis.DAY,
   U = "viewedThreadIds";
 
 function b() {
@@ -145,7 +145,7 @@ function b() {
         guildId: n.getGuildId(),
         channelId: n.id,
         messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-      }), B(n.getGuildId(), n.id)
+      }), x(n.getGuildId(), n.id)
     }
   }
 }
@@ -164,7 +164,7 @@ function G() {
       isPreload: e,
       skipLocalFetch: t,
       logFailures: n
-    }) : n && M.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && M.log("Skipping fetch because channel is null")
+    }) : n && M.log("Skipping fetch because the selected channel is not a text channel"), x(r.getGuildId(), r.id)) : n && M.log("Skipping fetch because channel is null")
   } else n && M.log("Skipping fetch because there is no selected channel")
 }
 
@@ -180,10 +180,10 @@ function w(e) {
     channelId: n,
     messageId: i,
     jumpType: r
-  }), B(t, n)
+  }), x(t, n)
 }
 
-function x(e) {
+function B(e) {
   let {
     guildId: t,
     channelId: n
@@ -194,7 +194,7 @@ function x(e) {
   })
 }
 
-function B(e, t) {
+function x(e, t) {
   let n = f.ZP.getCurrentSidebarChannelId(t);
   if (null != n) P({
     guildId: e,
@@ -208,7 +208,7 @@ function k() {
     t = O.Z.getGuildId();
   if (null == t || null == e) return;
   let n = f.ZP.getSidebarState(e);
-  if ((null == n ? void 0 : n.type) !== T.tI.VIEW_CHANNEL) B(t, e)
+  if ((null == n ? void 0 : n.type) !== T.tI.VIEW_CHANNEL) x(t, e)
 }
 
 function V(e) {
@@ -220,7 +220,7 @@ function V(e) {
   i === C.e3s && (P({
     guildId: t,
     channelId: n
-  }), B(t, n))
+  }), x(t, n))
 }
 
 function Z(e) {
@@ -272,7 +272,7 @@ function j(e) {
   } = e;
   if (s) return;
   let o = null !== (t = Y[n]) && void 0 !== t ? t : 0;
-  if (Date.now() - o < 10 * p.Z.Millis.SECOND) return;
+  if (Date.now() - o < 10 * R.Z.Millis.SECOND) return;
   Y[n] = Date.now();
   let a = m.Z.getChannelId(),
     l = f.ZP.getCurrentSidebarChannelId(a),
@@ -319,7 +319,7 @@ class z extends c.Z {
       APP_STATE_UPDATE: K,
       OVERLAY_INITIALIZE: b,
       CHANNEL_SELECT: w,
-      VOICE_CHANNEL_SELECT: x,
+      VOICE_CHANNEL_SELECT: B,
       THREAD_CREATE: Z,
       THREAD_LIST_SYNC: () => G(),
       CHANNEL_CREATE: Z,

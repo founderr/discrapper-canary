@@ -10,22 +10,22 @@ var i = n(735250),
   u = n(430824),
   _ = n(914010),
   E = n(900849),
-  I = n(41776),
-  m = n(981631),
+  m = n(41776),
+  I = n(981631),
   T = n(689938),
   h = n(595708),
   N = n(40578);
 t.Z = () => {
   let e = (0, r.e7)([_.Z], () => _.Z.getGuildId(), []),
     t = (0, r.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-    n = (0, r.e7)([I.Z], () => I.Z.getHistorySnapshot(), []),
+    n = (0, r.e7)([m.Z], () => m.Z.getHistorySnapshot(), []),
     [s, f] = a.useState(!1);
   if (null == t) return null;
   let p = async () => {
     f(!0);
     try {
       E.mT(t.id), await c.Z.joinGuild(t.id, {
-        source: m.vtS.NOTICE_BAR
+        source: I.vtS.NOTICE_BAR
       })
     } catch {
       f(!1)

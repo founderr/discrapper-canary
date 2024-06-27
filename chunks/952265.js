@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $s: function() {
-    return N
+    return A
   },
   DE: function() {
-    return p
+    return R
   },
   Gw: function() {
     return c
@@ -25,13 +25,13 @@ n.d(t, {
     return I
   },
   f9: function() {
-    return A
+    return N
   },
   h7: function() {
     return T
   },
   nf: function() {
-    return R
+    return p
   },
   o: function() {
     return f
@@ -79,7 +79,7 @@ async function I(e) {
       }, n)
     }, 300),
     l = await e();
-  return clearTimeout(a), o ? R(s, n) && f(s, l, i.onCloseRequest, i.onCloseCallback, n) : T(l, {
+  return clearTimeout(a), o ? p(s, n) && f(s, l, i.onCloseRequest, i.onCloseCallback, n) : T(l, {
     ...i,
     modalKey: s
   }, n), s
@@ -160,11 +160,11 @@ function S(e) {
   return !1
 }
 
-function N() {
+function A() {
   return S(E.getState())
 }
 
-function A() {
+function N() {
   return S(E())
 }
 
@@ -183,12 +183,12 @@ function O() {
     for (let n of e[t]) h(n.key, t)
 }
 
-function p(e, t) {
+function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.z1,
     i = e[n];
   return null != i && i.some(e => e.key === t)
 }
 
-function R(e, t) {
-  return p(E.getState(), e, t)
+function p(e, t) {
+  return R(E.getState(), e, t)
 }

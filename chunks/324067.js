@@ -13,13 +13,13 @@ let h = null,
   f = {},
   S = null;
 
-function N() {
+function A() {
   return {
     _categories: [],
     null: []
   }
 }
-let A = N();
+let N = A();
 
 function m(e, t) {
   e.index = t
@@ -27,7 +27,7 @@ function m(e, t) {
 
 function O(e) {
   let t = E.ZP.getChannels(e),
-    n = N(),
+    n = A(),
     i = e => {
       var t;
       let {
@@ -49,11 +49,11 @@ function O(e) {
   }), t[E.sH].forEach(i), t[E.Zb].forEach(i), (0, u.Z)(n._categories, n).forEach(m), f[e] = n, n
 }
 
-function p() {
+function R() {
   f = {}, null != h && O(h)
 }
 
-function R(e) {
+function p(e) {
   let {
     guild: {
       id: t
@@ -96,7 +96,7 @@ class D extends(i = a.ZP.Store) {
     return null != e ? function(e) {
       let t = f[e];
       return null != t ? t : O(e)
-    }(e) : A
+    }(e) : N
   }
 }
 o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
@@ -112,11 +112,11 @@ o = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(
     if (h = null != t ? t : null, null == t || null != f[t]) return !1;
     O(t)
   },
-  CONNECTION_OPEN: p,
-  OVERLAY_INITIALIZE: p,
-  CACHE_LOADED_LAZY: p,
-  GUILD_CREATE: R,
-  GUILD_UPDATE: R,
+  CONNECTION_OPEN: R,
+  OVERLAY_INITIALIZE: R,
+  CACHE_LOADED_LAZY: R,
+  GUILD_CREATE: p,
+  GUILD_UPDATE: p,
   GUILD_DELETE: function(e) {
     let {
       guild: {

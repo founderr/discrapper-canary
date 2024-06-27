@@ -4,16 +4,16 @@ n.d(t, {
     return O
   },
   BP: function() {
-    return A
-  },
-  MC: function() {
-    return R
-  },
-  dn: function() {
     return N
   },
-  hL: function() {
+  MC: function() {
     return p
+  },
+  dn: function() {
+    return A
+  },
+  hL: function() {
+    return R
   },
   lK: function() {
     return m
@@ -37,7 +37,7 @@ var i, r, s = n(278074),
   f = n(981631),
   S = n(689938);
 (r = i || (i = {})).SPOILER = "spoiler", r.EXPLICIT_CONTENT = "explicit_content", r.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-let N = (e, t) => {
+let A = (e, t) => {
     let {
       spoiler: n,
       flags: i = 0,
@@ -49,7 +49,7 @@ let N = (e, t) => {
     }
     return n || (0, T.yE)(i, f.J0y.IS_SPOILER) ? "spoiler" : null
   },
-  A = (e, t, n, i, r) => {
+  N = (e, t, n, i, r) => {
     let {
       flags: s = 0,
       contentScanVersion: o
@@ -95,11 +95,11 @@ function O(e, t, n) {
   }, n) ? [!0, "explicit_content"] : e.spoiler ? [t, "spoiler"] : [!1, void 0]
 }
 
-function p(e) {
+function R(e) {
   let {
     channel: t,
     media: n
   } = e, i = (0, o.e7)([I.Z], () => null != t && I.Z.can(f.Plq.MANAGE_MESSAGES, t)), r = d.cC.useSetting(), s = (0, u.m)();
   return O(n, !(0, h.Z)(r, i), s)
 }
-let R = e => (0, s.EQ)(e).with("explicit_content", () => S.Z.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => S.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let p = e => (0, s.EQ)(e).with("explicit_content", () => S.Z.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => S.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return g
+    return O
   }
 }), t(47120);
 var n = t(735250);
@@ -68,7 +68,7 @@ function C() {
   })
 }
 
-function A() {
+function m() {
   let e = E.cP.useSetting(),
     s = E.Ou.useSetting();
   return (0, n.jsx)(o.F, {
@@ -94,7 +94,7 @@ function A() {
   })
 }
 
-function m() {
+function A() {
   return (0, n.jsx)(o.F, {
     setting: u.s6.ACTIVITY_PRIVACY_BROADCASTING,
     children: (0, n.jsxs)(a.FormSection, {
@@ -120,7 +120,7 @@ function m() {
   })
 }
 
-function O() {
+function g() {
   return (0, n.jsx)(o.F, {
     setting: u.s6.ACTIVITY_PRIVACY_TOS,
     children: (0, n.jsx)(a.FormSection, {
@@ -136,7 +136,7 @@ function O() {
   })
 }
 
-function g(e) {
+function O(e) {
   let {
     className: s,
     showHeader: t = !0
@@ -145,6 +145,6 @@ function g(e) {
     className: s,
     tag: a.FormTitleTags.H1,
     title: t ? S.Z.Messages.ACTIVITY_PRIVACY : null,
-    children: [(0, n.jsx)(C, {}), (0, n.jsx)(A, {}), (0, n.jsx)(m, {}), (0, n.jsx)(O, {})]
+    children: [(0, n.jsx)(C, {}), (0, n.jsx)(m, {}), (0, n.jsx)(A, {}), (0, n.jsx)(g, {})]
   })
 }

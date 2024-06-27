@@ -19,25 +19,25 @@ var a = n(442837),
   _ = n(979339),
   f = n(643632),
   E = n(939863),
-  g = n(689938),
-  C = n(998877);
+  C = n(689938),
+  g = n(998877);
 
 function I(e) {
   let {
     onClick: t
   } = e;
   return (0, i.jsx)(r.Z, {
-    iconContainerClassName: C.continueIconContainer,
+    iconContainerClassName: g.continueIconContainer,
     icon: (0, i.jsx)(s.StageIcon, {
       size: "custom",
       color: "currentColor",
-      className: C.continueIcon,
+      className: g.continueIcon,
       height: 20,
       width: 20
     }),
     color: l.Z.unsafe_rawColors.PRIMARY_700.css,
-    title: g.Z.Messages.STAGE_CONTINUE_PROMPT_TITLE,
-    description: g.Z.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
+    title: C.Z.Messages.STAGE_CONTINUE_PROMPT_TITLE,
+    description: C.Z.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
     onClick: t
   })
 }
@@ -50,9 +50,9 @@ function x(e) {
     usersInSummary: a
   } = (0, _.Z)(t.id);
   return (0, i.jsxs)("div", {
-    className: C.audienceSummary,
+    className: g.audienceSummary,
     children: [(0, i.jsx)(p.Z, {
-      className: C.summaryItem,
+      className: g.summaryItem,
       guildId: t.guild_id,
       users: a,
       size: p.u.SIZE_16
@@ -61,15 +61,15 @@ function x(e) {
       color: "header-secondary",
       children: function(e) {
         if (0 === e.length) return "";
-        if (1 === e.length) return g.Z.Messages.STAGE_AUDIENCE_WAITING_ONE.format({
+        if (1 === e.length) return C.Z.Messages.STAGE_AUDIENCE_WAITING_ONE.format({
           first: e[0].userNick
         });
-        if (2 === e.length) return g.Z.Messages.STAGE_AUDIENCE_WAITING_TWO.format({
+        if (2 === e.length) return C.Z.Messages.STAGE_AUDIENCE_WAITING_TWO.format({
           first: e[0].userNick,
           second: e[1].userNick
         });
         let t = e.length - 2;
-        return g.Z.Messages.STAGE_AUDIENCE_WAITING_MANY.format({
+        return C.Z.Messages.STAGE_AUDIENCE_WAITING_MANY.format({
           first: e[0].userNick,
           second: e[1].userNick,
           numOthers: t
@@ -91,36 +91,36 @@ function T(e) {
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(E.Z, {
       children: (0, i.jsx)("div", {
-        className: C.iconBackground,
+        className: g.iconBackground,
         children: (0, i.jsx)(s.StageIcon, {
           size: "custom",
           color: "currentColor",
           width: 40,
           height: 40,
-          className: C.icon
+          className: g.icon
         })
       })
     }), (0, i.jsxs)("div", {
-      className: C.headerContainer,
+      className: g.headerContainer,
       children: [(0, i.jsx)(s.Heading, {
-        className: C.__invalid_title,
+        className: g.__invalid_title,
         variant: "heading-xl/semibold",
-        children: g.Z.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
+        children: C.Z.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
       }), (0, i.jsx)(s.Text, {
-        className: C.subtitle,
+        className: g.subtitle,
         variant: "text-sm/normal",
-        children: g.Z.Messages.STAGE_START_PROMPT_SUBTITLE
+        children: C.Z.Messages.STAGE_START_PROMPT_SUBTITLE
       })]
     }), T ? null : (0, i.jsx)(c.Z, {
       channelId: t.id
     }), l ? (0, i.jsx)(u.Z, {
-      className: C.eventPrompt,
+      className: g.eventPrompt,
       channel: t
     }) : null, p ? (0, i.jsx)(o.Z, {
-      className: C.eventPrompt,
+      className: g.eventPrompt,
       guildId: r
     }) : null, (l || N.length > 0) && (0, i.jsx)("hr", {
-      className: C.separator
+      className: g.separator
     }), l ? (0, i.jsx)(I, {
       onClick: n
     }) : null, (0, i.jsx)(x, {

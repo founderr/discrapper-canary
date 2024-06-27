@@ -39,12 +39,12 @@ s.Z = a.memo(function(e) {
       guildIcon: i.icon,
       guildIconSize: 32
     })
-  }, [t]), A = a.useCallback(e => {
+  }, [t]), m = a.useCallback(e => {
     let s = e[0];
     return null == s ? null : (0, n.jsx)(n.Fragment, {
       children: C(s)
     })
-  }, [C]), m = a.useCallback(e => (0, d.nE)(e, !0, u.Sbl.USER_SETTINGS), []), O = a.useCallback(e => e === c, [c]), g = a.useCallback(e => e, []), h = a.useCallback(() => (0, d.nE)(null, !1), []);
+  }, [C]), A = a.useCallback(e => (0, d.nE)(e, !0, u.Sbl.USER_SETTINGS), []), g = a.useCallback(e => e === c, [c]), O = a.useCallback(e => e, []), h = a.useCallback(() => (0, d.nE)(null, !1), []);
   return (0, n.jsxs)(o.Z, {
     title: T.Z.Messages.CLANS,
     titleId: I,
@@ -55,12 +55,12 @@ s.Z = a.memo(function(e) {
     }), (0, n.jsx)(r.Select, {
       className: S.select,
       optionClassName: S.selectPopout,
-      isSelected: O,
+      isSelected: g,
       options: N,
-      select: m,
-      renderOptionValue: A,
+      select: A,
+      renderOptionValue: m,
       renderOptionLabel: C,
-      serialize: g,
+      serialize: O,
       clear: h,
       clearable: null != c
     })]

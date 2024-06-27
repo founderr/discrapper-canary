@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(131951),
   f = n(626135),
   E = n(120522),
-  g = n(386542),
-  C = n(933843),
+  C = n(386542),
+  g = n(933843),
   I = n(485731),
   x = n(1163),
   T = n(738672),
@@ -60,16 +60,16 @@ function j(e) {
     channel: t
   } = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [l, s] = a.useState(!1), {
     preset: o
-  } = (0, c.cj)([m.Z], () => m.Z.getState()), g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
+  } = (0, c.cj)([m.Z], () => m.Z.getState()), C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
     s(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
       if (e) {
-        if ((0, I.J1)(!(0, C.mc)(b, R)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+        if ((0, I.J1)(!(0, g.mc)(b, R)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
             guild_id: t.guild_id,
             channel_id: t.id,
             perk_type: r.q.STREAM_HIGH_QUALITY,
             resolution: b,
             max_fps: R
-          }), (0, I.cD)(!1), null == g) return;
+          }), (0, I.cD)(!1), null == C) return;
         let e = {
           qualityOptions: {
             preset: o,
@@ -78,18 +78,18 @@ function j(e) {
           },
           context: u.Yn.STREAM
         };
-        null != g.desktopSource ? e.desktopSettings = {
-          sourceId: g.desktopSource.id,
+        null != C.desktopSource ? e.desktopSettings = {
+          sourceId: C.desktopSource.id,
           sound: !0
-        } : null != g.cameraSource && (e.cameraSettings = {
-          videoDeviceGuid: g.cameraSource.videoDeviceGuid,
-          audioDeviceGuid: g.cameraSource.audioDeviceGuid
+        } : null != C.cameraSource && (e.cameraSettings = {
+          videoDeviceGuid: C.cameraSource.videoDeviceGuid,
+          audioDeviceGuid: C.cameraSource.audioDeviceGuid
         }), h.Z.setGoLiveSource(e)
       }
     }).catch(() => {}).finally(() => {
       s(!1)
     })
-  }, [o, t, g]);
+  }, [o, t, C]);
   return (0, i.jsx)(d.ShinyButton, {
     fullWidth: !0,
     pauseAnimation: n,
@@ -179,7 +179,7 @@ function O(e) {
     hqStreamingState: {
       hqStreamingOptOutPopoutShouldShow: l
     }
-  } = (0, g.k)(r.q.STREAM_HIGH_QUALITY), {
+  } = (0, C.k)(r.q.STREAM_HIGH_QUALITY), {
     enabled: s,
     variant1: o
   } = x.Z.useExperiment({

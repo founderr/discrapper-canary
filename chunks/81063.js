@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return g
   },
   getAssetFromImageURL: function() {
-    return N
+    return A
   },
   getAssetIds: function() {
     return C
   },
   getAssetImage: function() {
-    return A
+    return N
   },
   getAssets: function() {
     return m
@@ -68,12 +68,12 @@ async function S(e) {
   }), a.Z.getApplicationAssets(e)
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = h[e].serialize(t);
   return n ? "".concat(e, ":").concat(n.toString()) : null
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   if (null != t && t.includes(":")) {
     let [e, i] = t.split(":");
     if (e === _.ABu.TWITCH) {
@@ -119,19 +119,19 @@ async function O(e, t) {
     of i) f[e] = t
 }
 
-function p(e, t) {
+function R(e, t) {
   let n = 0;
   if (e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:"))).length > 0)
     for (let i = 0; i < e.length; i++) {
       let r = e[i];
       if (null == r) continue;
       let s = Object.prototype.hasOwnProperty.call(f, r) ? f[r] : void 0;
-      null != s && (t[i] = N("mp", s), n++)
+      null != s && (t[i] = A("mp", s), n++)
     }
   return n === e.length
 }
 
-function R(e, t, n, i) {
+function p(e, t, n, i) {
   let r = !1;
   for (let s = 0; s < e.length; s++) {
     let o = e[s];
@@ -156,10 +156,10 @@ async function g(e, t) {
   });
   let i = [],
     r = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-  return (r.length > 0 && await O(e, r), p(t, i)) ? (o.Z.dispatch({
+  return (r.length > 0 && await O(e, r), R(t, i)) ? (o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
-  }), i) : R(t, i, await m(e), n) ? S(e).then(() => g(e, t, n - 1)) : (o.Z.dispatch({
+  }), i) : p(t, i, await m(e), n) ? S(e).then(() => g(e, t, n - 1)) : (o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), i)
@@ -167,7 +167,7 @@ async function g(e, t) {
 
 function C(e, t) {
   let n = [];
-  if (p(t, n)) return n;
+  if (R(t, n)) return n;
   let i = a.Z.getApplicationAssets(e);
-  return null == i ? n : (R(t, n, i), n)
+  return null == i ? n : (p(t, n, i), n)
 }

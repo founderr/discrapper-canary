@@ -28,23 +28,23 @@ function f(e) {
     location: t
   }), E = (0, h.Z)();
   (0, o.t)();
-  let [g] = n.recipients, C = (0, r.e7)([c.default], () => c.default.getUser(g));
-  return (s()(null != C, "ProfilePanelExperimentWrapper: user cannot be undefined"), a.useEffect(() => {
-    (0, d.W)(C, {
-      withMutualFriends: !C.bot,
+  let [C] = n.recipients, g = (0, r.e7)([c.default], () => c.default.getUser(C));
+  return (s()(null != g, "ProfilePanelExperimentWrapper: user cannot be undefined"), a.useEffect(() => {
+    (0, d.W)(g, {
+      withMutualFriends: !g.bot,
       withMutualGuilds: !0,
       channelId: n.id
     })
-  }, [C, n.id]), E) ? null : f && C.isNonUserBot() ? (0, i.jsx)(p.Z, {
-    user: C,
+  }, [g, n.id]), E) ? null : f && g.isNonUserBot() ? (0, i.jsx)(p.Z, {
+    user: g,
     channel: n,
     ...l
-  }) : f || !C.bot ? (0, i.jsx)(_.Z, {
-    user: C,
+  }) : f || !g.bot ? (0, i.jsx)(_.Z, {
+    user: g,
     channel: n,
     ...l
   }) : (0, i.jsx)(m.Z, {
-    user: C,
+    user: g,
     channel: n,
     ...l
   })

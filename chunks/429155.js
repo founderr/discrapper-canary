@@ -19,60 +19,60 @@ let u = r.forwardRef(function(e, t) {
     renderEmptySearchState: h,
     rowCount: f,
     rowCountBySection: S,
-    rowHeight: N,
-    sectionHeaderHeight: A,
+    rowHeight: A,
+    sectionHeaderHeight: N,
     sectionFooterHeight: m
-  } = e, O = r.useRef(!1), p = r.useRef(null), R = (0, o.Iu)(e => e.searchQuery), g = n.useStore(e => e.activeCategoryIndex), C = (0, a.Qs)({
+  } = e, O = r.useRef(!1), R = r.useRef(null), p = (0, o.Iu)(e => e.searchQuery), g = n.useStore(e => e.activeCategoryIndex), C = (0, a.Qs)({
     activeCategoryIndex: g,
     isScrolling: O,
-    listRef: p,
+    listRef: R,
     onActiveCategoryIndexChange: n.setActiveCategoryIndex,
     scrollOffset: 20,
-    searchQuery: R
+    searchQuery: p
   });
   return (0, a.Xs)({
-    searchQuery: R,
+    searchQuery: p,
     activeCategoryIndex: g,
-    listRef: p
+    listRef: R
   }), r.useImperativeHandle(t, () => ({
     scrollTo: function() {
       for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-      return null === (e = p.current) || void 0 === e ? void 0 : e.scrollTo(...n)
+      return null === (e = R.current) || void 0 === e ? void 0 : e.scrollTo(...n)
     },
     getRowDescriptors: () => {
       var e, t;
-      return null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
+      return null !== (t = null === (e = R.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
     },
     getSectionDescriptors: () => {
       var e, t;
-      return null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
+      return null !== (t = null === (e = R.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
     },
     scrollToSectionTop: function() {
       for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-      return null === (e = p.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
+      return null === (e = R.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
     },
     scrollRowIntoView: function() {
       for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-      return null === (e = p.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
+      return null === (e = R.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
     },
     getScrollerNode: function() {
       for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-      return null === (e = p.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
+      return null === (e = R.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
     },
     scrollIntoViewNode: function() {
       for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-      return null === (e = p.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
+      return null === (e = R.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
     },
     getListDimensions: function() {
       for (var e, t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-      return null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
+      return null !== (t = null === (e = R.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
         height: -1,
         totalHeight: -1
       }
     }
   }), []), (0, i.jsxs)("div", {
     className: l.wrapper,
-    children: [R.length > 0 && !u && null != h ? h() : (0, i.jsx)(s.Z, {
+    children: [p.length > 0 && !u && null != h ? h() : (0, i.jsx)(s.Z, {
       role: "none presentation",
       listPadding: _,
       onScroll: C,
@@ -82,11 +82,11 @@ let u = r.forwardRef(function(e, t) {
       renderSectionFooter: I,
       rowCount: f,
       rowCountBySection: S,
-      rowHeight: N,
-      sectionHeaderHeight: A,
+      rowHeight: A,
+      sectionHeaderHeight: N,
       sectionFooterHeight: m,
       stickyHeaders: !0,
-      ref: p
+      ref: R
     }), null == T ? void 0 : T()]
   })
 });

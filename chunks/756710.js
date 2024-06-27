@@ -29,17 +29,17 @@ function c(e) {
   r.useEffect(() => {
     s && (0, l.F)(S)
   }, [s]);
-  let N = r.useCallback(e => {
+  let A = r.useCallback(e => {
       if (null == I) return !1;
       !(e.shiftKey && T) && !h && f(), e.persist(), requestAnimationFrame(() => I(e))
     }, [I, f, T, h]),
-    A = d ? o()(_.item, u._[n], {
+    N = d ? o()(_.item, u._[n], {
       [_.focused]: s
     }) : _.customItem;
   return (0, i.jsx)(a.P, {
     innerRef: S,
-    className: A,
-    onClick: c ? void 0 : N,
+    className: N,
+    onClick: c ? void 0 : A,
     "aria-disabled": c,
     ...E,
     children: t({

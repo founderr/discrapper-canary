@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return A
+    return m
   }
 }), t(47120);
 var n = t(735250);
@@ -21,14 +21,14 @@ var a = t(392711),
   N = t(216430),
   C = t(331651);
 
-function A() {
+function m() {
   let e, s;
   let a = (0, r.e7)([u.Z], () => u.Z.theme),
     {
-      canSetInputDevice: A,
-      canSetOutputDevice: m,
-      inputDeviceId: O,
-      outputDeviceId: g
+      canSetInputDevice: m,
+      canSetOutputDevice: A,
+      inputDeviceId: g,
+      outputDeviceId: O
     } = (0, r.cj)([_.Z], () => ({
       canSetInputDevice: _.Z.supports(S.AN.AUDIO_INPUT_DEVICE),
       canSetOutputDevice: _.Z.supports(S.AN.AUDIO_OUTPUT_DEVICE),
@@ -36,23 +36,23 @@ function A() {
       outputDeviceId: _.Z.getOutputDeviceId()
     })),
     h = (0, r.e7)([_.Z], () => _.Z.getInputDevices()),
-    R = (0, r.e7)([_.Z], () => _.Z.getOutputDevices());
-  !A && (e = (0, n.jsx)(l.FormText, {
+    p = (0, r.e7)([_.Z], () => _.Z.getOutputDevices());
+  !m && (e = (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
     className: C.marginTop8,
     children: I.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.y)("Help Text Input Devices")
     })
-  })), !m && (s = (0, n.jsx)(l.FormText, {
+  })), !A && (s = (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
     className: C.marginTop8,
     children: I.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.y)("Help Text Output Devices")
     })
   }));
-  let p = i()(h).values().first(),
-    x = null != p ? p.disabled : null != e,
-    M = i()(R).values().first(),
+  let R = i()(h).values().first(),
+    x = null != R ? R.disabled : null != e,
+    M = i()(p).values().first(),
     D = null != M ? M.disabled : null != s;
 
   function f(e) {
@@ -89,7 +89,7 @@ function A() {
         className: C.marginBottom8,
         children: I.Z.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, n.jsx)(l.SingleSelect, {
-        value: O,
+        value: g,
         onChange: e => c.Z.setInputDevice(e, "Settings"),
         options: i().map(h, e => {
           let {
@@ -112,9 +112,9 @@ function A() {
         className: C.marginBottom8,
         children: I.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
       }), (0, n.jsx)(l.SingleSelect, {
-        value: g,
+        value: O,
         onChange: e => c.Z.setOutputDevice(e, "Settings"),
-        options: i().map(R, e => {
+        options: i().map(p, e => {
           let {
             id: s,
             name: t

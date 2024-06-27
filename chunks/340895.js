@@ -15,16 +15,16 @@ let h = "IncomingCallStore",
     height: 315
   },
   S = new Set,
-  N = [],
-  A = new Map,
+  A = [],
+  N = new Map,
   m = new Set,
   O = 0,
-  p = 0,
-  R = !1;
+  R = 0,
+  p = !1;
 
 function g(e) {
-  if (null == e || null == A.get(e)) return !1;
-  A.delete(e), (m = new Set(m)).delete(e)
+  if (null == e || null == N.get(e)) return !1;
+  N.delete(e), (m = new Set(m)).delete(e)
 }
 
 function C(e) {
@@ -36,10 +36,10 @@ function C(e) {
     let e = E.Z.getChannel(t);
     if (null == e) return !1;
     let n = 10 * m.size;
-    A.set(t, {
+    N.set(t, {
       channel: e,
       x: O + n,
-      y: p + n
+      y: R + n
     }), (m = new Set(m)).add(t)
   } else {
     if (!m.has(t) || i) return !1;
@@ -47,31 +47,31 @@ function C(e) {
   }
 }! function() {
   let e = l.K.get(h);
-  if (null != e) O = +e.x, p = +e.y;
+  if (null != e) O = +e.x, R = +e.y;
   else {
     let e = n(451478).Z.windowSize();
-    O = e.width / 2 - f.width / 2, p = e.height / 2 - f.height / 2
+    O = e.width / 2 - f.width / 2, R = e.height / 2 - f.height / 2
   }
 }();
 
 function v() {
-  R = I.Z.getStatus() === T.Skl.DND || _.QZ.getSetting()
+  p = I.Z.getStatus() === T.Skl.DND || _.QZ.getSetting()
 }
 class L extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(E.Z, I.Z), this.syncWith([I.Z], v), this.syncWith([c.Z], v)
   }
   getIncomingCalls() {
-    return R ? N : Array.from(A.values())
+    return p ? A : Array.from(N.values())
   }
   getIncomingCallChannelIds() {
-    return R ? S : m
+    return p ? S : m
   }
   getFirstIncomingCallId() {
-    return R ? null : m.values().next().value
+    return p ? null : m.values().next().value
   }
   hasIncomingCalls() {
-    return !R && m.size > 0
+    return !p && m.size > 0
   }
 }
 o = "IncomingCallStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
@@ -99,9 +99,9 @@ o = "IncomingCallStore", (s = "displayName") in(r = L) ? Object.defineProperty(r
       x: t,
       y: n
     } = e;
-    return O = t, p = n, l.K.set(h, {
+    return O = t, R = n, l.K.set(h, {
       x: O,
-      y: p
+      y: R
     }), !1
   },
   CHANNEL_DELETE: function(e) {

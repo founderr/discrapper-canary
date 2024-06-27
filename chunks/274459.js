@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return C
   }
 }), n(47120);
 var i = n(735250),
@@ -19,15 +19,15 @@ let m = 6 * d.Z.Millis.SECOND,
   f = 2 * d.Z.Millis.SECOND,
   E = e => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
 
-function g(e) {
+function C(e) {
   let {
     userId: t,
     voiceChannelEffect: n,
     onComplete: l
   } = e, {
     emoji: d,
-    sentAt: g
-  } = n, C = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [I, x] = a.useState(!0), T = !C, N = (0, r.useTransition)(I, {
+    sentAt: C
+  } = n, g = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [I, x] = a.useState(!0), T = !g, N = (0, r.useTransition)(I, {
     from: {
       rotate: -120
     },
@@ -38,7 +38,7 @@ function g(e) {
       rotate: -120
     },
     config: r.config.default,
-    immediate: C,
+    immediate: g,
     onRest: (e, t) => {
       let {
         phase: n
@@ -48,12 +48,12 @@ function g(e) {
   });
   return (a.useEffect(() => {
     let e;
-    return Date.now() - g >= f ? (0, h.H)(t) : e = setTimeout(() => {
+    return Date.now() - C >= f ? (0, h.H)(t) : e = setTimeout(() => {
       x(!1), T && (0, h.H)(t)
     }, T ? _ : m), () => {
       null != e && clearTimeout(e)
     }
-  }, [g, t, T]), T) ? null : N((e, t) => {
+  }, [C, t, T]), T) ? null : N((e, t) => {
     var n;
     let {
       rotate: a

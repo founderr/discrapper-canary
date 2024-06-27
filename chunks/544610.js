@@ -10,8 +10,8 @@ var a, l, s, r, o = n(392711),
   _ = n(51144),
   f = n(592125),
   E = n(580005),
-  g = n(699516),
-  C = n(594174),
+  C = n(699516),
+  g = n(594174),
   I = n(981631);
 let x = !1,
   T = "",
@@ -33,9 +33,9 @@ function R() {
   if (!x) return !1;
   let e = f.Z.getChannel(A);
   if (0 === T.trim().length) return null != i && i.clearQuery(), v = function(e) {
-    let t = g.Z.getFriendIDs();
+    let t = C.Z.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
-      let n = C.default.getUser(t);
+      let n = g.default.getUser(t);
       return null == n ? e : (e.push({
         user: n
       }), e)
@@ -56,7 +56,7 @@ function R() {
     return e.forEach(e => {
       let i = E.Z.getScoreWithoutFetchingLatest(e.id),
         a = e.getRecipientId(),
-        l = g.Z.isFriend(a) ? .2 : 0,
+        l = C.Z.isFriend(a) ? .2 : 0,
         s = null != f.Z.getDMFromUserId(a) ? .1 : 0;
       n[a] = 1 + i / t + l + s
     }), n
@@ -66,7 +66,7 @@ function R() {
 function j() {
   if (!x) return !1;
   let e = S;
-  return (S = c().some(g.Z.getRelationships(), e => e === I.OGo.FRIEND)) !== e
+  return (S = c().some(C.Z.getRelationships(), e => e === I.OGo.FRIEND)) !== e
 }
 
 function L(e, t) {
@@ -82,7 +82,7 @@ function P(e) {
       id: t
     } = e;
     return {
-      user: C.default.getUser(t)
+      user: g.default.getUser(t)
     }
   }).filter(e => null != e.user), w.emitChange()
 }
@@ -106,7 +106,7 @@ function k() {
 }
 class U extends(a = u.ZP.Store) {
   initialize() {
-    this.waitFor(C.default, f.Z, g.Z), this.syncWith([C.default, f.Z], R), this.syncWith([g.Z], j)
+    this.waitFor(g.default, f.Z, C.Z), this.syncWith([g.default, f.Z], R), this.syncWith([C.Z], j)
   }
   getResults() {
     return v

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(695346),
   f = n(768119),
   E = n(944486),
-  g = n(693580),
-  C = n(585483),
+  C = n(693580),
+  g = n(585483),
   I = n(251285),
   x = n(406326),
   T = n(619753),
@@ -89,10 +89,10 @@ let M = e => {
 };
 class b extends a.PureComponent {
   componentDidMount() {
-    C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
+    g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
   componentWillUnmount() {
-    C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
+    g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
   componentDidUpdate(e) {
     let {
@@ -221,7 +221,7 @@ class b extends a.PureComponent {
     }), Z(this, "renderIndexing", () => {
       let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
       return (0, i.jsxs)(M, {
-        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)("div", {
+        children: [(0, i.jsx)(C.Z, {}), (0, i.jsx)("div", {
           className: (S.emptyResultsText, S.stillIndexing),
           children: e
         })]

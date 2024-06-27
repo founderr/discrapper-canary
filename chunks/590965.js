@@ -8,8 +8,8 @@ var l, r, a, s, o = n(442837),
   p = n(601964),
   _ = n(592125),
   f = n(430824),
-  g = n(701190),
-  m = n(496675),
+  m = n(701190),
+  g = n(496675),
   C = n(594174),
   I = n(998502),
   E = n(981631),
@@ -24,7 +24,7 @@ function T() {
 }
 class L extends(l = o.ZP.Store) {
   initialize() {
-    this.waitFor(f.Z, g.Z, C.default)
+    this.waitFor(f.Z, m.Z, C.default)
   }
   isOpen() {
     let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
@@ -70,7 +70,7 @@ s = "InviteModalStore", (a = "displayName") in(r = L) ? Object.defineProperty(r,
             } = e;
             if (null != t) {
               let e = _.Z.getChannel(t.id);
-              if (m.Z.can(E.Plq.VIEW_CHANNEL, e)) return t.id
+              if (g.Z.can(E.Plq.VIEW_CHANNEL, e)) return t.id
             }
             return null
           }(t);

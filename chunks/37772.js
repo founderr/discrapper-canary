@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(628238),
   _ = n(976853),
   E = n(977683),
-  I = n(869765),
-  m = n(695346),
+  m = n(869765),
+  I = n(695346),
   T = n(592125),
   h = n(699516),
   N = n(998951),
@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(901461),
   A = n(739566),
   R = n(443877),
-  x = n(938353),
-  O = n(25015),
+  O = n(938353),
+  x = n(25015),
   M = n(689674),
   v = n(963550),
   L = n(845080),
@@ -76,18 +76,18 @@ t.Z = a.memo(function e(t) {
     disableInteraction: F = !1,
     hasThread: w,
     treatSpam: V
-  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, r.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, r.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = m.x4.useSetting(), K = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
+  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, r.e7)([m.Z], () => m.Z.getMessageByReference(H)), W = (0, r.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === m.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), z = I.x4.useSetting(), K = I.RS.useSetting(), Q = I.NA.useSetting(), q = I.QK.useSetting(), X = (0, u.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
     disableReactionCreates: $
   } = (0, R.Z)(s), {
     content: ee,
     hasSpoilerEmbeds: et
-  } = (0, O.Z)(o, {
+  } = (0, x.Z)(o, {
     hideSimpleEmbedContent: K && Q,
     allowList: X,
     allowHeading: X,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), en = (0, A.ZP)(o), ei = (0, r.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(C.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, el = (0, M.Z)({
+  }), en = (0, A.ZP)(o), ei = (0, r.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(C.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === m.Y.LOADED && null != W, es = !ea && void 0 === a, el = (0, M.Z)({
     message: o,
     channel: s,
     enabled: es
@@ -115,7 +115,7 @@ t.Z = a.memo(function e(t) {
       author: en,
       guildId: s.guild_id
     }),
-    childrenAccessories: (0, i.jsx)(x.BB, {
+    childrenAccessories: (0, i.jsx)(O.BB, {
       channel: s,
       message: o,
       hasSpoilerEmbeds: et,

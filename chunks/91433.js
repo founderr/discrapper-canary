@@ -29,7 +29,7 @@ function I(e) {
   } = (0, c.KZ)(), {
     newestAnalyticsLocation: S
   } = (0, l.ZP)(), {
-    originalFriendingEnabled: N
+    originalFriendingEnabled: A
   } = (0, _.V)({
     location: "UserProfileIncomingFriendRequestBanner"
   });
@@ -44,7 +44,7 @@ function I(e) {
       className: E.buttonContainer,
       children: [(0, i.jsx)(o.Button, {
         look: o.Button.Looks.FILLED,
-        color: N ? o.Button.Colors.GREEN : s()(o.Button.Colors.BRAND, E.color),
+        color: A ? o.Button.Colors.GREEN : s()(o.Button.Colors.BRAND, E.color),
         size: o.Button.Sizes.SMALL,
         className: E.button,
         onClick: () => {

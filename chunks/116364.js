@@ -16,12 +16,12 @@ var r = n(392711),
   h = n(689938),
   f = n(535175),
   S = n(239840);
-let N = {
+let A = {
     results: {
       choices: []
     }
   },
-  A = {
+  N = {
     results: {
       choices: [],
       isLoading: !0
@@ -40,11 +40,11 @@ let N = {
       isError: !0
     }
   },
-  p = s().debounce(_.Z, T.Fu, {
+  R = s().debounce(_.Z, T.Fu, {
     leading: !0,
     trailing: !0
   }),
-  R = {
+  p = {
     stores: [u.Z, l.Z],
     showEmpty: !0,
     matches(e, t, n, i, r) {
@@ -54,11 +54,11 @@ let N = {
     queryResults(e, t, n, i, r) {
       var s;
       let o = u.Z.getActiveOption(e.id);
-      if (null == o) return N;
+      if (null == o) return A;
       if (o.autocomplete) {
         if (r) {
           let r = u.Z.getActiveCommand(e.id);
-          p({
+          R({
             command: r,
             optionValues: i.getCommandOptionValues(),
             context: {
@@ -73,7 +73,7 @@ let N = {
         }
         if (l.Z.getLastErrored(e.id)) return O;
         let s = l.Z.getAutocompleteChoices(e.id, o.name, n);
-        return null == s ? A : {
+        return null == s ? N : {
           results: {
             choices: s
           }
@@ -138,4 +138,4 @@ let N = {
       }
     }
   };
-t.Z = R
+t.Z = p

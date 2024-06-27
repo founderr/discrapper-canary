@@ -4,7 +4,7 @@ n.d(t, {
     return Y
   },
   DK: function() {
-    return B
+    return x
   },
   G3: function() {
     return E
@@ -16,10 +16,10 @@ n.d(t, {
     return I
   },
   P8: function() {
-    return R
+    return p
   },
   PJ: function() {
-    return x
+    return B
   },
   Rp: function() {
     return k
@@ -74,13 +74,13 @@ let E = 365,
   h = [o.Ci.MO.weekday, o.Ci.TU.weekday, o.Ci.WE.weekday, o.Ci.TH.weekday, o.Ci.FR.weekday],
   f = [o.Ci.SU.weekday, o.Ci.MO.weekday, o.Ci.TU.weekday, o.Ci.WE.weekday, o.Ci.TH.weekday],
   S = [o.Ci.TU.weekday, o.Ci.WE.weekday, o.Ci.TH.weekday, o.Ci.FR.weekday, o.Ci.SA.weekday],
-  N = [o.Ci.SA.weekday, o.Ci.SU.weekday],
-  A = [o.Ci.FR.weekday, o.Ci.SA.weekday],
+  A = [o.Ci.SA.weekday, o.Ci.SU.weekday],
+  N = [o.Ci.FR.weekday, o.Ci.SA.weekday],
   m = [o.Ci.SU.weekday, o.Ci.MO.weekday],
   O = [o.Ci.SU.weekday, o.Ci.MO.weekday, o.Ci.TU.weekday, o.Ci.WE.weekday, o.Ci.TH.weekday, o.Ci.FR.weekday, o.Ci.SA.weekday],
-  p = new Set([0, 6]);
+  R = new Set([0, 6]);
 
-function R(e) {
+function p(e) {
   var t;
   let n = e.toDate(),
     i = Math.ceil(n.getDate() / 7),
@@ -113,7 +113,7 @@ function R(e) {
         })
       })
     }];
-  return p.has(n.getDay()) ? (null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && s.push({
+  return R.has(n.getDay()) ? (null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && s.push({
     value: _.z.WEEKEND_ONLY,
     label: d.Z.Messages.CREATE_EVENT_RECUR_WEEKENDS
   }) : s.push({
@@ -208,7 +208,7 @@ function w(e) {
   })
 }
 
-function x(e, t, n) {
+function B(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     r = [],
     s = n;
@@ -223,7 +223,7 @@ function x(e, t, n) {
   return r
 }
 
-function B(e) {
+function x(e) {
   var t;
   if (null == e) return null;
   let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
@@ -254,7 +254,7 @@ function V(e) {
 function Z(e) {
   let t = D(e.toDate().getDay()),
     n = D(e.toDate().getUTCDay());
-  return n.weekday - t.weekday > 0 ? m : n.weekday - t.weekday < 0 ? A : N
+  return n.weekday - t.weekday > 0 ? m : n.weekday - t.weekday < 0 ? N : A
 }
 
 function H(e, t) {

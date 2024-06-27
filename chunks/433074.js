@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(914010),
   _ = n(594174),
   E = n(197409),
-  I = n(626135),
-  m = n(135431),
+  m = n(626135),
+  I = n(135431),
   T = n(674588),
   h = n(264043),
   N = n(132871),
@@ -29,7 +29,7 @@ function S(e) {
   let {
     code: S,
     message: A
-  } = e, [R, x, O] = (0, l.Wu)([h.Z], () => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)], [S]), M = (0, l.e7)([c.default], () => c.default.locale), v = (0, l.e7)([u.Z], () => {
+  } = e, [R, O, x] = (0, l.Wu)([h.Z], () => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)], [S]), M = (0, l.e7)([c.default], () => c.default.locale), v = (0, l.e7)([u.Z], () => {
     var e;
     return null !== (e = u.Z.getGuildId()) && void 0 !== e ? e : void 0
   }), L = (0, l.e7)([_.default], () => _.default.getCurrentUser()), [Z, P] = a.useState(!1), b = a.useCallback(e => {
@@ -38,23 +38,23 @@ function S(e) {
   a.useEffect(() => {
     (0, T.gZ)(S)
   }, [S]), a.useEffect(() => {
-    Z && O === h.M.FETCHED && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    Z && x === h.M.FETCHED && m.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: S,
       device_platform: s.tq ? "mobile_web" : "desktop_web",
       sender_user_id: A.author.id,
       guild_id: v,
       channel_id: A.channel_id
     })
-  }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, O]), a.useEffect(() => {
-    Z && x && I.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+  }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, x]), a.useEffect(() => {
+    Z && O && m.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: s.tq ? "mobile_web" : "desktop_web",
       sender_user_id: A.author.id,
       guild_id: v,
       channel_id: A.channel_id
     })
-  }, [Z, v, x, A.author.id, A.channel_id]);
+  }, [Z, v, O, A.author.id, A.channel_id]);
   let j = e => {
-    I.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+    m.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: S,
       device_platform: s.tq ? "mobile_web" : "desktop_web",
       clicked_section: e,
@@ -69,7 +69,7 @@ function S(e) {
       }
     })
   };
-  if (x) return (0, i.jsxs)(E.Z, {
+  if (O) return (0, i.jsxs)(E.Z, {
     containerRef: D,
     children: [(0, i.jsx)(E.Z.Header, {
       text: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
@@ -86,7 +86,7 @@ function S(e) {
       })
     })]
   });
-  if (null == R || O === h.M.FETCHING) return (0, i.jsxs)(E.Z, {
+  if (null == R || x === h.M.FETCHING) return (0, i.jsxs)(E.Z, {
     containerRef: D,
     children: [(0, i.jsx)(E.Z.Header, {
       text: C.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
@@ -130,7 +130,7 @@ function S(e) {
         })]
       }), (0, i.jsx)(E.Z.Button, {
         onClick: () => {
-          if (null != R)(0, m.L)({
+          if (null != R)(0, I.L)({
             applicationId: S,
             customInstallUrl: R.custom_install_url,
             installParams: R.install_params,

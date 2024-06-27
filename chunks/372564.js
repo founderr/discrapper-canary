@@ -23,7 +23,7 @@ function E(e, t, n) {
   }) : e[t] = n, e
 }
 
-function g(e) {
+function C(e) {
   let {
     channel: t,
     onClose: n,
@@ -53,7 +53,7 @@ function g(e) {
   })
 }
 
-function C(e) {
+function g(e) {
   return e.matches("a") || "highlight" === e.className || e.className.includes("mention")
 }
 class I extends a.Component {
@@ -84,10 +84,10 @@ class I extends a.Component {
     super(...e), E(this, "_mouseDown", !1), E(this, "_mouseUp", !1), E(this, "handleOpenTopic", e => {
       let t = e.target;
       if ((0, r.k)(t)) {
-        if (C(t)) return;
+        if (g(t)) return;
         let e = t.parentNode;
-        if ((0, r.k)(e) && C(e)) return
-      }(0, o.openModal)(e => (0, i.jsx)(g, {
+        if ((0, r.k)(e) && g(e)) return
+      }(0, o.openModal)(e => (0, i.jsx)(C, {
         ...e,
         ...this.props
       }))

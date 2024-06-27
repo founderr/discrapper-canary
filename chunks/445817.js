@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return m
+    return A
   }
 }), t(47120);
 var n = t(735250),
@@ -19,30 +19,30 @@ var n = t(735250),
   I = t(689938),
   N = t(350043);
 let C = 387,
-  A = 218;
+  m = 218;
 
-function m(e) {
+function A(e) {
   let {
     previewEnabled: s,
     onEnablePreview: t
-  } = e, m = u.Z.getCameraComponent(), [O, g] = a.useState((0, c.P)(T.default.getCurrentUser())), h = a.useRef(!1), R = a.useRef(O), p = (0, l.O)(), x = (0, i.e7)([u.Z], () => Object.values(u.Z.getVideoDevices()).length > 0);
+  } = e, A = u.Z.getCameraComponent(), [g, O] = a.useState((0, c.P)(T.default.getCurrentUser())), h = a.useRef(!1), p = a.useRef(g), R = (0, l.O)(), x = (0, i.e7)([u.Z], () => Object.values(u.Z.getVideoDevices()).length > 0);
   return a.useEffect(() => () => {
-    h.current && o.Z.wait(() => (0, d.Up)(R.current))
+    h.current && o.Z.wait(() => (0, d.Up)(p.current))
   }, []), (0, n.jsx)(E.Z, {
-    selectedBackgroundOption: O,
+    selectedBackgroundOption: g,
     onSelectBackgroundOption: e => {
-      h.current = !0, R.current = e, g(e), (0, _.wG)(e, {
-        location: p.location
+      h.current = !0, p.current = e, O(e), (0, _.wG)(e, {
+        location: R.location
       }).catch(S.dG4)
     },
     renderCamera: e => s ? (0, n.jsx)("div", {
       className: N.cameraWrapper,
       children: (0, n.jsxs)("div", {
         className: N.camera,
-        children: [(0, n.jsx)(m, {
+        children: [(0, n.jsx)(A, {
           deviceId: e,
           width: C,
-          height: A,
+          height: m,
           disabled: !s
         }), (0, n.jsx)(E.S, {})]
       })

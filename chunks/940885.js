@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return C
   }
 });
 var i = n(735250);
@@ -20,14 +20,14 @@ var a = n(410030),
   f = n(689938),
   E = n(440431);
 
-function g(e) {
+function C(e) {
   let {
     user: t,
     channelId: n
   } = e, {
-    analyticsLocations: g
+    analyticsLocations: C
   } = (0, l.ZP)(), {
-    trackUserProfileAction: C
+    trackUserProfileAction: g
   } = (0, r.KZ)(), I = (0, a.ZP)(), {
     mutualFriends: x,
     isFetching: T
@@ -45,7 +45,7 @@ function g(e) {
       isLoadingHeader: v,
       loadingContentsCount: N.length,
       itemType: _.R.MutualGuildList,
-      onExpand: () => C({
+      onExpand: () => g({
         action: "PRESS_SECTION",
         section: "MUTUAL_GUILDS"
       }),
@@ -72,7 +72,7 @@ function g(e) {
       isLoadingHeader: T,
       loadingContentsCount: x.length,
       itemType: _.R.MutualFriendsList,
-      onExpand: () => C({
+      onExpand: () => g({
         action: "PRESS_SECTION",
         section: "MUTUAL_FRIENDS"
       }),
@@ -87,7 +87,7 @@ function g(e) {
           status: l,
           onSelect: () => {
             (0, h.openUserProfileModal)({
-              sourceAnalyticsLocations: g,
+              sourceAnalyticsLocations: C,
               userId: a.id,
               channelId: n
             })

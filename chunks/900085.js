@@ -15,8 +15,8 @@ var i, l = n(735250),
   p = n(714338),
   _ = n(212819),
   f = n(14429),
-  g = n(592125),
-  m = n(888369),
+  m = n(592125),
+  g = n(888369),
   C = n(430824),
   I = n(306680),
   E = n(944486),
@@ -70,14 +70,14 @@ class D extends(i = r.Component) {
 O(D, "defaultProps", {
   unread: !1
 });
-let U = c.ZP.connectStores([I.ZP, g.Z], e => {
+let U = c.ZP.connectStores([I.ZP, m.Z], e => {
     let {
       channel: t
     } = e;
     return {
       unread: I.ZP.hasUnread(t.id),
       mentions: I.ZP.getMentionCount(t.id),
-      category: g.Z.getChannel(t.parent_id)
+      category: m.Z.getChannel(t.parent_id)
     }
   })(D),
   G = c.ZP.connectStores([N.ZP], e => {
@@ -89,12 +89,12 @@ let U = c.ZP.connectStores([I.ZP, g.Z], e => {
       voiceStates: N.ZP.getVoiceStates(t.guild_id)[t.id]
     }
   })(D),
-  w = c.ZP.connectStores([m.default], e => {
+  w = c.ZP.connectStores([g.default], e => {
     let {
       guild: t
     } = e;
     return {
-      unread: m.default.hasUnread(t.id)
+      unread: g.default.hasUnread(t.id)
     }
   })(S.ic),
   k = c.ZP.connectStores([I.ZP], e => {
@@ -105,10 +105,10 @@ let U = c.ZP.connectStores([I.ZP, g.Z], e => {
       mentions: I.ZP.getMentionCount(t.id)
     }
   })(S.PZ),
-  B = c.ZP.connectStores([g.Z, I.ZP], e => {
+  B = c.ZP.connectStores([m.Z, I.ZP], e => {
     let {
       user: t
-    } = e, n = g.Z.getDMFromUserId(t.id);
+    } = e, n = m.Z.getDMFromUserId(t.id);
     return {
       mentions: null != n ? I.ZP.getMentionCount(n) : 0
     }
@@ -281,7 +281,7 @@ class H extends r.PureComponent {
           return (0, d.jW)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("96427"), n.e("33053"), n.e("50654"), n.e("7654"), n.e("41662"), n.e("44156"), n.e("33009"), n.e("85552"), n.e("58227"), n.e("75291"), n.e("24420"), n.e("33213"), n.e("96479")]).then(n.bind(n, 545135));
+            } = await Promise.all([n.e("96427"), n.e("33053"), n.e("50654"), n.e("7654"), n.e("48486"), n.e("44156"), n.e("33009"), n.e("85552"), n.e("58227"), n.e("75291"), n.e("24958"), n.e("33213"), n.e("96479")]).then(n.bind(n, 545135));
             return n => (0, l.jsx)(e, {
               ...n,
               guild: t.record,

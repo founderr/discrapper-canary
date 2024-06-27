@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return m
+    return I
   }
 });
 var i = n(735250);
@@ -16,14 +16,14 @@ var a = n(120356),
   _ = n(689938),
   E = n(905185);
 
-function I(e) {
+function m(e) {
   let t = o.Z.getVoiceChannelId();
   if (null == t) return;
   let n = r.Z.getChannel(t);
   if (null != n)(0, c.RK)(n, e)
 }
 
-function m() {
+function I() {
   var e;
   let t = (0, d.Z)(),
     n = null !== (e = (0, u._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
@@ -48,7 +48,7 @@ function m() {
       className: s()(E.__invalid_button, E.acceptButton),
       size: l.Button.Sizes.MIN,
       color: l.Button.Colors.WHITE,
-      onClick: () => I(!1),
+      onClick: () => m(!1),
       children: (0, i.jsx)(l.Text, {
         className: E.acceptText,
         variant: "text-xs/normal",
@@ -60,7 +60,7 @@ function m() {
       look: l.Button.Looks.OUTLINED,
       size: l.Button.Sizes.MIN,
       color: l.Button.Colors.WHITE,
-      onClick: () => I(!0),
+      onClick: () => m(!0),
       children: (0, i.jsx)(l.Text, {
         className: E.declineText,
         variant: "text-xs/normal",

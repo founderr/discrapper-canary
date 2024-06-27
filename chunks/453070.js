@@ -19,7 +19,7 @@ n.d(t, {
     return U
   },
   el: function() {
-    return R
+    return p
   },
   fP: function() {
     return C
@@ -28,7 +28,7 @@ n.d(t, {
     return g
   },
   t$: function() {
-    return p
+    return R
   }
 }), n(653041), n(47120), n(733860);
 var i = n(470079),
@@ -47,8 +47,8 @@ var i = n(470079),
   h = n(822179),
   f = n(926491),
   S = n(373228),
-  N = n(378233),
-  A = n(981631),
+  A = n(378233),
+  N = n(981631),
   m = n(689938);
 let O = e => {
     C();
@@ -57,11 +57,11 @@ let O = e => {
       t && null == f.Z.getStickerPack(e) && (0, T.FQ)(e)
     }, [e, t])
   },
-  p = e => {
-    let t = o.Wp.useSetting();
-    return (0, N.WD)(t, e)
-  },
   R = e => {
+    let t = o.Wp.useSetting();
+    return (0, A.WD)(t, e)
+  },
+  p = e => {
     let {
       collapsedStickersCategories: t,
       filteredStickers: n,
@@ -79,43 +79,43 @@ let O = e => {
         T = [],
         h = 0,
         f = 0,
-        A = 0;
+        N = 0;
       if (0 !== o) {
         let i = function(t, n) {
           let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = (0, N.J8)(t[0]) ? l.Z.getGuild(t[0].guild_id) : void 0,
+            r = (0, A.J8)(t[0]) ? l.Z.getGuild(t[0].guild_id) : void 0,
             {
               canCreateExpressions: o
             } = (0, s.Gw)(r),
             a = u.Z.getGuildId(),
             _ = c.findIndex(e => e.type === S.Ih.FAVORITE),
             O = c.findIndex(e => e.type === S.Ih.RECENT),
-            p = t.length;
-          null != r && a === r.id && o && t.length < (0, d.A3)(r.premiumTier) && p++;
-          let R = Math.ceil(p / e);
-          I[f] = i ? 0 : R;
-          for (let s = 0; s < R; s++) {
+            R = t.length;
+          null != r && a === r.id && o && t.length < (0, d.A3)(r.premiumTier) && R++;
+          let p = Math.ceil(R / e);
+          I[f] = i ? 0 : p;
+          for (let s = 0; s < p; s++) {
             let o = s * e,
               a = o + e,
               l = t.slice(o, a).map((e, t) => ({
                 type: S.al.STICKER,
                 sticker: e,
-                packId: (0, N.jl)(e) ? e.pack_id : "TODO - fix",
+                packId: (0, A.jl)(e) ? e.pack_id : "TODO - fix",
                 gridSectionIndex: f,
                 rowIndex: h,
                 columnIndex: t,
-                visibleRowIndex: A,
+                visibleRowIndex: N,
                 category: n
               }));
-            f > O && f > _ && null != r && p > t.length && l.push({
+            f > O && f > _ && null != r && R > t.length && l.push({
               type: S.al.CREATE_STICKER,
               guild_id: r.id,
               name: m.Z.Messages.STICKER_PICKER_CREATE_STICKER_TITLE,
               gridSectionIndex: f,
               rowIndex: h,
               columnIndex: l.length,
-              visibleRowIndex: A
-            }), !i && (A++, T.push(l), E.push(l.length)), h++
+              visibleRowIndex: N
+            }), !i && (N++, T.push(l), E.push(l.length)), h++
           }
           f++
         };
@@ -183,7 +183,7 @@ let O = e => {
           name: t.name,
           stickers: []
         }), null != o && !E.BT({
-          permission: A.Plq.USE_EXTERNAL_EMOJIS,
+          permission: N.Plq.USE_EXTERNAL_EMOJIS,
           user: o,
           context: e
         }) && (i = i.filter(t => t.id === e.getGuildId()))
@@ -225,7 +225,7 @@ let y = e => {
       a = v(e);
     return i.useMemo(() => {
       var i;
-      let r = n.map(N.z),
+      let r = n.map(A.z),
         l = {
           type: S.Ih.FAVORITE,
           id: S.Ih.FAVORITE,
@@ -237,11 +237,11 @@ let y = e => {
         id: S.Ih.RECENT,
         name: m.Z.Messages.STICKER_CATEGORY_RECENT,
         stickers: null !== (i = null == s ? void 0 : s.filter(t => {
-          if ((0, N.J8)(t)) {
+          if ((0, A.J8)(t)) {
             var i, r;
             return null !== (r = null === (i = f.Z.getStickersByGuildId(t.guild_id)) || void 0 === i ? void 0 : i.some(e => e.id === t.id)) && void 0 !== r && r && (0, I.cO)(t, o, e) !== I.eb.NONSENDABLE
           }
-          if ((0, N.jl)(t)) return n.some(e => e.id === t.pack_id)
+          if ((0, A.jl)(t)) return n.some(e => e.id === t.pack_id)
         })) && void 0 !== i ? i : []
       }, ...a, ...r]
     }, [n, t, s, a, o, e])
@@ -251,7 +251,7 @@ let y = e => {
       n = (0, r.e7)([f.Z], () => f.Z.getStickerById(e.id)),
       [s, o] = i.useState(!0),
       [a, l] = i.useState(!1),
-      u = (0, N.J8)(e) || (0, N.jl)(e);
+      u = (0, A.J8)(e) || (0, A.jl)(e);
     return (i.useEffect(() => {
       (async () => {
         if (t && !u && null == n && s && !a) {

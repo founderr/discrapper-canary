@@ -21,18 +21,18 @@ function o(e) {
     ...p
   } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, s.Z)(t, n, o, u), {
     Component: E,
-    play: g,
-    events: C
+    play: C,
+    events: g
   } = (0, l.O)(m ? "unmute" : "mute");
-  return a.useEffect(() => () => g(), [g, m]), (0, i.jsx)(_, {
+  return a.useEffect(() => () => C(), [C, m]), (0, i.jsx)(_, {
     isActive: !m,
     iconComponent: E,
     label: f,
     onMouseEnter: e => {
-      null == d || d(e), C.onMouseEnter()
+      null == d || d(e), g.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == h || h(e), C.onMouseLeave()
+      null == h || h(e), g.onMouseLeave()
     },
     ...p
   })

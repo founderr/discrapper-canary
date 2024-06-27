@@ -45,6 +45,6 @@ async function f(e) {
     default:
       (0, E.vE)(n)
   }
-  let N = c.Z.getChannel(n);
-  return (null != N || (await _.Z.loadThread(n), null != (N = c.Z.getChannel(n)))) && ((0, I.YO)(N) || i.Z.isChannelGatedAndVisible(t, n))
+  let A = c.Z.getChannel(n);
+  return (null != A || (await _.Z.loadThread(n), null != (A = c.Z.getChannel(n)))) && ((0, I.YO)(A) || i.Z.isChannelGatedAndVisible(t, n))
 }

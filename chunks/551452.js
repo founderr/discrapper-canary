@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -42,7 +42,7 @@ async function S(e, t, n) {
   }(0, u.Z)(f.Z5c.CHANNEL(e, t, n))
 }
 
-function N(e) {
+function A(e) {
   return {
     react(t, o, a) {
       let l = E.Z.getChannel(t.channelId),

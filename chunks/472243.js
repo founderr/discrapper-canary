@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -22,23 +22,23 @@ var r = n(120356),
   f = n(689938),
   S = n(471991);
 
-function N(e) {
-  var t, n, r, N;
+function A(e) {
+  var t, n, r, A;
   let {
-    type: A,
+    type: N,
     textValue: m,
     maxCharacterCount: O,
-    showRemainingCharsAfterCount: p,
-    className: R
-  } = e, g = (0, o.e7)([d.default], () => E.ZP.canUseIncreasedMessageLength(d.default.getCurrentUser())), C = (0, _.Z)(), v = null != O ? O : C, L = null !== (N = null != p ? p : O) && void 0 !== N ? N : C / 10, D = m.length, M = null != A.upsellLongMessages && (null != D ? D : 0) > T.J6R && g, P = null != A.upsellLongMessages && !g, y = (null === (n = (0, c.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === h.Si.TIER_2, U = v - D, b = U > L, G = U < 0 && y, w = 0 === U ? f.Z.Messages.CHARACTER_COUNT_AT_LIMIT : U > 0 ? f.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+    showRemainingCharsAfterCount: R,
+    className: p
+  } = e, g = (0, o.e7)([d.default], () => E.ZP.canUseIncreasedMessageLength(d.default.getCurrentUser())), C = (0, _.Z)(), v = null != O ? O : C, L = null !== (A = null != R ? R : O) && void 0 !== A ? A : C / 10, D = m.length, M = null != N.upsellLongMessages && (null != D ? D : 0) > T.J6R && g, P = null != N.upsellLongMessages && !g, y = (null === (n = (0, c.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === h.Si.TIER_2, U = v - D, b = U > L, G = U < 0 && y, w = 0 === U ? f.Z.Messages.CHARACTER_COUNT_AT_LIMIT : U > 0 ? f.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
     count: U
   }) : f.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {
-    analyticsLocations: x
+    analyticsLocations: B
   } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
   return M && U >= 0 || !b || P && !b ? (0, i.jsx)(u.Gt, {
-    value: x,
+    value: B,
     children: (0, i.jsxs)("div", {
-      className: s()(R, S.characterCount, {
+      className: s()(p, S.characterCount, {
         [S.error]: U < 0
       }),
       children: [(0, i.jsxs)("div", {
@@ -69,7 +69,7 @@ function N(e) {
         })
       }), P && !b ? (0, i.jsx)(I.Z, {
         className: S.upsell,
-        iconOnly: (null === (r = A.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
+        iconOnly: (null === (r = N.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
         remaining: U
       }) : null]
     })

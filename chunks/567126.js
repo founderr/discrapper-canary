@@ -19,23 +19,23 @@ var l = t(735250),
   g = t(918701),
   h = t(977156),
   C = t(433811),
-  Z = t(131951),
-  N = t(449224),
+  N = t(131951),
+  Z = t(449224),
   I = t(285952),
   x = t(643095),
   f = t(358085),
   A = t(463727),
   R = t(855403),
   T = t(989941),
-  L = t(958707),
-  v = t(133179),
+  v = t(958707),
+  L = t(133179),
   M = t(46140),
   p = t(65154),
   O = t(689938),
   j = t(946152);
 async function P() {
-  let e = Z.Z.getVideoDevices(),
-    n = (0, c.Z)(Z.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
+  let e = N.Z.getVideoDevices(),
+    n = (0, c.Z)(N.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -90,7 +90,7 @@ async function D() {
 }
 
 function G(e) {
-  let n = (0, f.isWindows)() ? (0, T.Z)(_.ZP, N.Z) : null,
+  let n = (0, f.isWindows)() ? (0, T.Z)(_.ZP, Z.Z) : null,
     t = _.ZP.getRunningGames();
   return null != n && (0, R.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, R.Z)(e.id, n.windowHandle)) ? 1 : 0
 }
@@ -103,7 +103,7 @@ function U(e) {
     enableGoLiveCaptureCard: a
   } = A.Z.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = Z.Z.supports(p.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), V = s.useRef(null), k = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
+  }), r = N.Z.supports(p.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [Z, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), V = s.useRef(null), k = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
     let l = (0, h.Zy)({
       location: M.dr.STREAM_SOURCE_SELECT
     });
@@ -121,7 +121,7 @@ function U(e) {
       }
       return null
     }, [l, e, n, t])
-  }((0, u.e7)([S.Z], () => S.Z.quests), H, N), F = s.useMemo(() => null == N ? null : [...N].sort((e, n) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)), [W, N]);
+  }((0, u.e7)([S.Z], () => S.Z.quests), H, Z), F = s.useMemo(() => null == Z ? null : [...Z].sort((e, n) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)), [W, Z]);
   s.useEffect(() => {
     let e = k.current;
     return P().then(e => {
@@ -173,7 +173,7 @@ function U(e) {
         [j.selected]: a
       }),
       onClick: () => t(e, null),
-      children: (0, l.jsx)(v.Z, {
+      children: (0, l.jsx)(L.Z, {
         source: e,
         selectedSource: n
       }, e.id)
@@ -187,7 +187,7 @@ function U(e) {
   return (0, l.jsxs)(s.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: j.segmentContainer,
-      children: [(0, l.jsx)(L.Z, {
+      children: [(0, l.jsx)(v.Z, {
         separator: B
       }), (0, l.jsx)(m.SegmentedControl, {
         options: function() {

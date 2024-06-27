@@ -30,8 +30,8 @@ function u(e) {
     s.Z.unsubscribe("UNSYNCED_USER_SETTINGS_UPDATE", E)
   }), []);
   let {
-    preventIdle: g,
-    allowIdle: C
+    preventIdle: C,
+    allowIdle: g
   } = (0, c.Y)("popup");
   return (null == t ? void 0 : t.current) == null ? null : (0, i.jsx)(r.ZP, {
     children: (0, i.jsx)(l.ReferencePositionLayer, {
@@ -42,10 +42,10 @@ function u(e) {
       nudgeAlignIntoViewport: !1,
       positionKey: p,
       children: () => (0, i.jsx)("div", {
-        onMouseOver: g,
-        onFocus: g,
-        onBlur: C,
-        onMouseLeave: C,
+        onMouseOver: C,
+        onFocus: C,
+        onBlur: g,
+        onMouseLeave: g,
         children: d({
           hidden: _ || h || n,
           onDismiss: u

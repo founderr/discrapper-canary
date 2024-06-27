@@ -17,8 +17,8 @@ var l = n(120356),
   p = n(619915),
   _ = n(339340),
   f = n(201895),
-  g = n(718589),
-  m = n(933557),
+  m = n(718589),
+  g = n(933557),
   C = n(557135),
   I = n(873696),
   E = n(446226),
@@ -146,7 +146,7 @@ class q extends G.ZP {
       connectChannelDropTarget: h,
       connectChannelDragSource: p,
       connectUserDropTarget: _,
-      connectDragPreview: m,
+      connectDragPreview: g,
       canReorderChannel: C,
       canMoveMembers: I,
       showTutorial: E,
@@ -199,7 +199,7 @@ class q extends G.ZP {
                 onContextMenu: e => {
                   this.handleContextMenu(e), null == d || d()
                 },
-                connectDragPreview: m,
+                connectDragPreview: g,
                 isFavoriteSuggestion: Z,
                 "aria-label": (0, f.ZP)({
                   channel: e,
@@ -209,7 +209,7 @@ class q extends G.ZP {
                   embeddedActivitiesCount: x.length,
                   isSubscriptionGated: S
                 }),
-                "aria-describedby": (0, g.Z)({
+                "aria-describedby": (0, m.Z)({
                   channel: e,
                   embeddedApps: x
                 }),
@@ -398,7 +398,7 @@ function J(e) {
       bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
       unverifiedAccount: !i.canChat
     }
-  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
+  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), m = (0, g.ZP)(n), C = (0, Z.qY)(n.id), {
     isSubscriptionGated: I,
     needSubscriptionToAccess: N
   } = (0, S.Z)(n.id), x = (0, E.Z)(), v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
@@ -420,7 +420,7 @@ function J(e) {
     enableActivities: !0
   }), U = L && null == R;
   return (0, i.jsx)(Q, {
-    channelName: g,
+    channelName: m,
     embeddedApps: f,
     embeddedActivityType: F.IIU.PLAYING,
     video: _,

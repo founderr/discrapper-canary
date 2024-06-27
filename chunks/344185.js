@@ -22,16 +22,16 @@ function f(e) {
 }
 
 function S(e) {
-  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => c.AW.has(e.type)).forEach(t => N(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
+  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => c.AW.has(e.type)).forEach(t => A(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = I[e],
     i = t.parent_id;
   !(i in n) && (n[i] = {}), I[e][i][t.id] = h(t)
 }
 
-function A(e) {
+function N(e) {
   var t, n;
   let {
     channel: i
@@ -65,7 +65,7 @@ function m(e) {
   }, delete I[t][n][i], l().isEmpty(I[t][n]) && delete I[t][n]
 }
 let O = {};
-class p extends(i = u.ZP.Store) {
+class R extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(d.Z)
   }
@@ -92,12 +92,12 @@ class p extends(i = u.ZP.Store) {
     return T.has(e)
   }
 }
-o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+o = "ActiveThreadsStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new p(_.Z, {
+}) : r[s] = o, t.Z = new R(_.Z, {
   CONNECTION_OPEN: function(e) {
     I = {}, T.clear(), e.guilds.forEach(e => {
       S(e)
@@ -108,7 +108,7 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
       channels: t
     } = e;
     I = {}, l()(t).filter(e => c.Ec.has(e.type)).groupBy("guild_id").forEach((e, t) => {
-      I[t] = {}, e.forEach(e => N(t, e))
+      I[t] = {}, e.forEach(e => A(t, e))
     })
   },
   GUILD_CREATE: function(e) {
@@ -123,8 +123,8 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
     } = e;
     f(t.id)
   },
-  THREAD_CREATE: A,
-  THREAD_UPDATE: A,
+  THREAD_CREATE: N,
+  THREAD_UPDATE: N,
   THREAD_LIST_SYNC: function(e) {
     let {
       guildId: t,
@@ -136,7 +136,7 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(
       }, I[t]) I[t][e] = {
       ...I[t][e]
     };
-    n.forEach(e => N(t, e))
+    n.forEach(e => A(t, e))
   },
   THREAD_DELETE: function(e) {
     let {

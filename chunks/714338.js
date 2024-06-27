@@ -16,8 +16,8 @@ let d = {},
   h = (0, _.isMac)() ? "cmd" : "ctrl",
   f = (0, _.isMac)() ? "opt" : "alt",
   S = (0, _.isMac)() ? "return" : "enter",
-  N = [...a.u.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", h)),
-  A = () => [],
+  A = [...a.u.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", h)),
+  N = () => [],
   m = [];
 
 function O(e) {
@@ -26,27 +26,27 @@ function O(e) {
   return t.map(e => e.replace("mod", h))
 }
 
-function p(e, t) {
+function R(e, t) {
   return (n, i) => (u.default.track(c.rMx.KEYBOARD_SHORTCUT_USED, {
     shortcut_name: e
   }), t(n, i))
 }
 
-function R(e) {
+function p(e) {
   for (let [t, n] of Object.entries(e)) {
     if (null == n) continue;
-    let e = A();
-    !_.isPlatformEmbedded && (e = e.concat(N));
+    let e = N();
+    !_.isPlatformEmbedded && (e = e.concat(A));
     let i = n.binds.filter(t => (t = t.replace("mod", h), 0 > e.indexOf(t)));
     if (0 === i.length) continue;
     let r = n.comboKeysBindGlobal ? T.bindGlobal : T.bind;
-    if (null != n.action && r.call(T, i, p(t, n.action)), null != n.keyup && r.call(T, i, p(t, n.keyup), "keyup"), null != n.keydown) {
+    if (null != n.action && r.call(T, i, R(t, n.action)), null != n.keyup && r.call(T, i, R(t, n.keyup), "keyup"), null != n.keydown) {
       let e = i.indexOf("any-character"); - 1 !== e && (! function(e, t) {
         let n = e => t(e, e.key);
         document.addEventListener(e, n), m.push(() => document.removeEventListener(e, n))
-      }("keydown", n.keydown), i.splice(e, 1)), i.length > 0 && r.call(T, i, p(t, n.keydown), "keydown")
+      }("keydown", n.keydown), i.splice(e, 1)), i.length > 0 && r.call(T, i, R(t, n.keydown), "keydown")
     }
-    null != n.keypress && r.call(T, i, p(t, n.keypress), "keypress")
+    null != n.keypress && r.call(T, i, R(t, n.keypress), "keypress")
   }
 }(0, _.isDesktop)() && new(r())(document.documentElement).bind("backspace", e => e.preventDefault()), t.Z = {
   combokeys: T,
@@ -54,7 +54,7 @@ function R(e) {
   altKey: f,
   returnKey: S,
   setGetKeybindList(e) {
-    A = e
+    N = e
   },
   checkDupes(e) {
     let t = new Set,
@@ -66,10 +66,10 @@ function R(e) {
     d = e
   },
   enable() {
-    if (!I) I = !0, this.checkDupes(d), R(d)
+    if (!I) I = !0, this.checkDupes(d), p(d)
   },
   enableTemp(e) {
-    E.push(d), d = e, R(e), I = !0
+    E.push(d), d = e, p(e), I = !0
   },
   disableTemp() {
     let e = E.pop();

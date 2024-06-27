@@ -19,11 +19,11 @@ function u(e, t, n) {
     markGuildRead: u,
     deleteChannel: _,
     toggle: E,
-    getNumUnreadChannels: I
-  } = t, m = null;
+    getNumUnreadChannels: m
+  } = t, I = null;
   return s().flatMap(e, e => {
-    let t = e.sortOrder !== m;
-    m = e.sortOrder;
+    let t = e.sortOrder !== I;
+    I = e.sortOrder;
     let s = [];
     return t && (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel ? s.push((0, i.jsx)(l.Z, {
       className: d.divider,
@@ -40,7 +40,7 @@ function u(e, t, n) {
       toggle: E,
       deleteChannel: _,
       onJump: n,
-      getNumUnreadChannels: I
+      getNumUnreadChannels: m
     }, e.channelId)), s
   })
 }

@@ -7,13 +7,13 @@ n.d(t, {
     return g
   },
   Ek: function() {
-    return p
+    return R
   },
   Gu: function() {
     return w
   },
   JQ: function() {
-    return R
+    return p
   },
   NE: function() {
     return S
@@ -25,7 +25,7 @@ n.d(t, {
     return b
   },
   Xu: function() {
-    return A
+    return N
   },
   Y: function() {
     return G
@@ -34,7 +34,7 @@ n.d(t, {
     return m
   },
   ki: function() {
-    return N
+    return A
   },
   kn: function() {
     return D
@@ -86,19 +86,19 @@ function S(e, t) {
   }, [e]), e, t)
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = e.isForumLikeChannel() ? h.Plq.SEND_MESSAGES : s.$e(h.Plq.CREATE_PUBLIC_THREADS, h.Plq.READ_MESSAGE_HISTORY);
   return O(E.Z.can(n, e), e, t)
 }
 
-function A(e) {
+function N(e) {
   let t = (0, o.e7)([E.Z], () => E.Z.can(s.$e(h.Plq.CREATE_PRIVATE_THREADS), e), [e]);
   return e.type === h.d4z.GUILD_TEXT && O(t, e)
 }
 
 function m(e) {
   let t = S(e),
-    n = A(e);
+    n = N(e);
   return t || n
 }
 
@@ -106,14 +106,14 @@ function O(e, t, n) {
   return !(__OVERLAY__ || !e || !_.uC.has(t.type) || null != n && (n.hasFlag(h.iLy.HAS_THREAD) || (0, u.Z)(n))) && !0
 }
 
-function p(e) {
+function R(e) {
   let t = (0, o.e7)([d.Z], () => d.Z.getChannel(I.default.castMessageIdAsChannelId(e.id)), [e]);
   return function(e, t, n) {
     return !!t.hasFlag(h.iLy.HAS_THREAD) && null != n && !!e || !1
   }((0, o.e7)([E.Z], () => E.Z.can(h.Plq.VIEW_CHANNEL, t), [t]), e, t)
 }
 
-function R(e) {
+function p(e) {
   return (0, o.cj)([T.Z, E.Z], () => {
     let t = T.Z.getActiveJoinedThreadsForParent(e.guild_id, e.id),
       n = T.Z.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),

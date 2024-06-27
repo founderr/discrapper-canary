@@ -22,23 +22,23 @@ function f(e) {
     channelId: t,
     warningId: f,
     senderId: E
-  } = e, g = a.useCallback(() => {
+  } = e, C = a.useCallback(() => {
     (0, c.T)(t, [f])
-  }, [t, f]), C = a.useCallback(e => () => {
+  }, [t, f]), g = a.useCallback(e => () => {
     r.Z.addRelationship({
       userId: E,
       context: {
         location: p.zr
       },
       type: m.OGo.BLOCKED
-    }), g(), (0, s.showToast)((0, s.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, d.qc)({
+    }), C(), (0, s.showToast)((0, s.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, d.qc)({
       channelId: t,
       warningId: f,
       senderId: E,
       warningType: u.pj.STRANGER_DANGER,
       cta: e
     })
-  }, [g, t, f, E]);
+  }, [C, t, f, E]);
   a.useEffect(() => {
     (0, d.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
       channelId: t,
@@ -80,7 +80,7 @@ function f(e) {
         return n => (0, i.jsx)(s, {
           ...n,
           userId: E,
-          confirmBlock: C(e),
+          confirmBlock: g(e),
           onCancel: () => {
             null == l || l(), (0, d.qc)({
               channelId: t,
@@ -100,7 +100,7 @@ function f(e) {
     warningType: u.pj.STRANGER_DANGER,
     header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
     description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
-    onDismiss: g,
+    onDismiss: C,
     buttons: [{
       text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
       color: s.Button.Colors.BRAND,

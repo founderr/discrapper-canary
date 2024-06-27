@@ -40,8 +40,8 @@ function h() {
     n = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
     h = (0, u._O)(),
     f = (0, r.e7)([a.Z], () => a.Z.hasAnyUnexpiredOffer()),
-    [S, N] = i.useState(!1),
-    [A, m] = i.useState([]);
+    [S, A] = i.useState(!1),
+    [N, m] = i.useState([]);
   i.useEffect(() => {
     null != e && s.Z.wait(() => d.ZP.markOutboundPromotionsSeen())
   }, [e]);
@@ -53,23 +53,23 @@ function h() {
         return n.id === e.promotion.id
       }) ? t : [...t, e])
     }, []),
-    p = l.ZP.isPremium(n),
-    R = _.g.useExperiment({
+    R = l.ZP.isPremium(n),
+    p = _.g.useExperiment({
       location: "useOutboundPromotions"
     }, {
-      autoTrackExposure: !p,
-      disable: p
+      autoTrackExposure: !R,
+      disable: R
     }).enabled || l.ZP.isPremiumExactly(n, I.p9.TIER_2);
   i.useEffect(() => {
     s.Z.wait(() => {
-      R && null == e && d.ZP.fetchActiveOutboundPromotions()
+      p && null == e && d.ZP.fetchActiveOutboundPromotions()
     })
-  }, [e, R]), i.useEffect(() => {
+  }, [e, p]), i.useEffect(() => {
     s.Z.wait(() => {
       (0, c.t8)().then(e => {
-        m(e), N(!0)
+        m(e), A(!0)
       }).catch(() => {
-        m([]), N(!0)
+        m([]), A(!0)
       })
     })
   }, []);
@@ -78,21 +78,21 @@ function h() {
       code: e,
       promotion: t
     }
-    of A) g[t.id] = e;
+    of N) g[t.id] = e;
   let C = new Set(t.map(e => {
       let {
         id: t
       } = e;
       return t
     })),
-    v = A.filter(e => {
+    v = N.filter(e => {
       let {
         promotion: t
       } = e;
       return !C.has(t.id)
     });
   return {
-    promotionsLoaded: S && (!R || null != e),
+    promotionsLoaded: S && (!p || null != e),
     activeOutboundPromotions: t.filter(e => (0, c.ZC)(e) && (!(h || f) || (0, c.Qf)(e, g))),
     claimedEndedOutboundPromotions: v.filter(e => (0, c.ZC)(e.promotion)),
     claimedOutboundPromotionCodeMap: g,

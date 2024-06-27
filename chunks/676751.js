@@ -53,9 +53,9 @@ function d(e) {
     content: d,
     timestamp: u,
     messageReference: _
-  } = a, E = (0, l.ZP)(a), I = t(E), m = o.Z.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
+  } = a, E = (0, l.ZP)(a), m = t(E), I = o.Z.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
     username: E.nick,
-    usernameHook: I,
+    usernameHook: m,
     webhookName: d,
     webhookNameHook: (e, t) => (0, i.jsx)(c, {
       messageReference: _,
@@ -66,6 +66,6 @@ function d(e) {
     icon: n(570111),
     timestamp: u,
     compact: s,
-    children: m
+    children: I
   })
 }

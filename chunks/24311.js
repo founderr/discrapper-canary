@@ -25,26 +25,26 @@ function I(e) {
     joinCallVideo: h,
     id: f,
     onCall: S
-  } = e, N = l.default.getId(), A = I === d.IlC.POPOUT, m = (0, r.e7)([c.Z, u.Z], () => c.Z.getVoiceChannelId() === u.Z.getDMFromUserId(t.id)), O = (0, r.e7)([_.Z], () => _.Z.isBlocked(t.id));
-  if (N === t.id || A || m || t.bot) return null;
-  let p = () => {
+  } = e, A = l.default.getId(), N = I === d.IlC.POPOUT, m = (0, r.e7)([c.Z, u.Z], () => c.Z.getVoiceChannelId() === u.Z.getDMFromUserId(t.id)), O = (0, r.e7)([_.Z], () => _.Z.isBlocked(t.id));
+  if (A === t.id || N || m || t.bot) return null;
+  let R = () => {
       null == S || S(), o.Z.openPrivateChannel(t.id, !0, h)
     },
-    R = !a.ZP.disableCallUserConfirmationPrompt;
+    p = !a.ZP.disableCallUserConfirmationPrompt;
   return (0, i.jsx)(s.MenuItem, {
     id: null != f ? f : "call",
     label: null != T ? T : E.Z.Messages.CALL,
-    action: R ? () => {
+    action: p ? () => {
       (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await n.e("27157").then(n.bind(n, 736454));
         return t => (0, i.jsx)(e, {
-          onSubmit: p,
+          onSubmit: R,
           ...t
         })
       })
-    } : p,
+    } : R,
     disabled: O
   })
 }

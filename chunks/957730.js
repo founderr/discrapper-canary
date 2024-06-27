@@ -16,12 +16,12 @@ var i = n(392711),
   h = n(984933),
   f = n(271383),
   S = n(430824),
-  N = n(496675),
-  A = n(699516),
+  A = n(496675),
+  N = n(699516),
   m = n(246946),
   O = n(594174),
-  p = n(483360),
-  R = n(176354),
+  R = n(483360),
+  p = n(176354),
   g = n(51144),
   C = n(981631),
   v = n(185923),
@@ -80,8 +80,8 @@ let y = _.Z.RULES,
   b = /^<@!?(\d+)>/,
   G = /^<@&(\d+)>/,
   w = /^<#(\d+)>/,
-  x = /^<a?:(\w+):(\d+)>/,
-  B = /(@everyone|@here|@Clyde)\b/,
+  B = /^<a?:(\w+):(\d+)>/,
+  x = /(@everyone|@here|@Clyde)\b/,
   k = {
     link: M(o().defaultRules.link),
     autolink: M(o().defaultRules.autolink),
@@ -91,7 +91,7 @@ let y = _.Z.RULES,
     rawUserMention: P(b),
     rawRoleMention: P(G),
     rawChannelMention: P(w),
-    rawEmoji: P(x),
+    rawEmoji: P(B),
     mention: {
       match(e, t, n) {
         let i = n.split(" ").pop() + e;
@@ -102,7 +102,7 @@ let y = _.Z.RULES,
             ...e,
             text: e.text.split("#")[0]
           })), "mention"))) return null;
-        let s = B.exec(e);
+        let s = x.exec(e);
         if (null != s && r[0].length <= s[0].length) return null;
         if ("" === n) {
           let t = d.v.exec(e);
@@ -260,12 +260,12 @@ let y = _.Z.RULES,
       parse(e) {
         let t = T.Z.getChannel(e[1]);
         return {
-          content: null == t ? e[0] : (0, a.F6)(t, O.default, A.Z, !0, !0)
+          content: null == t ? e[0] : (0, a.F6)(t, O.default, N.Z, !0, !0)
         }
       }
     },
     emoji: {
-      match: o().anyScopeRegex(x),
+      match: o().anyScopeRegex(B),
       parse(e, t, n) {
         let [i, r, s] = e, {
           guild: o
@@ -350,7 +350,7 @@ function Y(e) {
   let t;
   let n = null == e ? void 0 : e.getGuildId(),
     i = null != n ? S.Z.getGuild(n) : null,
-    s = N.Z.can(C.Plq.MENTION_EVERYONE, e);
+    s = A.Z.can(C.Plq.MENTION_EVERYONE, e);
   t = (null == e ? void 0 : e.isPrivate()) ? e.recipients.map(e => ({
     userId: e,
     nick: null
@@ -398,7 +398,7 @@ function Y(e) {
         text: n
       }
     }),
-    _ = null != n ? r()(p.k1).filter(e => e !== h.sH).flatMap(e => h.ZP.getChannels(n)[e].map(e => ({
+    _ = null != n ? r()(R.k1).filter(e => e !== h.sH).flatMap(e => h.ZP.getChannels(n)[e].map(e => ({
       id: e.channel.id,
       text: e.channel.name
     }))).value() : [],
@@ -409,7 +409,7 @@ function Y(e) {
     d = l.Z.getDisambiguatedEmojiContext(n),
     I = d.getEscapedCustomEmoticonNames(),
     T = d.getCustomEmoji(),
-    A = d.getCustomEmoticonRegex();
+    N = d.getCustomEmoticonRegex();
   return {
     inline: !0,
     mentionableRoles: a,
@@ -417,7 +417,7 @@ function Y(e) {
     users: o,
     channels: u.concat(_).concat(c),
     emojiContext: d,
-    customEmoticonsRegex: A,
+    customEmoticonsRegex: N,
     customEmoji: T,
     textExclusions: I,
     disableErrorGuards: !0
@@ -439,7 +439,7 @@ t.ZP = {
         validNonShortcutEmojis: []
       };
     return a.content = (n = a.content, i = o, r = (t, n) => {
-      R.ZP.isEmojiPremiumLocked({
+      p.ZP.isEmojiPremiumLocked({
         emoji: t,
         channel: e,
         intention: v.Hz.CHAT

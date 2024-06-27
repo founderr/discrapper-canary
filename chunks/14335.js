@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(963249),
   _ = n(594174),
   E = n(626135),
-  I = n(74538),
-  m = n(163684),
+  m = n(74538),
+  I = n(163684),
   T = n(748770),
   h = n(474936),
   N = n(981631),
@@ -23,11 +23,11 @@ var i = n(735250),
   p = n(921186);
 
 function C() {
-  let e = (0, l.e7)([_.default], () => I.ZP.isPremium(_.default.getCurrentUser())),
+  let e = (0, l.e7)([_.default], () => m.ZP.isPremium(_.default.getCurrentUser())),
     {
       enabled: t,
       getNitroCTA: n
-    } = m.g.useExperiment({
+    } = I.g.useExperiment({
       location: "OutboundPromotionNotice"
     }, {
       autoTrackExposure: !e,
@@ -41,7 +41,7 @@ function C() {
     } = (0, d.ZP)(),
     S = a.useCallback(() => {
       (0, u.Z)({
-        subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
+        subscriptionTier: m.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
         analyticsLocations: g,
         analyticsObject: {
           ...C,

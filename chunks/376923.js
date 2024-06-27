@@ -3,7 +3,7 @@ n.d(t, {
     return E
   },
   LJ: function() {
-    return g
+    return C
   },
   mV: function() {
     return _
@@ -15,7 +15,7 @@ n.d(t, {
     return i
   },
   wi: function() {
-    return C
+    return g
   }
 }), n(789020), n(47120);
 var i, a, l = n(470079),
@@ -56,14 +56,14 @@ function E(e) {
   }, [e])
 }
 
-function g(e) {
+function C(e) {
   return l.useMemo(() => {
     let t = p.default.extractTimestamp(e);
     return r()(new Date(t)).format("MM/DD/YYYY")
   }, [e])
 }
 
-function C(e, t) {
+function g(e, t) {
   let n = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
     i = null == n ? void 0 : n.joinedAt;
   return l.useMemo(() => null == i ? "" : r()(new Date(i)).format("MMM DD, YYYY"), [i])

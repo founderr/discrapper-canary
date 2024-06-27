@@ -8,42 +8,42 @@ var i = t(735250),
   r = t(442837),
   l = t(481060),
   o = t(668781),
-  u = t(79390),
-  s = t(222677),
-  c = t(665906),
-  d = t(496675),
+  s = t(79390),
+  u = t(222677),
+  d = t(665906),
+  c = t(496675),
   E = t(768581),
   f = t(176354),
-  I = t(981631),
-  M = t(689938);
+  M = t(981631),
+  I = t(689938);
 
 function g(e, n) {
   let {
     reducedMotion: t
-  } = a.useContext(l.AccessibilityPreferencesContext), g = (0, c.$R)(n), m = (0, r.e7)([d.Z], () => d.Z.can(I.Plq.MANAGE_MESSAGES, n) && g, [n, g]), Z = e.reactions.reduce((e, n) => {
+  } = a.useContext(l.AccessibilityPreferencesContext), g = (0, d.$R)(n), m = (0, r.e7)([c.Z], () => c.Z.can(M.Plq.MANAGE_MESSAGES, n) && g, [n, g]), _ = e.reactions.reduce((e, n) => {
     var t;
     return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find(e => null != e.id && e.id === n.emoji.id || e.name === n.emoji.name) ? e : [...e, n.emoji]
-  }, []), _ = (t, i) => {
-    t.shiftKey ? (0, s.$E)(n.id, e.id, i) : o.Z.show({
-      title: M.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
-      body: M.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
-      confirmText: M.Z.Messages.YES_TEXT,
-      cancelText: M.Z.Messages.NO_TEXT,
+  }, []), Z = (t, i) => {
+    t.shiftKey ? (0, u.$E)(n.id, e.id, i) : o.Z.show({
+      title: I.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
+      body: I.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
+      confirmText: I.Z.Messages.YES_TEXT,
+      cancelText: I.Z.Messages.NO_TEXT,
       onConfirm: () => {
-        (0, s.$E)(n.id, e.id, i)
+        (0, u.$E)(n.id, e.id, i)
       }
     })
   };
-  return !m || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, u.eQ)(e) ? null : (0, i.jsx)(l.MenuItem, {
+  return !m || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, s.eQ)(e) ? null : (0, i.jsx)(l.MenuItem, {
     id: "remove-emoji-reactions",
-    label: M.Z.Messages.REMOVE_EMOJI_REACTIONS,
+    label: I.Z.Messages.REMOVE_EMOJI_REACTIONS,
     color: "danger",
-    children: Z.map(e => {
+    children: _.map(e => {
       var n, a;
       return (0, i.jsx)(l.MenuItem, {
         id: "remove-emoji-reactions-".concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
         label: null == e.id ? e.name : ":".concat(e.name, ":"),
-        action: n => _(n, e),
+        action: n => Z(n, e),
         imageUrl: n => {
           var i;
           let {

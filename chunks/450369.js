@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(569545),
   f = n(382182),
   E = n(484459),
-  g = n(103575),
-  C = n(199902),
+  C = n(103575),
+  g = n(199902),
   I = n(430824),
   x = n(496675),
   T = n(979651),
@@ -53,7 +53,7 @@ let R = 16 / 9,
         guildId: l.guild_id,
         channelId: l.id
       }),
-      renderPopout: e => (0, i.jsx)(g.Z, {
+      renderPopout: e => (0, i.jsx)(C.Z, {
         ...e,
         location: "StageTile",
         guildId: s,
@@ -91,11 +91,11 @@ let R = 16 / 9,
       onContextMenu: h,
       inPopout: E
     } = e, {
-      reducedMotion: g
+      reducedMotion: C
     } = a.useContext(o.AccessibilityPreferencesContext), {
       id: v,
       blocked: j
-    } = t, L = (0, r.Wu)([C.Z], () => C.Z.getAllActiveStreams(), []), {
+    } = t, L = (0, r.Wu)([g.Z], () => g.Z.getAllActiveStreams(), []), {
       selectedParticipant: P,
       largeStream: O
     } = (0, r.cj)([p.Z], () => ({
@@ -121,7 +121,7 @@ let R = 16 / 9,
       onClick: y,
       onContextMenu: h,
       paused: !1,
-      pulseSpeakingIndicator: !g.enabled,
+      pulseSpeakingIndicator: !C.enabled,
       width: s,
       children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
     }, v)
@@ -176,9 +176,9 @@ t.Z = a.memo(function(e) {
           })
       }
     },
-    g = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+    C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, i.jsx)(i.Fragment, {
-    children: g ? (0, i.jsx)(j, {
+    children: C ? (0, i.jsx)(j, {
       stageParticipant: a,
       rtcParticipant: _,
       channel: l,

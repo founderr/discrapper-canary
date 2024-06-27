@@ -27,19 +27,19 @@ function T(e) {
     opacity: .1
   }), C = (0, c.useToken)(T).spring({
     opacity: 0
-  }), A = (0, c.useToken)(T).spring({
+  }), m = (0, c.useToken)(T).spring({
     opacity: 1
-  }), m = e => {
+  }), A = e => {
     e.finished && (null == i || i())
-  }, [O, g] = (0, o.useSpring)(() => ({
+  }, [g, O] = (0, o.useSpring)(() => ({
     immediate: !0,
     from: {
       backgroundColor: I,
       borderColor: I
     }
-  })), h = E + 200 + 200, R = S ? 0 : 200;
+  })), h = E + 200 + 200, p = S ? 0 : 200;
   return a.useEffect(() => {
-    g({
+    O({
       reset: !0,
       immediate: !1,
       to: {
@@ -47,21 +47,21 @@ function T(e) {
         borderColor: I
       },
       config: {
-        duration: R,
+        duration: p,
         easing: l.Z.Easing.ease
       }
-    }), g({
+    }), O({
       delay: E,
       immediate: S,
       to: [{
         backgroundColor: N,
-        borderColor: A
+        borderColor: m
       }],
       config: {
-        duration: R,
+        duration: p,
         easing: l.Z.Easing.ease
       }
-    }), g({
+    }), O({
       delay: h,
       immediate: S,
       to: [{
@@ -69,13 +69,13 @@ function T(e) {
         borderColor: C
       }],
       config: {
-        duration: R,
+        duration: p,
         easing: l.Z.Easing.ease
       },
-      onRest: m
+      onRest: A
     })
-  }, [g]), (0, n.jsx)(o.animated.div, {
-    style: O,
+  }, [O]), (0, n.jsx)(o.animated.div, {
+    style: g,
     className: r()(u.settingsItemHighlight, t),
     children: s
   })

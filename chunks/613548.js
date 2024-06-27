@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(517525),
   f = n(6242),
   E = n(757692),
-  g = n(141321),
-  C = n(44136),
+  C = n(141321),
+  g = n(44136),
   I = n(651183),
   x = n(618158),
   T = n(390322),
@@ -48,7 +48,7 @@ function V(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, a = Date.now(), l = (0, u.e7)([b.Z, y.Z], () => o()(b.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, C.ZP)(e)).sortBy(e => -b.Z.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
+  } = e, a = Date.now(), l = (0, u.e7)([b.Z, y.Z], () => o()(b.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, g.ZP)(e)).sortBy(e => -b.Z.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
   return 0 === l.length ? null : (0, i.jsx)(i.Fragment, {
     children: l.map((e, t) => (0, i.jsx)(d.Tooltip, {
       position: "bottom",
@@ -78,15 +78,15 @@ function F(e) {
     inCall: s,
     isChatOpen: r,
     exitFullScreen: o
-  } = e, C = n.id, {
+  } = e, g = n.id, {
     voiceParticipantsHidden: b,
     selectedParticipant: L,
     userParticipantCount: H
   } = (0, u.cj)([y.Z], () => ({
-    selectedParticipant: y.Z.getSelectedParticipant(C),
-    voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(C),
-    userParticipantCount: y.Z.getUserParticipantCount(C)
-  }), [C]), F = (0, u.e7)([R.default], () => R.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, E.o)(L, F), K = (0, f.lL)("CallHeader", !0, F, Y), {
+    selectedParticipant: y.Z.getSelectedParticipant(g),
+    voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(g),
+    userParticipantCount: y.Z.getUserParticipantCount(g)
+  }), [g]), F = (0, u.e7)([R.default], () => R.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, E.o)(L, F), K = (0, f.lL)("CallHeader", !0, F, Y), {
     preventIdle: q,
     allowIdle: X
   } = (0, x.Y)("popup"), Q = [];
@@ -103,11 +103,11 @@ function F(e) {
     }, "invite-button"))
   }
   return b && Q.push((0, i.jsx)(V, {
-    channelId: C,
+    channelId: g,
     guildId: n.guild_id
   }, "current-speaker")), Q.push((0, i.jsx)(p.Z, {
     className: G.button,
-    channelId: C
+    channelId: g
   }, "clips-enabled-indicator")), (null == L ? void 0 : L.type) === w.fO.STREAM && (Q.push((0, i.jsx)(I.Z, {
     className: G.button,
     participant: L
@@ -138,14 +138,14 @@ function F(e) {
     }
   }, "call-members-popout")), s && Q.push(null != L ? (0, i.jsx)(S.Z, {
     className: G.button,
-    channelId: C
+    channelId: g
   }, "deselect-participant") : (0, i.jsx)(M.Z, {
     className: G.button,
-    channelId: C,
+    channelId: g,
     isHorizontal: !0
   }, "select-participant")), !t && Q.push((0, i.jsx)(h.Z, {
     className: G.button
-  }, "clips")), Q.push((0, i.jsx)(g.Z, {
+  }, "clips")), Q.push((0, i.jsx)(C.Z, {
     onOpen: q,
     onClose: X,
     className: G.button
@@ -157,7 +157,7 @@ function F(e) {
       } = e;
       return (0, i.jsx)(T.Z, {
         children: (0, i.jsx)(k.Z, {
-          channelId: C,
+          channelId: g,
           onClose: t,
           appContext: l,
           exitFullScreen: o

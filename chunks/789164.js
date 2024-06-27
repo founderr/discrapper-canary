@@ -22,7 +22,7 @@ let u = r.forwardRef(function(e, t) {
     htmlFor: T,
     tag: h = "h5",
     ...f
-  } = e, S = r.useId(), N = null !== (n = f.titleId) && void 0 !== n ? n : S;
+  } = e, S = r.useId(), A = null !== (n = f.titleId) && void 0 !== n ? n : S;
   return (0, i.jsx)("div", {
     ref: t,
     className: _,
@@ -31,7 +31,7 @@ let u = r.forwardRef(function(e, t) {
         className: l.sectionTitle,
         children: [E, null != d ? (0, i.jsx)(a.v, {
           tag: h,
-          id: N,
+          id: A,
           htmlFor: T,
           disabled: I,
           className: c,
@@ -41,7 +41,7 @@ let u = r.forwardRef(function(e, t) {
       children: (0, i.jsx)("div", {
         className: l.children,
         children: (0, i.jsx)(o.ol, {
-          titleId: N,
+          titleId: A,
           children: u
         })
       })

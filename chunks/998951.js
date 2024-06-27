@@ -26,11 +26,11 @@ t.Z = function(e) {
         right: 4
       }
     },
-    hasThread: N,
-    isSystemMessage: A,
+    hasThread: A,
+    isSystemMessage: N,
     hasReply: m,
     ...O
-  } = e, p = (0, i.jsx)(o.FocusRing, {
+  } = e, R = (0, i.jsx)(o.FocusRing, {
     ...S,
     children: (0, i.jsxs)("div", {
       className: s()(t, {
@@ -39,8 +39,8 @@ t.Z = function(e) {
         [a.compact]: n,
         [a.cozy]: !n,
         [a.zalgo]: l,
-        [a.hasThread]: N,
-        [a.isSystemMessage]: A,
+        [a.hasThread]: A,
+        [a.isSystemMessage]: N,
         [a.hasReply]: m
       }),
       ref: f,
@@ -56,6 +56,6 @@ t.Z = function(e) {
     })
   });
   return u ? (0, i.jsx)(o.FocusBlock, {
-    children: p
-  }) : p
+    children: R
+  }) : R
 }

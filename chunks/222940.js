@@ -18,21 +18,21 @@ function E(e) {
   let {
     inboxIconRef: t,
     recentsPopoutShown: n
-  } = e, [E, I] = a.useState(!1), m = (0, s.e7)([o.Z], () => o.Z.getLastUnseenInvite()), T = (0, s.e7)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
+  } = e, [E, m] = a.useState(!1), I = (0, s.e7)([o.Z], () => o.Z.getLastUnseenInvite()), T = (0, s.e7)([d.default], () => null != I ? d.default.getUser(I.inviter_id) : null);
   return (a.useEffect(() => {
-    n && I(!1)
+    n && m(!1)
   }, [n]), a.useEffect(() => {
-    if (null == m) {
-      I(!1);
+    if (null == I) {
+      m(!1);
       return
-    }(0, c.Br)(m), I(!0);
+    }(0, c.Br)(I), m(!0);
     let e = new l.V7;
     return e.start(5e3, () => {
-      I(!1)
+      m(!1)
     }), () => {
       e.stop()
     }
-  }, [m]), E && null != m && null != T) ? (0, i.jsxs)(r.TooltipLayer, {
+  }, [I]), E && null != I && null != T) ? (0, i.jsxs)(r.TooltipLayer, {
     tooltipClassName: _.tooltip,
     tooltipContentClassName: _.tooltipContent,
     targetElementRef: t,
@@ -42,7 +42,7 @@ function E(e) {
       className: _.iconContainer,
       children: [(0, i.jsx)("img", {
         className: _.inviteImage,
-        src: m.application_asset,
+        src: I.application_asset,
         alt: "Game Invite"
       }), (0, i.jsx)("div", {
         className: _.offsetAvatarContainer,
@@ -64,7 +64,7 @@ function E(e) {
       }), (0, i.jsx)(r.Text, {
         className: _.__invalid_subtitle,
         variant: "text-xxs/medium",
-        children: m.application_name
+        children: I.application_name
       })]
     })]
   }) : null

@@ -21,15 +21,15 @@ function T(e) {
     transitionState: I,
     onSuccess: N,
     onClose: C,
-    requirementsUpdated: A,
-    noSkip: m = !1
-  } = e, [O, g] = a.useState(""), [h, R] = a.useState(""), [p, x] = a.useState(""), [M, D] = a.useState(null), [f, L] = a.useState(null), P = (0, i.e7)([l.Z], () => l.Z.getErrors()), Z = (0, i.e7)([l.Z], () => l.Z.getFormState()), v = a.useRef(null);
+    requirementsUpdated: m,
+    noSkip: A = !1
+  } = e, [g, O] = a.useState(""), [h, p] = a.useState(""), [R, x] = a.useState(""), [M, D] = a.useState(null), [f, L] = a.useState(null), P = (0, i.e7)([l.Z], () => l.Z.getErrors()), Z = (0, i.e7)([l.Z], () => l.Z.getFormState()), v = a.useRef(null);
   async function b(e) {
     e.preventDefault(), (0, o.b9)();
     let s = !1;
-    if ("" === h ? (D(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), s = !0) : D(null), h !== p ? (L(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), s = !0) : L(null), s) return;
+    if ("" === h ? (D(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), s = !0) : D(null), h !== R ? (L(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), s = !0) : L(null), s) return;
     let t = await (0, o.Mn)({
-      password: O,
+      password: g,
       newPassword: h
     });
     if (null == t ? void 0 : t.ok) N();
@@ -57,8 +57,8 @@ function T(e) {
         color: "header-secondary",
         variant: "text-md/normal",
         className: u.subtitle,
-        children: A ? E.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : E.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
-      }), !0 !== m && (0, n.jsx)(r.ModalCloseButton, {
+        children: m ? E.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : E.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+      }), !0 !== A && (0, n.jsx)(r.ModalCloseButton, {
         onClick: C,
         className: u.modalCloseButton
       })]
@@ -71,8 +71,8 @@ function T(e) {
           error: null == P ? void 0 : null === (s = P.password) || void 0 === s ? void 0 : s[0],
           children: (0, n.jsx)(r.TextInput, {
             type: "password",
-            value: O,
-            onChange: g,
+            value: g,
+            onChange: O,
             inputRef: v
           })
         }), (0, n.jsx)(r.FormItem, {
@@ -82,7 +82,7 @@ function T(e) {
           children: (0, n.jsx)(r.TextInput, {
             type: "password",
             value: h,
-            onChange: R
+            onChange: p
           })
         }), (0, n.jsx)(r.FormItem, {
           className: u.newPassword,
@@ -90,7 +90,7 @@ function T(e) {
           error: null != f ? f : void 0,
           children: (0, n.jsx)(r.TextInput, {
             type: "password",
-            value: p,
+            value: R,
             onChange: x
           })
         })]
@@ -101,7 +101,7 @@ function T(e) {
           size: r.Button.Sizes.MEDIUM,
           submitting: Z === _.QZA.SUBMITTING,
           children: E.Z.Messages.DONE
-        }), !0 !== m && (0, n.jsx)(r.Button, {
+        }), !0 !== A && (0, n.jsx)(r.Button, {
           className: u.cancel,
           look: r.Button.Looks.LINK,
           color: r.Button.Colors.PRIMARY,

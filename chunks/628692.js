@@ -20,16 +20,16 @@ t.Z = function(e) {
     jumbo: n = !1
   } = e, {
     currentPreviewRef: s
-  } = r.useContext(d.Z), f = (0, a.e7)([E.Z], () => E.Z.getSoundById(t)), S = (null == f ? void 0 : f.emojiId) != null || (null == f ? void 0 : f.emojiName) != null, [N, A] = r.useState(!1), m = (0, _.P)("soundmoji_chat_mention"), O = r.useCallback(() => {
+  } = r.useContext(d.Z), f = (0, a.e7)([E.Z], () => E.Z.getSoundById(t)), S = (null == f ? void 0 : f.emojiId) != null || (null == f ? void 0 : f.emojiName) != null, [A, N] = r.useState(!1), m = (0, _.P)("soundmoji_chat_mention"), O = r.useCallback(() => {
     var e;
     null == f && (0, c.w)();
     let n = new Audio((0, I.Z)(t));
-    null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, T.Z)(null !== (e = null == f ? void 0 : f.volume) && void 0 !== e ? e : .5), A(!0), n.play(), n.addEventListener("ended", () => {
-      A(!1)
+    null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, T.Z)(null !== (e = null == f ? void 0 : f.volume) && void 0 !== e ? e : .5), N(!0), n.play(), n.addEventListener("ended", () => {
+      N(!1)
     }, {
       once: !0
     })
-  }, [t, f, s, A]);
+  }, [t, f, s, N]);
   return m ? null == f ? (0, i.jsxs)(l.Clickable, {
     title: "Risky Click",
     tag: "span",
@@ -51,7 +51,7 @@ t.Z = function(e) {
     className: h.jumboContainer,
     children: [(0, i.jsx)("div", {
       className: o()(h.jumboOverlay, {
-        [h.playing]: N
+        [h.playing]: A
       }),
       children: (0, i.jsx)(l.CirclePlayIcon, {
         size: "md",

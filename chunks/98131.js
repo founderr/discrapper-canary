@@ -15,8 +15,8 @@ var l = t(735250),
   g = t(435064),
   h = t(894694),
   C = t(39604),
-  Z = t(981631),
-  N = t(921944),
+  N = t(981631),
+  Z = t(921944),
   I = t(689938),
   x = t(291779),
   f = t(278768);
@@ -26,17 +26,17 @@ let A = e => {
     isAnimationDone: t,
     guildId: a,
     children: i
-  } = e, E = (0, r.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === h.x.MEETS_MINIMUM || E === h.x.UNKNOWN, f = E === h.x.BELOW_MINIMUM, A = t && (S || f) && !n, [R, T] = (0, d.c)(A ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), L = R === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, E = (0, r.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === h.x.MEETS_MINIMUM || E === h.x.UNKNOWN, f = E === h.x.BELOW_MINIMUM, A = t && (S || f) && !n, [R, T] = (0, d.c)(A ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = R === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   s.useEffect(() => {
     n && (0, c.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
     })
   }, [n]);
-  let v = (e, n) => {
-    e.stopPropagation(), e.preventDefault(), null == n || n(), T(N.L.UNKNOWN)
+  let L = (e, n) => {
+    e.stopPropagation(), e.preventDefault(), null == n || n(), T(Z.L.UNKNOWN)
   };
   return (0, l.jsx)(u.Popout, {
-    shouldShow: L,
+    shouldShow: v,
     position: "right",
     align: "center",
     renderPopout: e => {
@@ -61,7 +61,7 @@ let A = e => {
             color: "always-white",
             className: x.warningText,
             children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-              url: _.Z.getArticleURL(Z.BhN.CLIPS)
+              url: _.Z.getArticleURL(N.BhN.CLIPS)
             })
           }) : null]
         }),
@@ -71,10 +71,10 @@ let A = e => {
             clipsEnabled: !0,
             guildId: a,
             trackAnalytics: !0
-          }), v(e)
+          }), L(e)
         },
         onClose: e => {
-          v(e, n)
+          L(e, n)
         }
       })
     },
@@ -85,7 +85,7 @@ n.Z = function(e) {
   let {
     isAnimationDone: n,
     guildId: t
-  } = e, s = (0, r.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(Z.kg4.SAVE_CLIP));
+  } = e, s = (0, r.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(N.kg4.SAVE_CLIP));
   i()(null != a, "Clips keybind should be set");
   let o = S.BB(a.shortcut, !0);
   return (0, l.jsx)(u.FormItem, {

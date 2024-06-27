@@ -95,23 +95,23 @@ function f(e) {
       showOptions: T,
       showImage: f,
       optionStates: S,
-      onOptionClick: N,
-      section: A,
+      onOptionClick: A,
+      section: N,
       isSelectable: m = !0
     } = e,
     O = r.useMemo(() => {
       var e;
       return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === _)
     }, [_, u]),
-    p = null != _ ? null == S ? void 0 : S[_] : null;
-  a = null != p && (null === (t = p.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = p.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-  let R = f && null != A ? (0, c.ky)(A) : null;
+    R = null != _ ? null == S ? void 0 : S[_] : null;
+  a = null != R && (null === (t = R.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = R.lastValidationResult.error) && void 0 !== n ? n : "" : null;
+  let p = f && null != N ? (0, c.ky)(N) : null;
   return (0, i.jsxs)("div", {
     className: o()(I.wrapper, m ? null : I.disabled),
-    children: [null != R ? (0, i.jsx)(R, {
+    children: [null != p ? (0, i.jsx)(p, {
       className: I.image,
       channel: E,
-      section: A,
+      section: N,
       width: 32,
       height: 32
     }) : null, (0, i.jsxs)("div", {
@@ -124,7 +124,7 @@ function f(e) {
         }), T ? (0, i.jsx)(h, {
           command: u,
           optionStates: S,
-          onOptionClick: N
+          onOptionClick: A
         }) : null]
       }), (0, i.jsx)(l.wL, {
         className: o()(I.description, null != a ? I.error : null),
@@ -132,7 +132,7 @@ function f(e) {
       })]
     }), (0, i.jsx)(l.dY, {
       className: I.source,
-      children: null == A ? void 0 : A.name
+      children: null == N ? void 0 : N.name
     })]
   })
 }

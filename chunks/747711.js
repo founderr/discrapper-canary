@@ -16,7 +16,7 @@ t.Z = e => {
     channel: h,
     animateAssets: p,
     forceShowPremiumBadge: m
-  } = e, _ = t.isNonUserBot(), [f, E] = (0, a.Wu)([s.Z], () => [_ ? null : s.Z.getStatus(t.id), s.Z.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
+  } = e, _ = t.isNonUserBot(), [f, E] = (0, a.Wu)([s.Z], () => [_ ? null : s.Z.getStatus(t.id), s.Z.isMobileOnline(t.id)]), C = null == n ? void 0 : n.profileEffectId;
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(r.Z, {
       user: t,
@@ -42,8 +42,8 @@ t.Z = e => {
         user: t,
         size: o.V.SIZE_22
       })
-    }), null != g && (0, i.jsx)(l.Z, {
-      profileEffectId: g,
+    }), null != C && (0, i.jsx)(l.Z, {
+      profileEffectId: C,
       maxLoops: 0,
       resetOnHover: !0,
       isHovering: m,

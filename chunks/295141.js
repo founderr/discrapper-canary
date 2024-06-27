@@ -7,10 +7,10 @@ n.d(t, {
     return I
   },
   LB: function() {
-    return A
+    return N
   },
   MI: function() {
-    return N
+    return A
   },
   V_: function() {
     return f
@@ -178,7 +178,7 @@ let a = async (e, t) => {
   } catch (e) {
     throw new r.Hx(e)
   }
-}, N = async (e, t, n) => {
+}, A = async (e, t, n) => {
   try {
     return (await i.tn.patch({
       url: s.ANM.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
@@ -187,7 +187,7 @@ let a = async (e, t) => {
   } catch (e) {
     throw new r.Hx(e)
   }
-}, A = async (e, t, n) => {
+}, N = async (e, t, n) => {
   try {
     return (await i.tn.get({
       url: s.ANM.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n)

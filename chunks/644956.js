@@ -21,12 +21,12 @@ var r = n(120356),
   h = n(818083),
   f = n(480608),
   S = n(124072),
-  N = n(484459),
-  A = n(103575),
+  A = n(484459),
+  N = n(103575),
   m = n(592125),
   O = n(271383),
-  p = n(430824),
-  R = n(594174),
+  R = n(430824),
+  p = n(594174),
   g = n(285952),
   C = n(151827),
   v = n(689938),
@@ -59,11 +59,11 @@ function P(e) {
     inlinePreview: U = !1
   } = e, {
     analyticsLocations: b
-  } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, x = w && "dot" === G, B = e => (0, i.jsxs)(S.Z, {
+  } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, x = e => (0, i.jsxs)(S.Z, {
     className: s()(D.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
-    children: [x && (0, i.jsx)(_.RoleDot, {
+    children: [B && (0, i.jsx)(_.RoleDot, {
       color: (0, l.Rf)(t),
       className: L.roleDot,
       background: !1,
@@ -78,7 +78,7 @@ function P(e) {
   });
   return !k || U || null == o || null == P || null == r && "@everyone" !== h ? (0, i.jsx)(T.Gt, {
     value: b,
-    children: B()
+    children: x()
   }) : (0, i.jsx)(T.Gt, {
     value: b,
     children: (0, i.jsx)(_.Popout, {
@@ -87,21 +87,21 @@ function P(e) {
       },
       renderPopout: e => {
         let t = m.Z.getChannel(o),
-          s = p.Z.getGuild(P),
+          s = R.Z.getGuild(P),
           l = O.ZP.getMembers(s.id),
-          u = p.Z.getRole(P, null != r ? r : s.getEveryoneRoleId()),
-          E = a()(l).filter(e => !!("@everyone" === h || e.roles.includes(r)) && null != R.default.getUser(e.userId)).sortBy(e => {
+          u = R.Z.getRole(P, null != r ? r : s.getEveryoneRoleId()),
+          E = a()(l).filter(e => !!("@everyone" === h || e.roles.includes(r)) && null != p.default.getUser(e.userId)).sortBy(e => {
             var t;
-            let n = R.default.getUser(e.userId);
+            let n = p.default.getUser(e.userId);
             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
           }).map(e => {
-            let r = R.default.getUser(e.userId);
+            let r = p.default.getUser(e.userId);
             return (0, i.jsx)(_.Popout, {
-              preload: () => (0, N.W)(r.id, r.getAvatarURL(t.guild_id, 80), {
+              preload: () => (0, A.W)(r.id, r.getAvatarURL(t.guild_id, 80), {
                 guildId: t.guild_id,
                 channelId: t.id
               }),
-              renderPopout: n => (0, i.jsx)(A.Z, {
+              renderPopout: n => (0, i.jsx)(N.Z, {
                 ...n,
                 location: "RoleMention",
                 userId: e.userId,
@@ -163,7 +163,7 @@ function P(e) {
         })
       },
       position: "right",
-      children: B
+      children: x
     })
   })
 }

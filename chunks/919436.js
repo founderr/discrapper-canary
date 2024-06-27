@@ -11,8 +11,8 @@ var i, l = n(735250),
   p = n(933557),
   _ = n(93687),
   f = n(266076),
-  g = n(199902),
-  m = n(19780),
+  m = n(199902),
+  g = n(19780),
   C = n(306680),
   I = n(944486),
   E = n(594174),
@@ -130,15 +130,15 @@ class R extends(i = r.PureComponent) {
       isGDMFacepileEnabled: p
     } = this.props, {
       hovered: _,
-      animating: g
-    } = this.state, m = e.isMultiUserDM() && null == e.icon && p;
+      animating: m
+    } = this.state, g = e.isMultiUserDM() && null == e.icon && p;
     return (0, l.jsx)(a.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, l.jsxs)(S.H, {
         children: [(0, l.jsx)(x.Z, {
-          hovered: !g && _,
-          selected: !g && n,
-          unread: !g && h,
+          hovered: !m && _,
+          selected: !m && n,
+          unread: !m && h,
           className: L.pill
         }), (0, l.jsx)(Z.Z, {
           text: null != t ? t : "",
@@ -168,9 +168,9 @@ class R extends(i = r.PureComponent) {
                 selected: n || _,
                 ariaLabel: null != t ? t : "",
                 onContextMenu: this.handleContextMenu,
-                icon: m ? void 0 : this.getChannelIcon(),
-                backgroundStyle: m ? "on-hover" : "always",
-                children: m ? (0, l.jsx)(f.Z, {
+                icon: g ? void 0 : this.getChannelIcon(),
+                backgroundStyle: g ? "on-hover" : "always",
+                children: g ? (0, l.jsx)(f.Z, {
                   channel: e,
                   size: c.AvatarSizes.SIZE_48,
                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -229,9 +229,9 @@ A(R, "defaultProps", {
 }), t.Z = r.forwardRef(function(e, t) {
   let n = e.channel.id,
     i = (0, p.ZP)(e.channel),
-    r = (0, o.e7)([m.Z], () => m.Z.getChannelId(), []),
+    r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []),
     a = (0, o.e7)([d.Z], () => null != r ? d.Z.getMode(r) : T.WtW.VOICE, [r]),
-    s = (0, o.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
+    s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
     c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []),
     u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
     {

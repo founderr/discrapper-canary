@@ -19,7 +19,7 @@ n.d(t, {
     return a.Hx
   },
   tn: function() {
-    return R
+    return p
   },
   yZ: function() {
     return u.H
@@ -71,12 +71,12 @@ function E(e, t, n, i, o) {
     var n;
     null === (n = t.onRequestProgress) || void 0 === n || n.call(t, e)
   });
-  let N = () => {
+  let A = () => {
     t.backoff = null != t.backoff ? t.backoff : new s.Z, t.retried = (null != t.retried ? t.retried : 0) + 1, t.backoff.fail(() => L(t.url).then(() => E(e, t, n, i, o)))
   };
   null == C || null === (I = C.prepareRequest) || void 0 === I || I.call(C, S), S.ok(e => null != e.status), S.then(r => {
     var s, u, _;
-    if (null != t.retries && t.retries-- > 0 && d.has(r.status)) return N();
+    if (null != t.retries && t.retries-- > 0 && d.has(r.status)) return A();
     let c = {
       ok: r.ok,
       headers: r.headers,
@@ -121,7 +121,7 @@ function E(e, t, n, i, o) {
       })
     }
   }, e => {
-    null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code ? N() : (h(t), i(e), null != o && o({
+    null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code ? A() : (h(t), i(e), null != o && o({
       ok: !1,
       hasErr: !0,
       err: e
@@ -190,17 +190,17 @@ function S(e, t, n) {
     null != s ? (c.verbose("makeRequest: queueing request for ", t.url), s.queue.push(E.bind(null, e, t, i, r, n))) : E(e, t, i, r, n)
   })
 }
-let N = S.bind(null, "get"),
-  A = S.bind(null, "post"),
+let A = S.bind(null, "get"),
+  N = S.bind(null, "post"),
   m = S.bind(null, "put"),
   O = S.bind(null, "patch"),
-  p = S.bind(null, "del"),
-  R = {
-    get: N,
-    post: A,
+  R = S.bind(null, "del"),
+  p = {
+    get: A,
+    post: N,
     put: m,
     patch: O,
-    del: p
+    del: R
   };
 if (n.g.isServerRendering) {
   let e = (e, t) => Promise.resolve({
@@ -210,7 +210,7 @@ if (n.g.isServerRendering) {
     body: null,
     text: ""
   });
-  N = e, A = e, m = e, O = e, p = e
+  A = e, N = e, m = e, O = e, R = e
 }
 
 function g() {

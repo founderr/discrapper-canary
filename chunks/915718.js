@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(243778),
   f = n(590293),
   E = n(970731),
-  g = n(560688),
-  C = n(173507),
+  C = n(560688),
+  g = n(173507),
   I = n(523746),
   x = n(819640),
   T = n(131951),
@@ -91,7 +91,7 @@ class D extends a.PureComponent {
       m = "",
       f = !1;
     l ? (m = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, f = !0) : o ? (m = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : m = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
-    let g = (0, i.jsx)(Z.ZP.Icon, {
+    let C = (0, i.jsx)(Z.ZP.Icon, {
       icon: r.PhoneCallIcon,
       onClick: this.handleVoiceClick,
       disabled: f,
@@ -147,9 +147,9 @@ class D extends a.PureComponent {
               className: O.tooltip
             })
           },
-          children: () => g
+          children: () => C
         });
-        return g
+        return C
       }
     })
   }
@@ -165,7 +165,7 @@ class D extends a.PureComponent {
         notFriend: i,
         appContext: a
       } = this.props, l = i ? n.getRecipientId() : null, s = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), l);
-      t ? (0, C.Z)(s, a) : s()
+      t ? (0, g.Z)(s, a) : s()
     }), y(this, "handleJoinCall", e => {
       c.default.selectVoiceChannel(this.props.channel.id, e)
     }), y(this, "handleVoiceClick", e => {
@@ -185,9 +185,9 @@ class D extends a.PureComponent {
       let {
         appContext: e
       } = this.props;
-      (0, C.Z)(() => this.handleJoinCall(!0), e)
+      (0, g.Z)(() => this.handleJoinCall(!0), e)
     }), y(this, "handleBrowserNotSupported", () => {
-      (0, g.Z)()
+      (0, C.Z)()
     })
   }
 }
@@ -202,8 +202,8 @@ function k(e) {
     callActive: I.Z.isCallActive(t.id),
     callUnavailable: I.Z.isCallUnavailable(t.id)
   })), E = t.getRecipientId(), {
-    notFriend: g,
-    isBlocked: C
+    notFriend: C,
+    isBlocked: g
   } = (0, l.cj)([N.Z], () => ({
     notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
     isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
@@ -221,8 +221,8 @@ function k(e) {
     inCall: o,
     callActive: m,
     callUnavailable: _,
-    notFriend: g,
-    isBlocked: C,
+    notFriend: C,
+    isBlocked: g,
     appContext: Z,
     canShowTooltip: j,
     canShowActivityGdmTooltip: M,

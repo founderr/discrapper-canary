@@ -11,8 +11,8 @@ var i = n(735250),
   p = n(98597),
   _ = n(473403),
   f = n(981631),
-  g = n(490897),
-  m = n(47705);
+  m = n(490897),
+  g = n(47705);
 let C = (0, c.B)(function(e) {
   let {
     guild: t,
@@ -44,18 +44,18 @@ let C = (0, c.B)(function(e) {
     R = (0, p.CN)(v, I, E),
     y = (0, i.jsx)("div", {
       className: a()(M, {
-        [m.disabled]: R,
-        [m.selected]: L
+        [g.disabled]: R,
+        [g.selected]: L
       }),
       "data-dnd-name": v.name,
       children: (0, i.jsxs)(_.Z, {
-        className: m.iconVisibility,
+        className: g.iconVisibility,
         channel: v,
         guild: t,
         selected: L,
         onContextMenu: b,
         forceInteractable: !0,
-        resolvedUnreadSetting: g.i.ONLY_MENTIONS,
+        resolvedUnreadSetting: m.i.ONLY_MENTIONS,
         children: [(0, i.jsx)(p.eP, {
           channel: v,
           tabIndex: Z

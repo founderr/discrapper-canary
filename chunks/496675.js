@@ -12,12 +12,12 @@ var i, r, s, o, a = n(392711),
   h = n(195663),
   f = n(131704),
   S = n(601964),
-  N = n(598077),
-  A = n(386438),
+  A = n(598077),
+  N = n(386438),
   m = n(700785),
   O = n(592125),
-  p = n(683301),
-  R = n(271383),
+  R = n(683301),
+  p = n(271383),
   g = n(430824),
   C = n(594174),
   v = n(981631),
@@ -49,7 +49,7 @@ function b(e) {
   let r = O.Z.getChannel(e);
   if (null == r) return m.Hn;
   let s = r.getGuildId(),
-    o = null != s && (E.Z.isLurking(s) || (null === (t = R.ZP.getMember(s, i.id)) || void 0 === t ? void 0 : t.isPending));
+    o = null != s && (E.Z.isLurking(s) || (null === (t = p.ZP.getMember(s, i.id)) || void 0 === t ? void 0 : t.isPending));
   return !r.isScheduledForDeletion() && !o && l().isEmpty(r.permissionOverwrites) && null != s ? U(s) : m.uB({
     user: i,
     context: r,
@@ -70,17 +70,17 @@ function w(e) {
   }
 }
 
-function x() {
+function B() {
   for (let e in D = {}, M = {}, P) P[e] += 1;
   y += 1
 }
 
-function B() {
-  x()
+function x() {
+  B()
 }
 
 function k() {
-  x()
+  B()
 }
 
 function V(e) {
@@ -89,7 +89,7 @@ function V(e) {
     user: n
   } = e;
   if (n.id !== (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-  x()
+  B()
 }
 
 function Z() {
@@ -160,7 +160,7 @@ function W(e, t, n, i) {
 }
 class K extends(i = _.ZP.Store) {
   initialize() {
-    this.waitFor(C.default, g.Z, O.Z, R.ZP, p.ZP, T.Z, I.Z, d.Z)
+    this.waitFor(C.default, g.Z, O.Z, p.ZP, R.ZP, T.Z, I.Z, d.Z)
   }
   getChannelPermissions(e) {
     return f.Ec.has(e.type) ? b(e.id) : G(e.id)
@@ -202,16 +202,16 @@ class K extends(i = _.ZP.Store) {
     return u.e$(s, e)
   }
   canBasicChannel(e, t, n, i, r) {
-    return "basicPermissions" in t ? A.Z.has(t.basicPermissions, e) : u.e$(W(t, n, i, r), A.Z.asBigFlag(e))
+    return "basicPermissions" in t ? N.Z.has(t.basicPermissions, e) : u.e$(W(t, n, i, r), N.Z.asBigFlag(e))
   }
   computePermissions(e, t, n, i) {
     return W(e, t, n, i)
   }
   computeBasicPermissions(e) {
-    return "basicPermissions" in e ? e.basicPermissions : A.Z.asBasicFlag(W(e))
+    return "basicPermissions" in e ? e.basicPermissions : N.Z.asBasicFlag(W(e))
   }
   canManageUser(e, t, n) {
-    let i = t instanceof N.Z ? t.id : t;
+    let i = t instanceof A.Z ? t.id : t;
     if (n.isOwner(i)) return !1;
     let r = C.default.getCurrentUser();
     if (!this.can(e, n)) return !1;
@@ -252,11 +252,11 @@ o = "PermissionStore", (s = "displayName") in(r = K) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[s] = o, t.Z = new K(c.Z, {
-  BACKGROUND_SYNC: B,
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
-  CACHE_LOADED: B,
-  CACHE_LOADED_LAZY: B,
+  BACKGROUND_SYNC: x,
+  CONNECTION_OPEN: x,
+  OVERLAY_INITIALIZE: x,
+  CACHE_LOADED: x,
+  CACHE_LOADED_LAZY: x,
   CONNECTION_CLOSED: function() {
     z()
   },

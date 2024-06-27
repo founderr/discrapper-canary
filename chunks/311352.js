@@ -12,8 +12,8 @@ var l = n(399606),
   p = n(924557),
   _ = n(435064),
   f = n(39604),
-  g = n(981631),
-  m = n(689938),
+  m = n(981631),
+  g = n(689938),
   C = n(387764);
 
 function I(e) {
@@ -53,7 +53,7 @@ let N = e => {
         position: "top",
         header: (0, i.jsx)("div", {
           className: C.header,
-          children: m.Z.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_TITLE.format({
+          children: g.Z.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_TITLE.format({
             keybind: t,
             keybindHook: () => (0, i.jsx)("span", {
               className: C.keybindHintKeys,
@@ -70,7 +70,7 @@ let N = e => {
             variant: "text-sm/normal",
             color: "always-white",
             className: C.bodyText,
-            children: m.Z.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_BODY.format({
+            children: g.Z.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_BODY.format({
               keybindHook: () => (0, i.jsx)("div", {
                 className: C.keyCombo,
                 children: t
@@ -97,16 +97,16 @@ t.Z = () => {
       clipsEnabled: _.Z.getSettings().clipsEnabled,
       isAtMaxSavingClipsOperations: _.Z.getIsAtMaxSaveClipOperations()
     })),
-    s = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
+    s = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
   if (!(t && n) || null == s || e) return null;
   let o = h.BB(s.shortcut, !0);
   return (0, i.jsx)(N, {
     keybindString: o,
     children: (0, i.jsx)(d.Z, {
       disabled: r,
-      tooltipText: null != s ? m.Z.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
+      tooltipText: null != s ? g.Z.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
         hotkey: h.BB(null == s ? void 0 : s.shortcut, !0)
-      }) : m.Z.Messages.CLIPS_EDIT_SAVE_CLIP,
+      }) : g.Z.Messages.CLIPS_EDIT_SAVE_CLIP,
       onClick: E,
       onContextMenu: I,
       icon: a.ClipsIcon

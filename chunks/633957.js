@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return O
+    return x
   }
 }), n(47120);
 var i = n(735250),
@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(527805),
   _ = n(952561),
   E = n(513202),
-  I = n(100527),
-  m = n(906732),
+  m = n(100527),
+  I = n(906732),
   T = n(973616),
   h = n(314897),
   N = n(592125),
@@ -26,17 +26,17 @@ var i = n(735250),
   S = n(226378),
   A = n(701488),
   R = n(689938),
-  x = n(656366);
+  O = n(656366);
 
-function O(e) {
+function x(e) {
   var t;
   let {
     application: n,
-    channelId: O,
+    channelId: x,
     guildId: M
   } = e, [v, L] = a.useState(!1), {
     analyticsLocations: Z
-  } = (0, m.ZP)(I.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([h.default], () => h.default.getId()), {
+  } = (0, I.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, r.O)(), b = (0, _.Z)(), D = (0, s.e7)([N.Z], () => N.Z.getChannel(x)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : x, U = (0, s.e7)([h.default], () => h.default.getId()), {
     embeddedActivity: y,
     currentEmbeddedActivity: B
   } = (0, s.cj)([o.ZP], () => ({
@@ -54,7 +54,7 @@ function O(e) {
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e
   }, [n]), w = (0, u.s5)({
     userId: U,
-    channelId: O,
+    channelId: x,
     application: F
   }), V = null == y, H = (0, S.NL)({
     embeddedActivity: y,
@@ -67,7 +67,7 @@ function O(e) {
       V ? await (0, d.Z)({
         targetApplicationId: n.id,
         currentEmbeddedApplication: b,
-        channelId: O,
+        channelId: x,
         guildId: M,
         locationObject: P.location,
         embeddedActivitiesManager: E.Z,
@@ -75,7 +75,7 @@ function O(e) {
       }) : await (0, c.Z)({
         applicationId: y.applicationId,
         currentEmbeddedApplication: b,
-        activityChannelId: O,
+        activityChannelId: x,
         locationObject: P.location,
         embeddedActivitiesManager: E.Z,
         analyticsLocations: Z
@@ -85,13 +85,13 @@ function O(e) {
     }
   }, W = H.disabled ? R.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, i.jsx)("div", {
-    className: x.container,
+    className: O.container,
     children: (0, i.jsxs)("div", {
-      className: x.contentContainer,
+      className: O.contentContainer,
       children: [(0, i.jsx)("div", {
-        className: x.headerContainer,
+        className: O.headerContainer,
         children: V ? (0, i.jsx)("div", {
-          className: x.__invalid_endedNote,
+          className: O.__invalid_endedNote,
           children: (0, i.jsx)(l.Text, {
             variant: "text-md/medium",
             children: W
@@ -103,7 +103,7 @@ function O(e) {
           children: null != G ? G : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })
       }), (0, i.jsxs)("div", {
-        className: x.footerContainer,
+        className: O.footerContainer,
         children: [(0, i.jsx)(l.Tooltip, {
           text: H.tooltip,
           children: e => {

@@ -15,8 +15,8 @@ var a = n(442837),
   u = n(63063),
   _ = n(51144),
   E = n(981631),
-  I = n(689938);
-let m = new Set(["ko", "ja"]);
+  m = n(689938);
+let I = new Set(["ko", "ja"]);
 
 function T() {
   let e = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
@@ -32,8 +32,8 @@ function T() {
         highlighted: n
       }),
       icon: l.CircleQuestionIcon,
-      tooltipPosition: m.has(t) ? "left" : void 0,
-      tooltip: I.Z.Messages.HELP
+      tooltipPosition: I.has(t) ? "left" : void 0,
+      tooltip: m.Z.Messages.HELP
     })
   })
 }

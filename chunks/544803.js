@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(366695),
   _ = n(436088),
   f = n(51144),
-  g = n(158631),
-  m = n(143614),
+  m = n(158631),
+  g = n(143614),
   C = n(787740),
   I = n(981631),
   E = n(689938),
@@ -58,7 +58,7 @@ function x(e) {
 function S(e) {
   let {
     closePopout: t
-  } = e, n = (0, m.Z)(), r = n.slice(0, 3), u = (0, g.ZP)(), h = n.length - r.length;
+  } = e, n = (0, g.Z)(), r = n.slice(0, 3), u = (0, m.ZP)(), h = n.length - r.length;
   return l.useEffect(() => {
     c.ZP.trackWithMetadata(I.rMx.BROADCAST_POPOUT_VIEWED, {
       num_broadcasts_shown: r.length,

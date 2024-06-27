@@ -31,7 +31,7 @@ let _ = {
       src: n(977706)
     })]
   }, "symbol");
-class g extends l.PureComponent {
+class m extends l.PureComponent {
   componentDidMount() {
     this.setState({
       animating: !0
@@ -143,7 +143,7 @@ class g extends l.PureComponent {
     })
   }
 }
-let m = 240;
+let g = 240;
 class C extends l.PureComponent {
   componentDidMount() {
     this.setTimeout(() => {
@@ -175,7 +175,7 @@ class C extends l.PureComponent {
     }), p(this, "removeExplosion", e => {
       let t = this.children,
         n = t.findIndex(t => {
-          if (t.type !== g) return !1;
+          if (t.type !== m) return !1;
           let n = t.props;
           return null != n.componentId && n.componentId === e
         });
@@ -186,12 +186,12 @@ class C extends l.PureComponent {
         n = window.innerHeight / 2 >> 0;
       if (this.state.explosions < 8) {
         let l = "expl-".concat(this.state.explosions);
-        e.push((0, i.jsx)(g, {
+        e.push((0, i.jsx)(m, {
           componentId: l,
           top: o().random(n - 100, n + 100, !1),
           left: o().random(t - 200, t + 200, !1),
           onAnimationComplete: this.removeExplosion
-        }, l)), this.setTimeout(this.createExplosion, m), this.setState({
+        }, l)), this.setTimeout(this.createExplosion, g), this.setState({
           explosions: this.state.explosions + 1
         })
       } else this.setTimeout(this.addSymbol, 750)

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(481932),
   f = n(272510),
   E = n(171368),
-  g = n(926150),
-  C = n(308829),
+  C = n(926150),
+  g = n(308829),
   I = n(354810),
   x = n(940885),
   T = n(625015),
@@ -69,7 +69,7 @@ function S(e) {
             channel: n,
             isHovering: b,
             onOpenProfile: R
-          }), (0, i.jsx)(g.Z, {
+          }), (0, i.jsx)(C.Z, {
             user: t,
             displayProfile: Z,
             channelId: n.id,
@@ -82,7 +82,7 @@ function S(e) {
             user: t,
             displayProfile: Z
           })]
-        }), (0, i.jsx)(C.Z, {
+        }), (0, i.jsx)(g.Z, {
           user: t,
           channelId: n.id
         }), (null == Z ? void 0 : Z.profileEffectId) != null && (0, i.jsx)(u.Z, {

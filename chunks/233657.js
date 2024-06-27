@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return m
   }
 });
 var i = n(735250);
@@ -18,12 +18,12 @@ var l = n(442837),
   _ = n(689938),
   f = n(359123);
 
-function g(e) {
+function m(e) {
   let {
     guild: t,
-    selected: g
+    selected: m
   } = e, {
-    hasUnread: m,
+    hasUnread: g,
     mentionCount: C
   } = (0, l.cj)([u.ZP], () => ({
     hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -52,7 +52,7 @@ function g(e) {
       className: e
     }),
     text: x,
-    selected: g,
+    selected: m,
     onClick: E,
     onContextMenu: e => {
       (0, s.jW)(e, async () => {
@@ -65,7 +65,7 @@ function g(e) {
         })
       })
     },
-    showUnread: m && !I,
+    showUnread: g && !I,
     trailing: !I && C > 0 ? (0, i.jsx)(a.NumberBadge, {
       className: f.numberBadge,
       disableColor: !0,

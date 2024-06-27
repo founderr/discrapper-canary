@@ -17,10 +17,10 @@ function f(e) {
 
 function S(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(N)
+  null === (t = e.threads) || void 0 === t || t.forEach(A)
 }
 
-function N(e) {
+function A(e) {
   d.AW.has(e.type) && null != e.member && (I[e.id] = {
     threadId: e.id,
     guildId: e.guild_id,
@@ -28,13 +28,13 @@ function N(e) {
     muted: e.member.muted,
     muteConfig: e.member.muteConfig,
     joinTimestamp: new Date(e.member.joinTimestamp)
-  }, A(e.id))
+  }, N(e.id))
 }
 
-function A(e) {
+function N(e) {
   let t = I[e];
   T.clearTimer(e), !0 === t.muted ? ((h = new Set(h)).add(e), T.setTimer(e, t.muteConfig, () => {
-    I[e].muted = !1, (h = new Set(h)).delete(e), p.emitChange()
+    I[e].muted = !1, (h = new Set(h)).delete(e), R.emitChange()
   }) && (I[e].muted = !1, (h = new Set(h)).delete(e))) : (h = new Set(h)).delete(e)
 }
 
@@ -51,7 +51,7 @@ function m(e) {
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, A(e.id)
+    }, N(e.id)
   })
 }
 class O extends(i = u.ZP.Store) {
@@ -86,7 +86,7 @@ o = "JoinedThreadsStore", (s = "displayName") in(r = O) ? Object.defineProperty(
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let p = new O(_.Z, {
+let R = new O(_.Z, {
   CONNECTION_OPEN: function(e) {
     T.reset(), h = new Set, I = {}, e.guilds.forEach(e => {
       S(e)
@@ -117,7 +117,7 @@ let p = new O(_.Z, {
     let {
       channel: t
     } = e;
-    N(t)
+    A(t)
   },
   THREAD_LIST_SYNC: m,
   SEARCH_FINISH: m,
@@ -142,7 +142,7 @@ let p = new O(_.Z, {
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, A(e.id)
+    }, N(e.id)
   },
   THREAD_MEMBER_LOCAL_UPDATE: function(e) {
     let {
@@ -178,8 +178,8 @@ let p = new O(_.Z, {
         muted: t.muted,
         muteConfig: t.muteConfig,
         joinTimestamp: new Date(t.joinTimestamp)
-      }, A(e.id), i = !0)
+      }, N(e.id), i = !0)
     }), i
   }
 });
-t.Z = p
+t.Z = R

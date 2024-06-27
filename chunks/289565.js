@@ -21,13 +21,13 @@ function u(e) {
     className: u,
     compact: _,
     popoutProps: E,
-    hideTimestamp: I = !1,
-    withFooter: m = !1,
+    hideTimestamp: m = !1,
+    withFooter: I = !1,
     ...T
   } = e, h = (0, l.ZP)(t);
   return (0, i.jsx)("div", {
     className: s()({
-      [d.withFooter]: m
+      [d.withFooter]: I
     }, d.embedCard, {
       [d.compact]: _
     }, u),
@@ -49,7 +49,7 @@ function u(e) {
         author: h,
         guildId: null == n ? void 0 : n.guild_id,
         compact: _,
-        hideTimestamp: I,
+        hideTimestamp: m,
         className: s()(d.header, {
           [d.compact]: _
         }),

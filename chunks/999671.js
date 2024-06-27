@@ -21,8 +21,8 @@ function _(e) {
     onSelect: n
   } = e, _ = (0, a.e7)([r.Z, o.Z], () => r.Z.getChannel(o.Z.getChannelId())), {
     everyoneFilter: E,
-    roleFilter: I,
-    guildFilter: m
+    roleFilter: m,
+    guildFilter: I
   } = (0, a.cj)([c.Z], () => {
     let {
       everyoneFilter: e,
@@ -54,19 +54,19 @@ function _(e) {
       label: u.Z.Messages.RECENT_MENTIONS_FILTER_ROLES,
       action: function() {
         l.Z.setGuildFilter({
-          roleFilter: !I
+          roleFilter: !m
         })
       },
-      checked: I
+      checked: m
     }), null == _ || _.isPrivate() ? null : (0, i.jsx)(s.MenuCheckboxItem, {
       id: "All Servers",
       label: u.Z.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
       action: function() {
         l.Z.setGuildFilter({
-          guildFilter: m === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER
+          guildFilter: I === d.NgX.THIS_SERVER ? d.NgX.ALL_SERVERS : d.NgX.THIS_SERVER
         })
       },
-      checked: m === d.NgX.ALL_SERVERS
+      checked: I === d.NgX.ALL_SERVERS
     })]
   })
 }

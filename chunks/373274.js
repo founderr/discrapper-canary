@@ -18,8 +18,8 @@ var i, l = n(735250),
   p = n(260300),
   _ = n(410575),
   f = n(607070),
-  g = n(100527),
-  m = n(906732),
+  m = n(100527),
+  g = n(906732),
   C = n(362658),
   I = n(583962),
   E = n(915885),
@@ -564,12 +564,12 @@ class ec extends(i = r.PureComponent) {
         }
       }
       if (u.isPlaceholderRow(t, n)) return null;
-      let g = u.getChannelFromSectionRow(t, n);
-      if (null == g) return null;
+      let m = u.getChannelFromSectionRow(t, n);
+      if (null == m) return null;
       let {
-        category: m,
+        category: g,
         channel: C
-      } = g, x = m instanceof O.VR, S = C.record, Z = "".concat(t).concat(C.id);
+      } = m, x = g instanceof O.VR, S = C.record, Z = "".concat(t).concat(C.id);
       switch (S.type) {
         case el.d4z.GUILD_ANNOUNCEMENT:
         case el.d4z.GUILD_TEXT:
@@ -605,7 +605,7 @@ class ec extends(i = r.PureComponent) {
             position: C.position,
             selected: s === C.id,
             connected: c === C.id,
-            collapsed: C.isCollapsed || m.isCollapsed,
+            collapsed: C.isCollapsed || g.isCollapsed,
             voiceStates: null !== (v = d[C.id]) && void 0 !== v ? v : [],
             speakerVoiceStates: null !== (T = p[C.id]) && void 0 !== T ? T : [],
             disableManageChannels: h,
@@ -618,7 +618,7 @@ class ec extends(i = r.PureComponent) {
             position: C.position,
             selected: s === C.id,
             connected: c === C.id,
-            collapsed: C.isCollapsed || m.isCollapsed,
+            collapsed: C.isCollapsed || g.isCollapsed,
             voiceStates: d[C.id],
             subtitle: C.subtitle,
             disableManageChannels: h,
@@ -713,7 +713,7 @@ let eu = e => {
     selectedVoiceChannelId: i
   } = e, a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled), {
     analyticsLocations: s
-  } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([A.Z], () => A.Z.getChannel(n)), h = (0, u.e7)([A.Z], () => A.Z.getChannel(i)), p = (0, u.e7)([R.Z], () => R.Z.getGuildId()), C = (0, S.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
+  } = (0, g.ZP)(m.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([A.Z], () => A.Z.getChannel(n)), h = (0, u.e7)([A.Z], () => A.Z.getChannel(i)), p = (0, u.e7)([R.Z], () => R.Z.getGuildId()), C = (0, S.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
     let n = I.current;
     if (null != n) {
       if (el.Xyh.test(t) || (0, er.AB)(t)) n.scrollToChannel(t, !1, 2 * ei.yE, () => {
@@ -747,7 +747,7 @@ let eu = e => {
     null != n && T(n)
   }, [n, T]);
   let L = (0, v.Z)(t);
-  return (0, l.jsx)(m.Gt, {
+  return (0, l.jsx)(g.Gt, {
     value: s,
     children: (0, l.jsx)(_.Z, {
       section: el.jXE.GUILD_CHANNEL_LIST,

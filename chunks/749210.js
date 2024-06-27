@@ -20,12 +20,12 @@ var i = n(990547),
   h = n(703656),
   f = n(314897),
   S = n(592125),
-  N = n(664915),
-  A = n(984933),
+  A = n(664915),
+  N = n(984933),
   m = n(430824),
   O = n(944486),
-  p = n(914010),
-  R = n(594174),
+  R = n(914010),
+  p = n(594174),
   g = n(626135),
   C = n(700785),
   v = n(74538),
@@ -64,7 +64,7 @@ async function G(e) {
       lurkLocation: d
     } = u,
     E = null !== (t = u.lurker) && void 0 !== t && t,
-    T = R.default.getCurrentUser();
+    T = p.default.getCurrentUser();
   if (null !== (i = null == T ? void 0 : T.hasFlag(M.xW$.QUARANTINED)) && void 0 !== i && i) return (0, I.default)(), new Promise((e, t) => t(Error()));
   o.Z.wait(() => o.Z.dispatch({
     type: "GUILD_JOIN",
@@ -74,7 +74,7 @@ async function G(e) {
     loadId: c
   }));
   try {
-    let t = p.Z.getGuildId(),
+    let t = R.Z.getGuildId(),
       i = e === t && null != m.Z.getGuild(e) ? O.Z.getChannelId(e) : null,
       r = await s.tn.put({
         url: M.ANM.GUILD_JOIN(e),
@@ -115,7 +115,7 @@ async function G(e) {
     return r
   } catch (t) {
     if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === M.evJ.TOO_MANY_USER_GUILDS) {
-      let e = R.default.getCurrentUser();
+      let e = p.default.getCurrentUser();
       v.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? y(M.tHP) : y(M.DZw)
     }
     throw (null === (a = t.body) || void 0 === a ? void 0 : a.code) === M.evJ.GUILD_AT_CAPACITY && b(), E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === M.evJ.UNKNOWN_GUILD && U(e), t
@@ -383,7 +383,7 @@ t.Z = {
     })
   },
   toggleGuildFolderExpand(e) {
-    let t = N.Z.isFolderExpanded(e);
+    let t = A.Z.isFolderExpanded(e);
     g.default.track(M.rMx.GUILD_FOLDER_CLICKED, {
       source: "sidebar",
       action: t ? "collapsed" : "expanded"
@@ -427,11 +427,11 @@ t.Z = {
       (0, h.uL)(M.Z5c.FRIENDS);
       return
     }
-    let t = A.ZP.getDefaultChannel(e);
+    let t = N.ZP.getDefaultChannel(e);
     null == t || t.isNSFW() ? (0, h.uL)(M.Z5c.FRIENDS) : (0, h.uL)(M.Z5c.CHANNEL(e, t.id))
   },
   escapeToDefaultChannel(e) {
-    let t = A.ZP.getDefaultChannel(e);
+    let t = N.ZP.getDefaultChannel(e);
     null != t ? (0, h.uL)(M.Z5c.CHANNEL(e, t.id)) : (0, h.uL)(M.Z5c.FRIENDS)
   },
   async fetchApplications(e, t) {

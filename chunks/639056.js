@@ -77,15 +77,15 @@ s.Z = function(e) {
       consumed: n
     } = e;
     return null != s && null != t && !n
-  }).groupBy(e => e.subscriptionPlanId).value(), r = (0, l.e7)([E.ZP], () => E.ZP.getPremiumSubscription()), _ = (0, l.e7)([E.ZP], () => null == E.ZP.getPremiumTypeSubscription()), u = Object.keys(a).some(e => e === S.Xh.PREMIUM_MONTH_TIER_1), A = (0, l.e7)([d.default], () => d.default.getCurrentUser());
-  return null == A ? null : (0, n.jsxs)("div", {
+  }).groupBy(e => e.subscriptionPlanId).value(), r = (0, l.e7)([E.ZP], () => E.ZP.getPremiumSubscription()), _ = (0, l.e7)([E.ZP], () => null == E.ZP.getPremiumTypeSubscription()), u = Object.keys(a).some(e => e === S.Xh.PREMIUM_MONTH_TIER_1), m = (0, l.e7)([d.default], () => d.default.getCurrentUser());
+  return null == m ? null : (0, n.jsxs)("div", {
     children: [(0, n.jsx)("div", {
       className: i()(s, N.premiumSubscriptionAccountCredit),
       children: Object.keys(a).map(e => (0, n.jsx)(C, {
         planId: e,
         count: a[e].length,
         userPremiumSubscription: r,
-        user: A
+        user: m
       }, e))
     }), u && _ && (0, n.jsxs)("div", {
       children: [(0, n.jsx)(c.Text, {

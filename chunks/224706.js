@@ -16,12 +16,12 @@ var i = n(664751),
   h = n(626135),
   f = n(630388),
   S = n(877481),
-  N = n(358085),
-  A = n(278323),
+  A = n(358085),
+  N = n(278323),
   m = n(58642),
   O = n(254854),
-  p = n(981631),
-  R = n(701488),
+  R = n(981631),
+  p = n(701488),
   g = n(689938);
 
 function C(e) {
@@ -29,11 +29,11 @@ function C(e) {
     applicationId: t,
     secret: n,
     channelId: i,
-    intent: r = R.Ws.PLAY,
+    intent: r = p.Ws.PLAY,
     embedded: s = !1,
     analyticsLocations: a = []
   } = e;
-  v(t, null, i, s, a).then(() => S.Z.waitConnected(t)).then(() => Promise.race([S.Z.waitSubscribed(t, p.zMe.ACTIVITY_JOIN)])).then(() => {
+  v(t, null, i, s, a).then(() => S.Z.waitConnected(t)).then(() => Promise.race([S.Z.waitSubscribed(t, R.zMe.ACTIVITY_JOIN)])).then(() => {
     o.Z.dispatch({
       type: "ACTIVITY_JOIN",
       applicationId: t,
@@ -65,7 +65,7 @@ function v(e, t, n) {
     let a = I.Z.getLibraryApplication(e, t);
     if (null == a) throw Error("Missing library application when launching");
     E = (h = e, s.tn.post({
-      url: p.ANM.OAUTH2_AUTHORIZE,
+      url: R.ANM.OAUTH2_AUTHORIZE,
       query: {
         client_id: h,
         response_type: "token",
@@ -108,7 +108,7 @@ function v(e, t, n) {
       pids: t
     })
   }).catch(t => {
-    O.Z.show(p.kVF.LAUNCH_GAME_FAILURE, g.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), o.Z.dispatch({
+    O.Z.show(R.kVF.LAUNCH_GAME_FAILURE, g.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), o.Z.dispatch({
       type: "GAME_LAUNCH_FAIL",
       applicationId: e,
       error: f
@@ -124,7 +124,7 @@ t.Z = {
     o.Z.dispatch({
       type: "RUNNING_GAME_ADD_OVERRIDE",
       pid: e
-    }), h.default.track(p.rMx.RUNNING_GAME_OVERRIDE_ADDED, {
+    }), h.default.track(R.rMx.RUNNING_GAME_OVERRIDE_ADDED, {
       game_name: t
     })
   },
@@ -133,7 +133,7 @@ t.Z = {
     if (null != n) {
       let e = I.Z.getActiveLibraryApplication(n.id);
       if (null != e) {
-        let t = f.x9(e.getFlags(), p.eHb.OVERLAY_DISABLED);
+        let t = f.x9(e.getFlags(), R.eHb.OVERLAY_DISABLED);
         m.h(e.id, e.branchId, t);
         return
       }
@@ -188,7 +188,7 @@ t.Z = {
     let n = async e => {
       try {
         let t = await s.tn.get({
-          url: p.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
+          url: R.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
           query: {
             application_ids: e
           }
@@ -212,7 +212,7 @@ t.Z = {
       o.Z.dispatch({
         type: "GAMES_DATABASE_FETCH"
       }), s.tn.get({
-        url: p.ANM.APPLICATIONS_DETECTABLE,
+        url: R.ANM.APPLICATIONS_DETECTABLE,
         headers: {
           "If-None-Match": E.Z.detectableGamesEtag
         },
@@ -255,10 +255,10 @@ t.Z = {
       executableName: c
     } = e, d = (0, u.F)(c);
     if (null != d) s.tn.post({
-      url: p.ANM.UNVERIFIED_APPLICATIONS,
+      url: R.ANM.UNVERIFIED_APPLICATIONS,
       body: {
         name: i,
-        os: (0, N.getPlatformName)(),
+        os: (0, A.getPlatformName)(),
         icon: r,
         distributor_application: (t = l, n = _, null == t || "" === t ? null : {
           distributor: t,
@@ -288,7 +288,7 @@ t.Z = {
   },
   uploadIcon(e, t, n) {
     s.tn.post({
-      url: p.ANM.UNVERIFIED_APPLICATIONS_ICONS,
+      url: R.ANM.UNVERIFIED_APPLICATIONS_ICONS,
       body: {
         application_name: e,
         application_hash: t,
@@ -312,7 +312,7 @@ t.Z = {
       applicationId: i,
       channelId: r,
       messageId: s,
-      intent: a = R.Ws.PLAY,
+      intent: a = p.Ws.PLAY,
       embedded: l = !1
     } = e;
     if (__OVERLAY__) return o.Z.dispatch({
@@ -328,7 +328,7 @@ t.Z = {
       applicationId: i
     });
     try {
-      let e = await A.Z.getJoinSecret(t, n, i, r, s);
+      let e = await N.Z.getJoinSecret(t, n, i, r, s);
       return C({
         applicationId: i,
         secret: e,

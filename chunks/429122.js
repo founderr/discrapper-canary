@@ -66,11 +66,11 @@ t.ZP = l.memo(function(e) {
     guildId: p,
     selectedChannelId: _,
     selectedVoiceChannelId: f,
-    optInEnabled: g
+    optInEnabled: m
   } = e, {
-    hasDivider: m,
+    hasDivider: g,
     canHaveVoiceSummary: C
-  } = l.useMemo(() => (0, o.ie)(n, g, t), [n, g, t, c]), I = l.useMemo(() => t === s.zm ? null : n.getCategoryFromSection(t), [n, t, c]), E = l.useMemo(() => null != I && I.isCollapsed ? (0, a.c4)({
+  } = l.useMemo(() => (0, o.ie)(n, m, t), [n, m, t, c]), I = l.useMemo(() => t === s.zm ? null : n.getCategoryFromSection(t), [n, t, c]), E = l.useMemo(() => null != I && I.isCollapsed ? (0, a.c4)({
     channels: I.getChannelRecords(),
     selectedChannelId: _,
     selectedVoiceChannelId: f,
@@ -80,7 +80,7 @@ t.ZP = l.memo(function(e) {
     guildChannels: n,
     guildChannelsVersion: c
   });
-  let N = m ? (0, i.jsx)("div", {
+  let N = g ? (0, i.jsx)("div", {
     className: d.sectionDivider
   }) : null;
   return C && 0 !== E.length ? (0, i.jsxs)(i.Fragment, {

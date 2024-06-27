@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return p
+    return R
   }
 }), n(47120);
 var i = n(735250),
@@ -20,9 +20,9 @@ var i = n(735250),
   h = n(752266),
   f = n(390820),
   S = n(230797),
-  N = n(612830),
-  A = n(293173);
-let m = [n(198087), T, S, f, N, h, A];
+  A = n(612830),
+  N = n(293173);
+let m = [n(198087), T, S, f, A, h, N];
 
 function O(e) {
   let {
@@ -50,7 +50,7 @@ function O(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     user: t,
     setNote: n,

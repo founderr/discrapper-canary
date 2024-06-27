@@ -20,22 +20,22 @@ let _ = r.forwardRef(function(e, t) {
     to: h,
     avatarClassName: f,
     selectedClassName: S,
-    innerClassName: N,
-    wrapContent: A,
+    innerClassName: A,
+    wrapContent: N,
     highlighted: m,
     focusProps: O,
-    ...p
+    ...R
   } = e;
-  p.className = o()(p.className, u.container, {
+  R.className = o()(R.className, u.container, {
     [u.selected]: I,
     [u.highlighted]: m,
     [null != S ? S : ""]: I,
     [u.clickable]: !I && (null != h || null != E)
-  }), p["aria-selected"] = null !== (n = p["aria-selected"]) && void 0 !== n ? n : I;
-  let R = (0, i.jsxs)("div", {
-    className: o()(N, u.layout, {
+  }), R["aria-selected"] = null !== (n = R["aria-selected"]) && void 0 !== n ? n : I;
+  let p = (0, i.jsxs)("div", {
+    className: o()(A, u.layout, {
       [u.muted]: !I && T,
-      [u.wrappedLayout]: A
+      [u.wrappedLayout]: N
     }),
     children: [(0, i.jsx)("div", {
       className: o()(u.avatar, f),
@@ -46,7 +46,7 @@ let _ = r.forwardRef(function(e, t) {
         className: u.nameAndDecorators,
         children: [(0, i.jsx)("div", {
           className: o()(u.name, {
-            [u.wrappedName]: A
+            [u.wrappedName]: N
           }),
           children: s
         }), d]
@@ -64,25 +64,25 @@ let _ = r.forwardRef(function(e, t) {
     children: (0, i.jsx)(a.rU, {
       to: h,
       onClick: E,
-      ...p,
+      ...R,
       role: "listitem",
       ref: t,
-      children: R
+      children: p
     })
   }) : null != E ? (0, i.jsx)(l.Clickable, {
     onClick: E,
     focusProps: O,
-    ...p,
+    ...R,
     role: "listitem",
     innerRef: t,
-    children: R
+    children: p
   }) : (0, i.jsx)(l.FocusRing, {
     ...O,
     children: (0, i.jsx)("div", {
-      ...p,
+      ...R,
       role: "listitem",
       ref: t,
-      children: R
+      children: p
     })
   })
 });

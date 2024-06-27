@@ -24,9 +24,9 @@ function f(e) {
     className: p
   } = e, f = (0, u.bp)(), {
     reducedMotion: E
-  } = a.useContext(r.AccessibilityPreferencesContext), g = (0, c.Z)({
+  } = a.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({
     userId: l.id
-  }), C = null != l.member ? (0, m.CA)(l.member) : null, I = e => {
+  }), g = null != l.member ? (0, m.CA)(l.member) : null, I = e => {
     (0, o.jW)(e, async () => {
       let {
         default: e
@@ -69,11 +69,11 @@ function f(e) {
         },
         onContextMenu: I,
         children: (0, i.jsx)(r.Avatar, {
-          src: null != C ? C : l.user.getAvatarURL(t.guild_id, 24),
+          src: null != g ? g : l.user.getAvatarURL(t.guild_id, 24),
           size: r.AvatarSizes.SIZE_24,
           className: s()(_.avatar, p),
           "aria-label": l.userNick,
-          isSpeaking: g && !E.enabled
+          isSpeaking: C && !E.enabled
         })
       })
     })

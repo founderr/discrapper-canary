@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(981631),
   f = n(474936),
   S = n(689938),
-  N = n(573809);
+  A = n(573809);
 t.Z = r.memo(function(e) {
   let {
     disabled: t,
     referralsRemaining: n,
-    channel: A,
+    channel: N,
     isResending: m
   } = e, {
     enabled: O
@@ -29,22 +29,22 @@ t.Z = r.memo(function(e) {
     location: "ec41f5_1"
   }, {
     autoTrackExposure: !0
-  }), p = O ? S.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : m ? S.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.Z.Messages.SHARE_NITRO_TOOLTIP, R = O ? S.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [g, C] = r.useState(!1), [v, L] = r.useState(!1), D = (0, a.Z)(null, () => L(!1)), {
+  }), R = O ? S.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : m ? S.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.Z.Messages.SHARE_NITRO_TOOLTIP, p = O ? S.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [g, C] = r.useState(!1), [v, L] = r.useState(!1), D = (0, a.Z)(null, () => L(!1)), {
     analyticsLocations: M
-  } = (0, _.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON), P = A.isDM() && void 0 !== A.recipients ? A.recipients[0] : null, y = (0, l.ZP)();
+  } = (0, _.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON), P = N.isDM() && void 0 !== N.recipients ? N.recipients[0] : null, y = (0, l.ZP)();
   return t ? null : (0, i.jsxs)("div", {
     ref: D,
-    className: N.buttonContainer,
+    className: A.buttonContainer,
     children: [(0, i.jsx)(d.Z, {
       shouldShowPopout: v,
       referralsRemaining: n,
-      channel: A,
+      channel: N,
       onClose: () => L(!1),
       isResending: m
     }), (0, i.jsx)(s.u, {
-      text: p,
+      text: R,
       shouldShow: !v,
-      "aria-label": null != R ? R : p,
+      "aria-label": null != p ? p : R,
       children: e => (0, i.jsx)("div", {
         onMouseEnter: () => {
           !v && !g && (C(!0), T.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
@@ -58,9 +58,9 @@ t.Z = r.memo(function(e) {
         },
         children: (0, i.jsx)(E.Z, {
           ...e,
-          innerClassName: N.button,
+          innerClassName: A.button,
           isActive: v,
-          "aria-label": null != R ? R : p,
+          "aria-label": null != p ? p : R,
           "aria-haspopup": "dialog",
           onClick: () => {
             L(e => !e), T.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {

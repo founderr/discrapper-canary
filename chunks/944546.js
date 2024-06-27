@@ -3,7 +3,7 @@ n.d(t, {
     return E
   },
   Z: function() {
-    return g
+    return C
   }
 });
 var i = n(735250);
@@ -57,7 +57,7 @@ function E(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     user: t,
     onClose: n
@@ -69,14 +69,14 @@ function g(e) {
     guildId: r,
     channelId: c,
     messageId: f,
-    roleId: g
-  } = (0, u.KZ)(), C = e => {
+    roleId: C
+  } = (0, u.KZ)(), g = e => {
     n(), (0, h.openUserProfileModal)({
       userId: e,
       guildId: r,
       channelId: c,
       messageId: f,
-      roleId: g,
+      roleId: C,
       sourceAnalyticsLocations: s,
       analyticsLocation: {
         section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS
@@ -106,7 +106,7 @@ function g(e) {
       return (0, i.jsx)(E, {
         user: n,
         status: a,
-        onSelect: () => C(n.id)
+        onSelect: () => g(n.id)
       }, t)
     })
   })

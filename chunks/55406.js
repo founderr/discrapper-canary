@@ -30,7 +30,7 @@ let S = e => {
       }
     }
   },
-  N = e => ({
+  A = e => ({
     ...i.baseRules,
     image: {
       ...d,
@@ -79,7 +79,7 @@ let S = e => {
       ..."function" == typeof i.customRules.paragraph ? i.customRules.paragraph(e) : i.customRules.paragraph
     }
   }),
-  A = e => ({
+  N = e => ({
     lheading: {
       ...u,
       parse: S({
@@ -89,7 +89,7 @@ let S = e => {
     }
   }),
   m = e => ({
-    ...N(e),
+    ...A(e),
     newline: {
       ...s().defaultRules.newline
     },
@@ -99,11 +99,11 @@ let S = e => {
   });
 t.Z = {
   getDefaultRules: e => ({
-    ...N(e)
+    ...A(e)
   }),
   getSpecialRules: e => ({
-    ...N(e),
-    ...A(e)
+    ...A(e),
+    ...N(e)
   }),
   getMessageRules: e => ({
     ...m(e)

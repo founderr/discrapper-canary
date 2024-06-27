@@ -63,25 +63,25 @@ function d(e, t, n) {
     h = e.hasFlag(s.iLy.HAS_THREAD),
     f = d || E || I || T || h || e.type === s.uaV.THREAD_CREATED,
     S = d && e.content === e.embeds[0].url && e.embeds[0].type === s.hBH.GIFV,
-    N = e.type !== s.uaV.DEFAULT || !S && "" !== e.content,
-    A = (0, r.Z)(e),
-    m = !A && (null == n ? void 0 : n.hasTimestamp) !== !1,
+    A = e.type !== s.uaV.DEFAULT || !S && "" !== e.content,
+    N = (0, r.Z)(e),
+    m = !N && (null == n ? void 0 : n.hasTimestamp) !== !1,
     O = l(e, t),
-    p = a(e),
-    R = A ? "" : "".concat(_ ? p : O, " ").concat(i.Z0);
-  if (N) {
+    R = a(e),
+    p = N ? "" : "".concat(_ ? R : O, " ").concat(i.Z0);
+  if (A) {
     let t = o(e);
-    R += " ".concat(t)
+    p += " ".concat(t)
   }
   if (f) {
     let t = c(e);
-    R += " ".concat(t)
+    p += " ".concat(t)
   }
   if (m) {
     let t = u(e);
-    R += " ".concat(i.fy, " ").concat(t)
+    p += " ".concat(i.fy, " ").concat(t)
   }
-  return R.trim()
+  return p.trim()
 }
 
 function E(e) {

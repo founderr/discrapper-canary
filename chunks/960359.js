@@ -15,7 +15,7 @@ n.d(t, {
     return u
   },
   Vb: function() {
-    return m
+    return I
   },
   Vt: function() {
     return r
@@ -24,7 +24,7 @@ n.d(t, {
     return o
   },
   m0: function() {
-    return I
+    return m
   }
 });
 var i = n(544891),
@@ -126,7 +126,7 @@ let r = async e => {
   }), a.Z.dispatch({
     type: "DROPS_ENROLL_SUCCESS"
   })
-}, I = async (e, t, n) => {
+}, m = async (e, t, n) => {
   let r = s.Z.getViewerIds(t);
   try {
     let s = await i.tn.post({
@@ -151,7 +151,7 @@ let r = async e => {
       statusCode: null == t ? void 0 : t.status
     })
   }
-}, m = async e => {
+}, I = async e => {
   try {
     let t = await i.tn.get({
       url: l.ANM.DROPS_PROGRESS(e)

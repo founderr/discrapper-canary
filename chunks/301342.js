@@ -25,8 +25,8 @@ var i = n(735250),
   p = n(680089),
   _ = n(430824),
   f = n(496675),
-  g = n(9156),
-  m = n(514342),
+  m = n(9156),
+  g = n(514342),
   C = n(151827),
   I = n(203818),
   E = n(438144),
@@ -48,7 +48,7 @@ let v = l.memo(function(e) {
       hideIcon: L,
       children: A
     } = e,
-    b = (0, o.e7)([g.ZP], () => g.ZP.isChannelMuted(r.getGuildId(), r.id)),
+    b = (0, o.e7)([m.ZP], () => m.ZP.isChannelMuted(r.getGuildId(), r.id)),
     M = (0, o.e7)([p.Z], () => p.Z.isCollapsed(r.id)),
     R = (0, o.e7)([f.Z], () => f.Z.can(N.Plq.MANAGE_CHANNELS, r));
   t = null != T ? v > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
@@ -129,7 +129,7 @@ let v = l.memo(function(e) {
               className: S.icon
             }), (0, i.jsx)(C.Z, {
               className: S.name,
-              children: (0, i.jsx)(m.Z, {
+              children: (0, i.jsx)(g.Z, {
                 children: r.name
               })
             })]
@@ -189,7 +189,7 @@ let T = l.memo(function(e) {
           className: S.mainContent,
           children: (0, i.jsx)(C.Z, {
             className: S.name,
-            children: (0, i.jsx)(m.Z, {
+            children: (0, i.jsx)(g.Z, {
               children: t
             })
           })
@@ -250,7 +250,7 @@ let T = l.memo(function(e) {
         className: a()(S.iconVisibility, S.wrapperStatic),
         children: (0, i.jsx)(C.Z, {
           className: S.name,
-          children: (0, i.jsx)(m.Z, {
+          children: (0, i.jsx)(g.Z, {
             children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER
           })
         })
@@ -271,7 +271,7 @@ let T = l.memo(function(e) {
         className: a()(S.iconVisibility, S.wrapperStatic),
         children: (0, i.jsx)(C.Z, {
           className: S.name,
-          children: (0, i.jsx)(m.Z, {
+          children: (0, i.jsx)(g.Z, {
             children: t.name
           })
         })

@@ -19,8 +19,8 @@ var i, a, l = n(735250),
   _ = n(846027),
   f = n(287734),
   E = n(872810),
-  g = n(410575),
-  C = n(40851),
+  C = n(410575),
+  g = n(40851),
   I = n(317381),
   x = n(596040),
   T = n(100527),
@@ -73,8 +73,8 @@ var i, a, l = n(735250),
   e_ = n(985370),
   ef = n(544384),
   eE = n(560688),
-  eg = n(127608),
-  eC = n(76021),
+  eC = n(127608),
+  eg = n(76021),
   eI = n(173507),
   ex = n(981631),
   eT = n(354459),
@@ -94,13 +94,13 @@ function eS(e) {
     canGoLive: a,
     hasPermission: r,
     disabled: o
-  } = e, c = (0, C.bp)(), u = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
+  } = e, c = (0, g.bp)(), u = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
     available: d,
     activated: _,
     hqStreamingState: f
-  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), g = null != u && d && _, I = s.useRef(null), x = t.getGuildId(), T = s.useCallback(() => {
-    if (null == i || i(), !a) return (0, eg.Z)();
-    (0, eC.Z)(x, t.id, ex.ZY5.GUILD_CHANNEL)
+  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), C = null != u && d && _, I = s.useRef(null), x = t.getGuildId(), T = s.useCallback(() => {
+    if (null == i || i(), !a) return (0, eC.Z)();
+    (0, eg.Z)(x, t.id, ex.ZY5.GUILD_CHANNEL)
   }, [x, t.id, a, i]), N = (0, p.e7)([D.ZP, eo.Z], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != N, R = () => {
     b && (null == u ? (0, E.tE)({
       channelId: t.id,
@@ -114,7 +114,7 @@ function eS(e) {
     if (a) {
       T();
       return
-    }(0, eg.Z)()
+    }(0, eC.Z)()
   }, L = () => {
     if (A) {
       (0, M.Z)(() => (0, B.Z)(u));
@@ -140,13 +140,13 @@ function eS(e) {
       } : null,
       popoutOpen: t,
       shouldShowTooltip: !t,
-      premiumGlow: g && f.hqStreamingIsEnabled,
+      premiumGlow: C && f.hqStreamingIsEnabled,
       buttonRef: I,
       onClick: null != u ? L : j
     })
   };
   return A ? P() : (0, l.jsxs)(l.Fragment, {
-    children: [g && f.hqStreamingIsEnabled ? (0, l.jsx)(Y.$, {
+    children: [C && f.hqStreamingIsEnabled ? (0, l.jsx)(Y.$, {
       buttonRef: I,
       dismissed: f.hqStreamingPopoutDismissed,
       onDismiss: () => {
@@ -213,17 +213,17 @@ let eA = s.memo(function(e) {
     channel: a
   } = e, r = (0, p.e7)([b.Z], () => b.Z.getSelectedParticipant(a.id)), {
     reducedMotion: o
-  } = s.useContext(m.AccessibilityPreferencesContext), [c, u] = s.useState(!1), h = null == r ? void 0 : r.id, _ = (0, p.e7)([ei.Z], () => null != h ? ei.Z.getActiveStreamForStreamKey(h) : null, [h]), g = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != _ && _.ownerId !== (null == n ? void 0 : n.id), C = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreamsForChannel(a.id).filter(e => {
+  } = s.useContext(m.AccessibilityPreferencesContext), [c, u] = s.useState(!1), h = null == r ? void 0 : r.id, _ = (0, p.e7)([ei.Z], () => null != h ? ei.Z.getActiveStreamForStreamKey(h) : null, [h]), C = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != _ && _.ownerId !== (null == n ? void 0 : n.id), g = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreamsForChannel(a.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
   })), I = (0, H.qY)(a.id), x = (0, Z.zW)(a.id), T = s.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eT.fO.ACTIVITY && r.id === t) return "ACTIVITY";
-    if (g) return "STREAM";
+    if (C) return "STREAM";
     if (null != I) return "EVENT";
     return "CALL"
-  }, [r, t, g, I]), [N, v] = s.useState(T()), S = (0, d.useSpring)({
+  }, [r, t, C, I]), [N, v] = s.useState(T()), S = (0, d.useSpring)({
     opacity: c ? .2 : 1,
     transform: c && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
@@ -243,8 +243,8 @@ let eA = s.memo(function(e) {
   let M = s.useCallback(() => {
       if (null != _)(0, E.g)((0, k.V9)(_));
       else
-        for (let e of C)(0, E.g)((0, k.V9)(e))
-    }, [C, _]),
+        for (let e of g)(0, E.g)((0, k.V9)(e))
+    }, [g, _]),
     R = (e, t) => {
       let s = {
         centerButton: !0,
@@ -259,7 +259,7 @@ let eA = s.memo(function(e) {
             applicationId: r.id,
             color: "red",
             channelId: a.id,
-            onPopoutClick: C.length > 0 ? t : null
+            onPopoutClick: g.length > 0 ? t : null
           });
         case "STREAM":
           return (0, l.jsx)(et.O, {
@@ -268,7 +268,7 @@ let eA = s.memo(function(e) {
             streamActive: !0,
             color: "red",
             onClick: M,
-            onPopoutClick: C.length > 1 ? t : null,
+            onPopoutClick: g.length > 1 ? t : null,
             isSelfStream: !1
           });
         case "CALL":
@@ -276,7 +276,7 @@ let eA = s.memo(function(e) {
             ...s,
             color: "red",
             onClick: () => null == i ? void 0 : i(),
-            onPopoutClick: C.length > 0 ? t : null,
+            onPopoutClick: g.length > 0 ? t : null,
             channel: a
           });
         case "EVENT":
@@ -298,7 +298,7 @@ let eA = s.memo(function(e) {
       }) : (0, l.jsx)(ef.Z, {
         channel: a,
         currentUser: n,
-        activeStreams: C,
+        activeStreams: g,
         handleGoLive: ex.VqG,
         hideSelfOptions: !0,
         onClose: t
@@ -327,7 +327,7 @@ function eM(e) {
     cameraUnavailable: n,
     hasCameraPermission: i,
     currentUser: a
-  } = e, r = (0, C.bp)(), {
+  } = e, r = (0, g.bp)(), {
     reachedLimit: c,
     limit: u
   } = (0, ed.Z)(t), d = s.useCallback(() => {
@@ -385,9 +385,9 @@ t.ZP = function(e) {
     canGoLive: E
   } = (0, p.cj)([el.Z], () => ({
     canGoLive: (0, U.Z)(el.Z)
-  })), C = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != C, S = (0, p.e7)([es.Z], () => {
+  })), g = (0, y.Z)(), x = (0, p.e7)([O.Z], () => null != O.Z.getAwaitingRemoteSessionInfo()), v = null != g, S = (0, p.e7)([es.Z], () => {
     var e;
-    return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : es.Z.getVoiceChannelId()) === t.id
+    return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : es.Z.getVoiceChannelId()) === t.id
   }), Z = (0, R.Z)(t, !0), A = (0, p.e7)([I.ZP], () => {
     let e = I.ZP.getSelfEmbeddedActivityForChannel(t.id);
     return null != e ? e.applicationId : null
@@ -413,7 +413,7 @@ t.ZP = function(e) {
   }) && !t.isPrivate() && !Z;
   return (0, l.jsx)(N.Gt, {
     value: D,
-    children: (0, l.jsxs)(g.Z, {
+    children: (0, l.jsxs)(C.Z, {
       section: ex.jXE.VOICE_CONTROL_TRAY,
       children: [(0, l.jsx)("div", {
         className: eN.eventPromptsContainer,

@@ -90,7 +90,7 @@ function S(e) {
     })]
   })
 }
-class N extends(i = s.PureComponent) {
+class A extends(i = s.PureComponent) {
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize)
   }
@@ -196,6 +196,6 @@ class N extends(i = s.PureComponent) {
     })
   }
 }
-T(N, "defaultProps", {
+T(A, "defaultProps", {
   embedded: !1
-}), t.Z = N
+}), t.Z = A

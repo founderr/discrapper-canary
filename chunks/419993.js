@@ -27,8 +27,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = (0, l.Z)(),
-  A = (0, l.Z)(),
+let A = (0, l.Z)(),
+  N = (0, l.Z)(),
   m = (0, l.Z)();
 class O extends(i = s.Component) {
   getPaddingRight() {
@@ -104,7 +104,7 @@ class O extends(i = s.Component) {
   renderErrorMessage() {
     let e = this.getErrorMessage();
     return null == e ? null : (0, r.jsx)(d.x, {
-      id: N,
+      id: A,
       variant: "text-xs/normal",
       color: "text-danger",
       className: T.errorMessage,
@@ -122,10 +122,10 @@ class O extends(i = s.Component) {
       maxLength: _,
       allowOverflow: d,
       spellCheck: S,
-      resizeable: N,
+      resizeable: A,
       className: O,
-      id: p,
-      rows: R,
+      id: R,
+      rows: p,
       flex: g,
       autosize: C,
       required: v,
@@ -146,7 +146,7 @@ class O extends(i = s.Component) {
             className: a()(h.inputDefault, T.textArea, f.scrollbarDefault, O, {
               [h.error]: P,
               [h.disabled]: n,
-              [T.resizeable]: N
+              [T.resizeable]: A
             }),
             "aria-labelledby": y,
             "aria-describedby": U,
@@ -154,7 +154,7 @@ class O extends(i = s.Component) {
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: p,
+            id: R,
             disabled: n,
             placeholder: s,
             value: i,
@@ -168,11 +168,11 @@ class O extends(i = s.Component) {
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
             onInvalid: L,
-            rows: R,
+            rows: p,
             ref: D
           })
         }), null != l && (0, r.jsx)(c.n, {
-          id: A,
+          id: N,
           children: I.Z.Messages.MINIMUM_LENGTH.format({
             minLength: l
           })
@@ -194,7 +194,7 @@ class O extends(i = s.Component) {
         minLength: n,
         error: i
       } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(N) : (null != t && r.push(m), null != n && r.push(A)), r.length > 0 ? r.join(" ") : void 0
+      return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(m), null != n && r.push(N)), r.length > 0 ? r.join(" ") : void 0
     }), S(this, "onChange", e => {
       let {
         onChange: t,

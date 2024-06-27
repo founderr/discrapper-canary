@@ -22,12 +22,12 @@ var o = n(120356),
   h = n(785717),
   f = n(221292),
   S = n(290421),
-  N = n(318661),
-  A = n(228168),
+  A = n(318661),
+  N = n(228168),
   m = n(981631),
   O = n(689938),
-  p = n(131010),
-  R = n(839973);
+  R = n(131010),
+  p = n(839973);
 
 function g(e) {
   let {
@@ -39,24 +39,24 @@ function g(e) {
     isTryItOutFlow: g,
     onBadgeClick: C,
     size: v = 0
-  } = e, L = (0, N.ZP)(t.id, n), {
+  } = e, L = (0, A.ZP)(t.id, n), {
     analyticsLocations: D
   } = (0, c.ZP)(_.Z.BADGE), {
     trackUserProfileAction: M,
     ...P
   } = (0, h.KZ)(), y = (0, S.Z)(L).map(e => ({
     ...e,
-    src: (0, A.jC)(e.icon)
+    src: (0, N.jC)(e.icon)
   }));
   if (t.isClyde()) return (0, s.jsx)("div", {
-    className: a()(i, p.container, p.clydeBadgeList),
+    className: a()(i, R.container, R.clydeBadgeList),
     "aria-label": O.Z.Messages.PROFILE_USER_BADGES,
     role: "group",
     children: (0, s.jsx)(d.Z, {})
   });
   g && null == y.find(e => "premium" === e.id) && y.push({
     id: "premium",
-    src: R,
+    src: p,
     description: O.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: new Date
     })
@@ -65,7 +65,7 @@ function g(e) {
   return (0, s.jsx)(c.Gt, {
     value: D,
     children: (0, s.jsx)("div", {
-      className: a()(i, y.length > 0 ? p.containerWithContent : p.container),
+      className: a()(i, y.length > 0 ? R.containerWithContent : R.container),
       "aria-label": O.Z.Messages.PROFILE_USER_BADGES,
       role: "group",
       children: y.map(e => (0, s.jsx)(l.Tooltip, {
@@ -104,10 +104,10 @@ function g(e) {
             "aria-hidden": !0,
             src: e.src,
             className: a()({
-              [p.profileBadge24]: 0 === U,
-              [p.profileBadge22]: 1 === U,
-              [p.profileBadge20]: 2 === U,
-              [p.profileBadge18]: 3 === U
+              [R.profileBadge24]: 0 === U,
+              [R.profileBadge22]: 1 === U,
+              [R.profileBadge20]: 2 === U,
+              [R.profileBadge18]: 3 === U
             })
           })
         })

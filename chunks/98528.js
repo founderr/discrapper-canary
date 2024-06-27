@@ -16,10 +16,10 @@ n.d(t, {
     return I
   },
   t$: function() {
-    return A
+    return N
   },
   yi: function() {
-    return N
+    return A
   }
 }), n(47120), n(653041);
 var i = n(470079),
@@ -202,8 +202,8 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       autoFocusElement: !1,
       useVirtualFocus: !0
     }), {
-      gridContainerProps: N,
-      handleGridContainerKeyDown: A
+      gridContainerProps: A,
+      handleGridContainerKeyDown: N
     } = i.useMemo(() => {
       let e = S();
       return {
@@ -220,13 +220,13 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       gridDispatch: T,
       getItemProps: h,
       getRowProps: f,
-      gridContainerProps: N,
-      handleGridContainerKeyDown: A,
+      gridContainerProps: A,
+      handleGridContainerKeyDown: N,
       isUsingKeyboardNavigation: _
     }
   };
 
-function N(e) {
+function A(e) {
   let {
     categories: t,
     collapsedCategories: n,
@@ -280,7 +280,7 @@ function N(e) {
   }, [t, n, r, a, o, s])
 }
 
-function A(e) {
+function N(e) {
   let {
     columnCounts: t,
     expressionsGrid: n,

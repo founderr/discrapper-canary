@@ -1,31 +1,31 @@
-var s = n(735250),
-  o = n(470079),
-  i = n(481060),
-  a = n(377171),
-  l = n(689938),
-  r = n(307995);
-t.Z = o.forwardRef(function(e, t) {
+var i = n(735250),
+  a = n(470079),
+  s = n(481060),
+  l = n(377171),
+  r = n(689938),
+  o = n(307995);
+t.Z = a.forwardRef(function(e, t) {
   let {
     isInventory: n,
-    style: o
+    style: a
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     ref: t,
-    className: r.desktopTooltip,
+    className: o.desktopTooltip,
     style: {
       marginTop: n ? 8 : 0,
-      ...o
+      ...a
     },
-    children: [(0, s.jsx)(i.CircleInformationIcon, {
+    children: [(0, i.jsx)(s.CircleInformationIcon, {
       size: "custom",
-      className: r.infoIcon,
+      className: o.infoIcon,
       height: n ? 16 : 12,
       width: n ? 16 : 12,
-      color: n ? a.Z.TEXT_MUTED : a.Z.WHITE
-    }), (0, s.jsx)(i.Text, {
+      color: n ? l.Z.TEXT_MUTED : l.Z.WHITE
+    }), (0, i.jsx)(s.Text, {
       color: n ? "text-muted" : "always-white",
       variant: n ? "text-xs/normal" : "text-xxs/normal",
-      children: l.Z.Messages.QUESTS_PROGRESS_WEB_TIP
+      children: r.Z.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   })
 })

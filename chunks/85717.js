@@ -14,24 +14,24 @@ var o = n(493683),
   h = n(944486),
   f = n(885110),
   S = n(67212),
-  N = n(770471),
-  A = n(757454),
+  A = n(770471),
+  N = n(757454),
   m = n(158631),
   O = n(981631);
-let p = [];
-class R extends u.Z {
+let R = [];
+class p extends u.Z {
   handleRunningGamesChange() {
     let e = _.ZP.getVisibleGame();
     if (null == e) return;
     let {
       canBroadcast: t
-    } = N.Z.getCurrentConfig({
+    } = A.Z.getCurrentConfig({
       location: "handle_running_games_change"
     }, {
       autoTrackExposure: !1
     }), n = f.Z.getBroadcast(), i = (0, S.Ds)(e), r = null != T.Z.getGameByName(i), s = (0, m.dD)();
-    if (!t || null != n || !d.xd.getSetting() || !r || !s || null != p.find(t => t.pid === e.pid)) return;
-    if (p = _.ZP.getRunningGames(), !(0, A.Q)()) return;
+    if (!t || null != n || !d.xd.getSetting() || !r || !s || null != R.find(t => t.pid === e.pid)) return;
+    if (R = _.ZP.getRunningGames(), !(0, N.Q)()) return;
     let o = h.Z.getVoiceChannelId();
     (0, l.tE)({
       pid: e.pid,
@@ -124,4 +124,4 @@ class R extends u.Z {
     }) : t[n] = i
   }
 }
-t.Z = new R
+t.Z = new p

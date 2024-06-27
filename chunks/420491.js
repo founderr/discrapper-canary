@@ -62,8 +62,8 @@ let T = (0, c.B)({
   }),
   f = new l.Y("GatewayZstdStore");
 let S = !1,
-  N = 0,
-  A = !0;
+  A = 0,
+  N = !0;
 
 function m() {
   return null == i && (i = (0, E.NF)() && (0, E.MF)()), i
@@ -80,16 +80,16 @@ function O() {
     t = e.useZstd;
   e.doVerification && (t = h.getCurrentConfig({
     location: "GatewayZstdStore"
-  }).useZstd), p(t), N = 0
+  }).useZstd), R(t), A = 0
 }
 
-function p(e) {
+function R(e) {
   if (e && !(0, E.NF)()) {
     f.warn("Attempting to enable zstd but it is not supported");
     return
   }(0, E.CG)(e), e !== i && f.info("Setting Zstd to ".concat(e)), i = e
 }
-class R extends(a = u.ZP.Store) {
+class p extends(a = u.ZP.Store) {
   initialize() {
     this.waitFor(d.Z)
   }
@@ -97,24 +97,24 @@ class R extends(a = u.ZP.Store) {
     return m()
   }
   enableFailureTracking() {
-    A = !0
+    N = !0
   }
   disableFailureTracking() {
-    A = !1
+    N = !1
   }
 }
-o = "GatewayZstdStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+o = "GatewayZstdStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new R(_.Z, {
+}) : r[s] = o, t.Z = new p(_.Z, {
   CONNECTION_OPEN: O,
   CONNECTION_INTERRUPTED: function(e) {
     let {
       code: t
     } = e;
-    if (!!m() && !!A && 1e3 !== t)(N += 1) > 3 && (f.error("Disabling zstd due to consecutive errors"), p(!1), S = !0)
+    if (!!m() && !!N && 1e3 !== t)(A += 1) > 3 && (f.error("Disabling zstd due to consecutive errors"), R(!1), S = !0)
   },
   CONNECTION_RESUMED: O
 })

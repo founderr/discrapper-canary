@@ -19,24 +19,24 @@ t.Z = e => {
     showTryItOut: T = !1,
     avatarDecorationOverride: h
   } = e, [f, S] = i.useState(!1), {
-    canAnimate: N
-  } = (0, s.j)(f, E), A = (0, r.e7)([a.ZP], () => null != c && null != n ? a.ZP.getMember(c, n.id) : null), [m, O] = (0, r.Wu)([l.default], () => {
+    canAnimate: A
+  } = (0, s.j)(f, E), N = (0, r.e7)([a.ZP], () => null != c && null != n ? a.ZP.getMember(c, n.id) : null), [m, O] = (0, r.Wu)([l.default], () => {
     var e;
     return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)]
-  }), p = null == A ? null == O ? void 0 : O.avatarDecoration : null === A.avatarDecoration ? null : null !== (t = A.avatarDecoration) && void 0 !== t ? t : null == O ? void 0 : O.avatarDecoration, {
-    pendingAvatarDecoration: R
+  }), R = null == N ? null == O ? void 0 : O.avatarDecoration : null === N.avatarDecoration ? null : null !== (t = N.avatarDecoration) && void 0 !== t ? t : null == O ? void 0 : O.avatarDecoration, {
+    pendingAvatarDecoration: p
   } = (0, o.Z)({
     isTryItOut: T,
     guildId: c
-  }), g = I && void 0 !== R && void 0 !== m && m === (null == n ? void 0 : n.id), C = null != c && null === R, v = g ? C ? null == n ? void 0 : n.avatarDecoration : null != R ? R : p : null != p ? p : null == n ? void 0 : n.avatarDecoration, L = i.useMemo(() => (0, u.NZ)({
+  }), g = I && void 0 !== p && void 0 !== m && m === (null == n ? void 0 : n.id), C = null != c && null === p, v = g ? C ? null == n ? void 0 : n.avatarDecoration : null != p ? p : R : null != R ? R : null == n ? void 0 : n.avatarDecoration, L = i.useMemo(() => (0, u.NZ)({
     avatarDecoration: void 0 !== h ? h : v,
-    canAnimate: N,
+    canAnimate: A,
     size: d
-  }), [v, N, d, h]), D = i.useCallback(() => S(!0), []);
+  }), [v, A, d, h]), D = i.useCallback(() => S(!0), []);
   return {
     avatarPlaceholderSrc: _,
     avatarDecorationSrc: L,
-    isAvatarDecorationAnimating: N,
+    isAvatarDecorationAnimating: A,
     eventHandlers: {
       onMouseEnter: D,
       onMouseLeave: i.useCallback(() => S(!1), [])

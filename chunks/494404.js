@@ -20,8 +20,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(668781),
   E = n(904245),
-  I = n(724757),
-  m = n(294218),
+  m = n(724757),
+  I = n(294218),
   T = n(703656),
   h = n(210887),
   N = n(592125),
@@ -32,8 +32,8 @@ var i = n(735250),
   S = n(387204),
   A = n(626135),
   R = n(585483),
-  x = n(981631),
-  O = n(689938),
+  O = n(981631),
+  x = n(689938),
   M = n(555194);
 
 function v(e, t, n) {
@@ -92,7 +92,7 @@ class b extends a.PureComponent {
         className: l()(M.__invalid_text, {
           hidden: e
         }),
-        children: O.Z.Messages.JUMP
+        children: x.Z.Messages.JUMP
       }), (0, i.jsx)(u.Spinner, {
         type: u.Spinner.Type.PULSING_ELLIPSIS,
         className: l()(M.loading, {
@@ -146,7 +146,7 @@ let D = d.ZP.connectStores([p.Z], e => {
     channel: t
   } = e;
   return {
-    canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t)
+    canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t)
   }
 })(b);
 
@@ -158,15 +158,15 @@ function j(e) {
     loading: r,
     loadMore: _,
     renderHeader: E,
-    renderEmptyState: m,
+    renderEmptyState: I,
     renderItem: T,
     getProTip: N,
     scrollerClassName: f,
     className: p,
     listName: v
-  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, m.Z)(v, Z), b = (0, d.e7)([C.Z], () => C.Z.hasNotice()), D = (0, d.e7)([g.Z], () => g.Z.windowSize());
   a.useEffect(() => {
-    A.default.track(x.rMx.OPEN_POPOUT, {
+    A.default.track(O.rMx.OPEN_POPOUT, {
       type: t
     })
   }, [t]), a.useEffect(() => {
@@ -183,8 +183,8 @@ function j(e) {
         animate: !0
       })
     }
-    return R.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.subscribe(x.CkL.SCROLL_PAGE_UP, e), () => {
-      R.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, e)
+    return R.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.subscribe(O.CkL.SCROLL_PAGE_UP, e), () => {
+      R.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e)
     }
   }, []);
   let j = a.useCallback(() => {
@@ -198,7 +198,7 @@ function j(e) {
     className: l()(M.emptyPlaceholder, M.loadingPlaceholder),
     children: (0, i.jsx)(u.Spinner, {})
   }, "spinner")] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, {
-    children: m(h.Z.theme)
+    children: I(h.Z.theme)
   }, "empty-state")) : (y = !1, U = [], o().each(n, e => {
     U.push(...T(e))
   }));
@@ -213,11 +213,11 @@ function j(e) {
       color: u.Button.Colors.PRIMARY,
       size: u.Button.Sizes.MAX,
       onClick: _,
-      children: O.Z.Messages.LOAD_MORE_MESSAGES
+      children: x.Z.Messages.LOAD_MORE_MESSAGES
     })
   }) : (0, i.jsx)("div", {
     className: M.scrollingFooterWrap,
-    children: m(h.Z.theme)
+    children: I(h.Z.theme)
   }));
   let k = null == N ? void 0 : N(),
     G = y && null != k ? (0, i.jsx)("div", {
@@ -279,7 +279,7 @@ function U(e) {
     loading: o,
     loadMore: c,
     onJump: u,
-    canCloseAllMessages: I = !1,
+    canCloseAllMessages: m = !1,
     renderHeader: h,
     renderEmptyState: p,
     renderMessage: C,
@@ -301,15 +301,15 @@ function U(e) {
       channel_id: l
     } = e;
     if (a) _.Z.show({
-      title: O.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: x.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: x.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: s.username
       }),
-      confirmText: O.Z.Messages.OKAY
+      confirmText: x.Z.Messages.OKAY
     });
     else if (!L) {
       let e = N.Z.getChannel(l);
-      null != e && (E.Z.trackJump(l, i, t), (0, T.uL)(x.Z5c.CHANNEL(e.getGuildId(), l, i))), null == u || u(n)
+      null != e && (E.Z.trackJump(l, i, t), (0, T.uL)(O.Z5c.CHANNEL(e.getGuildId(), l, i))), null == u || u(n)
     }
   }
   a.useEffect(() => {
@@ -340,7 +340,7 @@ function U(e) {
       let a = [];
       return null == n ? [] : (a.push((0, i.jsxs)("div", {
         className: M.messageGroupWrapper,
-        children: [(0, i.jsx)(m.Z, {
+        children: [(0, i.jsx)(I.Z, {
           className: M.messageGroupCozy,
           message: t,
           channel: n
@@ -348,7 +348,7 @@ function U(e) {
           channel: s,
           message: t,
           jumping: L,
-          canCloseAllMessages: I,
+          canCloseAllMessages: m,
           jumpTo: Z,
           onCloseMessage: R
         })]

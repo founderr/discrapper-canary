@@ -1,16 +1,16 @@
 "use strict";
 let i, r, s, o, a, l, u, _, c, d, E;
 var I, T, h, f, S = n(442837),
-  N = n(570140),
-  A = n(981631);
-let m = A.QZA.CLOSED,
+  A = n(570140),
+  N = n(981631);
+let m = N.QZA.CLOSED,
   O = {};
 
-function p() {
-  R(), g(), O = {}, m = A.QZA.OPEN
+function R() {
+  p(), g(), O = {}, m = N.QZA.OPEN
 }
 
-function R() {
+function p() {
   i = void 0, u = void 0, r = void 0
 }
 
@@ -28,7 +28,7 @@ class C extends(f = S.ZP.Store) {
     return void 0 !== i || void 0 !== r || void 0 !== s || void 0 !== o || void 0 !== a || void 0 !== l || void 0 !== u || void 0 !== _
   }
   getIsSubmitDisabled() {
-    return void 0 !== a && a.length > A.tPV
+    return void 0 !== a && a.length > N.tPV
   }
   getPendingAvatar() {
     return i
@@ -84,26 +84,26 @@ h = "GuildIdentitySettingsStore", (T = "displayName") in(I = C) ? Object.defineP
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[T] = h, t.Z = new C(N.Z, {
+}) : I[T] = h, t.Z = new C(A.Z, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-    c = e.guild, m = A.QZA.OPEN, O = {}, d = e.source, E = e.analyticsLocations
+    c = e.guild, m = N.QZA.OPEN, O = {}, d = e.source, E = e.analyticsLocations
   },
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    p(), m = A.QZA.CLOSED, O = {}, c = null, d = void 0, E = []
+    R(), m = N.QZA.CLOSED, O = {}, c = null, d = void 0, E = []
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
     c = e.guild, O = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-    m = A.QZA.SUBMITTING, O = {}
+    m = N.QZA.SUBMITTING, O = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
     var t;
-    if (m !== A.QZA.SUBMITTING) return !1;
-    m = A.QZA.OPEN, O = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (m !== N.QZA.SUBMITTING) return !1;
+    m = N.QZA.OPEN, O = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_PROFILE_UPDATE_FAILURE: function(e) {
-    m = A.QZA.OPEN, O = e.errors
+    m = N.QZA.OPEN, O = e.errors
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
     let {
@@ -153,10 +153,10 @@ h = "GuildIdentitySettingsStore", (T = "displayName") in(I = C) ? Object.defineP
     } = e;
     _ = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: R,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: p,
   GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
+  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: R,
+  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: R,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
     O = {}
   }

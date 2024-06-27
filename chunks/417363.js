@@ -11,12 +11,12 @@ var i, r, s, o, a, l = n(392711),
   h = n(129542),
   f = n(70956),
   S = n(780570),
-  N = n(358085),
-  A = n(804739),
+  A = n(358085),
+  N = n(804739),
   m = n(941128),
   O = n(391690),
-  p = n(981631);
-let R = 1 * f.Z.Millis.MINUTE;
+  R = n(981631);
+let p = 1 * f.Z.Millis.MINUTE;
 (i || (i = {})).DISPATCH_APPLICATION_PROGRESS = "dispatch_application_progress";
 let g = {},
   C = "file://",
@@ -30,17 +30,17 @@ let g = {},
   b = !1;
 
 function G(e) {
-  return e.type === p.vxO.INSTALLING || e.type === p.vxO.UPDATING || e.type === p.vxO.REPAIRING ? e.networkProgress : null
+  return e.type === R.vxO.INSTALLING || e.type === R.vxO.UPDATING || e.type === R.vxO.REPAIRING ? e.networkProgress : null
 }
 
 function w(e) {
-  return e.type === p.vxO.INSTALLING || e.type === p.vxO.UPDATING || e.type === p.vxO.REPAIRING ? e.diskProgress : null
+  return e.type === R.vxO.INSTALLING || e.type === R.vxO.UPDATING || e.type === R.vxO.REPAIRING ? e.diskProgress : null
 }
 
-function x(e) {
-  return e.type === p.vxO.INSTALLING || e.type === p.vxO.UPDATING || e.type === p.vxO.REPAIRING ? e.readerProgress : null
+function B(e) {
+  return e.type === R.vxO.INSTALLING || e.type === R.vxO.UPDATING || e.type === R.vxO.REPAIRING ? e.readerProgress : null
 }
-let B = u().throttle(function(e) {
+let x = u().throttle(function(e) {
     y = (y = [{
       bytes: e,
       timestamp: Date.now()
@@ -48,7 +48,7 @@ let B = u().throttle(function(e) {
   }, 200),
   k = u().throttle(function(e) {
     let t = Date.now(),
-      n = t - R;
+      n = t - p;
     P = (P = [{
       bytes: e,
       timestamp: t
@@ -80,7 +80,7 @@ class H extends(r = _.ZP.Store) {
   }
   isUpToDate(e, t) {
     let n = g[(0, S.Tu)(e, t)];
-    return null != n && n.type === p.vxO.UP_TO_DATE
+    return null != n && n.type === R.vxO.UP_TO_DATE
   }
   shouldPatch(e, t) {
     let n = g[(0, S.Tu)(e, t)];
@@ -88,7 +88,7 @@ class H extends(r = _.ZP.Store) {
   }
   isInstalled(e, t) {
     let n = g[(0, S.Tu)(e, t)];
-    return null != n ? n.type !== p.vxO.UNINSTALLING : O.Z.shouldBeInstalled(e, t)
+    return null != n ? n.type !== R.vxO.UNINSTALLING : O.Z.shouldBeInstalled(e, t)
   }
   supportsCloudSync(e, t) {
     null == t && (t = e);
@@ -96,9 +96,9 @@ class H extends(r = _.ZP.Store) {
     return null != n && null != n.storage && !!n.storage.sync
   }
   isLaunchable(e, t) {
-    if (!(0, A.Q)()) return !1;
+    if (!(0, N.Q)()) return !1;
     let n = g[(0, S.Tu)(e, t)];
-    return null != n && n.type === p.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
+    return null != n && n.type === R.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
   }
   getDefaultLaunchOption(e, t) {
     let n = g[(0, S.Tu)(e, t)];
@@ -167,19 +167,19 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
               should_patch: T
             } = e;
             switch (null == T && (T = !0), e.state.type) {
-              case p.DJE.COMPLETE: {
+              case R.DJE.COMPLETE: {
                 let e;
                 let S = {},
-                  A = null;
-                if (I) e = p.vxO.REPAIRING;
-                else if (null == t) e = p.vxO.INSTALL_REQUIRED;
-                else if (T && (t !== n || null != i && 0 !== u().difference(i, r).length)) e = p.vxO.UPDATE_REQUIRED;
-                else if (e = p.vxO.UP_TO_DATE, null != c) {
+                  N = null;
+                if (I) e = R.vxO.REPAIRING;
+                else if (null == t) e = R.vxO.INSTALL_REQUIRED;
+                else if (T && (t !== n || null != i && 0 !== u().difference(i, r).length)) e = R.vxO.UPDATE_REQUIRED;
+                else if (e = R.vxO.UP_TO_DATE, null != c) {
                   let e = d.Z.fileManager.join(c, "content"),
                     t = (0, h.D)();
                   if (null != l && 0 !== l.length) {
                     var f;
-                    if (t === p.QR$.WIN64 && (f = t, !l.some(e => e.platforms.includes(f)))) t = p.QR$.WIN32;
+                    if (t === R.QR$.WIN64 && (f = t, !l.some(e => e.platforms.includes(f)))) t = R.QR$.WIN32;
                     for (let n of l)
                       if (n.platforms.includes(t)) {
                         let t;
@@ -188,15 +188,15 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                           name: r,
                           working_dir: s
                         } = n, o = d.Z.fileManager.join(e, i);
-                        (0, N.isMac)() && !o.startsWith(C) && (o = "".concat(C).concat(o)), t = null != s ? d.Z.fileManager.join(e, s) : d.Z.fileManager.dirname(o), S[r] = {
+                        (0, A.isMac)() && !o.startsWith(C) && (o = "".concat(C).concat(o)), t = null != s ? d.Z.fileManager.join(e, s) : d.Z.fileManager.dirname(o), S[r] = {
                           ...n,
                           id: r,
                           fullExecutablePath: o,
                           fullWorkingDir: t
-                        }, null == A && (A = r)
+                        }, null == N && (N = r)
                       }
                   } else if (null != a) {
-                    t === p.QR$.WIN64 && null == a[t] && (t = p.QR$.WIN32);
+                    t === R.QR$.WIN64 && null == a[t] && (t = R.QR$.WIN32);
                     let n = a[t];
                     if (null != n) {
                       let {
@@ -209,7 +209,7 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                         fullExecutablePath: d.Z.fileManager.join(e, i),
                         fullWorkingDir: e,
                         platforms: [t]
-                      }, A = r
+                      }, N = r
                     }
                   }
                 }
@@ -224,12 +224,12 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                   installPath: c,
                   installedSize: E,
                   launchOptions: S,
-                  defaultLaunchOptionId: A,
+                  defaultLaunchOptionId: N,
                   shouldPatch: T,
                   storage: _
                 }
               }
-              case p.DJE.TRANSITION: {
+              case R.DJE.TRANSITION: {
                 let a;
                 let {
                   stage: l,
@@ -239,10 +239,10 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
                   progress: h,
                   total: f,
                   paused: S
-                } = e.state, N = l.type;
+                } = e.state, A = l.type;
                 return {
-                  type: a = N === p.f07.UNINSTALLING ? p.vxO.UNINSTALLING : I ? p.vxO.REPAIRING : null == t ? p.vxO.INSTALLING : p.vxO.UPDATING,
-                  stage: N,
+                  type: a = A === R.f07.UNINSTALLING ? R.vxO.UNINSTALLING : I ? R.vxO.REPAIRING : null == t ? R.vxO.INSTALLING : R.vxO.UPDATING,
+                  stage: A,
                   applicationId: s,
                   branchId: o,
                   buildId: t,
@@ -264,18 +264,18 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != g[o]) {
           let e = Z(n, o, G);
-          e > 0 && B(L += e);
+          e > 0 && x(L += e);
           let i = Z(n, o, w);
           i > 0 && V(D += i);
-          let a = Z(n, o, x);
+          let a = Z(n, o, B);
           if (a > 0 && k(M += a), r === t) {
             let e = n[o];
-            if (!0 !== e.paused && (e.type === p.vxO.UNINSTALLING || e.type === p.vxO.INSTALLING || e.type === p.vxO.UPDATING)) switch (e.stage) {
-              case p.f07.PATCHING:
-              case p.f07.FINALIZING:
-              case p.f07.VERIFYING:
-              case p.f07.REPAIRING:
-              case p.f07.POST_INSTALL_SCRIPTS:
+            if (!0 !== e.paused && (e.type === R.vxO.UNINSTALLING || e.type === R.vxO.INSTALLING || e.type === R.vxO.UPDATING)) switch (e.stage) {
+              case R.f07.PATCHING:
+              case R.f07.FINALIZING:
+              case R.f07.VERIFYING:
+              case R.f07.REPAIRING:
+              case R.f07.POST_INSTALL_SCRIPTS:
                 E.Z.setProgress("dispatch_application_progress", (0, S.xI)(e.progress, e.total) / 100), s = !0
             }
           }
@@ -289,7 +289,7 @@ a = "DispatchApplicationStore", (o = "displayName") in(s = H) ? Object.definePro
               branchId: t,
               installationPath: i
             })
-          }), -1 === m.Z.getQueuePosition(e, t) && (n[o].type === p.vxO.INSTALLING || n[o].type === p.vxO.UPDATING) && T.Z.hasApplication(e, t) && O.Z.shouldBeInstalled(e, t) && c.Z.wait(() => {
+          }), -1 === m.Z.getQueuePosition(e, t) && (n[o].type === R.vxO.INSTALLING || n[o].type === R.vxO.UPDATING) && T.Z.hasApplication(e, t) && O.Z.shouldBeInstalled(e, t) && c.Z.wait(() => {
             c.Z.dispatch({
               type: "DISPATCH_APPLICATION_UPDATE",
               applicationId: e,

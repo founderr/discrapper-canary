@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(272510),
   f = n(171368),
   S = n(215633),
-  N = n(23293),
-  A = n(777887),
+  A = n(23293),
+  N = n(777887),
   m = n(228168);
 
 function O(e) {
@@ -29,8 +29,8 @@ function O(e) {
     user: t,
     currentUser: n,
     guildId: O,
-    channelId: p,
-    messageId: R,
+    channelId: R,
+    messageId: p,
     roleId: g,
     closePopout: C,
     setPopoutRef: v,
@@ -47,8 +47,8 @@ function O(e) {
       sourceAnalyticsLocations: M,
       userId: t.id,
       guildId: O,
-      channelId: p,
-      messageId: R,
+      channelId: R,
+      messageId: p,
       roleId: g,
       ...e
     })
@@ -59,8 +59,8 @@ function O(e) {
       layout: "BITE_SIZE_POPOUT",
       userId: t.id,
       guildId: O,
-      channelId: p,
-      messageId: R,
+      channelId: R,
+      messageId: p,
       roleId: g,
       shouldTrackViewOnMount: null == U || null != U.fullProfileLoadedTimestamp,
       children: (0, i.jsx)(o.Dialog, {
@@ -77,25 +77,25 @@ function O(e) {
               profileType: m.y0.BITE_SIZE,
               guildId: O
             })
-          }), (0, i.jsx)(N.Z, {
+          }), (0, i.jsx)(A.Z, {
             user: t,
             displayProfile: P,
             guildId: O,
-            channelId: p,
+            channelId: R,
             onOpenProfile: L ? void 0 : w
-          }), (0, i.jsx)(A.Z, {
+          }), (0, i.jsx)(N.Z, {
             user: t,
             currentUser: n,
             displayProfile: P,
             guild: y,
             isHovering: G,
             onOpenProfile: w,
-            channelId: p,
+            channelId: R,
             onClose: C
           }), (0, i.jsx)(S.Z, {
             user: t,
             guildId: O,
-            channelId: p,
+            channelId: R,
             onClose: C
           })]
         })

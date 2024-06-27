@@ -34,8 +34,8 @@ function a(e) {
   }, [n]);
   let {
     focusPath: T
-  } = d, [h, f] = i.useState(!1), [S, N] = i.useState(!1), [{
-    onItemFocusMemoizer: A,
+  } = d, [h, f] = i.useState(!1), [S, A] = i.useState(!1), [{
+    onItemFocusMemoizer: N,
     onItemMouseEnterMemoizer: m
   }] = i.useState(() => ({
     onItemFocusMemoizer: new o.$o(e => () => {
@@ -45,7 +45,7 @@ function a(e) {
       })
     }),
     onItemMouseEnterMemoizer: new o.$o(e => () => {
-      N(!1), E({
+      A(!1), E({
         type: r.B.SET_FOCUS_PATH,
         path: e.split("--")
       })
@@ -73,7 +73,7 @@ function a(e) {
       case s.Us.NAVIGATE_DOWN:
       case s.Us.NAVIGATE_IN:
       case s.Us.NAVIGATE_OUT:
-        e.preventDefault(), e.stopPropagation(), N(!0), I({
+        e.preventDefault(), e.stopPropagation(), A(!0), I({
           type: n
         });
         return;
@@ -81,7 +81,7 @@ function a(e) {
         var i, r, a, u, d;
         if (e.repeat) return;
         if (e.target.tabIndex >= 0) return;
-        if (e.preventDefault(), e.stopPropagation(), N(!1), I({
+        if (e.preventDefault(), e.stopPropagation(), A(!1), I({
             type: n
           }), null != l) {
           l(T);
@@ -90,9 +90,9 @@ function a(e) {
         let E = (u = null !== (i = e.target.ownerDocument) && void 0 !== i ? i : document, d = (r = t, null != (a = T) ? "".concat((0, o.qR)(r, a.join("--"))) : r), u.getElementById(d));
         null == E || E.click()
     }
-  }, [I, t, T, l, _]), p = i.useCallback(() => {
+  }, [I, t, T, l, _]), R = i.useCallback(() => {
     !h && f(!0)
-  }, [h]), R = i.useCallback(e => {
+  }, [h]), p = i.useCallback(e => {
     if (e.target !== e.currentTarget) {
       if (!e.currentTarget.contains(e.relatedTarget)) h && f(!1)
     }
@@ -106,11 +106,11 @@ function a(e) {
     id: t,
     tabIndex: -1,
     onKeyDown: O,
-    onFocus: p,
-    onBlur: R,
+    onFocus: R,
+    onBlur: p,
     onMouseLeave: g,
     "aria-activedescendant": T.length > 0 ? (0, o.qR)(t, T.join("--")) : void 0
-  }), [t, O, p, R, g, T]), L = i.useCallback(e => {
+  }), [t, O, R, p, g, T]), L = i.useCallback(e => {
     let {
       path: n
     } = e;
@@ -135,10 +135,10 @@ function a(e) {
       role: r,
       id: (0, o.qR)(t, s),
       tabIndex: -1,
-      onFocus: A.get(s),
+      onFocus: N.get(s),
       onMouseEnter: m.get(s)
     }
-  }, [t, C, A, m]);
+  }, [t, C, N, m]);
   return i.useMemo(() => ({
     dispatch: I,
     getContainerProps: v,

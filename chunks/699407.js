@@ -41,25 +41,25 @@ let d = 1500,
       getFingerprint: o,
       getSessionId: _ = f,
       TRACKING_URL: S,
-      drainTimeoutOverride: N,
-      waitFor: A
+      drainTimeoutOverride: A,
+      waitFor: N
     } = e;
-    d = null != N ? N : 1500;
+    d = null != A ? A : 1500;
 
     function m() {
       return 0 !== h.length && (null != r ? null != i : null != o())
     }
 
     function O() {
-      null == s && m() && (s = E(p, {
+      null == s && m() && (s = E(R, {
         timeout: d
       }))
     }
 
-    function p() {
+    function R() {
       if (s = null, !m()) return;
       let e = h.slice();
-      h = [], R(e).then(() => {
+      h = [], p(e).then(() => {
         e.forEach(e => {
           var t;
           null === (t = e.resolve) || void 0 === t || t.call(e)
@@ -73,7 +73,7 @@ let d = 1500,
       })
     }
 
-    function R(e) {
+    function p(e) {
       let t = Date.now(),
         n = e.map(e => ({
           ...e,
@@ -98,9 +98,9 @@ let d = 1500,
       } = e;
       return null != t && (i = t), null != n.id && (r = n.id), O(), !1
     }, T.handleConnectionClosed = function() {
-      return p(), i = null, r = null, !1
+      return R(), i = null, r = null, !1
     }, T.handleFingerprint = function() {
-      return p(), !1
+      return R(), !1
     }, T.handleTrack = function(e) {
       let {
         event: t,
@@ -127,15 +127,15 @@ let d = 1500,
           return null != t ? (0, a.s)(t) : null
         }(_);
         null != c && (_.properties.client_uuid = I.generate(c)), h.push(_);
-        h.length > 1e4 && (h = h.slice(-1e4)), i ? p() : O()
+        h.length > 1e4 && (h = h.slice(-1e4)), i ? R() : O()
       }), !1
     };
     class g extends l.yh {
       initialize() {
-        null != A && this.waitFor(...A)
+        null != N && this.waitFor(...N)
       }
       constructor(...e) {
-        super(...e), c(this, "submitEventsImmediately", R)
+        super(...e), c(this, "submitEventsImmediately", p)
       }
     }
     return c(g, "displayName", "AnalyticsTrackingStore"), new g(t, n)

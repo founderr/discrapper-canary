@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return C
+    return g
   },
   r: function() {
     return I
@@ -21,9 +21,9 @@ var i = n(735250),
   _ = n(403182),
   f = n(928477),
   E = n(981631),
-  g = n(689938);
+  C = n(689938);
 
-function C(e) {
+function g(e) {
   let {
     parentChannel: t,
     parentMessageId: n,
@@ -99,14 +99,14 @@ function I(e) {
           } else if (a === E.evJ.ENTITY_TOO_LARGE) {
             let e = (0, _.dg)(t.getGuildId());
             o.Z.show({
-              title: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-              body: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+              title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+              body: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                 maxSize: (0, _.Ng)(e)
               })
             })
           } else a === E.evJ.TOO_MANY_ATTACHMENTS && o.Z.show({
-            title: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-            body: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+            title: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+            body: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
               limit: E.dN1
             })
           });

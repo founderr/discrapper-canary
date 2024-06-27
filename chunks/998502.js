@@ -15,15 +15,15 @@ var i, r, s, o, a, l, u, _, c = n(512722),
   h = n(593472),
   f = n(358085),
   S = n(591759),
-  N = n(981631),
-  A = n(413135).Buffer;
+  A = n(981631),
+  N = n(413135).Buffer;
 let m = window.DiscordNative,
   O = ["jpg", "jpeg", "png"],
-  p = null,
   R = null,
+  p = null,
   g = null,
   C = {};
-null != m && (p = m.remoteApp.getVersion().split(".").map(e => parseInt(e)), g = null === (i = (r = m.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), R = null === (s = (o = m.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o));
+null != m && (R = m.remoteApp.getVersion().split(".").map(e => parseInt(e)), g = null === (i = (r = m.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), p = null === (s = (o = m.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o));
 let v = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
   L = !1;
 async function D(e) {
@@ -75,7 +75,7 @@ function P(e) {
     try {
       n = this.requireModule("discord_overlay2")
     } catch (e) {}
-    n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), m.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== T.K.get(E.SV) && this.supportsFeature(N.eRX.USER_DATA_CACHE) && m.userDataCache.cacheUserData(T.K.stringify()), null == m || null === (t = m.window) || void 0 === t || t.close(null == m ? void 0 : null === (e = m.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
+    n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), m.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== T.K.get(E.SV) && this.supportsFeature(A.eRX.USER_DATA_CACHE) && m.userDataCache.cacheUserData(T.K.stringify()), null == m || null === (t = m.window) || void 0 === t || t.close(null == m ? void 0 : null === (e = m.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
   },
   inputEventRegister(e, t, n, i) {
     !Array.isArray(t) && (t = t.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), t.map(e => {
@@ -182,10 +182,10 @@ function P(e) {
     return ""
   },
   get version() {
-    return p
+    return R
   },
   get buildNumber() {
-    return R
+    return p
   },
   get moduleVersions() {
     return g
@@ -196,7 +196,7 @@ function P(e) {
   async copyImage(e) {
     d()(f.isPlatformEmbedded, "Copy image method called outside native app"), d()("function" == typeof m.clipboard.copyImage, "Copy image not supported");
     let t = await D(e);
-    m.clipboard.copyImage(A.from(t), e)
+    m.clipboard.copyImage(N.from(t), e)
   },
   async saveImage(e) {
     var t;
@@ -205,7 +205,7 @@ function P(e) {
     if (null == n) return;
     let i = null !== (t = n.pathname.split("/").pop()) && void 0 !== t ? t : "unknown",
       r = await D(e),
-      s = A.from(r);
+      s = N.from(r);
     m.fileManager.saveWithDialog(s, i)
   },
   async saveFile(e, t) {
@@ -215,7 +215,7 @@ function P(e) {
     if (null == i) return;
     let r = null !== (n = null != t ? t : i.pathname.split("/").pop()) && void 0 !== n ? n : "unknown",
       s = await D(e),
-      o = A.from(s);
+      o = N.from(s);
     m.fileManager.saveWithDialog(o, r)
   },
   canCopyImage() {
@@ -467,7 +467,7 @@ function P(e) {
   },
   isModuleVersionAtLeast(e, t) {
     var n, i, r;
-    let s = [...null != p ? p : [0, 0, 0]];
+    let s = [...null != R ? R : [0, 0, 0]];
     s.push(null !== (i = null === (n = this.moduleVersions) || void 0 === n ? void 0 : n[e]) && void 0 !== i ? i : 0);
     let o = null !== (r = t[this.releaseChannel]) && void 0 !== r ? r : t.stable;
     for (let [e, t] of s.entries()) {

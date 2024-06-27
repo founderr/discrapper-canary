@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(542578),
   E = n(153124),
-  I = n(203143),
-  m = n(79390),
+  m = n(203143),
+  I = n(79390),
   T = n(839963),
   h = n(139256),
   N = n(294608),
@@ -32,13 +32,13 @@ function C(e) {
     channelId: c,
     messageId: d
   } = (0, N.pE)(), [T, h] = a.useState(""), [f, C] = a.useState(!1), g = "" !== T && f, S = a.useCallback(() => {
-    h((0, m.e1)(d, c, l))
+    h((0, I.e1)(d, c, l))
   }, [d, c, l]), A = a.useCallback(() => {
     S(), C(!0)
   }, [S]), R = a.useCallback(() => {
     C(!1)
-  }, []), x = a.useCallback(() => {
-    (0, I.n)({
+  }, []), O = a.useCallback(() => {
+    (0, m.n)({
       channelId: c,
       messageId: d,
       answerId: l
@@ -49,7 +49,7 @@ function C(e) {
       _.Z.removeReactChangeListener(S)
     }
   }, [f, S]);
-  let O = (0, i.jsx)(u.Text, {
+  let x = (0, i.jsx)(u.Text, {
     variant: "text-xs/semibold",
     color: "none",
     className: p.voteCount,
@@ -74,19 +74,19 @@ function C(e) {
           onMouseLeave: R,
           onFocus: A,
           onBlur: R,
-          onClick: x,
+          onClick: O,
           className: p.voteCountButton,
           "aria-describedby": g ? o : void 0,
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
-          children: O
+          children: x
         })
       }), g && (0, i.jsx)(r.T, {
         id: o,
         children: T
       })]
     }) : (0, i.jsx)(i.Fragment, {
-      children: O
+      children: x
     }), (0, i.jsxs)(u.Text, {
       variant: "text-md/bold",
       color: "none",

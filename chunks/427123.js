@@ -6,8 +6,8 @@ var i, a, s, l, r = n(392711),
   u = n(570140),
   _ = n(496929),
   E = n(16084),
-  I = n(728345),
-  m = n(812206),
+  m = n(728345),
+  I = n(812206),
   T = n(594190),
   h = n(594174),
   N = n(580130),
@@ -26,9 +26,9 @@ function R() {
     }
     of o().values(S)) {
     if (A.includes(t)) continue;
-    let i = m.Z.getApplication(n);
+    let i = I.Z.getApplication(n);
     if (null == i) {
-      !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
+      !I.Z.isFetchingApplication(n) && !I.Z.didFetchingApplicationFail(n) && m.Z.fetchApplication(n);
       continue
     }
     let a = f.Z.get(t);
@@ -43,7 +43,7 @@ function R() {
   }
   return e
 }
-class x extends(i = c.ZP.Store) {
+class O extends(i = c.ZP.Store) {
   initialize() {
     var e;
     this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = d.K.get(C)) && void 0 !== e ? e : A
@@ -52,12 +52,12 @@ class x extends(i = c.ZP.Store) {
     return o().values(g)
   }
 }
-l = "DetectedOffPlatformPremiumPerksStore", (s = "displayName") in(a = x) ? Object.defineProperty(a, s, {
+l = "DetectedOffPlatformPremiumPerksStore", (s = "displayName") in(a = O) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.Z = new x(u.Z, {
+}) : a[s] = l, t.Z = new O(u.Z, {
   LOGOUT: function() {
     g = {}, S = {}
   },

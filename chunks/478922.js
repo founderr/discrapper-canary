@@ -32,12 +32,12 @@ function _(e, t, n) {
       columns: h,
       getItemKey: f,
       getItemHeight: S,
-      getSectionHeight: N,
-      chunkSize: A,
+      getSectionHeight: A,
+      chunkSize: N,
       renderSection: m,
       renderItem: O,
-      getSectionProps: p,
-      itemGutter: R,
+      getSectionProps: R,
+      itemGutter: p,
       removeEdgeItemGutters: g,
       sectionGutter: C,
       padding: v,
@@ -48,7 +48,7 @@ function _(e, t, n) {
       style: y,
       maxContentWidth: U,
       ...b
-    } = n, G = r.useRef(null), w = r.useRef(null), [x, B] = r.useState(!1), {
+    } = n, G = r.useRef(null), w = r.useRef(null), [B, x] = r.useState(!1), {
       scrollerRef: k,
       scrollerState: V,
       getScrollerState: Z
@@ -73,9 +73,9 @@ function _(e, t, n) {
       columns: h,
       getItemKey: f,
       getItemHeight: S,
-      getSectionHeight: N,
-      chunkSize: A,
-      itemGutter: R,
+      getSectionHeight: A,
+      chunkSize: N,
+      itemGutter: p,
       removeEdgeItemGutters: g,
       sectionGutter: C,
       padding: v,
@@ -102,8 +102,8 @@ function _(e, t, n) {
       ...(0, l.Ue)(k, Z, X)
     }), [k, Z, Q, X, J]);
     let ee = (0, r.useCallback)(e => {
-      q(1), null == G.current ? B(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
-        G.current = null, B(!1)
+      q(1), null == G.current ? x(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+        G.current = null, x(!1)
       }, 200), null != E && E(e)
     }, [E, q]);
     return (0, i.jsx)("div", {
@@ -112,7 +112,7 @@ function _(e, t, n) {
       className: o()(P, {
         [e]: !0,
         [t]: M,
-        [u.scrolling]: x
+        [u.scrolling]: B
       }),
       style: (0, l.uT)(y),
       ...b,
@@ -129,7 +129,7 @@ function _(e, t, n) {
               n = F[e],
               r = j[e],
               s = F[(0, l.DP)(t)],
-              o = null == p ? void 0 : p(t);
+              o = null == R ? void 0 : R(t);
             return null != n && null != r ? (0, i.jsxs)("div", {
               style: n,
               ...o,
@@ -140,7 +140,7 @@ function _(e, t, n) {
             }, e) : null
           })
         })
-      }), [j, O, m, F, W, p, Y])
+      }), [j, O, m, F, W, R, Y])
     })
   })
 }

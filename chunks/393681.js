@@ -15,13 +15,13 @@ var n = t(735250),
   I = t(952306),
   N = t(346585),
   C = t(347649),
-  A = t(332473),
-  m = t(303172),
-  O = t(921801),
-  g = t(484459),
+  m = t(332473),
+  A = t(303172),
+  g = t(921801),
+  O = t(484459),
   h = t(430824),
-  R = t(325067),
-  p = t(246946),
+  p = t(325067),
+  R = t(246946),
   x = t(594174),
   M = t(285952),
   D = t(474333),
@@ -32,8 +32,8 @@ var n = t(735250),
   v = t(418632),
   b = t(730820),
   j = t(888256),
-  U = t(2719),
-  B = t(194530),
+  B = t(2719),
+  U = t(194530),
   G = t(726985),
   F = t(981631),
   V = t(801461),
@@ -45,7 +45,7 @@ class k extends a.PureComponent {
     let {
       currentUser: e
     } = this.props;
-    (0, g.Z)(e.id, e.getAvatarURL(void 0, 80))
+    (0, O.Z)(e.id, e.getAvatarURL(void 0, 80))
   }
   componentWillUnmount() {
     E.Z.clearBackupCodes(), (0, u.Zy)()
@@ -111,7 +111,7 @@ class k extends a.PureComponent {
         date: (0, N.IE)(this.props.locale)
       }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, n.jsx)(f.Z, {
         className: Y.noticeTextButton,
-        onClick: () => (0, m.Z)(V.Kq.USER_SETTINGS),
+        onClick: () => (0, A.Z)(V.Kq.USER_SETTINGS),
         children: y.Z.Messages.GET_STARTED
       })]
     }) : null
@@ -121,7 +121,7 @@ class k extends a.PureComponent {
       tag: _.FormTitleTags.H1,
       title: y.Z.Messages.USER_SETTINGS_MY_ACCOUNT,
       className: Y.__invalid_userSettingsAccount,
-      children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, n.jsx)(U.Z, {})]
+      children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, n.jsx)(B.Z, {})]
     })
   }
   renderSecuritySettings() {
@@ -143,20 +143,20 @@ class k extends a.PureComponent {
             src: t(511391)
           }), y.Z.Messages.TWO_FA_ENABLED]
         })
-      }) : null, (0, n.jsx)(O.F, {
+      }) : null, (0, n.jsx)(g.F, {
         setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
         children: (0, n.jsx)("div", {
           children: (0, n.jsx)(_.Button, {
             size: _.Button.Sizes.SMALL,
             className: Y.changePasswordButton,
-            onClick: () => (0, _.openModal)(e => (0, n.jsx)(B.default, {
+            onClick: () => (0, _.openModal)(e => (0, n.jsx)(U.default, {
               ...e,
               onSuccess: e.onClose
             })),
             children: y.Z.Messages.CHANGE_PASSWORD
           })
         })
-      }), (0, n.jsx)(O.F, {
+      }), (0, n.jsx)(g.F, {
         setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
         children: (0, n.jsxs)(M.Z, {
           align: M.Z.Align.STRETCH,
@@ -253,13 +253,13 @@ class k extends a.PureComponent {
   }
   render() {
     return this.props.hide ? (0, n.jsx)(T.Z, {}) : (0, n.jsxs)("div", {
-      children: [this.renderConfirmModals(), (0, n.jsx)(O.F, {
+      children: [this.renderConfirmModals(), (0, n.jsx)(g.F, {
         setting: G.s6.ACCOUNT_PROFILE,
         children: this.renderAccountSettings()
-      }), (0, n.jsx)(O.F, {
+      }), (0, n.jsx)(g.F, {
         setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
         children: this.renderSecuritySettings()
-      }), (0, n.jsx)(O.F, {
+      }), (0, n.jsx)(g.F, {
         setting: G.s6.ACCOUNT_REMOVAL,
         children: this.renderAccountRemovalSettings()
       })]
@@ -311,10 +311,10 @@ s.Z = () => {
       let e = x.default.getCurrentUser();
       return l()(null != e, "ConnectedUserAccountSettings: currentUser cannot be undefined"), e
     }),
-    s = (0, c.e7)([R.Z], () => R.Z.getBackupCodes()),
-    t = (0, c.e7)([p.Z], () => p.Z.hidePersonalInformation),
+    s = (0, c.e7)([p.Z], () => p.Z.getBackupCodes()),
+    t = (0, c.e7)([R.Z], () => R.Z.hidePersonalInformation),
     a = (0, c.e7)([Z.Z], () => Z.Z.theme),
-    i = (0, A.b)(),
+    i = (0, m.b)(),
     r = (0, C.CC)(),
     o = (0, c.e7)([P.default], () => P.default.locale);
   return (0, n.jsx)(k, {

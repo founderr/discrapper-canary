@@ -16,8 +16,8 @@ var i, a, l = n(735250),
   _ = n(58540),
   f = n(484459),
   E = n(103575),
-  g = n(271383),
-  C = n(496675),
+  C = n(271383),
+  g = n(496675),
   I = n(158776),
   x = n(502568),
   T = n(471253),
@@ -63,17 +63,17 @@ let j = s.memo(function(e) {
       let e = setTimeout(() => c(!1), 1e3);
       return () => clearTimeout(e)
     }, []);
-    let C = t.getGuildId();
-    u()(null != C, "Channel cannot be guildless");
+    let g = t.getGuildId();
+    u()(null != g, "Channel cannot be guildless");
     let {
       isMobile: x,
       status: N
     } = (0, d.cj)([I.Z], () => ({
       isMobile: I.Z.isMobileOnline(i.user.id),
-      status: I.Z.getStatus(i.user.id, C)
-    })), Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(C, i.user.id)), A = s.useMemo(() => ({
-      [C]: [i.user.id]
-    }), [C, i.user.id]);
+      status: I.Z.getStatus(i.user.id, g)
+    })), Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(g, i.user.id)), A = s.useMemo(() => ({
+      [g]: [i.user.id]
+    }), [g, i.user.id]);
     (0, _.$)(A);
     let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
@@ -92,7 +92,7 @@ let j = s.memo(function(e) {
         return n => (0, l.jsx)(e, {
           ...n,
           user: i.user,
-          guildId: C,
+          guildId: g,
           channel: t,
           showMediaItems: !0
         })
@@ -109,7 +109,7 @@ let j = s.memo(function(e) {
           ...e,
           location: "RequestToSpeakSidebar",
           userId: i.user.id,
-          guildId: C,
+          guildId: g,
           channelId: t.id
         }),
         position: "left",
@@ -203,7 +203,7 @@ function y(e) {
     channel: t,
     toggleRequestToSpeakSidebar: n,
     chatOpen: i
-  } = e, a = (0, N.Fd)(t.id), s = [(0, d.e7)([C.Z], () => C.Z.can(M.Pl.MANAGE_CHANNELS, t) || C.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
+  } = e, a = (0, N.Fd)(t.id), s = [(0, d.e7)([g.Z], () => g.Z.can(M.Pl.MANAGE_CHANNELS, t) || g.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
   return (0, l.jsxs)("div", {
     className: o()(R.container, {
       [R.chatOpen]: i

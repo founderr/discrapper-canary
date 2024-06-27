@@ -1,12 +1,12 @@
 n.d(t, {
   RB: function() {
-    return x
+    return O
   },
   VH: function() {
     return S
   },
   Vi: function() {
-    return O
+    return x
   },
   Vu: function() {
     return M
@@ -22,8 +22,8 @@ var i, a, s, l, r = n(692547),
   u = n(137492),
   _ = n(387661),
   E = n(659953),
-  I = n(319707),
-  m = n(584914),
+  m = n(319707),
+  I = n(584914),
   T = n(334702),
   h = n(333722),
   N = n(549931),
@@ -33,14 +33,14 @@ var i, a, s, l, r = n(692547),
 (i = s || (s = {})).CHECKED = "CHECKED", i.FRIENDS = "FRIENDS", i.SHARE_SCREEN = "SHARE_SCREEN", i.NEW_MESSAGE = "NEW_MESSAGE";
 let g = {
   CHECKED: _,
-  FRIENDS: I,
+  FRIENDS: m,
   SHARE_SCREEN: p,
   NEW_MESSAGE: N
 };
 (a = l || (l = {})).MISSED_MESSAGES = "MISSED_MESSAGES", a.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", a.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", a.TOP_MESSAGES = "TOP_MESSAGES", a.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", a.UPDATE_PROFILE = "UPDATE_PROFILE", a.FIND_FRIENDS = "FIND_FRIENDS", a.ADD_FRIEND = "ADD_FRIEND", a.FIRST_MESSAGE = "FIRST_MESSAGE";
 let S = {
     MISSED_MESSAGES: h,
-    FRIEND_REQUEST_REMINDER: m,
+    FRIEND_REQUEST_REMINDER: I,
     SCHEDULED_GUILD_EVENT: E,
     TOP_MESSAGES: T,
     NOTIFICATION_CENTER: u,
@@ -79,11 +79,11 @@ let S = {
         return "NOTIFICATION_CENTER"
     }
   },
-  x = e => {
+  O = e => {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  O = e => {
+  x = e => {
     switch (e) {
       case o.DY.GO_LIVE_PUSH:
         return {

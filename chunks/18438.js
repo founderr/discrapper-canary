@@ -22,7 +22,7 @@ n.d(t, {
     return u
   },
   W3: function() {
-    return A
+    return N
   },
   b9: function() {
     return m
@@ -37,7 +37,7 @@ n.d(t, {
     return o
   },
   pG: function() {
-    return N
+    return A
   },
   sr: function() {
     return h
@@ -174,13 +174,13 @@ function S() {
   })
 }
 
-function N() {
+function A() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function A() {
+function N() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
   })

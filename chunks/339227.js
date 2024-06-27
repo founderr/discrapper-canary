@@ -164,12 +164,12 @@ let f = {
     }
   },
   S = new Set(["*", "_", "\\"]),
-  N = {},
-  A = {};
+  A = {},
+  N = {};
 for (let e in c.Z.RULES) {
   if (!(e in f)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
   let t = f[e];
-  "skip" !== t.type && (N[e] = m(c.Z.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (A[e] = m("text" === e ? d.ZP : c.Z.RULES[e]))
+  "skip" !== t.type && (A[e] = m(c.Z.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (N[e] = m("text" === e ? d.ZP : c.Z.RULES[e]))
 }
 
 function m(e) {
@@ -224,10 +224,10 @@ let O = {
       }
     }
   },
-  p = (0, E.Z)([N, O]),
   R = (0, E.Z)([A, O]),
-  g = l._p(p),
-  C = l._p(R),
+  p = (0, E.Z)([N, O]),
+  g = l._p(R),
+  C = l._p(p),
   v = {
     max: 1 / 0,
     maxAge: 1 * I.Z.Millis.MINUTE,

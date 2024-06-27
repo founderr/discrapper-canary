@@ -70,18 +70,18 @@ n.d(t, {
     return eg
   }
 }), n(47120), n(411104), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(653041);
-var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f, S, N, A, m = n(230367),
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f, S, A, N, m = n(230367),
   O = n(320215),
-  p = n(240773),
-  R = n(495852),
+  R = n(240773),
+  p = n(495852),
   g = n(381499),
   C = n(835913),
   v = n(397696);
-(d = i || (i = {}))[d.UNSPECIFIED = 0] = "UNSPECIFIED", d[d.MENTIONS = 1] = "MENTIONS", d[d.UNREADS = 2] = "UNREADS", d[d.TODOS = 3] = "TODOS", d[d.FOR_YOU = 4] = "FOR_YOU", d[d.GAME_INVITES = 5] = "GAME_INVITES", (E = r || (r = {}))[E.NO_PROGRESS = 0] = "NO_PROGRESS", E[E.JOIN_GUILD = 1] = "JOIN_GUILD", E[E.INVITE_USER = 2] = "INVITE_USER", E[E.CONTACT_SYNC = 4] = "CONTACT_SYNC", (I = s || (s = {}))[I.NO_GUILD_ONBOARDING = 0] = "NO_GUILD_ONBOARDING", I[I.GUILD_NOTICE_SHOWN = 1] = "GUILD_NOTICE_SHOWN", I[I.GUILD_NOTICE_CLEARED = 2] = "GUILD_NOTICE_CLEARED", (T = o || (o = {}))[T.UNSET_EXPLICIT_CONTENT_REDACTION = 0] = "UNSET_EXPLICIT_CONTENT_REDACTION", T[T.SHOW = 1] = "SHOW", T[T.BLUR = 2] = "BLUR", T[T.BLOCK = 3] = "BLOCK", (h = a || (a = {}))[h.DEFAULT_UNSET = 0] = "DEFAULT_UNSET", h[h.DISABLED = 1] = "DISABLED", h[h.NON_FRIENDS = 2] = "NON_FRIENDS", h[h.FRIENDS_AND_NON_FRIENDS = 3] = "FRIENDS_AND_NON_FRIENDS", (f = l || (l = {}))[f.OFF = 0] = "OFF", f[f.ON_FOR_LARGE_GUILDS = 1] = "ON_FOR_LARGE_GUILDS", (S = u || (u = {}))[S.UNSET = 0] = "UNSET", S[S.DARK = 1] = "DARK", S[S.LIGHT = 2] = "LIGHT", S[S.DARKER = 3] = "DARKER", S[S.MIDNIGHT = 4] = "MIDNIGHT", (N = _ || (_ = {}))[N.MINT_APPLE = 0] = "MINT_APPLE", N[N.CITRUS_SHERBERT = 1] = "CITRUS_SHERBERT", N[N.RETRO_RAINCLOUD = 2] = "RETRO_RAINCLOUD", N[N.HANAMI = 3] = "HANAMI", N[N.SUNRISE = 4] = "SUNRISE", N[N.COTTON_CANDY = 5] = "COTTON_CANDY", N[N.LOFI_VIBES = 6] = "LOFI_VIBES", N[N.DESERT_KHAKI = 7] = "DESERT_KHAKI", N[N.SUNSET = 8] = "SUNSET", N[N.CHROMA_GLOW = 9] = "CHROMA_GLOW", N[N.FOREST = 10] = "FOREST", N[N.CRIMSON_MOON = 11] = "CRIMSON_MOON", N[N.MIDNIGHT_BLURPLE = 12] = "MIDNIGHT_BLURPLE", N[N.MARS = 13] = "MARS", N[N.DUSK = 14] = "DUSK", N[N.UNDER_THE_SEA = 15] = "UNDER_THE_SEA", N[N.EASTER_EGG = 16] = "EASTER_EGG", N[N.RETRO_STORM = 17] = "RETRO_STORM", N[N.NEON_NIGHTS = 18] = "NEON_NIGHTS", N[N.SEPIA = 19] = "SEPIA", N[N.STRAWBERRY_LEMONADE = 20] = "STRAWBERRY_LEMONADE", N[N.AURORA = 21] = "AURORA", N[N.BLURPLE_TWILIGHT = 22] = "BLURPLE_TWILIGHT", (A = c || (c = {}))[A.UNSET_FAVORITE_CHANNEL_TYPE = 0] = "UNSET_FAVORITE_CHANNEL_TYPE", A[A.REFERENCE_ORIGINAL = 1] = "REFERENCE_ORIGINAL", A[A.CATEGORY = 2] = "CATEGORY";
-class L extends R.C {
+(d = i || (i = {}))[d.UNSPECIFIED = 0] = "UNSPECIFIED", d[d.MENTIONS = 1] = "MENTIONS", d[d.UNREADS = 2] = "UNREADS", d[d.TODOS = 3] = "TODOS", d[d.FOR_YOU = 4] = "FOR_YOU", d[d.GAME_INVITES = 5] = "GAME_INVITES", (E = r || (r = {}))[E.NO_PROGRESS = 0] = "NO_PROGRESS", E[E.JOIN_GUILD = 1] = "JOIN_GUILD", E[E.INVITE_USER = 2] = "INVITE_USER", E[E.CONTACT_SYNC = 4] = "CONTACT_SYNC", (I = s || (s = {}))[I.NO_GUILD_ONBOARDING = 0] = "NO_GUILD_ONBOARDING", I[I.GUILD_NOTICE_SHOWN = 1] = "GUILD_NOTICE_SHOWN", I[I.GUILD_NOTICE_CLEARED = 2] = "GUILD_NOTICE_CLEARED", (T = o || (o = {}))[T.UNSET_EXPLICIT_CONTENT_REDACTION = 0] = "UNSET_EXPLICIT_CONTENT_REDACTION", T[T.SHOW = 1] = "SHOW", T[T.BLUR = 2] = "BLUR", T[T.BLOCK = 3] = "BLOCK", (h = a || (a = {}))[h.DEFAULT_UNSET = 0] = "DEFAULT_UNSET", h[h.DISABLED = 1] = "DISABLED", h[h.NON_FRIENDS = 2] = "NON_FRIENDS", h[h.FRIENDS_AND_NON_FRIENDS = 3] = "FRIENDS_AND_NON_FRIENDS", (f = l || (l = {}))[f.OFF = 0] = "OFF", f[f.ON_FOR_LARGE_GUILDS = 1] = "ON_FOR_LARGE_GUILDS", (S = u || (u = {}))[S.UNSET = 0] = "UNSET", S[S.DARK = 1] = "DARK", S[S.LIGHT = 2] = "LIGHT", S[S.DARKER = 3] = "DARKER", S[S.MIDNIGHT = 4] = "MIDNIGHT", (A = _ || (_ = {}))[A.MINT_APPLE = 0] = "MINT_APPLE", A[A.CITRUS_SHERBERT = 1] = "CITRUS_SHERBERT", A[A.RETRO_RAINCLOUD = 2] = "RETRO_RAINCLOUD", A[A.HANAMI = 3] = "HANAMI", A[A.SUNRISE = 4] = "SUNRISE", A[A.COTTON_CANDY = 5] = "COTTON_CANDY", A[A.LOFI_VIBES = 6] = "LOFI_VIBES", A[A.DESERT_KHAKI = 7] = "DESERT_KHAKI", A[A.SUNSET = 8] = "SUNSET", A[A.CHROMA_GLOW = 9] = "CHROMA_GLOW", A[A.FOREST = 10] = "FOREST", A[A.CRIMSON_MOON = 11] = "CRIMSON_MOON", A[A.MIDNIGHT_BLURPLE = 12] = "MIDNIGHT_BLURPLE", A[A.MARS = 13] = "MARS", A[A.DUSK = 14] = "DUSK", A[A.UNDER_THE_SEA = 15] = "UNDER_THE_SEA", A[A.EASTER_EGG = 16] = "EASTER_EGG", A[A.RETRO_STORM = 17] = "RETRO_STORM", A[A.NEON_NIGHTS = 18] = "NEON_NIGHTS", A[A.SEPIA = 19] = "SEPIA", A[A.STRAWBERRY_LEMONADE = 20] = "STRAWBERRY_LEMONADE", A[A.AURORA = 21] = "AURORA", A[A.BLURPLE_TWILIGHT = 22] = "BLURPLE_TWILIGHT", (N = c || (c = {}))[N.UNSET_FAVORITE_CHANNEL_TYPE = 0] = "UNSET_FAVORITE_CHANNEL_TYPE", N[N.REFERENCE_ORIGINAL = 1] = "REFERENCE_ORIGINAL", N[N.CATEGORY = 2] = "CATEGORY";
+class L extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -129,10 +129,10 @@ class L extends R.C {
           r.localization = eT.internalBinaryRead(e, e.uint32(), n, r.localization);
           break;
         case 13:
-          r.appearance = eN.internalBinaryRead(e, e.uint32(), n, r.appearance);
+          r.appearance = eA.internalBinaryRead(e, e.uint32(), n, r.appearance);
           break;
         case 14:
-          r.guildFolders = ep.internalBinaryRead(e, e.uint32(), n, r.guildFolders);
+          r.guildFolders = eR.internalBinaryRead(e, e.uint32(), n, r.guildFolders);
           break;
         case 15:
           r.favorites = ev.internalBinaryRead(e, e.uint32(), n, r.favorites);
@@ -159,7 +159,7 @@ class L extends R.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    e.versions && v.L.internalBinaryWrite(e.versions, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.guilds && U.internalBinaryWrite(e.guilds, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.userContent && F.internalBinaryWrite(e.userContent, t.tag(4, m.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.textAndImages && et.internalBinaryWrite(e.textAndImages, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.notifications && ei.internalBinaryWrite(e.notifications, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.privacy && es.internalBinaryWrite(e.privacy, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.debug && ea.internalBinaryWrite(e.debug, t.tag(9, m.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, m.TD.LengthDelimited).fork(), n).join(), e.status && ec.internalBinaryWrite(e.status, t.tag(11, m.TD.LengthDelimited).fork(), n).join(), e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, m.TD.LengthDelimited).fork(), n).join(), e.appearance && eN.internalBinaryWrite(e.appearance, t.tag(13, m.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ep.internalBinaryWrite(e.guildFolders, t.tag(14, m.TD.LengthDelimited).fork(), n).join(), e.favorites && ev.internalBinaryWrite(e.favorites, t.tag(15, m.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eU.internalBinaryWrite(e.audioContextSettings, t.tag(16, m.TD.LengthDelimited).fork(), n).join(), e.communities && eG.internalBinaryWrite(e.communities, t.tag(17, m.TD.LengthDelimited).fork(), n).join(), e.broadcast && eZ.internalBinaryWrite(e.broadcast, t.tag(18, m.TD.LengthDelimited).fork(), n).join(), e.clips && eF.internalBinaryWrite(e.clips, t.tag(19, m.TD.LengthDelimited).fork(), n).join();
+    e.versions && v.L.internalBinaryWrite(e.versions, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.guilds && U.internalBinaryWrite(e.guilds, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.userContent && F.internalBinaryWrite(e.userContent, t.tag(4, m.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.textAndImages && et.internalBinaryWrite(e.textAndImages, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.notifications && ei.internalBinaryWrite(e.notifications, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.privacy && es.internalBinaryWrite(e.privacy, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.debug && ea.internalBinaryWrite(e.debug, t.tag(9, m.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, m.TD.LengthDelimited).fork(), n).join(), e.status && ec.internalBinaryWrite(e.status, t.tag(11, m.TD.LengthDelimited).fork(), n).join(), e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, m.TD.LengthDelimited).fork(), n).join(), e.appearance && eA.internalBinaryWrite(e.appearance, t.tag(13, m.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eR.internalBinaryWrite(e.guildFolders, t.tag(14, m.TD.LengthDelimited).fork(), n).join(), e.favorites && ev.internalBinaryWrite(e.favorites, t.tag(15, m.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eU.internalBinaryWrite(e.audioContextSettings, t.tag(16, m.TD.LengthDelimited).fork(), n).join(), e.communities && eG.internalBinaryWrite(e.communities, t.tag(17, m.TD.LengthDelimited).fork(), n).join(), e.broadcast && eZ.internalBinaryWrite(e.broadcast, t.tag(18, m.TD.LengthDelimited).fork(), n).join(), e.clips && eF.internalBinaryWrite(e.clips, t.tag(19, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -228,12 +228,12 @@ class L extends R.C {
       no: 13,
       name: "appearance",
       kind: "message",
-      T: () => eN
+      T: () => eA
     }, {
       no: 14,
       name: "guild_folders",
       kind: "message",
-      T: () => ep
+      T: () => eR
     }, {
       no: 15,
       name: "favorites",
@@ -263,13 +263,13 @@ class L extends R.C {
   }
 }
 let D = new L;
-class M extends R.C {
+class M extends p.C {
   create(e) {
     let t = {
       currentTab: 0,
       viewedTutorial: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -315,12 +315,12 @@ class M extends R.C {
   }
 }
 let P = new M;
-class y extends R.C {
+class y extends p.C {
   create(e) {
     let t = {
       guilds: {}
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -378,7 +378,7 @@ class y extends R.C {
   }
 }
 let U = new y;
-class b extends R.C {
+class b extends p.C {
   create(e) {
     let t = {
       channels: {},
@@ -388,7 +388,7 @@ class b extends R.C {
       disableRaidAlertPush: !1,
       disableRaidAlertNag: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -522,10 +522,10 @@ class b extends R.C {
   }
 }
 let G = new b;
-class w extends R.C {
+class w extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -578,13 +578,13 @@ class w extends R.C {
     }])
   }
 }
-let x = new w;
-class B extends R.C {
+let B = new w;
+class x extends p.C {
   create(e) {
     let t = {
       collapsedInInbox: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -599,7 +599,7 @@ class B extends R.C {
           r.collapsedInInbox = e.bool();
           break;
         case 2:
-          r.iconEmoji = x.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
+          r.iconEmoji = B.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
           break;
         case 3:
           r.customNotificationSoundConfig = Z.internalBinaryRead(e, e.uint32(), n, r.customNotificationSoundConfig);
@@ -614,7 +614,7 @@ class B extends R.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    !1 !== e.collapsedInInbox && t.tag(1, m.TD.Varint).bool(e.collapsedInInbox), e.iconEmoji && x.internalBinaryWrite(e.iconEmoji, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, m.TD.LengthDelimited).fork(), n).join();
+    !1 !== e.collapsedInInbox && t.tag(1, m.TD.Varint).bool(e.collapsedInInbox), e.iconEmoji && B.internalBinaryWrite(e.iconEmoji, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -628,7 +628,7 @@ class B extends R.C {
       no: 2,
       name: "icon_emoji",
       kind: "message",
-      T: () => x
+      T: () => B
     }, {
       no: 3,
       name: "custom_notification_sound_config",
@@ -637,11 +637,11 @@ class B extends R.C {
     }])
   }
 }
-let k = new B;
-class V extends R.C {
+let k = new x;
+class V extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -676,13 +676,13 @@ class V extends R.C {
   }
 }
 let Z = new V;
-class H extends R.C {
+class H extends p.C {
   create(e) {
     let t = {
       dismissedContents: new Uint8Array(0),
       lastReceivedChangelogId: "0"
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -760,13 +760,13 @@ class H extends R.C {
   }
 }
 let F = new H;
-class Y extends R.C {
+class Y extends p.C {
   create(e) {
     let t = {
       id: "0",
       assetHash: ""
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -812,12 +812,12 @@ class Y extends R.C {
   }
 }
 let j = new Y;
-class W extends R.C {
+class W extends p.C {
   create(e) {
     let t = {
       useBlur: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -852,14 +852,14 @@ class W extends R.C {
   }
 }
 let K = new W;
-class z extends R.C {
+class z extends p.C {
   create(e) {
     let t = {
       videoBackgroundFilterDesktop: {
         oneofKind: void 0
       }
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -901,7 +901,7 @@ class z extends R.C {
           r.nativePhoneIntegrationEnabled = g.D5.internalBinaryRead(e, e.uint32(), n, r.nativePhoneIntegrationEnabled);
           break;
         case 9:
-          r.soundboardSettings = ex.internalBinaryRead(e, e.uint32(), n, r.soundboardSettings);
+          r.soundboardSettings = eB.internalBinaryRead(e, e.uint32(), n, r.soundboardSettings);
           break;
         default:
           let s = n.readUnknownField;
@@ -913,7 +913,7 @@ class z extends R.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    "blur" === e.videoBackgroundFilterDesktop.oneofKind && K.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), "presetOption" === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, m.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), "customAsset" === e.videoBackgroundFilterDesktop.oneofKind && j.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && g.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && g.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && g.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && g.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && ex.internalBinaryWrite(e.soundboardSettings, t.tag(9, m.TD.LengthDelimited).fork(), n).join();
+    "blur" === e.videoBackgroundFilterDesktop.oneofKind && K.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), "presetOption" === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, m.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), "customAsset" === e.videoBackgroundFilterDesktop.oneofKind && j.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && g.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && g.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && g.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && g.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && eB.internalBinaryWrite(e.soundboardSettings, t.tag(9, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -960,19 +960,19 @@ class z extends R.C {
       no: 9,
       name: "soundboard_settings",
       kind: "message",
-      T: () => ex
+      T: () => eB
     }])
   }
 }
 let q = new z;
-class X extends R.C {
+class X extends p.C {
   create(e) {
     let t = {
       explicitContentGuilds: 0,
       explicitContentFriendDm: 0,
       explicitContentNonFriendDm: 0
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1026,10 +1026,10 @@ class X extends R.C {
   }
 }
 let Q = new X;
-class J extends R.C {
+class J extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1083,7 +1083,7 @@ class J extends R.C {
   }
 }
 let $ = new J;
-class ee extends R.C {
+class ee extends p.C {
   create(e) {
     let t = {
       emojiPickerCollapsedSections: [],
@@ -1091,7 +1091,7 @@ class ee extends R.C {
       soundboardPickerCollapsedSections: [],
       dmSpamFilterV2: 0
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1361,13 +1361,13 @@ class ee extends R.C {
   }
 }
 let et = new ee;
-class en extends R.C {
+class en extends p.C {
   create(e) {
     let t = {
       notificationCenterAckedBeforeId: "0",
       focusModeExpiresAtMs: "0"
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1445,7 +1445,7 @@ class en extends R.C {
   }
 }
 let ei = new en;
-class er extends R.C {
+class er extends p.C {
   create(e) {
     let t = {
       restrictedGuildIds: [],
@@ -1456,7 +1456,7 @@ class er extends R.C {
       activityJoiningRestrictedGuildIds: [],
       messageRequestRestrictedGuildIds: []
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1694,10 +1694,10 @@ class er extends R.C {
   }
 }
 let es = new er;
-class eo extends R.C {
+class eo extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1732,10 +1732,10 @@ class eo extends R.C {
   }
 }
 let ea = new eo;
-class el extends R.C {
+class el extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1789,12 +1789,12 @@ class el extends R.C {
   }
 }
 let eu = new el;
-class e_ extends R.C {
+class e_ extends p.C {
   create(e) {
     let t = {
       statusExpiresAtMs: "0"
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1856,7 +1856,7 @@ class e_ extends R.C {
   }
 }
 let ec = new e_;
-class ed extends R.C {
+class ed extends p.C {
   create(e) {
     let t = {
       text: "",
@@ -1864,7 +1864,7 @@ class ed extends R.C {
       emojiName: "",
       expiresAtMs: "0"
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1926,10 +1926,10 @@ class ed extends R.C {
   }
 }
 let eE = new ed;
-class eI extends R.C {
+class eI extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -1975,10 +1975,10 @@ class eI extends R.C {
   }
 }
 let eT = new eI;
-class eh extends R.C {
+class eh extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2024,14 +2024,14 @@ class eh extends R.C {
   }
 }
 let ef = new eh;
-class eS extends R.C {
+class eS extends p.C {
   create(e) {
     let t = {
       theme: 0,
       developerMode: !1,
       mobileRedesignDisabled: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2116,11 +2116,11 @@ class eS extends R.C {
     }])
   }
 }
-let eN = new eS;
-class eA extends R.C {
+let eA = new eS;
+class eN extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2154,14 +2154,14 @@ class eA extends R.C {
     }])
   }
 }
-let em = new eA;
-class eO extends R.C {
+let em = new eN;
+class eO extends p.C {
   create(e) {
     let t = {
       folders: [],
       guildPositions: []
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2215,13 +2215,13 @@ class eO extends R.C {
     }])
   }
 }
-let ep = new eO;
-class eR extends R.C {
+let eR = new eO;
+class ep extends p.C {
   create(e) {
     let t = {
       guildIds: []
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2290,14 +2290,14 @@ class eR extends R.C {
     }])
   }
 }
-let eg = new eR;
-class eC extends R.C {
+let eg = new ep;
+class eC extends p.C {
   create(e) {
     let t = {
       favoriteChannels: {},
       muted: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2367,7 +2367,7 @@ class eC extends R.C {
   }
 }
 let ev = new eC;
-class eL extends R.C {
+class eL extends p.C {
   create(e) {
     let t = {
       nickname: "",
@@ -2375,7 +2375,7 @@ class eL extends R.C {
       position: 0,
       parentId: "0"
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2437,7 +2437,7 @@ class eL extends R.C {
   }
 }
 let eD = new eL;
-class eM extends R.C {
+class eM extends p.C {
   create(e) {
     let t = {
       muted: !1,
@@ -2445,7 +2445,7 @@ class eM extends R.C {
       modifiedAt: "0",
       soundboardMuted: !1
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2507,13 +2507,13 @@ class eM extends R.C {
   }
 }
 let eP = new eM;
-class ey extends R.C {
+class ey extends p.C {
   create(e) {
     let t = {
       user: {},
       stream: {}
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2606,10 +2606,10 @@ class ey extends R.C {
   }
 }
 let eU = new ey;
-class eb extends R.C {
+class eb extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2644,12 +2644,12 @@ class eb extends R.C {
   }
 }
 let eG = new eb;
-class ew extends R.C {
+class ew extends p.C {
   create(e) {
     let t = {
       volume: 0
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2683,14 +2683,14 @@ class ew extends R.C {
     }])
   }
 }
-let ex = new ew;
-class eB extends R.C {
+let eB = new ew;
+class ex extends p.C {
   create(e) {
     let t = {
       soundId: "0",
       guildId: "0"
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2735,14 +2735,14 @@ class eB extends R.C {
     }])
   }
 }
-let ek = new eB;
-class eV extends R.C {
+let ek = new ex;
+class eV extends p.C {
   create(e) {
     let t = {
       allowedGuildIds: [],
       allowedUserIds: []
     };
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t
@@ -2820,10 +2820,10 @@ class eV extends R.C {
   }
 }
 let eZ = new eV;
-class eH extends R.C {
+class eH extends p.C {
   create(e) {
     let t = {};
-    return globalThis.Object.defineProperty(t, p.C, {
+    return globalThis.Object.defineProperty(t, R.C, {
       enumerable: !1,
       value: this
     }), void 0 !== e && (0, O.l)(this, t, e), t

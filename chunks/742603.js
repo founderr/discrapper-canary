@@ -19,8 +19,8 @@ var a = n(120356),
   _ = n(554747),
   f = n(854698),
   E = n(897669),
-  g = n(984370),
-  C = n(910611),
+  C = n(984370),
+  g = n(910611),
   I = n(454585),
   x = n(134483),
   T = n(210975),
@@ -200,7 +200,7 @@ function V(e) {
   return (0, i.jsxs)("div", {
     className: U.subtitleContainer,
     children: [(0, i.jsxs)(Z.ZP, {
-      onDoubleClick: g.O,
+      onDoubleClick: C.O,
       transparent: !0,
       className: (0, A.Q)(D.BR.DARK),
       childrenBottom: H,
@@ -225,7 +225,7 @@ function V(e) {
             className: U.secureFramesIcon
           })]
         })
-      }), (0, i.jsx)(C.TS, {
+      }), (0, i.jsx)(g.TS, {
         channel: t,
         guild: a
       }), (0, i.jsx)(G, {

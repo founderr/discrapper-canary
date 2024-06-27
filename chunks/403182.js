@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Ng: function() {
-    return N
+    return A
   },
   OC: function() {
-    return p
+    return R
   },
   dg: function() {
-    return A
+    return N
   },
   dp: function() {
     return T
@@ -109,11 +109,11 @@ function S(e, t) {
   return null != i ? i.klass : "unknown"
 }
 
-function N(e) {
+function A(e) {
   return r().filesize(e)
 }
 
-function A(e) {
+function N(e) {
   let t = _.default.getCurrentUser();
   a.Z.trackExposure({
     location: "de18ec_1"
@@ -127,7 +127,7 @@ function A(e) {
 }
 
 function m(e, t) {
-  let n = A(t);
+  let n = N(t);
   return Array.from(e).some(e => e.size > n)
 }
 
@@ -136,10 +136,10 @@ function O(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > p()
+  }(e) > R()
 }
 
-function p() {
+function R() {
   let e = _.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

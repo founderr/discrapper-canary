@@ -25,8 +25,8 @@ var i = n(735250),
   p = n(100527),
   _ = n(970606),
   f = n(963202),
-  g = n(824991),
-  m = n(243778),
+  m = n(824991),
+  g = n(243778),
   C = n(863249),
   I = n(937111),
   E = n(602147),
@@ -47,7 +47,7 @@ function T(e) {
     children: h,
     isEligibleForUpsell: p = !0,
     withInviteIcon: _ = !0
-  } = e, f = (0, s.TH)(), [C, I] = (0, m.U)([r], S.R.SIDEBAR), Z = C !== r, T = (0, d.Z)(), L = p && !T && !Z && f.pathname !== N.Z5c.GUILD_DISCOVERY;
+  } = e, f = (0, s.TH)(), [C, I] = (0, g.U)([r], S.R.SIDEBAR), Z = C !== r, T = (0, d.Z)(), L = p && !T && !Z && f.pathname !== N.Z5c.GUILD_DISCOVERY;
   l.useEffect(() => {
     L && o()
   }, [L, o]);
@@ -88,11 +88,11 @@ function T(e) {
             })
           }), (0, i.jsxs)("div", {
             className: v.popoutContent,
-            children: [_ && (0, i.jsx)(g.YV, {}), (0, i.jsx)(g.aF, {
+            children: [_ && (0, i.jsx)(m.YV, {}), (0, i.jsx)(m.aF, {
               title: t
-            }), (0, i.jsx)(g.To, {
+            }), (0, i.jsx)(m.To, {
               message: n
-            }), (0, i.jsx)(g.Xu, {
+            }), (0, i.jsx)(m.Xu, {
               onClick: b
             })]
           }), (0, i.jsx)("div", {

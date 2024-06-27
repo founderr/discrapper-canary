@@ -13,11 +13,11 @@ var i = n(735250),
   _ = n(502568),
   f = n(585483),
   E = n(981631),
-  g = n(689938);
+  C = n(689938);
 t.Z = a.memo(function(e) {
   let {
     channel: t
-  } = e, n = (0, u.Z)(), l = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), C = (0, r.e7)([m.Z], () => !s().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
+  } = e, n = (0, u.Z)(), l = (0, r.e7)([m.Z], () => m.Z.isInChannel(t.id)), g = (0, r.e7)([m.Z], () => !s().isEmpty(m.Z.getVoiceStatesForChannel(t.id))), I = (0, r.e7)([p.Z], () => p.Z.can(E.Plq.CONNECT, t)), {
     needSubscriptionToAccess: x
   } = (0, d.Z)(t.id), T = (0, h.$R)(t), N = a.useCallback(() => {
     c.Z.handleVoiceConnect({
@@ -37,6 +37,6 @@ t.Z = a.memo(function(e) {
   }).enabled && !n && !l && I && T && t.isVocalThread()) ? (0, i.jsx)(_.ZP.Icon, {
     icon: o.PhoneCallIcon,
     onClick: N,
-    tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
+    tooltip: g ? C.Z.Messages.JOIN_VOICE_CALL : C.Z.Messages.START_VOICE_CALL
   }) : null
 })

@@ -4,7 +4,7 @@ n.d(t, {
     return z
   },
   HH: function() {
-    return x
+    return B
   },
   Hc: function() {
     return j
@@ -58,7 +58,7 @@ n.d(t, {
     return K
   },
   zj: function() {
-    return B
+    return x
   }
 }), n(789020);
 var i, r, s, o, a, l, u, _, c = n(286379),
@@ -69,12 +69,12 @@ var i, r, s, o, a, l, u, _, c = n(286379),
   h = n(182274),
   f = n(695346),
   S = n(592125),
-  N = n(699516),
-  A = n(594174),
+  A = n(699516),
+  N = n(594174),
   m = n(626135),
   O = n(630388),
-  p = n(948561),
-  R = n(651530),
+  R = n(948561),
+  p = n(651530),
   g = n(719548),
   C = n(981631),
   v = n(973005);
@@ -106,7 +106,7 @@ let L = {
       isFriend: i = !1
     } = e;
     if (null != t && t !== d.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-    let r = A.default.getCurrentUser();
+    let r = N.default.getCurrentUser();
     return (null == r ? void 0 : r.nsfwAllowed) === !1 ? b({
       isDm: n,
       isFriend: i
@@ -155,10 +155,10 @@ function w(e) {
   return e === d.Q4.BLUR || e === d.Q4.BLOCK
 }
 
-function x(e) {
+function B(e) {
   var t;
-  if (!(0, R.Kh)()) return !1;
-  let n = A.default.getCurrentUser();
+  if (!(0, p.Kh)()) return !1;
+  let n = N.default.getCurrentUser();
   if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
   let {
     explicitContentGuilds: i,
@@ -166,10 +166,10 @@ function x(e) {
     explicitContentNonFriendDm: s
   } = G(), o = S.Z.getChannel(e.channel_id);
   if (null == o) return !1;
-  if (o.isDM() || o.isGroupDM()) return null != e.author && N.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
+  if (o.isDM() || o.isGroupDM()) return null != e.author && A.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
-let B = e => {
+let x = e => {
   let t = G();
   f.Sh.updateSetting({
     ...t,
@@ -194,7 +194,7 @@ function k(e, t) {
 }
 
 function V(e) {
-  return x(e) ? {
+  return B(e) ? {
     obscuredAttachments: e.attachments.filter(e => k({
       type: 0,
       media: e
@@ -260,7 +260,7 @@ function j(e) {
     message_id: o,
     embed_ids: l,
     user_is_underage: (0, h.U)(),
-    scan_timeout_duration: p.b2,
+    scan_timeout_duration: R.b2,
     attachment_ids_v2: a
   }), T.Z.increment({
     name: c.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,

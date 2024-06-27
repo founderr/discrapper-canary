@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(703656),
   f = n(932724),
   S = n(672339),
-  N = n(898531),
-  A = n(923973),
+  A = n(898531),
+  N = n(923973),
   m = n(189771),
   O = n(560688),
-  p = n(871499),
-  R = n(136995),
+  R = n(871499),
+  p = n(136995),
   g = n(25827),
   C = n(131951),
   v = n(594174),
@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(65154),
   G = n(689938),
   w = n(82872),
-  x = n(972667);
-let B = {
+  B = n(972667);
+let x = {
     width: 232,
     height: 315
   },
@@ -53,7 +53,7 @@ let B = {
 function H(e) {
   let {
     header: t
-  } = e, n = C.Z.getCameraComponent(), s = (0, l.e7)([C.Z], () => C.Z.getVideoDeviceId()), o = (0, N.Z)();
+  } = e, n = C.Z.getCameraComponent(), s = (0, l.e7)([C.Z], () => C.Z.getVideoDeviceId()), o = (0, A.Z)();
   return r.useEffect(() => {
     let e = v.default.getCurrentUser();
     if (o && null != e) {
@@ -87,10 +87,10 @@ function F(e) {
   } = e, {
     cameraUnavailable: s,
     enabled: a
-  } = (0, A.Z)(), l = (0, m.Z)(n);
+  } = (0, N.Z)(), l = (0, m.Z)(n);
   return (0, i.jsxs)("div", {
     className: w.actions,
-    children: [(0, i.jsx)(p.d, {
+    children: [(0, i.jsx)(R.d, {
       iconComponent: u.CloseSmallIcon,
       color: "red",
       className: w.actionButton,
@@ -131,7 +131,7 @@ function F(e) {
           }
         })
       }
-    }), (0, i.jsx)(R.Z, {
+    }), (0, i.jsx)(p.Z, {
       channel: n,
       color: "green",
       centerButton: !0,
@@ -146,7 +146,7 @@ function Y(e) {
     y: n,
     x: s,
     channel: d
-  } = e, [h, f] = r.useState(!1), S = (0, I.x)(d), N = (0, T.ZP)(d), [A, m] = (0, l.Wu)([C.Z], () => [C.Z.supports(b.AN.VIDEO), Object.keys(C.Z.getVideoDevices()).length]), O = (0, l.e7)([L.Z], () => L.Z.isFocused()), p = (0, l.e7)([P.Z], () => P.Z.getMode(d.id)), R = r.useCallback(e => {
+  } = e, [h, f] = r.useState(!1), S = (0, I.x)(d), A = (0, T.ZP)(d), [N, m] = (0, l.Wu)([C.Z], () => [C.Z.supports(b.AN.VIDEO), Object.keys(C.Z.getVideoDevices()).length]), O = (0, l.e7)([L.Z], () => L.Z.isFocused()), R = (0, l.e7)([P.Z], () => P.Z.getMode(d.id)), p = r.useCallback(e => {
     null != e.top && null != e.left && c.Z.move(e.left, e.top)
   }, []), g = (0, a.useSpring)({
     value: h ? 1 : 0,
@@ -161,7 +161,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [d]);
-  let v = p === U.WtW.VIDEO && A && m > 0,
+  let v = R === U.WtW.VIDEO && N && m > 0,
     y = (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(D.Z, {
         className: w.icon,
@@ -175,16 +175,16 @@ function Y(e) {
           className: w.title,
           color: "header-primary",
           variant: h ? "text-md/semibold" : "text-lg/semibold",
-          children: N
+          children: A
         }), (0, i.jsx)(u.Text, {
           color: "header-secondary",
           className: w.subtitle,
           variant: h ? "text-sm/normal" : "text-md/normal",
-          children: p === U.WtW.VOICE ? G.Z.Messages.INCOMING_CALL_ELLIPSIS : G.Z.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
+          children: R === U.WtW.VOICE ? G.Z.Messages.INCOMING_CALL_ELLIPSIS : G.Z.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
         })]
       })]
     }),
-    Y = v ? B : k;
+    Y = v ? x : k;
   return (0, i.jsx)(E.Z, {
     className: w.wrapper,
     selector: ".".concat(w.root),
@@ -194,11 +194,11 @@ function Y(e) {
     },
     maxX: window.innerWidth,
     maxY: window.innerHeight,
-    onDragEnd: R,
+    onDragEnd: p,
     dragAnywhere: !0,
     children: (0, i.jsx)(i.Fragment, {
       children: (0, i.jsxs)(a.animated.div, {
-        className: o()(w.root, x.elevationHigh, {
+        className: o()(w.root, B.elevationHigh, {
           [w.previewCamera]: h
         }, h ? (0, M.Q)("dark") : null),
         style: {

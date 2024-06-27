@@ -16,18 +16,18 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   let {
     disabled: n,
     type: s
-  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), f = r.useContext(u.ZP), [S, N] = r.useState(!1), A = T === d.X1.STICKER, m = r.useCallback(() => {
+  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), f = r.useContext(u.ZP), [S, A] = r.useState(!1), N = T === d.X1.STICKER, m = r.useCallback(() => {
     (0, _.RO)(d.X1.STICKER, s)
   }, [s]);
   r.useEffect(() => {
     let e = () => {
         requestAnimationFrame(() => {
-          N(!0)
+          A(!0)
         })
       },
       t = () => {
         requestAnimationFrame(() => {
-          N(!1)
+          A(!1)
         })
       };
     return f.addListener("sticker-suggestions-shown", e), f.addListener("sticker-suggestions-hidden", t), () => {
@@ -36,23 +36,23 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   }, [f]);
   let {
     Component: O,
-    events: p,
-    play: R
+    events: R,
+    play: p
   } = (0, l.z)();
   return n ? null : (0, i.jsx)("div", {
     className: o()(d.CT, I.buttonContainer),
     ref: t,
     children: (0, i.jsx)(c.Z, {
       innerClassName: o()(I.button, I.stickerButton, {
-        [I.stickerButtonTilted]: S && !A
+        [I.stickerButtonTilted]: S && !N
       }),
-      ...p,
+      ...R,
       onClick: () => {
-        m(), R()
+        m(), p()
       },
-      isActive: A,
+      isActive: N,
       "aria-label": E.Z.Messages.STICKER_BUTTON_LABEL,
-      "aria-expanded": A,
+      "aria-expanded": N,
       "aria-haspopup": "dialog",
       "aria-controls": h,
       sparkle: !1,

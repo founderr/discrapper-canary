@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i, r = n(735250),
@@ -27,7 +27,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends(i = s.PureComponent) {
+class A extends(i = s.PureComponent) {
   render() {
     let {
       appContext: e,
@@ -65,23 +65,23 @@ class N extends(i = s.PureComponent) {
         width: d,
         height: E,
         animated: S,
-        children: N,
-        renderLinkComponent: A,
+        children: A,
+        renderLinkComponent: N,
         renderForwardComponent: m,
         isWindowFocused: O,
-        shouldHideMediaOptions: p = !1
-      } = this.props, R = {
+        shouldHideMediaOptions: R = !1
+      } = this.props, p = {
         alt: s,
         src: l,
         original: null != _ ? _ : l,
         width: d,
         height: E,
         animated: S,
-        children: N,
+        children: A,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: A,
+        renderLinkComponent: N,
         renderForwardComponent: m,
-        onContextMenu: p ? e => {
+        onContextMenu: R ? e => {
           e.stopPropagation(), e.preventDefault()
         } : void 0,
         trigger: i
@@ -94,11 +94,11 @@ class N extends(i = s.PureComponent) {
         size: a.ModalSize.DYNAMIC,
         "aria-label": h.Z.Messages.IMAGE,
         children: (0, r.jsx)(u.y, {
-          ...R,
+          ...p,
           className: f.image,
           shouldAnimate: O,
           onClose: this.onCloseImage,
-          shouldHideMediaOptions: p
+          shouldHideMediaOptions: R
         })
       }), {
         modalKey: T.c
@@ -107,16 +107,16 @@ class N extends(i = s.PureComponent) {
   }
 }
 
-function A(e) {
+function N(e) {
   let t = (0, l.bp)(),
     n = (0, E.n)();
-  return (0, r.jsx)(N, {
+  return (0, r.jsx)(A, {
     ...e,
     isWindowFocused: n,
     appContext: t
   })
 }
-S(N, "defaultProps", {
+S(A, "defaultProps", {
   shouldLink: !0,
   autoPlay: !1,
   animated: !1

@@ -98,12 +98,12 @@ let _ = () => ({
     icon: s.Z,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
-  N = () => ({
+  A = () => ({
     icon: o.Z,
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
   }),
-  A = () => ({
+  N = () => ({
     icon: r.ShieldUserIcon,
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
     description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
@@ -121,12 +121,12 @@ let _ = () => ({
       description: e
     }
   },
-  p = () => ({
+  R = () => ({
     color: i.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
     icon: a.Z,
     description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
   }),
-  R = function() {
+  p = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
     return {
       color: e,
@@ -140,11 +140,11 @@ function g() {
 }
 
 function C() {
-  return [I(), h(l.Eu4.TIER_2), R(), O()]
+  return [I(), h(l.Eu4.TIER_2), p(), O()]
 }
 
 function v() {
-  return [h(l.Eu4.TIER_3, i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), p(), f(), O()]
+  return [h(l.Eu4.TIER_3, i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), R(), f(), O()]
 }
 
 function L() {
@@ -160,5 +160,5 @@ function M() {
 }
 
 function P() {
-  return [N(), A(), S(), m()]
+  return [A(), N(), S(), m()]
 }

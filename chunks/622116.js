@@ -15,8 +15,8 @@ var a = n(442837),
   u = n(131704),
   _ = n(592125),
   E = n(430824),
-  I = n(699516),
-  m = n(594174),
+  m = n(699516),
+  I = n(594174),
   T = n(934415),
   h = n(900849),
   N = n(981631);
@@ -28,7 +28,7 @@ function f(e) {
     beforeTransition: f,
     className: p,
     openChatWithoutConnecting: C
-  } = e, g = (0, a.e7)([m.default, I.Z], () => null == t ? "" : (0, o.F6)(t, m.default, I.Z), [t]);
+  } = e, g = (0, a.e7)([I.default, m.Z], () => null == t ? "" : (0, o.F6)(t, I.default, m.Z), [t]);
   return (0, i.jsx)(s.Tooltip, {
     text: g,
     position: "top",

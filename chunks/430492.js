@@ -110,16 +110,16 @@ s.ZP = function(e) {
     drop: I,
     platform: N,
     transitionState: C
-  } = e, A = (0, c.Dt)(), [m, O] = a.useState();
+  } = e, m = (0, c.Dt)(), [A, g] = a.useState();
   a.useEffect(() => {
     null == l && o.Z.wait(async () => {
       await (0, d.dN)(I.dropsQuestId)
     })
   }, [I.dropsQuestId, l]);
-  let g = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
+  let O = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
   return (0, n.jsx)(r.ModalRoot, {
     transitionState: C,
-    "aria-labelledby": A,
+    "aria-labelledby": m,
     children: (0, n.jsx)(n.Fragment, {
       children: (() => {
         if (null != l) return (0, n.jsx)(S, {
@@ -130,13 +130,13 @@ s.ZP = function(e) {
           }),
           code: l
         });
-        if (null === g) return (0, n.jsx)("div", {
+        if (null === O) return (0, n.jsx)("div", {
           className: T.spinnerContainer,
           children: (0, n.jsx)(r.Spinner, {})
         });
         {
-          let e = g.length > 0,
-            a = 1 === g.length;
+          let e = O.length > 0,
+            a = 1 === O.length;
           return (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsxs)(r.ModalHeader, {
               separator: !1,
@@ -152,7 +152,7 @@ s.ZP = function(e) {
                 variant: "text-md/normal",
                 className: T.dropBodyText,
                 children: a ? u.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
-                  platform: (0, E.Un)(g[0])
+                  platform: (0, E.Un)(O[0])
                 }) : u.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
                   title: I.title
                 })
@@ -161,12 +161,12 @@ s.ZP = function(e) {
               }), (0, n.jsxs)(r.FormSection, {
                 className: T.dropFormSection,
                 children: [(0, n.jsx)(r.SingleSelect, {
-                  onChange: O,
-                  options: g.map(e => ({
+                  onChange: g,
+                  options: O.map(e => ({
                     value: e,
                     label: (0, E.Un)(e)
                   })),
-                  value: a ? g[0] : m,
+                  value: a ? O[0] : A,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
                   look: e ? r.SelectLooks.FILLED : r.SelectLooks.CUSTOM
@@ -185,9 +185,9 @@ s.ZP = function(e) {
                     let {
                       default: e
                     } = await t.e("5004").then(t.bind(t, 233070));
-                    return t => (void 0 !== m || a) && (0, n.jsx)(e, {
+                    return t => (void 0 !== A || a) && (0, n.jsx)(e, {
                       ...t,
-                      platform: void 0 === m ? g[0] : m,
+                      platform: void 0 === A ? O[0] : A,
                       code: l,
                       dropsQuestId: I.dropsQuestId,
                       closeParentModal: s,
@@ -195,7 +195,7 @@ s.ZP = function(e) {
                     })
                   })
                 },
-                disabled: void 0 === m && !a,
+                disabled: void 0 === A && !a,
                 children: u.Z.Messages.UNLOCK_CODE
               }), e ? (0, n.jsx)(r.Button, {
                 onClick: s,

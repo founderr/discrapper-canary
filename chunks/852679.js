@@ -24,12 +24,12 @@ async function I(e) {
     guildId: h,
     closeLayer: f,
     onCloseModal: S,
-    totalNumberOfSlotsToAssign: N = 1,
-    disablePremiumUpsell: A,
+    totalNumberOfSlotsToAssign: A = 1,
+    disablePremiumUpsell: N,
     onSubscriptionConfirmation: m,
     inPopout: O,
-    applicationId: p
-  } = e, R = O ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, g = l.ZP.getPremiumTypeSubscription();
+    applicationId: R
+  } = e, p = O ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, g = l.ZP.getPremiumTypeSubscription();
   if (null != g && g.isPurchasedExternally && null != g.paymentGateway) {
     null != f && f(), s.Z.show({
       title: d.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
@@ -61,11 +61,11 @@ async function I(e) {
         analyticsLocation: I,
         analyticsSourceLocation: null != T ? T : I,
         guildId: h,
-        totalNumberOfSlotsToAssign: N,
+        totalNumberOfSlotsToAssign: A,
         closeGuildPerksModal: f,
-        disablePremiumUpsell: A,
+        disablePremiumUpsell: N,
         onSubscriptionConfirmation: m,
-        applicationId: p
+        applicationId: R
       })
     }
   }, {
@@ -79,6 +79,6 @@ async function I(e) {
     onCloseRequest: () => {
       (0, r.closeModal)(E), null == S || S(!1)
     },
-    contextKey: R
+    contextKey: p
   })
 }

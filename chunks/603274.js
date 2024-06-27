@@ -17,8 +17,8 @@ var l = n(120356),
   p = n(199902),
   _ = n(592125),
   f = n(594174),
-  g = n(938475),
-  m = n(602623),
+  m = n(938475),
+  g = n(602623),
   C = n(823379),
   I = n(709054),
   E = n(853856),
@@ -33,7 +33,7 @@ function v(e, t) {
     children: [(0, i.jsx)(e, {
       className: S.activityIcon,
       color: "currentColor"
-    }), (0, i.jsx)(m.Z, {
+    }), (0, i.jsx)(g.Z, {
       guildId: void 0,
       users: t,
       max: 6
@@ -47,7 +47,7 @@ function T() {
     l = n.map(e => e.id),
     r = n.filter(e => e.type === N.d4z.GUILD_VOICE),
     a = n.filter(e => e.type === N.d4z.GUILD_STAGE_VOICE).map(e => e.id),
-    x = (0, o.Wu)([g.ZP], () => s().flatMap(r, e => g.ZP.getVoiceStatesForChannel(e).map(e => {
+    x = (0, o.Wu)([m.ZP], () => s().flatMap(r, e => m.ZP.getVoiceStatesForChannel(e).map(e => {
       let {
         user: t
       } = e;
@@ -83,7 +83,7 @@ function T() {
         size: "lg",
         color: "currentColor",
         className: S.activityIcon
-      }), (0, i.jsx)(m.Z, {
+      }), (0, i.jsx)(g.Z, {
         guildId: void 0,
         users: e,
         max: 3

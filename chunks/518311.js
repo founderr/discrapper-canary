@@ -17,8 +17,8 @@ var i, a = n(735250),
   _ = n(570140),
   f = n(26151),
   E = n(493683),
-  g = n(758059),
-  C = n(447543),
+  C = n(758059),
+  g = n(447543),
   I = n(708690),
   x = n(194359),
   T = n(425493),
@@ -190,7 +190,7 @@ class eo extends(i = l.PureComponent) {
     }, {
       autoTrackExposure: !1
     });
-    C.Z.createInvite(e.id, {
+    g.Z.createInvite(e.id, {
       max_age: t
     }, Q.t4x.GROUP_DM)
   }
@@ -584,7 +584,7 @@ class eo extends(i = l.PureComponent) {
       } = this.props;
       t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus()
     }), en(this, "handleAddFriendNavigation", () => {
-      (0, R.uL)(Q.Z5c.FRIENDS), g.Z.setSection(Q.pJs.ADD_FRIEND), this.props.onClose()
+      (0, R.uL)(Q.Z5c.FRIENDS), C.Z.setSection(Q.pJs.ADD_FRIEND), this.props.onClose()
     }), en(this, "handleScroll", () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({

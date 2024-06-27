@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(612226),
   N = t(714338),
   C = t(924557),
-  A = t(74299),
-  m = t(131951),
-  O = t(556296),
-  g = t(808506),
+  m = t(74299),
+  A = t(131951),
+  g = t(556296),
+  O = t(808506),
   h = t(285952),
-  R = t(474333),
-  p = t(63063),
+  p = t(474333),
+  R = t(63063),
   x = t(358085),
   M = t(13140),
   D = t(210887),
@@ -37,7 +37,7 @@ var n = t(735250),
   b = t(5973),
   j = t(331651);
 
-function U(e, s, t) {
+function B(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -46,7 +46,7 @@ function U(e, s, t) {
   }) : e[s] = t, e
 }
 
-function B(e) {
+function U(e) {
   let {
     children: s
   } = e;
@@ -75,7 +75,7 @@ class V extends a.PureComponent {
         color: d.Z.unsafe_rawColors.RED_400.css
       },
       children: Z.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({
-        keyboardNavArticle: p.Z.getArticleURL(L.BhN.KEYBOARD_NAVIGATION)
+        keyboardNavArticle: R.Z.getArticleURL(L.BhN.KEYBOARD_NAVIGATION)
       })
     }) : (0, n.jsx)(_.FormText, {
       className: v.keybindMessage,
@@ -151,19 +151,19 @@ class V extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), U(this, "handleActionChanged", e => {
+    super(...e), B(this, "handleActionChanged", e => {
       E.Z.setKeybind({
         ...this.props.keybind,
         action: e
       })
-    }), U(this, "handleShortcutChange", e => {
+    }), B(this, "handleShortcutChange", e => {
       E.Z.setKeybind({
         ...this.props.keybind,
         shortcut: e
       })
-    }), U(this, "handleDeleteKeybind", () => {
+    }), B(this, "handleDeleteKeybind", () => {
       E.Z.deleteKeybind(this.props.keybind.id)
-    }), U(this, "handleEnableDisable", () => {
+    }), B(this, "handleEnableDisable", () => {
       let {
         keybind: e
       } = this.props;
@@ -298,8 +298,8 @@ class y extends a.PureComponent {
             className: j.marginBottom20,
             children: [(0, n.jsx)(h.Z.Child, {
               grow: 0,
-              children: (0, n.jsx)(R.Z, {
-                messageType: R.Q.WARNING,
+              children: (0, n.jsx)(p.Z, {
+                messageType: p.Q.WARNING,
                 children: Z.Z.Messages.ADD_KEYBIND_WARNING
               })
             }), (0, n.jsx)(h.Z.Child, {
@@ -314,8 +314,8 @@ class y extends a.PureComponent {
           }), (0, n.jsx)(_.FormDivider, {}), (0, n.jsxs)(_.FormSection, {
             children: [this.renderKeybinds(s), this.renderEmpty(s)]
           })]
-        }) : (0, n.jsx)(R.Z, {
-          messageType: R.Q.INFO,
+        }) : (0, n.jsx)(p.Z, {
+          messageType: p.Q.INFO,
           textVariant: "text-lg/medium",
           className: v.browserNotice,
           children: Z.Z.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
@@ -338,7 +338,7 @@ class y extends a.PureComponent {
               className: v.__invalid_defaultKeybindShortcut
             })
           })]
-        }), (0, n.jsx)(_.FormDivider, {}), (0, n.jsx)(B, {
+        }), (0, n.jsx)(_.FormDivider, {}), (0, n.jsx)(U, {
           children: e => (0, n.jsx)(n.Fragment, {
             children: e.map((e, s) => {
               let t = (0, I.UD)(e),
@@ -379,16 +379,16 @@ class y extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), U(this, "handleAddKeybind", () => {
+    super(...e), B(this, "handleAddKeybind", () => {
       E.Z.addKeybind()
     })
   }
 }
 
 function Y() {
-  let e = (0, c.e7)([O.Z], () => O.Z.getState()),
-    s = (0, c.e7)([m.Z], () => (0, A.Z)(m.Z)),
-    t = (0, c.e7)([g.Z], () => g.Z.isSupported()),
+  let e = (0, c.e7)([g.Z], () => g.Z.getState()),
+    s = (0, c.e7)([A.Z], () => (0, m.Z)(A.Z)),
+    t = (0, c.e7)([O.Z], () => O.Z.isSupported()),
     a = (0, C.Go)();
   return (0, n.jsx)(y, {
     keybinds: e,

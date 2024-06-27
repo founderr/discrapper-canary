@@ -23,26 +23,26 @@ function u(e, t, n) {
       customTheme: h = !1,
       paddingFix: f = !0,
       style: S,
-      ...N
+      ...A
     } = u, {
-      scrollerRef: A,
+      scrollerRef: N,
       getScrollerState: m
-    } = (0, l.Ke)(), O = (0, l.t2)(A, I);
+    } = (0, l.Ke)(), O = (0, l.t2)(N, I);
     r.useImperativeHandle(_, () => ({
-      getScrollerNode: () => A.current,
+      getScrollerNode: () => N.current,
       getScrollerState: m,
-      ...(0, l.Ue)(A, m, O, I)
-    }), [A, m, I, O]);
-    let p = (0, l.tT)({
+      ...(0, l.Ue)(N, m, O, I)
+    }), [N, m, I, O]);
+    let R = (0, l.tT)({
       paddingFix: f,
       orientation: I,
       dir: E,
       className: d,
-      scrollerRef: A,
+      scrollerRef: N,
       specs: s
     });
     return (0, i.jsx)("div", {
-      ref: A,
+      ref: N,
       className: o()(d, {
         [e]: !0,
         [t]: T,
@@ -50,10 +50,10 @@ function u(e, t, n) {
       }),
       style: (0, l.uT)(S, I),
       dir: E,
-      ...N,
+      ...A,
       children: (0, i.jsxs)(a.Jc, {
-        containerRef: A,
-        children: [c, p]
+        containerRef: N,
+        children: [c, R]
       })
     })
   })

@@ -4,7 +4,7 @@ n.d(t, {
     return g
   },
   On: function() {
-    return p
+    return R
   },
   Vv: function() {
     return m
@@ -16,10 +16,10 @@ n.d(t, {
     return C
   },
   ef: function() {
-    return A
+    return N
   },
   s6: function() {
-    return N
+    return A
   },
   sh: function() {
     return D
@@ -48,7 +48,7 @@ function S(e, t) {
     remote_platform: null === (i = _.Z.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
 }
-async function N() {
+async function A() {
   let e = I.Z.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
   o.Z.dispatch({
@@ -70,7 +70,7 @@ async function N() {
   }
 }
 
-function A(e) {
+function N(e) {
   o.Z.dispatch({
     type: "REMOTE_SESSION_CONNECT",
     sessionId: e
@@ -100,10 +100,10 @@ function O(e) {
     payload: {
       type: "DISCONNECT"
     }
-  }), S("DISCONNECT", e), N()
+  }), S("DISCONNECT", e), A()
 }
 
-function p(e, t, n, i) {
+function R(e, t, n, i) {
   let r = (0, l.z)(n);
   null != r && (o.Z.dispatch({
     type: "REMOTE_COMMAND",
@@ -116,7 +116,7 @@ function p(e, t, n, i) {
     }
   }), S("AUDIO_SETTINGS_UPDATE", e))
 }
-async function R() {
+async function p() {
   let e;
   try {
     let t = null != u.Z.getRTCConnectionId() ? r.o.TRANSFER_EXISTING_CALL : r.o.CREATE_NEW_CALL;
@@ -226,7 +226,7 @@ async function L(e, t, n) {
   })
 }
 async function D(e, t, n) {
-  await E.Z.maybeShowPTTAlert(e), await N();
-  let i = await R();
+  await E.Z.maybeShowPTTAlert(e), await A();
+  let i = await p();
   await v(e, t, n, i), (0, T.Z)(n.id, e)
 }

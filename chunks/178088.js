@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(602478),
   _ = n(360629),
   E = n(742989),
-  I = n(675478),
-  m = n(581883),
+  m = n(675478),
+  I = n(581883),
   T = n(585483),
   h = n(153209),
   N = n(881591),
@@ -31,33 +31,33 @@ function A(e) {
     onClose: n,
     children: A,
     badgeState: R,
-    popoutPosition: x,
-    popoutAlign: O
+    popoutPosition: O,
+    popoutAlign: x
   } = e, {
     analyticsLocations: M
   } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER), [v, L] = a.useState(!1), [Z, P] = function() {
-    let e = (0, l.e7)([m.Z], () => {
+    let e = (0, l.e7)([I.Z], () => {
       var e, t;
-      return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.X.UNREADS
+      return null !== (t = null === (e = I.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.X.UNREADS
     });
     return [e, a.useCallback(e => {
-      I.hW.updateAsync("inbox", t => {
+      m.hW.updateAsync("inbox", t => {
         if (t.currentTab === e) return !1;
         t.currentTab = e
-      }, I.fy.FREQUENT_USER_ACTION)
+      }, m.fy.FREQUENT_USER_ACTION)
     }, [])]
   }(), {
     showTutorial: b,
     setSeenTutorial: D
   } = function(e) {
-    let t = (0, l.e7)([m.Z], () => {
+    let t = (0, l.e7)([I.Z], () => {
         var e, t;
-        return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
+        return null !== (t = null === (e = I.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
       }),
       n = a.useCallback(() => {
-        I.hW.updateAsync("inbox", e => {
+        m.hW.updateAsync("inbox", e => {
           e.viewedTutorial = !0
-        }, I.fy.INFREQUENT_USER_ACTION)
+        }, m.fy.INFREQUENT_USER_ACTION)
       }, []);
     return {
       showTutorial: !t && e === r.X.UNREADS,
@@ -92,8 +92,8 @@ function A(e) {
     value: M,
     children: (0, i.jsx)(o.Popout, {
       animation: o.Popout.Animation.NONE,
-      position: x,
-      align: O,
+      position: O,
+      align: x,
       autoInvert: !1,
       shouldShow: v,
       onRequestClose: j,

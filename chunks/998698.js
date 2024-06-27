@@ -154,7 +154,7 @@ o = "ApplicationCommandStore", (s = "displayName") in(r = S) ? Object.defineProp
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let N = new S(l.Z, {
+let A = new S(l.Z, {
   CONNECTION_OPEN: E,
   CHANNEL_SELECT: E,
   LOGOUT: E,
@@ -187,4 +187,4 @@ let N = new S(l.Z, {
     return a || l || u
   }
 });
-t.Z = N
+t.Z = A

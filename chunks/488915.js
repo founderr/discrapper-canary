@@ -24,17 +24,17 @@ function S(e) {
   return "plan:".concat(e)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   return "entitlement:".concat(e, ":").concat(n, ":").concat(t)
 }
 
-function A(e, t) {
+function N(e, t) {
   return "entitlement:".concat(t, ":").concat(e)
 }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
 let m = new d.h(e => [f(e.application_id), ...e.subscription_listings_ids.map(h)], e => e.id),
   O = new d.h(e => [f(e.application_id), S(e.subscription_plans[0].id)], e => e.id),
-  p = new d.h(e => [N(e.applicationId, e.isValid(null, T.Z), e.guildId), A(e.isValid(null, T.Z), e.guildId)], e => e.id),
-  R = {},
+  R = new d.h(e => [A(e.applicationId, e.isValid(null, T.Z), e.guildId), N(e.isValid(null, T.Z), e.guildId)], e => e.id),
+  p = {},
   g = {};
 
 function C(e) {
@@ -51,7 +51,7 @@ function v(e) {
 class L extends(r = c.yh) {
   getSubscriptionGroupListingsForApplicationFetchState(e) {
     var t;
-    return null !== (t = R[e]) && void 0 !== t ? t : 0
+    return null !== (t = p[e]) && void 0 !== t ? t : 0
   }
   getSubscriptionGroupListing(e) {
     return m.get(e)
@@ -79,11 +79,11 @@ class L extends(r = c.yh) {
   }
   getApplicationEntitlementsForGuild(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    return p.values(N(e, n, t))
+    return R.values(A(e, n, t))
   }
   getEntitlementsForGuild(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return p.values(A(t, e))
+    return R.values(N(t, e))
   }
 }
 l = "ApplicationSubscriptionStore", (a = "displayName") in(o = L) ? Object.defineProperty(o, a, {
@@ -93,13 +93,13 @@ l = "ApplicationSubscriptionStore", (a = "displayName") in(o = L) ? Object.defin
   writable: !0
 }) : o[a] = l, t.Z = new L(E.Z, {
   LOGOUT: function() {
-    m.clear(), O.clear(), p.clear(), R = {}, g = {}
+    m.clear(), O.clear(), R.clear(), p = {}, g = {}
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function(e) {
     let {
       applicationId: t
     } = e;
-    R[t] = 1;
+    p[t] = 1;
     let n = C(t);
     if (null != n)
       for (let e of n.subscription_listings_ids) O.delete(e)
@@ -109,13 +109,13 @@ l = "ApplicationSubscriptionStore", (a = "displayName") in(o = L) ? Object.defin
       applicationId: t,
       groupListing: n
     } = e;
-    R[t] = 2, v(n)
+    p[t] = 2, v(n)
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function(e) {
     let {
       applicationId: t
     } = e;
-    R[t] = 2
+    p[t] = 2
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(e) {
     let {
@@ -130,7 +130,7 @@ l = "ApplicationSubscriptionStore", (a = "displayName") in(o = L) ? Object.defin
     } = e;
     g[t] = 2, n.forEach(e => {
       let t = I.Z.createFromServer(e);
-      p.set(t.id, t)
+      R.set(t.id, t)
     })
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(e) {

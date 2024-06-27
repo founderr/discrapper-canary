@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(784222),
   f = n(926243),
   S = n(149203),
-  N = n(981631),
-  A = n(689938),
+  A = n(981631),
+  N = n(689938),
   m = n(688623);
 t.Z = e => {
   let {
@@ -25,8 +25,8 @@ t.Z = e => {
     emojiSize: n,
     onSelect: s,
     onInspect: O,
-    surrogateCodePoint: p,
-    getEmojiItemProps: R,
+    surrogateCodePoint: R,
+    getEmojiItemProps: p,
     getEmojiRowProps: g,
     isScrolling: C,
     isUsingKeyboardNavigation: v,
@@ -40,12 +40,12 @@ t.Z = e => {
     isBurstReaction: G,
     inNitroLockedSection: w
   } = e, {
-    enabled: x
+    enabled: B
   } = T.Z.useExperiment({
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), B = c.kJ.getState(), [k, V] = r.useState(B.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
+  }), x = c.kJ.getState(), [k, V] = r.useState(x.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
   r.useEffect(() => c.kJ.useStore.subscribe(e => V(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.DZ.loadIfNecessary()
   }, []);
@@ -62,7 +62,7 @@ t.Z = e => {
             t.stopPropagation(), !C.current && !v.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
-            }), d.Z.open(e.guildId, N.pNK.EMOJI, N.jXE.EMOJI_PICKER_POPOUT))
+            }), d.Z.open(e.guildId, A.pNK.EMOJI, A.jXE.EMOJI_PICKER_POPOUT))
           }, c = () => {
             !C.current && !v.current && O(e)
           };
@@ -76,13 +76,13 @@ t.Z = e => {
               tabIndex: E,
               onFocus: I,
               ...T
-            } = null !== (e = R(l, L)) && void 0 !== e ? e : {};
+            } = null !== (e = p(l, L)) && void 0 !== e ? e : {};
             return (0, r.createElement)("li", {
               ...T,
               key: t
             }, (0, i.jsx)(a.FocusRing, {
               children: (0, i.jsx)("button", {
-                "aria-label": A.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                "aria-label": N.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                 ref: d,
                 className: o()(m.emojiItem, {
                   [m.emojiItemLarge]: Y,
@@ -120,13 +120,13 @@ t.Z = e => {
             isInspected: a,
             isScrolling: C,
             isUsingKeyboardNavigation: v,
-            surrogateCodePoint: p,
+            surrogateCodePoint: R,
             allowAnimatedEmoji: D,
             selectedItemClassName: U,
             onSelect: s,
             onInspect: O,
             channelGuildId: P,
-            getEmojiItemProps: R,
+            getEmojiItemProps: p,
             isMediumSize: j,
             isLargeSize: Y,
             pulseItemKey: Z,
@@ -150,7 +150,7 @@ t.Z = e => {
       children: e.map(W)
     });
   if (y !== S.En.TOP_GUILD_EMOJI) return K(t);
-  let z = t.filter(e => !!x && e.type === h.ld.CREATE_EMOJI || e.subCategory === S.t0.TOP_GUILD_EMOJI || e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+  let z = t.filter(e => !!B && e.type === h.ld.CREATE_EMOJI || e.subCategory === S.t0.TOP_GUILD_EMOJI || e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
     q = t.filter(e => e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
   return 0 === q.length ? K(t) : (0, i.jsxs)("div", {
     className: m.topEmojiSectionContainer,
@@ -178,7 +178,7 @@ t.Z = e => {
         }), (0, i.jsx)(a.Text, {
           variant: "text-xs/semibold",
           color: "always-white",
-          children: A.Z.Messages.NEW
+          children: N.Z.Messages.NEW
         })]
       })]
     })]

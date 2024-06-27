@@ -45,23 +45,23 @@ function u(e) {
     isActive: m = !1,
     isCenterButton: _ = !1,
     ...f
-  } = e, E = n > 0, g = (0, a.useSpring)({
+  } = e, E = n > 0, C = (0, a.useSpring)({
     percentComplete: 0 !== n ? (t - n) / t : 0,
     config: {
       ...a.config.molasses,
       duration: 1e3
     }
-  }), C = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
+  }), g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
     seconds: n
   }) : void 0, I = _ ? s.d : s.Z;
   return (0, i.jsxs)("div", {
     className: o.container,
     children: [E ? (0, i.jsx)(c, {
-      percentComplete: g.percentComplete
+      percentComplete: C.percentComplete
     }) : null, (0, i.jsx)(I, {
       ...f,
       disabled: E,
-      label: C,
+      label: g,
       iconComponent: l.ReactionIcon,
       onClick: u,
       onKeyDown: d,

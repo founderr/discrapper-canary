@@ -40,9 +40,9 @@ function d(e) {
       } = e;
       return -((null !== (n = null === (t = f.get(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1)
     }), [n, f]),
-    N = (0, a.Z)(S);
+    A = (0, a.Z)(S);
   return {
-    mutualFriends: null != S ? S : N,
+    mutualFriends: null != S ? S : A,
     isFetching: d
   }
 }

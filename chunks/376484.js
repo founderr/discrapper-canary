@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return I
+    return m
   }
 }), n(47120);
 var i = n(735250);
@@ -16,7 +16,7 @@ var a = n(120356),
   _ = n(689938),
   E = n(362136);
 
-function I(e) {
+function m(e) {
   let {
     message: t,
     channel: a,
@@ -44,7 +44,7 @@ function I(e) {
       className: s()(E.__invalid_embedContent, {
         [E.compact]: r
       }),
-      children: (0, i.jsx)(m, {
+      children: (0, i.jsx)(I, {
         message: t
       })
     }), (0, i.jsx)("div", {
@@ -60,7 +60,7 @@ function I(e) {
   })
 }
 
-function m(e) {
+function I(e) {
   var t;
   let {
     message: n

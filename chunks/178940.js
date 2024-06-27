@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   X: function() {
-    return p
+    return R
   }
 }), n(47120);
 var i, r, s, o, a, l = n(735250),
@@ -15,9 +15,9 @@ var i, r, s, o, a, l = n(735250),
   h = n(84735),
   f = n(481060),
   S = n(981631),
-  N = n(58126);
+  A = n(58126);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,15 +26,15 @@ function A(e, t, n) {
   }) : e[t] = n, e
 }(o = i || (i = {})).DEFAULT = "default", o.INVERTED = "inverted", o.GHOST = "ghost", o.ROW = "row", (a = r || (r = {})).TOP = "top", a.CENTER = "center";
 let m = {
-    BOX: N.box,
-    ROUND: N.round,
-    SMALL_BOX: N.smallBox
+    BOX: A.box,
+    ROUND: A.round,
+    SMALL_BOX: A.smallBox
   },
   O = {
-    top: N.alignTop,
-    center: N.alignCenter
+    top: A.alignTop,
+    center: A.alignCenter
   };
-class p extends(s = u.PureComponent) {
+class R extends(s = u.PureComponent) {
   getInputMode() {
     return this.props.disabled ? "disabled" : this.props.readOnly ? "readonly" : "default"
   }
@@ -98,19 +98,19 @@ class p extends(s = u.PureComponent) {
       displayOnly: E,
       type: I,
       onClick: T
-    } = this.props, A = null != a ? (0, l.jsx)("div", {
-      className: c()(N.label, e ? N.labelDisabled : N.labelClickable, _ ? N.labelReversed : N.labelForward),
+    } = this.props, N = null != a ? (0, l.jsx)("div", {
+      className: c()(A.label, e ? A.labelDisabled : A.labelClickable, _ ? A.labelReversed : A.labelForward),
       style: {
         lineHeight: "".concat(u, "px")
       },
       children: a
-    }) : null, m = this.props.disabled ? N.inputDisabled : this.props.readOnly ? N.inputReadonly : N.inputDefault;
+    }) : null, m = this.props.disabled ? A.inputDisabled : this.props.readOnly ? A.inputReadonly : A.inputDefault;
     return (0, l.jsxs)(E ? "span" : "label", {
-      className: c()(e ? N.checkboxWrapperDisabled : N.checkboxWrapper, O[r], s, {
-        [N.row]: "row" === I,
-        [N.checked]: n
+      className: c()(e ? A.checkboxWrapperDisabled : A.checkboxWrapper, O[r], s, {
+        [A.row]: "row" === I,
+        [A.checked]: n
       }),
-      children: [_ ? A : null, !E && (0, l.jsx)(h.t, {
+      children: [_ ? N : null, !E && (0, l.jsx)(h.t, {
         children: (0, l.jsx)("input", {
           className: c()(o, m),
           type: "checkbox",
@@ -123,8 +123,8 @@ class p extends(s = u.PureComponent) {
           }
         })
       }), (0, l.jsx)("div", {
-        className: c()(N.checkbox, i, {
-          [N.checked]: n
+        className: c()(A.checkbox, i, {
+          [A.checked]: n
         }),
         style: {
           width: u,
@@ -137,11 +137,11 @@ class p extends(s = u.PureComponent) {
           color: this.getColor(),
           "aria-hidden": !0
         })
-      }), _ ? null : A]
+      }), _ ? null : N]
     })
   }
   constructor(...e) {
-    super(...e), A(this, "handleChange", e => {
+    super(...e), N(this, "handleChange", e => {
       let {
         onChange: t
       } = this.props;
@@ -149,7 +149,7 @@ class p extends(s = u.PureComponent) {
     })
   }
 }
-A(p, "Types", i), A(p, "Shapes", m), A(p, "Aligns", r), A(p, "defaultProps", {
+N(R, "Types", i), N(R, "Shapes", m), N(R, "Aligns", r), N(R, "defaultProps", {
   size: 24,
   disabled: !1,
   readOnly: !1,

@@ -16,8 +16,8 @@ let p = l.forwardRef(function(e, t) {
     onContextMenu: p,
     icon: _,
     selected: f,
-    tooltip: g,
-    upperBadge: m,
+    tooltip: m,
+    upperBadge: g,
     lowerBadge: C,
     lowerBadgeSize: I,
     showPill: E = !0,
@@ -27,7 +27,7 @@ let p = l.forwardRef(function(e, t) {
     onMouseEnter: Z,
     onMouseLeave: v,
     onMouseDown: T
-  } = e, L = (0, s.Ie)(n), [A, b] = l.useState(!1), M = "string" == typeof g && null == x ? g : x;
+  } = e, L = (0, s.Ie)(n), [A, b] = l.useState(!1), M = "string" == typeof m && null == x ? m : x;
   return (0, i.jsxs)(u.H, {
     children: [E ? (0, i.jsx)("div", {
       className: h.pill,
@@ -36,12 +36,12 @@ let p = l.forwardRef(function(e, t) {
         selected: f
       })
     }) : null, (0, i.jsx)(d.Z, {
-      text: g,
+      text: m,
       selected: f,
       children: (0, i.jsx)(o.BlobMask, {
         className: h.__invalid_circleButtonMask,
         selected: f || A,
-        upperBadge: m,
+        upperBadge: g,
         lowerBadge: C,
         lowerBadgeSize: I,
         children: (0, i.jsx)(o.Clickable, {

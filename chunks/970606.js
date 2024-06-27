@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   Oe: function() {
-    return N
+    return A
   },
   Pq: function() {
     return C
@@ -28,16 +28,16 @@ n.d(t, {
     return L
   },
   Qh: function() {
-    return A
+    return N
   },
   TE: function() {
-    return p
+    return R
   },
   Vr: function() {
     return d
   },
   _9: function() {
-    return R
+    return p
   },
   aC: function() {
     return v
@@ -158,7 +158,7 @@ function S(e, t) {
   })
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   a.default.track(u.rMx.CLAN_DISCOVERY_VIEWED, {
     guild_ids: e,
     section: t,
@@ -168,7 +168,7 @@ function N(e, t, n) {
   })
 }
 
-function A(e) {
+function N(e) {
   switch (e) {
     case l.Wy.GAMES:
       return "games";
@@ -209,7 +209,7 @@ function O(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     guildId: t,
     location: n
@@ -220,7 +220,7 @@ function p(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     guildId: t,
     location: n

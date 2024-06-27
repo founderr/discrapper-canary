@@ -50,10 +50,10 @@ function c(e) {
     nonce: h,
     poll: f,
     changelogId: S
-  } = e, N = [];
+  } = e, A = [];
   if (c === u.uaV.REPLY && (r()(null != d, "Replies must have a message reference"), null == E || E.replied_user)) {
     let e = s.Z.getMessageByReference(d);
-    (null == e ? void 0 : e.state) === s.Y.LOADED && N.push(_(e.message.author))
+    (null == e ? void 0 : e.state) === s.Y.LOADED && A.push(_(e.message.author))
   }
   return null == I && (I = a.default.getCurrentUser()), I instanceof o.Z && (I = _(I)), r()(null != I, "createMessage: author cannot be undefined"), {
     id: null != h ? h : (0, l.r)(),
@@ -64,7 +64,7 @@ function c(e) {
     attachments: [],
     embeds: [],
     pinned: !1,
-    mentions: N,
+    mentions: A,
     mention_channels: [],
     mention_roles: [],
     mention_everyone: !1,

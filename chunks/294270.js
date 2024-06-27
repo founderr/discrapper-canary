@@ -19,12 +19,12 @@ let E = 15 * l.Z.Millis.SECOND,
     return "".concat(e, ":").concat(t, ":").concat(n)
   },
   S = new s.V7,
-  N = [],
-  A = {},
+  A = [],
+  N = {},
   m = (0, u.tu)("highfive_whistle", "highfive_whistle", .6),
   O = (0, u.tu)("highfive_clap", "highfive_clap", .6);
 
-function p(e) {
+function R(e) {
   let {
     emoji: t,
     channelId: n,
@@ -35,42 +35,42 @@ function p(e) {
       var i;
       let r = f(t, n);
       if (null != c.Z.getWaitingHighFive(n, t)) return;
-      let [o, a] = null !== (i = Object.entries(A).find(e => {
+      let [o, a] = null !== (i = Object.entries(N).find(e => {
         let [t] = e;
         return t !== r
       })) && void 0 !== i ? i : [];
-      if (null != o && null != a) a.cancel(), O.play(), delete A[o], (0, _.Ym)(o.split(":")[0], t, n, e);
+      if (null != o && null != a) a.cancel(), O.play(), delete N[o], (0, _.Ym)(o.split(":")[0], t, n, e);
       else {
         (0, _._g)(e, t, n), m.play();
         let i = new s.sW(I, () => {
-          delete A[t], (0, _.Gd)(t, n)
+          delete N[t], (0, _.Gd)(t, n)
         });
-        A[t] = i, i.delay()
+        N[t] = i, i.delay()
       }
     }(t.name, i, n);
-    i === o && (N = [...N, t.name].slice(-1 * h), r().isEqual(N, T) ? (m.play(), S.stop(), N = [], (0, _.ME)(!l)) : S.start(E, () => N = []))
+    i === o && (A = [...A, t.name].slice(-1 * h), r().isEqual(A, T) ? (m.play(), S.stop(), A = [], (0, _.ME)(!l)) : S.start(E, () => A = []))
   }
 }
 
-function R(e) {
+function p(e) {
   let {
     completingUserId: t,
     waitingUserId: n,
     channelId: i
   } = e, r = f("".concat(t).concat(n), i, !0);
-  A[r] = new s.sW(550, () => {
-    delete A[r], (0, _.hu)(t, n, i)
-  }), A[r].delay()
+  N[r] = new s.sW(550, () => {
+    delete N[r], (0, _.hu)(t, n, i)
+  }), N[r].delay()
 }
 class g extends o.Z {
   _terminate() {
-    Object.values(A).forEach(e => e.cancel()), A = {}
+    Object.values(N).forEach(e => e.cancel()), N = {}
   }
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      VOICE_CHANNEL_EFFECT_SEND: p,
-      HIGH_FIVE_COMPLETE: R
+      VOICE_CHANNEL_EFFECT_SEND: R,
+      HIGH_FIVE_COMPLETE: p
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,

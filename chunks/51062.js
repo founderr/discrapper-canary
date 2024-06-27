@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i = n(470079),
@@ -21,8 +21,8 @@ var i = n(470079),
   f = n(377668),
   S = n(185923);
 
-function N(e, t, n) {
-  var N, A, m, O, p, R, g;
+function A(e, t, n) {
+  var A, N, m, O, R, p, g;
   let {
     channel: C,
     type: v
@@ -44,31 +44,31 @@ function N(e, t, n) {
     hidePersonalInformation: d.Z.hidePersonalInformation
   }), [C, v, U]), {
     activeCommand: w,
-    activeCommandOption: x
+    activeCommandOption: B
   } = (0, s.cj)([a.Z], () => ({
     activeCommand: a.Z.getActiveCommand(C.id),
     activeCommandOption: a.Z.getActiveOption(C.id)
-  })), B = (0, T.Z)({
+  })), x = (0, T.Z)({
     navId: "channel-autocomplete",
     scrollerRef: n,
     state: L,
     onFocus: e => Z.setSelectedIndex(e)
-  }), k = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentWord(), V = {
+  }), k = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), V = {
     ...e,
-    navigator: B,
+    navigator: x,
     activeCommand: w,
-    activeCommandOption: x,
-    canMentionUsers: null !== (p = null === (A = v.users) || void 0 === A ? void 0 : A.allowMentioning) && void 0 !== p && p,
+    activeCommandOption: B,
+    canMentionUsers: null !== (R = null === (N = v.users) || void 0 === N ? void 0 : N.allowMentioning) && void 0 !== R && R,
     canMentionEveryone: b,
     canMentionClyde: y,
     hidePersonalInformation: G,
     hideMentionDescription: v === l.I.RULES_INPUT,
     emojiIntention: v === l.I.RULES_INPUT ? S.Hz.COMMUNITY_CONTENT : S.Hz.CHAT,
-    currentWord: null !== (R = null == k ? void 0 : k.word) && void 0 !== R ? R : "",
+    currentWord: null !== (p = null == k ? void 0 : k.word) && void 0 !== p ? p : "",
     currentWordIsAtStart: (null == k ? void 0 : k.isAtStart) === !0,
-    optionText: null != x ? (0, o.KF)({
-      [x.name]: null !== (g = null === (m = e.editorRef.current) || void 0 === m ? void 0 : m.getCurrentCommandOptionValue()) && void 0 !== g ? g : []
-    }, x.name) : ""
+    optionText: null != B ? (0, o.KF)({
+      [B.name]: null !== (g = null === (m = e.editorRef.current) || void 0 === m ? void 0 : m.getCurrentCommandOptionValue()) && void 0 !== g ? g : []
+    }, B.name) : ""
   }, [Z] = i.useState(() => new I.Z(V));
   return i.useEffect(() => {
     Z.updateProps(V)
@@ -87,5 +87,5 @@ function N(e, t, n) {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [Z, null === (O = L.query) || void 0 === O ? void 0 : O.typeInfo]), [L, Z, B]
+  }, [Z, null === (O = L.query) || void 0 === O ? void 0 : O.typeInfo]), [L, Z, x]
 }

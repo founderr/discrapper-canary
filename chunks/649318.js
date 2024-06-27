@@ -37,9 +37,9 @@ var i, r, s, o, a = n(403644),
   h = n(259443),
   f = n(65154),
   S = n(436620);
-let N = new h.Y("SDP");
+let A = new h.Y("SDP");
 (s = i || (i = {})).AUDIO = "a", s.VIDEO = "v", (o = r || (r = {})).SENDRECV = "sendrecv", o.SENDONLY = "sendonly", o.RECVONLY = "recvonly", o.INACTIVE = "inactive";
-let A = "UDP/TLS/RTP/SAVPF";
+let N = "UDP/TLS/RTP/SAVPF";
 
 function m(e) {
   switch (e) {
@@ -76,7 +76,7 @@ function O(e, t, n) {
   }]
 }
 
-function p(e) {
+function R(e) {
   return T.write({
     version: 0,
     timing: {
@@ -104,7 +104,7 @@ function p(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     mid: t,
     type: n,
@@ -128,7 +128,7 @@ function R(e) {
     fmtp: [],
     payloads: a,
     port: 0,
-    protocol: A,
+    protocol: N,
     rtp: [{
       codec: "NULL",
       payload: a,
@@ -140,7 +140,7 @@ function R(e) {
   let {
     media: [h]
   } = T.parse(s);
-  if (h.type = n, h.protocol = A, h.payloads = a, h.setup = i, h.mid = t, h.rtcpMux = "rtcp-mux", h.direction = r, h.ssrcs = _, _.length > 0 && (null != d && (h.ssrcGroups = l()(_, 4).map(e => {
+  if (h.type = n, h.protocol = N, h.payloads = a, h.setup = i, h.mid = t, h.rtcpMux = "rtcp-mux", h.direction = r, h.ssrcs = _, _.length > 0 && (null != d && (h.ssrcGroups = l()(_, 4).map(e => {
       let t = e[0].id;
       return {
         semantics: "FID",
@@ -177,9 +177,9 @@ function R(e) {
         payload: a,
         rate: 9e4
       });
-      let N = "x-google-max-bitrate=".concat(u);
-      o === f.ad.H264 && (N += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f"), h.fmtp.push({
-        config: N,
+      let A = "x-google-max-bitrate=".concat(u);
+      o === f.ad.H264 && (A += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f"), h.fmtp.push({
+        config: A,
         payload: a
       }), h.rtcpFb = [{
         type: "ccm",
@@ -225,11 +225,11 @@ function g(e) {
     ssrcs: c,
     extensions: d
   } = e, E = [];
-  if (N.info("generateSessionDescription: ".concat(JSON.stringify(c))), "Firefox" === I().name) {
+  if (A.info("generateSessionDescription: ".concat(JSON.stringify(c))), "Firefox" === I().name) {
     let e = "answer" === t ? "passive" : "active";
     c.forEach(t => {
       let [i, c, I, T, h] = t;
-      if ("video" !== I || 0 !== l && 0 !== _) E.push(R({
+      if ("video" !== I || 0 !== l && 0 !== _) E.push(p({
         mid: h,
         type: I,
         setup: e,
@@ -251,7 +251,7 @@ function g(e) {
         let [t, n] = e;
         return O(n, t, "a")
       });
-    if (E.push(R({
+    if (E.push(p({
         mid: "audio",
         type: "audio",
         setup: e,
@@ -270,7 +270,7 @@ function g(e) {
         let [t, n] = e;
         return O(n, t, "v")
       });
-      E.push(R({
+      E.push(p({
         mid: "video",
         type: "video",
         setup: e,
@@ -287,7 +287,7 @@ function g(e) {
   }
   return new RTCSessionDescription({
     type: t,
-    sdp: p(E)
+    sdp: R(E)
   })
 }
 
@@ -315,7 +315,7 @@ function C(e) {
       mid: S
     } = e;
     "" !== T ? t = O(T, c, "audio" === h ? "a" : "v") : (t = [], "sendonly" === f ? f = "inactive" : "sendrecv" === f && (f = "recvonly"));
-    E.push(R({
+    E.push(p({
       mid: S,
       type: h,
       setup: I,
@@ -331,7 +331,7 @@ function C(e) {
     }))
   }), new RTCSessionDescription({
     type: t,
-    sdp: p(E)
+    sdp: R(E)
   })
 }
 
@@ -378,7 +378,7 @@ function L(e) {
         [f.ad.H264, f.ad.VP8, f.ad.VP9].forEach((t, n) => {
           let s = v(r, o, i, t, n);
           null != s && e.codecs.push(s)
-        }), "sendrecv" === a && (null != (n = null == s ? void 0 : s.find(e => "cname" === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == s ? void 0 : s.findLast(e => "cname" === e.attribute)) && (n.id === e.videoSSRC && N.warn("Unable to find a unique rtx SSRC!"), e.rtxSSRC = n.id))
+        }), "sendrecv" === a && (null != (n = null == s ? void 0 : s.find(e => "cname" === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == s ? void 0 : s.findLast(e => "cname" === e.attribute)) && (n.id === e.videoSSRC && A.warn("Unable to find a unique rtx SSRC!"), e.rtxSSRC = n.id))
     }
     return e
   }, {
@@ -403,13 +403,13 @@ function D(e) {
 }
 
 function M(e) {
-  if (!e.includes("a=fingerprint")) return N.error("Remote SDP does not include fingerprint!"), !1;
-  if (!e.includes("a=ice-ufrag")) return N.error("Remote SDP does not include ICE user name!"), !1;
-  if (!e.includes("a=ice-pwd")) return N.error("Remote SDP does not include ICE password!"), !1;
-  if (!e.includes("a=candidate")) return N.error("Remote SDP does not include ICE candidate!"), !1;
-  if (!e.includes("c=")) return N.error("Remote SDP does not include c-line!"), !1;
+  if (!e.includes("a=fingerprint")) return A.error("Remote SDP does not include fingerprint!"), !1;
+  if (!e.includes("a=ice-ufrag")) return A.error("Remote SDP does not include ICE user name!"), !1;
+  if (!e.includes("a=ice-pwd")) return A.error("Remote SDP does not include ICE password!"), !1;
+  if (!e.includes("a=candidate")) return A.error("Remote SDP does not include ICE candidate!"), !1;
+  if (!e.includes("c=")) return A.error("Remote SDP does not include c-line!"), !1;
   let t = e.split("\n").filter(e => e.startsWith("c=")).join().trim();
-  return !(t.split(" ").length < 3) || (N.error("Incorrect c-line: ".concat(t)), !1)
+  return !(t.split(" ").length < 3) || (A.error("Incorrect c-line: ".concat(t)), !1)
 }
 
 function P(e) {

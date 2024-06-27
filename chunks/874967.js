@@ -31,7 +31,7 @@ let S = l().memoize(e => {
   }
   return t ? _.Z.unsafe_rawColors.BLACK_500.css : _.Z.unsafe_rawColors.WHITE_500.css
 });
-class N extends r.PureComponent {
+class A extends r.PureComponent {
   render() {
     let e;
     let {
@@ -100,4 +100,4 @@ class N extends r.PureComponent {
     })
   }
 }
-t.Z = N
+t.Z = A

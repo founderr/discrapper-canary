@@ -4,7 +4,7 @@ n.d(t, {
     return m
   },
   Ih: function() {
-    return A
+    return N
   },
   Lz: function() {
     return O
@@ -48,12 +48,12 @@ function S(e) {
   }
 }
 
-function N(e, t) {
+function A(e, t) {
   return (0, r.cj)([_.Z, a.default], () => (0, E.Z)(_.Z, a.default, t, e), [e, t])
 }
 
-function A(e, t, n) {
-  let r = N(e, t),
+function N(e, t, n) {
+  let r = A(e, t),
     {
       notPlayable: s,
       isCurrentUser: o,
@@ -79,7 +79,7 @@ function A(e, t, n) {
 
 function m(e, t, n, r) {
   let s = null != r ? r : u.ZP.getName(t),
-    o = N(e, t),
+    o = A(e, t),
     {
       syncingWithUser: a,
       syncingWithParty: l,
@@ -90,7 +90,7 @@ function m(e, t, n, r) {
       startLoading: T,
       clearLoading: f
     } = S(o),
-    A = i.useCallback(() => {
+    N = i.useCallback(() => {
       T(), (0, I.Z)(o, h.kG.USER_ACTIVITY_SYNC, n).catch(f)
     }, [o, n, T, f]);
   return {
@@ -98,13 +98,13 @@ function m(e, t, n, r) {
     tooltip: (0, d.Z)(o, h.kG.USER_ACTIVITY_SYNC, s),
     disabled: !E && (_ || a || l),
     loading: E,
-    onClick: A,
+    onClick: N,
     spotifyData: o
   }
 }
 
 function O(e, t, n) {
-  let r = N(e, t),
+  let r = A(e, t),
     {
       notPlayable: s,
       syncingWithUser: o,

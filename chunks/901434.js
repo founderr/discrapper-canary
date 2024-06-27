@@ -17,11 +17,11 @@ t.Z = function(e) {
   var t, n;
   let {
     participants: p,
-    channel: g,
-    hasConnectPermission: C
-  } = e, I = (0, u.J)(g.guild_id), x = a.useCallback(() => {
-    I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
-  }, [g.id, g.guild_id, I]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, l.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, T]);
+    channel: C,
+    hasConnectPermission: g
+  } = e, I = (0, u.J)(C.guild_id), x = a.useCallback(() => {
+    I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id)
+  }, [C.id, C.guild_id, I]), T = p.filter(e => e.type === m.Ui.VOICE), N = 4 === T.length ? 2 : 3, v = (0, l.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [C.id, T]);
   return (0, i.jsxs)("div", {
     className: f.container,
     children: [(0, i.jsx)("div", {
@@ -31,7 +31,7 @@ t.Z = function(e) {
       },
       children: v.slice(0, 5).map(e => (0, i.jsx)(d.ZP, {
         participant: e,
-        channel: g,
+        channel: C,
         className: f.tile,
         paused: !0,
         inCall: !0,
@@ -42,13 +42,13 @@ t.Z = function(e) {
     }), (0, i.jsx)(s.Heading, {
       className: f.channelName,
       variant: "heading-xxl/semibold",
-      children: g.name
+      children: C.name
     }), (0, i.jsx)("div", {
       className: f.participantsRow,
       children: (0, i.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: (t = g, 0 === (n = T).length ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({
+        children: (t = C, 0 === (n = T).length ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({
           a: E(t, n[0])
         }) : 2 === n.length ? _.Z.Messages.CURRENTLY_IN_STAGE_2.format({
           a: E(t, n[0]),
@@ -60,12 +60,12 @@ t.Z = function(e) {
         }) : void 0)
       })
     }), (0, i.jsx)(s.Button, {
-      disabled: !C,
+      disabled: !g,
       className: f.joinButton,
-      color: C ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
+      color: g ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
       onClick: x,
       size: s.Button.Sizes.MEDIUM,
-      children: C ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
+      children: g ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
     })]
   })
 }

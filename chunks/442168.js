@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return C
   }
 });
 var i = n(735250),
@@ -31,19 +31,19 @@ let m = {
     duration: 1e3
   };
 
-function g(e) {
+function C(e) {
   let {
     stream: t,
     inPopout: n
   } = e, {
-    reducedMotion: g
-  } = a.useContext(r.Sf), C = (0, a.useRef)(null), I = u.n.getState().clipsButtonRef, x = (0, d.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
+    reducedMotion: C
+  } = a.useContext(r.Sf), g = (0, a.useRef)(null), I = u.n.getState().clipsButtonRef, x = (0, d.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
   a.useEffect(() => () => {
     (0, c.Gh)(x)
   }, [x]);
   let S = () => {
       var e;
-      let t = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+      let t = null === (e = g.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
       return null == t || n ? m : {
         width: t.width,
         height: t.height,
@@ -85,7 +85,7 @@ function g(e) {
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...g.enabled ? Z(e) : S()
+        ...C.enabled ? Z(e) : S()
       }),
       enter: e => [{
         opacity: 1,
@@ -94,7 +94,7 @@ function g(e) {
       }],
       leave: {
         opacity: 0,
-        ...!g.enabled && {
+        ...!C.enabled && {
           height: 0,
           width: 0,
           ...(() => {
@@ -105,7 +105,7 @@ function g(e) {
           })()
         }
       },
-      config: g.enabled ? E : f,
+      config: C.enabled ? E : f,
       onRest: (e, t) => {
         null != t.item && null != N.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp)
       }
@@ -113,7 +113,7 @@ function g(e) {
   return (0, l.useChain)([A, b], [0, .1], 3e3), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)("div", {
       className: p.hidden,
-      ref: C
+      ref: g
     }), M((e, t) => null != t && (0, i.jsx)(l.animated.div, {
       className: p.whiteFlash,
       style: e

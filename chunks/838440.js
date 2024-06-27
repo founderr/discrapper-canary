@@ -26,8 +26,8 @@ function T(e) {
     stickers: h,
     uploads: f,
     channel: S,
-    restrictMentions: N = !0,
-    respectCooldown: A = !0
+    restrictMentions: A = !0,
+    respectCooldown: N = !0
   } = e, m = d.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
     var t, n, u;
@@ -37,24 +37,24 @@ function T(e) {
       content: h,
       stickers: f,
       uploads: S,
-      channel: N,
-      restrictMentions: A,
+      channel: A,
+      restrictMentions: N,
       respectCooldown: m,
       userCanUsePremiumMessageLength: O,
-      resolve: p
+      resolve: R
     } = e;
     if (0 === h.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == f || 0 === f.length) && (null == S || 0 === S.length)) {
-      p({
+      R({
         valid: !1,
         failureReason: E.zYc.EMPTY_MESSAGE
       });
       return
     }
-    let R = O ? E.en1 : E.J6R;
-    if (h.length > R) {
-      if (O || null == N) {
+    let p = O ? E.en1 : E.J6R;
+    if (h.length > p) {
+      if (O || null == A) {
         ;
-        n = h.length, u = R, (0, r.openModal)(e => (0, i.jsx)(o.default, {
+        n = h.length, u = p, (0, r.openModal)(e => (0, i.jsx)(o.default, {
           title: I.Z.Messages.MESSAGE_TOO_LONG_HEADER,
           body: I.Z.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: n,
@@ -68,18 +68,18 @@ function T(e) {
         })
       } else s.Z.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
-        channel: N,
+        channel: A,
         content: h
       });
-      p({
+      R({
         valid: !1,
         failureReason: E.zYc.MESSAGE_TOO_LONG
       });
       return
     }
-    if (null != N) {
-      if (null != N.getGuildId() && m && l.Z.getSlowmodeCooldownGuess(N.id) > 0) {
-        p({
+    if (null != A) {
+      if (null != A.getGuildId() && m && l.Z.getSlowmodeCooldownGuess(A.id) > 0) {
+        R({
           valid: !1,
           failureReason: E.zYc.SLOWMODE_COOLDOWN
         });
@@ -92,16 +92,16 @@ function T(e) {
             animation: n
           }
           of c.$) {
-          let i = e(h, N, A);
+          let i = e(h, A, N);
           if (!1 !== i) {
             d({
               analyticsType: t,
-              channel: N,
-              onCancel: () => p({
+              channel: A,
+              onCancel: () => R({
                 valid: !1,
                 failureReason: E.zYc.SHOUTING_CANCELLED
               }),
-              onConfirm: () => p({
+              onConfirm: () => R({
                 valid: !0
               }),
               popoutText: i,
@@ -119,13 +119,13 @@ function T(e) {
         ...e
       }), {
         onCloseRequest: E.dG4
-      }), p({
+      }), R({
         valid: !1,
         failureReason: E.zYc.RATE_LIMITED
       });
       return
     }
-    p({
+    R({
       valid: !0
     })
   })({
@@ -135,8 +135,8 @@ function T(e) {
     stickers: h,
     uploads: f,
     channel: S,
-    restrictMentions: N,
-    respectCooldown: A,
+    restrictMentions: A,
+    respectCooldown: N,
     userCanUsePremiumMessageLength: m,
     resolve: e
   }))

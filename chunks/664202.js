@@ -34,21 +34,21 @@ let h = e => {
     {
       upsellSource: S
     } = (0, T.k)(),
-    N = (0, o.e7)([E.default], () => E.default.getCurrentUser());
-  s()(null != N, "currentUser should not be null");
-  let A = (0, _.Q)(),
-    m = (0, I.ZP)(N.id, r),
+    A = (0, o.e7)([E.default], () => E.default.getCurrentUser());
+  s()(null != A, "currentUser should not be null");
+  let N = (0, _.Q)(),
+    m = (0, I.ZP)(A.id, r),
     O = (0, I.ZP)(t.id, r);
   i.useEffect(() => {
-    null == m && (0, l.In)(N.id)
-  }, [m, N]);
-  let p = f !== c.C5.DEFAULT && (null == N ? void 0 : N.id) !== t.id && !A && !(null != S && S !== n),
-    R = p && (null == N ? void 0 : N.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
-    g = p && null != m && null == m.profileEffectId && (null == O ? void 0 : O.profileEffectId) != null,
-    [C, v] = (0, d.U)((R, []), void 0, !0);
+    null == m && (0, l.In)(A.id)
+  }, [m, A]);
+  let R = f !== c.C5.DEFAULT && (null == A ? void 0 : A.id) !== t.id && !N && !(null != S && S !== n),
+    p = R && (null == A ? void 0 : A.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+    g = R && null != m && null == m.profileEffectId && (null == O ? void 0 : O.profileEffectId) != null,
+    [C, v] = (0, d.U)((p, []), void 0, !0);
   return {
     shouldShow: C === a.z.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
-    canShowAvatarDecorationUpsell: R,
+    canShowAvatarDecorationUpsell: p,
     canShowProfileEffectUpsell: g,
     onDismiss: v
   }

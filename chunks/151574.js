@@ -14,12 +14,12 @@ var i, r, s = n(735250),
   h = n(906732),
   f = n(570220),
   S = n(28546),
-  N = n(285651),
-  A = n(926491),
+  A = n(285651),
+  N = n(926491),
   m = n(373228),
   O = n(378233),
-  p = n(419922),
-  R = n(490095),
+  R = n(419922),
+  p = n(490095),
   g = n(652136),
   C = n(695346),
   v = n(806519),
@@ -32,9 +32,9 @@ var i, r, s = n(735250),
 let b = (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   G = (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
   w = 2 * G + (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
-  x = () => Promise.resolve();
+  B = () => Promise.resolve();
 
-function B(e) {
+function x(e) {
   let {
     isFocused: t,
     isHidden: n,
@@ -66,12 +66,12 @@ function B(e) {
       children: (0, s.jsx)("div", {
         className: U.maskBackground
       })
-    }), (0, s.jsx)(p.ZP, {
+    }), (0, s.jsx)(R.ZP, {
       maskAsset: !0,
       size: G,
       sticker: o,
       className: U.__invalid_sticker
-    }), i !== N.eb.SENDABLE && (0, s.jsx)(R.Z, {
+    }), i !== A.eb.SENDABLE && (0, s.jsx)(p.Z, {
       size: 14
     })]
   })
@@ -85,7 +85,7 @@ t.Z = o.memo(function(e) {
     onSelectSticker: a,
     stickerIconVisible: d = !1,
     submitButtonVisible: E = !1
-  } = e, p = o.useContext(f.ZP), [R, v] = o.useState(null), [b, G] = o.useState(!1), [k, V] = o.useState(null), Z = (0, S.Iu)(e => null != e.activeView), H = o.useRef(null), [F, Y] = o.useState(""), [j, W] = o.useState(""), [K, z] = o.useState(!1), [q, X] = o.useState(!1), Q = (0, D.Z)(F, b, i), {
+  } = e, R = o.useContext(f.ZP), [p, v] = o.useState(null), [b, G] = o.useState(!1), [k, V] = o.useState(null), Z = (0, S.Iu)(e => null != e.activeView), H = o.useRef(null), [F, Y] = o.useState(""), [j, W] = o.useState(""), [K, z] = o.useState(!1), [q, X] = o.useState(!1), Q = (0, D.Z)(F, b, i), {
     analyticsLocations: J
   } = (0, h.ZP)(T.Z.EXPRESSION_SUGGESTIONS), {
     handleTextChange: $,
@@ -107,12 +107,12 @@ t.Z = o.memo(function(e) {
           v(null), null === (i = n.current) || void 0 === i || i.focus()
         }
       };
-    return p.addListener("text-changed", $), p.addListener("autocomplete-visibility-change", e), p.addListener("selection-changed", t), () => {
-      p.removeListener("text-changed", $), p.removeListener("autocomplete-visibility-change", e), p.removeListener("selection-changed", t)
+    return R.addListener("text-changed", $), R.addListener("autocomplete-visibility-change", e), R.addListener("selection-changed", t), () => {
+      R.removeListener("text-changed", $), R.removeListener("autocomplete-visibility-change", e), R.removeListener("selection-changed", t)
     }
-  }, [$, n, p]), o.useLayoutEffect(() => {
-    null == R && V(null)
-  }, [R]);
+  }, [$, n, R]), o.useLayoutEffect(() => {
+    null == p && V(null)
+  }, [p]);
   let [et, en] = o.useState(!1);
   o.useLayoutEffect(() => {
     requestAnimationFrame(() => {
@@ -139,8 +139,8 @@ t.Z = o.memo(function(e) {
       }, [s]), E = (0, _.ZP)({
         id: "expression-suggestions-stickers",
         isEnabled: !0,
-        scrollToStart: x,
-        scrollToEnd: x,
+        scrollToStart: B,
+        scrollToEnd: B,
         orientation: c.hy.HORIZONTAL,
         setFocus: d,
         useVirtualFocus: !0
@@ -174,7 +174,7 @@ t.Z = o.memo(function(e) {
       editorRef: n,
       hasStickerResults: ei,
       shouldRenderSuggestions: er,
-      focusedSuggestionType: R,
+      focusedSuggestionType: p,
       setFocusedSuggestionType: v,
       setHasDismissed: G,
       setFocusedStickerListItem: V,
@@ -185,22 +185,22 @@ t.Z = o.memo(function(e) {
         if (L.default.track(P.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
             sticker_id: e.id,
             suggestion_trigger: j
-          }), t === N.eb.SENDABLE) G(!0), a(e, m.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y("");
+          }), t === A.eb.SENDABLE) G(!0), a(e, m.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), Y("");
         else if ((0, O.jl)(e)) {
-          let t = A.Z.getStickerPack(e.pack_id);
+          let t = N.Z.getStickerPack(e.pack_id);
           null != t && (0, g.Z)({
             stickerPack: t,
             analyticsLocations: J
           })
         }
-        p.emit("sticker-suggestions-hidden")
+        R.emit("sticker-suggestions-hidden")
       }
     },
     ea = o.useRef([]),
     el = o.useRef(!1);
   o.useEffect(() => {
-    er && (ea.current = Q), er !== el.current && (p.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.Tk)(F), W(F))), el.current = er
-  }, [p, er, Q, F]);
+    er && (ea.current = Q), er !== el.current && (R.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.Tk)(F), W(F))), el.current = er
+  }, [R, er, Q, F]);
   let eu = !er,
     e_ = er ? Q : ea.current;
   return (0, s.jsx)(h.Gt, {
@@ -237,7 +237,7 @@ t.Z = o.memo(function(e) {
                   t.current = e
                 },
                 onMouseLeave: () => {
-                  null == R && V(null)
+                  null == p && V(null)
                 },
                 tabIndex: eu ? -1 : n,
                 ...i,
@@ -246,7 +246,7 @@ t.Z = o.memo(function(e) {
                     sticker: n,
                     sendability: i
                   } = e;
-                  return (0, s.jsx)(B, {
+                  return (0, s.jsx)(x, {
                     isFocused: k === "".concat(t),
                     isHidden: eu,
                     sendability: i,

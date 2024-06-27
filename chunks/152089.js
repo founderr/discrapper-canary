@@ -34,11 +34,11 @@ function _(e) {
     hidePersonalInformation: h,
     type: f,
     emojiIntention: S,
-    editorRef: N,
-    onSendMessage: A,
+    editorRef: A,
+    onSendMessage: N,
     onSendSticker: m,
     setValue: O
-  } = e, p = {
+  } = e, R = {
     mentions: {
       channel: l.nS.DENY,
       global: l.VV.DENY,
@@ -53,25 +53,25 @@ function _(e) {
     hidePersonalInformation: !0 === h,
     chatInputType: f,
     emojiIntention: S,
-    sendMessage: A,
+    sendMessage: N,
     sendSticker: m,
     insertText: (e, t) => {
       var n;
-      null === (n = N.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
+      null === (n = A.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
     },
     replaceText: (e, t) => {
       O(e, null != t ? t : (0, s.JM)(e))
     },
     getCommandOptionValues: () => {
       var e;
-      return null === (e = N.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
+      return null === (e = A.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
     }
   };
   if (null != n) {
     let e = (0, r.$z)(n);
-    e.canMentionChannels && (p.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (p.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (p.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (p.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), p.hideMentionDescription = !0
-  } else u && (p.mentions.channel = l.nS.ALLOW_SELECTABLE), a && (p.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (p.mentions.user = l.h3.ALLOW_CHANNEL), _ && (p.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), c && (p.mentions.clyde = l.cz.ALLOW);
-  return (null === (t = f.commands) || void 0 === t ? void 0 : t.enabled) && (d ? p.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : p.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (p.allowedChannelTypes = n.channelTypes), p
+    e.canMentionChannels && (R.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (R.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (R.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (R.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), R.hideMentionDescription = !0
+  } else u && (R.mentions.channel = l.nS.ALLOW_SELECTABLE), a && (R.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (R.mentions.user = l.h3.ALLOW_CHANNEL), _ && (R.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), c && (R.mentions.clyde = l.cz.ALLOW);
+  return (null === (t = f.commands) || void 0 === t ? void 0 : t.enabled) && (d ? R.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : R.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (R.allowedChannelTypes = n.channelTypes), R
 }
 
 function c(e) {
@@ -101,8 +101,8 @@ function d(e) {
     optionText: d
   } = e, E = null;
   for (let e of a.R) {
-    var I, T, h, f, S, N;
-    let A = a.W[e];
+    var I, T, h, f, S, A;
+    let N = a.W[e];
     if (e === l.eq.GIFS || e === l.eq.CHOICES) {
       if (i.commands === l.L8.OLD_BUILT_INS) {
         if (c({
@@ -115,7 +115,7 @@ function d(e) {
           })) {
           E = {
             type: e,
-            typeInfo: A,
+            typeInfo: N,
             query: _
           };
           break
@@ -129,7 +129,7 @@ function d(e) {
           options: i
         })) return {
         type: e,
-        typeInfo: A,
+        typeInfo: N,
         query: d
       }
     } else if (e === l.eq.COMMANDS && i.commands !== l.L8.OLD_BUILT_INS) {
@@ -143,8 +143,8 @@ function d(e) {
         })) {
         E = {
           type: e,
-          typeInfo: A,
-          query: _.substring(null !== (T = null === (I = A.sentinel) || void 0 === I ? void 0 : I.length) && void 0 !== T ? T : 0)
+          typeInfo: N,
+          query: _.substring(null !== (T = null === (I = N.sentinel) || void 0 === I ? void 0 : I.length) && void 0 !== T ? T : 0)
         };
         break
       }
@@ -159,7 +159,7 @@ function d(e) {
         })) {
         E = {
           type: e,
-          typeInfo: A,
+          typeInfo: N,
           query: _
         };
         break
@@ -175,8 +175,8 @@ function d(e) {
         })) {
         E = {
           type: e,
-          typeInfo: A,
-          query: r.substring(null !== (f = null === (h = A.sentinel) || void 0 === h ? void 0 : h.length) && void 0 !== f ? f : 0)
+          typeInfo: N,
+          query: r.substring(null !== (f = null === (h = N.sentinel) || void 0 === h ? void 0 : h.length) && void 0 !== f ? f : 0)
         };
         break
       }
@@ -190,8 +190,8 @@ function d(e) {
       })) {
       E = {
         type: e,
-        typeInfo: A,
-        query: r.substring(null !== (N = null === (S = A.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== N ? N : 0)
+        typeInfo: N,
+        query: r.substring(null !== (A = null === (S = N.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== A ? A : 0)
       };
       break
     }

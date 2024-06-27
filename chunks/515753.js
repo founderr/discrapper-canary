@@ -19,8 +19,8 @@ var i = n(735250),
   p = n(481060),
   _ = n(493683),
   f = n(239091),
-  g = n(420660),
-  m = n(702321),
+  m = n(420660),
+  g = n(702321),
   C = n(201895),
   I = n(43267),
   E = n(933557),
@@ -93,8 +93,8 @@ class Q extends l.Component {
       onClick: h,
       className: _,
       role: f,
-      "aria-posinset": g,
-      "aria-setsize": m,
+      "aria-posinset": m,
+      "aria-setsize": g,
       ...C
     } = this.props;
     return (0, i.jsx)(G.Z, {
@@ -107,8 +107,8 @@ class Q extends l.Component {
         within: !0,
         ...z
       },
-      "aria-posinset": g,
-      "aria-setsize": m,
+      "aria-posinset": m,
+      "aria-setsize": g,
       children: (0, i.jsx)(p.Interactive, {
         as: "div",
         selected: t,
@@ -182,10 +182,10 @@ function J(e) {
     ef = () => {
       _.Z.preload(H.ME, t.id)
     },
-    eg = e => {
+    em = e => {
       e.stopPropagation()
     },
-    em = e => {
+    eg = e => {
       if (e.target === e.currentTarget) {
         var t;
         null === (t = $.current) || void 0 === t || t.click()
@@ -242,7 +242,7 @@ function J(e) {
       };
       if (t.isSystemDM()) return (0, i.jsx)("div", {
         className: W.subtext,
-        children: (0, m.Z)(t.id) ? F.Z.Messages.SYSTEM_DM_CHANGELOG_STATUS : F.Z.Messages.SYSTEM_DM_ACTIVITY_TEXT
+        children: (0, g.Z)(t.id) ? F.Z.Messages.SYSTEM_DM_CHANGELOG_STATUS : F.Z.Messages.SYSTEM_DM_ACTIVITY_TEXT
       });
       if (t.isMultiUserDM()) return (0, i.jsx)("div", {
         className: W.subtext,
@@ -285,7 +285,7 @@ function J(e) {
       });
       o()(null != d, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
       let n = null;
-      return !d.isSystemUser() && (n = (0, g.Z)(S) ? H.Skl.STREAMING : y), (0, i.jsx)(Y, {
+      return !d.isSystemUser() && (n = (0, m.Z)(S) ? H.Skl.STREAMING : y), (0, i.jsx)(Y, {
         ...ei,
         size: p.AvatarSizes.SIZE_32,
         src: et,
@@ -337,7 +337,7 @@ function J(e) {
             [W.interactiveSelected]: s
           }),
           as: "div",
-          onClick: em,
+          onClick: eg,
           muted: el,
           selected: s,
           children: [(0, i.jsx)(c.rU, {
@@ -368,7 +368,7 @@ function J(e) {
           }), es ? (0, i.jsx)(q, {}) : null, (0, i.jsx)(K, {
             "aria-label": ex ? F.Z.Messages.LEAVE_GROUP_DM : F.Z.Messages.CLOSE_DM,
             onClick: ex ? eI : e_,
-            onMouseDown: eg
+            onMouseDown: em
           })]
         })
       })

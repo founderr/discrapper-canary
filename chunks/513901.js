@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return A
+    return m
   }
 });
 var n = t(735250),
@@ -20,27 +20,27 @@ var n = t(735250),
   N = t(689938),
   C = t(912768);
 
-function A(e) {
+function m(e) {
   let {
     user: s,
     guild: t,
     className: i,
-    sectionTitle: A,
-    forcedDivider: m = !1,
-    withTutorial: O = !1,
-    showBorder: g = !1,
+    sectionTitle: m,
+    forcedDivider: A = !1,
+    withTutorial: g = !1,
+    showBorder: O = !1,
     isTryItOutFlow: h = !1,
-    initialSelectedEffectId: R
-  } = e, p = (0, E.Kg)(s, t), x = _.ZP.canUsePremiumProfileCustomization(s), {
+    initialSelectedEffectId: p
+  } = e, R = (0, E.Kg)(s, t), x = _.ZP.canUsePremiumProfileCustomization(s), {
     analyticsLocations: M
   } = (0, l.ZP)(), {
     pendingProfileEffectId: D,
     errors: f
   } = (0, E.bd)(t), L = a.useCallback(() => (0, c.H)({
     analyticsLocations: M,
-    initialSelectedEffectId: R,
+    initialSelectedEffectId: p,
     guild: t
-  }), [M, R, t]);
+  }), [M, p, t]);
   a.useEffect(() => {
     x && d.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
       type: I.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
@@ -48,14 +48,14 @@ function A(e) {
     })
   }, [x, M]);
   let P = null != t,
-    Z = h || void 0 !== D ? null != D : null != p,
-    v = O ? o.ShinyButton : o.Button;
+    Z = h || void 0 !== D ? null != D : null != R,
+    v = g ? o.ShinyButton : o.Button;
   return (0, n.jsx)(u.Z, {
-    forcedDivider: m,
+    forcedDivider: A,
     borderType: T.Y.PREMIUM,
     hasBackground: !0,
-    title: A,
-    showBorder: g,
+    title: m,
+    showBorder: O,
     errors: f,
     className: i,
     children: (0, n.jsxs)("div", {
@@ -64,7 +64,7 @@ function A(e) {
         size: o.Button.Sizes.SMALL,
         onClick: L,
         className: r()({
-          [C.buttonHighlighted]: O
+          [C.buttonHighlighted]: g
         }),
         children: N.Z.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
       }), Z && (0, n.jsx)(o.Button, {
@@ -73,7 +73,7 @@ function A(e) {
         look: o.Button.Looks.LINK,
         size: o.Button.Sizes.SMALL,
         onClick: function() {
-          (0, E.s6)(null, p, t)
+          (0, E.s6)(null, R, t)
         },
         children: P ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
       })]

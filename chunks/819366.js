@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(484459),
   f = n(103575),
   S = n(592125),
-  N = n(271383),
-  A = n(430824),
+  A = n(271383),
+  N = n(430824),
   m = n(699516),
   O = n(594174),
-  p = n(5192),
-  R = n(51144),
+  R = n(5192),
+  p = n(51144),
   g = n(377668);
 
 function C(e) {
@@ -80,7 +80,7 @@ function v(e) {
         guildId: U
       })
     })
-  }, G = R.ZP.useName(P), w = (0, l.e7)([S.Z, N.ZP, m.Z], () => p.ZP.getNickname(U, s, P)), x = A.Z.getGuild(U), B = (0, E.Ib)(x, y) && r === g.fL ? g.jM : null;
+  }, G = p.ZP.useName(P), w = (0, l.e7)([S.Z, A.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), B = N.Z.getGuild(U), x = (0, E.Ib)(B, y) && r === g.fL ? g.jM : null;
   if (null == P) return (0, i.jsx)(C, {
     userId: I,
     className: t,
@@ -89,7 +89,7 @@ function v(e) {
   let k = e => (0, i.jsx)(T.Z, {
     className: t,
     onContextMenu: b,
-    color: B,
+    color: x,
     ...e,
     children: "@".concat(null != w ? w : G)
   });

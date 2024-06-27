@@ -27,7 +27,7 @@ function S() {
     hasPermission: h
   })
 }
-class N extends(o = a.ZP.Store) {
+class A extends(o = a.ZP.Store) {
   initialize() {
     this.waitFor(d.Z, c.Z, E.Z, I.Z)
   }
@@ -38,12 +38,12 @@ class N extends(o = a.ZP.Store) {
     return h
   }
 }
-s = "PermissionVADStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
+s = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(l.Z, {
+}) : i[r] = s, t.Z = new A(l.Z, {
   RTC_CONNECTION_STATE: S,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: S,
   AUDIO_SET_MODE: S,

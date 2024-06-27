@@ -21,12 +21,12 @@ var r = n(496532),
   h = n(775101),
   f = n(933632),
   S = n(158188),
-  N = n(66334),
-  A = n(215635),
+  A = n(66334),
+  N = n(215635),
   m = n(718572),
   O = n(496223),
-  p = n(846262),
-  R = n(926372),
+  R = n(846262),
+  p = n(926372),
   g = n(116175);
 let C = e => {
   let {
@@ -43,7 +43,7 @@ let C = e => {
         ...v
       });
     case g.ZD.WATER_DROP:
-      return (0, i.jsx)(p.l, {
+      return (0, i.jsx)(R.l, {
         primaryTintColor: n,
         ...v
       });
@@ -138,19 +138,19 @@ let C = e => {
         ...v
       });
     case g.ZD.SOUND:
-      return (0, i.jsx)(N.J, {
+      return (0, i.jsx)(A.J, {
         primaryTintColor: n,
         secondaryTintColor: C,
         ...v
       });
     case g.ZD.SUN:
-      return (0, i.jsx)(A.O, {
+      return (0, i.jsx)(N.O, {
         primaryTintColor: n,
         secondaryTintColor: C,
         ...v
       });
     case g.ZD.WIND:
-      return (0, i.jsx)(R.z, {
+      return (0, i.jsx)(p.z, {
         primaryTintColor: n,
         secondaryTintColor: C,
         ...v

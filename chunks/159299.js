@@ -13,9 +13,9 @@ var i, a = n(392711),
   _ = n(700785),
   f = n(709054),
   E = n(51144),
-  g = n(981631);
+  C = n(981631);
 
-function C(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -116,16 +116,16 @@ class x {
       s = p.default.getCurrentUser(),
       r = (null == l ? void 0 : l.id) === (null == s ? void 0 : s.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
       o = null != l && null != t && _.BT({
-        permission: g.Plq.VIEW_CHANNEL,
+        permission: C.Plq.VIEW_CHANNEL,
         user: l,
         context: t
       }),
-      u = r !== g.Skl.OFFLINE && r !== g.Skl.INVISIBLE && r !== g.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
+      u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
       m = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(l);
     return [u, null == m ? void 0 : m.toLowerCase(), o]
   }
   constructor(e, t, n) {
-    C(this, "guildId", void 0), C(this, "parentId", void 0), C(this, "threadId", void 0), C(this, "version", void 0), C(this, "sections", void 0), C(this, "allUserIds", void 0), this.guildId = e, this.parentId = t, this.threadId = n, this.version = 0, this.sections = {}, this.allUserIds = new Set
+    g(this, "guildId", void 0), g(this, "parentId", void 0), g(this, "threadId", void 0), g(this, "version", void 0), g(this, "sections", void 0), g(this, "allUserIds", void 0), this.guildId = e, this.parentId = t, this.threadId = n, this.version = 0, this.sections = {}, this.allUserIds = new Set
   }
 }
 
@@ -175,7 +175,7 @@ class S extends(i = s.ZP.Store) {
     return null !== (a = null == s ? void 0 : s.canViewChannel) && void 0 !== a && a
   }
 }
-C(S, "displayName", "ThreadMemberListStore"), t.Z = new S(r.Z, {
+g(S, "displayName", "ThreadMemberListStore"), t.Z = new S(r.Z, {
   CONNECTION_OPEN: function() {
     I = {}
   },

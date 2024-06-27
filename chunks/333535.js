@@ -21,7 +21,7 @@ var i = n(735250),
 function E(e) {
   let {
     threadId: t
-  } = e, n = (0, s.e7)([c.Z], () => c.Z.getChannel(t)), E = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)), g = a.useCallback(() => {
+  } = e, n = (0, s.e7)([c.Z], () => c.Z.getChannel(t)), E = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)), C = a.useCallback(() => {
     null != n && null != E && ((0, o.yw)(m.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
     }), (0, l.J)((0, u.EO)(n, E)))
@@ -45,7 +45,7 @@ function E(e) {
       }), (0, i.jsxs)(r.Button, {
         className: f.sharePromptCta,
         innerClassName: f.ctaContent,
-        onClick: g,
+        onClick: C,
         children: [(0, i.jsx)(r.LinkIcon, {
           color: "currentColor",
           size: "xs"

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return R
+    return p
   }
 });
 var n = t(735250),
@@ -19,16 +19,16 @@ var n = t(735250),
   I = t(296533),
   N = t(901750),
   C = t(112863),
-  A = t(701157),
-  m = t(912152),
-  O = t(615603),
-  g = t(474936),
+  m = t(701157),
+  A = t(912152),
+  g = t(615603),
+  O = t(474936),
   h = t(703079);
 
-function R(e) {
+function p(e) {
   let {
     premiumSubscription: s
-  } = e, t = (0, i.e7)([T.Z], () => T.Z.boostSlots), R = a.useMemo(() => Object.values(t), [t]), p = (0, i.e7)([u.default], () => u.default.getCurrentUser()), x = S.ZP.isPremium(p, g.p9.TIER_2), M = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, i.e7)([E.ZP], () => E.ZP.getFlattenedGuildIds()), f = M.length > 0 || D.length > 0, L = R.length > 0, P = a.useMemo(() => R.some(e => null != e.premiumGuildSubscription), [R]), Z = (0, i.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()), v = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
+  } = e, t = (0, i.e7)([T.Z], () => T.Z.boostSlots), p = a.useMemo(() => Object.values(t), [t]), R = (0, i.e7)([u.default], () => u.default.getCurrentUser()), x = S.ZP.isPremium(R, O.p9.TIER_2), M = (0, i.e7)([_.Z], () => _.Z.affinities), D = (0, i.e7)([E.ZP], () => E.ZP.getFlattenedGuildIds()), f = M.length > 0 || D.length > 0, L = p.length > 0, P = a.useMemo(() => p.some(e => null != e.premiumGuildSubscription), [p]), Z = (0, i.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()), v = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
   return (0, n.jsxs)("div", {
     children: [(0, n.jsx)(r.oQ, {
       className: h.blockedPaymentsWarning
@@ -37,7 +37,7 @@ function R(e) {
       hasAppliedGuildBoosts: P,
       isUserPremiumTier2: x,
       subscriptionIsPausedOrPausePending: v
-    }), (0, n.jsx)(m.Z, {
+    }), (0, n.jsx)(A.Z, {
       hasAppliedGuildBoosts: P,
       isUserPremiumTier2: x,
       hasGuildAffinitiesOrInGuild: f,
@@ -48,9 +48,9 @@ function R(e) {
     }) : (0, n.jsx)(I.Z, {
       guildBoostSlots: t,
       premiumSubscription: s
-    }), (0, n.jsx)(O.Z, {
-      guildBoostSlots: R
-    }), (0, n.jsx)(A.Z, {
+    }), (0, n.jsx)(g.Z, {
+      guildBoostSlots: p
+    }), (0, n.jsx)(m.Z, {
       hasAppliedGuildBoosts: P,
       subscriptionIsPausedOrPausePending: v
     }), (0, n.jsx)(c.Z, {

@@ -42,11 +42,11 @@ function h(e) {
 function f(e) {
   var t, n, h, f, S;
   let {
-    contentDisplay: N,
-    fadeInOut: A = !1,
+    contentDisplay: A,
+    fadeInOut: N = !1,
     ...m
   } = e, O = {}, {
-    analyticsLocations: p
+    analyticsLocations: R
   } = (0, c.ZP)();
   r.Children.forEach(m.children, (e, t) => {
     O[e.props.id] = {
@@ -56,17 +56,17 @@ function f(e) {
       index: t
     }
   });
-  let R = m.activeSlide,
+  let p = m.activeSlide,
     g = (0, _.Z)(m.activeSlide);
-  let C = null !== (t = m.directionOverride) && void 0 !== t ? t : (f = null != g ? O[g] : null, S = O[R], null == f ? null : f.index > S.index ? "backwards" : f.index < S.index ? "forwards" : null),
+  let C = null !== (t = m.directionOverride) && void 0 !== t ? t : (f = null != g ? O[g] : null, S = O[p], null == f ? null : f.index > S.index ? "backwards" : f.index < S.index ? "forwards" : null),
     {
       reducedMotion: v
     } = r.useContext(l.S),
     L = r.useContext(d.Z),
-    D = O[R].impressionName,
+    D = O[p].impressionName,
     M = {
-      ...O[R].impressionProperties,
-      location_stack: p
+      ...O[p].impressionProperties,
+      location_stack: R
     };
   L({
     type: o.ImpressionTypes.MODAL,
@@ -80,7 +80,7 @@ function f(e) {
     ref: P,
     width: y = 0,
     height: U = 0
-  } = (0, u.Z)(R), b = {
+  } = (0, u.Z)(p), b = {
     ...I,
     ...m.springConfig,
     ...v.enabled ? {
@@ -91,7 +91,7 @@ function f(e) {
     width: null !== (n = m.width) && void 0 !== n ? n : y,
     height: U,
     config: b
-  }), w = (0, s.useTransition)(R, {
+  }), w = (0, s.useTransition)(p, {
     immediate: null == g,
     value: 0,
     from: {
@@ -108,10 +108,10 @@ function f(e) {
       let {
         item: n
       } = t;
-      n === R && null != m.onSlideReady && m.onSlideReady(n)
+      n === p && null != m.onSlideReady && m.onSlideReady(n)
     }
-  }), x = (0, E.Z)(C), {
-    width: B,
+  }), B = (0, E.Z)(C), {
+    width: x,
     centered: k = !0
   } = m, V = a.tq ? "100%" : G.width.to(e => Math.round(e)), Z = a.tq ? "100%" : G.height.to(e => Math.round(e)), H = a.tq ? {} : k ? {
     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
@@ -135,18 +135,18 @@ function f(e) {
         opacity: e.value.to(e => 1 - Math.abs(e))
       };
       return (0, i.jsx)(s.animated.div, {
-        ref: t === R ? P : null,
+        ref: t === p ? P : null,
         style: {
           position: "absolute",
-          display: N,
+          display: A,
           flexDirection: "column",
           backfaceVisibility: "hidden",
-          width: a.tq ? "100%" : B,
+          width: a.tq ? "100%" : x,
           ...H,
           ...v.enabled ? o : {
-            left: e.value.to(T("left", x)),
-            right: e.value.to(T("right", x)),
-            ...A && o
+            left: e.value.to(T("left", B)),
+            right: e.value.to(T("right", B)),
+            ...N && o
           }
         },
         children: O[t].children

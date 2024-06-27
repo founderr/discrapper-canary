@@ -53,6 +53,6 @@ function I(e) {
     h = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(I, T, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
     f = null != h && _.$I.has(h) ? null : null != n ? n : (0, u.DK)(E),
     S = d(E.id),
-    N = d(E.id, f);
-  null == f ? (r(t, null, i, null != S ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == c || c()) : null != N ? (r(t, f, i, null != S ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == c || c()) : s(E, f)
+    A = d(E.id, f);
+  null == f ? (r(t, null, i, null != S ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == c || c()) : null != A ? (r(t, f, i, null != S ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == c || c()) : s(E, f)
 }(i = r || (r = {}))[i.SERIES = 0] = "SERIES", i[i.RECURRENCE = 1] = "RECURRENCE"

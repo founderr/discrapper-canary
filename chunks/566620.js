@@ -28,7 +28,7 @@ n.d(t, {
     return U
   },
   sN: function() {
-    return B
+    return x
   },
   tg: function() {
     return H
@@ -37,7 +37,7 @@ n.d(t, {
     return V
   },
   w1: function() {
-    return x
+    return B
   }
 }), n(47120);
 var i = n(990547),
@@ -56,12 +56,12 @@ var i = n(990547),
   h = n(314897),
   f = n(592125),
   S = n(944486),
-  N = n(594174),
-  A = n(823379),
+  A = n(594174),
+  N = n(823379),
   m = n(573261),
   O = n(867176),
-  p = n(317381),
-  R = n(844797),
+  R = n(317381),
+  p = n(844797),
   g = n(672181),
   C = n(917107),
   v = n(981631),
@@ -70,8 +70,8 @@ var i = n(990547),
 
 function M(e, t, n) {
   let i = h.default.getId(),
-    r = p.ZP.getSelfEmbeddedActivityForChannel(e),
-    o = p.ZP.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
+    r = R.ZP.getSelfEmbeddedActivityForChannel(e),
+    o = R.ZP.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
   null != r ? y({
     channelId: e,
     applicationId: r.applicationId,
@@ -88,7 +88,7 @@ async function P(e) {
   let r = f.Z.getChannel(e),
     o = null !== (t = null == r ? void 0 : r.getGuildId()) && void 0 !== t ? t : void 0;
   if (null == o && !(null !== (n = null == r ? void 0 : r.isPrivate()) && void 0 !== n && n)) return;
-  let a = p.ZP.getSelfEmbeddedActivityForChannel(e);
+  let a = R.ZP.getSelfEmbeddedActivityForChannel(e);
   if (null === a) return;
   let l = h.default.getSessionId();
   try {
@@ -96,10 +96,10 @@ async function P(e) {
       type: "EMBEDDED_ACTIVITY_LAUNCH_START",
       embeddedActivity: a
     });
-    let t = p.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === a.applicationId),
+    let t = R.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === a.applicationId),
       n = L.Yq.includes(a.applicationId),
       u = (null == r ? void 0 : r.isPrivate()) && (0, O.WS)(r, !t, "EmbeddedActivitiesActionCreators#launchEmbeddedActivity");
-    if (!t && ((0, R.TX)(e, a.applicationId, S.Z, f.Z) || n || u)) {
+    if (!t && ((0, p.TX)(e, a.applicationId, S.Z, f.Z) || n || u)) {
       let t;
       try {
         n && (t = await (0, c.ZP)(e, a.applicationId))
@@ -154,7 +154,7 @@ function y(e) {
     channelId: i,
     applicationId: r,
     showFeedback: o = !0
-  } = e, l = p.ZP.getSelfEmbeddedActivityForChannel(i);
+  } = e, l = R.ZP.getSelfEmbeddedActivityForChannel(i);
   s.Z.dispatch({
     type: "EMBEDDED_ACTIVITY_CLOSE",
     channelId: i,
@@ -164,8 +164,8 @@ function y(e) {
     showFeedback: o
   });
   let u = E.Z.getSelectedParticipantId(i),
-    _ = null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  if (null != p.ZP.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != _ && "" !== _) u === r && a.Z.selectParticipant(i, null)
+    _ = null === (n = A.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  if (null != R.ZP.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != _ && "" !== _) u === r && a.Z.selectParticipant(i, null)
 }
 
 function U(e, t) {
@@ -232,14 +232,14 @@ let w = (e, t, n) => {
   } = n;
   (i === e || null == i && null == e) && t()
 };
-async function x(e) {
+async function B(e) {
   var t, n, r, o;
   let {
     guildId: a,
     force: l = !1
-  } = e, u = p.ZP.getShelfActivities(a), _ = u.map(e => d.Z.getApplication(e.application_id)).filter(A.lm);
-  if (!l && !p.ZP.shouldFetchShelf(a)) {
-    if (null === (t = p.ZP.getShelfFetchStatus(a)) || void 0 === t ? void 0 : t.isFetching) {
+  } = e, u = R.ZP.getShelfActivities(a), _ = u.map(e => d.Z.getApplication(e.application_id)).filter(N.lm);
+  if (!l && !R.ZP.shouldFetchShelf(a)) {
+    if (null === (t = R.ZP.getShelfFetchStatus(a)) || void 0 === t ? void 0 : t.isFetching) {
       let e, t;
       let n = new Promise(t => {
           e = w.bind(null, a, t), s.Z.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)
@@ -300,7 +300,7 @@ async function x(e) {
     }
   }
 }
-async function B(e) {
+async function x(e) {
   let {
     activityChannelId: t,
     invitedChannelId: n,

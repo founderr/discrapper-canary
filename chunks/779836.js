@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return C
+    return g
   }
 });
 var i = n(735250);
@@ -20,7 +20,7 @@ var a = n(120356),
   f = n(689938),
   E = n(153023);
 
-function g(e) {
+function C(e) {
   let {
     summary: t,
     channel: n
@@ -79,7 +79,7 @@ function g(e) {
   })
 }
 
-function C(e) {
+function g(e) {
   var t, n;
   let a, {
       item: s,
@@ -97,7 +97,7 @@ function C(e) {
       className: E.summaryStartIcon
     }), s.content]
   }) : (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(g, {
+    children: [(0, i.jsx)(C, {
       summary: p,
       channel: u
     }), (0, i.jsx)(o.TopicsIcon, {

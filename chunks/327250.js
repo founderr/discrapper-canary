@@ -19,8 +19,8 @@ var a = n(120356),
   _ = n(271383),
   f = n(430824),
   E = n(496675),
-  g = n(158776),
-  C = n(885110),
+  C = n(158776),
+  g = n(885110),
   I = n(594174),
   x = n(572004),
   T = n(5192),
@@ -36,7 +36,7 @@ function M(e) {
     backgroundColor: n,
     guildId: a,
     onClose: l
-  } = e, o = t.id, c = (0, s.e7)([C.Z, g.Z, m.default], () => o === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(o, a), [o, a]);
+  } = e, o = t.id, c = (0, s.e7)([g.Z, C.Z, m.default], () => o === m.default.getId() ? g.Z.getStatus() : C.Z.getStatus(o, a), [o, a]);
   return (0, i.jsxs)("div", {
     className: A.topRow,
     style: {
@@ -116,8 +116,8 @@ function R(e) {
     member: l,
     guildId: m
   } = e, _ = (0, s.e7)([f.Z], () => f.Z.getGuild(m)), {
-    canKickUser: g,
-    canBanUser: C,
+    canKickUser: C,
+    canBanUser: g,
     canModerateMembers: T
   } = (0, s.cj)([E.Z, I.default, f.Z], () => ({
     canKickUser: null != _ && E.Z.canManageUser(S.Plq.KICK_MEMBERS, a, _),
@@ -152,7 +152,7 @@ function R(e) {
         children: Z.Z.Messages.SEND_DM
       })]
     }), (0, i.jsxs)(b, {
-      disabled: !g,
+      disabled: !C,
       "aria-label": Z.Z.Messages.KICK,
       style: {
         backgroundColor: t
@@ -181,7 +181,7 @@ function R(e) {
         children: Z.Z.Messages.KICK
       })]
     }), (0, i.jsxs)(b, {
-      disabled: !C,
+      disabled: !g,
       "aria-label": Z.Z.Messages.BAN,
       style: {
         backgroundColor: t

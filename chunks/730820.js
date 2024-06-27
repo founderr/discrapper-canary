@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(607018),
   N = t(778764),
   C = t(314897),
-  A = t(325067),
-  m = t(594174),
-  O = t(285952),
-  g = t(572004),
+  m = t(325067),
+  A = t(594174),
+  g = t(285952),
+  O = t(572004),
   h = t(287880),
-  R = t(714565),
-  p = t(202858),
+  p = t(714565),
+  R = t(202858),
   x = t(726985),
   M = t(981631),
   D = t(815660),
@@ -49,9 +49,9 @@ function v(e) {
       consumed: t
     }
   } = e, i = "".concat(s.substr(0, 4), "-").concat(s.substr(4)), r = a.useRef(null), o = a.useCallback(e => {
-    if ("c" === e.key && e.metaKey && g.wS) {
+    if ("c" === e.key && e.metaKey && O.wS) {
       var s;
-      e.preventDefault(), e.stopPropagation(), (0, g.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus()
+      e.preventDefault(), e.stopPropagation(), (0, O.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus()
     }
   }, [i]);
   return (0, n.jsx)("li", {
@@ -99,7 +99,7 @@ class b extends a.PureComponent {
         })]
       })
     }
-    if (o) e = (0, n.jsx)(O.Z, {
+    if (o) e = (0, n.jsx)(g.Z, {
       className: r ? "" : P.marginTop8,
       children: (0, n.jsx)(l.Button, {
         color: l.Button.Colors.RED,
@@ -111,8 +111,8 @@ class b extends a.PureComponent {
       })
     });
     else {
-      let s = (0, R.c)(a);
-      e = (0, n.jsxs)(O.Z, {
+      let s = (0, p.c)(a);
+      e = (0, n.jsxs)(g.Z, {
         className: r ? "" : P.marginTop8,
         children: [(0, n.jsx)(l.Button, {
           onClick: this.handleEnableSMS,
@@ -172,13 +172,13 @@ class b extends a.PureComponent {
           type: l.FormText.Types.DESCRIPTION,
           className: P.marginBottom20,
           children: f.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
-        }), (0, n.jsxs)(O.Z, {
-          children: [(0, n.jsx)(O.Z.Child, {
+        }), (0, n.jsxs)(g.Z, {
+          children: [(0, n.jsx)(g.Z.Child, {
             children: (0, n.jsx)("ul", {
               className: L.checkboxGroup,
               children: a(s.slice(0, s.length / 2))
             })
-          }), (0, n.jsx)(O.Z.Child, {
+          }), (0, n.jsx)(g.Z.Child, {
             children: (0, n.jsx)("ul", {
               className: L.checkboxGroup,
               children: a(s.slice(s.length / 2))
@@ -203,14 +203,14 @@ class b extends a.PureComponent {
         type: l.FormText.Types.DESCRIPTION,
         className: P.marginBottom20,
         children: f.Z.Messages.TWO_FA_DESCRIPTION
-      }), (0, n.jsxs)(O.Z, {
-        justify: O.Z.Justify.START,
+      }), (0, n.jsxs)(g.Z, {
+        justify: g.Z.Justify.START,
         className: P.marginBottom20,
-        children: [(0, n.jsx)(O.Z.Child, {
+        children: [(0, n.jsx)(g.Z.Child, {
           wrap: !0,
           grow: 0,
           children: t
-        }), (0, n.jsxs)(O.Z.Child, {
+        }), (0, n.jsxs)(g.Z.Child, {
           wrap: !0,
           children: [(0, n.jsx)(S.F, {
             setting: x.s6.ACCOUNT_REMOVE_2FA,
@@ -224,7 +224,7 @@ class b extends a.PureComponent {
           }), (0, n.jsx)(S.F, {
             setting: x.s6.ACCOUNT_ENABLE_2FA,
             children: (0, n.jsx)(l.Button, {
-              onClick: p.ZP.enableMFA,
+              onClick: R.ZP.enableMFA,
               size: l.ButtonSizes.SMALL,
               children: f.Z.Messages.TWO_FA_ENABLE
             })
@@ -245,7 +245,7 @@ class b extends a.PureComponent {
         children: f.Z.Messages.TWO_FA_SALES_PITCH
       }), (0, n.jsx)(l.FormItem, {
         children: (0, n.jsx)(l.Button, {
-          onClick: p.ZP.enableMFA,
+          onClick: R.ZP.enableMFA,
           size: l.ButtonSizes.SMALL,
           children: f.Z.Messages.TWO_FA_ENABLE
         })
@@ -296,7 +296,7 @@ class b extends a.PureComponent {
         onConfirm: () => c.Z.disable()
       })
     }), Z(this, "generateBackupCodes", async () => {
-      let e = A.Z.getVerificationKey();
+      let e = m.Z.getVerificationKey();
       await c.Z.confirmViewBackupCodes(e, !0)
     }), Z(this, "sendMFABackupCodesVerificationKeyEmail", () => {
       (0, l.openModal)(e => (0, n.jsx)(u.default, {
@@ -360,10 +360,10 @@ class b extends a.PureComponent {
 }
 
 function j(e) {
-  let s = (0, o.e7)([m.default], () => m.default.getCurrentUser());
+  let s = (0, o.e7)([A.default], () => A.default.getCurrentUser());
   r()(null != s, "TwoFactorAuth: currentUser cannot be undefined");
-  let t = (0, o.cj)([A.Z, C.default], () => ({
-    togglingSMS: A.Z.togglingSMS,
+  let t = (0, o.cj)([m.Z, C.default], () => ({
+    togglingSMS: m.Z.togglingSMS,
     hasTOTPEnabled: C.default.hasTOTPEnabled()
   }));
   return (0, n.jsx)(b, {

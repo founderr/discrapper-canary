@@ -13,13 +13,13 @@ n.d(t, {
     return v
   },
   eL: function() {
-    return R
+    return p
   },
   vg: function() {
     return g
   },
   zy: function() {
-    return p
+    return R
   }
 }), n(789020), n(47120), n(724458);
 var i, r, s = n(470079),
@@ -49,16 +49,16 @@ function S(e) {
   return null != e && null != e && (0, o.NU)(e.filename) && null != e.proxy_url
 }
 
-function N(e) {
+function A(e) {
   return f(e) || S(e)
 }(r = i || (i = {})).EMBED = "embed", r.ATTACHMENT = "attachment";
 
-function A(e) {
+function N(e) {
   return function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.x4.getSetting();
     if (!t) return [];
     let n = null == e ? void 0 : e.attachments;
-    return null == e || null == n ? [] : n.filter(N).map((e, t) => {
+    return null == e || null == n ? [] : n.filter(A).map((e, t) => {
       let {
         proxy_url: n,
         url: i,
@@ -129,7 +129,7 @@ function m(e, t) {
 
 function O(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    i = p(e, n);
+    i = R(e, n);
   return s.useMemo(() => {
     if (null == t) return [];
     if (!t.isMediaChannel()) return i;
@@ -140,20 +140,20 @@ function O(e, t) {
   }, [t, i])
 }
 
-function p(e, t) {
-  let n = A(e);
+function R(e, t) {
+  let n = N(e);
   return [...n, ...m(e, t)]
 }
 
-function R(e, t) {
+function p(e, t) {
   var n, i;
-  let r = A(e),
+  let r = N(e),
     s = m(e, t);
   return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : s[0]) && void 0 !== i ? i : null
 }
 
 function g(e, t) {
-  let n = A(e),
+  let n = N(e),
     i = m(e, t);
   return null == n[0] && null != i[0]
 }

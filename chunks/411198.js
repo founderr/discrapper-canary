@@ -34,21 +34,21 @@ var i = n(512722),
 
 function u(e, t) {
   var n, i, a, u, _, c, d, E, I, T, h, f, S;
-  let N = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-    A = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
+  let A = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+    N = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
   if (null == e.properties) {
     r()(null != t, "If guild.properties is null, existingGuild must be passed in");
     let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
-      n = N instanceof Date ? N.getTime() : N;
-    return A === t.premiumSubscriberCount && e === n ? t : t.merge({
-      joinedAt: N,
-      premiumSubscriberCount: A
+      n = A instanceof Date ? A.getTime() : A;
+    return N === t.premiumSubscriberCount && e === n ? t : t.merge({
+      joinedAt: A,
+      premiumSubscriberCount: N
     })
   }
   let m = {
     id: e.id,
-    joinedAt: N,
-    premiumSubscriberCount: A,
+    joinedAt: A,
+    premiumSubscriberCount: N,
     name: null !== (i = e.properties.name) && void 0 !== i ? i : "",
     description: e.properties.description,
     icon: e.properties.icon,

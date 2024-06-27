@@ -31,11 +31,11 @@ function S(e) {
   return null != h.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), d.Z.isFriend(e.id) && (t.isFriend = !0, t.friendNickname = d.Z.getNickname(e.id)), t
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   null != e && (e[t] = null != n && "" !== n ? n : null)
 }
 
-function A(e) {
+function N(e) {
   let t = [];
   if (null == e || !(0, u.hv)(e.type)) return t;
   let {
@@ -43,7 +43,7 @@ function A(e) {
   } = e;
   return n.forEach(n => {
     let i = S(E.default.getUser(n));
-    null != e && N(i, e.id), t.push(i)
+    null != e && A(i, e.id), t.push(i)
   }), t
 }
 
@@ -51,7 +51,7 @@ function m(e, t) {
   let n = [];
   return e.forEach(e => {
     let i = S(e.user);
-    null != i && (N(i, t, e.nick), n.push(i))
+    null != i && (A(i, t, e.nick), n.push(i))
   }), n
 }(r = i || (i = {})).UPDATE_USERS = "UPDATE_USERS", r.USER_RESULTS = "USER_RESULTS", r.QUERY_SET = "QUERY_SET", r.QUERY_CLEAR = "QUERY_CLEAR";
 class O {
@@ -96,7 +96,7 @@ class O {
     }), this._worker = e, this._uuid = (0, a.Z)(), this._callback = t, this._limit = n, this._currentQuery = null, this._nextQuery = null, this._subscribed = !1, this.subscribe()
   }
 }
-class p extends l.Z {
+class R extends l.Z {
   _initialize() {
     this.rebootWebworker()
   }
@@ -186,7 +186,7 @@ class p extends l.Z {
           for (let n of T.default.keys(t)) {
             let r = i.get(n),
               s = t[n];
-            if (null != r && null != s && null != s.nick) N(r, e, s.nick), i.set(n, r)
+            if (null != r && null != s && null != s.nick) A(r, e, s.nick), i.set(n, r)
           }
       }
       this.updateUsers(Array.from(i.values())), i.clear()
@@ -214,7 +214,7 @@ class p extends l.Z {
         user: n,
         nick: i
       } = e, r = S(n);
-      null != r && (N(r, t, i), this.updateUsers([r]))
+      null != r && (A(r, t, i), this.updateUsers([r]))
     }), f(this, "_handlePassiveUpdateV2", e => {
       this.updateUsers(m(e.members, e.guildId))
     }), f(this, "_handleRelationshipAdd", e => {
@@ -231,19 +231,19 @@ class p extends l.Z {
         channel: {
           id: t
         }
-      } = e, n = A(_.Z.getChannel(t));
+      } = e, n = N(_.Z.getChannel(t));
       if (0 === n.length) return;
       let i = S(E.default.getCurrentUser());
-      N(i, t), n.push(i), this.updateUsers(n)
+      A(i, t), n.push(i), this.updateUsers(n)
     }), f(this, "_handleDMUpdates", e => {
       let {
         channels: t
       } = e;
       for (let e of t) {
-        let t = A(_.Z.getChannel(e.id));
+        let t = N(_.Z.getChannel(e.id));
         if (0 === t.length) continue;
         let n = S(E.default.getCurrentUser());
-        N(n, e.id), t.push(n), this.updateUsers(t)
+        A(n, e.id), t.push(n), this.updateUsers(t)
       }
     }), f(this, "_handleRecipientChanges", e => {
       let {
@@ -253,8 +253,8 @@ class p extends l.Z {
       } = e;
       if (!i) return;
       let r = S(n);
-      N(r, t), this.updateUsers([r])
+      A(r, t), this.updateUsers([r])
     })
   }
 }
-t.Z = new p
+t.Z = new R

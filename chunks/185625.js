@@ -25,7 +25,7 @@ n.d(t, {
     return h
   },
   k8: function() {
-    return A
+    return N
   },
   ox: function() {
     return _
@@ -69,7 +69,7 @@ async function _(e, t) {
     r = await l(e, t);
   await i.tn.post({
     url: a.ANM.SUBMIT_REPORT_MENU(n),
-    body: N(r, e, [{
+    body: A(r, e, [{
       nodeRef: r.root_node_id,
       destination: ["", r.success_node_id]
     }])
@@ -79,7 +79,7 @@ async function _(e, t) {
 function c(e, t, n) {
   return i.tn.post({
     url: a.ANM.SUBMIT_REPORT_MENU(S(t)),
-    body: N(e, t, n)
+    body: A(e, t, n)
   })
 }
 
@@ -87,7 +87,7 @@ function d(e, t, n, r) {
   let s = f(t);
   return i.tn.post({
     url: a.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(s),
-    body: N(e, t, n, r)
+    body: A(e, t, n, r)
   })
 }
 
@@ -135,7 +135,7 @@ function S(e) {
   if (!Object.values(o.b).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
 }
-let N = (e, t, n, i) => {
+let A = (e, t, n, i) => {
   let {
     version: r,
     variant: s,
@@ -259,7 +259,7 @@ let N = (e, t, n, i) => {
   return null
 };
 
-function A(e, t, n) {
+function N(e, t, n) {
   s.ZP.trackWithMetadata(a.rMx.IAR_MODAL_CLOSE, {
     report_type: e.name,
     report_id: n,

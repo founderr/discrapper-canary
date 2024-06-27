@@ -4,11 +4,11 @@ i.d(n, {
   }
 });
 var t = i(470079),
-  s = i(442837),
-  o = i(621853);
+  o = i(442837),
+  s = i(621853);
 let l = [];
 
 function a(e) {
-  let n = (0, s.e7)([o.Z], () => o.Z.getUserProfile(e));
+  let n = (0, o.e7)([s.Z], () => s.Z.getUserProfile(e));
   return (0, t.useMemo)(() => (null == n ? void 0 : n.applicationRoleConnections) == null ? l : n.applicationRoleConnections, [null == n ? void 0 : n.applicationRoleConnections])
 }

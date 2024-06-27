@@ -17,8 +17,8 @@ t.Z = function(e) {
     message: r,
     image: s,
     type: f,
-    imageStyles: g,
-    imageMarginX: m,
+    imageStyles: m,
+    imageMarginX: g,
     imageMarginTop: C,
     trackingSource: I,
     undismissable: E,
@@ -70,7 +70,7 @@ t.Z = function(e) {
     color: "text-muted",
     children: r
   }));
-  let M = null != m ? "".concat(m, "px") : "16px";
+  let M = null != g ? "".concat(g, "px") : "16px";
   return (0, i.jsxs)("div", {
     className: a()(p.container, T),
     children: [!0 === E ? null : (0, i.jsx)(o.Clickable, {
@@ -95,7 +95,7 @@ t.Z = function(e) {
       },
       children: (0, i.jsx)("img", {
         className: p.image,
-        style: g,
+        style: m,
         src: s,
         alt: ""
       })

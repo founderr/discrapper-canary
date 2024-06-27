@@ -24,8 +24,8 @@ function E(e) {
     labelText: n,
     tooltipText: l,
     canToggle: E,
-    iconAltText: g,
-    onChange: C,
+    iconAltText: C,
+    onChange: g,
     tooltipColor: I,
     className: x,
     id: T = "fancybutton-toggle",
@@ -55,7 +55,7 @@ function E(e) {
       onChange: function() {
         if (E) {
           let e = !t;
-          M(!0), null == C || C(e)
+          M(!0), null == g || g(e)
         }
         "function" == typeof v && v()
       },
@@ -78,7 +78,7 @@ function E(e) {
       }) : null, (0, i.jsx)("img", {
         ref: L,
         src: R,
-        alt: g
+        alt: C
       }), (0, i.jsx)("span", {
         ref: O,
         children: (0, i.jsx)(c.Text, {

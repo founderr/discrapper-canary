@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(905405),
   f = n(937889),
   E = n(739566),
-  g = n(378233),
-  C = n(419922),
+  C = n(378233),
+  g = n(419922),
   I = n(375954),
   x = n(699516),
   T = n(512665),
@@ -57,7 +57,7 @@ function j(e) {
     trailingIconClass: b.messageContentTrailingIcon,
     leadingIconClass: b.messageContentLeadingIcon,
     iconSize: M.WW
-  }), P = (0, g.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(C.ZP, {
+  }), P = (0, C.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(g.ZP, {
     className: b.sticker,
     size: 128,
     sticker: e,
@@ -149,12 +149,12 @@ function L(e) {
       e[i.id] = t, t += a + 8
     }!(0, r.isEqual)(e, _) && f(e)
   }, [p]);
-  let g = p.map(e => ({
+  let C = p.map(e => ({
       message: e,
       height: m.current[e.id],
       y: _[e.id]
     })),
-    C = (0, o.useTransition)(g, {
+    g = (0, o.useTransition)(C, {
       keys: e => e.message.id,
       from: () => ({
         opacity: 0
@@ -196,7 +196,7 @@ function L(e) {
     onMouseLeave: () => {
       u(!1)
     },
-    children: C((e, t) => (0, i.jsx)(o.animated.div, {
+    children: g((e, t) => (0, i.jsx)(o.animated.div, {
       ref: e => E(t.message.id, null != e ? e.offsetHeight : null),
       className: b.toastWrapper,
       style: e,

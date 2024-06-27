@@ -23,8 +23,8 @@ function E(e) {
     channel: t,
     onJump: E
   } = e, {
-    messages: g,
-    loading: C
+    messages: C,
+    loading: g
   } = (0, l.cj)([d.Z], () => {
     let e = d.Z.getPinnedMessages(t.id),
       n = null != e ? e.messages : f;
@@ -36,7 +36,7 @@ function E(e) {
   return a.useEffect(() => {
     c.l.getCurrentConfig({
       location: "pins"
-    }).enabled && g.some(u.k5) && o.Z.fetchPins(t.id, !0)
+    }).enabled && C.some(u.k5) && o.Z.fetchPins(t.id, !0)
   }, []), a.useEffect(() => {
     I && o.Z.ackPins(t.id)
   }, [I, t.id]), (0, i.jsx)(r.Dialog, {
@@ -46,8 +46,8 @@ function E(e) {
         o.Z.ackPins(t.id), o.Z.fetchPins(t.id)
       },
       channel: t,
-      messages: g,
-      loading: C,
+      messages: C,
+      loading: g,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
         null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : m.Z.confirmUnpin(t, e))

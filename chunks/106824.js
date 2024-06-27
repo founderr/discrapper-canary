@@ -129,10 +129,10 @@ class c extends i.EventEmitter {
       metadata: f
     } = d.queryResults(this.props.channel, this.props.guild, E, r, I), S = 0;
     for (let e of Object.values(h)) Array.isArray(e) && (S += e.length);
-    let N = !0 === h.isLoading,
-      A = this.shouldShow(S, N, d),
+    let A = !0 === h.isLoading,
+      N = this.shouldShow(S, A, d),
       m = this.state.selectedIndex;
-    !A || N ? m = null : null != m && m >= S && (m = S - 1), A && !this.state.isVisible && (0, s.a7)(c, this.props.channel, f), this.setState({
+    !N || A ? m = null : null != m && m >= S && (m = S - 1), N && !this.state.isVisible && (0, s.a7)(c, this.props.channel, f), this.setState({
       query: {
         type: c,
         typeInfo: d,
@@ -140,9 +140,9 @@ class c extends i.EventEmitter {
         results: h,
         resultCount: S,
         options: r,
-        isLoading: N
+        isLoading: A
       },
-      isVisible: A,
+      isVisible: N,
       selectedIndex: m
     })
   }

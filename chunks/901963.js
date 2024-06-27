@@ -16,39 +16,39 @@ var i = n(735250),
   h = n(981631),
   f = n(474936),
   S = n(689938),
-  N = n(164940);
-let A = "premiumRetentionEmojiPickerNotice",
-  m = l.K.get(A);
+  A = n(164940);
+let N = "premiumRetentionEmojiPickerNotice",
+  m = l.K.get(N);
 t.Z = e => {
   let {
     closePopout: t,
     channel: n
   } = e, [s, O] = r.useState(!1), {
-    subscription: p,
-    hasFetchedSubscriptions: R
+    subscription: R,
+    hasFetchedSubscriptions: p
   } = (0, a.cj)([d.ZP], () => ({
     subscription: d.ZP.getPremiumSubscription(),
     hasFetchedSubscriptions: d.ZP.hasFetchedSubscriptions()
   }));
   if (r.useEffect(() => {
-      !R && (0, _.jg)()
-    }, [R]), null == p || !(0, I.zV)(p.status) || s) return null;
-  let g = p.status === h.O0b.PAST_DUE ? (0, I.lY)(p).expiresDate : o()(p.currentPeriodStart).add(f.gh),
-    C = "".concat(p.id, ":").concat(g.toISOString());
+      !p && (0, _.jg)()
+    }, [p]), null == R || !(0, I.zV)(R.status) || s) return null;
+  let g = R.status === h.O0b.PAST_DUE ? (0, I.lY)(R).expiresDate : o()(R.currentPeriodStart).add(f.gh),
+    C = "".concat(R.id, ":").concat(g.toISOString());
   if (m === C) return null;
-  let v = I.ZP.getPremiumType(p.planId) === f.p9.TIER_0 ? E.JX.PREMIUM_TIER_0 : I.ZP.getPremiumType(p.planId) === f.p9.TIER_1 ? E.JX.PREMIUM_TIER_1 : E.JX.PREMIUM_TIER_2;
+  let v = I.ZP.getPremiumType(R.planId) === f.p9.TIER_0 ? E.JX.PREMIUM_TIER_0 : I.ZP.getPremiumType(R.planId) === f.p9.TIER_1 ? E.JX.PREMIUM_TIER_1 : E.JX.PREMIUM_TIER_2;
   return (0, i.jsxs)("div", {
-    className: N.premiumRetentionNotice,
+    className: A.premiumRetentionNotice,
     children: [(0, i.jsx)(u.NitroWheelIcon, {
       size: "md",
-      className: N.premiumRetentionNoticeIcon,
+      className: A.premiumRetentionNoticeIcon,
       color: v
     }), (0, i.jsxs)("div", {
-      className: N.premiumRetentionNoticeContent,
+      className: A.premiumRetentionNoticeContent,
       children: [(0, i.jsx)(u.Text, {
         variant: "text-xs/normal",
         children: S.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
-          planName: I.ZP.getDisplayPremiumType(p.planId),
+          planName: I.ZP.getDisplayPremiumType(R.planId),
           endsAt: g
         })
       }), (0, i.jsx)("div", {
@@ -61,12 +61,12 @@ t.Z = e => {
       })]
     }), (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        l.K.set(A, C), m = C, O(!0)
+        l.K.set(N, C), m = C, O(!0)
       },
       children: (0, i.jsx)(u.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: N.premiumRetentionNoticeClose
+        className: A.premiumRetentionNoticeClose
       })
     })]
   })

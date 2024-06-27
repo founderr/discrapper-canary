@@ -86,19 +86,19 @@ function E(e) {
     shouldShowBirthdayUX: h,
     isLightTheme: f,
     ...S
-  } = e, [N, A] = r.useState(a), m = null !== (t = l.get(N)) && void 0 !== t ? t : null;
+  } = e, [A, N] = r.useState(a), m = null !== (t = l.get(A)) && void 0 !== t ? t : null;
   return r.useEffect(() => {
-    T ? A(e => d(T, h, f, I, e)) : I && A(a)
+    T ? N(e => d(T, h, f, I, e)) : I && N(a)
   }, [T, h, f, I]), (0, i.jsxs)("svg", {
     width: n,
     height: u,
     ...(0, o.Z)(S),
     xmlns: "http://www.w3.org/2000/svg",
     children: [I ? (0, i.jsx)(c, {
-      fillColor: N
+      fillColor: A
     }) : (0, i.jsx)(_, {
       referralsRemaining: E,
-      fillColor: T ? N : a,
+      fillColor: T ? A : a,
       secondaryFillColor: T ? m : null
     }), (0, i.jsxs)("defs", {
       children: [(0, i.jsxs)("linearGradient", {

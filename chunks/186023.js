@@ -20,15 +20,15 @@ t.Z = e => {
     emailToken: h,
     isAuthenticated: f = !0
   } = e, S = (0, a.Dt)(), {
-    nodes: N,
-    root_node_id: A,
+    nodes: A,
+    root_node_id: N,
     success_node_id: m,
     fail_node_id: O
-  } = n, [p, R] = r.useState(A), [g, C] = r.useState(void 0), [v, L] = r.useState(void 0), [D, M] = r.useState([]), [P, y] = r.useState(void 0), U = e => {
+  } = n, [R, p] = r.useState(N), [g, C] = r.useState(void 0), [v, L] = r.useState(void 0), [D, M] = r.useState([]), [P, y] = r.useState(void 0), U = e => {
     var n;
     let {
       destination: i
-    } = e, [, r] = i, s = N[r];
+    } = e, [, r] = i, s = A[r];
     if (s.elements.some(e => "skip" === e.type) && (null === (n = s.button) || void 0 === n ? void 0 : n.type) === "next") return U({
       ...e,
       destination: ["", s.button.target]
@@ -39,11 +39,11 @@ t.Z = e => {
         message_id: e,
         content_type: t.name,
         report_sub_type: s.report_type,
-        current_node: N[p].id,
+        current_node: A[R].id,
         next_node: s.id
       })
     }
-    R(r)
+    p(r)
   }, b = async e => {
     var i;
     let r = f ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], h),
@@ -54,40 +54,40 @@ t.Z = e => {
     if (D.length < 1) return;
     let i = [...D],
       r = i.pop(),
-      s = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : A;
+      s = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : N;
     if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
       let e = t.record.id;
       o.ZP.trackWithMetadata(c.rMx.IAR_NAVIGATE, {
         message_id: e,
         content_type: t.name,
-        report_sub_type: N[s].report_type,
-        current_node: N[p].id,
-        next_node: N[s].id
+        report_sub_type: A[s].report_type,
+        current_node: A[R].id,
+        next_node: A[s].id
       })
     }
-    C(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), L(null == r ? void 0 : r.textInput), R(s), M(i), null == T || T("..")
-  }, w = [], x = [];
-  for (let e in N) {
-    var B, k;
-    let t = N[e];
-    if (t.id !== m && t.id !== O && t.id !== A) {
+    C(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), L(null == r ? void 0 : r.textInput), p(s), M(i), null == T || T("..")
+  }, w = [], B = [];
+  for (let e in A) {
+    var x, k;
+    let t = A[e];
+    if (t.id !== m && t.id !== O && t.id !== N) {
       if (t.key.endsWith("_SUBMIT")) {
-        x.push(t);
+        B.push(t);
         continue
       }
-      if (w.push(t), (null === (B = t.button) || void 0 === B ? void 0 : B.type) === "next") {
+      if (w.push(t), (null === (x = t.button) || void 0 === x ? void 0 : x.type) === "next") {
         let e = null === (k = t.button) || void 0 === k ? void 0 : k.target,
-          n = w.indexOf(N[e]); - 1 !== n && (w.splice(n, 1), w.push(N[e]))
+          n = w.indexOf(A[e]); - 1 !== n && (w.splice(n, 1), w.push(A[e]))
       }
     }
   }
-  let V = [N[A], ...w, ...x, N[m], N[O]];
+  let V = [A[N], ...w, ...B, A[m], A[O]];
   return (0, i.jsx)(s.ModalRoot, {
     transitionState: E.transitionState,
     "aria-labelledby": S,
     children: (0, i.jsx)(s.Slides, {
       width: 440,
-      activeSlide: p,
+      activeSlide: R,
       centered: !1,
       children: V.map(e => (0, i.jsx)(s.Slide, {
         id: e.id,

@@ -19,16 +19,16 @@ var l = t(735250),
   g = t(1163),
   h = t(594174),
   C = t(285952),
-  Z = t(74538),
-  N = t(451467),
+  N = t(74538),
+  Z = t(451467),
   I = t(122186),
   x = t(37113),
   f = t(981631),
   A = t(474936),
   R = t(689938),
   T = t(278768),
-  L = t(665375),
-  v = t(331651);
+  v = t(665375),
+  L = t(331651);
 
 function M(e) {
   let {
@@ -49,13 +49,13 @@ function M(e) {
 
 function p() {
   return (0, l.jsxs)("div", {
-    className: L.toolTipTextContainer,
+    className: v.toolTipTextContainer,
     children: [(0, l.jsx)(d.NitroWheelIcon, {
       size: "md",
       color: "currentColor",
-      className: i()(L.premiumIcon)
+      className: i()(v.premiumIcon)
     }), (0, l.jsx)(d.Text, {
-      className: L.upsellText,
+      className: v.upsellText,
       variant: "text-sm/medium",
       children: R.Z.Messages.UNLOCK_WITH_NITRO
     })]
@@ -78,17 +78,17 @@ function O(e) {
       label: S
     } = s;
   return r ? (n = (0, l.jsx)(d.TooltipContainer, {
-    tooltipClassName: L.tooltip,
+    tooltipClassName: v.tooltip,
     spacing: 6,
     "aria-label": R.Z.Messages.UNLOCK_WITH_NITRO,
     text: (0, l.jsx)(p, {}),
     children: (0, l.jsx)("div", {
-      className: L.textContainer,
+      className: v.textContainer,
       onMouseEnter: () => E(!0),
       onMouseLeave: () => E(!1),
       children: (0, l.jsx)(d.Text, {
         variant: "text-xs/bold",
-        className: i()(L.selectorNitroText, L.enhancedSelectorNitroText),
+        className: i()(v.selectorNitroText, v.enhancedSelectorNitroText),
         children: S
       })
     })
@@ -96,20 +96,20 @@ function O(e) {
     analyticsLocation: u,
     onClose: m
   })) : (n = (0, l.jsx)("div", {
-    className: L.textContainer,
+    className: v.textContainer,
     children: (0, l.jsx)(d.Text, {
       variant: "text-xs/normal",
-      className: i()(L.selectorText, {
-        [L.enhancedSelectorNitroText]: o
+      className: i()(v.selectorText, {
+        [v.enhancedSelectorNitroText]: o
       }),
       children: S
     })
   }), t = () => c(_)), {
     content: n,
-    className: i()(L.selectorButton, {
-      [L.selectorButtonSelected]: a,
-      [L.perksDemo]: o,
-      [L.premiumUpsell]: r
+    className: i()(v.selectorButton, {
+      [v.selectorButtonSelected]: a,
+      [v.perksDemo]: o,
+      [v.premiumUpsell]: r
     }),
     onClick: t
   }
@@ -129,11 +129,11 @@ function j(e) {
   } = e, G = (0, c.e7)([h.default], () => {
     let e = h.default.getCurrentUser();
     return o()(null != e, "StreamSettings: user cannot be undefined"), e
-  }), U = Z.ZP.canStreamQuality(Z.U2.MID, G), {
+  }), U = N.ZP.canStreamQuality(N.U2.MID, G), {
     location: b
   } = (0, E.O)(), w = (0, _.Zq)({
     autoTrackExposure: !1
-  }), B = (0, Z.I5)(G, A.p9.TIER_1), {
+  }), B = (0, N.I5)(G, A.p9.TIER_1), {
     inPerksDemosExperiment: y
   } = S.Z.useExperiment({
     location: "Go Live Modal"
@@ -147,7 +147,7 @@ function j(e) {
     autoTrackExposure: !0,
     disable: !y || B
   });
-  let V = (0, Z.So)(u.q.STREAM_HIGH_QUALITY),
+  let V = (0, N.So)(u.q.STREAM_HIGH_QUALITY),
     k = !U && !w || V,
     [H, W] = s.useState(!1),
     F = D ? x.z8 : x.WC,
@@ -159,7 +159,7 @@ function j(e) {
       buttons: F.map(e => O({
         type: e,
         selected: e.value === a,
-        needsPremium: !(0, N.Z)(t, e.value, i, G, P),
+        needsPremium: !(0, Z.Z)(t, e.value, i, G, P),
         needsDemo: V && e.value !== x.LY.RESOLUTION_720,
         analyticsLocation: z,
         onClick: () => r(e.value),
@@ -171,7 +171,7 @@ function j(e) {
       buttons: x.k0.map(e => O({
         type: e,
         selected: e.value === i,
-        needsPremium: !(0, N.Z)(t, a, e.value, G, P),
+        needsPremium: !(0, Z.Z)(t, a, e.value, G, P),
         needsDemo: V && e.value === x.ws.FPS_60,
         analyticsLocation: z,
         onClick: () => p(e.value),
@@ -194,7 +194,7 @@ function j(e) {
         children: (0, l.jsx)(d.FormItem, {
           title: R.Z.Messages.STREAM_RESOLUTION,
           titleClassName: T.formItemTitleSlim,
-          className: L.documentModeGroup,
+          className: v.documentModeGroup,
           children: (0, l.jsx)(d.Text, {
             variant: "text-xs/normal",
             children: R.Z.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
@@ -211,12 +211,12 @@ function j(e) {
       children: [(0, l.jsxs)(C.Z, {
         children: [(0, l.jsx)(d.FormItem, {
           title: R.Z.Messages.STREAM_RESOLUTION,
-          className: L.settingsGroup,
+          className: v.settingsGroup,
           titleClassName: T.formItemTitleSlim,
           children: K
         }), (0, l.jsx)(d.FormItem, {
           title: R.Z.Messages.SCREENSHARE_FRAME_RATE,
-          className: L.settingsGroup,
+          className: v.settingsGroup,
           titleClassName: T.formItemTitleSlim,
           children: Y
         })]
@@ -233,10 +233,10 @@ function j(e) {
       titleClassName: T.formItemTitle,
       className: T.modalContent,
       children: (0, l.jsxs)("div", {
-        className: L.qualitySettingsContainer,
+        className: v.qualitySettingsContainer,
         children: [(0, l.jsx)(d.SingleSelect, {
           value: t,
-          className: v.marginTop8,
+          className: L.marginTop8,
           options: Q,
           onChange: e => j(e)
         }), J]

@@ -15,8 +15,8 @@ var a = n(120356),
   u = n(141321),
   _ = n(208450),
   E = n(594174),
-  I = n(502568),
-  m = n(358085),
+  m = n(502568),
+  I = n(358085),
   T = n(998502),
   h = n(300986),
   N = n(314451),
@@ -25,7 +25,7 @@ var a = n(120356),
   C = n(176505),
   g = n(656847);
 async function S() {
-  if ((0, m.isMac)() && m.isPlatformEmbedded) {
+  if ((0, I.isMac)() && I.isPlatformEmbedded) {
     var e, t, n;
     let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
     "Minimize" === i ? T.ZP.minimize() : "Maximize" === i && T.ZP.maximize()
@@ -40,25 +40,25 @@ function A(e) {
     guildId: s,
     innerClassname: o,
     transparent: c = !1,
-    toolbar: m,
+    toolbar: I,
     mobileToolbar: T,
     "aria-label": p,
     "aria-labelledby": C,
     scrollable: A,
     role: R,
-    hideSearch: x,
-    showDivider: O
+    hideSearch: O,
+    showDivider: x
   } = e, M = (0, r.e7)([E.default], () => E.default.getCurrentUser()), v = (null == M ? void 0 : M.isStaff()) || (null == M ? void 0 : M.isStaffPersonal()) || !1;
-  return (0, i.jsx)(I.ZP, {
+  return (0, i.jsx)(m.ZP, {
     className: n,
     innerClassName: o,
     toolbar: function() {
-      if (null == m) return null;
-      let e = null != a && !x;
+      if (null == I) return null;
+      let e = null != a && !O;
       return l.tq ? T : (0, i.jsxs)(i.Fragment, {
-        children: [m, e ? (0, i.jsx)(_.Z, {
+        children: [I, e ? (0, i.jsx)(_.Z, {
           className: g.search
-        }, null != s ? s : a) : null, O && (0, i.jsx)(I.ZP.Divider, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(d.Z, {
+        }, null != s ? s : a) : null, x && (0, i.jsx)(m.ZP.Divider, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(d.Z, {
           canShowReminder: !0
         }), (0, i.jsx)(u.Z, {}), v ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)(h.Z, {})]
       })
@@ -81,7 +81,7 @@ function R(e) {
     "aria-labelledby": s,
     role: l
   } = e;
-  return (0, i.jsx)(I.ZP, {
+  return (0, i.jsx)(m.ZP, {
     className: n,
     onDoubleClick: S,
     "aria-label": a,
@@ -91,7 +91,7 @@ function R(e) {
   })
 }
 
-function x(e) {
+function O(e) {
   let {
     isAuthenticated: t = !0,
     ...n
@@ -111,4 +111,4 @@ function x(e) {
     })
   })
 }
-x.Title = I.ZP.Title, x.Icon = I.ZP.Icon, x.Divider = I.ZP.Divider, x.Caret = I.ZP.Caret, t.Z = x
+O.Title = m.ZP.Title, O.Icon = m.ZP.Icon, O.Divider = m.ZP.Divider, O.Caret = m.ZP.Caret, t.Z = O

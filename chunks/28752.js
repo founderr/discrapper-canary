@@ -28,7 +28,7 @@ function S(e) {
   } = e, S = r.useMemo(() => c.ZP.getApplicationIconURL({
     id: n.id,
     icon: n.icon
-  }), [n.icon, n.id]), N = r.useMemo(() => [{
+  }), [n.icon, n.id]), A = r.useMemo(() => [{
     type: a.Y.USER_INSTALL,
     icon: u.UserPlusIcon,
     title: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
@@ -59,7 +59,7 @@ function S(e) {
       })]
     }), (0, i.jsx)("ul", {
       className: f.rows,
-      children: N.map(e => (0, i.jsxs)(u.Clickable, {
+      children: A.map(e => (0, i.jsxs)(u.Clickable, {
         tag: "li",
         className: o()(f.row, {
           [f.inApp]: t

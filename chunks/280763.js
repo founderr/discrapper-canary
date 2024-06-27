@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return I
+    return m
   }
 }), n(47120);
 var i = n(735250),
@@ -49,7 +49,7 @@ class E extends a.PureComponent {
   }
 }
 
-function I(e) {
+function m(e) {
   let {
     className: t
   } = e, {

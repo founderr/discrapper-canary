@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(530),
   f = n(790711),
   S = n(580512),
-  N = n(67152),
-  A = n(579285),
+  A = n(67152),
+  N = n(579285),
   m = n(287612),
   O = n(228168),
-  p = n(981631),
-  R = n(472375);
+  R = n(981631),
+  p = n(472375);
 
 function g(e) {
   let {
@@ -38,11 +38,11 @@ function g(e) {
     channelId: D,
     onClose: M
   } = e, P = _.ZP.getName(null == C ? void 0 : C.id, D, t), y = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), U = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), b = (0, o.Z)("username"), G = r.useMemo(() => ({
-    source: p.jXE.PROFILE_POPOUT,
+    source: R.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
   return (0, i.jsxs)("div", {
-    className: R.body,
+    className: p.body,
     children: [(0, i.jsx)(h.Z, {
       user: t,
       profileType: O.y0.BITE_SIZE,
@@ -69,7 +69,7 @@ function g(e) {
           })
         })]
       })
-    }), y === p.OGo.PENDING_INCOMING && (0, i.jsx)(T.Z.Overlay, {
+    }), y === R.OGo.PENDING_INCOMING && (0, i.jsx)(T.Z.Overlay, {
       children: (0, i.jsx)(E.Z, {
         user: t,
         guildId: null == C ? void 0 : C.id,
@@ -84,7 +84,7 @@ function g(e) {
       userId: t.id,
       inline: !1,
       profileViewedAnalytics: G
-    }), (0, i.jsx)(N.Z, {
+    }), (0, i.jsx)(A.Z, {
       user: t,
       bio: null == g ? void 0 : g.bio,
       hidePersonalInformation: U,
@@ -94,7 +94,7 @@ function g(e) {
       guild: C,
       channelId: D,
       onClose: M
-    }), null != C && (0, i.jsx)(A.Z, {
+    }), null != C && (0, i.jsx)(N.Z, {
       user: t,
       currentUser: n,
       guild: C,

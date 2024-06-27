@@ -19,9 +19,9 @@ var n = t(735250),
   I = t(358085),
   N = t(210887),
   C = t(981631),
-  A = t(689938),
-  m = t(81378);
-let O = [{
+  m = t(689938),
+  A = t(81378);
+let g = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
 }, {
@@ -44,7 +44,7 @@ let O = [{
   value: "custom"
 }];
 
-function g(e, s) {
+function O(e, s) {
   let [t, n] = a.useState(() => {
     let t = l.K.get(e);
     return null != t ? t : s
@@ -61,7 +61,7 @@ function h() {
   } = (0, o.cj)([N.Z, u.Z], () => ({
     theme: N.Z.theme,
     platformZoom: u.Z.zoom
-  })), [l, h] = a.useState("upright"), R = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
+  })), [l, h] = a.useState("upright"), p = ["normal", "medium", "semibold", "bold", "extrabold"], R = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -78,19 +78,19 @@ function h() {
       var e, s;
       return (0, S.fD)() ? null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [D, f] = g("playground-overrideText", null),
-    [L, P] = g("playground-defaultText", O[0].value),
+    [D, f] = O("playground-overrideText", null),
+    [L, P] = O("playground-defaultText", g[0].value),
     Z = a.useCallback(e => {
-      let s = O.find(s => {
+      let s = g.find(s => {
         let {
           value: t
         } = s;
         return t === e
       });
-      "" === e || null == e ? (P(O[0].value), f(null)) : null != s ? P(s.value) : (P("custom"), f(e))
+      "" === e || null == e ? (P(g[0].value), f(null)) : null != s ? P(s.value) : (P("custom"), f(e))
     }, [f, P]);
   return (0, n.jsx)("div", {
-    className: m.fullscreen,
+    className: A.fullscreen,
     style: {
       "--playground-font-family": "mono" === l ? "gg mono" : "gg sans",
       "--playground-font-style": "italic" === l ? "italic" : "normal"
@@ -98,7 +98,7 @@ function h() {
     children: (0, n.jsxs)(c.FormSection, {
       tag: c.FormTitleTags.H1,
       children: [(0, n.jsxs)("div", {
-        className: m.toolbar,
+        className: A.toolbar,
         children: [(0, n.jsxs)("div", {
           children: [(0, n.jsxs)(c.Text, {
             tag: "div",
@@ -119,14 +119,14 @@ function h() {
           }) : null]
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.SingleSelect, {
-            className: m.select,
-            options: O,
+            className: A.select,
+            options: g,
             onChange: e => Z(e),
             value: L
           })
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)("div", {
-            className: m.input,
+            className: A.input,
             children: (0, n.jsx)(c.TextInput, {
               placeholder: "Enter custom input...",
               value: null != D ? D : "",
@@ -136,13 +136,13 @@ function h() {
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.RadioGroup, {
             withTransparentBackground: !0,
-            className: m.theme,
+            className: A.theme,
             orientation: "horizontal",
             options: [{
-              name: A.Z.Messages.THEME_DARK,
+              name: m.Z.Messages.THEME_DARK,
               value: C.BRd.DARK
             }, {
-              name: A.Z.Messages.THEME_LIGHT,
+              name: m.Z.Messages.THEME_LIGHT,
               value: C.BRd.LIGHT
             }],
             onChange: e => {
@@ -155,7 +155,7 @@ function h() {
         }), (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.RadioGroup, {
             withTransparentBackground: !0,
-            className: m.theme,
+            className: A.theme,
             orientation: "horizontal",
             options: [{
               name: "Upright",
@@ -177,16 +177,16 @@ function h() {
           keybind: "ESC"
         })]
       }), (0, n.jsxs)("div", {
-        className: m.textGrid,
-        children: [(0, n.jsx)("div", {}), R.map(e => (0, n.jsx)("div", {
-          className: m.columnHeading,
+        className: A.textGrid,
+        children: [(0, n.jsx)("div", {}), p.map(e => (0, n.jsx)("div", {
+          className: A.columnHeading,
           children: (0, n.jsx)(c.Heading, {
             variant: "eyebrow",
             children: e
           })
         }, e)), [10, 12, 14, 15, 16, 18, 20, 24].map(e => (0, n.jsxs)(a.Fragment, {
           children: [(0, n.jsxs)("div", {
-            className: m.fontSize,
+            className: A.fontSize,
             children: [(0, n.jsxs)(c.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
@@ -195,19 +195,19 @@ function h() {
               color: "text-muted",
               children: ["(", e * x / 100, ")"]
             }) : null]
-          }, e), R.map(s => {
+          }, e), p.map(s => {
             var t;
             let a = null !== (t = "custom" === L ? D : L) && void 0 !== t ? t : "";
             return (0, n.jsx)("div", {
-              className: m.textSample,
+              className: A.textSample,
               children: (0, n.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(s),
-                className: r()(m.text, {
-                  [m.breakAnywhere]: !a.includes(" ")
+                className: r()(A.text, {
+                  [A.breakAnywhere]: !a.includes(" ")
                 }),
                 style: {
                   fontSize: e,
-                  fontWeight: p.get(s)
+                  fontWeight: R.get(s)
                 },
                 children: [(0, n.jsx)("p", {
                   children: a

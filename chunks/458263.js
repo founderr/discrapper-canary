@@ -15,8 +15,8 @@ var a = n(442837),
   u = n(504983),
   _ = n(594174),
   E = n(74538),
-  I = n(981631),
-  m = n(921944),
+  m = n(981631),
+  I = n(921944),
   T = n(474936),
   h = n(526761),
   N = n(689938),
@@ -37,7 +37,7 @@ function p(e) {
     backgroundClassName: f.upsellInner,
     children: [null != p ? (0, i.jsx)(o.Clickable, {
       className: f.close,
-      onClick: () => null == p ? void 0 : p(m.L.DISMISS),
+      onClick: () => null == p ? void 0 : p(I.L.DISMISS),
       "aria-label": N.Z.Messages.CLOSE,
       children: (0, i.jsx)(o.CloseSmallIcon, {
         size: "xs",
@@ -59,18 +59,18 @@ function p(e) {
       children: g
     }), S ? (0, i.jsx)(s.zx, {
       onClick: function() {
-        c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == p || p(m.L.PRIMARY)
+        c.Z.open(m.oAB.VOICE, h.GA), null == n || n(), null == p || p(I.L.PRIMARY)
       },
       children: N.Z.Messages.CHECK_IT_OUT
     }) : (0, i.jsx)(d.Z, {
       buttonText: N.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
       subscriptionTier: T.Si.TIER_2,
       premiumModalAnalyticsLocation: {
-        section: I.jXE.SOUNDBOARD_SOUND_PICKER,
-        object: I.qAy.BUTTON_CTA
+        section: m.jXE.SOUNDBOARD_SOUND_PICKER,
+        object: m.qAy.BUTTON_CTA
       },
       color: s.zx.Colors.GREEN,
-      onSubscribeModalClose: () => null == p ? void 0 : p(m.L.PRIMARY)
+      onSubscribeModalClose: () => null == p ? void 0 : p(I.L.PRIMARY)
     })]
   })
 }

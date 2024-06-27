@@ -12,7 +12,7 @@ n.d(t, {
     return _
   },
   MF: function() {
-    return g
+    return m
   },
   NY: function() {
     return u
@@ -55,7 +55,7 @@ let i = 8,
   p = 84,
   _ = 16,
   f = 5,
-  g = {
+  m = {
     origin: {
       x: -36,
       y: 7

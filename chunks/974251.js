@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(924557),
   f = n(435064),
   E = n(712114),
-  g = n(605236),
-  C = n(536442),
+  C = n(605236),
+  g = n(536442),
   I = n(79390),
   x = n(665906),
   T = n(695346),
@@ -61,7 +61,7 @@ t.Z = a.memo(function(e) {
     }, {
       autoTrackExposure: !1
     }),
-    en = (0, r.e7)([C.qc], () => C.qc.hasHotspot(C.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+    en = (0, r.e7)([g.qc], () => g.qc.hasHotspot(g.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
     ei = (0, c.useModalsStore)(e => (0, c.hasModalOpenSelector)(e, k.Qr)),
     ea = (0, r.e7)([v.Z], () => v.Z.hasLayers()),
     el = (0, r.e7)([f.Z], () => f.Z.hasClips()),
@@ -104,8 +104,8 @@ t.Z = a.memo(function(e) {
   let e_ = (0, x.NE)(V),
     ef = (0, x.Xu)(V),
     eE = !T.dN.useSetting() && !(0, j.isAndroidWeb)() && null != window.ResizeObserver,
-    eg = (0, I.UI)(null != V ? V : void 0),
-    eC = (0, c.useRedesignIconContext)().enabled,
+    eC = (0, I.UI)(null != V ? V : void 0),
+    eg = (0, c.useRedesignIconContext)().enabled,
     eI = (0, p.qB)(V.id, "ChannelAttachButton"),
     ex = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
     eT = (0, y.Z)({
@@ -117,14 +117,14 @@ t.Z = a.memo(function(e) {
       channel: V,
       activities: X,
       newClipsCount: ex,
-      canPostPolls: eg,
+      canPostPolls: eC,
       canLaunchActivities: eI,
       appContext: K
     });
   if (0 === eT.length) return null;
   let eN = X.some(e => (0, m.Z)(e, D.xjy.SYNC)),
     ev = X.some(e => (0, m.Z)(e, D.xjy.JOIN) && !(0, m.Z)(e, D.xjy.EMBEDDED)) || eN;
-  H = eC ? (0, i.jsx)(c.CirclePlusIcon, {
+  H = eg ? (0, i.jsx)(c.CirclePlusIcon, {
     className: B.__invalid_attachButtonIcon,
     colorClass: B.attachButtonPlus
   }) : ev ? (0, i.jsx)(b.Z, {
@@ -152,12 +152,12 @@ t.Z = a.memo(function(e) {
     position: "top",
     positionKey: null != es ? es : "null",
     onRequestOpen: () => {
-      ep && (0, g.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+      ep && (0, C.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
         dismissAction: U.L.TAKE_ACTION
       }), er("attachMenu")
     },
     onRequestClose: () => {
-      !(0, c.hasAnyModalOpen)() && (ep && (0, g.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+      !(0, c.hasAnyModalOpen)() && (ep && (0, C.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
         dismissAction: U.L.TAKE_ACTION
       }), er(null))
     },

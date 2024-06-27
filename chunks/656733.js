@@ -26,15 +26,15 @@ let E = {
   h = null,
   f = "",
   S = "",
-  N = [],
   A = [],
+  N = [],
   m = [],
   O = [];
 
-function p(e) {
+function R(e) {
   return e.replace(/^https?:/, "")
 }
-class R extends(i = a.ZP.Store) {
+class p extends(i = a.ZP.Store) {
   getAnalyticsID() {
     return h
   }
@@ -45,10 +45,10 @@ class R extends(i = a.ZP.Store) {
     return S
   }
   getResultItems() {
-    return N
+    return A
   }
   getTrendingCategories() {
-    return A
+    return N
   }
   getSelectedFormat() {
     return T
@@ -60,21 +60,21 @@ class R extends(i = a.ZP.Store) {
     return O
   }
 }
-o = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+o = "GIFPickerViewStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new R(_.Z, {
+}) : r[s] = o, t.Z = new p(_.Z, {
   GIF_PICKER_INITIALIZE: function(e) {
     h = e.analyticsID
   },
   GIF_PICKER_QUERY: function(e) {
-    "" === (f = e.query) && (S = "", N = [], m = [])
+    "" === (f = e.query) && (S = "", A = [], m = [])
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
     if (null != e.query && f === S) return !1;
-    null != e.query && (S = e.query), N = e.items.map(e => {
+    null != e.query && (S = e.query), A = e.items.map(e => {
       let {
         width: t,
         height: n,
@@ -86,8 +86,8 @@ o = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       return {
         width: t,
         height: n,
-        src: p(i),
-        gifSrc: p(r),
+        src: R(i),
+        gifSrc: R(r),
         url: s,
         id: o,
         format: ! function(e) {
@@ -117,19 +117,19 @@ o = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       query: t
     } = e;
     if (null == t) return !1;
-    S = t, N = []
+    S = t, A = []
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
     let t = e.trendingCategories;
-    A = [...null != e.trendingGIFPreview ? [{
+    N = [...null != e.trendingGIFPreview ? [{
       type: c.wI2.TRENDING_GIFS,
       icon: u.I,
       name: d.Z.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
-      src: p(e.trendingGIFPreview.src),
+      src: R(e.trendingGIFPreview.src),
       format: l.EO.IMAGE
     }] : [], ...t.map(e => ({
       ...e,
-      src: p(e.src),
+      src: R(e.src),
       type: c.wI2.TRENDING_CATEGORY,
       format: l.EO.VIDEO
     }))]

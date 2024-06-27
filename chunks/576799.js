@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return I
+    return m
   }
 });
 var i = n(735250),
@@ -15,18 +15,18 @@ var i = n(735250),
   _ = n(768760),
   E = n(250050);
 
-function I(e) {
+function m(e) {
   let {
     message: t,
     channel: n
-  } = e, I = (0, s.e7)([d.Z], () => d.Z.isBlockedForMessage(t)), m = (0, r.p)(), T = a.useMemo(() => ({
+  } = e, m = (0, s.e7)([d.Z], () => d.Z.isBlockedForMessage(t)), I = (0, r.p)(), T = a.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, l.$)(T);
   let h = a.useMemo(() => null != t.content && "" !== t.content ? (0, o.ZP)(t, {
     formatInline: !0,
-    shouldFilterKeywords: m
-  }).content : null, [t, m]);
+    shouldFilterKeywords: I
+  }).content : null, [t, I]);
   return (0, i.jsxs)("div", {
     className: E.threadMessageAccessory,
     children: [(0, i.jsx)("img", {
@@ -56,7 +56,7 @@ function I(e) {
             children: a
           }), r]
         })
-      }(t, h, I)
+      }(t, h, m)
     })]
   })
 }

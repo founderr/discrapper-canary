@@ -16,7 +16,7 @@ n.d(t, {
     return M
   },
   hM: function() {
-    return p
+    return R
   },
   iy: function() {
     return U
@@ -53,8 +53,8 @@ var i = n(392711),
   h = n(591759),
   f = n(668781),
   S = n(981631),
-  N = n(526761),
-  A = n(689938);
+  A = n(526761),
+  N = n(689938);
 let m = /-/g;
 
 function O(e) {
@@ -69,7 +69,7 @@ function O(e) {
   })
 }
 
-function p(e, t) {
+function R(e, t) {
   let {
     startTime: n,
     ...i
@@ -90,7 +90,7 @@ function p(e, t) {
   })
 }
 
-function R(e, t, n) {
+function p(e, t, n) {
   let i = Date.now();
   O(t), o.tn.get({
     url: S.ANM.GIFS_SEARCH,
@@ -104,7 +104,7 @@ function R(e, t, n) {
     oldFormErrors: !0
   }).then(r => {
     let s = r.body;
-    p(s, t, {
+    R(s, t, {
       startTime: i,
       limit: n
     }), l.Z.dispatch({
@@ -117,7 +117,7 @@ function R(e, t, n) {
     query: e
   }))
 }
-let g = r().debounce(R, 250);
+let g = r().debounce(p, 250);
 
 function C(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -125,7 +125,7 @@ function C(e, t) {
   "" === e ? L() : (l.Z.dispatch({
     type: "GIF_PICKER_QUERY",
     query: e
-  }), n ? R(e, t, i) : g(e, t, i))
+  }), n ? p(e, t, i) : g(e, t, i))
 }
 
 function v(e) {
@@ -238,7 +238,7 @@ function y(e) {
     let {
       body: i
     } = n;
-    p(i, S.wI2.TRENDING_GIFS, {
+    R(i, S.wI2.TRENDING_GIFS, {
       startTime: t,
       limit: e
     }), l.Z.dispatch({
@@ -264,15 +264,15 @@ function b(e) {
     if (t.gifs[U(e.url)] = {
         ...e,
         order: i + 1
-      }, a.wK.toBinary(t).length > N.vY) return f.Z.show({
-      title: A.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-      body: A.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
+      }, a.wK.toBinary(t).length > A.vY) return f.Z.show({
+      title: N.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+      body: N.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
     }), !1;
     let s = r().size(t.gifs);
     s > 2 && (t.hideTooltip = !0), I.default.track(S.rMx.GIF_FAVORITED, {
       total_num_favorited: s
     })
-  }, N.fy.INFREQUENT_USER_ACTION)
+  }, A.fy.INFREQUENT_USER_ACTION)
 }
 
 function G(e) {
@@ -280,5 +280,5 @@ function G(e) {
     e in t.gifs ? delete t.gifs[e] : delete t.gifs[U(e)], I.default.track(S.rMx.GIF_UNFAVORITED, {
       total_num_favorited: r().size(t.gifs)
     })
-  }, N.fy.INFREQUENT_USER_ACTION)
+  }, A.fy.INFREQUENT_USER_ACTION)
 }

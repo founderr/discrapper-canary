@@ -15,13 +15,13 @@ var n = t(735250),
   I = t(430492),
   N = t(688465),
   C = t(594174),
-  A = t(55935),
-  m = t(702512),
-  O = t(689938),
-  g = t(612011);
+  m = t(55935),
+  A = t(702512),
+  g = t(689938),
+  O = t(612011);
 let h = "YYYY-MM-DD HH:mm";
 
-function R(e) {
+function p(e) {
   let {
     drop: s,
     enrolled: t,
@@ -41,9 +41,9 @@ function R(e) {
     endDate: I,
     dropsQuestId: N,
     assets: C,
-    articleUrl: A
-  } = s, m = (0, S.EW)(N);
-  if (null == m) return null;
+    articleUrl: m
+  } = s, A = (0, S.EW)(N);
+  if (null == A) return null;
   let h = () => {
     (0, T.RJ)(N).then(() => {
       E.Z.wait(async () => {
@@ -52,19 +52,19 @@ function R(e) {
     })
   };
   return (0, n.jsxs)("div", {
-    className: g.dropContainer,
+    className: O.dropContainer,
     children: [(0, n.jsx)("div", {
-      className: g.dropCard,
+      className: O.dropCard,
       children: (0, n.jsxs)("div", {
-        className: g.mainPromotionCardContainer,
+        className: O.mainPromotionCardContainer,
         children: [(0, n.jsxs)("div", {
-          className: g.promotionCardLeftContainer,
+          className: O.promotionCardLeftContainer,
           children: [(0, n.jsx)("div", {
-            className: g.promotionIcon,
+            className: O.promotionIcon,
             children: (0, n.jsx)("img", {
               alt: "",
               src: C.iconSrc,
-              className: g.promotionIconImage
+              className: O.promotionIconImage
             })
           }), (0, n.jsxs)("div", {
             children: [(0, n.jsx)(_.Heading, {
@@ -73,73 +73,73 @@ function R(e) {
             }), (0, n.jsx)(_.Text, {
               variant: "text-xs/medium",
               color: "text-normal",
-              className: g.availableUntil,
-              children: O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+              className: O.availableUntil,
+              children: g.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
                 endDate: l()(I, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
         }), (0, n.jsx)(_.Tooltip, {
-          text: t && !i ? O.Z.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
-          tooltipContentClassName: g.redeemTooltipContent,
+          text: t && !i ? g.Z.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
+          tooltipContentClassName: O.redeemTooltipContent,
           children: e => (0, n.jsx)(_.Button, {
-            className: g.promotionCardButton,
+            className: O.promotionCardButton,
             color: _.Button.Colors.BRAND,
             size: _.Button.Sizes.SMALL,
             onClick: h,
             disabled: t && !i,
             ...e,
-            children: t ? O.Z.Messages.REDEEM : O.Z.Messages.DROPS_GIFT_INVENTORY_ENROLL
+            children: t ? g.Z.Messages.REDEEM : g.Z.Messages.DROPS_GIFT_INVENTORY_ENROLL
           })
         })]
       })
     }), (0, n.jsxs)("div", {
-      className: g.dropCriteria,
+      className: O.dropCriteria,
       children: [(0, n.jsx)("img", {
         alt: "",
         src: C.rewardSrc,
-        className: g.dropRewardImage
+        className: O.dropRewardImage
       }), (0, n.jsx)("div", {
         ref: r,
         children: (0, n.jsx)(_.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          className: g.dropCriteriaText,
-          children: m.messages.giftInfo()
+          className: O.dropCriteriaText,
+          children: A.messages.giftInfo()
         })
       }), (0, n.jsx)(_.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
-        className: g.dropLearnMore,
-        children: O.Z.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: A
+        className: O.dropLearnMore,
+        children: g.Z.Messages.DROPS_LEARN_MORE.format({
+          faqUrl: m
         })
       })]
     })]
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     drop: s,
     code: t,
     platform: i
-  } = e, [o, c] = a.useState(!1), d = void 0 !== t, E = (0, A.vc)(l()(s.endDate), "LL"), u = O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [o, c] = a.useState(!1), d = void 0 !== t, E = (0, m.vc)(l()(s.endDate), "LL"), u = g.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: E
-  }), T = d ? O.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : O.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, S = a.useCallback(() => c(!1), []);
+  }), T = d ? g.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : g.Z.Messages.PROMOTION_CARD_ACTION_CLAIM, S = a.useCallback(() => c(!1), []);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("div", {
-      className: r()(g.skuCard, g.promotionCard),
+      className: r()(O.skuCard, O.promotionCard),
       children: (0, n.jsxs)("div", {
-        className: g.mainPromotionCardContainer,
+        className: O.mainPromotionCardContainer,
         children: [(0, n.jsxs)("div", {
-          className: g.promotionCardLeftContainer,
+          className: O.promotionCardLeftContainer,
           children: [(0, n.jsx)("div", {
-            className: g.promotionIcon,
+            className: O.promotionIcon,
             children: (0, n.jsx)("img", {
               alt: "",
               src: s.assets.iconSrc,
-              className: g.promotionIconImage
+              className: O.promotionIconImage
             })
           }), (0, n.jsxs)("div", {
             children: [(0, n.jsx)(_.Heading, {
@@ -148,7 +148,7 @@ function p(e) {
             }), (0, n.jsx)(_.Text, {
               variant: "text-sm/normal",
               color: "text-normal",
-              className: g.__invalid_promotionText,
+              className: O.__invalid_promotionText,
               children: u
             })]
           })]
@@ -217,32 +217,32 @@ s.Z = function(e) {
     })
   }
   let E = (0, n.jsxs)("div", {
-    className: g.dropsHeaderContainer,
+    className: O.dropsHeaderContainer,
     children: [(0, n.jsx)(_.Heading, {
       variant: "heading-md/semibold",
-      children: O.Z.Messages.DROPS_GIFT_INVENTORY_TITLE
+      children: g.Z.Messages.DROPS_GIFT_INVENTORY_TITLE
     }), (0, n.jsx)(N.Z, {
-      className: g.betaTagIcon
+      className: O.betaTagIcon
     })]
   });
   return c && 0 === i.length && 0 === r.length && t ? (0, n.jsxs)(_.FormSection, {
     children: [E, (0, n.jsx)(_.FormDivider, {
-      className: g.divider
+      className: O.divider
     }), (0, n.jsx)("div", {
-      className: g.dropsHelpText,
-      children: O.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: m.n4
+      className: O.dropsHelpText,
+      children: g.Z.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
+        blogURL: A.n4
       })
     })]
   }) : 0 === i.length && 0 === r.length ? null : (0, n.jsxs)(_.FormSection, {
     children: [E, (0, n.jsx)(_.FormDivider, {
-      className: g.divider
+      className: O.divider
     }), i.map(e => {
       let s = (0, S.EW)(e.dropsQuestId),
         t = null != e.dropsStatus.enrolled_at,
         a = null != e.dropsStatus.completed_at;
       return null != s ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(R, {
+        children: [(0, n.jsx)(p, {
           drop: {
             ...s
           },
@@ -258,7 +258,7 @@ s.Z = function(e) {
       var s, t;
       let a = (0, S.EW)(e.dropsQuestId);
       return null != a ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(p, {
+        children: [(0, n.jsx)(R, {
           drop: a,
           code: null !== (s = e.dropsStatus.code) && void 0 !== s ? s : void 0,
           platform: null !== (t = e.dropsStatus.platform) && void 0 !== t ? t : void 0
@@ -269,8 +269,8 @@ s.Z = function(e) {
         })]
       }) : null
     }), "string" == typeof(null == o ? void 0 : o.id) && r.length > 0 ? (0, n.jsx)("div", {
-      className: g.feedback,
-      children: O.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
+      className: O.feedback,
+      children: g.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
         feedbackURL: "https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id=".concat(null !== (s = null == o ? void 0 : o.id) && void 0 !== s ? s : "")
       })
     }) : null]

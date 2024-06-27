@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(255269),
   f = n(937889),
   E = n(703656),
-  g = n(359110),
-  C = n(695346),
+  C = n(359110),
+  g = n(695346),
   I = n(592125),
   x = n(430824),
   T = n(496675),
@@ -43,17 +43,17 @@ function P(e) {
     scrollTo: m,
     searchResults: _,
     blockCount: f,
-    onChangePage: g
+    onChangePage: C
   } = e, {
-    offset: C,
+    offset: g,
     totalResults: x,
     isSearching: T,
     showBlockedResults: S
   } = n, Z = a.useCallback(e => {
     if (T) return;
     let t = e - 1;
-    null == g || g(t), c.oO(h, t)
-  }, [h, T, g]), A = a.useCallback(e => {
+    null == C || C(t), c.oO(h, t)
+  }, [h, T, C]), A = a.useCallback(e => {
     if (e.blocked) r.Z.show({
       title: j.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: j.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -117,7 +117,7 @@ function P(e) {
       scrollTo: m,
       searchId: h,
       renderEmbeds: p,
-      offset: C,
+      offset: g,
       jumpToMessage: A,
       listNavigator: U,
       favoriteSearch: B
@@ -153,7 +153,7 @@ function P(e) {
       })]
     }) : null, !T && !B && (0, i.jsx)(M.Z, {
       changePage: Z,
-      offset: C,
+      offset: g,
       totalResults: x,
       pageLength: R.vpv
     })]
@@ -176,10 +176,10 @@ function O(e) {
     jumpToMessage: P,
     listNavigator: O,
     favoriteSearch: y
-  } = e, D = C.cC.useSetting(), k = (0, m.p)(), U = a.useCallback(e => {
+  } = e, D = g.cC.useSetting(), k = (0, m.p)(), U = a.useCallback(e => {
     if (e === S.Z.getChannelId()) return;
     let t = I.Z.getChannel(e);
-    if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t))(0, g.Kh)(t.id)
+    if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t))(0, C.Kh)(t.id)
   }, []), w = null != l ? (0, h.F6)(l, Z.default, N.Z, !1) : "???", B = y && null != l.guild_id ? null === (t = x.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == l ? void 0 : l.parent_id) != null ? I.Z.getChannel(l.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(l)) && void 0 !== n ? n : s.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, l), {
     content: z
   } = (0, f.ZP)({

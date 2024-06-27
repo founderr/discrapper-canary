@@ -22,13 +22,13 @@ n.d(t, {
     return l
   },
   X: function() {
-    return A
+    return N
   },
   YW: function() {
     return T
   },
   ae: function() {
-    return p
+    return R
   },
   b3: function() {
     return S
@@ -49,13 +49,13 @@ n.d(t, {
     return o
   },
   md: function() {
-    return N
+    return A
   },
   qm: function() {
     return f
   },
   yZ: function() {
-    return R
+    return p
   }
 });
 var i, r, s, o, a, l, u = n(348327),
@@ -68,8 +68,8 @@ let d = 100,
   h = 12,
   f = 50,
   S = 4,
-  N = 7,
-  A = 5,
+  A = 7,
+  N = 5,
   m = 13;
 
 function O(e) {
@@ -77,14 +77,14 @@ function O(e) {
   let {
     id: t,
     ...n
-  } = p(), {
+  } = R(), {
     id: i,
     ...r
   } = e;
   return _()(n, r)
 }
 
-function p() {
+function R() {
   return {
     id: String(Date.now()),
     title: c.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
@@ -96,7 +96,7 @@ function p() {
   }
 }
 
-function R(e) {
+function p(e) {
   return {
     id: String(Date.now()),
     title: "",

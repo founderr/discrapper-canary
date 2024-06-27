@@ -26,12 +26,12 @@ var i = n(735250),
   h = n(275759),
   f = n(323588),
   S = n(753194),
-  N = n(598077),
-  A = n(671533),
+  A = n(598077),
+  N = n(671533),
   m = n(49012),
   O = n(981631),
-  p = n(856651),
-  R = n(689938),
+  R = n(856651),
+  p = n(689938),
   g = n(389914);
 
 function C(e) {
@@ -39,7 +39,7 @@ function C(e) {
   let r, s, _, {
     connectedAccount: E,
     theme: I,
-    locale: N,
+    locale: A,
     userId: C,
     className: v,
     showMetadata: L,
@@ -47,9 +47,9 @@ function C(e) {
   } = e;
   null == L && (L = !0);
   let M = null !== (n = E.metadata) && void 0 !== n ? n : {},
-    P = L ? (0, h.FI)(M[p.PC.CREATED_AT], N) : null,
+    P = L ? (0, h.FI)(M[R.PC.CREATED_AT], A) : null,
     y = (0, u.useToken)(a.Z.unsafe_rawColors.TWITTER).hex(),
-    U = R.Z.Messages.CONNECTION_VERIFIED;
+    U = p.Z.Messages.CONNECTION_VERIFIED;
   if (L) switch (E.type) {
     case O.ABu.REDDIT:
       r = (0, f.oP)(M);
@@ -58,7 +58,7 @@ function C(e) {
       r = (0, f.Dq)(M);
       break;
     case O.ABu.TWITTER:
-      r = (0, f.rJ)(M), "1" === M[p.PC.TWITTER_VERIFIED] && (s = y, U = R.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+      r = (0, f.rJ)(M), "1" === M[R.PC.TWITTER_VERIFIED] && (s = y, U = p.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break;
     case O.ABu.PAYPAL:
       r = (0, f.li)(M);
@@ -87,17 +87,17 @@ function C(e) {
         trusted: (null == b ? void 0 : b.type) !== O.ABu.DOMAIN
       }, e)
     },
-    children: (0, i.jsx)(A.Z, {
+    children: (0, i.jsx)(N.Z, {
       className: g.connectedAccountOpenIcon,
-      direction: A.Z.Directions.RIGHT
+      direction: N.Z.Directions.RIGHT
     })
   }));
   let w = (0, u.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
-    x = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
-    B = E.verified ? (0, i.jsx)(S.Z, {
+    B = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
+    x = E.verified ? (0, i.jsx)(S.Z, {
       className: g.connectedAccountVerifiedIcon,
       color: null != s ? s : w,
-      forcedIconColor: x,
+      forcedIconColor: B,
       size: 16,
       tooltipText: U
     }) : null;
@@ -109,7 +109,7 @@ function C(e) {
         text: null == b ? void 0 : b.name,
         children: e => (0, i.jsx)("img", {
           ...e,
-          alt: R.Z.Messages.IMG_ALT_LOGO.format({
+          alt: p.Z.Messages.IMG_ALT_LOGO.format({
             name: null == b ? void 0 : b.name
           }),
           className: g.connectedAccountIcon,
@@ -131,12 +131,12 @@ function C(e) {
                 className: g.connectedAccountNameText,
                 children: E.name
               })
-            }), B]
+            }), x]
           }), _]
         }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: R.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+          children: p.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
             date: P
           })
         }) : null]
@@ -199,11 +199,11 @@ function v(e) {
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: R.Z.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+          children: p.Z.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
             applicationHook: () => (0, i.jsxs)("div", {
               className: g.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(_.Z, {
-                user: new N.Z(t.application.bot),
+                user: new A.Z(t.application.bot),
                 size: u.AvatarSizes.SIZE_16
               }) : null, (0, i.jsx)(u.Text, {
                 variant: "text-xs/normal",

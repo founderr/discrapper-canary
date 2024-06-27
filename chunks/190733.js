@@ -14,7 +14,7 @@ t.Z = i.forwardRef(function(e, t) {
     onChange: u,
     onSubmit: _,
     className: g
-  } = e, [m, p] = i.useState(!1);
+  } = e, [m, f] = i.useState(!1);
   return (0, a.jsx)(c.SearchBox, {
     ref: t,
     className: r()(d.search, g),
@@ -24,8 +24,8 @@ t.Z = i.forwardRef(function(e, t) {
     cta: l && m && n.length > 0 ? o.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
     onChange: u,
     onClear: () => u(""),
-    onFocus: () => p(!0),
-    onBlur: () => p(!1),
+    onFocus: () => f(!0),
+    onBlur: () => f(!1),
     onKeyPress: e => {
       e.charCode === s.yXg.ENTER && (null == _ || _())
     },

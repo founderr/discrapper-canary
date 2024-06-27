@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(137591),
   f = n(299206),
   E = n(727429),
-  g = n(359110),
-  C = n(502568),
+  C = n(359110),
+  g = n(502568),
   I = n(585483),
   x = n(739830),
   T = n(488131),
@@ -52,7 +52,7 @@ function S(e) {
       let {
         isShown: n
       } = t;
-      return (0, i.jsx)(C.ZP.Icon, {
+      return (0, i.jsx)(g.ZP.Icon, {
         ...e,
         onClick: r,
         tooltip: n ? null : o,
@@ -69,13 +69,13 @@ function Z(e) {
     channel: t,
     closePopout: n,
     onSelect: a
-  } = e, E = (0, o.Z)(t, "Sidebar Overflow"), C = (0, u.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, s.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
+  } = e, E = (0, o.Z)(t, "Sidebar Overflow"), g = (0, u.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, s.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
     id: t.id,
     label: v.Z.Messages.COPY_ID_THREAD
   }), j = (0, _.Z)(t);
 
   function L() {
-    (0, g.Kh)(t.id)
+    (0, C.Kh)(t.id)
   }
   return (0, i.jsxs)(l.Menu, {
     navId: "thread-context",
@@ -91,7 +91,7 @@ function Z(e) {
     }), (0, i.jsxs)(l.MenuGroup, {
       children: [x, T]
     }), (0, i.jsxs)(l.MenuGroup, {
-      children: [M, C, A]
+      children: [M, g, A]
     }), (0, i.jsxs)(l.MenuGroup, {
       children: [(0, i.jsx)(l.MenuItem, {
         id: "search",
@@ -130,7 +130,7 @@ function A(e) {
       channel: t
     }), (0, i.jsx)(S, {
       channel: t
-    }), (0, i.jsx)(C.ZP.Icon, {
+    }), (0, i.jsx)(g.ZP.Icon, {
       icon: l.CloseSmallIcon,
       tooltip: v.Z.Messages.CLOSE,
       onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)

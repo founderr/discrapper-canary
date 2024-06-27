@@ -29,20 +29,20 @@ function u(e) {
     className: I,
     disabled: N = !1,
     isTryItOutFlow: C = !1,
-    forcedDivider: A,
-    withHighlight: m = !1
-  } = e, O = m ? r.ShinyButton : r.Button;
+    forcedDivider: m,
+    withHighlight: A = !1
+  } = e, g = A ? r.ShinyButton : r.Button;
   return (0, n.jsx)(l.Z, {
     className: I,
     title: u,
     errors: t,
     disabled: N,
-    forcedDivider: A,
+    forcedDivider: m,
     children: (0, n.jsxs)("div", {
       className: _.buttonsContainer,
-      children: [(0, n.jsx)(O, {
+      children: [(0, n.jsx)(g, {
         className: i()({
-          [_.buttonHighlighted]: m
+          [_.buttonHighlighted]: A
         }),
         size: r.Button.Sizes.SMALL,
         onClick: () => (0, o.$r)(c.pC.AVATAR, S, C, C ? E : void 0),

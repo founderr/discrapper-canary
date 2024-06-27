@@ -25,13 +25,13 @@ function S(e) {
     channelId: t,
     option: n,
     keyboardModeEnabled: s
-  } = e, S = r.useRef(null), [N, A] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
-    A(!0)
-  }, []), R = r.useCallback(() => {
-    A(!1)
+  } = e, S = r.useRef(null), [A, N] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), R = r.useCallback(() => {
+    N(!0)
+  }, []), p = r.useCallback(() => {
+    N(!1)
   }, []), g = r.useCallback(e => {
     var i;
-    A(!1);
+    N(!1);
     let r = {
       id: n.name,
       file: null === (i = e.dataTransfer) || void 0 === i ? void 0 : i.files[0],
@@ -46,10 +46,10 @@ function S(e) {
   }, [t, n]);
   return (r.useEffect(() => {
     let e = O.current;
-    return null == m && (null == e || e.addEventListener("dragover", p, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", g, !1)), () => {
-      null == e || e.removeEventListener("dragover", p, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", g, !1)
+    return null == m && (null == e || e.addEventListener("dragover", R, !1), null == e || e.addEventListener("dragleave", p, !1), null == e || e.addEventListener("drop", g, !1)), () => {
+      null == e || e.removeEventListener("dragover", R, !1), null == e || e.removeEventListener("dragleave", p, !1), null == e || e.removeEventListener("drop", g, !1)
     }
-  }, [m, p, R, g]), null != m) ? (0, i.jsx)(I.Z, {
+  }, [m, R, p, g]), null != m) ? (0, i.jsx)(I.Z, {
     channelId: t,
     upload: m,
     keyboardModeEnabled: s,
@@ -78,13 +78,13 @@ function S(e) {
       }
     },
     className: o()(h.emptyOption, {
-      [h.emptyOptionActive]: N
+      [h.emptyOptionActive]: A
     }),
     draftType: c.d.SlashCommand,
     ref: O,
     children: [(0, i.jsx)("span", {
       className: o()(h.optionName, {
-        [h.optionNameActive]: N
+        [h.optionNameActive]: A
       }),
       children: n.name
     }), (0, i.jsx)(a.Clickable, {

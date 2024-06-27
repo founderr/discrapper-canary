@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return T
+    return A
   }
 }), n(47120);
 var a = n(735250);
@@ -16,8 +16,8 @@ var i = n(209173),
   _ = n(639002),
   g = n(781627),
   m = n(981631),
-  p = n(689938),
-  f = n(439818);
+  f = n(689938),
+  p = n(439818);
 let C = new Map([
     ["890343617762304070", {
       imageSrc: n(336662)
@@ -47,7 +47,7 @@ function I(e) {
       compact: !0
     }) : null,
     _ = null !== (n = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-    m = _ > 0 ? p.Z.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
+    m = _ > 0 ? f.Z.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
       guildCount: _
     }) : void 0;
   return (0, a.jsx)(g.Z, {
@@ -55,7 +55,7 @@ function I(e) {
     header: i.data.name,
     description: i.data.description,
     secondaryInfo: m,
-    ctaLabel: p.Z.Messages.APPLICATION_ADD_BUTTON,
+    ctaLabel: f.Z.Messages.APPLICATION_ADD_BUTTON,
     mutualGuildCount: u,
     onCtaClick: () => (0, o.goToApplication)({
       applicationId: l.id
@@ -63,7 +63,7 @@ function I(e) {
   })
 }
 
-function R(e) {
+function T(e) {
   let {
     result: t
   } = e, n = h.get(t.data.id);
@@ -71,17 +71,17 @@ function R(e) {
     imageSrc: n.imageSrc,
     header: t.data.name,
     description: t.data.description,
-    secondaryInfo: p.Z.Messages.APP_DIRECTORY_ACTIVITY_LABEL
+    secondaryInfo: f.Z.Messages.APP_DIRECTORY_ACTIVITY_LABEL
   })
 }
 
-function b(e) {
+function R(e) {
   let t, n, i, {
       result: c,
       guildId: o
     } = e,
     d = x.get(c.data.name);
-  return null == d ? null : (c.data.name === m.ABu.SPOTIFY && (t = p.Z.Messages.APP_DIRECTORY_SPOTIFY_TITLE, n = p.Z.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), i = () => {
+  return null == d ? null : (c.data.name === m.ABu.SPOTIFY && (t = f.Z.Messages.APP_DIRECTORY_SPOTIFY_TITLE, n = f.Z.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), i = () => {
     r.default.track(m.rMx.APP_DIRECTORY_CTA_CLICKED, {
       current_page: s.ApplicationDirectoryViews.SEARCH,
       cta: "spotify",
@@ -91,30 +91,30 @@ function b(e) {
     imageSrc: d.imageSrc,
     header: t,
     description: n,
-    ctaLabel: p.Z.Messages.LEARN_MORE,
+    ctaLabel: f.Z.Messages.LEARN_MORE,
     onCtaClick: i,
-    secondaryInfo: p.Z.Messages.APP_DIRECTORY_CONNECTION_LABEL
+    secondaryInfo: f.Z.Messages.APP_DIRECTORY_CONNECTION_LABEL
   })
 }
 
-function T(e) {
+function A(e) {
   let {
     results: t,
     guildId: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: f.container,
+    className: p.container,
     children: [(0, a.jsx)(u.Z, {}), (0, a.jsx)("div", {
-      className: f.list,
+      className: p.list,
       children: t.map((e, t) => {
         let l = "".concat(t).concat(e.type);
         if (e.type === i.s.APPLICATION) return (0, a.jsx)(I, {
           result: e
         }, l);
-        if (e.type === i.s.ACTIVITY_APPLICATION) return (0, a.jsx)(R, {
+        if (e.type === i.s.ACTIVITY_APPLICATION) return (0, a.jsx)(T, {
           result: e
         }, l);
-        if (e.type === i.s.CONNECTION) return (0, a.jsx)(b, {
+        if (e.type === i.s.CONNECTION) return (0, a.jsx)(R, {
           guildId: n,
           result: e
         }, l)

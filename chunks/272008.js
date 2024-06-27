@@ -10,13 +10,13 @@ n.d(t, {
     return y
   },
   QB: function() {
-    return R
+    return p
   },
   T0: function() {
     return M
   },
   Tj: function() {
-    return p
+    return R
   },
   Wf: function() {
     return L
@@ -28,7 +28,7 @@ n.d(t, {
     return C
   },
   is: function() {
-    return N
+    return A
   },
   kP: function() {
     return P
@@ -43,7 +43,7 @@ n.d(t, {
     return g
   },
   xw: function() {
-    return A
+    return N
   }
 }), n(411104);
 var i = n(990547),
@@ -92,12 +92,12 @@ async function S(e) {
     errorHints: []
   }
 }
-async function N(e) {
+async function A(e) {
   await r.tn.post({
     url: h.ANM.QUEST_ON_CONSOLE_STOP(e)
   })
 }
-async function A() {
+async function N() {
   if (!_.Z.isFetchingCurrentQuests) {
     s.Z.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
@@ -197,7 +197,7 @@ async function O(e, t) {
     }
   }
 }
-async function p(e, t, n) {
+async function R(e, t, n) {
   if (!_.Z.isClaimingRewardCode(e)) {
     s.Z.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -225,7 +225,7 @@ async function p(e, t, n) {
     }
   }
 }
-async function R(e, t, n) {
+async function p(e, t, n) {
   if (!_.Z.isClaimingReward(e)) {
     s.Z.dispatch({
       type: "QUESTS_CLAIM_REWARD_BEGIN",

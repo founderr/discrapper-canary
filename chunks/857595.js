@@ -13,7 +13,7 @@ n.d(t, {
     return E
   },
   TX: function() {
-    return p
+    return R
   },
   Uv: function() {
     return v
@@ -22,7 +22,7 @@ n.d(t, {
     return c
   },
   Zt: function() {
-    return A
+    return N
   },
   cq: function() {
     return d
@@ -34,13 +34,13 @@ n.d(t, {
     return T
   },
   gs: function() {
-    return R
+    return p
   },
   lq: function() {
     return h
   },
   o2: function() {
-    return N
+    return A
   },
   oL: function() {
     return _
@@ -129,14 +129,14 @@ function S(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_SATURATION",
     saturation: e
   })
 }
 
-function A(e) {
+function N(e) {
   let t = o.Z.useReducedMotion;
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
@@ -174,14 +174,14 @@ function O(e, t) {
   })
 }
 
-function p(e) {
+function R(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
     systemPrefersContrast: e
   })
 }
 
-function R(e) {
+function p(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS",
     alwaysShowLinkDecorations: e

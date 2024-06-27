@@ -13,7 +13,7 @@ n.d(t, {
     return h
   },
   VO: function() {
-    return N
+    return A
   },
   YO: function() {
     return S
@@ -76,7 +76,7 @@ function S(e) {
   return !!e.isPrivate() || s.Z.can(a.Plq.VIEW_CHANNEL, e)
 }
 
-function N(e) {
+function A(e) {
   let {
     guildId: t,
     channelId: n

@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(430824),
   _ = n(594174),
   f = n(40153),
-  g = n(603592),
-  m = n(981631),
+  m = n(603592),
+  g = n(981631),
   C = n(675999),
   I = n(689938),
   E = n(810817);
@@ -51,17 +51,17 @@ function S(e) {
     lastTargetNode: n
   } = e, s = (0, r.e7)([p.Z], () => p.Z.getGuilds()), S = l.useMemo(() => Object.values(s), [s]), Z = (0, r.e7)([_.default], () => _.default.getCurrentUser()), v = l.useMemo(() => S.some(e => e.isOwner(Z)), [S, Z]), T = (0, a.useModalsStore)(e => (0, a.hasModalOpenSelector)(e, C.PU)), {
     analyticsLocations: L
-  } = (0, o.ZP)(), A = (0, a.useRedesignIconContext)().enabled, b = (0, i.jsx)(g.Z, {
+  } = (0, o.ZP)(), A = (0, a.useRedesignIconContext)().enabled, b = (0, i.jsx)(m.Z, {
     showPill: !1,
     id: "create-join-button",
     onClick: () => {
       (0, u.yU)() ? (0, d.Z)({
         analyticsSource: {
-          page: m.Sbl.CREATE_JOIN_GUILD_MODAL
+          page: g.Sbl.CREATE_JOIN_GUILD_MODAL
         },
         analyticsLocation: {
-          page: m.Sbl.CREATE_JOIN_GUILD_MODAL,
-          section: m.jXE.GUILD_CAP_UPSELL_MODAL
+          page: g.Sbl.CREATE_JOIN_GUILD_MODAL,
+          section: g.jXE.GUILD_CAP_UPSELL_MODAL
         },
         analyticsLocations: L
       }) : c.Z.openCreateGuildModal({

@@ -52,7 +52,7 @@ function S(e, t, n) {
         children: s
       });
     case "applicationCommandOption":
-      return (0, i.jsx)(N, {
+      return (0, i.jsx)(A, {
         attributes: r,
         channelId: n,
         element: o,
@@ -62,19 +62,19 @@ function S(e, t, n) {
       return null
   }
 }
-let N = e => {
+let A = e => {
   let t, {
       channelId: n,
       element: s,
       attributes: E,
       children: S
     } = e,
-    N = (0, a.vt)(),
-    A = (0, a.UE)(),
+    A = (0, a.vt)(),
+    N = (0, a.UE)(),
     m = (0, a._7)(),
     {
       optionType: O,
-      errored: p
+      errored: R
     } = (0, l.cj)([_.Z], () => {
       var e, t, i;
       return {
@@ -82,20 +82,20 @@ let N = e => {
         errored: (null === (i = _.Z.getOptionState(n, s.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
       }
     }, [n, s.optionName]),
-    R = (0, l.e7)([d.Z], () => d.Z.getUpload(n, s.optionName, c.d.SlashCommand), [n, s.optionName]),
+    p = (0, l.e7)([d.Z], () => d.Z.getUpload(n, s.optionName, c.d.SlashCommand), [n, s.optionName]),
     g = s.children[s.children.length - 1],
     C = null != g && T.LC.isText(g) && g.text.endsWith("\n"),
     v = o()(f.inlineElement, f.optionPill, {
-      [f.selectedPill]: A && N,
-      [f.erroredPill]: (!A || !N) && p
+      [f.selectedPill]: N && A,
+      [f.erroredPill]: (!N || !A) && R
     }),
     L = r.useCallback(() => {
       !T.bN.isVoid(m, s) && I.Q.selectCommandOption(m, s.optionName, !0)
     }, [m, s]);
-  return t = O === u.jw.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
+  return t = O === u.jw.ATTACHMENT ? (null == p ? void 0 : p.filename) != null ? (0, i.jsxs)("span", {
     className: o()(f.optionPillValue, f.attachmentFilename),
     contentEditable: !1,
-    children: [R.filename, S]
+    children: [p.filename, S]
   }) : (0, i.jsxs)("span", {
     className: o()(f.optionPillValue, f.readonlyPillValue),
     contentEditable: !1,

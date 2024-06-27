@@ -49,12 +49,12 @@ t.Z = o.memo(function(e) {
     children: h,
     onClick: f,
     isActive: S,
-    onMouseEnter: N,
-    onMouseLeave: A,
+    onMouseEnter: A,
+    onMouseLeave: N,
     onFocus: m,
     onBlur: O,
-    pulse: p,
-    sparkle: R,
+    pulse: R,
+    sparkle: p,
     notification: g,
     "aria-label": C,
     "aria-expanded": v,
@@ -92,11 +92,11 @@ t.Z = o.memo(function(e) {
       [I.active]: S
     }),
     innerClassName: l()(I.button, i, {
-      [I.pulseButton]: p
+      [I.pulseButton]: R
     }),
     onClick: f,
-    onMouseEnter: N,
-    onMouseLeave: A,
+    onMouseEnter: A,
+    onMouseLeave: N,
     onFocus: m,
     onBlur: O,
     focusProps: {
@@ -121,13 +121,13 @@ t.Z = o.memo(function(e) {
         children: P({
           component: (0, s.jsx)(a, {
             className: l()(I.icon, o, {
-              [I.pulseIcon]: p
+              [I.pulseIcon]: R
             }),
             color: "currentColor"
           })
         })
       }, i) : void 0
-    }), R && (0, s.jsxs)("div", {
+    }), p && (0, s.jsxs)("div", {
       className: I.sparkleContainer,
       children: [(0, s.jsx)(d.Z, {
         className: I.sparkleStar

@@ -46,7 +46,7 @@ function f(e, t, n, d) {
           if (null != e) {
             if (e.isPrivate()) {
               for (let t of e.recipients)
-                if (N(o, a, t)) return {
+                if (A(o, a, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
@@ -58,14 +58,14 @@ function f(e, t, n, d) {
                   userId: e
                 }
                 of _.ZP.getMembers(t))
-                if (N(o, a, e)) return {
+                if (A(o, a, e)) return {
                   type: "userMention",
                   userId: e,
                   children: [{
                     text: ""
                   }]
                 };
-              if (d && N(o, a, h.fL)) return {
+              if (d && A(o, a, h.fL)) return {
                 type: "userMention",
                 userId: h.fL,
                 children: [{
@@ -154,7 +154,7 @@ function S(e, t, n, i) {
   return null == r ? null : (0, T.VI)(r)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let i = d.default.getUser(n);
   return null != i && (n === h.fL && "clyde" === e.toLowerCase() || i.username === e && i.discriminator === (null != t ? t : "0"))
 }

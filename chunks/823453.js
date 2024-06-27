@@ -16,14 +16,14 @@ var i = n(735250),
   h = n(706454),
   f = n(210887),
   S = n(451478),
-  N = n(792125),
-  A = n(597952),
+  A = n(792125),
+  N = n(597952),
   m = n(252618),
   O = n(587061),
-  p = n(392358),
-  R = n(981631);
+  R = n(392358),
+  p = n(981631);
 n(209525);
-let g = new Set([R.Z5c.LOGIN, R.Z5c.REGISTER]);
+let g = new Set([p.Z5c.LOGIN, p.Z5c.REGISTER]);
 t.Z = r.memo(function(e) {
   let {
     children: t,
@@ -33,7 +33,7 @@ t.Z = r.memo(function(e) {
     skipsSettingDefaultPageTitle: s
   });
   let {
-    clientThemesClassName: R,
+    clientThemesClassName: p,
     clientThemesCSS: C
   } = (0, I.ZP)(), v = r.createElement("style", {
     [I.PQ]: !0
@@ -52,7 +52,7 @@ t.Z = r.memo(function(e) {
       } = r.useContext(d.AccessibilityPreferencesContext), {
         fontScale: I,
         fontScaleClass: m,
-        keyboardModeEnabled: R,
+        keyboardModeEnabled: p,
         saturation: C,
         desaturateUserColors: v,
         useForcedColors: L,
@@ -78,7 +78,7 @@ t.Z = r.memo(function(e) {
         }
       }), M = (0, l.TH)(), P = r.useMemo(() => g.has(M.pathname), [M.pathname]);
       (0, O.Z)(window, P);
-      let y = (0, p.Z)(window, __OVERLAY__ || s),
+      let y = (0, R.Z)(window, __OVERLAY__ || s),
         U = (0, _.e7)([T.Z], () => T.Z.sidebarWidth),
         b = (0, d.useRedesignIconContext)().enabled,
         G = window.CSS.supports("selector(::-webkit-scrollbar)");
@@ -88,7 +88,7 @@ t.Z = r.memo(function(e) {
         className: o()(e, {
           overlay: __OVERLAY__,
           "mouse-mode": y,
-          "keyboard-mode": R,
+          "keyboard-mode": p,
           "reduce-motion": a.enabled,
           "full-motion": !a.enabled,
           "is-mobile": u.tq,
@@ -101,9 +101,9 @@ t.Z = r.memo(function(e) {
           "show-redesigned-icons": b,
           "no-webkit-scrollbar": !G,
           "has-webkit-scrollbar": G
-        }, (0, N.Q)(n), (0, A.Z)(), m)
+        }, (0, A.Q)(n), (0, N.Z)(), m)
       })
-    }(R), function() {
+    }(p), function() {
       let [e, t] = r.useState([]);
       return r.useEffect(() => {
         Promise.all(c.L.map(e => n(529305)("./".concat(e, ".woff2")).then(e => {

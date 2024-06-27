@@ -24,7 +24,7 @@ function S(e, t, n, i, E) {
   if (t !== T.AR.UseGreyDot) return [{
     label: "Setting the guild to a white dot unread",
     apply: (e, t) => {
-      N(e, t, !0)
+      A(e, t, !0)
     }
   }];
   let f = [],
@@ -43,7 +43,7 @@ function S(e, t, n, i, E) {
       label: "Setting ".concat(i.length, " to mentions-only since they were all-messages and we are unmuting the guild"),
       debug: i.map(e => "\n    - #".concat(e.name)).join(""),
       apply: (e, t) => {
-        for (let n of i) A(e, t, n.id, e => {
+        for (let n of i) N(e, t, n.id, e => {
           e.message_notifications = h.bL.ONLY_MENTIONS
         })
       }
@@ -59,7 +59,7 @@ function S(e, t, n, i, E) {
     return {
       label: "Setting the guild to a grey dot unread",
       apply: (e, t) => {
-        N(e, t, !1)
+        A(e, t, !1)
       }
     }
   }()), f.push(... function(e) {
@@ -83,7 +83,7 @@ function S(e, t, n, i, E) {
       label: "Unmuting ".concat(n.length, " categories and setting to grey-dot"),
       debug: n.map(e => "\n    - #".concat(e.name)).join(""),
       apply: (e, t) => {
-        for (let i of n) m(e, t, i.id, !1), A(e, t, i.id, e => {
+        for (let i of n) m(e, t, i.id, !1), N(e, t, i.id, e => {
           e.muted = !1, e.mute_config = null
         })
       }
@@ -160,19 +160,19 @@ function S(e, t, n, i, E) {
   }(e, S)), f.filter(I.lm)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   var i, r;
   e.flags = (0, E.mB)(null !== (r = null !== (i = e.flags) && void 0 !== i ? i : t.flags) && void 0 !== r ? r : 0, f.vc.UNREADS_ALL_MESSAGES, n), e.flags = (0, E.mB)(e.flags, f.vc.UNREADS_ONLY_MENTIONS, !n)
 }
 
-function A(e, t, n, i) {
+function N(e, t, n, i) {
   var s, o, a, l;
   let u = null !== (a = null === (s = e.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== a ? a : {};
   i(u, null !== (l = null === (o = t.channel_overrides) || void 0 === o ? void 0 : o[n]) && void 0 !== l ? l : {}), !r().isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u)
 }
 
 function m(e, t, n, i) {
-  A(e, t, n, (e, t) => {
+  N(e, t, n, (e, t) => {
     var n, r;
     e.flags = (0, E.mB)(null !== (r = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== r ? r : 0, f.ic.UNREADS_ALL_MESSAGES, i), e.flags = (0, E.mB)(e.flags, f.ic.UNREADS_ONLY_MENTIONS, !i)
   })

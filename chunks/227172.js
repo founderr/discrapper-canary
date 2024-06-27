@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(639351),
   f = n(823379),
   E = n(192918),
-  g = n(22211),
-  C = n(561308),
+  C = n(22211),
+  g = n(561308),
   I = n(919394),
   x = n(438226),
   T = n(206295),
@@ -53,7 +53,7 @@ t.Z = e => {
   } = (0, T.Z)(_), k = (0, s.e7)([p.default], () => p.default.locale), {
     streamPreviewUrl: U,
     stream: w
-  } = (0, g.Z)(n), {
+  } = (0, C.Z)(n), {
     displayParticipants: B,
     participant1: H,
     participant2: G,
@@ -71,7 +71,7 @@ t.Z = e => {
       applicationImageSrc: _,
       avatarSrcs: B.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: i,
-      timestamp: (0, C.yh)(n, k),
+      timestamp: (0, g.yh)(n, k),
       colors: [y, D],
       channelId: e
     })
@@ -93,7 +93,7 @@ t.Z = e => {
         width: 16,
         height: 16
       }) : null,
-      userDescription: (0, C.kr)(n) ? M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      userDescription: (0, g.kr)(n) ? M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: P,
       subtitle: L,
       badges: Y,

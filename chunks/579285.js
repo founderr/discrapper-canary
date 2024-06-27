@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(430824),
   f = n(496675),
   S = n(700785),
-  N = n(785717),
-  A = n(256226),
+  A = n(785717),
+  N = n(256226),
   m = n(314172),
   O = n(981631),
-  p = n(689938),
-  R = n(446384);
+  R = n(689938),
+  p = n(446384);
 let g = (0, E.Z)(function(e) {
   let {
     user: t,
@@ -36,7 +36,7 @@ let g = (0, E.Z)(function(e) {
     highestRole: I,
     canManageRoles: T,
     width: f,
-    onAddRole: N,
+    onAddRole: A,
     onRemoveRole: g,
     onOpenProfile: C
   } = e;
@@ -59,12 +59,12 @@ let g = (0, E.Z)(function(e) {
     [U, b] = r.useState(f),
     G = E.length > y.length,
     w = T && null != d,
-    x = r.useRef(null),
-    B = r.useRef(null);
+    B = r.useRef(null),
+    x = r.useRef(null);
   r.useLayoutEffect(() => {
     var e, t, n, i, r, s, o, a;
-    let l = null !== (r = null === (t = x.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
-      u = null !== (s = null === (i = B.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
+    let l = null !== (r = null === (t = B.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
+      u = null !== (s = null === (i = x.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
       _ = f - (l > 0 ? l + 4 : 0) - (u > 0 ? u + 4 : 0),
       c = 0;
     for (let e = 0; e < 2; e++) {
@@ -89,12 +89,12 @@ let g = (0, E.Z)(function(e) {
       scrollToEnd: O.Cyb,
       wrap: !0
     }),
-    Z = 0 === E.length ? p.Z.Messages.ROLE_LIST_EMPTY : p.Z.Messages.ROLES_LIST.format({
+    Z = 0 === E.length ? R.Z.Messages.ROLE_LIST_EMPTY : R.Z.Messages.ROLES_LIST.format({
       numRoles: E.length
     }),
     H = y.map((e, r) => {
       var o;
-      return (0, i.jsx)(A.Z, {
+      return (0, i.jsx)(N.Z, {
         role: e,
         guildId: s.id,
         style: {
@@ -115,16 +115,16 @@ let g = (0, E.Z)(function(e) {
           ...n
         } = e;
         return (0, i.jsxs)("div", {
-          className: R.root,
+          className: p.root,
           "aria-label": Z,
           ref: t,
           ...n,
           children: [H, G && (0, i.jsx)(c.TooltipContainer, {
-            text: p.Z.Messages.VIEW_ALL_ROLES,
+            text: R.Z.Messages.VIEW_ALL_ROLES,
             children: (0, i.jsx)(c.Clickable, {
-              innerRef: x,
+              innerRef: B,
               onClick: C,
-              className: R.showMoreButton,
+              className: p.showMoreButton,
               children: (0, i.jsx)(c.Text, {
                 variant: "text-xs/medium",
                 children: "+".concat(E.length - y.length)
@@ -132,11 +132,11 @@ let g = (0, E.Z)(function(e) {
             })
           }), w && (0, i.jsx)(m.Z, {
             variant: E.length > 0 ? "icon" : "text",
-            buttonRef: B,
+            buttonRef: x,
             guild: s,
             guildMember: d,
             highestRole: I,
-            onAddRole: N
+            onAddRole: A
           })]
         })
       }
@@ -152,7 +152,7 @@ function C(e) {
     onOpenProfile: o
   } = e, {
     trackUserProfileAction: a
-  } = (0, N.KZ)(), l = (0, _.e7)([T.ZP], () => T.ZP.getMember(s.id, t.id)), u = null == l ? void 0 : l.roles, c = null == u || 0 === u.length, E = S.e9(s, n.id), [h] = (0, _.Wu)([f.Z], () => [f.Z.can(O.Plq.MANAGE_ROLES, s), null != s ? f.Z.getGuildVersion(s.id) : null]), A = r.useCallback(e => {
+  } = (0, A.KZ)(), l = (0, _.e7)([T.ZP], () => T.ZP.getMember(s.id, t.id)), u = null == l ? void 0 : l.roles, c = null == u || 0 === u.length, E = S.e9(s, n.id), [h] = (0, _.Wu)([f.Z], () => [f.Z.can(O.Plq.MANAGE_ROLES, s), null != s ? f.Z.getGuildVersion(s.id) : null]), N = r.useCallback(e => {
     var n, i;
     a({
       action: "REMOVE_ROLE"
@@ -175,7 +175,7 @@ function C(e) {
       highestRole: E,
       canManageRoles: h,
       onAddRole: m,
-      onRemoveRole: A,
+      onRemoveRole: N,
       onOpenProfile: o
     })
   })

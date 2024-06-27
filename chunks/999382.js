@@ -5,12 +5,12 @@ var c, d, E, I, T = n(392711),
   h = n.n(T),
   f = n(913527),
   S = n.n(f),
-  N = n(442837),
-  A = n(544891),
+  A = n(442837),
+  N = n(544891),
   m = n(433517),
   O = n(570140),
-  p = n(749210),
-  R = n(131704),
+  R = n(749210),
+  p = n(131704),
   g = n(601964),
   C = n(758449),
   v = n(598077),
@@ -23,8 +23,8 @@ var c, d, E, I, T = n(392711),
   b = n(731455),
   G = n(135899);
 let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "clan"],
-  x = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-  B = !1,
+  B = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
+  x = !1,
   k = U.QZA.CLOSED,
   V = {},
   Z = !1,
@@ -77,7 +77,7 @@ function ei(e) {
 }
 
 function er() {
-  B = !1, k = U.QZA.CLOSED, o = a = null, Z = !1, H = null, F = null, Y = 0, Q = null, ee = null, et = null, i = null, r = null, s = null, j = U.BpS.NONE, u = void 0
+  x = !1, k = U.QZA.CLOSED, o = a = null, Z = !1, H = null, F = null, Y = 0, Q = null, ee = null, et = null, i = null, r = null, s = null, j = U.BpS.NONE, u = void 0
 }
 
 function es(e) {
@@ -90,8 +90,8 @@ function es(e) {
       guildId: a.id,
       location: "7f0c91_1"
     });
-    !e && p.Z.fetchGuildBans(a.id)
-  } else if (i === U.pNK.INSTANT_INVITES) A.tn.get({
+    !e && R.Z.fetchGuildBans(a.id)
+  } else if (i === U.pNK.INSTANT_INVITES) N.tn.get({
     url: U.ANM.GUILD_INSTANT_INVITES(a.id),
     oldFormErrors: !0
   }).then(e => {
@@ -100,7 +100,7 @@ function es(e) {
       invites: e.body
     })
   });
-  else if (i === U.pNK.WIDGET) A.tn.get({
+  else if (i === U.pNK.WIDGET) N.tn.get({
     url: U.ANM.GUILD_WIDGET(a.id),
     oldFormErrors: !0
   }).then(e => {
@@ -112,7 +112,7 @@ function es(e) {
   });
   else if (i === U.pNK.INTEGRATIONS || i === U.pNK.ROLES) {
     if (l = null, t !== e.section) return ea(e)
-  } else i === U.pNK.MEMBERS ? l = a.getEveryoneRoleId() : i === U.pNK.VANITY_URL ? A.tn.get({
+  } else i === U.pNK.MEMBERS ? l = a.getEveryoneRoleId() : i === U.pNK.VANITY_URL ? N.tn.get({
     url: U.ANM.GUILD_VANITY_URL(a.id),
     oldFormErrors: !0
   }).then(e => {
@@ -142,7 +142,7 @@ function eo(e) {
     temporary: e.temporary,
     revoked: e.revoked,
     inviter: null != e.inviter ? new v.Z(e.inviter) : null,
-    channel: (0, R.jD)(e.channel),
+    channel: (0, p.jD)(e.channel),
     guild: null != e.guild ? new g.ZP(e.guild) : null,
     uses: e.uses,
     maxUses: e.max_uses,
@@ -155,7 +155,7 @@ function ea(e) {
   if (null == a || k !== U.QZA.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== a.id) return !1;
   (0, y.i)(a.id)
 }
-class el extends(c = N.ZP.Store) {
+class el extends(c = A.ZP.Store) {
   initialize() {
     this.waitFor(L.Z, D.default)
   }
@@ -166,7 +166,7 @@ class el extends(c = N.ZP.Store) {
     return !h().isEqual(a, o) || !h().isEqual(X, q)
   }
   isOpen() {
-    return B
+    return x
   }
   getSavedRouteState() {
     return u
@@ -238,7 +238,7 @@ I = "GuildSettingsStore", (E = "displayName") in(d = el) ? Object.defineProperty
 }) : d[E] = I, t.Z = new el(O.Z, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_INIT: ei,
   GUILD_SETTINGS_OPEN: function(e) {
-    B = !0, ei(e)
+    x = !0, ei(e)
   },
   GUILD_SETTINGS_CLOSE: er,
   GUILD_SETTINGS_UPDATE: function(e) {
@@ -362,7 +362,7 @@ I = "GuildSettingsStore", (E = "displayName") in(d = el) ? Object.defineProperty
       let t = o = e,
         n = a.toJS();
       w.forEach(e => {
-        if (!x.has(e) && ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.b4)) {
+        if (!B.has(e) && ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.b4)) {
           if ("features" === e) {
             t.set(e, new Set(n[e]));
             return

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   q: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i, r, s, o, a, l, u = n(735250),
@@ -200,7 +200,7 @@ class S extends(s = _.PureComponent) {
 f(S, "contextType", T.S), f(S, "defaultProps", {
   duration: 300
 });
-class N extends(o = _.Component) {
+class A extends(o = _.Component) {
   componentDidMount() {
     this.setPrevSteps()
   }
@@ -260,7 +260,7 @@ class N extends(o = _.Component) {
     })
   }
 }
-f(N, "defaultProps", {
+f(A, "defaultProps", {
   fillParent: !1,
   animationMotionType: "slide"
 })

@@ -23,12 +23,12 @@ function h(e, t, n) {
 }
 let f = d.isPlatformEmbedded && (0, d.isWindows)(),
   S = f && 10 > parseFloat(l.Z.os.release),
-  N = !0;
+  A = !0;
 if (f && !S) {
   let [e, , t] = l.Z.os.release.split(".");
-  N = parseInt(e) > 10 || parseInt(t) >= 15063
+  A = parseInt(e) > 10 || parseInt(t) >= 15063
 }
-let A = f && N || "Chrome" === a().name && 47 > parseFloat(a().version) || "Firefox" === a().name && 52 > parseFloat(a().version),
+let N = f && A || "Chrome" === a().name && 47 > parseFloat(a().version) || "Firefox" === a().name && 52 > parseFloat(a().version),
   m = s().throttle(E.GN, 1e3, {
     leading: !0
   });
@@ -37,7 +37,7 @@ function O() {
   I.ZP.flashFrame(!1)
 }
 f && (window.addEventListener("focus", O), I.ZP.on("MAIN_WINDOW_FOCUS", O));
-let p = window.Notification;
+let R = window.Notification;
 S && (I.ZP.on("NOTIFICATION_CLICK", (e, t) => {
   let n = null[t];
   null != n && (n.onclick(), n.close())
@@ -52,17 +52,17 @@ S && (I.ZP.on("NOTIFICATION_CLICK", (e, t) => {
     body: t,
     icon: n
   }) {
-    h(this, "id", p._id++), h(this, "title", void 0), h(this, "body", void 0), h(this, "icon", void 0), h(this, "onshow", function() {}), h(this, "onclick", function() {}), h(this, "onclose", function() {}), this.title = e, this.body = t, this.icon = n, setImmediate(() => this.onshow()), null[this.id] = this, I.ZP.send("NOTIFICATION_SHOW", {
+    h(this, "id", R._id++), h(this, "title", void 0), h(this, "body", void 0), h(this, "icon", void 0), h(this, "onshow", function() {}), h(this, "onclick", function() {}), h(this, "onclose", function() {}), this.title = e, this.body = t, this.icon = n, setImmediate(() => this.onshow()), null[this.id] = this, I.ZP.send("NOTIFICATION_SHOW", {
       id: this.id,
       title: this.title,
       body: this.body,
       icon: this.icon
     })
   }
-}, h(i, "permission", "granted"), h(i, "_id", 0), p = i);
+}, h(i, "permission", "granted"), h(i, "_id", 0), R = i);
 
-function R() {
-  return null != p && "granted" === p.permission
+function p() {
+  return null != R && "granted" === R.permission
 }
 
 function g(e) {
@@ -72,13 +72,13 @@ function g(e) {
 }
 
 function C(e) {
-  return _.Z.disableNotifications && null == e.overrideStreamerMode || !R() || d.isPlatformEmbedded && !I.ZP.shouldDisplayNotifications()
+  return _.Z.disableNotifications && null == e.overrideStreamerMode || !p() || d.isPlatformEmbedded && !I.ZP.shouldDisplayNotifications()
 }
 t.Z = {
-  hasPermission: R,
+  hasPermission: p,
   requestPermission: function(e) {
-    null != p && p.requestPermission(() => {
-      null != e && e(R())
+    null != R && R.requestPermission(() => {
+      null != e && e(p())
     })
   },
   showNotification: function(e, t, n, i, r) {
@@ -99,14 +99,14 @@ t.Z = {
     };
     f && u.Z.taskbarFlash && I.ZP.flashFrame(!0);
     try {
-      E = new p(t, S)
+      E = new R(t, S)
     } catch (e) {
       return null
     }
     return (null === (o = r.onShown) || void 0 === o || o.call(r), !r.omitViewTracking && c.default.track(T.rMx.NOTIFICATION_VIEWED, i), E.onclick = () => {
       var e;
       d.isPlatformEmbedded ? I.ZP.focus() : (window.focus(), E.close()), !r.omitClickTracking && c.default.track(T.rMx.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
-    }, A && setTimeout(() => E.close(), 5e3), N) ? E : {
+    }, N && setTimeout(() => E.close(), 5e3), A) ? E : {
       close() {
         var e;
         null == E || null === (e = E.onclose) || void 0 === e || e.call(E)

@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(688465),
   N = t(487419),
   C = t(378364),
-  A = t(197344),
-  m = t(734934),
-  O = t(223683),
-  g = t(312400),
+  m = t(197344),
+  A = t(734934),
+  g = t(223683),
+  O = t(312400),
   h = t(115345),
-  R = t(392888),
-  p = t(921801),
+  p = t(392888),
+  R = t(921801),
   x = t(657254),
   M = t(470647),
   D = t(292959),
@@ -36,8 +36,8 @@ var n = t(735250),
   v = t(709054),
   b = t(557177),
   j = t(695346),
-  U = t(675478),
-  B = t(33656),
+  B = t(675478),
+  U = t(33656),
   G = t(726985),
   F = t(981631),
   V = t(468788),
@@ -100,14 +100,14 @@ function W(e) {
     location: "791c79_1"
   }, {
     autoTrackExposure: !1
-  }), l = A.Z.useIsRingtoneEligible();
+  }), l = m.Z.useIsRingtoneEligible();
   a.useEffect(() => {
     x.Z.trackExposure({
       location: "791c79_3"
     })
   }, []);
   let c = a.useRef(),
-    _ = (0, m.p)(),
+    _ = (0, A.p)(),
     u = a.useCallback((e, s) => {
       s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = b.GN(e)
     }, []),
@@ -194,7 +194,7 @@ function W(e) {
     label: y.Z.Messages.SOUND_INVITED_TO_SPEAK,
     sound: "reconnect"
   }];
-  return (0, n.jsx)(p.F, {
+  return (0, n.jsx)(R.F, {
     setting: G.s6.NOTIFICATIONS_SOUNDS,
     children: (0, n.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
@@ -246,7 +246,7 @@ function K() {
         value: t.guildId
       }
     });
-  return 0 === Object.keys(e).length ? null : (0, n.jsxs)(p.F, {
+  return 0 === Object.keys(e).length ? null : (0, n.jsxs)(R.F, {
     setting: G.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
     children: [(0, n.jsxs)(d.Heading, {
       variant: "heading-lg/semibold",
@@ -267,32 +267,32 @@ function K() {
         options: i
       }), null != s ? (0, n.jsxs)("div", {
         className: H.marginTop20,
-        children: [(0, n.jsxs)(p.F, {
+        children: [(0, n.jsxs)(R.F, {
           setting: G.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
           children: [(0, n.jsx)(d.FormSwitch, {
             className: r()(H.marginBottom20),
             note: y.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
             value: !e[s].disableRaidAlertNag,
             onChange: () => {
-              (0, U.PS)(s, e => {
+              (0, B.PS)(s, e => {
                 e.disableRaidAlertNag = !e.disableRaidAlertNag
-              }, U.fy.INFREQUENT_USER_ACTION)
+              }, B.fy.INFREQUENT_USER_ACTION)
             },
             hideBorder: !0,
             children: y.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
           }), (0, n.jsx)(d.FormDivider, {
             className: r()(H.marginTop20, H.marginBottom40)
           })]
-        }), (0, n.jsxs)(p.F, {
+        }), (0, n.jsxs)(R.F, {
           setting: G.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
           children: [(0, n.jsx)(d.FormSwitch, {
             className: H.marginBottom20,
             note: y.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
             value: !e[s].disableRaidAlertPush,
             onChange: () => {
-              (0, U.PS)(s, e => {
+              (0, B.PS)(s, e => {
                 e.disableRaidAlertPush = !e.disableRaidAlertPush
-              }, U.fy.INFREQUENT_USER_ACTION)
+              }, B.fy.INFREQUENT_USER_ACTION)
             },
             hideBorder: !0,
             children: y.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
@@ -340,7 +340,7 @@ class z extends a.PureComponent {
     return (0, n.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       title: y.Z.Messages.NOTIFICATIONS,
-      children: [(0, n.jsx)(p.F, {
+      children: [(0, n.jsx)(R.F, {
         setting: G.s6.NOTIFICATIONS_ENABLE_DESKTOP,
         children: (0, n.jsx)(d.FormSwitch, {
           className: H.marginBottom20,
@@ -351,7 +351,7 @@ class z extends a.PureComponent {
           tooltipNote: _ ? y.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
           children: y.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE
         })
-      }), (0, n.jsx)(X, {}), (0, n.jsx)(p.F, {
+      }), (0, n.jsx)(X, {}), (0, n.jsx)(R.F, {
         setting: G.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
         children: (0, n.jsx)(d.FormSwitch, {
           className: E ? H.marginBottom20 : H.marginBottom40,
@@ -360,7 +360,7 @@ class z extends a.PureComponent {
           onChange: this.handleToggleShowUnreadBadge,
           children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
         })
-      }), (0, n.jsx)(p.F, {
+      }), (0, n.jsx)(R.F, {
         setting: G.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
         children: (0, n.jsx)(d.FormSwitch, {
           className: H.marginBottom40,
@@ -369,7 +369,7 @@ class z extends a.PureComponent {
           onChange: this.handleToggleShowFlash,
           children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL
         })
-      }), (0, n.jsx)(q, {}), (0, n.jsx)(p.F, {
+      }), (0, n.jsx)(q, {}), (0, n.jsx)(R.F, {
         setting: G.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
         children: (0, n.jsxs)(d.FormItem, {
           title: y.Z.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
@@ -391,7 +391,7 @@ class z extends a.PureComponent {
           disableAllSounds: o,
           notifyMessagesInSelectedChannel: c
         })
-      }), (0, n.jsx)(B.Z, {})]
+      }), (0, n.jsx)(U.Z, {})]
     })
   }
   constructor(...e) {
@@ -411,7 +411,7 @@ class z extends a.PureComponent {
         name: y.Z.Messages.TTS_NEVER,
         value: F.PrB.NEVER
       }];
-      return (0, n.jsxs)(p.F, {
+      return (0, n.jsxs)(R.F, {
         setting: G.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
         children: [(0, n.jsxs)(d.FormItem, {
           title: y.Z.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
@@ -454,7 +454,7 @@ function X() {
       autoTrackExposure: !1
     }).enabled,
     s = (0, c.e7)([f.ZP], () => f.ZP.mentionOnAllMessages);
-  return e ? (0, n.jsx)(p.F, {
+  return e ? (0, n.jsx)(R.F, {
     setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
     children: (0, n.jsx)(d.FormSwitch, {
       className: H.marginBottom20,
@@ -469,14 +469,14 @@ function X() {
 }
 
 function q() {
-  let e = g.xT.useExperiment({
+  let e = O.xT.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
     }).enabled,
     {
       manuallyOpen: s
-    } = g.fs.useExperiment({
+    } = O.fs.useExperiment({
       location: "UserSettingsNotifications"
     }, {
       autoTrackExposure: !1
@@ -484,7 +484,7 @@ function q() {
     t = (0, c.e7)([f.ZP], () => f.ZP.useNewNotifications),
     [i, o] = a.useState(!1);
   return e && (t || s) ? (0, n.jsxs)(n.Fragment, {
-    children: [t ? (0, n.jsx)(p.F, {
+    children: [t ? (0, n.jsx)(R.F, {
       setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
       children: (0, n.jsx)(d.FormSwitch, {
         className: H.marginBottom40,
@@ -497,17 +497,17 @@ function q() {
         onChange: () => J(o),
         children: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
-    }) : s ? (0, n.jsx)(p.F, {
+    }) : s ? (0, n.jsx)(R.F, {
       setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
       children: (0, n.jsx)(d.FormSwitch, {
         className: H.marginBottom40,
         value: t,
         disabled: i || t,
         note: "Turns on the new notification system",
-        onChange: () => (0, R.R)(!0),
+        onChange: () => (0, p.R)(!0),
         children: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
-    }) : null, (0, n.jsxs)(p.F, {
+    }) : null, (0, n.jsxs)(R.F, {
       setting: G.s6.NOTIFICATIONS_NEW_SETTINGS,
       children: [(0, n.jsx)(d.FormItem, {
         title: "New Notification Settings (Advanced, Staff Only)",
@@ -516,21 +516,21 @@ function q() {
             display: "flex",
             gap: 16
           },
-          children: [(0, n.jsx)(p.F, {
+          children: [(0, n.jsx)(R.F, {
             setting: G.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
             children: (0, n.jsx)(d.Button, {
-              onClick: O.KP,
+              onClick: g.KP,
               children: "Restore most recent snapshot"
             })
-          }), (0, n.jsx)(p.F, {
+          }), (0, n.jsx)(R.F, {
             setting: G.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
             children: (0, n.jsx)(d.Button, {
               onClick: () => {
-                (0, R.R)(!0)
+                (0, p.R)(!0)
               },
               children: "Launch Migration"
             })
-          }), (0, n.jsx)(p.F, {
+          }), (0, n.jsx)(R.F, {
             setting: G.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
             children: (0, n.jsx)(d.FormSwitch, {
               hideBorder: !0,
@@ -550,7 +550,7 @@ function q() {
 }
 async function J(e) {
   e(!0);
-  let s = await (0, O.Tn)();
+  let s = await (0, g.Tn)();
   0 === s.length ? await (0, h.oL)() : _.Z.show({
     title: y.Z.Messages.CONFIRM,
     body: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
@@ -563,7 +563,7 @@ async function J(e) {
 }
 
 function $(e) {
-  let s = (0, m.p)();
+  let s = (0, A.p)();
   return (0, n.jsx)(z, {
     ...e,
     focusMode: s

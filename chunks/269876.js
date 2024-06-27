@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return O
+    return g
   }
 }), t(47120);
 var n = t(735250),
@@ -19,17 +19,17 @@ var n = t(735250),
   I = t(689938),
   N = t(590199),
   C = t(83922),
-  A = t(331651);
-let m = (0, T.hQ)();
+  m = t(331651);
+let A = (0, T.hQ)();
 
-function O() {
+function g() {
   let [e, s] = a.useState(-100), [t, i] = a.useState(!1), {
-    threshold: O,
-    autoThreshold: g
+    threshold: g,
+    autoThreshold: O
   } = (0, o.cj)([u.Z], () => u.Z.getModeOptions()), {
     inputMode: h,
-    automaticVADSupported: R,
-    isEnabled: p
+    automaticVADSupported: p,
+    isEnabled: R
   } = (0, o.cj)([u.Z], () => ({
     inputMode: u.Z.getMode(),
     automaticVADSupported: u.Z.supports(S.AN.AUTOMATIC_VAD),
@@ -57,16 +57,16 @@ function O() {
   let D = (0, n.jsx)("section", {
     className: r()(N.inputSensitivityToggle, N.manual),
     children: (0, n.jsx)(_.Slider, {
-      initialValue: O + 100,
+      initialValue: g + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-      onValueChange: e => M(-((100 - e) * 1), g),
+      onValueChange: e => M(-((100 - e) * 1), O),
       barStyles: {
         background: d.Z.unsafe_rawColors.GREEN_360.css
       },
       fillStyles: {
         background: d.Z.unsafe_rawColors.YELLOW_300.css
       },
-      "aria-labelledby": m,
+      "aria-labelledby": A,
       children: (0, n.jsxs)("div", {
         className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar),
         children: [(0, n.jsx)("div", {
@@ -80,7 +80,7 @@ function O() {
       })
     })
   });
-  return g && (D = (0, n.jsxs)("section", {
+  return O && (D = (0, n.jsxs)("section", {
     className: N.inputSensitivityToggle,
     children: [(0, n.jsx)("div", {
       className: N.inputSensitivitySlider,
@@ -91,37 +91,37 @@ function O() {
       })
     }), (0, n.jsx)(_.FormText, {
       type: _.FormText.Types.DESCRIPTION,
-      className: A.marginBottom8,
+      className: m.marginBottom8,
       children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, n.jsxs)(_.FormItem, {
     className: N.sensitivity,
     children: [(0, n.jsx)(_.FormTitle, {
-      id: m,
+      id: A,
       tag: _.FormTitleTags.H5,
-      className: A.marginBottom8,
+      className: m.marginBottom8,
       children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, n.jsxs)("div", {
-      children: [R && (0, n.jsx)(T.FG, {
+      children: [p && (0, n.jsx)(T.FG, {
         children: e => (0, n.jsxs)("div", {
-          className: r()(C.horizontal, A.marginBottom4),
+          className: r()(C.horizontal, m.marginBottom4),
           children: [(0, n.jsx)(_.FormTitle, {
             tag: _.FormTitleTags.H3,
-            className: A.marginReset,
+            className: m.marginReset,
             children: (0, n.jsx)("label", {
               htmlFor: e,
               children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
             })
           }), (0, n.jsx)(_.Switch, {
             id: e,
-            checked: g,
-            onChange: e => M(O, e)
+            checked: O,
+            onChange: e => M(g, e)
           })]
         })
       }), D]
-    }), !p && (0, n.jsx)(_.FormText, {
+    }), !R && (0, n.jsx)(_.FormText, {
       type: _.FormText.Types.DESCRIPTION,
-      className: r()(N.inputDisabledWarning, A.marginBottom8),
+      className: r()(N.inputDisabledWarning, m.marginBottom8),
       children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: E.Z.enable
       })

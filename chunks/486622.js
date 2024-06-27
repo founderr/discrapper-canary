@@ -24,7 +24,7 @@ function E(e) {
     onAcceptSuccess: n,
     onRejectSuccess: a,
     onError: E
-  } = e, g = (0, m.Z)(), [C, I] = i.useState(!1), [x, T] = i.useState(!1), [N, v] = i.useState(!1), [S, Z] = i.useState(!1), [A, M] = i.useState(!1), b = C || x || N, R = i.useCallback(async e => {
+  } = e, C = (0, m.Z)(), [g, I] = i.useState(!1), [x, T] = i.useState(!1), [N, v] = i.useState(!1), [S, Z] = i.useState(!1), [A, M] = i.useState(!1), b = g || x || N, R = i.useCallback(async e => {
     if (!b) {
       I(!0);
       try {
@@ -120,11 +120,11 @@ function E(e) {
     }) : i(a)
   }, [R]);
   return {
-    acceptMessageRequest: g ? P : R,
+    acceptMessageRequest: C ? P : R,
     rejectMessageRequest: j,
     rejectAll: L,
     markAsNotSpam: O,
-    isAcceptLoading: C,
+    isAcceptLoading: g,
     isRejectLoading: x,
     isUserProfileLoading: N,
     isOptimisticAccepted: S,

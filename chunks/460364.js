@@ -22,18 +22,18 @@ function u(e) {
     listClassName: E
   } = e, I = r.useRef(null), T = r.useRef(null), h = r.useRef(null), f = r.useRef(null), {
     isUsingKeyboardNavigation: S,
-    focusIndex: N,
-    ...A
+    focusIndex: A,
+    ...N
   } = u;
   r.useLayoutEffect(() => {
     var e;
     n && ((0, o.F)(I), null === (e = h.current) || void 0 === e || e.focus())
   }, [n]), r.useEffect(() => {
-    if (n && N >= 0 && S) {
+    if (n && A >= 0 && S) {
       var e;
-      null === (e = f.current) || void 0 === e || e.scrollRowIntoView(N)
+      null === (e = f.current) || void 0 === e || e.scrollRowIntoView(A)
     }
-  }, [n, S, N]);
+  }, [n, S, A]);
   let m = r.useCallback(e => _[e], [_]);
   return (0, i.jsxs)("div", {
     ref: I,
@@ -52,7 +52,7 @@ function u(e) {
         className: l.submenuPaddingContainer,
         children: (0, i.jsx)("div", {
           className: l.submenu,
-          ...A,
+          ...N,
           ref: h,
           children: (0, i.jsx)(a.Z, {
             ref: f,

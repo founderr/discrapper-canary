@@ -43,10 +43,10 @@ function T(e) {
   if (null == f) return 4;
   let S = _.getChannel(a);
   if (null == S) return 4;
-  let N = S.getGuildId();
+  let A = S.getGuildId();
   if (!S.isPrivate()) {
-    if (null == N) return 10;
-    let e = h.getGuild(N);
+    if (null == A) return 10;
+    let e = h.getGuild(A);
     if ((null == e ? void 0 : e.afkChannelId) === S.id) return 9;
     let t = d.getCurrentClientVoiceChannelId(S.getGuildId()) === f,
       n = (0, c.rY)(S, d, h),

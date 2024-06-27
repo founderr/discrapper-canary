@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   u: function() {
-    return N
+    return A
   }
 }), n(653041), n(47120);
 var i, r = n(735250),
@@ -27,14 +27,14 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = {
+let A = {
   SIZE_16: 16,
   SIZE_24: 24,
   SIZE_32: 32,
   SIZE_56: 56
 };
 
-function A(e, t) {
+function N(e, t) {
   let n = e instanceof E.Z ? e : null != e ? e.user : null;
   return null != n ? n.id : "user-".concat(t)
 }
@@ -54,13 +54,13 @@ class m extends(i = s.PureComponent) {
       o.push(t ? (0, r.jsx)("div", {
         className: f.avatarContainer,
         children: a
-      }, A(null !== (_ = e[u]) && void 0 !== _ ? _ : null, u)) : (0, r.jsx)(h.ZP, {
+      }, N(null !== (_ = e[u]) && void 0 !== _ ? _ : null, u)) : (0, r.jsx)(h.ZP, {
         className: f.avatarContainerMasked,
         height: i,
         width: i,
         mask: h.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
         children: a
-      }, A(e[u], u))), u++
+      }, N(e[u], u))), u++
     }
     return null != s ? o.push(s) : null != l && o.push(l), o
   }
@@ -130,15 +130,15 @@ class m extends(i = s.PureComponent) {
       }),
       children: n => (0, r.jsxs)("div", {
         className: a()(e, f.container, function() {
-          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.SIZE_24;
+          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.SIZE_24;
           switch (e) {
-            case N.SIZE_16:
+            case A.SIZE_16:
               return f.size16;
-            case N.SIZE_24:
+            case A.SIZE_24:
               return f.size24;
-            case N.SIZE_32:
+            case A.SIZE_32:
               return f.size32;
-            case N.SIZE_56:
+            case A.SIZE_56:
               return f.size56;
             default:
               return f.size24
@@ -201,5 +201,5 @@ S(m, "defaultProps", {
   },
   renderIcon: !1,
   showDefaultAvatarsForNullUsers: !1,
-  size: N.SIZE_24
+  size: A.SIZE_24
 }), t.Z = m

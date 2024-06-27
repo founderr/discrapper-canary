@@ -26,16 +26,16 @@ function f(e) {
     nickname: s,
     pronouns: f,
     usernameIcon: S,
-    identityCTA: N,
-    className: A,
+    identityCTA: A,
+    className: N,
     isTryItOut: m = !1,
     lastSection: O
-  } = e, p = (0, u.Z)("username"), R = r.useMemo(() => ({
+  } = e, R = (0, u.Z)("username"), p = r.useMemo(() => ({
     source: I.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
   return (0, i.jsxs)(E.Z, {
-    className: o()(h.container, A),
+    className: o()(h.container, N),
     lastSection: O,
     children: [(0, i.jsxs)("div", {
       className: n ? h.copiableNameTag : void 0,
@@ -64,7 +64,7 @@ function f(e) {
             usernameClass: null == s ? h.userTagUsernameNoNickname : h.userTagUsernameBase,
             discriminatorClass: null == s ? h.userTagDiscriminatorNoNickname : h.discrimBase,
             botClass: null == s ? h.headerBotTag : h.headerBotTagWithNickname
-          }), N]
+          }), A]
         })
       }), null != f && "" !== f && (0, i.jsx)(a.Tooltip, {
         text: T.Z.Messages.USER_PROFILE_PRONOUNS,
@@ -75,12 +75,12 @@ function f(e) {
           children: f
         })
       })]
-    }), p && (0, i.jsx)("div", {
+    }), R && (0, i.jsx)("div", {
       className: h.clanTag,
       children: (0, i.jsx)(_.ZP, {
         userId: t.id,
         inline: !1,
-        profileViewedAnalytics: R
+        profileViewedAnalytics: p
       })
     })]
   })

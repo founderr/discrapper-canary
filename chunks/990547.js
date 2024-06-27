@@ -11,22 +11,22 @@ n.r(t), n.d(t, {
     return S.A
   },
   ImpressionNames: function() {
-    return N.z
+    return A.z
   },
   ImpressionSchema: function() {
-    return N.ImpressionSchema
+    return A.ImpressionSchema
   },
   ImpressionTypes: function() {
     return S.n
   },
   NetworkActionNames: function() {
-    return N.a
+    return A.a
   },
   StandardAnalyticsLocation: function() {
     return S.StandardAnalyticsLocation
   },
   StandardAnalyticsSchemaNameMap: function() {
-    return N.StandardAnalyticsSchemaNameMap
+    return A.StandardAnalyticsSchemaNameMap
   },
   TypedEventProperties: function() {
     return S.TypedEventProperties
@@ -75,20 +75,20 @@ var s, o = n(348327),
   h = n(947486),
   f = n(699407),
   S = n(20281),
-  N = n(525769);
-let A = "deviceProperties",
+  A = n(525769);
+let N = "deviceProperties",
   m = "referralProperties",
   O = {},
-  p = {},
-  R = window.DiscordNative;
-if (null != R) {
+  R = {},
+  p = window.DiscordNative;
+if (null != p) {
   let e;
-  let t = R.remoteApp.getVersion(),
-    n = R.process.platform,
-    r = R.os.release,
-    o = R.os.arch,
-    a = R.os.appArch,
-    l = R.remoteApp.getReleaseChannel(),
+  let t = p.remoteApp.getVersion(),
+    n = p.process.platform,
+    r = p.os.release,
+    o = p.os.arch,
+    a = p.os.appArch,
+    l = p.remoteApp.getReleaseChannel(),
     u = (0, d.qf)();
   switch (n) {
     case "win32":
@@ -113,7 +113,7 @@ if (null != R) {
       app_arch: a,
       system_locale: u
     }, (null === (s = c().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = c().ua || "", i.browser_version = c().version || ""), "linux" === n) {
-    let e = R.crashReporter.getMetadata();
+    let e = p.crashReporter.getMetadata();
     i.window_manager = e.wm, i.distro = e.distro
   }
 }
@@ -193,7 +193,7 @@ function P(e) {
 }
 if (null == i) try {
   let e, t, n;
-  e = E.K.get(A), null == e && (e = function() {
+  e = E.K.get(N), null == e && (e = function() {
     let e = {},
       t = L();
     return e.os = t, e.browser = function() {
@@ -217,7 +217,7 @@ if (null == i) try {
       else if (/Gecko/.test(e)) return "Mozilla";
       else return ""
     }(), e.device = D(), e.system_locale = (0, d.qf)(), e
-  }(), E.K.set(A, e)), t = E.K.get(m), null == t && (t = M(), E.K.set(m, t)), n = I.x.get(m), null == n && (n = function(e, t) {
+  }(), E.K.set(N, e)), t = E.K.get(m), null == t && (t = M(), E.K.set(m, t)), n = I.x.get(m), null == n && (n = function(e, t) {
     let n = {};
     return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
   }(M(), "_current"), I.x.set(m, n)), i = {
@@ -251,9 +251,9 @@ y(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "305734", "305734"), 10);
+  let s = parseInt((n = "305846", "305846"), 10);
   !isNaN(s) && (i.client_build_number = s);
-  let o = null == R ? void 0 : null === (e = (t = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
+  let o = null == p ? void 0 : null === (e = (t = p.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(o) && (i.native_build_number = o), i.client_event_source = function() {
     try {
       if (__OVERLAY__) return "OVERLAY"
@@ -278,9 +278,9 @@ let U = e => {
         if (P(t)) return Promise.resolve();
         if ("number" == typeof l.throttlePercent && Math.random() > l.throttlePercent) return Promise.resolve();
         if (l.deduplicate) {
-          let e = p[t];
+          let e = R[t];
           if (a()(e, o)) return Promise.resolve();
-          p[t] = o
+          R[t] = o
         }
         O[t] = Date.now() + l.throttlePeriod
       } else if ("throttlePercent" in l) {

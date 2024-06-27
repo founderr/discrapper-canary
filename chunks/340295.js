@@ -15,9 +15,9 @@ t.Z = function(e) {
     participants: m,
     channel: _,
     hasConnectPermission: f
-  } = e, E = m.filter(d.Io), g = (0, o.J)(_.guild_id), C = a.useCallback(() => {
-    g ? (0, r.hk)(_.guild_id, () => s.default.selectVoiceChannel(_.id)) : s.default.selectVoiceChannel(_.id)
-  }, [_.id, _.guild_id, g]), I = 4 === E.length ? 2 : 3;
+  } = e, E = m.filter(d.Io), C = (0, o.J)(_.guild_id), g = a.useCallback(() => {
+    C ? (0, r.hk)(_.guild_id, () => s.default.selectVoiceChannel(_.id)) : s.default.selectVoiceChannel(_.id)
+  }, [_.id, _.guild_id, C]), I = 4 === E.length ? 2 : 3;
   return (0, i.jsxs)("div", {
     className: p.container,
     children: [(0, i.jsx)("div", {
@@ -59,7 +59,7 @@ t.Z = function(e) {
       disabled: !f,
       className: p.joinButton,
       color: f ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
-      onClick: C,
+      onClick: g,
       size: l.Button.Sizes.MEDIUM,
       children: f ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
     })]

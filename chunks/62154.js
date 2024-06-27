@@ -5,13 +5,13 @@ i.d(n, {
 });
 var t = i(735250);
 i(470079);
-var s = i(543595),
-  o = i(100849),
+var o = i(543595),
+  s = i(100849),
   l = i(487922),
   a = i(620648),
   r = i(944546),
-  d = i(470900),
-  c = i(228168);
+  c = i(470900),
+  d = i(228168);
 
 function u(e) {
   let {
@@ -19,37 +19,37 @@ function u(e) {
     user: i,
     selectedSection: u,
     autoFocusNote: I,
-    onClose: f
+    onClose: E
   } = e;
   switch (u) {
-    case c.oh.ACTIVITY:
-      return (0, t.jsx)(o.Z, {
+    case d.oh.ACTIVITY:
+      return (0, t.jsx)(s.Z, {
         user: i,
-        type: s.Y.PROFILE_V2,
-        onClose: f
+        type: o.Y.PROFILE_V2,
+        onClose: E
       });
-    case c.oh.MUTUAL_GUILDS:
-      return (0, t.jsx)(d.Z, {
+    case d.oh.MUTUAL_GUILDS:
+      return (0, t.jsx)(c.Z, {
         user: i,
-        onClose: f
+        onClose: E
       });
-    case c.oh.MUTUAL_FRIENDS:
+    case d.oh.MUTUAL_FRIENDS:
       return (0, t.jsx)(r.Z, {
         user: i,
-        onClose: f
+        onClose: E
       });
-    case c.oh.BOT_DATA_ACCESS:
+    case d.oh.BOT_DATA_ACCESS:
       return (0, t.jsx)(l.Z, {
         user: i
       });
-    case c.oh.USER_INFO_CONNECTIONS:
-    case c.oh.USER_INFO:
+    case d.oh.USER_INFO_CONNECTIONS:
+    case d.oh.USER_INFO:
     default:
       return (0, t.jsx)(a.Z, {
         displayProfile: n,
         autoFocusNote: I,
         user: i,
-        scrollToConnections: u === c.oh.USER_INFO_CONNECTIONS
+        scrollToConnections: u === d.oh.USER_INFO_CONNECTIONS
       })
   }
 }

@@ -21,15 +21,15 @@ var r = n(120356),
   h = n(835225),
   f = n(939039),
   S = n(117795),
-  N = n(358085),
-  A = n(792125),
+  A = n(358085),
+  N = n(792125),
   m = n(998502),
   O = n(689938),
-  p = n(204172);
-let R = e => m.ZP.close(e),
+  R = n(204172);
+let p = e => m.ZP.close(e),
   g = e => m.ZP.minimize(e),
   C = (e, t) => {
-    (0, N.isMac)() && !t.altKey ? m.ZP.fullscreen(e) : m.ZP.maximize(e)
+    (0, A.isMac)() && !t.altKey ? m.ZP.fullscreen(e) : m.ZP.maximize(e)
   },
   v = e => {
     let {
@@ -38,26 +38,26 @@ let R = e => m.ZP.close(e),
       hasOpenLayer: r
     } = e;
     return (0, i.jsxs)("div", {
-      className: s()(p.typeWindows, (0, A.Q)(n), {
-        [p.withBackgroundOverride]: !r
+      className: s()(R.typeWindows, (0, N.Q)(n), {
+        [R.withBackgroundOverride]: !r
       }),
       children: [(0, i.jsx)("div", {
-        className: p.wordmarkWindows,
+        className: R.wordmarkWindows,
         children: (0, i.jsx)(d.Z, {})
       }), (0, i.jsx)(a.Clickable, {
-        className: p.winButtonClose,
-        onClick: () => R(t),
+        className: R.winButtonClose,
+        onClick: () => p(t),
         "aria-label": O.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
         tabIndex: -1,
         children: (0, i.jsx)(E.Z, {})
       }), (0, i.jsx)(a.Clickable, {
-        className: p.winButtonMinMax,
+        className: R.winButtonMinMax,
         onClick: e => C(t, e),
         "aria-label": O.Z.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
         tabIndex: -1,
         children: (0, i.jsx)(T.Z, {})
       }), (0, i.jsx)(a.Clickable, {
-        className: p.winButtonMinMax,
+        className: R.winButtonMinMax,
         onClick: () => g(t),
         "aria-label": O.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
         tabIndex: -1,
@@ -74,25 +74,25 @@ let R = e => m.ZP.close(e),
       hasOpenLayer: l
     } = e;
     return (0, i.jsxs)(a.Clickable, {
-      className: s()(r ? p.typeMacOSWithFrame : p.typeMacOS, t ? p.focused : p.unfocused, (0, A.Q)(o), {
-        [p.withBackgroundOverride]: !l
+      className: s()(r ? R.typeMacOSWithFrame : R.typeMacOS, t ? R.focused : R.unfocused, (0, N.Q)(o), {
+        [R.withBackgroundOverride]: !l
       }),
       onDoubleClick: () => m.ZP.maximize(n),
       tabIndex: -1,
       children: [u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS ? (0, i.jsx)("div", {
-        className: p.macDragRegion
+        className: R.macDragRegion
       }) : (0, i.jsxs)("div", {
-        className: p.macButtons,
+        className: R.macButtons,
         children: [(0, i.jsx)(a.Clickable, {
-          className: p.macButtonClose,
-          onClick: () => R(n),
+          className: R.macButtonClose,
+          onClick: () => p(n),
           "aria-label": O.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
           tabIndex: -1,
           children: (0, i.jsx)(I.Z, {
             color: "#4c0000"
           })
         }), (0, i.jsx)(a.Clickable, {
-          className: p.macButtonMinimize,
+          className: R.macButtonMinimize,
           onClick: () => g(n),
           "aria-label": O.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
           tabIndex: -1,
@@ -100,7 +100,7 @@ let R = e => m.ZP.close(e),
             color: "#975500"
           })
         }), (0, i.jsx)(a.Clickable, {
-          className: p.macButtonMaximize,
+          className: R.macButtonMaximize,
           onClick: e => C(n, e),
           "aria-label": O.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
           tabIndex: -1,
@@ -109,7 +109,7 @@ let R = e => m.ZP.close(e),
           })
         })]
       }), r ? (0, i.jsx)("div", {
-        className: p.wordmarkMacOS,
+        className: R.wordmarkMacOS,
         children: (0, i.jsx)(d.Z, {
           color: "#ffffff"
         })
@@ -127,13 +127,13 @@ function D(e) {
   } = e, u = (0, _.bp)(), d = (0, o.e7)([c.Z], () => c.Z.isFullscreenInContext(u)), E = (0, l.Z)();
   if (d) return null;
   switch (n) {
-    case N.PlatformTypes.WINDOWS:
+    case A.PlatformTypes.WINDOWS:
       return (0, i.jsx)(v, {
         windowKey: r,
         themeOverride: a,
         hasOpenLayer: E
       });
-    case N.PlatformTypes.OSX:
+    case A.PlatformTypes.OSX:
       return (0, i.jsx)(L, {
         focused: t,
         windowKey: r,

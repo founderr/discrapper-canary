@@ -12,8 +12,8 @@ var i, a, l = n(735250),
   _ = n(766015),
   f = n(401139),
   E = n(12779),
-  g = n(450369),
-  C = n(689938),
+  C = n(450369),
+  g = n(689938),
   I = n(310808);
 let x = 424,
   T = 624,
@@ -21,7 +21,7 @@ let x = 424,
 (a = i || (i = {}))[a.SELECTED = 0] = "SELECTED", a[a.SPEAKER = 1] = "SPEAKER", a[a.AUDIENCE = 2] = "AUDIENCE";
 let v = (e, t) => {
     let n = Math.floor(e / t - 8),
-      i = Math.floor(n / g.Q);
+      i = Math.floor(n / C.Q);
     return {
       speakerTileWidth: n,
       speakerTileHeight: i
@@ -63,7 +63,7 @@ t.Z = (0, o.Z)(e => {
       } = e;
       if (1 === t) return 0 === M ? null : (0, l.jsx)(E.Z, {
         participantCount: M,
-        label: C.Z.Messages.SPEAKER_LABEL,
+        label: g.Z.Messages.SPEAKER_LABEL,
         className: I.header,
         onClick: () => z(!W),
         collapsed: W,
@@ -73,7 +73,7 @@ t.Z = (0, o.Z)(e => {
       }, "speaker-header-".concat(t));
       if (2 === t) return 0 === b ? null : (0, l.jsx)(E.Z, {
         participantCount: b,
-        label: C.Z.Messages.AUDIENCE_LABEL,
+        label: g.Z.Messages.AUDIENCE_LABEL,
         className: I.header,
         onClick: () => K(!Y),
         collapsed: Y,
@@ -93,7 +93,7 @@ t.Z = (0, o.Z)(e => {
           if (0 === a.length || null == a[0]) return null;
           return (0, l.jsx)("div", {
             className: I.focusedRow,
-            children: (0, l.jsx)(g.Z, {
+            children: (0, l.jsx)(C.Z, {
               channel: i,
               participant: a[0],
               width: V
@@ -120,7 +120,7 @@ t.Z = (0, o.Z)(e => {
           return null
       }
     },
-    rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / g.Q + 8 : 1 === e ? W ? 0 : G : Y ? 0 : 98,
+    rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? W ? 0 : G : Y ? 0 : 98,
     renderFooter: e => {
       let {
         section: t

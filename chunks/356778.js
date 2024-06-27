@@ -3,7 +3,7 @@ n.d(t, {
     return p
   },
   Ow: function() {
-    return C
+    return g
   },
   P2: function() {
     return T
@@ -52,9 +52,9 @@ let _ = {
       }), n
     })
   },
-  g = e => f(t => t.get(e), r.Z);
+  C = e => f(t => t.get(e), r.Z);
 
-function C(e, t, n) {
+function g(e, t, n) {
   let i = null != n ? n : {};
   switch (t) {
     case "links":
@@ -81,10 +81,10 @@ function I(e, t, n) {
     let {
       addtionalQuery: a,
       shouldDispatch: s = !1
-    } = i, r = l.useMemo(() => m(e, t, n, a), [e, t, n, a]), f = g(r), I = (0, c.Z)(r), [x, T] = l.useState({});
+    } = i, r = l.useMemo(() => m(e, t, n, a), [e, t, n, a]), f = C(r), I = (0, c.Z)(r), [x, T] = l.useState({});
     return l.useEffect(() => {
       if (I !== r) {
-        let i = C(e, n, a),
+        let i = g(e, n, a),
           l = new u.ZP(t, h.aib.GUILD, i);
         E(r, {
           searchFetcher: l,
@@ -131,7 +131,7 @@ function I(e, t, n) {
 
 function x(e, t, n, i) {
   let a = l.useMemo(() => m(e, t, n, i, !0), [e, t, n, i]),
-    s = g(a),
+    s = C(a),
     r = (0, c.Z)(a);
   return {
     key: a,
@@ -151,11 +151,11 @@ function T(e, t, n) {
   } = x(e, t, "links", n), {
     key: m,
     state: _
-  } = x(e, t, "media", n), f = l.useMemo(() => C(e, "all_counts", n), [e, n]), g = l.useMemo(() => ({
+  } = x(e, t, "media", n), f = l.useMemo(() => g(e, "all_counts", n), [e, n]), C = l.useMemo(() => ({
     tabs: {
-      messages: C(e, "messages", f),
-      links: C(e, "links", f),
-      media: C(e, "media", f)
+      messages: g(e, "messages", f),
+      links: g(e, "links", f),
+      media: g(e, "media", f)
     },
     track_exact_total_hits: !0
   }), [e, f]), I = l.useCallback(e => {
@@ -171,7 +171,7 @@ function T(e, t, n) {
     })
   }, [I]);
   l.useEffect(() => {
-    let e = new u.tJ(t, h.aib.GUILD, f, g);
+    let e = new u.tJ(t, h.aib.GUILD, f, C);
     T({
       searchTabFetcher: e,
       messageCount: p,
@@ -214,7 +214,7 @@ function T(e, t, n) {
     return () => {
       e.cancel(), clearTimeout(n)
     }
-  }, [e, t, f, g, T, I]);
+  }, [e, t, f, C, T, I]);
   let [N, v] = l.useState({});
   return {
     messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,

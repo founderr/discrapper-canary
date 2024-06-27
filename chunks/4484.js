@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(925994),
   f = n(436660),
   S = n(887490),
-  N = n(194625),
-  A = n(77188),
+  A = n(194625),
+  N = n(77188),
   m = n(230554),
   O = n(780748),
-  p = n(464581),
-  R = n(732659),
+  R = n(464581),
+  p = n(732659),
   g = n(86724),
   C = n(847302),
   v = n(657198),
@@ -38,8 +38,8 @@ t.Z = r.forwardRef(function(e, t) {
     disabled: b,
     submitting: G,
     placeholder: w,
-    required: x,
-    textAreaPaddingClassName: B,
+    required: B,
+    textAreaPaddingClassName: x,
     onChange: k,
     onPaste: V,
     onResize: Z,
@@ -106,17 +106,17 @@ t.Z = r.forwardRef(function(e, t) {
         eh.current = !0
       } else e.onChange()
     }
-  }, [P.id, P.guild_id, et]), eN = r.useCallback(() => {
+  }, [P.id, P.guild_id, et]), eA = r.useCallback(() => {
     eT.current = !1
-  }, []), eA = r.useCallback(() => {
+  }, []), eN = r.useCallback(() => {
     eT.current = !0
-  }, []), em = (0, A.Z)({
+  }, []), em = (0, N.Z)({
     channel: P,
     chatInputType: s,
     canUseCommands: $,
     canOnlyUseTextCommands: ee,
-    onChangeStart: eN,
-    onChangeEnd: eA,
+    onChangeStart: eA,
+    onChangeEnd: eN,
     updateState: eS
   }), eO = r.useCallback((e, t) => {
     let n = E.tM(em, e, P.id),
@@ -125,7 +125,7 @@ t.Z = r.forwardRef(function(e, t) {
       values: n,
       results: i
     }
-  }, [P.guild_id, P.id, em]), ep = r.useCallback(() => {
+  }, [P.guild_id, P.id, em]), eR = r.useCallback(() => {
     let e;
     let t = $ ? u.Z.getActiveCommand(P.id) : null;
     if (null != t && null != t.options) {
@@ -156,9 +156,9 @@ t.Z = r.forwardRef(function(e, t) {
       ignoreTrailingEmptyNodes: !0
     }), t, e)
   }, [P.id, em, z, eO, $]);
-  (0, m.Z)(t, em, P, ep), (0, R.Z)(em, eE, Z);
+  (0, m.Z)(t, em, P, eR), (0, p.Z)(em, eE, Z);
   let {
-    handleKeyDown: eR,
+    handleKeyDown: ep,
     handleKeyUp: eg
   } = (0, O.Z)({
     editor: em,
@@ -169,13 +169,13 @@ t.Z = r.forwardRef(function(e, t) {
     onTab: W,
     onEnter: K,
     allowNewLines: ei,
-    submit: ep,
+    submit: eR,
     hideAutocomplete: X,
     moveSelection: Q
   }), {
     handlePaste: eC,
     handleGlobalPaste: ev
-  } = (0, p.Z)(em, ef, V), eL = r.useCallback(e => {
+  } = (0, R.Z)(em, ef, V), eL = r.useCallback(e => {
     null == q || q()
   }, [q]), eD = r.useCallback(e => {
     e !== eI.current ? eh.current && (null == k || k(null, (0, h.sk)(e, {
@@ -194,7 +194,7 @@ t.Z = r.forwardRef(function(e, t) {
     };
     return _.Z.addChangeListener(e), () => _.Z.removeChangeListener(e)
   }, [P, em, eO]);
-  let eM = r.useCallback((e, t) => (0, N.Z)(e, t), []),
+  let eM = r.useCallback((e, t) => (0, A.Z)(e, t), []),
     eP = r.useCallback(e => (0, v.Z)(em, e, P.id), [P.id, em]),
     ey = r.useCallback(e => (0, L.Z)(e), []);
   return (0, i.jsxs)(i.Fragment, {
@@ -209,7 +209,7 @@ t.Z = r.forwardRef(function(e, t) {
         editor: em,
         channelId: P.id,
         guildId: P.guild_id,
-        className: o()(M.slateTextArea, B),
+        className: o()(M.slateTextArea, x),
         placeholder: w,
         readOnly: ef,
         spellCheck: J,
@@ -220,7 +220,7 @@ t.Z = r.forwardRef(function(e, t) {
         onBlur: F,
         onClick: eL,
         onPaste: eC,
-        onKeyDown: eR,
+        onKeyDown: ep,
         onKeyUp: eg,
         decorateExtra: eM,
         renderExtraElement: eP,
@@ -234,7 +234,7 @@ t.Z = r.forwardRef(function(e, t) {
         "aria-describedby": e_,
         "aria-invalid": eu,
         "aria-autocomplete": ed,
-        "aria-required": x
+        "aria-required": B
       })
     })]
   })

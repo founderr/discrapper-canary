@@ -15,8 +15,8 @@ var i = n(735250),
   h = n(689938),
   f = n(713216);
 let S = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-  N = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-  A = e => {
+  A = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+  N = e => {
     let t = null,
       n = null;
     if (!(0, I.jl)(e) && !(0, I.J8)(e) || (0, I.J8)(e)) {
@@ -31,7 +31,7 @@ let S = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
       null != r && (t = h.Z.Messages.STICKER_FROM_SOURCE.format({
         source: r.name
       }), n = (0, i.jsx)(T.ZP, {
-        size: N,
+        size: A,
         sticker: (0, I.Zt)(r),
         disableAnimation: !0
       }))
@@ -59,7 +59,7 @@ let S = (0, c.Mg)(s.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
     let {
       graphic: a,
       title: _
-    } = A(s), c = (0, I.jl)(s) || (0, I.J8)(s) ? (0, i.jsx)(T.ZP, {
+    } = N(s), c = (0, I.jl)(s) || (0, I.J8)(s) ? (0, i.jsx)(T.ZP, {
       isInteracting: !0,
       size: S,
       sticker: s,

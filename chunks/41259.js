@@ -26,8 +26,8 @@ function T(e) {
     bot: h,
     accountScopes: f,
     showLogout: S,
-    location: N,
-    isTrustedName: A
+    location: A,
+    isTrustedName: N
   } = e, m = l.ZP.getApplicationIconURL({
     id: T.id,
     icon: T.icon
@@ -55,7 +55,7 @@ function T(e) {
         size: d.EF.SIZE_80,
         "aria-label": n.username
       })]
-    }), !A && (0, i.jsx)(o.x, {
+    }), !N && (0, i.jsx)(o.x, {
       variant: "text-md/medium",
       color: "header-secondary",
       className: I.label,
@@ -95,7 +95,7 @@ function T(e) {
         }), (0, i.jsx)(s.P, {
           tag: "a",
           className: I.logoutLink,
-          onClick: () => (0, _.c$)(N),
+          onClick: () => (0, _.c$)(A),
           children: E.Z.Messages.OAUTH2_LOGOUT
         })]
       })

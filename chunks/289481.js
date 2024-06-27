@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(45114),
   _ = n(367907),
   E = n(717680),
-  I = n(703656),
-  m = n(592125),
+  m = n(703656),
+  I = n(592125),
   T = n(259580),
   h = n(617379),
   N = n(324081),
@@ -69,7 +69,7 @@ let R = a.memo(function(e) {
     onJump: n,
     deleteChannel: s,
     toggle: l
-  } = e, r = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId));
+  } = e, r = (0, o.e7)([I.Z], () => I.Z.getChannel(t.channelId));
   if (a.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.Z.wait(() => {
         (0, u.In)(t.channelId, !0), s(t.channelId)
@@ -81,7 +81,7 @@ let R = a.memo(function(e) {
       guild_id: t.guildId
     });
     let a = null != i ? i : t.oldestUnreadMessageId;
-    (0, I.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    (0, m.uL)(C.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
   return (0, i.jsx)("div", {
     className: S.channel,
@@ -94,9 +94,9 @@ let R = a.memo(function(e) {
         channelState: t,
         children: [(0, i.jsx)(h.Z, {
           channel: r
-        }), (0, i.jsx)(x, {
+        }), (0, i.jsx)(O, {
           ...e
-        }), "nsfw" === t.type ? null : (0, i.jsx)(O, {
+        }), "nsfw" === t.type ? null : (0, i.jsx)(x, {
           ...e
         })]
       }),
@@ -113,7 +113,7 @@ let R = a.memo(function(e) {
   })
 });
 
-function x(e) {
+function O(e) {
   let {
     channel: t,
     markChannelRead: n,
@@ -142,7 +142,7 @@ function x(e) {
   })
 }
 
-function O(e) {
+function x(e) {
   let {
     channel: t,
     toggle: n,

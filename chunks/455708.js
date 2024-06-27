@@ -16,8 +16,8 @@ var i = n(735250),
   h = n(215016),
   f = n(981631),
   S = n(149203),
-  N = n(689938),
-  A = n(155938);
+  A = n(689938),
+  N = n(155938);
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function m(e, t, n) {
   }) : e[t] = n, e
 }
 let O = e => e.stopPropagation();
-class p extends r.PureComponent {
+class R extends r.PureComponent {
   componentDidMount() {
     _.gK(), document.addEventListener("keydown", this.backToFrontPage), "" !== this.props.query && this.search(this.props.query, f.wI2.SEARCH)
   }
@@ -52,24 +52,24 @@ class p extends r.PureComponent {
       case f.wI2.FAVORITES:
         return (0, i.jsx)(l.FormTitle, {
           tag: "h5",
-          className: A.searchHeader,
-          children: N.Z.Messages.CATEGORY_FAVORITE
+          className: N.searchHeader,
+          children: A.Z.Messages.CATEGORY_FAVORITE
         });
       case f.wI2.TRENDING_GIFS:
         return (0, i.jsx)(l.FormTitle, {
           tag: "h5",
-          className: A.searchHeader,
-          children: N.Z.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
+          className: N.searchHeader,
+          children: A.Z.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
         });
       default:
         return (0, i.jsx)(l.SearchBar, {
-          className: A.searchBar,
+          className: N.searchBar,
           size: l.SearchBar.Sizes.MEDIUM,
           query: e,
           onChange: this.handleChangeQuery,
           onClear: this.handleClearQuery,
-          placeholder: N.Z.Messages.SEARCH_TENOR,
-          "aria-label": N.Z.Messages.SEARCH_TENOR,
+          placeholder: A.Z.Messages.SEARCH_TENOR,
+          "aria-label": A.Z.Messages.SEARCH_TENOR,
           ref: this.searchBarRef,
           autoFocus: !0
         })
@@ -81,8 +81,8 @@ class p extends r.PureComponent {
     } = this.state, t = null;
     return null != e && (t = (0, i.jsx)(l.Clickable, {
       onClick: this.handleClearQuery,
-      className: A.backButton,
-      "aria-label": N.Z.Messages.BACK,
+      className: N.backButton,
+      "aria-label": A.Z.Messages.BACK,
       children: (0, i.jsx)(l.ArrowSmallLeftIcon, {
         size: "md",
         color: "currentColor"
@@ -131,14 +131,14 @@ class p extends r.PureComponent {
       id: S.vO,
       role: "tabpanel",
       "aria-labelledby": S._3,
-      className: o()(A.container, e),
+      className: o()(N.container, e),
       onClick: O,
       ref: t,
       children: [(0, i.jsx)("div", {
-        className: A.header,
+        className: N.header,
         children: this.renderHeader()
       }), (0, i.jsx)("div", {
-        className: A.content,
+        className: N.content,
         children: this.renderContent()
       })]
     })
@@ -197,7 +197,7 @@ t.Z = r.forwardRef((e, t) => {
     resultItems: d.Z.getResultItems(),
     suggestions: d.Z.getSuggestions()
   })), l = (0, c.Iu)(e => e.searchQuery), u = (0, I.HI)();
-  return (0, i.jsx)(p, {
+  return (0, i.jsx)(R, {
     ...e,
     forwardedRef: t,
     query: null != l && "" !== l ? l : n,

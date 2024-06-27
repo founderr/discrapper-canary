@@ -3,7 +3,7 @@ t.d(s, {
     return h
   },
   Gd: function() {
-    return p
+    return R
   }
 }), t(47120);
 var n = t(735250),
@@ -23,10 +23,10 @@ var d = t(594174),
   I = t(114487),
   N = t(219039),
   C = t(979264),
-  A = t(308083),
-  m = t(981631),
-  O = t(689938),
-  g = t(879678);
+  m = t(308083),
+  A = t(981631),
+  g = t(689938),
+  O = t(879678);
 
 function h(e) {
   let {
@@ -39,23 +39,23 @@ function h(e) {
     guildIcon: _,
     guildIconSize: E,
     memberCount: u
-  } = e, T = a.useRef(null), [S, m] = a.useState(!1);
+  } = e, T = a.useRef(null), [S, A] = a.useState(!1);
   return a.useEffect(() => {
     let e = T.current;
-    null != e && null != e.offsetWidth && null != e.scrollWidth && m(e.offsetWidth < e.scrollWidth)
+    null != e && null != e.offsetWidth && null != e.scrollWidth && A(e.offsetWidth < e.scrollWidth)
   }, []), (0, n.jsxs)("div", {
-    className: r()(g.container, s),
+    className: r()(O.container, s),
     children: [(0, n.jsxs)("div", {
-      className: g.guildPrefixContainer,
+      className: O.guildPrefixContainer,
       children: [(0, n.jsx)(I.b, {
         guildId: c,
         guildName: d,
         guildIcon: _,
         iconSize: E,
-        className: g.guildPrefixIcon,
+        className: O.guildPrefixIcon,
         animate: !1
       }), (0, n.jsxs)("div", {
-        className: g.details,
+        className: O.details,
         children: [(0, n.jsx)(l.Tooltip, {
           text: d,
           color: l.Tooltip.Colors.PRIMARY,
@@ -63,7 +63,7 @@ function h(e) {
           children: e => (0, n.jsx)("span", {
             ref: T,
             ...e,
-            className: g.guildName,
+            className: O.guildName,
             children: d
           })
         }), null != u && (0, n.jsx)(N.Z, {
@@ -71,23 +71,23 @@ function h(e) {
         })]
       })]
     }), (0, n.jsx)("div", {
-      className: g.tagContainer,
+      className: O.tagContainer,
       children: (0, n.jsx)(C.aG, {
         guildId: c,
-        className: g.tag,
+        className: O.tag,
         clanTag: t,
         clanBadge: i,
         onClick: o,
-        badgeSize: A.NC.SIZE_16,
+        badgeSize: m.NC.SIZE_16,
         textColor: "interactive-normal",
         textVariant: "text-sm/semibold",
-        badgeClassName: g.badge
+        badgeClassName: O.badge
       })
     })]
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     userClanTag: s,
     userClanBadge: t,
@@ -96,24 +96,24 @@ function R(e) {
     guildIcon: S,
     clan: I,
     userId: N
-  } = e, C = (0, T.C)(), A = (0, o.e7)([d.default], () => {
+  } = e, C = (0, T.C)(), m = (0, o.e7)([d.default], () => {
     var e;
     return (0, u.vh)(null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
-  }), R = a.useMemo(() => {
-    if (i !== A) {
+  }), p = a.useMemo(() => {
+    if (i !== m) {
       if (C.has(i)) return () => {
         (0, l.openModal)(e => (0, n.jsx)(l.ConfirmModal, {
           ...e,
-          header: O.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
-          confirmText: O.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA,
+          header: g.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
+          confirmText: g.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA,
           confirmButtonColor: l.Button.Colors.BRAND,
-          cancelText: O.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
+          cancelText: g.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
           onConfirm: async () => {
             await (0, _.nE)(i, !0, c.Z.PROFILE_POPOUT)
           },
           children: (0, n.jsx)(l.Text, {
             variant: "text-sm/normal",
-            children: O.Z.Messages.CLAN_USER_PROFILE_USE_CLAN_TAG.format({
+            children: g.Z.Messages.CLAN_USER_PROFILE_USE_CLAN_TAG.format({
               guildName: r
             })
           })
@@ -121,23 +121,23 @@ function R(e) {
       };
       if (null != I) return () => {
         (0, E.q)(i, I, {
-          source: m.jXE.USER_PROFILE,
+          source: A.jXE.USER_PROFILE,
           location: c.Z.CLAN_TAG,
           tagUserId: N
         })
       }
     }
-  }, [C, I, A, i, r, N]);
+  }, [C, I, m, i, r, N]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(l.Heading, {
-      className: g.header,
+      className: O.header,
       variant: "eyebrow",
-      children: O.Z.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
+      children: g.Z.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
     }), (0, n.jsx)(h, {
-      className: g.profileContainer,
+      className: O.profileContainer,
       clanTag: s,
       clanBadge: t,
-      onTagClick: R,
+      onTagClick: p,
       guildName: r,
       guildId: i,
       guildIcon: S,
@@ -147,7 +147,7 @@ function R(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     userId: s,
     wrapChildren: t
@@ -162,7 +162,7 @@ function p(e) {
     userId: s
   });
   if (null == a || null == r || null == o) return null;
-  let d = (0, n.jsx)(R, {
+  let d = (0, n.jsx)(p, {
     userClanTag: a,
     userClanBadge: i,
     guildId: r,

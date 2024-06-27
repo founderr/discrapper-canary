@@ -7,19 +7,19 @@ n.d(t, {
     return m
   },
   RE: function() {
-    return p
+    return R
   },
   Xe: function() {
     return L
   },
   dv: function() {
-    return R
+    return p
   },
   rS: function() {
     return O
   },
   t0: function() {
-    return A
+    return N
   }
 }), n(47120), n(653041);
 var i = n(392711),
@@ -38,9 +38,9 @@ var i = n(392711),
   h = n(668781),
   f = n(981631),
   S = n(526761),
-  N = n(689938);
+  A = n(689938);
 
-function A(e) {
+function N(e) {
   E.hW.updateAsync("textAndImages", t => {
     t.diversitySurrogate = o.Gm.create(), t.diversitySurrogate.value = e
   }, S.fy.FREQUENT_USER_ACTION)
@@ -90,7 +90,7 @@ function O(e) {
   }), Promise.reject(e)))
 }
 
-function p(e, t) {
+function R(e, t) {
   return a.Z.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
@@ -100,7 +100,7 @@ function p(e, t) {
     oldFormErrors: !0
   })
 }
-async function R(e) {
+async function p(e) {
   let {
     guildId: t,
     emojiId: n,
@@ -138,8 +138,8 @@ function C(e) {
 function v(e) {
   let t = C(e);
   if (null != t) E.DZ.updateAsync("favoriteEmojis", e => (e.emojis = g(e.emojis), r().size(e.emojis) >= S.oX) ? (h.Z.show({
-    title: N.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-    body: N.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+    title: A.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: A.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: S.oX
     })
   }), !1) : !e.emojis.includes(t) && void e.emojis.push(t), S.fy.INFREQUENT_USER_ACTION)

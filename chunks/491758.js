@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(556296),
   N = t(924557),
   C = t(435064),
-  A = t(894694),
-  m = t(779618),
-  O = t(39604),
-  g = t(442334),
+  m = t(894694),
+  A = t(779618),
+  g = t(39604),
+  O = t(442334),
   h = t(356659),
-  R = t(981631),
-  p = t(37113),
+  p = t(981631),
+  R = t(37113),
   x = t(526761),
   M = t(689938),
   D = t(404007),
@@ -42,7 +42,7 @@ function P() {
       clipsQuality: Z
     } = (0, o.cj)([C.Z], () => C.Z.getSettings()),
     v = (0, o.e7)([C.Z], () => C.Z.getHardwareClassification()),
-    b = (0, o.e7)([I.Z], () => I.Z.getKeybindForAction(R.kg4.SAVE_CLIP, !0)),
+    b = (0, o.e7)([I.Z], () => I.Z.getKeybindForAction(p.kg4.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: j
     } = E.Z.useExperiment({
@@ -50,9 +50,9 @@ function P() {
     }, {
       autoTrackExposure: !1
     }),
-    U = (0, m.Z)(S.Z),
+    B = (0, A.Z)(S.Z),
     {
-      showClipsHeaderEntrypoint: B
+      showClipsHeaderEntrypoint: U
     } = N.NV.useExperiment({
       location: "clips_recording_settings"
     }, {
@@ -77,43 +77,43 @@ function P() {
       })
     }], [G]),
     V = a.useMemo(() => [{
-      value: p.LY.RESOLUTION_480,
+      value: R.LY.RESOLUTION_480,
       label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.LY.RESOLUTION_480
+        resolution: R.LY.RESOLUTION_480
       })
     }, {
-      value: p.LY.RESOLUTION_720,
+      value: R.LY.RESOLUTION_720,
       label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.LY.RESOLUTION_720
+        resolution: R.LY.RESOLUTION_720
       })
     }, {
-      value: p.LY.RESOLUTION_1080,
+      value: R.LY.RESOLUTION_1080,
       label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.LY.RESOLUTION_1080
+        resolution: R.LY.RESOLUTION_1080
       })
     }, {
-      value: p.LY.RESOLUTION_1440,
+      value: R.LY.RESOLUTION_1440,
       label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.LY.RESOLUTION_1440
+        resolution: R.LY.RESOLUTION_1440
       })
     }, {
-      value: p.LY.RESOLUTION_SOURCE,
+      value: R.LY.RESOLUTION_SOURCE,
       label: M.Z.Messages.SCREENSHARE_SOURCE
     }], [G]),
     y = a.useMemo(() => [{
-      value: p.ws.FPS_15,
+      value: R.ws.FPS_15,
       label: M.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-        fps: p.ws.FPS_15
+        fps: R.ws.FPS_15
       })
     }, {
-      value: p.ws.FPS_30,
+      value: R.ws.FPS_30,
       label: M.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-        fps: p.ws.FPS_30
+        fps: R.ws.FPS_30
       })
     }, {
-      value: p.ws.FPS_60,
+      value: R.ws.FPS_60,
       label: M.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-        fps: p.ws.FPS_60
+        fps: R.ws.FPS_60
       })
     }], [G]),
     Y = a.useCallback(e => {
@@ -129,11 +129,11 @@ function P() {
         look: T.z.WARNING,
         className: f.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
-          onClick: () => d.Z.open(R.oAB.VOICE, null, {
+          onClick: () => d.Z.open(p.oAB.VOICE, null, {
             scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), v === A.x.BELOW_MINIMUM ? (0, n.jsx)(T.Z, {
+      }), v === m.x.BELOW_MINIMUM ? (0, n.jsx)(T.Z, {
         look: T.z.WARNING,
         className: f.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -143,7 +143,7 @@ function P() {
         className: f.formItem,
         value: s,
         note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
-        onChange: e => O.em({
+        onChange: e => g.em({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
@@ -152,7 +152,7 @@ function P() {
         className: f.formItem,
         children: M.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })]
-    }), j && U && (0, n.jsxs)(n.Fragment, {
+    }), j && B && (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(l.FormDivider, {}), (0, n.jsx)(l.FormSection, {
         className: L.marginTop20,
         disabled: !e,
@@ -162,14 +162,14 @@ function P() {
           className: f.formItem,
           value: i,
           note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
-          onChange: e => O._Q({
+          onChange: e => g._Q({
             enabled: e,
             trackAnalytics: !0
           }),
           children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
         })
       })]
-    }), B && (0, n.jsxs)(n.Fragment, {
+    }), U && (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(l.FormDivider, {}), (0, n.jsx)(l.FormSection, {
         className: L.marginTop20,
         children: (0, n.jsx)(l.FormSwitch, {
@@ -177,22 +177,22 @@ function P() {
           className: f.formItem,
           value: t,
           note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-          onChange: e => O.N0(e),
+          onChange: e => g.N0(e),
           children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })]
     }), (0, n.jsx)(l.FormDivider, {}), (0, n.jsxs)(l.FormSection, {
       className: L.marginTop20,
-      children: [(0, n.jsx)(g.Q, {
+      children: [(0, n.jsx)(O.Q, {
         className: f.formItem,
-        select: O.eU,
+        select: g.eU,
         title: M.Z.Messages.CLIPS_SETTINGS_LENGTH,
         note: M.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: P,
         options: F
-      }), (0, n.jsx)(g.Q, {
+      }), (0, n.jsx)(O.Q, {
         className: f.formItem,
-        select: e => O.yi({
+        select: e => g.yi({
           resolution: e,
           frameRate: Z.frameRate
         }),
@@ -200,9 +200,9 @@ function P() {
         note: M.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
         value: Z.resolution,
         options: V
-      }), (0, n.jsx)(g.Q, {
+      }), (0, n.jsx)(O.Q, {
         className: f.formItem,
-        select: e => O.yi({
+        select: e => g.yi({
           resolution: Z.resolution,
           frameRate: e
         }),
@@ -210,7 +210,7 @@ function P() {
         note: M.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: Z.frameRate,
         options: y
-      }), (0, n.jsx)(g.O, {
+      }), (0, n.jsx)(O.O, {
         className: f.formItem,
         title: M.Z.Messages.CLIPS_SETTINGS_KEYBIND,
         note: M.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,

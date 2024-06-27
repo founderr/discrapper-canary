@@ -9,12 +9,12 @@ var a, l, u, _, c = n(442837),
   h = n(382182),
   f = n(139656),
   S = n(855403),
-  N = n(314897),
-  A = n(592125),
+  A = n(314897),
+  N = n(592125),
   m = n(430824),
   O = n(131951),
-  p = n(496675),
-  R = n(19780),
+  R = n(496675),
+  p = n(19780),
   g = n(944486),
   C = n(979651),
   v = n(981631),
@@ -59,18 +59,18 @@ function G(e) {
 }
 
 function w(e, t) {
-  let n = A.Z.getBasicChannel(t);
-  return e === L.lo.CALL || null != n && p.Z.canBasicChannel(v.S7T.VIEW_CHANNEL, n)
+  let n = N.Z.getBasicChannel(t);
+  return e === L.lo.CALL || null != n && R.Z.canBasicChannel(v.S7T.VIEW_CHANNEL, n)
 }
 
-function x(e) {
+function B(e) {
   if (w(e.streamType, e.channelId)) return !0;
-  let t = A.Z.getBasicChannel(e.channelId);
-  return null != t && (0, h.p9)(t, C.Z, m.Z, p.Z, E.Z)[0]
+  let t = N.Z.getBasicChannel(e.channelId);
+  return null != t && (0, h.p9)(t, C.Z, m.Z, R.Z, E.Z)[0]
 }
-class B extends(a = c.ZP.Store) {
+class x extends(a = c.ZP.Store) {
   initialize() {
-    this.syncWith([p.Z], () => !0), this.waitFor(I.ZP, p.Z)
+    this.syncWith([R.Z], () => !0), this.waitFor(I.ZP, R.Z)
   }
   isSelfStreamHidden(e) {
     var t;
@@ -98,8 +98,8 @@ class B extends(a = c.ZP.Store) {
   }
   getCurrentUserActiveStream() {
     let e = g.Z.getVoiceChannelId(),
-      t = A.Z.getChannel(e);
-    return null == t ? null : this.getActiveStreamForUser(N.default.getId(), t.getGuildId())
+      t = N.Z.getChannel(e);
+    return null == t ? null : this.getActiveStreamForUser(A.default.getId(), t.getGuildId())
   }
   getActiveStreamForUser(e, t) {
     var n;
@@ -109,9 +109,9 @@ class B extends(a = c.ZP.Store) {
   getStreamerActiveStreamMetadata() {
     var e;
     let t = g.Z.getVoiceChannelId(),
-      n = A.Z.getChannel(t);
+      n = N.Z.getChannel(t);
     if (null == n) return null;
-    let i = this.getActiveStreamForUser(N.default.getId(), n.getGuildId());
+    let i = this.getActiveStreamForUser(A.default.getId(), n.getGuildId());
     return null == i ? null : null !== (e = o[(0, T.V9)(i)]) && void 0 !== e ? e : null
   }
   getStreamerActiveStreamMetadataForStream(e) {
@@ -122,13 +122,13 @@ class B extends(a = c.ZP.Store) {
     var t;
     if (!(0, f.Z)(O.Z)) return null;
     let n = r[e];
-    return null == n ? null : null !== (t = Object.values(n).find(e => x(e))) && void 0 !== t ? t : null
+    return null == n ? null : null !== (t = Object.values(n).find(e => B(e))) && void 0 !== t ? t : null
   }
   getStreamForUser(e, t) {
     var n;
     if (!(0, f.Z)(O.Z)) return null;
     let i = null === (n = r[e]) || void 0 === n ? void 0 : n[null != t ? t : v.kod];
-    return null != i && x(i) ? i : null
+    return null != i && B(i) ? i : null
   }
   getRTCStream(e) {
     var t;
@@ -163,12 +163,12 @@ class B extends(a = c.ZP.Store) {
     }
   }
 }
-_ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.defineProperty(l, u, {
+_ = "ApplicationStreamingStore", (u = "displayName") in(l = x) ? Object.defineProperty(l, u, {
   value: _,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[u] = _, t.Z = new B(d.Z, {
+}) : l[u] = _, t.Z = new x(d.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       applicationStreamState: t
@@ -196,8 +196,8 @@ _ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.definePr
           channelId: s
         }).ownerId] && (r[l.ownerId] = {}), r[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : v.kod] = l, !0
       } {
-        let t = N.default.getSessionId();
-        return n === N.default.getId() && o !== t && null != R.Z.getChannelId() ? e : function(e, t) {
+        let t = A.default.getSessionId();
+        return n === A.default.getId() && o !== t && null != p.Z.getChannelId() ? e : function(e, t) {
           var n;
           let i = null != t ? t : v.kod;
           return (null === (n = r[e]) || void 0 === n ? void 0 : n[i]) != null && (delete r[e][i], !0)
@@ -212,7 +212,7 @@ _ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.definePr
     i.delete(t), i.set(t, {
       ...n,
       state: v.jm8.CONNECTING
-    }), n.ownerId === N.default.getId() && (M[n.channelId] = !1)
+    }), n.ownerId === A.default.getId() && (M[n.channelId] = !1)
   },
   STREAM_START: function(e) {
     var t;
@@ -227,7 +227,7 @@ _ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.definePr
       streamType: n,
       guildId: r,
       channelId: s,
-      ownerId: N.default.getId()
+      ownerId: A.default.getId()
     }), c = null !== (t = null != a ? I.ZP.getGameForPID(a) : null != u ? I.ZP.getRunningGames().find(e => (0, S.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
     o[_] = {
       id: null == c ? void 0 : c.id,
@@ -237,7 +237,7 @@ _ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.definePr
       streamType: n,
       guildId: r,
       channelId: s,
-      ownerId: N.default.getId(),
+      ownerId: A.default.getId(),
       state: v.jm8.CONNECTING
     })
   },
@@ -298,7 +298,7 @@ _ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.definePr
       channelId: t,
       selfStreamHidden: n
     } = e;
-    (0, T.DB)(D) && (null == D ? void 0 : D.includes(N.default.getId())) && !1 === M[t] && !0 === n && (D = null), M[t] = n
+    (0, T.DB)(D) && (null == D ? void 0 : D.includes(A.default.getId())) && !1 === M[t] && !0 === n && (D = null), M[t] = n
   },
   SET_STREAM_APP_INTENT: function(e) {
     let {
@@ -335,7 +335,7 @@ _ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.definePr
     } = e;
     if (D = t, Array.from(i.values()).forEach(e => {
         (0, T.V9)(e) !== D && e.state === v.jm8.ENDED && U((0, T.V9)(e))
-      }), null != t)(0, T.DB)(t) && t.includes(N.default.getId()) && (M[n] = !1)
+      }), null != t)(0, T.DB)(t) && t.includes(A.default.getId()) && (M[n] = !1)
   },
   CONNECTION_OPEN: y,
   CONNECTION_CLOSED: y,

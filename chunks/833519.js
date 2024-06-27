@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(871118),
   f = n(517525),
   E = n(590076),
-  g = n(507675),
-  C = n(199902),
+  C = n(507675),
+  g = n(199902),
   I = n(314897),
   x = n(592125),
   T = n(131951),
@@ -53,7 +53,7 @@ function H(e) {
     idle: l,
     width: s,
     premiumIndicator: o
-  } = e, c = (0, r.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, O.K)(s);
+  } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, O.K)(s);
   return (0, i.jsxs)(i.Fragment, {
     children: [n ? null : (0, i.jsx)(P.Z, {
       participant: t
@@ -82,7 +82,7 @@ function G(e) {
     stream: F,
     user: W,
     streamId: z
-  } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([C.Z], () => C.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]), q = (0, r.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
+  } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(W.id, F.guildId), [W.id, F.guildId]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
   if (a.useEffect(() => {
       !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1))
     }, []), a.useEffect(() => {
@@ -126,7 +126,7 @@ function G(e) {
       paused: h || J,
       videoSpinnerContext: Q ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
       userId: W.id
-    }, z), null != $ ? (0, i.jsx)(g.Z, {
+    }, z), null != $ ? (0, i.jsx)(C.Z, {
       size: (0, A.L)(P),
       ...$
     }) : null, (0, i.jsx)(M.Z, {

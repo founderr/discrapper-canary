@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(98278),
   f = n(104494),
   S = n(639119),
-  N = n(165583),
-  A = n(197115),
+  A = n(165583),
+  N = n(197115),
   m = n(302945),
   O = n(631771),
-  p = n(703656),
-  R = n(210887),
+  R = n(703656),
+  p = n(210887),
   g = n(626135),
   C = n(176354),
   v = n(74538),
@@ -37,13 +37,13 @@ t.Z = e => {
   let {
     onLearnMore: G,
     onClose: w,
-    channel: x,
-    emojiDescriptor: B,
+    channel: B,
+    emojiDescriptor: x,
     pickerIntention: k,
     analyticsLocation: V,
     containerContextClassName: Z
-  } = e, H = (0, a.e7)([R.Z], () => R.Z.theme) === M.BRd.LIGHT ? "light" : "dark", [F, Y] = r.useState(!1), j = () => {
-    (0, L.A3)(x), (0, h.z)(), G()
+  } = e, H = (0, a.e7)([p.Z], () => p.Z.theme) === M.BRd.LIGHT ? "light" : "dark", [F, Y] = r.useState(!1), j = () => {
+    (0, L.A3)(B), (0, h.z)(), G()
   }, W = n(577391)("./img_premium_emoji_".concat(H, ".svg")), K = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(H, ".png"), z = (0, S.N)(), q = (0, f.Ng)(), X = null != z || null != q, Q = (0, E.Iu)(e => e.searchQuery), {
     analyticsLocations: J
   } = (0, d.ZP)(c.Z.EMOJI_PICKER), {
@@ -57,10 +57,10 @@ t.Z = e => {
   });
   r.useEffect(() => {
     let e;
-    e = k === P.Hz.REACTION ? y.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == B ? y.cd.EMOJI_PICKER_FLOATING_UPSELL : B.subCategory === D.t0.TOP_GUILD_EMOJI ? y.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : B.subCategory === D.t0.NEWLY_ADDED_EMOJI ? y.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : y.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let t = null != B ? B.emoji : void 0,
+    e = k === P.Hz.REACTION ? y.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == x ? y.cd.EMOJI_PICKER_FLOATING_UPSELL : x.subCategory === D.t0.TOP_GUILD_EMOJI ? y.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : x.subCategory === D.t0.NEWLY_ADDED_EMOJI ? y.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : y.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    let t = null != x ? x.emoji : void 0,
       n = null != t && t.animated,
-      i = null != t && !C.ZP.isInternalEmojiForGuildId(t, null == x ? void 0 : x.getGuildId()),
+      i = null != t && !C.ZP.isInternalEmojiForGuildId(t, null == B ? void 0 : B.getGuildId()),
       r = null != t ? M.qAy.EMOJI : M.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     g.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
       type: e,
@@ -74,12 +74,12 @@ t.Z = e => {
       location_stack: J,
       sku_id: (0, v.Wz)(v.ZP.getSkuIdForPremiumType(y.p9.TIER_2))
     })
-  }, [B, x, V, J, k, Q]);
+  }, [x, B, V, J, k, Q]);
   let et = () => {
       (0, I.Z)(), w(), G(), g.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
         location_section: M.jXE.EMOJI_UPSELL_POPOUT,
         location_object: M.qAy.NAVIGATION_LINK
-      }), (0, _.xf)(), (0, p.uL)(M.Z5c.APPLICATION_STORE)
+      }), (0, _.xf)(), (0, R.uL)(M.Z5c.APPLICATION_STORE)
     },
     en = (0, a.e7)([T.Z], () => T.Z.affinities),
     ei = (0, a.e7)([T.Z], () => T.Z.hasFetched);
@@ -87,7 +87,7 @@ t.Z = e => {
     !ei && u.MH()
   }, [ei]);
   let er = en.length > 1 && ee,
-    es = () => (0, i.jsx)(A.Z, {
+    es = () => (0, i.jsx)(N.Z, {
       showGradient: !0,
       premiumModalAnalyticsLocation: V,
       subscriptionTier: y.Si.TIER_2,
@@ -149,7 +149,7 @@ t.Z = e => {
       onClick: w,
       children: U.Z.Messages.CLOSE
     }), (0, i.jsxs)(i.Fragment, {
-      children: [X ? (0, i.jsx)(N.ZP, {
+      children: [X ? (0, i.jsx)(A.ZP, {
         type: y.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
         subscriptionTier: null !== (s = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== s ? s : y.Si.TIER_2,
         onClose: w,
@@ -172,7 +172,7 @@ t.Z = e => {
             onClick: j
           })
         })]
-      }), !X && (0, i.jsx)(A.Z, {
+      }), !X && (0, i.jsx)(N.Z, {
         subscriptionTier: y.Si.TIER_2,
         submitting: F,
         premiumModalAnalyticsLocation: {

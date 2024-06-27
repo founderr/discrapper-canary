@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return _
   },
   addExtraAnalyticsDecorator: function() {
-    return A
+    return N
   },
   debugLogEvent: function() {
     return v
@@ -46,10 +46,10 @@ let h = i.createContext({
   }),
   f = {},
   S = performance.now(),
-  N = [];
+  A = [];
 
-function A(e) {
-  N.push(e)
+function N(e) {
+  A.push(e)
 }
 let m = {
   [E.rMx.APP_OPENED]: {
@@ -247,8 +247,8 @@ function O(e) {
     location_object_type: e.objectType
   }
 }
-let p = () => I.E.NONE,
-  R = (0, r.trackMaker)({
+let R = () => I.E.NONE,
+  p = (0, r.trackMaker)({
     analyticEventConfigs: m,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: "TRACK"
@@ -290,7 +290,7 @@ function C(e) {
       }
     }
   }
-  o.client_performance_cpu = c.Z.getCurrentCPUUsagePercent(), o.client_performance_memory = c.Z.getCurrentMemoryUsageKB(), o.cpu_core_count = c.Z.getCPUCoreCount(), o.accessibility_features = p(), o.rendered_locale = T.Z.getLocale(), o.uptime_app = Math.floor((performance.now() - S) / 1e3);
+  o.client_performance_cpu = c.Z.getCurrentCPUUsagePercent(), o.client_performance_memory = c.Z.getCurrentMemoryUsageKB(), o.cpu_core_count = c.Z.getCPUCoreCount(), o.accessibility_features = R(), o.rendered_locale = T.Z.getLocale(), o.uptime_app = Math.floor((performance.now() - S) / 1e3);
   let a = c.Z.getProcessUptime();
   null != a && (o.uptime_process_renderer = Math.floor(a));
   let {
@@ -299,7 +299,7 @@ function C(e) {
     utmCampaign: _,
     utmContent: d
   } = f;
-  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : _, o.utm_content = null !== (r = o.utm_content) && void 0 !== r ? r : d, N.forEach(e => e(o)), o
+  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : _, o.utm_content = null !== (r = o.utm_content) && void 0 !== r ? r : d, A.forEach(e => e(o)), o
 }
 
 function v(e, t) {
@@ -326,7 +326,7 @@ t.default = {
   ...r,
   getCampaignParams: r.getCampaignParams,
   setSystemAccessibilityFeatures: function(e) {
-    p = e
+    R = e
   },
   expandEventProperties: C,
   track: function(e, t) {
@@ -336,7 +336,7 @@ t.default = {
         message: "".concat(e)
       }), null != n.throttlePercent && Math.random() > n.throttlePercent) return Promise.resolve();
     let i = C(t);
-    return v(e, i, n.logEventProperties), R(e, i, {
+    return v(e, i, n.logEventProperties), p(e, i, {
       flush: n.flush,
       fingerprint: n.fingerprint
     })

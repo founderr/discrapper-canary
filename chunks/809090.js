@@ -26,12 +26,12 @@ function d(e) {
     onBlur: h,
     onMouseOver: f,
     onMouseLeave: S,
-    ...N
-  } = e, [A, m] = r.useState(!1), O = r.useCallback(() => {
+    ...A
+  } = e, [N, m] = r.useState(!1), O = r.useCallback(() => {
     m(!0), null == T || T()
-  }, [T]), p = r.useCallback(() => {
+  }, [T]), R = r.useCallback(() => {
     m(!1), null == h || h()
-  }, [h]), R = r.useCallback(() => {
+  }, [h]), p = r.useCallback(() => {
     m(!0), null == f || f()
   }, [f]), g = r.useCallback(() => {
     m(!1), null == S || S()
@@ -49,18 +49,18 @@ function d(e) {
     return c
   }, [t, s]);
   return (0, i.jsx)("div", {
-    ...N,
+    ...A,
     className: o()(_.wrapper, E, {
       [_.selectable]: I,
       [_.selected]: I && n
     }),
     onFocus: O,
-    onBlur: p,
-    onMouseOver: R,
+    onBlur: R,
+    onMouseOver: p,
     onMouseLeave: g,
     children: (0, i.jsx)(a.ZP, {
       className: _.mask,
-      mask: I && (n || A) ? a.QS.SQUIRCLE : a.QS.AVATAR_DEFAULT,
+      mask: I && (n || N) ? a.QS.SQUIRCLE : a.QS.AVATAR_DEFAULT,
       width: s,
       height: d,
       children: (0, i.jsx)("img", {

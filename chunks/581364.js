@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $z: function() {
-    return p
+    return R
   },
   BH: function() {
     return m
@@ -25,13 +25,13 @@ n.d(t, {
     return P
   },
   Z8: function() {
-    return N
+    return A
   },
   bD: function() {
-    return R
+    return p
   },
   nG: function() {
-    return A
+    return N
   },
   qJ: function() {
     return U
@@ -61,7 +61,7 @@ var E = n(703558),
   f = n(981631),
   S = n(231338);
 
-function N(e) {
+function A(e) {
   var t, n, i;
   let r, {
     rootCommand: s,
@@ -135,7 +135,7 @@ function N(e) {
   }
 }
 
-function A(e, t) {
+function N(e, t) {
   return l().flatMap(e, e => (o()(null != e.id, "Missing command id"), function e(t) {
     var n, i;
     let {
@@ -146,14 +146,14 @@ function A(e, t) {
       useKeyedPermissions: l
     } = t;
     if (s.hasOwnProperty("id")) {
-      if (null == s.options || 0 === s.options.length) return [N({
+      if (null == s.options || 0 === s.options.length) return [A({
         rootCommand: r,
         command: s,
         applicationId: o,
         subCommandPath: a,
         useKeyedPermissions: l
       })]
-    } else if (s.type !== _.jw.SUB_COMMAND && s.type !== _.jw.SUB_COMMAND_GROUP && (null == s.options || 0 === s.options.length)) return [N({
+    } else if (s.type !== _.jw.SUB_COMMAND && s.type !== _.jw.SUB_COMMAND_GROUP && (null == s.options || 0 === s.options.length)) return [A({
       rootCommand: r,
       command: s,
       applicationId: o,
@@ -175,7 +175,7 @@ function A(e, t) {
       useKeyedPermissions: l
     }));
     let d = s.options.filter(e => e.type === _.jw.SUB_COMMAND);
-    for (let e = 0; e < d.length; e++) u.push(N({
+    for (let e = 0; e < d.length; e++) u.push(A({
       rootCommand: r,
       command: d[e],
       applicationId: o,
@@ -186,7 +186,7 @@ function A(e, t) {
       }]),
       useKeyedPermissions: l
     }));
-    return 0 === c.length && 0 === d.length && u.push(N({
+    return 0 === c.length && 0 === d.length && u.push(A({
       rootCommand: r,
       command: s,
       applicationId: o,
@@ -213,7 +213,7 @@ function O(e, t, n, i) {
   }), r.slice(0, i)
 }
 
-function p(e) {
+function R(e) {
   let t = e.type === _.jw.STRING,
     n = e.type === _.jw.CHANNEL,
     i = e.type === _.jw.USER || e.type === _.jw.MENTIONABLE,
@@ -229,7 +229,7 @@ function p(e) {
   }
 }
 
-function R(e) {
+function p(e) {
   return r()(e).subtract(1).toString()
 }
 let g = u.vB(0);

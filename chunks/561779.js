@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   i: function() {
-    return A
+    return N
   }
 }), n(724458), n(411104);
 var i, r, s, o = n(735250),
@@ -39,7 +39,7 @@ function S(e, t) {
   return null
 }(s = i || (i = {}))[s.ABOVE = 0] = "ABOVE", s[s.BELOW = 1] = "BELOW";
 
-function N(e) {
+function A(e) {
   return {
     value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
     initialValueProp: e.initialValue,
@@ -81,10 +81,10 @@ function N(e) {
     }(e)
   }
 }
-class A extends(r = a.PureComponent) {
+class N extends(r = a.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.initialValue !== t.initialValueProp ? {
-      ...N(e),
+      ...A(e),
       active: t.active
     } : null
   }
@@ -113,12 +113,12 @@ class A extends(r = a.PureComponent) {
       disabled: d,
       stickToMarkers: f,
       className: S,
-      children: N,
-      barStyles: A,
+      children: A,
+      barStyles: N,
       fillStyles: m,
       mini: O,
-      hideBubble: p,
-      defaultValue: R,
+      hideBubble: R,
+      defaultValue: p,
       orientation: g,
       onValueRender: C,
       renderMarker: v,
@@ -131,12 +131,12 @@ class A extends(r = a.PureComponent) {
       "aria-label": b,
       "aria-labelledby": G,
       "aria-describedby": w
-    } = this.props, x = 0;
-    f ? null != s && (null != l ? x = s[l] : null != a && (x = s[a])) : x = this.scaleValue(t);
-    let B = "".concat(x, "%"),
+    } = this.props, B = 0;
+    f ? null != s && (null != l ? B = s[l] : null != a && (B = s[a])) : B = this.scaleValue(t);
+    let x = "".concat(B, "%"),
       k = null != s && null != r ? s.map((e, t) => {
         let n = r[t],
-          i = null != R && R === n,
+          i = null != p && p === n,
           s = this.renderMark(n);
         return (0, o.jsx)("div", {
           className: u()(h.mark, {
@@ -157,7 +157,7 @@ class A extends(r = a.PureComponent) {
           })
         }, t)
       }) : null,
-      V = null != C ? C(t) : "".concat(x.toFixed(0), "%"),
+      V = null != C ? C(t) : "".concat(B.toFixed(0), "%"),
       Z = null !== (e = null == L ? void 0 : L(t)) && void 0 !== e ? e : void 0;
     return (0, o.jsx)(E.t, {
       focusTarget: this.containerRef,
@@ -189,27 +189,27 @@ class A extends(r = a.PureComponent) {
           children: k
         }), (0, o.jsx)("div", {
           className: u()(h.bar, D),
-          style: A,
+          style: N,
           children: (0, o.jsx)("div", {
             className: h.barFill,
             style: {
               ...m,
-              width: B
+              width: x
             }
           })
-        }), N, (0, o.jsx)("div", {
+        }), A, (0, o.jsx)("div", {
           className: h.track,
           children: (0, o.jsx)(I.u, {
             color: I.u.Colors.GREY,
             hideOnClick: !1,
-            text: p || f ? null : V,
+            text: R || f ? null : V,
             forceOpen: n || i && T.Z.keyboardModeEnabled,
             children: e => (0, o.jsx)("div", {
               ...e,
               className: u()(h.grabber, M),
               style: {
                 ...P,
-                left: B
+                left: x
               },
               onMouseDown: this.handleMouseDown,
               ref: this.grabberRef
@@ -403,11 +403,11 @@ class A extends(r = a.PureComponent) {
     }), this.state = {
       active: !1,
       focused: !1,
-      ...N(e)
+      ...A(e)
     }
   }
 }
-f(A, "defaultProps", {
+f(N, "defaultProps", {
   initialValue: 10,
   minValue: 0,
   maxValue: 100,

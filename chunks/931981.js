@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   V: function() {
-    return N
+    return A
   },
   e: function() {
     return S
@@ -49,7 +49,7 @@ let f = new h(a.Z, {}),
     let i = u.ZP.getNicknames(n.id).some(e => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
     return i ? !f.hasId(n.id) && i : (T.delete(n.id) && f.emitChange(), !1)
   }),
-  N = () => (0, r.jsxs)("div", {
+  A = () => (0, r.jsxs)("div", {
     className: E.bar,
     children: [d.Z.Messages.STAFF_PTO_NOTICE, (0, r.jsx)(o.Clickable, {
       className: E.closeButton,

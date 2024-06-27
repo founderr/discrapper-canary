@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(470956),
   f = n(430824),
   E = n(496675),
-  g = n(199052),
-  C = n(434488),
+  C = n(199052),
+  g = n(434488),
   I = n(27457),
   x = n(251564),
   T = n(695492),
@@ -79,7 +79,7 @@ function S(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !w && (!(y >= 2) || !H || V || G || F ? B && 1 === y && U && (H && !V ? W.push(e => (0, i.jsx)(C.h, {
+  }, []), null != P && !w && (!(y >= 2) || !H || V || G || F ? B && 1 === y && U && (H && !V ? W.push(e => (0, i.jsx)(g.h, {
     channel: A,
     guild: P,
     width: e,
@@ -91,7 +91,7 @@ function S(e) {
     channel: A,
     guild: P,
     inPopout: L
-  }))) : W.push(e => (0, i.jsx)(C.h, {
+  }))) : W.push(e => (0, i.jsx)(g.h, {
     channel: A,
     guild: P,
     width: e,
@@ -103,7 +103,7 @@ function S(e) {
     var t, n;
     return null !== (n = null === (t = D[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : "empty-tile"
   }, [D]);
-  return (0, i.jsx)(g.Z, {
+  return (0, i.jsx)(C.Z, {
     className: M,
     keyExtractor: z,
     paddingTop: 64,

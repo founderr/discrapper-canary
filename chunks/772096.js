@@ -34,8 +34,8 @@ let T = ["http:", "https:", "discord:"],
   h = [c.b.TEXT, c.b.UNDERLINE, c.b.STRONG, c.b.ITALICS, c.b.STRIKETHROUGH, c.b.INLINE_CODE, c.b.SPOILER, c.b.LINE_BREAK, c.b.TIMESTAMP],
   f = [...h, c.b.EMOJI, c.b.CUSTOM_EMOJI],
   S = [c.b.LIST, c.b.HEADING, c.b.BLOCK_QUOTE, c.b.SUBTEXT],
-  N = [c.b.TEXT],
-  A = [c.b.UNDERLINE, c.b.STRONG, c.b.ITALICS, c.b.STRIKETHROUGH, c.b.INLINE_CODE, c.b.SPOILER, c.b.LINE_BREAK, c.b.TIMESTAMP, c.b.EMOJI, c.b.CUSTOM_EMOJI, c.b.LIST, c.b.HEADING, c.b.BLOCK_QUOTE, c.b.SUBTEXT];
+  A = [c.b.TEXT],
+  N = [c.b.UNDERLINE, c.b.STRONG, c.b.ITALICS, c.b.STRIKETHROUGH, c.b.INLINE_CODE, c.b.SPOILER, c.b.LINE_BREAK, c.b.TIMESTAMP, c.b.EMOJI, c.b.CUSTOM_EMOJI, c.b.LIST, c.b.HEADING, c.b.BLOCK_QUOTE, c.b.SUBTEXT];
 
 function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -75,8 +75,8 @@ t.ZP = {
     let [i, s, o, a] = e, d = () => ({
       type: c.b.TEXT,
       content: i
-    }), E = I(o), T = I(s), p = I(null != a ? a : ""), R = E.whitespaceSanitized, g = T.fullySanitized, C = p.fullySanitized, v = g.trim();
-    if (0 === R.trim().length || 0 === v.length) return d();
+    }), E = I(o), T = I(s), R = I(null != a ? a : ""), p = E.whitespaceSanitized, g = T.fullySanitized, C = R.fullySanitized, v = g.trim();
+    if (0 === p.trim().length || 0 === v.length) return d();
     let L = O(l().unescapeUrl(o)),
       D = (0, u.ZP)(s).length > 0 || (0, u.ZP)(a).length > 0;
     if (null == L || D) return d();
@@ -87,7 +87,7 @@ t.ZP = {
       },
       P = n.allowEmojiLinks ? f : h,
       y = [...P, ...S],
-      U = [...N, ...A],
+      U = [...A, ...N],
       b = m(t(g, M), y, [c.b.EMOJI]),
       G = m(t(C, M), U);
     if (null == b || null == G || 0 === (function e(t) {
@@ -128,15 +128,15 @@ t.ZP = {
         return n
       })(b).trim().length) return d();
     let w = r().pick(t.rules, P),
-      x = l().parserFor(w)(T.whitespaceSanitized, M),
-      B = p.whitespaceSanitized,
+      B = l().parserFor(w)(T.whitespaceSanitized, M),
+      x = R.whitespaceSanitized,
       {
         target: k
       } = L;
     return {
-      content: x,
+      content: B,
       target: k,
-      title: B
+      title: x
     }
   }
 }

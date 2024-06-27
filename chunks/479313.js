@@ -10,16 +10,16 @@ n.d(t, {
     return O
   },
   U$: function() {
-    return p
+    return R
   },
   e7: function() {
-    return A
+    return N
   },
   wv: function() {
     return m
   },
   yK: function() {
-    return N
+    return A
   }
 });
 var i = n(470079),
@@ -87,7 +87,7 @@ async function S(e) {
   })
 }
 
-function N(e, t) {
+function A(e, t) {
   l.Z.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -95,7 +95,7 @@ function N(e, t) {
   })
 }
 
-function A() {
+function N() {
   l.Z.dispatch({
     type: "TOGGLE_TOPICS_BAR"
   })
@@ -117,14 +117,14 @@ function O(e, t) {
   })
 }
 
-function p(e, t) {
+function R(e, t) {
   l.Z.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
     rating: t
   })
 }
-async function R() {
+async function p() {
   var e;
   let t, n;
   if (!I.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -205,7 +205,7 @@ async function C(e) {
   }
 }
 let v = 12633 == n.j ? {
-  setSummaryFeedback: p,
+  setSummaryFeedback: R,
   updateVisibleMessages: O,
   setSelectedSummary: m,
   setGravitySelectedSummary: function(e, t) {
@@ -215,7 +215,7 @@ let v = 12633 == n.j ? {
       summaryId: null != t ? t : null
     })
   },
-  setHighlightedSummary: N,
+  setHighlightedSummary: A,
   fetchSummaries: S,
   fetchSummariesBulk: g,
   useChannelSummaries: function(e) {
@@ -230,7 +230,7 @@ let v = 12633 == n.j ? {
         t && e();
         async function e() {
           try {
-            await R()
+            await p()
           } catch (e) {}
           await g(n.split(","))
         }

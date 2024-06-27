@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(197115),
   N = t(350327),
   C = t(996073),
-  A = t(25990),
-  m = t(626135),
-  O = t(74538),
-  g = t(296810),
+  m = t(25990),
+  A = t(626135),
+  g = t(74538),
+  O = t(296810),
   h = t(921813),
-  R = t(433411),
-  p = t(532432),
+  p = t(433411),
+  R = t(532432),
   x = t(504983),
   M = t(134795),
   D = t(513901),
@@ -37,12 +37,12 @@ var n = t(735250),
   b = t(460247);
 
 function j(e) {
-  var s, j, U;
+  var s, j, B;
   let {
-    user: B
+    user: U
   } = e, {
     reducedMotion: G
-  } = a.useContext(r.AccessibilityPreferencesContext), F = O.ZP.isPremium(B), {
+  } = a.useContext(r.AccessibilityPreferencesContext), F = g.ZP.isPremium(U), {
     pendingAvatar: V,
     pendingBanner: y,
     pendingThemeColors: Y,
@@ -53,10 +53,10 @@ function j(e) {
     tryItOutBanner: K,
     tryItOutAvatarDecoration: z,
     tryItOutProfileEffectId: Q
-  } = (0, i.cj)([A.Z], () => {
-    let e = A.Z.getAllPending(),
-      s = A.Z.getErrors(),
-      t = A.Z.getAllTryItOut();
+  } = (0, i.cj)([m.Z], () => {
+    let e = m.Z.getAllPending(),
+      s = m.Z.getErrors(),
+      t = m.Z.getAllTryItOut();
     return {
       ...e,
       ...t,
@@ -69,14 +69,14 @@ function j(e) {
     sourceAnalyticsLocations: ee
   } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
   a.useEffect(() => {
-    m.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
+    A.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
       type: P.cd.PREMIUM_PROFILE_TRY_IT_OUT,
       location: {
         page: L.ZY5.USER_SETTINGS
       },
       location_stack: ee
     })
-  }, [ee, B]);
+  }, [ee, U]);
   let es = (null === (j = (0, T.N)()) || void 0 === j ? void 0 : null === (s = j.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === P.Si.TIER_2,
     et = (0, u.Ng)(),
     en = (0, u.Wp)(et, P.Si.TIER_2),
@@ -95,7 +95,7 @@ function j(e) {
       type: x.Y.PREMIUM,
       isShown: !0,
       hasBackground: !0,
-      children: [(0, n.jsx)(g.Z, {
+      children: [(0, n.jsx)(O.Z, {
         layoutClassName: b.tryItOutLayout,
         previewTitle: (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(r.NitroWheelIcon, {
@@ -105,10 +105,10 @@ function j(e) {
           }), v.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
         profilePreview: (0, n.jsx)(h.Z, {
-          user: B,
+          user: U,
           pendingPronouns: H,
           pendingBio: k,
-          pendingBanner: null !== (U = null != K ? K : y) && void 0 !== U ? U : t(466045),
+          pendingBanner: null !== (B = null != K ? K : y) && void 0 !== B ? B : t(466045),
           pendingAvatar: null != W ? W : V,
           pendingThemeColors: null != w ? w : Y,
           pendingAvatarDecoration: X,
@@ -131,7 +131,7 @@ function j(e) {
             })]
           }), (0, n.jsx)(f.Z, {
             className: b.customizationSection,
-            user: B,
+            user: U,
             pendingAvatar: null != W ? W : V,
             pendingColors: null != w ? w : Y,
             onThemeColorsChange: N.rf,
@@ -143,23 +143,23 @@ function j(e) {
             showRemoveBannerButton: null != K,
             onBannerChange: N.f4,
             showPremiumIcon: !1
-          }), (0, n.jsx)(p.Z, {
+          }), (0, n.jsx)(R.Z, {
             className: b.customizationSection,
             isTryItOutFlow: !0,
             onAvatarChange: N.c_,
             showRemoveAvatarButton: !1,
             changeAvatarButtonText: v.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
             sectionTitle: v.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
-          }), (0, n.jsx)(R.Z, {
+          }), (0, n.jsx)(p.Z, {
             isTryItOutFlow: !0,
             className: b.customizationSection,
-            user: B,
+            user: U,
             sectionTitle: v.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, "decoration"), (0, n.jsx)(D.Z, {
             className: b.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: q,
-            user: B,
+            user: U,
             sectionTitle: v.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
           }, "effect"), !es && (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(r.Text, {

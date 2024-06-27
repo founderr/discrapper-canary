@@ -16,7 +16,7 @@ var i, r, s, o, a = n(442837),
   h = n(524484),
   f = n(981631);
 let S = new Set,
-  N = new l.h(function(e) {
+  A = new l.h(function(e) {
     let {
       userId: t,
       channelId: n
@@ -29,7 +29,7 @@ let S = new Set,
     } = e;
     return "".concat(n, "-").concat(t)
   }),
-  A = new l.h(function(e) {
+  N = new l.h(function(e) {
     let {
       messageId: t,
       channelId: n,
@@ -59,19 +59,19 @@ let S = new Set,
 function O(e, t, n, i) {
   return !(e !== t || null == n || i.has(n)) && (i.add(n), !0)
 }
-class p extends(i = a.ZP.Store) {
+class R extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(c.default, d.Z)
   }
   getComboScore(e, t) {
-    let n = N.get(m({
+    let n = A.get(m({
       userId: e,
       channelId: t
     }));
     return null == n ? 0 : (0, T.Eo)(n)
   }
   getUserCombo(e, t) {
-    return N.get(m({
+    return A.get(m({
       userId: e,
       channelId: t
     }))
@@ -83,11 +83,11 @@ class p extends(i = a.ZP.Store) {
   }
   getMessageCombo(e) {
     var t;
-    let n = A.get(e);
+    let n = N.get(e);
     return null !== (t = null == n ? void 0 : n.combo) && void 0 !== t ? t : void 0
   }
   getMostRecentMessageCombo(e) {
-    let t = A.values(e);
+    let t = N.values(e);
     return t[t.length - 1]
   }
   getUserComboShakeIntensity(e, t, n, i) {
@@ -95,13 +95,13 @@ class p extends(i = a.ZP.Store) {
     return null != r ? (0, T.KH)(r, i) * n : 0
   }
 }
-o = "PoggermodeStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+o = "PoggermodeStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let R = new p(_.Z, {
+let p = new R(_.Z, {
   POGGERMODE_UPDATE_COMBO: function(e) {
     let {
       type: t,
@@ -111,7 +111,7 @@ let R = new p(_.Z, {
     ! function e(t) {
       var n, i, r, s, o, a;
       let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        _ = N.get(m(t)),
+        _ = A.get(m(t)),
         c = {
           ..._,
           ...t,
@@ -119,8 +119,8 @@ let R = new p(_.Z, {
           multiplier: Math.min(null !== (s = null !== (r = t.multiplier) && void 0 !== r ? r : null == _ ? void 0 : _.multiplier) && void 0 !== s ? s : 1, 7),
           decayInterval: null !== (o = null == _ ? void 0 : _.decayInterval) && void 0 !== o ? o : new u.Xp
         };
-      N.set(m(t), c), l && (null === (a = c.decayInterval) || void 0 === a || a.start(1e3, () => {
-        let t = N.get(m(c));
+      A.set(m(t), c), l && (null === (a = c.decayInterval) || void 0 === a || a.start(1e3, () => {
+        let t = A.get(m(c));
         if (null != t) {
           let i = c.multiplier !== t.multiplier && c.value !== t.value;
           if (t.value <= 0 || i) {
@@ -129,11 +129,11 @@ let R = new p(_.Z, {
               ...t,
               value: 0,
               multiplier: 1
-            }), R.emitChange())
+            }), p.emitChange())
           } else e({
             ...t,
             value: t.value - 1
-          }), R.emitChange()
+          }), p.emitChange()
         }
       }))
     }(n)
@@ -144,7 +144,7 @@ let R = new p(_.Z, {
       comboMessage: n
     } = e;
     if (!I.Z.isEnabled()) return !1;
-    t = n, A.set(t.messageId, t)
+    t = n, N.set(t.messageId, t)
   },
   MESSAGE_CREATE: function(e) {
     var t, n;
@@ -159,7 +159,7 @@ let R = new p(_.Z, {
     if (!I.Z.isEnabled()) return !1;
     let a = c.default.getId();
     if (!O(null == s ? void 0 : s.id, a, o, S)) return !1;
-    let l = N.get(m({
+    let l = A.get(m({
       userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
       channelId: i
     }));
@@ -173,4 +173,4 @@ let R = new p(_.Z, {
     return !1
   }
 });
-t.ZP = R
+t.ZP = p

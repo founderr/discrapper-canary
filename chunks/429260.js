@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return u
+    return s
   }
 });
 var i = t(735250);
@@ -10,7 +10,7 @@ var a = t(481060),
   l = t(970257),
   o = t(689938);
 
-function u(e) {
+function s(e) {
   return (0, l.a4)(e) ? (0, i.jsx)(a.MenuItem, {
     id: "report",
     label: o.Z.Messages.REPORT_MESSAGE_MENU_OPTION,

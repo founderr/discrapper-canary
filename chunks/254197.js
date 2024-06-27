@@ -53,7 +53,7 @@ let I = s.forwardRef(function(e, t) {
   }), z = (null === (n = k.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, m.Rf)({
     quest: k,
     location: R.dr.QUESTS_BAR
-  }), F = G.percentComplete > 0, K = I && U, X = s.useMemo(() => (0, C.$J)(k), [k]), Y = (0, C.ph)(k), $ = (0, C.pG)({
+  }), F = G.percentComplete > 0, K = I && U, Y = s.useMemo(() => (0, C.$J)(k), [k]), X = (0, C.ph)(k), $ = (0, C.pG)({
     quest: k,
     location: R.dr.QUESTS_BAR,
     useV2Variants: V === f.P.V2 || (0, b.a)(k),
@@ -109,7 +109,7 @@ let I = s.forwardRef(function(e, t) {
         style: {
           marginTop: 8
         }
-      }), X && (0, o.jsx)(j.Z, {
+      }), Y && (0, o.jsx)(j.Z, {
         quest: k
       }), (0, o.jsx)(T.n, {
         children: (0, o.jsx)(v.y, {
@@ -178,8 +178,8 @@ let I = s.forwardRef(function(e, t) {
             className: y.heroAsset,
             controls: !1,
             children: (0, o.jsx)("source", {
-              src: Y,
-              type: (0, C.mN)(Y)
+              src: X,
+              type: (0, C.mN)(X)
             })
           })
         }) : (0, o.jsx)(_.Fl, {
@@ -188,7 +188,7 @@ let I = s.forwardRef(function(e, t) {
             ref: e,
             alt: "",
             className: y.heroAsset,
-            src: Y
+            src: X
           })
         }), (0, o.jsx)(i.animated.div, {
           className: y.legibilityGradient,

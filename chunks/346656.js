@@ -22,7 +22,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = {
+let A = {
     SMOL: "Smol",
     MINI: "Mini",
     SMALLER: "Smaller",
@@ -32,25 +32,25 @@ let N = {
     LARGER: "Larger",
     XLARGE: "XLarge"
   },
-  A = {
-    [N.SMOL]: 16,
-    [N.MINI]: 20,
-    [N.SMALLER]: 24,
-    [N.SMALL]: 30,
-    [N.MEDIUM]: 40,
-    [N.LARGE]: 50,
-    [N.LARGER]: 64,
-    [N.XLARGE]: 100
+  N = {
+    [A.SMOL]: 16,
+    [A.MINI]: 20,
+    [A.SMALLER]: 24,
+    [A.SMALL]: 30,
+    [A.MEDIUM]: 40,
+    [A.LARGE]: 50,
+    [A.LARGER]: 64,
+    [A.XLARGE]: 100
   },
   m = {
-    [N.SMOL]: [10, 10, 8, 6, 6, 4],
-    [N.MINI]: [12, 12, 10, 10, 8, 6, 4],
-    [N.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-    [N.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-    [N.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-    [N.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-    [N.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-    [N.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+    [A.SMOL]: [10, 10, 8, 6, 6, 4],
+    [A.MINI]: [12, 12, 10, 10, 8, 6, 4],
+    [A.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+    [A.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+    [A.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+    [A.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+    [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+    [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
 class O extends s.PureComponent {
   renderAcronym() {
@@ -94,11 +94,11 @@ class O extends s.PureComponent {
       onClick: I,
       to: h,
       badgeStrokeColor: S,
-      animate: N,
-      tabIndex: A,
+      animate: A,
+      tabIndex: N,
       iconSrc: O,
-      "aria-hidden": p,
-      ...R
+      "aria-hidden": R,
+      ...p
     } = this.props, g = m[l], C = null != I ? c.Clickable : "div";
     return (0, r.jsxs)(C, {
       className: a()(f.icon, i, (0, T.l)(f, "iconSize", l), {
@@ -106,14 +106,14 @@ class O extends s.PureComponent {
         [f.iconInactive]: !o,
         [f.noIcon]: null == n.icon
       }),
-      "aria-hidden": p,
+      "aria-hidden": R,
       style: null == n.icon ? {
         fontSize: (null !== (t = g[n.acronym.length]) && void 0 !== t ? t : g[g.length - 1]) * _,
         ...u
       } : u,
       onClick: null != h || null == I ? void 0 : I,
-      tabIndex: A,
-      ...R,
+      tabIndex: N,
+      ...p,
       children: [this.renderAcronym(), this.renderBadge()]
     })
   }
@@ -154,7 +154,7 @@ class O extends s.PureComponent {
     }) : this.renderTooltip()
   }
 }
-let p = u.ZP.connectStores([E.Z], e => {
+let R = u.ZP.connectStores([E.Z], e => {
   let {
     guild: t,
     animate: n,
@@ -165,21 +165,21 @@ let p = u.ZP.connectStores([E.Z], e => {
   return {
     style: {
       ...r,
-      backgroundImage: (0, I.rv)(null != i ? i : t.getIconURL(A[s], n && E.Z.isFocused()))
+      backgroundImage: (0, I.rv)(null != i ? i : t.getIconURL(N[s], n && E.Z.isFocused()))
     }
   }
 })((0, d.N)(e => (0, r.jsx)(O, {
   ...e
 })));
-class R extends(i = s.PureComponent) {
+class p extends(i = s.PureComponent) {
   render() {
-    return (0, r.jsx)(p, {
+    return (0, r.jsx)(R, {
       ...this.props
     })
   }
 }
-S(R, "Sizes", N), S(R, "defaultProps", {
-  size: N.LARGE,
+S(p, "Sizes", A), S(p, "defaultProps", {
+  size: A.LARGE,
   textScale: 1,
   showBadge: !1,
   showTooltip: !1,
@@ -187,4 +187,4 @@ S(R, "Sizes", N), S(R, "defaultProps", {
   tooltipPosition: "top",
   badgeStrokeColor: _.Z.unsafe_rawColors.WHITE_500.css,
   animate: !1
-}), t.Z = R
+}), t.Z = p

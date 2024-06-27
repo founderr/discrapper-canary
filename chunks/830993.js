@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(496675),
   _ = n(158776),
   f = n(979651),
-  g = n(823379),
-  m = n(355363),
+  m = n(823379),
+  g = n(355363),
   C = n(737592),
   I = n(561788),
   E = n(135724),
@@ -32,7 +32,7 @@ function v(e) {
     channel: h,
     guild: p,
     onAction: f,
-    voiceStates: m,
+    voiceStates: g,
     isChannelSelected: I,
     shouldShowSettingNudge: E
   } = e;
@@ -49,10 +49,10 @@ function v(e) {
       }
     }, [e, t]);
     (0, s.$)(n)
-  }(h, m);
+  }(h, g);
   let N = (0, o.ZP)(h),
     v = Array.from((0, o.uF)(N).values()),
-    L = null !== (t = null == m ? void 0 : m.filter(g.lm)) && void 0 !== t ? t : [],
+    L = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
     A = e => t => [x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === x.IIU.LISTENING,
     b = (0, r.e7)([_.Z], () => {
       let e = {};
@@ -74,7 +74,7 @@ function v(e) {
     children: [(0, i.jsx)(T, {
       channel: h,
       isChannelSelected: I,
-      voiceStatesCount: null !== (d = null == m ? void 0 : m.length) && void 0 !== d ? d : 0
+      voiceStatesCount: null !== (d = null == g ? void 0 : g.length) && void 0 !== d ? d : 0
     }), (0, i.jsx)("div", {
       className: Z.headerDivider
     }), v.map((e, t) => {
@@ -109,7 +109,7 @@ function v(e) {
               (0, a.openModalLazy)(async () => {
                 let {
                   default: e
-                } = await Promise.all([n.e("96427"), n.e("77298"), n.e("23357"), n.e("19503"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("39612"), n.e("32776"), n.e("95900"), n.e("33053"), n.e("8016"), n.e("68136"), n.e("50654"), n.e("76540"), n.e("22646"), n.e("87624"), n.e("5528"), n.e("3746"), n.e("43331"), n.e("30419"), n.e("18824"), n.e("80229"), n.e("41662"), n.e("49508"), n.e("54535"), n.e("65371"), n.e("130"), n.e("67534")]).then(n.bind(n, 241420));
+                } = await Promise.all([n.e("96427"), n.e("77298"), n.e("23357"), n.e("19503"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("39612"), n.e("32776"), n.e("95900"), n.e("33053"), n.e("8016"), n.e("68136"), n.e("50654"), n.e("76540"), n.e("22646"), n.e("87624"), n.e("5528"), n.e("3746"), n.e("43331"), n.e("30419"), n.e("18824"), n.e("80229"), n.e("48486"), n.e("49508"), n.e("54535"), n.e("65371"), n.e("130"), n.e("54794")]).then(n.bind(n, 241420));
                 return t => (0, i.jsx)(e, {
                   ...t,
                   guild: p
@@ -128,7 +128,7 @@ function T(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: l
-  } = e, a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)), s = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)), o = (0, m.ZP)({
+  } = e, a = (0, r.e7)([p.Z], () => !p.Z.can(x.Plq.CONNECT, t)), s = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)), o = (0, g.ZP)({
     channel: t,
     locked: a,
     video: s,

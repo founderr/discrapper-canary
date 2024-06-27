@@ -13,8 +13,8 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(86357),
   E = n(914602),
-  I = n(568836),
-  m = n(730749),
+  m = n(568836),
+  I = n(730749),
   T = n(112724),
   h = n(812206),
   N = n(283595),
@@ -26,7 +26,7 @@ var i, a = n(735250),
   A = n(689938),
   R = n(14994);
 
-function x(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,7 +34,7 @@ function x(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class O extends(i = s.Component) {
+class x extends(i = s.Component) {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -72,8 +72,8 @@ class O extends(i = s.Component) {
       width: n,
       fetchFailed: i,
       renderFallback: s
-    } = this.props, r = n > I.aL;
-    if (null == e || null == t) return i ? s() : (0, a.jsx)(I.OR, {
+    } = this.props, r = n > m.aL;
+    if (null == e || null == t) return i ? s() : (0, a.jsx)(m.OR, {
       isHorizontal: r
     });
     return e.productLine === S.POd.COLLECTIBLES ? (0, a.jsx)(d.Z, {
@@ -91,22 +91,22 @@ class O extends(i = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), x(this, "state", {
+    super(...e), O(this, "state", {
       playing: !1,
       muted: !0
-    }), x(this, "handleToggleMute", () => {
+    }), O(this, "handleToggleMute", () => {
       this.setState({
         muted: !this.state.muted
       })
-    }), x(this, "handleMouseEnter", () => {
+    }), O(this, "handleMouseEnter", () => {
       this.setState({
         playing: !0
       })
-    }), x(this, "handleMouseLeave", () => {
+    }), O(this, "handleMouseLeave", () => {
       this.setState({
         playing: !1
       })
-    }), x(this, "getStoreListingLocation", () => {
+    }), O(this, "getStoreListingLocation", () => {
       let {
         sku: e
       } = this.props;
@@ -115,12 +115,12 @@ class O extends(i = s.Component) {
         slug: e.slug,
         analyticsSource: this.analyticsLocation
       })
-    }), x(this, "handleActionButtonClick", e => e.preventDefault()), x(this, "handleBuyButtonClick", e => e.preventDefault()), x(this, "handleLinkClick", e => {
+    }), O(this, "handleActionButtonClick", e => e.preventDefault()), O(this, "handleBuyButtonClick", e => e.preventDefault()), O(this, "handleLinkClick", e => {
       let {
         onEmbedClick: t
       } = this.props;
       null != t && t(e)
-    }), x(this, "renderApplicationTile", (e, t) => {
+    }), O(this, "renderApplicationTile", (e, t) => {
       let {
         inLibrary: n,
         width: i,
@@ -130,7 +130,7 @@ class O extends(i = s.Component) {
       } = this.props, {
         playing: o,
         muted: c
-      } = this.state, d = i > I.aL;
+      } = this.state, d = i > m.aL;
       return (0, a.jsx)(E.Z, {
         sku: e,
         storeListing: t,
@@ -145,7 +145,7 @@ class O extends(i = s.Component) {
         isHorizontal: d,
         isEmbed: !0
       })
-    }), x(this, "renderActions", e => {
+    }), O(this, "renderActions", e => {
       let {
         inLibrary: t,
         application: n,
@@ -178,7 +178,7 @@ class O extends(i = s.Component) {
     })
   }
 }
-x(O, "defaultProps", {
+O(x, "defaultProps", {
   renderFallback: S.dG4
 });
 let M = [p.Z, f.Z, N.Z, C.Z];
@@ -196,6 +196,6 @@ function v(e) {
     libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let L = (0, T.Z)((0, m.Z)(O));
+let L = (0, T.Z)((0, I.Z)(x));
 t.Z = r.ZP.connectStores(M, v)(L);
-let Z = (0, m.Z)(r.ZP.connectStores(M, v)(O))
+let Z = (0, I.Z)(r.ZP.connectStores(M, v)(x))

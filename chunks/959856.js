@@ -20,12 +20,12 @@ var i = n(264344),
   h = n(740197),
   f = n(548820),
   S = n(579237),
-  N = n(582168),
-  A = n(825040),
+  A = n(582168),
+  N = n(825040),
   m = n(65154),
   O = n(436620);
 
-function p(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,7 +33,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = new s.Y("MediaEngineWebRTC");
+let p = new s.Y("MediaEngineWebRTC");
 class g extends o.Z {
   destroy() {
     null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(_.aB.Destroy), this.removeAllListeners()
@@ -42,7 +42,7 @@ class g extends o.Z {
     !this.interacted && (document.createElement("audio").play(), this.interacted = !0), this.eachConnection(e => e.interact())
   }
   static supported() {
-    return !__OVERLAY__ && (O.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (R.info("WebRTC is not supported on", r().name, r().version), !1))
+    return !__OVERLAY__ && (O.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (p.info("WebRTC is not supported on", r().name, r().version), !1))
   }
   supported() {
     return !0
@@ -254,9 +254,9 @@ class g extends o.Z {
     e([])
   }
   constructor() {
-    super(), p(this, "Video", A.Z), p(this, "Camera", N.Z), p(this, "_audioContext", null), p(this, "outputVolume", m.Qx), p(this, "sourceId", m.w5), p(this, "sinkId", m.w5), p(this, "enabled", !1), p(this, "connections", new Set), p(this, "interacted", !1), p(this, "loopback", null), p(this, "voiceActivityInput", null), p(this, "pendingDesktopInputs", {}), p(this, "enablePromise", null), p(this, "handleActiveSinksChange", (e, t) => {
+    super(), R(this, "Video", N.Z), R(this, "Camera", A.Z), R(this, "_audioContext", null), R(this, "outputVolume", m.Qx), R(this, "sourceId", m.w5), R(this, "sinkId", m.w5), R(this, "enabled", !1), R(this, "connections", new Set), R(this, "interacted", !1), R(this, "loopback", null), R(this, "voiceActivityInput", null), R(this, "pendingDesktopInputs", {}), R(this, "enablePromise", null), R(this, "handleActiveSinksChange", (e, t) => {
       this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t))
-    }), p(this, "handleNewListener", e => {
+    }), R(this, "handleNewListener", e => {
       switch (e) {
         case _.aB.DeviceChange:
           null != navigator.mediaDevices && null == navigator.mediaDevices.ondevicechange && (navigator.mediaDevices.ondevicechange = () => {
@@ -266,7 +266,7 @@ class g extends o.Z {
         case _.aB.VoiceActivity:
           null == this.voiceActivityInput && (this.voiceActivityInput = new E.Z(this.getAudioContext()), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable())
       }
-    }), p(this, "handleRemoveListener", e => {
+    }), R(this, "handleRemoveListener", e => {
       switch (e) {
         case _.aB.DeviceChange:
           var t;
@@ -275,16 +275,16 @@ class g extends o.Z {
         case _.aB.VoiceActivity:
           null != this.voiceActivityInput && 0 === this.listenerCount(_.aB.VoiceActivity) && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null)
       }
-    }), p(this, "handleDeviceChange", () => (0, h.PW)().then(e => {
+    }), R(this, "handleDeviceChange", () => (0, h.PW)().then(e => {
       let [t, n, i] = e;
       return this.emit(_.aB.DeviceChange, t, n, i)
-    })), p(this, "handleVoiceActivity", e => {
+    })), R(this, "handleVoiceActivity", e => {
       this.emit(_.aB.VoiceActivity, e, 0)
-    }), p(this, "handleDesktopSourceEnd", () => {
+    }), R(this, "handleDesktopSourceEnd", () => {
       this.emit(_.aB.DesktopSourceEnd)
-    }), p(this, "handleAudioPermission", e => {
+    }), R(this, "handleAudioPermission", e => {
       this.emit(_.aB.AudioPermission, e)
-    }), p(this, "handleVideoPermission", e => {
+    }), R(this, "handleVideoPermission", e => {
       this.emit(_.aB.VideoPermission, e)
     }), this.on("newListener", this.handleNewListener), this.on("removeListener", this.handleRemoveListener), (0, d.px)(this.handleActiveSinksChange), (0, c.Z)(this)
   }

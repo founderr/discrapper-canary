@@ -10,8 +10,8 @@ var i, a, s, l, r = n(913527),
   u = n(704215),
   _ = n(433517),
   E = n(570140),
-  I = n(579806),
-  m = n(726542),
+  m = n(579806),
+  I = n(726542),
   T = n(812206),
   h = n(223892),
   N = n(674525),
@@ -22,8 +22,8 @@ var i, a, s, l, r = n(913527),
   S = n(594190),
   A = n(38618),
   R = n(569545),
-  x = n(615365),
-  O = n(528011),
+  O = n(615365),
+  x = n(528011),
   M = n(487419),
   v = n(715903),
   L = n(223606),
@@ -64,8 +64,8 @@ var i, a, s, l, r = n(913527),
   eu = n(215427),
   e_ = n(246946),
   eE = n(558724),
-  eI = n(23434),
-  em = n(594174),
+  em = n(23434),
+  eI = n(594174),
   eT = n(979651),
   eh = n(351402),
   eN = n(853872),
@@ -76,8 +76,8 @@ var i, a, s, l, r = n(913527),
   eS = n(358085),
   eA = n(74538),
   eR = n(922156),
-  ex = n(436181),
-  eO = n(941128),
+  eO = n(436181),
+  ex = n(941128),
   eM = n(981631),
   ev = n(188785),
   eL = n(702512),
@@ -175,7 +175,7 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
   eY = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VIEWING_ROLES, eM.kVF.INVITED_TO_SPEAK, eM.kVF.LURKING_GUILD, eM.kVF.VOICE_DISABLED, eM.kVF.NO_INPUT_DETECTED, eM.kVF.HARDWARE_MUTE, eM.kVF.H264_DISABLED, eM.kVF.DISPATCH_ERROR, eM.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eM.kVF.SPOTIFY_AUTO_PAUSED, eM.kVF.BLOCKED_BY_PROXY, eM.kVF.VOICE_CONNECTED_LAST_SESSION, eM.kVF.PENDING_MEMBER, eM.kVF.STREAMER_MODE, eM.kVF.SCHEDULED_MAINTENANCE],
   eW = {
     [eM.kVF.GUILD_RAID_NOTIFICATION]: {
-      predicate: () => (0, O.g)().show && !eV(eM.kVF.GUILD_RAID_NOTIFICATION),
+      predicate: () => (0, x.g)().show && !eV(eM.kVF.GUILD_RAID_NOTIFICATION),
       metadata: () => ({
         dismissUntil: o()().add(3, "hours").toDate()
       })
@@ -265,8 +265,8 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
       })
     },
     [eM.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-      predicate: () => null != ex.Z.getLastProgress(),
-      metadata: () => ex.Z.getLastProgress()
+      predicate: () => null != eO.Z.getLastProgress(),
+      metadata: () => eO.Z.getLastProgress()
     },
     [eM.kVF.SPOTIFY_AUTO_PAUSED]: {
       predicate: () => W.Z.wasAutoPaused()
@@ -298,7 +298,7 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
       predicate: () => (0, G.tq)()
     },
     [eM.kVF.CORRUPT_INSTALLATION]: {
-      predicate: () => eS.isPlatformEmbedded && (!d.Z.supported() || eO.Z.isCorruptInstallation())
+      predicate: () => eS.isPlatformEmbedded && (!d.Z.supported() || ex.Z.isCorruptInstallation())
     },
     [eM.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
       predicate: e => {
@@ -347,7 +347,7 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
         let {
           selectedGuildId: t
         } = e;
-        return null != t && x.Z.getCurrentConfig({
+        return null != t && O.Z.getCurrentConfig({
           location: "notice_store"
         }).showSurvey && !eV(eM.kVF.SERVER_USAGE_SURVEY)
       },
@@ -379,18 +379,18 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
       }
     },
     [eM.kVF.CONNECT_SPOTIFY]: {
-      predicate: () => !W.Z.hasConnectedAccount() && S.ZP.isObservedAppRunning(m.Z.get(eM.ABu.SPOTIFY).name) && !eV(eM.kVF.CONNECT_SPOTIFY)
+      predicate: () => !W.Z.hasConnectedAccount() && S.ZP.isObservedAppRunning(I.Z.get(eM.ABu.SPOTIFY).name) && !eV(eM.kVF.CONNECT_SPOTIFY)
     },
     [eM.kVF.WIN32_DEPRECATED_MESSAGE]: {
-      predicate: () => (null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.arch) === "ia32" && (null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === "win32",
+      predicate: () => (null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.arch) === "ia32" && (null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === "win32",
       metadata: () => ({
         dismissUntil: o()().add(5, "days").toDate()
       })
     },
     [eM.kVF.WIN7_8_DEPRECATED_MESSAGE]: {
       predicate: () => {
-        if ((null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === "win32") try {
-          return 10 > parseInt(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release.split(".")[0])
+        if ((null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === "win32") try {
+          return 10 > parseInt(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release.split(".")[0])
         } catch (e) {}
         return !1
       },
@@ -400,8 +400,8 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
     },
     [eM.kVF.MACOS_17_18_DEPRECATED_MESSAGE]: {
       predicate: () => {
-        if ((null === I.Z || void 0 === I.Z ? void 0 : I.Z.process.platform) === "darwin") try {
-          return 19 > parseInt(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release.split(".")[0])
+        if ((null === m.Z || void 0 === m.Z ? void 0 : m.Z.process.platform) === "darwin") try {
+          return 19 > parseInt(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release.split(".")[0])
         } catch (e) {}
         return !1
       },
@@ -655,7 +655,7 @@ let eH = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
 function ez() {
   if (!A.Z.isConnected()) return !1;
   eG = null;
-  let e = em.default.getCurrentUser();
+  let e = eI.default.getCurrentUser();
   if (null == e) return !1;
   let t = ef.ZP.getPremiumSubscription(),
     n = eh.Z.isLocalizedPromoEnabled,
@@ -695,13 +695,13 @@ function eK() {
 }
 class eQ extends(i = c.ZP.Store) {
   initialize() {
-    this.syncWith([eE.Z, er.Z, et.Z, ed.Z, F.Z, ep.Z, X.Z, ee.Z, K.Z, M.Z, H.Z, Q.Z], ez), this.waitFor(em.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, eI.Z, W.Z, S.ZP, er.Z, eR.Z, ex.Z, eg.Z, es.Z, ef.ZP, eO.Z, et.Z, eN.Z, el.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z)
+    this.syncWith([eE.Z, er.Z, et.Z, ed.Z, F.Z, ep.Z, X.Z, ee.Z, K.Z, M.Z, H.Z, Q.Z], ez), this.waitFor(eI.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, em.Z, W.Z, S.ZP, er.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, el.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z)
   }
   hasNotice() {
     return null != eG && null != eG.type
   }
   getNotice() {
-    return null == eI.Z.getAction() ? eG : null
+    return null == em.Z.getAction() ? eG : null
   }
   isNoticeDismissed(e) {
     return eV(e)

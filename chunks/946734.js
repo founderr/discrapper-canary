@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(594174),
   f = n(514342),
   E = n(502568),
-  g = n(602623),
-  C = n(251625),
+  C = n(602623),
+  g = n(251625),
   I = n(823379),
   x = n(981631),
   T = n(228168),
@@ -70,7 +70,7 @@ class Z {
     channelId: n,
     analyticsLocations: a
   }) {
-    S(this, "userId", void 0), S(this, "user", void 0), S(this, "channelId", void 0), S(this, "analyticsLocations", void 0), S(this, "generateNicknameGuildPairs", (0, C.oH)(e => {
+    S(this, "userId", void 0), S(this, "user", void 0), S(this, "channelId", void 0), S(this, "analyticsLocations", void 0), S(this, "generateNicknameGuildPairs", (0, g.oH)(e => {
       var t;
       return s()(p.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)).toPairs().map(e => {
         let [t, n] = e;
@@ -140,7 +140,7 @@ function A(e) {
       text: N.Z.Messages.AKA,
       disableColor: !0,
       className: v.akaBadge
-    }), l.length > 0 ? (0, i.jsx)(g.Z, {
+    }), l.length > 0 ? (0, i.jsx)(C.Z, {
       size: 16,
       users: s,
       showUserPopout: !1,

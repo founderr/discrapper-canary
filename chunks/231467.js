@@ -23,12 +23,12 @@ var i = n(735250),
   h = n(114487),
   f = n(214715),
   S = n(550271),
-  N = n(246364),
-  A = n(937111),
+  A = n(246364),
+  N = n(937111),
   m = n(703656),
   O = n(271383),
-  p = n(594174),
-  R = n(806519),
+  R = n(594174),
+  p = n(806519),
   g = n(778045),
   C = n(355932),
   v = n(981631),
@@ -164,25 +164,25 @@ function G(e) {
     prioritizedGameIds: d,
     className: E,
     showBrandingFooter: f = !1,
-    bannerUrl: N,
-    onlyAnimateIconOnHover: A = !1,
+    bannerUrl: A,
+    onlyAnimateIconOnHover: N = !1,
     hasPendingJoinRequest: m = !1,
     atMaxMemberCapacity: O = !1
   } = e, {
-    tag: p,
+    tag: R,
     badge: C,
     branding: {
       primaryColor: v,
       secondaryColor: G
     },
     bannerHash: w
-  } = n, x = (0, _.Z)(n.games), B = (0, T.Z)("clan_discovery_card"), [k, V] = r.useState(!1), Z = r.useRef(null), [H, F] = r.useState(!1), Y = r.useCallback(() => {
+  } = n, B = (0, _.Z)(n.games), x = (0, T.Z)("clan_discovery_card"), [k, V] = r.useState(!1), Z = r.useRef(null), [H, F] = r.useState(!1), Y = r.useCallback(() => {
     V(!0)
   }, []), j = r.useCallback(() => {
     V(!1)
   }, []), W = D.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: n.memberCount
-  }), K = null != N ? N : (0, I.pY)(n.id, w), z = null == s && null == K ? {
+  }), K = null != A ? A : (0, I.pY)(n.id, w), z = null == s && null == K ? {
     background: "linear-gradient(90deg, ".concat(v, ", ").concat(G, ")")
   } : void 0, q = null != s ? s : null != K ? (0, i.jsx)("img", {
     alt: D.Z.Messages.CLAN_LOOK_BANNER,
@@ -212,8 +212,8 @@ function G(e) {
         className: M.cardContentTitleSection,
         children: [(0, i.jsxs)("div", {
           className: M.cardNameAndTagWrapper,
-          children: [(0, i.jsx)(R.ZP, {
-            mask: R.QS.CLAN_ICON,
+          children: [(0, i.jsx)(p.ZP, {
+            mask: p.QS.CLAN_ICON,
             width: 70,
             height: 70,
             className: M.clanIconMask,
@@ -224,7 +224,7 @@ function G(e) {
                 guildName: n.name,
                 guildIcon: n.icon,
                 iconSize: 64,
-                animate: !A || k
+                animate: !N || k
               })
             })
           }), (0, i.jsx)("div", {
@@ -232,7 +232,7 @@ function G(e) {
             children: (0, i.jsx)(a.Tooltip, {
               text: D.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !u && B,
+              shouldShow: !u && x,
               children: e => (0, i.jsxs)("div", {
                 ...e,
                 className: M.clanTagChiplet,
@@ -245,7 +245,7 @@ function G(e) {
                 }), (0, i.jsx)(a.Text, {
                   variant: "text-xs/medium",
                   color: "text-primary",
-                  children: p
+                  children: R
                 })]
               })
             })
@@ -307,7 +307,7 @@ function G(e) {
       }), (0, i.jsx)("div", {
         className: M.cardFooterGames,
         children: (0, i.jsx)(g.Z, {
-          games: x,
+          games: B,
           prioritizedGameIds: d
         })
       })]
@@ -329,11 +329,11 @@ t.ZP = 12633 == n.j ? function(e) {
     affinity: E,
     index: I,
     source: T
-  } = o, h = (0, l.e7)([p.default], () => p.default.getCurrentUser()), f = (0, l.e7)([O.ZP], () => O.ZP.isMember(_.id, null == h ? void 0 : h.id), [_, h]), S = (0, l.e7)([A.Z], () => {
+  } = o, h = (0, l.e7)([R.default], () => R.default.getCurrentUser()), f = (0, l.e7)([O.ZP], () => O.ZP.isMember(_.id, null == h ? void 0 : h.id), [_, h]), S = (0, l.e7)([N.Z], () => {
     var e;
-    return (null === (e = A.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED
-  }), R = _.memberCount >= L.Du, g = r.useCallback(() => {
-    let e = null != A.Z.getRequest(_.id);
+    return (null === (e = N.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === A.wB.SUBMITTED
+  }), p = _.memberCount >= L.Du, g = r.useCallback(() => {
+    let e = null != N.Z.getRequest(_.id);
     if ((0, c.EK)({
         guildId: _.id,
         isMember: f,
@@ -373,7 +373,7 @@ t.ZP = 12633 == n.j ? function(e) {
       prioritizedGameIds: s,
       showBrandingFooter: !0,
       hasPendingJoinRequest: S,
-      atMaxMemberCapacity: R
+      atMaxMemberCapacity: p
     })
   })
 } : null

@@ -12,12 +12,12 @@ var i, r, s, o, a = n(392711),
   h = n(160404),
   f = n(786761),
   S = n(418476),
-  N = n(739566),
-  A = n(995774),
+  A = n(739566),
+  N = n(995774),
   m = n(706454),
   O = n(630388),
-  p = n(709054),
-  R = n(314897),
+  R = n(709054),
+  p = n(314897),
   g = n(592125),
   C = n(796974),
   v = n(984933),
@@ -30,8 +30,8 @@ var i, r, s, o, a = n(392711),
   b = n(594174),
   G = n(981631);
 let w = new Set,
-  x = new E.Z("MessageStore"),
-  B = !1;
+  B = new E.Z("MessageStore"),
+  x = !1;
 
 function k() {
   c.Z.forEach(e => {
@@ -66,8 +66,8 @@ function H(e) {
     emoji: s,
     reactionType: o
   } = e, a = c.Z.get(n);
-  if (null == a || !(0, A.sm)(e)) return !1;
-  let l = R.default.getId() === r;
+  if (null == a || !(0, N.sm)(e)) return !1;
+  let l = p.default.getId() === r;
   a = a.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, o) : n.removeReaction(s, l, o)), c.Z.commit(a)
 }
 
@@ -142,7 +142,7 @@ class Y extends(i = u.ZP.Store) {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
-    return B
+    return x
   }
 }
 o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, {
@@ -166,7 +166,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
   CONNECTION_OPEN: k,
   OVERLAY_INITIALIZE: k,
   CACHE_LOADED: function(e) {
-    for (let [t, n] of p.default.entries(e.messages)) {
+    for (let [t, n] of R.default.entries(e.messages)) {
       let e = c.Z.getOrCreate(t).addCachedMessages(n, !0);
       c.Z.commit(e)
     }
@@ -235,7 +235,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
       truncateBottom: n,
       truncateTop: i
     } = e;
-    x.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+    B.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
     let r = c.Z.getOrCreate(t);
     r = r.truncate(n, i), c.Z.commit(r)
   },
@@ -243,7 +243,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
     let {
       channelId: t
     } = e;
-    x.log("Clearing messages for ".concat(t)), c.Z.clear(t), w.clear()
+    B.log("Clearing messages for ".concat(t)), c.Z.clear(t), w.clear()
   },
   MESSAGE_CREATE: function(e) {
     let {
@@ -252,7 +252,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
       isPushNotification: i
     } = e, r = c.Z.getOrCreate(t);
     if (i) {
-      x.log("Inserting message tapped on from a push notification", n.id, n.channel_id), c.Z.commit(r.receivePushNotification(n));
+      B.log("Inserting message tapped on from a push notification", n.id, n.channel_id), c.Z.commit(r.receivePushNotification(n));
       return
     }
     if (!r.ready) return !1;
@@ -405,6 +405,6 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
     let {
       message: t
     } = e, n = b.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
+    null != t && null != t.author && null != n && t.author.id === n.id && (x = !0)
   }
 })

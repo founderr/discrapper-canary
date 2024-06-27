@@ -25,7 +25,7 @@ function T(e) {
     highestRole: T,
     onAddRole: h,
     ...f
-  } = e, S = (0, r.e7)([u.Z], () => u.Z.roleStyle), N = e => (0, _.Gy)(t.id, e.id) && !e.managed && c.Z.isRoleHigher(t, T, e) && -1 === n.roles.indexOf(e.id);
+  } = e, S = (0, r.e7)([u.Z], () => u.Z.roleStyle), A = e => (0, _.Gy)(t.id, e.id) && !e.managed && c.Z.isRoleHigher(t, T, e) && -1 === n.roles.indexOf(e.id);
   return (0, i.jsx)(o.y, {
     position: "bottom",
     align: "center",
@@ -36,7 +36,7 @@ function T(e) {
       return (0, i.jsx)(l.Z, {
         guild: t,
         roleStyle: S,
-        roleFilter: N,
+        roleFilter: A,
         onSelect: h,
         onClose: n
       })

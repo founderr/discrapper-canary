@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(414910),
   f = n(415635),
   E = n(649739),
-  g = n(574176),
-  C = n(833858),
+  C = n(574176),
+  g = n(833858),
   I = n(223135),
   x = n(37091),
   T = n(6572),
@@ -58,7 +58,7 @@ var i = n(735250),
   et = n(689938),
   en = n(372453);
 let ei = a.memo(e => {
-  var t, n, l, c, C;
+  var t, n, l, c, g;
   let {
     participant: I,
     onDoubleClick: w,
@@ -79,8 +79,8 @@ let ei = a.memo(e => {
     focused: e_ = !1,
     blocked: ef = !1,
     fit: eE = B.L.CONTAIN,
-    paused: eg = !1,
-    pulseSpeakingIndicator: eC = !1
+    paused: eC = !1,
+    pulseSpeakingIndicator: eg = !1
   } = e, eI = a.useContext(R.h9), [ex, eT] = a.useState(!1), eN = (0, o.e7)([P.default], () => P.default.getId()), ev = (0, o.e7)([k.default], () => k.default.getCurrentUser()), eS = I.type === J.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [eZ] = (0, m.Z)(I.type === J.fO.ACTIVITY ? [I.id] : []), eA = (0, o.e7)([x.Z], () => x.Z.getEnabled()), eM = (0, o.e7)([y.Z], () => null != eS && y.Z.isLocalVideoDisabled(eS, (0, _.Z)(I.type)), [eS, I.type]), eb = (0, o.e7)([y.Z], () => null != eS ? y.Z.getVideoToggleState(eS, (0, _.Z)(I.type)) : Q.ZUi.NONE, [eS, I.type]), eR = eb === Q.ZUi.AUTO_PROBING, {
     speaking: ej,
     ringing: eL,
@@ -119,7 +119,7 @@ let ei = a.memo(e => {
     }
   }(eN, I, er.getGuildId()), ey = I.type === J.fO.STREAM && eS === eN, eD = (0, V.So)(r.q.STREAM_HIGH_QUALITY), ek = (0, A.j$)(), eU = eD && ey, ew = (0, Z.o)(I, ev), eB = (0, S.lL)("CallTile", !0, ev, ew), eH = eB.persistentQualityIndicator && eB.enabled, eG = (0, o.e7)([j.Z], () => null != eS ? j.Z.getEffectForUserId(eS) : null), eV = (0, o.e7)([U.Z], () => U.Z.getVoicePlatformForChannel(er.id, null != eS ? eS : Q.lds)), {
     enableHangStatus: eF
-  } = g.n.useExperiment({
+  } = C.n.useExperiment({
     guildId: er.guild_id,
     location: "VoiceUsers"
   }), {
@@ -170,7 +170,7 @@ let ei = a.memo(e => {
         width: eo,
         fit: eE,
         onVideoResize: eu,
-        paused: eg,
+        paused: eC,
         inPopout: ec,
         focused: e_
       }), e3 = (0, i.jsx)(Y._, {
@@ -191,12 +191,12 @@ let ei = a.memo(e => {
         participant: I,
         fit: eE,
         onVideoResize: eu,
-        paused: eg,
+        paused: eC,
         selected: eh,
         width: eo,
         blocked: ef,
         noVideoRender: em || eR,
-        pulseSpeakingIndicator: eC
+        pulseSpeakingIndicator: eg
       }), e3 = (0, i.jsx)(K.T, {
         userId: I.user.id,
         channelId: er.id
@@ -222,7 +222,7 @@ let ei = a.memo(e => {
         width: eo,
         fit: eE,
         onVideoResize: eu,
-        paused: eg,
+        paused: eC,
         inPopout: ec,
         focused: e_
       })
@@ -271,7 +271,7 @@ let ei = a.memo(e => {
                 guildId: er.getGuildId(),
                 containerDimensions: {
                   width: null !== (c = null == e6 ? void 0 : null === (n = e6.current) || void 0 === n ? void 0 : n.clientWidth) && void 0 !== c ? c : 0,
-                  height: null !== (C = null == e6 ? void 0 : null === (l = e6.current) || void 0 === l ? void 0 : l.clientHeight) && void 0 !== C ? C : 0
+                  height: null !== (g = null == e6 ? void 0 : null === (l = e6.current) || void 0 === l ? void 0 : l.clientHeight) && void 0 !== g ? g : 0
                 }
               })
             }) : null, e4, eU ? (0, i.jsx)(M.W, {
@@ -373,7 +373,7 @@ let el = a.memo(e => {
     hasVideo: m,
     inCall: f,
     localVideoDisabled: E,
-    videoToggleState: g,
+    videoToggleState: C,
     focused: x,
     blocked: T,
     hideAudioIcon: N,
@@ -468,7 +468,7 @@ let el = a.memo(e => {
       })
     }
   })), v === J.fO.USER && null != b ? k = (0, i.jsx)(u.Tooltip, {
-    text: (0, C.O8)(b),
+    text: (0, g.O8)(b),
     children: e => (0, i.jsx)("div", {
       ...e,
       className: s()(en.hangStatusContainer, {
@@ -501,7 +501,7 @@ let el = a.memo(e => {
       className: s()(en.overlayTop, {
         [en.small]: p < 195
       }),
-      children: H || g === Q.ZUi.AUTO_PROBING ? d ? (0, i.jsx)("div", {
+      children: H || C === Q.ZUi.AUTO_PROBING ? d ? (0, i.jsx)("div", {
         className: en.status,
         children: (0, i.jsx)(u.VideoSlashIcon, {
           size: "md",

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   EO: function() {
-    return N
+    return A
   },
   Fc: function() {
     return S
@@ -109,14 +109,14 @@ function S(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   return f(e, {
     minDaysOld: 0,
     maxDaysOld: 7
   })
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   if (null == e) return a.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
   if (!c(e.username)) return "???";
   let i = n;
@@ -131,7 +131,7 @@ function m(e, t) {
       ...t
     },
     i = "auto" !== n.identifiable || r.Z.hidePersonalInformation;
-  return A(e, n, i)
+  return N(e, n, i)
 }
 
 function O(e) {
@@ -148,7 +148,7 @@ t.ZP = {
       ..._,
       ...t
     };
-    return A(e, n, (0, i.e7)([r.Z], () => r.Z.hidePersonalInformation))
+    return N(e, n, (0, i.e7)([r.Z], () => r.Z.hidePersonalInformation))
   },
   getFormattedName: function(e) {
     var t;

@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(797614),
   f = n(703656),
   S = n(586576),
-  N = n(626135),
-  A = n(960048),
+  A = n(626135),
+  N = n(960048),
   m = n(998502),
   O = n(981631),
-  p = n(689938),
-  R = n(635603);
+  R = n(689938),
+  p = n(635603);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -49,8 +49,8 @@ function C() {
     size: c.ButtonSizes.LARGE,
     onClick: n,
     submitting: e,
-    className: R.clearOverrideButton,
-    children: p.Z.Messages.CLEAR_BUILD_OVERRIDE
+    className: p.clearOverrideButton,
+    children: R.Z.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
 let v = o().throttle(e => {
@@ -72,10 +72,10 @@ class L extends r.PureComponent {
       info: t
     });
     let i = (0, T.e)(),
-      r = A.Z.captureCrash(e, {
+      r = N.Z.captureCrash(e, {
         extra: t
       });
-    N.default.track(O.rMx.APP_CRASHED, {
+    A.default.track(O.rMx.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
@@ -105,24 +105,24 @@ class L extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, i.jsxs)("div", {
           children: [(0, i.jsx)("p", {
-            children: p.Z.Messages.ERRORS_UNEXPECTED_CRASH
+            children: R.Z.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, i.jsx)("p", {
-            children: p.Z.Messages.ERRORS_ACTION_TO_TAKE
+            children: R.Z.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, i.jsxs)("div", {
-          className: R.buttons,
+          className: p.buttons,
           children: [(0, i.jsx)(c.Button, {
             size: c.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: p.Z.Messages.ERRORS_RELOAD
+            children: R.Z.Messages.ERRORS_RELOAD
           }), (0, i.jsx)(C, {})]
         });
       return (0, i.jsx)(S.Z, {
-        title: p.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+        title: R.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
-        className: R.errorPage
+        className: p.errorPage
       })
     }
     return e

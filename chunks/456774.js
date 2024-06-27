@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(962086),
   f = n(160404),
   S = n(703656),
-  N = n(814443),
-  A = n(592125),
+  A = n(814443),
+  N = n(592125),
   m = n(940627),
   O = n(705600),
-  p = n(626135),
-  R = n(912787),
+  R = n(626135),
+  p = n(912787),
   g = n(272709),
   C = n(718582),
   v = n(126134),
@@ -58,15 +58,15 @@ function P(e) {
     for (let a of s) {
       var c, d, E, I, T;
       if (3 === e.length) break;
-      let s = null !== (E = (0, R.i)(a)) && void 0 !== E ? E : "",
+      let s = null !== (E = (0, p.i)(a)) && void 0 !== E ? E : "",
         h = (0, C.bA)(s, t.id),
         f = e.length;
-      e.push(a.category), i.push(h.length), r.push(h.length > 0 ? h[0].id : "0"), o.push(h.length > 0 && null !== (I = null === (c = N.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== I ? I : 0), n.push(Math.min(h.length, 6)), l.push(s), u.push(null !== (T = null === (d = A.Z.getChannel(s)) || void 0 === d ? void 0 : d.type) && void 0 !== T ? T : L.d4z.UNKNOWN), _["position_".concat(f + 1, "_affinity_user_ids")] = h.slice(0, 6).map(e => e.id), _["position_".concat(f + 1, "_user_affinity_scores")] = h.slice(0, 6).map(e => {
+      e.push(a.category), i.push(h.length), r.push(h.length > 0 ? h[0].id : "0"), o.push(h.length > 0 && null !== (I = null === (c = A.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== I ? I : 0), n.push(Math.min(h.length, 6)), l.push(s), u.push(null !== (T = null === (d = N.Z.getChannel(s)) || void 0 === d ? void 0 : d.type) && void 0 !== T ? T : L.d4z.UNKNOWN), _["position_".concat(f + 1, "_affinity_user_ids")] = h.slice(0, 6).map(e => e.id), _["position_".concat(f + 1, "_user_affinity_scores")] = h.slice(0, 6).map(e => {
         var t, n;
-        return null !== (n = null === (t = N.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+        return null !== (n = null === (t = A.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
       })
     }
-    0 !== e.length && (_.card_types = e, _.affinity_users_counts = n, _.total_users_counts = i, _.max_affinity_user_ids = r, _.max_affinity_user_scores = o, _.channel_ids = l, _.channel_types = u, _.guild_id = t.id, p.default.track(L.rMx.GUILD_TOOLTIP_SHOWN, {
+    0 !== e.length && (_.card_types = e, _.affinity_users_counts = n, _.total_users_counts = i, _.max_affinity_user_ids = r, _.max_affinity_user_scores = o, _.channel_ids = l, _.channel_types = u, _.guild_id = t.id, R.default.track(L.rMx.GUILD_TOOLTIP_SHOWN, {
       ..._,
       ...(0, a.hH)(t.id)
     }))
@@ -81,8 +81,8 @@ function y(e) {
   let {
     guild: n,
     closePopout: a,
-    nudge: N
-  } = e, A = r.useRef(null), p = (0, u.Z)(n), R = (0, I.Ij)(n), {
+    nudge: A
+  } = e, N = r.useRef(null), R = (0, u.Z)(n), p = (0, I.Ij)(n), {
     isViewingRoles: g,
     backNavigationSection: C
   } = (0, s.cj)([f.Z], () => ({
@@ -90,12 +90,12 @@ function y(e) {
     backNavigationSection: f.Z.getBackNavigationSection(n.id)
   })), v = () => {
     f.Z.isFullServerPreview(n.id) && (0, S.uL)(L.Z5c.CHANNEL(n.id)), c.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, d.discardOnboardingPromise)(n.id)), (0, h.mL)(n.id), T.Z.open(n.id, C), C === L.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(n.id)
-  }, y = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight, U = N + 14;
+  }, y = null === (t = N.current) || void 0 === t ? void 0 : t.clientHeight, U = A + 14;
   return (0, i.jsx)(l.Z.Provider, {
     value: n.id,
     children: (0, i.jsxs)("div", {
       className: M.container,
-      ref: A,
+      ref: N,
       children: [(0, i.jsx)("div", {
         className: M.tooltipPointer,
         style: {
@@ -103,7 +103,7 @@ function y(e) {
         }
       }), (0, i.jsxs)("div", {
         className: M.header,
-        children: [p ? (0, i.jsx)(O.Z, {
+        children: [R ? (0, i.jsx)(O.Z, {
           guild: n,
           size: 16,
           className: M.rowIconV2,
@@ -119,7 +119,7 @@ function y(e) {
         })]
       }), (0, i.jsx)(P, {
         guild: n
-      }), R ? (0, i.jsxs)("div", {
+      }), p ? (0, i.jsxs)("div", {
         className: M.footer,
         children: [(0, i.jsx)(o.CircleInformationIcon, {
           size: "custom",

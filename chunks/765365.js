@@ -20,8 +20,8 @@ var i = n(735250),
   h = n(993409),
   f = n(981631),
   S = n(689938),
-  N = n(717633),
-  A = n(682583);
+  A = n(717633),
+  N = n(682583);
 
 function m(e) {
   let {
@@ -32,8 +32,8 @@ function m(e) {
   } = (0, T.KZ)(), m = (0, o.e7)([c.default], () => c.default.getId()), O = (0, o.e7)([d.Z, I.Z], () => {
     var e;
     return d.Z.getChannel(null === (e = I.Z.getVoiceStateForUser(m)) || void 0 === e ? void 0 : e.channelId)
-  }), p = null == O ? void 0 : O.isPrivate(), R = (0, o.e7)([E.Z], () => E.Z.can(f.Plq.CREATE_INSTANT_INVITE, O));
-  if (null == O || p || !R) return null;
+  }), R = null == O ? void 0 : O.isPrivate(), p = (0, o.e7)([E.Z], () => E.Z.can(f.Plq.CREATE_INSTANT_INVITE, O));
+  if (null == O || R || !p) return null;
   let g = async () => {
     r({
       action: "PRESS_INVITE_TO_CALL"
@@ -49,10 +49,10 @@ function m(e) {
   return (0, i.jsx)(h.Z, {
     fullWidth: !0,
     variant: "text",
-    color: s()(a.Button.Colors.BRAND, N.color),
+    color: s()(a.Button.Colors.BRAND, A.color),
     onClick: g,
     icon: a.GroupPlusIcon,
     text: S.Z.Messages.USER_PROFILE_INVITE_TO_CALL,
-    tooltipContainerClassName: A.ctaTooltipContainer
+    tooltipContainerClassName: N.ctaTooltipContainer
   })
 }

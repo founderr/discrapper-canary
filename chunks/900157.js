@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(287746),
   f = n(541716),
   E = n(910611),
-  g = n(359110),
-  C = n(592125),
+  C = n(359110),
+  g = n(592125),
   I = n(703558),
   x = n(430824),
   T = n(979651),
@@ -35,21 +35,21 @@ function b(e) {
     channelId: t,
     baseChannelId: l,
     channelViewSource: b = "Split View"
-  } = e, R = (0, r.e7)([C.Z], () => C.Z.getChannel(t)), j = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, m.ZP)(R);
+  } = e, R = (0, r.e7)([g.Z], () => g.Z.getChannel(t)), j = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, m.ZP)(R);
   (function(e) {
     let t = (0, r.e7)([T.Z], () => null != e && !s().isEmpty(T.Z.getVoiceStatesForChannel(e.id)));
     a.useEffect(() => {
       t && null != e && (o.Z.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.ad)(e, S.on.VOICE_AUTO_OPEN))
+      }), (0, C.ad)(e, S.on.VOICE_AUTO_OPEN))
     }, [t, e])
   })(R);
   let P = a.useRef(!1);
   if (a.useEffect(() => {
       if (null == R || P.current) return;
       P.current = !0;
-      let e = (0, h.K)(C.Z.getChannel(R.id), !0);
+      let e = (0, h.K)(g.Z.getChannel(R.id), !0);
       (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
         ...e,
         ...(0, d.$H)(R.id),
@@ -86,7 +86,7 @@ function b(e) {
           })
         },
         handleClick: function() {
-          if (null != R)(0, g.Kh)(R.id)
+          if (null != R)(0, C.Kh)(R.id)
         }
       })
     }), (0, i.jsx)("div", {

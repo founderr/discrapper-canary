@@ -24,21 +24,21 @@ function E(e) {
   let {
     stream: s,
     applicationId: E,
-    channel: g,
-    exitFullScreen: C,
+    channel: C,
+    exitFullScreen: g,
     appContext: I,
     analyticsLocation: x,
     className: T,
     ...N
-  } = e, v = null == g ? void 0 : g.getGuildId(), S = null == g ? void 0 : g.id, Z = (0, o.e7)([h.Z], () => null != v ? h.Z.getGuild(v) : null, [v]), A = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(S), [S]);
-  if (t = Z, a = g, !(null != t && null != a && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, a))) return null;
+  } = e, v = null == C ? void 0 : C.getGuildId(), S = null == C ? void 0 : C.id, Z = (0, o.e7)([h.Z], () => null != v ? h.Z.getGuild(v) : null, [v]), A = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(S), [S]);
+  if (t = Z, a = C, !(null != t && null != a && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, a))) return null;
   let M = _.Z.Messages.INSTANT_INVITE;
   return null != s ? M = _.Z.Messages.INVITE_STREAM_HEADER : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(c.Button, {
       size: c.Button.Sizes.SMALL,
       color: f.buttonColor,
       onClick: () => {
-        r()(null != Z, "guild cannot be null"), r()(null != g, "channel cannot be null"), ! function(e) {
+        r()(null != Z, "guild cannot be null"), r()(null != C, "channel cannot be null"), ! function(e) {
           let {
             guild: t,
             channel: a,
@@ -69,11 +69,11 @@ function E(e) {
           })
         }({
           guild: Z,
-          channel: g,
+          channel: C,
           streamUserId: null == s ? void 0 : s.ownerId,
           applicationId: E,
           appContext: I,
-          exitFullScreen: C,
+          exitFullScreen: g,
           analyticsLocation: x,
           guildScheduledEvent: A
         })
@@ -82,11 +82,11 @@ function E(e) {
       ...N,
       children: M
     }), (0, i.jsx)(d.Z, {
-      channel: g,
+      channel: C,
       stream: s,
       appContext: I,
       className: l()(T, f.iconButton),
-      exitFullScreen: C,
+      exitFullScreen: g,
       analyticsLocation: x,
       guildScheduledEvent: A
     })]

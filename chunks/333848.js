@@ -21,23 +21,23 @@ t.Z = {
       userLimit: h,
       parentId: f,
       skuId: S,
-      branchId: N
+      branchId: A
     } = e;
     s.Z.dispatch({
       type: "CREATE_CHANNEL_MODAL_SUBMIT"
     });
-    let A = {
+    let N = {
       type: n,
       name: E,
       permission_overwrites: I
     };
-    if (null != T && T !== c.epw && (A.bitrate = T), null != h && h > 0 && (A.user_limit = h), null != f && (A.parent_id = f), n === c.d4z.GUILD_STORE) {
+    if (null != T && T !== c.epw && (N.bitrate = T), null != h && h > 0 && (N.user_limit = h), null != f && (N.parent_id = f), n === c.d4z.GUILD_STORE) {
       if (null == S) throw Error("Unexpected missing SKU");
-      A.sku_id = S, A.branch_id = N
+      N.sku_id = S, N.branch_id = A
     }
     return u.Z.post({
       url: c.ANM.GUILD_CHANNELS(t),
-      body: A,
+      body: N,
       oldFormErrors: !0,
       trackedActionData: {
         event: i.NetworkActionNames.CHANNEL_CREATE,

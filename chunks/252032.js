@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(703316),
   f = n(585483),
   E = n(630388),
-  g = n(838440),
-  C = n(981631),
+  C = n(838440),
+  g = n(981631),
   I = n(105461);
 
 function x(e) {
@@ -27,7 +27,7 @@ function x(e) {
     value: t,
     channel: n
   } = e;
-  return (0, g.v)({
+  return (0, C.v)({
     type: o.I.EDIT,
     content: t,
     channel: n,
@@ -44,7 +44,7 @@ function T(e) {
     id: o
   } = t, {
     id: c
-  } = n, m = t.getGuildId(), f = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]), g = t.type === C.d4z.GUILD_ANNOUNCEMENT, T = null != f && f.hasFeature(C.oNc.NEWS), v = g && T, {
+  } = n, m = t.getGuildId(), f = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]), C = t.type === g.d4z.GUILD_ANNOUNCEMENT, T = null != f && f.hasFeature(g.oNc.NEWS), v = C && T, {
     editingMessage: S,
     editingTextValue: Z,
     editingRichValue: A
@@ -55,8 +55,8 @@ function T(e) {
   }), [o]), M = (0, l.e7)([u.default], () => u.default.getId()), b = a.useCallback((e, n, i) => {
     let {
       content: a
-    } = i, l = p.Z.can(C.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
-    return v && (o === M || l) && null != S && (0, E.yE)(S.flags, C.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : s.Z.editMessage(e, n, {
+    } = i, l = p.Z.can(g.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
+    return v && (o === M || l) && null != S && (0, E.yE)(S.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : s.Z.editMessage(e, n, {
       content: a
     }), Promise.resolve()
   }, [S, v, M, t]), R = a.useCallback(e => (0, a.createElement)(N, {
@@ -89,8 +89,8 @@ function N(e) {
     onSubmit: u,
     onKeyDown: d
   } = e, [h, p] = a.useState(!0), m = a.useCallback(() => p(!0), []), _ = a.useCallback(() => p(!1), []);
-  return a.useEffect(() => (f.S.subscribe(C.CkL.TEXTAREA_FOCUS, m), f.S.subscribe(C.CkL.TEXTAREA_BLUR, _), () => {
-    f.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, m), f.S.unsubscribe(C.CkL.TEXTAREA_BLUR, _)
+  return a.useEffect(() => (f.S.subscribe(g.CkL.TEXTAREA_FOCUS, m), f.S.subscribe(g.CkL.TEXTAREA_BLUR, _), () => {
+    f.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, m), f.S.unsubscribe(g.CkL.TEXTAREA_BLUR, _)
   }), [m, _]), (0, i.jsx)(c.Z, {
     className: I.channelTextArea,
     textValue: t,

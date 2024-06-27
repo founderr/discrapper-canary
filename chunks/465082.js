@@ -15,8 +15,8 @@ var a = n(735250),
   _ = n(924489),
   g = n(132871),
   m = n(491576),
-  p = n(689938),
-  f = n(644827);
+  f = n(689938),
+  p = n(644827);
 
 function C(e) {
   var t, n, l;
@@ -25,57 +25,57 @@ function C(e) {
     className: h,
     childrenClassName: x,
     showAdd: I,
-    showMutualGuilds: R,
-    showPrimaryCategory: b,
-    children: T,
-    onView: A,
+    showMutualGuilds: T,
+    showPrimaryCategory: R,
+    children: A,
+    onView: b,
     guildCountPosition: v = "top",
     subheaderTextVariant: E = "text-sm/normal",
     mutualGuildShownMax: P,
-    guildIconSize: S,
-    source: j
-  } = e, N = (0, g.useApplicationDirectoryHistory)(e => e.guildId), y = (0, c.JA)(C.id), M = d.ZP.getApplicationIconURL({
+    guildIconSize: N,
+    source: S
+  } = e, j = (0, g.useApplicationDirectoryHistory)(e => e.guildId), y = (0, c.JA)(C.id), O = d.ZP.getApplicationIconURL({
     id: C.id,
     icon: C.icon,
     size: 48
   }), {
-    canInstall: O,
+    canInstall: M,
     install: D
   } = (0, u.P)(C), Z = (0, m.Z)({
     application: C,
-    showMutualGuilds: R
+    showMutualGuilds: T
   }), L = i.useCallback(e => {
-    e.stopPropagation(), D(j)
-  }, [D, j]), k = null === (t = C.categories) || void 0 === t ? void 0 : t[0], Y = (null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || Z.length > 0, H = (0, a.jsx)(_.Z, {
+    e.stopPropagation(), D(S)
+  }, [D, S]), k = null === (t = C.categories) || void 0 === t ? void 0 : t[0], Y = (null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || Z.length > 0, H = (0, a.jsx)(_.Z, {
     application: C,
     textVariant: E,
     mutualGuilds: Z,
     mutualGuildShownMax: P,
-    guildIconSize: S,
+    guildIconSize: N,
     compact: !0
-  }), U = b && null != k, B = Y && "top" === v, G = Y && "bottom" === v, {
+  }), U = R && null != k, B = Y && "top" === v, G = Y && "bottom" === v, {
     applicationSubscriptionListingsShown: w
   } = (0, o.ZP)({
     applicationId: C.id,
     groupListingId: C.primary_sku_id,
-    guildId: N
+    guildId: j
   }), F = (0, a.jsxs)("article", {
     children: [(0, a.jsxs)("div", {
-      className: f.topWrapper,
+      className: p.topWrapper,
       children: [(0, a.jsx)("img", {
-        className: f.icon,
+        className: p.icon,
         alt: "",
         "aria-hidden": !0,
-        src: M,
+        src: O,
         width: 48,
         height: 48
       }), (0, a.jsxs)("div", {
-        className: f.info,
+        className: p.info,
         children: [(0, a.jsx)(s.Heading, {
           variant: "heading-md/medium",
           children: C.name
         }), (U || B) && (0, a.jsxs)("div", {
-          className: f.details,
+          className: p.details,
           children: [U ? (0, a.jsx)(s.Text, {
             tag: "span",
             color: "header-secondary",
@@ -83,20 +83,20 @@ function C(e) {
             children: k.name
           }) : null, B ? (0, a.jsxs)(a.Fragment, {
             children: [U ? (0, a.jsx)("span", {
-              className: f.bullet,
+              className: p.bullet,
               children: "•"
             }) : null, H, w ? (0, a.jsxs)("div", {
-              className: f.premiumContainer,
+              className: p.premiumContainer,
               children: [(0, a.jsx)("span", {
-                className: f.bullet,
+                className: p.bullet,
                 children: "•"
               }), (0, a.jsx)(s.TicketIcon, {
                 size: "xs",
                 color: "currentColor"
               }), (0, a.jsx)(s.Text, {
                 variant: "text-sm/medium",
-                className: f.premiumText,
-                children: p.Z.Messages.APPLICATION_DIRECTORY_LISTING_TOOLTIP_PREMIUM
+                className: p.premiumText,
+                children: f.Z.Messages.APPLICATION_DIRECTORY_LISTING_TOOLTIP_PREMIUM
               })]
             }) : null]
           }) : null]
@@ -104,28 +104,28 @@ function C(e) {
       }), I ? (0, a.jsx)(s.Button, {
         size: s.Button.Sizes.SMALL,
         onClick: L,
-        disabled: !O,
-        children: p.Z.Messages.APP_DIRECTORY_LISTING_ADD_BUTTON
+        disabled: !M,
+        children: f.Z.Messages.APP_DIRECTORY_LISTING_ADD_BUTTON
       }) : null]
-    }), null != T || null != x ? (0, a.jsx)("div", {
-      className: r()(x, f.__invalid_children),
-      children: T
+    }), null != A || null != x ? (0, a.jsx)("div", {
+      className: r()(x, p.__invalid_children),
+      children: A
     }) : null, G ? (0, a.jsx)("div", {
-      className: f.bottomGuildCountContainer,
+      className: p.bottomGuildCountContainer,
       children: H
     }) : null]
   });
-  return null != A ? (0, a.jsx)(s.Clickable, {
+  return null != b ? (0, a.jsx)(s.Clickable, {
     tag: "li",
-    onClick: () => A({
+    onClick: () => b({
       mutualGuilds: Z
     }),
-    className: r()(h, f.listing, f.clickable),
+    className: r()(h, p.listing, p.clickable),
     ...y,
     children: F
   }) : (0, a.jsx)(s.FocusRing, {
     children: (0, a.jsx)("li", {
-      className: r()(h, f.listing),
+      className: r()(h, p.listing),
       ...y,
       children: F
     })

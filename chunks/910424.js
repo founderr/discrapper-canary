@@ -26,25 +26,25 @@ function S(e) {
     isCurrentUser: t,
     color: n,
     look: S,
-    applicationStream: N,
-    onAction: A
+    applicationStream: A,
+    onAction: N
   } = e, {
     activeStream: m,
     watchingOtherStream: O
   } = (0, r.cj)([c.Z], () => ({
-    activeStream: c.Z.getActiveStreamForApplicationStream(N),
-    watchingOtherStream: null != N && c.Z.getAllActiveStreamsForChannel(N.channelId).filter(e => {
+    activeStream: c.Z.getActiveStreamForApplicationStream(A),
+    watchingOtherStream: null != A && c.Z.getAllActiveStreamsForChannel(A.channelId).filter(e => {
       let {
         ownerId: t
       } = e;
-      return t !== N.ownerId
+      return t !== A.ownerId
     }).length > 0
-  })), p = (0, r.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.channelId)), [R, g] = (0, _.wq)(p), C = (0, u.Aq)(), v = null != m && null != N && m.state !== T.jm8.ENDED && m.ownerId === N.ownerId, L = e => {
-    if (null != N) null == A || A(), a.default.selectVoiceChannel(N.channelId), !v && (0, l.iV)(N, {
+  })), R = (0, r.e7)([d.Z], () => d.Z.getChannel(null == A ? void 0 : A.channelId)), [p, g] = (0, _.wq)(R), C = (0, u.Aq)(), v = null != m && null != A && m.state !== T.jm8.ENDED && m.ownerId === A.ownerId, L = e => {
+    if (null != A) null == N || N(), a.default.selectVoiceChannel(A.channelId), !v && (0, l.iV)(A, {
       forceMultiple: e
     }), C.dispatch(T.CkL.POPOUT_CLOSE), E.S.dispatch(T.CkL.MODAL_CLOSE), o.Z.popAll()
   };
-  if (null == N) return null;
+  if (null == A) return null;
   let D = (0, _.P9)(g);
   t ? D = h.Z.Messages.WATCH_STREAM_STREAMING : v && (D = h.Z.Messages.WATCH_STREAM_WATCHING);
   let M = {
@@ -53,7 +53,7 @@ function S(e) {
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(I.Z, {
-      disabled: t || v || !R,
+      disabled: t || v || !p,
       onClick: () => L(!1),
       ...M,
       fullWidth: !0,

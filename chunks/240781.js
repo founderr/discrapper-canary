@@ -61,11 +61,11 @@ t.Z = e => {
     guildId: n,
     avatarDecorationOverride: r,
     className: c
-  } = e, N = (0, a.e7)([d.Z], () => d.Z.getStatus(t.id)), {
-    product: A,
+  } = e, A = (0, a.e7)([d.Z], () => d.Z.getStatus(t.id)), {
+    product: N,
     purchase: m
-  } = (0, _.Z)(null == r ? void 0 : r.skuId), O = E.ZP.canUseCollectibles(t), p = (0, u.qS)(m), R = (0, u.G1)(A), g = !O && p;
-  return null != A && (null == m || g) ? (0, i.jsxs)("div", {
+  } = (0, _.Z)(null == r ? void 0 : r.skuId), O = E.ZP.canUseCollectibles(t), R = (0, u.qS)(m), p = (0, u.G1)(N), g = !O && R;
+  return null != N && (null == m || g) ? (0, i.jsxs)("div", {
     className: s()(h.modalPreview, h.shopPreviewContainer, c),
     children: [(0, i.jsx)("div", {
       className: h.shopPreviewBanner,
@@ -78,10 +78,10 @@ t.Z = e => {
       className: h.shopPreviewTextContainer,
       children: [(0, i.jsx)(l.Text, {
         variant: "text-sm/semibold",
-        children: A.name
+        children: N.name
       }), (0, i.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: g ? T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, o.EQ)([R, O]).with([!0, !0], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: g ? T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, o.EQ)([p, O]).with([!0, !0], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, i.jsxs)("div", {
@@ -109,7 +109,7 @@ t.Z = e => {
               guildId: n,
               avatarSize: s,
               avatarDecorationOverride: r,
-              status: o ? N : void 0,
+              status: o ? A : void 0,
               "aria-hidden": !0
             })
           }, "".concat(s).concat(o))

@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(490173),
   f = n(114250),
   S = n(315263),
-  N = n(40851),
-  A = n(607070),
+  A = n(40851),
+  N = n(607070),
   m = n(899663),
   O = n(213609),
-  p = n(613413),
-  R = n(327943),
+  R = n(613413),
+  p = n(327943),
   g = n(907459),
   C = n(559407),
   v = n(556766),
@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(892254),
   G = n(210887),
   w = n(819640),
-  x = n(594174),
-  B = n(451478),
+  B = n(594174),
+  x = n(451478),
   k = n(672752),
   V = n(812663),
   Z = n(153850),
@@ -68,7 +68,7 @@ let et = (0, K.Un)({
     webpackId: 177741
   }),
   en = r.memo(function(e) {
-    let t = (0, _.e7)([B.Z], () => B.Z.isFocused());
+    let t = (0, _.e7)([x.Z], () => x.Z.isFocused());
     return (0, i.jsx)(Q.Z, {
       ...e,
       focused: t
@@ -80,7 +80,7 @@ t.Z = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, l.TH)(), d = (0, j.getPlatform)(), S = u.tq || u.Em, B = (0, _.e7)([G.Z], () => G.Z.darkSidebar ? J.BRd.DARK : void 0), K = (0, _.e7)([A.Z], () => A.Z.useForcedColors ? "yes" : "no"), [Q, ei] = (0, _.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark]), er = (0, _.e7)([R.Z], () => R.Z.isEditorOpen), es = (0, _.e7)([w.Z], () => w.Z.getLayers().includes(J.S9g.USER_SETTINGS)), eo = (0, _.e7)([x.default], () => W.ZP.canUseClientThemes(x.default.getCurrentUser())), ea = Q && !es, el = [];
+  } = (0, l.TH)(), d = (0, j.getPlatform)(), S = u.tq || u.Em, x = (0, _.e7)([G.Z], () => G.Z.darkSidebar ? J.BRd.DARK : void 0), K = (0, _.e7)([N.Z], () => N.Z.useForcedColors ? "yes" : "no"), [Q, ei] = (0, _.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark]), er = (0, _.e7)([p.Z], () => p.Z.isEditorOpen), es = (0, _.e7)([w.Z], () => w.Z.getLayers().includes(J.S9g.USER_SETTINGS)), eo = (0, _.e7)([B.default], () => W.ZP.canUseClientThemes(B.default.getCurrentUser())), ea = Q && !es, el = [];
   ea && ei && !eo && el.push(c.z.CLIENT_THEMES_COACHMARK);
   let [eu, e_] = (0, y.U)(el, $.R.SIDEBAR, !0);
   el.push(c.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -110,8 +110,8 @@ t.Z = function(e) {
               containerRef: eE,
               children: [(0, i.jsx)(Y.Co, {}), (0, i.jsx)(k.ZP, {}), (0, i.jsx)(a.OU, {}), null != d ? (0, i.jsx)(en, {
                 type: d,
-                themeOverride: B
-              }) : null, (0, i.jsx)(N.Wu, {
+                themeOverride: x
+              }) : null, (0, i.jsx)(A.Wu, {
                 appContext: J.IlC.APP,
                 renderWindow: window,
                 children: (0, i.jsxs)(Z.yP, {
@@ -136,7 +136,7 @@ t.Z = function(e) {
                             children: [(0, i.jsx)("div", {
                               className: o()(S ? ee.mobileApp : ee.app),
                               children: t
-                            }), (0, i.jsx)(C.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(E.Modals, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(H.Ox, {}), (0, i.jsx)(Z.Un, {}), (0, i.jsx)(F.ot, {}), (0, i.jsx)(E.ToastContainer, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(U.Z, {}), (0, i.jsx)(et, {})]
+                            }), (0, i.jsx)(C.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(E.Modals, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(H.Ox, {}), (0, i.jsx)(Z.Un, {}), (0, i.jsx)(F.ot, {}), (0, i.jsx)(E.ToastContainer, {}), (0, i.jsx)(R.Z, {}), (0, i.jsx)(U.Z, {}), (0, i.jsx)(et, {})]
                           })
                         })
                       })

@@ -17,8 +17,8 @@ var l = n(120356),
   p = n(305325),
   _ = n(281956),
   f = n(66999),
-  g = n(506936),
-  m = n(359110),
+  m = n(506936),
+  g = n(359110),
   C = n(922482),
   I = n(431328),
   E = n(501655),
@@ -111,8 +111,8 @@ class F extends P.ZP {
       canMoveMembers: p,
       stageInstance: _,
       isSubscriptionGated: f,
-      needSubscriptionToAccess: g,
-      unread: m,
+      needSubscriptionToAccess: m,
+      unread: g,
       resolvedUnreadSetting: C,
       mentionCount: I,
       isFavoriteSuggestion: E
@@ -145,7 +145,7 @@ class F extends P.ZP {
               channel: e,
               selected: !E && t,
               connected: n,
-              unread: n ? m : void 0,
+              unread: n ? g : void 0,
               resolvedUnreadSetting: C,
               mentionCount: I,
               locked: l,
@@ -160,11 +160,11 @@ class F extends P.ZP {
               isFavoriteSuggestion: E,
               "aria-label": (0, h.ZP)({
                 channel: e,
-                unread: m,
+                unread: g,
                 mentionCount: I,
                 userCount: x,
                 isSubscriptionGated: f,
-                needSubscriptionToAccess: g
+                needSubscriptionToAccess: m
               }),
               ...c,
               children: [E && this.renderAcceptSuggestionButton(), E && this.renderRemoveSuggestionButton(), !E && this.renderOpenChatButton(), !E && this.renderInviteButton(), !E && this.renderEditButton(), !E && this.renderChannelInfo()]
@@ -191,13 +191,13 @@ class F extends P.ZP {
       } = this.props, l = e.getGuildId();
       null != l && (0, _.n)(l) && (0, p.hk)(l), i && this.setState({
         shouldShowGuildVerificationPopout: !0
-      }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, C.Cq)(e), !__OVERLAY__ && (0, m.Kh)(e.id)
+      }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, C.Cq)(e), !__OVERLAY__ && (0, g.Kh)(e.id)
     }), H(this, "handleClickChat", () => {
       let {
         channel: e,
         locked: t
       } = this.props;
-      !__OVERLAY__ && !t && (0, m.Kh)(e.id)
+      !__OVERLAY__ && !t && (0, g.Kh)(e.id)
     }), H(this, "handleContextMenu", e => {
       let {
         channel: t
@@ -218,8 +218,8 @@ class F extends P.ZP {
       } = this.props, {
         shouldShowGuildVerificationPopout: t
       } = this.state;
-      if (t) return (0, i.jsx)(g.Z, {
-        type: g.R.VOICE,
+      if (t) return (0, i.jsx)(m.Z, {
+        type: m.R.VOICE,
         guildId: e.guild_id,
         closePopout: this.closeGuildVerificationPopout
       });
@@ -295,24 +295,24 @@ function Y(e) {
       bypassLimit: A.Z.can(G.Plq.MOVE_MEMBERS, n),
       unverifiedAccount: !i.canChat
     }
-  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, S.ZP)(n.id), _ = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id), [n.id]), g = (0, I.Rk)(n.id, E.pV.AUDIENCE), {
-    isSubscriptionGated: m,
+  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, S.ZP)(n.id), _ = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id), [n.id]), m = (0, I.Rk)(n.id, E.pV.AUDIENCE), {
+    isSubscriptionGated: g,
     needSubscriptionToAccess: C
   } = (0, f.Z)(n.id), T = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)), R = (0, x.xJ)(n.id), y = (0, j.Z)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: s,
     voiceStates: o,
-    isSubscriptionGated: m,
+    isSubscriptionGated: g,
     needSubscriptionToAccess: C,
     enableConnectedUserLimit: R || n.userLimit > 0 && n.userLimit < G.xGv
   }), O = e.connected && null == y;
   return (0, i.jsx)(W, {
     categoryCollapsed: h,
     connectAction: p,
-    numAudience: g,
+    numAudience: m,
     stageInstance: _,
-    isSubscriptionGated: m,
+    isSubscriptionGated: g,
     needSubscriptionToAccess: C,
     ...c,
     ...d,

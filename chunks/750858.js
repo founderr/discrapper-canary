@@ -21,20 +21,20 @@ var i, r, s = n(735250),
   h = n(372900),
   f = n(463396),
   S = n(477734),
-  N = n(484459),
-  A = n(467679),
+  A = n(484459),
+  N = n(467679),
   m = n(768581),
   O = n(51063),
-  p = n(981631),
-  R = n(250050);
+  R = n(981631),
+  p = n(250050);
 
 function g(e) {
   let {
     compact: t
   } = e;
-  return (0, s.jsx)(A.Z, {
-    className: t ? R.botTagCompact : R.botTagCozy,
-    type: A.Z.Types.REMIX,
+  return (0, s.jsx)(N.Z, {
+    className: t ? p.botTagCompact : p.botTagCozy,
+    type: N.Z.Types.REMIX,
     useRemSizes: !0
   })
 }
@@ -45,7 +45,7 @@ function C(e) {
       author: i,
       message: r,
       channel: a,
-      userOverride: A,
+      userOverride: N,
       compact: C = !1,
       withMentionPrefix: v = !1,
       showPopout: L = !1,
@@ -58,25 +58,25 @@ function C(e) {
       decorations: G
     } = e,
     w = o.useContext(h.Z),
-    x = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : w,
+    B = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : w,
     {
-      analyticsLocations: B
+      analyticsLocations: x
     } = (0, I.ZP)(E.Z.USERNAME),
     {
       nick: k,
       colorString: V,
       colorRoleName: Z
     } = i,
-    H = null != r.messageReference && null != r.webhookId && r.hasFlag(p.iLy.IS_CROSSPOST),
+    H = null != r.messageReference && null != r.webhookId && r.hasFlag(R.iLy.IS_CROSSPOST),
     F = (0, _.e7)([d.Z], () => d.Z.roleStyle),
     Y = (0, S.X$)(),
     j = o.useMemo(() => ({
-      source: p.jXE.CHANNEL,
+      source: R.jXE.CHANNEL,
       messageId: r.id,
       tagUserId: r.author.id
     }), [r.id, r.author.id]),
     W = {
-      className: R.username,
+      className: p.username,
       style: "username" === F && null != V ? {
         color: V
       } : void 0,
@@ -89,20 +89,20 @@ function C(e) {
     K = o.useMemo(() => C ? (0, s.jsx)(T.ZP, {
       clan: i.clan,
       userId: r.author.id,
-      contextGuildId: x,
-      className: R.clanTagChiplet,
+      contextGuildId: B,
+      className: p.clanTagChiplet,
       profileViewedAnalytics: j
-    }) : null, [C, j, i.clan, x, r.author.id]);
+    }) : null, [C, j, i.clan, B, r.author.id]);
   n = null != U && null != L ? (0, s.jsx)(c.Popout, {
     preload: H ? void 0 : function() {
-      let e = null != A ? A : r.author;
-      return (0, N.W)(e.id, null != i.guildMemberAvatar && null != x ? (0, m.JM)({
-        guildId: x,
+      let e = null != N ? N : r.author;
+      return (0, A.W)(e.id, null != i.guildMemberAvatar && null != B ? (0, m.JM)({
+        guildId: B,
         userId: e.id,
         avatar: i.guildMemberAvatar,
         size: 80
-      }) : e.getAvatarURL(x, 80), {
-        guildId: x,
+      }) : e.getAvatarURL(B, 80), {
+        guildId: B,
         channelId: r.channel_id
       })
     },
@@ -120,7 +120,7 @@ function C(e) {
           tag: "span",
           ...n,
           ...W,
-          className: l()(W.className, R.clickable, D)
+          className: l()(W.className, p.clickable, D)
         }), K]
       })
     }
@@ -133,19 +133,19 @@ function C(e) {
   let z = null != G ? G[0] : null,
     q = null != G ? G[1] : null;
   return (0, s.jsxs)(I.Gt, {
-    value: B,
+    value: x,
     children: [null != z && C ? (0, s.jsxs)(s.Fragment, {
       children: [" ", z, " "]
     }) : null, "dot" === F ? (0, s.jsx)(c.RoleDot, {
       color: V,
       name: Z,
-      className: R.roleDot
+      className: p.roleDot
     }) : null, n, !C && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(T.ZP, {
         clan: i.clan,
         userId: r.author.id,
-        contextGuildId: x,
-        className: R.clanTagChiplet,
+        contextGuildId: B,
+        className: p.clanTagChiplet,
         profileViewedAnalytics: j
       }), (0, s.jsx)(O.Z, {
         message: r

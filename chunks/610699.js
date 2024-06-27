@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(447543),
   E = n(317381),
-  I = n(778569),
-  m = n(182906),
+  m = n(778569),
+  I = n(182906),
   T = n(100527),
   h = n(906732),
   N = n(835473),
@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(496675),
   A = n(594174),
   R = n(197409),
-  x = n(514342),
-  O = n(602623),
+  O = n(514342),
+  x = n(602623),
   M = n(624138),
   v = n(358595),
   L = n(981631),
@@ -94,7 +94,7 @@ function B(e) {
         className: b.channelIcon,
         size: "xs",
         color: "currentColor"
-      }) : null, (0, i.jsx)(x.Z, {
+      }) : null, (0, i.jsx)(O.Z, {
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -110,7 +110,7 @@ function B(e) {
       [b.stacked]: a,
       [b.ended]: s
     }),
-    children: (0, i.jsx)(x.Z, {
+    children: (0, i.jsx)(O.Z, {
       children: (0, i.jsx)(u.Text, {
         variant: "text-xs/normal",
         children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
@@ -128,7 +128,7 @@ function k(e) {
       getAcceptInviteContext: f
     } = e,
     {
-      approximate_member_count: x,
+      approximate_member_count: O,
       approximate_presence_count: M,
       target_type: k,
       target_application: G
@@ -168,7 +168,7 @@ function k(e) {
     {
       analyticsLocations: J
     } = (0, h.ZP)(T.Z.INVITE_EMBED),
-    $ = (0, I.Z)({
+    $ = (0, m.Z)({
       applicationId: G.id,
       size: D,
       names: ["embedded_cover"]
@@ -197,7 +197,7 @@ function k(e) {
         [b.large]: w,
         [b.stacked]: H
       }),
-      children: (0, i.jsx)(m.Z, {
+      children: (0, i.jsx)(I.Z, {
         imageBackground: $,
         applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : "",
         imageClassName: l()(b.img, {
@@ -245,7 +245,7 @@ function k(e) {
             children: P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
         }) : null, ei ? null : (0, i.jsx)(y, {
-          members: x,
+          members: O,
           membersOnline: M,
           isLarge: w,
           isStacked: H
@@ -253,7 +253,7 @@ function k(e) {
           className: b.cta,
           children: [null != W && Q ? (0, i.jsx)("div", {
             className: b.avatars,
-            children: (0, i.jsx)(O.Z, {
+            children: (0, i.jsx)(x.Z, {
               guildId: W.id,
               users: et,
               max: 4

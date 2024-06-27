@@ -30,8 +30,8 @@ function _() {
       guildId: t,
       channelId: n
     }
-  }, a.Z), n = (0, l.e7)([u.Z], () => u.Z.getGuild(e)), _ = (0, l.e7)([c.Z], () => null == n ? c.Z.getChannel(t) : null), f = (0, l.e7)([d.default], () => d.default.getCurrentUser()), E = null != _ ? (0, r.x)(_) : null, g = null != f ? f.getAvatarURL(e, 80) : p.pK["0"], C = (0, i.jsx)(s.Avatar, {
-    src: g,
+  }, a.Z), n = (0, l.e7)([u.Z], () => u.Z.getGuild(e)), _ = (0, l.e7)([c.Z], () => null == n ? c.Z.getChannel(t) : null), f = (0, l.e7)([d.default], () => d.default.getCurrentUser()), E = null != _ ? (0, r.x)(_) : null, C = null != f ? f.getAvatarURL(e, 80) : p.pK["0"], g = (0, i.jsx)(s.Avatar, {
+    src: C,
     "aria-hidden": !0,
     size: s.AvatarSizes.SIZE_80,
     className: m.avatarSizeOverride
@@ -43,11 +43,11 @@ function _() {
     src: E,
     size: s.AvatarSizes.SIZE_80,
     className: m.avatarSizeOverride
-  }) : C, (0, i.jsxs)("div", {
+  }) : g, (0, i.jsxs)("div", {
     className: m.container,
     children: [(0, i.jsx)("div", {
       className: m.personAvatar,
-      children: C
+      children: g
     }), (0, i.jsx)("div", {
       className: m.guildAvatar,
       children: I

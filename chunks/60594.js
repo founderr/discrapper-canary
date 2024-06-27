@@ -17,16 +17,16 @@ var l, s, a = t(735250),
   g = t(812206),
   h = t(594190),
   C = t(751571),
-  Z = t(361291),
-  N = t(592125),
+  N = t(361291),
+  Z = t(592125),
   I = t(430824),
   x = t(131951),
   f = t(944486),
   A = t(594174),
   R = t(449224),
   T = t(285952),
-  L = t(153124),
-  v = t(626135),
+  v = t(153124),
+  L = t(626135),
   M = t(358085),
   p = t(998502),
   O = t(451467),
@@ -57,7 +57,7 @@ function H(e) {
     resolution: X,
     fps: $,
     soundshareEnabled: ee
-  } = (0, c.cj)([Z.Z], () => Z.Z.getState()), en = (0, c.e7)([f.Z, N.Z], () => N.Z.getChannel(f.Z.getVoiceChannelId())), et = (0, c.e7)([h.ZP, R.Z], () => (0, M.isWindows)() ? (0, P.Z)(h.ZP, R.Z) : null), el = (0, c.e7)([A.default], () => {
+  } = (0, c.cj)([N.Z], () => N.Z.getState()), en = (0, c.e7)([f.Z, Z.Z], () => Z.Z.getChannel(f.Z.getVoiceChannelId())), et = (0, c.e7)([h.ZP, R.Z], () => (0, M.isWindows)() ? (0, P.Z)(h.ZP, R.Z) : null), el = (0, c.e7)([A.default], () => {
     let e = A.default.getCurrentUser();
     return o()(null != e, "GoLiveModal: user cannot be undefined"), e
   }), es = null !== (n = null == en ? void 0 : en.getGuildId()) && void 0 !== n ? n : K, ea = (0, c.e7)([I.Z], () => {
@@ -65,12 +65,12 @@ function H(e) {
     return null != es ? null === (e = I.Z.getGuild(es)) || void 0 === e ? void 0 : e.premiumTier : null
   }), [ei, er] = null !== (l = (0, j.Z)(q, el, ea)) && void 0 !== l ? l : [w.LY.RESOLUTION_720, w.ws.FPS_30];
   q !== w.tI.PRESET_CUSTOM && (X = ei, $ = er), !(0, O.Z)(q, X, $, el, ea) && (X = ei, $ = er);
-  let eo = (0, L.Dt)();
-  let [eu, ec] = i.useState((H = F, W = z, H ? 0 : W ? 1 : 2)), [ed, em] = i.useState(null), [eE, e_] = i.useState(!1), [eS, eg] = i.useState(null), [eh, eC] = i.useState(null), [eZ, eN] = i.useState(null), [eI, ex] = i.useState(q), [ef, eA] = i.useState(X), [eR, eT] = i.useState($), [eL, ev] = i.useState(ee), [eM, ep] = i.useState(null != K ? K : null), eO = null !== (s = null == en ? void 0 : en.id) && void 0 !== s ? s : eS;
+  let eo = (0, v.Dt)();
+  let [eu, ec] = i.useState((H = F, W = z, H ? 0 : W ? 1 : 2)), [ed, em] = i.useState(null), [eE, e_] = i.useState(!1), [eS, eg] = i.useState(null), [eh, eC] = i.useState(null), [eN, eZ] = i.useState(null), [eI, ex] = i.useState(q), [ef, eA] = i.useState(X), [eR, eT] = i.useState($), [ev, eL] = i.useState(ee), [eM, ep] = i.useState(null != K ? K : null), eO = null !== (s = null == en ? void 0 : en.id) && void 0 !== s ? s : eS;
   i.useEffect(() => {
     let e = (0, M.isWindows)() ? (0, P.Z)(h.ZP, R.Z) : null,
       n = (null == e ? void 0 : e.id) != null ? g.Z.getApplication(e.id) : null;
-    v.default.track(B.rMx.OPEN_MODAL, {
+    L.default.track(B.rMx.OPEN_MODAL, {
       type: "Go Live Modal",
       application_id: null == n ? void 0 : n.id,
       application_name: null == e ? void 0 : e.name,
@@ -85,7 +85,7 @@ function H(e) {
       o()(null != et || null != eh, "got nothing to stream");
       let t = null !== (e = null == en ? void 0 : en.id) && void 0 !== e ? e : eS;
       o()(null != t, "Received null target channel ID");
-      let l = N.Z.getChannel(t),
+      let l = Z.Z.getChannel(t),
         s = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : K;
       null == en && E.default.selectVoiceChannel(t);
       let a = eI,
@@ -95,7 +95,7 @@ function H(e) {
         preset: a,
         resolution: i,
         frameRate: r,
-        soundshareEnabled: eL
+        soundshareEnabled: ev
       });
       let u = (0, b.Z)(et, eh, h.ZP.getRunningGames()),
         c = !(0, M.isWindows)() || null == u || (null == eh ? void 0 : eh.id.startsWith("camera:")) || null == u ? null : u.pid;
@@ -103,8 +103,8 @@ function H(e) {
         pid: c,
         sourceId: null == c && null != eh ? eh.id : null,
         sourceName: null == c && null != eh ? eh.name : null,
-        audioSourceId: eZ,
-        sound: eL
+        audioSourceId: eN,
+        sound: ev
       }), (async () => {
         !await C.Z.hasPermission(y.Eu.SCREEN_RECORDING, {
           showAuthorizationError: !1
@@ -133,7 +133,7 @@ function H(e) {
         n = eh.id;
       if (n.startsWith("screen") && e.length > 0 && !e.some(e => e.includes(n))) {
         var s, i;
-        s = n, i = e, v.default.track(B.rMx.SCREENSHARE_FAILED, {
+        s = n, i = e, L.default.track(B.rMx.SCREENSHARE_FAILED, {
           source_id: s,
           screens: i.length
         }), (0, d.openModal)(e => (0, a.jsx)(d.ConfirmModal, {
@@ -236,7 +236,7 @@ function H(e) {
             selectedResolution: ef,
             selectedSource: eh,
             selectedFPS: eR,
-            sound: eL,
+            sound: ev,
             sourceChanged: eE,
             selectSource: z,
             onChangeSelectedFPS: e => eP(eI, ef, e),
@@ -245,9 +245,9 @@ function H(e) {
             onChangeSelectedChannelId: eg,
             onChangeSelectedSource: eG,
             onChangeSource: () => ec(1),
-            onChangeAudioDevice: e => eN(e),
+            onChangeAudioDevice: e => eZ(e),
             onChangeGuild: () => ec(0),
-            onChangeSound: e => ev(e),
+            onChangeSound: e => eL(e),
             onClose: Q,
             selectedGuildId: eM,
             targetGuildPremiumTier: ea,

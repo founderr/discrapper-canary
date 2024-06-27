@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(706140),
   f = n(346610),
   E = n(868643),
-  g = n(223606),
-  C = n(188597),
+  C = n(223606),
+  g = n(188597),
   I = n(41776),
   x = n(222677),
   T = n(995774),
@@ -95,8 +95,8 @@ function $(e) {
     key: _,
     disabled: f,
     dangerous: E,
-    separator: g,
-    sparkle: C,
+    separator: C,
+    sparkle: g,
     showNewBadge: I,
     ...x
   } = e;
@@ -129,12 +129,12 @@ function $(e) {
             className: X.icon,
             color: "currentColor",
             ...r
-          }), C && (0, i.jsx)(d.LottieSparkle, {}), I && (0, i.jsx)(d.TextBadge, {
+          }), g && (0, i.jsx)(d.LottieSparkle, {}), I && (0, i.jsx)(d.TextBadge, {
             text: q.Z.Messages.NEW,
             color: m.Z.BG_BRAND,
             className: X.newBadge
           })]
-        }), g && (0, i.jsx)(D.Z0, {})]
+        }), C && (0, i.jsx)(D.Z0, {})]
       })
     }
   }, _)
@@ -149,8 +149,8 @@ function ee(e) {
     canDelete: r,
     canReport: o,
     canEdit: m,
-    canPublish: g,
-    canReact: C,
+    canPublish: C,
+    canReact: g,
     canConfigureJoin: x,
     canReply: T,
     canStartThread: N,
@@ -176,7 +176,7 @@ function ee(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, u = (0, c.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]), d = (0, c.e7)([b.default], () => b.default.getId()), m = (0, A.$R)(t), _ = (0, A.Gu)(t), g = M.nc.useSetting(), C = M.Sb.useSetting(), x = (0, c.e7)([P.Z], () => null == t.guild_id || P.Z.canChatInGuild(t.guild_id), [t]), {
+    } = n, u = (0, c.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]), d = (0, c.e7)([b.default], () => b.default.getId()), m = (0, A.$R)(t), _ = (0, A.Gu)(t), C = M.nc.useSetting(), g = M.Sb.useSetting(), x = (0, c.e7)([P.Z], () => null == t.guild_id || P.Z.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: T,
       canAddNewReactions: N
     } = (0, c.cj)([O.Z], () => ({
@@ -192,7 +192,7 @@ function ee(e) {
       } = (0, G.Z)({
         channel: t,
         canChat: x,
-        renderReactions: g,
+        renderReactions: C,
         canAddNewReactions: N,
         isLurking: k,
         isGuest: V,
@@ -233,8 +233,8 @@ function ee(e) {
       canViewThread: D,
       canForward: et && en,
       canCopy: U.wS,
-      hasDeveloperMode: C,
-      canReact: !Q && g,
+      hasDeveloperMode: g,
+      canReact: !Q && C,
       canPublish: J,
       canConfigureJoin: ee,
       isExpanded: el && !es && !i && !a && !l,
@@ -262,7 +262,7 @@ function ee(e) {
     e_(!0)
   }, []), eE = a.useCallback(() => {
     e_(!1)
-  }, []), eg = a.useCallback((e, t) => {
+  }, []), eC = a.useCallback((e, t) => {
     eh(K.L.TAKE_ACTION), (0, V.ts)(e, t)
   }, [eh]);
   return (0, i.jsxs)(i.Fragment, {
@@ -324,7 +324,7 @@ function ee(e) {
         icon: d.ArrowAngleLeftUpIcon,
         onClick: V.HH
       }) : null]
-    }) : null, C && !el ? (0, i.jsx)(F.Z, {
+    }) : null, g && !el ? (0, i.jsx)(F.Z, {
       channel: t,
       message: n,
       togglePopout: eo,
@@ -351,7 +351,7 @@ function ee(e) {
       message: n,
       label: q.Z.Messages.MESSAGE_ACTION_FORWARD,
       icon: d.ChatArrowRightIcon,
-      onClick: eg,
+      onClick: eC,
       onTooltipShow: ef,
       onTooltipHide: eE,
       showNewBadge: !em && ep
@@ -369,7 +369,7 @@ function ee(e) {
       label: q.Z.Messages.VIEW_THREAD,
       icon: d.ThreadIcon,
       onClick: V.qe
-    }) : null, g ? $({
+    }) : null, C ? $({
       key: "publish",
       channel: t,
       message: n,
@@ -431,7 +431,7 @@ function et(e) {
   let {
     channel: t,
     message: n
-  } = e, a = (0, c.e7)([g.Z], () => null != g.Z.getMessage(n.id), [n.id]), l = null == n.interaction || null != n.interactionData && (0, C.$s)(n.interactionData);
+  } = e, a = (0, c.e7)([C.Z], () => null != C.Z.getMessage(n.id), [n.id]), l = null == n.interaction || null != n.interactionData && (0, g.$s)(n.interactionData);
   return (0, i.jsxs)(i.Fragment, {
     children: [!a && l && $({
       key: "retry",

@@ -10,8 +10,8 @@ var i, a, l, s, r = n(442837),
   _ = n(981631),
   f = n(354459);
 let E = [],
-  g = [],
   C = [],
+  g = [],
   I = new c.Z,
   x = new c.Z,
   T = null;
@@ -29,13 +29,13 @@ class v extends(i = r.ZP.Store) {
     return I.size()
   }
   getDesyncedUserIds(e) {
-    return e !== T ? C : I.keys()
+    return e !== T ? g : I.keys()
   }
   getDesyncedVoiceStates(e) {
     return e !== T ? E : I.values()
   }
   getDesyncedParticipants(e) {
-    return e !== T ? g : x.values()
+    return e !== T ? C : x.values()
   }
 }
 s = "RTCConnectionDesyncStore", (l = "displayName") in(a = v) ? Object.defineProperty(a, l, {

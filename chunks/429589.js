@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(650774),
   f = n(430824),
   S = n(283595),
-  N = n(496675),
-  A = n(699516),
+  A = n(496675),
+  N = n(699516),
   m = n(944486),
   O = n(594174),
-  p = n(979651),
-  R = n(181106),
+  R = n(979651),
+  p = n(181106),
   g = n(417363),
   C = n(358085),
   v = n(804739),
@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(620662),
   G = n(275920),
   w = n(952561),
-  x = n(513202),
-  B = n(915863),
+  B = n(513202),
+  x = n(915863),
   k = n(701488),
   V = n(981631),
   Z = n(689938);
@@ -52,7 +52,7 @@ function H(e) {
     user: Y,
     onAction: j,
     isEmbedded: W = !1,
-    ButtonComponent: K = B.Z,
+    ButtonComponent: K = x.Z,
     ...z
   } = e, {
     analyticsLocations: q
@@ -72,12 +72,12 @@ function H(e) {
       channelId: n
     } = e;
     return (t === (null == H ? void 0 : H.application_id) || t === (null == F ? void 0 : F.applicationId)) && n === et
-  })), er = (0, s.e7)([R.Z], () => null != H && null != H.application_id && R.Z.getState(H.application_id, V.mFx.JOIN) === V.OcF.LOADING), [es] = (0, d.Z)((null == F ? void 0 : F.applicationId) != null ? [null == F ? void 0 : F.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), eo = (0, U.s5)({
+  })), er = (0, s.e7)([p.Z], () => null != H && null != H.application_id && p.Z.getState(H.application_id, V.mFx.JOIN) === V.OcF.LOADING), [es] = (0, d.Z)((null == F ? void 0 : F.applicationId) != null ? [null == F ? void 0 : F.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), eo = (0, U.s5)({
     userId: Y.id,
     activity: H,
     channelId: et,
     application: es
-  }), ea = (0, s.e7)([I.Z, f.Z, h.Z, A.Z, m.Z, p.Z, N.Z], () => null != F ? eo === U.Fw.CAN_JOIN : null != H ? (0, P.Z)({
+  }), ea = (0, s.e7)([I.Z, f.Z, h.Z, N.Z, m.Z, R.Z, A.Z], () => null != F ? eo === U.Fw.CAN_JOIN : null != H ? (0, P.Z)({
     user: Y,
     activity: H,
     application: es,
@@ -87,10 +87,10 @@ function H(e) {
     ChannelStore: I.Z,
     GuildStore: f.Z,
     GuildMemberCountStore: h.Z,
-    RelationshipStore: A.Z,
+    RelationshipStore: N.Z,
     SelectedChannelStore: m.Z,
-    VoiceStateStore: p.Z,
-    PermissionStore: N.Z
+    VoiceStateStore: R.Z,
+    PermissionStore: A.Z
   }) : void 0), el = (0, s.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == F ? void 0 : F.applicationId) && e.channelId === (null == F ? void 0 : F.channelId))), eu = (0, w.Z)(), e_ = (0, _.O)(), ec = !C.isPlatformEmbedded;
   if (!((0, b.Z)(H, V.xjy.JOIN) || W) || null == ee) return null;
   let ed = !$ || W && !el,
@@ -127,7 +127,7 @@ function H(e) {
           currentEmbeddedApplication: eu,
           activityChannelId: et,
           locationObject: e_.location,
-          embeddedActivitiesManager: x.Z,
+          embeddedActivitiesManager: B.Z,
           analyticsLocations: q
         })
       }

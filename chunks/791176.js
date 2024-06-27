@@ -14,27 +14,27 @@ var i = n(735250),
   _ = n(50493),
   f = n(981631),
   E = n(689938),
-  g = n(926452);
+  C = n(926452);
 
-function C(e) {
+function g(e) {
   var t, n;
   let {
     permission: a,
     roleIds: l,
     guild: h,
     specMap: p
-  } = e, _ = f.Plq[a], C = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = m._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
+  } = e, _ = f.Plq[a], g = null !== (n = null === (t = p[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_), I = m._o.has(_), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
   return (0, i.jsx)(o.Tooltip, {
     "aria-label": E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
-    tooltipClassName: g.roleTooltipContainer,
-    tooltipContentClassName: g.roleTooltipContentContainer,
+    tooltipClassName: C.roleTooltipContainer,
+    tooltipContentClassName: C.roleTooltipContentContainer,
     allowOverflow: !0,
     text: (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(o.Text, {
         variant: "text-sm/normal",
         children: I ? E.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
       }), l.map(e => (0, i.jsx)("div", {
-        className: s()(g.roleTooltipItem),
+        className: s()(C.roleTooltipItem),
         children: (0, i.jsx)(c.Z, {
           role: x[e],
           guildId: h.id
@@ -47,8 +47,8 @@ function C(e) {
         onMouseLeave: n
       } = e;
       return (0, i.jsxs)(o.Clickable, {
-        className: s()(g.permissionChiplet, {
-          [g.elevatedPermission]: I
+        className: s()(C.permissionChiplet, {
+          [C.elevatedPermission]: I
         }),
         onMouseEnter: t,
         onMouseLeave: n,
@@ -60,7 +60,7 @@ function C(e) {
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: C
+          children: g
         })]
       })
     }
@@ -73,7 +73,7 @@ t.Z = a.memo(function(e) {
   } = e, l = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, m.B2)(t.userId, t.guildId, m.Qn), u = (0, m.B2)(t.userId, t.guildId, m.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = a.useMemo(() => null != l ? h.Z.getGuildPermissionSpecMap(l) : null, [l]), N = a.useMemo(() => null != l ? h.Z.generateGuildPermissionSpec(l) : null, [l]), v = a.useMemo(() => {
     if (null == l || null == T) return null;
     if (0 === I) return (0, i.jsx)("div", {
-      className: s()(g.permissionChiplet, g.noModPerms),
+      className: s()(C.permissionChiplet, C.noModPerms),
       children: (0, i.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-positive",
@@ -87,7 +87,7 @@ t.Z = a.memo(function(e) {
           a = m.pd.find(e => f.Plq[e] === n);
         if (null == a) return;
         let s = c[a];
-        if (null != s) e.push((0, i.jsx)(C, {
+        if (null != s) e.push((0, i.jsx)(g, {
           permission: a,
           roleIds: s,
           guild: l,
@@ -98,13 +98,13 @@ t.Z = a.memo(function(e) {
   }, [l, I, c, N, T]);
   return null == l ? null : (0, i.jsx)(o.FormItem, {
     title: (0, i.jsxs)("div", {
-      className: g.headerContainer,
+      className: C.headerContainer,
       children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
         color: "header-secondary",
         children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
       }), (0, i.jsxs)(o.Clickable, {
-        className: g.viewAllPermissions,
+        className: C.viewAllPermissions,
         onClick: () => n(_.k.PERMISSIONS),
         children: [(0, i.jsx)(o.Text, {
           variant: "eyebrow",
@@ -119,11 +119,11 @@ t.Z = a.memo(function(e) {
         })]
       })]
     }),
-    titleClassName: g.__invalid_infoTitle,
+    titleClassName: C.__invalid_infoTitle,
     children: (0, i.jsx)(p.WM, {
       children: (0, i.jsx)(p._2, {
         description: (0, i.jsx)("div", {
-          className: g.permissionsContainer,
+          className: C.permissionsContainer,
           children: v
         })
       })

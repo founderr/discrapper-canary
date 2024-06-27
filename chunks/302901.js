@@ -4,7 +4,7 @@ n.d(t, {
     return I
   },
   Xv: function() {
-    return N
+    return A
   },
   li: function() {
     return T
@@ -93,7 +93,7 @@ let S = e => {
   })
 };
 
-function N(e) {
+function A(e) {
   let t = r.createContext([null, () => {}]),
     n = {
       LayerProvider: e => (0, i.jsx)(T, {

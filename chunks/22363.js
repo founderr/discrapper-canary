@@ -21,11 +21,11 @@ t.Z = e => {
     autoFocus: h,
     searchBarRef: f,
     hasTabWrapper: S,
-    diversitySurrogate: N,
-    isBurstReaction: A,
+    diversitySurrogate: A,
+    isBurstReaction: N,
     onBurstReactionToggle: m,
     renderHeader: O
-  } = e, p = (0, i.jsxs)(i.Fragment, {
+  } = e, R = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(u.Z, {
       emojiListRef: E,
       gridNavigatorId: _.Vr,
@@ -35,22 +35,22 @@ t.Z = e => {
       isFullRow: !1,
       onFocus: T,
       autoFocus: h,
-      defaultSearchPlaceholder: (0, a.nV)(n, A)
+      defaultSearchPlaceholder: (0, a.nV)(n, N)
     }), n === c.Hz.REACTION ? (0, i.jsx)("div", {
       className: d.burstToggle,
       children: (0, i.jsx)(o.Z, {
-        checked: A,
+        checked: N,
         onClick: m
       })
     }) : null, null != t ? t : (0, i.jsx)(l.Z, {
       searchBarRef: f,
       className: d.diversitySelector,
       hasTabWrapper: S,
-      selectedSurrogate: N
+      selectedSurrogate: A
     })]
   });
   return (0, i.jsx)("div", {
     className: s()(d.header, r),
-    children: null != O ? O(p) : p
+    children: null != O ? O(R) : R
   })
 }

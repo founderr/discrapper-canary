@@ -28,10 +28,10 @@ function S() {
   s = null
 }
 
-function N() {
+function A() {
   i = null, r = null, h = new Set, T.applicationId = null, T.originURL = null, S()
 }
-class A extends(o = a.ZP.PersistedStore) {
+class N extends(o = a.ZP.PersistedStore) {
   initialize(e) {
     i = (T = {
       ...null != e ? e : I
@@ -75,7 +75,7 @@ class A extends(o = a.ZP.PersistedStore) {
     })
   }
 }
-E(A, "displayName", "TestModeStore"), E(A, "persistKey", "TestModeStore"), t.Z = new A(l.Z, {
+E(N, "displayName", "TestModeStore"), E(N, "persistKey", "TestModeStore"), t.Z = new N(l.Z, {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function(e) {
     let {
       applicationId: t
@@ -103,6 +103,6 @@ E(A, "displayName", "TestModeStore"), E(A, "persistKey", "TestModeStore"), t.Z =
     i = t
   },
   DEVELOPER_TEST_MODE_RESET_ERROR: S,
-  LOGOUT: N,
-  DEVELOPER_TEST_MODE_RESET: N
+  LOGOUT: A,
+  DEVELOPER_TEST_MODE_RESET: A
 })

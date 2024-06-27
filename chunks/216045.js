@@ -19,29 +19,29 @@ var n = t(735250),
   I = t(957730),
   N = t(296810),
   C = t(921813),
-  A = t(935147),
-  m = t(246946),
-  O = t(25990),
-  g = t(594174),
+  m = t(935147),
+  A = t(246946),
+  g = t(25990),
+  O = t(594174),
   h = t(74538),
-  R = t(695346),
-  p = t(265159),
+  p = t(695346),
+  R = t(265159),
   x = t(532495);
 
 function M() {
-  let e = (0, o.e7)([g.default], () => {
-    let e = g.default.getCurrentUser();
+  let e = (0, o.e7)([O.default], () => {
+    let e = O.default.getCurrentUser();
     return r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
   });
   a.useEffect(() => {
     (0, c.In)(e.id)
   }, [e.id]);
-  let s = (0, o.e7)([m.Z], () => m.Z.hidePersonalInformation),
+  let s = (0, o.e7)([A.Z], () => A.Z.hidePersonalInformation),
     {
       pendingBio: t,
       ...i
-    } = (0, o.cj)([O.Z], () => O.Z.getAllPending()),
-    M = R.dN.useSetting() && null != t ? I.ZP.parse(void 0, t).content : t,
+    } = (0, o.cj)([g.Z], () => g.Z.getAllPending()),
+    M = p.dN.useSetting() && null != t ? I.ZP.parse(void 0, t).content : t,
     D = h.ZP.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: f
@@ -60,12 +60,12 @@ function M() {
       profilePreview: (0, n.jsx)(C.Z, {
         user: e,
         canUsePremiumCustomization: D,
-        onUpsellClick: p.Z,
+        onUpsellClick: R.Z,
         pendingBio: M,
         ...i
       }),
       children: (0, n.jsx)(x.Z, {})
-    }), !D && (0, n.jsx)(A.Z, {
+    }), !D && (0, n.jsx)(m.Z, {
       user: e
     })]
   })

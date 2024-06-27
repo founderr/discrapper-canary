@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(871499),
   f = n(131951),
   E = n(459273),
-  g = n(304388),
-  C = n(981631),
+  C = n(304388),
+  g = n(981631),
   I = n(689938);
 
 function x(e) {
@@ -50,9 +50,9 @@ function x(e) {
       null === (e = j.current) || void 0 === e || e.hidePopout()
     }, []);
   return (0, E.yp)({
-    event: C.CkL.TOGGLE_SOUNDBOARD,
+    event: g.CkL.TOGGLE_SOUNDBOARD,
     handler: L
-  }), (0, i.jsx)(g.Z, {
+  }), (0, i.jsx)(C.Z, {
     ref: j,
     renderPopout: e => {
       let {

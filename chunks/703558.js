@@ -31,7 +31,7 @@ function S(e) {
   return null == t && (t = f[e] = {}), t
 }
 
-function N(e) {
+function A(e) {
   let {
     type: t,
     channelId: n,
@@ -49,11 +49,11 @@ function N(e) {
       timestamp: Date.now(),
       draft: i
     }
-  } else A(n, r);
+  } else N(n, r);
   return "DRAFT_SAVE" === t
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.default.getId();
   if (null == n) return !1;
   let i = S(n),
@@ -79,13 +79,13 @@ function O(e) {
   let i = S(n);
   return delete i[t], !1
 }
-class p extends(r = l.ZP.PersistedStore) {
+class R extends(r = l.ZP.PersistedStore) {
   initialize(e) {
     f = null != e ? e : {}, ! function() {
       for (let [e, t] of c.default.entries(f))
         for (let [n, i] of c.default.entries(t)) {
           let t = i[0];
-          null != t && ("" === t.draft || "" === t.draft.trim()) && A(n, 0, e)
+          null != t && ("" === t.draft || "" === t.draft.trim()) && N(n, 0, e)
         }
     }(), this.waitFor(d.default, E.Z, I.Z)
   }
@@ -140,7 +140,7 @@ class p extends(r = l.ZP.PersistedStore) {
     return null == n ? null : n[1]
   }
 }
-T(p, "displayName", "DraftStore"), T(p, "persistKey", "DraftStore"), T(p, "migrations", [e => {
+T(R, "displayName", "DraftStore"), T(R, "persistKey", "DraftStore"), T(R, "migrations", [e => {
   if (null == e) return {};
   for (let t in e) "timestamp" in e[t] && (e[t] = {
     0: e[t]
@@ -153,7 +153,7 @@ T(p, "displayName", "DraftStore"), T(p, "persistKey", "DraftStore"), T(p, "migra
     i = n[t] = {};
   for (let t in e) i[t] = e[t];
   return n
-}]), t.Z = new p(u.Z, {
+}]), t.Z = new R(u.Z, {
   CONNECTION_OPEN: function() {
     let e = d.default.getId();
     return !(e in f) && (f[e] = {}), m(), !1
@@ -190,17 +190,17 @@ T(p, "displayName", "DraftStore"), T(p, "persistKey", "DraftStore"), T(p, "migra
           timestamp: Date.now(),
           draft: n
         }
-      }), A(t.parent_id, 1), A(t.parent_id, 2)
+      }), N(t.parent_id, 1), N(t.parent_id, 2)
     }
   },
-  DRAFT_SAVE: N,
-  DRAFT_CHANGE: N,
+  DRAFT_SAVE: A,
+  DRAFT_CHANGE: A,
   DRAFT_CLEAR: function(e) {
     let {
       channelId: t,
       draftType: n
     } = e;
-    return A(t, n)
+    return N(t, n)
   },
   THREAD_SETTINGS_DRAFT_CHANGE: function(e) {
     let {

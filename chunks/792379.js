@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(588822),
   f = n(900927),
   E = n(678738),
-  g = n(502762),
-  C = n(530),
+  C = n(502762),
+  g = n(530),
   I = n(171368),
   x = n(308829),
   T = n(354810),
@@ -48,7 +48,7 @@ function A(e) {
       layout: "SIMPLIFIED_DM_PANEL",
       userId: t.id,
       channelId: n.id,
-      children: (0, i.jsxs)(g.Z, {
+      children: (0, i.jsxs)(C.Z, {
         ref: R,
         user: t,
         displayProfile: M,
@@ -64,7 +64,7 @@ function A(e) {
             onOpenProfile: L
           }), (0, i.jsxs)("div", {
             className: Z.body,
-            children: [(0, i.jsx)(C.Z, {
+            children: [(0, i.jsx)(g.Z, {
               user: t,
               profileType: N.y0.PANEL,
               nickname: d.ZP.getName(null, n.id, t),
@@ -74,7 +74,7 @@ function A(e) {
                 displayProfile: M,
                 profileType: N.y0.PANEL
               })
-            }), (0, i.jsxs)(g.Z.Overlay, {
+            }), (0, i.jsxs)(C.Z.Overlay, {
               className: Z.overlay,
               children: [(0, i.jsx)(E.Z, {
                 title: v.Z.Messages.USER_POPOUT_ABOUT_ME,

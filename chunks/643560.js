@@ -23,14 +23,14 @@ function h(e) {
   } = e, {
     isEntryAdmin: f,
     canEdit: E,
-    canRemove: g
-  } = (0, u.Z)(t), C = (0, r.Z)({
+    canRemove: C
+  } = (0, u.Z)(t), g = (0, r.Z)({
     id: t.guildId,
     label: d.Z.Messages.COPY_ID_GUILD,
     onSuccess: p
   });
   a.useEffect(() => {
-    !E && !g && null == C && (0, s.Zy)()
+    !E && !C && null == g && (0, s.Zy)()
   });
   let I = () => {
     c.kx(t.channelId, t.guildId)
@@ -60,7 +60,7 @@ function h(e) {
             })
           }), x()
         }
-      }) : null, g ? (0, i.jsx)(l.MenuItem, {
+      }) : null, C ? (0, i.jsx)(l.MenuItem, {
         id: "remove-from-hub",
         label: d.Z.Messages.HUB_ENTRY_REMOVE,
         action: function() {
@@ -91,7 +91,7 @@ function h(e) {
         })
       })]
     }), (0, i.jsx)(l.MenuGroup, {
-      children: C
+      children: g
     })]
   })
 }

@@ -98,13 +98,13 @@ t.ZP = r.memo(function(e) {
   }
   if (null == T) return null;
   let {
-    text: N,
-    icon: A,
+    text: A,
+    icon: N,
     color: m
   } = T;
   return (0, i.jsx)(S, {
-    icon: A,
-    text: N,
+    icon: N,
+    text: A,
     className: n,
     color: m
   })

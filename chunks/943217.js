@@ -80,8 +80,8 @@ function c(e) {
   }), {
     radius: f,
     offsetX: S,
-    offsetY: N
-  } = _[n], A = u && (n === a.y0.POPOUT || n === a.y0.BITE_SIZE) ? 4 : 0, m = h - N - A;
+    offsetY: A
+  } = _[n], N = u && (n === a.y0.POPOUT || n === a.y0.BITE_SIZE) ? 4 : 0, m = h - A - N;
   return (0, i.jsxs)("svg", {
     className: l.bannerSVGWrapper,
     viewBox: "0 0 ".concat(T, " ").concat(h),
@@ -99,7 +99,7 @@ function c(e) {
         height: "100%"
       }), (0, i.jsx)("circle", {
         fill: "black",
-        cx: f + S - A,
+        cx: f + S - N,
         cy: m,
         r: f
       })]

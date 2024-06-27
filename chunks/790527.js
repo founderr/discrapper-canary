@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(104494),
   f = n(639119),
   S = n(165583),
-  N = n(197115),
-  A = n(302945),
+  A = n(197115),
+  N = n(302945),
   m = n(631771),
   O = n(474936),
-  p = n(981631),
-  R = n(689938),
+  R = n(981631),
+  p = n(689938),
   g = n(935777),
   C = n(769860);
 
@@ -42,8 +42,8 @@ function v(e) {
     glowUp: b,
     modalClassName: G,
     artContainerClassName: w,
-    headerClassName: x,
-    bodyClassName: B,
+    headerClassName: B,
+    bodyClassName: x,
     transitionState: k,
     onClose: V,
     onSubscribeClick: Z,
@@ -63,13 +63,13 @@ function v(e) {
     analyticsLocations: er
   } = (0, c.ZP)(_.Z.PREMIUM_UPSELL_MODAL);
   r.useEffect(() => {
-    !z && (ee ? E.default.track(p.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+    !z && (ee ? E.default.track(R.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(L, " - Tier ").concat(D.boostedGuildTier),
       guild_id: D.guild.id,
       channel_id: D.channelId,
       location: P,
       location_stack: er
-    }) : E.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+    }) : E.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
       type: L,
       source: M,
       location: P,
@@ -123,14 +123,14 @@ function v(e) {
           children: [(0, i.jsx)(l.Heading, {
             className: o()(g.header, {
               [g.enhancedHeader]: Q
-            }, x),
+            }, B),
             variant: "heading-xl/bold",
             children: v
-          }), eo ? (0, i.jsx)(A.Z, {
+          }), eo ? (0, i.jsx)(N.Z, {
             affinities: es
           }) : void 0, J, (0, i.jsx)(l.Text, {
             variant: "text-md/normal",
-            className: o()(B, g.subHeader),
+            className: o()(x, g.subHeader),
             children: y
           })]
         })
@@ -159,7 +159,7 @@ function v(e) {
             guild: D.guild,
             onClose: V
           });
-          let t = Q ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+          let t = Q ? p.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
           if (ei) {
             if (null != et) {
               var n, r;
@@ -167,11 +167,11 @@ function v(e) {
                 intervalType: null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.interval,
                 intervalCount: null == et ? void 0 : null === (r = et.subscription_trial) || void 0 === r ? void 0 : r.interval_count
               }), e = null == et ? void 0 : et.trial_id
-            } else null != en && (t = R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
+            } else null != en && (t = p.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
               percent: en.discount.amount
             }))
           }
-          return (0, i.jsx)(N.Z, {
+          return (0, i.jsx)(A.Z, {
             showGradient: Q,
             premiumModalAnalyticsLocation: P,
             subscriptionTier: K,
@@ -189,7 +189,7 @@ function v(e) {
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.PRIMARY,
         look: l.Button.Looks.LINK,
-        children: null != X ? X : R.Z.Messages.BACK
+        children: null != X ? X : p.Z.Messages.BACK
       })]
     })]
   })

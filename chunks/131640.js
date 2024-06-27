@@ -4,7 +4,7 @@ n.d(t, {
     return k
   },
   tZ: function() {
-    return B
+    return x
   }
 }), n(627341);
 var i = n(735250),
@@ -23,12 +23,12 @@ var i = n(735250),
   h = n(430824),
   f = n(806519),
   S = n(626135),
-  N = n(74538),
-  A = n(998502),
+  A = n(74538),
+  N = n(998502),
   m = n(785717),
   O = n(621853),
-  p = n(204197),
-  R = n(735336),
+  R = n(204197),
+  p = n(735336),
   g = n(793397),
   C = n(184325),
   v = n(652853),
@@ -71,9 +71,9 @@ function w(e) {
     })]
   })
 }
-let x = A.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+let B = N.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
-function B(e) {
+function x(e) {
   let {
     user: t,
     displayProfile: n,
@@ -84,38 +84,38 @@ function B(e) {
     guildId: E,
     channelId: T,
     onClose: h,
-    disableUserProfileLink: A,
+    disableUserProfileLink: N,
     profileType: O,
-    animateOnHover: R,
+    animateOnHover: p,
     hasProfileEffect: C,
     statusTooltipDelay: w
   } = e, {
-    theme: B
-  } = (0, v.z)(), k = r.useContext(S.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = N.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
+    theme: x
+  } = (0, v.z)(), k = r.useContext(S.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = A.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
     analyticsLocations: F
   } = (0, c.ZP)(), {
     trackUserProfileAction: Y,
     messageId: j,
     roleId: W
-  } = (0, m.KZ)(), K = A || t.isClyde(), {
+  } = (0, m.KZ)(), K = N || t.isClyde(), {
     avatarDecorationSrc: z,
     avatarSrc: q,
     eventHandlers: X
-  } = (0, p.Z)({
+  } = (0, R.Z)({
     user: t,
     guildId: E,
     size: b,
-    animateOnHover: R
+    animateOnHover: p
   }), Q = (0, i.jsx)("div", {
     className: U.avatarHoverTarget,
     ...X,
-    children: (0, i.jsx)(x, {
+    children: (0, i.jsx)(B, {
       src: null != s ? s : q,
       avatarDecoration: z,
       size: b,
       "aria-label": t.username,
       status: H ? M.Skl.UNKNOWN : u,
-      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(B) : void 0,
+      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(x) : void 0,
       isMobile: d,
       statusTooltip: !0,
       statusTooltipDelay: w
@@ -186,7 +186,7 @@ function k(e) {
     upsell: E
   } = e;
   return (0, i.jsxs)(i.Fragment, {
-    children: [E, (0, i.jsx)(R.Z, {
+    children: [E, (0, i.jsx)(p.Z, {
       user: t,
       displayProfile: n,
       onClose: o,
@@ -199,7 +199,7 @@ function k(e) {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: c
-    }), (0, i.jsx)(B, {
+    }), (0, i.jsx)(x, {
       user: t,
       displayProfile: n,
       status: l ? M.Skl.STREAMING : u,

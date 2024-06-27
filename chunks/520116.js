@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(900164),
   _ = n(554838),
   E = n(493892),
-  I = n(37772),
-  m = n(695346),
+  m = n(37772),
+  I = n(695346),
   T = n(314897),
   h = n(496675),
   N = n(594174),
@@ -26,12 +26,12 @@ var i = n(735250),
   S = n(981631),
   A = n(689938),
   R = n(131132);
-let x = {
+let O = {
   left: 4,
   right: -12
 };
 
-function O(e) {
+function x(e) {
   var t;
   let {
     channel: n,
@@ -47,7 +47,7 @@ function O(e) {
     }
   }, [n.id]);
   return (0, i.jsx)(c.FocusRing, {
-    offset: x,
+    offset: O,
     children: (0, i.jsxs)("div", {
       className: R.messageContainer,
       onKeyDown: E,
@@ -55,7 +55,7 @@ function O(e) {
       children: [(0, i.jsx)(C.Z, {
         className: R.jumpButton,
         onJump: e => u(e, s.id)
-      }), (0, i.jsx)(I.Z, {
+      }), (0, i.jsx)(m.Z, {
         id: s.id,
         message: s,
         channel: n,
@@ -77,18 +77,18 @@ function M(e) {
     channelRecord: s,
     gotoChannel: r
   } = e, {
-    enabled: I
+    enabled: m
   } = d.Z.useExperiment({
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), C = m.jU.useSetting(), x = (0, o.e7)([h.Z], () => h.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || l()(a.messages[0].timestamp).isSame(l()(), "day"), Z = null !== (n = null === (t = N.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
+  }), C = I.jU.useSetting(), O = (0, o.e7)([h.Z], () => h.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || l()(a.messages[0].timestamp).isSame(l()(), "day"), Z = null !== (n = null === (t = N.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
       n = a.messages.slice(0, g.hC);
     n.forEach(n => {
-      if (!(0, u.Z)(n, x)) {
+      if (!(0, u.Z)(n, O)) {
         if (!L && (null == e || !e.isSame(n.timestamp, "day"))) {
           let t = (0, p.vc)(n.timestamp, "LL");
           P.push((0, i.jsx)(f.Z, {
@@ -97,12 +97,12 @@ function M(e) {
           }, t)), e = l()(n.timestamp)
         }
         let a = null == t || (0, _.Z)(s, t, n);
-        t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(O, {
+        t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(x, {
           channel: s,
           message: n,
           compact: C,
           isGroupStart: a,
-          treatSpam: !Z && I && (0, E.DQ)(n) && M,
+          treatSpam: !Z && m && (0, E.DQ)(n) && M,
           gotoChannel: r
         }, n.id))
       }

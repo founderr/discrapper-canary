@@ -10,10 +10,10 @@ n.d(t, {
     return f
   },
   Kd: function() {
-    return R
+    return p
   },
   d2: function() {
-    return p
+    return R
   },
   dU: function() {
     return h
@@ -84,7 +84,7 @@ function S(e) {
       throw Error("Unrecognized DeviceType ".concat(n, "."))
   }
 }!(0, u.isMac)() && (T["223"] = "`"), Object.freeze(T);
-let N = [
+let A = [
     ["META", "⌘"],
     ["RIGHT META", "RIGHT ⌘"],
     ["SHIFT", "⇧"],
@@ -108,19 +108,19 @@ let N = [
     ["TAB", "⇥"],
     ["SPACE", "␣"]
   ],
-  A = e => {
-    for (let [t, n] of N)
+  N = e => {
+    for (let [t, n] of A)
       if (t === e.toUpperCase()) return n;
     return e
   },
   m = e => {
-    for (let [t, n] of N)
+    for (let [t, n] of A)
       if (n === e.toUpperCase()) return t.toLowerCase();
     return e
   },
   O = /shift|meta|ctrl|alt$/;
 
-function p(e) {
+function R(e) {
   let t = {
     keyCode: 0,
     metaKey: !1,
@@ -145,7 +145,7 @@ function p(e) {
   }, [])
 }
 
-function R(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MoX.KEYBOARD_KEY;
   return e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, a.Z.modKey).split("+").map(e => e.trim().replace("plus", "+")).reduce((e, i) => {
@@ -166,5 +166,5 @@ function g(e) {
       if (t === _.MoX.GAMEPAD_BUTTON) return "gamepad".concat(n);
       else return "dev".concat(t, ",").concat(n)
     }).filter(l.lm);
-  return t ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(A) : i).join(" + ").toUpperCase() : i.join("+")
+  return t ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(N) : i).join(" + ").toUpperCase() : i.join("+")
 }

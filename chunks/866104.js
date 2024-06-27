@@ -3,7 +3,7 @@ n.d(t, {
     return M
   },
   Z: function() {
-    return O
+    return x
   }
 }), n(47120);
 var i = n(735250),
@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(353254),
   _ = n(695346),
   E = n(271383),
-  I = n(594174),
-  m = n(346656),
+  m = n(594174),
+  I = n(346656),
   T = n(671533),
   h = n(810090),
   N = n(51144),
@@ -30,7 +30,7 @@ var i = n(735250),
   A = n(689938),
   R = n(828406);
 
-function x(e) {
+function O(e) {
   let {
     onClick: t
   } = e;
@@ -51,7 +51,7 @@ function x(e) {
   })
 }
 
-function O(e) {
+function x(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
@@ -87,9 +87,9 @@ function M(e) {
   let {
     nickname: h,
     nickcolor: f
-  } = (s = T, (0, r.cj)([E.ZP, I.default], () => {
+  } = (s = T, (0, r.cj)([E.ZP, m.default], () => {
     var e, t;
-    let n = I.default.getCurrentUser();
+    let n = m.default.getCurrentUser();
     l()(null != n, "user cannot be null");
     let i = E.ZP.getMember(s, n.id);
     return {
@@ -113,7 +113,7 @@ function M(e) {
     }), M && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(o.Spacer, {
         size: 4
-      }), (0, i.jsx)(x, {
+      }), (0, i.jsx)(O, {
         onClick: () => (0, S.Z)({
           guildId: T
         })
@@ -129,9 +129,9 @@ function M(e) {
     children: [(0, i.jsxs)("div", {
       className: R.infoContainer,
       children: [(0, i.jsx)("div", {
-        children: (0, i.jsx)(m.Z, {
+        children: (0, i.jsx)(I.Z, {
           guild: u,
-          size: m.Z.Sizes.LARGER,
+          size: I.Z.Sizes.LARGER,
           iconSrc: null == u.icon || j ? (0, d.b)("server_products/storefront/default-guild-icon.jpg") : void 0
         })
       }), (0, i.jsx)(o.Spacer, {
@@ -172,7 +172,7 @@ function M(e) {
           }), y]
         })]
       })]
-    }), (0, i.jsx)(O, {
+    }), (0, i.jsx)(x, {
       coverImageAsset: null == _ ? void 0 : _.cover_image_asset,
       isPreview: j
     })]

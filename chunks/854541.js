@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   AG: function() {
-    return R
+    return p
   },
   Z$: function() {
     return C
@@ -29,12 +29,12 @@ var i = n(735250),
   h = n(44315),
   f = n(502568),
   S = n(534828),
-  N = n(981631),
-  A = n(689938),
+  A = n(981631),
+  N = n(689938),
   m = n(19857);
 let O = () => Promise.resolve();
 
-function p(e) {
+function R(e) {
   let {
     color: t,
     isDefault: n = !1,
@@ -69,7 +69,7 @@ function p(e) {
         colorClass: m.colorPickerDropperFg,
         width: 14,
         height: 14,
-        color: (0, h.Lq)(S ? N.Ilk.WHITE_500 : N.Ilk.BLACK_500)
+        color: (0, h.Lq)(S ? A.Ilk.WHITE_500 : A.Ilk.BLACK_500)
       }) : null, function() {
         let e = 16,
           t = 16;
@@ -77,13 +77,13 @@ function p(e) {
           size: "custom",
           width: e,
           height: t,
-          color: (0, h.Lq)(S ? N.Ilk.WHITE_500 : N.Ilk.BLACK_500)
+          color: (0, h.Lq)(S ? A.Ilk.WHITE_500 : A.Ilk.BLACK_500)
         })
       }()]
     })
   })
 }
-class R extends r.PureComponent {
+class p extends r.PureComponent {
   render() {
     let {
       color: e,
@@ -91,7 +91,7 @@ class R extends r.PureComponent {
       value: n,
       disabled: r
     } = this.props;
-    return (0, i.jsx)(p, {
+    return (0, i.jsx)(R, {
       isDefault: !0,
       color: e,
       isSelected: e === n || 0 === n,
@@ -108,7 +108,7 @@ class g extends r.PureComponent {
       disabled: n,
       "aria-label": r
     } = this.props;
-    return (0, i.jsx)(p, {
+    return (0, i.jsx)(R, {
       isCustom: !0,
       color: e,
       isSelected: t === e,
@@ -126,10 +126,10 @@ let C = r.memo(function(e) {
     suggestedColors: l,
     middle: d,
     footer: h,
-    showEyeDropper: N,
+    showEyeDropper: A,
     wrapperComponentType: O,
-    className: p
-  } = e, R = (0, T.Z)(), g = function(e) {
+    className: R
+  } = e, p = (0, T.Z)(), g = function(e) {
     if (null == e) return null;
     if ("string" == typeof e) return (0, u.FX)(e) ? (0, u._i)(e) : null;
     return e
@@ -175,10 +175,10 @@ let C = r.memo(function(e) {
       }), s(n)
     },
     y = async () => {
-      if (null != R) try {
+      if (null != p) try {
         let {
           sRGBHex: e
-        } = await R.open();
+        } = await p.open();
         P(e)
       } catch {}
     }, U = r.useCallback(e => {
@@ -201,9 +201,9 @@ let C = r.memo(function(e) {
         color: D.pending.hsl
       }), d, (0, i.jsxs)("div", {
         className: m.customColorPickerInputContainer,
-        children: [N && null != R && (0, i.jsx)(f.JO, {
+        children: [A && null != p && (0, i.jsx)(f.JO, {
           onClick: y,
-          tooltip: A.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+          tooltip: N.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: "top",
           className: m.customColorPickerEyeDropper,
           icon: I.EyeDropperIcon
@@ -226,8 +226,8 @@ let C = r.memo(function(e) {
       }), h]
     }), w = null != O ? O : c.V;
   return (0, i.jsx)(w, {
-    "aria-label": A.Z.Messages.PICK_A_COLOR,
-    className: o()(m.customColorPicker, p),
+    "aria-label": N.Z.Messages.PICK_A_COLOR,
+    className: o()(m.customColorPicker, R),
     children: G
   })
 });
@@ -246,7 +246,7 @@ function v(e) {
     colorContainerClassName: I
   } = e, T = e => (0, i.jsx)("div", {
     className: m.colorPickerRow,
-    children: e.map(e => (0, i.jsx)(p, {
+    children: e.map(e => (0, i.jsx)(R, {
       color: e,
       isSelected: e === u,
       onClick: c,

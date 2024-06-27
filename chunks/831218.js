@@ -9,8 +9,8 @@ var i, l, r, a = n(735250),
   p = n(902704),
   _ = n(481060),
   f = n(925549),
-  g = n(607070),
-  m = n(367907),
+  m = n(607070),
+  g = n(367907),
   C = n(453542),
   I = n(762914),
   E = n(702321),
@@ -282,7 +282,7 @@ class U extends(l = s.Component) {
           num_users_visible: a.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.Z.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, g.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
         ...u,
         ...(0, C.X)(),
         changelog_dm_visible: c
@@ -370,11 +370,11 @@ t.Z = e => {
     let e = A.Z.getPrivateChannelIds(),
       t = (0, S.tU)(e, [x.Z, Z.Z]);
     return (0, I.Ce)(t)
-  }, []), _ = (0, h.cj)([g.Z, v.Z, T.Z], () => ({
+  }, []), _ = (0, h.cj)([m.Z, v.Z, T.Z], () => ({
     theme: v.Z.darkSidebar ? y.BRd.DARK : n,
-    keyboardModeEnabled: g.Z.keyboardModeEnabled,
+    keyboardModeEnabled: m.Z.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion()
-  })), f = s.useRef(null), m = s.useCallback(e => {
+  })), f = s.useRef(null), g = s.useCallback(e => {
     let t = f.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
@@ -408,7 +408,7 @@ t.Z = e => {
     scrollToStart: C,
     scrollToEnd: E,
     defaultFocused: (r + (l ? 1 : 0)).toString(),
-    setFocus: m
+    setFocus: g
   });
   return (0, a.jsx)(u.bG, {
     navigator: L,

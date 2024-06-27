@@ -17,8 +17,8 @@ var l = n(442837),
   p = n(493355),
   _ = n(134598),
   f = n(243778),
-  g = n(594190),
-  m = n(569545),
+  m = n(594190),
+  g = n(569545),
   C = n(989941),
   I = n(199902),
   E = n(314897),
@@ -34,7 +34,7 @@ var l = n(442837),
 function b() {
   let e = (0, l.e7)([N.Z], () => N.Z.getVoiceChannelId()),
     t = (0, l.e7)([E.default], () => E.default.getId()),
-    n = (0, l.e7)([g.ZP, S.Z], () => (0, C.Z)(g.ZP, S.Z)),
+    n = (0, l.e7)([m.ZP, S.Z], () => (0, C.Z)(m.ZP, S.Z)),
     {
       canBroadcast: b
     } = u.Z.useExperiment({
@@ -64,7 +64,7 @@ function b() {
             pid: null == n ? void 0 : n.pid,
             channelId: e
           })
-        }) : (0, c.v$)((0, m.V9)(i), null == n ? void 0 : n.pid)
+        }) : (0, c.v$)((0, g.V9)(i), null == n ? void 0 : n.pid)
       } else(0, c.b_)()
     },
     D = e => (0, i.jsx)(v.Z, {

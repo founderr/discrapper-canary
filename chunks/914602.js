@@ -9,8 +9,8 @@ var i, a = n(735250),
   u = n(592771),
   _ = n(305177),
   E = n(73346),
-  I = n(568836),
-  m = n(345898),
+  m = n(568836),
+  I = n(345898),
   T = n(981631),
   h = n(624179);
 
@@ -33,7 +33,7 @@ class f extends(i = s.PureComponent) {
       renderCustomTitle: l,
       renderCustomMedia: r,
       isEmbed: o
-    } = this.props, c = o ? I.$G : m.Z;
+    } = this.props, c = o ? m.$G : I.Z;
     return (0, a.jsx)(c, {
       className: i,
       renderMedia: null != r ? r : this.renderMedia,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return C
+    return g
   }
 });
 var i = n(735250),
@@ -19,7 +19,7 @@ var i = n(735250),
   f = n(50493),
   E = n(981631);
 
-function g(e, t) {
+function C(e, t) {
   return n => {
     if (0 === n) return "auto";
     let i = "forwards" === t.current,
@@ -29,25 +29,25 @@ function g(e, t) {
   }
 }
 
-function C(e) {
+function g(e) {
   var t, n;
   let {
-    userId: C,
+    userId: g,
     guildId: I,
     onClose: x,
     analyticsLocation: T,
     className: N
-  } = e, v = (0, s.e7)([u.ZP], () => u.ZP.getGuildSidebarState(I), [I]), S = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : f.k.INFO, Z = (0, o.Z)(C);
+  } = e, v = (0, s.e7)([u.ZP], () => u.ZP.getGuildSidebarState(I), [I]), S = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : f.k.INFO, Z = (0, o.Z)(g);
   let A = null == (n = S) ? null : n === f.k.INFO ? "backwards" : "forwards",
     M = (0, d.Z)(A),
     {
       reducedMotion: b
     } = a.useContext(r.S),
     R = a.useCallback(e => {
-      null != v && (0, h.r)(I, C, v.baseChannelId, {
+      null != v && (0, h.r)(I, g, v.baseChannelId, {
         modViewPanel: e
       })
-    }, [v, I, C]),
+    }, [v, I, g]),
     j = a.useMemo(() => ({
       [E.EkH.CLOSE_MODAL]: {
         binds: ["esc"],
@@ -60,7 +60,7 @@ function C(e) {
     }), [x, S, R]);
   a.useEffect(() => (c.Z.enable(), c.Z.enableTemp(j), () => c.Z.disableTemp()), [j]);
   let L = (0, l.useTransition)(S, {
-    immediate: Z !== C,
+    immediate: Z !== g,
     value: 0,
     from: {
       value: 1
@@ -95,29 +95,29 @@ function C(e) {
           ...b.enabled ? {
             opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to(e => 1 - Math.abs(e))
           } : {
-            left: null === (s = e.value) || void 0 === s ? void 0 : s.to(g("left", M)),
-            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", M))
+            left: null === (s = e.value) || void 0 === s ? void 0 : s.to(C("left", M)),
+            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C("right", M))
           }
         },
         children: function(e) {
           switch (e) {
             case f.k.INFO:
               return (0, i.jsx)(p.Z, {
-                userId: C,
+                userId: g,
                 guildId: I,
                 onNavigate: R,
                 className: N
               });
             case f.k.MESSAGE_HISTORY:
               return (0, i.jsx)(m.Z, {
-                userId: C,
+                userId: g,
                 guildId: I,
                 onNavigate: () => R(f.k.INFO),
                 className: N
               });
             case f.k.PERMISSIONS:
               return (0, i.jsx)(_.Z, {
-                userId: C,
+                userId: g,
                 guildId: I,
                 onNavigate: () => R(f.k.INFO),
                 className: N

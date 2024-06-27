@@ -22,7 +22,7 @@ n.d(t, {
     return I
   },
   HW: function() {
-    return p
+    return R
   },
   Hp: function() {
     return O
@@ -52,10 +52,10 @@ n.d(t, {
     return u
   },
   XH: function() {
-    return R
+    return p
   },
   _U: function() {
-    return x
+    return B
   },
   dJ: function() {
     return l
@@ -76,16 +76,16 @@ n.d(t, {
     return U
   },
   mg: function() {
-    return A
+    return N
   },
   nU: function() {
-    return N
+    return A
   },
   wD: function() {
     return D
   },
   xd: function() {
-    return B
+    return x
   },
   xx: function() {
     return w
@@ -103,12 +103,12 @@ let E = "alt+c",
   h = e => "Discord_Clip_".concat(e, ".mp4"),
   f = 3,
   S = 1,
-  N = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-  A = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+  A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+  N = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   m = /(Apple M[12].*)/,
   O = .1,
-  p = 25,
-  R = 0,
+  R = 25,
+  p = 0,
   g = 200,
   C = "clips-edit",
   v = "clips-gallery",
@@ -121,6 +121,6 @@ let E = "alt+c",
   b = 30,
   G = 10,
   w = 14 * d.Z.Millis.DAY,
-  x = 5,
   B = 5,
+  x = 5,
   k = 1

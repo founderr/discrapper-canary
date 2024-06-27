@@ -32,12 +32,12 @@ function d(e, t, n, s) {
       onScroll: h,
       onResize: f = null,
       onContentResize: S = null,
-      dir: N = "ltr",
-      sections: A,
+      dir: A = "ltr",
+      sections: N,
       sectionHeight: m,
       rowHeight: O,
-      footerHeight: p = 0,
-      sidebarHeight: R,
+      footerHeight: R = 0,
+      sidebarHeight: p,
       listHeaderHeight: g = 0,
       renderSection: C,
       renderRow: v,
@@ -50,8 +50,8 @@ function d(e, t, n, s) {
       paddingBottom: b,
       fade: G = !1,
       customTheme: w = !1,
-      chunkSize: x,
-      style: B,
+      chunkSize: B,
+      style: x,
       innerId: k,
       innerRole: V,
       innerAriaLabel: Z,
@@ -70,7 +70,7 @@ function d(e, t, n, s) {
       className: T,
       specs: a,
       orientation: "vertical",
-      dir: N
+      dir: A
     });
     let {
       spacerTop: ee,
@@ -81,15 +81,15 @@ function d(e, t, n, s) {
       forceUpdateOnChunkChange: es,
       anchor: eo
     } = (0, _.aU)({
-      sections: A,
+      sections: N,
       sectionHeight: m,
       rowHeight: O,
-      footerHeight: p,
-      sidebarHeight: R,
+      footerHeight: R,
+      sidebarHeight: p,
       listHeaderHeight: g,
       paddingTop: U,
       paddingBottom: b,
-      chunkSize: x,
+      chunkSize: B,
       getScrollerState: $,
       getAnchorId: y
     }), ea = (0, _.t2)(Q), el = r.useRef(f), eu = r.useRef(S);
@@ -138,7 +138,7 @@ function d(e, t, n, s) {
           }
           return [0, 0]
         }, [])
-      }(A);
+      }(N);
     r.useImperativeHandle(I, () => ({
       getScrollerNode: () => Q.current,
       getScrollerState: $,
@@ -169,7 +169,7 @@ function d(e, t, n, s) {
         [n]: w,
         [c.scrolling]: q
       }),
-      style: (0, _.uT)(B),
+      style: (0, _.uT)(x),
       ...W,
       children: [r.useMemo(() => (0, i.jsx)(j, {
         id: k,
@@ -240,9 +240,9 @@ function d(e, t, n, s) {
       })({
         isSidebarVisible: ei,
         renderSidebar: D,
-        sidebarHeight: R,
+        sidebarHeight: p,
         isListVisible: 0 !== en.length
-      }), [ei, D, R, en.length])]
+      }), [ei, D, p, en.length])]
     })
   })
 }

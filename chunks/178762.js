@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(687694),
   f = n(69259),
   E = n(91140),
-  g = n(227172),
-  C = n(551228),
+  C = n(227172),
+  g = n(551228),
   I = n(678869),
   x = n(278399),
   T = n(886217),
@@ -69,7 +69,7 @@ let R = s().throttle(e => {
           entry: t
         });
       case o.s.LISTENED_SESSION:
-        return (0, i.jsx)(C.ZP, {
+        return (0, i.jsx)(g.ZP, {
           ...n,
           entry: t
         });
@@ -84,7 +84,7 @@ let R = s().throttle(e => {
     } = e;
     switch (t.content_type) {
       case o.s.PLAYED_GAME:
-        return (0, i.jsx)(g.Z, {
+        return (0, i.jsx)(C.Z, {
           ...n,
           entry: t
         });
@@ -117,7 +117,7 @@ t.ZP = a.memo(e => {
   let {
     index: l,
     ...s
-  } = e, [o, p] = a.useState("default"), E = (0, r.JA)("".concat(l)), g = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), C = {
+  } = e, [o, p] = a.useState("default"), E = (0, r.JA)("".concat(l)), C = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), g = {
     entry: s.entry,
     channelId: s.channel.id,
     guildId: s.channel.guild_id,
@@ -131,7 +131,7 @@ t.ZP = a.memo(e => {
     T && b && M(!0)
   }, [T, b]);
   let P = a.useCallback(e => {
-      if (!!g)(0, d.jW)(e, async () => {
+      if (!!C)(0, d.jW)(e, async () => {
         let {
           default: e
         } = await n.e("153").then(n.bind(n, 330150));
@@ -140,7 +140,7 @@ t.ZP = a.memo(e => {
           requestId: s.requestId
         })
       })
-    }, [s, g]),
+    }, [s, C]),
     O = a.useCallback(() => {
       p(String(Date.now()))
     }, []),
@@ -152,7 +152,7 @@ t.ZP = a.memo(e => {
   return (0, i.jsx)("div", {
     onMouseEnter: () => {
       x.current = !0, setTimeout(() => {
-        x.current && N(!0), I && (0, f.L)(A.xP.CARD_CLICK, C)
+        x.current && N(!0), I && (0, f.L)(A.xP.CARD_CLICK, g)
       }, 100)
     },
     onMouseLeave: y,
@@ -170,7 +170,7 @@ t.ZP = a.memo(e => {
       position: "left",
       shouldShow: I ? T : v,
       positionKey: o,
-      onRequestOpen: () => (0, f.L)(A.xP.CARD_CLICK, C),
+      onRequestOpen: () => (0, f.L)(A.xP.CARD_CLICK, g),
       onRequestClose: () => {
         Z && y(), !I && (N(!1), S(!1))
       },
@@ -194,7 +194,7 @@ t.ZP = a.memo(e => {
               ...e,
               ...E,
               onMouseEnter: () => {
-                R(C)
+                R(g)
               },
               onContextMenu: P,
               children: (0, i.jsx)(j, {

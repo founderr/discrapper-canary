@@ -27,19 +27,19 @@ function c(e) {
       onCancel: h,
       onClose: f,
       onCloseCallback: S,
-      bodyClassName: N,
-      transitionState: A,
+      bodyClassName: A,
+      transitionState: N,
       loading: m = !1,
       confirmButtonColor: O = a.zx.Colors.RED,
-      focusCancel: p = !1
+      focusCancel: R = !1
     } = e,
-    R = r.useRef(null);
+    p = r.useRef(null);
   return r.useEffect(() => {
-    !p && setTimeout(() => {
+    !R && setTimeout(() => {
       var e;
-      return null === (e = R.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = p.current) || void 0 === e ? void 0 : e.focus()
     }, 0)
-  }, [p]), r.useLayoutEffect(() => () => null == S ? void 0 : S()), null != E && (t = (0, i.jsx)(a.zx, {
+  }, [R]), r.useLayoutEffect(() => () => null == S ? void 0 : S()), null != E && (t = (0, i.jsx)(a.zx, {
     type: "button",
     look: a.zx.Looks.LINK,
     color: a.zx.Colors.PRIMARY,
@@ -47,10 +47,10 @@ function c(e) {
     onClick: () => {
       null == h || h(), f()
     },
-    autoFocus: p,
+    autoFocus: R,
     children: E
   })), null != d && (n = (0, i.jsx)(a.zx, {
-    buttonRef: R,
+    buttonRef: p,
     type: "submit",
     color: O,
     submitting: m,
@@ -61,11 +61,11 @@ function c(e) {
         throw e
       }
     },
-    autoFocus: !p,
+    autoFocus: !R,
     children: d
   })), (0, i.jsxs)(u.Y0, {
     className: I,
-    transitionState: A,
+    transitionState: N,
     children: [null != s ? (0, i.jsx)(u.xB, {
       separator: !1,
       children: (0, i.jsx)(l.X, {
@@ -73,7 +73,7 @@ function c(e) {
         children: s
       })
     }) : null, (0, i.jsx)(u.hz, {
-      className: o()(_.content, N),
+      className: o()(_.content, A),
       children: c
     }), (0, i.jsxs)(u.mz, {
       children: [n, t]

@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(921801),
   N = t(246946),
   C = t(594174),
-  A = t(351402),
-  m = t(853872),
-  O = t(78839),
-  g = t(706454),
+  m = t(351402),
+  A = t(853872),
+  g = t(78839),
+  O = t(706454),
   h = t(726985),
-  R = t(981631),
-  p = t(689938),
+  p = t(981631),
+  R = t(689938),
   x = t(265891);
 class M extends a.PureComponent {
   componentDidMount() {
@@ -34,7 +34,7 @@ class M extends a.PureComponent {
     })
   }
   handleRedemptionRedirect() {
-    _.Z.setSection(R.oAB.INVENTORY)
+    _.Z.setSection(p.oAB.INVENTORY)
   }
   render() {
     let {
@@ -57,7 +57,7 @@ class M extends a.PureComponent {
         children: (0, n.jsx)(T.Z, {
           paymentSources: t,
           defaultPaymentSourceId: a,
-          premiumSubscriptionPaymentSourceId: null != r && r.status !== R.O0b.CANCELED ? r.paymentSourceId : null,
+          premiumSubscriptionPaymentSourceId: null != r && r.status !== p.O0b.CANCELED ? r.paymentSourceId : null,
           locale: i,
           removing: o,
           submitting: c
@@ -69,7 +69,7 @@ class M extends a.PureComponent {
           children: (0, n.jsxs)(l.HeadingLevel, {
             component: (0, n.jsx)(l.FormTitle, {
               tag: "h1",
-              children: p.Z.Messages.BILLING_PAYMENT_HISTORY
+              children: R.Z.Messages.BILLING_PAYMENT_HISTORY
             }),
             children: [(0, n.jsx)(S.oQ, {}), (0, n.jsx)(u.Z, {
               locale: i
@@ -79,7 +79,7 @@ class M extends a.PureComponent {
       }), (0, n.jsx)(l.Card, {
         className: x.codeRedemptionRedirect,
         type: l.Card.Types.CUSTOM,
-        children: p.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
+        children: R.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
           onClick: this.handleRedemptionRedirect
         })
       })]
@@ -88,20 +88,20 @@ class M extends a.PureComponent {
 }
 
 function D() {
-  let e = (0, o.cj)([g.default, A.Z, m.Z, C.default, N.Z, O.ZP], () => {
-    let e = O.ZP.getPremiumTypeSubscription(),
+  let e = (0, o.cj)([O.default, m.Z, A.Z, C.default, N.Z, g.ZP], () => {
+    let e = g.ZP.getPremiumTypeSubscription(),
       s = C.default.getCurrentUser();
     return r()(null != s, "UserSettingsBilling: currentUser cannot be undefined"), {
-      locale: g.default.locale,
+      locale: O.default.locale,
       hide: N.Z.enabled,
       isClaimed: s.isClaimed(),
       isVerified: s.verified,
       premiumSubscription: e,
-      defaultPaymentSourceId: m.Z.defaultPaymentSourceId,
-      paymentSources: m.Z.paymentSources,
-      syncing: A.Z.isSyncing,
-      isRemovingPaymentSource: A.Z.isRemovingPaymentSource,
-      isUpdatingPaymentSource: A.Z.isUpdatingPaymentSource
+      defaultPaymentSourceId: A.Z.defaultPaymentSourceId,
+      paymentSources: A.Z.paymentSources,
+      syncing: m.Z.isSyncing,
+      isRemovingPaymentSource: m.Z.isRemovingPaymentSource,
+      isUpdatingPaymentSource: m.Z.isUpdatingPaymentSource
     }
   });
   return (0, n.jsx)(M, {

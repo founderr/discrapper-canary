@@ -59,13 +59,13 @@ function E(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [g, C] = s.useState(p.ZP[E]), I = s.useCallback(e => {
+  }(t), [C, g] = s.useState(p.ZP[E]), I = s.useCallback(e => {
     d.ZP.updatedUnsyncedSettings({
       [E]: e
     })
   }, [E]), x = (0, m.W)({
     maxWidth: n
-  }), T = (0, c.clamp)(g, m.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
   s.useEffect(() => {
     null == i || i(T, x)
   }, [T, i, x]);
@@ -81,7 +81,7 @@ function E(e) {
     }), !x && (0, l.jsx)(f, {
       maxWidth: n,
       resizableNode: h,
-      onResize: C,
+      onResize: g,
       onResizeEnd: I
     }), (0, l.jsx)("div", {
       ref: h,

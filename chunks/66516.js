@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(621853),
   N = t(246946),
   C = t(594174),
-  A = t(63063),
-  m = t(74538),
-  O = t(18438),
-  g = t(778825),
+  m = t(63063),
+  A = t(74538),
+  g = t(18438),
+  O = t(778825),
   h = t(856607),
-  R = t(594496),
-  p = t(856768),
+  p = t(594496),
+  R = t(856768),
   x = t(981631),
   M = t(689938);
 
@@ -55,11 +55,11 @@ function f(e) {
   }), f = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id)), L = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
     source: P,
     ...Z
-  } = (0, o.cj)([g.Z], () => ({
-    ...g.Z.getAllPending(),
-    source: g.Z.getSource()
+  } = (0, o.cj)([O.Z], () => ({
+    ...O.Z.getAllPending(),
+    source: O.Z.getSource()
   }));
-  return (a.useEffect(() => () => c.Z.wait(O.W3), []), a.useEffect(() => {
+  return (a.useEffect(() => () => c.Z.wait(g.W3), []), a.useEffect(() => {
     null != P && E.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
       settings_type: "guild",
       destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
@@ -70,13 +70,13 @@ function f(e) {
     children: [(0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
       children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
-        helpCenterLink: A.Z.getArticleURL(x.BhN.GUILD_PROFILES)
+        helpCenterLink: m.Z.getArticleURL(x.BhN.GUILD_PROFILES)
       })
     }), null != s ? (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(p.Z, {
+      children: [(0, n.jsx)(R.Z, {
         guildId: s.id,
         onChange: e => {
-          null != e && (0, O.HP)(e)
+          null != e && (0, g.HP)(e)
         }
       }), (0, n.jsx)(T.Z, {
         previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
@@ -85,11 +85,11 @@ function f(e) {
         profilePreview: (0, n.jsx)(S.Z, {
           user: i,
           guild: s,
-          canUsePremiumCustomization: m.ZP.canUsePremiumProfileCustomization(i),
+          canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
           onUpsellClick: D,
           ...Z
         }),
-        children: (0, n.jsx)(R.Z, {})
+        children: (0, n.jsx)(p.Z, {})
       })]
     }) : (0, n.jsx)(h.Z, {})]
   }) : (0, n.jsx)(l.Spinner, {})

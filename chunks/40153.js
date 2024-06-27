@@ -19,9 +19,9 @@ var i = n(735250),
   p = n(662146),
   _ = n(981631),
   f = n(689938),
-  g = n(798314);
+  m = n(798314);
 
-function m(e) {
+function g(e) {
   let t = l.useRef(null),
     n = e.map(e => e[0]);
   return l.useLayoutEffect(() => {
@@ -62,9 +62,9 @@ function I(e) {
   } = e, o = l.useMemo(() => C([h.eD.GUILD, h.eD.FOLDER], n, s, r), [n, s, r]), [{
     canDrop: u,
     isOver: d
-  }, p] = (0, c.L)(o), _ = m([
-    [u, g.autoPointerEvents],
-    [d, g.dragOver]
+  }, p] = (0, c.L)(o), _ = g([
+    [u, m.autoPointerEvents],
+    [d, m.dragOver]
   ]);
   return (0, i.jsx)("div", {
     ref: e => {
@@ -73,7 +73,7 @@ function I(e) {
     "data-dnd-name": f.Z.Messages.DND_DROP_ABOVE.format({
       itemName: t
     }),
-    className: a()(g.target)
+    className: a()(m.target)
   })
 }
 
@@ -89,16 +89,16 @@ function E(e) {
   l.useEffect(() => {
     null == r || r(o)
   }, [r, o]);
-  let d = m([
-    [s, g.autoPointerEvents],
-    [o, g.dragOver]
+  let d = g([
+    [s, m.autoPointerEvents],
+    [o, m.dragOver]
   ]);
   return (0, i.jsx)(p.Z, {
     text: t,
     shouldShow: o,
     forceOpen: o,
     disableWrapper: !0,
-    tooltipClass: g.centerTargetTooltip,
+    tooltipClass: m.centerTargetTooltip,
     children: (0, i.jsx)("div", {
       ref: e => {
         d.current = e, u(e)
@@ -106,7 +106,7 @@ function E(e) {
       "data-dnd-name": f.Z.Messages.DND_DROP_COMBINE.format({
         itemName: t
       }),
-      className: a()(g.centerTarget, {})
+      className: a()(m.centerTarget, {})
     })
   })
 }
@@ -118,24 +118,24 @@ function N(e) {
   } = e, [{
     canDrop: l,
     isOver: r
-  }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)), o = m([
-    [r, g.wrapperOver]
-  ]), u = m([
-    [r, g.dragOver],
-    [l, g.autoPointerEvents]
+  }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)), o = g([
+    [r, m.wrapperOver]
+  ]), u = g([
+    [r, m.dragOver],
+    [l, m.autoPointerEvents]
   ]);
   return (0, i.jsx)("div", {
     ref: o,
-    className: a()(g.folderEndWrapper),
+    className: a()(m.folderEndWrapper),
     "aria-hidden": !0,
     children: (0, i.jsx)("div", {
-      className: g.folderTarget,
+      className: m.folderTarget,
       children: (0, i.jsx)("div", {
         ref: e => {
           u.current = e, s(e)
         },
         "aria-label": "At end of ".concat(t),
-        className: a()(g.target)
+        className: a()(m.target)
       })
     })
   })
@@ -161,7 +161,7 @@ t.ZP = l.memo(function(e) {
     onDragOverChanged: a
   } = e, s = !l && null == n.parentId;
   return (0, i.jsxs)("div", {
-    className: g.wrapper,
+    className: m.wrapper,
     "aria-hidden": !0,
     children: [(0, i.jsx)(I, {
       name: t,

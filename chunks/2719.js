@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(299206),
   N = t(295474),
   C = t(144114),
-  A = t(918505),
-  m = t(332473),
-  O = t(921801),
-  g = t(290421),
+  m = t(918505),
+  A = t(332473),
+  g = t(921801),
+  O = t(290421),
   h = t(318661),
-  R = t(80132),
-  p = t(735336),
+  p = t(80132),
+  R = t(735336),
   x = t(204197),
   M = t(25990),
   D = t(594174),
@@ -36,8 +36,8 @@ var n = t(735250),
   v = t(461877),
   b = t(726985),
   j = t(981631),
-  U = t(815660),
-  B = t(801461),
+  B = t(815660),
+  U = t(801461),
   G = t(228168),
   F = t(689938),
   V = t(194411);
@@ -48,13 +48,13 @@ function Y(e) {
   let {
     className: o,
     user: l
-  } = e, c = a.useRef(null), E = (0, A.o9)(), u = (0, m.b)(), T = (0, N.gS)(), S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null, [I, C] = a.useState(!1);
+  } = e, c = a.useRef(null), E = (0, m.o9)(), u = (0, A.b)(), T = (0, N.gS)(), S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null, [I, C] = a.useState(!1);
   a.useEffect(() => {
     C(null != c.current && c.current.scrollWidth > c.current.clientWidth)
   }, [l.username]);
-  let O = !l.isClaimed(),
-    g = E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone() || O,
-    h = g ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  let g = !l.isClaimed(),
+    O = E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone() || g,
+    h = O ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, n.jsxs)("div", {
     className: r()(V.field, o),
     children: [(0, n.jsx)("div", {
@@ -109,7 +109,7 @@ function Y(e) {
       text: h,
       children: e => (0, n.jsx)(_.Button, {
         ...e,
-        disabled: g,
+        disabled: O,
         size: _.Button.Sizes.SMALL,
         className: V.fieldButton,
         color: _.Button.Colors.PRIMARY,
@@ -120,7 +120,7 @@ function Y(e) {
               default: e
             } = await Promise.all([t.e("85342"), t.e("6693")]).then(t.bind(t, 193049));
             return s => (0, n.jsx)(e, {
-              source: B.Kq.USER_SETTINGS_EDIT,
+              source: U.Kq.USER_SETTINGS_EDIT,
               ...s
             })
           } {
@@ -353,7 +353,7 @@ function W(e) {
               ...s
             })
           }, {
-            modalKey: U.M
+            modalKey: B.M
           })
         },
         children: c ? F.Z.Messages.EDIT : F.Z.Messages.ADD
@@ -406,7 +406,7 @@ function Q() {
       return l()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
     t = (0, h.ZP)(s.id),
-    a = (0, g.Z)(t),
+    a = (0, O.Z)(t),
     i = Z.co.useSetting(),
     r = (0, c.e7)([M.Z], () => M.Z.getErrors()),
     o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
@@ -419,7 +419,7 @@ function Q() {
     });
   return (0, n.jsxs)("div", {
     className: V.accountProfileCard,
-    children: [(0, n.jsx)(p.Z, {
+    children: [(0, n.jsx)(R.Z, {
       displayProfile: t,
       user: s,
       allowEdit: !1,
@@ -444,7 +444,7 @@ function Q() {
           }), (0, n.jsx)(K, {
             user: s
           })]
-        }), (0, n.jsx)(R.Z, {
+        }), (0, n.jsx)(p.Z, {
           badges: a,
           className: V.badgeList,
           badgeClassName: V.badge
@@ -463,24 +463,24 @@ function Q() {
         children: o
       }) : null, (0, n.jsxs)("div", {
         className: V.fieldList,
-        children: [(0, n.jsx)(O.F, {
+        children: [(0, n.jsx)(g.F, {
           setting: b.s6.ACCOUNT_DISPLAY_NAME,
           children: (0, n.jsx)(H, {
             className: V.fieldSpacerBottom,
             user: s
           })
-        }), (0, n.jsx)(O.F, {
+        }), (0, n.jsx)(g.F, {
           setting: b.s6.ACCOUNT_USERNAME,
           children: (0, n.jsx)(Y, {
             user: s
           })
-        }), (0, n.jsx)(O.F, {
+        }), (0, n.jsx)(g.F, {
           setting: b.s6.ACCOUNT_EMAIL,
           children: (0, n.jsx)(w, {
             className: V.fieldSpacer,
             user: s
           })
-        }), (0, n.jsx)(O.F, {
+        }), (0, n.jsx)(g.F, {
           setting: b.s6.ACCOUNT_PHONE_NUMBER,
           children: (0, n.jsx)(W, {
             className: V.fieldSpacer,

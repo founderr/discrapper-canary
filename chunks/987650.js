@@ -25,7 +25,7 @@ n.d(t, {
     return u
   },
   wF: function() {
-    return N
+    return A
   }
 });
 var i, r, s, o, a, l, u, _, c, d, E, I, T = n(358085);
@@ -61,7 +61,7 @@ let S = Object.freeze({
   DISABLED: null
 });
 (l = I || (I = {}))[l.Disabled = 0] = "Disabled", l[l.Hook = 1] = "Hook", l[l.OutOfProcess = 2] = "OutOfProcess";
-let N = Object.freeze({
+let A = Object.freeze({
   BOTTOM: 0,
   LOWER: .25,
   UPPER: .75,

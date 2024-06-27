@@ -10,13 +10,13 @@ n.d(t, {
     return S
   },
   e4: function() {
-    return N
+    return A
   },
   fq: function() {
     return E
   },
   lM: function() {
-    return A
+    return N
   },
   wu: function() {
     return f
@@ -110,12 +110,12 @@ let S = (0, r.memoize)(e => {
   return (0, s._i)(t)
 }, e => e);
 
-function N(e, t) {
+function A(e, t) {
   let n = E(e);
   return null != n && null != t ? h(t, null == n ? void 0 : n.messageInputBorder) : null
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = (0, _.Sl)(d.Ilk.WHITE_500).hex;
   return (0, l.wj)(e) ? (0, s._i)(n) : null != t ? S(t) : null
 }

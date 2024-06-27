@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(103575),
   f = n(158776),
   E = n(699516),
-  g = n(111583),
-  C = n(594174),
+  C = n(111583),
+  g = n(594174),
   I = n(467679),
   x = n(360048),
   T = n(151827),
@@ -44,7 +44,7 @@ function D(e) {
     status: u,
     activities: d,
     lastOnlineTimestamp: h
-  } = e, p = (0, s.e7)([g.Z], () => null != g.Z.getTypingUsers(a.id)[t.id]), I = (0, s.e7)([C.default], () => C.default.getCurrentUser()), x = (0, s.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), T = (0, s.e7)([E.Z], () => E.Z.getNickname(t.id)), N = e => {
+  } = e, p = (0, s.e7)([C.Z], () => null != C.Z.getTypingUsers(a.id)[t.id]), I = (0, s.e7)([g.default], () => g.default.getCurrentUser()), x = (0, s.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), T = (0, s.e7)([E.Z], () => E.Z.getNickname(t.id)), N = e => {
     (0, o.jW)(e, async () => {
       let {
         default: e
@@ -175,11 +175,11 @@ function U(e, t) {
 function w(e) {
   let {
     channel: t
-  } = e, l = C.default.getCurrentUser(), o = null == l ? void 0 : l.isStaff(), {
+  } = e, l = g.default.getCurrentUser(), o = null == l ? void 0 : l.isStaff(), {
     analyticsLocations: c
   } = (0, d.ZP)(u.Z.MEMBER_LIST), {
     shouldTrackRecentlyOnlineExposure: _,
-    listItems: g
+    listItems: C
   } = function(e) {
     let {
       isRecentlyOnlineEnabled: t
@@ -188,13 +188,13 @@ function w(e) {
     }, {
       autoTrackExposure: !1
     });
-    return (0, s.e7)([E.Z, C.default, f.Z], () => {
+    return (0, s.e7)([E.Z, g.default, f.Z], () => {
       let n = !1,
-        i = (0, Z.T)(e.recipients, C.default),
+        i = (0, Z.T)(e.recipients, g.default),
         a = {};
       for (let e of i) {
         var l, s, r;
-        if (E.Z.isFriend(e.id) || e.id === (null === (l = C.default.getCurrentUser()) || void 0 === l ? void 0 : l.id)) {
+        if (E.Z.isFriend(e.id) || e.id === (null === (l = g.default.getCurrentUser()) || void 0 === l ? void 0 : l.id)) {
           let t = f.Z.getLastOnlineTimestamp(e.id),
             {
               isRecentlyOnlineShowable: i,
@@ -250,18 +250,18 @@ function w(e) {
   });
   a.useEffect(() => {
     if (o)
-      for (let e of g)(0, m.W)(e.user, {
+      for (let e of C)(0, m.W)(e.user, {
         dispatchWait: !0,
         channelId: t.id
       })
-  }, [o, g, t.id]), a.useEffect(() => {
+  }, [o, C, t.id]), a.useEffect(() => {
     N.default.track(R.rMx.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let y = o && g.every(e => e.user.isStaff());
+  let y = o && C.every(e => e.user.isStaff());
   return (0, i.jsx)(d.Gt, {
     value: c,
     children: (0, i.jsx)("div", {
@@ -271,11 +271,11 @@ function w(e) {
         fade: !0,
         children: [(0, i.jsxs)(T.Z, {
           className: P.membersGroup,
-          children: ["".concat(j.Z.Messages.MEMBERS, "—").concat(g.length, " "), y ? (0, i.jsx)(I.Z, {
+          children: ["".concat(j.Z.Messages.MEMBERS, "—").concat(C.length, " "), y ? (0, i.jsx)(I.Z, {
             className: P.__invalid_decorator,
             type: I.Z.Types.STAFF_ONLY_DM
           }) : null]
-        }), g.map(e => (0, i.jsx)(D, {
+        }), C.map(e => (0, i.jsx)(D, {
           user: e.user,
           status: e.status,
           activities: e.activities,

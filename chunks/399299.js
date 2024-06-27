@@ -19,16 +19,16 @@ var l = t(735250),
   g = t(695346),
   h = t(494620),
   C = t(592125),
-  Z = t(650774),
-  N = t(430824),
+  N = t(650774),
+  Z = t(430824),
   I = t(131951),
   x = t(944486),
   f = t(594174),
   A = t(449224),
   R = t(285952),
   T = t(366695),
-  L = t(346656),
-  v = t(626135),
+  v = t(346656),
+  L = t(626135),
   M = t(823379),
   p = t(63063),
   O = t(358085),
@@ -93,15 +93,15 @@ function Y(e) {
   let {
     onChange: n,
     guildId: t
-  } = e, s = (0, r.e7)([N.Z], () => N.Z.getGuild(t));
+  } = e, s = (0, r.e7)([Z.Z], () => Z.Z.getGuild(t));
   return null == s ? (n(), null) : (0, l.jsx)(o.FormItem, {
     title: W.Z.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
     className: z.modalContent,
     titleClassName: z.formItemTitle,
     children: (0, l.jsxs)(w.Z, {
-      children: [(0, l.jsx)(L.Z, {
+      children: [(0, l.jsx)(v.Z, {
         guild: s,
-        size: L.Z.Sizes.SMALLER,
+        size: v.Z.Sizes.SMALLER,
         className: F.selectedIcon
       }), (0, l.jsx)("span", {
         className: F.ellipsisText,
@@ -141,11 +141,11 @@ function Q(e) {
 function J(e) {
   let {
     guildId: n
-  } = e, t = (0, r.e7)([Z.Z], () => {
+  } = e, t = (0, r.e7)([N.Z], () => {
     var e;
-    return null !== (e = Z.Z.getMemberCount(n)) && void 0 !== e ? e : 0
+    return null !== (e = N.Z.getMemberCount(n)) && void 0 !== e ? e : 0
   }), a = g.eo.useSetting(), u = s.useCallback((e, n) => {
-    g.eo.updateSetting(n), v.default.track(k.rMx.NOTIFY_STREAM_SETTING_UPDATE, {
+    g.eo.updateSetting(n), L.default.track(k.rMx.NOTIFY_STREAM_SETTING_UPDATE, {
       value: n
     })
   }, []);
@@ -195,13 +195,13 @@ function X(e) {
     sourceChanged: c,
     selectedGuildId: S,
     targetGuildPremiumTier: g,
-    selectSource: Z,
-    selectGuild: N,
+    selectSource: N,
+    selectGuild: Z,
     sound: A,
     onClose: R,
     onChangeSelectedFPS: T,
-    onChangeSelectedResolution: L,
-    onChangeSelectedPreset: v,
+    onChangeSelectedResolution: v,
+    onChangeSelectedPreset: L,
     onChangeSelectedChannelId: M,
     onChangeSource: O,
     onChangeAudioDevice: P,
@@ -227,7 +227,7 @@ function X(e) {
       onChangeAudioDevice: P
     }) : (0, l.jsxs)("div", {
       children: [(0, l.jsx)(K, {
-        selectSource: Z,
+        selectSource: N,
         sourceChanged: c,
         onChangeSource: O,
         selectedSource: n
@@ -238,7 +238,7 @@ function X(e) {
         onChange: y,
         screen: n.id.startsWith("screen")
       }) : null]
-    }), N && null != S ? (0, l.jsx)(Y, {
+    }), Z && null != S ? (0, l.jsx)(Y, {
       guildId: S,
       onChange: w
     }) : null, null != z ? (0, l.jsx)(b.Z, {
@@ -272,8 +272,8 @@ function X(e) {
       targetGuildPremiumTier: g,
       onClose: R,
       onFPSChange: T,
-      onResolutionChange: L,
-      onPresetChange: v,
+      onResolutionChange: v,
+      onPresetChange: L,
       captureDeviceSelected: ea
     }), es]
   })

@@ -9,8 +9,8 @@ var i, a = n(735250),
   u = n(498179),
   _ = n(276852),
   E = n(994339),
-  I = n(275920),
-  m = n(431583),
+  m = n(275920),
+  I = n(431583),
   T = n(592745),
   h = n(952164),
   N = n(768419),
@@ -21,8 +21,8 @@ var i, a = n(735250),
   S = n(757266),
   A = n(831506),
   R = n(271383),
-  x = n(283595),
-  O = n(293273),
+  O = n(283595),
+  x = n(293273),
   M = n(594174),
   v = n(181106),
   L = n(417363),
@@ -105,7 +105,7 @@ class G extends(i = s.PureComponent) {
           applicationId: e.application_id,
           channelId: a,
           messageId: i.id
-        }), (0, I.Z)({
+        }), (0, m.Z)({
           type: U.q5t.JOIN,
           source: U.Sbl.MESSAGE_EMBED,
           userId: n,
@@ -141,7 +141,7 @@ class G extends(i = s.PureComponent) {
       } = this.props;
       null != e && null != t && d.Z_(e, t)
     }), B(this, "handleDownloadApp", () => {
-      (0, r.openModal)(e => (0, a.jsx)(m.default, {
+      (0, r.openModal)(e => (0, a.jsx)(I.default, {
         source: "Game Invite",
         ...e
       }))
@@ -196,8 +196,8 @@ class G extends(i = s.PureComponent) {
         className: u,
         channelId: _,
         message: E,
-        hideParty: I,
-        isSyncable: m,
+        hideParty: m,
+        isSyncable: I,
         isLaunchable: T,
         guildId: h
       } = this.props;
@@ -220,12 +220,12 @@ class G extends(i = s.PureComponent) {
         isLoading: o || this.state.sending,
         activityActionType: d,
         isInBrowser: !b.isPlatformEmbedded,
-        isSyncable: m,
+        isSyncable: I,
         isSender: c,
         channelId: _,
         guildId: null != h ? h : void 0,
         message: E,
-        hideParty: I,
+        hideParty: m,
         onJoin: this.handleJoin,
         onInvite: this.handleInvite,
         onSync: this.handleSync,
@@ -242,7 +242,7 @@ class G extends(i = s.PureComponent) {
 }
 B(G, "defaultProps", {
   isPreview: !1
-}), t.Z = l.ZP.connectStores([N.Z, A.Z, O.Z, x.Z, T.Z, L.Z, S.Z, v.Z, M.default, R.ZP], e => {
+}), t.Z = l.ZP.connectStores([N.Z, A.Z, x.Z, O.Z, T.Z, L.Z, S.Z, v.Z, M.default, R.ZP], e => {
   let {
     activity: t,
     analyticsLocations: n,
@@ -252,7 +252,7 @@ B(G, "defaultProps", {
     guildId: l
   } = e, {
     id: r
-  } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? A.Z.getParty(t.party.id) : null, c = null != r ? O.Z.getApplicationActivity(r) : O.Z.findActivity(e => e.type === U.IIU.LISTENING), d = !1;
+  } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === a ? A.Z.getParty(t.party.id) : null, c = null != r ? x.Z.getApplicationActivity(r) : x.Z.findActivity(e => e.type === U.IIU.LISTENING), d = !1;
   null != r && (d = v.Z.getState(r, U.mFx.JOIN) === U.OcF.LOADING);
   let u = Array.from(null != o ? o : []).map(e => {
       let t = null != l ? R.ZP.getMember(l, e) : null,
@@ -269,16 +269,16 @@ B(G, "defaultProps", {
     }),
     _ = null != t && N.Z.canPlay(t),
     E = N.Z.getSyncingWith(),
-    I = null != E && null != s && E.userId === s;
+    m = null != E && null != s && E.userId === s;
   return {
     analyticsLocations: n,
     partyMembers: u,
     connectedApplication: null != r ? S.Z.getApplication(r) : null,
     myPartyId: null != c && null != c.party ? c.party.id : null,
     isLaunching: d,
-    isSyncable: _ && !I,
+    isSyncable: _ && !m,
     isLaunchable: null != r && (0, D.t)({
-      LibraryApplicationStore: x.Z,
+      LibraryApplicationStore: O.Z,
       LaunchableGameStore: T.Z,
       DispatchApplicationStore: L.Z,
       ConnectedAppsStore: S.Z,

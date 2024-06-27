@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   J7: function() {
-    return p
+    return R
   },
   JM: function() {
     return m
@@ -25,16 +25,16 @@ n.d(t, {
     return E
   },
   pX: function() {
-    return A
+    return N
   },
   sq: function() {
     return I
   },
   wk: function() {
-    return R
+    return p
   },
   zd: function() {
-    return N
+    return A
   }
 });
 var i = n(367907),
@@ -116,7 +116,7 @@ function S(e, t) {
     record: e
   }, {}, t, void 0, !1)
 }
-async function N(e, t) {
+async function A(e, t) {
   try {
     await (0, _.ox)({
       name: u.b.FIRST_DM,
@@ -127,7 +127,7 @@ async function N(e, t) {
   } catch {}
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   g(u.b.USER, {
     reported_user_id: e.id
   }), (0, c.m)({
@@ -157,7 +157,7 @@ function O(e, t) {
     record: n
   }, {}, t, void 0, !1, !1, e)
 }
-async function p(e, t, n) {
+async function R(e, t, n) {
   try {
     await (0, _.ox)({
       name: u.b.MESSAGE,
@@ -170,7 +170,7 @@ async function p(e, t, n) {
   }
 }
 
-function R(e, t) {
+function p(e, t) {
   g(u.b.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id

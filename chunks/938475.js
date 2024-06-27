@@ -4,7 +4,7 @@ n.d(t, {
     return g
   },
   sQ: function() {
-    return R
+    return p
   }
 }), n(47120), n(724458);
 var i, r = n(392711),
@@ -30,28 +30,28 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = Object.freeze([]),
-  A = {};
+let A = Object.freeze([]),
+  N = {};
 
 function m(e) {
-  let t = A[e];
-  return null == t && (t = new C(e), A[e] = t), t
+  let t = N[e];
+  return null == t && (t = new C(e), N[e] = t), t
 }
 
 function O(e, t) {
   return d.ZP.getMember(e, t.id)
 }
 
-function p(e, t, n) {
+function R(e, t, n) {
   var i;
   let r = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : h.ZP.getName(n);
   return {
     member: t,
-    comparator: R(e, r)
+    comparator: p(e, r)
   }
 }
 
-function R(e, t) {
+function p(e, t) {
   return "".concat(e.selfStream ? "\0" : "\x01").concat(t.toLowerCase(), "\0").concat(e.userId)
 }
 
@@ -67,7 +67,7 @@ function g(e, t, n) {
   let {
     member: o,
     comparator: a
-  } = p(e, O(t, i = r), i), l = {
+  } = R(e, O(t, i = r), i), l = {
     voiceState: e,
     user: r,
     member: o,
@@ -91,7 +91,7 @@ class C {
         return this._voiceStates.set(e, {
           ...n,
           member: s,
-          comparator: R(t, o),
+          comparator: p(t, o),
           nick: o,
           voiceState: t
         }), !0
@@ -109,7 +109,7 @@ class C {
       if ((null == s ? void 0 : s.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == s ? void 0 : s.avatar) !== (null === (r = t.member) || void 0 === r ? void 0 : r.avatar)) {
         let {
           comparator: i
-        } = p(t.voiceState, s, n);
+        } = R(t.voiceState, s, n);
         return this._voiceStates.set(e, {
           ...t,
           member: s,
@@ -135,7 +135,7 @@ class C {
   getVoiceStatesForChannel(e) {
     this.processPending();
     let t = this._voiceStates.values(e);
-    return 0 === t.length ? N : t
+    return 0 === t.length ? A : t
   }
   countVoiceStatesForChannel(e) {
     return this.processPending(), this._voiceStates.size(e)
@@ -167,11 +167,11 @@ class C {
 }
 
 function v() {
-  return s().reduce(A, (e, t) => t.updateUsers() || e, !1)
+  return s().reduce(N, (e, t) => t.updateUsers() || e, !1)
 }
 
 function L() {
-  A = {};
+  N = {};
   let e = I.Z.getAllVoiceStates();
   T.default.keys(e).forEach(t => {
     Object.keys(e[t]).forEach(e => {
@@ -187,7 +187,7 @@ class D extends(i = o.ZP.Store) {
     return m(null != e ? e : f.ME).getVoiceStates()
   }
   getAllVoiceStates() {
-    return A
+    return N
   }
   getVoiceStatesForChannel(e) {
     let t = e.getGuildId(),
@@ -209,7 +209,7 @@ class D extends(i = o.ZP.Store) {
 }
 S(D, "displayName", "SortedVoiceStateStore"), t.ZP = new D(l.Z, {
   CONNECTION_OPEN: function() {
-    A = {}
+    N = {}
   },
   OVERLAY_INITIALIZE: function() {
     L()
@@ -243,18 +243,18 @@ S(D, "displayName", "SortedVoiceStateStore"), t.ZP = new D(l.Z, {
     let {
       guild: t
     } = e;
-    delete A[t.id]
+    delete N[t.id]
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete A[t.id]
+    delete N[t.id]
   },
   PASSIVE_UPDATE_V2: function(e) {
     var t, n;
     let i = !1,
-      r = new Set(null === (t = A[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
+      r = new Set(null === (t = N[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
       s = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId)),
       o = new Set(e.removedVoiceStateUsers);
     for (let t of new Set([...r, ...s])) i = m(e.guildId).updateVoiceState(t) || i;

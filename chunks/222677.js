@@ -4,7 +4,7 @@ n.d(t, {
     return C
   },
   T6: function() {
-    return R
+    return p
   },
   TW: function() {
     return r
@@ -19,7 +19,7 @@ n.d(t, {
     return v
   },
   rU: function() {
-    return p
+    return R
   },
   wX: function() {
     return g
@@ -40,7 +40,7 @@ var i, r, s = n(544891),
   f = n(981631),
   S = n(689938);
 
-function N(e, t, n) {
+function A(e, t, n) {
   let {
     status: i,
     body: r
@@ -63,7 +63,7 @@ function N(e, t, n) {
   return !0
 }
 
-function A(e, t, n, i, r) {
+function N(e, t, n, i, r) {
   var s, o;
   a.Z.dispatch({
     type: e,
@@ -122,7 +122,7 @@ async function O(e) {
     reactionType: l
   }), d
 }
-async function p(e, t, n) {
+async function R(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
     r = arguments.length > 4 ? arguments[4] : void 0,
     a = null != r && !!r.burst,
@@ -139,7 +139,7 @@ async function p(e, t, n) {
     return
   }
   let E = await L(n, a);
-  return A("MESSAGE_REACTION_ADD", e, t, n, {
+  return N("MESSAGE_REACTION_ADD", e, t, n, {
     burst: a,
     colors: E
   }), await _.Z.unarchiveThreadIfNecessary(e), s.tn.put({
@@ -168,12 +168,12 @@ async function p(e, t, n) {
       name: n.name
     }))
   }).catch(r => {
-    N(r, () => p(e, t, n, i, {
+    A(r, () => R(e, t, n, i, {
       burst: a,
       isRetry: !0
     }), {
       isRetry: c
-    }) && (A("MESSAGE_REACTION_REMOVE", e, t, n, {
+    }) && (N("MESSAGE_REACTION_REMOVE", e, t, n, {
       burst: a
     }), a ? o.uv.announce(S.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
       name: n.name
@@ -183,7 +183,7 @@ async function p(e, t, n) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     channelId: t,
     messageId: n,
@@ -204,7 +204,7 @@ async function g(e, t, n) {
     url: f.ANM.REMOVE_REACTIONS(e, t),
     oldFormErrors: !0
   }).catch(n => {
-    N(n, () => g(e, t, {
+    A(n, () => g(e, t, {
       isRetry: !0
     }), {
       isRetry: i
@@ -219,7 +219,7 @@ async function C(e, t, n, i) {
     url: f.ANM.REMOVE_EMOJI_REACTIONS(e, t, o),
     oldFormErrors: !0
   }).catch(i => {
-    N(i, () => C(e, t, n, {
+    A(i, () => C(e, t, n, {
       isRetry: !0
     }), {
       isRetry: r
@@ -231,7 +231,7 @@ async function v(e, t, n, i) {
     a = arguments.length > 5 ? arguments[5] : void 0,
     l = null != a && !!a.burst,
     c = null != a && !!a.isRetry;
-  A("MESSAGE_REACTION_REMOVE", e, t, n, {
+  N("MESSAGE_REACTION_REMOVE", e, t, n, {
     userId: i,
     burst: l
   }), await _.Z.unarchiveThreadIfNecessary(e), s.tn.del({
@@ -255,14 +255,14 @@ async function v(e, t, n, i) {
       name: n.name
     }))
   }).catch(async s => {
-    if (N(s, () => v(e, t, n, i, r, {
+    if (A(s, () => v(e, t, n, i, r, {
         burst: l,
         isRetry: !0
       }), {
         isRetry: c
       })) {
       let r = await L(n, l);
-      A("MESSAGE_REACTION_ADD", e, t, n, {
+      N("MESSAGE_REACTION_ADD", e, t, n, {
         userId: i,
         burst: l,
         colors: r

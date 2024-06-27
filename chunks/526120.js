@@ -7,13 +7,13 @@ n.d(t, {
     return f
   },
   Oh: function() {
-    return A
+    return N
   },
   cP: function() {
     return h
   },
   gp: function() {
-    return N
+    return A
   }
 }), n(47120), n(724458);
 var i = n(544891),
@@ -96,7 +96,7 @@ let h = async e => {
     flash: !1,
     jumpType: o.SR.INSTANT
   })
-}, N = (e, t) => {
+}, A = (e, t) => {
   r.Z.dispatch({
     type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
     guildId: e,
@@ -110,7 +110,7 @@ let h = async e => {
     server_guide_channel_type: "member action",
     channel_action_type: i.actionType
   }), (0, l.Kh)(t)
-}, A = (e, t) => {
+}, N = (e, t) => {
   if (r.Z.dispatch({
       type: "COMPLETE_NEW_MEMBER_ACTION",
       guildId: e,

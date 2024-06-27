@@ -1,9 +1,9 @@
 n.d(t, {
   H: function() {
-    return C
+    return g
   },
   T: function() {
-    return g
+    return C
   }
 }), n(47120), n(724458);
 var i = n(470079),
@@ -21,24 +21,24 @@ var i = n(470079),
   _ = n(809017),
   f = n(981631),
   E = n(689938);
-let g = 0;
+let C = 0;
 
-function C(e) {
+function g(e) {
   let {
     memberStoreProps: {
       groups: t,
       rows: n,
-      version: g
+      version: C
     },
-    channelId: C,
+    channelId: g,
     guildId: I
   } = e, [x, T] = i.useState(!1), {
     requestId: N,
     entries: v,
     impressionCappedEntryIds: S
-  } = (0, h.Z)(C), Z = (0, a.e7)([d.Z], () => d.Z.hidden), A = (0, a.e7)([o.Z], () => o.Z.isFocused()), M = (0, a.e7)([r.Z], () => r.Z.getChannel(C)), b = (null == M ? void 0 : M.isForumChannel()) === !1, [R, j, L, P] = i.useMemo(() => {
+  } = (0, h.Z)(g), Z = (0, a.e7)([d.Z], () => d.Z.hidden), A = (0, a.e7)([o.Z], () => o.Z.isFocused()), M = (0, a.e7)([r.Z], () => r.Z.getChannel(g)), b = (null == M ? void 0 : M.isForumChannel()) === !1, [R, j, L, P] = i.useMemo(() => {
     let e;
-    if (null == v || 0 === v.length || null == N || !b) return [t, n, g];
+    if (null == v || 0 === v.length || null == N || !b) return [t, n, C];
     let i = x ? v.length : 3,
       a = v.slice(0, i);
     e = Z ? [{
@@ -59,7 +59,7 @@ function C(e) {
         T(e => {
           let t = !e;
           return c.default.track(f.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-            channel_id: C,
+            channel_id: g,
             guild_id: I,
             expanded: t
           }), t
@@ -73,7 +73,7 @@ function C(e) {
       [l, ...t],
       [...n, l, ...e], Math.random(), e
     ]
-  }, [C, v, x, t, I, N, n, g, Z, b]), O = i.useRef(0), y = i.useRef(v), D = i.useRef(), k = i.useRef({
+  }, [g, v, x, t, I, N, n, C, Z, b]), O = i.useRef(0), y = i.useRef(v), D = i.useRef(), k = i.useRef({
     impressionCappedEntryIds: S
   }), U = i.useCallback(e => {
     var t;
@@ -97,7 +97,7 @@ function C(e) {
       first_shown_at: D.current,
       item_ids: i,
       surface_type: m.Kd.GUILD_MEMBER_LIST,
-      channel_id: C,
+      channel_id: g,
       guild_id: I,
       all_item_ids: n,
       impression_capped_item_ids: [...k.current.impressionCappedEntryIds]
@@ -105,7 +105,7 @@ function C(e) {
       type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS",
       itemIds: i
     })
-  }), [N, C, I, Z, A, b]), {
+  }), [N, g, I, Z, A, b]), {
     groups: R,
     rows: j,
     version: L,

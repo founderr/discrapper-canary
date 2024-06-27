@@ -1,18 +1,18 @@
 "use strict";
 let i, r, s, o, a, l, u, _, c, d, E, I, T, h;
-var f, S, N, A, m = n(979554),
+var f, S, A, N, m = n(979554),
   O = n(442837),
-  p = n(570140),
-  R = n(981631);
-let g = R.QZA.CLOSED,
+  R = n(570140),
+  p = n(981631);
+let g = p.QZA.CLOSED,
   C = {};
 
 function v() {
-  g = R.QZA.OPEN, C = {}
+  g = p.QZA.OPEN, C = {}
 }
 
 function L() {
-  g = R.QZA.CLOSED, C = {}
+  g = p.QZA.CLOSED, C = {}
 }
 
 function D() {
@@ -30,7 +30,7 @@ function P() {
 function y() {
   E = void 0, I = void 0, T = void 0, h = void 0, d = void 0
 }
-class U extends(A = O.ZP.Store) {
+class U extends(N = O.ZP.Store) {
   getFormState() {
     return g
   }
@@ -41,7 +41,7 @@ class U extends(A = O.ZP.Store) {
     return void 0 !== i || void 0 !== a || void 0 !== l || void 0 !== u || void 0 !== _ || void 0 !== c || void 0 !== s || void 0 !== o || void 0 !== r
   }
   getIsSubmitDisabled() {
-    return void 0 !== l && l.length > R.tPV
+    return void 0 !== l && l.length > p.tPV
   }
   getPendingAvatar() {
     return i
@@ -108,12 +108,12 @@ class U extends(A = O.ZP.Store) {
     }
   }
 }
-N = "UserSettingsAccountStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
-  value: N,
+A = "UserSettingsAccountStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
+  value: A,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : f[S] = N, t.Z = new U(p.Z, {
+}) : f[S] = A, t.Z = new U(R.Z, {
   USER_SETTINGS_ACCOUNT_INIT: v,
   USER_SETTINGS_MODAL_INIT: v,
   USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: v,
@@ -121,19 +121,19 @@ N = "UserSettingsAccountStore", (S = "displayName") in(f = U) ? Object.definePro
     let {
       section: t
     } = e;
-    return t === R.oAB.ACCOUNT && v()
+    return t === p.oAB.ACCOUNT && v()
   },
   USER_SETTINGS_ACCOUNT_CLOSE: L,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
     D(), y(), L()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-    g = R.QZA.SUBMITTING, C = {}
+    g = p.QZA.SUBMITTING, C = {}
   },
   USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
     var t;
-    if (g !== R.QZA.SUBMITTING) return !1;
-    g = R.QZA.OPEN, C = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (g !== p.QZA.SUBMITTING) return !1;
+    g = p.QZA.OPEN, C = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
     let {

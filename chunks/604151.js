@@ -21,10 +21,10 @@ let h = function(e, t) {
   let h = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     f = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     S = _.Z.getChannel(e),
-    N = I.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-    A = null != S ? d.Z.getCheck(S.guild_id) : null;
-  if (!(null != t && (0, s.n)(t)) && (null == A || !!A.canChat || !!(0, o.jU)(S))) {
-    if (null != S && !N) {
+    A = I.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+    N = null != S ? d.Z.getCheck(S.guild_id) : null;
+  if (!(null != t && (0, s.n)(t)) && (null == N || !!N.canChat || !!(0, o.jU)(S))) {
+    if (null != S && !A) {
       let e = (0, T.rY)(S, I.Z, c.Z);
       if (e && S.isGuildStageVoice() && (0, a.xJ)(S.id)) {
         (0, i.ZD)(async () => {

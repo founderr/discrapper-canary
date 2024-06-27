@@ -16,7 +16,7 @@ n.d(t, {
     return D
   },
   pI: function() {
-    return p
+    return R
   },
   sR: function() {
     return L
@@ -41,24 +41,24 @@ var i = n(399606),
   h = n(208049),
   f = n(763296),
   S = n(697426),
-  N = n(641015),
-  A = n(893663),
+  A = n(641015),
+  N = n(893663),
   m = n(710111),
   O = n(981631);
 
-function p() {
+function R() {
   var e;
   let t = o.kU.getSetting();
   return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
 }
 
-function R(e, t) {
+function p(e, t) {
   return (null == t ? void 0 : t.guild_id) == null || c.Z.can(O.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === m.X8 || e.guildId === (null == t ? void 0 : t.guild_id)
 }
 
 function g(e, t, n) {
   let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return (I.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === m.X8) && R(t, n) && (!i || t.available)
+  return (I.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === m.X8) && p(t, n) && (!i || t.available)
 }
 
 function C(e, t, n) {
@@ -67,14 +67,14 @@ function C(e, t, n) {
 async function v(e) {
   let t = d.default.getCurrentUser(),
     n = (0, s.Z)(),
-    i = (0, A.k9)(e);
-  if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, N.D)()) return;
+    i = (0, N.k9)(e);
+  if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, A.D)()) return;
   await (0, h.w)();
   let r = i.guildId === m.hY ? m.X8 : i.guildId,
     o = f.Z.getSound(r, i.soundId);
   if (null != o) {
     var a, l;
-    if (!R(o, n) || !g(t, o, n, !0)) return null;
+    if (!p(o, n) || !g(t, o, n, !0)) return null;
     a = o, l = n.id, (0, h.XE)(l, a, S.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, a, __OVERLAY__)
   }
 }

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   $I: function() {
-    return R
+    return p
   },
   Fc: function() {
     return D
   },
   Ku: function() {
-    return p
+    return R
   },
   VF: function() {
     return M
@@ -37,7 +37,7 @@ n.d(t, {
     return g
   },
   p: function() {
-    return N
+    return A
   },
   p1: function() {
     return i
@@ -52,7 +52,7 @@ n.d(t, {
     return s
   },
   wm: function() {
-    return A
+    return N
   },
   zV: function() {
     return P
@@ -63,13 +63,13 @@ n.d(t, {
 }), n(47120);
 var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f = n(70956),
   S = n(981631);
-let N = 100,
-  A = 1e3,
+let A = 100,
+  N = 1e3,
   m = 100,
   O = "Guild Events Modal",
-  p = "-1";
+  R = "-1";
 (_ = i || (i = {}))[_.SCHEDULED = 1] = "SCHEDULED", _[_.ACTIVE = 2] = "ACTIVE", _[_.COMPLETED = 3] = "COMPLETED", _[_.CANCELED = 4] = "CANCELED";
-let R = new Set([3, 4]);
+let p = new Set([3, 4]);
 (c = r || (r = {}))[c.NONE = 0] = "NONE", c[c.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", c[c.VOICE = 2] = "VOICE", c[c.EXTERNAL = 3] = "EXTERNAL", c[c.PRIME_TIME = 4] = "PRIME_TIME", (d = s || (s = {}))[d.EVENT_START = 1] = "EVENT_START", (E = o || (o = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
 let g = {
     1: S.d4z.GUILD_STAGE_VOICE,

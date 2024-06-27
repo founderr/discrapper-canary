@@ -1,6 +1,6 @@
 n.d(t, {
   o: function() {
-    return m
+    return g
   }
 });
 var i = n(735250),
@@ -16,9 +16,9 @@ var i = n(735250),
   p = n(981631),
   _ = n(731455),
   f = n(689938),
-  g = n(356131);
+  m = n(356131);
 
-function m() {
+function g() {
   let e = window.location.pathname.startsWith(p.Z5c.GUILD_DISCOVERY),
     t = d.ZP.getCurrentCategoryId() === _.Gj.Clans;
   e && !t && ((0, s.AQ)(), (0, s.uY)(_.Hk, !0));
@@ -42,12 +42,12 @@ let C = l.forwardRef(function(e, t) {
     }
   };
   return d && !p && (_.lowerBadge = (0, i.jsx)("div", {
-    className: g.guildNotif
+    className: m.guildNotif
   })), (0, i.jsx)(h.Z, {
     id: "guild-discover-button",
     ref: t,
     className: s,
-    onClick: null != u ? u : m,
+    onClick: null != u ? u : g,
     selected: n,
     tooltip: null != l ? l : f.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
     icon: a.CompassIcon,

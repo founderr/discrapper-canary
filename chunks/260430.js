@@ -63,14 +63,14 @@ function h(e) {
   } = e, f = (0, o.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
   if (0 === r.length) return null;
   let S = f(),
-    N = h ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
-    A = _ === a.Y.USER_INSTALL && s.includes(l.x.APPLICATIONS_COMMANDS);
+    A = h ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
+    N = _ === a.Y.USER_INSTALL && s.includes(l.x.APPLICATIONS_COMMANDS);
   return (0, i.jsxs)("div", {
     className: I.scopes,
     children: [(0, i.jsx)(u.X, {
       variant: "heading-deprecated-12/semibold",
       className: I.sectionLabel,
-      children: N.format({
+      children: A.format({
         application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""
       })
     }), r.map(e => {
@@ -79,7 +79,7 @@ function h(e) {
         text: (0, d.jW)(e, r),
         error: null == c ? void 0 : null === (t = c[e]) || void 0 === t ? void 0 : t[0]
       }, e)
-    }), A && (0, i.jsx)(T, {
+    }), N && (0, i.jsx)(T, {
       text: E.Z.Messages.SCOPE_DM_YOU
     }), (0, i.jsx)(T, {
       text: S,

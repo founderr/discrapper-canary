@@ -12,22 +12,22 @@ let I = {},
   h = null,
   f = null,
   S = null,
-  N = "lastChangeLogDate",
-  A = null,
+  A = "lastChangeLogDate",
+  N = null,
   m = null,
   O = new Set;
 
-function p() {
-  A = c.l4.getSetting()
+function R() {
+  N = c.l4.getSetting()
 }
-class R extends(i = a.ZP.Store) {
+class p extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.default, d.Z), this.syncWith([_.default], () => !0), this.syncWith([d.Z], p);
-    let e = l.K.get(N);
+    this.waitFor(_.default, d.Z), this.syncWith([_.default], () => !0), this.syncWith([d.Z], R);
+    let e = l.K.get(A);
     if (null != e) try {
       m = new Date(e)
     } catch {
-      l.K.remove(N)
+      l.K.remove(A)
     }
   }
   getChangelog(e, t) {
@@ -51,7 +51,7 @@ class R extends(i = a.ZP.Store) {
     return f
   }
   lastSeenChangelogId() {
-    return A
+    return N
   }
   lastSeenChangelogDate() {
     return m
@@ -60,7 +60,7 @@ class R extends(i = a.ZP.Store) {
     return {
       changelogConfig: S,
       loadedChangelogs: T,
-      lastSeenChangelogId: A,
+      lastSeenChangelogId: N,
       lastSeenChangelogDate: m
     }
   }
@@ -68,12 +68,12 @@ class R extends(i = a.ZP.Store) {
     return O.size > 0
   }
 }
-o = "ChangelogStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+o = "ChangelogStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new R(u.Z, {
+}) : r[s] = o, t.Z = new p(u.Z, {
   CHANGE_LOG_LOCK: function(e) {
     let {
       key: t
@@ -127,6 +127,6 @@ o = "ChangelogStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s
     let {
       changelogDate: t
     } = e;
-    m = new Date(t), l.K.set(N, t)
+    m = new Date(t), l.K.set(A, t)
   }
 })

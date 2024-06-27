@@ -23,7 +23,7 @@ function f(e) {
 function S(e) {
   return !(e === d.ME || E.includes(e)) && (E = [...E, e], !0)
 }
-class N extends(i = a.ZP.Store) {
+class A extends(i = a.ZP.Store) {
   initialize() {
     this.waitFor(_.Z, c.default)
   }
@@ -52,12 +52,12 @@ class N extends(i = a.ZP.Store) {
     return null != e ? I[e] : null
   }
 }
-o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+o = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new N(l.Z, {
+}) : r[s] = o, t.Z = new A(l.Z, {
   CONNECTION_OPEN: function() {
     E = Object.values(_.Z.getGuilds()).reduce((e, t) => t.isLurker() ? [...e, t.id] : e, [])
   },

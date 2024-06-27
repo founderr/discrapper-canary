@@ -36,9 +36,9 @@ let I = {
   },
   S = [A.HeQ.CARD, A.HeQ.PAYPAL],
   C = new Set(["DE", "BG", "CZ", "DK", "HU", "RO", "SE", "CH", "SI", "IE", "LV", "MT", "FR", "SK", "FI", "GR", "PT", "LU", "LT", "CY", "NO", "NL", "ES", "BE", "AT", "IT"]),
-  P = new Set(["BE", "NL", "DE", "ES", "AT", "IT"]),
-  b = new Map([
-    [A.HeQ.SOFORT, new Set(["ALL", ...P])],
+  b = new Set(["BE", "NL", "DE", "ES", "AT", "IT"]),
+  P = new Map([
+    [A.HeQ.SOFORT, new Set(["ALL", ...b])],
     [A.HeQ.PRZELEWY24, new Set(["ALL", "PL"])],
     [A.HeQ.GIROPAY, new Set(["ALL", "DE"])],
     [A.HeQ.PAYSAFE_CARD, new Set(["ALL", ...C])],
@@ -70,7 +70,7 @@ function f(e) {
   n.length > 0 && null != t && null != e && (r = n.includes(e) ? e : t);
   let s = new Set,
     l = [];
-  return b.forEach((e, t) => {
+  return P.forEach((e, t) => {
     a.includes(t) && (e.has(r) ? s.add(t) : l.push(t))
   }), R.forEach((e, a) => {
     e.has(r) && s.add(a)

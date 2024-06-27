@@ -17,10 +17,10 @@ let c = r.forwardRef(function(e, t) {
     expressionsListRef: I,
     defaultSearchPlaceholder: T,
     emptySearchPlaceholder: h
-  } = e, f = r.useRef(null), [S, N] = (0, u.Iu)(e => [e.searchQuery, e.isSearchSuggestion], s.Z), A = n.useStore(e => e.searchPlaceholder), m = n.useStore(e => e.inspectedExpressionPosition, s.Z), O = r.useCallback(e => {
+  } = e, f = r.useRef(null), [S, A] = (0, u.Iu)(e => [e.searchQuery, e.isSearchSuggestion], s.Z), N = n.useStore(e => e.searchPlaceholder), m = n.useStore(e => e.inspectedExpressionPosition, s.Z), O = r.useCallback(e => {
     var t;
     n.setActiveCategoryIndex("" === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
-  }, [I, n]), p = r.useCallback(() => {
+  }, [I, n]), R = r.useCallback(() => {
     (0, u.ql)("")
   }, []);
   return r.useImperativeHandle(t, () => ({
@@ -29,11 +29,11 @@ let c = r.forwardRef(function(e, t) {
       return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
     }
   })), r.useLayoutEffect(() => {
-    if (N) {
+    if (A) {
       var e;
       null === (e = f.current) || void 0 === e || e.focus()
     }
-  }, [N]), (0, i.jsx)("div", {
+  }, [A]), (0, i.jsx)("div", {
     className: _.wrapper,
     children: (0, i.jsx)(a.ZP, {
       autoFocus: c,
@@ -41,8 +41,8 @@ let c = r.forwardRef(function(e, t) {
       query: S,
       ref: f,
       size: a.ZP.Sizes.MEDIUM,
-      placeholder: null != A ? A : c || null == h ? T : h,
-      onClear: p,
+      placeholder: null != N ? N : c || null == h ? T : h,
+      onClear: R,
       onKeyDown: d,
       onQueryChange: O,
       className: _.__invalid_searchBar,

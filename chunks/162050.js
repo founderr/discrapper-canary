@@ -17,8 +17,8 @@ var l = n(442837),
   p = n(436088),
   _ = n(51144),
   f = n(603592),
-  g = n(674552),
-  m = n(689938);
+  m = n(674552),
+  g = n(689938);
 
 function C() {
   var e;
@@ -42,7 +42,7 @@ function C() {
       S && null != n && a.default.selectPrivateChannel(n.id)
     },
     icon: p.Z,
-    tooltip: null != N ? m.Z.Messages.BROADCASTING_CHANNEL_NAME.format({
+    tooltip: null != N ? g.Z.Messages.BROADCASTING_CHANNEL_NAME.format({
       name: N
     }) : void 0,
     selected: Z,
@@ -51,6 +51,6 @@ function C() {
       src: null == E ? void 0 : E.getAvatarURL(null, 16),
       "aria-label": N
     }),
-    lowerBadge: I > 0 ? (0, g.Ne)(I) : null
+    lowerBadge: I > 0 ? (0, m.Ne)(I) : null
   }) : null
 }

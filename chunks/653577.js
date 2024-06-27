@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(626135),
   _ = n(981631),
   f = n(689938),
-  g = n(387592),
-  m = n(622322);
+  m = n(387592),
+  g = n(622322);
 
 function C(e) {
   let {
@@ -37,13 +37,13 @@ function C(e) {
   }, [t.id, S, t.guild_id]);
   let L = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
   if (null == t.guild_id) return null;
-  let A = a()(g.statusDiv, n && v ? g.hoverable : null);
+  let A = a()(m.statusDiv, n && v ? m.hoverable : null);
   if (S) return (0, i.jsx)(o.Clickable, {
     className: A,
     onClick: v ? I : void 0,
     children: (0, i.jsx)(o.Text, {
       variant: "text-xs/medium",
-      className: a()(g.statusText, m.markup),
+      className: a()(m.statusText, g.markup),
       children: (0, i.jsx)(h.Z, {
         children: d.Z.parseVoiceChannelStatus(x, !0, {
           channelId: t.id
@@ -56,12 +56,12 @@ function C(e) {
     onClick: I,
     children: [(0, i.jsx)(o.Text, {
       variant: "text-xs/medium",
-      className: g.statusText,
+      className: m.statusText,
       children: f.Z.Messages.VOICE_CHANNEL_SET_STATUS
     }), (0, i.jsx)(o.PencilIcon, {
       size: "custom",
       color: "currentColor",
-      className: g.pencilIcon,
+      className: m.pencilIcon,
       width: L,
       height: L
     })]

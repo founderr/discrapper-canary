@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(174767),
   _ = n(240126),
   E = n(791914),
-  I = n(326838),
-  m = n(689938),
+  m = n(326838),
+  I = n(689938),
   T = n(277539);
 
 function h(e) {
@@ -40,8 +40,8 @@ function h(e) {
       className: T.__invalid_emptyStateContainer,
       children: (0, i.jsx)(_.Z, {
         Icon: c.GameControllerIcon,
-        header: m.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-        tip: m.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+        header: I.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+        tip: I.Z.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
       })
     })]
   }) : (0, i.jsxs)("div", {
@@ -53,7 +53,7 @@ function h(e) {
       closePopout: h,
       children: (0, i.jsx)(c.CircleIconButton, {
         className: T.__invalid_deleteButton,
-        tooltip: m.Z.Messages.GAME_INVITES_DELETE_ALL,
+        tooltip: I.Z.Messages.GAME_INVITES_DELETE_ALL,
         color: c.CircleIconButtonColors.SECONDARY,
         icon: (0, i.jsx)(c.TrashIcon, {
           size: "xs"
@@ -77,18 +77,18 @@ function h(e) {
         className: T.invitesContainer,
         children: [C.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(N, {
-            title: m.Z.Messages.GAME_INVITES_RECENT_HEADER
+            title: I.Z.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, i.jsx)(i.Fragment, {
-            children: C.map(e => (0, i.jsx)(I.Z, {
+            children: C.map(e => (0, i.jsx)(m.Z, {
               invite: e,
               expired: !1
             }, e.invite_id))
           })]
         }), g.length > 0 && (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(N, {
-            title: m.Z.Messages.GAME_INVITES_EXPIRED_HEADER
+            title: I.Z.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, i.jsx)(i.Fragment, {
-            children: g.map(e => (0, i.jsx)(I.Z, {
+            children: g.map(e => (0, i.jsx)(m.Z, {
               invite: e,
               expired: !0
             }, e.invite_id))

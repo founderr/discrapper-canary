@@ -12,9 +12,9 @@ var i, r, s, o, a = n(442837),
 let h = new Map,
   f = null,
   S = null,
-  N = null;
+  A = null;
 
-function A(e, t) {
+function N(e, t) {
   let n = h.get(e);
   if (null == n) return !1;
   let i = n.delete(t);
@@ -40,14 +40,14 @@ function O(e, t) {
   return !1
 }
 
-function p(e) {
+function R(e) {
   let {
     user: t,
     sessionId: n
   } = e;
-  f = t.id, S = n, N = null
+  f = t.id, S = n, A = null
 }
-class R extends(i = a.ZP.Store) {
+class p extends(i = a.ZP.Store) {
   initialize() {
     this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(d.Z)
   }
@@ -91,14 +91,14 @@ class R extends(i = a.ZP.Store) {
     return null != f && this.isPrioritySpeaker(f, e) && this.isSpeaking(f, e)
   }
 }
-o = "SpeakingStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+o = "SpeakingStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new R(l.Z, {
-  CONNECTION_OPEN: p,
-  OVERLAY_INITIALIZE: p,
+}) : r[s] = o, t.Z = new p(l.Z, {
+  CONNECTION_OPEN: R,
+  OVERLAY_INITIALIZE: R,
   SPEAKING: function(e) {
     let {
       context: t,
@@ -145,8 +145,8 @@ o = "SpeakingStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s,
         userId: n,
         channelId: i,
         sessionId: r
-      } = t, s = !1, o = N;
-      return n === f && r === S && (N = null != i ? i : null), o !== N && (s = h.delete(T.Yn.DEFAULT) || s), null == i ? s = n === f && r === S ? h.delete(T.Yn.DEFAULT) || s : A(T.Yn.DEFAULT, n) || s : n === f && r !== S ? s = h.delete(T.Yn.DEFAULT) || s : n !== f && i !== d.Z.getChannelId() && (s = A(T.Yn.DEFAULT, n) || s), s || e
+      } = t, s = !1, o = A;
+      return n === f && r === S && (A = null != i ? i : null), o !== A && (s = h.delete(T.Yn.DEFAULT) || s), null == i ? s = n === f && r === S ? h.delete(T.Yn.DEFAULT) || s : N(T.Yn.DEFAULT, n) || s : n === f && r !== S ? s = h.delete(T.Yn.DEFAULT) || s : n !== f && i !== d.Z.getChannelId() && (s = N(T.Yn.DEFAULT, n) || s), s || e
     }, !1)
   }
 })

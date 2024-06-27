@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(512665),
   f = n(352736),
   E = n(937889),
-  g = n(739566),
-  C = n(507418),
+  C = n(739566),
+  g = n(507418),
   I = n(348238),
   x = n(981631),
   T = n(689938);
@@ -33,7 +33,7 @@ let N = a.memo(function(e) {
     referencedUsernameProfile: Z,
     referencedAvatarProfile: A,
     setPopout: M
-  } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, g.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+  } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, C.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
     if (null == b) return null;
     let e = (0, r.Z)(b);
     if (e.type === x.uaV.USER_JOIN) {
@@ -84,7 +84,7 @@ let N = a.memo(function(e) {
   }, [b, R, v, L, j]), O = (0, l.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [M]), B = (0, g.Uj)(n);
+  }), [M]), B = (0, C.Uj)(n);
   return (0, i.jsx)(_.Z, {
     repliedAuthor: R,
     baseMessage: n,
@@ -96,7 +96,7 @@ let N = a.memo(function(e) {
     isReplyAuthorBlocked: O,
     showAvatarPopout: A,
     showUsernamePopout: Z,
-    renderPopout: C.Z,
+    renderPopout: g.Z,
     onClickAvatar: U,
     onClickUsername: k,
     onClickReply: D,

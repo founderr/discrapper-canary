@@ -20,8 +20,8 @@ var i = n(46973),
   h = n(435064),
   f = n(894694),
   S = n(779618),
-  N = n(356659),
-  A = n(981631),
+  A = n(356659),
+  N = n(981631),
   m = n(70722);
 class O extends s.Z {
   handleRTCConnectionState(e) {
@@ -30,7 +30,7 @@ class O extends s.Z {
       state: n,
       streamKey: r
     } = e;
-    if (!(0, T.ln)() || n !== A.hes.RTC_CONNECTED) return;
+    if (!(0, T.ln)() || n !== N.hes.RTC_CONNECTED) return;
     let s = u.default.getId();
     if (t === i.Yn.DEFAULT) return this.applyUserVoiceRecording(s);
     if (t === i.Yn.STREAM && null != r) {
@@ -70,7 +70,7 @@ class O extends s.Z {
       applicationName: t,
       errMsg: n
     } = e;
-    E.default.track(A.rMx.CLIPS_INIT_FAILURE, {
+    E.default.track(N.rMx.CLIPS_INIT_FAILURE, {
       application_name: t,
       error_message: n
     })
@@ -87,7 +87,7 @@ class O extends s.Z {
       if (this.applyNativeClipsSettings(), !(0, T.ln)()) {
         h.Z.getSettings().clipsEnabled && this.disableClips();
         return
-      }(null == h.Z.getHardwareClassification() || null == h.Z.getHardwareClassificationForDecoupled() || h.Z.getHardwareClassificationVersion() !== N.WM) && this.classifyHardwareAndTrack().then(e => {
+      }(null == h.Z.getHardwareClassification() || null == h.Z.getHardwareClassificationForDecoupled() || h.Z.getHardwareClassificationVersion() !== A.WM) && this.classifyHardwareAndTrack().then(e => {
         r.Z.dispatch({
           type: "CLIPS_CLASSIFY_HARDWARE",
           classification: e
@@ -115,9 +115,9 @@ class O extends s.Z {
     try {
       let e = await o.Z.processUtils.getSystemInfo(),
         t = this.classifyHardware(e);
-      return E.default.track(A.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
+      return E.default.track(N.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
         classification: t,
-        version: N.WM,
+        version: A.WM,
         gpu_models: e.gpus.map(e => {
           let {
             model: t
@@ -135,13 +135,13 @@ class O extends s.Z {
           let {
             model: t
           } = e;
-          return N.mg.test(t)
+          return A.mg.test(t)
         }),
         n = e.gpus.some(e => {
           let {
             model: t
           } = e;
-          return N.nU.test(t)
+          return A.nU.test(t)
         });
       return t ? f.x.MEETS_AUTO_ENABLE : n ? f.x.MEETS_MINIMUM : f.x.BELOW_MINIMUM
     }
@@ -149,7 +149,7 @@ class O extends s.Z {
       let {
         model: t
       } = e;
-      return N.B2.test(t)
+      return A.B2.test(t)
     }) ? f.x.MEETS_AUTO_ENABLE : f.x.MEETS_MINIMUM;
     return f.x.UNKNOWN
   }

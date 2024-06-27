@@ -52,7 +52,7 @@ let O = s.forwardRef(function(e, t) {
   }, [Z]), G = w.features.has(B.S7.POST_ENROLLMENT_CTA), F = (0, g.Rf)({
     quest: Z,
     location: B.dr.QUESTS_BAR
-  }), K = F.progressSeconds > 0, X = (null === (n = Z.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, Y = (null === (r = Z.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, $ = s.useMemo(() => (0, h.Xv)(Z.config), [Z.config]), J = O && I, ee = (0, h.ph)(Z), et = (0, h.pG)({
+  }), K = F.progressSeconds > 0, Y = (null === (n = Z.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (r = Z.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, $ = s.useMemo(() => (0, h.Xv)(Z.config), [Z.config]), J = O && I, ee = (0, h.ph)(Z), et = (0, h.pG)({
     quest: Z,
     location: B.dr.QUESTS_BAR,
     taskDetails: F
@@ -75,7 +75,7 @@ let O = s.forwardRef(function(e, t) {
     className: a()(_, R.contentExpanded, {
       [R.contentInteractable]: J
     }),
-    children: X ? (0, o.jsxs)("div", {
+    children: Y ? (0, o.jsxs)("div", {
       className: R.questAcceptedContent,
       ref: t,
       children: [(0, o.jsxs)("div", {
@@ -99,7 +99,7 @@ let O = s.forwardRef(function(e, t) {
               className: R.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: Y ? b.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
+              children: X ? b.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                 expirationDate: L
               }) : b.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                 expirationDate: Q
@@ -125,7 +125,7 @@ let O = s.forwardRef(function(e, t) {
             })
           })
         })]
-      }), Y ? (0, o.jsx)(d.Button, {
+      }), X ? (0, o.jsx)(d.Button, {
         className: a()(R.cta, R.ctaClaimReward),
         style: $ ? eo : void 0,
         color: d.Button.Colors.CUSTOM,

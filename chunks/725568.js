@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   Ox: function() {
-    return p
+    return R
   },
   QP: function() {
-    return N
+    return A
   },
   ob: function() {
     return g
   },
   q4: function() {
-    return R
+    return p
   }
 }), n(47120);
 var i, r, s = n(735250),
@@ -28,7 +28,7 @@ var i, r, s = n(735250),
   f = n(247194);
 let S = (0, T.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 (r = i || (i = {}))[r.ENTERING = 1] = "ENTERING", r[r.ENTERED = 2] = "ENTERED", r[r.EXITING = 3] = "EXITING", r[r.EXITED = 4] = "EXITED";
-let N = (0, c.Z)(e => ({
+let A = (0, c.Z)(e => ({
   fullScreenLayers: [],
   addLayer: t => e(e => {
     let {
@@ -40,7 +40,7 @@ let N = (0, c.Z)(e => ({
   })
 }));
 
-function A(e) {
+function N(e) {
   let {
     item: t
   } = e, n = o.useRef(null);
@@ -86,16 +86,16 @@ let m = {
     exitDone: f.exitDoneReducedMotion
   };
 
-function p() {
+function R() {
   let {
     reducedMotion: e
-  } = o.useContext(E.AccessibilityPreferencesContext), t = e.enabled ? O : m, n = N(e => e.fullScreenLayers);
+  } = o.useContext(E.AccessibilityPreferencesContext), t = e.enabled ? O : m, n = A(e => e.fullScreenLayers);
   return (0, s.jsx)(u.Z, {
     children: n.map(e => (0, s.jsx)(_.Z, {
       classNames: t,
       timeout: S,
       onEntered: () => {
-        N.setState({
+        A.setState({
           fullScreenLayers: n.map(t => t.key === e.key ? {
             ...t,
             transitionState: 2
@@ -103,21 +103,21 @@ function p() {
         })
       },
       unmountOnExit: !0,
-      children: (0, s.jsx)(A, {
+      children: (0, s.jsx)(N, {
         item: e
       })
     }, e.key))
   })
 }
 
-function R(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
     {
       layerKey: n,
       Layer: i
     } = t,
     r = null != n ? n : l()();
-  return N.setState(t => ({
+  return A.setState(t => ({
     fullScreenLayers: [...t.fullScreenLayers, {
       key: r,
       transitionState: 1,
@@ -128,7 +128,7 @@ function R(e) {
 }
 
 function g(e) {
-  N.setState(t => ({
+  A.setState(t => ({
     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
   }))
 }

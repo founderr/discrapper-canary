@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   L6: function() {
-    return p
+    return R
   },
   ZP: function() {
     return S
@@ -85,13 +85,13 @@ function S(e) {
                 I = i && 0 === o.length,
                 h = (_ ? o.slice(1) : o).length % 2 == 1,
                 S = h && (null == u || "" === u || null != u.match(f)),
-                N = S && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
+                A = S && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: d,
                 isStyledCodeBlockLine: I,
-                lang: h || _ ? N : r,
+                lang: h || _ ? A : r,
                 hljsTypes: null,
                 closesCodeBlock: _,
                 opensCodeBlock: h,
@@ -125,7 +125,7 @@ function S(e) {
                         o = [],
                         a = 0,
                         l = 0;
-                      for (; null != (r = N.exec(s));) {
+                      for (; null != (r = A.exec(s));) {
                         let t = r.index + r[0].length,
                           n = r.index - l;
                         r.index > l && (e.length > 0 && o.push({
@@ -175,13 +175,13 @@ function S(e) {
     }), n = c.bN.richValue(e)), t()
   }, e
 }
-let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-  A = {
+let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+  N = {
     max: 1 / 0,
     maxAge: 1 * o.Z.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  m = new(s())(A);
+  m = new(s())(N);
 
 function O(e, t) {
   let n = 0;
@@ -205,7 +205,7 @@ function O(e, t) {
   return n % 2 != 0
 }
 
-function p(e) {
+function R(e) {
   if (null == e.selection) return !1;
   let t = c.M8.start(e.selection);
   return O(e, t)

@@ -29,40 +29,40 @@ function C(e) {
     onBioChange: c,
     pendingBio: d,
     placeholder: C,
-    currentBio: A,
-    disabled: m = !1
-  } = e, [O, g] = a.useState(null != d ? d : A), [h, R] = a.useState((0, o.JM)(O)), p = a.useRef(!1);
+    currentBio: m,
+    disabled: A = !1
+  } = e, [g, O] = a.useState(null != d ? d : m), [h, p] = a.useState((0, o.JM)(g)), R = a.useRef(!1);
   return a.useEffect(() => {
     if (void 0 === d) {
-      let e = (0, o.JM)(A);
-      g(A), R(e)
+      let e = (0, o.JM)(m);
+      O(m), p(e)
     }
-  }, [d, A]), (0, n.jsxs)(_.Z, {
+  }, [d, m]), (0, n.jsxs)(_.Z, {
     title: s,
     titleId: S,
     description: u.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: t,
-    disabled: m,
+    disabled: A,
     children: [(0, n.jsx)(l.Z, {
       "aria-describedby": N,
       "aria-labelledby": S,
       innerClassName: T.bioTextArea,
       maxCharacterCount: E.tPV,
       onChange: function(e, s, t) {
-        s !== O && (g(s), R(t), c(s))
+        s !== g && (O(s), p(t), c(s))
       },
       placeholder: C,
       channel: I,
-      textValue: O,
+      textValue: g,
       richValue: h,
       type: r.I.PROFILE_BIO_INPUT,
       onBlur: () => {
-        p.current = !1
+        R.current = !1
       },
       onFocus: () => {
-        p.current = !0
+        R.current = !0
       },
-      focused: p.current,
+      focused: R.current,
       onSubmit: function() {
         return new Promise(e => {
           e({

@@ -19,12 +19,12 @@ t.default = e => {
     className: h,
     confirmColor: f,
     confirmText: S = d.Z.Messages.OKAY,
-    secondaryConfirmText: N,
-    onCancel: A,
+    secondaryConfirmText: A,
+    onCancel: N,
     onClose: m,
     onConfirm: O,
-    onConfirmSecondary: p,
-    title: R,
+    onConfirmSecondary: R,
+    title: p,
     transitionState: g,
     titleClassName: C
   } = e;
@@ -33,7 +33,7 @@ t.default = e => {
     size: o.zx.Sizes.LARGE,
     color: o.zx.Colors.PRIMARY,
     onClick: () => {
-      null == m || m(), null == A || A()
+      null == m || m(), null == N || N()
     },
     className: E.secondaryButton,
     children: T
@@ -44,20 +44,20 @@ t.default = e => {
     className: s()(E.primaryButton, null != t ? E.gutter : null),
     autoFocus: !0,
     children: S
-  })), null != N && "" !== N && (r = (0, i.jsx)(a.P, {
+  })), null != A && "" !== A && (r = (0, i.jsx)(a.P, {
     onClick: () => {
-      null == m || m(), null == p || p()
+      null == m || m(), null == R || R()
     },
     className: E.minorContainer,
     children: (0, i.jsx)(_.x, {
       className: E.secondaryAction,
       variant: "text-xs/normal",
-      children: N
+      children: A
     })
   })), (0, i.jsx)(u.Y0, {
     transitionState: g,
     className: s()(h, E.container),
-    "aria-label": R,
+    "aria-label": p,
     children: (0, i.jsxs)("form", {
       onSubmit: e => {
         null != e && e.preventDefault(), null == m || m(), null == O || O()
@@ -69,10 +69,10 @@ t.default = e => {
           direction: c.Z.Direction.VERTICAL,
           justify: c.Z.Justify.CENTER,
           className: E.content,
-          children: [null != R && (0, i.jsx)(l.v, {
+          children: [null != p && (0, i.jsx)(l.v, {
             tag: "h2",
             className: s()(E.title, C),
-            children: R
+            children: p
           }), null != I && (0, i.jsx)(_.x, {
             variant: "text-md/normal",
             className: E.body,

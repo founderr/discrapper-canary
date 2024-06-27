@@ -10,8 +10,8 @@ var i = n(735250),
   u = n(358221),
   _ = n(594190),
   E = n(687516),
-  I = n(210887),
-  m = n(937995),
+  m = n(210887),
+  I = n(937995),
   T = n(158776),
   h = n(594174),
   N = n(617136),
@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(918701),
   A = n(242755),
   R = n(5881),
-  x = n(566078),
-  O = n(602667),
+  O = n(566078),
+  x = n(602667),
   M = n(340100),
   v = n(611855),
   L = n(644646),
@@ -41,7 +41,7 @@ t.Z = function(e) {
     channelId: k,
     previewQuest: G,
     isParticipatingOverride: F
-  } = e, [w, V] = a.useState(!1), H = a.useCallback(() => V(!0), []), Y = a.useCallback(() => V(!1), []), W = a.useContext(m.h9), z = (0, r.e7)([h.default], () => h.default.getCurrentUser()), K = (0, r.e7)([I.Z], () => I.Z.getState().theme), Q = (0, o.wj)(K) ? j.BRd.DARK : j.BRd.LIGHT, {
+  } = e, [w, V] = a.useState(!1), H = a.useCallback(() => V(!0), []), Y = a.useCallback(() => V(!1), []), W = a.useContext(I.h9), z = (0, r.e7)([h.default], () => h.default.getCurrentUser()), K = (0, r.e7)([m.Z], () => m.Z.getState().theme), Q = (0, o.wj)(K) ? j.BRd.DARK : j.BRd.LIGHT, {
     isCurrentUserStreamingQuestApplication: q,
     quest: X
   } = (0, r.cj)([T.Z, u.Z, C.Z], () => {
@@ -72,13 +72,13 @@ t.Z = function(e) {
       isCurrentUserStreamingQuestApplication: null != t && null != z && function(e, t, n, i) {
         for (let s of e) {
           var a;
-          if (s.type === U.fO.STREAM && s.user.id === n.id && x.r.build(t.config).application.id === (null === (a = (0, E.L2)(s.stream, i)) || void 0 === a ? void 0 : a.id)) return !0
+          if (s.type === U.fO.STREAM && s.user.id === n.id && O.r.build(t.config).application.id === (null === (a = (0, E.L2)(s.stream, i)) || void 0 === a ? void 0 : a.id)) return !0
         }
         return !1
       }(e, t, z, T.Z),
       quest: t
     }
-  }, [k, z, G]), J = null != X ? x.r.build(X.config) : null, $ = null == J ? void 0 : J.application.id, ee = (0, r.cj)([_.ZP], () => {
+  }, [k, z, G]), J = null != X ? O.r.build(X.config) : null, $ = null == J ? void 0 : J.application.id, ee = (0, r.cj)([_.ZP], () => {
     let e = _.ZP.getRunningGames().map(e => e.id);
     return (0, S.$H)({
       quest: X,
@@ -111,17 +111,17 @@ t.Z = function(e) {
   if (null == X || !(0, S.dl)(X)) return null;
   let e_ = (null === (t = X.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     eE = (null === (n = X.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-    eI = null != X.userStatus && (0, S.zE)(X.userStatus, g.jn.QUEST_LIVE_STREAM),
-    em = null != X.userStatus && (0, S.zE)(X.userStatus, g.jn.QUEST_BAR),
-    eT = (0, S.Mi)(X, g.jn.QUEST_BAR) && !em;
+    em = null != X.userStatus && (0, S.zE)(X.userStatus, g.jn.QUEST_LIVE_STREAM),
+    eI = null != X.userStatus && (0, S.zE)(X.userStatus, g.jn.QUEST_BAR),
+    eT = (0, S.Mi)(X, g.jn.QUEST_BAR) && !eI;
   ed.info({
-    isQuestCallHeaderDismissed: eI,
+    isQuestCallHeaderDismissed: em,
     isQuestExpired: eu,
     isQuestBarShowing: eT,
     isCurrentUserCallParticipant: ei
   });
   let eh = null != G && (null === (s = X.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
-  if (!eh && (eI || eu || eT) || !eh && !ei) return null;
+  if (!eh && (em || eu || eT) || !eh && !ei) return null;
   let eN = (0, S.il)({
       quest: X,
       location: D.dr.QUEST_CHANNEL_CALL_HEADER
@@ -132,7 +132,7 @@ t.Z = function(e) {
       quest: X,
       questContent: g.jn.QUEST_LIVE_STREAM
     });
-  return (0, i.jsx)(O.A, {
+  return (0, i.jsx)(x.A, {
     questOrQuests: X,
     overrideVisibility: !W,
     questContent: g.jn.QUEST_LIVE_STREAM,

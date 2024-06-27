@@ -1,16 +1,16 @@
 a.r(e), a.d(e, {
   default: function() {
-    return C
+    return x
   }
 });
-var i = a(735250);
+var t = a(735250);
 a(470079);
-var t = a(120356),
-  l = a.n(t),
+var i = a(120356),
+  l = a.n(i),
   c = a(512722),
   o = a.n(c),
-  s = a(481060),
-  r = a(99690),
+  r = a(481060),
+  s = a(99690),
   p = a(23551),
   d = a(122021),
   u = a(689938),
@@ -20,11 +20,11 @@ function N(n) {
   let {
     onComplete: e,
     excludedPlatformTypes: a,
-    includedPlatformTypes: t
+    includedPlatformTypes: i
   } = n, l = (0, d.fq)();
-  return (0, i.jsx)("div", {
+  return (0, t.jsx)("div", {
     className: m.connectionsContainer,
-    children: l.filter(n => !(null == a ? void 0 : a.has(n.type)) && (null == t || t.has(n.type))).map(n => (0, i.jsx)(p.Z, {
+    children: l.filter(n => !(null == a ? void 0 : a.has(n.type)) && (null == i || i.has(n.type))).map(n => (0, t.jsx)(p.Z, {
       type: n.type,
       className: m.accountBtn,
       innerClassName: m.accountBtnInner,
@@ -39,35 +39,35 @@ function f(n) {
     onCompleteApplication: a
   } = n;
   if (null == e || null == a) return null;
-  let t = e.filter(n => {
+  let i = e.filter(n => {
     var e;
     return (null === (e = n.application) || void 0 === e ? void 0 : e.roleConnectionsVerificationUrl) != null
   });
-  return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(s.Text, {
+  return 0 === i.length ? null : (0, t.jsxs)(t.Fragment, {
+    children: [(0, t.jsx)(r.Text, {
       variant: "eyebrow",
       color: "interactive-normal",
       className: m.applicationsHeader,
       children: u.Z.Messages.APPS
-    }), (0, i.jsx)("div", {
+    }), (0, t.jsx)("div", {
       className: m.applicationsContainer,
-      children: t.map(n => {
+      children: i.map(n => {
         let e = n.application;
         o()(null != e, "application is null");
-        let t = null == e ? void 0 : e.bot;
-        return o()(null != t, "bot is null"), (0, i.jsxs)(s.Clickable, {
+        let i = null == e ? void 0 : e.bot;
+        return o()(null != i, "bot is null"), (0, t.jsxs)(r.Clickable, {
           onClick: () => a(e.id),
           className: m.application,
-          children: [(0, i.jsx)(r.Z, {
-            user: t,
+          children: [(0, t.jsx)(s.Z, {
+            user: i,
             className: m.applicationIcon
-          }), (0, i.jsxs)("div", {
+          }), (0, t.jsxs)("div", {
             className: m.applicationNameContainer,
-            children: [(0, i.jsx)(s.Heading, {
+            children: [(0, t.jsx)(r.Heading, {
               variant: "heading-sm/semibold",
               className: m.applicationNameText,
               children: e.name
-            }), null != e.description && e.description.length > 0 ? (0, i.jsx)(s.Text, {
+            }), null != e.description && e.description.length > 0 ? (0, t.jsx)(r.Text, {
               variant: "text-xs/normal",
               color: "header-secondary",
               className: m.applicationNameText,
@@ -80,42 +80,42 @@ function f(n) {
   })
 }
 
-function C(n) {
+function x(n) {
   let {
     transitionState: e,
     onComplete: a,
-    onClose: t,
+    onClose: i,
     excludedPlatformTypes: c,
     includedPlatformTypes: o,
-    integrations: r,
+    integrations: s,
     onCompleteApplication: p
   } = n;
-  return (0, i.jsx)(s.ModalRoot, {
+  return (0, t.jsx)(r.ModalRoot, {
     "aria-label": u.Z.Messages.CONNECTIONS_ADD_CONNECTIONS,
-    size: s.ModalSize.SMALL,
+    size: r.ModalSize.SMALL,
     transitionState: e,
     className: l()(m.container),
     fullscreenOnMobile: !1,
-    children: (0, i.jsxs)(s.ModalContent, {
-      children: [(0, i.jsxs)("div", {
+    children: (0, t.jsxs)(r.ModalContent, {
+      children: [(0, t.jsxs)("div", {
         className: m.header,
-        children: [(0, i.jsx)(s.Heading, {
+        children: [(0, t.jsx)(r.Heading, {
           className: m.title,
           variant: "heading-md/bold",
           children: u.Z.Messages.CONNECTIONS_ADD_CONNECTIONS
-        }), (0, i.jsx)(s.ModalCloseButton, {
-          onClick: t
+        }), (0, t.jsx)(r.ModalCloseButton, {
+          onClick: i
         })]
-      }), (0, i.jsx)(N, {
+      }), (0, t.jsx)(N, {
         onComplete: function(n) {
-          a(n), t()
+          a(n), i()
         },
         excludedPlatformTypes: c,
         includedPlatformTypes: o
-      }), (0, i.jsx)(f, {
-        integrations: r,
+      }), (0, t.jsx)(f, {
+        integrations: s,
         onCompleteApplication: null != p ? function(n) {
-          null == p || p(n), t()
+          null == p || p(n), i()
         } : void 0
       })]
     })

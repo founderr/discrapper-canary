@@ -26,8 +26,8 @@ function p(e) {
     activities: _,
     newClipsCount: f,
     canPostPolls: E,
-    canLaunchActivities: g,
-    appContext: C
+    canLaunchActivities: C,
+    appContext: g
   } = e, I = [];
   return t && (I.push({
     type: "UPLOAD_A_FILE",
@@ -37,7 +37,7 @@ function p(e) {
     type: "UPLOAD_TEXT_AS_FILE",
     icon: l.FileUpIcon,
     display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), p && t && C !== d.IlC.POPOUT && I.push({
+  })), p && t && g !== d.IlC.POPOUT && I.push({
     type: "CLIPS",
     icon: l.ClipsIcon,
     display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
@@ -55,7 +55,7 @@ function p(e) {
     type: "SLASH_COMMAND",
     icon: l.AppsIcon,
     display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
-  }), g && I.push({
+  }), C && I.push({
     type: "ACTIVITY",
     icon: l.ActivitiesIcon,
     display: h.Z.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL

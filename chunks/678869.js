@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(936195),
   f = n(5192),
   E = n(561308),
-  g = n(256726),
-  C = n(206295),
+  C = n(256726),
+  g = n(206295),
   I = n(551228),
   x = n(591853),
   T = n(371991),
@@ -104,7 +104,7 @@ function j(e) {
     {
       primaryColor: F,
       secondaryColor: W
-    } = (0, C.Z)(H),
+    } = (0, g.Z)(H),
     z = (0, s.e7)([u.Z, m.default], () => (null == U ? void 0 : U.type) === v.IIU.LISTENING && null != V ? (0, h.Z)(u.Z, m.default, V, U) : void 0, [U, V], r.Z),
     Y = a.useCallback(() => {
       var e;
@@ -113,7 +113,7 @@ function j(e) {
         n = (0, E.T_)(null != t ? {
           start: t
         } : y, Date.now());
-      return (0, g.CR)({
+      return (0, C.CR)({
         user: V,
         channel: O,
         mediaImageSrc: H,
@@ -123,7 +123,7 @@ function j(e) {
           media: G
         }, O, V),
         colors: [F, W],
-        badges: (0, g.jE)({
+        badges: (0, C.jE)({
           timestamp: n
         })
       })

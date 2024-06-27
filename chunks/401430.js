@@ -6,7 +6,7 @@ n.d(t, {
     return E
   },
   q$: function() {
-    return I
+    return m
   }
 }), n(411104), n(789020);
 var i = n(570140),
@@ -49,7 +49,7 @@ function E() {
   })
 }
 
-function I() {
+function m() {
   i.Z.dispatch({
     type: "DEVELOPER_TEST_MODE_RESET_ERROR"
   })

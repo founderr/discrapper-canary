@@ -88,12 +88,12 @@ function I(e) {
       postProcessor: E,
       shouldFilterKeywords: I,
       contentMessage: T
-    } = n, S = !1, N = (null != T ? T : t).content, A = e(I ? (0, r.N)(N, {
+    } = n, S = !1, A = (null != T ? T : t).content, N = e(I ? (0, r.N)(A, {
       escapeReplacement: !0,
       messageId: t.id,
       channelId: t.channel_id,
       authorId: null === (s = t.author) || void 0 === s ? void 0 : s.id
-    }) : N, !0, c(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
+    }) : A, !0, c(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
@@ -116,7 +116,7 @@ function I(e) {
     }(e)), null != E && (e = E(e, n)), e));
     return {
       hasSpoilerEmbeds: S,
-      content: A
+      content: N
     }
   }(t.formatInline ? s.Z.parseInlineReply : s.Z.parse, e, t)
 }

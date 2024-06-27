@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(156361),
   f = n(695464),
   S = n(153124),
-  N = n(555573),
-  A = n(10718),
+  A = n(555573),
+  N = n(10718),
   m = n(367790),
   O = n(895924),
-  p = n(581364),
-  R = n(56801),
+  R = n(581364),
+  p = n(56801),
   g = n(342687),
   C = n(826298),
   v = n(689079),
@@ -41,7 +41,7 @@ t.Z = r.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: s
-  } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), x = r.useRef(null), [B, k] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
+  } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [x, k] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, c.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -54,7 +54,7 @@ t.Z = r.forwardRef(function(e, t) {
     filteredSectionId: W,
     scrollDown: K,
     filterSection: z
-  } = A.wi(n, {
+  } = N.wi(n, {
     commandType: _.yU.CHAT,
     builtIns: s ? m.D.ONLY_TEXT : m.D.ALLOW,
     applicationCommands: !s
@@ -65,7 +65,7 @@ t.Z = r.forwardRef(function(e, t) {
   }), q = (0, I.Qs)({
     activeCategoryIndex: V,
     isScrolling: a,
-    listRef: x,
+    listRef: B,
     onActiveCategoryIndexChange: e => {
       let t = H[e];
       if (null != t) {
@@ -86,21 +86,21 @@ t.Z = r.forwardRef(function(e, t) {
   let Q = r.useCallback(e => e !== H.length - 1 || Y ? 16 : 0, [H.length, Y]),
     J = F.map(e => e.data.length);
   r.useEffect(() => {
-    null != x.current && B && null != G && x.current.scrollRowIntoView(G)
-  }, [B, G]), r.useLayoutEffect(() => {
+    null != B.current && x && null != G && B.current.scrollRowIntoView(G)
+  }, [x, G]), r.useLayoutEffect(() => {
     if (null != W) {
       var e;
-      null === (e = x.current) || void 0 === e || e.scrollToSectionTop(0)
+      null === (e = B.current) || void 0 === e || e.scrollToSectionTop(0)
     }
   }, [j, W]);
   let $ = r.useCallback(e => {
       if (e.id === W || e.id === v.bi.FRECENCY) {
         var t;
-        z(null), null === (t = x.current) || void 0 === t || t.scrollToSectionTop(0)
+        z(null), null === (t = B.current) || void 0 === t || t.scrollToSectionTop(0)
       } else z(e.id)
     }, [z, W]),
     ee = r.useCallback((e, t, i) => {
-      N.Po({
+      A.Po({
         channelId: n.id,
         command: e,
         section: t,
@@ -118,7 +118,7 @@ t.Z = r.forwardRef(function(e, t) {
         if (t = n, G < (n += e.data.length)) {
           let n = e.data[G - t],
             i = Z.find(e => e.id === n.applicationId);
-          ee(n, i, (0, p.tI)(e.section));
+          ee(n, i, (0, R.tI)(e.section));
           break
         } return !0
     },
@@ -183,7 +183,7 @@ t.Z = r.forwardRef(function(e, t) {
         selected: G === e,
         showImage: s.section.id !== o.applicationId,
         section: l,
-        onClick: () => ee(o, l, (0, p.tI)(s.section)),
+        onClick: () => ee(o, l, (0, R.tI)(s.section)),
         onHover: () => {
           w(null), k(!1)
         }
@@ -197,14 +197,14 @@ t.Z = r.forwardRef(function(e, t) {
     className: M.outerWrapper,
     innerClassName: M.wrapper,
     onMouseDown: b,
-    children: [(0, i.jsx)(R.Z, {
+    children: [(0, i.jsx)(p.Z, {
       className: M.rail,
       channel: n,
       sections: Z,
       filteredSectionId: W,
       activeCategoryIndex: V,
       onSectionClick: $,
-      applicationCommandListRef: x
+      applicationCommandListRef: B
     }), (0, i.jsx)(f.Z, {
       role: "listbox",
       className: M.list,
@@ -218,7 +218,7 @@ t.Z = r.forwardRef(function(e, t) {
       rowHeight: 56,
       sectionHeaderHeight: 32,
       sectionMarginBottom: Q,
-      ref: x,
+      ref: B,
       stickyHeaders: !0
     })]
   })

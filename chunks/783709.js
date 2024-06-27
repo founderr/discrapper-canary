@@ -14,8 +14,8 @@ var i = n(735250),
   u = n(481060),
   _ = n(867176),
   E = n(566620),
-  I = n(403404),
-  m = n(100527),
+  m = n(403404),
+  I = n(100527),
   T = n(906732),
   h = n(739566),
   N = n(223021),
@@ -26,9 +26,9 @@ var i = n(735250),
   S = n(750858),
   A = n(981631),
   R = n(689938),
-  x = n(250050);
+  O = n(250050);
 
-function O(e) {
+function x(e) {
   let {
     width: t = 6,
     height: n = 10,
@@ -59,7 +59,7 @@ function M(e) {
     channel: r
   } = e, {
     analyticsLocations: c
-  } = (0, T.ZP)(m.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, i.jsx)(f.Z, {
+  } = (0, T.ZP)(I.Z.EXECUTED_COMMAND), M = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, i.jsx)(f.Z, {
     ...e,
     location: "ExecutedCommand",
     channelId: r.id,
@@ -87,18 +87,18 @@ function M(e) {
           onPopoutRequestClose: E
         } = e;
         if (s && null == a.activityInstance || o) return (0, i.jsx)("div", {
-          className: x.replyBadge,
-          children: (0, i.jsx)(O, {
-            className: x.commandIcon
+          className: O.replyBadge,
+          children: (0, i.jsx)(x, {
+            className: O.commandIcon
           })
         });
         if (null != a.interaction) {
-          var I, m, T;
+          var m, I, T;
           let e = (0, h.ij)(a.interaction.user, r);
           n = null !== (T = p.ZP.getGuildMemberAvatarURL({
-            avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
+            avatar: null !== (m = e.guildMemberAvatar) && void 0 !== m ? m : void 0,
             userId: a.interaction.user.id,
-            guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
+            guildId: null !== (I = null == r ? void 0 : r.guild_id) && void 0 !== I ? I : ""
           })) && void 0 !== T ? T : void 0
         }
         let N = () => null != a.interaction && function(e) {
@@ -117,8 +117,8 @@ function M(e) {
             onContextMenu: r,
             onMouseDown: o,
             className: l()({
-              [x.executedCommandAvatar]: !0,
-              [x.clickable]: null != s
+              [O.executedCommandAvatar]: !0,
+              [O.clickable]: null != s
             })
           })
         }({
@@ -135,7 +135,7 @@ function M(e) {
           onRequestClose: E,
           children: N
         }) : N()
-      }(e, e => M(e, b.user, [m.Z.AVATAR])),
+      }(e, e => M(e, b.user, [I.Z.AVATAR])),
       n = function(e, t, n) {
         var a;
         let {
@@ -165,7 +165,7 @@ function M(e) {
   };
   if ((null == s ? void 0 : s.activityInstance) !== null) {
     let e = () => {
-      (0, I.Z)({
+      (0, m.Z)({
         channel: r,
         guildId: r.guild_id,
         locationObject: {
@@ -187,7 +187,7 @@ function M(e) {
         tag: "span",
         onClick: e,
         children: (0, i.jsx)("div", {
-          className: l()(x.commandName, x.clickable),
+          className: l()(O.commandName, O.clickable),
           children: R.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
         })
       })
@@ -222,17 +222,17 @@ function M(e) {
               tag: "span",
               onClick: s,
               children: (0, i.jsxs)("div", {
-                className: l()(x.appLauncherOnboardingCommandName, x.clickable),
+                className: l()(O.appLauncherOnboardingCommandName, O.clickable),
                 children: [(0, i.jsx)(u.AppsIcon, {
                   size: "custom",
                   color: "currentColor",
                   height: 10,
                   width: 10,
-                  className: x.appsIcon
+                  className: O.appsIcon
                 }), o]
               })
             }) : (0, i.jsx)("div", {
-              className: x.commandName,
+              className: O.commandName,
               children: o
             })
           }
@@ -246,7 +246,7 @@ function M(e) {
   return (0, i.jsx)(T.Gt, {
     value: c,
     children: (0, i.jsx)("div", {
-      className: l()(x.repliedMessage, x.executedCommand, Z),
+      className: l()(O.repliedMessage, O.executedCommand, Z),
       "aria-hidden": !e.compact,
       children: n
     })

@@ -22,16 +22,16 @@ function _(e) {
     onConfirm: _,
     onCancel: f,
     channel: E,
-    analyticsType: g,
-    popoutText: C,
+    analyticsType: C,
+    popoutText: g,
     animation: I
   } = e;
   a.useEffect(() => {
     u.default.track(d.rMx.OPEN_POPOUT, {
-      type: g,
+      type: C,
       ...(0, o.v_)(E)
     })
-  }, [g, E]);
+  }, [C, E]);
   let x = a.useCallback(() => {
       null == _ || _(), t()
     }, [_, t]),
@@ -76,7 +76,7 @@ function _(e) {
             id: "content-warning-popout-label",
             className: m.markup,
             variant: "text-sm/normal",
-            children: C.body
+            children: g.body
           }), (0, i.jsxs)("div", {
             className: p.buttonWrapper,
             children: [(0, i.jsxs)("div", {
@@ -107,7 +107,7 @@ function _(e) {
             })]
           })]
         })]
-      }), null != C.footer && "" !== C.footer ? (0, i.jsxs)("div", {
+      }), null != g.footer && "" !== g.footer ? (0, i.jsxs)("div", {
         className: p.footer,
         children: [(0, i.jsx)(r.CircleInformationIcon, {
           size: "xs",
@@ -115,7 +115,7 @@ function _(e) {
           className: p.icon
         }), (0, i.jsx)(r.Text, {
           variant: "text-sm/normal",
-          children: C.footer
+          children: g.footer
         })]
       }) : null]
     })

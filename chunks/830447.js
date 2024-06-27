@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   T: function() {
-    return A
+    return N
   },
   v: function() {
-    return N
+    return A
   }
 }), n(390547), n(724458), n(653041), n(47120), n(411104);
 var i = n(735250),
@@ -24,17 +24,17 @@ var i = n(735250),
   f = n(788314),
   S = n(639897);
 
-function N(e) {
+function A(e) {
   var t;
   let {
     navId: n,
     variant: s = "flexible",
     hideScroller: a = !1,
     className: d,
-    children: N,
-    onClose: A,
+    children: A,
+    onClose: N,
     onSelect: O
-  } = e, p = function e(t) {
+  } = e, R = function e(t) {
     return (function e(t) {
       return null == t ? [] : r.Children.toArray(t).flatMap(t => {
         var n;
@@ -104,19 +104,19 @@ function N(e) {
       }), t;
       throw Error("Menu API only allows Items and groups of Items as children. Received ".concat(null !== (r = null !== (i = null == n ? void 0 : n.type) && void 0 !== i ? i : n) && void 0 !== r ? r : typeof n, " (").concat(typeof n, ") instead"))
     }, [])
-  }(N), R = function e(t) {
+  }(A), p = function e(t) {
     return t.reduce((t, n) => n.navigable ? (t.push({
       key: n.key,
       children: "item" === n.type && null != n.children ? e(n.children) : void 0
     }), t) : t, [])
-  }(p), g = r.useRef([]);
-  !l()(g.current, R) && (g.current = R);
-  let C = null === (t = p.find(e => null != e.key)) || void 0 === t ? void 0 : t.key,
+  }(R), g = r.useRef([]);
+  !l()(g.current, p) && (g.current = p);
+  let C = null === (t = R.find(e => null != e.key)) || void 0 === t ? void 0 : t.key,
     v = (0, u.ZP)({
       navId: n,
       items: g.current,
       initialFocusPath: I.Z.keyboardModeEnabled && null != C ? [C] : [],
-      closeMenu: A
+      closeMenu: N
     });
   r.useEffect(() => {
     v.isUsingKeyboardNavigation ? !I.Z.keyboardModeEnabled && (0, E.Qj)() : I.Z.keyboardModeEnabled && (0, E.rf)()
@@ -133,7 +133,7 @@ function N(e) {
       "aria-label": e["aria-label"],
       children: (0, i.jsxs)(D, {
         className: S.scroller,
-        children: [0 === p.length && (0, i.jsx)(f.ck, {
+        children: [0 === R.length && (0, i.jsx)(f.ck, {
           disabled: !0,
           label: () => (0, i.jsx)(m, {}),
           menuItemProps: v.getItemProps({
@@ -141,8 +141,8 @@ function N(e) {
           }),
           isFocused: !1,
           onFocus: () => {},
-          onClose: A
-        }), p.length > 0 && function e(t, n, r, s) {
+          onClose: N
+        }), R.length > 0 && function e(t, n, r, s) {
           let o = 0,
             a = [];
           return t.reduce((t, l, u) => {
@@ -270,13 +270,13 @@ function N(e) {
             }
             return t
           }, [])
-        }(p, v, [], A)]
+        }(R, v, [], N)]
       })
     })
   })
 }
 
-function A() {
+function N() {
   return (0, i.jsx)("div", {
     className: o()(S.menu, S.loader, S.flexible),
     children: (0, i.jsx)(d.$, {})

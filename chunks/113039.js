@@ -43,20 +43,20 @@ t.ZP = r.memo(function(e) {
     content: u,
     onUpdate: f,
     contentRef: S
-  } = e, N = s.isEdited(), A = s.state === d.yb.SEND_FAILED, m = s.state === d.yb.SENDING, O = s.isCommandType(), p = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), R = r.useRef(!1);
+  } = e, A = s.isEdited(), N = s.state === d.yb.SEND_FAILED, m = s.state === d.yb.SENDING, O = s.isCommandType(), R = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), p = r.useRef(!1);
   return r.useLayoutEffect(() => {
-    R.current ? null != f && f() : R.current = !0
-  }, [f, s.content, u, p, a]), (0, i.jsxs)("div", {
+    p.current ? null != f && f() : p.current = !0
+  }, [f, s.content, u, R, a]), (0, i.jsxs)("div", {
     id: (0, _.ut)(s),
     ref: S,
     className: o()(n, I.markup, {
       [T.messageContent]: !0,
       [T.isSending]: m && !O,
       [T.markupRtl]: "rtl" === l()(s.content),
-      [T.isFailed]: A,
+      [T.isFailed]: N,
       [T.isUnsupported]: s.isUnsupported
     }),
-    children: [null != a ? a : h(s, u), N && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
+    children: [null != a ? a : h(s, u), A && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
       children: [" ", (0, i.jsx)(c.Z, {
         timestamp: s.editedTimestamp,
         isEdited: !0,

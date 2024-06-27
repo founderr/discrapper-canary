@@ -15,11 +15,11 @@ var i = n(735250),
   _ = n(689938),
   E = n(789447);
 
-function I() {
+function m() {
   (0, r.closeModal)(u.c)
 }
 
-function m(e) {
+function I(e) {
   let {
     className: t,
     channelId: n,
@@ -34,7 +34,7 @@ function m(e) {
         forwardOptions: {
           onlyEmbedIndices: [o.embedIndex]
         },
-        onRequestSent: I
+        onRequestSent: m
       });
       return
     }(0, d.l8)({
@@ -44,7 +44,7 @@ function m(e) {
       forwardOptions: {
         onlyAttachmentIds: [o.attachmentId]
       },
-      onRequestSent: I
+      onRequestSent: m
     })
   }, [n, s, o]);
   return (0, i.jsx)(r.Clickable, {
@@ -71,7 +71,7 @@ function T(e, t) {
     let {
       className: a
     } = n;
-    return (0, i.jsx)(m, {
+    return (0, i.jsx)(I, {
       className: a,
       channelId: e.channel_id,
       messageId: e.id,

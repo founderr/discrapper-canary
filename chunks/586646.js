@@ -26,7 +26,7 @@ function f(e) {
     codeBase64: n,
     chunkSize: h.y6,
     desiredLength: h.YP
-  }), g = l.useCallback(() => {
+  }), m = l.useCallback(() => {
     (0, o.PM)({
       channelId: t
     })
@@ -56,7 +56,7 @@ function f(e) {
       }), null != f && (0, i.jsx)(d.H, {
         chunks: f,
         color: a.tokens.colors.INTERACTIVE_NORMAL.css,
-        onCopy: g
+        onCopy: m
       })]
     }), null != f && (0, i.jsx)(u.b, {
       className: _.code,

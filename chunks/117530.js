@@ -13,41 +13,41 @@ var i, r, s, o, a = n(392711),
 let f = new Map,
   S = [];
 
-function N(e, t) {
+function A(e, t) {
   var n, i;
-  return null !== (i = null === (n = A(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : S
+  return null !== (i = null === (n = N(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : S
 }
 
-function A(e) {
+function N(e) {
   var t;
   return null !== (t = f.get(e)) && void 0 !== t ? t : new Map
 }
 
 function m(e, t, n) {
-  let i = A(e);
+  let i = N(e);
   i.set(t, n), f.set(e, i)
 }
 class O extends(i = u.ZP.Store) {
   getFirstUpload(e, t) {
-    let n = N(e, t);
+    let n = A(e, t);
     return n.length > 0 ? n[0] : null
   }
   hasAdditionalUploads(e, t) {
     var n;
-    return (null !== (n = N(e, t).length) && void 0 !== n ? n : 0) > 1
+    return (null !== (n = A(e, t).length) && void 0 !== n ? n : 0) > 1
   }
   getUploads(e, t) {
-    return N(e, t)
+    return A(e, t)
   }
   getUploadCount(e, t) {
     var n;
-    return null !== (n = N(e, t).length) && void 0 !== n ? n : 0
+    return null !== (n = A(e, t).length) && void 0 !== n ? n : 0
   }
   getUpload(e, t, n) {
-    return N(e, n).find(e => e.id === t)
+    return A(e, n).find(e => e.id === t)
   }
   findUpload(e, t, n) {
-    return N(e, t).find(n)
+    return A(e, t).find(n)
   }
 }
 o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -59,7 +59,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
   UPLOAD_ATTACHMENT_POP_FILE: function(e) {
     let {
       channelId: t
-    } = e, n = [...N(t, I.d.ChannelMessage)];
+    } = e, n = [...A(t, I.d.ChannelMessage)];
     n.shift(), m(t, I.d.ChannelMessage, n)
   },
   UPLOAD_ATTACHMENT_ADD_FILES: e => {
@@ -68,7 +68,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       channelId: n,
       showLargeMessageDialog: i,
       draftType: r
-    } = e, s = [...N(n, r)];
+    } = e, s = [...A(n, r)];
     if (s.length + t.length > T.dN1 && r !== I.d.SlashCommand && r !== I.d.ApplicationLauncherCommand) {
       c.Z.show({
         title: h.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
@@ -92,7 +92,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       spoiler: s,
       thumbnail: o,
       draftType: a
-    } = e, l = [...N(t, a)].map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== s && (e.spoiler = s), void 0 !== r && (e.description = r), void 0 !== o && (e.isThumbnail = o)), e));
+    } = e, l = [...A(t, a)].map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== s && (e.spoiler = s), void 0 !== r && (e.description = r), void 0 !== o && (e.isThumbnail = o)), e));
     m(t, a, l)
   },
   UPLOAD_ATTACHMENT_REMOVE_FILE: function(e) {
@@ -100,7 +100,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       channelId: t,
       id: n,
       draftType: i
-    } = e, r = [...N(t, i)], s = r.findIndex(e => (0, E.T)({
+    } = e, r = [...A(t, i)], s = r.findIndex(e => (0, E.T)({
       uri: n,
       filename: n
     }, e));
@@ -111,7 +111,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       channelId: t,
       attachmentIds: n,
       draftType: i
-    } = e, r = [...N(t, i)];
+    } = e, r = [...A(t, i)];
     n.forEach(e => {
       let t = r.findIndex(t => e === t.id);
       t > -1 && r.splice(t, 1)[0].cancel()
@@ -138,7 +138,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       id: n,
       file: i,
       draftType: r
-    } = e, s = [...N(t, r)].filter(e => e.id !== n), o = new d.n(i, t);
+    } = e, s = [...A(t, r)].filter(e => e.id !== n), o = new d.n(i, t);
     o.upload(), s.push(o), m(t, r, s)
   },
   SIDEBAR_CLOSE: function(e) {

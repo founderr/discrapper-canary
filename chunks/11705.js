@@ -19,8 +19,8 @@ let E = e => {
     listingId: t,
     isListingPublished: n,
     expanded: E,
-    onToggleExpanded: I
-  } = e, m = (0, c.Z)(), [T] = o._T(t), [h] = o.d9(t, m), [N] = o.H9(t);
+    onToggleExpanded: m
+  } = e, I = (0, c.Z)(), [T] = o._T(t), [h] = o.d9(t, I), [N] = o.H9(t);
   return (0, i.jsxs)("div", {
     className: _.container,
     children: [(0, i.jsx)(d.BM, {
@@ -43,7 +43,7 @@ let E = e => {
         })]
       })]
     }), (0, i.jsx)(a.Clickable, {
-      onClick: I,
+      onClick: m,
       children: E ? (0, i.jsx)(a.ChevronSmallUpIcon, {
         size: "md",
         color: "currentColor",

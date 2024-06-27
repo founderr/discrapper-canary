@@ -30,12 +30,12 @@ var r = n(120356),
   h = n(922745),
   f = n(871499),
   S = n(402113),
-  N = n(800965),
-  A = n(157813),
+  A = n(800965),
+  N = n(157813),
   m = n(25827),
   O = n(131951),
-  p = n(285952),
-  R = n(602623),
+  R = n(285952),
+  p = n(602623),
   g = n(349619),
   C = n(981631),
   v = n(231338),
@@ -65,41 +65,41 @@ function y(e) {
     applicationId: s,
     onMouseDown: a,
     onMouseMove: f,
-    onMouseLeave: A,
-    onJumpToChannel: R,
+    onMouseLeave: N,
+    onJumpToChannel: p,
     idle: L,
     selectedParticipant: P
-  } = e, y = (0, u.bp)() === C.IlC.POPOUT, U = (0, o.e7)([O.Z], () => O.Z.isVideoEnabled()), b = (0, o.e7)([O.Z], () => Object.values(O.Z.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, _.Z)([s])[0], x = (0, E.Z)(r), B = e => {
+  } = e, y = (0, u.bp)() === C.IlC.POPOUT, U = (0, o.e7)([O.Z], () => O.Z.isVideoEnabled()), b = (0, o.e7)([O.Z], () => Object.values(O.Z.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, _.Z)([s])[0], B = (0, E.Z)(r), x = e => {
     l.Z.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
     className: M.videoControls,
     onMouseMove: f,
     onMouseDown: a,
-    onMouseLeave: A,
+    onMouseLeave: N,
     children: [(0, i.jsx)("div", {
       className: M.topControls,
       children: (0, i.jsx)(h.r, {
         idle: L,
         title: null !== (n = null == w ? void 0 : w.name) && void 0 !== n ? n : r.name,
-        onJumpToChannel: R,
+        onJumpToChannel: p,
         preventIdleComponent: T.Z
       })
     }), (0, i.jsxs)("div", {
       className: M.bottomControls,
-      children: [(0, i.jsxs)(p.Z, {
+      children: [(0, i.jsxs)(R.Z, {
         grow: 0,
         shrink: 1,
         basis: "50%",
-        align: p.Z.Align.CENTER,
+        align: R.Z.Align.CENTER,
         children: [(0, i.jsx)(m.C, {
           className: D.leftPipIcon,
           enabled: U,
           cameraUnavailable: !G,
-          hasPermission: x,
-          onChange: B,
+          hasPermission: B,
+          onChange: x,
           onCameraUnavailable: () => {
-            G ? B(!0) : (0, I.Z)()
+            G ? x(!0) : (0, I.Z)()
           }
         }), (0, i.jsx)(T.Z, {
           children: (0, i.jsx)(c.Z, {
@@ -110,13 +110,13 @@ function y(e) {
             compact: !0
           })
         })]
-      }), (0, i.jsxs)(p.Z, {
+      }), (0, i.jsxs)(R.Z, {
         grow: 0,
         shrink: 1,
-        justify: p.Z.Justify.END,
+        justify: R.Z.Justify.END,
         basis: "50%",
-        align: p.Z.Align.CENTER,
-        children: [y ? null : (0, i.jsx)(N.Z, {
+        align: R.Z.Align.CENTER,
+        children: [y ? null : (0, i.jsx)(A.Z, {
           className: D.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
@@ -161,7 +161,7 @@ function U(e) {
       })
     }), (0, i.jsxs)("div", {
       className: M.bottomControls,
-      children: [(0, i.jsx)(R.Z, {
+      children: [(0, i.jsx)(p.Z, {
         renderIcon: !1,
         users: E,
         size: 24,
@@ -183,7 +183,7 @@ function b(e) {
     participantsOpen: n,
     showToggleParticipants: r
   } = e;
-  return r ? (0, i.jsx)(A.Z, {
+  return r ? (0, i.jsx)(N.Z, {
     channelId: t,
     isParticipantsOpen: n,
     className: D.participantsButton
@@ -203,7 +203,7 @@ function G(e) {
     onToggleHeight: E,
     isExpanded: I,
     hideExpandedButton: f
-  } = e, N = (0, _.Z)([u])[0];
+  } = e, A = (0, _.Z)([u])[0];
   return (0, i.jsx)("div", {
     className: D.pipHeader,
     onMouseMove: r,
@@ -220,7 +220,7 @@ function G(e) {
       }), l && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(h.r, {
           idle: !l,
-          title: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : c.name,
+          title: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : c.name,
           onJumpToChannel: d,
           preventIdleComponent: T.Z
         }), (0, i.jsxs)("div", {

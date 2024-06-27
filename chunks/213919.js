@@ -5,22 +5,22 @@ n.r(t), n.d(t, {
     return g
   },
   getToken: function() {
-    return A
+    return N
   },
   hideToken: function() {
     return O
   },
   init: function() {
-    return N
+    return A
   },
   removeToken: function() {
-    return R
+    return p
   },
   setToken: function() {
     return m
   },
   showToken: function() {
-    return p
+    return R
   }
 }), n(47120), n(724458);
 var s = n(433517),
@@ -67,7 +67,7 @@ function S(e) {
   return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(a) ? "".concat(a).concat(u.encryptString(e)) : e
 }
 
-function N() {
+function A() {
   if (T) return;
   r = s.K.get(o.B1), E = s.K.get(o.XM) || {};
   let {
@@ -86,13 +86,13 @@ function N() {
   })), T = !0
 }
 
-function A(e) {
-  return (N(), null != e) ? d[e] : i
+function N(e) {
+  return (A(), null != e) ? d[e] : i
 }
 
 function m(e, t) {
   if (null == e) {
-    R(t);
+    p(t);
     return
   }
   i = e, null != t && (d[t] = e), c ? g() : (r = i, E = d, h())
@@ -102,11 +102,11 @@ function O() {
   if (!I) I = !0, h()
 }
 
-function p() {
+function R() {
   if (!!I) I = !1, h()
 }
 
-function R(e) {
+function p(e) {
   let t = i;
   return null != e && (t = d[e], delete d[e], delete E[e]), t === i && (i = null, r = null), h(), null != t
 }

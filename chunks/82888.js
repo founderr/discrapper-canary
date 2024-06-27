@@ -34,8 +34,8 @@ function p(e) {
   if (a.useEffect(() => {
       null != p && null == E && (0, o.gC)(h.MI.RESIZABLE)
     }, [p, E]), !f) return null;
-  let g = null == m ? void 0 : m.applicationId;
-  return _ !== h.Ez.PANEL || null == g ? null : null == p || null == m || (0, u.Z)(p) || null == g ? null : (0, i.jsx)(d.Z, {
+  let C = null == m ? void 0 : m.applicationId;
+  return _ !== h.Ez.PANEL || null == C ? null : null == p || null == m || (0, u.Z)(p) || null == C ? null : (0, i.jsx)(d.Z, {
     maxHeight: t,
     connectedChannelId: p,
     renderExternalHeader: n

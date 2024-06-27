@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Y: function() {
-    return A
+    return N
   },
   c: function() {
-    return N
+    return A
   }
 }), n(47120);
 var i = n(735250),
@@ -23,7 +23,7 @@ var i = n(735250),
   h = n(185923),
   f = n(474936),
   S = n(950110);
-let N = e => {
+let A = e => {
     var t;
     let {
       node: n,
@@ -77,13 +77,13 @@ let N = e => {
       children: f
     }) : f()
   },
-  A = e => {
+  N = e => {
     let {
       node: t,
       isInteracting: n,
       tooltipPosition: s = I.b_.position,
       enableClick: _ = !0
-    } = e, [f, N] = r.useState(String(Date.now())), [A, O] = r.useState(!1), [p, R] = r.useState(!1), g = function() {
+    } = e, [f, A] = r.useState(String(Date.now())), [N, O] = r.useState(!1), [R, p] = r.useState(!1), g = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, i.jsx)(u.Z, {
         ...e,
@@ -98,7 +98,7 @@ let N = e => {
       "aria-label": t.name,
       ...I.b_,
       position: s,
-      shouldShow: !p,
+      shouldShow: !R,
       onTooltipShow: () => {
         O(!0), _ && (m({
           emojiNode: t,
@@ -114,10 +114,10 @@ let N = e => {
         },
         onClick: t => {
           var n;
-          O(!1), R(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          O(!1), p(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          A && (d.default.track(T.rMx.CLOSE_POPOUT, {
+          N && (d.default.track(T.rMx.CLOSE_POPOUT, {
             nonce: C
           }), O(!1))
         },
@@ -134,7 +134,7 @@ let N = e => {
       onRequestClose: () => {
         d.default.track(T.rMx.CLOSE_POPOUT, {
           nonce: C
-        }), O(!1), R(!1)
+        }), O(!1), p(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
@@ -142,7 +142,7 @@ let N = e => {
       renderPopout: e => (0, i.jsx)(E.vk, {
         ...e,
         node: t,
-        refreshPositionKey: () => N(String(Date.now())),
+        refreshPositionKey: () => A(String(Date.now())),
         nonce: C
       }),
       positionKey: f,

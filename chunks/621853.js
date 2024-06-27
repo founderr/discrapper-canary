@@ -24,22 +24,22 @@ let I = new Set,
   h = {},
   f = {},
   S = {},
-  N = {},
   A = {},
+  N = {},
   m = !1;
 
 function O() {
-  I.clear(), T.clear(), h = {}, f = {}, S = {}, N = {}, A = {}, m = !1
+  I.clear(), T.clear(), h = {}, f = {}, S = {}, A = {}, N = {}, m = !1
 }
 
-function p(e) {
+function R(e) {
   let {
     userId: t
   } = e;
   T.add(t)
 }
 
-function R(e) {
+function p(e) {
   let {
     userId: t
   } = e;
@@ -60,21 +60,21 @@ function g(e) {
 }
 
 function C(e) {
-  T.delete(e.userId), S[e.userId] = g(e.mutualFriends), N[e.userId] = e.mutualFriends.length
+  T.delete(e.userId), S[e.userId] = g(e.mutualFriends), A[e.userId] = e.mutualFriends.length
 }
 
 function v() {
-  if (0 === Object.keys(A).length) return !1;
-  A = {}
+  if (0 === Object.keys(N).length) return !1;
+  N = {}
 }
 
 function L(e) {
-  if (null == A[e.user.id]) return !1;
-  delete A[e.user.id]
+  if (null == N[e.user.id]) return !1;
+  delete N[e.user.id]
 }
 
 function D(e) {
-  var t, n, i, r, o, a, l, _, c, E, T, m, O, p, R, C, v;
+  var t, n, i, r, o, a, l, _, c, E, T, m, O, R, p, C, v;
   if (I.delete(e.user.id), null != e.mutual_guilds) {
     let t = {};
     e.mutual_guilds.forEach(e => {
@@ -86,16 +86,16 @@ function D(e) {
         guild: r,
         nick: i
       })
-    }), A[e.user.id] = d.ZP.getFlattenedGuildIds().filter(e => null != t[e]).map(e => ({
+    }), N[e.user.id] = d.ZP.getFlattenedGuildIds().filter(e => null != t[e]).map(e => ({
       guild: t[e].guild,
       nick: t[e].nick
     }))
   }
   if (null != e.mutual_friends_count) {
     let t = e.mutual_friends_count;
-    N[e.user.id] = t
+    A[e.user.id] = t
   }
-  null != e.mutual_friends && (S[e.user.id] = g(e.mutual_friends), N[e.user.id] = e.mutual_friends.length);
+  null != e.mutual_friends && (S[e.user.id] = g(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
   let L = null !== (c = e.premium_since) && void 0 !== c ? c : null,
     D = e.application;
   if (h[e.user.id] = {
@@ -132,8 +132,8 @@ function D(e) {
       guildId: e.guild_member_profile.guild_id,
       banner: e.guild_member_profile.banner,
       accentColor: e.guild_member_profile.accent_color,
-      themeColors: null === (p = e.guild_member_profile) || void 0 === p ? void 0 : p.theme_colors,
-      popoutAnimationParticleType: null === (R = e.guild_member_profile) || void 0 === R ? void 0 : R.popout_animation_particle_type,
+      themeColors: null === (R = e.guild_member_profile) || void 0 === R ? void 0 : R.theme_colors,
+      popoutAnimationParticleType: null === (p = e.guild_member_profile) || void 0 === p ? void 0 : p.popout_animation_particle_type,
       profileEffectId: null === (v = e.guild_member_profile) || void 0 === v ? void 0 : null === (C = v.profile_effect) || void 0 === C ? void 0 : C.id,
       bio: e.guild_member_profile.bio,
       pronouns: e.guild_member_profile.pronouns,
@@ -244,7 +244,7 @@ function G(e) {
 function w() {
   I.clear(), h = {}, f = {}
 }
-class x extends c.Z {
+class B extends c.Z {
   initialize() {
     this.waitFor(d.ZP), this.syncWith([o.default], w)
   }
@@ -268,15 +268,15 @@ class x extends c.Z {
     return S[e]
   }
   getMutualFriendsCount(e) {
-    return N[e]
+    return A[e]
   }
   getMutualGuilds(e) {
-    return A[e]
+    return N[e]
   }
   takeSnapshot() {
     let e = l.default.getId();
     return {
-      version: x.LATEST_SNAPSHOT_VERSION,
+      version: B.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
         profile: h[e]
@@ -292,9 +292,9 @@ class x extends c.Z {
       USER_PROFILE_UPDATE_START: y,
       USER_PROFILE_UPDATE_SUCCESS: U,
       USER_PROFILE_UPDATE_FAILURE: b,
-      MUTUAL_FRIENDS_FETCH_START: p,
+      MUTUAL_FRIENDS_FETCH_START: R,
       MUTUAL_FRIENDS_FETCH_SUCCESS: C,
-      MUTUAL_FRIENDS_FETCH_FAILURE: R,
+      MUTUAL_FRIENDS_FETCH_FAILURE: p,
       GUILD_JOIN: v,
       GUILD_DELETE: v,
       GUILD_MEMBER_ADD: L,
@@ -303,7 +303,7 @@ class x extends c.Z {
       USER_UPDATE: G,
       LOGOUT: O
     }), E(this, "loadCache", () => {
-      let e = this.readSnapshot(x.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
       null != e && e.forEach(e => {
         let {
           userId: t,
@@ -314,4 +314,4 @@ class x extends c.Z {
     })
   }
 }
-E(x, "displayName", "UserProfileStore"), E(x, "LATEST_SNAPSHOT_VERSION", 1), t.Z = new x
+E(B, "displayName", "UserProfileStore"), E(B, "LATEST_SNAPSHOT_VERSION", 1), t.Z = new B

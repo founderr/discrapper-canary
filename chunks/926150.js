@@ -19,8 +19,8 @@ var a = n(442837),
   _ = n(724593),
   f = n(678738),
   E = n(502762),
-  g = n(530),
-  C = n(580512),
+  C = n(530),
+  g = n(580512),
   I = n(765365),
   x = n(228168),
   T = n(981631),
@@ -47,7 +47,7 @@ function S(e) {
   }), j = (0, a.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), L = (0, a.e7)([s.Z], () => s.Z.hidePersonalInformation);
   return (0, i.jsxs)("div", {
     className: v.body,
-    children: [(0, i.jsx)(g.Z, {
+    children: [(0, i.jsx)(C.Z, {
       user: t,
       profileType: x.y0.PANEL,
       nickname: r.ZP.getName(null, S, t),
@@ -73,7 +73,7 @@ function S(e) {
         user: t,
         channelId: S
       })
-    }), b && R, (0, i.jsx)(C.Z, {
+    }), b && R, (0, i.jsx)(g.Z, {
       user: t,
       channelId: S
     }), (0, i.jsxs)(E.Z.Overlay, {

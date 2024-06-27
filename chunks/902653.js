@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   WebAudioSound: function() {
-    return A
+    return N
   },
   playGiftSound: function() {
     return S
@@ -44,7 +44,7 @@ function S(e, t) {
   n.volume = (0, u.Z)(t), n.play()
 }
 
-function N() {
+function A() {
   if (null != window.navigator.mediaDevices) window.navigator.mediaDevices.enumerateDevices().then(e => {
     let t = _.Z.getOutputDevices(),
       n = o()(t).sortBy(e => e.index).findIndex(e => e.id === _.Z.getOutputDeviceId()),
@@ -56,8 +56,8 @@ function N() {
     I = E
   })
 }
-c.isPlatformEmbedded && (_.Z.addChangeListener(N), N());
-class A {
+c.isPlatformEmbedded && (_.Z.addChangeListener(A), A());
+class N {
   get volume() {
     return this._volume
   }

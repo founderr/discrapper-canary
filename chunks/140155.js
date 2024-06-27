@@ -64,13 +64,13 @@ function S(e) {
   }
 }
 
-function N(e) {
+function A(e) {
   let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? S(e.item) : e.item;
   if (!T.initialized || !h(t) || T.notifCenterIds.has(t.id)) return !1;
   T.notifCenterIds.add(t.id), T.notifCenterItems = [t, ...T.notifCenterItems], T.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id))
 }
 
-function A(e, t) {
+function N(e, t) {
   T.notifCenterItems = T.notifCenterItems.map(n => e.includes(n.id) ? {
     ...n,
     acked: t
@@ -88,7 +88,7 @@ function O(e) {
     disable_action: !0
   } : t)
 }
-class p extends(i = r.ZP.PersistedStore) {
+class R extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     if (this.waitFor(u.default), null != e) {
       let t = e.notifCenterItems.map(e => ({
@@ -143,8 +143,8 @@ class p extends(i = r.ZP.PersistedStore) {
     return T.notifCenterTabFocused
   }
 }
-I(p, "displayName", "NotificationCenterItemsStore"), I(p, "persistKey", "NotificationCenterItemsStore_v2");
-let R = new p(s.Z, {
+I(R, "displayName", "NotificationCenterItemsStore"), I(R, "persistKey", "NotificationCenterItemsStore_v2");
+let p = new R(s.Z, {
   CONNECTION_OPEN: function(e) {
     f();
     let t = [];
@@ -169,13 +169,13 @@ let R = new p(s.Z, {
     let {
       ids: t
     } = e;
-    A(t, !0)
+    N(t, !0)
   },
   NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function(e) {
     let {
       ids: t
     } = e;
-    A(t, !1)
+    N(t, !1)
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
     let {
@@ -183,7 +183,7 @@ let R = new p(s.Z, {
     } = e;
     O(t)
   },
-  NOTIFICATION_CENTER_ITEM_CREATE: N,
+  NOTIFICATION_CENTER_ITEM_CREATE: A,
   NOTIFICATION_CENTER_ITEM_DELETE: function(e) {
     let {
       id: t
@@ -191,7 +191,7 @@ let R = new p(s.Z, {
     if (!T.notifCenterIds.has(t)) return !1;
     T.notifCenterIds.delete(t), T.notifCenterItems = T.notifCenterItems.filter(e => e.id !== t)
   },
-  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: N,
+  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: A,
   LOAD_NOTIFICATION_CENTER_ITEMS: function() {
     T.loading = !0
   },
@@ -262,4 +262,4 @@ let R = new p(s.Z, {
     }
   }
 });
-t.Z = R
+t.Z = p

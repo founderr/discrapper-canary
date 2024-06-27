@@ -4,13 +4,13 @@ n.d(t, {
     return O
   },
   NE: function() {
-    return p
+    return R
   },
   QN: function() {
-    return A
+    return N
   },
   Qf: function() {
-    return R
+    return p
   },
   pQ: function() {
     return m
@@ -52,7 +52,7 @@ let h = e => {
     return t === T.Sk.ONLINE && n ? "".concat(t, "-mobile") : t === T.Sk.ONLINE ? "".concat(t, "-desktop") : t
   },
   S = e => null == e ? e : Object.keys(I.IIU)[Object.values(I.IIU).indexOf(e)],
-  N = e => {
+  A = e => {
     var t, n;
     let {
       layout: i,
@@ -92,7 +92,7 @@ let h = e => {
       is_bot_profile: _.bot
     }
   },
-  A = e => {
+  N = e => {
     var t, n;
     return null == e ? {} : {
       related_user_id: e,
@@ -119,13 +119,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_ACTION, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...N({
+      ...A({
         layout: _,
         userId: t,
         guildId: n,
         showGuildProfile: a
       }),
-      ...A(t),
+      ...N(t),
       location_stack: l,
       profile_action: c,
       profile_section: d,
@@ -151,13 +151,13 @@ let h = e => {
     u.default.track(I.rMx.USER_PROFILE_ACTIVITY_JOINED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...N({
+      ...A({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...A(t),
+      ...N(t),
       location_stack: o,
       activity_type: null != T ? "VOICE" : S(l),
       activity_name: _,
@@ -165,30 +165,6 @@ let h = e => {
       activity_session_id: d,
       application_id: E,
       voice_channel_id: T
-    })
-  },
-  p = e => {
-    let {
-      userId: t,
-      guildId: n,
-      channelId: r,
-      showGuildProfile: s,
-      analyticsLocations: o,
-      layout: a,
-      badge: l
-    } = e;
-    u.default.track(I.rMx.USER_PROFILE_BADGE_PRESSED, {
-      ...(0, i.hH)(n),
-      ...(0, i.JS)(r),
-      ...N({
-        layout: a,
-        userId: t,
-        guildId: n,
-        showGuildProfile: s
-      }),
-      ...A(t),
-      location_stack: o,
-      badge: l
     })
   },
   R = e => {
@@ -201,16 +177,40 @@ let h = e => {
       layout: a,
       badge: l
     } = e;
-    u.default.track(I.rMx.USER_PROFILE_BADGE_HOVERED, {
+    u.default.track(I.rMx.USER_PROFILE_BADGE_PRESSED, {
       ...(0, i.hH)(n),
       ...(0, i.JS)(r),
-      ...N({
+      ...A({
         layout: a,
         userId: t,
         guildId: n,
         showGuildProfile: s
       }),
-      ...A(t),
+      ...N(t),
+      location_stack: o,
+      badge: l
+    })
+  },
+  p = e => {
+    let {
+      userId: t,
+      guildId: n,
+      channelId: r,
+      showGuildProfile: s,
+      analyticsLocations: o,
+      layout: a,
+      badge: l
+    } = e;
+    u.default.track(I.rMx.USER_PROFILE_BADGE_HOVERED, {
+      ...(0, i.hH)(n),
+      ...(0, i.JS)(r),
+      ...A({
+        layout: a,
+        userId: t,
+        guildId: n,
+        showGuildProfile: s
+      }),
+      ...N(t),
       location_stack: o,
       badge: l
     })

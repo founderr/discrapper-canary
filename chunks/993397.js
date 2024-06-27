@@ -60,7 +60,7 @@ t.Z = a.memo(function(e) {
     collapsedReason: c
   } = e, {
     hasJumpTarget: p = !1
-  } = n, [E, g] = a.useState(p), C = a.useCallback(() => g(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
+  } = n, [E, C] = a.useState(p), g = a.useCallback(() => C(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, i.jsxs)("div", {
     className: s()({
       [_.groupStart]: !0,
@@ -73,7 +73,7 @@ t.Z = a.memo(function(e) {
       count: I,
       compact: r,
       expanded: E,
-      onClick: C,
+      onClick: g,
       collapsedReason: c
     }, "collapsed-message-item"), E ? n.content.map((e, t) => {
       if (e.type === h.ys_.DIVIDER && t > 0) {

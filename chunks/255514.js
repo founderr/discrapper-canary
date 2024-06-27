@@ -16,12 +16,12 @@ var i = n(735250),
   h = n(320596),
   f = n(273514),
   S = n(995712),
-  N = n(234937),
-  A = n(473121),
+  A = n(234937),
+  N = n(473121),
   m = n(449413),
   O = n(266080),
-  p = n(316617),
-  R = n(15682),
+  R = n(316617),
+  p = n(15682),
   g = n(905434),
   C = n(196627),
   v = n(739319),
@@ -60,8 +60,8 @@ t.Z = e => {
     reportType: n,
     history: G,
     onSelectChild: w,
-    onModalClose: x,
-    onSubmit: B,
+    onModalClose: B,
+    onSubmit: x,
     multiSelect: k,
     reportId: V,
     textInput: Z
@@ -92,7 +92,7 @@ t.Z = e => {
       if (e === M.evJ.INVALID_FORM_BODY) J(P.Z.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
       else J(P.Z.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
     },
-    el = () => B({
+    el = () => x({
       nodeRef: t.id,
       destination: ["", e.successNodeId]
     }).then(() => {
@@ -104,11 +104,11 @@ t.Z = e => {
       z(!1)
     });
   return r.useEffect(() => {
-    t.is_auto_submit && !q && (X(!0), B({
+    t.is_auto_submit && !q && (X(!0), x({
       nodeRef: t.id,
       destination: ["", t.id]
     }))
-  }, [t.is_auto_submit, q, B, t.id]), (0, i.jsxs)("div", {
+  }, [t.is_auto_submit, q, x, t.id]), (0, i.jsxs)("div", {
     className: y.container,
     children: [(0, i.jsxs)(s.ModalHeader, {
       separator: !1,
@@ -116,7 +116,7 @@ t.Z = e => {
       className: y.header,
       children: [(0, i.jsx)(C.Z, {
         element: U(t, "success")
-      }), (0, i.jsx)(A.Z, {
+      }), (0, i.jsx)(N.Z, {
         node: t
       }), (0, i.jsx)(m.Z, {
         node: t
@@ -127,7 +127,7 @@ t.Z = e => {
         element: F
       }) : null, null != U(t, "breadcrumbs") && (0, i.jsx)(_.Z, {
         history: G
-      }), null != U(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, i.jsx)(p.Z, {
+      }), null != U(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, i.jsx)(R.Z, {
         message: n.record
       }), null != U(t, "user_preview") && "user" === n.name ? (0, i.jsx)(L.Z, {
         user: n.record
@@ -159,13 +159,13 @@ t.Z = e => {
         reportId: V
       }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(g.Z, {
         stageInstance: n.record
-      }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(N.Z, {
+      }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(A.Z, {
         event: n.record
       }), null != U(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, i.jsx)(f.Z, {
         entry: n.record
       }), null != U(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, i.jsx)(S.Z, {
         entry: n.record
-      }), null != H && (0, i.jsx)(R.Z, {
+      }), null != H && (0, i.jsx)(p.Z, {
         element: H,
         onChange: (e, t) => {
           let n = {
@@ -201,7 +201,7 @@ t.Z = e => {
         switch (e.type) {
           case "done":
           case "cancel":
-            x();
+            B();
             break;
           case "next":
             eo(["", e.target]);
@@ -214,7 +214,7 @@ t.Z = e => {
       canNavigateBack: G.length > 0
     }), (0, i.jsx)(s.ModalCloseButton, {
       className: y.closeButton,
-      onClick: x
+      onClick: B
     })]
   })
 }

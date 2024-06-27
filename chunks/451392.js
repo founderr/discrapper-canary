@@ -27,29 +27,29 @@ function C(e) {
     pendingColors: a,
     onThemeColorsChange: r,
     preventDisabled: C,
-    guildId: A,
-    className: m,
-    showPremiumIcon: O = !0,
-    showResetThemeButton: g = !1,
+    guildId: m,
+    className: A,
+    showPremiumIcon: g = !0,
+    showResetThemeButton: O = !1,
     forcedDivider: h
-  } = e, R = (0, _.ZP)(s.id, A), {
-    primaryColor: p,
+  } = e, p = (0, _.ZP)(s.id, m), {
+    primaryColor: R,
     secondaryColor: x
   } = (0, E.Z)({
     user: s,
-    displayProfile: R,
+    displayProfile: p,
     pendingThemeColors: a,
     isPreview: !0
-  }), M = u.ZP.canUsePremiumProfileCustomization(s), D = null != t ? t : s.getAvatarURL(A, 80), f = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), L = (0, d.Cf)(D, f, !1);
-  if (null == p || null == x) return null;
+  }), M = u.ZP.canUsePremiumProfileCustomization(s), D = null != t ? t : s.getAvatarURL(m, 80), f = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), L = (0, d.Cf)(D, f, !1);
+  if (null == R || null == x) return null;
   let P = e => {
-    r(o()(e, null == R ? void 0 : R.themeColors) ? void 0 : e)
+    r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e)
   };
   return (0, n.jsx)(S.Z, {
     title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !M && !C,
-    className: i()(N.__invalid_profileThemesSection, m),
-    showPremiumIcon: O,
+    className: i()(N.__invalid_profileThemesSection, A),
+    showPremiumIcon: g,
     forcedDivider: h,
     children: (0, n.jsxs)("div", {
       className: N.sectionContainer,
@@ -57,7 +57,7 @@ function C(e) {
         className: N.sparkleContainer,
         children: (0, n.jsx)(T.Z, {
           onChange: e => P([e, x]),
-          color: p,
+          color: R,
           suggestedColors: L,
           showEyeDropper: !0,
           label: (0, n.jsx)(c.Text, {
@@ -71,7 +71,7 @@ function C(e) {
       }), (0, n.jsx)("div", {
         className: N.sparkleContainer,
         children: (0, n.jsx)(T.Z, {
-          onChange: e => P([p, e]),
+          onChange: e => P([R, e]),
           color: x,
           suggestedColors: L,
           showEyeDropper: !0,
@@ -83,7 +83,7 @@ function C(e) {
             children: I.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), g && null != A && (0, n.jsx)(c.Button, {
+      }), O && null != m && (0, n.jsx)(c.Button, {
         className: N.resetButton,
         color: c.Button.Colors.PRIMARY,
         look: c.Button.Looks.LINK,

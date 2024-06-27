@@ -1,6 +1,6 @@
 n.d(t, {
   Y: function() {
-    return l
+    return a
   }
 });
 let i = (0, n(818083).B)({
@@ -24,7 +24,7 @@ let i = (0, n(818083).B)({
       }
     }]
   }),
-  l = () => {
+  a = () => {
     let {
       enabled: e
     } = i.getCurrentConfig({

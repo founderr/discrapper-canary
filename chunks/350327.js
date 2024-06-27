@@ -16,7 +16,7 @@ n.d(t, {
     return E
   },
   c_: function() {
-    return A
+    return N
   },
   f4: function() {
     return O
@@ -28,10 +28,10 @@ n.d(t, {
     return I
   },
   rf: function() {
-    return p
+    return R
   },
   z5: function() {
-    return N
+    return A
   }
 });
 var i = n(544891),
@@ -126,14 +126,14 @@ function S(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function A(e) {
+function N(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
@@ -154,7 +154,7 @@ function O(e) {
   }), d(c.QP.PROFILE_BANNER)
 }
 
-function p(e) {
+function R(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e

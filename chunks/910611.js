@@ -24,8 +24,8 @@ var i = n(735250),
   _ = n(594174),
   f = n(467679),
   E = n(346656),
-  g = n(946734),
-  C = n(99843),
+  C = n(946734),
+  g = n(99843),
   I = n(372564),
   x = n(984370),
   T = n(217314),
@@ -43,7 +43,7 @@ function Z(e) {
     handleClick: m,
     handleContextMenu: f,
     handleParentClick: E,
-    handleParentContextMenu: g,
+    handleParentContextMenu: C,
     renderFollowButton: I
   } = e, Z = (0, u.KS)(t, r), {
     prefix: A,
@@ -110,7 +110,7 @@ function Z(e) {
             experimentLocation: "header_bar",
             className: S.avatar
           })
-        }), (0, i.jsx)(C.Z, {
+        }), (0, i.jsx)(g.Z, {
           channel: t
         }, "channel-".concat(t.id))]
       });
@@ -153,7 +153,7 @@ function Z(e) {
         j = (0, i.jsxs)(a.Fragment, {
           children: [b(e, v.Z.Messages.TEXT_CHANNEL), (0, i.jsx)(x.Z.Title, {
             level: M,
-            onContextMenu: g,
+            onContextMenu: C,
             onClick: E,
             className: s()(S.parentChannelName, S.cursorPointer),
             children: (0, c.F6)(l, _.default, p.Z)
@@ -210,7 +210,7 @@ function M(e, t) {
       return (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(A, {
           channel: e
-        }), (0, i.jsx)(g.Z, {
+        }), (0, i.jsx)(C.Z, {
           channel: e
         }, e.id)]
       });

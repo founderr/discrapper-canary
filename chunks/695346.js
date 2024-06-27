@@ -25,10 +25,10 @@ n.d(t, {
     return el
   },
   H1: function() {
-    return R
+    return p
   },
   L1: function() {
-    return eN
+    return eA
   },
   MI: function() {
     return ea
@@ -49,7 +49,7 @@ n.d(t, {
     return P
   },
   QK: function() {
-    return eA
+    return eN
   },
   QZ: function() {
     return S
@@ -64,7 +64,7 @@ n.d(t, {
     return eM
   },
   SE: function() {
-    return eR
+    return ep
   },
   Sb: function() {
     return eS
@@ -73,7 +73,7 @@ n.d(t, {
     return eP
   },
   T4: function() {
-    return p
+    return R
   },
   UP: function() {
     return J
@@ -136,7 +136,7 @@ n.d(t, {
     return T
   },
   fv: function() {
-    return N
+    return A
   },
   gw: function() {
     return ey
@@ -145,7 +145,7 @@ n.d(t, {
     return k
   },
   iG: function() {
-    return B
+    return x
   },
   iH: function() {
     return eC
@@ -154,7 +154,7 @@ n.d(t, {
     return F
   },
   kJ: function() {
-    return x
+    return B
   },
   kU: function() {
     return Y
@@ -262,12 +262,12 @@ let S = (0, a.Zc)("notifications", "quietMode", e => {
   }, e => s.D5.create({
     value: !!e
   })),
-  N = (0, a.Zc)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
-  A = [],
-  m = (0, a.Zc)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : A, e => e),
-  O = (0, a.Zc)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : A, e => e),
-  p = (0, a.Zc)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : A, e => e),
-  R = (0, a.Zc)("textAndImages", "viewImageDescriptions", e => {
+  A = (0, a.Zc)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
+  N = [],
+  m = (0, a.Zc)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : N, e => e),
+  O = (0, a.Zc)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : N, e => e),
+  R = (0, a.Zc)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : N, e => e),
+  p = (0, a.Zc)("textAndImages", "viewImageDescriptions", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.D5.create({
@@ -322,7 +322,7 @@ let S = (0, a.Zc)("notifications", "quietMode", e => {
   }, e => s.D5.create({
     value: e
   })),
-  x = (0, a.Zc)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.D5.create({
+  B = (0, a.Zc)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.D5.create({
     value: e
   }));
 (0, a.Zc)("privacy", "contactSyncEnabled", e => {
@@ -331,7 +331,7 @@ let S = (0, a.Zc)("notifications", "quietMode", e => {
 }, e => s.D5.create({
   value: e
 }));
-let B = (0, a.Zc)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+let x = (0, a.Zc)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
   k = (0, a.Zc)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, a.Zc)("privacy", "friendDiscoveryFlags", e => {
   var t;
@@ -506,7 +506,7 @@ let ef = new Set([o.Z.ALL, o.Z.UNREADS, o.Z.NONE]);
   value: e
 }));
 let eS = (0, a.KM)((0, a.Zc)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
-  eN = (0, a.Zc)("appearance", "clientThemeSettings", e => {
+  eA = (0, a.Zc)("appearance", "clientThemeSettings", e => {
     var t;
     return {
       backgroundGradientPresetId: null == e ? void 0 : null === (t = e.backgroundGradientPresetId) || void 0 === t ? void 0 : t.value
@@ -516,7 +516,7 @@ let eS = (0, a.KM)((0, a.Zc)("appearance", "developerMode", e => null != e && e,
       value: e.backgroundGradientPresetId
     }) : void 0
   })),
-  eA = (0, a.R2)((0, a.KM)((0, a.Zc)("textAndImages", "gifAutoPlay", e => {
+  eN = (0, a.R2)((0, a.KM)((0, a.Zc)("textAndImages", "gifAutoPlay", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => s.D5.create({
@@ -552,8 +552,8 @@ let eS = (0, a.KM)((0, a.Zc)("appearance", "developerMode", e => null != e && e,
     var e;
     return null === (e = l.Z.getOverride("animateStickers")) || void 0 === e ? void 0 : e.value
   })),
-  ep = [],
-  eR = (0, a.Zc)("privacy", "activityRestrictedGuildIds", e => null != e ? e : ep, e => e),
+  eR = [],
+  ep = (0, a.Zc)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eR, e => e),
   eg = [],
   eC = (0, a.Zc)("privacy", "activityJoiningRestrictedGuildIds", e => null != e ? e : eg, e => e),
   ev = (0, a.Zc)("privacy", "defaultGuildsActivityRestricted", e => e === r.E5.ON_FOR_LARGE_GUILDS, e => !0 === e ? r.E5.ON_FOR_LARGE_GUILDS : r.E5.OFF),

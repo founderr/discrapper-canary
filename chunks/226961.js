@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   J$: function() {
-    return R
+    return p
   },
   Pz: function() {
     return f
@@ -27,7 +27,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = R(c.Yn.DEFAULT, _._s_.TRANSPORT, 0),
+let E = p(c.Yn.DEFAULT, _._s_.TRANSPORT, 0),
   I = E,
   T = {},
   h = new Map,
@@ -56,21 +56,21 @@ function S(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
-function N(e, t) {
+function A(e, t) {
   return "".concat(e, ":").concat(t)
 }
-class A {
+class N {
   static empty() {
-    return new A({})
+    return new N({})
   }
   put(e, t, n, i) {
     if ("" === i) {
       let i = {
         ...this.state
       };
-      return delete i[S(e, t, n)], new A(i)
+      return delete i[S(e, t, n)], new N(i)
     }
-    return new A({
+    return new N({
       [S(e, t, n)]: i,
       ...this.state
     })
@@ -83,11 +83,11 @@ class A {
     d(this, "state", void 0), this.state = e
   }
 }
-let m = A.empty(),
+let m = N.empty(),
   O = !1,
-  p = null;
+  R = null;
 
-function R(e, t, n) {
+function p(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
@@ -107,7 +107,7 @@ function C() {
 C();
 
 function v() {
-  null != p && (p.destroy(), p = null)
+  null != R && (R.destroy(), R = null)
 }
 class L extends(i = r.ZP.Store) {
   getSection() {
@@ -128,7 +128,7 @@ class L extends(i = r.ZP.Store) {
     return O
   }
   getSimulcastDebugOverride(e, t) {
-    let n = N(e, t);
+    let n = A(e, t);
     return h.has(n) ? h.get(n) : c.Z.NO_OVERRIDE
   }
 }
@@ -199,7 +199,7 @@ d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
     } = e, n = l.Z.getMediaEngine();
     if (v(), !n.supports(c.AN.CONNECTION_REPLAY) || 0 === t.length) return;
     let i = n.createReplayConnection(c.Yn.DEFAULT, t);
-    null != i && (p = i, i.on(s.Sh.Video, (e, t, n, r, s) => {
+    null != i && (R = i, i.on(s.Sh.Video, (e, t, n, r, s) => {
       o.Z.dispatch({
         type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
         mediaEngineConnectionId: i.mediaEngineConnectionId,
@@ -224,7 +224,7 @@ d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
       context: n,
       quality: i
     } = e;
-    h.set(N(t, n), i)
+    h.set(A(t, n), i)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     null != e.channelId && (C(), h.clear())

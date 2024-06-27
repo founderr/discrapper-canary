@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(768581),
   f = n(392552),
   S = n(543241),
-  N = n(199257),
-  A = n(880949),
+  A = n(199257),
+  N = n(880949),
   m = n(784222),
   O = n(149203),
-  p = n(689938),
-  R = n(961184);
+  R = n(689938),
+  p = n(961184);
 
 function g(e) {
   return "animated" in e
@@ -35,7 +35,7 @@ let C = e => {
       inspectedEmoji: t,
       guild: n
     } = e, i = g(t);
-    return null != n && i ? p.Z.Messages.EMOJI_FROM_GUILD.format({
+    return null != n && i ? R.Z.Messages.EMOJI_FROM_GUILD.format({
       guildName: n.name
     }) : null
   },
@@ -70,12 +70,12 @@ let C = e => {
       },
       G = (0, s.e7)([I.Z], () => null !== b && b.type === l.B.GUILD ? I.Z.getGuild(b.guildId) : null, [b]),
       w = (0, s.e7)([T.Z], () => T.Z.isFocused()),
-      x = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
-      B = E.Yk.useSetting(),
+      B = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
+      x = E.Yk.useSetting(),
       k = (0, S.C1)(L, g(b) ? b : null),
       {
         newlyAddedEmojis: V
-      } = (0, N.Z)(L, D),
+      } = (0, A.Z)(L, D),
       Z = b.id,
       H = (null == U ? void 0 : U.type) === m.ld.EMOJI ? U.subCategory : O.t0.NONE;
     if (r.useEffect(() => {
@@ -93,31 +93,31 @@ let C = e => {
       var F;
       let e = null != b.id ? h.ZP.getEmojiURL({
         id: b.id,
-        animated: B && b.animated,
+        animated: x && b.animated,
         size: 28
       }) : b.url;
       t = "" === e ? (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
-        className: R.glyphEmoji,
+        className: p.glyphEmoji,
         children: "surrogates" in b ? b.surrogates : null
       }) : (0, i.jsx)("img", {
         alt: null !== (F = b.allNamesString) && void 0 !== F ? F : "",
         src: e,
-        className: R.emoji
+        className: p.emoji
       })
     } else t = (0, i.jsx)(o.CirclePlusIcon, {
       size: "md",
       color: "currentColor",
-      className: R.icon,
-      colorClass: R.icon
+      className: p.icon,
+      colorClass: p.icon
     });
-    let Y = null != G ? (0, i.jsx)(A.Z, {
-        className: R.__invalid_guildIcon,
+    let Y = null != G ? (0, i.jsx)(N.Z, {
+        className: p.__invalid_guildIcon,
         guild: G,
-        shouldAnimate: !x && w
+        shouldAnimate: !B && w
       }) : null,
-      j = P && "CREATE_EMOJI" === b.type ? p.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : b.allNamesString,
-      W = P && "CREATE_EMOJI" === b.type ? p.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : C({
+      j = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : b.allNamesString,
+      W = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : C({
         inspectedEmoji: b,
         channel: M,
         guildId: L,

@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(669405),
   _ = n(434479),
   f = n(981631),
-  g = n(176505),
-  m = n(689938);
+  m = n(176505),
+  g = n(689938);
 
 function C(e) {
   let {
@@ -37,14 +37,14 @@ function C(e) {
       width: 24,
       height: 24
     }),
-    text: m.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
+    text: g.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
     selected: n,
     onClick: () => {
       (0, s.Q2)({
         guildId: t.id,
         source: f.jXE.CHANNEL_LIST,
-        tab: g.oC.MEMBER_APPLICATIONS
-      }), (0, h.uL)(f.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS))
+        tab: m.oC.MEMBER_APPLICATIONS
+      }), (0, h.uL)(f.Z5c.CHANNEL(t.id, m.oC.MEMBER_APPLICATIONS))
     },
     trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, {
       count: I

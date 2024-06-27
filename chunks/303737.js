@@ -4,7 +4,7 @@ n.d(t, {
     return m
   },
   be: function() {
-    return A
+    return N
   },
   g4: function() {
     return S
@@ -16,10 +16,10 @@ n.d(t, {
     return O
   },
   sO: function() {
-    return R
+    return p
   },
   yL: function() {
-    return p
+    return R
   }
 }), n(653041), n(47120), n(998459);
 var i = n(991637),
@@ -65,7 +65,7 @@ function S(e, t, n) {
   return E
 }
 
-function N(e) {
+function A(e) {
   let t = c.n.getState().editStateIdsForGroup[e],
     n = c.n.getState().listings,
     i = new Set;
@@ -87,8 +87,8 @@ function N(e) {
   return r
 }
 
-function A(e) {
-  let t = N(e);
+function N(e) {
+  let t = A(e);
   h[e] = t, t.forEach(e => {
     let t = e.set("flags", T.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     o.Z.dispatch({
@@ -100,7 +100,7 @@ function A(e) {
 
 function m(e) {
   var t;
-  (null !== (t = h[e]) && void 0 !== t ? t : N(e)).forEach(e => {
+  (null !== (t = h[e]) && void 0 !== t ? t : A(e)).forEach(e => {
     o.Z.dispatch({
       type: "CHANNEL_DELETE",
       channel: e
@@ -132,7 +132,7 @@ async function O(e, t) {
   })
 }
 
-function p(e, t) {
+function R(e, t) {
   var n, i;
   let r = c.n.getState().listings[e],
     s = null == r ? void 0 : r.usedTemplate;
@@ -172,6 +172,6 @@ function p(e, t) {
   }
 }
 
-function R(e) {
+function p(e) {
   return (0, d.H2)(e) && e.hasFeature(I.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.$F)() && (0, u.hQ)(e.id)
 }

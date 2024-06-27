@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(314897),
   f = n(592125),
   E = n(496675),
-  g = n(158776),
-  C = n(246946),
+  C = n(158776),
+  g = n(246946),
   I = n(979651),
   x = n(5192),
   T = n(51144),
@@ -71,38 +71,38 @@ t.Z = e => {
     isMobile: eo,
     status: ec,
     hangStatusActivity: eu
-  } = (0, r.cj)([m.Z, g.Z, E.Z], () => {
+  } = (0, r.cj)([m.Z, C.Z, E.Z], () => {
     let e = null != m.Z.getAnyStreamForUser(n.id);
     return {
-      activity: g.Z.findActivity(n.id, t => {
+      activity: C.Z.findActivity(n.id, t => {
         let {
           type: n
         } = t;
         return e ? n === K.IIU.PLAYING : n !== K.IIU.CUSTOM_STATUS && n !== K.IIU.HANG_STATUS
       }),
-      customStatusActivity: g.Z.findActivity(n.id, e => {
+      customStatusActivity: C.Z.findActivity(n.id, e => {
         let {
           type: t
         } = e;
         return t === K.IIU.CUSTOM_STATUS
       }),
       isApplicationStreaming: e,
-      isMobile: g.Z.isMobileOnline(n.id),
-      status: et ? null : g.Z.getStatus(n.id),
-      hangStatusActivity: ea && null != ei && E.Z.can(K.Plq.CONNECT, ei) ? g.Z.findActivity(n.id, e => {
+      isMobile: C.Z.isMobileOnline(n.id),
+      status: et ? null : C.Z.getStatus(n.id),
+      hangStatusActivity: ea && null != ei && E.Z.can(K.Plq.CONNECT, ei) ? C.Z.findActivity(n.id, e => {
         let {
           type: t
         } = e;
         return t === K.IIU.HANG_STATUS
       }) : null
     }
-  }), ed = null != el || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, l.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
+  }), ed = null != el || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, l.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
     mutualFriends: em,
     isFetching: e_
   } = (0, M.Z)(n.id, !n.bot), {
     mutualGuilds: ef,
     isFetching: eE
-  } = (0, b.Z)(n.id, !n.bot), eg = !n.bot && null != em && em.length > 0, eC = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
+  } = (0, b.Z)(n.id, !n.bot), eC = !n.bot && null != em && em.length > 0, eg = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
     popoutUser: n,
     source: D.m.PROFILE_PANEL
   }), ex = (0, c.ZP)();
@@ -231,9 +231,9 @@ t.Z = e => {
                   }
                 }
               })
-            }) : null, (eC || eg) && (0, i.jsxs)(R.Z.Overlay, {
+            }) : null, (eg || eC) && (0, i.jsxs)(R.Z.Overlay, {
               className: X.profilePanelConnections,
-              children: [eC ? (0, i.jsx)(W.Z, {
+              children: [eg ? (0, i.jsx)(W.Z, {
                 className: X.mutualGuildsList,
                 header: q.Z.Messages.MUTUAL_GUILDS_COUNT.format({
                   count: ef.length
@@ -252,9 +252,9 @@ t.Z = e => {
                   })
                 },
                 children: eT
-              }) : null, eg ? (0, i.jsx)(W.Z, {
+              }) : null, eC ? (0, i.jsx)(W.Z, {
                 className: s()(X.mutualFriendsList, {
-                  [X.mutualFriendsDivider]: eC
+                  [X.mutualFriendsDivider]: eg
                 }),
                 header: q.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
                   count: em.length

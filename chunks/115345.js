@@ -16,7 +16,7 @@ n.d(t, {
     return H
   },
   vo: function() {
-    return x
+    return B
   }
 }), n(47120), n(789020), n(724458), n(411104);
 var i = n(470079),
@@ -35,12 +35,12 @@ var i = n(470079),
   h = n(888369),
   f = n(430824),
   S = n(771845),
-  N = n(9156),
-  A = n(626135),
+  A = n(9156),
+  N = n(626135),
   m = n(630388),
   O = n(823379),
-  p = n(960048),
-  R = n(709054),
+  R = n(960048),
+  p = n(709054),
   g = n(223683),
   C = n(630114),
   v = n(506712),
@@ -68,7 +68,7 @@ function b(e, t) {
           overrideMode: r,
           messagePain: u.messages === D.XR.High,
           visitsALot: a,
-          muted: N.ZP.isMuted(e.id) && !N.ZP.isTemporarilyMuted(e.id)
+          muted: A.ZP.isMuted(e.id) && !A.ZP.isTemporarilyMuted(e.id)
         }
       }(r, n, e, t, a[r.id]);
       return i
@@ -131,23 +131,23 @@ function w() {
     t = {};
   for (let r of e) {
     var n, i;
-    let e = null !== (i = (null !== (n = N.ZP.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
+    let e = null !== (i = (null !== (n = A.ZP.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
     e = (0, m.mB)(e, y.vc.UNREADS_ALL_MESSAGES, !0), e = (0, m.mB)(e, y.vc.UNREADS_ONLY_MENTIONS, !1), t[r.id] = {
       flags: e
     }
   }
-  k(t), A.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+  k(t), N.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
     auto_migrated: !0,
     num_unread_guids_after: e.filter(e => h.default.hasUnread(e.id)).length
   })
 }
 
-function x(e) {
+function B(e) {
   let [t, n] = i.useState(!1), [r, s] = i.useState(!1), o = i.useCallback(async t => {
     if (r) throw Error("Already submitted notifications migration");
     n(!0);
     try {
-      await B(t, e), s(!0)
+      await x(t, e), s(!0)
     } finally {
       n(!1)
     }
@@ -158,8 +158,8 @@ function x(e) {
     saveSettings: o
   }
 }
-async function B(e, t) {
-  if (N.ZP.useNewNotifications) {
+async function x(e, t) {
+  if (A.ZP.useNewNotifications) {
     u.Z.show({
       title: "Info",
       body: "It looks like you are already using the new notifications system so skipping saving any changes this time because that will almost certainly mess up your account!"
@@ -178,16 +178,16 @@ async function B(e, t) {
         }
       }),
       n = {
-        num_unread_guilds_before: R.default.keys(e).filter(e => h.default.hasUnread(e)).length,
-        unmuted_server_ids: t.filter(e => N.ZP.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
+        num_unread_guilds_before: p.default.keys(e).filter(e => h.default.hasUnread(e)).length,
+        unmuted_server_ids: t.filter(e => A.ZP.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
       };
     return () => {
-      A.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+      N.default.track(M.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
         ...n,
         auto_migrated: !0,
         pre_selected_server_ids: Object.values(e).filter(e => e.mode === D.AR.UseGreyDot).map(e => e.guildId),
         final_selected_server_ids: t.map(e => e.plan.guildId),
-        num_unread_guids_after: R.default.keys(e).filter(e => h.default.hasUnread(e)).length,
+        num_unread_guids_after: p.default.keys(e).filter(e => h.default.hasUnread(e)).length,
         num_tiny_servers_selected: t.filter(e => e.memberCount <= 20).length,
         num_small_servers_selected: t.filter(e => e.memberCount > 20 && e.memberCount <= 200).length,
         num_medium_servers_selected: t.filter(e => e.memberCount > 200 && e.memberCount <= 1e3).length,
@@ -203,7 +203,7 @@ async function B(e, t) {
     let t = {};
     for (let n of Object.values(e)) {
       var i, r;
-      let e = null !== (i = N.ZP.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
+      let e = null !== (i = A.ZP.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
         s = {};
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
@@ -219,7 +219,7 @@ async function B(e, t) {
       })
     } else n()
   } catch (e) {
-    p.Z.captureException(e), u.Z.show({
+    R.Z.captureException(e), u.Z.show({
       title: U.Z.Messages.ERROR,
       body: U.Z.Messages.NOTIF_MIGRATION_ERROR,
       onConfirm: t
@@ -262,8 +262,8 @@ async function Z() {
   }() && (0, g.dt)(e): (0, g.$U)("Backup from ".concat(new Date().toLocaleDateString()))
 }
 async function H() {
-  a.K.set("turnedOffNewNotifications", !0), A.default.track(M.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
-    num_guilds_with_new_setting: Object.values(f.Z.getGuilds()).filter(e => N.ZP.resolveGuildUnreadSetting(e) === P.i.ONLY_MENTIONS).length
+  a.K.set("turnedOffNewNotifications", !0), N.default.track(M.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
+    num_guilds_with_new_setting: Object.values(f.Z.getGuilds()).filter(e => A.ZP.resolveGuildUnreadSetting(e) === P.i.ONLY_MENTIONS).length
   });
   let e = await (0, g.Tn)(),
     t = s().sortBy(e, e => new Date(e.recorded_at).getTime());

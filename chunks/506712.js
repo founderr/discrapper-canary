@@ -30,11 +30,11 @@ function c(e, t, n, i, r) {
       var t;
       return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0)
     }),
-    N = d("three month", i, I, e => {
+    A = d("three month", i, I, e => {
       var t;
       return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0)
     }),
-    A = [S, N, d("six month", i, I, e => {
+    N = [S, A, d("six month", i, I, e => {
       var t;
       return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0)
     }), f],
@@ -44,14 +44,14 @@ function c(e, t, n, i, r) {
     var t;
     m++, O += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
   });
-  let p = "\n**Pain**:\n- Everyones: ".concat(_.XR[null !== (a = T.everyones) && void 0 !== a ? a : 0], "\n- Messages: ").concat(_.XR[null !== (u = T.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(h, "\n**Remote**:\n- Channels: ").concat(m, "\n- AllVisits: ").concat(A.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(A.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(A.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(A.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(O, "\n"),
-    R = N.guildOpens >= .02 * N.totalOpensAcrossAllServers,
+  let R = "\n**Pain**:\n- Everyones: ".concat(_.XR[null !== (a = T.everyones) && void 0 !== a ? a : 0], "\n- Messages: ").concat(_.XR[null !== (u = T.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(h, "\n**Remote**:\n- Channels: ").concat(m, "\n- AllVisits: ").concat(N.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(N.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(N.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(N.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(O, "\n"),
+    p = A.guildOpens >= .02 * A.totalOpensAcrossAllServers,
     g = (null !== (c = f.guildOpens) && void 0 !== c ? c : 0) > 0;
   if (T.messages === _.XR.High) {
-    if (!r) return [_.AR.UseGreyDot, R, "UseGreyDot" + p];
-    if (!R && g) return [_.AR.UseGreyDot, R, "UseGreyDot" + p]
+    if (!r) return [_.AR.UseGreyDot, p, "UseGreyDot" + R];
+    if (!p && g) return [_.AR.UseGreyDot, p, "UseGreyDot" + R]
   }
-  return [_.AR.KeepAsIs, R, "KeepAsIs" + p]
+  return [_.AR.KeepAsIs, p, "KeepAsIs" + R]
 }
 
 function d(e, t, n, i) {

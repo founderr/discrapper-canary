@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(627845),
   N = t(514361),
   C = t(605236),
-  A = t(786761),
-  m = t(3148),
-  O = t(739566),
-  g = t(753206),
+  m = t(786761),
+  A = t(3148),
+  g = t(739566),
+  O = t(753206),
   h = t(837741),
-  R = t(804545),
-  p = t(921801),
+  p = t(804545),
+  R = t(921801),
   x = t(594174),
   M = t(285952),
   D = t(153124),
@@ -36,8 +36,8 @@ var n = t(735250),
   v = t(329013),
   b = t(333859),
   j = t(726985),
-  U = t(981631),
-  B = t(921944),
+  B = t(981631),
+  U = t(921944),
   G = t(959517),
   F = t(689938),
   V = t(225731),
@@ -61,40 +61,40 @@ let H = {
   K = "1337",
   z = e => {
     let s = 0;
-    return [(0, A.e5)({
-      ...(0, m.ZP)({
+    return [(0, m.e5)({
+      ...(0, A.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
-      state: U.yb.SENT,
+      state: B.yb.SENT,
       id: "".concat(s++)
-    }), (0, A.e5)({
-      ...(0, m.ZP)({
+    }), (0, m.e5)({
+      ...(0, A.ZP)({
         channelId: K,
         content: (0, c.wj)(e) ? F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
-      state: U.yb.SENT,
+      state: B.yb.SENT,
       id: "".concat(s++)
-    }), (0, A.e5)({
-      ...(0, m.ZP)({
+    }), (0, m.e5)({
+      ...(0, A.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
-      state: U.yb.SENT,
+      state: B.yb.SENT,
       id: "".concat(s++)
-    }), (0, A.e5)({
-      ...(0, m.ZP)({
+    }), (0, m.e5)({
+      ...(0, A.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
-      state: U.yb.SENT,
+      state: B.yb.SENT,
       id: "".concat(s++)
-    }), (0, A.e5)({
-      ...(0, m.ZP)({
+    }), (0, m.e5)({
+      ...(0, A.ZP)({
         channelId: K,
         content: F.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
-      state: U.yb.SENT,
+      state: B.yb.SENT,
       id: "".concat(s)
     })]
   };
@@ -110,8 +110,8 @@ class Q extends a.Component {
       }), (0, n.jsx)(d.Slider, {
         className: r()(y.marginTop20, y.marginBottom4),
         initialValue: this.props.zoom,
-        defaultValue: U.yqN.ZOOM_DEFAULT,
-        markers: U.yqN.ZOOM_SCALES,
+        defaultValue: B.yqN.ZOOM_DEFAULT,
+        markers: B.yqN.ZOOM_SCALES,
         stickToMarkers: !0,
         onValueChange: this.handleZoomChange,
         onValueRender: this.handleSliderRender,
@@ -137,8 +137,8 @@ class Q extends a.Component {
         children: (0, n.jsx)(d.Slider, {
           className: r()(y.marginTop20, y.marginBottom4),
           initialValue: this.props.fontSize,
-          defaultValue: U.yqN.FONT_SIZE_DEFAULT,
-          markers: U.yqN.FONT_SIZES,
+          defaultValue: B.yqN.FONT_SIZE_DEFAULT,
+          markers: B.yqN.FONT_SIZES,
           stickToMarkers: !0,
           onValueChange: this.handleFontSizeChange,
           onValueRender: this.handleSliderRenderPX,
@@ -187,8 +187,8 @@ class Q extends a.Component {
         className: r()(V.preview, y.marginBottom40, e ? V.compactPreview : void 0, "group-spacing-".concat(null != t ? t : e ? G.c8 : G.pq)),
         outline: !0,
         "aria-hidden": !0,
-        children: i.map((s, t) => (0, n.jsx)(g.Z, {
-          author: (0, O.ZH)(s),
+        children: i.map((s, t) => (0, n.jsx)(O.Z, {
+          author: (0, g.ZH)(s),
           message: s,
           compact: e,
           isGroupStart: t % 2 == 0,
@@ -219,7 +219,7 @@ class Q extends a.Component {
         className: V.forcedColorsWarning,
         children: (0, I.b)() ? F.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
           onClick: () => {
-            E.Z.open(U.oAB.ACCESSIBILITY)
+            E.Z.open(B.oAB.ACCESSIBILITY)
           }
         }) : F.Z.Messages.THEME_DISABLED_FOR_FORCED_COLORS
       })
@@ -232,12 +232,12 @@ class Q extends a.Component {
           children: F.Z.Messages.THEME
         }), (0, n.jsx)(v.g, {})]
       }),
-      children: [(0, n.jsx)(v.i, {}), (0, n.jsx)(p.F, {
+      children: [(0, n.jsx)(v.i, {}), (0, n.jsx)(R.F, {
         setting: j.s6.APPEARANCE_ICON,
         children: (0, n.jsx)(b.c, {})
       }), (0, n.jsx)(d.FormSwitch, {
         value: t && (0, c.ap)(e) && !s,
-        disabled: e !== U.BRd.LIGHT || s || null != a,
+        disabled: e !== B.BRd.LIGHT || s || null != a,
         onChange: this.handleDarkSidebarChecked,
         className: y.marginTop20,
         children: F.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
@@ -281,13 +281,13 @@ class Q extends a.Component {
     return (0, n.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       title: F.Z.Messages.APPEARANCE,
-      children: [(0, n.jsxs)(p.F, {
+      children: [(0, n.jsxs)(R.F, {
         setting: j.s6.APPEARANCE_THEME,
         children: [this.renderPreview(), this.renderTheme()]
-      }), (0, n.jsx)(p.F, {
+      }), (0, n.jsx)(R.F, {
         setting: j.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
         children: this.renderDisplayMode()
-      }), (0, n.jsx)(p.F, {
+      }), (0, n.jsx)(R.F, {
         setting: j.s6.APPEARANCE_SCALING_SPACING,
         children: this.renderScalingAndSpacing()
       }), (0, n.jsx)(d.Text, {
@@ -295,7 +295,7 @@ class Q extends a.Component {
         className: y.marginTop20,
         children: F.Z.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
           onAccessibilityClick() {
-            E.Z.open(U.oAB.ACCESSIBILITY)
+            E.Z.open(B.oAB.ACCESSIBILITY)
           }
         })
       })]
@@ -329,7 +329,7 @@ class Q extends a.Component {
     (0, T.cq)(e)
   }
   constructor(...e) {
-    super(...e), Y(this, "darkMessages", z(U.BRd.DARK)), Y(this, "lightMessages", z(U.BRd.LIGHT)), Y(this, "handleDisplayCompactAvatarsChanged", e => {
+    super(...e), Y(this, "darkMessages", z(B.BRd.DARK)), Y(this, "lightMessages", z(B.BRd.LIGHT)), Y(this, "handleDisplayCompactAvatarsChanged", e => {
       _.ZP.updatedUnsyncedSettings({
         displayCompactAvatars: e
       })
@@ -343,7 +343,7 @@ class Q extends a.Component {
 }
 let X = e => {
   !(0, C.un)(e) && (0, C.EW)(e, {
-    dismissAction: B.L.AUTO,
+    dismissAction: U.L.AUTO,
     forceTrack: !0
   })
 };
@@ -361,7 +361,7 @@ function q() {
     }),
     {
       enabled: d
-    } = (0, R._)({
+    } = (0, p._)({
       location: r
     });
   a.useEffect(() => {

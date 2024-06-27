@@ -13,12 +13,12 @@ var s, o, a, l, u, _, c = n(807864),
   h = n(765250),
   f = n(13245),
   S = n(287734),
-  N = n(579806),
-  A = n(887278),
+  A = n(579806),
+  N = n(887278),
   m = n(490029),
   O = n(710845),
-  p = n(594190),
-  R = n(454991),
+  R = n(594190),
+  p = n(454991),
   g = n(633565),
   C = n(48481),
   v = n(314897),
@@ -31,9 +31,9 @@ var s, o, a, l, u, _, c = n(807864),
   b = n(998502),
   G = n(145597),
   w = n(981631),
-  x = n(987650);
+  B = n(987650);
 (a = s || (s = {})).ATTACHING = "ATTACHING", a.CONNECTING = "CONNECTING", a.CONNECTED = "CONNECTED", a.READY = "READY", a.CRASHED = "CRASHED", a.CONNECT_FAILED = "CONNECT_FAILED", a.HOOK_FAILED = "HOOK_FAILED";
-let B = {},
+let x = {},
   k = new Map,
   V = !1,
   Z = new Set,
@@ -76,7 +76,7 @@ function en(e, t) {
     if (null == t ? k.delete(e) : k.set(e, t), null == t || "CRASHED" === t) {
       var r;
       j = null;
-      let e = null === N.Z || void 0 === N.Z ? void 0 : null === (r = N.Z.fileManager) || void 0 === r ? void 0 : r.uploadDiscordHookCrashes;
+      let e = null === A.Z || void 0 === A.Z ? void 0 : null === (r = A.Z.fileManager) || void 0 === r ? void 0 : r.uploadDiscordHookCrashes;
       null != e && e().then(e => {
         if (!!Array.isArray(e) && 0 !== e.length)
           for (let l of (J.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
@@ -121,7 +121,7 @@ async function er(e) {
   $ = "attach.getOverlayModule";
   let n = await eu();
   $ = "attach.transitionOverlayPIDStatus", en(e, "ATTACHING"), $ = "attach.attachToProcess";
-  let i = await A.YT(e);
+  let i = await N.YT(e);
   null == i ? ($ = "attach.transitionOverlayPIDStatus (CONNECTING)", en(e, "CONNECTING", "ATTACHING"), $ = "attach.reconcileHostProcess", await ei(n), n.connectProcess(e)) : ($ = "attach.transitionOverlayPIDStatus (HOOK_FAILED)", en(e, "HOOK_FAILED", "ATTACHING"), J.warn("Could not hook to pid=".concat(e, ", error=").concat(i)))
 }
 async function es(e) {
@@ -131,7 +131,7 @@ async function es(e) {
   }
   $ = "detach.getOverlayModule";
   let t = await eu();
-  $ = "detach.transitionOverlayPIDStatus", en(e, null), e !== G.Js && ($ = "detach.cancelAttachToProcess", A.pn(e), $ = "detach.disconnectProcess", t.disconnectProcess(e)), $ = "detach.reconcileHostProcess", await ei(t)
+  $ = "detach.transitionOverlayPIDStatus", en(e, null), e !== G.Js && ($ = "detach.cancelAttachToProcess", N.pn(e), $ = "detach.disconnectProcess", t.disconnectProcess(e)), $ = "detach.reconcileHostProcess", await ei(t)
 }
 async function eo(e) {
   var t;
@@ -143,12 +143,12 @@ async function eo(e) {
     return
   }
   async function n(t) {
-    if (!(t in B)) {
-      J.error("Unexpected. ".concat(t, " is not a tracked game?"), B, e);
+    if (!(t in x)) {
+      J.error("Unexpected. ".concat(t, " is not a tracked game?"), x, e);
       return
     }
-    let n = B[t];
-    delete B[t];
+    let n = x[t];
+    delete x[t];
     try {
       await n.deconstructor()
     } catch (e) {
@@ -156,15 +156,15 @@ async function eo(e) {
     }
   }
   if (null == e || !H) {
-    for (let t of (J.verbose("updateIntendedOverlayPIDs: Removing all.", B, e), Object.keys(B))) await n(Number(t));
+    for (let t of (J.verbose("updateIntendedOverlayPIDs: Removing all.", x, e), Object.keys(x))) await n(Number(t));
     return
   }
   for (let n of null !== (t = e.added) && void 0 !== t ? t : []) {
-    let t = p.ZP.getGameOverlayStatus(n);
-    if (J.verbose("updateIntendedOverlayPIDs: newGame", n, t), null != t && t.enabled) switch (n.pid in B && J.error("Unexpected. ".concat(n.pid, " is being added twice?"), B, e), t.overlayMethod) {
-      case x.gl.OutOfProcess:
+    let t = R.ZP.getGameOverlayStatus(n);
+    if (J.verbose("updateIntendedOverlayPIDs: newGame", n, t), null != t && t.enabled) switch (n.pid in x && J.error("Unexpected. ".concat(n.pid, " is being added twice?"), x, e), t.overlayMethod) {
+      case B.gl.OutOfProcess:
         let i = await eE();
-        await i.trackGame(n.pid), B[n.pid] = {
+        await i.trackGame(n.pid), x[n.pid] = {
           method: t.overlayMethod,
           deconstructor: async () => {
             let e = await eE();
@@ -172,15 +172,15 @@ async function eo(e) {
           }
         };
         break;
-      case x.gl.Hook:
-        !k.has(n.pid) && await er(n.pid), B[n.pid] = {
+      case B.gl.Hook:
+        !k.has(n.pid) && await er(n.pid), x[n.pid] = {
           method: t.overlayMethod,
           deconstructor: async () => {
             await es(n.pid)
           }
         };
         break;
-      case x.gl.Disabled:
+      case B.gl.Disabled:
         J.verbose("updateIntendedOverlayPIDs: disabled", n);
         break;
       default:
@@ -201,7 +201,7 @@ function el() {
 let eu = (() => {
   let e = null;
   async function t() {
-    if (!x.iP) throw J.error("Attempted to load overlay on an unsupported platform."), Error("Overlay is not supported on this platform.");
+    if (!B.iP) throw J.error("Attempted to load overlay on an unsupported platform."), Error("Overlay is not supported on this platform.");
     try {
       return await b.ZP.ensureModule("discord_overlay2"),
         function(e) {
@@ -218,16 +218,16 @@ async function e_(e) {
   var t, n, i, r, s, o, a;
   try {
     let t = await el() + "&oop=true&pid=".concat(e);
-    await (null === N.Z || void 0 === N.Z ? void 0 : null === (r = N.Z.globalOverlay) || void 0 === r ? void 0 : null === (i = r.openWindow) || void 0 === i ? void 0 : i.call(r, t))
+    await (null === A.Z || void 0 === A.Z ? void 0 : null === (r = A.Z.globalOverlay) || void 0 === r ? void 0 : null === (i = r.openWindow) || void 0 === i ? void 0 : i.call(r, t))
   } catch (e) {
-    J.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === N.Z || void 0 === N.Z || null === (o = N.Z.window) || void 0 === o || o.close(null === N.Z || void 0 === N.Z ? void 0 : null === (s = N.Z.globalOverlay) || void 0 === s ? void 0 : s.WINDOW_KEY)
+    J.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === A.Z || void 0 === A.Z || null === (o = A.Z.window) || void 0 === o || o.close(null === A.Z || void 0 === A.Z ? void 0 : null === (s = A.Z.globalOverlay) || void 0 === s ? void 0 : s.WINDOW_KEY)
   }
-  return W = e, null !== (a = await (null === N.Z || void 0 === N.Z ? void 0 : null === (n = N.Z.window) || void 0 === n ? void 0 : n.getNativeHandle(null === N.Z || void 0 === N.Z ? void 0 : null === (t = N.Z.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== a ? a : ""
+  return W = e, null !== (a = await (null === A.Z || void 0 === A.Z ? void 0 : null === (n = A.Z.window) || void 0 === n ? void 0 : n.getNativeHandle(null === A.Z || void 0 === A.Z ? void 0 : null === (t = A.Z.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== a ? a : ""
 }
 
 function ec() {
   var e, t;
-  null === N.Z || void 0 === N.Z || null === (t = N.Z.window) || void 0 === t || t.close(null === N.Z || void 0 === N.Z ? void 0 : null === (e = N.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), W = null
+  null === A.Z || void 0 === A.Z || null === (t = A.Z.window) || void 0 === t || t.close(null === A.Z || void 0 === A.Z ? void 0 : null === (e = A.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), W = null
 }
 
 function ed(e) {
@@ -237,13 +237,13 @@ function ed(e) {
 let eE = (() => {
   let e = null;
   async function t() {
-    if (!x.iP || !(0, G.VS)()) throw J.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
+    if (!B.iP || !(0, G.VS)()) throw J.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
     try {
       var e, t;
       let {
         OutOfProcess: n
       } = await eu();
-      return null == n || null === (e = n.init) || void 0 === e || e.call(n), n.setClickZoneCallback(ep), n.setHostWindowCallbacks(e_, ec, ed), n.setFocusCallback(eh), null === (t = n.setSuccessfullyShownCallback) || void 0 === t || t.call(n, ef), n
+      return null == n || null === (e = n.init) || void 0 === e || e.call(n), n.setClickZoneCallback(eR), n.setHostWindowCallbacks(e_, ec, ed), n.setFocusCallback(eh), null === (t = n.setSuccessfullyShownCallback) || void 0 === t || t.call(n, ef), n
     } catch (e) {
       throw J.error("failed loading out of process overlay", e), e
     }
@@ -253,13 +253,13 @@ let eE = (() => {
 
 function eI() {
   return ea({
-    added: p.ZP.getRunningGames(),
+    added: R.ZP.getRunningGames(),
     removed: []
   })
 }
 let eT = et("setOverlayEnabled", async (e, t) => {
-  if (!x.iP || H === e && F === t) return;
-  H = e, F = t, R.v.update({
+  if (!B.iP || H === e && F === t) return;
+  H = e, F = t, p.v.update({
     enabled: e,
     legacyEnabled: t
   }), eM.emitChange();
@@ -273,7 +273,7 @@ let eT = et("setOverlayEnabled", async (e, t) => {
 function eh(e) {
   if (0 === e) {
     var t, n;
-    if ((null !== (n = null === (t = B[null != j ? j : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : x.gl.Disabled) === x.gl.OutOfProcess) return
+    if ((null !== (n = null === (t = x[null != j ? j : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : B.gl.Disabled) === B.gl.OutOfProcess) return
   }
   f.Z.setFocusedPID(0 === e ? null : e)
 }
@@ -284,7 +284,7 @@ function ef(e) {
 
 function eS(e, t, n) {
   var i;
-  let r = null === (i = p.ZP.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
+  let r = null === (i = R.ZP.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
     s = L.Z.getGameByName(r),
     o = {
       game_name: r,
@@ -298,7 +298,7 @@ function eS(e, t, n) {
   }), P.default.track(w.rMx.OVERLAY_HOOK_RESULT, o), J.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), o), t ? en(e, "CONNECTED", "CONNECTING") : en(e, "CONNECT_FAILED", "CONNECTING")
 }
 
-function eN() {
+function eA() {
   let e = v.default.getToken(),
     t = v.default.getId();
   if (null != e) m.lW({
@@ -312,7 +312,7 @@ function eN() {
     }]
   })
 }
-async function eA(e) {
+async function eN(e) {
   let t = await eu();
   null != j && j !== G.Js && t.sendCommand(j, {
     message: "intercept_input",
@@ -322,17 +322,17 @@ async function eA(e) {
 
 function em(e) {
   if (e) {
-    let t = p.ZP.getVisibleGame(),
-      n = null == t ? null : p.ZP.getGameOverlayStatus(t);
-    (null == n ? void 0 : n.overlayMethod) === x.gl.OutOfProcess ? eA(e) : setTimeout(() => eA(e), 200)
-  } else eA(e)
+    let t = R.ZP.getVisibleGame(),
+      n = null == t ? null : R.ZP.getGameOverlayStatus(t);
+    (null == n ? void 0 : n.overlayMethod) === B.gl.OutOfProcess ? eN(e) : setTimeout(() => eN(e), 200)
+  } else eN(e)
 }
 let eO = null;
 
-function ep(e, t, n) {
+function eR(e, t, n) {
   f.Z.relayClickZoneClicked(e, t, n)
 }
-async function eR(e) {
+async function ep(e) {
   if (!!(0, G.VS)())(await eE()).setClickZones(e.map(e => ({
     name: e.name,
     left: e.left,
@@ -404,13 +404,13 @@ function eL(e) {
 }
 class eD extends(o = d.ZP.Store) {
   initialize() {
-    if (!(!x.iP || __OVERLAY__)) this.waitFor(p.ZP, v.default), m.sr(eL, ev), v.default.addChangeListener(eN), eT(R.v.enabled, R.v.legacyEnabled), E.Z.addInterceptor(eg)
+    if (!(!B.iP || __OVERLAY__)) this.waitFor(R.ZP, v.default), m.sr(eL, ev), v.default.addChangeListener(eA), eT(p.v.enabled, p.v.legacyEnabled), E.Z.addInterceptor(eg)
   }
   isInputLocked(e) {
     return !z.has(e)
   }
   isSupported() {
-    return x.iP
+    return B.iP
   }
   get enabled() {
     return H
@@ -512,7 +512,7 @@ let eM = new eD(E.Z, __OVERLAY__ ? {
     } = e;
     K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams;
-    n.append("build_id", "f2584e5072b5f150f7149bb5a37fb9c74d8bdb95"), n.append("rpc", String(t)), n.append("rpc_auth_token", K), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
+    n.append("build_id", "ed7283374a794f2ea560e78d3efc21bb894c824c"), n.append("rpc", String(t)), n.append("rpc_auth_token", K), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
     let {
@@ -562,11 +562,11 @@ let eM = new eD(E.Z, __OVERLAY__ ? {
     let {
       zones: t
     } = e;
-    eR(t)
+    ep(t)
   },
   OVERLAY_SET_ASSOCIATED_GAME: function(e) {
     var t, n;
-    if ((null !== (n = null === (t = B[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : x.gl.Disabled) !== x.gl.OutOfProcess) return;
+    if ((null !== (n = null === (t = x[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : B.gl.Disabled) !== B.gl.OutOfProcess) return;
     let i = k.get(e.previousAssociatedGamePID);
     null != i && (k.delete(e.previousAssociatedGamePID), k.set(e.associatedGamePID, i)), z.delete(e.previousAssociatedGamePID), W = e.associatedGamePID
   },

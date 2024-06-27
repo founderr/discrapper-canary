@@ -25,8 +25,8 @@ function l(e) {
     isMessageSnapshot: u,
     renderThreadAccessory: _,
     renderComponentAccessory: E,
-    renderSuppressEmbeds: I,
-    forceAddReactions: m,
+    renderSuppressEmbeds: m,
+    forceAddReactions: I,
     className: T
   } = e;
   return d ? null : (0, i.jsx)(a.Z, {
@@ -42,8 +42,8 @@ function l(e) {
       onMediaItemContextMenu: o,
       renderThreadAccessory: _,
       renderComponentAccessory: E,
-      renderSuppressEmbeds: I,
-      forceAddReactions: m
+      renderSuppressEmbeds: m,
+      forceAddReactions: I
     })
   })
 }

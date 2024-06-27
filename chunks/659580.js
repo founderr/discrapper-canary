@@ -24,13 +24,13 @@ function _(e) {
     renderInputDevices: _ = !1,
     renderInputModes: f = !1,
     renderInputVolume: E = !1,
-    renderOutputVolume: g = !1,
-    onSelect: C
+    renderOutputVolume: C = !1,
+    onSelect: g
   } = e, I = (0, d.Z)(), x = (0, c.Z)(), T = (0, u.Z)(), N = (0, s.Z)(), v = (0, r.Z)(), S = (0, o.Z)();
   return (0, i.jsx)(l.Z, {
     object: h.qAy.CONTEXT_MENU,
     children: (0, i.jsxs)(a.Menu, {
-      onSelect: C,
+      onSelect: g,
       className: m.menu,
       onClose: t,
       navId: "audio-device-context",
@@ -45,7 +45,7 @@ function _(e) {
         label: p.Z.Messages.FORM_LABEL_INPUT_MODE,
         children: N
       }) : null, (0, i.jsxs)(a.MenuGroup, {
-        children: [E ? v : null, g ? S : null, I]
+        children: [E ? v : null, C ? S : null, I]
       })]
     })
   })

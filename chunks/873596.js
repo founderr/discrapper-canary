@@ -16,9 +16,9 @@ var i = n(735250),
   p = n(586646),
   _ = n(760373),
   f = n(689938),
-  g = n(228233);
+  m = n(228233);
 
-function m(e) {
+function g(e) {
   let {
     lobbyId: t,
     connectionTypeText: n,
@@ -67,7 +67,7 @@ function I(e) {
     channelId: t,
     location: "RTCConnectionDebugPanelContainer"
   }) ? f.Z.Messages.E2EE_END_TO_END_ENCRYPTED : f.Z.Messages.SECURE_CONNECTION;
-  return n ? (0, i.jsx)(m, {
+  return n ? (0, i.jsx)(g, {
     lobbyId: l,
     closePopout: r,
     connectionTypeText: a
@@ -96,25 +96,25 @@ function E(e) {
       selectedTab: t
     })
   }, [e.channelId, t]), (0, i.jsxs)("div", {
-    className: g.container,
+    className: m.container,
     children: [(0, i.jsx)(a.Heading, {
-      className: g.title,
+      className: m.title,
       variant: "heading-lg/bold",
       color: "header-primary",
       children: f.Z.Messages.E2EE_VOICE_DETAILS
     }), (0, i.jsxs)(a.TabBar, {
-      className: g.tabs,
+      className: m.tabs,
       selectedItem: t,
       type: "top",
       look: "brand",
       onItemSelect: n,
       children: [(0, i.jsx)(a.TabBar.Item, {
         id: _.tu.RTC_DEBUG_PANEL,
-        className: g.tabBarItem,
+        className: m.tabBarItem,
         children: f.Z.Messages.E2EE_CONNECTION
       }), (0, i.jsx)(a.TabBar.Item, {
         id: _.tu.RTC_SECURE_FRAMES,
-        className: g.tabBarItem,
+        className: m.tabBarItem,
         children: f.Z.Messages.E2EE_PRIVACY
       })]
     }), (0, i.jsx)(a.TabBar.Panel, {
@@ -132,9 +132,9 @@ function N(e) {
   }) ? (0, i.jsx)(E, {
     ...e
   }) : (0, i.jsx)("div", {
-    className: g.debugPanelStandalone,
+    className: m.debugPanelStandalone,
     children: (0, i.jsx)("section", {
-      className: g.debugPanelSection,
+      className: m.debugPanelSection,
       children: (0, i.jsx)(I, {
         ...e
       })

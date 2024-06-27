@@ -76,7 +76,7 @@ let S = e => {
     })
   })
 };
-class N extends(r = a.Component) {
+class A extends(r = a.Component) {
   componentDidUpdate(e) {
     let {
       focusAfterReady: t,
@@ -172,10 +172,10 @@ class N extends(r = a.Component) {
       tags: E,
       onActivate: h,
       className: f,
-      inputProps: N,
-      focusAfterReady: A
-    } = this.props, m = null != t && t.length > 0, O = !1, p = [];
-    return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => p.push((0, o.jsxs)(_.Anchor, {
+      inputProps: A,
+      focusAfterReady: N
+    } = this.props, m = null != t && t.length > 0, O = !1, R = [];
+    return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => R.push((0, o.jsxs)(_.Anchor, {
       focusProps: {
         offset: 4
       },
@@ -187,7 +187,7 @@ class N extends(r = a.Component) {
         className: T.close,
         "aria-label": I.Z.Messages.REMOVE
       })]
-    }, t))) : (O = !0, E.forEach((e, t) => p.push((0, o.jsxs)(_.Anchor, {
+    }, t))) : (O = !0, E.forEach((e, t) => R.push((0, o.jsxs)(_.Anchor, {
       className: u()(T.tag, T.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
       children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, o.jsx)(_.Avatar, {
@@ -225,7 +225,7 @@ class N extends(r = a.Component) {
           style: {
             maxHeight: l
           },
-          children: [p, (0, o.jsx)("input", {
+          children: [R, (0, o.jsx)("input", {
             className: u()(T.input, {
               [T.richTagInput]: O
             }),
@@ -239,10 +239,10 @@ class N extends(r = a.Component) {
             onFocus: this.handleFocus,
             disabled: r,
             "aria-disabled": r,
-            autoFocus: !A && e,
+            autoFocus: !N && e,
             onMouseDown: h,
             ...this.defaultInputProps,
-            ...N
+            ...A
           }), null != s ? (0, o.jsx)(S, {
             size: a,
             themeOverride: i,
@@ -308,7 +308,7 @@ class N extends(r = a.Component) {
     })
   }
 }
-h(N, "Sizes", f), h(N, "defaultProps", {
+h(A, "Sizes", f), h(A, "defaultProps", {
   size: f.SMALL,
   query: "",
   sections: [],
@@ -320,4 +320,4 @@ h(N, "Sizes", f), h(N, "defaultProps", {
   autoFocus: !1,
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
-}), t.ZP = N
+}), t.ZP = A

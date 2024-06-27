@@ -118,12 +118,12 @@ function _(e) {
     } = e,
     f = [],
     S = [],
-    N = [],
     A = [],
+    N = [],
     m = [],
     O = [],
-    p = [],
-    R = [];
+    R = [],
+    p = [];
   return r.forEach(e => {
     var t;
     if (e.unavailable) return;
@@ -135,7 +135,7 @@ function _(e) {
       guild_scheduled_events: s,
       ...o
     } = e;
-    f.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels), S.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles), N.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis), A.push(r), m.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers), O.push(n), p.push(s), R.push(o, i)
+    f.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels), S.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles), A.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis), N.push(r), m.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers), O.push(n), R.push(s), p.push(o, i)
   }), {
     presences_size: JSON.stringify(null !== (t = null == s ? void 0 : s.friends) && void 0 !== t ? t : []).length,
     users_size: JSON.stringify(T).length,
@@ -150,12 +150,12 @@ function _(e) {
     guild_members_size: JSON.stringify(null != o ? o : []).length,
     guild_presences_size: JSON.stringify(null !== (n = null == s ? void 0 : s.guilds) && void 0 !== n ? n : []).length,
     guild_roles_size: JSON.stringify(S).length,
-    guild_emojis_size: JSON.stringify(N).length,
-    guild_threads_size: JSON.stringify(A).length,
+    guild_emojis_size: JSON.stringify(A).length,
+    guild_threads_size: JSON.stringify(N).length,
     guild_stickers_size: JSON.stringify(m).length,
-    guild_events_size: JSON.stringify(p).length,
+    guild_events_size: JSON.stringify(R).length,
     guild_features_size: JSON.stringify(O).length,
-    guild_remaining_data_size: JSON.stringify(R).length,
+    guild_remaining_data_size: JSON.stringify(p).length,
     size_metrics_duration_ms: Date.now() - i
   }
 }

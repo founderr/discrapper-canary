@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(644914),
   f = n(434404),
   E = n(330010),
-  g = n(314897),
-  C = n(430824),
+  C = n(314897),
+  g = n(430824),
   I = n(594174),
   x = n(259580),
   T = n(585483),
@@ -77,7 +77,7 @@ function j(e) {
 function L(e) {
   let {
     channel: t
-  } = e, l = (0, c.e7)([C.Z], () => null != t ? C.Z.getGuild(t.getGuildId()) : null, [t]), h = null != l && S.default.extractTimestamp(l.id) < Date.now() - A._8R, x = (0, c.e7)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+  } = e, l = (0, c.e7)([g.Z], () => null != t ? g.Z.getGuild(t.getGuildId()) : null, [t]), h = null != l && S.default.extractTimestamp(l.id) < Date.now() - A._8R, x = (0, c.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]), {
     canInvite: L,
     canManageGuild: P,
     canMessage: O

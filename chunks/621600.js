@@ -7,7 +7,7 @@ n.d(t, {
     return O
   },
   I: function() {
-    return R
+    return p
   },
   Ib: function() {
     return i
@@ -25,10 +25,10 @@ n.d(t, {
     return m
   },
   rU: function() {
-    return p
+    return R
   },
   sK: function() {
-    return A
+    return N
   },
   wK: function() {
     return g
@@ -86,10 +86,10 @@ function S(e, t, n, i, r) {
     },
     _ = u(n),
     c = u(O(e), t),
-    I = N(_, c, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    I = A(_, c, "RETURN_PREVIOUS_WHEN_CHANGED"),
     h = null !== (s = I("guild_flags")) && void 0 !== s ? s : 0,
     S = (null !== (o = c.guild_flags) && void 0 !== o ? o : 0) ^ h,
-    A = 0 === (0, d.M1)(S, T.vc.OPT_IN_CHANNELS_OFF, T.vc.OPT_IN_CHANNELS_ON);
+    N = 0 === (0, d.M1)(S, T.vc.OPT_IN_CHANNELS_OFF, T.vc.OPT_IN_CHANNELS_ON);
   a.ZP.trackWithMetadata(E.rMx.NOTIFICATION_SETTINGS_UPDATED, {
     ...c,
     ...l.Z.getStats(e),
@@ -105,17 +105,17 @@ function S(e, t, n, i, r) {
     guild_receive_mobile_push_old: I("guild_receive_mobile_push"),
     guild_scheduled_events_muted_old: I("guild_scheduled_events_muted"),
     guild_message_notification_settings_old: I("guild_message_notification_settings"),
-    is_opt_in_only_change: A
+    is_opt_in_only_change: N
   })
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   return i => {
     if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0
   }
 }
 
-function A(e) {
+function N(e) {
   return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null
 }
 
@@ -132,14 +132,14 @@ function m(e, t, n, i, r, s) {
         channel_is_overridden: a,
         channel_flags: null !== (i = r.flags) && void 0 !== i ? i : null == t ? void 0 : t.channel_flags,
         channel_message_notification_settings: o,
-        channel_muted_until: A(r.mute_config)
+        channel_muted_until: N(r.mute_config)
       }
     },
     m = S(i),
-    O = S(R(e, t), n),
-    p = N(m, O, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    O = S(p(e, t), n),
+    R = A(m, O, "RETURN_PREVIOUS_WHEN_CHANGED"),
     g = u.Z.getChannel(t),
-    C = null !== (c = p("channel_flags")) && void 0 !== c ? c : 0,
+    C = null !== (c = R("channel_flags")) && void 0 !== c ? c : 0,
     v = (null !== (I = O.channel_flags) && void 0 !== I ? I : 0) ^ C,
     L = 0 === (0, d.M1)(v, T.ic.FAVORITED, T.ic.OPT_IN_ENABLED),
     D = null !== (h = null === (o = _.Z.getLastMessage(t)) || void 0 === o ? void 0 : o.type) && void 0 !== h ? h : null;
@@ -152,11 +152,11 @@ function m(e, t, n, i, r, s) {
     update_type: "channel",
     label: r,
     parent_id: null != g ? g.parent_id : null,
-    channel_flags_old: p("channel_flags"),
-    channel_is_muted_old: p("channel_is_muted"),
-    channel_muted_until_old: p("channel_muted_until"),
-    channel_is_overridden_old: p("channel_is_overridden"),
-    channel_message_notification_settings_old: p("channel_message_notification_settings"),
+    channel_flags_old: R("channel_flags"),
+    channel_is_muted_old: R("channel_is_muted"),
+    channel_muted_until_old: R("channel_muted_until"),
+    channel_is_overridden_old: R("channel_is_overridden"),
+    channel_message_notification_settings_old: R("channel_message_notification_settings"),
     is_opt_in_only_change: L,
     last_message_type: D
   })
@@ -178,12 +178,12 @@ function O(e) {
   }
 }
 
-function p(e) {
+function R(e) {
   let t = new Map;
   return e.forEach(e => t.set(e, O(e))), t
 }
 
-function R(e, t) {
+function p(e, t) {
   let n = c.ZP.isChannelMuted(e, t),
     i = c.ZP.getChannelMuteConfig(e, t);
   return {
@@ -196,5 +196,5 @@ function R(e, t) {
 
 function g(e, t) {
   let n = new Map;
-  return t.forEach(t => n.set(t, R(e, t))), n
+  return t.forEach(t => n.set(t, p(e, t))), n
 }

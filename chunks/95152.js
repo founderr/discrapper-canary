@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return p
   }
 }), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
@@ -20,9 +20,9 @@ var i = n(735250),
   h = n(981631),
   f = n(689938),
   S = n(214932),
-  N = n(331651);
+  A = n(331651);
 
-function A(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -90,7 +90,7 @@ class O extends r.Component {
     })
   }
 }
-class p extends r.Component {
+class R extends r.Component {
   componentDidMount() {
     var e;
     (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.ow.WEB && E.default.track(h.rMx.OPEN_MODAL, {
@@ -150,7 +150,7 @@ class p extends r.Component {
                 children: f.Z.Messages.UPLOAD_AREA_FILENAME
               })
             }), (0, i.jsx)(a.TextInput, {
-              className: o()(S.channelTextAreaUpload, N.marginTop8),
+              className: o()(S.channelTextAreaUpload, A.marginTop8),
               value: this.state.filename,
               onChange: e => this.setState({
                 filename: e
@@ -165,7 +165,7 @@ class p extends r.Component {
                   children: f.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                 })
               }), (0, i.jsx)(a.TextInput, {
-                className: o()(S.channelTextAreaUpload, N.marginTop8),
+                className: o()(S.channelTextAreaUpload, A.marginTop8),
                 placeholder: f.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                 value: this.state.description,
                 onChange: e => this.setState({
@@ -176,7 +176,7 @@ class p extends r.Component {
                 }
               })]
             }) : null, !0 !== s && (0, i.jsx)(a.Checkbox, {
-              className: N.marginBottom20,
+              className: A.marginBottom20,
               value: l,
               onChange: (e, t) => this.setState({
                 hasSpoiler: t
@@ -213,16 +213,16 @@ class p extends r.Component {
   }
   constructor(e) {
     var t, n, i, r, s, o;
-    super(e), A(this, "cancelAll", () => {
+    super(e), N(this, "cancelAll", () => {
       l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose()
-    }), A(this, "cancel", () => {
+    }), N(this, "cancel", () => {
       this.props.onClose()
-    }), A(this, "handleTextChange", (e, t, n) => {
+    }), N(this, "handleTextChange", (e, t, n) => {
       this.setState({
         textValue: t,
         richValue: n
       })
-    }), A(this, "handleSubmit", () => {
+    }), N(this, "handleSubmit", () => {
       let {
         upload: e,
         onClose: t,
@@ -251,9 +251,9 @@ class p extends r.Component {
   }
 }
 
-function R(e) {
+function p(e) {
   let t = (0, c.Z)();
-  return e.upload.item.platform !== u.ow.WEB ? null : (0, i.jsx)(p, {
+  return e.upload.item.platform !== u.ow.WEB ? null : (0, i.jsx)(R, {
     ...e,
     file: e.upload.item.file,
     messageMaxLength: t

@@ -28,16 +28,16 @@ function f(e) {
     onClose: f
   } = e, {
     analyticsLocations: S,
-    newestAnalyticsLocation: N
+    newestAnalyticsLocation: A
   } = (0, l.ZP)(), {
-    trackUserProfileAction: A,
+    trackUserProfileAction: N,
     ...m
   } = (0, E.KZ)(), O = (0, o.e7)([c.default], () => c.default.getCurrentUser()), {
-    messageCtaEnabled: p
+    messageCtaEnabled: R
   } = (0, d.l)({
     location: "BiteSizeProfileActivitySection"
   }), {
-    isApplicationStreaming: R,
+    isApplicationStreaming: p,
     activity: g
   } = (0, o.cj)([u.Z, _.Z], () => {
     let e = null != u.Z.getAnyStreamForUser(t.id);
@@ -60,16 +60,16 @@ function f(e) {
     type: a.P.BITE_SIZE_POPOUT,
     activity: g,
     className: h.activity,
-    source: N,
+    source: A,
     user: t,
     guildId: null == n ? void 0 : n.id,
     channelId: r,
     onOpenGameProfile: f,
     onAction: () => {
-      A({
+      N({
         action: "JOIN_ACTIVITY"
       }), (0, I.Ac)({
-        activityType: R ? T.IIU.STREAMING : null == g ? void 0 : g.type,
+        activityType: p ? T.IIU.STREAMING : null == g ? void 0 : g.type,
         activityName: null == g ? void 0 : g.name,
         activityPlatform: null == g ? void 0 : g.platform,
         activitySessionId: null == g ? void 0 : g.session_id,
@@ -79,7 +79,7 @@ function f(e) {
       }), null == f || f()
     },
     showActions: t.id !== (null == O ? void 0 : O.id),
-    actionColor: s()(h.buttonColor, p ? h.engagementExpButtonColor : void 0),
+    actionColor: s()(h.buttonColor, R ? h.engagementExpButtonColor : void 0),
     showChannelDetails: !0
   })
 }

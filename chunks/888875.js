@@ -16,12 +16,12 @@ var i = n(392711),
   h = n(581883),
   f = n(48481),
   S = n(526761),
-  N = n(674563);
-let A = "lastFrecencySavedTime",
+  A = n(674563);
+let N = "lastFrecencySavedTime",
   m = Math.random() * (5 * I.Z.Millis.MINUTE),
   O = 1 * I.Z.Millis.DAY + Math.floor(Math.random() * (1 * I.Z.Millis.HOUR)),
-  p = null,
-  R = Date.now();
+  R = null,
+  p = Date.now();
 class g extends a.Z {
   _initialize() {
     T.DZ.beforeSendCallbacks.push({
@@ -52,7 +52,7 @@ class g extends a.Z {
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => u.Z.hasPendingUsage() && h.Z.hasLoaded(S.yP.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!u.Z.hasPendingUsage()) h.Z.hasLoaded(S.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = s.UY.create(), e.applicationFrecency.applications = (0, f.tU)(u.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, N.yP))
+        if (!!u.Z.hasPendingUsage()) h.Z.hasLoaded(S.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = s.UY.create(), e.applicationFrecency.applications = (0, f.tU)(u.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, A.yP))
       }
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => E.Z.hasPendingUsage() && h.Z.hasLoaded(S.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -78,19 +78,19 @@ class g extends a.Z {
 
 function C() {
   var e;
-  R = null !== (e = o.K.get(A)) && void 0 !== e ? e : Date.now(), D(!1)
+  p = null !== (e = o.K.get(N)) && void 0 !== e ? e : Date.now(), D(!1)
 }
 
 function v() {
-  clearTimeout(p), p = null
+  clearTimeout(R), R = null
 }
 async function L() {
-  R = Date.now(), D(!0), !h.Z.hasLoaded(S.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || _.Z.hasPendingUsage() || l.ZP.hasPendingUsage() || u.Z.hasPendingUsage() || E.Z.hasPendingUsage()) && await T.DZ.loadIfNecessary(), r().forEach(T.aj, e => {
+  p = Date.now(), D(!0), !h.Z.hasLoaded(S.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || _.Z.hasPendingUsage() || l.ZP.hasPendingUsage() || u.Z.hasPendingUsage() || E.Z.hasPendingUsage()) && await T.DZ.loadIfNecessary(), r().forEach(T.aj, e => {
     e.markDirtyIfHasPendingChange()
   })
 }
 
 function D(e) {
-  e && (R = Date.now(), o.K.set(A, R)), null != p && clearTimeout(p), p = setTimeout(L, Math.max(m, O - (Date.now() - R)))
+  e && (p = Date.now(), o.K.set(N, p)), null != R && clearTimeout(R), R = setTimeout(L, Math.max(m, O - (Date.now() - p)))
 }
 t.Z = new g

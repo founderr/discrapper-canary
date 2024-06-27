@@ -26,43 +26,43 @@ function h(e) {
     guildId: h,
     viewProfileItem: f
   } = e, S = (0, r.e7)([c.default], () => c.default.getId() === t.id), {
-    trackUserProfileAction: N
+    trackUserProfileAction: A
   } = (0, d.KZ)(), {
-    analyticsLocations: A,
+    analyticsLocations: N,
     newestAnalyticsLocation: m
   } = (0, a.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU), O = (0, u.Z)({
     user: t,
     color: "danger",
     location: m,
-    onBlock: () => N({
+    onBlock: () => A({
       action: "BLOCK",
-      analyticsLocations: A
+      analyticsLocations: N
     }),
-    onUnblock: () => N({
+    onUnblock: () => A({
       action: "UNBLOCK",
-      analyticsLocations: A
+      analyticsLocations: N
     })
-  }), p = (0, _.Z)({
+  }), R = (0, _.Z)({
     user: t,
     guildId: h,
     color: "danger",
     location: m,
-    onAction: () => N({
+    onAction: () => A({
       action: "REPORT",
-      analyticsLocations: A
+      analyticsLocations: N
     })
-  }), R = (0, l.Z)({
+  }), p = (0, l.Z)({
     id: t.id,
     label: T.Z.Messages.COPY_ID_USER,
-    onSuccess: () => N({
+    onSuccess: () => A({
       action: "COPY_USER_ID",
-      analyticsLocations: A
+      analyticsLocations: N
     })
   });
   if (S && n !== I.y0.FULL_SIZE) return null;
   let g = [];
-  return (null != f && g.push([f]), !S && (null != O || null != p) && g.push([O, p]), null != R && g.push([R]), 0 === g.length) ? null : (0, i.jsx)(a.Gt, {
-    value: A,
+  return (null != f && g.push([f]), !S && (null != O || null != R) && g.push([O, R]), null != p && g.push([p]), 0 === g.length) ? null : (0, i.jsx)(a.Gt, {
+    value: N,
     children: (0, i.jsx)(s.Popout, {
       renderPopout: e => {
         let {
@@ -88,7 +88,7 @@ function h(e) {
           text: T.Z.Messages.MORE,
           icon: s.MoreHorizontalIcon,
           onClick: e => {
-            N({
+            A({
               action: "PRESS_OPTIONS"
             }), t(e)
           },

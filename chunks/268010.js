@@ -23,7 +23,7 @@ let E = (e, t, n) => {
       episodeDescription: e.extra.media_subtitle
     }).replaceAll("*", "")
   },
-  g = (e, t) => f.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  C = (e, t) => f.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: t.username,
     activity: e.extra.media_title
   });
@@ -32,7 +32,7 @@ t.Z = e => {
     channel: t,
     entry: n,
     requestId: c,
-    closePopout: C
+    closePopout: g
   } = e, {
     user: I,
     mediaImageSrc: x,
@@ -72,11 +72,11 @@ t.Z = e => {
       })
     }), (0, i.jsx)(_.St, {
       children: (0, i.jsx)(_.WT, {
-        closePopout: C,
+        closePopout: g,
         user: I,
         channel: t,
         generateReactionImage: Z,
-        reactionImageAltText: g(n, I),
+        reactionImageAltText: C(n, I),
         entry: n,
         requestId: c
       })

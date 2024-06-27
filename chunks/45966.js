@@ -12,8 +12,8 @@ var i, r, s, o, a = n(392711),
   h = n(819553),
   f = n(290511);
 let S = {},
-  N = {},
   A = {},
+  N = {},
   m = !1;
 
 function O(e, t, n) {
@@ -37,7 +37,7 @@ function O(e, t, n) {
   })(e, t, n))
 }
 
-function p(e) {
+function R(e) {
   var t, n, i, r, s, o, a, l, u;
   let {
     guildId: _,
@@ -50,12 +50,12 @@ function p(e) {
   }
 }
 
-function R(e, t) {
-  if (null == N[e]) return;
+function p(e, t) {
+  if (null == A[e]) return;
   let n = {};
-  Object.keys(N[e]).forEach(i => {
-    !t.includes(i) && N[e][i] ? n[i] = !0 : t.includes(i) && !1 === N[e][i] && (n[i] = !1)
-  }), N[e] = n;
+  Object.keys(A[e]).forEach(i => {
+    !t.includes(i) && A[e][i] ? n[i] = !0 : t.includes(i) && !1 === A[e][i] && (n[i] = !1)
+  }), A[e] = n;
   let i = t.filter(e => null == n[e] || !0 === n[e]);
   Object.keys(n).forEach(e => {
     !0 === n[e] && !t.includes(e) && i.push(e)
@@ -115,11 +115,11 @@ class L extends(i = u.ZP.Store) {
   shouldFetchPrompts(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.Z.Millis.HOUR;
     if (m) return !1;
-    let n = A[e];
+    let n = N[e];
     return null == n || Date.now() - n > t
   }
   getPendingResponseOptions(e) {
-    return N[e]
+    return A[e]
   }
   ackIdForGuild(e) {
     let t = this.getEnabledOnboardingPrompts(e),
@@ -131,7 +131,7 @@ class L extends(i = u.ZP.Store) {
     }), n
   }
   lastFetchedAt(e) {
-    return A[e]
+    return N[e]
   }
   isAdvancedMode(e) {
     var t;
@@ -175,7 +175,7 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = L) ? Object.define
       responses: _ ? [] : s,
       onboardingPromptsSeen: o,
       onboardingResponsesSeen: a
-    }, !_ && R(t, s), A[t] = Date.now()
+    }, !_ && p(t, s), N[t] = Date.now()
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function() {
     m = !1
@@ -187,8 +187,8 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = L) ? Object.define
       selected: i,
       removedOptionIds: r
     } = e;
-    return !!c.Z.isFullServerPreview(t) || null != S[t] && (null != r && r.length > 0 && l().pullAll(S[t].responses, r), i ? S[t].responses.push(n) : l().pull(S[t].responses, n), null == N[t] && (N[t] = {}), N[t][n] = i, null != r && r.forEach(e => N[t][e] = !1), N[t] = {
-      ...N[t]
+    return !!c.Z.isFullServerPreview(t) || null != S[t] && (null != r && r.length > 0 && l().pullAll(S[t].responses, r), i ? S[t].responses.push(n) : l().pull(S[t].responses, n), null == A[t] && (A[t] = {}), A[t][n] = i, null != r && r.forEach(e => A[t][e] = !1), A[t] = {
+      ...A[t]
     }, !0)
   },
   GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function(e) {
@@ -198,7 +198,7 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = L) ? Object.define
       prompts_seen: i,
       options_seen: r
     } = e;
-    R(t, n);
+    p(t, n);
     let s = S[t];
     if (null == s) return !1;
     let o = O(s.prompts, i, r);
@@ -210,8 +210,8 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = L) ? Object.define
       onboardingResponsesSeen: r
     }
   },
-  GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: p,
-  GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: p,
+  GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: R,
+  GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: R,
   GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: function(e) {
     let {
       guildId: t,

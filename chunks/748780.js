@@ -54,26 +54,26 @@ t.Z = {
       durationMin: h,
       durationMax: f,
       ...S
-    } = n, N = t._value, A = E(n.duration, h, f), m = E(n.toValue, s, o), O = i[I](t, {
+    } = n, A = t._value, N = E(n.duration, h, f), m = E(n.toValue, s, o), O = i[I](t, {
       ...S,
       toValue: m,
       tension: a,
       friction: l,
-      duration: A
-    }), p = O;
+      duration: N
+    }), R = O;
     if (_ || c) {
       let e = E(n.duration, h, f);
       r = i[I](t, {
         ...S,
-        toValue: _ ? N : -m,
+        toValue: _ ? A : -m,
         tension: a,
         friction: l,
         duration: e
-      }), p = i.sequence([O, r])
+      }), R = i.sequence([O, r])
     }
-    u ? p.start(() => {
+    u ? R.start(() => {
       (!T || T && T()) && (d ? d(e.bind(null, t, n)) : e(t, n))
-    }) : p.start(d)
+    }) : R.start(d)
   },
   interpolate: function(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

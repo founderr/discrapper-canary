@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(735250),
@@ -24,7 +24,7 @@ let f = () => [T.Z.Messages.APP_ICON_PIRATE, T.Z.Messages.APP_ICON_PIRATE_1, T.Z
     return null !== (e = l().sample(f())) && void 0 !== e ? e : T.Z.Messages.APP_ICON_PIRATE
   };
 
-function N(e) {
+function A(e) {
   let {
     id: t,
     className: n,
@@ -33,13 +33,13 @@ function N(e) {
     tabIndex: l,
     children: d,
     isNew: T = !1
-  } = e, [f, N] = r.useState(E.QA[t].name), A = t === c.Ru.PIRATE, m = (0, u.useRadioItem)({
+  } = e, [f, A] = r.useState(E.QA[t].name), N = t === c.Ru.PIRATE, m = (0, u.useRadioItem)({
     label: f,
     isSelected: a
   });
   return (0, i.jsx)(u.Tooltip, {
     text: f,
-    onTooltipShow: () => A && N(S()),
+    onTooltipShow: () => N && A(S()),
     children: e => (0, i.jsxs)("div", {
       className: h.appIconSelectionContainer,
       children: [!a && T && (0, i.jsx)("div", {
@@ -58,7 +58,7 @@ function N(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     icon: t,
     isSelected: n,
@@ -67,7 +67,7 @@ function A(e) {
     onSelect: o,
     isNew: a
   } = e;
-  return (0, i.jsx)(N, {
+  return (0, i.jsx)(A, {
     onSelect: r ? void 0 : o,
     isSelected: n,
     id: t.id,

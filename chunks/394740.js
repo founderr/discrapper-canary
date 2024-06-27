@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return R
+    return p
   }
 }), n(47120);
 var i = n(735250),
@@ -20,24 +20,24 @@ var i = n(735250),
   h = n(74538),
   f = n(706667),
   S = n(409673),
-  N = n(981631),
-  A = n(474936),
+  A = n(981631),
+  N = n(474936),
   m = n(689938),
   O = n(439316),
-  p = n(538100);
+  R = n(538100);
 
-function R(e) {
+function p(e) {
   var t;
   let {
     onClose: s,
-    closePopout: R,
+    closePopout: p,
     sound: g,
     channel: C
   } = e, v = (0, _.ZP)(), [L, D] = r.useState(!1), {
     location: M
   } = (0, u.O)(), P = r.useMemo(() => ({
     ...M,
-    section: N.jXE.SOUNDBOARD_SOUND_PICKER
+    section: A.jXE.SOUNDBOARD_SOUND_PICKER
   }), [M]), {
     analyticsLocations: y
   } = (0, d.ZP)(c.Z.PREMIUM_UPSELL), {
@@ -48,42 +48,42 @@ function R(e) {
     tooltipPosition: "left"
   }), G = (0, a.ap)(v) ? n(537381) : n(341048);
   r.useEffect(() => {
-    T.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: A.cd.SOUND_PICKER_SOUND_CLICKED,
+    T.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
+      type: N.cd.SOUND_PICKER_SOUND_CLICKED,
       is_external: !0,
       location: {
         ...P,
-        object: N.qAy.SOUNDBOARD_SOUND
+        object: A.qAy.SOUNDBOARD_SOUND
       },
       location_stack: y,
-      sku_id: h.ZP.getSkuIdForPremiumType(A.p9.TIER_2)
+      sku_id: h.ZP.getSkuIdForPremiumType(N.p9.TIER_2)
     })
   }, [y, P]);
   let w = r.useCallback(() => {
-    T.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
-      location_section: N.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL
-    }), (0, E.z)(), R()
-  }, [R]);
+    T.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
+      location_section: A.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL
+    }), (0, E.z)(), p()
+  }, [p]);
   return (0, i.jsxs)("div", {
-    className: o()(p.premiumPromo, O.container),
+    className: o()(R.premiumPromo, O.container),
     children: [(0, i.jsx)(l.Clickable, {
-      className: p.premiumPromoClose,
+      className: R.premiumPromoClose,
       onClick: s,
       children: m.Z.Messages.CLOSE
     }), (0, i.jsx)("img", {
       "aria-hidden": !0,
       alt: "",
-      className: o()(p.premiumPromoImage, p.premiumPromoImageSmaller, O.image),
+      className: o()(R.premiumPromoImage, R.premiumPromoImageSmaller, O.image),
       src: G
     }), (0, i.jsx)(l.Heading, {
       variant: "heading-lg/normal",
       color: "header-primary",
-      className: p.premiumPromoTitle,
+      className: R.premiumPromoTitle,
       children: m.Z.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
     }), (0, i.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: p.premiumPromoDescription,
+      className: R.premiumPromoDescription,
       children: m.Z.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
         onClick: w
       })
@@ -93,11 +93,11 @@ function R(e) {
         className: O.previewButtonContainer,
         children: b
       }), (0, i.jsx)(I.Z, {
-        subscriptionTier: A.Si.TIER_2,
+        subscriptionTier: N.Si.TIER_2,
         submitting: L,
         premiumModalAnalyticsLocation: {
-          section: N.jXE.SOUNDBOARD_SOUND_PICKER,
-          object: N.qAy.BUTTON_CTA
+          section: A.jXE.SOUNDBOARD_SOUND_PICKER,
+          object: A.qAy.BUTTON_CTA
         },
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.GREEN,

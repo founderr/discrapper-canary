@@ -1,6 +1,6 @@
 t.d(s, {
   i: function() {
-    return eB
+    return eU
   }
 }), t(653041);
 var n = t(735250);
@@ -20,13 +20,13 @@ var a = t(990547),
   I = t(163379),
   N = t(703288),
   C = t(574755),
-  A = t(425799),
-  m = t(377171),
-  O = t(621628),
-  g = t(18438),
+  m = t(425799),
+  A = t(377171),
+  g = t(621628),
+  O = t(18438),
   h = t(778825),
-  R = t(351780),
-  p = t(231765),
+  p = t(351780),
+  R = t(231765),
   x = t(837741),
   M = t(804545),
   D = t(813732),
@@ -37,8 +37,8 @@ var a = t(990547),
   v = t(171156),
   b = t(906467),
   j = t(131951),
-  U = t(25990),
-  B = t(626135),
+  B = t(25990),
+  U = t(626135),
   G = t(572004),
   F = t(49012),
   V = t(358085),
@@ -60,7 +60,7 @@ var a = t(990547),
   et = t(501348),
   en = t(795594),
   ea = t(443702),
-  ei = t(327192),
+  ei = t(920914),
   er = t(177508),
   eo = t(956699),
   el = t(54942),
@@ -74,13 +74,13 @@ var a = t(990547),
   eI = t(327885),
   eN = t(595242),
   eC = t(301121),
-  eA = t(463153),
-  em = t(36192),
-  eO = t(338345),
-  eg = t(400287),
+  em = t(463153),
+  eA = t(36192),
+  eg = t(338345),
+  eO = t(400287),
   eh = t(554042),
-  eR = t(200645),
-  ep = t(287490),
+  ep = t(200645),
+  eR = t(287490),
   ex = t(168308),
   eM = t(277329),
   eD = t(674116),
@@ -99,13 +99,13 @@ let ej = () => {
       location: e
     }).enabled && s.push(i.z.PRIDE_ICONS_APPEARANCE_BADGE), s
   },
-  eU = eR.Z,
-  eB = e => {
+  eB = ep.Z,
+  eU = e => {
     let {
       unseenGiftCount: s,
       showPrepaidPaymentPastDueWarning: x,
       impressionSource: M,
-      numOfPendingFamilyRequests: eB,
+      numOfPendingFamilyRequests: eU,
       isOverlaySupported: eG,
       isClipsBetaTagShowing: eF = !1,
       shouldMergeGameSettings: eV,
@@ -124,7 +124,7 @@ let ej = () => {
     return Object.freeze({
       [ef.s6.SEARCH_NO_RESULTS]: {
         section: E.ID.CUSTOM,
-        element: eA.Z,
+        element: em.Z,
         predicate: () => ey
       },
       [ef.s6.ACCOUNT]: {
@@ -260,12 +260,12 @@ let ej = () => {
           text: ev.Z.Messages.NEW
         }),
         notice: {
-          stores: [U.Z, h.Z],
+          stores: [B.Z, h.Z],
           element: f.Z
         },
         onSettingsClose: () => {
           l.Z.wait(() => {
-            (0, g.It)(), (0, d.P6)(), _.Z.clearSubsection(eL.oAB.PROFILE_CUSTOMIZATION)
+            (0, O.It)(), (0, d.P6)(), _.Z.clearSubsection(eL.oAB.PROFILE_CUSTOMIZATION)
           })
         }
       },
@@ -422,10 +422,10 @@ let ej = () => {
         label: ev.Z.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         ariaLabel: ev.Z.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         element: el.Z,
-        badgeCount: eB,
+        badgeCount: eU,
         newIndicator: (0, n.jsx)(o.TextBadge, {
           text: ev.Z.Messages.NEW,
-          color: m.Z.BG_BRAND
+          color: A.Z.BG_BRAND
         }),
         newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
       },
@@ -440,7 +440,7 @@ let ej = () => {
         searchableTitles: [ev.Z.Messages.AUTH_SESSIONS],
         label: ev.Z.Messages.AUTH_SESSIONS,
         ariaLabel: ev.Z.Messages.AUTH_SESSIONS,
-        element: em.Z,
+        element: eA.Z,
         newIndicatorDismissibleContentTypes: [i.z.AUTH_SESSIONS_NEW],
         predicate: () => Y.Z.getCurrentConfig({
           location: "9f7d84_1"
@@ -813,8 +813,8 @@ let ej = () => {
         searchableTitles: [ev.Z.Messages.POGGERMODE],
         label: ev.Z.Messages.POGGERMODE,
         ariaLabel: ev.Z.Messages.POGGERMODE,
-        element: p.Z,
-        predicate: () => R.Z.settingsVisible,
+        element: R.Z,
+        predicate: () => p.Z.settingsVisible,
         icon: (0, n.jsx)("img", {
           alt: "",
           src: t(348621),
@@ -826,7 +826,7 @@ let ej = () => {
         searchableTitles: [ev.Z.Messages.CHAT],
         label: ev.Z.Messages.CHAT,
         ariaLabel: ev.Z.Messages.CHAT,
-        element: eg.Z
+        element: eO.Z
       },
       [ef.s6.CHAT_INLINE_MEDIA]: {
         section: eL.oAB.TEXT,
@@ -1051,14 +1051,14 @@ let ej = () => {
         section: eL.oAB.WINDOWS,
         searchableTitles: [ev.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS],
         label: ev.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-        element: eR.Z,
+        element: ep.Z,
         predicate: () => V.isPlatformEmbedded && (0, V.isWindows)()
       },
       [ef.s6.LINUX_SETTINGS]: {
         section: eL.oAB.LINUX,
         searchableTitles: [ev.Z.Messages.USER_SETTINGS_LINUX_SETTINGS],
         label: ev.Z.Messages.USER_SETTINGS_LINUX_SETTINGS,
-        element: eU,
+        element: eB,
         predicate: () => V.isPlatformEmbedded && (0, V.isLinux)()
       },
       [ef.s6.STREAMER_MODE]: {
@@ -1066,7 +1066,7 @@ let ej = () => {
         searchableTitles: [ev.Z.Messages.STREAMER_MODE],
         label: ev.Z.Messages.STREAMER_MODE,
         ariaLabel: ev.Z.Messages.STREAMER_MODE,
-        element: eO.Z
+        element: eg.Z
       },
       [ef.s6.STREAMER_MODE_INTEGRATIONS]: {
         section: eL.oAB.STREAMER_MODE,
@@ -1205,11 +1205,11 @@ let ej = () => {
         section: "merchandise",
         onClick: () => {
           let e = "https://discordmerch.com/Dsktopprm";
-          B.default.track(eL.rMx.USER_SETTINGS_MERCH_LINK_CLICKED), (0, F.q)({
+          U.default.track(eL.rMx.USER_SETTINGS_MERCH_LINK_CLICKED), (0, F.q)({
             href: e,
             shouldConfirm: !0,
             onConfirm: () => {
-              B.default.track(eL.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, T.Z)(e)
+              U.default.track(eL.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, T.Z)(e)
             }
           })
         },
@@ -1227,7 +1227,7 @@ let ej = () => {
         section: eL.oAB.EXPERIMENTS,
         searchableTitles: ["Experiments"],
         label: "Experiments",
-        element: ep.Z,
+        element: eR.Z,
         predicate: () => b.Z.isDeveloper
       },
       [ef.s6.DEVELOPER_OPTIONS]: {
@@ -1375,7 +1375,7 @@ let ej = () => {
         section: eL.oAB.DISMISSIBLE_CONTENT_OPTIONS,
         searchableTitles: ["Dismissible Contents"],
         label: "Dismissible Contents",
-        element: O.Z,
+        element: g.Z,
         predicate: () => b.Z.isDeveloper
       },
       [ef.s6.PAYMENT_FLOW_MODALS]: {
@@ -1410,7 +1410,7 @@ let ej = () => {
         section: eL.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
         searchableTitles: ["Profile Effects Preview Tool"],
         label: "Profile Effects Preview Tool",
-        element: A.Z,
+        element: m.Z,
         predicate: () => b.Z.isDeveloper
       },
       [ef.s6.QUEST_PREVIEW_TOOL]: {

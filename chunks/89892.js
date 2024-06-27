@@ -393,25 +393,25 @@ class f {
   }
   loadComplete(e) {
     var t, n, i, a, l, _, c, E, h, f, S;
-    let N = [...e.newMessages],
-      A = null !== (t = e.isBefore) && void 0 !== t && t,
+    let A = [...e.newMessages],
+      N = null !== (t = e.isBefore) && void 0 !== t && t,
       m = null !== (n = e.isAfter) && void 0 !== n && n,
       O = null !== (i = e.jump) && void 0 !== i ? i : null,
-      p = null !== (a = e.hasMoreBefore) && void 0 !== a && a,
-      R = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
+      R = null !== (a = e.hasMoreBefore) && void 0 !== a && a,
+      p = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
       g = null !== (_ = e.cached) && void 0 !== _ && _,
-      C = r()(N).reverse().map(s.Z.getCurrentConfig({
+      C = r()(A).reverse().map(s.Z.getCurrentConfig({
         location: "2ecb25_2"
       }, {
         autoTrackExposure: !1
       }).enabled ? e => (0, u.e5)(e) : e => T(this, e)).value(),
       v = null;
-    if ((A || m) && null == O && this.ready) v = this.merge(C, A, !0);
+    if ((N || m) && null == O && this.ready) v = this.merge(C, N, !0);
     else {
       let e = this._array.filter(e => e.state === d.yb.SENDING),
         t = this._array.filter(e => e.state === d.yb.SEND_FAILED),
         n = e.length > 0 || t.length > 0;
-      v = this.reset(C), !n || A || m || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (t.length > 0 && (I.info("loadComplete: merging with SEND_FAILED messages for channelId=".concat(this.channelId)), v = v.merge(t)), e.length > 0 && (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), v = v.merge(e)))
+      v = this.reset(C), !n || N || m || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (t.length > 0 && (I.info("loadComplete: merging with SEND_FAILED messages for channelId=".concat(this.channelId)), v = v.merge(t)), e.length > 0 && (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), v = v.merge(e)))
     }
     return v = v.mutate({
       ready: !0,
@@ -424,8 +424,8 @@ class f {
       jumpTargetOffset: null != O && null != O.messageId && null != O.offset ? O.offset : 0,
       jumpSequenceId: null != O ? v.jumpSequenceId + 1 : v.jumpSequenceId,
       jumpReturnTargetId: null !== (S = null == O ? void 0 : O.returnMessageId) && void 0 !== S ? S : null,
-      hasMoreBefore: null == O && m ? v.hasMoreBefore : p,
-      hasMoreAfter: null == O && A ? v.hasMoreAfter : R,
+      hasMoreBefore: null == O && m ? v.hasMoreBefore : R,
+      hasMoreAfter: null == O && N ? v.hasMoreAfter : p,
       cached: g,
       hasFetched: e.hasFetched,
       error: !1

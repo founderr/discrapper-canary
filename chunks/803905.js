@@ -7,10 +7,10 @@ n.d(t, {
     return U
   },
   Ct: function() {
-    return p
+    return R
   },
   EQ: function() {
-    return x
+    return B
   },
   Ej: function() {
     return m
@@ -19,13 +19,13 @@ n.d(t, {
     return I
   },
   O1: function() {
-    return N
+    return A
   },
   O8: function() {
     return L
   },
   Pl: function() {
-    return A
+    return N
   },
   Uw: function() {
     return M
@@ -70,7 +70,7 @@ n.d(t, {
     return h
   },
   uw: function() {
-    return R
+    return p
   },
   wN: function() {
     return w
@@ -101,7 +101,7 @@ class c extends o.Z {
       try {
         let n = _[t.premiumType];
         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let i = B[n];
+        let i = x[n];
         if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
         return i.skuFeatures.includes(e)
       } catch (e) {
@@ -119,12 +119,12 @@ let d = new c(i.q.ANIMATED_EMOJIS),
   h = new c(i.q.CUSTOM_CALL_SOUNDS),
   f = new c(i.q.ANIMATED_AVATAR),
   S = new c(i.q.CUSTOM_DISCRIMINATOR),
-  N = new c(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
-  A = new c("profileBadges"),
+  A = new c(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
+  N = new c("profileBadges"),
   m = new c(i.q.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
   O = new c("collectibles"),
-  p = new c("appIcons"),
-  R = new c(i.q.CLIENT_THEMES),
+  R = new c("appIcons"),
+  p = new c(i.q.CLIENT_THEMES),
   g = new c("boostDiscount"),
   C = new c("freeBoosts"),
   v = new c(i.q.STREAM_MID_QUALITY),
@@ -138,11 +138,11 @@ new o.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, s.h);
 let b = new c(i.q.INCREASED_GUILD_LIMIT),
   G = new c(i.q.INCREASED_MESSAGE_LENGTH),
   w = new c("increasedVideoUploadQuality"),
-  x = new c("uploadLargeFiles"),
-  B = Object.freeze({
-    [l.Si.TIER_0]: new a.Z(l.Si.TIER_0, [d, E, I, A, U, w, x, p]),
-    [l.Si.TIER_1]: new a.Z(l.Si.TIER_1, [d, E, f, S, A, g, v, M, w, x, p]),
-    [l.Si.TIER_2]: new a.Z(l.Si.TIER_2, [d, E, I, T, h, f, S, N, A, m, R, g, C, v, L, M, P, y, U, b, G, w, x, p, O, D])
+  B = new c("uploadLargeFiles"),
+  x = Object.freeze({
+    [l.Si.TIER_0]: new a.Z(l.Si.TIER_0, [d, E, I, N, U, w, B, R]),
+    [l.Si.TIER_1]: new a.Z(l.Si.TIER_1, [d, E, f, S, N, g, v, M, w, B, R]),
+    [l.Si.TIER_2]: new a.Z(l.Si.TIER_2, [d, E, I, T, h, f, S, A, N, m, p, g, C, v, L, M, P, y, U, b, G, w, B, R, O, D])
   });
 
 function k(e, t) {

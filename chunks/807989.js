@@ -37,13 +37,13 @@ function S(e) {
       scopes: s,
       redirectUri: a,
       approximateGuildCount: S,
-      isEmbeddedFlow: A,
+      isEmbeddedFlow: N,
       disclosures: m
     } = e,
     O = new Date(c.default.extractTimestamp(r.id)),
-    p = (0, E.W3)(s),
-    R = (0, _.yE)(null !== (t = r.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
-  if (null != a && !R && !A) try {
+    R = (0, E.W3)(s),
+    p = (0, _.yE)(null !== (t = r.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED);
+  if (null != a && !p && !N) try {
     let e = new URL(a);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   } catch (e) {
@@ -51,32 +51,32 @@ function S(e) {
   }
   return (0, i.jsxs)("div", {
     className: h.applicationDetails,
-    children: [null != n ? (0, i.jsx)(N, {
+    children: [null != n ? (0, i.jsx)(A, {
       className: h.redirectWarning,
       icon: l.LinkIcon,
       text: T.Z.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, i.jsx)(N, {
+    }) : null, (0, i.jsx)(A, {
       icon: l.LockIcon,
       text: (0, d.i)(r)
-    }), (0, i.jsx)(N, {
+    }), (0, i.jsx)(A, {
       icon: l.ClockIcon,
       text: T.Z.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
         date: O
       })
-    }), s.includes(o.x.BOT) && null != S ? (0, i.jsx)(N, {
+    }), s.includes(o.x.BOT) && null != S ? (0, i.jsx)(A, {
       icon: l.RobotIcon,
       text: T.Z.Messages.OAUTH2_DETAILS_GUILDS.format({
         guildCount: S
       })
-    }) : null, (0, i.jsx)(N, {
+    }) : null, (0, i.jsx)(A, {
       icon: l.ShieldIcon,
-      text: p
+      text: R
     }), null != m ? m.map(e => {
       let t = (0, u.PM)(e),
         n = f(e);
-      return null != n && null != t ? (0, i.jsx)(N, {
+      return null != n && null != t ? (0, i.jsx)(A, {
         icon: n,
         text: t
       }) : null
@@ -84,7 +84,7 @@ function S(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     icon: t,
     text: n,

@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(682662),
   _ = n(674552),
   f = n(593364),
-  g = n(905423),
-  m = n(199902),
+  m = n(905423),
+  g = n(199902),
   C = n(592125),
   I = n(944486),
   E = n(979651),
@@ -55,7 +55,7 @@ function y() {
     })),
     D = (0, o.e7)([I.Z], () => I.Z.getChannelId(A.I_8)),
     U = (0, o.e7)([C.Z], () => C.Z.getChannel(D)),
-    G = (0, g.Z)(e => e.guildId) === A.I_8,
+    G = (0, m.Z)(e => e.guildId) === A.I_8,
     {
       badge: w,
       unread: k
@@ -63,12 +63,12 @@ function y() {
     B = function(e) {
       let t = (0, o.e7)([I.Z], () => I.Z.getVoiceChannelId()),
         n = null != t && null != e[t],
-        i = (0, o.e7)([m.Z], () => {
+        i = (0, o.e7)([g.Z], () => {
           if (!n) return !1;
-          let t = m.Z.getCurrentUserActiveStream();
+          let t = g.Z.getCurrentUserActiveStream();
           return null != t && null != e[t.channelId]
         }),
-        l = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreams().some(t => null != e[t.channelId])),
+        l = (0, o.e7)([g.Z], () => g.Z.getAllApplicationStreams().some(t => null != e[t.channelId])),
         r = (0, o.e7)([E.Z], () => n && null != t && E.Z.hasVideo(t), [n, t]),
         a = (0, o.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
         s = (0, o.e7)([h.ZP], () => Array.from(h.ZP.getSelfEmbeddedActivities().values()).some(t => {

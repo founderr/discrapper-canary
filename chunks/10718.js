@@ -4,7 +4,7 @@ n.d(t, {
     return f
   },
   JT: function() {
-    return N
+    return A
   },
   Nk: function() {
     return T
@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   YZ: function() {
-    return A
+    return N
   },
   wi: function() {
     return S
@@ -104,7 +104,7 @@ function S(e, t, n) {
   let S = i.useMemo(() => {
     let e = [];
     if (null != n.placeholderCount)
-      for (let i = 0; i < n.placeholderCount; i++) e.push(p(i, t.commandType));
+      for (let i = 0; i < n.placeholderCount; i++) e.push(R(i, t.commandType));
     return e
   }, [t.commandType, n.placeholderCount]);
   return i.useMemo(() => {
@@ -145,21 +145,21 @@ function S(e, t, n) {
   }, [_, u, T, c, I, S])
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   let {
     descriptors: i,
     commands: r,
     loading: s
   } = l.ZP.query(e, t, n), o = [];
   if (null != n.placeholderCount && s)
-    for (let e = 0; e < n.placeholderCount; e++) o.push(p(e, t.commandType));
+    for (let e = 0; e < n.placeholderCount; e++) o.push(R(e, t.commandType));
   return {
     commands: s ? [...r, ...o] : r,
     sections: s && 0 === i.length ? [a.Tm[d.bi.BUILT_IN]] : i
   }
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = (0, l.PL)(!0, !0),
     r = (0, l.em)(e, !0, !0);
   return i.useMemo(() => {
@@ -203,7 +203,7 @@ let O = {
   name: ""
 };
 
-function p(e, t) {
+function R(e, t) {
   return {
     type: t,
     inputType: _.iw.PLACEHOLDER,

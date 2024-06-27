@@ -16,12 +16,12 @@ let T = null,
   h = null,
   f = null,
   S = null,
-  N = null,
-  A = !1,
+  A = null,
+  N = !1,
   m = !1,
   O = null,
-  p = !1,
-  R = new u.Z("SubscriptionStore");
+  R = !1,
+  p = new u.Z("SubscriptionStore");
 
 function g(e) {
   let {
@@ -36,7 +36,7 @@ function g(e) {
 }
 
 function C() {
-  T = null, h = null, f = null, S = null, N = null, A = !1, m = !1, O = null, p = !1
+  T = null, h = null, f = null, S = null, A = null, N = !1, m = !1, O = null, R = !1
 }
 
 function v(e) {
@@ -57,7 +57,7 @@ function D(e, t) {
     if (!L(r)) {
       if (!m) {
         let e = d.default.getId();
-        R.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.g9)("user id mismatch between logged in user and SubscriptionStore user", {
+        p.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.g9)("user id mismatch between logged in user and SubscriptionStore user", {
           extra: {
             authUserId: e,
             subscriptionId: r.id,
@@ -76,10 +76,10 @@ class M extends(i = a.ZP.Store) {
     return null != T
   }
   hasFetchedMostRecentPremiumTypeSubscription() {
-    return A
+    return N
   }
   hasFetchedPreviousPremiumTypeSubscription() {
-    return p
+    return R
   }
   getPremiumSubscription() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -101,7 +101,7 @@ class M extends(i = a.ZP.Store) {
     return S
   }
   getActiveApplicationSubscriptions() {
-    return N
+    return A
   }
   getSubscriptionForPlanIds(e) {
     var t;
@@ -129,7 +129,7 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     } = e, n = {}, i = {}, r = [], s = [], o = d.default.getId();
     t.forEach(e => {
       if (e.user_id !== o && !m) {
-        R.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        p.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: o,
             subscriptionId: e.id,
@@ -140,7 +140,7 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
       }
       let t = c.Q.createFromServer(e);
       n[t.id] = t, v(t) && (i[t.id] = t, t.type === I.NYc.GUILD && t.status !== I.O0b.ENDED && r.push(t), t.type === I.NYc.APPLICATION && t.status !== I.O0b.ENDED && s.push(t))
-    }), T = n, h = i, S = r, N = s
+    }), T = n, h = i, S = r, A = s
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
     let {
@@ -155,8 +155,8 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     }), null != S && n.type === I.NYc.GUILD && (S = g({
       activeSubscriptions: S,
       record: n
-    })), null != N && n.type === I.NYc.APPLICATION && (S = g({
-      activeSubscriptions: N,
+    })), null != A && n.type === I.NYc.APPLICATION && (S = g({
+      activeSubscriptions: A,
       record: n
     }))
   },
@@ -164,16 +164,16 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     let {
       subscription: t
     } = e;
-    if (A = !0, null != t) {
+    if (N = !0, null != t) {
       let e = d.default.getId();
       if (t.user_id !== e && !m) {
-        R.log("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        p.log("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: e,
             subscriptionId: t.id,
             subscriptionUserId: t.user_id
           }
-        }), A = !1, m = !0;
+        }), N = !1, m = !0;
         return
       }
       f = c.Q.createFromServer(t)
@@ -183,16 +183,16 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     let {
       subscription: t
     } = e;
-    if (p = !0, null != t) {
+    if (R = !0, null != t) {
       let e = d.default.getId();
       if (t.user_id !== e && !m) {
-        R.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        p.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: e,
             subscriptionId: t.id,
             subscriptionUserId: t.user_id
           }
-        }), p = !1, m = !0;
+        }), R = !1, m = !0;
         return
       }
       O = c.Q.createFromServer(t)

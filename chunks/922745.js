@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return A
   },
   r: function() {
     return S
@@ -56,7 +56,7 @@ function S(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     children: t,
     idle: n,
@@ -68,8 +68,8 @@ function N(e) {
     renderBottomRightControls: E,
     screenMessage: I,
     hideControls: h = !1,
-    className: N,
-    innerClassName: A,
+    className: A,
+    innerClassName: N,
     ...m
   } = e;
   return (0, i.jsxs)("div", {
@@ -78,11 +78,11 @@ function N(e) {
     onMouseLeave: u,
     className: s()(f.pictureInPictureVideo, {
       [f.idle]: n
-    }, N),
+    }, A),
     onDoubleClick: r,
     children: [(0, i.jsx)(l.W, {
       children: (0, i.jsx)(d.B, {
-        className: A,
+        className: N,
         children: t
       }, o)
     }), null != I ? (0, i.jsx)(T.Z, {

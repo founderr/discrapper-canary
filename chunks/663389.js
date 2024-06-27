@@ -11,12 +11,12 @@ let E = d.QZA.CLOSED,
   h = {},
   f = {},
   S = {},
-  N = null,
   A = null,
+  N = null,
   m = !1,
   O = !1,
-  p = null,
   R = null,
+  p = null,
   g = null,
   C = [],
   v = null,
@@ -26,8 +26,8 @@ function D(e) {
   var t, n, i, r, s, o;
   let a = c.default.getCurrentUser();
   if (null == a) return M();
-  T = null !== (t = e.section) && void 0 !== t ? t : T, v = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (h[T] = e.subsection), null != e.scrollPosition && null != T && (f[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = d.QZA.OPEN, S = {}, A = {
-    ...N = {
+  T = null !== (t = e.section) && void 0 !== t ? t : T, v = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (h[T] = e.subsection), null != e.scrollPosition && null != T && (f[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = d.QZA.OPEN, S = {}, N = {
+    ...A = {
       [d.oAB.ACCOUNT]: {
         userId: a.id,
         username: a.username,
@@ -39,11 +39,11 @@ function D(e) {
         claimed: a.isClaimed()
       }
     }
-  }, R = null !== (i = e.onClose) && void 0 !== i ? i : null, g = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, C = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], L = null !== (o = e.impressionSource) && void 0 !== o ? o : null
+  }, p = null !== (i = e.onClose) && void 0 !== i ? i : null, g = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, C = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], L = null !== (o = e.impressionSource) && void 0 !== o ? o : null
 }
 
 function M() {
-  E = d.QZA.CLOSED, m = !1, N = null, v = null, A = null, I = null, T = null, h = {}, f = {}, R = null, g = null, C = [], L = null
+  E = d.QZA.CLOSED, m = !1, A = null, v = null, N = null, I = null, T = null, h = {}, f = {}, p = null, g = null, C = [], L = null
 }
 
 function P() {
@@ -54,7 +54,7 @@ class y extends(o = u.ZP.Store) {
     this.waitFor(c.default)
   }
   hasChanges() {
-    return null != A && null != N && (!!this.isOpen() || p === d.cII.USER_SETTINGS) && !l().isEqual(A, N)
+    return null != N && null != A && (!!this.isOpen() || R === d.cII.USER_SETTINGS) && !l().isEqual(N, A)
   }
   isOpen() {
     return m
@@ -80,7 +80,7 @@ class y extends(o = u.ZP.Store) {
       section: T,
       subsection: null != T ? h[T] : null,
       scrollPosition: null != T ? f[T] : null,
-      settings: A,
+      settings: N,
       errors: S,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: O,
@@ -91,7 +91,7 @@ class y extends(o = u.ZP.Store) {
     }
   }
   get onClose() {
-    return R
+    return p
   }
 }
 s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.defineProperty(i, r, {
@@ -134,9 +134,9 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
     let {
       settings: t
     } = e;
-    null == A && (A = {});
-    let n = A[d.oAB.ACCOUNT];
-    A[d.oAB.ACCOUNT] = {
+    null == N && (N = {});
+    let n = N[d.oAB.ACCOUNT];
+    N[d.oAB.ACCOUNT] = {
       ...n,
       ...t
     }
@@ -144,8 +144,8 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
   USER_SETTINGS_MODAL_SUBMIT_COMPLETE: P,
   USER_SETTINGS_MODAL_RESET: function() {
     let e = c.default.getCurrentUser();
-    P(), null != e && (A = {
-      ...N = {
+    P(), null != e && (N = {
+      ...A = {
         [d.oAB.ACCOUNT]: {
           userId: e.id,
           username: e.username,
@@ -160,7 +160,7 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
     })
   },
   DRAWER_SELECT_TAB: function(e) {
-    return p = e.tab, null == T && p === d.cII.USER_SETTINGS && D({
+    return R = e.tab, null == T && R === d.cII.USER_SETTINGS && D({
       type: "USER_SETTINGS_MODAL_INIT",
       section: null,
       subsection: null,

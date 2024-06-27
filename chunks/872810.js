@@ -4,7 +4,7 @@ n.d(t, {
     return V
   },
   Rc: function() {
-    return B
+    return x
   },
   W1: function() {
     return H
@@ -40,7 +40,7 @@ n.d(t, {
     return D
   },
   xc: function() {
-    return x
+    return B
   }
 });
 var i = n(512722),
@@ -59,12 +59,12 @@ var i = n(512722),
   h = n(944486),
   f = n(979651),
   S = n(934415),
-  N = n(70956),
-  A = n(557457),
+  A = n(70956),
+  N = n(557457),
   m = n(573261),
   O = n(26151),
-  p = n(493683),
-  R = n(475179),
+  R = n(493683),
+  p = n(475179),
   g = n(287734),
   C = n(981631),
   v = n(70722);
@@ -112,7 +112,7 @@ function P(e, t) {
     type: "STREAM_WATCH",
     streamKey: r,
     allowMultiple: s
-  }), !s && (null == t || !t.noFocus) && R.Z.selectParticipant(e.channelId, r)
+  }), !s && (null == t || !t.noFocus) && p.Z.selectParticipant(e.channelId, r)
 }
 
 function y(e, t) {
@@ -178,14 +178,14 @@ async function w(e, t, n) {
     })
   } catch (t) {
     let e;
-    429 === t.status && (e = t.body.retry_after * N.Z.Millis.SECOND), a.Z.dispatch({
+    429 === t.status && (e = t.body.retry_after * A.Z.Millis.SECOND), a.Z.dispatch({
       type: "STREAM_PREVIEW_FETCH_FAIL",
       streamKey: i,
       retryAfter: e
     })
   }
 }
-async function x(e) {
+async function B(e) {
   try {
     await m.Z.post({
       url: C.ANM.STREAM_NOTIFY(e),
@@ -197,8 +197,8 @@ async function x(e) {
   } catch (e) {}
 }
 
-function B(e) {
-  (0, A.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
+function x(e) {
+  (0, N.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })
@@ -234,7 +234,7 @@ function Z(e) {
       sourceId: i,
       sourceName: r
     }
-  }), null == t ? p.Z.createBroadcastPrivateChannel() : L(null, t, {
+  }), null == t ? R.Z.createBroadcastPrivateChannel() : L(null, t, {
     pid: n,
     sourceId: i,
     sourceName: r
@@ -245,7 +245,7 @@ function H(e, t) {
   let n = E.default.getId(),
     i = (0, u.my)(t),
     r = h.Z.getVoiceChannelId();
-  null != r && r !== e && g.default.disconnect(), p.Z.addRecipient(e, n, void 0, () => {
+  null != r && r !== e && g.default.disconnect(), R.Z.addRecipient(e, n, void 0, () => {
     O.Z.call(e, !1, !1, null, () => {
       U(i)
     })

@@ -4,10 +4,10 @@ n.d(t, {
     return S
   },
   fq: function() {
-    return N
+    return A
   },
   rR: function() {
-    return A
+    return N
   }
 }), n(47120);
 var i = n(470079),
@@ -48,7 +48,7 @@ function S(e) {
   }
 }
 
-function N() {
+function A() {
   let e = (0, o.e7)([u.Z], () => u.Z.getAccounts()),
     t = S({
       forUserProfile: !1
@@ -63,7 +63,7 @@ function N() {
   }, e => n.has(e.type), e => e.hasMetadata, e => !E.vbS.has(e.type), e => e.name])
 }
 
-function A(e) {
+function N(e) {
   let [t, n] = i.useState(!1);
 
   function r(e) {

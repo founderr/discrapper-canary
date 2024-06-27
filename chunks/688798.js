@@ -16,12 +16,12 @@ var i = n(913527),
   h = n(306680),
   f = n(709054),
   S = n(839627),
-  N = n(802098),
-  A = n(128014),
+  A = n(802098),
+  N = n(128014),
   m = n(163379),
   O = n(596401),
-  p = n(981631),
-  R = n(930441);
+  R = n(981631),
+  p = n(930441);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ async function C(e, t) {
     i = f.default.extractTimestamp(e);
   if ((n >= e || r()().diff(i, "days") > 30) && !t) return;
   let s = await (0, d.Y7)();
-  if (!(null == s ? void 0 : s.categories[R.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
+  if (!(null == s ? void 0 : s.categories[p.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
   let o = await a.Z.getOrEnsurePrivateChannel(O.sP);
   if (null == o) return;
   await l.Z.fetchMessages({
@@ -56,7 +56,7 @@ async function C(e, t) {
   });
   l.Z.receiveMessage(o, {
     ...S,
-    state: p.yb.SENT,
+    state: R.yb.SENT,
     channel_id: o
   }, !0, {})
 }
@@ -79,7 +79,7 @@ class v extends _.Z {
             min_version: s
           }] of Object.entries(e)) s <= t && s > n && (n = s, i = r);
         return i
-      }(r, (0, A.b)());
+      }(r, (0, N.b)());
       if (s.Z.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
           config: i.body,
@@ -90,15 +90,15 @@ class v extends _.Z {
         return
       }
       if (!0 !== r[a].show_on_startup) return;
-      let l = N.Z.lastSeenChangelogId(),
-        _ = N.Z.lastSeenChangelogDate();
+      let l = A.Z.lastSeenChangelogId(),
+        _ = A.Z.lastSeenChangelogDate();
       if (null != l && 0 >= f.default.compare(a, l)) return;
       let c = await o.Z.fetchChangelog(a, E.default.locale);
       if (null != c) {
-        if (null == _ || null == N.Z.lastSeenChangelogDate()) {
+        if (null == _ || null == A.Z.lastSeenChangelogDate()) {
           o.Z.markChangelogAsSeen(a, c.date);
           return
-        }!N.Z.isLocked() && new Date(c.date) > new Date(_) && (0, m.Z)()
+        }!A.Z.isLocked() && new Date(c.date) > new Date(_) && (0, m.Z)()
       }
     })
   }

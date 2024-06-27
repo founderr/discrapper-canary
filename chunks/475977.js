@@ -14,8 +14,8 @@ var n = t(735250),
   I = t(689938),
   N = t(21011),
   C = t(353437),
-  A = t(786792);
-let m = e => {
+  m = t(786792);
+let A = e => {
   var s, t, a, i, l;
   let {
     displayOptions: c,
@@ -62,9 +62,9 @@ s.Z = () => {
     ref: t,
     className: r()(N.container),
     style: {
-      backgroundImage: "url(".concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : A, ")")
+      backgroundImage: "url(".concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ")")
     },
-    children: [(0, n.jsx)(m, {
+    children: [(0, n.jsx)(A, {
       displayOptions: C,
       marketingVariant: i
     }), (0, n.jsx)(o.Button, {

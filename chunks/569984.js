@@ -1,11 +1,11 @@
 "use strict";
 let i, r, s, o, a, l, u, _, c, d, E, I, T;
 n(47120);
-var h, f, S, N, A = n(906280),
-  m = n.n(A),
+var h, f, S, A, N = n(906280),
+  m = n.n(N),
   O = n(887003),
-  p = n(442837),
-  R = n(570140),
+  R = n(442837),
+  p = n(570140),
   g = n(497505),
   C = n(918701),
   v = n(5881),
@@ -68,7 +68,7 @@ function G(e) {
   let t = new Set(_);
   t.delete(e), _ = t
 }
-class w extends(h = p.ZP.Store) {
+class w extends(h = R.ZP.Store) {
   get quests() {
     return r
   }
@@ -112,12 +112,12 @@ class w extends(h = p.ZP.Store) {
     return r.get(e)
   }
 }
-N = "QuestsStore", (S = "displayName") in(f = w) ? Object.defineProperty(f, S, {
-  value: N,
+A = "QuestsStore", (S = "displayName") in(f = w) ? Object.defineProperty(f, S, {
+  value: A,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : f[S] = N, t.Z = new w(R.Z, {
+}) : f[S] = A, t.Z = new w(p.Z, {
   LOGOUT: function() {
     D()
   },

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250),
@@ -21,7 +21,7 @@ var i = n(735250),
   f = n(689938),
   S = n(520759);
 
-function N(e) {
+function A(e) {
   let {
     channel: t,
     message: n,
@@ -61,7 +61,7 @@ function N(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     reply: t,
     chatInputType: n
@@ -71,10 +71,10 @@ function A(e) {
     shouldMention: u,
     showMentionToggle: I
   } = t, {
-    nick: A,
+    nick: N,
     colorString: m,
     colorRoleName: O
-  } = (0, _.ZP)(s), p = function(e, t) {
+  } = (0, _.ZP)(s), R = function(e, t) {
     let n = e.id,
       i = t.id;
     return (0, a.e7)([T.Z], () => {
@@ -86,7 +86,7 @@ function A(e) {
       }
       return 10
     }, [n, i])
-  }(r, s), R = (0, E.NE)(r, s), g = n.showThreadPromptOnReply && p >= 2 && R;
+  }(r, s), p = (0, E.NE)(r, s), g = n.showThreadPromptOnReply && R >= 2 && p;
 
   function C(e) {
     e.stopPropagation(), (0, c.qx)(r.id, !u)
@@ -114,7 +114,7 @@ function A(e) {
             children: f.Z.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
                 className: S.name,
-                name: A,
+                name: N,
                 color: m,
                 roleName: O
               }, t)
@@ -169,10 +169,10 @@ function A(e) {
             })
           })]
         })]
-      }), g && (0, i.jsx)(N, {
+      }), g && (0, i.jsx)(A, {
         channel: r,
         message: s,
-        replyChainLength: p
+        replyChainLength: R
       })]
     })
   })

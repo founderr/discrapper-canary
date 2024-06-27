@@ -38,9 +38,9 @@ let c = (e, t, n) => ({
       episodeDescription: m,
       colors: _,
       channelId: f
-    } = e, E = n.extra.media_title, g = c(d, t);
+    } = e, E = n.extra.media_title, C = c(d, t);
     return await (0, l.f)({
-      assetsToLoad: g,
+      assetsToLoad: C,
       drawImage: e => {
         let t = _.map((e, t) => ({
           color: e,

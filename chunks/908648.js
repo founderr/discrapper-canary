@@ -17,11 +17,11 @@ function r(e) {
     actorUsernameHook: c,
     targetUsernameHook: d,
     compact: u
-  } = e, _ = (0, a.ZP)(t), E = (0, a.Sw)(o, r), I = c(_), m = d(null != E ? E : void 0), T = l.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+  } = e, _ = (0, a.ZP)(t), E = (0, a.Sw)(o, r), m = c(_), I = d(null != E ? E : void 0), T = l.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
     actorName: _.nick,
-    actorHook: I,
+    actorHook: m,
     targetName: null == E ? void 0 : E.nick,
-    targetHook: m
+    targetHook: I
   });
   return (0, i.jsx)(s.Z, {
     icon: n(570111),

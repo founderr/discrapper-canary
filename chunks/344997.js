@@ -38,7 +38,7 @@ function E(e) {
   })
 }
 
-function I(e) {
+function m(e) {
   let {
     learnMoreLink: t
   } = e;
@@ -49,7 +49,7 @@ function I(e) {
   })
 }
 
-function m(e) {
+function I(e) {
   let {
     ctaType: t,
     classificationId: n,
@@ -63,7 +63,7 @@ function m(e) {
       });
     case c.wo.LEARN_MORE_LINK:
       if (null == a) return null;
-      return (0, i.jsx)(I, {
+      return (0, i.jsx)(m, {
         learnMoreLink: a
       });
     default:
@@ -137,7 +137,7 @@ function N(e) {
       })]
     }), (0, i.jsx)(h, {
       theme: a.theme,
-      children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, i.jsx)(m, {
+      children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, i.jsx)(I, {
         ctaType: e,
         classificationId: a.classification_id,
         learnMoreLink: a.learn_more_link

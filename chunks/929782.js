@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   enable: function() {
-    return N
+    return A
   },
   isNotSupported: function() {
     return f
   },
   trackToggleSelfMute: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -59,7 +59,7 @@ function S(e) {
   })
 }
 
-function N() {
+function A() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return f() ? Promise.resolve(!1) : (_.default.track(d.rMx.PERMISSIONS_REQUESTED, {
     type: "audio"
@@ -86,7 +86,7 @@ function N() {
   }).then(() => !0))
 }
 
-function A(e) {
+function N(e) {
   let {
     usedKeybind: t = !1
   } = e, n = l.Z.getKeybindForAction(d.kg4.TOGGLE_MUTE, !1, !0);

@@ -1,31 +1,31 @@
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var o = n(120356),
-  i = n.n(o),
-  a = n(481060),
-  l = n(689938),
-  r = n(256129);
+var a = n(120356),
+  s = n.n(a),
+  l = n(481060),
+  r = n(689938),
+  o = n(256129);
 t.Z = function(e) {
   let {
     className: t,
     color: n = "header-primary",
-    textOpacity: o = .9,
-    bgOpacity: u = .4
+    textOpacity: a = .9,
+    bgOpacity: c = .4
   } = e;
-  return (0, s.jsxs)(a.Text, {
+  return (0, i.jsxs)(l.Text, {
     variant: "text-xxs/medium",
     color: n,
-    className: i()(r.promotedTag, t),
-    children: [(0, s.jsx)("span", {
-      className: r.promotedTagBackground,
+    className: s()(o.promotedTag, t),
+    children: [(0, i.jsx)("span", {
+      className: o.promotedTagBackground,
       style: {
-        opacity: u
+        opacity: c
       }
-    }), (0, s.jsx)("span", {
+    }), (0, i.jsx)("span", {
       style: {
-        opacity: o
+        opacity: a
       },
-      children: l.Z.Messages.QUESTS_PROMOTED
+      children: r.Z.Messages.QUESTS_PROMOTED
     })]
   })
 }

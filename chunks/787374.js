@@ -1,6 +1,6 @@
 n.d(t, {
   S: function() {
-    return I
+    return m
   },
   m: function() {
     return E
@@ -35,7 +35,7 @@ function E() {
   }
 }
 
-function I(e) {
+function m(e) {
   let {
     src: t
   } = e;

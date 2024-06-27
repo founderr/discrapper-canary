@@ -13,8 +13,8 @@ var i, a = n(735250),
   _ = n(607070),
   f = n(899663),
   E = n(317381),
-  g = n(496616),
-  C = n(100527),
+  C = n(496616),
+  g = n(100527),
   I = n(906732),
   x = n(168551),
   T = n(597952),
@@ -134,8 +134,8 @@ class V extends(i = l.Component) {
       reducedMotionEnabled: d,
       fontScaleClass: _,
       saturation: E,
-      withTitleBar: g,
-      guestWindow: C,
+      withTitleBar: C,
+      guestWindow: g,
       clientThemesClassName: I,
       contentClassName: x
     } = this.props, S = (0, O.getPlatform)(), Z = r()(_, {
@@ -161,11 +161,11 @@ class V extends(i = l.Component) {
                   children: (0, a.jsxs)(N.Z, {
                     children: [(0, a.jsx)(P.Co, {}), (0, a.jsx)(m.Wu, {
                       appContext: w.IlC.POPOUT,
-                      renderWindow: C,
+                      renderWindow: g,
                       children: (0, a.jsxs)(L.yP, {
                         children: [(0, a.jsxs)("div", {
                           className: H.popout,
-                          children: [g && null != S ? (0, a.jsx)(v.Z, {
+                          children: [C && null != S ? (0, a.jsx)(v.Z, {
                             focused: n,
                             type: S,
                             windowKey: s,
@@ -189,7 +189,7 @@ class V extends(i = l.Component) {
   constructor(...e) {
     super(...e), G(this, "rootRef", l.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
       if (this.props.connectedToEmbeddedActivity && !R.ZP.disableEmbeddedActivityPopOutAlert) {
-        if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)(0, g.Z)(() => {
+        if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)(0, C.Z)(() => {
           U.Z.unmountWindow(this.props.windowKey), O.isPlatformEmbedded && D.ZP.close(this.props.windowKey)
         })
       }
@@ -227,7 +227,7 @@ let F = l.forwardRef(function(e, t) {
       keyboardModeEnabled: p,
       reducedMotionEnabled: m,
       fontScaleClass: f,
-      saturation: g,
+      saturation: C,
       systemForcedColors: T,
       useForcedColors: N
     } = (0, d.cj)([_.Z], () => ({
@@ -244,7 +244,7 @@ let F = l.forwardRef(function(e, t) {
   let A = (0, Z.Z)(n, i),
     {
       analyticsLocations: R
-    } = (0, I.ZP)(C.Z.POPOUT_WINDOW),
+    } = (0, I.ZP)(g.Z.POPOUT_WINDOW),
     {
       clientThemesClassName: L,
       clientThemesCSS: P
@@ -269,7 +269,7 @@ let F = l.forwardRef(function(e, t) {
         reducedMotionEnabled: m,
         connectedToEmbeddedActivity: v,
         fontScaleClass: f,
-        saturation: g,
+        saturation: C,
         clientThemesClassName: L,
         clientThemesCSS: P
       })

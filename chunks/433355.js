@@ -4,7 +4,7 @@ n.d(t, {
     return L
   },
   uZ: function() {
-    return A
+    return N
   }
 });
 var i, r = n(873546),
@@ -23,7 +23,7 @@ var i, r = n(873546),
   f = n(176505),
   S = n(231338);
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,11 +31,11 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = "message_requests",
+let N = "message_requests",
   m = !1,
   O = !1,
-  p = !0,
-  R = !1,
+  R = !0,
+  p = !1,
   g = {},
   C = {};
 
@@ -54,7 +54,7 @@ function L(e) {
 
 function D(e) {
   let t = !1;
-  R && (R = !1, t = !0);
+  p && (p = !1, t = !0);
   let n = v(E.Z.getChannelId());
   return null != n && n in g && (delete g[n], t = !0), t && e ? e : !e
 }
@@ -72,14 +72,14 @@ function M() {
 }
 
 function P() {
-  if (R === d.Z.isActive()) return !1;
-  R = d.Z.isActive()
+  if (p === d.Z.isActive()) return !1;
+  p = d.Z.isActive()
 }
 class y extends(i = s.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t, n, i, r, s;
-      m = null !== (t = e.isMembersOpen) && void 0 !== t && t, O = null !== (n = e.isSummariesOpen) && void 0 !== n && n, p = null === (i = e.isProfileOpen) || void 0 === i || i, g = null !== (r = e.sidebars) && void 0 !== r ? r : {}, C = null !== (s = e.guildSidebars) && void 0 !== s ? s : {}
+      m = null !== (t = e.isMembersOpen) && void 0 !== t && t, O = null !== (n = e.isSummariesOpen) && void 0 !== n && n, R = null === (i = e.isProfileOpen) || void 0 === i || i, g = null !== (r = e.sidebars) && void 0 !== r ? r : {}, C = null !== (s = e.guildSidebars) && void 0 !== s ? s : {}
     }
     this.syncWith([d.Z], P), this.syncWith([c.Z], M)
   }
@@ -87,15 +87,15 @@ class y extends(i = s.ZP.PersistedStore) {
     return {
       isMembersOpen: m,
       isSummariesOpen: O,
-      isProfileOpen: p,
+      isProfileOpen: R,
       sidebars: g,
       guildSidebars: C
     }
   }
   getSection(e, t) {
-    if (R) return h.ULH.SEARCH;
+    if (p) return h.ULH.SEARCH;
     let n = v(e);
-    return null != n && null != g[n] ? h.ULH.SIDEBAR_CHAT : t && p ? h.ULH.PROFILE : O ? h.ULH.SUMMARIES : m ? h.ULH.MEMBERS : h.ULH.NONE
+    return null != n && null != g[n] ? h.ULH.SIDEBAR_CHAT : t && R ? h.ULH.PROFILE : O ? h.ULH.SUMMARIES : m ? h.ULH.MEMBERS : h.ULH.NONE
   }
   getSidebarState(e) {
     let t = v(e);
@@ -106,24 +106,24 @@ class y extends(i = s.ZP.PersistedStore) {
   }
   getCurrentSidebarChannelId(e) {
     let t = v(e);
-    if (null == t || R) return null;
+    if (null == t || p) return null;
     let n = g[t];
     return null == n ? null : n.type === a.tI.VIEW_THREAD || n.type === a.tI.VIEW_CHANNEL ? n.channelId : null
   }
   getCurrentSidebarMessageId(e) {
     var t;
     let n = v(e);
-    if (null == n || R) return null;
+    if (null == n || p) return null;
     let i = g[n];
     return null == i ? null : i.type === a.tI.VIEW_THREAD || i.type === a.tI.VIEW_CHANNEL ? null === (t = i.details) || void 0 === t ? void 0 : t.initialMessageId : null
   }
 }
-N(y, "displayName", "ChannelSectionStore"), N(y, "persistKey", "ChannelSectionStore2"), t.ZP = new y(o.Z, {
+A(y, "displayName", "ChannelSectionStore"), A(y, "persistKey", "ChannelSectionStore2"), t.ZP = new y(o.Z, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
     O && (O = D(O)), m = D(m)
   },
   PROFILE_PANEL_TOGGLE_SECTION: function() {
-    !p && l.S.dispatch(h.CkL.SEARCH_RESULTS_CLOSE), p = D(p)
+    !R && l.S.dispatch(h.CkL.SEARCH_RESULTS_CLOSE), R = D(R)
   },
   CHANNEL_TOGGLE_SUMMARIES_SECTION: function() {
     m && (m = D(m)), O = D(O)
@@ -135,7 +135,7 @@ N(y, "displayName", "ChannelSectionStore"), N(y, "persistKey", "ChannelSectionSt
       channelId: i,
       details: r
     } = e;
-    R = !1;
+    p = !1;
     let s = v(n);
     return null != s && (g[s] = {
       type: t,
@@ -150,7 +150,7 @@ N(y, "displayName", "ChannelSectionStore"), N(y, "persistKey", "ChannelSectionSt
       baseChannelId: i,
       details: r
     } = e;
-    R = !1;
+    p = !1;
     let s = v(i);
     return null != s && (C[n] = {
       type: t,
@@ -165,7 +165,7 @@ N(y, "displayName", "ChannelSectionStore"), N(y, "persistKey", "ChannelSectionSt
       parentMessageId: n,
       location: i
     } = e;
-    R = !1;
+    p = !1;
     let r = v(t);
     null != r && (g[r] = {
       type: a.tI.CREATE_THREAD,

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return U
+    return B
   }
 }), t(653041);
 var n = t(735250),
@@ -19,13 +19,13 @@ var n = t(735250),
   I = t(894939),
   N = t(321499),
   C = t(710808),
-  A = t(625205),
-  m = t(325808),
-  O = t(823087),
-  g = t(546997),
+  m = t(625205),
+  A = t(325808),
+  g = t(823087),
+  O = t(546997),
   h = t(167540),
-  R = t(803567),
-  p = t(269876),
+  p = t(803567),
+  R = t(269876),
   x = t(976758),
   M = t(526761),
   D = t(726985),
@@ -50,7 +50,7 @@ function j(e, s, t) {
   }))
 }
 
-function U() {
+function B() {
   let {
     inputMode: e,
     qosEnabled: s,
@@ -59,8 +59,8 @@ function U() {
     attenuateWhileSpeakingOthers: T,
     audioSubsystem: S,
     silenceWarning: f,
-    legacyAudioSubsystemSupported: U,
-    experimentalAudioSubsystemSupported: B
+    legacyAudioSubsystemSupported: B,
+    experimentalAudioSubsystemSupported: U
   } = (0, o.cj)([E.Z], () => ({
     inputMode: E.Z.getMode(),
     qosEnabled: E.Z.getQoS(),
@@ -84,13 +84,13 @@ function U() {
     title: P.Z.Messages.VOICE_SETTINGS,
     children: [(0, n.jsx)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_DEVICES,
-      children: (0, n.jsx)(A.Z, {})
+      children: (0, n.jsx)(m.Z, {})
     }), (0, n.jsx)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
       children: (0, n.jsx)(x.Z, {})
     }), (0, n.jsxs)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_MIC_TEST,
-      children: [(0, n.jsx)(O.Z, {}), (0, n.jsx)(l.FormText, {
+      children: [(0, n.jsx)(g.Z, {}), (0, n.jsx)(l.FormText, {
         className: Z.marginBottom20,
         type: l.FormText.Types.DESCRIPTION,
         children: P.Z.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
@@ -101,10 +101,10 @@ function U() {
       })]
     }), (0, n.jsx)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_INPUT_MODE,
-      children: (0, n.jsx)(m.Z, {})
+      children: (0, n.jsx)(A.Z, {})
     }), (0, n.jsxs)(_.F, {
       setting: D.s6.VOICE_AND_VIDEO_SENSITIVITY,
-      children: [e === L.pM.VOICE_ACTIVITY && (0, n.jsx)(p.Z, {}), (0, n.jsx)(l.FormDivider, {
+      children: [e === L.pM.VOICE_ACTIVITY && (0, n.jsx)(R.Z, {}), (0, n.jsx)(l.FormDivider, {
         className: Z.marginBottom40
       })]
     }), (0, n.jsx)(_.F, {
@@ -134,7 +134,7 @@ function U() {
           children: (0, n.jsx)(N.Z, {})
         }), (0, n.jsx)(_.F, {
           setting: D.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-          children: (0, n.jsx)(R.Z, {})
+          children: (0, n.jsx)(p.Z, {})
         }), (0, n.jsx)(_.F, {
           setting: D.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
           children: (0, n.jsx)(l.FormSection, {
@@ -198,7 +198,7 @@ function U() {
                   value: L.iA.EXPERIMENTAL,
                   label: "Experimental"
                 }), t
-              }(U, B),
+              }(B, U),
               onChange: e => {
                 j(P.Z.Messages.SWITCH_SUBSYSTEM, P.Z.Messages.SWITCH_SUBSYSTEM_BODY, () => c.Z.setAudioSubsystem(e))
               }
@@ -208,7 +208,7 @@ function U() {
           })
         }), (0, n.jsxs)(_.F, {
           setting: D.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
-          children: [(0, n.jsx)(g.Z, {}), (0, n.jsx)(l.FormSection, {
+          children: [(0, n.jsx)(O.Z, {}), (0, n.jsx)(l.FormSection, {
             className: Z.marginBottom20,
             title: P.Z.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
             children: (0, n.jsx)(l.FormSwitch, {

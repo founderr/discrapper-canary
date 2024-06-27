@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(785717),
   f = n(204197),
   E = n(78675),
-  g = n(438163),
-  C = n(652853),
+  C = n(438163),
+  g = n(652853),
   I = n(228168),
   x = n(981631),
   T = n(775784);
@@ -35,7 +35,7 @@ function S(e) {
     onOpenProfile: S
   } = e, {
     theme: Z
-  } = (0, C.z)(), {
+  } = (0, g.z)(), {
     analyticsLocations: A
   } = (0, u.ZP)(c.Z.AVATAR), {
     trackUserProfileAction: M
@@ -91,7 +91,7 @@ function S(e) {
         statusTooltip: !0,
         statusTooltipDelay: I.vB
       })
-    }), (0, i.jsx)(g.Z, {
+    }), (0, i.jsx)(C.Z, {
       user: t,
       profileType: I.y0.PANEL
     })]

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return m
+    return A
   }
 }), t(47120);
 var n = t(735250),
@@ -63,7 +63,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function m(e) {
   let {
     sound: s
   } = e, {
@@ -83,7 +83,7 @@ function A(e) {
   })
 }
 
-function m(e) {
+function A(e) {
   let {
     sound: s,
     isGlobal: t,
@@ -110,7 +110,7 @@ function m(e) {
           soundName: s.name,
           subtextHook: E
         }) : s.name
-      }), i ? (0, n.jsx)(A, {
+      }), i ? (0, n.jsx)(m, {
         sound: s
       }) : (0, n.jsx)(o.VoiceNormalIcon, {
         size: "md",

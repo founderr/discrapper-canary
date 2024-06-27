@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(300284),
   f = n(695346),
   S = n(314897),
-  N = n(430824),
-  A = n(594174),
+  A = n(430824),
+  N = n(594174),
   m = n(451478),
   O = n(311715),
-  p = n(626135),
-  R = n(768581),
+  R = n(626135),
+  p = n(768581),
   g = n(74538),
   C = n(785717),
   v = n(888778),
@@ -45,7 +45,7 @@ let w = {
     [P.y0.POMELO_POPOUT]: 18,
     [P.y0.CANCEL_MODAL]: 0
   },
-  x = {
+  B = {
     [P.y0.MODAL]: y.ZY5.USER_PROFILE,
     [P.y0.POPOUT]: y.ZY5.USER_POPOUT,
     [P.y0.SETTINGS]: y.ZY5.USER_POPOUT,
@@ -54,22 +54,22 @@ let w = {
     [P.y0.CANCEL_MODAL]: y.ZY5.USER_POPOUT
   };
 
-function B(e) {
+function x(e) {
   let {
     type: t,
     shown: s,
     onClick: a
-  } = e, u = (0, l.e7)([A.default], () => {
-    let e = A.default.getCurrentUser();
+  } = e, u = (0, l.e7)([N.default], () => {
+    let e = N.default.getCurrentUser();
     return g.ZP.canUsePremiumProfileCustomization(e)
   }), I = r.useRef(!1), {
     analyticsLocations: T
   } = (0, E.ZP)(d.Z.BADGE);
   return r.useEffect(() => {
-    s && !I.current && (I.current = !0, p.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+    s && !I.current && (I.current = !0, R.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
       type: U.cd.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
       location: {
-        page: x[t],
+        page: B[t],
         section: y.jXE.NITRO_BANNER,
         object: y.qAy.NITRO_BADGE
       },
@@ -156,20 +156,20 @@ function V(e) {
     displayProfile: c,
     onClose: d,
     guildId: E,
-    profileType: A,
-    isHovering: p,
+    profileType: N,
+    isHovering: R,
     animateOnHover: w,
-    allowEdit: x = !0,
+    allowEdit: B = !0,
     showPremiumBadgeUpsell: V = !0,
     hasProfileEffect: Z = !1
-  } = e, H = (0, l.e7)([N.Z], () => N.Z.getGuild(E)), F = (0, l.e7)([S.default], () => S.default.getId()) === s.id && x, Y = g.ZP.isPremiumAtLeast(null == c ? void 0 : c.premiumType, U.p9.TIER_2), {
+  } = e, H = (0, l.e7)([A.Z], () => A.Z.getGuild(E)), F = (0, l.e7)([S.default], () => S.default.getId()) === s.id && B, Y = g.ZP.isPremiumAtLeast(null == c ? void 0 : c.premiumType, U.p9.TIER_2), {
     trackUserProfileAction: j
   } = (0, C.KZ)(), [W, K] = r.useState(!1), z = (0, l.e7)([m.Z], () => m.Z.isFocused()), q = f.QK.getSetting(), {
     bannerSrc: X,
     status: Q
   } = (0, v.Z)({
     displayProfile: c,
-    size: (0, D.e7)(A),
+    size: (0, D.e7)(N),
     canAnimate: w || !q ? W : z
   }), J = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), $ = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), ee = (0, a._i)((0, I.ZP)(s.getAvatarURL(E, $), J, !1)), et = (0, T.Z)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, h.Z)({
     analyticsLocation: {
@@ -180,12 +180,12 @@ function V(e) {
   return (0, i.jsx)(L.Z, {
     isPremium: Y,
     hasThemeColors: null !== (n = null == c ? void 0 : c.canEditThemes) && void 0 !== n && n,
-    profileType: A,
+    profileType: N,
     hasBanner: null != X,
     hasProfileEffect: Z,
     children: (0, i.jsxs)("div", {
       className: o()(G.banner, (0, D.Ae)({
-        profileType: A,
+        profileType: N,
         user: {
           hasBanner: null != X,
           isPremium: Y,
@@ -201,8 +201,8 @@ function V(e) {
         backgroundColor: Q !== v.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : et
       },
       children: [F ? null == H ? (0, i.jsx)(k, {
-        darkenOnHover: Z && p,
-        profileType: A,
+        darkenOnHover: Z && R,
+        profileType: N,
         profileLabel: b.Z.Messages.EDIT_PROFILE,
         icon: "pencil",
         onClick: () => {
@@ -224,21 +224,21 @@ function V(e) {
           })
         },
         children: e => (0, i.jsx)(k, {
-          darkenOnHover: Z && p,
+          darkenOnHover: Z && R,
           profileLabel: b.Z.Messages.EDIT_PROFILE,
           icon: "pencil",
           ...e,
-          profileType: A
+          profileType: N
         })
-      }) : V && null != X && A !== P.y0.SETTINGS ? (0, i.jsx)(B, {
-        type: A,
-        shown: void 0 === p ? W : p,
+      }) : V && null != X && N !== P.y0.SETTINGS ? (0, i.jsx)(x, {
+        type: N,
+        shown: void 0 === R ? W : R,
         onClick: () => {
           j({
             action: "PRESS_PREMIUM_UPSELL"
           }), null == d || d()
         }
-      }) : null, !q && (0, R.F8)(X) && (0, i.jsx)(O.Z, {
+      }) : null, !q && (0, p.F8)(X) && (0, i.jsx)(O.Z, {
         className: G.gifTag
       })]
     })

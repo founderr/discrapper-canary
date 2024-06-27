@@ -14,20 +14,20 @@ var i = n(735250),
   u = n(442837),
   _ = n(524437),
   E = n(481060),
-  I = n(239091),
-  m = n(904245),
+  m = n(239091),
+  I = n(904245),
   T = n(43267),
   h = n(933557),
   N = n(294218),
   f = n(703656),
-  p = n(962796),
-  C = n(802463),
-  g = n(981014),
+  p = n(686478),
+  C = n(962796),
+  g = n(802463),
   S = n(543666),
-  A = n(626086),
+  A = n(682417),
   R = n(695346),
-  x = n(592125),
-  O = n(430824),
+  O = n(592125),
+  x = n(430824),
   M = n(375954),
   v = n(346656),
   L = n(240126),
@@ -47,11 +47,11 @@ function y(e) {
   let {
     setTab: t,
     closePopout: n
-  } = e, s = (0, u.e7)([C.Z], () => C.Z.getMessageReminders());
+  } = e, s = (0, u.e7)([g.Z], () => g.Z.getMessageReminders());
   a.useEffect(() => () => {
-    (0, p.Mf)()
+    (0, C.Mf)()
   }, []);
-  let [l, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), c = l ? s : o, d = c.filter(e => !(0, g.uX)(e));
+  let [l, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), c = l ? s : o, d = c.filter(e => !(0, p.uX)(e));
   return (0, S.N)(d), (0, i.jsxs)("div", {
     className: D.container,
     children: [(0, i.jsx)(Z.Z, {
@@ -89,19 +89,19 @@ function B(e) {
   let t, {
       messageId: a
     } = e,
-    s = (0, u.e7)([C.Z], () => C.Z.getMessageReminders().find(e => e.messageId === a));
+    s = (0, u.e7)([g.Z], () => g.Z.getMessageReminders().find(e => e.messageId === a));
   o()(null != s, "should not be rendering a to-do message without a to-do message");
   let r = s.complete,
     c = (0, u.e7)([M.Z], () => M.Z.getMessage(s.channelId, s.messageId)),
     {
       message: _,
-      channel: g
+      channel: p
     } = (0, A.p)(s),
-    S = x.Z.getChannel(g.id),
+    S = O.Z.getChannel(p.id),
     L = (0, h.ZP)(S, !0),
-    Z = null != L ? L : g.name,
-    y = (0, u.e7)([O.Z], () => O.Z.getGuild(null == g ? void 0 : g.guild_id)),
-    B = null != g ? (0, T.x)(g) : null,
+    Z = null != L ? L : p.name,
+    y = (0, u.e7)([x.Z], () => x.Z.getGuild(null == p ? void 0 : p.guild_id)),
+    B = null != p ? (0, T.x)(p) : null,
     k = null;
   return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", k = b.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d().duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
@@ -151,7 +151,7 @@ function B(e) {
         children: [(0, i.jsx)(E.TooltipContainer, {
           text: b.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
           children: (0, i.jsx)(E.Clickable, {
-            onClick: e => (0, I.jW)(e, async () => {
+            onClick: e => (0, m.jW)(e, async () => {
               let {
                 default: e
               } = await n.e("6045").then(n.bind(n, 883150));
@@ -172,7 +172,7 @@ function B(e) {
           type: E.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, p.Y_)(s.messageId, t)
+            (0, C.Y_)(s.messageId, t)
           }
         })]
       })]
@@ -182,7 +182,7 @@ function B(e) {
       }),
       children: [(0, i.jsx)(N.Z, {
         message: _,
-        channel: g,
+        channel: p,
         className: j.message,
         compact: R.jU.getSetting(),
         animateAvatar: !1,
@@ -192,7 +192,7 @@ function B(e) {
         className: D.actions,
         children: [null == c ? (0, i.jsx)(E.Button, {
           onClick: () => {
-            m.Z.fetchMessages({
+            I.Z.fetchMessages({
               channelId: s.channelId,
               limit: 1,
               jump: {
@@ -211,7 +211,7 @@ function B(e) {
           })
         }) : null, (0, i.jsx)(E.Button, {
           onClick: () => {
-            (0, f.uL)(P.Z5c.CHANNEL(null == g ? void 0 : g.getGuildId(), s.channelId, s.messageId))
+            (0, f.uL)(P.Z5c.CHANNEL(null == p ? void 0 : p.getGuildId(), s.channelId, s.messageId))
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,
@@ -227,7 +227,7 @@ function B(e) {
 }
 
 function k() {
-  return (0, u.e7)([C.Z], () => C.Z.getMessageReminders().length > 0) ? null : (0, i.jsx)(L.Z, {
+  return (0, u.e7)([g.Z], () => g.Z.getMessageReminders().length > 0) ? null : (0, i.jsx)(L.Z, {
     Icon: E.DoubleCheckmarkLargeIcon,
     header: b.Z.Messages.MESSAGE_REMINDERS_EMPTY,
     tip: b.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP

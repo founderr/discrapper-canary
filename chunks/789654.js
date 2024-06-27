@@ -156,7 +156,7 @@ function Z() {
         });
       return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(v).filter(e => v[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(S).filter(e => S[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
     }, [e, r, t, v, S]),
-    O = n.useCallback(e => {
+    B = n.useCallback(e => {
       let t = "",
         r = "",
         a = !1;
@@ -182,7 +182,7 @@ function Z() {
         return "".concat(a ? "\n" : "").concat(u)
       }).join(",\n"))
     }, []),
-    B = n.useCallback(e => c()(C(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
+    O = n.useCallback(e => c()(C(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
     P = n.useCallback(e => {
       let t = {};
       Object.keys(e).forEach(r => {
@@ -240,7 +240,7 @@ function Z() {
         }), (0, a.jsx)(f.Button, {
           size: f.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(B(t))
+            navigator.clipboard.writeText(O(t))
           },
           children: "Export"
         })]
@@ -254,7 +254,7 @@ function Z() {
         }), (0, a.jsx)(f.Button, {
           size: f.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(O(r))
+            navigator.clipboard.writeText(B(r))
           },
           children: "Export"
         })]

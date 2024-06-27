@@ -17,8 +17,8 @@ var i, a = n(735250),
   _ = n(366695),
   f = n(374129),
   E = n(639351),
-  g = n(368666),
-  C = n(630388),
+  C = n(368666),
+  g = n(630388),
   I = n(51144),
   x = n(981631),
   T = n(354459),
@@ -227,8 +227,8 @@ class b extends(i = l.Component) {
       })
     }, "playstation")), h ? H.push((0, a.jsx)("div", {
       className: r()(S.iconSpacing, S.liveIconSpacing),
-      children: (0, a.jsx)(g.ZP, {
-        size: g.ZP.Sizes.SMALL
+      children: (0, a.jsx)(C.ZP, {
+        size: C.ZP.Sizes.SMALL
       })
     }, "stream")) : m && H.push((0, a.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
@@ -239,7 +239,7 @@ class b extends(i = l.Component) {
         className: r()(S.icon, _)
       })
     }, "watch"));
-    let V = null != O && !(0, C.yE)(O.flags, x.udG.EMBEDDED),
+    let V = null != O && !(0, g.yE)(O.flags, x.udG.EMBEDDED),
       F = null == b && V;
     return 0 !== H.length || null != G || L || F ? (0, a.jsxs)("div", {
       className: S.icons,

@@ -27,7 +27,7 @@ function S() {
   }
   return !1
 }
-class N extends(o = u.ZP.Store) {
+class A extends(o = u.ZP.Store) {
   initialize() {
     this.waitFor(I.Z, E.Z)
   }
@@ -56,12 +56,12 @@ class N extends(o = u.ZP.Store) {
     }
   }
 }
-s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
+s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(c.Z, {
+}) : i[r] = s, t.Z = new A(c.Z, {
   CONNECTION_OPEN: function() {
     return S(!0)
   },

@@ -16,12 +16,12 @@ var r = n(120356),
   h = n(285952),
   f = n(543595),
   S = n(374129),
-  N = n(639351),
-  A = n(503438),
+  A = n(639351),
+  N = n(503438),
   m = n(802856),
   O = n(606925),
-  p = n(719216),
-  R = n(429589),
+  R = n(719216),
+  p = n(429589),
   g = n(276149),
   C = n(636245),
   v = n(551514),
@@ -41,15 +41,15 @@ t.Z = (0, _.Z)(e => {
     guildId: b,
     channelId: G,
     source: w,
-    color: x = u.Button.Colors.WHITE,
-    look: B = u.Button.Looks.OUTLINED,
+    color: B = u.Button.Colors.WHITE,
+    look: x = u.Button.Looks.OUTLINED,
     type: k,
     onAction: V,
     isEmbedded: Z = !1
   } = e, H = (0, l.e7)([I.default], () => {
     let e = I.default.getCurrentUser();
     return a()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
-  }), F = k === f.Y.PROFILE || k === f.Y.PROFILE_V2 || k === f.Y.SIMPLIFIED_PROFILE, Y = k === f.Y.STREAM_PREVIEW || null != o, j = k === f.Y.SIMPLIFIED_PROFILE || k === f.Y.BITE_SIZE_POPOUT, W = (0, A.Z)(t), K = F ? h.Z.Align.END : h.Z.Align.STRETCH, z = W || Y ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL, q = (null == t ? void 0 : t.type) === y.IIU.HANG_STATUS, X = (0, l.e7)([T.Z, E.Z], () => {
+  }), F = k === f.Y.PROFILE || k === f.Y.PROFILE_V2 || k === f.Y.SIMPLIFIED_PROFILE, Y = k === f.Y.STREAM_PREVIEW || null != o, j = k === f.Y.SIMPLIFIED_PROFILE || k === f.Y.BITE_SIZE_POPOUT, W = (0, N.Z)(t), K = F ? h.Z.Align.END : h.Z.Align.STRETCH, z = W || Y ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL, q = (null == t ? void 0 : t.type) === y.IIU.HANG_STATUS, X = (0, l.e7)([T.Z, E.Z], () => {
     var e;
     return q ? E.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), Q = z === h.Z.Direction.VERTICAL;
@@ -62,14 +62,14 @@ t.Z = (0, _.Z)(e => {
     children: (() => {
       if ((0, m.Z)(t)) return (0, i.jsx)(O.Z, {
         platform: c.Z.get(y.ABu.XBOX),
-        look: B,
-        color: x,
+        look: x,
+        color: B,
         onAction: V,
-        Icon: N.Z
+        Icon: A.Z
       }, "ConnectPlatformActivityButton");
       if ((null == t ? void 0 : t.platform) === y.M7m.PS4 || (null == t ? void 0 : t.platform) === y.M7m.PS5) return (0, i.jsx)(O.Z, {
-        look: B,
-        color: x,
+        look: x,
+        color: B,
         platform: c.Z.get(y.ABu.PLAYSTATION),
         onAction: V,
         Icon: S.Z
@@ -81,16 +81,16 @@ t.Z = (0, _.Z)(e => {
             guildId: b,
             channelId: G,
             source: w,
-            look: B,
-            color: x,
+            look: x,
+            color: B,
             onAction: V
           }, "spotify-activity-sync-button"),
           n = (0, i.jsx)(L.Z, {
             activity: t,
             user: r,
             source: w,
-            look: B,
-            color: x,
+            look: x,
+            color: B,
             onAction: V
           }, "spotify-activity-play-button");
         return j ? (0, i.jsxs)(i.Fragment, {
@@ -104,47 +104,47 @@ t.Z = (0, _.Z)(e => {
         return null == e ? null : (0, i.jsx)(C.Z, {
           guildId: e.guildId,
           channelId: e.channelId,
-          color: x,
-          look: B,
+          color: B,
+          look: x,
           isProfile: F,
           onAction: V
         }, e.channelId)
       }
       return Y ? (0, i.jsx)(P.Z, {
         isCurrentUser: H.id === r.id,
-        color: x,
-        look: B,
+        color: B,
+        look: x,
         applicationStream: o,
         onAction: V
       }, "watch-button") : q && null != X ? (0, i.jsx)(g.Z, {
-        color: x,
-        look: B,
+        color: B,
+        look: x,
         hangStatusChannel: X,
         onAction: V
       }, "hang-status-button") : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(M.Z, {
           activity: t,
-          color: x,
-          look: B,
+          color: B,
+          look: x,
           onAction: V
-        }, "watch-button"), (0, i.jsx)(R.Z, {
+        }, "watch-button"), (0, i.jsx)(p.Z, {
           activity: t,
           embeddedActivity: n,
           user: r,
-          color: x,
-          look: B,
+          color: B,
+          look: x,
           isEmbedded: Z,
           onAction: V
         }, "join-activity-button"), (0, i.jsx)(v.Z, {
           activity: t,
           user: r,
-          color: x,
-          look: B,
+          color: B,
+          look: x,
           onAction: V
-        }, "notify-button"), (0, i.jsx)(p.Z, {
+        }, "notify-button"), (0, i.jsx)(R.Z, {
           user: r,
-          color: x,
-          look: B,
+          color: B,
+          look: x,
           activity: t,
           onAction: V
         }, "custom-activity-button")]

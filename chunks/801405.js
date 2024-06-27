@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(358085),
   f = n(228488),
   E = n(981631),
-  g = n(607176);
-let C = () => {
+  C = n(607176);
+let g = () => {
   s.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT))
 };
 
@@ -87,12 +87,12 @@ function I(e) {
   }), [N, x]), a.useEffect(() => {
     null != M && T.current === E.WtW.VIDEO && v === E.WtW.VOICE && (0, f.Pr)(M, A)
   }, [A, v, T, M]), a.useEffect(() => {
-    !S && x && C()
+    !S && x && g()
   }, [S, x]), R) ? (0, i.jsx)(d.Z, {
     themeable: !1,
     node: M,
     guestWindow: u,
-    className: g.rightTrayIcon,
+    className: C.rightTrayIcon,
     onClick: P(N)
   }) : null
 }

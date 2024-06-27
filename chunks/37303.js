@@ -17,8 +17,8 @@ var i = n(735250),
   u = n(602667),
   _ = n(87894),
   E = n(372113),
-  I = n(206044),
-  m = n(266843),
+  m = n(206044),
+  I = n(266843),
   T = n(46140),
   h = n(441468);
 
@@ -49,15 +49,15 @@ function f(e) {
     containerRef: S,
     size: A,
     height: R
-  } = (0, m.h)([t]), x = (0, r.q)({
+  } = (0, I.h)([t]), O = (0, r.q)({
     location: T.dr.QUESTS_CARD
   }), {
-    expansionSpring: O,
+    expansionSpring: x,
     isAnimating: M,
     isExpanded: v,
     toggleExpanded: L
-  } = (0, m.O)({
-    initiallyExpanded: !x || l || (0, _.iM)({
+  } = (0, I.O)({
+    initiallyExpanded: !O || l || (0, _.iM)({
       location: n,
       quest: t
     })
@@ -70,7 +70,7 @@ function f(e) {
     children: e => (0, i.jsx)(i.Fragment, {
       children: (0, i.jsxs)(s.animated.div, {
         style: {
-          maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : O.to({
+          maxHeight: n === d.jn.QUESTS_EMBED ? void 0 : x.to({
             range: [0, 1],
             output: [_.DJ, Z]
           })
@@ -83,16 +83,16 @@ function f(e) {
         onMouseEnter: p,
         onBlur: C,
         onMouseLeave: C,
-        children: [(0, i.jsx)(I.Z, {
+        children: [(0, i.jsx)(m.Z, {
           isFocused: N,
           isQuestExpired: g,
           location: n,
           quest: t,
           size: A,
-          expansionSpring: O,
+          expansionSpring: x,
           isAnimating: M,
           isExpanded: v,
-          isInConcurrentQuestExperiment: x,
+          isInConcurrentQuestExperiment: O,
           contentPosition: c,
           toggleExpanded: L
         }), (0, i.jsx)(E.Z, {

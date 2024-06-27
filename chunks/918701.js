@@ -116,7 +116,7 @@ n.d(t, {
     return $
   },
   yI: function() {
-    return x
+    return B
   },
   ys: function() {
     return ei
@@ -285,7 +285,7 @@ function w(e) {
   }
 }
 
-function x(e) {
+function B(e) {
   var t;
   return {
     userId: e.user_id,
@@ -297,7 +297,7 @@ function x(e) {
   }
 }
 
-function B(e) {
+function x(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
@@ -317,7 +317,7 @@ function B(e) {
             questRewards: {
               reward: {
                 tag: t.reward.tag,
-                rewardCode: x(t.reward.reward_code)
+                rewardCode: B(t.reward.reward_code)
               }
             }
           }
@@ -329,7 +329,7 @@ function B(e) {
 function k(e) {
   return {
     claimedAt: e.claimed_at,
-    items: e.entitlements.map(B),
+    items: e.entitlements.map(x),
     errors: e.errors
   }
 }

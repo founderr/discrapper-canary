@@ -33,14 +33,14 @@ function E(e) {
   }, [n, t, e]), n
 }
 
-function g() {
+function C() {
   return (0, l.jsx)("div", {
     ref: E(i || (i = n.t(p, 2))),
     className: f.glow
   })
 }
 
-function C() {
+function g() {
   return (0, l.jsx)("div", {
     ref: E(a || (a = n.t(m, 2))),
     className: f.trinkets
@@ -56,11 +56,11 @@ let I = e => {
     }), 1e4)
   }, []), (0, l.jsxs)("div", {
     className: f.animation,
-    children: [(0, l.jsx)(g, {}), (0, l.jsx)("div", {
+    children: [(0, l.jsx)(C, {}), (0, l.jsx)("div", {
       className: f.circleLayer
     }), (0, l.jsx)("div", {
       className: f.omniButton,
       children: t
-    }), (0, l.jsx)(C, {})]
+    }), (0, l.jsx)(g, {})]
   })
 }

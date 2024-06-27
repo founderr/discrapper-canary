@@ -15,8 +15,8 @@ var i, l = n(735250),
   p = n(812206),
   _ = n(703656),
   f = n(417363),
-  g = n(941128),
-  m = n(366966),
+  m = n(941128),
+  g = n(366966),
   C = n(780570),
   I = n(353042),
   E = n(981631),
@@ -33,52 +33,52 @@ function S(e, t, n) {
 }
 let Z = {
   [E.vxO.INSTALLING]: {
-    [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+    [g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
-    [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+    [g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+    [g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+    [g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   },
   [E.vxO.UPDATING]: {
-    [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
+    [g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
       name: e
     }),
-    [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
+    [g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
+    [g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
+    [g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
       name: e,
       timeRemaining: t
     })
   },
   [E.vxO.REPAIRING]: {
-    [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
+    [g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
-    [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+    [g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
       name: e,
       timeRemaining: t
     }),
-    [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+    [g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
       name: e,
       timeRemaining: t
     }),
-    [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+    [g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
       name: e,
       timeRemaining: t
     })
@@ -123,7 +123,7 @@ class v extends r.PureComponent {
         {
           unit: h,
           time: p
-        } = (0, m.CI)(null != c ? c / 60 : null, d);
+        } = (0, g.CI)(null != c ? c / 60 : null, d);
       if (null != u && null != h) {
         let e = u[h];
         return null != e ? e(i.name, p) : null
@@ -217,8 +217,8 @@ function L(e, t) {
     return null != r && e.push(r), e
   }, [])
 }
-t.Z = c.ZP.connectStores([g.Z, f.Z, p.Z], () => {
-  let e = g.Z.activeItems,
+t.Z = c.ZP.connectStores([m.Z, f.Z, p.Z], () => {
+  let e = m.Z.activeItems,
     t = L(e, f.Z),
     {
       total: n,
@@ -226,7 +226,7 @@ t.Z = c.ZP.connectStores([g.Z, f.Z, p.Z], () => {
     } = C.lK(t);
   return {
     percent: C.xI(i, n),
-    isPaused: g.Z.paused,
+    isPaused: m.Z.paused,
     firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null
   }

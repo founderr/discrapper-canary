@@ -40,18 +40,18 @@ let f = 100,
     numFrequentlyItems: f,
     maxSamples: 10
   }),
-  N = null,
-  A = null;
+  A = null,
+  N = null;
 
 function m(e) {
   let {
     guildId: t,
     channelId: n
   } = e, i = !1;
-  return n !== N && (N = null != n ? n : null, null != n && I.Xyh.test(n) && (i = !0, S.track(n), p.pendingUsages.push({
+  return n !== A && (A = null != n ? n : null, null != n && I.Xyh.test(n) && (i = !0, S.track(n), R.pendingUsages.push({
     key: n,
     timestamp: Date.now()
-  }))), t !== A && (A = null != t ? t : null, null != t && I.Xyh.test(t) && (i = !0, S.track(t), p.pendingUsages.push({
+  }))), t !== N && (N = null != t ? t : null, null != t && I.Xyh.test(t) && (i = !0, S.track(t), R.pendingUsages.push({
     key: t,
     timestamp: Date.now()
   }))), i
@@ -64,20 +64,20 @@ function O() {
   S.overwriteHistory(s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  })), p.pendingUsages)
+  })), R.pendingUsages)
 }
-let p = {
+let R = {
   pendingUsages: []
 };
-class R extends(i = o.ZP.PersistedStore) {
+class p extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(E.Z, d.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.Xyh.test(e.key)), p = e), this.syncWith([u.Z], O)
+    this.waitFor(E.Z, d.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.Xyh.test(e.key)), R = e), this.syncWith([u.Z], O)
   }
   getState() {
-    return p
+    return R
   }
   hasPendingUsage() {
-    return p.pendingUsages.length > 0
+    return R.pendingUsages.length > 0
   }
   get frecencyWithoutFetchingLatest() {
     return S
@@ -100,7 +100,7 @@ class R extends(i = o.ZP.PersistedStore) {
     return 100
   }
 }
-h(R, "displayName", "FrecencyStore"), h(R, "persistKey", "FrecencyStore"), t.Z = new R(a.Z, {
+h(p, "displayName", "FrecencyStore"), h(p, "persistKey", "FrecencyStore"), t.Z = new p(a.Z, {
   CHANNEL_SELECT: m,
   VOICE_CHANNEL_SELECT: m,
   USER_SETTINGS_PROTO_UPDATE: function(e) {
@@ -110,6 +110,6 @@ h(R, "displayName", "FrecencyStore"), h(R, "persistKey", "FrecencyStore"), t.Z =
       },
       wasSaved: n
     } = e;
-    return t === T.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && (p.pendingUsages = [], !0)
+    return t === T.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && (R.pendingUsages = [], !0)
   }
 })

@@ -28,10 +28,10 @@ function _(e) {
   } = e, {
     tooltip: f,
     loading: S,
-    disabled: N,
-    onClick: A
+    disabled: A,
+    onClick: N
   } = (0, l.Fe)(t, n, c, a.ZP.getNickname(_, r, n)), m = () => {
-    null == h || h(), A()
+    null == h || h(), N()
   };
   return (0, i.jsx)(o.Tooltip, {
     text: f,
@@ -49,7 +49,7 @@ function _(e) {
         onClick: m,
         onMouseEnter: n,
         onMouseLeave: r,
-        disabled: N,
+        disabled: A,
         submitting: S,
         "aria-label": null != f ? f : t.name,
         children: (0, i.jsx)(o.UserPlayIcon, {

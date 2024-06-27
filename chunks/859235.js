@@ -28,31 +28,31 @@ t.Z = o.forwardRef(function(e, t) {
     className: r,
     children: o,
     actions: a,
-    handleEditModal: N,
-    keyboardModeEnabled: A,
+    handleEditModal: A,
+    keyboardModeEnabled: N,
     onKeyDown: m,
     draftType: O,
-    size: p = 1
+    size: R = 1
   } = e, {
-    onFocus: R,
+    onFocus: p,
     ...g
   } = (0, u.JA)(n), {
     handleFocus: C,
     handleBlur: v
-  } = (0, I.b)(R), L = 0 === p, D = null != a;
+  } = (0, I.b)(p), L = 0 === R, D = null != a;
   return (0, s.jsx)(_.FocusRing, {
     children: (0, s.jsx)("li", {
       ...g,
       onFocus: C,
       onBlur: v,
       onKeyDown: e => {
-        if (!!A) {
+        if (!!N) {
           switch (e.which) {
             case T.yXg.D:
               e.preventDefault(), c.Z.remove(i, n, O);
               return;
             case T.yXg.E:
-              null != N && (e.preventDefault(), N(e));
+              null != A && (e.preventDefault(), A(e));
               return;
             case T.yXg.BACKSPACE:
               e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, O)) : (e.preventDefault(), c.Z.remove(i, n, O));
@@ -67,7 +67,7 @@ t.Z = o.forwardRef(function(e, t) {
         }
       },
       className: l()(f.upload, r, {
-        [f.sizeClip]: 2 === p
+        [f.sizeClip]: 2 === R
       }),
       ref: t,
       children: (0, s.jsxs)("div", {

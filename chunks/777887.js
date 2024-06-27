@@ -26,18 +26,18 @@ function f(e) {
     currentUser: n,
     displayProfile: f,
     guild: S,
-    isHovering: N,
-    onOpenProfile: A,
+    isHovering: A,
+    onOpenProfile: N,
     channelId: m,
     onClose: O
-  } = e, p = o.ZP.getName(null == S ? void 0 : S.id, m, t), R = (0, r.e7)([s.Z], () => s.Z.hidePersonalInformation);
+  } = e, R = o.ZP.getName(null == S ? void 0 : S.id, m, t), p = (0, r.e7)([s.Z], () => s.Z.hidePersonalInformation);
   return (0, i.jsxs)("div", {
     className: h.body,
     children: [(0, i.jsx)(_.Z, {
       user: t,
       profileType: T.y0.BITE_SIZE,
-      onOpenProfile: A,
-      nickname: p,
+      onOpenProfile: N,
+      nickname: R,
       pronouns: null == f ? void 0 : f.pronouns,
       tags: (0, i.jsx)(a.Z, {
         displayProfile: f,
@@ -47,23 +47,23 @@ function f(e) {
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(l.Z, {
           userId: t.id
-        }), !R && (0, i.jsx)(u.Z, {
+        }), !p && (0, i.jsx)(u.Z, {
           user: t,
-          isHovering: N,
-          onOpenProfile: () => A({
+          isHovering: A,
+          onOpenProfile: () => N({
             subsection: T.Tb.NOTE
           })
         })]
       })
     }), (0, i.jsx)(I.Z, {
       user: t,
-      onOpenProfile: e => A({
+      onOpenProfile: e => N({
         section: e
       })
     }), (0, i.jsx)(d.Z, {
       user: t,
       bio: null == f ? void 0 : f.bio,
-      hidePersonalInformation: R,
+      hidePersonalInformation: p,
       onClose: O
     }), (0, i.jsx)(c.Z, {
       user: t,
@@ -74,7 +74,7 @@ function f(e) {
       user: t,
       currentUser: n,
       guild: S,
-      onOpenProfile: () => A({
+      onOpenProfile: () => N({
         subsection: T.Tb.ROLES
       })
     })]

@@ -11,12 +11,12 @@ var s, o, a, l, u = n(442837),
   h = n(314897),
   f = n(938475),
   S = n(981631),
-  N = n(65154);
-let A = [],
+  A = n(65154);
+let N = [],
   m = null,
   O = null,
-  p = null,
   R = null,
+  p = null,
   g = !1,
   C = !1;
 
@@ -44,7 +44,7 @@ function v(e, t) {
       userId: n,
       streamId: i,
       rtcServerId: r,
-      context: N.Yn.DEFAULT
+      context: A.Yn.DEFAULT
     }))
   }), s.on(c.z.Ping, (e, t) => {
     _.Z.wait(() => _.Z.dispatch({
@@ -58,7 +58,7 @@ function v(e, t) {
       lossRate: e
     }))
   }), s.on(c.z.Speaking, (e, t) => {
-    null == p || p.setSpeaking(e, t)
+    null == R || R.setSpeaking(e, t)
   }), s.on(c.z.Flags, (e, t) => {
     _.Z.wait(() => {
       _.Z.dispatch({
@@ -104,12 +104,12 @@ function v(e, t) {
         state: e
       })
     })
-  }), p = new d.Z(h.default.getId(), t), R = null, g = !1, C = !1, s
+  }), R = new d.Z(h.default.getId(), t), p = null, g = !1, C = !1, s
 }
 
 function L() {
   if (null == i) return !1;
-  R = i.getDuration(), i.destroy(), i = null, p = null
+  p = i.getDuration(), i.destroy(), i = null, R = null
 }
 
 function D() {
@@ -165,7 +165,7 @@ class y extends(s = u.ZP.Store) {
     return null != i ? i.quality : S.IE4.UNKNOWN
   }
   getPings() {
-    return null != i ? i.getPings() : A
+    return null != i ? i.getPings() : N
   }
   getAveragePing() {
     return null != i ? null == i ? void 0 : i.getAveragePing() : 0
@@ -184,13 +184,13 @@ class y extends(s = u.ZP.Store) {
   }
   getDuration() {
     var e;
-    return null !== (e = null == i ? void 0 : i.getDuration()) && void 0 !== e ? e : R
+    return null !== (e = null == i ? void 0 : i.getDuration()) && void 0 !== e ? e : p
   }
   getPacketStats() {
     return null == i ? void 0 : i.getPacketStats()
   }
   getVoiceStateStats() {
-    return null == p ? void 0 : p.getStats()
+    return null == R ? void 0 : R.getStats()
   }
   getWasEverMultiParticipant() {
     return g
@@ -236,11 +236,11 @@ let U = new y(_.Z, __OVERLAY__ ? {} : {
     } = e;
     return t.reduce((e, t) => {
       var n, s, o;
-      if (null == p || p.updateVoiceStates(t.userId, t.channelId), g = g || (null !== (n = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, h.default.getId() !== t.userId) return !1;
-      if (null != i) t.sessionId === r ? null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? L() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || L(), null != t.channelId && (m = null, O = null, i = v(t.guildId, t.channelId), g = (null !== (s = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1)) : t.guildId === i.guildId && (!(null != I.Z.getAwaitingRemoteSessionInfo() && null != I.Z.getRemoteSessionId()) && (m = i.channelId), L());
+      if (null == R || R.updateVoiceStates(t.userId, t.channelId), g = g || (null !== (n = null == R ? void 0 : R.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, h.default.getId() !== t.userId) return !1;
+      if (null != i) t.sessionId === r ? null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? L() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || L(), null != t.channelId && (m = null, O = null, i = v(t.guildId, t.channelId), g = (null !== (s = null == R ? void 0 : R.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1)) : t.guildId === i.guildId && (!(null != I.Z.getAwaitingRemoteSessionInfo() && null != I.Z.getRemoteSessionId()) && (m = i.channelId), L());
       else {
         if (t.sessionId !== r || null == t.channelId) return e;
-        m = null, O = null, i = v(t.guildId, t.channelId), g = (null !== (o = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== o ? o : 0) > 1
+        m = null, O = null, i = v(t.guildId, t.channelId), g = (null !== (o = null == R ? void 0 : R.getStats().max_voice_state_count) && void 0 !== o ? o : 0) > 1
       }
       return !0
     }, !1)

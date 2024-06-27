@@ -34,18 +34,18 @@ t.Z = e => {
     requestId: l,
     closePopout: r
   } = e, {
-    iconUrl: g,
-    iconTitle: C,
+    iconUrl: C,
+    iconTitle: g,
     user: I,
     details: x,
     gameTitle: T
   } = (0, m.F)(n), {
     primaryColor: N,
     secondaryColor: v
-  } = (0, u.Z)(g), S = (0, o.yA)(n), Z = (0, o.Nq)(n), A = a.useCallback(e => {
+  } = (0, u.Z)(C), S = (0, o.yA)(n), Z = (0, o.Nq)(n), A = a.useCallback(e => {
     if (null != I && null != S && null != Z && !!(0, d.qy)(Z)) return (0, c.SO)({
       entry: n,
-      applicationImageSrc: g,
+      applicationImageSrc: C,
       avatarSrcs: [I.getAvatarURL(t.guild_id, 128)],
       description: f(n, t, I, Z),
       timestamp: _.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
@@ -54,11 +54,11 @@ t.Z = e => {
       colors: [N, v],
       channelId: e
     })
-  }, [g, t, S, n, N, Z, v, I]);
+  }, [C, t, S, n, N, Z, v, I]);
   return null != I && null != S && null != Z && (0, d.qy)(Z) ? (0, i.jsxs)(p.yR, {
     children: [(0, i.jsx)(p.wG, {
-      thumbnailSrc: g,
-      thumbnailTitle: C,
+      thumbnailSrc: C,
+      thumbnailTitle: g,
       channel: t,
       entry: n,
       userDescription: _.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,

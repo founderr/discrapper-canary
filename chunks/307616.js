@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   n: function() {
-    return R
+    return p
   },
   v: function() {
     return O
@@ -24,7 +24,7 @@ var i = n(735250),
   f = n(981631),
   S = n(812709);
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,7 +32,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = [d.ZP, E.ZP];
+let N = [d.ZP, E.ZP];
 class m extends r.PureComponent {
   render() {
     let {
@@ -54,11 +54,11 @@ class m extends r.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "state", {
+    super(...e), A(this, "state", {
       transitionState: null
-    }), N(this, "componentWillAppear", e => {
+    }), A(this, "componentWillAppear", e => {
       this.componentWillEnter(e)
-    }), N(this, "componentWillEnter", e => {
+    }), A(this, "componentWillEnter", e => {
       let {
         instant: t
       } = this.props;
@@ -69,7 +69,7 @@ class m extends r.PureComponent {
           transitionState: h.Dv.ENTERED
         }), e()
       }, t ? 0 : h.CT)
-    }), N(this, "componentWillLeave", e => {
+    }), A(this, "componentWillLeave", e => {
       let {
         instant: t
       } = this.props;
@@ -80,7 +80,7 @@ class m extends r.PureComponent {
           transitionState: h.Dv.EXITED
         }), e()
       }, t ? 0 : h.CT)
-    }), N(this, "close", () => new Promise(e => {
+    }), A(this, "close", () => new Promise(e => {
       this.props.closeModal(this.props.modalKey), setTimeout(() => e(), h.CT)
     }))
   }
@@ -89,11 +89,11 @@ class m extends r.PureComponent {
 function O() {
   return (0, T.Vn)((0, c.bp)())
 }
-let p = [];
+let R = [];
 
-function R() {
+function p() {
   let e = O(),
-    t = (0, T.s9)(t => void 0 !== t[e] ? t[e] : p),
+    t = (0, T.s9)(t => void 0 !== t[e] ? t[e] : R),
     n = r.useRef();
   r.useLayoutEffect(() => {
     n.current = t[t.length - 1]
@@ -116,10 +116,10 @@ function R() {
     a = r.useCallback(t => {
       (0, T.Mr)(t, e)
     }, [e]),
-    c = A.map(e => t.some(t => t.Layer === e || null == t.Layer && e === d.ZP));
+    c = N.map(e => t.some(t => t.Layer === e || null == t.Layer && e === d.ZP));
   return (0, i.jsxs)(u.W, {
     component: r.Fragment,
-    children: [A.map((e, n) => {
+    children: [N.map((e, n) => {
       var r;
       let s = l().findLast(t, t => t.Layer === e || null == t.Layer && e === d.ZP);
       return (0, i.jsx)(_.Backdrop, {

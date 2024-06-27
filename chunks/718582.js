@@ -57,12 +57,12 @@ var i, r, s = n(470079),
   h = n(557135),
   f = n(471445),
   S = n(66999),
-  N = n(15274),
-  A = n(924301),
+  A = n(15274),
+  N = n(924301),
   m = n(230900),
   O = n(703656),
-  p = n(881824),
-  R = n(922482),
+  R = n(881824),
+  p = n(922482),
   g = n(565799),
   C = n(501655),
   v = n(344185),
@@ -75,8 +75,8 @@ var i, r, s = n(470079),
   b = n(496675),
   G = n(158776),
   w = n(699516),
-  x = n(594174),
-  B = n(979651),
+  B = n(594174),
+  x = n(979651),
   k = n(938475),
   V = n(626135),
   Z = n(823379),
@@ -107,18 +107,18 @@ function en(e, t) {
   return (i && r.length > 0 ? (0, o.orderBy)(n, [e => {
     var t, n;
     return null !== (n = null === (t = L.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
-  }], ["desc"]) : n).map(e => x.default.getUser(e)).filter(Z.lm)
+  }], ["desc"]) : n).map(e => B.default.getUser(e)).filter(Z.lm)
 }
 
 function ei(e, t) {
   return function(e, t, n, i) {
     let r;
     let o = eo(e),
-      a = s.useMemo(() => o.map(e => x.default.getUser(e)).filter(Z.lm), [o]),
+      a = s.useMemo(() => o.map(e => B.default.getUser(e)).filter(Z.lm), [o]),
       l = a.slice(0, 6),
       u = Math.max(0, a.length - l.length);
     if (null != i && i.length > 0) {
-      let e = H.ZP.getName(t, n, x.default.getUser(i[0]));
+      let e = H.ZP.getName(t, n, B.default.getUser(i[0]));
       r = 1 === i.length ? z.Z.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
         username: e
       }) : z.Z.Messages.GUILD_POPOUT_USERS_STREAMING.format({
@@ -126,7 +126,7 @@ function ei(e, t) {
         count: i.length - 1
       })
     } else if (l.length > 0) {
-      let e = H.ZP.getName(t, n, x.default.getUser(l[0].id));
+      let e = H.ZP.getName(t, n, B.default.getUser(l[0].id));
       r = 1 === l.length ? z.Z.Messages.GUILD_POPOUT_USER_IN_VOICE.format({
         username: e
       }) : z.Z.Messages.GUILD_POPOUT_USERS_IN_VOICE.format({
@@ -161,7 +161,7 @@ function er(e) {
       });
       return [...e, ...Object.values(v.Z.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
     }, [t]),
-    E = (0, l.e7)([A.ZP, M.Z], () => A.ZP.getGuildScheduledEventsForGuild(t).filter(e => (0, A.xt)(e)).map(e => {
+    E = (0, l.e7)([N.ZP, M.Z], () => N.ZP.getGuildScheduledEventsForGuild(t).filter(e => (0, N.xt)(e)).map(e => {
       var t;
       return {
         category: j.L.EVENT,
@@ -190,7 +190,7 @@ function er(e) {
         }) && t !== e.afkChannelId && _.includes(t)
       })
     }, [f, I, _, h, e.afkChannelId]),
-    N = (0, l.e7)([c.ZP, B.Z, D.Z, G.Z, M.Z], () => S.map(e => {
+    A = (0, l.e7)([c.ZP, x.Z, D.Z, G.Z, M.Z], () => S.map(e => {
       var t;
       let n = D.Z.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
         i = f[e].filter(Z.lm),
@@ -203,7 +203,7 @@ function er(e) {
           } = e;
           return t.id
         }),
-        l = B.Z.hasVideo(e),
+        l = x.Z.hasVideo(e),
         u = [],
         _ = [];
       for (let e of (r.length > 0 && (s = j.L.EMBEDDED_ACTIVITY), i)) {
@@ -236,9 +236,9 @@ function er(e) {
     }), [f, S], o.isEqual),
     m = (0, l.e7)([P.Z], () => P.Z.hasConsented(W.pjP.PERSONALIZATION)),
     O = (0, l.e7)([L.Z], () => L.Z.getUserAffinities()),
-    p = m && O.length > 0,
-    R = [...N, ...E];
-  return r !== R.length && R.length > 0 && (i((function(e) {
+    R = m && O.length > 0,
+    p = [...A, ...E];
+  return r !== p.length && p.length > 0 && (i((function(e) {
     let t = [...e],
       n = t[0].category,
       i = t.findIndex(e => e.category === j.L.EVENT),
@@ -323,7 +323,7 @@ function er(e) {
       }
       return s = s > 0 ? s * r : 1e-5 * r
     })(e, t)], ["desc"])
-  }(R, p)).slice(0, 3)), u(R.length)), n
+  }(p, R)).slice(0, 3)), u(p.length)), n
 }
 let es = e => e => [W.IIU.PLAYING, W.IIU.WATCHING].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
 
@@ -393,7 +393,7 @@ function eu(e, t) {
   let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   let s = (n = e, i = t, n.map(e => {
       var t;
-      let n = x.default.getUser(e);
+      let n = B.default.getUser(e);
       if (null == n) return null;
       let r = U.ZP.getNick(i, n.id);
       return null !== (t = null != r ? r : F.ZP.getGlobalName(n)) && void 0 !== t ? t : F.ZP.getUserTag(n)
@@ -446,7 +446,7 @@ function ec(e, t, n) {
       };
     case j.L.EVENT:
       return () => {
-        e_(e, t, n, "card"), (0, N.bO)({
+        e_(e, t, n, "card"), (0, A.bO)({
           eventId: e.event.id
         })
       };
@@ -455,12 +455,12 @@ function ec(e, t, n) {
   }
 }
 let ed = async (e, t) => {
-  let n = await (0, R.AC)(e, t);
-  (0, p.R5)(n, null, !1)
+  let n = await (0, p.AC)(e, t);
+  (0, R.R5)(n, null, !1)
 }, eE = (e, t) => {
   h.Z.handleVoiceConnect({
     channel: t,
-    connected: B.Z.isInChannel(t.id),
+    connected: x.Z.isInChannel(t.id),
     needSubscriptionToAccess: (0, S.$)(t.id).needSubscriptionToAccess,
     locked: !1
   }), (0, O.XU)(e, t.id)
@@ -496,7 +496,7 @@ function eI(e, t) {
           entity_type: r
         } = t, s = M.Z.getChannel(n);
         if (null == n || null == s || !b.Z.can(W.Plq.CONNECT, s)) {
-          (0, N.bO)({
+          (0, A.bO)({
             eventId: t.id
           });
           return

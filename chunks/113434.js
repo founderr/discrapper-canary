@@ -4,13 +4,13 @@ n.d(t, {
     return y
   },
   DU: function() {
-    return B
+    return x
   },
   EH: function() {
     return M
   },
   Fr: function() {
-    return x
+    return B
   },
   J2: function() {
     return v
@@ -278,7 +278,7 @@ function w() {
   }, [e])
 }
 
-function x(e) {
+function B(e) {
   let t = (0, m.z)({
       location: R.dr.MEMBERS_LIST
     }),
@@ -287,7 +287,7 @@ function x(e) {
   return P(i) ? null : i
 }
 
-function B(e) {
+function x(e) {
   var t;
   let n = (0, f.Xv)(e),
     {

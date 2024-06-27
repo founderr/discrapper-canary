@@ -19,8 +19,8 @@ var i, r = n(735250),
   h = n(768760),
   f = n(689938),
   S = n(278919),
-  N = n(167969),
-  A = n(557256);
+  A = n(167969),
+  N = n(557256);
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,9 +42,9 @@ class O extends(i = s.PureComponent) {
       placeholderVersion: l,
       alt: _,
       width: E,
-      height: N,
-      maxWidth: A = E,
-      maxHeight: m = N,
+      height: A,
+      maxWidth: N = E,
+      maxHeight: m = A,
       minWidth: O,
       minHeight: g,
       mediaLayoutType: C,
@@ -59,32 +59,32 @@ class O extends(i = s.PureComponent) {
       useFullWidth: G = !1,
       ...w
     } = this.props;
-    if (1 === E && 1 === N) return null;
-    let x = (0, d.Tj)({
+    if (1 === E && 1 === A) return null;
+    let B = (0, d.Tj)({
         width: E,
-        height: N,
-        maxWidth: A,
+        height: A,
+        maxWidth: N,
         maxHeight: m,
         minWidth: O,
         minHeight: g
       }),
-      B = 0 !== x.width ? x.width / x.height : 1;
+      x = 0 !== B.width ? B.width / B.height : 1;
     "" !== s && i !== T.zo9.ERROR ? e = P({
       src: s,
-      size: x,
+      size: B,
       alt: _,
       className: n,
       mediaLayoutType: C
-    }) : i !== T.zo9.LOADING && (e = (0, r.jsx)(p, {
-      size: x,
+    }) : i !== T.zo9.LOADING && (e = (0, r.jsx)(R, {
+      size: B,
       mediaLayoutType: C,
       alt: _
     })), e = (0, r.jsx)(I.N, {
       readyState: i,
-      aspectRatio: B,
+      aspectRatio: x,
       placeholder: o,
       placeholderVersion: l,
-      placeholderStyle: R(x, C),
+      placeholderStyle: p(B, C),
       children: e
     });
     let k = null != y ? y() : null;
@@ -109,7 +109,7 @@ class O extends(i = s.PureComponent) {
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(x, v, G, C),
+        }(B, v, G, C),
         ...w,
         children: [null != M && (0, r.jsx)("a", {
           tabIndex: -1,
@@ -143,7 +143,7 @@ class O extends(i = s.PureComponent) {
   }
 }
 
-function p(e) {
+function R(e) {
   let {
     size: t,
     mediaLayoutType: n,
@@ -166,7 +166,7 @@ function p(e) {
       }
     }(t, n),
     children: (0, r.jsx)("img", {
-      src: (0, l.ap)(s) ? A : N,
+      src: (0, l.ap)(s) ? N : A,
       className: S.imageError,
       alt: null != i ? i : f.Z.Messages.IMAGE
     })
@@ -187,14 +187,14 @@ m(O, "defaultProps", {
       className: null != s ? s : void 0,
       alt: null != i ? i : f.Z.Messages.IMAGE,
       src: t,
-      style: R(n, o)
+      style: p(n, o)
     })
   },
   minWidth: 0,
   minHeight: 0
 });
 
-function R(e, t) {
+function p(e, t) {
   switch (t) {
     case h.hV.MOSAIC:
       return {
