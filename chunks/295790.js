@@ -12,11 +12,13 @@ function l(e) {
   let {
     message: t,
     channel: n,
-    compact: l
+    compact: l,
+    disableInteraction: r
   } = e;
   return (0, a.Z)(t) ? (0, i.jsx)(s.Z, {
     message: t,
     channel: n,
-    compact: l
+    compact: l,
+    disableInteraction: r
   }) : null
 }

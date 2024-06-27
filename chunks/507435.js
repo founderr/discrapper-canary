@@ -147,7 +147,7 @@ function S(e) {
       victorEmoji: n.victorEmoji
     }), (0, s.jsx)(g, {
       ...a
-    }), (0, s.jsx)(d.Button, {
+    }), null != i && (0, s.jsx)(d.Button, {
       className: f.button,
       size: d.Button.Sizes.TINY,
       onClick: i,
@@ -166,16 +166,17 @@ function A(e) {
   var t;
   let {
     message: n,
-    compact: i
-  } = e, a = n.embeds[0], r = l.useMemo(() => (0, m.Z)(a), [a]), o = (0, c.aF)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", h.Dv), _ = n.messageReference, E = l.useCallback(() => {
-    null != _ && u.Z.jumpToMessage({
-      channelId: _.channel_id,
-      messageId: _.message_id,
+    compact: i,
+    disableInteraction: a = !1
+  } = e, r = n.embeds[0], o = l.useMemo(() => (0, m.Z)(r), [r]), _ = (0, c.aF)(null !== (t = null == o ? void 0 : o.questionText) && void 0 !== t ? t : "", h.Dv), E = n.messageReference, T = l.useCallback(() => {
+    null != E && u.Z.jumpToMessage({
+      channelId: E.channel_id,
+      messageId: E.message_id,
       flash: !0,
       returnMessageId: n.id
     })
-  }, [n.id, _]);
-  return null == r ? null : (0, s.jsxs)(s.Fragment, {
+  }, [n.id, E]);
+  return null == o ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(I.Z, {
       iconNode: (0, s.jsx)(d.PollsIcon, {
         size: "xs"
@@ -183,13 +184,13 @@ function A(e) {
       timestamp: n.timestamp,
       compact: i,
       children: N.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
-        title: o,
-        titleOnClick: E
+        title: _,
+        titleOnClick: T
       })
     }), (0, s.jsx)(S, {
       className: f.embed,
-      data: r,
-      onClickPollLink: E
+      data: o,
+      onClickPollLink: a ? void 0 : T
     })]
   })
 }

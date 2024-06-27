@@ -671,21 +671,23 @@ t.Z = a.memo(function(e) {
   let {
     message: t,
     channel: n,
-    compact: a
+    compact: a,
+    disableInteraction: s
   } = e, {
-    type: s
-  } = t, l = ex[s];
-  if (null == l) {
-    var r;
-    return r = Error("unknown message type ".concat(t.type)), em.Z.captureException(r), new I.Z("SystemMessage").error("", r), null
+    type: l
+  } = t, r = ex[l];
+  if (null == r) {
+    var o;
+    return o = Error("unknown message type ".concat(t.type)), em.Z.captureException(o), new I.Z("SystemMessage").error("", o), null
   }
   return (0, i.jsx)(F.ZP, {
     message: t,
     content: (0, eh.ZP)(t).content,
-    children: (0, i.jsx)(l, {
+    children: (0, i.jsx)(r, {
       message: t,
       channel: n,
-      compact: a
+      compact: a,
+      disableInteraction: s
     })
   })
 })
