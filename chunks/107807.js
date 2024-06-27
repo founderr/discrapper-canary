@@ -29,8 +29,8 @@ var o, c, a = t(735250),
   g = t(598077),
   j = t(314897),
   L = t(592125),
-  y = t(553795),
-  k = t(271383),
+  k = t(553795),
+  y = t(271383),
   G = t(496675),
   R = t(467679),
   Z = t(259580),
@@ -162,18 +162,19 @@ function W(e) {
         I = (null == O || O.result) && m.every(e => e.result),
         v = _.find(e => null != e.application),
         M = S.Z.get(e),
-        f = null == v ? void 0 : v.application,
-        j = (null == f ? void 0 : f.bot) != null ? new g.Z(f.bot) : null;
-      P.SJ.includes(null !== (n = null == f ? void 0 : f.id) && void 0 !== n ? n : "") ? C = (0, a.jsx)(B.Z, {
+        f = null == M || M.enabled,
+        j = null == v ? void 0 : v.application,
+        L = (null == j ? void 0 : j.bot) != null ? new g.Z(j.bot) : null;
+      P.SJ.includes(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : "") ? C = (0, a.jsx)(B.Z, {
         className: z.botTag,
         color: A,
         size: 16
-      }) : null != j && (C = (0, a.jsx)(R.Z, {
+      }) : null != L && (C = (0, a.jsx)(R.Z, {
         className: z.botTag,
-        verified: j.isVerifiedBot()
+        verified: L.isVerifiedBot()
       }));
-      let L = c[null !== (o = null == M ? void 0 : M.type) && void 0 !== o ? o : H.Kt],
-        y = !I && null != L && L <= r;
+      let k = c[null !== (o = null == M ? void 0 : M.type) && void 0 !== o ? o : H.Kt],
+        y = !I && null != k && k <= r;
       return u = I ? (0, a.jsx)(T.CheckmarkLargeIcon, {
         size: "md",
         color: "currentColor",
@@ -184,14 +185,18 @@ function W(e) {
         color: T.Button.Colors.LINK,
         className: z.connectionsChecksGroupRetryButton,
         children: Y.Z.Messages.RETRY
-      }) : (0, a.jsx)(Z.Z, {
+      }) : f ? (0, a.jsx)(Z.Z, {
         direction: Z.Z.Directions.RIGHT,
         className: z.connectionsChecksGroupCaret
+      }) : (0, a.jsx)(T.Text, {
+        variant: "text-md/medium",
+        color: "text-muted",
+        children: Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_PLATFORM_DISABLED
       }), (null == M ? void 0 : M.type) === V.ABu.STEAM && (N = Y.Z.Messages.CONNECTIONS_STEAM_TOOLTIP), (0, a.jsxs)(T.Clickable, {
-        className: i()(z.connectionsChecksGroup, I ? z.connectionsChecksGroupPassed : null),
-        onClick: I ? void 0 : () => {
+        className: i()(z.connectionsChecksGroup, I ? z.connectionsChecksGroupPassed : null, f ? null : z.connectionsChecksGroupPlatformDisabled),
+        onClick: !I && f ? () => {
           var e, n, o;
-          return n = null !== (e = null == M ? void 0 : M.type) && void 0 !== e ? e : H.Kt, o = f, void((0, b.Z)({
+          return n = null !== (e = null == M ? void 0 : M.type) && void 0 !== e ? e : H.Kt, o = j, void((0, b.Z)({
             platformType: n,
             location: "Verified Roles Connect Accounts Modal",
             overrideUrl: null == o ? void 0 : o.role_connections_verification_url
@@ -199,7 +204,7 @@ function W(e) {
             ...c,
             [n]: Date.now()
           }), h(n), E(null != o ? o : null), t())
-        },
+        } : void 0,
         children: [!I && y ? (0, a.jsx)("div", {
           className: z.connectionsChecksGroupRequirementsNotMet,
           children: (0, a.jsx)(T.Text, {
@@ -209,8 +214,8 @@ function W(e) {
           })
         }) : null, null != M ? (0, a.jsx)(K, {
           platformType: M.type
-        }) : null, null != j ? (0, a.jsx)(x.Z, {
-          user: j
+        }) : null, null != L ? (0, a.jsx)(x.Z, {
+          user: L
         }) : null, (0, a.jsxs)("div", {
           className: z.connectionsChecksGroupTextContainer,
           children: [(0, a.jsxs)("div", {
@@ -218,7 +223,7 @@ function W(e) {
             children: [(0, a.jsx)(T.Text, {
               variant: "text-md/medium",
               color: "header-primary",
-              children: null !== (s = null == M ? void 0 : M.name) && void 0 !== s ? s : null == f ? void 0 : f.name
+              children: null !== (s = null == M ? void 0 : M.name) && void 0 !== s ? s : null == j ? void 0 : j.name
             }), C, null != N ? (0, a.jsx)(T.Tooltip, {
               text: N,
               children: e => (0, a.jsx)(T.CircleInformationIcon, {
@@ -325,7 +330,7 @@ function J(e) {
     onClose: t,
     guildId: o,
     role: c
-  } = e, [l, i] = s.useState(0), [r, C] = s.useState(null), [u, _] = s.useState(!1), [h, O] = s.useState(!0), [x, v] = s.useState(!1), [g, R] = s.useState(!0), [Z, P] = s.useState(!1), b = (0, N.e7)([y.Z], () => y.Z.getAccounts()), B = (0, N.e7)([j.default], () => j.default.getId()), [H, K] = s.useState(null), [Q, J] = s.useState(null), [$, ee] = s.useState(null), en = (0, p.ZP)(), et = (0, N.e7)([f.default], () => f.default.locale), eo = (0, N.e7)([k.ZP], () => k.ZP.getMember(o, B)), ec = Object.values((0, N.e7)([L.Z], () => L.Z.getMutableGuildChannelsForGuild(o))).filter(e => G.Z.can(V.Plq.VIEW_CHANNEL, e) && G.Z.can(V.Plq.SEND_MESSAGES, e) && (0, I.Z)(e).includes(c));
+  } = e, [l, i] = s.useState(0), [r, C] = s.useState(null), [u, _] = s.useState(!1), [h, O] = s.useState(!0), [x, v] = s.useState(!1), [g, R] = s.useState(!0), [Z, P] = s.useState(!1), b = (0, N.e7)([k.Z], () => k.Z.getAccounts()), B = (0, N.e7)([j.default], () => j.default.getId()), [H, K] = s.useState(null), [Q, J] = s.useState(null), [$, ee] = s.useState(null), en = (0, p.ZP)(), et = (0, N.e7)([f.default], () => f.default.locale), eo = (0, N.e7)([y.ZP], () => y.ZP.getMember(o, B)), ec = Object.values((0, N.e7)([L.Z], () => L.Z.getMutableGuildChannelsForGuild(o))).filter(e => G.Z.can(V.Plq.VIEW_CHANNEL, e) && G.Z.can(V.Plq.SEND_MESSAGES, e) && (0, I.Z)(e).includes(c));
 
   function ea() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];

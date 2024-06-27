@@ -8,6 +8,7 @@ e.exports = {
   connectionsChecksGroups: "connectionsChecksGroups_c3d805",
   connectionsChecksGroup: "connectionsChecksGroup_c3d805",
   connectionsChecksGroupPassed: "connectionsChecksGroupPassed_c3d805",
+  connectionsChecksGroupPlatformDisabled: "connectionsChecksGroupPlatformDisabled_c3d805",
   connectionsChecksGroupTextContainer: "connectionsChecksGroupTextContainer_c3d805",
   connectionsChecksGroupTextNameContainer: "connectionsChecksGroupTextNameContainer_c3d805",
   connectionsChecksGroupTextNameInfoIcon: "connectionsChecksGroupTextNameInfoIcon_c3d805",
