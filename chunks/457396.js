@@ -1,6 +1,6 @@
 n.d(t, {
   g: function() {
-    return G
+    return U
   }
 });
 var i, s, a = n(735250);
@@ -28,88 +28,86 @@ var r = n(91192),
   L = n(924540),
   v = n(649765),
   O = n(565626),
-  R = n(734741),
-  x = n(701910),
-  P = n(487980),
-  b = n(474936),
-  M = n(981631),
-  D = n(921944),
-  y = n(689938),
-  j = n(613235);
-let U = "NitroTabButton";
+  R = n(701910),
+  x = n(487980),
+  P = n(474936),
+  b = n(981631),
+  M = n(921944),
+  D = n(689938),
+  y = n(613235);
+let j = "NitroTabButton";
 (i = s || (s = {}))[i.BOGO_PROMOTION = 0] = "BOGO_PROMOTION", i[i.TENURE_REWARD = 1] = "TENURE_REWARD", i[i.NEW_PERKS_BADGE = 2] = "NEW_PERKS_BADGE", i[i.DISCOUNT_OFFER = 3] = "DISCOUNT_OFFER", i[i.TRIAL_OFFER = 4] = "TRIAL_OFFER", i[i.LOCALIZED_PRICING = 5] = "LOCALIZED_PRICING", i[i.REFERRAL_PROGRAM = 6] = "REFERRAL_PROGRAM";
-let G = e => {
+let U = e => {
   let t, n, i, {
       selected: s,
-      route: G,
-      locationState: w,
-      ...k
+      route: U,
+      locationState: G,
+      ...w
     } = e,
-    B = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
-    H = (0, l.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
-    V = (0, m.Qo)(B, H),
-    F = (0, r.JA)("nitro"),
-    Y = (0, S.N)(),
-    W = (0, C.Ng)(),
-    z = (0, l.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == Y,
-    K = (0, Z.Vi)(),
-    q = (0, O.ZP)(),
-    Q = (0, R.ZR)(),
-    X = (0, N.$_)(),
-    J = (0, P.K)(U),
-    $ = (0, l.e7)([p.Z], () => p.Z.getCreatedAtOverride()),
-    ee = null != $ ? $ : null == B ? void 0 : B.createdAt,
-    et = s || null != Y || null != W || K || q || Q || null != X || V,
+    k = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
+    B = (0, l.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
+    H = (0, m.Qo)(k, B),
+    V = (0, r.JA)("nitro"),
+    F = (0, S.N)(),
+    Y = (0, C.Ng)(),
+    W = (0, l.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == F,
+    z = (0, Z.Vi)(),
+    K = (0, O.ZP)(),
+    q = (0, N.$_)(),
+    Q = (0, x.K)(j),
+    X = (0, l.e7)([p.Z], () => p.Z.getCreatedAtOverride()),
+    J = null != X ? X : null == k ? void 0 : k.createdAt,
+    $ = s || null != F || null != Y || z || K || null != q || H,
     {
-      enabled: en
+      enabled: ee
     } = T._.useExperiment({
-      location: U
+      location: j
     }, {
       autoTrackExposure: !1
     }),
-    ei = en && (null == Y ? void 0 : Y.trial_id) === b.a7,
-    es = (0, g.N9)({
+    et = ee && (null == F ? void 0 : F.trial_id) === P.a7,
+    en = (0, g.N9)({
       location: "NitroTabButton",
-      showTabForOtherReasons: et
+      showTabForOtherReasons: $
     });
-  if (!(et = et || null != B && null != ee && Date.now() - ee.getTime() > es)) return null;
-  Q ? (n = (0, a.jsx)(x.g, {}), i = 2) : K ? (n = (0, a.jsx)(f.Z, {
+  if (!($ = $ || null != k && null != J && Date.now() - J.getTime() > en)) return null;
+  z ? (n = (0, a.jsx)(f.Z, {
     isNitroTab: !0
-  }), i = 0) : null != X ? (n = (0, a.jsx)(x.Z, {
-    copy: X
-  }), i = 1) : q ? (n = (0, a.jsx)(x.Z, {}), i = 2) : null != W ? (n = (0, a.jsx)(L.GN, {
-    userDiscount: W,
+  }), i = 0) : null != q ? (n = (0, a.jsx)(R.Z, {
+    copy: q
+  }), i = 1) : K ? (n = (0, a.jsx)(R.Z, {}), i = 2) : null != Y ? (n = (0, a.jsx)(L.GN, {
+    userDiscount: Y,
     isTabSelected: s,
     includesAmountOff: !1
-  }), i = 3) : null == Y || ei ? J ? (n = (0, a.jsx)(v.Z, {
+  }), i = 3) : null == F || et ? Q ? (n = (0, a.jsx)(v.Z, {
     isSelected: s,
     onSelect: () => (0, u.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
-      dismissAction: D.L.TAKE_ACTION
+      dismissAction: M.L.TAKE_ACTION
     })
-  }), i = 6) : z && (n = (0, a.jsx)(A.k, {
+  }), i = 6) : W && (n = (0, a.jsx)(A.k, {
     entryPoint: A.U.PrivateMessages
-  }), !s && (t = j.localizeBadge), i = 5) : (n = (0, a.jsx)(L.$H, {
-    trialOffer: Y,
+  }), !s && (t = y.localizeBadge), i = 5) : (n = (0, a.jsx)(L.$H, {
+    trialOffer: F,
     isTabSelected: s
   }), i = 4);
-  let ea = (0, a.jsx)(d.Qj, {
+  let ei = (0, a.jsx)(d.Qj, {
     selected: s,
-    route: G,
+    route: U,
     icon: c.NitroWheelIcon,
-    text: y.Z.Messages.PREMIUM,
-    locationState: w,
+    text: D.Z.Messages.PREMIUM,
+    locationState: G,
     onClick: () => {
-      I.default.track(M.rMx.NITRO_TAB_VISITED, {
+      I.default.track(b.rMx.NITRO_TAB_VISITED, {
         badge_decorator: i,
-        has_premium: V
+        has_premium: H
       })
     },
-    ...k,
-    ...F,
+    ...w,
+    ...V,
     className: t,
     children: n
   });
-  return J ? (0, a.jsx)(v.E, {
-    children: ea
-  }) : ea
+  return Q ? (0, a.jsx)(v.E, {
+    children: ei
+  }) : ei
 }
