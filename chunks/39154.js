@@ -15,6 +15,7 @@ function r(e, t) {
     components: t.message.components,
     editedTimestamp: null,
     timestamp: t.message.timestamp,
+    codedLinks: t.message.codedLinks,
     reactions: [],
     messageSnapshots: [],
     customRenderedContent: null

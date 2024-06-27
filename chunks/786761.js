@@ -49,54 +49,54 @@ function m(e) {
     embeds: v(e),
     components: (0, o.uZ)(null !== (t = e.components) && void 0 !== t ? t : [], {
       includeEmojiSrc: !1
-    })
+    }),
+    codedLinks: e.type === A.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content)
   })
 }
 
 function O(e) {
-  var t, n, i, r, o, l, T, S, O, R;
+  var t, n, i, r, s, o, l, T, S, O;
   let {
-    reactions: p,
-    interactionData: g
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, v = m(e), M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (o = e.mention_roles) && void 0 !== o ? o : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], U = e.message_reference, b = e.type === A.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content);
-  let G = null == (S = e).author ? N : null != S.webhook_id ? new c.Z(S.author) : null !== (O = I.default.getUser(S.author.id)) && void 0 !== O ? O : new c.Z(S.author),
-    w = null == e ? void 0 : e.gift_info,
-    B = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-    x = e.type === A.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-    k = e.type === A.uaV.PREMIUM_REFERRAL ? e.content : void 0,
-    V = e.content;
-  return e.type === A.uaV.PREMIUM_REFERRAL && (V = ""), R = 0, new _.ZP({
+    reactions: R,
+    interactionData: p
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, g = m(e), v = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], M = null !== (s = e.mention_roles) && void 0 !== s ? s : [], P = null !== (o = e.mention_channels) && void 0 !== o ? o : [], y = e.message_reference;
+  let U = null == (T = e).author ? N : null != T.webhook_id ? new c.Z(T.author) : null !== (S = I.default.getUser(T.author.id)) && void 0 !== S ? S : new c.Z(T.author),
+    b = null == e ? void 0 : e.gift_info,
+    G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
+    w = e.type === A.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+    B = e.type === A.uaV.PREMIUM_REFERRAL ? e.content : void 0,
+    x = e.content;
+  return e.type === A.uaV.PREMIUM_REFERRAL && (x = ""), O = 0, new _.ZP({
     ...e,
-    ...v.toJS(),
-    author: G,
+    ...g.toJS(),
+    author: U,
     webhookId: e.webhook_id,
-    blocked: E.Z.isBlockedForMessage(e) || null != x && E.Z.isBlocked(x),
+    blocked: E.Z.isBlockedForMessage(e) || null != w && E.Z.isBlocked(w),
     mentionEveryone: e.mention_everyone,
-    mentions: M,
-    mentionRoles: P,
-    mentionChannels: y,
-    messageReference: U,
+    mentions: v,
+    mentionRoles: M,
+    mentionChannels: P,
+    messageReference: y,
     mentioned: (0, f.Sz)({
       userId: d.default.getId(),
       channelId: e.channel_id,
-      mentionEveryone: null !== (T = e.mention_everyone) && void 0 !== T && T,
-      mentionUsers: M,
-      mentionRoles: P
+      mentionEveryone: null !== (l = e.mention_everyone) && void 0 !== l && l,
+      mentionUsers: v,
+      mentionRoles: M
     }),
-    codedLinks: b,
     giftCodes: (0, h.Fp)(e) ? (0, h.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, h.Q_)(e.content),
-    content: V,
-    referralTrialOfferId: k,
-    call: C(e.call, v.timestamp),
+    content: x,
+    referralTrialOfferId: B,
+    call: C(e.call, g.timestamp),
     messageSnapshots: D(e),
-    reactions: L(null != p ? p : e.reactions, e.poll),
-    interaction: B,
-    interactionData: null != g ? g : e.interaction_data,
+    reactions: L(null != R ? R : e.reactions, e.poll),
+    interaction: G,
+    interactionData: null != p ? p : e.interaction_data,
     interactionMetadata: e.interaction_metadata,
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, a.Z)(e.poll),
-    giftInfo: null == w ? void 0 : w
+    giftInfo: null == b ? void 0 : b
   })
 }
 
