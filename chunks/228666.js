@@ -1,6 +1,6 @@
 t.d(a, {
   P: function() {
-    return m
+    return p
   }
 });
 var n = t(735250),
@@ -8,53 +8,49 @@ var n = t(735250),
   s = t(442837),
   l = t(481060),
   o = t(464179),
-  i = t(812169),
-  c = t(706454),
-  u = t(351402);
+  i = t(706454),
+  c = t(351402);
 t(285952);
-var d = t(603421),
-  E = t(981631),
-  _ = t(689938),
-  p = t(202675);
-let m = e => {
+var u = t(603421),
+  d = t(981631),
+  E = t(689938),
+  _ = t(202675);
+let p = e => {
   let a, {
       billingAddressInfo: t,
-      billingError: m,
-      onBillingAddressChange: A,
-      paymentSourceType: N
+      billingError: p,
+      onBillingAddressChange: m,
+      paymentSourceType: A
     } = e,
-    h = null != m && (null == m.code || (0, d.ly)(m) === d.Rg.ADDRESS),
-    T = (0, s.e7)([c.default], () => c.default.locale);
-  switch (N) {
-    case E.HeQ.CARD:
-      a = "en-US" === T ? 1 === (0, i._)().bucket ? o.ZP.Layouts.MODAL_US_REDUCED : o.ZP.Layouts.MODAL_US : o.ZP.Layouts.MODAL_INTL;
+    N = null != p && (null == p.code || (0, u.ly)(p) === u.Rg.ADDRESS),
+    h = (0, s.e7)([i.default], () => i.default.locale);
+  switch (A) {
+    case d.HeQ.GIROPAY:
+    case d.HeQ.PAYSAFE_CARD:
+    case d.HeQ.GCASH:
+    case d.HeQ.GRABPAY_MY:
+    case d.HeQ.MOMO_WALLET:
+    case d.HeQ.KAKAOPAY:
+    case d.HeQ.GOPAY_WALLET:
+    case d.HeQ.BANCONTACT:
+      a = "en-US" === h ? o.ZP.Layouts.MODAL_US_WITH_NAME : o.ZP.Layouts.MODAL_INTL_WITH_NAME;
       break;
-    case E.HeQ.GIROPAY:
-    case E.HeQ.PAYSAFE_CARD:
-    case E.HeQ.GCASH:
-    case E.HeQ.GRABPAY_MY:
-    case E.HeQ.MOMO_WALLET:
-    case E.HeQ.KAKAOPAY:
-    case E.HeQ.GOPAY_WALLET:
-    case E.HeQ.BANCONTACT:
-      a = "en-US" === T ? o.ZP.Layouts.MODAL_US_WITH_NAME : o.ZP.Layouts.MODAL_INTL_WITH_NAME;
-      break;
-    case E.HeQ.VENMO:
-    case E.HeQ.CASH_APP:
+    case d.HeQ.VENMO:
+    case d.HeQ.CASH_APP:
       a = o.ZP.Layouts.MODAL_US_WITH_NAME;
       break;
     default:
-      a = "en-US" === T ? o.ZP.Layouts.MODAL_US : o.ZP.Layouts.MODAL_INTL
+      a = "en-US" === h ? o.ZP.Layouts.MODAL_US : o.ZP.Layouts.MODAL_INTL
   }
-  let I = (0, s.e7)([u.Z], () => u.Z.ipCountryCode);
-  return 0 === t.country.length && (t.country = null != I ? I : ""), (0, n.jsxs)(r.Fragment, {
-    children: [h ? (0, n.jsx)(l.FormErrorBlock, {
-      className: p.errorBlock,
-      children: _.Z.Messages.BILLING_ERROR_SECTION_ADDRESS
+  let T = (0, s.e7)([c.Z], () => c.Z.ipCountryCode);
+  return 0 === t.country.length && (t.country = null != T ? T : ""), (0, n.jsxs)(r.Fragment, {
+    children: [N ? (0, n.jsx)(l.FormErrorBlock, {
+      className: _.errorBlock,
+      children: E.Z.Messages.BILLING_ERROR_SECTION_ADDRESS
     }) : null, (0, n.jsx)(o.ZP, {
-      className: p.__invalid_formItem,
-      onBillingAddressChange: A,
-      error: m,
+      className: _.__invalid_formItem,
+      onBillingAddressChange: m,
+      error: p,
       layout: a,
       ...t
     })]
