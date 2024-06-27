@@ -469,6 +469,11 @@ function eV() {
                   impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                   disableTrack: !0
                 }), (0, i.jsx)(g.Z, {
+                  path: eE.Z5c.GLOBAL_DISCOVERY_QUESTS,
+                  render: eR,
+                  impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
+                  disableTrack: !0
+                }), (0, i.jsx)(g.Z, {
                   path: eE.Z5c.GUILD_DISCOVERY,
                   render: e => {
                     let {
