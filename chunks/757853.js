@@ -85,7 +85,7 @@ function M(e) {
   })
 }
 
-function P(e) {
+function D(e) {
   let {
     user: t,
     subLabel: n,
@@ -106,7 +106,7 @@ function P(e) {
   })
 }
 
-function D(e) {
+function P(e) {
   let {
     channel: t,
     subLabel: n,
@@ -215,11 +215,11 @@ function F(e) {
         "aria-posinset": s + 1,
         "aria-setsize": t.length
       };
-    if (o === E.h8.USER) return (0, l.jsx)(P, {
+    if (o === E.h8.USER) return (0, l.jsx)(D, {
       user: u,
       ...I
     });
-    if (o === E.h8.GROUP_DM) return (0, l.jsx)(D, {
+    if (o === E.h8.GROUP_DM) return (0, l.jsx)(P, {
       channel: u,
       ...I
     });

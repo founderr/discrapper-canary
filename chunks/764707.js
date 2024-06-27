@@ -1,14 +1,14 @@
 n(47120);
-var r = n(979590),
-  a = n.n(r),
+var a = n(979590),
+  r = n.n(a),
   o = n(399606),
   l = n(607070),
   i = n(168631);
 let s = (e, t) => {
     let n = e.toRgb(),
-      r = t.toRgb(),
-      [o, l, s] = (0, i.J2)([n.r, n.g, n.b], [r.r, r.g, r.b], 50);
-    return a()({
+      a = t.toRgb(),
+      [o, l, s] = (0, i.J2)([n.r, n.g, n.b], [a.r, a.g, a.b], 50);
+    return r()({
       r: o,
       g: l,
       b: s
@@ -37,37 +37,37 @@ let s = (e, t) => {
   u = (e, t) => {
     let {
       h: n,
-      s: r,
+      s: a,
       l: o
     } = e.toHsl();
-    return a()({
+    return r()({
       h: n,
-      s: r * t,
+      s: a * t,
       l: o
     })
   };
 t.Z = e => t => {
   let n = (0, o.e7)([l.Z], () => l.Z.saturation);
   if (null == t) return {};
-  let r = {
+  let a = {
     backgroundColors: c(e, t.backgroundColors),
     buttonColors: d(e, t.buttonColors),
     confettiColors: t.confettiColors
   };
   return 1 === n ? {
-    ...r
+    ...a
   } : {
-    backgroundColors: null != r.backgroundColors ? {
-      primary: u(r.backgroundColors.primary, n),
-      secondary: u(r.backgroundColors.secondary, n),
-      border: u(r.backgroundColors.border, n),
-      label: u(r.backgroundColors.label, n)
+    backgroundColors: null != a.backgroundColors ? {
+      primary: u(a.backgroundColors.primary, n),
+      secondary: u(a.backgroundColors.secondary, n),
+      border: u(a.backgroundColors.border, n),
+      label: u(a.backgroundColors.label, n)
     } : void 0,
-    buttonColors: null != r.buttonColors ? {
-      primary: u(r.buttonColors.primary, n),
-      secondary: u(r.buttonColors.secondary, n),
-      text: u(r.buttonColors.text, n)
+    buttonColors: null != a.buttonColors ? {
+      primary: u(a.buttonColors.primary, n),
+      secondary: u(a.buttonColors.secondary, n),
+      text: u(a.buttonColors.text, n)
     } : void 0,
-    confettiColors: r.confettiColors.map(e => u(e, n))
+    confettiColors: a.confettiColors.map(e => u(e, n))
   }
 }

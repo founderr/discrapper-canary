@@ -3,10 +3,10 @@ n.d(t, {
     return v
   }
 });
-var r = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(120356),
-  o = n.n(a),
+var r = n(120356),
+  o = n.n(r),
   l = n(780384),
   i = n(481060),
   s = n(410030),
@@ -20,7 +20,7 @@ let v = e => {
   let {
     product: t,
     isPurchased: n,
-    isHighlighted: a,
+    isHighlighted: r,
     user: v,
     forCollectedModal: C,
     profileEffectClassName: E
@@ -28,25 +28,25 @@ let v = e => {
     firstProfileEffect: h,
     firstAvatarDecoration: b
   } = (0, d.R)(t), m = (0, s.ZP)(), T = (0, l.ap)(m);
-  return (0, r.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: f.container,
-    children: [null != h ? (0, r.jsx)("div", {
+    children: [null != h ? (0, a.jsx)("div", {
       className: o()(f.profileEffectShopPreview, E),
-      children: (0, r.jsx)(c.Z, {
-        isHovering: a,
+      children: (0, a.jsx)(c.Z, {
+        isHovering: r,
         profileEffectId: h.id,
         isPurchased: n,
         forCollectedModal: C,
         removeSetHeight: !0
       })
-    }) : null, null != b ? (0, r.jsx)("div", {
+    }) : null, null != b ? (0, a.jsx)("div", {
       className: f.avatarDecorationPreview,
-      children: (0, r.jsx)(u.R, {
+      children: (0, a.jsx)(u.R, {
         item: b,
         user: v,
         avatarSize: i.AvatarSizes.SIZE_120,
         isPurchased: n,
-        isHighlighted: a,
+        isHighlighted: r,
         avatarPlaceholderSrc: T ? g : p
       })
     }) : null]
