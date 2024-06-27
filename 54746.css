@@ -33076,6 +33076,10 @@ h3.improved_f017d0:after {
     overflow: hidden
 }
 
+.maxBioHeight_fc5c48 {
+    max-height: 55px
+}
+
 .pill_f9575e {
     border-radius: var(--radius-xs);
     background: var(--bg-mod-faint);
