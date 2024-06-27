@@ -5,19 +5,30 @@ n(470079);
 var r = n(481060),
   s = n(570140),
   o = n(468026),
-  a = n(566620),
-  l = n(287545),
-  u = n(318891),
-  _ = n(719296),
-  c = n(689938);
-class d extends l.Z {
+  a = n(626135),
+  l = n(358085),
+  u = n(998502),
+  _ = n(566620),
+  c = n(287545),
+  d = n(318891),
+  E = n(719296),
+  I = n(981631),
+  T = n(689938);
+class h extends c.Z {
+  _initialize() {
+    l.isPlatformEmbedded && u.ZP.on("APP_PUSH_ANALYTICS", (e, t) => {
+      t.forEach(e => {
+        "activities" === e.type && e.name === I.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION && a.default.track(e.name, e.data)
+      })
+    })
+  }
   showErrorModal(e) {
     let {
       code: t,
       message: n
     } = e;
     (0, r.openModalLazy)(async () => e => (0, i.jsx)(o.default, {
-      title: c.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
+      title: T.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
         code: t
       }),
       body: n,
@@ -26,7 +37,7 @@ class d extends l.Z {
   }
   showLaunchErrorModal(e) {
     (0, r.openModalLazy)(async () => t => (0, i.jsx)(o.default, {
-      title: c.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+      title: T.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
       body: e,
       ...t
     }))
@@ -37,7 +48,7 @@ class d extends l.Z {
       applicationId: n
     } = e;
     s.Z.wait(() => {
-      (0, a.mW)({
+      (0, _.mW)({
         channelId: t,
         applicationId: n
       })
@@ -47,8 +58,8 @@ class d extends l.Z {
     let {
       channelId: t,
       applicationId: n
-    } = e, i = (0, _.Z)(t, n);
-    (0, u.RI)(i)
+    } = e, i = (0, E.Z)(t, n);
+    (0, d.RI)(i)
   }
   releaseWebView() {}
   constructor(...e) {
@@ -70,4 +81,4 @@ class d extends l.Z {
     }) : t[n] = i
   }
 }
-t.Z = new d
+t.Z = new h
