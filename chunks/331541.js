@@ -327,110 +327,116 @@ function ee(e) {
               onClose: n
             }), (0, i.jsxs)("div", {
               className: Q.menus,
-              children: [(0, i.jsxs)(d.Menu, {
-                navId: "status",
-                "aria-label": q.Z.Messages.STATUS_MENU_LABEL,
-                hideScroller: !0,
-                className: Q.menu,
-                onClose: n,
-                onSelect: void 0,
-                children: [ec && (0, i.jsx)(d.MenuGroup, {
-                  children: (0, i.jsx)(d.MenuItem, {
-                    id: "edit-profile",
-                    icon: d.PencilIcon,
-                    label: q.Z.Messages.EDIT_PROFILE,
-                    action: () => {
-                      en({
-                        action: "EDIT_PROFILE",
-                        analyticsLocations: et
-                      }), ed()
-                    },
-                    showIconFirst: !0,
-                    focusedClassName: Q.menuItemFocused,
-                    subMenuIconClassName: Q.subMenuIcon
-                  }, "edit-profile")
-                }), (0, i.jsx)(d.MenuGroup, {
-                  children: (0, i.jsx)(d.MenuItem, {
-                    id: "status-picker",
-                    label: (0, i.jsxs)("div", {
-                      style: {
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between"
+              children: [(0, i.jsx)(R.Z.Overlay, {
+                className: Q.menuOverlay,
+                children: (0, i.jsxs)(d.Menu, {
+                  navId: "status",
+                  "aria-label": q.Z.Messages.STATUS_MENU_LABEL,
+                  hideScroller: !0,
+                  className: Q.menu,
+                  onClose: n,
+                  onSelect: void 0,
+                  children: [ec && (0, i.jsx)(d.MenuGroup, {
+                    children: (0, i.jsx)(d.MenuItem, {
+                      id: "edit-profile",
+                      icon: d.PencilIcon,
+                      label: q.Z.Messages.EDIT_PROFILE,
+                      action: () => {
+                        en({
+                          action: "EDIT_PROFILE",
+                          analyticsLocations: et
+                        }), ed()
                       },
-                      children: [(0, V.u5)(es), eu || e_ ? (0, i.jsx)(d.BellSlashIcon, {
-                        size: "xxs"
-                      }) : null]
-                    }),
-                    focusedClassName: Q.menuItemFocused,
-                    subMenuIconClassName: Q.subMenuIcon,
-                    action: o.tq ? function() {
-                      en({
-                        action: "PRESS_SET_STATUS",
-                        analyticsLocations: et
-                      }), (0, d.openModalLazy)(() => new Promise(e => {
-                        e(e => (0, i.jsx)(d.ModalRoot, {
-                          ...e,
-                          size: d.ModalSize.SMALL,
-                          className: Q.modal,
-                          "aria-label": q.Z.Messages.SET_STATUS,
-                          children: (0, i.jsx)(d.Menu, {
-                            navId: "status-mobile-web",
-                            variant: "fixed",
-                            "aria-label": q.Z.Messages.STATUS_MENU_LABEL,
-                            hideScroller: !0,
-                            className: Q.statusPickerModalMenu,
-                            onClose: e.onClose,
-                            onSelect: e.onClose,
-                            children: ea
-                          })
+                      showIconFirst: !0,
+                      focusedClassName: Q.menuItemFocused,
+                      subMenuIconClassName: Q.subMenuIcon
+                    }, "edit-profile")
+                  }), (0, i.jsx)(d.MenuGroup, {
+                    children: (0, i.jsx)(d.MenuItem, {
+                      id: "status-picker",
+                      label: (0, i.jsxs)("div", {
+                        style: {
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between"
+                        },
+                        children: [(0, V.u5)(es), eu || e_ ? (0, i.jsx)(d.BellSlashIcon, {
+                          size: "xxs"
+                        }) : null]
+                      }),
+                      focusedClassName: Q.menuItemFocused,
+                      subMenuIconClassName: Q.subMenuIcon,
+                      action: o.tq ? function() {
+                        en({
+                          action: "PRESS_SET_STATUS",
+                          analyticsLocations: et
+                        }), (0, d.openModalLazy)(() => new Promise(e => {
+                          e(e => (0, i.jsx)(d.ModalRoot, {
+                            ...e,
+                            size: d.ModalSize.SMALL,
+                            className: Q.modal,
+                            "aria-label": q.Z.Messages.SET_STATUS,
+                            children: (0, i.jsx)(d.Menu, {
+                              navId: "status-mobile-web",
+                              variant: "fixed",
+                              "aria-label": q.Z.Messages.STATUS_MENU_LABEL,
+                              hideScroller: !0,
+                              className: Q.statusPickerModalMenu,
+                              onClose: e.onClose,
+                              onSelect: e.onClose,
+                              children: ea
+                            })
+                          }))
                         }))
-                      }))
-                    } : void 0,
-                    showIconFirst: !0,
-                    icon: e => {
-                      let {
-                        className: t,
-                        isFocused: n
-                      } = e;
-                      return (0, i.jsx)(d.Status, {
-                        status: es,
-                        size: 12,
-                        className: r()(t, Q.mainStatusIcon),
-                        color: n ? "currentColor" : void 0
-                      })
-                    },
-                    children: o.tq ? void 0 : ea
-                  }, "status-picker")
-                }), !ec && (0, i.jsx)(d.MenuGroup, {
-                  children: eh
-                })]
-              }), (0, i.jsxs)(d.Menu, {
-                navId: "account",
-                "aria-label": q.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
-                hideScroller: !0,
-                className: Q.menu,
-                onClose: n,
-                onSelect: void 0,
-                children: [(0, i.jsx)(d.MenuGroup, {
-                  children: (0, i.jsx)(d.MenuItem, {
-                    id: "switch-account",
-                    focusedClassName: Q.menuItemFocused,
-                    subMenuIconClassName: Q.subMenuIcon,
-                    label: q.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                    icon: d.UserCircleIcon,
-                    showIconFirst: !0,
-                    action: () => {
-                      en({
-                        action: "PRESS_SWITCH_ACCOUNTS",
-                        analyticsLocations: et
-                      }), (0, W.Z)()
-                    },
-                    children: eE
-                  })
-                }), (0, i.jsx)(d.MenuGroup, {
-                  children: eI
-                })]
+                      } : void 0,
+                      showIconFirst: !0,
+                      icon: e => {
+                        let {
+                          className: t,
+                          isFocused: n
+                        } = e;
+                        return (0, i.jsx)(d.Status, {
+                          status: es,
+                          size: 12,
+                          className: r()(t, Q.mainStatusIcon),
+                          color: n ? "currentColor" : void 0
+                        })
+                      },
+                      children: o.tq ? void 0 : ea
+                    }, "status-picker")
+                  }), !ec && (0, i.jsx)(d.MenuGroup, {
+                    children: eh
+                  })]
+                })
+              }), (0, i.jsx)(R.Z.Overlay, {
+                className: Q.menuOverlay,
+                children: (0, i.jsxs)(d.Menu, {
+                  navId: "account",
+                  "aria-label": q.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
+                  hideScroller: !0,
+                  className: Q.menu,
+                  onClose: n,
+                  onSelect: void 0,
+                  children: [(0, i.jsx)(d.MenuGroup, {
+                    children: (0, i.jsx)(d.MenuItem, {
+                      id: "switch-account",
+                      focusedClassName: Q.menuItemFocused,
+                      subMenuIconClassName: Q.subMenuIcon,
+                      label: q.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                      icon: d.UserCircleIcon,
+                      showIconFirst: !0,
+                      action: () => {
+                        en({
+                          action: "PRESS_SWITCH_ACCOUNTS",
+                          analyticsLocations: et
+                        }), (0, W.Z)()
+                      },
+                      children: eE
+                    })
+                  }), (0, i.jsx)(d.MenuGroup, {
+                    children: eI
+                  })]
+                })
               })]
             })]
           }), (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(f.Z, {

@@ -1,6 +1,7 @@
 e.exports = {
   body: "body_ad5fac",
   menus: "menus_ad5fac",
+  menuOverlay: "menuOverlay_ad5fac",
   menu: "menu_ad5fac",
   menuItemFocused: "menuItemFocused_ad5fac",
   subMenuIcon: "subMenuIcon_ad5fac",
