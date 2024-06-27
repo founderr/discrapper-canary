@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   container: "container_fe5744",
   keybindHintKeys: "keybindHintKeys_fe5744",

@@ -11,7 +11,7 @@ var s = n(120356),
   i = n(432594),
   l = n(481060),
   c = n(230711),
-  d = n(327192),
+  d = n(231757),
   u = n(617136),
   p = n(497505),
   m = n(796111),
@@ -33,7 +33,9 @@ function h(e) {
         questId: t.id,
         questContent: p.jn.QUEST_BAR_V2,
         questContentCTA: u.jZ.CONNECT_CONSOLE
-      }), (0, d.q)(s)
+      }), (0, d.Z)({
+        platformType: s
+      })
     },
     children: s === g.ABu.PLAYSTATION ? (0, o.jsx)(a.K, {
       colorClass: r()(f.connectConsoleButton, n ? f.playstationButtonConnected : f.connectConsoleButtonUnconnected),

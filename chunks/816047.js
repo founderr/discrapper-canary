@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   selectedIcon: "selectedIcon_da7eaa",
   ellipsisText: "ellipsisText_da7eaa",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   upsellBanner: "upsellBanner_f59576",
   enhancedBanner: "enhancedBanner_f59576",

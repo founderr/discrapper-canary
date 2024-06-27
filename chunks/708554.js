@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   title: "title_b70be6 " + n("278768").modalContent,
   scrollerInner: "scrollerInner_b70be6",

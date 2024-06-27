@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   selectorButton: "selectorButton_a78967",
   selectorButtonSelected: "selectorButtonSelected_a78967",

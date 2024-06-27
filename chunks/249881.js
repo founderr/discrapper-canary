@@ -1,62 +1,61 @@
-"use strict";
-n.d(t, {
+t.d(s, {
   t: function() {
-    return c
+    return _
   }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(481060),
-  o = n(243778),
-  a = n(921944),
-  l = n(689938),
-  u = n(487099);
-let _ = e => {
+var n = t(735250),
+  a = t(470079),
+  i = t(481060),
+  r = t(243778),
+  o = t(921944),
+  l = t(689938),
+  c = t(487099);
+let d = e => {
     let {
-      markAsDismissed: t
+      markAsDismissed: s
     } = e;
-    return r.useEffect(() => t(a.L.UNKNOWN), [t]), (0, i.jsx)(s.TextBadge, {
-      className: u.newBadge,
+    return a.useEffect(() => s(o.L.UNKNOWN), [s]), (0, n.jsx)(i.TextBadge, {
+      className: c.newBadge,
       text: l.Z.Messages.NEW
     })
   },
-  c = e => {
+  _ = e => {
     let {
-      title: t,
-      body: n,
-      img: r,
-      newIndicatorDismissibleContent: a,
-      onClick: c
+      title: s,
+      body: t,
+      img: a,
+      newIndicatorDismissibleContent: o,
+      onClick: _
     } = e;
-    return (0, i.jsxs)("div", {
-      className: u.container,
-      children: [r, (0, i.jsxs)("div", {
-        className: u.textContainer,
-        children: [(0, i.jsxs)("div", {
-          className: u.headerText,
-          children: [(0, i.jsx)(o.Z, {
-            contentTypes: [a],
+    return (0, n.jsxs)("div", {
+      className: c.container,
+      children: [a, (0, n.jsxs)("div", {
+        className: c.textContainer,
+        children: [(0, n.jsxs)("div", {
+          className: c.headerText,
+          children: [(0, n.jsx)(r.Z, {
+            contentTypes: [o],
             children: e => {
               let {
-                visibleContent: t,
-                markAsDismissed: n
+                visibleContent: s,
+                markAsDismissed: t
               } = e;
-              return t === a ? (0, i.jsx)(_, {
-                markAsDismissed: n
+              return s === o ? (0, n.jsx)(d, {
+                markAsDismissed: t
               }) : null
             }
-          }), (0, i.jsx)(s.Text, {
+          }), (0, n.jsx)(i.Text, {
             variant: "text-md/semibold",
-            children: t
+            children: s
           })]
-        }), (0, i.jsx)(s.Text, {
+        }), (0, n.jsx)(i.Text, {
           variant: "text-xs/normal",
-          children: n
+          children: t
         })]
-      }), (0, i.jsx)(s.Button, {
-        size: s.ButtonSizes.MEDIUM,
-        onClick: c,
-        className: u.reconnectButton,
+      }), (0, n.jsx)(i.Button, {
+        size: i.ButtonSizes.MEDIUM,
+        onClick: _,
+        className: c.reconnectButton,
         children: l.Z.Messages.RECONNECT
       })]
     })

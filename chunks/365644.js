@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   avatar: "avatar_c32699",
   userListOverflow: "userListOverflow_c32699",

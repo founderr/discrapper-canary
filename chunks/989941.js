@@ -1,17 +1,16 @@
-"use strict";
-let r;
+let i;
 n.d(t, {
   Z: function() {
-    return a
+    return l
   }
 });
-var o = n(145597);
+var a = n(145597);
 
-function a(e, t) {
+function l(e, t) {
   if (__OVERLAY__) {
     let e = t.getGame(),
-      n = (0, o.QF)();
-    return null == e || null == n ? null : (null == r ? void 0 : r.id) === e.id && (null == r ? void 0 : r.pid) === n ? r : r = {
+      n = (0, a.QF)();
+    return null == e || null == n ? null : (null == i ? void 0 : i.id) === e.id && (null == i ? void 0 : i.pid) === n ? i : i = {
       id: e.id,
       pid: n,
       pidPath: [],

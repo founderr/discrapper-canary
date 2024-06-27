@@ -1,43 +1,42 @@
-"use strict";
-n.d(t, {
+t.d(s, {
   Z: function() {
-    return d
+    return E
   },
   z: function() {
-    return r
+    return a
   }
 });
-var i, r, s = n(735250);
-n(470079);
-var o = n(120356),
-  a = n.n(o),
-  l = n(481060),
-  u = n(873773);
-(i = r || (r = {})).INFO = "info", i.WARNING = "warning";
-let _ = {
-    info: u.info,
-    warning: u.warning
+var n, a, i = t(735250);
+t(470079);
+var r = t(120356),
+  o = t.n(r),
+  l = t(481060),
+  c = t(873773);
+(n = a || (a = {})).INFO = "info", n.WARNING = "warning";
+let d = {
+    info: c.info,
+    warning: c.warning
   },
-  c = {
+  _ = {
     info: l.CircleInformationIcon,
     warning: l.CircleExclamationPointIcon
   };
 
-function d(e) {
+function E(e) {
   let {
-    children: t,
-    className: n,
-    look: i = "info"
-  } = e, r = c[i];
-  return (0, s.jsxs)("div", {
-    className: a()(u.root, n, _[i]),
-    children: [(0, s.jsx)(r, {
-      className: u.icon
-    }), (0, s.jsx)(l.Text, {
-      className: u.text,
+    children: s,
+    className: t,
+    look: n = "info"
+  } = e, a = _[n];
+  return (0, i.jsxs)("div", {
+    className: o()(c.root, t, d[n]),
+    children: [(0, i.jsx)(a, {
+      className: c.icon
+    }), (0, i.jsx)(l.Text, {
+      className: c.text,
       variant: "text-sm/medium",
       color: "text-normal",
-      children: t
+      children: s
     })]
   })
 }

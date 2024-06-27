@@ -38,7 +38,7 @@ function T(e) {
       questContent: n,
       questContentCTA: _.jZ.CLAIM_REWARD,
       questContentPosition: i
-    }), s ? (0, c.Xv)(t.config) ? (0, d.openCollectibleRewardModal)(t, n) : (0, I.hp)({
+    }), s ? (0, c.Xv)(t.config) ? (0, d.openCollectibleRewardModal)(t, n) : (0, I.h)({
       questId: t.id,
       location: n,
       questContentPosition: i

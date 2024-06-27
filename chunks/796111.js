@@ -1,12 +1,13 @@
+"use strict";
 n.d(t, {
   P: function() {
-    return i
+    return s
   },
   i: function() {
-    return o
+    return r
   }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     id: "2024-06_quest_inline_console_connection",
     kind: "user",
     label: "Quest Inline Console Connection Experiment",
@@ -27,27 +28,27 @@ let s = (0, n(818083).B)({
       }
     }]
   }),
-  o = e => {
+  r = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
     } = e;
-    return s.getCurrentConfig({
+    return i.getCurrentConfig({
       location: t
     }, {
       autoTrackExposure: n
     }).enabled
   },
-  i = e => {
+  s = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
     } = e, {
-      enabled: o
-    } = s.useExperiment({
+      enabled: r
+    } = i.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
     });
-    return o
+    return r
   }

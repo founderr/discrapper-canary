@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
   spinner: "spinner_d7ec26",
   tile: "tile_d7ec26",

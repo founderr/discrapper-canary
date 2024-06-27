@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, {
+t.d(s, {
   Y: function() {
-    return c
+    return _
   }
 });
-var i = n(735250);
-n(470079);
-var r = n(704215),
-  s = n(231757),
-  o = n(63063),
-  a = n(249881),
-  l = n(981631),
-  u = n(689938),
-  _ = n(195794);
-let c = () => {
-  let e = o.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
-  return (0, i.jsx)(a.t, {
-    title: u.Z.Messages.XBOX_TWO_WAY_UPSELL_TITLE,
-    body: u.Z.Messages.XBOX_TWO_WAY_UPSELL_BODY.format({
+var n = t(735250);
+t(470079);
+var a = t(704215),
+  i = t(231757),
+  r = t(63063),
+  o = t(249881),
+  l = t(981631),
+  c = t(689938),
+  d = t(195794);
+let _ = () => {
+  let e = r.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
+  return (0, n.jsx)(o.t, {
+    title: c.Z.Messages.XBOX_TWO_WAY_UPSELL_TITLE,
+    body: c.Z.Messages.XBOX_TWO_WAY_UPSELL_BODY.format({
       help_article: e
     }),
-    img: (0, i.jsx)("img", {
-      src: _,
+    img: (0, n.jsx)("img", {
+      src: d,
       width: "auto",
       height: "45",
       alt: ""
     }),
-    newIndicatorDismissibleContent: r.z.XBOX_ONE_WAY_RECONNECT,
-    onClick: () => (0, s.Z)({
+    newIndicatorDismissibleContent: a.z.XBOX_ONE_WAY_RECONNECT,
+    onClick: () => (0, i.Z)({
       platformType: l.ABu.XBOX,
       location: "Xbox two way upsell"
     })

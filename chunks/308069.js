@@ -24,7 +24,7 @@ t.Z = e => {
     isExpanded: T,
     isExpansionAnimationComplete: N
   } = e, v = s.useCallback(() => {
-    (0, x.az)(t, {
+    (0, x.a)(t, {
       content: d.jn.QUEST_BAR_V2,
       ctaContent: c.jZ.OPEN_DISCLOSURE
     })

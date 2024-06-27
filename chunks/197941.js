@@ -48,7 +48,7 @@ t.Z = {
       }) : (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("79477"), n.e("44742")]).then(n.bind(n, 60594));
+        } = await Promise.all([n.e("79477"), n.e("1310")]).then(n.bind(n, 60594));
         return t => (0, i.jsx)(e, {
           ...t,
           guildId: _.guild_id,

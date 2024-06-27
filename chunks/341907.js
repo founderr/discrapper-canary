@@ -1,25 +1,18 @@
 "use strict";
 n.d(t, {
-  az: function() {
-    return c
+  a: function() {
+    return a
   },
-  gI: function() {
-    return d
-  },
-  hp: function() {
-    return _
+  h: function() {
+    return o
   }
-}), n(47120);
+});
 var i = n(735250);
 n(470079);
 var r = n(481060),
-  s = n(570140),
-  o = n(230711),
-  a = n(327192),
-  l = n(617136),
-  u = n(981631);
+  s = n(617136);
 
-function _(e) {
+function o(e) {
   let {
     questId: t,
     location: s,
@@ -28,7 +21,7 @@ function _(e) {
   (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("54535"), n.e("97458"), n.e("96624")]).then(n.bind(n, 985866));
+    } = await Promise.all([n.e("54535"), n.e("12506")]).then(n.bind(n, 985866));
     return n => (0, i.jsx)(e, {
       ...n,
       questId: t,
@@ -38,8 +31,8 @@ function _(e) {
   })
 }
 
-function c(e, t) {
-  (0, l._3)({
+function a(e, t) {
+  (0, s._3)({
     questId: e.id,
     questContent: t.content,
     questContentPosition: t.position,
@@ -53,22 +46,5 @@ function c(e, t) {
       questContent: t.content,
       quest: e
     })
-  })
-}
-
-function d(e, t) {
-  let {
-    quest: n,
-    showInline: i
-  } = e;
-  (0, l._3)({
-    questId: n.id,
-    questContent: t.content,
-    questContentPosition: t.position,
-    questContentCTA: t.ctaContent
-  }), !i && o.Z.open(u.oAB.CONNECTIONS), s.Z.dispatch({
-    type: "CONNECTIONS_GRID_MODAL_SHOW",
-    onComplete: a.q,
-    includedPlatformTypes: new Set([u.ABu.XBOX, u.ABu.PLAYSTATION])
   })
 }
