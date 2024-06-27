@@ -18,7 +18,8 @@ function I(e) {
   } = e;
   return "location:".concat(t, " channelId:").concat(n)
 }
-class T extends(l = u.ZP.Store) {
+let T = Object.freeze([]);
+class h extends(l = u.ZP.Store) {
   getLastFetchTimeMs(e) {
     let {
       location: t,
@@ -48,15 +49,15 @@ class T extends(l = u.ZP.Store) {
     return null !== (t = c[I({
       location: n,
       channelId: i
-    })]) && void 0 !== t ? t : []
+    })]) && void 0 !== t ? t : T
   }
 }
-o = void 0, (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+o = void 0, (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new T(_.Z, {
+}) : r[s] = o, t.Z = new h(_.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
     let {
       location: t,
