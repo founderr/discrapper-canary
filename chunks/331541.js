@@ -50,7 +50,7 @@ var i = n(735250),
   z = n(981631),
   K = n(228168),
   q = n(689938),
-  Q = n(384028);
+  Q = n(503862);
 let X = [{
   duration: 30 * B.Z.Millis.MINUTE,
   label: () => q.Z.Messages.MUTE_DURATION_30_MINUTES
@@ -256,7 +256,7 @@ function ee(e) {
     {
       modifyStatusEnabled: ec
     } = (0, N.K)({
-      location: "SimplifiedAccountProfilePopout"
+      location: "AccountProfilePopout"
     }),
     ed = (0, S.Z)({
       analyticsLocations: et
