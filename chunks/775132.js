@@ -4,7 +4,6 @@ e.exports = {
   tab: "tab_f0cd33",
   expandedInboxHeader: "expandedInboxHeader_f0cd33",
   expandedTabSection: "expandedTabSection_f0cd33",
-  tabBar: "tabBar_f0cd33",
   active: "active_f0cd33",
   inboxIcon: "inboxIcon_f0cd33",
   inboxTitle: "inboxTitle_f0cd33",
