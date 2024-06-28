@@ -1,15 +1,16 @@
+"use strict";
 var i = n(544891),
-  a = n(570140),
+  r = n(570140),
   s = n(981631);
 t.Z = {
   fetch() {
     i.tn.get({
       url: s.ANM.OAUTH2_TOKENS,
       oldFormErrors: !0
-    }).then(e => a.Z.dispatch({
+    }).then(e => r.Z.dispatch({
       type: "USER_AUTHORIZED_APPS_UPDATE",
       apps: e.body
-    }), () => a.Z.dispatch({
+    }), () => r.Z.dispatch({
       type: "USER_AUTHORIZED_APPS_UPDATE",
       apps: []
     }))

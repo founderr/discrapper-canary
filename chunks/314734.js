@@ -1,4 +1,5 @@
-var i, a;
+"use strict";
+var i, r;
 n.d(t, {
   Jh: function() {
     return s
@@ -7,12 +8,12 @@ n.d(t, {
     return i
   },
   e9: function() {
-    return l
+    return o
   },
   t4: function() {
-    return r
+    return a
   }
-}), (a = i || (i = {}))[a.POPULAR = 0] = "POPULAR", a[a.ALPHABETICAL = 1] = "ALPHABETICAL";
+}), (r = i || (i = {}))[r.POPULAR = 0] = "POPULAR", r[r.ALPHABETICAL = 1] = "ALPHABETICAL";
 let s = "app-launcher-element",
-  l = "app-launcher-modal",
-  r = "app-launcher-entrypoint"
+  o = "app-launcher-modal",
+  a = "app-launcher-entrypoint"

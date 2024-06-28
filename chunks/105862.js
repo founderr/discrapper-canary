@@ -1,50 +1,51 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   Z: function() {
-    return h
+    return T
   }
 });
-var i = t(735250),
-  l = t(470079),
-  a = t(780384),
-  r = t(481060),
-  s = t(410030),
-  o = t(782568),
-  c = t(63063),
-  u = t(981631),
-  d = t(689938),
-  m = t(427010),
-  p = t(983008),
-  E = t(478408);
+var i = n(735250),
+  r = n(470079),
+  s = n(780384),
+  o = n(481060),
+  a = n(410030),
+  l = n(782568),
+  u = n(63063),
+  _ = n(981631),
+  c = n(689938),
+  d = n(427010),
+  E = n(983008),
+  I = n(478408);
 
-function h() {
-  let e = (0, s.ZP)(),
-    n = (0, a.ap)(e) ? E : p,
-    t = l.useCallback(() => {
-      (0, o.Z)(c.Z.getArticleURL(u.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
+function T() {
+  let e = (0, a.ZP)(),
+    t = (0, s.ap)(e) ? I : E,
+    n = r.useCallback(() => {
+      (0, l.Z)(u.Z.getArticleURL(_.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
     }, []);
   return (0, i.jsxs)("div", {
-    className: m.container,
+    className: d.container,
     children: [(0, i.jsx)("img", {
-      className: m.image,
-      src: n,
+      className: d.image,
+      src: t,
       alt: "",
       "aria-hidden": !0
     }), (0, i.jsxs)("div", {
-      className: m.body,
-      children: [(0, i.jsx)(r.Heading, {
+      className: d.body,
+      children: [(0, i.jsx)(o.Heading, {
         variant: "heading-lg/bold",
         color: "header-primary",
-        children: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
-      }), (0, i.jsx)(r.Text, {
+        children: c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
+      }), (0, i.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "text-normal",
-        children: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+        children: c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
       })]
-    }), (0, i.jsx)(r.Button, {
-      size: r.Button.Sizes.MEDIUM,
-      "aria-label": d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
-      onClick: t,
-      children: d.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
+    }), (0, i.jsx)(o.Button, {
+      size: o.Button.Sizes.MEDIUM,
+      "aria-label": c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
+      onClick: n,
+      children: c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
     })]
   })
 }

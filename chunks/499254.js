@@ -1,6 +1,7 @@
+"use strict";
 n.d(t, {
   _: function() {
-    return a
+    return r
   },
   y: function() {
     return s
@@ -8,7 +9,7 @@ n.d(t, {
 });
 var i = n(570140);
 
-function a(e) {
+function r(e) {
   i.Z.dispatch({
     type: "APP_LAUNCHER_SHOW",
     entrypoint: e

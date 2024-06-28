@@ -1,61 +1,62 @@
-var i, l, a, r, s = t(442837),
-  o = t(570140),
-  c = t(827498);
-let u = {
+"use strict";
+var i, r, s, o, a = n(442837),
+  l = n(570140),
+  u = n(827498);
+let _ = {
   show: !1,
-  entrypoint: c._b.NONE,
-  closeReason: c.ti.DISMISSED
+  entrypoint: u._b.NONE,
+  closeReason: u.ti.DISMISSED
 };
 
-function d(e) {
+function c(e) {
   let {
-    closeReason: n = c.ti.DISMISSED
+    closeReason: t = u.ti.DISMISSED
   } = e;
-  return u.show = !1, u.entrypoint = c._b.NONE, u.closeReason = n, !0
+  return _.show = !1, _.entrypoint = u._b.NONE, _.closeReason = t, !0
 }
-class m extends(r = s.ZP.Store) {
+class d extends(o = a.ZP.Store) {
   initialize() {}
   shouldShowPopup() {
-    return u.show && u.entrypoint === c._b.TEXT
+    return _.show && _.entrypoint === u._b.TEXT
   }
   shouldShowModal() {
-    return u.show && u.entrypoint === c._b.VOICE
+    return _.show && _.entrypoint === u._b.VOICE
   }
   entrypoint() {
-    return u.entrypoint
+    return _.entrypoint
   }
   closeReason() {
-    return u.closeReason
+    return _.closeReason
   }
-}
-
-function p() {
-  d({
-    closeReason: c.ti.DISMISSED
-  })
 }
 
 function E() {
-  d({
-    closeReason: c.ti.COMMAND
+  c({
+    closeReason: u.ti.DISMISSED
   })
 }
-a = "AppLauncherStore", (l = "displayName") in(i = m) ? Object.defineProperty(i, l, {
-  value: a,
+
+function I() {
+  c({
+    closeReason: u.ti.COMMAND
+  })
+}
+s = "AppLauncherStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, n.Z = new m(o.Z, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   APP_LAUNCHER_SHOW: function(e) {
     let {
-      entrypoint: n
+      entrypoint: t
     } = e;
-    return u.show = !0, u.entrypoint = n, u.closeReason = c.ti.DISMISSED, !0
+    return _.show = !0, _.entrypoint = t, _.closeReason = u.ti.DISMISSED, !0
   },
-  APP_LAUNCHER_DISMISS: d,
-  CONNECTION_OPEN: p,
-  LOGOUT: p,
-  CHANNEL_SELECT: p,
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: E,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: E
+  APP_LAUNCHER_DISMISS: c,
+  CONNECTION_OPEN: E,
+  LOGOUT: E,
+  CHANNEL_SELECT: E,
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: I,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: I
 })

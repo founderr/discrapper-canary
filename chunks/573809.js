@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  channelTextAreaContainer: "channelTextAreaContainer_d0696b",
   channelTextArea: "channelTextArea_d0696b",
   highlighted: "highlighted_d0696b",
   focusRing: "focusRing_d0696b",

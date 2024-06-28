@@ -1,34 +1,35 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   A: function() {
-    return d
+    return c
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(780384),
-  a = t(481060),
-  r = t(410030),
-  s = t(176412),
-  o = t(95821),
-  c = t(983008),
-  u = t(478408);
+var i = n(735250);
+n(470079);
+var r = n(780384),
+  s = n(481060),
+  o = n(410030),
+  a = n(176412),
+  l = n(95821),
+  u = n(983008),
+  _ = n(478408);
 
-function d(e) {
+function c(e) {
   let {
-    searchQuery: n,
-    textContent: t,
-    type: d
-  } = e, m = (0, r.ZP)(), p = (0, l.ap)(m) ? u : c;
-  return (0, s.B)(d, n), (0, i.jsxs)("div", {
-    className: o.emptyStateContainer,
+    searchQuery: t,
+    textContent: n,
+    type: c
+  } = e, d = (0, o.ZP)(), E = (0, r.ap)(d) ? _ : u;
+  return (0, a.B)(c, t), (0, i.jsxs)("div", {
+    className: l.emptyStateContainer,
     children: [(0, i.jsx)("img", {
-      className: o.emptyStateImage,
-      src: p,
+      className: l.emptyStateImage,
+      src: E,
       alt: "empty state"
-    }), (0, i.jsx)(a.Text, {
+    }), (0, i.jsx)(s.Text, {
       variant: "text-md/medium",
       color: "text-muted",
-      children: t
+      children: n
     })]
   })
 }

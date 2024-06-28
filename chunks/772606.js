@@ -1,32 +1,33 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
-var i = t(735250),
-  l = t(470079),
-  a = t(120356),
-  r = t.n(a),
-  s = t(330711),
-  o = t(481060),
-  c = t(695676),
-  u = t(864247);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(330711),
+  l = n(481060),
+  u = n(695676),
+  _ = n(864247);
 
-function d(e) {
+function c(e) {
   let {
-    className: n
+    className: t
   } = e, {
-    goBack: t
-  } = (0, c.hH)(), a = l.useCallback(() => {
-    t()
-  }, [t]);
-  return (0, i.jsx)(o.Clickable, {
-    "aria-label": s.Z.Messages.BACK,
-    onClick: a,
-    className: r()(u.clickable, n),
-    children: (0, i.jsx)(o.ArrowLargeLeftIcon, {
+    goBack: n
+  } = (0, u.hH)(), s = r.useCallback(() => {
+    n()
+  }, [n]);
+  return (0, i.jsx)(l.Clickable, {
+    "aria-label": a.Z.Messages.BACK,
+    onClick: s,
+    className: o()(_.clickable, t),
+    children: (0, i.jsx)(l.ArrowLargeLeftIcon, {
       size: "sm",
-      color: o.tokens.colors.INTERACTIVE_ACTIVE
+      color: l.tokens.colors.INTERACTIVE_ACTIVE
     })
   })
 }

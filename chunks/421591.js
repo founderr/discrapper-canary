@@ -1,117 +1,118 @@
-t(47120);
-var i = t(735250),
-  l = t(470079),
-  a = t(367907),
-  r = t(541099),
-  s = t(695676),
-  o = t(173790),
-  c = t(361917),
-  u = t(684256),
-  d = t(981631),
-  m = t(987421);
-n.Z = l.memo(l.forwardRef(function(e, n) {
-  let t, {
-      channel: p,
-      entrypoint: E
+"use strict";
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(367907),
+  o = n(541099),
+  a = n(695676),
+  l = n(173790),
+  u = n(361917),
+  _ = n(684256),
+  c = n(981631),
+  d = n(987421);
+t.Z = r.memo(r.forwardRef(function(e, t) {
+  let n, {
+      channel: E,
+      entrypoint: I
     } = e,
-    [h, _] = l.useState(""),
-    N = function(e) {
-      let [n, t] = l.useState(null), i = l.useRef(0);
-      return l.useEffect(() => {
-        null == n || n.scrollTo(0, 0)
-      }, [n, e]), l.useEffect(() => {
-        if (null != n) return n.scrollTo(0, i.current), n.addEventListener("scroll", e), () => {
-          n.removeEventListener("scroll", e, !1)
+    [T, h] = r.useState(""),
+    f = function(e) {
+      let [t, n] = r.useState(null), i = r.useRef(0);
+      return r.useEffect(() => {
+        null == t || t.scrollTo(0, 0)
+      }, [t, e]), r.useEffect(() => {
+        if (null != t) return t.scrollTo(0, i.current), t.addEventListener("scroll", e), () => {
+          t.removeEventListener("scroll", e, !1)
         };
 
         function e() {
-          if (null != n) i.current = n.scrollTop
+          if (null != t) i.current = t.scrollTop
         }
-      }, [n]), t
-    }(h);
-  l.useEffect(() => {
-    (0, a.yw)(d.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-      source: E,
+      }, [t]), n
+    }(T);
+  r.useEffect(() => {
+    (0, s.yw)(c.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+      source: I,
       location: "app_launcher"
     })
-  }, [E]);
+  }, [I]);
   let {
-    history: A,
-    setHistory: C,
-    currentView: f,
-    pushHistory: x,
-    goBack: v
+    history: S,
+    setHistory: A,
+    currentView: N,
+    pushHistory: m,
+    goBack: O
   } = function() {
-    let [e, n] = l.useState([{
-      type: s.gc.HOME
-    }]), t = e[e.length - 1];
+    let [e, t] = r.useState([{
+      type: a.gc.HOME
+    }]), n = e[e.length - 1];
     return {
       history: e,
-      setHistory: n,
-      currentView: t,
-      pushHistory: t => {
-        n([...e, t])
+      setHistory: t,
+      currentView: n,
+      pushHistory: n => {
+        t([...e, n])
       },
       goBack: () => {
         if (0 === e.length) return;
-        let t = [...e];
-        t.pop(), n(t)
+        let n = [...e];
+        n.pop(), t(n)
       }
     }
   }();
-  switch (l.useEffect(() => {
+  switch (r.useEffect(() => {
       let e = Date.now();
       return () => {
-        (0, a.yw)(d.rMx.APP_LAUNCHER_CLOSED, {
-          reason: r.Z.closeReason(),
+        (0, s.yw)(c.rMx.APP_LAUNCHER_CLOSED, {
+          reason: o.Z.closeReason(),
           time_spent: Date.now() - e,
-          source: E
+          source: I
         })
       }
-    }, [E]), null == f ? void 0 : f.type) {
-    case s.gc.HOME:
-      t = (0, i.jsx)(c.Z, {
-        setScroller: N,
-        channel: p,
-        entrypoint: E,
-        searchQuery: h,
-        setSearchQuery: _
+    }, [I]), null == N ? void 0 : N.type) {
+    case a.gc.HOME:
+      n = (0, i.jsx)(u.Z, {
+        setScroller: f,
+        channel: E,
+        entrypoint: I,
+        searchQuery: T,
+        setSearchQuery: h
       });
       break;
-    case s.gc.LIST:
-      t = (0, i.jsx)(u.Z, {
-        channel: p,
-        entrypoint: E,
-        title: f.title,
-        look: f.look,
-        items: f.items,
-        sectionName: f.sectionName
+    case a.gc.LIST:
+      n = (0, i.jsx)(_.Z, {
+        channel: E,
+        entrypoint: I,
+        title: N.title,
+        look: N.look,
+        items: N.items,
+        sectionName: N.sectionName
       });
       break;
-    case s.gc.APPLICATION:
-      t = (0, i.jsx)(o.Z, {
-        channel: p,
-        application: f.application,
-        sectionName: f.sectionName
+    case a.gc.APPLICATION:
+      n = (0, i.jsx)(l.Z, {
+        channel: E,
+        application: N.application,
+        sectionName: N.sectionName
       });
       break;
     default:
-      t = null
+      n = null
   }
   return (0, i.jsx)("div", {
-    className: m.drawerSizingWrapper,
-    ref: n,
+    className: d.drawerSizingWrapper,
+    ref: t,
     children: (0, i.jsx)("div", {
-      className: m.contentWrapper,
-      children: (0, i.jsx)(s.uX.Provider, {
+      className: d.contentWrapper,
+      children: (0, i.jsx)(a.uX.Provider, {
         value: {
-          history: A,
-          setHistory: C,
-          currentView: f,
-          pushHistory: x,
-          goBack: v
+          history: S,
+          setHistory: A,
+          currentView: N,
+          pushHistory: m,
+          goBack: O
         },
-        children: t
+        children: n
       })
     })
   })

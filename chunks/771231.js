@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_f8c206",
   noAnimation: "noAnimation_f8c206",

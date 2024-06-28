@@ -1,68 +1,69 @@
+"use strict";
 var i = n(735250),
-  a = n(470079),
-  l = n(374470),
-  s = n(952265),
-  r = n(481060),
-  o = n(40851),
-  c = n(153850),
-  u = n(585483),
-  d = n(5967),
-  h = n(499254),
-  p = n(827498),
-  m = n(421591),
-  _ = n(314734),
-  f = n(981631),
-  E = n(368498);
+  r = n(470079),
+  s = n(374470),
+  o = n(952265),
+  a = n(481060),
+  l = n(40851),
+  u = n(153850),
+  _ = n(585483),
+  c = n(5967),
+  d = n(499254),
+  E = n(827498),
+  I = n(421591),
+  T = n(314734),
+  h = n(981631),
+  f = n(368498);
 
-function C() {
-  h.y(p.ti.DISMISSED)
+function S() {
+  d.y(E.ti.DISMISSED)
 }
 
-function g(e) {
+function A(e) {
   let {
     channel: t,
     closeOnModalOuterClick: n = !1,
-    parentModalKey: c
-  } = e, h = a.useRef(null), {
-    renderWindow: E,
-    windowDispatch: g
-  } = a.useContext(o.ZP), I = null != c, x = (0, s.Jw)(null != c ? c : ""), T = a.useCallback(e => {
+    parentModalKey: u
+  } = e, d = r.useRef(null), {
+    renderWindow: f,
+    windowDispatch: A
+  } = r.useContext(l.ZP), N = null != u, m = (0, o.Jw)(null != u ? u : ""), O = r.useCallback(e => {
     var t;
-    if (!I && (0, s.$s)() || I && !(x && n)) return;
+    if (!N && (0, o.$s)() || N && !(m && n)) return;
     let {
       target: i
     } = e;
-    if ((0, l.k)(i) && null != i.closest("." + _.Jh)) return;
+    if ((0, s.k)(i) && null != i.closest("." + T.Jh)) return;
     for (;
-      (0, l.k)(i);) {
-      if (i === h.current) return;
-      if (i.classList.contains(_.t4)) {
+      (0, s.k)(i);) {
+      if (i === d.current) return;
+      if (i.classList.contains(T.t4)) {
         e.preventDefault();
         return
       }
       i = i.parentNode
     }
-    C();
-    let a = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-    (null == a || "BODY" === a.tagName) && u.S.dispatchToLastSubscribed(f.CkL.TEXTAREA_FOCUS)
-  }, [n, x, I]);
-  return a.useLayoutEffect(() => (E.addEventListener("mousedown", T), E.addEventListener("contextmenu", T), g.subscribe(f.CkL.POPOUT_CLOSE, C), () => {
-    E.removeEventListener("mousedown", T), E.removeEventListener("contextmenu", T), g.unsubscribe(f.CkL.POPOUT_CLOSE, C)
-  }), [T, E, g]), (0, r.useFocusLock)(h), a.useEffect(() => {
-    (!I && (0, s.$s)() || I && !x) && C()
-  }, [x, I]), (0, i.jsx)(m.Z, {
-    ref: h,
+    S();
+    let r = null === (t = (0, c.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+    (null == r || "BODY" === r.tagName) && _.S.dispatchToLastSubscribed(h.CkL.TEXTAREA_FOCUS)
+  }, [n, m, N]);
+  return r.useLayoutEffect(() => (f.addEventListener("mousedown", O), f.addEventListener("contextmenu", O), A.subscribe(h.CkL.POPOUT_CLOSE, S), () => {
+    f.removeEventListener("mousedown", O), f.removeEventListener("contextmenu", O), A.unsubscribe(h.CkL.POPOUT_CLOSE, S)
+  }), [O, f, A]), (0, a.useFocusLock)(d), r.useEffect(() => {
+    (!N && (0, o.$s)() || N && !m) && S()
+  }, [m, N]), (0, i.jsx)(I.Z, {
+    ref: d,
     channel: t,
-    entrypoint: p._b.TEXT
+    entrypoint: E._b.TEXT
   })
 }
-t.Z = a.memo(function(e) {
+t.Z = r.memo(function(e) {
   let {
     positionTargetRef: t,
     ...n
   } = e;
-  return (0, i.jsx)(c.W5, {
-    className: E.positionLayer,
+  return (0, i.jsx)(u.W5, {
+    className: f.positionLayer,
     targetRef: t,
     position: "top",
     align: "right",
@@ -73,10 +74,10 @@ t.Z = a.memo(function(e) {
         isPositioned: t
       } = e;
       return (0, i.jsx)("section", {
-        className: E.positionContainer,
+        className: f.positionContainer,
         role: "dialog",
         "aria-label": "Application Launcher",
-        children: t && (0, i.jsx)(g, {
+        children: t && (0, i.jsx)(A, {
           ...n
         })
       })

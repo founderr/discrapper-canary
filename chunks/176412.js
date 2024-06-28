@@ -1,72 +1,73 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   B: function() {
-    return _
+    return h
   },
   P: function() {
-    return h
+    return T
   }
 });
-var i = t(470079),
-  l = t(392711),
-  a = t(481060),
-  r = t(2052),
-  s = t(542094),
-  o = t(513202),
-  c = t(367907),
-  u = t(499254),
-  d = t(541099),
-  m = t(827498),
-  p = t(981631),
-  E = t(689938);
+var i = n(470079),
+  r = n(392711),
+  s = n(481060),
+  o = n(2052),
+  a = n(542094),
+  l = n(513202),
+  u = n(367907),
+  _ = n(499254),
+  c = n(541099),
+  d = n(827498),
+  E = n(981631),
+  I = n(689938);
 
-function h(e, n, t, i) {
-  var l;
-  let h = (0, r.O)(),
-    _ = (0, s.Qv)({
-      applicationId: n.id,
+function T(e, t, n, i) {
+  var r;
+  let T = (0, o.O)(),
+    h = (0, a.Qv)({
+      applicationId: t.id,
       channelId: e.id
     }),
-    N = (0, s.w1)({
-      applicationId: n.id,
-      embeddedActivitiesManager: o.Z,
+    f = (0, a.w1)({
+      applicationId: t.id,
+      embeddedActivitiesManager: l.Z,
       channelId: e.id,
-      guildId: null !== (l = e.getGuildId()) && void 0 !== l ? l : void 0,
-      locationObject: h.location,
+      guildId: null !== (r = e.getGuildId()) && void 0 !== r ? r : void 0,
+      locationObject: T.location,
       onActivityItemSelectedProp: e => {
         let {
-          applicationId: n
-        } = e, l = d.Z.entrypoint();
-        u.y(m.ti.ACTIVITY), (0, c.yw)(p.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
-          location: t,
-          application_id: n,
+          applicationId: t
+        } = e, r = c.Z.entrypoint();
+        _.y(d.ti.ACTIVITY), (0, u.yw)(E.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+          location: n,
+          application_id: t,
           section_name: i,
-          action: _,
-          source: l
+          action: h,
+          source: r
         })
       }
     }),
-    A = a.ButtonColors.BRAND,
-    C = E.Z.Messages.LAUNCH;
-  return _ === s.JS.JOIN ? (A = a.ButtonColors.GREEN, C = E.Z.Messages.JOIN_ACTIVITY) : _ === s.JS.LEAVE && (A = a.ButtonColors.RED, C = E.Z.Messages.LEAVE), {
-    onActivityItemSelected: N,
-    activityAction: _,
-    buttonColor: A,
-    buttonText: C
+    S = s.ButtonColors.BRAND,
+    A = I.Z.Messages.LAUNCH;
+  return h === a.JS.JOIN ? (S = s.ButtonColors.GREEN, A = I.Z.Messages.JOIN_ACTIVITY) : h === a.JS.LEAVE && (S = s.ButtonColors.RED, A = I.Z.Messages.LEAVE), {
+    onActivityItemSelected: f,
+    activityAction: h,
+    buttonColor: S,
+    buttonText: A
   }
 }
 
-function _(e, n) {
-  let t = d.Z.entrypoint(),
-    a = i.useMemo(() => (0, l.debounce)((e, n) => {
-      (0, c.yw)(p.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+function h(e, t) {
+  let n = c.Z.entrypoint(),
+    s = i.useMemo(() => (0, r.debounce)((e, t) => {
+      (0, u.yw)(E.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
         type: e,
-        source: n
+        source: t
       })
     }, 400, {
       leading: !1,
       trailing: !0
     }), []);
   i.useEffect(() => {
-    null != e && a(e, t)
-  }, [e, n, t, a])
+    null != e && s(e, n)
+  }, [e, t, n, s])
 }

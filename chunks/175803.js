@@ -8,7 +8,6 @@ e.exports = {
   cursorPointer: "cursorPointer_a7d72e",
   content: "content_a7d72e",
   noChat: "noChat_a7d72e",
-  channelBottomBarArea: "channelBottomBarArea_a7d72e",
   channelTextArea: "channelTextArea_a7d72e",
   avatar: "avatar_a7d72e",
   parentChannelName: "parentChannelName_a7d72e",

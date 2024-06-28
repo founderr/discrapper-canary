@@ -1,137 +1,138 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   Z: function() {
-    return N
+    return f
   }
-}), t(47120);
-var i = t(735250),
-  l = t(470079),
-  a = t(581051),
-  r = t(353381),
-  s = t(993365),
-  o = t(481060),
-  c = t(240991),
-  u = t(810090),
-  d = t(283442),
-  m = t(783097),
-  p = t(591204),
-  E = t(689938),
-  h = t(589419),
-  _ = t(622322);
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(581051),
+  o = n(353381),
+  a = n(993365),
+  l = n(481060),
+  u = n(240991),
+  _ = n(810090),
+  c = n(283442),
+  d = n(783097),
+  E = n(591204),
+  I = n(689938),
+  T = n(589419),
+  h = n(622322);
 
-function N(e) {
-  var n;
+function f(e) {
+  var t;
   let {
-    channel: t,
-    application: l,
-    videoUrl: a,
-    imageCoverUrl: r,
-    sectionName: o
-  } = e, c = null != a || null != r, d = (null !== (n = l.description) && void 0 !== n ? n : "").length > 0;
+    channel: n,
+    application: r,
+    videoUrl: s,
+    imageCoverUrl: o,
+    sectionName: l
+  } = e, u = null != s || null != o, c = (null !== (t = r.description) && void 0 !== t ? t : "").length > 0;
   return (0, i.jsxs)("div", {
-    className: h.container,
-    children: [(0, i.jsx)(A, {
-      channel: t,
-      application: l,
-      sectionName: o
-    }), c || d ? (0, i.jsxs)("div", {
-      className: h.profileAndVideoContainer,
-      children: [c ? (0, i.jsx)("div", {
-        className: h.videoContainer,
-        children: (0, i.jsx)(u.Z, {
+    className: T.container,
+    children: [(0, i.jsx)(S, {
+      channel: n,
+      application: r,
+      sectionName: l
+    }), u || c ? (0, i.jsxs)("div", {
+      className: T.profileAndVideoContainer,
+      children: [u ? (0, i.jsx)("div", {
+        className: T.videoContainer,
+        children: (0, i.jsx)(_.Z, {
           loop: !0,
           autoPlay: !0,
           muted: !0,
-          className: d ? h.videoWithOverview : h.videoNoOverview,
-          src: a,
-          poster: r
+          className: c ? T.videoWithOverview : T.videoNoOverview,
+          src: s,
+          poster: o
         })
-      }) : null, d ? (0, i.jsxs)("div", {
-        className: c ? h.overviewContainerWithVideo : h.overviewContainerNoVideo,
-        children: [(0, i.jsx)(s.x, {
+      }) : null, c ? (0, i.jsxs)("div", {
+        className: u ? T.overviewContainerWithVideo : T.overviewContainerNoVideo,
+        children: [(0, i.jsx)(a.x, {
           variant: "text-sm/semibold",
-          children: E.Z.Messages.OVERVIEW
-        }), (0, i.jsx)(C, {
-          application: l
+          children: I.Z.Messages.OVERVIEW
+        }), (0, i.jsx)(A, {
+          application: r
         })]
       }) : null]
     }) : null]
   })
 }
 
-function A(e) {
+function S(e) {
   let {
-    channel: n,
-    application: t,
-    sectionName: l
-  } = e, a = (0, m.ye)({
-    application: t
-  }), r = n.isThread(), s = (0, d.Z)({
-    applicationId: t.id,
-    channel: n
+    channel: t,
+    application: n,
+    sectionName: r
+  } = e, s = (0, d.ye)({
+    application: n
+  }), o = t.isThread(), a = (0, c.Z)({
+    applicationId: n.id,
+    channel: t
   });
   return (0, i.jsx)("div", {
-    className: h.titleContainer,
+    className: T.titleContainer,
     children: (0, i.jsxs)("div", {
-      className: h.titleInnerContainer,
-      children: [(0, i.jsx)(o.Heading, {
+      className: T.titleInnerContainer,
+      children: [(0, i.jsx)(l.Heading, {
         variant: "heading-xl/extrabold",
-        children: t.name
-      }), a ? (0, i.jsx)(p.Z, {
-        channel: n,
-        application: t,
-        disabled: r,
-        sectionName: l,
-        commandName: s
+        children: n.name
+      }), s ? (0, i.jsx)(E.Z, {
+        channel: t,
+        application: n,
+        disabled: o,
+        sectionName: r,
+        commandName: a
       }) : null]
     })
   })
 }
 
-function C(e) {
+function A(e) {
   let {
-    application: n
-  } = e, [t, u] = l.useState(!1), d = l.useMemo(() => {
+    application: t
+  } = e, [n, _] = r.useState(!1), c = r.useMemo(() => {
     var e;
-    return (0, c.YP)(null !== (e = n.description) && void 0 !== e ? e : "")
-  }, [n]), {
-    ref: m,
-    lineCount: p
+    return (0, u.YP)(null !== (e = t.description) && void 0 !== e ? e : "")
+  }, [t]), {
+    ref: d,
+    lineCount: E
   } = function() {
-    let e = l.useRef(null),
-      [n, t] = l.useState(null);
-    return l.useEffect(() => {
-      let n = e.current;
-      if (null === n || 0 === n.clientHeight) return;
-      let i = parseInt(getComputedStyle(n).lineHeight);
-      if (!isNaN(i)) t(Math.max(Math.floor(n.clientHeight / i)))
+    let e = r.useRef(null),
+      [t, n] = r.useState(null);
+    return r.useEffect(() => {
+      let t = e.current;
+      if (null === t || 0 === t.clientHeight) return;
+      let i = parseInt(getComputedStyle(t).lineHeight);
+      if (!isNaN(i)) n(Math.max(Math.floor(t.clientHeight / i)))
     }, []), {
       ref: e,
-      lineCount: n
+      lineCount: t
     }
   }();
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(s.x, {
-      ref: m,
-      className: _.markup,
+    children: [(0, i.jsx)(a.x, {
+      ref: d,
+      className: h.markup,
       variant: "text-sm/medium",
-      lineClamp: t ? void 0 : 3,
-      children: d
-    }), null != p && p >= 3 ? (0, i.jsxs)(o.Clickable, {
-      className: h.expandableDescriptionClickable,
+      lineClamp: n ? void 0 : 3,
+      children: c
+    }), null != E && E >= 3 ? (0, i.jsxs)(l.Clickable, {
+      className: T.expandableDescriptionClickable,
       onClick: () => {
-        u(e => !e)
+        _(e => !e)
       },
-      children: [(0, i.jsx)(s.x, {
-        ref: m,
+      children: [(0, i.jsx)(a.x, {
+        ref: d,
         variant: "text-sm/semibold",
         color: "text-brand",
-        children: t ? E.Z.Messages.APP_LAUNCHER_SHOW_LESS : E.Z.Messages.APP_LAUNCHER_SHOW_MORE
-      }), t ? (0, i.jsx)(r.u, {
+        children: n ? I.Z.Messages.APP_LAUNCHER_SHOW_LESS : I.Z.Messages.APP_LAUNCHER_SHOW_MORE
+      }), n ? (0, i.jsx)(o.u, {
         size: "sm",
-        color: o.tokens.colors.TEXT_BRAND
-      }) : (0, i.jsx)(a.C, {
+        color: l.tokens.colors.TEXT_BRAND
+      }) : (0, i.jsx)(s.C, {
         size: "sm",
-        color: o.tokens.colors.TEXT_BRAND
+        color: l.tokens.colors.TEXT_BRAND
       })]
     }) : null]
   })

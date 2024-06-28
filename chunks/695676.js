@@ -1,17 +1,18 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   gc: function() {
-    return l
+    return r
   },
   hH: function() {
-    return s
+    return a
   },
   uX: function() {
-    return r
+    return o
   }
 });
-var i, l, a = t(470079);
-(i = l || (l = {})).HOME = "home", i.LIST = "list", i.APPLICATION = "application";
-let r = a.createContext({
+var i, r, s = n(470079);
+(i = r || (r = {})).HOME = "home", i.LIST = "list", i.APPLICATION = "application";
+let o = s.createContext({
   history: [],
   setHistory: () => {},
   currentView: void 0,
@@ -19,6 +20,6 @@ let r = a.createContext({
   goBack: () => {}
 });
 
-function s() {
-  return a.useContext(r)
+function a() {
+  return s.useContext(o)
 }

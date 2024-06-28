@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_fb1469",
   image: "image_fb1469",

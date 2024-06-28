@@ -1,32 +1,33 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   Z: function() {
-    return s
+    return a
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(481060),
-  a = t(895924),
-  r = t(176412);
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(895924),
+  o = n(176412);
 
-function s(e) {
+function a(e) {
   let {
-    channel: n,
-    application: t,
-    sectionName: s,
-    disabled: o,
-    commandName: c
+    channel: t,
+    application: n,
+    sectionName: a,
+    disabled: l,
+    commandName: u
   } = e, {
-    onActivityItemSelected: u,
-    buttonColor: d,
-    buttonText: m
-  } = (0, r.P)(n, t, a.Vh.APP_LAUNCHER_APPLICATION_VIEW, s);
-  return (0, i.jsx)(l.Button, {
+    onActivityItemSelected: _,
+    buttonColor: c,
+    buttonText: d
+  } = (0, o.P)(t, n, s.Vh.APP_LAUNCHER_APPLICATION_VIEW, a);
+  return (0, i.jsx)(r.Button, {
     type: "submit",
-    size: l.ButtonSizes.MEDIUM,
-    color: d,
-    disabled: o,
-    onClick: u,
-    children: null != c ? c : m
+    size: r.ButtonSizes.MEDIUM,
+    color: c,
+    disabled: l,
+    onClick: _,
+    children: null != u ? u : d
   })
 }
