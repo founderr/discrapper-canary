@@ -16,7 +16,7 @@ var r = n(481060),
   T = n(689938);
 class h extends c.Z {
   _initialize() {
-    l.isPlatformEmbedded && u.ZP.on("APP_PUSH_ANALYTICS", (e, t) => {
+    super._initialize(), l.isPlatformEmbedded && u.ZP.on("APP_PUSH_ANALYTICS", (e, t) => {
       t.forEach(e => {
         "activities" === e.type && e.name === I.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION && a.default.track(e.name, e.data)
       })
