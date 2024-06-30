@@ -1,47 +1,33 @@
-"use strict";
 n.d(t, {
-  y: function() {
-    return d
-  }
+    y: function () {
+        return _;
+    }
 }), n(47120);
-var i, r, s = n(735250);
+var r, i, a = n(735250);
 n(470079);
-var o = n(120356),
-  a = n.n(o),
-  l = n(392711),
-  u = n.n(l),
-  _ = n(692547),
-  c = n(80901);
-
-function d(e) {
-  let {
-    className: t,
-    percents: n,
-    size: i = "small",
-    foregroundColors: r = [_.Z.unsafe_rawColors.BRAND_500.css],
-    backgroundColor: o = "var(--background-modifier-active)",
-    animate: l = !0
-  } = e, d = u().zip(n, r).map((e, t) => {
-    let n, [r, o] = e;
-    return n = Array.isArray(o) ? {
-      background: "linear-gradient(to right, ".concat(o[0], ", ").concat(o[1], ")")
-    } : {
-      backgroundColor: o
-    }, (0, s.jsx)("div", {
-      className: a()(c.progressBar, c[i], {
-        [c.animating]: l
-      }),
-      style: {
-        transform: "translate3d(".concat(Math.min(Math.max(0, r), 100) - 100, "%, 0, 0)"),
-        ...n
-      }
-    }, t)
-  }).reverse();
-  return (0, s.jsx)("div", {
-    className: a()(t, c.progress, c[i]),
-    style: {
-      backgroundColor: o
-    },
-    children: d
-  })
-}(r = i || (i = {})).XSMALL = "xsmall", r.SMALL = "small", r.LARGE = "large", d.Sizes = i
+var o = n(120356), s = n.n(o), l = n(392711), u = n.n(l), c = n(692547), d = n(80901);
+function _(e) {
+    let {
+            className: t,
+            percents: n,
+            size: r = 'small',
+            foregroundColors: i = [c.Z.unsafe_rawColors.BRAND_500.css],
+            backgroundColor: o = 'var(--background-modifier-active)',
+            animate: l = !0
+        } = e, _ = u().zip(n, i).map((e, t) => {
+            let n, [i, o] = e;
+            return n = Array.isArray(o) ? { background: 'linear-gradient(to right, '.concat(o[0], ', ').concat(o[1], ')') } : { backgroundColor: o }, (0, a.jsx)('div', {
+                className: s()(d.progressBar, d[r], { [d.animating]: l }),
+                style: {
+                    transform: 'translate3d('.concat(Math.min(Math.max(0, i), 100) - 100, '%, 0, 0)'),
+                    ...n
+                }
+            }, t);
+        }).reverse();
+    return (0, a.jsx)('div', {
+        className: s()(t, d.progress, d[r]),
+        style: { backgroundColor: o },
+        children: _
+    });
+}
+(i = r || (r = {})).XSMALL = 'xsmall', i.SMALL = 'small', i.LARGE = 'large', _.Sizes = r;

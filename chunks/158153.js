@@ -1,10 +1,9 @@
-t.d(s, {
-  G: function() {
-    return a
-  }
+s.d(t, {
+    G: function () {
+        return a;
+    }
 });
-var n = t(74538);
-
-function a(e, s) {
-  return n.ZP.getNumIncludedPremiumGuildSubscriptionSlots(e.planId) + (null != s ? 1 : 0)
+var n = s(74538);
+function a(e, t) {
+    return n.ZP.getNumIncludedPremiumGuildSubscriptionSlots(e.planId) + (null != t ? 1 : 0);
 }

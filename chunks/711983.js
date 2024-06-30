@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  popoutMenu: "popoutMenu_dd53f8"
-}
+e.exports = { popoutMenu: 'popoutMenu_dd53f8' };

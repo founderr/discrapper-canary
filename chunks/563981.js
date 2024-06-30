@@ -1,5 +1,4 @@
-"use strict";
 e.exports = {
-  avatarBackground: "avatarBackground_bb882a",
-  avatar: "avatar_bb882a"
-}
+    avatarBackground: 'avatarBackground_bb882a',
+    avatar: 'avatar_bb882a'
+};

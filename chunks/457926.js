@@ -1,19 +1,18 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return a;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(383240);
-
-function s(e) {
-  let {
-    children: t
-  } = e;
-  return (0, i.jsxs)("span", {
-    className: r.nowrap,
-    children: [t, "⁠"]
-  })
+var i = n(383240);
+function a(e) {
+    let {children: t} = e;
+    return (0, r.jsxs)('span', {
+        className: i.nowrap,
+        children: [
+            t,
+            '\u2060'
+        ]
+    });
 }

@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  bannerSVGWrapper: "bannerSVGWrapper_b32cc2"
-}
+e.exports = { bannerSVGWrapper: 'bannerSVGWrapper_b32cc2' };

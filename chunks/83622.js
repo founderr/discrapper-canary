@@ -1,5 +1,4 @@
-"use strict";
 e.exports = {
-  sliderContainer: "sliderContainer_e13f88",
-  slider: "slider_e13f88"
-}
+    sliderContainer: 'sliderContainer_e13f88',
+    slider: 'slider_e13f88'
+};

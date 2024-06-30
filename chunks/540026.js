@@ -1,231 +1,234 @@
-"use strict";
 n(47120);
-var i, r = n(735250),
-  s = n(470079),
-  o = n(120356),
-  a = n.n(o),
-  l = n(748780),
-  u = n(660609);
-
-function _(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r, i = n(735250), a = n(470079), o = n(120356), s = n.n(o), l = n(748780), u = n(660609);
+function c(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let c = {
-    friction: 14,
-    tension: 200
-  },
-  d = {
-    DURATION: "DURATION",
-    VOLUME: "VOLUME"
-  };
-
+let d = {
+        friction: 14,
+        tension: 200
+    }, _ = {
+        DURATION: 'DURATION',
+        VOLUME: 'VOLUME'
+    };
 function E(e) {
-  let t = 0 | e,
-    n = t % 60;
-  return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
+    let t = 0 | e, n = t % 60;
+    return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
 }
-class I extends(i = s.Component) {
-  componentDidMount() {
-    let {
-      previewWidth: e,
-      animatedProgress: t
-    } = this.state;
-    this._previewId = e.addListener(this.handlePreviewChange), this._progressId = t.addListener(this.handleAnimatedChange)
-  }
-  componentWillUnmount() {
-    let {
-      previewWidth: e,
-      animatedProgress: t
-    } = this.state;
-    e.removeListener(this._previewId), t.removeListener(this._progressId), window.removeEventListener("mouseup", this.handleDragEnd, !1), window.removeEventListener("mousemove", this.handleDragMove, !1)
-  }
-  componentDidUpdate(e, t) {
-    let {
-      dragging: n,
-      previewWidth: i,
-      animatedProgress: r
-    } = this.state;
-    !n && t.dragging && i.setValue(r._value)
-  }
-  setGrabber(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      {
-        animatedProgress: n
-      } = this.state;
-    t ? l.Z.spring(n, {
-      toValue: e,
-      ...c
-    }).start() : n.setValue(e)
-  }
-  calculatePercentage(e, t) {
-    let {
-      wrapper: n,
-      props: {
-        type: i
-      }
-    } = this;
-    if (null == n) return 0;
-    let {
-      left: r,
-      width: s,
-      bottom: o,
-      height: a
-    } = n.getBoundingClientRect();
-    return Math.min(1, Math.max(0, i === d.VOLUME ? (o - t) / a : (e - r) / s))
-  }
-  render() {
-    let {
-      buffers: e,
-      type: t,
-      className: n,
-      sliderClassName: i
-    } = this.props, {
-      dragging: s,
-      previewWidth: o,
-      animatedProgress: _
-    } = this.state, c = s ? _ : o;
-    return (0, r.jsx)("div", {
-      className: a()(n, t === d.VOLUME ? u.vertical : u.horizontal),
-      children: (0, r.jsx)("div", {
-        className: a()(i, s ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === d.VOLUME ? u.mediaBarInteractionVolume : null),
-        onMouseDown: this.handleDragStart,
-        onMouseMove: this.handleMouseMove,
-        ref: e => this.wrapper = e,
-        children: (0, r.jsxs)("div", {
-          className: a()(u.mediaBarWrapper, t === d.VOLUME ? u.mediaBarWrapperVolume : null),
-          children: [null != e ? e.map((e, t) => {
-            let [n, i] = e;
-            return (0, r.jsx)("div", {
-              className: u.buffer,
-              style: {
-                width: "".concat(100 * i, "%"),
-                left: "".concat(100 * n, "%")
-              }
-            }, t)
-          }) : null, t === d.DURATION ? (0, r.jsx)(l.Z.div, {
-            className: u.mediaBarPreview,
-            style: {
-              width: o.interpolate({
-                inputRange: [0, 1],
-                outputRange: ["0%", "100%"]
-              })
-            }
-          }) : null, (0, r.jsx)(l.Z.div, {
-            className: u.mediaBarProgress,
-            style: {
-              width: _.interpolate({
-                inputRange: [0, 1],
-                outputRange: ["0%", "100%"]
-              })
-            },
-            children: (0, r.jsx)("span", {
-              className: u.mediaBarGrabber
+class f extends (r = a.Component) {
+    componentDidMount() {
+        let {
+            previewWidth: e,
+            animatedProgress: t
+        } = this.state;
+        this._previewId = e.addListener(this.handlePreviewChange), this._progressId = t.addListener(this.handleAnimatedChange);
+    }
+    componentWillUnmount() {
+        let {
+            previewWidth: e,
+            animatedProgress: t
+        } = this.state;
+        e.removeListener(this._previewId), t.removeListener(this._progressId), window.removeEventListener('mouseup', this.handleDragEnd, !1), window.removeEventListener('mousemove', this.handleDragMove, !1);
+    }
+    componentDidUpdate(e, t) {
+        let {
+            dragging: n,
+            previewWidth: r,
+            animatedProgress: i
+        } = this.state;
+        !n && t.dragging && r.setValue(i._value);
+    }
+    setGrabber(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {animatedProgress: n} = this.state;
+        t ? l.Z.spring(n, {
+            toValue: e,
+            ...d
+        }).start() : n.setValue(e);
+    }
+    calculatePercentage(e, t) {
+        let {
+            wrapper: n,
+            props: {type: r}
+        } = this;
+        if (null == n)
+            return 0;
+        let {
+            left: i,
+            width: a,
+            bottom: o,
+            height: s
+        } = n.getBoundingClientRect();
+        return Math.min(1, Math.max(0, r === _.VOLUME ? (o - t) / s : (e - i) / a));
+    }
+    render() {
+        let {
+                buffers: e,
+                type: t,
+                className: n,
+                sliderClassName: r
+            } = this.props, {
+                dragging: a,
+                previewWidth: o,
+                animatedProgress: c
+            } = this.state, d = a ? c : o;
+        return (0, i.jsx)('div', {
+            className: s()(n, t === _.VOLUME ? u.vertical : u.horizontal),
+            children: (0, i.jsx)('div', {
+                className: s()(r, a ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === _.VOLUME ? u.mediaBarInteractionVolume : null),
+                onMouseDown: this.handleDragStart,
+                onMouseMove: this.handleMouseMove,
+                ref: e => this.wrapper = e,
+                children: (0, i.jsxs)('div', {
+                    className: s()(u.mediaBarWrapper, t === _.VOLUME ? u.mediaBarWrapperVolume : null),
+                    children: [
+                        null != e ? e.map((e, t) => {
+                            let [n, r] = e;
+                            return (0, i.jsx)('div', {
+                                className: u.buffer,
+                                style: {
+                                    width: ''.concat(100 * r, '%'),
+                                    left: ''.concat(100 * n, '%')
+                                }
+                            }, t);
+                        }) : null,
+                        t === _.DURATION ? (0, i.jsx)(l.Z.div, {
+                            className: u.mediaBarPreview,
+                            style: {
+                                width: o.interpolate({
+                                    inputRange: [
+                                        0,
+                                        1
+                                    ],
+                                    outputRange: [
+                                        '0%',
+                                        '100%'
+                                    ]
+                                })
+                            }
+                        }) : null,
+                        (0, i.jsx)(l.Z.div, {
+                            className: u.mediaBarProgress,
+                            style: {
+                                width: c.interpolate({
+                                    inputRange: [
+                                        0,
+                                        1
+                                    ],
+                                    outputRange: [
+                                        '0%',
+                                        '100%'
+                                    ]
+                                })
+                            },
+                            children: (0, i.jsx)('span', { className: u.mediaBarGrabber })
+                        }),
+                        t === _.DURATION ? (0, i.jsx)(l.Z.div, {
+                            ref: this.setBubbleRef,
+                            className: u.bubble,
+                            style: {
+                                left: d.interpolate({
+                                    inputRange: [
+                                        0,
+                                        1
+                                    ],
+                                    outputRange: [
+                                        '0%',
+                                        '100%'
+                                    ]
+                                })
+                            }
+                        }) : null
+                    ]
+                })
             })
-          }), t === d.DURATION ? (0, r.jsx)(l.Z.div, {
-            ref: this.setBubbleRef,
-            className: u.bubble,
-            style: {
-              left: c.interpolate({
-                inputRange: [0, 1],
-                outputRange: ["0%", "100%"]
-              })
-            }
-          }) : null]
-        })
-      })
-    })
-  }
-  constructor(...e) {
-    super(...e), _(this, "state", {
-      animatedProgress: new l.Z.Value(0),
-      dragging: !1,
-      offsetLeft: 0,
-      offsetWidth: 0,
-      previewWidth: new l.Z.Value(0)
-    }), _(this, "wrapper", void 0), _(this, "bubble", void 0), _(this, "_previewId", void 0), _(this, "_progressId", void 0), _(this, "handlePreviewChange", () => {
-      let {
-        bubble: e,
-        state: {
-          dragging: t,
-          previewWidth: n
-        },
-        props: {
-          value: i
-        }
-      } = this;
-      if (!t && null != e) e.innerText = E(n._value * i)
-    }), _(this, "handleAnimatedChange", () => {
-      let {
-        bubble: e,
-        state: {
-          dragging: t,
-          animatedProgress: n
-        },
-        props: {
-          value: i
-        }
-      } = this;
-      if (!!t && null != e) e.innerText = E(n._value * i)
-    }), _(this, "handleMouseMove", e => {
-      let {
-        dragging: t,
-        previewWidth: n
-      } = this.state;
-      if (t) return;
-      let {
-        clientX: i,
-        clientY: r
-      } = e;
-      n.setValue(this.calculatePercentage(i, r))
-    }), _(this, "handleDragMove", e => {
-      let {
-        onDrag: t,
-        type: n
-      } = this.props, {
-        clientX: i,
-        clientY: r
-      } = e;
-      t(this.calculatePercentage(i, r), n)
-    }), _(this, "handleDragStart", e => {
-      let {
-        onDragStart: t,
-        onDrag: n,
-        type: i,
-        currentWindow: r
-      } = this.props, {
-        clientX: s,
-        clientY: o
-      } = e;
-      if (e.preventDefault(), null == this.wrapper) return;
-      let {
-        left: a,
-        width: l
-      } = this.wrapper.getBoundingClientRect();
-      this.setState({
-        dragging: !0,
-        offsetLeft: a,
-        offsetWidth: l
-      }, () => {
-        t(i), n(this.calculatePercentage(s, o), i), r.removeEventListener("mouseup", this.handleDragEnd, !1), r.removeEventListener("mousemove", this.handleDragMove, !1), r.addEventListener("mouseup", this.handleDragEnd, !1), r.addEventListener("mousemove", this.handleDragMove, !1)
-      })
-    }), _(this, "handleDragEnd", () => {
-      let {
-        onDragEnd: e,
-        currentWindow: t
-      } = this.props;
-      e(), t.removeEventListener("mouseup", this.handleDragEnd, !1), t.removeEventListener("mousemove", this.handleDragMove, !1), this.setState({
-        dragging: !1
-      })
-    }), _(this, "setBubbleRef", e => {
-      null == e ? this.bubble = null : null != e.componentRef ? this.bubble = e.componentRef : null != e.refs && (this.bubble = e.refs.node)
-    })
-  }
+        });
+    }
+    constructor(...e) {
+        super(...e), c(this, 'state', {
+            animatedProgress: new l.Z.Value(0),
+            dragging: !1,
+            offsetLeft: 0,
+            offsetWidth: 0,
+            previewWidth: new l.Z.Value(0)
+        }), c(this, 'wrapper', void 0), c(this, 'bubble', void 0), c(this, '_previewId', void 0), c(this, '_progressId', void 0), c(this, 'handlePreviewChange', () => {
+            let {
+                bubble: e,
+                state: {
+                    dragging: t,
+                    previewWidth: n
+                },
+                props: {value: r}
+            } = this;
+            if (!t && null != e)
+                e.innerText = E(n._value * r);
+        }), c(this, 'handleAnimatedChange', () => {
+            let {
+                bubble: e,
+                state: {
+                    dragging: t,
+                    animatedProgress: n
+                },
+                props: {value: r}
+            } = this;
+            if (!!t && null != e)
+                e.innerText = E(n._value * r);
+        }), c(this, 'handleMouseMove', e => {
+            let {
+                dragging: t,
+                previewWidth: n
+            } = this.state;
+            if (t)
+                return;
+            let {
+                clientX: r,
+                clientY: i
+            } = e;
+            n.setValue(this.calculatePercentage(r, i));
+        }), c(this, 'handleDragMove', e => {
+            let {
+                    onDrag: t,
+                    type: n
+                } = this.props, {
+                    clientX: r,
+                    clientY: i
+                } = e;
+            t(this.calculatePercentage(r, i), n);
+        }), c(this, 'handleDragStart', e => {
+            let {
+                    onDragStart: t,
+                    onDrag: n,
+                    type: r,
+                    currentWindow: i
+                } = this.props, {
+                    clientX: a,
+                    clientY: o
+                } = e;
+            if (e.preventDefault(), null == this.wrapper)
+                return;
+            let {
+                left: s,
+                width: l
+            } = this.wrapper.getBoundingClientRect();
+            this.setState({
+                dragging: !0,
+                offsetLeft: s,
+                offsetWidth: l
+            }, () => {
+                t(r), n(this.calculatePercentage(a, o), r), i.removeEventListener('mouseup', this.handleDragEnd, !1), i.removeEventListener('mousemove', this.handleDragMove, !1), i.addEventListener('mouseup', this.handleDragEnd, !1), i.addEventListener('mousemove', this.handleDragMove, !1);
+            });
+        }), c(this, 'handleDragEnd', () => {
+            let {
+                onDragEnd: e,
+                currentWindow: t
+            } = this.props;
+            e(), t.removeEventListener('mouseup', this.handleDragEnd, !1), t.removeEventListener('mousemove', this.handleDragMove, !1), this.setState({ dragging: !1 });
+        }), c(this, 'setBubbleRef', e => {
+            null == e ? this.bubble = null : null != e.componentRef ? this.bubble = e.componentRef : null != e.refs && (this.bubble = e.refs.node);
+        });
+    }
 }
-_(I, "Types", d), _(I, "defaultProps", {
-  currentWindow: window
-}), t.Z = I
+c(f, 'Types', _), c(f, 'defaultProps', { currentWindow: window }), t.Z = f;

@@ -1,87 +1,159 @@
-"use strict";
 n(653041), n(47120);
-var i = n(147913),
-  r = n(579806),
-  s = n(818083),
-  o = n(998502);
-let a = [0, 0];
-
+var r = n(147913), i = n(579806), a = n(818083), o = n(998502);
+let s = [
+    0,
+    0
+];
 function l(e) {
-  let t = e.toString(16);
-  for (; t.length < 4;) t = "0" + t;
-  return t
+    let t = e.toString(16);
+    for (; t.length < 4;)
+        t = '0' + t;
+    return t;
 }
-
-function u(e, t, n, i) {
-  let r = [],
-    o = n.map(e => e.map(l).join(":")).join(", ");
-  for (let e = 0; e < i.length; e++) {
-    let t = {};
-    t[i[e]] = "1", r.push({
-      id: e + 1,
-      label: i[e],
-      config: t
-    })
-  }
-  return {
-    gpus: n,
-    experiment: (0, s.B)({
-      kind: "user",
-      id: e,
-      label: "GPU Workarounds: ".concat(t, " (").concat(o, ")"),
-      defaultConfig: {},
-      treatments: r
-    })
-  }
+function u(e, t, n, r) {
+    let i = [], o = n.map(e => e.map(l).join(':')).join(', ');
+    for (let e = 0; e < r.length; e++) {
+        let t = {};
+        t[r[e]] = '1', i.push({
+            id: e + 1,
+            label: r[e],
+            config: t
+        });
+    }
+    return {
+        gpus: n,
+        experiment: (0, a.B)({
+            kind: 'user',
+            id: e,
+            label: 'GPU Workarounds: '.concat(t, ' (').concat(o, ')'),
+            defaultConfig: {},
+            treatments: i
+        })
+    };
 }
-
+function c(e) {
+    return [
+        4318,
+        e
+    ];
+}
+let d = [
+    u('2024-06_hardware_hevc_nv_gtx_970', 'NVIDIA hardware HEVC decode on GTX 970', [c(5058)], ['disable_accelerated_hevc_decode']),
+    u('2024-06_hardware_hevc_nv_maxwell', 'NVIDIA hardware HEVC decode on Maxwell (except 970)', [
+        c(4928),
+        c(4929),
+        c(4932),
+        c(4934),
+        c(4935),
+        c(4936),
+        c(4937),
+        c(4939),
+        c(4941),
+        c(4942),
+        c(4943),
+        c(4986),
+        c(4987),
+        c(4992),
+        c(4993),
+        c(4994),
+        c(5008),
+        c(5009),
+        c(5010),
+        c(5011),
+        c(5016),
+        c(5017),
+        c(5018),
+        c(5019),
+        c(5020),
+        c(5021),
+        c(5040),
+        c(5041),
+        c(5042),
+        c(5043),
+        c(5044),
+        c(5046),
+        c(5049),
+        c(5050),
+        c(5051),
+        c(5052),
+        c(5056),
+        c(5079),
+        c(5080),
+        c(5081),
+        c(5082),
+        c(5104),
+        c(5105),
+        c(5106),
+        c(5107),
+        c(5112),
+        c(5113),
+        c(5114),
+        c(5115),
+        c(5121),
+        c(5126),
+        c(5127),
+        c(5159),
+        c(5655),
+        c(5656),
+        c(5657),
+        c(5658),
+        c(5735),
+        c(5965),
+        c(5966),
+        c(6044),
+        c(6082),
+        c(6088),
+        c(6128),
+        c(6129),
+        c(6141)
+    ], ['disable_accelerated_hevc_decode'])
+];
 function _(e) {
-  return [4318, e]
-}
-let c = [u("2024-06_hardware_hevc_nv_gtx_970", "NVIDIA hardware HEVC decode on GTX 970", [_(5058)], ["disable_accelerated_hevc_decode"]), u("2024-06_hardware_hevc_nv_maxwell", "NVIDIA hardware HEVC decode on Maxwell (except 970)", [_(4928), _(4929), _(4932), _(4934), _(4935), _(4936), _(4937), _(4939), _(4941), _(4942), _(4943), _(4986), _(4987), _(4992), _(4993), _(4994), _(5008), _(5009), _(5010), _(5011), _(5016), _(5017), _(5018), _(5019), _(5020), _(5021), _(5040), _(5041), _(5042), _(5043), _(5044), _(5046), _(5049), _(5050), _(5051), _(5052), _(5056), _(5079), _(5080), _(5081), _(5082), _(5104), _(5105), _(5106), _(5107), _(5112), _(5113), _(5114), _(5115), _(5121), _(5126), _(5127), _(5159), _(5655), _(5656), _(5657), _(5658), _(5735), _(5965), _(5966), _(6044), _(6082), _(6088), _(6128), _(6129), _(6141)], ["disable_accelerated_hevc_decode"])];
-
-function d(e) {
-  for (let t of e)
-    if (t[0] === a[0] && t[1] === a[1]) return !0;
-  return !1
+    for (let t of e)
+        if (t[0] === s[0] && t[1] === s[1])
+            return !0;
+    return !1;
 }
 let E = !1;
-
-function I() {
-  let e = {};
-  for (let t of c)
-    if (d(t.gpus)) {
-      let n = t.experiment.getCurrentConfig({
-        location: "updateFlags"
-      });
-      e = {
-        ...e,
-        ...n
-      }
-    } o.ZP.setChromiumSwitches(e)
+function f() {
+    let e = {};
+    for (let t of d)
+        if (_(t.gpus)) {
+            let n = t.experiment.getCurrentConfig({ location: 'updateFlags' });
+            e = {
+                ...e,
+                ...n
+            };
+        }
+    o.ZP.setChromiumSwitches(e);
 }
-class T extends i.Z {
-  constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: async () => {
-        try {
-          var e, t, n, i;
-          if (E || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
-          let s = await r.Z.processUtils.getSystemInfo();
-          for (let e of null !== (i = null === (n = s.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (a = [e.vendorId, e.deviceId]);
-          for (let e of (E = !0, c)) d(e.gpus) && e.experiment.subscribe({
-            location: "GPU experiment subscription"
-          }, I);
-          I()
-        } catch (e) {}
-      }
-    }, n in t ? Object.defineProperty(t, n, {
-      value: i,
-      enumerable: !0,
-      configurable: !0,
-      writable: !0
-    }) : t[n] = i
-  }
+class h extends r.Z {
+    constructor(...e) {
+        var t, n, r;
+        super(...e), t = this, n = 'actions', r = {
+            POST_CONNECTION_OPEN: async () => {
+                try {
+                    var e, t, n, r;
+                    if (E || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null)
+                        return;
+                    let a = await i.Z.processUtils.getSystemInfo();
+                    for (let e of null !== (r = null === (n = a.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== r ? r : [])
+                        !0 === e.active && (s = [
+                            e.vendorId,
+                            e.deviceId
+                        ]);
+                    for (let e of (E = !0, d))
+                        _(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, f);
+                    f();
+                } catch (e) {
+                }
+            }
+        }, n in t ? Object.defineProperty(t, n, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : t[n] = r;
+    }
 }
-t.Z = new T
+t.Z = new h();

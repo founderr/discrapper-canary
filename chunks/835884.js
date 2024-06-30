@@ -1,5 +1,4 @@
-var n = r(222531),
-  o = r(202234);
-t.exports = Object.keys || function(t) {
-  return n(t, o)
-}
+var e = o(222531), n = o(202234);
+r.exports = Object.keys || function (r) {
+    return e(r, n);
+};

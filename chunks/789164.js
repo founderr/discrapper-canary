@@ -1,50 +1,47 @@
-"use strict";
 n.d(t, {
-  h: function() {
-    return u
-  }
+    h: function () {
+        return u;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(337033),
-  o = n(15127),
-  a = n(512983),
-  l = n(169298);
-let u = r.forwardRef(function(e, t) {
-  var n;
-  let {
-    children: u,
-    className: _,
-    titleClassName: c,
-    title: d,
-    icon: E,
-    disabled: I,
-    htmlFor: T,
-    tag: h = "h5",
-    ...f
-  } = e, S = r.useId(), A = null !== (n = f.titleId) && void 0 !== n ? n : S;
-  return (0, i.jsx)("div", {
-    ref: t,
-    className: _,
-    children: null != d ? (0, i.jsx)(s.y, {
-      component: (0, i.jsxs)("div", {
-        className: l.sectionTitle,
-        children: [E, null != d ? (0, i.jsx)(a.v, {
-          tag: h,
-          id: A,
-          htmlFor: T,
-          disabled: I,
-          className: c,
-          children: d
-        }) : null]
-      }),
-      children: (0, i.jsx)("div", {
-        className: l.children,
-        children: (0, i.jsx)(o.ol, {
-          titleId: A,
-          children: u
-        })
-      })
-    }) : u
-  })
-})
+var r = n(735250), i = n(470079), a = n(337033), o = n(15127), s = n(512983), l = n(169298);
+let u = i.forwardRef(function (e, t) {
+    var n;
+    let {
+            children: u,
+            className: c,
+            titleClassName: d,
+            title: _,
+            icon: E,
+            disabled: f,
+            htmlFor: h,
+            tag: p = 'h5',
+            ...m
+        } = e, I = i.useId(), T = null !== (n = m.titleId) && void 0 !== n ? n : I;
+    return (0, r.jsx)('div', {
+        ref: t,
+        className: c,
+        children: null != _ ? (0, r.jsx)(a.y, {
+            component: (0, r.jsxs)('div', {
+                className: l.sectionTitle,
+                children: [
+                    E,
+                    null != _ ? (0, r.jsx)(s.v, {
+                        tag: p,
+                        id: T,
+                        htmlFor: h,
+                        disabled: f,
+                        className: d,
+                        children: _
+                    }) : null
+                ]
+            }),
+            children: (0, r.jsx)('div', {
+                className: l.children,
+                children: (0, r.jsx)(o.ol, {
+                    titleId: T,
+                    children: u
+                })
+            })
+        }) : u
+    });
+});

@@ -1,22 +1,18 @@
-n.d(t, {
-  H: function() {
-    return a
-  },
-  c: function() {
-    return s
-  }
+n.d(e, {
+    H: function () {
+        return l;
+    },
+    c: function () {
+        return i;
+    }
 });
-var i = n(570140);
-
-function s(e) {
-  i.Z.wait(() => i.Z.dispatch({
-    type: "NUF_NEW_USER",
-    newUserType: e
-  }))
+var r = n(570140);
+function i(t) {
+    r.Z.wait(() => r.Z.dispatch({
+        type: 'NUF_NEW_USER',
+        newUserType: t
+    }));
 }
-
-function a() {
-  i.Z.wait(() => i.Z.dispatch({
-    type: "NUF_COMPLETE"
-  }))
+function l() {
+    r.Z.wait(() => r.Z.dispatch({ type: 'NUF_COMPLETE' }));
 }

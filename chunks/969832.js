@@ -1,98 +1,91 @@
-"use strict";
-let i, r;
+let r, i;
 n.d(t, {
-  o: function() {
-    return h
-  }
-}), n(47120);
-var s = n(735250),
-  o = n(470079),
-  a = n(120356),
-  l = n.n(a),
-  u = n(846519),
-  _ = n(481060),
-  c = n(626135),
-  d = n(572004),
-  E = n(981631),
-  I = n(689938),
-  T = n(41450);
-
-function h(e) {
-  var t;
-  let {
-    className: n,
-    copyValue: a,
-    copyMetaData: h,
-    copyTooltip: f,
-    copyTooltipDelay: S = 500,
-    children: A,
-    disableCopy: N,
-    showCopyIcon: m,
-    "aria-label": O,
-    onCopy: R
-  } = e, [p, g] = o.useState(0), [C, v] = o.useState(!1), [L, D] = o.useState(!1);
-  if (o.useEffect(() => (i = new u.V7, r = new u.V7, function() {
-      i.stop(), r.stop()
-    }), []), !d.wS || N) return (0, s.jsx)(s.Fragment, {
-    children: A
-  });
-  let M = [I.Z.Messages.COPY_SUCCESS_1, I.Z.Messages.COPY_SUCCESS_2, I.Z.Messages.COPY_SUCCESS_3, I.Z.Messages.COPY_SUCCESS_4, I.Z.Messages.COPY_SUCCESS_5, I.Z.Messages.COPY_SUCCESS_6, I.Z.Messages.COPY_SUCCESS_7, I.Z.Messages.COPY_SUCCESS_8, I.Z.Messages.COPY_SUCCESS_9, I.Z.Messages.COPY_SUCCESS_10, I.Z.Messages.COPY_SUCCESS_11],
-    P = Math.min(Math.max(p - 1, 0), M.length - 1),
-    y = null !== (t = M[P]) && void 0 !== t ? t : M[0],
-    U = p >= M.length - 1,
-    b = U ? _.TooltipColors.RED : _.TooltipColors.GREEN,
-    G = C ? b : _.TooltipColors.PRIMARY,
-    w = () => {
-      i.stop(), D(!1)
-    },
-    B = e => {
-      null == R || R(), (0, d.JG)(a), c.default.track(E.rMx.TEXT_COPIED, {
-        type: h
-      }), "function" == typeof e && e(), !L && g(p + 1), D(!0), v(!0), i.start(1e3, () => D(!1)), r.start(2e3, () => g(0))
-    };
-  return (0, s.jsx)(_.Tooltip, {
-    delay: S,
-    color: G,
-    forceOpen: L,
-    text: C ? (0, s.jsx)(_.Shaker, {
-      isShaking: U,
-      children: y
-    }) : f,
-    onAnimationRest: (e, t) => {
-      !L && C && t.phase === E.UkZ.LEAVE && v(!1)
-    },
-    "aria-label": f,
-    children: e => {
-      let {
-        onClick: t,
-        onMouseEnter: i,
-        ...r
-      } = e;
-      return (0, s.jsx)(_.Clickable, {
-        ...r,
-        className: T.clickTarget,
-        "aria-label": O,
-        onMouseEnter: () => {
-          C ? w() : "function" == typeof i && i()
-        },
-        onClick: () => {
-          B(t)
-        },
-        children: (0, s.jsxs)("div", {
-          className: l()(n, T.copiableWrapper),
-          children: [(0, s.jsx)("div", {
-            className: T.childWrapper,
-            children: A
-          }), m ? (0, s.jsx)("div", {
-            className: T.__invalid_copyIconWrapper,
-            children: (0, s.jsx)(_.CopyIcon, {
-              size: "sm",
-              color: "currentColor",
-              className: T.copyIcon
-            })
-          }) : null]
-        })
-      })
+    o: function () {
+        return p;
     }
-  })
+}), n(47120);
+var a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(846519), c = n(481060), d = n(626135), _ = n(572004), E = n(981631), f = n(689938), h = n(41450);
+function p(e) {
+    var t;
+    let {
+            className: n,
+            copyValue: s,
+            copyMetaData: p,
+            copyTooltip: m,
+            copyTooltipDelay: I = 500,
+            children: T,
+            disableCopy: g,
+            showCopyIcon: S,
+            'aria-label': A,
+            onCopy: N
+        } = e, [v, O] = o.useState(0), [R, C] = o.useState(!1), [y, D] = o.useState(!1);
+    if (o.useEffect(() => (r = new u.V7(), i = new u.V7(), function () {
+            r.stop(), i.stop();
+        }), []), !_.wS || g)
+        return (0, a.jsx)(a.Fragment, { children: T });
+    let L = [
+            f.Z.Messages.COPY_SUCCESS_1,
+            f.Z.Messages.COPY_SUCCESS_2,
+            f.Z.Messages.COPY_SUCCESS_3,
+            f.Z.Messages.COPY_SUCCESS_4,
+            f.Z.Messages.COPY_SUCCESS_5,
+            f.Z.Messages.COPY_SUCCESS_6,
+            f.Z.Messages.COPY_SUCCESS_7,
+            f.Z.Messages.COPY_SUCCESS_8,
+            f.Z.Messages.COPY_SUCCESS_9,
+            f.Z.Messages.COPY_SUCCESS_10,
+            f.Z.Messages.COPY_SUCCESS_11
+        ], b = Math.min(Math.max(v - 1, 0), L.length - 1), M = null !== (t = L[b]) && void 0 !== t ? t : L[0], P = v >= L.length - 1, U = P ? c.TooltipColors.RED : c.TooltipColors.GREEN, w = R ? U : c.TooltipColors.PRIMARY, x = () => {
+            r.stop(), D(!1);
+        }, G = e => {
+            null == N || N(), (0, _.JG)(s), d.default.track(E.rMx.TEXT_COPIED, { type: p }), 'function' == typeof e && e(), !y && O(v + 1), D(!0), C(!0), r.start(1000, () => D(!1)), i.start(2000, () => O(0));
+        };
+    return (0, a.jsx)(c.Tooltip, {
+        delay: I,
+        color: w,
+        forceOpen: y,
+        text: R ? (0, a.jsx)(c.Shaker, {
+            isShaking: P,
+            children: M
+        }) : m,
+        onAnimationRest: (e, t) => {
+            !y && R && t.phase === E.UkZ.LEAVE && C(!1);
+        },
+        'aria-label': m,
+        children: e => {
+            let {
+                onClick: t,
+                onMouseEnter: r,
+                ...i
+            } = e;
+            return (0, a.jsx)(c.Clickable, {
+                ...i,
+                className: h.clickTarget,
+                'aria-label': A,
+                onMouseEnter: () => {
+                    R ? x() : 'function' == typeof r && r();
+                },
+                onClick: () => {
+                    G(t);
+                },
+                children: (0, a.jsxs)('div', {
+                    className: l()(n, h.copiableWrapper),
+                    children: [
+                        (0, a.jsx)('div', {
+                            className: h.childWrapper,
+                            children: T
+                        }),
+                        S ? (0, a.jsx)('div', {
+                            className: h.__invalid_copyIconWrapper,
+                            children: (0, a.jsx)(c.CopyIcon, {
+                                size: 'sm',
+                                color: 'currentColor',
+                                className: h.copyIcon
+                            })
+                        }) : null
+                    ]
+                })
+            });
+        }
+    });
 }

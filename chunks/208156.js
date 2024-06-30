@@ -1,91 +1,65 @@
-"use strict";
 n.d(t, {
-  J: function() {
-    return N
-  }
-}), n(47120), n(610138), n(216116), n(78328), n(815648);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(482033),
-  l = n(772848),
-  u = n(442837),
-  _ = n(928518),
-  c = n(631467),
-  d = n(210887),
-  E = n(585483),
-  I = n(53289),
-  T = n(953101),
-  h = n(701488),
-  f = n(981631),
-  S = n(972216);
-
-function A(e) {
-  let {
-    url: t,
-    className: n,
-    style: s,
-    onLoad: o,
-    shouldRefocus: S,
-    queryParams: A,
-    allowPopups: N = !1,
-    referrerPolicy: m = "origin"
-  } = e, O = (0, u.e7)([_.Z], () => _.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT)), R = (0, a.useMemoOne)(() => (0, l.Z)(), [t]), p = r.useRef(null), g = (0, I.Z)(p, S, null == O ? window : O), C = {
-    ...A,
-    frame_id: R,
-    platform: h.S4.DESKTOP
-  }, [v, L] = r.useState(!1), D = d.Z.theme, M = {
-    ...s
-  };
-  return D === f.BRd.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.S.dispatch(f.CkL.IFRAME_MOUNT, {
-    id: R
-  }), () => {
-    E.S.dispatch(f.CkL.IFRAME_UNMOUNT, {
-      id: R
-    })
-  }), [R]), r.useEffect(() => {
-    let e = e => {
-      let {
-        resizing: t
-      } = e;
-      L(t)
-    };
-    return E.S.subscribe(f.CkL.MANUAL_IFRAME_RESIZING, e), () => {
-      E.S.unsubscribe(f.CkL.MANUAL_IFRAME_RESIZING, e)
+    J: function () {
+        return g;
     }
-  }, []), v && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
-    style: M,
-    allow: "autoplay; encrypted-media",
-    referrerPolicy: m,
-    onLoad: function(e) {
-      var n;
-      null == o || o(e.target), p.current = e.target, g(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, C], null != t ? t : "")
-    },
-    sandbox: (0, T.Z)({
-      allowPopups: N
-    }),
-    className: n,
-    src: "".concat(t, "?").concat(new URLSearchParams(C))
-  }) : null
+}), n(47120), n(610138), n(216116), n(78328), n(815648);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(482033), l = n(772848), u = n(442837), c = n(928518), d = n(631467), _ = n(210887), E = n(585483), f = n(53289), h = n(953101), p = n(701488), m = n(981631), I = n(972216);
+function T(e) {
+    let {
+            url: t,
+            className: n,
+            style: a,
+            onLoad: o,
+            shouldRefocus: I,
+            queryParams: T,
+            allowPopups: g = !1,
+            referrerPolicy: S = 'origin'
+        } = e, A = (0, u.e7)([c.Z], () => c.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)), N = (0, s.useMemoOne)(() => (0, l.Z)(), [t]), v = i.useRef(null), O = (0, f.Z)(v, I, null == A ? window : A), R = {
+            ...T,
+            frame_id: N,
+            platform: p.S4.DESKTOP
+        }, [C, y] = i.useState(!1), D = _.Z.theme, L = { ...a };
+    return D === m.BRd.LIGHT ? L.colorScheme = 'light' : L.colorScheme = 'dark', i.useEffect(() => (E.S.dispatch(m.CkL.IFRAME_MOUNT, { id: N }), () => {
+        E.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: N });
+    }), [N]), i.useEffect(() => {
+        let e = e => {
+            let {resizing: t} = e;
+            y(t);
+        };
+        return E.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e), () => {
+            E.S.unsubscribe(m.CkL.MANUAL_IFRAME_RESIZING, e);
+        };
+    }, []), C && (L.pointerEvents = 'none'), null != t ? (0, r.jsx)('iframe', {
+        style: L,
+        allow: 'autoplay; encrypted-media',
+        referrerPolicy: S,
+        onLoad: function (e) {
+            var n;
+            null == o || o(e.target), v.current = e.target, O(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([
+                d.Z.HELLO,
+                R
+            ], null != t ? t : '');
+        },
+        sandbox: (0, h.Z)({ allowPopups: g }),
+        className: n,
+        src: ''.concat(t, '?').concat(new URLSearchParams(R))
+    }) : null;
 }
-
-function N(e) {
-  let {
-    onLoad: t
-  } = e, [n, s] = r.useState(!1), a = r.useCallback(e => {
-    s(!0), null == t || t(e)
-  }, [t]);
-  return (0, i.jsxs)("div", {
-    className: S.fillParent,
-    children: [!n && (0, i.jsx)("div", {
-      className: o()(S.fillParent, S.iframePlaceholder)
-    }), (0, i.jsx)("div", {
-      className: o()(S.fillParent, n ? void 0 : S.hiddenIframeContainer),
-      children: (0, i.jsx)(A, {
-        ...e,
-        onLoad: a
-      })
-    })]
-  })
+function g(e) {
+    let {onLoad: t} = e, [n, a] = i.useState(!1), s = i.useCallback(e => {
+            a(!0), null == t || t(e);
+        }, [t]);
+    return (0, r.jsxs)('div', {
+        className: I.fillParent,
+        children: [
+            !n && (0, r.jsx)('div', { className: o()(I.fillParent, I.iframePlaceholder) }),
+            (0, r.jsx)('div', {
+                className: o()(I.fillParent, n ? void 0 : I.hiddenIframeContainer),
+                children: (0, r.jsx)(T, {
+                    ...e,
+                    onLoad: s
+                })
+            })
+        ]
+    });
 }

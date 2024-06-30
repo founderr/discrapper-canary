@@ -1,119 +1,113 @@
-"use strict";
-n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(367907),
-  o = n(541099),
-  a = n(695676),
-  l = n(173790),
-  u = n(361917),
-  _ = n(684256),
-  c = n(981631),
-  d = n(987421);
-t.Z = r.memo(r.forwardRef(function(e, t) {
-  let n, {
-      channel: E,
-      entrypoint: I
-    } = e,
-    [T, h] = r.useState(""),
-    f = function(e) {
-      let [t, n] = r.useState(null), i = r.useRef(0);
-      return r.useEffect(() => {
-        null == t || t.scrollTo(0, 0)
-      }, [t, e]), r.useEffect(() => {
-        if (null != t) return t.scrollTo(0, i.current), t.addEventListener("scroll", e), () => {
-          t.removeEventListener("scroll", e, !1)
+t(47120);
+var i = t(735250), l = t(470079), a = t(367907), r = t(541099), s = t(695676), o = t(173790), c = t(361917), u = t(684256), d = t(981631), m = t(987421);
+n.Z = l.memo(l.forwardRef(function (e, n) {
+    let t, {
+            channel: p,
+            entrypoint: _
+        } = e, [E, A] = l.useState(''), N = function (e) {
+            let [n, t] = l.useState(null), i = l.useRef(0);
+            return l.useEffect(() => {
+                null == n || n.scrollTo(0, 0);
+            }, [
+                n,
+                e
+            ]), l.useEffect(() => {
+                if (null != n)
+                    return n.scrollTo(0, i.current), n.addEventListener('scroll', e), () => {
+                        n.removeEventListener('scroll', e, !1);
+                    };
+                function e() {
+                    if (null != n)
+                        i.current = n.scrollTop;
+                }
+            }, [n]), t;
+        }(E);
+    l.useEffect(() => {
+        (0, a.yw)(d.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+            source: _,
+            location: 'app_launcher'
+        });
+    }, [_]);
+    let {
+        history: h,
+        setHistory: C,
+        currentView: f,
+        pushHistory: I,
+        goBack: x
+    } = function () {
+        let [e, n] = l.useState([{ type: s.gc.HOME }]), t = e[e.length - 1];
+        return {
+            history: e,
+            setHistory: n,
+            currentView: t,
+            pushHistory: t => {
+                n([
+                    ...e,
+                    t
+                ]);
+            },
+            goBack: () => {
+                if (0 === e.length)
+                    return;
+                let t = [...e];
+                t.pop(), n(t);
+            }
         };
-
-        function e() {
-          if (null != t) i.current = t.scrollTop
-        }
-      }, [t]), n
-    }(T);
-  r.useEffect(() => {
-    (0, s.yw)(c.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-      source: I,
-      location: "app_launcher"
-    })
-  }, [I]);
-  let {
-    history: S,
-    setHistory: A,
-    currentView: N,
-    pushHistory: m,
-    goBack: O
-  } = function() {
-    let [e, t] = r.useState([{
-      type: a.gc.HOME
-    }]), n = e[e.length - 1];
-    return {
-      history: e,
-      setHistory: t,
-      currentView: n,
-      pushHistory: n => {
-        t([...e, n])
-      },
-      goBack: () => {
-        if (0 === e.length) return;
-        let n = [...e];
-        n.pop(), t(n)
-      }
-    }
-  }();
-  switch (r.useEffect(() => {
-      let e = Date.now();
-      return () => {
-        (0, s.yw)(c.rMx.APP_LAUNCHER_CLOSED, {
-          reason: o.Z.closeReason(),
-          time_spent: Date.now() - e,
-          source: I
-        })
-      }
-    }, [I]), null == N ? void 0 : N.type) {
-    case a.gc.HOME:
-      n = (0, i.jsx)(u.Z, {
-        setScroller: f,
-        channel: E,
-        entrypoint: I,
-        searchQuery: T,
-        setSearchQuery: h
-      });
-      break;
-    case a.gc.LIST:
-      n = (0, i.jsx)(_.Z, {
-        channel: E,
-        entrypoint: I,
-        title: N.title,
-        look: N.look,
-        items: N.items,
-        sectionName: N.sectionName
-      });
-      break;
-    case a.gc.APPLICATION:
-      n = (0, i.jsx)(l.Z, {
-        channel: E,
-        application: N.application,
-        sectionName: N.sectionName
-      });
-      break;
+    }();
+    switch (l.useEffect(() => {
+            let e = Date.now();
+            return () => {
+                (0, a.yw)(d.rMx.APP_LAUNCHER_CLOSED, {
+                    reason: r.Z.closeReason(),
+                    time_spent: Date.now() - e,
+                    source: _
+                });
+            };
+        }, [_]), null == f ? void 0 : f.type) {
+    case s.gc.HOME:
+        t = (0, i.jsx)(c.Z, {
+            setScroller: N,
+            channel: p,
+            entrypoint: _,
+            searchQuery: E,
+            setSearchQuery: A
+        });
+        break;
+    case s.gc.LIST:
+        t = (0, i.jsx)(u.Z, {
+            channel: p,
+            entrypoint: _,
+            title: f.title,
+            look: f.look,
+            items: f.items,
+            sectionName: f.sectionName
+        });
+        break;
+    case s.gc.APPLICATION:
+        t = (0, i.jsx)(o.Z, {
+            channel: p,
+            application: f.application,
+            sectionName: f.sectionName
+        });
+        break;
     default:
-      n = null
-  }
-  return (0, i.jsx)("div", {
-    className: d.drawerSizingWrapper,
-    ref: t,
-    children: (0, i.jsx)("div", {
-      className: d.contentWrapper,
-      children: (0, i.jsx)(a.uX.Provider, {
-        value: {
-          history: S,
-          setHistory: A,
-          currentView: N,
-          pushHistory: m,
-          goBack: O
-        },
-        children: n
-      })
-    })
-  })
-}))
+        t = null;
+    }
+    return (0, i.jsx)('div', {
+        className: m.drawerSizingWrapper,
+        ref: n,
+        children: (0, i.jsx)('div', {
+            className: m.contentWrapper,
+            children: (0, i.jsx)(s.uX.Provider, {
+                value: {
+                    history: h,
+                    setHistory: C,
+                    currentView: f,
+                    pushHistory: I,
+                    goBack: x
+                },
+                children: t
+            })
+        })
+    });
+}));

@@ -1,9 +1,7 @@
-var t = n(735250);
-n(470079);
-var i = n(196567),
-  l = n(689938),
-  r = n(576688);
-s.Z = () => (0, t.jsx)(i.Z, {
-  copy: l.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
-  bannerImage: r
-})
+var i = t(735250);
+t(470079);
+var r = t(196567), o = t(689938), a = t(576688);
+n.Z = () => (0, i.jsx)(r.Z, {
+    copy: o.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
+    bannerImage: a
+});

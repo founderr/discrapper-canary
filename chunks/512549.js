@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  divider: "divider_ae36e5"
-}
+e.exports = { divider: 'divider_ae36e5' };

@@ -1,56 +1,37 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return _;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(481060),
-  a = n(785717),
-  l = n(702557),
-  u = n(993409),
-  _ = n(689938),
-  c = n(703464);
-
-function d(e) {
-  let {
-    user: t,
-    isHovering: n,
-    onOpenProfile: r
-  } = e, {
-    trackUserProfileAction: d
-  } = (0, a.KZ)(), {
-    note: E
-  } = (0, l.Z)(t.id), I = () => {
-    d({
-      action: "PRESS_ADD_NOTE"
-    }), null == r || r()
-  };
-  return null == E || "" === E ? (0, i.jsx)(u.Z, {
-    variant: "icon",
-    text: _.Z.Messages.ADD_NOTE,
-    "aria-label": _.Z.Messages.ADD_NOTE,
-    icon: o.PaperPlusIcon,
-    onClick: I,
-    color: c.color,
-    look: o.Button.Looks.BLANK,
-    className: s()(c.button, {
-      [c.visible]: n
-    })
-  }) : (0, i.jsx)(u.Z, {
-    variant: "icon",
-    text: E,
-    "aria-label": E,
-    icon: o.PaperIcon,
-    onClick: I,
-    color: c.color,
-    look: o.Button.Looks.BLANK,
-    className: s()(c.button, {
-      [c.visible]: n
-    }),
-    tooltipClassName: c.tooltip
-  })
+var i = n(120356), a = n.n(i), o = n(481060), s = n(785717), l = n(702557), u = n(993409), c = n(689938), d = n(703464);
+function _(e) {
+    let {
+            user: t,
+            isHovering: n,
+            onOpenProfile: i
+        } = e, {trackUserProfileAction: _} = (0, s.KZ)(), {note: E} = (0, l.Z)(t.id), f = () => {
+            _({ action: 'PRESS_ADD_NOTE' }), null == i || i();
+        };
+    return null == E || '' === E ? (0, r.jsx)(u.Z, {
+        variant: 'icon',
+        text: c.Z.Messages.ADD_NOTE,
+        'aria-label': c.Z.Messages.ADD_NOTE,
+        icon: o.PaperPlusIcon,
+        onClick: f,
+        color: d.color,
+        look: o.Button.Looks.BLANK,
+        className: a()(d.button, { [d.visible]: n })
+    }) : (0, r.jsx)(u.Z, {
+        variant: 'icon',
+        text: E,
+        'aria-label': E,
+        icon: o.PaperIcon,
+        onClick: f,
+        color: d.color,
+        look: o.Button.Looks.BLANK,
+        className: a()(d.button, { [d.visible]: n }),
+        tooltipClassName: d.tooltip
+    });
 }

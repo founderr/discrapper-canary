@@ -1,102 +1,83 @@
-t(47120), t(653041);
-var n = t(735250),
-  a = t(470079),
-  i = t(921738),
-  r = t.n(i),
-  o = t(213005),
-  l = t(504884),
-  c = t(358085),
-  d = t(998502),
-  _ = t(981631);
-
-function E(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-    value: t,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[s] = t, e
+n(47120), n(653041);
+var s = n(735250), i = n(470079), r = n(921738), o = n.n(r), l = n(213005), a = n(504884), d = n(358085), u = n(998502), c = n(981631);
+function h(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let u = c.isPlatformEmbedded && null != d.ZP.getDiscordUtils().inputCaptureRegisterElement;
-class T extends a.PureComponent {
-  componentDidMount() {
-    this._mounted = !0
-  }
-  componentWillUnmount() {
-    this._mounted = !1, this.cleanUp()
-  }
-  componentDidUpdate(e) {
-    this.props.defaultValue !== e.defaultValue && this.setState({
-      codes: this.props.defaultValue
-    })
-  }
-  cleanUp() {
-    c.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), this.gs = null)
-  }
-  handleComboChange(e) {
-    let {
-      mode: s
-    } = this.state, {
-      onChange: t
-    } = this.props;
-    s === l.c.RECORDING && (null != t && t(e), this.setState({
-      codes: e
-    }))
-  }
-  render() {
-    let e, s;
-    let {
-      codes: t,
-      mode: a
-    } = this.state, {
-      disabled: i
-    } = this.props;
-    return u ? (s = d.ZP.getDiscordUtils().inputCaptureRegisterElement, e = this.handleNativeChange) : !c.isPlatformEmbedded && (e = this.handleComboKeys), (0, n.jsx)(l.Z, {
-      disabled: i,
-      value: t,
-      mode: a,
-      onClick: this.toggleRecordMode,
-      onChange: e,
-      registerNativeRecorder: s,
-      disableOnClickWhileRecording: u
-    })
-  }
-  constructor(e) {
-    super(e), E(this, "_input", void 0), E(this, "gs", void 0), E(this, "_mounted", !1), E(this, "recordStart", () => {
-      c.isPlatformEmbedded && !u && (this.gs = new o.Z, this.gs.on("change", this.handleGSChange)), this.setState({
-        mode: l.c.RECORDING
-      })
-    }), E(this, "recordEnd", () => {
-      this.cleanUp(), this.setState({
-        mode: l.c.DEFAULT
-      })
-    }), E(this, "toggleRecordMode", () => {
-      this.state.mode === l.c.DEFAULT ? this.recordStart() : this.recordEnd()
-    }), E(this, "handleComboKeys", (e, s, t) => {
-      if (t.preventDefault(), "keydown" === t.type) {
-        let e = s.map(e => [_.MoX.KEYBOARD_KEY, r()(e), _.CgE.BROWSER]),
-          {
-            keyCode: n
-          } = t;
-        null == e.find(e => {
-          let [, s] = e;
-          return n === s
-        }) && e.push([_.MoX.KEYBOARD_KEY, n, _.CgE.BROWSER]), this.handleComboChange(e)
-      }
-    }), E(this, "handleGSChange", e => {
-      if (!1 === this._mounted) return;
-      let s = [...e.combo];
-      this.handleComboChange(s)
-    }), E(this, "handleNativeChange", e => {
-      e.length > 0 && this.handleComboChange(e), this.recordEnd()
-    });
-    let {
-      defaultValue: s
-    } = e;
-    this.state = {
-      codes: s,
-      mode: l.c.DEFAULT
+let m = d.isPlatformEmbedded && null != u.ZP.getDiscordUtils().inputCaptureRegisterElement;
+class p extends i.PureComponent {
+    componentDidMount() {
+        this._mounted = !0;
     }
-  }
+    componentWillUnmount() {
+        this._mounted = !1, this.cleanUp();
+    }
+    componentDidUpdate(e) {
+        this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue });
+    }
+    cleanUp() {
+        d.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), this.gs = null);
+    }
+    handleComboChange(e) {
+        let {mode: t} = this.state, {onChange: n} = this.props;
+        t === a.c.RECORDING && (null != n && n(e), this.setState({ codes: e }));
+    }
+    render() {
+        let e, t;
+        let {
+                codes: n,
+                mode: i
+            } = this.state, {disabled: r} = this.props;
+        return m ? (t = u.ZP.getDiscordUtils().inputCaptureRegisterElement, e = this.handleNativeChange) : !d.isPlatformEmbedded && (e = this.handleComboKeys), (0, s.jsx)(a.Z, {
+            disabled: r,
+            value: n,
+            mode: i,
+            onClick: this.toggleRecordMode,
+            onChange: e,
+            registerNativeRecorder: t,
+            disableOnClickWhileRecording: m
+        });
+    }
+    constructor(e) {
+        super(e), h(this, '_input', void 0), h(this, 'gs', void 0), h(this, '_mounted', !1), h(this, 'recordStart', () => {
+            d.isPlatformEmbedded && !m && (this.gs = new l.Z(), this.gs.on('change', this.handleGSChange)), this.setState({ mode: a.c.RECORDING });
+        }), h(this, 'recordEnd', () => {
+            this.cleanUp(), this.setState({ mode: a.c.DEFAULT });
+        }), h(this, 'toggleRecordMode', () => {
+            this.state.mode === a.c.DEFAULT ? this.recordStart() : this.recordEnd();
+        }), h(this, 'handleComboKeys', (e, t, n) => {
+            if (n.preventDefault(), 'keydown' === n.type) {
+                let e = t.map(e => [
+                        c.MoX.KEYBOARD_KEY,
+                        o()(e),
+                        c.CgE.BROWSER
+                    ]), {keyCode: s} = n;
+                null == e.find(e => {
+                    let [, t] = e;
+                    return s === t;
+                }) && e.push([
+                    c.MoX.KEYBOARD_KEY,
+                    s,
+                    c.CgE.BROWSER
+                ]), this.handleComboChange(e);
+            }
+        }), h(this, 'handleGSChange', e => {
+            if (!1 === this._mounted)
+                return;
+            let t = [...e.combo];
+            this.handleComboChange(t);
+        }), h(this, 'handleNativeChange', e => {
+            e.length > 0 && this.handleComboChange(e), this.recordEnd();
+        });
+        let {defaultValue: t} = e;
+        this.state = {
+            codes: t,
+            mode: a.c.DEFAULT
+        };
+    }
 }
-s.Z = T
+t.Z = p;

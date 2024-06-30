@@ -1,10 +1,9 @@
-t.d(s, {
-  W: function() {
-    return a
-  }
+s.d(t, {
+    W: function () {
+        return a;
+    }
 });
 let n = {};
-
 function a() {
-  return n
+    return n;
 }

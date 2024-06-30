@@ -1,164 +1,145 @@
-n.d(t, {
-  Z: function() {
-    return M
-  }
-}), n(47120), n(411104);
-var s = n(735250),
-  a = n(470079),
-  i = n(120356),
-  o = n.n(i),
-  r = n(512722),
-  l = n.n(r),
-  c = n(442837),
-  d = n(481060),
-  u = n(976255),
-  _ = n(366939),
-  p = n(623573),
-  m = n(190947),
-  f = n(275850),
-  E = n(906732),
-  I = n(15640),
-  C = n(246946),
-  h = n(853872),
-  N = n(509545),
-  P = n(74538),
-  g = n(212895),
-  T = n(296848),
-  S = n(374649),
-  R = n(981631),
-  A = n(689938),
-  b = n(663950),
-  x = n(83922);
-
-function M(e) {
-  let {
-    subscription: t,
-    onPaymentSourceAdded: n,
-    highlightAddPaymentMethodButton: i,
-    dropdownClassName: r,
-    analyticsLocation: M,
-    currentInvoicePreview: y,
-    disabled: B = !1
-  } = e, D = (0, c.e7)([C.Z], () => C.Z.hidePersonalInformation), [O, v] = (0, c.Wu)([h.Z], () => [h.Z.paymentSources, h.Z.hasFetchedPaymentSources]), U = (0, I.V)((0, T.yb)(t)), {
-    analyticsLocations: Z
-  } = (0, E.ZP)(), j = a.useMemo(() => Object.values(O).filter(e => !e.invalid), [O]), [w, k] = a.useState(!1), [G, F] = a.useState(t.currency), Y = async (e, n) => {
-    if (null == t) throw Error("missing subscription and paymentSource");
-    null == e ? await _.fG(t, n, Z, M) : await _.tq(t, e, n, Z, M), k(!1), F(n)
-  }, H = async (e, n, s) => {
-    k(!0);
-    let a = await (0, S.hz)({
-      subscriptionId: t.id,
-      paymentSourceId: null == e ? void 0 : e.id,
-      renewal: !0,
-      currency: n,
-      analyticsLocations: Z,
-      analyticsLocation: M
-    });
-    y.currency !== a.currency || y.currency === a.currency && y.total !== a.total ? await L(a, () => {
-      s(e, n)
-    }, () => {
-      k(!1)
-    }) : s(e, n)
-  }, W = e => {
-    let n = N.Z.get(t.planIdForCurrencies);
-    l()(null != e, "paymentSource not specified for change"), l()(null != n, "Unable to fetch plan");
-    let s = (0, g.DE)(n.id, e.id, !1);
-    return s.length > 0 ? s[0] : R.pKx.USD
-  }, V = e => {
-    null != e && H(e, W(e), Y)
-  }, z = e => {
-    (0, g.i1)(e.id, (0, T.yb)(t)).then(() => {
-      H(e, W(e), Y)
-    }), "function" == typeof n && n(e.id)
-  }, K = () => {
-    (0, d.openModalLazy)(async () => e => (0, s.jsx)(p.default, {
-      ...e,
-      onAddPaymentSource: z,
-      analyticsLocation: M
-    }), {
-      onCloseCallback: () => {
-        (0, u.fw)()
-      },
-      onCloseRequest: R.dG4
-    })
-  };
-  if (t.isPurchasedExternally) return (e => {
-    l()(null != e.paymentGateway, "Expected payment gateway when managed externally");
-    let t = (0, P.JE)(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
-    return (0, s.jsx)(d.Anchor, {
-      href: t,
-      useDefaultUnderlineStyles: !1,
-      className: b.externalLink,
-      children: (0, s.jsx)(d.Button, {
-        fullWidth: !0,
-        look: d.Button.Looks.FILLED,
-        color: d.Button.Colors.PRIMARY,
-        children: A.Z.Messages.BILLING_MANAGE_BILLING
-      })
-    })
-  })(t);
-  if (!v || !U) return (0, s.jsx)(d.Spinner, {});
-  if (!(j.length > 0)) return (0, s.jsx)(d.Button, {
-    fullWidth: !0,
-    look: d.Button.Looks.FILLED,
-    color: i ? d.Button.Colors.BRAND : d.Button.Colors.PRIMARY,
-    onClick: K,
-    children: A.Z.Messages.BILLING_ADD_PAYMENT_METHOD
-  });
-  else {
-    let e = N.Z.get(t.planIdForCurrencies);
-    l()(null != e, "Unable to fetch plan");
-    let n = (0, g.DE)(e, t.paymentSourceId, !1);
-    return (0, s.jsxs)(s.Fragment, {
-      children: [(() => {
-        let e = t.paymentSourceId;
-        return (0, s.jsx)(f.Z, {
-          prependOption: null == e ? {
-            label: A.Z.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION,
-            value: null
-          } : null,
-          className: r,
-          paymentSources: j,
-          hidePersonalInformation: D,
-          selectedPaymentSourceId: e,
-          onChange: V,
-          onPaymentSourceAdd: K,
-          dropdownLoading: w,
-          disabled: B
-        })
-      })(), null != t.paymentSourceId ? (0, s.jsx)(m.b, {
-        currencies: n,
-        children: (0, s.jsxs)("div", {
-          className: o()(b.currency, x.flex, x.alignCenter),
-          children: [(0, s.jsx)("div", {
-            children: A.Z.Messages.PAYMENT_CURRENCY_PAYING_IN
-          }), (0, s.jsx)(m.Z, {
-            className: b.currencyDropdown,
-            selectedCurrency: G,
-            currencies: n,
-            onChange: e => {
-              H(void 0, e, Y)
-            }
-          })]
-        })
-      }) : null]
-    })
-  }
-}
-let L = async (e, t, a) => {
-  let i = await (0, d.openModalLazy)(async () => {
-    let {
-      default: i
-    } = await n.e("97516").then(n.bind(n, 358927));
-    return n => (0, s.jsx)(i, {
-      newInvoice: e,
-      onConfirm: t,
-      onCancel: a,
-      modalProps: n
-    })
-  }, {
-    onCloseRequest: () => {
-      null != i && (0, d.closeModal)(i), a()
+s.d(t, {
+    Z: function () {
+        return f;
     }
-  })
+}), s(47120), s(411104);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(481060), _ = s(976255), E = s(366939), u = s(623573), T = s(190947), I = s(275850), S = s(906732), N = s(15640), C = s(246946), m = s(853872), A = s(509545), h = s(74538), g = s(212895), O = s(296848), p = s(374649), R = s(981631), x = s(689938), M = s(663950), D = s(83922);
+function f(e) {
+    let {
+            subscription: t,
+            onPaymentSourceAdded: s,
+            highlightAddPaymentMethodButton: i,
+            dropdownClassName: o,
+            analyticsLocation: f,
+            currentInvoicePreview: L,
+            disabled: Z = !1
+        } = e, b = (0, c.e7)([C.Z], () => C.Z.hidePersonalInformation), [v, j] = (0, c.Wu)([m.Z], () => [
+            m.Z.paymentSources,
+            m.Z.hasFetchedPaymentSources
+        ]), B = (0, N.V)((0, O.yb)(t)), {analyticsLocations: U} = (0, S.ZP)(), G = a.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [F, y] = a.useState(!1), [V, Y] = a.useState(t.currency), w = async (e, s) => {
+            if (null == t)
+                throw Error('missing subscription and paymentSource');
+            null == e ? await E.fG(t, s, U, f) : await E.tq(t, e, s, U, f), y(!1), Y(s);
+        }, k = async (e, s, n) => {
+            y(!0);
+            let a = await (0, p.hz)({
+                subscriptionId: t.id,
+                paymentSourceId: null == e ? void 0 : e.id,
+                renewal: !0,
+                currency: s,
+                analyticsLocations: U,
+                analyticsLocation: f
+            });
+            L.currency !== a.currency || L.currency === a.currency && L.total !== a.total ? await P(a, () => {
+                n(e, s);
+            }, () => {
+                y(!1);
+            }) : n(e, s);
+        }, H = e => {
+            let s = A.Z.get(t.planIdForCurrencies);
+            l()(null != e, 'paymentSource not specified for change'), l()(null != s, 'Unable to fetch plan');
+            let n = (0, g.DE)(s.id, e.id, !1);
+            return n.length > 0 ? n[0] : R.pKx.USD;
+        }, W = e => {
+            null != e && k(e, H(e), w);
+        }, K = e => {
+            (0, g.i1)(e.id, (0, O.yb)(t)).then(() => {
+                k(e, H(e), w);
+            }), 'function' == typeof s && s(e.id);
+        }, z = () => {
+            (0, d.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
+                ...e,
+                onAddPaymentSource: K,
+                analyticsLocation: f
+            }), {
+                onCloseCallback: () => {
+                    (0, _.fw)();
+                },
+                onCloseRequest: R.dG4
+            });
+        };
+    if (t.isPurchasedExternally)
+        return (e => {
+            l()(null != e.paymentGateway, 'Expected payment gateway when managed externally');
+            let t = (0, h.JE)(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT');
+            return (0, n.jsx)(d.Anchor, {
+                href: t,
+                useDefaultUnderlineStyles: !1,
+                className: M.externalLink,
+                children: (0, n.jsx)(d.Button, {
+                    fullWidth: !0,
+                    look: d.Button.Looks.FILLED,
+                    color: d.Button.Colors.PRIMARY,
+                    children: x.Z.Messages.BILLING_MANAGE_BILLING
+                })
+            });
+        })(t);
+    if (!j || !B)
+        return (0, n.jsx)(d.Spinner, {});
+    if (!(G.length > 0))
+        return (0, n.jsx)(d.Button, {
+            fullWidth: !0,
+            look: d.Button.Looks.FILLED,
+            color: i ? d.Button.Colors.BRAND : d.Button.Colors.PRIMARY,
+            onClick: z,
+            children: x.Z.Messages.BILLING_ADD_PAYMENT_METHOD
+        });
+    else {
+        let e = A.Z.get(t.planIdForCurrencies);
+        l()(null != e, 'Unable to fetch plan');
+        let s = (0, g.DE)(e, t.paymentSourceId, !1);
+        return (0, n.jsxs)(n.Fragment, {
+            children: [
+                (() => {
+                    let e = t.paymentSourceId;
+                    return (0, n.jsx)(I.Z, {
+                        prependOption: null == e ? {
+                            label: x.Z.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION,
+                            value: null
+                        } : null,
+                        className: o,
+                        paymentSources: G,
+                        hidePersonalInformation: b,
+                        selectedPaymentSourceId: e,
+                        onChange: W,
+                        onPaymentSourceAdd: z,
+                        dropdownLoading: F,
+                        disabled: Z
+                    });
+                })(),
+                null != t.paymentSourceId ? (0, n.jsx)(T.b, {
+                    currencies: s,
+                    children: (0, n.jsxs)('div', {
+                        className: r()(M.currency, D.flex, D.alignCenter),
+                        children: [
+                            (0, n.jsx)('div', { children: x.Z.Messages.PAYMENT_CURRENCY_PAYING_IN }),
+                            (0, n.jsx)(T.Z, {
+                                className: M.currencyDropdown,
+                                selectedCurrency: V,
+                                currencies: s,
+                                onChange: e => {
+                                    k(void 0, e, w);
+                                }
+                            })
+                        ]
+                    })
+                }) : null
+            ]
+        });
+    }
 }
+let P = async (e, t, a) => {
+    let i = await (0, d.openModalLazy)(async () => {
+        let {default: i} = await s.e('97516').then(s.bind(s, 358927));
+        return s => (0, n.jsx)(i, {
+            newInvoice: e,
+            onConfirm: t,
+            onCancel: a,
+            modalProps: s
+        });
+    }, {
+        onCloseRequest: () => {
+            null != i && (0, d.closeModal)(i), a();
+        }
+    });
+};

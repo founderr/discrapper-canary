@@ -1,63 +1,56 @@
-n(47120);
-var s = n(735250),
-  a = n(470079),
-  l = n(994640),
-  i = n(247007),
-  r = n(999464),
-  o = n(503406),
-  c = n(463115),
-  d = n(888592);
-t.Z = e => {
-  let {
-    onClose: t,
-    invite: n,
-    forceGuildScrollHeight: u = !0,
-    isNUXFlow: _
-  } = e, [N, E] = a.useState([d.tF.VERIFY_EMAIL]), [m, I] = a.useState(""), [C, T] = a.useState(""), [h, x] = a.useState(void 0), [g, v] = a.useState([]), S = e => {
-    E(N.concat(e).slice(-4))
-  };
-  switch (N[N.length - 1]) {
+a(47120);
+var n = a(735250), t = a(470079), l = a(994640), i = a(247007), r = a(999464), o = a(503406), c = a(463115), d = a(888592);
+s.Z = e => {
+    let {
+            onClose: s,
+            invite: a,
+            forceGuildScrollHeight: N = !0,
+            isNUXFlow: u
+        } = e, [_, m] = t.useState([d.tF.VERIFY_EMAIL]), [E, I] = t.useState(''), [x, h] = t.useState(''), [C, T] = t.useState(void 0), [g, O] = t.useState([]), v = e => {
+            m(_.concat(e).slice(-4));
+        };
+    switch (_[_.length - 1]) {
     case d.tF.VERIFY_EMAIL:
-      return (0, s.jsx)(l.Z, {
-        setGuildsInfo: v,
-        setStep: S,
-        email: m,
-        setEmail: I,
-        setGuildId: x,
-        invite: n,
-        onClose: t,
-        isNUXFlow: _
-      });
+        return (0, n.jsx)(l.Z, {
+            setGuildsInfo: O,
+            setStep: v,
+            email: E,
+            setEmail: I,
+            setGuildId: T,
+            invite: a,
+            onClose: s,
+            isNUXFlow: u
+        });
     case d.tF.SELECT_SCHOOL:
-      return (0, s.jsx)(i.Z, {
-        guildsInfo: g,
-        setStep: S,
-        email: m,
-        setGuildId: x,
-        forceGuildScrollHeight: u
-      });
+        return (0, n.jsx)(i.Z, {
+            guildsInfo: g,
+            setStep: v,
+            email: E,
+            setGuildId: T,
+            forceGuildScrollHeight: N
+        });
     case d.tF.SUBMIT_SCHOOL:
-      return (0, s.jsx)(r.Z, {
-        onBack: () => {
-          N.length > 1 && E(N.slice(0, -1).slice(-4))
-        },
-        setStep: S,
-        email: m,
-        school: C,
-        setSchool: T
-      });
+        return (0, n.jsx)(r.Z, {
+            onBack: () => {
+                _.length > 1 && m(_.slice(0, -1).slice(-4));
+            },
+            setStep: v,
+            email: E,
+            school: x,
+            setSchool: h
+        });
     case d.tF.VERIFY_PIN:
-      return (0, s.jsx)(o.Z, {
-        email: m,
-        onClose: t,
-        guildId: h
-      });
+        return (0, n.jsx)(o.Z, {
+            email: E,
+            onClose: s,
+            guildId: C
+        });
     case d.tF.EMAIL_WAITLIST:
-      return (0, s.jsx)(c.Z, {
-        setStep: S,
-        school: C
-      });
+        return (0, n.jsx)(c.Z, {
+            setStep: v,
+            school: x
+        });
     default:
-      return null
-  }
-}
+        return null;
+    }
+};

@@ -1,40 +1,26 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return c
-  }
+    Z: function () {
+        return d;
+    }
 });
-var i = n(594190),
-  r = n(592125),
-  s = n(19780),
-  o = n(944486),
-  a = n(626135),
-  l = n(710111),
-  u = n(981631),
-  _ = n(474936);
-
-function c(e, t, n, c) {
-  var d, E, I;
-  let T = r.Z.getChannel(o.Z.getVoiceChannelId()),
-    h = null == T ? void 0 : T.getGuildId(),
-    f = s.Z.getMediaSessionId(),
-    S = s.Z.getRTCConnectionId(),
-    A = null === (d = i.ZP.getCurrentGameForAnalytics()) || void 0 === d ? void 0 : d.name,
-    N = h !== n.guildId && n.guildId !== l.X8;
-  let m = (E = n, I = N, E.guildId === l.X8 ? "default" : I ? "custom-external" : "custom");
-  a.default.track(u.rMx.PREMIUM_FEATURE_USAGE, {
-    feature_name: _.QP.SOUNDBOARD_PLAY,
-    feature_tier: N ? _.h1.PREMIUM_STANDARD : _.h1.FREE,
-    guild_id: h,
-    location_stack: e,
-    rtc_connection_id: S,
-    media_session_id: f,
-    in_overlay: t,
-    application_name: A,
-    emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
-    feature_selection: m,
-    feature_selection_id: n.soundId,
-    sound_type: c,
-    is_broadcast: null != T && T.isBroadcastChannel()
-  })
+var r = n(594190), i = n(592125), a = n(19780), o = n(944486), s = n(626135), l = n(710111), u = n(981631), c = n(474936);
+function d(e, t, n, d) {
+    var _, E, f;
+    let h = i.Z.getChannel(o.Z.getVoiceChannelId()), p = null == h ? void 0 : h.getGuildId(), m = a.Z.getMediaSessionId(), I = a.Z.getRTCConnectionId(), T = null === (_ = r.ZP.getCurrentGameForAnalytics()) || void 0 === _ ? void 0 : _.name, g = p !== n.guildId && n.guildId !== l.X8;
+    let S = (E = n, f = g, E.guildId === l.X8 ? 'default' : f ? 'custom-external' : 'custom');
+    s.default.track(u.rMx.PREMIUM_FEATURE_USAGE, {
+        feature_name: c.QP.SOUNDBOARD_PLAY,
+        feature_tier: g ? c.h1.PREMIUM_STANDARD : c.h1.FREE,
+        guild_id: p,
+        location_stack: e,
+        rtc_connection_id: I,
+        media_session_id: m,
+        in_overlay: t,
+        application_name: T,
+        emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
+        feature_selection: S,
+        feature_selection_id: n.soundId,
+        sound_type: d,
+        is_broadcast: null != h && h.isBroadcastChannel()
+    });
 }

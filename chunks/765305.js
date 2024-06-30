@@ -1,85 +1,80 @@
-"use strict";
 n.d(t, {
-  $I: function() {
-    return p
-  },
-  Fc: function() {
-    return D
-  },
-  Ku: function() {
-    return R
-  },
-  VF: function() {
-    return M
-  },
-  WX: function() {
-    return r
-  },
-  X_: function() {
-    return l
-  },
-  _U: function() {
-    return C
-  },
-  fL: function() {
-    return a
-  },
-  gG: function() {
-    return m
-  },
-  gv: function() {
-    return u
-  },
-  j8: function() {
-    return o
-  },
-  nz: function() {
-    return g
-  },
-  p: function() {
-    return A
-  },
-  p1: function() {
-    return i
-  },
-  pg: function() {
-    return v
-  },
-  rC: function() {
-    return L
-  },
-  sy: function() {
-    return s
-  },
-  wm: function() {
-    return N
-  },
-  zV: function() {
-    return P
-  },
-  zw: function() {
-    return O
-  }
+    $I: function () {
+        return v;
+    },
+    Fc: function () {
+        return D;
+    },
+    Ku: function () {
+        return N;
+    },
+    VF: function () {
+        return L;
+    },
+    WX: function () {
+        return i;
+    },
+    X_: function () {
+        return l;
+    },
+    _U: function () {
+        return R;
+    },
+    fL: function () {
+        return s;
+    },
+    gG: function () {
+        return S;
+    },
+    gv: function () {
+        return u;
+    },
+    j8: function () {
+        return o;
+    },
+    nz: function () {
+        return O;
+    },
+    p: function () {
+        return T;
+    },
+    p1: function () {
+        return r;
+    },
+    pg: function () {
+        return C;
+    },
+    rC: function () {
+        return y;
+    },
+    sy: function () {
+        return a;
+    },
+    wm: function () {
+        return g;
+    },
+    zV: function () {
+        return b;
+    },
+    zw: function () {
+        return A;
+    }
 }), n(47120);
-var i, r, s, o, a, l, u, _, c, d, E, I, T, h, f = n(70956),
-  S = n(981631);
-let A = 100,
-  N = 1e3,
-  m = 100,
-  O = "Guild Events Modal",
-  R = "-1";
-(_ = i || (i = {}))[_.SCHEDULED = 1] = "SCHEDULED", _[_.ACTIVE = 2] = "ACTIVE", _[_.COMPLETED = 3] = "COMPLETED", _[_.CANCELED = 4] = "CANCELED";
-let p = new Set([3, 4]);
-(c = r || (r = {}))[c.NONE = 0] = "NONE", c[c.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", c[c.VOICE = 2] = "VOICE", c[c.EXTERNAL = 3] = "EXTERNAL", c[c.PRIME_TIME = 4] = "PRIME_TIME", (d = s || (s = {}))[d.EVENT_START = 1] = "EVENT_START", (E = o || (o = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
-let g = {
-    1: S.d4z.GUILD_STAGE_VOICE,
-    2: S.d4z.GUILD_VOICE
-  },
-  C = new Set([3]),
-  v = new Set([1, 2]);
-(I = a || (a = {}))[I.EVENT_INFO = 0] = "EVENT_INFO", I[I.RSVP_LIST = 1] = "RSVP_LIST";
-let L = 100,
-  D = 2 * f.Z.Millis.DAY,
-  M = 12 * f.Z.Millis.HOUR,
-  P = 4;
-(T = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", T.EVENT_STARTING_SOON = "Event Starting Soon Notice", (h = u || (u = {}))[h.UNINTERESTED = 0] = "UNINTERESTED", h[h.INTERESTED = 1] = "INTERESTED"
+var r, i, a, o, s, l, u, c, d, _, E, f, h, p, m = n(70956), I = n(981631);
+let T = 100, g = 1000, S = 100, A = 'Guild Events Modal', N = '-1';
+(c = r || (r = {}))[c.SCHEDULED = 1] = 'SCHEDULED', c[c.ACTIVE = 2] = 'ACTIVE', c[c.COMPLETED = 3] = 'COMPLETED', c[c.CANCELED = 4] = 'CANCELED';
+let v = new Set([
+    3,
+    4
+]);
+(d = i || (i = {}))[d.NONE = 0] = 'NONE', d[d.STAGE_INSTANCE = 1] = 'STAGE_INSTANCE', d[d.VOICE = 2] = 'VOICE', d[d.EXTERNAL = 3] = 'EXTERNAL', d[d.PRIME_TIME = 4] = 'PRIME_TIME', (_ = a || (a = {}))[_.EVENT_START = 1] = 'EVENT_START', (E = o || (o = {}))[E.PUBLIC = 1] = 'PUBLIC', E[E.GUILD_ONLY = 2] = 'GUILD_ONLY';
+let O = {
+        1: I.d4z.GUILD_STAGE_VOICE,
+        2: I.d4z.GUILD_VOICE
+    }, R = new Set([3]), C = new Set([
+        1,
+        2
+    ]);
+(f = s || (s = {}))[f.EVENT_INFO = 0] = 'EVENT_INFO', f[f.RSVP_LIST = 1] = 'RSVP_LIST';
+let y = 100, D = 2 * m.Z.Millis.DAY, L = 12 * m.Z.Millis.HOUR, b = 4;
+(h = l || (l = {})).NEW_EVENT = 'Upcoming Event Notice', h.EVENT_STARTING_SOON = 'Event Starting Soon Notice', (p = u || (u = {}))[p.UNINTERESTED = 0] = 'UNINTERESTED', p[p.INTERESTED = 1] = 'INTERESTED';

@@ -1,64 +1,42 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return _;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(481060),
-  a = n(404975),
-  l = n(317179),
-  u = n(785717),
-  _ = n(689938),
-  c = n(517117);
-
-function d(e) {
-  let {
-    isHovering: t,
-    location: n,
-    className: r
-  } = e, {
-    trackUserProfileAction: d
-  } = (0, u.KZ)(), {
-    statusReactReplyEnabled: E
-  } = (0, l.t)({
-    location: n
-  });
-  return E ? (0, i.jsxs)(a.ZP, {
-    className: s()(r, c.popover, {
-      [c.visible]: t
-    }),
-    children: [(0, i.jsx)(o.TooltipContainer, {
-      text: _.Z.Messages.USER_PROFILE_SEND_REACTION,
-      children: (0, i.jsx)(a.zx, {
-        className: c.button,
-        "aria-label": _.Z.Messages.USER_PROFILE_SEND_REACTION,
-        onClick: () => {
-          d({
-            action: "PRESS_REACT"
-          })
-        },
-        children: (0, i.jsx)(o.ReactionIcon, {
-          className: c.icon
-        })
-      })
-    }), (0, i.jsx)(o.TooltipContainer, {
-      text: _.Z.Messages.USER_PROFILE_REPLY,
-      children: (0, i.jsx)(a.zx, {
-        className: c.button,
-        "aria-label": _.Z.Messages.USER_PROFILE_REPLY,
-        onClick: () => {
-          d({
-            action: "PRESS_REPLY"
-          })
-        },
-        children: (0, i.jsx)(o.ArrowAngleLeftUpIcon, {
-          className: c.icon
-        })
-      })
-    })]
-  }) : null
+var i = n(120356), a = n.n(i), o = n(481060), s = n(404975), l = n(317179), u = n(785717), c = n(689938), d = n(517117);
+function _(e) {
+    let {
+            isHovering: t,
+            location: n,
+            className: i
+        } = e, {trackUserProfileAction: _} = (0, u.KZ)(), {statusReactReplyEnabled: E} = (0, l.t)({ location: n });
+    return E ? (0, r.jsxs)(s.ZP, {
+        className: a()(i, d.popover, { [d.visible]: t }),
+        children: [
+            (0, r.jsx)(o.TooltipContainer, {
+                text: c.Z.Messages.USER_PROFILE_SEND_REACTION,
+                children: (0, r.jsx)(s.zx, {
+                    className: d.button,
+                    'aria-label': c.Z.Messages.USER_PROFILE_SEND_REACTION,
+                    onClick: () => {
+                        _({ action: 'PRESS_REACT' });
+                    },
+                    children: (0, r.jsx)(o.ReactionIcon, { className: d.icon })
+                })
+            }),
+            (0, r.jsx)(o.TooltipContainer, {
+                text: c.Z.Messages.USER_PROFILE_REPLY,
+                children: (0, r.jsx)(s.zx, {
+                    className: d.button,
+                    'aria-label': c.Z.Messages.USER_PROFILE_REPLY,
+                    onClick: () => {
+                        _({ action: 'PRESS_REPLY' });
+                    },
+                    children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, { className: d.icon })
+                })
+            })
+        ]
+    }) : null;
 }

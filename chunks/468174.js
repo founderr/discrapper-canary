@@ -1,37 +1,30 @@
-n.d(e, {
-  g: function() {
-    return s
-  }
+r.d(e, {
+    g: function () {
+        return i;
+    }
 });
-var r = n(46834),
-  i = n(876122),
-  a = n(633401);
-
-function s(t, e, n = () => {}) {
-  let s;
-  let o = {
-    ...t
-  };
-  void 0 !== o.name && void 0 === o.description && (o.description = o.name);
-  let l = (0, i.Gd)(),
-    u = l.getScope(),
-    c = u.getSpan(),
-    d = function() {
-      if (!!(0, a.z)()) return c ? c.startChild(o) : l.startTransaction(o)
-    }();
-
-  function h() {
-    d && d.finish(), l.getScope().setSpan(c)
-  }
-  u.setSpan(d);
-  try {
-    s = e(d)
-  } catch (t) {
-    throw d && d.setStatus("internal_error"), n(t), h(), t
-  }
-  return (0, r.J8)(s) ? Promise.resolve(s).then(() => {
-    h()
-  }, t => {
-    d && d.setStatus("internal_error"), n(t), h()
-  }) : h(), s
+var n = r(46834), _ = r(876122), a = r(633401);
+function i(t, e, r = () => {
+}) {
+    let i;
+    let o = { ...t };
+    void 0 !== o.name && void 0 === o.description && (o.description = o.name);
+    let E = (0, _.Gd)(), s = E.getScope(), c = s.getSpan(), I = function () {
+            if (!!(0, a.z)())
+                return c ? c.startChild(o) : E.startTransaction(o);
+        }();
+    function R() {
+        I && I.finish(), E.getScope().setSpan(c);
+    }
+    s.setSpan(I);
+    try {
+        i = e(I);
+    } catch (t) {
+        throw I && I.setStatus('internal_error'), r(t), R(), t;
+    }
+    return (0, n.J8)(i) ? Promise.resolve(i).then(() => {
+        R();
+    }, t => {
+        I && I.setStatus('internal_error'), r(t), R();
+    }) : R(), i;
 }

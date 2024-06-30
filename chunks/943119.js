@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  icon: "icon_a94328"
-}
+e.exports = { icon: 'icon_a94328' };

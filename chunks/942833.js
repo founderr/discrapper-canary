@@ -1,33 +1,33 @@
-n.d(e, {
-  C: function() {
-    return l
-  },
-  k: function() {
-    return c
-  }
+t.d(n, {
+    C: function () {
+        return l;
+    },
+    k: function () {
+        return u;
+    }
 });
-var r = n(470079),
-  u = n(937615),
-  i = n(689938);
-
-function l(t) {
-  return r.useMemo(() => {
-    if (null == t) return;
-    let e = null != t.role_id,
-      n = t.attachments_count > 0;
-    if (e && n) return i.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
-    if (e) return i.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-    if (n) return i.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE
-  }, [t])
+var r = t(470079), i = t(937615), o = t(689938);
+function l(e) {
+    return r.useMemo(() => {
+        if (null == e)
+            return;
+        let n = null != e.role_id, t = e.attachments_count > 0;
+        if (n && t)
+            return o.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
+        if (n)
+            return o.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
+        if (t)
+            return o.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
+    }, [e]);
 }
-
-function c(t) {
-  return r.useMemo(() => {
-    if ((null == t ? void 0 : t.price) == null) return;
-    let {
-      amount: e,
-      currency: n
-    } = t.price;
-    return (0, u.T4)(e, n)
-  }, [t])
+function u(e) {
+    return r.useMemo(() => {
+        if ((null == e ? void 0 : e.price) == null)
+            return;
+        let {
+            amount: n,
+            currency: t
+        } = e.price;
+        return (0, i.T4)(n, t);
+    }, [e]);
 }

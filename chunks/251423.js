@@ -1,22 +1,17 @@
-n.d(t, {
-  L: function() {
-    return o
-  }
+n.d(e, {
+    L: function () {
+        return a;
+    }
 });
-var i = n(470079),
-  s = n(442837),
-  a = n(570140),
-  r = n(480387),
-  l = n(726745);
-
-function o() {
-  let e = (0, s.cj)([l.Z], () => ({
-    isLoading: l.Z.getIsValidatingUsers(),
-    multiAccountUsers: l.Z.getUsers()
-  }));
-  return i.useEffect(() => {
-    a.Z.wait(() => {
-      r.HJ()
-    })
-  }, []), e
+var r = n(470079), i = n(442837), l = n(570140), u = n(480387), o = n(726745);
+function a() {
+    let t = (0, i.cj)([o.Z], () => ({
+        isLoading: o.Z.getIsValidatingUsers(),
+        multiAccountUsers: o.Z.getUsers()
+    }));
+    return r.useEffect(() => {
+        l.Z.wait(() => {
+            u.HJ();
+        });
+    }, []), t;
 }

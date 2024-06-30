@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  legacyInputCommandHeader: "legacyInputCommandHeader_c70ab6"
-}
+e.exports = { legacyInputCommandHeader: 'legacyInputCommandHeader_c70ab6' };

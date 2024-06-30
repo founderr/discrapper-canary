@@ -1,35 +1,28 @@
-t.d(s, {
-  C: function() {
-    return _
-  },
-  V: function() {
-    return d
-  }
-}), t(47120);
-var n = t(470079),
-  a = t(392711),
-  i = t.n(a),
-  r = t(442837),
-  o = t(271383),
-  l = t(430824),
-  c = t(353093);
-
+s.d(t, {
+    C: function () {
+        return _;
+    },
+    V: function () {
+        return d;
+    }
+}), s(47120);
+var n = s(470079), a = s(392711), i = s.n(a), r = s(442837), o = s(271383), l = s(430824), c = s(353093);
 function d() {
-  return (0, r.Wu)([l.Z, o.ZP], () => {
-    let e = l.Z.getGuilds();
-    return i()(e).values().filter(e => {
-      var s;
-      return (0, c.EJ)(e) && (null === (s = o.ZP.getSelfMember(e.id)) || void 0 === s ? void 0 : s.joinedAt) != null
-    }).value()
-  })
+    return (0, r.Wu)([
+        l.Z,
+        o.ZP
+    ], () => {
+        let e = l.Z.getGuilds();
+        return i()(e).values().filter(e => {
+            var t;
+            return (0, c.EJ)(e) && (null === (t = o.ZP.getSelfMember(e.id)) || void 0 === t ? void 0 : t.joinedAt) != null;
+        }).value();
+    });
 }
-
 function _() {
-  let e = d();
-  return n.useMemo(() => new Set(e.map(e => {
-    let {
-      id: s
-    } = e;
-    return s
-  })), [e])
+    let e = d();
+    return n.useMemo(() => new Set(e.map(e => {
+        let {id: t} = e;
+        return t;
+    })), [e]);
 }

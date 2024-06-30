@@ -1,37 +1,34 @@
 t.d(n, {
-  Z: function() {
-    return c
-  }
+    Z: function () {
+        return d;
+    }
 });
-var a = t(735250);
+var i = t(735250);
 t(470079);
-var s = t(481060),
-  i = t(131388),
-  l = t(409813),
-  r = t(750143),
-  o = t(590558),
-  d = t(60314);
-
-function c(e) {
-  let {
-    step: n,
-    onClose: t
-  } = e, c = (0, i.Z)(r.X);
-  return n === l.h8.BENEFITS || n === l.h8.CONFIRM ? null : (0, a.jsxs)("div", {
-    className: o.headerContainer,
-    children: [!c && (0, a.jsx)("div", {
-      className: o.headerImageContainer,
-      "aria-hidden": "true",
-      "data-accessibility": "desaturate",
-      children: (0, a.jsx)("img", {
-        src: d,
-        alt: "",
-        className: o.headerImage
-      })
-    }), (0, a.jsx)(s.ModalCloseButton, {
-      withCircleBackground: !0,
-      className: o.closeButton,
-      onClick: t
-    })]
-  })
+var a = t(481060), r = t(131388), o = t(409813), s = t(750143), l = t(590558), c = t(60314);
+function d(e) {
+    let {
+            step: n,
+            onClose: t
+        } = e, d = (0, r.Z)(s.X);
+    return n === o.h8.BENEFITS || n === o.h8.CONFIRM ? null : (0, i.jsxs)('div', {
+        className: l.headerContainer,
+        children: [
+            !d && (0, i.jsx)('div', {
+                className: l.headerImageContainer,
+                'aria-hidden': 'true',
+                'data-accessibility': 'desaturate',
+                children: (0, i.jsx)('img', {
+                    src: c,
+                    alt: '',
+                    className: l.headerImage
+                })
+            }),
+            (0, i.jsx)(a.ModalCloseButton, {
+                withCircleBackground: !0,
+                className: l.closeButton,
+                onClick: t
+            })
+        ]
+    });
 }

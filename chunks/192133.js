@@ -1,211 +1,183 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return w
-  }
+    Z: function () {
+        return x;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(442837),
-  l = n(481060),
-  u = n(100527),
-  _ = n(580552),
-  c = n(314897),
-  d = n(592125),
-  E = n(246946),
-  I = n(5192),
-  T = n(51144),
-  h = n(342656),
-  f = n(621853),
-  S = n(652853),
-  A = n(421486),
-  N = n(138394),
-  m = n(790711),
-  O = n(248345),
-  R = n(337125),
-  p = n(19836),
-  g = n(207570),
-  C = n(77097),
-  v = n(538564),
-  L = n(489642),
-  D = n(319300),
-  M = n(591600),
-  P = n(579729),
-  y = n(186395),
-  U = n(584045),
-  b = n(981631),
-  G = n(841719);
-
-function w(e) {
-  var t, n, s;
-  let {
-    activity: w,
-    customStatusActivity: B,
-    user: x,
-    displayProfile: k,
-    guild: V,
-    guildMember: Z,
-    channelId: H,
-    onClose: F,
-    setNote: Y = !1,
-    canDM: j,
-    hideNote: W = !1,
-    showCopiableUsername: K = !1,
-    analyticsParams: z
-  } = e, q = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation), X = (0, a.e7)([f.Z], () => {
-    var e;
-    return null === (e = f.Z.getUserProfile(x.id)) || void 0 === e ? void 0 : e.application
-  }), Q = (0, a.e7)([d.Z], () => d.Z.getChannel(H)), {
-    theme: J
-  } = (0, S.z)(), $ = r.useRef(null), [ee, et] = r.useState(!0), en = r.useCallback(() => {
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(100527), c = n(580552), d = n(314897), _ = n(592125), E = n(246946), f = n(5192), h = n(51144), p = n(342656), m = n(621853), I = n(652853), T = n(421486), g = n(138394), S = n(790711), A = n(248345), N = n(337125), v = n(19836), O = n(207570), R = n(77097), C = n(538564), y = n(489642), D = n(319300), L = n(591600), b = n(579729), M = n(186395), P = n(584045), U = n(981631), w = n(841719);
+function x(e) {
+    var t, n, a;
     let {
-      current: e
-    } = $;
-    null != e && et(0 === e.getScrollerState().scrollTop)
-  }, []);
-  r.useLayoutEffect(() => {
-    var e;
-    let {
-      current: t
-    } = $;
-    null != t && (null === (e = t.getScrollerNode()) || void 0 === e || e.scrollTo({
-      top: 0
-    }))
-  }, []);
-  let ei = (0, a.e7)([c.default], () => c.default.getId()),
-    er = x.id === ei,
-    es = x.bot || er,
-    {
-      enabled: eo
-    } = (0, h.qI)({
-      autoTrackExposure: !0,
-      location: u.Z.PROFILE_POPOUT,
-      disable: es
+            activity: x,
+            customStatusActivity: G,
+            user: k,
+            displayProfile: B,
+            guild: F,
+            guildMember: V,
+            channelId: H,
+            onClose: Z,
+            setNote: Y = !1,
+            canDM: j,
+            hideNote: W = !1,
+            showCopiableUsername: K = !1,
+            analyticsParams: z
+        } = e, q = (0, s.e7)([E.Z], () => E.Z.hidePersonalInformation), Q = (0, s.e7)([m.Z], () => {
+            var e;
+            return null === (e = m.Z.getUserProfile(k.id)) || void 0 === e ? void 0 : e.application;
+        }), X = (0, s.e7)([_.Z], () => _.Z.getChannel(H)), {theme: $} = (0, I.z)(), J = i.useRef(null), [ee, et] = i.useState(!0), en = i.useCallback(() => {
+            let {current: e} = J;
+            null != e && et(0 === e.getScrollerState().scrollTop);
+        }, []);
+    i.useLayoutEffect(() => {
+        var e;
+        let {current: t} = J;
+        null != t && (null === (e = t.getScrollerNode()) || void 0 === e || e.scrollTo({ top: 0 }));
+    }, []);
+    let er = (0, s.e7)([d.default], () => d.default.getId()), ei = k.id === er, ea = k.bot || ei, {enabled: eo} = (0, p.qI)({
+            autoTrackExposure: !0,
+            location: u.Z.PROFILE_POPOUT,
+            disable: ea
+        });
+    if ((0, c.Z)(k.id))
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(P.Z, {
+                    className: w.usernameSection,
+                    user: k,
+                    nickname: h.ZP.getName(k),
+                    pronouns: null
+                }),
+                (0, r.jsxs)(l.HeadingLevel, {
+                    children: [
+                        (0, r.jsx)(g.Z, { className: w.divider }),
+                        (0, r.jsx)(l.AdvancedScroller, {
+                            className: o()(w.scroller, { [w.scrollerSeparator]: !ee }),
+                            onScroll: en,
+                            ref: J,
+                            children: (0, r.jsx)(v.Z, {
+                                bio: null,
+                                hidePersonalInformation: !1,
+                                userId: k.id,
+                                lastSection: !0
+                            })
+                        })
+                    ]
+                })
+            ]
+        });
+    if (k.isSystemUser())
+        return (0, r.jsx)(P.Z, {
+            user: k,
+            nickname: h.ZP.getName(k),
+            pronouns: null,
+            className: w.usernameSection,
+            lastSection: !0
+        });
+    if (k.isNonUserBot())
+        return (0, r.jsx)(P.Z, {
+            user: k,
+            nickname: null,
+            pronouns: null,
+            className: w.usernameSection,
+            lastSection: !0
+        });
+    let es = null !== (t = f.ZP.getNickname(null == F ? void 0 : F.id, H, k)) && void 0 !== t ? t : h.ZP.getName(k), el = {
+            location: {
+                page: U.ZY5.USER_POPOUT,
+                section: U.jXE.USER_PROFILE
+            }
+        };
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(P.Z, {
+                className: w.usernameSection,
+                user: k,
+                nickname: es,
+                pronouns: null == B ? void 0 : B.pronouns,
+                usernameIcon: k.hasAvatarForGuild(null == F ? void 0 : F.id) && (0, r.jsx)(S.Z, {
+                    user: k,
+                    nickname: es
+                }),
+                shouldCopyOnClick: K
+            }),
+            (0, r.jsxs)(l.HeadingLevel, {
+                children: [
+                    (0, r.jsx)(C.Z, {
+                        className: w.customStatusSection,
+                        customStatusActivity: G
+                    }),
+                    (0, r.jsx)(g.Z, { className: w.divider }),
+                    (0, r.jsxs)(l.AdvancedScroller, {
+                        className: o()(w.scroller, { [w.scrollerSeparator]: !ee }),
+                        onScroll: en,
+                        ref: J,
+                        children: [
+                            (0, r.jsx)(O.Z, {
+                                user: k,
+                                guildId: null == F ? void 0 : F.id
+                            }),
+                            (0, r.jsx)(v.Z, {
+                                isUsingGuildBio: null !== (n = null == B ? void 0 : B.isUsingGuildMemberBio()) && void 0 !== n && n,
+                                bio: null == B ? void 0 : B.bio,
+                                guild: F,
+                                hidePersonalInformation: q
+                            }),
+                            eo && (0, r.jsx)(T.ZP, {
+                                className: w.profileMutuals,
+                                user: k,
+                                onClose: Z
+                            }),
+                            (0, r.jsx)(D.Z, {
+                                userId: k.id,
+                                guildId: null == F ? void 0 : F.id
+                            }),
+                            (0, r.jsx)(A.Z, {
+                                activity: x,
+                                user: k,
+                                guild: F,
+                                channelId: H,
+                                onClose: Z,
+                                analyticsParams: (null == z ? void 0 : z.location) != null ? z : el
+                            }),
+                            (null == Q ? void 0 : Q.popularApplicationCommandIds) != null && null != X ? (0, r.jsx)(b.Z, {
+                                applicationId: Q.id,
+                                commandIds: Q.popularApplicationCommandIds,
+                                channel: X,
+                                guildId: null == F ? void 0 : F.id,
+                                onClick: Z
+                            }) : null,
+                            (0, r.jsx)(N.Z, {
+                                user: k,
+                                guildId: null == F ? void 0 : F.id
+                            }),
+                            (0, r.jsx)(M.Z, {
+                                user: k,
+                                guild: F,
+                                guildMember: V,
+                                showBorder: null !== (a = null == B ? void 0 : B.canEditThemes) && void 0 !== a && a
+                            }),
+                            (0, r.jsx)(R.Z, {
+                                userId: k.id,
+                                channelId: H,
+                                guild: F,
+                                onClose: Z,
+                                theme: $
+                            }),
+                            !q && !W && (0, r.jsx)(L.Z, {
+                                user: k,
+                                setNote: Y,
+                                autoFocus: !j,
+                                lastSection: !j
+                            }),
+                            !k.isNonUserBot() && j && (0, r.jsx)(y.Z, {
+                                user: k,
+                                setNote: Y,
+                                canDM: j,
+                                onClose: Z
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
     });
-  if ((0, _.Z)(x.id)) return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(U.Z, {
-      className: G.usernameSection,
-      user: x,
-      nickname: T.ZP.getName(x),
-      pronouns: null
-    }), (0, i.jsxs)(l.HeadingLevel, {
-      children: [(0, i.jsx)(N.Z, {
-        className: G.divider
-      }), (0, i.jsx)(l.AdvancedScroller, {
-        className: o()(G.scroller, {
-          [G.scrollerSeparator]: !ee
-        }),
-        onScroll: en,
-        ref: $,
-        children: (0, i.jsx)(p.Z, {
-          bio: null,
-          hidePersonalInformation: !1,
-          userId: x.id,
-          lastSection: !0
-        })
-      })]
-    })]
-  });
-  if (x.isSystemUser()) return (0, i.jsx)(U.Z, {
-    user: x,
-    nickname: T.ZP.getName(x),
-    pronouns: null,
-    className: G.usernameSection,
-    lastSection: !0
-  });
-  if (x.isNonUserBot()) return (0, i.jsx)(U.Z, {
-    user: x,
-    nickname: null,
-    pronouns: null,
-    className: G.usernameSection,
-    lastSection: !0
-  });
-  let ea = null !== (t = I.ZP.getNickname(null == V ? void 0 : V.id, H, x)) && void 0 !== t ? t : T.ZP.getName(x),
-    el = {
-      location: {
-        page: b.ZY5.USER_POPOUT,
-        section: b.jXE.USER_PROFILE
-      }
-    };
-  return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(U.Z, {
-      className: G.usernameSection,
-      user: x,
-      nickname: ea,
-      pronouns: null == k ? void 0 : k.pronouns,
-      usernameIcon: x.hasAvatarForGuild(null == V ? void 0 : V.id) && (0, i.jsx)(m.Z, {
-        user: x,
-        nickname: ea
-      }),
-      shouldCopyOnClick: K
-    }), (0, i.jsxs)(l.HeadingLevel, {
-      children: [(0, i.jsx)(v.Z, {
-        className: G.customStatusSection,
-        customStatusActivity: B
-      }), (0, i.jsx)(N.Z, {
-        className: G.divider
-      }), (0, i.jsxs)(l.AdvancedScroller, {
-        className: o()(G.scroller, {
-          [G.scrollerSeparator]: !ee
-        }),
-        onScroll: en,
-        ref: $,
-        children: [(0, i.jsx)(g.Z, {
-          user: x,
-          guildId: null == V ? void 0 : V.id
-        }), (0, i.jsx)(p.Z, {
-          isUsingGuildBio: null !== (n = null == k ? void 0 : k.isUsingGuildMemberBio()) && void 0 !== n && n,
-          bio: null == k ? void 0 : k.bio,
-          guild: V,
-          hidePersonalInformation: q
-        }), eo && (0, i.jsx)(A.ZP, {
-          className: G.profileMutuals,
-          user: x,
-          onClose: F
-        }), (0, i.jsx)(D.Z, {
-          userId: x.id,
-          guildId: null == V ? void 0 : V.id
-        }), (0, i.jsx)(O.Z, {
-          activity: w,
-          user: x,
-          guild: V,
-          channelId: H,
-          onClose: F,
-          analyticsParams: (null == z ? void 0 : z.location) != null ? z : el
-        }), (null == X ? void 0 : X.popularApplicationCommandIds) != null && null != Q ? (0, i.jsx)(P.Z, {
-          applicationId: X.id,
-          commandIds: X.popularApplicationCommandIds,
-          channel: Q,
-          guildId: null == V ? void 0 : V.id,
-          onClick: F
-        }) : null, (0, i.jsx)(R.Z, {
-          user: x,
-          guildId: null == V ? void 0 : V.id
-        }), (0, i.jsx)(y.Z, {
-          user: x,
-          guild: V,
-          guildMember: Z,
-          showBorder: null !== (s = null == k ? void 0 : k.canEditThemes) && void 0 !== s && s
-        }), (0, i.jsx)(C.Z, {
-          userId: x.id,
-          channelId: H,
-          guild: V,
-          onClose: F,
-          theme: J
-        }), !q && !W && (0, i.jsx)(M.Z, {
-          user: x,
-          setNote: Y,
-          autoFocus: !j,
-          lastSection: !j
-        }), !x.isNonUserBot() && j && (0, i.jsx)(L.Z, {
-          user: x,
-          setNote: Y,
-          canDM: j,
-          onClose: F
-        })]
-      })]
-    })]
-  })
 }

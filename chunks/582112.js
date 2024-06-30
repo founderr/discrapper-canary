@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  overflow: "overflow_c74e70"
-}
+e.exports = { overflow: 'overflow_c74e70' };

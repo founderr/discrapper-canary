@@ -1,1 +1,1 @@
-e.exports = n.p + "cffa9b7714f321c8cc60.png"
+E.exports = I.p + 'cffa9b7714f321c8cc60.png';

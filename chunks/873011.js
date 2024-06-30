@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  J: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.REMINDER = 0] = "REMINDER", r[r.BOOKMARK = 1] = "BOOKMARK"
+    J: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.REMINDER = 0] = 'REMINDER', i[i.BOOKMARK = 1] = 'BOOKMARK';

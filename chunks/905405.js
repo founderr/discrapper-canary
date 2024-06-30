@@ -1,19 +1,15 @@
-"use strict";
 n.d(t, {
-  p: function() {
-    return s
-  }
+    p: function () {
+        return a;
+    }
 });
-var i = n(592204),
-  r = n(712950);
-let s = () => {
-  var e;
-  let {
-    profanity: t,
-    sexualContent: n,
-    slurs: s
-  } = (0, r.g)();
-  return !!(0, i.Xo)({
-    location: "use-should-filter-keywords"
-  }) && null !== (e = t || n || s) && void 0 !== e && e
-}
+var r = n(592204), i = n(712950);
+let a = () => {
+    var e;
+    let {
+        profanity: t,
+        sexualContent: n,
+        slurs: a
+    } = (0, i.g)();
+    return !!(0, r.Xo)({ location: 'use-should-filter-keywords' }) && null !== (e = t || n || a) && void 0 !== e && e;
+};

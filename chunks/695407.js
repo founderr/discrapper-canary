@@ -1,105 +1,98 @@
-"use strict";
 n.d(t, {
-  n: function() {
-    return E
-  }
+    n: function () {
+        return E;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(1561),
-  l = n(84735),
-  u = n(922770),
-  _ = n(481060),
-  c = n(689938),
-  d = n(447136);
-let E = r.forwardRef(function(e, t) {
-  var n, s, E;
-  let {
-    query: I,
-    onChange: T,
-    loading: h = !1,
-    disabled: f = !1,
-    placeholder: S = c.Z.Messages.SEARCH,
-    "aria-label": A
-  } = e, N = r.useRef(null), m = r.useRef(null);
-  r.useImperativeHandle(t, () => ({
-    focus: () => {
-      var e;
-      return null === (e = m.current) || void 0 === e ? void 0 : e.focus()
-    },
-    blur: () => {
-      var e;
-      return null === (e = m.current) || void 0 === e ? void 0 : e.blur()
-    },
-    activate: () => !1
-  }), []);
-  let O = (n = I, s = h, E = T, s ? (0, i.jsx)("div", {
-    className: d.iconContainer,
-    children: (0, i.jsx)(u.$, {
-      type: u.$.Type.SPINNING_CIRCLE,
-      className: o()(d.icon)
-    })
-  }) : n.length > 0 ? (0, i.jsx)(a.P, {
-    "aria-label": c.Z.Messages.SEARCH_CLEAR,
-    className: o()(d.iconContainer, d.iconClickable),
-    onClick: e => {
-      e.stopPropagation(), E("")
-    },
-    onMouseDown: e => {
-      e.preventDefault(), e.stopPropagation()
-    },
-    focusProps: {
-      offset: {
-        top: -3,
-        right: -3,
-        bottom: -3,
-        left: -3
-      }
-    },
-    children: (0, i.jsx)(_.CloseSmallIcon, {
-      size: "custom",
-      color: "currentColor",
-      width: 18,
-      height: 18,
-      className: d.icon,
-      "aria-label": c.Z.Messages.CLOSE
-    })
-  }) : (0, i.jsx)("div", {
-    className: d.iconContainer,
-    children: (0, i.jsx)(_.MagnifyingGlassIcon, {
-      size: "custom",
-      color: "currentColor",
-      width: 18,
-      height: 18,
-      className: d.icon,
-      "aria-label": c.Z.Messages.SEARCH
-    })
-  }));
-  return (0, i.jsx)(l.t, {
-    focusTarget: m,
-    ringTarget: N,
-    offset: {
-      top: 2,
-      bottom: 2,
-      left: 4,
-      right: 4
-    },
-    children: (0, i.jsxs)("div", {
-      className: d.container,
-      ref: N,
-      children: [(0, i.jsx)("input", {
-        role: "searchbox",
-        "aria-busy": h,
-        ref: m,
-        className: d.input,
-        value: I,
-        onChange: e => T(e.currentTarget.value),
-        "aria-label": A,
-        placeholder: S,
-        disabled: f
-      }), O]
-    })
-  })
-})
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(1561), l = n(84735), u = n(922770), c = n(481060), d = n(689938), _ = n(447136);
+let E = i.forwardRef(function (e, t) {
+    var n, a, E;
+    let {
+            query: f,
+            onChange: h,
+            loading: p = !1,
+            disabled: m = !1,
+            placeholder: I = d.Z.Messages.SEARCH,
+            'aria-label': T
+        } = e, g = i.useRef(null), S = i.useRef(null);
+    i.useImperativeHandle(t, () => ({
+        focus: () => {
+            var e;
+            return null === (e = S.current) || void 0 === e ? void 0 : e.focus();
+        },
+        blur: () => {
+            var e;
+            return null === (e = S.current) || void 0 === e ? void 0 : e.blur();
+        },
+        activate: () => !1
+    }), []);
+    let A = (n = f, a = p, E = h, a ? (0, r.jsx)('div', {
+        className: _.iconContainer,
+        children: (0, r.jsx)(u.$, {
+            type: u.$.Type.SPINNING_CIRCLE,
+            className: o()(_.icon)
+        })
+    }) : n.length > 0 ? (0, r.jsx)(s.P, {
+        'aria-label': d.Z.Messages.SEARCH_CLEAR,
+        className: o()(_.iconContainer, _.iconClickable),
+        onClick: e => {
+            e.stopPropagation(), E('');
+        },
+        onMouseDown: e => {
+            e.preventDefault(), e.stopPropagation();
+        },
+        focusProps: {
+            offset: {
+                top: -3,
+                right: -3,
+                bottom: -3,
+                left: -3
+            }
+        },
+        children: (0, r.jsx)(c.CloseSmallIcon, {
+            size: 'custom',
+            color: 'currentColor',
+            width: 18,
+            height: 18,
+            className: _.icon,
+            'aria-label': d.Z.Messages.CLOSE
+        })
+    }) : (0, r.jsx)('div', {
+        className: _.iconContainer,
+        children: (0, r.jsx)(c.MagnifyingGlassIcon, {
+            size: 'custom',
+            color: 'currentColor',
+            width: 18,
+            height: 18,
+            className: _.icon,
+            'aria-label': d.Z.Messages.SEARCH
+        })
+    }));
+    return (0, r.jsx)(l.t, {
+        focusTarget: S,
+        ringTarget: g,
+        offset: {
+            top: 2,
+            bottom: 2,
+            left: 4,
+            right: 4
+        },
+        children: (0, r.jsxs)('div', {
+            className: _.container,
+            ref: g,
+            children: [
+                (0, r.jsx)('input', {
+                    role: 'searchbox',
+                    'aria-busy': p,
+                    ref: S,
+                    className: _.input,
+                    value: f,
+                    onChange: e => h(e.currentTarget.value),
+                    'aria-label': T,
+                    placeholder: I,
+                    disabled: m
+                }),
+                A
+            ]
+        })
+    });
+});

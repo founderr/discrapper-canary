@@ -1,55 +1,40 @@
-n.d(e, {
-  q: function() {
-    return s
-  }
+r.d(e, {
+    q: function () {
+        return i;
+    }
 });
-var r = n(703498),
-  i = n(876122),
-  a = n(643487);
-class s {
-  constructor() {
-    s.prototype.__init.call(this)
-  }
-  static __initStatic() {
-    this.id = "HttpContext"
-  }
-  __init() {
-    this.name = s.id
-  }
-  setupOnce() {
-    (0, r.c)(t => {
-      if ((0, i.Gd)().getIntegration(s)) {
-        if (!a.m9.navigator && !a.m9.location && !a.m9.document) return t;
-        let e = t.request && t.request.url || a.m9.location && a.m9.location.href,
-          {
-            referrer: n
-          } = a.m9.document || {},
-          {
-            userAgent: r
-          } = a.m9.navigator || {},
-          i = {
-            ...t.request && t.request.headers,
-            ...n && {
-              Referer: n
-            },
-            ...r && {
-              "User-Agent": r
+var n = r(703498), _ = r(876122), a = r(643487);
+class i {
+    constructor() {
+        i.prototype.__init.call(this);
+    }
+    static __initStatic() {
+        this.id = 'HttpContext';
+    }
+    __init() {
+        this.name = i.id;
+    }
+    setupOnce() {
+        (0, n.c)(t => {
+            if ((0, _.Gd)().getIntegration(i)) {
+                if (!a.m9.navigator && !a.m9.location && !a.m9.document)
+                    return t;
+                let e = t.request && t.request.url || a.m9.location && a.m9.location.href, {referrer: r} = a.m9.document || {}, {userAgent: n} = a.m9.navigator || {}, _ = {
+                        ...t.request && t.request.headers,
+                        ...r && { Referer: r },
+                        ...n && { 'User-Agent': n }
+                    }, i = {
+                        ...t.request,
+                        ...e && { url: e },
+                        headers: _
+                    };
+                return {
+                    ...t,
+                    request: i
+                };
             }
-          },
-          s = {
-            ...t.request,
-            ...e && {
-              url: e
-            },
-            headers: i
-          };
-        return {
-          ...t,
-          request: s
-        }
-      }
-      return t
-    })
-  }
+            return t;
+        });
+    }
 }
-s.__initStatic()
+i.__initStatic();

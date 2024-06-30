@@ -1,238 +1,226 @@
-"use strict";
-n.d(t, {
-  U4: function() {
-    return i
-  },
-  cG: function() {
-    return M
-  },
-  kA: function() {
-    return P
-  },
-  qR: function() {
-    return y
-  }
-}), n(411104);
-var i, r, s = n(735250),
-  o = n(470079),
-  a = n(120356),
-  l = n.n(a),
-  u = n(481060),
-  _ = n(542094),
-  c = n(778569),
-  d = n(182906),
-  E = n(367907),
-  I = n(220082),
-  T = n(318661),
-  h = n(792125),
-  f = n(541099),
-  S = n(783097),
-  A = n(695676),
-  N = n(176412),
-  m = n(753972),
-  O = n(981631),
-  R = n(231338),
-  p = n(689938),
-  g = n(599632);
-
-function C(e) {
-  let {
-    application: t,
-    look: n = "large_banner",
-    isPartner: i,
-    onClick: r,
-    bannerImageStyle: a,
-    children: _
-  } = e, {
-    iconURL: c,
-    name: d,
-    description: E
-  } = o.useMemo(() => (0, S.sl)(t, {
-    botIconFirst: !0
-  }), [t]), T = (0, I.ZP)(c, "");
-  return "icon" === n ? (0, s.jsx)(u.Clickable, {
-    className: l()(g.container, g.iconCard),
-    onClick: r,
-    children: null != c && (0, s.jsx)(m.Z, {
-      src: c,
-      className: g.iconCard,
-      "aria-hidden": !0
-    })
-  }) : (0, s.jsxs)(u.Clickable, {
-    className: g.container,
-    onClick: r,
-    children: [(0, s.jsxs)("div", {
-      className: l()(g.bannerImageContainer, {
-        [g.mediumBanner]: "medium_banner" === n,
-        [g.largeBanner]: "large_banner" === n
-      }),
-      children: [(0, s.jsx)("span", {
-        className: a,
-        children: (0, s.jsx)(v, {
-          application: t,
-          fallbackColor: T
-        })
-      }), i && (0, s.jsx)("div", {
-        className: g.partnerLabelWrapper,
-        children: (0, s.jsx)(u.Text, {
-          className: (0, h.Q)(R.BR.DARK),
-          variant: "text-sm/medium",
-          color: "text-normal",
-          children: p.Z.Messages.APP_DIRECTORY_PARTNER
-        })
-      }), "large_banner" === n || "medium_banner" === n ? (0, s.jsx)("div", {
-        className: g.bannerImageChildContainer,
-        children: _
-      }) : null]
-    }), (0, s.jsxs)("div", {
-      className: g.appDetailsContainer,
-      children: [null != c && (0, s.jsx)(m.Z, {
-        src: c,
-        className: g.icon,
-        "aria-hidden": !0
-      }), (0, s.jsxs)("div", {
-        className: g.appDetails,
-        children: [(0, s.jsx)(u.Heading, {
-          variant: "heading-md/semibold",
-          color: "header-primary",
-          lineClamp: 1,
-          children: d
-        }), (0, s.jsx)(u.Text, {
-          variant: "text-sm/normal",
-          color: "text-secondary",
-          lineClamp: 1,
-          children: E
-        })]
-      })]
-    })]
-  })
-}
-
-function v(e) {
-  let {
-    application: t,
-    fallbackColor: n
-  } = e;
-  if ((0, S.BQ)(t)) {
-    if ((0, S.ye)({
-        application: t
-      })) return (0, s.jsx)(L, {
-      application: t
-    });
-    if (null != t.bot) return (0, s.jsx)(D, {
-      bot: t.bot
-    })
-  }
-  return (0, s.jsx)("div", {
-    className: g.bannerImage,
-    style: {
-      backgroundColor: n
-    }
-  })
-}
-
-function L(e) {
-  let {
-    application: t
-  } = e, n = (0, c.Z)({
-    applicationId: t.id,
-    size: 600,
-    names: ["embedded_cover"]
-  });
-  return (0, s.jsx)(d.Z, {
-    imageBackground: n,
-    applicationName: t.name,
-    imageClassName: g.bannerImage,
-    imageNotFoundClassName: g.bannerImage
-  })
-}
-
-function D(e) {
-  let {
-    bot: t
-  } = e, n = (0, T.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
-    canAnimate: !1,
-    size: 600
-  }), [n]);
-  return (0, s.jsx)("img", {
-    src: i,
-    alt: "",
-    className: g.bannerImage
-  })
-}
-
-function M(e) {
-  let {
-    application: t,
-    sectionName: n,
-    resultsPosition: i,
-    query: r,
-    installOnDemand: s
-  } = e, {
-    pushHistory: a
-  } = (0, A.hH)();
-  return o.useCallback(e => {
-    e.stopPropagation(), (0, E.yw)(O.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
-      application_id: t.id,
-      section_name: n,
-      search_results_position: i,
-      source: f.Z.entrypoint(),
-      location,
-      query: r
-    }), a({
-      type: A.gc.APPLICATION,
-      application: t,
-      installOnDemand: s,
-      sectionName: n
-    })
-  }, [t, s, a, r, i, n])
-}
-
-function P(e) {
-  let t = M(e);
-  return (0, s.jsx)(C, {
-    ...e,
-    onClick: t
-  })
-}
-
-function y(e) {
-  let {
-    channel: t,
-    application: n,
-    location: i,
-    sectionName: r,
-    ...o
-  } = e;
-  if (!(0, S.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
-  let {
-    onActivityItemSelected: a,
-    activityAction: l,
-    buttonColor: c,
-    buttonText: d
-  } = (0, N.P)(t, n, i, r);
-  return l === _.JS.START ? (0, s.jsx)(C, {
-    ...o,
-    application: n,
-    onClick: a
-  }) : (0, s.jsx)(C, {
-    ...o,
-    application: n,
-    onClick: e => {
-      e.stopPropagation()
+t.d(n, {
+    U4: function () {
+        return i;
     },
-    bannerImageStyle: g.darkenBannerImage,
-    children: (0, s.jsx)("div", {
-      className: g.voiceLauncherAppCardContainer,
-      children: (0, s.jsx)(u.Button, {
-        className: g.voiceLauncherAppCardButton,
-        type: "submit",
-        size: u.Button.Sizes.LARGE,
-        color: c,
-        disabled: !1,
-        onClick: a,
-        children: d
-      })
-    })
-  })
-}(r = i || (i = {})).ICON = "icon", r.NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner"
+    cG: function () {
+        return S;
+    },
+    kA: function () {
+        return O;
+    },
+    qR: function () {
+        return j;
+    }
+}), t(411104);
+var i, l, a = t(735250), r = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(542094), d = t(778569), m = t(182906), p = t(367907), _ = t(220082), E = t(318661), A = t(792125), N = t(541099), h = t(783097), C = t(695676), f = t(176412), I = t(753972), x = t(981631), P = t(231338), v = t(689938), g = t(599632);
+function T(e) {
+    let {
+            application: n,
+            look: t = 'large_banner',
+            isPartner: i,
+            onClick: l,
+            bannerImageStyle: s,
+            children: u
+        } = e, {
+            iconURL: d,
+            name: m,
+            description: p
+        } = r.useMemo(() => (0, h.sl)(n, { botIconFirst: !0 }), [n]), E = (0, _.ZP)(d, '');
+    return 'icon' === t ? (0, a.jsx)(c.Clickable, {
+        className: o()(g.container, g.iconCard),
+        onClick: l,
+        'aria-label': v.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+            applicationName: m,
+            applicationDescription: p
+        }),
+        children: null != d && (0, a.jsx)(I.Z, {
+            src: d,
+            className: g.iconCard,
+            'aria-hidden': !0
+        })
+    }) : (0, a.jsxs)(c.Clickable, {
+        className: g.container,
+        onClick: l,
+        'aria-label': v.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+            applicationName: m,
+            applicationDescription: p
+        }),
+        children: [
+            (0, a.jsxs)('div', {
+                className: o()(g.bannerImageContainer, {
+                    [g.mediumBanner]: 'medium_banner' === t,
+                    [g.largeBanner]: 'large_banner' === t
+                }),
+                children: [
+                    (0, a.jsx)('span', {
+                        className: s,
+                        children: (0, a.jsx)(M, {
+                            application: n,
+                            fallbackColor: E
+                        })
+                    }),
+                    i && (0, a.jsx)('div', {
+                        className: g.partnerLabelWrapper,
+                        children: (0, a.jsx)(c.Text, {
+                            className: (0, A.Q)(P.BR.DARK),
+                            variant: 'text-sm/medium',
+                            color: 'text-normal',
+                            children: v.Z.Messages.APP_DIRECTORY_PARTNER
+                        })
+                    }),
+                    'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {
+                        className: g.bannerImageChildContainer,
+                        children: u
+                    }) : null
+                ]
+            }),
+            (0, a.jsxs)('div', {
+                className: g.appDetailsContainer,
+                children: [
+                    null != d && (0, a.jsx)(I.Z, {
+                        src: d,
+                        className: g.icon,
+                        'aria-hidden': !0
+                    }),
+                    (0, a.jsxs)('div', {
+                        className: g.appDetails,
+                        children: [
+                            (0, a.jsx)(c.Heading, {
+                                variant: 'heading-md/semibold',
+                                color: 'header-primary',
+                                lineClamp: 1,
+                                children: m
+                            }),
+                            (0, a.jsx)(c.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-secondary',
+                                lineClamp: 1,
+                                children: p
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+}
+function M(e) {
+    let {
+        application: n,
+        fallbackColor: t
+    } = e;
+    if ((0, h.BQ)(n)) {
+        if ((0, h.ye)({ application: n }))
+            return (0, a.jsx)(L, { application: n });
+        if (null != n.bot)
+            return (0, a.jsx)(R, { bot: n.bot });
+    }
+    return (0, a.jsx)('div', {
+        className: g.bannerImage,
+        style: { backgroundColor: t }
+    });
+}
+function L(e) {
+    let {application: n} = e, t = (0, d.Z)({
+            applicationId: n.id,
+            size: 600,
+            names: ['embedded_cover']
+        });
+    return (0, a.jsx)(m.Z, {
+        imageBackground: t,
+        applicationName: n.name,
+        imageClassName: g.bannerImage,
+        imageNotFoundClassName: g.bannerImage
+    });
+}
+function R(e) {
+    let {bot: n} = e, t = (0, E.ZP)(n.id), i = r.useMemo(() => null == t ? void 0 : t.getBannerURL({
+            canAnimate: !1,
+            size: 600
+        }), [t]);
+    return (0, a.jsx)('img', {
+        src: i,
+        alt: '',
+        className: g.bannerImage
+    });
+}
+function S(e) {
+    let {
+            application: n,
+            sectionName: t,
+            resultsPosition: i,
+            query: l,
+            installOnDemand: a
+        } = e, {pushHistory: s} = (0, C.hH)();
+    return r.useCallback(e => {
+        e.stopPropagation(), (0, p.yw)(x.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+            application_id: n.id,
+            section_name: t,
+            search_results_position: i,
+            source: N.Z.entrypoint(),
+            location,
+            query: l
+        }), s({
+            type: C.gc.APPLICATION,
+            application: n,
+            installOnDemand: a,
+            sectionName: t
+        });
+    }, [
+        n,
+        a,
+        s,
+        l,
+        i,
+        t
+    ]);
+}
+function O(e) {
+    let n = S(e);
+    return (0, a.jsx)(T, {
+        ...e,
+        onClick: n
+    });
+}
+function j(e) {
+    let {
+        channel: n,
+        application: t,
+        location: i,
+        sectionName: l,
+        ...r
+    } = e;
+    if (!(0, h.BQ)(t))
+        throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
+    let {
+        onActivityItemSelected: s,
+        activityAction: o,
+        buttonColor: d,
+        buttonText: m
+    } = (0, f.P)(n, t, i, l);
+    return o === u.JS.START ? (0, a.jsx)(T, {
+        ...r,
+        application: t,
+        onClick: s
+    }) : (0, a.jsx)(T, {
+        ...r,
+        application: t,
+        onClick: e => {
+            e.stopPropagation();
+        },
+        bannerImageStyle: g.darkenBannerImage,
+        children: (0, a.jsx)('div', {
+            className: g.voiceLauncherAppCardContainer,
+            children: (0, a.jsx)(c.Button, {
+                className: g.voiceLauncherAppCardButton,
+                type: 'submit',
+                size: c.Button.Sizes.LARGE,
+                color: d,
+                disabled: !1,
+                onClick: s,
+                children: m
+            })
+        })
+    });
+}
+(l = i || (i = {})).ICON = 'icon', l.NO_BANNER = 'no_banner', l.MEDIUM_BANNER = 'medium_banner', l.LARGE_BANNER = 'large_banner';

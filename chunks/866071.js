@@ -1,19 +1,16 @@
-"use strict";
 n.d(t, {
-  K: function() {
-    return o
-  }
+    K: function () {
+        return o;
+    }
 });
-var i = n(339085),
-  r = n(176354),
-  s = n(185923);
-
+var r = n(339085), i = n(176354), a = n(185923);
 function o(e, t) {
-  if (null == e.id) return !0;
-  let n = i.Z.getCustomEmojiById(e.id);
-  return null != n && !r.ZP.isEmojiDisabled({
-    emoji: n,
-    channel: t,
-    intention: s.Hz.STATUS
-  })
+    if (null == e.id)
+        return !0;
+    let n = r.Z.getCustomEmojiById(e.id);
+    return null != n && !i.ZP.isEmojiDisabled({
+        emoji: n,
+        channel: t,
+        intention: a.Hz.STATUS
+    });
 }

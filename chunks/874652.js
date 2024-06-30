@@ -1,1 +1,1 @@
-t.exports = {}
+r.exports = {};

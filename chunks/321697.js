@@ -1,20 +1,16 @@
 t.d(n, {
-  r: function() {
-    return E
-  }
+    r: function () {
+        return E;
+    }
 });
-var i = t(481060),
-  l = t(560067),
-  o = t(675999);
+var i = t(481060), l = t(560067), o = t(675999);
 let E = {
-  binds: ["mod+shift+n"],
-  comboKeysBindGlobal: !0,
-  action() {
-    (0, i.hasModalOpen)(o.PU) ? l.Z.updateCreateGuildModal({
-      slide: o._m.JOIN_GUILD,
-      location: "Keyboard Shortcut"
-    }): l.Z.openCreateGuildModal({
-      location: "Keyboard Shortcut"
-    })
-  }
-}
+    binds: ['mod+shift+n'],
+    comboKeysBindGlobal: !0,
+    action() {
+        (0, i.hasModalOpen)(o.PU) ? l.Z.updateCreateGuildModal({
+            slide: o._m.JOIN_GUILD,
+            location: 'Keyboard Shortcut'
+        }) : l.Z.openCreateGuildModal({ location: 'Keyboard Shortcut' });
+    }
+};

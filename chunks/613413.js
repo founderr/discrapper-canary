@@ -1,78 +1,69 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return h
-  }
+    Z: function () {
+        return p;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(442837),
-  l = n(481060),
-  u = n(906467),
-  _ = n(857192),
-  c = n(835225),
-  d = n(117795),
-  E = n(153850),
-  I = n(565384),
-  T = n(762748);
-
-function h() {
-  let {
-    debugTrackedData: e,
-    impressions: t
-  } = (0, I.Xo)(e => ({
-    debugTrackedData: e.debugTrackedData,
-    impressions: e.impressions
-  })), n = (0, a.e7)([_.default], () => _.default.isAnalyticsDebuggerEnabled), s = (0, a.e7)([u.Z], () => u.Z.isDeveloper), [h, f] = r.useState(!1), {
-    name: S,
-    ...A
-  } = null != e ? e : {}, N = null != S;
-  return s && n ? (0, i.jsx)(E.ZP, {
-    children: (0, i.jsxs)("div", {
-      className: o()(T.container, {
-        [T.containerMinimized]: h,
-        [T.notTracked]: !N
-      }),
-      children: [(0, i.jsx)(l.Clickable, {
-        className: T.minimizeButton,
-        onClick: () => {
-          f(!h)
-        },
-        children: h ? (0, i.jsx)(c.Z, {}) : (0, i.jsx)(d.Z, {})
-      }), (0, i.jsxs)("div", {
-        className: o()(T.content, {
-          [T.contentMinimized]: h
-        }),
-        children: [(0, i.jsxs)(l.Text, {
-          className: o()(T.label, {
-            [T.notTracked]: !N
-          }),
-          variant: "text-xxs/normal",
-          children: [N ? (0, i.jsx)(l.CircleCheckIcon, {
-            size: "md",
-            color: "currentColor",
-            className: T.iconTracked
-          }) : (0, i.jsx)(l.CircleXIcon, {
-            size: "md",
-            color: "currentColor",
-            className: T.iconNotTracked
-          }), null != S ? S : "(untracked)"]
-        }), (0, i.jsx)("div", {
-          className: T.current,
-          children: JSON.stringify(A, void 0, 2)
-        }), (0, i.jsx)(l.Text, {
-          className: o()(T.label, {
-            [T.notTracked]: !N
-          }),
-          variant: "text-xxs/normal",
-          children: "impressions stack"
-        }), (0, i.jsx)("div", {
-          className: T.stack,
-          children: JSON.stringify(t, void 0, 2)
-        })]
-      })]
-    })
-  }) : null
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(906467), c = n(857192), d = n(835225), _ = n(117795), E = n(153850), f = n(565384), h = n(762748);
+function p() {
+    let {
+            debugTrackedData: e,
+            impressions: t
+        } = (0, f.Xo)(e => ({
+            debugTrackedData: e.debugTrackedData,
+            impressions: e.impressions
+        })), n = (0, s.e7)([c.default], () => c.default.isAnalyticsDebuggerEnabled), a = (0, s.e7)([u.Z], () => u.Z.isDeveloper), [p, m] = i.useState(!1), {
+            name: I,
+            ...T
+        } = null != e ? e : {}, g = null != I;
+    return a && n ? (0, r.jsx)(E.ZP, {
+        children: (0, r.jsxs)('div', {
+            className: o()(h.container, {
+                [h.containerMinimized]: p,
+                [h.notTracked]: !g
+            }),
+            children: [
+                (0, r.jsx)(l.Clickable, {
+                    className: h.minimizeButton,
+                    onClick: () => {
+                        m(!p);
+                    },
+                    children: p ? (0, r.jsx)(d.Z, {}) : (0, r.jsx)(_.Z, {})
+                }),
+                (0, r.jsxs)('div', {
+                    className: o()(h.content, { [h.contentMinimized]: p }),
+                    children: [
+                        (0, r.jsxs)(l.Text, {
+                            className: o()(h.label, { [h.notTracked]: !g }),
+                            variant: 'text-xxs/normal',
+                            children: [
+                                g ? (0, r.jsx)(l.CircleCheckIcon, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: h.iconTracked
+                                }) : (0, r.jsx)(l.CircleXIcon, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: h.iconNotTracked
+                                }),
+                                null != I ? I : '(untracked)'
+                            ]
+                        }),
+                        (0, r.jsx)('div', {
+                            className: h.current,
+                            children: JSON.stringify(T, void 0, 2)
+                        }),
+                        (0, r.jsx)(l.Text, {
+                            className: o()(h.label, { [h.notTracked]: !g }),
+                            variant: 'text-xxs/normal',
+                            children: 'impressions stack'
+                        }),
+                        (0, r.jsx)('div', {
+                            className: h.stack,
+                            children: JSON.stringify(t, void 0, 2)
+                        })
+                    ]
+                })
+            ]
+        })
+    }) : null;
 }

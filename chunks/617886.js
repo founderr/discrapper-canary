@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  customButton: "customButton_ff01f0"
-}
+e.exports = { customButton: 'customButton_ff01f0' };

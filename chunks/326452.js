@@ -1,164 +1,144 @@
-"use strict";
 n.d(t, {
-  E: function() {
-    return f
-  }
+    E: function () {
+        return m;
+    }
 }), n(47120);
-var i, r = n(735250),
-  s = n(470079),
-  o = n(120356),
-  a = n.n(o),
-  l = n(1561),
-  u = n(84735),
-  _ = n(922770),
-  c = n(481060),
-  d = n(689938),
-  E = n(923764);
-
-function I(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r, i = n(735250), a = n(470079), o = n(120356), s = n.n(o), l = n(1561), u = n(84735), c = n(922770), d = n(481060), _ = n(689938), E = n(923764);
+function f(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let T = Object.freeze({
-    SMALL: E.small,
-    MEDIUM: E.medium,
-    LARGE: E.large
-  }),
-  h = e => {
-    let {
-      hasContent: t,
-      onClear: n,
-      className: i,
-      isLoading: o,
-      size: u = T.SMALL
-    } = e;
-    return (0, r.jsx)(l.P, {
-      className: a()(i, E.iconLayout, u, {
-        [E.pointer]: t
-      }),
-      onClick: e => {
-        e.stopPropagation(), null != n && n(e)
-      },
-      tabIndex: t ? 0 : -1,
-      "aria-hidden": !t,
-      onMouseDown: e => {
-        e.preventDefault(), e.stopPropagation()
-      },
-      children: (0, r.jsx)("div", {
-        className: E.iconContainer,
-        children: o ? (0, r.jsx)(_.$, {
-          type: _.$.Type.SPINNING_CIRCLE,
-          className: a()(E.icon, E.visible)
-        }) : (0, r.jsxs)(s.Fragment, {
-          children: [(0, r.jsx)(c.MagnifyingGlassIcon, {
-            size: "md",
-            color: "currentColor",
-            className: a()(E.icon, {
-              [E.visible]: !t
-            }),
-            "aria-label": d.Z.Messages.SEARCH
-          }), (0, r.jsx)(c.CloseSmallIcon, {
-            size: "md",
-            color: "currentColor",
-            className: a()(E.clear, {
-              [E.visible]: t
-            }),
-            "aria-label": d.Z.Messages.CLEAR
-          })]
-        })
-      })
-    })
-  };
-h.Sizes = T;
-class f extends(i = s.PureComponent) {
-  focus() {
-    let {
-      current: e
-    } = this.inputRef;
-    null == e || e.focus()
-  }
-  blur() {
-    let {
-      current: e
-    } = this.inputRef;
-    null == e || e.blur()
-  }
-  render() {
-    let {
-      query: e,
-      autoFocus: t,
-      onClear: n,
-      className: i,
-      placeholder: s = d.Z.Messages.SEARCH,
-      iconClassName: o,
-      onKeyDown: l,
-      onKeyUp: _,
-      onKeyPress: c,
-      isLoading: I,
-      size: T,
-      disabled: f,
-      onChange: S,
-      onBlur: A,
-      onFocus: N,
-      autoComplete: m,
-      inputProps: O,
-      hideSearchIcon: R,
-      "aria-label": p = d.Z.Messages.SEARCH,
-      ...g
-    } = this.props;
-    return (0, r.jsx)(u.t, {
-      focusTarget: this.inputRef,
-      ringTarget: this.containerRef,
-      children: (0, r.jsx)("div", {
-        className: a()(i, E.container, T, {
-          [E.disabled]: f
-        }),
-        ref: this.containerRef,
-        ...g,
-        children: (0, r.jsxs)("div", {
-          className: E.inner,
-          children: [(0, r.jsx)("input", {
-            ...O,
-            onFocus: N,
-            onBlur: A,
-            className: E.input,
-            value: e,
-            onChange: this.handleOnChange,
-            onKeyDown: l,
-            onKeyUp: _,
-            onKeyPress: c,
-            placeholder: s,
-            disabled: f,
-            autoFocus: t,
-            autoComplete: m,
-            "aria-label": p,
-            ref: this.inputRef
-          }), !R && (0, r.jsx)(h, {
-            size: T,
-            hasContent: e.length > 0,
+let h = Object.freeze({
+        SMALL: E.small,
+        MEDIUM: E.medium,
+        LARGE: E.large
+    }), p = e => {
+        let {
+            hasContent: t,
             onClear: n,
-            className: o,
-            isLoading: I
-          })]
-        })
-      })
-    })
-  }
-  constructor(...e) {
-    super(...e), I(this, "inputRef", s.createRef()), I(this, "containerRef", s.createRef()), I(this, "handleOnChange", e => {
-      let {
-        onChange: t
-      } = this.props;
-      null == t || t(e.currentTarget.value)
-    })
-  }
+            className: r,
+            isLoading: o,
+            size: u = h.SMALL
+        } = e;
+        return (0, i.jsx)(l.P, {
+            className: s()(r, E.iconLayout, u, { [E.pointer]: t }),
+            onClick: e => {
+                e.stopPropagation(), null != n && n(e);
+            },
+            tabIndex: t ? 0 : -1,
+            'aria-hidden': !t,
+            onMouseDown: e => {
+                e.preventDefault(), e.stopPropagation();
+            },
+            children: (0, i.jsx)('div', {
+                className: E.iconContainer,
+                children: o ? (0, i.jsx)(c.$, {
+                    type: c.$.Type.SPINNING_CIRCLE,
+                    className: s()(E.icon, E.visible)
+                }) : (0, i.jsxs)(a.Fragment, {
+                    children: [
+                        (0, i.jsx)(d.MagnifyingGlassIcon, {
+                            size: 'md',
+                            color: 'currentColor',
+                            className: s()(E.icon, { [E.visible]: !t }),
+                            'aria-label': _.Z.Messages.SEARCH
+                        }),
+                        (0, i.jsx)(d.CloseSmallIcon, {
+                            size: 'md',
+                            color: 'currentColor',
+                            className: s()(E.clear, { [E.visible]: t }),
+                            'aria-label': _.Z.Messages.CLEAR
+                        })
+                    ]
+                })
+            })
+        });
+    };
+p.Sizes = h;
+class m extends (r = a.PureComponent) {
+    focus() {
+        let {current: e} = this.inputRef;
+        null == e || e.focus();
+    }
+    blur() {
+        let {current: e} = this.inputRef;
+        null == e || e.blur();
+    }
+    render() {
+        let {
+            query: e,
+            autoFocus: t,
+            onClear: n,
+            className: r,
+            placeholder: a = _.Z.Messages.SEARCH,
+            iconClassName: o,
+            onKeyDown: l,
+            onKeyUp: c,
+            onKeyPress: d,
+            isLoading: f,
+            size: h,
+            disabled: m,
+            onChange: I,
+            onBlur: T,
+            onFocus: g,
+            autoComplete: S,
+            inputProps: A,
+            hideSearchIcon: N,
+            'aria-label': v = _.Z.Messages.SEARCH,
+            ...O
+        } = this.props;
+        return (0, i.jsx)(u.t, {
+            focusTarget: this.inputRef,
+            ringTarget: this.containerRef,
+            children: (0, i.jsx)('div', {
+                className: s()(r, E.container, h, { [E.disabled]: m }),
+                ref: this.containerRef,
+                ...O,
+                children: (0, i.jsxs)('div', {
+                    className: E.inner,
+                    children: [
+                        (0, i.jsx)('input', {
+                            ...A,
+                            onFocus: g,
+                            onBlur: T,
+                            className: E.input,
+                            value: e,
+                            onChange: this.handleOnChange,
+                            onKeyDown: l,
+                            onKeyUp: c,
+                            onKeyPress: d,
+                            placeholder: a,
+                            disabled: m,
+                            autoFocus: t,
+                            autoComplete: S,
+                            'aria-label': v,
+                            ref: this.inputRef
+                        }),
+                        !N && (0, i.jsx)(p, {
+                            size: h,
+                            hasContent: e.length > 0,
+                            onClear: n,
+                            className: o,
+                            isLoading: f
+                        })
+                    ]
+                })
+            })
+        });
+    }
+    constructor(...e) {
+        super(...e), f(this, 'inputRef', a.createRef()), f(this, 'containerRef', a.createRef()), f(this, 'handleOnChange', e => {
+            let {onChange: t} = this.props;
+            null == t || t(e.currentTarget.value);
+        });
+    }
 }
-I(f, "Sizes", T), I(f, "defaultProps", {
-  size: T.SMALL,
-  isLoading: !1,
-  disabled: !1
-})
+f(m, 'Sizes', h), f(m, 'defaultProps', {
+    size: h.SMALL,
+    isLoading: !1,
+    disabled: !1
+});

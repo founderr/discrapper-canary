@@ -1,1 +1,1 @@
-e.exports = n.p + "c20795680da160eea400.png"
+e.exports = n.p + 'c20795680da160eea400.png';

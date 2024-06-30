@@ -1,69 +1,45 @@
 n.d(t, {
-  Z: function() {
-    return E
-  }
+    Z: function () {
+        return u;
+    }
 });
-var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
-  l = n(481060),
-  o = n(63063),
-  c = n(113434),
-  d = n(981631),
-  u = n(689938),
-  _ = n(770884);
-
-function E(e) {
-  let {
-    setSelectedFilter: t,
-    selectedFilter: n
-  } = e, a = [{
-    id: c.W6.UNCLAIMED,
-    label: u.Z.Messages.QUESTS_ALL
-  }, {
-    id: c.W6.CLAIMED,
-    label: u.Z.Messages.QUESTS_CLAIMED
-  }], E = s.useCallback(() => {
-    window.open(o.Z.getArticleURL(d.BhN.QUESTS_LEARN_MORE))
-  }, []), h = s.useCallback(e => {
-    t(e)
-  }, [t]);
-  return (0, i.jsxs)(l.TabBar, {
-    className: r()(_.container),
-    selectedItem: n,
-    onItemSelect: e => h(e),
-    type: "top",
-    "aria-label": u.Z.Messages.QUESTS,
-    orientation: "horizontal",
-    children: [a.map(e => {
-      let t = e.id === n;
-      return (0, i.jsx)(l.TabBar.Item, {
-        id: e.id,
-        className: r()(_.tab, {
-          [_.selected]: t
-        }),
-        "aria-label": e.label,
-        disableItemStyles: !0,
-        children: (0, i.jsx)(l.Text, {
-          variant: "text-md/semibold",
-          color: t ? "text-brand" : "text-primary",
-          children: e.label
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(113434), c = n(689938), d = n(770884);
+function u(e) {
+    let {
+            setSelectedFilter: t,
+            selectedFilter: n
+        } = e, a = [
+            {
+                id: o.W6.UNCLAIMED,
+                label: c.Z.Messages.QUESTS_ALL
+            },
+            {
+                id: o.W6.CLAIMED,
+                label: c.Z.Messages.QUESTS_CLAIMED
+            }
+        ], u = s.useCallback(e => {
+            t(e);
+        }, [t]);
+    return (0, i.jsx)(l.TabBar, {
+        className: r()(d.container),
+        selectedItem: n,
+        onItemSelect: e => u(e),
+        type: 'top',
+        'aria-label': c.Z.Messages.QUESTS,
+        orientation: 'horizontal',
+        children: a.map(e => {
+            let t = e.id === n;
+            return (0, i.jsx)(l.TabBar.Item, {
+                id: e.id,
+                className: r()(d.tab, { [d.selected]: t }),
+                'aria-label': e.label,
+                disableItemStyles: !0,
+                children: (0, i.jsx)(l.Text, {
+                    variant: 'text-md/medium',
+                    color: t ? 'header-primary' : 'text-primary',
+                    children: e.label
+                })
+            }, e.id);
         })
-      }, e.id)
-    }), (0, i.jsxs)(l.Button, {
-      onClick: E,
-      className: _.button,
-      innerClassName: _.innerButton,
-      children: [(0, i.jsx)(l.Text, {
-        variant: "text-md/semibold",
-        color: "text-muted",
-        className: _.externalLinkText,
-        children: u.Z.Messages.LEARN_MORE
-      }), (0, i.jsx)(l.LinkExternalSmallIcon, {
-        className: _.icon,
-        color: "var(--text-muted)"
-      })]
-    })]
-  })
+    });
 }

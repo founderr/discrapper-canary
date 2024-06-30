@@ -1,27 +1,72 @@
-a.d(l, {
-  U: function() {
-    return r
-  },
-  a: function() {
-    return s
-  }
+n.d(t, {
+    IS: function () {
+        return E;
+    },
+    UE: function () {
+        return h;
+    },
+    as: function () {
+        return a;
+    },
+    fP: function () {
+        return _;
+    },
+    m1: function () {
+        return o;
+    },
+    wz: function () {
+        return f;
+    }
 });
-var n, s, t = a(626135),
-  i = a(981631);
-(n = s || (s = {}))[n.FollowGame = 0] = "FollowGame", n[n.UnfollowGame = 1] = "UnfollowGame", n[n.ClickMessageUser = 2] = "ClickMessageUser", n[n.SendMessageUser = 3] = "SendMessageUser", n[n.JoinVC = 4] = "JoinVC", n[n.WatchStream = 5] = "WatchStream", n[n.ClickSimilarGame = 6] = "ClickSimilarGame", n[n.WebsiteLink = 7] = "WebsiteLink", n[n.XLink = 8] = "XLink", n[n.YouTubeLink = 9] = "YouTubeLink", n[n.ShowMore = 10] = "ShowMore", n[n.ShowLess = 11] = "ShowLess", n[n.JoinOfficialServer = 12] = "JoinOfficialServer", n[n.ClickImage = 13] = "ClickImage";
-let r = e => {
-  let {
-    gameName: l,
-    applicationId: a,
-    action: n,
-    recipientUserId: s,
-    similarGameId: r
-  } = e;
-  t.default.track(i.rMx.GAME_PROFILE_ACTION, {
-    game_name: l,
-    application_id: a,
-    action: n,
-    recipient_user_id: s,
-    similar_game_id: r
-  })
-}
+var r, i, a, o, s = n(772848), l = n(146282), u = n(626135), c = n(981631), d = n(206583);
+(r = a || (a = {}))[r.FollowGame = 0] = 'FollowGame', r[r.UnfollowGame = 1] = 'UnfollowGame', r[r.ClickMessageUser = 2] = 'ClickMessageUser', r[r.SendMessageUser = 3] = 'SendMessageUser', r[r.JoinVC = 4] = 'JoinVC', r[r.WatchStream = 5] = 'WatchStream', r[r.ClickSimilarGame = 6] = 'ClickSimilarGame', r[r.WebsiteLink = 7] = 'WebsiteLink', r[r.XLink = 8] = 'XLink', r[r.YouTubeLink = 9] = 'YouTubeLink', r[r.ShowMore = 10] = 'ShowMore', r[r.ShowLess = 11] = 'ShowLess', r[r.JoinOfficialServer = 12] = 'JoinOfficialServer', r[r.ClickImage = 13] = 'ClickImage', (i = o || (o = {})).ActivityCard = 'activity_card', i.UserProfile = 'user_profile', i.SimilarGames = 'similar_games';
+let _ = () => (0, s.Z)(), E = e => {
+        let {
+            viewId: t,
+            source: n,
+            gameName: r,
+            applicationId: i,
+            authorId: a
+        } = e;
+        return u.default.track(c.rMx.GAME_PROFILE_OPEN, {
+            view_id: t,
+            source: n,
+            game_name: r,
+            application_id: i,
+            author_id: a,
+            request_id: l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)
+        }), t;
+    }, f = e => {
+        let {
+            viewId: t,
+            gameName: n,
+            applicationId: r,
+            playedFriends: i,
+            similarGames: a
+        } = e;
+        u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
+            view_id: t,
+            game_name: n,
+            application_id: r,
+            played_friends: i,
+            similar_games: a,
+            request_id: l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)
+        });
+    }, h = e => {
+        let {
+            gameName: t,
+            applicationId: n,
+            action: r,
+            recipientUserId: i,
+            similarGameId: a,
+            viewId: o
+        } = e;
+        u.default.track(c.rMx.GAME_PROFILE_ACTION, {
+            game_name: t,
+            application_id: n,
+            action: r,
+            recipient_user_id: i,
+            similar_game_id: a,
+            view_id: o
+        });
+    };

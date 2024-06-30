@@ -1,23 +1,23 @@
-l.d(n, {
-  u: function() {
-    return a
-  }
+n.d(l, {
+    u: function () {
+        return i;
+    }
 });
-var s = l(481060),
-  t = l(471445),
-  i = l(230900);
-
-function a(e, n) {
-  let l, a;
-  if (null == e) return null;
-  let o = (0, i.cS)(e);
-  if (null != o) l = s.LocationIcon, a = o;
-  else {
-    if (null == n) return null;
-    l = (0, t.Th)(n.type), a = n.name
-  }
-  return {
-    IconComponent: l,
-    locationName: a
-  }
+var s = n(481060), t = n(471445), a = n(230900);
+function i(e, l) {
+    let n, i;
+    if (null == e)
+        return null;
+    let r = (0, a.cS)(e);
+    if (null != r)
+        n = s.LocationIcon, i = r;
+    else {
+        if (null == l)
+            return null;
+        n = (0, t.Th)(l.type), i = l.name;
+    }
+    return {
+        IconComponent: n,
+        locationName: i
+    };
 }

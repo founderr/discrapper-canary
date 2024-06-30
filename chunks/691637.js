@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  gifTag: "gifTag_b30195"
-}
+e.exports = { gifTag: 'gifTag_b30195' };

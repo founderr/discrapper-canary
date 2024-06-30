@@ -1,15 +1,12 @@
-"use strict";
 n.d(t, {
-  $H: function() {
-    return i
-  },
-  Ip: function() {
-    return s
-  },
-  Ui: function() {
-    return r
-  }
+    $H: function () {
+        return r;
+    },
+    Ip: function () {
+        return a;
+    },
+    Ui: function () {
+        return i;
+    }
 });
-let i = 5,
-  r = "switch-accounts-modal",
-  s = "multiaccount_cta_tooltip_seen"
+let r = 5, i = 'switch-accounts-modal', a = 'multiaccount_cta_tooltip_seen';

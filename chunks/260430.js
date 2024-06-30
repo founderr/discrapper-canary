@@ -1,89 +1,82 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return h
-  }
+    Z: function () {
+        return p;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(77866),
-  a = n(373793),
-  l = n(243814),
-  u = n(260034),
-  _ = n(993365),
-  c = n(481060),
-  d = n(713938),
-  E = n(689938),
-  I = n(684398);
-
-function T(e) {
-  let {
-    text: t,
-    error: n,
-    isFake: r
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: I.scope,
-    children: [(0, i.jsx)("div", {
-      className: s()(I.iconWrapper, r ? I.fakeScopeIcon : I.scopeIcon),
-      children: r ? (0, i.jsx)(c.CloseSmallIcon, {
-        size: "md",
-        color: "currentColor",
-        className: I.icon
-      }) : (0, i.jsx)(c.CheckmarkLargeIcon, {
-        size: "md",
-        color: "currentColor",
-        className: I.icon
-      })
-    }), (0, i.jsxs)("div", {
-      className: I.scopeInner,
-      children: [(0, i.jsx)(_.x, {
-        variant: "text-md/medium",
-        children: t
-      }), null != n ? (0, i.jsx)(_.x, {
-        variant: "text-xs/normal",
-        color: "text-danger",
-        children: n
-      }) : null]
-    })]
-  })
-}
-
+var i = n(120356), a = n.n(i), o = n(77866), s = n(373793), l = n(243814), u = n(260034), c = n(993365), d = n(481060), _ = n(713938), E = n(689938), f = n(684398);
 function h(e) {
-  var t;
-  let {
-    application: n,
-    accountScopes: r,
-    requestedScopes: s,
-    integrationType: _,
-    errors: c,
-    isTrustedName: h = !1
-  } = e, f = (0, o.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
-  if (0 === r.length) return null;
-  let S = f(),
-    A = h ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
-    N = _ === a.Y.USER_INSTALL && s.includes(l.x.APPLICATIONS_COMMANDS);
-  return (0, i.jsxs)("div", {
-    className: I.scopes,
-    children: [(0, i.jsx)(u.X, {
-      variant: "heading-deprecated-12/semibold",
-      className: I.sectionLabel,
-      children: A.format({
-        application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""
-      })
-    }), r.map(e => {
-      var t;
-      return (0, i.jsx)(T, {
-        text: (0, d.jW)(e, r),
-        error: null == c ? void 0 : null === (t = c[e]) || void 0 === t ? void 0 : t[0]
-      }, e)
-    }), N && (0, i.jsx)(T, {
-      text: E.Z.Messages.SCOPE_DM_YOU
-    }), (0, i.jsx)(T, {
-      text: S,
-      isFake: !0
-    })]
-  })
+    let {
+        text: t,
+        error: n,
+        isFake: i
+    } = e;
+    return (0, r.jsxs)('div', {
+        className: f.scope,
+        children: [
+            (0, r.jsx)('div', {
+                className: a()(f.iconWrapper, i ? f.fakeScopeIcon : f.scopeIcon),
+                children: i ? (0, r.jsx)(d.CloseSmallIcon, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: f.icon
+                }) : (0, r.jsx)(d.CheckmarkLargeIcon, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: f.icon
+                })
+            }),
+            (0, r.jsxs)('div', {
+                className: f.scopeInner,
+                children: [
+                    (0, r.jsx)(c.x, {
+                        variant: 'text-md/medium',
+                        children: t
+                    }),
+                    null != n ? (0, r.jsx)(c.x, {
+                        variant: 'text-xs/normal',
+                        color: 'text-danger',
+                        children: n
+                    }) : null
+                ]
+            })
+        ]
+    });
+}
+function p(e) {
+    var t;
+    let {
+            application: n,
+            accountScopes: i,
+            requestedScopes: a,
+            integrationType: c,
+            errors: d,
+            isTrustedName: p = !1
+        } = e, m = (0, o.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
+    if (0 === i.length)
+        return null;
+    let I = m(), T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL, g = c === s.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+    return (0, r.jsxs)('div', {
+        className: f.scopes,
+        children: [
+            (0, r.jsx)(u.X, {
+                variant: 'heading-deprecated-12/semibold',
+                className: f.sectionLabel,
+                children: T.format({ application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
+            }),
+            i.map(e => {
+                var t;
+                return (0, r.jsx)(h, {
+                    text: (0, _.jW)(e, i),
+                    error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
+                }, e);
+            }),
+            g && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
+            (0, r.jsx)(h, {
+                text: I,
+                isFake: !0
+            })
+        ]
+    });
 }

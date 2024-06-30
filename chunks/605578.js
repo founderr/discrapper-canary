@@ -1,55 +1,53 @@
-"use strict";
 n.d(t, {
-  k: function() {
-    return a
-  }
+    k: function () {
+        return s;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(1561),
-  o = n(101817);
-
-function a(e) {
-  let {
-    tag: t = "div",
-    children: n,
-    className: a,
-    focusProps: l,
-    onClick: u,
-    onDoubleClick: _,
-    onContextMenu: c,
-    onKeyDown: d,
-    onFocus: E,
-    onBlur: I,
-    onMouseOver: T,
-    onMouseDown: h,
-    onMouseLeave: f,
-    buttonProps: S,
-    "aria-label": A
-  } = e, N = r.useRef(null);
-  return (0, i.jsxs)(t, {
-    ref: N,
-    className: a,
-    onClick: u,
-    onMouseOver: T,
-    onMouseLeave: f,
-    onDoubleClick: _,
-    onContextMenu: c,
-    children: [(0, i.jsx)(s.P, {
-      ...S,
-      focusProps: {
-        ringTarget: N,
-        ...l
-      },
-      className: o.focusTarget,
-      "aria-label": A,
-      onClick: e => {
-        e.stopPropagation(), null == u || u(e)
-      },
-      onKeyDown: d,
-      onFocus: E,
-      onBlur: I,
-      onMouseDown: h
-    }), n]
-  })
+var r = n(735250), i = n(470079), a = n(1561), o = n(101817);
+function s(e) {
+    let {
+            tag: t = 'div',
+            children: n,
+            className: s,
+            focusProps: l,
+            onClick: u,
+            onDoubleClick: c,
+            onContextMenu: d,
+            onKeyDown: _,
+            onFocus: E,
+            onBlur: f,
+            onMouseOver: h,
+            onMouseDown: p,
+            onMouseLeave: m,
+            buttonProps: I,
+            'aria-label': T
+        } = e, g = i.useRef(null);
+    return (0, r.jsxs)(t, {
+        ref: g,
+        className: s,
+        onClick: u,
+        onMouseOver: h,
+        onMouseLeave: m,
+        onDoubleClick: c,
+        onContextMenu: d,
+        children: [
+            (0, r.jsx)(a.P, {
+                ...I,
+                focusProps: {
+                    ringTarget: g,
+                    ...l
+                },
+                className: o.focusTarget,
+                'aria-label': T,
+                onClick: e => {
+                    e.stopPropagation(), null == u || u(e);
+                },
+                onKeyDown: _,
+                onFocus: E,
+                onBlur: f,
+                onMouseDown: p
+            }),
+            n
+        ]
+    });
 }

@@ -1,12 +1,13 @@
 n.d(t, {
-  K: function() {
-    return s
-  }
+    K: function () {
+        return r;
+    }
 });
-var r = n(998502);
-async function s(e) {
-  try {
-    return await r.ZP.getSetting("USERNAME_PREFIX", "") + e
-  } catch (e) {}
-  return e
+var s = n(998502);
+async function r(e) {
+    try {
+        return await s.ZP.getSetting('USERNAME_PREFIX', '') + e;
+    } catch (e) {
+    }
+    return e;
 }

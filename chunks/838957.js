@@ -1,2 +1,2 @@
 var e = r(581031);
-t.exports = e({}.isPrototypeOf)
+t.exports = e({}.isPrototypeOf);

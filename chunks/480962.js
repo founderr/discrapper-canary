@@ -1,58 +1,51 @@
-"use strict";
 n.d(t, {
-  _: function() {
-    return c
-  }
+    _: function () {
+        return d;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(539907),
-  l = n(743236),
-  u = n(21340),
-  _ = n(639897);
-
-function c(e) {
-  let {
-    subMenuClassName: t,
-    parentItem: n,
-    isFocused: s,
-    menuSubmenuProps: c,
-    renderSubmenu: d
-  } = e, {
-    focusIndex: E,
-    isUsingKeyboardNavigation: I,
-    ...T
-  } = c, h = r.useRef(null), f = r.useRef(null), S = r.useRef(null);
-  return r.useLayoutEffect(() => {
-    var e;
-    s && ((0, l.F)(h), null === (e = S.current) || void 0 === e || e.focus())
-  }, [s]), (0, i.jsxs)("div", {
-    ref: h,
-    className: _.__invalid_submenuContainer,
-    children: [(0, i.jsx)("div", {
-      ref: f
-    }), n, s ? (0, i.jsx)(a.j, {
-      targetRef: f,
-      autoInvert: !0,
-      nudgeAlignIntoViewport: !0,
-      fixed: !0,
-      spacing: 4,
-      position: "right",
-      align: "top",
-      children: () => (0, i.jsx)("div", {
-        className: _.submenuPaddingContainer,
-        children: (0, i.jsx)("div", {
-          className: o()(_.submenu, t),
-          ...T,
-          ref: S,
-          children: (0, i.jsx)(u.zJ, {
-            className: _.scroller,
-            children: d()
-          })
-        })
-      })
-    }) : null]
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(539907), l = n(743236), u = n(21340), c = n(639897);
+function d(e) {
+    let {
+            subMenuClassName: t,
+            parentItem: n,
+            isFocused: a,
+            menuSubmenuProps: d,
+            renderSubmenu: _
+        } = e, {
+            focusIndex: E,
+            isUsingKeyboardNavigation: f,
+            ...h
+        } = d, p = i.useRef(null), m = i.useRef(null), I = i.useRef(null);
+    return i.useLayoutEffect(() => {
+        var e;
+        a && ((0, l.F)(p), null === (e = I.current) || void 0 === e || e.focus());
+    }, [a]), (0, r.jsxs)('div', {
+        ref: p,
+        className: c.__invalid_submenuContainer,
+        children: [
+            (0, r.jsx)('div', { ref: m }),
+            n,
+            a ? (0, r.jsx)(s.j, {
+                targetRef: m,
+                autoInvert: !0,
+                nudgeAlignIntoViewport: !0,
+                fixed: !0,
+                spacing: 4,
+                position: 'right',
+                align: 'top',
+                children: () => (0, r.jsx)('div', {
+                    className: c.submenuPaddingContainer,
+                    children: (0, r.jsx)('div', {
+                        className: o()(c.submenu, t),
+                        ...h,
+                        ref: I,
+                        children: (0, r.jsx)(u.zJ, {
+                            className: c.scroller,
+                            children: _()
+                        })
+                    })
+                })
+            }) : null
+        ]
+    });
 }

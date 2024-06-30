@@ -1,82 +1,64 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return g
-  }
+    Z: function () {
+        return O;
+    }
 });
-var i = n(668781),
-  r = n(812206),
-  s = n(835873),
-  o = n(592125),
-  a = n(430824),
-  l = n(496675),
-  u = n(594174),
-  _ = n(979651),
-  c = n(585483),
-  d = n(867176),
-  E = n(337682),
-  I = n(566620),
-  T = n(882347),
-  h = n(307091),
-  f = n(374065),
-  S = n(917107),
-  A = n(89425),
-  N = n(275920),
-  m = n(197386),
-  O = n(701488),
-  R = n(981631),
-  p = n(689938);
-async function g(e) {
-  var t;
-  let {
-    targetApplicationId: n,
-    currentEmbeddedApplication: g,
-    locationObject: C,
-    channelId: v,
-    guildId: L,
-    embeddedActivitiesManager: D,
-    analyticsLocations: M
-  } = e, P = a.Z.getGuild(L), y = u.default.getCurrentUser();
-  if (null == n) return !1;
-  let U = null !== (t = r.Z.getApplication(n)) && void 0 !== t ? t : await (0, h.Z)(n, v);
-  if (null == v) return c.S.dispatch(R.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
-    applicationId: n
-  }), !1;
-  let b = o.Z.getChannel(v);
-  if (null == b || null == P && !b.isPrivate() || null == y || null == U) return !1;
-  let G = null != v ? (0, f.e4)({
-    channelId: v,
-    ChannelStore: o.Z,
-    GuildStore: a.Z,
-    PermissionStore: l.Z,
-    VoiceStateStore: _.Z
-  }) : f.jy.NO_CHANNEL;
-  if (G !== f.jy.CAN_LAUNCH) return G === f.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, s.w)() : G === f.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.Z.show({
-    title: p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-    body: p.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
-    hideActionSheet: !1
-  }), !1;
-  if (!await (0, T.p)({
-      applicationId: U.id,
-      application: U,
-      channel: b,
-      currentEmbeddedApplication: g,
-      embeddedActivitiesManager: D,
-      user: y
-    })) return !1;
-  let w = (0, S.Z)(v),
-    B = O.wP.includes(b.type);
-  if (w) {
-    if (!await (0, A.Z)({
-        channelId: v,
-        bypassChangeModal: null != g
-      })) return !1
-  } else if (!(0, d.WS)(b, !0, "handleStartEmbeddedActivity") || !B) return !1;
-  return I.J$(v, U.id, M), (0, m.Z)(L, v), (0, N.Z)({
-    type: R.q5t.LAUNCH,
-    userId: y.id,
-    applicationId: U.id,
-    locationObject: C,
-    analyticsLocations: M
-  }), E.tZ(U.id), !0
+var r = n(668781), i = n(812206), a = n(835873), o = n(592125), s = n(430824), l = n(496675), u = n(594174), c = n(979651), d = n(585483), _ = n(867176), E = n(337682), f = n(566620), h = n(882347), p = n(307091), m = n(374065), I = n(917107), T = n(89425), g = n(275920), S = n(197386), A = n(701488), N = n(981631), v = n(689938);
+async function O(e) {
+    var t;
+    let {
+            targetApplicationId: n,
+            currentEmbeddedApplication: O,
+            locationObject: R,
+            channelId: C,
+            guildId: y,
+            embeddedActivitiesManager: D,
+            analyticsLocations: L
+        } = e, b = s.Z.getGuild(y), M = u.default.getCurrentUser();
+    if (null == n)
+        return !1;
+    let P = null !== (t = i.Z.getApplication(n)) && void 0 !== t ? t : await (0, p.Z)(n, C);
+    if (null == C)
+        return d.S.dispatch(N.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    let U = o.Z.getChannel(C);
+    if (null == U || null == b && !U.isPrivate() || null == M || null == P)
+        return !1;
+    let w = null != C ? (0, m.e4)({
+        channelId: C,
+        ChannelStore: o.Z,
+        GuildStore: s.Z,
+        PermissionStore: l.Z,
+        VoiceStateStore: c.Z
+    }) : m.jy.NO_CHANNEL;
+    if (w !== m.jy.CAN_LAUNCH)
+        return w === m.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, a.w)() : w === m.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && r.Z.show({
+            title: v.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+            body: v.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+            hideActionSheet: !1
+        }), !1;
+    if (!await (0, h.p)({
+            applicationId: P.id,
+            application: P,
+            channel: U,
+            currentEmbeddedApplication: O,
+            embeddedActivitiesManager: D,
+            user: M
+        }))
+        return !1;
+    let x = (0, I.Z)(C), G = A.wP.includes(U.type);
+    if (x) {
+        if (!await (0, T.Z)({
+                channelId: C,
+                bypassChangeModal: null != O
+            }))
+            return !1;
+    } else if (!(0, _.WS)(U, !0, 'handleStartEmbeddedActivity') || !G)
+        return !1;
+    return f.J$(C, P.id, L), (0, S.Z)(y, C), (0, g.Z)({
+        type: N.q5t.LAUNCH,
+        userId: M.id,
+        applicationId: P.id,
+        locationObject: R,
+        analyticsLocations: L
+    }), E.tZ(P.id), !0;
 }

@@ -1,96 +1,76 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return R
-  }
+    Z: function () {
+        return N;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(442837),
-  l = n(481060),
-  u = n(100527),
-  _ = n(906732),
-  c = n(104494),
-  d = n(639119),
-  E = n(165583),
-  I = n(592125),
-  T = n(944486),
-  h = n(672752),
-  f = n(626135),
-  S = n(981631),
-  A = n(474936),
-  N = n(689938),
-  m = n(415088);
-
-function O() {
-  (0, l.openModalLazy)(async () => {
-    let {
-      default: e
-    } = await n.e("3289").then(n.bind(n, 682609));
-    return t => (0, i.jsx)(e, {
-      channel: null,
-      ...t
-    })
-  })
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(442837), l = n(481060), u = n(100527), c = n(906732), d = n(104494), _ = n(639119), E = n(165583), f = n(592125), h = n(944486), p = n(672752), m = n(626135), I = n(981631), T = n(474936), g = n(689938), S = n(415088);
+function A() {
+    (0, l.openModalLazy)(async () => {
+        let {default: e} = await n.e('3289').then(n.bind(n, 682609));
+        return t => (0, r.jsx)(e, {
+            channel: null,
+            ...t
+        });
+    });
 }
-
-function R(e) {
-  var t;
-  let {
-    className: n,
-    iconOnly: s,
-    remaining: R
-  } = e, p = (0, a.e7)([T.Z, I.Z], () => {
-    let e = I.Z.getChannel(T.Z.getChannelId());
-    return (null == e ? void 0 : e.isPrivate()) ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL
-  }), {
-    analyticsLocations: g
-  } = (0, _.ZP)(u.Z.PREMIUM_UPSELL), C = (0, c.Ng)(), v = (0, d.N)(), L = (0, c.Wp)(C, A.Si.TIER_2), D = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.Si.TIER_2;
-  return (r.useEffect(() => {
-    f.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: "longer messages inline",
-      location: {
-        location_page: p,
-        location_section: S.jXE.CHANNEL_TEXT_AREA
-      },
-      location_stack: g
-    })
-  }, [p, g]), (D || L) && R < 0) ? (0, i.jsx)(E.ZP, {
-    type: A.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
-    subscriptionTier: A.Si.TIER_2,
-    context: R,
-    discountOffer: C,
-    trialOffer: v,
-    children: N.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-      onLearnMore: O
-    })
-  }) : s ? (0, i.jsx)(l.Clickable, {
-    className: m.iconOnly,
-    onClick: () => O(),
-    children: (0, i.jsx)(l.Tooltip, {
-      text: N.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
-      position: "top",
-      children: e => (0, i.jsx)(l.NitroWheelIcon, {
-        size: "md",
-        color: "currentColor",
-        className: m.premium,
-        ...e
-      })
-    })
-  }) : (0, i.jsxs)("div", {
-    className: o()(m.root, n),
-    children: [(0, i.jsx)(l.NitroWheelIcon, {
-      size: "md",
-      className: m.premium,
-      color: h.JX.PREMIUM_TIER_2
-    }), (0, i.jsx)(l.Text, {
-      className: m.text,
-      variant: "text-sm/normal",
-      children: N.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-        onLearnMore: O
-      })
-    })]
-  })
+function N(e) {
+    var t;
+    let {
+            className: n,
+            iconOnly: a,
+            remaining: N
+        } = e, v = (0, s.e7)([
+            h.Z,
+            f.Z
+        ], () => {
+            let e = f.Z.getChannel(h.Z.getChannelId());
+            return (null == e ? void 0 : e.isPrivate()) ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL;
+        }), {analyticsLocations: O} = (0, c.ZP)(u.Z.PREMIUM_UPSELL), R = (0, d.Ng)(), C = (0, _.N)(), y = (0, d.Wp)(R, T.Si.TIER_2), D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
+    return (i.useEffect(() => {
+        m.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+            type: 'longer messages inline',
+            location: {
+                location_page: v,
+                location_section: I.jXE.CHANNEL_TEXT_AREA
+            },
+            location_stack: O
+        });
+    }, [
+        v,
+        O
+    ]), (D || y) && N < 0) ? (0, r.jsx)(E.ZP, {
+        type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
+        subscriptionTier: T.Si.TIER_2,
+        context: N,
+        discountOffer: R,
+        trialOffer: C,
+        children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+    }) : a ? (0, r.jsx)(l.Clickable, {
+        className: S.iconOnly,
+        onClick: () => A(),
+        children: (0, r.jsx)(l.Tooltip, {
+            text: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+            position: 'top',
+            children: e => (0, r.jsx)(l.NitroWheelIcon, {
+                size: 'md',
+                color: 'currentColor',
+                className: S.premium,
+                ...e
+            })
+        })
+    }) : (0, r.jsxs)('div', {
+        className: o()(S.root, n),
+        children: [
+            (0, r.jsx)(l.NitroWheelIcon, {
+                size: 'md',
+                className: S.premium,
+                color: p.JX.PREMIUM_TIER_2
+            }),
+            (0, r.jsx)(l.Text, {
+                className: S.text,
+                variant: 'text-sm/normal',
+                children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
+            })
+        ]
+    });
 }

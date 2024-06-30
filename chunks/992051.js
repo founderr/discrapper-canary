@@ -1,1 +1,1 @@
-t.exports = !1
+t.exports = !1;

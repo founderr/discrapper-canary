@@ -1,9 +1,8 @@
 e.d(n, {
-  J8: function() {
-    return r
-  }
+    J8: function () {
+        return r;
+    }
 });
-
 function r(t) {
-  return !!(t && t.then && "function" == typeof t.then)
+    return !!(t && t.then && 'function' == typeof t.then);
 }

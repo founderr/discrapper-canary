@@ -1,69 +1,60 @@
 t.d(n, {
-  Z: function() {
-    return h
-  }
-});
-var a = t(735250);
-t(470079);
-var s = t(772848),
-  i = t(481060),
-  l = t(976255),
-  r = t(667),
-  o = t(335131),
-  d = t(626135),
-  c = t(409813),
-  u = t(608579),
-  E = t(981631);
-let f = "payment-modal";
-
-function h(e) {
-  let n;
-  let {
-    skuId: t,
-    isGift: h = !1,
-    giftMessage: m,
-    onClose: v,
-    onComplete: p,
-    analyticsLocations: C,
-    analyticsObject: x
-  } = e, I = !1, T = (0, s.Z)(), g = e => {
-    n = e
-  };
-  (0, i.openModalLazy)(async () => e => {
-    let {
-      onClose: n,
-      returnRef: s,
-      ...i
-    } = e;
-    return (0, a.jsx)(u.Z, {
-      ...i,
-      loadId: T,
-      skuId: t,
-      isGift: h,
-      giftMessage: m,
-      analyticsLocations: C,
-      onClose: e => {
-        n(), null == v || v(e)
-      },
-      onComplete: () => {
-        I = !0, null == p || p()
-      },
-      returnRef: s,
-      onStepChange: g
-    })
-  }, {
-    modalKey: f,
-    onCloseCallback: () => {
-      !I && d.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
-        load_id: T,
-        payment_type: E.Zuq[E.GZQ.ONE_TIME],
-        location: x,
-        is_gift: h,
-        location_stack: C
-      }), (0, l.fw)(), (0, r.p)(), null == v || v(I), I && (0, o.qg)()
-    },
-    onCloseRequest: () => {
-      n === c.h8.REVIEW && (0, i.closeModal)(f)
+    Z: function () {
+        return _;
     }
-  })
+});
+var i = t(735250);
+t(470079);
+var a = t(772848), r = t(481060), o = t(976255), s = t(667), l = t(335131), c = t(626135), d = t(409813), u = t(608579), f = t(981631);
+let p = 'payment-modal';
+function _(e) {
+    let n;
+    let {
+            skuId: t,
+            isGift: _ = !1,
+            giftMessage: m,
+            onClose: C,
+            onComplete: b,
+            analyticsLocations: g,
+            analyticsObject: v
+        } = e, x = !1, h = (0, a.Z)(), E = e => {
+            n = e;
+        };
+    (0, r.openModalLazy)(async () => e => {
+        let {
+            onClose: n,
+            returnRef: a,
+            ...r
+        } = e;
+        return (0, i.jsx)(u.Z, {
+            ...r,
+            loadId: h,
+            skuId: t,
+            isGift: _,
+            giftMessage: m,
+            analyticsLocations: g,
+            onClose: e => {
+                n(), null == C || C(e);
+            },
+            onComplete: () => {
+                x = !0, null == b || b();
+            },
+            returnRef: a,
+            onStepChange: E
+        });
+    }, {
+        modalKey: p,
+        onCloseCallback: () => {
+            !x && c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
+                load_id: h,
+                payment_type: f.Zuq[f.GZQ.ONE_TIME],
+                location: v,
+                is_gift: _,
+                location_stack: g
+            }), (0, o.fw)(), (0, s.p)(), null == C || C(x), x && (0, l.qg)();
+        },
+        onCloseRequest: () => {
+            n === d.h8.REVIEW && (0, r.closeModal)(p);
+        }
+    });
 }

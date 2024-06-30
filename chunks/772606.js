@@ -1,33 +1,20 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return c
-  }
+t.d(n, {
+    Z: function () {
+        return d;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(120356),
-  o = n.n(s),
-  a = n(330711),
-  l = n(481060),
-  u = n(695676),
-  _ = n(864247);
-
-function c(e) {
-  let {
-    className: t
-  } = e, {
-    goBack: n
-  } = (0, u.hH)(), s = r.useCallback(() => {
-    n()
-  }, [n]);
-  return (0, i.jsx)(l.Clickable, {
-    "aria-label": a.Z.Messages.BACK,
-    onClick: s,
-    className: o()(_.clickable, t),
-    children: (0, i.jsx)(l.ArrowLargeLeftIcon, {
-      size: "sm",
-      color: l.tokens.colors.INTERACTIVE_ACTIVE
-    })
-  })
+var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), s = t(481060), o = t(695676), c = t(689938), u = t(864247);
+function d(e) {
+    let {className: n} = e, {goBack: t} = (0, o.hH)(), a = l.useCallback(() => {
+            t();
+        }, [t]);
+    return (0, i.jsx)(s.Clickable, {
+        onClick: a,
+        className: r()(u.clickable, n),
+        'aria-label': c.Z.Messages.BACK_ACCESSIBILITY_HINT,
+        children: (0, i.jsx)(s.ArrowLargeLeftIcon, {
+            size: 'sm',
+            color: s.tokens.colors.INTERACTIVE_ACTIVE
+        })
+    });
 }

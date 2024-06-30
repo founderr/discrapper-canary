@@ -1,123 +1,102 @@
-n.d(s, {
-  q: function() {
-    return M
-  }
+t.d(n, {
+    q: function () {
+        return I;
+    }
 });
-var t = n(735250);
-n(470079);
-var i = n(120356),
-  l = n.n(i),
-  r = n(481060),
-  C = n(140465),
-  a = n(424082),
-  o = n(639119),
-  d = n(55610),
-  _ = n(973007),
-  u = n(74538),
-  c = n(987209),
-  p = n(598),
-  x = n(409813),
-  L = n(614223),
-  I = n(48175),
-  E = n(474936),
-  h = n(689938),
-  f = n(738892);
-
-function M(e) {
-  let {
-    handleStepChange: s,
-    handleClose: n,
-    referralTrialOfferId: i
-  } = e, {
-    setSelectedSkuId: l,
-    activeSubscription: r,
-    startedPaymentFlowWithPaymentSourcesRef: d,
-    setSelectedPlanId: _,
-    priceOptions: h
-  } = (0, p.usePaymentContext)(), {
-    isGift: f
-  } = (0, c.wD)(), M = (0, o.N)(i);
-  (0, a.Uh)("PremiumPaymentSKUSelectStep", null == M);
-  let j = (0, C.Nx)();
-  return (0, t.jsx)(N, {
-    selectSku: e => (function(e) {
-      let {
-        activeSubscription: s,
-        newSkuId: n,
-        setSelectedSkuId: t,
-        handleStepChange: i,
-        isGift: l,
-        userTrialOffer: r,
-        setSelectedPlanId: C,
-        startedPaymentFlowWithPaymentSources: a
-      } = e;
-      t(n);
-      let o = x.h8.PLAN_SELECT,
-        d = (0, u.k5)(s);
-      (d === E.Si.TIER_1 || d === E.Si.TIER_2) && n === E.Si.TIER_0 && !l && (o = x.h8.WHAT_YOU_LOSE);
-      let _ = (0, I.T)({
-          userTrialOffer: r,
-          isGift: l,
-          skuId: n
+var i = t(735250);
+t(470079);
+var r = t(120356), o = t.n(r), a = t(481060), s = t(140465), l = t(424082), d = t(639119), c = t(55610), C = t(973007), u = t(74538), _ = t(987209), p = t(598), f = t(409813), x = t(614223), h = t(48175), b = t(474936), g = t(689938), m = t(738892);
+function I(e) {
+    let {
+            handleStepChange: n,
+            handleClose: t,
+            referralTrialOfferId: r
+        } = e, {
+            setSelectedSkuId: o,
+            activeSubscription: a,
+            startedPaymentFlowWithPaymentSourcesRef: c,
+            setSelectedPlanId: C,
+            priceOptions: g
+        } = (0, p.usePaymentContext)(), {isGift: m} = (0, _.wD)(), I = (0, d.N)(r);
+    (0, l.Uh)('PremiumPaymentSKUSelectStep', null == I);
+    let E = (0, s.Nx)();
+    return (0, i.jsx)(L, {
+        selectSku: e => function (e) {
+            let {
+                activeSubscription: n,
+                newSkuId: t,
+                setSelectedSkuId: i,
+                handleStepChange: r,
+                isGift: o,
+                userTrialOffer: a,
+                setSelectedPlanId: s,
+                startedPaymentFlowWithPaymentSources: l
+            } = e;
+            i(t);
+            let d = f.h8.PLAN_SELECT, c = (0, u.k5)(n);
+            (c === b.Si.TIER_1 || c === b.Si.TIER_2) && t === b.Si.TIER_0 && !o && (d = f.h8.WHAT_YOU_LOSE);
+            let C = (0, h.T)({
+                    userTrialOffer: a,
+                    isGift: o,
+                    skuId: t
+                }), _ = (0, x.Kp)({
+                    isTrial: C,
+                    isGift: o,
+                    selectedSkuId: t,
+                    startedPaymentFlowWithPaymentSources: l
+                });
+            d !== f.h8.WHAT_YOU_LOSE && _ && (d = f.h8.REVIEW, s((0, x.nA)(t, n))), r(d, { analyticsDataOverride: { sku_id: t } });
+        }({
+            activeSubscription: a,
+            newSkuId: e,
+            setSelectedSkuId: o,
+            handleStepChange: n,
+            isGift: m,
+            userTrialOffer: I,
+            startedPaymentFlowWithPaymentSources: c.current,
+            setSelectedPlanId: C
         }),
-        c = (0, L.Kp)({
-          isTrial: _,
-          isGift: l,
-          selectedSkuId: n,
-          startedPaymentFlowWithPaymentSources: a
-        });
-      o !== x.h8.WHAT_YOU_LOSE && c && (o = x.h8.REVIEW, C((0, L.nA)(n, s))), i(o, {
-        analyticsDataOverride: {
-          sku_id: n
-        }
-      })
-    })({
-      activeSubscription: r,
-      newSkuId: e,
-      setSelectedSkuId: l,
-      handleStepChange: s,
-      isGift: f,
-      userTrialOffer: M,
-      startedPaymentFlowWithPaymentSources: d.current,
-      setSelectedPlanId: _
-    }),
-    onClose: n,
-    isGift: f,
-    inOfferExperience: j,
-    priceOptions: h
-  })
+        onClose: t,
+        isGift: m,
+        inOfferExperience: E,
+        priceOptions: g
+    });
 }
-
-function N(e) {
-  let {
-    selectSku: s,
-    onClose: n,
-    isGift: i,
-    inOfferExperience: C,
-    priceOptions: a
-  } = e;
-  return (0, t.jsxs)(t.Fragment, {
-    children: [(0, t.jsxs)(r.ModalHeader, {
-      className: f.skuSelectModalHeader,
-      separator: !1,
-      children: [(0, t.jsx)(r.FormTitle, {
-        tag: r.FormTitleTags.H4,
-        children: h.Z.Messages.BILLING_STEP_SELECT_PLAN
-      }), (0, t.jsx)(r.ModalCloseButton, {
-        onClick: n
-      })]
-    }), (0, t.jsxs)(r.ModalContent, {
-      className: l()(f.skuSelectModalContent, {
-        [f.modalPadding]: C
-      }),
-      children: [(0, t.jsx)(d.Z, {
-        fromBoostCancelModal: !1,
-        className: f.legacyPricingNotice
-      }), (0, t.jsx)(_.Z, {
-        onSelectSku: e => s((0, u.Wz)(e)),
-        isGift: i,
-        priceOptions: a
-      })]
-    })]
-  })
+function L(e) {
+    let {
+        selectSku: n,
+        onClose: t,
+        isGift: r,
+        inOfferExperience: s,
+        priceOptions: l
+    } = e;
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsxs)(a.ModalHeader, {
+                className: m.skuSelectModalHeader,
+                separator: !1,
+                children: [
+                    (0, i.jsx)(a.FormTitle, {
+                        tag: a.FormTitleTags.H4,
+                        children: g.Z.Messages.BILLING_STEP_SELECT_PLAN
+                    }),
+                    (0, i.jsx)(a.ModalCloseButton, { onClick: t })
+                ]
+            }),
+            (0, i.jsxs)(a.ModalContent, {
+                className: o()(m.skuSelectModalContent, { [m.modalPadding]: s }),
+                children: [
+                    (0, i.jsx)(c.Z, {
+                        fromBoostCancelModal: !1,
+                        className: m.legacyPricingNotice
+                    }),
+                    (0, i.jsx)(C.Z, {
+                        onSelectSku: e => n((0, u.Wz)(e)),
+                        isGift: r,
+                        priceOptions: l
+                    })
+                ]
+            })
+        ]
+    });
 }

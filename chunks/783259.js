@@ -1,49 +1,38 @@
-"use strict";
-var i = n(735250),
-  r = n(470079),
-  s = n(692547),
-  o = n(481060),
-  a = n(220082),
-  l = n(420596),
-  u = n(880563),
-  _ = n(484459),
-  c = n(318661),
-  d = n(695346),
-  E = n(981631),
-  I = n(948910);
-t.Z = function(e) {
-  let {
-    style: t,
-    src: n,
-    backgroundSrc: T,
-    userId: h,
-    pulseSpeakingIndicator: f = !1,
-    speaking: S = !1,
-    ...A
-  } = e, N = null != T ? T : n, m = (0, a.ZP)(N, s.Z.unsafe_rawColors.PRIMARY_800.css), O = (0, l.c)(!0, "VideoBackground-web").enabled, R = (0, c.ZP)(null != h ? h : E.lds), p = null == R ? void 0 : R.getBannerURL({
-    size: 1024,
-    canAnimate: d.QK.getSetting()
-  });
-  if (r.useEffect(() => {
-      null != h && O && (0, _.Z)(h, void 0, {
-        dispatchWait: !0
-      })
-    }, [O, h]), null == n) return null;
-  let g = (0, i.jsx)(o.Avatar, {
-      className: I.avatarWrapper,
-      src: n,
-      ...A
-    }),
-    C = {
-      ...t,
-      backgroundColor: m
-    };
-  return null != p && S && O && (C.backgroundImage = "url(".concat(p, ")"), C.backgroundSize = "cover"), (0, i.jsx)("div", {
-    style: C,
-    className: I.background,
-    children: f ? (0, i.jsx)(u.Z, {
-      shouldAnimate: S,
-      children: g
-    }) : g
-  })
-}
+var r = n(735250), i = n(470079), a = n(692547), o = n(481060), s = n(220082), l = n(420596), u = n(880563), c = n(484459), d = n(318661), _ = n(695346), E = n(981631), f = n(948910);
+t.Z = function (e) {
+    let {
+            style: t,
+            src: n,
+            backgroundSrc: h,
+            userId: p,
+            pulseSpeakingIndicator: m = !1,
+            speaking: I = !1,
+            ...T
+        } = e, g = null != h ? h : n, S = (0, s.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css), A = (0, l.c)(!0, 'VideoBackground-web').enabled, N = (0, d.ZP)(null != p ? p : E.lds), v = null == N ? void 0 : N.getBannerURL({
+            size: 1024,
+            canAnimate: _.QK.getSetting()
+        });
+    if (i.useEffect(() => {
+            null != p && A && (0, c.Z)(p, void 0, { dispatchWait: !0 });
+        }, [
+            A,
+            p
+        ]), null == n)
+        return null;
+    let O = (0, r.jsx)(o.Avatar, {
+            className: f.avatarWrapper,
+            src: n,
+            ...T
+        }), R = {
+            ...t,
+            backgroundColor: S
+        };
+    return null != v && I && A && (R.backgroundImage = 'url('.concat(v, ')'), R.backgroundSize = 'cover'), (0, r.jsx)('div', {
+        style: R,
+        className: f.background,
+        children: m ? (0, r.jsx)(u.Z, {
+            shouldAnimate: I,
+            children: O
+        }) : O
+    });
+};

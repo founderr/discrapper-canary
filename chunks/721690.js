@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  listItemTooltip: "listItemTooltip_bba834"
-}
+e.exports = { listItemTooltip: 'listItemTooltip_bba834' };

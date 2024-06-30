@@ -1,67 +1,59 @@
-t.d(s, {
-  Z: function() {
-    return u
-  }
+s.d(t, {
+    Z: function () {
+        return u;
+    }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  i = t.n(a),
-  r = t(913527),
-  o = t.n(r),
-  l = t(481060),
-  c = t(55935),
-  d = t(955204),
-  _ = t(674680),
-  E = t(778609);
-
+var n = s(735250);
+s(470079);
+var a = s(120356), i = s.n(a), r = s(913527), o = s.n(r), l = s(481060), c = s(55935), d = s(955204), _ = s(674680), E = s(778609);
 function u(e) {
-  let {
-    achievementId: s,
-    dateUnlocked: t
-  } = e, a = (0, d.oX)(s);
-  if (null == a) return null;
-  let r = null != t,
-    {
-      name: u,
-      description: T,
-      hideDescriptionUntilUnlock: S,
-      onAction: I
-    } = a,
-    N = S && !r,
-    C = r ? "header-primary" : "text-muted",
-    m = r ? "header-secondary" : "text-muted",
-    A = o()(t),
-    g = null != I && r,
-    O = g ? l.Clickable : "div";
-  return (0, n.jsxs)(O, {
-    className: i()(E.container, g && E.actionable),
-    onClick: () => {
-      g && I()
-    },
-    children: [(0, n.jsx)("div", {
-      className: E.iconContainer,
-      children: (0, n.jsx)(_.Z, {
-        achievementId: s,
-        size: _.Z.Sizes.SIZE_40,
-        unlocked: r
-      })
-    }), (0, n.jsxs)("div", {
-      className: E.nameContainer,
-      children: [null != t && (0, n.jsx)(l.Text, {
-        variant: "text-xxs/semibold",
-        color: "text-muted",
-        className: E.unlocked,
-        children: (0, c.Y4)(A)
-      }), (0, n.jsx)(l.Text, {
-        variant: "text-md/medium",
-        color: C,
-        children: u()
-      }), (0, n.jsx)(l.Text, {
-        variant: "text-xs/normal",
-        color: m,
-        children: N ? "?????" : T()
-      })]
-    })]
-  })
+    let {
+            achievementId: t,
+            dateUnlocked: s
+        } = e, a = (0, d.oX)(t);
+    if (null == a)
+        return null;
+    let r = null != s, {
+            name: u,
+            description: T,
+            hideDescriptionUntilUnlock: I,
+            onAction: S
+        } = a, N = I && !r, C = r ? 'header-primary' : 'text-muted', m = r ? 'header-secondary' : 'text-muted', A = o()(s), h = null != S && r, g = h ? l.Clickable : 'div';
+    return (0, n.jsxs)(g, {
+        className: i()(E.container, h && E.actionable),
+        onClick: () => {
+            h && S();
+        },
+        children: [
+            (0, n.jsx)('div', {
+                className: E.iconContainer,
+                children: (0, n.jsx)(_.Z, {
+                    achievementId: t,
+                    size: _.Z.Sizes.SIZE_40,
+                    unlocked: r
+                })
+            }),
+            (0, n.jsxs)('div', {
+                className: E.nameContainer,
+                children: [
+                    null != s && (0, n.jsx)(l.Text, {
+                        variant: 'text-xxs/semibold',
+                        color: 'text-muted',
+                        className: E.unlocked,
+                        children: (0, c.Y4)(A)
+                    }),
+                    (0, n.jsx)(l.Text, {
+                        variant: 'text-md/medium',
+                        color: C,
+                        children: u()
+                    }),
+                    (0, n.jsx)(l.Text, {
+                        variant: 'text-xs/normal',
+                        color: m,
+                        children: N ? '?????' : T()
+                    })
+                ]
+            })
+        ]
+    });
 }

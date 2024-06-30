@@ -1,61 +1,57 @@
-t.d(n, {
-  Z: function() {
-    return c
-  }
-}), t(47120);
-var i = t(735250),
-  r = t(470079),
-  o = t(120356),
-  l = t.n(o),
-  u = t(481060),
-  s = t(455225);
-
-function a(e) {
-  let {
-    alt: n,
-    ...t
-  } = e, [o, l] = r.useState(!0);
-  return (0, i.jsxs)(i.Fragment, {
-    children: [o && (0, i.jsx)(u.Spinner, {
-      type: u.Spinner.Type.LOW_MOTION,
-      className: s.loader
-    }), (0, i.jsx)("img", {
-      ...t,
-      alt: n,
-      onLoad: () => l(!1)
-    })]
-  })
-}
-
+n.d(t, {
+    Z: function () {
+        return d;
+    }
+}), n(47120);
+var a = n(735250), r = n(470079), i = n(120356), o = n.n(i), s = n(481060), l = n(455225);
 function c(e) {
-  let {
-    src: n,
-    backgroundSrc: t,
-    alt: r,
-    aspectRatio: o,
-    className: u,
-    imageChildClassName: c,
-    ...d
-  } = e;
-  return (0, i.jsxs)("div", {
-    className: l()(s.container, u),
-    children: [(0, i.jsx)("img", {
-      src: t,
-      alt: r,
-      className: s.backgroundImage
-    }), (0, i.jsx)("div", {
-      className: s.backgroundImageFilter
-    }), (0, i.jsx)("div", {
-      style: {
-        aspectRatio: o
-      },
-      className: s.imageContainer,
-      children: (0, i.jsx)(a, {
-        src: n,
+    let {
+            alt: t,
+            ...n
+        } = e, [i, o] = r.useState(!0);
+    return (0, a.jsxs)(a.Fragment, {
+        children: [
+            i && (0, a.jsx)(s.Spinner, {
+                type: s.Spinner.Type.LOW_MOTION,
+                className: l.loader
+            }),
+            (0, a.jsx)('img', {
+                ...n,
+                alt: t,
+                onLoad: () => o(!1)
+            })
+        ]
+    });
+}
+function d(e) {
+    let {
+        src: t,
+        backgroundSrc: n,
         alt: r,
-        className: l()(s.image, c),
-        ...d
-      })
-    })]
-  })
+        aspectRatio: i,
+        className: s,
+        imageChildClassName: d,
+        ...u
+    } = e;
+    return (0, a.jsxs)('div', {
+        className: o()(l.container, s),
+        children: [
+            (0, a.jsx)('img', {
+                src: n,
+                alt: r,
+                className: l.backgroundImage
+            }),
+            (0, a.jsx)('div', { className: l.backgroundImageFilter }),
+            (0, a.jsx)('div', {
+                style: { aspectRatio: i },
+                className: l.imageContainer,
+                children: (0, a.jsx)(c, {
+                    src: t,
+                    alt: r,
+                    className: o()(l.image, d),
+                    ...u
+                })
+            })
+        ]
+    });
 }

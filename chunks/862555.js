@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  loadingPopout: "loadingPopout_a8c724"
-}
+e.exports = { loadingPopout: 'loadingPopout_a8c724' };

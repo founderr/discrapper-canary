@@ -1,15 +1,15 @@
 var t = {
-  lastWeek: function(e) {
-    var a = e.getUTCDay();
-    return "'" + (0 === a || 6 === a ? "\xfaltimo" : "\xfaltima") + "' eeee '\xe0s' p"
-  },
-  yesterday: "'ontem \xe0s' p",
-  today: "'hoje \xe0s' p",
-  tomorrow: "'amanh\xe3 \xe0s' p",
-  nextWeek: "eeee '\xe0s' p",
-  other: "P"
+    lastWeek: function (e) {
+        var a = e.getUTCDay();
+        return '\'' + (0 === a || 6 === a ? 'último' : 'última') + '\' eeee \'às\' p';
+    },
+    yesterday: '\'ontem às\' p',
+    today: '\'hoje às\' p',
+    tomorrow: '\'amanhã às\' p',
+    nextWeek: 'eeee \'às\' p',
+    other: 'P'
 };
-a.Z = function(e, a, i, n) {
-  var o = t[e];
-  return "function" == typeof o ? o(a) : o
-}
+a.Z = function (e, a, i, n) {
+    var o = t[e];
+    return 'function' == typeof o ? o(a) : o;
+};

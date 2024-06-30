@@ -1,94 +1,85 @@
-"use strict";
-let i, r;
+let r, i;
 n(47120);
-var s, o, a, l, u = n(392711),
-  _ = n(442837),
-  c = n(570140),
-  d = n(706454),
-  E = n(884697);
-let I = new Map,
-  T = new Map,
-  h = I,
-  f = T,
-  S = !1,
-  A = new Set;
-let N = {},
-  m = () => {
-    h = I, f = T, r = void 0, S = !1, A = new Set, i = void 0, N = {}
-  };
-class O extends(s = _.ZP.Store) {
-  initialize() {
-    this.syncWith([d.default], m)
-  }
-  get isFetchingCategories() {
-    return S
-  }
-  isFetchingProduct(e) {
-    return null != e && A.has(e)
-  }
-  get error() {
-    return i
-  }
-  get lastSuccessfulFetch() {
-    return r
-  }
-  get lastFetchOptions() {
-    return N
-  }
-  get categories() {
-    return h
-  }
-  get products() {
-    return f
-  }
-  getCategory(e) {
-    return null != e ? h.get(e) : void 0
-  }
-  getProduct(e) {
-    return null != e ? f.get(e) : void 0
-  }
-  getCategoryForProduct(e) {
-    let t = this.getProduct(e);
-    return this.getCategory(null == t ? void 0 : t.categorySkuId)
-  }
+var a, o, s, l, u = n(392711), c = n(442837), d = n(570140), _ = n(706454), E = n(884697);
+let f = new Map(), h = new Map(), p = f, m = h, I = !1, T = new Set();
+let g = {}, S = () => {
+        p = f, m = h, i = void 0, I = !1, T = new Set(), r = void 0, g = {};
+    };
+class A extends (a = c.ZP.Store) {
+    initialize() {
+        this.syncWith([_.default], S);
+    }
+    get isFetchingCategories() {
+        return I;
+    }
+    isFetchingProduct(e) {
+        return null != e && T.has(e);
+    }
+    get error() {
+        return r;
+    }
+    get lastSuccessfulFetch() {
+        return i;
+    }
+    get lastFetchOptions() {
+        return g;
+    }
+    get categories() {
+        return p;
+    }
+    get products() {
+        return m;
+    }
+    getCategory(e) {
+        return null != e ? p.get(e) : void 0;
+    }
+    getProduct(e) {
+        return null != e ? m.get(e) : void 0;
+    }
+    getCategoryForProduct(e) {
+        let t = this.getProduct(e);
+        return this.getCategory(null == t ? void 0 : t.categorySkuId);
+    }
 }
-l = "CollectiblesCategoryStore", (a = "displayName") in(o = O) ? Object.defineProperty(o, a, {
-  value: l,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : o[a] = l, t.Z = new O(c.Z, {
-  COLLECTIBLES_CATEGORIES_FETCH: e => {
-    S = !0, i = void 0, N = e.options
-  },
-  COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
-    0 === e.categories.length ? (h = I, f = T) : !(0, u.isEqual)([...h.values()], e.categories) && (h = new Map(e.categories.map(e => [e.skuId, e])), f = new Map((0, E.Cs)(h).map(e => [e.skuId, e]))), r = Date.now(), S = !1, i = void 0
-  },
-  COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
-    let {
-      error: t
-    } = e;
-    h = I, f = T, S = !1, A = new Set, i = t
-  },
-  COLLECTIBLES_PRODUCT_FETCH: e => {
-    let {
-      skuId: t
-    } = e;
-    (A = new Set(A)).add(t), i = void 0
-  },
-  COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
-    let {
-      skuId: t,
-      product: n
-    } = e;
-    f.set(t, n), (A = new Set(A)).delete(t), i = void 0
-  },
-  COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
-    let {
-      skuId: t,
-      error: n
-    } = e;
-    (A = new Set(A)).delete(t), i = n
-  },
-  LOGOUT: m
-})
+l = 'CollectiblesCategoryStore', (s = 'displayName') in (o = A) ? Object.defineProperty(o, s, {
+    value: l,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : o[s] = l, t.Z = new A(d.Z, {
+    COLLECTIBLES_CATEGORIES_FETCH: e => {
+        I = !0, r = void 0, g = e.options;
+    },
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
+        0 === e.categories.length ? (p = f, m = h) : !(0, u.isEqual)([...p.values()], e.categories) && (p = new Map(e.categories.map(e => [
+            e.skuId,
+            e
+        ])), m = new Map((0, E.Cs)(p).map(e => [
+            e.skuId,
+            e
+        ]))), i = Date.now(), I = !1, r = void 0;
+    },
+    COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
+        let {error: t} = e;
+        p = f, m = h, I = !1, T = new Set(), r = t;
+    },
+    COLLECTIBLES_PRODUCT_FETCH: e => {
+        let {skuId: t} = e;
+        (T = new Set(T)).add(t), r = void 0;
+    },
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
+        let {
+            skuId: t,
+            product: n
+        } = e;
+        m.set(t, n), (T = new Set(T)).delete(t), r = void 0;
+    },
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
+        let {
+            skuId: t,
+            error: n
+        } = e;
+        (T = new Set(T)).delete(t), r = n;
+    },
+    LOGOUT: S
+});

@@ -1,136 +1,93 @@
-"use strict";
 n.d(t, {
-  k: function() {
-    return v
-  }
+    k: function () {
+        return C;
+    }
 });
-var i = n(735250),
-  r = n(470079),
-  s = n(442837),
-  o = n(481060),
-  a = n(607070),
-  l = n(906411),
-  u = n(438332),
-  _ = n(664437),
-  c = n(806966),
-  d = n(65029),
-  E = n(695346),
-  I = n(430824),
-  T = n(451478),
-  h = n(768581),
-  f = n(392552),
-  S = n(543241),
-  A = n(199257),
-  N = n(880949),
-  m = n(784222),
-  O = n(149203),
-  R = n(689938),
-  p = n(961184);
-
-function g(e) {
-  return "animated" in e
+var r = n(735250), i = n(470079), a = n(442837), o = n(481060), s = n(607070), l = n(906411), u = n(438332), c = n(664437), d = n(806966), _ = n(65029), E = n(695346), f = n(430824), h = n(451478), p = n(768581), m = n(392552), I = n(543241), T = n(199257), g = n(880949), S = n(784222), A = n(149203), N = n(689938), v = n(961184);
+function O(e) {
+    return 'animated' in e;
 }
-let C = e => {
-    let {
-      inspectedEmoji: t,
-      guild: n
-    } = e, i = g(t);
-    return null != n && i ? R.Z.Messages.EMOJI_FROM_GUILD.format({
-      guildName: n.name
-    }) : null
-  },
-  v = r.memo(function(e) {
-    let t, {
-        className: n,
-        emojiGrid: v,
-        guildId: L,
-        pickerIntention: D,
-        channel: M
-      } = e,
-      {
-        enabled: P
-      } = f.Z.useExperiment({
-        location: "EmojiPicker"
-      }, {
-        autoTrackExposure: !1
-      }),
-      y = c.kJ.useStore(e => e.inspectedExpressionPosition),
-      U = r.useMemo(() => {
-        var e;
+let R = e => {
         let {
-          rowIndex: t,
-          columnIndex: n
-        } = y;
-        return null === (e = v[t]) || void 0 === e ? void 0 : e[n]
-      }, [v, y]),
-      b = (null == U ? void 0 : U.type) === m.ld.EMOJI ? null == U ? void 0 : U.emoji : {
-        type: "CREATE_EMOJI",
-        guildId: null == U ? void 0 : U.guildId,
-        allNamesString: null == U ? void 0 : U.name
-      },
-      G = (0, s.e7)([I.Z], () => null !== b && b.type === l.B.GUILD ? I.Z.getGuild(b.guildId) : null, [b]),
-      w = (0, s.e7)([T.Z], () => T.Z.isFocused()),
-      B = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
-      x = E.Yk.useSetting(),
-      k = (0, S.C1)(L, g(b) ? b : null),
-      {
-        newlyAddedEmojis: V
-      } = (0, A.Z)(L, D),
-      Z = b.id,
-      H = (null == U ? void 0 : U.type) === m.ld.EMOJI ? U.subCategory : O.t0.NONE;
-    if (r.useEffect(() => {
-        let e = Date.now();
-        return () => {
-          Date.now() - e >= 250 && g(b) && H !== O.t0.NONE && (H === O.t0.NEWLY_ADDED_EMOJI && null !== b && b.type === l.B.GUILD && (0, _.Zg)(b.guildId, V[0].id), null != y.source && (0, S.Gn)({
-            emoji: b,
-            subCategory: H,
-            position: U.columnIndex + 1,
-            newlyAddedHighlight: H === O.t0.NEWLY_ADDED_EMOJI && u.Z.isNewerThanLastSeen(L, Z)
-          }))
-        }
-      }), null == b) return null;
-    if (g(b)) {
-      var F;
-      let e = null != b.id ? h.ZP.getEmojiURL({
-        id: b.id,
-        animated: x && b.animated,
-        size: 28
-      }) : b.url;
-      t = "" === e ? (0, i.jsx)(o.Text, {
-        variant: "text-md/normal",
-        className: p.glyphEmoji,
-        children: "surrogates" in b ? b.surrogates : null
-      }) : (0, i.jsx)("img", {
-        alt: null !== (F = b.allNamesString) && void 0 !== F ? F : "",
-        src: e,
-        className: p.emoji
-      })
-    } else t = (0, i.jsx)(o.CirclePlusIcon, {
-      size: "md",
-      color: "currentColor",
-      className: p.icon,
-      colorClass: p.icon
+                inspectedEmoji: t,
+                guild: n
+            } = e, r = O(t);
+        return null != n && r ? N.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
+    }, C = i.memo(function (e) {
+        let t, {
+                className: n,
+                emojiGrid: C,
+                guildId: y,
+                pickerIntention: D,
+                channel: L
+            } = e, {enabled: b} = m.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }), M = d.kJ.useStore(e => e.inspectedExpressionPosition), P = i.useMemo(() => {
+                var e;
+                let {
+                    rowIndex: t,
+                    columnIndex: n
+                } = M;
+                return null === (e = C[t]) || void 0 === e ? void 0 : e[n];
+            }, [
+                C,
+                M
+            ]), U = (null == P ? void 0 : P.type) === S.ld.EMOJI ? null == P ? void 0 : P.emoji : {
+                type: 'CREATE_EMOJI',
+                guildId: null == P ? void 0 : P.guildId,
+                allNamesString: null == P ? void 0 : P.name
+            }, w = (0, a.e7)([f.Z], () => null !== U && U.type === l.B.GUILD ? f.Z.getGuild(U.guildId) : null, [U]), x = (0, a.e7)([h.Z], () => h.Z.isFocused()), G = (0, a.e7)([s.Z], () => s.Z.useReducedMotion, []), k = E.Yk.useSetting(), B = (0, I.C1)(y, O(U) ? U : null), {newlyAddedEmojis: F} = (0, T.Z)(y, D), V = U.id, H = (null == P ? void 0 : P.type) === S.ld.EMOJI ? P.subCategory : A.t0.NONE;
+        if (i.useEffect(() => {
+                let e = Date.now();
+                return () => {
+                    Date.now() - e >= 250 && O(U) && H !== A.t0.NONE && (H === A.t0.NEWLY_ADDED_EMOJI && null !== U && U.type === l.B.GUILD && (0, c.Zg)(U.guildId, F[0].id), null != M.source && (0, I.Gn)({
+                        emoji: U,
+                        subCategory: H,
+                        position: P.columnIndex + 1,
+                        newlyAddedHighlight: H === A.t0.NEWLY_ADDED_EMOJI && u.Z.isNewerThanLastSeen(y, V)
+                    }));
+                };
+            }), null == U)
+            return null;
+        if (O(U)) {
+            var Z;
+            let e = null != U.id ? p.ZP.getEmojiURL({
+                id: U.id,
+                animated: k && U.animated,
+                size: 28
+            }) : U.url;
+            t = '' === e ? (0, r.jsx)(o.Text, {
+                variant: 'text-md/normal',
+                className: v.glyphEmoji,
+                children: 'surrogates' in U ? U.surrogates : null
+            }) : (0, r.jsx)('img', {
+                alt: null !== (Z = U.allNamesString) && void 0 !== Z ? Z : '',
+                src: e,
+                className: v.emoji
+            });
+        } else
+            t = (0, r.jsx)(o.CirclePlusIcon, {
+                size: 'md',
+                color: 'currentColor',
+                className: v.icon,
+                colorClass: v.icon
+            });
+        let Y = null != w ? (0, r.jsx)(g.Z, {
+                className: v.__invalid_guildIcon,
+                guild: w,
+                shouldAnimate: !G && x
+            }) : null, j = b && 'CREATE_EMOJI' === U.type ? N.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : U.allNamesString, W = b && 'CREATE_EMOJI' === U.type ? N.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : R({
+                inspectedEmoji: U,
+                channel: L,
+                guildId: y,
+                intention: D,
+                guild: w
+            });
+        return (0, r.jsx)(_.Z, {
+            className: n,
+            graphicPrimary: t,
+            graphicSecondary: Y,
+            titlePrimary: j,
+            titleSecondary: W,
+            isFavorite: B,
+            emojiSubCategory: H
+        });
     });
-    let Y = null != G ? (0, i.jsx)(N.Z, {
-        className: p.__invalid_guildIcon,
-        guild: G,
-        shouldAnimate: !B && w
-      }) : null,
-      j = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : b.allNamesString,
-      W = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : C({
-        inspectedEmoji: b,
-        channel: M,
-        guildId: L,
-        intention: D,
-        guild: G
-      });
-    return (0, i.jsx)(d.Z, {
-      className: n,
-      graphicPrimary: t,
-      graphicSecondary: Y,
-      titlePrimary: j,
-      titleSecondary: W,
-      isFavorite: k,
-      emojiSubCategory: H
-    })
-  })

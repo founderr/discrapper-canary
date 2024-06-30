@@ -1,126 +1,98 @@
-"use strict";
 n.d(t, {
-  A5: function() {
-    return k
-  },
-  B2: function() {
-    return m
-  },
-  Bg: function() {
-    return f
-  },
-  D5: function() {
-    return _
-  },
-  D_: function() {
-    return E
-  },
-  EF: function() {
-    return h
-  },
-  G$: function() {
-    return I
-  },
-  HW: function() {
-    return R
-  },
-  Hp: function() {
-    return O
-  },
-  JO: function() {
-    return M
-  },
-  Kw: function() {
-    return y
-  },
-  MG: function() {
-    return g
-  },
-  OT: function() {
-    return a
-  },
-  Qr: function() {
-    return v
-  },
-  Ut: function() {
-    return C
-  },
-  WM: function() {
-    return S
-  },
-  X9: function() {
-    return u
-  },
-  XH: function() {
-    return p
-  },
-  _U: function() {
-    return B
-  },
-  dJ: function() {
-    return l
-  },
-  f_: function() {
-    return L
-  },
-  i$: function() {
-    return G
-  },
-  jF: function() {
-    return T
-  },
-  ji: function() {
-    return b
-  },
-  jp: function() {
-    return U
-  },
-  mg: function() {
-    return N
-  },
-  nU: function() {
-    return A
-  },
-  wD: function() {
-    return D
-  },
-  xd: function() {
-    return x
-  },
-  xx: function() {
-    return w
-  },
-  yl: function() {
-    return P
-  }
+    A5: function () {
+        return B;
+    },
+    B2: function () {
+        return S;
+    },
+    Bg: function () {
+        return m;
+    },
+    D5: function () {
+        return c;
+    },
+    D_: function () {
+        return E;
+    },
+    EF: function () {
+        return p;
+    },
+    G$: function () {
+        return f;
+    },
+    HW: function () {
+        return N;
+    },
+    Hp: function () {
+        return A;
+    },
+    JO: function () {
+        return L;
+    },
+    Kw: function () {
+        return M;
+    },
+    MG: function () {
+        return O;
+    },
+    OT: function () {
+        return s;
+    },
+    Qr: function () {
+        return C;
+    },
+    Ut: function () {
+        return R;
+    },
+    WM: function () {
+        return I;
+    },
+    X9: function () {
+        return u;
+    },
+    XH: function () {
+        return v;
+    },
+    _U: function () {
+        return G;
+    },
+    dJ: function () {
+        return l;
+    },
+    f_: function () {
+        return y;
+    },
+    i$: function () {
+        return w;
+    },
+    jF: function () {
+        return h;
+    },
+    ji: function () {
+        return U;
+    },
+    jp: function () {
+        return P;
+    },
+    mg: function () {
+        return g;
+    },
+    nU: function () {
+        return T;
+    },
+    wD: function () {
+        return D;
+    },
+    xd: function () {
+        return k;
+    },
+    xx: function () {
+        return x;
+    },
+    yl: function () {
+        return b;
+    }
 });
-var i, r, s, o, a, l, u, _, c = n(710845),
-  d = n(70956);
-(i = a || (a = {}))[i.SECONDS_30 = 30 * d.Z.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = d.Z.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * d.Z.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (s = u || (u = {})).DECOUPLED = "decoupled", s.VIEWER = "viewer", s.STREAMER = "streamer", (o = _ || (_ = {}))[o.Error = 0] = "Error", o[o.Disabled = 1] = "Disabled", o[o.Enabled = 2] = "Enabled";
-let E = "alt+c",
-  I = 6 * d.Z.Millis.SECOND,
-  T = new c.Z("Clips"),
-  h = e => "Discord_Clip_".concat(e, ".mp4"),
-  f = 3,
-  S = 1,
-  A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-  N = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-  m = /(Apple M[12].*)/,
-  O = .1,
-  R = 25,
-  p = 0,
-  g = 200,
-  C = "clips-edit",
-  v = "clips-gallery",
-  L = 640,
-  D = 360,
-  M = 100,
-  P = e => "Clip - ".concat(new Date(e).toLocaleString()),
-  y = 15,
-  U = 3e4,
-  b = 30,
-  G = 10,
-  w = 14 * d.Z.Millis.DAY,
-  B = 5,
-  x = 5,
-  k = 1
+var r, i, a, o, s, l, u, c, d = n(710845), _ = n(70956);
+(r = s || (s = {}))[r.SECONDS_30 = 30 * _.Z.Millis.SECOND] = 'SECONDS_30', r[r.MINUTES_1 = _.Z.Millis.MINUTE] = 'MINUTES_1', r[r.MINUTES_2 = 2 * _.Z.Millis.MINUTE] = 'MINUTES_2', (i = l || (l = {}))[i.ALL = 0] = 'ALL', i[i.FRIENDS = 1] = 'FRIENDS', (a = u || (u = {})).DECOUPLED = 'decoupled', a.VIEWER = 'viewer', a.STREAMER = 'streamer', (o = c || (c = {}))[o.Error = 0] = 'Error', o[o.Disabled = 1] = 'Disabled', o[o.Enabled = 2] = 'Enabled';
+let E = 'alt+c', f = 6 * _.Z.Millis.SECOND, h = new d.Z('Clips'), p = e => 'Discord_Clip_'.concat(e, '.mp4'), m = 3, I = 1, T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/, g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/, S = /(Apple M[12].*)/, A = 0.1, N = 25, v = 0, O = 200, R = 'clips-edit', C = 'clips-gallery', y = 640, D = 360, L = 100, b = e => 'Clip - '.concat(new Date(e).toLocaleString()), M = 15, P = 30000, U = 30, w = 10, x = 14 * _.Z.Millis.DAY, G = 5, k = 5, B = 1;

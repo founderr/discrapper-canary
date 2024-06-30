@@ -1,15 +1,21 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return s
-  },
-  v: function() {
-    return r
-  }
+    Z: function () {
+        return a;
+    },
+    v: function () {
+        return i;
+    }
 });
-let i = "@silent",
-  r = new RegExp("^".concat(i, "(\\s|$)"));
-
-function s(e) {
-  return null == e ? [!1, ""] : null == e.match(r) ? [!1, e] : [!0, e.substring(i.length).trim()]
+let r = '@silent', i = new RegExp('^'.concat(r, '(\\s|$)'));
+function a(e) {
+    return null == e ? [
+        !1,
+        ''
+    ] : null == e.match(i) ? [
+        !1,
+        e
+    ] : [
+        !0,
+        e.substring(r.length).trim()
+    ];
 }

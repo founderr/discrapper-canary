@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  item: "item_f5370e"
-}
+e.exports = { item: 'item_f5370e' };

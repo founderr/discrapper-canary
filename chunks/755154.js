@@ -1,5 +1,4 @@
-"use strict";
 e.exports = {
-  container: "container_c94b03",
-  textSection: "textSection_c94b03"
-}
+    container: 'container_c94b03',
+    textSection: 'textSection_c94b03'
+};

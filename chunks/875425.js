@@ -1,16 +1,14 @@
 a.d(t, {
-  F: function() {
-    return l
-  },
-  s: function() {
-    return n
-  }
+    F: function () {
+        return l;
+    },
+    s: function () {
+        return n;
+    }
 });
-let s = 36e5,
-  n = 128,
-  l = Object.freeze({
-    MINUTES_30: 18e5,
-    HOURS_1: 36e5,
-    HOURS_4: 144e5,
-    TODAY: "TODAY"
-  })
+let s = 3600000, n = 128, l = Object.freeze({
+        MINUTES_30: 1800000,
+        HOURS_1: 3600000,
+        HOURS_4: 14400000,
+        TODAY: 'TODAY'
+    });

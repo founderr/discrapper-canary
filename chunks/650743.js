@@ -1,91 +1,71 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return O
-  }
+    Z: function () {
+        return A;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(399606),
-  s = n(704215),
-  o = n(481060),
-  a = n(596454),
-  l = n(607070),
-  u = n(605236),
-  _ = n(880949),
-  c = n(28546),
-  d = n(65029),
-  E = n(430824),
-  I = n(556296),
-  T = n(451478),
-  h = n(358085),
-  f = n(13140),
-  S = n(763296),
-  A = n(981631),
-  N = n(689938),
-  m = n(658147);
-
-function O(e) {
-  let {
-    soundboardSound: t,
-    closePicker: O
-  } = e, R = (0, c.Iu)(e => e.searchQuery), p = (0, r.e7)([S.Z], () => null != t && S.Z.isFavoriteSound(t.soundId)), g = (0, r.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)), C = (0, r.e7)([l.Z], () => l.Z.useReducedMotion, []), v = (0, r.e7)([T.Z], () => T.Z.isFocused()), L = (0, r.e7)([I.Z], () => I.Z.getKeybindForAction(A.kg4.SOUNDBOARD_HOLD));
-  if (null != t && R.length > 0) return (0, i.jsx)(d.Z, {
-    graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(a.Z, {
-      emojiId: t.emojiId,
-      emojiName: t.emojiName,
-      className: m.emoji
-    }) : (0, i.jsx)(o.ImageIcon, {
-      size: "md",
-      color: "currentColor",
-      className: m.emoji
-    }),
-    graphicSecondary: null != g ? (0, i.jsx)(_.Z, {
-      guild: g,
-      shouldAnimate: !C && v
-    }) : null,
-    titlePrimary: t.name,
-    titleSecondary: null == g ? void 0 : g.name,
-    isFavorite: p
-  });
-  let D = () => {
-      O(), (0, o.openModalLazy)(async () => {
-        let {
-          default: e
-        } = await n.e("58120").then(n.bind(n, 355453));
-        return t => (0, i.jsx)(e, {
-          ...t
-        })
-      })
-    },
-    M = (0, u.un)(s.z.SOUNDBOARD_KEYBIND_TIP),
-    P = null != L && (0, h.isWindows)() && !M ? N.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
-      keybind: (0, f.BB)(L.shortcut, !0),
-      openSettingsHook: (e, t) => (0, i.jsx)(o.Anchor, {
-        onClick: D,
-        children: e
-      }, t)
-    }) : null;
-  return null == P ? null : (0, i.jsxs)("div", {
-    className: m.keybindHint,
-    children: [(0, i.jsx)(o.CircleExclamationPointIcon, {
-      size: "custom",
-      width: 20,
-      height: 20,
-      color: "currentColor",
-      className: m.warningIcon
-    }), (0, i.jsx)(o.Text, {
-      variant: "text-sm/medium",
-      color: "text-normal",
-      className: m.keybindHintText,
-      children: P
-    }), (0, i.jsx)(o.Clickable, {
-      className: m.closeButton,
-      onClick: () => (0, u.EW)(s.z.SOUNDBOARD_KEYBIND_TIP),
-      children: (0, i.jsx)(o.CloseSmallIcon, {
-        size: "xs",
-        color: "currentColor"
-      })
-    })]
-  })
+var i = n(399606), a = n(704215), o = n(481060), s = n(596454), l = n(607070), u = n(605236), c = n(880949), d = n(28546), _ = n(65029), E = n(430824), f = n(556296), h = n(451478), p = n(358085), m = n(13140), I = n(763296), T = n(981631), g = n(689938), S = n(658147);
+function A(e) {
+    let {
+            soundboardSound: t,
+            closePicker: A
+        } = e, N = (0, d.Iu)(e => e.searchQuery), v = (0, i.e7)([I.Z], () => null != t && I.Z.isFavoriteSound(t.soundId)), O = (0, i.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)), R = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []), C = (0, i.e7)([h.Z], () => h.Z.isFocused()), y = (0, i.e7)([f.Z], () => f.Z.getKeybindForAction(T.kg4.SOUNDBOARD_HOLD));
+    if (null != t && N.length > 0)
+        return (0, r.jsx)(_.Z, {
+            graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, r.jsx)(s.Z, {
+                emojiId: t.emojiId,
+                emojiName: t.emojiName,
+                className: S.emoji
+            }) : (0, r.jsx)(o.ImageIcon, {
+                size: 'md',
+                color: 'currentColor',
+                className: S.emoji
+            }),
+            graphicSecondary: null != O ? (0, r.jsx)(c.Z, {
+                guild: O,
+                shouldAnimate: !R && C
+            }) : null,
+            titlePrimary: t.name,
+            titleSecondary: null == O ? void 0 : O.name,
+            isFavorite: v
+        });
+    let D = () => {
+            A(), (0, o.openModalLazy)(async () => {
+                let {default: e} = await n.e('58120').then(n.bind(n, 355453));
+                return t => (0, r.jsx)(e, { ...t });
+            });
+        }, L = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP), b = null != y && (0, p.isWindows)() && !L ? g.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            keybind: (0, m.BB)(y.shortcut, !0),
+            openSettingsHook: (e, t) => (0, r.jsx)(o.Anchor, {
+                onClick: D,
+                children: e
+            }, t)
+        }) : null;
+    return null == b ? null : (0, r.jsxs)('div', {
+        className: S.keybindHint,
+        children: [
+            (0, r.jsx)(o.CircleExclamationPointIcon, {
+                size: 'custom',
+                width: 20,
+                height: 20,
+                color: 'currentColor',
+                className: S.warningIcon
+            }),
+            (0, r.jsx)(o.Text, {
+                variant: 'text-sm/medium',
+                color: 'text-normal',
+                className: S.keybindHintText,
+                children: b
+            }),
+            (0, r.jsx)(o.Clickable, {
+                className: S.closeButton,
+                onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
+                children: (0, r.jsx)(o.CloseSmallIcon, {
+                    size: 'xs',
+                    color: 'currentColor'
+                })
+            })
+        ]
+    });
 }

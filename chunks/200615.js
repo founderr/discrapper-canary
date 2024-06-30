@@ -1,32 +1,21 @@
-"use strict";
 n.d(t, {
-  F: function() {
-    return d
-  }
+    F: function () {
+        return d;
+    }
 });
-var r = n(735250),
-  i = n(470079),
-  a = n(481060),
-  o = n(906732),
-  s = n(963249),
-  c = n(474936),
-  l = n(799381);
+var s = n(735250), r = n(470079), a = n(481060), o = n(906732), i = n(963249), l = n(474936), c = n(799381);
 let d = e => {
-  let {
-    text: t
-  } = e, {
-    analyticsLocations: n
-  } = (0, o.ZP)(), d = i.useRef(null);
-  return (0, r.jsx)(a.Clickable, {
-    className: l.subscribeNow,
-    innerRef: d,
-    onClick: () => {
-      (0, s.Z)({
-        subscriptionTier: c.Si.TIER_2,
-        analyticsLocations: n,
-        returnRef: d
-      })
-    },
-    children: t
-  })
-}
+    let {text: t} = e, {analyticsLocations: n} = (0, o.ZP)(), d = r.useRef(null);
+    return (0, s.jsx)(a.Clickable, {
+        className: c.subscribeNow,
+        innerRef: d,
+        onClick: () => {
+            (0, i.Z)({
+                subscriptionTier: l.Si.TIER_2,
+                analyticsLocations: n,
+                returnRef: d
+            });
+        },
+        children: t
+    });
+};

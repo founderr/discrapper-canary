@@ -1,48 +1,41 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return d
-  }
+    Z: function () {
+        return _;
+    }
 }), n(47120);
-var i = n(470079),
-  r = n(392711),
-  s = n(442837),
-  o = n(881052),
-  a = n(699682),
-  l = n(81897),
-  u = n(814443),
-  _ = n(621853),
-  c = n(484459);
-
-function d(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    [n, d] = (0, s.Wu)([_.Z], () => [_.Z.getMutualFriends(e), _.Z.isFetchingProfile(e)]),
-    E = (0, l.Z)(),
-    [I, T] = (0, i.useState)(null),
-    h = t && null == I && !d && null == n;
-  (0, i.useEffect)(() => {
-    if (!!h)(async () => {
-      try {
-        await (0, c.Z)(e, void 0, {
-          withMutualFriends: !0,
-          abortSignal: E
-        })
-      } catch (e) {
-        T(new o.Hx(e))
-      }
-    })()
-  }, [h, e, E]);
-  let f = (0, s.e7)([u.Z], () => u.Z.getUserAffinitiesMap()),
-    S = (0, i.useMemo)(() => null == n ? null : n.length < 2 ? n : (0, r.sortBy)(n, e => {
-      var t, n;
-      let {
-        user: i
-      } = e;
-      return -((null !== (n = null === (t = f.get(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1)
-    }), [n, f]),
-    A = (0, a.Z)(S);
-  return {
-    mutualFriends: null != S ? S : A,
-    isFetching: d
-  }
+var r = n(470079), i = n(392711), a = n(442837), o = n(881052), s = n(699682), l = n(81897), u = n(814443), c = n(621853), d = n(484459);
+function _(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], [n, _] = (0, a.Wu)([c.Z], () => [
+            c.Z.getMutualFriends(e),
+            c.Z.isFetchingProfile(e)
+        ]), E = (0, l.Z)(), [f, h] = (0, r.useState)(null), p = t && null == f && !_ && null == n;
+    (0, r.useEffect)(() => {
+        if (!!p)
+            (async () => {
+                try {
+                    await (0, d.Z)(e, void 0, {
+                        withMutualFriends: !0,
+                        abortSignal: E
+                    });
+                } catch (e) {
+                    h(new o.Hx(e));
+                }
+            })();
+    }, [
+        p,
+        e,
+        E
+    ]);
+    let m = (0, a.e7)([u.Z], () => u.Z.getUserAffinitiesMap()), I = (0, r.useMemo)(() => null == n ? null : n.length < 2 ? n : (0, i.sortBy)(n, e => {
+            var t, n;
+            let {user: r} = e;
+            return -((null !== (n = null === (t = m.get(r.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1);
+        }), [
+            n,
+            m
+        ]), T = (0, s.Z)(I);
+    return {
+        mutualFriends: null != I ? I : T,
+        isFetching: _
+    };
 }

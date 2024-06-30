@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  clickable: "clickable_e82700"
-}
+e.exports = { clickable: 'clickable_e82700' };

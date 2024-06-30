@@ -1,66 +1,44 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return T
-  }
-});
-var i = n(735250);
-n(470079);
-var r = n(442837),
-  s = n(481060),
-  o = n(300284),
-  a = n(314897),
-  l = n(430824),
-  u = n(877485),
-  _ = n(785717),
-  c = n(841040),
-  d = n(993409),
-  E = n(228168),
-  I = n(689938);
-
-function T(e) {
-  let {
-    user: t,
-    guildId: n,
-    profileType: T,
-    onClose: h
-  } = e, f = (0, r.e7)([a.default], () => a.default.getId() === t.id), S = (0, r.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
-    originalFriendingEnabled: A
-  } = (0, u.V)({
-    location: "UserProfileEditMenuButton"
-  }), {
-    trackUserProfileAction: N
-  } = (0, _.KZ)(), m = (0, o.Z)(), O = A && T === E.y0.FULL_SIZE ? void 0 : s.PencilIcon;
-  return f ? null == S ? (0, i.jsx)(d.Z, {
-    variant: "text",
-    icon: O,
-    text: I.Z.Messages.EDIT_PROFILE,
-    autoFocus: !0,
-    fullWidth: !0,
-    onClick: () => {
-      N({
-        action: "EDIT_PROFILE"
-      }), null == h || h(), m()
+    Z: function () {
+        return h;
     }
-  }) : (0, i.jsx)(s.Popout, {
-    renderPopout: e => {
-      let {
-        closePopout: t
-      } = e;
-      return (0, i.jsx)(c.Z, {
-        guild: S,
-        onClose: () => {
-          t(), null == h || h()
+});
+var r = n(735250);
+n(470079);
+var i = n(442837), a = n(481060), o = n(300284), s = n(314897), l = n(430824), u = n(877485), c = n(785717), d = n(841040), _ = n(993409), E = n(228168), f = n(689938);
+function h(e) {
+    let {
+            user: t,
+            guildId: n,
+            profileType: h,
+            onClose: p
+        } = e, m = (0, i.e7)([s.default], () => s.default.getId() === t.id), I = (0, i.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {originalFriendingEnabled: T} = (0, u.V)({ location: 'UserProfileEditMenuButton' }), {trackUserProfileAction: g} = (0, c.KZ)(), S = (0, o.Z)(), A = T && h === E.y0.FULL_SIZE ? void 0 : a.PencilIcon;
+    return m ? null == I ? (0, r.jsx)(_.Z, {
+        variant: 'text',
+        icon: A,
+        text: f.Z.Messages.EDIT_PROFILE,
+        autoFocus: !0,
+        fullWidth: !0,
+        onClick: () => {
+            g({ action: 'EDIT_PROFILE' }), null == p || p(), S();
         }
-      })
-    },
-    children: e => (0, i.jsx)(d.Z, {
-      variant: "text",
-      icon: O,
-      text: I.Z.Messages.EDIT_PROFILE,
-      autoFocus: !0,
-      fullWidth: !0,
-      ...e
-    })
-  }) : null
+    }) : (0, r.jsx)(a.Popout, {
+        renderPopout: e => {
+            let {closePopout: t} = e;
+            return (0, r.jsx)(d.Z, {
+                guild: I,
+                onClose: () => {
+                    t(), null == p || p();
+                }
+            });
+        },
+        children: e => (0, r.jsx)(_.Z, {
+            variant: 'text',
+            icon: A,
+            text: f.Z.Messages.EDIT_PROFILE,
+            autoFocus: !0,
+            fullWidth: !0,
+            ...e
+        })
+    }) : null;
 }

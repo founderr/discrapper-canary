@@ -1,26 +1,22 @@
-n.d(i, {
-  s: function() {
-    return r
-  }
+I.d(_, {
+    s: function () {
+        return N;
+    }
 });
-var t = n(735250);
-n(470079);
-var a = n(481060),
-  l = n(621145),
-  s = n(689938),
-  o = n(688690);
-let r = e => {
-  let {
-    flaggedContent: i
-  } = e;
-  return 0 === i.length ? null : (0, t.jsxs)("div", {
-    className: o.classificationEvidenceContainer,
-    children: [(0, t.jsx)(a.Text, {
-      variant: "eyebrow",
-      color: "text-muted",
-      children: s.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
-    }), (0, t.jsx)(l.Z, {
-      flaggedContent: i
-    })]
-  })
-}
+var A = I(735250);
+I(470079);
+var O = I(481060), T = I(621145), S = I(689938), C = I(688690);
+let N = E => {
+    let {flaggedContent: _} = E;
+    return 0 === _.length ? null : (0, A.jsxs)('div', {
+        className: C.classificationEvidenceContainer,
+        children: [
+            (0, A.jsx)(O.Text, {
+                variant: 'eyebrow',
+                color: 'text-muted',
+                children: S.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+            }),
+            (0, A.jsx)(T.Z, { flaggedContent: _ })
+        ]
+    });
+};

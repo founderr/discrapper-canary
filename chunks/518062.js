@@ -1,46 +1,41 @@
-t.d(n, {
-  Z: function() {
-    return d
-  }
-}), t(47120);
-var r = t(735250);
-t(470079);
-var o = t(442837),
-  a = t(481060),
-  i = t(607070),
-  l = t(122890),
-  s = t(285952),
-  c = t(300395),
-  u = t(796116);
-
-function d(e) {
-  let {
-    purchaseState: n,
-    currentStep: t,
-    onClose: d
-  } = e, [f, p] = (0, l.z)({
-    purchaseState: n,
-    currentStep: t,
-    initialScene: c.fe.Scenes.ENTRY,
-    purchaseScene: c.fe.Scenes.STARS,
-    errorScene: c.fe.Scenes.ERROR,
-    successScene: c.fe.Scenes.SUCCESS
-  }), _ = (0, o.e7)([i.Z], () => i.Z.useReducedMotion);
-  return (0, r.jsxs)(a.ModalHeader, {
-    align: s.Z.Align.START,
-    className: u.header,
-    separator: !1,
-    children: [(0, r.jsx)(c.fe, {
-      className: u.animation,
-      nextScene: f,
-      onScenePlay: e => p(c.fe.getNextScene(e)),
-      pauseWhileUnfocused: !1,
-      pause: _
-    }), (0, r.jsx)("div", {
-      className: u.headerTitle
-    }), (0, r.jsx)(a.ModalCloseButton, {
-      onClick: d,
-      className: u.closeButton
-    })]
-  })
+s.d(t, {
+    Z: function () {
+        return _;
+    }
+}), s(47120);
+var n = s(735250);
+s(470079);
+var a = s(442837), i = s(481060), r = s(607070), o = s(122890), l = s(285952), c = s(300395), d = s(796116);
+function _(e) {
+    let {
+            purchaseState: t,
+            currentStep: s,
+            onClose: _
+        } = e, [E, u] = (0, o.z)({
+            purchaseState: t,
+            currentStep: s,
+            initialScene: c.fe.Scenes.ENTRY,
+            purchaseScene: c.fe.Scenes.STARS,
+            errorScene: c.fe.Scenes.ERROR,
+            successScene: c.fe.Scenes.SUCCESS
+        }), T = (0, a.e7)([r.Z], () => r.Z.useReducedMotion);
+    return (0, n.jsxs)(i.ModalHeader, {
+        align: l.Z.Align.START,
+        className: d.header,
+        separator: !1,
+        children: [
+            (0, n.jsx)(c.fe, {
+                className: d.animation,
+                nextScene: E,
+                onScenePlay: e => u(c.fe.getNextScene(e)),
+                pauseWhileUnfocused: !1,
+                pause: T
+            }),
+            (0, n.jsx)('div', { className: d.headerTitle }),
+            (0, n.jsx)(i.ModalCloseButton, {
+                onClick: _,
+                className: d.closeButton
+            })
+        ]
+    });
 }

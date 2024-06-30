@@ -1,107 +1,87 @@
-n.d(t, {
-  Z: function() {
-    return g
-  }
-}), n(390547);
-var r = n(735250),
-  s = n(470079),
-  i = n(120356),
-  o = n.n(i),
-  a = n(658722),
-  l = n.n(a),
-  c = n(392711),
-  u = n.n(c),
-  d = n(217986),
-  h = n(481060),
-  p = n(133080),
-  C = n(285952),
-  f = n(689938),
-  m = n(138792),
-  x = n(972667);
-
-function N(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
-}
-class g extends s.PureComponent {
-  renderItems() {
-    let {
-      query: e
-    } = this.state, t = d.Z.flatMap((e, t) => {
-      let {
-        alpha2: n,
-        phoneCountryCodes: s,
-        name: i
-      } = e, o = (0, p.q9)(n);
-      return s.map(e => ({
-        key: "".concat(t, "-").concat(e),
-        name: i,
-        translatedName: o,
-        countryData: {
-          name: i,
-          alpha2: n,
-          code: e
-        },
-        children: (0, r.jsxs)(C.Z, {
-          className: m.countryItem,
-          justify: C.Z.Justify.CENTER,
-          align: C.Z.Align.CENTER,
-          children: [(0, r.jsx)(C.Z.Child, {
-            className: m.countryName,
-            children: o
-          }), (0, r.jsx)(C.Z.Child, {
-            className: m.countryCode,
-            grow: 0,
-            shrink: 0,
-            children: e
-          })]
-        })
-      }))
-    }), n = u()(t).filter(t => 0 === e.length || l()(e.toLowerCase(), t.name.toLowerCase()) || l()(e.toLowerCase(), t.translatedName.toLowerCase())).map(e => (0, s.createElement)(h.PopoutList.Item, {
-      ...e,
-      key: e.key,
-      onClick: () => this.onClick(e.countryData)
-    })).value();
-    return 0 === n.length ? (0, r.jsx)(h.PopoutList.Empty, {
-      children: f.Z.Messages.NONE
-    }) : (0, r.jsx)(h.ScrollerAuto, {
-      className: m.phoneFieldScroller,
-      children: n
-    })
-  }
-  render() {
-    let {
-      className: e
-    } = this.props;
-    return (0, r.jsxs)(h.PopoutList, {
-      className: o()(m.phoneFieldPopout, x.elevationBorderLow, e),
-      children: [(0, r.jsx)(h.PopoutList.SearchBar, {
-        query: this.state.query,
-        placeholder: f.Z.Messages.SEARCH_COUNTRY,
-        onChange: this.onChangeQuery,
-        onClear: this.onClearQuery,
-        autoComplete: "off"
-      }), (0, r.jsx)(h.PopoutList.Divider, {}), this.renderItems()]
-    })
-  }
-  constructor(e) {
-    super(e), N(this, "onChangeQuery", e => {
-      this.setState({
-        query: e
-      })
-    }), N(this, "onClearQuery", () => {
-      this.setState({
-        query: ""
-      })
-    }), N(this, "onClick", e => {
-      var t, n;
-      null === (t = (n = this.props).onClick) || void 0 === t || t.call(n, e)
-    }), this.state = {
-      query: ""
+s.d(t, {
+    Z: function () {
+        return N;
     }
-  }
+}), s(390547);
+var n = s(735250), i = s(470079), o = s(120356), l = s.n(o), a = s(658722), r = s.n(a), h = s(392711), d = s.n(h), u = s(217986), c = s(481060), p = s(133080), m = s(285952), C = s(689938), f = s(138792), g = s(972667);
+function y(e, t, s) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: s,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = s, e;
+}
+class N extends i.PureComponent {
+    renderItems() {
+        let {query: e} = this.state, t = u.Z.flatMap((e, t) => {
+                let {
+                        alpha2: s,
+                        phoneCountryCodes: i,
+                        name: o
+                    } = e, l = (0, p.q9)(s);
+                return i.map(e => ({
+                    key: ''.concat(t, '-').concat(e),
+                    name: o,
+                    translatedName: l,
+                    countryData: {
+                        name: o,
+                        alpha2: s,
+                        code: e
+                    },
+                    children: (0, n.jsxs)(m.Z, {
+                        className: f.countryItem,
+                        justify: m.Z.Justify.CENTER,
+                        align: m.Z.Align.CENTER,
+                        children: [
+                            (0, n.jsx)(m.Z.Child, {
+                                className: f.countryName,
+                                children: l
+                            }),
+                            (0, n.jsx)(m.Z.Child, {
+                                className: f.countryCode,
+                                grow: 0,
+                                shrink: 0,
+                                children: e
+                            })
+                        ]
+                    })
+                }));
+            }), s = d()(t).filter(t => 0 === e.length || r()(e.toLowerCase(), t.name.toLowerCase()) || r()(e.toLowerCase(), t.translatedName.toLowerCase())).map(e => (0, i.createElement)(c.PopoutList.Item, {
+                ...e,
+                key: e.key,
+                onClick: () => this.onClick(e.countryData)
+            })).value();
+        return 0 === s.length ? (0, n.jsx)(c.PopoutList.Empty, { children: C.Z.Messages.NONE }) : (0, n.jsx)(c.ScrollerAuto, {
+            className: f.phoneFieldScroller,
+            children: s
+        });
+    }
+    render() {
+        let {className: e} = this.props;
+        return (0, n.jsxs)(c.PopoutList, {
+            className: l()(f.phoneFieldPopout, g.elevationBorderLow, e),
+            children: [
+                (0, n.jsx)(c.PopoutList.SearchBar, {
+                    query: this.state.query,
+                    placeholder: C.Z.Messages.SEARCH_COUNTRY,
+                    onChange: this.onChangeQuery,
+                    onClear: this.onClearQuery,
+                    autoComplete: 'off'
+                }),
+                (0, n.jsx)(c.PopoutList.Divider, {}),
+                this.renderItems()
+            ]
+        });
+    }
+    constructor(e) {
+        super(e), y(this, 'onChangeQuery', e => {
+            this.setState({ query: e });
+        }), y(this, 'onClearQuery', () => {
+            this.setState({ query: '' });
+        }), y(this, 'onClick', e => {
+            var t, s;
+            null === (t = (s = this.props).onClick) || void 0 === t || t.call(s, e);
+        }), this.state = { query: '' };
+    }
 }

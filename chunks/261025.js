@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  title: "title_a4cad7"
-}
+e.exports = { title: 'title_a4cad7' };

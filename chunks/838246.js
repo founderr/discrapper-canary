@@ -1,7 +1,6 @@
-"use strict";
 e.exports = {
-  container: "container_bedaeb",
-  header: "header_bedaeb",
-  backButton: "backButton_bedaeb",
-  appGrid: "appGrid_bedaeb"
-}
+    container: 'container_bedaeb',
+    header: 'header_bedaeb',
+    backButton: 'backButton_bedaeb',
+    appGrid: 'appGrid_bedaeb'
+};

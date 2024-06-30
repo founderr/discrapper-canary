@@ -1,7 +1,6 @@
-"use strict";
-var i, r;
+var r, i;
 n.d(t, {
-  i: function() {
-    return i
-  }
-}), (r = i || (i = {}))[r.THRILLER = 0] = "THRILLER", r[r.SCIENCE_FICTION = 1] = "SCIENCE_FICTION", r[r.ACTION = 2] = "ACTION", r[r.HORROR = 3] = "HORROR", r[r.SURVIVAL = 4] = "SURVIVAL", r[r.FANTASY = 5] = "FANTASY", r[r.HISTORICAL = 6] = "HISTORICAL", r[r.STEALTH = 7] = "STEALTH", r[r.COMEDY = 8] = "COMEDY", r[r.BUSINESS = 9] = "BUSINESS", r[r.DRAMA = 10] = "DRAMA", r[r.NON_FICTION = 11] = "NON_FICTION", r[r.KIDS = 12] = "KIDS", r[r.SANDBOX = 13] = "SANDBOX", r[r.OPEN_WORLD = 14] = "OPEN_WORLD", r[r.WARFARE = 15] = "WARFARE", r[r.EDUCATIONAL = 16] = "EDUCATIONAL", r[r.MYSTERY = 17] = "MYSTERY", r[r.PARTY = 18] = "PARTY", r[r.ROMANCE = 19] = "ROMANCE", r[r.EROTIC = 20] = "EROTIC"
+    i: function () {
+        return r;
+    }
+}), (i = r || (r = {}))[i.THRILLER = 0] = 'THRILLER', i[i.SCIENCE_FICTION = 1] = 'SCIENCE_FICTION', i[i.ACTION = 2] = 'ACTION', i[i.HORROR = 3] = 'HORROR', i[i.SURVIVAL = 4] = 'SURVIVAL', i[i.FANTASY = 5] = 'FANTASY', i[i.HISTORICAL = 6] = 'HISTORICAL', i[i.STEALTH = 7] = 'STEALTH', i[i.COMEDY = 8] = 'COMEDY', i[i.BUSINESS = 9] = 'BUSINESS', i[i.DRAMA = 10] = 'DRAMA', i[i.NON_FICTION = 11] = 'NON_FICTION', i[i.KIDS = 12] = 'KIDS', i[i.SANDBOX = 13] = 'SANDBOX', i[i.OPEN_WORLD = 14] = 'OPEN_WORLD', i[i.WARFARE = 15] = 'WARFARE', i[i.EDUCATIONAL = 16] = 'EDUCATIONAL', i[i.MYSTERY = 17] = 'MYSTERY', i[i.PARTY = 18] = 'PARTY', i[i.ROMANCE = 19] = 'ROMANCE', i[i.EROTIC = 20] = 'EROTIC';

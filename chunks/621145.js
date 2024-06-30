@@ -1,228 +1,189 @@
-n.d(i, {
-  Z: function() {
-    return D
-  }
-}), n(47120), n(773603);
-var t = n(735250),
-  a = n(470079),
-  l = n(392711),
-  s = n(442837),
-  o = n(481060),
-  r = n(640108),
-  c = n(406432),
-  d = n(169525),
-  m = n(786761),
-  u = n(3148),
-  h = n(219797),
-  _ = n(524444),
-  A = n(25015),
-  p = n(963550),
-  x = n(845080),
-  I = n(594174),
-  E = n(998951),
-  T = n(310043),
-  g = n(69750),
-  C = n(956664),
-  f = n(709054),
-  S = n(788080),
-  v = n(800530),
-  N = n(981631),
-  L = n(768760),
-  j = n(554958);
-let y = (e, i) => {
-    let n = e.attachments.map(e => {
-      var n, t, a, l;
-      let s = {
-        ...e,
-        filename: (0, S.eS)(e),
-        size: 0,
-        proxy_url: e.url
-      };
-      if (!((0, c.CO)(e.filename) || (0, c.NU)(e.filename))) return s;
-      return {
-        ...s,
-        width: null !== (a = null === (n = i[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== a ? a : v.Sv,
-        height: null !== (l = null === (t = i[e.id]) || void 0 === t ? void 0 : t.height) && void 0 !== l ? l : v.EY
-      }
-    });
-    return (0, m.e5)({
-      ...(0, u.ZP)({
-        nonce: e.id,
-        content: e.content,
-        type: N.uaV.DEFAULT,
-        channelId: N.lds
-      }),
-      timestamp: new Date(f.default.extractTimestamp(e.id)).toISOString(),
-      attachments: n,
-      state: N.yb.SENT
-    })
-  },
-  O = e => {
-    let {
-      message: i
-    } = e, {
-      attachments: n
-    } = i;
-    if (0 === n.length) return null;
-    let a = (e, i, n) => {
-        let a = v.Sv,
-          s = v.EY;
-        if (null != i.width && null != i.height) {
-          let e = (0, C.Dc)({
-            width: i.width,
-            height: i.height,
-            maxWidth: v.Sv,
-            maxHeight: v.EY
-          });
-          a = (0, l.clamp)(Math.round(i.width * e), 0, v.Sv), s = (0, l.clamp)(Math.round(i.height * e), 0, v.EY)
-        }
-        return (0, t.jsx)("div", {
-          style: {
-            width: n ? a : "100%",
-            height: n ? s : "100%"
-          },
-          children: (0, t.jsx)(r.ZP, {
-            className: e.className,
-            forceExternal: !1,
-            src: i.url,
-            width: n ? a : "100%",
-            height: n ? s : "100%",
-            responsive: !0,
-            volume: e.volume,
-            autoPlay: !1,
-            autoMute: !1,
-            type: r.ZP.Types.VIDEO,
-            mediaLayoutType: e.mediaLayoutType,
-            fileName: i.filename,
-            fileSize: null == i.size ? void 0 : i.size.toString(),
-            playable: !0,
-            renderLinkComponent: _.iT,
-            onClick: e.onClick,
-            onPlay: e.onPlay,
-            onEnded: e.onEnded,
-            onVolumeChange: e.onVolumeChange,
-            onMute: e.onMute,
-            downloadable: !1
-          })
-        })
-      },
-      s = 1 === n.length;
-
-    function o(e, i) {
-      return (0, d.dn)(e.originalItem, i)
+I.d(_, {
+    Z: function () {
+        return m;
     }
-    return (0, t.jsx)("div", {
-      className: j.classificationEvidenceMessageAttachment,
-      children: (0, t.jsx)(T.Z, {
-        items: n.map(e => ({
-          item: {
-            uniqueId: e.id,
-            originalItem: e,
-            type: (0, g.aw)(e, !0),
-            downloadUrl: e.proxy_url,
-            height: e.height,
-            width: e.width,
-            spoiler: e.spoiler,
-            contentType: e.content_type
-          },
-          message: i,
-          mediaLayoutType: L.hV.MOSAIC,
-          autoPlayGif: !1,
-          canRemoveItem: !1,
-          isSingleMosaicItem: s,
-          onRemoveItem: l.noop,
-          renderVideoComponent: i => a(i, e, s),
-          renderImageComponent: e => (0, t.jsx)(h.dS, {
-            ...e,
-            hiddenSpoilers: !0,
-            shouldHideMediaOptions: !0,
-            shouldLink: !1
-          }),
-          renderAudioComponent: h.q7,
-          renderPlaintextFilePreview: h.d4,
-          renderGenericFileComponent: h.ZK,
-          renderMosaicItemFooter: h.L9,
-          getObscureReason: o,
-          gifFavoriteButton: () => null
-        }))
-      })
-    })
-  };
-
-function D(e) {
-  var i;
-  let {
-    flaggedContent: n
-  } = e, l = (0, s.e7)([I.default], () => I.default.getCurrentUser()), [r, d] = a.useState({}), [m, u] = a.useState(!0), h = n[0], _ = y(h, r), T = (0, A.Z)(_, {
-    hideSimpleEmbedContent: !1,
-    allowList: !1,
-    allowHeading: !1,
-    allowLinks: !1,
-    previewLinkTarget: !1
-  });
-  return (a.useEffect(() => {
-    Promise.all(h.attachments.filter(e => {
-      let {
-        filename: i
-      } = e;
-      return (0, c.CO)(i) || (0, c.NU)(i)
-    }).map(e => {
-      var i;
-      return (i = e, new Promise((e, n) => {
-        if ((0, c.CO)(i.filename)) {
-          let t = new Image;
-          t.src = i.url, t.onload = () => {
-            e(t)
-          }, t.onerror = () => {
-            n()
-          }
-        } else if ((0, c.NU)(i.filename)) {
-          let t = document.createElement("video");
-          t.src = i.url, t.onloadedmetadata = () => {
-            let i = t.videoWidth;
-            e({
-              width: i,
-              height: t.videoHeight
+}), I(47120), I(773603);
+var A = I(735250), O = I(470079), T = I(392711), S = I(442837), C = I(481060), N = I(640108), D = I(406432), R = I(169525), e = I(786761), V = I(3148), i = I(219797), n = I(524444), P = I(25015), t = I(963550), a = I(845080), L = I(594174), l = I(998951), s = I(310043), o = I(69750), M = I(956664), r = I(709054), U = I(788080), c = I(800530), Y = I(981631), d = I(768760), G = I(554958);
+let F = (E, _) => {
+        let I = E.attachments.map(E => {
+            var I, A, O, T;
+            let S = {
+                ...E,
+                filename: (0, U.eS)(E),
+                size: 0,
+                proxy_url: E.url
+            };
+            if (!((0, D.CO)(E.filename) || (0, D.NU)(E.filename)))
+                return S;
+            return {
+                ...S,
+                width: null !== (O = null === (I = _[E.id]) || void 0 === I ? void 0 : I.width) && void 0 !== O ? O : c.Sv,
+                height: null !== (T = null === (A = _[E.id]) || void 0 === A ? void 0 : A.height) && void 0 !== T ? T : c.EY
+            };
+        });
+        return (0, e.e5)({
+            ...(0, V.ZP)({
+                nonce: E.id,
+                content: E.content,
+                type: Y.uaV.DEFAULT,
+                channelId: Y.lds
+            }),
+            timestamp: new Date(r.default.extractTimestamp(E.id)).toISOString(),
+            attachments: I,
+            state: Y.yb.SENT
+        });
+    }, u = E => {
+        let {message: _} = E, {attachments: I} = _;
+        if (0 === I.length)
+            return null;
+        let O = (E, _, I) => {
+                let O = c.Sv, S = c.EY;
+                if (null != _.width && null != _.height) {
+                    let E = (0, M.Dc)({
+                        width: _.width,
+                        height: _.height,
+                        maxWidth: c.Sv,
+                        maxHeight: c.EY
+                    });
+                    O = (0, T.clamp)(Math.round(_.width * E), 0, c.Sv), S = (0, T.clamp)(Math.round(_.height * E), 0, c.EY);
+                }
+                return (0, A.jsx)('div', {
+                    style: {
+                        width: I ? O : '100%',
+                        height: I ? S : '100%'
+                    },
+                    children: (0, A.jsx)(N.ZP, {
+                        className: E.className,
+                        forceExternal: !1,
+                        src: _.url,
+                        width: I ? O : '100%',
+                        height: I ? S : '100%',
+                        responsive: !0,
+                        volume: E.volume,
+                        autoPlay: !1,
+                        autoMute: !1,
+                        type: N.ZP.Types.VIDEO,
+                        mediaLayoutType: E.mediaLayoutType,
+                        fileName: _.filename,
+                        fileSize: null == _.size ? void 0 : _.size.toString(),
+                        playable: !0,
+                        renderLinkComponent: n.iT,
+                        onClick: E.onClick,
+                        onPlay: E.onPlay,
+                        onEnded: E.onEnded,
+                        onVolumeChange: E.onVolumeChange,
+                        onMute: E.onMute,
+                        downloadable: !1
+                    })
+                });
+            }, S = 1 === I.length;
+        function C(E, _) {
+            return (0, R.dn)(E.originalItem, _);
+        }
+        return (0, A.jsx)('div', {
+            className: G.classificationEvidenceMessageAttachment,
+            children: (0, A.jsx)(s.Z, {
+                items: I.map(E => ({
+                    item: {
+                        uniqueId: E.id,
+                        originalItem: E,
+                        type: (0, o.aw)(E, !0),
+                        downloadUrl: E.proxy_url,
+                        height: E.height,
+                        width: E.width,
+                        spoiler: E.spoiler,
+                        contentType: E.content_type
+                    },
+                    message: _,
+                    mediaLayoutType: d.hV.MOSAIC,
+                    autoPlayGif: !1,
+                    canRemoveItem: !1,
+                    isSingleMosaicItem: S,
+                    onRemoveItem: T.noop,
+                    renderVideoComponent: _ => O(_, E, S),
+                    renderImageComponent: E => (0, A.jsx)(i.dS, {
+                        ...E,
+                        hiddenSpoilers: !0,
+                        shouldHideMediaOptions: !0,
+                        shouldLink: !1
+                    }),
+                    renderAudioComponent: i.q7,
+                    renderPlaintextFilePreview: i.d4,
+                    renderGenericFileComponent: i.ZK,
+                    renderMosaicItemFooter: i.L9,
+                    getObscureReason: C,
+                    gifFavoriteButton: () => null
+                }))
             })
-          }, t.onerror = () => {
-            n()
-          }
-        } else e({
-          width: 0,
-          height: 0
+        });
+    };
+function m(E) {
+    var _;
+    let {flaggedContent: I} = E, T = (0, S.e7)([L.default], () => L.default.getCurrentUser()), [N, R] = O.useState({}), [e, V] = O.useState(!0), i = I[0], n = F(i, N), s = (0, P.Z)(n, {
+            hideSimpleEmbedContent: !1,
+            allowList: !1,
+            allowHeading: !1,
+            allowLinks: !1,
+            previewLinkTarget: !1
+        });
+    return (O.useEffect(() => {
+        Promise.all(i.attachments.filter(E => {
+            let {filename: _} = E;
+            return (0, D.CO)(_) || (0, D.NU)(_);
+        }).map(E => {
+            var _;
+            return (_ = E, new Promise((E, I) => {
+                if ((0, D.CO)(_.filename)) {
+                    let A = new Image();
+                    A.src = _.url, A.onload = () => {
+                        E(A);
+                    }, A.onerror = () => {
+                        I();
+                    };
+                } else if ((0, D.NU)(_.filename)) {
+                    let A = document.createElement('video');
+                    A.src = _.url, A.onloadedmetadata = () => {
+                        let _ = A.videoWidth;
+                        E({
+                            width: _,
+                            height: A.videoHeight
+                        });
+                    }, A.onerror = () => {
+                        I();
+                    };
+                } else
+                    E({
+                        width: 0,
+                        height: 0
+                    });
+            })).then(_ => R(I => ({
+                ...I,
+                [E.id]: _
+            })));
+        })).finally(() => V(!1));
+    }, [i.attachments]), '' === n.content && 0 === n.attachments.length) ? null : (0, A.jsx)('div', {
+        className: G.classificationEvidenceCard,
+        children: e ? (0, A.jsx)(C.Spinner, {}) : (0, A.jsx)(l.Z, {
+            compact: !1,
+            childrenHeader: (0, a.Z)({
+                author: {
+                    ...T,
+                    colorString: '',
+                    nick: null !== (_ = null == T ? void 0 : T.username) && void 0 !== _ ? _ : ''
+                },
+                message: n,
+                channel: void 0,
+                guildId: void 0,
+                compact: !1,
+                animateAvatar: !1,
+                isGroupStart: !0,
+                roleIcon: void 0,
+                hideTimestamp: !1
+            }),
+            childrenAccessories: (0, A.jsx)(u, { message: n }),
+            childrenMessageContent: (0, t.Z)({ message: n }, s.content),
+            hasThread: !1,
+            hasReply: !1
         })
-      })).then(i => d(n => ({
-        ...n,
-        [e.id]: i
-      })))
-    })).finally(() => u(!1))
-  }, [h.attachments]), "" === _.content && 0 === _.attachments.length) ? null : (0, t.jsx)("div", {
-    className: j.classificationEvidenceCard,
-    children: m ? (0, t.jsx)(o.Spinner, {}) : (0, t.jsx)(E.Z, {
-      compact: !1,
-      childrenHeader: (0, x.Z)({
-        author: {
-          ...l,
-          colorString: "",
-          nick: null !== (i = null == l ? void 0 : l.username) && void 0 !== i ? i : ""
-        },
-        message: _,
-        channel: void 0,
-        guildId: void 0,
-        compact: !1,
-        animateAvatar: !1,
-        isGroupStart: !0,
-        roleIcon: void 0,
-        hideTimestamp: !1
-      }),
-      childrenAccessories: (0, t.jsx)(O, {
-        message: _
-      }),
-      childrenMessageContent: (0, p.Z)({
-        message: _
-      }, T.content),
-      hasThread: !1,
-      hasReply: !1
-    })
-  })
+    });
 }

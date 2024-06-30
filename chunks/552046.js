@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  button: "button_edead5"
-}
+e.exports = { button: 'button_edead5' };

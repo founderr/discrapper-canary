@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  nitroWheel: "nitroWheel_abc655"
-}
+e.exports = { nitroWheel: 'nitroWheel_abc655' };

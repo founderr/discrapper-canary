@@ -1,17 +1,12 @@
-var e = n(525305),
-  o = n(354848),
-  i = n(332916),
-  u = n(641236)("toStringTag"),
-  f = Object,
-  a = "Arguments" === i(function() {
-    return arguments
-  }()),
-  c = function(t, r) {
-    try {
-      return t[r]
-    } catch (t) {}
-  };
-t.exports = e ? i : function(t) {
-  var r, n, e;
-  return void 0 === t ? "Undefined" : null === t ? "Null" : "string" == typeof(n = c(r = f(t), u)) ? n : a ? i(r) : "Object" === (e = i(r)) && o(r.callee) ? "Arguments" : e
-}
+var e = n(525305), i = n(354848), o = n(332916), u = n(641236)('toStringTag'), c = Object, a = 'Arguments' === o(function () {
+        return arguments;
+    }()), s = function (t, r) {
+        try {
+            return t[r];
+        } catch (t) {
+        }
+    };
+t.exports = e ? o : function (t) {
+    var r, n, e;
+    return void 0 === t ? 'Undefined' : null === t ? 'Null' : 'string' == typeof (n = s(r = c(t), u)) ? n : a ? o(r) : 'Object' === (e = o(r)) && i(r.callee) ? 'Arguments' : e;
+};

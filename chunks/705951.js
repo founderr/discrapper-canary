@@ -1,111 +1,93 @@
-"use strict";
 n(47120);
-var i = n(147913),
-  r = n(70956),
-  s = n(272008),
-  o = n(569984),
-  a = n(918701),
-  l = n(5881),
-  u = n(46140);
-
-function _(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
+var r = n(147913), i = n(70956), a = n(272008), o = n(569984), s = n(918701), l = n(5881), u = n(46140);
+function c(e, t, n) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : e[t] = n, e;
 }
-let c = 1 * r.Z.Millis.SECOND,
-  d = (0, l.T)({
-    location: u.dr.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER
-  });
-class E extends i.Z {
-  constructor(...e) {
-    super(...e), _(this, "optimisticUpdatesMap", new Map), _(this, "optimisticUpdatesInterval", null), _(this, "_shouldHaveOptimisticUpdates", e => {
-      let t = o.Z.getQuest(e);
-      if (null == t || null == t.userStatus) return !1;
-      let n = null != t.userStatus.completedAt,
-        i = null != t.userStatus.enrolledAt,
-        r = null != t.userStatus.claimedAt;
-      return i && !r && !n && (0, a.$J)(t) && (0, a.Bz)(t)
-    }), _(this, "_initiateOptimisticUpdatesIfNeeded", e => {
-      let t = o.Z.getQuest(e);
-      if (null == t || !this._shouldHaveOptimisticUpdates(e)) return;
-      let n = (0, a.Gh)(t);
-      null != n && (this.optimisticUpdatesMap.set(e, {
-        updateAt: Date.now(),
-        taskType: n.taskType
-      }), null == this.optimisticUpdatesInterval && this.optimisticUpdatesMap.size > 0 && (this.optimisticUpdatesInterval = window.setInterval(this._optimisticUpdatesLoop, c)))
-    }), _(this, "_optimisticUpdatesLoop", () => {
-      if (this.optimisticUpdatesMap.forEach((e, t) => {
-          let n = o.Z.getQuest(t);
-          (null == n || null == n.userStatus || !this._shouldHaveOptimisticUpdates(t)) && this.optimisticUpdatesMap.delete(t)
-        }), 0 === this.optimisticUpdatesMap.size) {
-        clearInterval(this.optimisticUpdatesInterval), this.optimisticUpdatesInterval = null;
-        return
-      }
-      this.optimisticUpdatesMap.forEach((e, t) => {
-        let n = o.Z.getQuest(t);
-        if (null == n || null == n.userStatus) return;
-        let i = (0, a.Gh)(n);
-        if (null != i && Date.now() >= e.updateAt) {
-          let {
-            targetSeconds: o,
-            progressSeconds: a,
-            taskType: l
-          } = i, u = (Date.now() - e.updateAt) / r.Z.Millis.SECOND, _ = Math.min(a + u, o), c = {
-            ...n.userStatus,
-            progress: {
-              [l]: {
-                ...n.userStatus.progress[l],
-                eventName: l,
-                value: _
-              }
+let d = 1 * i.Z.Millis.SECOND, _ = (0, l.T)({ location: u.dr.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER });
+class E extends r.Z {
+    constructor(...e) {
+        super(...e), c(this, 'optimisticUpdatesMap', new Map()), c(this, 'optimisticUpdatesInterval', null), c(this, '_shouldHaveOptimisticUpdates', e => {
+            let t = o.Z.getQuest(e);
+            if (null == t || null == t.userStatus)
+                return !1;
+            let n = null != t.userStatus.completedAt, r = null != t.userStatus.enrolledAt, i = null != t.userStatus.claimedAt;
+            return r && !i && !n && (0, s.$J)(t) && (0, s.Bz)(t);
+        }), c(this, '_initiateOptimisticUpdatesIfNeeded', e => {
+            let t = o.Z.getQuest(e);
+            if (null == t || !this._shouldHaveOptimisticUpdates(e))
+                return;
+            let n = (0, s.Gh)(t);
+            null != n && (this.optimisticUpdatesMap.set(e, {
+                updateAt: Date.now(),
+                taskType: n.taskType
+            }), null == this.optimisticUpdatesInterval && this.optimisticUpdatesMap.size > 0 && (this.optimisticUpdatesInterval = window.setInterval(this._optimisticUpdatesLoop, d)));
+        }), c(this, '_optimisticUpdatesLoop', () => {
+            if (this.optimisticUpdatesMap.forEach((e, t) => {
+                    let n = o.Z.getQuest(t);
+                    (null == n || null == n.userStatus || !this._shouldHaveOptimisticUpdates(t)) && this.optimisticUpdatesMap.delete(t);
+                }), 0 === this.optimisticUpdatesMap.size) {
+                clearInterval(this.optimisticUpdatesInterval), this.optimisticUpdatesInterval = null;
+                return;
             }
-          };
-          if ((0, s.kP)(c), d.log("Dispatching optimistic update:", {
-              secondsSinceLastUpdate: u,
-              optimisticProgressValue: _,
-              optimisticUpdatesMap: this.optimisticUpdatesMap
-            }), _ >= .995 * o) {
-            this.optimisticUpdatesMap.delete(t);
-            return
-          }
-          this.optimisticUpdatesMap.set(t, {
-            updateAt: Date.now(),
-            taskType: l
-          })
-        }
-      })
-    }), _(this, "handleFetchCurrentQuestsSuccess", e => {
-      let {
-        quests: t
-      } = e;
-      t.forEach(e => {
-        this._initiateOptimisticUpdatesIfNeeded(e.id)
-      })
-    }), _(this, "handleQuestUserStatusUpdate", e => {
-      let {
-        user_status: t
-      } = e;
-      this._initiateOptimisticUpdatesIfNeeded(t.quest_id)
-    }), _(this, "handleEnrollSuccess", e => {
-      let {
-        enrolledQuestUserStatus: t
-      } = e;
-      this._initiateOptimisticUpdatesIfNeeded(t.questId)
-    }), _(this, "handleClaimRewardSuccess", e => {
-      let {
-        questId: t
-      } = e;
-      this.optimisticUpdatesMap.has(t) && this.optimisticUpdatesMap.delete(t)
-    }), _(this, "actions", {
-      QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: this.handleFetchCurrentQuestsSuccess,
-      QUESTS_ENROLL_SUCCESS: this.handleEnrollSuccess,
-      QUESTS_USER_STATUS_UPDATE: this.handleQuestUserStatusUpdate,
-      QUESTS_CLAIM_REWARD_SUCCESS: this.handleClaimRewardSuccess
-    })
-  }
+            this.optimisticUpdatesMap.forEach((e, t) => {
+                let n = o.Z.getQuest(t);
+                if (null == n || null == n.userStatus)
+                    return;
+                let r = (0, s.Gh)(n);
+                if (null != r && Date.now() >= e.updateAt) {
+                    let {
+                            targetSeconds: o,
+                            progressSeconds: s,
+                            taskType: l
+                        } = r, u = (Date.now() - e.updateAt) / i.Z.Millis.SECOND, c = Math.min(s + u, o), d = {
+                            ...n.userStatus,
+                            progress: {
+                                [l]: {
+                                    ...n.userStatus.progress[l],
+                                    eventName: l,
+                                    value: c
+                                }
+                            }
+                        };
+                    if ((0, a.kP)(d), _.log('Dispatching optimistic update:', {
+                            secondsSinceLastUpdate: u,
+                            optimisticProgressValue: c,
+                            optimisticUpdatesMap: this.optimisticUpdatesMap
+                        }), c >= 0.995 * o) {
+                        this.optimisticUpdatesMap.delete(t);
+                        return;
+                    }
+                    this.optimisticUpdatesMap.set(t, {
+                        updateAt: Date.now(),
+                        taskType: l
+                    });
+                }
+            });
+        }), c(this, 'handleFetchCurrentQuestsSuccess', e => {
+            let {quests: t} = e;
+            t.forEach(e => {
+                this._initiateOptimisticUpdatesIfNeeded(e.id);
+            });
+        }), c(this, 'handleQuestUserStatusUpdate', e => {
+            let {user_status: t} = e;
+            this._initiateOptimisticUpdatesIfNeeded(t.quest_id);
+        }), c(this, 'handleEnrollSuccess', e => {
+            let {enrolledQuestUserStatus: t} = e;
+            this._initiateOptimisticUpdatesIfNeeded(t.questId);
+        }), c(this, 'handleClaimRewardSuccess', e => {
+            let {questId: t} = e;
+            this.optimisticUpdatesMap.has(t) && this.optimisticUpdatesMap.delete(t);
+        }), c(this, 'actions', {
+            QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: this.handleFetchCurrentQuestsSuccess,
+            QUESTS_ENROLL_SUCCESS: this.handleEnrollSuccess,
+            QUESTS_USER_STATUS_UPDATE: this.handleQuestUserStatusUpdate,
+            QUESTS_CLAIM_REWARD_SUCCESS: this.handleClaimRewardSuccess
+        });
+    }
 }
-t.Z = new E
+t.Z = new E();

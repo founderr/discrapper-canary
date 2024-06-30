@@ -1,11 +1,9 @@
 n.d(t, {
-  Z: function() {
-    return s
-  }
+    Z: function () {
+        return s;
+    }
 });
-var i = n(442837),
-  a = n(236289);
-
+var i = n(442837), a = n(236289);
 function s() {
-  return (0, i.e7)([a.Z], () => a.Z.isFetching())
+    return (0, i.e7)([a.Z], () => a.Z.isFetching());
 }

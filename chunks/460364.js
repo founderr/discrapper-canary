@@ -1,70 +1,74 @@
-"use strict";
 n.d(t, {
-  C: function() {
-    return u
-  }
-});
-var i = n(735250),
-  r = n(470079),
-  s = n(539907),
-  o = n(743236),
-  a = n(695464),
-  l = n(639897);
-
-function u(e) {
-  let {
-    parentItem: t,
-    isFocused: n,
-    menuSubmenuProps: u,
-    rows: _,
-    rowHeight: c,
-    onScroll: d,
-    listClassName: E
-  } = e, I = r.useRef(null), T = r.useRef(null), h = r.useRef(null), f = r.useRef(null), {
-    isUsingKeyboardNavigation: S,
-    focusIndex: A,
-    ...N
-  } = u;
-  r.useLayoutEffect(() => {
-    var e;
-    n && ((0, o.F)(I), null === (e = h.current) || void 0 === e || e.focus())
-  }, [n]), r.useEffect(() => {
-    if (n && A >= 0 && S) {
-      var e;
-      null === (e = f.current) || void 0 === e || e.scrollRowIntoView(A)
+    C: function () {
+        return u;
     }
-  }, [n, S, A]);
-  let m = r.useCallback(e => _[e], [_]);
-  return (0, i.jsxs)("div", {
-    ref: I,
-    className: l.__invalid_submenuContainer,
-    children: [(0, i.jsx)("div", {
-      ref: T
-    }), t, n ? (0, i.jsx)(s.j, {
-      targetRef: T,
-      autoInvert: !0,
-      nudgeAlignIntoViewport: !0,
-      fixed: !0,
-      spacing: 4,
-      position: "right",
-      align: "top",
-      children: () => _.length > 0 && (0, i.jsx)("div", {
-        className: l.submenuPaddingContainer,
-        children: (0, i.jsx)("div", {
-          className: l.submenu,
-          ...N,
-          ref: h,
-          children: (0, i.jsx)(a.Z, {
-            ref: f,
-            className: E,
-            listPadding: [6, 0, 6, 8],
-            onScroll: d,
-            renderRow: m,
-            rowCount: _.length,
-            rowHeight: c
-          })
-        })
-      })
-    }) : null]
-  })
+});
+var r = n(735250), i = n(470079), a = n(539907), o = n(743236), s = n(695464), l = n(639897);
+function u(e) {
+    let {
+            parentItem: t,
+            isFocused: n,
+            menuSubmenuProps: u,
+            rows: c,
+            rowHeight: d,
+            onScroll: _,
+            listClassName: E
+        } = e, f = i.useRef(null), h = i.useRef(null), p = i.useRef(null), m = i.useRef(null), {
+            isUsingKeyboardNavigation: I,
+            focusIndex: T,
+            ...g
+        } = u;
+    i.useLayoutEffect(() => {
+        var e;
+        n && ((0, o.F)(f), null === (e = p.current) || void 0 === e || e.focus());
+    }, [n]), i.useEffect(() => {
+        if (n && T >= 0 && I) {
+            var e;
+            null === (e = m.current) || void 0 === e || e.scrollRowIntoView(T);
+        }
+    }, [
+        n,
+        I,
+        T
+    ]);
+    let S = i.useCallback(e => c[e], [c]);
+    return (0, r.jsxs)('div', {
+        ref: f,
+        className: l.__invalid_submenuContainer,
+        children: [
+            (0, r.jsx)('div', { ref: h }),
+            t,
+            n ? (0, r.jsx)(a.j, {
+                targetRef: h,
+                autoInvert: !0,
+                nudgeAlignIntoViewport: !0,
+                fixed: !0,
+                spacing: 4,
+                position: 'right',
+                align: 'top',
+                children: () => c.length > 0 && (0, r.jsx)('div', {
+                    className: l.submenuPaddingContainer,
+                    children: (0, r.jsx)('div', {
+                        className: l.submenu,
+                        ...g,
+                        ref: p,
+                        children: (0, r.jsx)(s.Z, {
+                            ref: m,
+                            className: E,
+                            listPadding: [
+                                6,
+                                0,
+                                6,
+                                8
+                            ],
+                            onScroll: _,
+                            renderRow: S,
+                            rowCount: c.length,
+                            rowHeight: d
+                        })
+                    })
+                })
+            }) : null
+        ]
+    });
 }

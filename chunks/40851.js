@@ -1,91 +1,77 @@
-"use strict";
 n.d(t, {
-  Aq: function() {
-    return f
-  },
-  GB: function() {
-    return I
-  },
-  J5: function() {
-    return d
-  },
-  UI: function() {
-    return u
-  },
-  Wu: function() {
-    return T
-  },
-  bp: function() {
-    return h
-  },
-  g0: function() {
-    return E
-  }
+    Aq: function () {
+        return m;
+    },
+    GB: function () {
+        return f;
+    },
+    J5: function () {
+        return _;
+    },
+    UI: function () {
+        return u;
+    },
+    Wu: function () {
+        return h;
+    },
+    bp: function () {
+        return p;
+    },
+    g0: function () {
+        return E;
+    }
 }), n(47120);
-var i = n(735250),
-  r = n(470079),
-  s = n(585483),
-  o = n(830917),
-  a = n(919570),
-  l = n(981631);
-let u = new s.b,
-  _ = r.createContext({
-    appContext: l.IlC.APP,
-    renderWindow: window,
-    windowDispatch: u,
-    windowId: (0, o.UU)()
-  }),
-  c = new Map;
-
-function d(e) {
-  var t;
-  let n = e.ownerDocument.defaultView;
-  if (null == n) return;
-  let i = (0, o.ZY)(n);
-  return null === (t = c.get(i)) || void 0 === t ? void 0 : t.windowDispatch
+var r = n(735250), i = n(470079), a = n(585483), o = n(830917), s = n(919570), l = n(981631);
+let u = new a.b(), c = i.createContext({
+        appContext: l.IlC.APP,
+        renderWindow: window,
+        windowDispatch: u,
+        windowId: (0, o.UU)()
+    }), d = new Map();
+function _(e) {
+    var t;
+    let n = e.ownerDocument.defaultView;
+    if (null == n)
+        return;
+    let r = (0, o.ZY)(n);
+    return null === (t = d.get(r)) || void 0 === t ? void 0 : t.windowDispatch;
 }
-
 function E(e) {
-  return c.get(e)
+    return d.get(e);
 }
-
-function I() {
-  let e = function() {
-    var e;
-    let t = (0, a.GR)();
-    return null == t ? null : null !== (e = c.get(t)) && void 0 !== e ? e : null
-  }();
-  return null != e ? e.appContext : null
-}
-
-function T(e) {
-  let {
-    appContext: t,
-    renderWindow: n,
-    children: r
-  } = e, a = function(e, t) {
-    let n = (0, o.ZY)(t),
-      i = c.get(n);
-    return null == i && (i = {
-      appContext: e,
-      renderWindow: t,
-      windowDispatch: new s.b,
-      windowId: n
-    }, c.set(n, i), t.addEventListener("unload", () => {
-      c.delete(n)
-    })), i
-  }(t, n);
-  return (0, i.jsx)(_.Provider, {
-    value: a,
-    children: r
-  })
-}
-
-function h() {
-  return r.useContext(_).appContext
-}
-
 function f() {
-  return r.useContext(_).windowDispatch
+    let e = function () {
+        var e;
+        let t = (0, s.GR)();
+        return null == t ? null : null !== (e = d.get(t)) && void 0 !== e ? e : null;
+    }();
+    return null != e ? e.appContext : null;
 }
-t.ZP = _
+function h(e) {
+    let {
+            appContext: t,
+            renderWindow: n,
+            children: i
+        } = e, s = function (e, t) {
+            let n = (0, o.ZY)(t), r = d.get(n);
+            return null == r && (r = {
+                appContext: e,
+                renderWindow: t,
+                windowDispatch: new a.b(),
+                windowId: n
+            }, d.set(n, r), t.addEventListener('unload', () => {
+                d.delete(n);
+            })), r;
+        }(t, n);
+    return (0, r.jsx)(c.Provider, {
+        value: s,
+        children: i
+    });
+}
+function p() {
+    return i.useContext(c).appContext;
+}
+function m() {
+    return i.useContext(c).windowDispatch;
+}
+t.ZP = c;

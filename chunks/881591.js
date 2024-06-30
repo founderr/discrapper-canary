@@ -1,235 +1,199 @@
 n.d(t, {
-  Z: function() {
-    return y
-  }
+    Z: function () {
+        return b;
+    }
 }), n(47120);
-var i = n(735250),
-  a = n(470079),
-  s = n(120356),
-  l = n.n(s),
-  r = n(512722),
-  o = n.n(r),
-  c = n(913527),
-  d = n.n(c),
-  u = n(442837),
-  _ = n(524437),
-  E = n(481060),
-  I = n(239091),
-  m = n(904245),
-  T = n(43267),
-  h = n(933557),
-  N = n(294218),
-  f = n(703656),
-  p = n(686478),
-  C = n(962796),
-  g = n(802463),
-  S = n(543666),
-  A = n(682417),
-  R = n(695346),
-  O = n(592125),
-  x = n(430824),
-  M = n(375954),
-  v = n(346656),
-  L = n(240126),
-  Z = n(791914),
-  P = n(981631),
-  b = n(689938),
-  D = n(111212),
-  j = n(174766);
-let U = {
-  offset: {
-    left: 4,
-    right: -12
-  }
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(524437), u = n(481060), _ = n(239091), E = n(904245), m = n(43267), I = n(933557), T = n(294218), h = n(703656), N = n(962796), f = n(802463), p = n(682417), C = n(695346), g = n(592125), S = n(430824), A = n(375954), x = n(346656), O = n(240126), R = n(791914), M = n(981631), v = n(689938), L = n(111212), Z = n(174766);
+let P = {
+    offset: {
+        left: 4,
+        right: -12
+    }
 };
-
-function y(e) {
-  let {
-    setTab: t,
-    closePopout: n
-  } = e, s = (0, u.e7)([g.Z], () => g.Z.getMessageReminders());
-  a.useEffect(() => () => {
-    (0, C.Mf)()
-  }, []);
-  let [l, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), c = l ? s : o, d = c.filter(e => !(0, p.uX)(e));
-  return (0, S.N)(d), (0, i.jsxs)("div", {
-    className: D.container,
-    children: [(0, i.jsx)(Z.Z, {
-      tab: _.X.TODOS,
-      setTab: t,
-      closePopout: n
-    }), (0, i.jsxs)("div", {
-      className: D.headerText,
-      children: [(0, i.jsx)(E.Heading, {
-        variant: "heading-lg/bold",
-        children: l ? b.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : b.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
-      }), (0, i.jsx)(E.Anchor, {
-        onClick: () => r(!l),
-        children: (0, i.jsx)(E.Text, {
-          variant: "text-sm/normal",
-          color: "text-link",
-          children: l ? b.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({
-            count: o.length
-          }) : b.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({
-            count: s.length
-          })
-        })
-      })]
-    }), 0 === c.length ? (0, i.jsx)(k, {}) : null, (0, i.jsx)(E.AdvancedScrollerThin, {
-      children: c.map(e => (function(e) {
-        return [(0, i.jsx)(B, {
-          messageId: e.messageId
-        }, e.messageId)]
-      })(e))
-    })]
-  })
-}
-
-function B(e) {
-  let t, {
-      messageId: a
-    } = e,
-    s = (0, u.e7)([g.Z], () => g.Z.getMessageReminders().find(e => e.messageId === a));
-  o()(null != s, "should not be rendering a to-do message without a to-do message");
-  let r = s.complete,
-    c = (0, u.e7)([M.Z], () => M.Z.getMessage(s.channelId, s.messageId)),
-    {
-      message: _,
-      channel: p
-    } = (0, A.p)(s),
-    S = O.Z.getChannel(p.id),
-    L = (0, h.ZP)(S, !0),
-    Z = null != L ? L : p.name,
-    y = (0, u.e7)([x.Z], () => x.Z.getGuild(null == p ? void 0 : p.guild_id)),
-    B = null != p ? (0, T.x)(p) : null,
-    k = null;
-  return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", k = b.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
-    duration: d().duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
-  })) : (t = "text-danger", k = b.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
-    duration: d().duration(Date.now() - s.dueAt.getTime(), "millisecond").humanize()
-  }))), (0, i.jsxs)("div", {
-    className: j.container,
-    children: [(0, i.jsxs)("div", {
-      className: D.messageHeader,
-      children: [(0, i.jsxs)("div", {
-        children: [(0, i.jsxs)("div", {
-          className: D.messageInfo,
-          children: [null != y ? (0, i.jsx)(v.Z, {
-            className: D.guildIcon,
-            guild: y,
-            size: v.Z.Sizes.SMALL,
-            active: !0
-          }) : (0, i.jsx)(E.Avatar, {
-            "aria-hidden": !0,
-            src: null != B ? B : n(187293),
-            size: E.AvatarSizes.SIZE_32
-          }), (0, i.jsx)(E.Text, {
-            variant: "text-md/medium",
-            color: "header-primary",
-            selectable: !0,
-            children: Z
-          })]
-        }), null != s.notes && s.notes.length > 0 ? (0, i.jsxs)(E.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: D.notes,
-          selectable: !0,
-          children: [(0, i.jsx)(E.FileIcon, {
-            size: "xxs",
-            color: "currentColor"
-          }), s.notes]
-        }) : null, null != k ? (0, i.jsx)(E.Text, {
-          variant: "text-sm/medium",
-          color: t,
-          style: {
-            marginTop: 4
-          },
-          children: k
-        }) : null]
-      }), (0, i.jsxs)("div", {
-        className: D.reminderActions,
-        children: [(0, i.jsx)(E.TooltipContainer, {
-          text: b.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
-          children: (0, i.jsx)(E.Clickable, {
-            onClick: e => (0, I.jW)(e, async () => {
-              let {
-                default: e
-              } = await n.e("6045").then(n.bind(n, 883150));
-              return t => (0, i.jsx)(e, {
-                ...t,
-                message: _
-              })
+function b(e) {
+    let {
+            setTab: t,
+            closePopout: n
+        } = e, s = (0, c.e7)([f.Z], () => f.Z.getMessageReminders());
+    a.useEffect(() => () => {
+        (0, N.Mf)();
+    }, []);
+    let [l, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date()), [s]), _ = l ? s : o;
+    return (0, i.jsxs)('div', {
+        className: L.container,
+        children: [
+            (0, i.jsx)(R.Z, {
+                tab: d.X.TODOS,
+                setTab: t,
+                closePopout: n
             }),
-            className: D.clock,
-            children: (0, i.jsx)(E.ClockIcon, {
-              size: "custom",
-              width: 20,
-              height: 20,
-              color: "currentColor"
-            })
-          })
-        }), (0, i.jsx)(E.Checkbox, {
-          type: E.Checkbox.Types.INVERTED,
-          value: r,
-          onChange: (e, t) => {
-            (0, C.Y_)(s.messageId, t)
-          }
-        })]
-      })]
-    }), (0, i.jsxs)("div", {
-      className: l()(j.messageContainer, D.unloadedMessage, {
-        [D.disabledMessage]: r
-      }),
-      children: [(0, i.jsx)(N.Z, {
-        message: _,
-        channel: p,
-        className: j.message,
-        compact: R.jU.getSetting(),
-        animateAvatar: !1,
-        focusProps: U,
-        trackAnnouncementViews: !0
-      }, _.id), (0, i.jsxs)("div", {
-        className: D.actions,
-        children: [null == c ? (0, i.jsx)(E.Button, {
-          onClick: () => {
-            m.Z.fetchMessages({
-              channelId: s.channelId,
-              limit: 1,
-              jump: {
-                messageId: s.messageId,
-                flash: !1,
-                offset: 1
-              }
-            })
-          },
-          size: E.Button.Sizes.MIN,
-          color: E.Button.Colors.TRANSPARENT,
-          className: D.loadButton,
-          children: (0, i.jsx)(E.Text, {
-            variant: "text-xs/normal",
-            children: "Load"
-          })
-        }) : null, (0, i.jsx)(E.Button, {
-          onClick: () => {
-            (0, f.uL)(P.Z5c.CHANNEL(null == p ? void 0 : p.getGuildId(), s.channelId, s.messageId))
-          },
-          size: E.Button.Sizes.MIN,
-          color: E.Button.Colors.TRANSPARENT,
-          className: D.loadButton,
-          children: (0, i.jsx)(E.Text, {
-            variant: "text-xs/normal",
-            children: b.Z.Messages.JUMP
-          })
-        })]
-      })]
-    })]
-  })
+            (0, i.jsxs)('div', {
+                className: L.headerText,
+                children: [
+                    (0, i.jsx)(u.Heading, {
+                        variant: 'heading-lg/bold',
+                        children: l ? v.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : v.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
+                    }),
+                    (0, i.jsx)(u.Anchor, {
+                        onClick: () => r(!l),
+                        children: (0, i.jsx)(u.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-link',
+                            children: l ? v.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : v.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
+                        })
+                    })
+                ]
+            }),
+            0 === _.length ? (0, i.jsx)(j, {}) : (0, i.jsx)(u.AdvancedScrollerThin, { children: _.map(e => (0, i.jsx)(D, { messageReminder: e }, e.messageId)) })
+        ]
+    });
 }
-
-function k() {
-  return (0, u.e7)([g.Z], () => g.Z.getMessageReminders().length > 0) ? null : (0, i.jsx)(L.Z, {
-    Icon: E.DoubleCheckmarkLargeIcon,
-    header: b.Z.Messages.MESSAGE_REMINDERS_EMPTY,
-    tip: b.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP
-  })
+function D(e) {
+    let t, {messageReminder: a} = e, s = a.complete, r = (0, c.e7)([A.Z], () => A.Z.getMessage(a.channelId, a.messageId)), {
+            message: d,
+            channel: f
+        } = (0, p.p)(a), O = g.Z.getChannel(f.id), R = (0, I.ZP)(O, !0), b = null != R ? R : f.name, D = (0, c.e7)([S.Z], () => S.Z.getGuild(null == f ? void 0 : f.guild_id)), j = null != f ? (0, m.x)(f) : null, U = null;
+    return null != a.dueAt && (a.dueAt > new Date() ? (t = 'text-muted', U = v.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({ duration: o().duration(a.dueAt.getTime() - Date.now(), 'millisecond').humanize() })) : (t = 'text-danger', U = v.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({ duration: o().duration(Date.now() - a.dueAt.getTime(), 'millisecond').humanize() }))), (0, i.jsxs)('div', {
+        className: Z.container,
+        children: [
+            (0, i.jsxs)('div', {
+                className: L.messageHeader,
+                children: [
+                    (0, i.jsxs)('div', {
+                        children: [
+                            (0, i.jsxs)('div', {
+                                className: L.messageInfo,
+                                children: [
+                                    null != D ? (0, i.jsx)(x.Z, {
+                                        className: L.guildIcon,
+                                        guild: D,
+                                        size: x.Z.Sizes.SMALL,
+                                        active: !0
+                                    }) : (0, i.jsx)(u.Avatar, {
+                                        'aria-hidden': !0,
+                                        src: null != j ? j : n(187293),
+                                        size: u.AvatarSizes.SIZE_32
+                                    }),
+                                    (0, i.jsx)(u.Text, {
+                                        variant: 'text-md/medium',
+                                        color: 'header-primary',
+                                        selectable: !0,
+                                        children: b
+                                    })
+                                ]
+                            }),
+                            null != a.notes && a.notes.length > 0 ? (0, i.jsxs)(u.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-muted',
+                                className: L.notes,
+                                selectable: !0,
+                                children: [
+                                    (0, i.jsx)(u.FileIcon, {
+                                        size: 'xxs',
+                                        color: 'currentColor'
+                                    }),
+                                    a.notes
+                                ]
+                            }) : null,
+                            null != U ? (0, i.jsx)(u.Text, {
+                                variant: 'text-sm/medium',
+                                color: t,
+                                style: { marginTop: 4 },
+                                children: U
+                            }) : null
+                        ]
+                    }),
+                    (0, i.jsxs)('div', {
+                        className: L.reminderActions,
+                        children: [
+                            (0, i.jsx)(u.TooltipContainer, {
+                                text: v.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
+                                children: (0, i.jsx)(u.Clickable, {
+                                    onClick: e => (0, _.jW)(e, async () => {
+                                        let {default: e} = await n.e('6045').then(n.bind(n, 883150));
+                                        return t => (0, i.jsx)(e, {
+                                            ...t,
+                                            message: d
+                                        });
+                                    }),
+                                    className: L.clock,
+                                    children: (0, i.jsx)(u.ClockIcon, {
+                                        size: 'custom',
+                                        width: 20,
+                                        height: 20,
+                                        color: 'currentColor'
+                                    })
+                                })
+                            }),
+                            (0, i.jsx)(u.Checkbox, {
+                                type: u.Checkbox.Types.INVERTED,
+                                value: s,
+                                onChange: (e, t) => {
+                                    (0, N.Y_)(a.messageId, t);
+                                }
+                            })
+                        ]
+                    })
+                ]
+            }),
+            (0, i.jsxs)('div', {
+                className: l()(Z.messageContainer, L.unloadedMessage, { [L.disabledMessage]: s }),
+                children: [
+                    (0, i.jsx)(T.Z, {
+                        message: d,
+                        channel: f,
+                        className: Z.message,
+                        compact: C.jU.getSetting(),
+                        animateAvatar: !1,
+                        focusProps: P,
+                        trackAnnouncementViews: !0
+                    }, d.id),
+                    (0, i.jsxs)('div', {
+                        className: L.actions,
+                        children: [
+                            null == r ? (0, i.jsx)(u.Button, {
+                                onClick: () => {
+                                    E.Z.fetchMessages({
+                                        channelId: a.channelId,
+                                        limit: 1,
+                                        jump: {
+                                            messageId: a.messageId,
+                                            flash: !1,
+                                            offset: 1
+                                        }
+                                    });
+                                },
+                                size: u.Button.Sizes.MIN,
+                                color: u.Button.Colors.TRANSPARENT,
+                                className: L.loadButton,
+                                children: (0, i.jsx)(u.Text, {
+                                    variant: 'text-xs/normal',
+                                    children: 'Load'
+                                })
+                            }) : null,
+                            (0, i.jsx)(u.Button, {
+                                onClick: () => {
+                                    (0, h.uL)(M.Z5c.CHANNEL(null == f ? void 0 : f.getGuildId(), a.channelId, a.messageId));
+                                },
+                                size: u.Button.Sizes.MIN,
+                                color: u.Button.Colors.TRANSPARENT,
+                                className: L.loadButton,
+                                children: (0, i.jsx)(u.Text, {
+                                    variant: 'text-xs/normal',
+                                    children: v.Z.Messages.JUMP
+                                })
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+}
+function j() {
+    return (0, i.jsx)(O.Z, {
+        Icon: u.DoubleCheckmarkLargeIcon,
+        header: v.Z.Messages.MESSAGE_REMINDERS_EMPTY,
+        tip: v.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP
+    });
 }

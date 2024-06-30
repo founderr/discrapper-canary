@@ -1,32 +1,24 @@
-n.d(e, {
-  m: function() {
-    return o
-  }
+r.d(e, {
+    m: function () {
+        return o;
+    }
 });
-var r = n(358133),
-  i = n(416097),
-  a = n(544457),
-  s = n(527475);
+var n = r(358133), _ = r(416097), a = r(544457), i = r(527475);
 let o = t => {
-  let e;
-  let n = (0, i.I)("CLS", 0),
-    o = 0,
-    l = [],
-    u = t => {
-      t.forEach(t => {
-        if (!t.hadRecentInput) {
-          let r = l[0],
-            i = l[l.length - 1];
-          o && 0 !== l.length && t.startTime - i.startTime < 1e3 && t.startTime - r.startTime < 5e3 ? (o += t.value, l.push(t)) : (o = t.value, l = [t]), o > n.value && (n.value = o, n.entries = l, e && e())
-        }
-      })
-    },
-    c = (0, a.N)("layout-shift", u);
-  if (c) {
-    e = (0, r._)(t, n);
-    let i = () => {
-      u(c.takeRecords()), e(!0)
-    };
-    return (0, s.u)(i), i
-  }
-}
+    let e;
+    let r = (0, _.I)('CLS', 0), o = 0, E = [], s = t => {
+            t.forEach(t => {
+                if (!t.hadRecentInput) {
+                    let n = E[0], _ = E[E.length - 1];
+                    o && 0 !== E.length && t.startTime - _.startTime < 1000 && t.startTime - n.startTime < 5000 ? (o += t.value, E.push(t)) : (o = t.value, E = [t]), o > r.value && (r.value = o, r.entries = E, e && e());
+                }
+            });
+        }, c = (0, a.N)('layout-shift', s);
+    if (c) {
+        e = (0, n._)(t, r);
+        let _ = () => {
+            s(c.takeRecords()), e(!0);
+        };
+        return (0, i.u)(_), _;
+    }
+};

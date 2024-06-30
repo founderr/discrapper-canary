@@ -1,62 +1,48 @@
-n.d(s, {
-  x: function() {
-    return I
-  }
+t.d(n, {
+    x: function () {
+        return h;
+    }
 });
-var t = n(735250);
-n(470079);
-var i = n(512722),
-  l = n.n(i),
-  r = n(780384),
-  C = n(481060),
-  a = n(410030),
-  o = n(973159),
-  d = n(74538),
-  _ = n(987209),
-  u = n(598),
-  c = n(409813),
-  p = n(614223),
-  x = n(689938),
-  L = n(784169);
-
-function I(e) {
-  let {
-    handleStepChange: s,
-    handleClose: n
-  } = e, i = (0, a.ZP)(), {
-    activeSubscription: I,
-    selectedSkuId: E,
-    setSelectedPlanId: h,
-    startedPaymentFlowWithPaymentSourcesRef: f
-  } = (0, u.usePaymentContext)(), {
-    isGift: M
-  } = (0, _.wD)(), N = null != I ? (0, d.Af)(I) : null, j = null != N ? (0, d.gq)(N.planId) : null, T = null != N ? (0, d.Rd)(N.planId) : null, A = (0, p.Kp)({
-    isTrial: !1,
-    isGift: M,
-    selectedSkuId: E,
-    startedPaymentFlowWithPaymentSources: f.current
-  });
-  return l()(null != T, "Expected premium type"), (0, t.jsx)(o.Z, {
-    premiumType: T,
-    titleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
-    subtitleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({
-      subscriptionName: j
-    }),
-    footer: (0, t.jsxs)("div", {
-      className: L.whatYouLoseButtonContainer,
-      children: [(0, t.jsx)(C.Button, {
-        onClick: () => {
-          A ? (h((0, p.nA)(E, I)), s(c.h8.REVIEW)) : s(c.h8.PLAN_SELECT)
-        },
-        children: x.Z.Messages.CONTINUE
-      }), (0, t.jsx)(C.Button, {
-        look: C.Button.Looks.LINK,
-        color: (0, r.wj)(i) ? C.Button.Colors.WHITE : C.Button.Colors.PRIMARY,
-        onClick: n,
-        children: x.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
-      })]
-    }),
-    onClose: n,
-    isDowngrade: !0
-  })
+var i = t(735250);
+t(470079);
+var r = t(512722), o = t.n(r), a = t(780384), s = t(481060), l = t(410030), d = t(973159), c = t(74538), C = t(987209), u = t(598), _ = t(409813), p = t(614223), f = t(689938), x = t(784169);
+function h(e) {
+    let {
+            handleStepChange: n,
+            handleClose: t
+        } = e, r = (0, l.ZP)(), {
+            activeSubscription: h,
+            selectedSkuId: b,
+            setSelectedPlanId: g,
+            startedPaymentFlowWithPaymentSourcesRef: m
+        } = (0, u.usePaymentContext)(), {isGift: I} = (0, C.wD)(), L = null != h ? (0, c.Af)(h) : null, E = null != L ? (0, c.gq)(L.planId) : null, M = null != L ? (0, c.Rd)(L.planId) : null, T = (0, p.Kp)({
+            isTrial: !1,
+            isGift: I,
+            selectedSkuId: b,
+            startedPaymentFlowWithPaymentSources: m.current
+        });
+    return o()(null != M, 'Expected premium type'), (0, i.jsx)(d.Z, {
+        premiumType: M,
+        titleText: f.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
+        subtitleText: f.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({ subscriptionName: E }),
+        footer: (0, i.jsxs)('div', {
+            className: x.whatYouLoseButtonContainer,
+            children: [
+                (0, i.jsx)(s.Button, {
+                    onClick: () => {
+                        T ? (g((0, p.nA)(b, h)), n(_.h8.REVIEW)) : n(_.h8.PLAN_SELECT);
+                    },
+                    children: f.Z.Messages.CONTINUE
+                }),
+                (0, i.jsx)(s.Button, {
+                    look: s.Button.Looks.LINK,
+                    color: (0, a.wj)(r) ? s.Button.Colors.WHITE : s.Button.Colors.PRIMARY,
+                    onClick: t,
+                    children: f.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
+                })
+            ]
+        }),
+        onClose: t,
+        isDowngrade: !0
+    });
 }

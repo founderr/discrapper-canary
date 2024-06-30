@@ -1,27 +1,21 @@
-t.d(n, {
-  Z: function() {
-    return s
-  }
+i.d(n, {
+    Z: function () {
+        return s;
+    }
 });
-var i = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  o = t(481060),
-  l = t(52619);
-
+var t = i(735250);
+i(470079);
+var a = i(120356), r = i.n(a), o = i(481060), l = i(52619);
 function s(e) {
-  let {
-    supportedLanguages: n
-  } = e;
-  return (0, i.jsx)("ul", {
-    className: l.outerContainer,
-    children: n.map(e => (0, i.jsx)("li", {
-      className: r()(l.innerContainer, l.languageItem),
-      children: (0, i.jsx)(o.Text, {
-        variant: "text-md/normal",
-        children: e
-      })
-    }, e))
-  })
+    let {supportedLanguages: n} = e;
+    return (0, t.jsx)('ul', {
+        className: l.outerContainer,
+        children: n.map(e => (0, t.jsx)('li', {
+            className: r()(l.innerContainer, l.languageItem),
+            children: (0, t.jsx)(o.Text, {
+                variant: 'text-md/normal',
+                children: e
+            })
+        }, e))
+    });
 }

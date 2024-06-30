@@ -1,61 +1,61 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return l
-  }
-});
-var i = n(470079),
-  r = n(481060),
-  s = n(1585),
-  o = n(125988),
-  a = n(252532);
-
-function l(e) {
-  let {
-    user: t,
-    guildId: n,
-    size: l,
-    showPending: u = !1,
-    showTryItOut: _ = !1,
-    animateOnHover: c = !1,
-    avatarDecorationOverride: d,
-    avatarOverride: E
-  } = e, {
-    avatarSrc: I,
-    isAvatarAnimating: T,
-    eventHandlers: h
-  } = (0, a.w)({
-    user: t,
-    guildId: n,
-    size: (0, r.getAvatarSize)(l),
-    showPending: u,
-    animateOnHover: c,
-    avatarOverride: E
-  }), {
-    avatarPlaceholderSrc: f,
-    avatarDecorationSrc: S,
-    eventHandlers: A
-  } = (0, o.Z)({
-    user: t,
-    guildId: null != n ? n : void 0,
-    size: (0, s.y9)(l),
-    showPending: u,
-    onlyAnimateOnHover: c,
-    avatarDecorationOverride: d,
-    showTryItOut: _
-  }), N = i.useCallback(() => {
-    h.onMouseEnter(), A.onMouseEnter()
-  }, [h, A]);
-  return {
-    avatarPlaceholderSrc: f,
-    avatarDecorationSrc: S,
-    avatarSrc: I,
-    isAnimating: T,
-    eventHandlers: {
-      onMouseEnter: N,
-      onMouseLeave: i.useCallback(() => {
-        h.onMouseLeave(), A.onMouseLeave()
-      }, [h, A])
+    Z: function () {
+        return l;
     }
-  }
+});
+var r = n(470079), i = n(481060), a = n(1585), o = n(125988), s = n(252532);
+function l(e) {
+    let {
+            user: t,
+            guildId: n,
+            size: l,
+            showPending: u = !1,
+            showTryItOut: c = !1,
+            animateOnHover: d = !1,
+            avatarDecorationOverride: _,
+            avatarOverride: E
+        } = e, {
+            avatarSrc: f,
+            isAvatarAnimating: h,
+            eventHandlers: p
+        } = (0, s.w)({
+            user: t,
+            guildId: n,
+            size: (0, i.getAvatarSize)(l),
+            showPending: u,
+            animateOnHover: d,
+            avatarOverride: E
+        }), {
+            avatarPlaceholderSrc: m,
+            avatarDecorationSrc: I,
+            eventHandlers: T
+        } = (0, o.Z)({
+            user: t,
+            guildId: null != n ? n : void 0,
+            size: (0, a.y9)(l),
+            showPending: u,
+            onlyAnimateOnHover: d,
+            avatarDecorationOverride: _,
+            showTryItOut: c
+        }), g = r.useCallback(() => {
+            p.onMouseEnter(), T.onMouseEnter();
+        }, [
+            p,
+            T
+        ]);
+    return {
+        avatarPlaceholderSrc: m,
+        avatarDecorationSrc: I,
+        avatarSrc: f,
+        isAnimating: h,
+        eventHandlers: {
+            onMouseEnter: g,
+            onMouseLeave: r.useCallback(() => {
+                p.onMouseLeave(), T.onMouseLeave();
+            }, [
+                p,
+                T
+            ])
+        }
+    };
 }

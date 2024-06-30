@@ -1,84 +1,70 @@
-"use strict";
 n(47120);
-var i, r, s, o, a = n(442837),
-  l = n(570140),
-  u = n(353926),
-  _ = n(581883),
-  c = n(430824),
-  d = n(496675),
-  E = n(709054),
-  I = n(154285),
-  T = n(533244);
-let h = {},
-  f = {};
-
-function S() {
-  var e;
-  let t = null !== (e = _.Z.getGuildsProto()) && void 0 !== e ? e : {},
-    n = c.Z.getGuilds(),
-    i = E.default.keys(n);
-  for (let e of (f = {}, i))(0, I.jy)(e).showAlertMode && (f[e] = {
-    guildId: e,
-    guildName: n[e].name,
-    ...t[e]
-  })
+var r, i, a, o, s = n(442837), l = n(570140), u = n(353926), c = n(581883), d = n(430824), _ = n(496675), E = n(709054), f = n(154285), h = n(533244);
+let p = {}, m = {};
+function I() {
+    var e;
+    let t = null !== (e = c.Z.getGuildsProto()) && void 0 !== e ? e : {}, n = d.Z.getGuilds(), r = E.default.keys(n);
+    for (let e of (m = {}, r))
+        (0, f.jy)(e).showAlertMode && (m[e] = {
+            guildId: e,
+            guildName: n[e].name,
+            ...t[e]
+        });
 }
-
-function A(e) {
-  return null != e && Object.keys(e).length > 0 ? {
-    raidDetectedAt: e.raid_detected_at,
-    dmSpamDetectedAt: e.dm_spam_detected_at,
-    dmsDisabledUntil: e.dms_disabled_until,
-    invitesDisabledUntil: e.invites_disabled_until
-  } : null
+function T(e) {
+    return null != e && Object.keys(e).length > 0 ? {
+        raidDetectedAt: e.raid_detected_at,
+        dmSpamDetectedAt: e.dm_spam_detected_at,
+        dmsDisabledUntil: e.dms_disabled_until,
+        invitesDisabledUntil: e.invites_disabled_until
+    } : null;
 }
-class N extends(i = a.ZP.Store) {
-  initialize() {
-    this.waitFor(_.Z, c.Z, d.Z, u.Z), this.syncWith([_.Z, c.Z, d.Z, u.Z], S)
-  }
-  getGuildIncident(e) {
-    return h[e]
-  }
-  getIncidentsByGuild() {
-    return h
-  }
-  getGuildAlertSettings() {
-    return f
-  }
-}
-o = "GuildIncidentsStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
-  value: o,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : r[s] = o, t.Z = new N(l.Z, {
-  CONNECTION_OPEN: function(e) {
-    for (let n of (h = {}, e.guilds)) {
-      var t;
-      let e = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
-      null != e && ((0, T.i9)(e) || (0, T.ur)(e)) && (h[n.id] = e)
+class g extends (r = s.ZP.Store) {
+    initialize() {
+        this.waitFor(c.Z, d.Z, _.Z, u.Z), this.syncWith([
+            c.Z,
+            d.Z,
+            _.Z,
+            u.Z
+        ], I);
     }
-  },
-  GUILD_CREATE: function(e) {
-    var t;
-    let {
-      guild: n
-    } = e, i = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
-    null != i && ((0, T.i9)(i) || (0, T.ur)(i)) && (h[n.id] = i)
-  },
-  GUILD_UPDATE: function(e) {
-    let {
-      guild: t
-    } = e, n = A(t.incidents_data);
-    null != n && ((0, T.i9)(n) || (0, T.ur)(n)) ? h[t.id] = n : delete h[t.id]
-  },
-  GUILD_DELETE: function(e) {
-    let {
-      guild: t
-    } = e;
-    delete h[t.id]
-  },
-  LOGOUT: function(e) {
-    h = {}
-  }
-})
+    getGuildIncident(e) {
+        return p[e];
+    }
+    getIncidentsByGuild() {
+        return p;
+    }
+    getGuildAlertSettings() {
+        return m;
+    }
+}
+o = 'GuildIncidentsStore', (a = 'displayName') in (i = g) ? Object.defineProperty(i, a, {
+    value: o,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+}) : i[a] = o, t.Z = new g(l.Z, {
+    CONNECTION_OPEN: function (e) {
+        for (let n of (p = {}, e.guilds)) {
+            var t;
+            let e = T(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+            null != e && ((0, h.i9)(e) || (0, h.ur)(e)) && (p[n.id] = e);
+        }
+    },
+    GUILD_CREATE: function (e) {
+        var t;
+        let {guild: n} = e, r = T(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+        null != r && ((0, h.i9)(r) || (0, h.ur)(r)) && (p[n.id] = r);
+    },
+    GUILD_UPDATE: function (e) {
+        let {guild: t} = e, n = T(t.incidents_data);
+        null != n && ((0, h.i9)(n) || (0, h.ur)(n)) ? p[t.id] = n : delete p[t.id];
+    },
+    GUILD_DELETE: function (e) {
+        let {guild: t} = e;
+        delete p[t.id];
+    },
+    LOGOUT: function (e) {
+        p = {};
+    }
+});

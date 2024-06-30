@@ -1,44 +1,42 @@
-"use strict";
 n.d(t, {
-  U: function() {
-    return l
-  }
+    U: function () {
+        return c;
+    }
 });
-var r = n(735250);
+var s = n(735250);
 n(470079);
-var i = n(120356),
-  a = n.n(i),
-  o = n(481060),
-  s = n(689938),
-  c = n(219199);
-let l = e => {
-  let {
-    className: t,
-    isPartiallyPurchased: n
-  } = e;
-  return n ? (0, r.jsx)(o.Tooltip, {
-    tooltipClassName: c.partiallyOwnedDisclaimer,
-    position: "top",
-    align: "left",
-    text: s.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
-    children: e => (0, r.jsxs)("div", {
-      className: a()(c.partialOwnStateContainer, t),
-      ...e,
-      children: [(0, r.jsx)("span", {
-        className: c.iconWrapper,
-        children: (0, r.jsx)(o.CircleInformationIcon, {
-          size: "md",
-          color: "currentColor",
-          className: c.infoIcon
+var r = n(120356), a = n.n(r), o = n(481060), i = n(689938), l = n(219199);
+let c = e => {
+    let {
+        className: t,
+        isPartiallyPurchased: n
+    } = e;
+    return n ? (0, s.jsx)(o.Tooltip, {
+        tooltipClassName: l.partiallyOwnedDisclaimer,
+        position: 'top',
+        align: 'left',
+        text: i.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
+        children: e => (0, s.jsxs)('div', {
+            className: a()(l.partialOwnStateContainer, t),
+            ...e,
+            children: [
+                (0, s.jsx)('span', {
+                    className: l.iconWrapper,
+                    children: (0, s.jsx)(o.CircleInformationIcon, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: l.infoIcon
+                    })
+                }),
+                (0, s.jsx)(o.Text, {
+                    variant: 'text-md/semibold',
+                    children: i.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
+                })
+            ]
         })
-      }), (0, r.jsx)(o.Text, {
-        variant: "text-md/semibold",
-        children: s.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
-      })]
-    })
-  }) : (0, r.jsx)(o.Text, {
-    variant: "text-md/semibold",
-    className: t,
-    children: s.Z.Messages.COLLECTIBLES_ALREADY_OWNED
-  })
-}
+    }) : (0, s.jsx)(o.Text, {
+        variant: 'text-md/semibold',
+        className: t,
+        children: i.Z.Messages.COLLECTIBLES_ALREADY_OWNED
+    });
+};

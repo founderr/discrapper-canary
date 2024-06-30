@@ -1,78 +1,55 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return I
-  }
+    Z: function () {
+        return f;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356),
-  s = n.n(r),
-  o = n(481060),
-  a = n(194359),
-  l = n(906732),
-  u = n(5192),
-  _ = n(877485),
-  c = n(785717),
-  d = n(689938),
-  E = n(866254);
-
-function I(e) {
-  let {
-    user: t,
-    guildId: n,
-    channelId: r,
-    friendToken: I,
-    className: T
-  } = e, h = u.ZP.getName(n, r, t), {
-    trackUserProfileAction: f
-  } = (0, c.KZ)(), {
-    newestAnalyticsLocation: S
-  } = (0, l.ZP)(), {
-    originalFriendingEnabled: A
-  } = (0, _.V)({
-    location: "UserProfileIncomingFriendRequestBanner"
-  });
-  return (0, i.jsxs)("div", {
-    className: s()(E.container, T),
-    children: [(0, i.jsx)(o.Text, {
-      variant: "text-sm/normal",
-      children: d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
-        username: h
-      })
-    }), (0, i.jsxs)("div", {
-      className: E.buttonContainer,
-      children: [(0, i.jsx)(o.Button, {
-        look: o.Button.Looks.FILLED,
-        color: A ? o.Button.Colors.GREEN : s()(o.Button.Colors.BRAND, E.color),
-        size: o.Button.Sizes.SMALL,
-        className: E.button,
-        onClick: () => {
-          f({
-            action: "ACCEPT_FRIEND_REQUEST"
-          }), a.Z.addRelationship({
-            userId: t.id,
-            friendToken: I,
-            context: {
-              location: S
-            }
-          })
-        },
-        children: d.Z.Messages.FRIEND_REQUEST_ACCEPT
-      }), (0, i.jsx)(o.Button, {
-        look: o.Button.Looks.FILLED,
-        color: o.Button.Colors.PRIMARY,
-        size: o.Button.Sizes.SMALL,
-        className: E.button,
-        onClick: () => {
-          f({
-            action: "IGNORE_FRIEND_REQUEST"
-          }), a.Z.cancelFriendRequest(t.id, {
-            location: S
-          })
-        },
-        children: d.Z.Messages.FRIEND_REQUEST_IGNORE
-      })]
-    })]
-  })
+var i = n(120356), a = n.n(i), o = n(481060), s = n(194359), l = n(906732), u = n(5192), c = n(877485), d = n(785717), _ = n(689938), E = n(866254);
+function f(e) {
+    let {
+            user: t,
+            guildId: n,
+            channelId: i,
+            friendToken: f,
+            className: h
+        } = e, p = u.ZP.getName(n, i, t), {trackUserProfileAction: m} = (0, d.KZ)(), {newestAnalyticsLocation: I} = (0, l.ZP)(), {originalFriendingEnabled: T} = (0, c.V)({ location: 'UserProfileIncomingFriendRequestBanner' });
+    return (0, r.jsxs)('div', {
+        className: a()(E.container, h),
+        children: [
+            (0, r.jsx)(o.Text, {
+                variant: 'text-sm/normal',
+                children: _.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({ username: p })
+            }),
+            (0, r.jsxs)('div', {
+                className: E.buttonContainer,
+                children: [
+                    (0, r.jsx)(o.Button, {
+                        look: o.Button.Looks.FILLED,
+                        color: T ? o.Button.Colors.GREEN : a()(o.Button.Colors.BRAND, E.color),
+                        size: o.Button.Sizes.SMALL,
+                        className: E.button,
+                        onClick: () => {
+                            m({ action: 'ACCEPT_FRIEND_REQUEST' }), s.Z.addRelationship({
+                                userId: t.id,
+                                friendToken: f,
+                                context: { location: I }
+                            });
+                        },
+                        children: _.Z.Messages.FRIEND_REQUEST_ACCEPT
+                    }),
+                    (0, r.jsx)(o.Button, {
+                        look: o.Button.Looks.FILLED,
+                        color: o.Button.Colors.PRIMARY,
+                        size: o.Button.Sizes.SMALL,
+                        className: E.button,
+                        onClick: () => {
+                            m({ action: 'IGNORE_FRIEND_REQUEST' }), s.Z.cancelFriendRequest(t.id, { location: I });
+                        },
+                        children: _.Z.Messages.FRIEND_REQUEST_IGNORE
+                    })
+                ]
+            })
+        ]
+    });
 }

@@ -1,50 +1,40 @@
-"use strict";
 n.d(t, {
-  Z: function() {
-    return I
-  }
+    Z: function () {
+        return f;
+    }
 });
-var i = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(442837),
-  s = n(481060),
-  o = n(493683),
-  a = n(740492),
-  l = n(314897),
-  u = n(592125),
-  _ = n(699516),
-  c = n(944486),
-  d = n(981631),
-  E = n(689938);
-
-function I(e) {
-  let {
-    user: t,
-    context: I,
-    label: T,
-    joinCallVideo: h,
-    id: f,
-    onCall: S
-  } = e, A = l.default.getId(), N = I === d.IlC.POPOUT, m = (0, r.e7)([c.Z, u.Z], () => c.Z.getVoiceChannelId() === u.Z.getDMFromUserId(t.id)), O = (0, r.e7)([_.Z], () => _.Z.isBlocked(t.id));
-  if (A === t.id || N || m || t.bot) return null;
-  let R = () => {
-      null == S || S(), o.Z.openPrivateChannel(t.id, !0, h)
-    },
-    p = !a.ZP.disableCallUserConfirmationPrompt;
-  return (0, i.jsx)(s.MenuItem, {
-    id: null != f ? f : "call",
-    label: null != T ? T : E.Z.Messages.CALL,
-    action: p ? () => {
-      (0, s.openModalLazy)(async () => {
-        let {
-          default: e
-        } = await n.e("27157").then(n.bind(n, 736454));
-        return t => (0, i.jsx)(e, {
-          onSubmit: R,
-          ...t
-        })
-      })
-    } : R,
-    disabled: O
-  })
+var i = n(442837), a = n(481060), o = n(493683), s = n(740492), l = n(314897), u = n(592125), c = n(699516), d = n(944486), _ = n(981631), E = n(689938);
+function f(e) {
+    let {
+            user: t,
+            context: f,
+            label: h,
+            joinCallVideo: p,
+            id: m,
+            onCall: I
+        } = e, T = l.default.getId(), g = f === _.IlC.POPOUT, S = (0, i.e7)([
+            d.Z,
+            u.Z
+        ], () => d.Z.getVoiceChannelId() === u.Z.getDMFromUserId(t.id)), A = (0, i.e7)([c.Z], () => c.Z.isBlocked(t.id));
+    if (T === t.id || g || S || t.bot)
+        return null;
+    let N = () => {
+            null == I || I(), o.Z.openPrivateChannel(t.id, !0, p);
+        }, v = !s.ZP.disableCallUserConfirmationPrompt;
+    return (0, r.jsx)(a.MenuItem, {
+        id: null != m ? m : 'call',
+        label: null != h ? h : E.Z.Messages.CALL,
+        action: v ? () => {
+            (0, a.openModalLazy)(async () => {
+                let {default: e} = await n.e('27157').then(n.bind(n, 736454));
+                return t => (0, r.jsx)(e, {
+                    onSubmit: N,
+                    ...t
+                });
+            });
+        } : N,
+        disabled: A
+    });
 }

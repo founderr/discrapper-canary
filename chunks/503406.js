@@ -1,78 +1,78 @@
-n(47120);
-var s = n(735250),
-  a = n(470079),
-  l = n(120356),
-  i = n.n(l),
-  r = n(392711),
-  o = n.n(r),
-  c = n(481060),
-  d = n(231239),
-  u = n(881052),
-  _ = n(703656),
-  N = n(153124),
-  E = n(981631),
-  m = n(689938),
-  I = n(192690);
-let C = (0, N.hQ)();
-t.Z = e => {
-  let {
-    email: t,
-    guildId: n,
-    onClose: l
-  } = e, [r, N] = a.useState(""), [T, h] = a.useState(null), x = a.useCallback(async () => {
-    if (null != n) try {
-      let e = await d.Z.verifyCode(r, n, t);
-      e.guild && (null == l || l(), (0, _.uL)(E.Z5c.CHANNEL(e.guild.id)))
-    } catch (e) {
-      h(new u.Hx(e))
-    }
-  }, [r, t, n, l]), g = o().throttle(() => {
-    d.Z.sendVerificationEmail(t, !0, n)
-  }, 1e3), v = async e => {
-    null != r && "" !== r && e.charCode === E.yXg.ENTER && await x()
-  };
-  return (0, s.jsxs)("div", {
-    className: I.container,
-    children: [(0, s.jsx)("div", {
-      className: I.topImage
-    }), (0, s.jsx)(c.Heading, {
-      className: i()(I.centerText, I.header),
-      variant: "heading-xl/semibold",
-      children: m.Z.Messages.HUB_VERIFY_EMAIL_ADDRESS
-    }), (0, s.jsx)("div", {
-      className: I.descriptionWidth,
-      children: (0, s.jsx)(c.Text, {
-        className: I.centerText,
-        variant: "text-sm/normal",
-        color: "header-secondary",
-        children: m.Z.Messages.HUB_PIN_DESCRIPTION.format({
-          email: t,
-          onClick: g
-        })
-      })
-    }), (0, s.jsxs)(c.FormItem, {
-      className: I.formItem,
-      children: [(0, s.jsx)(c.FormTitle, {
-        id: C,
-        children: m.Z.Messages.HUB_ENTER_PIN
-      }), (0, s.jsx)(c.TextInput, {
-        onKeyPress: v,
-        onChange: e => {
-          null != e && "" !== e && N(e)
-        },
-        error: null == T ? void 0 : T.getAnyErrorMessage(),
-        "aria-labelledby": C
-      })]
-    }), (0, s.jsx)(c.Button, {
-      fullWidth: !0,
-      onClick: x,
-      size: c.Button.Sizes.LARGE,
-      color: c.Button.Colors.BRAND,
-      children: (0, s.jsx)(c.Text, {
-        className: I.submitText,
-        variant: "text-sm/normal",
-        children: m.Z.Messages.SUBMIT
-      })
-    })]
-  })
-}
+a(47120);
+var n = a(735250), t = a(470079), l = a(120356), i = a.n(l), r = a(392711), o = a.n(r), c = a(481060), d = a(231239), N = a(881052), u = a(703656), _ = a(153124), m = a(981631), E = a(689938), I = a(192690);
+let x = (0, _.hQ)();
+s.Z = e => {
+    let {
+            email: s,
+            guildId: a,
+            onClose: l
+        } = e, [r, _] = t.useState(''), [h, C] = t.useState(null), T = t.useCallback(async () => {
+            if (null != a)
+                try {
+                    let e = await d.Z.verifyCode(r, a, s);
+                    e.guild && (null == l || l(), (0, u.uL)(m.Z5c.CHANNEL(e.guild.id)));
+                } catch (e) {
+                    C(new N.Hx(e));
+                }
+        }, [
+            r,
+            s,
+            a,
+            l
+        ]), g = o().throttle(() => {
+            d.Z.sendVerificationEmail(s, !0, a);
+        }, 1000), O = async e => {
+            null != r && '' !== r && e.charCode === m.yXg.ENTER && await T();
+        };
+    return (0, n.jsxs)('div', {
+        className: I.container,
+        children: [
+            (0, n.jsx)('div', { className: I.topImage }),
+            (0, n.jsx)(c.Heading, {
+                className: i()(I.centerText, I.header),
+                variant: 'heading-xl/semibold',
+                children: E.Z.Messages.HUB_VERIFY_EMAIL_ADDRESS
+            }),
+            (0, n.jsx)('div', {
+                className: I.descriptionWidth,
+                children: (0, n.jsx)(c.Text, {
+                    className: I.centerText,
+                    variant: 'text-sm/normal',
+                    color: 'header-secondary',
+                    children: E.Z.Messages.HUB_PIN_DESCRIPTION.format({
+                        email: s,
+                        onClick: g
+                    })
+                })
+            }),
+            (0, n.jsxs)(c.FormItem, {
+                className: I.formItem,
+                children: [
+                    (0, n.jsx)(c.FormTitle, {
+                        id: x,
+                        children: E.Z.Messages.HUB_ENTER_PIN
+                    }),
+                    (0, n.jsx)(c.TextInput, {
+                        onKeyPress: O,
+                        onChange: e => {
+                            null != e && '' !== e && _(e);
+                        },
+                        error: null == h ? void 0 : h.getAnyErrorMessage(),
+                        'aria-labelledby': x
+                    })
+                ]
+            }),
+            (0, n.jsx)(c.Button, {
+                fullWidth: !0,
+                onClick: T,
+                size: c.Button.Sizes.LARGE,
+                color: c.Button.Colors.BRAND,
+                children: (0, n.jsx)(c.Text, {
+                    className: I.submitText,
+                    variant: 'text-sm/normal',
+                    children: E.Z.Messages.SUBMIT
+                })
+            })
+        ]
+    });
+};

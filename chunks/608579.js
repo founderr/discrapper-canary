@@ -1,108 +1,101 @@
 t.d(n, {
-  Z: function() {
-    return S
-  }
-}), t(47120);
-var a = t(735250),
-  s = t(470079),
-  i = t(120356),
-  l = t.n(i),
-  r = t(887024),
-  o = t(100527),
-  d = t(906732),
-  c = t(987209),
-  u = t(598),
-  E = t(409813),
-  f = t(791785),
-  h = t(961830),
-  m = t(742956),
-  v = t(346790),
-  p = t(49308),
-  C = t(117652),
-  x = t(126982),
-  I = t(981631),
-  T = t(302800),
-  g = t(231338),
-  N = t(99178);
-
-function S(e) {
-  let {
-    onClose: n,
-    onComplete: t,
-    onStepChange: i,
-    transitionState: S,
-    loadId: A,
-    skuId: _,
-    isGift: j = !1,
-    giftRecipient: Z,
-    giftMessage: P,
-    analyticsLocations: y,
-    returnRef: O
-  } = e, {
-    analyticsLocations: M
-  } = (0, d.ZP)([...y, o.Z.COLLECTIBLES_PAYMENT_MODAL]), R = s.useRef(new r.qA), [L, k] = s.useState(null), [b, D] = s.useState(!1), w = s.useMemo(() => (0, T.UY)(_), [_]), B = s.useCallback(() => {
-    D(!0), null == t || t()
-  }, [t]), F = s.useCallback(e => {
-    D(!1), n(e)
-  }, [n]), G = s.useMemo(() => [h.WA, C.Dd, v.n, ...h.yp, h.wo, {
-    key: E.h8.CONFIRM,
-    renderStep: e => (0, a.jsx)(p.x, {
-      ...e,
-      confettiCanvas: L,
-      analyticsLocations: M,
-      hideConfetti: null != w
-    }),
-    options: {
-      bodyClassName: N.modalOverrideBody,
-      sliderBodyClassName: N.modalOverrideSliderBody
+    Z: function () {
+        return I;
     }
-  }], [M, L, w]);
-  return (0, a.jsxs)(d.Gt, {
-    value: M,
-    children: [(0, a.jsx)(r.O_, {
-      ref: k,
-      className: N.confettiCanvas,
-      environment: R.current
-    }), null != w && (0, a.jsx)("img", {
-      src: w.confettiAssetSrc,
-      className: l()(N.customConfetti, {
-        [N.hidden]: !b
-      }),
-      style: w.style,
-      alt: "",
-      "aria-hidden": !0
-    }), (0, a.jsx)(u.PaymentContextProvider, {
-      loadId: A,
-      stepConfigs: G,
-      applicationId: I.XAJ,
-      skuIDs: [_],
-      isGift: j,
-      activeSubscription: null,
-      purchaseType: g.GZ.ONE_TIME,
-      children: (0, a.jsx)(c.KB, {
-        isGift: j,
-        giftRecipient: Z,
-        giftMessage: P,
-        children: (0, a.jsx)(f.PaymentModal, {
-          onClose: F,
-          onComplete: B,
-          applicationId: I.XAJ,
-          skuId: _,
-          initialPlanId: null,
-          analyticsLocations: M,
-          transitionState: S,
-          renderHeader: (e, n, t) => j ? (0, a.jsx)(m.Z, {
-            step: t,
-            onClose: () => n(!1)
-          }) : (0, a.jsx)(x.Z, {
-            step: t,
-            onClose: () => n(!1)
-          }),
-          returnRef: O,
-          onStepChange: i,
-          hideShadow: !0
-        })
-      })
-    })]
-  })
+}), t(47120);
+var i = t(735250), a = t(470079), r = t(120356), o = t.n(r), s = t(887024), l = t(100527), c = t(906732), d = t(987209), u = t(598), f = t(409813), p = t(791785), _ = t(961830), m = t(742956), C = t(346790), b = t(49308), g = t(117652), v = t(126982), x = t(981631), h = t(302800), E = t(231338), T = t(99178);
+function I(e) {
+    let {
+            onClose: n,
+            onComplete: t,
+            onStepChange: r,
+            transitionState: I,
+            loadId: S,
+            skuId: A,
+            isGift: N = !1,
+            giftRecipient: y,
+            giftMessage: P,
+            analyticsLocations: j,
+            returnRef: O
+        } = e, {analyticsLocations: Z} = (0, c.ZP)([
+            ...j,
+            l.Z.COLLECTIBLES_PAYMENT_MODAL
+        ]), B = a.useRef(new s.qA()), [k, w] = a.useState(null), [R, M] = a.useState(!1), L = a.useMemo(() => (0, h.UY)(A), [A]), D = a.useCallback(() => {
+            M(!0), null == t || t();
+        }, [t]), G = a.useCallback(e => {
+            M(!1), n(e);
+        }, [n]), H = a.useMemo(() => [
+            _.WA,
+            g.Dd,
+            C.n,
+            ..._.yp,
+            _.wo,
+            {
+                key: f.h8.CONFIRM,
+                renderStep: e => (0, i.jsx)(b.x, {
+                    ...e,
+                    confettiCanvas: k,
+                    analyticsLocations: Z,
+                    hideConfetti: null != L
+                }),
+                options: {
+                    bodyClassName: T.modalOverrideBody,
+                    sliderBodyClassName: T.modalOverrideSliderBody
+                }
+            }
+        ], [
+            Z,
+            k,
+            L
+        ]);
+    return (0, i.jsxs)(c.Gt, {
+        value: Z,
+        children: [
+            (0, i.jsx)(s.O_, {
+                ref: w,
+                className: T.confettiCanvas,
+                environment: B.current
+            }),
+            null != L && (0, i.jsx)('img', {
+                src: L.confettiAssetSrc,
+                className: o()(T.customConfetti, { [T.hidden]: !R }),
+                style: L.style,
+                alt: '',
+                'aria-hidden': !0
+            }),
+            (0, i.jsx)(u.PaymentContextProvider, {
+                loadId: S,
+                stepConfigs: H,
+                applicationId: x.XAJ,
+                skuIDs: [A],
+                isGift: N,
+                activeSubscription: null,
+                purchaseType: E.GZ.ONE_TIME,
+                children: (0, i.jsx)(d.KB, {
+                    isGift: N,
+                    giftRecipient: y,
+                    giftMessage: P,
+                    children: (0, i.jsx)(p.PaymentModal, {
+                        onClose: G,
+                        onComplete: D,
+                        applicationId: x.XAJ,
+                        skuId: A,
+                        initialPlanId: null,
+                        analyticsLocations: Z,
+                        transitionState: I,
+                        renderHeader: (e, n, t) => N ? (0, i.jsx)(m.Z, {
+                            step: t,
+                            onClose: () => n(!1)
+                        }) : (0, i.jsx)(v.Z, {
+                            step: t,
+                            onClose: () => n(!1)
+                        }),
+                        returnRef: O,
+                        onStepChange: r,
+                        hideShadow: !0
+                    })
+                })
+            })
+        ]
+    });
 }

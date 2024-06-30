@@ -1,6 +1,6 @@
-var s, n;
-e.d(t, {
-  u: function() {
-    return s
-  }
-}), (n = s || (s = {}))[n.DROP = 0] = "DROP", n[n.INITIALIZE = 1] = "INITIALIZE", n[n.VISIBILITY_CHANGE = 2] = "VISIBILITY_CHANGE", n[n.STATE_CHANGE = 3] = "STATE_CHANGE", n[n.FIRST_DRAW = 4] = "FIRST_DRAW", n[n.ERROR = 5] = "ERROR"
+var e, o;
+n.d(t, {
+    u: function () {
+        return e;
+    }
+}), (o = e || (e = {}))[o.DROP = 0] = 'DROP', o[o.INITIALIZE = 1] = 'INITIALIZE', o[o.VISIBILITY_CHANGE = 2] = 'VISIBILITY_CHANGE', o[o.STATE_CHANGE = 3] = 'STATE_CHANGE', o[o.FIRST_DRAW = 4] = 'FIRST_DRAW', o[o.ERROR = 5] = 'ERROR';

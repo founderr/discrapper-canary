@@ -1,3 +1,1 @@
-e.exports = {
-  content: "content_ea12a7"
-}
+e.exports = { content: 'content_ea12a7' };

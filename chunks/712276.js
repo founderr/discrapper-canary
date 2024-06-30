@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  loader: "loader_c363a8"
-}
+e.exports = { loader: 'loader_c363a8' };

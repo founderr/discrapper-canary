@@ -1,25 +1,17 @@
-n.d(e, {
-  F: function() {
-    return l
-  }
+r.d(e, {
+    F: function () {
+        return E;
+    }
 });
-var r = n(358133),
-  i = n(233863),
-  a = n(416097),
-  s = n(544457),
-  o = n(527475);
-let l = t => {
-  let e;
-  let n = (0, i.Y)(),
-    l = (0, a.I)("FID"),
-    u = t => {
-      t.startTime < n.firstHiddenTime && (l.value = t.processingStart - t.startTime, l.entries.push(t), e(!0))
-    },
-    c = t => {
-      t.forEach(u)
-    },
-    d = (0, s.N)("first-input", c);
-  e = (0, r._)(t, l), d && (0, o.u)(() => {
-    c(d.takeRecords()), d.disconnect()
-  }, !0)
-}
+var n = r(358133), _ = r(233863), a = r(416097), i = r(544457), o = r(527475);
+let E = t => {
+    let e;
+    let r = (0, _.Y)(), E = (0, a.I)('FID'), s = t => {
+            t.startTime < r.firstHiddenTime && (E.value = t.processingStart - t.startTime, E.entries.push(t), e(!0));
+        }, c = t => {
+            t.forEach(s);
+        }, I = (0, i.N)('first-input', c);
+    e = (0, n._)(t, E), I && (0, o.u)(() => {
+        c(I.takeRecords()), I.disconnect();
+    }, !0);
+};

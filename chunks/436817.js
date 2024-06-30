@@ -1,6 +1,6 @@
 var _;
 t.d(e, {
-  y: function() {
-    return _
-  }
-}), (_ || (_ = {})).MODAL = "MODAL"
+    y: function () {
+        return _;
+    }
+}), (_ || (_ = {})).MODAL = 'MODAL';

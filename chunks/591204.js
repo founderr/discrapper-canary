@@ -1,33 +1,33 @@
-"use strict";
-n.d(t, {
-  Z: function() {
-    return a
-  }
+t.d(n, {
+    Z: function () {
+        return o;
+    }
 });
-var i = n(735250);
-n(470079);
-var r = n(481060),
-  s = n(895924),
-  o = n(176412);
-
-function a(e) {
-  let {
-    channel: t,
-    application: n,
-    sectionName: a,
-    disabled: l,
-    commandName: u
-  } = e, {
-    onActivityItemSelected: _,
-    buttonColor: c,
-    buttonText: d
-  } = (0, o.P)(t, n, s.Vh.APP_LAUNCHER_APPLICATION_VIEW, a);
-  return (0, i.jsx)(r.Button, {
-    type: "submit",
-    size: r.ButtonSizes.MEDIUM,
-    color: c,
-    disabled: l,
-    onClick: _,
-    children: null != u ? u : d
-  })
+var i = t(735250);
+t(470079);
+var l = t(481060), a = t(895924), r = t(176412), s = t(689938);
+function o(e) {
+    let {
+            channel: n,
+            application: t,
+            sectionName: o,
+            disabled: c,
+            commandName: u
+        } = e, {
+            onActivityItemSelected: d,
+            buttonColor: m,
+            buttonText: p
+        } = (0, r.P)(n, t, a.Vh.APP_LAUNCHER_APPLICATION_VIEW, o);
+    return (0, i.jsx)(l.Button, {
+        type: 'submit',
+        size: l.ButtonSizes.MEDIUM,
+        color: m,
+        disabled: c,
+        onClick: d,
+        'aria-label': s.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+            buttonText: null != u ? u : p,
+            applicationName: t.name
+        }),
+        children: null != u ? u : p
+    });
 }

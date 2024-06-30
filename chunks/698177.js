@@ -1,86 +1,81 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  r = n(120356),
-  a = n.n(r),
-  l = n(442837),
-  o = n(481060),
-  c = n(144114),
-  u = n(742458),
-  d = n(541692),
-  _ = n(952802),
-  E = n(388905),
-  I = n(815660),
-  h = n(689938),
-  p = n(83922),
-  g = n(331651);
+var s = n(735250), r = n(470079), i = n(120356), a = n.n(i), l = n(442837), o = n(481060), c = n(144114), u = n(742458), d = n(541692), h = n(952802), _ = n(388905), E = n(815660), g = n(689938), p = n(83922), f = n(331651);
 t.Z = () => {
-  let [e, t] = i.useState(""), [r, f] = i.useState(""), [N, m] = i.useState(!1), [T, A] = i.useState(!1), [Z, x] = i.useState(null), [S, O] = i.useState(null), v = (0, l.e7)([d.Z], () => d.Z.getCountryCode()), C = v.code.split(" ")[0], D = async () => {
-    try {
-      await c.Z.resendCode(e)
-    } catch (e) {
-      O(e.body.message)
-    }
-  }, P = async () => {
-    m(!0);
-    try {
-      let {
-        token: t
-      } = await c.Z.verifyPhone(C + e, r);
-      x(null), O(null), A(!0), c.Z.validatePhoneForSupport(t)
-    } catch (e) {
-      e.body.message ? (x(null), O(e.body.message)) : (x(e.body.phone), O(e.body.code))
-    } finally {
-      m(!1)
-    }
-  }, R = (0, s.jsxs)(E.ZP, {
-    children: [(0, s.jsx)(E.Ee, {
-      src: n(292824)
-    }), (0, s.jsxs)(E.Dx, {
-      className: a()(g.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
-      children: [h.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED, (0, s.jsx)(o.CircleCheckIcon, {
-        size: "md",
-        color: "currentColor",
-        className: g.marginLeft8
-      })]
-    })]
-  });
-  return T ? R : (0, s.jsxs)(E.ZP, {
-    children: [(0, s.jsx)(E.Dx, {
-      children: h.Z.Messages.ENTER_CODE
-    }), (0, s.jsx)(E.DK, {
-      className: g.marginTop8,
-      children: h.Z.Messages.VERIFY_PHONE_FOR_SUPPORT
-    }), (0, s.jsxs)(E.gO, {
-      className: g.marginTop20,
-      children: [(0, s.jsx)(_.Z, {
-        label: h.Z.Messages.FORM_LABEL_PHONE_NUMBER,
-        alpha2: v.alpha2,
-        countryCode: C,
-        value: e,
-        autoComplete: "off",
-        spellCheck: "false",
-        onChange: t,
-        forceMode: u.Nz.PHONE,
-        error: Z
-      }), (0, s.jsx)(E.II, {
-        className: g.marginTop20,
-        label: h.Z.Messages.CONFIRMATION_CODE,
-        value: r,
-        onChange: f,
-        maxLength: I.z,
-        error: S
-      }), (0, s.jsx)(E.zx, {
-        size: E.zx.Sizes.SMALL,
-        look: E.zx.Looks.LINK,
-        onClick: D,
-        children: h.Z.Messages.RESEND_CODE
-      }), (0, s.jsx)(E.zx, {
-        className: g.marginTop20,
-        onClick: P,
-        submitting: N,
-        children: h.Z.Messages.DONE
-      })]
-    })]
-  })
-}
+    let [e, t] = r.useState(''), [i, I] = r.useState(''), [m, N] = r.useState(!1), [T, x] = r.useState(!1), [A, C] = r.useState(null), [S, v] = r.useState(null), O = (0, l.e7)([d.Z], () => d.Z.getCountryCode()), Z = O.code.split(' ')[0], R = async () => {
+            try {
+                await c.Z.resendCode(e);
+            } catch (e) {
+                v(e.body.message);
+            }
+        }, b = async () => {
+            N(!0);
+            try {
+                let {token: t} = await c.Z.verifyPhone(Z + e, i);
+                C(null), v(null), x(!0), c.Z.validatePhoneForSupport(t);
+            } catch (e) {
+                e.body.message ? (C(null), v(e.body.message)) : (C(e.body.phone), v(e.body.code));
+            } finally {
+                N(!1);
+            }
+        }, D = (0, s.jsxs)(_.ZP, {
+            children: [
+                (0, s.jsx)(_.Ee, { src: n(292824) }),
+                (0, s.jsxs)(_.Dx, {
+                    className: a()(f.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
+                    children: [
+                        g.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED,
+                        (0, s.jsx)(o.CircleCheckIcon, {
+                            size: 'md',
+                            color: 'currentColor',
+                            className: f.marginLeft8
+                        })
+                    ]
+                })
+            ]
+        });
+    return T ? D : (0, s.jsxs)(_.ZP, {
+        children: [
+            (0, s.jsx)(_.Dx, { children: g.Z.Messages.ENTER_CODE }),
+            (0, s.jsx)(_.DK, {
+                className: f.marginTop8,
+                children: g.Z.Messages.VERIFY_PHONE_FOR_SUPPORT
+            }),
+            (0, s.jsxs)(_.gO, {
+                className: f.marginTop20,
+                children: [
+                    (0, s.jsx)(h.Z, {
+                        label: g.Z.Messages.FORM_LABEL_PHONE_NUMBER,
+                        alpha2: O.alpha2,
+                        countryCode: Z,
+                        value: e,
+                        autoComplete: 'off',
+                        spellCheck: 'false',
+                        onChange: t,
+                        forceMode: u.Nz.PHONE,
+                        error: A
+                    }),
+                    (0, s.jsx)(_.II, {
+                        className: f.marginTop20,
+                        label: g.Z.Messages.CONFIRMATION_CODE,
+                        value: i,
+                        onChange: I,
+                        maxLength: E.z,
+                        error: S
+                    }),
+                    (0, s.jsx)(_.zx, {
+                        size: _.zx.Sizes.SMALL,
+                        look: _.zx.Looks.LINK,
+                        onClick: R,
+                        children: g.Z.Messages.RESEND_CODE
+                    }),
+                    (0, s.jsx)(_.zx, {
+                        className: f.marginTop20,
+                        onClick: b,
+                        submitting: m,
+                        children: g.Z.Messages.DONE
+                    })
+                ]
+            })
+        ]
+    });
+};

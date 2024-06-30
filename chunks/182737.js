@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  canvas: "canvas_f193af"
-}
+e.exports = { canvas: 'canvas_f193af' };

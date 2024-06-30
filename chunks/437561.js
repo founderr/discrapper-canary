@@ -1,4 +1,1 @@
-"use strict";
-e.exports = {
-  wrapper: "wrapper_bf1b19"
-}
+e.exports = { wrapper: 'wrapper_bf1b19' };
