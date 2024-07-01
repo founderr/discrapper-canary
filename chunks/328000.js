@@ -10,7 +10,6 @@ e.exports = {
     username: 'username_a31c43',
     activity: 'activity_a31c43',
     activityText: 'activityText_a31c43',
-    subtext: 'subtext_a31c43',
     activityEmoji: 'activityEmoji_a31c43',
     name: 'name_a31c43',
     clanTag: 'clanTag_a31c43'

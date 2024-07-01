@@ -19886,17 +19886,6 @@ div.cardContainer_c22357 {
     overflow: hidden
 }
 
-.subtext_a31c43 {
-    flex: 0 1 auto;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--channels-default);
-    font-weight: 500
-}
-
 .activityEmoji_a31c43 {
     margin-right: 4px;
     width: 14px;

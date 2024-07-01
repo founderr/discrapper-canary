@@ -1,18 +1,17 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return U;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), l = n(873546), s = n(442837), r = n(481060), o = n(239091), c = n(144144), u = n(100527), d = n(906732), h = n(556084), p = n(280234), m = n(484459), _ = n(103575), f = n(158776), E = n(699516), C = n(111583), g = n(594174), I = n(467679), x = n(360048), T = n(151827), N = n(626135), v = n(768581), S = n(585483), Z = n(233870), A = n(51144), M = n(998502), b = n(276264), R = n(981631), j = n(689938), L = n(328000), P = n(279691);
-let O = [], y = M.ZP.getEnableHardwareAcceleration();
-function D(e) {
+var i = n(735250), a = n(470079), l = n(873546), s = n(442837), r = n(481060), o = n(239091), c = n(144144), d = n(100527), u = n(906732), h = n(556084), p = n(484459), m = n(103575), _ = n(158776), f = n(699516), E = n(111583), C = n(594174), g = n(467679), I = n(360048), x = n(151827), T = n(626135), N = n(768581), v = n(585483), S = n(233870), Z = n(51144), A = n(998502), M = n(276264), b = n(981631), R = n(689938), j = n(328000), L = n(279691);
+let P = [], O = A.ZP.getEnableHardwareAcceleration();
+function y(e) {
     let {
             user: t,
             channel: a,
-            status: u,
-            activities: d,
-            lastOnlineTimestamp: h
-        } = e, p = (0, s.e7)([C.Z], () => null != C.Z.getTypingUsers(a.id)[t.id]), I = (0, s.e7)([g.default], () => g.default.getCurrentUser()), x = (0, s.e7)([f.Z], () => f.Z.isMobileOnline(t.id)), T = (0, s.e7)([E.Z], () => E.Z.getNickname(t.id)), N = e => {
+            status: d,
+            activities: u
+        } = e, h = (0, s.e7)([E.Z], () => null != E.Z.getTypingUsers(a.id)[t.id]), g = (0, s.e7)([C.default], () => C.default.getCurrentUser()), I = (0, s.e7)([_.Z], () => _.Z.isMobileOnline(t.id)), x = (0, s.e7)([f.Z], () => f.Z.getNickname(t.id)), T = e => {
             (0, o.jW)(e, async () => {
                 let {default: e} = await Promise.all([
                     n.e('79695'),
@@ -28,8 +27,8 @@ function D(e) {
             });
         };
     return (0, i.jsx)(r.Popout, {
-        preload: () => (0, m.W)(t, { channelId: a.id }),
-        renderPopout: e => (0, i.jsx)(_.Z, {
+        preload: () => (0, p.W)(t, { channelId: a.id }),
+        renderPopout: e => (0, i.jsx)(m.Z, {
             ...e,
             location: 'PrivateChannelRecipients',
             userId: t.id,
@@ -38,36 +37,35 @@ function D(e) {
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(A.ZP.getUserTag(t, { decoration: 'never' })), n = '<@'.concat(t.id, '>');
-            S.S.dispatchToLastSubscribed(R.CkL.INSERT_TEXT, {
+            let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })), n = '<@'.concat(t.id, '>');
+            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }), c.Z.startTyping(a.id);
         },
-        children: e => (0, i.jsx)(b.Z, {
+        children: e => (0, i.jsx)(M.Z, {
             user: t,
-            currentUser: I,
+            currentUser: g,
             isOwner: t.id === a.ownerId,
-            ownerTooltipText: j.Z.Messages.GROUP_OWNER,
-            shouldAnimateStatus: y,
-            isTyping: p,
-            status: u,
-            activities: d,
-            lastOnlineTimestamp: h,
+            ownerTooltipText: R.Z.Messages.GROUP_OWNER,
+            shouldAnimateStatus: O,
+            isTyping: h,
+            status: d,
+            activities: u,
             channel: a,
-            onContextMenu: N,
-            isMobile: x,
-            nick: T,
+            onContextMenu: T,
+            isMobile: I,
+            nick: x,
             ...e
         }, t.id)
     });
 }
-function k(e) {
+function D(e) {
     var t;
     let {
             integration: s,
             channel: c
-        } = e, u = a.useCallback(e => {
+        } = e, d = a.useCallback(e => {
             (0, o.jW)(e, async () => {
                 let {default: e} = await n.e('37969').then(n.bind(n, 496281));
                 return t => (0, i.jsx)(e, {
@@ -79,27 +77,27 @@ function k(e) {
         }, [
             s,
             c
-        ]), d = s.application.bot, h = v.ZP.getApplicationIconURL({
+        ]), u = s.application.bot, h = N.ZP.getApplicationIconURL({
             id: s.application.id,
             icon: s.application.icon,
             bot: null === (t = s.application) || void 0 === t ? void 0 : t.bot,
             botIconFirst: !0
         });
-    return null != d ? (0, i.jsx)(r.Popout, {
-        preload: () => (0, m.W)(d.id, h, { channelId: c.id }),
-        renderPopout: e => (0, i.jsx)(_.Z, {
+    return null != u ? (0, i.jsx)(r.Popout, {
+        preload: () => (0, p.W)(u.id, h, { channelId: c.id }),
+        renderPopout: e => (0, i.jsx)(m.Z, {
             ...e,
             location: 'PrivateChannelRecipients',
-            userId: d.id,
+            userId: u.id,
             channelId: c.id
         }),
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
-        children: e => (0, i.jsx)(x.Z, {
-            onContextMenu: u,
-            className: L.member,
+        children: e => (0, i.jsx)(I.Z, {
+            onContextMenu: d,
+            className: j.member,
             name: (0, i.jsx)('span', {
-                className: L.username,
+                className: j.username,
                 children: s.application.name
             }),
             avatar: (0, i.jsx)(r.Avatar, {
@@ -108,9 +106,9 @@ function k(e) {
                 'aria-label': s.application.name,
                 statusTooltip: !0
             }),
-            decorators: (0, i.jsx)(I.Z, {
-                className: L.botTag,
-                verified: null == d ? void 0 : d.isVerifiedBot()
+            decorators: (0, i.jsx)(g.Z, {
+                className: j.botTag,
+                verified: null == u ? void 0 : u.isVerifiedBot()
             }),
             id: s.application.id,
             focusProps: {
@@ -125,167 +123,128 @@ function k(e) {
         })
     }) : null;
 }
-function U(e, t) {
-    if (e.shouldTrackRecentlyOnlineExposure !== t.shouldTrackRecentlyOnlineExposure || e.listItems.length !== t.listItems.length)
+function k(e, t) {
+    if (e.listItems.length !== t.listItems.length)
         return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let i = e.listItems[n], a = t.listItems[n];
-        if (i.user !== a.user || i.status !== a.status || i.activities !== a.activities || i.lastOnlineTimestamp !== a.lastOnlineTimestamp)
+        if (i.user !== a.user || i.status !== a.status || i.activities !== a.activities)
             return !1;
     }
     return !0;
 }
-function w(e) {
-    let {channel: t} = e, l = g.default.getCurrentUser(), o = null == l ? void 0 : l.isStaff(), {analyticsLocations: c} = (0, d.ZP)(u.Z.MEMBER_LIST), {
-            shouldTrackRecentlyOnlineExposure: _,
-            listItems: C
-        } = function (e) {
-            let {isRecentlyOnlineEnabled: t} = p.Z.useExperiment({ location: 'n/a' }, { autoTrackExposure: !1 });
-            return (0, s.e7)([
-                E.Z,
-                g.default,
-                f.Z
-            ], () => {
-                let n = !1, i = (0, Z.T)(e.recipients, g.default), a = {};
-                for (let e of i) {
-                    var l, s, r;
-                    if (E.Z.isFriend(e.id) || e.id === (null === (l = g.default.getCurrentUser()) || void 0 === l ? void 0 : l.id)) {
-                        let t = f.Z.getLastOnlineTimestamp(e.id), {
-                                isRecentlyOnlineShowable: i,
-                                isRecentlyOnlineTrackable: l
-                            } = (0, p.$)(t);
-                        a[e.id] = {
-                            status: null !== (s = f.Z.getStatus(e.id)) && void 0 !== s ? s : R.Skl.OFFLINE,
-                            activities: null !== (r = f.Z.getActivities(e.id)) && void 0 !== r ? r : O,
-                            lastOnlineTimestamp: i ? t : void 0
-                        }, l && (n = !0);
-                    } else
-                        a[e.id] = {
-                            status: R.Skl.OFFLINE,
-                            activities: O
-                        };
-                }
-                let o = [];
-                for (let e of i) {
-                    let t = {
-                        user: e,
-                        status: a[e.id].status,
-                        activities: a[e.id].activities,
-                        lastOnlineTimestamp: a[e.id].lastOnlineTimestamp
-                    };
-                    o.push(t);
-                }
-                if (!t)
-                    return {
-                        shouldTrackRecentlyOnlineExposure: n,
-                        listItems: o
-                    };
-                let c = [
-                        R.Skl.OFFLINE,
-                        R.Skl.INVISIBLE,
-                        null,
-                        void 0
-                    ], u = [], d = [], h = [];
-                return o.forEach(e => {
-                    c.includes(e.status) ? null != e.lastOnlineTimestamp ? d.push(e) : h.push(e) : u.push(e);
-                }), {
-                    shouldTrackRecentlyOnlineExposure: n,
-                    listItems: [
-                        ...u,
-                        ...d,
-                        ...h
-                    ]
+function U(e) {
+    var t;
+    let {channel: l} = e, o = C.default.getCurrentUser(), c = null == o ? void 0 : o.isStaff(), {analyticsLocations: m} = (0, u.ZP)(d.Z.MEMBER_LIST);
+    let {listItems: E} = (t = l, (0, s.e7)([
+            f.Z,
+            C.default,
+            _.Z
+        ], () => {
+            let e = (0, S.T)(t.recipients, C.default), n = {};
+            for (let t of e) {
+                var i, a, l;
+                f.Z.isFriend(t.id) || t.id === (null === (i = C.default.getCurrentUser()) || void 0 === i ? void 0 : i.id) ? n[t.id] = {
+                    status: null !== (a = _.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
+                    activities: null !== (l = _.Z.getActivities(t.id)) && void 0 !== l ? l : P
+                } : n[t.id] = {
+                    status: b.Skl.OFFLINE,
+                    activities: P
                 };
-            }, [
-                e,
-                t
-            ], U);
-        }(t);
-    _ && p.Z.trackExposure({ location: 'private_channel_recipients' });
-    let {
-        installedIntegrations: v,
-        applicationsShelf: S,
-        fetched: A,
-        appsInGDMEnabled: M,
-        availableApplications: b
-    } = (0, h.j)({ channelId: t.id });
+            }
+            let s = [];
+            for (let t of e) {
+                let e = {
+                    user: t,
+                    status: n[t.id].status,
+                    activities: n[t.id].activities
+                };
+                s.push(e);
+            }
+            return { listItems: s };
+        }, [t], k)), {
+            installedIntegrations: N,
+            applicationsShelf: v,
+            fetched: Z,
+            appsInGDMEnabled: A,
+            availableApplications: M
+        } = (0, h.j)({ channelId: l.id });
     a.useEffect(() => {
-        if (o)
-            for (let e of C)
-                (0, m.W)(e.user, {
+        if (c)
+            for (let e of E)
+                (0, p.W)(e.user, {
                     dispatchWait: !0,
-                    channelId: t.id
+                    channelId: l.id
                 });
     }, [
-        o,
-        C,
-        t.id
+        c,
+        E,
+        l.id
     ]), a.useEffect(() => {
-        N.default.track(R.rMx.MEMBER_LIST_VIEWED, {
-            channel_id: t.id,
-            channel_type: t.type,
-            guild_id: t.guild_id
+        T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
+            channel_id: l.id,
+            channel_type: l.type,
+            guild_id: l.guild_id
         });
     }, [
-        t.guild_id,
-        t.id,
-        t.type
+        l.guild_id,
+        l.id,
+        l.type
     ]);
-    let y = o && C.every(e => e.user.isStaff());
-    return (0, i.jsx)(d.Gt, {
-        value: c,
+    let O = c && E.every(e => e.user.isStaff());
+    return (0, i.jsx)(u.Gt, {
+        value: m,
         children: (0, i.jsx)('div', {
-            className: P.membersWrap,
+            className: L.membersWrap,
             children: (0, i.jsxs)(r.Scroller, {
-                className: P.members,
+                className: L.members,
                 fade: !0,
                 children: [
-                    (0, i.jsxs)(T.Z, {
-                        className: P.membersGroup,
+                    (0, i.jsxs)(x.Z, {
+                        className: L.membersGroup,
                         children: [
-                            ''.concat(j.Z.Messages.MEMBERS, '\u2014').concat(C.length, ' '),
-                            y ? (0, i.jsx)(I.Z, {
-                                className: P.__invalid_decorator,
-                                type: I.Z.Types.STAFF_ONLY_DM
+                            ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(E.length, ' '),
+                            O ? (0, i.jsx)(g.Z, {
+                                className: L.__invalid_decorator,
+                                type: g.Z.Types.STAFF_ONLY_DM
                             }) : null
                         ]
                     }),
-                    C.map(e => (0, i.jsx)(D, {
+                    E.map(e => (0, i.jsx)(y, {
                         user: e.user,
                         status: e.status,
                         activities: e.activities,
-                        lastOnlineTimestamp: e.lastOnlineTimestamp,
-                        channel: t
+                        channel: l
                     }, e.user.id)),
-                    M && (v.length > 0 || A && S.length > 0) && (0, i.jsxs)(i.Fragment, {
+                    A && (N.length > 0 || Z && v.length > 0) && (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(T.Z, {
-                                className: P.membersGroup,
-                                children: ''.concat(j.Z.Messages.APPS, '\u2014').concat(v.length)
+                            (0, i.jsx)(x.Z, {
+                                className: L.membersGroup,
+                                children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
                             }),
-                            v.map(e => (0, i.jsx)(k, {
+                            N.map(e => (0, i.jsx)(D, {
                                 integration: e,
-                                channel: t
+                                channel: l
                             }, e.application.id)),
-                            b.length > 0 && (0, i.jsx)(x.Z, {
-                                className: L.member,
+                            M.length > 0 && (0, i.jsx)(I.Z, {
+                                className: j.member,
                                 onClick: () => {
                                     (0, r.openModalLazy)(async () => {
                                         let {default: e} = await n.e('4536').then(n.bind(n, 422677));
-                                        return n => (0, i.jsx)(e, {
-                                            ...n,
-                                            channelId: t.id
+                                        return t => (0, i.jsx)(e, {
+                                            ...t,
+                                            channelId: l.id
                                         });
                                     });
                                 },
                                 avatar: (0, i.jsx)('div', {
-                                    className: P.appIconWrapper,
+                                    className: L.appIconWrapper,
                                     children: (0, i.jsx)(r.PlusSmallIcon, {
                                         size: 'sm',
                                         color: 'currentColor'
                                     })
                                 }),
-                                name: j.Z.Messages.PRIVATE_CHANNEL_ADD_APPS
+                                name: R.Z.Messages.PRIVATE_CHANNEL_ADD_APPS
                             })
                         ]
                     })

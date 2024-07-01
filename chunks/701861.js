@@ -70,15 +70,14 @@ class L extends s.PureComponent {
                 activities: n,
                 applicationStream: s,
                 status: a,
-                lastOnlineTimestamp: r,
-                isMobile: l
-            } = this.props, {isActiveRow: c} = this.state;
+                isMobile: r
+            } = this.props, {isActiveRow: l} = this.state;
         return (0, i.jsx)(p.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
-            isActive: c,
+            isActive: l,
             user: e,
-            onOtherHover: () => c ? null : (0, d.Zy)(),
+            onOtherHover: () => l ? null : (0, d.Zy)(),
             onClick: this.handleOpenPrivateChannel,
             children: t => (0, i.jsxs)('div', {
                 className: f.listItemContents,
@@ -86,15 +85,13 @@ class L extends s.PureComponent {
                     (0, i.jsx)(T.Z, {
                         user: e,
                         status: a,
-                        isMobile: l,
+                        isMobile: r,
                         subText: (0, i.jsx)(g.Z, {
                             hovered: t,
                             activities: n,
                             applicationStream: s,
                             status: a,
-                            user: e,
-                            lastOnlineTimestamp: r,
-                            experimentLocation: 'friend_row'
+                            user: e
                         }),
                         hovered: t,
                         showAccountIdentifier: !0

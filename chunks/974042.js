@@ -18,7 +18,6 @@ function T(e) {
 function S(e) {
     return {
         status: h.Z.getStatus(e),
-        lastOnlineTimestamp: h.Z.getLastOnlineTimestamp(e),
         isMobile: h.Z.isMobileOnline(e),
         activities: h.Z.getActivities(e),
         applicationStream: u.Z.getAnyStreamForUser(e)
@@ -42,7 +41,7 @@ class N extends c.Z {
         ];
     }
     constructor(e) {
-        super(), g(this, 'key', void 0), g(this, 'type', void 0), g(this, 'status', void 0), g(this, 'isMobile', void 0), g(this, 'activities', void 0), g(this, 'applicationStream', void 0), g(this, 'user', void 0), g(this, 'usernameLower', void 0), g(this, 'mutualGuildsLength', void 0), g(this, 'mutualGuilds', void 0), g(this, 'nickname', void 0), g(this, 'lastOnlineTimestamp', void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname, this.lastOnlineTimestamp = e.lastOnlineTimestamp;
+        super(), g(this, 'key', void 0), g(this, 'type', void 0), g(this, 'status', void 0), g(this, 'isMobile', void 0), g(this, 'activities', void 0), g(this, 'applicationStream', void 0), g(this, 'user', void 0), g(this, 'usernameLower', void 0), g(this, 'mutualGuildsLength', void 0), g(this, 'mutualGuilds', void 0), g(this, 'nickname', void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname;
     }
 }
 class f {
