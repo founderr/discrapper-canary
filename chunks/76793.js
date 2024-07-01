@@ -90,37 +90,53 @@ function g(e) {
     });
 }
 function O(e) {
-    let {data: t} = e, s = a.useMemo(() => I.default.keys(t), [t]);
-    return (0, n.jsx)(n.Fragment, {
-        children: s.map(e => {
-            let s = t[e];
-            return (0, n.jsxs)('div', {
-                className: m.item,
+    let {entries: t} = e;
+    return 0 === t.length ? null : (0, n.jsxs)(n.Fragment, {
+        children: [
+            (0, n.jsxs)(r.FormItem, {
+                className: A.marginBottom20,
                 children: [
-                    (0, n.jsx)(h, {
-                        userId: e,
-                        count: s.length
+                    (0, n.jsx)(r.FormTitle, {
+                        tag: r.FormTitleTags.H5,
+                        className: A.marginBottom8,
+                        children: C.Z.Messages.E2EE_VERIFIED_DEVICES
                     }),
-                    s.map((t, i) => (0, n.jsxs)(a.Fragment, {
-                        children: [
-                            (0, n.jsx)(g, {
-                                className: m.row,
-                                userId: e,
-                                index: i,
-                                verification: t
-                            }),
-                            i !== s.length - 1 && (0, n.jsx)('div', { className: m.divider })
-                        ]
-                    }, ''.concat(i, '-').concat(t.timestamp)))
+                    (0, n.jsx)(r.FormText, {
+                        type: r.FormTextTypes.DESCRIPTION,
+                        children: C.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: N.s9 })
+                    })
                 ]
-            }, e);
-        })
+            }),
+            t.map(e => {
+                let [t, s] = e;
+                return (0, n.jsxs)('div', {
+                    className: m.item,
+                    children: [
+                        (0, n.jsx)(h, {
+                            userId: t,
+                            count: s.length
+                        }),
+                        s.map((e, i) => (0, n.jsxs)(a.Fragment, {
+                            children: [
+                                (0, n.jsx)(g, {
+                                    className: m.row,
+                                    userId: t,
+                                    index: i,
+                                    verification: e
+                                }),
+                                i !== s.length - 1 && (0, n.jsx)('div', { className: m.divider })
+                            ]
+                        }, ''.concat(i, '-').concat(e.timestamp)))
+                    ]
+                }, t);
+            })
+        ]
     });
 }
 function p() {
     let e = (0, i.e7)([d.Z], () => d.Z.getPersistentCodesEnabled()), t = a.useCallback(e => {
             c.Z.updateSettings({ persistentCodesEnabled: e });
-        }, []), s = (0, E.W)();
+        }, []), s = (0, E.W)(), o = a.useMemo(() => I.default.entries(s), [s]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(r.FormSection, {
@@ -140,6 +156,7 @@ function p() {
                                 children: C.Z.Messages.E2EE_VERIFICATION_CODES
                             }),
                             (0, n.jsx)(r.FormSwitch, {
+                                hideBorder: 0 === o.length,
                                 value: e,
                                 note: C.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: N.$J }),
                                 onChange: t,
@@ -149,21 +166,7 @@ function p() {
                     })
                 ]
             }),
-            (0, n.jsxs)(r.FormItem, {
-                className: A.marginBottom20,
-                children: [
-                    (0, n.jsx)(r.FormTitle, {
-                        tag: r.FormTitleTags.H5,
-                        className: A.marginBottom8,
-                        children: C.Z.Messages.E2EE_VERIFIED_DEVICES
-                    }),
-                    (0, n.jsx)(r.FormText, {
-                        type: r.FormTextTypes.DESCRIPTION,
-                        children: C.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: N.s9 })
-                    })
-                ]
-            }),
-            (0, n.jsx)(O, { data: s })
+            (0, n.jsx)(O, { entries: o })
         ]
     });
 }
