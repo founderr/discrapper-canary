@@ -1,36 +1,40 @@
 n.d(t, {
     o: function () {
-        return g;
+        return C;
     }
 });
-var i = n(735250), l = n(470079), r = n(704215), a = n(481060), s = n(212093), o = n(963202), c = n(605236), u = n(703656), d = n(683301), h = n(603592), p = n(981631), _ = n(731455), f = n(689938), m = n(356131);
-function g() {
-    let e = window.location.pathname.startsWith(p.Z5c.GUILD_DISCOVERY), t = d.ZP.getCurrentCategoryId() === _.Gj.Clans;
-    e && !t && ((0, s.AQ)(), (0, s.uY)(_.Hk, !0));
-    let n = (0, u.s1)().location.search;
-    (0, u.uL)(p.Z5c.GUILD_DISCOVERY, { search: n });
+var i = n(735250), l = n(470079), r = n(704215), a = n(481060), s = n(212093), o = n(963202), c = n(605236), u = n(831565), d = n(703656), h = n(683301), p = n(603592), _ = n(981631), f = n(731455), g = n(689938), m = n(356131);
+function C() {
+    let e = (0, u.S)('discovery_button'), t = window.location.pathname.startsWith(_.Z5c.GUILD_DISCOVERY), n = h.ZP.getCurrentCategoryId() === f.Gj.Clans;
+    if (e) {
+        (0, d.uL)(_.Z5c.GLOBAL_DISCOVERY);
+        return;
+    }
+    t && !n && ((0, s.AQ)(), (0, s.uY)(f.Hk, !0));
+    let i = (0, d.s1)().location.search;
+    (0, d.uL)(_.Z5c.GUILD_DISCOVERY, { search: i });
 }
-let C = l.forwardRef(function (e, t) {
+let I = l.forwardRef(function (e, t) {
     let {
             selected: n,
             tooltip: l,
             className: s,
             onClick: u
-        } = e, {clanDiscoveryEnabled: d} = (0, o.nk)('guild_discovery'), p = (0, c.wE)(r.z.NEW_GAMING_DISCOVERY_NOTIF), _ = {
+        } = e, {clanDiscoveryEnabled: d} = (0, o.nk)('guild_discovery'), h = (0, c.wE)(r.z.NEW_GAMING_DISCOVERY_NOTIF), _ = {
             lowerBadgeSize: {
                 width: 12,
                 height: 12
             }
         };
-    return d && !p && (_.lowerBadge = (0, i.jsx)('div', { className: m.guildNotif })), (0, i.jsx)(h.Z, {
+    return d && !h && (_.lowerBadge = (0, i.jsx)('div', { className: m.guildNotif })), (0, i.jsx)(p.Z, {
         id: 'guild-discover-button',
         ref: t,
         className: s,
-        onClick: null != u ? u : g,
+        onClick: null != u ? u : C,
         selected: n,
-        tooltip: null != l ? l : f.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+        tooltip: null != l ? l : g.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
         icon: a.CompassIcon,
         ..._
     });
 });
-t.Z = C;
+t.Z = I;
