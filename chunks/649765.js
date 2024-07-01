@@ -1,47 +1,47 @@
 n.d(t, {
     E: function () {
-        return _;
+        return d;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(206180), c = n(119269), d = n(689938), u = n(616614);
-let _ = e => {
+var i = n(735250), s = n(470079), a = n(481060), r = n(119269), l = n(227140), o = n(689938), c = n(616614);
+let d = e => {
     let {children: t} = e, n = (0, i.jsxs)('div', {
-            className: u.coachTipContainer,
+            className: c.coachTipContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: u.iconContainer,
-                    children: (0, i.jsx)(c.Z, {
+                    className: c.iconContainer,
+                    children: (0, i.jsx)(r.Z, {
                         staticPercentage: 100,
-                        iconClassName: u.icon,
+                        iconClassName: c.icon,
                         showAnimations: !0,
-                        progressCircleVariation: c.Q.NITRO_LOGO,
+                        progressCircleVariation: r.Q.NITRO_LOGO,
                         ellipseOpacity: 1,
-                        customAnimationClassName: u.customCircleAnimation,
+                        customAnimationClassName: c.customCircleAnimation,
                         circleColor: 'url(#purple-gradient)'
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: u.coachtipContent,
+                    className: c.coachtipContent,
                     children: [
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-sm/bold',
-                            children: d.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
+                            children: o.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-xs/normal',
-                            children: d.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
+                            children: o.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
                         })
                     ]
                 })
             ]
         });
-    return (0, i.jsx)(l.Tooltip, {
+    return (0, i.jsx)(a.Tooltip, {
         text: n,
         position: 'right',
-        'aria-label': d.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
-        tooltipClassName: u.marketingBadgeTooltip,
+        'aria-label': o.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+        tooltipClassName: c.marketingBadgeTooltip,
         allowOverflow: !0,
-        tooltipContentClassName: u.tooltipContent,
+        tooltipContentClassName: c.tooltipContent,
         children: e => (0, i.jsx)('div', {
             ...e,
             children: t
@@ -58,27 +58,5 @@ t.Z = e => {
     }, [
         t,
         n
-    ]), (0, i.jsxs)('div', {
-        className: u.badgeContainer,
-        children: [
-            (0, i.jsx)('div', {
-                className: u.newBadge,
-                children: d.Z.Messages.NEW
-            }),
-            (0, i.jsx)('span', {
-                className: r()(u.star, u.starLeft),
-                children: (0, i.jsx)(o.Z, {
-                    width: 8,
-                    height: 8
-                })
-            }),
-            (0, i.jsx)('span', {
-                className: r()(u.star, u.starRight),
-                children: (0, i.jsx)(o.Z, {
-                    width: 13,
-                    height: 13
-                })
-            })
-        ]
-    });
+    ]), (0, i.jsx)(l.Z, { copy: o.Z.Messages.NEW });
 };

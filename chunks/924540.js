@@ -1,13 +1,13 @@
 n.d(t, {
     $H: function () {
-        return v;
+        return b;
     },
     GN: function () {
-        return x;
+        return v;
     }
 });
 var s = n(735250), r = n(470079), o = n(120356), i = n.n(o), c = n(481060), a = n(774078), l = n(55935), u = n(74538), d = n(639119), p = n(474936), f = n(689938), g = n(716496);
-function b(e) {
+function x(e) {
     let {
             isTabSelected: t,
             expiresAt: n,
@@ -30,12 +30,19 @@ function b(e) {
                     color: 'currentColor',
                     className: g.premiumTrialBadgeIcon
                 }),
-                o
+                (0, s.jsxs)(c.Text, {
+                    variant: 'eyebrow',
+                    children: [
+                        ' ',
+                        o,
+                        ' '
+                    ]
+                })
             ]
         })
     });
 }
-function v(e) {
+function b(e) {
     var t;
     let {
             isTabSelected: n,
@@ -51,7 +58,7 @@ function v(e) {
         className: (null == o ? void 0 : o.sku_id) === p.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
     });
 }
-function x(e) {
+function v(e) {
     let {
             isTabSelected: t,
             userDiscount: n,
@@ -71,12 +78,19 @@ function _(e) {
         offerExpiresAt: r,
         className: o
     } = e;
-    return null != r ? (0, s.jsx)(b, {
+    return null != r ? (0, s.jsx)(x, {
         expiresAt: r,
         isTabSelected: t,
         trialDuration: n
     }) : (0, s.jsx)('div', {
         className: i()(g.premiumTrialBadge, o),
-        children: n
+        children: (0, s.jsxs)(c.Text, {
+            variant: 'eyebrow',
+            children: [
+                ' ',
+                n,
+                ' '
+            ]
+        })
     });
 }
