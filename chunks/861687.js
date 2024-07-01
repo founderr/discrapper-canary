@@ -917,7 +917,7 @@ class es extends d.Z {
                 null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
             });
         } else
-            i === er.Yn.STREAM && (this._goLiveQualityManager = new S.Z(d), this._goLiveQualityManager.on(S.y.RequestedSSRCsUpdate, (e, t, n) => {
+            i === er.Yn.STREAM && (this._goLiveQualityManager = new S.Z(!1), this._goLiveQualityManager.on(S.y.RequestedSSRCsUpdate, (e, t, n) => {
                 var r;
                 null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
             }), this._goLiveQualityManager.on(S.y.RequestedStreamsUpdate, e => {
