@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(230711), _ = n(568836), E = n(730749), m = n(112724), I = n(607070), T = n(884697), h = n(479446), N = n(930114), p = n(981632), f = n(703656), C = n(314897), g = n(82142), S = n(283595), A = n(594174), x = n(509545), O = n(55563), R = n(285952), M = n(199480), v = n(70613), L = n(626135), Z = n(669079), P = n(74538), b = n(296848), D = n(51144), j = n(626799), U = n(981631), y = n(474936), B = n(689938), k = n(366838);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(230711), _ = n(568836), E = n(730749), m = n(112724), I = n(607070), T = n(884697), h = n(479446), N = n(930114), f = n(981632), p = n(703656), C = n(314897), g = n(82142), S = n(283595), A = n(594174), x = n(509545), O = n(55563), R = n(285952), M = n(199480), v = n(70613), L = n(626135), Z = n(669079), P = n(74538), b = n(296848), D = n(51144), j = n(626799), U = n(981631), y = n(474936), B = n(689938), k = n(366838);
 function G(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -238,7 +238,7 @@ class V extends a.Component {
     constructor(...e) {
         super(...e), G(this, 'handleViewLibrary', e => {
             let {libraryApplication: t} = this.props;
-            e.preventDefault(), null != t && t.isHidden() ? (0, f.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, f.uL)(U.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : null } });
+            e.preventDefault(), null != t && t.isHidden() ? (0, p.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, p.uL)(U.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
         }), G(this, 'handleVerificationClick', e => {
             e.stopPropagation(), e.preventDefault(), u.Z.open(U.oAB.ACCOUNT);
         }), G(this, 'handleAccept', e => {
@@ -296,7 +296,7 @@ class V extends a.Component {
                         wind: 5
                     }),
                     a && (0, i.jsx)(M.Z, { className: k.headerIcon }),
-                    null != e.giftStyle && (0, i.jsx)(p.Z, {
+                    null != e.giftStyle && (0, i.jsx)(f.Z, {
                         defaultAnimationState: e.redeemed ? h.S.LOOP : h.S.IDLE,
                         giftStyle: e.giftStyle,
                         className: r
