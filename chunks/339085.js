@@ -452,6 +452,9 @@ class ed extends (r = u.ZP.PersistedStore) {
     }
 }
 V(ed, 'displayName', 'EmojiStore'), V(ed, 'persistKey', 'EmojiStoreV2'), t.Z = new ed(c.Z, {
+    LOGOUT: function () {
+        Z.pendingUsages = [];
+    },
     BACKGROUND_SYNC: function () {
         ei();
     },
