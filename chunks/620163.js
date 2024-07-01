@@ -31,7 +31,8 @@ let ej = () => {
             isStricterMessageRequestsEnabled: ez,
             hasLibraryApplication: eQ,
             hasTOTPEnabled: eX,
-            canBroadcastActivity: eq
+            canBroadcastActivity: eq,
+            developerMode: eJ
         } = e;
         return Object.freeze({
             [ef.s6.SEARCH_NO_RESULTS]: {
@@ -1129,7 +1130,7 @@ let ej = () => {
                 section: eP.oAB.ADVANCED,
                 searchableTitles: [eb.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE],
                 parent: ef.s6.SETTINGS_ADVANCED,
-                predicate: () => v.Z.isDeveloper
+                predicate: () => eJ
             },
             [ef.s6.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME]: {
                 section: eP.oAB.ADVANCED,
