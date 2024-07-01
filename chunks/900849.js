@@ -40,7 +40,7 @@ n.d(t, {
     }
 }), n(47120);
 var r, i, a = n(664751), o = n(544891), s = n(749210), l = n(41776), u = n(703656), c = n(769654), d = n(650774), _ = n(430824), E = n(626135), f = n(981631);
-(i = r || (r = {})).SEARCH = 'Search', i.RECOMMENDED = 'Recommended', i.POPULAR = 'Popular', i.RECOMMENDED_E3 = 'Recommended - E3', i.HEADER = 'Header';
+(i = r || (r = {})).SEARCH = 'Search', i.RECOMMENDED = 'Recommended', i.POPULAR = 'Popular', i.RECOMMENDED_E3 = 'Recommended - E3', i.HEADER = 'Header', i.GLOBAL_DISCOVERY = 'Global Discovery';
 let h = '>200';
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
