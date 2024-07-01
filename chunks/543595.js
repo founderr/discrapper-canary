@@ -569,7 +569,9 @@ let X = e => {
     var t;
     let n = (0, v.ZP)({
         location: 'UserActivity',
-        applicationId: null === (t = e.application) || void 0 === t ? void 0 : t.id
+        applicationId: null === (t = e.application) || void 0 === t ? void 0 : t.id,
+        source: N.m1.UserProfile,
+        trackEntryPointImpression: !0
     });
     return (0, o.jsx)(Q, {
         ...e,

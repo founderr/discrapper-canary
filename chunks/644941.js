@@ -173,7 +173,8 @@ let Z = 'GameProfileModal', C = e => {
                 });
             }, ed = (0, L.ZP)({
                 location: 'GameProfileModal',
-                applicationId: c
+                applicationId: c,
+                trackEntryPointImpression: !1
             });
         if (o()(ed, 'Game Profile was opened when it thinks it shouldn\'t have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openModalLazy`'), null == es)
             return null;
