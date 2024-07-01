@@ -15,8 +15,8 @@ function h(e) {
             renderIcon: p,
             text: _,
             selected: f,
-            trailing: m,
-            showUnread: g = !1,
+            trailing: g,
+            showUnread: m = !1,
             ...C
         } = e, I = (0, a.JA)(n), E = null !== (t = (0, s.q)(_)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
@@ -41,7 +41,7 @@ function h(e) {
             },
             className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: f }, l),
             children: [
-                g ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
+                m ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
                 (0, i.jsx)('div', {
                     className: r()([
                         d.link,
@@ -60,7 +60,7 @@ function h(e) {
                                 'aria-hidden': !0,
                                 children: _
                             }),
-                            m
+                            g
                         ]
                     })
                 })

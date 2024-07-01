@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }), n(653041), n(47120);
 var i = n(275726), a = n(135938), l = n(55935), s = n(709054), r = n(554838), o = n(493892), c = n(981631);
-function u(e) {
-    let t, n, u, {
-            channel: d,
+function d(e) {
+    let t, n, d, {
+            channel: u,
             messages: h,
             oldestUnreadMessageId: p,
             treatSpam: m,
@@ -49,7 +49,7 @@ function u(e) {
             else if ((0, o.P1)(e) && n)
                 return c.ys_.MESSAGE_GROUP_SPAMMER;
             return null;
-        }(d, e, j && m);
+        }(u, e, j && m);
         if (null !== L) {
             ;
             let t, n;
@@ -67,28 +67,28 @@ function u(e) {
                 b.unreadId = e.id, g = null;
             else if (null !== R) {
                 ;
-                S = R, Z = d, (A = e).isFirstMessageInForumPost(Z) || S.content.push({
+                S = R, Z = u, (A = e).isFirstMessageInForumPost(Z) || S.content.push({
                     type: c.ys_.DIVIDER,
                     unreadId: A.id
                 }), S.hasUnread = !0, g = null;
             } else
-                !e.isFirstMessageInForumPost(d) && E.push({
+                !e.isFirstMessageInForumPost(u) && E.push({
                     type: c.ys_.DIVIDER,
                     unreadId: e.id
                 }), g = null;
         } else
-            null != g && s.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(d) && E.push({
+            null != g && s.default.extractTimestamp(e.id) > g && (!e.isFirstMessageInForumPost(u) && E.push({
                 type: c.ys_.DIVIDER,
                 unreadId: e.id
             }), g = null);
-        let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
-        (0, r.J)(d, P, e) && (n = e.id);
+        let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? d : b;
+        (0, r.J)(u, P, e) && (n = e.id);
         let O = {
             type: e.type === c.uaV.THREAD_STARTER_MESSAGE ? c.ys_.THREAD_STARTER_MESSAGE : c.ys_.MESSAGE,
             content: e,
             groupId: n
         };
-        n === e.id && (u = O);
+        n === e.id && (d = O);
         let {
             jumpSequenceId: y,
             jumpFlash: D,
@@ -99,10 +99,10 @@ function u(e) {
             content: f.topic,
             contentKey: f.startId,
             isSummaryDivider: !0
-        }), null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O), e.isFirstMessageInForumPost(d) && E.push({ type: c.ys_.FORUM_POST_ACTION_BAR }), null != f && e.id === f.endId && f.count > 1 && E.push({
+        }), null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O), e.isFirstMessageInForumPost(u) && E.push({ type: c.ys_.FORUM_POST_ACTION_BAR }), null != f && e.id === f.endId && f.count > 1 && E.push({
             type: c.ys_.DIVIDER,
             contentKey: f.endId,
             isSummaryDivider: !0
         });
-    }), C && (0, o.P1)(d) && a.Z.trackExposure({ location: '416cc9_1' }), E;
+    }), C && (0, o.P1)(u) && a.Z.trackExposure({ location: '416cc9_1' }), E;
 }

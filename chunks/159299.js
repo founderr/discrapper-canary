@@ -1,5 +1,5 @@
 n(47120), n(653041), n(724458);
-var i, a = n(392711), l = n.n(a), s = n(442837), r = n(570140), o = n(592125), c = n(271383), u = n(797316), d = n(158776), h = n(885110), p = n(594174), m = n(823379), _ = n(700785), f = n(709054), E = n(51144), C = n(981631);
+var i, a = n(392711), l = n.n(a), s = n(442837), r = n(570140), o = n(592125), c = n(271383), d = n(797316), u = n(158776), h = n(885110), p = n(594174), m = n(823379), _ = n(700785), f = n(709054), E = n(51144), C = n(981631);
 function g(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -111,13 +111,13 @@ class x {
     }
     calculateNewState(e, t) {
         var n, i;
-        let a = c.ZP.getMember(this.guildId, e), l = p.default.getUser(e), s = p.default.getCurrentUser(), r = (null == l ? void 0 : l.id) === (null == s ? void 0 : s.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId), o = null != l && null != t && _.BT({
+        let a = c.ZP.getMember(this.guildId, e), l = p.default.getUser(e), s = p.default.getCurrentUser(), r = (null == l ? void 0 : l.id) === (null == s ? void 0 : s.id) ? h.Z.getStatus() : u.Z.getStatus(e, this.guildId), o = null != l && null != t && _.BT({
                 permission: C.Plq.VIEW_CHANNEL,
                 user: l,
                 context: t
-            }), u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online' : 'offline', m = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(l);
+            }), d = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online' : 'offline', m = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(l);
         return [
-            u,
+            d,
             null == m ? void 0 : m.toLowerCase(),
             o
         ];
@@ -145,8 +145,8 @@ function v(e) {
 }
 class S extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, p.default), this.syncWith([u.Z], () => {
-            let e = u.Z.getSubscribedThreadIds(), t = !1;
+        this.waitFor(o.Z, c.ZP, d.Z, u.Z, h.Z, p.default), this.syncWith([d.Z], () => {
+            let e = d.Z.getSubscribedThreadIds(), t = !1;
             for (let n in I)
                 !e.has(n) && (delete I[n], t = !0);
             return t;

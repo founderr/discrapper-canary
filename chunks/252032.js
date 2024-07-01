@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 }), n(789020), n(47120);
-var i = n(735250), a = n(470079), l = n(442837), s = n(904245), r = n(257559), o = n(541716), c = n(893718), u = n(314897), d = n(323873), h = n(430824), p = n(496675), m = n(113039), _ = n(703316), f = n(585483), E = n(630388), C = n(838440), g = n(981631), I = n(105461);
+var i = n(735250), a = n(470079), l = n(442837), s = n(904245), r = n(257559), o = n(541716), c = n(893718), d = n(314897), u = n(323873), h = n(430824), p = n(496675), m = n(113039), _ = n(703316), f = n(585483), E = n(630388), C = n(838440), g = n(981631), I = n(105461);
 function x(e) {
     let {
         value: t,
@@ -25,11 +25,11 @@ function T(e) {
             editingMessage: S,
             editingTextValue: Z,
             editingRichValue: A
-        } = (0, l.cj)([d.Z], () => ({
-            editingMessage: d.Z.getEditingMessage(o),
-            editingTextValue: d.Z.getEditingTextValue(o),
-            editingRichValue: d.Z.getEditingRichValue(o)
-        }), [o]), M = (0, l.e7)([u.default], () => u.default.getId()), b = a.useCallback((e, n, i) => {
+        } = (0, l.cj)([u.Z], () => ({
+            editingMessage: u.Z.getEditingMessage(o),
+            editingTextValue: u.Z.getEditingTextValue(o),
+            editingRichValue: u.Z.getEditingRichValue(o)
+        }), [o]), M = (0, l.e7)([d.default], () => d.default.getId()), b = a.useCallback((e, n, i) => {
             let {content: a} = i, l = p.Z.can(g.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
             return v && (o === M || l) && null != S && (0, E.yE)(S.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : s.Z.editMessage(e, n, { content: a }), Promise.resolve();
         }, [
@@ -63,8 +63,8 @@ function N(e) {
             message: l,
             channel: s,
             onChange: r,
-            onSubmit: u,
-            onKeyDown: d
+            onSubmit: d,
+            onKeyDown: u
         } = e, [h, p] = a.useState(!0), m = a.useCallback(() => p(!0), []), _ = a.useCallback(() => p(!1), []);
     return a.useEffect(() => (f.S.subscribe(g.CkL.TEXTAREA_FOCUS, m), f.S.subscribe(g.CkL.TEXTAREA_BLUR, _), () => {
         f.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, m), f.S.unsubscribe(g.CkL.TEXTAREA_BLUR, _);
@@ -80,9 +80,9 @@ function N(e) {
         onChange: r,
         onSubmit: e => {
             let {value: t} = e;
-            return u(t);
+            return d(t);
         },
-        onKeyDown: d,
+        onKeyDown: u,
         focused: h,
         onFocus: m,
         onBlur: _

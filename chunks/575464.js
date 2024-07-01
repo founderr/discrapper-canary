@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(91192), r = n(442837), o = n(481060), c = n(129861), u = n(700582), d = n(158776), h = n(285952), p = n(51144), m = n(864731);
+var a = n(120356), l = n.n(a), s = n(91192), r = n(442837), o = n(481060), c = n(129861), d = n(700582), u = n(158776), h = n(285952), p = n(51144), m = n(864731);
 function _(e) {
     let {
             user: t,
@@ -18,7 +18,7 @@ function _(e) {
             onMouseEnter: g,
             'aria-setsize': I,
             'aria-posinset': x
-        } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, s.JA)(String(t.id));
+        } = e, T = (0, r.e7)([u.Z], () => u.Z.getStatus(t.id)), N = (0, s.JA)(String(t.id));
     return (0, i.jsx)(o.Clickable, {
         id: 'user-row-'.concat(n),
         className: m.friendWrapper,
@@ -37,7 +37,7 @@ function _(e) {
             align: h.Z.Align.CENTER,
             className: l()(m.friend, { [m.friendSelected]: f }),
             children: [
-                (0, i.jsx)(u.Z, {
+                (0, i.jsx)(d.Z, {
                     user: t,
                     status: T,
                     className: m.avatar

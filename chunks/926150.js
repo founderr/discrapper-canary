@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(699516), s = n(246946), r = n(5192), o = n(332390), c = n(824572), u = n(741308), d = n(588822), h = n(681837), p = n(91433), m = n(900927), _ = n(724593), f = n(678738), E = n(502762), C = n(530), g = n(580512), I = n(765365), x = n(228168), T = n(981631), N = n(689938), v = n(77540);
+var a = n(442837), l = n(699516), s = n(246946), r = n(5192), o = n(332390), c = n(824572), d = n(741308), u = n(588822), h = n(681837), p = n(91433), m = n(900927), _ = n(724593), f = n(678738), E = n(502762), C = n(530), g = n(580512), I = n(765365), x = n(228168), T = n(981631), N = n(689938), v = n(77540);
 function S(e) {
     let {
             user: t,
@@ -23,7 +23,7 @@ function S(e) {
                 nickname: r.ZP.getName(null, S, t),
                 pronouns: null == n ? void 0 : n.pronouns,
                 onOpenProfile: A,
-                tags: (0, i.jsx)(u.Z, {
+                tags: (0, i.jsx)(d.Z, {
                     displayProfile: n,
                     profileType: x.y0.PANEL
                 }),
@@ -55,7 +55,7 @@ function S(e) {
                     !L && (null == n ? void 0 : n.bio) != null && (null == n ? void 0 : n.bio) !== '' && (0, i.jsx)(f.Z, {
                         title: N.Z.Messages.USER_POPOUT_ABOUT_ME,
                         headingColor: 'header-primary',
-                        children: (0, i.jsx)(d.Z, {
+                        children: (0, i.jsx)(u.Z, {
                             userBio: n.bio,
                             animateOnHover: !0,
                             isHovering: Z,

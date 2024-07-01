@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(91192), c = n(399606), u = n(846519), d = n(481060), h = n(493683), p = n(239091), _ = n(153867), f = n(35225), m = n(703656), g = n(769654), C = n(271383), I = n(771845), E = n(880080), N = n(727258), x = n(249792), S = n(40153), Z = n(593618), v = n(252686), T = n(682662), L = n(674552), A = n(981631), b = n(689938), M = n(784490);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(91192), c = n(399606), u = n(846519), d = n(481060), h = n(493683), p = n(239091), _ = n(153867), f = n(35225), g = n(703656), m = n(769654), C = n(271383), I = n(771845), E = n(880080), N = n(727258), x = n(249792), S = n(40153), Z = n(593618), v = n(252686), T = n(682662), L = n(674552), A = n(981631), b = n(689938), M = n(784490);
 let R = {
     analyticsSource: {
         page: A.ZY5.GUILD_CHANNEL,
@@ -71,10 +71,10 @@ t.Z = l.memo(function (e) {
     l.useEffect(() => () => eh.cancel(), [eh]);
     let ep = l.useCallback(() => {
             if (null != G) {
-                (0, m.uL)(G, { state: R });
+                (0, g.uL)(G, { state: R });
                 return;
             }
-            (0, g.X)(J, { state: R });
+            (0, m.X)(J, { state: R });
         }, [
             J,
             G
@@ -89,13 +89,13 @@ t.Z = l.memo(function (e) {
             w,
             F,
             q
-        ]), ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)), em = l.useCallback(e => {
+        ]), ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)), eg = l.useCallback(e => {
             null != w && !ef && Y(e, w);
         }, [
             w,
             Y,
             ef
-        ]), eg = l.useCallback(e => {
+        ]), em = l.useCallback(e => {
             if ('ArrowLeft' === e.key && null != X) {
                 var t;
                 null === (t = document.querySelector('[aria-owns=folder-items-'.concat(X, ']'))) || void 0 === t || t.focus();
@@ -138,8 +138,8 @@ t.Z = l.memo(function (e) {
                 K || ea(!1);
             },
             onMouseDown: e_,
-            onContextMenu: em,
-            onKeyDown: eg,
+            onContextMenu: eg,
+            onKeyDown: em,
             icon: w.getIconURL(96, es && k),
             selected: B || es,
             ...el,

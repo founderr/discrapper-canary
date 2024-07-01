@@ -6,7 +6,7 @@ n.d(t, {
         return U;
     }
 }), n(47120);
-var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(149765), c = n(846519), u = n(481060), d = n(475179), h = n(239091), p = n(287734), m = n(872810), _ = n(888651), f = n(100527), E = n(258609), C = n(257115), g = n(569545), I = n(382182), x = n(525925), T = n(701362), N = n(224184), v = n(484459), S = n(103575), Z = n(314897), A = n(430824), M = n(496675), b = n(979651), R = n(805009), j = n(981631), L = n(927923), P = n(70722), O = n(689938), y = n(492787);
+var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(149765), c = n(846519), d = n(481060), u = n(475179), h = n(239091), p = n(287734), m = n(872810), _ = n(888651), f = n(100527), E = n(258609), C = n(257115), g = n(569545), I = n(382182), x = n(525925), T = n(701362), N = n(224184), v = n(484459), S = n(103575), Z = n(314897), A = n(430824), M = n(496675), b = n(979651), R = n(805009), j = n(981631), L = n(927923), P = n(70722), O = n(689938), y = n(492787);
 function D(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -19,7 +19,7 @@ function k(e) {
     let {numUsers: t} = e;
     return (0, a.jsx)('div', {
         className: y.moreContainer,
-        children: (0, a.jsxs)(u.Text, {
+        children: (0, a.jsxs)(d.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
             children: [
@@ -39,13 +39,13 @@ function U(e) {
         children: [
             (0, a.jsx)('div', {
                 className: y.audienceIconContainer,
-                children: (0, a.jsx)(u.HeadphonesIcon, {
+                children: (0, a.jsx)(d.HeadphonesIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: y.audienceIcon
                 })
             }),
-            (0, a.jsx)(u.Text, {
+            (0, a.jsx)(d.Text, {
                 color: 'text-muted',
                 variant: 'text-sm/medium',
                 children: i
@@ -73,7 +73,7 @@ class w extends (i = l.PureComponent) {
                 'data-dnd-name': s.name,
                 onMouseEnter: i ? void 0 : this.handleMouseEnter,
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
-                children: (0, a.jsx)(u.Popout, {
+                children: (0, a.jsx)(d.Popout, {
                     preload: () => (0, v.W)(l.id, l.getAvatarURL(s.guild_id, 80), {
                         guildId: s.guild_id,
                         channelId: s.id
@@ -133,7 +133,7 @@ class w extends (i = l.PureComponent) {
                 channelId: t.id,
                 guildId: t.guild_id
             };
-            Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
+            Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), u.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
         }), D(this, 'handleJoinVoice', () => {
             let {
                 user: e,
@@ -211,7 +211,7 @@ class w extends (i = l.PureComponent) {
                     mute: s,
                     localMute: o,
                     localVideoDisabled: c,
-                    speaking: d,
+                    speaking: u,
                     disconnected: h,
                     user: p,
                     deaf: m,
@@ -235,7 +235,7 @@ class w extends (i = l.PureComponent) {
                     isHoveringHangStatus: D
                 } = this.state, k = L.al.has(null != n ? n : ''), U = {
                     user: p,
-                    speaking: d,
+                    speaking: u,
                     disconnected: h,
                     mute: s,
                     localMute: o,
@@ -269,7 +269,7 @@ class w extends (i = l.PureComponent) {
                 };
             if (t) {
                 var w;
-                return (0, a.jsx)(u.Tooltip, {
+                return (0, a.jsx)(d.Tooltip, {
                     text: null !== (w = (0, C.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
                     children: e => {
                         let {
@@ -284,7 +284,7 @@ class w extends (i = l.PureComponent) {
                     }
                 });
             }
-            return (0, a.jsx)(u.Popout, {
+            return (0, a.jsx)(d.Popout, {
                 position: 'right',
                 renderPopout: M && D || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
                 shouldShow: l && !P,

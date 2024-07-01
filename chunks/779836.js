@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(920906), r = n(399606), o = n(481060), c = n(511010), u = n(446183), d = n(677281), h = n(765104), p = n(477291), m = n(531578), _ = n(959517), f = n(689938), E = n(153023);
+var a = n(120356), l = n.n(a), s = n(920906), r = n(399606), o = n(481060), c = n(511010), d = n(446183), u = n(677281), h = n(765104), p = n(477291), m = n(531578), _ = n(959517), f = n(689938), E = n(153023);
 function C(e) {
     let {
             summary: t,
@@ -43,7 +43,7 @@ function C(e) {
                     }),
                     (0, i.jsx)(o.Clickable, {
                         onClick: e => l(e, m.aZ.GOOD),
-                        children: (0, i.jsx)(d.Z, {
+                        children: (0, i.jsx)(u.Z, {
                             className: E.thumbIcon,
                             width: 12,
                             height: 12
@@ -51,7 +51,7 @@ function C(e) {
                     }),
                     (0, i.jsx)(o.Clickable, {
                         onClick: e => l(e, m.aZ.BAD),
-                        children: (0, i.jsx)(u.Z, {
+                        children: (0, i.jsx)(d.Z, {
                             className: E.thumbIcon,
                             width: 12,
                             height: 12
@@ -66,9 +66,9 @@ function g(e) {
     var t, n;
     let a, {
             item: s,
-            channel: u,
-            index: d
-        } = e, p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
+            channel: d,
+            index: u
+        } = e, p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(d.id));
     if (null == p)
         return null;
     let m = null != s.unreadId, f = null != s.content;
@@ -85,7 +85,7 @@ function g(e) {
         children: [
             (0, i.jsx)(C, {
                 summary: p,
-                channel: u
+                channel: d
             }),
             (0, i.jsx)(o.TopicsIcon, {
                 size: 'xs',
@@ -99,5 +99,5 @@ function g(e) {
         isUnread: m,
         id: m ? _.j1 : void 0,
         children: a
-    }, 'divider-'.concat(null !== (n = null !== (t = s.contentKey) && void 0 !== t ? t : s.unreadId) && void 0 !== n ? n : d));
+    }, 'divider-'.concat(null !== (n = null !== (t = s.contentKey) && void 0 !== t ? t : s.unreadId) && void 0 !== n ? n : u));
 }

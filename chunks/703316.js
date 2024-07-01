@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(47120);
 var i = n(735250), a = n(470079), l = n(925975), s = n(957730), r = n(981631), o = n(689938), c = n(777282);
-function u(e, t, n) {
+function d(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -12,7 +12,7 @@ function u(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-function d(e) {
+function u(e) {
     e.stopPropagation();
 }
 class h extends a.PureComponent {
@@ -29,7 +29,7 @@ class h extends a.PureComponent {
         return (0, i.jsxs)('div', {
             className: e,
             ref: this.node,
-            onContextMenu: d,
+            onContextMenu: u,
             children: [
                 r({
                     textValue: t,
@@ -51,10 +51,10 @@ class h extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), u(this, 'node', a.createRef()), u(this, 'onClickSave', () => {
+        super(...e), d(this, 'node', a.createRef()), d(this, 'onClickSave', () => {
             let {textValue: e} = this.props;
             this.onSubmit(e);
-        }), u(this, 'onSubmit', e => {
+        }), d(this, 'onSubmit', e => {
             let {
                 message: t,
                 channel: n,
@@ -87,13 +87,13 @@ class h extends a.PureComponent {
                     shouldRefocus: !0
                 });
             });
-        }), u(this, 'onChange', (e, t, n) => {
+        }), d(this, 'onChange', (e, t, n) => {
             let {
                 channel: i,
                 onChange: a
             } = this.props;
             a(i.id, t, n);
-        }), u(this, 'onKeyDown', e => {
+        }), d(this, 'onKeyDown', e => {
             if (e.keyCode === r.yXg.ESCAPE && !e.shiftKey) {
                 let {
                     channel: t,

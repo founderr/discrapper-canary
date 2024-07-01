@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(434650), o = n(393903), c = n(353093), u = n(979264), d = n(256037);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(434650), o = n(393903), c = n(353093), d = n(979264), u = n(256037);
 t.Z = a.memo(function (e) {
     let {
             children: t,
@@ -30,24 +30,24 @@ t.Z = a.memo(function (e) {
     }, [C]);
     let g = (0, r.O)(f);
     return (0, i.jsxs)('div', {
-        className: s()(d.container, n && d.isOverlayContainer),
+        className: s()(u.container, n && u.isOverlayContainer),
         ref: E,
         children: [
             (0, i.jsx)('div', {
-                className: d.usernameContainer,
+                className: u.usernameContainer,
                 children: t
             }),
             (0, i.jsx)('div', {
-                className: d.chipletParent,
+                className: u.chipletParent,
                 ref: g,
                 children: (0, i.jsx)('span', {
-                    className: s()(d.chipletContainer, !C && n && d.noPadding),
+                    className: s()(u.chipletContainer, !C && n && u.noPadding),
                     ref: p,
                     style: m,
-                    children: (0, i.jsx)(u.ZP, {
+                    children: (0, i.jsx)(d.ZP, {
                         ...h,
                         contextGuildId: l,
-                        className: s()(h.className, n && d.isOverlayTag)
+                        className: s()(h.className, n && u.isOverlayTag)
                     })
                 })
             })

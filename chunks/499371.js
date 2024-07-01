@@ -1,5 +1,5 @@
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(481060), o = n(285952), c = n(548380), u = n(331651);
-class d extends a.PureComponent {
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(481060), o = n(285952), c = n(548380), d = n(331651);
+class u extends a.PureComponent {
     render() {
         let {
             title: e,
@@ -7,7 +7,7 @@ class d extends a.PureComponent {
             agreement: n,
             disagreement: a,
             onAgree: l,
-            onDisagree: d,
+            onDisagree: u,
             imageClassName: h
         } = this.props;
         return (0, i.jsxs)(o.Z, {
@@ -18,11 +18,11 @@ class d extends a.PureComponent {
             children: [
                 (0, i.jsx)('div', { className: s()(c.image, h) }),
                 (0, i.jsx)('div', {
-                    className: s()(c.title, u.marginBottom8),
+                    className: s()(c.title, d.marginBottom8),
                     children: e
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(c.description, u.marginBottom20),
+                    className: s()(c.description, d.marginBottom20),
                     children: t
                 }),
                 (0, i.jsxs)(o.Z, {
@@ -34,7 +34,7 @@ class d extends a.PureComponent {
                             className: c.action,
                             size: r.ButtonSizes.LARGE,
                             color: r.ButtonColors.PRIMARY,
-                            onClick: d,
+                            onClick: u,
                             children: a
                         }) : null,
                         null != n ? (0, i.jsx)(r.Button, {
@@ -50,4 +50,4 @@ class d extends a.PureComponent {
         });
     }
 }
-t.Z = d;
+t.Z = u;

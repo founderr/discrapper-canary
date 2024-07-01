@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(692547), s = n(780384), r = n(481060), o = n(367907), c = n(210887), u = n(626135), d = n(981631), h = n(689938), p = n(683993), m = n(622322);
+var i = n(735250), a = n(470079), l = n(692547), s = n(780384), r = n(481060), o = n(367907), c = n(210887), d = n(626135), u = n(981631), h = n(689938), p = n(683993), m = n(622322);
 function _(e) {
     let {
         onClose: t,
@@ -15,7 +15,7 @@ function _(e) {
         animation: I
     } = e;
     a.useEffect(() => {
-        u.default.track(d.rMx.OPEN_POPOUT, {
+        d.default.track(u.rMx.OPEN_POPOUT, {
             type: C,
             ...(0, o.v_)(E)
         });

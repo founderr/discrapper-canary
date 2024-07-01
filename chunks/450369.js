@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 });
-var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(442837), o = n(481060), c = n(475179), u = n(239091), d = n(872810), h = n(40851), p = n(358221), m = n(258609), _ = n(569545), f = n(382182), E = n(484459), C = n(103575), g = n(199902), I = n(430824), x = n(496675), T = n(979651), N = n(40300), v = n(88751), S = n(252132), Z = n(248400), A = n(981631), M = n(354459), b = n(433654);
+var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(442837), o = n(481060), c = n(475179), d = n(239091), u = n(872810), h = n(40851), p = n(358221), m = n(258609), _ = n(569545), f = n(382182), E = n(484459), C = n(103575), g = n(199902), I = n(430824), x = n(496675), T = n(979651), N = n(40300), v = n(88751), S = n(252132), Z = n(248400), A = n(981631), M = n(354459), b = n(433654);
 let R = 16 / 9, j = e => {
         let {
                 stageParticipant: t,
@@ -12,8 +12,8 @@ let R = 16 / 9, j = e => {
                 guildId: s,
                 user: r,
                 width: c,
-                isModerator: u,
-                onContextMenu: d,
+                isModerator: d,
+                onContextMenu: u,
                 inPopout: h
             } = e, {reducedMotion: p} = a.useContext(o.AccessibilityPreferencesContext), {
                 blocked: m,
@@ -34,7 +34,7 @@ let R = 16 / 9, j = e => {
             position: 'right',
             spacing: 8,
             children: e => (0, i.jsx)(o.Clickable, {
-                onContextMenu: e => d(n, e),
+                onContextMenu: e => u(n, e),
                 ...e,
                 children: (0, i.jsx)(S.Z, {
                     participant: n,
@@ -47,7 +47,7 @@ let R = 16 / 9, j = e => {
                     paused: !1,
                     pulseSpeakingIndicator: !p.enabled,
                     width: c,
-                    children: u && (0, i.jsx)(Z.Z, {})
+                    children: d && (0, i.jsx)(Z.Z, {})
                 }, _)
             })
         });
@@ -57,7 +57,7 @@ let R = 16 / 9, j = e => {
                 rtcParticipant: n,
                 channel: l,
                 width: s,
-                isModerator: u,
+                isModerator: d,
                 onContextMenu: h,
                 inPopout: E
             } = e, {reducedMotion: C} = a.useContext(o.AccessibilityPreferencesContext), {
@@ -73,7 +73,7 @@ let R = 16 / 9, j = e => {
                 if (e.type === M.fO.STREAM && 0 === L.filter(t => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
                     if (!(0, f.p9)(l, T.Z, I.Z, x.Z, m.Z)[0])
                         return;
-                    (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
+                    (0, u.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                 }
                 (null == P ? void 0 : P.id) === e.id ? O ? (c.Z.selectParticipant(l.id, null), c.Z.updateStageStreamSize(l.id, !1)) : c.Z.updateStageStreamSize(l.id, !0) : (c.Z.updateStageStreamSize(l.id, !1), c.Z.selectParticipant(l.id, e.id));
             }, [
@@ -96,7 +96,7 @@ let R = 16 / 9, j = e => {
             paused: !1,
             pulseSpeakingIndicator: !C.enabled,
             width: s,
-            children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
+            children: d && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
         }, v);
     };
 t.Z = a.memo(function (e) {
@@ -105,8 +105,8 @@ t.Z = a.memo(function (e) {
             participant: a,
             channel: l,
             width: o
-        } = e, c = (0, h.bp)(), d = l.getGuildId();
-    s()(null != d, 'Channel cannot be guildless');
+        } = e, c = (0, h.bp)(), u = l.getGuildId();
+    s()(null != u, 'Channel cannot be guildless');
     let {user: m} = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(l.id, a.id), [
             l.id,
             a.id
@@ -120,7 +120,7 @@ t.Z = a.memo(function (e) {
             switch (e.type) {
             case M.fO.HIDDEN_STREAM:
             case M.fO.STREAM:
-                (0, u.jW)(t, async () => {
+                (0, d.jW)(t, async () => {
                     let {default: t} = await n.e('22183').then(n.bind(n, 987281));
                     return n => (0, i.jsx)(t, {
                         ...n,
@@ -133,7 +133,7 @@ t.Z = a.memo(function (e) {
                 return;
             case M.fO.USER:
             default:
-                (0, u.jW)(t, async () => {
+                (0, d.jW)(t, async () => {
                     let {default: e} = await Promise.all([
                         n.e('79695'),
                         n.e('17400'),
@@ -143,7 +143,7 @@ t.Z = a.memo(function (e) {
                     return t => (0, i.jsx)(e, {
                         ...t,
                         user: m,
-                        guildId: d,
+                        guildId: u,
                         channel: l,
                         showMediaItems: !0,
                         showStageChannelItems: !0,
@@ -157,7 +157,7 @@ t.Z = a.memo(function (e) {
             stageParticipant: a,
             rtcParticipant: _,
             channel: l,
-            guildId: d,
+            guildId: u,
             user: m,
             width: o,
             isModerator: f,
@@ -167,7 +167,7 @@ t.Z = a.memo(function (e) {
             stageParticipant: a,
             rtcParticipant: _,
             channel: l,
-            guildId: d,
+            guildId: u,
             user: m,
             width: o,
             isModerator: f,

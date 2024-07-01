@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), l = n(920906), s = n(442837), r = n(780384), o = n(435064), c = n(39604), u = n(175470), d = n(569545), h = n(153850), p = n(385608);
+var i = n(735250), a = n(470079), l = n(920906), s = n(442837), r = n(780384), o = n(435064), c = n(39604), d = n(175470), u = n(569545), h = n(153850), p = n(385608);
 let m = { visibility: 'hidden' }, _ = {
         precision: 0.0001,
         duration: 300
@@ -17,7 +17,7 @@ function C(e) {
     let {
             stream: t,
             inPopout: n
-        } = e, {reducedMotion: C} = a.useContext(r.Sf), g = (0, a.useRef)(null), I = u.n.getState().clipsButtonRef, x = (0, d.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
+        } = e, {reducedMotion: C} = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
     a.useEffect(() => () => {
         (0, c.Gh)(x);
     }, [x]);

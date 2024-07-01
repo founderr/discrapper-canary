@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(393238), c = n(410030), u = n(231338), d = n(118807);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(393238), c = n(410030), d = n(231338), u = n(118807);
 let h = {
         mass: 1,
         tension: 400,
@@ -174,12 +174,12 @@ function f(e) {
             to: { opacity: 1 },
             config: p,
             delay: 1000
-        }), v = (0, c.Fg)(), S = v === u.BR.LIGHT ? '#FFFFFF' : '#1C1D23', Z = v === u.BR.LIGHT ? '#EBEDEF' : '#26272F', A = v === u.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
+        }), v = (0, c.Fg)(), S = v === d.BR.LIGHT ? '#FFFFFF' : '#1C1D23', Z = v === d.BR.LIGHT ? '#EBEDEF' : '#26272F', A = v === d.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
     return (0, i.jsx)('div', {
-        className: d.container,
+        className: u.container,
         ref: I,
         children: (0, i.jsxs)(r.animated.div, {
-            className: d.heightContainer,
+            className: u.heightContainer,
             style: {
                 ...T,
                 overflow: l ? 'initial' : 'hidden'
@@ -191,13 +191,13 @@ function f(e) {
                     axleColor: A
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(d.content, n && d.fullHeight),
+                    className: s()(u.content, n && u.fullHeight),
                     ref: C,
                     children: (0, i.jsx)('div', {
-                        className: s()(d.innerContent, n && d.fullHeight),
+                        className: s()(u.innerContent, n && u.fullHeight),
                         style: { backgroundColor: S },
                         children: (0, i.jsx)(r.animated.div, {
-                            className: s()(d.contentAnimContainer, n && d.fullHeight),
+                            className: s()(u.contentAnimContainer, n && u.fullHeight),
                             style: N,
                             children: t
                         })

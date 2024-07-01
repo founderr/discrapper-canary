@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(680295), s = n(158776), r = n(735336), o = n(184325), c = n(131640), u = n(228168), d = n(651448);
+var a = n(442837), l = n(680295), s = n(158776), r = n(735336), o = n(184325), c = n(131640), d = n(228168), u = n(651448);
 t.Z = e => {
     let {
             user: t,
@@ -18,7 +18,7 @@ t.Z = e => {
             (0, i.jsx)(r.Z, {
                 user: t,
                 displayProfile: n,
-                profileType: u.y0.PANEL,
+                profileType: d.y0.PANEL,
                 showPremiumBadgeUpsell: !0,
                 isHovering: m,
                 animateOnHover: !p
@@ -31,13 +31,13 @@ t.Z = e => {
                 channelId: h.id,
                 disableUserProfileLink: !0,
                 hasBanner: (null == n ? void 0 : n.banner) != null,
-                profileType: u.y0.PANEL,
+                profileType: d.y0.PANEL,
                 animateOnHover: !p
             }),
             (0, i.jsx)('div', {
-                className: d.badgelistGroup,
+                className: u.badgelistGroup,
                 children: (0, i.jsx)(o.Z, {
-                    className: d.badgeList,
+                    className: u.badgeList,
                     user: t,
                     size: o.V.SIZE_22
                 })

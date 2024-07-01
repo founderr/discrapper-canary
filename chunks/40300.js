@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 }), n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(481060), u = n(763520), d = n(153066), h = n(583830);
+var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(481060), d = n(763520), u = n(153066), h = n(583830);
 (a = i || (i = {})).CONTAIN = 'contain', a.COVER = 'cover';
 let p = s.memo(function (e) {
     let {
@@ -18,7 +18,7 @@ let p = s.memo(function (e) {
             streamPreviewURL: f,
             videoSpinnerContext: E,
             userId: C
-        } = e, [g, I] = s.useState(!0), [x] = s.useState(() => new u.o('VideoStream'));
+        } = e, [g, I] = s.useState(!0), [x] = s.useState(() => new d.o('VideoStream'));
     s.useEffect(() => {
         !_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, C, t));
     }, [
@@ -36,7 +36,7 @@ let p = s.memo(function (e) {
         className: o()(h.wrapper, i),
         children: [
             null != t && (0, l.jsx)(a, {
-                className: o()(h.video, (0, d.l)(h, 'video', p), { [h.mirror]: m }, r),
+                className: o()(h.video, (0, u.l)(h, 'video', p), { [h.mirror]: m }, r),
                 streamId: t,
                 onResize: n,
                 onReady: T,

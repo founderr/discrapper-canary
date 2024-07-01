@@ -12,8 +12,8 @@ function c(e) {
         iconContainerClassName: n,
         icon: a,
         color: c,
-        title: u,
-        description: d,
+        title: d,
+        description: u,
         userCount: h,
         onClick: p,
         highlight: m
@@ -32,13 +32,13 @@ function c(e) {
                 children: [
                     (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
-                        children: u
+                        children: d
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'header-secondary',
                         className: o.inline,
-                        children: d
+                        children: u
                     }),
                     null != h && h > 0 ? (0, i.jsxs)(i.Fragment, {
                         children: [

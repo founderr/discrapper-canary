@@ -1,9 +1,9 @@
 n(653041), n(47120);
-var i, a, l, s, r = n(442837), o = n(570140), c = n(633302), u = n(594174), d = n(176354), h = n(292793), p = n(88315), m = n(813900);
+var i, a, l, s, r = n(442837), o = n(570140), c = n(633302), d = n(594174), u = n(176354), h = n(292793), p = n(88315), m = n(813900);
 let _ = {}, f = {}, E = {}, C = !0, g = null;
 function I(e) {
     if (null == f[e]) {
-        let t = u.default.getUser(e);
+        let t = d.default.getUser(e);
         if (null == t)
             return;
         let n = t.getAvatarURL(null, m.Ks), i = new Image();
@@ -81,7 +81,7 @@ let T = new x(o.Z, {
         let o = null !== (n = null !== (t = a.emojiId) && void 0 !== t ? t : a.emojiName) && void 0 !== n ? n : '';
         if (null == E[o]) {
             let e = null != a.emojiName ? c.ZP.convertNameToSurrogate(a.emojiName) : null;
-            E[o] = new Image(), E[o].src = (0, d.qc)({
+            E[o] = new Image(), E[o].src = (0, u.qc)({
                 id: a.emojiId,
                 name: null !== (i = null != e ? e : a.emojiName) && void 0 !== i ? i : '',
                 animated: !1

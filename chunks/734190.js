@@ -1,4 +1,4 @@
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(91192), o = n(442837), c = n(481060), u = n(493683), d = n(239091), h = n(569471), p = n(488131), _ = n(592125), f = n(306680), m = n(979651), g = n(938475), C = n(514342), I = n(714794), E = n(135724), N = n(25601), x = n(207055), S = n(981631), Z = n(124368), v = n(689938), T = n(47705), L = n(359123), A = n(205546);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(91192), o = n(442837), c = n(481060), u = n(493683), d = n(239091), h = n(569471), p = n(488131), _ = n(592125), f = n(306680), g = n(979651), m = n(938475), C = n(514342), I = n(714794), E = n(135724), N = n(25601), x = n(207055), S = n(981631), Z = n(124368), v = n(689938), T = n(47705), L = n(359123), A = n(205546);
 function b(e) {
     let {
         style: t,
@@ -25,7 +25,7 @@ t.Z = l.memo(function (e) {
             isSelectedVoice: A,
             isLast: M,
             withGuildIcon: R
-        } = e, y = (0, o.e7)([g.ZP], () => g.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)), {
+        } = e, y = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
             unread: P,
             mentionCount: j
         } = (0, o.cj)([f.ZP], () => ({

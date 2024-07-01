@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     }
 });
-var i = n(735250), a = n(470079), l = n(920906), s = n(442837), r = n(186325), o = n(110924), c = n(714338), u = n(433355), d = n(863840), h = n(189432), p = n(727381), m = n(313692), _ = n(596443), f = n(50493), E = n(981631);
+var i = n(735250), a = n(470079), l = n(920906), s = n(442837), r = n(186325), o = n(110924), c = n(714338), d = n(433355), u = n(863840), h = n(189432), p = n(727381), m = n(313692), _ = n(596443), f = n(50493), E = n(981631);
 function C(e, t) {
     return n => {
         if (0 === n)
@@ -20,8 +20,8 @@ function g(e) {
             onClose: x,
             analyticsLocation: T,
             className: N
-        } = e, v = (0, s.e7)([u.ZP], () => u.ZP.getGuildSidebarState(I), [I]), S = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : f.k.INFO, Z = (0, o.Z)(g);
-    let A = null == (n = S) ? null : n === f.k.INFO ? 'backwards' : 'forwards', M = (0, d.Z)(A), {reducedMotion: b} = a.useContext(r.S), R = a.useCallback(e => {
+        } = e, v = (0, s.e7)([d.ZP], () => d.ZP.getGuildSidebarState(I), [I]), S = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : f.k.INFO, Z = (0, o.Z)(g);
+    let A = null == (n = S) ? null : n === f.k.INFO ? 'backwards' : 'forwards', M = (0, u.Z)(A), {reducedMotion: b} = a.useContext(r.S), R = a.useCallback(e => {
             null != v && (0, h.r)(I, g, v.baseChannelId, { modViewPanel: e });
         }, [
             v,

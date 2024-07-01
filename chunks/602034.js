@@ -6,7 +6,7 @@ n.d(t, {
         return I;
     }
 });
-var i = n(735250), a = n(470079), l = n(143927), s = n(481060), r = n(570140), o = n(668781), c = n(966390), u = n(680287), d = n(470623), h = n(957730), p = n(48854), m = n(703558), _ = n(403182), f = n(928477), E = n(981631), C = n(689938);
+var i = n(735250), a = n(470079), l = n(143927), s = n(481060), r = n(570140), o = n(668781), c = n(966390), d = n(680287), u = n(470623), h = n(957730), p = n(48854), m = n(703558), _ = n(403182), f = n(928477), E = n(981631), C = n(689938);
 function g(e) {
     let {
             parentChannel: t,
@@ -16,7 +16,7 @@ function g(e) {
             location: s,
             onThreadCreated: r,
             useDefaultThreadName: o
-        } = e, u = a.useCallback((e, t, n, i) => {
+        } = e, d = a.useCallback((e, t, n, i) => {
             c.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
@@ -33,14 +33,14 @@ function g(e) {
         location: s,
         onThreadCreated: r,
         useDefaultThreadName: o,
-        uploadHandler: u
+        uploadHandler: d
     });
 }
 function I(e) {
     let {parentChannel: t} = e, {
             name: a,
             appliedTags: c
-        } = (0, d.xH)(e => {
+        } = (0, u.xH)(e => {
             let {
                 name: t,
                 appliedTags: n
@@ -55,8 +55,8 @@ function I(e) {
         name: a,
         appliedTags: c,
         upload: function (e, a, l) {
-            return new Promise((c, d) => {
-                let h = new u.Z(e);
+            return new Promise((c, u) => {
+                let h = new d.Z(e);
                 h.on('error', (e, a, l) => {
                     if (a === E.evJ.EXPLICIT_CONTENT) {
                         let e = (0, p.r)();
@@ -84,7 +84,7 @@ function I(e) {
                             title: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
                             body: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({ limit: E.dN1 })
                         });
-                    d({ body: l });
+                    u({ body: l });
                 }), h.on('complete', (e, t) => {
                     c({ body: t });
                 }), h.uploadFiles(l, a, { addFilesTo: 'message.attachments' });

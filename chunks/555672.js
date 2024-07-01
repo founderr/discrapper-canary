@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     }
 });
-var i = n(735250), a = n(470079), l = n(317261), s = n(561308), r = n(297781), o = n(443487), c = n(43205), u = n(265048), d = n(689938), h = n(41899);
+var i = n(735250), a = n(470079), l = n(317261), s = n(561308), r = n(297781), o = n(443487), c = n(43205), d = n(265048), u = n(689938), h = n(41899);
 let p = [r.E6], m = [l._.WEEK];
 function _(e) {
     return null != e && m.includes(e);
@@ -16,7 +16,7 @@ t.ZP = a.memo(e => {
             entry: t,
             channel: n,
             selected: a
-        } = e, {iconUrl: l} = (0, u.F)(t), m = (0, s.Nq)(t);
+        } = e, {iconUrl: l} = (0, d.F)(t), m = (0, s.Nq)(t);
     return null != m && _(m) ? (0, i.jsxs)(o.Zb, {
         selected: a,
         children: [
@@ -29,7 +29,7 @@ t.ZP = a.memo(e => {
                     }),
                     (0, i.jsx)(o.ll, {
                         children: function (e) {
-                            return d.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({ gameName: e.extra.game_name });
+                            return u.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({ gameName: e.extra.game_name });
                         }(t)
                     }),
                     (0, i.jsx)(r.Gk, {

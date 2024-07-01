@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     }
 }), n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(392711), u = n(692547), d = n(153867), h = n(347469), p = n(740492), m = n(36645), _ = n(923756);
+var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(392711), d = n(692547), u = n(153867), h = n(347469), p = n(740492), m = n(36645), _ = n(923756);
 (a = i || (i = {}))[a.PostSidebar = 0] = 'PostSidebar', a[a.ThreadSidebar = 1] = 'ThreadSidebar', a[a.CallChatSidebar = 2] = 'CallChatSidebar', a[a.MessageRequestSidebar = 3] = 'MessageRequestSidebar', a[a.HomeSidebar = 4] = 'HomeSidebar';
 function f(e) {
     let {
@@ -48,8 +48,8 @@ function E(e) {
                 return 'homeSidebarWidth';
             }
         }(t), [C, g] = s.useState(p.ZP[E]), I = s.useCallback(e => {
-            d.ZP.updatedUnsyncedSettings({ [E]: e });
-        }, [E]), x = (0, m.W)({ maxWidth: n }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+            u.ZP.updatedUnsyncedSettings({ [E]: e });
+        }, [E]), x = (0, m.W)({ maxWidth: n }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     s.useEffect(() => {
         null == i || i(T, x);
     }, [

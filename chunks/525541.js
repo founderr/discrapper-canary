@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(481060), l = n(493683), s = n(726521), r = n(213010), o = n(718538), c = n(689938);
-function u(e) {
+function d(e) {
     let {
             otherUserId: t,
             channel: n,
-            buttonSize: u = a.ButtonSizes.TINY,
-            className: d,
+            buttonSize: d = a.ButtonSizes.TINY,
+            className: u,
             buttonText: h,
             navigateAwayOnReportSuccess: p = !0,
             onReportClick: m,
@@ -25,8 +25,8 @@ function u(e) {
         null == _ || _(), l.Z.closePrivateChannel(n.id, p);
     };
     return (0, i.jsx)(a.Button, {
-        className: d,
-        size: u,
+        className: u,
+        size: d,
         color: a.Button.Colors.RED,
         disabled: null == g,
         onClick: () => {

@@ -1,9 +1,9 @@
-var i = n(735250), a = n(470079), l = n(873546), s = n(442837), r = n(481060), o = n(433355), c = n(373791), u = n(96413);
+var i = n(735250), a = n(470079), l = n(873546), s = n(442837), r = n(481060), o = n(433355), c = n(373791), d = n(96413);
 t.Z = a.memo(function (e) {
     let {
             message: t,
             subtitle: n,
-            countdown: d,
+            countdown: u,
             buttonText: h,
             buttonColor: p,
             buttonSubmitting: m,
@@ -23,24 +23,24 @@ t.Z = a.memo(function (e) {
     return null != f ? N = (0, i.jsx)('img', {
         alt: '',
         src: f,
-        className: u.image
+        className: d.image
     }) : null != E && (N = (0, i.jsx)(r.LottieAnimation, {
         importData: E,
         shouldAnimate: !x,
-        className: u.animation
+        className: d.animation
     })), (0, i.jsxs)('div', {
-        className: u.wrapper,
+        className: d.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: u.content,
+                className: d.content,
                 children: [
                     N,
                     (0, i.jsxs)('div', {
-                        className: u.text,
+                        className: d.text,
                         children: [
                             (0, i.jsx)(r.Heading, {
                                 variant: 'heading-md/semibold',
-                                className: u.title,
+                                className: d.title,
                                 children: t
                             }),
                             null != n && (0, i.jsx)(r.Text, {
@@ -53,10 +53,10 @@ t.Z = a.memo(function (e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: u.buttonContainer,
+                className: d.buttonContainer,
                 children: [
                     null != C && (0, i.jsx)(r.Button, {
-                        className: u.button,
+                        className: d.button,
                         size: r.Button.Sizes.SMALL,
                         onClick: g,
                         look: r.Button.Looks.LINK,
@@ -65,8 +65,8 @@ t.Z = a.memo(function (e) {
                         children: C
                     }),
                     null != h && (0, i.jsx)(r.Button, {
-                        className: u.button,
-                        innerClassName: u.innerButton,
+                        className: d.button,
+                        innerClassName: d.innerButton,
                         size: r.Button.Sizes.SMALL,
                         onClick: _,
                         submitting: m,
@@ -75,9 +75,9 @@ t.Z = a.memo(function (e) {
                     })
                 ]
             }),
-            null != d && (0, i.jsx)(c.Z, {
-                className: u.countdown,
-                deadline: d
+            null != u && (0, i.jsx)(c.Z, {
+                className: d.countdown,
+                deadline: u
             })
         ]
     });

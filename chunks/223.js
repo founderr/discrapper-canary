@@ -3,7 +3,7 @@ n.d(t, {
         return Q;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), m = n(313889), I = n(825829), T = n(226192), h = n(36459), N = n(336197), f = n(937889), p = n(739566), C = n(507418), g = n(348238), S = n(38267), A = n(103575), x = n(496675), O = n(594174), R = n(467679), M = n(622116), v = n(289565), L = n(778947), Z = n(702346), P = n(5192), b = n(51144), D = n(787374), j = n(981631), U = n(674563), y = n(590433), B = n(959517), k = n(689938), G = n(121802);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(91192), d = n(722770), u = n(442837), _ = n(481060), E = n(607070), m = n(313889), I = n(825829), T = n(226192), h = n(36459), N = n(336197), p = n(937889), f = n(739566), C = n(507418), g = n(348238), S = n(38267), A = n(103575), x = n(496675), O = n(594174), R = n(467679), M = n(622116), v = n(289565), L = n(778947), Z = n(702346), P = n(5192), b = n(51144), D = n(787374), j = n(981631), U = n(674563), y = n(590433), B = n(959517), k = n(689938), G = n(121802);
 function F(e, t) {
     let {
             popouts: n,
@@ -157,7 +157,7 @@ let K = a.memo(function (e) {
             embedChannel: s,
             compact: l,
             interactionUserId: r
-        } = e, o = F(n, a), c = w(a, n.author), d = (0, p.ZP)(n), u = (0, L.CF)({
+        } = e, o = F(n, a), c = w(a, n.author), d = (0, f.ZP)(n), u = (0, L.CF)({
             message: n,
             channel: a,
             author: d,
@@ -166,7 +166,7 @@ let K = a.memo(function (e) {
             ...o
         }, c), E = O.default.getUser(r), m = F(n, a), T = w(a, E);
     if (null != E) {
-        let e = (0, p.ij)(E, a), i = (0, L.CF)({
+        let e = (0, f.ij)(E, a), i = (0, L.CF)({
                 message: n,
                 channel: a,
                 author: e,
@@ -200,7 +200,7 @@ function Q(e) {
         } = e, {
             avatarSrc: o,
             eventHandlers: {
-                onMouseEnter: p,
+                onMouseEnter: f,
                 onMouseLeave: C
             }
         } = (0, D.m)(!0), {
@@ -223,7 +223,7 @@ function Q(e) {
             alertActionsExecution: et,
             quarantineType: en,
             interactionUserId: ei
-        } = (0, I.ZP)(s), ea = a.useMemo(() => (0, f.k$)(X, Q, r.id), [
+        } = (0, I.ZP)(s), ea = a.useMemo(() => (0, p.k$)(X, Q, r.id), [
             X,
             Q,
             r
@@ -250,7 +250,7 @@ function Q(e) {
             s.id
         ]), ed = (0, y.L9)(Number($)), eu = null != ee, e_ = B && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
     return (0, i.jsx)('div', {
-        onMouseEnter: p,
+        onMouseEnter: f,
         onMouseLeave: C,
         children: (0, i.jsx)(Z.Z, {
             className: l()(G.mainContainer, { [G.compact]: n }),

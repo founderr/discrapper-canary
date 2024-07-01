@@ -1,7 +1,7 @@
 n(411104), n(47120);
 var i = n(735250);
 n(470079);
-var l = n(392711), r = n(848246), a = n(481060), s = n(570140), o = n(904245), c = n(317770), u = n(100527), d = n(358221), h = n(963249), p = n(592125), _ = n(430824), f = n(594174), m = n(295226), g = n(626135), C = n(74538), I = n(557457), E = n(970645), N = n(30684), x = n(736871), S = n(6242), Z = n(757692), v = n(114064), T = n(937579), L = n(485731), A = n(1163), b = n(841174), M = n(11352), R = n(474936), y = n(981631), O = n(354459), P = n(37113), j = n(689938);
+var l = n(392711), r = n(848246), a = n(481060), s = n(570140), o = n(904245), c = n(317770), u = n(100527), d = n(358221), h = n(963249), p = n(592125), _ = n(430824), f = n(594174), g = n(295226), m = n(626135), C = n(74538), I = n(557457), E = n(970645), N = n(30684), x = n(736871), S = n(6242), Z = n(757692), v = n(114064), T = n(937579), L = n(485731), A = n(1163), b = n(841174), M = n(11352), R = n(474936), y = n(981631), O = n(354459), P = n(37113), j = n(689938);
 function D(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -81,7 +81,7 @@ class U extends c.Z {
         super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiumPaymentModalCloseReject', null), D(this, '_lastStreamingChannelId', null), D(this, '_maybeFetchPremiumOffer', async () => {
             let e = f.default.getCurrentUser();
             if (null != e && e.verified) {
-                let t = !(0, C.I5)(e) && m.Z.shouldFetchOffer();
+                let t = !(0, C.I5)(e) && g.Z.shouldFetchOffer();
                 await (0, T.Tf)(t);
             }
             s.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
@@ -118,7 +118,7 @@ class U extends c.Z {
                         resolution: (0, P.o6)(r.maxResolution.height),
                         fps: (0, I.bp)(r.maxFrameRate)
                     });
-                    o.Z.sendNitroSystemMessage(e, n), g.default.track(y.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                    o.Z.sendNitroSystemMessage(e, n), m.default.track(y.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                         type: R.cd.HD_STREAMING_VIEWER_UPSELL,
                         location_section: null != t ? y.jXE.TEXT_IN_VOICE : y.jXE.CHANNEL_TEXT_AREA,
                         location_object: y.qAy.MESSAGE,

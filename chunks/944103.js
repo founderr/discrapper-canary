@@ -3,8 +3,8 @@ n.d(t, {
         return h;
     }
 });
-var i = n(470079), a = n(442837), l = n(131704), s = n(9156), r = n(423589), o = n(674190), c = n(624617), u = n(490897);
-let d = Object.freeze({
+var i = n(470079), a = n(442837), l = n(131704), s = n(9156), r = n(423589), o = n(674190), c = n(624617), d = n(490897);
+let u = Object.freeze({
     NOTICE_RENDER: {
         MAX: 1,
         PER_SECONDS: 600
@@ -25,8 +25,8 @@ function h(e) {
             } = e;
             if (!l.$N.has(e.type))
                 return !1;
-            let i = s.ZP.resolveUnreadSetting(e), a = s.ZP.getChannelUnreadSetting(t, n), r = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS), o = c.Z.getNumberOfChannelVisitsSince(t, n, d.CHANNEL_VISTS.PER_SECONDS);
-            return a === u.i.UNSET && i !== u.i.ALL_MESSAGES && r <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
+            let i = s.ZP.resolveUnreadSetting(e), a = s.ZP.getChannelUnreadSetting(t, n), r = c.Z.getNumberOfRendersSince(u.NOTICE_RENDER.PER_SECONDS), o = c.Z.getNumberOfChannelVisitsSince(t, n, u.CHANNEL_VISTS.PER_SECONDS);
+            return a === d.i.UNSET && i !== d.i.ALL_MESSAGES && r <= u.NOTICE_RENDER.MAX && o >= u.CHANNEL_VISTS.MIN;
         }, [e]);
     return i.useEffect(() => {
         t && h && (0, o.g)(e.guild_id, e.id);

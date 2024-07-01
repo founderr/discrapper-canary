@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(911969), d = n(906732), u = n(778087), _ = n(603721), E = n(124072), m = n(739566), I = n(171368), T = n(592125), h = n(430824), N = n(594174), f = n(981631), p = n(665692), C = n(689938), g = n(768634);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(911969), d = n(906732), u = n(778087), _ = n(603721), E = n(124072), m = n(739566), I = n(171368), T = n(592125), h = n(430824), N = n(594174), p = n(981631), f = n(665692), C = n(689938), g = n(768634);
 let S = {
         tag: 'span',
         variant: 'text-md/normal',
@@ -92,10 +92,10 @@ t.Z = a.memo(function (e) {
                                         channelId: R.id,
                                         messageId: v,
                                         sourceAnalyticsLocations: P,
-                                        analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                        analyticsLocation: { section: p.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                     }),
                                     children: [
-                                        p.ME,
+                                        f.ME,
                                         e.nick
                                     ]
                                 });
@@ -107,7 +107,7 @@ t.Z = a.memo(function (e) {
                             null != t && (g = (0, i.jsxs)(E.Z, {
                                 ...A,
                                 children: [
-                                    p.zy,
+                                    f.zy,
                                     t.name
                                 ]
                             }));
@@ -118,7 +118,7 @@ t.Z = a.memo(function (e) {
                             null != t && (g = (0, i.jsxs)(E.Z, {
                                 ...A,
                                 children: [
-                                    p.ME,
+                                    f.ME,
                                     t.name
                                 ]
                             }));
@@ -129,7 +129,7 @@ t.Z = a.memo(function (e) {
                             if (null != t)
                                 g = (0, i.jsxs)(E.Z, {
                                     children: [
-                                        p.ME,
+                                        f.ME,
                                         t.name
                                     ]
                                 });
@@ -142,10 +142,10 @@ t.Z = a.memo(function (e) {
                                         onClick: () => (0, I.openUserProfileModal)({
                                             userId: t.id,
                                             guildId: R.guild_id,
-                                            analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                            analyticsLocation: { section: p.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                         }),
                                         children: [
-                                            p.ME,
+                                            f.ME,
                                             e.nick
                                         ]
                                     });

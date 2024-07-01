@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(724458), n(653041), n(47120);
-var i = n(735250), a = n(470079), l = n(837969), s = n(481060), r = n(668781), o = n(904245), c = n(603263), u = n(963374), d = n(607070), h = n(933557), p = n(471445), m = n(905405), _ = n(255269), f = n(937889), E = n(703656), C = n(359110), g = n(695346), I = n(592125), x = n(430824), T = n(496675), N = n(699516), v = n(768119), S = n(944486), Z = n(594174), A = n(68588), M = n(101695), b = n(683101), R = n(981631), j = n(689938), L = n(832719);
+var i = n(735250), a = n(470079), l = n(837969), s = n(481060), r = n(668781), o = n(904245), c = n(603263), d = n(963374), u = n(607070), h = n(933557), p = n(471445), m = n(905405), _ = n(255269), f = n(937889), E = n(703656), C = n(359110), g = n(695346), I = n(592125), x = n(430824), T = n(496675), N = n(699516), v = n(768119), S = n(944486), Z = n(594174), A = n(68588), M = n(101695), b = n(683101), R = n(981631), j = n(689938), L = n(832719);
 function P(e) {
     var t;
     let {
@@ -59,7 +59,7 @@ function P(e) {
             _,
             S
         ]), P = a.useRef([]), y = b.reduce((e, t) => e + 1 + t.results.length, 0), D = a.useCallback((e, t) => {
-            if (!d.Z.keyboardModeEnabled)
+            if (!u.Z.keyboardModeEnabled)
                 return;
             let n = P.current, i = null != t ? n[t] : void 0;
             if (null == i || null == i.hitRef.current)
@@ -78,7 +78,7 @@ function P(e) {
             focusedIndex: 0,
             setFocus: D,
             onSelect: k
-        }), w = v.Z.getQuery(h), B = v.Z.getSearchType(h) === R.aib.FAVORITES, H = (0, u.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''), G = b.map(e => {
+        }), w = v.Z.getQuery(h), B = v.Z.getSearchType(h) === R.aib.FAVORITES, H = (0, d.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ''), G = b.map(e => {
             let {
                 channel: t,
                 results: n,
@@ -144,8 +144,8 @@ function O(e) {
             results: r,
             highlighter: o,
             startIndex: c,
-            resultRefs: u,
-            totalResults: d,
+            resultRefs: d,
+            totalResults: u,
             scrollTo: E,
             searchId: v,
             renderEmbeds: M,
@@ -230,8 +230,8 @@ function O(e) {
                 r.map((e, t) => {
                     let n = c + t;
                     return (0, i.jsx)(b.Z, {
-                        ref: e => u.current[n] = e,
-                        totalResults: d,
+                        ref: e => d.current[n] = e,
+                        totalResults: u,
                         scrollTo: E,
                         searchId: v,
                         renderEmbeds: M,

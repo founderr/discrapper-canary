@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     }
 });
-var i = n(735250), a = n(470079), l = n(990547), s = n(481060), r = n(213609), o = n(536442), c = n(39604), u = n(176127), d = n(689938), h = n(397031);
+var i = n(735250), a = n(470079), l = n(990547), s = n(481060), r = n(213609), o = n(536442), c = n(39604), d = n(176127), u = n(689938), h = n(397031);
 function p(e) {
     let {
         onOpenClips: t,
@@ -21,19 +21,19 @@ function p(e) {
         children: [
             (0, i.jsx)('div', {
                 className: h.thumbnailStackContainer,
-                children: (0, i.jsx)(u.Z, {})
+                children: (0, i.jsx)(d.Z, {})
             }),
             (0, i.jsx)(s.Heading, {
                 className: h.header,
                 color: 'header-primary',
                 variant: 'heading-md/extrabold',
-                children: d.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: n.newClipIds.length })
+                children: u.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: n.newClipIds.length })
             }),
             (0, i.jsx)(s.Text, {
                 color: 'text-normal',
                 className: h.__invalid_content,
                 variant: 'text-sm/medium',
-                children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_BODY.format({ applicationName: n.applicationName })
+                children: u.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_BODY.format({ applicationName: n.applicationName })
             }),
             (0, i.jsxs)('div', {
                 className: h.buttonsContainer,
@@ -44,12 +44,12 @@ function p(e) {
                         onClick: function () {
                             (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
                         },
-                        children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
+                        children: u.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
                     }),
                     (0, i.jsx)(s.Button, {
                         color: s.Button.Colors.BRAND,
                         onClick: t,
-                        children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA
+                        children: u.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA
                     })
                 ]
             })

@@ -3,9 +3,9 @@ n.d(t, {
         return E;
     }
 }), n(47120), n(757143);
-var i = n(302454), a = n.n(i), l = n(969812), s = n(904245), r = n(367907), o = n(339085), c = n(222677), u = n(995774), d = n(695346), h = n(375954), p = n(981631);
+var i = n(302454), a = n.n(i), l = n(969812), s = n(904245), r = n(367907), o = n(339085), c = n(222677), d = n(995774), u = n(695346), h = n(375954), p = n(981631);
 let m = /\\([*?+/])/g, _ = {
-        tts: { action: () => ({ tts: d.OW.getSetting() }) },
+        tts: { action: () => ({ tts: u.OW.getSetting() }) },
         me: { action: e => ({ content: '_'.concat(e, '_') }) },
         tableflip: { action: e => ({ content: ''.concat(e, ' (\u256F\xB0\u25A1\xB0)\u256F\uFE35 \u253B\u2501\u253B').trim() }) },
         unflip: { action: e => ({ content: ''.concat(e, ' \u252C\u2500\u252Cノ( º _ ºノ)').trim() }) },
@@ -31,7 +31,7 @@ let m = /\\([*?+/])/g, _ = {
                     return;
                 let l = o.Z.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
                 if (null != l)
-                    return (0, c.rU)(i.id, a.id, (0, u.g1)(l)), { content: '' };
+                    return (0, c.rU)(i.id, a.id, (0, d.g1)(l)), { content: '' };
             }
         },
         searchReplace: {
@@ -67,7 +67,7 @@ function E(e, t) {
                 return f(i, a, e, t);
             continue;
         }
-        if (d.dN.getSetting() && '/' === e[0]) {
+        if (u.dN.getSetting() && '/' === e[0]) {
             let n = e.split(' ');
             if (i === n[0].slice(1) && null != a.action)
                 return f(i, a, n.slice(1).join(' '), t);

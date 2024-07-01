@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120), n(411104);
 var i = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), a = n(442837), s = n(846519), o = n(481060), c = n(475179), u = n(239091), d = n(146773), h = n(888651), p = n(619915), _ = n(339340), f = n(201895), m = n(718589), g = n(933557), C = n(557135), I = n(873696), E = n(446226), N = n(305325), x = n(281956), S = n(66999), Z = n(554747), v = n(506936), T = n(574176), L = n(359110), A = n(155409), b = n(695346), M = n(592125), R = n(430824), y = n(607744), O = n(496675), P = n(306680), j = n(9156), D = n(979651), U = n(934415), G = n(98597), w = n(648501), k = n(473403), B = n(830993), V = n(653577), H = n(207055), F = n(981631), W = n(647086), Y = n(689938), z = n(47705);
+var l = n(120356), r = n.n(l), a = n(442837), s = n(846519), o = n(481060), c = n(475179), u = n(239091), d = n(146773), h = n(888651), p = n(619915), _ = n(339340), f = n(201895), g = n(718589), m = n(933557), C = n(557135), I = n(873696), E = n(446226), N = n(305325), x = n(281956), S = n(66999), Z = n(554747), v = n(506936), T = n(574176), L = n(359110), A = n(155409), b = n(695346), M = n(592125), R = n(430824), y = n(607744), O = n(496675), P = n(306680), j = n(9156), D = n(979651), U = n(934415), G = n(98597), w = n(648501), k = n(473403), B = n(830993), V = n(653577), H = n(207055), F = n(981631), W = n(647086), Y = n(689938), z = n(47705);
 function K(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -96,7 +96,7 @@ class q extends G.ZP {
                 connectChannelDropTarget: h,
                 connectChannelDragSource: p,
                 connectUserDropTarget: _,
-                connectDragPreview: g,
+                connectDragPreview: m,
                 canReorderChannel: C,
                 canMoveMembers: I,
                 showTutorial: E,
@@ -146,7 +146,7 @@ class q extends G.ZP {
                                         onContextMenu: e => {
                                             this.handleContextMenu(e), null == d || d();
                                         },
-                                        connectDragPreview: g,
+                                        connectDragPreview: m,
                                         isFavoriteSuggestion: Z,
                                         'aria-label': (0, f.ZP)({
                                             channel: e,
@@ -156,7 +156,7 @@ class q extends G.ZP {
                                             embeddedActivitiesCount: x.length,
                                             isSubscriptionGated: S
                                         }),
-                                        'aria-describedby': (0, m.Z)({
+                                        'aria-describedby': (0, g.Z)({
                                             channel: e,
                                             embeddedApps: x
                                         }),
@@ -344,7 +344,7 @@ function J(e) {
                 bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
-        }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), m = (0, g.ZP)(n), C = (0, Z.qY)(n.id), {
+        }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
             isSubscriptionGated: I,
             needSubscriptionToAccess: N
         } = (0, S.Z)(n.id), x = (0, E.Z)(), v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
@@ -364,7 +364,7 @@ function J(e) {
             enableActivities: !0
         }), U = L && null == R;
     return (0, i.jsx)(Q, {
-        channelName: m,
+        channelName: g,
         embeddedApps: f,
         embeddedActivityType: F.IIU.PLAYING,
         video: _,

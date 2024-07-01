@@ -14,7 +14,7 @@ function c(e) {
     return (0, i.jsxs)('header', {
         className: o.searchHeader,
         children: [
-            (0, i.jsx)(u, { ...e }),
+            (0, i.jsx)(d, { ...e }),
             (0, i.jsxs)(a.TabBar, {
                 orientation: 'horizontal',
                 className: o.searchHeaderTabList,
@@ -38,7 +38,7 @@ function c(e) {
         ]
     });
 }
-function u(e) {
+function d(e) {
     let t;
     let {
         isSearching: n,
@@ -64,16 +64,16 @@ function u(e) {
                     className: o.totalResultsWrapper,
                     ...n,
                     children: [
-                        (0, i.jsx)(d, { ...e }),
+                        (0, i.jsx)(u, { ...e }),
                         t
                     ]
                 })
-            }) : (0, i.jsx)(d, { ...e }),
+            }) : (0, i.jsx)(u, { ...e }),
             c ? null : t
         ]
     });
 }
-function d(e) {
+function u(e) {
     let {
         isSearching: t,
         isIndexing: n,

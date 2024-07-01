@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(481060), c = n(100527), u = n(906732), d = n(150039), h = n(171368), p = n(271383), m = n(430824), _ = n(594174), f = n(514342), E = n(502568), C = n(602623), g = n(251625), I = n(823379), x = n(981631), T = n(228168), N = n(689938), v = n(743630);
+var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(481060), c = n(100527), d = n(906732), u = n(150039), h = n(171368), p = n(271383), m = n(430824), _ = n(594174), f = n(514342), E = n(502568), C = n(602623), g = n(251625), I = n(823379), x = n(981631), T = n(228168), N = n(689938), v = n(743630);
 function S(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -87,7 +87,7 @@ class Z {
     }
 }
 function A(e) {
-    let {channel: t} = e, n = t.getRecipientId(), l = (0, d.gc)(n), s = Array(l.length).fill(null), {analyticsLocations: h} = (0, u.ZP)(c.Z.AKA), p = function (e) {
+    let {channel: t} = e, n = t.getRecipientId(), l = (0, u.gc)(n), s = Array(l.length).fill(null), {analyticsLocations: h} = (0, d.ZP)(c.Z.AKA), p = function (e) {
             let {
                     userId: t,
                     channelId: n,
@@ -109,7 +109,7 @@ function A(e) {
             analyticsLocations: h,
             channelId: t.id
         });
-    return 0 === p.getNicknameGuildPairs().length && 0 === l.length ? (0, i.jsx)('div', { className: v.spacer }) : (0, i.jsxs)(u.Gt, {
+    return 0 === p.getNicknameGuildPairs().length && 0 === l.length ? (0, i.jsx)('div', { className: v.spacer }) : (0, i.jsxs)(d.Gt, {
         value: h,
         children: [
             (0, i.jsx)(E.iz, {}),

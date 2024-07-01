@@ -7,8 +7,8 @@ t.Z = function (e) {
             color: n = r.Z.colors.WHITE,
             quest: a,
             isInventory: I
-        } = e, T = (0, l.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = 100 * h, f = (0, _.r)(a);
-    return f && !I ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
+        } = e, T = (0, l.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = 100 * h, p = (0, _.r)(a);
+    return p && !I ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
         className: s()(m.wrapper, t),
         style: { color: n.css },
         children: [
@@ -36,7 +36,7 @@ t.Z = function (e) {
                     style: { width: ''.concat(N, '%') }
                 })
             }),
-            f && (0, i.jsx)(E.Z, { isInventory: I })
+            p && (0, i.jsx)(E.Z, { isInventory: I })
         ]
     });
 };

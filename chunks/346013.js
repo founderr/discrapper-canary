@@ -3,14 +3,14 @@ n.d(t, {
         return y;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(772848), d = n(831209), u = n(399606), _ = n(481060), E = n(607070), m = n(100527), I = n(367907), T = n(1585), h = n(841762), N = n(336197), f = n(406432), p = n(348238), C = n(38267), g = n(484459), S = n(103575), A = n(695346), x = n(271383), O = n(594174), R = n(768581), M = n(900849), v = n(506071), L = n(495114), Z = n(170140), P = n(981631), b = n(959517), D = n(689938), j = n(84427), U = n(527455);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(772848), d = n(831209), u = n(399606), _ = n(481060), E = n(607070), m = n(100527), I = n(367907), T = n(1585), h = n(841762), N = n(336197), p = n(406432), f = n(348238), C = n(38267), g = n(484459), S = n(103575), A = n(695346), x = n(271383), O = n(594174), R = n(768581), M = n(900849), v = n(506071), L = n(495114), Z = n(170140), P = n(981631), b = n(959517), D = n(689938), j = n(84427), U = n(527455);
 function y(e) {
     var t, n, s;
     let {
             embedUrl: r,
             message: y,
             channel: B
-        } = e, k = (0, Z.J)(r, y), {setPopout: G} = (0, C.Z)(y.id, b.d$), F = (0, p.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, z] = a.useState((null == k ? void 0 : k.coverImage) == null), K = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
+        } = e, k = (0, Z.J)(r, y), {setPopout: G} = (0, C.Z)(y.id, b.d$), F = (0, f.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, z] = a.useState((null == k ? void 0 : k.coverImage) == null), K = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, u.e7)([
             x.ZP,
             O.default
         ], () => {
@@ -62,7 +62,7 @@ function y(e) {
         }), eo = null === (n = k.user) || void 0 === n ? void 0 : n.getAvatarURL(k.guildId, 40, ee), ec = () => {
             if (!$.enabled)
                 et(e => !e);
-        }, ed = k.coverImage, eu = null != ed && (0, f.d$)(ed);
+        }, ed = k.coverImage, eu = null != ed && (0, p.d$)(ed);
     return (0, i.jsxs)('div', {
         className: j.postPreviewContainer,
         children: [

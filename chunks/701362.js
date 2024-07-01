@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(717881), u = n(58540), d = n(850827), h = n(258609), p = n(199902), m = n(314897), _ = n(430824), f = n(496675), E = n(158776), C = n(979651), g = n(387204), I = n(626135), x = n(382182), T = n(687516), N = n(718805), v = n(871118), S = n(981631), Z = n(689938), A = n(143046);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(717881), d = n(58540), u = n(850827), h = n(258609), p = n(199902), m = n(314897), _ = n(430824), f = n(496675), E = n(158776), C = n(979651), g = n(387204), I = n(626135), x = n(382182), T = n(687516), N = n(718805), v = n(871118), S = n(981631), Z = n(689938), A = n(143046);
 class M extends a.PureComponent {
     componentDidMount() {
         let {
@@ -76,7 +76,7 @@ class M extends a.PureComponent {
                                         section: S.jXE.STREAM_VIEWER_POPOUT
                                     }
                                 }
-                            }) : (0, i.jsx)(d.Z, {
+                            }) : (0, i.jsx)(u.Z, {
                                 type: c.P.STREAM_PREVIEW,
                                 applicationStream: n,
                                 user: t,
@@ -107,18 +107,18 @@ function b(e) {
             _.Z,
             f.Z,
             h.Z
-        ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({ [n.guild_id]: [t.id] }), [
+        ], () => (0, x.p9)(n, C.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), u = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), g = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({ [n.guild_id]: [t.id] }), [
             n.guild_id,
             t.id
         ]);
-    return (0, u.$)(v), (0, i.jsx)(M, {
+    return (0, d.$)(v), (0, i.jsx)(M, {
         ...l,
         canWatch: s,
         unavailableReason: o,
         user: t,
         streamApplication: I,
         stream: c,
-        activeStream: d,
+        activeStream: u,
         currentUserId: g,
         activity: N
     });

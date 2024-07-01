@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), l = n(758713), s = n(442837), r = n(481060), o = n(620662), c = n(841784), u = n(420660), d = n(429589), h = n(757182), p = n(706454), m = n(374129), _ = n(639351), f = n(823379), E = n(192918), C = n(22211), g = n(561308), I = n(919394), x = n(438226), T = n(206295), N = n(91140), v = n(297781), S = n(591853), Z = n(265048), A = n(981631), M = n(689938);
+var i = n(735250), a = n(470079), l = n(758713), s = n(442837), r = n(481060), o = n(620662), c = n(841784), d = n(420660), u = n(429589), h = n(757182), p = n(706454), m = n(374129), _ = n(639351), f = n(823379), E = n(192918), C = n(22211), g = n(561308), I = n(919394), x = n(438226), T = n(206295), N = n(91140), v = n(297781), S = n(591853), Z = n(265048), A = n(981631), M = n(689938);
 let b = {
     [l.z.DESKTOP]: null,
     [l.z.LINUX]: null,
@@ -97,7 +97,7 @@ t.Z = e => {
             userDescription: M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
             entry: n,
             stream: w
-        }), q = (0, o.Z)(O, A.xjy.JOIN) || (0, c.Z)(O) ? (0, i.jsx)(d.Z, {
+        }), q = (0, o.Z)(O, A.xjy.JOIN) || (0, c.Z)(O) ? (0, i.jsx)(u.Z, {
             activity: O,
             user: j,
             ButtonComponent: e => (0, i.jsx)(S.Ll, {
@@ -106,7 +106,7 @@ t.Z = e => {
             })
         }) : null, X = [
             q,
-            (0, u.Z)(O) ? (0, i.jsx)(h.Z, {
+            (0, d.Z)(O) ? (0, i.jsx)(h.Z, {
                 activity: O,
                 ButtonComponent: e => (0, i.jsx)(S.Ll, {
                     IconComponent: r.EyeIcon,

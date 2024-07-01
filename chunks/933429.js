@@ -3,7 +3,7 @@ n.d(t, {
         return ej;
     }
 }), n(47120);
-var i, a, s, l, r = n(913527), o = n.n(r), c = n(442837), d = n(743426), u = n(704215), _ = n(433517), E = n(570140), m = n(579806), I = n(726542), T = n(812206), h = n(223892), N = n(674525), f = n(605236), p = n(524347), C = n(853197), g = n(353926), S = n(594190), A = n(38618), x = n(569545), O = n(615365), R = n(528011), M = n(487419), v = n(715903), L = n(223606), Z = n(150340), P = n(160404), b = n(41776), D = n(347649), j = n(332473), U = n(30684), y = n(616106), B = n(995598), k = n(774276), G = n(518638), F = n(1844), w = n(621615), V = n(417626), H = n(569984), Y = n(523255), W = n(768419), z = n(590415), K = n(581883), Q = n(199902), q = n(314897), X = n(881998), J = n(463395), $ = n(592125), ee = n(553795), et = n(427123), en = n(271383), ei = n(430824), ea = n(131951), es = n(292959), el = n(496675), er = n(571474), eo = n(19780), ec = n(944486), ed = n(914010), eu = n(215427), e_ = n(246946), eE = n(558724), em = n(23434), eI = n(594174), eT = n(979651), eh = n(351402), eN = n(853872), ef = n(78839), ep = n(295226), eC = n(580130), eg = n(695103), eS = n(358085), eA = n(74538), ex = n(922156), eO = n(436181), eR = n(941128), eM = n(981631), ev = n(188785), eL = n(702512), eZ = n(474936), eP = n(46140), eb = n(231338), eD = n(65154);
+var i, a, s, l, r = n(913527), o = n.n(r), c = n(442837), d = n(743426), u = n(704215), _ = n(433517), E = n(570140), m = n(579806), I = n(726542), T = n(812206), h = n(223892), N = n(674525), p = n(605236), f = n(524347), C = n(853197), g = n(353926), S = n(594190), A = n(38618), x = n(569545), O = n(615365), R = n(528011), M = n(487419), v = n(715903), L = n(223606), Z = n(150340), P = n(160404), b = n(41776), D = n(347649), j = n(332473), U = n(30684), y = n(616106), B = n(995598), k = n(774276), G = n(518638), F = n(1844), w = n(621615), V = n(417626), H = n(569984), Y = n(523255), W = n(768419), z = n(590415), K = n(581883), Q = n(199902), q = n(314897), X = n(881998), J = n(463395), $ = n(592125), ee = n(553795), et = n(427123), en = n(271383), ei = n(430824), ea = n(131951), es = n(292959), el = n(496675), er = n(571474), eo = n(19780), ec = n(944486), ed = n(914010), eu = n(215427), e_ = n(246946), eE = n(558724), em = n(23434), eI = n(594174), eT = n(979651), eh = n(351402), eN = n(853872), ep = n(78839), ef = n(295226), eC = n(580130), eg = n(695103), eS = n(358085), eA = n(74538), ex = n(922156), eO = n(436181), eR = n(941128), eM = n(981631), ev = n(188785), eL = n(702512), eZ = n(474936), eP = n(46140), eb = n(231338), eD = n(65154);
 let ej = {
         [eM.kVF.LOCALIZED_PRICING]: u.z.NAGBAR_NOTICE_LOCALIZED_PRICING,
         [eM.kVF.DOWNLOAD_NAG]: u.z.NAGBAR_NOTICE_DOWNLOAD,
@@ -78,7 +78,7 @@ function eV(e) {
         return t ? null : ej[e];
     }(e);
     if (null != t)
-        return (0, f.un)(t);
+        return (0, p.un)(t);
     let n = eU[e];
     if (null != n) {
         let t = function (e) {
@@ -354,8 +354,8 @@ let eH = [
             metadata: () => ({ dismissUntil: o()().add(5, 'days').toDate() })
         },
         [eM.kVF.CONNECT_PLAYSTATION]: { predicate: () => ee.Z.isSuggestedAccountType(eM.ABu.PLAYSTATION) && null == ee.Z.getAccount(null, eM.ABu.PLAYSTATION) && !eV(eM.kVF.CONNECT_PLAYSTATION) },
-        [eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => ep.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
-        [eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => ep.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
+        [eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => ef.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
+        [eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => ef.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
         [eM.kVF.PREMIUM_UNCANCEL]: {
             predicate: e => {
                 let {
@@ -478,19 +478,19 @@ let eH = [
             }
         },
         [eM.kVF.DROPS_GO_LIVE_BANNER]: {
-            predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.Tn)(eL.X2.FORTNITE),
+            predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, p.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, p.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.Tn)(eL.X2.FORTNITE),
             metadata: () => ({ partnerGame: eL.X2.FORTNITE })
         },
         [eM.kVF.DROPS_PROGRESS_INTERRUPTION]: {
-            predicate: () => p.Z.isCurrentQuestInterrupted && null != p.Z.currentDropQuestGameTitle,
+            predicate: () => f.Z.isCurrentQuestInterrupted && null != f.Z.currentDropQuestGameTitle,
             metadata: () => ({
-                gameTitle: p.Z.currentDropQuestGameTitle,
+                gameTitle: f.Z.currentDropQuestGameTitle,
                 reloadCallback: () => window.location.reload(!0)
             })
         },
         [eM.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, j.e)() && !eV(eM.kVF.POMELO_ELIGIBLE) && !(0, D.ov)() },
         [eM.kVF.DROPS_ENDED_INCOMPLETE]: {
-            predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.FL)(eL.X2.FORTNITE),
+            predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, p.un)(u.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, p.un)(u.z.QUEST_2_COMPLETION_TOOLTIP) && (0, C.FL)(eL.X2.FORTNITE),
             metadata: () => ({ partnerGame: eL.X2.FORTNITE })
         },
         [eM.kVF.UU_MIGRATION]: { predicate: () => (0, j.e)() && !eV(eM.kVF.UU_MIGRATION) && (0, D.ov)() },
@@ -549,7 +549,7 @@ function ez() {
     let e = eI.default.getCurrentUser();
     if (null == e)
         return !1;
-    let t = ef.ZP.getPremiumSubscription(), n = eh.Z.isLocalizedPromoEnabled, i = ed.Z.getGuildId(), a = ec.Z.getVoiceChannelId(), s = null != a ? eT.Z.getVoiceStateForChannel(a) : null;
+    let t = ep.ZP.getPremiumSubscription(), n = eh.Z.isLocalizedPromoEnabled, i = ed.Z.getGuildId(), a = ec.Z.getVoiceChannelId(), s = null != a ? eT.Z.getVoiceStateForChannel(a) : null;
     for (let o of ev.a ? eY : eH) {
         if (null != eW[o]) {
             if (eW[o].predicate({
@@ -588,14 +588,14 @@ class eQ extends (i = c.ZP.Store) {
             et.Z,
             ed.Z,
             F.Z,
-            ep.Z,
+            ef.Z,
             X.Z,
             ee.Z,
             K.Z,
             M.Z,
             H.Z,
             Q.Z
-        ], ez), this.waitFor(eI.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, em.Z, W.Z, S.ZP, er.Z, ex.Z, eO.Z, eg.Z, es.Z, ef.ZP, eR.Z, et.Z, eN.Z, el.Z, F.Z, eC.Z, ep.Z, ee.Z, b.Z, p.Z, N.Z, V.Z, H.Z, Q.Z);
+        ], ez), this.waitFor(eI.default, eu.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, ed.Z, em.Z, W.Z, S.ZP, er.Z, ex.Z, eO.Z, eg.Z, es.Z, ep.ZP, eR.Z, et.Z, eN.Z, el.Z, F.Z, eC.Z, ef.Z, ee.Z, b.Z, f.Z, N.Z, V.Z, H.Z, Q.Z);
     }
     hasNotice() {
         return null != eG && null != eG.type;

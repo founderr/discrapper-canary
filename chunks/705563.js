@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(171368), r = n(650774), o = n(430824), c = n(496675), u = n(502568), d = n(709054), h = n(826581), p = n(246364), m = n(360328), _ = n(981631), f = n(689938), E = n(695572);
+var a = n(442837), l = n(481060), s = n(171368), r = n(650774), o = n(430824), c = n(496675), d = n(502568), u = n(709054), h = n(826581), p = n(246364), m = n(360328), _ = n(981631), f = n(689938), E = n(695572);
 function C(e) {
     let {
             channelId: t,
             showProfile: n = !1,
             showTrailingDivider: C = !1
-        } = e, g = d.default.cast(t), {
+        } = e, g = u.default.cast(t), {
             joinRequest: I,
             isModmin: x,
             guildId: T,
@@ -71,7 +71,7 @@ function C(e) {
                 size: l.ButtonSizes.SMALL,
                 children: f.Z.Messages.VIEW_PROFILE
             }),
-            C && (0, i.jsx)(u.ZP.Divider, {})
+            C && (0, i.jsx)(d.ZP.Divider, {})
         ]
     }) : null;
 }

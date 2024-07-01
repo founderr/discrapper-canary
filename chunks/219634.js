@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 }), n(47120), n(653041);
-var i = n(470079), a = n(149765), l = n(442837), s = n(902704), r = n(592125), o = n(720202), c = n(271383), u = n(700785), d = n(231338);
+var i = n(470079), a = n(149765), l = n(442837), s = n(902704), r = n(592125), o = n(720202), c = n(271383), d = n(700785), u = n(231338);
 let h = [], p = new Set();
 function m(e) {
     let {
@@ -37,11 +37,11 @@ function m(e) {
                 return p;
             let e = new Set();
             for (let t of C) {
-                let n = u.uB({
+                let n = d.uB({
                     user: t,
                     context: m
                 });
-                a.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
+                a.e$(n, u.Pl.VIEW_CHANNEL) && e.add(t);
             }
             return e;
         }, [

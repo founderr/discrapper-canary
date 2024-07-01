@@ -1,5 +1,5 @@
 n(724458), n(47120);
-var i, a, l, s, r = n(442837), o = n(570140), c = n(642047), u = n(189786), d = n(5192), h = n(594174), p = n(979651), m = n(938475), _ = n(981631), f = n(354459);
+var i, a, l, s, r = n(442837), o = n(570140), c = n(642047), d = n(189786), u = n(5192), h = n(594174), p = n(979651), m = n(938475), _ = n(981631), f = n(354459);
 let E = [], C = [], g = [], I = new c.Z(), x = new c.Z(), T = null;
 function N(e) {
     let t = I.delete(e), n = x.delete(e);
@@ -63,7 +63,7 @@ s = 'RTCConnectionDesyncStore', (l = 'displayName') in (a = v) ? Object.definePr
             let l = h.default.getUser(t);
             if (null == l)
                 return e;
-            let s = new u.Z({
+            let s = new d.Z({
                     userId: t,
                     channelId: i
                 }), r = (0, m.PH)(s, null != n ? n : _.ME, t);
@@ -73,7 +73,7 @@ s = 'RTCConnectionDesyncStore', (l = 'displayName') in (a = v) ? Object.definePr
                 user: l,
                 id: l.id,
                 streamId: null,
-                voiceState: new u.Z({
+                voiceState: new d.Z({
                     userId: t,
                     channelId: i
                 }),
@@ -82,7 +82,7 @@ s = 'RTCConnectionDesyncStore', (l = 'displayName') in (a = v) ? Object.definePr
                 lastSpoke: 0,
                 soundsharing: !1,
                 ringing: !1,
-                userNick: d.ZP.getName(n, i, l),
+                userNick: u.ZP.getName(n, i, l),
                 localVideoDisabled: !1
             };
             return x.set(t, o), !0;

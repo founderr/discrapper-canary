@@ -18,17 +18,17 @@ function r(e, t, n) {
             t,
             n,
             e
-        ]), u = i.useCallback((e, t, n) => {
+        ]), d = i.useCallback((e, t, n) => {
             r.current = (0, a.Z)(), o.current = Date.now(), c(t, n);
-        }, [c]), d = i.useCallback((e, t, n) => c(t, n), [c]), h = i.useCallback((e, t, n) => u(e, t, n), [u]);
+        }, [c]), u = i.useCallback((e, t, n) => c(t, n), [c]), h = i.useCallback((e, t, n) => d(e, t, n), [d]);
     return i.useMemo(() => ({
-        handleMouseDown: u,
-        handleMouseMove: d,
+        handleMouseDown: d,
+        handleMouseMove: u,
         handleMouseUp: s,
         handleMouseEnter: h
     }), [
-        u,
+        d,
         h,
-        d
+        u
     ]);
 }

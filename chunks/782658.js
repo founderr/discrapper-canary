@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), l = n(447543), r = n(410575), o = n(906732), c = n(924301), d = n(11868), u = n(413605), _ = n(451603), E = n(885714), m = n(314897), I = n(430824), T = n(701190), h = n(610699), N = n(313876), f = n(778333), p = n(949981), C = n(680668), g = n(143708), S = n(358595), A = n(563917), x = n(135845), O = n(981631);
+var i = n(735250), a = n(470079), s = n(442837), l = n(447543), r = n(410575), o = n(906732), c = n(924301), d = n(11868), u = n(413605), _ = n(451603), E = n(885714), m = n(314897), I = n(430824), T = n(701190), h = n(610699), N = n(313876), p = n(778333), f = n(949981), C = n(680668), g = n(143708), S = n(358595), A = n(563917), x = n(135845), O = n(981631);
 function R(e) {
     let {
             code: t,
@@ -67,7 +67,7 @@ function R(e) {
     default:
         switch ((0, u.VR)(L)) {
         case u.wx.GROUP_DM:
-            y = (0, i.jsx)(p.Z, {
+            y = (0, i.jsx)(f.Z, {
                 onTransitionToInviteChannel: j,
                 onAcceptInstantInvite: U,
                 currentUserId: b,
@@ -76,7 +76,7 @@ function R(e) {
             });
             break;
         case u.wx.FRIEND:
-            y = (0, i.jsx)(f.Z, {
+            y = (0, i.jsx)(p.Z, {
                 invite: L,
                 author: n,
                 getAcceptInviteContext: R

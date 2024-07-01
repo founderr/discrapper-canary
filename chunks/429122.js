@@ -60,13 +60,13 @@ t.ZP = l.memo(function (e) {
             guildId: p,
             selectedChannelId: _,
             selectedVoiceChannelId: f,
-            optInEnabled: m
+            optInEnabled: g
         } = e, {
-            hasDivider: g,
+            hasDivider: m,
             canHaveVoiceSummary: C
-        } = l.useMemo(() => (0, o.ie)(n, m, t), [
+        } = l.useMemo(() => (0, o.ie)(n, g, t), [
             n,
-            m,
+            g,
             t,
             c
         ]), I = l.useMemo(() => t === s.zm ? null : n.getCategoryFromSection(t), [
@@ -89,7 +89,7 @@ t.ZP = l.memo(function (e) {
             guildChannels: n,
             guildChannelsVersion: c
         });
-    let N = g ? (0, i.jsx)('div', { className: d.sectionDivider }) : null;
+    let N = m ? (0, i.jsx)('div', { className: d.sectionDivider }) : null;
     return C && 0 !== E.length ? (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {

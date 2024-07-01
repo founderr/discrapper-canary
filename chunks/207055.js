@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(846519), c = n(586902), u = n(317381), d = n(812206), h = n(835473), p = n(362721), m = n(574176), _ = n(106301), f = n(512384), E = n(470956), C = n(199902), g = n(314897), I = n(271383), x = n(131951), T = n(496675), N = n(158776), v = n(885110), S = n(797258), Z = n(606304), A = n(979651), M = n(805009), b = n(51144), R = n(649739), j = n(262317), L = n(981631), P = n(524484), O = n(298332);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(846519), c = n(586902), d = n(317381), u = n(812206), h = n(835473), p = n(362721), m = n(574176), _ = n(106301), f = n(512384), E = n(470956), C = n(199902), g = n(314897), I = n(271383), x = n(131951), T = n(496675), N = n(158776), v = n(885110), S = n(797258), Z = n(606304), A = n(979651), M = n(805009), b = n(51144), R = n(649739), j = n(262317), L = n(981631), P = n(524484), O = n(298332);
 let y = a.memo(e => {
     var t;
     let {
@@ -23,7 +23,7 @@ let y = a.memo(e => {
         ]), U = (0, r.e7)([Z.Z], () => Z.Z.isPrioritySpeaker(M)), w = (0, c.Z)({
             userId: M,
             checkSoundSharing: !0
-        }), B = (0, r.e7)([I.ZP], () => I.ZP.isGuestOrLurker(s.guild_id, M)), H = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(s.id).find(e => {
+        }), B = (0, r.e7)([I.ZP], () => I.ZP.isGuestOrLurker(s.guild_id, M)), H = (0, r.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForChannel(s.id).find(e => {
             let {userIds: t} = e;
             return t.has(M);
         }), [
@@ -32,7 +32,7 @@ let y = a.memo(e => {
         ]), G = (0, h.Z)(null != H ? [H.applicationId] : []), V = (0, R.Hr)('voice_users_eligibility_check', !1), F = (0, r.e7)([
             N.Z,
             v.Z
-        ], () => O ? v.Z.getActivities() : N.Z.getActivities(M, s.guild_id)).find(e => null != e.application_id && e.type === L.IIU.PLAYING), W = (0, r.e7)([d.Z], () => (null == F ? void 0 : F.application_id) != null ? d.Z.getApplication(null == F ? void 0 : F.application_id) : void 0);
+        ], () => O ? v.Z.getActivities() : N.Z.getActivities(M, s.guild_id)).find(e => null != e.application_id && e.type === L.IIU.PLAYING), W = (0, r.e7)([u.Z], () => (null == F ? void 0 : F.application_id) != null ? u.Z.getApplication(null == F ? void 0 : F.application_id) : void 0);
     null != W && R.ZP.trackExposure({ location: 'voice_users' });
     let [z, Y] = (0, r.Wu)([C.Z], () => [
             C.Z.getStreamForUser(M, s.getGuildId()),
@@ -82,8 +82,8 @@ t.Z = function (e) {
             allowDragging: n = !0,
             channel: l,
             voiceStates: c,
-            collapsed: u,
-            collapsedMax: d = 6,
+            collapsed: d,
+            collapsedMax: u = 6,
             tabIndex: p,
             location: m,
             numAudience: _,
@@ -102,7 +102,7 @@ t.Z = function (e) {
             t,
             x
         ]), w = (0, r.Wu)([N.Z], () => {
-            if (u)
+            if (d)
                 return [];
             let e = new Set();
             return null == b || b.forEach(t => {
@@ -116,7 +116,7 @@ t.Z = function (e) {
     let B = (() => {
         if (null == b || 0 === b.length)
             return null;
-        let e = (u && b.length > d + 1 ? b.slice(0, d) : b).map(e => {
+        let e = (d && b.length > u + 1 ? b.slice(0, u) : b).map(e => {
             var t;
             let {
                 user: a,
@@ -134,7 +134,7 @@ t.Z = function (e) {
                 serverDeaf: r.deaf,
                 sessionId: null !== (t = r.sessionId) && void 0 !== t ? t : '',
                 channel: l,
-                collapsed: u,
+                collapsed: d,
                 canDrag: n && T.Z.can(L.Plq.MOVE_MEMBERS, l),
                 showPreview: k,
                 hidePreview: U,
@@ -145,16 +145,16 @@ t.Z = function (e) {
             }, a.id);
         });
         return null != _ && _ > 0 ? e.push((0, i.jsx)(j.ul, {
-            collapsed: u,
+            collapsed: d,
             numAudience: _
-        })) : u && b.length > d + 1 && e.push((0, i.jsx)(j.XX, { numUsers: b.length - d })), e;
+        })) : d && b.length > u + 1 && e.push((0, i.jsx)(j.XX, { numUsers: b.length - u })), e;
     })();
     return null == B && null == I ? null : (0, i.jsxs)(M.e, {
         className: s()(C, O.list, {
-            [O.collapsed]: u,
+            [O.collapsed]: d,
             [O.withGuildIcon]: f
         }),
-        collapsed: u,
+        collapsed: d,
         children: [
             B,
             I

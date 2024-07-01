@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(374470), o = n(481060), c = n(239091), u = n(294218), d = n(592125), h = n(689938), p = n(932688);
+var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(374470), o = n(481060), c = n(239091), d = n(294218), u = n(592125), h = n(689938), p = n(932688);
 function m(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -23,7 +23,7 @@ class _ extends a.PureComponent {
             } = this.props, r = s().find(e, e => e.isSearchHit);
         if (null == r)
             return null;
-        let c = d.Z.getChannel(r.channel_id);
+        let c = u.Z.getChannel(r.channel_id);
         if (null == c)
             return null;
         let m = 'search-result-'.concat(r.id);
@@ -47,7 +47,7 @@ class _ extends a.PureComponent {
                         children: (0, i.jsx)('div', {
                             ref: this.hitRef,
                             className: p.message,
-                            children: (0, i.jsx)(u.Z, {
+                            children: (0, i.jsx)(d.Z, {
                                 id: m,
                                 message: r,
                                 channel: c,
@@ -73,7 +73,7 @@ class _ extends a.PureComponent {
     }
     constructor(...e) {
         super(...e), m(this, 'containerRef', a.createRef()), m(this, 'hitRef', a.createRef()), m(this, 'handleContextMenu', (e, t) => {
-            let a = d.Z.getChannel(t.channel_id);
+            let a = u.Z.getChannel(t.channel_id);
             if (null != a)
                 e.stopPropagation(), (0, c.jW)(e, async () => {
                     let {default: e} = await n.e('53809').then(n.bind(n, 858341));

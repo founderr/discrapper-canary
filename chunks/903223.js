@@ -1,8 +1,8 @@
-var i, a, l, s, r = n(392711), o = n.n(r), c = n(442837), u = n(570140), d = n(430824);
+var i, a, l, s, r = n(392711), o = n.n(r), c = n(442837), d = n(570140), u = n(430824);
 let h = null, p = {};
 class m extends (s = c.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z);
+        this.waitFor(u.Z);
     }
     getOptimalRegion() {
         var e;
@@ -33,7 +33,7 @@ l = 'RegionStore', (a = 'displayName') in (i = m) ? Object.defineProperty(i, a, 
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : i[a] = l, t.Z = new m(u.Z, {
+}) : i[a] = l, t.Z = new m(d.Z, {
     LOAD_REGIONS: function (e) {
         let t = o().sortBy(e.regions, e => e.name);
         null != e.guildId ? p[e.guildId] = t : h = t;

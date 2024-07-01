@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     }
 }), n(653041);
-var i = n(735250), a = n(470079), l = n(392711), s = n(442837), r = n(481060), o = n(481051), c = n(871499), u = n(306680), d = n(111583), h = n(459273), p = n(566620), m = n(317381), _ = n(918559), f = n(981631), E = n(689938), C = n(856230);
+var i = n(735250), a = n(470079), l = n(392711), s = n(442837), r = n(481060), o = n(481051), c = n(871499), d = n(306680), u = n(111583), h = n(459273), p = n(566620), m = n(317381), _ = n(918559), f = n(981631), E = n(689938), C = n(856230);
 function g(e) {
     let {
             channelId: t,
@@ -16,12 +16,12 @@ function g(e) {
             unreadCount: N,
             mentionCount: v
         } = function (e) {
-            let t = (0, s.e7)([d.Z], () => !(0, l.isEmpty)(d.Z.getTypingUsers(e)), [e]), {
+            let t = (0, s.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]), {
                     unreadCount: n,
                     mentionCount: i
-                } = (0, s.cj)([u.ZP], () => ({
-                    unreadCount: u.ZP.getUnreadCount(e),
-                    mentionCount: u.ZP.getMentionCount(e)
+                } = (0, s.cj)([d.ZP], () => ({
+                    unreadCount: d.ZP.getUnreadCount(e),
+                    mentionCount: d.ZP.getMentionCount(e)
                 }), [e]);
             return {
                 unreadCount: n,

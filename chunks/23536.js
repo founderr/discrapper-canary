@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(780384), r = n(481060), o = n(332148), c = n(796798), u = n(198620), d = n(624453), h = n(306680), p = n(494404), m = n(257559), _ = n(689938);
+var i = n(735250), a = n(470079), l = n(442837), s = n(780384), r = n(481060), o = n(332148), c = n(796798), d = n(198620), u = n(624453), h = n(306680), p = n(494404), m = n(257559), _ = n(689938);
 let f = [];
 function E(e) {
     let {
@@ -12,15 +12,15 @@ function E(e) {
         } = e, {
             messages: C,
             loading: g
-        } = (0, l.cj)([d.Z], () => {
-            let e = d.Z.getPinnedMessages(t.id), n = null != e ? e.messages : f;
+        } = (0, l.cj)([u.Z], () => {
+            let e = u.Z.getPinnedMessages(t.id), n = null != e ? e.messages : f;
             return {
                 messages: n,
                 loading: null == n || null != e && e.loading
             };
         }), I = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
     return a.useEffect(() => {
-        c.l.getCurrentConfig({ location: 'pins' }).enabled && C.some(u.k5) && o.Z.fetchPins(t.id, !0);
+        c.l.getCurrentConfig({ location: 'pins' }).enabled && C.some(d.k5) && o.Z.fetchPins(t.id, !0);
     }, []), a.useEffect(() => {
         I && o.Z.ackPins(t.id);
     }, [

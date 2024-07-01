@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(91192), a = n(442837), s = n(433517), o = n(481060), c = n(339149), u = n(327943), d = n(864682), h = n(67212), p = n(770471), _ = n(292584), f = n(835865), m = n(456541), g = n(143614), C = n(544803), I = n(899740), E = n(155409), N = n(699516), x = n(944486), S = n(594174), Z = n(295226), v = n(774343), T = n(417363), L = n(941128), A = n(436088), b = n(880080), M = n(780570), R = n(557177), y = n(278464), O = n(682662), P = n(662146), j = n(674552), D = n(981631), U = n(474936), G = n(871465), w = n(689938), k = n(496540);
+var i = n(735250), l = n(470079), r = n(91192), a = n(442837), s = n(433517), o = n(481060), c = n(339149), u = n(327943), d = n(864682), h = n(67212), p = n(770471), _ = n(292584), f = n(835865), g = n(456541), m = n(143614), C = n(544803), I = n(899740), E = n(155409), N = n(699516), x = n(944486), S = n(594174), Z = n(295226), v = n(774343), T = n(417363), L = n(941128), A = n(436088), b = n(880080), M = n(780570), R = n(557177), y = n(278464), O = n(682662), P = n(662146), j = n(674552), D = n(981631), U = n(474936), G = n(871465), w = n(689938), k = n(496540);
 let B = {
     origin: {
         x: -16,
@@ -23,8 +23,8 @@ function V(e) {
             badge: h,
             link: _,
             showProgressBadge: f
-        } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, M] = l.useState(0), [y, U] = l.useState(!1), {canViewBroadcasts: V} = p.Z.useExperiment({ location: 'home_button_no_track' }, { autoTrackExposure: !1 }), H = (0, g.Z)(), F = H.length > 0 && V;
-    (0, m.P)();
+        } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, M] = l.useState(0), [y, U] = l.useState(!1), {canViewBroadcasts: V} = p.Z.useExperiment({ location: 'home_button_no_track' }, { autoTrackExposure: !1 }), H = (0, m.Z)(), F = H.length > 0 && V;
+    (0, g.P)();
     let W = (0, r.Ie)('home'), Y = () => {
             T(null), M(0), clearTimeout(v);
         };
@@ -132,7 +132,7 @@ function H() {
         } = (0, a.cj)([Z.Z], () => ({
             unviewedTrialCount: Z.Z.getUnacknowledgedOffers(s).length,
             unviewedDiscountCount: Z.Z.getUnacknowledgedDiscountOffers().length
-        })), d = o + u, p = (0, a.e7)([S.default], () => S.default.getCurrentUser()), m = (0, I.T)(), g = r + d + m, C = g === d && d > 0 && r + m === 0;
+        })), d = o + u, p = (0, a.e7)([S.default], () => S.default.getCurrentUser()), g = (0, I.T)(), m = r + d + g, C = m === d && d > 0 && r + g === 0;
     l.useEffect(() => {
         n.length > 0 && (0, h.E7)();
     }, [n]), (0, f.Z)();
@@ -141,7 +141,7 @@ function H() {
         selected: e,
         user: p,
         selectedChannelId: x.Z.getChannelId(D.ME),
-        badge: g,
+        badge: m,
         link: E,
         showProgressBadge: t
     });

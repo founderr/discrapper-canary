@@ -14,21 +14,21 @@ function s(e) {
             onClick: o,
             ...c
         } = e, {
-            Component: u,
-            events: d
+            Component: d,
+            events: u
         } = (0, a.s)();
     return (0, i.jsx)(l.d, {
         isActive: n,
         color: t,
-        iconComponent: u,
+        iconComponent: d,
         onMouseEnter: e => {
-            null == s || s(e), d.onMouseEnter();
+            null == s || s(e), u.onMouseEnter();
         },
         onMouseLeave: e => {
-            null == r || r(e), d.onMouseLeave();
+            null == r || r(e), u.onMouseLeave();
         },
         onClick: e => {
-            null == o || o(e), d.onClick();
+            null == o || o(e), u.onClick();
         },
         ...c
     });

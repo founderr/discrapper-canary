@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     }
 }), n(789020), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(954955), o = n.n(r), c = n(507274), d = n(481060), u = n(130402), _ = n(466794), E = n(659215), m = n(222677), I = n(995774), T = n(931651), h = n(594174), N = n(630388), f = n(74538), p = n(566006), C = n(981631), g = n(185923), S = n(474936), A = n(689938), x = n(704963), O = n(667671);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(954955), o = n.n(r), c = n(507274), d = n(481060), u = n(130402), _ = n(466794), E = n(659215), m = n(222677), I = n(995774), T = n(931651), h = n(594174), N = n(630388), p = n(74538), f = n(566006), C = n(981631), g = n(185923), S = n(474936), A = n(689938), x = n(704963), O = n(667671);
 function R(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -20,10 +20,10 @@ class M extends a.Component {
                 className: n,
                 children: a,
                 useChatFontScaling: s
-            } = this.props, {isReactionPickerActive: r} = this.state, o = t.state === C.yb.SENDING, c = e === p.O.BURST;
+            } = this.props, {isReactionPickerActive: r} = this.state, o = t.state === C.yb.SENDING, c = e === f.O.BURST;
         if (o || (0, N.yE)(t.flags, C.iLy.EPHEMERAL))
             return null;
-        let E = h.default.getCurrentUser(), m = (0, f.I5)(E), I = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
+        let E = h.default.getCurrentUser(), m = (0, p.I5)(E), I = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
         !m && c && (I = (0, i.jsx)(_.X, { tooltipText: A.Z.Messages.ADD_BURST_REACTION }));
         let T = s ? O : x;
         return (0, i.jsx)(d.Popout, {
@@ -86,7 +86,7 @@ class M extends a.Component {
             } = this.props;
             e.stopPropagation();
             let i = h.default.getCurrentUser();
-            t === p.O.BURST && !(0, f.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
+            t === f.O.BURST && !(0, p.I5)(i) && (0, E.openBurstReactionsUpsellModal)({
                 analytics: {
                     type: S.cd.BURST_REACTION_UPSELL,
                     page: null != n.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
@@ -101,7 +101,7 @@ class M extends a.Component {
                     message: s
                 } = this.props, l = {
                     openPopoutType: 'message_reaction_emoji_picker',
-                    ...n === p.O.BURST && {
+                    ...n === f.O.BURST && {
                         openPopoutType: 'message_super_reaction_emoji_picker',
                         page: null != a.getGuildId() ? C.ZY5.GUILD_CHANNEL : C.ZY5.DM_CHANNEL,
                         section: (0, I.s4)(a),

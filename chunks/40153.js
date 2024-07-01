@@ -6,8 +6,8 @@ n.d(t, {
         return N;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(290843), u = n(749210), d = n(626135), h = n(727258), p = n(662146), _ = n(981631), f = n(689938), m = n(798314);
-function g(e) {
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(290843), u = n(749210), d = n(626135), h = n(727258), p = n(662146), _ = n(981631), f = n(689938), g = n(798314);
+function m(e) {
     let t = l.useRef(null), n = e.map(e => e[0]);
     return l.useLayoutEffect(() => {
         let n = requestAnimationFrame(() => {
@@ -50,14 +50,14 @@ function I(e) {
         ]), [{
                 canDrop: u,
                 isOver: d
-            }, p] = (0, c.L)(o), _ = g([
+            }, p] = (0, c.L)(o), _ = m([
             [
                 u,
-                m.autoPointerEvents
+                g.autoPointerEvents
             ],
             [
                 d,
-                m.dragOver
+                g.dragOver
             ]
         ]);
     return (0, i.jsx)('div', {
@@ -65,7 +65,7 @@ function I(e) {
             _.current = e, p(e);
         },
         'data-dnd-name': f.Z.Messages.DND_DROP_ABOVE.format({ itemName: t }),
-        className: a()(m.target)
+        className: a()(g.target)
     });
 }
 function E(e) {
@@ -83,14 +83,14 @@ function E(e) {
         r,
         o
     ]);
-    let d = g([
+    let d = m([
         [
             s,
-            m.autoPointerEvents
+            g.autoPointerEvents
         ],
         [
             o,
-            m.dragOver
+            g.dragOver
         ]
     ]);
     return (0, i.jsx)(p.Z, {
@@ -98,13 +98,13 @@ function E(e) {
         shouldShow: o,
         forceOpen: o,
         disableWrapper: !0,
-        tooltipClass: m.centerTargetTooltip,
+        tooltipClass: g.centerTargetTooltip,
         children: (0, i.jsx)('div', {
             ref: e => {
                 d.current = e, u(e);
             },
             'data-dnd-name': f.Z.Messages.DND_DROP_COMBINE.format({ itemName: t }),
-            className: a()(m.centerTarget, {})
+            className: a()(g.centerTarget, {})
         })
     });
 }
@@ -115,31 +115,31 @@ function N(e) {
         } = e, [{
                 canDrop: l,
                 isOver: r
-            }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)), o = g([[
+            }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)), o = m([[
                 r,
-                m.wrapperOver
-            ]]), u = g([
+                g.wrapperOver
+            ]]), u = m([
             [
                 r,
-                m.dragOver
+                g.dragOver
             ],
             [
                 l,
-                m.autoPointerEvents
+                g.autoPointerEvents
             ]
         ]);
     return (0, i.jsx)('div', {
         ref: o,
-        className: a()(m.folderEndWrapper),
+        className: a()(g.folderEndWrapper),
         'aria-hidden': !0,
         children: (0, i.jsx)('div', {
-            className: m.folderTarget,
+            className: g.folderTarget,
             children: (0, i.jsx)('div', {
                 ref: e => {
                     u.current = e, s(e);
                 },
                 'aria-label': 'At end of '.concat(t),
-                className: a()(m.target)
+                className: a()(g.target)
             })
         })
     });
@@ -160,7 +160,7 @@ t.ZP = l.memo(function (e) {
             onDragOverChanged: a
         } = e, s = !l && null == n.parentId;
     return (0, i.jsxs)('div', {
-        className: m.wrapper,
+        className: g.wrapper,
         'aria-hidden': !0,
         children: [
             (0, i.jsx)(I, {

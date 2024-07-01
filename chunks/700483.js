@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(287734), u = n(40851), d = n(358221), h = n(659580), p = n(793865), m = n(575175), _ = n(258609), f = n(74299), E = n(924301), C = n(459502), g = n(856691), I = n(889161), x = n(923973), T = n(829750), N = n(189771), v = n(294629), S = n(793319), Z = n(560688), A = n(390322), M = n(871499), b = n(386000), R = n(25827), j = n(314897), L = n(131951), P = n(496675), O = n(944486), y = n(594174), D = n(881824), k = n(471253), U = n(922482), w = n(200498), B = n(146085), H = n(88751), G = n(427679), V = n(71275), F = n(600518), W = n(485287), z = n(754277), Y = n(719100), K = n(184805), q = n(643632), X = n(270295), Q = n(981631), J = n(689938), $ = n(428847);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(287734), d = n(40851), u = n(358221), h = n(659580), p = n(793865), m = n(575175), _ = n(258609), f = n(74299), E = n(924301), C = n(459502), g = n(856691), I = n(889161), x = n(923973), T = n(829750), N = n(189771), v = n(294629), S = n(793319), Z = n(560688), A = n(390322), M = n(871499), b = n(386000), R = n(25827), j = n(314897), L = n(131951), P = n(496675), O = n(944486), y = n(594174), D = n(881824), k = n(471253), U = n(922482), w = n(200498), B = n(146085), H = n(88751), G = n(427679), V = n(71275), F = n(600518), W = n(485287), z = n(754277), Y = n(719100), K = n(184805), q = n(643632), X = n(270295), Q = n(981631), J = n(689938), $ = n(428847);
 function ee(e) {
     let {
         channel: t,
@@ -13,12 +13,12 @@ function ee(e) {
 }
 function et(e) {
     var t, n;
-    let {channel: a} = e, l = (0, K.Z)(a.id), [s, c] = (0, X.Z)(a), u = (0, r.e7)([P.Z], () => P.Z.can(Q.Plq.REQUEST_TO_SPEAK, a));
+    let {channel: a} = e, l = (0, K.Z)(a.id), [s, c] = (0, X.Z)(a), d = (0, r.e7)([P.Z], () => P.Z.can(Q.Plq.REQUEST_TO_SPEAK, a));
     if (l)
         return null;
     return (0, i.jsx)(M.d, {
         isActive: s,
-        label: (t = s, n = u, t ? J.Z.Messages.AUDIENCE_LOWER_HAND : n ? J.Z.Messages.AUDIENCE_RAISE_HAND_CTA : J.Z.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
+        label: (t = s, n = d, t ? J.Z.Messages.AUDIENCE_LOWER_HAND : n ? J.Z.Messages.AUDIENCE_RAISE_HAND_CTA : J.Z.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
         iconComponent: () => (0, i.jsx)(o.HandRequestSpeakIcon, {
             size: 'md',
             color: 'currentColor',
@@ -26,7 +26,7 @@ function et(e) {
         }),
         onClick: c,
         className: $.buttonSpacing,
-        disabled: !u && !s
+        disabled: !d && !s
     });
 }
 let en = a.memo(function (e) {
@@ -68,7 +68,7 @@ function ea(e) {
     let {
             channel: t,
             onSelect: n
-        } = e, a = (0, u.bp)(), {canManageGuildEvent: l} = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {suppress: p} = (0, v.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), C = (0, w.B)(t.id), g = l(d);
+        } = e, a = (0, d.bp)(), {canManageGuildEvent: l} = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), u = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {suppress: p} = (0, v.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), C = (0, w.B)(t.id), g = l(u);
     return h ? (f || g) && null != c ? (0, i.jsx)(o.Popout, {
         renderPopout: e => {
             let {closePopout: l} = e;
@@ -226,13 +226,13 @@ let er = a.memo(function (e) {
             suppress: n,
             selfMute: a,
             mute: l
-        } = (0, v.Z)(t), c = (0, w.B)(t.id), u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
+        } = (0, v.Z)(t), c = (0, w.B)(t.id), d = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
             cameraUnavailable: E,
             enabled: C
         } = (0, x.Z)(), g = (0, N.Z)(t), {
             limit: I,
             reachedLimit: M
-        } = (0, T.Z)(t), j = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)), D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), B = (0, V.PK)(t.id), H = I > 0, G = M && !B || null != U && U.user.id !== (null == j ? void 0 : j.id);
+        } = (0, T.Z)(t), j = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)), D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), U = (0, r.e7)([u.Z], () => u.Z.getStreamParticipants(t.id)[0], [t.id]), B = (0, V.PK)(t.id), H = I > 0, G = M && !B || null != U && U.user.id !== (null == j ? void 0 : j.id);
     if (null == j)
         return null;
     let F = (0, i.jsxs)(i.Fragment, {
@@ -304,7 +304,7 @@ let er = a.memo(function (e) {
                                 suppress: n,
                                 popoutOpen: r,
                                 onClick: () => (0, m.Z)(l, n),
-                                awaitingRemote: u
+                                awaitingRemote: d
                             });
                         }
                     })
@@ -330,16 +330,16 @@ t.Z = a.memo(function (e) {
     let {
             channel: t,
             isOnStartStageScreen: n
-        } = e, a = (0, K.Z)(t.id), l = (0, w.B)(t.id), s = (0, r.e7)([P.Z], () => P.Z.can(B.yP, t), [t]), o = (0, q.Z)(t.id), c = (0, r.e7)([d.Z], () => null != t ? d.Z.getSelectedParticipant(t.id) : null), u = !o && null == c;
+        } = e, a = (0, K.Z)(t.id), l = (0, w.B)(t.id), s = (0, r.e7)([P.Z], () => P.Z.can(B.yP, t), [t]), o = (0, q.Z)(t.id), c = (0, r.e7)([u.Z], () => null != t ? u.Z.getSelectedParticipant(t.id) : null), d = !o && null == c;
     return n ? (0, i.jsx)(eo, { channel: t }) : a || l ? (0, i.jsxs)('div', {
         className: $.containerColumn,
         children: [
             (0, i.jsxs)('div', {
                 className: $.eventPrompts,
                 children: [
-                    u ? (0, i.jsx)(C.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                    d ? (0, i.jsx)(C.Z, { channelId: null == t ? void 0 : t.id }) : null,
                     (0, i.jsx)('div', { className: $.separator }),
-                    u && s ? (0, i.jsx)(g.Z, {
+                    d && s ? (0, i.jsx)(g.Z, {
                         highlight: !0,
                         channel: t
                     }) : null,

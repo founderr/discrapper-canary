@@ -11,8 +11,8 @@ function c(e) {
             value: t,
             labelText: n,
             onChange: c,
-            onShowUpsell: u
-        } = e, d = (0, a.e7)([l.default], () => l.default.getCurrentUser()), h = s.ZP.canUseFancyVoiceChannelReactions(d), p = '';
+            onShowUpsell: d
+        } = e, u = (0, a.e7)([l.default], () => l.default.getCurrentUser()), h = s.ZP.canUseFancyVoiceChannelReactions(u), p = '';
     return p = h ? t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL, (0, i.jsx)(r.Z, {
         checked: t,
         onChange: c,
@@ -21,6 +21,6 @@ function c(e) {
         iconAltText: o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TADA_ALT,
         canToggle: h,
         onClick: h ? () => {
-        } : u
+        } : d
     });
 }

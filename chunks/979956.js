@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     },
     KZ: function () {
-        return u;
+        return d;
     }
 }), n(724458), n(653041);
 var i = n(476326), a = n(403182), l = n(74538), s = n(474936), r = n(689938);
@@ -17,6 +17,6 @@ function o(e, t) {
 function c(e, t) {
     return a.nA(e, t) || a.vY(e);
 }
-function u(e) {
+function d(e) {
     return e.reduce((e, t) => (t.item.platform === i.ow.WEB && e.push(t.item.file), e), []);
 }

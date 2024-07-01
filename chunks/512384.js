@@ -12,10 +12,10 @@ function o(e) {
             shakeLocation: n,
             children: o,
             className: c
-        } = e, u = (0, r.Z)(n);
+        } = e, d = (0, r.Z)(n);
     return (0, a.e7)([s.Z], () => s.Z.isEnabled({ shakeLocation: n })) ? (0, i.jsx)(l.Shaker, {
         isShaking: t,
-        intensity: u,
+        intensity: d,
         className: c,
         children: o
     }) : (0, i.jsx)(i.Fragment, { children: o });

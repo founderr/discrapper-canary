@@ -11,7 +11,7 @@ function T(e) {
             guildId: t,
             guildProductListingId: n,
             sourceAnalyticsLocations: a
-        } = e, T = (0, l.e7)([_.Z], () => _.Z.getGuildProduct(n)), h = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]), N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), f = (0, d.n)();
+        } = e, T = (0, l.e7)([_.Z], () => _.Z.getGuildProduct(n)), h = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]), N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), p = (0, d.n)();
     if (s()(null != h, 'guild cannot be null'), s()(null != T, 'guildProductListing cannot be null'), (0, u.SO)(h))
         return (0, i.jsx)(r.Tooltip, {
             text: I.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
@@ -25,7 +25,7 @@ function T(e) {
     if (!T.has_entitlement)
         return (0, i.jsx)(r.ShinyButton, {
             shineSize: r.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: N || !f,
+            pauseAnimation: N || !p,
             onClick: () => (0, E.z)({
                 guildProductListing: T,
                 guildId: h.id,

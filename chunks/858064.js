@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return m;
     }
 });
 var i = n(735250);
@@ -39,7 +39,7 @@ let f = (e, t, n) => {
         };
     }
 };
-function m(e) {
+function g(e) {
     let {
             streamLengthRequirement: t,
             viewerCountRequirement: n
@@ -76,20 +76,20 @@ function m(e) {
         ]
     });
 }
-function g(e) {
+function m(e) {
     let {
             onClose: t,
             tooltipAction: n,
             partnerGame: u
-        } = e, g = (0, c.au)(u);
+        } = e, m = (0, c.au)(u);
     (0, c.op)(u);
     let C = (0, l.e7)([s.default], () => s.default.getId());
-    if (null == g)
+    if (null == m)
         return null;
     let {
             streamLengthRequirement: I,
             viewerCountRequirement: E
-        } = g.config, N = g.drop, {
+        } = m.config, N = m.drop, {
             header: x,
             body: S,
             imgSrc: Z,
@@ -128,7 +128,7 @@ function g(e) {
                 variant: 'heading-md/extrabold',
                 children: x
             }),
-            n === d._e.TRACK_PROGRESS ? (0, i.jsx)(m, {
+            n === d._e.TRACK_PROGRESS ? (0, i.jsx)(g, {
                 streamLengthRequirement: I,
                 viewerCountRequirement: E
             }) : (0, i.jsx)(r.Text, {

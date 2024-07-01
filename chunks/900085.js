@@ -3,7 +3,7 @@ n.d(t, {
         return F;
     }
 }), n(411104), n(47120);
-var i, l = n(735250), r = n(470079), a = n(120356), s = n.n(a), o = n(873546), c = n(442837), u = n(481060), d = n(239091), h = n(134616), p = n(714338), _ = n(212819), f = n(14429), m = n(592125), g = n(888369), C = n(430824), I = n(306680), E = n(944486), N = n(938475), x = n(387204), S = n(107828), Z = n(153124), v = n(585483), T = n(63063), L = n(51596), A = n(823385), b = n(670512), M = n(981631), R = n(689938), y = n(163282);
+var i, l = n(735250), r = n(470079), a = n(120356), s = n.n(a), o = n(873546), c = n(442837), u = n(481060), d = n(239091), h = n(134616), p = n(714338), _ = n(212819), f = n(14429), g = n(592125), m = n(888369), C = n(430824), I = n(306680), E = n(944486), N = n(938475), x = n(387204), S = n(107828), Z = n(153124), v = n(585483), T = n(63063), L = n(51596), A = n(823385), b = n(670512), M = n(981631), R = n(689938), y = n(163282);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -43,30 +43,30 @@ class D extends (i = r.Component) {
 O(D, 'defaultProps', { unread: !1 });
 let U = c.ZP.connectStores([
         I.ZP,
-        m.Z
+        g.Z
     ], e => {
         let {channel: t} = e;
         return {
             unread: I.ZP.hasUnread(t.id),
             mentions: I.ZP.getMentionCount(t.id),
-            category: m.Z.getChannel(t.parent_id)
+            category: g.Z.getChannel(t.parent_id)
         };
     })(D), G = c.ZP.connectStores([N.ZP], e => {
         let {channel: t} = e;
         if (null == t.guild_id)
             throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: N.ZP.getVoiceStates(t.guild_id)[t.id] };
-    })(D), w = c.ZP.connectStores([g.default], e => {
+    })(D), w = c.ZP.connectStores([m.default], e => {
         let {guild: t} = e;
-        return { unread: g.default.hasUnread(t.id) };
+        return { unread: m.default.hasUnread(t.id) };
     })(S.ic), k = c.ZP.connectStores([I.ZP], e => {
         let {channel: t} = e;
         return { mentions: I.ZP.getMentionCount(t.id) };
     })(S.PZ), B = c.ZP.connectStores([
-        m.Z,
+        g.Z,
         I.ZP
     ], e => {
-        let {user: t} = e, n = m.Z.getDMFromUserId(t.id);
+        let {user: t} = e, n = g.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? I.ZP.getMentionCount(n) : 0 };
     })(S.n5);
 function V(e, t, n) {

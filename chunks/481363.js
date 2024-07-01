@@ -12,9 +12,9 @@ function c(e) {
             messagePopouts: {
                 emojiPicker: n,
                 emojiBurstPicker: c,
-                moreUtilities: u
+                moreUtilities: d
             },
-            isFocused: d,
+            isFocused: u,
             buttonProps: {
                 message: h,
                 channel: p,
@@ -31,7 +31,7 @@ function c(e) {
         setPopout: t,
         showEmojiPicker: n,
         showEmojiBurstPicker: c,
-        showMoreUtilities: u,
-        isFocused: d
+        showMoreUtilities: d,
+        isFocused: u
     });
 }

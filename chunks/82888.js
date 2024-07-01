@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     }
 });
-var i = n(735250), a = n(470079), l = n(399606), s = n(110924), r = n(867176), o = n(566620), c = n(317381), u = n(917107), d = n(9145), h = n(918559);
+var i = n(735250), a = n(470079), l = n(399606), s = n(110924), r = n(867176), o = n(566620), c = n(317381), d = n(917107), u = n(9145), h = n(918559);
 function p(e) {
     let {
             maxHeight: t,
@@ -29,7 +29,7 @@ function p(e) {
         ]), !f)
         return null;
     let C = null == m ? void 0 : m.applicationId;
-    return _ !== h.Ez.PANEL || null == C ? null : null == p || null == m || (0, u.Z)(p) || null == C ? null : (0, i.jsx)(d.Z, {
+    return _ !== h.Ez.PANEL || null == C ? null : null == p || null == m || (0, d.Z)(p) || null == C ? null : (0, i.jsx)(u.Z, {
         maxHeight: t,
         connectedChannelId: p,
         renderExternalHeader: n

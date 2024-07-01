@@ -1,6 +1,6 @@
 n.d(t, {
     GB: function () {
-        return u;
+        return d;
     },
     Rh: function () {
         return o;
@@ -43,7 +43,7 @@ function c(e) {
         });
     });
 }
-function u(e, t) {
+function d(e, t) {
     return a.tn.del(r.ANM.CHANNEL_INTEGRATION(e, t)).then(e => {
         var t;
         if (null === (t = e.body) || void 0 === t ? void 0 : t.message)

@@ -13,8 +13,8 @@ function r(e) {
             channel: r,
             className: o,
             focused: c,
-            children: u,
-            inCall: d,
+            children: d,
+            inCall: u,
             inPopout: h,
             noBorder: p,
             onClick: m,
@@ -39,7 +39,7 @@ function r(e) {
                     channel: r,
                     className: o,
                     focused: c,
-                    inCall: d,
+                    inCall: u,
                     inPopout: h,
                     noBorder: p,
                     onClick: m,
@@ -53,7 +53,7 @@ function r(e) {
                     width: x,
                     ...T
                 }),
-                u
+                d
             ]
         })
     });

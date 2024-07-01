@@ -9,13 +9,13 @@ function o(e) {
             hasPermission: n,
             streamActive: o,
             isSelfStream: c,
-            centerButton: u,
-            onMouseEnter: d,
+            centerButton: d,
+            onMouseEnter: u,
             onMouseLeave: h,
             premiumGlow: p,
             buttonRef: m,
             ..._
-        } = e, f = u ? s.d : s.Z;
+        } = e, f = d ? s.d : s.Z;
     t = o ? c ? r.Z.Messages.STOP_STREAMING : r.Z.Messages.STOP_WATCHING : n ? r.Z.Messages.SHARE_YOUR_SCREEN : r.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
     let {
         Component: E,
@@ -32,7 +32,7 @@ function o(e) {
         iconComponent: E,
         isActive: o,
         onMouseEnter: e => {
-            null == d || d(e), C.onMouseEnter();
+            null == u || u(e), C.onMouseEnter();
         },
         onMouseLeave: e => {
             null == h || h(e), C.onMouseLeave();

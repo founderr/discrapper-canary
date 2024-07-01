@@ -8,17 +8,17 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(239091), r = n(129861), o = n(906732), c = n(158776), u = n(785717), d = n(726059), h = n(171368), p = n(981631), m = n(689938), _ = n(667589);
+var a = n(442837), l = n(481060), s = n(239091), r = n(129861), o = n(906732), c = n(158776), d = n(785717), u = n(726059), h = n(171368), p = n(981631), m = n(689938), _ = n(667589);
 let f = (0, l.getAvatarSize)(l.AvatarSizes.SIZE_40);
 function E(e) {
     let {
             user: t,
             status: o,
-            onSelect: u
-        } = e, d = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
+            onSelect: d
+        } = e, u = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
     return (0, i.jsxs)(l.Clickable, {
         className: _.listRow,
-        onClick: u,
+        onClick: d,
         onContextMenu: e => {
             (0, s.jW)(e, async () => {
                 let {default: e} = await Promise.all([
@@ -38,7 +38,7 @@ function E(e) {
                 'aria-label': t.username,
                 size: l.AvatarSizes.SIZE_40,
                 status: o,
-                isMobile: d,
+                isMobile: u,
                 className: _.listAvatar
             }),
             (0, i.jsx)(r.Z, {
@@ -53,12 +53,12 @@ function C(e) {
     let {
             user: t,
             onClose: n
-        } = e, {mutualFriends: a} = (0, d.Z)(t.id), {analyticsLocations: s} = (0, o.ZP)(), {
+        } = e, {mutualFriends: a} = (0, u.Z)(t.id), {analyticsLocations: s} = (0, o.ZP)(), {
             guildId: r,
             channelId: c,
             messageId: f,
             roleId: C
-        } = (0, u.KZ)(), g = e => {
+        } = (0, d.KZ)(), g = e => {
             n(), (0, h.openUserProfileModal)({
                 userId: e,
                 guildId: r,

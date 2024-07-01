@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(481060), s = n(32750), r = n(323597), o = n(438536), c = n(193987), u = n(933793), d = n(13736), h = n(732393), p = n(214906), m = n(612856), _ = n(137591), f = n(299206), E = n(727429), C = n(359110), g = n(502568), I = n(585483), x = n(739830), T = n(488131), N = n(981631), v = n(689938);
+var i = n(735250), a = n(470079), l = n(481060), s = n(32750), r = n(323597), o = n(438536), c = n(193987), d = n(933793), u = n(13736), h = n(732393), p = n(214906), m = n(612856), _ = n(137591), f = n(299206), E = n(727429), C = n(359110), g = n(502568), I = n(585483), x = n(739830), T = n(488131), N = n(981631), v = n(689938);
 function S(e) {
     let {channel: t} = e, [n, s] = a.useState(!1);
     function r() {
@@ -41,7 +41,7 @@ function Z(e) {
             channel: t,
             closePopout: n,
             onSelect: a
-        } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), g = (0, u.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, s.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
+        } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), g = (0, d.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, s.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, u.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
             id: t.id,
             label: v.Z.Messages.COPY_ID_THREAD
         }), j = (0, _.Z)(t);

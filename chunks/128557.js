@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(77866), o = n(748780), c = n(442837), u = n(704215), d = n(481060), h = n(699682), p = n(367907), m = n(812206), _ = n(644914), f = n(434404), E = n(330010), C = n(314897), g = n(430824), I = n(594174), x = n(259580), T = n(585483), N = n(63063), v = n(358085), S = n(709054), Z = n(967128), A = n(981631), M = n(231873), b = n(689938), R = n(715287);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(77866), o = n(748780), c = n(442837), d = n(704215), u = n(481060), h = n(699682), p = n(367907), m = n(812206), _ = n(644914), f = n(434404), E = n(330010), C = n(314897), g = n(430824), I = n(594174), x = n(259580), T = n(585483), N = n(63063), v = n(358085), S = n(709054), Z = n(967128), A = n(981631), M = n(231873), b = n(689938), R = n(715287);
 function j(e) {
     let {
             className: t,
@@ -15,13 +15,13 @@ function j(e) {
             header: r,
             completed: o,
             onClick: c
-        } = e, [u, p] = a.useState(!1), m = (0, h.Z)(o);
+        } = e, [d, p] = a.useState(!1), m = (0, h.Z)(o);
     return a.useEffect(() => {
         null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
     }, [
         o,
         m
-    ]), (0, i.jsxs)(d.Clickable, {
+    ]), (0, i.jsxs)(u.Clickable, {
         className: s()(t, R.card, { [R.completed]: o }),
         onClick: c,
         children: [
@@ -29,16 +29,16 @@ function j(e) {
                 className: R.icon,
                 style: { backgroundImage: 'url(\''.concat(n, '\')') }
             }),
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(u.Text, {
                 color: 'header-primary',
                 className: s()(R.cardTextContainer, R.cardHeader),
                 variant: 'text-sm/normal',
                 children: r
             }),
-            o ? (0, i.jsx)(d.CheckmarkLargeIcon, {
+            o ? (0, i.jsx)(u.CheckmarkLargeIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(R.checkmark, { [R.animate]: u })
+                className: s()(R.checkmark, { [R.animate]: d })
             }) : (0, i.jsx)(x.Z, {
                 className: R.arrow,
                 direction: x.Z.Directions.RIGHT
@@ -69,7 +69,7 @@ function L(e) {
                     p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.INVITE
-                    }), null != e && (0, d.openModalLazy)(async () => {
+                    }), null != e && (0, u.openModalLazy)(async () => {
                         let {default: t} = await Promise.all([
                             n.e('7654'),
                             n.e('17520')
@@ -98,7 +98,7 @@ function L(e) {
                     p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.DOWNLOAD
-                    }), (0, d.openModalLazy)(async () => {
+                    }), (0, u.openModalLazy)(async () => {
                         let {default: e} = await Promise.resolve().then(n.bind(n, 431583));
                         return t => (0, i.jsx)(e, {
                             source: A.jXE.CHANNEL_WELCOME_CTA,
@@ -115,14 +115,14 @@ function L(e) {
                     null != e && (p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.ADD_APP
-                    }), (0, d.openModalLazy)(async () => {
+                    }), (0, u.openModalLazy)(async () => {
                         let {default: t} = await n.e('77875').then(n.bind(n, 657300));
                         return n => {
                             var a;
                             return (0, i.jsx)(t, {
                                 guildId: null !== (a = e.id) && void 0 !== a ? a : '',
                                 ...n,
-                                analyticsType: u.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL
+                                analyticsType: d.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL
                             });
                         };
                     }));
@@ -252,12 +252,12 @@ function L(e) {
                     (0, i.jsxs)(o.Z.div, {
                         style: W,
                         children: [
-                            (0, i.jsx)(d.Heading, {
+                            (0, i.jsx)(u.Heading, {
                                 className: R.titleName,
                                 variant: 'heading-xxl/semibold',
                                 children: b.Z.Messages.WELCOME_CTA_TITLE.format({ guildName: l.name })
                             }),
-                            (0, i.jsxs)(d.Text, {
+                            (0, i.jsxs)(u.Text, {
                                 color: 'header-secondary',
                                 className: s()({
                                     [R.subtitle]: !0,

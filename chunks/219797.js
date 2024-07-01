@@ -21,7 +21,7 @@ n.d(t, {
         return g;
     }
 }), n(789020);
-var i = n(735250), a = n(470079), s = n(442837), l = n(993365), r = n(981729), o = n(481060), c = n(543651), d = n(394779), u = n(519320), _ = n(592125), E = n(52824), m = n(630388), I = n(591759), T = n(850908), h = n(524444), N = n(981631), f = n(689938), p = n(559266);
+var i = n(735250), a = n(470079), s = n(442837), l = n(993365), r = n(981729), o = n(481060), c = n(543651), d = n(394779), u = n(519320), _ = n(592125), E = n(52824), m = n(630388), I = n(591759), T = n(850908), h = n(524444), N = n(981631), p = n(689938), f = n(559266);
 function C(e) {
     let t = e.item.originalItem;
     return (0, h.Yi)({
@@ -44,8 +44,8 @@ function g(e) {
     let t = e.item.originalItem, n = a.useCallback(() => {
             var e;
             return (0, m.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(r.DY, {
-                text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
-                className: p.clipPill,
+                text: p.Z.Messages.CLIPS_BETA_TAG_HOVER,
+                className: f.clipPill,
                 children: [
                     (0, i.jsx)(o.ClipsIcon, {
                         size: 'xs',
@@ -54,7 +54,7 @@ function g(e) {
                     (0, i.jsx)(l.x, {
                         variant: 'text-xs/semibold',
                         color: 'always-white',
-                        children: f.Z.Messages.CLIP_TAG
+                        children: p.Z.Messages.CLIP_TAG
                     })
                 ]
             }) : null;

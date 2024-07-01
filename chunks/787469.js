@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(399606), o = n(481060), c = n(893966), u = n(472596), d = n(285173), h = n(430824), p = n(496675), m = n(776767), _ = n(981631), f = n(689938), E = n(332513);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(399606), o = n(481060), c = n(893966), d = n(472596), u = n(285173), h = n(430824), p = n(496675), m = n(776767), _ = n(981631), f = n(689938), E = n(332513);
 function C(e) {
     let {member: t} = e, n = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guildId)), l = (0, r.e7)([h.Z], () => h.Z.getRoles(t.guildId)), C = a.useMemo(() => null == n ? [] : null == t.highestRoleId ? t.roles : t.roles.filter(e => null != e && e !== t.highestRoleId).sort((e, t) => {
             var n, i, a, s;
@@ -16,7 +16,7 @@ function C(e) {
         ]), g = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [
             t.guildId,
             t.userId
-        ]), I = (0, u.zq)(g), x = (0, u.qr)(t), T = (0, r.e7)([p.Z], () => p.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
+        ]), I = (0, d.zq)(g), x = (0, d.qr)(t), T = (0, r.e7)([p.Z], () => p.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
     return null == n ? null : (0, i.jsx)(o.FormItem, {
         title: f.Z.Messages.ROLES,
         titleClassName: E.infoTitle,
@@ -38,7 +38,7 @@ function C(e) {
                                 return (0, i.jsx)(o.Clickable, {
                                     onMouseEnter: n,
                                     onMouseLeave: a,
-                                    children: (0, i.jsx)(d.Z, {
+                                    children: (0, i.jsx)(u.Z, {
                                         className: s()(E.roleTooltipItem, E.highestRole),
                                         role: I,
                                         guildId: t.guildId
@@ -46,7 +46,7 @@ function C(e) {
                                 });
                             }
                         }),
-                        C.map(e => (0, i.jsx)(d.Z, {
+                        C.map(e => (0, i.jsx)(u.Z, {
                             className: s()(E.roleTooltipItem),
                             role: l[e],
                             guildId: t.guildId

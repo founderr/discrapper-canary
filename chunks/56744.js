@@ -16,10 +16,10 @@ let E = a.memo(function (e) {
         }).content : null, [
             m,
             I
-        ]), h = (0, s.e7)([o.Z], () => null != m && o.Z.isBlockedForMessage(m), [m]), N = (0, u.Uj)(m), f = (0, u.Uj)(t);
+        ]), h = (0, s.e7)([o.Z], () => null != m && o.Z.isBlockedForMessage(m), [m]), N = (0, u.Uj)(m), p = (0, u.Uj)(t);
     return (0, i.jsx)(c.Z, {
         repliedAuthor: N,
-        baseAuthor: f,
+        baseAuthor: p,
         baseMessage: t,
         channel: n,
         referencedMessage: _,

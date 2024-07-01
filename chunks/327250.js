@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(399606), r = n(481060), o = n(493683), c = n(906732), u = n(69882), d = n(251794), h = n(386696), p = n(910693), m = n(314897), _ = n(271383), f = n(430824), E = n(496675), C = n(158776), g = n(885110), I = n(594174), x = n(572004), T = n(5192), N = n(51144), v = n(991570), S = n(981631), Z = n(689938), A = n(342821);
+var a = n(120356), l = n.n(a), s = n(399606), r = n(481060), o = n(493683), c = n(906732), d = n(69882), u = n(251794), h = n(386696), p = n(910693), m = n(314897), _ = n(271383), f = n(430824), E = n(496675), C = n(158776), g = n(885110), I = n(594174), x = n(572004), T = n(5192), N = n(51144), v = n(991570), S = n(981631), Z = n(689938), A = n(342821);
 function M(e) {
     let {
             user: t,
@@ -118,7 +118,7 @@ function R(e) {
         }), [
             a,
             _
-        ]), N = (0, u.b)(l), {
+        ]), N = (0, d.b)(l), {
             analyticsLocations: v,
             newestAnalyticsLocation: M
         } = (0, c.ZP)(), R = (0, p.sE)(m, {
@@ -212,7 +212,7 @@ function R(e) {
                 'aria-label': Z.Z.Messages.TIMEOUT_USER,
                 style: { backgroundColor: t },
                 onClick: () => {
-                    N ? (0, d.q)(l.guildId, l.userId, v) : (0, d.z)(l.guildId, l.userId, v);
+                    N ? (0, u.q)(l.guildId, l.userId, v) : (0, u.z)(l.guildId, l.userId, v);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {

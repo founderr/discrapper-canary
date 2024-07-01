@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 });
-var i = n(735250), a = n(470079), l = n(597312), s = n(727637), r = n(410030), o = n(100527), c = n(906732), u = n(680295), d = n(5192), h = n(785717), p = n(318661), m = n(741308), _ = n(588822), f = n(900927), E = n(678738), C = n(502762), g = n(530), I = n(679332), x = n(544989), T = n(171368), N = n(308829), v = n(354810), S = n(228168), Z = n(689938), A = n(20256), M = n(77540);
+var i = n(735250), a = n(470079), l = n(597312), s = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(5192), h = n(785717), p = n(318661), m = n(741308), _ = n(588822), f = n(900927), E = n(678738), C = n(502762), g = n(530), I = n(679332), x = n(544989), T = n(171368), N = n(308829), v = n(354810), S = n(228168), Z = n(689938), A = n(20256), M = n(77540);
 function b(e) {
     let {
             user: t,
@@ -49,7 +49,7 @@ function b(e) {
                                     (0, i.jsx)(g.Z, {
                                         user: t,
                                         profileType: S.y0.PANEL,
-                                        nickname: d.ZP.getName(null, n.id, t),
+                                        nickname: u.ZP.getName(null, n.id, t),
                                         pronouns: null == R ? void 0 : R.pronouns,
                                         onOpenProfile: O,
                                         tags: (0, i.jsx)(m.Z, {
@@ -84,7 +84,7 @@ function b(e) {
                         user: t,
                         channelId: n.id
                     }),
-                    (null == R ? void 0 : R.profileEffectId) != null && (0, i.jsx)(u.Z, {
+                    (null == R ? void 0 : R.profileEffectId) != null && (0, i.jsx)(d.Z, {
                         profileEffectId: null == R ? void 0 : R.profileEffectId,
                         isHovering: P
                     })

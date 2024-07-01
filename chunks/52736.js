@@ -12,7 +12,7 @@ function o(e) {
             children: a,
             verified: o,
             roleColor: c,
-            roleName: u
+            roleName: d
         } = e;
     return t = o ? (0, i.jsx)(s.Z, {
         size: 12,
@@ -25,7 +25,7 @@ function o(e) {
         className: l()(n, r.role),
         children: [
             t,
-            u,
+            d,
             a
         ]
     });

@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(112724), o = n(613611), c = n(351248), u = n(285952), d = n(585483), h = n(340295), p = n(171277), m = n(677845), _ = n(430371), f = n(236564), E = n(981631), C = n(354459), g = n(858962);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(112724), o = n(613611), c = n(351248), d = n(285952), u = n(585483), h = n(340295), p = n(171277), m = n(677845), _ = n(430371), f = n(236564), E = n(981631), C = n(354459), g = n(858962);
 t.Z = (0, r.Z)(e => {
     let {
         participants: t,
@@ -23,7 +23,7 @@ t.Z = (0, r.Z)(e => {
         awaitingRemoteSessionInfo: y
     } = e;
     a.useEffect(() => {
-        d.S.dispatch(E.CkL.REMEASURE_TARGET);
+        u.S.dispatch(E.CkL.REMEASURE_TARGET);
     }, [
         R,
         j
@@ -53,10 +53,10 @@ t.Z = (0, r.Z)(e => {
             className: s()(g.videoGrid, g.hiddenParticipants),
             channelId: v.id,
             width: R
-        }) : (0, i.jsx)(u.Z, {
+        }) : (0, i.jsx)(d.Z, {
             className: g.videoGridWrapper,
-            justify: u.Z.Justify.CENTER,
-            align: u.Z.Align.CENTER,
+            justify: d.Z.Justify.CENTER,
+            align: d.Z.Align.CENTER,
             children: (0, i.jsx)(m.Z, {
                 channel: v,
                 className: g.videoGrid,

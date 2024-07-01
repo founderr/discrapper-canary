@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), a = n(442837), s = n(481060), o = n(493683), c = n(239091), u = n(146773), d = n(867176), h = n(619915), p = n(201895), _ = n(873696), f = n(66999), m = n(22082), g = n(665906), C = n(592125), I = n(430824), E = n(496675), N = n(306680), x = n(9156), S = n(594174), Z = n(109446), v = n(98597), T = n(648501), L = n(473403), A = n(304471), b = n(981631), M = n(647086), R = n(47705);
+var l = n(120356), r = n.n(l), a = n(442837), s = n(481060), o = n(493683), c = n(239091), u = n(146773), d = n(867176), h = n(619915), p = n(201895), _ = n(873696), f = n(66999), g = n(22082), m = n(665906), C = n(592125), I = n(430824), E = n(496675), N = n(306680), x = n(9156), S = n(594174), Z = n(109446), v = n(98597), T = n(648501), L = n(473403), A = n(304471), b = n(981631), M = n(647086), R = n(47705);
 function y(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -41,8 +41,8 @@ class O extends v.ZP {
                 connectChannelDropTarget: d,
                 connectChannelDragSource: h,
                 connectDragPreview: f,
-                canReorderChannel: m,
-                isSubscriptionGated: g,
+                canReorderChannel: g,
+                isSubscriptionGated: m,
                 isFavoriteSuggestion: C,
                 subtitle: I,
                 forceTopLevelThread: E,
@@ -77,7 +77,7 @@ class O extends v.ZP {
                         subtitleColor: null == T ? void 0 : T.color,
                         onMouseDown: this.handleMouseDown,
                         onContextMenu: this.handleContextMenu,
-                        connectDragPreview: m ? f : null,
+                        connectDragPreview: g ? f : null,
                         isFavoriteSuggestion: C,
                         channelTypeOverride: E ? b.d4z.GUILD_TEXT : void 0,
                         resolvedUnreadSetting: x,
@@ -86,7 +86,7 @@ class O extends v.ZP {
                             channel: e,
                             unread: a,
                             mentionCount: u,
-                            isSubscriptionGated: g
+                            isSubscriptionGated: m
                         }),
                         children: [
                             C && this.renderAcceptSuggestionButton(),
@@ -98,7 +98,7 @@ class O extends v.ZP {
                     })
                 })
             });
-        return m ? d(h(A)) : A;
+        return g ? d(h(A)) : A;
     }
     constructor(...e) {
         super(...e), y(this, 'state', {
@@ -198,7 +198,7 @@ function j(e) {
         } = e, {
             hasActiveThreads: c,
             hasMoreActiveThreads: u
-        } = (0, g.JQ)(t), p = (0, a.cj)([N.ZP], () => ({
+        } = (0, m.JQ)(t), p = (0, a.cj)([N.ZP], () => ({
             unread: N.ZP.hasUnread(t.id),
             ackMessageId: N.ZP.ackMessageId(t.id),
             mentionCount: N.ZP.getMentionCount(t.id)
@@ -211,7 +211,7 @@ function j(e) {
                 canManageChannel: E.Z.can(b.Plq.MANAGE_CHANNELS, t),
                 canReorderChannel: !0 !== l && (n.id === M._ || (null != e ? E.Z.can(b.Plq.MANAGE_CHANNELS, e) : E.Z.can(b.Plq.MANAGE_CHANNELS, n)))
             };
-        }), Z = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)), {
+        }), Z = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)), {
             needSubscriptionToAccess: v,
             isSubscriptionGated: L
         } = (0, f.Z)(t.id), A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)), R = (0, a.e7)([S.default], () => {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(735250);
@@ -25,12 +25,12 @@ let c = (0, a.animated)(e => {
         })
     });
 });
-function u(e) {
+function d(e) {
     let {
             totalCooldownSeconds: t,
             remainingCooldownSeconds: n,
-            onClick: u,
-            onKeyDown: d,
+            onClick: d,
+            onKeyDown: u,
             onMouseEnter: h,
             onMouseLeave: p,
             isActive: m = !1,
@@ -52,8 +52,8 @@ function u(e) {
                 disabled: E,
                 label: g,
                 iconComponent: l.ReactionIcon,
-                onClick: u,
-                onKeyDown: d,
+                onClick: d,
+                onKeyDown: u,
                 onMouseEnter: h,
                 onMouseLeave: p,
                 isActive: m,

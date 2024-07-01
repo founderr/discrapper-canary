@@ -1,10 +1,10 @@
 var i = n(735250);
 n(470079);
-var a = n(481060), l = n(671533), s = n(400251), r = n(689938), o = n(509616), c = n(573929), u = n(176480);
+var a = n(481060), l = n(671533), s = n(400251), r = n(689938), o = n(509616), c = n(573929), d = n(176480);
 t.Z = e => {
     let t, {
             searchQuery: n,
-            setSearchQuery: d,
+            setSearchQuery: u,
             mostRecentQuery: h,
             handleClearSearch: p,
             handleSearchKeyPress: m,
@@ -32,7 +32,7 @@ t.Z = e => {
                 (0, i.jsx)('img', {
                     className: c.emptySearchImage,
                     alt: '',
-                    src: u
+                    src: d
                 }),
                 (0, i.jsx)(a.Heading, {
                     variant: 'heading-xl/semibold',
@@ -85,7 +85,7 @@ t.Z = e => {
                             inputClassName: c.searchPageInput,
                             label: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-                            onChange: d,
+                            onChange: u,
                             onClear: p,
                             onKeyPress: m,
                             cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null

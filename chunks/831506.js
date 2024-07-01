@@ -14,7 +14,7 @@ function N(e, t) {
     let a = T[n];
     null != a && (a.delete(e), 0 === a.size && delete T[n]);
 }
-function f(e, t, n, i) {
+function p(e, t, n, i) {
     let a = n.find(e => null != e.party && e.party.id), s = null != a && null != a.party ? a.party.id : null, l = h(t, e);
     if (null == s || i === m.Skl.OFFLINE)
         return null != l && (N(t, e), void 0);
@@ -32,25 +32,25 @@ function f(e, t, n, i) {
         T[n] = s, s.add(e);
     }(t, e, s);
 }
-function p(e) {
+function f(e) {
     let {guild: t} = e, n = !1;
     for (let {
                 user: e,
                 status: i,
                 activities: a
             } of t.presences)
-        !1 !== f(t.id, e.id, a, i) && (n = !0);
+        !1 !== p(t.id, e.id, a, i) && (n = !0);
     return n;
 }
 function C(e, t) {
     let n = !1;
     return t.forEach(t => {
-        null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
+        null != t && p(e, t.user.id, t.activities, t.status) && (n = !0);
     }), n;
 }
 function g() {
     let e = u.default.getId(), t = E.Z.getActivities();
-    return f(m.ME, e, t);
+    return p(m.ME, e, t);
 }
 class S extends (i = c.ZP.Store) {
     initialize() {
@@ -82,9 +82,9 @@ l = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
                     status: t,
                     activities: a
                 } of n)
-            null != e && !1 !== f(m.ME, e.id, a, t) && (i = !0);
+            null != e && !1 !== p(m.ME, e.id, a, t) && (i = !0);
         for (let e of t)
-            !1 !== p({ guild: e }) && (i = !0);
+            !1 !== f({ guild: e }) && (i = !0);
         return i;
     },
     OVERLAY_INITIALIZE: function (e) {
@@ -94,14 +94,14 @@ l = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
         } = e;
         T = {}, I = { ...n }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
     },
-    GUILD_CREATE: p,
+    GUILD_CREATE: f,
     PRESENCES_REPLACE: function (e) {
         let {presences: t} = e, n = !1;
         for (let {
                     user: e,
                     activities: i
                 } of t)
-            null != e && !1 !== f(m.ME, e.id, i) && (n = !0);
+            null != e && !1 !== p(m.ME, e.id, i) && (n = !0);
         return n;
     },
     PRESENCE_UPDATES: function (e) {
@@ -113,7 +113,7 @@ l = 'GamePartyStore', (s = 'displayName') in (a = S) ? Object.defineProperty(a, 
                 status: i,
                 activities: a
             } = e;
-            return f(null != t ? t : m.ME, n.id, a, i);
+            return p(null != t ? t : m.ME, n.id, a, i);
         }).some(e => e);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {

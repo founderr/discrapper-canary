@@ -3,9 +3,9 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(704215), a = n(442837), l = n(645041), s = n(271383), r = n(430824), o = n(594174), c = n(353093), u = n(954138), d = n(981631);
+var i = n(704215), a = n(442837), l = n(645041), s = n(271383), r = n(430824), o = n(594174), c = n(353093), d = n(954138), u = n(981631);
 function h(e, t) {
-    let n = (0, u.Z)(t), h = (0, a.e7)([
+    let n = (0, d.Z)(t), h = (0, a.e7)([
             o.default,
             r.Z,
             s.ZP
@@ -23,10 +23,10 @@ function h(e, t) {
             let l = t.getCurrentUser();
             if (null == l)
                 return !1;
-            let u = i.getMember(e, l.id);
+            let d = i.getMember(e, l.id);
             if (null == l.clan)
                 return !0;
-            let d = (null == u ? void 0 : u.joinedAt) != null ? new Date(u.joinedAt) : null, h = null != d && Date.now() - d.getTime() > 259200000, {
+            let u = (null == d ? void 0 : d.joinedAt) != null ? new Date(d.joinedAt) : null, h = null != u && Date.now() - u.getTime() > 259200000, {
                     identityGuildId: p,
                     identityEnabled: m
                 } = l.clan;
@@ -35,6 +35,6 @@ function h(e, t) {
             o.default,
             r.Z,
             s.ZP
-        ]), [e]), p = (0, l.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
+        ]), [e]), p = (0, l.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : u.lds);
     return n && h && !p;
 }

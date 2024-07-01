@@ -9,7 +9,7 @@ n.d(t, {
         return l;
     },
     Nn: function () {
-        return u;
+        return d;
     },
     X_: function () {
         return o;
@@ -26,7 +26,7 @@ let a = 'SAFETY_WARNING_BANNER_WEB', l = 'https://www.crisistextline.org/', s = 
         i.Z.Messages.STRANGER_DANGER_TIPS_1,
         i.Z.Messages.STRANGER_DANGER_TIPS_2,
         i.Z.Messages.STRANGER_DANGER_TIPS_3
-    ], u = () => [
+    ], d = () => [
         i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_1,
         i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_2,
         i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_3

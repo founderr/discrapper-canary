@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(805519), r = n(246364), o = n(705563), c = n(594174), u = n(346656), d = n(967128), h = n(689938), p = n(573475);
+var a = n(442837), l = n(481060), s = n(805519), r = n(246364), o = n(705563), c = n(594174), d = n(346656), u = n(967128), h = n(689938), p = n(573475);
 function m(e) {
     var t;
     let {
@@ -21,10 +21,10 @@ function m(e) {
                     null != s && (0, i.jsxs)('div', {
                         className: p.summaryHeaderClanInfo,
                         children: [
-                            (0, i.jsx)(u.Z, {
+                            (0, i.jsx)(d.Z, {
                                 guild: s,
                                 active: !0,
-                                size: u.Z.Sizes.SMOL,
+                                size: d.Z.Sizes.SMOL,
                                 className: p.guildIcon
                             }),
                             (0, i.jsx)(l.Heading, {
@@ -73,10 +73,10 @@ function _(e) {
             joinRequest: a,
             joinRequestGuild: r
         } = (0, s.Z)(t.id);
-    return (0, i.jsx)(d.ZP, {
+    return (0, i.jsx)(u.ZP, {
         channelId: t.id,
         className: p.container,
-        children: (0, i.jsx)(d.jz, {
+        children: (0, i.jsx)(u.jz, {
             children: null != a && null != a.formResponses ? (0, i.jsxs)('div', {
                 className: p.formContainer,
                 children: [

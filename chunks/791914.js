@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(120356), s = n.n(a), l = n(399606), r = n(524437), o = n(481060), c = n(494404), d = n(377171), u = n(317632), _ = n(602478), E = n(121254), m = n(742989), I = n(802463), T = n(818186), h = n(689938), N = n(775132);
-function f(e) {
+function p(e) {
     let {
             tab: t,
             setTab: n,
             children: a,
-            badgeState: f,
-            closePopout: p
+            badgeState: p,
+            closePopout: f
         } = e, {showReminders: C} = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }), {enabled: g} = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }), {enabled: S} = _.Z.useExperiment({ location: 'RecentsHeader' }), A = (0, l.e7)([u.Z], () => u.Z.getUnseenInviteCount()), x = (0, l.e7)([I.Z], () => I.Z.getMessageReminders()).length;
     return (0, i.jsxs)(c.h4, {
         className: s()(N.header, N.expanded),
@@ -30,7 +30,7 @@ function f(e) {
                         variant: 'text-lg/semibold',
                         children: h.Z.Messages.INBOX
                     }),
-                    (0, i.jsx)(T.Z, { closePopout: p })
+                    (0, i.jsx)(T.Z, { closePopout: f })
                 ]
             }),
             (0, i.jsxs)('div', {
@@ -47,7 +47,7 @@ function f(e) {
                                 className: s()(N.tab, N.expanded, { [N.active]: t === r.X.FOR_YOU }),
                                 children: [
                                     h.Z.Messages.FOR_YOU,
-                                    (null == f ? void 0 : f.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
+                                    (null == p ? void 0 : p.badgeForYou) ? (0, i.jsx)(o.CircleBadge, {
                                         color: d.Z.STATUS_DANGER,
                                         className: s()(N.iconBadge)
                                     }) : null

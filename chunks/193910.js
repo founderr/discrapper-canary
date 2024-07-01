@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(653041), n(47120);
-var i = n(735250), a = n(470079), l = n(831209), s = n(442837), r = n(704215), o = n(481060), c = n(538239), u = n(566620), d = n(403404), h = n(906732), p = n(605236), m = n(706140), _ = n(243778), f = n(488131), E = n(375954), C = n(626135), g = n(585483), I = n(403182), x = n(127654), T = n(752305), N = n(951211), v = n(981631), S = n(921944), Z = n(489887), A = n(689938), M = n(356195);
+var i = n(735250), a = n(470079), l = n(831209), s = n(442837), r = n(704215), o = n(481060), c = n(538239), d = n(566620), u = n(403404), h = n(906732), p = n(605236), m = n(706140), _ = n(243778), f = n(488131), E = n(375954), C = n(626135), g = n(585483), I = n(403182), x = n(127654), T = n(752305), N = n(951211), v = n(981631), S = n(921944), Z = n(489887), A = n(689938), M = n(356195);
 function b(e, t, a, l) {
     (0, o.openModalLazy)(async () => {
         let {default: s} = await Promise.resolve().then(n.bind(n, 538239));
@@ -79,7 +79,7 @@ function L(e) {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
-        }), (0, d.Z)({
+        }), (0, u.Z)({
             channel: t,
             guildId: t.guild_id,
             locationObject: {
@@ -91,7 +91,7 @@ function L(e) {
             openInPopout: !1,
             enableSelectedTextChannelInvite: !0,
             analyticsLocations: y
-        }), (0, u.w1)({ guildId: t.guild_id });
+        }), (0, d.w1)({ guildId: t.guild_id });
     }
     function H() {
         let e = L, n = 'txt', i = '', a = L.match(R);

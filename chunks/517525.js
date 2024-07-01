@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(468194), c = n(442837), u = n(692547), d = n(477690), h = n(481060), p = n(2052), m = n(906732), _ = n(484459), f = n(594174), E = n(368666), C = n(626135), g = n(74538), I = n(557457), x = n(475674), T = n(981631), N = n(474936), v = n(689938), S = n(244438);
-let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(468194), c = n(442837), d = n(692547), u = n(477690), h = n(481060), p = n(2052), m = n(906732), _ = n(484459), f = n(594174), E = n(368666), C = n(626135), g = n(74538), I = n(557457), x = n(475674), T = n(981631), N = n(474936), v = n(689938), S = n(244438);
+let Z = (0, o.Mg)(u.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     }, M = {
@@ -15,7 +15,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         let t, l, {
                 participant: r,
                 isUpsellEnabled: o,
-                shape: d,
+                shape: u,
                 size: _,
                 didTrackUpsellViewed: Z,
                 setDidTrackUpsellViewed: A,
@@ -68,7 +68,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
             children: e => (0, i.jsxs)(h.Clickable, {
                 ...e,
                 onClick: k,
-                className: s()(S.qualityIndicator, _, E.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
+                className: s()(S.qualityIndicator, _, E.eE[u], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
                 children: [
                     P ? (0, i.jsx)(h.NitroWheelIcon, {
                         size: 'md',
@@ -86,8 +86,8 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS), A = {
         return (0, i.jsx)(h.TextBadge, {
             text: U,
             className: s()(M, S.qualityIndicatorBadge, { [S.qualityIndicatorBadgePremium]: b }),
-            color: u.Z.unsafe_rawColors.PRIMARY_500.css,
-            shape: d
+            color: d.Z.unsafe_rawColors.PRIMARY_500.css,
+            shape: u
         });
     };
 t.Z = e => {
@@ -97,8 +97,8 @@ t.Z = e => {
             isUpsellEnabled: l = !0,
             size: o,
             className: c,
-            premiumIndicator: u
-        } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {reducedMotion: f} = a.useContext(h.AccessibilityPreferencesContext), C = n && null != m;
+            premiumIndicator: d
+        } = e, [u, p] = a.useState(!1), m = (0, I.Wc)(t), {reducedMotion: f} = a.useContext(h.AccessibilityPreferencesContext), C = n && null != m;
     a.useEffect(() => {
         (0, _.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
     }, [t]);
@@ -130,9 +130,9 @@ t.Z = e => {
                         size: o,
                         shape: h.BadgeShapes.ROUND_LEFT,
                         isUpsellEnabled: l,
-                        didTrackUpsellViewed: d,
+                        didTrackUpsellViewed: u,
                         setDidTrackUpsellViewed: p,
-                        premiumIndicator: u
+                        premiumIndicator: d
                     })
                 }) : null),
                 (0, i.jsx)(r.animated.div, {

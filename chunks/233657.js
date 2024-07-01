@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 });
 var i = n(735250);
 n(470079);
 var l = n(442837), r = n(704215), a = n(481060), s = n(239091), o = n(605236), c = n(554747), u = n(306680), d = n(9156), h = n(434479), p = n(490897), _ = n(689938), f = n(359123);
-function m(e) {
+function g(e) {
     let {
             guild: t,
-            selected: m
+            selected: g
         } = e, {
-            hasUnread: g,
+            hasUnread: m,
             mentionCount: C
         } = (0, l.cj)([u.ZP], () => ({
             hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -39,7 +39,7 @@ function m(e) {
             className: e
         }),
         text: x,
-        selected: m,
+        selected: g,
         onClick: E,
         onContextMenu: e => {
             (0, s.jW)(e, async () => {
@@ -50,7 +50,7 @@ function m(e) {
                 });
             });
         },
-        showUnread: g && !I,
+        showUnread: m && !I,
         trailing: !I && C > 0 ? (0, i.jsx)(a.NumberBadge, {
             className: f.numberBadge,
             disableColor: !0,

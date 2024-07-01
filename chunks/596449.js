@@ -10,7 +10,7 @@ function c(e) {
     let {
             className: t,
             guildId: c
-        } = e, u = (0, s.Z)();
+        } = e, d = (0, s.Z)();
     return (0, i.jsx)(r.Z, {
         className: t,
         icon: (0, i.jsx)(l.CalendarIcon, {
@@ -33,7 +33,7 @@ function c(e) {
                     ...t,
                     guildId: c
                 });
-            }, u);
+            }, d);
         }
     });
 }

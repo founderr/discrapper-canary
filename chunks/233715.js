@@ -9,25 +9,25 @@ function r(e) {
             children: t,
             className: n,
             flashKey: r
-        } = e, o = (0, s.useToken)(s.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 1 }), c = (0, s.useToken)(s.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 0 }), [u, d] = (0, l.useSpring)(() => ({
+        } = e, o = (0, s.useToken)(s.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 1 }), c = (0, s.useToken)(s.tokens.colors.BACKGROUND_MESSAGE_HIGHLIGHT).spring({ opacity: 0 }), [d, u] = (0, l.useSpring)(() => ({
             immediate: !0,
             from: { backgroundColor: o }
         }));
     return a.useEffect(() => {
-        d({
+        u({
             reset: !0,
             immediate: !0,
             to: { backgroundColor: o }
-        }), d({
+        }), u({
             delay: 1000,
             immediate: !1,
             to: { backgroundColor: c }
         });
     }, [
         r,
-        d
+        u
     ]), (0, i.jsx)(l.animated.div, {
-        style: u,
+        style: d,
         className: n,
         children: t
     });

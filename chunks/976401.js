@@ -18,8 +18,8 @@ function c(e) {
             innerClassName: p,
             tooltipClassName: _,
             onMouseEnter: f,
-            onMouseLeave: m,
-            'aria-label': g,
+            onMouseLeave: g,
+            'aria-label': m,
             'aria-checked': C,
             role: I,
             tooltipColor: E,
@@ -33,7 +33,7 @@ function c(e) {
     return (0, i.jsx)(a.Tooltip, {
         tooltipClassName: _,
         text: t,
-        'aria-label': g,
+        'aria-label': m,
         color: E,
         forceOpen: N,
         children: e => {
@@ -61,7 +61,7 @@ function c(e) {
                     null == d || d(), null == f || f();
                 },
                 onMouseLeave: () => {
-                    null == h || h(), null == m || m();
+                    null == h || h(), null == g || g();
                 },
                 onContextMenu: l,
                 role: I,

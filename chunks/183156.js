@@ -12,16 +12,16 @@ function c(e) {
         roleColor: n,
         roleName: a,
         hasRemoveIcon: c = !1,
-        onClick: u,
-        disabled: d = !1,
+        onClick: d,
+        disabled: u = !1,
         verified: h = !1
     } = e;
     return (0, i.jsx)(s.Button, {
         className: l()(t, o.button),
         look: s.Button.Looks.BLANK,
         size: s.Button.Sizes.NONE,
-        onClick: u,
-        disabled: d,
+        onClick: d,
+        disabled: u,
         children: (0, i.jsx)(r.Z, {
             className: o.role,
             roleColor: n,

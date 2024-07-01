@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(481060), r = n(991570), o = n(50493), c = n(689938), u = n(638649), d = n(332513);
+var a = n(120356), l = n.n(a), s = n(481060), r = n(991570), o = n(50493), c = n(689938), d = n(638649), u = n(332513);
 function h(e) {
     let {
             userId: t,
@@ -14,18 +14,18 @@ function h(e) {
             backPanel: h = o.k.INFO
         } = e, p = (0, r.f)(t, n, 0.8, s.tokens.colors.BACKGROUND_SECONDARY);
     return (0, i.jsxs)('div', {
-        className: l()(d.header),
+        className: l()(u.header),
         style: { backgroundColor: p },
         children: [
             (0, i.jsx)('div', {
-                className: l()(d.headerTitle),
+                className: l()(u.headerTitle),
                 children: (0, i.jsxs)(s.Clickable, {
-                    className: l()(u.backButton),
+                    className: l()(d.backButton),
                     onClick: () => null == a ? void 0 : a(h),
                     children: [
                         (0, i.jsx)(s.ArrowSmallLeftIcon, {
                             size: 'custom',
-                            className: l()(u.__invalid_backButtonIcon),
+                            className: l()(d.__invalid_backButtonIcon),
                             width: 20,
                             height: 20
                         }),
@@ -37,11 +37,11 @@ function h(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: l()(u.__invalid_options),
+                className: l()(d.__invalid_options),
                 children: (0, i.jsx)(s.KeyCombo, {
                     shortcut: 'esc',
-                    keyClassName: u.keyComboInner,
-                    className: u.keyComboContainer
+                    keyClassName: d.keyComboInner,
+                    className: d.keyComboContainer
                 })
             })
         ]

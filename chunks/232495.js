@@ -6,12 +6,12 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var a = n(442837), l = n(481060), s = n(430824), r = n(914010), o = n(689938), c = n(66175);
-let u = () => (0, i.jsx)(i.Fragment, {
+let d = () => (0, i.jsx)(i.Fragment, {
         children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
             shareIcon: o.Z.Messages.INSTANT_INVITE,
             shareIconHook: () => (0, i.jsx)(l.GroupPlusIcon, { className: c.icon }, 'icon')
         })
-    }), d = () => {
+    }), u = () => {
         let e = (0, a.e7)([
                 s.Z,
                 r.Z
@@ -32,7 +32,7 @@ let u = () => (0, i.jsx)(i.Fragment, {
                         className: c.writingMessagesTitle,
                         children: o.Z.Messages.TIP_WRITING_MESSAGES_TITLE3
                     }),
-                    body: (0, i.jsx)(d, {})
+                    body: (0, i.jsx)(u, {})
                 },
                 ORGANIZE_BY_TOPIC: {
                     title: (0, i.jsx)('div', {
@@ -47,7 +47,7 @@ let u = () => (0, i.jsx)(i.Fragment, {
                 },
                 INSTANT_INVITE: {
                     title: o.Z.Messages.TIP_INSTANT_INVITE_TITLE3,
-                    body: (0, i.jsx)(u, {})
+                    body: (0, i.jsx)(d, {})
                 },
                 SERVER_SETTINGS: {
                     title: o.Z.Messages.TIP_SERVER_SETTINGS_TITLE3,

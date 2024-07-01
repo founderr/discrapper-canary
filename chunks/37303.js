@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     Z: function () {
-        return f;
+        return p;
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(920906), l = n(442837), r = n(686777), o = n(113434), c = n(569984), d = n(497505), u = n(602667), _ = n(87894), E = n(372113), m = n(206044), I = n(266843), T = n(46140), h = n(441468);
@@ -19,16 +19,16 @@ function N(e) {
             quest: a,
             ...n
         };
-        return (0, i.jsx)(f, { ...e });
+        return (0, i.jsx)(p, { ...e });
     }
 }
-function f(e) {
+function p(e) {
     let {
             quest: t,
             location: n,
             initiallyExpanded: l,
             contentPosition: c
-        } = e, [N, f] = a.useState(!1), p = a.useCallback(() => f(!0), []), C = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
+        } = e, [N, p] = a.useState(!1), f = a.useCallback(() => p(!0), []), C = a.useCallback(() => p(!1), []), g = (0, o.tP)(t), {
             containerRef: S,
             size: A,
             height: x
@@ -66,8 +66,8 @@ function f(e) {
                     e.current = t, S.current = t;
                 },
                 className: h.questsCard,
-                onFocus: p,
-                onMouseEnter: p,
+                onFocus: f,
+                onMouseEnter: f,
                 onBlur: C,
                 onMouseLeave: C,
                 children: [

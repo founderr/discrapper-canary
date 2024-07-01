@@ -29,7 +29,7 @@ class N extends (a = c.ZP.Store) {
         return I;
     }
 }
-function f(e) {
+function p(e) {
     return e.sort((e, t) => e.application.name.localeCompare(t.application.name));
 }
 o = 'PrivateChannelIntegrationStore', (r = 'displayName') in (l = N) ? Object.defineProperty(l, r, {
@@ -38,7 +38,7 @@ o = 'PrivateChannelIntegrationStore', (r = 'displayName') in (l = N) ? Object.de
     configurable: !0,
     writable: !0
 }) : l[r] = o;
-let p = new N(d.Z, {
+let f = new N(d.Z, {
     LOGOUT() {
         E.clear();
     },
@@ -70,7 +70,7 @@ let p = new N(d.Z, {
             channelId: t,
             integrations: n
         } = e;
-        E.set(t, f(n.map(_.F))), m.set(t, 2);
+        E.set(t, p(n.map(_.F))), m.set(t, 2);
     },
     FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
         let {channelId: t} = e;
@@ -80,7 +80,7 @@ let p = new N(d.Z, {
         let {integration: t} = e, n = E.get(t.channel_id);
         if (null == n)
             return !1;
-        E.set(t.channel_id, f([
+        E.set(t.channel_id, p([
             ...n,
             (0, _.F)(t)
         ]));
@@ -90,7 +90,7 @@ let p = new N(d.Z, {
         if (null == n)
             return !1;
         let i = (0, _.F)(t), a = n.findIndex(e => e.application.id === i.application.id), s = [...n];
-        -1 === a ? s.push(i) : s[a] = i, E.set(i.channel_id, f(s));
+        -1 === a ? s.push(i) : s[a] = i, E.set(i.channel_id, p(s));
     },
     PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
         let {
@@ -106,4 +106,4 @@ let p = new N(d.Z, {
         return E.delete(t.id);
     }
 });
-t.Z = p;
+t.Z = f;

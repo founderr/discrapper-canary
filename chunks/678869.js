@@ -3,7 +3,7 @@ n.d(t, {
         return j;
     }
 }), n(627494), n(757143), n(653041);
-var i = n(735250), a = n(470079), l = n(423875), s = n(442837), r = n(902704), o = n(481060), c = n(952164), u = n(768419), d = n(456190), h = n(239470), p = n(894344), m = n(314897), _ = n(936195), f = n(5192), E = n(561308), C = n(256726), g = n(206295), I = n(551228), x = n(591853), T = n(371991), N = n(410441), v = n(981631), S = n(616922), Z = n(689938), A = n(861666), M = n(208899);
+var i = n(735250), a = n(470079), l = n(423875), s = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(456190), h = n(239470), p = n(894344), m = n(314897), _ = n(936195), f = n(5192), E = n(561308), C = n(256726), g = n(206295), I = n(551228), x = n(591853), T = n(371991), N = n(410441), v = n(981631), S = n(616922), Z = n(689938), A = n(861666), M = n(208899);
 let b = (e, t, n) => {
     let {
             artist: i,
@@ -74,9 +74,9 @@ function j(e) {
             primaryColor: F,
             secondaryColor: W
         } = (0, g.Z)(H), z = (0, s.e7)([
-            u.Z,
+            d.Z,
             m.default
-        ], () => (null == U ? void 0 : U.type) === v.IIU.LISTENING && null != V ? (0, h.Z)(u.Z, m.default, V, U) : void 0, [
+        ], () => (null == U ? void 0 : U.type) === v.IIU.LISTENING && null != V ? (0, h.Z)(d.Z, m.default, V, U) : void 0, [
             U,
             V
         ], r.Z), Y = a.useCallback(() => {
@@ -130,7 +130,7 @@ function j(e) {
             }
         }), j = () => {
             (0, c.aG)(U);
-        }, P = (0, d.Z)(z, S.kG.USER_ACTIVITY_SYNC, null != O ? f.ZP.getNickname(O.guild_id, O.id, V) : void 0), L = () => {
+        }, P = (0, u.Z)(z, S.kG.USER_ACTIVITY_SYNC, null != O ? f.ZP.getNickname(O.guild_id, O.id, V) : void 0), L = () => {
             (0, c.Z5)(U, V.id);
         };
     }

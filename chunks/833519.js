@@ -6,7 +6,7 @@ n.d(t, {
         return H;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(475179), u = n(872810), d = n(763520), h = n(710845), p = n(590293), m = n(863908), _ = n(871118), f = n(517525), E = n(590076), C = n(507675), g = n(199902), I = n(314897), x = n(592125), T = n(131951), N = n(451478), v = n(40300), S = n(368666), Z = n(685203), A = n(112560), M = n(442168), b = n(822296), R = n(916771), j = n(792517), L = n(979425), P = n(651183), O = n(623825), y = n(981631), D = n(354459), k = n(65154), U = n(689938), w = n(372453);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(475179), d = n(872810), u = n(763520), h = n(710845), p = n(590293), m = n(863908), _ = n(871118), f = n(517525), E = n(590076), C = n(507675), g = n(199902), I = n(314897), x = n(592125), T = n(131951), N = n(451478), v = n(40300), S = n(368666), Z = n(685203), A = n(112560), M = n(442168), b = n(822296), R = n(916771), j = n(792517), L = n(979425), P = n(651183), O = n(623825), y = n(981631), D = n(354459), k = n(65154), U = n(689938), w = n(372453);
 let B = new h.Z('StreamTile');
 function H(e) {
     let {
@@ -16,7 +16,7 @@ function H(e) {
             idle: l,
             width: s,
             premiumIndicator: o
-        } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, O.K)(s);
+        } = e, c = (0, r.e7)([g.Z], () => g.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, O.K)(s);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             n ? null : (0, i.jsx)(P.Z, { participant: t }),
@@ -24,7 +24,7 @@ function H(e) {
                 size: S.ZP.Sizes.SMALL,
                 className: w.liveIndicator,
                 participant: t,
-                showQuality: !u && !l,
+                showQuality: !d && !l,
                 isUpsellEnabled: !1,
                 premiumIndicator: o
             })
@@ -50,7 +50,7 @@ function G(e) {
             F.guildId
         ]), q = (0, r.e7)([g.Z], () => g.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
     if (a.useEffect(() => {
-            !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
+            !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, d.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
         }, []), a.useEffect(() => {
             B.info('Stream Tile State - activeStream: '.concat(null != K, ' | selected: ').concat(n, ' | Video: ').concat(null != H, ' | MediaEngine: ').concat(T.Z.supports(k.AN.VIDEO)));
         }, [
@@ -101,7 +101,7 @@ function G(e) {
                     videoComponent: H,
                     fit: f,
                     paused: h || J,
-                    videoSpinnerContext: Q ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
+                    videoSpinnerContext: Q ? u.m.SELF_STREAM : u.m.REMOTE_STREAM,
                     userId: W.id
                 }, z),
                 null != $ ? (0, i.jsx)(C.Z, {
@@ -137,7 +137,7 @@ function G(e) {
                             className: w.addCTA,
                             tooltip: U.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                             onClick: e => {
-                                e.stopPropagation(), (0, u.rn)(F, { forceMultiple: !0 });
+                                e.stopPropagation(), (0, d.rn)(F, { forceMultiple: !0 });
                             },
                             isSmall: ee,
                             children: (0, i.jsx)(o.EyePlusIcon, {

@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     }
 });
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(920906), o = n(442837), c = n(692547), u = n(481060), d = n(607070), h = n(492162), p = n(451478), _ = n(409216), f = n(934415), m = n(968847), g = n(689938), C = n(953248);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(920906), o = n(442837), c = n(692547), u = n(481060), d = n(607070), h = n(492162), p = n(451478), _ = n(409216), f = n(934415), g = n(968847), m = n(689938), C = n(953248);
 let I = {
     friction: 30,
     tension: 300
@@ -15,7 +15,7 @@ function E(e) {
             jumpToVoiceChannels: r
         } = e, s = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, h.Z)(n.id), d = l.useCallback(e => {
             e.preventDefault(), e.stopPropagation(), r();
-        }, [r]), p = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], m = (0, f.c4)({
+        }, [r]), p = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], g = (0, f.c4)({
             channels: p,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
@@ -36,12 +36,12 @@ function E(e) {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
                 className: C.barText,
-                children: g.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({ count: m.length })
+                children: m.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({ count: g.length })
             }),
             (0, i.jsx)(_.Z, {
                 guildId: n.id,
                 className: C.voiceChannelsUsers,
-                users: m.slice(0, 4),
+                users: g.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
                 size: u.AvatarSizes.SIZE_16
@@ -59,11 +59,11 @@ function N(e) {
         } = e, {
             bottomBar: _,
             topBar: f
-        } = (0, o.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)), N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), x = (0, o.e7)([p.Z], () => p.Z.isFocused()), {
+        } = (0, o.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)), N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), x = (0, o.e7)([p.Z], () => p.Z.isFocused()), {
             mode: S,
             mentionCount: Z,
             targetChannelId: v
-        } = 'bottom' === t ? _ : f, T = S === m.x.HIDDEN, L = (0, s.useSpring)({
+        } = 'bottom' === t ? _ : f, T = S === g.x.HIDDEN, L = (0, s.useSpring)({
             to: { transform: T ? 'bottom' === t ? 'translateY(180%)' : 'translateY(-180%)' : 'translateY(0%)' },
             config: I,
             immediate: N || !x
@@ -82,7 +82,7 @@ function N(e) {
             className: C.containerPadding,
             style: L,
             'aria-hidden': T,
-            children: S === m.x.HIDDEN ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) }) : S === m.x.UNREAD ? (0, i.jsxs)(u.Clickable, {
+            children: S === g.x.HIDDEN ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) }) : S === g.x.UNREAD ? (0, i.jsxs)(u.Clickable, {
                 className: C.bar,
                 onClick: A,
                 children: [
@@ -103,19 +103,19 @@ function N(e) {
                         variant: 'text-xs/semibold',
                         color: 'interactive-normal',
                         className: C.barText,
-                        children: g.Z.Messages.NEW_UNREADS
+                        children: m.Z.Messages.NEW_UNREADS
                     })
                 ]
-            }) : S === m.x.MENTIONS ? (0, i.jsx)(u.Clickable, {
+            }) : S === g.x.MENTIONS ? (0, i.jsx)(u.Clickable, {
                 className: a()(C.bar, C.mentionsBar),
                 onClick: A,
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-xs/semibold',
                     color: 'status-danger-text',
                     className: C.barText,
-                    children: g.Z.Messages.NEW_MENTIONS_COUNT.format({ count: Z })
+                    children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: Z })
                 })
-            }) : S === m.x.VOICE_CHANNELS ? (0, i.jsx)(E, {
+            }) : S === g.x.VOICE_CHANNELS ? (0, i.jsx)(E, {
                 jumpToVoiceChannels: c,
                 guildChannels: n,
                 guildChannelsVersion: r

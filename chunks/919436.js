@@ -1,5 +1,5 @@
 n(411104), n(47120);
-var i, l = n(735250), r = n(470079), a = n(920906), s = n(91192), o = n(442837), c = n(481060), u = n(239091), d = n(358221), h = n(43267), p = n(933557), _ = n(93687), f = n(266076), m = n(199902), g = n(19780), C = n(306680), I = n(944486), E = n(594174), N = n(451478), x = n(880080), S = n(682662), Z = n(662146), v = n(674552), T = n(981631), L = n(129061);
+var i, l = n(735250), r = n(470079), a = n(920906), s = n(91192), o = n(442837), c = n(481060), u = n(239091), d = n(358221), h = n(43267), p = n(933557), _ = n(93687), f = n(266076), g = n(199902), m = n(19780), C = n(306680), I = n(944486), E = n(594174), N = n(451478), x = n(880080), S = n(682662), Z = n(662146), v = n(674552), T = n(981631), L = n(129061);
 function A(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -102,16 +102,16 @@ class R extends (i = r.PureComponent) {
                 isGDMFacepileEnabled: p
             } = this.props, {
                 hovered: _,
-                animating: m
-            } = this.state, g = e.isMultiUserDM() && null == e.icon && p;
+                animating: g
+            } = this.state, m = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(x.Z, {
-                        hovered: !m && _,
-                        selected: !m && n,
-                        unread: !m && h,
+                        hovered: !g && _,
+                        selected: !g && n,
+                        unread: !g && h,
                         className: L.pill
                     }),
                     (0, l.jsx)(Z.Z, {
@@ -136,9 +136,9 @@ class R extends (i = r.PureComponent) {
                                     selected: n || _,
                                     ariaLabel: null != t ? t : '',
                                     onContextMenu: this.handleContextMenu,
-                                    icon: g ? void 0 : this.getChannelIcon(),
-                                    backgroundStyle: g ? 'on-hover' : 'always',
-                                    children: g ? (0, l.jsx)(f.Z, {
+                                    icon: m ? void 0 : this.getChannelIcon(),
+                                    backgroundStyle: m ? 'on-hover' : 'always',
+                                    children: m ? (0, l.jsx)(f.Z, {
                                         channel: e,
                                         size: c.AvatarSizes.SIZE_48,
                                         facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -198,7 +198,7 @@ A(R, 'defaultProps', {
     video: !1,
     isCurrentUserInThisDMCall: !1
 }), t.Z = r.forwardRef(function (e, t) {
-    let n = e.channel.id, i = (0, p.ZP)(e.channel), r = (0, o.e7)([g.Z], () => g.Z.getChannelId(), []), a = (0, o.e7)([d.Z], () => null != r ? d.Z.getMode(r) : T.WtW.VOICE, [r]), s = (0, o.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0), c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []), u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]), {isFacepileEnabled: h} = _.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }), f = r === n, E = !1, N = !1;
+    let n = e.channel.id, i = (0, p.ZP)(e.channel), r = (0, o.e7)([m.Z], () => m.Z.getChannelId(), []), a = (0, o.e7)([d.Z], () => null != r ? d.Z.getMode(r) : T.WtW.VOICE, [r]), s = (0, o.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0), c = (0, o.e7)([I.Z], () => I.Z.getChannelId(), []), u = (0, o.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]), {isFacepileEnabled: h} = _.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }), f = r === n, E = !1, N = !1;
     return f && (E = a === T.WtW.VOICE, N = a === T.WtW.VIDEO), (0, l.jsx)(R, {
         ...e,
         ref: t,

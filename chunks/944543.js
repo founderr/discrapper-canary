@@ -1,5 +1,5 @@
 n(757143), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(771340), u = n(903223), d = n(285952), h = n(689938), p = n(46319);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(771340), d = n(903223), u = n(285952), h = n(689938), p = n(46319);
 function m(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -27,8 +27,8 @@ class E extends a.PureComponent {
             region: e,
             selected: t
         } = this.props;
-        return (0, i.jsxs)(d.Z, {
-            align: d.Z.Align.CENTER,
+        return (0, i.jsxs)(u.Z, {
+            align: u.Z.Align.CENTER,
             className: s()({ selected: t }),
             children: [
                 (0, i.jsx)(f, {
@@ -95,4 +95,4 @@ class C extends a.PureComponent {
         });
     }
 }
-t.Z = r.ZP.connectStores([u.Z], () => ({ regions: u.Z.getRegions(null) }))(C);
+t.Z = r.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(C);

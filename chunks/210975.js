@@ -7,11 +7,11 @@ n.d(t, {
     }
 });
 var i = n(470079), a = n(442837), l = n(470956), s = n(314897), r = n(592125), o = n(979651), c = n(441894);
-function u(e) {
+function d(e) {
     let t = (0, a.e7)([o.Z], () => o.Z.getVoiceStatesForChannel(e)), n = i.useMemo(() => Object.keys(t), [t]);
     return (0, l.Yp)(e, n);
 }
-function d(e) {
+function u(e) {
     let {
             channelId: t,
             location: n
@@ -33,7 +33,7 @@ function p(e) {
             userId: i,
             channelId: l,
             location: r
-        } = e, o = u(l), c = d({
+        } = e, o = d(l), c = u({
             channelId: l,
             location: r
         }), h = (0, a.e7)([s.default], () => s.default.getId());
@@ -43,7 +43,7 @@ function m(e) {
     let {
             channelId: t,
             location: n
-        } = e, l = u(t), r = d({
+        } = e, l = d(t), r = u({
             channelId: t,
             location: n
         }), o = (0, a.e7)([s.default], () => s.default.getId());

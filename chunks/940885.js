@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(410030), l = n(906732), s = n(769654), r = n(785717), o = n(726059), c = n(162267), u = n(483517), d = n(502762), h = n(171368), p = n(944546), m = n(470900), _ = n(772056), f = n(689938), E = n(440431);
+var a = n(410030), l = n(906732), s = n(769654), r = n(785717), o = n(726059), c = n(162267), d = n(483517), u = n(502762), h = n(171368), p = n(944546), m = n(470900), _ = n(772056), f = n(689938), E = n(440431);
 function C(e) {
     let {
             user: t,
@@ -17,7 +17,7 @@ function C(e) {
             mutualGuilds: N,
             isFetching: v
         } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, Z = null != N && N.length > 0;
-    return S || Z ? (0, i.jsxs)(d.Z.Overlay, {
+    return S || Z ? (0, i.jsxs)(u.Z.Overlay, {
         className: E.overlay,
         children: [
             Z && (0, i.jsx)(_.Z, {
@@ -44,7 +44,7 @@ function C(e) {
                     }, n.id);
                 })
             }),
-            Z && S && (0, i.jsx)(u.Z, { className: E.divider }),
+            Z && S && (0, i.jsx)(d.Z, { className: E.divider }),
             S && (0, i.jsx)(_.Z, {
                 className: E.list,
                 header: f.Z.Messages.MUTUAL_FRIENDS_COUNT.format({ count: x.length }),

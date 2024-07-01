@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), l = n(470079), r = n(442837), a = n(481060), s = n(970606), o = n(693546), c = n(826581), u = n(246364), d = n(98493), h = n(703656), p = n(669405), _ = n(434479), f = n(981631), m = n(176505), g = n(689938);
+var i = n(735250), l = n(470079), r = n(442837), a = n(481060), s = n(970606), o = n(693546), c = n(826581), u = n(246364), d = n(98493), h = n(703656), p = n(669405), _ = n(434479), f = n(981631), g = n(176505), m = n(689938);
 function C(e) {
     let {
             guild: t,
@@ -22,14 +22,14 @@ function C(e) {
             width: 24,
             height: 24
         }),
-        text: g.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
+        text: m.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
         selected: n,
         onClick: () => {
             (0, s.Q2)({
                 guildId: t.id,
                 source: f.jXE.CHANNEL_LIST,
-                tab: m.oC.MEMBER_APPLICATIONS
-            }), (0, h.uL)(f.Z5c.CHANNEL(t.id, m.oC.MEMBER_APPLICATIONS));
+                tab: g.oC.MEMBER_APPLICATIONS
+            }), (0, h.uL)(f.Z5c.CHANNEL(t.id, g.oC.MEMBER_APPLICATIONS));
         },
         trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, { count: I }) : null
     });

@@ -21,7 +21,7 @@ let _ = {
             })
         ]
     }, 'symbol');
-class m extends l.PureComponent {
+class g extends l.PureComponent {
     componentDidMount() {
         this.setState({ animating: !0 }), this._renderSecondaryTimeout = setTimeout(() => {
             this.setState({ renderSecondary: !0 });
@@ -137,7 +137,7 @@ class m extends l.PureComponent {
         });
     }
 }
-let g = 240;
+let m = 240;
 class C extends l.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
@@ -163,7 +163,7 @@ class C extends l.PureComponent {
             return this._timeouts.push(n), n;
         }), p(this, 'removeExplosion', e => {
             let t = this.children, n = t.findIndex(t => {
-                    if (t.type !== m)
+                    if (t.type !== g)
                         return !1;
                     let n = t.props;
                     return null != n.componentId && n.componentId === e;
@@ -173,12 +173,12 @@ class C extends l.PureComponent {
             let e = this.children, t = window.innerWidth / 2 >> 0, n = window.innerHeight / 2 >> 0;
             if (this.state.explosions < 8) {
                 let l = 'expl-'.concat(this.state.explosions);
-                e.push((0, i.jsx)(m, {
+                e.push((0, i.jsx)(g, {
                     componentId: l,
                     top: o().random(n - 100, n + 100, !1),
                     left: o().random(t - 200, t + 200, !1),
                     onAnimationComplete: this.removeExplosion
-                }, l)), this.setTimeout(this.createExplosion, g), this.setState({ explosions: this.state.explosions + 1 });
+                }, l)), this.setTimeout(this.createExplosion, m), this.setState({ explosions: this.state.explosions + 1 });
             } else
                 this.setTimeout(this.addSymbol, 750);
         }), p(this, 'addSymbol', () => {

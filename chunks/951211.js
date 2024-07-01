@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     }
 }), n(653041);
-var i, a, l = n(481060), s = n(620662), r = n(933557), o = n(377171), c = n(699516), u = n(594174), d = n(981631), h = n(689938);
+var i, a, l = n(481060), s = n(620662), r = n(933557), o = n(377171), c = n(699516), d = n(594174), u = n(981631), h = n(689938);
 function p(e) {
     let {
             canAttachFiles: t,
@@ -29,7 +29,7 @@ function p(e) {
         type: 'UPLOAD_TEXT_AS_FILE',
         icon: l.FileUpIcon,
         display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-    })), p && t && g !== d.IlC.POPOUT && I.push({
+    })), p && t && g !== u.IlC.POPOUT && I.push({
         type: 'CLIPS',
         icon: l.ClipsIcon,
         display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
@@ -52,28 +52,28 @@ function p(e) {
         icon: l.ActivitiesIcon,
         display: h.Z.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
     }), _.forEach(e => {
-        if (!(0, s.Z)(e, d.xjy.EMBEDDED))
-            e.type === d.IIU.PLAYING && (0, s.Z)(e, d.xjy.JOIN) && I.push({
+        if (!(0, s.Z)(e, u.xjy.EMBEDDED))
+            e.type === u.IIU.PLAYING && (0, s.Z)(e, u.xjy.JOIN) && I.push({
                 type: 'INVITE_TO_GAME',
                 icon: l.DpadIcon,
                 display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-                    channel: (0, r.F6)(m, u.default, c.Z, !0),
+                    channel: (0, r.F6)(m, d.default, c.Z, !0),
                     game: null != e ? e.name : ''
                 }),
                 activity: e
-            }), e.type === d.IIU.LISTENING && (0, s.Z)(e, d.xjy.SYNC) && I.push({
+            }), e.type === u.IIU.LISTENING && (0, s.Z)(e, u.xjy.SYNC) && I.push({
                 type: 'INVITE_TO_LISTEN',
                 icon: l.UserPlayIcon,
                 display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-                    channel: (0, r.F6)(m, u.default, c.Z, !0),
+                    channel: (0, r.F6)(m, d.default, c.Z, !0),
                     name: null != e ? e.name : ''
                 }),
                 activity: e
-            }), e.type === d.IIU.WATCHING && (0, s.Z)(e, d.xjy.SYNC) && I.push({
+            }), e.type === u.IIU.WATCHING && (0, s.Z)(e, u.xjy.SYNC) && I.push({
                 type: 'INVITE_TO_WATCH',
                 icon: l.EyeIcon,
                 display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-                    channel: (0, r.F6)(m, u.default, c.Z, !0),
+                    channel: (0, r.F6)(m, d.default, c.Z, !0),
                     name: null != e ? e.name : ''
                 }),
                 activity: e

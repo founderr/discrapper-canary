@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 }), n(47120), n(653041);
-var i = n(735250), l = n(470079), r = n(442837), a = n(481060), s = n(110924), o = n(693546), c = n(863249), u = n(937111), d = n(914010), h = n(289090), p = n(727258), _ = n(234383), f = n(179809), m = n(773182), g = n(588275), C = n(689938), I = n(388555);
+var i = n(735250), l = n(470079), r = n(442837), a = n(481060), s = n(110924), o = n(693546), c = n(863249), u = n(937111), d = n(914010), h = n(289090), p = n(727258), _ = n(234383), f = n(179809), g = n(773182), m = n(588275), C = n(689938), I = n(388555);
 function E(e) {
     let {onActivate: t} = e, [n, E] = l.useState(!1), N = (0, r.e7)([d.Z], () => d.Z.getGuildId()), x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds), S = (0, _.Z)(), Z = (0, s.Z)(N), v = l.useMemo(() => {
             let e = (0, p.qQ)({
@@ -33,7 +33,7 @@ function E(e) {
         T,
         Z,
         N
-    ]), 0 === S.length) ? null : (0, i.jsx)(m.TH, {
+    ]), 0 === S.length) ? null : (0, i.jsx)(g.TH, {
         onActivate: t,
         children: (0, i.jsx)(f.Z, {
             folderNode: v,
@@ -53,7 +53,7 @@ function E(e) {
                 className: I.pendingIcon
             }),
             renderChildNode: function (e) {
-                return e.type !== p.eD.GUILD ? null : (0, i.jsx)(g.Z, { guildNode: e }, e.id);
+                return e.type !== p.eD.GUILD ? null : (0, i.jsx)(m.Z, { guildNode: e }, e.id);
             }
         })
     });

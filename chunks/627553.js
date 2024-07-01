@@ -11,10 +11,10 @@ function r(e) {
             color: r = 'currentColor',
             foreground: o,
             background: c,
-            ...u
-        } = e, d = a.useRef((0, l.Z)());
+            ...d
+        } = e, u = a.useRef((0, l.Z)());
     return (0, i.jsxs)('svg', {
-        ...(0, s.Z)(u),
+        ...(0, s.Z)(d),
         width: t,
         height: n,
         viewBox: '0 0 24 24',
@@ -22,7 +22,7 @@ function r(e) {
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, i.jsxs)('g', {
-                'clip-path': 'url('.concat(d.current, ')'),
+                'clip-path': 'url('.concat(u.current, ')'),
                 children: [
                     (0, i.jsx)('path', {
                         className: c,
@@ -42,7 +42,7 @@ function r(e) {
             }),
             (0, i.jsx)('defs', {
                 children: (0, i.jsx)('clipPath', {
-                    id: d.current,
+                    id: u.current,
                     children: (0, i.jsx)('rect', {
                         width: '24',
                         height: '24',

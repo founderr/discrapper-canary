@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(481060), c = n(503438), u = n(594174), d = n(672938), h = n(936195), p = n(727218), _ = n(602623), f = n(81063), m = n(768581), g = n(823379), C = n(51144), I = n(328979);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(481060), c = n(503438), u = n(594174), d = n(672938), h = n(936195), p = n(727218), _ = n(602623), f = n(81063), g = n(768581), m = n(823379), C = n(51144), I = n(328979);
 let E = _.u.SIZE_24;
 function N(e) {
     var t, n;
@@ -15,7 +15,7 @@ function N(e) {
         } = e, d = null == r ? void 0 : r.assets, h = null == r ? void 0 : r.application_id;
     if (null == r || null == d || null == d.large_image && null == d.small_image)
         return null != s ? function (e) {
-            let t = m.ZP.getApplicationIconURL({
+            let t = g.ZP.getApplicationIconURL({
                     id: e.application.id,
                     icon: e.application.icon
                 }), n = e.application.name;
@@ -29,13 +29,13 @@ function N(e) {
                 })
             });
         }(s) : null;
-    let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image, _ = (0, c.Z)(r), g = _ ? I.spotifyLargeImage : I.applicationLargeImage, C = null != p ? (0, i.jsx)('img', {
+    let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image, _ = (0, c.Z)(r), m = _ ? I.spotifyLargeImage : I.applicationLargeImage, C = null != p ? (0, i.jsx)('img', {
             alt: null !== (n = d.large_text) && void 0 !== n ? n : '',
             src: (0, f.getAssetImage)(h, p, [
                 128,
                 128
             ]),
-            className: g
+            className: m
         }) : null;
     return _ && null != u ? (C = (0, i.jsx)(o.Clickable, {
         className: I.clickable,
@@ -134,9 +134,9 @@ function T(e) {
             onOpenSpotifyTrack: h,
             onOpenSpotifyArtist: p,
             onOpenSpotifyAlbum: f
-        } = e, m = [];
-    null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != d && (m = d.map(e => e.user.id));
-    let T = (0, s.Wu)([u.default], () => m.map(e => u.default.getUser(e)).filter(g.lm)), L = null != n || (0, c.Z)(t), A = l.useMemo(() => {
+        } = e, g = [];
+    null != n ? g = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != d && (g = d.map(e => e.user.id));
+    let T = (0, s.Wu)([u.default], () => g.map(e => u.default.getUser(e)).filter(m.lm)), L = null != n || (0, c.Z)(t), A = l.useMemo(() => {
             let e = new Map();
             return L && null != d && d.forEach(t => {
                 let n = t.member;
@@ -172,7 +172,7 @@ function T(e) {
                                 onOpenSpotifyArtist: p
                             }),
                             (0, i.jsx)(Z, { activity: t }),
-                            m.length > 0 && (0, i.jsx)(_.Z, {
+                            g.length > 0 && (0, i.jsx)(_.Z, {
                                 className: I.usersSummary,
                                 guildId: a.guild_id,
                                 users: T,

@@ -1,6 +1,6 @@
 n(47120);
-var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(481060), c = n(285952), u = n(372992);
-function d(e, t, n) {
+var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(481060), c = n(285952), d = n(372992);
+function u(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -17,7 +17,7 @@ class h extends (i = l.PureComponent) {
             renderHeader: i,
             className: l,
             onClose: s,
-            children: d
+            children: u
         } = this.props;
         return null != t && (e = (0, a.jsx)(o.ModalFooter, {
             direction: c.Z.Direction.HORIZONTAL,
@@ -30,7 +30,7 @@ class h extends (i = l.PureComponent) {
                     ...p
                 } = t;
                 return (0, a.jsxs)(o.ModalRoot, {
-                    className: u.modal,
+                    className: d.modal,
                     ...p,
                     children: [
                         (0, a.jsxs)(o.ModalHeader, {
@@ -49,10 +49,10 @@ class h extends (i = l.PureComponent) {
                             ]
                         }),
                         (0, a.jsx)(o.ModalContent, {
-                            className: r()(l, u.content, { selectable: n }),
+                            className: r()(l, d.content, { selectable: n }),
                             scrollerRef: this.scrollerRef,
                             onScroll: this.handleScroll,
-                            children: d
+                            children: u
                         }),
                         e
                     ]
@@ -61,7 +61,7 @@ class h extends (i = l.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e), d(this, 'scrollerRef', l.createRef()), d(this, 'handleScroll', () => {
+        super(...e), u(this, 'scrollerRef', l.createRef()), u(this, 'handleScroll', () => {
             let {current: e} = this.scrollerRef;
             if (null != e) {
                 var t, n;
@@ -70,4 +70,4 @@ class h extends (i = l.PureComponent) {
         });
     }
 }
-d(h, 'defaultProps', { selectable: !1 }), t.Z = h;
+u(h, 'defaultProps', { selectable: !1 }), t.Z = h;

@@ -101,8 +101,8 @@ t.Z = l.memo(function (e) {
     let {
             wheelWidth: t,
             wheelHeight: n,
-            itemWidth: m,
-            itemHeight: g,
+            itemWidth: g,
+            itemHeight: m,
             showDeadZoneIndicator: C,
             activeItem: I,
             onItemSelect: E,
@@ -191,15 +191,15 @@ t.Z = l.memo(function (e) {
             let r = h[l];
             if (null == r)
                 throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
-            let a = _(r.x, t, m), s = _(r.y, n, g);
+            let a = _(r.x, t, g), s = _(r.y, n, m);
             return (0, i.jsx)('div', {
                 ref: e => P(e, l),
                 className: u.chatWheelItem,
                 style: {
                     left: a,
                     top: s,
-                    width: m,
-                    height: g
+                    width: g,
+                    height: m
                 },
                 children: e
             }, l);
@@ -207,9 +207,9 @@ t.Z = l.memo(function (e) {
             O,
             A,
             t,
-            m,
-            n,
             g,
+            n,
+            m,
             S.length,
             P
         ]);

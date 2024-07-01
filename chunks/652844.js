@@ -33,7 +33,7 @@ let s = {
                     return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.play(n);
-            }, [e]), u = a.useCallback(() => {
+            }, [e]), d = a.useCallback(() => {
                 if (null == t.current)
                     return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
@@ -43,7 +43,7 @@ let s = {
             events: {
                 onClick: o,
                 onMouseEnter: c,
-                onMouseLeave: u
+                onMouseLeave: d
             },
             play: o,
             Component: a.useCallback(e => (0, i.jsx)(l.L, {

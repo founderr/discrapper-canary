@@ -12,18 +12,18 @@ let N = e => {
                 url: n,
                 description: a
             } = t;
-        return null == n ? null : (0, i.jsx)(p, {
+        return null == n ? null : (0, i.jsx)(f, {
             url: n,
             description: a
         });
-    }, f = e => {
+    }, p = e => {
         var t, n, a;
         let {embed: s} = e;
         if (!I.n2.has(s.type))
             return null;
         let l = void 0 !== s.video && s.type !== r.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
-        return null == l ? null : (0, i.jsx)(p, { url: l });
-    }, p = e => {
+        return null == l ? null : (0, i.jsx)(f, { url: l });
+    }, f = e => {
         let {
                 url: t,
                 description: n
@@ -58,7 +58,7 @@ function g(e) {
             onConfirmPress: d,
             transitionState: u,
             onClose: E
-        } = e, I = (0, _.Dt)(), p = a.useCallback(() => {
+        } = e, I = (0, _.Dt)(), f = a.useCallback(() => {
             (0, m.aP)({
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
@@ -102,7 +102,7 @@ function g(e) {
             (0, i.jsxs)(o.ModalContent, {
                 children: [
                     (0, i.jsx)(o.ModalCloseButton, {
-                        onClick: p,
+                        onClick: f,
                         className: h.closeButton
                     }),
                     (0, i.jsx)(o.Heading, {
@@ -119,7 +119,7 @@ function g(e) {
                         children: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
                     }),
                     null != r && (0, i.jsx)(N, { attachment: r }),
-                    null != c && (0, i.jsx)(f, { embed: c })
+                    null != c && (0, i.jsx)(p, { embed: c })
                 ]
             }),
             (0, i.jsxs)(o.ModalFooter, {
@@ -138,7 +138,7 @@ function g(e) {
                         disabled: s,
                         color: o.Button.Colors.TRANSPARENT,
                         size: o.Button.Sizes.MEDIUM,
-                        onClick: p,
+                        onClick: f,
                         children: T.Z.Messages.CANCEL
                     })
                 ]

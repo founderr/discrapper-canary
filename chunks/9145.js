@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(993365), c = n(481060), u = n(153867), d = n(110924), h = n(607070), p = n(900211), m = n(740492), _ = n(871499), f = n(402113), E = n(592125), C = n(271383), g = n(944486), I = n(594174), x = n(602623), T = n(585483), N = n(792125), v = n(51144), S = n(566620), Z = n(317381), A = n(619915), M = n(988980), b = n(952561), R = n(563218), j = n(719296), L = n(651612), P = n(918559), O = n(981631), y = n(689938), D = n(2314);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(993365), c = n(481060), d = n(153867), u = n(110924), h = n(607070), p = n(900211), m = n(740492), _ = n(871499), f = n(402113), E = n(592125), C = n(271383), g = n(944486), I = n(594174), x = n(602623), T = n(585483), N = n(792125), v = n(51144), S = n(566620), Z = n(317381), A = n(619915), M = n(988980), b = n(952561), R = n(563218), j = n(719296), L = n(651612), P = n(918559), O = n(981631), y = n(689938), D = n(2314);
 let k = x.u.SIZE_32, U = {
         [P.MI.NO_CHAT]: D.noChat,
         [P.MI.RESIZABLE]: D.resizable
@@ -17,7 +17,7 @@ function w(e) {
         } = e, H = (0, b.Z)(), G = (0, r.Wu)([Z.ZP], () => null != w ? Z.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([E.Z], () => E.Z.getChannel(w)), F = (0, A.gb)(G), W = (0, A.uF)(F), z = a.useCallback(() => {
             (0, S.tg)(P.Ez.PIP);
         }, []), Y = a.useRef(null), K = (0, r.e7)([Z.ZP], () => Z.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : l), J = a.useCallback(e => {
-            u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
+            d.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []), $ = a.useRef(null), [ee, et] = a.useState({
             width: 0,
             height: 0
@@ -50,8 +50,8 @@ function w(e) {
             return eo.forEach(t => {
                 null != t && void 0 !== t && e.set(t.userId, t);
             }), e;
-        }, [eo]), eu = function (e, t, n) {
-            let i = (0, d.Z)(e), l = e !== i, [s, r] = a.useState(!1);
+        }, [eo]), ed = function (e, t, n) {
+            let i = (0, u.Z)(e), l = e !== i, [s, r] = a.useState(!1);
             a.useEffect(() => {
                 r(!0);
                 let e = setTimeout(() => r(!1), 50);
@@ -79,8 +79,8 @@ function w(e) {
         }(q, X, l);
     if (null == H)
         return null;
-    let ed = [];
-    null != es && (ed = Array.from(es.embeddedActivity.userIds).map(e => I.default.getUser(e)).filter(e => null != e && void 0 !== e));
+    let eu = [];
+    null != es && (eu = Array.from(es.embeddedActivity.userIds).map(e => I.default.getUser(e)).filter(e => null != e && void 0 !== e));
     let eh = (e, t) => {
         var n;
         if (null == e || void 0 === e || void 0 === t)
@@ -99,7 +99,7 @@ function w(e) {
     return (0, i.jsxs)('div', {
         className: s()(D.wrapper, U[K], (0, N.Q)(O.BRd.DARK)),
         ref: Y,
-        style: eu,
+        style: ed,
         children: [
             null == B ? void 0 : B(),
             (0, i.jsxs)('div', {
@@ -133,7 +133,7 @@ function w(e) {
                         children: [
                             (0, i.jsx)(x.Z, {
                                 renderIcon: !1,
-                                users: ed,
+                                users: eu,
                                 size: k,
                                 max: 6,
                                 className: D.userAvatars,

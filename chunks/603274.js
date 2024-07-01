@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120), n(390547), n(653041);
 var i = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), a = n(392711), s = n.n(a), o = n(442837), c = n(481060), u = n(317381), d = n(565799), h = n(501655), p = n(199902), _ = n(592125), f = n(594174), m = n(938475), g = n(602623), C = n(823379), I = n(709054), E = n(853856), N = n(981631), x = n(689938), S = n(907934), Z = n(721690);
+var l = n(120356), r = n.n(l), a = n(392711), s = n.n(a), o = n(442837), c = n(481060), u = n(317381), d = n(565799), h = n(501655), p = n(199902), _ = n(592125), f = n(594174), g = n(938475), m = n(602623), C = n(823379), I = n(709054), E = n(853856), N = n(981631), x = n(689938), S = n(907934), Z = n(721690);
 function v(e, t) {
     return 0 === t.length ? null : (0, i.jsxs)('div', {
         className: S.row,
@@ -14,7 +14,7 @@ function v(e, t) {
                 className: S.activityIcon,
                 color: 'currentColor'
             }),
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(m.Z, {
                 guildId: void 0,
                 users: t,
                 max: 6
@@ -27,7 +27,7 @@ function T() {
     let n = (0, o.Wu)([
             E.Z,
             _.Z
-        ], () => I.default.keys(E.Z.getFavoriteChannels()).map(e => _.Z.getChannel(e)).filter(C.lm)), l = n.map(e => e.id), r = n.filter(e => e.type === N.d4z.GUILD_VOICE), a = n.filter(e => e.type === N.d4z.GUILD_STAGE_VOICE).map(e => e.id), x = (0, o.Wu)([m.ZP], () => s().flatMap(r, e => m.ZP.getVoiceStatesForChannel(e).map(e => {
+        ], () => I.default.keys(E.Z.getFavoriteChannels()).map(e => _.Z.getChannel(e)).filter(C.lm)), l = n.map(e => e.id), r = n.filter(e => e.type === N.d4z.GUILD_VOICE), a = n.filter(e => e.type === N.d4z.GUILD_STAGE_VOICE).map(e => e.id), x = (0, o.Wu)([g.ZP], () => s().flatMap(r, e => g.ZP.getVoiceStatesForChannel(e).map(e => {
             let {user: t} = e;
             return t;
         })), [r]), Z = (0, o.Wu)([d.Z], () => s().flatMap(a, e => d.Z.getMutableParticipants(e, h.pV.SPEAKER).filter(e => e.type === h.Ui.VOICE).map(e => {
@@ -54,7 +54,7 @@ function T() {
                     color: 'currentColor',
                     className: S.activityIcon
                 }),
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(m.Z, {
                     guildId: void 0,
                     users: e,
                     max: 3

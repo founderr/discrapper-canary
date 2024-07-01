@@ -9,7 +9,7 @@ n.d(t, {
         return v;
     }
 }), n(411104);
-var i = n(186070), l = n(185514), r = n(360038), a = n(175724), s = n(705371), o = n(138976), c = n(167042), u = n(239748), d = n(337482), h = n(679080), p = n(510761), _ = n(189509), f = n(673553), m = n(280492), g = n(746887), C = n(721383), I = n(743810), E = n(981631), N = n(689938);
+var i = n(186070), l = n(185514), r = n(360038), a = n(175724), s = n(705371), o = n(138976), c = n(167042), u = n(239748), d = n(337482), h = n(679080), p = n(510761), _ = n(189509), f = n(673553), g = n(280492), m = n(746887), C = n(721383), I = n(743810), E = n(981631), N = n(689938);
 function x() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++)
         t[n] = arguments[n];
@@ -37,9 +37,9 @@ let S = {
         [E.EkH.TEXTAREA_FOCUS]: f.U,
         [E.EkH.MARK_CHANNEL_READ]: a.f,
         [E.EkH.MARK_SERVER_READ]: s.l,
-        [E.EkH.TOGGLE_MUTE]: m.iN,
-        [E.EkH.TOGGLE_DEAFEN]: m.oV,
-        [E.EkH.TOGGLE_CATEGORY_COLLAPSED]: g.u,
+        [E.EkH.TOGGLE_MUTE]: g.iN,
+        [E.EkH.TOGGLE_DEAFEN]: g.oV,
+        [E.EkH.TOGGLE_CATEGORY_COLLAPSED]: m.u,
         [E.EkH.SCROLL_UP]: d.B2,
         [E.EkH.SCROLL_DOWN]: d.gN,
         [E.EkH.SEARCH_EMOJIS]: h.S,

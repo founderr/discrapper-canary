@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     }
 }), n(47120), n(627341);
-var i = n(278074), a = n(263568), s = n(607070), l = n(339085), r = n(633302), o = n(715903), c = n(69882), d = n(592125), u = n(271383), _ = n(375954), E = n(594174), m = n(768581), I = n(176354), T = n(358085), h = n(798628), N = n(79390), f = n(839963), p = n(897325), C = n(57101), g = n(562293), S = n(981631), A = n(689938);
+var i = n(278074), a = n(263568), s = n(607070), l = n(339085), r = n(633302), o = n(715903), c = n(69882), d = n(592125), u = n(271383), _ = n(375954), E = n(594174), m = n(768581), I = n(176354), T = n(358085), h = n(798628), N = n(79390), p = n(839963), f = n(897325), C = n(57101), g = n(562293), S = n(981631), A = n(689938);
 let x = {
     channelId: S.lds,
     selectedAnswerIds: new Set(),
@@ -57,14 +57,14 @@ function v(e, t) {
     let E = e.state === S.yb.SENT, m = E ? null != l ? l : (0, g.H)(r.expiry) : '', I = null == m && E, {
             selectedAnswerIds: T,
             submitting: N,
-            editing: f,
-            showResults: p
+            editing: p,
+            showResults: f
         } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : x, C = e.reactions, A = !0;
     if (!M(e)) {
         let t = _.Z.getMessage(e.channel_id, e.id);
         A = !e.isSearchHit && null != t, C = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : C;
     }
-    let O = T.size > 0, R = C.some(e => !0 === e.me_vote), v = !f && R, L = v || I || p, Z = E && A && (!R || f || L), P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i), b = null != P ? u.ZP.getSelfMember(P) : null, D = (0, o.EY)(b), j = (0, c.b)(b);
+    let O = T.size > 0, R = C.some(e => !0 === e.me_vote), v = !p && R, L = v || I || f, Z = E && A && (!R || p || L), P = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i), b = null != P ? u.ZP.getSelfMember(P) : null, D = (0, o.EY)(b), j = (0, c.b)(b);
     return {
         poll: r,
         canTapAnswers: Z,
@@ -75,7 +75,7 @@ function v(e, t) {
         hasSelectedAnswer: O,
         hasVoted: v,
         hasVoteRecorded: R,
-        isEditingVote: f,
+        isEditingVote: p,
         isExpired: I,
         isInteractive: A,
         isSent: E,
@@ -83,7 +83,7 @@ function v(e, t) {
         selectedAnswerIds: T,
         submitting: N,
         tapShouldOpenVotersModal: L,
-        showResults: p
+        showResults: f
     };
 }
 function L(e, t) {
@@ -98,7 +98,7 @@ function L(e, t) {
     let g = E.default.getCurrentUser();
     if (null == g)
         return;
-    let S = s.Z.useReducedMotion, x = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o), M = (0, p.E)(g, x), L = h.answers, Z = h.layout_type, P = v(e, t, { formattedExpirationLabel: _ });
+    let S = s.Z.useReducedMotion, x = null === (o = d.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o), M = (0, f.E)(g, x), L = h.answers, Z = h.layout_type, P = v(e, t, { formattedExpirationLabel: _ });
     if (null == P)
         return;
     let {
@@ -243,7 +243,7 @@ function L(e, t) {
             tapShouldOpenVotersModal: W,
             canTapAnswers: b,
             canSelectMultipleAnswers: en
-        }).with({ tapShouldOpenVotersModal: !0 }, () => f.Y7.LIST).with({ canTapAnswers: !1 }, () => f.Y7.LIST).with({ canSelectMultipleAnswers: !1 }, () => f.Y7.RADIO_BUTTONS).with({ canSelectMultipleAnswers: !0 }, () => f.Y7.CHECKBOXES).exhaustive(),
+        }).with({ tapShouldOpenVotersModal: !0 }, () => p.Y7.LIST).with({ canTapAnswers: !1 }, () => p.Y7.LIST).with({ canSelectMultipleAnswers: !1 }, () => p.Y7.RADIO_BUTTONS).with({ canSelectMultipleAnswers: !0 }, () => p.Y7.CHECKBOXES).exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: Z,
         resources: (0, C.Z)({

@@ -45,7 +45,7 @@ n.d(t, {
         return D;
     }
 }), n(789020), n(47120);
-var i = n(735250), a = n(470079), s = n(668781), l = n(239091), r = n(904245), o = n(144144), c = n(40851), d = n(592125), u = n(323873), _ = n(375954), E = n(594174), m = n(585483), I = n(5967), T = n(630388), h = n(358085), N = n(51144), f = n(91047), p = n(901461), C = n(50284), g = n(981631), S = n(689938);
+var i = n(735250), a = n(470079), s = n(668781), l = n(239091), r = n(904245), o = n(144144), c = n(40851), d = n(592125), u = n(323873), _ = n(375954), E = n(594174), m = n(585483), I = n(5967), T = n(630388), h = n(358085), N = n(51144), p = n(91047), f = n(901461), C = n(50284), g = n(981631), S = n(689938);
 function A(e, t, n) {
     return a.useCallback(() => {
         n({ [e]: !t });
@@ -105,7 +105,7 @@ function b(e, t, s, r) {
     let {id: o} = t, {
             id: E,
             flags: m
-        } = e, I = (0, T.yE)(m, g.iLy.EPHEMERAL), N = (0, p.Z)(e), f = (0, c.bp)();
+        } = e, I = (0, T.yE)(m, g.iLy.EPHEMERAL), N = (0, f.Z)(e), p = (0, c.bp)();
     return a.useCallback((e, t) => {
         if (I)
             return;
@@ -149,14 +149,14 @@ function b(e, t, s, r) {
                 }
             }, {
                 onClose: () => s({ contextMenu: !1 }),
-                context: f
+                context: p
             });
     }, [
         I,
         o,
         E,
         s,
-        f,
+        p,
         N,
         r
     ]);
@@ -164,7 +164,7 @@ function b(e, t, s, r) {
 function D(e, t) {
     return a.useCallback(n => {
         let i = E.default.getUser(e), a = d.Z.getChannel(t);
-        null != i && null != a && (n.stopPropagation(), (0, f.Pv)(n, i, a));
+        null != i && null != a && (n.stopPropagation(), (0, p.Pv)(n, i, a));
     }, [
         e,
         t
@@ -173,7 +173,7 @@ function D(e, t) {
 function j(e, t, n) {
     return a.useCallback(i => {
         let a = E.default.getUser(e), s = d.Z.getChannel(t);
-        null != a && null != s && (i.stopPropagation(), (0, f._j)(i, {
+        null != a && null != s && (i.stopPropagation(), (0, p._j)(i, {
             user: a,
             channel: s,
             moderationAlertId: n
@@ -187,7 +187,7 @@ function j(e, t, n) {
 function U(e, t) {
     return a.useCallback(n => {
         let i = E.default.getUser(e), a = d.Z.getChannel(t);
-        null != i && null != a && (n.stopPropagation(), (0, f.xS)(n, i, a.guild_id));
+        null != i && null != a && (n.stopPropagation(), (0, p.xS)(n, i, a.guild_id));
     }, [
         e,
         t

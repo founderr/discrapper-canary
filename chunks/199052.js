@@ -5,10 +5,10 @@ n.d(t, {
 }), n(47120);
 var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(695464), o = n(459);
 let c = 16 / 9;
-function u(e, t) {
+function d(e, t) {
     return Math.max(1, Math.floor((t - e) / (8 + e)) + 1);
 }
-function d(e, t, n) {
+function u(e, t, n) {
     let i = t - e;
     for (; i > 0;) {
         let t = e, a = Math.floor(i / 2);
@@ -43,20 +43,20 @@ function h(e) {
             } = function (e, t, n) {
                 let i;
                 let a = Math.floor(t / 25);
-                i = e > 25 ? d(a, t, e => {
-                    let i = u(e, t), a = function (e, t) {
+                i = e > 25 ? u(a, t, e => {
+                    let i = d(e, t), a = function (e, t) {
                             let n = e / c;
                             return Math.ceil((t - n) / (8 + n)) + 1;
                         }(e, n);
                     return i * a > 25;
-                }) : d(a, t, i => {
-                    let a = u(i, t), l = function (e, t) {
+                }) : u(a, t, i => {
+                    let a = d(i, t), l = function (e, t) {
                             let n = e / c;
                             return Math.floor((t - n) / (8 + n)) + 1;
                         }(i, n);
                     return a * l >= e;
                 }) - 1;
-                let l = u(i, t), s = Math.ceil(e / l);
+                let l = d(i, t), s = Math.ceil(e / l);
                 return {
                     tileWidth: i,
                     columns: Math.max(1, l),

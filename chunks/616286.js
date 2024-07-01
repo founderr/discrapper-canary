@@ -3,14 +3,14 @@ n.d(t, {
         return T;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(442837), c = n(475179), u = n(358221), d = n(306680), h = n(944486), p = n(111583), m = n(459273), _ = n(880831), f = n(774168), E = n(871499), C = n(981631), g = n(689938);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(442837), c = n(475179), d = n(358221), u = n(306680), h = n(944486), p = n(111583), m = n(459273), _ = n(880831), f = n(774168), E = n(871499), C = n(981631), g = n(689938);
 function I(e) {
     let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]), n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]), {
             unreadCount: i,
             mentionCount: a
-        } = (0, o.cj)([d.ZP], () => ({
-            unreadCount: d.ZP.getUnreadCount(e),
-            mentionCount: d.ZP.getMentionCount(e)
+        } = (0, o.cj)([u.ZP], () => ({
+            unreadCount: u.ZP.getUnreadCount(e),
+            mentionCount: u.ZP.getMentionCount(e)
         }), [e]);
     return {
         unreadCount: i,
@@ -42,12 +42,12 @@ function T(e) {
             channelId: n,
             className: l,
             showingClassName: r,
-            onClick: d,
+            onClick: u,
             inPopout: h,
             showRequestToSpeakSidebar: p,
             toggleRequestToSpeakSidebar: f,
             ...T
-        } = e, {disabled: N} = T, v = a.useRef(null), S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]), {
+        } = e, {disabled: N} = T, v = a.useRef(null), S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]), {
             isShowing: Z,
             unreadCount: A,
             mentionCount: M
@@ -71,11 +71,11 @@ function T(e) {
                 mentionCount: n
             };
         }(n), b = a.useCallback(() => {
-            null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
+            null == u || u(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
         }, [
             n,
             S,
-            d,
+            u,
             p,
             f
         ]), R = a.useCallback(e => {

@@ -6,7 +6,7 @@ t.Z = e => {
         onMouseEnter: r,
         onMouseLeave: o,
         onFocus: c,
-        channel: u
+        channel: d
     } = e;
     return a.useEffect(() => {
         !t && n();
@@ -18,7 +18,7 @@ t.Z = e => {
             onMouseEnter: r,
             onMouseLeave: o,
             children: (0, i.jsx)(s.Z, {
-                channel: u,
+                channel: d,
                 closePopout: n,
                 onFocus: c
             })

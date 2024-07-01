@@ -1,5 +1,5 @@
 n(47120);
-var i, l, r, a = n(735250), s = n(470079), o = n(299608), c = n.n(o), u = n(91192), d = n(924826), h = n(442837), p = n(902704), _ = n(481060), f = n(925549), m = n(607070), g = n(367907), C = n(453542), I = n(762914), E = n(702321), N = n(518311), x = n(355298), S = n(869404), Z = n(333984), v = n(210887), T = n(592125), L = n(158776), A = n(55589), b = n(153124), M = n(151827), R = n(515753), y = n(981631), O = n(689938), P = n(367358);
+var i, l, r, a = n(735250), s = n(470079), o = n(299608), c = n.n(o), u = n(91192), d = n(924826), h = n(442837), p = n(902704), _ = n(481060), f = n(925549), g = n(607070), m = n(367907), C = n(453542), I = n(762914), E = n(702321), N = n(518311), x = n(355298), S = n(869404), Z = n(333984), v = n(210887), T = n(592125), L = n(158776), A = n(55589), b = n(153124), M = n(151827), R = n(515753), y = n(981631), O = n(689938), P = n(367358);
 function j(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -271,7 +271,7 @@ class U extends (l = s.Component) {
                     num_users_visible: a.length,
                     num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.Z.isMobileOnline(e)).length
                 };
-            this.hasReportedAnalytics = !0, g.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
+            this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
                 ...u,
                 ...(0, C.X)(),
                 changelog_dm_visible: c
@@ -357,14 +357,14 @@ t.Z = e => {
                 ]);
             return (0, I.Ce)(t);
         }, []), _ = (0, h.cj)([
-            m.Z,
+            g.Z,
             v.Z,
             T.Z
         ], () => ({
             theme: v.Z.darkSidebar ? y.BRd.DARK : n,
-            keyboardModeEnabled: m.Z.keyboardModeEnabled,
+            keyboardModeEnabled: g.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion()
-        })), f = s.useRef(null), g = s.useCallback(e => {
+        })), f = s.useRef(null), m = s.useCallback(e => {
             let t = f.current, n = document.querySelector(e);
             null != t && null != n && t.scrollIntoViewNode({
                 node: n,
@@ -395,7 +395,7 @@ t.Z = e => {
             scrollToStart: C,
             scrollToEnd: E,
             defaultFocused: (r + (l ? 1 : 0)).toString(),
-            setFocus: g
+            setFocus: m
         });
     return (0, a.jsx)(u.bG, {
         navigator: L,

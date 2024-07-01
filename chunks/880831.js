@@ -6,11 +6,11 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(920906), c = n(442837), u = n(481060), d = n(570140), h = n(475179), p = n(904245), m = n(372900), _ = n(905405), f = n(937889), E = n(739566), C = n(378233), g = n(419922), I = n(375954), x = n(699516), T = n(512665), N = n(768581), v = n(70956), S = n(823379), Z = n(792125), A = n(981631), M = n(768760), b = n(275953);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(570140), h = n(475179), p = n(904245), m = n(372900), _ = n(905405), f = n(937889), E = n(739566), C = n(378233), g = n(419922), I = n(375954), x = n(699516), T = n(512665), N = n(768581), v = n(70956), S = n(823379), Z = n(792125), A = n(981631), M = n(768760), b = n(275953);
 let R = 10 * v.Z.Millis.SECOND;
 function j(e) {
     var t;
-    let {message: n} = e, l = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [d, I] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
+    let {message: n} = e, l = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, I] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
             if ('A' !== e.target.nodeName)
                 h.Z.updateChatOpen(n.channel_id, !0), p.Z.jumpToMessage({
                     channelId: n.channel_id,
@@ -21,7 +21,7 @@ function j(e) {
             n.channel_id,
             n.id
         ]), Z = null != n.content && '' !== n.content ? (0, f.ZP)(n, {
-            isInteracting: d,
+            isInteracting: u,
             shouldFilterKeywords: v
         }).content : null, {
             contentPlaceholder: A,
@@ -36,9 +36,9 @@ function j(e) {
             className: b.sticker,
             size: 128,
             sticker: e,
-            isInteracting: d
+            isInteracting: u
         }, e.id)) : null;
-    return (0, i.jsxs)(u.Clickable, {
+    return (0, i.jsxs)(d.Clickable, {
         className: b.toast,
         onMouseEnter: () => {
             I(!0);
@@ -72,7 +72,7 @@ function L(e) {
     let {
             channelId: t,
             className: n
-        } = e, [l, u] = a.useState(!1), {
+        } = e, [l, d] = a.useState(!1), {
             toastsHidden: h,
             toastMessages: p
         } = function (e) {
@@ -82,7 +82,7 @@ function L(e) {
                     isFrozen: i,
                     count: l,
                     lingerMs: s
-                } = e, [r, o] = a.useState([]), [u, h] = a.useState(!1), p = a.useRef(null), m = a.useRef(), _ = a.useCallback(() => {
+                } = e, [r, o] = a.useState([]), [d, h] = a.useState(!1), p = a.useRef(null), m = a.useRef(), _ = a.useCallback(() => {
                     o([]), h(!0);
                 }, []);
             a.useEffect(() => {
@@ -97,8 +97,8 @@ function L(e) {
                             i.id
                         ]);
                 }
-                return d.Z.subscribe('MESSAGE_CREATE', e), () => {
-                    d.Z.unsubscribe('MESSAGE_CREATE', e);
+                return u.Z.subscribe('MESSAGE_CREATE', e), () => {
+                    u.Z.unsubscribe('MESSAGE_CREATE', e);
                 };
             }, [
                 n,
@@ -115,7 +115,7 @@ function L(e) {
             }, [r]), i && null == p.current ? p.current = r : !i && null != p.current && (p.current = null);
             let f = null !== (t = p.current) && void 0 !== t ? t : r;
             return {
-                toastsHidden: u,
+                toastsHidden: d,
                 toastMessages: (0, c.Wu)([I.Z], () => f.map(e => I.Z.getMessage(n, e)), [
                     n,
                     f
@@ -171,10 +171,10 @@ function L(e) {
     return (0, i.jsx)('div', {
         className: s()(n, (0, Z.Q)(A.BRd.DARK)),
         onMouseEnter: () => {
-            u(!0);
+            d(!0);
         },
         onMouseLeave: () => {
-            u(!1);
+            d(!1);
         },
         children: g((e, t) => (0, i.jsx)(o.animated.div, {
             ref: e => E(t.message.id, null != e ? e.offsetHeight : null),

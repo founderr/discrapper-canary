@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(442837), u = n(481060), d = n(410030), h = n(271383), p = n(430824), m = n(594174), _ = n(153124), f = n(709054), E = n(931240), C = n(645896), g = n(603368), I = n(532490), x = n(380365), T = n(979264), N = n(620929), v = n(284019), S = n(308083), Z = n(981631), A = n(689938), M = n(595737);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(410030), h = n(271383), p = n(430824), m = n(594174), _ = n(153124), f = n(709054), E = n(931240), C = n(645896), g = n(603368), I = n(532490), x = n(380365), T = n(979264), N = n(620929), v = n(284019), S = n(308083), Z = n(981631), A = n(689938), M = n(595737);
 function b(e) {
     var t;
     let {
@@ -13,7 +13,7 @@ function b(e) {
         } = e, c = a.useMemo(() => {
             let e = f.default.extractTimestamp(n);
             return o()(new Date(e)).format('MMMM YYYY');
-        }, [n]), d = a.useMemo(() => new Set(l.games), [l.games]);
+        }, [n]), u = a.useMemo(() => new Set(l.games), [l.games]);
     return (0, i.jsx)(I.Z, {
         guildId: n,
         signHintPosition: I.p.LEFT,
@@ -32,19 +32,19 @@ function b(e) {
                 }),
                 (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(u.Heading, {
+                        (0, i.jsx)(d.Heading, {
                             variant: 'heading-xxl/normal',
                             color: 'text-muted',
                             className: M.charterHeaderText,
                             children: A.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
                         }),
-                        (0, i.jsx)(u.Heading, {
+                        (0, i.jsx)(d.Heading, {
                             variant: 'heading-xxl/bold',
                             color: 'interactive-active',
                             className: M.charterHeaderText,
                             children: l.name
                         }),
-                        (0, i.jsx)(u.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             className: M.establishedDate,
@@ -53,11 +53,11 @@ function b(e) {
                     ]
                 }),
                 (0, i.jsx)(N.p, {
-                    applicationIds: d,
+                    applicationIds: u,
                     playstyle: l.playstyle,
                     className: s()(M.charterBodyText, M.gameSection)
                 }),
-                (0, i.jsx)(u.Text, {
+                (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
                     className: M.charterBodyText,
@@ -95,20 +95,20 @@ function R(e) {
             N
         ]), O = a.useCallback(() => {
             j(!0);
-        }, []), y = (0, c.e7)([p.Z], () => p.Z.getGuild(n)), D = (0, c.e7)([m.default], () => m.default.getCurrentUser()), k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null), U = (0, d.ZP)(), w = (0, g.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
-            u.tokens.colors.BG_BRAND,
+        }, []), y = (0, c.e7)([p.Z], () => p.Z.getGuild(n)), D = (0, c.e7)([m.default], () => m.default.getCurrentUser()), k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null), U = (0, u.ZP)(), w = (0, g.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
+            d.tokens.colors.BG_BRAND,
             0.7
-        ]), B = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+        ]), B = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: U,
             saturation: 1
         }).hex(), H = (0, g.nj)(w, B, 'top center');
-    return null == y || null == D || null == k || null == I ? null : (0, i.jsx)(u.ModalRoot, {
+    return null == y || null == D || null == k || null == I ? null : (0, i.jsx)(d.ModalRoot, {
         ...o,
         transitionState: o.transitionState,
         'aria-labelledby': f,
         className: M.modal,
-        size: u.ModalSize.DYNAMIC,
-        children: (0, i.jsxs)(u.ModalContent, {
+        size: d.ModalSize.DYNAMIC,
+        children: (0, i.jsxs)(d.ModalContent, {
             className: M.content,
             style: H,
             children: [
@@ -120,12 +120,12 @@ function R(e) {
                             children: [
                                 (0, i.jsx)('div', {
                                     className: M.title,
-                                    children: (0, i.jsx)(u.Heading, {
+                                    children: (0, i.jsx)(d.Heading, {
                                         variant: 'heading-xxl/medium',
                                         children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({ name: y.name })
                                     })
                                 }),
-                                (0, i.jsx)(u.Text, {
+                                (0, i.jsx)(d.Text, {
                                     className: M.subtitle,
                                     variant: 'text-md/normal',
                                     children: A.Z.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
@@ -149,19 +149,19 @@ function R(e) {
                 }),
                 (0, i.jsx)(v.Z, {
                     onClick: P,
-                    color: u.Button.Colors.BRAND,
+                    color: d.Button.Colors.BRAND,
                     themeColor: w,
                     fullWidth: !1,
                     className: s()(M.ctaButton, R ? M.ctaButtonSigned : null),
                     children: (0, i.jsxs)('div', {
                         className: M.ctaButtonInner,
                         children: [
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 color: 'currentColor',
                                 variant: 'text-md/medium',
                                 children: A.Z.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
                             }),
-                            (0, i.jsx)(u.ArrowLargeRightIcon, {
+                            (0, i.jsx)(d.ArrowLargeRightIcon, {
                                 size: 'custom',
                                 width: 20,
                                 height: 20,

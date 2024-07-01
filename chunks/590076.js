@@ -3,13 +3,13 @@ n.d(t, {
         return _;
     }
 });
-var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(399606), o = n(618158), c = n(594174), u = n(822183), d = n(364125), h = n(610947), p = n(260788);
+var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(399606), o = n(618158), c = n(594174), d = n(822183), u = n(364125), h = n(610947), p = n(260788);
 function m(e) {
     let {
             focused: t,
             channelId: n,
             streamerId: l,
-            stream: u
+            stream: d
         } = e, m = a.useRef(null), _ = (0, r.e7)([c.default], () => c.default.getCurrentUser());
     s()(null != _, 'user cannot be null'), (0, h.Z)(m, _, l, n);
     let {
@@ -18,11 +18,11 @@ function m(e) {
         handleMouseEnter: C,
         handleMouseMove: g,
         handleMouseUp: I
-    } = (0, d.Z)({
+    } = (0, u.Z)({
         user: _,
         channelId: n,
         streamerId: l,
-        stream: u,
+        stream: d,
         focused: t,
         canvas: m.current
     });
@@ -39,7 +39,7 @@ function m(e) {
     });
 }
 function _(e) {
-    let {isSharedCanvasEnabled: t} = u.Z.useExperiment({
+    let {isSharedCanvasEnabled: t} = d.Z.useExperiment({
         guildId: e.guildId,
         location: 'd0de1c_1'
     }, { autoTrackExposure: !0 });

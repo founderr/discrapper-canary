@@ -3,7 +3,7 @@ n.d(t, {
         return $;
     }
 }), n(653041), n(47120), n(733860);
-var i = n(735250), a = n(470079), l = n(442837), s = n(904245), r = n(966390), o = n(902840), c = n(607070), u = n(367907), d = n(600084), h = n(62764), p = n(79712), m = n(736052), _ = n(359110), f = n(359119), E = n(13279), C = n(248789), g = n(88101), I = n(576954), x = n(765104), T = n(122707), N = n(779836), v = n(23750), S = n(496675), Z = n(306680), A = n(944486), M = n(594174), b = n(130208), R = n(55935), j = n(70956), L = n(709054), P = n(534091), O = n(900164), y = n(554838), D = n(481369), k = n(186877), U = n(294218), w = n(534469), B = n(993397), H = n(511010), G = n(524444), V = n(977391), F = n(921235), W = n(97352), z = n(226027), Y = n(959517), K = n(981631), q = n(134612), X = n(689938);
+var i = n(735250), a = n(470079), l = n(442837), s = n(904245), r = n(966390), o = n(902840), c = n(607070), d = n(367907), u = n(600084), h = n(62764), p = n(79712), m = n(736052), _ = n(359110), f = n(359119), E = n(13279), C = n(248789), g = n(88101), I = n(576954), x = n(765104), T = n(122707), N = n(779836), v = n(23750), S = n(496675), Z = n(306680), A = n(944486), M = n(594174), b = n(130208), R = n(55935), j = n(70956), L = n(709054), P = n(534091), O = n(900164), y = n(554838), D = n(481369), k = n(186877), U = n(294218), w = n(534469), B = n(993397), H = n(511010), G = n(524444), V = n(977391), F = n(921235), W = n(97352), z = n(226027), Y = n(959517), K = n(981631), q = n(134612), X = n(689938);
 function Q(e) {
     return null != e && e.type === K.ys_.MESSAGE && e.content.id === e.groupId;
 }
@@ -52,7 +52,7 @@ function $(e) {
             filterAfterTimestamp: es,
             showingQuarantineBanner: er,
             hideSummaries: eo
-        } = e, ec = M.default.getCurrentUser(), eu = () => ea.isInitialized() || U.ready, ed = (0, k.$)(b), eh = U.length > 0 && (null === (t = U.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(b)), ep = (0, o.ts)(b), em = (0, l.e7)([x.Z], () => x.Z.shouldShowTopicsBar() && !eo), e_ = (0, g.P)(b.id, q.zr), ef = (0, E.z)(b.id, q.zr), eE = (0, D.Z)(), eC = null != e_ ? e_ : ef;
+        } = e, ec = M.default.getCurrentUser(), ed = () => ea.isInitialized() || U.ready, eu = (0, k.$)(b), eh = U.length > 0 && (null === (t = U.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(b)), ep = (0, o.ts)(b), em = (0, l.e7)([x.Z], () => x.Z.shouldShowTopicsBar() && !eo), e_ = (0, g.P)(b.id, q.zr), ef = (0, E.z)(b.id, q.zr), eE = (0, D.Z)(), eC = null != e_ ? e_ : ef;
     b.isDM() && null != eC && (n = eC.type === f.pj.STRANGER_DANGER ? (0, i.jsx)(I.M, {
         channelId: b.id,
         warningId: eC.id,
@@ -136,23 +136,23 @@ function $(e) {
             }
         }, 'buffer'));
         let {useReducedMotion: e} = c.Z;
-        (e && eu() || !e) && eT.unshift((0, i.jsx)(V.ZP, {
+        (e && ed() || !e) && eT.unshift((0, i.jsx)(V.ZP, {
             compact: et,
             ...el
         }, 'has-more'));
     }
-    if ((!U.hasMoreBefore || null != es) && eT.unshift((0, i.jsx)(d.Z, {
+    if ((!U.hasMoreBefore || null != es) && eT.unshift((0, i.jsx)(u.Z, {
             channel: b,
             showingBanner: er
         }, 'empty-message')), U.hasMoreAfter && eT.push((0, i.jsx)(V.ZP, {
             compact: et,
             ...el
-        }, 'has-more-after')), !er && ed && eu() && eT.push((0, i.jsx)(F.Z, { channel: b })), $ > 0 && ee && eu()) {
+        }, 'has-more-after')), !er && eu && ed() && eT.push((0, i.jsx)(F.Z, { channel: b })), $ > 0 && ee && ed()) {
         let e, t;
         let n = Z.ZP.getOldestUnreadTimestamp(b.id), l = 0 !== n ? n : L.default.extractTimestamp(b.id), s = (0, R.KC)(new Date(), new Date(l));
         if (Z.ZP.isEstimated(b.id) ? (e = s ? X.Z.Messages.NEW_MESSAGES_ESTIMATED : X.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = X.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = s ? X.Z.Messages.NEW_MESSAGES : X.Z.Messages.NEW_MESSAGES_WITH_DATE, t = X.Z.Messages.NEW_MESSAGES_SUMMARIES), ep && (0, o.tW)(b) && eE.includes(z.E.SUMMARIES)) {
             let n = Z.ZP.ackMessageId(b.id), s = (0, T.q)(b.id, Z.ZP.getOldestUnreadMessageId(b.id));
-            if ((0, u.yw)(K.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
+            if ((0, d.yw)(K.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: s,
                     num_unread_messages: $,
                     last_ack_message_id: n,
@@ -251,7 +251,7 @@ function $(e) {
                 });
             }
         });
-    else if (U.hasMoreAfter && eu()) {
+    else if (U.hasMoreAfter && ed()) {
         let {jumpReturnTargetId: e} = U;
         r = U.loadingMore && U.jumpedToPresent ? (0, i.jsx)(G.DR, {}) : null != e ? (0, i.jsx)(G.DR, {
             type: G.A7.REPLY,

@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), s = n(470079), l = n(442837), r = n(481060), o = n(278323), c = n(224706), d = n(763472), u = n(498179), _ = n(276852), E = n(994339), m = n(275920), I = n(431583), T = n(592745), h = n(952164), N = n(768419), f = n(456432), p = n(103575), C = n(789407), g = n(598077), S = n(757266), A = n(831506), x = n(271383), O = n(283595), R = n(293273), M = n(594174), v = n(181106), L = n(417363), Z = n(243769), P = n(768581), b = n(358085), D = n(804739), j = n(410575), U = n(981631), y = n(701488);
+var i, a = n(735250), s = n(470079), l = n(442837), r = n(481060), o = n(278323), c = n(224706), d = n(763472), u = n(498179), _ = n(276852), E = n(994339), m = n(275920), I = n(431583), T = n(592745), h = n(952164), N = n(768419), p = n(456432), f = n(103575), C = n(789407), g = n(598077), S = n(757266), A = n(831506), x = n(271383), O = n(283595), R = n(293273), M = n(594174), v = n(181106), L = n(417363), Z = n(243769), P = n(768581), b = n(358085), D = n(804739), j = n(410575), U = n(981631), y = n(701488);
 function B(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -112,7 +112,7 @@ class G extends (i = s.PureComponent) {
                 message: s,
                 analyticsLocations: l
             } = this.props;
-            return null == n ? null : (0, a.jsx)(p.Z, {
+            return null == n ? null : (0, a.jsx)(f.Z, {
                 ...t,
                 location: 'ActivityInviteEmbed',
                 userId: e.id,
@@ -126,7 +126,7 @@ class G extends (i = s.PureComponent) {
                 channelId: t,
                 guildId: n
             } = this.props;
-            return (0, a.jsx)(f.Z, {
+            return (0, a.jsx)(p.Z, {
                 guildId: null != n ? n : void 0,
                 channelId: t,
                 source: 'Invite Embed',

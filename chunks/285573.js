@@ -1,4 +1,4 @@
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(239091), c = n(146773), u = n(592125), d = n(984933), h = n(496675), p = n(98597), _ = n(473403), f = n(981631), m = n(490897), g = n(47705);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(239091), c = n(146773), u = n(592125), d = n(984933), h = n(496675), p = n(98597), _ = n(473403), f = n(981631), g = n(490897), m = n(47705);
 let C = (0, c.B)(function (e) {
     let {
             guild: t,
@@ -30,18 +30,18 @@ let C = (0, c.B)(function (e) {
         return null;
     let M = (0, p.jo)(c, N), R = (0, p.CN)(v, I, E), y = (0, i.jsx)('div', {
             className: a()(M, {
-                [g.disabled]: R,
-                [g.selected]: L
+                [m.disabled]: R,
+                [m.selected]: L
             }),
             'data-dnd-name': v.name,
             children: (0, i.jsxs)(_.Z, {
-                className: g.iconVisibility,
+                className: m.iconVisibility,
                 channel: v,
                 guild: t,
                 selected: L,
                 onContextMenu: b,
                 forceInteractable: !0,
-                resolvedUnreadSetting: m.i.ONLY_MENTIONS,
+                resolvedUnreadSetting: g.i.ONLY_MENTIONS,
                 children: [
                     (0, i.jsx)(p.eP, {
                         channel: v,

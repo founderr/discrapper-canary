@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(239091), u = n(749210), d = n(134432), h = n(769654), p = n(601964), m = n(430824), _ = n(940627), f = n(346656), E = n(806519), C = n(404975), g = n(768581), I = n(683818), x = n(16853), T = n(981631), N = n(689938), v = n(699996), S = n(883760);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(239091), d = n(749210), u = n(134432), h = n(769654), p = n(601964), m = n(430824), _ = n(940627), f = n(346656), E = n(806519), C = n(404975), g = n(768581), I = n(683818), x = n(16853), T = n(981631), N = n(689938), v = n(699996), S = n(883760);
 let Z = e => {
     let {onClick: t} = e;
     return (0, i.jsxs)(o.Clickable, {
@@ -101,14 +101,14 @@ t.Z = e => {
     let {entry: l} = e, [s, C] = a.useState(!1), I = null != (0, r.e7)([m.Z], () => m.Z.getGuild(l.guildId)), x = async () => {
             C(!0);
             try {
-                I ? (0, h.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: T.vtS.DIRECTORY_ENTRY });
+                I ? (0, h.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: T.vtS.DIRECTORY_ENTRY });
             } finally {
                 C(!1);
             }
         }, S = g.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
-            size: 300 * (0, d.x_)()
+            size: 300 * (0, u.x_)()
         }), Z = null !== (t = g.ZP.getGuildIconURL({
             id: l.guildId,
             icon: l.icon,

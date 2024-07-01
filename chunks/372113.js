@@ -1,4 +1,4 @@
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(442837), d = n(481060), u = n(230711), _ = n(607070), E = n(706454), m = n(63063), I = n(930153), T = n(617136), h = n(272008), N = n(113434), f = n(569984), p = n(497505), C = n(918701), g = n(796111), S = n(566078), A = n(340100), x = n(644646), O = n(667105), R = n(87894), M = n(2660), v = n(46140), L = n(981631), Z = n(689938), P = n(504321), b = n(789002);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(442837), d = n(481060), u = n(230711), _ = n(607070), E = n(706454), m = n(63063), I = n(930153), T = n(617136), h = n(272008), N = n(113434), p = n(569984), f = n(497505), C = n(918701), g = n(796111), S = n(566078), A = n(340100), x = n(644646), O = n(667105), R = n(87894), M = n(2660), v = n(46140), L = n(981631), Z = n(689938), P = n(504321), b = n(789002);
 let D = (e, t, n) => (0, R.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium';
 function j(e) {
     let {
@@ -42,7 +42,7 @@ function U(e) {
             beforeRequest: () => {
                 (0, T._3)({
                     questId: t.id,
-                    questContent: p.jn.GIFT_INVENTORY_FOR_YOU,
+                    questContent: f.jn.GIFT_INVENTORY_FOR_YOU,
                     questContentCTA: T.jZ.DEFIBRILLATOR
                 }), i.startAnimation();
             },
@@ -103,7 +103,7 @@ function y(e) {
             hasConsoleTasks: u,
             hasConsoleConnection: E,
             waitingForConsoleConnection: m
-        } = e, I = n >= 1, N = n >= 3, p = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id)), x = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), R = function (e) {
+        } = e, I = n >= 1, N = n >= 3, f = (0, C.Bz)(t), S = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), A = (0, c.e7)([p.Z], () => p.Z.isEnrolling(t.id)), x = (0, C.zK)(t, v.S7.IN_HOUSE_CONSOLE_QUEST), R = function (e) {
             let {
                     quest: t,
                     progressState: n,
@@ -196,7 +196,7 @@ function y(e) {
             questContentPosition: r,
             inGiftInventory: o
         });
-    if (u && I && E && !p && !N && o)
+    if (u && I && E && !f && !N && o)
         return (0, s.jsx)(U, {
             quest: t,
             useReducedMotion: S
@@ -240,7 +240,7 @@ t.Z = e => {
             isExpanded: r,
             isAnimating: _,
             contentPosition: h
-        } = e, f = function (e) {
+        } = e, p = function (e) {
             var t, n, i;
             let a = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, s = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, l = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, r = (0, N.Rf)(e).percentComplete > 0;
             if (l)
@@ -253,7 +253,7 @@ t.Z = e => {
                 return 1;
             else
                 return 0;
-        }(t), g = f >= 1, O = f >= 3, b = f >= 4, U = (0, C.Xv)(t.config), B = (0, R.uq)(n), k = n === p.jn.QUESTS_EMBED, G = r || _, {xboxAndPlaystationAccounts: F} = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = g && w && !H, W = (0, N.t5)(t, v.dr.QUESTS_CARD, n, Y), z = (0, c.e7)([E.default], () => E.default.locale), K = B && U, Q = l && !O, q = (0, s.jsx)(x.Z, {
+        }(t), g = p >= 1, O = p >= 3, b = p >= 4, U = (0, C.Xv)(t.config), B = (0, R.uq)(n), k = n === f.jn.QUESTS_EMBED, G = r || _, {xboxAndPlaystationAccounts: F} = (0, N.z6)(), w = (0, C.$J)(t), V = g && !b && B, H = F.length > 0, Y = g && w && !H, W = (0, N.t5)(t, v.dr.QUESTS_CARD, n, Y), z = (0, c.e7)([E.default], () => E.default.locale), K = B && U, Q = l && !O, q = (0, s.jsx)(x.Z, {
             autoplay: a,
             className: o()(P.gridImg, {
                 [P.questRewardGiftInventory]: B && 'lg' === i,
@@ -314,14 +314,14 @@ t.Z = e => {
                                     locale: d,
                                     isQuestExpired: _,
                                     hasConsoleConnection: E
-                                } = e, T = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, h = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, f = h && (null === (i = o.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, p = (0, C.zK)(o, v.S7.IN_HOUSE_CONSOLE_QUEST), g = (0, C.zK)(o, v.S7.MOBILE_CONSOLE_QUEST), A = (0, R.uq)(c), x = (0, N.B6)(null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt, {
+                                } = e, T = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, h = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, p = h && (null === (i = o.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, f = (0, C.zK)(o, v.S7.IN_HOUSE_CONSOLE_QUEST), g = (0, C.zK)(o, v.S7.MOBILE_CONSOLE_QUEST), A = (0, R.uq)(c), x = (0, N.B6)(null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt, {
                                     year: 'numeric',
                                     month: 'long',
                                     day: 'numeric'
                                 }), O = (0, C.oo)({ quest: o }), M = S.r.build(o.config).defaultReward.messages.nameWithArticle, P = (0, C.Kr)(o.config);
-                            if (h && p && A)
+                            if (h && f && A)
                                 return Z.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: x });
-                            if (f) {
+                            if (p) {
                                 let e = O ? (0, C.o9)({
                                         quest: o,
                                         idx: null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedTier
@@ -393,7 +393,7 @@ t.Z = e => {
                     }),
                     l && !O ? null : (0, s.jsx)(y, {
                         quest: t,
-                        progressState: f,
+                        progressState: p,
                         isCollectibleQuest: U,
                         location: n,
                         inGiftInventory: B,

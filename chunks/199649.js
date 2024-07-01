@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(194359), r = n(631937), o = n(702321), c = n(377171), u = n(699516), d = n(626135), h = n(63063), p = n(862679), m = n(981631), _ = n(596401), f = n(689938);
+var a = n(442837), l = n(481060), s = n(194359), r = n(631937), o = n(702321), c = n(377171), d = n(699516), u = n(626135), h = n(63063), p = n(862679), m = n(981631), _ = n(596401), f = n(689938);
 function E(e) {
     let {
             channel: t,
             children: E
-        } = e, C = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
+        } = e, C = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.getRecipientId()));
     (0, r.Z)(t.id);
     let g = (0, o.Z)(t.id), I = t.isSystemDM(), x = C && !I && !t.isMultiUserDM(), T = {};
     if (I) {
@@ -25,7 +25,7 @@ function E(e) {
         }) : f.Z.Messages.LEARN_MORE;
         T.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION, T.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT, T.buttonText = e, T.onButtonClick = () => {
             if (g) {
-                open(_.D2), d.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
+                open(_.D2), u.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'chat_blocker',
                     target: _.D2
                 });

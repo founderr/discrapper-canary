@@ -1,6 +1,6 @@
 n.d(t, {
     To: function () {
-        return g;
+        return m;
     },
     Xu: function () {
         return C;
@@ -12,7 +12,7 @@ n.d(t, {
         return I;
     },
     aF: function () {
-        return m;
+        return g;
     }
 });
 var i = n(735250), l = n(470079), r = n(481060), a = n(100527), s = n(428695), o = n(703656), c = n(970606), u = n(308083), d = n(981631), h = n(921944), p = n(689938), _ = n(228741);
@@ -33,7 +33,7 @@ function f() {
         ]
     });
 }
-function m(e) {
+function g(e) {
     let {title: t} = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(r.Heading, {
@@ -44,7 +44,7 @@ function m(e) {
         })
     });
 }
-function g(e) {
+function m(e) {
     let {message: t} = e;
     return (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
@@ -81,7 +81,7 @@ function I(e) {
             location: a.Z.GUILD_CHANNEL_LIST
         });
     }, [t.id]);
-    let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE, I = l.useCallback(() => (0, i.jsx)(g, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []), E = l.useCallback(() => (0, i.jsx)(m, { title: f }), [f]), N = l.useCallback(() => {
+    let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE, I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []), E = l.useCallback(() => (0, i.jsx)(g, { title: f }), [f]), N = l.useCallback(() => {
             (0, c._9)({
                 guildId: t.id,
                 location: a.Z.GUILD_CHANNEL_LIST

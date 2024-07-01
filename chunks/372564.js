@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(374470), o = n(481060), c = n(239091), u = n(822951), d = n(933557), h = n(454585), p = n(984370), m = n(981631), _ = n(689938), f = n(504273);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(374470), o = n(481060), c = n(239091), d = n(822951), u = n(933557), h = n(454585), p = n(984370), m = n(981631), _ = n(689938), f = n(504273);
 function E(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -13,12 +13,12 @@ function C(e) {
             channel: t,
             onClose: n,
             transitionState: a
-        } = e, l = (0, d.ZP)(t, !0);
+        } = e, l = (0, u.ZP)(t, !0);
     return (0, i.jsx)(o.ModalRoot, {
         transitionState: a,
         'aria-label': _.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
         children: (0, i.jsx)(o.ModalContent, {
-            children: (0, i.jsx)(u.Z, {
+            children: (0, i.jsx)(d.Z, {
                 selectable: !0,
                 onClose: n,
                 renderHeader: () => (0, i.jsx)(o.Heading, {

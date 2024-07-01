@@ -5,9 +5,9 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(399606), l = n(481060), s = n(210975), r = n(158776), o = n(699516), c = n(594174), u = n(51144), d = n(984370), h = n(689938), p = n(175803);
+var a = n(399606), l = n(481060), s = n(210975), r = n(158776), o = n(699516), c = n(594174), d = n(51144), u = n(984370), h = n(689938), p = n(175803);
 function m(e) {
-    let t = e.channel.getRecipientId(), n = e.channel.isSystemDM(), m = (0, a.e7)([c.default], () => c.default.getUser(t)), _ = (0, a.e7)([r.Z], () => r.Z.getStatus(t)), f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)), E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)), C = u.ZP.useUserTag(m), g = (0, s.m$)({
+    let t = e.channel.getRecipientId(), n = e.channel.isSystemDM(), m = (0, a.e7)([c.default], () => c.default.getUser(t)), _ = (0, a.e7)([r.Z], () => r.Z.getStatus(t)), f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)), E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)), C = d.ZP.useUserTag(m), g = (0, s.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });
@@ -20,11 +20,11 @@ function m(e) {
                     isMobile: f,
                     className: p.avatar,
                     size: l.AvatarSizes.SIZE_24,
-                    'aria-label': u.ZP.getName(m),
+                    'aria-label': d.ZP.getName(m),
                     src: m.getAvatarURL(void 0, 24)
                 })
             }),
-            (0, i.jsx)(d.Z.Title, {
+            (0, i.jsx)(u.Z.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
@@ -34,7 +34,7 @@ function m(e) {
                         (0, i.jsx)(l.TooltipContainer, {
                             text: C,
                             position: 'bottom',
-                            children: null != E ? E : u.ZP.getName(m)
+                            children: null != E ? E : d.ZP.getName(m)
                         }),
                         g && (0, i.jsx)(l.ShieldLockIcon, {
                             size: 'xxs',

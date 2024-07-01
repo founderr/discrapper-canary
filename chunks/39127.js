@@ -3,16 +3,16 @@ n.d(t, {
         return h;
     }
 });
-var i = n(735250), a = n(470079), l = n(392711), s = n(500923), r = n.n(s), o = n(963838), c = n(353368), u = n(454190);
-let d = async e => {
+var i = n(735250), a = n(470079), l = n(392711), s = n(500923), r = n.n(s), o = n(963838), c = n(353368), d = n(454190);
+let u = async e => {
     var t;
     let {
             animationType: n,
             animationId: i,
             url: a,
             shouldResize: s
-        } = e, r = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC], u = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, l.sample)(r)));
-    return u.assets[0].p = s ? await (0, o.lv)(a) : a, u;
+        } = e, r = null !== (t = o.Jw[n]) && void 0 !== t ? t : o.Jw[c.q.BASIC], d = JSON.parse(JSON.stringify(null != i && i < r.length ? r[i] : (0, l.sample)(r)));
+    return d.assets[0].p = s ? await (0, o.lv)(a) : a, d;
 };
 function h(e) {
     let {
@@ -24,7 +24,7 @@ function h(e) {
         let e;
         return !async function () {
             if (null != s.current) {
-                let t = await d(n);
+                let t = await u(n);
                 e = r().loadAnimation({
                     container: s.current,
                     renderer: 'svg',
@@ -41,7 +41,7 @@ function h(e) {
         l,
         n
     ]), (0, i.jsx)('div', {
-        className: u.effect,
+        className: d.effect,
         style: {
             height: t.height,
             width: t.width

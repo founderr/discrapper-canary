@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(607070), r = n(43267), o = n(933557), c = n(266076), u = n(204197), d = n(967128);
+var a = n(442837), l = n(481060), s = n(607070), r = n(43267), o = n(933557), c = n(266076), d = n(204197), u = n(967128);
 function h(e) {
     var t;
     let {
@@ -16,12 +16,12 @@ function h(e) {
             avatarDecorationSrc: f,
             eventHandlers: E,
             isAnimating: C
-        } = (0, u.Z)({
+        } = (0, d.Z)({
             user: p,
             size: l.AvatarSizes.SIZE_80,
             animateOnHover: !0
         });
-    return (0, i.jsxs)(d.ZP, {
+    return (0, i.jsxs)(u.ZP, {
         channelId: n.id,
         ...E,
         children: [
@@ -40,8 +40,8 @@ function h(e) {
                     avatarDecoration: f
                 });
             })(),
-            (0, i.jsx)(d.Ot, { children: _ }),
-            (0, i.jsx)(d.jz, { children: h })
+            (0, i.jsx)(u.Ot, { children: _ }),
+            (0, i.jsx)(u.jz, { children: h })
         ]
     });
 }

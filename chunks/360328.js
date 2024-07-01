@@ -5,17 +5,17 @@ n.d(t, {
 }), n(47120);
 var i = n(735250), a = n(470079), l = n(481060), s = n(693546), r = n(246364), o = n(689938);
 function c(e, t) {
-    let [c, u] = a.useState(!1), d = () => {
+    let [c, d] = a.useState(!1), u = () => {
             (0, l.showToast)((0, l.createToast)(o.Z.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE));
         }, h = async () => {
             if (!c && null != e && null != t) {
-                u(!0);
+                d(!0);
                 try {
                     await s.Z.updateGuildJoinRequest(e, t, r.wB.APPROVED);
                 } catch {
-                    d();
+                    u();
                 } finally {
-                    u(!1);
+                    d(!1);
                 }
             }
         };
@@ -28,7 +28,7 @@ function c(e, t) {
                     modalProps: n,
                     guildId: e,
                     userId: t,
-                    onError: d
+                    onError: u
                 });
             });
         },

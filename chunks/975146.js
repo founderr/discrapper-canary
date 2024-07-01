@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(120356), l = n.n(a), s = n(481060), r = n(871499), o = n(689938), c = n(211810);
-function u(e) {
+function d(e) {
     let {
         className: t,
         count: n
@@ -28,7 +28,7 @@ function u(e) {
         ]
     });
 }
-function d(e) {
+function u(e) {
     let {
         count: t,
         ...n
@@ -37,7 +37,7 @@ function d(e) {
         label: o.Z.Messages.CHANNEL_CALL_PARTICIPANTS,
         iconComponent: e => {
             let {className: n} = e;
-            return (0, i.jsx)(u, {
+            return (0, i.jsx)(d, {
                 className: n,
                 count: t
             });

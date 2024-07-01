@@ -3,19 +3,19 @@ n.d(t, {
         return X;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n.n(r), c = n(91192), u = n(924826), d = n(873546), h = n(442837), p = n(481060), m = n(239091), _ = n(144144), f = n(607070), E = n(100527), C = n(906732), g = n(623624), I = n(518738), x = n(965376), T = n(159299), N = n(484459), v = n(103575), S = n(199902), Z = n(271383), A = n(430824), M = n(158776), b = n(885110), R = n(111583), j = n(594174), L = n(499033), P = n(151827), O = n(176278), y = n(626135), D = n(585483), k = n(700785), U = n(51144), w = n(998502), B = n(276264), H = n(981631), G = n(689938), V = n(260505), F = n(279691);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n.n(r), c = n(91192), d = n(924826), u = n(873546), h = n(442837), p = n(481060), m = n(239091), _ = n(144144), f = n(607070), E = n(100527), C = n(906732), g = n(623624), I = n(518738), x = n(965376), T = n(159299), N = n(484459), v = n(103575), S = n(199902), Z = n(271383), A = n(430824), M = n(158776), b = n(885110), R = n(111583), j = n(594174), L = n(499033), P = n(151827), O = n(176278), y = n(626135), D = n(585483), k = n(700785), U = n(51144), w = n(998502), B = n(276264), H = n(981631), G = n(689938), V = n(260505), F = n(279691);
 let W = w.ZP.getEnableHardwareAcceleration(), z = 44 + B.x, Y = a.memo(function (e) {
         let {
                 channel: t,
                 sectionId: l,
                 userId: s,
                 guildOwnerId: r
-            } = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, s)), u = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, s)), f = (0, h.e7)([A.Z], () => {
+            } = e, o = (0, h.e7)([R.Z], () => R.Z.isTyping(t.id, s)), d = (0, h.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, s)), f = (0, h.e7)([A.Z], () => {
                 var e;
-                return (null == u ? void 0 : u.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+                return (null == d ? void 0 : d.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, d.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
             }, [
                 t.guild_id,
-                u
+                d
             ]), E = (0, h.e7)([j.default], () => j.default.getUser(s)), C = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([
                 M.Z,
                 b.Z
@@ -60,7 +60,7 @@ let W = w.ZP.getEnableHardwareAcceleration(), z = 44 + B.x, Y = a.memo(function 
             }, [t.guild_id]);
         if (null == E)
             return null;
-        let Y = null == u ? void 0 : u.premiumSince;
+        let Y = null == d ? void 0 : d.premiumSince;
         return (0, i.jsx)(p.Popout, {
             preload: () => (0, N.W)(E, {
                 guildId: t.guild_id,
@@ -79,7 +79,7 @@ let W = w.ZP.getEnableHardwareAcceleration(), z = 44 + B.x, Y = a.memo(function 
                     }
                 }
             }),
-            position: d.tq ? 'window_center' : 'left',
+            position: u.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: F,
             children: (e, n) => {
@@ -89,10 +89,10 @@ let W = w.ZP.getEnableHardwareAcceleration(), z = 44 + B.x, Y = a.memo(function 
                     shouldAnimateStatus: W,
                     user: E,
                     currentUser: C,
-                    nick: null == u ? void 0 : u.nick,
+                    nick: null == d ? void 0 : d.nick,
                     status: x,
                     activities: P,
-                    colorString: null == u ? void 0 : u.colorString,
+                    colorString: null == d ? void 0 : d.colorString,
                     colorRoleName: f,
                     isTyping: o,
                     channel: t,
@@ -175,7 +175,7 @@ function X(e) {
     let {
             channel: t,
             guild: n
-        } = e, l = 'members-'.concat(t.id), {analyticsLocations: r} = (0, C.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), m = d.filter(e => e.userIds.length > 0).reverse()[0], {
+        } = e, l = 'members-'.concat(t.id), {analyticsLocations: r} = (0, C.ZP)(E.Z.MEMBER_LIST), u = (0, x.D)(t.id, n), m = u.filter(e => e.userIds.length > 0).reverse()[0], {
             navigator: _,
             listRef: g
         } = function (e, t) {
@@ -211,7 +211,7 @@ function X(e) {
                     });
                 }), []);
             return {
-                navigator: (0, u.ZP)({
+                navigator: (0, d.ZP)({
                     id: e,
                     setFocus: l,
                     isEnabled: n,
@@ -220,7 +220,7 @@ function X(e) {
                 }),
                 listRef: i
             };
-        }(l, z), I = 0 === d.length || d.every(e => 0 === e.userIds.length);
+        }(l, z), I = 0 === u.length || u.every(e => 0 === e.userIds.length);
     if (a.useEffect(() => {
             y.default.track(H.rMx.MEMBER_LIST_VIEWED, {
                 channel_id: t.id,
@@ -247,7 +247,7 @@ function X(e) {
                         paddingTop: 0,
                         sectionHeight: 40,
                         renderSection: e => {
-                            let {section: t} = e, a = d[t];
+                            let {section: t} = e, a = u[t];
                             return (0, i.jsx)(K, {
                                 id: a.id,
                                 label: a.label,
@@ -263,7 +263,7 @@ function X(e) {
                                 } = e, {
                                     userIds: l,
                                     id: s
-                                } = d[n];
+                                } = u[n];
                             return (0, i.jsx)(Y, {
                                 channel: t,
                                 sectionId: s,
@@ -271,11 +271,11 @@ function X(e) {
                                 guildOwnerId: N
                             }, l[a]);
                         },
-                        footerHeight: e => d[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
-                        renderFooter: e => d[e.section] === m ? (0, i.jsx)(q, { channel: t }, 'footer') : null,
+                        footerHeight: e => u[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,
+                        renderFooter: e => u[e.section] === m ? (0, i.jsx)(q, { channel: t }, 'footer') : null,
                         innerAriaLabel: G.Z.Messages.MEMBERS,
                         innerTag: 'ul',
-                        sections: d.map(e => e.userIds.length),
+                        sections: u.map(e => e.userIds.length),
                         fade: !0,
                         ...T,
                         ...e

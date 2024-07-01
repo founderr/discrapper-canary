@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     }
 }), n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(920906), u = n(481060), d = n(792125), h = n(542094), p = n(182906), m = n(556505), _ = n(513202), f = n(981631), E = n(689938), C = n(107667);
+var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(920906), d = n(481060), u = n(792125), h = n(542094), p = n(182906), m = n(556505), _ = n(513202), f = n(981631), E = n(689938), C = n(107667);
 let g = ['embedded_cover'], I = {
         tension: 800,
         friction: 24
@@ -52,7 +52,7 @@ function x(e) {
                     className: C.activityAction,
                     children: (0, l.jsx)('div', {
                         className: C.activityActionButton,
-                        children: (0, l.jsx)(u.Text, {
+                        children: (0, l.jsx)(d.Text, {
                             variant: 'text-sm/medium',
                             color: 'always-white',
                             children: E.Z.Messages.JOIN
@@ -64,7 +64,7 @@ function x(e) {
                     className: C.activityAction,
                     children: (0, l.jsx)('div', {
                         className: o()(C.activityActionButton, C.activityActionButtonDanger),
-                        children: (0, l.jsx)(u.Text, {
+                        children: (0, l.jsx)(d.Text, {
                             variant: 'text-sm/medium',
                             color: 'always-white',
                             children: E.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
@@ -76,11 +76,11 @@ function x(e) {
                 return (0, l.jsx)(l.Fragment, {});
             }
         }, [v]);
-    return (0, l.jsx)(u.Button, {
+    return (0, l.jsx)(d.Button, {
         onClick: T,
         color: 'transparent',
-        look: u.Button.Looks.BLANK,
-        size: u.Button.Sizes.NONE,
+        look: d.Button.Looks.BLANK,
+        size: d.Button.Sizes.NONE,
         onFocus: M,
         onBlur: b,
         onMouseEnter: M,
@@ -93,7 +93,7 @@ function x(e) {
             children: e => {
                 let {value: t} = e;
                 return (0, l.jsx)(c.animated.div, {
-                    className: o()((0, d.Q)(f.BRd.DARK), C.activityItem, x, {
+                    className: o()((0, u.Q)(f.BRd.DARK), C.activityItem, x, {
                         [C.activityItem_13_11]: 0 === r,
                         [C.activityItem_16_9]: 1 === r
                     }),

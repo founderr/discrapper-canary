@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(470079), a = n(924826), l = n(459273), s = n(585483), r = n(534091), o = n(959517), c = n(981631);
-function u(e) {
+function d(e) {
     let {
             scrollerRef: t,
             ...n
-        } = e, u = i.useCallback(() => {
+        } = e, d = i.useCallback(() => {
             let e = t.current;
             return null == e ? Promise.resolve() : new Promise(t => {
                 e.scrollToBottom({ callback: () => requestAnimationFrame(t) });
             });
-        }, []), d = i.useCallback(() => {
+        }, []), u = i.useCallback(() => {
             let e = t.current;
             return null == e ? Promise.resolve() : new Promise(t => {
                 e.scrollToTop({ callback: () => requestAnimationFrame(t) });
@@ -35,8 +35,8 @@ function u(e) {
             preserveFocusPosition: !1,
             setFocus: h,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
-            scrollToStart: d,
-            scrollToEnd: u,
+            scrollToStart: u,
+            scrollToEnd: d,
             onNavigateNextAtEnd: p
         }), _ = i.useCallback(e => {
             let {

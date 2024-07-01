@@ -1,5 +1,5 @@
 n(627494), n(757143);
-var i = n(735250), a = n(470079), l = n(317261), s = n(442837), r = n(594174), o = n(823379), c = n(5192), u = n(561308), d = n(256726), h = n(206295), p = n(278399), m = n(297781), _ = n(591853), f = n(410441), E = n(689938);
+var i = n(735250), a = n(470079), l = n(317261), s = n(442837), r = n(594174), o = n(823379), c = n(5192), d = n(561308), u = n(256726), h = n(206295), p = n(278399), m = n(297781), _ = n(591853), f = n(410441), E = n(689938);
 let C = (e, t, n, i) => {
         let a = function (e) {
                 if (e === l._.WEEK)
@@ -26,11 +26,11 @@ t.Z = e => {
         } = n.extra.media, N = n.extra.artist.name, v = (0, s.e7)([r.default], () => r.default.getUser(n.author_id)), {
             primaryColor: S,
             secondaryColor: Z
-        } = (0, h.Z)(T), A = (0, u.Nq)(n), M = a.useCallback(() => {
+        } = (0, h.Z)(T), A = (0, d.Nq)(n), M = a.useCallback(() => {
             if (null == v || !(0, o.Hi)(A, p.y9))
                 return;
             let e = C(n, t, v, A);
-            return (0, d.CR)({
+            return (0, u.CR)({
                 user: v,
                 channel: t,
                 mediaImageSrc: T,
@@ -40,7 +40,7 @@ t.Z = e => {
                     S,
                     Z
                 ],
-                badges: (0, d.UU)(n)
+                badges: (0, u.UU)(n)
             });
         }, [
             T,

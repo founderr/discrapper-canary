@@ -3,16 +3,16 @@ n.d(t, {
         return I;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(570140), r = n(475179), o = n(367907), c = n(358221), u = n(788983), d = n(268353), h = n(944486), p = n(626135), m = n(585483), _ = n(358085), f = n(228488), E = n(981631), C = n(607176);
+var i = n(735250), a = n(470079), l = n(442837), s = n(570140), r = n(475179), o = n(367907), c = n(358221), d = n(788983), u = n(268353), h = n(944486), p = n(626135), m = n(585483), _ = n(358085), f = n(228488), E = n(981631), C = n(607176);
 let g = () => {
-    s.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
+    s.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 function I(e) {
     let {
             channel: t,
             appContext: n,
             popoutOpen: s,
-            popoutWindow: u,
+            popoutWindow: d,
             currentWindow: I
         } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
             currentLayout: N,
@@ -36,14 +36,14 @@ function I(e) {
             currentDocument: A,
             rootNode: M
         } = a.useMemo(() => {
-            let e = null != u && x ? u.document : document, t = I.document.getElementById('app-mount');
+            let e = null != d && x ? d.document : document, t = I.document.getElementById('app-mount');
             return {
                 currentWindow: I,
                 currentDocument: e,
                 rootNode: t
             };
         }, [
-            u,
+            d,
             x,
             I
         ]), b = s && !x, R = v === E.WtW.VIDEO && S && !b, j = a.useCallback((e, i) => {
@@ -99,10 +99,10 @@ function I(e) {
     }, [
         S,
         x
-    ]), R) ? (0, i.jsx)(d.Z, {
+    ]), R) ? (0, i.jsx)(u.Z, {
         themeable: !1,
         node: M,
-        guestWindow: u,
+        guestWindow: d,
         className: C.rightTrayIcon,
         onClick: P(N)
     }) : null;

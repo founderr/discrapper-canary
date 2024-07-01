@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(481060), c = n(32750), u = n(109764), d = n(323597), h = n(438536), p = n(251746), m = n(193987), _ = n(933793), f = n(13736), E = n(732393), C = n(137591), g = n(299206), I = n(695346), x = n(979651), T = n(502568), N = n(488131), v = n(689938);
+var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(481060), c = n(32750), d = n(109764), u = n(323597), h = n(438536), p = n(251746), m = n(193987), _ = n(933793), f = n(13736), E = n(732393), C = n(137591), g = n(299206), I = n(695346), x = n(979651), T = n(502568), N = n(488131), v = n(689938);
 function S(e) {
     let {channel: t} = e, [n, l] = a.useState(!1);
     function s() {
@@ -44,7 +44,7 @@ function Z(e) {
         } = e, l = (0, c.Z)(t), T = (0, m.Z)(t), S = (0, E.Z)(t.id), Z = (0, f.Z)(t), A = (0, g.Z)({
             id: t.id,
             label: v.Z.Messages.COPY_ID_THREAD
-        }), M = (0, u.Z)(t), b = (0, d.Z)(t), R = (0, h.Z)(t, 'Toolbar Overflow'), j = (0, _.Z)(t), L = (0, p.Z)(t), P = (0, C.Z)(t), O = I.vF.useSetting(), y = (0, r.e7)([x.Z], () => !s().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
+        }), M = (0, d.Z)(t), b = (0, u.Z)(t), R = (0, h.Z)(t, 'Toolbar Overflow'), j = (0, _.Z)(t), L = (0, p.Z)(t), P = (0, C.Z)(t), O = I.vF.useSetting(), y = (0, r.e7)([x.Z], () => !s().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,

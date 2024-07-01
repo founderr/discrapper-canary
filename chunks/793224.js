@@ -5,12 +5,12 @@ n.d(t, {
 }), n(653041);
 var i = n(735250);
 n(470079);
-var l = n(442837), r = n(704215), a = n(481060), s = n(872810), o = n(367907), c = n(67212), u = n(770471), d = n(757454), h = n(286328), p = n(493355), _ = n(134598), f = n(243778), m = n(594190), g = n(569545), C = n(989941), I = n(199902), E = n(314897), N = n(944486), x = n(885110), S = n(449224), Z = n(436088), v = n(976401), T = n(981631), L = n(921944), A = n(689938);
+var l = n(442837), r = n(704215), a = n(481060), s = n(872810), o = n(367907), c = n(67212), u = n(770471), d = n(757454), h = n(286328), p = n(493355), _ = n(134598), f = n(243778), g = n(594190), m = n(569545), C = n(989941), I = n(199902), E = n(314897), N = n(944486), x = n(885110), S = n(449224), Z = n(436088), v = n(976401), T = n(981631), L = n(921944), A = n(689938);
 function b() {
     let e = (0, l.e7)([N.Z], () => N.Z.getVoiceChannelId()), t = (0, l.e7)([E.default], () => E.default.getId()), n = (0, l.e7)([
-            m.ZP,
+            g.ZP,
             S.Z
-        ], () => (0, C.Z)(m.ZP, S.Z)), {canBroadcast: b} = u.Z.useExperiment({ location: 'broadcast_button_rtc_panel_no_track' }, { autoTrackExposure: !1 }), M = (0, d.Z)() && null != n, R = (0, l.e7)([x.Z], () => null != x.Z.getBroadcast()), y = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
+        ], () => (0, C.Z)(g.ZP, S.Z)), {canBroadcast: b} = u.Z.useExperiment({ location: 'broadcast_button_rtc_panel_no_track' }, { autoTrackExposure: !1 }), M = (0, d.Z)() && null != n, R = (0, l.e7)([x.Z], () => null != x.Z.getBroadcast()), y = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
     if (!M && !R)
         return null;
     if (u.Z.trackExposure({ location: 'broadcast_button_rtc_panel' }), !b)
@@ -27,7 +27,7 @@ function b() {
                         pid: null == n ? void 0 : n.pid,
                         channelId: e
                     });
-                }) : (0, c.v$)((0, g.V9)(i), null == n ? void 0 : n.pid);
+                }) : (0, c.v$)((0, m.V9)(i), null == n ? void 0 : n.pid);
             } else
                 (0, c.b_)();
         }, D = e => (0, i.jsx)(v.Z, {

@@ -6,8 +6,8 @@ t.Z = l.forwardRef(function (e, t) {
             header: r,
             artClassName: _,
             headerClassName: f,
-            contentClassName: m,
-            tryItText: g,
+            contentClassName: g,
+            tryItText: m,
             dismissText: C,
             onTryFeature: I,
             onClose: E,
@@ -44,7 +44,7 @@ t.Z = l.forwardRef(function (e, t) {
         className: N,
         ref: t,
         children: (0, i.jsxs)('div', {
-            className: a()(p.content, m, {
+            className: a()(p.content, g, {
                 [p.contentNoArt]: null == _ || x,
                 [p.contentPremium]: S || M
             }),
@@ -107,7 +107,7 @@ t.Z = l.forwardRef(function (e, t) {
                                     null == E || E(e), I(e), U(d.L.PRIMARY);
                                 },
                                 color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
-                                children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
+                                children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
                             }),
                             (0, i.jsx)(s.Button, {
                                 className: p.button,

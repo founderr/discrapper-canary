@@ -1,12 +1,12 @@
 n.d(t, {
     Gx: function () {
-        return d;
+        return u;
     },
     Op: function () {
         return h;
     },
     T4: function () {
-        return u;
+        return d;
     },
     V_: function () {
         return c;
@@ -25,10 +25,10 @@ function o(e) {
 function c() {
     return r(0, s.Z.Messages.FORM_THREAD_NAME_REQUIRED_ERROR);
 }
-function u() {
+function d() {
     return r(0, s.Z.Messages.FORM_THREAD_STARTER_MESSAGE_REQUIRED_ERROR);
 }
-function d(e, t) {
+function u(e, t) {
     return r(1, (0, l.$q)(e, null == t ? void 0 : t.id));
 }
 function h(e, t) {

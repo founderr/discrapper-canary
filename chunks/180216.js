@@ -3,12 +3,12 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(592125), o = n(430824), c = n(584825), u = n(406074), d = n(660196), h = n(36246), p = n(305342), m = n(981631), _ = n(689938), f = n(212017);
+var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(592125), o = n(430824), c = n(584825), d = n(406074), u = n(660196), h = n(36246), p = n(305342), m = n(981631), _ = n(689938), f = n(212017);
 function E(e) {
     let {
             guildId: t,
             channelId: n
-        } = e, E = (0, u.C)({
+        } = e, E = (0, d.C)({
             guildId: t,
             channelId: n
         }), C = (0, c.GG)(t), g = (0, c.YB)(t), I = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]), x = null == I ? void 0 : I.name, T = (0, l.e7)([r.Z], () => r.Z.getChannel(n)), N = a.useMemo(() => {
@@ -18,7 +18,7 @@ function E(e) {
                     e[n] = t.id;
             return e;
         }, [C]);
-    return ((0, d.Z)({
+    return ((0, u.Z)({
         guildId: t,
         location: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: E.map(e => e.id)

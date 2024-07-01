@@ -1,21 +1,21 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(442837), r = n(692547), o = n(481060), c = n(358221), u = n(594190), d = n(836157), h = n(199902), p = n(924557), m = n(435064), _ = n(354459), f = n(689938), E = n(66824);
+var a = n(120356), l = n.n(a), s = n(442837), r = n(692547), o = n(481060), c = n(358221), d = n(594190), u = n(836157), h = n(199902), p = n(924557), m = n(435064), _ = n(354459), f = n(689938), E = n(66824);
 t.Z = e => {
     let {
             className: t,
             channelId: n
-        } = e, a = (0, p.Go)(), {enableDecoupledGameClipping: C} = d.Z.useExperiment({ location: 'ClipsEnabledIndicator' }, { autoTrackExposure: !1 });
+        } = e, a = (0, p.Go)(), {enableDecoupledGameClipping: C} = u.Z.useExperiment({ location: 'ClipsEnabledIndicator' }, { autoTrackExposure: !1 });
     return (0, s.e7)([
         h.Z,
         c.Z,
         m.Z,
-        u.ZP
+        d.ZP
     ], () => {
         var e;
         if (null == n)
             return !1;
-        let t = h.Z.getCurrentUserActiveStream(), i = null === (e = u.ZP.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
+        let t = h.Z.getCurrentUserActiveStream(), i = null === (e = d.ZP.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
         return null != t && !!m.Z.getSettings().clipsEnabled && !!a || null != i && !!m.Z.getSettings().decoupledClipsEnabled && !!C || c.Z.getParticipants(n).some(e => e.type === _.fO.USER && m.Z.isClipsEnabledForUser(e.user.id));
     }) ? (0, i.jsxs)(o.TooltipContainer, {
         text: f.Z.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,

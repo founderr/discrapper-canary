@@ -8,7 +8,7 @@ function N(e) {
     let {
             canShowReminder: t = !1,
             className: N
-        } = e, f = (0, E.Z)(c.Z), {showClipsHeaderEntrypoint: p} = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }), {
+        } = e, p = (0, E.Z)(c.Z), {showClipsHeaderEntrypoint: f} = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }), {
             hasClips: C,
             hasNewClips: g,
             lastClipsSession: S,
@@ -37,7 +37,7 @@ function N(e) {
         x,
         L,
         Z
-    ]), p && f && C) ? (0, i.jsxs)(i.Fragment, {
+    ]), f && p && C) ? (0, i.jsxs)(i.Fragment, {
         children: [
             null != R && t && A && O && !(0, l.hasAnyModalOpen)() && !v && (0, i.jsx)(I.Z, {
                 clipIconRef: R,

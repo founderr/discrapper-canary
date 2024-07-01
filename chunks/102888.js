@@ -2,8 +2,8 @@ var i = n(735250), a = n(470079), l = n(481060), s = n(128557), r = n(981631), o
 t.Z = e => {
     let {
             guild: t,
-            onAddGuild: u
-        } = e, d = a.useCallback(() => {
+            onAddGuild: d
+        } = e, u = a.useCallback(() => {
             (0, l.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     n.e('7654'),
@@ -35,19 +35,19 @@ t.Z = e => {
                 className: c.emptySubtitle,
                 children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
             }),
-            null != u ? (0, i.jsx)(s.i, {
+            null != d ? (0, i.jsx)(s.i, {
                 className: c.emptyCTA,
                 iconUrl: n(362827),
                 header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
                 completed: !1,
-                onClick: u
+                onClick: d
             }) : null,
             (0, i.jsx)(s.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
                 header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,
                 completed: !1,
-                onClick: d
+                onClick: u
             })
         ]
     });

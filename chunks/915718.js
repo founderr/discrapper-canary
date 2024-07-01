@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), l = n(442837), s = n(704215), r = n(481060), o = n(26151), c = n(287734), u = n(40851), d = n(607070), h = n(451576), p = n(358221), m = n(605236), _ = n(243778), f = n(590293), E = n(970731), C = n(560688), g = n(173507), I = n(523746), x = n(819640), T = n(131951), N = n(699516), v = n(594174), S = n(979651), Z = n(502568), A = n(810090), M = n(585483), b = n(63063), R = n(981631), j = n(921944), L = n(65154), P = n(689938), O = n(745380);
+var i = n(735250), a = n(470079), l = n(442837), s = n(704215), r = n(481060), o = n(26151), c = n(287734), d = n(40851), u = n(607070), h = n(451576), p = n(358221), m = n(605236), _ = n(243778), f = n(590293), E = n(970731), C = n(560688), g = n(173507), I = n(523746), x = n(819640), T = n(131951), N = n(699516), v = n(594174), S = n(979651), Z = n(502568), A = n(810090), M = n(585483), b = n(63063), R = n(981631), j = n(921944), L = n(65154), P = n(689938), O = n(745380);
 function y(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -31,12 +31,12 @@ class D extends a.PureComponent {
         } = this.props;
         if (n || a && c === R.WtW.VOICE)
             return null;
-        let u = o.isManaged(), d = null, h = !1;
-        return T.Z.supports(L.AN.VIDEO) ? s ? (d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, h = !0) : a && c === R.WtW.VIDEO ? (t = this.handleJoinVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL) : (h = !0, t = this.handleBrowserNotSupported, d = P.Z.Messages.BROWSER_NOT_SUPPORTED), (0, i.jsx)(Z.ZP.Icon, {
+        let d = o.isManaged(), u = null, h = !1;
+        return T.Z.supports(L.AN.VIDEO) ? s ? (u = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, h = !0) : a && c === R.WtW.VIDEO ? (t = this.handleJoinVideoCall, u = d ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, u = d ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL) : (h = !0, t = this.handleBrowserNotSupported, u = P.Z.Messages.BROWSER_NOT_SUPPORTED), (0, i.jsx)(Z.ZP.Icon, {
             icon: r.VideoIcon,
             onClick: t,
             disabled: h || l,
-            tooltip: d,
+            tooltip: u,
             tooltipColor: e
         });
     }
@@ -49,8 +49,8 @@ class D extends a.PureComponent {
             callUnavailable: l,
             isBlocked: o,
             channel: c,
-            canShowActivityGdmTooltip: u,
-            dismissibleContentTypes: d,
+            canShowActivityGdmTooltip: d,
+            dismissibleContentTypes: u,
             useReducedMotion: h
         } = this.props;
         if (t)
@@ -65,7 +65,7 @@ class D extends a.PureComponent {
             tooltipColor: e
         });
         return (0, i.jsx)(_.Z, {
-            contentTypes: d,
+            contentTypes: u,
             children: e => {
                 let {
                     visibleContent: a,
@@ -76,7 +76,7 @@ class D extends a.PureComponent {
                         position: 'bottom',
                         align: 'center',
                         animation: r.Popout.Animation.TRANSLATE,
-                        shouldShow: n && u && !t,
+                        shouldShow: n && d && !t,
                         renderPopout: e => {
                             let {closePopout: t} = e;
                             return (0, i.jsx)(E.ZP, {
@@ -164,7 +164,7 @@ class D extends a.PureComponent {
     }
 }
 function k(e) {
-    let {channel: t} = e, n = (0, f.Z)(), r = (0, l.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, l.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), {
+    let {channel: t} = e, n = (0, f.Z)(), r = (0, l.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, l.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, l.e7)([u.Z], () => u.Z.useReducedMotion), {
             callActive: m,
             callUnavailable: _
         } = (0, l.cj)([I.Z], () => ({
@@ -176,7 +176,7 @@ function k(e) {
         } = (0, l.cj)([N.Z], () => ({
             notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
             isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
-        })), T = (0, l.e7)([v.default], () => v.default.getUser(E)), Z = (0, u.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, l.e7)([x.Z], () => x.Z.hasLayers());
+        })), T = (0, l.e7)([v.default], () => v.default.getUser(E)), Z = (0, d.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, l.e7)([x.Z], () => x.Z.hasLayers());
     M && !b && A.push(s.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [j, L] = a.useState(!1);
     return (a.useEffect(() => {

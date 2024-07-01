@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 });
-var i = n(735250), a = n(470079), l = n(286379), s = n(481060), r = n(797614), o = n(473092), c = n(689938), u = n(370826), d = n(560580);
+var i = n(735250), a = n(470079), l = n(286379), s = n(481060), r = n(797614), o = n(473092), c = n(689938), d = n(370826), u = n(560580);
 function h(e) {
     let {
         channelId: t,
@@ -34,14 +34,14 @@ function h(e) {
         p
     ]);
     return (0, i.jsxs)('div', {
-        className: u.strangerDangerBanner,
+        className: d.strangerDangerBanner,
         children: [
             (0, i.jsxs)('div', {
-                className: u.shieldAndHeading,
+                className: d.shieldAndHeading,
                 children: [
                     (0, i.jsx)('img', {
-                        className: u.safetyShieldIcon,
-                        src: d,
+                        className: d.safetyShieldIcon,
+                        src: u,
                         alt: ''
                     }),
                     (0, i.jsxs)('div', {
@@ -61,25 +61,25 @@ function h(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: u.buttons,
+                className: d.buttons,
                 children: null == E ? void 0 : E.map((e, t) => (0, i.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
                     color: e.color,
                     'aria-label': e.text,
                     onClick: e.onclick,
-                    className: u.ctaButton,
+                    className: d.ctaButton,
                     children: e.text
                 }, t))
             }),
             (0, i.jsx)(s.Clickable, {
-                className: u.closeButton,
+                className: d.closeButton,
                 onClick: C,
                 role: 'button',
                 'aria-label': c.Z.Messages.DISMISS,
                 children: (0, i.jsx)(s.CloseSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: u.closeButton
+                    className: d.closeButton
                 })
             })
         ]

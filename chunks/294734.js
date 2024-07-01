@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 });
-var i = n(735250), a = n(470079), s = n(793030), l = n(442837), r = n(902704), o = n(692547), c = n(481060), d = n(356264), u = n(628238), _ = n(25015), E = n(438075), m = n(695346), I = n(592125), T = n(906467), h = n(430824), N = n(496675), f = n(699516), p = n(594174), C = n(113039), g = n(100604), S = n(694784), A = n(39154), x = n(689938), O = n(414700);
+var i = n(735250), a = n(470079), s = n(793030), l = n(442837), r = n(902704), o = n(692547), c = n(481060), d = n(356264), u = n(628238), _ = n(25015), E = n(438075), m = n(695346), I = n(592125), T = n(906467), h = n(430824), N = n(496675), p = n(699516), f = n(594174), C = n(113039), g = n(100604), S = n(694784), A = n(39154), x = n(689938), O = n(414700);
 function R() {
     return (0, i.jsxs)('div', {
         className: O.headerContainer,
@@ -33,12 +33,12 @@ function M(e) {
             u
         ]), E = (0, l.e7)([
             I.Z,
-            p.default,
-            f.Z,
+            f.default,
+            p.Z,
             N.Z,
             h.Z,
             d.Z
-        ], () => _.getForwardInfo(I.Z, p.default, f.Z, N.Z, h.Z, d.Z).footerInfo, [_], r.Z), m = a.useCallback(() => {
+        ], () => _.getForwardInfo(I.Z, f.default, p.Z, N.Z, h.Z, d.Z).footerInfo, [_], r.Z), m = a.useCallback(() => {
             (0, S.Z)(t);
         }, [t]);
     return null == E ? null : (0, i.jsxs)(c.Clickable, {
@@ -73,8 +73,8 @@ function v(e) {
             n,
             s
         ]), c = m.RS.useSetting(), d = m.NA.useSetting(), h = (0, l.e7)([T.Z], () => T.Z.isDeveloper), N = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-            content: f,
-            hasSpoilerEmbeds: p
+            content: p,
+            hasSpoilerEmbeds: f
         } = (0, _.Z)(o, {
             hideSimpleEmbedContent: c && d,
             isInteracting: !1,
@@ -95,7 +95,7 @@ function v(e) {
                     (0, i.jsx)(R, {}),
                     (0, i.jsx)(C.ZP, {
                         message: o,
-                        content: f
+                        content: p
                     }),
                     (0, E.Z)({
                         channelMessageProps: {
@@ -103,7 +103,7 @@ function v(e) {
                             channel: g,
                             compact: S
                         },
-                        hasSpoilerEmbeds: p,
+                        hasSpoilerEmbeds: f,
                         isInteracting: !1,
                         isMessageSnapshot: !0
                     }),

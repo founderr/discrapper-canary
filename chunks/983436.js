@@ -10,7 +10,7 @@ function I(e) {
             guild: n,
             channel: I,
             messageData: T
-        } = e, h = c.Z.getGuildId(), N = o.Z.getChannelId(h), f = a.useCallback(() => {
+        } = e, h = c.Z.getGuildId(), N = o.Z.getChannelId(h), p = a.useCallback(() => {
             var e;
             u.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
@@ -27,7 +27,7 @@ function I(e) {
             I.type,
             h,
             N
-        ]), p = (0, i.jsx)(d.Z.Channel, { channel: I });
+        ]), f = (0, i.jsx)(d.Z.Channel, { channel: I });
     return (0, i.jsx)(d.Z, {
         children: (0, i.jsxs)(d.Z.Body, {
             children: [
@@ -36,8 +36,8 @@ function I(e) {
                     children: [
                         (0, i.jsx)(d.Z.Icon, { guild: n }),
                         (0, i.jsx)(d.Z.Info, {
-                            title: p,
-                            onClick: f,
+                            title: f,
+                            onClick: p,
                             children: (0, i.jsxs)('span', {
                                 className: m.infoTitle,
                                 children: [
@@ -55,7 +55,7 @@ function I(e) {
                     ]
                 }),
                 (0, i.jsx)(d.Z.Button, {
-                    onClick: f,
+                    onClick: p,
                     color: d.Z.Button.Colors.GREEN,
                     children: I.isGuildStageVoice() ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.JOIN_VOICE
                 })

@@ -1,17 +1,17 @@
 n(653041);
 var i, a, l, s, r = n(442837), o = n(570140), c = n(975984);
-let u = [], d = {}, h = {};
+let d = [], u = {}, h = {};
 class p extends (i = r.ZP.Store) {
     getSearchState(e) {
         var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : {
+        return null !== (t = u[e]) && void 0 !== t ? t : {
             mostRecentQuery: '',
             fetching: !1
         };
     }
     getSearchResults(e, t) {
         var n, i, a;
-        return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : u;
+        return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : d;
     }
     shouldFetch(e, t) {
         var n, i;
@@ -30,7 +30,7 @@ s = 'GuildDirectorySearchStore', (l = 'displayName') in (a = p) ? Object.defineP
             channelId: t,
             query: n
         } = e;
-        d[t] = {
+        u[t] = {
             fetching: !0,
             mostRecentQuery: n
         };
@@ -41,8 +41,8 @@ s = 'GuildDirectorySearchStore', (l = 'displayName') in (a = p) ? Object.defineP
             query: n,
             results: i
         } = e;
-        d[t] = {
-            ...d[t],
+        u[t] = {
+            ...u[t],
             fetching: !1
         };
         let a = [];
@@ -59,14 +59,14 @@ s = 'GuildDirectorySearchStore', (l = 'displayName') in (a = p) ? Object.defineP
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (e) {
         let {channelId: t} = e;
-        d[t] = {
-            ...d[t],
+        u[t] = {
+            ...u[t],
             fetching: !1
         };
     },
     GUILD_DIRECTORY_SEARCH_CLEAR: function (e) {
         let {channelId: t} = e;
-        d[t] = {
+        u[t] = {
             fetching: !1,
             mostRecentQuery: ''
         };
@@ -76,7 +76,7 @@ s = 'GuildDirectorySearchStore', (l = 'displayName') in (a = p) ? Object.defineP
             channelId: t,
             query: n
         } = e;
-        d[t] = {
+        u[t] = {
             fetching: !1,
             mostRecentQuery: n
         };
@@ -86,7 +86,7 @@ s = 'GuildDirectorySearchStore', (l = 'displayName') in (a = p) ? Object.defineP
         let {
                 channelId: n,
                 guildId: i
-            } = e, a = null === (t = d[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
+            } = e, a = null === (t = u[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
         if (null == a)
             return;
         let l = h[n][a];
@@ -95,7 +95,7 @@ s = 'GuildDirectorySearchStore', (l = 'displayName') in (a = p) ? Object.defineP
         let s = l.results.filter(e => e.guildId !== i);
         h[n] = {
             ...h[n],
-            [d[n].mostRecentQuery]: {
+            [u[n].mostRecentQuery]: {
                 ...l,
                 results: s
             }

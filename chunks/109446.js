@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(392711), a = n.n(r), s = n(442837), o = n(481060), c = n(99690), u = n(359110), d = n(601070), h = n(91159), p = n(488131), _ = n(496675), f = n(306680), m = n(594174), g = n(768581), C = n(709054), I = n(981631), E = n(124368), N = n(689938), x = n(542326);
+var i = n(735250), l = n(470079), r = n(392711), a = n.n(r), s = n(442837), o = n(481060), c = n(99690), u = n(359110), d = n(601070), h = n(91159), p = n(488131), _ = n(496675), f = n(306680), g = n(594174), m = n(768581), C = n(709054), I = n(981631), E = n(124368), N = n(689938), x = n(542326);
 function S(e) {
     let {channel: t} = e, r = (0, s.Wu)([
             d.Z,
@@ -49,7 +49,7 @@ function S(e) {
     });
 }
 function Z(e) {
-    let {thread: t} = e, n = (0, s.e7)([m.default], () => m.default.getUser(t.ownerId)), l = (0, h.Ok)(t);
+    let {thread: t} = e, n = (0, s.e7)([g.default], () => g.default.getUser(t.ownerId)), l = (0, h.Ok)(t);
     return (0, i.jsxs)(o.Clickable, {
         className: x.row,
         onClick: e => {
@@ -58,7 +58,7 @@ function Z(e) {
         children: [
             null == n ? (0, i.jsx)('img', {
                 className: x.avatar,
-                src: g.ZP.getDefaultAvatarURL(void 0, void 0),
+                src: m.ZP.getDefaultAvatarURL(void 0, void 0),
                 alt: ''
             }) : (0, i.jsx)(c.Z, {
                 className: x.avatar,

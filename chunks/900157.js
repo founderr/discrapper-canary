@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 });
-var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(570140), c = n(239091), u = n(561472), d = n(367907), h = n(731429), p = n(188471), m = n(933557), _ = n(287746), f = n(541716), E = n(910611), C = n(359110), g = n(592125), I = n(703558), x = n(430824), T = n(979651), N = n(502568), v = n(664342), S = n(124368), Z = n(981631), A = n(689938), M = n(423289);
+var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(570140), c = n(239091), d = n(561472), u = n(367907), h = n(731429), p = n(188471), m = n(933557), _ = n(287746), f = n(541716), E = n(910611), C = n(359110), g = n(592125), I = n(703558), x = n(430824), T = n(979651), N = n(502568), v = n(664342), S = n(124368), Z = n(981631), A = n(689938), M = n(423289);
 function b(e) {
     let {
             channelId: t,
@@ -28,9 +28,9 @@ function b(e) {
                 return;
             P.current = !0;
             let e = (0, h.K)(g.Z.getChannel(R.id), !0);
-            (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
+            (0, u.yw)(Z.rMx.CHANNEL_OPENED, {
                 ...e,
-                ...(0, d.$H)(R.id),
+                ...(0, u.$H)(R.id),
                 channel_view: b
             }), (0, p.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [
@@ -44,7 +44,7 @@ function b(e) {
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(d.Z, {
                 channel: R,
                 draftType: I.d.ChannelMessage
             }),

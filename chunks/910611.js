@@ -9,7 +9,7 @@ n.d(t, {
         return M;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(933557), u = n(471445), d = n(266076), h = n(703656), p = n(699516), m = n(914010), _ = n(594174), f = n(467679), E = n(346656), C = n(946734), g = n(99843), I = n(372564), x = n(984370), T = n(217314), N = n(981631), v = n(689938), S = n(175803);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(933557), d = n(471445), u = n(266076), h = n(703656), p = n(699516), m = n(914010), _ = n(594174), f = n(467679), E = n(346656), C = n(946734), g = n(99843), I = n(372564), x = n(984370), T = n(217314), N = n(981631), v = n(689938), S = n(175803);
 function Z(e) {
     let {
             channel: t,
@@ -22,7 +22,7 @@ function Z(e) {
             handleParentClick: E,
             handleParentContextMenu: C,
             renderFollowButton: I
-        } = e, Z = (0, u.KS)(t, r), {
+        } = e, Z = (0, d.KS)(t, r), {
             prefix: A,
             level: M
         } = function (e, t) {
@@ -93,7 +93,7 @@ function Z(e) {
             children: [
                 (0, i.jsx)(o.HiddenVisually, { children: v.Z.Messages.GROUP_DM }),
                 (0, i.jsx)('div', {
-                    children: (0, i.jsx)(d.Z, {
+                    children: (0, i.jsx)(u.Z, {
                         'aria-hidden': !0,
                         channel: t,
                         size: o.AvatarSizes.SIZE_24,
@@ -150,7 +150,7 @@ function Z(e) {
     case N.d4z.PRIVATE_THREAD:
         let j = null;
         if (!h && null != l) {
-            let e = (0, u.KS)(l, r);
+            let e = (0, d.KS)(l, r);
             j = (0, i.jsxs)(a.Fragment, {
                 children: [
                     b(e, v.Z.Messages.TEXT_CHANNEL),

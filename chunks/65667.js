@@ -14,8 +14,8 @@ function T(e) {
         } = e, T = (0, r.ZP)(t), h = a(T), {
             avatarSrc: N,
             eventHandlers: {
-                onMouseEnter: f,
-                onMouseLeave: p
+                onMouseEnter: p,
+                onMouseLeave: f
             }
         } = (0, u.m)(!0), C = '' !== t.content ? new Date(t.content).toLocaleString(m.Z.getLocale(), {
             hour: 'numeric',
@@ -25,8 +25,8 @@ function T(e) {
             year: 'numeric'
         }) : '';
     return (0, i.jsx)('div', {
-        onMouseEnter: f,
-        onMouseLeave: p,
+        onMouseEnter: p,
+        onMouseLeave: f,
         children: (0, i.jsx)(d.Z, {
             className: s()(I.mainContainer, { [I.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(u.S, { src: N }),

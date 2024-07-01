@@ -9,8 +9,8 @@ function c(e) {
             name: t,
             labelType: n,
             collapsed: c = !1,
-            showTooltip: u = !1
-        } = e, d = n === s.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED, h = n === s.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [p, m] = a.useState(c ? '' : d);
+            showTooltip: d = !1
+        } = e, u = n === s.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED, h = n === s.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [p, m] = a.useState(c ? '' : u);
     if (a.useEffect(() => {
             c ? m('') : n === s.ww.NEW ? m(r.Z.Messages.NEW) : n === s.ww.UPDATED && m(r.Z.Messages.UPDATED);
         }, [
@@ -23,7 +23,7 @@ function c(e) {
         disableColor: !0,
         text: (0, i.jsx)('span', { children: p })
     });
-    if (!u)
+    if (!d)
         return _;
     let f = r.Z.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({ activity: t });
     return (0, i.jsx)(l.TooltipContainer, {

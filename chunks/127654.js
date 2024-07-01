@@ -6,11 +6,11 @@ n.d(t, {
         return x;
     }
 }), n(653041), n(47120), n(411104);
-var i = n(475179), a = n(166459), l = n(966390), s = n(531643), r = n(476326), o = n(367907), c = n(358221), u = n(117530), d = n(594174), h = n(626135), p = n(403182), m = n(74538), _ = n(979956), f = n(981631), E = n(959517), C = n(474936), g = n(689938);
+var i = n(475179), a = n(166459), l = n(966390), s = n(531643), r = n(476326), o = n(367907), c = n(358221), d = n(117530), u = n(594174), h = n(626135), p = n(403182), m = n(74538), _ = n(979956), f = n(981631), E = n(959517), C = n(474936), g = n(689938);
 function I(e, t) {
-    let n = d.default.getCurrentUser(), i = e.getGuildId(), a = p.dg(i), l = [], r = 0, c = 0, u = 0, h = [];
+    let n = u.default.getCurrentUser(), i = e.getGuildId(), a = p.dg(i), l = [], r = 0, c = 0, d = 0, h = [];
     for (let e of t)
-        u += 1, r += e.size, l.push(e.size), e.size > c && (c = e.size), null != e.type ? h.push(e.type) : h.push('unknown');
+        d += 1, r += e.size, l.push(e.size), e.size > c && (c = e.size), null != e.type ? h.push(e.type) : h.push('unknown');
     if (c > a) {
         (0, o.yw)(f.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
@@ -18,7 +18,7 @@ function I(e, t) {
             user_individual_file_size_limit: a,
             pre_compression_file_sizes: l,
             pre_compression_aggregate_file_size: r,
-            num_attachments: u,
+            num_attachments: d,
             error_type: E.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: h
         }), (0, s.openUploadError)({
@@ -37,7 +37,7 @@ function I(e, t) {
 function x(e, t, n) {
     let {
         filesMetadata: o,
-        requireConfirm: d = !0,
+        requireConfirm: u = !0,
         showLargeMessageDialog: p = !1,
         isThumbnail: m = !1
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
@@ -50,17 +50,17 @@ function x(e, t, n) {
         I(t, e);
         return;
     }
-    if (u.Z.getUploadCount(t.id, n) + e.length > f.dN1) {
+    if (d.Z.getUploadCount(t.id, n) + e.length > f.dN1) {
         (0, s.openUploadError)({
             title: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
             help: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({ limit: f.dN1 })
         }), h.default.track(f.rMx.UPLOAD_FILE_LIMIT_ERROR, {
-            existing_count: u.Z.getUploadCount(t.id, n),
+            existing_count: d.Z.getUploadCount(t.id, n),
             new_count: e.length
         });
         return;
     }
-    if ((t.type === f.d4z.GUILD_VOICE || t.type === f.d4z.GUILD_STAGE_VOICE) && !c.Z.getChatOpen(t.id) && i.Z.updateChatOpen(t.id, !0), d) {
+    if ((t.type === f.d4z.GUILD_VOICE || t.type === f.d4z.GUILD_STAGE_VOICE) && !c.Z.getChatOpen(t.id) && i.Z.updateChatOpen(t.id, !0), u) {
         let i = Array.from(e).map((e, t) => ({
             file: e,
             platform: r.ow.WEB,

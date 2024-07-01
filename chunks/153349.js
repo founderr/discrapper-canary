@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(512722), u = n.n(c), d = n(442837), h = n(481060), p = n(239091), m = n(99690), _ = n(58540), f = n(484459), E = n(103575), C = n(271383), g = n(496675), I = n(158776), x = n(502568), T = n(471253), N = n(431328), v = n(145834), S = n(590415), Z = n(614173), A = n(618896), M = n(231338), b = n(689938), R = n(944759);
+var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(512722), d = n.n(c), u = n(442837), h = n(481060), p = n(239091), m = n(99690), _ = n(58540), f = n(484459), E = n(103575), C = n(271383), g = n(496675), I = n(158776), x = n(502568), T = n(471253), N = n(431328), v = n(145834), S = n(590415), Z = n(614173), A = n(618896), M = n(231338), b = n(689938), R = n(944759);
 let j = s.memo(function (e) {
         let {
                 toggleRequestToSpeakSidebar: t,
@@ -38,14 +38,14 @@ let j = s.memo(function (e) {
             return () => clearTimeout(e);
         }, []);
         let g = t.getGuildId();
-        u()(null != g, 'Channel cannot be guildless');
+        d()(null != g, 'Channel cannot be guildless');
         let {
                 isMobile: x,
                 status: N
-            } = (0, d.cj)([I.Z], () => ({
+            } = (0, u.cj)([I.Z], () => ({
                 isMobile: I.Z.isMobileOnline(i.user.id),
                 status: I.Z.getStatus(i.user.id, g)
-            })), Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(g, i.user.id)), A = s.useMemo(() => ({ [g]: [i.user.id] }), [
+            })), Z = (0, u.e7)([C.ZP], () => C.ZP.getMember(g, i.user.id)), A = s.useMemo(() => ({ [g]: [i.user.id] }), [
                 g,
                 i.user.id
             ]);
@@ -189,7 +189,7 @@ function y(e) {
             toggleRequestToSpeakSidebar: n,
             chatOpen: i
         } = e, a = (0, N.Fd)(t.id), s = [
-            (0, d.e7)([g.Z], () => g.Z.can(M.Pl.MANAGE_CHANNELS, t) || g.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
+            (0, u.e7)([g.Z], () => g.Z.can(M.Pl.MANAGE_CHANNELS, t) || g.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
             Math.max(1, a.length)
         ];
     return (0, l.jsxs)('div', {

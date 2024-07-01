@@ -1,10 +1,10 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(91192), o = n(442837), c = n(481060), u = n(904245), d = n(902840), h = n(607070), p = n(580747), m = n(135938), _ = n(160404), f = n(765104), E = n(695346), C = n(314897), g = n(323873), I = n(607744), x = n(375954), T = n(496675), N = n(306680), v = n(62817), S = n(594174), Z = n(68588), A = n(459273), M = n(255269), b = n(47481), R = n(977391), j = n(73274), L = n(419388), P = n(406534), O = n(981631), y = n(689938), D = n(601621);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(91192), o = n(442837), c = n(481060), d = n(904245), u = n(902840), h = n(607070), p = n(580747), m = n(135938), _ = n(160404), f = n(765104), E = n(695346), C = n(314897), g = n(323873), I = n(607744), x = n(375954), T = n(496675), N = n(306680), v = n(62817), S = n(594174), Z = n(68588), A = n(459273), M = n(255269), b = n(47481), R = n(977391), j = n(73274), L = n(419388), P = n(406534), O = n(981631), y = n(689938), D = n(601621);
 let k = a.memo(function (e) {
     var t, n;
     let {
             className: l,
-            messageGroupSpacing: d,
+            messageGroupSpacing: u,
             scrollerClassName: p,
             channel: m,
             messages: f,
@@ -26,18 +26,18 @@ let k = a.memo(function (e) {
             groupRange: 4,
             attachments: 8,
             fontSize: S,
-            groupSpacing: d
+            groupSpacing: u
         }) : (0, R.aJ)({
             compact: !1,
             messageGroups: 26,
             groupRange: 4,
             attachments: 8,
             fontSize: S,
-            groupSpacing: d
+            groupSpacing: u
         }), [
             g,
             S,
-            d
+            u
         ]), H = (0, L.ZP)({
             messages: f,
             channel: m,
@@ -80,7 +80,7 @@ let k = a.memo(function (e) {
                     var e;
                     null === (e = H.ref.current) || void 0 === e || e.scrollToBottom({ animate: !h.Z.useReducedMotion });
                 } else
-                    u.Z.jumpToPresent(m.id, O.AQB);
+                    d.Z.jumpToPresent(m.id, O.AQB);
             }
         });
     !function (e) {
@@ -117,7 +117,7 @@ let k = a.memo(function (e) {
         children: [
             null != K && K,
             (0, i.jsxs)('div', {
-                className: s()(D.messagesWrapper, l, 'group-spacing-'.concat(d)),
+                className: s()(D.messagesWrapper, l, 'group-spacing-'.concat(u)),
                 children: [
                     null == K && W,
                     (0, i.jsxs)(c.PinToBottomScrollerAuto, {
@@ -172,7 +172,7 @@ t.Z = a.memo(function (e) {
             forceCozy: r = !1,
             ...c
         } = e, {
-            canManageMessages: u,
+            canManageMessages: d,
             permissionVersion: _,
             canChat: A
         } = function (e) {
@@ -231,13 +231,13 @@ t.Z = a.memo(function (e) {
             let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]), l = (0, o.e7)([N.ZP], () => {
                     var t;
                     return null !== (t = N.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
-                }, [e.id]), {enabled: s} = m.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }), r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n, c = (0, d.ts)(e), u = (0, p.Z)('use_topic_dividers_in_chat'), h = (0, o.Wu)([f.Z], () => {
+                }, [e.id]), {enabled: s} = m.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }), r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n, c = (0, u.ts)(e), d = (0, p.Z)('use_topic_dividers_in_chat'), h = (0, o.Wu)([f.Z], () => {
                     var t;
-                    return c && u && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];
+                    return c && d && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];
                 }, [
                     c,
                     e.id,
-                    u
+                    d
                 ]), _ = (0, o.e7)([f.Z], () => c ? f.Z.selectedSummary(e.id) : null, [
                     c,
                     e.id
@@ -267,7 +267,7 @@ t.Z = a.memo(function (e) {
             };
         }(t);
     return (0, i.jsx)(Z.a.Provider, {
-        value: (0, M.Z)(P, u),
+        value: (0, M.Z)(P, d),
         children: (0, i.jsx)(k, {
             ...c,
             messageGroupSpacing: R,

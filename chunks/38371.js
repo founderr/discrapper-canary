@@ -24,10 +24,10 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var a = n(120356), l = n.n(a), s = n(392711), r = n.n(s), o = n(481060), c = n(230953);
-function u(e) {
+function d(e) {
     return ''.concat(e / 16, 'rem');
 }
-function d() {
+function u() {
     return (0, i.jsx)('div', {
         className: c.avatar,
         style: { opacity: 0.08 }
@@ -42,7 +42,7 @@ function h(e) {
     return (0, i.jsx)('div', {
         className: l()(a, { [c.blob]: !0 }),
         style: {
-            width: u(t),
+            width: d(t),
             opacity: null != n ? n : r().random(0.02, 0.08)
         }
     });
@@ -52,18 +52,18 @@ function p(e) {
             groupStart: n = !1,
             compact: a = !1,
             attachmentSpecs: s,
-            usernameWidth: u,
+            usernameWidth: d,
             usernameOpacity: p,
             className: m,
             style: _
         } = e, f = a ? 50 : r().random(40, 50);
     return !a && n ? t = (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(d, {}),
+            (0, i.jsx)(u, {}),
             (0, i.jsx)(o.H, {
                 className: c.header,
                 children: (0, i.jsx)(h, {
-                    width: u,
+                    width: d,
                     opacity: p,
                     className: c.__invalid_username
                 })
@@ -81,7 +81,7 @@ function p(e) {
             (0, i.jsx)(o.H, {
                 className: c.header,
                 children: (0, i.jsx)(h, {
-                    width: u,
+                    width: d,
                     opacity: p
                 })
             })
@@ -129,16 +129,16 @@ function g(e) {
             compact: a = !1,
             attachmentSpecs: l,
             className: s
-        } = e, o = null != l ? l.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), d = r().random(0.1, 0.2);
+        } = e, o = null != l ? l.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), u = r().random(0.1, 0.2);
     return (0, i.jsx)(i.Fragment, {
         children: Array(t).fill(null).map((e, t) => (0, i.jsx)(p, {
             compact: a,
             className: s,
             usernameWidth: c,
-            usernameOpacity: d,
+            usernameOpacity: u,
             groupStart: 0 === t,
             attachmentSpecs: t === o ? l : void 0,
-            style: 0 === t ? { marginTop: u(n) } : void 0
+            style: 0 === t ? { marginTop: d(n) } : void 0
         }, t))
     });
 }

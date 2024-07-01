@@ -8,7 +8,7 @@ n(470079);
 var a = n(533800), s = n(481060), l = n(358555), r = n(131704), o = n(197409), c = n(630388), d = n(267642), u = n(411198), _ = n(277707), E = n(358595), m = n(981631), I = n(689938), T = n(637091);
 function h(e) {
     var t, h;
-    let N, f, p, {
+    let N, p, f, {
             onTransitionToInviteChannel: C,
             onAcceptInstantInvite: g,
             guild: S,
@@ -35,7 +35,7 @@ function h(e) {
             isStage: U,
             isStream: !1
         });
-    return f = (0, i.jsxs)('span', {
+    return p = (0, i.jsxs)('span', {
         className: T.infoTitle,
         children: [
             (0, i.jsx)(o.Z.GuildName, { guild: S }),
@@ -48,7 +48,7 @@ function h(e) {
                 })
             })
         ]
-    }), y && (p = (0, i.jsx)(s.TooltipContainer, {
+    }), y && (f = (0, i.jsx)(s.TooltipContainer, {
         className: T.tooltipContainer,
         text: I.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
         children: (0, i.jsx)(s.CircleInformationIcon, {
@@ -56,7 +56,7 @@ function h(e) {
             color: 'currentColor',
             className: T.infoIcon
         })
-    })), j ? (f = (0, i.jsx)(o.Z.Channel, { channel: P }), N = (0, i.jsxs)('span', {
+    })), j ? (p = (0, i.jsx)(o.Z.Channel, { channel: P }), N = (0, i.jsxs)('span', {
         className: T.infoTitle,
         children: [
             I.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: S.name }),
@@ -79,7 +79,7 @@ function h(e) {
             (0, i.jsx)(o.Z.GuildSplash, { guild: S }),
             (0, i.jsx)(o.Z.Header, {
                 text: G,
-                extra: p
+                extra: f
             }),
             (0, i.jsxs)(o.Z.Body, {
                 children: [
@@ -88,7 +88,7 @@ function h(e) {
                         children: [
                             (0, i.jsx)(o.Z.Icon, { guild: S }),
                             (0, i.jsx)(o.Z.Info, {
-                                title: f,
+                                title: p,
                                 onClick: b ? k : null,
                                 children: N
                             })

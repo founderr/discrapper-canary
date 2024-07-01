@@ -3,19 +3,19 @@ n.d(t, {
         return Z;
     }
 });
-var i = n(735250), l = n(470079), r = n(399606), a = n(704215), s = n(692547), o = n(481060), c = n(239091), u = n(605236), d = n(45966), h = n(31445), p = n(22082), _ = n(703656), f = n(306680), m = n(709054), g = n(540126), C = n(434479), I = n(981631), E = n(176505), N = n(490897), x = n(689938), S = n(219644);
+var i = n(735250), l = n(470079), r = n(399606), a = n(704215), s = n(692547), o = n(481060), c = n(239091), u = n(605236), d = n(45966), h = n(31445), p = n(22082), _ = n(703656), f = n(306680), g = n(709054), m = n(540126), C = n(434479), I = n(981631), E = n(176505), N = n(490897), x = n(689938), S = n(219644);
 function Z(e) {
     let {
             guild: t,
             selected: Z
-        } = e, v = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > g.Cb, M = (0, r.e7)([
+        } = e, v = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > m.Cb, M = (0, r.e7)([
             d.Z,
             f.ZP
         ], () => {
             let e = d.Z.lastFetchedAt(t.id), n = f.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
             if (null == n)
                 return !1;
-            let i = m.default.extractTimestamp(n);
+            let i = g.default.extractTimestamp(n);
             return null != e && e > i;
         }), R = l.useCallback(() => {
             (0, _.uL)(I.Z5c.CHANNEL(t.id, v ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));

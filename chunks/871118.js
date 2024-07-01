@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(543882), u = n(592125), d = n(496675), h = n(981631), p = n(689938), m = n(654984);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(543882), d = n(592125), u = n(496675), h = n(981631), p = n(689938), m = n(654984);
 function _(e) {
     let {
         isLoading: t,
@@ -31,7 +31,7 @@ function f(e) {
             stream: t,
             className: n,
             noText: l = !1
-        } = e, o = (0, r.e7)([u.Z], () => u.Z.getBasicChannel(t.channelId)), f = (0, r.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)), {
+        } = e, o = (0, r.e7)([d.Z], () => d.Z.getBasicChannel(t.channelId)), f = (0, r.e7)([u.Z], () => null != o && u.Z.canBasicChannel(h.S7T.CONNECT, o)), {
             url: E,
             isLoading: C
         } = (0, r.cj)([c.Z], () => ({

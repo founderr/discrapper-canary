@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     }
 }), n(47120), n(724458);
-var i = n(470079), a = n(442837), l = n(570140), s = n(439170), r = n(592125), o = n(451478), c = n(626135), u = n(162461), d = n(146282), h = n(590026), p = n(178762), m = n(206583), _ = n(809017), f = n(981631), E = n(689938);
+var i = n(470079), a = n(442837), l = n(570140), s = n(439170), r = n(592125), o = n(451478), c = n(626135), d = n(162461), u = n(146282), h = n(590026), p = n(178762), m = n(206583), _ = n(809017), f = n(981631), E = n(689938);
 let C = 0;
 function g(e) {
     let {
@@ -21,7 +21,7 @@ function g(e) {
             requestId: N,
             entries: v,
             impressionCappedEntryIds: S
-        } = (0, h.Z)(g), Z = (0, a.e7)([d.Z], () => d.Z.hidden), A = (0, a.e7)([o.Z], () => o.Z.isFocused()), M = (0, a.e7)([r.Z], () => r.Z.getChannel(g)), b = (null == M ? void 0 : M.isForumChannel()) === !1, [R, j, L, P] = i.useMemo(() => {
+        } = (0, h.Z)(g), Z = (0, a.e7)([u.Z], () => u.Z.hidden), A = (0, a.e7)([o.Z], () => o.Z.isFocused()), M = (0, a.e7)([r.Z], () => r.Z.getChannel(g)), b = (null == M ? void 0 : M.isForumChannel()) === !1, [R, j, L, P] = i.useMemo(() => {
             let e;
             if (null == v || 0 === v.length || null == N || !b)
                 return [
@@ -104,7 +104,7 @@ function g(e) {
                 guild_id: I,
                 all_item_ids: n,
                 impression_capped_item_ids: [...k.current.impressionCappedEntryIds]
-            }), (0, u.wm)('useInjectContentInventoryFeed') && l.Z.dispatch({
+            }), (0, d.wm)('useInjectContentInventoryFeed') && l.Z.dispatch({
                 type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
                 itemIds: i
             });

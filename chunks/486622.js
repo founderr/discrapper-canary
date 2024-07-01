@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var i = n(470079), a = n(707019), l = n.n(a), s = n(881052), r = n(726521), o = n(621853), c = n(484459), u = n(695346), d = n(626135), h = n(823162), p = n(268699), m = n(9389), _ = n(687683), f = n(981631);
+var i = n(470079), a = n(707019), l = n.n(a), s = n(881052), r = n(726521), o = n(621853), c = n(484459), d = n(695346), u = n(626135), h = n(823162), p = n(268699), m = n(9389), _ = n(687683), f = n(981631);
 function E(e) {
     let {
             user: t,
@@ -79,7 +79,7 @@ function E(e) {
             let n = async () => {
                 var n;
                 let i = null != t ? null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
-                d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+                u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                     action: _.cl.ACCEPT_CONFIRMATION_PROMPT,
                     channel_id: e,
                     mutual_guild_ids: null != i ? i : [],
@@ -92,7 +92,7 @@ function E(e) {
                 onCancel: () => {
                     var n;
                     let i = null != t ? null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
-                    d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+                    u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                         action: _.cl.DISMISS_CONFIRMATION_PROMPT,
                         channel_id: e,
                         mutual_guild_ids: null != i ? i : [],
@@ -106,18 +106,18 @@ function E(e) {
             t
         ]), O = i.useCallback((e, t, n) => {
             let i = (i, a) => {
-                    a && u.kJ.updateSetting(i), i && null != t && (0, r.zd)(t), R(e.id), d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+                    a && d.kJ.updateSetting(i), i && null != t && (0, r.zd)(t), R(e.id), u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                         action: _.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
                         channel_id: e.id,
                         is_dont_show_again_checked: a,
                         non_spam_retraining_opt_in: i
                     }), null != n && n();
-                }, a = u.kJ.getSetting();
+                }, a = d.kJ.getSetting();
             null == a ? (0, p.V)({
                 channel: e,
                 onConfirm: i,
                 onCancel: () => {
-                    d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
+                    u.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                         action: _.cl.DISMISS_HAM_CONFIRMATION_PROMPT,
                         channel_id: e.id
                     });

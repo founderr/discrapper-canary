@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(442837), u = n(481060), d = n(430824), h = n(650461), p = n(353093), m = n(105671), _ = n(532490), f = n(979264), E = n(570938), C = n(550271), g = n(116175), I = n(308083), x = n(689938), T = n(772661);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(430824), h = n(650461), p = n(353093), m = n(105671), _ = n(532490), f = n(979264), E = n(570938), C = n(550271), g = n(116175), I = n(308083), x = n(689938), T = n(772661);
 function N(e) {
     let {
         guildId: t,
@@ -52,7 +52,7 @@ function v(e) {
             o,
             n
         ]);
-    return (0, i.jsx)(u.Text, {
+    return (0, i.jsx)(d.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
         className: s()(T.overviewText, l),
@@ -60,9 +60,9 @@ function v(e) {
     });
 }
 t.Z = 12633 == n.j ? e => {
-    let {guildId: t} = e, n = (0, h.Wg)(), l = (0, c.e7)([d.Z], () => {
+    let {guildId: t} = e, n = (0, h.Wg)(), l = (0, c.e7)([u.Z], () => {
             var e, n;
-            return null !== (n = null === (e = d.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
+            return null !== (n = null === (e = u.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
         }), {
             gameApplicationIds: s,
             playstyle: r,
@@ -85,19 +85,19 @@ t.Z = 12633 == n.j ? e => {
                 primaryColor: null != C ? C : g.Nh,
                 secondaryColor: null != S ? S : g.vY
             }),
-            (0, i.jsx)(u.Heading, {
+            (0, i.jsx)(d.Heading, {
                 variant: 'heading-xl/normal',
                 color: 'text-muted',
                 className: T.overviewHeaderPrelude,
                 children: x.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
             }),
-            (0, i.jsx)(u.Heading, {
+            (0, i.jsx)(d.Heading, {
                 variant: 'heading-xl/bold',
                 color: 'interactive-active',
                 className: T.overviewGuildName,
                 children: l
             }),
-            (0, i.jsx)(u.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 className: T.overviewText,
@@ -107,13 +107,13 @@ t.Z = 12633 == n.j ? e => {
                 applicationIds: s,
                 playstyle: r
             }),
-            null != Z ? (0, i.jsx)(u.Text, {
+            null != Z ? (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 className: T.overviewText,
                 children: x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({ traits: Z })
             }) : null,
-            (0, i.jsx)(u.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 className: T.overviewText,

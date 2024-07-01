@@ -6,7 +6,7 @@ n.d(t, {
         return K;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(613828), u = n(91192), d = n(873546), h = n(442837), p = n(481060), _ = n(493683), f = n(239091), m = n(420660), g = n(702321), C = n(201895), I = n(43267), E = n(933557), N = n(979264), x = n(853856), S = n(93687), Z = n(785232), v = n(878857), T = n(204197), L = n(199902), A = n(158776), b = n(306680), M = n(111583), R = n(9156), y = n(594174), O = n(467679), P = n(514342), j = n(28718), D = n(733880), U = n(709054), G = n(998502), w = n(788307), k = n(960670), B = n(981631), V = n(689938), H = n(608418);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(613828), u = n(91192), d = n(873546), h = n(442837), p = n(481060), _ = n(493683), f = n(239091), g = n(420660), m = n(702321), C = n(201895), I = n(43267), E = n(933557), N = n(979264), x = n(853856), S = n(93687), Z = n(785232), v = n(878857), T = n(204197), L = n(199902), A = n(158776), b = n(306680), M = n(111583), R = n(9156), y = n(594174), O = n(467679), P = n(514342), j = n(28718), D = n(733880), U = n(709054), G = n(998502), w = n(788307), k = n(960670), B = n(981631), V = n(689938), H = n(608418);
 let F = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar, W = {
         offset: {
             top: 2,
@@ -48,8 +48,8 @@ class K extends l.Component {
             onClick: h,
             className: _,
             role: f,
-            'aria-posinset': m,
-            'aria-setsize': g,
+            'aria-posinset': g,
+            'aria-setsize': m,
             ...C
         } = this.props;
         return (0, i.jsx)(D.Z, {
@@ -60,8 +60,8 @@ class K extends l.Component {
                 within: !0,
                 ...W
             },
-            'aria-posinset': m,
-            'aria-setsize': g,
+            'aria-posinset': g,
+            'aria-setsize': m,
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
                 selected: t,
@@ -170,7 +170,7 @@ function q(e) {
             };
             return t.isSystemDM() ? (0, i.jsx)('div', {
                 className: H.subtext,
-                children: (0, g.Z)(t.id) ? V.Z.Messages.SYSTEM_DM_CHANGELOG_STATUS : V.Z.Messages.SYSTEM_DM_ACTIVITY_TEXT
+                children: (0, m.Z)(t.id) ? V.Z.Messages.SYSTEM_DM_CHANGELOG_STATUS : V.Z.Messages.SYSTEM_DM_ACTIVITY_TEXT
             }) : t.isMultiUserDM() ? (0, i.jsx)('div', {
                 className: H.subtext,
                 children: V.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
@@ -201,7 +201,7 @@ function q(e) {
                 });
             o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
-            return !d.isSystemUser() && (n = (0, m.Z)(S) ? B.Skl.STREAMING : M), (0, i.jsx)(F, {
+            return !d.isSystemUser() && (n = (0, g.Z)(S) ? B.Skl.STREAMING : M), (0, i.jsx)(F, {
                 ...ee,
                 size: p.AvatarSizes.SIZE_32,
                 src: X,
@@ -212,7 +212,7 @@ function q(e) {
                 'aria-label': d.username,
                 statusTooltip: !0
             });
-        }, ef = t.isMultiUserDM(), em = t.isSystemDM(), eg = (0, v.Q)(), eC = ef || em || t.type !== B.d4z.DM || (null == d ? void 0 : d.clan) == null ? ei : (0, i.jsxs)(i.Fragment, {
+        }, ef = t.isMultiUserDM(), eg = t.isSystemDM(), em = (0, v.Q)(), eC = ef || eg || t.type !== B.d4z.DM || (null == d ? void 0 : d.clan) == null ? ei : (0, i.jsxs)(i.Fragment, {
             children: [
                 ei,
                 (0, i.jsx)(N.ZP, {
@@ -248,7 +248,7 @@ function q(e) {
                 'aria-posinset': U,
                 children: (0, i.jsxs)(p.Interactive, {
                     className: a()(H.interactive, {
-                        [H.interactiveSystemDM]: eg && em,
+                        [H.interactiveSystemDM]: em && eg,
                         [H.interactiveSelected]: s
                     }),
                     as: 'div',

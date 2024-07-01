@@ -3,14 +3,14 @@ n.d(t, {
         return H;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(692547), c = n(481060), u = n(475179), d = n(40851), h = n(358221), p = n(933557), m = n(320007), _ = n(236091), f = n(623624), E = n(984370), C = n(141321), g = n(618158), I = n(390322), x = n(616286), T = n(961048), N = n(430824), v = n(496675), S = n(502568), Z = n(626135), A = n(792125), M = n(431328), b = n(501655), R = n(200498), j = n(146085), L = n(427679), P = n(592473), O = n(831002), y = n(903108), D = n(981631), k = n(474936), U = n(689938), w = n(688818);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(692547), c = n(481060), d = n(475179), u = n(40851), h = n(358221), p = n(933557), m = n(320007), _ = n(236091), f = n(623624), E = n(984370), C = n(141321), g = n(618158), I = n(390322), x = n(616286), T = n(961048), N = n(430824), v = n(496675), S = n(502568), Z = n(626135), A = n(792125), M = n(431328), b = n(501655), R = n(200498), j = n(146085), L = n(427679), P = n(592473), O = n(831002), y = n(903108), D = n(981631), k = n(474936), U = n(689938), w = n(688818);
 function B(e) {
     let {
             inPopout: t,
             channel: n,
             toggleRequestToSpeakSidebar: l,
             showRequestToSpeakSidebar: o
-        } = e, p = (0, d.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), N = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
+        } = e, p = (0, u.bp)(), f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)), E = (0, R.B)(n.id), N = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY), {
             preventIdle: v,
             allowIdle: S
         } = (0, g.Y)('popup');
@@ -50,7 +50,7 @@ function B(e) {
                 className: w.button,
                 children: (0, i.jsx)(P.Z, {
                     toggleRequestToSpeakSidebar: () => {
-                        f && u.Z.updateChatOpen(n.id, !1), l();
+                        f && d.Z.updateChatOpen(n.id, !1), l();
                     },
                     showRequestToSpeakSidebar: o,
                     numRequestToSpeak: N
@@ -72,12 +72,12 @@ function H(e) {
     var t, n;
     let {
             inPopout: l,
-            channel: d,
+            channel: u,
             toggleRequestToSpeakSidebar: h,
             showRequestToSpeakSidebar: m
-        } = e, _ = (0, p.ZP)(d), C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)), g = (0, M.Io)(d.id), I = (0, M.Rk)(d.id, b.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, y.Z)(d), O = (0, r.e7)([v.Z], () => v.Z.can(j.yP, d)), H = () => {
-            u.Z.updateStageVideoLimitBoostUpsellDismissed(d.id, !0), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
-                guild_id: d.guild_id,
+        } = e, _ = (0, p.ZP)(u), C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(u.id)), g = (0, M.Io)(u.id), I = (0, M.Rk)(u.id, b.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(u.guild_id), [u.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, R = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, y.Z)(u), O = (0, r.e7)([v.Z], () => v.Z.can(j.yP, u)), H = () => {
+            d.Z.updateStageVideoLimitBoostUpsellDismissed(u.id, !0), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
+                guild_id: u.guild_id,
                 type: k.cd.VIDEO_STAGE_LIMIT,
                 is_moderator: O,
                 action: k.T7.DISMISS
@@ -85,7 +85,7 @@ function H(e) {
         };
     a.useEffect(() => {
         P && Z.default.track(D.rMx.BOOSTING_UPSELL_VIEWED, {
-            guild_id: d.guild_id,
+            guild_id: u.guild_id,
             type: k.cd.VIDEO_STAGE_LIMIT,
             is_moderator: O,
             listener_count: g + I
@@ -96,7 +96,7 @@ function H(e) {
             inPopout: l,
             toggleRequestToSpeakSidebar: h,
             showRequestToSpeakSidebar: m,
-            channel: d
+            channel: u
         }),
         onDoubleClick: E.O,
         transparent: !0,
@@ -178,10 +178,10 @@ function H(e) {
                                     size: c.Button.Sizes.SMALL,
                                     onClick: () => {
                                         (0, f.f)({
-                                            guildId: d.guild_id,
+                                            guildId: u.guild_id,
                                             location: { section: D.jXE.STAGE_VIDEO_LIMIT }
                                         }), Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
-                                            guild_id: d.guild_id,
+                                            guild_id: u.guild_id,
                                             type: k.cd.VIDEO_STAGE_LIMIT,
                                             is_moderator: O,
                                             action: k.T7.BOOST

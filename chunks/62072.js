@@ -1,4 +1,4 @@
-var i = n(470079), a = n(904245), l = n(346610), s = n(868643), r = n(912332), o = n(41776), c = n(280845), u = n(665906), d = n(488131), h = n(695346), p = n(314897), m = n(592125), _ = n(323873), f = n(271383), E = n(607744), C = n(375954), g = n(496675), I = n(572004), x = n(585483), T = n(358085), N = n(709054), v = n(418476), S = n(901461), Z = n(432376), A = n(996861), M = n(981631);
+var i = n(470079), a = n(904245), l = n(346610), s = n(868643), r = n(912332), o = n(41776), c = n(280845), d = n(665906), u = n(488131), h = n(695346), p = n(314897), m = n(592125), _ = n(323873), f = n(271383), E = n(607744), C = n(375954), g = n(496675), I = n(572004), x = n(585483), T = n(358085), N = n(709054), v = n(418476), S = n(901461), Z = n(432376), A = n(996861), M = n(981631);
 function b(e) {
     return g.Z.can(M.Plq.MANAGE_MESSAGES, e);
 }
@@ -42,7 +42,7 @@ t.Z = function (e, t, n) {
                         canAddNewReactions: t && g.Z.can(M.Plq.ADD_REACTIONS, e),
                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
                         isGuest: null != e.guild_id && f.ZP.isCurrentUserGuest(e.guild_id),
-                        isActiveChannelOrUnarchivableThread: (0, u.RG)(e)
+                        isActiveChannelOrUnarchivableThread: (0, d.RG)(e)
                     });
                 return !i && n;
             }(H) && (n.preventDefault(), x.S.dispatchKeyed(M.LPv.TOGGLE_REACTION_POPOUT, B.id, { emojiPicker: !0 }));
@@ -58,11 +58,11 @@ t.Z = function (e, t, n) {
             }));
             break;
         case 't':
-            if (y && (0, u.ki)(H, B))
-                n.preventDefault(), (0, d.R6)(H, B, 'Message Shortcut');
+            if (y && (0, d.ki)(H, B))
+                n.preventDefault(), (0, u.R6)(H, B, 'Message Shortcut');
             else if (B.hasFlag(M.iLy.HAS_THREAD)) {
                 let e = m.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
-                null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w));
+                null != e && (y || w) && (n.preventDefault(), (0, u.ok)(e, w));
             }
             break;
         case 'enter':

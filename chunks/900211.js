@@ -11,13 +11,13 @@ function r(e) {
             onResizeEnd: r,
             minHeight: o,
             maxHeight: c
-        } = e, [u, d] = a.useState(null);
+        } = e, [d, u] = a.useState(null);
     a.useEffect(() => {
         var e, n;
-        d(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null);
+        u(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null);
     }, [t]);
     let h = (0, l.Z)({
-        initialElementDimension: u,
+        initialElementDimension: d,
         minDimension: o,
         maxDimension: c,
         resizableDomNodeRef: t,

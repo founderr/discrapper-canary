@@ -1,5 +1,5 @@
 n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(442837), o = n(112724), c = n(358221), u = n(565799), d = n(431328), h = n(501655), p = n(27931), m = n(260979), _ = n(766015), f = n(401139), E = n(12779), C = n(450369), g = n(689938), I = n(310808);
+var i, a, l = n(735250), s = n(470079), r = n(442837), o = n(112724), c = n(358221), d = n(565799), u = n(431328), h = n(501655), p = n(27931), m = n(260979), _ = n(766015), f = n(401139), E = n(12779), C = n(450369), g = n(689938), I = n(310808);
 let x = 424, T = 624, N = 824;
 (a = i || (i = {}))[a.SELECTED = 0] = 'SELECTED', a[a.SPEAKER = 1] = 'SPEAKER', a[a.AUDIENCE = 2] = 'AUDIENCE';
 let v = (e, t) => {
@@ -26,7 +26,7 @@ t.Z = (0, o.Z)(e => {
             selectedParticipantId: c.Z.getSelectedParticipantId(i.id),
             largeStream: c.Z.getStageStreamSize(i.id),
             chatOpen: c.Z.getChatOpen(i.id)
-        }), [i.id]), M = (0, d.Io)(i.id), b = (0, d.Rk)(i.id, h.pV.AUDIENCE), R = (0, r.e7)([u.Z], () => null != x ? u.Z.getParticipant(i.id, x) : null), j = (0, d.w8)(i.id, h.pV.SPEAKER), L = j.filter(A), P = null != j.find(e => e.type === h.Ui.STREAM), O = Z(a), y = S(a, N), D = {
+        }), [i.id]), M = (0, u.Io)(i.id), b = (0, u.Rk)(i.id, h.pV.AUDIENCE), R = (0, r.e7)([d.Z], () => null != x ? d.Z.getParticipant(i.id, x) : null), j = (0, u.w8)(i.id, h.pV.SPEAKER), L = j.filter(A), P = null != j.find(e => e.type === h.Ui.STREAM), O = Z(a), y = S(a, N), D = {
             [h.pV.SPEAKER]: y,
             [h.pV.AUDIENCE]: O,
             [h.pV.SELECTED]: 1

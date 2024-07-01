@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return eu;
+        return ed;
     }
 }), n(411104), n(653041), n(47120);
-var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(392711), c = n.n(o), u = n(913527), d = n.n(u), h = n(873546), p = n(442837), m = n(481060), _ = n(570140), f = n(26151), E = n(493683), C = n(758059), g = n(447543), I = n(708690), x = n(194359), T = n(425493), N = n(461745), v = n(40851), S = n(367907), Z = n(762914), A = n(43267), M = n(933557), b = n(366980), R = n(703656), j = n(131704), L = n(592125), P = n(341165), O = n(544610), y = n(19780), D = n(306680), k = n(699516), U = n(246946), w = n(594174), B = n(285952), H = n(153124), G = n(502568), V = n(626135), F = n(572004), W = n(585483), z = n(823379), Y = n(709054), K = n(51144), q = n(73752), X = n(575464), Q = n(981631), J = n(689938), $ = n(994175), ee = n(838009), et = n(331651);
+var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(392711), c = n.n(o), d = n(913527), u = n.n(d), h = n(873546), p = n(442837), m = n(481060), _ = n(570140), f = n(26151), E = n(493683), C = n(758059), g = n(447543), I = n(708690), x = n(194359), T = n(425493), N = n(461745), v = n(40851), S = n(367907), Z = n(762914), A = n(43267), M = n(933557), b = n(366980), R = n(703656), j = n(131704), L = n(592125), P = n(341165), O = n(544610), y = n(19780), D = n(306680), k = n(699516), U = n(246946), w = n(594174), B = n(285952), H = n(153124), G = n(502568), V = n(626135), F = n(572004), W = n(585483), z = n(823379), Y = n(709054), K = n(51144), q = n(73752), X = n(575464), Q = n(981631), J = n(689938), $ = n(994175), ee = n(838009), et = n(331651);
 function en(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -56,7 +56,7 @@ let es = e => {
                     }),
                     (0, a.jsx)('span', {
                         className: $.lastActiveTimestamp,
-                        children: d()(Y.default.extractTimestamp(s)).fromNow()
+                        children: u()(Y.default.extractTimestamp(s)).fromNow()
                     })
                 ]
             })
@@ -470,14 +470,14 @@ class eo extends (i = l.PureComponent) {
                 return null;
             let {
                     user: c,
-                    comparator: u
-                } = o, d = l.has(c.id);
+                    comparator: d
+                } = o, u = l.has(c.id);
             return (0, a.jsx)(X.Z, {
                 row: n,
                 user: c,
                 hideDiscriminator: r,
-                comparator: u,
-                checked: d,
+                comparator: d,
+                checked: u,
                 selected: n === s,
                 onClick: this.handleClick,
                 onMouseEnter: this.focusResult,
@@ -541,7 +541,7 @@ class eo extends (i = l.PureComponent) {
                     onClose: n
                 } = this.props, i = Array.from(t);
             if (null != e) {
-                let t = ed(Array.from(new Set([
+                let t = eu(Array.from(new Set([
                     ...e.recipients,
                     ...i
                 ])));
@@ -551,7 +551,7 @@ class eo extends (i = l.PureComponent) {
                     channelIds: t
                 }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, i);
             } else {
-                let e = ed(i);
+                let e = eu(i);
                 i.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, a.jsx)(er, {
                     ...t,
                     onConfirm: () => this.createNewDM(i),
@@ -590,7 +590,7 @@ let ec = p.ZP.connectStores([
         hideInstantInvites: U.Z.hideInstantInvites
     };
 })(eo);
-function eu(e) {
+function ed(e) {
     let {
             channel: t,
             iconClassName: n,
@@ -599,12 +599,12 @@ function eu(e) {
             tooltipPosition: r = 'bottom',
             popoutPosition: o = 'bottom',
             popoutAlign: c = 'right',
-            subscribeToGlobalHotkey: u = !1
-        } = e, [d, h] = l.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), p = (0, Z.Dd)(null == t ? void 0 : t.id), _ = l.useCallback(() => h(e => !e), []);
-    return (l.useEffect(() => (u && W.S.subscribe(Q.CkL.TOGGLE_DM_CREATE, _), () => {
+            subscribeToGlobalHotkey: d = !1
+        } = e, [u, h] = l.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), p = (0, Z.Dd)(null == t ? void 0 : t.id), _ = l.useCallback(() => h(e => !e), []);
+    return (l.useEffect(() => (d && W.S.subscribe(Q.CkL.TOGGLE_DM_CREATE, _), () => {
         W.S.unsubscribe(Q.CkL.TOGGLE_DM_CREATE, _);
     }), [
-        u,
+        d,
         _
     ]), p) ? null : (0, a.jsx)(m.Popout, {
         renderPopout: e => (0, a.jsx)(ec, {
@@ -613,7 +613,7 @@ function eu(e) {
             channel: t
         }),
         position: o,
-        shouldShow: d,
+        shouldShow: u,
         align: c,
         onRequestClose: () => h(!1),
         animation: m.Popout.Animation.NONE,
@@ -628,7 +628,7 @@ function eu(e) {
         })
     });
 }
-function ed(e) {
+function eu(e) {
     let t = eh(e);
     return new Set(c()(L.Z.getMutablePrivateChannels()).values().filter(e => (0, j.bc)(e.type)).filter(e => eh(e.recipients) === t).map(e => e.id).value());
 }

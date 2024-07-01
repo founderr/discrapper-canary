@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(481060), l = n(906732), s = n(785717), r = n(171368), o = n(689938), c = n(615264);
-function u(e) {
+function d(e) {
     let {
             user: t,
             channelId: n
-        } = e, {analyticsLocations: u} = (0, l.ZP)(), {trackUserProfileAction: d} = (0, s.KZ)();
+        } = e, {analyticsLocations: d} = (0, l.ZP)(), {trackUserProfileAction: u} = (0, s.KZ)();
     return (0, i.jsx)('footer', {
         className: c.footer,
         children: (0, i.jsx)(a.Button, {
@@ -19,8 +19,8 @@ function u(e) {
             look: a.Button.Looks.BLANK,
             color: c.buttonColor,
             onClick: () => {
-                d({ action: 'PRESS_VIEW_PROFILE' }), (0, r.openUserProfileModal)({
-                    sourceAnalyticsLocations: u,
+                u({ action: 'PRESS_VIEW_PROFILE' }), (0, r.openUserProfileModal)({
+                    sourceAnalyticsLocations: d,
                     userId: t.id,
                     channelId: n
                 });

@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(653041);
-var i = n(735250), a = n(470079), l = n(990547), s = n(442837), r = n(704215), o = n(40851), c = n(317381), u = n(374065), d = n(213609), h = n(358221), p = n(381586), m = n(159300), _ = n(470956), f = n(430824), E = n(496675), C = n(199052), g = n(434488), I = n(27457), x = n(251564), T = n(695492), N = n(981631), v = n(420751);
+var i = n(735250), a = n(470079), l = n(990547), s = n(442837), r = n(704215), o = n(40851), c = n(317381), d = n(374065), u = n(213609), h = n(358221), p = n(381586), m = n(159300), _ = n(470956), f = n(430824), E = n(496675), C = n(199052), g = n(434488), I = n(27457), x = n(251564), T = n(695492), N = n(981631), v = n(420751);
 function S(e) {
     let {
             participants: t,
@@ -27,7 +27,7 @@ function S(e) {
     let U = (0, s.e7)([E.Z], () => A.isPrivate() || (0, m.b)(E.Z, P, A), [
             P,
             A
-        ]), w = (null == P ? void 0 : P.afkChannelId) === A.id, B = A.userLimit <= 0 || A.userLimit > 1, H = (0, s.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0), G = (0, p.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT), V = (0, u.KF)(A.id) !== u.jy.CAN_LAUNCH, F = null != O && O === A.id, W = D.map(e => t => (0, i.jsx)(I.ZP, {
+        ]), w = (null == P ? void 0 : P.afkChannelId) === A.id, B = A.userLimit <= 0 || A.userLimit > 1, H = (0, s.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0), G = (0, p.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT), V = (0, d.KF)(A.id) !== d.jy.CAN_LAUNCH, F = null != O && O === A.id, W = D.map(e => t => (0, i.jsx)(I.ZP, {
             participant: e,
             channel: A,
             className: v.tile,
@@ -39,7 +39,7 @@ function S(e) {
             width: t,
             inPopout: L
         }, e.id));
-    (0, d.Z)({
+    (0, u.Z)({
         type: l.ImpressionTypes.VIEW,
         name: l.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
         properties: {

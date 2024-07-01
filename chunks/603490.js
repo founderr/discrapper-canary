@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(873546), l = n(481060), s = n(130402), r = n(404975), o = n(185923), c = n(689938), u = n(613861);
-function d(e) {
+var a = n(873546), l = n(481060), s = n(130402), r = n(404975), o = n(185923), c = n(689938), d = n(613861);
+function u(e) {
     let {
         channel: t,
         message: n,
-        togglePopout: d,
+        togglePopout: u,
         renderEmojiPicker: h,
         shouldShow: p
     } = e;
@@ -21,7 +21,7 @@ function d(e) {
             return h(t, n, i, !1);
         },
         shouldShow: p,
-        onRequestClose: d,
+        onRequestClose: u,
         position: a.tq ? 'top' : 'left',
         align: a.tq ? 'center' : 'top',
         children: (e, t) => {
@@ -35,7 +35,7 @@ function d(e) {
                 color: l.TooltipColors.PRIMARY,
                 'aria-label': c.Z.Messages.ADD_REACTION,
                 hideOnClick: !0,
-                tooltipClassName: u.tooltip,
+                tooltipClassName: d.tooltip,
                 children: e => {
                     let {
                         onMouseEnter: t,
@@ -48,7 +48,7 @@ function d(e) {
                         },
                         onMouseLeave: n,
                         onClick: () => {
-                            d(), null == p || p();
+                            u(), null == p || p();
                         },
                         'aria-label': c.Z.Messages.ADD_REACTION,
                         selected: h,
@@ -56,7 +56,7 @@ function d(e) {
                         children: (0, i.jsx)(l.ReactionIcon, {
                             size: 'sm',
                             color: 'currentColor',
-                            className: u.icon
+                            className: d.icon
                         })
                     });
                 }

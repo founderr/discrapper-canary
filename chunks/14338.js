@@ -3,13 +3,13 @@ n.d(t, {
         return E;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(481060), o = n(239091), c = n(586902), u = n(40851), d = n(484459), h = n(103575), p = n(409216), m = n(768581), _ = n(887853);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(481060), o = n(239091), c = n(586902), d = n(40851), u = n(484459), h = n(103575), p = n(409216), m = n(768581), _ = n(887853);
 function f(e) {
     let {
             channel: t,
             speaker: l,
             className: p
-        } = e, f = (0, u.bp)(), {reducedMotion: E} = a.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({ userId: l.id }), g = null != l.member ? (0, m.CA)(l.member) : null, I = e => {
+        } = e, f = (0, d.bp)(), {reducedMotion: E} = a.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({ userId: l.id }), g = null != l.member ? (0, m.CA)(l.member) : null, I = e => {
             (0, o.jW)(e, async () => {
                 let {default: e} = await Promise.all([
                     n.e('79695'),
@@ -29,7 +29,7 @@ function f(e) {
             }, { context: f });
         };
     return (0, i.jsx)(r.Popout, {
-        preload: () => (0, d.W)(l.user, {
+        preload: () => (0, u.W)(l.user, {
             guildId: t.guild_id,
             channelId: t.id
         }),

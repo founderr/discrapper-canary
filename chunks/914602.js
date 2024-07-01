@@ -8,7 +8,7 @@ function N(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class f extends (i = s.PureComponent) {
+class p extends (i = s.PureComponent) {
     render() {
         let {
                 sku: e,
@@ -84,10 +84,10 @@ class f extends (i = s.PureComponent) {
         });
     }
 }
-N(f, 'defaultProps', {
+N(p, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
-}), t.Z = f;
+}), t.Z = p;

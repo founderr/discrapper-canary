@@ -3,7 +3,7 @@ e.d(t, {
         return A;
     }
 }), e(47120);
-var r, i = e(392711), u = e.n(i), o = e(661869), E = e(876215), a = e(423875), l = e(442837), T = e(570140), c = e(158776), _ = e(146282), s = e(26033), d = e(561308), f = e(981631), S = e(616922);
+var r, i = e(392711), u = e.n(i), o = e(661869), E = e(876215), l = e(423875), a = e(442837), T = e(570140), c = e(158776), _ = e(146282), s = e(26033), d = e(561308), f = e(981631), S = e(616922);
 function N(n, t, e) {
     return t in n ? Object.defineProperty(n, t, {
         value: e,
@@ -28,7 +28,7 @@ function O(n) {
                     }(n, t);
                 if (t.type === f.IIU.LISTENING && n.content_type === E.s.LISTENED_SESSION) {
                     var e, r, i, u, o;
-                    return e = n, r = t, (null === (u = e.extra.entries[0]) || void 0 === u ? void 0 : null === (i = u.media) || void 0 === i ? void 0 : i.provider) === a.p.SPOTIFY && (0, S.Ps)(null === (o = r.party) || void 0 === o ? void 0 : o.id);
+                    return e = n, r = t, (null === (u = e.extra.entries[0]) || void 0 === u ? void 0 : null === (i = u.media) || void 0 === i ? void 0 : i.provider) === l.p.SPOTIFY && (0, S.Ps)(null === (o = r.party) || void 0 === o ? void 0 : o.id);
                 }
                 return !1;
             }) : void 0;
@@ -60,7 +60,7 @@ function R() {
         I.delete(e), n = !0;
     return n;
 }
-class D extends (r = l.ZP.Store) {
+class D extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, c.Z), this.syncWith([c.Z], R);
     }

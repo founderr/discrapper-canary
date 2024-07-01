@@ -6,7 +6,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(920906), c = n(481060), u = n(596454), d = n(727637), h = n(543241), p = n(907040), m = n(633302), _ = n(806966), f = n(401227), E = n(153124), C = n(176354), g = n(823379), I = n(354459), x = n(185923), T = n(420212), N = n(61798);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(920906), c = n(481060), d = n(596454), u = n(727637), h = n(543241), p = n(907040), m = n(633302), _ = n(806966), f = n(401227), E = n(153124), C = n(176354), g = n(823379), I = n(354459), x = n(185923), T = n(420212), N = n(61798);
 let v = x.Hz.CHAT, S = [
         m.ZP.getByName('thumbsup'),
         m.ZP.getByName('eyes'),
@@ -21,7 +21,7 @@ function Z(e) {
             isDisabled: n = !1,
             onClick: l,
             className: r
-        } = e, h = a.useRef(null), p = (0, d.Z)(h);
+        } = e, h = a.useRef(null), p = (0, u.Z)(h);
     return (0, i.jsx)('span', {
         ref: h,
         children: (0, i.jsx)(c.Button, {
@@ -45,7 +45,7 @@ function Z(e) {
                                 1.14
                             ]).to(e => 'scale('.concat(e, ')'))
                         },
-                        children: (0, i.jsx)(u.Z, {
+                        children: (0, i.jsx)(d.Z, {
                             className: s()(N.emoji, r, { [N.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
@@ -87,8 +87,8 @@ function M(e) {
             title: n,
             closePopout: l,
             onFocus: o,
-            onSelectEmoji: u,
-            onSelectDisabledEmoji: d,
+            onSelectEmoji: d,
+            onSelectDisabledEmoji: u,
             onExpandedToggle: m,
             emojiSearchProps: f,
             recentlyUsedEmojis: g,
@@ -109,7 +109,7 @@ function M(e) {
                 l();
                 return;
             }
-            null != e && u(e);
+            null != e && d(e);
             O(!t), t && _.kJ.setSearchPlaceholder(null);
         };
     return (0, i.jsxs)(c.Dialog, {
@@ -173,7 +173,7 @@ function M(e) {
                                             emoji: e,
                                             isDisabled: n,
                                             onClick: () => {
-                                                n ? null == d || d(e) : y(e, !0);
+                                                n ? null == u || u(e) : y(e, !0);
                                             }
                                         })
                                     })

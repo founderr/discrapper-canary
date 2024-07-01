@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(239091), c = n(901461), d = n(592125), u = n(709054), _ = n(723774), E = n(144140), m = n(91159), I = n(576799), T = n(488131), h = n(981631), N = n(689938), f = n(541595);
-function p(e) {
+var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(239091), c = n(901461), d = n(592125), u = n(709054), _ = n(723774), E = n(144140), m = n(91159), I = n(576799), T = n(488131), h = n(981631), N = n(689938), p = n(541595);
+function f(e) {
     let {
             message: t,
             compact: n
@@ -29,7 +29,7 @@ function C(e) {
                 children: [
                     (0, i.jsx)('span', { children: N.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
                     (0, i.jsx)('span', {
-                        className: f.timestamp,
+                        className: p.timestamp,
                         children: (0, m.Ye)(s)
                     })
                 ]
@@ -40,18 +40,18 @@ function C(e) {
                         channel: e
                     }),
                     (0, i.jsx)('span', {
-                        className: f.timestamp,
+                        className: p.timestamp,
                         children: (0, m.Ye)(s)
                     })
                 ]
             });
-        }(t), p = null != d && d > 0;
+        }(t), f = null != d && d > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: s()(f.spine, {
-                    [f.cozy]: !a,
-                    [f.systemMessageSpine]: c
+                className: s()(p.spine, {
+                    [p.cozy]: !a,
+                    [p.systemMessageSpine]: c
                 })
             }),
             (0, i.jsx)(r.Clickable, {
@@ -77,27 +77,27 @@ function C(e) {
                     });
                 },
                 'aria-roledescription': N.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-                className: s()(f.container, { [f.systemMessageContainer]: c }),
+                className: s()(p.container, { [p.systemMessageContainer]: c }),
                 children: (0, i.jsxs)(r.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: f.topLine,
+                            className: p.topLine,
                             children: [
                                 (0, i.jsx)(r.HiddenVisually, { children: N.Z.Messages.THREAD }),
                                 (0, i.jsx)('span', {
-                                    className: f.name,
+                                    className: p.name,
                                     children: t.name
                                 }),
                                 (0, i.jsx)('span', {
-                                    className: f.cta,
-                                    'aria-hidden': !p,
+                                    className: p.cta,
+                                    'aria-hidden': !f,
                                     children: (0, _.WE)(d, t.id)
                                 })
                             ]
                         }),
                         (0, i.jsx)('span', {
                             'aria-hidden': !0,
-                            className: s()(f.bottomLine),
+                            className: s()(p.bottomLine),
                             children: u
                         })
                     ]

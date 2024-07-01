@@ -1,11 +1,11 @@
-var i = n(735250), a = n(470079), l = n(481060), s = n(287734), r = n(305325), o = n(281956), c = n(584729), u = n(27457), d = n(354459), h = n(689938), p = n(679386);
+var i = n(735250), a = n(470079), l = n(481060), s = n(287734), r = n(305325), o = n(281956), c = n(584729), d = n(27457), u = n(354459), h = n(689938), p = n(679386);
 t.Z = function (e) {
     var t, n;
     let {
             participants: m,
             channel: _,
             hasConnectPermission: f
-        } = e, E = m.filter(d.Io), C = (0, o.J)(_.guild_id), g = a.useCallback(() => {
+        } = e, E = m.filter(u.Io), C = (0, o.J)(_.guild_id), g = a.useCallback(() => {
             C ? (0, r.hk)(_.guild_id, () => s.default.selectVoiceChannel(_.id)) : s.default.selectVoiceChannel(_.id);
         }, [
             _.id,
@@ -18,7 +18,7 @@ t.Z = function (e) {
             (0, i.jsx)('div', {
                 className: p.tiles,
                 style: { maxWidth: 168 * I },
-                children: E.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
+                children: E.slice(0, 5).map(e => (0, i.jsx)(d.ZP, {
                     participant: e,
                     channel: _,
                     className: p.tile,

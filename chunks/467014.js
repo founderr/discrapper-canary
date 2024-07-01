@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(433355), o = n(189432), c = n(356778), u = n(776767), d = n(50493), h = n(689938), p = n(332513);
+var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(433355), o = n(189432), c = n(356778), d = n(776767), u = n(50493), h = n(689938), p = n(332513);
 function m(e) {
     let {
             userId: t,
@@ -17,7 +17,7 @@ function m(e) {
                 return;
             let i = (0, c.Ow)(t, e);
             await (0, o.r)(n, t, m.baseChannelId, {
-                modViewPanel: d.k.MESSAGE_HISTORY,
+                modViewPanel: u.k.MESSAGE_HISTORY,
                 additionalSearchQuery: i
             });
         }, [
@@ -28,14 +28,14 @@ function m(e) {
     return (0, i.jsx)(s.FormItem, {
         title: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
         titleClassName: p.infoTitle,
-        children: (0, i.jsxs)(u.WM, {
+        children: (0, i.jsxs)(d.WM, {
             children: [
-                (0, i.jsx)(u._2, {
+                (0, i.jsx)(d._2, {
                     icon: (0, i.jsx)(s.ChatIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        width: u.Mn,
-                        height: u.Mn
+                        width: d.Mn,
+                        height: d.Mn
                     }),
                     name: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
@@ -52,11 +52,11 @@ function m(e) {
                     }),
                     onNavigate: _ > 0 ? () => x(c.mw.MESSAGES) : void 0
                 }),
-                (0, i.jsx)(u._2, {
+                (0, i.jsx)(d._2, {
                     icon: (0, i.jsx)(s.LinkIcon, {
                         size: 'custom',
-                        width: u.Mn,
-                        height: u.Mn
+                        width: d.Mn,
+                        height: d.Mn
                     }),
                     name: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
@@ -73,11 +73,11 @@ function m(e) {
                     }),
                     onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
                 }),
-                (0, i.jsx)(u._2, {
+                (0, i.jsx)(d._2, {
                     icon: (0, i.jsx)(s.ImagesIcon, {
                         size: 'custom',
-                        width: u.Mn,
-                        height: u.Mn
+                        width: d.Mn,
+                        height: d.Mn
                     }),
                     name: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',

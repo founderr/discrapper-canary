@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(110924), c = n(988980), u = n(157813), d = n(314897), h = n(131951), p = n(585483), m = n(807705), _ = n(27457), f = n(111248), E = n(312703), C = n(796638), g = n(981631), I = n(354459), x = n(858962), T = n(868999);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(110924), c = n(988980), d = n(157813), u = n(314897), h = n(131951), p = n(585483), m = n(807705), _ = n(27457), f = n(111248), E = n(312703), C = n(796638), g = n(981631), I = n(354459), x = n(858962), T = n(868999);
 let N = 16 / 9, v = 8 + C.cF;
 function S(e) {
     let t, {
@@ -23,7 +23,7 @@ function S(e) {
             height: D,
             layout: k,
             idle: U
-        } = e, w = null != M, B = h.Z.getVideoComponent(), H = d.default.getId(), [G, V] = a.useState(null), [F, W] = a.useState(!0), [z, Y] = a.useState(!1), K = j.type === I.fO.ACTIVITY, q = (0, c.Z)(j.id), X = !K && null != j.streamId, Q = D <= 2 * v + 144, J = L && !Q, $ = (0, o.Z)(J), ee = k === g.AEg.MINIMUM || k === g.AEg.NORMAL, et = !Q && (!ee || K), en = (0, m.Z)(et, 100), ei = 0;
+        } = e, w = null != M, B = h.Z.getVideoComponent(), H = u.default.getId(), [G, V] = a.useState(null), [F, W] = a.useState(!0), [z, Y] = a.useState(!1), K = j.type === I.fO.ACTIVITY, q = (0, c.Z)(j.id), X = !K && null != j.streamId, Q = D <= 2 * v + 144, J = L && !Q, $ = (0, o.Z)(J), ee = k === g.AEg.MINIMUM || k === g.AEg.NORMAL, et = !Q && (!ee || K), en = (0, m.Z)(et, 100), ei = 0;
     (K || J) && (ei += 72), K && !J && (et ? ei += 48 : ei += 8), J && (ei += 0.5 * v + 8);
     let ea = a.useMemo(() => K && q ? y / (D - 2 * ei) : X && null != G && G.width > 0 && G.height > 0 ? G.width / G.height : N, [
             X,
@@ -54,19 +54,19 @@ function S(e) {
             onRest: () => {
                 Y(!1), p.S.dispatch(g.CkL.REMEASURE_TARGET);
             }
-        }), eu = (0, r.useSpring)({
+        }), ed = (0, r.useSpring)({
             value: J ? 1 : 0,
             config: {
                 ...r.config.stiff,
                 clamp: !0
             }
-        }), ed = (0, r.useSpring)({
+        }), eu = (0, r.useSpring)({
             value: es,
             config: {
                 ...r.config.stiff,
                 clamp: !0
             },
-            immediate: $ === J && eu.value.idle && !en
+            immediate: $ === J && ed.value.idle && !en
         }), eh = (0, r.useSpring)({
             value: t,
             config: {
@@ -98,10 +98,10 @@ function S(e) {
                 children: [
                     (0, i.jsxs)(r.animated.div, {
                         className: T.videoFrame,
-                        style: { top: eu.value.to(e => -e * v / 2) },
+                        style: { top: ed.value.to(e => -e * v / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
-                                style: { width: ed.value },
+                                style: { width: eu.value },
                                 className: T.videoWrapper,
                                 children: (0, i.jsx)('div', {
                                     className: s()(x.videoSizer),
@@ -134,7 +134,7 @@ function S(e) {
                             et ? (0, i.jsx)(r.animated.div, {
                                 className: s()(T.actionRow, { [T.idle]: U }),
                                 style: { bottom: eh.value },
-                                children: (0, i.jsx)(u.Z, {
+                                children: (0, i.jsx)(d.Z, {
                                     channelId: R.id,
                                     isParticipantsOpen: L,
                                     isVertical: !0

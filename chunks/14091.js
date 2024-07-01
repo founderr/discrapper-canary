@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n.n(r), c = n(442837), u = n(481060), d = n(447543), h = n(603263), p = n(367907), m = n(210887), _ = n(695346), f = n(768119), E = n(944486), C = n(693580), g = n(585483), I = n(251285), x = n(406326), T = n(619753), N = n(981631), v = n(689938), S = n(762705);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n.n(r), c = n(442837), d = n(481060), u = n(447543), h = n(603263), p = n(367907), m = n(210887), _ = n(695346), f = n(768119), E = n(944486), C = n(693580), g = n(585483), I = n(251285), x = n(406326), T = n(619753), N = n(981631), v = n(689938), S = n(762705);
 function Z(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -100,7 +100,7 @@ class b extends a.PureComponent {
             'aria-label': v.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
             children: [
                 this.renderHeader(),
-                (0, i.jsx)(u.AdvancedScroller, {
+                (0, i.jsx)(d.AdvancedScroller, {
                     ref: this.scrollerRef,
                     className: S.scroller,
                     children: this.renderContent()
@@ -133,7 +133,7 @@ class b extends a.PureComponent {
                 callback: n
             });
         }), Z(this, 'selectChannel', e => {
-            e !== E.Z.getChannelId() && d.Z.transitionToInviteChannelSync(e);
+            e !== E.Z.getChannelId() && u.Z.transitionToInviteChannelSync(e);
         }), Z(this, 'searchPrevious', () => {
             let {
                 searchId: e,

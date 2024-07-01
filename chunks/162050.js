@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120);
 var i = n(735250);
 n(470079);
-var l = n(442837), r = n(481060), a = n(287734), s = n(770471), o = n(592125), c = n(306680), u = n(944486), d = n(594174), h = n(153124), p = n(436088), _ = n(51144), f = n(603592), m = n(674552), g = n(689938);
+var l = n(442837), r = n(481060), a = n(287734), s = n(770471), o = n(592125), c = n(306680), u = n(944486), d = n(594174), h = n(153124), p = n(436088), _ = n(51144), f = n(603592), g = n(674552), m = n(689938);
 function C() {
     var e;
     let t = (0, h.Dt)(), [n, C] = (0, l.Wu)([
@@ -21,13 +21,13 @@ function C() {
             S && null != n && a.default.selectPrivateChannel(n.id);
         },
         icon: p.Z,
-        tooltip: null != N ? g.Z.Messages.BROADCASTING_CHANNEL_NAME.format({ name: N }) : void 0,
+        tooltip: null != N ? m.Z.Messages.BROADCASTING_CHANNEL_NAME.format({ name: N }) : void 0,
         selected: Z,
         upperBadge: (0, i.jsx)(r.Avatar, {
             size: r.AvatarSizes.SIZE_16,
             src: null == E ? void 0 : E.getAvatarURL(null, 16),
             'aria-label': N
         }),
-        lowerBadge: I > 0 ? (0, m.Ne)(I) : null
+        lowerBadge: I > 0 ? (0, g.Ne)(I) : null
     }) : null;
 }

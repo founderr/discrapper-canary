@@ -12,10 +12,10 @@ let c = {
     channelVisits: new (l())({ max: 1000 }),
     bannerRenders: []
 };
-function u(e, t) {
+function d(e, t) {
     return e + t;
 }
-class d extends (i = s.ZP.PersistedStore) {
+class u extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e)
             Array.isArray(e.bannerRenders) && (c.bannerRenders = e.bannerRenders), null != e.channelVisitsDump && c.channelVisits.load(e.channelVisitsDump);
@@ -39,7 +39,7 @@ class d extends (i = s.ZP.PersistedStore) {
         return (null !== (i = c.channelVisits.get(e + t)) && void 0 !== i ? i : []).filter(e => e >= Date.now() - 1000 * n).length;
     }
 }
-o(d, 'displayName', 'UnreadSettingNoticeStore'), o(d, 'persistKey', 'UnreadSettingNoticeStore'), t.Z = new d(r.Z, {
+o(u, 'displayName', 'UnreadSettingNoticeStore'), o(u, 'persistKey', 'UnreadSettingNoticeStore'), t.Z = new u(r.Z, {
     UNREAD_SETTING_NOTICE_RENDERED: function () {
         c.bannerRenders.length > 100 && c.bannerRenders.pop(), c.bannerRenders.unshift(Date.now());
     },

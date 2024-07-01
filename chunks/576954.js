@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 });
-var i = n(735250), a = n(470079), l = n(286379), s = n(481060), r = n(194359), o = n(797614), c = n(378298), u = n(359119), d = n(473092), h = n(177342), p = n(134612), m = n(981631), _ = n(689938);
+var i = n(735250), a = n(470079), l = n(286379), s = n(481060), r = n(194359), o = n(797614), c = n(378298), d = n(359119), u = n(473092), h = n(177342), p = n(134612), m = n(981631), _ = n(689938);
 function f(e) {
     let {
             channelId: t,
@@ -19,11 +19,11 @@ function f(e) {
                 userId: E,
                 context: { location: p.zr },
                 type: m.OGo.BLOCKED
-            }), C(), (0, s.showToast)((0, s.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, d.qc)({
+            }), C(), (0, s.showToast)((0, s.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, u.qc)({
                 channelId: t,
                 warningId: f,
                 senderId: E,
-                warningType: u.pj.STRANGER_DANGER,
+                warningType: d.pj.STRANGER_DANGER,
                 cta: e
             });
         }, [
@@ -33,11 +33,11 @@ function f(e) {
             E
         ]);
     a.useEffect(() => {
-        (0, d.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
+        (0, u.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: f,
             senderId: E,
-            warningType: u.pj.STRANGER_DANGER
+            warningType: d.pj.STRANGER_DANGER
         }), o.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [
         t,
@@ -59,7 +59,7 @@ function f(e) {
                         warningId: f,
                         senderId: E,
                         handleBlock: () => {
-                            x(d.NM.USER_MODAL_BLOCK_CONFIRM, d.NM.USER_MODAL_BLOCK_CANCEL, I);
+                            x(u.NM.USER_MODAL_BLOCK_CONFIRM, u.NM.USER_MODAL_BLOCK_CANCEL, I);
                         }
                     });
                 };
@@ -72,11 +72,11 @@ function f(e) {
                     userId: E,
                     confirmBlock: g(e),
                     onCancel: () => {
-                        null == l || l(), (0, d.qc)({
+                        null == l || l(), (0, u.qc)({
                             channelId: t,
                             warningId: f,
                             senderId: E,
-                            warningType: u.pj.STRANGER_DANGER,
+                            warningType: d.pj.STRANGER_DANGER,
                             cta: a
                         });
                     }
@@ -87,7 +87,7 @@ function f(e) {
         channelId: t,
         warningId: f,
         senderId: E,
-        warningType: u.pj.STRANGER_DANGER,
+        warningType: d.pj.STRANGER_DANGER,
         header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
         description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
         onDismiss: C,
@@ -96,19 +96,19 @@ function f(e) {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
                 color: s.Button.Colors.BRAND,
                 onclick: () => {
-                    I(), (0, d.qc)({
+                    I(), (0, u.qc)({
                         channelId: t,
                         warningId: f,
                         senderId: E,
-                        warningType: u.pj.STRANGER_DANGER,
-                        cta: d.NM.OPEN_MORE_TIPS
+                        warningType: d.pj.STRANGER_DANGER,
+                        cta: u.NM.OPEN_MORE_TIPS
                     });
                 }
             },
             {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
                 color: s.Button.Colors.RED,
-                onclick: () => x(d.NM.USER_BANNER_BLOCK_CONFIRM, d.NM.USER_BANNER_BLOCK_CANCEL)
+                onclick: () => x(u.NM.USER_BANNER_BLOCK_CONFIRM, u.NM.USER_BANNER_BLOCK_CANCEL)
             }
         ]
     });

@@ -5,7 +5,7 @@ e.d(t, {
 }), e(47120);
 var r = e(470079), i = e(442837), u = e(592125), o = e(9156);
 function E(n) {
-    let t = (0, i.e7)([u.Z], () => u.Z.getPrivateChannelsVersion()), e = (0, i.e7)([u.Z], () => u.Z.getMutableDMsByUserIds(), [t]), E = (0, i.e7)([o.ZP], () => o.ZP.getMutedChannels(null)), a = r.useMemo(() => {
+    let t = (0, i.e7)([u.Z], () => u.Z.getPrivateChannelsVersion()), e = (0, i.e7)([u.Z], () => u.Z.getMutableDMsByUserIds(), [t]), E = (0, i.e7)([o.ZP], () => o.ZP.getMutedChannels(null)), l = r.useMemo(() => {
             let n = new Set();
             for (let t in e) {
                 let r = e[t];
@@ -18,11 +18,11 @@ function E(n) {
         ]);
     return r.useMemo(() => null == n ? void 0 : n.filter(n => {
         for (let t of n.participants)
-            if (a.has(t))
+            if (l.has(t))
                 return !1;
         return !0;
     }), [
         n,
-        a
+        l
     ]);
 }

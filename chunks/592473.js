@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(772848), o = n(481060), c = n(871499), u = n(689938), d = n(958482);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(772848), o = n(481060), c = n(871499), d = n(689938), u = n(958482);
 function h(e) {
     let {
             width: t = 24,
@@ -52,11 +52,11 @@ function p(e) {
             numRequestToSpeak: n
         } = e, a = n > 0;
     return (0, i.jsxs)('div', {
-        className: s()(d.raisedHandIcon, t),
+        className: s()(u.raisedHandIcon, t),
         children: [
             (0, i.jsx)(h, { isBadged: a }),
             a ? (0, i.jsx)(o.Text, {
-                className: d.raisedHandCount,
+                className: u.raisedHandCount,
                 variant: 'text-xs/semibold',
                 children: n > 99 ? '99+' : n
             }) : null
@@ -71,15 +71,15 @@ function m(e) {
             numRequestToSpeak: s,
             onClick: r,
             ...o
-        } = e, d = a.useCallback(() => {
+        } = e, u = a.useCallback(() => {
             null == r || r(), t();
         }, [
             r,
             t
         ]);
     return (0, i.jsx)(c.Z, {
-        onClick: d,
-        label: n ? u.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : u.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
+        onClick: u,
+        label: n ? d.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : d.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
         className: l,
         iconComponent: () => (0, i.jsx)(p, {
             numRequestToSpeak: s,

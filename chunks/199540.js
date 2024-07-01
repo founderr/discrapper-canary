@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(920906), o = n(866442), c = n(442837), u = n(477690), d = n(481060), h = n(430824), p = n(346656), _ = n(624138), f = n(674552), m = n(981631), g = n(689938), C = n(248699);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(920906), o = n(866442), c = n(442837), u = n(477690), d = n(481060), h = n(430824), p = n(346656), _ = n(624138), f = n(674552), g = n(981631), m = n(689938), C = n(248699);
 let I = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION), E = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 function N(e) {
     let {
@@ -29,14 +29,14 @@ function x(e) {
         } = e, {
             color: u,
             children: h
-        } = r, p = null != u ? u : m.Wyy, _ = h.map(e => e.id), [f, g] = l.useState(!1), [x, S] = l.useState(c), Z = c ? 0 : -E, v = (0, s.useSpring)({
+        } = r, p = null != u ? u : g.Wyy, _ = h.map(e => e.id), [f, m] = l.useState(!1), [x, S] = l.useState(c), Z = c ? 0 : -E, v = (0, s.useSpring)({
             transform: 'translate3d(0, '.concat(Z, 'px, 0)'),
             config: { duration: I },
             onStart() {
-                g(!0), S(c);
+                m(!0), S(c);
             },
             onRest() {
-                g(!1), S(c);
+                m(!1), S(c);
             }
         }), T = f ? v : void 0;
     return (f || x) && (t = (0, i.jsx)(s.animated.div, {
@@ -76,7 +76,7 @@ function S(e) {
             folderGroupId: h,
             folderIconContent: p,
             onClick: _,
-            onContextMenu: m,
+            onContextMenu: g,
             onHoverChange: I,
             onKeyDown: E,
             treeItemProps: {
@@ -102,12 +102,12 @@ function S(e) {
         children: (0, i.jsx)(d.Clickable, {
             className: a()(C.folder, { [C.hover]: Z }),
             onClick: _,
-            onContextMenu: m,
+            onContextMenu: g,
             onMouseEnter: T,
             onMouseLeave: L,
             onKeyDown: E,
             onFocus: N,
-            'aria-label': g.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
+            'aria-label': m.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
                 folderName: u,
                 mentions: c
             }),

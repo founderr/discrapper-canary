@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(653041), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(748780), o = n(442837), c = n(215569), u = n(780384), d = n(481060), h = n(410030), p = n(451478), m = n(421600), _ = n(354459), f = n(330280), E = n(83922), C = n(120393);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(748780), o = n(442837), c = n(215569), d = n(780384), u = n(481060), h = n(410030), p = n(451478), m = n(421600), _ = n(354459), f = n(330280), E = n(83922), C = n(120393);
 function g(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -126,7 +126,7 @@ class v extends a.PureComponent {
                 theme: e,
                 children: t,
                 className: n
-            } = this.props, a = (0, u.wj)(e), l = s()(f.sprite, {
+            } = this.props, a = (0, d.wj)(e), l = s()(f.sprite, {
                 [C.crossWhite]: a,
                 [C.crossGrey]: !a
             });
@@ -158,11 +158,11 @@ function S(e) {
             participants: a,
             onContextMenu: l,
             className: r,
-            onClick: u,
+            onClick: d,
             width: E,
             guildId: C
         } = e, g = (0, h.ZP)();
-    let I = (t = E, n = a.length, ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80), x = (0, o.e7)([p.Z], () => p.Z.isFocused()), T = a.map(e => {
+    let I = (t = E, n = a.length, ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80), x = (0, o.e7)([p.Z], () => p.Z.isFocused()), T = a.map(e => {
             var t, n;
             if (e.type !== _.fO.USER)
                 return null;
@@ -174,16 +174,16 @@ function S(e) {
             } = e;
             return (0, i.jsx)(v, {
                 className: f.participant,
-                width: (0, d.getAvatarSize)(I),
+                width: (0, u.getAvatarSize)(I),
                 theme: g,
                 children: (0, i.jsx)(m.Z, {
-                    src: a.getAvatarURL(C, (0, d.getAvatarSize)(I), r && x),
+                    src: a.getAvatarURL(C, (0, u.getAvatarSize)(I), r && x),
                     size: I,
                     muted: null !== (t = null == s ? void 0 : s.isVoiceMuted()) && void 0 !== t && t,
                     deafen: null !== (n = null == s ? void 0 : s.isVoiceDeafened()) && void 0 !== n && n,
                     speaking: r,
                     ringing: o,
-                    onClick: t => null == u ? void 0 : u(e, t),
+                    onClick: t => null == d ? void 0 : d(e, t),
                     onContextMenu: t => null == l ? void 0 : l(e, t)
                 }, e.id)
             }, a.id);

@@ -3,9 +3,9 @@ n.d(t, {
         return E;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(435064), o = n(39604), c = n(441167), u = n(871499), d = n(199902), h = n(314897), p = n(358221), m = n(354459), _ = n(689938), f = n(407423);
+var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(435064), o = n(39604), c = n(441167), d = n(871499), u = n(199902), h = n(314897), p = n(358221), m = n(354459), _ = n(689938), f = n(407423);
 function E(e) {
-    let {channel: t} = e, n = (0, l.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === m.fO.STREAM, C = (0, l.e7)([d.Z], () => E ? d.Z.getActiveStreamForStreamKey(n.id) : null), {ignoreSenderPreference: g} = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }), {
+    let {channel: t} = e, n = (0, l.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === m.fO.STREAM, C = (0, l.e7)([u.Z], () => E ? u.Z.getActiveStreamForStreamKey(n.id) : null), {ignoreSenderPreference: g} = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }), {
             viewerClippingAllowed: I,
             isAtMaxSavingClipOperations: x
         } = (0, l.cj)([r.Z], () => ({
@@ -15,7 +15,7 @@ function E(e) {
             ...e,
             color: 'currentColor'
         }), []);
-    return (0, i.jsx)(u.Z, {
+    return (0, i.jsx)(d.Z, {
         className: f.actionBarButton,
         onClick: () => {
             !v && (N ? (0, o.C1)() : (0, o.C1)(n.id));

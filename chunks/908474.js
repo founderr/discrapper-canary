@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), a = n(470079), l = n(399606), s = n(481060), r = n(69882), o = n(815790), c = n(893966), u = n(373791), d = n(776767), h = n(689938), p = n(332513);
+var i = n(735250), a = n(470079), l = n(399606), s = n(481060), r = n(69882), o = n(815790), c = n(893966), d = n(373791), u = n(776767), h = n(689938), p = n(332513);
 function m(e) {
     let {member: t} = e, n = t.userId, m = t.guildId, _ = (0, l.e7)([c.Z], () => c.Z.getEnhancedMember(m, n), [
             n,
@@ -21,14 +21,14 @@ function m(e) {
     return null != f || g ? (0, i.jsx)(s.FormItem, {
         title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
         titleClassName: p.infoTitle,
-        children: (0, i.jsxs)(d.WM, {
+        children: (0, i.jsxs)(u.WM, {
             children: [
-                null != f && (0, i.jsx)(d._2, {
+                null != f && (0, i.jsx)(u._2, {
                     icon: (0, i.jsx)(s.ChatAlertIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        width: d.Mn,
-                        height: d.Mn,
+                        width: u.Mn,
+                        height: u.Mn,
                         className: p.__invalid_unusualDMLabelIcon
                     }),
                     name: (0, i.jsx)(s.Text, {
@@ -42,12 +42,12 @@ function m(e) {
                         children: C
                     })
                 }),
-                g && null != I && (0, i.jsx)(d._2, {
+                g && null != I && (0, i.jsx)(u._2, {
                     icon: (0, i.jsx)(s.ClockWarningIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        width: d.Mn,
-                        height: d.Mn,
+                        width: u.Mn,
+                        height: u.Mn,
                         className: p.__invalid_unusualDMLabelIcon
                     }),
                     name: (0, i.jsx)(s.Text, {
@@ -58,7 +58,7 @@ function m(e) {
                     description: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
-                        children: (0, i.jsx)(u.Z, {
+                        children: (0, i.jsx)(d.Z, {
                             deadline: I,
                             showUnits: !0,
                             stopAtOneSec: !0

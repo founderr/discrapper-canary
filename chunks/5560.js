@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(512722), o = n.n(r), c = n(699581), u = n(374470), d = n(442837), h = n(481060), p = n(260300), m = n(819640), _ = n(451478), f = n(486458), E = n(21825), C = n(232495), g = n(10401), I = n(427389);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(512722), o = n.n(r), c = n(699581), d = n(374470), u = n(442837), h = n(481060), p = n(260300), m = n(819640), _ = n(451478), f = n(486458), E = n(21825), C = n(232495), g = n(10401), I = n(427389);
 function x(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -33,7 +33,7 @@ class T extends a.PureComponent {
     updateCache() {
         var e, t;
         let n = (0, c.findDOMNode)(this);
-        if (null == n || !(0, u.k)(n, HTMLElement))
+        if (null == n || !(0, d.k)(n, HTMLElement))
             return;
         let {
                 offsetWidth: i,
@@ -77,8 +77,8 @@ class T extends a.PureComponent {
                 media: r,
                 textAlign: o,
                 isLongText: c,
-                highPriority: u,
-                spacing: d,
+                highPriority: d,
+                spacing: u,
                 arrowAlignment: p = f.cy.TOP,
                 popoutPosition: m
             } = l, {
@@ -89,7 +89,7 @@ class T extends a.PureComponent {
                 top: null != C ? a.y + C : void 0
             }, x = e => {
                 let t = n && !e;
-                return !0 !== u ? null : (0, i.jsxs)('div', {
+                return !0 !== d ? null : (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('div', {
                             className: s()(I.top, {
@@ -110,14 +110,14 @@ class T extends a.PureComponent {
                 return {
                     [I.animating]: t,
                     [I.notAnimating]: !t,
-                    [I.highPriority]: u
+                    [I.highPriority]: d
                 };
             }, N = this.getTutorialPopoutText();
         return (0, i.jsx)(f.ZP, {
             position: m,
             renderMedia: r,
             textAlign: o,
-            spacing: d,
+            spacing: u,
             isLongText: c,
             uniqueId: e,
             autoInvert: t,
@@ -158,7 +158,7 @@ t.Z = 12633 == n.j ? function () {
         tutorialData: t,
         windowFocused: n,
         shouldShowAny: a
-    } = (0, d.cj)([
+    } = (0, u.cj)([
         g.Z,
         _.Z,
         m.Z

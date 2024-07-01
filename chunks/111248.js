@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(433517), o = n(518774), c = n(27457), u = n(981631), d = n(289999), h = n(972667);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(433517), o = n(518774), c = n(27457), d = n(981631), u = n(289999), h = n(972667);
 let p = 'CameraPreviewPosition';
 function m(e) {
     let {
@@ -13,7 +13,7 @@ function m(e) {
             channel: m,
             participants: _
         } = e, [f, E] = function () {
-            let [e, t] = a.useState(() => r.K.get(p, u.VD2.BOTTOM_RIGHT));
+            let [e, t] = a.useState(() => r.K.get(p, d.VD2.BOTTOM_RIGHT));
             return [
                 e,
                 a.useCallback(e => {
@@ -25,7 +25,7 @@ function m(e) {
         var e;
         null === (e = C.current) || void 0 === e || e.ensureIsInPosition();
     }, [_.length]), (0, i.jsx)('div', {
-        className: d.container,
+        className: u.container,
         children: (0, i.jsx)(o._, {
             position: f,
             id: 0,
@@ -38,12 +38,12 @@ function m(e) {
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
             children: (0, i.jsx)('div', {
-                className: d.tileContainer,
+                className: u.tileContainer,
                 children: _.map(e => (0, i.jsx)(c.ZP, {
                     participant: e,
                     channel: m,
                     onContextMenu: n,
-                    className: s()(d.tile, h.elevationHigh),
+                    className: s()(u.tile, h.elevationHigh),
                     fit: c.BP.COVER,
                     inCall: !0,
                     inPopout: !1,

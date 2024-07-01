@@ -8,11 +8,11 @@ function f(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let m = {
+let g = {
     friction: 15,
     tension: 100
 };
-class g extends (i = r.PureComponent) {
+class m extends (i = r.PureComponent) {
     componentDidMount() {
         this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
@@ -27,7 +27,7 @@ class g extends (i = r.PureComponent) {
         let {reducedMotion: t} = this.context;
         !0 !== t.enabled && o.Z.spring(this.state.translateY, {
             toValue: Math.min(e, 250),
-            ...m
+            ...g
         }).start();
     }
     renderArrowGroup(e) {
@@ -129,4 +129,4 @@ class g extends (i = r.PureComponent) {
         });
     }
 }
-f(g, 'contextType', u.AccessibilityPreferencesContext), t.Z = g;
+f(m, 'contextType', u.AccessibilityPreferencesContext), t.Z = m;

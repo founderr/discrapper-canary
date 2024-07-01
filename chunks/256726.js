@@ -6,11 +6,11 @@ n.d(t, {
         return h;
     },
     jE: function () {
-        return d;
+        return u;
     }
 }), n(627494), n(757143);
-var i = n(884439), a = n(55000), l = n(693824), s = n(690725), r = n(561308), o = n(737583), c = n(169040), u = n(689938);
-let d = e => {
+var i = n(884439), a = n(55000), l = n(693824), s = n(690725), r = n(561308), o = n(737583), c = n(169040), d = n(689938);
+let u = e => {
         let {timestamp: t} = e;
         return [{
                 iconPath: c.mb,
@@ -21,7 +21,7 @@ let d = e => {
         let n = null === (t = (0, r.PJ)(e, i.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
         return null == n ? [] : [{
                 iconPath: c.eF,
-                text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: n })
+                text: d.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: n })
             }];
     }, p = e => {
         let {
@@ -38,7 +38,7 @@ let d = e => {
                 channel: n,
                 mediaImageSrc: i,
                 artist: r,
-                description: d,
+                description: u,
                 colors: h,
                 badges: m
             } = e, _ = p({
@@ -82,7 +82,7 @@ let d = e => {
                         ],
                         weight: 500,
                         truncate: l.GX.None
-                    }), e.drawText(u.Z.Messages.BETA, {
+                    }), e.drawText(d.Z.Messages.BETA, {
                         x: c.nx - c.sB - 29,
                         y: 26
                     }, !0);
@@ -115,7 +115,7 @@ let d = e => {
                         h: 32,
                         w: c.kC
                     }, !0);
-                }(e, d), (0, o.J)({
+                }(e, u), (0, o.J)({
                     canvas: e,
                     badges: m,
                     startPosition: c.Iq,

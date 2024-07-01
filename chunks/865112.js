@@ -15,12 +15,12 @@ n.d(t, {
         return x;
     }
 });
-var i, a, s, l, r = n(692547), o = n(497089), c = n(650473), d = n(389765), u = n(137492), _ = n(387661), E = n(659953), m = n(319707), I = n(584914), T = n(334702), h = n(333722), N = n(549931), f = n(178561), p = n(39863), C = n(130312);
+var i, a, s, l, r = n(692547), o = n(497089), c = n(650473), d = n(389765), u = n(137492), _ = n(387661), E = n(659953), m = n(319707), I = n(584914), T = n(334702), h = n(333722), N = n(549931), p = n(178561), f = n(39863), C = n(130312);
 (i = s || (s = {})).CHECKED = 'CHECKED', i.FRIENDS = 'FRIENDS', i.SHARE_SCREEN = 'SHARE_SCREEN', i.NEW_MESSAGE = 'NEW_MESSAGE';
 let g = {
     CHECKED: _,
     FRIENDS: m,
-    SHARE_SCREEN: p,
+    SHARE_SCREEN: f,
     NEW_MESSAGE: N
 };
 (a = l || (l = {})).MISSED_MESSAGES = 'MISSED_MESSAGES', a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER', a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT', a.TOP_MESSAGES = 'TOP_MESSAGES', a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER', a.UPDATE_PROFILE = 'UPDATE_PROFILE', a.FIND_FRIENDS = 'FIND_FRIENDS', a.ADD_FRIEND = 'ADD_FRIEND', a.FIRST_MESSAGE = 'FIRST_MESSAGE';
@@ -33,7 +33,7 @@ let S = {
         UPDATE_PROFILE: C,
         FIND_FRIENDS: d,
         ADD_FRIEND: d,
-        FIRST_MESSAGE: f
+        FIRST_MESSAGE: p
     }, A = e => {
         switch (e.item_enum) {
         case o.AM.ADD_FRIEND:

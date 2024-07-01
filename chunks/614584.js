@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(25209), r = n(39154), o = n(35125), c = n(905405), u = n(628238), d = n(499401), h = n(693912), p = n(869765), m = n(699516), _ = n(512665), f = n(352736), E = n(937889), C = n(739566), g = n(507418), I = n(348238), x = n(981631), T = n(689938);
+var i = n(735250), a = n(470079), l = n(442837), s = n(25209), r = n(39154), o = n(35125), c = n(905405), d = n(628238), u = n(499401), h = n(693912), p = n(869765), m = n(699516), _ = n(512665), f = n(352736), E = n(937889), C = n(739566), g = n(507418), I = n(348238), x = n(981631), T = n(689938);
 let N = a.memo(function (e) {
     var t;
     let {
@@ -14,7 +14,7 @@ let N = a.memo(function (e) {
             referencedUsernameProfile: Z,
             referencedAvatarProfile: A,
             setPopout: M
-        } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, C.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+        } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, C.Uj)(b), j = (0, c.p)(), L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
             if (null == b)
                 return null;
             let e = (0, r.Z)(b);
@@ -32,7 +32,7 @@ let N = a.memo(function (e) {
                     roleSubscriptionData: e.roleSubscriptionData
                 }));
             if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, s.Rp)((0, d.Y)({
+                return (0, s.Rp)((0, u.Y)({
                     application: null == e ? void 0 : e.application,
                     username: null == R ? void 0 : R.nick
                 }));
@@ -103,8 +103,8 @@ function v(e, t, n, a, l) {
             compact: o
         } = e, {
             referencedUsernameProfile: c,
-            referencedAvatarProfile: u
-        } = n, d = s.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
+            referencedAvatarProfile: d
+        } = n, u = s.type === x.uaV.REPLY && null != a && (0, i.jsx)(N, {
             baseMessage: s,
             replyReference: a,
             referencedMessage: l,
@@ -112,7 +112,7 @@ function v(e, t, n, a, l) {
             compact: o,
             setPopout: t,
             referencedUsernameProfile: c,
-            referencedAvatarProfile: u
+            referencedAvatarProfile: d
         });
-    return (0, i.jsx)(i.Fragment, { children: d });
+    return (0, i.jsx)(i.Fragment, { children: u });
 }

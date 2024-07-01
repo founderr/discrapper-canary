@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(772848), c = n(442837), u = n(570140), d = n(596454), h = n(607070), p = n(690736);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n(772848), c = n(442837), d = n(570140), u = n(596454), h = n(607070), p = n(690736);
 let m = [
         p.emoji1,
         p.emoji2,
@@ -23,7 +23,7 @@ let m = [
         return (0, i.jsx)('div', {
             className: s()(p.emoji, o),
             onAnimationEnd: c,
-            children: (0, i.jsx)(d.Z, {
+            children: (0, i.jsx)(u.Z, {
                 emojiId: n.id,
                 emojiName: n.name,
                 animated: null !== (t = n.animated) && void 0 !== t && t
@@ -50,14 +50,14 @@ function f(e) {
                     }
                 ]);
         }
-        return u.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e), () => {
-            u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+        return d.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e), () => {
+            d.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
         };
     }, [
         t,
         l
     ]);
-    let d = a.useCallback(e => {
+    let u = a.useCallback(e => {
         r(t => t.filter(t => t.key !== e));
     }, []);
     return l ? null : (0, i.jsx)('div', {
@@ -66,7 +66,7 @@ function f(e) {
         'aria-hidden': !0,
         children: s.map(e => (0, i.jsx)(_, {
             emoji: e,
-            onAnimationEnd: d
+            onAnimationEnd: u
         }, e.key))
     });
 }

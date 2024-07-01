@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 });
-var i, a, l, s, r = n(735250), o = n(470079), c = n(699581), u = n(374470), d = n(442837), h = n(260300), p = n(451478), m = n(5560), _ = n(10401);
+var i, a, l, s, r = n(735250), o = n(470079), c = n(699581), d = n(374470), u = n(442837), h = n(260300), p = n(451478), m = n(5560), _ = n(10401);
 class f extends (s = o.Component) {
     componentDidMount() {
         let {
@@ -39,18 +39,18 @@ class f extends (s = o.Component) {
         } = this.props;
         if (e && null == s) {
             let e = (0, c.findDOMNode)(this);
-            if (!(0, u.k)(e))
+            if (!(0, d.k)(e))
                 return;
             let {
                 top: l,
                 left: s,
                 right: o,
-                bottom: d
+                bottom: u
             } = e.getBoundingClientRect();
             h.Z.show(t, {
                 position: n,
                 targetWidth: o - s,
-                targetHeight: d - l,
+                targetHeight: u - l,
                 autoInvert: r,
                 origin: {
                     x: s,
@@ -90,7 +90,7 @@ class f extends (s = o.Component) {
     }
 }
 function E(e) {
-    let {tutorialId: t} = e, n = (0, d.e7)([_.Z], () => _.Z.shouldShow(t), [t]), i = (0, d.e7)([p.Z], () => p.Z.isFocused()), a = (0, d.e7)([p.Z], () => p.Z.windowSize(), []);
+    let {tutorialId: t} = e, n = (0, u.e7)([_.Z], () => _.Z.shouldShow(t), [t]), i = (0, u.e7)([p.Z], () => p.Z.isFocused()), a = (0, u.e7)([p.Z], () => p.Z.windowSize(), []);
     return (0, r.jsx)(f, {
         ...e,
         visible: n,

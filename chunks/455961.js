@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120), n(773603);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(848246), o = n(793030), c = n(442837), u = n(46973), d = n(481060), h = n(846027), p = n(607070), m = n(361291), _ = n(131951), f = n(626135), E = n(120522), C = n(386542), g = n(933843), I = n(485731), x = n(1163), T = n(738672), N = n(981631), v = n(37113), S = n(689938), Z = n(778855);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(848246), o = n(793030), c = n(442837), d = n(46973), u = n(481060), h = n(846027), p = n(607070), m = n(361291), _ = n(131951), f = n(626135), E = n(120522), C = n(386542), g = n(933843), I = n(485731), x = n(1163), T = n(738672), N = n(981631), v = n(37113), S = n(689938), Z = n(778855);
 let A = async () => {
     let {default: e} = await n.e('21812').then(n.t.bind(n, 741855, 19));
     return e;
@@ -13,13 +13,13 @@ function M(e) {
         className: t,
         onDismiss: n
     } = e;
-    return (0, i.jsx)(d.Button, {
+    return (0, i.jsx)(u.Button, {
         className: t,
         'aria-label': S.Z.Messages.CLOSE,
-        look: d.Button.Looks.BLANK,
-        size: d.Button.Sizes.NONE,
+        look: u.Button.Looks.BLANK,
+        size: u.Button.Sizes.NONE,
         onClick: n,
-        children: (0, i.jsx)(d.CloseSmallIcon, {
+        children: (0, i.jsx)(u.CloseSmallIcon, {
             size: 'xs',
             className: Z.closeIcon,
             color: 'white'
@@ -45,7 +45,7 @@ function j(e) {
                             resolution: b,
                             frameRate: R
                         },
-                        context: u.Yn.STREAM
+                        context: d.Yn.STREAM
                     };
                     null != C.desktopSource ? e.desktopSettings = {
                         sourceId: C.desktopSource.id,
@@ -64,11 +64,11 @@ function j(e) {
             t,
             C
         ]);
-    return (0, i.jsx)(d.ShinyButton, {
+    return (0, i.jsx)(u.ShinyButton, {
         fullWidth: !0,
         pauseAnimation: n,
-        color: d.Button.Colors.GREEN,
-        size: d.Button.Sizes.SMALL,
+        color: u.Button.Colors.GREEN,
+        size: u.Button.Sizes.SMALL,
         className: Z.optInButton,
         onClick: x,
         submitting: l,
@@ -90,7 +90,7 @@ function L(e) {
                     (0, i.jsxs)('div', {
                         className: Z.variant1InfoContainer,
                         children: [
-                            (0, i.jsx)(d.LottieAnimation, {
+                            (0, i.jsx)(u.LottieAnimation, {
                                 importData: A,
                                 shouldAnimate: !l,
                                 className: Z.lottie,
@@ -175,10 +175,10 @@ function O(e) {
             t
         ]), !l || !s)
         return null;
-    let u = o ? L : P;
+    let d = o ? L : P;
     return (0, i.jsx)(T.h, {
         ...n,
-        renderComponent: e => (0, i.jsx)(u, {
+        renderComponent: e => (0, i.jsx)(d, {
             ...e,
             channel: t
         })

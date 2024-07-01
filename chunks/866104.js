@@ -6,7 +6,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), m = n(594174), I = n(346656), T = n(671533), h = n(810090), N = n(51144), f = n(506071), p = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(828406);
+var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(131388), d = n(357352), u = n(353254), _ = n(695346), E = n(271383), m = n(594174), I = n(346656), T = n(671533), h = n(810090), N = n(51144), p = n(506071), f = n(696014), C = n(847033), g = n(544978), S = n(893182), A = n(689938), x = n(828406);
 function O(e) {
     let {onClick: t} = e;
     return (0, i.jsxs)(o.Clickable, {
@@ -33,7 +33,7 @@ function R(e) {
     let {
             coverImageAsset: t,
             isPreview: n = !1
-        } = e, a = _.QK.useSetting(), s = (0, f.n)() && a, [l, r] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
+        } = e, a = _.QK.useSetting(), s = (0, p.n)() && a, [l, r] = (0, u.Z)(t, s), o = s ? (0, i.jsx)(h.Z, {
             autoPlay: !0,
             loop: !0,
             className: x.coverImage,
@@ -63,7 +63,7 @@ function M(e) {
         } = e, T = u.id;
     let {
             nickname: h,
-            nickcolor: f
+            nickcolor: p
         } = (s = T, (0, r.cj)([
             E.ZP,
             m.default
@@ -79,7 +79,7 @@ function M(e) {
         }, [s])), {
             isTruncated: M,
             ExpandableTextContainer: v
-        } = (0, p.s)(), L = (null !== (n = null == _ ? void 0 : null === (t = _.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
+        } = (0, f.s)(), L = (null !== (n = null == _ ? void 0 : null === (t = _.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
             selectedTab: D,
             isPhantomPreview: j
         } = (0, C.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
@@ -144,7 +144,7 @@ function M(e) {
                                             username: h,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)('span', {
-                                                    style: { color: f },
+                                                    style: { color: p },
                                                     children: e
                                                 }, t);
                                             }

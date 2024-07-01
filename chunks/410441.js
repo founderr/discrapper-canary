@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(735250);
@@ -13,19 +13,19 @@ let c = {
         Icon: s.Z
     }
 };
-function u(e) {
+function d(e) {
     var t;
     let {
             onClick: n,
             provider: a,
             'aria-label': s
         } = e, r = (0, l.useToken)(l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY), {
-            Icon: u,
-            getLabel: d
+            Icon: d,
+            getLabel: u
         } = null !== (t = c[a]) && void 0 !== t ? t : {};
-    if (null == u)
+    if (null == d)
         return null;
-    let h = null != s ? s : null == d ? void 0 : d(), p = (0, i.jsx)(u, {
+    let h = null != s ? s : null == u ? void 0 : u(), p = (0, i.jsx)(d, {
             color: r.hex(),
             width: 16,
             height: 16

@@ -13,7 +13,7 @@ function T(e) {
             currentUserId: T,
             onTransitionToInviteChannel: h,
             onAcceptInstantInvite: N
-        } = e, f = T === a.id, p = n.state === E.r2o.ACCEPTING, C = (0, l.e7)([o.Z], () => null != n.channel ? o.Z.getChannel(n.channel.id) : null, [n]);
+        } = e, p = T === a.id, f = n.state === E.r2o.ACCEPTING, C = (0, l.e7)([o.Z], () => null != n.channel ? o.Z.getChannel(n.channel.id) : null, [n]);
     s()(null == C || C.isPrivate(), 'must be a private channel');
     let g = null != C;
     if (null == C) {
@@ -33,7 +33,7 @@ function T(e) {
     let A = g ? h : N, x = m.Z.Messages.JOIN_GUILD, O = d.Z.Button.Colors.GREEN;
     g && (x = m.Z.Messages.JOINED_GUILD, O = d.Z.Button.Colors.PRIMARY);
     let R = m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-    return f && (R = m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(d.Z, {
+    return p && (R = m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(d.Z, {
         children: [
             (0, i.jsx)(d.Z.Header, { text: R }),
             (0, i.jsxs)(d.Z.Body, {
@@ -54,7 +54,7 @@ function T(e) {
                     }),
                     (0, i.jsx)(d.Z.Button, {
                         onClick: A,
-                        submitting: p,
+                        submitting: f,
                         isDisabled: g,
                         color: O,
                         children: x

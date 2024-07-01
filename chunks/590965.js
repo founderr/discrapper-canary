@@ -1,13 +1,13 @@
 let i;
 n(47120), n(653041);
-var l, r, a, s, o = n(442837), c = n(570140), u = n(413605), d = n(703656), h = n(131704), p = n(601964), _ = n(592125), f = n(430824), m = n(701190), g = n(496675), C = n(594174), I = n(998502), E = n(981631), N = n(176505);
+var l, r, a, s, o = n(442837), c = n(570140), u = n(413605), d = n(703656), h = n(131704), p = n(601964), _ = n(592125), f = n(430824), g = n(701190), m = n(496675), C = n(594174), I = n(998502), E = n(981631), N = n(176505);
 let x = E.IlC.APP, S = !1, Z = !1, v = [];
 function T() {
     S = !0;
 }
 class L extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, m.Z, C.default);
+        this.waitFor(f.Z, g.Z, C.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
@@ -56,7 +56,7 @@ s = 'InviteModalStore', (a = 'displayName') in (r = L) ? Object.defineProperty(r
                         let {channel: t} = e;
                         if (null != t) {
                             let e = _.Z.getChannel(t.id);
-                            if (g.Z.can(E.Plq.VIEW_CHANNEL, e))
+                            if (m.Z.can(E.Plq.VIEW_CHANNEL, e))
                                 return t.id;
                         }
                         return null;

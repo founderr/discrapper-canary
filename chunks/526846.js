@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(613828), o = n(772848), c = n(442837), u = n(481060), d = n(2052), h = n(40851), p = n(607070), m = n(100527), _ = n(906732), f = n(703656), E = n(210887), C = n(390322), g = n(626135), I = n(348600), x = n(566620), T = n(520599), N = n(611370), v = n(138138), S = n(127255), Z = n(5200), A = n(558317), M = n(403404), b = n(701488), R = n(981631), j = n(689938), L = n(496), P = n(587952), O = n(736733), y = n(932463), D = n(988967), k = n(463738);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(613828), o = n(772848), c = n(442837), d = n(481060), u = n(2052), h = n(40851), p = n(607070), m = n(100527), _ = n(906732), f = n(703656), E = n(210887), C = n(390322), g = n(626135), I = n(348600), x = n(566620), T = n(520599), N = n(611370), v = n(138138), S = n(127255), Z = n(5200), A = n(558317), M = n(403404), b = n(701488), R = n(981631), j = n(689938), L = n(496), P = n(587952), O = n(736733), y = n(932463), D = n(988967), k = n(463738);
 let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
         let {
                 channel: n,
@@ -34,7 +34,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
         let Q = (0, h.bp)(), {analyticsLocations: J} = (0, _.ZP)(m.Z.ACTIVITIES_MINI_SHELF), {analyticsLocations: $} = (0, _.ZP)([
                 ...J,
                 m.Z.ACTIVITIES_MINI_SHELF_BANNER
-            ]), ee = Q === R.IlC.POPOUT, et = (0, d.O)(), en = function (e, t) {
+            ]), ee = Q === R.IlC.POPOUT, et = (0, u.O)(), en = function (e, t) {
                 return (0, S.Z)({
                     guildId: e,
                     channel: t
@@ -79,7 +79,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', { className: L.posterDivider })
                 ]
-            }) : W ? (0, i.jsxs)(u.Clickable, {
+            }) : W ? (0, i.jsxs)(d.Clickable, {
                 className: s()(L.clickableBanner),
                 onClick: () => {
                     H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Fu), void 0, void 0, $);
@@ -92,7 +92,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', { className: L.posterDivider })
                 ]
-            }) : F ? (0, i.jsxs)(u.Clickable, {
+            }) : F ? (0, i.jsxs)(d.Clickable, {
                 className: s()(L.clickableBanner),
                 onClick: () => {
                     H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.NC), void 0, void 0, $);
@@ -105,7 +105,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', { className: L.posterDivider })
                 ]
-            }) : z ? (0, i.jsxs)(u.Clickable, {
+            }) : z ? (0, i.jsxs)(d.Clickable, {
                 className: s()(L.clickableBanner),
                 onClick: () => {
                     H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Cw), void 0, void 0, $);
@@ -122,15 +122,15 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
         return (0, i.jsx)(_.Gt, {
             value: J,
             children: (0, i.jsx)(C.Z, {
-                children: (0, i.jsxs)(u.Dialog, {
+                children: (0, i.jsxs)(d.Dialog, {
                     ref: t,
                     'aria-labelledby': U,
                     className: G,
                     children: [
-                        (0, i.jsx)(u.HeadingLevel, {
+                        (0, i.jsx)(d.HeadingLevel, {
                             forceLevel: 2,
-                            children: (0, i.jsx)(u.HiddenVisually, {
-                                children: (0, i.jsx)(u.H, {
+                            children: (0, i.jsx)(d.HiddenVisually, {
+                                children: (0, i.jsx)(d.H, {
                                     id: U,
                                     children: j.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
@@ -147,26 +147,26 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
                                         (0, i.jsxs)('div', {
                                             className: L.titleLeft,
                                             children: [
-                                                (0, i.jsx)(u.ActivitiesIcon, {
+                                                (0, i.jsx)(d.ActivitiesIcon, {
                                                     size: 'md',
                                                     className: L.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(d.Text, {
                                                     variant: 'eyebrow',
                                                     children: j.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsxs)(u.Clickable, {
+                                        (0, i.jsxs)(d.Clickable, {
                                             className: L.titleRight,
                                             onClick: ei,
                                             children: [
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(d.Text, {
                                                     variant: 'eyebrow',
                                                     children: j.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                                 }),
-                                                (0, i.jsx)(u.ChevronSmallRightIcon, {
+                                                (0, i.jsx)(d.ChevronSmallRightIcon, {
                                                     size: 'custom',
                                                     width: 12,
                                                     height: 12,

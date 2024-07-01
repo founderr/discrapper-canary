@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(920906), c = n(91192), u = n(477690), d = n(153867), h = n(771845), p = n(880080), _ = n(624138), f = n(727258), m = n(199540), g = n(40153), C = n(252686), I = n(682662), E = n(662146), N = n(689938), x = n(248699), S = n(784490);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(920906), c = n(91192), u = n(477690), d = n(153867), h = n(771845), p = n(880080), _ = n(624138), f = n(727258), g = n(199540), m = n(40153), C = n(252686), I = n(682662), E = n(662146), N = n(689938), x = n(248699), S = n(784490);
 let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION), v = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE), T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function L(e) {
     let {
@@ -75,7 +75,7 @@ function L(e) {
                         ref: R ? K : void 0,
                         className: a()({ [S.wobble]: !z && F && !u }),
                         'data-dnd-name': J,
-                        children: z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(m.Z, {
+                        children: z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(g.Z, {
                             folderNode: t,
                             expanded: u,
                             forceCircular: M,
@@ -93,7 +93,7 @@ function L(e) {
                         })
                     })
                 }),
-                R ? (0, i.jsx)(g.ZP, {
+                R ? (0, i.jsx)(m.ZP, {
                     name: J,
                     targetNode: t,
                     onDragOverChanged: q
@@ -121,7 +121,7 @@ function L(e) {
                     children: B.map(U)
                 }, l);
             }),
-            R && u ? (0, i.jsx)(g.Zu, {
+            R && u ? (0, i.jsx)(m.Zu, {
                 name: J,
                 targetNode: t
             }) : null

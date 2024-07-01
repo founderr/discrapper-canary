@@ -1,10 +1,10 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(704215), s = n(974674), r = n(481060), o = n(243778), c = n(261892), u = n(197115), d = n(703656), h = n(594174), p = n(626135), m = n(74538), _ = n(204197), f = n(502762), E = n(981631), C = n(921944), g = n(474936), I = n(689938), x = n(780104);
+var i = n(735250), a = n(470079), l = n(704215), s = n(974674), r = n(481060), o = n(243778), c = n(261892), d = n(197115), u = n(703656), h = n(594174), p = n(626135), m = n(74538), _ = n(204197), f = n(502762), E = n(981631), C = n(921944), g = n(474936), I = n(689938), x = n(780104);
 function T() {
     p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
         cta_type: 'Learn more button',
         target: 'premium marketing page'
-    }), (0, d.uL)(E.Z5c.APPLICATION_STORE);
+    }), (0, u.uL)(E.Z5c.APPLICATION_STORE);
 }
 function N(e) {
     let {
@@ -50,7 +50,7 @@ function N(e) {
                         onClick: T,
                         children: I.Z.Messages.LEARN_MORE
                     }),
-                    (0, i.jsx)(u.Z, {
+                    (0, i.jsx)(d.Z, {
                         className: x.getNitroButton,
                         size: r.Button.Sizes.TINY,
                         color: r.Button.Colors.CUSTOM,
@@ -159,13 +159,13 @@ let A = a.memo(function (e) {
             size: r.AvatarSizes.SIZE_32
         }), l = h.default.getCurrentUser(), s = m.ZP.isPremium(l) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2), {
             enabled: o,
-            variant: u
+            variant: d
         } = c.f.useExperiment({ location: 'SimplifiedProfilePanelPremiumUpsell' }, {
             disable: s,
             autoTrackExposure: !s
         });
     return o ? (0, i.jsx)(Z, {
-        variant: u,
+        variant: d,
         avatarSrc: a,
         username: t.username
     }) : null;

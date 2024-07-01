@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     }
 }), n(411104);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(399606), o = n(481060), c = n(588705), u = n(100527), d = n(906732), h = n(388905), p = n(792766), _ = n(451603), f = n(885714), m = n(973616), g = n(594174), C = n(285952), I = n(672752), E = n(153124), N = n(855981), x = n(55543), S = n(626135), Z = n(768581), v = n(358085), T = n(998502), L = n(379164), A = n(590965), b = n(981631), M = n(474936), R = n(689938), y = n(71044), O = n(331651);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(399606), o = n(481060), c = n(588705), u = n(100527), d = n(906732), h = n(388905), p = n(792766), _ = n(451603), f = n(885714), g = n(973616), m = n(594174), C = n(285952), I = n(672752), E = n(153124), N = n(855981), x = n(55543), S = n(626135), Z = n(768581), v = n(358085), T = n(998502), L = n(379164), A = n(590965), b = n(981631), M = n(474936), R = n(689938), y = n(71044), O = n(331651);
 function P() {
     let {
         analyticsLocations: e,
@@ -95,9 +95,9 @@ function D(e) {
 }
 function U(e) {
     let t, n, {transitionState: r} = e;
-    (0, s.e7)([g.default], () => {
+    (0, s.e7)([m.default], () => {
         var e;
-        return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
+        return null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
     let {
         invite: f,
@@ -124,7 +124,7 @@ function U(e) {
             target_application: w
         } = f, k = null != j, B = null != f.stage_instance, V = null == f.guild && null == f.channel && null != f.inviter;
     if (null != w)
-        t = null == j ? void 0 : j.name, n = m.Z.createFromServer(w).getCoverImageURL(1024);
+        t = null == j ? void 0 : j.name, n = g.Z.createFromServer(w).getCoverImageURL(1024);
     else if (null != j)
         t = j.name, n = Z.ZP.getGuildSplashURL({
             id: j.id,

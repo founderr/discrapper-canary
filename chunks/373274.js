@@ -6,7 +6,7 @@ n.d(t, {
         return ed;
     }
 }), n(47120), n(653041);
-var i, l = n(735250), r = n(470079), a = n(392711), s = n.n(a), o = n(91192), c = n(924826), u = n(442837), d = n(481060), h = n(925549), p = n(260300), _ = n(410575), f = n(607070), m = n(100527), g = n(906732), C = n(362658), I = n(583962), E = n(915885), N = n(258871), x = n(216306), S = n(398758), Z = n(220444), v = n(31022), T = n(10401), L = n(131704), A = n(592125), b = n(796974), M = n(984933), R = n(914010), y = n(153124), O = n(540126), P = n(734307), j = n(854444), D = n(688265), U = n(896053), G = n(301342), w = n(906817), k = n(429122), B = n(285573), V = n(519358), H = n(910595), F = n(466935), W = n(120818), Y = n(61642), z = n(848442), K = n(53425), q = n(424785), Q = n(770202), J = n(79556), X = n(428127), $ = n(950969), ee = n(233657), et = n(831700), en = n(443063), ei = n(327530), el = n(981631), er = n(176505), ea = n(689938), es = n(857100);
+var i, l = n(735250), r = n(470079), a = n(392711), s = n.n(a), o = n(91192), c = n(924826), u = n(442837), d = n(481060), h = n(925549), p = n(260300), _ = n(410575), f = n(607070), g = n(100527), m = n(906732), C = n(362658), I = n(583962), E = n(915885), N = n(258871), x = n(216306), S = n(398758), Z = n(220444), v = n(31022), T = n(10401), L = n(131704), A = n(592125), b = n(796974), M = n(984933), R = n(914010), y = n(153124), O = n(540126), P = n(734307), j = n(854444), D = n(688265), U = n(896053), G = n(301342), w = n(906817), k = n(429122), B = n(285573), V = n(519358), H = n(910595), F = n(466935), W = n(120818), Y = n(61642), z = n(848442), K = n(53425), q = n(424785), Q = n(770202), J = n(79556), X = n(428127), $ = n(950969), ee = n(233657), et = n(831700), en = n(443063), ei = n(327530), el = n(981631), er = n(176505), ea = n(689938), es = n(857100);
 function eo(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -488,13 +488,13 @@ class ec extends (i = r.PureComponent) {
             }
             if (u.isPlaceholderRow(t, n))
                 return null;
-            let m = u.getChannelFromSectionRow(t, n);
-            if (null == m)
+            let g = u.getChannelFromSectionRow(t, n);
+            if (null == g)
                 return null;
             let {
-                    category: g,
+                    category: m,
                     channel: C
-                } = m, x = g instanceof O.VR, S = C.record, Z = ''.concat(t).concat(C.id);
+                } = g, x = m instanceof O.VR, S = C.record, Z = ''.concat(t).concat(C.id);
             switch (S.type) {
             case el.d4z.GUILD_ANNOUNCEMENT:
             case el.d4z.GUILD_TEXT:
@@ -533,7 +533,7 @@ class ec extends (i = r.PureComponent) {
                     position: C.position,
                     selected: s === C.id,
                     connected: c === C.id,
-                    collapsed: C.isCollapsed || g.isCollapsed,
+                    collapsed: C.isCollapsed || m.isCollapsed,
                     voiceStates: null !== (v = d[C.id]) && void 0 !== v ? v : [],
                     speakerVoiceStates: null !== (T = p[C.id]) && void 0 !== T ? T : [],
                     disableManageChannels: h,
@@ -546,7 +546,7 @@ class ec extends (i = r.PureComponent) {
                     position: C.position,
                     selected: s === C.id,
                     connected: c === C.id,
-                    collapsed: C.isCollapsed || g.isCollapsed,
+                    collapsed: C.isCollapsed || m.isCollapsed,
                     voiceStates: d[C.id],
                     subtitle: C.subtitle,
                     disableManageChannels: h,
@@ -635,7 +635,7 @@ let eu = e => {
             guildId: t,
             selectedChannelId: n,
             selectedVoiceChannelId: i
-        } = e, a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled), {analyticsLocations: s} = (0, g.ZP)(m.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([A.Z], () => A.Z.getChannel(n)), h = (0, u.e7)([A.Z], () => A.Z.getChannel(i)), p = (0, u.e7)([R.Z], () => R.Z.getGuildId()), C = (0, S.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
+        } = e, a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled), {analyticsLocations: s} = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([A.Z], () => A.Z.getChannel(n)), h = (0, u.e7)([A.Z], () => A.Z.getChannel(i)), p = (0, u.e7)([R.Z], () => R.Z.getGuildId()), C = (0, S.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
             let n = I.current;
             if (null != n) {
                 if (el.Xyh.test(t) || (0, er.AB)(t))
@@ -675,7 +675,7 @@ let eu = e => {
         T
     ]);
     let L = (0, v.Z)(t);
-    return (0, l.jsx)(g.Gt, {
+    return (0, l.jsx)(m.Gt, {
         value: s,
         children: (0, l.jsx)(_.Z, {
             section: el.jXE.GUILD_CHANNEL_LIST,

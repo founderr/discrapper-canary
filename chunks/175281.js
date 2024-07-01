@@ -3,7 +3,7 @@ n.d(t, {
         return j;
     }
 }), n(47120), n(653041);
-var i, l, r = n(735250), a = n(470079), s = n(120356), o = n.n(s), c = n(512722), u = n.n(c), d = n(392711), h = n.n(d), p = n(748780), _ = n(442837), f = n(215569), m = n(481060), g = n(612226), C = n(951483), I = n(714338), E = n(607070), N = n(585483), x = n(557177), S = n(264549), Z = n(981631), v = n(689938), T = n(661948);
+var i, l, r = n(735250), a = n(470079), s = n(120356), o = n.n(s), c = n(512722), u = n.n(c), d = n(392711), h = n.n(d), p = n(748780), _ = n(442837), f = n(215569), g = n(481060), m = n(612226), C = n(951483), I = n(714338), E = n(607070), N = n(585483), x = n(557177), S = n(264549), Z = n(981631), v = n(689938), T = n(661948);
 function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -34,28 +34,28 @@ function b(e) {
     }
 }
 let M = 1000 / 60, R = [
-        g.Q2.MESSAGE,
-        g.Q2.NAVIGATION,
-        g.Q2.VOICE_AND_VIDEO,
-        g.Q2.CHAT,
-        g.Q2.MISCELLANEOUS
+        m.Q2.MESSAGE,
+        m.Q2.NAVIGATION,
+        m.Q2.VOICE_AND_VIDEO,
+        m.Q2.CHAT,
+        m.Q2.MISCELLANEOUS
     ];
 function y() {
-    let e = a.useMemo(() => h()((0, g.Rv)()).groupBy(e => e.group).value(), []);
+    let e = a.useMemo(() => h()((0, m.Rv)()).groupBy(e => e.group).value(), []);
     return (0, r.jsx)('div', {
         className: T.keyboardShortcutList,
         children: R.map(t => {
-            let n = e[t], i = (0, g.UD)(t), l = (0, g.U6)(t);
+            let n = e[t], i = (0, m.UD)(t), l = (0, m.U6)(t);
             return (0, r.jsxs)('div', {
                 className: T.keyboardShortcutSection,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsx)(m.Heading, {
+                            (0, r.jsx)(g.Heading, {
                                 variant: 'heading-lg/semibold',
                                 children: i
                             }),
-                            null != l && (0, r.jsx)(m.Text, {
+                            null != l && (0, r.jsx)(g.Text, {
                                 className: T.keybindGroupDescription,
                                 variant: 'text-sm/normal',
                                 children: l
@@ -69,13 +69,13 @@ function y() {
                             return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, r.jsxs)('div', {
                                 className: o()(T.keybindGroup),
                                 children: [
-                                    (0, r.jsx)(m.Text, {
+                                    (0, r.jsx)(g.Text, {
                                         variant: 'text-sm/normal',
                                         children: e.description
                                     }),
                                     (0, r.jsx)('div', {
                                         className: 'keybind-shortcuts',
-                                        children: e.binds.map(e => (0, r.jsx)(m.KeyCombo, {
+                                        children: e.binds.map(e => (0, r.jsx)(g.KeyCombo, {
                                             className: T.keybindKey,
                                             shortcut: e
                                         }, e))
@@ -107,14 +107,14 @@ class O extends a.PureComponent {
             className: T.keyboardShortcutsModal,
             style: this.getStyles(),
             children: [
-                (0, r.jsxs)(m.H, {
+                (0, r.jsxs)(g.H, {
                     className: T.modalTitle,
                     children: [
                         (0, r.jsx)('div', {
                             className: T.content,
                             children: v.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
                         }),
-                        (0, r.jsx)(m.KeyCombo, { shortcut: 'mod+/' })
+                        (0, r.jsx)(g.KeyCombo, { shortcut: 'mod+/' })
                     ]
                 }),
                 (0, r.jsx)('div', {
@@ -150,10 +150,10 @@ class O extends a.PureComponent {
                         })
                     ]
                 }),
-                (0, r.jsx)(m.AdvancedScrollerAuto, {
+                (0, r.jsx)(g.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(y, {}) })
+                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(y, {}) })
                 })
             ]
         });
@@ -317,7 +317,7 @@ function P(e) {
             let e = setTimeout(() => c(!1), 500);
             return () => clearTimeout(e);
         }
-    }, [s]), (0, r.jsx)(m.Clickable, {
+    }, [s]), (0, r.jsx)(g.Clickable, {
         onClick: u,
         className: o()(T.arrow, i, { [T.active]: t || s }),
         children: l
@@ -327,16 +327,16 @@ function j(e) {
     let {
             transitionState: t,
             onClose: n
-        } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, g.Rv)(), []), {
+        } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, m.Rv)(), []), {
             keyboardModeEnabled: c,
             useReducedMotion: u
         } = (0, _.cj)([E.Z], () => ({
             keyboardModeEnabled: E.Z.keyboardModeEnabled,
             useReducedMotion: E.Z.useReducedMotion
         }));
-    return (0, r.jsx)(m.ModalRoot, {
+    return (0, r.jsx)(g.ModalRoot, {
         className: o()(T.noBackground, { [T.noShadow]: i }),
-        size: m.ModalSize.DYNAMIC,
+        size: g.ModalSize.DYNAMIC,
         'aria-label': v.Z.Messages.KEYBINDS,
         transitionState: t,
         children: (0, r.jsx)(f.W, {

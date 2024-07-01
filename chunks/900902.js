@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), a = n(470079), l = n(778947), s = n(534761), r = n(901461), o = n(453687), c = n(507418), u = n(348238), d = n(981631);
+var i = n(735250), a = n(470079), l = n(778947), s = n(534761), r = n(901461), o = n(453687), c = n(507418), d = n(348238), u = n(981631);
 let h = a.memo(function (e) {
         let {
                 message: t,
@@ -17,7 +17,7 @@ let h = a.memo(function (e) {
                 author: _,
                 repliedMessage: f,
                 roleIcon: E
-            } = e, C = (0, u.wq)(t.author.id, n.id), g = (0, u.XO)(t, n, h, m), I = (0, u.R9)(p, m), x = a.useCallback(() => m({
+            } = e, C = (0, d.wq)(t.author.id, n.id), g = (0, d.XO)(t, n, h, m), I = (0, d.R9)(p, m), x = a.useCallback(() => m({
                 usernameProfile: !1,
                 avatarProfile: !1,
                 referencedUsernameProfile: !1
@@ -30,7 +30,7 @@ let h = a.memo(function (e) {
             author: _,
             compact: s,
             subscribeToGroupId: r,
-            showTimestampOnHover: !o && s && t.type !== d.uaV.REPLY,
+            showTimestampOnHover: !o && s && t.type !== u.uaV.REPLY,
             renderPopout: c.Z,
             showAvatarPopout: p,
             showUsernamePopout: h,
@@ -49,9 +49,9 @@ function m(e) {
             replyReference: l,
             author: s,
             repliedMessage: c,
-            roleIcon: u
+            roleIcon: d
         } = e, {
-            message: d,
+            message: u,
             compact: m,
             channel: _,
             groupId: f
@@ -59,11 +59,11 @@ function m(e) {
             usernameProfile: E,
             avatarProfile: C
         } = a;
-    if ((0, r.Z)(d))
+    if ((0, r.Z)(u))
         return null;
-    let g = d.id === f;
+    let g = u.id === f;
     return g || m || null != l ? (0, i.jsx)(h, {
-        message: d,
+        message: u,
         channel: _,
         compact: m,
         subscribeToGroupId: f,
@@ -74,12 +74,12 @@ function m(e) {
         avatarProfile: C,
         author: s,
         repliedMessage: c,
-        roleIcon: u
+        roleIcon: d
     }) : (0, i.jsx)(p, {
         compact: !0,
-        timestamp: d.timestamp,
+        timestamp: u.timestamp,
         isInline: !1,
-        id: (0, o.Dv)(d),
+        id: (0, o.Dv)(u),
         isVisibleOnlyOnHover: !0,
         cozyAlt: !0
     });

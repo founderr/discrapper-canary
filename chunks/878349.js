@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(780384), c = n(481060), u = n(393238), d = n(410030), h = n(607070), p = n(466794), m = n(213833), _ = n(546240), f = n(952009);
+var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(780384), c = n(481060), d = n(393238), u = n(410030), h = n(607070), p = n(466794), m = n(213833), _ = n(546240), f = n(952009);
 function E(e) {
     let {
             checked: t,
@@ -18,13 +18,13 @@ function E(e) {
             collapseWhenChecked: N = !0,
             onClick: v,
             disabled: S
-        } = e, Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = a.useState(!1), b = (0, d.ZP)(), R = (0, o.wj)(b) || t ? f : _, {
+        } = e, Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = a.useState(!1), b = (0, u.ZP)(), R = (0, o.wj)(b) || t ? f : _, {
             width: j = 0,
             ref: L
-        } = (0, u.Z)(), {
+        } = (0, d.Z)(), {
             width: P = 0,
             ref: O
-        } = (0, u.Z)();
+        } = (0, d.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(p.X, {
             textColor: 'always-white',

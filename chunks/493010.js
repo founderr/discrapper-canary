@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), l = n(704215), s = n(481060), r = n(475179), o = n(561472), c = n(287746), u = n(325708), d = n(541716), h = n(605236), p = n(703558), m = n(502568), _ = n(585483), f = n(909820), E = n(981631), C = n(921944), g = n(689938), I = n(423289);
+var i = n(735250), a = n(470079), l = n(704215), s = n(481060), r = n(475179), o = n(561472), c = n(287746), d = n(325708), u = n(541716), h = n(605236), p = n(703558), m = n(502568), _ = n(585483), f = n(909820), E = n(981631), C = n(921944), g = n(689938), I = n(423289);
 t.Z = function (e) {
     let {
         channel: t,
@@ -15,8 +15,8 @@ t.Z = function (e) {
             tooltip: g.Z.Messages.CLOSE,
             onClick: T
         });
-    return (0, i.jsxs)(u.Z, {
-        sidebarType: u.y.CallChatSidebar,
+    return (0, i.jsxs)(d.Z, {
+        sidebarType: d.y.CallChatSidebar,
         maxWidth: x,
         floatingLayer: f.ZP,
         children: [
@@ -41,7 +41,7 @@ t.Z = function (e) {
                 children: (0, i.jsx)(c.Z, {
                     channel: t,
                     guild: n,
-                    chatInputType: d.I.SIDEBAR
+                    chatInputType: u.I.SIDEBAR
                 }, t.id)
             })
         ]

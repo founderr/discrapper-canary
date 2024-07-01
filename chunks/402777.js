@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 });
-var i = n(735250), a = n(470079), l = n(597312), s = n(727637), r = n(410030), o = n(100527), c = n(906732), u = n(680295), d = n(785717), h = n(318661), p = n(502762), m = n(437758), _ = n(544989), f = n(481932), E = n(272510), C = n(171368), g = n(926150), I = n(308829), x = n(354810), T = n(940885), N = n(625015), v = n(228168), S = n(20256);
+var i = n(735250), a = n(470079), l = n(597312), s = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(785717), h = n(318661), p = n(502762), m = n(437758), _ = n(544989), f = n(481932), E = n(272510), C = n(171368), g = n(926150), I = n(308829), x = n(354810), T = n(940885), N = n(625015), v = n(228168), S = n(20256);
 function Z(e) {
     let {
             user: t,
@@ -18,7 +18,7 @@ function Z(e) {
         };
     return (0, i.jsx)(c.Gt, {
         value: Z,
-        children: (0, i.jsx)(d.Mt, {
+        children: (0, i.jsx)(u.Mt, {
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id,
@@ -70,7 +70,7 @@ function Z(e) {
                         user: t,
                         channelId: n.id
                     }),
-                    (null == A ? void 0 : A.profileEffectId) != null && (0, i.jsx)(u.Z, {
+                    (null == A ? void 0 : A.profileEffectId) != null && (0, i.jsx)(d.Z, {
                         profileEffectId: null == A ? void 0 : A.profileEffectId,
                         isHovering: R
                     })

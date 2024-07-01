@@ -6,9 +6,9 @@ e.d(t, {
         return s;
     }
 }), e(47120);
-var r = e(735250), i = e(470079), u = e(442837), o = e(846519), E = e(481060), a = e(706454), l = e(506071), T = e(561308), c = e(539331);
+var r = e(735250), i = e(470079), u = e(442837), o = e(846519), E = e(481060), l = e(706454), a = e(506071), T = e(561308), c = e(539331);
 function _(n) {
-    let [t, e] = i.useState(Date.now()), r = (0, l.n)(), u = i.useMemo(() => {
+    let [t, e] = i.useState(Date.now()), r = (0, a.n)(), u = i.useMemo(() => {
             let {hours: e} = (0, T.JY)(n, t);
             return e > 0 ? 300000 : 1000;
         }, [
@@ -30,7 +30,7 @@ let s = n => {
             entry: t,
             inline: e = !1,
             textColor: u
-        } = n, o = _(t), a = i.useMemo(() => (0, T.T_)(t, o), [
+        } = n, o = _(t), l = i.useMemo(() => (0, T.T_)(t, o), [
             t,
             o
         ]);
@@ -39,14 +39,14 @@ let s = n => {
         variant: 'text-xs/normal',
         tabularNumbers: !0,
         color: u,
-        children: a
+        children: l
     });
 };
 t.ZP = n => {
     let {
             entry: t,
             textColor: e
-        } = n, i = (0, T.kr)(t), o = (0, u.e7)([a.default], () => a.default.locale);
+        } = n, i = (0, T.kr)(t), o = (0, u.e7)([l.default], () => l.default.locale);
     return i ? (0, r.jsx)(s, {
         entry: t,
         textColor: e

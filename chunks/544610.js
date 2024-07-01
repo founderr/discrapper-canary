@@ -1,6 +1,6 @@
 let i;
 n(47120), n(724458), n(653041);
-var a, l, s, r, o = n(392711), c = n.n(o), u = n(442837), d = n(570140), h = n(279779), p = n(131704), m = n(624138), _ = n(51144), f = n(592125), E = n(580005), C = n(699516), g = n(594174), I = n(981631);
+var a, l, s, r, o = n(392711), c = n.n(o), d = n(442837), u = n(570140), h = n(279779), p = n(131704), m = n(624138), _ = n(51144), f = n(592125), E = n(580005), C = n(699516), g = n(594174), I = n(981631);
 let x = !1, T = '', N = 0, v = [], S = !1, Z = new Set(), A = null;
 function M() {
     T = '', N = 0, v = [], Z = new Set(), x = !1, A = null;
@@ -65,7 +65,7 @@ function D(e) {
 function k() {
     null != i && (i.destroy(), i = null), M();
 }
-class U extends (a = u.ZP.Store) {
+class U extends (a = d.ZP.Store) {
     initialize() {
         this.waitFor(g.default, f.Z, C.Z), this.syncWith([
             g.default,
@@ -100,7 +100,7 @@ r = 'PrivateChannelRecipientsInviteStore', (s = 'displayName') in (l = U) ? Obje
     configurable: !0,
     writable: !0
 }) : l[s] = r;
-let w = new U(d.Z, {
+let w = new U(u.Z, {
     CONNECTION_OPEN: function () {
         M();
     },

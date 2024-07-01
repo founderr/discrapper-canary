@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(692547), s = n(481060), r = n(688641), o = n(596449), c = n(459502), u = n(856691), d = n(889161), h = n(496675), p = n(602623), m = n(146085), _ = n(979339), f = n(643632), E = n(939863), C = n(689938), g = n(998877);
+var a = n(442837), l = n(692547), s = n(481060), r = n(688641), o = n(596449), c = n(459502), d = n(856691), u = n(889161), h = n(496675), p = n(602623), m = n(146085), _ = n(979339), f = n(643632), E = n(939863), C = n(689938), g = n(998877);
 function I(e) {
     let {onClick: t} = e;
     return (0, i.jsx)(r.Z, {
@@ -65,7 +65,7 @@ function T(e) {
     let {
             channel: t,
             onContinueClick: n
-        } = e, l = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t), [t]), r = t.guild_id, {canCreateGuildEvent: p} = (0, d.XJ)(t), T = (0, f.Z)(t.id), {usersInSummary: N} = (0, _.Z)(t.id);
+        } = e, l = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t), [t]), r = t.guild_id, {canCreateGuildEvent: p} = (0, u.XJ)(t), T = (0, f.Z)(t.id), {usersInSummary: N} = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, {
@@ -96,7 +96,7 @@ function T(e) {
                 ]
             }),
             T ? null : (0, i.jsx)(c.Z, { channelId: t.id }),
-            l ? (0, i.jsx)(u.Z, {
+            l ? (0, i.jsx)(d.Z, {
                 className: g.eventPrompt,
                 channel: t
             }) : null,

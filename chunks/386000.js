@@ -10,11 +10,11 @@ function o(e) {
             serverMute: n,
             suppress: o,
             centerButton: c = !1,
-            awaitingRemote: u,
-            onMouseEnter: d,
+            awaitingRemote: d,
+            onMouseEnter: u,
             onMouseLeave: h,
             ...p
-        } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, s.Z)(t, n, o, u), {
+        } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, s.Z)(t, n, o, d), {
             Component: E,
             play: C,
             events: g
@@ -27,7 +27,7 @@ function o(e) {
         iconComponent: E,
         label: f,
         onMouseEnter: e => {
-            null == d || d(e), g.onMouseEnter();
+            null == u || u(e), g.onMouseEnter();
         },
         onMouseLeave: e => {
             null == h || h(e), g.onMouseLeave();

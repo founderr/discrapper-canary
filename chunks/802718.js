@@ -3,8 +3,8 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), l = n(470079), r = n(91192), a = n(481060), s = n(442837), o = n(239091), c = n(410030), u = n(377171), d = n(682662), h = n(662146), p = n(678513), _ = n(981631), f = n(689938), m = n(316148);
-function g(e) {
+var i = n(735250), l = n(470079), r = n(91192), a = n(481060), s = n(442837), o = n(239091), c = n(410030), u = n(377171), d = n(682662), h = n(662146), p = n(678513), _ = n(981631), f = n(689938), g = n(316148);
+function m(e) {
     let {target: t} = e, s = (0, r.Ie)('fakedoor'), p = l.useCallback(() => {
             (0, a.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
@@ -16,7 +16,7 @@ function g(e) {
                     target: t
                 });
             });
-        }, [t]), g = l.useCallback(e => {
+        }, [t]), m = l.useCallback(e => {
             (0, o.jW)(e, async () => {
                 let {default: e} = await n.e('45355').then(n.bind(n, 761624));
                 return n => (0, i.jsx)(e, {
@@ -25,10 +25,10 @@ function g(e) {
                 });
             });
         }, [t]), C = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'), I = (0, i.jsxs)('div', {
-            className: m.tooltipContainer,
+            className: g.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: m.tooltipBackground,
+                    className: g.tooltipBackground,
                     style: { background: C }
                 }),
                 (0, i.jsx)(a.Heading, {
@@ -47,8 +47,8 @@ function g(e) {
                 theme: _.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: I,
-                    tooltipClass: m.tooltip,
-                    tooltipContentClass: m.tooltipContent,
+                    tooltipClass: g.tooltip,
+                    tooltipContentClass: g.tooltipContent,
                     children: (0, i.jsx)(a.ThemeContextProvider, {
                         theme: E,
                         children: (0, i.jsx)(a.BlobMask, {
@@ -59,7 +59,7 @@ function g(e) {
                             children: (0, i.jsx)(a.NavItem, {
                                 ...s,
                                 onClick: p,
-                                onContextMenu: g,
+                                onContextMenu: m,
                                 children: (0, i.jsx)(a.BellIcon, { color: u.Z.TEXT_NORMAL })
                             })
                         })
@@ -78,5 +78,5 @@ function g(e) {
 }
 function C() {
     let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-    return null == e ? null : (0, i.jsx)(g, { target: e });
+    return null == e ? null : (0, i.jsx)(m, { target: e });
 }

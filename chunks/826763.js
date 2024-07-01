@@ -5,20 +5,20 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), l = n(434404), s = n(962086), r = n(303737), o = n(981631), c = n(689938), u = n(45341), d = n(497224);
+var a = n(481060), l = n(434404), s = n(962086), r = n(303737), o = n(981631), c = n(689938), d = n(45341), u = n(497224);
 function h(e) {
     let {guildId: t} = e;
     return (0, i.jsx)('div', {
-        className: u.upsellPage,
+        className: d.upsellPage,
         children: (0, i.jsxs)('div', {
-            className: u.upsellContainer,
+            className: d.upsellContainer,
             children: [
                 (0, i.jsx)('img', {
-                    src: d,
+                    src: u,
                     alt: ''
                 }),
                 (0, i.jsxs)('div', {
-                    className: u.upsellContent,
+                    className: d.upsellContent,
                     children: [
                         (0, i.jsx)(a.Heading, {
                             variant: 'heading-xl/semibold',
@@ -26,7 +26,7 @@ function h(e) {
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
-                            className: u.bodyText,
+                            className: d.bodyText,
                             children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL_UPSELL_BODY
                         }),
                         (0, i.jsx)(a.Button, {
@@ -34,7 +34,7 @@ function h(e) {
                             onClick: () => {
                                 (0, s.mL)(t), l.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, r.GN)(t);
                             },
-                            className: u.__invalid_button,
+                            className: d.__invalid_button,
                             children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL_UPSELL_BUTTON
                         })
                     ]

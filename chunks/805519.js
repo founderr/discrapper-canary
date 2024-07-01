@@ -3,9 +3,9 @@ n.d(t, {
         return h;
     }
 }), n(47120), n(773603);
-var i = n(470079), a = n(442837), l = n(693546), s = n(826581), r = n(937111), o = n(430824), c = n(496675), u = n(709054), d = n(981631);
+var i = n(470079), a = n(442837), l = n(693546), s = n(826581), r = n(937111), o = n(430824), c = n(496675), d = n(709054), u = n(981631);
 function h(e) {
-    let [t, n] = i.useState(!1), [h, p] = i.useState(!1), m = u.default.cast(e), {
+    let [t, n] = i.useState(!1), [h, p] = i.useState(!1), m = d.default.cast(e), {
             joinRequest: _,
             guild: f
         } = (0, a.cj)([
@@ -25,7 +25,7 @@ function h(e) {
             let n = null !== (e = o.Z.getGuild(t.guildId)) && void 0 !== e ? e : r.Z.getJoinRequestGuild(t.guildId);
             return {
                 joinRequest: t,
-                isModmin: null != n && c.Z.can(d.Plq.KICK_MEMBERS, n),
+                isModmin: null != n && c.Z.can(u.Plq.KICK_MEMBERS, n),
                 guild: n
             };
         });
