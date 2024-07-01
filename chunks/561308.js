@@ -42,7 +42,7 @@ e.d(t, {
         return R;
     },
     nB: function () {
-        return g;
+        return G;
     },
     q_: function () {
         return m;
@@ -60,10 +60,10 @@ e.d(t, {
         return M;
     },
     z5: function () {
-        return G;
+        return g;
     }
 }), e(47120);
-var r = e(164369), i = e(913527), u = e.n(i), o = e(884439), E = e(442837), a = e(876215), l = e(835473), T = e(70956), c = e(709054), _ = e(719247), s = e(689938);
+var r = e(164369), i = e(913527), u = e.n(i), o = e(884439), E = e(442837), l = e(876215), a = e(835473), T = e(70956), c = e(709054), _ = e(719247), s = e(689938);
 let d = n => {
         let {
                 start: t,
@@ -95,27 +95,30 @@ let d = n => {
             minutes: i > 0 ? u(r) : r,
             seconds: u(e)
         });
-    }, N = (n, t) => {
-        let e = u()(c.default.extractTimestamp(n.id)), r = e.isSame(u()(), 'day'), i = u()().diff(e, 's');
-        if (i < T.Z.Seconds.MINUTE)
-            return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({ count: i });
-        if (i < T.Z.Seconds.HOUR) {
-            let n = Math.round(i / T.Z.Seconds.MINUTE);
+    }, N = (n, t, e) => {
+        let r = u()(e), i = u()(c.default.extractTimestamp(n.id)), o = i.isSame(r, 'day'), E = r.diff(i, 's');
+        if (E < T.Z.Seconds.MINUTE)
+            return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({ count: E });
+        if (E < T.Z.Seconds.HOUR) {
+            let n = Math.round(E / T.Z.Seconds.MINUTE);
             return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({ count: n });
         }
-        if (i < 6 * T.Z.Seconds.HOUR) {
-            let n = Math.round(i / T.Z.Seconds.HOUR);
+        if (E < 6 * T.Z.Seconds.HOUR) {
+            let n = Math.round(E / T.Z.Seconds.HOUR);
             return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({ count: n });
-        } else if (i < T.Z.Seconds.WEEK && r)
-            return e.toDate().toLocaleTimeString(t, { hour: 'numeric' });
-        else if (i < T.Z.Seconds.WEEK && !r)
-            return e.toDate().toLocaleTimeString(t, {
+        } else if (E < T.Z.Seconds.WEEK && o)
+            return i.toDate().toLocaleTimeString(t, { hour: 'numeric' });
+        else if (E < T.Z.Seconds.WEEK && !o)
+            return i.toDate().toLocaleTimeString(t, {
                 weekday: 'short',
                 hour: 'numeric'
             });
-        let o = Math.round(i / (7 * T.Z.Seconds.DAY));
-        return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({ count: o });
-    }, M = (n, t) => A(n) ? S(n, Date.now()) : N(n, t);
+        let l = Math.round(E / (7 * T.Z.Seconds.DAY));
+        return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({ count: l });
+    }, M = function (n, t) {
+        let e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
+        return A(n) ? S(n, e) : N(n, t, e);
+    };
 function I(n, t) {
     return n.traits.find(n => n.type === t);
 }
@@ -162,7 +165,7 @@ function p(n) {
     });
 }
 function P(n) {
-    return n.content_type === a.s.TOP_GAME;
+    return n.content_type === l.s.TOP_GAME;
 }
 function U(n) {
     var t;
@@ -182,13 +185,13 @@ function h(n) {
     let e = Math.round(t / T.Z.Seconds.HOUR);
     return s.Z.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({ hours: e });
 }
-function G(n) {
+function g(n) {
     var t;
     let e = null !== (t = D(n)) && void 0 !== t ? t : 0;
     return e > 10 * T.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : e > 5 * T.Z.Seconds.HOUR ? s.Z.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : s.Z.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON;
 }
-function g(n) {
-    let t = h(n), e = G(n);
+function G(n) {
+    let t = h(n), e = g(n);
     return null == t ? e : ''.concat(e, ' \u2014 ').concat(t);
 }
 function L(n) {
@@ -196,7 +199,7 @@ function L(n) {
     return null === (t = I(n, o.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
 function y(n) {
-    let t = (0, E.e7)([_.Z], () => _.Z.getMatchingActivity(n)), [e, r] = (0, l.Z)([
+    let t = (0, E.e7)([_.Z], () => _.Z.getMatchingActivity(n)), [e, r] = (0, a.Z)([
             null == t ? void 0 : t.application_id,
             n.extra.application_id
         ]);
