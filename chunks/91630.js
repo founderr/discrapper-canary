@@ -1,77 +1,72 @@
 n.d(t, {
     U: function () {
-        return p;
+        return g;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(657707), r = n(823379), l = n(51448), o = n(164427), c = n(624383), d = n(742916), u = n(860403), _ = n(982345), E = n(49898), h = n(731455), I = n(689938), m = n(432403);
-function p() {
+var i = n(735250), s = n(470079), a = n(657707), r = n(823379), l = n(51448), o = n(164427), c = n(624383), d = n(742916), u = n(860403), _ = n(536763), E = n(982345), h = n(49898), I = n(731455), m = n(689938), p = n(432403);
+function g() {
     let [e, t] = s.useState(''), {
             tabs: n,
-            selectedTab: p,
-            onSelectTab: g
-        } = (0, _.Y)(), T = s.useRef(new d.m()), S = s.useCallback(e => {
+            selectedTab: g,
+            onSelectTab: T
+        } = (0, E.Y)(), S = s.useRef(new d.m()), C = s.useCallback(e => {
             switch (e) {
-            case E.v.GUILDS:
+            case h.v.GUILDS:
                 return (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsx)(c.c, {
-                        title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
-                        description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+                        title: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
+                        description: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
                         backgroundImageUrl: 'https://cdn.discordapp.com/assets/clans/DiscoveryUpsell_Valorant_Background.png'
                     })
                 });
-            case E.v.GAMING:
+            case h.v.GAMING:
                 return (0, i.jsx)(u.j, {
-                    categoryId: h.Gj.Activity,
-                    categoryName: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY
+                    categoryId: I.Gj.Activity,
+                    categoryName: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY
                 });
-            case E.v.MUSIC:
+            case h.v.MUSIC:
                 return (0, i.jsx)(u.j, {
-                    categoryId: h.Gj.Music,
-                    categoryName: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY
+                    categoryId: I.Gj.Music,
+                    categoryName: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY
                 });
-            case E.v.ENTERTAINMENT:
+            case h.v.ENTERTAINMENT:
                 return (0, i.jsx)(u.j, {
-                    categoryId: h.Gj.Television,
-                    categoryName: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY
+                    categoryId: I.Gj.Television,
+                    categoryName: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY
                 });
-            case E.v.TECH:
+            case h.v.TECH:
                 return (0, i.jsx)(u.j, {
-                    categoryId: h.Gj.Science,
-                    categoryName: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY
+                    categoryId: I.Gj.Science,
+                    categoryName: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY
                 });
-            case E.v.EDUCATION:
+            case h.v.EDUCATION:
                 return (0, i.jsx)(u.j, {
-                    categoryId: h.Gj.Education,
-                    categoryName: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY
+                    categoryId: I.Gj.Education,
+                    categoryName: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY
                 });
-            case E.v.HUBS:
-                return (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(c.c, {
-                        title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_TITLE.format({ category: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY }),
-                        description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_DESCRIPTION
-                    })
-                });
+            case h.v.HUBS:
+                return (0, i.jsx)(_.X, {});
             default:
                 (0, r.vE)(e);
             }
         }, []);
     return (0, i.jsxs)('div', {
-        className: m.container,
+        className: p.container,
         children: [
             (0, i.jsx)(l.f, {
                 icon: (0, i.jsx)(a.QTo, {}),
-                title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE,
+                title: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE,
                 tabs: n,
-                selectedTab: p,
-                onTabSelect: g,
+                selectedTab: g,
+                onTabSelect: T,
                 searchQuery: e,
                 onSearch: t,
                 onSearchClear: () => t(''),
-                scrollManager: T
+                scrollManager: S
             }),
             (0, i.jsx)(o.J, {
-                scrollManager: T,
-                children: S(p.id)
+                scrollManager: S,
+                children: C(g.id)
             })
         ]
     });
