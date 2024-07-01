@@ -15,17 +15,18 @@ function m(e) {
             onError: C,
             onClose: j,
             redirectUri: E
-        } = e, [f, p] = r.useState(!1), v = r.useCallback(async e => {
-            let t, {location: n} = e, {
-                    callbackCode: r,
-                    callbackState: s
+        } = e, [v, f] = r.useState(!1), p = r.useCallback(async e => {
+            let t, n, {location: r} = e, {
+                    callbackCode: s,
+                    callbackState: o
                 } = i;
             try {
-                t = await c.Z.completeTwoWayLink(a, n, r, s);
+                t = await c.Z.completeTwoWayLink(a, r, s, o);
             } catch (e) {
-                h.error(''.concat(a, ' link error:'), e);
+                var l;
+                h.error(''.concat(a, ' link error:'), e), n = null === (l = e.body) || void 0 === l ? void 0 : l.code;
             }
-            null != t ? m() : C();
+            null != t ? m() : C(n);
         }, [
             a,
             i,
@@ -34,19 +35,19 @@ function m(e) {
         ]), {
             header: T,
             body: O,
-            appDetails: g,
-            sendAuthorize: R
+            appDetails: b,
+            sendAuthorize: g
         } = (0, d.useOAuth2AuthorizeForm)({
             clientId: t,
             scopes: s,
             responseType: 'code',
-            callback: v,
+            callback: p,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
             redirectUri: E
-        }), b = r.useCallback(() => {
-            o()(null != R, 'sendAuthorize not available'), p(!0), R(!0);
-        }, [R]);
+        }), R = r.useCallback(() => {
+            o()(null != g, 'sendAuthorize not available'), f(!0), g(!0);
+        }, [g]);
     return (0, n.jsxs)('div', {
         className: N.container,
         children: [
@@ -75,7 +76,7 @@ function m(e) {
                         children: [
                             T,
                             O,
-                            g
+                            b
                         ]
                     }),
                     (0, n.jsx)(l.ModalFooter, {
@@ -83,8 +84,8 @@ function m(e) {
                         children: (0, n.jsx)(l.Button, {
                             className: N.footerButton,
                             color: l.Button.Colors.BRAND,
-                            submitting: f,
-                            onClick: b,
+                            submitting: v,
+                            onClick: R,
                             children: x.Z.Messages.AUTHORIZE_AND_CONTINUE
                         })
                     })
