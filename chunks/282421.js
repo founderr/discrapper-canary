@@ -10,7 +10,7 @@ let i = (0, n(818083).B)({
     defaultConfig: { enabled: !1 },
     treatments: [{
             id: 1,
-            label: 'Enable Quest Home in the Friends List',
+            label: 'Enable Quest Home in Discovery',
             config: { enabled: !0 }
         }]
 });
