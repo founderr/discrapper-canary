@@ -6,9 +6,9 @@ n.d(t, {
         return i;
     }
 });
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060);
+var s = n(481060);
 let a = 'collectibles shop product details modal', o = e => {
         let {
             product: t,
@@ -17,9 +17,9 @@ let a = 'collectibles shop product details modal', o = e => {
             analyticsLocations: l,
             returnRef: c
         } = e;
-        (0, r.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
             let {default: e} = await n.e('2026').then(n.bind(n, 702370));
-            return n => (0, s.jsx)(e, {
+            return n => (0, r.jsx)(e, {
                 ...n,
                 product: t,
                 category: o,
@@ -29,5 +29,5 @@ let a = 'collectibles shop product details modal', o = e => {
             });
         }, { modalKey: a });
     }, i = () => {
-        (0, r.closeModal)(a);
+        (0, s.closeModal)(a);
     };

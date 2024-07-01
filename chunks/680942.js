@@ -1,4 +1,4 @@
-var s = n(735250), r = n(470079), a = n(481060), o = n(727637), i = n(906732), l = n(241553), c = n(333867), d = n(884697), u = n(231338), p = n(689938), g = n(521746);
+var r = n(735250), s = n(470079), a = n(481060), o = n(727637), i = n(906732), l = n(241553), c = n(333867), d = n(884697), u = n(231338), p = n(689938), g = n(521746);
 let f = {
     dark: [
         {
@@ -69,11 +69,11 @@ t.Z = e => {
             tooltipDelay: m,
             isGiftEasterEggEnabled: h,
             disableCustomColor: _ = !1
-        } = e, {analyticsLocations: b} = (0, i.ZP)(), x = r.useRef(null), E = (0, o.Z)(x), I = _ ? u.BR.DARK : u.BR.LIGHT;
-    return (0, d.x6)(t) ? null : (0, s.jsx)(a.Tooltip, {
+        } = e, {analyticsLocations: b} = (0, i.ZP)(), x = s.useRef(null), I = (0, o.Z)(x), E = _ ? u.BR.DARK : u.BR.LIGHT;
+    return (0, d.x6)(t) ? null : (0, r.jsx)(a.Tooltip, {
         text: p.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
         delay: m,
-        children: e => (0, s.jsx)(a.Button, {
+        children: e => (0, r.jsx)(a.Button, {
             ...e,
             buttonRef: x,
             className: g.giftButton,
@@ -93,12 +93,12 @@ t.Z = e => {
                     } : void 0
                 });
             },
-            children: h ? (0, s.jsx)(l.e, {
-                hovered: E,
+            children: h ? (0, r.jsx)(l.e, {
+                hovered: I,
                 isContentDismissed: !0,
-                themeOverride: I,
+                themeOverride: E,
                 boxColors: f
-            }) : (0, s.jsx)(a.GiftIcon, {
+            }) : (0, r.jsx)(a.GiftIcon, {
                 size: 'md',
                 color: 'currentColor'
             })

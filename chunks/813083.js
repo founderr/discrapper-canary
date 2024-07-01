@@ -1,14 +1,14 @@
 n(627341);
-var s, r, a = n(735250);
+var r, s, a = n(735250);
 n(470079);
 var o = n(120356), i = n.n(o), l = n(278074), c = n(780384), d = n(481060), u = n(410030), p = n(884697), g = n(689938), f = n(833417);
-(r = s || (s = {})).BANNER = 'banner', r.MODAL = 'modal', r.CARD = 'card';
+(s = r || (r = {})).BANNER = 'banner', s.MODAL = 'modal', s.CARD = 'card';
 t.Z = e => {
     let {
             category: t,
             display: n,
-            className: s
-        } = e, r = (0, u.ZP)();
+            className: r
+        } = e, s = (0, u.ZP)();
     if (null == t.unpublishedAt)
         return null;
     let o = (0, p.OT)(t.unpublishedAt);
@@ -16,7 +16,7 @@ t.Z = e => {
         return (0, a.jsx)(d.TextBadge, {
             disableColor: !0,
             text: e,
-            className: i()((0, c.wj)(r) ? f.badgeDark : f.badgeLight, s)
+            className: i()((0, c.wj)(s) ? f.badgeDark : f.badgeLight, r)
         });
     }
     return (0, l.EQ)([

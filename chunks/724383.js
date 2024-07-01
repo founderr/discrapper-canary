@@ -5,20 +5,20 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(252618), a = n(823379), r = n(976076), l = n(626426), o = n(916177), c = n(91630), d = n(754420), u = n(49898), _ = n(689938), E = n(738014);
+var s = n(252618), a = n(121711), r = n(823379), l = n(976076), o = n(626426), c = n(91630), d = n(754420), u = n(49898), _ = n(689938), E = n(738014);
 function h() {
-    let e = (0, r.Z)(), t = function (e) {
+    let e = (0, l.Z)(), t = function (e) {
             switch (e) {
             case u.S.SERVERS:
                 return (0, i.jsx)(c.U, {});
             case u.S.APPS:
-                return (0, i.jsx)(l.z, {});
+                return (0, i.jsx)(o.z, {});
             case u.S.QUESTS:
-                return (0, i.jsx)(o.K, {});
+                return (0, i.jsx)(a.Z, {});
             case u.S.SHOP:
                 return (0, i.jsx)(d.t, {});
             default:
-                (0, a.vE)(e);
+                (0, r.vE)(e);
             }
         }(e);
     return (0, i.jsxs)('section', {
@@ -36,7 +36,7 @@ function h() {
                     case u.S.SHOP:
                         return _.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE;
                     default:
-                        (0, a.vE)(e);
+                        (0, r.vE)(e);
                     }
                 }(e)
             }),

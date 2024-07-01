@@ -18,7 +18,7 @@ n.d(t, {
 var r = n(987170), i = n(987338);
 let a = (0, r.Z)({
         kind: 'user',
-        id: '2024-06_ctp_open_user_settings_vanilla',
+        id: '2024-07_ctp_open_user_settings_vanilla',
         label: 'CTP open user settings - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
         commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
@@ -29,7 +29,7 @@ let a = (0, r.Z)({
             }]
     }), o = (0, r.Z)({
         kind: 'user',
-        id: '2024-06_ctp_open_user_settings_filters',
+        id: '2024-07_ctp_open_user_settings_filters',
         label: 'CTP open user settings - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
         commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
@@ -40,7 +40,7 @@ let a = (0, r.Z)({
             }]
     }), s = (0, r.Z)({
         kind: 'user',
-        id: '2024-06_ctp_open_user_settings_multiple_buckets',
+        id: '2024-07_ctp_open_user_settings_multiple_buckets',
         label: 'CTP open user settings - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
         commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
@@ -58,7 +58,7 @@ let a = (0, r.Z)({
         ]
     }), l = (0, r.Z)({
         kind: 'user',
-        id: '2024-06_ctp_open_user_settings_everyone',
+        id: '2024-07_ctp_open_user_settings_everyone',
         label: 'CTP open user settings - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
         commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,
@@ -69,7 +69,7 @@ let a = (0, r.Z)({
             }]
     }), u = (0, r.Z)({
         kind: 'user',
-        id: '2024-06_ctp_open_user_settings_uneven_buckets',
+        id: '2024-07_ctp_open_user_settings_uneven_buckets',
         label: 'CTP open user settings - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
         commonTriggerPoint: i.$P.OPEN_USER_SETTINGS,

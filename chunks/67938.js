@@ -3,26 +3,26 @@ n.d(t, {
         return h;
     }
 });
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(120356), a = n.n(r), o = n(442837), i = n(481060), l = n(607070), c = n(873268), d = n(196798), u = n(660348), p = n(872044), g = n(671581), f = n(830487), C = n(602476);
+var s = n(120356), a = n.n(s), o = n(442837), i = n(481060), l = n(607070), c = n(873268), d = n(196798), u = n(660348), p = n(872044), g = n(671581), f = n(830487), C = n(602476);
 function m() {
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: c.attributionLogos,
         'aria-label': 'Discord x Pocketpair',
         children: [
-            (0, s.jsx)(i.ClydeIcon, {
+            (0, r.jsx)(i.ClydeIcon, {
                 size: 'custom',
                 color: 'currentColor',
                 height: 22,
                 'aria-hidden': !0
             }),
-            (0, s.jsx)(i.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'heading-sm/extrabold',
                 tag: 'div',
                 children: '|'
             }),
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: u,
                 alt: '',
                 'aria-hidden': !0
@@ -32,46 +32,46 @@ function m() {
 }
 function h(e) {
     let {category: t} = e, n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion);
-    return (0, s.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: a()(c.banner),
         'aria-label': t.name,
         children: [
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: c.mainContent,
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, r.jsx)('img', {
                         src: p,
                         className: c.bannerImage,
                         alt: t.name,
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(m, {}),
-                    (0, s.jsx)('img', {
+                    (0, r.jsx)(m, {}),
+                    (0, r.jsx)('img', {
                         src: g,
                         className: c.categoryLogo,
                         alt: t.name,
                         'aria-hidden': !0
                     }),
-                    !n && (0, s.jsx)('img', {
+                    !n && (0, r.jsx)('img', {
                         src: d,
                         className: c.animatedLayer,
                         alt: '',
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, r.jsx)(i.Text, {
                         className: c.summary,
                         variant: 'text-md/normal',
                         children: t.summary
                     })
                 ]
             }),
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: C,
                 className: a()(c.overflowImage, c.overflowRight),
                 alt: '',
                 'aria-hidden': !0
             }),
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: f,
                 className: a()(c.overflowImage, c.overflowLeft),
                 alt: '',

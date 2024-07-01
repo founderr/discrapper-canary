@@ -3,33 +3,33 @@ n.d(t, {
         return _;
     }
 }), n(653041);
-var s = n(735250), r = n(470079), a = n(120356), o = n.n(a), i = n(920906), l = n(873546), c = n(399606), d = n(481060), u = n(774078), p = n(607070), g = n(689938), f = n(698032), C = n(493978), m = n(932135);
+var r = n(735250), s = n(470079), a = n(120356), o = n.n(a), i = n(920906), l = n(873546), c = n(399606), d = n(481060), u = n(774078), p = n(607070), g = n(689938), f = n(698032), C = n(493978), m = n(932135);
 function h(e) {
     let {endDate: t} = e, {
             days: n,
-            hours: r,
+            hours: s,
             minutes: a,
             seconds: o
-        } = (0, u.Z)(t), i = function (e, t, n, s) {
-            let r = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t), a = [];
-            return e > 0 && a.push(r(e, g.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(r(t, g.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(r(n, g.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(r(s, g.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
-        }(n, r, a, o);
-    return (0, s.jsx)(d.Text, {
+        } = (0, u.Z)(t), i = function (e, t, n, r) {
+            let s = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t), a = [];
+            return e > 0 && a.push(s(e, g.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(s(t, g.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(s(n, g.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(s(r, g.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
+        }(n, s, a, o);
+    return (0, r.jsx)(d.Text, {
         variant: 'heading-md/medium',
         className: f.countdown,
         tag: 'div',
-        children: (0, s.jsx)('div', {
+        children: (0, r.jsx)('div', {
             role: 'timer',
             'aria-relevant': 'all',
             children: i
         })
     });
 }
-let _ = r.memo(function (e) {
+let _ = s.memo(function (e) {
     let {
             unpublishedAt: t,
             isVisible: n,
-            displayOptions: r,
+            displayOptions: s,
             isFullScreen: a
         } = e, u = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), g = (0, i.useSpring)({
             transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
@@ -40,7 +40,7 @@ let _ = r.memo(function (e) {
             },
             immediate: u
         });
-    return (0, s.jsxs)(i.animated.div, {
+    return (0, r.jsxs)(i.animated.div, {
         className: o()([
             f.countDownWrapper,
             a && f.fullScreenWrapper,
@@ -48,29 +48,29 @@ let _ = r.memo(function (e) {
         ]),
         role: 'status',
         style: {
-            ...r.style,
+            ...s.style,
             ...g
         },
         children: [
-            (0, s.jsx)(d.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: 'text-md/medium',
                 className: f.countdownLabel,
-                children: r.label()
+                children: s.label()
             }),
-            null != r.iconSrc && (0, s.jsx)('img', {
-                src: r.iconSrc,
+            null != s.iconSrc && (0, r.jsx)('img', {
+                src: s.iconSrc,
                 className: f.countdownIcon,
                 alt: '',
                 'aria-hidden': !0
             }),
-            (0, s.jsx)(h, { endDate: t }),
-            (0, s.jsx)('img', {
+            (0, r.jsx)(h, { endDate: t }),
+            (0, r.jsx)('img', {
                 src: C,
                 className: o()(f.sparkles, f.left),
                 alt: '',
                 'aria-hidden': !0
             }),
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: m,
                 className: o()(f.sparkles, f.right),
                 alt: '',

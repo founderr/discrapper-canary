@@ -1,9 +1,9 @@
 n.d(t, {
     n: function () {
-        return r;
+        return s;
     }
 });
-let s = (0, n(818083).B)({
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-04_collectibles_unified_product_catalog',
         label: 'Collectibles Unified Product Catalog',
@@ -13,4 +13,4 @@ let s = (0, n(818083).B)({
                 label: 'Enables the unified product catalog in the Shop',
                 config: { unifiedProductCatalogEnabled: !0 }
             }]
-    }), r = e => s.useExperiment({ location: e });
+    }), s = e => r.useExperiment({ location: e });
