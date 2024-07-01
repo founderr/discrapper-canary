@@ -55,7 +55,7 @@ class l {
 function o(e, t, n) {
     return new i(n(e, { ...t }));
 }
-t.ZP = {
+t.Z = {
     ...s.Z,
     timing: function (e, t) {
         return o(e, t, s.Z.timing);
