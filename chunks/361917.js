@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return k;
+        return B;
     }
 }), t(47120), t(653041);
 var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(892814), o = t(79411), c = t(442837), u = t(481060), d = t(911969), m = t(867176), p = t(566620), _ = t(127255), E = t(880308), A = t(367907), N = t(399654), h = t(844439), C = t(10718), f = t(895924), I = t(148958), x = t(424602), P = t(541099), v = t(827498), g = t(87005), T = t(695676), M = t(98880), L = t(804307), R = t(561160), S = t(41558), O = t(105862), j = t(28147), b = t(981631), y = t(689079), Z = t(689938), H = t(584915);
-let U = [], D = Array(8).fill(0).map((e, n) => n), B = [
+let U = [], D = Array(8).fill(0).map((e, n) => n), k = [
         {
             cards: [
                 ,
@@ -28,7 +28,7 @@ let U = [], D = Array(8).fill(0).map((e, n) => n), B = [
             look: M.U4.NO_BANNER
         }
     ];
-function k(e) {
+function B(e) {
     let {
             channel: n,
             entrypoint: t,
@@ -219,7 +219,7 @@ function F(e) {
     let a = (0, _.Z)({
             guildId: n.getGuildId(),
             channel: n
-        }), r = M.U4.LARGE_BANNER, {clickOnHomeActivityOpensAppDetail: s} = x.m1.getCurrentConfig({ location: 'ActivitiesShelfSection' }, { autoTrackExposure: !1 }), o = l.useMemo(() => s ? M.kA : M.qR, [s]);
+        }), r = M.U4.LARGE_BANNER, {clickOnHomeActivityOpensAppDetail: s} = x.m1.getCurrentConfig({ location: 'ActivitiesShelfSection' }, { autoTrackExposure: !1 });
     return (l.useEffect(() => {
         t(0 === a.length);
     }, [
@@ -232,12 +232,13 @@ function F(e) {
                 className: H.sectionContentContainer,
                 children: a.map(e => {
                     let {application: t} = e;
-                    return (0, i.jsx)(o, {
+                    return (0, i.jsx)(M.qR, {
                         channel: n,
                         application: t,
                         look: r,
                         location: f.Vh.APP_LAUNCHER_HOME,
-                        sectionName: v.L3.ACTIVITIES
+                        sectionName: v.L3.ACTIVITIES,
+                        isOneClickCTA: !s
                     }, t.id);
                 })
             })
@@ -371,7 +372,7 @@ function Y(e) {
         t,
         r.length
     ]), (0, i.jsx)(i.Fragment, {
-        children: a === h.M.FETCHING ? B.map((e, n) => {
+        children: a === h.M.FETCHING ? k.map((e, n) => {
             let {
                 cards: t,
                 look: l

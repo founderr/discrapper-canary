@@ -188,22 +188,30 @@ function j(e) {
         application: t,
         location: i,
         sectionName: l,
-        ...r
+        isOneClickCTA: r,
+        ...s
     } = e;
     if (!(0, h.BQ)(t))
         throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
     let {
-        onActivityItemSelected: s,
-        activityAction: o,
-        buttonColor: d,
-        buttonText: m
+        onActivityItemSelected: o,
+        activityAction: d,
+        buttonColor: m,
+        buttonText: p
     } = (0, f.P)(n, t, i, l);
-    return o === u.JS.START ? (0, a.jsx)(T, {
-        ...r,
-        application: t,
-        onClick: s
-    }) : (0, a.jsx)(T, {
-        ...r,
+    if (d === u.JS.START)
+        return r ? (0, a.jsx)(T, {
+            ...s,
+            application: t,
+            onClick: o
+        }) : (0, a.jsx)(O, {
+            ...s,
+            application: t,
+            location: i,
+            sectionName: l
+        });
+    return (0, a.jsx)(T, {
+        ...s,
         application: t,
         onClick: e => {
             e.stopPropagation();
@@ -215,10 +223,10 @@ function j(e) {
                 className: g.voiceLauncherAppCardButton,
                 type: 'submit',
                 size: c.Button.Sizes.LARGE,
-                color: d,
+                color: m,
                 disabled: !1,
-                onClick: s,
-                children: m
+                onClick: o,
+                children: p
             })
         })
     });

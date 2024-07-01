@@ -12,10 +12,7 @@ function p(e) {
             look: _,
             items: E,
             sectionName: A
-        } = e, {clickOnHomeActivityOpensAppDetail: N} = s.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }), h = l.useMemo(() => t === o._b.TEXT || N ? c.kA : c.qR, [
-            N,
-            t
-        ]);
+        } = e, {clickOnHomeActivityOpensAppDetail: N} = s.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }), h = l.useMemo(() => t === o._b.TEXT ? c.kA : c.qR, [t]);
     return (0, i.jsxs)('section', {
         className: m.container,
         'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({ sectionTitle: p }),
@@ -45,7 +42,8 @@ function p(e) {
                             look: _,
                             isPartner: l,
                             sectionName: A,
-                            location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL
+                            location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
+                            isOneClickCTA: N
                         }, t.id);
                     })
                 })
