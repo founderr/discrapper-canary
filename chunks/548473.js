@@ -33,21 +33,21 @@ function F(a) {
     ]), x;
 }
 function g() {
-    let a = (0, m.e7)([p.Z], () => p.Z.useReducedMotion), i = F(A);
+    let a = F(A);
     return (0, k.jsx)('div', {
-        className: t()(b.leftArt, { [b.altFloat]: !a }),
+        className: t()(b.leftArt, b.altFloat),
         children: (0, k.jsx)('div', {
-            ref: i,
+            ref: a,
             className: b.grillingIsland
         })
     });
 }
 function S() {
-    let a = (0, m.e7)([p.Z], () => p.Z.useReducedMotion), i = F(D);
+    let a = F(D);
     return (0, k.jsx)('div', {
-        className: t()(b.rightArt, { [b.altFloat]: !a }),
+        className: t()(b.rightArt, b.altFloat),
         children: (0, k.jsx)('div', {
-            ref: i,
+            ref: a,
             className: b.waffleIsland
         })
     });
@@ -87,7 +87,7 @@ function v(a) {
         e,
         o
     ]), (0, k.jsxs)('div', {
-        className: t()(b.centerArt, { [b.float]: !o }),
+        className: t()(b.centerArt, b.float),
         children: [
             (0, k.jsx)('div', {
                 className: t()(b.balloonDog, s),

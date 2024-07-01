@@ -3,7 +3,6 @@ e.exports = {
     flexContainer: 'flexContainer_b5926e',
     educationUpsellRoot: 'educationUpsellRoot_b5926e',
     wumpus: 'wumpus_b5926e',
-    animated: 'animated_b5926e',
     educationUpsell: 'educationUpsell_b5926e',
     educationUpsellArrow: 'educationUpsellArrow_b5926e',
     actions: 'actions_b5926e',

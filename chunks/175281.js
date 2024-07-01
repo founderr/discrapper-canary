@@ -327,7 +327,13 @@ function j(e) {
     let {
             transitionState: t,
             onClose: n
-        } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, g.Rv)(), []), c = (0, _.e7)([E.Z], () => E.Z.keyboardModeEnabled);
+        } = e, [i, l] = a.useState(!1), s = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, g.Rv)(), []), {
+            keyboardModeEnabled: c,
+            useReducedMotion: u
+        } = (0, _.cj)([E.Z], () => ({
+            keyboardModeEnabled: E.Z.keyboardModeEnabled,
+            useReducedMotion: E.Z.useReducedMotion
+        }));
     return (0, r.jsx)(m.ModalRoot, {
         className: o()(T.noBackground, { [T.noShadow]: i }),
         size: m.ModalSize.DYNAMIC,
@@ -339,7 +345,7 @@ function j(e) {
                 content: s,
                 keyboardModeEnabled: c,
                 activateRagingDemon: function () {
-                    I.Z.disable(), l(!0);
+                    !u && (I.Z.disable(), l(!0));
                 }
             }, 'modal')
         })
