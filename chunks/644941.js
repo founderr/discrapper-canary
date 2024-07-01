@@ -109,7 +109,6 @@ let Z = 'GameProfileModal', C = e => {
                 let a = Date.now(), n = en.map(e => {
                         let l = (0, v.kr)(e) ? (0, v.T_)(e, a) : (0, v.GL)(e, Y);
                         return JSON.stringify({
-                            user_id: e.author_id,
                             item_id: e.id,
                             trait: e.traits,
                             time_played: l
@@ -119,7 +118,8 @@ let Z = 'GameProfileModal', C = e => {
                     viewId: Q,
                     applicationId: c,
                     gameName: null !== (l = null !== (e = null == es ? void 0 : es.name) && void 0 !== e ? e : null == et ? void 0 : et.name) && void 0 !== l ? l : '',
-                    playedFriends: n,
+                    playedFriendIds: en.map(e => e.author_id),
+                    playedFriendsData: n,
                     similarGames: F(el.current)
                 });
             };

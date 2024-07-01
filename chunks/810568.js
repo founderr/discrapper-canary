@@ -41,15 +41,17 @@ let _ = () => (0, s.Z)(), E = e => {
             viewId: t,
             gameName: n,
             applicationId: r,
-            playedFriends: i,
-            similarGames: a
+            playedFriendIds: i,
+            playedFriendsData: a,
+            similarGames: o
         } = e;
         u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
             game_name: n,
             application_id: r,
-            played_friends: i,
-            similar_games: a,
+            played_friend_ids: i,
+            played_friends_data: a,
+            similar_games: o,
             request_id: l.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)
         });
     }, h = e => {
