@@ -4,10 +4,10 @@ n.d(t, {
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(664751), o = n(442837), c = n(481060), d = n(212093), u = n(703656), _ = n(683301), E = n(671533), h = n(900849), I = n(119317), m = n(749436), g = n(650394), p = n(731455), T = n(689938), S = n(178698);
-let C = 12, N = () => {
+let C = 12, f = () => {
         let e = (0, u.s1)().location.search;
         return null != e && e.length > 0 && e.startsWith('?') ? l.parse(e) : {};
-    }, f = e => {
+    }, N = e => {
         let {
                 categoryId: t,
                 categoryName: n,
@@ -49,8 +49,8 @@ t.Z = e => {
             defaultLanguage: l,
             availableLanguages: u,
             isFetchingSearch: Z,
-            scroller: L,
-            loadingGuildId: v,
+            scroller: v,
+            loadingGuildId: L,
             theme: O,
             currentCategoryId: R,
             currentCategoryName: x,
@@ -62,7 +62,7 @@ t.Z = e => {
             guilds: j,
             loading: U,
             total: G
-        } = n, [w, k] = s.useState(!1), {tag: B} = N(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
+        } = n, [w, k] = s.useState(!1), {tag: B} = f(), [H, V] = s.useState(B), F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()), Y = (e, t, n) => {
             d.bR(a, {
                 categoryId: n ? p.Hk : R,
                 preferredLocale: l.code,
@@ -71,13 +71,13 @@ t.Z = e => {
                 filters: { approximate_member_count: h.sq }
             }), k(!1);
         }, W = () => {
-            null == L || L.scrollTo({ to: 0 });
+            null == v || v.scrollTo({ to: 0 });
         };
     s.useEffect(() => {
         let {
                 offset: e,
                 tag: t
-            } = N(), n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
+            } = f(), n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
         V(!!t), 1 === n && k(!0);
     }, [a]);
     let z = R === p.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -121,7 +121,7 @@ t.Z = e => {
                 currentCategoryId: R,
                 isTagSearch: H
             }),
-            F ? (0, i.jsx)(A, {}) : G <= 0 ? (0, i.jsx)(f, {
+            F ? (0, i.jsx)(A, {}) : G <= 0 ? (0, i.jsx)(N, {
                 categoryId: R,
                 categoryName: x,
                 onClick: () => {
@@ -146,7 +146,7 @@ t.Z = e => {
                                     loading: U,
                                     loadingPlaceholderCount: C,
                                     onViewGuild: P,
-                                    loadingGuildId: v,
+                                    loadingGuildId: L,
                                     theme: O,
                                     analyticsContext: h.P1.SEARCH,
                                     onGuildCardSeen: b,

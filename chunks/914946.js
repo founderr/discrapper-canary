@@ -51,14 +51,14 @@ n.d(t, {
         return F;
     }
 }), n(47120), n(653041), n(411104), n(757143), n(392711);
-var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), E = n(695346), h = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), C = n(594174), N = n(979651), f = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
+var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), E = n(695346), h = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), C = n(594174), f = n(979651), N = n(70956), A = n(5192), Z = n(226951), v = n(996106), L = n(863141), O = n(186901), R = n(981631);
 let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost', P = function () {
         let e = x.split(':')[0];
         if (!e.includes('.'))
             return e;
         let t = e.split('.'), n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
-    }(), b = new RegExp('^'.concat(Z.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(Z.Z.escape(P), '|discordapp.com|discord.com)$')), M = 1 * f.Z.Millis.MINUTE, D = {};
+    }(), b = new RegExp('^'.concat(Z.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(Z.Z.escape(P), '|discordapp.com|discord.com)$')), M = 1 * N.Z.Millis.MINUTE, D = {};
 function y(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = j(e.src)), Array.isArray(e.content) && (e.content = e.content.map(y)), e;
 }
@@ -81,7 +81,7 @@ function G(e, t) {
         });
     })), Promise.all(n).then(() => {
         var n;
-        let s = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [], a = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
+        let s = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [], a = Object.values(f.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
         return {
             id: e.id,
             name: e.name,
@@ -142,14 +142,14 @@ function k(e, t, n) {
             self_deaf: r,
             suppress: l
         },
-        user: (0, v.Z)(c)
+        user: (0, L.Z)(c)
     };
 }
 function B(e, t, n) {
     let i = C.default.getUser(t);
     return {
         type: e,
-        user: null != i ? (0, v.Z)(i) : null,
+        user: null != i ? (0, L.Z)(i) : null,
         presence: {
             status: S.Z.getStatus(t),
             activity: null != n ? S.Z.getApplicationActivity(t, n) : S.Z.getPrimaryActivity(t)
@@ -217,9 +217,9 @@ function z(e, t, n) {
             if (e.transport === O.He.POST_MESSAGE) {
                 let e = (0, d.Z)(t);
                 if (null == e || !U(n, [e]))
-                    throw new L.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    throw new v.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
             } else if (!U(n, s))
-                throw new L.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                throw new v.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         }
         e.application = {
             id: a,
@@ -229,7 +229,7 @@ function z(e, t, n) {
             flags: c
         };
     }, () => {
-        throw new L.Z({ closeCode: R.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+        throw new v.Z({ closeCode: R.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
     });
 }
 async function K(e, t) {
@@ -286,10 +286,10 @@ function X(e, t) {
 }
 function J(e) {
     if (e !== O.He.POST_MESSAGE)
-        throw new L.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+        throw new v.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
     if (null == e.id)
-        throw new L.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');
+        throw new v.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

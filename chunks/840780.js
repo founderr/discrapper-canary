@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(442837), u = n(704215), d = n(692547), h = n(481060), p = n(988298), _ = n(475179), f = n(925549), g = n(872810), m = n(438139), C = n(730749), I = n(607070), E = n(566620), N = n(317381), x = n(620662), S = n(835473), Z = n(67212), v = n(757454), T = n(552740), L = n(933557), A = n(311352), b = n(730417), M = n(524347), R = n(853197), y = n(616360), O = n(858064), P = n(594190), j = n(569545), D = n(382182), U = n(74299), G = n(914923), w = n(165393), k = n(989941), B = n(803647), V = n(231664), H = n(759198), F = n(131704), W = n(199902), Y = n(314897), z = n(592125), K = n(984933), q = n(430824), Q = n(131951), J = n(496675), X = n(158776), $ = n(699516), ee = n(944486), et = n(885110), en = n(594174), ei = n(449224), el = n(366695), er = n(672752), ea = n(499150), es = n(976401), eo = n(333454), ec = n(864441), eu = n(368666), ed = n(626135), eh = n(358085), ep = n(793224), e_ = n(978769), ef = n(981631), eg = n(918559), em = n(702512), eC = n(689938), eI = n(115851);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(512722), o = n.n(s), c = n(442837), u = n(704215), d = n(692547), h = n(481060), p = n(988298), _ = n(475179), f = n(925549), m = n(872810), g = n(438139), C = n(730749), I = n(607070), E = n(566620), N = n(317381), x = n(620662), S = n(835473), v = n(67212), Z = n(757454), T = n(552740), L = n(933557), A = n(311352), b = n(730417), M = n(524347), R = n(853197), O = n(616360), y = n(858064), P = n(594190), j = n(569545), D = n(382182), U = n(74299), G = n(914923), w = n(165393), k = n(989941), B = n(803647), V = n(231664), H = n(759198), F = n(131704), W = n(199902), Y = n(314897), z = n(592125), K = n(984933), q = n(430824), Q = n(131951), J = n(496675), X = n(158776), $ = n(699516), ee = n(944486), et = n(885110), en = n(594174), ei = n(449224), el = n(366695), er = n(672752), ea = n(499150), es = n(976401), eo = n(333454), ec = n(864441), eu = n(368666), ed = n(626135), eh = n(358085), ep = n(793224), e_ = n(978769), ef = n(981631), em = n(918559), eg = n(702512), eC = n(689938), eI = n(115851);
 function eE(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -8,7 +8,7 @@ function eE(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let eN = (0, m.Z)(function (e) {
+let eN = (0, g.Z)(function (e) {
     let {message: t} = e;
     return (0, i.jsx)(eo.Z, { children: t });
 });
@@ -67,7 +67,7 @@ class ex extends l.PureComponent {
             position: 'top',
             align: 'center',
             onRequestClose: l,
-            renderPopout: () => (0, i.jsx)(O.Z, {
+            renderPopout: () => (0, i.jsx)(y.Z, {
                 partnerGame: t,
                 tooltipAction: e,
                 onClose: l
@@ -79,7 +79,7 @@ class ex extends l.PureComponent {
                         'aria-label': eC.Z.Messages.DROPS_ENABLED,
                         tooltipText: n ? null : eC.Z.Messages.DROPS_ENABLED,
                         onClick: this.handleClickDropsButton,
-                        icon: y.Z
+                        icon: O.Z
                     })
                 ]
             })
@@ -310,10 +310,10 @@ class ex extends l.PureComponent {
                     channel: t,
                     runningGame: n
                 } = this.props, i = null != t && (0, F.vd)(t.type) ? t : null;
-            null != i && null != n && (null == e ? (0, g.tE)({
+            null != i && null != n && (null == e ? (0, m.tE)({
                 channelId: i.id,
                 pid: n.pid
-            }) : (0, Z.v$)((0, j.V9)(e), n.pid));
+            }) : (0, v.v$)((0, j.V9)(e), n.pid));
         }), eE(this, 'handleClickGoLiveButton', () => {
             let {
                     guildId: e,
@@ -393,7 +393,7 @@ class ex extends l.PureComponent {
                 channel: t,
                 embeddedActivity: n
             } = this.props;
-            o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, F.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, F.Qm)(t.type) && (0, E.tg)(eg.Ez.PANEL);
+            o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, F.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ef.ME, t.id), (0, F.Qm)(t.type) && (0, E.tg)(em.Ez.PANEL);
         });
     }
 }
@@ -411,11 +411,11 @@ t.Z = (0, C.Z)(function (e) {
         ], () => z.Z.getChannel(ee.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([z.Z], () => z.Z.getChannel(o)), h = (0, c.e7)([q.Z], () => q.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([W.Z], () => [
             W.Z.getCurrentUserActiveStream(),
             W.Z.getStreamerActiveStreamMetadata()
-        ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([M.Z], () => M.Z.getActivityPanelTooltipAction()), {
-            partnerGame: m,
+        ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), m = (0, c.e7)([M.Z], () => M.Z.getActivityPanelTooltipAction()), {
+            partnerGame: g,
             dropsActivityPanelExperienceBlocked: C,
             showDropsSparkles: E
-        } = (0, b.c)(em.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), Z = (0, c.e7)([
+        } = (0, b.c)(eg.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), v = (0, c.e7)([
             q.Z,
             J.Z,
             K.ZP
@@ -426,7 +426,7 @@ t.Z = (0, C.Z)(function (e) {
                     return a.id;
                 if (null != x)
                     return x.applicationId;
-            }()) && void 0 !== t ? t : '']), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), y = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, O = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, v.Z)() && null != a, G = (0, c.e7)([
+            }()) && void 0 !== t ? t : '']), A = (0, c.e7)([Q.Z], () => (0, U.Z)(Q.Z) && (0, eh.isWindows)()), R = (0, c.e7)([X.Z], () => null != r ? X.Z.findActivity(r, e => e.type === ef.IIU.PLAYING) : null), O = null != p && p.ownerId === r && p.state !== ef.jm8.ENDED, y = (0, c.e7)([et.Z], () => et.Z.getBroadcast()), j = (0, Z.Z)() && null != a, G = (0, c.e7)([
             en.default,
             $.Z
         ], () => null != d ? (0, L.F6)(d, en.default, $.Z) : void 0), w = (0, V.Z)(null == s ? void 0 : s.id, r);
@@ -437,19 +437,19 @@ t.Z = (0, C.Z)(function (e) {
         activity: R,
         embeddedActivity: x,
         showDropsSparkles: E,
-        dropsPartnerGame: m,
+        dropsPartnerGame: g,
         dropsActivityPanelExperienceBlocked: C,
         userId: r,
         runningGame: a,
         application: T,
         useReducedMotion: f,
-        isStreaming: y,
+        isStreaming: O,
         channel: d,
-        canStream: Z,
-        dropsTooltipAction: g,
+        canStream: v,
+        dropsTooltipAction: m,
         stream: p,
         streamMetadata: _,
-        broadcast: O,
+        broadcast: y,
         canStartBroadcast: j,
         channelName: G,
         guildForConnectedChannel: h,

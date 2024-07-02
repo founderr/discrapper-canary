@@ -3,13 +3,13 @@ n.d(t, {
         return S;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(974674), r = n(481060), o = n(420660), c = n(100527), d = n(906732), u = n(233440), h = n(199902), p = n(158776), m = n(998502), _ = n(785717), f = n(204197), E = n(78675), C = n(438163), g = n(652853), I = n(228168), x = n(981631), T = n(739116);
-let N = m.ZP.getEnableHardwareAcceleration() ? s.Xo : s.qE, v = r.AvatarSizes.SIZE_80;
+var i = n(735250), a = n(470079), s = n(442837), l = n(974674), r = n(481060), o = n(420660), c = n(100527), d = n(906732), u = n(233440), h = n(199902), p = n(158776), m = n(998502), _ = n(785717), f = n(204197), E = n(78675), C = n(438163), g = n(652853), I = n(228168), x = n(981631), T = n(739116);
+let N = m.ZP.getEnableHardwareAcceleration() ? l.Xo : l.qE, v = r.AvatarSizes.SIZE_80;
 function S(e) {
     let {
             user: t,
             displayProfile: n,
-            channel: s,
+            channel: l,
             isHovering: m,
             onOpenProfile: S
         } = e, {theme: Z} = (0, g.z)(), {analyticsLocations: A} = (0, d.ZP)(c.Z.AVATAR), {trackUserProfileAction: M} = (0, _.KZ)(), b = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
@@ -20,13 +20,13 @@ function S(e) {
             user: t,
             size: v,
             animateOnHover: !m
-        }), P = a.useMemo(() => (0, u.W)(t, s.id), [
+        }), P = a.useMemo(() => (0, u.W)(t, l.id), [
             t,
-            s.id
+            l.id
         ]), {
             status: O,
             isMobileOnline: y
-        } = (0, l.cj)([
+        } = (0, s.cj)([
             h.Z,
             p.Z
         ], () => {

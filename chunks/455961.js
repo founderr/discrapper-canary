@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120), n(773603);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(848246), o = n(793030), c = n(442837), d = n(46973), u = n(481060), h = n(846027), p = n(607070), m = n(361291), _ = n(131951), f = n(626135), E = n(120522), C = n(386542), g = n(933843), I = n(485731), x = n(1163), T = n(738672), N = n(981631), v = n(37113), S = n(689938), Z = n(782783);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(848246), o = n(793030), c = n(442837), d = n(46973), u = n(481060), h = n(846027), p = n(607070), m = n(361291), _ = n(131951), f = n(626135), E = n(120522), C = n(386542), g = n(933843), I = n(485731), x = n(1163), T = n(738672), N = n(981631), v = n(37113), S = n(689938), Z = n(782783);
 let A = async () => {
     let {default: e} = await n.e('21812').then(n.t.bind(n, 741855, 19));
     return e;
@@ -28,8 +28,8 @@ function M(e) {
 }
 let b = v.LY.RESOLUTION_1440, R = v.ws.FPS_60;
 function j(e) {
-    let {channel: t} = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [l, s] = a.useState(!1), {preset: o} = (0, c.cj)([m.Z], () => m.Z.getState()), C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
-            s(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
+    let {channel: t} = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [s, l] = a.useState(!1), {preset: o} = (0, c.cj)([m.Z], () => m.Z.getState()), C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
+            l(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
                 if (e) {
                     if ((0, I.J1)(!(0, g.mc)(b, R)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                             guild_id: t.guild_id,
@@ -57,7 +57,7 @@ function j(e) {
                 }
             }).catch(() => {
             }).finally(() => {
-                s(!1);
+                l(!1);
             });
         }, [
             o,
@@ -71,7 +71,7 @@ function j(e) {
         size: u.Button.Sizes.SMALL,
         className: Z.optInButton,
         onClick: x,
-        submitting: l,
+        submitting: s,
         children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA
     });
 }
@@ -80,9 +80,9 @@ function L(e) {
             channel: t,
             hidden: n,
             onDismiss: a
-        } = e, l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
+        } = e, s = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
     return (0, i.jsxs)('div', {
-        className: s()(Z.optInPopout, { [Z.hidden]: n }),
+        className: l()(Z.optInPopout, { [Z.hidden]: n }),
         children: [
             (0, i.jsxs)('div', {
                 className: Z.variant1InfoContainerParent,
@@ -92,7 +92,7 @@ function L(e) {
                         children: [
                             (0, i.jsx)(u.LottieAnimation, {
                                 importData: A,
-                                shouldAnimate: !l,
+                                shouldAnimate: !s,
                                 className: Z.lottie,
                                 loop: !0
                             }),
@@ -122,7 +122,7 @@ function P(e) {
         onDismiss: a
     } = e;
     return (0, i.jsxs)('div', {
-        className: s()(Z.optInPopout, Z.variant2OptInPopout, { [Z.hidden]: n }),
+        className: l()(Z.optInPopout, Z.variant2OptInPopout, { [Z.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
                 className: Z.image,
@@ -155,25 +155,25 @@ function O(e) {
             channel: t,
             ...n
         } = e, {
-            hqStreamingState: {hqStreamingOptOutPopoutShouldShow: l}
+            hqStreamingState: {hqStreamingOptOutPopoutShouldShow: s}
         } = (0, C.k)(r.q.STREAM_HIGH_QUALITY), {
-            enabled: s,
+            enabled: l,
             variant1: o
         } = x.Z.useExperiment({ location: 'StreamButtonDemoOptInPopout' }, {
             autoTrackExposure: !1,
-            disable: !l
+            disable: !s
         }), c = a.useRef(!1);
     if (a.useEffect(() => {
-            l && s && !c.current && (c.current = !0, f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
+            s && l && !c.current && (c.current = !0, f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY
             }));
         }, [
-            l,
             s,
+            l,
             t
-        ]), !l || !s)
+        ]), !s || !l)
         return null;
     let d = o ? L : P;
     return (0, i.jsx)(T.h, {

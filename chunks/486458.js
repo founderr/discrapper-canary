@@ -9,7 +9,7 @@ n.d(t, {
         return i;
     }
 }), n(47120);
-var i, a, l, s, r, o = n(735250), c = n(470079), d = n(120356), u = n.n(d), h = n(780384), p = n(481060), m = n(626135), _ = n(792125), f = n(285952), E = n(981631), C = n(689938), g = n(934046);
+var i, a, s, l, r, o = n(735250), c = n(470079), d = n(120356), u = n.n(d), h = n(780384), p = n(481060), m = n(626135), _ = n(792125), f = n(285952), E = n(981631), C = n(689938), g = n(934046);
 function I(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -18,7 +18,7 @@ function I(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-(s = i || (i = {})).CENTER = 'center', s.LEFT = 'left', (r = a || (a = {})).TOP = 'top', r.MIDDLE = 'middle';
+(l = i || (i = {})).CENTER = 'center', l.LEFT = 'left', (r = a || (a = {})).TOP = 'top', r.MIDDLE = 'middle';
 class x extends c.PureComponent {
     componentDidMount() {
         let {uniqueId: e} = this.props;
@@ -37,12 +37,12 @@ class x extends c.PureComponent {
                 isLongText: n,
                 title: i,
                 body: a,
-                className: l,
-                forceTheme: s,
+                className: s,
+                forceTheme: l,
                 onClickSkipAll: r
             } = this.props, c = 'left' === t || n, d = 'center' === t || !c;
         return (0, o.jsxs)(p.Dialog, {
-            className: u()(g.popoutRoot, l),
+            className: u()(g.popoutRoot, s),
             children: [
                 null != e && (0, o.jsx)(f.Z, {
                     className: g.mediaContainer,
@@ -76,7 +76,7 @@ class x extends c.PureComponent {
                             size: p.ButtonSizes.SMALL,
                             look: p.Button.Looks.BLANK,
                             onClick: r,
-                            color: (0, h.ap)(s) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
+                            color: (0, h.ap)(l) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
                             className: c ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
                             children: C.Z.Messages.SKIP_ALL_TIPS
                         })
@@ -92,7 +92,7 @@ class x extends c.PureComponent {
         });
     }
 }
-class T extends (l = c.PureComponent) {
+class T extends (s = c.PureComponent) {
     render() {
         let {
                 renderMedia: e,
@@ -100,8 +100,8 @@ class T extends (l = c.PureComponent) {
                 onComplete: n,
                 onSkipAll: i,
                 isLongText: a,
-                title: l,
-                body: s,
+                title: s,
+                body: l,
                 children: r,
                 spacing: c,
                 forceTheme: d,
@@ -132,9 +132,9 @@ class T extends (l = c.PureComponent) {
                 } = e, {
                     forceTheme: i,
                     isLongText: a,
-                    arrowAlignment: l,
-                    renderMedia: s
-                } = this.props, r = null != s;
+                    arrowAlignment: s,
+                    renderMedia: l
+                } = this.props, r = null != l;
             return (0, o.jsx)(x, {
                 ...this.props,
                 className: u()({
@@ -146,8 +146,8 @@ class T extends (l = c.PureComponent) {
                     [g.right]: 'right' === n,
                     [g.top]: 'top' === n,
                     [g.left]: 'left' === n,
-                    [g.arrowAlignmentTop]: 'top' === l,
-                    [g.arrowAlignmentMiddle]: 'middle' === l,
+                    [g.arrowAlignmentTop]: 'top' === s,
+                    [g.arrowAlignmentMiddle]: 'middle' === s,
                     'force-theme': null != i
                 }, (0, _.Q)(i)),
                 onClickComplete: () => this.onClickComplete(t),

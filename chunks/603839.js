@@ -3,8 +3,8 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), E = n(889711), h = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), C = n(672775), N = n(601463), f = n(192565), A = n(641037), Z = n(689938), L = n(433369);
-let v = {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), E = n(889711), h = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), C = n(672775), f = n(601463), N = n(192565), A = n(641037), Z = n(689938), v = n(433369);
+let L = {
     mass: 1,
     tension: 600,
     friction: 60,
@@ -27,13 +27,13 @@ function O(e) {
             };
         }), b = (0, p.N)(t, 'ClanSetupModal'), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
             opacity: G,
-            config: v,
+            config: L,
             onStart: () => B(!0),
             onRest: () => B(1 === G),
             immediate: a
         }), F = (0, o.useSpring)({
             transform: 'translateX('.concat(1 === G ? 0 : -1 * (j - 380) / 2 + 190, 'px)'),
-            config: v,
+            config: L,
             immediate: a
         }), Y = (0, o.useTransition)(0 === G, {
             from: { opacity: 0 },
@@ -41,13 +41,13 @@ function O(e) {
                 opacity: 1,
                 delay: 500
             },
-            config: v,
+            config: L,
             immediate: a
         }), W = (0, o.useTransition)(0 === G, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: v,
+            config: L,
             immediate: a
         }), z = s.useCallback(e => {
             if (e === M.length)
@@ -112,12 +112,12 @@ function O(e) {
             $,
             n
         ]), et = s.useRef(null), en = null != q ? (0, i.jsxs)('div', {
-            className: L.tooltipContents,
+            className: v.tooltipContents,
             children: [
                 (0, i.jsx)(d.WarningIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: L.errorIcon
+                    className: v.errorIcon
                 }),
                 (0, i.jsxs)('div', {
                     children: [
@@ -131,7 +131,7 @@ function O(e) {
                             color: 'text-muted',
                             children: Z.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
                                 backHook: (e, t) => (0, i.jsx)(d.Anchor, {
-                                    className: L.errorLink,
+                                    className: v.errorLink,
                                     onClick: Q,
                                     children: e
                                 }, t)
@@ -144,12 +144,12 @@ function O(e) {
     return (0, i.jsx)(o.animated.div, {
         ref: et,
         style: H,
-        className: L.modal,
+        className: v.modal,
         children: (0, i.jsxs)(d.FocusRingScope, {
             containerRef: et,
             children: [
                 (0, i.jsx)(d.Button, {
-                    className: L.close,
+                    className: v.close,
                     look: d.Button.Looks.OUTLINED,
                     size: d.Button.Sizes.MEDIUM,
                     color: d.Button.Colors.PRIMARY,
@@ -157,39 +157,39 @@ function O(e) {
                     children: Z.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
                 }),
                 (0, i.jsxs)('div', {
-                    className: L.content,
+                    className: v.content,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: L.panel,
+                            className: v.panel,
                             children: [
                                 (0, i.jsx)(o.animated.div, {
                                     style: V,
-                                    className: r()(L.stepsContainer, { [L.hidden]: !k }),
-                                    children: (0, i.jsx)(f.Z, { guildId: t })
+                                    className: r()(v.stepsContainer, { [v.hidden]: !k }),
+                                    children: (0, i.jsx)(N.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: r()(L.navigationContainer, { [L.elevatedNavigationContainer]: !k }),
+                                    className: r()(v.navigationContainer, { [v.elevatedNavigationContainer]: !k }),
                                     children: (0, i.jsx)(C.Z, {
                                         steps: M,
                                         progress: R,
                                         updateCurrentStep: z,
                                         animationStyle: V,
-                                        animationClassName: r()({ [L.hidden]: !k })
+                                        animationClassName: r()({ [v.hidden]: !k })
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: V,
-                            className: r()(L.divider, {
-                                [L.hidden]: !k,
-                                [L.dividerResponsive]: k
+                            className: r()(v.divider, {
+                                [v.hidden]: !k,
+                                [v.dividerResponsive]: k
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: F,
-                            className: r()(L.sidebar, { [L.sidebarResponsive]: k }),
-                            children: (0, i.jsx)(N.Z, {
+                            className: r()(v.sidebar, { [v.sidebarResponsive]: k }),
+                            children: (0, i.jsx)(f.Z, {
                                 guildId: t,
                                 signed: D,
                                 setSigned: k ? void 0 : y,
@@ -203,10 +203,10 @@ function O(e) {
                 }),
                 W((e, t) => t && (0, i.jsx)(o.animated.div, {
                     style: e,
-                    className: L.submit,
+                    className: v.submit,
                     children: (0, i.jsx)(d.Tooltip, {
                         color: d.Tooltip.Colors.GREY,
-                        tooltipClassName: L.tooltip,
+                        tooltipClassName: v.tooltip,
                         text: en,
                         'aria-label': null != q ? Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
                         shouldShow: null != q,

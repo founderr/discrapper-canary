@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return f;
     }
 });
 var i = n(735250);
@@ -64,7 +64,7 @@ let C = {
         containerClass: a()(p.container, p.containerEnabled)
     }
 };
-function N() {
+function f() {
     var e;
     let {
         decoupledClipsEnabled: t,

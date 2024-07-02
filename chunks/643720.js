@@ -1,4 +1,4 @@
-var i = n(735250), a = n(470079), l = n(390322), s = n(381871);
+var i = n(735250), a = n(470079), s = n(390322), l = n(381871);
 t.Z = e => {
     let {
         isHovered: t,
@@ -13,11 +13,11 @@ t.Z = e => {
     }, [
         n,
         t
-    ]), (0, i.jsx)(l.Z, {
+    ]), (0, i.jsx)(s.Z, {
         children: (0, i.jsx)('div', {
             onMouseEnter: r,
             onMouseLeave: o,
-            children: (0, i.jsx)(s.Z, {
+            children: (0, i.jsx)(l.Z, {
                 channel: d,
                 closePopout: n,
                 onFocus: c

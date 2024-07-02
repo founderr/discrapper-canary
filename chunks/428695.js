@@ -7,16 +7,16 @@ t.Z = function (e) {
         message: r,
         image: s,
         type: f,
-        imageStyles: g,
-        imageMarginX: m,
+        imageStyles: m,
+        imageMarginX: g,
         imageMarginTop: C,
         trackingSource: I,
         undismissable: E,
         onDismissed: N,
         onClick: x,
         cta: S,
-        ctaColor: Z,
-        centerText: v,
+        ctaColor: v,
+        centerText: Z,
         className: T
     } = e;
     l.useEffect(() => {
@@ -40,24 +40,24 @@ t.Z = function (e) {
             }), null == x || x();
         },
         fullWidth: !0,
-        color: Z,
+        color: v,
         children: S
     }));
     let A = null;
     'function' == typeof n ? A = n() : null != n && (A = (0, i.jsx)(o.Text, {
         variant: 'text-md/medium',
         color: 'header-primary',
-        className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: v }),
+        className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: Z }),
         children: n
     }));
     let b = null;
     'function' == typeof r ? b = r() : null != r && (b = (0, i.jsx)(o.Text, {
-        className: a()({ [p.center]: v }),
+        className: a()({ [p.center]: Z }),
         variant: 'text-sm/normal',
         color: 'text-muted',
         children: r
     }));
-    let M = null != m ? ''.concat(m, 'px') : '16px';
+    let M = null != g ? ''.concat(g, 'px') : '16px';
     return (0, i.jsxs)('div', {
         className: a()(p.container, T),
         children: [
@@ -82,7 +82,7 @@ t.Z = function (e) {
                 },
                 children: (0, i.jsx)('img', {
                     className: p.image,
-                    style: g,
+                    style: m,
                     src: s,
                     alt: ''
                 })

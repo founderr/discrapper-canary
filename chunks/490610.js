@@ -10,32 +10,32 @@ t.Z = s.memo(function (e) {
             clans: T,
             searchResult: S,
             searchCriteria: C
-        } = (0, _.Qc)(20), N = (0, E.GN)(e => e.selectedTraits, l.Z), f = s.useMemo(() => new Set(C.games), [C.games]), A = s.useCallback(e => {
+        } = (0, _.Qc)(20), f = (0, E.GN)(e => e.selectedTraits, l.Z), N = s.useMemo(() => new Set(C.games), [C.games]), A = s.useCallback(e => {
             var t;
             return (0, i.jsx)(u.ZP, {
                 clan: e,
                 className: g.card,
                 affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, C),
-                traitsToHighlight: N,
+                traitsToHighlight: f,
                 source: m.jXE.DISCOVER_SEARCH,
-                prioritizedGameIds: f,
+                prioritizedGameIds: N,
                 onlyAnimateIconOnHover: !0
             }, e.id);
         }, [
             C,
-            N,
-            f
+            f,
+            N
         ]), Z = s.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
             T,
             S
-        ]), L = s.useCallback(e => {
+        ]), v = s.useCallback(e => {
             e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), 'top_picks', C);
         }, [
             Z,
             C
         ]);
     return 0 !== T.length && p ? (0, i.jsx)(o.$, {
-        onChange: L,
+        onChange: v,
         threshold: 0.25,
         children: (0, i.jsxs)('div', {
             className: r()(g.previewListContainer, a),

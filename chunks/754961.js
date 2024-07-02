@@ -19,14 +19,14 @@ function I(e) {
         } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
             m,
             T
-        ]), C = null != S, N = (0, l.useSpring)({
+        ]), C = null != S, f = (0, l.useSpring)({
             transform: _ ? 'translateX(0%)' : 'translateX(-100%)',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             },
             immediate: p || !I
-        }), f = (0, i.jsxs)(i.Fragment, {
+        }), N = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -42,7 +42,7 @@ function I(e) {
         });
     return (0, i.jsx)(c.Tooltip, {
         color: g ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
-        text: g ? f : a,
+        text: g ? N : a,
         'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
         shouldShow: null != n,
         tooltipStyle: S,
@@ -63,7 +63,7 @@ function I(e) {
                     className: h.progressStep,
                     children: (0, i.jsx)(l.animated.div, {
                         style: {
-                            ...N,
+                            ...f,
                             ...S
                         },
                         className: r()(h.progressStepFill, { [h.customProgressStepFill]: C })

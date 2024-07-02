@@ -3,21 +3,21 @@ n.d(t, {
         return I;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(570140), r = n(475179), o = n(367907), c = n(358221), d = n(788983), u = n(268353), h = n(944486), p = n(626135), m = n(585483), _ = n(358085), f = n(228488), E = n(981631), C = n(495585);
+var i = n(735250), a = n(470079), s = n(442837), l = n(570140), r = n(475179), o = n(367907), c = n(358221), d = n(788983), u = n(268353), h = n(944486), p = n(626135), m = n(585483), _ = n(358085), f = n(228488), E = n(981631), C = n(495585);
 let g = () => {
-    s.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
+    l.Z.wait(() => d.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 function I(e) {
     let {
             channel: t,
             appContext: n,
-            popoutOpen: s,
+            popoutOpen: l,
             popoutWindow: d,
             currentWindow: I
         } = e, x = n === E.IlC.POPOUT, T = a.useRef(null), {
             currentLayout: N,
             mode: v
-        } = (0, l.cj)([c.Z], () => {
+        } = (0, s.cj)([c.Z], () => {
             let e = c.Z.getMode(t.id), i = n === E.IlC.POPOUT;
             i && (e = E.WtW.VIDEO);
             let a = e === E.WtW.VIDEO ? c.Z.getLayout(t.id, n) : E.AEg.MINIMUM;
@@ -28,7 +28,7 @@ function I(e) {
         }, [
             t,
             n
-        ]), S = (0, l.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+        ]), S = (0, s.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
     a.useEffect(() => {
         T.current = v;
     });
@@ -46,7 +46,7 @@ function I(e) {
             d,
             x,
             I
-        ]), b = s && !x, R = v === E.WtW.VIDEO && S && !b, j = a.useCallback((e, i) => {
+        ]), b = l && !x, R = v === E.WtW.VIDEO && S && !b, j = a.useCallback((e, i) => {
             i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(E.CkL.TEXTAREA_BLUR));
         }, [
             n,

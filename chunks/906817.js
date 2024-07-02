@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     WW: function () {
-        return g;
+        return m;
     }
 });
 var i = n(735250), l = n(470079), r = n(362658), a = n(216306), s = n(557494), o = n(486458), c = n(540126), u = n(301342), d = n(327530), h = n(981631), p = n(689938), _ = n(222625);
@@ -24,7 +24,7 @@ function f(e, t, n) {
     }
     return d.Pw;
 }
-function g(e, t) {
+function m(e, t) {
     switch (e) {
     case c.zm:
         return 'hoisted-spacer';
@@ -49,20 +49,20 @@ t.ZP = l.memo(function (e) {
             sectionIndex: t,
             guild: n,
             guildChannels: f,
-            guildChannelsVersion: g,
-            selectedChannelId: m,
+            guildChannelsVersion: m,
+            selectedChannelId: g,
             disableManageChannels: C
         } = e, {isFavoritesPerk: I} = (0, r.z)('ChannelListSection'), E = l.useCallback(() => {
             let e = f.getCategoryFromSection(f.recentsSectionNumber);
             if (null == e)
                 return;
             let t = null, i = e.getShownChannelAndThreadIds();
-            null != m && i.includes(m) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t);
+            null != g && i.includes(g) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t);
         }, [
             n.id,
-            m,
+            g,
             f,
-            g
+            m
         ]);
     switch (t) {
     case c.zm:

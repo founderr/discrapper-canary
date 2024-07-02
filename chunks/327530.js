@@ -12,7 +12,7 @@ n.d(t, {
         return _;
     },
     MF: function () {
-        return g;
+        return m;
     },
     NY: function () {
         return u;
@@ -42,7 +42,7 @@ n.d(t, {
         return i;
     }
 });
-let i = 8, l = 32, r = 40, a = 12, s = 12, o = 34, c = 41.5, u = 16, d = 32, h = 8, p = 84, _ = 16, f = 5, g = {
+let i = 8, l = 32, r = 40, a = 12, s = 12, o = 34, c = 41.5, u = 16, d = 32, h = 8, p = 84, _ = 16, f = 5, m = {
         origin: {
             x: -36,
             y: 7

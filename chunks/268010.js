@@ -1,9 +1,9 @@
 n(627494), n(757143);
-var i = n(735250), a = n(470079), l = n(442837), s = n(692547), r = n(481060), o = n(706454), c = n(5192), d = n(561308), u = n(644810), h = n(206295), p = n(335326), m = n(297781), _ = n(591853), f = n(689938);
+var i = n(735250), a = n(470079), s = n(442837), l = n(692547), r = n(481060), o = n(706454), c = n(5192), d = n(561308), u = n(644810), h = n(206295), p = n(335326), m = n(297781), _ = n(591853), f = n(689938);
 let E = (e, t, n) => {
-        let i = f.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA, a = c.ZP.getName(t.guild_id, t.id, n), l = e.extra.media_title;
+        let i = f.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA, a = c.ZP.getName(t.guild_id, t.id, n), s = e.extra.media_title;
         return i.plainFormat({
-            mediaTitle: l,
+            mediaTitle: s,
             userName: a,
             episodeDescription: e.extra.media_subtitle
         }).replaceAll('*', '');
@@ -24,7 +24,7 @@ t.Z = e => {
         } = (0, p.Bj)(n), {
             primaryColor: N,
             secondaryColor: v
-        } = (0, h.Z)(x), S = (0, l.e7)([o.default], () => o.default.locale), Z = a.useCallback(e => {
+        } = (0, h.Z)(x), S = (0, s.e7)([o.default], () => o.default.locale), Z = a.useCallback(e => {
             if (null != I && null != x)
                 return (0, u.B)({
                     entry: n,
@@ -60,7 +60,7 @@ t.Z = e => {
                 subtitle: n.extra.media_subtitle,
                 headerIcons: (0, i.jsx)(r.CrunchyrollNeutralIcon, {
                     size: 'xs',
-                    color: s.Z.colors.CONTENT_INVENTORY_OVERLAY_UI_MOD
+                    color: l.Z.colors.CONTENT_INVENTORY_OVERLAY_UI_MOD
                 }),
                 badges: (0, i.jsx)(m.Gk, {
                     location: m.Gt.POPOUT,

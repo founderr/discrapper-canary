@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(410030), l = n(906732), s = n(769654), r = n(785717), o = n(726059), c = n(162267), d = n(483517), u = n(502762), h = n(171368), p = n(944546), m = n(470900), _ = n(772056), f = n(689938), E = n(271234);
+var a = n(410030), s = n(906732), l = n(769654), r = n(785717), o = n(726059), c = n(162267), d = n(483517), u = n(502762), h = n(171368), p = n(944546), m = n(470900), _ = n(772056), f = n(689938), E = n(271234);
 function C(e) {
     let {
             user: t,
             channelId: n
-        } = e, {analyticsLocations: C} = (0, l.ZP)(), {trackUserProfileAction: g} = (0, r.KZ)(), I = (0, a.ZP)(), {
+        } = e, {analyticsLocations: C} = (0, s.ZP)(), {trackUserProfileAction: g} = (0, r.KZ)(), I = (0, a.ZP)(), {
             mutualFriends: x,
             isFetching: T
         } = (0, o.Z)(t.id, !t.bot), {
@@ -40,7 +40,7 @@ function C(e) {
                         guild: n,
                         nick: a,
                         theme: I,
-                        onSelect: () => (0, s.X)(n.id)
+                        onSelect: () => (0, l.X)(n.id)
                     }, n.id);
                 })
             }),
@@ -59,11 +59,11 @@ function C(e) {
                     let {
                         key: t,
                         user: a,
-                        status: l
+                        status: s
                     } = e;
                     return (0, i.jsx)(p.T, {
                         user: a,
-                        status: l,
+                        status: s,
                         onSelect: () => {
                             (0, h.openUserProfileModal)({
                                 sourceAnalyticsLocations: C,

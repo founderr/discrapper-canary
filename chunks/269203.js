@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(805519), r = n(246364), o = n(705563), c = n(594174), d = n(346656), u = n(967128), h = n(689938), p = n(684668);
+var a = n(442837), s = n(481060), l = n(805519), r = n(246364), o = n(705563), c = n(594174), d = n(346656), u = n(967128), h = n(689938), p = n(684668);
 function m(e) {
     var t;
     let {
             joinRequest: n,
-            guild: s
+            guild: l
         } = e, o = (0, a.e7)([c.default], () => c.default.getUser(n.userId));
     return (0, i.jsxs)('div', {
         className: p.summaryContainer,
@@ -18,23 +18,23 @@ function m(e) {
             (0, i.jsxs)('div', {
                 className: p.summaryHeader,
                 children: [
-                    null != s && (0, i.jsxs)('div', {
+                    null != l && (0, i.jsxs)('div', {
                         className: p.summaryHeaderClanInfo,
                         children: [
                             (0, i.jsx)(d.Z, {
-                                guild: s,
+                                guild: l,
                                 active: !0,
                                 size: d.Z.Sizes.SMOL,
                                 className: p.guildIcon
                             }),
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(s.Heading, {
                                 variant: 'heading-sm/semibold',
                                 color: 'header-primary',
-                                children: s.name
+                                children: l.name
                             })
                         ]
                     }),
-                    null != o && (0, i.jsx)(l.Heading, {
+                    null != o && (0, i.jsx)(s.Heading, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         children: h.Z.Messages.MEMBER_VERIFICATION_USERS_APPLICATION.format({ username: o.globalName })
@@ -49,12 +49,12 @@ function m(e) {
                         (0, i.jsxs)('div', {
                             className: p.formResponseContainer,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'text-muted',
                                     children: e.label
                                 }),
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-md/medium',
                                     color: 'text-primary',
                                     children: t
@@ -72,7 +72,7 @@ function _(e) {
             loading: n,
             joinRequest: a,
             joinRequestGuild: r
-        } = (0, s.Z)(t.id);
+        } = (0, l.Z)(t.id);
     return (0, i.jsx)(u.ZP, {
         channelId: t.id,
         className: p.container,
@@ -91,7 +91,7 @@ function _(e) {
                         showProfile: !0
                     })
                 ]
-            }) : n ? (0, i.jsx)(l.Spinner, {}) : null
+            }) : n ? (0, i.jsx)(s.Spinner, {}) : null
         })
     });
 }

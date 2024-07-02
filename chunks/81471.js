@@ -1,15 +1,15 @@
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(905405), d = n(255269), u = n(937889), _ = n(695346), E = n(496675), h = n(699516), I = n(68588), m = n(512665), g = n(868807), p = n(981631), T = n(768760), S = n(689938), C = n(958633), N = n(530790);
-let f = s.memo(function (e) {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(905405), d = n(255269), u = n(937889), _ = n(695346), E = n(496675), h = n(699516), I = n(68588), m = n(512665), g = n(868807), p = n(981631), T = n(768760), S = n(689938), C = n(958633), f = n(530790);
+let N = s.memo(function (e) {
     let {channel: t} = e, {
             loaded: n,
             error: a,
-            message: f
-        } = (0, g.a)(t), A = (0, c.p)(), Z = (0, l.e7)([h.Z], () => null != f && h.Z.isBlockedForMessage(f), [f]), L = (0, l.e7)([E.Z], () => E.Z.can(p.Plq.MANAGE_MESSAGES, t)), v = _.cC.useSetting(), {content: O} = s.useMemo(() => (null == f ? void 0 : f.content) != null && '' !== f.content ? (0, u.ZP)(f, {
+            message: N
+        } = (0, g.a)(t), A = (0, c.p)(), Z = (0, l.e7)([h.Z], () => null != N && h.Z.isBlockedForMessage(N), [N]), v = (0, l.e7)([E.Z], () => E.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = _.cC.useSetting(), {content: O} = s.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
             formatInline: !0,
             noStyleAndInteraction: !0,
             shouldFilterKeywords: A
         }) : { content: null }, [
-            f,
+            N,
             A
         ]), R = null;
     if (a)
@@ -20,18 +20,18 @@ let f = s.memo(function (e) {
             children: S.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
         });
     else if (n) {
-        if (null != f && Z)
+        if (null != N && Z)
             R = (0, i.jsx)(o.Text, {
                 className: C.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: S.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
             });
-        else if (null != f) {
+        else if (null != N) {
             let {
                 contentPlaceholder: e,
                 renderedContent: t
-            } = (0, m.f)(f, O, Z, r()(C.messageContent, N.inlineFormat), {
+            } = (0, m.f)(N, O, Z, r()(C.messageContent, f.inlineFormat), {
                 leadingIconClass: C.messageContentIcon,
                 trailingIconClass: C.messageContentIcon,
                 iconSize: T.WW
@@ -58,11 +58,11 @@ let f = s.memo(function (e) {
     } else
         R = null;
     return (0, i.jsx)(I.a.Provider, {
-        value: (0, d.Z)(v, L),
+        value: (0, d.Z)(L, v),
         children: (0, i.jsx)(o.FocusBlock, {
             className: C.messageFocusBlock,
             children: R
         })
     });
 });
-t.Z = f;
+t.Z = N;

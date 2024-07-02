@@ -3,12 +3,12 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(780384), c = n(481060), d = n(393238), u = n(410030), h = n(607070), p = n(466794), m = n(602198), _ = n(546240), f = n(952009);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(780384), c = n(481060), d = n(393238), u = n(410030), h = n(607070), p = n(466794), m = n(602198), _ = n(546240), f = n(952009);
 function E(e) {
     let {
             checked: t,
             labelText: n,
-            tooltipText: l,
+            tooltipText: s,
             canToggle: E,
             iconAltText: C,
             onChange: g,
@@ -28,11 +28,11 @@ function E(e) {
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(p.X, {
             textColor: 'always-white',
-            tooltipText: l
+            tooltipText: s
         }),
         position: 'top',
         color: null != I ? I : S ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
-        'aria-label': l,
+        'aria-label': s,
         tooltipClassName: m.tooltip,
         className: m.tooltipContainer,
         children: [
@@ -52,7 +52,7 @@ function E(e) {
             }),
             (0, i.jsxs)('label', {
                 htmlFor: T,
-                className: s()(m.label, x, {
+                className: l()(m.label, x, {
                     [m.transition]: A,
                     [m.labelChecked]: t,
                     [m.labelUnchecked]: !t && !E
@@ -71,7 +71,7 @@ function E(e) {
                     (0, i.jsx)('span', {
                         ref: O,
                         children: (0, i.jsx)(c.Text, {
-                            className: s()(m.burstText, {
+                            className: l()(m.burstText, {
                                 [m.visuallyHidden]: t && N,
                                 [m.burstTextChecked]: t
                             }),

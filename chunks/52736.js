@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(134433), r = n(273150);
+var a = n(120356), s = n.n(a), l = n(134433), r = n(273150);
 function o(e) {
     let t, {
             className: n,
@@ -14,7 +14,7 @@ function o(e) {
             roleColor: c,
             roleName: d
         } = e;
-    return t = o ? (0, i.jsx)(s.Z, {
+    return t = o ? (0, i.jsx)(l.Z, {
         size: 12,
         color: c,
         className: r.linkedRoleColor
@@ -22,7 +22,7 @@ function o(e) {
         className: r.roleColor,
         style: { backgroundColor: c }
     }), (0, i.jsxs)('div', {
-        className: l()(n, r.role),
+        className: s()(n, r.role),
         children: [
             t,
             d,

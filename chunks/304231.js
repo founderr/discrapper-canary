@@ -35,30 +35,30 @@ function C(e) {
         hidePreview: !0
     });
 }
-function N(e) {
+function f(e) {
     return e.toString();
 }
 t.Z = s.memo(function (e) {
     let {
             selectedGame: t,
             setScreen: n
-        } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [f, A] = s.useState(0), [Z, L] = s.useState(0), v = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
-            A(e), Z < e && L(e);
+        } = e, c = s.useRef(null), d = s.useRef(null), E = s.useRef(null), I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), [N, A] = s.useState(0), [Z, v] = s.useState(0), L = (0, h.GN)(e => e.selectedPlaystyle, r.Z), O = (0, h.GN)(e => e.previousMode, r.Z), R = s.useCallback(e => {
+            A(e), Z < e && v(e);
         }, [Z]), x = s.useCallback(() => {
-            0 === f ? (n(h.o2.USER_UPSELL), (0, h.fH)(O)) : R(f - 1);
+            0 === N ? (n(h.o2.USER_UPSELL), (0, h.fH)(O)) : R(N - 1);
         }, [
-            f,
+            N,
             O,
             n,
             R
         ]), P = s.useCallback(() => {
-            2 === f ? (0, h.fH)(h.v0.DISCOVERY) : R(f + 1);
+            2 === N ? (0, h.fH)(h.v0.DISCOVERY) : R(N + 1);
         }, [
-            f,
+            N,
             R
-        ]), b = s.useMemo(() => 1 === f && null == v, [
-            v,
-            f
+        ]), b = s.useMemo(() => 1 === N && null == L, [
+            L,
+            N
         ]), M = s.useMemo(() => [
             {
                 index: 0,
@@ -109,7 +109,7 @@ t.Z = s.memo(function (e) {
         0.2,
         0.5
     ]);
-    let U = s.useMemo(() => [f], [f]), G = s.useCallback(e => {
+    let U = s.useMemo(() => [N], [N]), G = s.useCallback(e => {
             switch (e) {
             case 0:
                 return (0, i.jsx)(T, { selectedGame: t });
@@ -127,10 +127,10 @@ t.Z = s.memo(function (e) {
                 className: g.sequencer,
                 style: y,
                 children: (0, i.jsx)(_.Z, {
-                    currentStep: f,
+                    currentStep: N,
                     items: U,
                     renderItem: G,
-                    getItemKey: N
+                    getItemKey: f
                 })
             }),
             (0, i.jsxs)(a.animated.div, {
@@ -138,7 +138,7 @@ t.Z = s.memo(function (e) {
                 style: j,
                 children: [
                     (0, i.jsx)(u.T, {
-                        currentStepIndex: f,
+                        currentStepIndex: N,
                         steps: M,
                         furthestStepIndex: Z,
                         onStepClick: R

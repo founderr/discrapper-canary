@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return N;
     }
 });
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(541716), o = n(910611), c = n(355298), d = n(333984), u = n(26373), _ = n(486622), E = n(718538), h = n(359110), I = n(6025), m = n(433355), g = n(502568), p = n(933557), T = n(287746), S = n(689938), C = n(240196), N = n(712759);
-function f(e) {
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(541716), o = n(910611), c = n(355298), d = n(333984), u = n(26373), _ = n(486622), E = n(718538), h = n(359110), I = n(6025), m = n(433355), g = n(502568), p = n(933557), T = n(287746), S = n(689938), C = n(240196), f = n(712759);
+function N(e) {
     let {
             channel: t,
             baseChannelId: n
-        } = e, f = (0, p.ZP)(t), A = (0, u.K)(), Z = (0, u.V)(), L = (0, a.e7)([c.Z], () => c.Z.isMessageRequest(t.id)), v = (0, a.e7)([d.Z], () => d.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
-            I.Z.closeChannelSidebar(m.uZ), L && A && (0, h.Kh)(t.id), v && Z && (0, h.Kh)(t.id);
+        } = e, N = (0, p.ZP)(t), A = (0, u.K)(), Z = (0, u.V)(), v = (0, a.e7)([c.Z], () => c.Z.isMessageRequest(t.id)), L = (0, a.e7)([d.Z], () => d.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = s.useCallback(() => {
+            I.Z.closeChannelSidebar(m.uZ), v && A && (0, h.Kh)(t.id), L && Z && (0, h.Kh)(t.id);
         }, [
             t.id,
-            v,
-            Z,
             L,
+            Z,
+            v,
             A
         ]), x = s.useCallback(() => {
             (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
@@ -36,20 +36,20 @@ function f(e) {
                 'aria-label': S.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                 children: (0, o.ud)({
                     channel: t,
-                    channelName: f,
+                    channelName: N,
                     inSidebar: !0
                 })
             }),
-            v && (0, i.jsxs)('div', {
-                className: N.hamBanner,
+            L && (0, i.jsxs)('div', {
+                className: f.hamBanner,
                 children: [
                     (0, i.jsx)(r.Text, {
-                        className: N.__invalid_hamBannerText,
+                        className: f.__invalid_hamBannerText,
                         variant: 'text-sm/normal',
                         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
                     }),
                     (0, i.jsx)(r.Button, {
-                        className: N.hamBannerButton,
+                        className: f.hamBannerButton,
                         size: r.ButtonSizes.SMALL,
                         onClick: () => P(t, O),
                         children: S.Z.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON

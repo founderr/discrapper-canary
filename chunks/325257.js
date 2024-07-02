@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(91192), c = n(399606), u = n(846519), d = n(481060), h = n(493683), p = n(239091), _ = n(153867), f = n(35225), g = n(703656), m = n(769654), C = n(271383), I = n(771845), E = n(880080), N = n(727258), x = n(249792), S = n(40153), Z = n(593618), v = n(252686), T = n(682662), L = n(674552), A = n(981631), b = n(689938), M = n(690310);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(91192), c = n(399606), u = n(846519), d = n(481060), h = n(493683), p = n(239091), _ = n(153867), f = n(35225), m = n(703656), g = n(769654), C = n(271383), I = n(771845), E = n(880080), N = n(727258), x = n(249792), S = n(40153), v = n(593618), Z = n(252686), T = n(682662), L = n(674552), A = n(981631), b = n(689938), M = n(690310);
 let R = {
     analyticsSource: {
         page: A.ZY5.GUILD_CHANNEL,
@@ -7,7 +7,7 @@ let R = {
         object: A.qAy.CHANNEL
     }
 };
-function y(e, t) {
+function O(e, t) {
     (0, p.jW)(e, async () => {
         let {default: e} = await Promise.all([
             n.e('96427'),
@@ -31,7 +31,7 @@ function y(e, t) {
     });
 }
 t.Z = l.memo(function (e) {
-    var t, n, r, p, O;
+    var t, n, r, p, y;
     let {
             guildNode: P,
             setRef: j,
@@ -45,7 +45,7 @@ t.Z = l.memo(function (e) {
             mediaState: H,
             unavailable: F = !1,
             badge: W = 0,
-            contextMenu: Y = y,
+            contextMenu: Y = O,
             draggable: z = !1,
             sorting: K = !1,
             preloadOnClick: q = !0,
@@ -55,7 +55,7 @@ t.Z = l.memo(function (e) {
             parentId: X
         } = P, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != H ? (0, L.Or)(H) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
-    let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : { width: (0, d.getBadgeWidthForValue)(W) }, [{dragging: en}, ei] = (0, s.c)({
+    let et = null !== (y = e.lowerBadgeSize) && void 0 !== y ? y : { width: (0, d.getBadgeWidthForValue)(W) }, [{dragging: en}, ei] = (0, s.c)({
             type: N.eD.GUILD,
             item: () => (requestAnimationFrame(() => {
                 null == D || D();
@@ -71,10 +71,10 @@ t.Z = l.memo(function (e) {
     l.useEffect(() => () => eh.cancel(), [eh]);
     let ep = l.useCallback(() => {
             if (null != G) {
-                (0, g.uL)(G, { state: R });
+                (0, m.uL)(G, { state: R });
                 return;
             }
-            (0, m.X)(J, { state: R });
+            (0, g.X)(J, { state: R });
         }, [
             J,
             G
@@ -89,13 +89,13 @@ t.Z = l.memo(function (e) {
             w,
             F,
             q
-        ]), ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)), eg = l.useCallback(e => {
+        ]), ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)), em = l.useCallback(e => {
             null != w && !ef && Y(e, w);
         }, [
             w,
             Y,
             ef
-        ]), em = l.useCallback(e => {
+        ]), eg = l.useCallback(e => {
             if ('ArrowLeft' === e.key && null != X) {
                 var t;
                 null === (t = document.querySelector('[aria-owns=folder-items-'.concat(X, ']'))) || void 0 === t || t.focus();
@@ -138,13 +138,13 @@ t.Z = l.memo(function (e) {
                 K || ea(!1);
             },
             onMouseDown: e_,
-            onContextMenu: eg,
-            onKeyDown: em,
+            onContextMenu: em,
+            onKeyDown: eg,
             icon: w.getIconURL(96, es && k),
             selected: B || es,
             ...el,
             role: 'treeitem'
-        }), eN = en ? (0, i.jsx)(S.OG, { children: (0, i.jsx)(v.Z, {}) }) : (0, i.jsx)('div', {
+        }), eN = en ? (0, i.jsx)(S.OG, { children: (0, i.jsx)(Z.Z, {}) }) : (0, i.jsx)('div', {
             ref: z ? ei : void 0,
             'data-dnd-name': w.toString(),
             className: a()(M.blobContainer, {
@@ -169,7 +169,7 @@ t.Z = l.memo(function (e) {
                 unread: !en && V,
                 className: M.pill
             }),
-            (0, i.jsx)(Z.Z, {
+            (0, i.jsx)(v.Z, {
                 guild: w,
                 disabled: K,
                 isDragging: en,

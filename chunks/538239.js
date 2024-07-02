@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(512722), s = n.n(l), r = n(442837), o = n(481060), c = n(904245), d = n(654030), u = n(744061), h = n(367907), p = n(728345), m = n(812206), _ = n(541716), f = n(752305), E = n(893718), C = n(957730), g = n(789407), I = n(300429), x = n(838440), T = n(981631), N = n(689938), v = n(811082);
+var i = n(735250), a = n(470079), s = n(512722), l = n.n(s), r = n(442837), o = n(481060), c = n(904245), d = n(654030), u = n(744061), h = n(367907), p = n(728345), m = n(812206), _ = n(541716), f = n(752305), E = n(893718), C = n(957730), g = n(789407), I = n(300429), x = n(838440), T = n(981631), N = n(689938), v = n(811082);
 function S(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -46,7 +46,7 @@ class A extends a.PureComponent {
                 textFocused: n,
                 contentWarningProps: a
             } = this.state, {
-                activity: l,
+                activity: s,
                 analyticsLocations: r,
                 channel: c,
                 activityActionType: h,
@@ -75,10 +75,10 @@ class A extends a.PureComponent {
                         }),
                         (0, i.jsx)(d.Z, {
                             activityActionType: h,
-                            activity: l,
+                            activity: s,
                             className: v.preview,
                             application: m,
-                            partyId: null != l.party ? l.party.id : null,
+                            partyId: null != s.party ? s.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
                         }),
@@ -95,7 +95,7 @@ class A extends a.PureComponent {
                             shouldShow: null != a,
                             renderPopout: e => {
                                 let {closePopout: t} = e;
-                                return s()(null != a, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(u.Z, {
+                                return l()(null != a, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'), (0, i.jsx)(u.Z, {
                                     onClose: t,
                                     ...a
                                 });
@@ -183,25 +183,25 @@ class A extends a.PureComponent {
                     cooldown: i,
                     onClose: a
                 } = this.props, {
-                    textValue: l,
-                    contentWarningProps: s
+                    textValue: s,
+                    contentWarningProps: l
                 } = this.state;
             if (i > 0)
                 return Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 });
-            let r = C.ZP.parse(e, l), o = {
+            let r = C.ZP.parse(e, s), o = {
                     activity: t,
                     type: n
                 };
-            return null != s ? (this.setState({ contentWarningProps: null }), c.Z.sendMessage(e.id, r, !0, { activityAction: o }).then(e => this.trackInvite(e)), a(), Promise.resolve({
+            return null != l ? (this.setState({ contentWarningProps: null }), c.Z.sendMessage(e.id, r, !0, { activityAction: o }).then(e => this.trackInvite(e)), a(), Promise.resolve({
                 shouldClear: !0,
                 shouldRefocus: !0
             })) : (0, x.v)({
                 openWarningPopout: e => this.setState({ contentWarningProps: e }),
                 type: _.I.FORM,
-                content: l,
+                content: s,
                 channel: e
             }).then(t => {
                 let {valid: n} = t;

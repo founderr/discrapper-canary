@@ -1,13 +1,13 @@
 i.r(n);
 var r = i(735250);
 i(470079);
-var t = i(442837), l = i(481060), a = i(239091), u = i(883385), s = i(108843), o = i(911969), d = i(947440), c = i(100527), Z = i(441061), E = i(167675), _ = i(737013), M = i(145474), f = i(299206), C = i(976192), I = i(819403), p = i(286694), N = i(592125), U = i(777658), h = i(858488), A = i(185457), S = i(933409), T = i(570870), g = i(389052), x = i(24311), v = i(332576), m = i(710631), P = i(297047), R = i(88966), b = i(712301), j = i(991307), O = i(725119), G = i(931617), L = i(700994), F = i(332031), y = i(981631), V = i(689938);
-n.default = (0, s.Z)((0, u.Z)(function (e) {
+var t = i(442837), l = i(481060), a = i(239091), s = i(883385), u = i(108843), o = i(911969), d = i(947440), c = i(100527), Z = i(441061), E = i(167675), _ = i(737013), M = i(145474), f = i(299206), C = i(976192), I = i(819403), p = i(286694), N = i(592125), U = i(777658), h = i(858488), A = i(185457), S = i(933409), T = i(570870), g = i(389052), x = i(24311), v = i(332576), m = i(710631), P = i(297047), R = i(88966), b = i(712301), j = i(991307), O = i(725119), G = i(931617), L = i(700994), F = i(332031), y = i(981631), V = i(689938);
+n.default = (0, u.Z)((0, s.Z)(function (e) {
     let {
             user: n,
             guildId: i,
-            channel: u,
-            showMediaItems: s = !1,
+            channel: s,
+            showMediaItems: u = !1,
             showChatItems: c = !0,
             showChannelCallItems: k = !1,
             showModalItems: D = !0,
@@ -20,7 +20,7 @@ n.default = (0, s.Z)((0, u.Z)(function (e) {
             page: y.ZY5.GUILD_CHANNEL,
             section: y.jXE.CHAT_USERNAME,
             object: y.qAy.CONTEXT_MENU_ITEM
-        }, Y = (0, O.Z)(n.id, i, u.id), q = (0, P.Z)(n, i, H), z = (0, R.Z)(n.id, H), J = (0, F.Z)(n.id), Q = (0, x.Z)({
+        }, Y = (0, O.Z)(n.id, i, s.id), q = (0, P.Z)(n, i, H), z = (0, R.Z)(n.id, H), J = (0, F.Z)(n.id), Q = (0, x.Z)({
             user: n,
             context: H
         }), $ = (0, A.Z)({
@@ -29,7 +29,7 @@ n.default = (0, s.Z)((0, u.Z)(function (e) {
             context: H
         }), ee = (0, h.Z)({ user: n }), en = (0, L.Z)(n.id), ei = (0, j.Z)(n.id), er = (0, M.P)({
             userId: n.id,
-            channelId: u.id,
+            channelId: s.id,
             location: 'GuildChannelUserContextMenu'
         }), et = (0, C.Z)({
             guildId: i,
@@ -39,13 +39,13 @@ n.default = (0, s.Z)((0, u.Z)(function (e) {
         }), el = (0, m.Z)({
             user: n,
             guildId: i
-        }), ea = (0, d.Z)(null, n), eu = (0, U.Z)(n), es = (0, g.Z)({ user: n }), eo = (0, S.Z)(n, i, u.id), ed = (0, G.Z)(n.id, i), ec = (0, b.Z)(n, i), eZ = (0, f.Z)({
+        }), ea = (0, d.Z)(null, n), es = (0, U.Z)(n), eu = (0, g.Z)({ user: n }), eo = (0, S.Z)(n, i, s.id), ed = (0, G.Z)(n.id, i), ec = (0, b.Z)(n, i), eZ = (0, f.Z)({
             id: n.id,
             label: V.Z.Messages.COPY_ID_USER
-        }), eE = (0, v.Z)(n.id, u.id), e_ = (0, E.Z)(n.id), eM = (0, Z.Z)(u.id), ef = (0, I.Z)(n), eC = (0, p.Z)(n, i, u.id), eI = (0, t.e7)([N.Z], () => null != B ? N.Z.getChannel(B) : null), ep = (0, T.Z)({
+        }), eE = (0, v.Z)(n.id, s.id), e_ = (0, E.Z)(n.id), eM = (0, Z.Z)(s.id), ef = (0, I.Z)(n), eC = (0, p.Z)(n, i, s.id), eI = (0, t.e7)([N.Z], () => null != B ? N.Z.getChannel(B) : null), ep = (0, T.Z)({
             commandType: o.yU.USER,
             commandTargetId: n.id,
-            channel: null != eI ? eI : u,
+            channel: null != eI ? eI : s,
             guildId: i,
             onHeightUpdate: W,
             context: H
@@ -75,18 +75,18 @@ n.default = (0, s.Z)((0, u.Z)(function (e) {
                             J
                         ]
                     }),
-                    s && (0, r.jsx)(l.MenuGroup, { children: en }),
+                    u && (0, r.jsx)(l.MenuGroup, { children: en }),
                     (0, r.jsx)(l.MenuGroup, { children: D && ea }),
                     (0, r.jsxs)(l.MenuGroup, {
                         children: [
-                            s && ei,
-                            s && er,
-                            s && eE,
+                            u && ei,
+                            u && er,
+                            u && eE,
                             D && et,
                             ep,
                             D && el,
-                            eu,
-                            D && es,
+                            es,
+                            D && eu,
                             k && eN
                         ]
                     }),

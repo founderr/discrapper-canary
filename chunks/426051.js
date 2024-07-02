@@ -19,8 +19,8 @@ function g(e) {
             g.id,
             p
         ]), {
-            acceptMessageRequest: N,
-            isAcceptLoading: f,
+            acceptMessageRequest: f,
+            isAcceptLoading: N,
             isUserProfileLoading: A,
             isOptimisticAccepted: Z
         } = (0, _.m)({
@@ -28,7 +28,7 @@ function g(e) {
             onAcceptSuccess: C,
             onRejectSuccess: S,
             onError: T
-        }), L = f || A, v = L || Z;
+        }), v = N || A, L = v || Z;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -45,10 +45,10 @@ function g(e) {
                         color: r.ButtonColors.PRIMARY,
                         size: r.Button.Sizes.SMALL,
                         onClick: e => {
-                            N(g.id), e.stopPropagation();
+                            f(g.id), e.stopPropagation();
                         },
-                        disabled: v,
-                        submitting: L,
+                        disabled: L,
+                        submitting: v,
                         children: I.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
                     }),
                     (0, i.jsx)(h.Z, {

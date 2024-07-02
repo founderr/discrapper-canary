@@ -3,19 +3,19 @@ n.d(t, {
         return O;
     }
 });
-var i = n(735250), a = n(470079), l = n(442837), s = n(481060), r = n(570140), o = n(933557), c = n(605436), d = n(736052), u = n(878857), h = n(621853), p = n(484459), m = n(131704), _ = n(984933), f = n(496675), E = n(594174), C = n(51144), g = n(7782), I = n(967128), x = n(320781), T = n(269203), N = n(753898), v = n(734386), S = n(184279), Z = n(438306), A = n(544142), M = n(128557), b = n(981631), R = n(176505), j = n(689938), L = n(549856);
+var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(570140), o = n(933557), c = n(605436), d = n(736052), u = n(878857), h = n(621853), p = n(484459), m = n(131704), _ = n(984933), f = n(496675), E = n(594174), C = n(51144), g = n(7782), I = n(967128), x = n(320781), T = n(269203), N = n(753898), v = n(734386), S = n(184279), Z = n(438306), A = n(544142), M = n(128557), b = n(981631), R = n(176505), j = n(689938), L = n(549856);
 function P(e) {
     let {
             canManageRoles: t,
             channel: n
-        } = e, a = t && (0, c.Yk)(n), s = (0, l.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
+        } = e, a = t && (0, c.Yk)(n), l = (0, s.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, d.Z)(n.id))
         return null;
     if (n.isForumPost())
         return (0, i.jsx)(x.Z, { channel: n });
     if (m.Ec.has(n.type))
         return (0, i.jsx)(A.Z, { channel: n });
-    else if (s)
+    else if (l)
         return (0, i.jsx)(M.Z, { channel: n });
     else if (a)
         return (0, i.jsx)(v.Z, { channel: n });
@@ -26,13 +26,13 @@ function O(e) {
     let {
             channel: n,
             showingBanner: c
-        } = e, d = (0, o.ZP)(n), {type: m} = n, _ = (0, l.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(_), {
+        } = e, d = (0, o.ZP)(n), {type: m} = n, _ = (0, s.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(_), {
             canManageRoles: v,
             canReadMessageHistory: Z
-        } = (0, l.cj)([f.Z], () => ({
+        } = (0, s.cj)([f.Z], () => ({
             canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
-        })), A = (0, l.e7)([h.Z], () => m === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [
+        })), A = (0, s.e7)([h.Z], () => m === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [
             n,
             m
         ]), {systemDMRedesignEnabled: M} = u.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t });
@@ -53,7 +53,7 @@ function O(e) {
             channel: n,
             user: _,
             children: [
-                null != _ && (0, i.jsx)(s.Heading, {
+                null != _ && (0, i.jsx)(l.Heading, {
                     variant: 'heading-xl/medium',
                     className: L.marginBottom20,
                     children: x

@@ -1,5 +1,5 @@
-var i = n(735250), s = n(470079), a = n(481060), r = n(442837), l = n(212093), o = n(100527), c = n(570938), d = n(677277), u = n(285865), _ = n(702428), E = n(709158), h = n(683301), I = n(360048), m = n(296386), g = n(150192), p = n(889010), T = n(488905), S = n(731455), C = n(689938), N = n(885181);
-let f = e => {
+var i = n(735250), s = n(470079), a = n(481060), r = n(442837), l = n(212093), o = n(100527), c = n(570938), d = n(677277), u = n(285865), _ = n(702428), E = n(709158), h = n(683301), I = n(360048), m = n(296386), g = n(150192), p = n(889010), T = n(488905), S = n(731455), C = n(689938), f = n(885181);
+let N = e => {
     switch (e) {
     case S.Gj.Activity:
         return S.fW.Activity;
@@ -24,8 +24,8 @@ t.Z = function () {
             isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
         })), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), A = (0, r.e7)([g.Z], () => g.Z.getClanDiscoveryCategories(), [], g.j), Z = null == A ? void 0 : A.map(e => ({
             ...e,
-            icon: f(e.categoryId)
-        })), L = e => {
+            icon: N(e.categoryId)
+        })), v = e => {
             (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)();
         };
     return s.useEffect(() => {
@@ -43,26 +43,26 @@ t.Z = function () {
                         bottom: 1
                     }
                 },
-                onClick: () => L(S.Gj.Clans),
+                onClick: () => v(S.Gj.Clans),
                 wrapContent: !0,
                 selected: e === S.Gj.Clans,
-                className: N.categoryItem,
-                selectedClassName: N.selectedCategoryItem,
-                innerClassName: N.itemInner
+                className: f.categoryItem,
+                selectedClassName: f.selectedCategoryItem,
+                innerClassName: f.itemInner
             }, 'clan-discovery-home'),
             (0, i.jsx)(p.Z, {
                 categories: Z,
-                handleCategorySelect: L,
+                handleCategorySelect: v,
                 currentCategoryId: e,
                 shouldDisplaySelectedCategory: !t
             }),
             (0, i.jsx)(d.Z, {
-                handleCategorySelect: L,
+                handleCategorySelect: v,
                 currentCategoryId: e,
                 shouldDisplaySelectedCategory: !t
             }),
             n && (0, i.jsx)(_.Z, {
-                onClick: () => L(S.Gj.Quests),
+                onClick: () => v(S.Gj.Quests),
                 isSelected: e === S.Gj.Quests
             })
         ]

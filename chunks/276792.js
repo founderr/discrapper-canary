@@ -14,8 +14,8 @@ function g(e) {
             analyticsLocations: T,
             analyticsLocation: S,
             isLightTheme: C
-        } = e, N = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {onClose: f} = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', L = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
-            (0, o.uL)(E.Z5c.APPLICATION_STORE), f();
+        } = e, f = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {onClose: N} = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', v = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
+            (0, o.uL)(E.Z5c.APPLICATION_STORE), N();
         } : () => (0, l.Z)({
             subscriptionTier: _.Si.TIER_2,
             analyticsLocations: T,
@@ -25,9 +25,9 @@ function g(e) {
                 objectType: E.Qqv.TIER_2
             },
             onClose: e => {
-                e && f();
+                e && N();
             }
-        }), v = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
+        }), L = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
             className: I.termsApplyAnchor,
             href: d.Z.getArticleURL(g.helpArticleId),
             children: (0, i.jsx)(r.Heading, {
@@ -53,7 +53,7 @@ function g(e) {
         header: g.header,
         modalTopExtra: x,
         subHeader: g.subheader,
-        subHeaderExtra: v,
+        subHeaderExtra: L,
         heroArt: O,
         featureCards: g.featureCards.map(e => ({
             header: e.header,
@@ -61,7 +61,7 @@ function g(e) {
             imageSrc: C ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: N,
+        changeLogId: f,
         button: () => {
             let e = Date.now();
             return (0, i.jsxs)(r.ShinyButton, {
@@ -71,11 +71,11 @@ function g(e) {
                 size: r.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: N,
+                        change_log_id: f,
                         cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: N
-                    }), L();
+                        target: f
+                    }), v();
                 },
                 children: [
                     (0, i.jsx)('img', {

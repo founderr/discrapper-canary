@@ -3,12 +3,12 @@ n.d(t, {
         return s;
     },
     ZP: function () {
-        return v;
+        return L;
     }
 }), n(47120);
-var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), E = n(393903), h = n(638730), I = n(970606), m = n(945124), g = n(231467), p = n(931515), T = n(207796), S = n(526282), C = n(777734), N = n(976757), f = n(981631), A = n(689938), Z = n(477975);
-let L = 40;
-function v(e) {
+var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), E = n(393903), h = n(638730), I = n(970606), m = n(945124), g = n(231467), p = n(931515), T = n(207796), S = n(526282), C = n(777734), f = n(976757), N = n(981631), A = n(689938), Z = n(477975);
+let v = 40;
+function L(e) {
     let {
             width: t,
             isAnimating: n,
@@ -17,9 +17,9 @@ function v(e) {
         } = e, {
             loaded: a,
             clans: r,
-            searchResult: v,
+            searchResult: L,
             searchCriteria: O
-        } = (0, p.Qc)(), R = (0, T.GN)(e => e.selectedTraits, d.Z), x = (0, _.Z)(v), [P, b] = o.useState(0), M = o.useMemo(() => ({ height: P }), [P]), D = (0, c.useSpring)({
+        } = (0, p.Qc)(), R = (0, T.GN)(e => e.selectedTraits, d.Z), x = (0, _.Z)(L), [P, b] = o.useState(0), M = o.useMemo(() => ({ height: P }), [P]), D = (0, c.useSpring)({
             opacity: P > 0 ? 1 : 0,
             config: c.config.stiff
         }), y = 'upsell' === i, j = Math.min(null != t ? t : 1024, 2000), U = o.useMemo(() => {
@@ -42,20 +42,20 @@ function v(e) {
             trailing: !0
         });
     o.useEffect(() => {
-        if (null != v && !!(0, N.Pw)(v))
-            (!(null != x && (0, N.Pw)(x)) || !(x.loadedAt >= v.loadedAt)) && (0, I.Oe)(v.items.map(e => e.id), 'top_picks', O);
+        if (null != L && !!(0, f.Pw)(L))
+            (!(null != x && (0, f.Pw)(x)) || !(x.loadedAt >= L.loadedAt)) && (0, I.Oe)(L.items.map(e => e.id), 'top_picks', O);
     }, [
         O,
-        v,
+        L,
         x,
         k,
         n
     ]), o.useEffect(() => {
-        !n && (0, N.Pw)(v) && setTimeout(() => k());
+        !n && (0, f.Pw)(L) && setTimeout(() => k());
     }, [
         k,
         n,
-        v
+        L
     ]);
     let H = o.useMemo(() => function (e, t, n) {
             if (null == e)
@@ -72,7 +72,7 @@ function v(e) {
                     {
                         section: 'top_picks',
                         items: e.slice(0, t),
-                        sectionHeight: L,
+                        sectionHeight: v,
                         itemHeight: 400,
                         props: { className: Z.glassBackgroundTop },
                         header: A.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
@@ -91,7 +91,7 @@ function v(e) {
                     {
                         section: 'top_picks',
                         items: e.slice(0, t),
-                        sectionHeight: L,
+                        sectionHeight: v,
                         itemHeight: 400,
                         header: A.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
                         subtitle: A.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
@@ -99,7 +99,7 @@ function v(e) {
                     {
                         section: 'other_guilds',
                         items: e.slice(t),
-                        sectionHeight: L,
+                        sectionHeight: v,
                         itemHeight: 400,
                         header: A.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
                     }
@@ -126,7 +126,7 @@ function v(e) {
                 traitsToHighlight: R,
                 className: Z.card,
                 style: n,
-                source: f.jXE.DISCOVER_SEARCH,
+                source: N.jXE.DISCOVER_SEARCH,
                 prioritizedGameIds: V,
                 onlyAnimateIconOnHover: !0
             }, i);

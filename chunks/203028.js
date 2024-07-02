@@ -46,13 +46,13 @@ function m(e) {
                     partiedMembers: d,
                     voiceChannels: m,
                     currentActivities: g
-                } = e, p = s.length, T = d.length - p, S = g[0], C = null == S ? void 0 : S.activity, N = null == S ? void 0 : S.startedPlayingTime, f = { name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '' };
+                } = e, p = s.length, T = d.length - p, S = g[0], C = null == S ? void 0 : S.activity, f = null == S ? void 0 : S.startedPlayingTime, N = { name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '' };
             if ((0, r.Z)(C) && null != C)
                 return {
                     subtitle: (0, i.jsx)(c.ZP, {
-                        start: N,
+                        start: f,
                         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: f
+                        messageProps: N
                     }),
                     icon: null
                 };
@@ -75,9 +75,9 @@ function m(e) {
                         };
                     return {
                         subtitle: (0, i.jsx)(c.ZP, {
-                            start: N,
+                            start: f,
                             location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: f
+                            messageProps: N
                         }),
                         icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827) }) : null
                     };
@@ -140,7 +140,7 @@ function m(e) {
                     subtitle: (0, i.jsx)(c.ZP, {
                         start: s,
                         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: f
+                        messageProps: N
                     }),
                     icon: null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(E.Z) }) : null
                 };

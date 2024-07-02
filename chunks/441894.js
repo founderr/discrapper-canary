@@ -1,20 +1,20 @@
 t.d(n, {
     J: function () {
-        return o;
+        return c;
     }
 });
-var i = t(442837), r = t(19780), a = t(977059), u = t(760373);
-function o(e) {
+var r = t(442837), u = t(19780), l = t(977059), i = t(760373);
+function c(e) {
     let {
             channelId: n,
             location: t
-        } = e, o = a.c.useExperiment({ location: t });
-    return (0, i.e7)([r.Z], () => function (e, n, t) {
-        var i;
-        let {enabled: a} = n;
-        if (!a || null == e || r.Z.getChannelId() !== e)
+        } = e, c = l.c.useExperiment({ location: t });
+    return (0, r.e7)([u.Z], () => function (e, n, t) {
+        var r;
+        let {enabled: l} = n;
+        if (!l || null == e || u.Z.getChannelId() !== e)
             return !1;
-        let o = null === (i = t.getSecureFramesState()) || void 0 === i ? void 0 : i.version;
-        return null != o && o > u.HK;
-    }(n, o, r.Z));
+        let c = null === (r = t.getSecureFramesState()) || void 0 === r ? void 0 : r.version;
+        return null != c && c > i.HK;
+    }(n, c, u.Z));
 }

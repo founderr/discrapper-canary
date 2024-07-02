@@ -1,7 +1,7 @@
 t.r(n);
 var i = t(735250);
 t(470079);
-var a = t(481060), r = t(239091), l = t(883385), u = t(108843), s = t(911969), o = t(947440), d = t(100527), c = t(441061), _ = t(167675), M = t(737013), I = t(145474), f = t(702321), E = t(461535), N = t(776568), T = t(299206), Z = t(895563), A = t(212205), C = t(62420), S = t(455395), g = t(581052), h = t(875252), m = t(122074), x = t(819403), O = t(777658), R = t(858488), U = t(185457), p = t(570870), v = t(389052), j = t(24311), P = t(794973), G = t(332576), y = t(710631), b = t(558924), L = t(991307), F = t(725119), D = t(700994), V = t(332031), k = t(981631), Y = t(689938);
+var a = t(481060), r = t(239091), l = t(883385), u = t(108843), s = t(911969), o = t(947440), d = t(100527), c = t(441061), _ = t(167675), M = t(737013), I = t(145474), f = t(702321), E = t(461535), N = t(776568), T = t(299206), Z = t(895563), A = t(212205), C = t(62420), S = t(455395), g = t(581052), m = t(875252), h = t(122074), x = t(819403), O = t(777658), R = t(858488), U = t(185457), p = t(570870), v = t(389052), j = t(24311), P = t(794973), G = t(332576), y = t(710631), b = t(558924), L = t(991307), F = t(725119), D = t(700994), V = t(332031), k = t(981631), Y = t(689938);
 n.default = (0, u.Z)((0, l.Z)(function (e) {
     let {
             user: n,
@@ -25,7 +25,7 @@ n.default = (0, u.Z)((0, l.Z)(function (e) {
             userId: n.id,
             channelId: t.id,
             location: 'DMUserContextMenu'
-        }), es = (0, G.Z)(n.id, t.id), eo = (0, v.Z)({ user: n }), ed = (0, N.ZP)(t), ec = (0, m.Uf)(k.aIL, t.id, 'trailing'), e_ = (0, T.Z)({
+        }), es = (0, G.Z)(n.id, t.id), eo = (0, v.Z)({ user: n }), ed = (0, N.ZP)(t), ec = (0, h.Uf)(k.aIL, t.id, 'trailing'), e_ = (0, T.Z)({
             id: n.id,
             label: Y.Z.Messages.COPY_ID_USER
         }), eM = (0, T.Z)({
@@ -37,7 +37,7 @@ n.default = (0, u.Z)((0, l.Z)(function (e) {
             channel: t,
             guildId: void 0,
             onHeightUpdate: H
-        }), eA = (0, Z.l)(t), eC = (0, Z.P)(t), eS = (0, A.Z)(t), eg = (0, C.Z)(t), eh = (0, g.V)(t), em = (0, S.i)(t), ex = (0, h.H)(t), eO = t.isManaged(), eR = n.isNonUserBot();
+        }), eA = (0, Z.l)(t), eC = (0, Z.P)(t), eS = (0, A.Z)(t), eg = (0, C.Z)(t), em = (0, g.V)(t), eh = (0, S.i)(t), ex = (0, m.H)(t), eO = t.isManaged(), eR = n.isNonUserBot();
     return (0, i.jsxs)(a.Menu, {
         navId: 'user-context',
         onClose: r.Zy,
@@ -45,9 +45,9 @@ n.default = (0, u.Z)((0, l.Z)(function (e) {
         onSelect: W,
         children: [
             (0, i.jsx)(a.MenuGroup, { children: !(eR && !(0, f.Z)(t.id)) && eI }),
-            (0, i.jsx)(a.MenuGroup, { children: eh }),
-            (0, i.jsx)(a.MenuGroup, { children: ex }),
             (0, i.jsx)(a.MenuGroup, { children: em }),
+            (0, i.jsx)(a.MenuGroup, { children: ex }),
+            (0, i.jsx)(a.MenuGroup, { children: eh }),
             (0, i.jsxs)(a.MenuGroup, {
                 children: [
                     eA,

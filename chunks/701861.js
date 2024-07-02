@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(481060), c = n(493683), d = n(239091), u = n(194359), _ = n(703656), E = n(592125), h = n(131951), I = n(51144), m = n(321488), g = n(417183), p = n(825682), T = n(170245), S = n(981631), C = n(65154), N = n(689938), f = n(920175);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(481060), c = n(493683), d = n(239091), u = n(194359), _ = n(703656), E = n(592125), h = n(131951), I = n(51144), m = n(321488), g = n(417183), p = n(825682), T = n(170245), S = n(981631), C = n(65154), f = n(689938), N = n(920175);
 function A(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -17,37 +17,37 @@ function Z(e) {
         }, a = (0, l.e7)([h.Z], () => h.Z.supports(C.AN.VIDEO));
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
-        'aria-label': N.Z.Messages.USER_ACTIONS_MENU_LABEL,
+        'aria-label': f.Z.Messages.USER_ACTIONS_MENU_LABEL,
         onClose: d.Zy,
         onSelect: n,
         children: [
             a ? (0, i.jsx)(o.MenuItem, {
                 id: 'start-video-call',
-                label: N.Z.Messages.START_VIDEO_CALL,
+                label: f.Z.Messages.START_VIDEO_CALL,
                 action: function () {
                     c.Z.openPrivateChannel(t.id, !0, !0);
                 }
             }) : null,
             (0, i.jsx)(o.MenuItem, {
                 id: 'start-voice-call',
-                label: N.Z.Messages.START_VOICE_CALL,
+                label: f.Z.Messages.START_VOICE_CALL,
                 action: () => {
                     c.Z.openPrivateChannel(t.id, !0);
                 }
             }),
             (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
-                label: N.Z.Messages.REMOVE_FRIEND,
+                label: f.Z.Messages.REMOVE_FRIEND,
                 action: () => {
                     (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
-                        header: N.Z.Messages.REMOVE_FRIEND_TITLE.format({ name: I.ZP.getName(t) }),
-                        confirmText: N.Z.Messages.REMOVE_FRIEND,
-                        cancelText: N.Z.Messages.CANCEL,
+                        header: f.Z.Messages.REMOVE_FRIEND_TITLE.format({ name: I.ZP.getName(t) }),
+                        confirmText: f.Z.Messages.REMOVE_FRIEND,
+                        cancelText: f.Z.Messages.CANCEL,
                         onConfirm: s,
                         ...e,
                         children: (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            children: N.Z.Messages.REMOVE_FRIEND_BODY.format({ name: I.ZP.getName(t) })
+                            children: f.Z.Messages.REMOVE_FRIEND_BODY.format({ name: I.ZP.getName(t) })
                         })
                     }));
                 },
@@ -56,7 +56,7 @@ function Z(e) {
         ]
     });
 }
-class L extends s.PureComponent {
+class v extends s.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -80,7 +80,7 @@ class L extends s.PureComponent {
             onOtherHover: () => l ? null : (0, d.Zy)(),
             onClick: this.handleOpenPrivateChannel,
             children: t => (0, i.jsxs)('div', {
-                className: f.listItemContents,
+                className: N.listItemContents,
                 children: [
                     (0, i.jsx)(T.Z, {
                         user: e,
@@ -97,17 +97,17 @@ class L extends s.PureComponent {
                         showAccountIdentifier: !0
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.actions,
+                        className: N.actions,
                         children: [
                             (0, i.jsx)(m.Z, {
                                 icon: o.ChatIcon,
-                                tooltip: N.Z.Messages.SEND_DM,
+                                tooltip: f.Z.Messages.SEND_DM,
                                 onClick: this.handleOpenPrivateChannel,
                                 shouldHighlight: t
                             }),
                             (0, i.jsx)(m.Z, {
                                 icon: o.MoreVerticalIcon,
-                                tooltip: N.Z.Messages.MORE,
+                                tooltip: f.Z.Messages.MORE,
                                 onClick: this.handleOpenActionsMenu,
                                 shouldHighlight: t
                             })
@@ -136,4 +136,4 @@ class L extends s.PureComponent {
         });
     }
 }
-t.Z = L;
+t.Z = v;

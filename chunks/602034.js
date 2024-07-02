@@ -6,14 +6,14 @@ n.d(t, {
         return I;
     }
 });
-var i = n(735250), a = n(470079), l = n(143927), s = n(481060), r = n(570140), o = n(668781), c = n(966390), d = n(680287), u = n(470623), h = n(957730), p = n(48854), m = n(703558), _ = n(403182), f = n(928477), E = n(981631), C = n(689938);
+var i = n(735250), a = n(470079), s = n(143927), l = n(481060), r = n(570140), o = n(668781), c = n(966390), d = n(680287), u = n(470623), h = n(957730), p = n(48854), m = n(703558), _ = n(403182), f = n(928477), E = n(981631), C = n(689938);
 function g(e) {
     let {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: i,
-            privateThreadMode: l,
-            location: s,
+            privateThreadMode: s,
+            location: l,
             onThreadCreated: r,
             useDefaultThreadName: o
         } = e, d = a.useCallback((e, t, n, i) => {
@@ -29,8 +29,8 @@ function g(e) {
         parentChannel: t,
         parentMessageId: n,
         threadSettings: i,
-        privateThreadMode: l,
-        location: s,
+        privateThreadMode: s,
+        location: l,
         onThreadCreated: r,
         useDefaultThreadName: o,
         uploadHandler: d
@@ -49,23 +49,23 @@ function I(e) {
                 name: t,
                 appliedTags: n
             };
-        }, l.Z);
+        }, s.Z);
     return (0, f.Wj)({
         parentChannel: t,
         name: a,
         appliedTags: c,
-        upload: function (e, a, l) {
+        upload: function (e, a, s) {
             return new Promise((c, u) => {
                 let h = new d.Z(e);
-                h.on('error', (e, a, l) => {
+                h.on('error', (e, a, s) => {
                     if (a === E.evJ.EXPLICIT_CONTENT) {
                         let e = (0, p.r)();
-                        null != l && null != l.attachments && l.attachments.length > 0 && (r.Z.dispatch({
+                        null != s && null != s.attachments && s.attachments.length > 0 && (r.Z.dispatch({
                             type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
                             messageId: e,
                             channelId: t.id,
-                            attachments: l.attachments
-                        }), (0, s.openModalLazy)(async () => {
+                            attachments: s.attachments
+                        }), (0, l.openModalLazy)(async () => {
                             let {default: a} = await n.e('57539').then(n.bind(n, 924188));
                             return n => (0, i.jsx)(a, {
                                 ...n,
@@ -84,10 +84,10 @@ function I(e) {
                             title: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
                             body: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({ limit: E.dN1 })
                         });
-                    u({ body: l });
+                    u({ body: s });
                 }), h.on('complete', (e, t) => {
                     c({ body: t });
-                }), h.uploadFiles(l, a, { addFilesTo: 'message.attachments' });
+                }), h.uploadFiles(s, a, { addFilesTo: 'message.attachments' });
             });
         }
     });

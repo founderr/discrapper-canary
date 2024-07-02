@@ -1,6 +1,6 @@
 let i;
 n(47120), n(724458), n(653041);
-var a, l, s, r, o = n(392711), c = n.n(o), d = n(442837), u = n(570140), h = n(279779), p = n(131704), m = n(624138), _ = n(51144), f = n(592125), E = n(580005), C = n(699516), g = n(594174), I = n(981631);
+var a, s, l, r, o = n(392711), c = n.n(o), d = n(442837), u = n(570140), h = n(279779), p = n(131704), m = n(624138), _ = n(51144), f = n(592125), E = n(580005), C = n(699516), g = n(594174), I = n(981631);
 let x = !1, T = '', N = 0, v = [], S = !1, Z = new Set(), A = null;
 function M() {
     T = '', N = 0, v = [], Z = new Set(), x = !1, A = null;
@@ -27,8 +27,8 @@ function R() {
                 return E.Z.getScoreWithoutFetchingLatest(t);
             })), n = {};
         return e.forEach(e => {
-            let i = E.Z.getScoreWithoutFetchingLatest(e.id), a = e.getRecipientId(), l = C.Z.isFriend(a) ? 0.2 : 0, s = null != f.Z.getDMFromUserId(a) ? 0.1 : 0;
-            n[a] = 1 + i / t + l + s;
+            let i = E.Z.getScoreWithoutFetchingLatest(e.id), a = e.getRecipientId(), s = C.Z.isFriend(a) ? 0.2 : 0, l = null != f.Z.getDMFromUserId(a) ? 0.1 : 0;
+            n[a] = 1 + i / t + s + l;
         }), n;
     }()), !1;
 }
@@ -94,12 +94,12 @@ class U extends (a = d.ZP.Store) {
         };
     }
 }
-r = 'PrivateChannelRecipientsInviteStore', (s = 'displayName') in (l = U) ? Object.defineProperty(l, s, {
+r = 'PrivateChannelRecipientsInviteStore', (l = 'displayName') in (s = U) ? Object.defineProperty(s, l, {
     value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : l[s] = r;
+}) : s[l] = r;
 let w = new U(u.Z, {
     CONNECTION_OPEN: function () {
         M();

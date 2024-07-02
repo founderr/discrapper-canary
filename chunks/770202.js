@@ -1,5 +1,5 @@
 n(411104), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(493683), c = n(239091), u = n(146773), d = n(201895), h = n(703656), p = n(592125), _ = n(430824), f = n(496675), g = n(98597), m = n(473403), C = n(981631), I = n(490897), E = n(704672);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(493683), c = n(239091), u = n(146773), d = n(201895), h = n(703656), p = n(592125), _ = n(430824), f = n(496675), m = n(98597), g = n(473403), C = n(981631), I = n(490897), E = n(704672);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -14,7 +14,7 @@ function x(e, t) {
         throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
     o.Z.preload(n, t.id);
 }
-class S extends g.ZP {
+class S extends m.ZP {
     render() {
         let {
                 channel: e,
@@ -26,7 +26,7 @@ class S extends g.ZP {
             } = this.props, o = (0, i.jsx)('li', {
                 className: a()(this.getClassName(), { [E.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
-                children: (0, i.jsxs)(m.Z, {
+                children: (0, i.jsxs)(g.Z, {
                     className: E.iconVisibility,
                     channel: e,
                     selected: t,
@@ -73,7 +73,7 @@ class S extends g.ZP {
         });
     }
 }
-let Z = (0, u.B)(S);
+let v = (0, u.B)(S);
 t.Z = l.memo(function (e) {
     let {
             channel: t,
@@ -89,7 +89,7 @@ t.Z = l.memo(function (e) {
                 canReorderChannel: !0 !== l && null != e ? f.Z.can(C.Plq.MANAGE_CHANNELS, e) : f.Z.can(C.Plq.MANAGE_CHANNELS, n)
             };
         });
-    return (0, i.jsx)(Z, {
+    return (0, i.jsx)(v, {
         ...r,
         ...e
     });

@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(920906), o = n(393238), c = n(410030), d = n(231338), u = n(493796);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(920906), o = n(393238), c = n(410030), d = n(231338), u = n(493796);
 let h = {
         mass: 1,
         tension: 400,
@@ -157,7 +157,7 @@ function f(e) {
     let {
             children: t,
             fullHeight: n = !1
-        } = e, [l, f] = a.useState(!1), {
+        } = e, [s, f] = a.useState(!1), {
             height: E,
             ref: C
         } = (0, o.Z)(), {
@@ -167,7 +167,7 @@ function f(e) {
             from: { height: 0 },
             to: { height: x },
             config: h,
-            delay: l ? 0 : 800,
+            delay: s ? 0 : 800,
             onRest: () => f(!0)
         }), N = (0, r.useSpring)({
             from: { opacity: 0 },
@@ -182,7 +182,7 @@ function f(e) {
             className: u.heightContainer,
             style: {
                 ...T,
-                overflow: l ? 'initial' : 'hidden'
+                overflow: s ? 'initial' : 'hidden'
             },
             children: [
                 (0, i.jsx)(m, {
@@ -191,13 +191,13 @@ function f(e) {
                     axleColor: A
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(u.content, n && u.fullHeight),
+                    className: l()(u.content, n && u.fullHeight),
                     ref: C,
                     children: (0, i.jsx)('div', {
-                        className: s()(u.innerContent, n && u.fullHeight),
+                        className: l()(u.innerContent, n && u.fullHeight),
                         style: { backgroundColor: S },
                         children: (0, i.jsx)(r.animated.div, {
-                            className: s()(u.contentAnimContainer, n && u.fullHeight),
+                            className: l()(u.contentAnimContainer, n && u.fullHeight),
                             style: N,
                             children: t
                         })

@@ -6,10 +6,10 @@ n.d(t, {
         return _;
     }
 }), n(653041), n(47120);
-var i, a, l = n(470079), s = n(392711), r = n(442837), o = n(638730), c = n(358221), d = n(136015), u = n(565799), h = n(431328), p = n(501655);
+var i, a, s = n(470079), l = n(392711), r = n(442837), o = n(638730), c = n(358221), d = n(136015), u = n(565799), h = n(431328), p = n(501655);
 function m(e) {
-    let t = (0, h.Rk)(e, p.pV.AUDIENCE), [n, i] = l.useState(!1);
-    return l.useEffect(() => {
+    let t = (0, h.Rk)(e, p.pV.AUDIENCE), [n, i] = s.useState(!1);
+    return s.useEffect(() => {
         t > 100 ? i(!0) : t < 75 && i(!1);
     }, [t]), n ? 5000 : 0;
 }
@@ -19,8 +19,8 @@ function _(e, t, n) {
                     e,
                     u.Z.getParticipantsVersion(e)
                 ], [e], d.Q), a = (0, r.e7)([c.Z], () => c.Z.getSelectedParticipantId(e), [e]);
-            return l.useMemo(() => {
-                let l = [], r = [], o = -1, c = [];
+            return s.useMemo(() => {
+                let s = [], r = [], o = -1, c = [];
                 if (n)
                     for (let t of u.Z.getMutableParticipants(e, p.pV.SPEAKER))
                         if (t.type === p.Ui.STREAM)
@@ -28,8 +28,8 @@ function _(e, t, n) {
                         else
                             break;
                 let d = (e, t, n) => {
-                        let i = n ? e.filter((e, t) => e.id !== a && t > o) : e, c = (0, s.chunk)(i, t);
-                        r.push(c), l.push(c.length);
+                        let i = n ? e.filter((e, t) => e.id !== a && t > o) : e, c = (0, l.chunk)(i, t);
+                        r.push(c), s.push(c.length);
                     }, h = null != a ? u.Z.getParticipant(e, a) : null;
                 return (null == h ? void 0 : h.speaker) ? d([h], 1, !1) : d([], 1, !1), [
                     p.pV.SPEAKER,
@@ -37,7 +37,7 @@ function _(e, t, n) {
                 ].forEach(e => {
                     d(u.Z.getMutableParticipants(i[0], e), t[e], e === p.pV.SPEAKER);
                 }), d(c, 1, !1), [
-                    l,
+                    s,
                     r
                 ];
             }, [

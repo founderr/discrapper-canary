@@ -3,12 +3,12 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), a = n(470079), l = n(778947), s = n(534761), r = n(901461), o = n(453687), c = n(507418), d = n(348238), u = n(981631);
+var i = n(735250), a = n(470079), s = n(778947), l = n(534761), r = n(901461), o = n(453687), c = n(507418), d = n(348238), u = n(981631);
 let h = a.memo(function (e) {
         let {
                 message: t,
                 channel: n,
-                compact: s = !1,
+                compact: l = !1,
                 groupId: r,
                 isGroupStart: o,
                 usernameProfile: h,
@@ -22,15 +22,15 @@ let h = a.memo(function (e) {
                 avatarProfile: !1,
                 referencedUsernameProfile: !1
             }), [m]);
-        return (0, i.jsx)(l.ZP, {
+        return (0, i.jsx)(s.ZP, {
             guildId: n.guild_id,
             message: t,
             channel: n,
             repliedMessage: f,
             author: _,
-            compact: s,
+            compact: l,
             subscribeToGroupId: r,
-            showTimestampOnHover: !o && s && t.type !== u.uaV.REPLY,
+            showTimestampOnHover: !o && l && t.type !== u.uaV.REPLY,
             renderPopout: c.Z,
             showAvatarPopout: p,
             showUsernamePopout: h,
@@ -40,14 +40,14 @@ let h = a.memo(function (e) {
             onPopoutRequestClose: x,
             roleIcon: E
         });
-    }), p = a.memo(s.Z);
+    }), p = a.memo(l.Z);
 function m(e) {
     let {
             messageProps: t,
             setPopout: n,
             messagePopouts: a,
-            replyReference: l,
-            author: s,
+            replyReference: s,
+            author: l,
             repliedMessage: c,
             roleIcon: d
         } = e, {
@@ -62,7 +62,7 @@ function m(e) {
     if ((0, r.Z)(u))
         return null;
     let g = u.id === f;
-    return g || m || null != l ? (0, i.jsx)(h, {
+    return g || m || null != s ? (0, i.jsx)(h, {
         message: u,
         channel: _,
         compact: m,
@@ -72,7 +72,7 @@ function m(e) {
         setPopout: n,
         usernameProfile: E,
         avatarProfile: C,
-        author: s,
+        author: l,
         repliedMessage: c,
         roleIcon: d
     }) : (0, i.jsx)(p, {

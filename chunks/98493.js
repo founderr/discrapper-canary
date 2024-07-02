@@ -17,11 +17,11 @@ function d(e) {
         fetchNextPage: i.useCallback(async (e, i) => {
             if (l.current)
                 return;
-            let f = ''.concat(e, '-').concat(i), g = !1;
-            if (f !== p.current && (p.current = f, _.current = !1, g = !0), _.current)
+            let f = ''.concat(e, '-').concat(i), m = !1;
+            if (f !== p.current && (p.current = f, _.current = !1, m = !0), _.current)
                 return;
             null != d && h(null);
-            let m = function (e, t, n, i) {
+            let g = function (e, t, n, i) {
                 let l = n === c.wB.SUBMITTED;
                 if (t === c.Nw.TIMESTAMP_DESC) {
                     if (i)
@@ -37,7 +37,7 @@ function d(e) {
                     let t = e[e.length - 1];
                     return { after: l ? t.joinRequestId : t.actionedAt };
                 }
-            }(n, e, i, g);
+            }(n, e, i, m);
             try {
                 l.current = !0;
                 let e = await o.Z.fetchGuildJoinRequests({
@@ -45,7 +45,7 @@ function d(e) {
                     status: i,
                     limit: u,
                     force: !0,
-                    ...m
+                    ...g
                 });
                 if (null != e) {
                     let {guild_join_requests: t} = e.body;

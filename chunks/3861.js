@@ -1,9 +1,9 @@
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(112724), o = n(613611), c = n(351248), d = n(285952), u = n(585483), h = n(340295), p = n(171277), m = n(677845), _ = n(430371), f = n(236564), E = n(981631), C = n(354459), g = n(524465);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(112724), o = n(613611), c = n(351248), d = n(285952), u = n(585483), h = n(340295), p = n(171277), m = n(677845), _ = n(430371), f = n(236564), E = n(981631), C = n(354459), g = n(524465);
 t.Z = (0, r.Z)(e => {
     let {
         participants: t,
         filteredParticipants: n,
-        selectedParticipant: l,
+        selectedParticipant: s,
         participantsVersion: r,
         layout: I,
         onSelectParticipant: x,
@@ -48,9 +48,9 @@ t.Z = (0, r.Z)(e => {
             participants: t,
             onContextMenu: T
         });
-    if (n = A ? n : t, null == l)
+    if (n = A ? n : t, null == s)
         return 0 === n.length ? (0, i.jsx)(f.Z, {
-            className: s()(g.videoGrid, g.hiddenParticipants),
+            className: l()(g.videoGrid, g.hiddenParticipants),
             channelId: v.id,
             width: R
         }) : (0, i.jsx)(d.Z, {
@@ -73,7 +73,7 @@ t.Z = (0, r.Z)(e => {
         onFullscreenParticipant: N,
         onContextMenuParticipant: T,
         onSelectParticipant: x,
-        selectedParticipant: l,
+        selectedParticipant: s,
         filteredParticipants: D,
         participants: t,
         popoutWindow: O,

@@ -11,13 +11,13 @@ t.Z = function (e) {
             isActive: g,
             onOtherHover: p,
             className: T
-        } = e, [S, C] = s.useState(!1), [N, f] = s.useState(!1), A = () => {
-            C(!0), m && !g && !N && (null == p || p());
+        } = e, [S, C] = s.useState(!1), [f, N] = s.useState(!1), A = () => {
+            C(!0), m && !g && !f && (null == p || p());
         }, Z = () => {
             C(!1);
-        }, L = (e, t) => {
+        }, v = (e, t) => {
             if (null != t)
-                f(!0), (0, d.jW)(e, async () => {
+                N(!0), (0, d.jW)(e, async () => {
                     let {default: e} = await Promise.all([
                         n.e('79695'),
                         n.e('17400'),
@@ -29,7 +29,7 @@ t.Z = function (e) {
                     });
                 }, {
                     onClose: () => {
-                        f(!1);
+                        N(!1);
                     }
                 });
         };
@@ -42,10 +42,10 @@ t.Z = function (e) {
             },
             children: (0, i.jsx)(l.Z.div, {
                 className: r()(_.messageRequestItem, T, {
-                    [_.active]: g || N,
+                    [_.active]: g || f,
                     [_.firstItem]: 0 === t
                 }),
-                onContextMenu: e => L(e, E),
+                onContextMenu: e => v(e, E),
                 onMouseEnter: A,
                 onMouseLeave: Z,
                 onClick: null != I ? I : void 0,
@@ -54,7 +54,7 @@ t.Z = function (e) {
                     opacity: 1
                 },
                 ...e,
-                children: a(S || g || N)
+                children: a(S || g || f)
             })
         })
     });

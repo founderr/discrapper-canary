@@ -1,19 +1,19 @@
-var i = n(735250), a = n(470079), l = n(758713), s = n(442837), r = n(481060), o = n(620662), c = n(841784), d = n(420660), u = n(429589), h = n(757182), p = n(706454), m = n(374129), _ = n(639351), f = n(823379), E = n(192918), C = n(22211), g = n(561308), I = n(919394), x = n(438226), T = n(206295), N = n(91140), v = n(297781), S = n(591853), Z = n(265048), A = n(981631), M = n(689938);
+var i = n(735250), a = n(470079), s = n(758713), l = n(442837), r = n(481060), o = n(620662), c = n(841784), d = n(420660), u = n(429589), h = n(757182), p = n(706454), m = n(374129), _ = n(639351), f = n(823379), E = n(192918), C = n(22211), g = n(561308), I = n(919394), x = n(438226), T = n(206295), N = n(91140), v = n(297781), S = n(591853), Z = n(265048), A = n(981631), M = n(689938);
 let b = {
-    [l.z.DESKTOP]: null,
-    [l.z.LINUX]: null,
-    [l.z.MACOS]: null,
-    [l.z.NINTENDO]: null,
-    [l.z.IOS]: null,
-    [l.z.ANDROID]: null,
-    [l.z.XBOX]: _.Z,
-    [l.z.PLAYSTATION]: m.Z
+    [s.z.DESKTOP]: null,
+    [s.z.LINUX]: null,
+    [s.z.MACOS]: null,
+    [s.z.NINTENDO]: null,
+    [s.z.IOS]: null,
+    [s.z.ANDROID]: null,
+    [s.z.XBOX]: _.Z,
+    [s.z.PLAYSTATION]: m.Z
 };
 t.Z = e => {
     let {
             channel: t,
             entry: n,
-            requestId: l,
+            requestId: s,
             closePopout: m
         } = e, {
             iconUrl: _,
@@ -25,7 +25,7 @@ t.Z = e => {
         } = (0, Z.F)(n), {
             primaryColor: y,
             secondaryColor: D
-        } = (0, T.Z)(_), k = (0, s.e7)([p.default], () => p.default.locale), {
+        } = (0, T.Z)(_), k = (0, l.e7)([p.default], () => p.default.locale), {
             streamPreviewUrl: U,
             stream: w
         } = (0, C.Z)(n), {
@@ -125,7 +125,7 @@ t.Z = e => {
                     generateReactionImage: W,
                     reactionImageAltText: (0, x.IS)(n, j),
                     entry: n,
-                    requestId: l,
+                    requestId: s,
                     buttons: X
                 })
             })

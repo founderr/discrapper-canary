@@ -1,4 +1,4 @@
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(91192), o = n(442837), c = n(481060), u = n(493683), d = n(239091), h = n(569471), p = n(488131), _ = n(592125), f = n(306680), g = n(979651), m = n(938475), C = n(514342), I = n(714794), E = n(135724), N = n(25601), x = n(207055), S = n(981631), Z = n(124368), v = n(689938), T = n(704672), L = n(848998), A = n(807633);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(91192), o = n(442837), c = n(481060), u = n(493683), d = n(239091), h = n(569471), p = n(488131), _ = n(592125), f = n(306680), m = n(979651), g = n(938475), C = n(514342), I = n(714794), E = n(135724), N = n(25601), x = n(207055), S = n(981631), v = n(124368), Z = n(689938), T = n(704672), L = n(848998), A = n(807633);
 function b(e) {
     let {
         style: t,
@@ -25,14 +25,14 @@ t.Z = l.memo(function (e) {
             isSelectedVoice: A,
             isLast: M,
             withGuildIcon: R
-        } = e, y = (0, o.e7)([m.ZP], () => m.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
+        } = e, O = (0, o.e7)([g.ZP], () => g.ZP.getVoiceStatesForChannel(t), [t]), y = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)), {
             unread: P,
             mentionCount: j
         } = (0, o.cj)([f.ZP], () => ({
             unread: f.ZP.hasUnread(t.id),
             mentionCount: f.ZP.getMentionCount(t.id)
         })), D = (0, o.e7)([h.Z], () => h.Z.isMuted(t.id)), U = l.useCallback(e => {
-            (0, p.ok)(t, !e.shiftKey, Z.on.CHANNEL_LIST);
+            (0, p.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
         }, [t]), G = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [
@@ -47,13 +47,13 @@ t.Z = l.memo(function (e) {
                     channel: l
                 });
             });
-        }, [t.id]), k = null == y ? 0 : y.length, {
+        }, [t.id]), k = null == O ? 0 : O.length, {
             role: B,
             ...V
-        } = (0, s.JA)(t.id), H = l.useRef(null), F = j > 0 ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+        } = (0, s.JA)(t.id), H = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
             channelName: t.name,
             mentionCount: j
-        }) : P ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({ channelName: t.name }) : v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
+        }) : P ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({ channelName: t.name }) : Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
     return (0, i.jsxs)('li', {
         role: B,
         className: a()(T.containerDefault, { [T.selected]: r }),
@@ -102,7 +102,7 @@ t.Z = l.memo(function (e) {
                                         children: [
                                             k > 0 && t.userLimit > 0 ? (0, i.jsx)(E.Z, {
                                                 userCount: k,
-                                                video: O,
+                                                video: y,
                                                 channel: t
                                             }) : null,
                                             (0, I.Z)(j) ? (0, i.jsx)(N.Z, { mentionsCount: j }) : null
@@ -118,7 +118,7 @@ t.Z = l.memo(function (e) {
                 channel: t,
                 collapsed: !A,
                 collapsedMax: 6,
-                voiceStates: y,
+                voiceStates: O,
                 location: S.Sbl.GUILD_CHANNEL_LIST
             })
         ]

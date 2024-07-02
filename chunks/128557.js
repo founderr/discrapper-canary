@@ -6,12 +6,12 @@ n.d(t, {
         return j;
     }
 }), n(47120), n(653041);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(77866), o = n(748780), c = n(442837), d = n(704215), u = n(481060), h = n(699682), p = n(367907), m = n(812206), _ = n(644914), f = n(434404), E = n(330010), C = n(314897), g = n(430824), I = n(594174), x = n(259580), T = n(585483), N = n(63063), v = n(358085), S = n(709054), Z = n(967128), A = n(981631), M = n(231873), b = n(689938), R = n(454229);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(77866), o = n(748780), c = n(442837), d = n(704215), u = n(481060), h = n(699682), p = n(367907), m = n(812206), _ = n(644914), f = n(434404), E = n(330010), C = n(314897), g = n(430824), I = n(594174), x = n(259580), T = n(585483), N = n(63063), v = n(358085), S = n(709054), Z = n(967128), A = n(981631), M = n(231873), b = n(689938), R = n(454229);
 function j(e) {
     let {
             className: t,
             iconUrl: n,
-            icon: l,
+            icon: s,
             header: r,
             completed: o,
             onClick: c
@@ -22,23 +22,23 @@ function j(e) {
         o,
         m
     ]), (0, i.jsxs)(u.Clickable, {
-        className: s()(t, R.card, { [R.completed]: o }),
+        className: l()(t, R.card, { [R.completed]: o }),
         onClick: c,
         children: [
-            null != l ? l : (0, i.jsx)('div', {
+            null != s ? s : (0, i.jsx)('div', {
                 className: R.icon,
                 style: { backgroundImage: 'url(\''.concat(n, '\')') }
             }),
             (0, i.jsx)(u.Text, {
                 color: 'header-primary',
-                className: s()(R.cardTextContainer, R.cardHeader),
+                className: l()(R.cardTextContainer, R.cardHeader),
                 variant: 'text-sm/normal',
                 children: r
             }),
             o ? (0, i.jsx)(u.CheckmarkLargeIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(R.checkmark, { [R.animate]: d })
+                className: l()(R.checkmark, { [R.animate]: d })
             }) : (0, i.jsx)(x.Z, {
                 className: R.arrow,
                 direction: x.Z.Directions.RIGHT
@@ -47,18 +47,18 @@ function j(e) {
     });
 }
 function L(e) {
-    let {channel: t} = e, l = (0, c.e7)([g.Z], () => null != t ? g.Z.getGuild(t.getGuildId()) : null, [t]), h = null != l && S.default.extractTimestamp(l.id) < Date.now() - A._8R, x = (0, c.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]), {
+    let {channel: t} = e, s = (0, c.e7)([g.Z], () => null != t ? g.Z.getGuild(t.getGuildId()) : null, [t]), h = null != s && S.default.extractTimestamp(s.id) < Date.now() - A._8R, x = (0, c.e7)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]), {
             canInvite: L,
             canManageGuild: P,
             canMessage: O
-        } = (0, _.TE)(t, l), y = (0, c.e7)([I.default], () => {
+        } = (0, _.TE)(t, s), y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }), {
             guildPopulated: D,
             guildMessaged: k,
             guildPersonalized: U
-        } = (0, _.h_)(l), {
+        } = (0, _.h_)(s), {
             handleInvite: w,
             handleMessage: B,
             handlePersonalize: H,
@@ -81,7 +81,7 @@ function L(e) {
                             analyticsLocation: { section: A.jXE.CHANNEL_WELCOME_CTA }
                         });
                     });
-                }, [e]), l = a.useCallback(() => {
+                }, [e]), s = a.useCallback(() => {
                     p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.SEND_MESSAGE
@@ -89,7 +89,7 @@ function L(e) {
                         highlight: !0,
                         channelId: A.lds
                     });
-                }, []), s = a.useCallback(() => {
+                }, []), l = a.useCallback(() => {
                     p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.PERSONALIZE_SERVER
@@ -108,8 +108,8 @@ function L(e) {
                 }, []);
             return {
                 handleInvite: t,
-                handleMessage: l,
-                handlePersonalize: s,
+                handleMessage: s,
+                handlePersonalize: l,
                 handleDownload: r,
                 handleAddApplication: a.useCallback(() => {
                     null != e && (p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
@@ -128,7 +128,7 @@ function L(e) {
                     }));
                 }, [e])
             };
-        }(l), F = !(y || D || k || U), {
+        }(s), F = !(y || D || k || U), {
             titleAnimatedStyle: W,
             opacities: z
         } = function (e) {
@@ -186,11 +186,11 @@ function L(e) {
                 } : {},
                 opacities: i
             };
-        }(F), Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == l ? void 0 : l.id)).length > 0;
+        }(F), Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
     if (a.useEffect(() => {
             var e;
-            (0, E.i)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : A.lds);
-        }, [l]), null == l)
+            (0, E.i)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : A.lds);
+        }, [s]), null == s)
         return null;
     let K = [];
     !h && (L && K.push((0, i.jsx)(o.Z.div, {
@@ -255,11 +255,11 @@ function L(e) {
                             (0, i.jsx)(u.Heading, {
                                 className: R.titleName,
                                 variant: 'heading-xxl/semibold',
-                                children: b.Z.Messages.WELCOME_CTA_TITLE.format({ guildName: l.name })
+                                children: b.Z.Messages.WELCOME_CTA_TITLE.format({ guildName: s.name })
                             }),
                             (0, i.jsxs)(u.Text, {
                                 color: 'header-secondary',
-                                className: s()({
+                                className: l()({
                                     [R.subtitle]: !0,
                                     [R.noChildren]: 0 === K.length
                                 }),

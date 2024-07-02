@@ -1,23 +1,23 @@
 let i;
 n(47120), n(653041);
-var l, r, a, s, o = n(442837), c = n(570140), u = n(413605), d = n(703656), h = n(131704), p = n(601964), _ = n(592125), f = n(430824), g = n(701190), m = n(496675), C = n(594174), I = n(998502), E = n(981631), N = n(176505);
-let x = E.IlC.APP, S = !1, Z = !1, v = [];
+var l, r, a, s, o = n(442837), c = n(570140), u = n(413605), d = n(703656), h = n(131704), p = n(601964), _ = n(592125), f = n(430824), m = n(701190), g = n(496675), C = n(594174), I = n(998502), E = n(981631), N = n(176505);
+let x = E.IlC.APP, S = !1, v = !1, Z = [];
 function T() {
     S = !0;
 }
 class L extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, g.Z, C.default);
+        this.waitFor(f.Z, m.Z, C.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
-        return !!(S && v.length > 0 && x === e);
+        return !!(S && Z.length > 0 && x === e);
     }
     getProps() {
         return {
-            invite: v.length > 0 ? v[0][0] : null,
+            invite: Z.length > 0 ? Z[0][0] : null,
             error: null != i && '' !== i ? i : null,
-            submitting: Z
+            submitting: v
         };
     }
 }
@@ -56,7 +56,7 @@ s = 'InviteModalStore', (a = 'displayName') in (r = L) ? Object.defineProperty(r
                         let {channel: t} = e;
                         if (null != t) {
                             let e = _.Z.getChannel(t.id);
-                            if (m.Z.can(E.Plq.VIEW_CHANNEL, e))
+                            if (g.Z.can(E.Plq.VIEW_CHANNEL, e))
                                 return t.id;
                         }
                         return null;
@@ -65,12 +65,12 @@ s = 'InviteModalStore', (a = 'displayName') in (r = L) ? Object.defineProperty(r
                 }
             }
         }
-        if (v.some(e => {
+        if (Z.some(e => {
                 let [n] = e;
                 return n.code === t.code;
             }))
             return !1;
-        x = e.context, Z = !1;
+        x = e.context, v = !1;
         let n = function (e) {
             let {
                     approximate_member_count: t,
@@ -97,22 +97,22 @@ s = 'InviteModalStore', (a = 'displayName') in (r = L) ? Object.defineProperty(r
                 };
             return null != u && (h.channel = { ...u }), null != d && (h.guild = new p.ZP(d)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
         }(t);
-        v.push([
+        Z.push([
             n,
             e.resolve
         ]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (i = null, Z = !1, v.length > 0) {
-            let [, e] = v.shift();
+        if (i = null, v = !1, Z.length > 0) {
+            let [, e] = Z.shift();
             null != e && e();
         }
     },
     INVITE_ACCEPT: function () {
-        Z = !0;
+        v = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
         let {message: t} = e;
-        i = t, Z = !1;
+        i = t, v = !1;
     }
 });

@@ -1,5 +1,5 @@
 n(411104), n(47120), n(724458), n(653041);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(692547), u = n(780384), _ = n(481060), E = n(570140), h = n(239091), I = n(51025), m = n(785547), g = n(730749), p = n(112724), T = n(812206), S = n(44315), C = n(210887), N = n(283595), f = n(417363), A = n(941128), Z = n(451478), L = n(285952), v = n(366695), O = n(366966), R = n(151011), x = n(424218), P = n(780570), b = n(353042), M = n(86826), D = n(981631), y = n(689938), j = n(350062);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(692547), u = n(780384), _ = n(481060), E = n(570140), h = n(239091), I = n(51025), m = n(785547), g = n(730749), p = n(112724), T = n(812206), S = n(44315), C = n(210887), f = n(283595), N = n(417363), A = n(941128), Z = n(451478), v = n(285952), L = n(366695), O = n(366966), R = n(151011), x = n(424218), P = n(780570), b = n(353042), M = n(86826), D = n(981631), y = n(689938), j = n(350062);
 function U(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -217,8 +217,8 @@ class K extends s.PureComponent {
             foregroundGradientColor: s,
             message: a
         } = e;
-        return (0, i.jsxs)(L.Z, {
-            direction: L.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.Progress, {
                     percent: t,
@@ -242,8 +242,8 @@ class K extends s.PureComponent {
             percents: t,
             message: n
         } = e;
-        return (0, i.jsxs)(L.Z, {
-            direction: L.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.StackedProgress, {
                     percents: t,
@@ -327,7 +327,7 @@ class K extends s.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(b.Z, {
-            getHistoricalTotalBytes: f.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: N.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -440,13 +440,13 @@ let q = () => (0, i.jsx)(k, {
         {
             key: Y,
             cellClassName: j.nameCell,
-            render: e => (0, i.jsxs)(L.Z, {
-                align: L.Z.Align.CENTER,
+            render: e => (0, i.jsxs)(v.Z, {
+                align: v.Z.Align.CENTER,
                 children: [
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(L.Z, {
                         game: e.application,
                         className: j.__invalid_gameIcon,
-                        size: v.Z.Sizes.SMALL
+                        size: L.Z.Sizes.SMALL
                     }),
                     (0, i.jsx)('div', {
                         className: j.nameCellText,
@@ -475,8 +475,8 @@ let q = () => (0, i.jsx)(k, {
                     size: _.Button.Sizes.SMALL,
                     className: j.gameActionButton,
                     source: D.Sbl.APPLICATION_LIBRARY_UPDATES
-                }) : null : null != e.state ? e.state.type !== D.vxO.UP_TO_DATE && (n = e.index > 0 ? (0, i.jsx)(X, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, { item: e }), s = (0, i.jsx)(J, { item: e })) : s = (0, i.jsx)(J, { item: e }), (0, i.jsxs)(L.Z, {
-                    justify: L.Z.Justify.END,
+                }) : null : null != e.state ? e.state.type !== D.vxO.UP_TO_DATE && (n = e.index > 0 ? (0, i.jsx)(X, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, { item: e }), s = (0, i.jsx)(J, { item: e })) : s = (0, i.jsx)(J, { item: e }), (0, i.jsxs)(v.Z, {
+                    justify: v.Z.Justify.END,
                     children: [
                         n,
                         s
@@ -517,14 +517,14 @@ class ee extends s.PureComponent {
                         (0, i.jsx)(M.Z, {
                             className: r()(j.headerCell, j.networkProgress),
                             title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-                            getHistoricalTotalBytes: f.Z.getHistoricalTotalBytesDownloaded,
+                            getHistoricalTotalBytes: N.Z.getHistoricalTotalBytesDownloaded,
                             color: D.Ilk.GREEN_360,
                             animate: s
                         }),
                         (0, i.jsx)(M.Z, {
                             className: r()(j.headerCell, j.diskProgress),
                             title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-                            getHistoricalTotalBytes: f.Z.getHistoricalTotalBytesWritten,
+                            getHistoricalTotalBytes: N.Z.getHistoricalTotalBytesWritten,
                             color: D.Ilk.BLUE_345,
                             animate: s
                         })
@@ -585,7 +585,7 @@ function et(e, t, n, i) {
             branchId: l,
             state: c,
             application: o,
-            libraryApplication: N.Z.getLibraryApplication(r, l),
+            libraryApplication: f.Z.getLibraryApplication(r, l),
             finished: t,
             index: a
         }), e;
@@ -593,16 +593,16 @@ function et(e, t, n, i) {
 }
 t.Z = (0, p.Z)(c.ZP.connectStores([
     T.Z,
-    f.Z,
+    N.Z,
     A.Z,
     C.Z,
     Z.Z
 ], () => {
-    let e = et(A.Z.activeItems, !1, T.Z, f.Z);
+    let e = et(A.Z.activeItems, !1, T.Z, N.Z);
     return {
         applications: [
             ...e,
-            ...et(A.Z.finishedItems, !0, T.Z, f.Z)
+            ...et(A.Z.finishedItems, !0, T.Z, N.Z)
         ],
         paused: A.Z.paused,
         isFocused: Z.Z.isFocused(),

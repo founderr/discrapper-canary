@@ -17,9 +17,9 @@ t.Z = (0, u.Z)(e => {
             channelId: T,
             prompt: S,
             disableGuildSelect: C,
-            disclosures: N,
-            integrationType: f
-        } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T), Z = null != f ? null == o ? void 0 : o.get(f) : void 0, L = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : r.Z.getApplication(n);
+            disclosures: f,
+            integrationType: N
+        } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T), Z = null != N ? null == o ? void 0 : o.get(N) : void 0, v = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : r.Z.getApplication(n);
     return new Promise((e, t) => {
         let r = n => {
             let {location: i} = n;
@@ -30,7 +30,7 @@ t.Z = (0, u.Z)(e => {
             authorizations: o,
             clientId: n,
             scopes: null != c ? c : [],
-            disclosures: null != N ? N : [],
+            disclosures: null != f ? f : [],
             callback: r,
             responseType: E,
             redirectUri: h,
@@ -42,13 +42,13 @@ t.Z = (0, u.Z)(e => {
             channelId: T,
             prompt: S,
             disableGuildSelect: 'boolean' == typeof C ? C : 'true' === C,
-            integrationType: f
+            integrationType: N
         }), {
             modalKey: A,
             onCloseRequest: () => {
                 (0, s.closeModal)(A), t(new d.Z({ errorCode: _.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
             }
-        }, null != L && (0, a.Z)(L, T) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT);
+        }, null != v && (0, a.Z)(v, T) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT);
     });
 }, function (e, t) {
     if (o.isPlatformEmbedded) {

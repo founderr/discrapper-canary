@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return N;
     }
 }), n(653041), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(239091), d = n(586902), u = n(512384), _ = n(484459), E = n(103575), h = n(314897), I = n(131951), m = n(51144), g = n(524484), p = n(689938), T = n(372844);
@@ -31,20 +31,20 @@ let S = { offset: 2 }, C = {
             getStatus: () => p.Z.Messages.VOICE_CHANNEL_LOCAL_MUTED
         }
     };
-function N(e) {
+function f(e) {
     var t, s;
     let {
             channel: a,
             user: h,
-            nick: N,
-            mute: f,
+            nick: f,
+            mute: N,
             deaf: A,
             serverMute: Z,
-            serverDeaf: L
-        } = e, v = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
+            serverDeaf: v
+        } = e, L = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
             userId: h.id,
             checkSoundSharing: !0
-        }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), P = null != N ? N : m.ZP.getName(h), {
+        }), R = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(a.guild_id, 24), P = null != f ? f : m.ZP.getName(h), {
             icon: b,
             colorize: M,
             getStatus: D
@@ -67,11 +67,11 @@ function N(e) {
             else if (s)
                 return C.mute;
         }({
-            serverDeaf: L,
+            serverDeaf: v,
             deaf: A,
             serverMute: Z,
-            mute: f,
-            localMute: v
+            mute: N,
+            localMute: L
         })) && void 0 !== s ? s : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
             userName: P,
             status: D()
@@ -142,7 +142,7 @@ function N(e) {
         })
     });
 }
-function f(e) {
+function N(e) {
     let {
             voiceStates: t,
             channel: n,
@@ -189,7 +189,7 @@ function f(e) {
                         nick: s,
                         voiceState: a
                     } = e;
-                    return t.id !== E ? (0, i.jsx)(N, {
+                    return t.id !== E ? (0, i.jsx)(f, {
                         channel: n,
                         user: t,
                         nick: s,

@@ -9,7 +9,7 @@ n.d(t, {
         return H;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), E = n(662842), h = n(703656), I = n(922482), m = n(565799), g = n(501655), p = n(192079), T = n(427679), S = n(448206), C = n(496675), N = n(938475), f = n(602623), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), P = n(725436), b = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), w = n(981631), k = n(689938), B = n(538704);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), E = n(662842), h = n(703656), I = n(922482), m = n(565799), g = n(501655), p = n(192079), T = n(427679), S = n(448206), C = n(496675), f = n(938475), N = n(602623), A = n(626135), Z = n(823379), v = n(15274), L = n(924301), O = n(504160), R = n(151864), x = n(835184), P = n(725436), b = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), w = n(981631), k = n(689938), B = n(538704);
 let H = r.memo(function (e) {
     let {
             heading: t,
@@ -94,7 +94,7 @@ function V(e) {
     let {
             guildEvent: t,
             channel: n
-        } = e, i = (0, c.Wu)([N.ZP], () => N.ZP.getVoiceStatesForChannel(n).map(e => {
+        } = e, i = (0, c.Wu)([f.ZP], () => f.ZP.getVoiceStatesForChannel(n).map(e => {
             let {user: t} = e;
             return t;
         }), [n]), s = (0, u.KS)(n);
@@ -119,7 +119,7 @@ function F(e) {
     let {
             guildEvent: t,
             noticeType: n
-        } = e, i = (0, j.DK)(t), s = (0, c.e7)([v.ZP], () => v.ZP.isInterestedInEventRecurrence(t.id, i), [
+        } = e, i = (0, j.DK)(t), s = (0, c.e7)([L.ZP], () => L.ZP.isInterestedInEventRecurrence(t.id, i), [
             t.id,
             i
         ]), r = (0, c.e7)([x.Z], () => x.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
@@ -182,7 +182,7 @@ function Y(e) {
                 className: B.textBlock,
                 children: [
                     (0, a.jsx)(d.Clickable, {
-                        onClick: () => (0, L.bO)({ eventId: n.id }),
+                        onClick: () => (0, v.bO)({ eventId: n.id }),
                         className: B.eventNameClickable,
                         children: (0, a.jsx)(d.Text, {
                             color: 'header-primary',
@@ -273,7 +273,7 @@ function W(e) {
 }
 function z(e) {
     let {guildEvent: t} = e, n = r.useCallback(() => {
-            (0, L.bO)({ eventId: t.id });
+            (0, v.bO)({ eventId: t.id });
         }, [t]);
     return (0, a.jsx)(d.Button, {
         fullWidth: !0,
@@ -356,11 +356,11 @@ function Q(e) {
             l.length > 0 ? (0, a.jsxs)('div', {
                 className: o()(B.textBlock, B.singleLine),
                 children: [
-                    (0, a.jsx)(f.Z, {
+                    (0, a.jsx)(N.Z, {
                         guildId: s,
                         users: l,
                         showUserPopout: !0,
-                        size: f.u.SIZE_16
+                        size: N.u.SIZE_16
                     }),
                     (0, a.jsx)(d.Text, {
                         color: 'header-secondary',

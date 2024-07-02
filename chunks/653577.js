@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(481060), c = n(362721), u = n(12498), d = n(454585), h = n(514342), p = n(626135), _ = n(981631), f = n(689938), g = n(264838), m = n(530790);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(442837), o = n(481060), c = n(362721), u = n(12498), d = n(454585), h = n(514342), p = n(626135), _ = n(981631), f = n(689938), m = n(264838), g = n(530790);
 function C(e) {
     let {
             channel: t,
@@ -13,7 +13,7 @@ function C(e) {
             onClick: I,
             enableHangStatus: E,
             allowChannelTopic: N
-        } = e, x = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)), S = null != x && x.length > 0, Z = (0, c.Z)(t, !0), v = (!E || !!N) && Z, T = null != C && C.length > 0;
+        } = e, x = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)), S = null != x && x.length > 0, v = (0, c.Z)(t, !0), Z = (!E || !!N) && v, T = null != C && C.length > 0;
     l.useEffect(() => {
         S && p.default.track(_.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
             guild_id: t.guild_id,
@@ -27,31 +27,31 @@ function C(e) {
     let L = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id)
         return null;
-    let A = a()(g.statusDiv, n && v ? g.hoverable : null);
+    let A = a()(m.statusDiv, n && Z ? m.hoverable : null);
     if (S)
         return (0, i.jsx)(o.Clickable, {
             className: A,
-            onClick: v ? I : void 0,
+            onClick: Z ? I : void 0,
             children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/medium',
-                className: a()(g.statusText, m.markup),
+                className: a()(m.statusText, g.markup),
                 children: (0, i.jsx)(h.Z, { children: d.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
             })
         });
-    if (n && v && (!T || r))
+    if (n && Z && (!T || r))
         return (0, i.jsxs)(o.Clickable, {
             className: A,
             onClick: I,
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-xs/medium',
-                    className: g.statusText,
+                    className: m.statusText,
                     children: f.Z.Messages.VOICE_CHANNEL_SET_STATUS
                 }),
                 (0, i.jsx)(o.PencilIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: g.pencilIcon,
+                    className: m.pencilIcon,
                     width: L,
                     height: L
                 })

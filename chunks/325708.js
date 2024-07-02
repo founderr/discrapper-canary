@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     }
 }), n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(120356), o = n.n(r), c = n(392711), d = n(692547), u = n(153867), h = n(347469), p = n(740492), m = n(36645), _ = n(21620);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(392711), d = n(692547), u = n(153867), h = n(347469), p = n(740492), m = n(36645), _ = n(21620);
 (a = i || (i = {}))[a.PostSidebar = 0] = 'PostSidebar', a[a.ThreadSidebar = 1] = 'ThreadSidebar', a[a.CallChatSidebar = 2] = 'CallChatSidebar', a[a.MessageRequestSidebar = 3] = 'MessageRequestSidebar', a[a.HomeSidebar = 4] = 'HomeSidebar';
 function f(e) {
     let {
@@ -14,7 +14,7 @@ function f(e) {
             onResize: n,
             onResizeEnd: i,
             maxWidth: a
-        } = e, s = (0, h.Z)({
+        } = e, l = (0, h.Z)({
             minDimension: m.C,
             maxDimension: a,
             resizableDomNodeRef: t,
@@ -22,8 +22,8 @@ function f(e) {
             onElementResizeEnd: i,
             orientation: h.y.HORIZONTAL_LEFT
         });
-    return (0, l.jsx)('div', {
-        onMouseDown: s,
+    return (0, s.jsx)('div', {
+        onMouseDown: l,
         className: _.resizeHandle
     });
 }
@@ -34,7 +34,7 @@ function E(e) {
             onWidthChange: i,
             children: a,
             floatingLayer: r
-        } = e, h = s.useRef(null), E = function (e) {
+        } = e, h = l.useRef(null), E = function (e) {
             switch (e) {
             case 0:
                 return 'postSidebarWidth';
@@ -47,32 +47,32 @@ function E(e) {
             case 4:
                 return 'homeSidebarWidth';
             }
-        }(t), [C, g] = s.useState(p.ZP[E]), I = s.useCallback(e => {
+        }(t), [C, g] = l.useState(p.ZP[E]), I = l.useCallback(e => {
             u.ZP.updatedUnsyncedSettings({ [E]: e });
         }, [E]), x = (0, m.W)({ maxWidth: n }), T = (0, c.clamp)(C, m.C, n), N = x ? T : T + d.Z.modules.chat.RESIZE_HANDLE_WIDTH;
-    s.useEffect(() => {
+    l.useEffect(() => {
         null == i || i(T, x);
     }, [
         T,
         i,
         x
     ]);
-    let v = (0, l.jsxs)(l.Fragment, {
+    let v = (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, l.jsx)('div', {
+            (0, s.jsx)('div', {
                 className: o()(_.chatTarget, {
                     [_.floating]: x,
                     [_.notFloating]: !x
                 }),
                 style: { width: N }
             }),
-            !x && (0, l.jsx)(f, {
+            !x && (0, s.jsx)(f, {
                 maxWidth: n,
                 resizableNode: h,
                 onResize: g,
                 onResizeEnd: I
             }),
-            (0, l.jsx)('div', {
+            (0, s.jsx)('div', {
                 ref: h,
                 className: o()(_.container, { [_.floating]: x }),
                 style: { width: T },
@@ -81,13 +81,13 @@ function E(e) {
         ]
     });
     if (x) {
-        let e = null != r ? r : s.Fragment;
-        return (0, l.jsx)(e, {
-            children: (0, l.jsx)('div', {
+        let e = null != r ? r : l.Fragment;
+        return (0, s.jsx)(e, {
+            children: (0, s.jsx)('div', {
                 className: _.chatLayerWrapper,
                 children: v
             })
         });
     }
-    return (0, l.jsx)(l.Fragment, { children: v });
+    return (0, s.jsx)(s.Fragment, { children: v });
 }

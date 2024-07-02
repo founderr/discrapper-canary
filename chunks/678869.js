@@ -3,21 +3,21 @@ n.d(t, {
         return j;
     }
 }), n(627494), n(757143), n(653041);
-var i = n(735250), a = n(470079), l = n(423875), s = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(456190), h = n(239470), p = n(894344), m = n(314897), _ = n(936195), f = n(5192), E = n(561308), C = n(256726), g = n(206295), I = n(551228), x = n(591853), T = n(371991), N = n(410441), v = n(981631), S = n(616922), Z = n(689938), A = n(153602), M = n(331679);
+var i = n(735250), a = n(470079), s = n(423875), l = n(442837), r = n(902704), o = n(481060), c = n(952164), d = n(768419), u = n(456190), h = n(239470), p = n(894344), m = n(314897), _ = n(936195), f = n(5192), E = n(561308), C = n(256726), g = n(206295), I = n(551228), x = n(591853), T = n(371991), N = n(410441), v = n(981631), S = n(616922), Z = n(689938), A = n(153602), M = n(331679);
 let b = (e, t, n) => {
     let {
             artist: i,
             media: a
-        } = e, l = Z.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, s = f.ZP.getName(t.guild_id, t.id, n);
-    return l.plainFormat({
+        } = e, s = Z.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, l = f.ZP.getName(t.guild_id, t.id, n);
+    return s.plainFormat({
         artist: i,
-        userName: s,
+        userName: l,
         media: a
     }).replaceAll('*', '');
 };
 function R(e) {
-    let {activity: t} = e, n = t.timestamps, l = (0, T.tS)(n), {
-            durationTimestamp: s,
+    let {activity: t} = e, n = t.timestamps, s = (0, T.tS)(n), {
+            durationTimestamp: l,
             seekBarStyles: r
         } = a.useMemo(() => {
             var e;
@@ -27,14 +27,14 @@ function R(e) {
             } = null !== (e = t.timestamps) && void 0 !== e ? e : {};
             if (null == n || null == i)
                 return {};
-            let a = Math.min(i, l), s = i - n, r = Math.floor((a - n) / s * 100);
+            let a = Math.min(i, s), l = i - n, r = Math.floor((a - n) / l * 100);
             return {
                 seekBarStyles: { width: ''.concat(r, '%') },
                 durationTimestamp: (0, E.T_)({ start: i }, n)
             };
         }, [
             t,
-            l
+            s
         ]);
     return null == r ? null : (0, i.jsxs)('div', {
         className: A.listeningTimeline,
@@ -51,7 +51,7 @@ function R(e) {
                 variant: 'text-xs/normal',
                 tabularNumbers: !0,
                 color: void 0,
-                children: s
+                children: l
             })
         ]
     });
@@ -73,7 +73,7 @@ function j(e) {
         } = (0, I.pi)(y), {
             primaryColor: F,
             secondaryColor: W
-        } = (0, g.Z)(H), z = (0, s.e7)([
+        } = (0, g.Z)(H), z = (0, l.e7)([
             d.Z,
             m.default
         ], () => (null == U ? void 0 : U.type) === v.IIU.LISTENING && null != V ? (0, h.Z)(d.Z, m.default, V, U) : void 0, [
@@ -113,7 +113,7 @@ function j(e) {
     if (null == U || null == w)
         return null;
     let K = B, q = [];
-    if (w.media.provider === l.p.SPOTIFY && (null == z ? void 0 : z.syncDisabled) === !1) {
+    if (w.media.provider === s.p.SPOTIFY && (null == z ? void 0 : z.syncDisabled) === !1) {
         A = () => {
             (0, p.Z)(z, S.kG.USER_ACTIVITY_SYNC), k();
         }, q.push((0, i.jsx)(x.Ll, {

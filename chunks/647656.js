@@ -79,8 +79,8 @@ t.Z = {
                 assets: T,
                 party: S,
                 secrets: C,
-                timestamps: N,
-                buttons: f,
+                timestamps: f,
+                buttons: N,
                 type: A
             } = _;
             if ((null == A || A !== h.IIU.PLAYING && !g) && (_.type = h.IIU.PLAYING), null != C) {
@@ -89,12 +89,12 @@ t.Z = {
                     throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                 if (s().uniq(e).length < e.length)
                     throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
-                if (null != f)
+                if (null != N)
                     throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }
-            if (null != f && (_.metadata = { button_urls: f.map(e => e.url) }, _.buttons = f.map(e => e.label)), null != N)
-                for (let e of Object.keys(N))
-                    Date.now().toString().length - N[e].toString().length > 2 && (N[e] = Math.floor(N[e] * c.Z.Millis.SECOND));
+            if (null != N && (_.metadata = { button_urls: N.map(e => e.url) }, _.buttons = N.map(e => e.label)), null != f)
+                for (let e of Object.keys(f))
+                    Date.now().toString().length - f[e].toString().length > 2 && (f[e] = Math.floor(f[e] * c.Z.Millis.SECOND));
             if (null == T)
                 n = Promise.resolve([]);
             else {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return N;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(607070), d = n(605236), u = n(524444), _ = n(529815), E = n(250496), h = n(153124), I = n(810090), m = n(626135), g = n(565216), p = n(981631), T = n(921944), S = n(757601);
@@ -13,7 +13,7 @@ let C = e => {
             className: r()(S.tag, n),
             text: t
         });
-    }, N = e => {
+    }, f = e => {
         let {
             header: t,
             subHeader: n,
@@ -50,17 +50,17 @@ let C = e => {
             ]
         });
     };
-function f(e) {
+function N(e) {
     let {
             className: t,
             renderModalProps: n,
             heroArt: a,
             heroArtClassName: C,
-            modalDismissibleContent: f,
+            modalDismissibleContent: N,
             modalTopExtra: A,
             header: Z,
-            headerClassName: L,
-            subHeader: v,
+            headerClassName: v,
+            subHeader: L,
             subHeaderExtra: O,
             featureCards: R,
             changeLogId: x,
@@ -99,16 +99,16 @@ function f(e) {
         x,
         a
     ]), s.useEffect(() => {
-        null != f && (0, d.kk)(f);
+        null != N && (0, d.kk)(N);
         let e = Date.now();
         return m.default.track(p.rMx.CHANGE_LOG_OPENED, { change_log_id: x }), () => {
             m.default.track(p.rMx.CHANGE_LOG_CLOSED, {
                 change_log_id: x,
                 seconds_open: Math.round((Date.now() - e) / 1000)
-            }), null != f && (0, d.EW)(f, { dismissAction: T.L.DISMISS });
+            }), null != N && (0, d.EW)(N, { dismissAction: T.L.DISMISS });
         };
     }, [
-        f,
+        N,
         x
     ]), (0, i.jsxs)(o.ModalRoot, {
         className: r()(S.root, t),
@@ -126,7 +126,7 @@ function f(e) {
                 children: [
                     (0, i.jsx)(o.Heading, {
                         variant: 'display-md',
-                        className: r()(S.headerText, L),
+                        className: r()(S.headerText, v),
                         children: Z
                     }),
                     'video' === a.type ? (0, i.jsx)(I.Z, {
@@ -175,12 +175,12 @@ function f(e) {
                     (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/extrabold',
                         className: S.bodyText,
-                        children: v
+                        children: L
                     }),
                     null == O ? void 0 : O(),
                     (0, i.jsx)('div', {
                         className: r()(S.featureCardGroup, { [S.wideStyle]: y }),
-                        children: R.map((e, t) => (0, i.jsx)(N, {
+                        children: R.map((e, t) => (0, i.jsx)(f, {
                             ...e,
                             wideStyle: y
                         }, ''.concat(e.header, '_').concat(t)))

@@ -13,7 +13,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             onDismissed: T,
             onClick: S,
             cta: C,
-            ctaColor: N
+            ctaColor: f
         } = e;
         s.useEffect(() => {
             I(_.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -24,8 +24,8 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             t.id,
             d
         ]);
-        let f = null;
-        'function' == typeof C ? f = C() : null != C && (f = (0, i.jsx)(l.Button, {
+        let N = null;
+        'function' == typeof C ? N = C() : null != C && (N = (0, i.jsx)(l.Button, {
             className: h.btn,
             size: l.Button.Sizes.SMALL,
             onClick: () => {
@@ -36,7 +36,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
                 }), null == S || S();
             },
             fullWidth: !0,
-            color: N,
+            color: f,
             children: C
         }));
         let A = null != u ? ''.concat(u, 'px') : '16px';
@@ -80,7 +80,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
                             variant: 'text-sm/normal',
                             children: a
                         }),
-                        f
+                        N
                     ]
                 })
             ]

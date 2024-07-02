@@ -32,7 +32,7 @@ function C(e) {
         mutualGuilds: t.slice(0, 5)
     };
 }
-class N extends c.Z {
+class f extends c.Z {
     get comparator() {
         var e, t, n, i, s;
         return [
@@ -44,16 +44,16 @@ class N extends c.Z {
         super(), p(this, 'key', void 0), p(this, 'type', void 0), p(this, 'status', void 0), p(this, 'isMobile', void 0), p(this, 'activities', void 0), p(this, 'applicationStream', void 0), p(this, 'user', void 0), p(this, 'usernameLower', void 0), p(this, 'mutualGuildsLength', void 0), p(this, 'mutualGuilds', void 0), p(this, 'nickname', void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname;
     }
 }
-class f {
+class N {
     reset() {
-        let e = a().map(I.Z.getRelationships(), (e, t) => new N({
+        let e = a().map(I.Z.getRelationships(), (e, t) => new f({
                 key: t,
                 type: e,
                 nickname: I.Z.getNickname(t),
                 ...T(t),
                 ...S(t),
                 ...C(t)
-            })), t = a().map(d.Z.getSuggestions(), e => new N({
+            })), t = a().map(d.Z.getSuggestions(), e => new f({
                 key: e.key,
                 type: 99,
                 nickname: e.name,
@@ -61,10 +61,10 @@ class f {
                 ...S(e.key),
                 ...C(e.key)
             }));
-        return new f(a().concat(e, t));
+        return new N(a().concat(e, t));
     }
     clone() {
-        return new f(this._rows);
+        return new N(this._rows);
     }
     update(e) {
         let t = !1;
@@ -119,23 +119,23 @@ class f {
         p(this, '_rows', void 0), this._rows = e;
     }
 }
-let A = !0, Z = !1, L = g.pJs.ONLINE, v = new f(), O = !0, R = !1;
+let A = !0, Z = !1, v = g.pJs.ONLINE, L = new N(), O = !0, R = !1;
 function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || L !== g.pJs.ONLINE && L !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
+    A && (e || v !== g.pJs.ONLINE && v !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
 }
 function P() {
-    if (A = !0, O ? Z = !1 : x(), v = v.reset(), R)
+    if (A = !0, O ? Z = !1 : x(), L = L.reset(), R)
         return;
-    let e = v.getRelationshipCounts();
-    L = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
+    let e = L.getRelationshipCounts();
+    v = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
 }
 function b() {
-    v = O ? new f() : v.reset();
+    L = O ? new N() : L.reset();
 }
 function M(e) {
     return function () {
-        return !O && !!v.update(e) && (v = v.clone(), !0);
+        return !O && !!L.update(e) && (L = L.clone(), !0);
     };
 }
 class D extends (i = r.ZP.Store) {
@@ -148,9 +148,9 @@ class D extends (i = r.ZP.Store) {
     getState() {
         return {
             fetching: Z,
-            section: L,
+            section: v,
             pendingCount: I.Z.getPendingCount(),
-            rows: v
+            rows: L
         };
     }
 }
@@ -159,7 +159,7 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
         P();
     },
     FRIENDS_SET_SECTION: function (e) {
-        L = e.section, x();
+        v = e.section, x();
     },
     CHANNEL_SELECT: function (e) {
         let {channelId: t} = e;
@@ -176,6 +176,6 @@ p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
         return O = t !== g.cII.FRIENDS, b(), !O;
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        L = e.section, R = !0;
+        v = e.section, R = !0;
     }
 });

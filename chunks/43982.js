@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(512722), l = n.n(a), s = n(392711), r = n.n(s), o = n(970731), c = n(981631), d = n(689938), u = n(755943), h = n(480032), p = n(699352);
+var a = n(512722), s = n.n(a), l = n(392711), r = n.n(l), o = n(970731), c = n(981631), d = n(689938), u = n(755943), h = n(480032), p = n(699352);
 let m = null;
 function _(e) {
     let {
         onDismiss: t,
         onAccept: n,
         popoutPosition: a,
-        gameConsoleAccounts: s
+        gameConsoleAccounts: l
     } = e;
-    l()(s.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == m || null == s.find(e => e.type === m)) && (m = r().shuffle(s)[0].type);
+    s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == m || null == l.find(e => e.type === m)) && (m = r().shuffle(l)[0].type);
     let _ = null, f = null;
     switch (m) {
     case c.ABu.XBOX:

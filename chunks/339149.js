@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(47120), n(724458), n(653041);
-var i, l = n(735250), r = n(470079), a = n(120356), s = n.n(a), o = n(748780), c = n(442837), u = n(692547), d = n(215569), h = n(481060), p = n(812206), _ = n(703656), f = n(417363), g = n(941128), m = n(366966), C = n(780570), I = n(353042), E = n(981631), N = n(689938), x = n(660982);
+var i, l = n(735250), r = n(470079), a = n(120356), s = n.n(a), o = n(748780), c = n(442837), u = n(692547), d = n(215569), h = n(481060), p = n(812206), _ = n(703656), f = n(417363), m = n(941128), g = n(366966), C = n(780570), I = n(353042), E = n(981631), N = n(689938), x = n(660982);
 function S(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -12,54 +12,54 @@ function S(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let Z = {
+let v = {
     [E.vxO.INSTALLING]: {
-        [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({ name: e }),
-        [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+        [g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({ name: e }),
+        [g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
             name: e,
             timeRemaining: t
         }),
-        [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+        [g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
             name: e,
             timeRemaining: t
         }),
-        [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+        [g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
             name: e,
             timeRemaining: t
         })
     },
     [E.vxO.UPDATING]: {
-        [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({ name: e }),
-        [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
+        [g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({ name: e }),
+        [g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_SECONDS.format({
             name: e,
             timeRemaining: t
         }),
-        [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
+        [g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_MINUTES.format({
             name: e,
             timeRemaining: t
         }),
-        [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
+        [g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING_HOURS.format({
             name: e,
             timeRemaining: t
         })
     },
     [E.vxO.REPAIRING]: {
-        [m.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({ name: e }),
-        [m.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
+        [g.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({ name: e }),
+        [g.J6.SECONDS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_SECONDS.format({
             name: e,
             timeRemaining: t
         }),
-        [m.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
+        [g.J6.MINUTES]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_MINUTES.format({
             name: e,
             timeRemaining: t
         }),
-        [m.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
+        [g.J6.HOURS]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING_HOURS.format({
             name: e,
             timeRemaining: t
         })
     }
 };
-class v extends r.PureComponent {
+class Z extends r.PureComponent {
     renderText() {
         let {
             state: e,
@@ -94,10 +94,10 @@ class v extends r.PureComponent {
                 } = n;
             if (null == r || null == a || null == l)
                 return null;
-            let o = e[e.length - 1] / t * 1000, c = 0 !== o ? Math.max(1, (a - r) / o) : null, u = Z[s], d = null != u ? Object.keys(u) : [], {
+            let o = e[e.length - 1] / t * 1000, c = 0 !== o ? Math.max(1, (a - r) / o) : null, u = v[s], d = null != u ? Object.keys(u) : [], {
                     unit: h,
                     time: p
-                } = (0, m.CI)(null != c ? c / 60 : null, d);
+                } = (0, g.CI)(null != c ? c / 60 : null, d);
             if (null != u && null != h) {
                 let e = u[h];
                 return null != e ? e(i.name, p) : null;
@@ -128,7 +128,7 @@ class T extends (i = r.PureComponent) {
             firstState: t,
             isPaused: n
         } = this.props;
-        return null == e || null == t ? N.Z.Messages.LIBRARY : (0, l.jsx)(v, {
+        return null == e || null == t ? N.Z.Messages.LIBRARY : (0, l.jsx)(Z, {
             application: e,
             state: t,
             isPaused: n
@@ -181,17 +181,17 @@ function L(e, t) {
     }, []);
 }
 t.Z = c.ZP.connectStores([
-    g.Z,
+    m.Z,
     f.Z,
     p.Z
 ], () => {
-    let e = g.Z.activeItems, t = L(e, f.Z), {
+    let e = m.Z.activeItems, t = L(e, f.Z), {
             total: n,
             progress: i
         } = C.lK(t);
     return {
         percent: C.xI(i, n),
-        isPaused: g.Z.paused,
+        isPaused: m.Z.paused,
         firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null
     };

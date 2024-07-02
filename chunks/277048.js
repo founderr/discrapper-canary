@@ -1,15 +1,15 @@
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(653603), o = n.n(r), c = n(442837), d = n(481060), u = n(904245), h = n(232961), p = n(223606), m = n(453687), _ = n(63063), f = n(727779), E = n(113039), C = n(534761), g = n(981631), I = n(689938), x = n(614619), T = n(530790), N = n(477428);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(653603), o = n.n(r), c = n(442837), d = n(481060), u = n(904245), h = n(232961), p = n(223606), m = n(453687), _ = n(63063), f = n(727779), E = n(113039), C = n(534761), g = n(981631), I = n(689938), x = n(614619), T = n(530790), N = n(477428);
 let v = a.memo(function (e) {
     let {
         message: t,
         notice: n,
         compact: a = !1,
-        onDismiss: l
+        onDismiss: s
     } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: s()(x.blockedNoticeContainer, { [x.compact]: a }),
+                className: l()(x.blockedNoticeContainer, { [x.compact]: a }),
                 children: [
                     (0, i.jsx)('div', {
                         className: x.blockedNoticeIcon,
@@ -30,10 +30,10 @@ let v = a.memo(function (e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: s()(x.ephemeralAccessories, { [x.compact]: a }),
+                className: l()(x.ephemeralAccessories, { [x.compact]: a }),
                 children: (0, i.jsx)(f.Z, {
                     message: t,
-                    onDeleteMessage: l,
+                    onDeleteMessage: s,
                     children: (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
                         color: 'interactive-normal',
@@ -49,7 +49,7 @@ let v = a.memo(function (e) {
 t.Z = a.memo(function (e) {
     var t, n;
     let {
-            className: l,
+            className: s,
             compact: r,
             message: d,
             children: _,
@@ -71,7 +71,7 @@ t.Z = a.memo(function (e) {
         _
     ]), (0, i.jsxs)('div', {
         id: (0, m.ut)(d),
-        className: s()(l, T.markup, {
+        className: l()(s, T.markup, {
             [N.messageContent]: !0,
             [N.markupRtl]: 'rtl' === o()(d.content),
             [x.blockedEdit]: null == A ? void 0 : A.isBlockedEdit,

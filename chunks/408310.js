@@ -1,6 +1,6 @@
 var i = n(735250);
 n(470079);
-var a = n(481060), l = n(671533), s = n(400251), r = n(689938), o = n(476375), c = n(905899), d = n(176480);
+var a = n(481060), s = n(671533), l = n(400251), r = n(689938), o = n(476375), c = n(905899), d = n(176480);
 t.Z = e => {
     let t, {
             searchQuery: n,
@@ -51,7 +51,7 @@ t.Z = e => {
     } else
         t = (0, i.jsx)('div', {
             className: o.cardsContainer,
-            children: f.map(e => (0, i.jsx)(s.Z, { entry: e }, e.guildId))
+            children: f.map(e => (0, i.jsx)(l.Z, { entry: e }, e.guildId))
         });
     return (0, i.jsx)('div', {
         className: o.pageContainer,
@@ -67,7 +67,7 @@ t.Z = e => {
                                 (0, i.jsx)(a.Clickable, {
                                     onClick: p,
                                     className: c.arrow,
-                                    children: (0, i.jsx)(l.Z, { direction: l.Z.Directions.LEFT })
+                                    children: (0, i.jsx)(s.Z, { direction: s.Z.Directions.LEFT })
                                 }),
                                 (0, i.jsx)(a.Heading, {
                                     variant: 'heading-xl/semibold',

@@ -3,13 +3,13 @@ n.d(t, {
         return m;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(433517), o = n(518774), c = n(27457), d = n(981631), u = n(987647), h = n(759823);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(433517), o = n(518774), c = n(27457), d = n(981631), u = n(987647), h = n(759823);
 let p = 'CameraPreviewPosition';
 function m(e) {
     let {
             width: t,
             onContextMenuParticipant: n,
-            height: l,
+            height: s,
             channel: m,
             participants: _
         } = e, [f, E] = function () {
@@ -32,7 +32,7 @@ function m(e) {
             ref: C,
             onMove: (e, t) => E(t),
             maxX: t,
-            maxY: l,
+            maxY: s,
             edgeOffsetTop: g,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
@@ -43,7 +43,7 @@ function m(e) {
                     participant: e,
                     channel: m,
                     onContextMenu: n,
-                    className: s()(u.tile, h.elevationHigh),
+                    className: l()(u.tile, h.elevationHigh),
                     fit: c.BP.COVER,
                     inCall: !0,
                     inPopout: !1,

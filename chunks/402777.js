@@ -3,12 +3,12 @@ n.d(t, {
         return Z;
     }
 });
-var i = n(735250), a = n(470079), l = n(597312), s = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(785717), h = n(318661), p = n(502762), m = n(437758), _ = n(544989), f = n(481932), E = n(272510), C = n(171368), g = n(926150), I = n(308829), x = n(354810), T = n(940885), N = n(625015), v = n(228168), S = n(642402);
+var i = n(735250), a = n(470079), s = n(597312), l = n(727637), r = n(410030), o = n(100527), c = n(906732), d = n(680295), u = n(785717), h = n(318661), p = n(502762), m = n(437758), _ = n(544989), f = n(481932), E = n(272510), C = n(171368), g = n(926150), I = n(308829), x = n(354810), T = n(940885), N = n(625015), v = n(228168), S = n(642402);
 function Z(e) {
     let {
             user: t,
             channel: n
-        } = e, {analyticsLocations: Z} = (0, c.ZP)(o.Z.PROFILE_PANEL), A = (0, h.ZP)(t.id), M = (0, r.ZP)(), b = a.useRef(null), R = (0, s.Z)(b), j = e => {
+        } = e, {analyticsLocations: Z} = (0, c.ZP)(o.Z.PROFILE_PANEL), A = (0, h.ZP)(t.id), M = (0, r.ZP)(), b = a.useRef(null), R = (0, l.Z)(b), j = e => {
             (0, C.openUserProfileModal)({
                 sourceAnalyticsLocations: Z,
                 userId: t.id,
@@ -30,7 +30,7 @@ function Z(e) {
                 themeOverride: M,
                 className: S.container,
                 children: [
-                    (0, i.jsxs)(l.u2, {
+                    (0, i.jsxs)(s.u2, {
                         children: [
                             (0, i.jsxs)(_.Z, {
                                 profileType: v.y0.PANEL,

@@ -3,7 +3,7 @@ n.d(t, {
         return eG;
     }
 }), n(47120), n(653041);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(704215), c = n(846519), d = n(400354), u = n(652844), _ = n(789639), E = n(481060), h = n(355467), I = n(239091), m = n(230711), g = n(410575), p = n(941129), T = n(83200), S = n(634894), C = n(586902), N = n(515550), f = n(1585), A = n(304761), Z = n(865427), L = n(571250), v = n(628581), O = n(55311), R = n(575175), x = n(64220), P = n(377171), b = n(676035), M = n(427217), D = n(605236), y = n(243778), j = n(730417), U = n(524347), G = n(853197), w = n(810280), k = n(60762), B = n(258609), H = n(278464), V = n(331541), F = n(332473), Y = n(240504), W = n(804545), z = n(637906), K = n(39370), q = n(19199), Q = n(111653), X = n(866483), J = n(14357), $ = n(393333), ee = n(763296), et = n(640806), en = n(484459), ei = n(584427), es = n(52538), ea = n(331187), er = n(879815), el = n(294629), eo = n(314897), ec = n(592125), ed = n(819640), eu = n(131951), e_ = n(19780), eE = n(885110), eh = n(246946), eI = n(594174), em = n(78839), eg = n(285952), ep = n(546591), eT = n(976401), eS = n(333454), eC = n(864441), eN = n(626135), ef = n(768581), eA = n(572004), eZ = n(70956), eL = n(374023), ev = n(51144), eO = n(998502), eR = n(981631), ex = n(215023), eP = n(702512), eb = n(689938), eM = n(614493);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(704215), c = n(846519), d = n(400354), u = n(652844), _ = n(789639), E = n(481060), h = n(355467), I = n(239091), m = n(230711), g = n(410575), p = n(941129), T = n(83200), S = n(634894), C = n(586902), f = n(515550), N = n(1585), A = n(304761), Z = n(865427), v = n(571250), L = n(628581), O = n(55311), R = n(575175), x = n(64220), P = n(377171), b = n(676035), M = n(427217), D = n(605236), y = n(243778), j = n(730417), U = n(524347), G = n(853197), w = n(810280), k = n(60762), B = n(258609), H = n(278464), V = n(331541), F = n(332473), Y = n(240504), W = n(804545), z = n(637906), K = n(39370), q = n(19199), Q = n(111653), X = n(866483), J = n(14357), $ = n(393333), ee = n(763296), et = n(640806), en = n(484459), ei = n(584427), es = n(52538), ea = n(331187), er = n(879815), el = n(294629), eo = n(314897), ec = n(592125), ed = n(819640), eu = n(131951), e_ = n(19780), eE = n(885110), eh = n(246946), eI = n(594174), em = n(78839), eg = n(285952), ep = n(546591), eT = n(976401), eS = n(333454), eC = n(864441), ef = n(626135), eN = n(768581), eA = n(572004), eZ = n(70956), ev = n(374023), eL = n(51144), eO = n(998502), eR = n(981631), ex = n(215023), eP = n(702512), eb = n(689938), eM = n(614493);
 function eD(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -60,7 +60,7 @@ class eU extends s.PureComponent {
             } = this.props;
         if (null == a)
             return null;
-        let l = ev.ZP.getName(a), o = null != r && r !== eR.Skl.UNKNOWN, c = null != n;
+        let l = eL.ZP.getName(a), o = null != r && r !== eR.Skl.UNKNOWN, c = null != n;
         return (c || o && a.isPomelo()) && (e = (0, i.jsx)(ep.Z, {
             hoverText: s,
             forceHover: t,
@@ -68,7 +68,7 @@ class eU extends s.PureComponent {
                 activity: n,
                 emojiClassName: eM.emoji,
                 className: eM.customStatus
-            }) : ev.ZP.humanizeStatus(r)
+            }) : eL.ZP.humanizeStatus(r)
         })), (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
@@ -91,9 +91,9 @@ class eU extends s.PureComponent {
         } = this.props;
         if (null == n)
             return null;
-        let a = (0, ef.NZ)({
+        let a = (0, eN.NZ)({
             avatarDecoration: n.avatarDecoration,
-            size: (0, f.y9)(E.AvatarSizes.SIZE_32)
+            size: (0, N.y9)(E.AvatarSizes.SIZE_32)
         });
         return (0, i.jsx)(g.Z, {
             object: eR.qAy.AVATAR,
@@ -191,7 +191,7 @@ class eU extends s.PureComponent {
                             serverMute: a,
                             suppress: l,
                             awaitingRemote: s,
-                            tooltipText: d ? eb.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, v.Z)(n, a, l, s),
+                            tooltipText: d ? eb.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, L.Z)(n, a, l, s),
                             tooltipColor: d ? E.TooltipColors.GREEN : void 0,
                             tooltipForceOpen: d || void 0,
                             onMouseEnter: this.handleMouseEnterMute,
@@ -297,7 +297,7 @@ class eU extends s.PureComponent {
                                         position: 'top',
                                         align: 'center',
                                         shouldShow: !0,
-                                        renderPopout: () => (0, i.jsx)(N.Z, { markAsDismissed: n }),
+                                        renderPopout: () => (0, i.jsx)(f.Z, { markAsDismissed: n }),
                                         children: this.renderSettingsGear
                                     });
                                 default:
@@ -404,10 +404,10 @@ class eU extends s.PureComponent {
                 } = this.state;
             if (null == e)
                 return;
-            (0, eA.JG)(ev.ZP.getUserTag(e, {
+            (0, eA.JG)(eL.ZP.getUserTag(e, {
                 decoration: 'never',
                 identifiable: 'always'
-            })), eN.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
+            })), ef.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
             let i = {
                 shouldShowCopiedFeedback: !0,
                 shouldShowNametagTooltip: !0
@@ -448,23 +448,23 @@ function eG() {
         } = (0, l.cj)([eE.Z], () => ({
             streaming: null != eE.Z.findActivity(e => e.type === eR.IIU.STREAMING),
             status: eE.Z.getStatus()
-        })), _ = (0, C.Z)({ userId: r }), I = ev.ZP.useUserTag(n, { decoration: 'never' }), m = (0, l.e7)([eh.Z], () => eh.Z.hidePersonalInformation), g = (0, l.e7)([
+        })), _ = (0, C.Z)({ userId: r }), I = eL.ZP.useUserTag(n, { decoration: 'never' }), m = (0, l.e7)([eh.Z], () => eh.Z.hidePersonalInformation), g = (0, l.e7)([
             e_.Z,
             ec.Z
         ], () => {
             let e = e_.Z.getChannelId();
             return null != e ? ec.Z.getChannel(e) : null;
         }), {
-            mute: N,
-            selfMute: f,
-            suppress: L
+            mute: f,
+            selfMute: N,
+            suppress: v
         } = (0, el.Z)(g), {
-            selfDeaf: v,
+            selfDeaf: L,
             deaf: O
         } = (0, er.Z)(g), R = (0, l.e7)([A.C], () => {
             var e;
             return (0, Z.fD)() ? null === (e = A.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null;
-        }), x = (0, l.e7)([em.ZP], () => em.ZP.getPremiumTypeSubscription()), P = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()), M = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()), y = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || M || eL.s.isDisallowPopupsSet(), w = (0, F.b)(), k = (0, l.e7)([B.Z], () => null != B.Z.getAwaitingRemoteSessionInfo()), V = (0, l.e7)([U.Z], () => U.Z.isCurrentQuestCompleted), K = (0, l.e7)([U.Z], () => U.Z.currentDropQuestGameTitle), X = (0, H.n)(), J = (0, T.O)(), $ = (0, q.D)(), et = (0, p.u)(), en = (0, Q.t)(), es = (0, ei.Z)(n), ea = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ex.rL, eg = 'account';
+        }), x = (0, l.e7)([em.ZP], () => em.ZP.getPremiumTypeSubscription()), P = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()), M = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()), y = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || M || ev.s.isDisallowPopupsSet(), w = (0, F.b)(), k = (0, l.e7)([B.Z], () => null != B.Z.getAwaitingRemoteSessionInfo()), V = (0, l.e7)([U.Z], () => U.Z.isCurrentQuestCompleted), K = (0, l.e7)([U.Z], () => U.Z.currentDropQuestGameTitle), X = (0, H.n)(), J = (0, T.O)(), $ = (0, q.D)(), et = (0, p.u)(), en = (0, Q.t)(), es = (0, ei.Z)(n), ea = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ex.rL, eg = 'account';
     (0, S.j)({
         location: eg + ' auto on',
         autoTrackExposure: !0
@@ -514,15 +514,15 @@ function eG() {
         hidePrivateData: m,
         occluded: y,
         premiumSubscription: x,
-        selfDeaf: v,
-        selfMute: f,
+        selfDeaf: L,
+        selfMute: N,
         serverDeaf: O,
-        serverMute: N,
+        serverMute: f,
         speaking: _,
         speakingWhileMuted: P,
         status: u,
         streaming: d,
-        suppress: L,
+        suppress: v,
         webBuildOverride: R,
         awaitingRemote: k,
         isEligibleForPomelo: w
@@ -621,7 +621,7 @@ function eB(e) {
         c,
         _
     ]), (0, i.jsx)(eT.Z, {
-        tooltipText: (0, L.Z)(t, n, a),
+        tooltipText: (0, v.Z)(t, n, a),
         onMouseEnter: h,
         onMouseLeave: I,
         icon: (0, i.jsx)(m, {

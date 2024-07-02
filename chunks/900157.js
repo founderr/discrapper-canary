@@ -3,15 +3,15 @@ n.d(t, {
         return b;
     }
 });
-var i = n(735250), a = n(470079), l = n(392711), s = n.n(l), r = n(442837), o = n(570140), c = n(239091), d = n(561472), u = n(367907), h = n(731429), p = n(188471), m = n(933557), _ = n(287746), f = n(541716), E = n(910611), C = n(359110), g = n(592125), I = n(703558), x = n(430824), T = n(979651), N = n(502568), v = n(664342), S = n(124368), Z = n(981631), A = n(689938), M = n(822006);
+var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(570140), c = n(239091), d = n(561472), u = n(367907), h = n(731429), p = n(188471), m = n(933557), _ = n(287746), f = n(541716), E = n(910611), C = n(359110), g = n(592125), I = n(703558), x = n(430824), T = n(979651), N = n(502568), v = n(664342), S = n(124368), Z = n(981631), A = n(689938), M = n(822006);
 function b(e) {
     let {
             channelId: t,
-            baseChannelId: l,
+            baseChannelId: s,
             channelViewSource: b = 'Split View'
         } = e, R = (0, r.e7)([g.Z], () => g.Z.getChannel(t)), j = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, m.ZP)(R);
     (function (e) {
-        let t = (0, r.e7)([T.Z], () => null != e && !s().isEmpty(T.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, r.e7)([T.Z], () => null != e && !l().isEmpty(T.Z.getVoiceStatesForChannel(e.id)));
         a.useEffect(() => {
             t && null != e && (o.Z.dispatch({
                 type: 'SIDEBAR_CLOSE',
@@ -40,7 +40,7 @@ function b(e) {
         return null;
     let O = (0, i.jsx)(v.Z, {
         channel: R,
-        baseChannelId: l
+        baseChannelId: s
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [

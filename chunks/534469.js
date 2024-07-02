@@ -6,7 +6,7 @@ n.d(t, {
         return q;
     }
 }), n(789020);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(512722), o = n.n(r), c = n(91192), d = n(442837), u = n(481060), h = n(607070), p = n(223606), m = n(518738), _ = n(628238), f = n(807092), E = n(869765), C = n(703656), g = n(695346), I = n(592125), x = n(906467), T = n(323873), N = n(998951), v = n(630388), S = n(709054), Z = n(534091), A = n(901461), M = n(739566), b = n(233715), R = n(453687), j = n(348238), L = n(62072), P = n(38267), O = n(25015), y = n(689674), D = n(438075), k = n(764893), U = n(481363), w = n(900902), B = n(252032), H = n(737243), G = n(614584), V = n(295790), F = n(959517), W = n(981631), z = n(689938), Y = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(91192), d = n(442837), u = n(481060), h = n(607070), p = n(223606), m = n(518738), _ = n(628238), f = n(807092), E = n(869765), C = n(703656), g = n(695346), I = n(592125), x = n(906467), T = n(323873), N = n(998951), v = n(630388), S = n(709054), Z = n(534091), A = n(901461), M = n(739566), b = n(233715), R = n(453687), j = n(348238), L = n(62072), P = n(38267), O = n(25015), y = n(689674), D = n(438075), k = n(764893), U = n(481363), w = n(900902), B = n(252032), H = n(737243), G = n(614584), V = n(295790), F = n(959517), W = n(981631), z = n(689938), Y = n(848509);
 function K(e, t, n) {
     return e.getElementById((0, Z.p)(t, n));
 }
@@ -15,12 +15,12 @@ function q(e) {
     let {
         id: n,
         message: a,
-        message: {messageReference: l},
+        message: {messageReference: s},
         compact: r = !1,
         className: u
     } = e;
     o()(a.type === W.uaV.THREAD_STARTER_MESSAGE, 'Message must be a thread starter message');
-    let {...h} = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''), p = (0, d.e7)([E.Z], () => E.Z.getMessageByReference(l)), {
+    let {...h} = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''), p = (0, d.e7)([E.Z], () => E.Z.getMessageByReference(s)), {
             popouts: m,
             setPopout: _
         } = (0, P.Z)(a.id, F.d$), f = (0, M.ZP)(a), C = (0, R.iG)(a), g = (0, R.Gx)(a);
@@ -33,7 +33,7 @@ function q(e) {
         ...h,
         id: n,
         compact: r,
-        className: s()(u, {
+        className: l()(u, {
             [Y.message]: !0,
             [Y.cozyMessage]: !r,
             [Y.systemMessage]: !0,
@@ -43,7 +43,7 @@ function q(e) {
             messageProps: e,
             setPopout: _,
             messagePopouts: m,
-            replyReference: l,
+            replyReference: s,
             author: f
         }),
         childrenSystemMessage: (0, V.Z)(e),
@@ -56,7 +56,7 @@ function q(e) {
 function X(e) {
     var t, n;
     let {
-            id: l,
+            id: s,
             message: r,
             message: {
                 id: o,
@@ -82,12 +82,12 @@ function X(e) {
             handleMouseEnter: et,
             handleMouseLeave: en,
             isHovered: ei
-        } = (0, j.tn)(T, r.author.id, q), ea = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled), el = q || ea && k, es = el || ei, {
+        } = (0, j.tn)(T, r.author.id, q), ea = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled), es = q || ea && k, el = es || ei, {
             content: er,
             hasSpoilerEmbeds: eo
         } = (0, O.Z)(r, {
             hideSimpleEmbedContent: Q && J,
-            isInteracting: es,
+            isInteracting: el,
             formatInline: !1,
             allowList: ee,
             allowHeading: ee,
@@ -113,16 +113,16 @@ function X(e) {
             }),
             (0, i.jsx)(N.Z, {
                 ...y,
-                id: l,
+                id: s,
                 compact: I,
-                className: s()(x, {
+                className: l()(x, {
                     [Y.message]: !0,
                     [Y.cozyMessage]: !I,
                     [Y.mentioned]: r.mentioned,
                     [Y.ephemeral]: (0, v.yE)(r.flags, W.iLy.EPHEMERAL),
                     [Y.systemMessage]: (0, A.Z)(r),
                     [Y.groupStart]: r.id === T || r.type === W.uaV.REPLY,
-                    [Y.selected]: el
+                    [Y.selected]: es
                 }),
                 zalgo: !0,
                 onKeyDown: ec,
@@ -141,7 +141,7 @@ function X(e) {
                 childrenAccessories: (0, D.Z)({
                     channelMessageProps: e,
                     hasSpoilerEmbeds: eo,
-                    isInteracting: es,
+                    isInteracting: el,
                     renderThreadAccessory: !1,
                     renderComponentAccessory: !1,
                     renderSuppressEmbeds: !1
@@ -159,7 +159,7 @@ function X(e) {
 }
 t.ZP = a.memo(function (e) {
     var t, n;
-    let l;
+    let s;
     let {
         id: r,
         message: C,
@@ -176,7 +176,7 @@ t.ZP = a.memo(function (e) {
     let et = W.OBS.has(C.type) ? C.messageReference : void 0, {
             onFocus: en,
             ...ei
-        } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''), ea = g.RS.useSetting(), el = g.NA.useSetting(), es = (0, d.e7)([E.Z], () => E.Z.getMessageByReference(et)), {
+        } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''), ea = g.RS.useSetting(), es = g.NA.useSetting(), el = (0, d.e7)([E.Z], () => E.Z.getMessageByReference(et)), {
             popouts: er,
             selected: eo,
             setPopout: ec
@@ -197,7 +197,7 @@ t.ZP = a.memo(function (e) {
             content: eM,
             hasSpoilerEmbeds: eb
         } = (0, O.Z)(C, {
-            hideSimpleEmbedContent: ea && el,
+            hideSimpleEmbedContent: ea && es,
             isInteracting: eN,
             formatInline: !1,
             allowList: eS || eZ,
@@ -215,7 +215,7 @@ t.ZP = a.memo(function (e) {
             message: C,
             channel: K
         }), ew = null != ek;
-    l = C.type === W.uaV.CUSTOM_GIFT ? '' : !eI && ew ? (0, k.Z)(e, eM) : (0, B.Z)(e, eM, eI);
+    s = C.type === W.uaV.CUSTOM_GIFT ? '' : !eI && ew ? (0, k.Z)(e, eM) : (0, B.Z)(e, eM, eI);
     let eB = C.id === $, eH = (0, i.jsx)(u.FocusRing, {
             offset: {
                 left: 4,
@@ -238,7 +238,7 @@ t.ZP = a.memo(function (e) {
                     onClick: eu,
                     compact: X,
                     contentOnly: ee,
-                    className: s()(Q, {
+                    className: l()(Q, {
                         [Y.message]: !0,
                         [Y.cozyMessage]: !X,
                         [Y.mentioned]: C.mentioned,
@@ -252,7 +252,7 @@ t.ZP = a.memo(function (e) {
                         [Y.automodMessage]: ew
                     }),
                     zalgo: !eI,
-                    childrenRepliedMessage: ee ? void 0 : (0, G.Z)(e, ec, er, et, es),
+                    childrenRepliedMessage: ee ? void 0 : (0, G.Z)(e, ec, er, et, el),
                     childrenExecutedCommand: (0, H.Z)(e, ec, er),
                     childrenHeader: ee ? void 0 : (0, w.Z)({
                         messageProps: e,
@@ -260,7 +260,7 @@ t.ZP = a.memo(function (e) {
                         messagePopouts: er,
                         replyReference: et,
                         author: ej,
-                        repliedMessage: es,
+                        repliedMessage: el,
                         roleIcon: eO
                     }),
                     childrenAccessories: (0, D.Z)({
@@ -277,7 +277,7 @@ t.ZP = a.memo(function (e) {
                         isFocused: e_ || ef
                     }) : void 0,
                     childrenSystemMessage: (0, V.Z)(e),
-                    childrenMessageContent: l,
+                    childrenMessageContent: s,
                     onMouseMove: eh,
                     onMouseLeave: ep,
                     hasThread: !ee && C.hasFlag(W.iLy.HAS_THREAD) && null != ev,
@@ -289,7 +289,7 @@ t.ZP = a.memo(function (e) {
         });
     return null != eP ? (0, i.jsx)(b.Z, {
         flashKey: eP,
-        className: s()({
+        className: l()({
             [Y.backgroundFlash]: !0,
             [Y.groupStart]: !X && C.id === $
         }),

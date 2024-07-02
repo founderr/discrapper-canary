@@ -1,7 +1,7 @@
 let i, s;
 n(47120);
 var a, r, l, o, c = n(392711), d = n.n(c), u = n(442837), _ = n(433517), E = n(570140), h = n(700785), I = n(388610), m = n(592125), g = n(981631), p = n(71080);
-let T = new Set(), S = g.QZA.CLOSED, C = !1, N = null, f = null, A = null, Z = null, L = null, v = null, O = _.K.get(p.kf) || !1;
+let T = new Set(), S = g.QZA.CLOSED, C = !1, f = null, N = null, A = null, Z = null, v = null, L = null, O = _.K.get(p.kf) || !1;
 function R(e) {
     let t = e.getGuildId(), n = { ...e.permissionOverwrites };
     return null != t && null == n[t] && (n[t] = h.we(t)), n;
@@ -10,7 +10,7 @@ function x() {
     if (A = I.Z.getChannel(), Z = I.Z.getCategory(), null == A)
         return !1;
     let e = A.getGuildId();
-    f = N = R(A), null == N[L] && (L = e), s = null != Z, i = h.o4(A, Z), v = null, C = !1, S = g.QZA.CLOSED, T.clear();
+    N = f = R(A), null == f[v] && (v = e), s = null != Z, i = h.o4(A, Z), L = null, C = !1, S = g.QZA.CLOSED, T.clear();
 }
 class P extends (a = u.ZP.Store) {
     initialize() {
@@ -23,16 +23,16 @@ class P extends (a = u.ZP.Store) {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == N ? void 0 : N[e];
+        return null == f ? void 0 : f[e];
     }
     get editedPermissionIds() {
         return Array.from(T);
     }
     get permissionOverwrites() {
-        return N;
+        return f;
     }
     get selectedOverwriteId() {
-        return L;
+        return v;
     }
     get formState() {
         return S;
@@ -71,30 +71,30 @@ o = 'ChannelSettingsPermissionsStore', (l = 'displayName') in (r = P) ? Object.d
                 id: t,
                 allow: n,
                 deny: s
-            } = e, a = null == N ? void 0 : N[t];
+            } = e, a = null == f ? void 0 : f[t];
         if (null == a || null == A)
             return !1;
         a = {
             ...a,
             allow: n,
             deny: s
-        }, N = {
-            ...N,
+        }, f = {
+            ...f,
             [t]: a
-        }, T.add(t), S = g.QZA.OPEN, C = !d().isEqual(N, f), i = h.o4(A, Z);
+        }, T.add(t), S = g.QZA.OPEN, C = !d().isEqual(f, N), i = h.o4(A, Z);
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let {id: t} = e;
-        if (null != N && null != N[t])
-            L = t;
+        if (null != f && null != f[t])
+            v = t;
         else {
             if (null == A)
                 return !1;
-            v = t;
+            L = t;
         }
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        S = g.QZA.CLOSED, N = null, f = null, A = null, Z = null, C = !1, T.clear(), L = null, v = null;
+        S = g.QZA.CLOSED, f = null, N = null, A = null, Z = null, C = !1, T.clear(), v = null, L = null;
     },
     CHANNEL_UPDATES: function (e) {
         let {channels: t} = e;
@@ -109,14 +109,14 @@ o = 'ChannelSettingsPermissionsStore', (l = 'displayName') in (r = P) ? Object.d
                 let t = A.getGuildId();
                 if (null == t)
                     return !1;
-                f = R(A);
+                N = R(A);
                 let n = {};
                 return T.forEach(e => {
-                    null != N && (n[e] = N[e]);
-                }), null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.we(t)), null == (N = {
+                    null != f && (n[e] = f[e]);
+                }), null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.we(t)), null == (f = {
                     ...A.permissionOverwrites,
                     ...n
-                })[L] ? L = t : null != v && null != N[v] && (L = v, v = null), i = h.o4(A, Z), !0;
+                })[v] ? v = t : null != L && null != f[L] && (v = L, L = null), i = h.o4(A, Z), !0;
             }(e.id) && (n = !0);
         return n;
     },

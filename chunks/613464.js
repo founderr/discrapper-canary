@@ -3,12 +3,12 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(749210), d = n(110924), u = n(58540), h = n(100527), p = n(906732), m = n(527379), _ = n(484459), f = n(318661), E = n(502762), C = n(271383), g = n(594174), I = n(189357), x = n(718617), T = n(327250), N = n(228168), v = n(204246);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(749210), d = n(110924), u = n(58540), h = n(100527), p = n(906732), m = n(527379), _ = n(484459), f = n(318661), E = n(502762), C = n(271383), g = n(594174), I = n(189357), x = n(718617), T = n(327250), N = n(228168), v = n(204246);
 function S(e) {
     let {
             userId: t,
             guildId: n,
-            onClose: l,
+            onClose: s,
             className: S,
             infoPanelClassName: Z,
             style: A
@@ -17,16 +17,16 @@ function S(e) {
             t
         ]), [j, L] = a.useState(null == b || null == R), P = (0, d.Z)(R), O = a.useRef(null), {analyticsLocations: y} = (0, p.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW), D = (0, f.ZP)(t, n);
     return (a.useEffect(() => {
-        !M && l();
+        !M && s();
     }, [
         M,
-        l
+        s
     ]), a.useEffect(() => {
-        null != P && null == R && !j && l();
+        null != P && null == R && !j && s();
     }, [
         j,
         R,
-        l,
+        s,
         P
     ]), a.useEffect(() => {
         null != b && null != R && L(!1);
@@ -35,13 +35,13 @@ function S(e) {
         R
     ]), a.useEffect(() => {
         let e = null == R;
-        return !j && e && (O.current = window.setTimeout(l, 500)), () => {
+        return !j && e && (O.current = window.setTimeout(s, 500)), () => {
             null != O.current && window.clearTimeout(O.current);
         };
     }, [
         j,
         R,
-        l
+        s
     ]), (0, u.$)({ [n]: [t] }), a.useEffect(() => {
         (async function e() {
             let e = [
@@ -58,7 +58,7 @@ function S(e) {
         n,
         t
     ]), M) ? j || null == b || null == R ? (0, i.jsx)('div', {
-        className: s()(v.sidebarContianer, v.loadingContainer, S),
+        className: l()(v.sidebarContianer, v.loadingContainer, S),
         style: A,
         children: (0, i.jsx)(o.Spinner, {
             animated: !0,
@@ -67,26 +67,26 @@ function S(e) {
     }) : (0, i.jsx)(p.Gt, {
         value: y,
         children: (0, i.jsx)('div', {
-            className: s()(v.sidebarContianer, S),
+            className: l()(v.sidebarContianer, S),
             style: A,
             children: (0, i.jsx)(E.Z, {
                 user: b,
                 displayProfile: D,
                 profileType: N.y0.MODAL,
                 forceShowPremium: !0,
-                className: s()(v.profileThemedContainer),
+                className: l()(v.profileThemedContainer),
                 children: (0, i.jsxs)('div', {
-                    className: s()(v.innerContainer),
+                    className: l()(v.innerContainer),
                     children: [
                         (0, i.jsx)(T.Z, {
                             userId: t,
                             guildId: n,
-                            onClose: l
+                            onClose: s
                         }),
                         (0, i.jsx)(x.Z, {
                             userId: t,
                             guildId: n,
-                            onClose: l,
+                            onClose: s,
                             className: Z
                         })
                     ]

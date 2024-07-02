@@ -9,7 +9,7 @@ n.d(t, {
         return f;
     },
     jt: function () {
-        return g;
+        return m;
     }
 }), n(47120);
 var i = n(735250);
@@ -56,12 +56,12 @@ function f(e) {
             return null;
         t = a.VoiceNormalIcon;
     }
-    return m({
+    return g({
         icon: t,
         isCurrentUserConnected: r
     });
 }
-function g(e) {
+function m(e) {
     let {guildJoinRequestStatus: t} = e, [n, i] = function (e) {
             switch (e) {
             case o.wB.SUBMITTED:
@@ -86,12 +86,12 @@ function g(e) {
                 ];
             }
         }(t);
-    return m({
+    return g({
         icon: i,
         color: n
     });
 }
-function m(e) {
+function g(e) {
     let {
             icon: t,
             color: n,

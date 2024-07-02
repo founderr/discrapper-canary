@@ -1,6 +1,6 @@
 n(47120);
-var i, a = n(442837), l = n(570140);
-function s(e, t, n) {
+var i, a = n(442837), s = n(570140);
+function l(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -20,7 +20,7 @@ class o extends (i = a.ZP.PersistedStore) {
         return r;
     }
 }
-s(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'), s(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'), t.Z = new o(l.Z, {
+l(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'), l(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'), t.Z = new o(s.Z, {
     ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
         let {
             channelId: t,

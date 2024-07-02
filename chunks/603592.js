@@ -7,18 +7,18 @@ let p = l.forwardRef(function (e, t) {
             onContextMenu: p,
             icon: _,
             selected: f,
-            tooltip: g,
-            upperBadge: m,
+            tooltip: m,
+            upperBadge: g,
             lowerBadge: C,
             lowerBadgeSize: I,
             showPill: E = !0,
             className: N,
             'aria-label': x,
             children: S,
-            onMouseEnter: Z,
-            onMouseLeave: v,
+            onMouseEnter: v,
+            onMouseLeave: Z,
             onMouseDown: T
-        } = e, L = (0, s.Ie)(n), [A, b] = l.useState(!1), M = 'string' == typeof g && null == x ? g : x;
+        } = e, L = (0, s.Ie)(n), [A, b] = l.useState(!1), M = 'string' == typeof m && null == x ? m : x;
     return (0, i.jsxs)(u.H, {
         children: [
             E ? (0, i.jsx)('div', {
@@ -29,21 +29,21 @@ let p = l.forwardRef(function (e, t) {
                 })
             }) : null,
             (0, i.jsx)(d.Z, {
-                text: g,
+                text: m,
                 selected: f,
                 children: (0, i.jsx)(o.BlobMask, {
                     className: h.__invalid_circleButtonMask,
                     selected: f || A,
-                    upperBadge: m,
+                    upperBadge: g,
                     lowerBadge: C,
                     lowerBadgeSize: I,
                     children: (0, i.jsx)(o.Clickable, {
                         innerRef: t,
                         onMouseEnter: () => {
-                            null == Z || Z(), b(!0);
+                            null == v || v(), b(!0);
                         },
                         onMouseLeave: () => {
-                            null == v || v(), b(!1);
+                            null == Z || Z(), b(!1);
                         },
                         onMouseDown: T,
                         className: a()(h.circleIconButton, N, { [h.selected]: f || A }),

@@ -9,14 +9,14 @@ async function g(e) {
             section: T,
             subsection: S,
             guildId: C = h.ME,
-            channelId: N,
-            friendToken: f,
+            channelId: f,
+            friendToken: N,
             analyticsLocation: A,
             ...Z
-        } = e, L = u.default.getUser(p);
-    if (null == L)
+        } = e, v = u.default.getUser(p);
+    if (null == v)
         return;
-    let v = E.Z.getUserProfile(p), O = c.Z.getPrimaryActivity(p), R = c.Z.getStatus(p), x = c.Z.isMobileOnline(p), {
+    let L = E.Z.getUserProfile(p), O = c.Z.getPrimaryActivity(p), R = c.Z.getStatus(p), x = c.Z.isMobileOnline(p), {
             party: P,
             assets: b,
             application_id: M
@@ -25,19 +25,19 @@ async function g(e) {
         let {default: e} = await n.e('824').then(n.bind(n, 304113));
         return t => (0, i.jsx)(e, {
             location: 'handleOpenUserProfileModal',
-            user: L,
+            user: v,
             guildId: C,
-            friendToken: f,
+            friendToken: N,
             initialSection: T,
             initialSubsection: S,
-            channelId: N,
+            channelId: f,
             ...t,
             ...Z
         });
     }), _.default.track(h.rMx.OPEN_MODAL, {
         type: 'Profile Modal',
         guild_id: C !== h.ME ? C : null,
-        channel_id: N,
+        channel_id: f,
         other_user_id: p,
         application_id: null !== (a = null == O ? void 0 : O.application_id) && void 0 !== a ? a : null,
         application_name: null == O ? void 0 : O.name,
@@ -49,8 +49,8 @@ async function g(e) {
         party_platform: (0, I.Ps)(null == P ? void 0 : P.id) ? h.ABu.SPOTIFY : null,
         game_platform: (0, l.Z)(O),
         profile_user_status: j,
-        profile_has_nitro_customization: (null == v ? void 0 : v.banner) != null,
-        profile_has_profile_effect: (null == v ? void 0 : v.profileEffectId) != null,
+        profile_has_nitro_customization: (null == L ? void 0 : L.banner) != null,
+        profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
         ...null == A ? null : (0, _.expandLocation)(A)
     });
 }

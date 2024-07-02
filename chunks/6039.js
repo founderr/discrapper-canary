@@ -1,12 +1,12 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(568154), o = n(703656), c = n(430824), d = n(449934), u = n(768581), _ = n(693546), E = n(863249), h = n(944163), I = n(246364), m = n(937111), g = n(523924), p = n(390500), T = n(200305), S = n(981631), C = n(898625), N = n(689938), f = n(131147);
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(568154), o = n(703656), c = n(430824), d = n(449934), u = n(768581), _ = n(693546), E = n(863249), h = n(944163), I = n(246364), m = n(937111), g = n(523924), p = n(390500), T = n(200305), S = n(981631), C = n(898625), f = n(689938), N = n(131147);
 t.Z = e => {
     var t;
     let n, A;
     let {
             guildId: Z,
-            inviteCode: L
-        } = e, [v, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), P = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
+            inviteCode: v
+        } = e, [L, O] = s.useState(C.hO.INITIAL), R = (0, a.e7)([h.Z], () => h.Z.get(Z)), x = (0, a.e7)([m.Z], () => m.Z.getRequest(Z)), P = (0, a.e7)([c.Z], () => c.Z.getGuild(Z)), {
             hasFetchedRequestToJoinGuilds: b,
             guildPreviewDisabled: M
         } = (0, a.cj)([m.Z], () => ({
@@ -28,14 +28,14 @@ t.Z = e => {
         }, j = () => {
             _.Z.resetGuildJoinRequest(Z);
         };
-    let U = (n = N.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() }), A = () => {
-            O(Math.max(v, C.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
+    let U = (n = f.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() }), A = () => {
+            O(Math.max(L, C.hO.FILLING)), _.Z.removeGuildJoinRequest(Z), (0, o.uL)(S.Z5c.ME);
         }, () => {
             (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
-                header: N.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-                cancelText: N.Z.Messages.NEVERMIND,
+                header: f.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+                cancelText: f.Z.Messages.NEVERMIND,
                 onConfirm: A,
-                confirmText: N.Z.Messages.YES_TEXT,
+                confirmText: f.Z.Messages.YES_TEXT,
                 confirmButtonColor: r.Button.Colors.RED,
                 ...e,
                 children: (0, i.jsx)(r.Text, {
@@ -49,17 +49,17 @@ t.Z = e => {
             splash: R.guild.splash
         }) : (0, d.gK)();
     return (0, i.jsx)('div', {
-        className: f.page,
+        className: N.page,
         children: (0, i.jsxs)(l.Z, {
             embedded: !0,
             splash: G,
-            waveState: v,
+            waveState: L,
             showLogo: !1,
             updateWaveState: D,
             children: [
-                (0, i.jsx)('div', { className: f.dragRegion }),
+                (0, i.jsx)('div', { className: N.dragRegion }),
                 (0, i.jsx)('div', {
-                    className: f.contentWrapper,
+                    className: N.contentWrapper,
                     children: (() => {
                         switch (null == x ? void 0 : x.applicationStatus) {
                         case I.wB.SUBMITTED:
@@ -69,9 +69,9 @@ t.Z = e => {
                             });
                         case I.wB.REJECTED:
                             return (0, i.jsx)(g.Z, {
-                                reapplyText: N.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+                                reapplyText: f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                                 onReapply: j,
-                                confirmText: N.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+                                confirmText: f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                                 onWithdrawApplication: U,
                                 rejectionReason: null == x ? void 0 : x.rejectionReason,
                                 guild: M
@@ -79,7 +79,7 @@ t.Z = e => {
                         default:
                             return (0, i.jsx)(T.Z, {
                                 guildId: Z,
-                                inviteCode: L,
+                                inviteCode: v,
                                 onComplete: y
                             });
                         }

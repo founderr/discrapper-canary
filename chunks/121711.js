@@ -6,14 +6,14 @@ t.Z = function (e) {
         !t && (0, l.uL)(p.Z5c.FRIENDS);
     }, [t]), s.useEffect(() => {
     }, []), (0, d.Tt)({ location: T.Z.Messages.QUESTS });
-    let N = (0, _.Q)('dark');
+    let f = (0, _.Q)('dark');
     return t ? (0, i.jsxs)('div', {
         className: S.container,
         children: [
             (0, i.jsxs)(u.Z, {
                 toolbar: !0,
                 transparent: !0,
-                className: r()(N, S.headerBar),
+                className: r()(f, S.headerBar),
                 children: [
                     (0, i.jsx)(u.Z.Icon, {
                         icon: o.QuestsIcon,

@@ -18,9 +18,9 @@ function g(e) {
                 friendToken: void 0,
                 fromFriendSuggestion: !0
             });
-        }, N = e => {
+        }, f = e => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
-        }, f = g === h.Skl.OFFLINE ? h.Skl.UNKNOWN : g;
+        }, N = g === h.Skl.OFFLINE ? h.Skl.UNKNOWN : g;
     return (0, i.jsx)(_.Z, {
         isFocused: p,
         user: t,
@@ -43,7 +43,7 @@ function g(e) {
                         icon: a.CloseSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: N,
+                        onClick: f,
                         shouldHighlight: e
                     })
                 ]
@@ -54,7 +54,7 @@ function g(e) {
                     (0, i.jsx)(E.Z, {
                         user: t,
                         hovered: e,
-                        status: f,
+                        status: N,
                         subText: n,
                         className: m.__invalid_userInfo
                     }),

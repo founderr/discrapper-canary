@@ -16,13 +16,13 @@ function p(e, t) {
     });
 }
 function _(e) {
-    let {guildNode: t} = e, n = t.id, r = (0, l.e7)([s.Z], () => s.Z.getRequest(n)), _ = (0, l.e7)([s.Z], () => s.Z.getJoinRequestGuild(n), [n]), f = (0, l.e7)([c.Z], () => c.Z.isFocused()), g = (0, l.e7)([o.Z], () => o.Z.getGuildId());
+    let {guildNode: t} = e, n = t.id, r = (0, l.e7)([s.Z], () => s.Z.getRequest(n)), _ = (0, l.e7)([s.Z], () => s.Z.getJoinRequestGuild(n), [n]), f = (0, l.e7)([c.Z], () => c.Z.isFocused()), m = (0, l.e7)([o.Z], () => o.Z.getGuildId());
     return null == _ ? null : (0, i.jsx)(u.Z, {
         guildNode: t,
         guild: _,
         animatable: f,
         draggable: !1,
-        selected: n === g,
+        selected: n === m,
         preloadOnClick: !1,
         contextMenu: p,
         lowerBadge: (null == r ? void 0 : r.applicationStatus) === a.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: r.applicationStatus }) : void 0,

@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return v;
     }
 });
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(481060), d = n(183126), u = n(209613), _ = n(797614), E = n(151827), h = n(626135), I = n(26373), m = n(486622), g = n(922409), p = n(727813), T = n(355350), S = n(307947), C = n(125855), N = n(687683), f = n(981631), A = n(689938), Z = n(553437);
-function L() {
-    let e = s.useRef(null), t = (0, p.Z)(), n = (0, T.w)(), a = (0, I.V)(), L = (0, d.N)(), v = (0, u.Z)('message-requests-spam-list'), {channelId: O} = (0, g._)(), R = s.useCallback(() => {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(286379), c = n(481060), d = n(183126), u = n(209613), _ = n(797614), E = n(151827), h = n(626135), I = n(26373), m = n(486622), g = n(922409), p = n(727813), T = n(355350), S = n(307947), C = n(125855), f = n(687683), N = n(981631), A = n(689938), Z = n(553437);
+function v() {
+    let e = s.useRef(null), t = (0, p.Z)(), n = (0, T.w)(), a = (0, I.V)(), v = (0, d.N)(), L = (0, u.Z)('message-requests-spam-list'), {channelId: O} = (0, g._)(), R = s.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
         }, []), {rejectAll: x} = (0, m.m)({ onError: R }), P = s.useCallback(() => {
             x(t.map(e => e.channel.id));
@@ -14,7 +14,7 @@ function L() {
             x
         ]);
     s.useEffect(() => {
-        h.default.track(f.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), _.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), _.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
     let b = s.useCallback(e => {
             var n, s;
@@ -37,7 +37,7 @@ function L() {
             className: Z.sectionTitle,
             children: [
                 A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({ count: n }),
-                L && n > 0 ? (0, i.jsxs)(i.Fragment, {
+                v && n > 0 ? (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(c.Text, {
                             className: Z.titleDivider,
@@ -61,10 +61,10 @@ function L() {
         }, 'message-requests-spam-title'), [
             n,
             P,
-            L
+            v
         ]);
-    return 0 === t.length ? (0, i.jsx)(S.Z, { section: N.pS.SPAM }) : (0, i.jsx)(l.bG, {
-        navigator: v,
+    return 0 === t.length ? (0, i.jsx)(S.Z, { section: f.pS.SPAM }) : (0, i.jsx)(l.bG, {
+        navigator: L,
         children: (0, i.jsx)(l.SJ, {
             children: n => {
                 let {
@@ -82,8 +82,8 @@ function L() {
                     },
                     paddingTop: 24,
                     paddingBottom: 24,
-                    sectionHeight: N.oi,
-                    rowHeight: N.WN,
+                    sectionHeight: f.oi,
+                    rowHeight: f.WN,
                     renderSection: M,
                     renderRow: b,
                     sections: [t.length],

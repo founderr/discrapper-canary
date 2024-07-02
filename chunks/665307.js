@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 }), n(411104), n(47120);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(266067), c = n(442837), d = n(846519), u = n(477690), _ = n(481060), E = n(570140), h = n(239091), I = n(287259), m = n(785547), g = n(490983), p = n(799777), T = n(285952), S = n(366695), C = n(366966), N = n(151011), f = n(626135), A = n(780570), Z = n(624138), L = n(645818), v = n(981631), O = n(689938), R = n(895220);
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(266067), c = n(442837), d = n(846519), u = n(477690), _ = n(481060), E = n(570140), h = n(239091), I = n(287259), m = n(785547), g = n(490983), p = n(799777), T = n(285952), S = n(366695), C = n(366966), f = n(151011), N = n(626135), A = n(780570), Z = n(624138), v = n(645818), L = n(981631), O = n(689938), R = n(895220);
 function x(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -13,9 +13,9 @@ function x(e, t, n) {
     }) : e[t] = n, e;
 }
 let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION), M = Object.freeze({
-        [v.iEv.PLATFORM]: 'Platform',
-        [v.iEv.LAST_PLAYED]: 'Last Played',
-        [v.iEv.NAME]: 'Name'
+        [L.iEv.PLATFORM]: 'Platform',
+        [L.iEv.LAST_PLAYED]: 'Last Played',
+        [L.iEv.NAME]: 'Name'
     }), D = e => {
         let {
                 flag: t,
@@ -32,7 +32,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
         });
     }, y = [
         {
-            key: v.iEv.NAME,
+            key: L.iEv.NAME,
             renderHeader: () => O.Z.Messages.GAME_LIBRARY_LIST_HEADER_NAME,
             sort: !0,
             cellClassName: R.nameCell,
@@ -52,7 +52,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
                                 className: R.nameCellText,
                                 children: e.libraryApplication.getBranchedName(e.application)
                             }),
-                            e.libraryApplication.hasFlag(v.eHb.PREMIUM) ? (0, s.jsx)(_.Tooltip, {
+                            e.libraryApplication.hasFlag(L.eHb.PREMIUM) ? (0, s.jsx)(_.Tooltip, {
                                 text: O.Z.Messages.PREMIUM_GAME,
                                 children: e => (0, s.jsx)(_.NitroWheelIcon, {
                                     size: 'md',
@@ -67,7 +67,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
             })
         },
         {
-            key: v.iEv.PLATFORM,
+            key: L.iEv.PLATFORM,
             renderHeader: () => O.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM,
             sort: !0,
             cellClassName: R.platformCell,
@@ -76,12 +76,12 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
                 let t = e.libraryApplication.getDistributor();
                 return (0, s.jsx)(T.Z, {
                     align: T.Z.Align.CENTER,
-                    children: null != t ? v.EOG[t] : O.Z.Messages.GAME_LIBRARY_NOT_APPLICABLE
+                    children: null != t ? L.EOG[t] : O.Z.Messages.GAME_LIBRARY_NOT_APPLICABLE
                 });
             }
         },
         {
-            key: v.iEv.LAST_PLAYED,
+            key: L.iEv.LAST_PLAYED,
             renderHeader: () => O.Z.Messages.GAME_LIBRARY_LIST_HEADER_LAST_PLAYED,
             sort: !0,
             cellClassName: R.lastPlayedCell,
@@ -99,7 +99,7 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
             }
         },
         {
-            key: v.iEv.ACTIONS,
+            key: L.iEv.ACTIONS,
             renderHeader: () => null,
             cellClassName: R.actionsCell,
             render(e, t, n) {
@@ -113,30 +113,30 @@ let P = (0, Z.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT), b = (0, Z.Mg)(u.Z.GAME_LIST_LIN
                             className: R.settingIcons,
                             children: [
                                 (0, s.jsx)(D, {
-                                    flag: v.eHb.PRIVATE,
+                                    flag: L.eHb.PRIVATE,
                                     item: e,
                                     icon: _.EyeSlashIcon,
                                     tooltip: O.Z.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
                                 }),
                                 (0, s.jsx)(D, {
-                                    flag: v.eHb.OVERLAY_DISABLED,
+                                    flag: L.eHb.OVERLAY_DISABLED,
                                     item: e,
                                     icon: _.ScreenSlashIcon,
                                     tooltip: O.Z.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
                                 }),
-                                (0, s.jsx)(L.Z, {
+                                (0, s.jsx)(v.Z, {
                                     className: l()(R.settingIcon, { [R.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
                             ]
                         }),
                         (0, A.Je)(e.libraryApplication) ? (0, s.jsx)(m.Z, {
-                            analyticsListSort: (i = t.sortKey, r = t.sortDirection, ''.concat(M[i], ' ').concat(r === v.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                            analyticsListSort: (i = t.sortKey, r = t.sortDirection, ''.concat(M[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
                             analyticsListIndex: n,
-                            source: v.Sbl.APPLICATION_LIBRARY,
+                            source: L.Sbl.APPLICATION_LIBRARY,
                             libraryApplication: e.libraryApplication,
                             color: o ? _.Button.Colors.GREEN : _.Button.Colors.PRIMARY,
-                            isPlayShiny: o && e.defaultAction === v.apO.PLAY,
+                            isPlayShiny: o && e.defaultAction === L.apO.PLAY,
                             size: R.actionButtonSize,
                             hideProgress: null != e.defaultAction,
                             onDropdownOpen: () => null != t && t.setActiveRowKey(e),
@@ -210,33 +210,33 @@ class U extends (i = a.PureComponent) {
             } = this.props;
         for (let t of n) {
             switch (t.libraryApplication.getDistributor()) {
-            case v.GQo.DISCORD:
+            case L.GQo.DISCORD:
                 e.num_applications_discord++;
                 break;
-            case v.GQo.STEAM:
+            case L.GQo.STEAM:
                 e.num_applications_steam++;
                 break;
-            case v.GQo.BATTLENET:
+            case L.GQo.BATTLENET:
                 e.num_applications_battlenet++;
                 break;
-            case v.GQo.TWITCH:
+            case L.GQo.TWITCH:
                 e.num_applications_twitch++;
                 break;
-            case v.GQo.UPLAY:
+            case L.GQo.UPLAY:
                 e.num_applications_uplay++;
                 break;
-            case v.GQo.ORIGIN:
+            case L.GQo.ORIGIN:
                 e.num_applications_origin++;
                 break;
-            case v.GQo.GOG:
+            case L.GQo.GOG:
                 e.num_applications_gog++;
                 break;
-            case v.GQo.EPIC:
+            case L.GQo.EPIC:
                 e.num_applications_epic++;
             }
             e.num_applications_total++;
         }
-        f.default.track(v.rMx.LIBRARY_VIEWED, {
+        N.default.track(L.rMx.LIBRARY_VIEWED, {
             ...e,
             load_id: t.loadId
         });
@@ -288,7 +288,7 @@ class U extends (i = a.PureComponent) {
             } = this.state;
         return (0, s.jsxs)(a.Fragment, {
             children: [
-                n.length > 0 ? (0, s.jsx)(N.Z, {
+                n.length > 0 ? (0, s.jsx)(f.Z, {
                     columns: y,
                     data: n,
                     sortData: !1,
@@ -354,7 +354,7 @@ class U extends (i = a.PureComponent) {
     }
 }
 function G(e) {
-    let t = a.useContext(f.AnalyticsContext), n = (0, o.TH)(), {
+    let t = a.useContext(N.AnalyticsContext), n = (0, o.TH)(), {
             applicationViewItems: i,
             filterQuery: r,
             fetched: l

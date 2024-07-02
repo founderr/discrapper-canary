@@ -101,19 +101,19 @@ t.Z = l.memo(function (e) {
     let {
             wheelWidth: t,
             wheelHeight: n,
-            itemWidth: g,
-            itemHeight: m,
+            itemWidth: m,
+            itemHeight: g,
             showDeadZoneIndicator: C,
             activeItem: I,
             onItemSelect: E,
             onItemAction: N,
             interactive: x = !0,
             children: S
-        } = e, Z = l.useRef(null), v = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
+        } = e, v = l.useRef(null), Z = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
             x: 0,
             y: 0
-        }), y = Math.abs(M.x) + Math.abs(M.y) > 0, O = l.useMemo(() => a().chunk(S, p), [S]), P = l.useCallback((e, t) => {
-            null == v.current[A] ? v.current[A] = [] : v.current[A][t] = e;
+        }), O = Math.abs(M.x) + Math.abs(M.y) > 0, y = l.useMemo(() => a().chunk(S, p), [S]), P = l.useCallback((e, t) => {
+            null == Z.current[A] ? Z.current[A] = [] : Z.current[A][t] = e;
         }, [A]), j = l.useCallback((e, t) => {
             L.current = t, E(p * e + t);
         }, [E]), D = l.useCallback(() => {
@@ -143,9 +143,9 @@ t.Z = l.memo(function (e) {
             N,
             A
         ]), k = l.useMemo(() => (0, r.throttle)(e => {
-            if (null == Z.current)
+            if (null == v.current)
                 return;
-            let i = Z.current.getBoundingClientRect(), l = i.left + i.width / 2, r = {
+            let i = v.current.getBoundingClientRect(), l = i.left + i.width / 2, r = {
                     x: l,
                     y: i.top + i.height / 2
                 }, a = {
@@ -157,8 +157,8 @@ t.Z = l.memo(function (e) {
                 return;
             }
             let s = (0, o.ld)(r, a, Math.max(t, n));
-            for (let e = 0; e < v.current[A].length; e++) {
-                let t = v.current[A][e];
+            for (let e = 0; e < Z.current[A].length; e++) {
+                let t = Z.current[A][e];
                 if (null == t)
                     continue;
                 let n = t.getBoundingClientRect();
@@ -180,36 +180,36 @@ t.Z = l.memo(function (e) {
             if (!x)
                 return;
             let t = A + (e.deltaY > 0 ? 1 : -1);
-            t >= 0 && t < O.length && (null != L.current && (O[t].length > L.current ? j(t, L.current) : D()), b(t));
+            t >= 0 && t < y.length && (null != L.current && (y[t].length > L.current ? j(t, L.current) : D()), b(t));
         }, [
             x,
             A,
-            O,
+            y,
             j,
             D
-        ]), V = l.useMemo(() => O[A].map((e, l) => {
+        ]), V = l.useMemo(() => y[A].map((e, l) => {
             let r = h[l];
             if (null == r)
                 throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
-            let a = _(r.x, t, g), s = _(r.y, n, m);
+            let a = _(r.x, t, m), s = _(r.y, n, g);
             return (0, i.jsx)('div', {
                 ref: e => P(e, l),
                 className: u.chatWheelItem,
                 style: {
                     left: a,
                     top: s,
-                    width: g,
-                    height: m
+                    width: m,
+                    height: g
                 },
                 children: e
             }, l);
         }), [
-            O,
+            y,
             A,
             t,
-            g,
-            n,
             m,
+            n,
+            g,
             S.length,
             P
         ]);
@@ -219,7 +219,7 @@ t.Z = l.memo(function (e) {
         onWheel: B,
         onClick: w,
         children: (0, i.jsxs)('div', {
-            ref: Z,
+            ref: v,
             className: u.chatWheel,
             style: {
                 width: t,
@@ -281,7 +281,7 @@ t.Z = l.memo(function (e) {
                                     cy: 144,
                                     r: 28.8
                                 }),
-                                y && (0, i.jsx)('circle', {
+                                O && (0, i.jsx)('circle', {
                                     className: u.chatWheelCenter,
                                     cx: 144 + M.x,
                                     cy: 144 + M.y,
@@ -304,7 +304,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         C && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        x && O.length > 1 ? (0, i.jsx)('div', {
+                        x && y.length > 1 ? (0, i.jsx)('div', {
                             className: u.paginationHint,
                             children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT
                         }) : null

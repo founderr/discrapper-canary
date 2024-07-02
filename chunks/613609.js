@@ -15,17 +15,17 @@ t.Z = e => {
         C,
         t
     ]);
-    let N = s.useCallback(e => {
+    let f = s.useCallback(e => {
             g(t => Math.max(t, e));
-        }, []), f = (0, u.gK)();
+        }, []), N = (0, u.gK)();
     return (0, i.jsx)('div', {
         className: I.page,
         children: (0, i.jsxs)(l.Z, {
             embedded: !0,
-            splash: f,
+            splash: N,
             waveState: m,
             showLogo: !1,
-            updateWaveState: N,
+            updateWaveState: f,
             children: [
                 (0, i.jsx)('div', { className: I.dragRegion }),
                 (0, i.jsx)('div', {

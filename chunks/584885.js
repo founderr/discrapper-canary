@@ -44,16 +44,16 @@ t.Z = e => {
             theme: T,
             onViewGuild: S,
             fetchGuilds: C,
-            onGuildCardSeen: N,
-            currentCategoryId: f,
+            onGuildCardSeen: f,
+            currentCategoryId: N,
             loadId: A,
             onTagClick: Z,
-            showMoreCards: L = !1
+            showMoreCards: v = !1
         } = e;
     s.useEffect(() => {
         r.Z.wait(() => C());
-    }, [f]);
-    let v = (0, u.Z)(L ? I : h), {analyticsLocations: O} = (0, l.ZP)();
+    }, [N]);
+    let L = (0, u.Z)(v ? I : h), {analyticsLocations: O} = (0, l.ZP)();
     if (null == g)
         return null;
     let {
@@ -79,16 +79,16 @@ t.Z = e => {
     };
     if (x || null == R) {
         let e = [];
-        for (let t = 0; t < v; t++)
+        for (let t = 0; t < L; t++)
             e.push((0, i.jsx)(d.Z.Placeholder, {}, t));
         t = e;
     } else
-        t = R.slice(0, v).map(e => (0, i.jsx)(d.Z, {
+        t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
             className: E.__invalid_guildCard,
             guild: e,
             onView: b,
             theme: T,
-            onGuildCardSeen: N,
+            onGuildCardSeen: f,
             onTagClick: Z
         }, e.id));
     return (0, i.jsx)('section', {

@@ -10,7 +10,7 @@ function C(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class N extends _.Z {
+class f extends _.Z {
     _initialize() {
         super._initialize(), !__OVERLAY__ && a.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
     }
@@ -57,4 +57,4 @@ class N extends _.Z {
         });
     }
 }
-t.Z = new N();
+t.Z = new f();

@@ -3,7 +3,7 @@ n.d(t, {
         return eV;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(266067), o = n(990547), c = n(608787), d = n(873546), u = n(442837), _ = n(481060), E = n(711237), h = n(532835), I = n(290297), m = n(918854), g = n(279240), p = n(765717), T = n(358221), S = n(823748), C = n(626421), N = n(118379), f = n(652515), A = n(544978), Z = n(194729), L = n(668940), v = n(724383), O = n(705334), R = n(372900), x = n(6039), P = n(637853), b = n(326145), M = n(269675), D = n(242601), y = n(416568), j = n(613609), U = n(160404), G = n(225675), w = n(745052), k = n(285865), B = n(659971), H = n(720734), V = n(840780), F = n(235555), Y = n(746508), W = n(179742), z = n(270759), K = n(210724), q = n(905423), Q = n(304445), X = n(210887), J = n(592125), $ = n(271383), ee = n(430824), et = n(944486), en = n(933429), ei = n(823379), es = n(709054), ea = n(792125), er = n(409292), el = n(316173), eo = n(256638), ec = n(663701), ed = n(410575), eu = n(425369), e_ = n(715702), eE = n(981631), eh = n(176505), eI = n(290511), em = n(689938), eg = n(171200);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(266067), o = n(990547), c = n(608787), d = n(873546), u = n(442837), _ = n(481060), E = n(711237), h = n(532835), I = n(290297), m = n(918854), g = n(279240), p = n(765717), T = n(358221), S = n(823748), C = n(626421), f = n(118379), N = n(652515), A = n(544978), Z = n(194729), v = n(668940), L = n(724383), O = n(705334), R = n(372900), x = n(6039), P = n(637853), b = n(326145), M = n(269675), D = n(242601), y = n(416568), j = n(613609), U = n(160404), G = n(225675), w = n(745052), k = n(285865), B = n(659971), H = n(720734), V = n(840780), F = n(235555), Y = n(746508), W = n(179742), z = n(270759), K = n(210724), q = n(905423), Q = n(304445), X = n(210887), J = n(592125), $ = n(271383), ee = n(430824), et = n(944486), en = n(933429), ei = n(823379), es = n(709054), ea = n(792125), er = n(409292), el = n(316173), eo = n(256638), ec = n(663701), ed = n(410575), eu = n(425369), e_ = n(715702), eE = n(981631), eh = n(176505), eI = n(290511), em = n(689938), eg = n(171200);
 let ep = () => (0, i.jsx)('div', {
         className: eg.loader,
         children: (0, i.jsx)(_.Spinner, {})
@@ -22,7 +22,7 @@ let ep = () => (0, i.jsx)('div', {
         webpackId: 231588,
         name: 'GuildHomePage',
         renderLoader: ep
-    }), eN = (0, c.Un)({
+    }), ef = (0, c.Un)({
         createPromise: () => Promise.all([
             n.e('85552'),
             n.e('44400')
@@ -30,7 +30,7 @@ let ep = () => (0, i.jsx)('div', {
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: ep
-    }), ef = (0, c.Un)({
+    }), eN = (0, c.Un)({
         createPromise: () => Promise.all([
             n.e('96427'),
             n.e('44156'),
@@ -76,7 +76,7 @@ let ep = () => (0, i.jsx)('div', {
                     default:
                         return;
                     }
-            }), d = (0, f.C4)(s, 'channel_renderer');
+            }), d = (0, N.C4)(s, 'channel_renderer');
         if (null != s && null != a && (0, eh.AB)(a))
             switch (a) {
             case eh.oC.ROLE_SUBSCRIPTIONS:
@@ -95,19 +95,19 @@ let ep = () => (0, i.jsx)('div', {
             case eh.oC.GUILD_HOME:
                 return (0, i.jsx)(eC, { guildId: s });
             case eh.oC.CHANNEL_BROWSER:
-                return (0, i.jsx)(ef, {
+                return (0, i.jsx)(eN, {
                     guildId: s,
                     selectedSection: eI.l7.BROWSE
                 });
             case eh.oC.GUILD_ONBOARDING:
                 return (0, i.jsx)(eA, { guildId: s });
             case eh.oC.CUSTOMIZE_COMMUNITY:
-                return (0, i.jsx)(ef, {
+                return (0, i.jsx)(eN, {
                     guildId: s,
                     selectedSection: eI.l7.CUSTOMIZE
                 });
             case eh.oC.MEMBER_SAFETY:
-                return (0, i.jsx)(eN, { guildId: s });
+                return (0, i.jsx)(ef, { guildId: s });
             default:
                 (0, ei.vE)(a);
             }
@@ -124,7 +124,7 @@ let ep = () => (0, i.jsx)('div', {
             }, n.id);
         }
         return (0, i.jsx)(S.Z, {});
-    }, eL = s.memo(function () {
+    }, ev = s.memo(function () {
         let {
                 guildId: e,
                 channelId: t
@@ -133,12 +133,12 @@ let ep = () => (0, i.jsx)('div', {
             return window.location.pathname.startsWith(eE.Z5c.GLOBAL_DISCOVERY);
         }() ? (0, i.jsx)(O._, {}) : function () {
             return window.location.pathname.startsWith(eE.Z5c.GUILD_DISCOVERY);
-        }() ? (0, i.jsx)(L.Z, {}) : null != e ? (0, i.jsx)(D.Z, {
+        }() ? (0, i.jsx)(v.Z, {}) : null != e ? (0, i.jsx)(D.Z, {
             selectedChannelId: n,
             guildId: e
         }, e) : (0, i.jsx)(ec.Z, {});
     });
-function ev(e) {
+function eL(e) {
     let t = (0, q.Z)(e => {
         let {guildId: t} = e;
         return t;
@@ -148,7 +148,7 @@ function ev(e) {
         guildId: t
     });
 }
-let eO = e => (0, i.jsx)(eZ, { ...e }), eR = () => (0, i.jsx)(v.A, {}), ex = e => {
+let eO = e => (0, i.jsx)(eZ, { ...e }), eR = () => (0, i.jsx)(L.A, {}), ex = e => {
         let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
         return (0, i.jsx)(Z.Z, { searchRoute: t });
     }, eP = e => {
@@ -166,7 +166,7 @@ let eO = e => (0, i.jsx)(eZ, { ...e }), eR = () => (0, i.jsx)(v.A, {}), ex = e =
     }, eM = () => (0, i.jsx)(eu.Z, {}), eD = () => (0, i.jsx)(e_.Z, {}), ey = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
-            return (0, i.jsx)(N.Z, {
+            return (0, i.jsx)(f.Z, {
                 isFullScreen: e,
                 ...t
             });
@@ -214,7 +214,7 @@ function eH(e) {
             [eg.hidden]: l
         }),
         children: [
-            (0, i.jsx)(eL, {}),
+            (0, i.jsx)(ev, {}),
             (0, i.jsxs)('section', {
                 className: eg.panels,
                 'aria-label': em.Z.Messages.ACCOUNT_A11Y_LABEL,
@@ -223,7 +223,7 @@ function eH(e) {
                     (0, i.jsx)(F.Z, {}),
                     (0, i.jsx)(ed.Z, {
                         section: eE.jXE.ACTIVITY_PANEL,
-                        children: (0, i.jsx)(ev, { className: eg.activityPanel })
+                        children: (0, i.jsx)(eL, { className: eg.activityPanel })
                     }),
                     (0, i.jsx)(ed.Z, {
                         section: eE.jXE.RTC_CONNECTION_PANEL,

@@ -1,5 +1,5 @@
 n(757143), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(771340), d = n(903223), u = n(285952), h = n(689938), p = n(303450);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(771340), d = n(903223), u = n(285952), h = n(689938), p = n(303450);
 function m(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -29,7 +29,7 @@ class E extends a.PureComponent {
         } = this.props;
         return (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
-            className: s()({ selected: t }),
+            className: l()({ selected: t }),
             children: [
                 (0, i.jsx)(f, {
                     region: e,

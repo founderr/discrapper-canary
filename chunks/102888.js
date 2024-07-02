@@ -1,10 +1,10 @@
-var i = n(735250), a = n(470079), l = n(481060), s = n(128557), r = n(981631), o = n(689938), c = n(938163);
+var i = n(735250), a = n(470079), s = n(481060), l = n(128557), r = n(981631), o = n(689938), c = n(938163);
 t.Z = e => {
     let {
             guild: t,
             onAddGuild: d
         } = e, u = a.useCallback(() => {
-            (0, l.openModalLazy)(async () => {
+            (0, s.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     n.e('7654'),
                     n.e('39405')
@@ -25,24 +25,24 @@ t.Z = e => {
                 alt: '',
                 src: n(705845)
             }),
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(s.Heading, {
                 className: c.emptyTitle,
                 variant: 'heading-xl/semibold',
                 children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_TITLE.format({ guildName: t.name })
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 className: c.emptySubtitle,
                 children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
             }),
-            null != d ? (0, i.jsx)(s.i, {
+            null != d ? (0, i.jsx)(l.i, {
                 className: c.emptyCTA,
                 iconUrl: n(362827),
                 header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
                 completed: !1,
                 onClick: d
             }) : null,
-            (0, i.jsx)(s.i, {
+            (0, i.jsx)(l.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
                 header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,

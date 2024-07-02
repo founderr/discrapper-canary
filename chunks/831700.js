@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120), n(411104);
 var i = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), a = n(442837), s = n(846519), o = n(481060), c = n(475179), u = n(239091), d = n(146773), h = n(888651), p = n(619915), _ = n(339340), f = n(201895), g = n(718589), m = n(933557), C = n(557135), I = n(873696), E = n(446226), N = n(305325), x = n(281956), S = n(66999), Z = n(554747), v = n(506936), T = n(574176), L = n(359110), A = n(557494), b = n(695346), M = n(592125), R = n(430824), y = n(607744), O = n(496675), P = n(306680), j = n(9156), D = n(979651), U = n(934415), G = n(98597), w = n(648501), k = n(473403), B = n(830993), V = n(653577), H = n(207055), F = n(981631), W = n(647086), Y = n(689938), z = n(704672);
+var l = n(120356), r = n.n(l), a = n(442837), s = n(846519), o = n(481060), c = n(475179), u = n(239091), d = n(146773), h = n(888651), p = n(619915), _ = n(339340), f = n(201895), m = n(718589), g = n(933557), C = n(557135), I = n(873696), E = n(446226), N = n(305325), x = n(281956), S = n(66999), v = n(554747), Z = n(506936), T = n(574176), L = n(359110), A = n(557494), b = n(695346), M = n(592125), R = n(430824), O = n(607744), y = n(496675), P = n(306680), j = n(9156), D = n(979651), U = n(934415), G = n(98597), w = n(648501), k = n(473403), B = n(830993), V = n(653577), H = n(207055), F = n(981631), W = n(647086), Y = n(689938), z = n(704672);
 function K(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -96,15 +96,15 @@ class q extends G.ZP {
                 connectChannelDropTarget: h,
                 connectChannelDragSource: p,
                 connectUserDropTarget: _,
-                connectDragPreview: m,
+                connectDragPreview: g,
                 canReorderChannel: C,
                 canMoveMembers: I,
                 showTutorial: E,
                 hasActiveEvent: N,
                 embeddedApps: x,
                 isSubscriptionGated: S,
-                isFavoriteSuggestion: Z,
-                withGuildIcon: v
+                isFavoriteSuggestion: v,
+                withGuildIcon: Z
             } = this.props, {
                 shouldShowActivities: T,
                 shouldShowGuildVerificationPopout: L
@@ -133,7 +133,7 @@ class q extends G.ZP {
                                         className: z.iconVisibility,
                                         iconClassName: r()({ [z.iconLive]: N }),
                                         channel: e,
-                                        selected: !Z && t,
+                                        selected: !v && t,
                                         connected: n,
                                         unread: n ? l : void 0,
                                         resolvedUnreadSetting: a,
@@ -146,8 +146,8 @@ class q extends G.ZP {
                                         onContextMenu: e => {
                                             this.handleContextMenu(e), null == d || d();
                                         },
-                                        connectDragPreview: m,
-                                        isFavoriteSuggestion: Z,
+                                        connectDragPreview: g,
+                                        isFavoriteSuggestion: v,
                                         'aria-label': (0, f.ZP)({
                                             channel: e,
                                             unread: l,
@@ -156,19 +156,19 @@ class q extends G.ZP {
                                             embeddedActivitiesCount: x.length,
                                             isSubscriptionGated: S
                                         }),
-                                        'aria-describedby': (0, g.Z)({
+                                        'aria-describedby': (0, m.Z)({
                                             channel: e,
                                             embeddedApps: x
                                         }),
-                                        withGuildIcon: v,
+                                        withGuildIcon: Z,
                                         ...h,
                                         children: [
-                                            Z && this.renderAcceptSuggestionButton(),
-                                            Z && this.renderRemoveSuggestionButton(),
-                                            !Z && this.renderOpenChatButton(),
-                                            !Z && this.renderInviteButton(),
-                                            !Z && this.renderEditButton(),
-                                            !Z && this.renderChannelInfo()
+                                            v && this.renderAcceptSuggestionButton(),
+                                            v && this.renderRemoveSuggestionButton(),
+                                            !v && this.renderOpenChatButton(),
+                                            !v && this.renderInviteButton(),
+                                            !v && this.renderEditButton(),
+                                            !v && this.renderChannelInfo()
                                         ]
                                     });
                                 }
@@ -271,8 +271,8 @@ class q extends G.ZP {
                 });
             }
             if (o)
-                return (0, i.jsx)(v.Z, {
-                    type: v.R.VOICE,
+                return (0, i.jsx)(Z.Z, {
+                    type: Z.R.VOICE,
                     guildId: e.guild_id,
                     closePopout: this.closeGuildVerificationPopout
                 });
@@ -332,22 +332,22 @@ function J(e) {
             mentionCount: P.ZP.getMentionCount(n.id)
         })), d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)), h = (0, a.cj)([
             M.Z,
-            y.Z,
-            O.Z
+            O.Z,
+            y.Z
         ], () => {
-            let e = M.Z.getChannel(n.parent_id), i = y.Z.getCheck(n.guild_id);
+            let e = M.Z.getChannel(n.parent_id), i = O.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: O.Z.can(F.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? O.Z.can(F.Plq.MANAGE_CHANNELS, e) : O.Z.can(F.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: O.Z.can(F.Plq.MOVE_MEMBERS, n),
-                locked: !O.Z.can(F.Plq.CONNECT, n),
-                bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
+                canManageChannel: y.Z.can(F.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? y.Z.can(F.Plq.MANAGE_CHANNELS, e) : y.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: y.Z.can(F.Plq.MOVE_MEMBERS, n),
+                locked: !y.Z.can(F.Plq.CONNECT, n),
+                bypassLimit: y.Z.can(F.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
-        }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
+        }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), m = (0, g.ZP)(n), C = (0, v.qY)(n.id), {
             isSubscriptionGated: I,
             needSubscriptionToAccess: N
-        } = (0, S.Z)(n.id), x = (0, E.Z)(), v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
+        } = (0, S.Z)(n.id), x = (0, E.Z)(), Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
             enableHangStatus: A,
             allowChannelTopic: b
         } = T.n.useExperiment({
@@ -364,7 +364,7 @@ function J(e) {
             enableActivities: !0
         }), U = L && null == R;
     return (0, i.jsx)(Q, {
-        channelName: g,
+        channelName: m,
         embeddedApps: f,
         embeddedActivityType: F.IIU.PLAYING,
         video: _,
@@ -375,7 +375,7 @@ function J(e) {
         ...h,
         ...e,
         connected: L,
-        isFavoriteSuggestion: r && !v,
+        isFavoriteSuggestion: r && !Z,
         forceShowButtons: U,
         channelInfo: R,
         enableHangStatus: A,

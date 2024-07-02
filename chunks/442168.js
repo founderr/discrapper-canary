@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), l = n(920906), s = n(442837), r = n(780384), o = n(435064), c = n(39604), d = n(175470), u = n(569545), h = n(153850), p = n(420576);
+var i = n(735250), a = n(470079), s = n(920906), l = n(442837), r = n(780384), o = n(435064), c = n(39604), d = n(175470), u = n(569545), h = n(153850), p = n(420576);
 let m = { visibility: 'hidden' }, _ = {
         precision: 0.0001,
         duration: 300
@@ -17,7 +17,7 @@ function C(e) {
     let {
             stream: t,
             inPopout: n
-        } = e, {reducedMotion: C} = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, s.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, s.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
+        } = e, {reducedMotion: C} = a.useContext(r.Sf), g = (0, a.useRef)(null), I = d.n.getState().clipsButtonRef, x = (0, u.V9)(t), T = (0, l.e7)([o.Z], () => o.Z.getActiveAnimation()), N = (0, l.Wu)([o.Z], () => o.Z.getStreamClipAnimations(x)), v = (0, a.useRef)();
     a.useEffect(() => () => {
         (0, c.Gh)(x);
     }, [x]);
@@ -44,13 +44,13 @@ function C(e) {
                 height: 151,
                 width: 268
             };
-        }, A = (0, a.useRef)(null), M = (0, l.useTransition)(N, {
+        }, A = (0, a.useRef)(null), M = (0, s.useTransition)(N, {
             keys: e => e.timestamp,
             ref: A,
             from: { opacity: 0.2 },
             enter: { opacity: 0 },
             config: _
-        }), b = (0, a.useRef)(null), R = (0, l.useTransition)(N, {
+        }), b = (0, a.useRef)(null), R = (0, s.useTransition)(N, {
             ref: b,
             keys: e => e.timestamp,
             from: e => ({
@@ -83,7 +83,7 @@ function C(e) {
                 null != t.item && null != N.find(e => e.timestamp === t.item.timestamp) && (0, c.Gh)(x, t.item.timestamp);
             }
         });
-    return (0, l.useChain)([
+    return (0, s.useChain)([
         A,
         b
     ], [
@@ -95,14 +95,14 @@ function C(e) {
                 className: p.hidden,
                 ref: g
             }),
-            M((e, t) => null != t && (0, i.jsx)(l.animated.div, {
+            M((e, t) => null != t && (0, i.jsx)(s.animated.div, {
                 className: p.whiteFlash,
                 style: e
             })),
             (0, i.jsx)(h.ZP, {
                 children: (0, i.jsx)('div', {
                     className: p.hidden,
-                    children: R((e, t, n, a) => (null == t ? void 0 : t.thumbnail) != null && (0, i.jsx)(l.animated.img, {
+                    children: R((e, t, n, a) => (null == t ? void 0 : t.thumbnail) != null && (0, i.jsx)(s.animated.img, {
                         src: t.thumbnail,
                         className: p.movingImage,
                         style: e

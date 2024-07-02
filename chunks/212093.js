@@ -21,7 +21,7 @@ n.d(t, {
                     preferredLocale: r,
                     offset: d,
                     length: f,
-                    tag: g
+                    tag: m
                 } = n, C = u.ZP.getSearchIndex();
             if (null == C)
                 return;
@@ -48,14 +48,14 @@ n.d(t, {
                 offset: d,
                 limit: f,
                 categoryId: l,
-                tag: g
+                tag: m
             }), o.Z.dispatch({
                 type: 'GUILD_DISCOVERY_SEARCH_FETCH_START',
                 section: p.Lcj.SEARCH,
                 query: t,
                 categoryId: l
             });
-            let I = Object.assign({}, m, n.filters), E = Object.keys(I).map(e => ''.concat(e).concat(I[e]));
+            let I = Object.assign({}, g, n.filters), E = Object.keys(I).map(e => ''.concat(e).concat(I[e]));
             l !== _.Hk && E.push('(primary_category_id='.concat(l, ' OR categories.id=').concat(l, ')'));
             let N = E.join(' AND ');
             try {
@@ -126,11 +126,11 @@ n.d(t, {
         return x;
     },
     uY: function () {
-        return Z;
+        return v;
     }
 }), n(653041), n(47120);
 var i = n(807034), l = n(837281), r = n.n(l), a = n(664751), s = n(544891), o = n(570140), c = n(703656), u = n(683301), d = n(230307), h = n(70956), p = n(981631), _ = n(731455);
-let f = window.GLOBAL_ENV.ALGOLIA_KEY, g = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds', m = {
+let f = window.GLOBAL_ENV.ALGOLIA_KEY, m = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds', g = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
@@ -138,7 +138,7 @@ let f = window.GLOBAL_ENV.ALGOLIA_KEY, g = 'production' === window.GLOBAL_ENV.PR
 function C() {
     if (null == f)
         return;
-    let e = r()('NKTZZ4AIZU', f, { responsesCache: (0, i.A)() }).initIndex(g);
+    let e = r()('NKTZZ4AIZU', f, { responsesCache: (0, i.A)() }).initIndex(m);
     o.Z.wait(() => o.Z.dispatch({
         type: 'GUILD_DISCOVERY_SEARCH_INIT',
         index: e
@@ -148,7 +148,7 @@ function I(e, t) {
     let n = u.ZP.getSearchIndex();
     if (null == n)
         return;
-    let i = Object.assign({}, m, t), l = Object.keys(i).map(e => ''.concat(e).concat(i[e]));
+    let i = Object.assign({}, g, t), l = Object.keys(i).map(e => ''.concat(e).concat(i[e]));
     try {
         let t = n.search(e, {
                 filters: l.join(' AND '),
@@ -219,7 +219,7 @@ async function N(e, t) {
             }),
             oldFormErrors: !0
         });
-        v(n.body, p.Lcj.FEATURED);
+        Z(n.body, p.Lcj.FEATURED);
     } catch (e) {
         o.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
@@ -239,7 +239,7 @@ async function x() {
             query: a.stringify({ application_ids: e }),
             oldFormErrors: !0
         });
-        v(t.body, p.Lcj.GAMES_YOU_PLAY);
+        Z(t.body, p.Lcj.GAMES_YOU_PLAY);
     } catch (e) {
         o.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
@@ -251,7 +251,7 @@ function S() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     e && (0, c.uL)(p.Z5c.GUILD_DISCOVERY), o.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
 }
-function Z(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     o.Z.dispatch({
         type: 'GUILD_DISCOVERY_SELECT_CATEGORY',
@@ -259,7 +259,7 @@ function Z(e) {
         isHomepage: t
     });
 }
-function v(e, t) {
+function Z(e, t) {
     let {
         offset: n,
         limit: i,

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(481060), o = n(367907), c = n(626135), d = n(152376), u = n(981631), h = n(689938), p = n(139122);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(481060), o = n(367907), c = n(626135), d = n(152376), u = n(981631), h = n(689938), p = n(139122);
 function m(e) {
     let {
         channel: t,
@@ -16,7 +16,7 @@ function m(e) {
             banner_type: 'channel_opt_in'
         });
     }, [t]), (0, i.jsxs)('div', {
-        className: s()(p.chatHeaderBar, { [p.narrow]: n }),
+        className: l()(p.chatHeaderBar, { [p.narrow]: n }),
         children: [
             (0, i.jsx)(r.Text, {
                 className: p.chatHeaderBarText,

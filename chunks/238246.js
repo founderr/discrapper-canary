@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), l = n(470079), s = n(120356), r = n.n(s), o = n(512722), c = n.n(o), d = n(613828), u = n(442837), h = n(481060), p = n(490173), m = n(40851), _ = n(607070), f = n(899663), E = n(317381), C = n(496616), g = n(100527), I = n(906732), x = n(168551), T = n(597952), N = n(628123), v = n(151851), S = n(587061), Z = n(392358), A = n(892254), M = n(706454), b = n(210887), R = n(740492), j = n(451478), L = n(153850), P = n(806519), O = n(358085), y = n(792125), D = n(998502), k = n(473159), U = n(928518), w = n(981631), B = n(689938), H = n(536792);
+var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(512722), c = n.n(o), d = n(613828), u = n(442837), h = n(481060), p = n(490173), m = n(40851), _ = n(607070), f = n(899663), E = n(317381), C = n(496616), g = n(100527), I = n(906732), x = n(168551), T = n(597952), N = n(628123), v = n(151851), S = n(587061), Z = n(392358), A = n(892254), M = n(706454), b = n(210887), R = n(740492), j = n(451478), L = n(153850), P = n(806519), O = n(358085), y = n(792125), D = n(998502), k = n(473159), U = n(928518), w = n(981631), B = n(689938), H = n(536792);
 function G(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -8,7 +8,7 @@ function G(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class V extends (i = l.Component) {
+class V extends (i = s.Component) {
     componentDidMount() {
         let {guestWindow: e} = this.props, t = e.document;
         null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, k.O)(e), e.addEventListener('blur', this.handleBlur), t.addEventListener('contextmenu', this.handleContextMenu, !0), e.addEventListener('beforeunload', this.warnPopoutClose);
@@ -68,8 +68,8 @@ class V extends (i = l.Component) {
             a.textContent = e;
             return;
         }
-        let l = n.createElement('style');
-        l.setAttribute(x.PQ, 'true'), l.textContent = e, i.appendChild(l);
+        let s = n.createElement('style');
+        s.setAttribute(x.PQ, 'true'), s.textContent = e, i.appendChild(s);
     }
     updateForcedColors() {
         let {
@@ -85,8 +85,8 @@ class V extends (i = l.Component) {
                 forcedColors: t,
                 focused: n,
                 appFocused: i,
-                children: l,
-                windowKey: s,
+                children: s,
+                windowKey: l,
                 mouseModeEnabled: o,
                 keyboardModeEnabled: c,
                 reducedMotionEnabled: u,
@@ -130,12 +130,12 @@ class V extends (i = l.Component) {
                                                                 C && null != S ? (0, a.jsx)(v.Z, {
                                                                     focused: n,
                                                                     type: S,
-                                                                    windowKey: s,
+                                                                    windowKey: l,
                                                                     macOSFrame: !0
                                                                 }) : null,
                                                                 (0, a.jsx)('div', {
                                                                     className: r()(H.content, x),
-                                                                    children: l
+                                                                    children: s
                                                                 })
                                                             ]
                                                         }),
@@ -156,7 +156,7 @@ class V extends (i = l.Component) {
         });
     }
     constructor(...e) {
-        super(...e), G(this, 'rootRef', l.createRef()), G(this, '_cleanupWindowActionCreators', void 0), G(this, 'warnPopoutClose', e => {
+        super(...e), G(this, 'rootRef', s.createRef()), G(this, '_cleanupWindowActionCreators', void 0), G(this, 'warnPopoutClose', e => {
             if (this.props.connectedToEmbeddedActivity && !R.ZP.disableEmbeddedActivityPopOutAlert) {
                 if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)
                     (0, C.Z)(() => {
@@ -172,7 +172,7 @@ class V extends (i = l.Component) {
     }
 }
 G(V, 'defaultProps', { withTitleBar: !0 });
-let F = l.forwardRef(function (e, t) {
+let F = s.forwardRef(function (e, t) {
     let {
         guestWindow: n,
         focused: i
@@ -181,8 +181,8 @@ let F = l.forwardRef(function (e, t) {
         focused: U.Z.getWindowFocused(e.windowKey)
     }));
     c()(null != n, 'Missing guestWindow reference');
-    let l = (0, u.e7)([j.Z], () => j.Z.isFocused()), {
-            locale: s,
+    let s = (0, u.e7)([j.Z], () => j.Z.isFocused()), {
+            locale: l,
             theme: r
         } = (0, u.cj)([
             b.Z,
@@ -220,8 +220,8 @@ let F = l.forwardRef(function (e, t) {
                 ...e,
                 guestWindow: n,
                 focused: i,
-                appFocused: l,
-                locale: s,
+                appFocused: s,
+                locale: l,
                 theme: r,
                 forcedColors: o,
                 useForcedColors: N,

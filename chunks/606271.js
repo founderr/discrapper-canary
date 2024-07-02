@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), N = n(914946), f = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
+var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), f = n(914946), N = n(238679), A = n(863141), Z = n(981631), v = n(701488), L = n(65154);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -47,7 +47,7 @@ class R {
             _.Z,
             h.Z
         ];
-        new a.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', e => this.handleMessage(e)), r.Z.subscribe('SPEAKING', e => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', e => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', e => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', e => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', e => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', e => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', e => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', e => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', e => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', e => this.handleScreenOrientationUpdate(e)), (0, f.HU)(e => this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', e => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', e => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', e => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', e => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', e => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', e => this.handleUserAchievementUpdate(e));
+        new a.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), r.Z.subscribe('MESSAGE_CREATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_UPDATE', e => this.handleMessage(e)), r.Z.subscribe('MESSAGE_DELETE', e => this.handleMessage(e)), r.Z.subscribe('SPEAKING', e => this.handleSpeaking(e)), r.Z.subscribe('OAUTH2_TOKEN_REVOKE', e => this.handleOAuth2TokenRevoke(e)), r.Z.subscribe('GUILD_CREATE', e => this.handleGuildCreate(e)), r.Z.subscribe('CHANNEL_CREATE', e => this.handleChannelCreate(e)), r.Z.subscribe('LOGOUT', () => this.handleLogout()), r.Z.subscribe('VOICE_CHANNEL_SELECT', e => this.handleVoiceChannelSelect(e)), r.Z.subscribe('RPC_NOTIFICATION_CREATE', e => this.handleNotificationCreate(e)), r.Z.subscribe('ACTIVITY_JOIN', e => this.handleActivityJoin(e)), r.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', e => this.handleActivityLayoutModeUpdate(e)), r.Z.subscribe('THERMAL_STATE_CHANGE', e => this.handleThermalStateChange(e)), r.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', e => this.handleScreenOrientationUpdate(e)), (0, N.HU)(e => this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.Z.subscribe('RELATIONSHIP_ADD', e => this.handleRelationshipAdd(e)), r.Z.subscribe('RELATIONSHIP_REMOVE', e => this.handleRelationshipRemove(e)), r.Z.subscribe('PRESENCE_UPDATES', e => this.handlePresenceUpdate(e)), r.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), r.Z.subscribe('ENTITLEMENT_CREATE', e => this.handleEntitlementCreate(e)), r.Z.subscribe('ENTITLEMENT_DELETE', e => this.handleEntitlementDelete(e)), r.Z.subscribe('USER_ACHIEVEMENT_UPDATE', e => this.handleUserAchievementUpdate(e));
     }
     handleMessage(e) {
         let t, n, i;
@@ -72,14 +72,14 @@ class R {
         }
         null != n && this.rpcServer.dispatchToSubscriptions(t, { channel_id: n }, {
             channel_id: n,
-            message: (0, N.Xb)(i)
+            message: (0, f.Xb)(i)
         }, s);
     }
     handleSpeaking(e) {
         if (0 === this.rpcServer.subscriptions.length)
             return;
         let t = 0 !== e.speakingFlags ? Z.zMe.SPEAKING_START : Z.zMe.SPEAKING_STOP;
-        if (e.context === v.Yn.DEFAULT) {
+        if (e.context === L.Yn.DEFAULT) {
             let n = m.Z.getVoiceChannelId();
             if (null != n) {
                 let i = c.Z.getChannel(n);
@@ -117,8 +117,8 @@ class R {
         if (0 !== this.rpcServer.subscriptions.length)
             this.rpcServer.dispatchToSubscriptions(Z.zMe.NOTIFICATION_CREATE, {}, {
                 channel_id: t,
-                message: (0, N.Xb)(n),
-                icon_url: null != i ? (0, N.RE)(i) : null,
+                message: (0, f.Xb)(n),
+                icon_url: null != i ? (0, f.RE)(i) : null,
                 title: s,
                 body: a
             });
@@ -142,7 +142,7 @@ class R {
         } = e;
         if (0 === this.rpcServer.subscriptions.length)
             return;
-        let i = n !== L.cE.FOCUSED;
+        let i = n !== v.cE.FOCUSED;
         this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, { is_pip_mode: i });
         this.rpcServer.dispatchToSubscriptions(Z.zMe.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, { layout_mode: n });
     }
@@ -242,14 +242,14 @@ class R {
             }
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
-            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, N.cD)(n, t));
+            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(n, t));
     }
     handleRelationshipRemove(e) {
         let {
             relationship: {id: t}
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
-            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, N.cD)(Z.OGo.NONE, t));
+            this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(Z.OGo.NONE, t));
     }
     handlePresenceUpdate(e) {
         let {updates: t} = e;
@@ -262,13 +262,13 @@ class R {
                 if (null != t)
                     return;
                 let i = I.Z.getRelationshipType(n);
-                i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, N.cD)(i, n));
+                i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(i, n));
             });
     }
     handlePresencesReplace() {
         if (0 !== this.rpcServer.subscriptions.length)
             s().forEach(I.Z.getRelationships(), (e, t) => {
-                this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, N.cD)(e, t));
+                this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, f.cD)(e, t));
             });
     }
     handleEntitlementCreate(e) {

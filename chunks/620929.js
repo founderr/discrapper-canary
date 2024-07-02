@@ -3,14 +3,14 @@ n.d(t, {
         return v;
     }
 });
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(430824), h = n(650461), p = n(353093), m = n(105671), _ = n(532490), f = n(979264), E = n(570938), C = n(550271), g = n(116175), I = n(308083), x = n(689938), T = n(322591);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(913527), o = n.n(r), c = n(442837), d = n(481060), u = n(430824), h = n(650461), p = n(353093), m = n(105671), _ = n(532490), f = n(979264), E = n(570938), C = n(550271), g = n(116175), I = n(308083), x = n(689938), T = n(322591);
 function N(e) {
     let {
         guildId: t,
         tag: n,
         badge: a,
-        primaryColor: l,
-        secondaryColor: s
+        primaryColor: s,
+        secondaryColor: l
     } = e;
     return null == n || 0 === n.length ? (0, i.jsx)('div', {
         className: T.placeholderIcon,
@@ -30,8 +30,8 @@ function N(e) {
             badge: a,
             width: I.NC.SIZE_24,
             height: I.NC.SIZE_24,
-            primaryTintColor: l,
-            secondaryTintColor: s
+            primaryTintColor: s,
+            secondaryTintColor: l
         })
     });
 }
@@ -39,7 +39,7 @@ function v(e) {
     let {
             applicationIds: t,
             playstyle: n,
-            className: l
+            className: s
         } = e, r = a.useMemo(() => Array.from(t), [t]), o = (0, m.i)(r), c = a.useMemo(() => {
             if (null == o)
                 return null;
@@ -55,16 +55,16 @@ function v(e) {
     return (0, i.jsx)(d.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
-        className: s()(T.overviewText, l),
+        className: l()(T.overviewText, s),
         children: null == c ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
     });
 }
 t.Z = 12633 == n.j ? e => {
-    let {guildId: t} = e, n = (0, h.Wg)(), l = (0, c.e7)([u.Z], () => {
+    let {guildId: t} = e, n = (0, h.Wg)(), s = (0, c.e7)([u.Z], () => {
             var e, n;
             return null !== (n = null === (e = u.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
         }), {
-            gameApplicationIds: s,
+            gameApplicationIds: l,
             playstyle: r,
             interests: m,
             tag: f,
@@ -95,7 +95,7 @@ t.Z = 12633 == n.j ? e => {
                 variant: 'heading-xl/bold',
                 color: 'interactive-active',
                 className: T.overviewGuildName,
-                children: l
+                children: s
             }),
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
@@ -104,7 +104,7 @@ t.Z = 12633 == n.j ? e => {
                 children: x.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
             }),
             (0, i.jsx)(v, {
-                applicationIds: s,
+                applicationIds: l,
                 playstyle: r
             }),
             null != Z ? (0, i.jsx)(d.Text, {

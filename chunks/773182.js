@@ -12,7 +12,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(266067), o = n(442837), c = n(704215), u = n(481060), d = n(350810), h = n(110924), p = n(100527), _ = n(970606), f = n(963202), g = n(824991), m = n(243778), C = n(863249), I = n(937111), E = n(602147), N = n(981631), x = n(308083), S = n(921944), Z = n(689938), v = n(525865);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(266067), o = n(442837), c = n(704215), u = n(481060), d = n(350810), h = n(110924), p = n(100527), _ = n(970606), f = n(963202), m = n(824991), g = n(243778), C = n(863249), I = n(937111), E = n(602147), N = n(981631), x = n(308083), S = n(921944), v = n(689938), Z = n(525865);
 function T(e) {
     let {
             title: t,
@@ -24,7 +24,7 @@ function T(e) {
             children: h,
             isEligibleForUpsell: p = !0,
             withInviteIcon: _ = !0
-        } = e, f = (0, s.TH)(), [C, I] = (0, m.U)([r], S.R.SIDEBAR), Z = C !== r, T = (0, d.Z)(), L = p && !T && !Z && f.pathname !== N.Z5c.GUILD_DISCOVERY;
+        } = e, f = (0, s.TH)(), [C, I] = (0, g.U)([r], S.R.SIDEBAR), v = C !== r, T = (0, d.Z)(), L = p && !T && !v && f.pathname !== N.Z5c.GUILD_DISCOVERY;
     l.useEffect(() => {
         L && o();
     }, [
@@ -34,9 +34,9 @@ function T(e) {
     let A = l.useMemo(() => {
             switch (a) {
             case x.nJ:
-                return v.valorantBackgroundImage;
+                return Z.valorantBackgroundImage;
             case x.xn:
-                return v.genshinBackgroundImage;
+                return Z.genshinBackgroundImage;
             default:
                 return;
             }
@@ -49,34 +49,34 @@ function T(e) {
             e(), I(S.L.USER_DISMISS);
         }, [I]);
     return (0, i.jsxs)('div', {
-        className: v.container,
+        className: Z.container,
         children: [
             (0, i.jsx)(u.Popout, {
                 shouldShow: L,
                 renderPopout: e => {
                     let {closePopout: l} = e;
                     return (0, i.jsxs)('div', {
-                        className: v.popoutContainer,
+                        className: Z.popoutContainer,
                         children: [
                             (0, i.jsx)('div', { className: A }),
                             (0, i.jsx)(u.Clickable, {
                                 onClick: () => M(l),
-                                className: v.close,
+                                className: Z.close,
                                 children: (0, i.jsx)(u.CloseSmallIcon, {
                                     size: 'xs',
                                     color: u.tokens.colors.WHITE
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: v.popoutContent,
+                                className: Z.popoutContent,
                                 children: [
-                                    _ && (0, i.jsx)(g.YV, {}),
-                                    (0, i.jsx)(g.aF, { title: t }),
-                                    (0, i.jsx)(g.To, { message: n }),
-                                    (0, i.jsx)(g.Xu, { onClick: b })
+                                    _ && (0, i.jsx)(m.YV, {}),
+                                    (0, i.jsx)(m.aF, { title: t }),
+                                    (0, i.jsx)(m.To, { message: n }),
+                                    (0, i.jsx)(m.Xu, { onClick: b })
                                 ]
                             }),
-                            (0, i.jsx)('div', { className: v.popoutCaret })
+                            (0, i.jsx)('div', { className: Z.popoutCaret })
                         ]
                     });
                 },
@@ -86,7 +86,7 @@ function T(e) {
                 spacing: 16,
                 children: e => (0, i.jsx)('div', {
                     ...e,
-                    className: v.popoutAnchor
+                    className: Z.popoutAnchor
                 })
             }),
             h({ onClick: b })
@@ -105,13 +105,13 @@ function L(e) {
             switch (t) {
             case x.xn:
                 return [
-                    Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE,
-                    Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE
+                    v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE,
+                    v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE
                 ];
             case x.nJ:
                 return [
-                    Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE,
-                    Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE
+                    v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE,
+                    v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE
                 ];
             default:
                 return [
@@ -146,13 +146,13 @@ function A(e) {
             switch (t) {
             case x.xn:
                 return [
-                    Z.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE,
-                    Z.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
+                    v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE,
+                    v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
                 ];
             case x.nJ:
                 return [
-                    Z.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE,
-                    Z.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
+                    v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE,
+                    v.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
                 ];
             default:
                 return [
@@ -190,28 +190,28 @@ function b(e) {
         s,
         t
     ]), (0, i.jsxs)('div', {
-        className: v.container,
+        className: Z.container,
         children: [
             (0, i.jsx)(u.Popout, {
                 ref: c,
                 shouldShow: r,
                 renderPopout: () => (0, i.jsxs)('div', {
-                    className: v.popoutContainer,
+                    className: Z.popoutContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: v.popoutContent,
+                            className: Z.popoutContent,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: v.coachmarkTextContainer,
+                                    className: Z.coachmarkTextContainer,
                                     children: [
                                         (0, i.jsx)(u.Heading, {
                                             variant: 'heading-md/medium',
-                                            children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
+                                            children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
                                         }),
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
+                                            children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
                                         })
                                     ]
                                 }),
@@ -220,11 +220,11 @@ function b(e) {
                                     size: u.ButtonSizes.SMALL,
                                     color: u.ButtonColors.BRAND,
                                     onClick: a,
-                                    children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
+                                    children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', { className: v.popoutCaretLeft })
+                        (0, i.jsx)('div', { className: Z.popoutCaretLeft })
                     ]
                 }),
                 position: 'right',
@@ -233,7 +233,7 @@ function b(e) {
                 spacing: 16,
                 children: e => (0, i.jsx)('div', {
                     ...e,
-                    className: v.popoutAnchor
+                    className: Z.popoutAnchor
                 })
             }),
             n
@@ -246,9 +246,9 @@ function M(e) {
         children: n
     } = e;
     return (0, i.jsxs)('div', {
-        className: v.footer,
+        className: Z.footer,
         children: [
-            (0, i.jsx)('div', { className: a()(v.gradient, { [v.gradientHidden]: t }) }),
+            (0, i.jsx)('div', { className: a()(Z.gradient, { [Z.gradientHidden]: t }) }),
             n
         ]
     });

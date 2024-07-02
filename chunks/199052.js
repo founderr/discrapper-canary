@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(695464), o = n(217852);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(695464), o = n(217852);
 let c = 16 / 9;
 function d(e, t) {
     return Math.max(1, Math.floor((t - e) / (8 + e)) + 1);
@@ -20,7 +20,7 @@ function h(e) {
     var t;
     let {
             className: n,
-            children: l,
+            children: s,
             keyExtractor: h,
             paddingTop: p = 0,
             paddingBottom: m = 0
@@ -30,7 +30,7 @@ function h(e) {
         }), {
             width: E,
             height: C
-        } = _, g = null !== (t = null == l ? void 0 : l.length) && void 0 !== t ? t : 0, I = E - 16, x = C - (p + m), {
+        } = _, g = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = E - 16, x = C - (p + m), {
             tileStyle: T,
             tileWidth: N,
             rows: v,
@@ -39,7 +39,7 @@ function h(e) {
             let {
                 rows: i,
                 columns: a,
-                tileWidth: l
+                tileWidth: s
             } = function (e, t, n) {
                 let i;
                 let a = Math.floor(t / 25);
@@ -50,22 +50,22 @@ function h(e) {
                         }(e, n);
                     return i * a > 25;
                 }) : u(a, t, i => {
-                    let a = d(i, t), l = function (e, t) {
+                    let a = d(i, t), s = function (e, t) {
                             let n = e / c;
                             return Math.floor((t - n) / (8 + n)) + 1;
                         }(i, n);
-                    return a * l >= e;
+                    return a * s >= e;
                 }) - 1;
-                let l = d(i, t), s = Math.ceil(e / l);
+                let s = d(i, t), l = Math.ceil(e / s);
                 return {
                     tileWidth: i,
-                    columns: Math.max(1, l),
-                    rows: s
+                    columns: Math.max(1, s),
+                    rows: l
                 };
             }(e, t, n);
             return {
-                tileStyle: { width: l },
-                tileWidth: l,
+                tileStyle: { width: s },
+                tileWidth: s,
                 rows: i,
                 columns: a
             };
@@ -88,21 +88,21 @@ function h(e) {
             let n = e * S;
             return (0, i.jsx)('div', {
                 className: o.row,
-                children: null == l ? void 0 : null === (t = l.slice(n, n + S)) || void 0 === t ? void 0 : t.map((e, t) => {
+                children: null == s ? void 0 : null === (t = s.slice(n, n + S)) || void 0 === t ? void 0 : t.map((e, t) => {
                     var a;
-                    let l = n + t;
+                    let s = n + t;
                     return (0, i.jsx)('div', {
                         style: T,
-                        className: s()(o.tile, {
+                        className: l()(o.tile, {
                             [o.padColumn]: A,
-                            [o.noVerticalMargin]: l >= (v - 1) * S,
-                            [o.noHorizontalMargin]: (l + 1) % S == 0 || l === g - 1
+                            [o.noVerticalMargin]: s >= (v - 1) * S,
+                            [o.noHorizontalMargin]: (s + 1) % S == 0 || s === g - 1
                         }),
                         children: (0, i.jsx)('div', {
                             className: o.tileSizer,
                             children: e(N)
                         })
-                    }, null !== (a = null == h ? void 0 : h(l)) && void 0 !== a ? a : l);
+                    }, null !== (a = null == h ? void 0 : h(s)) && void 0 !== a ? a : s);
                 })
             }, e);
         },

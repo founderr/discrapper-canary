@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return N;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(194359), u = n(153124), _ = n(657682), E = n(981631), h = n(420212), I = n(689938), m = n(527915), g = n(549856);
@@ -10,7 +10,7 @@ let p = {
         success: null,
         error: null
     }, T = (0, u.hQ)(), S = ''.concat(T, '-decription'), C = ''.concat(T, '-error');
-function N(e, t) {
+function f(e, t) {
     switch (t.type) {
     case 'RESET':
         return p;
@@ -33,17 +33,17 @@ function N(e, t) {
         };
     }
 }
-function f() {
-    let e = s.createRef(), t = s.createRef(), [n, a] = s.useReducer(N, p), {
+function N() {
+    let e = s.createRef(), t = s.createRef(), [n, a] = s.useReducer(f, p), {
             canSend: l,
             hint: u,
-            success: f,
+            success: N,
             error: A
         } = n;
     return s.useEffect(() => {
-        null != f && (o()(null != e.current, 'Input is submitting when not mounted'), e.current.value = '', e.current.focus());
+        null != N && (o()(null != e.current, 'Input is submitting when not mounted'), e.current.value = '', e.current.focus());
     }, [
-        f,
+        N,
         e
     ]), (0, i.jsxs)('form', {
         onSubmit: t => {
@@ -86,7 +86,7 @@ function f() {
                 children: (0, i.jsxs)('div', {
                     ref: t,
                     className: r()(m.addFriendInputWrapper, {
-                        [m.success]: f,
+                        [m.success]: N,
                         [m.error]: A
                     }),
                     children: [
@@ -147,11 +147,11 @@ function f() {
                 className: g.marginTop8,
                 children: A
             }),
-            null != f && (0, i.jsx)(c.FormText, {
+            null != N && (0, i.jsx)(c.FormText, {
                 role: 'status',
                 type: c.FormText.Types.SUCCESS,
                 className: g.marginTop8,
-                children: f
+                children: N
             })
         ]
     });

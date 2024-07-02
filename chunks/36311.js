@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(749210), d = n(594174), u = n(499371), h = n(63063), p = n(981631), m = n(689938), _ = n(544787);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(749210), d = n(594174), u = n(499371), h = n(63063), p = n(981631), m = n(689938), _ = n(544787);
 function f(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -36,7 +36,7 @@ class E extends a.PureComponent {
             ref: this.scroller,
             className: _.scroller,
             children: (0, i.jsx)('div', {
-                className: s()(this.props.className, _.wrapper),
+                className: l()(this.props.className, _.wrapper),
                 children: n
             })
         });

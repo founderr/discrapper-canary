@@ -3,12 +3,12 @@ n.d(t, {
         return j;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(852229), o = n(442837), c = n(481060), d = n(393238), u = n(330726), h = n(48929), p = n(333535), m = n(566006), _ = n(443877), f = n(60174), E = n(216337), C = n(920888), g = n(287151), I = n(569471), x = n(346479), T = n(592125), N = n(934415), v = n(456269), S = n(109590), Z = n(228392), A = n(981631), M = n(689938), b = n(150631), R = n(716862);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(852229), o = n(442837), c = n(481060), d = n(393238), u = n(330726), h = n(48929), p = n(333535), m = n(566006), _ = n(443877), f = n(60174), E = n(216337), C = n(920888), g = n(287151), I = n(569471), x = n(346479), T = n(592125), N = n(934415), v = n(456269), S = n(109590), Z = n(228392), A = n(981631), M = n(689938), b = n(150631), R = n(716862);
 function j(e) {
     let {
             postId: t,
             isFirstMessage: n,
-            isLastItem: l = !1,
+            isLastItem: s = !1,
             parentChannelId: j
         } = e, {
             ref: L,
@@ -55,11 +55,11 @@ function j(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: s()(b.container, { [b.header]: D }),
+                className: l()(b.container, { [b.header]: D }),
                 ref: L,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: s()(b.reactButtons, { [b.loading]: J }),
+                        className: l()(b.reactButtons, { [b.loading]: J }),
                         children: [
                             !ee && !F && null != q && (0, i.jsx)('div', {
                                 className: R.reactions,
@@ -115,7 +115,7 @@ function j(e) {
                                     size: c.Button.Sizes.SMALL,
                                     onClick: et,
                                     className: b.button,
-                                    innerClassName: s()(b.buttonInner, { [b.active]: G }),
+                                    innerClassName: l()(b.buttonInner, { [b.active]: G }),
                                     children: [
                                         (0, i.jsx)(ei, {
                                             size: 'xs',
@@ -157,7 +157,7 @@ function j(e) {
             X && (0, i.jsx)(p.Z, { threadId: t }),
             (0, i.jsx)(E.Z, {
                 channel: B,
-                isLastItem: l
+                isLastItem: s
             })
         ]
     });

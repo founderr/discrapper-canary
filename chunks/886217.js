@@ -1,13 +1,13 @@
 n(627494), n(757143);
-var i = n(735250), a = n(470079), l = n(317261), s = n(442837), r = n(594174), o = n(823379), c = n(5192), d = n(561308), u = n(256726), h = n(206295), p = n(278399), m = n(297781), _ = n(591853), f = n(410441), E = n(689938);
+var i = n(735250), a = n(470079), s = n(317261), l = n(442837), r = n(594174), o = n(823379), c = n(5192), d = n(561308), u = n(256726), h = n(206295), p = n(278399), m = n(297781), _ = n(591853), f = n(410441), E = n(689938);
 let C = (e, t, n, i) => {
         let a = function (e) {
-                if (e === l._.WEEK)
+                if (e === s._.WEEK)
                     return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT;
-            }(i), s = c.ZP.getName(t.guild_id, t.id, n), r = e.extra.artist.name;
+            }(i), l = c.ZP.getName(t.guild_id, t.id, n), r = e.extra.artist.name;
         return a.plainFormat({
             artist: r,
-            userName: s
+            userName: l
         }).replaceAll('*', '');
     }, g = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
         username: t.username,
@@ -17,13 +17,13 @@ t.Z = e => {
     let {
             channel: t,
             entry: n,
-            requestId: l,
+            requestId: s,
             closePopout: c
         } = e, {
             parent_title: I,
             provider: x,
             image_url: T
-        } = n.extra.media, N = n.extra.artist.name, v = (0, s.e7)([r.default], () => r.default.getUser(n.author_id)), {
+        } = n.extra.media, N = n.extra.artist.name, v = (0, l.e7)([r.default], () => r.default.getUser(n.author_id)), {
             primaryColor: S,
             secondaryColor: Z
         } = (0, h.Z)(T), A = (0, d.Nq)(n), M = a.useCallback(() => {
@@ -75,7 +75,7 @@ t.Z = e => {
                     generateReactionImage: M,
                     reactionImageAltText: g(n, v),
                     entry: n,
-                    requestId: l
+                    requestId: s
                 })
             })
         ]

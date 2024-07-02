@@ -1,13 +1,13 @@
 let i, s, a;
 n(653041), n(47120);
 var r, l, o, c, d = n(392711), u = n.n(d), _ = n(442837), E = n(570140), h = n(308063), I = n(388610), m = n(430824), g = n(496675), p = n(855674), T = n(981631);
-let S = [], C = null, N = !1, f = T.QZA.CLOSED, A = {}, Z = !1, L = null;
-function v() {
+let S = [], C = null, f = !1, N = T.QZA.CLOSED, A = {}, Z = !1, v = null;
+function L() {
     if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != C) {
         let e = R(C.id);
         null != e && (C = e);
     }
-    f = T.QZA.OPEN, A = {}, Z = !1;
+    N = T.QZA.OPEN, A = {}, Z = !1;
 }
 let O = u().debounce(() => {
     Z && ((null == C || u().isEqual(C, R(C.id))) && (Z = !1), !Z && P.emitChange());
@@ -32,7 +32,7 @@ class x extends (r = _.ZP.Store) {
         return C;
     }
     get formState() {
-        return f;
+        return N;
     }
     getWebhook(e) {
         return R(e);
@@ -42,13 +42,13 @@ class x extends (r = _.ZP.Store) {
     }
     getProps() {
         return {
-            submitting: f === T.QZA.SUBMITTING,
+            submitting: N === T.QZA.SUBMITTING,
             webhooks: S,
             editedWebhook: C,
             section: a,
-            sectionId: L,
+            sectionId: v,
             hasChanges: this.hasChanges(),
-            isFetching: N,
+            isFetching: f,
             errors: A
         };
     }
@@ -60,15 +60,15 @@ c = 'ChannelSettingsIntegrationsStore', (o = 'displayName') in (l = x) ? Object.
     writable: !0
 }) : l[o] = c;
 let P = new x(E.Z, __OVERLAY__ ? {} : {
-    INTEGRATION_SETTINGS_INIT: v,
-    INTEGRATION_SETTINGS_SAVE_SUCCESS: v,
+    INTEGRATION_SETTINGS_INIT: L,
+    INTEGRATION_SETTINGS_SAVE_SUCCESS: L,
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let {section: t} = e;
         if (t !== T.CoT.INTEGRATIONS)
             return !1;
         if (a = T.b4C.OVERVIEW, null == i) {
             let e = I.Z.getChannel(), t = null == e ? void 0 : e.getGuildId();
-            null != e && null != t && (h.Z.fetchForChannel(t, e.id), N = !0), v();
+            null != e && null != t && (h.Z.fetchForChannel(t, e.id), f = !0), L();
         }
     },
     INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -76,7 +76,7 @@ let P = new x(E.Z, __OVERLAY__ ? {} : {
             section: t,
             sectionId: n
         } = e;
-        a = t, L = n;
+        a = t, v = n;
     },
     INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
         let {webhookId: t} = e, n = R(t);
@@ -94,7 +94,7 @@ let P = new x(E.Z, __OVERLAY__ ? {} : {
         C = { ...C }, null != t.name && C.name !== t.name && (C.name = t.name, Z = !0), void 0 !== t.avatar && C.avatar !== t.avatar && (C.avatar = t.avatar, Z = !0), null != t.channelId && C.channel_id !== t.channelId && (C.channel_id = t.channelId, Z = !0), Z && O();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        s = null, i = null, S = [], C = null, f = T.QZA.CLOSED;
+        s = null, i = null, S = [], C = null, N = T.QZA.CLOSED;
     },
     WEBHOOKS_UPDATE: function (e) {
         let {
@@ -102,9 +102,9 @@ let P = new x(E.Z, __OVERLAY__ ? {} : {
             channelId: n,
             webhooks: a
         } = e;
-        if (null == i || t !== i.id || null == s || n !== s.id || null == a || f === T.QZA.SUBMITTING)
+        if (null == i || t !== i.id || null == s || n !== s.id || null == a || N === T.QZA.SUBMITTING)
             return !1;
-        N = !1;
+        f = !1;
         for (let e = S.length - 1; e >= 0; e--) {
             let t = S[e];
             if (null != n && (null == t ? void 0 : t.channel_id) !== n)
@@ -132,13 +132,13 @@ let P = new x(E.Z, __OVERLAY__ ? {} : {
         S = [...S], O();
     },
     INTEGRATION_SETTINGS_SUBMITTING: function () {
-        f = T.QZA.SUBMITTING, A = {};
+        N = T.QZA.SUBMITTING, A = {};
     },
     INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
         var t;
-        if (f !== T.QZA.SUBMITTING)
+        if (N !== T.QZA.SUBMITTING)
             return !1;
-        f = T.QZA.OPEN, A = null !== (t = e.errors) && void 0 !== t ? t : {};
+        N = T.QZA.OPEN, A = null !== (t = e.errors) && void 0 !== t ? t : {};
     }
 });
 t.Z = P;

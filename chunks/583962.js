@@ -3,17 +3,17 @@ n.d(t, {
         return R;
     },
     aR: function () {
-        return y;
+        return O;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(920906), o = n(91192), c = n(442837), u = n(477690), d = n(481060), h = n(239091), p = n(607070), _ = n(100527), f = n(367907), g = n(906732), m = n(434404), C = n(496675), I = n(259580), E = n(267642), N = n(624138), x = n(667815), S = n(531572), Z = n(26323), v = n(30513), T = n(981631), L = n(689938), A = n(962095);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(920906), o = n(91192), c = n(442837), u = n(477690), d = n(481060), h = n(239091), p = n(607070), _ = n(100527), f = n(367907), m = n(906732), g = n(434404), C = n(496675), I = n(259580), E = n(267642), N = n(624138), x = n(667815), S = n(531572), v = n(26323), Z = n(30513), T = n(981631), L = n(689938), A = n(962095);
 let b = (0, N.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN), M = e => {
         let {
                 guild: t,
                 onSelect: n
             } = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([C.Z], () => C.Z.can(T.Plq.MANAGE_GUILD, t)), p = async () => {
                 if (!!u)
-                    o(!0), await m.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
+                    o(!0), await g.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
             };
         return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
@@ -28,7 +28,7 @@ let b = (0, N.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 action: p
             })
         });
-    }, R = 57, y = 57 + b, O = {
+    }, R = 57, O = 57 + b, y = {
         tension: 180,
         friction: 80
     };
@@ -36,31 +36,31 @@ t.ZP = e => {
     let {
             guild: t,
             withMargin: n
-        } = e, {analyticsLocations: r} = (0, g.ZP)(_.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+        } = e, {analyticsLocations: r} = (0, m.ZP)(_.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
             premiumSubscriberCount: u,
-            id: m
-        } = t, N = (0, E.rF)(u, m), b = (0, E.FZ)(N, t.id), R = null == b, y = null != b ? b : N, P = (0, c.e7)([S.Z], () => {
+            id: g
+        } = t, N = (0, E.rF)(u, g), b = (0, E.FZ)(N, t.id), R = null == b, O = null != b ? b : N, P = (0, c.e7)([S.Z], () => {
             var e;
-            return null !== (e = S.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
+            return null !== (e = S.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }), j = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), D = (0, c.e7)([C.Z], () => C.Z.can(T.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        P !== u && (0, x.v)(m, u);
+        P !== u && (0, x.v)(g, u);
     }, [
-        m,
+        g,
         P,
         u
     ]);
-    let U = ''.concat(Math.min(100, u / (0, E.vn)(t.id)[y] * 100), '%'), {current: G} = l.useRef(U), w = {
+    let U = ''.concat(Math.min(100, u / (0, E.vn)(t.id)[O] * 100), '%'), {current: G} = l.useRef(U), w = {
             from: { width: P === u ? G : '0%' },
             to: { width: U },
-            config: O,
+            config: y,
             immediate: j
         }, [k, B] = (0, s.useSpring)(() => w), V = () => {
             (0, f.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR },
-                guild_id: m,
+                guild_id: g,
                 location_stack: r
-            }), (0, Z.Z)({
+            }), (0, v.Z)({
                 analyticsLocations: r,
                 analyticsSourceLocation: {
                     page: T.ZY5.GUILD_CHANNEL,
@@ -68,18 +68,18 @@ t.ZP = e => {
                     object: T.qAy.TOOLTIP
                 },
                 guild: t,
-                perks: (0, v.VF)(),
+                perks: (0, Z.VF)(),
                 perkIntro: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
             });
-        }, H = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({ levelName: (0, E.e9)(y) }), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
+        }, H = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({ levelName: (0, E.e9)(O) }), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
             numBoosts: u,
-            numTotal: (0, E.vn)(t.id)[y]
+            numTotal: (0, E.vn)(t.id)[O]
         });
-    R && (H = (0, E.e9)(y), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u }));
+    R && (H = (0, E.e9)(O), F = L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u }));
     let W = (0, o.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
-            text: R ? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({ levelName: (0, E.nW)(y) }),
+            text: R ? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({ levelName: (0, E.nW)(O) }),
             color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,

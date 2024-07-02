@@ -3,10 +3,10 @@ n.d(t, {
         return E;
     }
 });
-var i = n(735250), a = n(470079), l = n(852229), s = n(399606), r = n(481060), o = n(367907), c = n(592125), d = n(934415), u = n(63063), h = n(158222), p = n(410992), m = n(981631), _ = n(689938), f = n(13367);
+var i = n(735250), a = n(470079), s = n(852229), l = n(399606), r = n(481060), o = n(367907), c = n(592125), d = n(934415), u = n(63063), h = n(158222), p = n(410992), m = n(981631), _ = n(689938), f = n(13367);
 function E(e) {
-    let {threadId: t} = e, n = (0, s.e7)([c.Z], () => c.Z.getChannel(t)), E = (0, s.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)), C = a.useCallback(() => {
-            null != n && null != E && ((0, o.yw)(m.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, l.J)((0, d.EO)(n, E)));
+    let {threadId: t} = e, n = (0, l.e7)([c.Z], () => c.Z.getChannel(t)), E = (0, l.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)), C = a.useCallback(() => {
+            null != n && null != E && ((0, o.yw)(m.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, s.J)((0, d.EO)(n, E)));
         }, [
             n,
             E

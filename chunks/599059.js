@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(981631), o = n(201241);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(981631), o = n(201241);
 function c(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -26,7 +26,7 @@ class d extends a.Component {
                 className: t,
                 name: n,
                 autoComplete: a,
-                maxLen: l
+                maxLen: s
             } = this.props, r = {
                 position: 'absolute',
                 left: 0,
@@ -37,7 +37,7 @@ class d extends a.Component {
             visibility: 'hidden',
             pointerEvents: 'none'
         } : r.opacity = 0, (0, i.jsx)('div', {
-            className: s()(o.outer, t),
+            className: l()(o.outer, t),
             children: (0, i.jsxs)('div', {
                 className: o.container,
                 children: [
@@ -48,7 +48,7 @@ class d extends a.Component {
                         style: r,
                         value: this.state.value,
                         name: n,
-                        maxLength: l,
+                        maxLength: s,
                         autoComplete: a,
                         onKeyPress: this.handleKeyPress,
                         onChange: this.handleChange,

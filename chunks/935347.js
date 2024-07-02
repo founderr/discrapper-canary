@@ -1,6 +1,6 @@
 n(653041);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(481060), _ = n(205355), E = n(607070), h = n(38618), I = n(197344), m = n(474873), g = n(706454), p = n(215427), T = n(820254), S = n(838949), C = n(358085), N = n(557177), f = n(998502), A = n(981631), Z = n(689938), L = n(969051);
-function v(e, t, n) {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(481060), _ = n(205355), E = n(607070), h = n(38618), I = n(197344), m = n(474873), g = n(706454), p = n(215427), T = n(820254), S = n(838949), C = n(358085), f = n(557177), N = n(998502), A = n(981631), Z = n(689938), v = n(969051);
+function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -10,7 +10,7 @@ function v(e, t, n) {
 }
 class O extends s.PureComponent {
     createSound() {
-        let {soundpack: e} = this.props, t = (0, N.uk)('discodo', e);
+        let {soundpack: e} = this.props, t = (0, f.uk)('discodo', e);
         return t.volume = 1, t;
     }
     componentDidMount() {
@@ -43,7 +43,7 @@ class O extends s.PureComponent {
         {
             let s = this._loadingText, a = null;
             return null != this._eventLoadingText && (s = this._eventLoadingText), null != t && (s = t.name, a = t.incident_updates[0].body), (0, i.jsxs)('div', {
-                className: L.container,
+                className: v.container,
                 'data-fade': n,
                 style: {
                     '--connecting-container-fade-duration': ''.concat(200, 'ms'),
@@ -51,28 +51,28 @@ class O extends s.PureComponent {
                 },
                 children: [
                     (0, i.jsxs)('div', {
-                        className: L.content,
+                        className: v.content,
                         children: [
                             (0, i.jsx)(S.Z, {
                                 autoPlay: !0,
                                 loop: !e,
                                 setRef: this.setVideoRef,
                                 onReady: this.handleReady,
-                                className: r()(L.spinner, this.state.ready ? L.ready : '')
+                                className: r()(v.spinner, this.state.ready ? v.ready : '')
                             }),
                             (0, i.jsxs)('div', {
-                                className: L.text,
+                                className: v.text,
                                 children: [
                                     null != t ? null : (0, i.jsx)('div', {
-                                        className: L.tipTitle,
+                                        className: v.tipTitle,
                                         children: Z.Z.Messages.LOADING_DID_YOU_KNOW
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: null != t ? L.title : L.tip,
+                                        className: null != t ? v.title : v.tip,
                                         children: s
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: L.body,
+                                        className: v.body,
                                         children: a
                                     })
                                 ]
@@ -80,33 +80,33 @@ class O extends s.PureComponent {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: r()(L.problems, { [L.slideIn]: this.state.problems }),
+                        className: r()(v.problems, { [v.slideIn]: this.state.problems }),
                         children: [
                             (0, i.jsx)('div', {
-                                className: L.problemsText,
+                                className: v.problemsText,
                                 children: Z.Z.Messages.CONNECTING_PROBLEMS_CTA
                             }),
                             (0, i.jsxs)('div', {
                                 children: [
                                     (0, i.jsxs)(u.Anchor, {
-                                        className: L.twitterLink,
+                                        className: v.twitterLink,
                                         href: A.yXt.TWITTER_SUPPORT,
                                         target: '_blank',
                                         children: [
                                             (0, i.jsx)(u.XNeutralIcon, {
                                                 size: 'xs',
                                                 color: 'currentColor',
-                                                className: L.icon
+                                                className: v.icon
                                             }),
                                             Z.Z.Messages.TWEET_US
                                         ]
                                     }),
                                     (0, i.jsxs)(u.Anchor, {
-                                        className: L.statusLink,
+                                        className: v.statusLink,
                                         href: A.yXt.STATUS,
                                         target: '_blank',
                                         children: [
-                                            (0, i.jsx)(T.Z, { className: L.icon }),
+                                            (0, i.jsx)(T.Z, { className: v.icon }),
                                             Z.Z.Messages.SERVER_STATUS
                                         ]
                                     })
@@ -119,7 +119,7 @@ class O extends s.PureComponent {
         }
     }
     constructor(e) {
-        super(e), v(this, 'videoRef', null), v(this, '_noProblemsTimeout', null), v(this, '_problemsTimeout', null), v(this, '_connectedSound', this.createSound()), v(this, '_loadingText', function () {
+        super(e), L(this, 'videoRef', null), L(this, '_noProblemsTimeout', null), L(this, '_problemsTimeout', null), L(this, '_connectedSound', this.createSound()), L(this, '_loadingText', function () {
             let e = [
                 Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_1,
                 Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_2,
@@ -129,7 +129,7 @@ class O extends s.PureComponent {
                 Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
                     tabHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'tab',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_7,
@@ -138,11 +138,11 @@ class O extends s.PureComponent {
                 Z.Z.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
                     F6Hook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'f6',
-                        className: L.keybind
+                        className: v.keybind
                     }, t),
                     tabHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'tab',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_LINE_1,
@@ -189,68 +189,68 @@ class O extends s.PureComponent {
                 Z.Z.Messages.LOADING_KEYBIND_TIP_1.format({
                     quickSwitcherHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'mod+k',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_2.format({
                     markUnreadHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'alt+click',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_3.format({
                     markServerUnreadHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'shift+esc',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_4.format({
                     navigateUnreadHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'shift+alt+up',
-                        className: L.keybind
+                        className: v.keybind
                     }, t),
                     downHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'down',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_5.format({
                     keyboardShortcutsHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'mod+/',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_6.format({
                     messageNewlineHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'shift+return',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_7.format({
                     shiftHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'shift',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 }),
                 Z.Z.Messages.LOADING_KEYBIND_TIP_8.format({
                     upHook: (e, t) => (0, i.jsx)(u.KeyCombo, {
                         shortcut: 'up',
-                        className: L.keybind
+                        className: v.keybind
                     }, t)
                 })
             ];
             return g.default.locale.startsWith('en-') && e.push(Z.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
-        }()), v(this, '_eventLoadingText', function () {
+        }()), L(this, '_eventLoadingText', function () {
             let e = I.Z.getLoadingTips();
             if (null != e && e.length > 0)
                 return e[o().random(e.length - 1)];
-        }()), v(this, 'handleReady', () => {
-            this.setState({ ready: !0 }), (0, C.isDesktop)() && (f.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), f.ZP.send('UPDATE_OPEN_ON_STARTUP'));
-        }), v(this, 'setVideoRef', e => {
+        }()), L(this, 'handleReady', () => {
+            this.setState({ ready: !0 }), (0, C.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+        }), L(this, 'setVideoRef', e => {
             this.videoRef = e;
-        }), v(this, 'setProblemsTimeout', () => {
+        }), L(this, 'setProblemsTimeout', () => {
             null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
-        }), v(this, 'clearProblemsTimeout', () => {
+        }), L(this, 'clearProblemsTimeout', () => {
             clearTimeout(this._problemsTimeout), this._problemsTimeout = null;
         });
         let {connected: t} = e;

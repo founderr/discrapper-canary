@@ -131,10 +131,10 @@ let C = {
         });
     }
 };
-function N(e) {
+function f(e) {
     return e.currentStep.toString();
 }
-function f(e) {
+function N(e) {
     let t = C[e.currentStep];
     return (0, i.jsx)(t, { guildId: e.guildId });
 }
@@ -152,7 +152,7 @@ function A(e) {
     return (0, i.jsx)(m.Z, {
         currentStep: r,
         items: l,
-        renderItem: f,
-        getItemKey: N
+        renderItem: N,
+        getItemKey: f
     });
 }

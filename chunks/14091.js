@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(392711), o = n.n(r), c = n(442837), d = n(481060), u = n(447543), h = n(603263), p = n(367907), m = n(210887), _ = n(695346), f = n(768119), E = n(944486), C = n(693580), g = n(585483), I = n(251285), x = n(406326), T = n(619753), N = n(981631), v = n(689938), S = n(582480);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n.n(r), c = n(442837), d = n(481060), u = n(447543), h = n(603263), p = n(367907), m = n(210887), _ = n(695346), f = n(768119), E = n(944486), C = n(693580), g = n(585483), I = n(251285), x = n(406326), T = n(619753), N = n(981631), v = n(689938), S = n(582480);
 function Z(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -28,9 +28,9 @@ class A extends a.Component {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
             if (null == t.props.searchAnalyticsId)
                 return;
-            let n = 0, i = 0, a = 0, l = 0;
+            let n = 0, i = 0, a = 0, s = 0;
             null != t.props.searchResults && o()(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
-                null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && l++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
+                null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
             }), p.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
                 search_type: t.props.searchType,
                 search_id: t.props.searchAnalyticsId,
@@ -43,7 +43,7 @@ class A extends a.Component {
                 page_results: null != t.props.searchResults ? t.props.searchResults.length : null,
                 is_indexing: t.props.searchIsIndexing,
                 page_num_messages: n,
-                page_num_links: l,
+                page_num_links: s,
                 page_num_embeds: a,
                 page_num_attach: i
             });
@@ -91,8 +91,8 @@ class b extends a.PureComponent {
                 searchResults: n
             } = this.props, {
                 offset: a,
-                hasError: l,
-                totalResults: s,
+                hasError: s,
+                totalResults: l,
                 isHistoricalIndexing: r
             } = this.props.search;
         return (0, i.jsxs)('section', {
@@ -111,8 +111,8 @@ class b extends a.PureComponent {
                     searchResults: n,
                     searchOffset: a,
                     searchLimit: N.vpv,
-                    searchHasError: l,
-                    searchTotalResults: s,
+                    searchHasError: s,
+                    searchTotalResults: l,
                     searchIsIndexing: r
                 })
             ]
@@ -169,7 +169,7 @@ class b extends a.PureComponent {
                     totalResults: t,
                     isSearching: n,
                     isHistoricalIndexing: a,
-                    documentsIndexed: l
+                    documentsIndexed: s
                 } = this.props.search;
             return (0, i.jsx)(x.Z, {
                 searchMode: e,
@@ -177,7 +177,7 @@ class b extends a.PureComponent {
                 totalResults: t,
                 isSearching: n,
                 isIndexing: a,
-                documentsIndexed: l
+                documentsIndexed: s
             });
         }), Z(this, 'renderIndexing', () => {
             let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
@@ -194,9 +194,9 @@ class b extends a.PureComponent {
             let {showNoResultsAlt: e} = this.props.search, t = e ? v.Z.Messages.SEARCH_NO_RESULTS_ALT : v.Z.Messages.SEARCH_NO_RESULTS;
             return (0, i.jsxs)(M, {
                 children: [
-                    (0, i.jsx)('div', { className: s()(S.noResultsImage, { [S.alt]: e }) }),
+                    (0, i.jsx)('div', { className: l()(S.noResultsImage, { [S.alt]: e }) }),
                     (0, i.jsx)('div', {
-                        className: s()(S.emptyResultsText, S.noResults, { [S.alt]: e }),
+                        className: l()(S.emptyResultsText, S.noResults, { [S.alt]: e }),
                         children: t
                     })
                 ]
@@ -205,7 +205,7 @@ class b extends a.PureComponent {
             children: [
                 (0, i.jsx)('div', { className: S.errorImage }),
                 (0, i.jsx)('div', {
-                    className: s()(S.emptyResultsText, S.errorMessage),
+                    className: l()(S.emptyResultsText, S.errorMessage),
                     children: v.Z.Messages.SEARCH_ERROR
                 })
             ]
@@ -216,10 +216,10 @@ class b extends a.PureComponent {
                 } = this.props, {
                     totalResults: n,
                     isSearching: a,
-                    isIndexing: l,
-                    hasError: s
+                    isIndexing: s,
+                    hasError: l
                 } = this.props.search;
-            return s ? this.renderError() : l ? this.renderIndexing() : a ? null : n > 0 ? (0, i.jsx)(T.Z, {
+            return l ? this.renderError() : s ? this.renderIndexing() : a ? null : n > 0 ? (0, i.jsx)(T.Z, {
                 search: this.props.search,
                 searchResults: e,
                 blockCount: t,

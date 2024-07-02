@@ -1,12 +1,12 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(149765), o = n(442837), c = n(481060), d = n(499254), u = n(424602), h = n(541099), p = n(827498), m = n(663924), _ = n(998698), f = n(665906), E = n(271383), C = n(496675), g = n(594174), I = n(981631), x = n(314734), T = n(689938), N = n(979030);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(149765), o = n(442837), c = n(481060), d = n(499254), u = n(424602), h = n(541099), p = n(827498), m = n(663924), _ = n(998698), f = n(665906), E = n(271383), C = n(496675), g = n(594174), I = n(981631), x = n(314734), T = n(689938), N = n(979030);
 let v = a.forwardRef(function (e, t) {
-    let [n, l] = a.useState(!1), r = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup()), u = a.useCallback(() => {
+    let [n, s] = a.useState(!1), r = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup()), u = a.useCallback(() => {
             r ? d.y(p.ti.DISMISSED) : d._(p._b.TEXT);
         }, [r]), m = () => {
-            l(!0);
+            s(!0);
         }, _ = () => {
-            l(!1);
+            s(!1);
         };
     return (0, i.jsx)(c.Tooltip, {
         text: T.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
@@ -35,7 +35,7 @@ let v = a.forwardRef(function (e, t) {
                     }
                 },
                 innerClassName: N.buttonContents,
-                children: (0, i.jsx)(c.AppsIcon, { className: s()(n ? N.iconHovered : N.iconUnhovered) })
+                children: (0, i.jsx)(c.AppsIcon, { className: l()(n ? N.iconHovered : N.iconUnhovered) })
             })
         })
     });
@@ -44,7 +44,7 @@ t.Z = a.memo(a.forwardRef(function (e) {
     let {
             channel: t,
             type: n
-        } = e, l = a.useRef(null), s = function (e, t) {
+        } = e, s = a.useRef(null), l = function (e, t) {
             let n = e.getGuildId(), i = (0, o.e7)([
                     E.ZP,
                     g.default
@@ -54,8 +54,8 @@ t.Z = a.memo(a.forwardRef(function (e) {
                     return null !== (t = null != n && null != i ? null === (e = E.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
                 }), {messagesDisabled: a} = (0, o.cj)([C.Z], () => {
                     var n, a;
-                    let l = e.isPrivate(), s = C.Z.computePermissions(e), o = r.e$(s, I.Plq.CREATE_PUBLIC_THREADS) || r.e$(s, I.Plq.CREATE_PRIVATE_THREADS), c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(s, I.Plq.SEND_MESSAGES)), d = (0, f.xl)(e);
-                    return { messagesDisabled: i || !l && !c || d };
+                    let s = e.isPrivate(), l = C.Z.computePermissions(e), o = r.e$(l, I.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, I.Plq.CREATE_PRIVATE_THREADS), c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, I.Plq.SEND_MESSAGES)), d = (0, f.xl)(e);
+                    return { messagesDisabled: i || !s && !c || d };
                 }, [
                     e,
                     t.permissions.requireCreateTherads,
@@ -67,12 +67,12 @@ t.Z = a.memo(a.forwardRef(function (e) {
             var e;
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? _.Z.getActiveCommand(t.id) : null };
         }), d = u.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled, p = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup(), []);
-    return d && null == c && !s ? (0, i.jsxs)('div', {
+    return d && null == c && !l ? (0, i.jsxs)('div', {
         className: N.channelAppLauncher,
         children: [
-            (0, i.jsx)(v, { ref: l }),
+            (0, i.jsx)(v, { ref: s }),
             p ? (0, i.jsx)(m.Z, {
-                positionTargetRef: l,
+                positionTargetRef: s,
                 channel: t
             }) : null
         ]

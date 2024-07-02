@@ -9,13 +9,13 @@ let _ = {
         [h.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
         [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
         [h.QKv.ERROR]: p.rtcConnectionStatusError
-    }, g = {
+    }, m = {
         [h.IE4.FINE]: p.rtcConnectionQualityFine,
         [h.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
         [h.IE4.BAD]: p.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null
     };
-class m extends l.PureComponent {
+class g extends l.PureComponent {
     renderPopoutTarget(e) {
         return (0, i.jsx)(s.Popout, {
             renderPopout: this.renderPopout,
@@ -65,7 +65,7 @@ class m extends l.PureComponent {
         })), (0, i.jsxs)('div', {
             children: [
                 (0, i.jsxs)('div', {
-                    className: a()(p.rtcConnectionStatus, g[t], o),
+                    className: a()(p.rtcConnectionStatus, m[t], o),
                     children: [
                         e,
                         (0, i.jsx)('div', {
@@ -115,4 +115,4 @@ function C(e) {
         });
     }
 }
-t.Z = m;
+t.Z = g;

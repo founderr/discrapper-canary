@@ -3,7 +3,7 @@ n.d(t, {
         return P;
     }
 }), n(724458), n(653041), n(47120);
-var i = n(735250), a = n(470079), l = n(837969), s = n(481060), r = n(668781), o = n(904245), c = n(603263), d = n(963374), u = n(607070), h = n(933557), p = n(471445), m = n(905405), _ = n(255269), f = n(937889), E = n(703656), C = n(359110), g = n(695346), I = n(592125), x = n(430824), T = n(496675), N = n(699516), v = n(768119), S = n(944486), Z = n(594174), A = n(68588), M = n(101695), b = n(683101), R = n(981631), j = n(689938), L = n(179562);
+var i = n(735250), a = n(470079), s = n(837969), l = n(481060), r = n(668781), o = n(904245), c = n(603263), d = n(963374), u = n(607070), h = n(933557), p = n(471445), m = n(905405), _ = n(255269), f = n(937889), E = n(703656), C = n(359110), g = n(695346), I = n(592125), x = n(430824), T = n(496675), N = n(699516), v = n(768119), S = n(944486), Z = n(594174), A = n(68588), M = n(101695), b = n(683101), R = n(981631), j = n(689938), L = n(179562);
 function P(e) {
     var t;
     let {
@@ -48,12 +48,12 @@ function P(e) {
                 let a = i.find(e => e.isSearchHit);
                 if (!S && null != a && N.Z.isBlockedForMessage(a))
                     return n;
-                let l = I.Z.getChannel(i[0].channel_id);
-                return null == l ? n : ((null == e || e !== l.id) && n.push({
-                    channel: l,
+                let s = I.Z.getChannel(i[0].channel_id);
+                return null == s ? n : ((null == e || e !== s.id) && n.push({
+                    channel: s,
                     results: [],
                     startIndex: t
-                }), t += 1, n[n.length - 1].results.push(i), e = null == l ? void 0 : l.id, n);
+                }), t += 1, n[n.length - 1].results.push(i), e = null == s ? void 0 : s.id, n);
             }, []);
         }, [
             _,
@@ -72,7 +72,7 @@ function P(e) {
         }, [m]), k = a.useCallback(e => {
             let t = P.current[e];
             null == t || t.jumpTo();
-        }, []), U = (0, l.ZP)({
+        }, []), U = (0, s.ZP)({
             navId: 'search-results',
             itemCount: y,
             focusedIndex: 0,
@@ -106,7 +106,7 @@ function P(e) {
         var e;
         null === (e = V.current) || void 0 === e || e.focus();
     }, [_]);
-    let F = (0, s.useFocusJumpSection)();
+    let F = (0, l.useFocusJumpSection)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -116,7 +116,7 @@ function P(e) {
                 'aria-busy': T,
                 children: G
             }),
-            f > 0 ? (0, i.jsxs)(s.Clickable, {
+            f > 0 ? (0, i.jsxs)(l.Clickable, {
                 tag: 'div',
                 className: L.resultsBlocked,
                 onClick: () => c.QY(h, !S),
@@ -140,7 +140,7 @@ function P(e) {
 function O(e) {
     var t, n;
     let {
-            channel: l,
+            channel: s,
             results: r,
             highlighter: o,
             startIndex: c,
@@ -159,7 +159,7 @@ function O(e) {
             let t = I.Z.getChannel(e);
             if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t))
                 (0, C.Kh)(t.id);
-        }, []), w = null != l ? (0, h.F6)(l, Z.default, N.Z, !1) : '???', B = y && null != l.guild_id ? null === (t = x.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == l ? void 0 : l.parent_id) != null ? I.Z.getChannel(l.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(l)) && void 0 !== n ? n : s.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, l), {content: z} = (0, f.ZP)({
+        }, []), w = null != s ? (0, h.F6)(s, Z.default, N.Z, !1) : '???', B = y && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, G = null != H ? H.name : null, V = null !== (n = (0, p.KS)(s)) && void 0 !== n ? n : l.TextIcon, F = null != H ? (0, p.KS)(H) : null, W = T.Z.can(R.Plq.MANAGE_MESSAGES, s), {content: z} = (0, f.ZP)({
             content: w,
             embeds: []
         }, {
@@ -182,8 +182,8 @@ function O(e) {
             className: L.searchResultGroup,
             'aria-label': X,
             children: [
-                (0, i.jsx)(s.Clickable, {
-                    onClick: () => U(l.id),
+                (0, i.jsx)(l.Clickable, {
+                    onClick: () => U(s.id),
                     children: (0, i.jsxs)('div', {
                         className: L.channelNameContainer,
                         children: [
@@ -192,7 +192,7 @@ function O(e) {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            (0, i.jsx)(s.Tooltip, {
+                            (0, i.jsx)(l.Tooltip, {
                                 text: w,
                                 shouldShow: K,
                                 children: e => (0, i.jsxs)('span', {
@@ -205,7 +205,7 @@ function O(e) {
                                     ]
                                 })
                             }),
-                            null != H && null != G && null != F ? (0, i.jsxs)(s.Clickable, {
+                            null != H && null != G && null != F ? (0, i.jsxs)(l.Clickable, {
                                 className: L.parentChannelNameClickable,
                                 onClick: e => {
                                     e.stopPropagation(), U(H.id);
@@ -216,7 +216,7 @@ function O(e) {
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         className: L.parentChannelNameText,
                                         variant: 'text-xs/medium',
                                         color: 'header-secondary',

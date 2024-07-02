@@ -1,11 +1,11 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(774078), d = n(579185), u = n(272929), h = n(456631), p = n(643720), m = n(981631), _ = n(269794);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(774078), d = n(579185), u = n(272929), h = n(456631), p = n(643720), m = n(981631), _ = n(269794);
 t.Z = e => {
     let {
             channel: t,
             className: n
         } = e, {
-            isHovered: l,
+            isHovered: s,
             setIsHovered: f,
             onMouseEnter: E,
             onMouseLeave: C,
@@ -23,12 +23,12 @@ t.Z = e => {
             C,
             I
         ]), M = a.useCallback((e, t) => {
-            g(), x(!I), (!l || I) && (null == t || t(e));
+            g(), x(!I), (!s || I) && (null == t || t(e));
         }, [
             g,
             I,
-            l
-        ]), b = l || I;
+            s
+        ]), b = s || I;
     return (0, i.jsx)(o.Popout, {
         shouldShow: b,
         animationPosition: 'bottom',
@@ -58,7 +58,7 @@ t.Z = e => {
                 isCenterButton: !0,
                 totalCooldownSeconds: N,
                 remainingCooldownSeconds: v,
-                className: s()(_.controlButton, n),
+                className: l()(_.controlButton, n),
                 onKeyDown: e => {
                     var t, n;
                     return t = e, n = a, void (t.keyCode === m.yXg.ENTER && t.keyCode === m.yXg.SPACE && M(t, n));

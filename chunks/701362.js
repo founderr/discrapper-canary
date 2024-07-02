@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(717881), d = n(58540), u = n(850827), h = n(258609), p = n(199902), m = n(314897), _ = n(430824), f = n(496675), E = n(158776), C = n(979651), g = n(387204), I = n(626135), x = n(382182), T = n(687516), N = n(718805), v = n(871118), S = n(981631), Z = n(689938), A = n(482831);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(717881), d = n(58540), u = n(850827), h = n(258609), p = n(199902), m = n(314897), _ = n(430824), f = n(496675), E = n(158776), C = n(979651), g = n(387204), I = n(626135), x = n(382182), T = n(687516), N = n(718805), v = n(871118), S = n(981631), Z = n(689938), A = n(482831);
 class M extends a.PureComponent {
     componentDidMount() {
         let {
@@ -24,8 +24,8 @@ class M extends a.PureComponent {
             onWatch: t,
             activeStream: n,
             currentUserId: a,
-            canWatch: l,
-            unavailableReason: s
+            canWatch: s,
+            unavailableReason: l
         } = this.props;
         return (0, i.jsxs)(o.Clickable, {
             onClick: t,
@@ -35,13 +35,13 @@ class M extends a.PureComponent {
                     className: A.previewImage,
                     stream: e
                 }),
-                l ? (0, i.jsx)('div', {
+                s ? (0, i.jsx)('div', {
                     className: A.previewHover,
                     children: (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
                         className: A.white,
-                        children: (0, N.Z)(e, n, a, s)
+                        children: (0, N.Z)(e, n, a, l)
                     })
                 }) : null
             ]
@@ -55,7 +55,7 @@ class M extends a.PureComponent {
             previewIsOpen: a
         } = this.props;
         return null == n ? null : (0, i.jsx)('div', {
-            className: s()(A.streamPreviewWrapper, { [A.mounted]: a }),
+            className: l()(A.streamPreviewWrapper, { [A.mounted]: a }),
             children: (0, i.jsxs)('div', {
                 className: A.streamPreview,
                 children: [
@@ -101,8 +101,8 @@ function b(e) {
     let {
             user: t,
             channel: n,
-            ...l
-        } = e, [s, o] = (0, r.Wu)([
+            ...s
+        } = e, [l, o] = (0, r.Wu)([
             C.Z,
             _.Z,
             f.Z,
@@ -112,8 +112,8 @@ function b(e) {
             t.id
         ]);
     return (0, d.$)(v), (0, i.jsx)(M, {
-        ...l,
-        canWatch: s,
+        ...s,
+        canWatch: l,
         unavailableReason: o,
         user: t,
         streamApplication: I,

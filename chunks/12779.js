@@ -1,10 +1,10 @@
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(481060), o = n(368666), c = n(871521), d = n(421924);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(481060), o = n(368666), c = n(871521), d = n(421924);
 t.Z = a.memo(function (e) {
     let {
         label: t,
         participantCount: n,
         onClick: a,
-        className: l,
+        className: s,
         collapsed: u,
         speakers: h,
         channel: p,
@@ -12,7 +12,7 @@ t.Z = a.memo(function (e) {
     } = e;
     return (0, i.jsxs)(r.Clickable, {
         onClick: a,
-        className: s()(d.container, l),
+        className: l()(d.container, s),
         children: [
             null == h ? (0, i.jsx)(r.GroupIcon, {
                 size: 'custom',
@@ -51,7 +51,7 @@ t.Z = a.memo(function (e) {
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: s()(d.downIcon, { [d.upIcon]: u })
+                className: l()(d.downIcon, { [d.upIcon]: u })
             })
         ]
     });

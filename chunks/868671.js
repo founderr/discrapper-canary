@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     }
 }), n(47120), n(724458);
-var i = n(470079), a = n(442837), l = n(570140), s = n(439170), r = n(592125), o = n(451478), c = n(626135), d = n(162461), u = n(146282), h = n(590026), p = n(178762), m = n(206583), _ = n(809017), f = n(981631), E = n(689938);
+var i = n(470079), a = n(442837), s = n(570140), l = n(439170), r = n(592125), o = n(451478), c = n(626135), d = n(162461), u = n(146282), h = n(590026), p = n(178762), m = n(206583), _ = n(809017), f = n(981631), E = n(689938);
 let C = 0;
 function g(e) {
     let {
@@ -30,14 +30,14 @@ function g(e) {
                     C
                 ];
             let i = x ? v.length : 3, a = v.slice(0, i);
-            e = Z ? [{ type: s.so.HIDDEN_CONTENT_INVENTORY }] : a.map(e => ({
-                type: s.so.CONTENT_INVENTORY,
+            e = Z ? [{ type: l.so.HIDDEN_CONTENT_INVENTORY }] : a.map(e => ({
+                type: l.so.CONTENT_INVENTORY,
                 entry: e,
                 requestId: N
             }));
-            let l = {
+            let s = {
                 id: _.G,
-                type: s.so.CONTENT_INVENTORY_GROUP,
+                type: l.so.CONTENT_INVENTORY_GROUP,
                 key: _.G,
                 count: e.length,
                 index: n.length,
@@ -58,12 +58,12 @@ function g(e) {
             };
             return [
                 [
-                    l,
+                    s,
                     ...t
                 ],
                 [
                     ...n,
-                    l,
+                    s,
                     ...e
                 ],
                 Math.random(),
@@ -104,7 +104,7 @@ function g(e) {
                 guild_id: I,
                 all_item_ids: n,
                 impression_capped_item_ids: [...k.current.impressionCappedEntryIds]
-            }), (0, d.wm)('useInjectContentInventoryFeed') && l.Z.dispatch({
+            }), (0, d.wm)('useInjectContentInventoryFeed') && s.Z.dispatch({
                 type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
                 itemIds: i
             });

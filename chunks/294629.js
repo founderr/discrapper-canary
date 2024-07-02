@@ -3,21 +3,21 @@ n.d(t, {
         return d;
     }
 });
-var i = n(442837), a = n(160404), l = n(314897), s = n(131951), r = n(496675), o = n(979651), c = n(981631);
+var i = n(442837), a = n(160404), s = n(314897), l = n(131951), r = n(496675), o = n(979651), c = n(981631);
 function d(e) {
     return (0, i.cj)([
-        l.default,
+        s.default,
         o.Z,
-        s.Z,
+        l.Z,
         r.Z,
         a.Z
     ], () => function (e) {
         var t;
         let {
                 channel: n,
-                authenticationStore: i = l.default,
+                authenticationStore: i = s.default,
                 voiceStateStore: d = o.Z,
-                mediaEngineStore: u = s.Z,
+                mediaEngineStore: u = l.Z,
                 permissionStore: h = r.Z,
                 impersonateStore: p = a.Z
             } = e, m = null != n ? d.getVoiceState(n.getGuildId(), i.getId()) : null, _ = u.isSelfMute() || u.isSelfMutedTemporarily(), f = null == n ? void 0 : n.getGuildId(), E = p.isViewingRoles(f) && !h.can(c.Plq.SPEAK, n);
@@ -28,9 +28,9 @@ function d(e) {
         };
     }({
         channel: e,
-        authenticationStore: l.default,
+        authenticationStore: s.default,
         voiceStateStore: o.Z,
-        mediaEngineStore: s.Z,
+        mediaEngineStore: l.Z,
         permissionStore: r.Z,
         impersonateStore: a.Z
     }));

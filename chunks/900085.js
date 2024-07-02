@@ -3,8 +3,8 @@ n.d(t, {
         return F;
     }
 }), n(411104), n(47120);
-var i, l = n(735250), r = n(470079), a = n(120356), s = n.n(a), o = n(873546), c = n(442837), u = n(481060), d = n(239091), h = n(134616), p = n(714338), _ = n(212819), f = n(14429), g = n(592125), m = n(888369), C = n(430824), I = n(306680), E = n(944486), N = n(938475), x = n(387204), S = n(107828), Z = n(153124), v = n(585483), T = n(63063), L = n(51596), A = n(823385), b = n(670512), M = n(981631), R = n(689938), y = n(175057);
-function O(e, t, n) {
+var i, l = n(735250), r = n(470079), a = n(120356), s = n.n(a), o = n(873546), c = n(442837), u = n(481060), d = n(239091), h = n(134616), p = n(714338), _ = n(212819), f = n(14429), m = n(592125), g = n(888369), C = n(430824), I = n(306680), E = n(944486), N = n(938475), x = n(387204), S = n(107828), v = n(153124), Z = n(585483), T = n(63063), L = n(51596), A = n(823385), b = n(670512), M = n(981631), R = n(689938), O = n(175057);
+function y(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -13,14 +13,14 @@ function O(e, t, n) {
     }) : e[t] = n, e;
 }
 let P = 10, j = () => (0, l.jsxs)('div', {
-        className: y.emptyState,
+        className: O.emptyState,
         children: [
             (0, l.jsx)('div', {
-                className: y.emptyStateNote,
+                className: O.emptyStateNote,
                 children: R.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
             }),
             (0, l.jsx)('div', {
-                className: y.emptyStateCTA,
+                className: O.emptyStateCTA,
                 children: (0, l.jsx)(u.Anchor, {
                     href: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -34,39 +34,39 @@ class D extends (i = r.Component) {
         return (0, l.jsx)(S.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
-                className: y.miscContainer,
+                className: O.miscContainer,
                 children: null != e ? e.name : null
             })
         });
     }
 }
-O(D, 'defaultProps', { unread: !1 });
+y(D, 'defaultProps', { unread: !1 });
 let U = c.ZP.connectStores([
         I.ZP,
-        g.Z
+        m.Z
     ], e => {
         let {channel: t} = e;
         return {
             unread: I.ZP.hasUnread(t.id),
             mentions: I.ZP.getMentionCount(t.id),
-            category: g.Z.getChannel(t.parent_id)
+            category: m.Z.getChannel(t.parent_id)
         };
     })(D), G = c.ZP.connectStores([N.ZP], e => {
         let {channel: t} = e;
         if (null == t.guild_id)
             throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: N.ZP.getVoiceStates(t.guild_id)[t.id] };
-    })(D), w = c.ZP.connectStores([m.default], e => {
+    })(D), w = c.ZP.connectStores([g.default], e => {
         let {guild: t} = e;
-        return { unread: m.default.hasUnread(t.id) };
+        return { unread: g.default.hasUnread(t.id) };
     })(S.ic), k = c.ZP.connectStores([I.ZP], e => {
         let {channel: t} = e;
         return { mentions: I.ZP.getMentionCount(t.id) };
     })(S.PZ), B = c.ZP.connectStores([
-        g.Z,
+        m.Z,
         I.ZP
     ], e => {
-        let {user: t} = e, n = g.Z.getDMFromUserId(t.id);
+        let {user: t} = e, n = m.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? I.ZP.getMentionCount(n) : 0 };
     })(S.n5);
 function V(e, t, n) {
@@ -74,7 +74,7 @@ function V(e, t, n) {
         text: n,
         children: e => (0, l.jsx)('span', {
             ...e,
-            className: y.autocompleteQuerySymbol,
+            className: O.autocompleteQuerySymbol,
             children: t
         })
     }, e);
@@ -111,7 +111,7 @@ class H extends r.PureComponent {
             } = this.props, {query: n} = this.state, i = t.length > 0 && '' !== n;
         return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
-                className: y.input,
+                className: O.input,
                 'aria-label': R.Z.Messages.QUICK_SWITCHER,
                 ref: this.inputRef,
                 type: 'text',
@@ -143,20 +143,20 @@ class H extends r.PureComponent {
             rowHeight: 34,
             paddingBottom: P,
             sections: [t.length],
-            className: y.scroller,
+            className: O.scroller,
             renderRow: this.renderRow,
             renderSection: this.renderSection
         });
     }
     focusNode(e) {
-        v.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        Z.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
     }
     renderProtip() {
         return (0, l.jsx)(x.Z, {
-            className: s()(y.protip, { [y.hasContent]: this.state.query.length > 0 }),
+            className: s()(O.protip, { [O.hasContent]: this.state.query.length > 0 }),
             type: x.Z.Types.INLINE,
             children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
@@ -179,10 +179,10 @@ class H extends r.PureComponent {
             'aria-label': R.Z.Messages.QUICK_SWITCHER,
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: s()(y.container, o.tq && y.mobileContainer),
+            className: s()(O.container, o.tq && O.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: s()(y.quickswitcher, o.tq && y.mobileQuickswitcher),
+                className: s()(O.quickswitcher, o.tq && O.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [
                     this.renderInput(),
@@ -194,22 +194,22 @@ class H extends r.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), O(this, 'scrollerRef', r.createRef()), O(this, 'inputRef', r.createRef()), O(this, '_listId', (0, Z.hQ)()), O(this, 'state', {
+        super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.createRef()), y(this, '_listId', (0, v.hQ)()), y(this, 'state', {
             query: this.props.query,
             mouseFocusDisabled: !0
-        }), O(this, 'handleInputChange', () => {
+        }), y(this, 'handleInputChange', () => {
             let {current: e} = this.inputRef;
             null != e && this.search(e.value);
-        }), O(this, 'handleMouseMove', () => {
+        }), y(this, 'handleMouseMove', () => {
             let {mouseFocusDisabled: e} = this.state;
             if (!1 !== e)
                 this.setState({ mouseFocusDisabled: !1 });
-        }), O(this, 'focusResult', e => {
+        }), y(this, 'focusResult', e => {
             if (!this.state.mouseFocusDisabled)
                 (0, L.tF)(this.props.results.indexOf(e));
-        }), O(this, 'selectResult', e => {
+        }), y(this, 'selectResult', e => {
             (0, L.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL);
-        }), O(this, 'handleContextMenu', e => {
+        }), y(this, 'handleContextMenu', e => {
             let t = this.props.results[this.props.selectedIndex];
             switch (t.type) {
             case _.h8.GUILD:
@@ -332,7 +332,7 @@ class H extends r.PureComponent {
                     });
                 });
             }
-        }), O(this, 'handleKeyDown', e => {
+        }), y(this, 'handleKeyDown', e => {
             let {
                     mouseFocusDisabled: t,
                     query: n
@@ -375,7 +375,7 @@ class H extends r.PureComponent {
                 return;
             }
             e.preventDefault(), (0, L.tF)(r);
-        }), O(this, 'renderRow', e => {
+        }), y(this, 'renderRow', e => {
             let {row: t} = e, n = this.props.results[t], {selectedIndex: i} = this.props, {showScores: r} = f.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
             switch (n.type) {
             case _.h8.HEADER:

@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(442837), r = n(481060), o = n(239091), c = n(100527), d = n(906732), u = n(471445), h = n(484459), p = n(103575), m = n(271383), _ = n(594174), f = n(51144), E = n(967128), C = n(981631), g = n(689938), I = n(602679);
+var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(239091), c = n(100527), d = n(906732), u = n(471445), h = n(484459), p = n(103575), m = n(271383), _ = n(594174), f = n(51144), E = n(967128), C = n(981631), g = n(689938), I = n(602679);
 function x(e) {
     var t, a;
     let {
             userId: u,
             channel: E
-        } = e, {analyticsLocations: C} = (0, d.ZP)(c.Z.USERNAME), g = (0, s.e7)([_.default], () => _.default.getUser(u)), x = (0, s.e7)([m.ZP], () => null != u ? m.ZP.getMember(E.guild_id, u) : null);
+        } = e, {analyticsLocations: C} = (0, d.ZP)(c.Z.USERNAME), g = (0, l.e7)([_.default], () => _.default.getUser(u)), x = (0, l.e7)([m.ZP], () => null != u ? m.ZP.getMember(E.guild_id, u) : null);
     function T(e) {
         if (null == g)
             return null;
@@ -30,7 +30,7 @@ function x(e) {
     }
     let N = null !== (a = null !== (t = null == x ? void 0 : x.nick) && void 0 !== t ? t : f.ZP.getName(g)) && void 0 !== a ? a : '???', v = null == x ? void 0 : x.colorString;
     return null == g ? (0, i.jsx)('span', {
-        className: l()(I.threadCreatorName, I.unknownCreatorName),
+        className: s()(I.threadCreatorName, I.unknownCreatorName),
         children: N
     }) : (0, i.jsx)(d.Gt, {
         value: C,

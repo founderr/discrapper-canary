@@ -4,18 +4,18 @@ n.d(t, {
     }
 }), n(789020), n(47120);
 var i = n(664751), s = n(373793), a = n(243814), r = n(149765), l = n(544891), o = n(45792), c = n(433517), d = n(570140), u = n(979200), _ = n(489863), E = n(166148), h = n(307643), I = n(973616), m = n(594174), g = n(630388), p = n(700785), T = n(996106), S = n(186901), C = n(981631);
-let N = 'CachedTokens';
-async function f(e, t, n) {
+let f = 'CachedTokens';
+async function N(e, t, n) {
     var i;
     let a;
     let l, o, c, d, {
             client_id: S,
-            response_type: N = 'code',
-            redirect_uri: f,
+            response_type: f = 'code',
+            redirect_uri: N,
             code_challenge: A,
             code_challenge_method: Z,
-            state: L,
-            nonce: v,
+            state: v,
+            nonce: L,
             scope: O,
             permissions: R,
             guild_id: x,
@@ -26,7 +26,7 @@ async function f(e, t, n) {
         } = e;
     if (null == S)
         throw new T.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'No Client ID provided');
-    if (null != f)
+    if (null != N)
         throw new T.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let y = [];
     if ('string' == typeof O ? y = O.split(' ').filter(e => e.length > 0) : Array.isArray(O) && (y = O), null == m.default.getCurrentUser())
@@ -37,11 +37,11 @@ async function f(e, t, n) {
         o = await (0, _.Ww)({
             clientId: S,
             scopes: y,
-            responseType: N,
-            redirectUri: f,
+            responseType: f,
+            redirectUri: N,
             codeChallenge: A,
             codeChallengeMethod: Z,
-            state: L,
+            state: v,
             integrationType: l
         });
     } catch (t) {
@@ -63,12 +63,12 @@ async function f(e, t, n) {
                 authorize: !0,
                 clientId: S,
                 scopes: y,
-                responseType: N,
-                redirectUri: f,
+                responseType: f,
+                redirectUri: N,
                 codeChallenge: A,
                 codeChallengeMethod: Z,
-                state: L,
-                nonce: v,
+                state: v,
+                nonce: L,
                 integrationType: l
             })).location;
         } catch (t) {
@@ -86,11 +86,11 @@ async function f(e, t, n) {
         authorizations: a,
         scopes: y,
         parsedPermissions: G,
-        responseType: N,
-        redirectUri: f,
+        responseType: f,
+        redirectUri: N,
         codeChallenge: A,
         codeChallengeMethod: Z,
-        state: L,
+        state: v,
         guildId: x,
         channelId: P,
         prompt: b,
@@ -151,7 +151,7 @@ function Z(e, t) {
                     let n = s.application.id;
                     if (null == n)
                         throw new T.Z({ errorCode: C.lTL.INVALID_COMMAND }, 'No application.');
-                    let l = a.x.IDENTIFY, o = () => f({
+                    let l = a.x.IDENTIFY, o = () => N({
                             client_id: n,
                             scope: l,
                             response_type: 'token'
@@ -165,26 +165,26 @@ function Z(e, t) {
                             }
                             return !function (e, t, n, i) {
                                 var s;
-                                let a = null !== (s = c.K.get(N)) && void 0 !== s ? s : {};
+                                let a = null !== (s = c.K.get(f)) && void 0 !== s ? s : {};
                                 a[e] = {
                                     accessToken: t,
                                     scope: n,
                                     expires: Date.now() + i
-                                }, c.K.set(N, a);
+                                }, c.K.set(f, a);
                             }(n, a.access_token, a.scope, a.expires_in), A(s, a.access_token);
                         });
                     return null != (r = function (e, t) {
-                        let n = c.K.get(N);
+                        let n = c.K.get(f);
                         if (null != n && null != n[e]) {
                             let i = n[e];
                             if (!(i.scope !== t || i.expires <= Date.now()))
                                 return i.accessToken;
-                            delete n[e], c.K.set(N, n);
+                            delete n[e], c.K.set(f, n);
                         }
                     }(n, l)) ? A(s, r).catch(() => (!function (e) {
                         var t;
-                        let n = null !== (t = c.K.get(N)) && void 0 !== t ? t : {};
-                        delete n[e], c.K.set(N, n);
+                        let n = null !== (t = c.K.get(f)) && void 0 !== t ? t : {};
+                        delete n[e], c.K.set(f, n);
                     }(n), o())) : o();
                 }
                 if (null == r)
@@ -212,7 +212,7 @@ function Z(e, t) {
                     if (s.application.id !== i.id)
                         throw new T.Z({ errorCode: C.lTL.INVALID_CLIENTID }, 'Application does not match the connection\'s');
                     let r = a.scopes || a.scope;
-                    return delete a.scopes, f({
+                    return delete a.scopes, N({
                         ...a,
                         scope: r
                     }, e, t);

@@ -10,9 +10,9 @@ function p(e) {
             type: n,
             status: p,
             isFocused: T
-        } = e, S = s.useContext(u.AnalyticsContext), {analyticsLocations: C} = (0, o.ZP)(), N = e => {
+        } = e, S = s.useContext(u.AnalyticsContext), {analyticsLocations: C} = (0, o.ZP)(), f = e => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
-        }, f = e => {
+        }, N = e => {
             e.stopPropagation(), l.Z.addRelationship({
                 userId: t.id,
                 context: { location: 'Friends' }
@@ -41,14 +41,14 @@ function p(e) {
                         icon: r.CheckmarkLargeIcon,
                         actionType: _.Z.ActionTypes.ACCEPT,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                        onClick: f,
+                        onClick: N,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(_.Z, {
                         icon: r.CloseSmallIcon,
                         actionType: _.Z.ActionTypes.DENY,
                         tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: N,
+                        onClick: f,
                         shouldHighlight: e
                     })
                 ]
@@ -56,7 +56,7 @@ function p(e) {
                 icon: r.CloseSmallIcon,
                 actionType: _.Z.ActionTypes.DENY,
                 tooltip: m.Z.Messages.FRIEND_REQUEST_CANCEL,
-                onClick: N,
+                onClick: f,
                 shouldHighlight: e
             });
             return (0, i.jsxs)('div', {

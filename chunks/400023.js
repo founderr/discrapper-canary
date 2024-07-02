@@ -1,9 +1,9 @@
 n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(91192), o = n(442837), c = n(481060), d = n(904245), u = n(902840), h = n(607070), p = n(580747), m = n(135938), _ = n(160404), f = n(765104), E = n(695346), C = n(314897), g = n(323873), I = n(607744), x = n(375954), T = n(496675), N = n(306680), v = n(62817), S = n(594174), Z = n(68588), A = n(459273), M = n(255269), b = n(47481), R = n(977391), j = n(73274), L = n(419388), P = n(406534), O = n(981631), y = n(689938), D = n(431747);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(91192), o = n(442837), c = n(481060), d = n(904245), u = n(902840), h = n(607070), p = n(580747), m = n(135938), _ = n(160404), f = n(765104), E = n(695346), C = n(314897), g = n(323873), I = n(607744), x = n(375954), T = n(496675), N = n(306680), v = n(62817), S = n(594174), Z = n(68588), A = n(459273), M = n(255269), b = n(47481), R = n(977391), j = n(73274), L = n(419388), P = n(406534), O = n(981631), y = n(689938), D = n(431747);
 let k = a.memo(function (e) {
     var t, n;
     let {
-            className: l,
+            className: s,
             messageGroupSpacing: u,
             scrollerClassName: p,
             channel: m,
@@ -117,13 +117,13 @@ let k = a.memo(function (e) {
         children: [
             null != K && K,
             (0, i.jsxs)('div', {
-                className: s()(D.messagesWrapper, l, 'group-spacing-'.concat(u)),
+                className: l()(D.messagesWrapper, s, 'group-spacing-'.concat(u)),
                 children: [
                     null == K && W,
                     (0, i.jsxs)(c.PinToBottomScrollerAuto, {
                         ref: J,
                         customTheme: !0,
-                        className: s()(p, D.scroller),
+                        className: l()(p, D.scroller),
                         contentClassName: D.scrollerContent,
                         onResize: H.handleResize,
                         onScroll: H.handleScroll,
@@ -147,7 +147,7 @@ let k = a.memo(function (e) {
                                     }),
                                     F,
                                     (0, i.jsx)('div', {
-                                        className: s()({
+                                        className: l()({
                                             [D.scrollerSpacer]: !b,
                                             [D.empty]: 0 === f.length && !f.loadingMore,
                                             [D.emptyForum]: 1 === f.length && !f.loadingMore && m.isForumPost() && (null === (t = f.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
@@ -167,8 +167,8 @@ t.Z = a.memo(function (e) {
     let {
             channel: t,
             showingQuarantineBanner: n,
-            hideSummaries: l = !1,
-            forceCompact: s = !1,
+            hideSummaries: s = !1,
+            forceCompact: l = !1,
             forceCozy: r = !1,
             ...c
         } = e, {
@@ -228,10 +228,10 @@ t.Z = a.memo(function (e) {
             editingMessageId: B
         } = function (e) {
             var t, n;
-            let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]), l = (0, o.e7)([N.ZP], () => {
+            let i = (0, o.e7)([x.Z], () => x.Z.getMessages(e.id), [e.id]), s = (0, o.e7)([N.ZP], () => {
                     var t;
                     return null !== (t = N.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
-                }, [e.id]), {enabled: s} = m.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }), r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n, c = (0, u.ts)(e), d = (0, p.Z)('use_topic_dividers_in_chat'), h = (0, o.Wu)([f.Z], () => {
+                }, [e.id]), {enabled: l} = m.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }), r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n, c = (0, u.ts)(e), d = (0, p.Z)('use_topic_dividers_in_chat'), h = (0, o.Wu)([f.Z], () => {
                     var t;
                     return c && d && null !== (t = f.Z.summaries(e.id)) && void 0 !== t ? t : [];
                 }, [
@@ -244,22 +244,22 @@ t.Z = a.memo(function (e) {
                 ]), E = a.useMemo(() => (0, b.Z)({
                     channel: e,
                     messages: i,
-                    oldestUnreadMessageId: l,
-                    treatSpam: s && !r,
+                    oldestUnreadMessageId: s,
+                    treatSpam: l && !r,
                     summaries: h,
                     selectedSummary: _
                 }), [
                     i,
                     e,
-                    l,
                     s,
+                    l,
                     h,
                     _
                 ]);
             return {
                 messages: i,
                 channelStream: E,
-                oldestUnreadMessageId: l,
+                oldestUnreadMessageId: s,
                 editingMessageId: (0, o.e7)([g.Z], () => {
                     var t;
                     return null === (t = g.Z.getEditingMessage(e.id)) || void 0 === t ? void 0 : t.id;
@@ -273,7 +273,7 @@ t.Z = a.memo(function (e) {
             messageGroupSpacing: R,
             showNewMessagesBar: !0,
             channel: t,
-            messageDisplayCompact: !r && (s || L),
+            messageDisplayCompact: !r && (l || L),
             messages: D,
             channelStream: U,
             permissionVersion: _,
@@ -285,7 +285,7 @@ t.Z = a.memo(function (e) {
             fontSize: j,
             keyboardModeEnabled: y,
             showingQuarantineBanner: n,
-            hideSummaries: l
+            hideSummaries: s
         })
     });
 });

@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 }), n(47120), n(757143);
-var i = n(302454), a = n.n(i), l = n(969812), s = n(904245), r = n(367907), o = n(339085), c = n(222677), d = n(995774), u = n(695346), h = n(375954), p = n(981631);
+var i = n(302454), a = n.n(i), s = n(969812), l = n(904245), r = n(367907), o = n(339085), c = n(222677), d = n(995774), u = n(695346), h = n(375954), p = n(981631);
 let m = /\\([*?+/])/g, _ = {
         tts: { action: () => ({ tts: u.OW.getSetting() }) },
         me: { action: e => ({ content: '_'.concat(e, '_') }) },
@@ -14,7 +14,7 @@ let m = /\\([*?+/])/g, _ = {
             action(e, t) {
                 let {channel: n} = t;
                 if (null != n.guild_id)
-                    return l.Z.changeNickname(n.guild_id, n.id, p.ME, e), { content: '' };
+                    return s.Z.changeNickname(n.guild_id, n.id, p.ME, e), { content: '' };
             }
         },
         reaction: {
@@ -29,9 +29,9 @@ let m = /\\([*?+/])/g, _ = {
                 let a = h.Z.getMessages(i.id).last();
                 if (null == a || null == a.id)
                     return;
-                let l = o.Z.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
-                if (null != l)
-                    return (0, c.rU)(i.id, a.id, (0, d.g1)(l)), { content: '' };
+                let s = o.Z.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
+                if (null != s)
+                    return (0, c.rU)(i.id, a.id, (0, d.g1)(s)), { content: '' };
             }
         },
         searchReplace: {
@@ -44,13 +44,13 @@ let m = /\\([*?+/])/g, _ = {
                 } = t;
                 if (i)
                     return;
-                let l = h.Z.getLastEditableMessage(a.id);
-                if (null == l || null == l.id)
+                let s = h.Z.getLastEditableMessage(a.id);
+                if (null == s || null == s.id)
                     return { content: '' };
                 let [, r, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
                 r = r.replace(m, (e, t) => t), o = o.replace(m, (e, t) => t);
-                let c = l.content.replace(r, o);
-                return (null == c || '' === c) && 0 === l.attachments.length ? s.Z.deleteMessage(a.id, l.id) : e !== l.content && s.Z.editMessage(a.id, l.id, { content: c }), { content: '' };
+                let c = s.content.replace(r, o);
+                return (null == c || '' === c) && 0 === s.attachments.length ? l.Z.deleteMessage(a.id, s.id) : e !== s.content && l.Z.editMessage(a.id, s.id, { content: c }), { content: '' };
             }
         },
         spoiler: { action: e => ({ content: (0, p.XmY)(e).trim() }) }

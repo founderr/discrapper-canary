@@ -15,13 +15,13 @@ function d(e) {
         }, [
             r,
             h
-        ]), g = p ? s.CircleCheckIcon : s.CopyIcon;
+        ]), m = p ? s.CircleCheckIcon : s.CopyIcon;
     return (0, i.jsx)(s.Clickable, {
         className: a()(u.container, n),
         onClick: f,
         children: (0, i.jsx)(s.Tooltip, {
             text: p ? c.Z.Messages.COPIED : c.Z.Messages.COPY,
-            children: e => (0, i.jsx)(g, {
+            children: e => (0, i.jsx)(m, {
                 ...d,
                 ...e,
                 size: 'xxs',

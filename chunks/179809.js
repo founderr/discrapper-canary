@@ -3,8 +3,8 @@ n.d(t, {
         return L;
     }
 }), n(47120);
-var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(920906), c = n(91192), u = n(477690), d = n(153867), h = n(771845), p = n(880080), _ = n(624138), f = n(727258), g = n(199540), m = n(40153), C = n(252686), I = n(682662), E = n(662146), N = n(689938), x = n(524343), S = n(690310);
-let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION), v = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE), T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(225857), o = n(920906), c = n(91192), u = n(477690), d = n(153867), h = n(771845), p = n(880080), _ = n(624138), f = n(727258), m = n(199540), g = n(40153), C = n(252686), I = n(682662), E = n(662146), N = n(689938), x = n(524343), S = n(690310);
+let v = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION), Z = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE), T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function L(e) {
     let {
             folderNode: t,
@@ -17,8 +17,8 @@ function L(e) {
             defaultFolderName: b,
             useCircleMask: M = !1,
             draggable: R = !1,
-            sorting: y = !1,
-            onDragStart: O,
+            sorting: O = !1,
+            onDragStart: y,
             onDragEnd: P,
             onExpandCollapse: j,
             onContextMenu: D,
@@ -30,11 +30,11 @@ function L(e) {
             children: B
         } = t, [V, H] = l.useState(!1), [F, W] = l.useState(!1), Y = V || F;
     l.useEffect(() => {
-        y && H(!1);
-    }, [y]);
+        O && H(!1);
+    }, [O]);
     let [{dragging: z}, K] = (0, s.c)({
             type: f.eD.FOLDER,
-            item: () => (null == O || O(), {
+            item: () => (null == y || y(), {
                 type: f.eD.FOLDER,
                 nodeId: t.id
             }),
@@ -49,11 +49,11 @@ function L(e) {
         }, [
             j,
             u
-        ]), J = null != k && '' !== k ? k : null != b && '' !== b ? b : N.Z.Messages.SERVER_FOLDER_PLACEHOLDER, X = (0, c.Ie)(''.concat(w)), $ = 'folder-items-'.concat(w), ee = B.length * (v + T), et = (0, o.useTransition)(!z && u, {
+        ]), J = null != k && '' !== k ? k : null != b && '' !== b ? b : N.Z.Messages.SERVER_FOLDER_PLACEHOLDER, X = (0, c.Ie)(''.concat(w)), $ = 'folder-items-'.concat(w), ee = B.length * (Z + T), et = (0, o.useTransition)(!z && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: Z }
+            config: { duration: v }
         }), en = l.useCallback(e => null == n ? void 0 : n(w, e), [
             n,
             w
@@ -68,18 +68,18 @@ function L(e) {
                 }),
                 (0, i.jsx)(E.Z, {
                     text: J,
-                    disabled: y,
+                    disabled: O,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: R ? K : void 0,
                         className: a()({ [S.wobble]: !z && F && !u }),
                         'data-dnd-name': J,
-                        children: z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(g.Z, {
+                        children: z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(m.Z, {
                             folderNode: t,
                             expanded: u,
                             forceCircular: M,
-                            sorting: y,
+                            sorting: O,
                             mediaState: _,
                             mentionCount: L,
                             tooltipName: J,
@@ -93,7 +93,7 @@ function L(e) {
                         })
                     })
                 }),
-                R ? (0, i.jsx)(m.ZP, {
+                R ? (0, i.jsx)(g.ZP, {
                     name: J,
                     targetNode: t,
                     onDragOverChanged: q
@@ -121,7 +121,7 @@ function L(e) {
                     children: B.map(U)
                 }, l);
             }),
-            R && u ? (0, i.jsx)(m.Zu, {
+            R && u ? (0, i.jsx)(g.Zu, {
                 name: J,
                 targetNode: t
             }) : null

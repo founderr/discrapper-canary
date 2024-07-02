@@ -3,8 +3,8 @@ n.d(t, {
         return y;
     }
 }), n(653041);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(748780), c = n(442837), d = n(215569), u = n(481060), _ = n(37234), E = n(134616), h = n(714338), I = n(663993), m = n(210887), g = n(819640), p = n(725568), T = n(585483), S = n(792125), C = n(981631), N = n(821636);
-function f(e, t, n) {
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(748780), c = n(442837), d = n(215569), u = n(481060), _ = n(37234), E = n(134616), h = n(714338), I = n(663993), m = n(210887), g = n(819640), p = n(725568), T = n(585483), S = n(792125), C = n(981631), f = n(821636);
+function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -49,7 +49,7 @@ let A = (0, I.Un)({
         ]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
-    }), L = (0, I.Un)({
+    }), v = (0, I.Un)({
         createPromise: () => Promise.all([
             n.e('96427'),
             n.e('77298'),
@@ -66,7 +66,7 @@ let A = (0, I.Un)({
         ]).then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
-    }), v = (0, I.Un)({
+    }), L = (0, I.Un)({
         createPromise: () => Promise.all([
             n.e('96427'),
             n.e('33053'),
@@ -83,8 +83,8 @@ let A = (0, I.Un)({
     }), O = {
         [C.S9g.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, s.jsx)(Z, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(v, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(L, {})
+        [C.S9g.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, s.jsx)(v, {})
     }, R = 'SHOWN', x = 'HIDDEN', P = {
         friction: 10,
         tension: 100
@@ -178,9 +178,9 @@ class M extends (i = a.PureComponent) {
             } = this.props, r = e || t === x ? this.getAnimatedStyle() : null, c = (0, s.jsx)(o.Z.div, {
                 ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
                 'aria-hidden': t === x,
-                className: l()(N.layer, {
-                    [N.baseLayer]: i,
-                    [N.animating]: e,
+                className: l()(f.layer, {
+                    [f.baseLayer]: i,
+                    [f.animating]: e,
                     'stop-animations': t === x
                 }),
                 style: r,
@@ -206,7 +206,7 @@ class M extends (i = a.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), f(this, 'containerRef', a.createRef());
+        super(e), N(this, 'containerRef', a.createRef());
         let t = 1, n = 1;
         e.mode === x && (t = 0.93, n = 0), this.state = {
             animating: !1,
@@ -216,7 +216,7 @@ class M extends (i = a.PureComponent) {
         };
     }
 }
-f(M, 'defaultProps', { baseLayer: !1 }), f(M, 'contextType', u.AccessibilityPreferencesContext);
+N(M, 'defaultProps', { baseLayer: !1 }), N(M, 'contextType', u.AccessibilityPreferencesContext);
 class D extends a.PureComponent {
     componentDidMount() {
         T.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
@@ -247,7 +247,7 @@ class D extends a.PureComponent {
         }, 'layer-'.concat(t));
     }
     renderArtisanalHack() {
-        return (0, s.jsx)('div', { className: l()(N.bg, (0, S.Q)(this.props.sidebarTheme)) });
+        return (0, s.jsx)('div', { className: l()(f.bg, (0, S.Q)(this.props.sidebarTheme)) });
     }
     render() {
         return (0, s.jsxs)(s.Fragment, {
@@ -255,7 +255,7 @@ class D extends a.PureComponent {
                 this.renderArtisanalHack(),
                 (0, s.jsx)(d.W, {
                     component: 'div',
-                    className: l()(N.layers, this.props.className),
+                    className: l()(f.layers, this.props.className),
                     children: this.renderLayers()
                 })
             ]

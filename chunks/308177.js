@@ -1,5 +1,5 @@
 n(47120);
-var i, a, l = n(735250), s = n(470079), r = n(442837), o = n(112724), c = n(358221), d = n(565799), u = n(431328), h = n(501655), p = n(27931), m = n(260979), _ = n(766015), f = n(401139), E = n(12779), C = n(450369), g = n(689938), I = n(821320);
+var i, a, s = n(735250), l = n(470079), r = n(442837), o = n(112724), c = n(358221), d = n(565799), u = n(431328), h = n(501655), p = n(27931), m = n(260979), _ = n(766015), f = n(401139), E = n(12779), C = n(450369), g = n(689938), I = n(821320);
 let x = 424, T = 624, N = 824;
 (a = i || (i = {}))[a.SELECTED = 0] = 'SELECTED', a[a.SPEAKER = 1] = 'SPEAKER', a[a.AUDIENCE = 2] = 'AUDIENCE';
 let v = (e, t) => {
@@ -37,13 +37,13 @@ t.Z = (0, o.Z)(e => {
         ], {
             speakerTileWidth: H,
             speakerTileHeight: G
-        } = v(a, y), V = T ? a - 32 : Math.min(a - 64, 3 * H + 8), F = e => e === U.length - 1 || 0 === b && 1 === e, [W, z] = s.useState(!1), [Y, K] = s.useState(!1);
-    return (0, l.jsx)(_.Z, {
+        } = v(a, y), V = T ? a - 32 : Math.min(a - 64, 3 * H + 8), F = e => e === U.length - 1 || 0 === b && 1 === e, [W, z] = l.useState(!1), [Y, K] = l.useState(!1);
+    return (0, s.jsx)(_.Z, {
         sections: B,
         renderSection: e => {
             let {section: t} = e;
             if (1 === t)
-                return 0 === M ? null : (0, l.jsx)(E.Z, {
+                return 0 === M ? null : (0, s.jsx)(E.Z, {
                     participantCount: M,
                     label: g.Z.Messages.SPEAKER_LABEL,
                     className: I.header,
@@ -54,7 +54,7 @@ t.Z = (0, o.Z)(e => {
                     isStreamLive: P
                 }, 'speaker-header-'.concat(t));
             if (2 === t)
-                return 0 === b ? null : (0, l.jsx)(E.Z, {
+                return 0 === b ? null : (0, s.jsx)(E.Z, {
                     participantCount: b,
                     label: g.Z.Messages.AUDIENCE_LABEL,
                     className: I.header,
@@ -76,9 +76,9 @@ t.Z = (0, o.Z)(e => {
             case 0:
                 if (0 === a.length || null == a[0])
                     return null;
-                return (0, l.jsx)('div', {
+                return (0, s.jsx)('div', {
                     className: I.focusedRow,
-                    children: (0, l.jsx)(C.Z, {
+                    children: (0, s.jsx)(C.Z, {
                         channel: i,
                         participant: a[0],
                         width: V
@@ -87,8 +87,8 @@ t.Z = (0, o.Z)(e => {
             case 1:
                 if (W)
                     return null;
-                return (0, l.jsx)(s.Fragment, {
-                    children: (0, l.jsx)(f.Z, {
+                return (0, s.jsx)(l.Fragment, {
+                    children: (0, s.jsx)(f.Z, {
                         tileWidth: H,
                         channel: i,
                         participants: a,
@@ -98,7 +98,7 @@ t.Z = (0, o.Z)(e => {
             case 2:
                 if (Y)
                     return null;
-                return (0, l.jsx)(m.Z, {
+                return (0, s.jsx)(m.Z, {
                     channel: i,
                     participants: a,
                     maxTiles: O
@@ -110,7 +110,7 @@ t.Z = (0, o.Z)(e => {
         rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? W ? 0 : G : Y ? 0 : 98,
         renderFooter: e => {
             let {section: t} = e;
-            return F(t) ? (0, l.jsx)('div', { className: I.spacer }, 'bottom-spacer') : null;
+            return F(t) ? (0, s.jsx)('div', { className: I.spacer }, 'bottom-spacer') : null;
         },
         footerHeight: e => 1 === e ? 8 : 0 === e ? 12 : F(e) ? 88 : 0,
         className: I.scroller,

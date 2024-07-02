@@ -1,5 +1,5 @@
 var i = n(735250), l = n(470079), r = n(442837), a = n(481060), s = n(554747), o = n(434479), c = n(593364), u = n(703656), d = n(944486), h = n(147754), p = n(688438), _ = n(981631), f = n(689938);
-let g = [
+let m = [
     {
         key: 'EVENTS',
         renderIcon: e => (0, i.jsx)(a.CalendarIcon, {
@@ -83,9 +83,9 @@ t.Z = e => {
     let {showHubEventsList: u} = h.Z.useExperiment({
             guildId: t.id,
             location: '543af8_2'
-        }, { autoTrackExposure: !1 }), _ = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), f = l.useMemo(() => ({ numEvents: a.length }), [a.length]), m = (0, p.t)(n);
+        }, { autoTrackExposure: !1 }), _ = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), f = l.useMemo(() => ({ numEvents: a.length }), [a.length]), g = (0, p.t)(n);
     return (0, i.jsx)(i.Fragment, {
-        children: g.map(e => {
+        children: m.map(e => {
             let {
                 key: l,
                 getName: r,
@@ -101,7 +101,7 @@ t.Z = e => {
                 text: r(f),
                 selected: _ && 'JOIN_SERVERS' === l,
                 onClick: null != n ? () => a(t, n) : void 0,
-                trailing: 'JOIN_SERVERS' === l && m > 0 ? (0, c.N)(m) : null
+                trailing: 'JOIN_SERVERS' === l && g > 0 ? (0, c.N)(g) : null
             }, d);
         })
     });

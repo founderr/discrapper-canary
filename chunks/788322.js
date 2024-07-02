@@ -1,16 +1,16 @@
 n.d(t, {
     Y: function () {
-        return L;
+        return v;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(239091), c = n(906732), d = n(134432), u = n(451603), _ = n(885714), E = n(940627), h = n(806519), I = n(768581), m = n(900849), g = n(556017), p = n(879484), T = n(26580), S = n(206887), C = n(981631), N = n(689938), f = n(465423), A = n(129512), Z = n(330065);
-let L = () => (0, i.jsx)('div', { className: f.placeholder });
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(239091), c = n(906732), d = n(134432), u = n(451603), _ = n(885714), E = n(940627), h = n(806519), I = n(768581), m = n(900849), g = n(556017), p = n(879484), T = n(26580), S = n(206887), C = n(981631), f = n(689938), N = n(465423), A = n(129512), Z = n(330065);
+let v = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = e => {
     var t;
     let {
             guild: a,
-            theme: L,
-            onView: v,
+            theme: v,
+            onView: L,
             onTagClick: O
         } = e, {
             id: R,
@@ -32,7 +32,7 @@ t.Z = e => {
             case C.BRd.LIGHT:
                 return Z;
             }
-        }(L), F = null !== (t = I.ZP.getGuildIconURL({
+        }(v), F = null !== (t = I.ZP.getGuildIconURL({
             id: R,
             icon: P,
             size: 32
@@ -52,7 +52,7 @@ t.Z = e => {
                 }
                 k(!0);
                 try {
-                    null != v && await v(a.id);
+                    null != L && await L(a.id);
                 } finally {
                     k(!1);
                 }
@@ -63,16 +63,16 @@ t.Z = e => {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: f.card,
+                className: N.card,
                 children: [
                     w ? (0, i.jsx)(l.Spinner, {
                         type: l.Spinner.Type.PULSING_ELLIPSIS,
-                        className: f.spinner
+                        className: N.spinner
                     }) : null,
                     (0, i.jsxs)(l.Clickable, {
-                        className: r()(f.container, {
-                            [f.hover]: U,
-                            [f.submitting]: w
+                        className: r()(N.container, {
+                            [N.hover]: U,
+                            [N.submitting]: w
                         }),
                         onClick: Y,
                         onContextMenu: e => {
@@ -88,19 +88,19 @@ t.Z = e => {
                         onMouseLeave: () => G(!1),
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(f.splashContainer, { [f.splashContainerWithTags]: W }),
+                                className: r()(N.splashContainer, { [N.splashContainerWithTags]: W }),
                                 children: (0, i.jsx)('img', {
                                     src: V,
                                     alt: '',
-                                    className: f.splashImage,
+                                    className: N.splashImage,
                                     width: 240
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: r()(f.content, { [f.contentWithTags]: W }),
+                                className: r()(N.content, { [N.contentWithTags]: W }),
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: f.header,
+                                        className: N.header,
                                         children: [
                                             (0, i.jsx)(h.ZP, {
                                                 mask: h.ZP.Masks.SQUIRCLE,
@@ -109,22 +109,22 @@ t.Z = e => {
                                                 children: (0, i.jsx)('img', {
                                                     src: F,
                                                     alt: '',
-                                                    className: f.avatar
+                                                    className: N.avatar
                                                 })
                                             }),
                                             (0, i.jsxs)('div', {
-                                                className: f.headerName,
+                                                className: N.headerName,
                                                 children: [
                                                     (0, i.jsx)('div', {
                                                         children: (0, i.jsx)(E.Z, {
                                                             guild: a,
-                                                            className: f.guildBadge,
+                                                            className: N.guildBadge,
                                                             size: 16
                                                         })
                                                     }),
                                                     (0, i.jsx)(l.Heading, {
                                                         variant: 'heading-md/semibold',
-                                                        className: f.headerTitle,
+                                                        className: N.headerTitle,
                                                         children: b
                                                     })
                                                 ]
@@ -132,7 +132,7 @@ t.Z = e => {
                                         ]
                                     }),
                                     (0, i.jsx)(l.Text, {
-                                        className: f.description,
+                                        className: N.description,
                                         variant: 'text-sm/normal',
                                         children: M
                                     }),
@@ -144,25 +144,25 @@ t.Z = e => {
                                         section: m.P1.SEARCH
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: f.memberInfo,
+                                        className: N.memberInfo,
                                         children: [
                                             null != D && (0, i.jsx)('div', {
-                                                className: f.memberCount,
+                                                className: N.memberCount,
                                                 children: (0, i.jsx)(l.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
+                                                    children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
                                                 })
                                             }),
                                             null != y && (0, i.jsxs)(i.Fragment, {
                                                 children: [
-                                                    (0, i.jsx)('div', { className: f.dotSeparator }),
+                                                    (0, i.jsx)('div', { className: N.dotSeparator }),
                                                     (0, i.jsx)('div', {
-                                                        className: f.memberCount,
+                                                        className: N.memberCount,
                                                         children: (0, i.jsx)(l.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
-                                                            children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
+                                                            children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
                                                         })
                                                     })
                                                 ]
@@ -172,14 +172,14 @@ t.Z = e => {
                                 ]
                             }),
                             z ? (0, i.jsx)('div', {
-                                className: f.actionButtons,
+                                className: N.actionButtons,
                                 children: (0, i.jsx)(S.Z, { guild: a })
                             }) : null
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)('hr', { className: f.separator })
+            (0, i.jsx)('hr', { className: N.separator })
         ]
     });
 };

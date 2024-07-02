@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 });
-var i = n(735250), a = n(470079), l = n(286379), s = n(481060), r = n(797614), o = n(473092), c = n(689938), d = n(995286), u = n(560580);
+var i = n(735250), a = n(470079), s = n(286379), l = n(481060), r = n(797614), o = n(473092), c = n(689938), d = n(995286), u = n(560580);
 function h(e) {
     let {
         channelId: t,
@@ -16,7 +16,7 @@ function h(e) {
         buttons: E
     } = e;
     a.useEffect(() => {
-        r.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
+        r.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
     }, []);
     let C = a.useCallback(() => {
         null == f || f(), (0, o.qc)({
@@ -46,12 +46,12 @@ function h(e) {
                     }),
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(s.Heading, {
+                            (0, i.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: m
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: _
@@ -62,8 +62,8 @@ function h(e) {
             }),
             (0, i.jsx)('div', {
                 className: d.buttons,
-                children: null == E ? void 0 : E.map((e, t) => (0, i.jsx)(s.Button, {
-                    size: s.Button.Sizes.SMALL,
+                children: null == E ? void 0 : E.map((e, t) => (0, i.jsx)(l.Button, {
+                    size: l.Button.Sizes.SMALL,
                     color: e.color,
                     'aria-label': e.text,
                     onClick: e.onclick,
@@ -71,12 +71,12 @@ function h(e) {
                     children: e.text
                 }, t))
             }),
-            (0, i.jsx)(s.Clickable, {
+            (0, i.jsx)(l.Clickable, {
                 className: d.closeButton,
                 onClick: C,
                 role: 'button',
                 'aria-label': c.Z.Messages.DISMISS,
-                children: (0, i.jsx)(s.CloseSmallIcon, {
+                children: (0, i.jsx)(l.CloseSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: d.closeButton

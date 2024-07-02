@@ -6,7 +6,7 @@ n.d(t, {
         return d;
     }
 });
-var i = n(818083), a = n(594174), l = n(74538), s = n(474936);
+var i = n(818083), a = n(594174), s = n(74538), l = n(474936);
 let r = (0, i.B)({
     kind: 'user',
     id: '2024-06_hd_streaming_viewer',
@@ -56,7 +56,7 @@ let r = (0, i.B)({
     ]
 });
 function o(e, t) {
-    return (0, l.I5)(e, s.p9.TIER_2) || t;
+    return (0, s.I5)(e, l.p9.TIER_2) || t;
 }
 function c(e) {
     let t = a.default.getCurrentUser();
