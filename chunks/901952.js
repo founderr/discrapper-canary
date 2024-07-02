@@ -100,23 +100,19 @@ function L(e) {
                         ...n
                     } = e;
                     return (0, r.jsx)(s.Button, {
-                        fullWidth: !0,
-                        size: s.Button.Sizes.SMALL,
+                        size: s.Button.Sizes.NONE,
                         onClick: e => {
                             m({ action: 'PRESS_CALL' }), t(e);
                         },
                         look: s.Button.Looks.BLANK,
-                        className: C.engagementExpButton,
+                        className: o()(C.iconButton, C.engagementExpButton),
                         ...n,
-                        children: (0, r.jsxs)('div', {
+                        children: (0, r.jsx)('div', {
                             className: C.engagementExpButtonInner,
-                            children: [
-                                (0, r.jsx)(s.PhoneCallIcon, {
-                                    size: 'xs',
-                                    color: 'currentColor'
-                                }),
-                                O.Z.Messages.CALL
-                            ]
+                            children: (0, r.jsx)(s.PhoneCallIcon, {
+                                size: 'xs',
+                                color: 'currentColor'
+                            })
                         })
                     });
                 }
@@ -140,7 +136,6 @@ function L(e) {
         }) : L ? (0, r.jsxs)('div', {
             className: C.ctaRow,
             children: [
-                H,
                 (0, r.jsx)(A.Z, {
                     fullWidth: !0,
                     variant: 'text',
@@ -149,7 +144,8 @@ function L(e) {
                     icon: s.ChatIcon,
                     text: O.Z.Messages.USER_PROFILE_MESSAGE,
                     tooltipContainerClassName: C.ctaTooltipContainer
-                })
+                }),
+                H
             ]
         }) : (0, r.jsx)(A.Z, {
             fullWidth: !0,
