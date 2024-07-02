@@ -1,1 +1,4 @@
-e.exports = { effect: 'effect_efd76b' };
+e.exports = {
+    modal: 'modal_aee8c6',
+    image: 'image_aee8c6'
+};

@@ -5,7 +5,7 @@ s.d(n, {
 });
 var l = s(735250);
 s(470079);
-var i = s(481060), t = s(700582), r = s(51144), a = s(689938), c = s(315611);
+var i = s(481060), t = s(700582), r = s(51144), a = s(689938), c = s(6805);
 let o = e => {
     let {giftRecipient: n} = e;
     return null == n ? null : (0, l.jsxs)('div', {

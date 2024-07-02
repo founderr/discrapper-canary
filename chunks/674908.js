@@ -3,7 +3,7 @@ a.d(t, {
         return y;
     }
 }), a(47120);
-var n = a(735250), l = a(470079), i = a(120356), r = a.n(i), o = a(952265), s = a(481060), u = a(239091), d = a(579806), c = a(889161), m = a(592125), p = a(430824), v = a(496675), f = a(594174), b = a(709054), h = a(39604), x = a(680056), g = a(678651), C = a(445229), _ = a(20437), j = a(356659), S = a(710111), I = a(689938), E = a(240356), T = a(413135).Buffer;
+var n = a(735250), l = a(470079), i = a(120356), r = a.n(i), o = a(952265), s = a(481060), u = a(239091), d = a(579806), c = a(889161), m = a(592125), p = a(430824), v = a(496675), f = a(594174), b = a(709054), h = a(39604), x = a(680056), g = a(678651), C = a(445229), _ = a(20437), j = a(356659), S = a(710111), I = a(689938), E = a(162439), T = a(413135).Buffer;
 function y(e) {
     let {
             clip: t,
@@ -35,7 +35,7 @@ function y(e) {
             (0, s.openModalLazy)(async () => {
                 let {default: i} = await Promise.all([
                         a.e('56035'),
-                        a.e('4306')
+                        a.e('97803')
                     ]).then(a.bind(a, 758961)), r = (null == l ? void 0 : l.guild_id) != null ? p.Z.getGuild(l.guild_id) : null, o = null != r && (0, c.Gw)(r, v.Z, f.default).canCreateExpressions, s = null == y || '' === y ? (0, j.yl)(b.default.extractTimestamp(t.id)) : y, u = s.slice(0, S.Ek);
                 return t => (0, n.jsx)(i, {
                     ...t,

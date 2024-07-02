@@ -1,1 +1,4 @@
-e.exports = n.p + 'a7bf1157100b9d5fe838.svg';
+e.exports = {
+    info: 'info_e86508',
+    infoSpacing: 'infoSpacing_e86508'
+};

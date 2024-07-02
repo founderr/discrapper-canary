@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(739566), c = n(430824), d = n(467679), u = n(778947), _ = n(702346), E = n(787374), m = n(674563), I = n(689938), T = n(923255);
+var a = n(120356), s = n.n(a), l = n(442837), r = n(481060), o = n(739566), c = n(430824), d = n(467679), u = n(778947), _ = n(702346), E = n(787374), m = n(674563), I = n(689938), T = n(24303);
 function h(e) {
     var t;
     let {
@@ -13,7 +13,7 @@ function h(e) {
             compact: a,
             usernameHook: h,
             channel: N
-        } = e, p = (0, l.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), f = (0, o.ZP)(n), C = h(f), {
+        } = e, f = (0, l.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), p = (0, o.ZP)(n), C = h(p), {
             avatarSrc: g,
             eventHandlers: {
                 onMouseEnter: S,
@@ -57,9 +57,9 @@ function h(e) {
                     (0, i.jsx)('div', {
                         className: s()(T.__invalid_messageContent, { [T.compact]: a }),
                         children: I.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-                            username: f.nick,
+                            username: p.nick,
                             usernameHook: C,
-                            guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ''
+                            guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

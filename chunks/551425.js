@@ -1,6 +1,6 @@
 var i = s(735250);
 s(470079);
-var n = s(979554), a = s(442837), l = s(481060), r = s(1585), o = s(125988), d = s(876917), u = s(594174), c = s(597688), h = s(5975);
+var n = s(979554), a = s(442837), l = s(481060), r = s(1585), o = s(125988), d = s(876917), u = s(594174), c = s(597688), h = s(998812);
 let p = l.AvatarSizes.SIZE_152, f = (0, r.y9)(p), m = e => {
         let {item: t} = e, s = (0, a.e7)([u.default], () => u.default.getCurrentUser()), {
                 avatarDecorationSrc: n,

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(739566), o = n(467679), c = n(778947), d = n(702346), u = n(787374), _ = n(674563), E = n(689938), m = n(923255);
+var a = n(120356), s = n.n(a), l = n(481060), r = n(739566), o = n(467679), c = n(778947), d = n(702346), u = n(787374), _ = n(674563), E = n(689938), m = n(24303);
 function I(e) {
     let {
             message: t,
@@ -15,12 +15,12 @@ function I(e) {
             avatarSrc: h,
             eventHandlers: {
                 onMouseEnter: N,
-                onMouseLeave: p
+                onMouseLeave: f
             }
         } = (0, u.m)(!0);
     return (0, i.jsx)('div', {
         onMouseEnter: N,
-        onMouseLeave: p,
+        onMouseLeave: f,
         children: (0, i.jsx)(d.Z, {
             className: s()(m.mainContainer, { [m.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(u.S, { src: h }),

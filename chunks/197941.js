@@ -32,7 +32,7 @@ t.Z = {
                 null != t && null != r && r.pid !== t && (0, h.isWindows)() ? (0, l.WH)(_.guild_id, _.id, { pid: t }) : null != s ? (0, l.L6)(!1) : null != t && (0, h.isWindows)() ? (0, l.WH)(_.guild_id, _.id, { pid: t }) : null != d ? (0, l.WH)(_.guild_id, _.id, { pid: d.pid }) : (0, a.openModalLazy)(async () => {
                     let {default: e} = await Promise.all([
                         n.e('79477'),
-                        n.e('1310')
+                        n.e('90060')
                     ]).then(n.bind(n, 60594));
                     return t => (0, i.jsx)(e, {
                         ...t,

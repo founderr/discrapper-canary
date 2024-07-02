@@ -1,4 +1,4 @@
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(481060), _ = s(594174), E = s(285952), u = s(418632), T = s(689938), I = s(66279);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(512722), l = s.n(o), c = s(442837), d = s(481060), _ = s(594174), E = s(285952), u = s(418632), T = s(689938), I = s(619735);
 class S extends a.Component {
     renderNotice() {
         let {
@@ -51,7 +51,7 @@ class S extends a.Component {
         (0, d.openModalLazy)(async () => {
             let {default: e} = await Promise.all([
                 s.e('9343'),
-                s.e('40903')
+                s.e('22303')
             ]).then(s.bind(s, 642298));
             return t => (0, n.jsx)(e, { ...t });
         });

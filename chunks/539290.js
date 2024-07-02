@@ -8,7 +8,7 @@ t.d(n, {
 });
 var s = t(735250);
 t(470079);
-var o = t(120356), r = t.n(o), a = t(780384), l = t(481060), i = t(410030), c = t(696936), u = t(903773), d = t(392538);
+var o = t(120356), r = t.n(o), a = t(780384), l = t(481060), i = t(410030), c = t(696936), u = t(903773), d = t(91597);
 let E = {
     RIGHT: d.horizontalStatusWarningBlock,
     BOTTOM: d.verticalStatusWarningBlock

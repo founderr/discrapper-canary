@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(689938), l = n(382862);
+var a = n(481060), s = n(689938), l = n(3172);
 function r(e) {
     let {message: t} = e;
     return (0, i.jsxs)(a.Clickable, {

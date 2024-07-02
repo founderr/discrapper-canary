@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(497505), a = n(772257), r = n(59608);
+var s = n(497505), a = n(772257), r = n(456727);
 function l(e) {
     let {quests: t} = e;
     return (0, i.jsx)('div', {

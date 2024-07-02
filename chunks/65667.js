@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(739566), o = n(467679), c = n(778947), d = n(702346), u = n(787374), _ = n(981631), E = n(674563), m = n(689938), I = n(923255);
+var a = n(120356), s = n.n(a), l = n(481060), r = n(739566), o = n(467679), c = n(778947), d = n(702346), u = n(787374), _ = n(981631), E = n(674563), m = n(689938), I = n(24303);
 function T(e) {
     let {
             message: t,
@@ -14,8 +14,8 @@ function T(e) {
         } = e, T = (0, r.ZP)(t), h = a(T), {
             avatarSrc: N,
             eventHandlers: {
-                onMouseEnter: p,
-                onMouseLeave: f
+                onMouseEnter: f,
+                onMouseLeave: p
             }
         } = (0, u.m)(!0), C = '' !== t.content ? new Date(t.content).toLocaleString(m.Z.getLocale(), {
             hour: 'numeric',
@@ -25,8 +25,8 @@ function T(e) {
             year: 'numeric'
         }) : '';
     return (0, i.jsx)('div', {
-        onMouseEnter: p,
-        onMouseLeave: f,
+        onMouseEnter: f,
+        onMouseLeave: p,
         children: (0, i.jsx)(d.Z, {
             className: s()(I.mainContainer, { [I.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(u.S, { src: N }),

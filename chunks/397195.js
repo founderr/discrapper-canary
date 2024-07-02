@@ -1,10 +1,10 @@
-e.exports = {
-    qrLogin: 'qrLogin_c6cd4b',
-    qrLoginInner: 'qrLoginInner_c6cd4b',
-    qrCode: 'qrCode_c6cd4b',
-    qrCodeContainer: 'qrCodeContainer_c6cd4b',
-    qrCodeOverlay: 'qrCodeOverlay_c6cd4b',
-    qrAvatar: 'qrAvatar_c6cd4b',
-    startOverButton: 'startOverButton_c6cd4b',
-    verticalSeparator: 'verticalSeparator_c6cd4b'
-};
+t.d(n, {
+    Z: function () {
+        return u;
+    }
+});
+var l = t(470079), s = t(106351), a = t(399606), i = t(447003), r = t(592125), o = t(984933), d = t(823379);
+function u(e) {
+    let n = (0, a.Wu)([o.ZP], () => o.ZP.getVocalChannelIds(e)), t = (0, a.Wu)([r.Z], () => n.map(e => r.Z.getChannel(e)).filter(d.lm), [n]);
+    return l.useMemo(() => t.filter(e => !(0, i.Z)(e) && e.type === s.d.GUILD_VOICE), [t]);
+}

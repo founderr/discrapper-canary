@@ -5,7 +5,7 @@ n.d(t, {
 }), n(757143);
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(430824), r = n(914010), o = n(689938), c = n(66175);
+var a = n(442837), l = n(481060), s = n(430824), r = n(914010), o = n(689938), c = n(591574);
 let d = () => (0, i.jsx)(i.Fragment, {
         children: o.Z.Messages.TIP_INSTANT_INVITE_BODY3.format({
             shareIcon: o.Z.Messages.INSTANT_INVITE,

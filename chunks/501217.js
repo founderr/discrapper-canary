@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), l = n(739566), r = n(592125), o = n(702346), c = n(689938), d = n(54441);
+var a = n(442837), s = n(481060), l = n(739566), r = n(592125), o = n(702346), c = n(689938), d = n(767957);
 function u(e) {
     var t;
     let {
@@ -18,7 +18,7 @@ function u(e) {
         } = e, T = (0, l.ZP)(n), h = _(T), N = (0, a.e7)([r.Z], () => {
             var e;
             return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
-        }), p = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+        }), f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
             actorName: T.nick,
             actorHook: h,
             threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
@@ -36,6 +36,6 @@ function u(e) {
         }),
         timestamp: n.timestamp,
         compact: u,
-        children: p
+        children: f
     });
 }

@@ -31,7 +31,7 @@ function E(e, t) {
     (0, i.ZD)(async () => {
         let {default: t} = await Promise.all([
             n.e('68241'),
-            n.e('39185')
+            n.e('2055')
         ]).then(n.bind(n, 581355));
         return n => (0, r.jsx)(t, {
             ...n,

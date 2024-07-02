@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(67788);
+var a = n(120356), l = n.n(a), s = n(726181);
 function r(e) {
     let {
         bannerIcon: t,

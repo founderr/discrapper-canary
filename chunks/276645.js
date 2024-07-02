@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060), a = n(970731), r = n(689938), l = n(682894);
+var s = n(481060), a = n(970731), r = n(689938), l = n(758);
 function o(e) {
     let {
         guildId: t,
@@ -30,7 +30,7 @@ function o(e) {
             (0, s.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     n.e('5863'),
-                    n.e('32328')
+                    n.e('12876')
                 ]).then(n.bind(n, 751212));
                 return n => (0, i.jsx)(e, {
                     ...n,

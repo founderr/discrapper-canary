@@ -3,8 +3,8 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), l = n(100527), r = n(906732), o = n(739566), c = n(942951), d = n(703656), u = n(702346), _ = n(35125), E = n(626751), m = n(891614), I = n(981631), T = n(176505), h = n(689938), N = n(918624);
-function p(e) {
+var i = n(735250), a = n(470079), s = n(481060), l = n(100527), r = n(906732), o = n(739566), c = n(942951), d = n(703656), u = n(702346), _ = n(35125), E = n(626751), m = n(891614), I = n(981631), T = n(176505), h = n(689938), N = n(20151);
+function f(e) {
     let {username: t} = e;
     return (0, i.jsx)('div', {
         className: N.welcomeCardText,
@@ -26,7 +26,7 @@ function p(e) {
         })
     });
 }
-function f(e) {
+function p(e) {
     let {
         guildId: t,
         user: n,
@@ -42,7 +42,7 @@ function f(e) {
                 user: n,
                 className: N.welcomeCardBadge
             }),
-            (0, i.jsx)(p, { username: a })
+            (0, i.jsx)(f, { username: a })
         ]
     });
 }
@@ -52,7 +52,7 @@ function C(e) {
             channel: m,
             message: h,
             compact: N
-        } = e, p = (0, o.ZP)(h), C = function (e) {
+        } = e, f = (0, o.ZP)(h), C = function (e) {
             let {
                     author: t,
                     channel: n,
@@ -81,7 +81,7 @@ function C(e) {
         }({
             channel: m,
             message: h,
-            author: p
+            author: f
         }), g = (null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = h.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
     return null == C ? null : (0, i.jsxs)(i.Fragment, {
         children: [
@@ -91,10 +91,10 @@ function C(e) {
                 compact: N,
                 children: C
             }),
-            g && (0, i.jsx)(f, {
+            g && (0, i.jsx)(p, {
                 guildId: m.guild_id,
                 user: h.author,
-                username: p.nick
+                username: f.nick
             }),
             (0, i.jsx)(E.Z, {
                 channel: m,

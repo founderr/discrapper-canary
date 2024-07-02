@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var l = n(682662), r = n(47061);
+var l = n(682662), r = n(972217);
 function a() {
     return (0, i.jsx)(l.H, { children: (0, i.jsx)('div', { className: r.guildSeparator }) });
 }

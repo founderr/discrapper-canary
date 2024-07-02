@@ -5,7 +5,7 @@ o.d(e, {
 });
 var t = o(735250);
 o(470079);
-var r = o(481060), i = o(63063), c = o(376340), s = o(981631), l = o(689938), a = o(414457), C = o(38920);
+var r = o(481060), i = o(63063), c = o(376340), s = o(981631), l = o(689938), a = o(80069), C = o(38920);
 function u() {
     return (0, t.jsx)('div', {
         className: a.__invalid_getCrunchyrollApp,

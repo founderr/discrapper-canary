@@ -3,22 +3,22 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(524437), c = n(481060), d = n(317632), u = n(174767), _ = n(240126), E = n(791914), m = n(326838), I = n(689938), T = n(277539);
+var i = n(735250), a = n(470079), s = n(392711), l = n.n(s), r = n(442837), o = n(524437), c = n(481060), d = n(317632), u = n(174767), _ = n(240126), E = n(791914), m = n(326838), I = n(689938), T = n(13812);
 function h(e) {
     let {
             setTab: t,
             badgeState: s,
             closePopout: h
-        } = e, p = (0, r.Wu)([d.Z], () => d.Z.getInvites()), f = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()), [C, g] = a.useMemo(() => l().partition(p, e => {
+        } = e, f = (0, r.Wu)([d.Z], () => d.Z.getInvites()), p = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()), [C, g] = a.useMemo(() => l().partition(f, e => {
             var t;
-            return (null === (t = f[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+            return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
         }), [
-            p,
-            f
+            f,
+            p
         ]);
     return (a.useEffect(() => {
         (0, u.sJ)();
-    }), 0 === p.length) ? (0, i.jsxs)('div', {
+    }), 0 === f.length) ? (0, i.jsxs)('div', {
         className: T.container,
         children: [
             (0, i.jsx)(E.Z, {

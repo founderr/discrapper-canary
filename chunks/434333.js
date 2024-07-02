@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     }
 });
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(1561), l = n(481060), u = n(122085);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(1561), l = n(481060), u = n(29726);
 let c = {
         RED: u.backgroundRed,
         BACKGROUND_TERTIARY: u.backgroundTertiary,

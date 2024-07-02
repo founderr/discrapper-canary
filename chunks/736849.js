@@ -1,20 +1,9 @@
-var e = n(570596), o = n(28886), i = n(621528);
-t.exports = function (t, r, n) {
-    var u, s;
-    o(t);
-    try {
-        if (!(u = i(t, 'return'))) {
-            if ('throw' === r)
-                throw n;
-            return n;
-        }
-        u = e(u, t);
-    } catch (t) {
-        s = !0, u = t;
-    }
-    if ('throw' === r)
-        throw n;
-    if (s)
-        throw u;
-    return o(u), n;
+e.exports = {
+    botPermissions: 'botPermissions_a06cfc',
+    permissionsList: 'permissionsList_a06cfc',
+    permission: 'permission_a06cfc',
+    permissionsLabel: 'permissionsLabel_a06cfc',
+    disabledPermissionsLabel: 'disabledPermissionsLabel_a06cfc',
+    disabledPermissionIcon: 'disabledPermissionIcon_a06cfc',
+    icon: 'icon_a06cfc'
 };

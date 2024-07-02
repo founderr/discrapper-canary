@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(990547), a = n(481060), r = n(230711), l = n(960359), o = n(730417), c = n(981631), d = n(921944), u = n(689938), _ = n(849158);
+var s = n(990547), a = n(481060), r = n(230711), l = n(960359), o = n(730417), c = n(981631), d = n(921944), u = n(689938), _ = n(55317);
 let E = (e, t) => ({
     header: u.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({ gameName: e.title }),
     body: e.messages.enrollmentTooltip(t),

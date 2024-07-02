@@ -1,1 +1,1 @@
-e.exports = n.p + 'e802f635fb703940c9b5.gif';
+e.exports = t.p + 'e802f635fb703940c9b5.gif';

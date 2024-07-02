@@ -10,7 +10,7 @@ function s(e) {
     a.Z.open(e, o.pNK.SOUNDBOARD), (0, i.openModalLazy)(async () => {
         let {default: t} = await Promise.all([
             n.e('56035'),
-            n.e('4306')
+            n.e('97803')
         ]).then(n.bind(n, 758961));
         return n => (0, r.jsx)(t, {
             ...n,

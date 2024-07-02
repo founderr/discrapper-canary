@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(399606), a = n(704215), o = n(481060), s = n(596454), l = n(607070), u = n(605236), c = n(880949), d = n(28546), _ = n(65029), E = n(430824), f = n(556296), h = n(451478), p = n(358085), m = n(13140), I = n(763296), T = n(981631), g = n(689938), S = n(658147);
+var i = n(399606), a = n(704215), o = n(481060), s = n(596454), l = n(607070), u = n(605236), c = n(880949), d = n(28546), _ = n(65029), E = n(430824), f = n(556296), h = n(451478), p = n(358085), m = n(13140), I = n(763296), T = n(981631), g = n(689938), S = n(996293);
 function A(e) {
     let {
             soundboardSound: t,
@@ -32,7 +32,7 @@ function A(e) {
         });
     let D = () => {
             A(), (0, o.openModalLazy)(async () => {
-                let {default: e} = await n.e('58120').then(n.bind(n, 355453));
+                let {default: e} = await n.e('5551').then(n.bind(n, 355453));
                 return t => (0, r.jsx)(e, { ...t });
             });
         }, L = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP), b = null != y && (0, p.isWindows)() && !L ? g.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({

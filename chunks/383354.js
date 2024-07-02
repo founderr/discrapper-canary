@@ -1,5 +1,4 @@
 e.exports = {
-    container: 'container_da027b',
-    icon: 'icon_da027b',
-    menu: 'menu_da027b'
+    spacingTop24: 'spacingTop24_a0bf6d',
+    videoBackgroundError: 'videoBackgroundError_a0bf6d'
 };

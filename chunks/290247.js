@@ -5,7 +5,7 @@ i.d(n, {
 });
 var t = i(735250);
 i(470079);
-var a = i(120356), r = i.n(a), o = i(481060), l = i(52619);
+var a = i(120356), r = i.n(a), o = i(481060), l = i(933975);
 function s(e) {
     let {supportedLanguages: n} = e;
     return (0, t.jsx)('ul', {

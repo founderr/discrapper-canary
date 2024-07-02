@@ -1,1 +1,1 @@
-e.exports = t.p + 'c824173d0d5f34be9341.svg';
+e.exports = a.p + 'c824173d0d5f34be9341.svg';
