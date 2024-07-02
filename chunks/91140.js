@@ -19,10 +19,11 @@ n.Z = a.memo(e => {
     let {
             entry: n,
             channel: t,
-            selected: a
+            selected: a,
+            hovered: _
         } = e, {
-            iconUrl: _,
-            iconTitle: f
+            iconUrl: f,
+            iconTitle: T
         } = (0, s.F)(n);
     return (0, l.jsxs)(i.Zb, {
         selected: a,
@@ -41,13 +42,16 @@ n.Z = a.memo(e => {
                     }),
                     (0, l.jsx)(o.Gk, {
                         location: o.Gt.CARD,
-                        children: E.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                        children: E.map((e, t) => (0, l.jsx)(e, {
+                            entry: n,
+                            hovered: _
+                        }, t))
                     })
                 ]
             }),
             (0, l.jsx)(u.f, {
-                alt: f,
-                src: _,
+                alt: T,
+                src: f,
                 size: 48,
                 className: d.thumbnail
             })

@@ -94,21 +94,25 @@ function Z(e) {
     });
 }
 function S(e) {
-    let {entry: n} = e, {
-            defaultTextColor: t,
-            defaultIconColor: l,
-            location: a
-        } = C(), o = 0 === a, i = (0, x.kr)(n), u = o && i ? f.tokens.colors.STATUS_POSITIVE : l, s = o && i ? 'text-positive' : t;
+    let {
+            entry: n,
+            hovered: t
+        } = e, {
+            defaultTextColor: l,
+            defaultIconColor: a,
+            location: o
+        } = C(), i = 0 === o, u = (0, x.kr)(n), s = i && u ? f.tokens.colors.STATUS_POSITIVE : a, c = i && u ? 'text-positive' : l;
     return (0, r.jsxs)('div', {
         className: M.badgeContainer,
         children: [
             (0, r.jsx)(f.GameControllerIcon, {
                 size: 'xxs',
-                color: u
+                color: s
             }),
             (0, r.jsx)(g.ZP, {
                 entry: n,
-                textColor: s
+                textColor: c,
+                hovered: t
             })
         ]
     });
@@ -147,24 +151,28 @@ function p(e) {
 }
 function O(e) {
     var n;
-    let {entry: t} = e, {
-            defaultTextColor: l,
-            defaultIconColor: a,
-            location: o
-        } = C(), i = 0 === o, u = (0, _.e7)([m.Z], () => m.Z.getMatchingActivity(t));
-    if ((null == u ? void 0 : u.timestamps) == null)
+    let {
+            entry: t,
+            hovered: l
+        } = e, {
+            defaultTextColor: a,
+            defaultIconColor: o,
+            location: i
+        } = C(), u = 0 === i, s = (0, _.e7)([m.Z], () => m.Z.getMatchingActivity(t));
+    if ((null == s ? void 0 : s.timestamps) == null)
         return null;
-    let s = i ? f.tokens.colors.STATUS_POSITIVE : a, c = null === (n = u.timestamps) || void 0 === n ? void 0 : n.start;
+    let c = u ? f.tokens.colors.STATUS_POSITIVE : o, d = null === (n = s.timestamps) || void 0 === n ? void 0 : n.start;
     return (0, r.jsxs)('div', {
         className: M.badgeContainer,
         children: [
             (0, r.jsx)(f.RecordPlayerIcon, {
                 size: 'xxs',
-                color: s
+                color: c
             }),
             (0, r.jsx)(g.x3, {
-                entry: null != c ? { start: c } : t,
-                textColor: i ? 'text-positive' : l
+                entry: null != d ? { start: d } : t,
+                textColor: u ? 'text-positive' : a,
+                hovered: l
             })
         ]
     });
@@ -252,20 +260,24 @@ function F(e) {
     });
 }
 function G(e) {
-    let {entry: n} = e, {
-            defaultTextColor: t,
-            defaultIconColor: l
+    let {
+            entry: n,
+            hovered: t
+        } = e, {
+            defaultTextColor: l,
+            defaultIconColor: a
         } = C();
     return (0, r.jsxs)('div', {
         className: M.badgeContainer,
         children: [
             (0, r.jsx)(f.TvIcon, {
                 size: 'xxs',
-                color: l
+                color: a
             }),
             (0, r.jsx)(g.ZP, {
                 entry: n,
-                textColor: t
+                textColor: l,
+                hovered: t
             })
         ]
     });

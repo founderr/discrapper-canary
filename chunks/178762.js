@@ -167,7 +167,8 @@ t.ZP = a.memo(e => {
                             onContextMenu: P,
                             children: (0, i.jsx)(j, {
                                 ...l,
-                                selected: n
+                                selected: n,
+                                hovered: x.current
                             })
                         })
                     })
