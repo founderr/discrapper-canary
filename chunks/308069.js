@@ -10,7 +10,7 @@ t.Z = e => {
             isExpanded: T,
             isExpansionAnimationComplete: N
         } = e, v = o.useCallback(() => {
-            (0, m.a)(t, {
+            (0, m.az)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });

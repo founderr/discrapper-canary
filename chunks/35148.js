@@ -10,7 +10,7 @@ t.Z = function (e) {
             isExpansionAnimationComplete: f,
             quest: h,
             useReducedMotion: _
-        } = e, E = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {percentComplete: S} = (0, l.Rf)(h);
+        } = e, E = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {percentComplete: S} = (0, l.Rf)(h), T = (0, l.Jf)(h), N = null != T ? T.completedRatio > 0 : S > 0;
     return (0, s.jsxs)(a.animated.div, {
         'aria-hidden': C && f,
         className: r()(n, g.contentCollapsed, {
@@ -45,7 +45,7 @@ t.Z = function (e) {
                             questContent: c.jn.QUEST_BAR,
                             autoplay: !1
                         }),
-                        S > 0 ? (0, s.jsx)(u.Z, {
+                        N ? (0, s.jsx)(u.Z, {
                             className: g.questProgressBar,
                             quest: h
                         }) : (0, s.jsx)(i.Text, {

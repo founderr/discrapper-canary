@@ -1,8 +1,11 @@
 n.d(t, {
-    a: function () {
+    C: function () {
         return s;
     },
-    h: function () {
+    az: function () {
+        return l;
+    },
+    hp: function () {
         return o;
     }
 });
@@ -29,6 +32,19 @@ function o(e) {
     });
 }
 function s(e, t) {
+    (0, i.openModalLazy)(async () => {
+        let {default: i} = await Promise.all([
+            n.e('54535'),
+            n.e('16658')
+        ]).then(n.bind(n, 117571));
+        return n => (0, r.jsx)(i, {
+            ...n,
+            questId: e,
+            location: t
+        });
+    });
+}
+function l(e, t) {
     (0, a._3)({
         questId: e.id,
         questContent: t.content,

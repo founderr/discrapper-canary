@@ -23,10 +23,11 @@ let O = o.forwardRef(function (e, t) {
                 content: f.jn.QUEST_BAR,
                 ctaContent: x.jZ.OPEN_GAME_LINK
             });
-        }, [Z]), G = w.features.has(B.S7.POST_ENROLLMENT_CTA), F = (0, g.Rf)(Z), K = F.progressSeconds > 0, Y = (null === (n = Z.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (r = Z.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, $ = o.useMemo(() => (0, h.Xv)(Z.config), [Z.config]), J = O && I, ee = (0, h.ph)(Z), et = (0, h.pG)({
+        }, [Z]), G = w.features.has(B.S7.POST_ENROLLMENT_CTA), F = (0, g.Rf)(Z), K = (0, g.Jf)(Z), Y = null != K ? K.progress > 0 : F.progressSeconds > 0, X = (null === (n = Z.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, J = (null === (r = Z.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, $ = o.useMemo(() => (0, h.Xv)(Z.config), [Z.config]), ee = O && I, et = (0, h.ph)(Z), en = (0, h.pG)({
             quest: Z,
-            taskDetails: F
-        }), en = (0, p.isWeb)(), es = o.useMemo(() => {
+            taskDetails: F,
+            thirdPartyTaskDetails: null != K ? K : void 0
+        }), es = (0, p.isWeb)(), eo = o.useMemo(() => {
             let e = (0, c.Qg)(Z.config.colors.primary, {
                 base: '#ffffff',
                 contrastRatio: c.S3.Text
@@ -39,9 +40,9 @@ let O = o.forwardRef(function (e, t) {
         }, [Z.config.colors.primary]);
     return (0, s.jsx)('div', {
         style: { backgroundColor: Z.config.colors.secondary },
-        'aria-hidden': !J,
-        className: a()(_, R.contentExpanded, { [R.contentInteractable]: J }),
-        children: Y ? (0, s.jsxs)('div', {
+        'aria-hidden': !ee,
+        className: a()(_, R.contentExpanded, { [R.contentInteractable]: ee }),
+        children: X ? (0, s.jsxs)('div', {
             className: R.questAcceptedContent,
             ref: t,
             children: [
@@ -64,14 +65,15 @@ let O = o.forwardRef(function (e, t) {
                                             variant: 'heading-sm/semibold',
                                             children: (0, h.AV)({
                                                 quest: Z,
-                                                taskDetails: F
+                                                taskDetails: F,
+                                                thirdPartyTaskDetails: null != K ? K : void 0
                                             })
                                         }),
                                         (0, s.jsx)(d.Text, {
                                             className: R.questAcceptedContentCopySubheading,
                                             color: 'always-white',
                                             variant: 'text-xxs/normal',
-                                            children: X ? b.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Q }) : b.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: L })
+                                            children: J ? b.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Q }) : b.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: L })
                                         })
                                     ]
                                 })
@@ -98,9 +100,9 @@ let O = o.forwardRef(function (e, t) {
                         })
                     ]
                 }),
-                X ? (0, s.jsx)(d.Button, {
+                J ? (0, s.jsx)(d.Button, {
                     className: a()(R.cta, R.ctaClaimReward),
-                    style: $ ? es : void 0,
+                    style: $ ? eo : void 0,
                     color: d.Button.Colors.CUSTOM,
                     fullWidth: !0,
                     onClick: V,
@@ -110,10 +112,10 @@ let O = o.forwardRef(function (e, t) {
                     className: R.description,
                     color: 'always-white',
                     variant: 'text-xs/normal',
-                    children: et
+                    children: en
                 }),
                 (0, s.jsx)(S.Z, { quest: Z }),
-                !en && !K && !H && G && (0, s.jsx)(y, { onClick: J ? z : void 0 })
+                !es && !Y && !H && G && (0, s.jsx)(y, { onClick: ee ? z : void 0 })
             ]
         }) : (0, s.jsxs)('div', {
             children: [
@@ -165,16 +167,16 @@ let O = o.forwardRef(function (e, t) {
                                     className: R.description,
                                     color: 'always-white',
                                     variant: 'text-sm/normal',
-                                    children: et
+                                    children: en
                                 })
                             ]
                         }),
                         (0, s.jsx)(d.Button, {
                             className: R.cta,
-                            style: '1232852290197655573' !== Z.id ? es : void 0,
+                            style: '1232852290197655573' !== Z.id ? eo : void 0,
                             color: d.Button.Colors.CUSTOM,
                             fullWidth: !0,
-                            onClick: J ? D : void 0,
+                            onClick: ee ? D : void 0,
                             size: d.Button.Sizes.NONE,
                             submitting: k,
                             children: b.Z.Messages.QUESTS_ACCEPT_QUEST
@@ -195,8 +197,8 @@ let O = o.forwardRef(function (e, t) {
                             className: R.heroAsset,
                             controls: !1,
                             children: (0, s.jsx)('source', {
-                                src: ee,
-                                type: (0, h.mN)(ee)
+                                src: et,
+                                type: (0, h.mN)(et)
                             })
                         })
                     }) : (0, s.jsx)(v.Fl, {
@@ -205,7 +207,7 @@ let O = o.forwardRef(function (e, t) {
                             ref: e,
                             alt: '',
                             className: R.heroAsset,
-                            src: ee
+                            src: et
                         })
                     })
                 })

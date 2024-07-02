@@ -73,7 +73,7 @@ function C(e) {
                         id: 'display-disclosure',
                         label: f.Z.Messages.QUESTS_DISCLOSURE_LABEL,
                         action: () => {
-                            (0, T.a)(e.quest, {
+                            (0, T.az)(e.quest, {
                                 content: e.questContent,
                                 position: e.questContentPosition,
                                 ctaContent: u.jZ.CONTEXT_MENU_OPEN_DISCLOSURE

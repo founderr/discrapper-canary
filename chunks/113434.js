@@ -3,19 +3,22 @@ n.d(t, {
         return L;
     },
     DU: function () {
-        return x;
+        return G;
     },
     EH: function () {
         return y;
     },
     Fr: function () {
-        return w;
+        return x;
     },
     GI: function () {
-        return B;
+        return F;
     },
     J2: function () {
         return O;
+    },
+    Jf: function () {
+        return M;
     },
     Rf: function () {
         return b;
@@ -27,22 +30,22 @@ n.d(t, {
         return C;
     },
     iO: function () {
-        return P;
-    },
-    jU: function () {
         return U;
     },
+    jU: function () {
+        return w;
+    },
     kJ: function () {
-        return G;
+        return k;
     },
     t5: function () {
-        return M;
+        return P;
     },
     tP: function () {
         return D;
     },
     z6: function () {
-        return k;
+        return B;
     }
 }), n(47120), n(653041);
 var r, i, a, o, s = n(470079), l = n(846519), u = n(442837), c = n(583434), d = n(706454), _ = n(553795), E = n(617136), f = n(272008), h = n(569984), p = n(497505), m = n(918701), I = n(796111), T = n(977156), g = n(31055), S = n(566078), A = n(46140), N = n(981631), v = n(689938);
@@ -180,8 +183,11 @@ function L(e) {
 }
 (o = i || (i = {})).UNCLAIMED = 'unclaimed', o.CLAIMED = 'claimed';
 let b = e => s.useMemo(() => (0, m.il)(e), [e]);
-function M(e, t, n, r) {
-    let {targetMinutes: i} = b(e);
+function M(e) {
+    return s.useMemo(() => (0, m.b7)(e), [e]);
+}
+function P(e, t, n, r) {
+    let {targetMinutes: i} = b(e), a = M(e);
     if ((0, m.zK)(e, A.S7.IN_HOUSE_CONSOLE_QUEST))
         return v.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
             minutes: i,
@@ -198,13 +204,15 @@ function M(e, t, n, r) {
                 });
             }
         });
-    let a = v.Z.Messages.QUESTS_STREAM_TASK;
-    return (0, m.Nj)({ quest: e }) && (a = v.Z.Messages.QUESTS_PLAY_TASK), a.format({
+    if (null != a)
+        return a.title;
+    let o = v.Z.Messages.QUESTS_STREAM_TASK;
+    return (0, m.Nj)({ quest: e }) && (o = v.Z.Messages.QUESTS_PLAY_TASK), o.format({
         minutes: i,
         gameTitle: e.config.messages.gameTitle
     });
 }
-function P() {
+function U() {
     let {
             quests: e,
             isFetchingCurrentQuests: t
@@ -234,21 +242,21 @@ function P() {
         t
     ]);
 }
-function U() {
-    let e = P();
+function w() {
+    let e = U();
     s.useEffect(() => {
         for (let t of e)
             (0, f.gl)(t.id, p.jn.GIFT_INVENTORY_SETTINGS_BADGE);
     }, [e]);
 }
-function w(e) {
+function x(e) {
     let t = (0, g.z)({ location: A.dr.MEMBERS_LIST }), n = (0, u.e7)([h.Z], () => t ? h.Z.quests : null), r = s.useMemo(() => (0, m.Jg)(n, e), [
             e,
             n
         ]);
     return D(r) ? null : r;
 }
-function x(e) {
+function G(e) {
     var t;
     let n = (0, m.Xv)(e), {
             product: r,
@@ -260,7 +268,7 @@ function x(e) {
         isFetching: i
     };
 }
-function G(e) {
+function k(e) {
     return {
         handleComplete: () => (0, f.Wf)(e),
         handleResetStatusClick: () => (0, f.eT)(e),
@@ -268,7 +276,7 @@ function G(e) {
         handleOverrideDeliveryClick: () => (0, f.EW)(e)
     };
 }
-function k() {
+function B() {
     let {
             fetching: e,
             accounts: t
@@ -294,7 +302,7 @@ function k() {
         xboxAndPlaystationAccounts: i
     };
 }
-let B = e => {
+let F = e => {
     let {
             questId: t,
             preview: n,
