@@ -1,5 +1,5 @@
 n(47120), n(733860);
-var s = n(735250), a = n(470079), i = n(392711), r = n.n(i), l = n(149765), o = n(442837), c = n(481060), d = n(497321), u = n(484614), _ = n(933557), E = n(984933), I = n(496675), T = n(699516), m = n(246946), N = n(594174), S = n(434404), h = n(999382), g = n(981631), C = n(689938), x = n(747666);
+var s = n(735250), a = n(470079), i = n(392711), r = n.n(i), l = n(149765), o = n(442837), c = n(481060), d = n(497321), u = n(484614), _ = n(933557), I = n(984933), E = n(496675), T = n(699516), m = n(246946), N = n(594174), S = n(434404), h = n(999382), g = n(981631), C = n(689938), x = n(747666);
 function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -18,15 +18,15 @@ class L extends a.PureComponent {
         } : null;
     }
     renderChannelSelect(e) {
-        let {widgetChannelId: t} = this.props, n = E.ZP.getChannels(e.id), a = r()([
-                ...n[E.sH],
-                ...n[E.Zb]
+        let {widgetChannelId: t} = this.props, n = I.ZP.getChannels(e.id), a = r()([
+                ...n[I.sH],
+                ...n[I.Zb]
             ]).filter(t => {
                 let {channel: n} = t;
                 return n.guild_id === e.id;
             }).filter(e => {
                 let {channel: n} = e;
-                return n.id === t || I.Z.can(f, n);
+                return n.id === t || E.Z.can(f, n);
             }).map(e => {
                 let {channel: t} = e;
                 return {

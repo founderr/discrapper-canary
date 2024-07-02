@@ -3,7 +3,7 @@ n.d(t, {
         return B;
     }
 }), n(47120), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(399606), d = n(481060), u = n(239091), _ = n(749210), E = n(479531), I = n(110924), T = n(410030), m = n(367907), N = n(906732), S = n(733026), h = n(246946), g = n(594174), C = n(695464), x = n(154921), p = n(626135), R = n(136015), f = n(51144), L = n(434404), O = n(999382), A = n(84613), M = n(740903), v = n(981631), D = n(689938), j = n(540998);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(399606), d = n(481060), u = n(239091), _ = n(749210), I = n(479531), E = n(110924), T = n(410030), m = n(367907), N = n(906732), S = n(733026), h = n(246946), g = n(594174), C = n(695464), x = n(154921), p = n(626135), R = n(136015), f = n(51144), L = n(434404), O = n(999382), A = n(84613), M = n(740903), D = n(981631), v = n(689938), j = n(540998);
 function Z(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -21,19 +21,19 @@ function b(e) {
             ban: l,
             hideDiscriminator: o,
             onClose: c
-        } = e, [u, I] = a.useState(!1), [T, S] = a.useState(null), {analyticsLocations: h} = (0, N.ZP)(), g = null !== (t = null == h ? void 0 : h[0]) && void 0 !== t ? t : null;
+        } = e, [u, E] = a.useState(!1), [T, S] = a.useState(null), {analyticsLocations: h} = (0, N.ZP)(), g = null !== (t = null == h ? void 0 : h[0]) && void 0 !== t ? t : null;
     async function C() {
         if (null != i) {
-            S(null), I(!0);
+            S(null), E(!0);
             try {
-                await _.Z.unbanUser(i.id, r.id), c(), p.default.track(v.rMx.GUILD_BAN_REMOVED, {
+                await _.Z.unbanUser(i.id, r.id), c(), p.default.track(D.rMx.GUILD_BAN_REMOVED, {
                     ...(0, m.hH)(i.id),
                     target_user_id: r.id,
                     reason: l.reason,
                     location: g
                 });
             } catch (e) {
-                S(new E.Z(e)), I(!1);
+                S(new I.Z(e)), E(!1);
             }
         }
     }
@@ -69,11 +69,11 @@ function b(e) {
                     (0, s.jsx)(d.Text, {
                         className: j.reasonHeader,
                         variant: 'text-xs/normal',
-                        children: D.Z.Messages.BAN_REASON
+                        children: v.Z.Messages.BAN_REASON
                     }),
                     (0, s.jsx)(d.Text, {
                         variant: 'text-sm/normal',
-                        children: null != l.reason && '' !== l.reason ? l.reason : D.Z.Messages.NO_BAN_REASON
+                        children: null != l.reason && '' !== l.reason ? l.reason : v.Z.Messages.NO_BAN_REASON
                     }),
                     null != T ? (0, s.jsx)(d.Text, {
                         className: j.error,
@@ -91,11 +91,11 @@ function b(e) {
                         look: d.Button.Looks.LINK,
                         color: d.Button.Colors.RED,
                         submitting: u,
-                        children: D.Z.Messages.REVOKE_BAN
+                        children: v.Z.Messages.REVOKE_BAN
                     }),
                     (0, s.jsx)(d.Button, {
                         onClick: c,
-                        children: D.Z.Messages.DONE
+                        children: v.Z.Messages.DONE
                     })
                 ]
             })
@@ -227,12 +227,12 @@ function P(e) {
             guildId: t,
             storedSearchQuery: n
         } = e, [i, r] = a.useState(null != n ? n : ''), [l, o] = a.useState(!1), c = a.useCallback(() => {
-            L.Z.setSection(v.pNK.SAFETY), (0, A.K)(M.u.DM_AND_SPAM_PROTECTION);
+            L.Z.setSection(D.pNK.SAFETY), (0, A.K)(M.u.DM_AND_SPAM_PROTECTION);
         }, []), u = a.useCallback(e => {
             r(e), 0 === e.trim().length && L.Z.setSearchQuery(e);
-        }, []), E = a.useCallback(() => {
+        }, []), I = a.useCallback(() => {
             r(''), L.Z.setSearchQuery('');
-        }, []), I = a.useCallback(async () => {
+        }, []), E = a.useCallback(async () => {
             if (0 === i.trim().length) {
                 L.Z.setSearchQuery(i), o(!1);
                 return;
@@ -250,18 +250,18 @@ function P(e) {
             l,
             i
         ]), T = a.useCallback(e => {
-            'Enter' === e.key && (e.preventDefault(), e.stopPropagation(), I());
-        }, [I]);
+            'Enter' === e.key && (e.preventDefault(), e.stopPropagation(), E());
+        }, [E]);
     return (0, s.jsxs)(d.FormSection, {
         tag: d.FormTitleTags.H1,
-        title: D.Z.Messages.BANS_HEADER_NEW,
+        title: v.Z.Messages.BANS_HEADER_NEW,
         children: [
             (0, s.jsx)('div', {
                 className: j.settingsHeader,
                 children: (0, s.jsx)(d.FormText, {
                     type: d.FormTextTypes.DESCRIPTION,
                     className: j.description,
-                    children: D.Z.Messages.BANS_HINT.format({ onModerationClick: c })
+                    children: v.Z.Messages.BANS_HINT.format({ onModerationClick: c })
                 })
             }),
             (0, s.jsxs)('div', {
@@ -270,22 +270,22 @@ function P(e) {
                     (0, s.jsx)(d.SearchBar, {
                         className: j.searchBar,
                         query: null != i ? i : '',
-                        placeholder: D.Z.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
-                        'aria-label': D.Z.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
+                        placeholder: v.Z.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
+                        'aria-label': v.Z.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
                         onChange: u,
                         onKeyDown: T,
-                        onClear: E,
+                        onClear: I,
                         size: d.SearchBar.Sizes.MEDIUM,
                         isLoading: l
                     }),
                     (0, s.jsx)(d.Button, {
                         color: d.Button.Colors.BRAND,
-                        onClick: I,
+                        onClick: E,
                         size: d.Button.Sizes.SMALL,
                         disabled: l,
                         submitting: l,
                         className: j.searchButton,
-                        children: D.Z.Messages.SEARCH
+                        children: v.Z.Messages.SEARCH
                     })
                 ]
             })
@@ -297,7 +297,7 @@ function B() {
     let {
             guild: i,
             searchQuery: u
-        } = (0, c.e7)([O.Z], () => O.Z.getProps(), [], l.isEqual), E = null != u && u.trim().length > 0, m = (0, I.Z)(E), N = E !== m, [h] = (0, c.e7)([O.Z], () => O.Z.getBans(), [], R.Q), C = null !== (e = null == h ? void 0 : h.size) && void 0 !== e ? e : 0, x = (0, T.ZP)(), p = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : v.lds, f = a.useRef(null), L = a.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+        } = (0, c.e7)([O.Z], () => O.Z.getProps(), [], l.isEqual), I = null != u && u.trim().length > 0, m = (0, E.Z)(I), N = I !== m, [h] = (0, c.e7)([O.Z], () => O.Z.getBans(), [], R.Q), C = null !== (e = null == h ? void 0 : h.size) && void 0 !== e ? e : 0, x = (0, T.ZP)(), p = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : D.lds, f = a.useRef(null), L = a.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
             if (null == t || 0 === e.trim().length)
                 return !1;
             let [[n], s] = (0, S.C)(e);
@@ -331,12 +331,12 @@ function B() {
     ]);
     let F = a.useCallback(e => {
             _.Z.fetchGuildBansBatch(p, 1000, e);
-        }, [p]), k = a.useMemo(() => o().chunk(M, B.pageSize), [
+        }, [p]), w = a.useMemo(() => o().chunk(M, B.pageSize), [
             B.pageSize,
             M
-        ]), w = a.useCallback(e => {
+        ]), k = a.useCallback(e => {
             var t, n, s;
-            if (null === (t = f.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !E && (H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null, F(H.current)), null != k[e - 1] || !!b)
+            if (null === (t = f.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !I && (H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null, F(H.current)), null != w[e - 1] || !!b)
                 y(t => ({
                     ...t,
                     currentPage: e
@@ -345,18 +345,18 @@ function B() {
             B.pageSize,
             M,
             b,
-            k,
+            w,
             F,
-            E
+            I
         ]), H = a.useRef(null);
     a.useEffect(() => {
         F(H.current);
     }, [F]);
     let V = a.useMemo(() => {
         var e;
-        return null !== (e = k[B.currentPage - 1]) && void 0 !== e ? e : [];
+        return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : [];
     }, [
-        k,
+        w,
         B.currentPage
     ]);
     return null == i ? null : (0, s.jsxs)('div', {
@@ -386,9 +386,9 @@ function B() {
                                 height: 212
                             }),
                             (0, s.jsx)(d.EmptyStateText, {
-                                note: D.Z.Messages.BANS_NO_USERS_BANNED,
+                                note: v.Z.Messages.BANS_NO_USERS_BANNED,
                                 style: { maxWidth: 300 },
-                                children: D.Z.Messages.NO_BANS
+                                children: v.Z.Messages.NO_BANS
                             })
                         ]
                     })
@@ -401,7 +401,7 @@ function B() {
                     totalCount: M.length + (b ? B.pageSize : 0),
                     pageSize: B.pageSize,
                     currentPage: B.currentPage,
-                    onPageChange: w,
+                    onPageChange: k,
                     maxVisiblePages: 9
                 })
             })

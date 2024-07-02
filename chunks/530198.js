@@ -3,15 +3,15 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(512722), o = n.n(l), c = n(780384), d = n(481060), u = n(99690), _ = n(410030), E = n(726542), I = n(981631), T = n(856651), m = n(689938), N = n(550322);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(512722), o = n.n(l), c = n(780384), d = n(481060), u = n(99690), _ = n(410030), I = n(726542), E = n(981631), T = n(856651), m = n(689938), N = n(550322);
 function S(e) {
     var t, n;
     let a, {
             theme: i,
             platform: l,
             integration: _,
-            onRemove: E,
-            locked: I
+            onRemove: I,
+            locked: E
         } = e;
     if ((null == _ ? void 0 : _.application) != null)
         o()(null != _.application.bot, 'bot is null'), a = (0, s.jsx)(u.Z, {
@@ -40,8 +40,8 @@ function S(e) {
                 'aria-label': m.Z.Messages.REMOVE,
                 size: d.Button.Sizes.TINY,
                 look: d.Button.Looks.BLANK,
-                onClick: E,
-                disabled: I,
+                onClick: I,
+                disabled: E,
                 className: N.closeButton,
                 children: (0, s.jsx)(d.Tooltip, {
                     text: m.Z.Messages.REMOVE,
@@ -65,9 +65,9 @@ function h(e) {
             onConfigurationChange: c,
             platform: u,
             applicationId: _,
-            metadataField: E,
-            operator: I
-        } = e, m = null !== (n = null == l ? void 0 : l.index) && void 0 !== n ? n : -1, S = null != I ? I : T.iO.GREATER_THAN, h = Math.round(Number(null !== (i = null == l ? void 0 : null === (t = l.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0));
+            metadataField: I,
+            operator: E
+        } = e, m = null !== (n = null == l ? void 0 : l.index) && void 0 !== n ? n : -1, S = null != E ? E : T.iO.GREATER_THAN, h = Math.round(Number(null !== (i = null == l ? void 0 : null === (t = l.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0));
     S === T.iO.GREATER_THAN ? h = Math.max(1, h + 1) : S === T.iO.LESS_THAN && (h = Math.max(0, h - 1));
     let [g, C] = a.useState(h.toString());
     return a.useEffect(() => {
@@ -86,7 +86,7 @@ function h(e) {
                     S === T.iO.GREATER_THAN ? n = Math.max(0, n - 1) : S === T.iO.LESS_THAN && (n = Math.max(1, n + 1)), c({
                         connectionType: null !== (t = null == u ? void 0 : u.type) && void 0 !== t ? t : T.Kt,
                         applicationId: _,
-                        connectionMetadataField: E,
+                        connectionMetadataField: I,
                         operator: S,
                         value: n.toString()
                     }, m);
@@ -95,7 +95,7 @@ function h(e) {
             }
         },
         disabled: o
-    }, E);
+    }, I);
 }
 function g(e) {
     let {
@@ -158,15 +158,15 @@ function C(e) {
             applicationId: c,
             onConfigurationChange: u,
             locked: _,
-            operator: E
-        } = e, I = a.createRef(), m = (null == l ? void 0 : l.configuration) != null, S = (0, s.jsx)(h, {
-            inputRef: I,
+            operator: I
+        } = e, E = a.createRef(), m = (null == l ? void 0 : l.configuration) != null, S = (0, s.jsx)(h, {
+            inputRef: E,
             metadataField: r,
             existingPendingConfiguration: l,
             locked: _ || !m,
             onConfigurationChange: u,
             platform: o,
-            operator: E,
+            operator: I,
             applicationId: c
         }, r), g = null != i ? i.format({ metadataHook: () => S }) : (0, s.jsxs)(s.Fragment, {
             children: [
@@ -205,7 +205,7 @@ function C(e) {
                     var t, n, s;
                     let a = null;
                     if (e) {
-                        let e = null != E ? E : T.iO.GREATER_THAN, s = Math.round(Number(null === (t = I.current) || void 0 === t ? void 0 : t.value));
+                        let e = null != I ? I : T.iO.GREATER_THAN, s = Math.round(Number(null === (t = E.current) || void 0 === t ? void 0 : t.value));
                         e === T.iO.GREATER_THAN ? s = Math.max(0, s - 1) : e === T.iO.LESS_THAN && (s = Math.max(1, s + 1)), a = {
                             connectionType: null !== (n = null == o ? void 0 : o.type) && void 0 !== n ? n : T.Kt,
                             applicationId: c,
@@ -226,7 +226,7 @@ function x(e) {
             configMetadataMap: t,
             onConfigurationChange: n,
             locked: a
-        } = e, i = E.Z.get(I.ABu.STEAM);
+        } = e, i = I.Z.get(E.ABu.STEAM);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(C, {
@@ -273,7 +273,7 @@ function p(e) {
             configMetadataMap: t,
             onConfigurationChange: n,
             locked: a
-        } = e, i = E.Z.get(I.ABu.TWITTER);
+        } = e, i = I.Z.get(E.ABu.TWITTER);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(C, {
@@ -320,7 +320,7 @@ function R(e) {
             configMetadataMap: t,
             onConfigurationChange: n,
             locked: a
-        } = e, i = E.Z.get(I.ABu.REDDIT);
+        } = e, i = I.Z.get(E.ABu.REDDIT);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(C, {
@@ -367,7 +367,7 @@ function f(e) {
             configMetadataMap: t,
             onConfigurationChange: n,
             locked: a
-        } = e, i = E.Z.get(I.ABu.PAYPAL);
+        } = e, i = I.Z.get(E.ABu.PAYPAL);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(C, {
@@ -396,7 +396,7 @@ function L(e) {
             configMetadataMap: t,
             onConfigurationChange: n,
             locked: a
-        } = e, i = E.Z.get(I.ABu.EBAY);
+        } = e, i = I.Z.get(E.ABu.EBAY);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(C, {
@@ -453,7 +453,7 @@ function O(e) {
             configMetadataMap: t,
             onConfigurationChange: n,
             locked: a
-        } = e, i = E.Z.get(I.ABu.TIKTOK);
+        } = e, i = I.Z.get(E.ABu.TIKTOK);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(g, {
@@ -579,7 +579,7 @@ function M(e) {
         return null;
     let d = null;
     try {
-        d = E.Z.get(n[0].configuration.connectionType);
+        d = I.Z.get(n[0].configuration.connectionType);
     } catch (e) {
     }
     let u = new Map();
@@ -592,22 +592,22 @@ function M(e) {
             locked: i
         }, m = null;
     switch (null == d ? void 0 : d.type) {
-    case I.ABu.STEAM:
+    case E.ABu.STEAM:
         m = (0, s.jsx)(x, { ...T });
         break;
-    case I.ABu.TWITTER:
+    case E.ABu.TWITTER:
         m = (0, s.jsx)(p, { ...T });
         break;
-    case I.ABu.REDDIT:
+    case E.ABu.REDDIT:
         m = (0, s.jsx)(R, { ...T });
         break;
-    case I.ABu.PAYPAL:
+    case E.ABu.PAYPAL:
         m = (0, s.jsx)(f, { ...T });
         break;
-    case I.ABu.EBAY:
+    case E.ABu.EBAY:
         m = (0, s.jsx)(L, { ...T });
         break;
-    case I.ABu.TIKTOK:
+    case E.ABu.TIKTOK:
         m = (0, s.jsx)(O, { ...T });
         break;
     default:

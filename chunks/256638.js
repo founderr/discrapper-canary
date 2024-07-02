@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return ep;
+        return ef;
     },
     c: function () {
         return eN;
     }
 });
-var i = n(735250), a = n(470079), s = n(913527), l = n.n(s), r = n(613828), o = n(442837), c = n(481060), d = n(668781), u = n(893776), _ = n(117266), E = n(37234), m = n(254854), I = n(195500), T = n(287734), h = n(205355), N = n(558381), f = n(223245), p = n(491428), C = n(401430), g = n(230711), S = n(726542), A = n(100527), x = n(906732), O = n(812206), R = n(391650), M = n(605236), v = n(749277), L = n(492435), Z = n(353926), P = n(506357), b = n(36459), D = n(236069), j = n(305325), U = n(281956), y = n(574650), B = n(665302), k = n(434404), G = n(918658), F = n(859428), w = n(963249), V = n(774276), H = n(14335), Y = n(246965), W = n(272008), z = n(523255), K = n(852923), Q = n(592125), q = n(430824), X = n(131951), J = n(19780), $ = n(914010), ee = n(594174), et = n(55563), en = n(695103), ei = n(933429), ea = n(285952), es = n(626135), el = n(63063), er = n(72924), eo = n(69499), ec = n(912193), ed = n(981631), eu = n(474936), e_ = n(610674), eE = n(65154), em = n(689938), eI = n(708522);
+var i = n(735250), a = n(470079), s = n(913527), l = n.n(s), r = n(613828), o = n(442837), c = n(481060), d = n(668781), u = n(893776), _ = n(117266), E = n(37234), m = n(254854), I = n(195500), T = n(287734), h = n(205355), N = n(558381), p = n(223245), f = n(491428), C = n(401430), g = n(230711), S = n(726542), A = n(100527), x = n(906732), O = n(812206), R = n(391650), M = n(605236), v = n(749277), L = n(492435), Z = n(353926), P = n(506357), b = n(36459), D = n(236069), j = n(305325), U = n(281956), y = n(574650), B = n(665302), k = n(434404), G = n(918658), F = n(859428), w = n(963249), V = n(774276), H = n(14335), Y = n(246965), W = n(272008), z = n(523255), K = n(852923), Q = n(592125), q = n(430824), X = n(131951), J = n(19780), $ = n(914010), ee = n(594174), et = n(55563), en = n(695103), ei = n(933429), ea = n(285952), es = n(626135), el = n(63063), er = n(72924), eo = n(69499), ec = n(912193), ed = n(981631), eu = n(474936), e_ = n(610674), eE = n(65154), em = n(689938), eI = n(708522);
 let eT = () => (0, i.jsxs)(c.Notice, {
         color: c.NoticeColors.DANGER,
         children: [
@@ -41,9 +41,9 @@ let eT = () => (0, i.jsxs)(c.Notice, {
 function eN(e) {
     m.Z.dismiss(null != e ? { untilAtLeast: l()(e) } : void 0);
 }
-let ef = 12633 == n.j ? a.memo(function () {
+let ep = 12633 == n.j ? a.memo(function () {
     var e, t, s;
-    let m = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()), A = (0, o.e7)([$.Z], () => $.Z.getGuildId()), ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()), ef = (0, o.e7)([q.Z], () => q.Z.getGuild(A)), {analyticsLocations: ep} = (0, x.ZP)(), eC = null == ec ? void 0 : ec.type, eg = (0, U.J)(A);
+    let m = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()), A = (0, o.e7)([$.Z], () => $.Z.getGuildId()), ec = (0, o.e7)([ei.Z], () => ei.Z.getNotice()), ep = (0, o.e7)([q.Z], () => q.Z.getGuild(A)), {analyticsLocations: ef} = (0, x.ZP)(), eC = null == ec ? void 0 : ec.type, eg = (0, U.J)(A);
     a.useEffect(() => {
         null != eC && !function (e, t) {
             let n = { notice_type: e };
@@ -57,7 +57,7 @@ let ef = 12633 == n.j ? a.memo(function () {
             let {metadata: e} = ec, t = Z.Z.getUserExperimentDescriptor(e.id);
             null != t && (0, L.W9)(e.id, t), (async () => {
                 var e, t;
-                (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, p.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
+                (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, f.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id);
             })();
         }
     }, [ec]);
@@ -305,7 +305,7 @@ let ef = 12633 == n.j ? a.memo(function () {
                 }),
                 em.Z.Messages.NOTICE_STREAMER_MODE_TEXT,
                 (0, i.jsx)(c.PrimaryCTANoticeButton, {
-                    onClick: () => f.Z.setEnabled(!1),
+                    onClick: () => p.Z.setEnabled(!1),
                     noticeType: ed.kVF.STREAMER_MODE,
                     children: em.Z.Messages.DISABLE
                 })
@@ -364,11 +364,11 @@ let ef = 12633 == n.j ? a.memo(function () {
                             (0, w.Z)({
                                 initialPlanId: null,
                                 subscriptionTier: eu.Si.TIER_2,
-                                analyticsLocations: ep,
+                                analyticsLocations: ef,
                                 analyticsObject: eU
                             });
                         },
-                        analyticsLocations: ep,
+                        analyticsLocations: ef,
                         analyticsLocationObject: eU,
                         context: __OVERLAY__ ? ed.IlC.OVERLAY : ed.IlC.APP
                     }).then(() => _.Z(eD.id)),
@@ -430,14 +430,14 @@ let ef = 12633 == n.j ? a.memo(function () {
                     (0, i.jsx)(c.NoticeCloseButton, {
                         noticeType: ed.kVF.SURVEY,
                         onClick: () => {
-                            (0, p.hZ)(t, !0);
+                            (0, f.hZ)(t, !0);
                         }
                     }),
                     n,
                     (0, i.jsx)(c.PrimaryCTANoticeButton, {
                         noticeType: ed.kVF.SURVEY,
                         onClick: () => {
-                            window.open(s, '_blank'), (0, p.hZ)(t, !1);
+                            window.open(s, '_blank'), (0, f.hZ)(t, !1);
                         },
                         children: a
                     })
@@ -454,13 +454,13 @@ let ef = 12633 == n.j ? a.memo(function () {
                         eN();
                     }
                 }),
-                em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server' }),
+                em.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == ep ? void 0 : ep.name) && void 0 !== t ? t : 'this server' }),
                 (0, i.jsx)(c.PrimaryCTANoticeButton, {
                     noticeType: ed.kVF.SERVER_USAGE_SURVEY,
                     onClick: () => {
-                        window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eN();
+                        window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == m ? void 0 : m.id, '&guild_id=').concat(null == ep ? void 0 : ep.id), '_blank'), eN();
                     },
-                    additionalTrackingProps: { guild_id: null == ef ? void 0 : ef.id },
+                    additionalTrackingProps: { guild_id: null == ep ? void 0 : ep.id },
                     children: em.Z.Messages.SERVER_USAGE_SURVEY_CTA
                 })
             ]
@@ -752,7 +752,7 @@ let ef = 12633 == n.j ? a.memo(function () {
             let e = { page: ed.ZY5.IN_APP };
             return (0, i.jsx)(D.Z, {
                 guildId: A,
-                analyticsLocations: ep,
+                analyticsLocations: ef,
                 analyticsLocation: e
             });
         }
@@ -879,10 +879,10 @@ let ef = 12633 == n.j ? a.memo(function () {
         return null;
     }
 }) : null;
-function ep() {
+function ef() {
     let {analyticsLocations: e} = (0, x.ZP)(A.Z.NOTICE);
     return (0, i.jsx)(x.Gt, {
         value: e,
-        children: (0, i.jsx)(ef, {})
+        children: (0, i.jsx)(ep, {})
     });
 }

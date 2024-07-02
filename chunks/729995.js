@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(442837), i = n(481060), r = n(2052), l = n(367907), o = n(45966), c = n(734893), d = n(621923), u = n(430824), _ = n(132338), E = n(626135), I = n(983135), T = n(8426), m = n(969632), N = n(570961), S = n(84658), h = n(974513), g = n(677892), C = n(981631), x = n(689938), p = n(334515);
+var a = n(442837), i = n(481060), r = n(2052), l = n(367907), o = n(45966), c = n(734893), d = n(621923), u = n(430824), _ = n(132338), I = n(626135), E = n(983135), T = n(8426), m = n(969632), N = n(570961), S = n(84658), h = n(974513), g = n(677892), C = n(981631), x = n(689938), p = n(334515);
 function R(e) {
     let {
             guildId: t,
@@ -14,15 +14,15 @@ function R(e) {
     u.object = n ? C.qAy.ONBOARDING_EDIT : C.qAy.ONBOARDING_REVIEW;
     let m = async function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            c ? (await (0, N.$y)(t, !1), E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+            c ? (await (0, N.$y)(t, !1), I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                 ...(0, l.hH)(t),
                 action_taken: S.W$[S.W$.TOGGLE_DISABLED],
                 location: u
-            })) : (await (0, N.$y)(t, !0), e && (0, T.To)(t, !0), n ? E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+            })) : (await (0, N.$y)(t, !0), e && (0, T.To)(t, !0), n ? I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                 ...(0, l.hH)(t),
                 action_taken: S.W$[S.W$.TOGGLE_ENABLED],
                 location: u
-            }) : E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+            }) : I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, l.hH)(t),
                 step: S.PG[S.PG.REVIEW],
                 back: !1,
@@ -30,21 +30,21 @@ function R(e) {
                 completed: !0
             }));
         }, h = () => {
-            E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+            I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                 ...(0, l.hH)(t),
                 action_taken: S.W$[S.W$.PREVIEW],
                 location: u
-            }), (0, I.di)(t);
+            }), (0, E.di)(t);
         }, x = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)(g.ku, {
                     guildId: t,
                     onEdit: () => {
-                        E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+                        I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                             ...(0, l.hH)(t),
                             action_taken: S.W$[S.W$.EDIT_DEFAULT_CHANNELS],
                             location: u
-                        }), (0, I.$K)(S.PG.DEFAULT_CHANNELS);
+                        }), (0, E.$K)(S.PG.DEFAULT_CHANNELS);
                     },
                     disableGoodStatus: n
                 }),
@@ -52,11 +52,11 @@ function R(e) {
                 (0, s.jsx)(g.ap, {
                     guildId: t,
                     onEdit: () => {
-                        E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+                        I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                             ...(0, l.hH)(t),
                             action_taken: S.W$[S.W$.EDIT_CUSTOMIZATION_QUESTIONS],
                             location: u
-                        }), (0, I.$K)(S.PG.CUSTOMIZATION_QUESTIONS);
+                        }), (0, E.$K)(S.PG.CUSTOMIZATION_QUESTIONS);
                     },
                     disableGoodStatus: n
                 }),
@@ -66,11 +66,11 @@ function R(e) {
                         (0, s.jsx)(g.P_, {
                             guildId: t,
                             onEdit: () => {
-                                E.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+                                I.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                                     ...(0, l.hH)(t),
                                     action_taken: S.W$[S.W$.EDIT_HOME_SETTINGS],
                                     location: u
-                                }), (0, I.$K)(S.PG.HOME_SETTINGS);
+                                }), (0, E.$K)(S.PG.HOME_SETTINGS);
                             },
                             disableGoodStatus: n
                         })

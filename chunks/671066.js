@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var s = n(735250);
 n(470079);
 var a = n(442837), i = n(481060), r = n(933557), l = n(592125), o = n(699516), c = n(594174), d = n(556012), u = n(689938), _ = n(647241);
-function E(e) {
+function I(e) {
     var t;
     let {
             action: n,
-            triggerType: E,
-            toggled: I,
+            triggerType: I,
+            toggled: E,
             onToggleAction: T
-        } = e, m = e => () => T(e), N = (0, d.c)(n.type, n, E), S = null === (t = n.metadata) || void 0 === t ? void 0 : t.channelId, h = (0, a.e7)([
+        } = e, m = e => () => T(e), N = (0, d.c)(n.type, n, I), S = null === (t = n.metadata) || void 0 === t ? void 0 : t.channelId, h = (0, a.e7)([
             c.default,
             o.Z,
             l.Z
@@ -51,7 +51,7 @@ function E(e) {
                         variant: 'text-xs/medium',
                         children: C
                     }),
-                    I && (0, s.jsxs)(i.Text, {
+                    E && (0, s.jsxs)(i.Text, {
                         color: 'text-muted',
                         variant: 'text-xs/medium',
                         children: [
@@ -70,7 +70,7 @@ function E(e) {
             (0, s.jsx)('div', {
                 children: (0, s.jsx)(i.Checkbox, {
                     type: i.Checkbox.Types.INVERTED,
-                    value: I,
+                    value: E,
                     onChange: m(!1),
                     className: _.__invalid_actionCheckbox
                 })

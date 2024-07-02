@@ -12,13 +12,13 @@ function _(e) {
             existingRules: n
         } = e, {
             cancelEditingRule: _,
-            isLoading: E,
-            hasChanges: I,
+            isLoading: I,
+            hasChanges: E,
             editingRule: T,
             errorMessage: m,
             saveEditingRule: N
-        } = (0, c.w)(), {updateRule: S} = (0, o.pH)(t), h = null != T, g = h && !(0, l.Vb)(T), C = h || I || g, x = async () => {
-            if (!I && !g)
+        } = (0, c.w)(), {updateRule: S} = (0, o.pH)(t), h = null != T, g = h && !(0, l.Vb)(T), C = h || E || g, x = async () => {
+            if (!E && !g)
                 return _();
             null != T && !g && S(T);
             let e = n.find(e => {
@@ -31,7 +31,7 @@ function _(e) {
             } catch (t) {
                 null != e && S(e);
             }
-        }, p = d.Z.Messages.CANCEL, R = !I && h ? d.Z.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({ ruleName: null == T ? void 0 : T.name }) : void 0;
+        }, p = d.Z.Messages.CANCEL, R = !E && h ? d.Z.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({ ruleName: null == T ? void 0 : T.name }) : void 0;
     return null != m && (R = (0, s.jsx)(i.Text, {
         variant: 'text-md/normal',
         color: 'text-danger',
@@ -42,8 +42,8 @@ function _(e) {
         className: u.saveNoticeContainer,
         children: C && (0, s.jsx)(i.SlideIn, {
             children: (0, s.jsx)(r.Z, {
-                submitting: E,
-                disabled: E,
+                submitting: I,
+                disabled: I,
                 onSave: x,
                 onReset: _,
                 onResetText: p,

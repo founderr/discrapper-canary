@@ -8,15 +8,15 @@ t.Z = e => {
             onRemoveTag: d,
             onAddTag: u,
             maxTaxLength: _,
-            maxTags: E,
-            disabled: I,
+            maxTags: I,
+            disabled: E,
             placeholder: T,
             ...m
         } = e, [N, S] = a.useState(null != i ? i : ''), h = n.map((e, t) => (0, s.jsxs)('span', {
-            className: r()(c.tag, { [c.__invalid_disabledTag]: I }),
+            className: r()(c.tag, { [c.__invalid_disabledTag]: E }),
             children: [
                 e,
-                !I && (0, s.jsx)(l.Clickable, {
+                !E && (0, s.jsx)(l.Clickable, {
                     className: c.closeWrapper,
                     onClick: () => d(t),
                     children: (0, s.jsx)(l.CloseSmallIcon, {
@@ -29,10 +29,10 @@ t.Z = e => {
         }, t)), g = a.useCallback(() => {
             let e = N.trim();
             if (0 !== e.length)
-                (null == E || !(n.length >= E)) && (u(e), S(''));
+                (null == I || !(n.length >= I)) && (u(e), S(''));
         }, [
             N,
-            E,
+            I,
             u,
             n.length
         ]), C = a.useCallback(e => {
@@ -52,7 +52,7 @@ t.Z = e => {
             n.length
         ]);
     return (0, s.jsxs)('div', {
-        className: r()(t, c.inputWrapper, { [c.disabled]: I }),
+        className: r()(t, c.inputWrapper, { [c.disabled]: E }),
         children: [
             h,
             (0, s.jsx)(l.TextInput, {
@@ -63,7 +63,7 @@ t.Z = e => {
                 onKeyDown: C,
                 onChange: S,
                 maxLength: _,
-                disabled: I,
+                disabled: E,
                 onBlur: g,
                 placeholder: T
             })

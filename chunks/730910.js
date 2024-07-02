@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(215569), u = n(780384), _ = n(481060), E = n(410030), I = n(367907), T = n(996753), m = n(626135), N = n(585483), S = n(999382), h = n(743475), g = n(983135), C = n(8426), x = n(969632), p = n(570961), R = n(208665), f = n(359191), L = n(84658), O = n(142961), A = n(232764), M = n(729311), v = n(850864), D = n(966301), j = n(981631), Z = n(689938), b = n(888543);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(215569), u = n(780384), _ = n(481060), I = n(410030), E = n(367907), T = n(996753), m = n(626135), N = n(585483), S = n(999382), h = n(743475), g = n(983135), C = n(8426), x = n(969632), p = n(570961), R = n(208665), f = n(359191), L = n(84658), O = n(142961), A = n(232764), M = n(729311), D = n(850864), v = n(966301), j = n(981631), Z = n(689938), b = n(888543);
 function U() {
     let e = (0, o.e7)([S.Z], () => S.Z.getGuild());
     return null == e ? null : (0, s.jsx)(G, { guild: e });
@@ -20,7 +20,7 @@ function G(e) {
         })), y = (0, o.e7)([f.Z], () => {
             let e = (0, L.lg)(S);
             return null != e && !f.Z.isEducationUpsellDismissed(e);
-        }), F = (0, E.ZP)(), k = a.useRef(null), [{spring: w}, H] = (0, l.useSpring)(() => ({ spring: 0 }));
+        }), F = (0, I.ZP)(), w = a.useRef(null), [{spring: k}, H] = (0, l.useSpring)(() => ({ spring: 0 }));
     a.useEffect(() => {
         function e() {
             H({
@@ -36,7 +36,7 @@ function G(e) {
             N.S.unsubscribe(j.CkL.EMPHASIZE_NOTICE, e);
         };
     }, [H]);
-    let V = (0, _.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(), Y = (0, _.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(), W = (0, u.wj)(F) ? V : Y, z = w.to({
+    let V = (0, _.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(), Y = (0, _.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(), W = (0, u.wj)(F) ? V : Y, z = k.to({
             range: [
                 0,
                 1
@@ -45,7 +45,7 @@ function G(e) {
                 (0, _.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(),
                 (0, _.useToken)(c.Z.colors.TEXT_NORMAL).hex()
             ]
-        }), K = w.to({
+        }), K = k.to({
             range: [
                 0,
                 1
@@ -59,9 +59,9 @@ function G(e) {
         if (S === L.PG.DEFAULT_CHANNELS)
             return (0, s.jsx)(M.j, {});
         if (S === L.PG.CUSTOMIZATION_QUESTIONS)
-            return (0, s.jsx)(D.Zm, {});
+            return (0, s.jsx)(v.Zm, {});
         else if (S === L.PG.HOME_SETTINGS)
-            return (0, s.jsx)(v.T, {});
+            return (0, s.jsx)(D.T, {});
     }
     let q = S === L.xh[L.xh.length - 1], X = async () => {
             let e = R.Z.advancedMode;
@@ -81,14 +81,14 @@ function G(e) {
             return !0;
         }, Q = async () => {
             m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, I.hH)(i),
+                ...(0, E.hH)(i),
                 step: L.PG[S],
                 back: !1,
                 skip: !G
             }), (0, g.Nb)((0, L.lg)(S)), await X() && (0, g.IG)(i, S);
         }, J = async () => {
             m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, I.hH)(i),
+                ...(0, E.hH)(i),
                 step: L.PG[S],
                 back: !0,
                 skip: !1
@@ -140,7 +140,7 @@ function G(e) {
                 style: { backgroundColor: K },
                 children: (0, s.jsxs)('div', {
                     className: b.flexContainer,
-                    ref: k,
+                    ref: w,
                     children: [
                         y ? (0, s.jsxs)('div', {
                             className: b.educationUpsellRoot,
@@ -160,7 +160,7 @@ function G(e) {
                             ]
                         }) : null,
                         (0, s.jsx)(_.FocusRingScope, {
-                            containerRef: k,
+                            containerRef: w,
                             children: (0, s.jsxs)('div', {
                                 className: b.actions,
                                 children: [

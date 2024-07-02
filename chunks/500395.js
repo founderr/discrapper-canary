@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(990547), i = n(481060), r = n(213609), l = n(787051), o = n(696936), c = n(539290), d = n(975464), u = n(689938), _ = n(705968), E = n(270395);
-function I(e) {
+var a = n(990547), i = n(481060), r = n(213609), l = n(787051), o = n(696936), c = n(539290), d = n(975464), u = n(689938), _ = n(705968), I = n(270395);
+function E(e) {
     let {config: t} = e, {
             noticeText: n,
             ctaLabel: a,
@@ -18,7 +18,7 @@ function I(e) {
         children: [
             (0, s.jsx)('img', {
                 className: _.__invalid_heroBanner,
-                src: E,
+                src: I,
                 alt: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
             }),
             (0, s.jsxs)('div', {
@@ -67,7 +67,7 @@ function T(e) {
     }), o) ? (0, s.jsx)(i.Spinner, {}) : (0, s.jsxs)('div', {
         className: _.__invalid_container,
         children: [
-            (0, s.jsx)(I, { config: n }),
+            (0, s.jsx)(E, { config: n }),
             (0, s.jsx)(d.C, {
                 onboardingMarketing: u,
                 onboardingMarketingError: c

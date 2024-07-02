@@ -22,7 +22,7 @@ function N(e) {
             icon: n.icon,
             bot: n.bot,
             size: 24
-        }), N = (0, r.ap)((0, o.ZP)()), h = l.useRef(null), C = l.useRef(null), f = l.useRef(null), I = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(), x = (0, c.ZP)('number' == typeof E ? '' : E, null != I ? I : ''), P = l.useMemo(() => {
+        }), N = (0, r.ap)((0, o.ZP)()), h = l.useRef(null), C = l.useRef(null), f = l.useRef(null), I = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(), x = (0, c.ZP)('number' == typeof E ? '' : E, null != I ? I : ''), v = l.useMemo(() => {
             var e, n;
             let t = (0, a.compact)([
                 d.Z.parseHexString(x),
@@ -36,22 +36,22 @@ function N(e) {
         }, [
             x,
             N
-        ]), v = A(h), g = A(C), T = l.useCallback(() => {
+        ]), P = A(h), g = A(C), T = l.useCallback(() => {
             var e, n, i, l, r, s, o, c, u;
-            let d = t.current, m = h.current, p = f.current, _ = parseInt(null !== (e = null == v ? void 0 : v.height) && void 0 !== e ? e : ''), E = parseInt(null !== (n = null == g ? void 0 : g.height) && void 0 !== n ? n : '');
+            let d = t.current, m = h.current, p = f.current, _ = parseInt(null !== (e = null == P ? void 0 : P.height) && void 0 !== e ? e : ''), E = parseInt(null !== (n = null == g ? void 0 : g.height) && void 0 !== n ? n : '');
             if (null != d && null != m && null != p && !isNaN(_) && !isNaN(E)) {
                 ;
                 let e = null !== (i = d.scrollTop) && void 0 !== i ? i : 0, n = 0 !== d.scrollHeight ? d.scrollHeight : E + 20, t = 0 !== d.clientHeight ? d.clientHeight : E + 20, A = E - _, h = (0, a.clamp)(n - t, A + 1, E + 20);
                 let C = (l = e, (r = A) === (s = h) ? 1 : (0, a.clamp)((l - r) / (s - r), 0, 1));
-                m.style.filter = 'brightness('.concat(1 + ((N ? 1.4 : 0.6) - (o = 1)) * C, ')'), m.style.backgroundColor = 'color-mix(in oklab,'.concat(x, ' ').concat((1 - C) * 100, '%, ').concat(P, ')'), p.style.opacity = ''.concat(0 + (1 - (c = 0)) * C), p.style.transform = 'translateY('.concat((u = _ / 4) + (0 - u) * C, 'px)');
+                m.style.filter = 'brightness('.concat(1 + ((N ? 1.4 : 0.6) - (o = 1)) * C, ')'), m.style.backgroundColor = 'color-mix(in oklab,'.concat(x, ' ').concat((1 - C) * 100, '%, ').concat(v, ')'), p.style.opacity = ''.concat(0 + (1 - (c = 0)) * C), p.style.transform = 'translateY('.concat((u = _ / 4) + (0 - u) * C, 'px)');
             }
         }, [
-            P,
+            v,
             x,
             null == g ? void 0 : g.height,
             N,
             t,
-            null == v ? void 0 : v.height
+            null == P ? void 0 : P.height
         ]);
     return l.useEffect(() => {
         T();

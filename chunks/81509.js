@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(120356), i = n.n(a), r = n(481060), l = n(596454), o = n(782568), c = n(377171), d = n(601964), u = n(346656), _ = n(526717), E = n(594278), I = n(549631), T = n(689938), m = n(334894);
+var a = n(120356), i = n.n(a), r = n(481060), l = n(596454), o = n(782568), c = n(377171), d = n(601964), u = n(346656), _ = n(526717), I = n(594278), E = n(549631), T = n(689938), m = n(334894);
 function N(e) {
     let {subscribers: t} = e;
     return (0, s.jsxs)('div', {
@@ -22,7 +22,7 @@ function N(e) {
             (0, s.jsxs)('div', {
                 className: m.subscriberCountText,
                 children: [
-                    (0, s.jsx)(I.Z, { color: c.Z.WHITE }),
+                    (0, s.jsx)(E.Z, { color: c.Z.WHITE }),
                     (0, s.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'always-white',
@@ -176,8 +176,8 @@ function C(e) {
         return null;
     let {
         guildIcon: u,
-        guildName: E,
-        guildAvatarUrl: I,
+        guildName: I,
+        guildAvatarUrl: E,
         subscriberCount: T,
         emojisToShow: N,
         notShownEmojiCount: C,
@@ -188,8 +188,8 @@ function C(e) {
         children: [
             (0, s.jsx)(S, {
                 guildIcon: u,
-                guildName: E,
-                guildAvatarUrl: I,
+                guildName: I,
+                guildAvatarUrl: E,
                 subscriberCount: T
             }),
             (0, s.jsx)(h, {
@@ -215,7 +215,7 @@ function x(e) {
                 children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_GUILD_SECTION_TITLE
             }),
             (0, s.jsx)(r.Spacer, { size: 24 }),
-            (0, s.jsx)(E.Z, {
+            (0, s.jsx)(I.Z, {
                 carouselClassName: m.creatorGuildCarousel,
                 items: t,
                 renderItem: e => (0, s.jsx)(C, { highlightedCreatorGuild: e }),

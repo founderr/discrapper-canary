@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(780384), o = n(481060), c = n(410030), d = n(134432), u = n(940627), _ = n(806519), E = n(768581), I = n(624138), T = n(689938), m = n(478655), N = n(129512), S = n(330065);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(780384), o = n(481060), c = n(410030), d = n(134432), u = n(940627), _ = n(806519), I = n(768581), E = n(624138), T = n(689938), m = n(478655), N = n(129512), S = n(330065);
 let h = [
     16,
     16,
@@ -28,11 +28,11 @@ t.Z = function (e) {
                 [m.cardDisabled]: g
             })
         });
-    let {name: v} = i, D = null != i.discoverySplash && /^data:/.test(i.discoverySplash) ? i.discoverySplash : E.ZP.getGuildDiscoverySplashURL({
+    let {name: D} = i, v = null != i.discoverySplash && /^data:/.test(i.discoverySplash) ? i.discoverySplash : I.ZP.getGuildDiscoverySplashURL({
             id: i.id,
             splash: i.discoverySplash,
             size: 240 * (0, d.x_)()
-        }), j = (0, l.wj)(O) ? N : S, Z = null !== (t = E.ZP.getGuildIconURL({
+        }), j = (0, l.wj)(O) ? N : S, Z = null !== (t = I.ZP.getGuildIconURL({
             id: i.id,
             icon: i.icon,
             size: 40
@@ -44,7 +44,7 @@ t.Z = function (e) {
             className: m.avatar
         });
     else {
-        let e = (0, I.Zg)(i.name);
+        let e = (0, E.Zg)(i.name);
         P = (0, s.jsx)('div', {
             className: m.defaultIcon,
             children: (0, s.jsx)(o.Text, {
@@ -68,7 +68,7 @@ t.Z = function (e) {
                     (0, s.jsx)('div', {
                         className: m.splash,
                         children: (0, s.jsx)('img', {
-                            src: null != D ? D : j,
+                            src: null != v ? v : j,
                             alt: '',
                             className: m.splashImage,
                             onLoad: () => M(!0)
@@ -107,7 +107,7 @@ t.Z = function (e) {
                             (0, s.jsx)(o.Text, {
                                 className: m.guildName,
                                 variant: 'text-md/normal',
-                                children: (0, s.jsx)('span', { children: v })
+                                children: (0, s.jsx)('span', { children: D })
                             })
                         ]
                     }),

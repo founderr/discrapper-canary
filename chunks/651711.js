@@ -11,16 +11,16 @@ function u(e) {
             sortedByIneligible: u
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
             isUserMFAEnabled: _,
-            isModerationMFAEnabled: E
-        } = (0, o.N)(), I = s.useCallback(async () => {
+            isModerationMFAEnabled: I
+        } = (0, o.N)(), E = s.useCallback(async () => {
             var e, s;
-            _ ? !E && await (null == n ? void 0 : null === (s = n.onRequireModeratorMFAClick) || void 0 === s ? void 0 : s.call(n)) : await (null == n ? void 0 : null === (e = n.onEnableMFAClick) || void 0 === e ? void 0 : e.call(n)), null == t || t();
+            _ ? !I && await (null == n ? void 0 : null === (s = n.onRequireModeratorMFAClick) || void 0 === s ? void 0 : s.call(n)) : await (null == n ? void 0 : null === (e = n.onEnableMFAClick) || void 0 === e ? void 0 : e.call(n)), null == t || t();
         }, [
             _,
-            E,
+            I,
             t,
             n
-        ]), T = (0, l.R)({ onEnableMFAClick: I });
+        ]), T = (0, l.R)({ onEnableMFAClick: E });
     return s.useMemo(() => {
         if (null == e)
             return null;
@@ -73,7 +73,7 @@ function u(e) {
                 description: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_NSFW_CONTENT_DESCRIPTION,
                 checked: e.notNSFW
             }), null != e.hasEnabled2FA) {
-            let t = !e.hasEnabled2FA && !_ && (null == n ? void 0 : n.onEnableMFAClick) != null, s = !e.hasEnabled2FA && !E && (null == n ? void 0 : n.onRequireModeratorMFAClick) != null, a = t || s;
+            let t = !e.hasEnabled2FA && !_ && (null == n ? void 0 : n.onEnableMFAClick) != null, s = !e.hasEnabled2FA && !I && (null == n ? void 0 : n.onRequireModeratorMFAClick) != null, a = t || s;
             o.push({
                 key: '2fa_requirement',
                 checkedLabel: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_2FA_ELIGIBLE,
@@ -81,7 +81,7 @@ function u(e) {
                 description: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_2FA_DESCRIPTION.format({ enableMFAHook: T }),
                 checked: e.hasEnabled2FA,
                 actionLabel: a ? d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_2MFA_ELIGIBILITY_CTA : void 0,
-                actionHandler: a ? I : void 0
+                actionHandler: a ? E : void 0
             });
         }
         return !0 === u && o.sort(e => e.checked ? 0 : -1), o;
@@ -90,8 +90,8 @@ function u(e) {
         u,
         _,
         n,
-        E,
+        I,
         T,
-        I
+        E
     ]);
 }

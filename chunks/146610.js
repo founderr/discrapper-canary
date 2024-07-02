@@ -1,11 +1,11 @@
 var s, a, i = n(735250);
 n(470079);
-var r = n(120356), l = n.n(r), o = n(151011), c = n(73346), d = n(169903), u = n(8584), _ = n(689938), E = n(982005), I = n(324609);
+var r = n(120356), l = n.n(r), o = n(151011), c = n(73346), d = n(169903), u = n(8584), _ = n(689938), I = n(982005), E = n(324609);
 (s = a || (a = {})).TIER_NAME = 'tier_name', s.SUBSCRIBERS = 'subscribers', s.AMOUNT = 'amount', s.PRICE = 'price';
 let T = [
     {
         key: 'tier_name',
-        cellClassName: E.tierNameColumn,
+        cellClassName: I.tierNameColumn,
         renderHeader: () => _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIERS,
         render(e) {
             let t, {subscriptionListing: n} = e;
@@ -16,27 +16,27 @@ let T = [
                         (0, i.jsx)('img', {
                             src: e,
                             alt: '',
-                            className: E.tierImage
+                            className: I.tierImage
                         }),
                         n.name
                     ]
                 });
             }
             return (0, i.jsx)(u.bL, {
-                className: E.tierNameCell,
+                className: I.tierNameCell,
                 children: t
             });
         }
     },
     {
         key: 'subscribers',
-        cellClassName: l()(E.subscribersColumn, I.cellAlignRight),
+        cellClassName: l()(I.subscribersColumn, E.cellAlignRight),
         renderHeader: () => _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_MEMBERS,
         render: e => (0, i.jsx)(u.av, { children: e.roleMemberCount })
     },
     {
         key: 'price',
-        cellClassName: l()(E.priceColumn, I.cellAlignRight),
+        cellClassName: l()(I.priceColumn, E.cellAlignRight),
         renderHeader: () => _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_PRICE,
         render(e) {
             let {subscriptionListing: t} = e, n = null == t ? void 0 : t.subscription_plans[0], s = null == n ? void 0 : n.price;
@@ -51,13 +51,13 @@ t.Z = e => {
             className: s
         } = e, a = (0, d.Z)(n, t);
     return (0, i.jsx)('div', {
-        className: l()(I.tableContainer, s),
+        className: l()(E.tableContainer, s),
         children: (0, i.jsx)(o.Z, {
             columns: T,
             data: a,
-            className: l()(I.table, E.table),
-            rowClassName: E.row,
-            headerClassName: l()(I.header, E.header)
+            className: l()(E.table, I.table),
+            rowClassName: I.row,
+            headerClassName: l()(E.header, I.header)
         })
     });
 };

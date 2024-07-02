@@ -1,11 +1,11 @@
 var s, a, i, r, l = n(442837), o = n(570140), c = n(40572), d = n(914010);
-let u = {}, _ = {}, E = 0;
-class I extends (r = l.ZP.Store) {
+let u = {}, _ = {}, I = 0;
+class E extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
     isUploadingEmoji() {
-        return E > 0;
+        return I > 0;
     }
     getEmojiRevision(e) {
         var t;
@@ -15,12 +15,12 @@ class I extends (r = l.ZP.Store) {
         return _[e];
     }
 }
-i = 'GuildSettingsEmojiStore', (a = 'displayName') in (s = I) ? Object.defineProperty(s, a, {
+i = 'GuildSettingsEmojiStore', (a = 'displayName') in (s = E) ? Object.defineProperty(s, a, {
     value: i,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : s[a] = i, t.Z = new I(o.Z, {
+}) : s[a] = i, t.Z = new E(o.Z, {
     EMOJI_DELETE: function (e) {
         let {
             guildId: t,
@@ -40,10 +40,10 @@ i = 'GuildSettingsEmojiStore', (a = 'displayName') in (s = I) ? Object.definePro
         _[t] = [];
     },
     EMOJI_UPLOAD_START: function () {
-        E++;
+        I++;
     },
     EMOJI_UPLOAD_STOP: function () {
-        E--;
+        I--;
     },
     GUILD_EMOJIS_UPDATE: function (e) {
         var t;

@@ -8,7 +8,7 @@ n.d(t, {
 }), n(47120);
 var s = n(735250), a = n(470079), i = n(481060), r = n(957011), l = n(587431), o = n(756066), c = n(689938), d = n(32033), u = n(270395);
 let _ = 'role_subscriptions_eligibility_modal';
-function E(e) {
+function I(e) {
     let {
         guild: t,
         eligibility: a,
@@ -44,7 +44,7 @@ function E(e) {
         ]
     });
 }
-function I(e) {
+function E(e) {
     let {
             guild: t,
             checkboxText: n
@@ -52,8 +52,8 @@ function I(e) {
             canSubmitAcceptance: o,
             error: u,
             loading: _,
-            submitAcceptTermsRequest: E
-        } = (0, r.Z)(t.id), [I, T] = a.useState(!1);
+            submitAcceptTermsRequest: I
+        } = (0, r.Z)(t.id), [E, T] = a.useState(!1);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(i.Checkbox, {
@@ -62,7 +62,7 @@ function I(e) {
                 },
                 size: 20,
                 type: i.Checkbox.Types.INVERTED,
-                value: I,
+                value: E,
                 children: (0, s.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
@@ -72,9 +72,9 @@ function I(e) {
             (0, s.jsx)(i.Spacer, { size: 24 }),
             (0, s.jsx)(i.Button, {
                 className: d.ctaButton,
-                disabled: !I || !o,
+                disabled: !E || !o,
                 grow: !0,
-                onClick: E,
+                onClick: I,
                 size: i.Button.Sizes.LARGE,
                 submitting: _,
                 children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
@@ -101,10 +101,10 @@ function T(e) {
             acceptTermsCheckboxText: d,
             wasRejectedInV1: u
         } = n;
-    return c ? u ? (0, s.jsx)(o.Z, { ...n }) : (0, s.jsx)(I, {
+    return c ? u ? (0, s.jsx)(o.Z, { ...n }) : (0, s.jsx)(E, {
         guild: t,
         checkboxText: d
-    }) : (0, s.jsx)(E, {
+    }) : (0, s.jsx)(I, {
         guild: t,
         eligibility: l,
         eligibilityLoading: a,

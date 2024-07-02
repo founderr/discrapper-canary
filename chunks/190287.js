@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(596454), d = n(296386), u = n(907040), _ = n(401227), E = n(999382), I = n(185923), T = n(689938), m = n(330029);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(596454), d = n(296386), u = n(907040), _ = n(401227), I = n(999382), E = n(185923), T = n(689938), m = n(330029);
 let N = e => {
     var t;
     let {
@@ -12,7 +12,7 @@ let N = e => {
             reasonMaxLength: h,
             placeholder: g,
             position: C
-        } = e, [x, p] = a.useState(!1), R = (0, l.e7)([E.Z], () => E.Z.isGuildMetadataLoaded());
+        } = e, [x, p] = a.useState(!1), R = (0, l.e7)([I.Z], () => I.Z.isGuildMetadataLoaded());
     return (0, s.jsxs)('div', {
         className: r()(m.reasonContainer),
         children: [
@@ -27,7 +27,7 @@ let N = e => {
                 renderPopout: e => {
                     let {closePopout: t} = e;
                     return (0, s.jsx)(u.Z, {
-                        pickerIntention: I.Hz.COMMUNITY_CONTENT,
+                        pickerIntention: E.Hz.COMMUNITY_CONTENT,
                         closePopout: t,
                         onSelectEmoji: (e, n) => {
                             null != e && T(e), n && t();

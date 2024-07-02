@@ -3,8 +3,8 @@ n.d(t, {
         return G;
     }
 }), n(47120), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n(442837), c = n(481060), d = n(239091), u = n(749210), _ = n(493544), E = n(479531), I = n(210887), T = n(246946), m = n(594174), N = n(154921), S = n(251625), h = n(226951), g = n(51144), C = n(434404), x = n(372454), p = n(999382), R = n(84613), f = n(740903), L = n(1080), O = n(981631), A = n(689938), M = n(842734), v = n(735194);
-function D(e, t, n) {
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n(442837), c = n(481060), d = n(239091), u = n(749210), _ = n(493544), I = n(479531), E = n(210887), T = n(246946), m = n(594174), N = n(154921), S = n(251625), h = n(226951), g = n(51144), C = n(434404), x = n(372454), p = n(999382), R = n(84613), f = n(740903), L = n(1080), O = n(981631), A = n(689938), M = n(842734), D = n(735194);
+function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -20,14 +20,14 @@ function j(e) {
             ban: r,
             hideDiscriminator: l,
             onClose: o
-        } = e, [d, _] = a.useState(!1), [I, T] = a.useState(null);
+        } = e, [d, _] = a.useState(!1), [E, T] = a.useState(null);
     async function m() {
         if (null != n) {
             T(null), _(!0);
             try {
                 await u.Z.unbanUser(n.id, i.id), o();
             } catch (e) {
-                T(new E.Z(e)), _(!1);
+                T(new I.Z(e)), _(!1);
             }
         }
     }
@@ -69,11 +69,11 @@ function j(e) {
                         variant: 'text-sm/normal',
                         children: null != r.reason && '' !== r.reason ? r.reason : A.Z.Messages.NO_BAN_REASON
                     }),
-                    null != I ? (0, s.jsx)(c.Text, {
+                    null != E ? (0, s.jsx)(c.Text, {
                         className: M.error,
                         color: 'text-danger',
                         variant: 'text-sm/normal',
-                        children: I.getAnyErrorMessage()
+                        children: E.getAnyErrorMessage()
                     }) : null
                 ]
             }),
@@ -104,7 +104,7 @@ class Z extends a.PureComponent {
             guild: n
         } = this.props;
         return (0, s.jsxs)(c.Clickable, {
-            className: r()(M.bannedUser, v.card),
+            className: r()(M.bannedUser, D.card),
             onClick: this.handleShowModal,
             onContextMenu: this.handleContextMenu,
             children: [
@@ -134,7 +134,7 @@ class Z extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), D(this, 'handleShowModal', () => {
+        super(...e), v(this, 'handleShowModal', () => {
             let {
                 guild: e,
                 user: t,
@@ -148,7 +148,7 @@ class Z extends a.PureComponent {
                 ban: a,
                 hideDiscriminator: n
             }));
-        }), D(this, 'handleContextMenu', e => {
+        }), v(this, 'handleContextMenu', e => {
             (0, d.jW)(e, async () => {
                 let {default: e} = await n.e('23835').then(n.bind(n, 768079));
                 return t => (0, s.jsx)(e, {
@@ -195,7 +195,7 @@ class b extends a.PureComponent {
         C.Z.setSearchQuery('');
     }
     constructor(...e) {
-        super(...e), D(this, 'getSortedBans', (0, S.oH)((e, t) => {
+        super(...e), v(this, 'getSortedBans', (0, S.oH)((e, t) => {
             if (null == e)
                 return [];
             let n = this.makeFilter(t), s = [];
@@ -204,7 +204,7 @@ class b extends a.PureComponent {
                 null != e && n(e) && s.push(e);
             }
             return s.sort((e, t) => e.username.localeCompare(t.username));
-        })), D(this, 'getRowHeight', (e, t) => {
+        })), v(this, 'getRowHeight', (e, t) => {
             var n;
             if (e > 0)
                 return 0;
@@ -216,7 +216,7 @@ class b extends a.PureComponent {
                 return 56;
             let r = i[t], l = null == s ? void 0 : s.get(null !== (n = null == r ? void 0 : r.id) && void 0 !== n ? n : '');
             return null == r || null == l ? 0 : 56;
-        }), D(this, 'renderRow', e => {
+        }), v(this, 'renderRow', e => {
             var t;
             let {
                     section: n,
@@ -242,12 +242,12 @@ class b extends a.PureComponent {
                     hideDiscriminator: r,
                     guild: l
                 }, d.id);
-        }), D(this, 'getSectionHeight', e => {
+        }), v(this, 'getSectionHeight', e => {
             if (e > 0)
                 return 0;
             let {bans: t} = this.props;
             return null == t ? 462 : 120;
-        }), D(this, 'renderSection', () => {
+        }), v(this, 'renderSection', () => {
             var e;
             let t;
             let {
@@ -304,7 +304,7 @@ class b extends a.PureComponent {
 }
 let U = o.ZP.connectStores([
     p.Z,
-    I.Z,
+    E.Z,
     T.Z
 ], () => {
     let {
@@ -316,7 +316,7 @@ let U = o.ZP.connectStores([
         searchQuery: null != n ? n : '',
         bans: e,
         guild: t,
-        theme: I.Z.theme,
+        theme: E.Z.theme,
         streamerMode: T.Z.hidePersonalInformation
     };
 })(b);

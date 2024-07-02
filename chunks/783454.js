@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 }), n(47120);
 var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(153124), c = n(259580), d = n(404203), u = n(689938), _ = n(232492);
-function E(e) {
+function I(e) {
     let {
             intiallyExpanded: t = !1,
             title: n,
             description: i,
-            children: E
-        } = e, [I, T] = a.useState(t), m = () => T(e => !e), N = (0, o.Dt)();
+            children: I
+        } = e, [E, T] = a.useState(t), m = () => T(e => !e), N = (0, o.Dt)();
     return (0, s.jsxs)('div', {
         className: _.container,
         children: [
             (0, s.jsx)(d.Z, {
-                className: r()(_.header, { [_.headerWithDescription]: I && null != i }),
+                className: r()(_.header, { [_.headerWithDescription]: E && null != i }),
                 onClick: m,
                 children: e => {
                     let {
@@ -32,18 +32,18 @@ function E(e) {
                                 onClick: a(m),
                                 'aria-label': u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
                                 'aria-controls': N,
-                                'aria-expanded': I,
+                                'aria-expanded': E,
                                 focusProps: { ringTarget: t },
                                 children: (0, s.jsx)(c.Z, {
                                     className: _.caret,
-                                    direction: I ? c.Z.Directions.UP : c.Z.Directions.DOWN
+                                    direction: E ? c.Z.Directions.UP : c.Z.Directions.DOWN
                                 })
                             })
                         ]
                     });
                 }
             }),
-            I && (0, s.jsxs)('div', {
+            E && (0, s.jsxs)('div', {
                 id: N,
                 children: [
                     null != i && (0, s.jsx)(l.FormText, {
@@ -54,7 +54,7 @@ function E(e) {
                     (0, s.jsx)('div', { className: _.divider }),
                     (0, s.jsx)('div', {
                         className: _.content,
-                        children: E
+                        children: I
                     })
                 ]
             })

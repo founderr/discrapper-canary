@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     }
 }), n(47120), n(724458);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(63063), c = n(256569), d = n(858457), u = n(273504), _ = n(981631), E = n(689938), I = n(511860);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(63063), c = n(256569), d = n(858457), u = n(273504), _ = n(981631), I = n(689938), E = n(511860);
 let T = o.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_REGEX);
 function m(e) {
     let {
@@ -12,15 +12,15 @@ function m(e) {
         errorText: a
     } = e;
     return t ? (0, s.jsx)('div', {
-        className: r()(I.subtext),
+        className: r()(E.subtext),
         children: (0, s.jsx)(l.Text, {
-            className: r()(I.errorSpan),
+            className: r()(E.errorSpan),
             variant: 'text-xs/medium',
             color: 'text-danger',
-            children: null != a ? a : E.Z.Messages.GUILD_AUTOMOD_REGEX_ERROR_HELP.format({ helpArticle: T })
+            children: null != a ? a : I.Z.Messages.GUILD_AUTOMOD_REGEX_ERROR_HELP.format({ helpArticle: T })
         })
     }) : (0, s.jsx)(l.Text, {
-        className: I.subtext,
+        className: E.subtext,
         variant: 'text-xs/medium',
         color: 'text-muted',
         children: n
@@ -69,7 +69,7 @@ function N(e) {
             g(e);
         }, [g]);
     return (0, s.jsxs)('div', {
-        className: r()(I.keywordsContainer, o),
+        className: r()(E.keywordsContainer, o),
         children: [
             (0, s.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
@@ -80,7 +80,7 @@ function N(e) {
                 maxTags: u.VW
             }),
             (0, s.jsx)(m, {
-                text: E.Z.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({ helpArticle: T }),
+                text: I.Z.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({ helpArticle: T }),
                 hasErrors: S.length > 0 || null != N,
                 errorText: null !== (n = null === (t = S.find(e => {
                     let {pattern: t} = e;

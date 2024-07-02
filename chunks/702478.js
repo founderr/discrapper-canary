@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(772848), r = n(640358), l = n(442837), o = n(544891), c = n(704215), d = n(692547), u = n(481060), _ = n(841470), E = n(605236), I = n(142497), T = n(706454), m = n(650774), N = n(430824), S = n(499150), h = n(626135), g = n(771212), C = n(434404), x = n(146596), p = n(559368), R = n(999382), f = n(981631), L = n(921944), O = n(190378), A = n(689938), M = n(980756), v = n(287837), D = n(573189), j = n(899947), Z = n(117831), b = n(996737), U = n(21846), G = n(280632), P = n(44234), B = n(117428);
+var s = n(735250), a = n(470079), i = n(772848), r = n(640358), l = n(442837), o = n(544891), c = n(704215), d = n(692547), u = n(481060), _ = n(841470), I = n(605236), E = n(142497), T = n(706454), m = n(650774), N = n(430824), S = n(499150), h = n(626135), g = n(771212), C = n(434404), x = n(146596), p = n(559368), R = n(999382), f = n(981631), L = n(921944), O = n(190378), A = n(689938), M = n(980756), D = n(287837), v = n(573189), j = n(899947), Z = n(117831), b = n(996737), U = n(21846), G = n(280632), P = n(44234), B = n(117428);
 let y = function (e, t, n) {
         let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3], a = null;
         return null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (a = A.Z.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : a = A.Z.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({ percentage: (0, r.o)(Math.abs(t), n) }), {
@@ -20,7 +20,7 @@ let y = function (e, t, n) {
             children: A.Z.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
         });
     };
-function k(e) {
+function w(e) {
     h.default.track(f.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
     let t = null == e ? f.E07.DEVELOPER_PORTAL : f.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e), n = (0, i.Z)();
     return o.tn.post({
@@ -34,12 +34,12 @@ function k(e) {
         window.open(t);
     });
 }
-let w = () => {
+let k = () => {
     let [e, t] = a.useState(!1), n = (0, l.e7)([R.Z], () => R.Z.getGuildId());
     return (0, s.jsx)(u.Button, {
         className: M.developerPortalCta,
         onClick: () => {
-            t(!0), k(n).then(() => {
+            t(!0), w(n).then(() => {
                 t(!1);
             });
         },
@@ -56,26 +56,26 @@ function H(e) {
             return null !== (e = m.Z.getMemberCount()) && void 0 !== e ? e : 0;
         }), {showAccessRate: o} = (0, g.eA)(t, !n);
     if (a.useEffect(() => {
-            o && ((0, E.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, E.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: L.L.AUTO }));
+            o && ((0, I.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, I.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: L.L.AUTO }));
         }, [o]), !o || !n || null == i)
         return null;
-    let _ = 10 * Math.ceil((1 - i) * 10), I = B, T = null, N = null;
-    return i >= 0.9 ? (I = B, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
+    let _ = 10 * Math.ceil((1 - i) * 10), E = B, T = null, N = null;
+    return i >= 0.9 ? (E = B, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
         ratingHook: (e, t) => (0, s.jsx)('span', {
             className: M.ratingVeryGood,
             children: e
         }, t)
-    }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({ accessRate: 10 })) : i >= (r > 10000 ? 0.7 : 0.8) ? (I = G, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+    }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({ accessRate: 10 })) : i >= (r > 10000 ? 0.7 : 0.8) ? (E = G, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
         ratingHook: (e, t) => (0, s.jsx)('span', {
             className: M.ratingGood,
             children: e
         }, t)
-    }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })) : i >= 0.5 ? (I = P, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
+    }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })) : i >= 0.5 ? (E = P, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
         ratingHook: (e, t) => (0, s.jsx)('span', {
             className: M.ratingNeutral,
             children: e
         }, t)
-    }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })) : (I = U, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+    }), N = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })) : (E = U, T = A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
         ratingHook: (e, t) => (0, s.jsx)('span', {
             className: M.ratingBad,
             children: e
@@ -103,7 +103,7 @@ function H(e) {
                             (0, s.jsx)('img', {
                                 alt: '',
                                 className: M.insightsIcon,
-                                src: I
+                                src: E
                             }),
                             (0, s.jsxs)('div', {
                                 children: [
@@ -181,7 +181,7 @@ function H(e) {
                                             (0, s.jsx)('img', {
                                                 alt: '',
                                                 className: M.actionIcon,
-                                                src: D
+                                                src: v
                                             }),
                                             (0, s.jsx)(u.Text, {
                                                 className: M.actionText,
@@ -203,7 +203,7 @@ function H(e) {
                                             (0, s.jsx)('img', {
                                                 alt: '',
                                                 className: M.actionIcon,
-                                                src: v
+                                                src: D
                                             }),
                                             (0, s.jsx)(u.Text, {
                                                 className: M.actionText,
@@ -230,7 +230,7 @@ function H(e) {
                                     variant: 'text-sm/normal',
                                     children: A.Z.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
                                         insightsHook: (e, n) => (0, s.jsx)(S.Z, {
-                                            onClick: () => k(t),
+                                            onClick: () => w(t),
                                             className: M.link,
                                             children: e
                                         }, n)
@@ -264,7 +264,7 @@ t.Z = () => {
         e,
         c
     ]), a.useEffect(() => {
-        (0, I.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
+        (0, E.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
     }, []);
     let d = null != r ? (0, s.jsx)('div', {
         className: M.__invalid_guildAnalyticsOverviewWrapper,
@@ -312,7 +312,7 @@ t.Z = () => {
                         variant: 'text-sm/normal',
                         children: A.Z.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
                     }),
-                    (0, s.jsx)(w, {})
+                    (0, s.jsx)(k, {})
                 ]
             }),
             d

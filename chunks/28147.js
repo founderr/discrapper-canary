@@ -3,8 +3,8 @@ t.d(n, {
         return T;
     }
 }), t(47120);
-var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(209173), o = t(555573), c = t(895924), u = t(809547), d = t(585483), m = t(499254), p = t(541099), _ = t(827498), E = t(392370), A = t(98880), N = t(561160), h = t(41558), C = t(106771), f = t(79984), I = t(981631), x = t(689938), P = t(933693);
-let v = Array(6).fill(0).map((e, n) => n), g = [
+var i = t(735250), l = t(470079), a = t(392711), r = t.n(a), s = t(209173), o = t(555573), c = t(895924), u = t(809547), d = t(585483), m = t(499254), p = t(541099), _ = t(827498), E = t(392370), A = t(98880), N = t(561160), h = t(41558), C = t(106771), f = t(79984), I = t(981631), x = t(689938), v = t(933693);
+let P = Array(6).fill(0).map((e, n) => n), g = [
         ,
         ,
         ,
@@ -32,13 +32,13 @@ function M(e) {
             searchesCommands: d,
             searchesBots: m
         }), {
-            fetchState: P,
-            applicationResults: v
+            fetchState: v,
+            applicationResults: P
         } = (0, E.Q2)({
             query: t,
             channel: n,
             fetches: a !== _._b.VOICE
-        }), g = null == P || P === u.M.FETCHING, T = l.useMemo(() => {
+        }), g = null == v || v === u.M.FETCHING, T = l.useMemo(() => {
             let e = f.map(e => ({
                 application: e,
                 installOnDemand: !1
@@ -51,14 +51,14 @@ function M(e) {
             }));
             return [
                 ...e,
-                ...r().compact(v.map(e => e.type === s.s.CONNECTION || n.has(e.data.id) ? null : {
+                ...r().compact(P.map(e => e.type === s.s.CONNECTION || n.has(e.data.id) ? null : {
                     application: e.data,
                     installOnDemand: !0
                 }))
             ];
         }, [
             a,
-            v,
+            P,
             f
         ]);
     return p ? (0, i.jsx)(j, {}) : A ? (0, i.jsx)(N.A, {
@@ -134,7 +134,7 @@ function R(e) {
         children: [
             (0, i.jsx)(h.Z, { title: x.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
-                className: P.sectionContentContainer,
+                className: v.sectionContentContainer,
                 children: t.map((e, t) => {
                     let {
                         command: a,
@@ -176,7 +176,7 @@ function S(e) {
         children: [
             (0, i.jsx)(h.Z, { title: x.Z.Messages.APPS }),
             (0, i.jsxs)('div', {
-                className: P.sectionContentContainer,
+                className: v.sectionContentContainer,
                 children: [
                     n.map((e, n) => {
                         let {
@@ -200,7 +200,7 @@ function S(e) {
         children: [
             (0, i.jsx)(h.Z, { title: x.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE }),
             (0, i.jsxs)('div', {
-                className: P.sectionActivitiesContentContainer,
+                className: v.sectionActivitiesContentContainer,
                 children: [
                     n.map((e, n) => {
                         let {
@@ -235,12 +235,12 @@ function j() {
         children: [
             (0, i.jsx)(h.Z, { title: x.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
-                className: P.sectionContentContainer,
-                children: v.map(e => (0, i.jsx)(f.Z, {}, e))
+                className: v.sectionContentContainer,
+                children: P.map(e => (0, i.jsx)(f.Z, {}, e))
             }),
             (0, i.jsx)(h.Z, { title: x.Z.Messages.APPS }),
             (0, i.jsx)('div', {
-                className: P.sectionContentContainer,
+                className: v.sectionContentContainer,
                 children: g.map(e => (0, i.jsx)(f.Z, {}, e))
             })
         ]

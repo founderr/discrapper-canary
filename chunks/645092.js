@@ -15,12 +15,12 @@ function I(e) {
             avatarSrc: h,
             eventHandlers: {
                 onMouseEnter: N,
-                onMouseLeave: f
+                onMouseLeave: p
             }
         } = (0, u.m)(!0);
     return (0, i.jsx)('div', {
         onMouseEnter: N,
-        onMouseLeave: f,
+        onMouseLeave: p,
         children: (0, i.jsx)(d.Z, {
             className: s()(m.mainContainer, { [m.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(u.S, { src: h }),

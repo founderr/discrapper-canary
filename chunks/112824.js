@@ -8,12 +8,12 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(120356), i = n.n(a), r = n(149765), l = n(442837), o = n(481060), c = n(430824), d = n(496675), u = n(700785), _ = n(647086), E = n(135899), I = n(689938), T = n(941377);
+var a = n(120356), i = n.n(a), r = n(149765), l = n(442837), o = n(481060), c = n(430824), d = n(496675), u = n(700785), _ = n(647086), I = n(135899), E = n(689938), T = n(941377);
 function m(e) {
-    return E.$X.filter(t => (null == e ? void 0 : e.id) !== _._ && u.oz(t, e));
+    return I.$X.filter(t => (null == e ? void 0 : e.id) !== _._ && u.oz(t, e));
 }
 function N(e) {
-    let {guild: t} = e, a = (0, l.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())), u = m(t), _ = u.length > 0, N = E.$X.some(e => !d.Z.can(e, t, null, {
+    let {guild: t} = e, a = (0, l.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())), u = m(t), _ = u.length > 0, N = I.$X.some(e => !d.Z.can(e, t, null, {
             [a.id]: {
                 ...a,
                 permissions: r.Od(a.permissions, e)
@@ -26,12 +26,12 @@ function N(e) {
                         (0, s.jsx)(o.Heading, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
-                            children: I.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
+                            children: E.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
                         }),
                         (0, s.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: I.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({ numPerms: u.length })
+                            children: E.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({ numPerms: u.length })
                         })
                     ]
                 }),
@@ -41,19 +41,19 @@ function N(e) {
                     height: 24,
                     width: 24,
                     className: T.warning,
-                    'aria-label': I.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
+                    'aria-label': E.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
                 }) : (0, s.jsx)(o.CircleCheckIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     height: 24,
                     width: 24,
                     className: T.check,
-                    'aria-label': I.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
+                    'aria-label': E.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
                 })
             ]
         });
     return _ ? N ? (0, s.jsx)(o.Tooltip, {
-        text: I.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
+        text: E.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
         children: e => (0, s.jsx)('div', {
             className: i()(T.simpleItemWrapper, T.disabled),
             ...e,

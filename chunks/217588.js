@@ -1,5 +1,5 @@
 n(724458), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), m = n(524444), I = n(98278), T = n(197115), h = n(430824), N = n(594174), f = n(285952), p = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), O = n(419922), R = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(481060), c = n(749210), d = n(367907), u = n(400106), _ = n(697568), E = n(183023), m = n(524444), I = n(98278), T = n(197115), h = n(430824), N = n(594174), p = n(285952), f = n(514342), C = n(626135), g = n(74538), S = n(453070), A = n(926491), x = n(378233), O = n(419922), R = n(688179), M = n(981631), v = n(474936), L = n(689938), Z = n(379157), P = n(830645);
 let b = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name }), D = e => {
         let {
             sticker: t,
@@ -21,22 +21,22 @@ function U(e) {
         sticker: t,
         description: n
     } = e;
-    return (0, i.jsxs)(f.Z, {
+    return (0, i.jsxs)(p.Z, {
         children: [
             (0, i.jsx)(O.ZP, {
                 sticker: t,
                 size: 48,
                 isInteracting: !0
             }),
-            (0, i.jsxs)(f.Z, {
-                direction: f.Z.Direction.VERTICAL,
-                justify: f.Z.Justify.CENTER,
+            (0, i.jsxs)(p.Z, {
+                direction: p.Z.Direction.VERTICAL,
+                justify: p.Z.Justify.CENTER,
                 className: P.truncatingText,
                 children: [
                     (0, i.jsx)(o.Text, {
                         className: P.__invalid_emojiName,
                         variant: 'text-md/semibold',
-                        children: (0, i.jsx)(p.Z, { children: t.name })
+                        children: (0, i.jsx)(f.Z, { children: t.name })
                     }),
                     null != n && (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
@@ -112,7 +112,7 @@ let y = e => {
                 sticker: n,
                 channel: s,
                 closePopout: I,
-                refreshPositionKey: p
+                refreshPositionKey: f
             } = e, [S, A] = a.useState(null), [x, R] = a.useState(!1), b = N.default.getCurrentUser(), D = g.ZP.canUseCustomStickersEverywhere(b), y = (0, r.e7)([h.Z], () => h.Z.getGuild(n.guild_id)), B = null != y, [k, G] = a.useState(!1), [F, w] = a.useState(null), V = a.useMemo(() => ({
                 page: null != s.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
                 section: M.jXE.STICKER_POPOUT
@@ -136,7 +136,7 @@ let y = e => {
         }), K = 'Custom Sticker Popout (Soft Upsell)');
         let Q = !z && !B && W && D;
         return (a.useEffect(() => {
-            p();
+            f();
         }, [
             x,
             S
@@ -207,10 +207,10 @@ let y = e => {
                                 children: [
                                     (0, i.jsx)(o.Clickable, {
                                         onClick: () => {
-                                            p(), G(!k);
+                                            f(), G(!k);
                                         },
                                         className: P.showMoreEmojis,
-                                        children: (0, i.jsxs)(f.Z, {
+                                        children: (0, i.jsxs)(p.Z, {
                                             children: [
                                                 (0, i.jsx)(o.Text, {
                                                     className: P.__invalid_showMoreEmojisLabel,
@@ -226,10 +226,10 @@ let y = e => {
                                             ]
                                         })
                                     }),
-                                    k && (0, i.jsx)(f.Z, {
-                                        wrap: f.Z.Wrap.WRAP,
-                                        align: f.Z.Align.START,
-                                        justify: f.Z.Justify.START,
+                                    k && (0, i.jsx)(p.Z, {
+                                        wrap: p.Z.Wrap.WRAP,
+                                        align: p.Z.Align.START,
+                                        justify: p.Z.Justify.START,
                                         className: P.otherEmojisContainer,
                                         children: t.map(e => (0, i.jsx)(o.Tooltip, {
                                             text: e.name,

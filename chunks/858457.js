@@ -63,7 +63,7 @@ async function d(e, t) {
 let u = (0, a.throttle)(d, 1000, { leading: !1 });
 function _(e, t) {
     var n, i;
-    let [r, l] = s.useState([]), [o, c] = s.useState(null), [_, E] = s.useState(null !== (i = null == e ? void 0 : null === (n = e.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) && void 0 !== i ? i : []), I = s.useCallback(t => {
+    let [r, l] = s.useState([]), [o, c] = s.useState(null), [_, I] = s.useState(null !== (i = null == e ? void 0 : null === (n = e.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) && void 0 !== i ? i : []), E = s.useCallback(t => {
             if (!(t.length < 3))
                 u({
                     ...e,
@@ -90,11 +90,11 @@ function _(e, t) {
                     }
                 }, e => {
                     l(e), 0 === e.length && c(null);
-                }), E(n), null == t || t(n);
+                }), I(n), null == t || t(n);
         }, [
             e,
             t
         ]),
-        validateEditingValueChanged: I
+        validateEditingValueChanged: E
     };
 }

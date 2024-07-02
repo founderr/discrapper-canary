@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120), n(536091);
-var s = n(735250), a = n(470079), i = n(442837), r = n(692547), l = n(481060), o = n(999382), c = n(279542), d = n(823379), u = n(63063), _ = n(426563), E = n(727072), I = n(85960), T = n(577330), m = n(65912), N = n(51248), S = n(546513), h = n(572456), g = n(273504), C = n(981631), x = n(689938), p = n(571568);
+var s = n(735250), a = n(470079), i = n(442837), r = n(692547), l = n(481060), o = n(999382), c = n(279542), d = n(823379), u = n(63063), _ = n(426563), I = n(727072), E = n(85960), T = n(577330), m = n(65912), N = n(51248), S = n(546513), h = n(572456), g = n(273504), C = n(981631), x = n(689938), p = n(571568);
 function R(e) {
     var t, n;
     let {
@@ -16,13 +16,13 @@ function R(e) {
         } = (0, m.V)(), {
             guild: A,
             subsection: M
-        } = (0, i.cj)([o.Z], () => o.Z.getProps()), v = null !== (n = null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : R) && void 0 !== n ? n : C.lds, D = null != L, [j] = (0, E.RD)(v), {rulesByTriggerType: Z} = (0, E.pH)(v), b = {
-            [I.vh.MEMBERS]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
-            [I.vh.CONTENT]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
+        } = (0, i.cj)([o.Z], () => o.Z.getProps()), D = null !== (n = null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : R) && void 0 !== n ? n : C.lds, v = null != L, [j] = (0, I.RD)(D), {rulesByTriggerType: Z} = (0, I.pH)(D), b = {
+            [E.vh.MEMBERS]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
+            [E.vh.CONTENT]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
         }, U = a.useMemo(() => Object.values(null != Z ? Z : {}).flat().filter(d.lm), [Z]);
     a.useEffect(() => {
-        D && O(null);
-    }, [v]);
+        v && O(null);
+    }, [D]);
     let G = a.useCallback((e, t) => {
             if (null != e) {
                 var n, s;
@@ -31,7 +31,7 @@ function R(e) {
                     return n === e;
                 })) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : null;
             }
-            return null != t ? I.I6[t].getDefaultRuleName() : null;
+            return null != t ? E.I6[t].getDefaultRuleName() : null;
         }, [U]), P = a.useMemo(() => {
             var e, t;
             return G(null !== (e = null == L ? void 0 : L.id) && void 0 !== e ? e : null, null !== (t = null == L ? void 0 : L.triggerType) && void 0 !== t ? t : null);
@@ -40,17 +40,17 @@ function R(e) {
             L
         ]);
     a.useEffect(() => {
-        f(D, (0, h.af)(P));
+        f(v, (0, h.af)(P));
     }, [
         f,
-        D,
+        v,
         P
     ]);
-    let B = (0, I.Z6)(v), y = e => (0, s.jsx)(s.Fragment, {
+    let B = (0, E.Z6)(D), y = e => (0, s.jsx)(s.Fragment, {
             children: e.map(e => {
                 var t;
                 return (0, s.jsx)(S.Z, {
-                    guildId: v,
+                    guildId: D,
                     triggerType: e,
                     rules: null !== (t = Z[e]) && void 0 !== t ? t : [],
                     initWithEdit: M === C.KsC.AUTOMOD_MENTION_SPAM && e === g.fX.MENTION_SPAM
@@ -139,10 +139,10 @@ function R(e) {
                 className: p.explicitContentFilterSection
             }),
             (0, s.jsx)(N.Z, {
-                guildId: v,
+                guildId: D,
                 existingRules: U
             }),
-            D && (0, s.jsx)('div', { className: p.endSpacer })
+            v && (0, s.jsx)('div', { className: p.endSpacer })
         ]
     });
 }

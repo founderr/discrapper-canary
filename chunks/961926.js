@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     }
 });
-var s = n(735250), a = n(470079), i = n(536982), r = n(285318), l = n(456677), o = n(55889), c = n(300453), d = n(620436), u = n(273504), _ = n(689938), E = n(583975);
-function I(e) {
-    var t, n, I;
+var s = n(735250), a = n(470079), i = n(536982), r = n(285318), l = n(456677), o = n(55889), c = n(300453), d = n(620436), u = n(273504), _ = n(689938), I = n(583975);
+function E(e) {
+    var t, n, E;
     let {
             rule: T,
             onChangeRule: m
@@ -23,7 +23,7 @@ function I(e) {
         ]);
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsxs)('div', {
-            className: E.cardContentsContainer,
+            className: I.cardContentsContainer,
             children: [
                 (0, s.jsxs)(c.Z, {
                     step: 1,
@@ -37,7 +37,7 @@ function I(e) {
                             onChange: N,
                             initialValue: null === (t = T.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
                             maxWordCount: u.I3,
-                            collapsed: (null === (n = T.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (I = T.triggerMetadata) || void 0 === I ? void 0 : I.allowList.length) === 0
+                            collapsed: (null === (n = T.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (E = T.triggerMetadata) || void 0 === E ? void 0 : E.allowList.length) === 0
                         })
                     ]
                 }),

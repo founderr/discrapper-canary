@@ -4,13 +4,13 @@ let u = [
         'new_members',
         'visitors',
         'communicators'
-    ], _ = {}, E = {}, I = null;
+    ], _ = {}, I = {}, E = null;
 function T(e) {
     let {
         guildId: t,
         stats: n
     } = e;
-    I = null;
+    E = null;
     let s = {}, a = {}, i = n[0], r = n[1];
     null != i && u.forEach(e => {
         if (null != i[e]) {
@@ -25,7 +25,7 @@ function T(e) {
 }
 function m(e) {
     let {error: t} = e;
-    I = t.code;
+    E = t.code;
 }
 class N extends (r = c.ZP.Store) {
     getOverviewAnalytics(e) {
@@ -33,15 +33,15 @@ class N extends (r = c.ZP.Store) {
     }
     getMemberInsights(e) {
         var t;
-        return null !== (t = E[e]) && void 0 !== t ? t : {};
+        return null !== (t = I[e]) && void 0 !== t ? t : {};
     }
     shouldFetchMemberInsights(e) {
         var t;
-        let n = null === (t = E[e]) || void 0 === t ? void 0 : t.fetchedAt;
+        let n = null === (t = I[e]) || void 0 === t ? void 0 : t.fetchedAt;
         return null == n || Date.now() - n > 43200000;
     }
     getError() {
-        return I;
+        return E;
     }
 }
 i = 'GuildSettingsAnalyticsStore', (a = 'displayName') in (s = N) ? Object.defineProperty(s, a, {
@@ -61,7 +61,7 @@ i = 'GuildSettingsAnalyticsStore', (a = 'displayName') in (s = N) ? Object.defin
             guildId: t,
             ...n
         } = e;
-        E[t] = {
+        I[t] = {
             ...n,
             fetchedAt: Date.now()
         };

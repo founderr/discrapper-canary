@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return D;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(699581), o = n(91192), c = n(374470), d = n(442837), u = n(481060), _ = n(497321), E = n(351773), I = n(110924), T = n(724757), m = n(987707), N = n(999382), S = n(210887), h = n(430824), g = n(246946), C = n(884737), x = n(770436), p = n(65226), R = n(689938), f = n(614892), L = n(518717);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(699581), o = n(91192), c = n(374470), d = n(442837), u = n(481060), _ = n(497321), I = n(351773), E = n(110924), T = n(724757), m = n(987707), N = n(999382), S = n(210887), h = n(430824), g = n(246946), C = n(884737), x = n(770436), p = n(65226), R = n(689938), f = n(614892), L = n(518717);
 let O = n(74773), A = n(210657);
 function M(e) {
     let {
@@ -16,13 +16,13 @@ function M(e) {
             setLastExpandedRef: d,
             onHeaderClick: u,
             onContentClick: _
-        } = e, E = a.useRef(l);
+        } = e, I = a.useRef(l);
     a.useEffect(() => {
-        E.current = l;
+        I.current = l;
     }, [l]);
-    let I = (0, T.Z)('audit-log', E);
+    let E = (0, T.Z)('audit-log', I);
     return (0, s.jsx)(o.bG, {
-        navigator: I,
+        navigator: E,
         children: (0, s.jsx)(o.SJ, {
             children: e => {
                 let {
@@ -50,7 +50,7 @@ function M(e) {
         })
     });
 }
-function v() {
+function D() {
     let e, t;
     let {
             guildId: n,
@@ -58,8 +58,8 @@ function v() {
             isInitialLoading: o,
             isLoading: T,
             isLoadingNextPage: x,
-            showLoadMore: v,
-            hasError: D,
+            showLoadMore: D,
+            hasError: v,
             hasOlderLogs: j,
             rawLogs: Z,
             theme: b,
@@ -89,10 +89,10 @@ function v() {
             expandedId: null,
             lastExpandedId: null,
             actionFilterQuery: ''
-        }), B = C._$(Z, i), y = !1, F = a.useRef(null), k = (0, I.Z)(G), w = (0, I.Z)(B), H = () => {
+        }), B = C._$(Z, i), y = !1, F = a.useRef(null), w = (0, E.Z)(G), k = (0, E.Z)(B), H = () => {
             var e;
             return (null === (e = F.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1;
-        }, V = !v && (null == B ? void 0 : B.length) !== (null == w ? void 0 : w.length) && null != F && H(), Y = () => {
+        }, V = !D && (null == B ? void 0 : B.length) !== (null == k ? void 0 : k.length) && null != F && H(), Y = () => {
             let n = {
                 expanded: null,
                 lastExpanded: null
@@ -106,7 +106,7 @@ function v() {
                 null != t && (0, c.k)(t) && (n.expanded = t.getBoundingClientRect());
             }
             return n;
-        }, W = Y(), z = (0, E.Z)(null, () => {
+        }, W = Y(), z = (0, I.Z)(null, () => {
             let {expandedId: n} = G;
             null == n || y ? null != n && (y = !1) : (e = null, t = null, P(e => ({
                 ...e,
@@ -115,7 +115,7 @@ function v() {
             })), W = Y());
         });
     a.useEffect(() => {
-        G.expandedId !== (null == k ? void 0 : k.expandedId) && K();
+        G.expandedId !== (null == w ? void 0 : w.expandedId) && K();
     }, []);
     let K = () => {
             let e = F.current;
@@ -182,7 +182,7 @@ function v() {
                             if (T || o)
                                 return ee();
                             if ((null == B ? void 0 : B.length) === 0) {
-                                let e = D ? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY, t = D ? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+                                let e = v ? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY, t = v ? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
                                 return (0, s.jsxs)(u.EmptyState, {
                                     theme: b,
                                     className: f.__invalid_empty,
@@ -218,7 +218,7 @@ function v() {
                             });
                         })(),
                         (() => {
-                            if (v && j && !U)
+                            if (D && j && !U)
                                 return (0, s.jsx)(u.Button, {
                                     color: u.Button.Colors.PRIMARY,
                                     className: f.__invalid_loadMore,

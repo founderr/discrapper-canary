@@ -1,10 +1,10 @@
 n.d(t, {
     X: function () {
-        return v;
+        return D;
     }
 }), n(47120), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(544891), c = n(433517), d = n(481060), u = n(852860), _ = n(933557), E = n(655006), I = n(769654), T = n(984933), m = n(650774), N = n(430824), S = n(496675), h = n(699516), g = n(594174), C = n(434404), x = n(999382), p = n(54842), R = n(981631), f = n(731455), L = n(689938), O = n(188482), A = n(922905);
-let M = 'dismissedCommunityFeaturesUpsell', v = () => {
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(544891), c = n(433517), d = n(481060), u = n(852860), _ = n(933557), I = n(655006), E = n(769654), T = n(984933), m = n(650774), N = n(430824), S = n(496675), h = n(699516), g = n(594174), C = n(434404), x = n(999382), p = n(54842), R = n(981631), f = n(731455), L = n(689938), O = n(188482), A = n(922905);
+let M = 'dismissedCommunityFeaturesUpsell', D = () => {
         let e;
         let {
                 guild: t,
@@ -38,7 +38,7 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
             },
             errorMessage: e
         });
-    }, D = e => {
+    }, v = e => {
         let {
                 discoveryEnabled: t,
                 onboardingEnabled: n,
@@ -46,13 +46,13 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
             } = e, [r, u] = a.useState(!0 === c.K.get(M)), _ = (0, l.e7)([m.Z], () => {
                 var e;
                 return null !== (e = m.Z.getMemberCount(i.id)) && void 0 !== e ? e : 0;
-            }), [E, T] = a.useState(!1);
+            }), [I, T] = a.useState(!1);
         a.useEffect(() => {
             o.tn.get(R.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(i.id)).then(e => {
                 T(e.body.eligible_for_admin_server);
             }).catch(() => T(!1));
         }, []);
-        let S = (0, l.e7)([N.Z], () => N.Z.getGuild('942897714956472401')), h = i.isCommunity() && _ >= 1000 && E && !(null != S);
+        let S = (0, l.e7)([N.Z], () => N.Z.getGuild('942897714956472401')), h = i.isCommunity() && _ >= 1000 && I && !(null != S);
         if (t && n && !h)
             return null;
         let g = async () => {
@@ -61,7 +61,7 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
                     url: R.ANM.JOIN_ADMIN_SERVER(i.id),
                     oldFormErrors: !0
                 });
-                C.Z.close(), (0, I.X)(e.body.id);
+                C.Z.close(), (0, E.X)(e.body.id);
             } catch {
             }
         };
@@ -152,7 +152,7 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
             } = (0, l.cj)([S.Z], () => ({
                 canManageGuild: S.Z.can(R.Plq.MANAGE_GUILD, t),
                 isGuildAdmin: S.Z.can(R.Plq.ADMINISTRATOR, t)
-            })), o = (0, l.e7)([T.ZP], () => null != t ? T.ZP.getChannels(t.id) : null), u = a.useMemo(f.jb, []), I = !0 !== c.K.get(M), {enableRaidAlerts: m} = E.l.useExperiment({
+            })), o = (0, l.e7)([T.ZP], () => null != t ? T.ZP.getChannels(t.id) : null), u = a.useMemo(f.jb, []), E = !0 !== c.K.get(M), {enableRaidAlerts: m} = I.l.useExperiment({
                 guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : R.lds,
                 location: 'c1af51_2'
             }, { autoTrackExposure: n });
@@ -177,7 +177,7 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
                     rulesChannelId: null,
                     publicUpdatesChannelId: null
                 });
-            }, v = e => {
+            }, D = e => {
                 C.Z.updateGuild({ rulesChannelId: e });
             }, j = e => {
                 C.Z.updateGuild({ safetyAlertsChannelId: e });
@@ -235,7 +235,7 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
             title: L.Z.Messages.GUILD_SETTINGS_COMMUNITY,
             tag: d.FormTitleTags.H1,
             children: [
-                I ? (0, s.jsx)(D, {
+                E ? (0, s.jsx)(v, {
                     discoveryEnabled: t.features.has(R.oNc.DISCOVERABLE),
                     onboardingEnabled: t.features.has(R.oNc.GUILD_ONBOARDING),
                     guild: t
@@ -262,7 +262,7 @@ let M = 'dismissedCommunityFeaturesUpsell', v = () => {
                             children: (0, s.jsx)(d.SearchableSelect, {
                                 value: t.rulesChannelId,
                                 options: N,
-                                onChange: v,
+                                onChange: D,
                                 isDisabled: !n
                             })
                         })

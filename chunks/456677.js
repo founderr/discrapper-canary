@@ -26,7 +26,7 @@ function c(e) {
                 ...t,
                 actions: i
             });
-        }, E = e => async n => {
+        }, I = e => async n => {
             let s = t.actions.find(t => t.type === e), a = null != s, i = u[e], r = n ? s : i;
             if (null != r && (!a || n)) {
                 let n = d[e];
@@ -42,7 +42,7 @@ function c(e) {
                 triggerType: t.triggerType,
                 action: null != n ? n : u[e],
                 toggled: null != n,
-                onToggleAction: E(e)
+                onToggleAction: I(e)
             }, e);
         })
     });

@@ -1,7 +1,7 @@
 let s, a, i;
 n(47120);
-var r, l, o, c, d = n(392711), u = n.n(d), _ = n(149765), E = n(866442), I = n(442837), T = n(570140), m = n(561654), N = n(430824), S = n(990492), h = n(823379), g = n(700785), C = n(999382), x = n(203377), p = n(981631);
-let R = new Set(), f = p.QZA.CLOSED, L = !1, O = !1, A = [], M = [], v = x.ZI.DISPLAY, D = !1, j = new Set(), Z = new Map(), b = new Map();
+var r, l, o, c, d = n(392711), u = n.n(d), _ = n(149765), I = n(866442), E = n(442837), T = n(570140), m = n(561654), N = n(430824), S = n(990492), h = n(823379), g = n(700785), C = n(999382), x = n(203377), p = n(981631);
+let R = new Set(), f = p.QZA.CLOSED, L = !1, O = !1, A = [], M = [], D = x.ZI.DISPLAY, v = !1, j = new Set(), Z = new Map(), b = new Map();
 function U() {
     if (null == s || null == A)
         return [];
@@ -34,7 +34,7 @@ function P() {
     s = C.Z.getProps().guild, L = !1, O = !1, i = void 0, R.clear(), f = p.QZA.OPEN, M = [...A = null != s ? u()(N.Z.getRoles(s.id)).values().sortBy(e => {
             let {position: t} = e;
             return t;
-        }).reverse().value() : []], D = !1, e && (b.clear(), Z.forEach((e, t) => {
+        }).reverse().value() : []], v = !1, e && (b.clear(), Z.forEach((e, t) => {
         b.set(t, [...e]);
     }));
 }
@@ -47,7 +47,7 @@ let B = u().debounce(() => {
                 return n === e;
             });
         }(t)) && (R.delete(t), e = !0);
-    }), 0 === R.size && (L = !1), D && u().isEqual(Z, b) && (e = !0, D = !1), e && H.emitChange();
+    }), 0 === R.size && (L = !1), v && u().isEqual(Z, b) && (e = !0, v = !1), e && H.emitChange();
 }, 500);
 function y(e, t) {
     let n = A.indexOf(e);
@@ -65,7 +65,7 @@ function F(e) {
         return n === e;
     });
 }
-function k(e) {
+function w(e) {
     let {guildId: t} = e;
     if (null == s || t !== s.id || f === p.QZA.SUBMITTING)
         return !1;
@@ -83,12 +83,12 @@ function k(e) {
         }) || null == t ? R.delete(e) : n[s] = t;
     }), 0 === R.size && (L = !1), O = !1, A = [...n];
 }
-class w extends (r = I.ZP.Store) {
+class k extends (r = E.ZP.Store) {
     initialize() {
         this.waitFor(C.Z, m.Z, N.Z);
     }
     hasChanges() {
-        return L || O || D;
+        return L || O || v;
     }
     get errorMessage() {
         return i;
@@ -97,7 +97,7 @@ class w extends (r = I.ZP.Store) {
         return O;
     }
     get hasRoleConfigurationChanges() {
-        return D;
+        return v;
     }
     get guild() {
         return s;
@@ -115,7 +115,7 @@ class w extends (r = I.ZP.Store) {
         return f;
     }
     get lastRoleEditSection() {
-        return v;
+        return D;
     }
     getSortDeltas() {
         return U();
@@ -133,13 +133,13 @@ class w extends (r = I.ZP.Store) {
         return b;
     }
 }
-c = 'GuildSettingsRolesStore', (o = 'displayName') in (l = w) ? Object.defineProperty(l, o, {
+c = 'GuildSettingsRolesStore', (o = 'displayName') in (l = k) ? Object.defineProperty(l, o, {
     value: c,
     enumerable: !0,
     configurable: !0,
     writable: !0
 }) : l[o] = c;
-let H = new w(T.Z, __OVERLAY__ ? {} : {
+let H = new k(T.Z, __OVERLAY__ ? {} : {
     GUILD_SETTINGS_ROLES_INIT: () => P(),
     GUILD_SETTINGS_INIT: G,
     GUILD_SETTINGS_SET_SECTION: G,
@@ -189,7 +189,7 @@ let H = new w(T.Z, __OVERLAY__ ? {} : {
         let {
                 id: t,
                 color: n
-            } = e, s = 0 === n ? null : (0, E.Rf)(n), a = F(t);
+            } = e, s = 0 === n ? null : (0, I.Rf)(n), a = F(t);
         return null != a && y(a, {
             color: n,
             colorString: s
@@ -252,15 +252,15 @@ let H = new w(T.Z, __OVERLAY__ ? {} : {
             } = e, s = F(t);
         if (null == s)
             return !1;
-        D = !0, j.add(s.id), b.set(s.id, n), B();
+        v = !0, j.add(s.id), b.set(s.id, n), B();
     },
     GUILD_SETTINGS_CLOSE: function () {
-        s = null, M = A = [], Z.clear(), R.clear(), b.clear(), j = new Set(), L = !1, O = !1, D = !1, f = p.QZA.CLOSED;
+        s = null, M = A = [], Z.clear(), R.clear(), b.clear(), j = new Set(), L = !1, O = !1, v = !1, f = p.QZA.CLOSED;
     },
-    GUILD_ROLE_CREATE: k,
-    GUILD_ROLE_UPDATE: k,
+    GUILD_ROLE_CREATE: w,
+    GUILD_ROLE_UPDATE: w,
     GUILD_ROLE_DELETE: function (e) {
-        return j.has(e.roleId) && (j.delete(e.roleId), Z.delete(e.roleId), b.delete(e.roleId), D = !1), k(e);
+        return j.has(e.roleId) && (j.delete(e.roleId), Z.delete(e.roleId), b.delete(e.roleId), v = !1), w(e);
     },
     GUILD_SETTINGS_ROLES_SUBMITTING: function () {
         f = p.QZA.SUBMITTING;
@@ -274,7 +274,7 @@ let H = new w(T.Z, __OVERLAY__ ? {} : {
     },
     GUILD_SETTINGS_ROLES_EDIT_SECTION_UPDATE: function (e) {
         let {section: t} = e;
-        v = t;
+        D = t;
     }
 });
 t.Z = H;

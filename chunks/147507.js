@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 }), n(47120);
-var i, a, s, l, r = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(887024), _ = n(772848), E = n(468194), m = n(477690), I = n(481060), T = n(230711), h = n(745510), N = n(739566), f = n(64078), p = n(29270), C = n(709586), g = n(482207), S = n(702346), A = n(267642), x = n(981631), O = n(689938), R = n(517134);
+var i, a, s, l, r = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(887024), _ = n(772848), E = n(468194), m = n(477690), I = n(481060), T = n(230711), h = n(745510), N = n(739566), p = n(64078), f = n(29270), C = n(709586), g = n(482207), S = n(702346), A = n(267642), x = n(981631), O = n(689938), R = n(517134);
 (s = i || (i = {})).ENTER = 'enter', s.CONFETTI = 'confetti', s.LEAF_PEEL = 'leaf_peel', s.LEAF_FALL = 'leaf_fall', s.EXIT = 'exit';
 let M = {
     enter: {
@@ -120,7 +120,7 @@ function k(e) {
         }()), {
             createMultipleConfettiAt: T,
             confettiCanvas: N
-        } = o.useContext(h.h), [f, p] = o.useState(null), C = (0, u.uR)(N, f), g = function (e, t) {
+        } = o.useContext(h.h), [p, f] = o.useState(null), C = (0, u.uR)(N, p), g = function (e, t) {
             if (null == e)
                 return 'enter';
             switch (e) {
@@ -239,7 +239,7 @@ function k(e) {
     ]), (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Ji, {
-                ref: p,
+                ref: f,
                 sprites: y,
                 colors: D,
                 spriteWidth: 45,
@@ -284,7 +284,7 @@ function G(e) {
                 return x.Eu4.TIER_3;
             }
             return null;
-        }(n), d = (0, p.Z)(n), {
+        }(n), d = (0, f.Z)(n), {
             createMultipleConfettiAt: u,
             addClickListener: _
         } = o.useContext(h.h), [E, m] = o.useState(!1), M = o.useRef(null), {reducedMotion: v} = o.useContext(I.AccessibilityPreferencesContext), L = (0, N.ZH)(n), Z = L.nick, P = s(L);
@@ -324,7 +324,7 @@ function G(e) {
         ]), j = o.useCallback(() => {
             m(!1);
         }, []), U = o.useCallback(() => {
-            (0, f.AI)({ settingsVisible: !0 }), T.Z.open(x.oAB.POGGERMODE), m(!1);
+            (0, p.AI)({ settingsVisible: !0 }), T.Z.open(x.oAB.POGGERMODE), m(!1);
         }, []), y = o.useCallback((e, t) => {
             (null == t ? void 0 : t.id.startsWith(b)) && U();
         }, [U]);

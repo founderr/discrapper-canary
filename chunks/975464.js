@@ -8,7 +8,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(990547), i = n(481060), r = n(213609), l = n(605288), o = n(787051), c = n(346163), d = n(587431), u = n(271267), _ = n(320893), E = n(81509), I = n(662379), T = n(60533), m = n(581050), N = n(675523);
+var a = n(990547), i = n(481060), r = n(213609), l = n(605288), o = n(787051), c = n(346163), d = n(587431), u = n(271267), _ = n(320893), I = n(81509), E = n(662379), T = n(60533), m = n(581050), N = n(675523);
 function S(e) {
     let {
             onboardingMarketing: t,
@@ -21,7 +21,7 @@ function S(e) {
                     t
                 ]
             });
-        }, r = (0, s.jsx)(a, { children: (0, s.jsx)(I.Z, {}) }, m.q.HOW_IT_WORKS), l = (0, s.jsx)(a, { children: (0, s.jsx)(_.Z, {}) }, m.q.BENEFITS);
+        }, r = (0, s.jsx)(a, { children: (0, s.jsx)(E.Z, {}) }, m.q.HOW_IT_WORKS), l = (0, s.jsx)(a, { children: (0, s.jsx)(_.Z, {}) }, m.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null ? (0, s.jsxs)(s.Fragment, {
         children: [
             r,
@@ -35,7 +35,7 @@ function S(e) {
             case m.q.BENEFITS:
                 return l;
             case m.q.OTHER_CREATORS:
-                return (0, s.jsx)(a, { children: (0, s.jsx)(E.Z, { highlightedCreators: e.creators }) }, m.q.OTHER_CREATORS);
+                return (0, s.jsx)(a, { children: (0, s.jsx)(I.Z, { highlightedCreators: e.creators }) }, m.q.OTHER_CREATORS);
             }
         })
     });
@@ -43,9 +43,9 @@ function S(e) {
 function h(e) {
     let {guild: t} = e, n = (0, c.Z)(t), {
             eligibilityLoading: _,
-            eligibilityError: E,
-            eligibility: I
-        } = n, m = (0, l.j)(I), {
+            eligibilityError: I,
+            eligibility: E
+        } = n, m = (0, l.j)(E), {
             isLoading: h,
             error: g,
             creatorMonetizationOnboardingMarketing: C
@@ -59,7 +59,7 @@ function h(e) {
             is_eligible: n.eligibleForMonetization,
             ineligible_reasons: m
         }
-    }, { disableTrack: null == t.id || null == I }), _ || null == I || h) ? (0, s.jsx)(i.Spinner, {}) : I.actionRequired ? (0, s.jsx)(T.Z, { guild: t }) : null != E ? (0, s.jsx)(d.Z, { children: E.message }) : (0, s.jsxs)('div', {
+    }, { disableTrack: null == t.id || null == E }), _ || null == E || h) ? (0, s.jsx)(i.Spinner, {}) : E.actionRequired ? (0, s.jsx)(T.Z, { guild: t }) : null != I ? (0, s.jsx)(d.Z, { children: I.message }) : (0, s.jsxs)('div', {
         className: N.container,
         children: [
             (0, s.jsx)(u.Z, {

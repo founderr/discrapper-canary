@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return Z;
     },
     n: function () {
         return T;
@@ -154,7 +154,7 @@ function j(e) {
         ]
     });
 }
-function R(e) {
+function Z(e) {
     var t, n;
     let {
             category: s,

@@ -11,8 +11,8 @@ function u(e) {
             guild: t,
             numSounds: n,
             isOutOfSlots: u
-        } = e, _ = t.premiumTier, E = (0, r.FZ)(_, t.id), I = o._k[_] - 2;
-    if (null == E || _ === l.Eu4.TIER_3 || n < I)
+        } = e, _ = t.premiumTier, I = (0, r.FZ)(_, t.id), E = o._k[_] - 2;
+    if (null == I || _ === l.Eu4.TIER_3 || n < E)
         return null;
     let T = u ? {
         color: a.ButtonColors.GREEN,
@@ -22,8 +22,8 @@ function u(e) {
     return (0, s.jsx)(i.Z, {
         header: c.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER,
         text: c.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPSELL_BANNER_TEXT.format({
-            level: E,
-            numAdditional: (0, r.Je)(E)
+            level: I,
+            numAdditional: (0, r.Je)(I)
         }),
         headerColor: 'header-primary',
         textColor: 'text-normal',
@@ -33,7 +33,7 @@ function u(e) {
             page: l.ZY5.GUILD_SETTINGS,
             section: l.jXE.GUILD_SETTINGS_SOUNDBOARD,
             object: l.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
-            objectType: (0, r.ge)(E)
+            objectType: (0, r.ge)(I)
         },
         className: d.container
     });

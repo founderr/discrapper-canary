@@ -9,7 +9,7 @@ function N(e) {
             onOpen: t,
             onClose: n,
             className: N
-        } = e, f = (0, s.e7)([d.default], () => d.default.getCurrentUser()), p = a.useRef(null), C = (0, s.e7)([c.ZP], () => (null == f ? void 0 : f.id) != null && c.ZP.getMentionCount(f.id, I.W.NOTIFICATION_CENTER) > 0), {enabled: g} = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }), S = (0, s.e7)([r.Z], () => g && r.Z.getUnseenInviteCount() > 0);
+        } = e, p = (0, s.e7)([d.default], () => d.default.getCurrentUser()), f = a.useRef(null), C = (0, s.e7)([c.ZP], () => (null == p ? void 0 : p.id) != null && c.ZP.getMentionCount(p.id, I.W.NOTIFICATION_CENTER) > 0), {enabled: g} = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }), S = (0, s.e7)([r.Z], () => g && r.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,
@@ -17,11 +17,11 @@ function N(e) {
         popoutPosition: 'bottom',
         popoutAlign: 'right',
         children: (e, t, n) => (0, i.jsxs)('div', {
-            ref: p,
+            ref: f,
             className: h.recentsIcon,
             children: [
                 g && (0, i.jsx)(m.Z, {
-                    inboxIconRef: p,
+                    inboxIconRef: f,
                     recentsPopoutShown: t
                 }),
                 (0, i.jsx)(u.JO, {

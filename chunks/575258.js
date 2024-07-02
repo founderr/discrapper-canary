@@ -3,7 +3,7 @@ let u = {
         description: '',
         channels: [],
         enabled: !1
-    }, _ = u, E = !1, I = !1, T = u;
+    }, _ = u, I = !1, E = !1, T = u;
 function m(e) {
     let {
             welcomeScreen: t,
@@ -18,7 +18,7 @@ function m(e) {
         };
     } else
         T = _ = u;
-    I = !1;
+    E = !1;
 }
 class N extends (r = l.ZP.Store) {
     initialize() {
@@ -28,12 +28,12 @@ class N extends (r = l.ZP.Store) {
         return T;
     }
     showNotice() {
-        return I;
+        return E;
     }
     getSettingsProps() {
         return {
-            submitting: E,
-            hasErrors: I,
+            submitting: I,
+            hasErrors: E,
             welcomeSettings: T,
             originalWelcomeSettings: _
         };
@@ -48,7 +48,7 @@ i = 'WelcomeScreenSettingsStore', (a = 'displayName') in (s = N) ? Object.define
     WELCOME_SCREEN_FETCH_SUCCESS: m,
     WELCOME_SCREEN_UPDATE: m,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        T = _, I = !1;
+        T = _, E = !1;
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
         T = u, _ = u;
@@ -61,12 +61,12 @@ i = 'WelcomeScreenSettingsStore', (a = 'displayName') in (s = N) ? Object.define
         };
     },
     WELCOME_SCREEN_SUBMIT: function () {
-        E = !0;
+        I = !0;
     },
     WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-        m(e), E = !1;
+        m(e), I = !1;
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-        I = !0, E = !1;
+        E = !0, I = !1;
     }
 });

@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     }
 }), n(47120), n(390547);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(481060), u = n(607070), _ = n(259580), E = n(293810), I = n(689938), T = n(601238);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(481060), u = n(607070), _ = n(259580), I = n(293810), E = n(689938), T = n(601238);
 function m(e) {
     let {
         checked: t,
@@ -32,10 +32,10 @@ function N(e) {
             width: ''.concat(100 * N, '%'),
             immediate: r
         }), g = [
-            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({ promoPageGuideUrl: E.iv.PROMO_PAGE_GUIDE }),
-            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({ caseStudiesUrl: E.iv.CASE_STUDIES }),
-            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({ subscriptionOfferingGuideUrl: E.iv.SUBSCRIPTION_OFFERING_GUIDE }),
-            I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({ tierStructureGuideUrl: E.iv.TIER_STRUCTURE_GUIDE })
+            E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({ promoPageGuideUrl: I.iv.PROMO_PAGE_GUIDE }),
+            E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({ caseStudiesUrl: I.iv.CASE_STUDIES }),
+            E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({ subscriptionOfferingGuideUrl: I.iv.SUBSCRIPTION_OFFERING_GUIDE }),
+            E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({ tierStructureGuideUrl: I.iv.TIER_STRUCTURE_GUIDE })
         ], C = n ? null : (0, s.jsxs)(s.Fragment, {
             children: [
                 !S && t.map((e, t) => {
@@ -60,7 +60,7 @@ function N(e) {
                 (0, s.jsx)(d.FormDivider, { className: T.divider }),
                 (0, s.jsx)(d.FormTitle, {
                     className: T.categoryTitle,
-                    children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
+                    children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
                 }),
                 g.map((e, t) => (0, s.jsx)('div', {
                     className: T.row,
@@ -83,7 +83,7 @@ function N(e) {
                         (0, s.jsx)(d.Heading, {
                             variant: 'heading-md/semibold',
                             className: T.headerText,
-                            children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
+                            children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
                         }),
                         (0, s.jsx)(_.Z, {
                             direction: n ? _.Z.Directions.DOWN : _.Z.Directions.UP,

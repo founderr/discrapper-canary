@@ -5,18 +5,18 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(120356), i = n.n(a), r = n(442837), l = n(481060), o = n(471445), c = n(977258), d = n(637853), u = n(816436), _ = n(259580), E = n(889369), I = n(838324), T = n(689938), m = n(631776);
+var a = n(120356), i = n.n(a), r = n(442837), l = n(481060), o = n(471445), c = n(977258), d = n(637853), u = n(816436), _ = n(259580), I = n(889369), E = n(838324), T = n(689938), m = n(631776);
 function N(e) {
     let {
             guild: t,
             scrollToQuestions: n
-        } = e, a = (0, r.e7)([E.Z], () => E.Z.editedDefaultChannelIds), i = (0, u.b)(t.id, a).filter(e => e.isCategory() || (0, c.s)(e.guild_id, e.id));
+        } = e, a = (0, r.e7)([I.Z], () => I.Z.editedDefaultChannelIds), i = (0, u.b)(t.id, a).filter(e => e.isCategory() || (0, c.s)(e.guild_id, e.id));
     return (0, s.jsxs)('div', {
         className: m.container,
         children: [
             (0, s.jsx)('div', {
                 className: m.header,
-                children: (0, s.jsx)(I.Z, {
+                children: (0, s.jsx)(E.Z, {
                     guildId: t.id,
                     scrollToQuestions: n
                 })

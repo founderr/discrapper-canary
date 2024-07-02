@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return D;
     }
 }), n(47120), n(653041), n(536091);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(275759), E = n(153124), I = n(63063), T = n(243730), m = n(764260), N = n(946724), S = n(95242), h = n(530198), g = n(420966), C = n(203377), x = n(981631), p = n(856651), R = n(689938), f = n(280562), L = n(681267);
-let O = (0, E.hQ)();
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(442837), d = n(481060), u = n(570140), _ = n(275759), I = n(153124), E = n(63063), T = n(243730), m = n(764260), N = n(946724), S = n(95242), h = n(530198), g = n(420966), C = n(203377), x = n(981631), p = n(856651), R = n(689938), f = n(280562), L = n(681267);
+let O = (0, I.hQ)();
 function A(e, t) {
     return t !== _.O1.AND ? Object.values(o().groupBy(e, e => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
@@ -24,7 +24,7 @@ function M(e) {
             (0, s.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: I.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, s.jsx)(d.Button, {
                 disabled: n,
@@ -38,7 +38,7 @@ function M(e) {
         ]
     });
 }
-function v(e) {
+function D(e) {
     let {
             guild: t,
             role: n,
@@ -46,10 +46,10 @@ function v(e) {
             setSelectedSection: l,
             integrations: o
         } = e, {
-            headerHeight: E,
-            headerRef: v
+            headerHeight: I,
+            headerRef: D
         } = (0, S.Z)(0), {
-            scrolledToTop: D,
+            scrolledToTop: v,
             handleScroll: j
         } = (0, g.V)(), Z = (0, c.e7)([T.Z], () => {
             var e;
@@ -90,7 +90,7 @@ function v(e) {
             locked: i
         });
     else if (G.length > 0) {
-        var k, w;
+        var w, k;
         let e = null;
         G.length < 10 && (e = (0, s.jsx)(d.Button, {
             className: r()(f.addVerificationButton, f.addVerificationButtonAppend),
@@ -111,7 +111,7 @@ function v(e) {
             })
         })), F = (0, s.jsxs)(s.Fragment, {
             children: [
-                (k = () => (0, m.d_)(n.id, []), w = i, (0, s.jsxs)(s.Fragment, {
+                (w = () => (0, m.d_)(n.id, []), k = i, (0, s.jsxs)(s.Fragment, {
                     children: [
                         (0, s.jsxs)('div', {
                             className: f.headerTitleContainer,
@@ -128,15 +128,15 @@ function v(e) {
                                     size: d.Button.Sizes.TINY,
                                     look: d.Button.Looks.LINK,
                                     color: d.Button.Colors.LINK,
-                                    onClick: k,
-                                    disabled: w,
+                                    onClick: w,
+                                    disabled: k,
                                     children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
                                 })
                             ]
                         }),
                         (0, s.jsx)(d.Text, {
                             variant: 'text-sm/normal',
-                            children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: I.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
+                            children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
                         })
                     ]
                 })),
@@ -222,14 +222,14 @@ function v(e) {
     }
     return (0, s.jsx)(d.AdvancedScrollerAuto, {
         className: f.scroller,
-        style: { scrollPaddingTop: E },
+        style: { scrollPaddingTop: I },
         onScroll: j,
         children: (0, s.jsxs)('div', {
             className: L.contentWidth,
             children: [
                 (0, s.jsx)('div', {
-                    className: r()(L.header, L.stickyHeader, { [L.stickyHeaderElevated]: !D }),
-                    ref: v,
+                    className: r()(L.header, L.stickyHeader, { [L.stickyHeaderElevated]: !v }),
+                    ref: D,
                     children: (0, s.jsx)(g.Z, {
                         guild: t,
                         role: n,

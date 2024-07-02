@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(47120);
 var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(904245), o = n(541716), c = n(419922), d = n(665906), u = n(271383), _ = n(496675), E = n(594174), m = n(626135), I = n(709054), T = n(838440), h = n(981631), N = n(646333);
-function f(e) {
+function p(e) {
     let {
             assets: t,
             currentUser: n,
@@ -12,7 +12,7 @@ function f(e) {
         } = e, a = (I.default.extractTimestamp(n.id) + I.default.extractTimestamp(i.id)) % t.length;
     return t[a];
 }
-function p(e) {
+function f(e) {
     let {
             currentUser: t,
             channel: n,
@@ -21,7 +21,7 @@ function p(e) {
             stickers: u,
             event: _,
             eventProperties: E
-        } = e, [I, h] = a.useState(!1), p = a.useMemo(() => f({
+        } = e, [I, h] = a.useState(!1), f = a.useMemo(() => p({
             assets: u,
             currentUser: t,
             message: s
@@ -29,7 +29,7 @@ function p(e) {
             u,
             t,
             s
-        ]), C = a.useMemo(() => f({
+        ]), C = a.useMemo(() => p({
             assets: d,
             currentUser: t,
             message: s
@@ -58,7 +58,7 @@ function p(e) {
             }({
                 channel: n,
                 message: s,
-                sticker: p
+                sticker: f
             }), !function (e) {
                 let {
                     sticker: t,
@@ -70,14 +70,14 @@ function p(e) {
                     sticker_id: t.id
                 });
             }({
-                sticker: p,
+                sticker: f,
                 event: _,
                 eventProperties: E
             }));
         }, [
             n,
             s,
-            p,
+            f,
             _,
             E
         ]);
@@ -92,7 +92,7 @@ function p(e) {
             (0, i.jsx)(c.ZP, {
                 className: N.CTAMessageSticker,
                 isInteracting: I,
-                sticker: p,
+                sticker: f,
                 size: 28
             }),
             C
@@ -131,7 +131,7 @@ function C(e) {
         });
     return null != c && m ? (0, i.jsx)('div', {
         className: N.CTAMessage,
-        children: (0, i.jsx)(p, {
+        children: (0, i.jsx)(f, {
             currentUser: c,
             channel: t,
             message: n,

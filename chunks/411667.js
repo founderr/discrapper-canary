@@ -11,8 +11,8 @@ function d(e) {
             resubmittingEnableRequest: d,
             resubmissionError: u,
             createEnableRequest: _,
-            resubmittedRequest: E,
-            requestRejectedNoticeText: I,
+            resubmittedRequest: I,
+            requestRejectedNoticeText: E,
             reapplyNoticeText: T
         } = (0, a.Z)(n), m = n.hasFeature(l.oNc.CREATOR_MONETIZABLE_RESTRICTED), N = n.hasFeature(l.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
     if (null != u)
@@ -21,7 +21,7 @@ function d(e) {
             children: u.getAnyErrorMessage()
         });
     let S = null;
-    return null != I ? S = I : E ? S = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != T ? (S = T, t = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : N ? S = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : m && (S = o.Z.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != S ? (0, s.jsx)(r.Z, {
+    return null != E ? S = E : I ? S = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != T ? (S = T, t = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : N ? S = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : m && (S = o.Z.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != S ? (0, s.jsx)(r.Z, {
         className: c.noticeContainer,
         notice: S,
         ctaLabel: t,

@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 }), n(411104), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(149765), o = n(442837), c = n(481060), d = n(144991), u = n(496675), _ = n(594174), E = n(626135), I = n(233608), T = n(700785), m = n(764260), N = n(631969), S = n(95242), h = n(420966), g = n(275296), C = n(203377), x = n(981631), p = n(689938), R = n(747950), f = n(681267);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(149765), o = n(442837), c = n(481060), d = n(144991), u = n(496675), _ = n(594174), I = n(626135), E = n(233608), T = n(700785), m = n(764260), N = n(631969), S = n(95242), h = n(420966), g = n(275296), C = n(203377), x = n(981631), p = n(689938), R = n(747950), f = n(681267);
 function L(e) {
     let {
             guild: t,
@@ -20,7 +20,7 @@ function L(e) {
                 ...n,
                 permissions: T.Hn
             }
-        }), [n]), E = a.useMemo(() => T.uB({
+        }), [n]), I = a.useMemo(() => T.uB({
             user: r,
             context: t,
             roles: u
@@ -28,11 +28,11 @@ function L(e) {
             r,
             t,
             u
-        ]), I = !l.fS(d, E);
+        ]), E = !l.fS(d, I);
     return (0, s.jsx)('div', {
         className: R.clearButtonWrapper,
         children: (0, s.jsx)(c.Tooltip, {
-            text: I ? p.Z.Messages.HELP_CLEAR_PERMISSIONS : null,
+            text: E ? p.Z.Messages.HELP_CLEAR_PERMISSIONS : null,
             position: 'top',
             color: c.Tooltip.Colors.RED,
             children: e => {
@@ -48,7 +48,7 @@ function L(e) {
                     onClick: () => (0, m.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: a,
-                    disabled: l.fS(n.permissions, T.Hn) || I || i,
+                    disabled: l.fS(n.permissions, T.Hn) || E || i,
                     children: p.Z.Messages.ROLE_PERMISSIONS_CLEAR_PERMISSIONS
                 });
             }
@@ -111,7 +111,7 @@ function A(e) {
             locked: i,
             setSelectedSection: l,
             initialSearchQuery: o
-        } = e, [d, u] = a.useState(null != o ? o : ''), _ = a.useMemo(() => I.Z.generateGuildPermissionSpec(t), [t]).map(e => ({
+        } = e, [d, u] = a.useState(null != o ? o : ''), _ = a.useMemo(() => E.Z.generateGuildPermissionSpec(t), [t]).map(e => ({
             ...e,
             permissions: e.permissions.filter(e => {
                 let t = d.trimStart().toLowerCase();
@@ -126,7 +126,7 @@ function A(e) {
         } = (0, h.V)(), A = a.useRef(!1);
     return a.useEffect(() => {
         if (!A.current && '' !== d.trimStart())
-            E.default.track(x.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), A.current = !0;
+            I.default.track(x.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), A.current = !0;
     }, [d]), (0, s.jsx)(c.AdvancedScrollerAuto, {
         className: R.scroller,
         style: { scrollPaddingTop: T },

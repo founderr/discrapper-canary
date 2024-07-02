@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(852229), i = n(481060), r = n(724598), l = n(674180), o = n(495437), c = n(267101), d = n(863663), u = n(676651), _ = n(613810), E = n(391181), I = n(689938), T = n(127587);
+var a = n(852229), i = n(481060), r = n(724598), l = n(674180), o = n(495437), c = n(267101), d = n(863663), u = n(676651), _ = n(613810), I = n(391181), E = n(689938), T = n(127587);
 let m = 'guild-product-listings-header';
 function N(e) {
     let {
@@ -31,13 +31,13 @@ function N(e) {
             (0, s.jsx)(i.FormTitle, {
                 className: T.productListingsHeader,
                 id: m,
-                children: x ? I.Z.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : I.Z.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
+                children: x ? E.Z.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : E.Z.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
             }),
             x ? (0, s.jsx)('ul', {
                 className: T.productListings,
                 'aria-labelledby': m,
                 children: N.map(e => (0, s.jsx)('li', {
-                    children: (0, s.jsx)(E.Z, {
+                    children: (0, s.jsx)(I.Z, {
                         guildId: t,
                         product: e,
                         onEditProduct: () => u(e.id),
@@ -84,7 +84,7 @@ function S(e) {
                         size: 6,
                         horizontal: !0
                     }),
-                    I.Z.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON
+                    E.Z.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON
                 ]
             }),
             (0, s.jsx)(i.Spacer, { size: 24 }),

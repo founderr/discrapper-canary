@@ -1,9 +1,9 @@
 t.d(n, {
     Q2: function () {
-        return v;
+        return P;
     },
     pe: function () {
-        return P;
+        return v;
     }
 }), t(47120), t(653041), t(536091);
 var i = t(470079), l = t(392711), a = t.n(l), r = t(373793), s = t(442837), o = t(911969), c = t(127255), u = t(654455), d = t(213459), m = t(807169), p = t(104793), _ = t(674588), E = t(809547), A = t(822245), N = t(631827), h = t(783097), C = t(689079);
@@ -18,7 +18,7 @@ function I(e, n) {
 function x(e, n) {
     return (0, d.un)(e.displayName, n.displayName);
 }
-function P(e) {
+function v(e) {
     let {
             channel: n,
             query: t,
@@ -29,8 +29,8 @@ function P(e) {
             searchesActivities: E = !0
         } = e, {
             commands: A,
-            commandSectionMap: P,
-            loading: v
+            commandSectionMap: v,
+            loading: P
         } = function (e) {
             var n, t;
             let {
@@ -214,7 +214,7 @@ function P(e) {
                 let i = e.get(n.applicationId);
                 if (null == i)
                     return null;
-                let l = null !== (t = P[n.id]) && void 0 !== t ? t : null;
+                let l = null !== (t = v[n.id]) && void 0 !== t ? t : null;
                 return {
                     command: n,
                     application: i,
@@ -224,7 +224,7 @@ function P(e) {
         }, [
             g,
             M,
-            P
+            v
         ]), R = i.useMemo(() => {
             var e;
             if (!_ && !E)
@@ -316,10 +316,10 @@ function P(e) {
         applicationResults: R,
         hasApplicationResults: O,
         isEmptyState: !S && !O,
-        loading: v && s
+        loading: P && s
     };
 }
-function v(e) {
+function P(e) {
     let {
             channel: n,
             query: t,

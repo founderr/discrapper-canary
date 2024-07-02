@@ -11,8 +11,8 @@ function _(e) {
         children: t,
         revenue: n,
         revenueTrend: _,
-        summaryMetricLabel: E,
-        summaryMetricValue: I,
+        summaryMetricLabel: I,
+        summaryMetricValue: E,
         summaryMetricTrend: T,
         summaryMetricTrendIsPercent: m
     } = e;
@@ -32,8 +32,8 @@ function _(e) {
                             })
                         }),
                         (0, s.jsx)(l.Z, {
-                            label: E,
-                            value: I,
+                            label: I,
+                            value: E,
                             additionalContent: (0, s.jsx)(i.H, {
                                 value: T,
                                 isPercent: m

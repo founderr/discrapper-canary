@@ -11,15 +11,15 @@ function u(e) {
         guildId: t,
         log: u,
         onHeaderClick: _,
-        className: E,
-        expanded: I,
+        className: I,
+        expanded: E,
         onContentClick: T
     } = e;
     return null == t ? null : (0, s.jsx)(o.Z, {
         guildId: t,
         log: u,
-        className: E,
-        expanded: I,
+        className: I,
+        expanded: E,
         onContentClick: T,
         onHeaderClick: () => {
             null == _ || _(u);
@@ -67,14 +67,14 @@ function u(e) {
                     });
                 });
             case c.KFR.USER:
-                let E = l.default.getUser(u.targetId);
-                if (null != E && null != t)
+                let I = l.default.getUser(u.targetId);
+                if (null != I && null != t)
                     return (0, a.jW)(e, async () => {
                         let {default: e} = await n.e('50929').then(n.bind(n, 595011));
                         return n => (0, s.jsx)(e, {
                             ...n,
                             guildId: t,
-                            user: E
+                            user: I
                         });
                     });
             }

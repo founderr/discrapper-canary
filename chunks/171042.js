@@ -1,6 +1,6 @@
 n(47120);
-var s, a, i, r = n(735250), l = n(470079), o = n(120356), c = n.n(o), d = n(392711), u = n.n(d), _ = n(82923), E = n(912878);
-function I(e, t, n) {
+var s, a, i, r = n(735250), l = n(470079), o = n(120356), c = n.n(o), d = n(392711), u = n.n(d), _ = n(82923), I = n(912878);
+function E(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -127,7 +127,7 @@ class N extends (a = l.Component) {
                 toValue: T.FLYING.OPACITY_VALUE,
                 duration: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND,
                 delay: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND
-            }), u = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY), E = _.Z.parallel([
+            }), u = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY), I = _.Z.parallel([
                 o,
                 c,
                 d,
@@ -136,7 +136,7 @@ class N extends (a = l.Component) {
         if (this.currentAnimation = _.Z.sequence([
                 s,
                 l,
-                E
+                I
             ]), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted) {
             let {onFlyingComplete: e} = this.props;
             null != e && e();
@@ -182,32 +182,32 @@ class N extends (a = l.Component) {
             style: t
         } = this.props;
         return (0, r.jsxs)(_.Z.div, {
-            className: c()(E.animation, e),
+            className: c()(I.animation, e),
             style: {
                 ...t,
                 ...this.getWumpusStyle()
             },
             children: [
                 (0, r.jsx)('div', {
-                    className: E.fireTopWrapper,
+                    className: I.fireTopWrapper,
                     children: (0, r.jsx)(_.Z.div, {
-                        className: E.fire,
+                        className: I.fire,
                         style: this.getFireStyle()
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: E.fireBottomWrapper,
+                    className: I.fireBottomWrapper,
                     children: (0, r.jsx)(_.Z.div, {
-                        className: E.fire,
+                        className: I.fire,
                         style: this.getFireStyle()
                     })
                 }),
-                (0, r.jsx)('div', { className: E.wumpus })
+                (0, r.jsx)('div', { className: I.wumpus })
             ]
         });
     }
     constructor(...e) {
-        super(...e), I(this, 'x', new _.Z.Value(0)), I(this, 'y', new _.Z.Value(0)), I(this, 'opacity', new _.Z.Value(1)), I(this, 'fireScale', new _.Z.Value(1)), I(this, 'currentAnimation', null), I(this, 'isUnmounted', !1);
+        super(...e), E(this, 'x', new _.Z.Value(0)), E(this, 'y', new _.Z.Value(0)), E(this, 'opacity', new _.Z.Value(1)), E(this, 'fireScale', new _.Z.Value(1)), E(this, 'currentAnimation', null), E(this, 'isUnmounted', !1);
     }
 }
-I(N, 'Stages', s), t.Z = N;
+E(N, 'Stages', s), t.Z = N;

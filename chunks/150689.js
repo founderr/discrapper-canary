@@ -11,7 +11,7 @@ function c(e) {
             everyoneRole: c,
             otherRoles: d,
             setSelectedSection: u
-        } = e, [_, E] = a.useState(''), [I, T] = a.useState(o.Cl), m = _.trim(), N = a.useMemo(() => d.filter(e => (0, i.uo)(e, m)), [
+        } = e, [_, I] = a.useState(''), [E, T] = a.useState(o.Cl), m = _.trim(), N = a.useMemo(() => d.filter(e => (0, i.uo)(e, m)), [
             d,
             m
         ]), S = a.useCallback(() => (0, s.jsx)(l.Z, {
@@ -20,7 +20,7 @@ function c(e) {
             filteredRoles: N,
             setEditRoleId: t,
             query: _,
-            setQuery: E,
+            setQuery: I,
             setHeaderHeight: T
         }, 'header'), [
             n,
@@ -36,7 +36,7 @@ function c(e) {
         otherRoles: d,
         setSelectedSection: u,
         renderHeader: S,
-        headerHeight: I,
+        headerHeight: E,
         query: _
     });
 }

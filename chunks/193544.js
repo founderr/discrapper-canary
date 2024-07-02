@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(186523), c = n(553826), d = n(2150), u = n(992249), _ = n(717251), E = n(689938), I = n(604277);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(186523), c = n(553826), d = n(2150), u = n(992249), _ = n(717251), I = n(689938), E = n(604277);
 function T(e) {
     var t, n, i;
     let {
@@ -26,13 +26,13 @@ function T(e) {
         };
     return (0, s.jsx)(u.Z, {
         title: x ? T : null !== (t = null == O ? void 0 : O.title) && void 0 !== t ? t : T,
-        description: x ? '('.concat(null !== (n = null == O ? void 0 : O.title) && void 0 !== n ? n : E.Z.Messages.NONE, ')') : null !== (i = null == O ? void 0 : O.description) && void 0 !== i ? i : '',
+        description: x ? '('.concat(null !== (n = null == O ? void 0 : O.title) && void 0 !== n ? n : I.Z.Messages.NONE, ')') : null !== (i = null == O ? void 0 : O.description) && void 0 !== i ? i : '',
         highlightColor: x ? d.q.NONE : null == O ? void 0 : O.highlightColor,
         action: (0, s.jsx)(l.Button, {
             look: l.Button.Looks.LINK,
             size: l.Button.Sizes.MIN,
             color: l.Button.Colors.LINK,
-            children: E.Z.Messages.CHANGE
+            children: I.Z.Messages.CHANGE
         }),
         loading: R,
         className: S,
@@ -40,9 +40,9 @@ function T(e) {
             title: e.title,
             description: e.description,
             highlightColor: e.highlightColor,
-            className: r()(I.groupCollapsedRow, g === e.value && I.selected),
+            className: r()(E.groupCollapsedRow, g === e.value && E.selected),
             selected: g === e.value,
-            action: g === e.value ? (0, s.jsx)(c.Z, { className: I.radioItem }) : (0, s.jsx)(o.Z, { className: I.radioItem }),
+            action: g === e.value ? (0, s.jsx)(c.Z, { className: E.radioItem }) : (0, s.jsx)(o.Z, { className: E.radioItem }),
             onClick: () => A(e),
             disabled: e.disabled
         }, ''.concat(e.title, '-').concat(t)))

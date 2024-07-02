@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 }), n(724458), n(653041), n(47120);
-var s = n(735250), a = n(470079), i = n(392711), r = n(481060), l = n(239091), o = n(132580), c = n(688465), d = n(236413), u = n(727072), _ = n(85960), E = n(65912), I = n(457414), T = n(154502), m = n(295708), N = n(273504), S = n(689938), h = n(292750);
+var s = n(735250), a = n(470079), i = n(392711), r = n(481060), l = n(239091), o = n(132580), c = n(688465), d = n(236413), u = n(727072), _ = n(85960), I = n(65912), E = n(457414), T = n(154502), m = n(295708), N = n(273504), S = n(689938), h = n(292750);
 function g(e) {
     let {
             rule: t,
@@ -105,10 +105,10 @@ function L(e) {
             rule: t,
             isDefaultRule: n,
             onContextMenu: l
-        } = e, o = (0, I.w)(t.triggerType, t), {
+        } = e, o = (0, E.w)(t.triggerType, t), {
             isLoading: c,
             saveRule: _
-        } = (0, E.w)(), {updateRule: T} = (0, u.pH)(t.guildId), [m, N] = a.useState(t.enabled), C = (0, i.throttle)(async (e, n) => {
+        } = (0, I.w)(), {updateRule: T} = (0, u.pH)(t.guildId), [m, N] = a.useState(t.enabled), C = (0, i.throttle)(async (e, n) => {
             if (n.preventDefault(), n.stopPropagation(), !c) {
                 let e = {
                     ...t,
@@ -129,7 +129,7 @@ function L(e) {
             headerSubtext: O,
             descriptionText: A,
             icon: M
-        } = o, v = !(0, d.Vb)(t);
+        } = o, D = !(0, d.Vb)(t);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)('div', {
@@ -162,7 +162,7 @@ function L(e) {
                             })
                         ]
                     }),
-                    v && (0, s.jsx)(r.Text, {
+                    D && (0, s.jsx)(r.Text, {
                         className: h.ruleTextDescription,
                         variant: 'text-sm/normal',
                         children: A
@@ -205,7 +205,7 @@ function O(e) {
     let {
             triggerType: t,
             onSetupRule: n
-        } = e, i = a.useMemo(() => (0, I.w)(t), [t]);
+        } = e, i = a.useMemo(() => (0, E.w)(t), [t]);
     if (null == i)
         return null;
     let {
@@ -275,11 +275,11 @@ function A(e) {
                         ...n
                     });
                 });
-        }, E = (0, s.jsx)(O, {
+        }, I = (0, s.jsx)(O, {
             triggerType: a,
             onSetupRule: d
         });
-    return null != t && !c && (E = i ? (0, s.jsx)(R, {
+    return null != t && !c && (I = i ? (0, s.jsx)(R, {
         rule: t,
         onChangeRule: u,
         onContextMenu: _
@@ -290,6 +290,6 @@ function A(e) {
     })), (0, s.jsx)(r.Clickable, {
         className: h.mainContainer,
         onContextMenu: _,
-        children: E
+        children: I
     });
 }

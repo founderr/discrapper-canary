@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(603211), d = n(710344), u = n(637853), _ = n(107862), E = n(259580), I = n(823379), T = n(889369), m = n(570961), N = n(208665), S = n(976983), h = n(290511), g = n(689938), C = n(647783);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(603211), d = n(710344), u = n(637853), _ = n(107862), I = n(259580), E = n(823379), T = n(889369), m = n(570961), N = n(208665), S = n(976983), h = n(290511), g = n(689938), C = n(647783);
 let x = { optionErrors: [] };
 function p(e) {
     var t;
@@ -17,8 +17,8 @@ function p(e) {
             singleColumn: O,
             onPromptDragComplete: A,
             onPromptDragStart: M,
-            onPromptDragReset: v
-        } = e, {dropdownsAllowed: D} = (0, _.Ug)(n.id), j = (0, l.e7)([T.Z], () => T.Z.editedDefaultChannelIds), Z = D ? h.qm : h.M$, {
+            onPromptDragReset: D
+        } = e, {dropdownsAllowed: v} = (0, _.Ug)(n.id), j = (0, l.e7)([T.Z], () => T.Z.editedDefaultChannelIds), Z = v ? h.qm : h.M$, {
             drag: b,
             dragSourcePosition: U,
             drop: G,
@@ -29,11 +29,11 @@ function p(e) {
             optionId: i.id,
             onDragStart: M,
             onDragComplete: A,
-            onDragReset: v
+            onDragReset: D
         }), B = (0, l.cj)([N.Z], () => {
             var e;
             return null !== (e = N.Z.errors[S]) && void 0 !== e ? e : x;
-        }), [y, F] = a.useState(!1), [k, w] = a.useState(!1), H = null !== (t = B.options) && void 0 !== t ? t : B.optionErrors.filter(I.lm)[0], V = B.config, Y = D && i.options.length >= h.fY, W = (0, u.kl)(n.id, Array.from(j), [i]).length - j.size, z = a.useRef(null);
+        }), [y, F] = a.useState(!1), [w, k] = a.useState(!1), H = null !== (t = B.options) && void 0 !== t ? t : B.optionErrors.filter(E.lm)[0], V = B.config, Y = v && i.options.length >= h.fY, W = (0, u.kl)(n.id, Array.from(j), [i]).length - j.size, z = a.useRef(null);
     return (a.useLayoutEffect(() => {
         setTimeout(() => {
             if (0 === S && !d) {
@@ -44,13 +44,13 @@ function p(e) {
     }, [d]), y) ? (0, s.jsx)(o.FocusRing, {
         children: (0, s.jsxs)('div', {
             tabIndex: 0,
-            onFocus: () => w(!0),
-            onBlur: () => w(!1),
-            onMouseLeave: () => w(!1),
+            onFocus: () => k(!0),
+            onBlur: () => k(!1),
+            onMouseLeave: () => k(!1),
             className: r()(C.container, {
                 [C.dropIndicatorBefore]: null != U && S < U,
                 [C.dropIndicatorAfter]: null != U && S > U,
-                [C.containerFocused]: k
+                [C.containerFocused]: w
             }),
             ref: e => b(G(e)),
             children: [
@@ -78,8 +78,8 @@ function p(e) {
                 (0, s.jsx)(o.Clickable, {
                     className: C.collapseButton,
                     onClick: () => F(!1),
-                    children: (0, s.jsx)(E.Z, {
-                        direction: E.Z.Directions.DOWN,
+                    children: (0, s.jsx)(I.Z, {
+                        direction: I.Z.Directions.DOWN,
                         height: 16,
                         width: 16
                     })
@@ -101,12 +101,12 @@ function p(e) {
     }) : (0, s.jsx)(o.FocusRing, {
         children: (0, s.jsxs)('div', {
             tabIndex: 0,
-            onFocus: () => w(!0),
-            onBlur: () => w(!1),
+            onFocus: () => k(!0),
+            onBlur: () => k(!1),
             className: r()(C.container, {
                 [C.dropIndicatorBefore]: null != U && S < U,
                 [C.dropIndicatorAfter]: null != U && S > U,
-                [C.containerFocused]: k
+                [C.containerFocused]: w
             }),
             ref: e => b(G(e)),
             children: [
@@ -194,8 +194,8 @@ function p(e) {
                         (0, s.jsx)(o.Clickable, {
                             className: C.collapseButton,
                             onClick: () => F(!0),
-                            children: (0, s.jsx)(E.Z, {
-                                direction: E.Z.Directions.UP,
+                            children: (0, s.jsx)(I.Z, {
+                                direction: I.Z.Directions.UP,
                                 height: 16,
                                 width: 16
                             })
@@ -271,7 +271,7 @@ function f(e) {
         } = e, {dropdownsAllowed: l} = (0, _.Ug)(t.id), o = l ? h.qm : h.M$, {
             handleDragStart: c,
             handleDragReset: u,
-            handleDragComplete: E
+            handleDragComplete: I
         } = (0, d.Z)(n.options, e => (0, m.Kk)(t, n.id, { options: e }));
     return (0, s.jsxs)('div', {
         className: C.options,
@@ -283,7 +283,7 @@ function f(e) {
                 singleColumn: i,
                 option: e,
                 onDragStart: c,
-                onDragComplete: E,
+                onDragComplete: I,
                 onDragReset: u,
                 hasError: null != r.optionErrors[l]
             }, e.id)),

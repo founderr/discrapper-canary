@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(348327), o = n.n(l), c = n(225857), d = n(290843), u = n(442837), _ = n(481060), E = n(239091), I = n(596454), T = n(607070), m = n(933557), N = n(471445), S = n(339085), h = n(621923), g = n(524329), C = n(575258), x = n(514698), p = n(592125), R = n(940627), f = n(346656), L = n(499150), O = n(4912), A = n(626135), M = n(700785), v = n(434404), D = n(92160), j = n(981631), Z = n(231338), b = n(689938), U = n(534888);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(348327), o = n.n(l), c = n(225857), d = n(290843), u = n(442837), _ = n(481060), I = n(239091), E = n(596454), T = n(607070), m = n(933557), N = n(471445), S = n(339085), h = n(621923), g = n(524329), C = n(575258), x = n(514698), p = n(592125), R = n(940627), f = n(346656), L = n(499150), O = n(4912), A = n(626135), M = n(700785), D = n(434404), v = n(92160), j = n(981631), Z = n(231338), b = n(689938), U = n(534888);
 let G = 'WELCOME_CHANNEL', P = e => {
         var t;
         let i, {
@@ -9,7 +9,7 @@ let G = 'WELCOME_CHANNEL', P = e => {
                 onChannelReorder: g,
                 isDropHovered: C,
                 index: R
-            } = e, [f, L] = a.useState(!1), A = a.useRef(null), v = (0, u.e7)([p.Z], () => p.Z.getChannel(o.channel_id)), D = (0, u.e7)([S.Z], () => null != o.emoji_id ? S.Z.getUsableCustomEmojiById(o.emoji_id) : null), P = null != v && M.Uu(j.Plq.VIEW_CHANNEL, v), B = null !== (t = (0, N.KS)(v)) && void 0 !== t ? t : _.TextIcon, y = (0, m.ZP)(v, !1), {homeSettingsEnabled: F} = (0, h.kZ)(l), [, k] = (0, c.c)({
+            } = e, [f, L] = a.useState(!1), A = a.useRef(null), D = (0, u.e7)([p.Z], () => p.Z.getChannel(o.channel_id)), v = (0, u.e7)([S.Z], () => null != o.emoji_id ? S.Z.getUsableCustomEmojiById(o.emoji_id) : null), P = null != D && M.Uu(j.Plq.VIEW_CHANNEL, D), B = null !== (t = (0, N.KS)(D)) && void 0 !== t ? t : _.TextIcon, y = (0, m.ZP)(D, !1), {homeSettingsEnabled: F} = (0, h.kZ)(l), [, w] = (0, c.c)({
                 type: G,
                 item: {
                     channel: o,
@@ -18,7 +18,7 @@ let G = 'WELCOME_CHANNEL', P = e => {
                 end: (e, t) => {
                     null != e && !t.didDrop() && g(e.channel, null, !0);
                 }
-            }), [, w] = (0, d.L)({
+            }), [, k] = (0, d.L)({
                 accept: G,
                 hover: e => {
                     g(e.channel, R, !1);
@@ -27,15 +27,15 @@ let G = 'WELCOME_CHANNEL', P = e => {
                     g(e.channel, R, !0);
                 }
             });
-        return a.useLayoutEffect(() => (k(w(A)), () => {
-            k(null), w(null);
+        return a.useLayoutEffect(() => (w(k(A)), () => {
+            w(null), k(null);
         }), [
-            k,
-            w
-        ]), i = P ? null != D || null != o.emoji_name ? (0, s.jsx)(I.Z, {
-            emojiId: null == D ? void 0 : D.id,
-            emojiName: null != D ? D.name : o.emoji_name,
-            animated: !!(null == D ? void 0 : D.animated)
+            w,
+            k
+        ]), i = P ? null != v || null != o.emoji_name ? (0, s.jsx)(E.Z, {
+            emojiId: null == v ? void 0 : v.id,
+            emojiName: null != v ? v.name : o.emoji_name,
+            animated: !!(null == v ? void 0 : v.animated)
         }) : (0, s.jsx)(B, {
             size: 'md',
             color: 'currentColor',
@@ -49,7 +49,7 @@ let G = 'WELCOME_CHANNEL', P = e => {
             ref: A,
             'data-dnd-name': o.description,
             onContextMenu: e => {
-                (0, E.jW)(e, async () => {
+                (0, I.jW)(e, async () => {
                     let {default: e} = await n.e('68535').then(n.bind(n, 602320));
                     return t => (0, s.jsx)(e, {
                         ...t,
@@ -118,7 +118,7 @@ t.Z = e => {
         } = e, {
             welcomeSettings: l,
             originalWelcomeSettings: c
-        } = (0, u.e7)([C.Z], () => C.Z.getSettingsProps()), d = (0, u.e7)([T.Z], () => T.Z.useReducedMotion), [E, I] = a.useState(null), [m, N] = a.useState(!1), [S, x] = a.useState(!1), {
+        } = (0, u.e7)([C.Z], () => C.Z.getSettingsProps()), d = (0, u.e7)([T.Z], () => T.Z.useReducedMotion), [I, E] = a.useState(null), [m, N] = a.useState(!1), [S, x] = a.useState(!1), {
             description: p,
             channels: M,
             enabled: G
@@ -128,10 +128,10 @@ t.Z = e => {
         }, F = e => {
             if (null != i)
                 !o()(e, c.channels) && ((0, g.Es)(i.id, { channels: e }), N(!0));
-        }, k = e => {
+        }, w = e => {
             if (null != i)
                 e !== c.enabled && ((0, g.Es)(i.id, { enabled: e }), x(!d), N(!0));
-        }, w = e => {
+        }, k = e => {
             if (null == e)
                 return;
             let t = [
@@ -141,19 +141,19 @@ t.Z = e => {
             (0, g.VP)({ channels: t }), F(t);
         }, H = e => t => {
             let n = [...null != M ? M : []];
-            null == t ? n.splice(e, 1) : n[e] = t, (0, g.VP)({ channels: n }), F(n), 0 === n.length && G && ((0, g.VP)({ enabled: !1 }), k(!1));
+            null == t ? n.splice(e, 1) : n[e] = t, (0, g.VP)({ channels: n }), F(n), 0 === n.length && G && ((0, g.VP)({ enabled: !1 }), w(!1));
         }, V = (e, t, n) => {
             if (null == M)
                 return;
             let s = M.indexOf(e), a = [...M];
-            null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, g.VP)({ channels: a })), n ? (F(a), I(null)) : I(t);
+            null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, g.VP)({ channels: a })), n ? (F(a), E(null)) : E(t);
         }, Y = a.useRef(!1);
     a.useEffect(() => (null != i && r && (0, _.openModalLazy)(async () => {
         let {default: e} = await n.e('39143').then(n.bind(n, 737868));
         return t => (0, s.jsx)(e, {
             ...t,
             guildId: i.id,
-            onSave: w
+            onSave: k
         });
     }, { onCloseRequest: () => Z.Vq }), () => {
         Y.current = !0;
@@ -180,7 +180,7 @@ t.Z = e => {
         Y
     ]), a.useEffect(() => () => (0, g.sm)(), []);
     let W = a.useCallback(() => {
-        null != i && v.Z.open(i.id, j.pNK.ONBOARDING);
+        null != i && D.Z.open(i.id, j.pNK.ONBOARDING);
     }, [i]);
     return null == i ? null : (0, s.jsxs)(_.FormSection, {
         title: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
@@ -206,7 +206,7 @@ t.Z = e => {
                 variant: 'text-sm/normal',
                 children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SETTINGS_TEXT
             }),
-            (0, s.jsx)(D.Z, {
+            (0, s.jsx)(v.Z, {
                 enabled: G,
                 onPreview: (null == M ? void 0 : M.length) === 0 ? void 0 : () => {
                     null != i && (0, _.openModalLazy)(async () => {
@@ -219,7 +219,7 @@ t.Z = e => {
                     });
                 },
                 onToggle: G || (null == M ? void 0 : M.length) !== 0 ? () => {
-                    k(!G);
+                    w(!G);
                 } : void 0,
                 animateStatus: S,
                 firstLine: G ? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
@@ -291,7 +291,7 @@ t.Z = e => {
                                 welcomeChannel: e,
                                 onEdit: H(t),
                                 onChannelReorder: V,
-                                isDropHovered: t === E,
+                                isDropHovered: t === I,
                                 index: t
                             }, t)),
                             (null == M || M.length < 5) && (0, s.jsx)(_.Button, {
@@ -300,7 +300,7 @@ t.Z = e => {
                                     return t => (0, s.jsx)(e, {
                                         ...t,
                                         guildId: i.id,
-                                        onSave: w
+                                        onSave: k
                                     });
                                 }, { onCloseRequest: () => Z.Vq }),
                                 className: U.addChannelButton,

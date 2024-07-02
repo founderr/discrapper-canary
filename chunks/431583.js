@@ -3,19 +3,19 @@ n.r(t), n.d(t, {
         return L;
     }
 }), n(47120);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(525654), d = n.n(c), u = n(873546), _ = n(213919), E = n(442837), m = n(481060), I = n(391650), T = n(314897), h = n(594174), N = n(153124), f = n(626135), p = n(361207), C = n(792125), g = n(981631), S = n(689938), A = n(59384);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(525654), d = n.n(c), u = n(873546), _ = n(213919), E = n(442837), m = n(481060), I = n(391650), T = n(314897), h = n(594174), N = n(153124), p = n(626135), f = n(361207), C = n(792125), g = n(981631), S = n(689938), A = n(59384);
 (a = i || (i = {}))[a.OSX = 0] = 'OSX', a[a.WINDOWS = 1] = 'WINDOWS', a[a.LINUX = 2] = 'LINUX', a[a.IOS = 3] = 'IOS', a[a.ANDROID = 4] = 'ANDROID';
 let x = [
         {
             getOs: () => S.Z.Messages.PLATFORM_MACOS,
             icon: A.apple,
-            url: () => (0, p.w4)('osx', !1),
+            url: () => (0, f.w4)('osx', !1),
             platformKey: 0
         },
         {
             getOs: () => S.Z.Messages.PLATFORM_WINDOWS,
             icon: A.windows,
-            url: () => (0, p.w4)('win', !1),
+            url: () => (0, f.w4)('win', !1),
             platformKey: 1
         },
         {
@@ -23,11 +23,11 @@ let x = [
             icon: A.linux,
             url: [
                 {
-                    url: () => (0, p.w4)('linux', !1, 'deb'),
+                    url: () => (0, f.w4)('linux', !1, 'deb'),
                     getText: () => S.Z.Messages.DEB
                 },
                 {
-                    url: () => (0, p.w4)('linux', !1, 'tar.gz'),
+                    url: () => (0, f.w4)('linux', !1, 'tar.gz'),
                     getText: () => S.Z.Messages.TAR_GZ
                 }
             ],
@@ -124,7 +124,7 @@ function L(e) {
             source: t,
             onClose: n,
             transitionState: i
-        } = e, a = (0, E.e7)([h.default], () => h.default.getCurrentUser()), r = (0, E.e7)([T.default], () => T.default.getFingerprint()), c = null == a || a.isClaimed(), [p, C] = l.useState(function () {
+        } = e, a = (0, E.e7)([h.default], () => h.default.getCurrentUser()), r = (0, E.e7)([T.default], () => T.default.getFingerprint()), c = null == a || a.isClaimed(), [f, C] = l.useState(function () {
             var e;
             switch (null === (e = d().os) || void 0 === e ? void 0 : e.family) {
             case 'OS X':
@@ -147,7 +147,7 @@ function L(e) {
             }
         }());
     function M(e) {
-        (null != _.getToken() || null != r) && f.default.track(g.rMx.DOWNLOAD_APP, {
+        (null != _.getToken() || null != r) && p.default.track(g.rMx.DOWNLOAD_APP, {
             platform: e,
             ptb: !1,
             released: !0,
@@ -160,7 +160,7 @@ function L(e) {
         C(e);
     }
     l.useEffect(() => {
-        f.default.track(g.rMx.OPEN_MODAL, {
+        p.default.track(g.rMx.OPEN_MODAL, {
             type: 'Download App',
             source: { location: t }
         });
@@ -195,7 +195,7 @@ function L(e) {
                             children: (0, s.jsx)('ul', {
                                 className: A.platforms,
                                 children: x.map(e => (0, s.jsx)(v, {
-                                    isActive: p === e.platformKey,
+                                    isActive: f === e.platformKey,
                                     platform: e,
                                     onClick: M,
                                     onMouseEnter: L,
@@ -218,7 +218,7 @@ function L(e) {
                                 (0, s.jsx)('ul', {
                                     className: A.platforms,
                                     children: O.map(e => (0, s.jsx)(v, {
-                                        isActive: p === e.platformKey,
+                                        isActive: f === e.platformKey,
                                         platform: e,
                                         onClick: M,
                                         onMouseEnter: L,

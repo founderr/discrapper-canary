@@ -1,10 +1,10 @@
 n.d(t, {
     J: function () {
-        return D;
+        return v;
     }
 }), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(627494), n(757143);
-var s = n(735250), a = n(470079), i = n(442837), r = n(692547), l = n(481060), o = n(225433), c = n(484614), d = n(852860), u = n(296386), _ = n(150192), E = n(688465), I = n(134432), T = n(813197), m = n(208567), N = n(496675), S = n(315507), h = n(987134), g = n(768581), C = n(63063), x = n(434404), p = n(999382), R = n(450474), f = n(190287), L = n(981631), O = n(731455), A = n(689938), M = n(502148);
-let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () => {
+var s = n(735250), a = n(470079), i = n(442837), r = n(692547), l = n(481060), o = n(225433), c = n(484614), d = n(852860), u = n(296386), _ = n(150192), I = n(688465), E = n(134432), T = n(813197), m = n(208567), N = n(496675), S = n(315507), h = n(987134), g = n(768581), C = n(63063), x = n(434404), p = n(999382), R = n(450474), f = n(190287), L = n(981631), O = n(731455), A = n(689938), M = n(502148);
+let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', v = () => {
         let {
             guild: e,
             guildMetadata: t,
@@ -41,15 +41,15 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
         });
     }, j = () => {
         var e;
-        let t = a.useRef(null), n = (0, i.e7)([p.Z], () => p.Z.getGuild()), [d, D] = a.useState(!1);
+        let t = a.useRef(null), n = (0, i.e7)([p.Z], () => p.Z.getGuild()), [d, v] = a.useState(!1);
         a.useEffect(() => {
-            !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), D(!0));
+            !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), v(!0));
         }, [
             n,
             d
         ]);
-        let {canManageGuild: j} = (0, i.cj)([N.Z], () => ({ canManageGuild: N.Z.can(L.Plq.MANAGE_GUILD, n) })), Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()), b = (0, i.e7)([p.Z], () => null != n ? p.Z.getMetadata() : null), U = (0, i.e7)([p.Z], () => null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null), [G, P] = a.useState([!0]), [B, y] = a.useState(!0), [F, k] = a.useState([!1]), [w, H] = a.useState(['']), V = e => {
-                let t = Object.entries(O.zo).filter(e => !w.includes(e[1].presentation)).map(e => ({
+        let {canManageGuild: j} = (0, i.cj)([N.Z], () => ({ canManageGuild: N.Z.can(L.Plq.MANAGE_GUILD, n) })), Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()), b = (0, i.e7)([p.Z], () => null != n ? p.Z.getMetadata() : null), U = (0, i.e7)([p.Z], () => null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null), [G, P] = a.useState([!0]), [B, y] = a.useState(!0), [F, w] = a.useState([!1]), [k, H] = a.useState(['']), V = e => {
+                let t = Object.entries(O.zo).filter(e => !k.includes(e[1].presentation)).map(e => ({
                     label: e[1].presentation,
                     value: e[0]
                 }));
@@ -126,20 +126,20 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
             }, $ = () => {
                 if (b.socialLinks.length < 9) {
                     let e = [...b.socialLinks];
-                    u.t$(n.id, e.concat('')), H(w.concat(''));
+                    u.t$(n.id, e.concat('')), H(k.concat(''));
                 }
             }, ee = (e, t) => {
-                let s = [...b.socialLinks], a = [...w], i = [...G];
+                let s = [...b.socialLinks], a = [...k], i = [...G];
                 a[t] = e, s[t] = O.zo[e].baseUrl, i[t] = !0, P(i), H(a), y(i.every(e => !0 === e)), u.t$(n.id, s);
             }, et = (e, t) => {
                 let s = [...b.socialLinks], a = s[t], i = e;
                 0 === a.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), s[t] = i, u.t$(n.id, s);
             }, en = e => {
                 let t = [...F];
-                t.splice(e, 1), k(t);
+                t.splice(e, 1), w(t);
                 let s = [...G];
                 s.splice(e, 1), P(s);
-                let a = [...w];
+                let a = [...k];
                 a.splice(e, 1), H(a);
                 let i = [...b.socialLinks];
                 i.splice(e, 1), u.t$(n.id, i);
@@ -180,7 +180,7 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
                 value: e.categoryId
             })), el = (e, t) => {
                 let n = [...F];
-                n[e] = t, k(n);
+                n[e] = t, w(n);
             };
         return (0, s.jsx)('div', {
             className: M.settingsColumn,
@@ -202,7 +202,7 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
                                             children: [
                                                 A.Z.Messages.DISCOVERY_LANDING_PAGE,
                                                 ' ',
-                                                (0, s.jsx)(E.Z, { className: M.betaTag })
+                                                (0, s.jsx)(I.Z, { className: M.betaTag })
                                             ]
                                         }),
                                         tag: l.FormTitleTags.H1,
@@ -219,7 +219,7 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
                                             (() => {
                                                 if (!b.isPublished || null == U)
                                                     return;
-                                                let e = v + U;
+                                                let e = D + U;
                                                 return (0, s.jsx)(s.Fragment, {
                                                     children: (0, s.jsxs)(l.FormSection, {
                                                         className: M.noDividerFormSection,
@@ -327,7 +327,7 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
                                                                         makeURL: e => g.ZP.getGuildDiscoverySplashURL({
                                                                             id: n.id,
                                                                             splash: e,
-                                                                            size: 512 * (0, I.x_)()
+                                                                            size: 512 * (0, E.x_)()
                                                                         }),
                                                                         disabled: !j,
                                                                         onChange: K,
@@ -463,9 +463,9 @@ let v = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/', D = () =>
                                                             children: [
                                                                 (0, s.jsx)(l.SingleSelect, {
                                                                     className: b.isPublished ? M.socialLinksDropdownMax : M.socialLinksDropdownMin,
-                                                                    options: V(w[t]),
+                                                                    options: V(k[t]),
                                                                     placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
-                                                                    value: w[t],
+                                                                    value: k[t],
                                                                     onChange: e => ee(e, t),
                                                                     isDisabled: !j
                                                                 }, 'dropdown-' + t),

@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     }
 }), n(47120), n(724458);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(525654), o = n.n(l), c = n(442837), d = n(846519), u = n(481060), _ = n(232567), E = n(596454), I = n(410030), T = n(623624), m = n(889161), N = n(208049), S = n(763296), h = n(22382), g = n(747071), C = n(171368), x = n(430824), p = n(594174), R = n(15385), f = n(768581), L = n(267642), O = n(358085), A = n(999382), M = n(70409), v = n(981631), D = n(710111), j = n(689938), Z = n(145509);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(525654), o = n.n(l), c = n(442837), d = n(846519), u = n(481060), _ = n(232567), I = n(596454), E = n(410030), T = n(623624), m = n(889161), N = n(208049), S = n(763296), h = n(22382), g = n(747071), C = n(171368), x = n(430824), p = n(594174), R = n(15385), f = n(768581), L = n(267642), O = n(358085), A = n(999382), M = n(70409), D = n(981631), v = n(710111), j = n(689938), Z = n(145509);
 let b = O.isPlatformEmbedded || 'Safari' !== o().name && 'Firefox' !== o().name;
 function U() {
     let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
@@ -44,8 +44,8 @@ function P(e) {
                         return e = a, void (0, T.f)({
                             guildId: e,
                             location: {
-                                section: v.jXE.GUILD_SETTINGS_SOUNDBOARD,
-                                object: v.qAy.BOOST_GEM_ICON
+                                section: D.jXE.GUILD_SETTINGS_SOUNDBOARD,
+                                object: D.qAy.BOOST_GEM_ICON
                             }
                         });
                     },
@@ -98,10 +98,10 @@ function F(e) {
     let {guild: t} = e, [i, r] = (0, c.Wu)([S.Z], () => {
             var e;
             return [
-                null !== (e = S.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : D.Hy,
+                null !== (e = S.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : v.Hy,
                 S.Z.isFetchingSounds() || S.Z.isFetchingDefaultSounds()
             ];
-        }), {canCreateExpressions: l} = (0, m.XJ)(t), o = a.useRef(null), d = (0, I.ZP)(), _ = t.premiumTier, E = (0, L.yw)(t, i, _);
+        }), {canCreateExpressions: l} = (0, m.XJ)(t), o = a.useRef(null), d = (0, E.ZP)(), _ = t.premiumTier, I = (0, L.yw)(t, i, _);
     a.useEffect(() => {
         (0, N.w)();
     }, []);
@@ -131,7 +131,7 @@ function F(e) {
                 });
             });
         },
-        disabled: E <= 0 || !l,
+        disabled: I <= 0 || !l,
         children: j.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
     }) : (0, s.jsx)(y, {});
     return (0, s.jsxs)(s.Fragment, {
@@ -177,13 +177,13 @@ function F(e) {
                         children: (0, s.jsx)(P, {
                             guildId: t.id,
                             currentTier: _,
-                            availableSounds: E
+                            availableSounds: I
                         })
                     }),
                     (0, s.jsx)(M.Z, {
                         guild: t,
                         numSounds: i.length,
-                        isOutOfSlots: 0 === E
+                        isOutOfSlots: 0 === I
                     }),
                     (0, s.jsxs)('div', {
                         className: Z.soundTable,
@@ -196,7 +196,7 @@ function F(e) {
                                     (0, s.jsx)(G, { children: j.Z.Messages.GUILD_SETTINGS_SOUND_UPLOADER_COLUMN })
                                 ]
                             }),
-                            i.map(e => (0, s.jsx)(k, {
+                            i.map(e => (0, s.jsx)(w, {
                                 sound: e,
                                 isPlaying: !1,
                                 guild: t,
@@ -209,7 +209,7 @@ function F(e) {
         ]
     });
 }
-function k(e) {
+function w(e) {
     let {
             sound: t,
             isPlaying: i,
@@ -217,7 +217,7 @@ function k(e) {
             guild: o
         } = e, {
             soundId: d,
-            name: I,
+            name: E,
             user: T,
             userId: S,
             emojiId: h,
@@ -229,7 +229,7 @@ function k(e) {
             t,
             R
         ]), O = null != h || null != g, [A, M] = a.useState(!1);
-    async function D() {
+    async function v() {
         if (!A) {
             M(!0);
             try {
@@ -252,7 +252,7 @@ function k(e) {
         null != x && (0, C.openUserProfileModal)({
             userId: x.id,
             guildId: o.id,
-            analyticsLocation: { section: v.jXE.GUILD_SETTINGS_SOUNDBOARD }
+            analyticsLocation: { section: D.jXE.GUILD_SETTINGS_SOUNDBOARD }
         });
     }, [
         x,
@@ -261,7 +261,7 @@ function k(e) {
     return (0, s.jsxs)('div', {
         className: r()(Z.row, { [Z.active]: i }),
         children: [
-            O ? (0, s.jsx)(E.Z, {
+            O ? (0, s.jsx)(I.Z, {
                 emojiId: h,
                 emojiName: g,
                 className: Z.emoji
@@ -279,7 +279,7 @@ function k(e) {
                     variant: 'text-sm/normal',
                     className: Z.soundName,
                     children: [
-                        I,
+                        E,
                         ' ',
                         (0, s.jsx)(u.VoiceNormalIcon, {
                             size: 'md',
@@ -335,14 +335,14 @@ function k(e) {
                         className: Z.soundRemove,
                         onClick: function (e) {
                             e.stopPropagation(), (0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
-                                header: j.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_TITLE.format({ soundName: I }),
+                                header: j.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_TITLE.format({ soundName: E }),
                                 confirmText: j.Z.Messages.DELETE,
                                 cancelText: j.Z.Messages.CANCEL,
-                                onConfirm: D,
+                                onConfirm: v,
                                 ...e,
                                 children: (0, s.jsx)(u.Text, {
                                     variant: 'text-md/normal',
-                                    children: j.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_BODY.format({ soundName: I })
+                                    children: j.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_BODY.format({ soundName: E })
                                 })
                             }));
                         },

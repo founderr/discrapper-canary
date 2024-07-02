@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(749210), c = n(63063), d = n(714939), u = n(494831), _ = n(981631), E = n(689938), I = n(412973);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(749210), c = n(63063), d = n(714939), u = n(494831), _ = n(981631), I = n(689938), E = n(412973);
 function T(e) {
     let {
             guild: t,
@@ -29,13 +29,13 @@ function T(e) {
         children: [
             (0, s.jsx)(l.FormTitle, {
                 tag: l.FormTitleTags.H1,
-                children: E.Z.Messages.ROLES
+                children: I.Z.Messages.ROLES
             }),
             (0, s.jsx)(l.Text, {
-                className: I.description,
+                className: E.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: E.Z.Messages.ROLE_OVERVIEW_DESCRIPTION
+                children: I.Z.Messages.ROLE_OVERVIEW_DESCRIPTION
             }),
             (0, s.jsx)(m, {
                 guild: t,
@@ -69,28 +69,28 @@ function m(e) {
                 setQuery: o
             }),
             (0, s.jsx)(l.Text, {
-                className: I.helpText,
+                className: E.helpText,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: E.Z.Messages.ROLE_LIST_BODY_WITH_HELP.format({ articleURL: c.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) })
+                children: I.Z.Messages.ROLE_LIST_BODY_WITH_HELP.format({ articleURL: c.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) })
             }),
             (0, s.jsx)('div', {
-                className: I.rolesTable,
+                className: E.rolesTable,
                 children: (0, s.jsxs)('div', {
-                    className: I.tableHeader,
+                    className: E.tableHeader,
                     children: [
-                        (0, s.jsx)('div', { className: I.dragSpacing }),
+                        (0, s.jsx)('div', { className: E.dragSpacing }),
                         (0, s.jsx)(l.Text, {
-                            className: r()(I.tableTitle, I.roleNameSpacing),
+                            className: r()(E.tableTitle, E.roleNameSpacing),
                             variant: 'text-sm/normal',
-                            children: E.Z.Messages.ROLE_LIST_HEADER.format({ numRoles: String(a.length) })
+                            children: I.Z.Messages.ROLE_LIST_HEADER.format({ numRoles: String(a.length) })
                         }),
                         (0, s.jsx)(l.Text, {
-                            className: r()(I.tableTitle, I.memberSpacing),
+                            className: r()(E.tableTitle, E.memberSpacing),
                             variant: 'text-sm/normal',
-                            children: E.Z.Messages.MEMBERS
+                            children: I.Z.Messages.MEMBERS
                         }),
-                        (0, s.jsx)('div', { className: I.buttonsSpacing })
+                        (0, s.jsx)('div', { className: E.buttonsSpacing })
                     ]
                 })
             })
@@ -110,24 +110,24 @@ function N(e) {
             c(!0), await o.Z.createRole(t.id), c(!1);
         };
     return (0, s.jsx)('div', {
-        className: I.__invalid_rolesList,
+        className: E.__invalid_rolesList,
         children: (0, s.jsxs)('div', {
-            className: I.searchContainer,
+            className: E.searchContainer,
             children: [
                 (0, s.jsx)(l.SearchBar, {
                     size: l.SearchBar.Sizes.MEDIUM,
                     query: n,
                     onChange: d,
                     onClear: u,
-                    placeholder: E.Z.Messages.SEARCH_ROLES,
-                    'aria-label': E.Z.Messages.SEARCH_ROLES
+                    placeholder: I.Z.Messages.SEARCH_ROLES,
+                    'aria-label': I.Z.Messages.SEARCH_ROLES
                 }),
                 (0, s.jsx)(l.Button, {
-                    className: I.createButton,
+                    className: E.createButton,
                     size: l.Button.Sizes.SMALL,
                     onClick: _,
                     submitting: r,
-                    children: E.Z.Messages.ROLE_CREATE_CTA
+                    children: I.Z.Messages.ROLE_CREATE_CTA
                 })
             ]
         })

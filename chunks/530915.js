@@ -74,11 +74,11 @@ let E = e => {
             } = e, {
                 trackSlideView: T,
                 trackPagination: N
-            } = (0, _.X)(t, v), [O, j] = (0, o.useState)(0), [R, Z] = (0, o.useState)(!1), [k, A] = (0, o.useState)(!1), P = o.useCallback(() => A(!0), []), B = o.useCallback(() => A(!1), []), M = (0, f.e7)([m.Z], () => m.Z.isFocused()), y = null != b && !L && !k && M, w = o.useCallback(e => (n.length + O + e) % n.length, [
+            } = (0, _.X)(t, v), [O, j] = (0, o.useState)(0), [Z, k] = (0, o.useState)(!1), [R, A] = (0, o.useState)(!1), P = o.useCallback(() => A(!0), []), B = o.useCallback(() => A(!1), []), M = (0, f.e7)([m.Z], () => m.Z.isFocused()), y = null != b && !L && !R && M, w = o.useCallback(e => (n.length + O + e) % n.length, [
                 n,
                 O
             ]), F = o.useCallback(d()((e, t, r) => {
-                null != r && (null == i || i(n[e], t, e, r), N(e, O, s(e), s(t))), Z('GO_TO_SLIDE' === r), null == c || c(n[e], t, e), j(e);
+                null != r && (null == i || i(n[e], t, e, r), N(e, O, s(e), s(t))), k('GO_TO_SLIDE' === r), null == c || c(n[e], t, e), j(e);
             }, 200), [
                 n,
                 i,
@@ -109,7 +109,7 @@ let E = e => {
                 (0, a.jsx)(C.Slides, {
                     activeSlide: String(O),
                     springConfig: null != h ? h : I,
-                    directionOverride: S && !R ? 'forwards' : void 0,
+                    directionOverride: S && !Z ? 'forwards' : void 0,
                     fadeInOut: !0,
                     children: n.map((e, t) => (0, a.jsx)(C.Slide, {
                         id: String(t),

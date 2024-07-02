@@ -1,12 +1,12 @@
 n.d(t, {
     Q: function () {
-        return E;
+        return I;
     }
 });
 var s = n(735250);
 n(470079);
 var a = n(740903), i = n(426434), r = n(112824), l = n(181339), o = n(195189), c = n(616230), d = n(3896), u = n(981631), _ = n(689938);
-let E = e => ({
+let I = e => ({
     [a.u.CAPTCHA_AND_RAID_PROTECTION]: [
         {
             renderComponent: () => (0, s.jsx)(l.Z, { guild: e }, 'raid-alerts'),

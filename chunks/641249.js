@@ -5,12 +5,12 @@ n.d(t, {
 }), n(47120);
 var s = n(735250);
 n(470079);
-var a = n(442837), i = n(481060), r = n(430824), l = n(723047), o = n(727843), c = n(290348), d = n(971792), u = n(155758), _ = n(331146), E = n(798680), I = n(689938), T = n(552052);
+var a = n(442837), i = n(481060), r = n(430824), l = n(723047), o = n(727843), c = n(290348), d = n(971792), u = n(155758), _ = n(331146), I = n(798680), E = n(689938), T = n(552052);
 function m() {
     let {
             editStateId: e,
             guildId: t
-        } = (0, o.N)(), [m, N] = c.XZ(e, t), S = (0, d.Z)(t, e), {setCurrentTab: h} = (0, E.dw)(), g = () => h(E.ue.EMOJIS), C = (0, a.e7)([r.Z], () => r.Z.getGuild(t)), x = null == C ? void 0 : C.getMaxRoleSubscriptionEmojiSlots();
+        } = (0, o.N)(), [m, N] = c.XZ(e, t), S = (0, d.Z)(t, e), {setCurrentTab: h} = (0, I.dw)(), g = () => h(I.ue.EMOJIS), C = (0, a.e7)([r.Z], () => r.Z.getGuild(t)), x = null == C ? void 0 : C.getMaxRoleSubscriptionEmojiSlots();
     function p(e) {
         null == m ? N(new Set(e)) : N(new Set([
             ...m,
@@ -23,7 +23,7 @@ function m() {
     }
     let f = (0, l.mY)();
     return (0, s.jsxs)(i.FormSection, {
-        title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
+        title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
         disabled: f,
         children: [
             (0, s.jsxs)(i.FormText, {
@@ -31,9 +31,9 @@ function m() {
                 className: T.formDescription,
                 disabled: f,
                 children: [
-                    I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }),
+                    E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }),
                     (0, s.jsx)('br', {}),
-                    I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: g })
+                    E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: g })
                 ]
             }),
             (0, s.jsx)(_.E, {
@@ -68,7 +68,7 @@ function m() {
                     });
                 },
                 disabled: f,
-                children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
+                children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
             })
         ]
     });

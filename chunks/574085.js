@@ -11,7 +11,7 @@ function _() {
             editStateId: e,
             guildId: t
         } = (0, r.N)(), [n, _] = l.R7(e);
-    function E(e, t) {
+    function I(e, t) {
         let {
                 name: s,
                 description: a,
@@ -27,7 +27,7 @@ function _() {
             };
         null != t ? l[t] = o : l.push(o), _(l);
     }
-    let I = (0, i.mY)();
+    let E = (0, i.mY)();
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(c.p, {
@@ -37,7 +37,7 @@ function _() {
                         ...a,
                         guildId: t,
                         initialData: n[e],
-                        onSave: t => E(t, e),
+                        onSave: t => I(t, e),
                         onDelete: () => function (e) {
                             let t = [...n];
                             t.splice(e, 1), _(t);
@@ -56,10 +56,10 @@ function _() {
                     (0, a.openModal)(e => (0, s.jsx)(o.DI, {
                         ...e,
                         guildId: t,
-                        onSave: e => E(e)
+                        onSave: e => I(e)
                     }));
                 },
-                disabled: I,
+                disabled: E,
                 children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_ADD_BUTTON_TEXT
             })
         ]

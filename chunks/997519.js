@@ -12,8 +12,8 @@ function c(e, t) {
             groupType: o.uw.SERVER_ROLE_SUBSCRIPTION,
             teamId: null == n ? void 0 : n.id
         }), u = (0, r.f)('useEarningMetrics'), _ = (0, l.Z)(e), {
-            currentPeriod: E,
-            previousPeriods: I,
+            currentPeriod: I,
+            previousPeriods: E,
             metrics: T
         } = s.useMemo(() => {
             let {
@@ -36,8 +36,8 @@ function c(e, t) {
     return {
         loading: d || !u,
         team: n,
-        currentPeriod: E,
-        previousPeriods: I,
+        currentPeriod: I,
+        previousPeriods: E,
         allPeriods: c,
         metrics: T
     };

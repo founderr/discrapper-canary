@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(239091), o = n(605436), c = n(741247), d = n(474333), u = n(243730), _ = n(852898), E = n(203377), I = n(689938), T = n(813679);
+var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(239091), o = n(605436), c = n(741247), d = n(474333), u = n(243730), _ = n(852898), I = n(203377), E = n(689938), T = n(813679);
 function m() {
     let [e, t] = a.useState(!0);
     return {
@@ -32,7 +32,7 @@ function N(e) {
             t.id
         ]), C = (0, o.pM)(t.id, m.id), x = (0, _.Z)(m);
     a.useEffect(() => {
-        C && S(E.ZI.PERMISSIONS);
+        C && S(I.ZI.PERMISSIONS);
     }, [
         C,
         S
@@ -47,7 +47,7 @@ function N(e) {
                         className: T.titleText,
                         color: 'header-primary',
                         variant: 'text-md/semibold',
-                        children: I.Z.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({ roleName: m.name })
+                        children: E.Z.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({ roleName: m.name })
                     }),
                     p ? (0, s.jsx)(r.Clickable, {
                         className: T.menu,
@@ -61,7 +61,7 @@ function N(e) {
                                 });
                             });
                         },
-                        'aria-label': I.Z.Messages.MORE_OPTIONS,
+                        'aria-label': E.Z.Messages.MORE_OPTIONS,
                         children: (0, s.jsx)(r.MoreHorizontalIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -75,7 +75,7 @@ function N(e) {
             }) : null,
             (0, s.jsxs)(r.TabBar, {
                 className: T.tabBar,
-                'aria-label': I.Z.Messages.OPTIONS,
+                'aria-label': E.Z.Messages.OPTIONS,
                 selectedItem: N,
                 type: 'top',
                 look: 'brand',
@@ -83,26 +83,26 @@ function N(e) {
                 children: [
                     (0, s.jsx)(r.TabBar.Item, {
                         className: T.tabBarItem,
-                        id: E.ZI.DISPLAY,
+                        id: I.ZI.DISPLAY,
                         disabled: C,
-                        children: I.Z.Messages.ROLE_EDIT_TAB_DISPLAY
+                        children: E.Z.Messages.ROLE_EDIT_TAB_DISPLAY
                     }),
                     (0, s.jsx)(r.TabBar.Item, {
                         className: T.tabBarItem,
-                        id: E.ZI.PERMISSIONS,
-                        children: I.Z.Messages.ROLE_EDIT_TAB_PERMISSIONS
+                        id: I.ZI.PERMISSIONS,
+                        children: E.Z.Messages.ROLE_EDIT_TAB_PERMISSIONS
                     }),
                     (0, s.jsx)(r.TabBar.Item, {
                         className: T.tabBarItem,
-                        id: E.ZI.VERIFICATIONS,
+                        id: I.ZI.VERIFICATIONS,
                         disabled: C,
-                        children: I.Z.Messages.ROLE_EDIT_TAB_VERIFICATION
+                        children: E.Z.Messages.ROLE_EDIT_TAB_VERIFICATION
                     }),
                     (0, s.jsx)(r.TabBar.Item, {
                         className: T.tabBarItem,
-                        id: E.ZI.MEMBERS,
+                        id: I.ZI.MEMBERS,
                         disabled: C,
-                        children: C ? I.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(g) })
+                        children: C ? E.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : E.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(g) })
                     })
                 ]
             })

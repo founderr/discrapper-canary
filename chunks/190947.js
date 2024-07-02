@@ -5,16 +5,16 @@ s.d(n, {
 });
 var l = s(735250);
 s(470079);
-var i = s(481060), t = s(991862);
+var t = s(481060), i = s(991862);
 function r(e) {
     let {
         currencies: n,
         className: s,
-        children: i
+        children: t
     } = e;
     return n.length < 2 ? null : (0, l.jsx)('div', {
         className: s,
-        children: i
+        children: t
     });
 }
 n.Z = function (e) {
@@ -30,9 +30,9 @@ n.Z = function (e) {
     let o = n.map((e, n) => ({
         key: n,
         value: e,
-        label: ''.concat(e.toUpperCase(), ' - ').concat((0, t.T)(e))
+        label: ''.concat(e.toUpperCase(), ' - ').concat((0, i.T)(e))
     }));
-    return (0, l.jsx)(i.SingleSelect, {
+    return (0, l.jsx)(t.SingleSelect, {
         value: r,
         options: o,
         onChange: e => {

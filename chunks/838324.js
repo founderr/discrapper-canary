@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     }
 }), n(47120);
 var s = n(735250);
 n(470079);
-var a = n(442837), i = n(692547), r = n(481060), l = n(45966), o = n(637853), c = n(889369), d = n(974513), u = n(290511), _ = n(689938), E = n(701923);
-function I(e) {
+var a = n(442837), i = n(692547), r = n(481060), l = n(45966), o = n(637853), c = n(889369), d = n(974513), u = n(290511), _ = n(689938), I = n(701923);
+function E(e) {
     let {
             guildId: t,
             scrollToQuestions: n
-        } = e, I = (0, a.e7)([l.Z], () => l.Z.isAdvancedMode(t)), T = (0, a.e7)([c.Z], () => c.Z.editedDefaultChannelIds), [m, N] = (0, o.VF)(t, T), [S, h] = (0, d.OA)(t, [...T]), g = I ? h.length : N.length, C = I ? S.length : m.length, x = g < u.md, p = C >= u.X, R = h.length - N.length, f = (0, s.jsx)(r.CircleCheckIcon, {
+        } = e, E = (0, a.e7)([l.Z], () => l.Z.isAdvancedMode(t)), T = (0, a.e7)([c.Z], () => c.Z.editedDefaultChannelIds), [m, N] = (0, o.VF)(t, T), [S, h] = (0, d.OA)(t, [...T]), g = E ? h.length : N.length, C = E ? S.length : m.length, x = g < u.md, p = C >= u.X, R = h.length - N.length, f = (0, s.jsx)(r.CircleCheckIcon, {
             size: 'sm',
             color: i.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: i.Z.unsafe_rawColors.WHITE_100.css,
-            className: E.icon
+            className: I.icon
         }), L = (0, s.jsx)(r.CircleXIcon, {
             size: 'sm',
-            className: E.icon,
+            className: I.icon,
             color: i.Z.colors.WHITE.css,
             secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css
         }), O = [
@@ -31,10 +31,10 @@ function I(e) {
             i.Z.colors.TEXT_MUTED.css
         ];
     return (0, s.jsxs)('div', {
-        className: E.container,
+        className: I.container,
         children: [
             (0, s.jsxs)('div', {
-                className: E.header,
+                className: I.header,
                 children: [
                     (0, s.jsx)(r.Text, {
                         variant: 'text-xs/bold',
@@ -54,7 +54,7 @@ function I(e) {
                 size: r.StackedProgress.Sizes.XSMALL
             }),
             (0, s.jsxs)('div', {
-                className: E.requiredItem,
+                className: I.requiredItem,
                 children: [
                     x ? L : f,
                     (0, s.jsx)(r.Text, {
@@ -65,7 +65,7 @@ function I(e) {
                 ]
             }),
             (0, s.jsxs)('div', {
-                className: E.requiredItem,
+                className: I.requiredItem,
                 children: [
                     p ? f : L,
                     (0, s.jsx)(r.Text, {
@@ -75,16 +75,16 @@ function I(e) {
                     })
                 ]
             }),
-            I && (0, s.jsxs)(s.Fragment, {
+            E && (0, s.jsxs)(s.Fragment, {
                 children: [
                     (0, s.jsxs)('div', {
-                        className: E.requiredItem,
+                        className: I.requiredItem,
                         children: [
                             (0, s.jsx)(r.CircleInformationIcon, {
                                 size: 'sm',
                                 color: i.Z.colors.WHITE.css,
                                 secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css,
-                                className: E.icon
+                                className: I.icon
                             }),
                             (0, s.jsx)(r.Text, {
                                 variant: 'text-xs/normal',
@@ -94,13 +94,13 @@ function I(e) {
                         ]
                     }),
                     (0, s.jsxs)('div', {
-                        className: E.requiredItem,
+                        className: I.requiredItem,
                         children: [
                             (0, s.jsx)(r.CircleInformationIcon, {
                                 size: 'sm',
                                 color: i.Z.colors.WHITE.css,
                                 secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css,
-                                className: E.icon
+                                className: I.icon
                             }),
                             (0, s.jsx)(r.Text, {
                                 variant: 'text-xs/normal',

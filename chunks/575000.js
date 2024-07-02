@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var s, a = n(735250), i = n(470079), r = n(120356), l = n.n(r), o = n(920906), c = n(772848), d = n(374470), u = n(477690), _ = n(481060), E = n(624138), I = n(981631), T = n(689938), m = n(974458);
+var s, a = n(735250), i = n(470079), r = n(120356), l = n.n(r), o = n(920906), c = n(772848), d = n(374470), u = n(477690), _ = n(481060), I = n(624138), E = n(981631), T = n(689938), m = n(974458);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -12,7 +12,7 @@ function N(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let S = -1, h = (0, E.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH), g = (0, E.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE), C = {
+let S = -1, h = (0, I.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH), g = (0, I.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE), C = {
         tension: 140,
         friction: 30
     }, x = {
@@ -74,7 +74,7 @@ class p extends (s = i.Component) {
     }
     renderTierMarkerTooltip(e) {
         let {progress: t} = this.props;
-        if (null == e.name || e.key === I.Eu4.NONE)
+        if (null == e.name || e.key === E.Eu4.NONE)
             return null;
         let n = Math.min(t, e.numRequired);
         return (0, a.jsxs)('div', {
@@ -96,9 +96,9 @@ class p extends (s = i.Component) {
         let {
                 progress: r,
                 tiers: l
-            } = this.props, c = l[n], d = r >= e.numRequired, u = null != c && e.key === c.key, E = e.key === l[0].key;
-        i = E ? m.tierFirst : u ? m.tierCurrent : d ? m.tierAccomplished : m.tierInProgress;
-        let I = e.y - (E ? 0 : g / 2), T = this.state.tierMarkerActive === t, N = !E && u && T;
+            } = this.props, c = l[n], d = r >= e.numRequired, u = null != c && e.key === c.key, I = e.key === l[0].key;
+        i = I ? m.tierFirst : u ? m.tierCurrent : d ? m.tierAccomplished : m.tierInProgress;
+        let E = e.y - (I ? 0 : g / 2), T = this.state.tierMarkerActive === t, N = !I && u && T;
         return (0, a.jsx)(_.Tooltip, {
             text: this.renderTierMarkerTooltip(e),
             position: 'right',
@@ -111,7 +111,7 @@ class p extends (s = i.Component) {
                     ...e,
                     className: i,
                     style: {
-                        top: I,
+                        top: E,
                         transform: t.scale.interpolate(e => 'scale('.concat(e, ')'))
                     },
                     children: N && (0, a.jsx)(_.CheckmarkLargeIcon, {

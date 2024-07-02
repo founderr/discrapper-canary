@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(456935), c = n(259580), d = n(981631), u = n(689938), _ = n(941377);
-function E(e) {
-    let {guild: t} = e, i = t.verificationLevel, E = a.useMemo(() => (0, o.I9)(i), [i]);
+function I(e) {
+    let {guild: t} = e, i = t.verificationLevel, I = a.useMemo(() => (0, o.I9)(i), [i]);
     return (0, s.jsxs)(l.Clickable, {
         onClick: () => (0, l.openModalLazy)(async () => {
             let {default: e} = await n.e('27933').then(n.bind(n, 694278));
@@ -48,7 +48,7 @@ function E(e) {
                                     width: 16,
                                     height: 16
                                 }),
-                                E
+                                I
                             ]
                         })
                     })

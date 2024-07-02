@@ -11,12 +11,12 @@ function u(e) {
             className: i,
             textAreaClassName: u,
             subtitleText: _,
-            initialValue: E
-        } = e, I = a.useMemo(() => null != E ? E : [], [E]), {
+            initialValue: I
+        } = e, E = a.useMemo(() => null != I ? I : [], [I]), {
             value: T,
             onChange: m,
             errorMessage: N
-        } = (0, o.Z)(t, E, n);
+        } = (0, o.Z)(t, I, n);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsxs)('div', {
@@ -32,7 +32,7 @@ function u(e) {
                         className: d.keywordsCounter,
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: ''.concat(I.length, ' / ').concat(n)
+                        children: ''.concat(E.length, ' / ').concat(n)
                     })
                 ]
             }),

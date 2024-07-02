@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return E;
+        return I;
     }
 });
 var s = n(735250);
@@ -46,7 +46,7 @@ function _(e) {
         ]
     });
 }
-function E(e) {
+function I(e) {
     let {
             tierEmojiIds: t,
             guildId: n,

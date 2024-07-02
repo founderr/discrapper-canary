@@ -3,39 +3,39 @@ s.d(n, {
         return b;
     }
 });
-var l = s(735250), i = s(470079), t = s(512722), r = s.n(t), a = s(742280), c = s(399606), o = s(481060), u = s(224550), d = s(609194), _ = s(275850), m = s(672971), I = s(115130), E = s(653798), p = s(314182), N = s(251660), T = s(246946), S = s(351402), x = s(855775), h = s(695103), P = s(366695), A = s(4912), v = s(669079), f = s(937615), M = s(987209), g = s(598), C = s(45572), R = s(119226), O = s(981631), L = s(689938), j = s(482775);
+var l = s(735250), t = s(470079), i = s(512722), r = s.n(i), a = s(742280), c = s(399606), o = s(481060), u = s(224550), d = s(609194), _ = s(275850), m = s(672971), E = s(115130), I = s(653798), p = s(314182), N = s(251660), T = s(246946), S = s(351402), x = s(855775), h = s(695103), P = s(366695), f = s(4912), A = s(669079), v = s(937615), M = s(987209), g = s(598), C = s(45572), O = s(119226), R = s(981631), L = s(689938), j = s(482775);
 function y(e) {
     let {
         sku: n,
         skuPricePreview: s
     } = e;
     r()(null != s.amount, 'SKU must have a price set.');
-    let i = s.amount - s.tax;
-    return !s.tax_inclusive && s.tax > 0 ? (0, l.jsxs)(E.PO, {
+    let t = s.amount - s.tax;
+    return !s.tax_inclusive && s.tax > 0 ? (0, l.jsxs)(I.PO, {
         className: j.invoice,
         children: [
-            (0, l.jsx)(E.R$, {
+            (0, l.jsx)(I.R$, {
                 label: n.name,
-                value: (0, f.T4)(i, s.currency),
+                value: (0, v.T4)(t, s.currency),
                 className: j.subscriptionCostRow
             }),
-            (0, l.jsx)(E.R$, {
+            (0, l.jsx)(I.R$, {
                 label: L.Z.Messages.PURCHASE_REVIEW_TAX_LABEL,
-                value: (0, f.T4)(s.tax, s.currency),
+                value: (0, v.T4)(s.tax, s.currency),
                 className: j.subscriptionCostRow
             }),
-            (0, l.jsx)(E.KU, {}),
-            (0, l.jsx)(E.Ji, {
+            (0, l.jsx)(I.KU, {}),
+            (0, l.jsx)(I.Ji, {
                 label: L.Z.Messages.BILLING_INVOICE_TOTAL.format(),
-                value: (0, f.T4)(s.amount, s.currency),
+                value: (0, v.T4)(s.amount, s.currency),
                 className: j.subscriptionCostRow
             })
         ]
-    }) : (0, l.jsx)(E.PO, {
+    }) : (0, l.jsx)(I.PO, {
         className: j.invoice,
-        children: (0, l.jsx)(E.R$, {
+        children: (0, l.jsx)(I.R$, {
             label: n.name,
-            value: (0, f.T4)(s.amount, s.currency),
+            value: (0, v.T4)(s.amount, s.currency),
             className: j.subscriptionCostRow
         })
     });
@@ -44,9 +44,9 @@ function Z(e) {
     let {
         application: n,
         sku: s,
-        isEmbeddedIAP: i
+        isEmbeddedIAP: t
     } = e;
-    return !0 !== i ? null : (0, l.jsxs)('div', {
+    return !0 !== t ? null : (0, l.jsxs)('div', {
         className: j.skuHeading,
         children: [
             (0, l.jsx)(P.Z, { game: n }),
@@ -62,39 +62,39 @@ function b(e) {
     let {
             hasLegalTermsFlash: n,
             legalTermsNodeRef: s,
-            onPaymentSourceChange: t,
+            onPaymentSourceChange: i,
             handlePaymentSourceAdd: P
         } = e, {
-            application: f,
+            application: v,
             purchaseState: b,
             paymentSources: D,
             paymentSourceId: G,
             setHasAcceptedTerms: U,
             skusById: F,
-            skuPricePreviewsById: w,
-            selectedSkuId: B,
+            skuPricePreviewsById: B,
+            selectedSkuId: w,
             isEmbeddedIAP: H,
             purchaseType: k,
             purchasePreviewError: W
         } = (0, g.usePaymentContext)(), {
             isGift: Y,
             giftRecipient: K
-        } = (0, M.wD)(), V = Y && (0, v.pO)(K);
-    r()(null != B, 'Expected selectedSkuId');
-    let z = F[B], X = w[B], J = null != G ? G : x.c, q = null != X ? X[J] : null;
-    r()(null != z, 'SKU must exist and be fetched.'), r()(null != f, 'Application must exist.');
+        } = (0, M.wD)(), V = Y && (0, A.pO)(K);
+    r()(null != w, 'Expected selectedSkuId');
+    let z = F[w], X = B[w], J = null != G ? G : x.c, q = null != X ? X[J] : null;
+    r()(null != z, 'SKU must exist and be fetched.'), r()(null != v, 'Application must exist.');
     let Q = (0, c.e7)([
-            I.Z,
+            E.Z,
             h.Z
-        ], () => h.Z.inTestModeForApplication(f.id) || I.Z.inDevModeForApplication(f.id), [f.id]), $ = (0, c.e7)([T.Z], () => T.Z.enabled), ee = a.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback), en = b === C.A.PURCHASING || b === C.A.COMPLETED, es = null != G ? D[G].type : null, el = i.useMemo(() => null != q ? (0, l.jsx)(y, {
+        ], () => h.Z.inTestModeForApplication(v.id) || E.Z.inDevModeForApplication(v.id), [v.id]), $ = (0, c.e7)([T.Z], () => T.Z.enabled), ee = a.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback), en = b === C.A.PURCHASING || b === C.A.COMPLETED, es = null != G ? D[G].type : null, el = t.useMemo(() => null != q ? (0, l.jsx)(y, {
             sku: z,
             skuPricePreview: q
         }) : null == W ? (0, l.jsx)(o.Spinner, {
             type: o.Spinner.Type.WANDERING_CUBES,
             className: j.invoiceSpinner
-        }) : (0, l.jsx)(E.PO, {
+        }) : (0, l.jsx)(I.PO, {
             className: j.invoice,
-            children: (0, l.jsx)(E.R$, {
+            children: (0, l.jsx)(I.R$, {
                 label: z.name,
                 value: null,
                 className: j.subscriptionCostRow
@@ -108,18 +108,18 @@ function b(e) {
         className: j.stepBody,
         children: [
             Q && (0, l.jsx)(d.Z, {
-                icon: (0, o.makeIconCompat)(A.Z),
+                icon: (0, o.makeIconCompat)(f.Z),
                 iconSize: d.Z.Sizes.SMALL,
                 color: d.Z.Colors.WARNING,
                 className: j.errorBlock,
                 children: L.Z.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
             }, 'TEST_MODE'),
             (0, l.jsx)(Z, {
-                application: f,
+                application: v,
                 sku: z,
                 isEmbeddedIAP: H
             }),
-            V && (0, l.jsx)(R.Z, { sku: z }),
+            V && (0, l.jsx)(O.Z, { sku: z }),
             null != K ? (0, l.jsx)(N.s, { giftRecipient: K }) : null,
             (0, l.jsx)(o.FormTitle, {
                 tag: o.FormTitleTags.H5,
@@ -136,7 +136,7 @@ function b(e) {
                     (0, l.jsx)(_.Z, {
                         paymentSources: Object.values(D),
                         selectedPaymentSourceId: G,
-                        onChange: t,
+                        onChange: i,
                         onPaymentSourceAdd: P,
                         hidePersonalInformation: $
                     })
@@ -154,7 +154,7 @@ function b(e) {
                     finePrintClassname: j.fineprint,
                     purchaseType: k,
                     isGift: Y,
-                    checkboxLabel: z.productLine === O.POd.COLLECTIBLES ? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: O.EYA.PAID_TERMS }) : void 0,
+                    checkboxLabel: z.productLine === R.POd.COLLECTIBLES ? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: R.EYA.PAID_TERMS }) : void 0,
                     finePrint: (0, l.jsx)(u.Z, {
                         paymentSourceType: es,
                         isEmbeddedIAP: H,

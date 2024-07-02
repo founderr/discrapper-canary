@@ -5,7 +5,7 @@ s.d(n, {
 }), s(757143);
 var l = s(735250);
 s(470079);
-var i = s(120356), t = s.n(i), r = s(481060), a = s(403182), c = s(587446), o = s(504983), u = s(410728);
+var t = s(120356), i = s.n(t), r = s(481060), a = s(403182), c = s(587446), o = s(504983), u = s(410728);
 function d(e) {
     let {errors: n} = e;
     return (0, l.jsx)(l.Fragment, {
@@ -24,12 +24,12 @@ function _(e) {
     let {
         title: n,
         titleIcon: s,
-        titleId: i,
+        titleId: t,
         description: a,
         children: _,
         className: m,
-        errors: I,
-        disabled: E = !1,
+        errors: E,
+        disabled: I = !1,
         hideDivider: p = !1,
         showBorder: N = !1,
         borderType: T,
@@ -38,8 +38,8 @@ function _(e) {
         showPremiumIcon: h = !1
     } = e;
     return (0, l.jsx)('div', {
-        className: t()(u.customizationSection, m, {
-            [u.disabled]: E,
+        className: i()(u.customizationSection, m, {
+            [u.disabled]: I,
             [u.hideDivider]: p,
             [u.showBorder]: N,
             [u.withDivider]: x
@@ -53,7 +53,7 @@ function _(e) {
             children: [
                 (0, l.jsxs)(r.FormTitle, {
                     className: u.title,
-                    id: i,
+                    id: t,
                     children: [
                         n,
                         h && (0, l.jsx)(c.Z, {}),
@@ -66,7 +66,7 @@ function _(e) {
                     children: a
                 }) : null,
                 _,
-                null != I && (0, l.jsx)(d, { errors: I })
+                null != E && (0, l.jsx)(d, { errors: E })
             ]
         })
     });

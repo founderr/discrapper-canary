@@ -1,5 +1,5 @@
 n(47120), n(724458);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(498607), o = n.n(l), c = n(913527), d = n.n(c), u = n(442837), _ = n(692547), E = n(481060), I = n(946314), T = n(984933), m = n(63063), N = n(709054), S = n(434404), h = n(981631), g = n(689938), C = n(638584);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(498607), o = n.n(l), c = n(913527), d = n.n(c), u = n(442837), _ = n(692547), I = n(481060), E = n(946314), T = n(984933), m = n(63063), N = n(709054), S = n(434404), h = n(981631), g = n(689938), C = n(638584);
 let x = e => {
     let {
             name: t,
@@ -10,18 +10,18 @@ let x = e => {
             pendingDescription: l,
             failingDescription: o
         } = e, c = t, d = null, u = null;
-    return r ? (d = (0, s.jsx)(E.CircleExclamationPointIcon, {
+    return r ? (d = (0, s.jsx)(I.CircleExclamationPointIcon, {
         size: 'custom',
         color: _.Z.unsafe_rawColors.YELLOW_300.css,
         width: 20,
         height: 20
-    }), u = null != l ? l : a) : i ? (d = (0, s.jsx)(E.Checkbox, {
+    }), u = null != l ? l : a) : i ? (d = (0, s.jsx)(I.Checkbox, {
         readOnly: !0,
-        shape: E.Checkbox.Shapes.ROUND,
+        shape: I.Checkbox.Shapes.ROUND,
         size: 20,
-        type: E.Checkbox.Types.INVERTED,
+        type: I.Checkbox.Types.INVERTED,
         value: !0
-    }), u = a) : (d = (0, s.jsx)(E.CircleXIcon, {
+    }), u = a) : (d = (0, s.jsx)(I.CircleXIcon, {
         size: 'custom',
         color: _.Z.unsafe_rawColors.RED_400.css,
         width: 20,
@@ -36,11 +36,11 @@ let x = e => {
             (0, s.jsxs)('div', {
                 className: C.checklistText,
                 children: [
-                    (0, s.jsx)(E.Heading, {
+                    (0, s.jsx)(I.Heading, {
                         variant: 'heading-md/semibold',
                         children: c
                     }),
-                    (0, s.jsx)(E.Text, {
+                    (0, s.jsx)(I.Text, {
                         color: 'text-muted',
                         variant: 'text-sm/normal',
                         children: u
@@ -66,9 +66,9 @@ t.Z = e => {
             className: l,
             noHeader: o = !1,
             failedItemsOnly: c = !1
-        } = e, [_, R] = (0, u.Wu)([I.ZP], () => [
-            I.ZP.getDiscoveryChecklist(i),
-            I.ZP.isLoading()
+        } = e, [_, R] = (0, u.Wu)([E.ZP], () => [
+            E.ZP.getDiscoveryChecklist(i),
+            E.ZP.isLoading()
         ], [i]), {nsfwProperties: f} = null != _ ? _ : {}, L = null == t ? void 0 : t.hasFeature(h.oNc.PARTNERED), O = null == f ? void 0 : f.channels_banned_keywords, A = (0, u.e7)([T.ZP], () => {
             var e, n, s;
             if (null == O)
@@ -92,16 +92,16 @@ t.Z = e => {
         return (0, s.jsxs)('div', {
             className: r()(C.container, C.loaderContainer, l),
             children: [
-                (0, s.jsx)(E.Heading, {
+                (0, s.jsx)(I.Heading, {
                     className: C.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
                     children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_LOADING
                 }),
-                (0, s.jsx)(E.Spinner, { className: C.__invalid_spinner })
+                (0, s.jsx)(I.Spinner, { className: C.__invalid_spinner })
             ]
         });
-    let M = L ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAILING_PARTNERS : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAIL, v = [
+    let M = L ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAILING_PARTNERS : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAIL, D = [
             {
                 name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE,
                 failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_FAILING,
@@ -135,18 +135,18 @@ t.Z = e => {
                 description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION,
                 failingDescription: (0, s.jsxs)(s.Fragment, {
                     children: [
-                        (0, s.jsx)(E.Text, {
+                        (0, s.jsx)(I.Text, {
                             color: 'text-muted',
                             className: C.healthFailingDescription,
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_FAILING
                         }),
-                        (null == _ ? void 0 : _.engagementHealthy) ? null : (0, s.jsx)(E.Text, {
+                        (null == _ ? void 0 : _.engagementHealthy) ? null : (0, s.jsx)(I.Text, {
                             color: 'text-danger',
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_ENGAGEMENT_FAILING
                         }),
-                        (null == _ ? void 0 : _.retentionHealthy) ? null : (0, s.jsx)(E.Text, {
+                        (null == _ ? void 0 : _.retentionHealthy) ? null : (0, s.jsx)(I.Text, {
                             color: 'text-danger',
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_RETENTION_FAILING
@@ -164,12 +164,12 @@ t.Z = e => {
                                     perc_ret_w1_intentful: i
                                 } = n;
                             return !e && null != i || !t && null != s && null != a;
-                        })() && (0, s.jsx)(E.Button, {
+                        })() && (0, s.jsx)(I.Button, {
                             className: C.detailsButton,
-                            look: E.Button.Looks.LINK,
-                            size: E.Button.Sizes.NONE,
-                            color: E.Button.Colors.LINK,
-                            onClick: () => (0, E.openModalLazy)(async () => {
+                            look: I.Button.Looks.LINK,
+                            size: I.Button.Sizes.NONE,
+                            color: I.Button.Colors.LINK,
+                            onClick: () => (0, I.openModalLazy)(async () => {
                                 let {default: e} = await n.e('23401').then(n.bind(n, 666599));
                                 return t => (0, s.jsx)(e, {
                                     ...t,
@@ -195,7 +195,7 @@ t.Z = e => {
                 description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_NSFW_DESCRIPTION,
                 failingDescription: (0, s.jsxs)(s.Fragment, {
                     children: [
-                        (null == f ? void 0 : f.channels) != null ? (0, s.jsx)(E.Text, {
+                        (null == f ? void 0 : f.channels) != null ? (0, s.jsx)(I.Text, {
                             color: 'text-muted',
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_CHANNEL_NAMES_2.format({
@@ -209,7 +209,7 @@ t.Z = e => {
                             className: C.indent,
                             children: A.map(e => {
                                 let [t, n] = e;
-                                return null != t ? (0, s.jsxs)(E.Text, {
+                                return null != t ? (0, s.jsxs)(I.Text, {
                                     color: 'text-muted',
                                     variant: 'text-sm/normal',
                                     children: [
@@ -221,7 +221,7 @@ t.Z = e => {
                                 }, t.id) : null;
                             })
                         }) : null,
-                        (null == f ? void 0 : f.name) != null ? (0, s.jsx)(E.Text, {
+                        (null == f ? void 0 : f.name) != null ? (0, s.jsx)(I.Text, {
                             color: 'text-muted',
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_NAME.format({
@@ -231,7 +231,7 @@ t.Z = e => {
                                 }, t)
                             })
                         }) : null,
-                        (null == f ? void 0 : f.description) != null ? (0, s.jsx)(E.Text, {
+                        (null == f ? void 0 : f.description) != null ? (0, s.jsx)(I.Text, {
                             color: 'text-muted',
                             variant: 'text-sm/normal',
                             children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_CHANGE_DESCRIPTION.format({
@@ -267,7 +267,7 @@ t.Z = e => {
                             className: C.headerIcon,
                             width: 40
                         }),
-                        (0, s.jsx)(E.Heading, {
+                        (0, s.jsx)(I.Heading, {
                             variant: 'heading-md/semibold',
                             children: (null == _ ? void 0 : _.sufficient) ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_GOOD_STANDING : e.format({
                                 doesNotHook: (e, t) => (0, s.jsx)('strong', {
@@ -279,10 +279,10 @@ t.Z = e => {
                     ]
                 });
             })(),
-            v.filter(e => !c || null == e.checked || !e.checked).map((e, t) => (0, s.jsxs)(a.Fragment, {
+            D.filter(e => !c || null == e.checked || !e.checked).map((e, t) => (0, s.jsxs)(a.Fragment, {
                 children: [
                     (0, s.jsx)(x, { ...e }),
-                    t < v.length - 1 ? (0, s.jsx)('hr', { className: C.separator }) : null
+                    t < D.length - 1 ? (0, s.jsx)('hr', { className: C.separator }) : null
                 ]
             }, e.name))
         ]

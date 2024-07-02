@@ -3,19 +3,19 @@ n.d(t, {
         return V;
     },
     fp: function () {
-        return k;
+        return w;
     },
     k0: function () {
         return F;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n(442837), c = n(481060), d = n(230711), u = n(497321), _ = n(367907), E = n(933557), I = n(471445), T = n(688465), m = n(154285), N = n(655006), S = n(191471), h = n(467319), g = n(241559), C = n(592125), x = n(496675), p = n(246946), R = n(594174), f = n(474333), L = n(626135), O = n(63063), A = n(78451), M = n(434404), v = n(999382), D = n(2150), j = n(181339), Z = n(193544), b = n(717251), U = n(981631), G = n(689938), P = n(75454);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n(442837), c = n(481060), d = n(230711), u = n(497321), _ = n(367907), I = n(933557), E = n(471445), T = n(688465), m = n(154285), N = n(655006), S = n(191471), h = n(467319), g = n(241559), C = n(592125), x = n(496675), p = n(246946), R = n(594174), f = n(474333), L = n(626135), O = n(63063), A = n(78451), M = n(434404), D = n(999382), v = n(2150), j = n(181339), Z = n(193544), b = n(717251), U = n(981631), G = n(689938), P = n(75454);
 function B(e) {
     let {guild: t} = e, n = t.canHaveRaidActivityAlerts(), i = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), {enableRaidAlerts: r} = N.l.useExperiment({
             guildId: t.id,
             location: '1a2662_1'
-        }, { autoTrackExposure: i }), l = (0, h.a)(t.id), d = (0, o.e7)([C.Z], () => C.Z.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), u = (0, E.ZP)(d), m = null != d, g = a.useMemo(() => {
-            let e = (null == d ? void 0 : d.type) != null ? (0, I.Th)(d.type) : null;
+        }, { autoTrackExposure: i }), l = (0, h.a)(t.id), d = (0, o.e7)([C.Z], () => C.Z.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), u = (0, I.ZP)(d), m = null != d, g = a.useMemo(() => {
+            let e = (null == d ? void 0 : d.type) != null ? (0, E.Th)(d.type) : null;
             return null != e ? e : c.TextIcon;
         }, [d]);
     function p() {
@@ -64,7 +64,7 @@ function B(e) {
                                 })
                             ]
                         }),
-                        highlightColor: D.q.GREEN,
+                        highlightColor: v.q.GREEN,
                         action: r ? (0, s.jsx)(c.Button, {
                             look: c.Button.Looks.LINK,
                             size: c.Button.Sizes.MIN,
@@ -158,7 +158,7 @@ function B(e) {
                                 })
                             ]
                         }),
-                        highlightColor: D.q.GREEN,
+                        highlightColor: v.q.GREEN,
                         action: (0, s.jsx)(c.Button, {
                             look: c.Button.Looks.LINK,
                             size: c.Button.Sizes.MIN,
@@ -285,15 +285,15 @@ function F(e) {
         ]
     });
 }
-async function k(e, t) {
+async function w(e, t) {
     if (e.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t)
         return;
     let n = e.features;
     return t ? n.add(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await M.Z.saveGuild(e.id, { features: n });
 }
-function w(e) {
+function k(e) {
     let {guild: t} = e, n = (0, o.e7)([x.Z], () => null != t && x.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = t.hasFeature(U.oNc.COMMUNITY), r = (0, g.n2)(t.id), [l, d] = a.useState(t.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), u = a.useCallback(async e => {
-            d(e), await k(t, e);
+            d(e), await w(t, e);
         }, [t]);
     return i || !r ? null : (0, s.jsxs)(s.Fragment, {
         children: [
@@ -352,7 +352,7 @@ function H(e) {
         }, [
             r,
             t
-        ]), E = n === U.BpS.ELEVATED, I = (0, l.throttle)(async e => {
+        ]), I = n === U.BpS.ELEVATED, E = (0, l.throttle)(async e => {
             if (!!u && !_)
                 await M.Z.updateMFALevel({
                     guildId: t.id,
@@ -367,8 +367,8 @@ function H(e) {
                 className: P.setupContainer,
                 children: [
                     (0, s.jsx)(c.FormSwitch, {
-                        value: E,
-                        onChange: I,
+                        value: I,
+                        onChange: E,
                         className: P.switchItem,
                         disabled: !u,
                         hideBorder: !0,
@@ -407,13 +407,13 @@ function V() {
     let {
             guild: t,
             mfaLevel: n
-        } = (0, o.cj)([v.Z], () => v.Z.getProps(), []), a = (0, o.e7)([p.Z], () => p.Z.enabled, []), {showAlertMode: i} = (0, m.sw)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : U.lds);
+        } = (0, o.cj)([D.Z], () => D.Z.getProps(), []), a = (0, o.e7)([p.Z], () => p.Z.enabled, []), {showAlertMode: i} = (0, m.sw)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : U.lds);
     return null == t ? null : a ? (0, s.jsx)(u.Z, {}) : (0, s.jsxs)(c.FormSection, {
         title: G.Z.Messages.SAFETY_SETUP,
         tag: c.FormTitleTags.H1,
         titleClassName: P.headerContainer,
         children: [
-            (0, s.jsx)(w, { guild: t }),
+            (0, s.jsx)(k, { guild: t }),
             (0, s.jsx)(y, { guild: t }),
             (0, s.jsx)(H, {
                 guild: t,

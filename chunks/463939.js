@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 });
-var s, a, i = n(735250), r = n(470079), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(264451), E = n(759178), I = n(462087), T = n(685201), m = n(766434), N = n(755930), S = n(334820), h = n(198139), g = n(689938), C = n(990868);
+var s, a, i = n(735250), r = n(470079), l = n(512722), o = n.n(l), c = n(913527), d = n.n(c), u = n(481060), _ = n(264451), I = n(759178), E = n(462087), T = n(685201), m = n(766434), N = n(755930), S = n(334820), h = n(198139), g = n(689938), C = n(990868);
 (s = a || (a = {})).DROPDOWN = 'DROPDOWN', s.PERIOD = 'PERIOD', s.AMOUNT = 'AMOUNT ', s.STATUS = 'STATUS ';
 let x = e => {
     let {dateUtc: t} = e;
@@ -25,7 +25,7 @@ function p(e) {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != o ? g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: o }) : g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING,
-                (0, i.jsx)(I.Z, { className: C.statusScheduledIcon })
+                (0, i.jsx)(E.Z, { className: C.statusScheduledIcon })
             ]
         });
     case h.x_.CANCELED:
@@ -70,7 +70,7 @@ function p(e) {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 null != o ? g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: o }) : g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED,
-                (0, i.jsx)(I.Z, { className: C.statusScheduledIcon })
+                (0, i.jsx)(E.Z, { className: C.statusScheduledIcon })
             ]
         });
     case h.jw.PAID:
@@ -90,7 +90,7 @@ function p(e) {
     case h.jw.RISK_REVIEW:
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                E.Z.getStatusErrorText(s),
+                I.Z.getStatusErrorText(s),
                 (0, i.jsx)(u.CircleXIcon, {
                     size: 'md',
                     color: 'currentColor',

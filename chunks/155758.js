@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     }
 });
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(294796), o = n(481060), c = n(153124), d = n(817460), u = n(723047), _ = n(528027), E = n(686807), I = n(157018), T = n(828656), m = n(689938), N = n(111975);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(294796), o = n(481060), c = n(153124), d = n(817460), u = n(723047), _ = n(528027), I = n(686807), E = n(157018), T = n(828656), m = n(689938), N = n(111975);
 function S(e) {
     let {
             guildId: t,
@@ -16,8 +16,8 @@ function S(e) {
             description: c,
             targetType: d,
             index: u,
-            dndName: E,
-            onEdit: I,
+            dndName: I,
+            onEdit: E,
             onMove: S,
             disabled: h = !1
         } = e, g = a.useRef(null), C = a.useRef(null), {
@@ -45,7 +45,7 @@ function S(e) {
                     !h && (0, s.jsx)('div', {
                         ref: C,
                         className: N.dragIconWrapper,
-                        'data-dnd-name': E,
+                        'data-dnd-name': I,
                         children: (0, s.jsx)(o.DragIcon, {
                             size: 'xs',
                             color: 'currentColor',
@@ -73,7 +73,7 @@ function S(e) {
                 className: N.cardActions,
                 children: !h && (0, s.jsx)(o.Clickable, {
                     className: N.cardActionButton,
-                    onClick: h ? void 0 : I,
+                    onClick: h ? void 0 : E,
                     'aria-label': m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
                     'aria-disabled': h,
                     children: (0, s.jsx)(o.PencilIcon, {
@@ -102,11 +102,11 @@ function h(e) {
                     guildId: o,
                     emojiId: e.emoji_id,
                     emojiName: e.emoji_name,
-                    title: (0, E.Z)(e),
+                    title: (0, I.Z)(e),
                     description: e.description,
                     targetType: _,
                     index: t,
-                    dndName: (0, I.Z)(e),
+                    dndName: (0, E.Z)(e),
                     onEdit: () => n(t),
                     onMove: i,
                     disabled: m

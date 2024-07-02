@@ -15,8 +15,8 @@ function c(e) {
         onToggle: d,
         animateStatus: u,
         firstLine: _,
-        secondLine: E,
-        disabled: I
+        secondLine: I,
+        disabled: E
     } = e;
     return (0, s.jsxs)('div', {
         className: i()(t, o.enableContainer),
@@ -43,7 +43,7 @@ function c(e) {
                     }),
                     (0, s.jsx)(r.Text, {
                         variant: 'text-sm/normal',
-                        children: E
+                        children: I
                     })
                 ]
             }),
@@ -55,12 +55,12 @@ function c(e) {
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.SMALL,
                         onClick: c,
-                        disabled: I,
+                        disabled: E,
                         color: r.Button.Colors.PRIMARY,
                         children: null != a ? a : l.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
                     }),
                     (0, s.jsx)(r.Button, {
-                        disabled: null == d || I,
+                        disabled: null == d || E,
                         size: r.Button.Sizes.SMALL,
                         color: n ? r.Button.Colors.RED : r.Button.Colors.BRAND,
                         onClick: d,

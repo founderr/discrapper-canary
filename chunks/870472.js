@@ -54,7 +54,7 @@ function c(e, t) {
             },
             setState: u,
             goBack: _,
-            goForward: E
+            goForward: I
         } = e;
     s.useLayoutEffect(() => {
         let e = e => t => {
@@ -67,7 +67,7 @@ function c(e, t) {
             document.removeEventListener('keydown', t), document.removeEventListener('keyup', n);
         };
     }, [u]);
-    let I = s.useCallback(e => {
+    let E = s.useCallback(e => {
             var t, s;
             let a = (null !== (s = e.clipboardData.getData('text')) && void 0 !== s ? s : '').split(l.uz).map(e => e.trim()).filter(e => e.length > 0);
             if (!(a.length <= 1))
@@ -238,10 +238,10 @@ function c(e, t) {
         ]), p = s.useCallback(e => {
             var t, n, s, i;
             let r = e.metaKey || e.ctrlKey;
-            'z' === e.key && r ? (_().selections.length > 0 ? null === (t = a.current) || void 0 === t || t.blur() : null === (n = a.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && r && (E().selections.length > 0 ? null === (s = a.current) || void 0 === s || s.blur() : null === (i = a.current) || void 0 === i || i.focus(), e.preventDefault(), e.stopPropagation());
+            'z' === e.key && r ? (_().selections.length > 0 ? null === (t = a.current) || void 0 === t || t.blur() : null === (n = a.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && r && (I().selections.length > 0 ? null === (s = a.current) || void 0 === s || s.blur() : null === (i = a.current) || void 0 === i || i.focus(), e.preventDefault(), e.stopPropagation());
         }, [
             _,
-            E,
+            I,
             a
         ]), R = s.useCallback(e => {
             var t;
@@ -290,7 +290,7 @@ function c(e, t) {
             p
         ]);
     return {
-        handlePasteEvent: I,
+        handlePasteEvent: E,
         handleInputChange: g,
         handleKeyDown: L,
         handleContainerKeyUp: s.useCallback(e => {

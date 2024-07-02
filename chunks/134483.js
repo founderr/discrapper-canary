@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), m = n(210887), I = n(937995), T = n(158776), h = n(594174), N = n(617136), f = n(272008), p = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), O = n(602667), R = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(442837), o = n(780384), c = n(481060), d = n(230711), u = n(358221), _ = n(594190), E = n(687516), m = n(210887), I = n(937995), T = n(158776), h = n(594174), N = n(617136), p = n(272008), f = n(113434), C = n(569984), g = n(497505), S = n(918701), A = n(5881), x = n(566078), O = n(602667), R = n(340100), M = n(611855), v = n(644646), L = n(670638), Z = n(667105), P = n(860151), b = n(46140), D = n(981631), j = n(354459), U = n(689938), y = n(630706);
 t.Z = function (e) {
     var t, n, s;
     let {
@@ -59,8 +59,8 @@ t.Z = function (e) {
         ]), ee = !0 === G || Q || $, et = (0, r.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, r.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
             B,
             W
-        ]), ei = (0, p.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, p.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
-            null != q && (0, f.AH)(q.id, {
+        ]), ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt), ea = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt), es = a.useCallback(() => {
+            null != q && (0, p.AH)(q.id, {
                 questContent: g.jn.QUEST_LIVE_STREAM,
                 questContentCTA: N.jZ.ACCEPT_QUEST
             });
@@ -82,7 +82,7 @@ t.Z = function (e) {
         }), ec = a.useMemo(() => (0, A.T)({
             quest: q,
             location: b.dr.QUEST_CHANNEL_CALL_HEADER
-        }), [q]), ed = (0, p.tP)(q);
+        }), [q]), ed = (0, f.tP)(q);
     if (null == q || !(0, S.dl)(q))
         return null;
     let eu = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, e_ = (null === (n = q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, eE = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_LIVE_STREAM), em = null != q.userStatus && (0, S.zE)(q.userStatus, g.jn.QUEST_BAR), eI = (0, S.Mi)(q, g.jn.QUEST_BAR) && !em;

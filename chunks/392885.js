@@ -1,6 +1,6 @@
 var s, a, i, r, l = n(442837), o = n(570140), c = n(999382), d = n(740903), u = n(981631);
-let _ = d.u.OVERVIEW, E = null;
-function I(e) {
+let _ = d.u.OVERVIEW, I = null;
+function E(e) {
     let {subsection: t} = e;
     switch (t) {
     case u.KsC.SAFETY_AUTOMOD:
@@ -32,12 +32,12 @@ i = 'GuildSettingsSafetyStore', (a = 'displayName') in (s = T) ? Object.definePr
     writable: !0
 }) : s[a] = i, t.Z = new T(o.Z, {
     GUILD_SETTINGS_INIT: function () {
-        if (c.Z.getGuildId() === E)
+        if (c.Z.getGuildId() === I)
             return !1;
-        E = c.Z.getGuildId();
+        I = c.Z.getGuildId();
     },
-    GUILD_SETTINGS_SET_SECTION: I,
-    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: I,
+    GUILD_SETTINGS_SET_SECTION: E,
+    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: E,
     GUILD_SETTINGS_SAFETY_PAGE: function (e) {
         let {page: t} = e;
         _ = t;

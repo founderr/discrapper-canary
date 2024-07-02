@@ -12,16 +12,16 @@ function d(e) {
             onExpandChange: d,
             loading: u,
             ..._
-        } = e, [E, I] = a.useState(!1), T = e => {
-            I(e), null == d || d(e);
+        } = e, [I, E] = a.useState(!1), T = e => {
+            E(e), null == d || d(e);
         };
     return (0, s.jsx)(l.Collapsible, {
         className: r()(c.groupContainer, i),
-        isExpanded: E,
+        isExpanded: I,
         collapsibleContent: (0, s.jsxs)('div', {
             className: c.groupCollapsedContainer,
             children: [
-                E && (0, s.jsx)('div', { className: c.pointer }),
+                I && (0, s.jsx)('div', { className: c.pointer }),
                 n
             ]
         }),
@@ -32,7 +32,7 @@ function d(e) {
                 className: c.groupHeaderRow,
                 action: u ? (0, s.jsx)(l.Spinner, { type: l.Spinner.Type.PULSING_ELLIPSIS }) : t,
                 onClick: e => {
-                    T(!E), n(e);
+                    T(!I), n(e);
                 }
             });
         }

@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     },
     Qg: function () {
-        return I;
+        return E;
     },
     Yn: function () {
         return g;
@@ -29,8 +29,8 @@ n.d(t, {
 }), n(47120);
 var s = n(735250), a = n(470079), i = n(120356), r = n.n(i);
 n(913527);
-var l = n(481060), o = n(151011), c = n(937615), d = n(809086), u = n(981631), _ = n(689938), E = n(447610);
-function I(e) {
+var l = n(481060), o = n(151011), c = n(937615), d = n(809086), u = n(981631), _ = n(689938), I = n(447610);
+function E(e) {
     return (t, n, s) => {
         let a = e(t), i = e(n);
         return null != a && null != i ? a === i ? 0 : a < i ? -1 : 1 : 0;
@@ -46,7 +46,7 @@ function T(e) {
     } = e;
     return {
         key: t,
-        bodyCellClassName: E.cell,
+        bodyCellClassName: I.cell,
         cellClassName: n,
         renderHeader: s,
         render: a,
@@ -56,7 +56,7 @@ function T(e) {
 function m() {
     return (0, s.jsx)(l.Text, {
         variant: 'text-xs/medium',
-        className: E.unpublishedBadge,
+        className: I.unpublishedBadge,
         children: _.Z.Messages.GUILD_PRODUCT_UNPUBLISHED_TITLE
     });
 }
@@ -79,12 +79,12 @@ function N(e) {
                         listing: t,
                         imageSize: 128,
                         alt: '',
-                        className: E.listingImage
+                        className: I.listingImage
                     }),
                     (0, s.jsxs)(l.Text, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        className: E.listingNameLabel,
+                        className: I.listingNameLabel,
                         children: [
                             t.name,
                             !t.published && (0, s.jsx)(m, {})
@@ -92,7 +92,7 @@ function N(e) {
                     })
                 ]
             })), (0, s.jsx)(x, {
-                className: E.listingNameCell,
+                className: I.listingNameCell,
                 children: n
             });
         },
@@ -143,7 +143,7 @@ function g(e) {
         let s = e[n];
         t[n] = {
             ...s,
-            cellClassName: r()(s.cellClassName, E.cellAlignRight)
+            cellClassName: r()(s.cellClassName, I.cellAlignRight)
         };
     }
     return t;
@@ -151,7 +151,7 @@ function g(e) {
 let C = e => {
         let {children: t} = e;
         return (0, s.jsx)(l.Text, {
-            className: E.headerCell,
+            className: I.headerCell,
             variant: 'text-xs/medium',
             color: 'interactive-normal',
             'aria-hidden': !0,
@@ -174,14 +174,14 @@ let C = e => {
     }, R = e => {
         let {children: t} = e;
         return (0, s.jsxs)(x, {
-            className: E.personCountCell,
+            className: I.personCountCell,
             children: [
                 null != t ? t : '-',
                 ' ',
                 (0, s.jsx)(l.UserIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.personCountIcon,
+                    className: I.personCountIcon,
                     'aria-hidden': !0
                 })
             ]
@@ -196,14 +196,14 @@ function f(e) {
             initialSortKey: c,
             initialSortDirection: d = u.sHY.ASCENDING,
             ..._
-        } = e, [I, T] = a.useState(c), [m, N] = a.useState(d);
+        } = e, [E, T] = a.useState(c), [m, N] = a.useState(d);
     return (0, s.jsx)('div', {
-        className: r()(E.tableContainer, t),
+        className: r()(I.tableContainer, t),
         children: (0, s.jsx)(o.Z, {
-            className: r()({ [E.tableWithoutSeparators]: !l }, E.table),
-            rowClassName: r()({ [E.rowWithSeparators]: l }, i),
-            headerClassName: r()(E.header, { [E.headerWithoutSeparators]: !l }, n),
-            sortKey: I,
+            className: r()({ [I.tableWithoutSeparators]: !l }, I.table),
+            rowClassName: r()({ [I.rowWithSeparators]: l }, i),
+            headerClassName: r()(I.header, { [I.headerWithoutSeparators]: !l }, n),
+            sortKey: E,
             sortDirection: m,
             onSort: (e, t) => {
                 T(e), N(t);

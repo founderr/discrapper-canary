@@ -3,9 +3,9 @@ n.d(t, {
         return x;
     }
 });
-var s = n(735250), a = n(470079), i = n(442837), r = n(704215), l = n(481060), o = n(605236), c = n(874993), d = n(430824), u = n(996753), _ = n(999382), E = n(84613), I = n(392885), T = n(740903), m = n(464610), N = n(733629), S = n(598622), h = n(921944), g = n(689938), C = n(941377);
+var s = n(735250), a = n(470079), i = n(442837), r = n(704215), l = n(481060), o = n(605236), c = n(874993), d = n(430824), u = n(996753), _ = n(999382), I = n(84613), E = n(392885), T = n(740903), m = n(464610), N = n(733629), S = n(598622), h = n(921944), g = n(689938), C = n(941377);
 function x(e) {
-    let t, {hideChangelog: n} = e, x = (0, i.e7)([_.Z], () => _.Z.getGuildId()), p = (0, i.e7)([d.Z], () => d.Z.getGuild(x)), R = (0, i.e7)([I.Z], () => I.Z.getCurrentPage());
+    let t, {hideChangelog: n} = e, x = (0, i.e7)([_.Z], () => _.Z.getGuildId()), p = (0, i.e7)([d.Z], () => d.Z.getGuild(x)), R = (0, i.e7)([E.Z], () => E.Z.getCurrentPage());
     if (a.useEffect(() => {
             (0, o.EW)(r.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: h.L.AUTO });
         }, []), null == p)
@@ -47,7 +47,7 @@ function x(e) {
                 look: l.Button.Looks.BLANK,
                 size: l.Button.Sizes.MIN,
                 onClick: () => {
-                    (0, E.K)(T.u.OVERVIEW);
+                    (0, I.K)(T.u.OVERVIEW);
                 },
                 children: [
                     (0, s.jsx)(u.Z, {

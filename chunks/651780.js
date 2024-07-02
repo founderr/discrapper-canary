@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 });
-var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(570140), o = n(355467), c = n(821849), d = n(774078), u = n(15640), _ = n(774380), E = n(404270), I = n(386937), T = n(316350), m = n(899667), N = n(474333), S = n(626135), h = n(267642), g = n(63063), C = n(999382), x = n(981631), p = n(689938), R = n(665980);
+var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(570140), o = n(355467), c = n(821849), d = n(774078), u = n(15640), _ = n(774380), I = n(404270), E = n(386937), T = n(316350), m = n(899667), N = n(474333), S = n(626135), h = n(267642), g = n(63063), C = n(999382), x = n(981631), p = n(689938), R = n(665980);
 function f(e) {
     let {
             endsAt: t,
@@ -93,12 +93,12 @@ function A() {
                     })
                 ]
             }),
-            (0, s.jsx)(I.Z, {
+            (0, s.jsx)(E.Z, {
                 tiers: (0, h.cP)(null != e && e.hasFeature(x.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= x.B9o),
                 renderTier: O
             }),
             (0, s.jsx)('div', { className: R.divider }),
-            n ? (0, s.jsx)(E.Z, {}) : null,
+            n ? (0, s.jsx)(I.Z, {}) : null,
             n ? (0, s.jsx)(_.Z, {
                 onOpenPremiumClick: () => void S.default.track(x.rMx.PREMIUM_PROMOTION_OPENED, {
                     location: {

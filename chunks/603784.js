@@ -1,4 +1,4 @@
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(726542), _ = n(100527), E = n(933557), I = n(484459), T = n(103575), m = n(210887), N = n(699516), S = n(594174), h = n(259580), g = n(274730), C = n(51144), x = n(426563), p = n(501801), R = n(981631), f = n(689938), L = n(980468);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(726542), _ = n(100527), I = n(933557), E = n(484459), T = n(103575), m = n(210887), N = n(699516), S = n(594174), h = n(259580), g = n(274730), C = n(51144), x = n(426563), p = n(501801), R = n(981631), f = n(689938), L = n(980468);
 class O extends a.PureComponent {
     render() {
         let {
@@ -67,7 +67,7 @@ class A extends a.PureComponent {
                     children: t
                 }, a),
                 count: l.count,
-                channel: l.channel ? 'string' == typeof l.channel ? l.channel : (0, E.F6)(l.channel, S.default, N.Z, !0) : null,
+                channel: l.channel ? 'string' == typeof l.channel ? l.channel : (0, I.F6)(l.channel, S.default, N.Z, !0) : null,
                 channelHook: (e, t) => (0, s.jsx)('span', {
                     onContextMenu: a,
                     children: e
@@ -103,7 +103,7 @@ class A extends a.PureComponent {
             } = e;
         if (null != a && null != i)
             return (0, s.jsx)(d.Popout, {
-                preload: () => (0, I.W)(i, a.getAvatarURL(t, 80), { guildId: t }),
+                preload: () => (0, E.W)(i, a.getAvatarURL(t, 80), { guildId: t }),
                 renderPopout: e => (0, s.jsx)(T.Z, {
                     ...e,
                     location: 'GuildSettingsAuditLogEntry',
@@ -162,7 +162,7 @@ class A extends a.PureComponent {
                 _
             ]
         });
-        let E = o ? i : R.dG4;
+        let I = o ? i : R.dG4;
         return (0, s.jsx)(l.mh, {
             id: t.id,
             children: i => (0, s.jsxs)('div', {
@@ -171,7 +171,7 @@ class A extends a.PureComponent {
                     (0, s.jsxs)(d.Clickable, {
                         className: c,
                         'aria-expanded': a,
-                        onClick: E,
+                        onClick: I,
                         ...i,
                         children: [
                             (0, s.jsx)(p.mp, {

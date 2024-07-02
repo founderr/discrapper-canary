@@ -38,7 +38,7 @@ let c = e => {
                     regexPatternCount: t.triggerMetadata.regexPatterns.length
                 }) : o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({ keywordCount: t.triggerMetadata.keywordFilter.length });
         }
-    }, E = e => {
+    }, I = e => {
         switch (e) {
         case l.fX.KEYWORD:
             return o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_DESCRIPTION;
@@ -53,7 +53,7 @@ let c = e => {
         default:
             return null;
         }
-    }, I = e => {
+    }, E = e => {
         if (e === l.fX.KEYWORD)
             return o.Z.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format();
     }, T = e => {
@@ -74,8 +74,8 @@ function m(e, t) {
     return null != e && d(e) ? {
         headerText: null !== (n = u(e, t)) && void 0 !== n ? n : '',
         headerSubtext: null !== (a = _(e, t)) && void 0 !== a ? a : '',
-        descriptionText: null !== (i = E(e)) && void 0 !== i ? i : '',
-        descriptionSubtext: null !== (r = I(e)) && void 0 !== r ? r : '',
+        descriptionText: null !== (i = I(e)) && void 0 !== i ? i : '',
+        descriptionSubtext: null !== (r = E(e)) && void 0 !== r ? r : '',
         icon: null !== (l = T(e)) && void 0 !== l ? l : s.LinkIcon
     } : null;
 }

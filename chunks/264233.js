@@ -9,16 +9,16 @@ function h(e) {
             setTab: t,
             badgeState: s,
             closePopout: h
-        } = e, f = (0, r.Wu)([d.Z], () => d.Z.getInvites()), p = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()), [C, g] = a.useMemo(() => l().partition(f, e => {
+        } = e, p = (0, r.Wu)([d.Z], () => d.Z.getInvites()), f = (0, r.e7)([d.Z], () => d.Z.getInviteStatuses()), [C, g] = a.useMemo(() => l().partition(p, e => {
             var t;
-            return (null === (t = p[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+            return (null === (t = f[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
         }), [
-            f,
-            p
+            p,
+            f
         ]);
     return (a.useEffect(() => {
         (0, u.sJ)();
-    }), 0 === f.length) ? (0, i.jsxs)('div', {
+    }), 0 === p.length) ? (0, i.jsxs)('div', {
         className: T.container,
         children: [
             (0, i.jsx)(E.Z, {

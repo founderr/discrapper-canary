@@ -1,5 +1,5 @@
 n(47120);
-var s, a, i, r, l = n(442837), o = n(570140), c = n(45966), d = n(734893), u = n(999382), _ = n(392885), E = n(740903), I = n(889369), T = n(969632), m = n(208665), N = n(84658), S = n(142961), h = n(981631);
+var s, a, i, r, l = n(442837), o = n(570140), c = n(45966), d = n(734893), u = n(999382), _ = n(392885), I = n(740903), E = n(889369), T = n(969632), m = n(208665), N = n(84658), S = n(142961), h = n(981631);
 let g = new Set(), C = N.PG.LANDING, x = null;
 function p(e) {
     let {subsection: t} = e;
@@ -9,9 +9,9 @@ function p(e) {
 }
 class R extends (s = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, I.Z, m.Z, T.Z, _.Z), this.syncWith([
+        this.waitFor(c.Z, E.Z, m.Z, T.Z, _.Z), this.syncWith([
             c.Z,
-            I.Z,
+            E.Z,
             m.Z,
             T.Z,
             _.Z
@@ -28,7 +28,7 @@ class R extends (s = l.ZP.Store) {
             return !1;
         let e = c.Z.isAdvancedMode(x);
         if (C === N.PG.DEFAULT_CHANNELS)
-            return e ? I.Z.hasChanges() || m.Z.hasChanges() : I.Z.hasChanges();
+            return e ? E.Z.hasChanges() || m.Z.hasChanges() : E.Z.hasChanges();
         if (C === N.PG.CUSTOMIZATION_QUESTIONS)
             return m.Z.hasChanges();
         if (C === N.PG.HOME_SETTINGS)
@@ -41,7 +41,7 @@ class R extends (s = l.ZP.Store) {
         if (C === N.PG.SAFETY_CHECK)
             return !0;
         if (C === N.PG.DEFAULT_CHANNELS)
-            return I.Z.editedDefaultChannelIds.size > 0;
+            return E.Z.editedDefaultChannelIds.size > 0;
         if (C === N.PG.CUSTOMIZATION_QUESTIONS)
             return m.Z.editedOnboardingPrompts.length > 0;
         else if (C === N.PG.HOME_SETTINGS)
@@ -57,7 +57,7 @@ class R extends (s = l.ZP.Store) {
         if ((0, S.C)(x))
             return this.hasChanges();
         let e = _.Z.getCurrentPage();
-        return (C !== N.PG.SAFETY_CHECK || e === E.u.OVERVIEW) && null != C && C !== N.PG.LANDING;
+        return (C !== N.PG.SAFETY_CHECK || e === I.u.OVERVIEW) && null != C && C !== N.PG.LANDING;
     }
     canCloseEarly() {
         return null == x || !this.hasErrors() && (!(0, S.C)(x) || !this.hasChanges());

@@ -13,7 +13,7 @@ function h(e) {
             compact: a,
             usernameHook: h,
             channel: N
-        } = e, f = (0, l.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), p = (0, o.ZP)(n), C = h(p), {
+        } = e, p = (0, l.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), f = (0, o.ZP)(n), C = h(f), {
             avatarSrc: g,
             eventHandlers: {
                 onMouseEnter: S,
@@ -57,9 +57,9 @@ function h(e) {
                     (0, i.jsx)('div', {
                         className: s()(T.__invalid_messageContent, { [T.compact]: a }),
                         children: I.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-                            username: p.nick,
+                            username: f.nick,
                             usernameHook: C,
-                            guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
+                            guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

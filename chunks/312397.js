@@ -6,7 +6,7 @@ n.d(t, {
         return eS;
     }
 }), n(47120), n(733860);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(512722), o = n.n(l), c = n(392711), d = n.n(c), u = n(442837), _ = n(692547), E = n(780384), I = n(481060), T = n(852860), m = n(902840), N = n(410030), S = n(100527), h = n(367907), g = n(906732), C = n(740504), x = n(933557), p = n(471445), R = n(890477), f = n(688465), L = n(807582), O = n(48217), A = n(26323), M = n(35125), v = n(536442), D = n(142497), j = n(884858), Z = n(516129), b = n(813197), U = n(208567), G = n(592125), P = n(324067), B = n(650774), y = n(496675), F = n(699516), k = n(594174), w = n(285952), H = n(709586), V = n(768581), Y = n(630388), W = n(823379), z = n(63063), K = n(434404), q = n(999382), X = n(203377), Q = n(981631), J = n(30513), $ = n(486324), ee = n(200299), et = n(689938), en = n(633766), es = n(935653), ea = n(449874);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(512722), o = n.n(l), c = n(392711), d = n.n(c), u = n(442837), _ = n(692547), I = n(780384), E = n(481060), T = n(852860), m = n(902840), N = n(410030), S = n(100527), h = n(367907), g = n(906732), C = n(740504), x = n(933557), p = n(471445), R = n(890477), f = n(688465), L = n(807582), O = n(48217), A = n(26323), M = n(35125), D = n(536442), v = n(142497), j = n(884858), Z = n(516129), b = n(813197), U = n(208567), G = n(592125), P = n(324067), B = n(650774), y = n(496675), F = n(699516), w = n(594174), k = n(285952), H = n(709586), V = n(768581), Y = n(630388), W = n(823379), z = n(63063), K = n(434404), q = n(999382), X = n(203377), Q = n(981631), J = n(30513), $ = n(486324), ee = n(200299), et = n(689938), en = n(633766), es = n(935653), ea = n(449874);
 function ei(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -16,18 +16,18 @@ function ei(e, t, n) {
     }) : e[t] = n, e;
 }
 let er = 'NO_AFK_CHANNEL', el = 'NO_SYSTEM_CHANNEL', eo = ''.concat(60), ec = ''.concat(300), ed = ''.concat(900), eu = ''.concat(1800), e_ = ''.concat(3600);
-function eE(e) {
-    return eI(e[0]);
-}
 function eI(e) {
+    return eE(e[0]);
+}
+function eE(e) {
     if (null == e)
         return;
     let {
             label: t,
             channel: n,
             category: a
-        } = e, i = (0, p.KS)(n), r = null != a ? (0, x.F6)(a, k.default, F.Z) : null;
-    return (0, s.jsx)(I.IconSelectOption, {
+        } = e, i = (0, p.KS)(n), r = null != a ? (0, x.F6)(a, w.default, F.Z) : null;
+    return (0, s.jsx)(E.IconSelectOption, {
         title: t,
         icon: i,
         subtitle: r
@@ -36,7 +36,7 @@ function eI(e) {
 function eT(e) {
     return {
         value: e.id,
-        label: (0, x.F6)(e, k.default, F.Z),
+        label: (0, x.F6)(e, w.default, F.Z),
         channel: e,
         category: G.Z.getChannel(e.parent_id)
     };
@@ -132,14 +132,14 @@ class eN extends a.PureComponent {
             errors: t,
             canManageGuild: n
         } = this.props;
-        return (0, s.jsxs)(w.Z, {
+        return (0, s.jsxs)(k.Z, {
             className: r()(en.__invalid_baseSection),
             children: [
-                (0, s.jsxs)(w.Z, {
+                (0, s.jsxs)(k.Z, {
                     basis: '50%',
-                    justify: w.Z.Justify.BETWEEN,
+                    justify: k.Z.Justify.BETWEEN,
                     children: [
-                        (0, s.jsxs)(w.Z.Child, {
+                        (0, s.jsxs)(k.Z.Child, {
                             wrap: !0,
                             children: [
                                 (0, s.jsx)(U.Z, {
@@ -167,19 +167,19 @@ class eN extends a.PureComponent {
                                 }) : null
                             ]
                         }),
-                        (0, s.jsxs)(w.Z, {
-                            direction: w.Z.Direction.VERTICAL,
-                            align: w.Z.Align.START,
+                        (0, s.jsxs)(k.Z, {
+                            direction: k.Z.Direction.VERTICAL,
+                            align: k.Z.Align.START,
                             style: { maxWidth: 180 },
                             children: [
-                                (0, s.jsx)(I.FormText, {
-                                    type: I.FormTextTypes.DESCRIPTION,
+                                (0, s.jsx)(E.FormText, {
+                                    type: E.FormTextTypes.DESCRIPTION,
                                     className: en.marginBottom8,
                                     children: et.Z.Messages.GUILD_SETTINGS_ICON_RECOMMEND
                                 }),
-                                (0, s.jsxs)(I.Button, {
-                                    look: I.ButtonLooks.OUTLINED,
-                                    color: I.ButtonColors.PRIMARY,
+                                (0, s.jsxs)(E.Button, {
+                                    look: E.ButtonLooks.OUTLINED,
+                                    color: E.ButtonColors.PRIMARY,
                                     disabled: !n,
                                     className: en.marginTop8,
                                     onClick: this.handleUploadImage,
@@ -196,12 +196,12 @@ class eN extends a.PureComponent {
                         })
                     ]
                 }),
-                (0, s.jsx)(w.Z.Child, {
+                (0, s.jsx)(k.Z.Child, {
                     basis: '50%',
-                    children: (0, s.jsx)(I.FormItem, {
+                    children: (0, s.jsx)(E.FormItem, {
                         title: et.Z.Messages.FORM_LABEL_SERVER_NAME,
                         className: en.marginBottom20,
-                        children: (0, s.jsx)(I.TextInput, {
+                        children: (0, s.jsx)(E.TextInput, {
                             type: 'text',
                             disabled: !n,
                             value: e.name,
@@ -251,30 +251,30 @@ class eN extends a.PureComponent {
         return o.unshift({
             value: er,
             label: et.Z.Messages.NO_AFK_CHANNEL
-        }), (0, s.jsxs)(I.FormSection, {
+        }), (0, s.jsxs)(E.FormSection, {
             className: en.divider,
             children: [
-                (0, s.jsxs)(w.Z, {
+                (0, s.jsxs)(k.Z, {
                     children: [
-                        (0, s.jsx)(w.Z.Child, {
+                        (0, s.jsx)(k.Z.Child, {
                             basis: '50%',
-                            children: (0, s.jsx)(I.FormItem, {
+                            children: (0, s.jsx)(E.FormItem, {
                                 title: et.Z.Messages.FORM_LABEL_AFK_CHANNEL,
-                                children: (0, s.jsx)(I.SingleSelect, {
+                                children: (0, s.jsx)(E.SingleSelect, {
                                     value: r,
                                     options: o,
                                     onChange: this.handleAFKChannelChange,
                                     isDisabled: !n,
-                                    renderOptionLabel: eI,
-                                    renderOptionValue: eE
+                                    renderOptionLabel: eE,
+                                    renderOptionValue: eI
                                 })
                             })
                         }),
-                        (0, s.jsx)(w.Z.Child, {
+                        (0, s.jsx)(k.Z.Child, {
                             basis: '50%',
-                            children: (0, s.jsx)(I.FormItem, {
+                            children: (0, s.jsx)(E.FormItem, {
                                 title: et.Z.Messages.FORM_LABEL_AFK_TIMEOUT,
-                                children: (0, s.jsx)(I.SingleSelect, {
+                                children: (0, s.jsx)(E.SingleSelect, {
                                     value: i,
                                     options: l,
                                     isDisabled: r === er || !n,
@@ -284,9 +284,9 @@ class eN extends a.PureComponent {
                         })
                     ]
                 }),
-                (0, s.jsx)(I.FormText, {
+                (0, s.jsx)(E.FormText, {
                     className: en.marginTop8,
-                    type: I.FormTextTypes.DESCRIPTION,
+                    type: E.FormTextTypes.DESCRIPTION,
                     children: et.Z.Messages.FORM_HELP_AFK_CHANNEL
                 })
             ]
@@ -311,24 +311,24 @@ class eN extends a.PureComponent {
             label: et.Z.Messages.NO_SYSTEM_CHANNEL
         });
         let c = (0, M.eI)(t), u = c || (0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS), _ = c || (0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
-        return (0, s.jsxs)(I.FormSection, {
+        return (0, s.jsxs)(E.FormSection, {
             className: en.divider,
             children: [
-                (0, s.jsx)(I.FormTitle, { children: et.Z.Messages.FORM_LABEL_SYSTEM_CHANNEL }),
-                (0, s.jsx)(I.SingleSelect, {
+                (0, s.jsx)(E.FormTitle, { children: et.Z.Messages.FORM_LABEL_SYSTEM_CHANNEL }),
+                (0, s.jsx)(E.SingleSelect, {
                     value: l,
                     options: o,
                     isDisabled: !a,
                     onChange: this.handleSystemChannelChange,
-                    renderOptionLabel: eI,
-                    renderOptionValue: eE
+                    renderOptionLabel: eE,
+                    renderOptionValue: eI
                 }),
-                (0, s.jsx)(I.FormText, {
+                (0, s.jsx)(E.FormText, {
                     className: en.marginTop8,
-                    type: I.FormTextTypes.DESCRIPTION,
+                    type: E.FormTextTypes.DESCRIPTION,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL
                 }),
-                (0, s.jsx)(I.FormSwitch, {
+                (0, s.jsx)(E.FormSwitch, {
                     className: en.marginTop20,
                     onChange: this.handleShowJoinsChange,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
@@ -336,7 +336,7 @@ class eN extends a.PureComponent {
                     disabled: !a || l === el,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_JOIN_MESSAGES
                 }),
-                (0, s.jsx)(I.FormSwitch, {
+                (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.__invalid_marginReset, en.marginTop20),
                     onChange: this.handleShowJoinRepliesChange,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
@@ -344,7 +344,7 @@ class eN extends a.PureComponent {
                     disabled: !a || l === el,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_JOIN_MESSAGE_REPLIES
                 }),
-                (0, s.jsx)(I.FormSwitch, {
+                (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.__invalid_marginReset, en.marginTop20),
                     onChange: this.handleShowSubscriptionsChange,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
@@ -352,7 +352,7 @@ class eN extends a.PureComponent {
                     disabled: !a || l === el,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTION_MESSAGES
                 }),
-                (0, s.jsx)(I.FormSwitch, {
+                (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.__invalid_marginReset, en.marginTop20),
                     onChange: this.handleShowGuildRemindersChange,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
@@ -360,7 +360,7 @@ class eN extends a.PureComponent {
                     disabled: !a || l === el,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_GUILD_REMINDERS
                 }),
-                u && (0, s.jsx)(I.FormSwitch, {
+                u && (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.__invalid_marginReset, en.marginTop20),
                     onChange: this.handleShowGuildRoleSubscriptionPurchaseMessages,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
@@ -368,7 +368,7 @@ class eN extends a.PureComponent {
                     disabled: !a || l === el,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGES
                 }),
-                _ && (0, s.jsx)(I.FormSwitch, {
+                _ && (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.__invalid_marginReset, en.marginTop20),
                     onChange: this.handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
@@ -376,7 +376,7 @@ class eN extends a.PureComponent {
                     disabled: !a || l === el,
                     children: et.Z.Messages.FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGE_REPLIES
                 }),
-                i && (0, s.jsx)(I.FormSwitch, {
+                i && (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.__invalid_marginReset, en.marginTop20),
                     onChange: this.handleShowDeadchatPromptMessageChange,
                     value: !(0, Y.yE)(t.systemChannelFlags, Q.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
@@ -411,21 +411,21 @@ class eN extends a.PureComponent {
             ];
         return (0, s.jsx)('div', {
             ref: this._notificationSectionRef,
-            children: (0, s.jsxs)(I.FormSection, {
+            children: (0, s.jsxs)(E.FormSection, {
                 className: en.divider,
                 children: [
-                    (0, s.jsx)(I.FormTitle, { children: et.Z.Messages.FORM_LABEL_DEFAULT_NOTIFICATION_SETTINGS }),
-                    (0, s.jsx)(I.FormText, {
-                        type: I.FormTextTypes.DESCRIPTION,
+                    (0, s.jsx)(E.FormTitle, { children: et.Z.Messages.FORM_LABEL_DEFAULT_NOTIFICATION_SETTINGS }),
+                    (0, s.jsx)(E.FormText, {
+                        type: E.FormTextTypes.DESCRIPTION,
                         className: en.marginBottom20,
                         children: et.Z.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATION_SETTINGS_INTRO
                     }),
-                    (0, s.jsx)(I.FormText, {
-                        type: I.FormTextTypes.DESCRIPTION,
+                    (0, s.jsx)(E.FormText, {
+                        type: E.FormTextTypes.DESCRIPTION,
                         className: en.marginBottom20,
                         children: et.Z.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATION_SETTINGS_TIP
                     }),
-                    (0, s.jsx)(I.RadioGroup, {
+                    (0, s.jsx)(E.RadioGroup, {
                         options: a,
                         value: e.defaultMessageNotifications,
                         disabled: !t,
@@ -441,9 +441,9 @@ class eN extends a.PureComponent {
             canManageGuild: t
         } = this.props;
         return (0, m.Jc)(e, !1) ? (0, s.jsx)('div', {
-            children: (0, s.jsx)(I.FormSection, {
+            children: (0, s.jsx)(E.FormSection, {
                 className: en.divider,
-                children: (0, s.jsx)(I.FormSwitch, {
+                children: (0, s.jsx)(E.FormSwitch, {
                     className: r()(en.marginTop8, en.marginBottom8),
                     onChange: this.handleConversationSummariesToggle,
                     value: e.hasFeature(Q.oNc.SUMMARIES_ENABLED_BY_USER),
@@ -454,7 +454,7 @@ class eN extends a.PureComponent {
                         className: en.badgedItem,
                         children: [
                             et.Z.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE,
-                            (0, s.jsx)(I.TextBadge, {
+                            (0, s.jsx)(E.TextBadge, {
                                 text: et.Z.Messages.BETA,
                                 color: _.Z.unsafe_rawColors.BRAND_500.css,
                                 className: en.__invalid_betaTag
@@ -484,18 +484,18 @@ class eN extends a.PureComponent {
             });
         return (0, s.jsx)('div', {
             ref: this._inviteSectionRef,
-            children: (0, s.jsx)(I.FormSection, {
+            children: (0, s.jsx)(E.FormSection, {
                 className: en.divider,
-                children: (0, s.jsxs)(w.Z, {
+                children: (0, s.jsxs)(k.Z, {
                     basis: '50%',
-                    direction: w.Z.Direction.HORIZONTAL,
-                    align: w.Z.Justify.START,
+                    direction: k.Z.Direction.HORIZONTAL,
+                    align: k.Z.Justify.START,
                     children: [
-                        (0, s.jsxs)(w.Z.Child, {
+                        (0, s.jsxs)(k.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: [
-                                (0, s.jsxs)(I.FormTitle, {
+                                (0, s.jsxs)(E.FormTitle, {
                                     className: en.flexFormTitle,
                                     children: [
                                         (0, s.jsx)('div', { children: et.Z.Messages.GUILD_SETTINGS_SERVER_INVITE_BACKGROUND }),
@@ -507,18 +507,18 @@ class eN extends a.PureComponent {
                                         })
                                     ]
                                 }),
-                                (0, s.jsx)(I.FormText, {
-                                    type: I.FormTextTypes.DESCRIPTION,
+                                (0, s.jsx)(E.FormText, {
+                                    type: E.FormTextTypes.DESCRIPTION,
                                     className: en.marginBottom8,
                                     children: et.Z.Messages.GUILD_SETTINGS_SPLASH_DESCRIPTION
                                 }),
-                                (0, s.jsx)(I.FormText, {
-                                    type: I.FormTextTypes.DESCRIPTION,
+                                (0, s.jsx)(E.FormText, {
+                                    type: E.FormTextTypes.DESCRIPTION,
                                     children: et.Z.Messages.GUILD_SETTINGS_SPLASH_RECOMMEND.format({ articleURL: z.Z.getArticleURL(Q.BhN.GUILD_INVITE_SPLASH) })
                                 }),
-                                n ? (0, s.jsxs)(I.Button, {
+                                n ? (0, s.jsxs)(E.Button, {
                                     disabled: !a,
-                                    color: I.ButtonColors.BRAND,
+                                    color: E.ButtonColors.BRAND,
                                     className: en.marginTop16,
                                     children: [
                                         et.Z.Messages.UPLOAD_BACKGROUND,
@@ -532,10 +532,10 @@ class eN extends a.PureComponent {
                                 }) : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)
                             ]
                         }),
-                        (0, s.jsx)(w.Z.Child, {
+                        (0, s.jsx)(k.Z.Child, {
                             wrap: !0,
                             basis: '50%',
-                            children: n ? i : (0, s.jsx)(I.Clickable, {
+                            children: n ? i : (0, s.jsx)(E.Clickable, {
                                 'aria-hidden': !0,
                                 tabIndex: -1,
                                 className: en.upsell,
@@ -567,9 +567,9 @@ class eN extends a.PureComponent {
                     section: Q.jXE.GUILD_BANNER
                 }, n),
                 enabled: r
-            }), o = (0, s.jsx)(I.Button, {
+            }), o = (0, s.jsx)(E.Button, {
                 disabled: !r,
-                color: I.Button.Colors.BRAND,
+                color: E.Button.Colors.BRAND,
                 className: en.marginTop16,
                 onClick: () => eh($.pC.GUILD_BANNER, ee.B, this.handleBannerChange, !0, {
                     page: Q.ZY5.GUILD_SETTINGS,
@@ -577,18 +577,18 @@ class eN extends a.PureComponent {
                 }, n),
                 children: et.Z.Messages.UPLOAD_BACKGROUND
             });
-        return (0, s.jsx)(I.FormSection, {
+        return (0, s.jsx)(E.FormSection, {
             className: en.divider,
-            children: (0, s.jsxs)(w.Z, {
+            children: (0, s.jsxs)(k.Z, {
                 basis: '50%',
-                direction: w.Z.Direction.HORIZONTAL,
-                align: w.Z.Justify.START,
+                direction: k.Z.Direction.HORIZONTAL,
+                align: k.Z.Justify.START,
                 children: [
-                    (0, s.jsxs)(w.Z.Child, {
+                    (0, s.jsxs)(k.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: [
-                            (0, s.jsxs)(I.FormTitle, {
+                            (0, s.jsxs)(E.FormTitle, {
                                 className: en.flexFormTitle,
                                 children: [
                                     (0, s.jsx)('div', { children: et.Z.Messages.FORM_LABEL_SERVER_BANNER }),
@@ -600,22 +600,22 @@ class eN extends a.PureComponent {
                                     })
                                 ]
                             }),
-                            (0, s.jsx)(I.FormText, {
-                                type: I.FormTextTypes.DESCRIPTION,
+                            (0, s.jsx)(E.FormText, {
+                                type: E.FormTextTypes.DESCRIPTION,
                                 className: en.marginBottom8,
                                 children: et.Z.Messages.FORM_HELP_SERVER_BANNER
                             }),
-                            (0, s.jsx)(I.FormText, {
-                                type: I.FormTextTypes.DESCRIPTION,
+                            (0, s.jsx)(E.FormText, {
+                                type: E.FormTextTypes.DESCRIPTION,
                                 children: et.Z.Messages.GUILD_SETTINGS_BANNER_RECOMMEND.format({ articleURL: z.Z.getArticleURL(Q.BhN.GUILD_BANNER_SPLASH) })
                             }),
                             a ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
                         ]
                     }),
-                    (0, s.jsx)(w.Z.Child, {
+                    (0, s.jsx)(k.Z.Child, {
                         wrap: !0,
                         basis: '50%',
-                        children: a ? l : (0, s.jsx)(I.Clickable, {
+                        children: a ? l : (0, s.jsx)(E.Clickable, {
                             'aria-hidden': !0,
                             tabIndex: -1,
                             className: en.upsell,
@@ -633,16 +633,16 @@ class eN extends a.PureComponent {
             canManageGuild: t,
             theme: n
         } = this.props;
-        return (0, s.jsx)(I.FormSection, {
-            children: (0, s.jsxs)(w.Z, {
-                align: w.Z.Align.START,
+        return (0, s.jsx)(E.FormSection, {
+            children: (0, s.jsxs)(k.Z, {
+                align: k.Z.Align.START,
                 children: [
-                    (0, s.jsxs)(w.Z, {
+                    (0, s.jsxs)(k.Z, {
                         basis: '50%',
-                        direction: w.Z.Direction.VERTICAL,
-                        align: w.Z.Align.STRETCH,
+                        direction: k.Z.Direction.VERTICAL,
+                        align: k.Z.Align.STRETCH,
                         children: [
-                            (0, s.jsx)(I.FormSwitch, {
+                            (0, s.jsx)(E.FormSwitch, {
                                 className: r()(en.marginTop8, en.marginBottom8),
                                 onChange: this.handlePremiumProgressBarEnabledChange,
                                 value: e.premiumProgressBarEnabled,
@@ -650,19 +650,19 @@ class eN extends a.PureComponent {
                                 disabled: !t,
                                 children: et.Z.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_TITLE
                             }),
-                            (0, s.jsx)(I.FormText, {
-                                type: I.FormTextTypes.DESCRIPTION,
+                            (0, s.jsx)(E.FormText, {
+                                type: E.FormTextTypes.DESCRIPTION,
                                 className: en.marginBottom8,
                                 children: et.Z.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_DESCRIPTION
                             })
                         ]
                     }),
-                    (0, s.jsx)(w.Z.Child, {
+                    (0, s.jsx)(k.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: (0, s.jsx)('img', {
                             alt: et.Z.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_IMG_ALT,
-                            src: (0, E.ap)(n) ? ea : es,
+                            src: (0, I.ap)(n) ? ea : es,
                             className: en.progressBarImage
                         })
                     })
@@ -673,9 +673,9 @@ class eN extends a.PureComponent {
     renderDisplaySection() {
         return (0, s.jsx)('div', {
             ref: this._displaySectionRef,
-            children: (0, s.jsxs)(I.FormSection, {
+            children: (0, s.jsxs)(E.FormSection, {
                 title: et.Z.Messages.DISPLAY,
-                tag: I.FormTitleTags.H1,
+                tag: E.FormTitleTags.H1,
                 className: en.divider,
                 children: [
                     this.renderProgressBar(),
@@ -686,9 +686,9 @@ class eN extends a.PureComponent {
         });
     }
     render() {
-        return (0, s.jsxs)(I.FormSection, {
+        return (0, s.jsxs)(E.FormSection, {
             title: et.Z.Messages.SERVER_OVERVIEW,
-            tag: I.FormTitleTags.H1,
+            tag: E.FormTitleTags.H1,
             children: [
                 this.renderBaseSettings(),
                 this.renderSummariesSection(),
@@ -703,7 +703,7 @@ class eN extends a.PureComponent {
         super(...e), ei(this, '_imageInputRef', a.createRef()), ei(this, '_displaySectionRef', a.createRef()), ei(this, '_inviteSectionRef', a.createRef()), ei(this, '_notificationSectionRef', a.createRef()), ei(this, 'handleIconChange', e => {
             K.Z.updateGuild({ icon: e });
         }), ei(this, 'handleOpenImageCroppingModal', (e, t) => {
-            (0, I.openModalLazy)(async () => {
+            (0, E.openModalLazy)(async () => {
                 let {default: a} = await n.e('22872').then(n.bind(n, 850085));
                 return n => (0, s.jsx)(a, {
                     onCrop: this.handleIconChange,
@@ -728,7 +728,7 @@ class eN extends a.PureComponent {
                 K.Z.updateGuild({ homeHeader: null });
                 return;
             }
-            (0, I.openModalLazy)(async () => {
+            (0, E.openModalLazy)(async () => {
                 let {default: a} = await n.e('22872').then(n.bind(n, 850085));
                 return n => (0, s.jsx)(a, {
                     imgURI: e,
@@ -809,8 +809,8 @@ class eN extends a.PureComponent {
         }), ei(this, 'handleConversationSummariesToggle', e => {
             let {guild: t} = this.props, n = new Set(t.features);
             e ? n.add(Q.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete(Q.oNc.SUMMARIES_ENABLED_BY_USER), K.Z.updateGuild({ features: n });
-        }), ei(this, 'uploadBGUpsellButton', e => (0, s.jsxs)(I.ShinyButton, {
-            color: I.Button.Colors.GREEN,
+        }), ei(this, 'uploadBGUpsellButton', e => (0, s.jsxs)(E.ShinyButton, {
+            color: E.Button.Colors.GREEN,
             className: r()(en.marginTop16),
             innerClassName: en.upsellButton,
             onClick: e,
@@ -835,15 +835,15 @@ function eS() {
             subsection: r
         } = (0, u.cj)([q.Z], () => q.Z.getProps()), l = (0, N.ZP)(), {analyticsLocations: c} = (0, g.ZP)(S.Z.OVERVIEW);
     a.useEffect(() => {
-        (0, D.Kw)(v.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
+        (0, v.Kw)(D.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
     let d = (0, u.e7)([P.Z], () => P.Z.getCategories(null == t ? void 0 : t.id)), _ = a.useMemo(() => (0, C.Z)(d._categories, d), [d]), {
-            canManageGuild: E,
-            isGuildAdmin: I
+            canManageGuild: I,
+            isGuildAdmin: E
         } = (0, u.cj)([y.Z], () => ({
             canManageGuild: y.Z.can(Q.Plq.MANAGE_GUILD, t),
             isGuildAdmin: y.Z.can(Q.Plq.ADMINISTRATOR, t)
-        })), T = (0, u.e7)([B.Z], () => B.Z.getMemberCount(null == t ? void 0 : t.id)), m = (0, u.e7)([k.default], () => k.default.getCurrentUser());
+        })), T = (0, u.e7)([B.Z], () => B.Z.getMemberCount(null == t ? void 0 : t.id)), m = (0, u.e7)([w.default], () => w.default.getCurrentUser());
     o()(null != m, 'GuildSettingsOverview: currentUser cannot be undefined');
     let {enableDeadchat: h} = R.Z.useExperiment({
         guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : Q.lds,
@@ -856,8 +856,8 @@ function eS() {
         value: c,
         children: (0, s.jsx)(eN, {
             channels: _,
-            canManageGuild: E,
-            isGuildAdmin: I,
+            canManageGuild: I,
+            isGuildAdmin: E,
             subsection: r,
             guild: t,
             errors: n,
@@ -872,7 +872,7 @@ function eS() {
 }
 function eh(e, t, a) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3], r = arguments.length > 4 ? arguments[4] : void 0, l = arguments.length > 5 ? arguments[5] : void 0;
-    (0, I.openModalLazy)(async () => {
+    (0, E.openModalLazy)(async () => {
         let {default: o} = await n.e('89289').then(n.bind(n, 28130));
         return n => (0, s.jsx)(o, {
             maxFileSizeBytes: t,

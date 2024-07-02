@@ -3,13 +3,13 @@ n.d(t, {
         return g;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(399606), o = n(481060), c = n(668781), d = n(603211), u = n(710344), _ = n(430824), E = n(570961), I = n(208665), T = n(959508), m = n(290511), N = n(689938), S = n(509084);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(399606), o = n(481060), c = n(668781), d = n(603211), u = n(710344), _ = n(430824), I = n(570961), E = n(208665), T = n(959508), m = n(290511), N = n(689938), S = n(509084);
 function h(e) {
     let {
             guild: t,
             prejoinOnly: n,
             postjoinOnly: i
-        } = e, c = (0, l.e7)([I.Z], () => I.Z.editedOnboardingPrompts), u = c.filter(e => e.inOnboarding), _ = u.length, {
+        } = e, c = (0, l.e7)([E.Z], () => E.Z.editedOnboardingPrompts), u = c.filter(e => e.inOnboarding), _ = u.length, {
             drag: T,
             drop: h,
             dragSourcePosition: g,
@@ -42,7 +42,7 @@ function h(e) {
         children: [
             !i && u.length < m.b3 ? (0, s.jsxs)(o.Clickable, {
                 className: S.addPrompt,
-                onClick: () => (0, E.tS)(t, [
+                onClick: () => (0, I.tS)(t, [
                     ...c,
                     (0, m.yZ)(!0)
                 ], !1),
@@ -86,7 +86,7 @@ function g(e) {
             postjoinOnly: a,
             includeCount: i,
             singleColumn: r
-        } = e, d = (0, l.e7)([_.Z], () => _.Z.getGuild(t)), g = (0, l.e7)([I.Z], () => I.Z.editedOnboardingPrompts), C = g.filter(e => e.inOnboarding), x = g.filter(e => !0 !== e.inOnboarding), p = [
+        } = e, d = (0, l.e7)([_.Z], () => _.Z.getGuild(t)), g = (0, l.e7)([E.Z], () => E.Z.editedOnboardingPrompts), C = g.filter(e => e.inOnboarding), x = g.filter(e => !0 !== e.inOnboarding), p = [
             ...C.map(e => ({
                 id: e.id,
                 data: e
@@ -119,7 +119,7 @@ function g(e) {
                 });
                 return;
             }
-            (0, E.tS)(d, [
+            (0, I.tS)(d, [
                 ...n,
                 ...s
             ]);
@@ -174,7 +174,7 @@ function g(e) {
                     }, e.id)),
                     g.length < m.YW ? (0, s.jsxs)(o.Clickable, {
                         className: S.addPrompt,
-                        onClick: () => (0, E.tS)(d, [
+                        onClick: () => (0, I.tS)(d, [
                             ...g,
                             (0, m.yZ)(!1)
                         ], !1),

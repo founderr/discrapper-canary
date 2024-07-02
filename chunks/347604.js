@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(392711), r = n.n(i), l = n(792986), o = n(442837), c = n(481060), d = n(946314), u = n(938502), _ = n(967916), E = n(68638), I = n(816817), T = n(219369), m = n(650774), N = n(845377), S = n(981631), h = n(689938), g = n(393623), C = n(716455);
+var s = n(735250), a = n(470079), i = n(392711), r = n.n(i), l = n(792986), o = n(442837), c = n(481060), d = n(946314), u = n(938502), _ = n(967916), I = n(68638), E = n(816817), T = n(219369), m = n(650774), N = n(845377), S = n(981631), h = n(689938), g = n(393623), C = n(716455);
 let x = [
         '322850917248663552',
         '172018499005317120',
@@ -29,9 +29,9 @@ t.Z = e => {
         R,
         f
     ]);
-    let [L, O] = (0, o.Wu)([E.Z], () => [
-            E.Z.getGuild(R),
-            E.Z.getGuild(f)
+    let [L, O] = (0, o.Wu)([I.Z], () => [
+            I.Z.getGuild(R),
+            I.Z.getGuild(f)
         ], [
             R,
             f
@@ -41,7 +41,7 @@ t.Z = e => {
         } = (0, o.cj)([d.ZP], () => ({
             canEnableDiscovery: d.ZP.passesChecklist(t.id),
             isPendingSuccess: d.ZP.isPendingSuccess(t.id)
-        }), [t.id]), [v, D] = (0, o.Wu)([m.Z], () => [
+        }), [t.id]), [D, v] = (0, o.Wu)([m.Z], () => [
             null,
             m.Z.getMemberCount(t.id)
         ], [t.id]), j = a.useCallback(() => {
@@ -58,21 +58,21 @@ t.Z = e => {
             (0, s.jsxs)('div', {
                 className: g.discoverPreview,
                 children: [
-                    (0, s.jsx)(I.Z, {
+                    (0, s.jsx)(E.Z, {
                         className: g.placeholderCard,
                         disabled: !0,
                         small: !0,
                         loading: null == L,
                         guild: L
                     }),
-                    (0, s.jsx)(I.Z, {
+                    (0, s.jsx)(E.Z, {
                         className: g.previewCard,
                         guild: t,
                         description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
-                        presenceCount: v,
-                        memberCount: D
+                        presenceCount: D,
+                        memberCount: v
                     }),
-                    (0, s.jsx)(I.Z, {
+                    (0, s.jsx)(E.Z, {
                         className: g.placeholderCard,
                         disabled: !0,
                         small: !0,

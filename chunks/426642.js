@@ -15,7 +15,7 @@ t.Z = e => {
             icon: a,
             description: u,
             color: _,
-            tooltip: E
+            tooltip: I
         } = {
             0: {
                 icon: l.FileWarningIcon,
@@ -76,7 +76,7 @@ t.Z = e => {
             }),
             (0, i.jsx)(l.TooltipContainer, {
                 position: 'right',
-                text: E,
+                text: I,
                 children: (0, i.jsx)(l.CircleExclamationPointIcon, {
                     size: 'custom',
                     width: 20,

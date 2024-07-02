@@ -14,7 +14,7 @@ function E(e) {
             onClose: m
         } = e, I = (0, a.e7)([c.Z], () => c.Z.getFpMessageInfo(n)), T = I.attachments.map(e => e.id), h = I.attachments.map(e => e.filename), {
             reportFalsePositive: N,
-            isReportFalsePositiveLoading: f
+            isReportFalsePositiveLoading: p
         } = (0, d.$)({
             onSuccess: () => {
                 (0, u.s)(m), l.Z.disableFalsePositiveButton(t, n);
@@ -29,7 +29,7 @@ function E(e) {
     return !(I.attachments.length > 0) && m(), (0, i.jsx)(u.$, {
         messageId: n,
         channelId: t,
-        isReportFalsePositiveLoading: f,
+        isReportFalsePositiveLoading: p,
         analyticsContext: o.UU.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
         onConfirmPress: N,
         transitionState: E,

@@ -6,11 +6,11 @@ t.Z = a.memo(function (e) {
             persistEdit: n = !1,
             initWithEdit: _ = !1
         } = e, {
-            hasChanges: E,
-            editingRule: I,
+            hasChanges: I,
+            editingRule: E,
             createNewEditingRule: T,
             setEditingRule: m
-        } = (0, l.V)(), {isLoading: N} = (0, l.w)(), [S] = a.useState(() => !(0, i.Vb)(t)), h = (null == I ? void 0 : I.id) === t.id || n, g = (0, r.U)(null == t ? void 0 : t.id), C = h && null != I ? I : t, x = a.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]), p = a.useCallback(() => {
+        } = (0, l.V)(), {isLoading: N} = (0, l.w)(), [S] = a.useState(() => !(0, i.Vb)(t)), h = (null == E ? void 0 : E.id) === t.id || n, g = (0, r.U)(null == t ? void 0 : t.id), C = h && null != E ? E : t, x = a.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]), p = a.useCallback(() => {
             T(t.guildId, t.triggerType);
         }, [
             t.guildId,
@@ -31,12 +31,12 @@ t.Z = a.memo(function (e) {
         m
     ]);
     let f = a.useCallback(() => {
-        h ? !E && m(null) : E ? x(() => {
+        h ? !I && m(null) : I ? x(() => {
             m(t);
         }) : m(t);
     }, [
         h,
-        E,
+        I,
         x,
         t,
         m
@@ -51,7 +51,7 @@ t.Z = a.memo(function (e) {
             onChangeRule: R,
             onSetupRule: p
         }),
-        isStuck: h && E,
+        isStuck: h && I,
         isExpanded: h,
         onExpand: f,
         children: h && (0, s.jsx)(c.Z, {

@@ -3,27 +3,27 @@ n.d(t, {
         return T;
     }
 }), n(47120), n(390547);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(481060), u = n(607070), _ = n(259580), E = n(593201);
-function I(e) {
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(920906), o = n(442837), c = n(692547), d = n(481060), u = n(607070), _ = n(259580), I = n(593201);
+function E(e) {
     let {
         checked: t,
         children: n
     } = e;
     return (0, s.jsxs)('div', {
-        className: E.row,
+        className: I.row,
         children: [
             (0, s.jsx)(d.Text, {
                 variant: 'text-md/normal',
                 color: 'interactive-active',
-                className: E.rowText,
+                className: I.rowText,
                 children: n
             }),
             t ? (0, s.jsx)(d.CircleCheckIcon, {
                 size: 'md',
                 color: 'currentColor',
                 secondaryColor: c.Z.unsafe_rawColors.WHITE_500.css,
-                className: r()(E.rowIcon, E.rowIconChecked)
-            }) : (0, s.jsx)('div', { className: r()(E.rowIcon, E.rowIconEmpty) })
+                className: r()(I.rowIcon, I.rowIconChecked)
+            }) : (0, s.jsx)('div', { className: r()(I.rowIcon, I.rowIconEmpty) })
         ]
     });
 }
@@ -39,27 +39,27 @@ function T(e) {
             immediate: N
         });
     return (0, s.jsxs)('div', {
-        className: E.container,
+        className: I.container,
         children: [
             (0, s.jsxs)(d.Clickable, {
-                className: E.headerBar,
+                className: I.headerBar,
                 onClick: () => m(e => !e),
                 children: [
                     (0, s.jsx)(d.Heading, {
                         variant: 'heading-md/semibold',
-                        className: E.headerText,
+                        className: I.headerText,
                         children: t
                     }),
                     (0, s.jsx)(_.Z, {
                         direction: T ? _.Z.Directions.DOWN : _.Z.Directions.UP,
-                        className: E.headerCaret
+                        className: I.headerCaret
                     })
                 ]
             }),
             (0, s.jsx)('div', {
-                className: E.progressBarOuter,
+                className: I.progressBarOuter,
                 children: (0, s.jsx)(l.animated.div, {
-                    className: E.progressBarInner,
+                    className: I.progressBarInner,
                     style: g
                 })
             }),
@@ -70,12 +70,12 @@ function T(e) {
                 } = e;
                 return (0, s.jsxs)(a.Fragment, {
                     children: [
-                        t > 0 && (0, s.jsx)(d.FormDivider, { className: E.divider }),
+                        t > 0 && (0, s.jsx)(d.FormDivider, { className: I.divider }),
                         (0, s.jsx)(d.FormTitle, {
-                            className: E.categoryTitle,
+                            className: I.categoryTitle,
                             children: n
                         }),
-                        i.map((e, t) => (0, s.jsx)(I, {
+                        i.map((e, t) => (0, s.jsx)(E, {
                             children: e.description,
                             checked: e.completed
                         }, t))
@@ -84,9 +84,9 @@ function T(e) {
             }),
             null !== i && '' !== i && null !== r && (0, s.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(d.FormDivider, { className: E.divider }),
+                    (0, s.jsx)(d.FormDivider, { className: I.divider }),
                     (0, s.jsx)(d.Button, {
-                        className: E.button,
+                        className: I.button,
                         size: d.Button.Sizes.SMALL,
                         color: d.Button.Colors.BRAND,
                         onClick: r,

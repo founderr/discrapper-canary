@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     }
 });
-var s = n(735250), a = n(470079), i = n(536982), r = n(456677), l = n(951665), o = n(428760), c = n(55889), d = n(300453), u = n(620436), _ = n(273504), E = n(689938), I = n(583975);
+var s = n(735250), a = n(470079), i = n(536982), r = n(456677), l = n(951665), o = n(428760), c = n(55889), d = n(300453), u = n(620436), _ = n(273504), I = n(689938), E = n(583975);
 function T(e) {
     var t, n, T, m, N, S;
     let {
@@ -34,11 +34,11 @@ function T(e) {
         ]);
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsxs)('div', {
-            className: I.cardContentsContainer,
+            className: E.cardContentsContainer,
             children: [
                 (0, s.jsxs)(d.Z, {
                     step: 1,
-                    header: E.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_TRIGGER_HEADER,
+                    header: I.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_TRIGGER_HEADER,
                     children: [
                         (0, s.jsx)(o.Z, {
                             onChangeText: C,
@@ -61,7 +61,7 @@ function T(e) {
                 (0, s.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
                 (0, s.jsx)(d.Z, {
                     step: 2,
-                    header: E.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
+                    header: I.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
                     children: (0, s.jsx)(r.Z, {
                         rule: h,
                         onChangeRule: g
@@ -70,7 +70,7 @@ function T(e) {
                 (0, s.jsx)(u.Z, { type: u.Z.Type.CROSS }),
                 (0, s.jsx)(d.Z, {
                     step: 3,
-                    header: E.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
+                    header: I.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
                     children: (0, s.jsx)(c.Z, {
                         rule: h,
                         onChangeRule: g

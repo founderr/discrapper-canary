@@ -1,6 +1,6 @@
 var s, a, i, r, l = n(442837), o = n(570140);
 let c = null, d = 0, u = null, _ = null;
-class E extends (r = l.ZP.Store) {
+class I extends (r = l.ZP.Store) {
     showNotice() {
         return c !== u;
     }
@@ -20,12 +20,12 @@ class E extends (r = l.ZP.Store) {
         return _;
     }
 }
-i = 'GuildSettingsVanityURLStore', (a = 'displayName') in (s = E) ? Object.defineProperty(s, a, {
+i = 'GuildSettingsVanityURLStore', (a = 'displayName') in (s = I) ? Object.defineProperty(s, a, {
     value: i,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : s[a] = i, t.Z = new E(o.Z, {
+}) : s[a] = i, t.Z = new I(o.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
         u = c = null !== (t = e.code) && void 0 !== t ? t : '', d = e.uses, _ = null !== (n = e.error) && void 0 !== n ? n : null;

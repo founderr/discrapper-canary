@@ -6,12 +6,12 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(852860), o = n(471445), c = n(45966), d = n(637853), u = n(999382), _ = n(889369), E = n(983135), I = n(570961), T = n(208665), m = n(974513), N = n(716130), S = n(981631), h = n(290511), g = n(689938), C = n(509084);
+var s = n(735250), a = n(470079), i = n(442837), r = n(481060), l = n(852860), o = n(471445), c = n(45966), d = n(637853), u = n(999382), _ = n(889369), I = n(983135), E = n(570961), T = n(208665), m = n(974513), N = n(716130), S = n(981631), h = n(290511), g = n(689938), C = n(509084);
 function x(e) {
     let {
             guildId: t,
             prompts: n
-        } = e, l = (0, i.e7)([_.Z], () => _.Z.editedDefaultChannelIds), [c, u] = (0, d.dF)(t, n, [...l]), E = c.length, I = c.length + u.length, T = E / I * 100, m = Math.max(Math.ceil(85 * I / 100) - E, 0), [N, S] = a.useState(!1), h = N ? r.ChevronSmallDownIcon : r.ChevronSmallUpIcon;
+        } = e, l = (0, i.e7)([_.Z], () => _.Z.editedDefaultChannelIds), [c, u] = (0, d.dF)(t, n, [...l]), I = c.length, E = c.length + u.length, T = I / E * 100, m = Math.max(Math.ceil(85 * E / 100) - I, 0), [N, S] = a.useState(!1), h = N ? r.ChevronSmallDownIcon : r.ChevronSmallUpIcon;
     return (0, s.jsxs)('div', {
         className: C.channelCoverage,
         children: [
@@ -31,7 +31,7 @@ function x(e) {
                                 className: C.coverageTitle,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({ numChannelsMissing: I - E })
+                                children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({ numChannelsMissing: E - I })
                             })
                         ]
                     }),
@@ -120,18 +120,18 @@ function R(e) {
             saveOnClose: n
         } = e, l = (0, i.e7)([c.Z], () => c.Z.isLoading()), o = (0, i.e7)([T.Z], () => T.Z.editedOnboardingPrompts), d = (0, i.e7)([T.Z], () => T.Z.advancedMode), u = a.useRef(!1);
     if (a.useEffect(() => {
-            !l && !u.current && 0 === o.length && (u.current = !0, !d && (0, I.tS)(t, [(0, h.ae)()], !1));
+            !l && !u.current && 0 === o.length && (u.current = !0, !d && (0, E.tS)(t, [(0, h.ae)()], !1));
         }), a.useEffect(() => {
             if (n)
                 return () => {
-                    (0, I.rS)(t, { ignoreDefaultPrompt: !0 }).catch(() => {
+                    (0, E.rS)(t, { ignoreDefaultPrompt: !0 }).catch(() => {
                     });
                 };
         }, [n]), null == t)
         return null;
     let _ = async () => {
         try {
-            await (0, I.rS)(t), await (0, E.di)(t.id);
+            await (0, E.rS)(t), await (0, I.di)(t.id);
         } catch {
         }
     };
@@ -191,11 +191,11 @@ function f() {
     return null == e ? null : (0, s.jsx)(l.Z, {
         onSave: () => {
             try {
-                (0, I.rS)(e);
+                (0, E.rS)(e);
             } catch {
             }
         },
-        onReset: I.NB,
+        onReset: E.NB,
         submitting: t,
         onSaveText: g.Z.Messages.SAVE
     });

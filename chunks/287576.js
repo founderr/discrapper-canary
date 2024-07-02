@@ -17,8 +17,8 @@ function c(e) {
             teamId: null == n ? void 0 : null === (t = n.team) || void 0 === t ? void 0 : t.id
         }), {
             currentPeriod: _,
-            previousPeriods: E,
-            metrics: I
+            previousPeriods: I,
+            metrics: E
         } = s.useMemo(() => {
             let {
                     currentPeriod: e,
@@ -34,8 +34,8 @@ function c(e) {
         loading: c || u,
         payoutsByPeriod: d,
         currentPeriod: _,
-        previousPeriods: E,
-        metrics: I,
+        previousPeriods: I,
+        metrics: E,
         application: n
     };
 }

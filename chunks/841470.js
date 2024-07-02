@@ -9,10 +9,10 @@ t.Z = e => {
             isTrendingUp: d,
             isTrendingDown: u,
             tooltipText: _
-        } = e, E = 'string' == typeof _ ? _ : t, I = null != _ ? (0, s.jsx)(i.Tooltip, {
+        } = e, I = 'string' == typeof _ ? _ : t, E = null != _ ? (0, s.jsx)(i.Tooltip, {
             text: _,
             position: 'top',
-            'aria-label': E,
+            'aria-label': I,
             children: e => (0, s.jsx)(i.CircleInformationIcon, {
                 size: 'xs',
                 color: 'currentColor',
@@ -27,7 +27,7 @@ t.Z = e => {
                 className: o.analyticsCardTitle,
                 children: [
                     t,
-                    I
+                    E
                 ]
             }),
             (0, s.jsx)('div', {

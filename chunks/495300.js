@@ -3,16 +3,16 @@ n.d(t, {
         return M;
     }
 });
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(704215), c = n(481060), d = n(605236), u = n(621923), _ = n(996753), E = n(999382), I = n(743475), T = n(983135), m = n(570961), N = n(208665), S = n(359191), h = n(84658), g = n(142961), C = n(729311), x = n(850864), p = n(729995), R = n(966301), f = n(707076), L = n(213956), O = n(689938), A = n(236169);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(704215), c = n(481060), d = n(605236), u = n(621923), _ = n(996753), I = n(999382), E = n(743475), T = n(983135), m = n(570961), N = n(208665), S = n(359191), h = n(84658), g = n(142961), C = n(729311), x = n(850864), p = n(729995), R = n(966301), f = n(707076), L = n(213956), O = n(689938), A = n(236169);
 function M() {
-    let e = (0, l.e7)([E.Z], () => E.Z.getGuildId());
-    return null == e ? null : (0, s.jsx)(v, { guildId: e });
+    let e = (0, l.e7)([I.Z], () => I.Z.getGuildId());
+    return null == e ? null : (0, s.jsx)(D, { guildId: e });
 }
-function v(e) {
-    let t, {guildId: n} = e, i = (0, l.e7)([S.Z], () => S.Z.getCurrentPage()), E = (0, l.e7)([S.Z], () => {
+function D(e) {
+    let t, {guildId: n} = e, i = (0, l.e7)([S.Z], () => S.Z.getCurrentPage()), I = (0, l.e7)([S.Z], () => {
             let e = (0, h.lg)(i);
             return null != e && !S.Z.isEducationUpsellDismissed(e);
-        }), N = (0, g.Z)(n), M = !N && E, {homeSettingsEnabled: v} = (0, u.kZ)(n);
+        }), N = (0, g.Z)(n), M = !N && I, {homeSettingsEnabled: D} = (0, u.kZ)(n);
     switch (a.useEffect(() => {
             (0, d.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
         }, []), i) {
@@ -43,10 +43,10 @@ function v(e) {
     return (0, s.jsxs)('div', {
         className: r()(A.onboardingContainer, { [A.upsellOnTop]: M }),
         children: [
-            !N && i !== h.PG.LANDING && (0, s.jsx)(D, {
+            !N && i !== h.PG.LANDING && (0, s.jsx)(v, {
                 setOnboardingStep: T.$K,
                 page: i,
-                homeSettingsEnabled: v
+                homeSettingsEnabled: D
             }),
             N && i !== h.PG.LANDING && (0, s.jsx)('div', {
                 children: (0, s.jsxs)(c.Button, {
@@ -54,7 +54,7 @@ function v(e) {
                     look: c.Button.Looks.BLANK,
                     size: c.Button.Sizes.MIN,
                     onClick: () => {
-                        (0, m.NB)(), (0, I.BG)(), (0, T.$K)(h.PG.LANDING);
+                        (0, m.NB)(), (0, E.BG)(), (0, T.$K)(h.PG.LANDING);
                     },
                     children: [
                         (0, s.jsx)(_.Z, {
@@ -73,7 +73,7 @@ function v(e) {
         ]
     });
 }
-function D(e) {
+function v(e) {
     let {
             page: t,
             setOnboardingStep: n,

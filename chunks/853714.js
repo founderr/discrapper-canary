@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(699581), o = n(91192), c = n(374470), d = n(442837), u = n(481060), _ = n(480137), E = n(239091), I = n(497321), T = n(724757), m = n(210887), N = n(387667), S = n(598077), h = n(592125), g = n(430824), C = n(246946), x = n(594174), p = n(274730), R = n(823379), f = n(51144), L = n(987707), O = n(999382), A = n(501801), M = n(603784), v = n(981631), D = n(689938), j = n(412058), Z = n(518717), b = n(759823);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(699581), o = n(91192), c = n(374470), d = n(442837), u = n(481060), _ = n(480137), I = n(239091), E = n(497321), T = n(724757), m = n(210887), N = n(387667), S = n(598077), h = n(592125), g = n(430824), C = n(246946), x = n(594174), p = n(274730), R = n(823379), f = n(51144), L = n(987707), O = n(999382), A = n(501801), M = n(603784), D = n(981631), v = n(689938), j = n(412058), Z = n(518717), b = n(759823);
 function U(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -38,7 +38,7 @@ class G extends a.PureComponent {
                     log: t,
                     guildId: a
                 } = this.props, {user: i} = t;
-            null != i && null != a && (0, E.jW)(e, async () => {
+            null != i && null != a && (0, I.jW)(e, async () => {
                 let {default: e} = await n.e('50929').then(n.bind(n, 595011));
                 return t => (0, s.jsx)(e, {
                     ...t,
@@ -51,7 +51,7 @@ class G extends a.PureComponent {
                     log: t,
                     guildId: a
                 } = this.props, i = g.Z.getGuild(a);
-            null != t.options.channel && null != i && (0, E.jW)(e, async () => {
+            null != t.options.channel && null != i && (0, I.jW)(e, async () => {
                 let {default: e} = await n.e('51529').then(n.bind(n, 911053));
                 return n => (0, s.jsx)(e, {
                     ...n,
@@ -64,29 +64,29 @@ class G extends a.PureComponent {
                 guildId: a
             } = this.props;
             switch (t.targetType) {
-            case v.KFR.CHANNEL:
-            case v.KFR.CHANNEL_OVERWRITE:
+            case D.KFR.CHANNEL:
+            case D.KFR.CHANNEL_OVERWRITE:
                 let i = h.Z.getChannel(t.targetId), r = g.Z.getGuild(a);
                 if (null != i && null != r)
-                    return (0, E.jW)(e, async () => {
+                    return (0, I.jW)(e, async () => {
                         let {default: e} = await n.e('51529').then(n.bind(n, 911053));
                         return t => (0, s.jsx)(e, {
                             ...t,
                             channel: i
                         });
                     });
-                return (0, E.jW)(e, async () => {
+                return (0, I.jW)(e, async () => {
                     let {default: e} = await n.e('5396').then(n.bind(n, 731646));
                     return n => (0, s.jsx)(e, {
                         ...n,
                         id: t.targetId,
-                        label: D.Z.Messages.COPY_ID_UNKNOWN
+                        label: v.Z.Messages.COPY_ID_UNKNOWN
                     });
                 });
-            case v.KFR.USER:
+            case D.KFR.USER:
                 let l = x.default.getUser(t.targetId);
                 if (null != l && null != a)
-                    return (0, E.jW)(e, async () => {
+                    return (0, I.jW)(e, async () => {
                         let {default: e} = await n.e('50929').then(n.bind(n, 595011));
                         return t => (0, s.jsx)(e, {
                             ...t,
@@ -110,12 +110,12 @@ function P(e) {
             setExpandedRef: d,
             setLastExpandedRef: u,
             onHeaderClick: _,
-            onContentClick: E
-        } = e, I = a.useRef(c);
+            onContentClick: I
+        } = e, E = a.useRef(c);
     a.useEffect(() => {
-        I.current = c;
+        E.current = c;
     }, [c]);
-    let m = (0, T.Z)('audit-log', I);
+    let m = (0, T.Z)('audit-log', E);
     return (0, s.jsx)(o.bG, {
         navigator: m,
         children: (0, s.jsx)(o.SJ, {
@@ -135,7 +135,7 @@ function P(e) {
                             ref: t ? d : a ? u : null,
                             className: j.row,
                             onHeaderClick: _,
-                            onContentClick: E,
+                            onContentClick: I,
                             log: e,
                             expanded: t
                         }, e.id);
@@ -201,7 +201,7 @@ class B extends a.PureComponent {
                         (0, s.jsx)(u.FormTitle, {
                             tag: u.FormTitleTags.H1,
                             className: j.formTitle,
-                            children: D.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
+                            children: v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
                         }),
                         this.renderHeaderDropdowns()
                     ]
@@ -228,11 +228,11 @@ class B extends a.PureComponent {
                 guild: _
             } = this.props;
         if (r)
-            return (0, s.jsx)(I.Z, {});
+            return (0, s.jsx)(E.Z, {});
         if (o || l)
             return this.renderSpinner();
         if (0 === a.length) {
-            let e = c ? D.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : D.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY, t = c ? D.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : D.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+            let e = c ? v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY, t = c ? v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
             return (0, s.jsxs)(u.EmptyState, {
                 theme: i,
                 className: j.empty,
@@ -309,7 +309,7 @@ class B extends a.PureComponent {
                 children: [
                     (0, s.jsx)(u.ComboboxItem.Icon, {
                         children: (0, s.jsx)(A.mp, {
-                            themeOverride: l ? v.BRd.DARK : null,
+                            themeOverride: l ? D.BRd.DARK : null,
                             actionType: i,
                             targetType: r,
                             action: e.value
@@ -385,8 +385,8 @@ class B extends a.PureComponent {
                     let {value: t} = e;
                     return n === t;
                 })) && void 0 !== e ? e : o[0], d = {
-                    label: D.Z.Messages.GUILD_SETTINGS_FILTER_ALL_USERS,
-                    valueLabel: D.Z.Messages.GUILD_SETTINGS_FILTER_ALL,
+                    label: v.Z.Messages.GUILD_SETTINGS_FILTER_ALL_USERS,
+                    valueLabel: v.Z.Messages.GUILD_SETTINGS_FILTER_ALL,
                     value: null
                 }, _ = [
                     d,
@@ -400,7 +400,7 @@ class B extends a.PureComponent {
                         value: t.id,
                         user: t
                     };
-                }), E = null !== (t = _.find(e => {
+                }), I = null !== (t = _.find(e => {
                     let {value: t} = e;
                     return t === i;
                 })) && void 0 !== t ? t : d;
@@ -412,18 +412,18 @@ class B extends a.PureComponent {
                         items: _,
                         renderItem: this.renderUserQuickSelectItem,
                         renderValue: this.renderUserQuickSelectValue,
-                        value: E,
+                        value: I,
                         onChange: this.handleFilterUserChange,
-                        label: D.Z.Messages.GUILD_SETTINGS_FILTER_USER,
-                        placeholder: D.Z.Messages.SEARCH_MEMBERS,
+                        label: v.Z.Messages.GUILD_SETTINGS_FILTER_USER,
+                        placeholder: v.Z.Messages.SEARCH_MEMBERS,
                         popoutProps: {
                             autoInvert: !1,
                             position: 'bottom'
                         }
                     }),
                     (0, s.jsx)(u.SearchableQuickSelect, {
-                        placeholder: D.Z.Messages.SEARCH_ACTIONS,
-                        label: D.Z.Messages.GUILD_SETTINGS_FILTER_ACTION,
+                        placeholder: v.Z.Messages.SEARCH_ACTIONS,
+                        label: v.Z.Messages.GUILD_SETTINGS_FILTER_ACTION,
                         popoutClassName: r()(j.selectFilterPopout, b.elevationBorderLow),
                         items: o,
                         renderItem: this.renderActionQuickSelectItem,
@@ -448,7 +448,7 @@ class B extends a.PureComponent {
                     color: u.Button.Colors.PRIMARY,
                     className: j.loadMore,
                     onClick: this.handleFetchNextPage,
-                    children: D.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
+                    children: v.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
                 });
         }), U(this, 'handleFilterActionChange', e => {
             (0, _.ZX)(e, this.props.guildId);

@@ -1,6 +1,6 @@
 n.d(t, {
     av: function () {
-        return D;
+        return v;
     },
     bL: function () {
         return L;
@@ -9,7 +9,7 @@ n.d(t, {
         return O;
     }
 }), n(653041), n(47120);
-var s, a, i = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(913527), d = n.n(c), u = n(442837), _ = n(481060), E = n(766434), I = n(151011), T = n(937615), m = n(289393), N = n(264451), S = n(759178), h = n(462087), g = n(685201), C = n(981631), x = n(198139), p = n(689938), R = n(324609);
+var s, a, i = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(913527), d = n.n(c), u = n(442837), _ = n(481060), I = n(766434), E = n(151011), T = n(937615), m = n(289393), N = n(264451), S = n(759178), h = n(462087), g = n(685201), C = n(981631), x = n(198139), p = n(689938), R = n(324609);
 (a = s || (s = {})).DROPDOWN = 'dropdown', a.PERIOD = 'period', a.SUBSCRIBERS = 'subscribers', a.AMOUNT = 'amount', a.STATUS = 'status';
 let f = (e, t, n, s) => {
         let a = null != s ? d()(s).add(15, 'days').toISOString() : void 0, r = (0, N.Zo)(a, 'MMM D');
@@ -120,11 +120,11 @@ let f = (e, t, n, s) => {
             className: R.periodCell,
             children: d()(t).utc().format('MMMM YYYY')
         });
-    }, v = e => {
+    }, D = e => {
         var t;
         let {listingId: n} = e, s = (0, u.e7)([m.Z], () => m.Z.getSubscriptionListing(n)), a = null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : '['.concat(p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIER_DELETED, ']');
         return (0, i.jsx)(L, { children: a });
-    }, D = e => {
+    }, v = e => {
         let {children: t} = e;
         return (0, i.jsxs)(L, {
             className: R.subscribersCell,
@@ -202,7 +202,7 @@ let f = (e, t, n, s) => {
                 let {expandedRows: n} = t, s = [(0, i.jsx)(M, { children: e.periodStartingAt }, e.key)];
                 if (n.has(e.key))
                     for (let t in e.ppgs)
-                        s.push((0, i.jsx)(v, { listingId: t }, t));
+                        s.push((0, i.jsx)(D, { listingId: t }, t));
                 return s;
             }
         },
@@ -230,7 +230,7 @@ let f = (e, t, n, s) => {
                     payoutStatus: n,
                     ppgDeferralReasons: s,
                     periodEndDate: a
-                } = (0, E.j0)(e);
+                } = (0, I.j0)(e);
                 return (0, i.jsx)(A, { children: f(t, n, s, a) });
             }
         }
@@ -239,7 +239,7 @@ t.ZP = e => {
     let {payoutsByPeriod: t} = e, [n, s] = r.useState(new Set());
     return (0, i.jsx)('div', {
         className: R.tableContainer,
-        children: (0, i.jsx)(I.Z, {
+        children: (0, i.jsx)(E.Z, {
             columns: b,
             data: t,
             className: R.table,

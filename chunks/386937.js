@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(179360), E = n(129861), I = n(999382), T = n(899667), m = n(271383), N = n(594174), S = n(575000), h = n(409216), g = n(267642), C = n(624138), x = n(981631), p = n(689938), R = n(740626);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(442837), d = n(477690), u = n(481060), _ = n(179360), I = n(129861), E = n(999382), T = n(899667), m = n(271383), N = n(594174), S = n(575000), h = n(409216), g = n(267642), C = n(624138), x = n(981631), p = n(689938), R = n(740626);
 function f(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -155,7 +155,7 @@ class O extends a.Component {
         }), f(this, 'renderSubscriber', (e, t, n) => {
             var a;
             return null == e ? null : (0, s.jsx)(u.Tooltip, {
-                text: (0, s.jsx)(E.Z, {
+                text: (0, s.jsx)(I.Z, {
                     user: e.user,
                     nick: e.nick
                 }),
@@ -181,7 +181,7 @@ class O extends a.Component {
                     }),
                     (0, s.jsx)('div', {
                         className: R.subscribersPopoutUsername,
-                        children: (0, s.jsx)(E.Z, {
+                        children: (0, s.jsx)(I.Z, {
                             user: e.user,
                             nick: e.nick
                         })
@@ -201,12 +201,12 @@ class O extends a.Component {
     }
 }
 let A = c.ZP.connectStores([
-    I.Z,
+    E.Z,
     N.default,
     T.Z,
     m.ZP
 ], () => {
-    let e = I.Z.getGuildId(), t = null != e ? T.Z.getAppliedGuildBoostsForGuild(e) : null, n = o()(null != t ? t : []).uniqBy(e => e.userId), s = n.map(t => ({
+    let e = E.Z.getGuildId(), t = null != e ? T.Z.getAppliedGuildBoostsForGuild(e) : null, n = o()(null != t ? t : []).uniqBy(e => e.userId), s = n.map(t => ({
             user: N.default.getUser(t.userId),
             nick: m.ZP.getNick(e, t.userId)
         })).filter(e => null != e.user).value();

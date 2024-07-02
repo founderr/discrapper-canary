@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return D;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(225857), o = n(290843), c = n(866442), d = n(442837), u = n(481060), _ = n(239091), E = n(749210), I = n(607070), T = n(605436), m = n(134433), N = n(496675), S = n(442313), h = n(671533), g = n(946724), C = n(970129), x = n(712181), p = n(420966), R = n(203377), f = n(981631), L = n(689938), O = n(99117);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(225857), o = n(290843), c = n(866442), d = n(442837), u = n(481060), _ = n(239091), I = n(749210), E = n(607070), T = n(605436), m = n(134433), N = n(496675), S = n(442313), h = n(671533), g = n(946724), C = n(970129), x = n(712181), p = n(420966), R = n(203377), f = n(981631), L = n(689938), O = n(99117);
 let A = 'DRAGGABLE_ROLE';
 function M(e) {
     var t, a;
     let i, {
             guild: d,
-            role: E,
-            highestRole: I,
+            role: I,
+            highestRole: E,
             selectedItem: N,
             onClick: S,
             currentPosition: h,
@@ -18,13 +18,13 @@ function M(e) {
             onDragReset: x,
             onDragComplete: p,
             roleStyle: R
-        } = e, L = (0, C.T)(d, I, E), M = (0, T.pM)(d.id, E.id), v = null == L && !M, D = (null === (t = E.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0, [, j] = (0, l.c)({
+        } = e, L = (0, C.T)(d, E, I), M = (0, T.pM)(d.id, I.id), D = null == L && !M, v = (null === (t = I.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0, [, j] = (0, l.c)({
             type: A,
-            item: () => (g(E.id), {
-                id: E.id,
+            item: () => (g(I.id), {
+                id: I.id,
                 position: h
             }),
-            canDrag: () => v,
+            canDrag: () => D,
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
@@ -35,16 +35,16 @@ function M(e) {
             }
         }), [{dragSourcePosition: Z}, b] = (0, o.L)({
             accept: A,
-            canDrop: () => v,
+            canDrop: () => D,
             collect: e => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
             },
-            drop: () => ({ roleId: E.id })
-        }), U = null !== (a = E.colorString) && void 0 !== a ? a : (0, c.Rf)(f.p6O);
-    return i = D ? (0, s.jsx)(m.Z, {
+            drop: () => ({ roleId: I.id })
+        }), U = null !== (a = I.colorString) && void 0 !== a ? a : (0, c.Rf)(f.p6O);
+    return i = v ? (0, s.jsx)(m.Z, {
         size: 12,
-        color: E.colorString,
+        color: I.colorString,
         className: O.verifiedRoleIcon
     }) : 'dot' === R ? (0, s.jsx)(u.RoleDot, {
         color: U,
@@ -55,7 +55,7 @@ function M(e) {
             [O.dragBefore]: null !== Z && h < Z,
             [O.dragAfter]: null !== Z && h > Z
         }),
-        id: E.id,
+        id: I.id,
         selectedItem: N,
         itemType: 'side',
         onClick: S,
@@ -64,12 +64,12 @@ function M(e) {
                 let {default: e} = await Promise.resolve().then(n.bind(n, 741247));
                 return t => (0, s.jsx)(e, {
                     ...t,
-                    role: E,
+                    role: I,
                     guild: d
                 });
             });
         },
-        'aria-label': E.name,
+        'aria-label': I.name,
         clickableRef: e => {
             var t;
             return j(b(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null));
@@ -84,24 +84,24 @@ function M(e) {
                 variant: 'text-sm/medium',
                 color: M ? 'header-primary' : 'interactive-active',
                 lineClamp: 1,
-                children: E.name
+                children: I.name
             })
         ]
     });
 }
-function v(e) {
+function D(e) {
     let {
             guild: t,
             currentRoleId: n,
             setCurrentRoleId: i,
             setSelectedSection: l
-        } = e, o = (0, d.e7)([g.Z], () => g.Z.roles), c = (0, d.e7)([N.Z], () => N.Z.getHighestRole(t)), _ = (0, d.e7)([I.Z], () => I.Z.roleStyle), [T, m] = a.useState(o.length), {
+        } = e, o = (0, d.e7)([g.Z], () => g.Z.roles), c = (0, d.e7)([N.Z], () => N.Z.getHighestRole(t)), _ = (0, d.e7)([E.Z], () => E.Z.roleStyle), [T, m] = a.useState(o.length), {
             scrolledToTop: C,
             handleScroll: f
         } = (0, p.V)(), {
             handleDragStart: A,
-            handleDragReset: v,
-            handleDragComplete: D
+            handleDragReset: D,
+            handleDragComplete: v
         } = (0, x.Z)(o), j = a.useRef(null), Z = a.useCallback(e => {
             var t, n;
             let s = o.findIndex(t => t.id === e);
@@ -119,7 +119,7 @@ function v(e) {
         n
     ]);
     let b = () => {
-        E.Z.createRole(t.id), l(R.ZI.DISPLAY);
+        I.Z.createRole(t.id), l(R.ZI.DISPLAY);
     };
     return (0, s.jsx)(S.ZP.Sidebar, {
         className: O.sidebar,
@@ -180,8 +180,8 @@ function v(e) {
                             onClick: () => i(e.id),
                             currentPosition: a,
                             onDragStart: A,
-                            onDragReset: v,
-                            onDragComplete: D,
+                            onDragReset: D,
+                            onDragComplete: v,
                             roleStyle: _
                         }, e.id))
                     })

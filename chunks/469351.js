@@ -1,15 +1,15 @@
 n.d(t, {
     t: function () {
-        return v;
+        return D;
     }
 }), n(47120), n(627341);
-var s, a, i = n(735250), r = n(470079), l = n(278074), o = n(399606), c = n(481060), d = n(76535), u = n(395586), _ = n(204875), E = n(715796), I = n(411667), T = n(434404), m = n(962086), N = n(225675), S = n(703656), h = n(430824), g = n(594174), C = n(63063), x = n(267101), p = n(294294), R = n(310800), f = n(833695), L = n(981631), O = n(176505), A = n(689938), M = n(583578);
-function v(e) {
+var s, a, i = n(735250), r = n(470079), l = n(278074), o = n(399606), c = n(481060), d = n(76535), u = n(395586), _ = n(204875), I = n(715796), E = n(411667), T = n(434404), m = n(962086), N = n(225675), S = n(703656), h = n(430824), g = n(594174), C = n(63063), x = n(267101), p = n(294294), R = n(310800), f = n(833695), L = n(981631), O = n(176505), A = n(689938), M = n(583578);
+function D(e) {
     let {
             guildId: t,
             hasValidApplication: n
-        } = e, {listingsLoaded: s} = (0, x.eD)(t), a = (0, o.e7)([h.Z], () => h.Z.getGuild(t)), v = (0, o.e7)([g.default], () => g.default.getCurrentUser()), D = (null == a ? void 0 : a.isOwner(v)) === !0, {loading: j} = (0, d.H)(t), [Z, b] = r.useState(n ? 'manage_listings' : 'payment');
-    (0, E.P)(a);
+        } = e, {listingsLoaded: s} = (0, x.eD)(t), a = (0, o.e7)([h.Z], () => h.Z.getGuild(t)), D = (0, o.e7)([g.default], () => g.default.getCurrentUser()), v = (null == a ? void 0 : a.isOwner(D)) === !0, {loading: j} = (0, d.H)(t), [Z, b] = r.useState(n ? 'manage_listings' : 'payment');
+    (0, I.P)(a);
     let U = r.useCallback(() => {
         if (null == a)
             return;
@@ -63,7 +63,7 @@ function v(e) {
                     disabled: !n,
                     children: A.Z.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
                 }),
-                D ? (0, i.jsx)(c.TabBar.Item, {
+                v ? (0, i.jsx)(c.TabBar.Item, {
                     id: 'payment',
                     className: M.tabBarItem,
                     children: A.Z.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
@@ -87,7 +87,7 @@ function v(e) {
         guildId: t,
         children: [
             G,
-            (0, i.jsx)(I.Z, { guild: a }),
+            (0, i.jsx)(E.Z, { guild: a }),
             (0, i.jsx)('div', {
                 className: M.tabBarContainer,
                 children: P

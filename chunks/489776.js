@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(920906), r = n(722770), l = n(442837), o = n(481060), c = n(607070), d = n(236413), u = n(85960), _ = n(65912), E = n(564488), I = n(689938), T = n(203965);
+var s = n(735250), a = n(470079), i = n(920906), r = n(722770), l = n(442837), o = n(481060), c = n(607070), d = n(236413), u = n(85960), _ = n(65912), I = n(564488), E = n(689938), T = n(203965);
 function m(e) {
     let {
             guildId: t,
@@ -44,7 +44,7 @@ function m(e) {
             (0, s.jsx)(i.animated.div, {
                 className: T.animatedRuleCardContainer,
                 style: A,
-                children: (0, s.jsx)(E.Z, {
+                children: (0, s.jsx)(I.Z, {
                     rule: f,
                     persistEdit: S
                 })
@@ -68,7 +68,7 @@ function m(e) {
                         (0, s.jsx)(o.Text, {
                             variant: 'text-md/semibold',
                             color: 'text-link',
-                            children: I.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({ ruleName: x() })
+                            children: E.Z.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({ ruleName: x() })
                         })
                     ]
                 })

@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     }
 }), n(653041), n(47120), n(390547);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), m = n(778569), I = n(182906), T = n(100527), h = n(906732), N = n(835473), f = n(471445), p = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), O = n(514342), R = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(512722), o = n.n(r), c = n(442837), d = n(477690), u = n(481060), _ = n(447543), E = n(317381), m = n(778569), I = n(182906), T = n(100527), h = n(906732), N = n(835473), p = n(471445), f = n(601964), C = n(592125), g = n(430824), S = n(496675), A = n(594174), x = n(197409), O = n(514342), R = n(602623), M = n(624138), v = n(358595), L = n(981631), Z = n(245335), P = n(689938), b = n(556849);
 let D = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE), j = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL), U = (0, M.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
     let {
@@ -48,7 +48,7 @@ function B(e) {
         hasEnded: s
     } = e;
     if (null != t && null != n) {
-        let e = (0, f.KS)(t, n);
+        let e = (0, p.KS)(t, n);
         return (0, i.jsxs)('div', {
             className: l()(b.channel, {
                 [b.stacked]: a,
@@ -89,7 +89,7 @@ function k(e) {
     var t, n;
     let s, r, {
             invite: d,
-            getAcceptInviteContext: f
+            getAcceptInviteContext: p
         } = e, {
             approximate_member_count: O,
             approximate_presence_count: M,
@@ -132,12 +132,12 @@ function k(e) {
     if (null == W) {
         if (null == d.guild)
             return (0, i.jsx)(v.Z, {});
-        W = new p.ZP(d.guild);
+        W = new f.ZP(d.guild);
     }
     let ea = ei && !X || ei && K, es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: d.code,
-                context: f('Invite Button Embed'),
+                context: p('Invite Button Embed'),
                 analyticsLocations: J
             });
         };

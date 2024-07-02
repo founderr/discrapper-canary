@@ -13,10 +13,10 @@ n.Z = e => {
     let {
         location: n,
         autoTrackExposure: s = !0,
-        trackExposureOptions: i = {}
+        trackExposureOptions: t = {}
     } = e;
     return l.useExperiment({ location: n }, {
         autoTrackExposure: s,
-        trackExposureOptions: i
+        trackExposureOptions: t
     });
 };

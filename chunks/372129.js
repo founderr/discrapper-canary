@@ -62,8 +62,8 @@ t.Z = e => {
             disabled: c,
             className: d,
             tabIndex: _ = -1,
-            'aria-label': E,
-            filters: I,
+            'aria-label': I,
+            filters: E,
             setLoading: T
         } = e, m = a.createRef(), N = a.useRef(null), [S, h] = a.useState(!1);
     a.useEffect(() => {
@@ -88,12 +88,12 @@ t.Z = e => {
         };
     return (0, s.jsx)(r.Z, {
         onChange: x,
-        filters: null != I ? I : (0, l.Zj)(),
+        filters: null != E ? E : (0, l.Zj)(),
         multiple: o,
         disabled: c,
         className: d,
         tabIndex: _,
-        'aria-label': E,
+        'aria-label': I,
         ref: m
     });
 };

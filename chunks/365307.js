@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     },
     j: function () {
-        return I;
+        return E;
     }
 });
 var s = n(735250);
 n(470079);
 var a = n(442837), i = n(139387), r = n(852860), l = n(490655), o = n(434404), c = n(360606), d = n(999382), u = n(821864), _ = n(905753);
-function E(e) {
+function I(e) {
     let {refToScroller: t} = e, n = (0, a.e7)([d.Z], () => d.Z.getGuild()), {
             section: i,
             sectionId: r,
             integrations: o,
             editedIntegration: u,
             webhooks: _,
-            editedWebhook: E,
-            isFetching: I,
+            editedWebhook: I,
+            isFetching: E,
             errors: T
         } = (0, a.cj)([c.Z], () => ({
             editedIntegration: c.Z.editedIntegration,
@@ -36,14 +36,14 @@ function E(e) {
         integrations: o,
         webhooks: _,
         editedIntegration: u,
-        editedWebhook: E,
-        isFetching: I,
+        editedWebhook: I,
+        isFetching: E,
         hasChanges: c.Z.hasChanges,
         errors: T,
         refToScroller: t
     });
 }
-function I() {
+function E() {
     let {
         guild: e,
         submitting: t

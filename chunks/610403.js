@@ -10,11 +10,11 @@ function _() {
     let e = (0, a.e7)([l.Z], () => l.Z.getGuild()), t = (0, o.y)(null == e ? void 0 : e.id, 'guild_product_settings'), {
             application: n,
             loading: _
-        } = (0, r.Z)(null == e ? void 0 : e.id, u.wW.GUILD_ROLE_SUBSCRIPTIONS), E = null != n && (null == e ? void 0 : e.hasFeature(d.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
+        } = (0, r.Z)(null == e ? void 0 : e.id, u.wW.GUILD_ROLE_SUBSCRIPTIONS), I = null != n && (null == e ? void 0 : e.hasFeature(d.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
     return (0, s.jsx)('main', {
         children: null == e || !t || _ ? (0, s.jsx)(i.Spinner, {}) : (0, s.jsx)(c.t, {
             guildId: e.id,
-            hasValidApplication: E
+            hasValidApplication: I
         })
     });
 }

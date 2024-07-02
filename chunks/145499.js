@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(2052), d = n(906732), u = n(678558), _ = n(852679), E = n(889161), I = n(626135), T = n(267642), m = n(268350), N = n(926491), S = n(386937), h = n(316350), g = n(863562), C = n(981631), x = n(689938), p = n(88725);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(2052), d = n(906732), u = n(678558), _ = n(852679), I = n(889161), E = n(626135), T = n(267642), m = n(268350), N = n(926491), S = n(386937), h = n(316350), g = n(863562), C = n(981631), x = n(689938), p = n(88725);
 let R = e => e < (0, T.A3)(C.Eu4.NONE) ? C.Eu4.NONE : e < (0, T.A3)(C.Eu4.TIER_1) ? C.Eu4.TIER_1 : e < (0, T.A3)(C.Eu4.TIER_2) ? C.Eu4.TIER_2 : e < (0, T.A3)(C.Eu4.TIER_3) ? C.Eu4.TIER_3 : C.Eu4.NONE, f = e => {
         let {
                 children: t,
@@ -43,12 +43,12 @@ let R = e => e < (0, T.A3)(C.Eu4.NONE) ? C.Eu4.NONE : e < (0, T.A3)(C.Eu4.TIER_1
             src: n(872732)
         })
     }), A = e => {
-        let {guild: t} = e, {location: n} = (0, c.O)(), {canCreateExpressions: a} = (0, E.XJ)(t);
+        let {guild: t} = e, {location: n} = (0, c.O)(), {canCreateExpressions: a} = (0, I.XJ)(t);
         return (0, s.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             color: o.Button.Colors.BRAND,
             onClick: () => {
-                I.default.track(C.rMx.OPEN_MODAL, {
+                E.default.track(C.rMx.OPEN_MODAL, {
                     type: C.jXE.CREATE_STICKER_MODAL,
                     location: n
                 }), L({ guildId: t.id });
@@ -58,10 +58,10 @@ let R = e => e < (0, T.A3)(C.Eu4.NONE) ? C.Eu4.NONE : e < (0, T.A3)(C.Eu4.TIER_1
         });
     };
 t.Z = e => {
-    let {guild: t} = e, [i, c] = a.useState(!0), I = (0, l.e7)([N.Z], () => {
+    let {guild: t} = e, [i, c] = a.useState(!0), E = (0, l.e7)([N.Z], () => {
             var e;
             return null !== (e = N.Z.getStickersByGuildId(t.id)) && void 0 !== e ? e : [];
-        }, [t]), {analyticsLocations: L} = (0, d.ZP)(), M = t.hasFeature(C.oNc.MORE_STICKERS) ? C.Eu4.TIER_3 : t.premiumTier, v = t.hasFeature(C.oNc.MORE_STICKERS) ? (0, T.vn)(t.id)[C.Eu4.TIER_3] : t.premiumSubscriberCount;
+        }, [t]), {analyticsLocations: L} = (0, d.ZP)(), M = t.hasFeature(C.oNc.MORE_STICKERS) ? C.Eu4.TIER_3 : t.premiumTier, D = t.hasFeature(C.oNc.MORE_STICKERS) ? (0, T.vn)(t.id)[C.Eu4.TIER_3] : t.premiumSubscriberCount;
     if (a.useEffect(() => {
             let e = !1;
             return (async () => {
@@ -71,9 +71,9 @@ t.Z = e => {
             };
         }, [t]), a.useEffect(() => {
             window.dispatchEvent(new Event('resize'));
-        }, [I]), i)
+        }, [E]), i)
         return (0, s.jsx)(o.Spinner, {});
-    let D = (e, n) => {
+    let v = (e, n) => {
             let s = null;
             n === C.Eu4.TIER_1 ? s = C.Qqv.TIER_1 : n === C.Eu4.TIER_2 ? s = C.Qqv.TIER_2 : n === C.Eu4.TIER_3 && (s = C.Qqv.TIER_3), (0, _.Z)({
                 analyticsLocations: L,
@@ -90,7 +90,7 @@ t.Z = e => {
             {
                 tier: C.Eu4.NONE,
                 title: (0, s.jsx)(f, {
-                    guildStickers: I,
+                    guildStickers: E,
                     currentGuildTier: M,
                     tier: C.Eu4.NONE,
                     children: x.Z.Messages.GUILD_SETTINGS_STICKERS_FREE_SLOTS_HEADER
@@ -99,7 +99,7 @@ t.Z = e => {
             {
                 tier: C.Eu4.TIER_1,
                 title: (0, s.jsx)(f, {
-                    guildStickers: I,
+                    guildStickers: E,
                     currentGuildTier: M,
                     tier: C.Eu4.TIER_1,
                     children: x.Z.Messages.PREMIUM_GUILD_TIER_1
@@ -108,7 +108,7 @@ t.Z = e => {
             {
                 tier: C.Eu4.TIER_2,
                 title: (0, s.jsx)(f, {
-                    guildStickers: I,
+                    guildStickers: E,
                     currentGuildTier: M,
                     tier: C.Eu4.TIER_2,
                     children: x.Z.Messages.PREMIUM_GUILD_TIER_2
@@ -117,7 +117,7 @@ t.Z = e => {
             {
                 tier: C.Eu4.TIER_3,
                 title: (0, s.jsx)(f, {
-                    guildStickers: I,
+                    guildStickers: E,
                     currentGuildTier: M,
                     tier: C.Eu4.TIER_3,
                     children: x.Z.Messages.PREMIUM_GUILD_TIER_3
@@ -136,8 +136,8 @@ t.Z = e => {
                 } = e, {
                     canCreateExpressions: m,
                     canManageGuildExpression: N
-                } = (0, E.Gw)(t), S = d[_ - 1], f = null != S ? (0, T.A3)(S.tier) : 0, L = (0, T.A3)(c.tier), j = (0, T.ig)(c.tier), Z = I.slice(f, L), b = Z.length > 0, U = M < c.tier, G = R(I.length), P = m && !U && G === c.tier && L !== Z.length, B = P || Z.length > 0, y = L - f, F = n(872732), k = j - Z.length, w = P ? Math.min(5 - (Z.length + 0) % 5, k) : 0, H = [];
-            for (let e = 0; e < w; e++)
+                } = (0, I.Gw)(t), S = d[_ - 1], f = null != S ? (0, T.A3)(S.tier) : 0, L = (0, T.A3)(c.tier), j = (0, T.ig)(c.tier), Z = E.slice(f, L), b = Z.length > 0, U = M < c.tier, G = R(E.length), P = m && !U && G === c.tier && L !== Z.length, B = P || Z.length > 0, y = L - f, F = n(872732), w = j - Z.length, k = P ? Math.min(5 - (Z.length + 0) % 5, w) : 0, H = [];
+            for (let e = 0; e < k; e++)
                 H.push((0, s.jsx)(O, {}, 'placeholder-'.concat(e)));
             let V = G === _ + 1 && G > M, Y = P || V || _ > M;
             return V ? a = (0, s.jsx)(u.Z, {
@@ -153,7 +153,7 @@ t.Z = e => {
                     objectType: (0, T.ge)(c.tier)
                 }
             }) : P && (a = (0, s.jsx)(A, { guild: t })), (0, s.jsxs)(h.Z, {
-                subscriptionCount: v,
+                subscriptionCount: D,
                 tier: c,
                 onSetRef: l,
                 isAnimatedTo: i,
@@ -201,7 +201,7 @@ t.Z = e => {
                             }),
                             (0, s.jsx)(o.Button, {
                                 color: o.Button.Colors.GREEN,
-                                onClick: () => D((0, T.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
+                                onClick: () => v((0, T.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
                                 children: x.Z.Messages.GUILD_STICKER_SETTINGS_BUY_LEVEL
                             })
                         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var s = n(735250);
@@ -28,21 +28,21 @@ let _ = e => {
         className: a
     });
 };
-function E(e) {
+function I(e) {
     let {
             header: t,
             text: a,
             analyticsLocation: c,
             guild: d,
-            className: E,
-            textColor: I,
+            className: I,
+            textColor: E,
             headerColor: T,
             buttonProps: m
         } = e, {analyticsLocations: N} = (0, o.ZP)(l.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, s.jsx)(o.Gt, {
         value: N,
         children: (0, s.jsxs)('div', {
-            className: i()(u.banner, E),
+            className: i()(u.banner, I),
             children: [
                 (0, s.jsx)('img', {
                     className: u.__invalid_headerGraphic,
@@ -60,7 +60,7 @@ function E(e) {
                         }),
                         (0, s.jsx)(r.Text, {
                             variant: 'text-sm/normal',
-                            color: null != I ? I : 'always-white',
+                            color: null != E ? E : 'always-white',
                             children: a
                         })
                     ]

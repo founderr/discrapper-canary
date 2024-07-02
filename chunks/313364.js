@@ -3,9 +3,9 @@ n.d(t, {
         return O;
     }
 });
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(399606), o = n(481060), c = n(100527), d = n(906732), u = n(434404), _ = n(171368), E = n(430824), I = n(893966), T = n(527379), m = n(305473), N = n(113679), S = n(440857), h = n(472596), g = n(598948), C = n(428936), x = n(41586), p = n(918192), R = n(981631), f = n(689938), L = n(935135);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(399606), o = n(481060), c = n(100527), d = n(906732), u = n(434404), _ = n(171368), I = n(430824), E = n(893966), T = n(527379), m = n(305473), N = n(113679), S = n(440857), h = n(472596), g = n(598948), C = n(428936), x = n(41586), p = n(918192), R = n(981631), f = n(689938), L = n(935135);
 function O(e) {
-    let {guildId: t} = e, n = (0, l.e7)([E.Z], () => E.Z.getGuild(t)), {analyticsLocations: i} = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE), O = !1 == !!(null == n ? void 0 : n.hasFeature(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), A = (0, l.e7)([I.Z], () => I.Z.getEstimatedMemberSearchCountByGuildId(t), [t]), M = a.useCallback(e => {
+    let {guildId: t} = e, n = (0, l.e7)([I.Z], () => I.Z.getGuild(t)), {analyticsLocations: i} = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE), O = !1 == !!(null == n ? void 0 : n.hasFeature(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), A = (0, l.e7)([E.Z], () => E.Z.getEstimatedMemberSearchCountByGuildId(t), [t]), M = a.useCallback(e => {
             if (null != e)
                 (0, _.openUserProfileModal)({
                     userId: e.userId,
@@ -13,9 +13,9 @@ function O(e) {
                     sourceAnalyticsLocations: i,
                     analyticsLocation: { section: R.jXE.GUILD_SETTINGS_MEMBERS }
                 });
-        }, [i]), v = a.useRef(null), D = a.useCallback(() => {
+        }, [i]), D = a.useRef(null), v = a.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.resetSearchText();
+            null === (e = D.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n)
         return null;
@@ -50,14 +50,14 @@ function O(e) {
                                             children: [
                                                 (0, s.jsx)(x.Z, {
                                                     guild: n,
-                                                    ref: v
+                                                    ref: D
                                                 }),
                                                 (0, s.jsx)(g.Z, {
                                                     guild: n,
                                                     searchState: j,
                                                     compact: !0,
                                                     onSelectRow: M,
-                                                    onResetForNewMembers: D
+                                                    onResetForNewMembers: v
                                                 }),
                                                 j !== h.po.SUCCESS_STILL_INDEXING && (0, s.jsx)(C.Z, { guildId: n.id })
                                             ]

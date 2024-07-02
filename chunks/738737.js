@@ -21,7 +21,7 @@ function r(e) {
         renderPurchaseConfirmation: T,
         planGroup: h,
         reviewWarningMessage: N,
-        skuId: f
+        skuId: p
     } = e;
     (0, a.openModalLazy)(async () => {
         let {PaymentContextProvider: e} = await Promise.resolve().then(n.bind(n, 598)), {PaymentModal: a} = await Promise.all([
@@ -45,25 +45,25 @@ function r(e) {
             ]).then(n.bind(n, 7305));
         return n => {
             let {
-                onClose: p,
+                onClose: f,
                 ...C
             } = n;
             return (0, i.jsx)(e, {
                 activeSubscription: r,
                 stepConfigs: l,
-                skuIDs: [f],
+                skuIDs: [p],
                 children: (0, i.jsx)(s.KB, {
                     children: (0, i.jsx)(a, {
                         ...C,
                         initialPlanId: t,
                         onClose: e => {
-                            p(), null == d || d(e);
+                            f(), null == d || d(e);
                         },
                         analyticsLocations: E,
                         analyticsObject: u,
                         analyticsLocation: _,
                         analyticsSubscriptionType: m,
-                        skuId: f,
+                        skuId: p,
                         renderHeader: I,
                         renderPurchaseConfirmation: T,
                         planGroup: h,

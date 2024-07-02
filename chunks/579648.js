@@ -1,5 +1,5 @@
 n(47120);
-var s, a, i = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(570140), d = n(596454), u = n(524329), _ = n(823379), E = n(999382), I = n(413584), T = n(689938), m = n(77812), N = n(906981);
+var s, a, i = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(570140), d = n(596454), u = n(524329), _ = n(823379), I = n(999382), E = n(413584), T = n(689938), m = n(77812), N = n(906981);
 (a = s || (s = {}))[a.LOADING = 0] = 'LOADING', a[a.INTRO = 1] = 'INTRO', a[a.SETTINGS = 2] = 'SETTINGS';
 let S = e => {
     let {
@@ -119,7 +119,7 @@ let S = e => {
     });
 };
 t.Z = () => {
-    let {guild: e} = (0, l.e7)([E.Z], () => E.Z.getProps()), [t, n] = r.useState(0), [s, a] = r.useState(!1);
+    let {guild: e} = (0, l.e7)([I.Z], () => I.Z.getProps()), [t, n] = r.useState(0), [s, a] = r.useState(!1);
     switch (r.useEffect(() => {
             null != e && c.Z.wait(() => {
                 (0, u.RM)(e.id).then(e => {
@@ -135,7 +135,7 @@ t.Z = () => {
             setShowCreateModal: a
         });
     case 2:
-        return (0, i.jsx)(I.Z, {
+        return (0, i.jsx)(E.Z, {
             guild: e,
             showCreateModal: s
         });

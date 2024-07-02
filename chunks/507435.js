@@ -3,8 +3,8 @@ n.d(t, {
         return A;
     }
 });
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(468194), d = n(481060), u = n(904245), _ = n(596454), E = n(377171), m = n(702346), I = n(809026), T = n(139256), h = n(489887), N = n(689938), f = n(619260);
-function p() {
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(468194), d = n(481060), u = n(904245), _ = n(596454), E = n(377171), m = n(702346), I = n(809026), T = n(139256), h = n(489887), N = n(689938), p = n(619260);
+function f() {
     return (0, s.jsx)('svg', {
         width: '24',
         height: '24',
@@ -25,7 +25,7 @@ function C(e) {
             victorEmoji: i
         } = e;
     if (n)
-        t = (0, s.jsx)(p, {});
+        t = (0, s.jsx)(f, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, s.jsx)(_.Z, {
@@ -35,7 +35,7 @@ function C(e) {
         });
     }
     return null != t ? (0, s.jsx)('div', {
-        className: f.imageContainer,
+        className: p.imageContainer,
         children: t
     }) : null;
 }
@@ -62,18 +62,18 @@ function g(e) {
         t = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)('div', {
-                    className: f.victorAnswer,
+                    className: p.victorAnswer,
                     children: [
                         (0, s.jsx)(d.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-normal',
-                            className: f.victorAnswerText,
+                            className: p.victorAnswerText,
                             scaleFontToUserSetting: !0,
                             children: a
                         }),
                         (0, s.jsx)(T.ZY, {
                             size: 16,
-                            className: f.victorIcon,
+                            className: p.victorIcon,
                             isVictor: !0,
                             isExpired: !0
                         })
@@ -116,7 +116,7 @@ function g(e) {
         });
     }
     return (0, s.jsx)('div', {
-        className: f.description,
+        className: p.description,
         children: t
     });
 }
@@ -139,7 +139,7 @@ function S(e) {
             };
         }(n), [n]);
     return (0, s.jsxs)('div', {
-        className: o()(f.container, t),
+        className: o()(p.container, t),
         children: [
             (0, s.jsx)(C, {
                 hasNoVotes: 'NO_VOTES' === a.type,
@@ -147,7 +147,7 @@ function S(e) {
             }),
             (0, s.jsx)(g, { ...a }),
             null != i && (0, s.jsx)(d.Button, {
-                className: f.button,
+                className: p.button,
                 size: d.Button.Sizes.TINY,
                 onClick: i,
                 color: d.Button.Colors.PRIMARY,
@@ -190,7 +190,7 @@ function A(e) {
                 })
             }),
             (0, s.jsx)(S, {
-                className: f.embed,
+                className: p.embed,
                 data: o,
                 onClickPollLink: a ? void 0 : T
             })

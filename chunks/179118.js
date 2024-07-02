@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return Z;
     }
 }), n(47120);
 var r = n(735250), s = n(470079), a = n(120356), o = n.n(a), i = n(392711), l = n.n(i), c = n(442837), d = n(481060), u = n(37234), p = n(194359), g = n(700582), f = n(479446), C = n(93127), m = n(814443), h = n(590783), _ = n(699516), b = n(246946), x = n(594174), I = n(366695), E = n(572004), L = n(669079), S = n(74538), v = n(51144), T = n(981631), N = n(474936), O = n(689938), j = n(882284);
-function R(e) {
+function Z(e) {
     let {
             giftCode: t,
             application: n,
@@ -16,10 +16,10 @@ function R(e) {
             giftRecipient: f,
             giftMessageError: C,
             isSendingMessage: m
-        } = e, [_, x] = s.useState(d.CopyInput.Modes.DEFAULT), R = (0, c.e7)([b.Z], () => b.Z.enabled), k = p || null != l && null != f, A = () => null != i ? i.skuId : null != a ? a.id : null, P = () => {
+        } = e, [_, x] = s.useState(d.CopyInput.Modes.DEFAULT), Z = (0, c.e7)([b.Z], () => b.Z.enabled), R = p || null != l && null != f, A = () => null != i ? i.skuId : null != a ? a.id : null, P = () => {
             let e;
             let t = null != l && N.V4.includes(l);
-            return null != C ? O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === N.rV.MONTH ? k ? t ? O.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : k ? t ? O.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+            return null != C ? O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === N.rV.MONTH ? R ? t ? O.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : R ? t ? O.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
                 skuName: (0, S.aq)(i.id),
                 intervalCount: i.intervalCount
             });
@@ -55,7 +55,7 @@ function R(e) {
                 children: [
                     (0, r.jsx)(d.FormTitle, { children: O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_PRIVATE_LINK }),
                     null != t && (0, r.jsx)(d.CopyInput, {
-                        hideMessage: R ? O.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
+                        hideMessage: Z ? O.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
                         value: (0, L.Nz)(t),
                         mode: _,
                         text: e,
@@ -103,7 +103,7 @@ function R(e) {
                 }),
                 children: null != f || p && null == C ? O.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != C ? O.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : O.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
             }),
-            p && null != f && null == C || k ? (0, r.jsxs)(r.Fragment, {
+            p && null != f && null == C || R ? (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(g.Z, {
                         user: f,
@@ -133,7 +133,7 @@ function R(e) {
                         className: j.blurb,
                         children: P()
                     }),
-                    null == C && (0, r.jsx)(Z, {
+                    null == C && (0, r.jsx)(k, {
                         giftCode: t,
                         onClose: u
                     }),
@@ -144,7 +144,7 @@ function R(e) {
         ]
     });
 }
-let Z = e => {
+let k = e => {
     let {
         giftCode: t,
         onClose: n
@@ -158,13 +158,13 @@ let Z = e => {
         } = (0, c.cj)([m.Z], () => ({
             userAffinities: m.Z.getUserAffinitiesUserIds(),
             isLoading: m.Z.getFetching()
-        })), S = Array.from(E.values()), T = (0, c.e7)([_.Z], () => _.Z.getFriendIDs()), N = l().difference(T, S), R = [
+        })), S = Array.from(E.values()), T = (0, c.e7)([_.Z], () => _.Z.getFriendIDs()), N = l().difference(T, S), Z = [
             ...S,
             ...N
-        ], Z = (0, c.e7)([x.default], () => x.default.filter(e => R.includes(e.id) && !e.bot), [R]);
-    if (null == Z || 0 === Z.length)
+        ], k = (0, c.e7)([x.default], () => x.default.filter(e => Z.includes(e.id) && !e.bot), [Z]);
+    if (null == k || 0 === k.length)
         return null;
-    let k = l().sortBy(Z, e => R.indexOf(e.id));
+    let R = l().sortBy(k, e => Z.indexOf(e.id));
     return (0, r.jsxs)('div', {
         className: j.giftRecipientSection,
         children: [
@@ -185,7 +185,7 @@ let Z = e => {
                         onChange: e => {
                             o(e), h(!1);
                         },
-                        options: k.map(e => ({
+                        options: R.map(e => ({
                             value: e,
                             label: ''.concat(v.ZP.getUserTag(e))
                         }))

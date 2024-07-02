@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(692547), c = n(481060), d = n(142497), u = n(338327), _ = n(496675), E = n(63063), I = n(981631), T = n(190378), m = n(689938), N = n(653375), S = n(438825), h = n(236140), g = n(37069), C = n(518513), x = n(168179), p = n(348986), R = n(930065), f = n(345669);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(692547), c = n(481060), d = n(142497), u = n(338327), _ = n(496675), I = n(63063), E = n(981631), T = n(190378), m = n(689938), N = n(653375), S = n(438825), h = n(236140), g = n(37069), C = n(518513), x = n(168179), p = n(348986), R = n(930065), f = n(345669);
 let L = () => [
         {
             icon: c.AnalyticsIcon,
@@ -159,7 +159,7 @@ let L = () => [
         });
     };
 t.Z = e => {
-    let {guild: t} = e, [n, i] = a.useState(0), [r, o] = a.useState(0), [g, C] = a.useState(), x = (0, l.e7)([_.Z], () => _.Z.can(I.Plq.ADMINISTRATOR, t)), p = null == g ? void 0 : g.offsetWidth, R = null == g ? void 0 : g.offsetHeight;
+    let {guild: t} = e, [n, i] = a.useState(0), [r, o] = a.useState(0), [g, C] = a.useState(), x = (0, l.e7)([_.Z], () => _.Z.can(E.Plq.ADMINISTRATOR, t)), p = null == g ? void 0 : g.offsetWidth, R = null == g ? void 0 : g.offsetHeight;
     a.useEffect(() => {
         null != p && i(p / 2), null != R && o(R / 2);
     }, [
@@ -208,7 +208,7 @@ t.Z = e => {
                 color: 'header-secondary',
                 variant: 'text-md/normal',
                 className: N.body,
-                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({ helpdeskArticle: E.Z.getArticleURL(I.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
+                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({ helpdeskArticle: I.Z.getArticleURL(E.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
             }),
             (0, s.jsx)(c.Tooltip, {
                 text: x ? null : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
@@ -231,7 +231,7 @@ t.Z = e => {
                 color: 'header-secondary',
                 className: N.body,
                 variant: 'text-sm/normal',
-                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({ helpdeskArticle: E.Z.getArticleURL(I.BhN.GUILD_COMMUNITY_FEATURE) })
+                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({ helpdeskArticle: I.Z.getArticleURL(E.BhN.GUILD_COMMUNITY_FEATURE) })
             }),
             (0, s.jsx)('div', {
                 className: N.features,

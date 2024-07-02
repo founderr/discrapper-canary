@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), l = n(99690), r = n(906732), o = n(336197), c = n(454585), d = n(171368), u = n(695346), _ = n(598077), E = n(594174), m = n(626135), I = n(709054), T = n(591759), h = n(833592), N = n(497089), f = n(178480), p = n(418316), C = n(526146), g = n(400565), S = n(148789), A = n(11825), x = n(981631), O = n(689938), R = n(273270), M = n(756688), v = n(886765);
+var i = n(735250), a = n(470079), s = n(481060), l = n(99690), r = n(906732), o = n(336197), c = n(454585), d = n(171368), u = n(695346), _ = n(598077), E = n(594174), m = n(626135), I = n(709054), T = n(591759), h = n(833592), N = n(497089), p = n(178480), f = n(418316), C = n(526146), g = n(400565), S = n(148789), A = n(11825), x = n(981631), O = n(689938), R = n(273270), M = n(756688), v = n(886765);
 function L(e) {
     var t, n, a;
     let {item: r} = e, o = null === (t = r.message) || void 0 === t ? void 0 : t.content;
@@ -110,7 +110,7 @@ let b = a.memo(function (e) {
                 _
             ]), M = null;
         l.type === N.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user && (M = (0, i.jsx)(S.Z, { userId: l.other_user.id }));
-        let v = null != l.local_id, b = (0, p.Z)(l);
+        let v = null != l.local_id, b = (0, f.Z)(l);
         return (0, i.jsxs)('div', {
             className: R.row,
             children: [
@@ -136,7 +136,7 @@ let b = a.memo(function (e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: E ? 'text-muted' : 'header-secondary',
-                                    children: (0, f.a3)(I.default.extractTimestamp(l.id))
+                                    children: (0, p.a3)(I.default.extractTimestamp(l.id))
                                 }),
                                 M
                             ]

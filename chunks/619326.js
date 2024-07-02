@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(866442), o = n(481060), c = n(393238), d = n(44315), u = n(663993), _ = n(981631), E = n(689938), I = n(404957);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(866442), o = n(481060), c = n(393238), d = n(44315), u = n(663993), _ = n(981631), I = n(689938), E = n(404957);
 let T = (0, u.Un)({
     createPromise: () => n.e('5609').then(n.bind(n, 336231)),
     webpackId: 336231
@@ -34,18 +34,18 @@ function N(e) {
             isDisabled: i
         }), C = (0, o.useRadioItem)({
             isSelected: N,
-            label: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({ colorHex: (0, l.Rf)(_.p6O) })
+            label: I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({ colorHex: (0, l.Rf)(_.p6O) })
         }), x = (0, o.useRadioItem)({
             isSelected: !N,
-            label: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({ colorHex: (0, l.Rf)(t) })
+            label: I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({ colorHex: (0, l.Rf)(t) })
         });
     return (0, s.jsxs)('div', {
-        className: I.buttonsContainer,
-        'aria-label': E.Z.Messages.USER_SETTINGS_PROFILE_COLOR,
+        className: E.buttonsContainer,
+        'aria-label': I.Z.Messages.USER_SETTINGS_PROFILE_COLOR,
         ...g,
         children: [
             (0, s.jsx)('div', {
-                className: r()(I.colorSwatch, { [I.disabled]: i }),
+                className: r()(E.colorSwatch, { [E.disabled]: i }),
                 children: (0, s.jsxs)(o.Clickable, {
                     onClick: i ? void 0 : function () {
                         n(_.p6O);
@@ -54,22 +54,22 @@ function N(e) {
                     ...C,
                     children: [
                         (0, s.jsx)('div', {
-                            className: I.swatch,
+                            className: E.swatch,
                             style: { backgroundColor: (0, l.Rf)(_.p6O) },
                             children: N ? h : null
                         }),
                         (0, s.jsx)(o.Text, {
-                            className: I.swatchDescription,
+                            className: E.swatchDescription,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
-                            children: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
+                            children: I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
                         })
                     ]
                 })
             }),
             (0, s.jsxs)('div', {
-                className: r()(I.colorSwatch, { [I.disabled]: i }),
+                className: r()(E.colorSwatch, { [E.disabled]: i }),
                 children: [
                     (0, s.jsxs)(o.Clickable, {
                         onClick: i ? void 0 : u,
@@ -77,16 +77,16 @@ function N(e) {
                         ...x,
                         children: [
                             (0, s.jsx)('div', {
-                                className: r()(I.customSwatch, { [I.defaultSwatch]: S === _.p6O }),
+                                className: r()(E.customSwatch, { [E.defaultSwatch]: S === _.p6O }),
                                 style: { '--custom-color': (0, l.Rf)(S) },
                                 children: N ? null : h
                             }),
                             (0, s.jsx)(o.Text, {
-                                className: I.swatchDescription,
+                                className: E.swatchDescription,
                                 color: 'header-secondary',
                                 variant: 'text-xs/normal',
                                 'aria-hidden': !0,
-                                children: E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
+                                children: I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
                             })
                         ]
                     }),
@@ -99,11 +99,11 @@ function N(e) {
                         }),
                         children: e => (0, s.jsx)(o.Clickable, {
                             ...e,
-                            className: I.dropperIconButton,
-                            'aria-label': E.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+                            className: E.dropperIconButton,
+                            'aria-label': I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
                             children: (0, s.jsx)(o.EyeDropperIcon, {
                                 size: 'custom',
-                                className: I.dropperIcon,
+                                className: E.dropperIcon,
                                 width: 14,
                                 height: 14,
                                 color: m(S)

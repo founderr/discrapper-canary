@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var s, a, i, r, l = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(920906), _ = n(481060), E = n(119331), I = n(597043), T = n(171042), m = n(402766), N = n(267642), S = n(981631), h = n(689938), g = n(740626);
+var s, a, i, r, l = n(735250), o = n(470079), c = n(120356), d = n.n(c), u = n(920906), _ = n(481060), I = n(119331), E = n(597043), T = n(171042), m = n(402766), N = n(267642), S = n(981631), h = n(689938), g = n(740626);
 let C = {
         tension: 200,
         friction: 20
@@ -19,10 +19,10 @@ function p(e) {
             n(1);
         }, r = () => {
             n(2);
-        }, c = 2 === t, E = 1 === t;
+        }, c = 2 === t, I = 1 === t;
     if (!(!(s >= a) && s / a >= 0.8) || c)
         return null;
-    let I = E || c ? g.hidden : null, m = E ? T.Z.Stages.FLYING : T.Z.Stages.HOVERING;
+    let E = I || c ? g.hidden : null, m = I ? T.Z.Stages.FLYING : T.Z.Stages.HOVERING;
     return (0, l.jsx)(u.Spring, {
         from: { opacity: 0 },
         to: { opacity: 1 },
@@ -37,12 +37,12 @@ function p(e) {
                     onFlyingComplete: r
                 }),
                 (0, l.jsx)('div', {
-                    className: d()(g.tierCloseHint, I),
+                    className: d()(g.tierCloseHint, E),
                     children: h.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_CLOSE_HINT.format({ numLeft: a - s })
                 }),
                 (0, l.jsx)(_.Clickable, {
                     onClick: i,
-                    className: d()(g.tierCloseClose, I),
+                    className: d()(g.tierCloseClose, E),
                     children: (0, l.jsx)(_.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
@@ -63,8 +63,8 @@ function R(e) {
             showHeaderLockStatus: r,
             headerButton: c = null,
             subscriptionsRequired: _,
-            subscriptionCount: E,
-            className: I
+            subscriptionCount: I,
+            className: E
         } = e, T = e => {
             null == a || a(e);
         }, [N, S] = o.useState(0);
@@ -79,7 +79,7 @@ function R(e) {
                 [g.tierHeaderWithoutCardBody]: !t,
                 [g.tierHeaderUnlocked]: s,
                 [g.tierHeaderLocked]: !s
-            }, I),
+            }, E),
             ref: T,
             children: (0, l.jsxs)('div', {
                 className: g.tierHeaderContent,
@@ -99,7 +99,7 @@ function R(e) {
                         hasAnimatedUnlocked: s
                     }) : null,
                     (0, l.jsx)(p, {
-                        numUnlocked: E,
+                        numUnlocked: I,
                         numRequired: _
                     })
                 ]
@@ -123,11 +123,11 @@ function f(e) {
             let {
                 icon: n,
                 className: s
-            } = (0, E.t)(e.icon, t);
+            } = (0, I.t)(e.icon, t);
             return (0, l.jsxs)('div', {
                 className: g.perk,
                 children: [
-                    (0, l.jsx)(I.Z, {
+                    (0, l.jsx)(E.Z, {
                         name: String(e.icon),
                         icon: n,
                         className: g.perkIcon,

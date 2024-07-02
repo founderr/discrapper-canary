@@ -6,11 +6,11 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(852860), d = n(977258), u = n(45966), _ = n(473403), E = n(454585), I = n(323502), T = n(958832), m = n(324067), N = n(984933), S = n(514342), h = n(259580), g = n(999382), C = n(743475), x = n(889369), p = n(570961), R = n(208665), f = n(868814), L = n(974513), O = n(2348), A = n(353890), M = n(716130), v = n(689938), D = n(796118);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(852860), d = n(977258), u = n(45966), _ = n(473403), I = n(454585), E = n(323502), T = n(958832), m = n(324067), N = n(984933), S = n(514342), h = n(259580), g = n(999382), C = n(743475), x = n(889369), p = n(570961), R = n(208665), f = n(868814), L = n(974513), O = n(2348), A = n(353890), M = n(716130), D = n(689938), v = n(796118);
 function j(e) {
     let {guild: t} = e, i = (0, l.e7)([u.Z], () => u.Z.getEnabled(t.id)), r = (0, l.e7)([T.Z], () => T.Z.hasFetched(t.id)), c = (0, f.Z)(t), m = (0, l.e7)([x.Z], () => x.Z.editedDefaultChannelIds), N = c.filter(e => !m.has(e.id)), [h, g] = a.useState(!1);
     a.useEffect(() => {
-        !r && !i && (0, I.S)(t.id);
+        !r && !i && (0, E.S)(t.id);
     }, [
         t.id,
         r,
@@ -27,61 +27,61 @@ function j(e) {
         });
     };
     return h || 0 === N.length ? null : (0, s.jsxs)('div', {
-        className: D.recommendations,
+        className: v.recommendations,
         children: [
             (0, s.jsx)(o.Text, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
-                children: v.Z.Messages.CHANNEL_RECOMMENDED
+                children: D.Z.Messages.CHANNEL_RECOMMENDED
             }),
             (0, s.jsxs)('div', {
-                className: D.recsSubheader,
+                className: v.recsSubheader,
                 children: [
                     (0, s.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: v.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RECOMMENDED_DESCRIPTION
+                        children: D.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RECOMMENDED_DESCRIPTION
                     }),
                     (0, s.jsxs)(o.Clickable, {
-                        className: D.dismissAll,
+                        className: v.dismissAll,
                         onClick: () => g(!0),
                         children: [
                             (0, s.jsx)(o.CheckmarkLargeIcon, {
                                 size: 'xxs',
                                 color: 'currentColor',
-                                className: D.checkmark
+                                className: v.checkmark
                             }),
                             (0, s.jsx)(o.Text, {
-                                className: D.dismissAllText,
+                                className: v.dismissAllText,
                                 variant: 'text-xs/medium',
                                 color: 'text-brand',
-                                children: v.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RECOMMENDED_DISMISS_ALL
+                                children: D.Z.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RECOMMENDED_DISMISS_ALL
                             })
                         ]
                     })
                 ]
             }),
             (0, s.jsx)('div', {
-                className: D.recommendedChannels,
+                className: v.recommendedChannels,
                 children: N.map((e, n) => (0, s.jsxs)(s.Fragment, {
                     children: [
                         (0, s.jsxs)('div', {
-                            className: D.channelRow,
+                            className: v.channelRow,
                             children: [
                                 (0, s.jsxs)('div', {
-                                    className: D.channelInfo,
+                                    className: v.channelInfo,
                                     children: [
                                         (0, s.jsxs)('div', {
-                                            className: D.channelName,
+                                            className: v.channelName,
                                             children: [
                                                 (0, s.jsx)(_._, {
                                                     channel: e,
                                                     guild: t
                                                 }),
                                                 (0, s.jsx)(S.Z, {
-                                                    className: D.__invalid_name,
+                                                    className: v.__invalid_name,
                                                     children: (0, s.jsx)(o.Text, {
-                                                        className: D.__invalid_channelText,
+                                                        className: v.__invalid_channelText,
                                                         variant: 'text-md/medium',
                                                         lineClamp: 1,
                                                         color: 'text-normal',
@@ -92,9 +92,9 @@ function j(e) {
                                         }),
                                         null != e.topic && e.topic.length > 0 ? (0, s.jsx)(S.Z, {
                                             children: (0, s.jsx)(o.Text, {
-                                                className: D.topic,
+                                                className: v.topic,
                                                 variant: 'text-xs/normal',
-                                                children: E.Z.parseTopic(e.topic, !0, { channelId: e.id })
+                                                children: I.Z.parseTopic(e.topic, !0, { channelId: e.id })
                                             })
                                         }, 'topic') : null
                                     ]
@@ -102,14 +102,14 @@ function j(e) {
                                 (0, d.s)(t.id, e.id) ? (0, s.jsx)(o.Button, {
                                     color: o.Button.Colors.BRAND,
                                     size: o.Button.Sizes.SMALL,
-                                    className: D.addChannelCTA,
+                                    className: v.addChannelCTA,
                                     onClick: () => (0, C.pt)(e.id),
-                                    children: v.Z.Messages.ADD
+                                    children: D.Z.Messages.ADD
                                 }) : (0, s.jsxs)(o.Button, {
                                     look: o.Button.Looks.OUTLINED,
                                     color: o.Button.Colors.PRIMARY,
-                                    className: D.lockedPill,
-                                    innerClassName: D.lockedPillInner,
+                                    className: v.lockedPill,
+                                    innerClassName: v.lockedPillInner,
                                     onClick: () => p(e.id),
                                     children: [
                                         (0, s.jsx)(o.LockIcon, {
@@ -118,24 +118,24 @@ function j(e) {
                                         }),
                                         (0, s.jsx)(o.Text, {
                                             variant: 'text-sm/medium',
-                                            children: v.Z.Messages.UNLOCK
+                                            children: D.Z.Messages.UNLOCK
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        n < N.length - 1 ? (0, s.jsx)('div', { className: D.separator }) : null
+                        n < N.length - 1 ? (0, s.jsx)('div', { className: v.separator }) : null
                     ]
                 }))
             }),
-            (0, s.jsx)('div', { className: D.largeSeparator })
+            (0, s.jsx)('div', { className: v.largeSeparator })
         ]
     });
 }
 function Z(e) {
     let {
             saveOnClose: t = !1
-        } = e, n = (0, l.e7)([g.Z], () => g.Z.getGuild()), i = (0, l.e7)([u.Z], () => u.Z.isLoading()), c = (0, l.e7)([N.ZP], () => N.ZP.getChannels(null == n ? void 0 : n.id)), d = (0, l.e7)([m.Z], () => m.Z.getCategories(null == n ? void 0 : n.id)), _ = (0, l.e7)([R.Z], () => R.Z.advancedMode), E = a.useRef(null), [I, T] = a.useState(!1);
+        } = e, n = (0, l.e7)([g.Z], () => g.Z.getGuild()), i = (0, l.e7)([u.Z], () => u.Z.isLoading()), c = (0, l.e7)([N.ZP], () => N.ZP.getChannels(null == n ? void 0 : n.id)), d = (0, l.e7)([m.Z], () => m.Z.getCategories(null == n ? void 0 : n.id)), _ = (0, l.e7)([R.Z], () => R.Z.advancedMode), I = a.useRef(null), [E, T] = a.useState(!1);
     return (a.useEffect(() => {
         if (t)
             return () => {
@@ -149,39 +149,39 @@ function Z(e) {
         t,
         _
     ]), null == n) ? null : i ? (0, s.jsx)(o.Spinner, {}) : (0, s.jsxs)('div', {
-        className: D.columns,
+        className: v.columns,
         children: [
             (0, s.jsxs)('div', {
-                className: D.channelBrowser,
+                className: v.channelBrowser,
                 children: [
                     (0, s.jsx)(o.Clickable, {
-                        className: D.collapseButton,
+                        className: v.collapseButton,
                         onClick: () => T(e => !e),
                         children: (0, s.jsx)(h.Z, {
-                            direction: I ? h.Z.Directions.DOWN : h.Z.Directions.UP,
+                            direction: E ? h.Z.Directions.DOWN : h.Z.Directions.UP,
                             height: 16,
                             width: 16
                         })
                     }),
                     (0, s.jsx)(o.Heading, {
-                        className: D.header,
+                        className: v.header,
                         variant: 'heading-lg/extrabold',
-                        children: v.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS
+                        children: D.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS
                     }),
                     (0, s.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: v.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_SUBHEADER
+                        children: D.Z.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_SUBHEADER
                     }),
                     (0, s.jsx)(L.Wu, {
-                        className: D.advancedModeToggle,
+                        className: v.advancedModeToggle,
                         guildId: n.id
                     }),
-                    I ? null : (0, s.jsxs)(s.Fragment, {
+                    E ? null : (0, s.jsxs)(s.Fragment, {
                         children: [
                             (0, s.jsx)(j, { guild: n }),
                             (0, s.jsx)(O.Z, {
-                                className: r()(D.channelBrowserOuter),
+                                className: r()(v.channelBrowserOuter),
                                 guild: n,
                                 categories: d,
                                 channels: c,
@@ -191,21 +191,21 @@ function Z(e) {
                     }),
                     _ && (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)('div', { className: D.largeSeparator }),
+                            (0, s.jsx)('div', { className: v.largeSeparator }),
                             (0, s.jsx)(o.Heading, {
-                                className: D.prejoinHeader,
+                                className: v.prejoinHeader,
                                 variant: 'heading-lg/extrabold',
-                                children: v.Z.Messages.GUILD_SETTINGS_PRE_JOIN_QUESTIONS_HEADER
+                                children: D.Z.Messages.GUILD_SETTINGS_PRE_JOIN_QUESTIONS_HEADER
                             }),
                             (0, s.jsx)(o.Text, {
-                                className: D.prejoinSubHeader,
+                                className: v.prejoinSubHeader,
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: v.Z.Messages.GUILD_SETTINGS_PRE_JOIN_QUESTIONS_SUBHEADER
+                                children: D.Z.Messages.GUILD_SETTINGS_PRE_JOIN_QUESTIONS_SUBHEADER
                             }),
                             (0, s.jsx)('div', {
-                                ref: E,
-                                className: D.advancedModeQuestions,
+                                ref: I,
+                                className: v.advancedModeQuestions,
                                 children: (0, s.jsx)(M.Z, {
                                     guildId: n.id,
                                     prejoinOnly: !0,
@@ -220,7 +220,7 @@ function Z(e) {
             (0, s.jsx)(A.Z, {
                 guild: n,
                 scrollToQuestions: () => {
-                    null != E.current && E.current.scrollIntoView({ behavior: 'smooth' });
+                    null != I.current && I.current.scrollIntoView({ behavior: 'smooth' });
                 }
             })
         ]
@@ -238,6 +238,6 @@ function b() {
         },
         onReset: C.BG,
         submitting: t,
-        onSaveText: v.Z.Messages.SAVE
+        onSaveText: D.Z.Messages.SAVE
     });
 }

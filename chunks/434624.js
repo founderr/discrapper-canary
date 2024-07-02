@@ -12,15 +12,15 @@ let T = a.memo(function (e) {
                 className: T,
                 count: h,
                 me: N,
-                me_burst: f,
-                burst_count: p,
+                me_burst: p,
+                burst_count: f,
                 burst_colors: C,
                 readOnly: g,
                 isLurking: S,
                 isGuest: A,
                 isPendingMember: x,
                 type: O
-            } = e, R = O === _.O.BURST, M = (0, E.y4)(N, f, O), v = (0, d.v)(R && null != C ? C : []), L = a ? I : m, Z = R ? p : h, P = (0, u.y)(Z, E.aO), b = {};
+            } = e, R = O === _.O.BURST, M = (0, E.y4)(N, p, O), v = (0, d.v)(R && null != C ? C : []), L = a ? I : m, Z = R ? f : h, P = (0, u.y)(Z, E.aO), b = {};
         if (R && null != v) {
             var D;
             let {

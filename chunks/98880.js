@@ -12,7 +12,7 @@ t.d(n, {
         return j;
     }
 }), t(411104);
-var i, l, a = t(735250), r = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(542094), d = t(778569), m = t(182906), p = t(367907), _ = t(220082), E = t(318661), A = t(792125), N = t(541099), h = t(783097), C = t(695676), f = t(176412), I = t(753972), x = t(981631), P = t(231338), v = t(689938), g = t(126152);
+var i, l, a = t(735250), r = t(470079), s = t(120356), o = t.n(s), c = t(481060), u = t(542094), d = t(778569), m = t(182906), p = t(367907), _ = t(220082), E = t(318661), A = t(792125), N = t(541099), h = t(783097), C = t(695676), f = t(176412), I = t(753972), x = t(981631), v = t(231338), P = t(689938), g = t(126152);
 function T(e) {
     let {
             application: n,
@@ -29,7 +29,7 @@ function T(e) {
     return 'icon' === t ? (0, a.jsx)(c.Clickable, {
         className: o()(g.container, g.iconCard),
         onClick: l,
-        'aria-label': v.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+        'aria-label': P.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: m,
             applicationDescription: p
         }),
@@ -41,7 +41,7 @@ function T(e) {
     }) : (0, a.jsxs)(c.Clickable, {
         className: g.container,
         onClick: l,
-        'aria-label': v.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
+        'aria-label': P.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
             applicationName: m,
             applicationDescription: p
         }),
@@ -62,10 +62,10 @@ function T(e) {
                     i && (0, a.jsx)('div', {
                         className: g.partnerLabelWrapper,
                         children: (0, a.jsx)(c.Text, {
-                            className: (0, A.Q)(P.BR.DARK),
+                            className: (0, A.Q)(v.BR.DARK),
                             variant: 'text-sm/medium',
                             color: 'text-normal',
-                            children: v.Z.Messages.APP_DIRECTORY_PARTNER
+                            children: P.Z.Messages.APP_DIRECTORY_PARTNER
                         })
                     }),
                     'large_banner' === t || 'medium_banner' === t ? (0, a.jsx)('div', {

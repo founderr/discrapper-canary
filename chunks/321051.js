@@ -3,7 +3,7 @@ s.d(n, {
         return m;
     }
 }), s(47120);
-var l = s(735250), i = s(470079), t = s(692547), r = s(481060), a = s(697426), c = s(603074), o = s(689938), u = s(290934);
+var l = s(735250), t = s(470079), i = s(692547), r = s(481060), a = s(697426), c = s(603074), o = s(689938), u = s(290934);
 let d = [
     54,
     8,
@@ -14,11 +14,11 @@ function _(e) {
     let {
             onSelect: n,
             sound: s
-        } = e, [_, m] = i.useState(!1);
-    function I(e) {
+        } = e, [_, m] = t.useState(!1);
+    function E(e) {
         m(!1), null == n || n(e);
     }
-    let E = e => (0, l.jsxs)('div', {
+    let I = e => (0, l.jsxs)('div', {
         className: u.customGiftHeader,
         children: [
             (0, l.jsxs)('div', {
@@ -54,11 +54,11 @@ function _(e) {
                     guildId: null,
                     channel: null,
                     onClose: n,
-                    onSelect: I,
+                    onSelect: E,
                     analyticsSource: 'gift soundboard',
                     soundButtonOverlay: a.Pb.ADD,
                     listPadding: d,
-                    renderHeader: E,
+                    renderHeader: I,
                     defaultSoundsOnly: !0
                 })
             });
@@ -70,7 +70,7 @@ function _(e) {
                 children: [
                     (0, l.jsx)(r.SoundboardIcon, {
                         size: 'custom',
-                        color: t.Z.colors.WHITE,
+                        color: i.Z.colors.WHITE,
                         className: u.soundIcon,
                         width: 14,
                         height: 14

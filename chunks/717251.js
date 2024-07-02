@@ -15,22 +15,22 @@ function c(e) {
         selected: d = !1,
         subsection: u = null,
         onClick: _,
-        className: E,
-        disabled: I
+        className: I,
+        disabled: E
     } = e;
     return (0, s.jsxs)('div', {
-        className: i()(o.container, E),
+        className: i()(o.container, I),
         children: [
             (0, s.jsx)(r.Clickable, {
                 className: i()(o.clickableContainer, {
                     [o.noAction]: null == _,
-                    [o.disabled]: I
-                }, E),
-                onClick: I ? void 0 : _,
+                    [o.disabled]: E
+                }, I),
+                onClick: E ? void 0 : _,
                 children: (0, s.jsxs)('div', {
                     className: i()(o.backgroundModifierContainer, o[c], {
                         [o.selected]: d,
-                        [o.disabled]: I,
+                        [o.disabled]: E,
                         [o.noAction]: null == _
                     }),
                     children: [

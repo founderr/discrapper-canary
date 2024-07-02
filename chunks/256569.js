@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(47120), n(177593);
 var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(347469), c = n(853276), d = n(596390), u = n(870472), _ = n(340063);
-function E(e) {
+function I(e) {
     let {
             resizableNode: t,
             onResize: n,
@@ -22,13 +22,13 @@ function E(e) {
         className: _.resizeHandle
     });
 }
-let I = a.forwardRef(function (e, t) {
+let E = a.forwardRef(function (e, t) {
     let {
             children: n,
             onFocus: i,
             onBlur: r,
             onClick: o
-        } = e, c = a.useRef(null), [u, I] = a.useState(d.tq);
+        } = e, c = a.useRef(null), [u, E] = a.useState(d.tq);
     return (0, s.jsxs)(l.Clickable, {
         className: _.textArea,
         onFocus: i,
@@ -44,11 +44,11 @@ let I = a.forwardRef(function (e, t) {
                 ref: t,
                 children: n
             }),
-            (0, s.jsx)(E, {
+            (0, s.jsx)(I, {
                 resizableNode: c,
-                onResize: I,
+                onResize: E,
                 onResizeEnd: e => {
-                    I(e), null == i || i();
+                    E(e), null == i || i();
                 }
             })
         ]
@@ -61,7 +61,7 @@ function T(e) {
             onChangeTags: i,
             onChangeNewTagValue: o,
             tagErrors: d = {},
-            placeholder: E,
+            placeholder: I,
             className: T,
             maxTags: m
         } = e, N = a.useRef(null), S = a.useRef(null), h = a.useRef(null), g = (0, u.V)(n), {
@@ -74,14 +74,14 @@ function T(e) {
             handleSelectTag: O,
             handleUnselectTag: A,
             handleResetTagSelections: M,
-            handleInputBlurEvent: v
+            handleInputBlurEvent: D
         } = (0, u.Q)(g, {
             scrollerRef: h,
             mainInputRef: N,
             mainContainerRef: S
         }), {
             state: {
-                value: D,
+                value: v,
                 tags: j,
                 selections: Z,
                 isSelecting: b
@@ -99,10 +99,10 @@ function T(e) {
         U
     ]), a.useEffect(() => {
         if (!U)
-            o(D);
+            o(v);
     }, [
         o,
-        D,
+        v,
         U
     ]);
     let B = a.useCallback(function () {
@@ -133,7 +133,7 @@ function T(e) {
         tabIndex: 0,
         onKeyUp: R,
         children: [
-            (0, s.jsxs)(I, {
+            (0, s.jsxs)(E, {
                 ref: h,
                 onClick: P,
                 children: [
@@ -154,9 +154,9 @@ function T(e) {
                         onChange: x,
                         onKeyDownCapture: p,
                         onPaste: C,
-                        onBlur: v,
-                        placeholder: 0 === j.length ? E : void 0,
-                        value: D
+                        onBlur: D,
+                        placeholder: 0 === j.length ? I : void 0,
+                        value: v
                     })
                 ]
             }),

@@ -10,11 +10,11 @@ function d(e) {
             rule: n,
             onChangeRule: d,
             collapsed: u = !1
-        } = e, [_, E] = a.useState(!u), I = a.useCallback(() => {
-            E(!_);
+        } = e, [_, I] = a.useState(!u), E = a.useCallback(() => {
+            I(!_);
         }, [
             _,
-            E
+            I
         ]), T = a.useCallback(e => {
             d({
                 ...n,
@@ -40,7 +40,7 @@ function d(e) {
             let {onClick: t} = e;
             return (0, s.jsx)(i.Clickable, {
                 onClick: e => {
-                    I(), t(e);
+                    E(), t(e);
                 },
                 children: (0, s.jsxs)('div', {
                     className: c.header,

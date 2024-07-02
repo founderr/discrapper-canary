@@ -5,8 +5,8 @@ t.Z = function (e) {
             items: t,
             carouselClassName: n,
             paginationCaretClassName: i,
-            intervalBetweenAutomaticItemRotations: E,
-            renderItem: I
+            intervalBetweenAutomaticItemRotations: I,
+            renderItem: E
         } = e, T = a.useMemo(() => new l.Xp(), []), [m, N] = a.useState(d.n.LEFT), [S, h] = a.useState(0), [g, C] = a.useState(!1), [x, p] = a.useState(!1), R = a.useCallback((e, t) => {
             h(n => {
                 let s = n + t;
@@ -28,11 +28,11 @@ t.Z = function (e) {
             x
         ]);
     return a.useEffect(() => {
-        null != E && (g ? g && T.stop() : T.start(E, f));
+        null != I && (g ? g && T.stop() : T.start(I, f));
     }, [
         g,
         T,
-        E,
+        I,
         f
     ]), (0, s.jsxs)('div', {
         className: _.root,
@@ -57,7 +57,7 @@ t.Z = function (e) {
                 onAnimationStart: () => p(!0),
                 onAnimationEnd: () => p(!1),
                 className: r()(_.carousel, n),
-                children: I(t[S])
+                children: E(t[S])
             }),
             (0, s.jsx)(o.Clickable, {
                 className: r()(_.carouselCaret, i),

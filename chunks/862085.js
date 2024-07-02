@@ -17,15 +17,15 @@ function o(e) {
         return null;
     let {
         headerText: _,
-        descriptionText: E,
-        icon: I
+        descriptionText: I,
+        icon: E
     } = u;
     return (0, s.jsxs)('div', {
         className: l.actionContainer,
         children: [
             (0, s.jsx)('div', {
                 className: l.actionIconContainer,
-                children: (0, s.jsx)(I, {
+                children: (0, s.jsx)(E, {
                     size: 'custom',
                     color: 'currentColor',
                     className: l.actionIcon
@@ -41,7 +41,7 @@ function o(e) {
                     (0, s.jsx)(a.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: E
+                        children: I
                     }),
                     o ? (0, s.jsxs)(a.Text, {
                         color: 'text-muted',

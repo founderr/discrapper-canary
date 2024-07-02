@@ -1,12 +1,12 @@
 var s = n(735250);
 n(470079);
-var a = n(442837), i = n(481060), r = n(100527), l = n(906732), o = n(623624), c = n(372444), d = n(852679), u = n(926491), _ = n(145499), E = n(424218), I = n(267642), T = n(63063), m = n(999382), N = n(981631), S = n(611480), h = n(689938), g = n(254221);
+var a = n(442837), i = n(481060), r = n(100527), l = n(906732), o = n(623624), c = n(372444), d = n(852679), u = n(926491), _ = n(145499), I = n(424218), E = n(267642), T = n(63063), m = n(999382), N = n(981631), S = n(611480), h = n(689938), g = n(254221);
 let C = {
         page: N.ZY5.GUILD_SETTINGS,
         section: N.jXE.GUILD_SETTINGS_STICKERS,
         object: N.qAy.BOOSTING_BANNER
     }, x = e => {
-        let {guild: t} = e, {analyticsLocations: n} = (0, l.ZP)(), a = (0, I.vn)(t.id)[N.Eu4.TIER_1] - t.premiumSubscriberCount;
+        let {guild: t} = e, {analyticsLocations: n} = (0, l.ZP)(), a = (0, E.vn)(t.id)[N.Eu4.TIER_1] - t.premiumSubscriberCount;
         return (0, s.jsxs)('div', {
             className: g.upsellContainer,
             children: [
@@ -53,7 +53,7 @@ let C = {
         children: [
             (0, s.jsx)(i.FormText, {
                 type: i.FormTextTypes.DESCRIPTION,
-                children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({ fileSize: (0, E.IC)(S.Ht, { useKibibytes: !0 }) })
+                children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({ fileSize: (0, I.IC)(S.Ht, { useKibibytes: !0 }) })
             }),
             (0, s.jsx)(i.FormText, {
                 type: i.FormTextTypes.DESCRIPTION,
@@ -64,10 +64,10 @@ let C = {
         let t, n, a, {
                 guild: i,
                 guildStickers: r
-            } = e, l = i.premiumTier, o = (0, I.Qi)(r, l), d = (0, I.FZ)(l, i.id), u = (0, I.A3)(l), _ = r.length;
+            } = e, l = i.premiumTier, o = (0, E.Qi)(r, l), d = (0, E.FZ)(l, i.id), u = (0, E.A3)(l), _ = r.length;
         return null == d || l === N.Eu4.TIER_3 || o > 0 ? (0, s.jsx)(s.Fragment, {}) : (_ > u ? (t = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({ level: d }), n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({ level: d }), a = N.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL) : (t = h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER, n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
             level: d,
-            numAdditional: (0, I.ig)(d)
+            numAdditional: (0, E.ig)(d)
         }), a = N.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL), (0, s.jsx)(c.Z, {
             header: t,
             text: n,
@@ -76,7 +76,7 @@ let C = {
                 page: N.ZY5.GUILD_SETTINGS,
                 section: N.jXE.GUILD_SETTINGS_STICKERS,
                 object: a,
-                objectType: (0, I.ge)(d)
+                objectType: (0, E.ge)(d)
             }
         }));
     };

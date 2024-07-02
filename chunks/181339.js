@@ -6,14 +6,14 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(106351), o = n(442837), c = n(481060), d = n(367907), u = n(933557), _ = n(369994), E = n(162157), I = n(177862), T = n(11265), m = n(592125), N = n(984933), S = n(496675), h = n(699516), g = n(594174), C = n(434404), x = n(449226), p = n(981631), R = n(689938), f = n(941377);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(106351), o = n(442837), c = n(481060), d = n(367907), u = n(933557), _ = n(369994), I = n(162157), E = n(177862), T = n(11265), m = n(592125), N = n(984933), S = n(496675), h = n(699516), g = n(594174), C = n(434404), x = n(449226), p = n(981631), R = n(689938), f = n(941377);
 function L(e) {
     let {
             guild: t,
             isExpanded: n,
             selectedChannelId: i,
             className: l
-        } = e, T = (0, E.BT)(t), N = t.canHaveRaidActivityAlerts(), [S, h] = a.useState(N), g = (0, o.e7)([m.Z], () => m.Z.getChannel(i), [i]), C = (0, u.ZP)(g), L = async () => {
+        } = e, T = (0, I.BT)(t), N = t.canHaveRaidActivityAlerts(), [S, h] = a.useState(N), g = (0, o.e7)([m.Z], () => m.Z.getChannel(i), [i]), C = (0, u.ZP)(g), L = async () => {
             h(!S);
             try {
                 var e;
@@ -21,7 +21,7 @@ function L(e) {
                 let n = null !== (e = null != i ? i : t.safetyAlertsChannelId) && void 0 !== e ? e : null;
                 if (null != n) {
                     let e = {
-                        raid_alert_type: I.wR.JOIN_RAID,
+                        raid_alert_type: E.wR.JOIN_RAID,
                         enabled: !N,
                         raid_alert_channel_id: n,
                         guild_id: t.id,
@@ -79,7 +79,7 @@ function O(e) {
             selectedChannelId: a,
             setSelectedChannelId: i,
             className: _
-        } = e, E = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, T = (0, o.Wu)([
+        } = e, I = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, T = (0, o.Wu)([
             N.ZP,
             g.default,
             h.Z,
@@ -95,16 +95,16 @@ function O(e) {
                     label: (0, u.F6)(t, g.default, h.Z, !0)
                 };
             });
-            return null != E ? e : [...e];
+            return null != I ? e : [...e];
         }, [
             n.id,
-            E
+            I
         ]), m = async e => {
             i(e);
             try {
-                if (e !== E && (await C.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), C.Z.updateGuild({ safetyAlertsChannelId: e })), null != e) {
+                if (e !== I && (await C.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), C.Z.updateGuild({ safetyAlertsChannelId: e })), null != e) {
                     let t = {
-                        raid_alert_type: I.wR.JOIN_RAID,
+                        raid_alert_type: E.wR.JOIN_RAID,
                         enabled: n.canHaveRaidActivityAlerts(),
                         raid_alert_channel_id: e,
                         guild_id: n.id,
@@ -113,7 +113,7 @@ function O(e) {
                     (0, d.yw)(p.rMx.GUILD_RAID_ALERTS_SETUP, t);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(R.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE)), i(E);
+                (0, c.showToast)((0, c.createToast)(R.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE)), i(I);
             }
         };
     return (0, s.jsx)('div', {

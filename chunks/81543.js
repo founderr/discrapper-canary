@@ -10,7 +10,7 @@ let _ = {
     tension: 40,
     overshootClamping: !0
 };
-class E extends r.PureComponent {
+class I extends r.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null === (t = (n = this.props).onAnimationStart) || void 0 === t || t.call(n), this._animated.setValue(-this.props.direction), c.Z.spring(this._animated, {
@@ -75,7 +75,7 @@ t.Z = e => {
     return (0, i.jsx)(d.W, {
         component: 'div',
         className: o()(u.animator, a),
-        children: (0, i.jsx)(E, {
+        children: (0, i.jsx)(I, {
             direction: s,
             onAnimationStart: r,
             onAnimationEnd: l,

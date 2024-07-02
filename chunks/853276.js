@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     }
 }), n(47120);
 var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(393238), d = n(607070), u = n(596390), _ = n(736954);
-let E = a.forwardRef(function (e, t) {
+let I = a.forwardRef(function (e, t) {
     var n, i;
     let {
             value: l,
             isSelected: c,
             isEditing: d,
             forceShowErrorTooltip: u = !1,
-            error: E
-        } = e, [I, T, m] = a.useMemo(() => {
-            if (null == E)
+            error: I
+        } = e, [E, T, m] = a.useMemo(() => {
+            if (null == I)
                 return [];
             let {
                     erroringCharacterOffset: e = 0,
                     erroringCharacterLength: t = l.length
-                } = null != E ? E : {}, n = l.slice(0, e), s = l.slice(e, e + t);
+                } = null != I ? I : {}, n = l.slice(0, e), s = l.slice(e, e + t);
             return [
                 n,
                 s,
@@ -26,21 +26,21 @@ let E = a.forwardRef(function (e, t) {
             ];
         }, [
             l,
-            E
+            I
         ]);
-    return null == E ? (0, s.jsx)('div', {
+    return null == I ? (0, s.jsx)('div', {
         className: r()(_.chipletValue, {
             [_.isEditing]: d,
             [_.isSelected]: c
         }),
         ref: t,
         children: l
-    }) : (null !== (n = null == I ? void 0 : I.length) && void 0 !== n ? n : 0) + (null !== (i = null == T ? void 0 : T.length) && void 0 !== i ? i : 0) > 70 ? (0, s.jsx)(o.Tooltip, {
-        'aria-label': E.message,
+    }) : (null !== (n = null == E ? void 0 : E.length) && void 0 !== n ? n : 0) + (null !== (i = null == T ? void 0 : T.length) && void 0 !== i ? i : 0) > 70 ? (0, s.jsx)(o.Tooltip, {
+        'aria-label': I.message,
         text: () => (0, s.jsxs)('div', {
-            'aria-label': E.message,
+            'aria-label': I.message,
             children: [
-                E.message,
+                I.message,
                 ' ',
                 (0, s.jsx)('span', {
                     className: _.errorOverflowValue,
@@ -56,12 +56,12 @@ let E = a.forwardRef(function (e, t) {
             ref: t,
             className: r()(_.chipletValue, {
                 [_.isEditing]: d,
-                [_.isError]: null != E && !d,
-                [_.isOverflowing]: null != E && !d
+                [_.isError]: null != I && !d,
+                [_.isOverflowing]: null != I && !d
             }),
             ...e,
             children: [
-                (0, s.jsx)('span', { children: I }),
+                (0, s.jsx)('span', { children: E }),
                 (0, s.jsx)('span', {
                     className: _.errorValue,
                     children: T
@@ -73,12 +73,12 @@ let E = a.forwardRef(function (e, t) {
         ref: t,
         className: r()(_.chipletValue, {
             [_.isEditing]: d,
-            [_.isError]: null != E && !d
+            [_.isError]: null != I && !d
         }),
         children: [
-            (0, s.jsx)('span', { children: I }),
+            (0, s.jsx)('span', { children: E }),
             (0, s.jsx)(o.Tooltip, {
-                text: E.message,
+                text: I.message,
                 color: o.Tooltip.Colors.RED,
                 position: 'top',
                 forceOpen: u || void 0,
@@ -92,12 +92,12 @@ let E = a.forwardRef(function (e, t) {
         ]
     });
 });
-function I(e) {
+function E(e) {
     let {
             value: t,
             onChange: n,
             onBlur: i,
-            onFocus: I,
+            onFocus: E,
             onRemove: T,
             isSelected: m,
             isSelecting: N,
@@ -109,13 +109,13 @@ function I(e) {
         } = (0, c.Z)(x), {
             ref: L,
             width: O = 0
-        } = (0, c.Z)(x), A = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), [M, v] = a.useState(h), D = a.useRef(null), j = f > O ? f : O;
+        } = (0, c.Z)(x), A = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), [M, D] = a.useState(h), v = a.useRef(null), j = f > O ? f : O;
     a.useEffect(() => {
-        h ? (v(!0), D.current = setTimeout(() => {
-            v(!1), D.current = null;
-        }, u.I5)) : v(!1);
+        h ? (D(!0), v.current = setTimeout(() => {
+            D(!1), v.current = null;
+        }, u.I5)) : D(!1);
     }, [h]), a.useEffect(() => () => {
-        clearTimeout(D.current);
+        clearTimeout(v.current);
     }, []);
     let Z = a.useCallback(e => {
             n(e.target.value);
@@ -139,8 +139,8 @@ function I(e) {
             t
         ]), G = a.useCallback(e => {
             let t = e.metaKey || e.ctrlKey;
-            I(t), t ? e.preventDefault() : p(!0), e.stopPropagation();
-        }, [I]), P = a.useCallback(e => {
+            E(t), t ? e.preventDefault() : p(!0), e.stopPropagation();
+        }, [E]), P = a.useCallback(e => {
             T();
         }, [T]);
     return (0, s.jsx)('div', {
@@ -160,8 +160,8 @@ function I(e) {
                     onBlur: () => b(!1),
                     onClick: G,
                     ignoreKeyPress: !0,
-                    onMouseEnter: () => v(!0),
-                    onMouseLeave: () => v(!1),
+                    onMouseEnter: () => D(!0),
+                    onMouseLeave: () => D(!1),
                     className: r()(_.chipletContainerInner, {
                         [_.isSelecting]: N,
                         [_.isEditing]: x
@@ -179,7 +179,7 @@ function I(e) {
                             value: t,
                             style: { width: j > 0 ? j : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),
-                        (0, s.jsx)(E, {
+                        (0, s.jsx)(I, {
                             ref: R,
                             value: t,
                             isEditing: x,

@@ -5,7 +5,7 @@ n.d(t, {
 }), n(47120);
 var s = n(735250);
 n(470079);
-var a = n(481060), i = n(723047), r = n(727843), l = n(290348), o = n(783454), c = n(893729), d = n(619326), u = n(553204), _ = n(689938), E = n(552052), I = n(615202);
+var a = n(481060), i = n(723047), r = n(727843), l = n(290348), o = n(783454), c = n(893729), d = n(619326), u = n(553204), _ = n(689938), I = n(552052), E = n(615202);
 function T() {
     let {
             editStateId: e,
@@ -44,19 +44,19 @@ function T() {
             }),
             (0, s.jsx)(a.Spacer, { size: 24 }),
             (0, s.jsx)('div', {
-                className: E.__invalid_iconSection,
+                className: I.__invalid_iconSection,
                 children: (0, s.jsxs)(a.FormSection, {
                     title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_TITLE,
                     disabled: g,
                     children: [
                         (0, s.jsx)(a.FormText, {
                             type: a.FormText.Types.DESCRIPTION,
-                            className: E.formDescription,
+                            className: I.formDescription,
                             disabled: g,
                             children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_DESCRIPTION
                         }),
                         (0, s.jsxs)('div', {
-                            className: I.iconUploaderContainer,
+                            className: E.iconUploaderContainer,
                             children: [
                                 (0, s.jsx)(u.Z, {
                                     role: S,
@@ -67,7 +67,7 @@ function T() {
                                 (0, s.jsx)(a.Button, {
                                     look: a.Button.Looks.OUTLINED,
                                     color: a.Button.Colors.PRIMARY,
-                                    className: E.__invalid_imageUploadButtonCTA,
+                                    className: I.__invalid_imageUploadButtonCTA,
                                     onClick: h,
                                     disabled: g,
                                     children: _.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
@@ -80,19 +80,19 @@ function T() {
             (0, s.jsx)(a.Spacer, { size: 24 }),
             (0, s.jsx)(a.FocusBlock, {
                 children: (0, s.jsxs)('div', {
-                    className: I.previewContainer,
+                    className: E.previewContainer,
                     'aria-hidden': !0,
                     children: [
                         (0, s.jsx)(c.Z, {
                             guildId: t,
                             role: S,
-                            className: I.messageContainer,
+                            className: E.messageContainer,
                             theme: 'light'
                         }),
                         (0, s.jsx)(c.Z, {
                             guildId: t,
                             role: S,
-                            className: I.messageContainer,
+                            className: E.messageContainer,
                             theme: 'dark'
                         })
                     ]

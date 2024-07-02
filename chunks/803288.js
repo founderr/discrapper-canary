@@ -1,12 +1,12 @@
 n.d(t, {
     T: function () {
-        return v;
+        return D;
     },
     Z: function () {
         return j;
     }
 }), n(757143), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(497321), d = n(852860), u = n(100527), _ = n(367907), E = n(906732), I = n(807582), T = n(26323), m = n(366980), N = n(246946), S = n(379070), h = n(709586), g = n(267642), C = n(999382), x = n(621319), p = n(44550), R = n(770270), f = n(981631), L = n(30513), O = n(689938), A = n(332189);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(442837), o = n(481060), c = n(497321), d = n(852860), u = n(100527), _ = n(367907), I = n(906732), E = n(807582), T = n(26323), m = n(366980), N = n(246946), S = n(379070), h = n(709586), g = n(267642), C = n(999382), x = n(621319), p = n(44550), R = n(770270), f = n(981631), L = n(30513), O = n(689938), A = n(332189);
 function M(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -15,7 +15,7 @@ function M(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let v = l.ZP.connectStores([
+let D = l.ZP.connectStores([
     C.Z,
     p.Z
 ], () => {
@@ -31,7 +31,7 @@ let v = l.ZP.connectStores([
         }
     };
 })(d.Z);
-class D extends a.PureComponent {
+class v extends a.PureComponent {
     componentWillUnmount() {
         (0, x.xv)();
     }
@@ -141,7 +141,7 @@ class D extends a.PureComponent {
                     className: A.flexFormTitle,
                     children: [
                         (0, s.jsx)('div', { children: O.Z.Messages.VANITY_URL }),
-                        (0, s.jsx)(I.Z, {
+                        (0, s.jsx)(E.Z, {
                             guild: t,
                             guildFeature: f.oNc.VANITY_URL,
                             className: A.guildFeatureAvailabilityIndicator,
@@ -208,10 +208,10 @@ function j() {
             originalVanityURLCode: p.Z.originalVanityURLCode,
             hasError: p.Z.hasError(),
             errorDetails: p.Z.errorDetails
-        })), n = (0, l.e7)([N.Z], () => N.Z.hideInstantInvites), {analyticsLocations: a} = (0, E.ZP)(u.Z.VANITY_URL);
-    return (0, s.jsx)(E.Gt, {
+        })), n = (0, l.e7)([N.Z], () => N.Z.hideInstantInvites), {analyticsLocations: a} = (0, I.ZP)(u.Z.VANITY_URL);
+    return (0, s.jsx)(I.Gt, {
         value: a,
-        children: (0, s.jsx)(D, {
+        children: (0, s.jsx)(v, {
             guild: e,
             ...t,
             hide: n,

@@ -13,8 +13,8 @@ function u(e) {
             name: a,
             bot: u,
             verifiedBot: _,
-            userTag: E
-        } = e, I = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation);
+            userTag: I
+        } = e, E = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation);
     return (0, s.jsxs)('div', {
         className: i()(d.container, t),
         children: [
@@ -38,12 +38,12 @@ function u(e) {
                         className: d.botTag,
                         verified: _
                     }) : null,
-                    I ? null : (0, s.jsx)(l.Text, {
+                    E ? null : (0, s.jsx)(l.Text, {
                         tag: 'span',
                         color: 'interactive-normal',
                         className: d.userTag,
                         variant: 'text-sm/normal',
-                        children: E
+                        children: I
                     })
                 ]
             })

@@ -16,9 +16,9 @@ t.Z = e => {
                     return;
                 a.filter(e => !s.includes(e)).forEach(e => (0, i.Kq)(t.id, e));
             }
-        }, E = e => {
-            (0, i.K0)(t.id, e);
         }, I = e => {
+            (0, i.K0)(t.id, e);
+        }, E = e => {
             e.preventDefault(), e.stopPropagation();
         }, T = r.Z.getAllCategories().map(e => {
             let {
@@ -43,12 +43,12 @@ t.Z = e => {
             } = e;
             return (0, s.jsxs)('span', {
                 className: c.subcategory,
-                onMouseDown: I,
+                onMouseDown: E,
                 children: [
                     t,
                     (0, s.jsx)(a.Clickable, {
                         className: c.closeWrapper,
-                        onClick: () => E(n),
+                        onClick: () => I(n),
                         children: (0, s.jsx)(a.CloseSmallIcon, {
                             size: 'xs',
                             color: 'currentColor',

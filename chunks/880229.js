@@ -3,11 +3,11 @@ n.d(t, {
         return W;
     },
     K: function () {
-        return k;
+        return w;
     }
 }), n(47120), n(390547);
-var s, a, i = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(77866), d = n(149765), u = n(866442), _ = n(442837), E = n(902704), I = n(477690), T = n(481060), m = n(596454), N = n(471445), S = n(605436), h = n(339085), g = n(518738), C = n(131704), x = n(324067), p = n(430824), R = n(153124), f = n(259580), L = n(176278), O = n(624138), A = n(817460), M = n(166803), v = n(629262), D = n(686807), j = n(981631), Z = n(689938), b = n(934178);
-let U = (0, R.hQ)(), G = (0, R.hQ)(), P = (0, O.Mg)(I.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+var s, a, i = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(77866), d = n(149765), u = n(866442), _ = n(442837), I = n(902704), E = n(477690), T = n(481060), m = n(596454), N = n(471445), S = n(605436), h = n(339085), g = n(518738), C = n(131704), x = n(324067), p = n(430824), R = n(153124), f = n(259580), L = n(176278), O = n(624138), A = n(817460), M = n(166803), D = n(629262), v = n(686807), j = n(981631), Z = n(689938), b = n(934178);
+let U = (0, R.hQ)(), G = (0, R.hQ)(), P = (0, O.Mg)(E.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function B(e) {
     var t;
     let {
@@ -120,7 +120,7 @@ function F(e) {
                         (0, i.jsx)(T.Text, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: (0, D.Z)(e)
+                            children: (0, v.Z)(e)
                         }),
                         (0, i.jsx)(T.Text, {
                             color: 'interactive-normal',
@@ -133,7 +133,7 @@ function F(e) {
         ]
     }) : null;
 }
-function k(e) {
+function w(e) {
     let {
             transitionState: t,
             fromSubscriptionListing: n,
@@ -141,10 +141,10 @@ function k(e) {
             existingIntangibleBenefits: a,
             onSubmit: l,
             onClose: o
-        } = e, c = n.role_benefits.benefits, [d, u] = r.useState(() => new Set(c)), _ = r.useMemo(() => c.filter(A.rC), [c]), I = (0, v.Z)(_), m = r.useMemo(() => c.filter(A.lL), [c]), N = r.useMemo(() => new Set(I.filter(e => s.some(t => t.ref_id === e.ref_id))), [
-            I,
+        } = e, c = n.role_benefits.benefits, [d, u] = r.useState(() => new Set(c)), _ = r.useMemo(() => c.filter(A.rC), [c]), E = (0, D.Z)(_), m = r.useMemo(() => c.filter(A.lL), [c]), N = r.useMemo(() => new Set(E.filter(e => s.some(t => t.ref_id === e.ref_id))), [
+            E,
             s
-        ]), S = r.useMemo(() => new Set(m.filter(e => a.some(t => (0, E.Z)(e, t)))), [
+        ]), S = r.useMemo(() => new Set(m.filter(e => a.some(t => (0, I.Z)(e, t)))), [
             a,
             m
         ]), h = (0, R.Dt)();
@@ -183,7 +183,7 @@ function k(e) {
                         (0, i.jsx)(F, {
                             title: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
                             selectAllText: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS,
-                            benefits: I,
+                            benefits: E,
                             dupeBenefits: N,
                             selectedBenefits: d,
                             onToggleBenefit: g
@@ -216,7 +216,7 @@ function k(e) {
         })
     });
 }
-function w(e) {
+function k(e) {
     var t;
     let {
             guildId: n,
@@ -291,7 +291,7 @@ function H(e) {
         ]);
     return o.length > 0 ? (0, i.jsx)('div', {
         className: b.list,
-        children: o.map(e => (0, i.jsx)(w, {
+        children: o.map(e => (0, i.jsx)(k, {
             guildId: t.id,
             role: e.role,
             channelCount: e.channelCount,
@@ -354,16 +354,16 @@ function Y(e) {
         }), _ = r.useMemo(() => (0, M.Z)(u, d), [
             u,
             d
-        ]), [E, I] = r.useState(() => new Set(_.map(e => e.id)));
+        ]), [I, E] = r.useState(() => new Set(_.map(e => e.id)));
     function m(e, t) {
-        I(n => {
+        E(n => {
             let s = new Set(n);
             return t ? s.add(e) : s.delete(e), s;
         });
     }
     return (0, i.jsxs)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), l(_.map(e => e.id).filter(e => E.has(e))), t();
+            e.preventDefault(), l(_.map(e => e.id).filter(e => I.has(e))), t();
         },
         className: b.slideForm,
         children: [
@@ -390,7 +390,7 @@ function Y(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            checked: E.size === _.length,
+                            checked: I.size === _.length,
                             onChange: function (e) {
                                 for (let t of _)
                                     m(t.id, e);
@@ -417,7 +417,7 @@ function Y(e) {
                                         height: '100%'
                                     })
                                 }),
-                                checked: E.has(e.id),
+                                checked: I.has(e.id),
                                 onChange: t => m(e.id, t),
                                 children: (0, i.jsx)(T.Text, {
                                     color: 'header-primary',

@@ -3,7 +3,7 @@ s.d(n, {
         return N;
     }
 }), s(47120);
-var l = s(735250), i = s(470079), t = s(481060), r = s(987209), a = s(321051), c = s(669079), o = s(479446), u = s(646476), d = s(981632), _ = s(96848), m = s(703926), I = s(474936), E = s(689938), p = s(635904);
+var l = s(735250), t = s(470079), i = s(481060), r = s(987209), a = s(321051), c = s(669079), o = s(479446), u = s(646476), d = s(981632), _ = s(96848), m = s(703926), E = s(474936), I = s(689938), p = s(635904);
 let N = e => {
     let {isShopGift: n} = e, {
             giftRecipient: s,
@@ -13,10 +13,10 @@ let N = e => {
             soundEffect: x,
             setEmojiConfetti: h,
             setSoundEffect: P
-        } = (0, r.wD)(), [A, v] = i.useState(!1), f = i.useRef(null), M = (0, t.useRadioGroup)({ orientation: 'horizontal' }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, R = g !== c.xr.DEFAULT, O = (0, u.rK)(), {enabled: L} = u.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: O }), j = null;
-    return R && (j = O && L ? I.V4 : I.QI), (0, l.jsxs)('div', {
+        } = (0, r.wD)(), [f, A] = t.useState(!1), v = t.useRef(null), M = (0, i.useRadioGroup)({ orientation: 'horizontal' }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, O = g !== c.xr.DEFAULT, R = (0, u.rK)(), {enabled: L} = u.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: R }), j = null;
+    return O && (j = R && L ? E.V4 : E.QI), (0, l.jsxs)('div', {
         children: [
-            R && (0, l.jsxs)('div', {
+            O && (0, l.jsxs)('div', {
                 className: p.giftMainAnimation,
                 children: [
                     null != N ? (0, l.jsx)(d.Z, {
@@ -25,7 +25,7 @@ let N = e => {
                         idleAnimationState: o.S.LOOP,
                         shouldAnimate: !0,
                         className: p.animation
-                    }) : (0, l.jsx)(t.Spinner, { className: p.spinner }),
+                    }) : (0, l.jsx)(i.Spinner, { className: p.spinner }),
                     C && (0, l.jsxs)('div', {
                         className: p.soundEmojiContainer,
                         children: [
@@ -50,21 +50,21 @@ let N = e => {
                 ]
             }),
             (0, l.jsx)('div', {
-                tabIndex: null != N || A ? void 0 : 0,
+                tabIndex: null != N || f ? void 0 : 0,
                 onFocus: e => {
                     var n;
-                    e.target === e.currentTarget && (null === (n = f.current) || void 0 === n || n.focus());
+                    e.target === e.currentTarget && (null === (n = v.current) || void 0 === n || n.focus());
                 },
                 className: p.giftBoxOptionContainer,
-                'aria-label': E.Z.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
+                'aria-label': I.Z.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
                 ...M,
                 children: null != j && j.map((e, n) => (0, l.jsx)(m.m, {
                     isSelected: N === e,
                     giftStyle: e,
                     setSelectedGiftStyle: T,
-                    ref: 0 === n ? f : null,
-                    onFocus: () => v(!0),
-                    onBlur: () => v(!1)
+                    ref: 0 === n ? v : null,
+                    onFocus: () => A(!0),
+                    onBlur: () => A(!1)
                 }, e))
             }),
             (0, l.jsx)('div', { className: p.__invalid_selectPlanDivider })

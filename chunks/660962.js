@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(442837), d = n(481060), u = n(605436), _ = n(663993), E = n(518738), I = n(786761), T = n(3148), m = n(753206), N = n(598077), S = n(496675), h = n(792125), g = n(764260), C = n(95242), x = n(541575), p = n(420966), R = n(337344), f = n(275296), L = n(203377), O = n(981631), A = n(689938), M = n(210663), v = n(681267), D = n(179517), j = n(79829);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(392711), o = n.n(l), c = n(442837), d = n(481060), u = n(605436), _ = n(663993), I = n(518738), E = n(786761), T = n(3148), m = n(753206), N = n(598077), S = n(496675), h = n(792125), g = n(764260), C = n(95242), x = n(541575), p = n(420966), R = n(337344), f = n(275296), L = n(203377), O = n(981631), A = n(689938), M = n(210663), D = n(681267), v = n(179517), j = n(79829);
 let Z = (0, _.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
         webpackId: 336231
@@ -64,7 +64,7 @@ function P(e) {
         guildId: l
     } = e;
     let o = (i = A.Z.Messages.ROLE_SAMPLE_MESSAGE, a.useMemo(() => {
-            let e = (0, I.e5)({
+            let e = (0, E.e5)({
                 ...(0, T.ZP)({
                     channelId: '1337',
                     content: i
@@ -82,12 +82,12 @@ function P(e) {
             nick: o.author.username,
             colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
         }, u = {
-            src: D,
+            src: v,
             name: r.name
         }, _ = {
             src: j,
             name: r.name
-        }, S = (0, E.oC)(l, r);
+        }, S = (0, I.oC)(l, r);
     return (0, s.jsx)(d.FocusBlock, {
         children: (0, s.jsxs)('div', {
             className: M.previewContainer,
@@ -155,22 +155,22 @@ function y(e) {
             locked: a,
             setSelectedSection: i
         } = e, l = (0, u.pM)(null == t ? void 0 : t.id, n.id), o = a || l, _ = (0, c.e7)([S.Z], () => S.Z.canImpersonateRole(t, n)), {
-            headerHeight: E,
-            headerRef: I
+            headerHeight: I,
+            headerRef: E
         } = (0, C.Z)(0), {
             scrolledToTop: T,
             handleScroll: m
         } = (0, p.V)();
     return (0, s.jsx)(d.AdvancedScrollerAuto, {
         className: M.scroller,
-        style: { scrollPaddingTop: E },
+        style: { scrollPaddingTop: I },
         onScroll: m,
         children: (0, s.jsxs)('div', {
-            className: v.contentWidth,
+            className: D.contentWidth,
             children: [
                 (0, s.jsx)('div', {
-                    className: r()(v.header, v.stickyHeader, { [v.stickyHeaderElevated]: !T }),
-                    ref: I,
+                    className: r()(D.header, D.stickyHeader, { [D.stickyHeaderElevated]: !T }),
+                    ref: E,
                     children: (0, s.jsx)(p.Z, {
                         guild: t,
                         role: n,

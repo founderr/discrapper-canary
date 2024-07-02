@@ -6,7 +6,7 @@ n.d(t, {
         return d;
     },
     lL: function () {
-        return E;
+        return I;
     },
     t4: function () {
         return u;
@@ -25,7 +25,7 @@ function _(e, t) {
         a.Z
     ], () => null != t && l.Z.editedDefaultChannelIds.has(t) ? c.Z.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY : r.Uu(o.Plq.VIEW_CHANNEL, a.Z.getChannel(e)) ? void 0 : c.Z.Messages.DEFAULT_CHANNELS_DISABLED_PRIVATE);
 }
-function E(e, t) {
+function I(e, t) {
     let n = (0, s.e7)([i.Z], () => {
             var n;
             return (null === (n = i.Z.getGuild(e)) || void 0 === n ? void 0 : n.rulesChannelId) === t;

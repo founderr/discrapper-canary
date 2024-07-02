@@ -6,14 +6,14 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(512722), r = n.n(i), l = n(442837), o = n(481060), c = n(596454), d = n(907040), u = n(339085), _ = n(633302), E = n(984933), I = n(401227), T = n(285952), m = n(474333), N = n(153124), S = n(691886), h = n(185923), g = n(689938), C = n(271820);
+var s = n(735250), a = n(470079), i = n(512722), r = n.n(i), l = n(442837), o = n(481060), c = n(596454), d = n(907040), u = n(339085), _ = n(633302), I = n(984933), E = n(401227), T = n(285952), m = n(474333), N = n(153124), S = n(691886), h = n(185923), g = n(689938), C = n(271820);
 function x(e) {
     let {
             guildId: t,
             emojiData: n,
             'aria-labelledby': i,
             onSelectEmoji: r
-        } = e, T = (0, l.e7)([u.Z], () => null != n.id ? u.Z.getCustomEmojiById(n.id) : void 0), m = (0, l.e7)([E.ZP], () => E.ZP.getDefaultChannel(t)), N = a.useCallback(e => {
+        } = e, T = (0, l.e7)([u.Z], () => null != n.id ? u.Z.getCustomEmojiById(n.id) : void 0), m = (0, l.e7)([I.ZP], () => I.ZP.getDefaultChannel(t)), N = a.useCallback(e => {
             let {closePopout: t} = e;
             return (0, s.jsx)(d.Z, {
                 pickerIntention: h.Hz.GUILD_ROLE_BENEFIT_EMOJI,
@@ -54,7 +54,7 @@ function x(e) {
                 className: C.emojiInputContainer,
                 ...e,
                 children: [
-                    (0, s.jsx)(I.Z, {
+                    (0, s.jsx)(E.Z, {
                         className: C.emojiButton,
                         active: n,
                         tabIndex: 0,
@@ -83,8 +83,8 @@ function p(e) {
             onSave: d,
             onDelete: u,
             transitionState: _,
-            onClose: E
-        } = e, I = (0, N.Dt)(), m = (0, N.Dt)(), S = (0, N.Dt)(), [h, p] = a.useState(null !== (t = null == i ? void 0 : i.description) && void 0 !== t ? t : ''), [R, f] = a.useState(() => ({
+            onClose: I
+        } = e, E = (0, N.Dt)(), m = (0, N.Dt)(), S = (0, N.Dt)(), [h, p] = a.useState(null !== (t = null == i ? void 0 : i.description) && void 0 !== t ? t : ''), [R, f] = a.useState(() => ({
             id: null == i ? void 0 : i.emoji_id,
             name: null == i ? void 0 : i.emoji_name
         })), L = c && '' !== h && (null != R.id || null != R.name);
@@ -94,22 +94,22 @@ function p(e) {
                 description: h,
                 emojiId: R.id,
                 emojiName: R.name
-            }), E());
+            }), I());
         },
         children: (0, s.jsxs)(o.ModalRoot, {
             transitionState: _,
-            'aria-labelledby': I,
+            'aria-labelledby': E,
             children: [
                 (0, s.jsxs)(o.ModalHeader, {
                     children: [
                         (0, s.jsx)(o.Heading, {
-                            id: I,
+                            id: E,
                             variant: 'heading-md/semibold',
                             children: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_MODAL_TITLE
                         }),
                         (0, s.jsx)(o.ModalCloseButton, {
                             className: C.closeButton,
-                            onClick: E
+                            onClick: I
                         })
                     ]
                 }),
@@ -159,7 +159,7 @@ function p(e) {
                                     size: o.Button.Sizes.ICON,
                                     className: C.deleteButton,
                                     onClick: () => {
-                                        u(), E();
+                                        u(), I();
                                     },
                                     children: (0, s.jsx)(o.TrashIcon, {
                                         size: 'md',
@@ -173,7 +173,7 @@ function p(e) {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
                             className: C.cancelButton,
-                            onClick: E,
+                            onClick: I,
                             children: g.Z.Messages.CANCEL
                         })
                     ]
@@ -191,7 +191,7 @@ function R(e) {
             onDelete: c,
             transitionState: d,
             onClose: u
-        } = e, [_, E] = a.useState(null == i ? void 0 : i.ref_id), I = (0, N.Dt)(), T = (0, s.jsxs)(s.Fragment, {
+        } = e, [_, I] = a.useState(null == i ? void 0 : i.ref_id), E = (0, N.Dt)(), T = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)(m.Z, {
                     messageType: m.Q.WARNING,
@@ -200,16 +200,16 @@ function R(e) {
                 (0, s.jsx)(o.Spacer, { size: 24 }),
                 (0, s.jsx)(o.FormSection, {
                     title: g.Z.Messages.CHANNEL,
-                    titleId: I,
+                    titleId: E,
                     children: (0, s.jsx)(S.Z, {
                         guildId: t,
                         value: _,
                         initialChannelId: null == i ? void 0 : i.ref_id,
                         omitChannelIds: n,
                         onChange: function (e) {
-                            E(e);
+                            I(e);
                         },
-                        'aria-labelledby': I
+                        'aria-labelledby': E
                     })
                 })
             ]
@@ -240,17 +240,17 @@ function f(e) {
             onClose: c,
             onDelete: d,
             guildId: u
-        } = e, [_, E] = a.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ''), I = (0, N.Dt)(), T = (0, s.jsx)(o.FormSection, {
+        } = e, [_, I] = a.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ''), E = (0, N.Dt)(), T = (0, s.jsx)(o.FormSection, {
             title: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
-            titleId: I,
+            titleId: E,
             children: (0, s.jsx)(o.TextArea, {
                 placeholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
                 value: _,
                 rows: 1,
                 onChange: function (e) {
-                    E(e);
+                    I(e);
                 },
-                'aria-labelledby': I
+                'aria-labelledby': E
             })
         });
     return (0, s.jsx)(p, {

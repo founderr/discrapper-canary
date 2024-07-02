@@ -5,14 +5,14 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(399606), i = n(481060), r = n(395586), l = n(755930), o = n(909667), c = n(968820), d = n(200472), u = n(489028), _ = n(277369), E = n(215124), I = n(999382), T = n(267101), m = n(287576), N = n(894610), S = n(689938);
+var a = n(399606), i = n(481060), r = n(395586), l = n(755930), o = n(909667), c = n(968820), d = n(200472), u = n(489028), _ = n(277369), I = n(215124), E = n(999382), T = n(267101), m = n(287576), N = n(894610), S = n(689938);
 function h(e) {
     let {listingId: t} = e, n = (0, T.r)(t);
     return null == n ? null : (0, s.jsx)(l.bL, { children: n.name });
 }
 function g(e) {
     var t, n, l;
-    let {guildId: T} = e, g = (0, m.Z)(T), C = (0, r.f3)(), x = (0, a.e7)([I.Z], () => I.Z.getGuild());
+    let {guildId: T} = e, g = (0, m.Z)(T), C = (0, r.f3)(), x = (0, a.e7)([E.Z], () => E.Z.getGuild());
     return g.loading || null == x ? (0, s.jsx)(i.Spinner, {}) : null == g.application ? (0, s.jsx)(u.Z, { guild: x }) : (0, s.jsxs)(d.Z, {
         children: [
             (0, s.jsx)(c.Z, {
@@ -45,7 +45,7 @@ function g(e) {
             }),
             (0, s.jsx)(i.FormSection, {
                 title: S.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
-                children: (0, s.jsx)(E.Z, {
+                children: (0, s.jsx)(I.Z, {
                     guildId: T,
                     allPeriods: g.payoutsByPeriod
                 })

@@ -23,7 +23,7 @@ function M(e) {
             className: b,
             optionClassName: v,
             dropdownLoading: g
-        } = e, h = 0 === p.length, O = [
+        } = e, O = 0 === p.length, h = [
             ...null != R ? [R] : [],
             ...p,
             P
@@ -147,13 +147,13 @@ function M(e) {
     let y = (n = m, a = U, r = null, n && null != a && !a.canRedeemTrial() ? r = T.Z.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID : n && null != a && a.hasFlag(E.Cw.NEW) && (r = T.Z.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({ helpDeskArticle: _.Z.getArticleURL(I.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), r);
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            h ? (0, t.jsx)(o.Button, {
+            O ? (0, t.jsx)(o.Button, {
                 color: o.ButtonColors.BRAND,
                 fullWidth: !0,
                 onClick: C,
                 children: T.Z.Messages.PAYMENT_SOURCES_ADD
             }) : (0, t.jsx)(o.SingleSelect, {
-                options: O,
+                options: h,
                 value: M,
                 onChange: e => {
                     if (e === P.id)

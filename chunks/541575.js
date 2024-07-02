@@ -1,6 +1,6 @@
 var s = n(735250);
 n(470079);
-var a = n(780384), i = n(481060), r = n(410030), l = n(367907), o = n(906732), c = n(807582), d = n(518738), u = n(26323), _ = n(176278), E = n(764260), I = n(981631), T = n(30513), m = n(689938), N = n(932305);
+var a = n(780384), i = n(481060), r = n(410030), l = n(367907), o = n(906732), c = n(807582), d = n(518738), u = n(26323), _ = n(176278), I = n(764260), E = n(981631), T = n(30513), m = n(689938), N = n(932305);
 t.Z = function (e) {
     let {
             guild: t,
@@ -12,24 +12,24 @@ t.Z = function (e) {
                 return n => (0, s.jsx)(e, {
                     ...n,
                     guildId: t.id,
-                    onUploadIcon: e => (0, E._l)(h.id, e, null),
-                    onSelectUnicodeEmoji: e => (0, E._l)(h.id, null, e)
+                    onUploadIcon: e => (0, I._l)(h.id, e, null),
+                    onSelectUnicodeEmoji: e => (0, I._l)(h.id, null, e)
                 });
             });
-        }, R = t.features.has(I.oNc.ROLE_ICONS), f = e => {
-            !R && ((0, l.yw)(I.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+        }, R = t.features.has(E.oNc.ROLE_ICONS), f = e => {
+            !R && ((0, l.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: {
                     ...e,
-                    section: I.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
+                    section: E.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
                 },
                 guild_id: null == t ? void 0 : t.id,
                 location_stack: x
             }), (0, u.Z)({
                 analyticsLocations: x,
                 analyticsSourceLocation: {
-                    page: I.ZY5.GUILD_SETTINGS,
-                    section: I.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
-                    object: I.qAy.BADGE
+                    page: E.ZY5.GUILD_SETTINGS,
+                    section: E.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
+                    object: E.qAy.BADGE
                 },
                 guild: t,
                 perks: (0, T.Yp)()
@@ -37,12 +37,12 @@ t.Z = function (e) {
         }, L = (0, s.jsx)(c.Z, {
             className: N.availabilityIndicator,
             guild: t,
-            guildFeature: I.oNc.ROLE_ICONS,
+            guildFeature: E.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
             hideTooltip: R,
             onClick: () => f({
-                object: I.qAy.LEARN_MORE,
-                objectType: I.Qqv.TIER_2
+                object: E.qAy.LEARN_MORE,
+                objectType: E.Qqv.TIER_2
             })
         });
     return (0, s.jsxs)(i.FormItem, {
@@ -80,7 +80,7 @@ t.Z = function (e) {
                         className: N.button,
                         color: (0, a.ap)(g) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
                         look: i.Button.Looks.OUTLINED,
-                        onClick: () => t.hasFeature(I.oNc.ROLE_ICONS) ? p() : f({ object: I.qAy.UPLOAD_IMAGE }),
+                        onClick: () => t.hasFeature(E.oNc.ROLE_ICONS) ? p() : f({ object: E.qAy.UPLOAD_IMAGE }),
                         disabled: S,
                         children: m.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
                     }),
@@ -89,7 +89,7 @@ t.Z = function (e) {
                         color: (0, a.ap)(g) ? i.Button.Colors.PRIMARY : i.Button.Colors.TRANSPARENT,
                         look: i.Button.Looks.BLANK,
                         onClick: () => {
-                            (0, E._l)(h.id, null, null);
+                            (0, I._l)(h.id, null, null);
                         },
                         disabled: S,
                         children: m.Z.Messages.REMOVE_ICON

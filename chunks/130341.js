@@ -24,7 +24,7 @@ n.d(t, {
         return p;
     }
 }), n(724458), n(653041), n(47120);
-var s = n(470079), a = n(658722), i = n.n(a), r = n(442837), l = n(271383), o = n(594174), c = n(626135), d = n(823379), u = n(892880), _ = n(51144), E = n(480608), I = n(203377), T = n(981631);
+var s = n(470079), a = n(658722), i = n.n(a), r = n(442837), l = n(271383), o = n(594174), c = n(626135), d = n(823379), u = n(892880), _ = n(51144), I = n(480608), E = n(203377), T = n(981631);
 let m = 50, N = 1000;
 function S(e, t) {
     let n = (0, r.Wu)([l.ZP], () => {
@@ -64,7 +64,7 @@ function S(e, t) {
 }
 function h(e, t, n) {
     return s.useEffect(() => {
-        (0, E.H)(e, t).catch(n);
+        (0, I.H)(e, t).catch(n);
     }, [
         e,
         t
@@ -85,13 +85,13 @@ function C(e, t) {
 }
 function x(e) {
     switch (e) {
-    case I.ZI.MEMBERS:
+    case E.ZI.MEMBERS:
         return 'Members';
-    case I.ZI.PERMISSIONS:
+    case E.ZI.PERMISSIONS:
         return 'Permissions';
-    case I.ZI.DISPLAY:
+    case E.ZI.DISPLAY:
         return 'Role Settings';
-    case I.ZI.VERIFICATIONS:
+    case E.ZI.VERIFICATIONS:
         return 'Connections';
     default:
         (0, d.vE)(e);

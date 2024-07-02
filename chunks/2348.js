@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(653041);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(692547), o = n(481060), c = n(239091), d = n(977258), u = n(637853), _ = n(473403), E = n(216306), I = n(514342), T = n(743475), m = n(827907), N = n(868814), S = n(981631), h = n(689938), g = n(133760);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(692547), o = n(481060), c = n(239091), d = n(977258), u = n(637853), _ = n(473403), I = n(216306), E = n(514342), T = n(743475), m = n(827907), N = n(868814), S = n(981631), h = n(689938), g = n(133760);
 function C(e) {
     let {
             guild: t,
@@ -75,10 +75,10 @@ let x = a.memo(function () {
                 channel: t,
                 category: a,
                 guild: i,
-                isFirstChannel: E,
+                isFirstChannel: I,
                 isLastChannel: C,
                 tooltipDirection: R = 'right'
-            } = e, f = (0, m.Mf)(t.id, a.id), L = (0, m.t4)(t.id, a.id), O = (0, m.EH)(t.id, a.id), A = (0, m.lL)(i.id, a.id), M = null != (0, N.Z)(i).find(e => e.id === t.id), v = (0, u.mn)(t.id), D = e => {
+            } = e, f = (0, m.Mf)(t.id, a.id), L = (0, m.t4)(t.id, a.id), O = (0, m.EH)(t.id, a.id), A = (0, m.lL)(i.id, a.id), M = null != (0, N.Z)(i).find(e => e.id === t.id), D = (0, u.mn)(t.id), v = e => {
                 if (!L)
                     return e.stopPropagation(), (0, d.s)(i.id, t.id) ? (0, T.pt)(t.id) : (0, o.openModalLazy)(async () => {
                         let {default: e} = await n.e('35641').then(n.bind(n, 89216));
@@ -156,12 +156,12 @@ let x = a.memo(function () {
                     position: R,
                     children: e => (0, s.jsxs)(o.Clickable, {
                         className: r()(g.channelRow, {
-                            [g.firstChannel]: E,
+                            [g.firstChannel]: I,
                             [g.lastChannel]: C,
                             [g.disabled]: L
                         }),
                         ...e,
-                        onClick: D,
+                        onClick: v,
                         onContextMenu: j,
                         children: [
                             (0, s.jsx)('div', {
@@ -173,7 +173,7 @@ let x = a.memo(function () {
                                             channel: t,
                                             guild: i
                                         }),
-                                        (0, s.jsx)(I.Z, {
+                                        (0, s.jsx)(E.Z, {
                                             className: g.__invalid_name,
                                             children: (0, s.jsx)(o.Text, {
                                                 className: g.channelText,
@@ -204,7 +204,7 @@ let x = a.memo(function () {
                                     value: f,
                                     type: o.Checkbox.Types.INVERTED,
                                     disabled: L,
-                                    color: v ? l.Z.colors.TEXT_BRAND.css : l.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                    color: D ? l.Z.colors.TEXT_BRAND.css : l.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                     innerClassName: g.checkboxInner,
                                     displayOnly: !0
                                 }) : (0, s.jsxs)(o.Button, {
@@ -262,7 +262,7 @@ function f(e) {
             t,
             n,
             r
-        ]), c = (0, E.tn)(n.id, t, 64);
+        ]), c = (0, I.tn)(n.id, t, 64);
     return (0, s.jsx)('div', {
         className: i,
         children: c.map((e, t) => {

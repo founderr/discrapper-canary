@@ -9,7 +9,7 @@ n.d(t, {
         return M;
     }
 }), n(47120);
-var s, a = n(735250), i = n(470079), r = n(120356), l = n.n(r), o = n(512722), c = n.n(o), d = n(442837), u = n(692547), _ = n(481060), E = n(570140), I = n(484614), T = n(852860), m = n(881052), N = n(751189), S = n(409059), h = n(518936), g = n(999382), C = n(58346), x = n(689938), p = n(343606), R = n(549856);
+var s, a = n(735250), i = n(470079), r = n(120356), l = n.n(r), o = n(512722), c = n.n(o), d = n(442837), u = n(692547), _ = n(481060), I = n(570140), E = n(484614), T = n(852860), m = n(881052), N = n(751189), S = n(409059), h = n(518936), g = n(999382), C = n(58346), x = n(689938), p = n(343606), R = n(549856);
 function f(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -51,7 +51,7 @@ class L extends (s = d.ZP.Store) {
     }
 }
 f(L, 'displayName', 'GuildSettingsTemplateMetadataStore_');
-let O = new L(E.Z);
+let O = new L(I.Z);
 function A() {
     let [e, t] = i.useState(!1), n = async () => {
             t(!0), await O.save(), t(!1);
@@ -76,14 +76,14 @@ function M() {
                     type: _.FormTextTypes.DESCRIPTION,
                     children: x.Z.Messages.GUILD_TEMPLATE_SETTINGS_DESCRIPTION.format()
                 }),
-                (0, a.jsx)(D, {}),
+                (0, a.jsx)(v, {}),
                 (0, a.jsx)(_.FormDivider, { className: p.divider }),
-                (0, a.jsx)(v, {})
+                (0, a.jsx)(D, {})
             ]
         })
     });
 }
-function v() {
+function D() {
     let {guild: e} = g.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([O], () => O.error), [n, s] = i.useState(!0), {
@@ -142,7 +142,7 @@ function v() {
         ]
     });
 }
-function D() {
+function v() {
     return (0, a.jsxs)('div', {
         className: p.descriptionBox,
         children: [
@@ -296,7 +296,7 @@ function b(e) {
         children: [
             (0, a.jsx)(_.FormItem, {
                 title: x.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_LINK,
-                children: (0, a.jsx)(I.Z, {
+                children: (0, a.jsx)(E.Z, {
                     buttonLook: _.Button.Looks.FILLED,
                     buttonColor: _.Button.Colors.BRAND,
                     value: (0, h.Z)(n.code)

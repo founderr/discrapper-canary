@@ -12,8 +12,8 @@ function _(e) {
             disabled: n = !1
         } = e, {
             editStateId: _,
-            guildId: E
-        } = (0, i.N)(), [I, T] = l.GP(_, E);
+            guildId: I
+        } = (0, i.N)(), [E, T] = l.GP(_, I);
     return (0, s.jsx)(a.RadioGroup, {
         className: u.__invalid_channelAccessSelect,
         radioItemClassName: u.__invalid_channelAccessSelectRadioButton,
@@ -37,7 +37,7 @@ function _(e) {
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             }
         ],
-        value: I,
+        value: E,
         'aria-labelledby': t,
         disabled: n
     });

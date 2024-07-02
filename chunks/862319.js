@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     },
     w: function () {
         return T;
@@ -8,31 +8,31 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(120356), i = n.n(a), r = n(481060), l = n(259580), o = n(73346), c = n(817460), d = n(723047), u = n(880229), _ = n(689938), E = n(741932);
-function I(e) {
+var a = n(120356), i = n.n(a), r = n(481060), l = n(259580), o = n(73346), c = n(817460), d = n(723047), u = n(880229), _ = n(689938), I = n(741932);
+function E(e) {
     let {
             channelBenefits: t,
             intangibleBenefits: n,
             subscriptionListings: a,
             onImport: l
-        } = e, I = (0, d.mY)();
+        } = e, E = (0, d.mY)();
     return (0, s.jsx)('div', {
-        className: E.container,
+        className: I.container,
         children: a.map(e => (0, s.jsxs)('div', {
-            className: E.row,
+            className: I.row,
             children: [
                 (0, s.jsx)('img', {
                     alt: '',
                     src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
-                    className: i()(E.rowIcon, E.listingImage)
+                    className: i()(I.rowIcon, I.listingImage)
                 }),
                 (0, s.jsxs)('div', {
-                    className: E.rowBody,
+                    className: I.rowBody,
                     children: [
                         (0, s.jsx)(r.Text, {
                             variant: 'text-md/normal',
                             color: 'header-primary',
-                            className: i()(E.rowText, E.listingName),
+                            className: i()(I.rowText, I.listingName),
                             children: e.name
                         }),
                         (0, s.jsx)(r.Text, {
@@ -58,7 +58,7 @@ function I(e) {
                             onSubmit: l
                         }));
                     },
-                    disabled: I,
+                    disabled: E,
                     children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_BUTTON
                 })
             ]
@@ -72,7 +72,7 @@ function T(e) {
         disabled: a = !1
     } = e;
     return (0, s.jsxs)(r.Clickable, {
-        className: i()(E.importRoleCard, { [E.disabled]: a }),
+        className: i()(I.importRoleCard, { [I.disabled]: a }),
         onClick: a ? void 0 : function () {
             (0, r.openModal)(e => (0, s.jsx)(u.C, {
                 ...e,
@@ -87,17 +87,17 @@ function T(e) {
                 width: 23,
                 height: 23,
                 color: 'currentColor',
-                className: E.rowIcon
+                className: I.rowIcon
             }),
             (0, s.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 color: 'header-primary',
-                className: E.rowText,
+                className: I.rowText,
                 children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_SELECT_ROLE
             }),
             (0, s.jsx)(l.Z, {
                 direction: l.Z.Directions.RIGHT,
-                className: E.caret
+                className: I.caret
             })
         ]
     });

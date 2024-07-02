@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(780384), i = n(481060), r = n(410030), l = n(293810), o = n(689938), c = n(499123), d = n(934961), u = n(568294), _ = n(867861), E = n(860790), I = n(268953), T = n(487703), m = n(458050), N = n(334364), S = n(431712);
+var a = n(780384), i = n(481060), r = n(410030), l = n(293810), o = n(689938), c = n(499123), d = n(934961), u = n(568294), _ = n(867861), I = n(860790), E = n(268953), T = n(487703), m = n(458050), N = n(334364), S = n(431712);
 function h(e) {
     return (0, a.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
@@ -89,7 +89,7 @@ function C() {
                     (0, s.jsx)(t, { length: 12 }),
                     (0, s.jsx)('img', {
                         className: c.roundAvatar,
-                        src: E,
+                        src: I,
                         alt: ''
                     }),
                     (0, s.jsx)(t, {
@@ -104,7 +104,7 @@ function C() {
                     (0, s.jsx)(t, { length: 12 }),
                     (0, s.jsx)('img', {
                         className: c.roundAvatar,
-                        src: I,
+                        src: E,
                         alt: ''
                     })
                 ]
