@@ -5,7 +5,10 @@ var s = r(481060), a = r(689938);
 n.Z = {
     openSecureFramesUserVerificationModal: function (e, n) {
         (0, s.openModalLazy)(async () => {
-            let s = (await r.e('33397').then(r.bind(r, 963410))).default;
+            let s = (await Promise.all([
+                r.e('95437'),
+                r.e('33397')
+            ]).then(r.bind(r, 963410))).default;
             return r => (0, i.jsx)(s, {
                 userId: e,
                 channelId: n,

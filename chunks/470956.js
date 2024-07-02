@@ -1,80 +1,92 @@
-n.d(t, {
+t.d(n, {
     Es: function () {
-        return E;
+        return g;
     },
     Eu: function () {
         return I;
     },
     Yp: function () {
-        return _;
+        return h;
     },
     bt: function () {
-        return f;
+        return N;
     }
-}), n(47120);
-var r = n(470079), o = n(392711), l = n(442837), u = n(413523), i = n(314897), a = n(878884), c = n(19780), s = n(979651), d = n(413402);
-function E(e, t) {
-    let n = (0, d.M)(), u = (0, l.e7)([a.Z], () => n ? a.Z.getDesyncedVoiceStates(e) : null);
-    return r.useMemo(() => function (e, t) {
-        if (!(0, d.i)() || null == e || 0 === e.length)
-            return t;
-        let n = null != t ? [...t] : [];
+}), t(47120), t(653041);
+var r = t(470079), u = t(392711), l = t(259443), i = t(286379), c = t(442837), o = t(413523), a = t(797614), s = t(314897), d = t(878884), f = t(19780), C = t(979651), Z = t(413402);
+let E = new l.Y('RTCConnectionDesyncHooks');
+function g(e, n) {
+    let t = (0, Z.M)(), l = (0, c.e7)([
+            d.Z,
+            f.Z
+        ], () => t && e === f.Z.getChannelId() ? d.Z.getDesyncedVoiceStates() : null);
+    return r.useMemo(() => function (e, n) {
+        if (!(0, Z.i)() || null == e || 0 === e.length)
+            return n;
+        let t = [], r = new Set();
+        for (let e of n)
+            t.push(e), r.add(e.user.id);
         return e.forEach(e => {
-            n.splice((0, o.sortedIndexBy)(n, e, e => {
-                let {comparator: t} = e;
-                return t;
+            r.has(e.user.id) && (E.info('Found duplicate user voice state: '.concat(e.user.id, '.')), a.Z.increment({ name: i.V.RTC_CONNECTION_DUPLICATE_USER })), t.splice((0, u.sortedIndexBy)(t, e, e => {
+                let {comparator: n} = e;
+                return n;
             }), 0, e);
-        }), n;
-    }(u, t), [
-        u,
-        t
+        }), t;
+    }(l, n), [
+        l,
+        n
     ]);
 }
-function f(e, t) {
-    let n = function (e) {
-        let t = (0, d.M)();
-        return (0, l.e7)([a.Z], () => t ? a.Z.getDesyncedParticipants(e) : null);
+function N(e, n) {
+    let t = function (e) {
+        let n = (0, Z.M)();
+        return (0, c.e7)([
+            d.Z,
+            f.Z
+        ], () => n && e === f.Z.getChannelId() ? d.Z.getDesyncedParticipants() : null);
     }(e);
-    return r.useMemo(() => function (e, t) {
-        if (!(0, d.i)() || null == e || 0 === e.length)
-            return t;
-        let n = [...t];
+    return r.useMemo(() => function (e, n) {
+        if (!(0, Z.i)() || null == e || 0 === e.length)
+            return n;
+        let t = [...n];
         return e.forEach(e => {
-            n.splice((0, o.sortedIndexBy)(n, e, e => (0, u.Yr)(e)), 0, e);
-        }), n;
-    }(n, t), [
-        n,
-        t
+            t.splice((0, u.sortedIndexBy)(t, e, e => (0, o.Yr)(e)), 0, e);
+        }), t;
+    }(t, n), [
+        t,
+        n
     ]);
 }
-function _(e, t) {
-    let n = (0, d.M)(), o = (0, l.e7)([a.Z], () => n ? a.Z.getDesyncedUserIds(e) : null);
+function h(e, n) {
+    let t = (0, Z.M)(), u = (0, c.e7)([
+            d.Z,
+            f.Z
+        ], () => t && e === f.Z.getChannelId() ? d.Z.getDesyncedUserIds() : null);
     return r.useMemo(() => {
         let e = new Set();
-        return t.forEach(t => e.add(t)), null == o || o.forEach(t => e.add(t)), e;
+        return n.forEach(n => e.add(n)), null == u || u.forEach(n => e.add(n)), e;
     }, [
-        o,
-        t
+        u,
+        n
     ]);
 }
-function I(e, t) {
-    let n = (0, d.M)(), o = (0, l.e7)([i.default], () => i.default.getId() === t), u = (0, l.e7)([c.Z], () => c.Z.getChannelId()), a = r.useRef(null), [E, f] = r.useState(!1), [_, I] = r.useState(!1), C = (0, l.e7)([
-            c.Z,
-            s.Z
-        ], () => null != t && null != e && c.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && c.Z.isUserConnected(t)), h = (0, l.e7)([
-            c.Z,
-            s.Z
-        ], () => null != t && null != e && c.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
+function I(e, n) {
+    let t = (0, Z.M)(), u = (0, c.e7)([s.default], () => s.default.getId() === n), l = (0, c.e7)([f.Z], () => f.Z.getChannelId()), i = r.useRef(null), [o, a] = r.useState(!1), [d, E] = r.useState(!1), g = (0, c.e7)([
+            f.Z,
+            C.Z
+        ], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && f.Z.isUserConnected(n)), N = (0, c.e7)([
+            f.Z,
+            C.Z
+        ], () => null != n && null != e && f.Z.getChannelId() === e && null != C.Z.isInChannel(e, n) && !f.Z.isUserConnected(n));
     return r.useEffect(() => {
-        C && I(!0);
-    }, [C]), r.useEffect(() => {
-        u !== e && I(!1);
+        g && E(!0);
+    }, [g]), r.useEffect(() => {
+        l !== e && E(!1);
     }, [
         e,
-        u
-    ]), r.useEffect(() => (h && null == a.current ? a.current = setTimeout(() => {
-        a.current = null, f(!0);
-    }, 250) : (clearTimeout(a.current), a.current = null, f(!1)), () => {
-        clearTimeout(a.current), a.current = null;
-    }), [h]), n && !o && _ && E;
+        l
+    ]), r.useEffect(() => (N && null == i.current ? i.current = setTimeout(() => {
+        i.current = null, a(!0);
+    }, 250) : (clearTimeout(i.current), i.current = null, a(!1)), () => {
+        clearTimeout(i.current), i.current = null;
+    }), [N]), t && !u && d && o;
 }
