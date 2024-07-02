@@ -1,42 +1,42 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return O;
     }
-}), n(47120);
-var i = n(735250), a = n(470079), l = n(120356), s = n.n(l), r = n(442837), o = n(481060), c = n(239091), d = n(434650), u = n(213459), g = n(695346), p = n(594174), v = n(695103), m = n(880448), x = n(602623), I = n(810090), f = n(823379), _ = n(5192), h = n(624138), T = n(115130), C = n(147865), E = n(542094), S = n(665811), j = n(182906), N = n(556505), b = n(513202), A = n(823531), M = n(689938), Z = n(93679), y = n(969728);
+}), t(47120);
+var i = t(735250), a = t(470079), l = t(120356), s = t.n(l), r = t(442837), o = t(481060), c = t(239091), d = t(434650), u = t(213459), g = t(695346), p = t(594174), v = t(695103), m = t(880448), x = t(602623), I = t(810090), f = t(823379), _ = t(5192), h = t(624138), C = t(115130), T = t(147865), E = t(542094), S = t(665811), j = t(182906), N = t(556505), b = t(513202), M = t(823531), A = t(689938), Z = t(93679), y = t(969728);
 function D(e) {
     let {
-        value: t,
-        icon: n
+        value: n,
+        icon: t
     } = e;
     return (0, i.jsxs)(o.Text, {
         className: Z.activityTag,
         color: 'interactive-normal',
         variant: 'text-xs/semibold',
         children: [
-            (0, f.lm)(n) ? (0, i.jsx)(n, { className: Z.icon }) : null,
-            t
+            (0, f.lm)(t) ? (0, i.jsx)(t, { className: Z.icon }) : null,
+            n
         ]
     });
 }
 function L(e) {
     let {
-            activity: t,
-            application: n,
+            activity: n,
+            application: t,
             channel: a,
             guildId: l,
             large: s = !1
         } = e, c = (0, r.Wu)([p.default], () => {
             var e;
-            return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
-                let [t] = e;
-                return p.default.getUser(t);
+            return Array.from(null !== (e = null == n ? void 0 : n.userIds) && void 0 !== e ? e : []).map(e => {
+                let [n] = e;
+                return p.default.getUser(n);
             }).filter(f.lm);
         }), d = _.ZP.getName(l, null == a ? void 0 : a.id, null == c ? void 0 : c[0]);
-    if (d = (0, h.aF)(d, 15), null == t || 0 === c.length) {
+    if (d = (0, h.aF)(d, 15), null == n || 0 === c.length) {
         var u, g;
-        let e = ''.concat((0, C.Z)(null !== (u = n.maxParticipants) && void 0 !== u ? u : 0));
-        return s && (e = null !== (g = n.description) && void 0 !== g ? g : ''), (0, i.jsx)(o.Text, {
+        let e = ''.concat((0, T.Z)(null !== (u = t.maxParticipants) && void 0 !== u ? u : 0));
+        return s && (e = null !== (g = t.description) && void 0 !== g ? g : ''), (0, i.jsx)(o.Text, {
             className: Z.activitySubtitleText,
             variant: 'text-xs/normal',
             color: 'interactive-normal',
@@ -49,10 +49,10 @@ function L(e) {
             (0, i.jsx)(o.Text, {
                 className: Z.usersArePlayingText,
                 variant: 'text-xs/normal',
-                children: c.length > 1 ? M.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                children: c.length > 1 ? A.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
                     username: d,
                     count: c.length - 1
-                }) : M.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: d })
+                }) : A.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({ username: d })
             }),
             (0, i.jsx)(x.Z, {
                 size: s ? x.u.SIZE_24 : x.u.SIZE_16,
@@ -64,9 +64,9 @@ function L(e) {
     });
 }
 function O(e) {
-    var t;
+    var n;
     let {
-            activityItem: n,
+            activityItem: t,
             channel: l,
             guildId: p,
             locationObject: x,
@@ -80,26 +80,26 @@ function O(e) {
             joinableEmbeddedApp: R,
             onActivityItemSelected: k,
             labelType: H,
-            staffReleasePhase: P
+            staffReleasePhase: F
         } = (0, E.ZP)({
-            activityItem: n,
+            activityItem: t,
             channel: l,
             guildId: p,
             locationObject: x,
             onActivityItemVisible: f,
             onActivityItemSelected: _,
             embeddedActivitiesManager: b.Z
-        }), F = (0, r.e7)([
-            T.Z,
+        }), P = (0, r.e7)([
+            C.Z,
             v.Z
-        ], () => T.Z.inDevModeForApplication(n.application.id) || v.Z.inTestModeForApplication(n.application.id), [n.application.id]), {application: U} = n, Y = a.useCallback(e => e && (null == f ? void 0 : f({ applicationId: n.application.id })), [
-            n.application.id,
+        ], () => C.Z.inDevModeForApplication(t.application.id) || v.Z.inTestModeForApplication(t.application.id), [t.application.id]), {application: U} = t, Y = a.useCallback(e => e && (null == f ? void 0 : f({ applicationId: t.application.id })), [
+            t.application.id,
             f
         ]), w = (0, d.O)(Y, 0.8, !0), [G, W] = a.useState(!1), [z, q] = a.useState(G);
     a.useEffect(() => {
         G && q(!0);
     }, [G]);
-    let J = () => W(!0), K = () => W(!1), X = g.Sb.useSetting(), $ = a.useCallback(() => {
+    let J = () => W(!0), K = () => W(!1), $ = g.Sb.useSetting(), X = a.useCallback(() => {
             null == k || k(), u.ZP.maybeQueryForInstallLessApps(U.id, null == l ? void 0 : l.id);
         }, [
             U.id,
@@ -107,9 +107,9 @@ function O(e) {
             k
         ]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: V === E.JS.START ? $ : void 0,
-        onContextMenu: X ? e => {
-            (0, c.vq)(e, e => (0, i.jsx)(A.Z, {
+        onClick: V === E.JS.START ? X : void 0,
+        onContextMenu: $ ? e => {
+            (0, c.vq)(e, e => (0, i.jsx)(M.Z, {
                 application: U,
                 ...e
             }));
@@ -146,7 +146,7 @@ function O(e) {
                     }) : null,
                     V !== E.JS.START ? (0, i.jsx)(S.U, {
                         action: V,
-                        onClick: $
+                        onClick: X
                     }) : null,
                     (0, i.jsx)('div', {
                         className: Z.overlayBadge,
@@ -158,8 +158,8 @@ function O(e) {
                             })
                         })
                     }),
-                    F ? (0, i.jsx)(o.Tooltip, {
-                        text: M.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
+                    P ? (0, i.jsx)(o.Tooltip, {
+                        text: A.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
                         children: e => (0, i.jsx)('div', {
                             className: Z.devShelfBadge,
                             ...e,
@@ -175,7 +175,7 @@ function O(e) {
                         className: Z.activityMaxParticipantsLarge,
                         variant: 'text-xs/normal',
                         color: 'interactive-normal',
-                        children: (0, C.Z)(null !== (t = U.maxParticipants) && void 0 !== t ? t : 0)
+                        children: (0, T.Z)(null !== (n = U.maxParticipants) && void 0 !== n ? n : 0)
                     }) : null,
                     (0, i.jsxs)('div', {
                         className: Z.activityName,
@@ -186,11 +186,11 @@ function O(e) {
                                 color: 'interactive-active',
                                 children: U.name
                             }),
-                            null != P ? (0, i.jsx)(o.Tooltip, {
-                                text: P,
+                            null != F ? (0, i.jsx)(o.Tooltip, {
+                                text: F,
                                 children: e => (0, i.jsx)('img', {
                                     className: Z.staffBadge,
-                                    alt: P,
+                                    alt: F,
                                     src: y,
                                     ...e
                                 })

@@ -1,16 +1,16 @@
 n(47120);
-var a = n(979590), r = n.n(a), o = n(399606), l = n(607070), i = n(168631);
+var r = n(979590), a = n.n(r), o = n(399606), l = n(607070), i = n(168631);
 let s = (e, t) => {
-        let n = e.toRgb(), a = t.toRgb(), [o, l, s] = (0, i.J2)([
+        let n = e.toRgb(), r = t.toRgb(), [o, l, s] = (0, i.J2)([
                 n.r,
                 n.g,
                 n.b
             ], [
-                a.r,
-                a.g,
-                a.b
+                r.r,
+                r.g,
+                r.b
             ], 50);
-        return r()({
+        return a()({
             r: o,
             g: l,
             b: s
@@ -36,12 +36,12 @@ let s = (e, t) => {
     }, u = (e, t) => {
         let {
             h: n,
-            s: a,
+            s: r,
             l: o
         } = e.toHsl();
-        return r()({
+        return a()({
             h: n,
-            s: a * t,
+            s: r * t,
             l: o
         });
     };
@@ -49,23 +49,23 @@ t.Z = e => t => {
     let n = (0, o.e7)([l.Z], () => l.Z.saturation);
     if (null == t)
         return {};
-    let a = {
+    let r = {
         backgroundColors: c(e, t.backgroundColors),
         buttonColors: d(e, t.buttonColors),
         confettiColors: t.confettiColors
     };
-    return 1 === n ? { ...a } : {
-        backgroundColors: null != a.backgroundColors ? {
-            primary: u(a.backgroundColors.primary, n),
-            secondary: u(a.backgroundColors.secondary, n),
-            border: u(a.backgroundColors.border, n),
-            label: u(a.backgroundColors.label, n)
+    return 1 === n ? { ...r } : {
+        backgroundColors: null != r.backgroundColors ? {
+            primary: u(r.backgroundColors.primary, n),
+            secondary: u(r.backgroundColors.secondary, n),
+            border: u(r.backgroundColors.border, n),
+            label: u(r.backgroundColors.label, n)
         } : void 0,
-        buttonColors: null != a.buttonColors ? {
-            primary: u(a.buttonColors.primary, n),
-            secondary: u(a.buttonColors.secondary, n),
-            text: u(a.buttonColors.text, n)
+        buttonColors: null != r.buttonColors ? {
+            primary: u(r.buttonColors.primary, n),
+            secondary: u(r.buttonColors.secondary, n),
+            text: u(r.buttonColors.text, n)
         } : void 0,
-        confettiColors: a.confettiColors.map(e => u(e, n))
+        confettiColors: r.confettiColors.map(e => u(e, n))
     };
 };

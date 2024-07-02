@@ -6,13 +6,13 @@ n.d(t, {
         return o;
     }
 }), n(724458), n(653041), n(47120);
-var a = n(470079), r = n(979554);
+var r = n(470079), a = n(979554);
 class o {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(r.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(a.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(r.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(a.Z.PROFILE_EFFECT);
     }
     getFirstItemByType(e) {
         var t;
@@ -27,20 +27,20 @@ class o {
         }, new Map());
     }
     constructor(e) {
-        var t, n, a;
-        t = this, a = void 0, (n = 'itemsByTypes') in t ? Object.defineProperty(t, n, {
-            value: a,
+        var t, n, r;
+        t = this, r = void 0, (n = 'itemsByTypes') in t ? Object.defineProperty(t, n, {
+            value: r,
             enumerable: !0,
             configurable: !0,
             writable: !0
-        }) : t[n] = a, this.itemsByTypes = this.sortByTypes(e);
+        }) : t[n] = r, this.itemsByTypes = this.sortByTypes(e);
     }
 }
 let l = e => {
     let {
         firstProfileEffect: t,
         firstAvatarDecoration: n
-    } = a.useMemo(() => new o(e.items), [e]);
+    } = r.useMemo(() => new o(e.items), [e]);
     return {
         firstProfileEffect: t,
         firstAvatarDecoration: n

@@ -1,24 +1,24 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return o;
     }
 });
-var i = n(735250);
-n(470079);
-var a = n(481060), l = n(239091), s = n(299206), r = n(689938);
+var i = t(735250);
+t(470079);
+var a = t(481060), l = t(239091), s = t(299206), r = t(689938);
 function o(e) {
     let {
-            application: t,
-            onSelect: n
+            application: n,
+            onSelect: t
         } = e, o = (0, s.Z)({
-            id: t.id,
+            id: n.id,
             label: r.Z.Messages.COPY_ID
         });
     return (0, i.jsx)(a.Menu, {
         navId: 'activity-shelf-item-context',
         onClose: l.Zy,
         'aria-label': r.Z.Messages.ACTIVITY_SHELF_ITEM_ACTIONS_MENU_LABEL,
-        onSelect: n,
+        onSelect: t,
         children: (0, i.jsx)(a.MenuGroup, { children: o }, 'developer-actions')
     });
 }
