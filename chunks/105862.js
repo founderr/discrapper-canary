@@ -3,7 +3,7 @@ t.d(n, {
         return E;
     }
 });
-var i = t(735250), l = t(470079), a = t(780384), r = t(481060), s = t(410030), o = t(782568), c = t(63063), u = t(981631), d = t(689938), m = t(427010), p = t(983008), _ = t(478408);
+var i = t(735250), l = t(470079), a = t(780384), r = t(481060), s = t(410030), o = t(782568), c = t(63063), u = t(981631), d = t(689938), m = t(720123), p = t(983008), _ = t(478408);
 function E() {
     let e = (0, s.ZP)(), n = (0, a.ap)(e) ? _ : p, t = l.useCallback(() => {
             (0, o.Z)(c.Z.getArticleURL(u.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));

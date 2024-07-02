@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), l = n(607187), s = n(112560), r = n(981631), o = n(689938), c = n(299993), d = n(800350);
+var a = n(481060), l = n(607187), s = n(112560), r = n(981631), o = n(689938), c = n(194791), d = n(800350);
 function u(e) {
     let {
         channel: t,
@@ -22,7 +22,7 @@ function u(e) {
             onCTAClick: () => (0, a.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     n.e('7654'),
-                    n.e('17520')
+                    n.e('39405')
                 ]).then(n.bind(n, 560114));
                 return n => (0, i.jsx)(e, {
                     ...n,

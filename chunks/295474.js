@@ -3,10 +3,10 @@ n.d(t, {
         return N;
     },
     gS: function () {
-        return p;
+        return f;
     },
     ww: function () {
-        return f;
+        return p;
     }
 }), n(789020);
 var i = n(470079), a = n(399606), s = n(230711), l = n(906732), r = n(18438), o = n(314897), c = n(271383), d = n(430824), u = n(496675), _ = n(914010), E = n(715903), m = n(981631), I = n(372897), T = n(526761), h = n(689938);
@@ -21,7 +21,7 @@ function N(e) {
         return (0, E.EY)(c.ZP.getMember(e, t));
     }, [e]);
 }
-function p(e) {
+function f(e) {
     return (0, a.cj)([
         o.default,
         c.ZP,
@@ -47,7 +47,7 @@ function p(e) {
         return r.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t;
     }, [e]);
 }
-function f(e) {
+function p(e) {
     let {
             guildId: t,
             scrollPosition: n,

@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(433517), c = n(481060), d = n(304761), u = n(865427), _ = n(820254), E = n(689938), h = n(184376);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(433517), c = n(481060), d = n(304761), u = n(865427), _ = n(820254), E = n(689938), h = n(906515);
 let I = 'isHideDevBanner';
 t.Z = () => {
     var e;
@@ -32,7 +32,7 @@ t.Z = () => {
         className: r()(h.devBanner, h.staging),
         children: [
             (0, i.jsx)(_.Z, { className: h.icon }),
-            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '306865' }),
+            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '306923' }),
             (0, i.jsx)(g, {})
         ]
     }) : null;

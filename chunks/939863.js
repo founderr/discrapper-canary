@@ -1,29 +1,29 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = t(735250);
 t(470079);
-var c = t(120356), r = t.n(c), l = t(689938), a = t(620725), u = t(296507), o = t(866402);
-function d(e) {
+var l = t(120356), s = t.n(l), a = t(689938), r = t(739720), c = t(296507), o = t(866402);
+function u(n) {
     let {
-        className: n,
+        className: e,
         children: t
-    } = e;
+    } = n;
     return (0, i.jsxs)('div', {
-        className: r()(a.container, n),
+        className: s()(r.container, e),
         children: [
             (0, i.jsx)('img', {
-                alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+                alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
                 src: o,
-                className: r()(a.sparkleIcon, a.sparkleBottom)
+                className: s()(r.sparkleIcon, r.sparkleBottom)
             }),
             t,
             (0, i.jsx)('img', {
-                alt: l.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-                src: u,
-                className: r()(a.sparkleIcon, a.sparkleTop)
+                alt: a.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+                src: c,
+                className: s()(r.sparkleIcon, r.sparkleTop)
             })
         ]
     });

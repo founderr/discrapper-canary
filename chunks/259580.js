@@ -1,6 +1,6 @@
 var r = n(735250);
 n(470079);
-var i = n(120356), a = n.n(i), o = n(481060), s = n(325767), l = n(418601);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(325767), l = n(509682);
 let u = {
         UP: l.directionUp,
         RIGHT: l.directionRight,

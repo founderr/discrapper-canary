@@ -1,5 +1,5 @@
 var i, a, s, l, r = n(913527), o = n.n(r), c = n(442837), d = n(846519), u = n(570140), _ = n(594190), E = n(569545), m = n(314897), I = n(70956), T = n(960359), h = n(853197), N = n(702512);
-let p = null, f = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = new d.V7(), x = {
+let f = null, p = null, C = {}, g = {}, S = N._e.LOADING_INITIAL_PROGRESS, A = new d.V7(), x = {
         completed: !1,
         initialProgressFetched: !1,
         interrupted: !1,
@@ -32,19 +32,19 @@ class v extends (l = c.ZP.Store) {
     getIsPartnerGameQuestComplete(e) {
         var t;
         let n = (0, h.BS)(e);
-        if (null == n || null == f)
+        if (null == n || null == p)
             return !1;
-        let i = !!(null === (t = f[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
+        let i = !!(null === (t = p[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
         return x.completed && x.gameTitle === n.title || i;
     }
     get serverEligibleByQuestIds() {
         return C;
     }
     get platformAvailability() {
-        return p;
+        return f;
     }
     get userStatus() {
-        return f;
+        return p;
     }
     get activityPanelTooltipAction() {
         return S;
@@ -82,14 +82,14 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
         C[e.dropsQuestId] = e.isEligible;
     },
     DROPS_PLATFORM_AVAILABILITY_SUCCESS: e => {
-        p = e.availablePlatforms.filter(e => N.El.includes(e));
+        f = e.availablePlatforms.filter(e => N.El.includes(e));
     },
     DROPS_USER_STATUS_FETCH_SUCCESS: e => {
         var t;
-        f = null !== (t = e.codes) && void 0 !== t ? t : {};
+        p = null !== (t = e.codes) && void 0 !== t ? t : {};
     },
     DROPS_USER_STATUS_FETCH_FAILURE: e => {
-        f = {};
+        p = {};
     },
     DROPS_ENROLLED_USER_FETCH_SUCCESS: e => {
         g[e.dropsQuestId] = {
@@ -117,7 +117,7 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
         S = N._e.STREAM_CTA, 403 === n ? C[t] = !1 : x.interrupted = !0;
     },
     DROPS_UNENROLL_USER: e => {
-        f = null, C = { ...C }, delete C[e.dropsQuestId], g = { ...g }, delete g[e.dropsQuestId], x.dropsQuestId === e.dropsQuestId && (x = {
+        p = null, C = { ...C }, delete C[e.dropsQuestId], g = { ...g }, delete g[e.dropsQuestId], x.dropsQuestId === e.dropsQuestId && (x = {
             completed: !1,
             initialProgressFetched: !1,
             interrupted: !1,
@@ -161,6 +161,6 @@ s = 'DropsStore', (a = 'displayName') in (i = v) ? Object.defineProperty(i, a, {
         });
     },
     LOGOUT: function () {
-        C = {}, g = {}, f = {}, A.stop();
+        C = {}, g = {}, p = {}, A.stop();
     }
 });

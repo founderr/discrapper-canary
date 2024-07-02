@@ -9,13 +9,13 @@ n.d(t, {
         return S;
     },
     FL: function () {
-        return f;
+        return p;
     },
     R9: function () {
         return I;
     },
     Tn: function () {
-        return p;
+        return f;
     },
     Un: function () {
         return x;
@@ -80,7 +80,7 @@ function N(e, t) {
     let {endDate: n} = e, i = a()(), s = a()(n, d.fS), l = a()(i.clone().add(e.dropsNoticeBannerDurationDays, 'days').format(d.fS)), r = s.isSameOrBefore(l), o = s.isBefore(i, 'minute');
     return r && (t && !o || !t && o);
 }
-function p(e) {
+function f(e) {
     var t;
     let n = g(e);
     if (null == n || !(null === (t = _(e)) || void 0 === t ? void 0 : t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 }).dropsEnabled))
@@ -88,7 +88,7 @@ function p(e) {
     let i = l.bh.getSetting(), a = N(n, !0);
     return !i && a;
 }
-function f(e) {
+function p(e) {
     var t, n;
     let i = g(e);
     if (null == i || !(null === (n = _(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({ location: '2' }, { autoTrackExposure: !1 })) || void 0 === t ? void 0 : t.dropsEnabled))

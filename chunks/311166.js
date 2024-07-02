@@ -5,7 +5,7 @@ l.d(n, {
 });
 var s = l(735250);
 l(470079);
-var a = l(481060), t = l(195367), i = l(689938), r = l(860355);
+var a = l(481060), t = l(195367), i = l(689938), r = l(206205);
 function o(e) {
     let {
         isSlideReady: n,

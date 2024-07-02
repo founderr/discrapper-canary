@@ -9,19 +9,19 @@ t.d(n, {
         return f;
     }
 });
-var o = t(735250), r = t(470079), a = t(120356), i = t.n(a), s = t(481060), l = t(489813), c = t(707592), u = t(953136);
+var o = t(735250), r = t(470079), i = t(120356), a = t.n(i), s = t(481060), l = t(489813), c = t(707592), u = t(902681);
 function d(e) {
     let {
             disabled: n,
             field: t,
-            value: a,
+            value: i,
             radioItemClassName: l,
             radioItemIconClassName: c,
             onChange: d
         } = e, {choices: m} = t, f = r.useMemo(() => m.map((e, n) => ({
             name: e,
             value: n,
-            radioItemIconClassName: i()(u.multipleChoiceIcon, c)
+            radioItemIconClassName: a()(u.multipleChoiceIcon, c)
         })), [
             m,
             c
@@ -29,7 +29,7 @@ function d(e) {
     return (0, o.jsx)(s.RadioGroup, {
         disabled: n,
         options: f,
-        value: a,
+        value: i,
         onChange: d,
         radioItemClassName: l,
         withTransparentBackground: !0

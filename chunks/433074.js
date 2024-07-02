@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(873546), l = n(399606), r = n(481060), o = n(434650), c = n(706454), d = n(973616), u = n(914010), _ = n(594174), E = n(197409), m = n(626135), I = n(135431), T = n(674588), h = n(264043), N = n(132871), p = n(147890), f = n(981631), C = n(689938), g = n(938979);
+var i = n(735250), a = n(470079), s = n(873546), l = n(399606), r = n(481060), o = n(434650), c = n(706454), d = n(973616), u = n(914010), _ = n(594174), E = n(197409), m = n(626135), I = n(135431), T = n(674588), h = n(264043), N = n(132871), f = n(147890), p = n(981631), C = n(689938), g = n(916718);
 function S(e) {
     var t, n;
     let {
@@ -22,7 +22,7 @@ function S(e) {
     a.useEffect(() => {
         (0, T.gZ)(S);
     }, [S]), a.useEffect(() => {
-        Z && R === h.M.FETCHED && m.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+        Z && R === h.M.FETCHED && m.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
             application_id: S,
             device_platform: s.tq ? 'mobile_web' : 'desktop_web',
             sender_user_id: A.author.id,
@@ -38,7 +38,7 @@ function S(e) {
         A.author.id,
         R
     ]), a.useEffect(() => {
-        Z && O && m.default.track(f.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+        Z && O && m.default.track(p.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
             device_platform: s.tq ? 'mobile_web' : 'desktop_web',
             sender_user_id: A.author.id,
             guild_id: v,
@@ -52,13 +52,13 @@ function S(e) {
         A.channel_id
     ]);
     let j = e => {
-        m.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+        m.default.track(p.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: S,
             device_platform: s.tq ? 'mobile_web' : 'desktop_web',
             clicked_section: e,
             guild_id: v,
             channel_id: A.channel_id
-        }), (0, p.goToAppDirectory)({
+        }), (0, f.goToAppDirectory)({
             view: N.ApplicationDirectoryViews.APPLICATION,
             guildId: v,
             applicationId: S,

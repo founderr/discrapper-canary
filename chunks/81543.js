@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     }
 });
-var s, a, i = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(748780), d = n(215569), u = n(228119);
+var s, a, i = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(748780), d = n(215569), u = n(907515);
 (s = a || (a = {}))[s.RIGHT = -1] = 'RIGHT', s[s.LEFT = 1] = 'LEFT';
 let _ = {
     friction: 10,

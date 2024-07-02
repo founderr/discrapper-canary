@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var l = n(831209), r = n(481060), a = n(667863);
+var l = n(831209), r = n(481060), a = n(588065);
 function s(e) {
     let {mentionsCount: t} = e;
     return (0, i.jsx)('div', {

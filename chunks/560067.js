@@ -2,7 +2,7 @@ t.Z = {
     openCreateGuildModal: e => {
         Promise.all([
             n.e('42483'),
-            n.e('13243')
+            n.e('59193')
         ]).then(n.bind(n, 635703)).then(t => {
             let {openCreateGuildModal: n} = t;
             return n(e);
@@ -11,7 +11,7 @@ t.Z = {
     updateCreateGuildModal: e => {
         Promise.all([
             n.e('42483'),
-            n.e('13243')
+            n.e('59193')
         ]).then(n.bind(n, 635703)).then(t => {
             let {updateCreateGuildModal: n} = t;
             return n(e);

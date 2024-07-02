@@ -5,7 +5,7 @@ n.d(t, {
 });
 var a = n(735250);
 n(470079);
-var r = n(481060), i = n(563190);
+var r = n(481060), i = n(696487);
 function o(e) {
     var t;
     let {attachment: n} = e, o = Math.round((null !== (t = n.size) && void 0 !== t ? t : 0) / 1024 / 1024 * 100) / 100;

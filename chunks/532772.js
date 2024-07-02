@@ -31,7 +31,7 @@ let o = {
             play: t,
             Component: i.useCallback(t => (0, r.jsx)(a.L, {
                 ...t,
-                src: () => n.e('36995').then(n.t.bind(n, 737962, 19)),
+                src: () => n.e('36995').then(n.t.bind(n, 940053, 19)),
                 ref: e,
                 markers: o
             }), [])

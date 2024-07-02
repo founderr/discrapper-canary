@@ -1,9 +1,9 @@
-t.d(n, {
+n.d(t, {
     wj: function () {
-        return r;
+        return a;
     }
 });
-let i = (0, t(818083).B)({
+let s = (0, n(818083).B)({
     kind: 'user',
     id: '2024-05_premium_tier_cards_experiment',
     label: 'Test tier card position and content modifications',
@@ -46,13 +46,13 @@ let i = (0, t(818083).B)({
         }
     ]
 });
-function r(e) {
+function a(e) {
     let {
-        enabled: n,
-        bucket: t
-    } = i.useExperiment({ location: e }, { autoTrackExposure: !0 });
+        enabled: t,
+        bucket: n
+    } = s.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return {
-        enabled: n,
-        bucket: t
+        enabled: t,
+        bucket: n
     };
 }

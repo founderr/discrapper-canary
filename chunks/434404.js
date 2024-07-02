@@ -25,17 +25,17 @@ let A = new s.Z('GuildSettingsActionCreators'), N = {
                 n.e('48486'),
                 n.e('44156'),
                 n.e('90508'),
-                n.e('33009'),
+                n.e('71700'),
                 n.e('85552'),
                 n.e('58227'),
                 n.e('3084'),
-                n.e('75291'),
-                n.e('13296'),
+                n.e('10926'),
+                n.e('21811'),
                 n.e('1187'),
-                n.e('23629'),
+                n.e('55400'),
                 n.e('92557'),
                 n.e('36439'),
-                n.e('32966')
+                n.e('40865')
             ]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(T.oNc.COMMUNITY)) && (t === T.pNK.GUILD_AUTOMOD && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_AUTOMOD), t === T.pNK.MEMBER_VERIFICATION && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), N.init(e, t, r, i);
             (0, o.jN)(T.S9g.GUILD_SETTINGS);
         },

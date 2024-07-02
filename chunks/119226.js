@@ -5,7 +5,7 @@ s.d(n, {
 }), s(627341);
 var l = s(735250);
 s(470079);
-var i = s(278074), t = s(979554), r = s(481060), a = s(1585), c = s(125988), o = s(583434), u = s(479446), d = s(981632), _ = s(731896), m = s(680295), I = s(998502), E = s(987209), p = s(689938), N = s(463597), T = s(241822);
+var i = s(278074), t = s(979554), r = s(481060), a = s(1585), c = s(125988), o = s(583434), u = s(479446), d = s(981632), _ = s(731896), m = s(680295), I = s(998502), E = s(987209), p = s(689938), N = s(578599), T = s(241822);
 let S = I.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 function x(e) {
     let {avatarDecoration: n} = e, {

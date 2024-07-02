@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var l = n(120356), r = n.n(l), a = n(481060), s = n(583393);
+var l = n(120356), r = n.n(l), a = n(481060), s = n(754577);
 function o(e) {
     let {
         total: t,

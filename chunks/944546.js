@@ -8,7 +8,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(239091), r = n(129861), o = n(906732), c = n(158776), d = n(785717), u = n(726059), h = n(171368), p = n(981631), m = n(689938), _ = n(667589);
+var a = n(442837), l = n(481060), s = n(239091), r = n(129861), o = n(906732), c = n(158776), d = n(785717), u = n(726059), h = n(171368), p = n(981631), m = n(689938), _ = n(735393);
 let f = (0, l.getAvatarSize)(l.AvatarSizes.SIZE_40);
 function E(e) {
     let {
@@ -24,7 +24,7 @@ function E(e) {
                 let {default: e} = await Promise.all([
                     n.e('79695'),
                     n.e('17400'),
-                    n.e('61035')
+                    n.e('13806')
                 ]).then(n.bind(n, 881351));
                 return n => (0, i.jsx)(e, {
                     ...n,

@@ -1,66 +1,66 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
         return c;
     }
 });
-var t = i(735250);
-i(470079);
-var a = i(120356), r = i.n(a), o = i(481060), l = i(422559), s = i(209945);
+var i = t(735250);
+t(470079);
+var a = t(120356), s = t.n(a), l = t(481060), o = t(422559), r = t(913206);
 function c(e) {
     let {
         grantedPermissions: n,
-        disabledPermissions: i,
+        disabledPermissions: t,
         grantedPermissionsHeader: a,
         disabledPermissionsHeader: c,
         className: d
     } = e;
-    return (0, t.jsxs)('div', {
-        className: r()(s.list, d),
+    return (0, i.jsxs)('div', {
+        className: s()(r.list, d),
         children: [
-            null != n && n.length > 0 ? (0, t.jsxs)(t.Fragment, {
+            null != n && n.length > 0 ? (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != a ? (0, t.jsx)(o.FormTitle, {
-                        className: s.permissionHeader,
+                    null != a ? (0, i.jsx)(l.FormTitle, {
+                        className: r.permissionHeader,
                         children: a
                     }) : null,
-                    (0, t.jsx)('div', {
-                        className: s.container,
-                        children: n.map(e => (0, t.jsxs)('div', {
-                            className: s.permission,
+                    (0, i.jsx)('div', {
+                        className: r.container,
+                        children: n.map(e => (0, i.jsxs)('div', {
+                            className: r.permission,
                             children: [
-                                (0, t.jsx)(o.CheckmarkLargeIcon, {
+                                (0, i.jsx)(l.CheckmarkLargeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: s.check
+                                    className: r.check
                                 }),
-                                (0, t.jsx)(o.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
-                                    children: (0, l.wt)(e)
+                                    children: (0, o.wt)(e)
                                 })
                             ]
                         }, e.toString()))
                     })
                 ]
             }) : null,
-            null != i && i.length > 0 ? (0, t.jsxs)(t.Fragment, {
+            null != t && t.length > 0 ? (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != c ? (0, t.jsx)(o.FormTitle, {
-                        className: s.permissionHeader,
+                    null != c ? (0, i.jsx)(l.FormTitle, {
+                        className: r.permissionHeader,
                         children: c
                     }) : null,
-                    (0, t.jsx)('div', {
-                        className: s.container,
-                        children: i.map(e => (0, t.jsxs)('div', {
-                            className: s.permission,
+                    (0, i.jsx)('div', {
+                        className: r.container,
+                        children: t.map(e => (0, i.jsxs)('div', {
+                            className: r.permission,
                             children: [
-                                (0, t.jsx)(o.CloseSmallIcon, {
+                                (0, i.jsx)(l.CloseSmallIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: s.cross
+                                    className: r.cross
                                 }),
-                                (0, t.jsx)(o.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
-                                    children: (0, l.wt)(e)
+                                    children: (0, o.wt)(e)
                                 })
                             ]
                         }, e.toString()))

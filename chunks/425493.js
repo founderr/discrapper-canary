@@ -1,6 +1,6 @@
 var r, i, a = n(735250);
 n(470079);
-var o = n(120356), s = n.n(o), l = n(873546), u = n(481060), c = n(689938), d = n(375515);
+var o = n(120356), s = n.n(o), l = n(873546), u = n(481060), c = n(689938), d = n(580933);
 (r = i || (i = {})).DEFAULT = '', r.BOLD = 'Bold', r.SOLID = 'Solid';
 let _ = e => {
     let {

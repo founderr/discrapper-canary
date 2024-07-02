@@ -1,17 +1,17 @@
 n.d(t, {
     H: function () {
-        return p;
+        return f;
     }
 });
 var i = n(735250);
 n(470079);
 var a = n(399606), s = n(166081), l = n(54797), r = n(674180), o = n(430824), c = n(572004), d = n(267101), u = n(863663), _ = n(676651), E = n(623488), m = n(942833), I = n(391181), T = n(964793), h = n(226060), N = n(981631);
-function p(e) {
+function f(e) {
     let {
             guildProductListing: t,
             guildId: n,
-            location: p,
-            shouldShowFullDescriptionButton: f = !0,
+            location: f,
+            shouldShowFullDescriptionButton: p = !0,
             hideRoleTag: C = !1,
             lineClamp: g = 1,
             cardWidth: S,
@@ -28,7 +28,7 @@ function p(e) {
     let j = () => (0, T.e)({
             guildId: n,
             guildProductListingId: t.id,
-            analyticsLocation: p
+            analyticsLocation: f
         }), U = (0, i.jsx)(I.m, {
             product: t,
             guildId: n,
@@ -64,10 +64,10 @@ function p(e) {
         ctaComponent: (0, i.jsx)(h.Z, {
             guildId: n,
             guildProductListingId: t.id,
-            sourceAnalyticsLocations: p
+            sourceAnalyticsLocations: f
         }),
         productType: Z,
-        shouldShowFullDescriptionButton: f,
+        shouldShowFullDescriptionButton: p,
         onShowFullDescription: j,
         onTapCard: j,
         actionMenu: U,

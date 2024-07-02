@@ -5,7 +5,7 @@ n.d(i, {
 });
 var o = n(735250);
 n(470079);
-var t = n(120356), r = n.n(t), a = n(797717), l = n(471885), s = n(981631), c = n(841821);
+var t = n(120356), r = n.n(t), a = n(797717), l = n(471885), s = n(981631), c = n(534457);
 let d = {
         [s.Eu4.NONE]: c.iconBackgroundTierNone,
         [s.Eu4.TIER_1]: c.iconBackgroundTierOne,

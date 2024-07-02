@@ -1,15 +1,15 @@
-s(47120);
-var i = s(735250), n = s(470079), a = s(120356), l = s.n(a), r = s(802433), o = s(680295), d = s(895173), u = s(241822);
-t.Z = e => {
+t(47120);
+var i = t(735250), a = t(470079), r = t(120356), o = t.n(r), s = t(802433), l = t(680295), c = t(837618), d = t(241822);
+n.Z = e => {
     let {
-            profileEffectId: t,
-            isHovering: s,
-            forCollectedModal: a = !1,
-            isPurchased: c,
-            removeSetHeight: h = !1
-        } = e, p = a ? 250 : 0.1, [f, m] = n.useState(!0);
-    return (n.useEffect(() => {
-        if (!0 !== a)
+            profileEffectId: n,
+            isHovering: t,
+            forCollectedModal: r = !1,
+            isPurchased: u,
+            removeSetHeight: f = !1
+        } = e, p = r ? 250 : 0.1, [_, m] = a.useState(!0);
+    return (a.useEffect(() => {
+        if (!0 !== r)
             m(!1);
         else {
             let e = setTimeout(() => {
@@ -21,28 +21,28 @@ t.Z = e => {
         }
     }, [
         p,
-        a
-    ]), null != t) ? (0, i.jsxs)('div', {
-        className: l()(d.previewContainer, {
-            [d.previewContainerAnimation]: a,
-            [d.previewContainerSetHeight]: !h
+        r
+    ]), null != n) ? (0, i.jsxs)('div', {
+        className: o()(c.previewContainer, {
+            [c.previewContainerAnimation]: r,
+            [c.previewContainerSetHeight]: !f
         }),
         children: [
             (0, i.jsx)('img', {
-                src: u,
+                src: d,
                 alt: ' ',
-                className: a ? d.previewForCollected : d.preview,
+                className: r ? c.previewForCollected : c.preview,
                 'aria-hidden': !0
             }),
-            !f && (0, i.jsx)('div', {
-                className: c ? d.purchasedEffect : void 0,
-                children: (0, i.jsx)(o.Z, {
-                    profileEffectId: t,
+            !_ && (0, i.jsx)('div', {
+                className: u ? c.purchasedEffect : void 0,
+                children: (0, i.jsx)(l.Z, {
+                    profileEffectId: n,
                     useThumbnail: !0,
-                    autoPlay: a,
-                    restartMethod: r.j.FromStart,
+                    autoPlay: r,
+                    restartMethod: s.j.FromStart,
                     resetOnHover: !0,
-                    isHovering: s,
+                    isHovering: t,
                     introDelay: p,
                     useOpacityOnHover: !1,
                     shopPreview: !0

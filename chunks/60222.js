@@ -1,17 +1,17 @@
-_.d(S, {
+o.d(t, {
     A: function () {
-        return O;
+        return a;
     },
     m: function () {
-        return A;
+        return d;
     }
-}), _(47120);
-var I = _(442837), N = _(430824), R = _(981631);
-function O(E) {
-    var S;
-    let [_] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [N.Z];
-    return !!(null === (S = _.getGuild(E)) || void 0 === S ? void 0 : S.hasFeature(R.oNc.COMMUNITY));
+}), o(47120);
+var n = o(442837), r = o(430824), i = o(981631);
+function a(e) {
+    var t;
+    let [o] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Z];
+    return !!(null === (t = o.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(i.oNc.COMMUNITY));
 }
-function A(E) {
-    return (0, I.e7)([N.Z], () => O(E, [N.Z]), [E]);
+function d(e) {
+    return (0, n.e7)([r.Z], () => a(e, [r.Z]), [e]);
 }

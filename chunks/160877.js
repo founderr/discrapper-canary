@@ -6,24 +6,24 @@ n.d(t, {
         return C;
     }
 });
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(470167), o = n(481060), c = n(572691), d = n(406432), u = n(584656), _ = n(153124), E = n(810090), m = n(163268), I = n(719548), T = n(689938), h = n(344898);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(470167), o = n(481060), c = n(572691), d = n(406432), u = n(584656), _ = n(153124), E = n(810090), m = n(163268), I = n(719548), T = n(689938), h = n(246829);
 let N = e => {
         let {attachment: t} = e, {
                 url: n,
                 description: a
             } = t;
-        return null == n ? null : (0, i.jsx)(f, {
+        return null == n ? null : (0, i.jsx)(p, {
             url: n,
             description: a
         });
-    }, p = e => {
+    }, f = e => {
         var t, n, a;
         let {embed: s} = e;
         if (!I.n2.has(s.type))
             return null;
         let l = void 0 !== s.video && s.type !== r.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
-        return null == l ? null : (0, i.jsx)(f, { url: l });
-    }, f = e => {
+        return null == l ? null : (0, i.jsx)(p, { url: l });
+    }, p = e => {
         let {
                 url: t,
                 description: n
@@ -58,7 +58,7 @@ function g(e) {
             onConfirmPress: d,
             transitionState: u,
             onClose: E
-        } = e, I = (0, _.Dt)(), f = a.useCallback(() => {
+        } = e, I = (0, _.Dt)(), p = a.useCallback(() => {
             (0, m.aP)({
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
@@ -102,7 +102,7 @@ function g(e) {
             (0, i.jsxs)(o.ModalContent, {
                 children: [
                     (0, i.jsx)(o.ModalCloseButton, {
-                        onClick: f,
+                        onClick: p,
                         className: h.closeButton
                     }),
                     (0, i.jsx)(o.Heading, {
@@ -119,7 +119,7 @@ function g(e) {
                         children: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
                     }),
                     null != r && (0, i.jsx)(N, { attachment: r }),
-                    null != c && (0, i.jsx)(p, { embed: c })
+                    null != c && (0, i.jsx)(f, { embed: c })
                 ]
             }),
             (0, i.jsxs)(o.ModalFooter, {
@@ -138,7 +138,7 @@ function g(e) {
                         disabled: s,
                         color: o.Button.Colors.TRANSPARENT,
                         size: o.Button.Sizes.MEDIUM,
-                        onClick: f,
+                        onClick: p,
                         children: T.Z.Messages.CANCEL
                     })
                 ]

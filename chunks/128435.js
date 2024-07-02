@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 }), n(627341);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(278074), o = n(263568), c = n(481060), d = n(203143), u = n(365206), _ = n(294608), E = n(65145), m = n(920557), I = n(355957);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(278074), o = n(263568), c = n(481060), d = n(203143), u = n(365206), _ = n(294608), E = n(65145), m = n(920557), I = n(227905);
 function T(e) {
     let {media: t} = e;
     return (0, i.jsx)(c.Heading, {
@@ -68,7 +68,7 @@ function N(e) {
         ]
     });
 }
-function p(e) {
+function f(e) {
     let {
             action: t,
             channelId: n,
@@ -117,7 +117,7 @@ function p(e) {
         className: o
     });
 }
-function f(e) {
+function p(e) {
     let {
             message: t,
             poll: n,
@@ -156,20 +156,20 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: I.bottomBar,
                     children: [
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(f, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
                             action: n.secondaryAction,
                             className: I.secondaryAction,
                             isInteractive: n.isInteractive
                         }),
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(f, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
                             action: n.tertiaryAction,
                             className: I.tertiaryAction
                         }),
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(f, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
                             action: n.primaryAction
@@ -190,7 +190,7 @@ function C(e) {
         message: t,
         poll: n,
         children: (0, i.jsx)(E.Pk, {
-            children: (0, i.jsx)(f, {
+            children: (0, i.jsx)(p, {
                 message: t,
                 poll: n,
                 className: a

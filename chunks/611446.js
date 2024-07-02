@@ -3,7 +3,7 @@ s.r(t), s.d(t, {
         return o;
     }
 }), s(47120);
-var o, T, n = s(735250), a = s(470079), l = s(481060), i = s(285952), r = s(367408), _ = s(473092), S = s(419672), c = s(858597), E = s(486213), O = s(689938), d = s(20022);
+var o, T, n = s(735250), a = s(470079), l = s(481060), i = s(285952), r = s(367408), _ = s(473092), S = s(419672), c = s(858597), E = s(486213), O = s(689938), d = s(14188);
 (T = o || (o = {})).ACTIONS = 'ACTIONS', T.SAFETY_TIPS = 'SAFETY_TIPS', T.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS';
 t.default = e => {
     let {

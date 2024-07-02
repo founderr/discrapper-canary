@@ -1,10 +1,10 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
-        return a;
+        return u;
     }
 });
-var i = t(442837), u = t(314897), l = t(944486), r = t(590415);
-function a() {
-    let n = (0, i.e7)([l.Z], () => l.Z.getVoiceChannelId()), e = (0, i.e7)([u.default], () => u.default.getId());
-    return (0, r.ZP)(e, n) === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+var l = t(442837), i = t(314897), a = t(944486), r = t(590415);
+function u() {
+    let e = (0, l.e7)([a.Z], () => a.Z.getVoiceChannelId()), n = (0, l.e7)([i.default], () => i.default.getId());
+    return (0, r.ZP)(n, e) === r.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }

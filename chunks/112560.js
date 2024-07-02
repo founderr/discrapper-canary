@@ -8,7 +8,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(120356), a = n.n(i), o = n(481060), s = n(285952), l = n(349194);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(285952), l = n(720746);
 function u(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }

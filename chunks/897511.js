@@ -6,7 +6,7 @@ o.r(t), o.d(t, {
         return I;
     }
 }), o(315314), o(610138), o(216116), o(78328), o(815648), o(47120);
-var n = o(735250), a = o(470079), s = o(544891), r = o(481060), l = o(464179), i = o(479531), d = o(117938), c = o(981631), u = o(689938), _ = o(418729);
+var n = o(735250), a = o(470079), s = o(544891), r = o(481060), l = o(464179), i = o(479531), d = o(117938), c = o(981631), u = o(689938), _ = o(434438);
 function I(e, t) {
     let o = URL.createObjectURL(t), n = document.createElement('a');
     n.href = o, n.download = 'receipt_'.concat(e, '.pdf'), document.body.appendChild(n), n.click(), document.body.removeChild(n), URL.revokeObjectURL(o);

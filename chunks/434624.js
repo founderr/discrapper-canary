@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(866442), o = n(596454), c = n(434650), d = n(56314), u = n(18732), _ = n(566006), E = n(287151), m = n(704963), I = n(667671);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(866442), o = n(596454), c = n(434650), d = n(56314), u = n(18732), _ = n(566006), E = n(287151), m = n(716862), I = n(372178);
 let T = a.memo(function (e) {
         let t, n, {
                 useChatFontScaling: a,
@@ -12,15 +12,15 @@ let T = a.memo(function (e) {
                 className: T,
                 count: h,
                 me: N,
-                me_burst: p,
-                burst_count: f,
+                me_burst: f,
+                burst_count: p,
                 burst_colors: C,
                 readOnly: g,
                 isLurking: S,
                 isGuest: A,
                 isPendingMember: x,
                 type: O
-            } = e, R = O === _.O.BURST, M = (0, E.y4)(N, p, O), v = (0, d.v)(R && null != C ? C : []), L = a ? I : m, Z = R ? f : h, P = (0, u.y)(Z, E.aO), b = {};
+            } = e, R = O === _.O.BURST, M = (0, E.y4)(N, f, O), v = (0, d.v)(R && null != C ? C : []), L = a ? I : m, Z = R ? p : h, P = (0, u.y)(Z, E.aO), b = {};
         if (R && null != v) {
             var D;
             let {

@@ -3,7 +3,7 @@ i.d(n, {
         return f;
     }
 }), i(789020);
-var t = i(735250), a = i(470079), r = i(120356), o = i.n(r), l = i(481060), s = i(860719), c = i(63063), d = i(49012), u = i(981631), _ = i(689938), p = i(419611);
+var t = i(735250), a = i(470079), r = i(120356), o = i.n(r), l = i(481060), s = i(860719), c = i(63063), d = i(49012), u = i(981631), _ = i(689938), p = i(745482);
 let m = c.Z.getArticleURL(u.BhN.BOT_DATA_ACCESS);
 function I(e) {
     let {

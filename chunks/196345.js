@@ -9,12 +9,12 @@ t.d(n, {
         return f;
     },
     dd: function () {
-        return p;
+        return _;
     }
 }), t(47120);
 var o = t(735250);
 t(470079);
-var r = t(120356), a = t.n(r), i = t(481060), s = t(454585), l = t(489813), c = t(689938), u = t(953136);
+var r = t(120356), i = t.n(r), a = t(481060), s = t(454585), l = t(489813), c = t(689938), u = t(902681);
 function d(e) {
     let {
         terms: n,
@@ -22,16 +22,16 @@ function d(e) {
         className: r
     } = e;
     return (0, o.jsx)('div', {
-        className: a()(u.termsFieldBody, r),
+        className: i()(u.termsFieldBody, r),
         children: n.map((e, n) => (0, o.jsxs)('div', {
             className: u.termsRow,
             children: [
-                (0, o.jsx)(i.Text, {
+                (0, o.jsx)(a.Text, {
                     variant: 'text-md/normal',
                     color: 'text-muted',
                     children: ''.concat(n + 1, '.')
                 }),
-                (0, o.jsx)(i.Text, {
+                (0, o.jsx)(a.Text, {
                     variant: 'text-md/normal',
                     className: u.termsRowContent,
                     children: s.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
@@ -46,15 +46,15 @@ function m(e) {
         checked: t,
         disabled: r
     } = e;
-    return (0, o.jsx)(i.Checkbox, {
+    return (0, o.jsx)(a.Checkbox, {
         size: 20,
-        type: i.Checkbox.Types.INVERTED,
+        type: a.Checkbox.Types.INVERTED,
         value: t,
         onChange: n,
         disabled: r,
         style: { borderWidth: 2 },
         className: u.checkbox,
-        children: (0, o.jsx)(i.Text, {
+        children: (0, o.jsx)(a.Text, {
             variant: 'text-sm/normal',
             children: c.Z.Messages.MEMBER_VERIFICATION_READ_RULES
         })
@@ -63,12 +63,12 @@ function m(e) {
 function f(e) {
     let {formField: n} = e;
     return (0, o.jsx)(l.Ih, {
-        icon: i.BookCheckIcon,
+        icon: a.BookCheckIcon,
         text: c.Z.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
         meetsRequirement: !!n.response
     });
 }
-let p = e => {
+let _ = e => {
     let {
         channelId: n,
         formField: t,

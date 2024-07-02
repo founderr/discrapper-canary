@@ -3,29 +3,29 @@ n.d(t, {
         return d;
     }
 }), n(47120);
-var r = n(735250), o = n(470079), i = n(120356), l = n.n(i), u = n(481060), a = n(572004), c = n(689938), s = n(560237);
+var i = n(735250), l = n(470079), r = n(120356), a = n.n(r), s = n(481060), o = n(572004), c = n(689938), u = n(942955);
 function d(e) {
     let {
             chunks: t,
             className: n,
-            onCopy: i,
+            onCopy: r,
             ...d
-        } = e, E = o.useMemo(() => null == t ? void 0 : t.join(' '), [t]), [f, _] = o.useState(!1), I = o.useCallback(() => {
-            _(!0), (0, a.JG)(E), null == i || i();
+        } = e, h = l.useMemo(() => null == t ? void 0 : t.join(' '), [t]), [p, _] = l.useState(!1), f = l.useCallback(() => {
+            _(!0), (0, o.JG)(h), null == r || r();
         }, [
-            i,
-            E
-        ]), C = f ? u.CircleCheckIcon : u.CopyIcon;
-    return (0, r.jsx)(u.Clickable, {
-        className: l()(s.container, n),
-        onClick: I,
-        children: (0, r.jsx)(u.Tooltip, {
-            text: f ? c.Z.Messages.COPIED : c.Z.Messages.COPY,
-            children: e => (0, r.jsx)(C, {
+            r,
+            h
+        ]), g = p ? s.CircleCheckIcon : s.CopyIcon;
+    return (0, i.jsx)(s.Clickable, {
+        className: a()(u.container, n),
+        onClick: f,
+        children: (0, i.jsx)(s.Tooltip, {
+            text: p ? c.Z.Messages.COPIED : c.Z.Messages.COPY,
+            children: e => (0, i.jsx)(g, {
                 ...d,
                 ...e,
                 size: 'xxs',
-                color: f ? u.tokens.colors.TEXT_POSITIVE : u.tokens.colors.INTERACTIVE_NORMAL
+                color: p ? s.tokens.colors.TEXT_POSITIVE : s.tokens.colors.INTERACTIVE_NORMAL
             })
         })
     });

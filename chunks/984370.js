@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(873546), r = n(442837), o = n(100527), c = n(906732), d = n(320007), u = n(141321), _ = n(208450), E = n(594174), m = n(502568), I = n(358085), T = n(998502), h = n(300986), N = n(314451), p = n(35583), f = n(981631), C = n(176505), g = n(656847);
+var a = n(120356), s = n.n(a), l = n(873546), r = n(442837), o = n(100527), c = n(906732), d = n(320007), u = n(141321), _ = n(208450), E = n(594174), m = n(502568), I = n(358085), T = n(998502), h = n(300986), N = n(314451), f = n(35583), p = n(981631), C = n(176505), g = n(139715);
 async function S() {
     if ((0, I.isMac)() && I.isPlatformEmbedded) {
         var e, t, n;
@@ -23,7 +23,7 @@ function A(e) {
             transparent: c = !1,
             toolbar: I,
             mobileToolbar: T,
-            'aria-label': f,
+            'aria-label': p,
             'aria-labelledby': C,
             scrollable: A,
             role: x,
@@ -42,7 +42,7 @@ function A(e) {
                     I,
                     e ? (0, i.jsx)(_.Z, { className: g.search }, null != s ? s : a) : null,
                     R && (0, i.jsx)(m.ZP.Divider, {}),
-                    (0, i.jsx)(p.Z, {}),
+                    (0, i.jsx)(f.Z, {}),
                     (0, i.jsx)(d.Z, { canShowReminder: !0 }),
                     (0, i.jsx)(u.Z, {}),
                     v ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)(h.Z, {})
@@ -51,7 +51,7 @@ function A(e) {
         }(),
         transparent: c,
         onDoubleClick: S,
-        'aria-label': f,
+        'aria-label': p,
         'aria-labelledby': C,
         role: x,
         scrollable: A,
@@ -79,7 +79,7 @@ function O(e) {
     let {
             isAuthenticated: t = !0,
             ...n
-        } = e, {analyticsLocations: a} = (0, c.ZP)(o.Z.HEADER_BAR), l = s()(n.className, { [g.forumOrHome]: null != n.channelType && f.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME });
+        } = e, {analyticsLocations: a} = (0, c.ZP)(o.Z.HEADER_BAR), l = s()(n.className, { [g.forumOrHome]: null != n.channelType && p.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === C.oC.GUILD_HOME });
     return (0, i.jsx)(c.Gt, {
         value: a,
         children: t ? (0, i.jsx)(A, {

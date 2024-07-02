@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060), a = n(13245), o = n(454902), r = n(312839), l = n(981631), c = n(987650), d = n(689938), u = n(439063);
+var s = n(481060), a = n(13245), o = n(454902), r = n(312839), l = n(981631), c = n(987650), d = n(689938), u = n(482765);
 function h() {
     return (0, i.jsx)('div', {
         className: u.footer,
@@ -44,7 +44,7 @@ function p(e) {
                     f('unlock'), a.Z.updateNotificationStatus(t), a.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
                         let {default: e} = await Promise.all([
                             n.e('79477'),
-                            n.e('44217')
+                            n.e('99293')
                         ]).then(n.bind(n, 60594));
                         return t => (0, i.jsx)(e, {
                             ...t,
@@ -78,7 +78,7 @@ function p(e) {
                     p('unlock'), a.Z.updateNotificationStatus(t), a.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
                         let {default: e} = await Promise.all([
                             n.e('79477'),
-                            n.e('44217')
+                            n.e('99293')
                         ]).then(n.bind(n, 60594));
                         return t => (0, i.jsx)(e, {
                             ...t,

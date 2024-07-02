@@ -3,7 +3,7 @@ a.d(t, {
         return b;
     }
 });
-var n = a(735250), l = a(470079), i = a(120356), r = a.n(i), o = a(442837), s = a(481060), u = a(99690), d = a(594174), c = a(823379), m = a(5192), p = a(689938), v = a(396458);
+var n = a(735250), l = a(470079), i = a(120356), r = a.n(i), o = a(442837), s = a(481060), u = a(99690), d = a(594174), c = a(823379), m = a(5192), p = a(689938), v = a(351165);
 function f(e) {
     let {user: t} = e, a = m.ZP.useName(null, null, t);
     return (0, n.jsxs)('div', {

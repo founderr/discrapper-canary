@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060), a = n(230711), r = n(100527), l = n(906732), o = n(170671), c = n(981631), d = n(921944), u = n(689938), _ = n(512475);
+var s = n(481060), a = n(230711), r = n(100527), l = n(906732), o = n(170671), c = n(981631), d = n(921944), u = n(689938), _ = n(893895);
 function E(e) {
     let {markAsDismissed: t} = e, {analyticsLocations: n} = (0, l.ZP)(r.Z.APP_ICON_NEW_STYLES_COACHMARK);
     return (0, i.jsxs)('div', {

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i, l, r = n(735250);
 n(470079);
-var a = n(442837), s = n(481060), o = n(893776), c = n(391650), u = n(144114), d = n(607744), h = n(594174), p = n(153124), _ = n(981631), f = n(815660), g = n(689938), m = n(319081);
+var a = n(442837), s = n(481060), o = n(893776), c = n(391650), u = n(144114), d = n(607744), h = n(594174), p = n(153124), _ = n(981631), f = n(815660), g = n(689938), m = n(198707);
 (i = l || (l = {}))[i.VOICE = 0] = 'VOICE';
 t.Z = e => {
     let {
@@ -49,7 +49,7 @@ t.Z = e => {
                                     I ? c.j() : N ? (0, s.openModalLazy)(async () => {
                                         let {default: e} = await Promise.all([
                                             n.e('76540'),
-                                            n.e('21518')
+                                            n.e('56931')
                                         ]).then(n.bind(n, 607018));
                                         return t => (0, r.jsx)(e, {
                                             reason: u.L.GUILD_PHONE_REQUIRED,

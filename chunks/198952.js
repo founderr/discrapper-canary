@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(481060), r = n(204197), i = n(998502), l = n(689938), o = n(297676);
+var a = n(481060), r = n(204197), i = n(998502), l = n(689938), o = n(550607);
 let c = i.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar, d = e => {
         let {
                 user: t,

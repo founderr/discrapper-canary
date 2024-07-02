@@ -3,7 +3,7 @@ s.d(n, {
         return m;
     }
 }), s(47120), s(757143);
-var l = s(735250), i = s(470079), t = s(481060), r = s(907040), a = s(981631), c = s(185923), o = s(689938), u = s(197013);
+var l = s(735250), i = s(470079), t = s(481060), r = s(907040), a = s(981631), c = s(185923), o = s(689938), u = s(605099);
 let d = {
         section: a.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'gift_effect_emoji_picker'

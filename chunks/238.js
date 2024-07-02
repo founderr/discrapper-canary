@@ -1,50 +1,50 @@
-i.d(n, {
+n.d(t, {
     N: function () {
-        return t;
+        return i;
     }
-}), i(47120);
-var t, a, r, o, l, s, c = i(442837), d = i(570140), u = i(55563), _ = i(551428);
-let p = new Map(), m = new Map();
-(r = t || (t = {}))[r.NONE = 0] = 'NONE', r[r.FETCHING = 1] = 'FETCHING', r[r.FETCHED = 2] = 'FETCHED', r[r.FAILED = 3] = 'FAILED';
+}), n(47120);
+var i, a, s, l, r, o, c = n(442837), d = n(570140), u = n(55563), _ = n(551428);
+let E = new Map(), m = new Map();
+(s = i || (i = {}))[s.NONE = 0] = 'NONE', s[s.FETCHING = 1] = 'FETCHING', s[s.FETCHED = 2] = 'FETCHED', s[s.FAILED = 3] = 'FAILED';
 let I = {
     subscriptions: [],
     otps: []
 };
-class f extends (a = c.ZP.Store) {
+class T extends (a = c.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, _.Z);
     }
     hasStorefront(e) {
-        return p.has(e);
+        return E.has(e);
     }
     getStoreLayout(e) {
-        var n;
-        return null !== (n = p.get(e)) && void 0 !== n ? n : I;
+        var t;
+        return null !== (t = E.get(e)) && void 0 !== t ? t : I;
     }
     getFetchStatus(e) {
-        var n;
-        return p.has(e) ? 2 : null !== (n = m.get(e)) && void 0 !== n ? n : 0;
+        var t;
+        return E.has(e) ? 2 : null !== (t = m.get(e)) && void 0 !== t ? t : 0;
     }
 }
-s = 'ApplicationStoreDirectoryStore', (l = 'displayName') in (o = f) ? Object.defineProperty(o, l, {
-    value: s,
+o = 'ApplicationStoreDirectoryStore', (r = 'displayName') in (l = T) ? Object.defineProperty(l, r, {
+    value: o,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : o[l] = s, n.Z = new f(d.Z, {
+}) : l[r] = o, t.Z = new T(d.Z, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (e) {
         let {
-            applicationId: n,
-            listings: i
+            applicationId: t,
+            listings: n
         } = e;
-        p.set(n, i), m.delete(n);
+        E.set(t, n), m.delete(t);
     },
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (e) {
-        let {applicationId: n} = e;
-        m.set(n, 3);
+        let {applicationId: t} = e;
+        m.set(t, 3);
     },
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function (e) {
-        let {applicationId: n} = e;
-        m.set(n, 1);
+        let {applicationId: t} = e;
+        m.set(t, 1);
     }
 });

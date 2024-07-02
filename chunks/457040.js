@@ -1,5 +1,5 @@
 n(47120);
-var r = n(735250), i = n(470079), a = n(954955), o = n.n(a), s = n(143927), l = n(442837), u = n(477690), c = n(481060), d = n(2052), _ = n(100527), E = n(906732), f = n(806966), h = n(28546), p = n(98528), m = n(98278), I = n(639119), T = n(695346), g = n(594174), S = n(626135), A = n(624138), N = n(191177), v = n(285651), O = n(217590), R = n(453070), C = n(926491), y = n(373228), D = n(462109), L = n(422195), b = n(657795), M = n(489762), P = n(31543), U = n(814042), w = n(15350), x = n(611480), G = n(981631), k = n(642631);
+var r = n(735250), i = n(470079), a = n(954955), o = n.n(a), s = n(143927), l = n(442837), u = n(477690), c = n(481060), d = n(2052), _ = n(100527), E = n(906732), f = n(806966), h = n(28546), p = n(98528), m = n(98278), I = n(639119), T = n(695346), g = n(594174), S = n(626135), A = n(624138), N = n(191177), v = n(285651), O = n(217590), R = n(453070), C = n(926491), y = n(373228), D = n(462109), L = n(422195), b = n(135065), M = n(489762), P = n(31543), U = n(814042), w = n(15350), x = n(611480), G = n(981631), k = n(660790);
 let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL), F = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT), V = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT), H = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN), Z = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL), Y = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS), j = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL), W = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING), K = Y + 2 * W, z = j + 2 * W, q = o()(O.Iw, 200), Q = o()(O.m1, 200), X = i.forwardRef(function (e, t) {
         var a;
         let {
@@ -55,7 +55,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL), F = (
                     }), (0, c.openModalLazy)(async () => {
                         let {default: t} = await Promise.all([
                             n.e('93626'),
-                            n.e('47406')
+                            n.e('10831')
                         ]).then(n.bind(n, 136735));
                         return n => (0, r.jsx)(t, {
                             guildId: e.guild_id,

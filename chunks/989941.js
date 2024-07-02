@@ -1,14 +1,14 @@
-let i;
+let r;
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var a = n(145597);
-function l(e, t) {
+var o = n(145597);
+function a(e, t) {
     if (__OVERLAY__) {
-        let e = t.getGame(), n = (0, a.QF)();
-        return null == e || null == n ? null : (null == i ? void 0 : i.id) === e.id && (null == i ? void 0 : i.pid) === n ? i : i = {
+        let e = t.getGame(), n = (0, o.QF)();
+        return null == e || null == n ? null : (null == r ? void 0 : r.id) === e.id && (null == r ? void 0 : r.pid) === n ? r : r = {
             id: e.id,
             pid: n,
             pidPath: [],

@@ -1,132 +1,132 @@
-a(47120);
-var C, t, i = a(735250), r = a(470079), s = a(120356), n = a.n(s), l = a(699581), o = a(374470), H = a(481060), c = a(112724), d = a(996753), V = a(248469);
-function M(e, L, a) {
-    return L in e ? Object.defineProperty(e, L, {
-        value: a,
+i(47120);
+var n, a, r = i(735250), o = i(470079), s = i(120356), l = i.n(s), c = i(699581), d = i(374470), u = i(481060), h = i(112724), _ = i(996753), p = i(283414);
+function m(e, t, i) {
+    return t in e ? Object.defineProperty(e, t, {
+        value: i,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : e[L] = a, e;
+    }) : e[t] = i, e;
 }
-(t = C || (C = {}))[t.LEFT = 0] = 'LEFT', t[t.RIGHT = 1] = 'RIGHT';
-let Z = e => {
+(a = n || (n = {}))[a.LEFT = 0] = 'LEFT', a[a.RIGHT = 1] = 'RIGHT';
+let f = e => {
     let {
-        onClick: L,
-        className: a,
-        direction: C
+        onClick: t,
+        className: i,
+        direction: n
     } = e;
-    return (0, i.jsx)(H.Clickable, {
+    return (0, r.jsx)(u.Clickable, {
         'aria-hidden': !0,
-        className: n()(V.scrollerButton, a),
-        onClick: L,
-        children: (0, i.jsx)(d.Z, {
-            className: V.scrollerButtonArrow,
-            direction: C
+        className: l()(p.scrollerButton, i),
+        onClick: t,
+        children: (0, r.jsx)(_.Z, {
+            className: p.scrollerButtonArrow,
+            direction: n
         })
     });
 };
-class _ extends r.Component {
-    static getDerivedStateFromProps(e, L) {
-        return L.prevWidth !== e.width ? {
+class g extends o.Component {
+    static getDerivedStateFromProps(e, t) {
+        return t.prevWidth !== e.width ? {
             tileIndex: 0,
             prevWidth: e.width,
             lastArrowDirection: 0
         } : null;
     }
     getMaxOffset() {
-        let {width: e} = this.props, {scrollerWidth: L} = this.state;
-        return Math.max(Math.floor(L - e), 0);
+        let {width: e} = this.props, {scrollerWidth: t} = this.state;
+        return Math.max(Math.floor(t - e), 0);
     }
     getSideOffset() {
         let {
                 tileWidth: e,
-                tileMargin: L
-            } = this.props, a = this.getMaxOffset(), C = e + L;
-        return a - Math.floor(a / C) * C;
+                tileMargin: t
+            } = this.props, i = this.getMaxOffset(), n = e + t;
+        return i - Math.floor(i / n) * n;
     }
     getMaxIndex() {
         let {
             tileWidth: e,
-            tileMargin: L
+            tileMargin: t
         } = this.props;
-        return Math.round(this.getMaxOffset() / (e + L));
+        return Math.round(this.getMaxOffset() / (e + t));
     }
-    getOffset(e, L) {
+    getOffset(e, t) {
         let {
-            tileWidth: a,
-            tileMargin: C
+            tileWidth: i,
+            tileMargin: n
         } = this.props;
-        return Math.min(e * (a + C) + (1 === L ? this.getSideOffset() : 0), this.getMaxOffset());
+        return Math.min(e * (i + n) + (1 === t ? this.getSideOffset() : 0), this.getMaxOffset());
     }
     componentDidMount() {
         this.setScrollerWidth();
     }
-    componentDidUpdate(e, L) {
-        if (L.tileIndex !== this.state.tileIndex || L.lastArrowDirection !== this.state.lastArrowDirection) {
-            var a, C, t;
-            let {tileIndex: e} = this.state, L = this.getOffset(this.state.tileIndex, this.state.lastArrowDirection);
-            null === (a = this.advancedScrollerRef.current) || void 0 === a || a.scrollTo({
-                to: L,
+    componentDidUpdate(e, t) {
+        if (t.tileIndex !== this.state.tileIndex || t.lastArrowDirection !== this.state.lastArrowDirection) {
+            var i, n, a;
+            let {tileIndex: e} = this.state, t = this.getOffset(this.state.tileIndex, this.state.lastArrowDirection);
+            null === (i = this.advancedScrollerRef.current) || void 0 === i || i.scrollTo({
+                to: t,
                 animate: !0
-            }), null === (C = (t = this.props).onScroll) || void 0 === C || C.call(t, { tileIndex: e });
+            }), null === (n = (a = this.props).onScroll) || void 0 === n || n.call(a, { tileIndex: e });
         }
         e.width !== this.props.width && this.setScrollerWidth();
     }
     render() {
         let {
                 tileIndex: e,
-                lastArrowDirection: L
+                lastArrowDirection: t
             } = this.state, {
-                header: a,
-                headerId: C,
-                subHeader: t,
-                headerContainerClassName: r,
+                header: i,
+                headerId: n,
+                subHeader: a,
+                headerContainerClassName: o,
                 scrollContainerClassName: s
-            } = this.props, l = this.getMaxOffset();
-        return (0, i.jsxs)('div', {
+            } = this.props, c = this.getMaxOffset();
+        return (0, r.jsxs)('div', {
             children: [
-                (0, i.jsxs)('div', {
-                    className: n()(V.headerContainer, r),
+                (0, r.jsxs)('div', {
+                    className: l()(p.headerContainer, o),
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(H.Heading, {
-                                    id: C,
+                                (0, r.jsx)(u.Heading, {
+                                    id: n,
                                     variant: 'heading-lg/semibold',
-                                    children: a
+                                    children: i
                                 }),
-                                null == t ? null : (0, i.jsx)(H.Text, {
+                                null == a ? null : (0, r.jsx)(u.Text, {
                                     variant: 'text-sm/medium',
-                                    className: V.subheader,
-                                    children: t
+                                    className: p.subheader,
+                                    children: a
                                 })
                             ]
                         }),
-                        l > 0 ? (0, i.jsxs)('div', {
-                            className: V.arrowsContainer,
+                        c > 0 ? (0, r.jsxs)('div', {
+                            className: p.arrowsContainer,
                             children: [
-                                (0, i.jsx)(Z, {
-                                    direction: d.Z.Directions.LEFT,
+                                (0, r.jsx)(f, {
+                                    direction: _.Z.Directions.LEFT,
                                     onClick: this.prev,
-                                    className: n()(V.arrowLeft, { [V.arrowDisabled]: 0 === e && 0 === L })
+                                    className: l()(p.arrowLeft, { [p.arrowDisabled]: 0 === e && 0 === t })
                                 }),
-                                (0, i.jsx)(Z, {
-                                    direction: d.Z.Directions.RIGHT,
+                                (0, r.jsx)(f, {
+                                    direction: _.Z.Directions.RIGHT,
                                     onClick: this.next,
-                                    className: n()(V.arrowRight, { [V.arrowDisabled]: e === this.getMaxIndex() && 1 === L })
+                                    className: l()(p.arrowRight, { [p.arrowDisabled]: e === this.getMaxIndex() && 1 === t })
                                 })
                             ]
                         }) : null
                     ]
                 }),
-                (0, i.jsx)('div', {
-                    className: n()(V.scrollerContainer, s),
-                    children: (0, i.jsx)(H.AdvancedScrollerNone, {
+                (0, r.jsx)('div', {
+                    className: l()(p.scrollerContainer, s),
+                    children: (0, r.jsx)(u.AdvancedScrollerNone, {
                         ref: this.advancedScrollerRef,
                         orientation: 'horizontal',
-                        className: V.scroller,
-                        children: (0, i.jsx)('div', {
-                            className: V.scroller,
+                        className: p.scroller,
+                        children: (0, r.jsx)('div', {
+                            className: p.scroller,
                             ref: e => {
                                 this.tileScrollerRef.current = e, this.setScrollerWidth();
                             },
@@ -138,20 +138,20 @@ class _ extends r.Component {
         });
     }
     constructor(...e) {
-        super(...e), M(this, 'state', {
+        super(...e), m(this, 'state', {
             tileIndex: 0,
             prevWidth: this.props.width,
             lastArrowDirection: 0,
             scrollerWidth: 0
-        }), M(this, 'advancedScrollerRef', r.createRef()), M(this, 'tileScrollerRef', r.createRef()), M(this, 'setScrollerWidth', () => {
-            let e = (0, l.findDOMNode)(this.tileScrollerRef.current);
-            (0, o.k)(e, HTMLElement) && e.offsetWidth !== this.state.scrollerWidth && this.setState({ scrollerWidth: e.offsetWidth });
-        }), M(this, 'prev', () => {
+        }), m(this, 'advancedScrollerRef', o.createRef()), m(this, 'tileScrollerRef', o.createRef()), m(this, 'setScrollerWidth', () => {
+            let e = (0, c.findDOMNode)(this.tileScrollerRef.current);
+            (0, d.k)(e, HTMLElement) && e.offsetWidth !== this.state.scrollerWidth && this.setState({ scrollerWidth: e.offsetWidth });
+        }), m(this, 'prev', () => {
             this.setState({
                 tileIndex: Math.max(this.state.tileIndex - 1, 0),
                 lastArrowDirection: 0
             });
-        }), M(this, 'next', () => {
+        }), m(this, 'next', () => {
             this.setState({
                 tileIndex: Math.min(this.state.tileIndex + 1, this.getMaxIndex()),
                 lastArrowDirection: 1
@@ -159,4 +159,4 @@ class _ extends r.Component {
         });
     }
 }
-L.Z = (0, c.Z)(_);
+t.Z = (0, h.Z)(g);

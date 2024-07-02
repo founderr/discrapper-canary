@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250), a = n(470079), s = n(481060), l = n(194359), r = n(689938), o = n(749967);
+var i = n(735250), a = n(470079), s = n(481060), l = n(194359), r = n(689938), o = n(273270);
 function c(e) {
     let {userId: t} = e, n = a.useCallback(e => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t);

@@ -1,6 +1,6 @@
 t.d(n, {
     OA: function () {
-        return i;
+        return a;
     },
     _C: function () {
         return l;
@@ -9,18 +9,18 @@ t.d(n, {
         return s;
     }
 });
-var o = t(823379), r = t(246364), a = t(592286);
-let i = e => {
+var o = t(823379), r = t(246364), i = t(592286);
+let a = e => {
     let {
         required: n,
         response: t,
-        field_type: a
+        field_type: i
     } = e;
     if (!n)
         return !0;
     if (null == t)
         return !1;
-    switch (a) {
+    switch (i) {
     case r.QJ.TERMS:
     case r.QJ.VERIFICATION:
         return !!t;
@@ -30,12 +30,12 @@ let i = e => {
     case r.QJ.MULTIPLE_CHOICE:
         return 'number' == typeof t;
     default:
-        return (0, o.vE)(a);
+        return (0, o.vE)(i);
     }
 };
 function s(e) {
-    return a.lI.has(null == e ? void 0 : e.field_type);
+    return i.lI.has(null == e ? void 0 : e.field_type);
 }
 function l(e) {
-    return a.hZ.has(null == e ? void 0 : e.field_type);
+    return i.hZ.has(null == e ? void 0 : e.field_type);
 }

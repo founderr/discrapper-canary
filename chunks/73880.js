@@ -11,7 +11,7 @@ t.d(n, {
 });
 var o = t(735250);
 t(470079);
-var r = t(120356), a = t.n(r), i = t(481060), s = t(489813), l = t(592286), c = t(953136);
+var r = t(120356), i = t.n(r), a = t(481060), s = t(489813), l = t(592286), c = t(902681);
 function u(e) {
     let {
         value: n,
@@ -21,8 +21,8 @@ function u(e) {
         className: u,
         autofocus: d
     } = e;
-    return (0, o.jsx)(i.TextArea, {
-        className: a()(c.paragraphFieldBody, u),
+    return (0, o.jsx)(a.TextArea, {
+        className: i()(c.paragraphFieldBody, u),
         maxLength: l.RS,
         value: null != n ? n : '',
         placeholder: null != t ? t : '',

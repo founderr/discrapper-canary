@@ -3,7 +3,7 @@ s.d(t, {
         return B;
     }
 }), s(653041);
-var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(481060), c = s(846027), d = s(230711), _ = s(921801), E = s(131951), u = s(663389), T = s(153124), I = s(63063), S = s(894939), N = s(321499), C = s(710808), m = s(625205), A = s(325808), h = s(823087), g = s(546997), O = s(167540), p = s(803567), R = s(269876), x = s(976758), M = s(526761), D = s(726985), f = s(981631), P = s(65154), L = s(689938), Z = s(331651);
+var n = s(735250), a = s(470079), i = s(120356), r = s.n(i), o = s(442837), l = s(481060), c = s(846027), d = s(230711), _ = s(921801), E = s(131951), u = s(663389), T = s(153124), I = s(63063), S = s(894939), N = s(321499), C = s(710808), m = s(625205), A = s(325808), h = s(823087), g = s(546997), O = s(167540), p = s(803567), R = s(269876), x = s(976758), M = s(526761), D = s(726985), f = s(981631), P = s(65154), L = s(689938), Z = s(549856);
 let b = (0, T.hQ)(), v = ''.concat(I.Z.getArticleURL(f.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function j(e, t, s) {
     (0, l.openModal)(a => (0, n.jsx)(l.ConfirmModal, {

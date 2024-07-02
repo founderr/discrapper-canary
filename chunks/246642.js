@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060), o = n(44315), a = n(641033), l = n(989830), r = n(689938), c = n(390017);
+var s = n(481060), o = n(44315), a = n(641033), l = n(989830), r = n(689938), c = n(566823);
 function u(e) {
     let {channelId: t} = e, n = (0, l.Z)(t);
     if (!(null != n && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1)))

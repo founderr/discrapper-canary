@@ -6,13 +6,13 @@ n.d(t, {
         return I;
     },
     c: function () {
-        return p;
+        return f;
     },
     dy: function () {
         return h;
     },
     hs: function () {
-        return f;
+        return p;
     },
     op: function () {
         return N;
@@ -71,19 +71,19 @@ function N(e) {
         l
     ]);
 }
-function p(e, t, n, i) {
+function f(e, t, n, i) {
     var s;
     let l = I(e), c = null == l ? void 0 : l.drop, d = (0, a.e7)([_.Z], () => null != c && _.Z.serverEligibleByQuestIds[c.dropsQuestId]), u = (0, a.e7)([_.Z], () => _.Z.getIsPartnerGameQuestComplete(e)), m = (0, E.wj)(null == t ? void 0 : t.name, null !== (s = null == c ? void 0 : c.gameSearchTerm) && void 0 !== s ? s : []), T = (0, r.ot)([
             n,
             i
-        ]), h = (0, o.wE)(i), N = null == c || (0, E.hM)(c), p = !!(null != c && !N && m && (null == l ? void 0 : l.config.dropsEnabled) && d);
+        ]), h = (0, o.wE)(i), N = null == c || (0, E.hM)(c), f = !!(null != c && !N && m && (null == l ? void 0 : l.config.dropsEnabled) && d);
     return {
-        partnerGame: p ? e : null,
+        partnerGame: f ? e : null,
         dropsActivityPanelExperienceBlocked: T,
         showDropsSparkles: !u && !h
     };
 }
-function f(e, t, n) {
+function p(e, t, n) {
     let i = (0, E.BS)(e);
     (0, l.Z)({
         type: t,

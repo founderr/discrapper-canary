@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     }
 });
-var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(186325), c = n(689938), d = n(107013);
+var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(186325), c = n(689938), d = n(134054);
 (r = i || (i = {})).WANDERING_CUBES = 'wanderingCubes', r.CHASING_DOTS = 'chasingDots', r.PULSING_ELLIPSIS = 'pulsingEllipsis', r.SPINNING_CIRCLE = 'spinningCircle', r.SPINNING_CIRCLE_SIMPLE = 'spinningCircleSimple', r.LOW_MOTION = 'lowMotion';
 function _(e) {
     let {

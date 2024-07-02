@@ -7,7 +7,7 @@ var i = n(924301);
 n(57132);
 var a = n(430824), s = n(699516), l = n(594174), r = n(624138), o = n(51144), c = n(497089), d = n(981631), u = n(689938);
 function _(e) {
-    var t, n, _, E, m, I, T, h, N, p, f, C, g, S, A;
+    var t, n, _, E, m, I, T, h, N, f, p, C, g, S, A;
     let x = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : d.lds, O = o.ZP.getName(l.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
     case c.O7.INCOMING_FRIEND_REQUESTS:
@@ -20,7 +20,7 @@ function _(e) {
             count: v
         });
     case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-        let L = null !== (f = null === (p = e.local_id) || void 0 === p ? void 0 : p.split('_').pop()) && void 0 !== f ? f : 'unknown';
+        let L = null !== (p = null === (f = e.local_id) || void 0 === f ? void 0 : f.split('_').pop()) && void 0 !== p ? p : 'unknown';
         return 'Update to build '.concat(L, ' available!');
     case c.DY.FRIEND_SUGGESTION_CREATED:
         let Z = s.Z.getRelationshipType(x) === d.OGo.PENDING_OUTGOING;

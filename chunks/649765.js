@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     }
 });
-var i = n(735250), s = n(470079), a = n(481060), r = n(119269), l = n(227140), o = n(689938), c = n(616614);
+var i = n(735250), s = n(470079), a = n(481060), r = n(119269), l = n(227140), o = n(689938), c = n(612358);
 let d = e => {
     let {children: t} = e, n = (0, i.jsxs)('div', {
             className: c.coachTipContainer,

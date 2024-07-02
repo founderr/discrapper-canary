@@ -3,7 +3,7 @@ t.d(n, {
         return d;
     }
 });
-var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), s = t(481060), o = t(695676), c = t(689938), u = t(864247);
+var i = t(735250), l = t(470079), a = t(120356), r = t.n(a), s = t(481060), o = t(695676), c = t(689938), u = t(581565);
 function d(e) {
     let {className: n} = e, {goBack: t} = (0, o.hH)(), a = l.useCallback(() => {
             t();

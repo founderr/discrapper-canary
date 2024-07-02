@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 }), n(47120);
-var s = n(735250), a = n(470079), i = n(399606), r = n(481060), l = n(279542), o = n(496675), c = n(140031), d = n(981631), u = n(689938), _ = n(374834);
+var s = n(735250), a = n(470079), i = n(399606), r = n(481060), l = n(279542), o = n(496675), c = n(140031), d = n(981631), u = n(689938), _ = n(861615);
 function E(e) {
     let {guild: t} = e, n = a.useId(), E = (0, i.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]), I = t.hasFeature(d.oNc.COMMUNITY), [T, m] = a.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), N = a.useCallback(async e => {
             m(e), await (0, l.fp)(t, e);

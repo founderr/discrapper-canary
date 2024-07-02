@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(920906), o = n(442837), c = n(481060), d = n(570140), u = n(45114), _ = n(367907), E = n(717680), m = n(703656), I = n(592125), T = n(259580), h = n(617379), N = n(324081), p = n(305248), f = n(520116), C = n(981631), g = n(689938), S = n(385190);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(920906), o = n(442837), c = n(481060), d = n(570140), u = n(45114), _ = n(367907), E = n(717680), m = n(703656), I = n(592125), T = n(259580), h = n(617379), N = n(324081), f = n(305248), p = n(520116), C = n(981631), g = n(689938), S = n(540895);
 let A = a.memo(function (e) {
     let {
             channel: t,
@@ -78,11 +78,11 @@ let x = a.memo(function (e) {
                     'nsfw' === t.type ? null : (0, i.jsx)(R, { ...e })
                 ]
             }),
-            children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(f.Z, {
+            children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(p.Z, {
                 channel: t,
                 channelRecord: r,
                 gotoChannel: E
-            }) : 'forum' === t.type ? (0, i.jsx)(p.Z, {
+            }) : 'forum' === t.type ? (0, i.jsx)(f.Z, {
                 channel: t,
                 channelRecord: r,
                 deleteChannel: s

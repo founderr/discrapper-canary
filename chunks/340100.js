@@ -1,14 +1,14 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(442837), r = n(692547), o = n(481060), c = n(706454), d = n(930153), u = n(113434), _ = n(524824), E = n(330039), m = n(567345);
+var a = n(120356), s = n.n(a), l = n(442837), r = n(692547), o = n(481060), c = n(706454), d = n(930153), u = n(113434), _ = n(524824), E = n(330039), m = n(260370);
 t.Z = function (e) {
     let {
             className: t,
             color: n = r.Z.colors.WHITE,
             quest: a,
             isInventory: I
-        } = e, T = (0, l.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = 100 * h, p = (0, _.r)(a);
-    return p && !I ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
+        } = e, T = (0, l.e7)([c.default], () => c.default.locale), {percentComplete: h} = (0, u.Rf)(a), N = 100 * h, f = (0, _.r)(a);
+    return f && !I ? (0, i.jsx)(E.Z, {}) : (0, i.jsxs)('div', {
         className: s()(m.wrapper, t),
         style: { color: n.css },
         children: [
@@ -36,7 +36,7 @@ t.Z = function (e) {
                     style: { width: ''.concat(N, '%') }
                 })
             }),
-            p && (0, i.jsx)(E.Z, { isInventory: I })
+            f && (0, i.jsx)(E.Z, { isInventory: I })
         ]
     });
 };

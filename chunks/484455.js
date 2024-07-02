@@ -5,7 +5,7 @@ t.d(n, {
 });
 var a = t(735250);
 t(470079);
-var r = t(120356), i = t.n(r), s = t(481060), o = t(237261);
+var r = t(120356), i = t.n(r), s = t(481060), o = t(672060);
 function l(e) {
     let {
         title: n,

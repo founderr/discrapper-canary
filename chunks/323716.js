@@ -88,7 +88,7 @@ let E = [
             null != r && (i['X-Captcha-Rqtoken'] = r), t(i);
         }).catch(r), !0) : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === _.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa) ? (Promise.all([
             n.e('52030'),
-            n.e('74815')
+            n.e('96043')
         ]).then(n.bind(n, 24031)).then(n => {
             let {openMFAModal: i} = n;
             i(e.body.mfa, t, r);

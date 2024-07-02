@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     }
 });
-var s = n(735250), a = n(470079), r = n(512722), i = n.n(r), l = n(399606), o = n(481060), c = n(594174), d = n(933970), _ = n(340453), u = n(292352), E = n(689938), T = n(88876);
+var s = n(735250), a = n(470079), r = n(512722), i = n.n(r), l = n(399606), o = n(481060), c = n(594174), d = n(933970), _ = n(340453), u = n(292352), E = n(689938), T = n(46380);
 function I(e) {
     let {user: t} = e, r = (0, l.e7)([c.default], () => c.default.getCurrentUser()), I = a.useCallback(() => {
             i()(void 0 !== r, 'User must be logged in to accept a link request'), (0, o.openModalLazy)(async () => {

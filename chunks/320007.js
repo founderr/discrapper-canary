@@ -8,7 +8,7 @@ function N(e) {
     let {
             canShowReminder: t = !1,
             className: N
-        } = e, p = (0, E.Z)(c.Z), {showClipsHeaderEntrypoint: f} = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }), {
+        } = e, f = (0, E.Z)(c.Z), {showClipsHeaderEntrypoint: p} = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }), {
             hasClips: C,
             hasNewClips: g,
             lastClipsSession: S,
@@ -28,7 +28,7 @@ function N(e) {
         (0, l.openModalLazy)(async () => {
             let {default: e} = await Promise.all([
                 n.e('2668'),
-                n.e('56874')
+                n.e('50779')
             ]).then(n.bind(n, 542055));
             return t => (0, i.jsx)(e, { ...t });
         }, { modalKey: T.Qr });
@@ -37,7 +37,7 @@ function N(e) {
         x,
         L,
         Z
-    ]), f && p && C) ? (0, i.jsxs)(i.Fragment, {
+    ]), p && f && C) ? (0, i.jsxs)(i.Fragment, {
         children: [
             null != R && t && A && O && !(0, l.hasAnyModalOpen)() && !v && (0, i.jsx)(I.Z, {
                 clipIconRef: R,

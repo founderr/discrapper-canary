@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }), n(47120);
-var i = n(553813), s = n.n(i), a = n(358085);
-let r = { [a.PlatformTypes.WINDOWS]: { nvidia: '<=537.58.0 || >=546.31' } };
-function l(e) {
-    let t = r[(0, a.getPlatform)()];
+var r = n(553813), o = n.n(r), i = n(358085);
+let c = { [i.PlatformTypes.WINDOWS]: { nvidia: '<=537.58.0 || >=546.31' } };
+function a(e) {
+    let t = c[(0, i.getPlatform)()];
     if (null == t)
         return !1;
     for (let n of Object.keys(e)) {
-        let i = e[n], a = t[n];
-        if (null == i || null == a || null != i.error)
+        let r = e[n], i = t[n];
+        if (null == r || null == i || null != r.error)
             continue;
-        let r = function (e) {
+        let c = function (e) {
             var t, n;
             return ''.concat(null !== (t = e.major) && void 0 !== t ? t : 0, '.').concat(null !== (n = e.minor) && void 0 !== n ? n : 0, '.0');
-        }(i);
-        if (!s().satisfies(r, a))
+        }(r);
+        if (!o().satisfies(c, i))
             return !0;
     }
     return !1;

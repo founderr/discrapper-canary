@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(442837), i = n(481060), r = n(90815), l = n(594174), o = n(244337);
+var a = n(442837), i = n(481060), r = n(90815), l = n(594174), o = n(983537);
 function c(e) {
     let {guild: t} = e, n = (0, a.e7)([l.default], () => {
             let e = l.default.getCurrentUser();

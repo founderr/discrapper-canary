@@ -1,29 +1,29 @@
-var r = n(735250);
-n(470079);
-var s = n(481060), i = n(689938);
-t.Z = e => {
+var i = t(735250);
+t(470079);
+var a = t(481060), r = t(689938);
+n.Z = e => {
     let {
-        onChangeAvatar: t,
-        onChangeAvatarDecoration: n,
-        onClose: l,
-        className: o
+        onChangeAvatar: n,
+        onChangeAvatarDecoration: t,
+        onClose: o,
+        className: s
     } = e;
-    return (0, r.jsxs)(s.Menu, {
-        className: o,
-        onClose: l,
+    return (0, i.jsxs)(a.Menu, {
+        className: s,
+        onClose: o,
         onSelect: void 0,
         navId: 'user-settings-change-avatar',
-        'aria-label': i.Z.Messages.AVATAR_ACTIONS_MENU_LABEL,
+        'aria-label': r.Z.Messages.AVATAR_ACTIONS_MENU_LABEL,
         children: [
-            (0, r.jsx)(s.MenuItem, {
+            (0, i.jsx)(a.MenuItem, {
                 id: 'change-avatar',
-                action: t,
-                label: i.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
-            }),
-            (0, r.jsx)(s.MenuItem, {
-                id: 'change-avatar-decoration',
                 action: n,
-                label: i.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+                label: r.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
+            }),
+            (0, i.jsx)(a.MenuItem, {
+                id: 'change-avatar-decoration',
+                action: t,
+                label: r.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
             })
         ]
     });

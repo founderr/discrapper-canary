@@ -1,6 +1,6 @@
 var i = n(735250);
 n(470079);
-var a = n(120356), s = n.n(a), l = n(481060), r = n(672188);
+var a = n(120356), s = n.n(a), l = n(481060), r = n(299938);
 t.Z = e => {
     let {
         renderTitle: t,

@@ -28,7 +28,7 @@ t.Z = {
         }() && !c.Z.keyboardNavigationExplainerModalSeen && 0 === I && (0, i.openModalLazy)(async () => {
             let {default: e} = await Promise.all([
                 n.e('6380'),
-                n.e('78906')
+                n.e('78333')
             ]).then(n.bind(n, 461964));
             return t => (0, r.jsx)(e, { ...t });
         });

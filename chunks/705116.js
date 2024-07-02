@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060), s = n(646504), l = n(430824), r = n(702346), o = n(981631), c = n(689938), d = n(154654);
+var a = n(481060), s = n(646504), l = n(430824), r = n(702346), o = n(981631), c = n(689938), d = n(584878);
 function u(e) {
     let t, {
             compact: u,
@@ -17,7 +17,7 @@ function u(e) {
                 let {default: t} = await Promise.all([
                     n.e('7654'),
                     n.e('1187'),
-                    n.e('92875')
+                    n.e('40474')
                 ]).then(n.bind(n, 560114));
                 return n => (0, i.jsx)(t, {
                     ...n,

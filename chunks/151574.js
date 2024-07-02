@@ -1,5 +1,5 @@
 n(47120);
-var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(91192), c = n(924826), d = n(536895), _ = n(468194), E = n(477690), f = n(481060), h = n(100527), p = n(906732), m = n(570220), I = n(28546), T = n(285651), g = n(926491), S = n(373228), A = n(378233), N = n(419922), v = n(490095), O = n(652136), R = n(695346), C = n(806519), y = n(626135), D = n(280930), L = n(606301), b = n(981631), M = n(689938), P = n(362508);
+var r, i, a = n(735250), o = n(470079), s = n(120356), l = n.n(s), u = n(91192), c = n(924826), d = n(536895), _ = n(468194), E = n(477690), f = n(481060), h = n(100527), p = n(906732), m = n(570220), I = n(28546), T = n(285651), g = n(926491), S = n(373228), A = n(378233), N = n(419922), v = n(490095), O = n(652136), R = n(695346), C = n(806519), y = n(626135), D = n(280930), L = n(606301), b = n(981631), M = n(689938), P = n(216509);
 let U = (0, _.Mg)(E.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING), w = (0, _.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE), x = 2 * w + (0, _.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * U, G = () => Promise.resolve();
 function k(e) {
     let {

@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(700582), c = n(330726), d = n(268350), u = n(419922), _ = n(689938), E = n(42225);
+var s = n(735250), a = n(470079), i = n(120356), r = n.n(i), l = n(481060), o = n(700582), c = n(330726), d = n(268350), u = n(419922), _ = n(689938), E = n(34024);
 t.Z = e => {
     let {
             className: t,
@@ -10,7 +10,7 @@ t.Z = e => {
             (0, l.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     n.e('93626'),
-                    n.e('41094')
+                    n.e('94548')
                 ]).then(n.bind(n, 136735));
                 return t => (0, s.jsx)(e, {
                     sticker: I,

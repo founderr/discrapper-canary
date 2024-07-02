@@ -5,7 +5,7 @@ n.d(t, {
 });
 var a = n(735250);
 n(470079);
-var s = n(399606), r = n(481060), l = n(541716), i = n(859235), o = n(898463), c = n(76451), d = n(117530), u = n(689938), m = n(818242);
+var s = n(399606), r = n(481060), l = n(541716), i = n(859235), o = n(898463), c = n(76451), d = n(117530), u = n(689938), m = n(674823);
 function h(e) {
     let {parentChannel: t} = e, n = (0, s.Wu)([d.Z], () => {
             let e = d.Z.getUploads(t.id, l.I.CREATE_FORUM_POST.drafts.type);

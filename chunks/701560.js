@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     }
 }), n(47120), n(411104);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(442837), c = n(481060), d = n(239091), u = n(2052), _ = n(594190), E = n(592745), m = n(757266), I = n(417363), T = n(358085), h = n(346329), N = n(981631), p = n(689938), f = n(199623);
+var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(442837), c = n(481060), d = n(239091), u = n(2052), _ = n(594190), E = n(592745), m = n(757266), I = n(417363), T = n(358085), h = n(346329), N = n(981631), f = n(689938), p = n(376296);
 function C(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -22,15 +22,15 @@ class g extends (i = s.PureComponent) {
     renderDropdown() {
         let {dispatchState: e} = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1 ? (0, a.jsxs)(c.Clickable, {
-            'aria-label': p.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-            className: f.dropdownArrowHitbox,
+            'aria-label': f.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+            className: p.dropdownArrowHitbox,
             onClick: this.handleDropdownClick,
             children: [
-                (0, a.jsx)('div', { className: f.arrowSeparator }),
+                (0, a.jsx)('div', { className: p.arrowSeparator }),
                 (0, a.jsx)(c.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: f.dropdownArrow
+                    className: p.dropdownArrow
                 })
             ]
         }) : null;
@@ -44,13 +44,13 @@ class g extends (i = s.PureComponent) {
             tooltipPosition: r
         } = this.props;
         return (0, a.jsxs)('div', {
-            className: f.disabledButtonWrapper,
+            className: p.disabledButtonWrapper,
             children: [
                 (0, a.jsx)(c.Button, {
                     className: n,
                     fullWidth: i,
                     size: s,
-                    color: null != l ? l : f.disabledButtonColor,
+                    color: null != l ? l : p.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
@@ -58,7 +58,7 @@ class g extends (i = s.PureComponent) {
                     text: t,
                     position: r,
                     children: e => (0, a.jsx)('div', {
-                        className: f.disabledButtonOverlay,
+                        className: p.disabledButtonOverlay,
                         ...e
                     })
                 })
@@ -78,13 +78,13 @@ class g extends (i = s.PureComponent) {
             hideNotLaunchable: u
         } = this.props;
         if (!s)
-            return u ? null : this.renderDisabledButton(p.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? p.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : p.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+            return u ? null : this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
         if (o)
-            return this.renderDisabledButton(p.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+            return this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
         let _ = d ? c.ShinyButton : c.Button;
         return (0, a.jsxs)(_, {
-            className: r()(f.playButton, e),
-            innerClassName: f.playButtonContents,
+            className: r()(p.playButton, e),
+            innerClassName: p.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != i ? i : c.Button.Colors.GREEN,
@@ -92,8 +92,8 @@ class g extends (i = s.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, a.jsx)('div', {
-                    className: f.buttonText,
-                    children: p.Z.Messages.GAME_ACTION_BUTTON_PLAY
+                    className: p.buttonText,
+                    children: f.Z.Messages.GAME_ACTION_BUTTON_PLAY
                 }),
                 this.renderDropdown()
             ]

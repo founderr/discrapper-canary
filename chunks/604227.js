@@ -5,10 +5,10 @@ s.d(t, {
 }), s(47120), s(757143), s(653041);
 var n = s(735250);
 s(470079);
-var a = s(525654), i = s.n(a), r = s(481060), o = s(579806), l = s(304761), c = s(969832), d = s(689938), _ = s(450092);
+var a = s(525654), i = s.n(a), r = s(481060), o = s(579806), l = s(304761), c = s(969832), d = s(689938), _ = s(283181);
 function E() {
     var e, t, s, a, E, u;
-    let T = window.GLOBAL_ENV.RELEASE_CHANNEL, I = '306865', S = (e = '627a827f998b6d23d32d4b8573019cf9a255b587', e.substring(0, 7)), N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(), C = null === o.Z || void 0 === o.Z ? void 0 : null === (t = (s = o.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s), m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E), A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web, h = function () {
+    let T = window.GLOBAL_ENV.RELEASE_CHANNEL, I = '306923', S = (e = '79f8babf0128a24e88996377cb4af26171c0815e', e.substring(0, 7)), N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(), C = null === o.Z || void 0 === o.Z ? void 0 : null === (t = (s = o.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s), m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E), A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web, h = function () {
             var e;
             let t = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
             if (null == t || null == o.Z)

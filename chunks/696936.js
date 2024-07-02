@@ -8,7 +8,7 @@ t.d(n, {
 });
 var s = t(735250);
 t(470079);
-var o = t(120356), r = t.n(o), a = t(481060), l = t(26866);
+var o = t(120356), r = t.n(o), a = t(481060), l = t(61224);
 let i = {
     RED: l.redMessageBlock,
     YELLOW: l.yellowMessageBlock,

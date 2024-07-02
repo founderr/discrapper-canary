@@ -1,26 +1,26 @@
-n.d(t, {
+t.d(n, {
     J: function () {
         return r;
     },
     K: function () {
-        return l;
+        return u;
     }
 });
-var s = n(735250);
-n(470079);
-var a = n(481060), i = n(866266);
+var l = t(735250);
+t(470079);
+var a = t(481060), i = t(866266);
 function r(e) {
     (0, a.openModalLazy)(async () => {
-        let {default: t} = await n.e('9354').then(n.bind(n, 461533));
-        return n => (0, s.jsx)(t, {
-            ...n,
+        let {default: n} = await t.e('9354').then(t.bind(t, 461533));
+        return t => (0, l.jsx)(n, {
+            ...t,
             guildId: e
         });
     });
 }
-function l(e) {
-    (0, a.openModalLazy)(async () => t => (0, s.jsx)(i.Z, {
-        ...t,
+function u(e) {
+    (0, a.openModalLazy)(async () => n => (0, l.jsx)(i.Z, {
+        ...n,
         guildId: e
     }));
 }

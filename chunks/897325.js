@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     }
 }), n(627341);
-var i = n(278074), a = n(263568), s = n(148163);
+var i = n(278074), a = n(263568), s = n(171018);
 function l(e, t) {
     let n = (0, i.EQ)(t).with(a.C.IMAGE_ONLY_ANSWERS, () => s.normalStylesImageOnlyAnswers).otherwise(() => s.normalStylesDefault);
     return {

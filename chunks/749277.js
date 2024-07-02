@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), s = n(704215), l = n(481060), r = n(232567), o = n(230711), c = n(726542), d = n(100527), u = n(231757), _ = n(674525), E = n(29458), m = n(636629), I = n(33885), T = n(963249), h = n(346585), N = n(303172), p = n(463230), f = n(246965), C = n(703656), g = n(706454), S = n(933429), A = n(395361), x = n(626135), O = n(243778), R = n(921944), M = n(981631), v = n(801461), L = n(474936), Z = n(689938), P = n(596791);
+var a = n(442837), s = n(704215), l = n(481060), r = n(232567), o = n(230711), c = n(726542), d = n(100527), u = n(231757), _ = n(674525), E = n(29458), m = n(636629), I = n(33885), T = n(963249), h = n(346585), N = n(303172), f = n(463230), p = n(246965), C = n(703656), g = n(706454), S = n(933429), A = n(395361), x = n(626135), O = n(243778), R = n(921944), M = n(981631), v = n(801461), L = n(474936), Z = n(689938), P = n(708522);
 let b = e => {
     let {
             dismissibleContent: t,
@@ -136,12 +136,12 @@ let b = e => {
                     ]
                 });
             case s.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                return (0, i.jsx)(f.Z, {
+                return (0, i.jsx)(p.Z, {
                     dismissCurrentNotice: () => S(R.L.UNKNOWN),
                     subscriptionTier: L.Si.TIER_2
                 });
             case s.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                return (0, i.jsx)(f.Z, {
+                return (0, i.jsx)(p.Z, {
                     dismissCurrentNotice: () => S(R.L.UNKNOWN),
                     subscriptionTier: L.Si.TIER_0
                 });
@@ -164,7 +164,7 @@ let b = e => {
                     ]
                 });
             case s.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
-                return (0, i.jsx)(p.Z, {
+                return (0, i.jsx)(f.Z, {
                     notice: D,
                     noticeType: b,
                     dismissCurrentNotice: () => S(R.L.UNKNOWN)

@@ -1,6 +1,6 @@
 var r = n(735250);
 n(470079);
-var i = n(120356), a = n.n(i), o = n(481060), s = n(28531), l = n(819758), u = n(149203), c = n(689938), d = n(615246);
+var i = n(120356), a = n.n(i), o = n(481060), s = n(28531), l = n(819758), u = n(149203), c = n(689938), d = n(549220);
 let _ = e => {
     let {emojiSubCategory: t} = e;
     return (0, r.jsxs)('div', {

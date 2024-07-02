@@ -1,5 +1,5 @@
 n(47120);
-var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(86357), c = n(54936), d = n(55008), u = n(592771), _ = n(305177), E = n(73346), m = n(568836), I = n(345898), T = n(981631), h = n(624179);
+var i, a = n(735250), s = n(470079), l = n(120356), r = n.n(l), o = n(86357), c = n(54936), d = n(55008), u = n(592771), _ = n(305177), E = n(73346), m = n(568836), I = n(345898), T = n(981631), h = n(659727);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -8,7 +8,7 @@ function N(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class p extends (i = s.PureComponent) {
+class f extends (i = s.PureComponent) {
     render() {
         let {
                 sku: e,
@@ -84,10 +84,10 @@ class p extends (i = s.PureComponent) {
         });
     }
 }
-N(p, 'defaultProps', {
+N(f, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
-}), t.Z = p;
+}), t.Z = f;

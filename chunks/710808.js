@@ -3,7 +3,7 @@ s.d(t, {
         return O;
     }
 }), s(47120);
-var n = s(735250), a = s(470079), i = s(442837), r = s(481060), o = s(846027), l = s(304680), c = s(579806), d = s(729345), _ = s(921801), E = s(131951), u = s(226961), T = s(285952), I = s(12647), S = s(726985), N = s(981631), C = s(65154), m = s(689938), A = s(331651);
+var n = s(735250), a = s(470079), i = s(442837), r = s(481060), o = s(846027), l = s(304680), c = s(579806), d = s(729345), _ = s(921801), E = s(131951), u = s(226961), T = s(285952), I = s(12647), S = s(726985), N = s(981631), C = s(65154), m = s(689938), A = s(549856);
 async function h() {
     let e = await c.Z.fileManager.getModulePath(), t = c.Z.fileManager.join(e, 'discord_voice');
     c.Z.fileManager.showItemInFolder(t);

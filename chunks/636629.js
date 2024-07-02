@@ -1,6 +1,6 @@
 var i = n(735250);
 n(470079);
-var a = n(913527), s = n.n(a), l = n(481060), r = n(730417), o = n(921944), c = n(689938), d = n(983209);
+var a = n(913527), s = n.n(a), l = n(481060), r = n(730417), o = n(921944), c = n(689938), d = n(478752);
 let u = (e, t) => ({
     bodyText: c.Z.Messages.DROPS_BANNER_NOTICE.format({
         gameName: e.title,

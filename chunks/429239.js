@@ -1,187 +1,187 @@
-var a = t(735250), n = t(470079), l = t(120356), s = t.n(l), r = t(974674), c = t(438784), d = t(481060), o = t(806519), u = t(525049), A = t(542398);
-let I = {}, _ = 1 / 4;
-function S(e) {
+var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(974674), c = n(438784), o = n(481060), u = n(806519), d = n(525049), _ = n(345390);
+let h = {}, E = 1 / 4;
+function f(e) {
     let {
-        height: i,
-        fillColor: t
+        height: t,
+        fillColor: n
     } = e;
-    return (0, a.jsx)('div', {
+    return (0, l.jsx)('div', {
         style: {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            borderRadius: i / 2,
-            backgroundColor: t,
-            height: i,
-            width: i * u.jR
+            borderRadius: t / 2,
+            backgroundColor: n,
+            height: t,
+            width: t * d.jR
         },
-        children: (0, a.jsx)(c.b, {
-            className: A.dots,
-            dotRadius: i * _
+        children: (0, l.jsx)(c.b, {
+            className: _.dots,
+            dotRadius: t * E
         })
     });
 }
-function E(e) {
+function S(e) {
     let {
-            isTyping: i,
-            statusCoords: t,
-            status: n
-        } = e, l = (0, d.useStatusFillColor)(d.StatusTypes.ONLINE);
-    return i ? (0, a.jsx)('div', {
+            isTyping: t,
+            statusCoords: n,
+            status: a
+        } = e, i = (0, o.useStatusFillColor)(o.StatusTypes.ONLINE);
+    return t ? (0, l.jsx)('div', {
         style: {
             position: 'absolute',
-            top: t.y,
-            left: t.x
+            top: n.y,
+            left: n.x
         },
-        children: (0, a.jsx)(S, {
-            height: t.height,
-            fillColor: l
+        children: (0, l.jsx)(f, {
+            height: n.height,
+            fillColor: i
         })
-    }) : null != n ? (0, a.jsx)(d.Status, {
-        size: t.height,
-        status: n,
+    }) : null != a ? (0, l.jsx)(o.Status, {
+        size: n.height,
+        status: a,
         style: {
             position: 'absolute',
-            top: t.y,
-            left: t.x
+            top: n.y,
+            left: n.x
         }
     }) : null;
 }
-function f(e) {
+function g(e) {
     let {
-        src: i,
-        size: t
+        src: t,
+        size: n
     } = e;
-    return (0, a.jsx)('img', {
-        className: A.circularImage,
-        src: i,
+    return (0, l.jsx)('img', {
+        className: _.circularImage,
+        src: t,
         alt: '',
-        width: t,
-        height: t
+        width: n,
+        height: n
     });
 }
-let h = {
-    [d.AvatarSizes.SIZE_16]: {
-        default: o.QS.DIAGONAL_FACEPILE_16,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_16,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_16
+let I = {
+    [o.AvatarSizes.SIZE_16]: {
+        default: u.QS.DIAGONAL_FACEPILE_16,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_16
     },
-    [d.AvatarSizes.SIZE_20]: {
-        default: o.QS.DIAGONAL_FACEPILE_20,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_20,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_20
+    [o.AvatarSizes.SIZE_20]: {
+        default: u.QS.DIAGONAL_FACEPILE_20,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_20,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_20
     },
-    [d.AvatarSizes.SIZE_24]: {
-        default: o.QS.DIAGONAL_FACEPILE_24,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_24,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_24
+    [o.AvatarSizes.SIZE_24]: {
+        default: u.QS.DIAGONAL_FACEPILE_24,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_24,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_24
     },
-    [d.AvatarSizes.SIZE_32]: {
-        default: o.QS.DIAGONAL_FACEPILE_32,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_32
+    [o.AvatarSizes.SIZE_32]: {
+        default: u.QS.DIAGONAL_FACEPILE_32,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_32
     },
-    [d.AvatarSizes.SIZE_40]: {
-        default: o.QS.DIAGONAL_FACEPILE_32,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_32
+    [o.AvatarSizes.SIZE_40]: {
+        default: u.QS.DIAGONAL_FACEPILE_32,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_32
     },
-    [d.AvatarSizes.SIZE_48]: {
-        default: o.QS.DIAGONAL_FACEPILE_40,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_40,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_40
+    [o.AvatarSizes.SIZE_48]: {
+        default: u.QS.DIAGONAL_FACEPILE_40,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_40,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_40
     },
-    [d.AvatarSizes.SIZE_56]: {
-        default: o.QS.DIAGONAL_FACEPILE_56,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_56,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_56
+    [o.AvatarSizes.SIZE_56]: {
+        default: u.QS.DIAGONAL_FACEPILE_56,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_56,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_56
     },
-    [d.AvatarSizes.SIZE_80]: {
-        default: o.QS.DIAGONAL_FACEPILE_80,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_80,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_80
+    [o.AvatarSizes.SIZE_80]: {
+        default: u.QS.DIAGONAL_FACEPILE_80,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_80
     },
-    [d.AvatarSizes.SIZE_120]: {
-        default: o.QS.DIAGONAL_FACEPILE_120,
-        typing: o.QS.DIAGONAL_FACEPILE_TYPING_120,
-        status: o.QS.DIAGONAL_FACEPILE_STATUS_120
+    [o.AvatarSizes.SIZE_120]: {
+        default: u.QS.DIAGONAL_FACEPILE_120,
+        typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,
+        status: u.QS.DIAGONAL_FACEPILE_STATUS_120
     }
 };
-i.Z = function (e) {
-    var i, t, l;
+t.Z = function (e) {
+    var t, n, i;
     let {
             backSrc: c,
-            frontSrc: _,
-            size: S,
-            isTyping: g,
+            frontSrc: E,
+            size: f,
+            isTyping: A,
             status: p,
-            style: L,
+            style: m,
             className: b,
-            ...N
-        } = e, {size: x} = d.AvatarSizeSpecs[S], {
-            statusCoords: T,
-            frontAvatarOffsetPx: m,
-            frontAvatarSizePx: C,
-            backAvatarSizePx: G
-        } = n.useMemo(() => {
+            ...C
+        } = e, {size: L} = o.AvatarSizeSpecs[f], {
+            statusCoords: N,
+            frontAvatarOffsetPx: T,
+            frontAvatarSizePx: Z,
+            backAvatarSizePx: y
+        } = a.useMemo(() => {
             var e;
-            let i = ''.concat(x, '-').concat(g);
-            return null !== (e = I[i]) && void 0 !== e ? e : function (e, i, t) {
-                let a = d.AvatarSizeSpecs[e], n = a.size / (u.z3 + u.o), l = n * u.z3, s = n * u.o, c = {
-                        statusCoords: (0, r.Vq)(a, d.StatusTypes.ONLINE, !1, i),
-                        frontAvatarSizePx: l,
-                        backAvatarSizePx: n,
+            let t = ''.concat(L, '-').concat(A);
+            return null !== (e = h[t]) && void 0 !== e ? e : function (e, t, n) {
+                let l = o.AvatarSizeSpecs[e], a = l.size / (d.z3 + d.o), i = a * d.z3, s = a * d.o, c = {
+                        statusCoords: (0, r.Vq)(l, o.StatusTypes.ONLINE, !1, t),
+                        frontAvatarSizePx: i,
+                        backAvatarSizePx: a,
                         frontAvatarOffsetPx: s,
-                        frontAvatarCenter: s + l / 2
+                        frontAvatarCenter: s + i / 2
                     };
-                return I[t] = c, c;
-            }(S, g, i);
+                return h[n] = c, c;
+            }(f, A, t);
         }, [
-            x,
-            g,
-            S
+            L,
+            A,
+            f
         ]);
-    let y = (i = null != p, t = g, l = S, t ? h[l].typing : i ? h[l].status : h[l].default);
-    return (0, a.jsxs)('div', {
+    let x = (t = null != p, n = A, i = f, n ? I[i].typing : t ? I[i].status : I[i].default);
+    return (0, l.jsxs)('div', {
         style: {
-            width: x,
-            height: x,
-            ...L
+            width: L,
+            height: L,
+            ...m
         },
-        'aria-label': N['aria-label'],
-        'aria-hidden': N['aria-hidden'],
-        className: s()(A.container, b),
+        'aria-label': C['aria-label'],
+        'aria-hidden': C['aria-hidden'],
+        className: s()(_.container, b),
         children: [
-            (0, a.jsxs)(o.ZP, {
-                mask: y,
-                height: x,
-                width: x,
+            (0, l.jsxs)(u.ZP, {
+                mask: x,
+                height: L,
+                width: L,
                 children: [
-                    (0, a.jsx)('img', {
+                    (0, l.jsx)('img', {
                         src: c,
                         alt: '',
-                        width: G,
-                        height: G
+                        width: y,
+                        height: y
                     }),
-                    (0, a.jsx)('div', {
+                    (0, l.jsx)('div', {
                         style: {
                             position: 'absolute',
-                            top: m,
-                            left: m
+                            top: T,
+                            left: T
                         },
-                        children: (0, a.jsx)(f, {
-                            src: _,
-                            size: C,
-                            isTyping: g,
+                        children: (0, l.jsx)(g, {
+                            src: E,
+                            size: Z,
+                            isTyping: A,
                             status: p
                         })
                     })
                 ]
             }),
-            (0, a.jsx)(E, {
-                statusCoords: T,
+            (0, l.jsx)(S, {
+                statusCoords: N,
                 status: p,
-                isTyping: g
+                isTyping: A
             })
         ]
     });

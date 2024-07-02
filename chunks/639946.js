@@ -5,7 +5,7 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var r = n(481060), i = n(471445), a = n(742593), l = n(324402);
+var r = n(481060), i = n(471445), a = n(742593), l = n(657736);
 function o(e) {
     let {channel: t} = e, n = (0, i.Th)(t.type);
     return (0, s.jsxs)('div', {

@@ -6,7 +6,7 @@ n.r(r), n.d(r, {
         return O;
     }
 }), n(653041), n(47120);
-var t = n(735250), l = n(470079), o = n(120356), s = n.n(o), i = n(954955), a = n.n(i), c = n(442837), d = n(477690), u = n(481060), m = n(691251), _ = n(598), p = n(409813), h = n(185139), E = n(624138), N = n(790954), S = n(453070), f = n(926491), C = n(378233), I = n(515005), P = n(282896), x = n(929204), g = n(981631), A = n(689938), T = n(451178);
+var t = n(735250), l = n(470079), o = n(120356), s = n.n(o), i = n(954955), a = n.n(i), c = n(442837), d = n(477690), u = n(481060), m = n(691251), _ = n(598), p = n(409813), h = n(185139), E = n(624138), N = n(790954), S = n(453070), f = n(926491), C = n(378233), I = n(515005), P = n(282896), x = n(929204), g = n(981631), A = n(689938), T = n(257436);
 let k = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS), v = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING), R = (0, E.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN), j = k + 2 * v, M = a()(N.pF, 250), b = () => {
         M.cancel();
     }, y = e => {

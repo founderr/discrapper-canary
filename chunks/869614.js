@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 }), n(47120);
-let i = new Set(['nvidia']);
-function s(e) {
+let r = new Set(['nvidia']);
+function o(e) {
     for (let t of Object.keys(e)) {
         let n = e[t];
-        if (null != n && null == n.error && i.has(t))
+        if (null != n && null == n.error && r.has(t))
             return !0;
     }
     return !1;

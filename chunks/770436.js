@@ -38,7 +38,7 @@ function u(e) {
         onChannelContextMenu: e => {
             let i = r.Z.getGuild(t);
             null != u.options.channel && null != i && (0, a.jW)(e, async () => {
-                let {default: e} = await n.e('51529').then(n.bind(n, 228620));
+                let {default: e} = await n.e('51529').then(n.bind(n, 911053));
                 return t => (0, s.jsx)(e, {
                     ...t,
                     channel: u.options.channel
@@ -52,7 +52,7 @@ function u(e) {
                 let o = i.Z.getChannel(u.targetId), _ = r.Z.getGuild(t);
                 if (null != o && null != _)
                     return (0, a.jW)(e, async () => {
-                        let {default: e} = await n.e('51529').then(n.bind(n, 228620));
+                        let {default: e} = await n.e('51529').then(n.bind(n, 911053));
                         return t => (0, s.jsx)(e, {
                             ...t,
                             channel: o

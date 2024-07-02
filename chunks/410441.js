@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(423875), l = n(481060), s = n(908841), r = n(689938), o = n(346737);
+var a = n(423875), l = n(481060), s = n(908841), r = n(689938), o = n(634241);
 let c = {
     [a.p.PROVIDER_UNSPECIFIED]: null,
     [a.p.SPOTIFY]: {

@@ -3,7 +3,7 @@ i.r(n), i.d(n, {
         return eP;
     }
 }), i(47120), i(315314), i(610138), i(216116), i(78328), i(815648), i(789020), i(653041);
-var t = i(735250), a = i(470079), r = i(120356), o = i.n(r), l = i(525654), s = i.n(l), c = i(302454), d = i.n(c), u = i(873546), _ = i(149765), p = i(468194), m = i(442837), I = i(692547), f = i(477690), g = i(481060), h = i(995648), C = i(445986), v = i(9807), E = i(911969), x = i(330726), b = i(782568), A = i(607070), P = i(581364), T = i(970321), R = i(283836), N = i(220082), S = i(252618), L = i(299206), O = i(422559), j = i(270144), y = i(864843), D = i(703656), Z = i(588822), M = i(706454), B = i(314897), k = i(451478), w = i(729035), G = i(626135), H = i(768581), U = i(572004), F = i(823379), Y = i(900849), W = i(674588), V = i(264043), z = i(303383), K = i(887706), q = i(738130), J = i(4461), Q = i(34674), X = i(576958), $ = i(924489), ee = i(125909), en = i(409425), ei = i(132871), et = i(147890), ea = i(491576), er = i(95650), eo = i(326135), el = i(940064), es = i(626004), ec = i(939893), ed = i(430913), eu = i(606183), e_ = i(272242), ep = i(981631), em = i(558921), eI = i(689938), ef = i(79329), eg = i(902294);
+var t = i(735250), a = i(470079), r = i(120356), o = i.n(r), l = i(525654), s = i.n(l), c = i(302454), d = i.n(c), u = i(873546), _ = i(149765), p = i(468194), m = i(442837), I = i(692547), f = i(477690), g = i(481060), h = i(995648), C = i(445986), v = i(9807), E = i(911969), x = i(330726), b = i(782568), A = i(607070), P = i(581364), T = i(970321), R = i(283836), N = i(220082), S = i(252618), L = i(299206), O = i(422559), j = i(270144), y = i(864843), D = i(703656), Z = i(588822), M = i(706454), B = i(314897), k = i(451478), w = i(729035), G = i(626135), H = i(768581), U = i(572004), F = i(823379), Y = i(900849), W = i(674588), V = i(264043), z = i(303383), K = i(887706), q = i(738130), J = i(4461), Q = i(34674), X = i(576958), $ = i(924489), ee = i(125909), en = i(409425), ei = i(132871), et = i(147890), ea = i(491576), er = i(95650), eo = i(326135), el = i(940064), es = i(626004), ec = i(939893), ed = i(430913), eu = i(606183), e_ = i(272242), ep = i(981631), em = i(558921), eI = i(689938), ef = i(57853), eg = i(902294);
 let eh = d().parserFor(ec.Z), eC = d().reactFor(d().ruleOutput(ec.Z, 'react')), ev = (0, p.Mg)(f.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE), eE = 'redirect_to_support_server', ex = 'start_application_install', eb = e => ''.concat(location.protocol, '//').concat(location.host).concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(e)), eA = e => {
         if (null == e)
             return null;
@@ -241,16 +241,16 @@ function eP(e) {
         }), [
             eF,
             e$
-        ]), [e6, e1] = (0, x.Z)(!1, 1000), e5 = a.useCallback(() => {
+        ]), [e6, e5] = (0, x.Z)(!1, 1000), e1 = a.useCallback(() => {
             if (null != eM)
                 G.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
                     source: 'product_page',
                     application_id: eM.id,
                     guild_id: f
-                }), (0, U.JG)(eb(eM.id)), e1(!0);
+                }), (0, U.JG)(eb(eM.id)), e5(!0);
         }, [
             eM,
-            e1,
+            e5,
             f
         ]);
     a.useEffect(() => {
@@ -567,7 +567,7 @@ function eP(e) {
                                                 className: ef.buttons,
                                                 children: [
                                                     (0, t.jsx)(g.Button, {
-                                                        onClick: e5,
+                                                        onClick: e1,
                                                         color: g.Button.Colors.PRIMARY,
                                                         children: e6 ? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                                                     }),

@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     }
 });
-var r = n(735250), i = n(470079), a = n(803997), o = n.n(a), s = n(696689), l = n.n(s), u = n(692547), c = n(951200), d = n(487204);
+var r = n(735250), i = n(470079), a = n(803997), o = n.n(a), s = n(696689), l = n.n(s), u = n(692547), c = n(181375), d = n(860857);
 let _ = Object.fromEntries(Object.keys(u.Z.colors).map(e => [
         l()(e),
         e

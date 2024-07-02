@@ -1,32 +1,32 @@
-n.d(t, {
+n.d(i, {
     c: function () {
-        return I;
+        return E;
     }
 });
-var s = n(735250);
+var o = n(735250);
 n(470079);
-var a = n(481060), i = n(269128), r = n(358555), l = n(267642), o = n(26323), c = n(30513), d = n(981631), u = n(689938), _ = n(342864);
-function E(e) {
+var t = n(481060), r = n(269128), a = n(358555), l = n(267642), s = n(26323), c = n(30513), d = n(981631), u = n(689938), _ = n(669252);
+function g(e) {
     let {
-        guild: t,
+        guild: i,
         banner: n
     } = e;
-    return (0, s.jsx)('div', {
+    return (0, o.jsx)('div', {
         className: _.guildBanner,
         style: { backgroundImage: 'url('.concat(n) },
-        children: (0, s.jsxs)('div', {
+        children: (0, o.jsxs)('div', {
             className: _.guildHeader,
             children: [
-                (0, s.jsx)(r.Z, {
-                    guild: t,
+                (0, o.jsx)(a.Z, {
+                    guild: i,
                     isBannerVisible: !0
                 }),
-                (0, s.jsx)(a.Heading, {
+                (0, o.jsx)(t.Heading, {
                     className: _.guildName,
                     variant: 'heading-md/semibold',
-                    children: t.toString()
+                    children: i.toString()
                 }),
-                (0, s.jsx)(i.Z, {
+                (0, o.jsx)(r.Z, {
                     className: _.dropdown,
                     open: !1
                 })
@@ -34,30 +34,30 @@ function E(e) {
         })
     });
 }
-function I(e) {
+function E(e) {
     let {
-            analyticsLocations: t,
+            analyticsLocations: i,
             analyticsLocation: n,
-            guild: a,
-            isGIF: i,
-            banner: r
-        } = e, _ = i ? (0, l._p)(d.oNc.ANIMATED_BANNER) : (0, l._p)(d.oNc.BANNER);
-    null != _ && (0, o.Z)({
-        analyticsLocations: t,
+            guild: t,
+            isGIF: r,
+            banner: a
+        } = e, _ = r ? (0, l._p)(d.oNc.ANIMATED_BANNER) : (0, l._p)(d.oNc.BANNER);
+    null != _ && (0, s.Z)({
+        analyticsLocations: i,
         analyticsSourceLocation: n,
-        guild: a,
+        guild: t,
         headerProps: {
             title: u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_TITLE,
-            subtitle: function (e, t) {
+            subtitle: function (e, i) {
                 let n = (0, l.nW)(e);
-                return t ? u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format({ targetLevelOrPlan: n }) : u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format({ targetLevelOrPlan: n });
-            }(_, i),
-            image: (0, s.jsx)(E, {
-                guild: a,
-                banner: r
+                return i ? u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format({ targetLevelOrPlan: n }) : u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format({ targetLevelOrPlan: n });
+            }(_, r),
+            image: (0, o.jsx)(g, {
+                guild: t,
+                banner: a
             })
         },
         perkIntro: u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_PERK_INTRO,
-        perks: i ? (0, c.zC)() : (0, c.XO)()
+        perks: r ? (0, c.zC)() : (0, c.XO)()
     });
 }

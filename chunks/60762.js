@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(990547), a = n(481060), r = n(230711), l = n(730417), o = n(981631), c = n(921944), d = n(689938), u = n(876860);
+var s = n(990547), a = n(481060), r = n(230711), l = n(730417), o = n(981631), c = n(921944), d = n(689938), u = n(157460);
 let _ = (e, t) => ({
     body: e.messages.completionTooltip(t),
     imgSrc: e.assets.tooltipSrc,

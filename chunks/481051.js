@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356), l = n.n(a), s = n(481060), r = n(322526);
+var a = n(120356), l = n.n(a), s = n(481060), r = n(574408);
 function o(e) {
     let {
         hasMentions: t,

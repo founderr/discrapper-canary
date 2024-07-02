@@ -1,62 +1,62 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return _;
+        return C;
     }
 });
-var r = n(735250);
-n(470079);
-var s = n(442837), i = n(954138), l = n(979264), o = n(741308), a = n(530), c = n(790711), d = n(67152), u = n(271383), f = n(246946), m = n(654904), E = n(228168), p = n(472375);
-function _(e) {
-    var t;
+var i = t(735250);
+t(470079);
+var a = t(442837), r = t(954138), o = t(979264), s = t(741308), l = t(530), c = t(790711), d = t(67152), u = t(271383), f = t(246946), p = t(654904), _ = t(228168), m = t(335182);
+function C(e) {
+    var n;
     let {
-            user: n,
-            displayProfile: _,
-            guild: h,
-            pendingAvatar: I,
-            pendingNickname: g,
-            pendingGlobalName: v,
-            pendingBio: C,
-            pendingPronouns: x,
-            isTryItOutFlow: Z,
-            hideBioSection: P
-        } = e, A = (0, s.e7)([u.ZP], () => null == h ? null : u.ZP.getMember(h.id, n.id)), N = (0, s.e7)([f.Z], () => f.Z.hidePersonalInformation), T = (0, i.Z)('ProfileCustomizationPreviewBody'), S = null == _ ? void 0 : null === (t = _.getPreviewBio(C)) || void 0 === t ? void 0 : t.value, j = null != x ? x : null == _ ? void 0 : _.pronouns, R = (0, m.Ly)({
-            pendingNickname: g,
-            pendingGlobalName: v,
-            user: n,
-            guildMember: A
+            user: t,
+            displayProfile: C,
+            guild: b,
+            pendingAvatar: g,
+            pendingNickname: v,
+            pendingGlobalName: x,
+            pendingBio: h,
+            pendingPronouns: E,
+            isTryItOutFlow: T,
+            hideBioSection: I
+        } = e, S = (0, a.e7)([u.ZP], () => null == b ? null : u.ZP.getMember(b.id, t.id)), A = (0, a.e7)([f.Z], () => f.Z.hidePersonalInformation), N = (0, r.Z)('ProfileCustomizationPreviewBody'), y = null == C ? void 0 : null === (n = C.getPreviewBio(h)) || void 0 === n ? void 0 : n.value, P = null != E ? E : null == C ? void 0 : C.pronouns, j = (0, p.Ly)({
+            pendingNickname: v,
+            pendingGlobalName: x,
+            user: t,
+            guildMember: S
         });
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         inert: '',
-        className: p.body,
+        className: m.body,
         children: [
-            (0, r.jsx)(a.Z, {
-                user: n,
-                profileType: E.y0.BITE_SIZE,
+            (0, i.jsx)(l.Z, {
+                user: t,
+                profileType: _.y0.BITE_SIZE,
                 usernameIcon: (() => {
-                    if (!(null != A))
+                    if (!(null != S))
                         return;
-                    if (null !== I && !!(null != A.avatar || null != I))
-                        return (0, r.jsx)(c.Z, {
-                            user: n,
-                            nickname: R
+                    if (null !== g && !!(null != S.avatar || null != g))
+                        return (0, i.jsx)(c.Z, {
+                            user: t,
+                            nickname: j
                         });
                 })(),
-                nickname: R,
-                pronouns: j,
-                isTryItOut: Z,
-                tags: (0, r.jsx)(o.Z, {
-                    displayProfile: _,
-                    profileType: E.y0.BITE_SIZE
+                nickname: j,
+                pronouns: P,
+                isTryItOut: T,
+                tags: (0, i.jsx)(s.Z, {
+                    displayProfile: C,
+                    profileType: _.y0.BITE_SIZE
                 })
             }),
-            T && (0, r.jsx)(l.ZP, {
-                userId: n.id,
+            N && (0, i.jsx)(o.ZP, {
+                userId: t.id,
                 inline: !1
             }),
-            !P && null != S && '' !== S && (0, r.jsx)(d.Z, {
-                user: n,
-                bio: S,
-                hidePersonalInformation: N
+            !I && null != y && '' !== y && (0, i.jsx)(d.Z, {
+                user: t,
+                bio: y,
+                hidePersonalInformation: A
             })
         ]
     });

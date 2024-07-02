@@ -1,4 +1,4 @@
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(392711), l = n(468194), u = n(481060), c = n(239091), d = n(2052), _ = n(691251), E = n(626135), f = n(285651), h = n(373228), p = n(378233), m = n(419922), I = n(490095), T = n(981631), g = n(689938), S = n(613892);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(392711), l = n(468194), u = n(481060), c = n(239091), d = n(2052), _ = n(691251), E = n(626135), f = n(285651), h = n(373228), p = n(378233), m = n(419922), I = n(490095), T = n(981631), g = n(689938), S = n(475686);
 let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions), N = (0, l.Mg)(S.__invalid_stickerPickerPreviewPadding), v = i.memo(function (e) {
         let {
                 isDisplayingIndividualStickers: t = !1,
@@ -70,7 +70,7 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions), N = (0, l.Mg)(S._
                                 }), (0, u.openModalLazy)(async () => {
                                     let {default: t} = await Promise.all([
                                         n.e('93626'),
-                                        n.e('47406')
+                                        n.e('10831')
                                     ]).then(n.bind(n, 136735));
                                     return n => (0, r.jsx)(t, {
                                         guildId: e.guild_id,

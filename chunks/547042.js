@@ -6,7 +6,7 @@ n.d(t, {
         return s;
     }
 });
-var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), E = n(906732), h = n(592125), I = n(810090), m = n(626135), g = n(981631), p = n(921944), T = n(689938), S = n(372064);
+var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), E = n(906732), h = n(592125), I = n(810090), m = n(626135), g = n(981631), p = n(921944), T = n(689938), S = n(660979);
 (i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
 let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4', N = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png', f = e => {
         let {

@@ -1,6 +1,6 @@
 var r = n(735250);
 n(470079);
-var i = n(481060), a = n(592125), o = n(430824), s = n(346656), l = n(689938), u = n(964862);
+var i = n(481060), a = n(592125), o = n(430824), s = n(346656), l = n(689938), u = n(586465);
 t.Z = e => {
     let {entry: t} = e, n = a.Z.getChannel(t.channelId);
     if (null == n)

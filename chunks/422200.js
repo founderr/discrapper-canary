@@ -1,56 +1,56 @@
-t.r(n);
-var i = t(735250);
-t(470079);
-var a = t(481060), s = t(239091), u = t(108843), r = t(100527), l = t(299206), d = t(895563), o = t(32750), c = t(109764), M = t(323597), _ = t(461535), E = t(438536), Z = t(251746), N = t(193987), O = t(933793), f = t(13736), T = t(732393), A = t(214906), U = t(612856), h = t(137591), g = t(689938);
-n.default = (0, u.Z)(function (e) {
+i.r(e);
+var t = i(735250);
+i(470079);
+var r = i(481060), a = i(239091), l = i(108843), u = i(100527), s = i(299206), o = i(895563), d = i(32750), c = i(109764), Z = i(323597), h = i(461535), M = i(438536), f = i(251746), _ = i(193987), p = i(933793), E = i(13736), j = i(732393), m = i(214906), x = i(612856), A = i(137591), I = i(689938);
+e.default = (0, l.Z)(function (n) {
     let {
-            channel: n,
-            onSelect: t
-        } = e, u = (0, c.Z)(n), r = (0, _.Z)(n), S = (0, A.Z)(n), m = (0, o.Z)(n), R = (0, N.Z)(n), I = (0, M.Z)(n), C = (0, l.Z)({
-            id: n.id,
-            label: g.Z.Messages.COPY_ID_THREAD
-        }), G = (0, E.Z)(n, 'Context Menu'), L = (0, O.Z)(n), p = (0, U.Z)(n), v = (0, f.Z)(n), b = (0, T.Z)(n.id), P = (0, Z.Z)(n), j = (0, h.Z)(n), x = (0, d.l)(n), D = (0, d.P)(n);
-    return (0, i.jsxs)(a.Menu, {
+            channel: e,
+            onSelect: i
+        } = n, l = (0, c.Z)(e), u = (0, h.Z)(e), C = (0, m.Z)(e), G = (0, d.Z)(e), g = (0, _.Z)(e), v = (0, Z.Z)(e), O = (0, s.Z)({
+            id: e.id,
+            label: I.Z.Messages.COPY_ID_THREAD
+        }), T = (0, M.Z)(e, 'Context Menu'), R = (0, p.Z)(e), U = (0, x.Z)(e), D = (0, E.Z)(e), N = (0, j.Z)(e.id), P = (0, f.Z)(e), b = (0, A.Z)(e), L = (0, o.l)(e), F = (0, o.P)(e);
+    return (0, t.jsxs)(r.Menu, {
         navId: 'thread-context',
-        onClose: s.Zy,
-        'aria-label': g.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-        onSelect: t,
+        onClose: a.Zy,
+        'aria-label': I.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+        onSelect: i,
         children: [
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, t.jsxs)(r.MenuGroup, {
                 children: [
-                    r,
-                    x
+                    u,
+                    L
                 ]
             }, 'mark-as-read-or-favorite'),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, t.jsxs)(r.MenuGroup, {
                 children: [
-                    G,
+                    T,
                     P,
-                    m,
-                    R,
-                    v,
-                    b,
-                    u
+                    G,
+                    g,
+                    D,
+                    N,
+                    l
                 ]
             }, 'thread-actions'),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, t.jsxs)(r.MenuGroup, {
                 children: [
-                    S,
-                    p
+                    C,
+                    U
                 ]
             }, 'notifications'),
-            (0, i.jsx)(a.MenuGroup, { children: D }),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, t.jsx)(r.MenuGroup, { children: F }),
+            (0, t.jsxs)(r.MenuGroup, {
                 children: [
-                    j,
-                    L,
-                    I
+                    b,
+                    R,
+                    v
                 ]
             }, 'admin-actions'),
-            (0, i.jsx)(a.MenuGroup, { children: C }, 'developer-actions')
+            (0, t.jsx)(r.MenuGroup, { children: O }, 'developer-actions')
         ]
     });
 }, [
-    r.Z.CONTEXT_MENU,
-    r.Z.CHANNEL_LIST_THREAD_MENU
+    u.Z.CONTEXT_MENU,
+    u.Z.CHANNEL_LIST_THREAD_MENU
 ]);

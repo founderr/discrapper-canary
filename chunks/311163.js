@@ -1,22 +1,22 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return n;
+        return o;
     }
 });
-var a = r(272423);
-function n(e) {
-    let t = (0, a.kf)(e);
+var i = n(272423);
+function o(e) {
+    let t = (0, i.kf)(e);
     if (null != t)
         return [
             t.params.guildId,
             t.params.channelId
         ];
-    let r = (0, a.B3)(e);
-    if (null != r) {
-        var n, i;
+    let n = (0, i.B3)(e);
+    if (null != n) {
+        var o, r;
         return [
-            null === (n = r.params) || void 0 === n ? void 0 : n.guildId,
-            null === (i = r.params) || void 0 === i ? void 0 : i.channelId
+            null === (o = n.params) || void 0 === o ? void 0 : o.guildId,
+            null === (r = n.params) || void 0 === r ? void 0 : r.channelId
         ];
     }
     return [

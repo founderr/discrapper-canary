@@ -1,33 +1,33 @@
 n.d(t, {
     C2: function () {
-        return c;
+        return E;
     },
     DL: function () {
-        return r;
+        return i;
     },
     EI: function () {
-        return l;
+        return r;
     },
     Nn: function () {
-        return d;
+        return N;
     },
     X_: function () {
-        return o;
+        return c;
     },
     n4: function () {
-        return s;
+        return a;
     },
     zr: function () {
-        return a;
+        return o;
     }
 });
-var i = n(689938);
-let a = 'SAFETY_WARNING_BANNER_WEB', l = 'https://www.crisistextline.org/', s = 'https://nofiltr.org/resources-hub/', r = 'InappropriateConversationModal-web', o = 'PRIVATE_DM_SAFETY_TOOLS_MODAL', c = () => [
-        i.Z.Messages.STRANGER_DANGER_TIPS_1,
-        i.Z.Messages.STRANGER_DANGER_TIPS_2,
-        i.Z.Messages.STRANGER_DANGER_TIPS_3
-    ], d = () => [
-        i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_1,
-        i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_2,
-        i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_3
+var s = n(689938);
+let o = 'SAFETY_WARNING_BANNER_WEB', r = 'https://www.crisistextline.org/', a = 'https://nofiltr.org/resources-hub/', i = 'InappropriateConversationModal-web', c = 'PRIVATE_DM_SAFETY_TOOLS_MODAL', E = () => [
+        s.Z.Messages.STRANGER_DANGER_TIPS_1,
+        s.Z.Messages.STRANGER_DANGER_TIPS_2,
+        s.Z.Messages.STRANGER_DANGER_TIPS_3
+    ], N = () => [
+        s.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_1,
+        s.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_2,
+        s.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_3
     ];

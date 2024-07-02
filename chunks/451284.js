@@ -1,9 +1,9 @@
-n.d(t, {
+i.d(n, {
     P: function () {
-        return s;
+        return o;
     }
 });
-var i = n(442837), a = n(236289);
-function s() {
-    return (0, i.e7)([a.Z], () => a.Z.getAccountStanding());
+var e = i(442837), a = i(236289);
+function o() {
+    return (0, e.e7)([a.Z], () => a.Z.getAccountStanding());
 }

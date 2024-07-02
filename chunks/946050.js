@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     }
 });
-var i = n(735250), a = n(470079), l = n(481060), s = n(670044), r = n(28391), o = n(526761), c = n(689938), d = n(223056);
+var i = n(735250), a = n(470079), l = n(481060), s = n(670044), r = n(28391), o = n(526761), c = n(689938), d = n(166999);
 function u(e) {
     return a.useEffect(() => e.onChannelChange(), [e.channel.id]), (0, i.jsxs)('div', {
         className: d.notice,

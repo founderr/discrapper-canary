@@ -1,5 +1,5 @@
 n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(477690), l = n(481060), u = n(2052), c = n(880949), d = n(806966), _ = n(28546), E = n(254494), f = n(430824), h = n(626135), p = n(624138), m = n(453070), I = n(926491), T = n(373228), g = n(378233), S = n(419922), A = n(981631), N = n(957825), v = n(689938), O = n(291769);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(477690), l = n(481060), u = n(2052), c = n(880949), d = n(806966), _ = n(28546), E = n(254494), f = n(430824), h = n(626135), p = n(624138), m = n(453070), I = n(926491), T = n(373228), g = n(378233), S = n(419922), A = n(981631), N = n(957825), v = n(689938), O = n(784498);
 let R = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING), C = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE), y = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN), D = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE), L = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE), b = (0, p.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL), M = [
         R,
         R,

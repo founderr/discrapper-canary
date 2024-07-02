@@ -1,59 +1,59 @@
 n.d(t, {
     m$: function () {
-        return m;
+        return _;
     },
     wV: function () {
-        return p;
+        return f;
     }
 });
-var i = n(470079), a = n(442837), l = n(470956), s = n(314897), r = n(592125), o = n(979651), c = n(441894);
-function d(e) {
-    let t = (0, a.e7)([o.Z], () => o.Z.getVoiceStatesForChannel(e)), n = i.useMemo(() => Object.keys(t), [t]);
-    return (0, l.Yp)(e, n);
+var r = n(470079), o = n(442837), i = n(470956), l = n(314897), u = n(592125), a = n(979651), c = n(441894);
+function s(e) {
+    let t = (0, o.e7)([a.Z], () => a.Z.getVoiceStatesForChannel(e)), n = r.useMemo(() => Object.keys(t), [t]);
+    return (0, i.Yp)(e, n);
 }
-function u(e) {
+function d(e) {
     let {
             channelId: t,
             location: n
-        } = e, i = (0, c.J)({
+        } = e, r = (0, c.J)({
             channelId: t,
             location: n
-        }), l = (0, a.e7)([r.Z], () => {
+        }), i = (0, o.e7)([u.Z], () => {
             var e;
-            return (null === (e = r.Z.getChannel(t)) || void 0 === e ? void 0 : e.isGuildStageVoice()) === !0;
+            return (null === (e = u.Z.getChannel(t)) || void 0 === e ? void 0 : e.isGuildStageVoice()) === !0;
         });
-    return i && !l;
+    return r && !i;
 }
-function h(e, t) {
+function E(e, t) {
     return !1;
 }
-function p(e) {
+function f(e) {
     var t, n;
     let {
-            userId: i,
-            channelId: l,
-            location: r
-        } = e, o = d(l), c = u({
-            channelId: l,
-            location: r
-        }), h = (0, a.e7)([s.default], () => s.default.getId());
-    return c && o.has(h) && null != i && o.has(i) && (t = 0, n = 0, !1);
+            userId: r,
+            channelId: i,
+            location: u
+        } = e, a = s(i), c = d({
+            channelId: i,
+            location: u
+        }), E = (0, o.e7)([l.default], () => l.default.getId());
+    return c && a.has(E) && null != r && a.has(r) && (t = 0, n = 0, !1);
 }
-function m(e) {
+function _(e) {
     let {
             channelId: t,
             location: n
-        } = e, l = d(t), r = u({
+        } = e, i = s(t), u = d({
             channelId: t,
             location: n
-        }), o = (0, a.e7)([s.default], () => s.default.getId());
-    return i.useMemo(() => !!(r && l.has(o)) && Array.from(l).every(e => {
+        }), a = (0, o.e7)([l.default], () => l.default.getId());
+    return r.useMemo(() => !!(u && i.has(a)) && Array.from(i).every(e => {
         var t, n;
-        return t = 0, n = 0, e === o;
+        return t = 0, n = 0, e === a;
     }), [
         t,
-        o,
-        r,
-        l
+        a,
+        u,
+        i
     ]);
 }

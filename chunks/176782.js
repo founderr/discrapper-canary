@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var s = n(442837), a = n(607070), r = n(314684), i = n(391110), l = n(678081);
+var s = n(442837), a = n(607070), r = n(314684), i = n(391110), l = n(978671);
 let o = {
         subtitle: { onlyShowOnHover: !1 },
         description: {

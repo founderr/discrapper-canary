@@ -3,7 +3,7 @@ n.d(t, {
         return B;
     }
 }), n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(831209), l = n(442837), u = n(481060), c = n(700582), d = n(812206), _ = n(924301), E = n(454585), f = n(565799), h = n(501655), p = n(427679), m = n(543882), I = n(592125), T = n(496675), g = n(594174), S = n(979651), A = n(366695), N = n(806519), v = n(912787), O = n(623552), R = n(718582), C = n(177963), y = n(835248), D = n(437431), L = n(874070), b = n(185885), M = n(126134), P = n(981631), U = n(765305), w = n(689938), x = n(970508);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(831209), l = n(442837), u = n(481060), c = n(700582), d = n(812206), _ = n(924301), E = n(454585), f = n(565799), h = n(501655), p = n(427679), m = n(543882), I = n(592125), T = n(496675), g = n(594174), S = n(979651), A = n(366695), N = n(806519), v = n(912787), O = n(623552), R = n(718582), C = n(177963), y = n(835248), D = n(437431), L = n(874070), b = n(185885), M = n(126134), P = n(981631), U = n(765305), w = n(689938), x = n(339089);
 function G(e) {
     let t = (0, v.Z)(e), {category: n} = e;
     return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : (n === M.L.GAMING || n === M.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0 || n === M.L.HANGOUT && e.streamUserIds.length > 0 ? u.ScreenArrowIcon : n === M.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && S.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;

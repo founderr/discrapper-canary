@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837), l = n(481060), s = n(207055), r = n(938475), o = n(981631), c = n(689938), d = n(603497);
+var a = n(442837), l = n(481060), s = n(207055), r = n(938475), o = n(981631), c = n(689938), d = n(943474);
 function u(e) {
     let {channel: t} = e, n = (0, a.e7)([r.ZP], () => r.ZP.getVoiceStatesForChannel(t));
     return (0, i.jsxs)('div', {

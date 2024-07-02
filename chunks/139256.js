@@ -18,7 +18,7 @@ n.d(t, {
         return G;
     }
 }), n(627341);
-var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(278074), d = n(481060), u = n(596454), _ = n(44315), E = n(377171), m = n(695346), I = n(261922), T = n(186523), h = n(553826), N = n(506071), p = n(203143), f = n(79390), C = n(839963), g = n(294608), S = n(65145), A = n(981631), x = n(689938), O = n(353452);
+var i, a, s = n(735250), l = n(470079), r = n(120356), o = n.n(r), c = n(278074), d = n(481060), u = n(596454), _ = n(44315), E = n(377171), m = n(695346), I = n(261922), T = n(186523), h = n(553826), N = n(506071), f = n(203143), p = n(79390), C = n(839963), g = n(294608), S = n(65145), A = n(981631), x = n(689938), O = n(357298);
 function R(e) {
     let {
         className: t,
@@ -149,7 +149,7 @@ function b(e) {
             channelId: d,
             messageId: u
         } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, m = l.useCallback(() => {
-            p.Z.handlePollAnswerTapped({
+            f.Z.handlePollAnswerTapped({
                 channelId: d,
                 messageId: u,
                 answerId: n.answerId
@@ -195,7 +195,7 @@ function D(e) {
         className: i,
         imageClassName: O.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-        alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
+        alt: null !== (t = n.description) && void 0 !== t ? t : (0, p.fw)(n.filename),
         responsive: !0,
         width: 212,
         height: 212,

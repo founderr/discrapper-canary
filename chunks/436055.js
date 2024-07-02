@@ -1,26 +1,26 @@
 n.d(t, {
     E: function () {
-        return l;
+        return a;
     }
 });
-var r = n(470079), o = n(250683), i = n(253135);
-function l(e) {
+var i = n(470079), l = n(250683), r = n(253135);
+function a(e) {
     let {
         codeBase64: t,
         chunkSize: n,
-        desiredLength: l
+        desiredLength: a
     } = e;
-    return r.useMemo(() => {
+    return i.useMemo(() => {
         if (null == t)
             return null;
-        let e = o.toByteArray(t), r = (0, i.D)(e, l, n);
-        if (null == r)
+        let e = l.toByteArray(t), i = (0, r.D)(e, a, n);
+        if (null == i)
             return null;
-        let u = RegExp('.{1,'.concat(n, '}'), 'g'), a = r.match(u);
-        return null == a ? null : Array.from(a);
+        let s = RegExp('.{1,'.concat(n, '}'), 'g'), o = i.match(s);
+        return null == o ? null : Array.from(o);
     }, [
         n,
         t,
-        l
+        a
     ]);
 }

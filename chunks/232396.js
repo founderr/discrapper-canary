@@ -1,4 +1,4 @@
-var s = n(826193), a = n(386015), i = n(12276);
+var i = n(826193), s = n(386015), a = n(12276);
 e.exports = function (e) {
-    return a(e) ? i(e) : s(e);
+    return s(e) ? a(e) : i(e);
 };
