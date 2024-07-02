@@ -63,7 +63,7 @@ function I(e, t, n, r, i) {
     }))), m(c.Z5c.CHANNEL(e, t, n), i, r);
 }
 function T() {
-    return null != i && u.Hb.has(i);
+    return null != i && u.H.has(i);
 }
 function g(e, t, n) {
     !p(e, 'replace') && (d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), i = n);
