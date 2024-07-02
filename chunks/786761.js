@@ -92,12 +92,15 @@ function v(e, t) {
             reactions: e.reactions,
             interactionData: e.interactionData
         });
-    let n = e;
+    let n = e, r = !1;
     if (null != t.call && (n = n.set('call', R(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', O(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', C(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', D(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new d.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, o.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions) {
-        var r;
-        n = n.set('reactions', y(null !== (r = e.reactions) && void 0 !== r ? r : t.reactions));
+        var i;
+        n = n.set('reactions', y(null !== (i = e.reactions) && void 0 !== i ? i : t.reactions));
     }
-    return null != t.poll && (n = n.set('poll', (0, s.Z)(t.poll))), n;
+    return null != t.poll && (n = n.set('poll', (0, s.Z)(t.poll))), null != t.mentions && (n = n.set('mentions', t.mentions.map(e => e.id)), r = !0), null != t.mention_everyone && (n = n.set('mentionEveryone', t.mention_everyone), r = !0), null != t.mention_roles && (n = n.set('mentionRoles', t.mention_roles), r = !0), r && (n = n.set('mentioned', (0, m.ZP)({
+        message: n,
+        userId: _.default.getId()
+    }))), n;
 }
 function O(e) {
     return null == e.attachments ? [] : e.attachments.map(e => ({
