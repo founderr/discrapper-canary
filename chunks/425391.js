@@ -8,6 +8,8 @@ e.exports = {
     shopScroll: 'shopScroll_e77fa3',
     itemTypeTitle: 'itemTypeTitle_e77fa3',
     popularPicksContainer: 'popularPicksContainer_e77fa3',
+    popularPicksGradient: 'popularPicksGradient_e77fa3',
+    defaultLightModeCustomGradient: 'defaultLightModeCustomGradient_e77fa3',
     popularPicksHeader: 'popularPicksHeader_e77fa3',
     hiddenWumpus: 'hiddenWumpus_e77fa3',
     hiddenWumpusEnabled: 'hiddenWumpusEnabled_e77fa3',
