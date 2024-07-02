@@ -330,7 +330,7 @@ function ef(e) {
                     page: el.ZY5.GUILD_CHANNEL,
                     section: el.jXE.FORUM_CHANNEL_POST
                 }
-            }), n ? (0, S.ad)(e, ei.on.BROWSER) : (e_.current = e.id, (0, R.ok)(e));
+            }), n ? (0, S.ad)(e, { source: ei.on.BROWSER }) : (e_.current = e.id, (0, R.ok)(e));
         }, [
             t.guild_id,
             t.id,

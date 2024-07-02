@@ -316,7 +316,7 @@ let W = () => ({
                                 size: c.Button.Sizes.SMALL,
                                 fullWidth: !0,
                                 onClick: () => {
-                                    R(), (null == N ? void 0 : N.id) != null && d.Z.transitionToGuildSync(N.id, void 0, H.oC.ROLE_SUBSCRIPTIONS, [E.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL]);
+                                    R(), (null == N ? void 0 : N.id) != null && d.Z.transitionToGuildSync(N.id, { sourceLocationStack: [E.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, H.oC.ROLE_SUBSCRIPTIONS);
                                 },
                                 children: en ? Y.Z.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : Y.Z.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                             })

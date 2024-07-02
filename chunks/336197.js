@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var r = n(727429), i = n(703656), a = n(769654), o = n(592125), s = n(754688), l = n(849027), u = n(927723), c = n(981631);
-async function d(e, t, n) {
-    let d = (0, s.Qj)(e);
-    if (null != d && !await (0, l.Z)(d)) {
+async function d(e, t) {
+    let n = (0, s.Qj)(e);
+    if (null != n && !await (0, l.Z)(n)) {
         (0, u.k)({ kind: 'channel' });
         return;
     }
-    if (null == d) {
-        (0, i.uL)(e, t, n);
+    if (null == n) {
+        (0, i.uL)(e, t);
         return;
     }
-    let _ = function (e) {
+    let d = function (e) {
         if (null == e.channelId)
             return e;
         let t = o.Z.getChannel(e.channelId);
@@ -25,10 +25,10 @@ async function d(e, t, n) {
             ...e,
             guildId: null != n ? n : c.ME
         };
-    }(d);
-    if (null == _.channelId) {
-        (0, a.X)(_.guildId);
+    }(n);
+    if (null == d.channelId) {
+        (0, a.X)(d.guildId);
         return;
     }
-    null != _.threadId ? (0, i.uL)(c.Z5c.CHANNEL_THREAD_VIEW(_.guildId, _.channelId, _.threadId, _.messageId), t, n) : (0, i.uL)(c.Z5c.CHANNEL(_.guildId, _.channelId, _.messageId), t, n);
+    null != d.threadId ? (0, i.uL)(c.Z5c.CHANNEL_THREAD_VIEW(d.guildId, d.channelId, d.threadId, d.messageId), t) : (0, i.uL)(c.Z5c.CHANNEL(d.guildId, d.channelId, d.messageId), t);
 }

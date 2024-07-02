@@ -82,7 +82,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
             }) : W ? (0, i.jsxs)(d.Clickable, {
                 className: l()(L.clickableBanner),
                 onClick: () => {
-                    H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Fu), void 0, void 0, $);
+                    H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Fu), { sourceLocationStack: $ });
                 },
                 children: [
                     (0, i.jsx)('img', {
@@ -95,7 +95,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
             }) : F ? (0, i.jsxs)(d.Clickable, {
                 className: l()(L.clickableBanner),
                 onClick: () => {
-                    H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.NC), void 0, void 0, $);
+                    H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.NC), { sourceLocationStack: $ });
                 },
                 children: [
                     (0, i.jsx)('img', {
@@ -108,7 +108,7 @@ let U = 'vc-activities-'.concat((0, o.Z)()), w = a.forwardRef(function (e, t) {
             }) : z ? (0, i.jsxs)(d.Clickable, {
                 className: l()(L.clickableBanner),
                 onClick: () => {
-                    H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Cw), void 0, void 0, $);
+                    H(), o(), (0, f.uL)(R.Z5c.ACTIVITY_DETAILS(b.Cw), { sourceLocationStack: $ });
                 },
                 children: [
                     (0, i.jsx)('img', {

@@ -63,7 +63,7 @@ function C(e) {
                     guildId: s,
                     messageId: i.id
                 })(t), {analyticsLocations: u} = (0, r.ZP)(l.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = i.roleSubscriptionData, m = a.useCallback(() => {
-                    (0, d.uL)(I.Z5c.CHANNEL(s, T.oC.ROLE_SUBSCRIPTIONS), void 0, null, u), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id);
+                    (0, d.uL)(I.Z5c.CHANNEL(s, T.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id);
                 }, [
                     s,
                     n,

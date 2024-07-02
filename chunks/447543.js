@@ -65,8 +65,11 @@ function J(e) {
                 transitionTo: r,
                 welcomeModalChannelId: i,
                 guildScheduledEvent: a
-            } = null != t ? t : {}, o = n === j.d4z.GUILD_STAGE_VOICE, s = { navigationReplace: !0 };
-        return null != i && (s.welcomeModalChannelId = i), o && (s.state = q.Df), null != a && (s.guildScheduledEventId = a.id), e => null != r ? r(e, s, R.Z.INVITE_ACCEPT) : (0, C.uL)(e, s, R.Z.INVITE_ACCEPT);
+            } = null != t ? t : {}, o = n === j.d4z.GUILD_STAGE_VOICE, s = {
+                source: R.Z.INVITE_ACCEPT,
+                navigationReplace: !0
+            };
+        return null != i && (s.welcomeModalChannelId = i), o && (s.state = q.Df), null != a && (s.guildScheduledEventId = a.id), e => null != r ? r(e, s) : (0, C.uL)(e, s);
     }(r, i)(h);
 }
 let ee = function (e, t) {

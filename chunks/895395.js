@@ -82,7 +82,7 @@ function y(e) {
                                     'aria-label': e,
                                     onClick: () => {
                                         var e;
-                                        e = E.Fu, r(), (0, p.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), void 0, void 0, R);
+                                        e = E.Fu, r(), (0, p.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), { sourceLocationStack: R });
                                     },
                                     children: [
                                         (0, i.jsx)('div', {

@@ -20,12 +20,12 @@ function A(e, t, n) {
         s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: e.parent_id
-        }), null != n ? (0, E.ad)(e, n) : (0, E.Kh)(e.id);
+        }), null != n ? (0, E.ad)(e, { source: n }) : (0, E.Kh)(e.id);
         return;
     }
     i()(null != e.parent_id, 'all threads must have parents');
     let a = p.Z.getChannelId();
-    e.parent_id !== a && !(0, S.ME)(a) && (0, E.Kh)(e.parent_id), (0, _.uL)(g.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, S.ME)(a) ? S.oC.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? T.on.FORUM : void 0), setTimeout(() => {
+    e.parent_id !== a && !(0, S.ME)(a) && (0, E.Kh)(e.parent_id), (0, _.uL)(g.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, S.ME)(a) ? S.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: T.on.FORUM } : void 0), setTimeout(() => {
         I.S.dispatch(g.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
     }, 0);
 }

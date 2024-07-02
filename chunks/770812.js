@@ -67,7 +67,7 @@ function S(e) {
                     (0, r.jsx)(s.Spacer, { size: 24 }),
                     (0, r.jsx)(h.Z, {
                         onClick: () => {
-                            (0, _.uL)(p.Z5c.CHANNEL(n, m.oC.ROLE_SUBSCRIPTIONS), void 0, void 0, S);
+                            (0, _.uL)(p.Z5c.CHANNEL(n, m.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: S });
                         },
                         children: O
                     })

@@ -16,7 +16,7 @@ function b(e) {
             t && null != e && (o.Z.dispatch({
                 type: 'SIDEBAR_CLOSE',
                 baseChannelId: e.parent_id
-            }), (0, C.ad)(e, S.on.VOICE_AUTO_OPEN));
+            }), (0, C.ad)(e, { source: S.on.VOICE_AUTO_OPEN }));
         }, [
             t,
             e

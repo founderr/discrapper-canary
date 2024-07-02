@@ -88,17 +88,17 @@ function x(e) {
 t.Z = {
     joinGuild: w,
     waitForGuild: x,
-    async transitionToGuildSync(e, t, n, r) {
-        let i = function (e, t) {
+    async transitionToGuildSync(e, t, n) {
+        let r = function (e, t) {
                 if (null != t)
                     return t;
                 if (!(0, c.cn)() || !!(0, E.JH)())
                     return (0, h.V)(e);
-            }((await x(e)).id, n), a = t;
-        (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = {
+            }((await x(e)).id, n), i = t;
+        (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (i = {
             ...t,
-            welcomeModalChannelId: i
-        }), (0, p.uL)(L.Z5c.CHANNEL(e, i), a, void 0, r), await new Promise(setImmediate);
+            welcomeModalChannelId: null != r ? r : void 0
+        }), (0, p.uL)(L.Z5c.CHANNEL(e, r), i), await new Promise(setImmediate);
     },
     deleteGuild: P,
     selectGuild(e) {
