@@ -800,13 +800,13 @@ class es extends d.Z {
     }
     _handleMLSPrepareCommitTransition(e, t) {
         var n;
-        this.logger.info('Received MLS commit for transition ID '.concat(e)), null === (n = this._connection) || void 0 === n || n.prepareMLSCommitTransition(e, t, (t, n) => {
+        this.logger.info('Received MLS commit for transition ID '.concat(e)), null === (n = this._connection) || void 0 === n || n.prepareMLSCommitTransition(e, t, (t, n, r) => {
             t ? (this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n)) : (this.logger.warn('Failed to process MLS commit for transition ID '.concat(e)), this._flagMLSInvalidCommitWelcome(e), this._handleSecureFramesInit(n));
         });
     }
     _handleMLSWelcome(e, t) {
         var n;
-        this.logger.info('Received MLS welcome for transition ID '.concat(e)), null === (n = this._connection) || void 0 === n || n.processMLSWelcome(e, t, (t, n) => {
+        this.logger.info('Received MLS welcome for transition ID '.concat(e)), null === (n = this._connection) || void 0 === n || n.processMLSWelcome(e, t, (t, n, r) => {
             t ? (this._maybeSendSecureFramesTransitionReady(e), this._trackSecureFrameTransition(e, n)) : (this._flagMLSInvalidCommitWelcome(e), this._sendMLSKeyPackage());
         });
     }
