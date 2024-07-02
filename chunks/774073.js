@@ -27,7 +27,7 @@ t.ZP = e => {
             autoTrackExposure: r = !0,
             source: i,
             trackEntryPointImpression: o = !0
-        } = e, l = (0, E.xG)(t, r);
+        } = e, l = (0, E.x)(t, r);
     a.useEffect(() => {
         l && null != n && '' !== n && c.Z.getDetectableGamesSupplemental([n]);
     }, [
