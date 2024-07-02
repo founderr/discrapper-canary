@@ -17,7 +17,7 @@ let es = e => 'https://'.concat(X.xr4, '/hc/').concat(e.toLowerCase(), '/request
         X.epS.DURABLE,
         X.epS.CONSUMABLE
     ];
-(i = n || (n = {})).PURCHASE_DATE = 'PURCHASE_DATE', i.SKU_TYPE = 'SKU_TYPE', i.ALREADY_REFUNDED = 'ALREADY_REFUNDED', i.PAYMENT_STATUS = 'PAYMENT_STATUS', i.PAYMENT_GATEWAY = 'PAYMENT_GATEWAY', i.SKU_STICKER_PACK = 'SKU_STICKER_PACK', i.SUBSCRIPTION_TYPE = 'SUBSCRIPTION_TYPE', i.GUILD_PRODUCT = 'GUILD_PRODUCT';
+(i = n || (n = {})).PURCHASE_DATE = 'PURCHASE_DATE', i.SKU_TYPE = 'SKU_TYPE', i.ALREADY_REFUNDED = 'ALREADY_REFUNDED', i.PAYMENT_STATUS = 'PAYMENT_STATUS', i.PAYMENT_GATEWAY = 'PAYMENT_GATEWAY', i.SKU_STICKER_PACK = 'SKU_STICKER_PACK', i.SUBSCRIPTION_TYPE = 'SUBSCRIPTION_TYPE', i.GUILD_PRODUCT = 'GUILD_PRODUCT', i.COLLECTIBLE = 'COLLECTIBLE';
 let ea = [
         X.PyE.FAILED,
         X.PyE.REVERSED,
@@ -335,7 +335,7 @@ class e_ extends (a = o.PureComponent) {
             dateLimit: l,
             playtimeLimit: 2,
             supportURL: i
-        }) : s.isGift ? $.Z.Messages.BILLING_GIFT_REFUND_TEXT_UNABLE.format({ dateLimit: l }) : s.isPremiumSubscription || s.isPremiumGuildSubscription ? $.Z.Messages.BILLING_PREMIUM_REFUND_TEXT_UNABLE.format({ dateLimit: l }) : s.isCollectible ? $.Z.Messages.BILLING_COLLECTIBLES_REFUND_TEXT_UNABLE : $.Z.Messages.BILLING_APPLICATION_REFUND_TEXT_UNABLE.format({
+        }) : s.isCollectible ? $.Z.Messages.BILLING_COLLECTIBLES_REFUND_TEXT_UNABLE : s.isGift ? $.Z.Messages.BILLING_GIFT_REFUND_TEXT_UNABLE.format({ dateLimit: l }) : s.isPremiumSubscription || s.isPremiumGuildSubscription ? $.Z.Messages.BILLING_PREMIUM_REFUND_TEXT_UNABLE.format({ dateLimit: l }) : $.Z.Messages.BILLING_APPLICATION_REFUND_TEXT_UNABLE.format({
             dateLimit: l,
             playtimeLimit: 2
         }), this.isPremium && (0, z.U)() && (e = null), (0, r.jsxs)(o.Fragment, {
@@ -678,6 +678,13 @@ class e_ extends (a = o.PureComponent) {
                 canRefund: () => {
                     let {payment: e} = this.props;
                     return null == e.sku || !(0, k.yE)(e.sku.flags, I.l.GUILD_PRODUCT);
+                }
+            },
+            {
+                rule: 'COLLECTIBLE',
+                canRefund: () => {
+                    let {payment: e} = this.props;
+                    return !e.isCollectible;
                 }
             }
         ]), et(this, 'handleExpandInfo', () => {

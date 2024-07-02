@@ -160,6 +160,7 @@ let a = {
     'teal.830': { hex: '#02191d' },
     'teal.860': { hex: '#021619' },
     'teal.900': { hex: '#011215' },
+    white: { hex: '#ffffff' },
     'white.100': {
         hex: '#ffffff',
         meta: { figma: { ignore: !0 } }
@@ -261,6 +262,7 @@ let a = {
         hex: '#0d0d0d',
         meta: { figma: { ignore: !0 } }
     },
+    black: { hex: '#000000' },
     'black.100': {
         hex: '#f2f2f2',
         meta: { figma: { ignore: !0 } }

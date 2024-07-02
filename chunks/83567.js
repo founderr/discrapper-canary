@@ -60,5 +60,31 @@ t.Z = {
                     }
             });
         }
+    },
+    [I.Et.MAYBE_GET_PROVIDER_ACCESS_TOKEN]: {
+        scope: { [_.Gp.ANY]: [_.wE] },
+        validation: e => (0, u.Z)(e).required().keys({ provider: e.string().required() }),
+        handler: async e => {
+            let {
+                socket: t,
+                args: {provider: n}
+            } = e;
+            (0, d.bu)(t.transport);
+            let i = (0, d._f)(t.application), r = a.Z.get(n);
+            if (null == r)
+                throw new c.Z({ errorCode: I.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
+            if (n === E.ABu.AMAZON_MUSIC) {
+                if (!m.has(i))
+                    throw new c.Z({ errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+            } else
+                throw new c.Z({ errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+            let o = l.Z.getAccount(null, n);
+            if (null == o)
+                throw new c.Z({ errorCode: I.lT.NO_CONNECTION_FOUND }, 'No connection found');
+            let u = await s.Z.refreshAccessToken(r.type, o.id);
+            if (null == u)
+                throw new c.Z({ errorCode: I.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
+            return { access_token: u };
+        }
     }
 };
