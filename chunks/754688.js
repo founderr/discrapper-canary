@@ -19,7 +19,7 @@ n.d(t, {
     }
 });
 var r = n(592125), i = n(430824), a = n(496675), o = n(226951), s = n(981631);
-let l = Array.from(n(176505).Vg).map(e => o.Z.escape(e)).join('|'), u = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)?(\\d+|').concat(l, ')?')), c = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)(\\d+|').concat(l, ')(?:/)(\\d+)')), d = RegExp('^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)'), _ = RegExp('^/guild-stages/(\\d+)(?:/)?(\\d+)?'), E = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'), f = new RegExp('^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|'.concat(s.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')), h = RegExp('^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)');
+let l = Array.from(n(176505).Vg).map(e => o.Z.escape(e)).join('|'), u = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)?(\\d+|').concat(l, ')?')), c = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)(\\d+|').concat(l, ')(?:/)(\\d+)')), d = RegExp('^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)'), _ = RegExp('^/guild-stages/(\\d+)(?:/)?(\\d+)?'), E = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'), f = new RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|'.concat(s.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')), h = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)');
 function p(e) {
     if (null == e)
         return null;

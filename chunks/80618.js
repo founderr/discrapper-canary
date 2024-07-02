@@ -1,5 +1,5 @@
 n(47120);
-var r, i = n(735250), a = n(470079), o = n(120356), s = n.n(o), l = n(481060), u = n(540026), c = n(689938), d = n(566324);
+var r, i = n(735250), a = n(470079), o = n(120356), s = n.n(o), l = n(481060), u = n(540026), c = n(689938), d = n(466775);
 function _(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -26,29 +26,30 @@ class E extends (r = a.PureComponent) {
     render() {
         let {
                 iconClassName: e,
-                className: t,
-                sliderWrapperClassName: n,
-                sliderClassName: r,
-                currentWindow: a,
-                muted: o,
-                minValue: _,
-                maxValue: E,
-                value: f,
-                onVolumeShow: h,
-                onVolumeHide: p
+                iconColor: t,
+                className: n,
+                sliderWrapperClassName: r,
+                sliderClassName: a,
+                currentWindow: o,
+                muted: _,
+                minValue: E,
+                maxValue: f,
+                value: h,
+                onVolumeShow: p,
+                onVolumeHide: m
             } = this.props, {
-                hovered: m,
-                focused: I,
-                dragging: T
-            } = this.state, g = l.VoiceNormalIcon;
-        return o || f === _ ? g = l.VoiceXIcon : f < E / 2 && (g = l.VoiceLowIcon), (0, i.jsxs)('div', {
-            className: s()(t, d.container),
+                hovered: I,
+                focused: T,
+                dragging: g
+            } = this.state, S = l.VoiceNormalIcon;
+        return _ || h === E ? S = l.VoiceXIcon : h < f / 2 && (S = l.VoiceLowIcon), (0, i.jsxs)('div', {
+            className: s()(n, d.container),
             onMouseEnter: () => {
-                clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == h || h();
+                clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), null == p || p();
             },
             onMouseLeave: () => {
                 clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => {
-                    this.setState({ hovered: !1 }), null == p || p();
+                    this.setState({ hovered: !1 }), null == m || m();
                 }, 150);
             },
             onFocus: () => this.setState({ focused: !0 }),
@@ -56,7 +57,7 @@ class E extends (r = a.PureComponent) {
             onKeyDown: this.handleKeyDown,
             children: [
                 (0, i.jsx)('div', {
-                    className: s()(d.volumeButtonSlider, n, { [d.sliderVisible]: m || I || T }),
+                    className: s()(d.volumeButtonSlider, r, { [d.sliderVisible]: I || T || g }),
                     onMouseEnter: () => {
                         clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                     },
@@ -64,13 +65,13 @@ class E extends (r = a.PureComponent) {
                         clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150);
                     },
                     children: (0, i.jsx)(u.Z, {
-                        sliderClassName: r,
+                        sliderClassName: a,
                         type: u.Z.Types.VOLUME,
-                        value: f / E,
+                        value: h / f,
                         onDrag: this.handleValueChange,
                         onDragStart: this.handleDragStart,
                         onDragEnd: this.handleDragEnd,
-                        currentWindow: a,
+                        currentWindow: o,
                         ref: this._mediaBar
                     })
                 }),
@@ -80,7 +81,10 @@ class E extends (r = a.PureComponent) {
                     size: l.Button.Sizes.NONE,
                     look: l.Button.Looks.BLANK,
                     onClick: this.handleToggleMute,
-                    children: (0, i.jsx)(g, { className: e })
+                    children: (0, i.jsx)(S, {
+                        color: t,
+                        className: e
+                    })
                 })
             ]
         });

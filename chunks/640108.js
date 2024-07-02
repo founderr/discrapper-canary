@@ -178,6 +178,7 @@ class B extends (r = o.Component) {
                         onVolumeShow: c,
                         onVolumeHide: _,
                         iconClassName: L.controlIcon,
+                        iconColor: 'currentColor',
                         sliderWrapperClassName: L.volumeSliderWrapper
                     })
                 }),
@@ -669,6 +670,7 @@ class Y extends (i = o.PureComponent) {
             children: t === w.VIDEO ? (0, a.jsx)(f.Z, {
                 'aria-label': D.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                 className: L.videoButton,
+                iconClassName: L.controlIcon,
                 guestWindow: window,
                 onClick: this.toggleFullscreen,
                 node: (0, O.fn)(null == e ? void 0 : e.parentNode, e)
