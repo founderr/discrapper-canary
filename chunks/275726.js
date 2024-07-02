@@ -59,7 +59,7 @@ let a = {
         0,
         19
     ]),
-    LAZY_LOADED_MESSAGE_REFERENCES: new Set([
+    REFERENCED_MESSAGE_AVAILABLE: new Set([
         19,
         21
     ]),
