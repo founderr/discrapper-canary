@@ -14,8 +14,5 @@ e.exports = {
     totalRow: 'totalRow_df16c1',
     totalLabel: 'totalLabel_df16c1',
     totalAmount: 'totalAmount_df16c1',
-    finePrint: 'finePrint_df16c1',
-    annualPlanDiscountPriceSection: 'annualPlanDiscountPriceSection_df16c1',
-    annualPlanOptionDiscount: 'annualPlanOptionDiscount_df16c1',
-    annualDiscountValues: 'annualDiscountValues_df16c1'
+    finePrint: 'finePrint_df16c1'
 };

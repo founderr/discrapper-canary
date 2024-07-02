@@ -1,180 +1,152 @@
 a.d(n, {
     HE: function () {
-        return R;
+        return A;
     },
     Ji: function () {
-        return p;
-    },
-    KU: function () {
-        return M;
-    },
-    PO: function () {
         return T;
     },
+    KU: function () {
+        return E;
+    },
+    PO: function () {
+        return u;
+    },
     R$: function () {
-        return N;
+        return _;
     },
     i$: function () {
-        return P;
+        return I;
     },
     q9: function () {
-        return A;
+        return d;
     }
 });
 var t = a(735250);
 a(470079);
-var s = a(120356), r = a.n(s), l = a(442837), i = a(481060), o = a(911969), c = a(706454), u = a(937615), d = a(104494), _ = a(474936), I = a(689938), E = a(30695);
-function T(e) {
+var s = a(120356), r = a.n(s), l = a(911969), i = a(937615), o = a(689938), c = a(30695);
+function u(e) {
     let {
         children: n,
         className: a
     } = e;
     return (0, t.jsx)('div', {
-        className: r()(E.table, a),
+        className: r()(c.table, a),
         children: n
     });
 }
-function A(e) {
+function d(e) {
     let {children: n} = e;
     return (0, t.jsx)('div', {
-        className: E.header,
+        className: c.header,
         children: n
     });
 }
-function N(e) {
+function _(e) {
     let {
         label: n,
         value: a,
         className: s
     } = e;
     return (0, t.jsxs)('div', {
-        className: r()(E.row, s),
+        className: r()(c.row, s),
         children: [
             (0, t.jsx)('div', {
-                className: E.rowLabel,
+                className: c.rowLabel,
                 children: n
             }),
             (0, t.jsx)('div', {
-                className: E.rowAmount,
+                className: c.rowAmount,
                 children: a
             })
         ]
     });
 }
-function P(e) {
+function I(e) {
     let {
             label: n,
             value: a,
             discounts: s,
             originalAmount: r,
-            interval: T,
-            currency: A,
-            className: P,
-            intervalCount: M,
-            planId: p
-        } = e, R = e => null != s ? s.find(n => n.type === e) : null, L = R(o.eW.SUBSCRIPTION_PLAN), f = R(o.eW.ENTITLEMENT), C = (0, d.z1)(), m = null != L && null != C && null != p && p === _.Xh.PREMIUM_YEAR_TIER_2, S = null == L || m ? null : Math.floor(L.amount / r * 100), b = (0, l.e7)([c.default], () => c.default.locale), v = () => {
-            var e;
-            let n = (0, u.T3)(b, _.sK[null !== (e = null == C ? void 0 : C.discount_id) && void 0 !== e ? e : 'DEFAULT']);
-            return (0, t.jsx)(i.Text, {
-                variant: 'eyebrow',
-                color: 'always-white',
-                className: E.annualPlanOptionDiscount,
-                children: I.Z.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({ discount: n })
-            });
-        }, g = (0, u.T4)(r, A);
+            interval: u,
+            currency: d,
+            className: I,
+            intervalCount: E
+        } = e, T = e => null != s ? s.find(n => n.type === e) : null, A = T(l.eW.SUBSCRIPTION_PLAN), N = T(l.eW.ENTITLEMENT), P = null != A ? Math.floor(A.amount / r * 100) : null, M = (0, i.T4)(r, d);
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(N, {
+            (0, t.jsx)(_, {
                 label: n,
-                value: m ? (0, t.jsx)('div', {
-                    className: E.annualDiscountValues,
-                    children: (0, t.jsxs)(t.Fragment, {
-                        children: [
-                            (0, t.jsxs)('div', {
-                                className: E.annualPlanDiscountPriceSection,
-                                children: [
-                                    v(),
-                                    a
-                                ]
-                            }),
-                            (0, t.jsx)(i.Text, {
-                                variant: 'text-md/normal',
-                                color: 'interactive-normal',
-                                children: I.Z.Messages.BILLING_ANNUAL_DISCOUNT_YEARLY_PRICE_SUBTEXT.format({ regularPrice: g })
-                            })
-                        ]
-                    })
-                }) : (0, t.jsxs)(t.Fragment, {
+                value: (0, t.jsxs)(t.Fragment, {
                     children: [
                         a,
-                        null != S ? (0, t.jsxs)('div', {
-                            className: E.rowPercentDiscount,
+                        null != P ? (0, t.jsxs)('div', {
+                            className: c.rowPercentDiscount,
                             children: [
                                 '-',
-                                S,
+                                P,
                                 '%'
                             ]
                         }) : null
                     ]
                 }),
-                className: P
+                className: I
             }),
-            null != S ? (0, t.jsxs)('div', {
-                className: E.rowDiscountOriginalPrice,
+            null != P ? (0, t.jsxs)('div', {
+                className: c.rowDiscountOriginalPrice,
                 children: [
                     '(',
-                    null != T && null != M ? (0, u.og)(g, T, M) : g,
+                    null != u && null != E ? (0, i.og)(M, u, E) : M,
                     ')'
                 ]
             }) : null,
-            null != f ? (0, t.jsx)('div', {
-                className: E.entitlementDiscountRow,
-                children: I.Z.Messages.BILLING_INVOICE_SUBSCRIPTION_CREDIT_APPLIED
+            null != N ? (0, t.jsx)('div', {
+                className: c.entitlementDiscountRow,
+                children: o.Z.Messages.BILLING_INVOICE_SUBSCRIPTION_CREDIT_APPLIED
             }) : null
         ]
     });
 }
-function M(e) {
+function E(e) {
     let {
         extended: n = !1,
         negativeMarginTop: a = !1,
         negativeMarginBottom: s = !1
     } = e;
     return (0, t.jsx)('div', {
-        className: r()(E.divider, {
-            [E.dividerExtended]: n,
-            [E.negativeMarginTop]: a,
-            [E.negativeMarginBottom]: s
+        className: r()(c.divider, {
+            [c.dividerExtended]: n,
+            [c.negativeMarginTop]: a,
+            [c.negativeMarginBottom]: s
         })
     });
 }
-function p(e) {
+function T(e) {
     let {
         label: n,
         value: a,
         className: s
     } = e;
     return (0, t.jsxs)('div', {
-        className: r()(E.totalRow, s),
+        className: r()(c.totalRow, s),
         children: [
             (0, t.jsx)('div', {
-                className: E.totalLabel,
+                className: c.totalLabel,
                 children: n
             }),
             (0, t.jsx)('div', {
-                className: E.totalAmount,
+                className: c.totalAmount,
                 children: a
             })
         ]
     });
 }
-function R(e) {
+function A(e) {
     let {
         children: n,
         className: a
     } = e;
     return (0, t.jsx)('div', {
-        className: r()(E.finePrint, a),
+        className: r()(c.finePrint, a),
         children: n
     });
 }

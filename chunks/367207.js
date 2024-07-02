@@ -82,7 +82,7 @@ class U extends c.Z {
             let e = f.default.getCurrentUser();
             if (null != e && e.verified) {
                 let t = !(0, C.I5)(e) && m.Z.shouldFetchOffer();
-                await (0, T.Tf)(t);
+                await (0, T.T)(t);
             }
             s.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
         }), D(this, '_maybeFetchCheckoutRecovery', async () => {

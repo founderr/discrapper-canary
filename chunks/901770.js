@@ -11,7 +11,6 @@ e.exports = {
     planOptionCurrentPlan: 'planOptionCurrentPlan_bd3462',
     planOptionMonthsFree: 'planOptionMonthsFree_bd3462',
     planOptionDiscount: 'planOptionDiscount_bd3462',
-    annualPlanOptionDiscount: 'annualPlanOptionDiscount_bd3462',
     planOptionSubtextContainer: 'planOptionSubtextContainer_bd3462',
     planOptionSubtext: 'planOptionSubtext_bd3462',
     discountPlanOptionSubtext: 'discountPlanOptionSubtext_bd3462',

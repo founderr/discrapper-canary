@@ -107,7 +107,7 @@ function g(e) {
         ]), eq = (0, s.IX)(W), ez = (0, d.yE)(null !== (t = null == eq ? void 0 : eq.flags) && void 0 !== t ? t : 0, D.udG.EMBEDDED) && (0, d.yE)(null !== (n = null == eq ? void 0 : eq.flags) && void 0 !== n ? n : 0, D.udG.EMBEDDED_IAP), e$ = (0, E.e7)([a.ZP], () => Array.from(a.ZP.getSelfEmbeddedActivities().values()).find(e => {
             let {applicationId: t} = e;
             return t === W;
-        })), e0 = (0, _.Z)(e$), e1 = (0, E.e7)([T.Z], () => null != eM ? T.Z.getForSKU(eM) : null, [eM]), e7 = ek[null != eM ? eM : ''], [e4, e2] = i.useState(null), [e8, e5] = i.useState(null);
+        })), e0 = (0, _.Z)(e$), e1 = (0, E.e7)([T.Z], () => null != eM ? T.Z.getForSKU(eM) : null, [eM]), e7 = ek[null != eM ? eM : ''], [e4, e2] = i.useState(null);
     return (0, r.jsx)(F.Provider, {
         value: {
             stripe: k,
@@ -180,9 +180,7 @@ function g(e) {
             setEntitlementsGranted: eb,
             referralCode: V,
             invoicePreview: e4,
-            setInvoicePreview: e2,
-            setAnnualDiscountInvoicePreview: e5,
-            annualDiscountInvoicePreview: e8
+            setInvoicePreview: e2
         },
         children: (0, r.jsx)(u.Elements, {
             options: D.OBo,
