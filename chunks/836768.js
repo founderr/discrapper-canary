@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(652874), s = n(868888), a = n(433517), r = n(49898);
 let l = (0, i.Z)((0, s.tJ)(e => ({
-    selectedPage: r.S.SERVERS,
+    selectedPage: r.SM.SERVERS,
     setSelectedPage: t => e({ selectedPage: t }),
     selectedServerTab: 'gaming',
     setSelectedServerTab: t => e({ selectedServerTab: t })

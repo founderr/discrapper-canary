@@ -11,9 +11,9 @@ function l() {
             switch (e) {
             case '/discovery':
             default:
-                return r.S.SERVERS;
+                return r.SM.SERVERS;
             case '/discovery/quests':
-                return r.S.QUESTS;
+                return r.SM.QUESTS;
             }
         }(new URL(window.location.href).pathname));
     }, [t]), e;

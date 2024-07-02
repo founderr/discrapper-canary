@@ -1,33 +1,37 @@
 n.d(t, {
     f: function () {
-        return o;
+        return c;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(920906), a = n(481060), r = n(689938), l = n(479882);
-function o(e) {
+var i = n(735250), s = n(470079), a = n(920906), r = n(481060), l = n(689938), o = n(479882);
+function c(e) {
     var t;
     let {
             icon: n,
-            title: o,
-            selectedTab: c,
-            tabs: d,
-            onTabSelect: u,
-            searchQuery: _,
-            onSearch: E,
-            onSearchClear: h,
-            scrollManager: I
-        } = e, m = r.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: o });
+            title: c,
+            selectedTab: d,
+            tabs: u,
+            onTabSelect: _,
+            searchQuery: E,
+            onSearch: h,
+            onSearchClear: I,
+            onSearchSubmit: m,
+            scrollManager: g
+        } = e, p = l.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: c }), T = s.useCallback(e => {
+            'Enter' === e.key && m(E);
+        }, [
+            m,
+            E
+        ]);
     return (0, i.jsx)('div', {
-        className: l.container,
+        className: o.container,
         children: (0, i.jsxs)('div', {
-            className: l.innerContainer,
+            className: o.innerContainer,
             children: [
-                (0, i.jsx)(s.animated.div, {
-                    className: l.backdrop,
+                (0, i.jsx)(a.animated.div, {
+                    className: o.backdrop,
                     style: {
-                        opacity: null == I ? void 0 : null === (t = I.current) || void 0 === t ? void 0 : t.top.to([
+                        opacity: null == g ? void 0 : null === (t = g.current) || void 0 === t ? void 0 : t.top.to([
                             0,
                             100
                         ], [
@@ -37,27 +41,28 @@ function o(e) {
                     }
                 }),
                 (0, i.jsx)('div', {
-                    className: l.icon,
+                    className: o.icon,
                     children: n
                 }),
-                (0, i.jsx)(a.TabBar, {
+                (0, i.jsx)(r.TabBar, {
                     type: 'top',
                     look: 'brand',
-                    selectedItem: c,
-                    onItemSelect: u,
-                    className: l.tabs,
-                    children: d.map(e => (0, i.jsx)(a.TabBar.Item, {
+                    selectedItem: d,
+                    onItemSelect: _,
+                    className: o.tabs,
+                    children: u.map(e => (0, i.jsx)(r.TabBar.Item, {
                         id: e,
                         children: e.label
                     }, e.id))
                 }),
                 (0, i.jsx)('div', {
-                    className: l.search,
-                    children: (0, i.jsx)(a.SearchBar, {
-                        placeholder: m,
-                        query: _,
-                        onChange: E,
-                        onClear: h
+                    className: o.search,
+                    children: (0, i.jsx)(r.SearchBar, {
+                        placeholder: p,
+                        query: E,
+                        onChange: h,
+                        onClear: I,
+                        onKeyDown: T
                     })
                 })
             ]

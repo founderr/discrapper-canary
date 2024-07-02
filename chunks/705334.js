@@ -18,13 +18,13 @@ function u(e) {
                 className: d.navItemIcon,
                 children: function (e) {
                     switch (e) {
-                    case o.S.SERVERS:
+                    case o.SM.SERVERS:
                         return (0, i.jsx)(r.ServerIcon, { color: 'currentColor' });
-                    case o.S.APPS:
+                    case o.SM.APPS:
                         return (0, i.jsx)(r.AppsIcon, { color: 'currentColor' });
-                    case o.S.QUESTS:
+                    case o.SM.QUESTS:
                         return (0, i.jsx)(r.QuestsIcon, { color: 'currentColor' });
-                    case o.S.SHOP:
+                    case o.SM.SHOP:
                         return (0, i.jsx)(r.ShopSparkleIcon, { color: 'currentColor' });
                     default:
                         return null;

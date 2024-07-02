@@ -9,25 +9,25 @@ function c() {
     let t = (0, a.Z)('global_discovery'), n = (0, r.d)(e => e.selectedServerTab, s.Z), c = i.useMemo(() => {
             let e = [];
             return t && e.push({
-                id: l.v.GUILDS,
+                id: l.vf.GUILDS,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_CATEGORY
             }), e.push({
-                id: l.v.GAMING,
+                id: l.vf.GAMING,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY
             }), e.push({
-                id: l.v.MUSIC,
+                id: l.vf.MUSIC,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY
             }), e.push({
-                id: l.v.ENTERTAINMENT,
+                id: l.vf.ENTERTAINMENT,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY
             }), e.push({
-                id: l.v.TECH,
+                id: l.vf.TECH,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY
             }), e.push({
-                id: l.v.EDUCATION,
+                id: l.vf.EDUCATION,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY
             }), e.push({
-                id: l.v.HUBS,
+                id: l.vf.HUBS,
                 label: o.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY
             }), e;
         }, [t]), d = null !== (e = c.find(e => e.id === n)) && void 0 !== e ? e : c[0];

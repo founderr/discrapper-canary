@@ -702,5 +702,6 @@ e.exports = Object.freeze({
     GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE: 'Join an Exclusive Gaming Guild',
     GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_TITLE: 'Find a {category} server for you',
-    GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    GLOBAL_DISCOVERY_SERVERS_GENERIC_HERO_DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER: 'Search results for "{query}"'
 });

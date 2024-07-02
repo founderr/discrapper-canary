@@ -9,13 +9,13 @@ var s = n(252618), a = n(121711), r = n(823379), l = n(976076), o = n(626426), c
 function h() {
     let e = (0, l.Z)(), t = function (e) {
             switch (e) {
-            case u.S.SERVERS:
+            case u.SM.SERVERS:
                 return (0, i.jsx)(c.U, {});
-            case u.S.APPS:
+            case u.SM.APPS:
                 return (0, i.jsx)(o.z, {});
-            case u.S.QUESTS:
+            case u.SM.QUESTS:
                 return (0, i.jsx)(a.Z, {});
-            case u.S.SHOP:
+            case u.SM.SHOP:
                 return (0, i.jsx)(d.t, {});
             default:
                 (0, r.vE)(e);
@@ -27,13 +27,13 @@ function h() {
             (0, i.jsx)(s.yY, {
                 location: function (e) {
                     switch (e) {
-                    case u.S.SERVERS:
+                    case u.SM.SERVERS:
                         return _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE;
-                    case u.S.APPS:
+                    case u.SM.APPS:
                         return _.Z.Messages.GLOBAL_DISCOVERY_APPS_TITLE;
-                    case u.S.QUESTS:
+                    case u.SM.QUESTS:
                         return _.Z.Messages.GLOBAL_DISCOVERY_QUESTS_TITLE;
-                    case u.S.SHOP:
+                    case u.SM.SHOP:
                         return _.Z.Messages.GLOBAL_DISCOVERY_SHOP_TITLE;
                     default:
                         (0, r.vE)(e);
