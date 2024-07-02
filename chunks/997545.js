@@ -392,7 +392,7 @@ class C extends E.Z {
                 frameRate: n
             } = e.quality, r = t <= 480 ? t / 3 * 4 : t / 9 * 16, i = null;
         if (null != e.desktopDescription ? i = e.desktopDescription.id : null != e.cameraDescription && (i = ''.concat(e.cameraDescription.videoDeviceGuid, ':').concat(e.cameraDescription.audioDeviceGuid)), this.goLiveSourceIdentifier === i) {
-            this.onDesktopEncodingOptionsSet(r, t, n), this.setDesktopEncodingOptions(r, t, n);
+            this.setDesktopEncodingOptions(r, t, n);
             return;
         }
         if (this.videoQualityManager.setGoliveSimulcast(this.experimentFlags.has(A.V8.GOLIVE_SIMULCAST)), this.goLiveSourceIdentifier = i, null != this.conn.setDesktopSource) {
@@ -435,7 +435,7 @@ class C extends E.Z {
                     audioInputDeviceId: n
                 });
             }
-            this.onDesktopEncodingOptionsSet(r, t, n), this.setDesktopEncodingOptions(r, t, n);
+            this.setDesktopEncodingOptions(r, t, n);
         }
     }
     clearGoLiveDevices() {
@@ -472,12 +472,6 @@ class C extends E.Z {
                 height: t
             }, this.videoStreamParameters[a].maxFrameRate = n, this.videoStreamParameters[a].maxBitrate = r), this.emit(p.Sh.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[a].ssrc, R(this.videoStreamParameters[a].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints);
         }
-    }
-    setOnDesktopEncodingOptionsSet(e) {
-        this.onDesktopEncodingOptionsSet = e;
-    }
-    setCallExperience(e) {
-        null != this.conn.setCallExperience && this.conn.setCallExperience(e);
     }
     setSDP(e) {
     }

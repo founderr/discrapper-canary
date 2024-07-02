@@ -43,10 +43,6 @@ class d extends a.Z {
     setUseElectronVideo(e) {
         this.useElectronVideo = e;
     }
-    setOnDesktopEncodingOptionsSet(e) {
-    }
-    setCallExperience(e) {
-    }
     setClipRecordUser(e, t, n) {
     }
     setViewerSideClip(e) {
