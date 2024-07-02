@@ -40,7 +40,7 @@ n.d(t, {
     }
 }), n(47120);
 var r, i, a = n(664751), o = n(544891), s = n(749210), l = n(41776), u = n(703656), c = n(769654), d = n(650774), _ = n(430824), E = n(626135), f = n(981631);
-(i = r || (r = {})).SEARCH = 'Search', i.RECOMMENDED = 'Recommended', i.POPULAR = 'Popular', i.RECOMMENDED_E3 = 'Recommended - E3', i.HEADER = 'Header', i.GLOBAL_DISCOVERY = 'Global Discovery';
+(i = r || (r = {})).SEARCH = 'Search', i.RECOMMENDED = 'Recommended', i.POPULAR = 'Popular', i.RECOMMENDED_E3 = 'Recommended - E3', i.HEADER = 'Header', i.GLOBAL_DISCOVERY = 'Global Discovery', i.FORWARD_BREADCRUMB = 'Forward Breadcrumb';
 let h = '>200';
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
@@ -48,19 +48,20 @@ async function p(e, t) {
             onSuccess: i,
             joinSource: a,
             loadId: o,
-            setsHistorySnapshot: d = !0
-        } = n, E = (0, u.s1)();
-    d && l.Z.setHistorySnapshot({ ...E });
-    let f = _.Z.getGuild(e), h = { state: { analyticsSource: t } };
-    null != f && null != f.joinedAt ? (0, c.X)(e, h) : (await s.Z.joinGuild(e, {
+            setsHistorySnapshot: d = !0,
+            shouldNavigate: E = !0
+        } = n, f = (0, u.s1)();
+    d && l.Z.setHistorySnapshot({ ...f });
+    let h = _.Z.getGuild(e), p = { state: { analyticsSource: t } };
+    null != h && null != h.joinedAt ? E && (0, c.X)(e, p) : (await s.Z.joinGuild(e, {
         lurker: !0,
         source: a,
         loadId: o,
         lurkLocation: null == t ? void 0 : t.page
-    }), await s.Z.transitionToGuildSync(e, {
-        ...h,
+    }), E && await s.Z.transitionToGuildSync(e, {
+        ...p,
         welcomeModalChannelId: r,
-        search: E.location.search
+        search: f.location.search
     }, r)), null == i || i();
 }
 async function m(e) {
