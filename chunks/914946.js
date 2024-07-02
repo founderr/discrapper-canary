@@ -51,7 +51,7 @@ n.d(t, {
         return F;
     }
 }), n(47120), n(653041), n(411104), n(757143), n(392711);
-var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), E = n(695346), h = n(131704), I = n(598077), m = n(592125), p = n(430824), g = n(131951), T = n(375954), S = n(158776), C = n(594174), N = n(979651), f = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
+var i, s = n(729594), a = n(243814), r = n(544891), l = n(63023), o = n(433517), c = n(904245), d = n(155268), u = n(454585), _ = n(739566), E = n(695346), h = n(131704), I = n(598077), m = n(592125), g = n(430824), p = n(131951), T = n(375954), S = n(158776), C = n(594174), N = n(979651), f = n(70956), A = n(5192), Z = n(226951), L = n(996106), v = n(863141), O = n(186901), R = n(981631);
 let x = null !== (i = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost', P = function () {
         let e = x.split(':')[0];
         if (!e.includes('.'))
@@ -132,9 +132,9 @@ function k(e, t, n) {
         throw Error('Invalid user id: '.concat(o));
     return {
         nick: A.ZP.getName(e, t, c),
-        mute: g.Z.isLocalMute(c.id),
-        volume: g.Z.getLocalVolume(c.id),
-        pan: g.Z.getLocalPan(c.id),
+        mute: p.Z.isLocalMute(c.id),
+        volume: p.Z.getLocalVolume(c.id),
+        pan: p.Z.getLocalPan(c.id),
         voice_state: {
             mute: i,
             deaf: s,
@@ -171,7 +171,7 @@ function H(e) {
     return window.location.hostname === t && 'localhost' === t || null == e.match('staging') && (!!(b.test(e) && b.test(n)) || !1);
 }
 function V(e, t, n) {
-    let i = p.Z.getGuild(e.getGuildId());
+    let i = g.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
 function F(e) {
@@ -240,18 +240,18 @@ function q(e, t) {
     null == t && (e.authorization.scopes = [O.lH]);
 }
 function Q(e) {
-    let t = g.Z.getSettings(), n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
+    let t = p.Z.getSettings(), n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
             id: e.id,
             name: e.name
         })), i = e(t);
     return {
         input: {
-            available_devices: n(g.Z.getInputDevices()),
+            available_devices: n(p.Z.getInputDevices()),
             device_id: t.inputDeviceId,
             volume: t.inputVolume
         },
         output: {
-            available_devices: n(g.Z.getOutputDevices()),
+            available_devices: n(p.Z.getOutputDevices()),
             device_id: t.outputDeviceId,
             volume: t.outputVolume
         },
@@ -272,7 +272,7 @@ function Q(e) {
     };
 }
 function X(e, t) {
-    let n = g.Z.getSettings(e), i = t(n);
+    let n = p.Z.getSettings(e), i = t(n);
     return {
         input_mode: {
             type: n.mode,

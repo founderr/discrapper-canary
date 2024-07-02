@@ -3,32 +3,32 @@ n.d(t, {
         return f;
     }
 }), n(653041), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(239091), d = n(586902), u = n(512384), _ = n(484459), E = n(103575), h = n(314897), I = n(131951), m = n(51144), p = n(524484), g = n(689938), T = n(258720);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(239091), d = n(586902), u = n(512384), _ = n(484459), E = n(103575), h = n(314897), I = n(131951), m = n(51144), g = n(524484), p = n(689938), T = n(258720);
 let S = { offset: 2 }, C = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
-            getStatus: () => g.Z.Messages.SERVER_DEAFENED
+            getStatus: () => p.Z.Messages.SERVER_DEAFENED
         },
         serverMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !0,
-            getStatus: () => g.Z.Messages.SERVER_MUTED
+            getStatus: () => p.Z.Messages.SERVER_MUTED
         },
         deaf: {
             icon: o.HeadphonesSlashIcon,
             colorize: !1,
-            getStatus: () => g.Z.Messages.VOICE_CHANNEL_DEAFENED
+            getStatus: () => p.Z.Messages.VOICE_CHANNEL_DEAFENED
         },
         mute: {
             icon: o.MicrophoneSlashIcon,
             colorize: !1,
-            getStatus: () => g.Z.Messages.VOICE_CHANNEL_MUTED
+            getStatus: () => p.Z.Messages.VOICE_CHANNEL_MUTED
         },
         localMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !1,
-            getStatus: () => g.Z.Messages.VOICE_CHANNEL_LOCAL_MUTED
+            getStatus: () => p.Z.Messages.VOICE_CHANNEL_LOCAL_MUTED
         }
     };
 function N(e) {
@@ -72,7 +72,7 @@ function N(e) {
             serverMute: Z,
             mute: f,
             localMute: v
-        })) && void 0 !== s ? s : {}, y = null != D ? g.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
+        })) && void 0 !== s ? s : {}, y = null != D ? p.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
             userName: P,
             status: D()
         }) : P;
@@ -126,7 +126,7 @@ function N(e) {
                 onContextMenu: j,
                 focusProps: S,
                 children: (0, i.jsx)(u.Z, {
-                    shakeLocation: p.oZ.VOICE_USER,
+                    shakeLocation: g.oZ.VOICE_USER,
                     isShaking: O,
                     children: (0, i.jsx)('div', {
                         className: r()(T.avatar, { [T.speaking]: O }),
@@ -152,7 +152,7 @@ function f(e) {
             onClick: () => d(!c),
             color: o.CircleIconButtonColors.PRIMARY,
             size: o.CircleIconButtonSizes.SIZE_24,
-            tooltip: c ? g.Z.Messages.VOICE_PANEL_HIDE_EXTRAS : g.Z.Messages.VOICE_PANEL_SHOW_EXTRAS,
+            tooltip: c ? p.Z.Messages.VOICE_PANEL_HIDE_EXTRAS : p.Z.Messages.VOICE_PANEL_SHOW_EXTRAS,
             icon: (0, i.jsx)(u, {
                 size: 'xs',
                 color: 'currentColor'
@@ -174,16 +174,16 @@ function f(e) {
                 n,
                 !1
             ];
-        }(t, E), p = m && c ? t : I;
-    return p.length <= 0 ? null : (0, i.jsx)(o.ScrollerThin, {
+        }(t, E), g = m && c ? t : I;
+    return g.length <= 0 ? null : (0, i.jsx)(o.ScrollerThin, {
         className: r()(T.scroller, a),
         fade: !0,
         children: (0, i.jsxs)('div', {
             className: T.voiceUsers,
             role: 'group',
-            'aria-label': g.Z.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
+            'aria-label': p.Z.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
             children: [
-                p.map(e => {
+                g.map(e => {
                     let {
                         user: t,
                         nick: s,

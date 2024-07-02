@@ -4,7 +4,7 @@ t.Z = e => {
     let {
             guildId: t,
             inviteCode: n
-        } = e, [m, p] = s.useState(h.hO.INITIAL), [g, T] = s.useState(null != n);
+        } = e, [m, g] = s.useState(h.hO.INITIAL), [p, T] = s.useState(null != n);
     s.useEffect(() => {
         null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
     }, [n]);
@@ -16,7 +16,7 @@ t.Z = e => {
         t
     ]);
     let N = s.useCallback(e => {
-            p(t => Math.max(t, e));
+            g(t => Math.max(t, e));
         }, []), f = (0, u.gK)();
     return (0, i.jsx)('div', {
         className: I.page,
@@ -30,7 +30,7 @@ t.Z = e => {
                 (0, i.jsx)('div', { className: I.dragRegion }),
                 (0, i.jsx)('div', {
                     className: I.contentWrapper,
-                    children: !g && (0, i.jsx)(_.HubEmailConnectionModalView, { invite: S })
+                    children: !p && (0, i.jsx)(_.HubEmailConnectionModalView, { invite: S })
                 })
             ]
         })

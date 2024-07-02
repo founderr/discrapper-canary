@@ -9,15 +9,15 @@ function m(e) {
             user: t,
             key: n,
             isFocused: m
-        } = e, p = s.useContext(c.AnalyticsContext), {analyticsLocations: g} = (0, l.ZP)(), T = e => {
+        } = e, g = s.useContext(c.AnalyticsContext), {analyticsLocations: p} = (0, l.ZP)(), T = e => {
             e.stopPropagation(), r.Z.unblockUser(t.id, { location: 'Friends' });
         };
     return (0, i.jsx)(u.Z, {
         isFocused: m,
         onClick: () => (0, o.openUserProfileModal)({
             userId: t.id,
-            sourceAnalyticsLocations: g,
-            analyticsLocation: p.location
+            sourceAnalyticsLocations: p,
+            analyticsLocation: g.location
         }),
         user: t,
         children: e => (0, i.jsxs)('div', {

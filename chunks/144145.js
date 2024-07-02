@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 }), n(653041), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(278323), o = n(287734), c = n(230711), d = n(726542), u = n(620662), _ = n(841784), E = n(802856), h = n(594190), I = n(592745), m = n(553795), p = n(757266), g = n(283595), T = n(417363), S = n(626135), C = n(804739), N = n(346329), f = n(981631), A = n(689938);
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(278323), o = n(287734), c = n(230711), d = n(726542), u = n(620662), _ = n(841784), E = n(802856), h = n(594190), I = n(592745), m = n(553795), g = n(757266), p = n(283595), T = n(417363), S = n(626135), C = n(804739), N = n(346329), f = n(981631), A = n(689938);
 let Z = d.Z.get(f.ABu.XBOX).name;
 function L(e) {
     let {currentActivities: t} = e, n = t.length > 1, L = function (e) {
@@ -20,24 +20,24 @@ function L(e) {
             let {currentActivities: t} = e, n = s.useContext(S.AnalyticsContext);
             return (0, a.Wu)([
                 h.ZP,
-                g.Z,
+                p.Z,
                 I.Z,
                 T.Z,
-                p.Z
+                g.Z
             ], () => t.filter(e => !(0, _.Z)(e.activity)).map(e => {
                 let {
                         activity: t,
                         game: i
-                    } = e, s = g.Z.getActiveLibraryApplication(i.id);
+                    } = e, s = p.Z.getActiveLibraryApplication(i.id);
                 return {
                     ...e,
                     libraryApplication: s,
                     canJoin: null != t && (0, u.Z)(t, f.xjy.JOIN) && t.type === f.IIU.PLAYING,
                     canPlay: (0, C.t)({
-                        LibraryApplicationStore: g.Z,
+                        LibraryApplicationStore: p.Z,
                         LaunchableGameStore: I.Z,
                         DispatchApplicationStore: T.Z,
-                        ConnectedAppsStore: p.Z,
+                        ConnectedAppsStore: g.Z,
                         applicationId: i.id,
                         branchId: null != s ? s.branchId : null
                     }),

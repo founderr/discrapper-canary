@@ -13,12 +13,12 @@ function j(e) {
             expectedCallbackState: x,
             onAuthToken: j,
             onError: E,
-            onClose: f,
-            img: p,
-            title: v,
+            onClose: v,
+            img: f,
+            title: p,
             body: T,
             redirectDestination: O
-        } = e, g = r.useCallback(async () => {
+        } = e, b = r.useCallback(async () => {
             let e;
             try {
                 if (e = await (0, u.H)(a, { twoWayLinkType: l.g.DESKTOP }), null == e)
@@ -33,7 +33,7 @@ function j(e) {
             a,
             E,
             s
-        ]), R = r.useCallback(e => {
+        ]), g = r.useCallback(e => {
             let {
                 callbackCode: t,
                 callbackState: n
@@ -51,9 +51,9 @@ function j(e) {
             x,
             j
         ]);
-    return r.useEffect(() => (i.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', R), () => {
-        i.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', R);
-    }), [R]), (0, n.jsxs)(n.Fragment, {
+    return r.useEffect(() => (i.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', g), () => {
+        i.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', g);
+    }), [g]), (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.ModalHeader, {
                 direction: N.Z.Direction.VERTICAL,
@@ -72,18 +72,18 @@ function j(e) {
                     (0, n.jsxs)('div', {
                         className: m.illustration,
                         children: [
-                            p,
+                            f,
                             ' '
                         ]
                     }),
                     (0, n.jsx)(c.Heading, {
                         className: m.title,
                         variant: 'heading-xl/extrabold',
-                        children: v
+                        children: p
                     }),
-                    null != f && (0, n.jsx)(c.ModalCloseButton, {
+                    null != v && (0, n.jsx)(c.ModalCloseButton, {
                         className: m.closeButton,
-                        onClick: f
+                        onClick: v
                     })
                 ]
             }),
@@ -110,7 +110,7 @@ function j(e) {
                 children: (0, n.jsxs)(c.Button, {
                     className: m.footerButton,
                     color: t ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
-                    onClick: g,
+                    onClick: b,
                     children: [
                         t ? h.Z.Messages.RETRY : h.Z.Messages.CONTINUE,
                         (0, n.jsx)(c.WindowLaunchIcon, {

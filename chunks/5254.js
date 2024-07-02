@@ -1,7 +1,7 @@
 n(47120);
 var i, s, a, r, l = n(392711), o = n.n(l), c = n(442837), d = n(570140), u = n(598077), _ = n(594174), E = n(388380);
-let h = {}, I = 0, m = !1, p = !1;
-function g(e) {
+let h = {}, I = 0, m = !1, g = !1;
+function p(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
@@ -36,10 +36,10 @@ r = 'FriendSuggestionStore', (a = 'displayName') in (s = T) ? Object.definePrope
     writable: !0
 }) : s[a] = r, t.Z = new T(d.Z, {
     CONNECTION_OPEN: function (e) {
-        h = {}, (I = e.friendSuggestionCount) > 0 && (p = !0, m || !p || (m = !0, p = !1, E.Z.fetch()));
+        h = {}, (I = e.friendSuggestionCount) > 0 && (g = !0, m || !g || (m = !0, g = !1, E.Z.fetch()));
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
-        let t = g(e.suggestion);
+        let t = p(e.suggestion);
         if (null != h[t.key])
             return !1;
         I++, h = {
@@ -52,7 +52,7 @@ r = 'FriendSuggestionStore', (a = 'displayName') in (s = T) ? Object.definePrope
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
-        m = !1, t = e.suggestions, h = o().chain(t).map(e => g(e)).keyBy(e => e.key).value(), I = o().keys(h).length;
+        m = !1, t = e.suggestions, h = o().chain(t).map(e => p(e)).keyBy(e => e.key).value(), I = o().keys(h).length;
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
         m = !1, h = {};

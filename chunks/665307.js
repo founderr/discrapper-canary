@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 }), n(411104), n(47120);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(266067), c = n(442837), d = n(846519), u = n(477690), _ = n(481060), E = n(570140), h = n(239091), I = n(287259), m = n(785547), p = n(490983), g = n(799777), T = n(285952), S = n(366695), C = n(366966), N = n(151011), f = n(626135), A = n(780570), Z = n(624138), L = n(645818), v = n(981631), O = n(689938), R = n(971567);
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(266067), c = n(442837), d = n(846519), u = n(477690), _ = n(481060), E = n(570140), h = n(239091), I = n(287259), m = n(785547), g = n(490983), p = n(799777), T = n(285952), S = n(366695), C = n(366966), N = n(151011), f = n(626135), A = n(780570), Z = n(624138), L = n(645818), v = n(981631), O = n(689938), R = n(971567);
 function x(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -358,20 +358,20 @@ function G(e) {
             applicationViewItems: i,
             filterQuery: r,
             fetched: l
-        } = (0, c.cj)([p.Z], () => ({
-            applicationViewItems: p.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: p.Z.applicationFilterQuery,
-            fetched: p.Z.hasFetchedApplications
+        } = (0, c.cj)([g.Z], () => ({
+            applicationViewItems: g.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: g.Z.applicationFilterQuery,
+            fetched: g.Z.hasFetchedApplications
         })), {
             sortKey: d,
             sortDirection: u,
             activeRowKey: _,
             isNavigatingByKeyboard: E
-        } = (0, c.cj)([g.Z], () => ({
-            sortKey: g.Z.sortKey,
-            sortDirection: g.Z.sortDirection,
-            activeRowKey: g.Z.activeRowKey,
-            isNavigatingByKeyboard: g.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([p.Z], () => ({
+            sortKey: p.Z.sortKey,
+            sortDirection: p.Z.sortDirection,
+            activeRowKey: p.Z.activeRowKey,
+            isNavigatingByKeyboard: p.Z.isNavigatingByKeyboard
         }));
     return (0, s.jsx)(U, {
         ...e,

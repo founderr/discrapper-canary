@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(481060), c = n(493683), d = n(239091), u = n(194359), _ = n(703656), E = n(592125), h = n(131951), I = n(51144), m = n(321488), p = n(417183), g = n(825682), T = n(170245), S = n(981631), C = n(65154), N = n(689938), f = n(53485);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(481060), c = n(493683), d = n(239091), u = n(194359), _ = n(703656), E = n(592125), h = n(131951), I = n(51144), m = n(321488), g = n(417183), p = n(825682), T = n(170245), S = n(981631), C = n(65154), N = n(689938), f = n(53485);
 function A(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -72,7 +72,7 @@ class L extends s.PureComponent {
                 status: a,
                 isMobile: r
             } = this.props, {isActiveRow: l} = this.state;
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(g.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: l,
@@ -86,7 +86,7 @@ class L extends s.PureComponent {
                         user: e,
                         status: a,
                         isMobile: r,
-                        subText: (0, i.jsx)(g.Z, {
+                        subText: (0, i.jsx)(p.Z, {
                             hovered: t,
                             activities: n,
                             applicationStream: s,

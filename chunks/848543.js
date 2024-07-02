@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(399606), o = n(704215), c = n(923462), d = n(481060), u = n(239091), _ = n(100527), E = n(906732), h = n(706140), I = n(294629), m = n(131951), p = n(459273), g = n(242291), T = n(458263), S = n(603074), C = n(981631), N = n(921944), f = n(689938), A = n(707747);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(399606), o = n(704215), c = n(923462), d = n(481060), u = n(239091), _ = n(100527), E = n(906732), h = n(706140), I = n(294629), m = n(131951), g = n(459273), p = n(242291), T = n(458263), S = n(603074), C = n(981631), N = n(921944), f = n(689938), A = n(707747);
 function Z(e) {
     let {
             channel: t,
@@ -14,7 +14,7 @@ function Z(e) {
         } = e, {
             mute: O,
             suppress: R
-        } = (0, I.Z)(t), x = (0, l.e7)([m.Z], () => m.Z.isDeaf()), P = O || R || x, [b, M] = s.useState(!1), D = t.getGuildId(), y = (0, g.sR)({ isSoundboardButtonDisabled: P }), [j, U] = (0, h.c)(y), {analyticsLocations: G} = (0, E.ZP)(_.Z.SOUNDBOARD_BUTTON);
+        } = (0, I.Z)(t), x = (0, l.e7)([m.Z], () => m.Z.isDeaf()), P = O || R || x, [b, M] = s.useState(!1), D = t.getGuildId(), y = (0, p.sR)({ isSoundboardButtonDisabled: P }), [j, U] = (0, h.c)(y), {analyticsLocations: G} = (0, E.ZP)(_.Z.SOUNDBOARD_BUTTON);
     function w(e) {
         null != D && (0, u.jW)(e, async () => {
             let {default: e} = await n.e('56049').then(n.bind(n, 338991));
@@ -88,7 +88,7 @@ function Z(e) {
             P,
             b
         ]);
-    return (0, p.yp)({
+    return (0, g.yp)({
         event: C.CkL.TOGGLE_SOUNDBOARD,
         handler: Y
     }), (0, i.jsx)(E.Gt, {

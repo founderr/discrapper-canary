@@ -196,7 +196,7 @@ function Z() {
             t,
             v,
             S
-        ]), B = n.useCallback(e => {
+        ]), O = n.useCallback(e => {
             let t = '', r = '', a = !1;
             return c()(_(), Object.keys(e).map(n => {
                 (r = n.split('-')[0]) !== t ? (t = r, a = !0) : a = !1;
@@ -223,7 +223,7 @@ function Z() {
                     }).join(',\n'), u = '"'.concat(n, '": themedToken({ ').concat(d, ' })');
                 return ''.concat(a ? '\n' : '').concat(u);
             }).join(',\n'));
-        }, []), O = n.useCallback(e => c()(C(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []), P = n.useCallback(e => {
+        }, []), B = n.useCallback(e => c()(C(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []), P = n.useCallback(e => {
             let t = {};
             Object.keys(e).forEach(r => {
                 Object.keys(e[r]).map(a => {
@@ -289,7 +289,7 @@ function Z() {
                             (0, a.jsx)(f.Button, {
                                 size: f.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(O(t));
+                                    navigator.clipboard.writeText(B(t));
                                 },
                                 children: 'Export'
                             })
@@ -306,7 +306,7 @@ function Z() {
                             (0, a.jsx)(f.Button, {
                                 size: f.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(B(r));
+                                    navigator.clipboard.writeText(O(r));
                                 },
                                 children: 'Export'
                             })

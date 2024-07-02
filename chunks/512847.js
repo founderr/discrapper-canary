@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     }
 });
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(317381), c = n(258609), d = n(569545), u = n(106301), _ = n(590415), E = n(131704), h = n(199902), I = n(314897), m = n(592125), p = n(430824), g = n(131951), T = n(292959), S = n(19780), C = n(944486), N = n(606304), f = n(979651), A = n(938475), Z = n(823379), L = n(557177), v = n(981631);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(317381), c = n(258609), d = n(569545), u = n(106301), _ = n(590415), E = n(131704), h = n(199902), I = n(314897), m = n(592125), g = n(430824), p = n(131951), T = n(292959), S = n(19780), C = n(944486), N = n(606304), f = n(979651), A = n(938475), Z = n(823379), L = n(557177), v = n(981631);
 function O(e, t, n, i) {
     s.useEffect(() => {
         let s = t(), a = new l.Fh(e, () => {
@@ -15,14 +15,14 @@ function O(e, t, n, i) {
 }
 function R() {
     return O([
-        g.Z,
+        p.Z,
         C.Z
     ], () => ({
         inVoiceChannel: null != C.Z.getVoiceChannelId(),
-        selfMute: g.Z.isSelfMute(),
-        selfDeaf: g.Z.isSelfDeaf(),
-        audioPermissionReady: g.Z.isNativeAudioPermissionReady(),
-        shouldSkipMuteUnmuteSound: g.Z.shouldSkipMuteUnmuteSound()
+        selfMute: p.Z.isSelfMute(),
+        selfDeaf: p.Z.isSelfDeaf(),
+        audioPermissionReady: p.Z.isNativeAudioPermissionReady(),
+        shouldSkipMuteUnmuteSound: p.Z.shouldSkipMuteUnmuteSound()
     }), (e, t) => {
         let {
             inVoiceChannel: n,
@@ -36,7 +36,7 @@ function R() {
         if (!!a && (!!n || !!e.audioPermissionReady)) {
             if (e.selfMute !== i) {
                 if (r) {
-                    g.Z.notifyMuteUnmuteSoundWasSkipped();
+                    p.Z.notifyMuteUnmuteSoundWasSkipped();
                     return;
                 }
                 return i ? 'mute' : 'unmute';
@@ -83,17 +83,17 @@ function x() {
 function P() {
     return O([N.Z], () => N.Z.isCurrentUserSpeaking(), (e, t) => {
         if (e !== t) {
-            let e = g.Z.isSelfMute();
-            if (g.Z.getMode() === v.pM4.PUSH_TO_TALK && !e)
+            let e = p.Z.isSelfMute();
+            if (p.Z.getMode() === v.pM4.PUSH_TO_TALK && !e)
                 return t ? 'ptt_start' : 'ptt_stop';
         }
     }), null;
 }
 function b() {
-    return O([g.Z], () => g.Z.isSelfMutedTemporarily(), (e, t) => {
+    return O([p.Z], () => p.Z.isSelfMutedTemporarily(), (e, t) => {
         if (e !== t) {
-            let e = g.Z.isSelfMute();
-            if (g.Z.getMode() === v.pM4.VOICE_ACTIVITY && !e)
+            let e = p.Z.isSelfMute();
+            if (p.Z.getMode() === v.pM4.VOICE_ACTIVITY && !e)
                 return t ? 'ptt_stop' : 'ptt_start';
         }
     }), null;
@@ -162,7 +162,7 @@ function y() {
                 let n = t.getGuildId();
                 if (null == n)
                     return !1;
-                let i = p.Z.getGuild(n);
+                let i = g.Z.getGuild(n);
                 return null != i && i.afkChannelId === t.id;
             }(i) || null != n && E.Lr.has(n))
             return;

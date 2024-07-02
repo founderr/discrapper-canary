@@ -10,10 +10,10 @@ let E = o.ZP.requireModule('discord_rpc').RPCIPC, h = new l.Z('RPCServer:IPC'), 
 function m(e, t) {
     null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t;
 }
-function p(e) {
+function g(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
-function g(e) {
+function p(e) {
     return new Promise((t, n) => {
         'string' == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on('readable', () => {
             try {
@@ -70,12 +70,12 @@ function S(e) {
         e.emit('pong', r);
         break;
     case I.HANDSHAKE:
-        if (p(e))
+        if (g(e))
             throw Error('already did handshake');
         m(e, !0), e.emit('handshake', r);
         break;
     case I.FRAME:
-        if (!p(e))
+        if (!g(e))
             throw Error('did not handshake');
         e.emit('request', r);
         break;
@@ -145,7 +145,7 @@ class N extends s.EventEmitter {
     constructor() {
         super();
         let e = E.net.createServer(e => this.handleConnection(e));
-        e.on('error', e => h.error('Error: '.concat(e.message))), E.getAvailableSocket(g).then(t => {
+        e.on('error', e => h.error('Error: '.concat(e.message))), E.getAvailableSocket(p).then(t => {
             e.listen(t, () => {
                 ('function' == typeof e.listening ? e.listening() : e.listening) && h.info('Starting on '.concat(e.address()));
             });

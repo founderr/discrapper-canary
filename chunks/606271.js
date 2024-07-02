@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), p = n(594174), g = n(979651), T = n(626135), S = n(823379), C = n(358085), N = n(914946), f = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
+var i = n(392711), s = n.n(i), a = n(442837), r = n(570140), l = n(573979), o = n(814443), c = n(592125), d = n(271383), u = n(430824), _ = n(131951), E = n(158776), h = n(19780), I = n(699516), m = n(944486), g = n(594174), p = n(979651), T = n(626135), S = n(823379), C = n(358085), N = n(914946), f = n(238679), A = n(863141), Z = n(981631), L = n(701488), v = n(65154);
 function O(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -22,7 +22,7 @@ class R {
             this.rpcServer.setEventHandler(e, t);
     }
     init() {
-        this.rpcServer.getCurrentUser = () => p.default.getCurrentUser(), this.rpcServer.onConnect = e => {
+        this.rpcServer.getCurrentUser = () => g.default.getCurrentUser(), this.rpcServer.onConnect = e => {
             r.Z.dispatch({
                 type: 'RPC_APP_CONNECTED',
                 socketId: e.id,
@@ -43,7 +43,7 @@ class R {
             c.Z,
             d.ZP,
             E.Z,
-            g.Z,
+            p.Z,
             _.Z,
             h.Z
         ];
@@ -85,7 +85,7 @@ class R {
                 let i = c.Z.getChannel(n);
                 if (null == i)
                     return;
-                let s = g.Z.getVoiceState(i.getGuildId(), e.userId);
+                let s = p.Z.getVoiceState(i.getGuildId(), e.userId);
                 if (null == s)
                     return;
                 this.rpcServer.dispatchToSubscriptions(t, { channel_id: s.channelId }, {
@@ -175,10 +175,10 @@ class R {
         } = i;
         if (null == s || null == a || null == a.party_id)
             return;
-        let r = p.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
+        let r = g.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
         if (null == r)
             return;
-        let l = p.default.getCurrentUser();
+        let l = g.default.getCurrentUser();
         if (null == l || r.id === l.id)
             return;
         let o = a.type === Z.mFx.JOIN_REQUEST ? E.Z.getApplicationActivity(l.id, s.id) : E.Z.getApplicationActivity(r.id, s.id);

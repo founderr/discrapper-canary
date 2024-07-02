@@ -16,12 +16,12 @@ function h(e) {
             onSelect: h,
             closePopout: I,
             'aria-label': m
-        } = e, p = (0, l.Z)({
+        } = e, g = (0, l.Z)({
             id: t.id,
             label: E.Z.Messages.COPY_ID_GUILD,
             shiftId: n,
             onSuccess: I
-        }), g = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, s.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, g)), {canSeeInAppReportingButtons: S} = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }), C = () => {
+        }), p = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, s.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)), {canSeeInAppReportingButtons: S} = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }), C = () => {
             (0, r.Zy)(), null == I || I();
         };
     return (0, i.jsxs)(a.Menu, {
@@ -41,7 +41,7 @@ function h(e) {
                     color: 'danger'
                 }) : null
             }),
-            (0, i.jsx)(a.MenuGroup, { children: p })
+            (0, i.jsx)(a.MenuGroup, { children: g })
         ]
     });
 }

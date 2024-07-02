@@ -11,7 +11,7 @@ t.Z = () => {
         return null;
     let m = () => {
             o.K.set(I, !0), n(!0);
-        }, p = () => (0, i.jsx)(c.Clickable, {
+        }, g = () => (0, i.jsx)(c.Clickable, {
             onClick: m,
             className: h.closeButton,
             'aria-label': E.Z.Messages.DISMISS,
@@ -26,14 +26,14 @@ t.Z = () => {
         children: [
             (0, i.jsx)(_.Z, { className: h.icon }),
             E.Z.Messages.BUILD_OVERRIDE,
-            (0, i.jsx)(p, {})
+            (0, i.jsx)(g, {})
         ]
     }) : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, i.jsxs)('div', {
         className: r()(h.devBanner, h.staging),
         children: [
             (0, i.jsx)(_.Z, { className: h.icon }),
-            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '306678' }),
-            (0, i.jsx)(p, {})
+            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '306865' }),
+            (0, i.jsx)(g, {})
         ]
     }) : null;
 };

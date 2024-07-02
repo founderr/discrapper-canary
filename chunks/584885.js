@@ -39,8 +39,8 @@ t.Z = e => {
     let t, {
             title: n,
             subtitle: m,
-            guildsData: p,
-            analyticsContext: g,
+            guildsData: g,
+            analyticsContext: p,
             theme: T,
             onViewGuild: S,
             fetchGuilds: C,
@@ -54,12 +54,12 @@ t.Z = e => {
         r.Z.wait(() => C());
     }, [f]);
     let v = (0, u.Z)(L ? I : h), {analyticsLocations: O} = (0, l.ZP)();
-    if (null == p)
+    if (null == g)
         return null;
     let {
             guilds: R,
             loading: x
-        } = p, P = null == R || 0 === R.length;
+        } = g, P = null == R || 0 === R.length;
     if (!x && P)
         return null;
     let b = async e => {
@@ -74,7 +74,7 @@ t.Z = e => {
             });
         else {
             let t = R.findIndex(t => t.id === e);
-            await S(e, t, g, A);
+            await S(e, t, p, A);
         }
     };
     if (x || null == R) {

@@ -8,7 +8,7 @@ function m(e, t) {
     let i = d.default.getCurrentUser();
     (null === (n = l.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(h.L0.NSFW_CHANNEL);
 }
-class p extends r.Z {
+class g extends r.Z {
     _initialize() {
         a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), a.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), a.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), a.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), a.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
@@ -56,4 +56,4 @@ class p extends r.Z {
         (0, s.closeModal)(h.dG);
     }
 }
-t.Z = new p();
+t.Z = new g();

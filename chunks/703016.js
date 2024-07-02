@@ -1,5 +1,5 @@
 n(757143), n(733860);
-var i = n(913527), s = n.n(i), a = n(570140), r = n(419363), l = n(933557), o = n(660199), c = n(869765), d = n(706454), u = n(695346), _ = n(314897), E = n(433355), h = n(592125), I = n(271383), m = n(430824), p = n(131951), g = n(292959), T = n(699516), S = n(944486), C = n(9156), N = n(594174), f = n(51144), A = n(196051), Z = n(441729), L = n(653477), v = n(981631), O = n(689938);
+var i = n(913527), s = n.n(i), a = n(570140), r = n(419363), l = n(933557), o = n(660199), c = n(869765), d = n(706454), u = n(695346), _ = n(314897), E = n(433355), h = n(592125), I = n(271383), m = n(430824), g = n(131951), p = n(292959), T = n(699516), S = n(944486), C = n(9156), N = n(594174), f = n(51144), A = n(196051), Z = n(441729), L = n(653477), v = n(981631), O = n(689938);
 let R = [], x = null, P = null, b = null, M = /\|\|([\s\S]+?)\|\|/g;
 function D(e, t, n, i) {
     let a = m.Z.getGuild(n), r = e.replace(M, O.Z.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
@@ -75,12 +75,12 @@ function B(e) {
         message: o,
         optimistic: c
     } = e;
-    if (c || p.Z.isSelfDeaf())
+    if (c || g.Z.isSelfDeaf())
         return !1;
     let d = h.Z.getChannel(l);
     if (null == d)
         return !1;
-    let m = S.Z.getChannelId(), N = E.ZP.getCurrentSidebarChannelId(m), A = l === m || l === N, Z = u.OW.getSetting() && o.tts && A, O = g.Z.getTTSType(), x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (O === v.PrB.ALL_CHANNELS || O === v.PrB.SELECTED_CHANNEL && A);
+    let m = S.Z.getChannelId(), N = E.ZP.getCurrentSidebarChannelId(m), A = l === m || l === N, Z = u.OW.getSetting() && o.tts && A, O = p.Z.getTTSType(), x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (O === v.PrB.ALL_CHANNELS || O === v.PrB.SELECTED_CHANNEL && A);
     if ((Z || x) && !T.Z.isBlockedForMessage(o)) {
         if (R.indexOf(o.id) >= 0)
             return !1;
@@ -101,7 +101,7 @@ function H(e) {
     return null != i && t === i.messageId && n === i.channelId && ((0, A.NB)(), !0);
 }
 function V() {
-    p.Z.isSelfDeaf() && r.M9();
+    g.Z.isSelfDeaf() && r.M9();
 }
 t.Z = {
     init() {

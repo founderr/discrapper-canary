@@ -5,19 +5,19 @@ n.d(t, {
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(990547), r = n(399606), l = n(481060), o = n(232567), c = n(213609), d = n(23434), u = n(153124), _ = n(981631), E = n(689938), h = n(90054);
 function I(e) {
-    let {transitionState: t} = e, I = (0, r.e7)([d.Z], () => d.Z.getAction()), [m, p] = s.useState(!1), g = (0, u.Dt)();
+    let {transitionState: t} = e, I = (0, r.e7)([d.Z], () => d.Z.getAction()), [m, g] = s.useState(!1), p = (0, u.Dt)();
     async function T() {
-        return p(!0), I === _.c2C.AGREEMENTS && p(await (0, o.Lr)()), null;
+        return g(!0), I === _.c2C.AGREEMENTS && g(await (0, o.Lr)()), null;
     }
     return (0, c.Z)({
         type: a.ImpressionTypes.VIEW,
         name: a.ImpressionNames.USER_AGREEMENTS,
         properties: { required_action: I }
     }, {}, []), (0, i.jsxs)(l.ModalRoot, {
-        'aria-labelledby': g,
+        'aria-labelledby': p,
         transitionState: t,
         children: [
-            (0, i.jsx)('div', { id: g }),
+            (0, i.jsx)('div', { id: p }),
             (0, i.jsx)(l.ModalHeader, {
                 separator: !1,
                 children: (0, i.jsx)(l.Heading, {

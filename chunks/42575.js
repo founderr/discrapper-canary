@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 });
 var i = n(735250), s = n(470079), a = n(481060), r = n(194359), l = n(906732), o = n(388380), c = n(171368), d = n(626135), u = n(321488), _ = n(417183), E = n(170245), h = n(981631), I = n(689938), m = n(208954);
-function p(e) {
+function g(e) {
     let {
             user: t,
             nickname: n,
-            status: p,
-            isFocused: g
+            status: g,
+            isFocused: p
         } = e, T = s.useContext(d.AnalyticsContext), {analyticsLocations: S} = (0, l.ZP)(), C = e => {
             null == e || e.stopPropagation(), r.Z.addRelationship({
                 userId: t.id,
@@ -20,9 +20,9 @@ function p(e) {
             });
         }, N = e => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
-        }, f = p === h.Skl.OFFLINE ? h.Skl.UNKNOWN : p;
+        }, f = g === h.Skl.OFFLINE ? h.Skl.UNKNOWN : g;
     return (0, i.jsx)(_.Z, {
-        isFocused: g,
+        isFocused: p,
         user: t,
         onClick: () => (0, c.openUserProfileModal)({
             userId: t.id,

@@ -12,7 +12,7 @@ let E = (0, l.makeIconCompat)(c.Z), h = (0, l.makeIconCompat)(d.Z), I = new Set(
         [u.TzF.CONFLICT]: E,
         [u.TzF.ERROR]: E
     });
-class p extends s.PureComponent {
+class g extends s.PureComponent {
     componentDidMount() {
         this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
     }
@@ -101,4 +101,4 @@ class p extends s.PureComponent {
 t.Z = a.ZP.connectStores([o.Z], e => {
     let {libraryApplication: t} = e;
     return { cloudSyncState: o.Z.getState(t.id, t.branchId) };
-})(p);
+})(g);

@@ -5,7 +5,7 @@ n.d(t, {
 }), n(653041);
 var i = n(735250);
 n(470079);
-var s = n(442837), a = n(481060), r = n(44315), l = n(598077), o = n(246946), c = n(594174), d = n(626135), u = n(51144), _ = n(480387), E = n(726745), h = n(251423), I = n(383832), m = n(981631), p = n(689938), g = n(886085);
+var s = n(442837), a = n(481060), r = n(44315), l = n(598077), o = n(246946), c = n(594174), d = n(626135), u = n(51144), _ = n(480387), E = n(726745), h = n(251423), I = n(383832), m = n(981631), g = n(689938), p = n(886085);
 function T() {
     let e = (0, s.e7)([c.default], () => c.default.getCurrentUser()), t = (0, s.e7)([o.Z], () => o.Z.hidePersonalInformation), {multiAccountUsers: n} = (0, h.L)(), T = t => {
             if (t !== (null == e ? void 0 : e.id))
@@ -14,11 +14,11 @@ function T() {
             let s = new l.Z(n), o = s.id === (null == e ? void 0 : e.id), c = n.tokenStatus === E.q.INVALID, d = t ? null : '#'.concat(s.discriminator);
             return (0, i.jsx)(a.MenuItem, {
                 id: s.id,
-                focusedClassName: g.focused,
+                focusedClassName: p.focused,
                 label: e => {
                     let {isFocused: l} = e;
                     return (0, i.jsxs)('div', {
-                        className: g.userMenuItem,
+                        className: p.userMenuItem,
                         children: [
                             (0, i.jsx)(a.Avatar, {
                                 src: s.getAvatarURL(void 0, 40),
@@ -26,10 +26,10 @@ function T() {
                                 'aria-label': n.username
                             }),
                             (0, i.jsxs)('div', {
-                                className: g.userMenuUsername,
+                                className: p.userMenuUsername,
                                 children: [
                                     (0, i.jsx)(a.Text, {
-                                        className: g.userMenuText,
+                                        className: p.userMenuText,
                                         variant: 'text-sm/normal',
                                         children: u.ZP.getUserTag(s, {
                                             mode: 'username',
@@ -37,7 +37,7 @@ function T() {
                                         })
                                     }),
                                     !s.isPomelo() && (0, i.jsx)(a.Text, {
-                                        className: g.userMenuDiscriminator,
+                                        className: p.userMenuDiscriminator,
                                         variant: 'text-sm/normal',
                                         children: d
                                     })
@@ -47,13 +47,13 @@ function T() {
                                 size: 'sm',
                                 color: (0, r.Lq)(l ? m.Ilk.WHITE_500 : m.Ilk.BRAND_500),
                                 secondaryColor: (0, r.Lq)(l ? m.Ilk.BRAND_500 : m.Ilk.WHITE_500),
-                                className: g.activeIcon
+                                className: p.activeIcon
                             }),
                             c && (0, i.jsx)(a.CircleExclamationPointIcon, {
                                 color: (0, r.Lq)(m.Ilk.RED_400),
                                 secondaryColor: (0, r.Lq)(m.Ilk.WHITE_500),
                                 size: 'xs',
-                                className: g.activeIcon
+                                className: p.activeIcon
                             })
                         ]
                     });
@@ -68,7 +68,7 @@ function T() {
             (0, i.jsx)(a.MenuSeparator, {}),
             (0, i.jsx)(a.MenuItem, {
                 id: 'manage-accounts',
-                label: p.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+                label: g.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
                 action: I.Z
             })
         ]

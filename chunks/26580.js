@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     F: function () {
-        return p;
+        return g;
     }
 }), n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(393238), c = n(626135), d = n(981631), u = n(626953);
@@ -94,7 +94,7 @@ let _ = [
         DEFAULT: u.tagDefault,
         LIGHT: u.tagLight,
         ALT: u.tagAlt
-    }, p = e => {
+    }, g = e => {
         let {
                 tags: t,
                 onTagClick: n,
@@ -104,24 +104,24 @@ let _ = [
                 guildId: d,
                 section: h
             } = e, {
-                ref: p,
-                width: g
+                ref: g,
+                width: p
             } = (0, o.Z)(), [T, S] = s.useState(null), C = t.filter(e => !_.includes(e.toLowerCase()));
         return s.useLayoutEffect(() => {
-            if (null == p.current || null == g || 0 === g)
+            if (null == g.current || null == p || 0 === p)
                 return;
-            let e = 0, t = 0, n = g - 40 - 4;
-            for (let i = 0; i < C.length && (t += p.current.children[i].clientWidth + 4, i === C.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
+            let e = 0, t = 0, n = p - 40 - 4;
+            for (let i = 0; i < C.length && (t += g.current.children[i].clientWidth + 4, i === C.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
                 ;
                 e++;
             }
             S(t => e <= C.length ? e : t);
         }, [
-            g,
             p,
+            g,
             C
         ]), (0, i.jsxs)('ul', {
-            ref: p,
+            ref: g,
             className: r()(u.tagContainer, a, { [u.invisible]: null == T }),
             children: [
                 C.map((e, t) => (0, i.jsx)(E, {

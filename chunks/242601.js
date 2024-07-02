@@ -3,7 +3,7 @@ n.d(t, {
         return eS;
     }
 }), n(47120), n(653041);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(920906), o = n(442837), c = n(704215), d = n(846519), u = n(481060), _ = n(570140), E = n(239091), h = n(269128), I = n(711237), m = n(110924), p = n(100527), g = n(906732), T = n(211242), S = n(536687), C = n(745837), N = n(13228), f = n(1259), A = n(211644), Z = n(605236), L = n(243778), v = n(492162), O = n(818634), R = n(596557), x = n(817520), P = n(999309), b = n(408987), M = n(130734), D = n(499137), y = n(258871), j = n(972264), U = n(11352), G = n(304445), w = n(344185), k = n(155409), B = n(10401), H = n(970731), V = n(210887), F = n(592125), Y = n(796974), W = n(486472), z = n(984933), K = n(650774), q = n(430824), Q = n(819640), X = n(496675), J = n(878884), $ = n(19780), ee = n(594174), et = n(74538), en = n(374023), ei = n(373274), es = n(547042), ea = n(315174), er = n(577718), el = n(156978), eo = n(591190), ec = n(981631), ed = n(652785), eu = n(921944), e_ = n(647086), eE = n(689938), eh = n(655674);
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(920906), o = n(442837), c = n(704215), d = n(846519), u = n(481060), _ = n(570140), E = n(239091), h = n(269128), I = n(711237), m = n(110924), g = n(100527), p = n(906732), T = n(211242), S = n(536687), C = n(745837), N = n(13228), f = n(1259), A = n(211644), Z = n(605236), L = n(243778), v = n(492162), O = n(818634), R = n(596557), x = n(817520), P = n(999309), b = n(408987), M = n(130734), D = n(499137), y = n(258871), j = n(972264), U = n(11352), G = n(304445), w = n(344185), k = n(155409), B = n(10401), H = n(970731), V = n(210887), F = n(592125), Y = n(796974), W = n(486472), z = n(984933), K = n(650774), q = n(430824), Q = n(819640), X = n(496675), J = n(878884), $ = n(19780), ee = n(594174), et = n(74538), en = n(374023), ei = n(373274), es = n(547042), ea = n(315174), er = n(577718), el = n(156978), eo = n(591190), ec = n(981631), ed = n(652785), eu = n(921944), e_ = n(647086), eE = n(689938), eh = n(655674);
 function eI(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -12,7 +12,7 @@ function eI(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let em = 64, ep = 'server-settings', eg = {
+let em = 64, eg = 'server-settings', ep = {
         origin: {
             x: -8,
             y: -48
@@ -61,9 +61,9 @@ class eT extends s.PureComponent {
             return (0, i.jsx)('div', {
                 onClick: t => e ? null : t.stopPropagation(),
                 children: (0, i.jsx)(k.Z, {
-                    tutorialId: ep,
+                    tutorialId: eg,
                     position: 'bottom',
-                    inlineSpecs: eg,
+                    inlineSpecs: ep,
                     children: this.renderGuildHeaderDropdownButton(e)
                 })
             });
@@ -111,7 +111,7 @@ class eT extends s.PureComponent {
                 bannerVisibleHeight: _,
                 communityInfoVisible: E
             } = this.state, h = s || a || r;
-        return null == t ? null : (0, i.jsx)(g.Gt, {
+        return null == t ? null : (0, i.jsx)(p.Gt, {
             value: l,
             children: (0, i.jsx)(u.LazyPopout, {
                 renderPopout: this.renderMenuPopout,
@@ -257,7 +257,7 @@ class eT extends s.PureComponent {
                     setHasSubheader: e => this.setState({ hasGuildSubheader: e })
                 }),
                 this.renderChannelList(),
-                (0, i.jsx)(g.Gt, {
+                (0, i.jsx)(p.Gt, {
                     value: t,
                     children: this.renderFooter()
                 })
@@ -354,9 +354,9 @@ class eT extends s.PureComponent {
             } = this.props;
             if (null == I)
                 return this.renderGuildHeaderDropdownButton(e);
-            let p = [];
-            return (o && p.push(c.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP), d && p.push(c.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE), t && p.push(c.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS), n && p.push(c.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK), s && p.push(c.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL), u && p.push(c.z.GUILD_HEADER_SOUNDBOARD_PERMISSION), r && p.push(c.z.GUILD_HEADER_INVITE_SPLASH), a && p.push(c.z.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP), l && p.push(c.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL), 0 === p.length) ? this.renderGuildHeaderDropdownButton(e) : (_ && p.push(c.z.MEDIA_CHANNEL_UPSELL), E && p.push(c.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL), h && p.push(c.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK), (0, i.jsx)(er.Z, {
-                contentTypes: p,
+            let g = [];
+            return (o && g.push(c.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP), d && g.push(c.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE), t && g.push(c.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS), n && g.push(c.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK), s && g.push(c.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL), u && g.push(c.z.GUILD_HEADER_SOUNDBOARD_PERMISSION), r && g.push(c.z.GUILD_HEADER_INVITE_SPLASH), a && g.push(c.z.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP), l && g.push(c.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL), 0 === g.length) ? this.renderGuildHeaderDropdownButton(e) : (_ && g.push(c.z.MEDIA_CHANNEL_UPSELL), E && g.push(c.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL), h && g.push(c.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK), (0, i.jsx)(er.Z, {
+                contentTypes: g,
                 theme: m,
                 guild: I,
                 renderGuildHeaderDropdownButton: () => this.renderGuildHeaderDropdownButton(e)
@@ -382,7 +382,7 @@ function eS(e) {
             X.Z.can(ec.Plq.MANAGE_GUILD, d),
             X.Z.can(ec.Plq.MANAGE_ROLES, d),
             X.Z.can(ec.Plq.MANAGE_THREADS, d)
-        ]), y = (0, o.e7)([W.Z], () => W.Z.isUnavailable(n)), G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()), k = (0, o.e7)([V.Z], () => V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme), {enableStudyGroup: H} = (0, D.s)(d), z = (0, A.ZP)(e => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)), [ei, es] = s.useState(!z), ea = (0, m.Z)(n), {analyticsLocations: er} = (0, g.ZP)(p.Z.GUILD_HEADER), {analyticsLocations: el} = (0, g.ZP)(p.Z.GUILD_CHANNEL_LIST_FOOTER);
+        ]), y = (0, o.e7)([W.Z], () => W.Z.isUnavailable(n)), G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()), k = (0, o.e7)([V.Z], () => V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme), {enableStudyGroup: H} = (0, D.s)(d), z = (0, A.ZP)(e => e.currentlyShown.has(c.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)), [ei, es] = s.useState(!z), ea = (0, m.Z)(n), {analyticsLocations: er} = (0, p.ZP)(g.Z.GUILD_HEADER), {analyticsLocations: el} = (0, p.ZP)(g.Z.GUILD_CHANNEL_LIST_FOOTER);
     s.useEffect(() => {
         n !== ea && es(!z);
     }, [
@@ -393,7 +393,7 @@ function eS(e) {
     let [eo, e_] = (0, A.ZP)(e => [
             ed.XN.some(t => e.currentlyShown.has(t.dismissibleContentType)),
             e.currentlyShownGroup.has(eu.R.GUILD_HEADER_TOOLTIPS)
-        ]), eE = (0, S.Z)(d), eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), eI = (0, o.e7)([Q.Z], () => Q.Z.hasLayers()), em = (0, o.e7)([B.Z], () => B.Z.shouldShow(ep)), eg = C && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), eS = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)), eC = C && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), eN = L && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || null != eS && eS > 50), ef = (0, P.Z)(n), eA = (0, f._)(n), eZ = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0, eL = C && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0, ev = (0, T.Q)(), eO = (C || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !ev, eR = (0, o.e7)([
+        ]), eE = (0, S.Z)(d), eh = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), eI = (0, o.e7)([Q.Z], () => Q.Z.hasLayers()), em = (0, o.e7)([B.Z], () => B.Z.shouldShow(eg)), ep = C && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), eS = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)), eC = C && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(), eN = L && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || null != eS && eS > 50), ef = (0, P.Z)(n), eA = (0, f._)(n), eZ = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0, eL = C && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0, ev = (0, T.Q)(), eO = (C || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !ev, eR = (0, o.e7)([
             M.Z,
             Q.Z
         ], () => null != d && null != G && C && !Q.Z.hasLayers() && M.Z.shouldShowGuildTemplateDirtyTooltip(n)), ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)), {isPopoutOpen: eP} = (0, O.y)(), eb = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t, eM = (0, o.e7)([w.Z], () => !r().isEmpty(w.Z.getThreadsForGuild(n))), eD = et.ZP.isNewUser(G), ey = ei && !eD, ej = (0, N.Z)(G);
@@ -415,7 +415,7 @@ function eS(e) {
         user: G,
         hasChannelNotice: null != eE || eo,
         anyLayerOpen: eh || eI,
-        showGuildBoostingProgressBarUpsell: eg,
+        showGuildBoostingProgressBarUpsell: ep,
         showGuildBoostingProgressBarSizeUpsell: eC,
         showInviteSplashUpsell: eO,
         showDiscoveryLandingPageSettingsUpsell: eL,

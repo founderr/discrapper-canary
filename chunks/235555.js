@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(239091), c = n(476669), d = n(524331), u = n(768419), _ = n(831506), E = n(699516), h = n(594174), I = n(643126), m = n(823379), p = n(689938);
-function g(e, t, n) {
+var i = n(735250), s = n(470079), a = n(392711), r = n.n(a), l = n(442837), o = n(239091), c = n(476669), d = n(524331), u = n(768419), _ = n(831506), E = n(699516), h = n(594174), I = n(643126), m = n(823379), g = n(689938);
+function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -31,7 +31,7 @@ class T extends s.PureComponent {
         }) : null;
     }
     constructor(...e) {
-        super(...e), g(this, 'handleUserContextMenu', (e, t) => {
+        super(...e), p(this, 'handleUserContextMenu', (e, t) => {
             (0, o.jW)(e, async () => {
                 let {default: e} = await Promise.all([
                     n.e('79695'),
@@ -43,11 +43,11 @@ class T extends s.PureComponent {
                     user: t
                 });
             });
-        }), g(this, 'renderOverflowPopout', () => {
+        }), p(this, 'renderOverflowPopout', () => {
             let {party: e} = this.props;
             return (0, i.jsx)(c.Z, {
                 party: e,
-                header: p.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({ count: e.length })
+                header: g.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({ count: e.length })
             });
         });
     }

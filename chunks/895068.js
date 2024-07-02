@@ -6,7 +6,7 @@ n.d(t, {
         return v;
     }
 }), n(47120);
-var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), E = n(393903), h = n(638730), I = n(970606), m = n(945124), p = n(231467), g = n(931515), T = n(207796), S = n(526282), C = n(777734), N = n(976757), f = n(981631), A = n(689938), Z = n(920040);
+var i, s, a, r, l = n(735250), o = n(470079), c = n(920906), d = n(143927), u = n(481060), _ = n(110924), E = n(393903), h = n(638730), I = n(970606), m = n(945124), g = n(231467), p = n(931515), T = n(207796), S = n(526282), C = n(777734), N = n(976757), f = n(981631), A = n(689938), Z = n(920040);
 let L = 40;
 function v(e) {
     let {
@@ -19,7 +19,7 @@ function v(e) {
             clans: r,
             searchResult: v,
             searchCriteria: O
-        } = (0, g.Qc)(), R = (0, T.GN)(e => e.selectedTraits, d.Z), x = (0, _.Z)(v), [P, b] = o.useState(0), M = o.useMemo(() => ({ height: P }), [P]), D = (0, c.useSpring)({
+        } = (0, p.Qc)(), R = (0, T.GN)(e => e.selectedTraits, d.Z), x = (0, _.Z)(v), [P, b] = o.useState(0), M = o.useMemo(() => ({ height: P }), [P]), D = (0, c.useSpring)({
             opacity: P > 0 ? 1 : 0,
             config: c.config.stiff
         }), y = 'upsell' === i, j = Math.min(null != t ? t : 1024, 2000), U = o.useMemo(() => {
@@ -120,7 +120,7 @@ function v(e) {
             if ('upsell' === r)
                 return null;
             let o = a[t];
-            return (0, l.jsx)(p.ZP, {
+            return (0, l.jsx)(g.ZP, {
                 clan: o,
                 affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, m.y)(o, O),
                 traitsToHighlight: R,

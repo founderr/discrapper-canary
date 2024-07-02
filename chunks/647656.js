@@ -73,8 +73,8 @@ t.Z = {
                     activity: _
                 }), Promise.resolve(_);
             _.name = i.application.name, _.application_id = i.application.id;
-            let p = i.transport === E.He.POST_MESSAGE, g = (0, u.S5)(_, p);
-            g > 0 && (_.flags = g), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
+            let g = i.transport === E.He.POST_MESSAGE, p = (0, u.S5)(_, g);
+            p > 0 && (_.flags = p), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
             let {
                 assets: T,
                 party: S,
@@ -83,7 +83,7 @@ t.Z = {
                 buttons: f,
                 type: A
             } = _;
-            if ((null == A || A !== h.IIU.PLAYING && !p) && (_.type = h.IIU.PLAYING), null != C) {
+            if ((null == A || A !== h.IIU.PLAYING && !g) && (_.type = h.IIU.PLAYING), null != C) {
                 let e = s().values(C).filter(e => !!e);
                 if (null != S && s().intersection(e, [S.id]).length > 0 && !I.includes(i.application.id))
                     throw new d.Z({ errorCode: h.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');

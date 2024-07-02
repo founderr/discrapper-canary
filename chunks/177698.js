@@ -12,14 +12,14 @@ t.Z = (0, u.Z)(e => {
             redirectUri: h,
             codeChallenge: I,
             codeChallengeMethod: m,
-            state: p,
-            guildId: g,
+            state: g,
+            guildId: p,
             channelId: T,
             prompt: S,
             disableGuildSelect: C,
             disclosures: N,
             integrationType: f
-        } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(g, '_').concat(T), Z = null != f ? null == o ? void 0 : o.get(f) : void 0, L = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : r.Z.getApplication(n);
+        } = e, A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T), Z = null != f ? null == o ? void 0 : o.get(f) : void 0, L = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : r.Z.getApplication(n);
     return new Promise((e, t) => {
         let r = n => {
             let {location: i} = n;
@@ -36,9 +36,9 @@ t.Z = (0, u.Z)(e => {
             redirectUri: h,
             codeChallenge: I,
             codeChallengeMethod: m,
-            state: p,
+            state: g,
             permissions: u,
-            guildId: g,
+            guildId: p,
             channelId: T,
             prompt: S,
             disableGuildSelect: 'boolean' == typeof C ? C : 'true' === C,

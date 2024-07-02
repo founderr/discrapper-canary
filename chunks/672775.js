@@ -25,7 +25,7 @@ function l(e) {
         }), {
             currentStep: I,
             furthestStep: m,
-            brandPrimaryColor: p
+            brandPrimaryColor: g
         } = n;
     return (0, i.jsxs)('div', {
         className: r.navigation,
@@ -37,14 +37,14 @@ function l(e) {
                 currentStepIndex: I,
                 furthestStepIndex: m,
                 onStepClick: d,
-                stepFillColor: p
+                stepFillColor: g
             }),
             (0, i.jsx)(a.i, {
                 isBackDisabled: h,
                 isNextDisabled: E,
                 onNextClick: u,
                 onBackClick: _,
-                nextButtonBackgroundColor: p,
+                nextButtonBackgroundColor: g,
                 nextButtonClassName: c,
                 nextButtonAnimationStyle: o
             })

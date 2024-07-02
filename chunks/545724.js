@@ -8,11 +8,11 @@ t.Z = function (e) {
             channel: h,
             onClick: I,
             isFocused: m,
-            isActive: p,
-            onOtherHover: g,
+            isActive: g,
+            onOtherHover: p,
             className: T
         } = e, [S, C] = s.useState(!1), [N, f] = s.useState(!1), A = () => {
-            C(!0), m && !p && !N && (null == g || g());
+            C(!0), m && !g && !N && (null == p || p());
         }, Z = () => {
             C(!1);
         }, L = (e, t) => {
@@ -42,7 +42,7 @@ t.Z = function (e) {
             },
             children: (0, i.jsx)(l.Z.div, {
                 className: r()(_.messageRequestItem, T, {
-                    [_.active]: p || N,
+                    [_.active]: g || N,
                     [_.firstItem]: 0 === t
                 }),
                 onContextMenu: e => L(e, E),
@@ -54,7 +54,7 @@ t.Z = function (e) {
                     opacity: 1
                 },
                 ...e,
-                children: a(S || p || N)
+                children: a(S || g || N)
             })
         })
     });

@@ -1,7 +1,7 @@
 n(47120);
 var i = n(846519), s = n(570140), a = n(287734), r = n(317770), l = n(199902), o = n(592125), c = n(430824), d = n(517100), u = n(19780), _ = n(70956), E = n(358085), h = n(981631);
 let I = new i.V7(), m = new i.V7();
-class p extends r.Z {
+class g extends r.Z {
     _initialize() {
         s.Z.subscribe('IDLE', this.handleIdleUpdate);
     }
@@ -33,4 +33,4 @@ class p extends r.Z {
             });
     }
 }
-t.Z = new p();
+t.Z = new g();

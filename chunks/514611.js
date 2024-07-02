@@ -1,5 +1,5 @@
 n(47120);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(622535), c = n(481060), d = n(239091), u = n(556017), _ = n(879484), E = n(26580), h = n(206887), I = n(134432), m = n(695346), p = n(768581), g = n(900849), T = n(940627), S = n(806519), C = n(981631), N = n(689938), f = n(785196), A = n(129512), Z = n(330065), L = n(755386);
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(622535), c = n(481060), d = n(239091), u = n(556017), _ = n(879484), E = n(26580), h = n(206887), I = n(134432), m = n(695346), g = n(768581), p = n(900849), T = n(940627), S = n(806519), C = n(981631), N = n(689938), f = n(785196), A = n(129512), Z = n(330065), L = n(755386);
 function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -37,11 +37,11 @@ class O extends (i = a.PureComponent) {
                 presenceCount: O,
                 memberCount: R,
                 keywords: x
-            } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(C.oNc.HUB), b = p.ZP.getGuildDiscoverySplashURL({
+            } = t, P = null === (e = t.features) || void 0 === e ? void 0 : e.has(C.oNc.HUB), b = g.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, I.x_)()
-            }), M = null != b ? b : this.getDefaultSplashURL(i, P), D = p.ZP.getGuildIconURL({
+            }), M = null != b ? b : this.getDefaultSplashURL(i, P), D = g.ZP.getGuildIconURL({
                 id: t.id,
                 icon: t.icon,
                 size: 40
@@ -143,7 +143,7 @@ class O extends (i = a.PureComponent) {
                                             tags: x,
                                             onTagClick: e => a(e, t.id),
                                             guildId: t.id,
-                                            section: g.P1.POPULAR
+                                            section: p.P1.POPULAR
                                         }),
                                         (0, s.jsxs)('div', {
                                             className: f.memberInfo,

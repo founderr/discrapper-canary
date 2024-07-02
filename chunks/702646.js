@@ -9,9 +9,9 @@ function m(e) {
             onClick: c,
             isActive: d,
             autoWidth: u = !1
-        } = e, [E, h] = s.useState(!1), [m, p] = s.useState(!1), g = _.GN.getState().mode, T = g === _.v0.GAMES || g === _.v0.PLAYSTYLE || g === _.v0.TRAITS;
+        } = e, [E, h] = s.useState(!1), [m, g] = s.useState(!1), p = _.GN.getState().mode, T = p === _.v0.GAMES || p === _.v0.PLAYSTYLE || p === _.v0.TRAITS;
     s.useEffect(() => {
-        T && (h(!1), p(!1));
+        T && (h(!1), g(!1));
     }, [T]);
     let S = d && (m || E), C = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
             className: I.tooltipContentWrapper,
@@ -49,10 +49,10 @@ function m(e) {
             color: o.ButtonColors.CUSTOM,
             onClick: c,
             onMouseEnter: () => {
-                p(!0);
+                g(!0);
             },
             onMouseLeave: () => {
-                p(!1);
+                g(!1);
             },
             children: [
                 t,
@@ -74,7 +74,7 @@ function m(e) {
         })
     });
 }
-function p() {
+function g() {
     var e;
     let t = (0, _.GN)(e => e.selectedGames, l.Z), n = s.useCallback(() => {
             (0, _.fH)(_.v0.GAMES, !0);
@@ -84,12 +84,12 @@ function p() {
                 applicationId: e,
                 otherGamesCount: 2 === t && c > 0 ? c + 1 : void 0
             }, e))
-        }), p = (0, i.jsx)(o.GameControllerIcon, {
+        }), g = (0, i.jsx)(o.GameControllerIcon, {
             className: I.filterPillIcon,
             color: 'currentColor'
         });
     return (0, i.jsx)(m, {
-        icon: p,
+        icon: g,
         text: h.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
         tooltip: E,
         onClick: n,
@@ -98,7 +98,7 @@ function p() {
         autoWidth: !0
     });
 }
-function g() {
+function p() {
     let e = s.useMemo(E.f4, []), t = (0, _.GN)(e => e.selectedPlaystyle, l.Z), n = null != t ? e[t] : null, a = null == n ? void 0 : n.title, r = s.useCallback(() => {
             (0, _.fH)(_.v0.PLAYSTYLE, !0);
         }, []), c = null != n ? (0, i.jsxs)(i.Fragment, {
@@ -199,8 +199,8 @@ t.Z = function (e) {
             (0, i.jsxs)('div', {
                 className: I.preferences,
                 children: [
-                    (0, i.jsx)(p, {}),
                     (0, i.jsx)(g, {}),
+                    (0, i.jsx)(p, {}),
                     (0, i.jsx)(T, {})
                 ]
             }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var i = n(735250);
@@ -39,7 +39,7 @@ function m(e) {
         }
     });
 }
-function p(e) {
+function g(e) {
     let {channel: t} = e;
     return (0, i.jsx)(h, {
         tooltipText: E.Z.Messages.DISCONNECT_SELF,
@@ -52,7 +52,7 @@ function p(e) {
         }
     });
 }
-function g(e) {
+function p(e) {
     let {channel: t} = e, n = (0, l.ZP)();
-    return t.isGuildStageVoice() ? (0, i.jsx)(m, { channel: t }) : n && t.isBroadcastChannel() ? (0, i.jsx)(I, {}) : (0, i.jsx)(p, { channel: t });
+    return t.isGuildStageVoice() ? (0, i.jsx)(m, { channel: t }) : n && t.isBroadcastChannel() ? (0, i.jsx)(I, {}) : (0, i.jsx)(g, { channel: t });
 }

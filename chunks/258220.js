@@ -13,7 +13,7 @@ function I(e) {
     let {
             applicationId: n,
             ...I
-        } = e, [m, p] = s.useState(!1), [g] = (0, l.Z)([n]), T = null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : 'This Activity';
+        } = e, [m, g] = s.useState(!1), [p] = (0, l.Z)([n]), T = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : 'This Activity';
     s.useEffect(() => {
         c.default.track(u.rMx.OPEN_MODAL, { type: h });
     }, []);
@@ -59,7 +59,7 @@ function I(e) {
                         type: a.Checkbox.Types.INVERTED,
                         size: 18,
                         value: m,
-                        onChange: () => p(!m),
+                        onChange: () => g(!m),
                         children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             children: _.Z.Messages.DONT_SHOW_AGAIN

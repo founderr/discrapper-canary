@@ -1,10 +1,10 @@
 n(610138), n(216116), n(78328), n(815648), n(47120), n(757143);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(266067), o = n(873546), c = n(442837), d = n(481060), u = n(570140), _ = n(150063), E = n(758059), h = n(252618), I = n(5254), m = n(984370), p = n(518311), g = n(199104), T = n(108427), S = n(210887), C = n(974042), N = n(153124), f = n(792125), A = n(666286), Z = n(596957), L = n(981631), v = n(723359), O = n(689938), R = n(756899);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(266067), o = n(873546), c = n(442837), d = n(481060), u = n(570140), _ = n(150063), E = n(758059), h = n(252618), I = n(5254), m = n(984370), g = n(518311), p = n(199104), T = n(108427), S = n(210887), C = n(974042), N = n(153124), f = n(792125), A = n(666286), Z = n(596957), L = n(981631), v = n(723359), O = n(689938), R = n(756899);
 function x() {
     return (0, i.jsxs)('div', {
         className: R.inviteToolbar,
         children: [
-            (0, i.jsx)(p.Z, { tooltip: O.Z.Messages.NEW_GROUP_DM }),
+            (0, i.jsx)(g.Z, { tooltip: O.Z.Messages.NEW_GROUP_DM }),
             (0, i.jsx)(m.Z.Divider, {})
         ]
     });
@@ -26,7 +26,7 @@ t.Z = function (e) {
     }, []), s.useEffect(() => {
         null != t && E.Z.setInitialSection(t);
     }, [t]);
-    let p = (0, c.e7)([S.Z], () => S.Z.theme), {
+    let g = (0, c.e7)([S.Z], () => S.Z.theme), {
             section: P,
             pendingCount: b
         } = (0, c.cj)([C.ZP], () => C.ZP.getState()), M = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()), D = (0, N.Dt)(), y = (0, N.Dt)();
@@ -36,7 +36,7 @@ t.Z = function (e) {
         children: [
             (0, i.jsx)(h.yY, { location: O.Z.Messages.FRIENDS }),
             (0, i.jsxs)(m.Z, {
-                className: (0, f.Q)(p),
+                className: (0, f.Q)(g),
                 toolbar: (0, i.jsx)(x, {}),
                 scrollable: o.tq,
                 role: 'navigation',
@@ -125,7 +125,7 @@ t.Z = function (e) {
                     }),
                     (0, i.jsx)('div', {
                         className: R.nowPlayingColumn,
-                        children: (0, i.jsx)(g.Z, {})
+                        children: (0, i.jsx)(p.Z, {})
                     })
                 ]
             })

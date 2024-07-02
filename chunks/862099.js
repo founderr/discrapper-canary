@@ -9,7 +9,7 @@ n.d(t, {
         return H;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), E = n(662842), h = n(703656), I = n(922482), m = n(565799), p = n(501655), g = n(192079), T = n(427679), S = n(448206), C = n(496675), N = n(938475), f = n(602623), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), P = n(725436), b = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), w = n(981631), k = n(689938), B = n(267455);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(481060), u = n(471445), _ = n(986332), E = n(662842), h = n(703656), I = n(922482), m = n(565799), g = n(501655), p = n(192079), T = n(427679), S = n(448206), C = n(496675), N = n(938475), f = n(602623), A = n(626135), Z = n(823379), L = n(15274), v = n(924301), O = n(504160), R = n(151864), x = n(835184), P = n(725436), b = n(497656), M = n(79874), D = n(554747), y = n(230900), j = n(854698), U = n(139712), G = n(765305), w = n(981631), k = n(689938), B = n(267455);
 let H = r.memo(function (e) {
     let {
             heading: t,
@@ -165,8 +165,8 @@ function Y(e) {
         } = (0, M.ZP)(n), {
             startDateTimeString: I,
             upcomingEvent: m,
-            diffMinutes: p
-        } = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()), g = m ? p > 0 ? k.Z.Messages.STARTING_IN_MINUTES.format({ minutes: p }) : k.Z.Messages.STARTING_SOON : k.Z.Messages.STARTING_ON_DATE.format({ date: I });
+            diffMinutes: g
+        } = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()), p = m ? g > 0 ? k.Z.Messages.STARTING_IN_MINUTES.format({ minutes: g }) : k.Z.Messages.STARTING_SOON : k.Z.Messages.STARTING_ON_DATE.format({ date: I });
     return r.useEffect(() => {
         A.default.track(w.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: i,
@@ -221,7 +221,7 @@ function Y(e) {
                         color: 'header-secondary',
                         variant: 'text-xs/normal',
                         className: B.startTime,
-                        children: g
+                        children: p
                     })
                 ]
             }),
@@ -304,7 +304,7 @@ function q(e) {
     let {
             stageInstance: t,
             channel: n
-        } = e, i = (0, c.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, p.pV.SPEAKER).map(e => e.user))], [n.id]), s = (0, c.e7)([m.Z], () => m.Z.getParticipantCount(n.id, p.pV.AUDIENCE), [n.id]), r = k.Z.Messages.LISTENING_COUNT.format({ count: ''.concat(s) });
+        } = e, i = (0, c.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, g.pV.SPEAKER).map(e => e.user))], [n.id]), s = (0, c.e7)([m.Z], () => m.Z.getParticipantCount(n.id, g.pV.AUDIENCE), [n.id]), r = k.Z.Messages.LISTENING_COUNT.format({ count: ''.concat(s) });
     return (0, a.jsx)(H, {
         onClickCloseIcon: () => (0, O.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: k.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
@@ -366,7 +366,7 @@ function Q(e) {
                         color: 'header-secondary',
                         variant: 'text-xs/normal',
                         className: B.userNames,
-                        children: (0, g.ER)(s, l, null == t ? void 0 : t.id, n.length)
+                        children: (0, p.ER)(s, l, null == t ? void 0 : t.id, n.length)
                     })
                 ]
             }) : null,

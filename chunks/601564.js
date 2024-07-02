@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), E = n(447269), h = n(612226), I = n(714338), m = n(663993), p = n(628123), g = n(703656), T = n(108427), S = n(911314), C = n(429899), N = n(843445), f = n(981631), A = n(689938), Z = n(595115);
+var i = n(735250), s = n(470079), a = n(593473), r = n(266067), l = n(442837), o = n(930118), c = n(355467), d = n(410575), u = n(666743), _ = n(112724), E = n(447269), h = n(612226), I = n(714338), m = n(663993), g = n(628123), p = n(703656), T = n(108427), S = n(911314), C = n(429899), N = n(843445), f = n(981631), A = n(689938), Z = n(595115);
 function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -25,7 +25,7 @@ function O(e) {
 l.ZP.initialize();
 class R extends s.PureComponent {
     componentDidMount() {
-        (0, o.Y)(this.props.location), this.stopListeningToHistory = (0, g.s1)().listen(e => {
+        (0, o.Y)(this.props.location), this.stopListeningToHistory = (0, p.s1)().listen(e => {
             e.pathname.startsWith(f.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
         }), this.props.isAuthenticated && (0, c.tZ)(), I.Z.disable(), I.Z.setLayout(E.r), I.Z.enable(), (0, T.e)('application_store');
     }
@@ -52,7 +52,7 @@ class R extends s.PureComponent {
                 location: t,
                 render: this.renderContent
             });
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(g.Z, {
             renderCustomMessage: this.renderCustomErrorMessage,
             children: n
         });

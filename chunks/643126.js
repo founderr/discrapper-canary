@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(100527), u = n(484459), _ = n(103575), E = n(285952), h = n(409216), I = n(63063), m = n(976401), p = n(333454), g = n(864441), T = n(981631), S = n(689938), C = n(15245);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(100527), u = n(484459), _ = n(103575), E = n(285952), h = n(409216), I = n(63063), m = n(976401), g = n(333454), p = n(864441), T = n(981631), S = n(689938), C = n(15245);
 function N(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -23,8 +23,8 @@ class A extends s.PureComponent {
     renderTitle() {
         return (0, i.jsxs)('div', {
             children: [
-                (0, i.jsx)(g.Z, { children: this.isHost() ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length }) : S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER }),
-                (0, i.jsx)(p.Z, { children: S.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })
+                (0, i.jsx)(p.Z, { children: this.isHost() ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length }) : S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER }),
+                (0, i.jsx)(g.Z, { children: S.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })
             ]
         });
     }

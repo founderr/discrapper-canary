@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     i: function () {
-        return p;
+        return g;
     }
 });
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(442837), c = n(481060), d = n(607070), u = n(603368), _ = n(284019), E = n(689938), h = n(16747);
@@ -15,8 +15,8 @@ function I(e) {
             isActive: _,
             animate: I,
             fillBackgroundColor: m,
-            hasError: p
-        } = e, g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
+            hasError: g
+        } = e, p = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), T = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY), S = s.useMemo(() => (0, u.j1)(m, T.hex()), [
             m,
             T
         ]), C = null != S, N = (0, l.useSpring)({
@@ -25,7 +25,7 @@ function I(e) {
                 ...l.config.stiff,
                 clamp: !0
             },
-            immediate: g || !I
+            immediate: p || !I
         }), f = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Text, {
@@ -41,12 +41,12 @@ function I(e) {
             ]
         });
     return (0, i.jsx)(c.Tooltip, {
-        color: p ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
-        text: p ? f : a,
-        'aria-label': p ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
+        color: g ? c.Tooltip.Colors.GREY : c.Tooltip.Colors.BRAND,
+        text: g ? f : a,
+        'aria-label': g ? E.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
         shouldShow: null != n,
         tooltipStyle: S,
-        tooltipClassName: r()(h.progressStepTooltip, { [h.progressStepTooltipCustomColors]: !p && null != S }),
+        tooltipClassName: r()(h.progressStepTooltip, { [h.progressStepTooltipCustomColors]: !g && null != S }),
         children: e => (0, i.jsxs)(c.Clickable, {
             ...e,
             'aria-label': E.Z.Messages.STEP_NUMBER.format({ number: t }),
@@ -54,7 +54,7 @@ function I(e) {
             onClick: n,
             className: h.progressStepWrapper,
             children: [
-                p && (0, i.jsx)(c.WarningIcon, {
+                g && (0, i.jsx)(c.WarningIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: h.errorIcon
@@ -104,7 +104,7 @@ function m(e) {
         })
     });
 }
-function p(e) {
+function g(e) {
     let {
         className: t,
         isBackDisabled: n,

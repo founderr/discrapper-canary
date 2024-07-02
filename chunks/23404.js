@@ -1,15 +1,15 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(663002), c = n(481060), d = n(230711), u = n(210887), _ = n(617136), E = n(272008), h = n(113434), I = n(569984), m = n(497505), p = n(918701), g = n(566078), T = n(602667), S = n(611855), C = n(670638), N = n(667105), f = n(860151), A = n(981631), Z = n(689938), L = n(199519);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(663002), c = n(481060), d = n(230711), u = n(210887), _ = n(617136), E = n(272008), h = n(113434), I = n(569984), m = n(497505), g = n(918701), p = n(566078), T = n(602667), S = n(611855), C = n(670638), N = n(667105), f = n(860151), A = n(981631), Z = n(689938), L = n(199519);
 function v(e) {
     var t;
-    let {quest: n} = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(g.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? A.BRd.DARK : A.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+    let {quest: n} = e, s = (0, h.B6)(n.config.expiresAt), a = (0, h.B6)(p.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([u.Z], () => u.Z.getState().theme), d = (0, o.w)(r) ? A.BRd.DARK : A.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
         className: L.heading,
         children: [
             (0, i.jsx)('img', {
                 className: L.headingGameTile,
                 alt: '',
-                src: (0, p.uo)(n, d)
+                src: (0, g.uo)(n, d)
             }),
             (0, i.jsxs)('div', {
                 className: L.headingCopy,
@@ -31,7 +31,7 @@ function v(e) {
 }
 t.Z = function (e) {
     var t, n, a;
-    let {quest: o} = e, u = (0, l.e7)([I.Z], () => I.Z.isEnrolling(o.id), [o]), [g, O] = s.useState(!1), R = s.useCallback(() => O(!0), []), x = s.useCallback(() => O(!1), []), P = s.useCallback(e => {
+    let {quest: o} = e, u = (0, l.e7)([I.Z], () => I.Z.isEnrolling(o.id), [o]), [p, O] = s.useState(!1), R = s.useCallback(() => O(!0), []), x = s.useCallback(() => O(!1), []), P = s.useCallback(e => {
             e.stopPropagation();
         }, []), b = s.useCallback(() => {
             (0, E.AH)(o.id, {
@@ -54,7 +54,7 @@ t.Z = function (e) {
             quest: o,
             location: m.jn.ACTIVITY_PANEL
         }), j = (0, h.tP)(o), U = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, G = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null;
-    return (null == o ? void 0 : o.userStatus) == null || (0, p.zE)(o.userStatus, m.jn.ACTIVITY_PANEL) || j || w || !(0, p.dl)(o) ? null : (0, i.jsx)(T.A, {
+    return (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL) || j || w || !(0, g.dl)(o) ? null : (0, i.jsx)(T.A, {
         questOrQuests: o,
         questContent: m.jn.ACTIVITY_PANEL,
         children: e => {
@@ -99,12 +99,12 @@ t.Z = function (e) {
                                 className: L.instructions,
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: (0, p.pG)({ quest: o })
+                                children: (0, g.pG)({ quest: o })
                             })
                         ]
                     }),
                     U && !G && (0, i.jsx)(f.Z, {
-                        autoplay: g,
+                        autoplay: p,
                         className: L.rewardTileWithInstructions,
                         quest: o,
                         questContent: m.jn.ACTIVITY_PANEL

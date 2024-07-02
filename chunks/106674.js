@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), E = n(543882), h = n(314897), I = n(944486), m = n(594174), p = n(366695), g = n(602623), T = n(51144), S = n(498058), C = n(158631), N = n(143614), f = n(981631), A = n(70722), Z = n(689938), L = n(938138);
+var i = n(735250), s = n(470079), a = n(442837), r = n(692547), l = n(481060), o = n(287734), c = n(872810), d = n(367907), u = n(835473), _ = n(871118), E = n(543882), h = n(314897), I = n(944486), m = n(594174), g = n(366695), p = n(602623), T = n(51144), S = n(498058), C = n(158631), N = n(143614), f = n(981631), A = n(70722), Z = n(689938), L = n(938138);
 function v(e) {
     let {users: t} = e;
     return (0, i.jsxs)('div', {
@@ -15,12 +15,12 @@ function v(e) {
                 height: 16,
                 color: r.Z.colors.HEADER_PRIMARY.css
             }),
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 showUserPopout: !0,
                 useFallbackUserForPopout: !0,
                 users: t,
                 max: 6,
-                size: g.u.SIZE_24
+                size: p.u.SIZE_24
             })
         ]
     });
@@ -29,10 +29,10 @@ function O(e) {
     var t;
     let {broadcast: n} = e, {
             userId: r,
-            applicationId: g,
+            applicationId: p,
             channelId: O,
             streamKey: R
-        } = n, [x, P] = s.useState(!1), b = (0, a.e7)([m.default], () => m.default.getUser(r)), [M] = (0, u.Z)([g]), D = null !== (t = T.ZP.getGlobalName(b)) && void 0 !== t ? t : T.ZP.getUserTag(b), y = (0, N.Z)(), j = (0, a.e7)([E.Z], () => E.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()), G = (0, C.ZP)(), w = (0, S.Z)(O);
+        } = n, [x, P] = s.useState(!1), b = (0, a.e7)([m.default], () => m.default.getUser(r)), [M] = (0, u.Z)([p]), D = null !== (t = T.ZP.getGlobalName(b)) && void 0 !== t ? t : T.ZP.getUserTag(b), y = (0, N.Z)(), j = (0, a.e7)([E.Z], () => E.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()), G = (0, C.ZP)(), w = (0, S.Z)(O);
     if (s.useEffect(() => {
             x && U === O && P(!1);
         }, [
@@ -116,9 +116,9 @@ function O(e) {
                     ownerId: r,
                     channelId: O
                 }
-            }) : (0, i.jsx)(p.Z, {
+            }) : (0, i.jsx)(g.Z, {
                 game: M,
-                size: p.Z.Sizes.LARGE,
+                size: g.Z.Sizes.LARGE,
                 className: L.gameIcon
             })
         ]

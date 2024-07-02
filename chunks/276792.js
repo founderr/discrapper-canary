@@ -1,20 +1,20 @@
 n.d(t, {
     N: function () {
-        return p;
+        return g;
     }
 });
 var i = n(735250);
 n(470079);
 var s = n(704215), a = n(740111), r = n(481060), l = n(963249), o = n(703656), c = n(626135), d = n(63063), u = n(823188), _ = n(474936), E = n(981631), h = n(689938), I = n(954440), m = n(74316);
-function p(e) {
+function g(e) {
     var t, n;
     let {
-            content: p,
-            renderModalProps: g,
+            content: g,
+            renderModalProps: p,
             analyticsLocations: T,
             analyticsLocation: S,
             isLightTheme: C
-        } = e, N = 'AnnouncementModalVariant1_'.concat(s.z[Number(p.dismissKey)]), {onClose: f} = g, A = null != p.button && '' !== p.button.copy ? p.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = p.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', L = (null === (n = p.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
+        } = e, N = 'AnnouncementModalVariant1_'.concat(s.z[Number(g.dismissKey)]), {onClose: f} = p, A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button', L = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? () => {
             (0, o.uL)(E.Z5c.APPLICATION_STORE), f();
         } : () => (0, l.Z)({
             subscriptionTier: _.Si.TIER_2,
@@ -27,9 +27,9 @@ function p(e) {
             onClose: e => {
                 e && f();
             }
-        }), v = '' !== p.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
+        }), v = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
             className: I.termsApplyAnchor,
-            href: d.Z.getArticleURL(p.helpArticleId),
+            href: d.Z.getArticleURL(g.helpArticleId),
             children: (0, i.jsx)(r.Heading, {
                 variant: 'heading-md/normal',
                 className: I.termsApplyBodyText,
@@ -37,25 +37,25 @@ function p(e) {
             })
         }) : void 0, O = {
             type: 'video',
-            src: C ? p.heroArtVideoLinkLightTheme : p.videoLink
+            src: C ? g.heroArtVideoLinkLightTheme : g.videoLink
         };
-    ('' !== p.heroArtImageLinkDarkTheme || '' !== p.heroArtImageLinkLightTheme) && (O = {
+    ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
         type: 'image',
-        src: C ? p.heroArtImageLinkLightTheme : p.heroArtImageLinkDarkTheme
+        src: C ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
     });
-    let R = C ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL, x = '' !== p.modalTopPill ? () => (0, i.jsx)(u.Cy, {
-            text: p.modalTopPill,
+    let R = C ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL, x = '' !== g.modalTopPill ? () => (0, i.jsx)(u.Cy, {
+            text: g.modalTopPill,
             className: I.modalTopPill,
             colorOptions: R
         }) : void 0;
     return {
-        renderModalProps: g,
-        header: p.header,
+        renderModalProps: p,
+        header: g.header,
         modalTopExtra: x,
-        subHeader: p.subheader,
+        subHeader: g.subheader,
         subHeaderExtra: v,
         heroArt: O,
-        featureCards: p.featureCards.map(e => ({
+        featureCards: g.featureCards.map(e => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: C ? e.imageLinkLightTheme : e.imageLink,
@@ -87,6 +87,6 @@ function p(e) {
                 ]
             });
         },
-        modalDismissibleContent: '' !== p.dismissKey ? Number(p.dismissKey) : void 0
+        modalDismissibleContent: '' !== g.dismissKey ? Number(g.dismissKey) : void 0
     };
 }

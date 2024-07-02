@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(568154), o = n(703656), c = n(430824), d = n(449934), u = n(768581), _ = n(693546), E = n(863249), h = n(944163), I = n(246364), m = n(937111), p = n(523924), g = n(390500), T = n(200305), S = n(981631), C = n(898625), N = n(689938), f = n(436726);
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(568154), o = n(703656), c = n(430824), d = n(449934), u = n(768581), _ = n(693546), E = n(863249), h = n(944163), I = n(246364), m = n(937111), g = n(523924), p = n(390500), T = n(200305), S = n(981631), C = n(898625), N = n(689938), f = n(436726);
 t.Z = e => {
     var t;
     let n, A;
@@ -63,12 +63,12 @@ t.Z = e => {
                     children: (() => {
                         switch (null == x ? void 0 : x.applicationStatus) {
                         case I.wB.SUBMITTED:
-                            return (0, i.jsx)(g.Z, {
+                            return (0, i.jsx)(p.Z, {
                                 onWithdrawApplication: U,
                                 guild: M
                             });
                         case I.wB.REJECTED:
-                            return (0, i.jsx)(p.Z, {
+                            return (0, i.jsx)(g.Z, {
                                 reapplyText: N.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                                 onReapply: j,
                                 confirmText: N.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,

@@ -1,9 +1,9 @@
 let i, s, a;
 n(653041), n(47120);
-var r, l, o, c, d = n(392711), u = n.n(d), _ = n(442837), E = n(570140), h = n(308063), I = n(388610), m = n(430824), p = n(496675), g = n(855674), T = n(981631);
+var r, l, o, c, d = n(392711), u = n.n(d), _ = n(442837), E = n(570140), h = n(308063), I = n(388610), m = n(430824), g = n(496675), p = n(855674), T = n(981631);
 let S = [], C = null, N = !1, f = T.QZA.CLOSED, A = {}, Z = !1, L = null;
 function v() {
-    if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && p.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? g.Z.getWebhooksForChannel(i.id, s.id) : [], null != C) {
+    if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, S = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != C) {
         let e = R(C.id);
         null != e && (C = e);
     }
@@ -20,7 +20,7 @@ function R(e) {
 }
 class x extends (r = _.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, m.Z, g.Z, p.Z);
+        this.waitFor(I.Z, m.Z, p.Z, g.Z);
     }
     hasChanges() {
         return Z;

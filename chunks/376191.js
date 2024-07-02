@@ -5,9 +5,9 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(442837), a = n(481060), r = n(129861), l = n(607070), o = n(388905), c = n(1585), d = n(125988), u = n(43267), _ = n(522289), E = n(699516), h = n(546591), I = n(51144), m = n(998502), p = n(620924), g = n(332712), T = n(81471), S = n(689938), C = n(272000);
+var s = n(442837), a = n(481060), r = n(129861), l = n(607070), o = n(388905), c = n(1585), d = n(125988), u = n(43267), _ = n(522289), E = n(699516), h = n(546591), I = n(51144), m = n(998502), g = n(620924), p = n(332712), T = n(81471), S = n(689938), C = n(272000);
 let N = e => {
-        let {userId: t} = e, n = (0, g._)(t);
+        let {userId: t} = e, n = (0, p._)(t);
         return null == n || 0 === n.length ? (0, i.jsx)(a.Text, {
             className: C.mutualGuilds,
             variant: 'text-sm/normal',
@@ -37,7 +37,7 @@ function A(e) {
             channel: n,
             otherUser: o,
             active: _
-        } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), g = (0, s.e7)([E.Z], () => null == o ? null : E.Z.getNickname(o.id)), A = !m && _, Z = (0, p.c)(n), {avatarDecorationSrc: L} = (0, d.Z)({
+        } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, s.e7)([E.Z], () => null == o ? null : E.Z.getNickname(o.id)), A = !m && _, Z = (0, g.c)(n), {avatarDecorationSrc: L} = (0, d.Z)({
             user: o,
             size: (0, c.y9)(a.AvatarSizes.SIZE_40),
             onlyAnimateOnHover: !0
@@ -58,7 +58,7 @@ function A(e) {
                         className: C.userContainerWithPreview,
                         children: [
                             (0, i.jsx)(r.Z, {
-                                nick: g,
+                                nick: p,
                                 user: o,
                                 showAccountIdentifier: !0,
                                 className: C.tagContainer,

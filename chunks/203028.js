@@ -12,8 +12,8 @@ function m(e) {
             onUserContextMenu: s
         } = e, {
             priorityMembers: m,
-            guildContext: p
-        } = t, g = m[0], T = function (e) {
+            guildContext: g
+        } = t, p = m[0], T = function (e) {
             let {
                     priorityMembers: t,
                     partiedMembers: n
@@ -45,8 +45,8 @@ function m(e) {
                     priorityMembers: s,
                     partiedMembers: d,
                     voiceChannels: m,
-                    currentActivities: p
-                } = e, g = s.length, T = d.length - g, S = p[0], C = null == S ? void 0 : S.activity, N = null == S ? void 0 : S.startedPlayingTime, f = { name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '' };
+                    currentActivities: g
+                } = e, p = s.length, T = d.length - p, S = g[0], C = null == S ? void 0 : S.activity, N = null == S ? void 0 : S.startedPlayingTime, f = { name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '' };
             if ((0, r.Z)(C) && null != C)
                 return {
                     subtitle: (0, i.jsx)(c.ZP, {
@@ -56,7 +56,7 @@ function m(e) {
                     }),
                     icon: null
                 };
-            if (g + T === 1 && null != S) {
+            if (p + T === 1 && null != S) {
                 let {game: e} = S;
                 if (null == C)
                     return {
@@ -104,13 +104,13 @@ function m(e) {
                     };
                 }
             }
-            if (0 === p.length) {
+            if (0 === g.length) {
                 if (m.length > 0)
                     return {
                         subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
                         icon: null
                     };
-                let e = p[0];
+                let e = g[0];
                 if (null != e) {
                     let {activity: t} = e;
                     if (null != t) {
@@ -124,8 +124,8 @@ function m(e) {
                             icon: (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY })
                         };
                 }
-            } else if (1 === p.length) {
-                let e = p.find(e => null != e.activity);
+            } else if (1 === g.length) {
+                let e = g.find(e => null != e.activity);
                 if (null == e)
                     return {
                         subtitle: null,
@@ -151,11 +151,11 @@ function m(e) {
             };
         }(t);
     return (0, i.jsx)(_.Z.Header, {
-        priorityUser: g,
-        guildId: null == p ? void 0 : p.id,
+        priorityUser: p,
+        guildId: null == g ? void 0 : g.id,
         title: T,
         subtitle: S,
         icon: C,
-        onContextMenu: e => s(e, g.user)
+        onContextMenu: e => s(e, p.user)
     });
 }

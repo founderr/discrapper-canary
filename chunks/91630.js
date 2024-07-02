@@ -1,13 +1,13 @@
 n.d(t, {
     U: function () {
-        return g;
+        return p;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(657707), r = n(823379), l = n(51448), o = n(164427), c = n(624383), d = n(742916), u = n(860403), _ = n(536763), E = n(982345), h = n(49898), I = n(731455), m = n(689938), p = n(432403);
-function g() {
+var i = n(735250), s = n(470079), a = n(657707), r = n(823379), l = n(51448), o = n(164427), c = n(624383), d = n(742916), u = n(860403), _ = n(536763), E = n(982345), h = n(49898), I = n(731455), m = n(689938), g = n(432403);
+function p() {
     let [e, t] = s.useState(''), {
             tabs: n,
-            selectedTab: g,
+            selectedTab: p,
             onSelectTab: T
         } = (0, E.Y)(), S = s.useRef(new d.m()), C = s.useCallback(e => {
             switch (e) {
@@ -51,13 +51,13 @@ function g() {
             }
         }, []);
     return (0, i.jsxs)('div', {
-        className: p.container,
+        className: g.container,
         children: [
             (0, i.jsx)(l.f, {
                 icon: (0, i.jsx)(a.QTo, {}),
                 title: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TITLE,
                 tabs: n,
-                selectedTab: g,
+                selectedTab: p,
                 onTabSelect: T,
                 searchQuery: e,
                 onSearch: t,
@@ -66,7 +66,7 @@ function g() {
             }),
             (0, i.jsx)(o.J, {
                 scrollManager: S,
-                children: C(g.id)
+                children: C(p.id)
             })
         ]
     });

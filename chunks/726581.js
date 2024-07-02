@@ -1,4 +1,4 @@
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(649974), c = n(246946), d = n(594174), u = n(525395), _ = n(55563), E = n(551428), h = n(912739), I = n(73346), m = n(733789), p = n(4962), g = n(689938), T = n(849454);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(649974), c = n(246946), d = n(594174), u = n(525395), _ = n(55563), E = n(551428), h = n(912739), I = n(73346), m = n(733789), g = n(4962), p = n(689938), T = n(849454);
 class S extends s.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length ? null : (0, i.jsx)('div', {
@@ -24,7 +24,7 @@ class S extends s.Component {
     getReviewToRender() {
         let {storeListing: e} = this.props;
         return null != e.staffNotes ? {
-            type: p.Z.Types.STAFF_NOTES,
+            type: g.Z.Types.STAFF_NOTES,
             staffNotes: e.staffNotes
         } : null;
     }
@@ -44,10 +44,10 @@ class S extends s.Component {
             children: [
                 (0, i.jsx)('div', {
                     className: T.header,
-                    children: g.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
+                    children: p.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
                 }),
                 this.renderReasons(e, t, s),
-                null != l ? (0, i.jsx)(p.Z, {
+                null != l ? (0, i.jsx)(g.Z, {
                     data: l,
                     className: T.review
                 }) : null

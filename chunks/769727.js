@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(920906), o = n(143927), c = n(704215), d = n(481060), u = n(442837), _ = n(393238), E = n(607070), h = n(963202), I = n(353093), m = n(605236), p = n(931515), g = n(807933), T = n(702646), S = n(207796), C = n(543550), N = n(895068), f = n(921944), A = n(528021);
+var i, s, a = n(735250), r = n(470079), l = n(920906), o = n(143927), c = n(704215), d = n(481060), u = n(442837), _ = n(393238), E = n(607070), h = n(963202), I = n(353093), m = n(605236), g = n(931515), p = n(807933), T = n(702646), S = n(207796), C = n(543550), N = n(895068), f = n(921944), A = n(528021);
 (s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
 let Z = {
         mass: 1,
@@ -13,7 +13,7 @@ let Z = {
                 delay: 500,
                 immediate: n,
                 onRest: () => d(!1)
-            }), p = (0, S.GN)(e => e.userUpsellScreen, o.Z), L = (0, S.GN)(e => e.started, o.Z), {guilds: v} = (0, h.C3)({
+            }), g = (0, S.GN)(e => e.userUpsellScreen, o.Z), L = (0, S.GN)(e => e.started, o.Z), {guilds: v} = (0, h.C3)({
                 location: 'ClanDiscoveryAdminContainer',
                 includeConverted: !0
             }), O = r.useMemo(() => v.filter(e => !(0, I.EJ)(e)), [v]), {enableApplication: R} = (0, h.Fg)('ClanDiscoveryAdminContainer'), x = (0, m.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
@@ -24,7 +24,7 @@ let Z = {
                 });
             }, [x]), r.useEffect(() => {
                 let e = v.length > 0;
-                if (e && !R && p === S.o2.USER_UPSELL) {
+                if (e && !R && g === S.o2.USER_UPSELL) {
                     (0, S.fH)(S.v0.ADMIN_UPSELL);
                     return;
                 }
@@ -42,7 +42,7 @@ let Z = {
                 L,
                 R,
                 i,
-                p
+                g
             ]), i) {
         case S.v0.ADMIN_UPSELL:
             return (0, a.jsx)(C.$, {});
@@ -89,14 +89,14 @@ let Z = {
                     }),
                     (0, a.jsx)('div', {
                         className: A.selectors,
-                        children: (0, a.jsx)(g.Z, { mode: i })
+                        children: (0, a.jsx)(p.Z, { mode: i })
                     })
                 ]
             });
         }
     });
 t.Z = r.memo(function () {
-    let {loading: e} = (0, p.LE)(), {
+    let {loading: e} = (0, g.LE)(), {
             ref: t,
             width: n
         } = (0, _.Z)();

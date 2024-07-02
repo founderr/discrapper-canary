@@ -14,7 +14,7 @@ function m() {
         s.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
     h.clear(), E.clear();
 }
-class p extends a.Z {
+class g extends a.Z {
     _initialize() {
         i.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), l.Z.addChangeListener(this.handlePopoutChange);
     }
@@ -29,8 +29,8 @@ class p extends a.Z {
         } = e;
         if (n !== u.Yn.DEFAULT || null == i)
             return;
-        let a = null != r.ZP.getVisibleGame(), _ = c.Z.isVisible(), I = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT), m = o.Z.isLocalVideoDisabled(t, n), p = h.has(t);
-        a && !_ && !I && !m && !p && (E.add(t), s.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
+        let a = null != r.ZP.getVisibleGame(), _ = c.Z.isVisible(), I = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT), m = o.Z.isLocalVideoDisabled(t, n), g = h.has(t);
+        a && !_ && !I && !m && !g && (E.add(t), s.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
     }
     handleManualLocalVideoToggle(e) {
         let {
@@ -51,4 +51,4 @@ class p extends a.Z {
         });
     }
 }
-t.Z = new p();
+t.Z = new g();

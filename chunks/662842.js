@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     }
 }), n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(232567), E = n(100527), h = n(471445), I = n(15274), m = n(924301), p = n(504160), g = n(151864), T = n(725436), S = n(497656), C = n(554747), N = n(230900), f = n(854698), A = n(703656), Z = n(922482), L = n(565799), v = n(501655), O = n(427679), R = n(448206), x = n(484459), P = n(103575), b = n(496675), M = n(594174), D = n(662868), y = n(981631), j = n(765305), U = n(689938), G = n(846756);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(232567), E = n(100527), h = n(471445), I = n(15274), m = n(924301), g = n(504160), p = n(151864), T = n(725436), S = n(497656), C = n(554747), N = n(230900), f = n(854698), A = n(703656), Z = n(922482), L = n(565799), v = n(501655), O = n(427679), R = n(448206), x = n(484459), P = n(103575), b = n(496675), M = n(594174), D = n(662868), y = n(981631), j = n(765305), U = n(689938), G = n(846756);
 (s = i || (i = {}))[s.STAGE = 0] = 'STAGE', s[s.EVENT_EXTERNAL = 1] = 'EVENT_EXTERNAL', s[s.EVENT_VOICE = 2] = 'EVENT_VOICE', s[s.STUDY_ROOM = 3] = 'STUDY_ROOM';
 function w(e) {
     let {
@@ -12,9 +12,9 @@ function w(e) {
         } = e, i = (0, S.y)(t.id), s = (0, C.k5)(t.id), l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
             isStageNoticeHidden: w,
             isEventNoticeHidden: k
-        } = (0, c.cj)([g.Z], () => ({
-            isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
-            isEventNoticeHidden: g.Z.isLiveChannelNoticeHidden({ eventId: null == s ? void 0 : s.id })
+        } = (0, c.cj)([p.Z], () => ({
+            isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
+            isEventNoticeHidden: p.Z.isLiveChannelNoticeHidden({ eventId: null == s ? void 0 : s.id })
         }), [
             l,
             s
@@ -45,7 +45,7 @@ function w(e) {
                 isEventNoticeHidden: d,
                 isStageNoticeHidden: _,
                 isStudyRoomNotice: E
-            } = e, I = null != n && null != i && !_, g = null != t ? (0, f.DK)(t) : null;
+            } = e, I = null != n && null != i && !_, p = null != t ? (0, f.DK)(t) : null;
         if (E && null != i) {
             let e = (0, h.KS)(i);
             return {
@@ -79,7 +79,7 @@ function w(e) {
                     }),
                     canListenIn: s,
                     buttonText: e,
-                    onClose: () => (0, p.ji)({ stageId: null == n ? void 0 : n.id }),
+                    onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                     users: o.length > 5 ? o.slice(0, 5) : o,
                     overflowUsers: c < 1 ? null : (0, a.jsxs)('div', {
                         className: G.pill,
@@ -117,7 +117,7 @@ function w(e) {
                     }),
                     canListenIn: s,
                     buttonText: e,
-                    onClose: () => (0, p.ji)({ stageId: null == n ? void 0 : n.id }),
+                    onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
                     users: o.length > 5 ? o.slice(0, 5) : o,
                     overflowUsers: c < 1 ? null : (0, a.jsxs)('div', {
                         className: G.pill,
@@ -143,7 +143,7 @@ function w(e) {
                 let e = (0, N.cS)(t);
                 if (null == e)
                     return { noticeType: null };
-                let n = m.ZP.getUserCount(t.id, g);
+                let n = m.ZP.getUserCount(t.id, p);
                 return {
                     noticeType: 1,
                     title: t.name,
@@ -157,7 +157,7 @@ function w(e) {
                     }),
                     canListenIn: !1,
                     buttonText: U.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-                    onClose: () => (0, p.ji)({ eventId: null == t ? void 0 : t.id }),
+                    onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                     users: null == l ? [] : [l],
                     overflowUsers: n < 1 ? null : (0, a.jsxs)('div', {
                         className: G.pill,
@@ -179,7 +179,7 @@ function w(e) {
                     })
                 };
             } else if (t.entity_type === j.WX.VOICE && null != i) {
-                let e = (0, h.KS)(i), n = m.ZP.getUserCount(t.id, g);
+                let e = (0, h.KS)(i), n = m.ZP.getUserCount(t.id, p);
                 return {
                     noticeType: 2,
                     title: t.name,
@@ -191,7 +191,7 @@ function w(e) {
                     }) : null,
                     canListenIn: s,
                     buttonText: U.Z.Messages.GUILD_EVENT_JOIN,
-                    onClose: () => (0, p.ji)({ eventId: null == t ? void 0 : t.id }),
+                    onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                     users: null == l ? [] : [l],
                     overflowUsers: n < 1 ? null : (0, a.jsxs)('div', {
                         className: G.pill,

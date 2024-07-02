@@ -15,7 +15,7 @@ t.Z = function (e) {
             },
             async scrollToEnd() {
             }
-        }), p = E !== d.pJs.ONLINE && E !== d.pJs.ALL, g = h || '' !== _ || p, T = t.map((e, t) => g ? (0, i.jsx)('div', { children: e.map(n) }, t) : (0, i.jsx)(l.W, {
+        }), g = E !== d.pJs.ONLINE && E !== d.pJs.ALL, p = h || '' !== _ || g, T = t.map((e, t) => p ? (0, i.jsx)('div', { children: e.map(n) }, t) : (0, i.jsx)(l.W, {
             transitionAppear: !1,
             component: 'div',
             children: e.map(n)

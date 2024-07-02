@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     }
 });
-var i = n(735250), s = n(470079), a = n(442837), r = n(224706), l = n(931240), o = n(650461), c = n(94963), d = n(745628), u = n(950279), _ = n(796918), E = n(513532), h = n(741595), I = n(974842), m = n(363915), p = n(359380), g = n(308083), T = n(689938);
+var i = n(735250), s = n(470079), a = n(442837), r = n(224706), l = n(931240), o = n(650461), c = n(94963), d = n(745628), u = n(950279), _ = n(796918), E = n(513532), h = n(741595), I = n(974842), m = n(363915), g = n(359380), p = n(308083), T = n(689938);
 function S(e) {
     let t = (0, o.Wg)(), {
             progress: n,
@@ -23,7 +23,7 @@ function S(e) {
     };
 }
 let C = {
-    [g.Wy.GAMES]: function (e) {
+    [p.Wy.GAMES]: function (e) {
         let {guildId: t} = e;
         s.useEffect(() => {
             r.Z.getDetectableGames();
@@ -42,7 +42,7 @@ let C = {
             error: null == a ? void 0 : a.gameApplicationIds
         });
     },
-    [g.Wy.PLAYSTYLE]: function (e) {
+    [p.Wy.PLAYSTYLE]: function (e) {
         let {guildId: t} = e, {
                 progress: n,
                 errors: s,
@@ -56,12 +56,12 @@ let C = {
             error: null == s ? void 0 : s.playstyle
         });
     },
-    [g.Wy.UTILITY_TRAITS]: function (e) {
+    [p.Wy.UTILITY_TRAITS]: function (e) {
         let {guildId: t} = e, {
                 progress: n,
                 handleClanUpdate: s
             } = S(t);
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(g.Z, {
             guildId: t,
             title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
             description: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
@@ -70,7 +70,7 @@ let C = {
             progress: n
         });
     },
-    [g.Wy.INTERESTS]: function (e) {
+    [p.Wy.INTERESTS]: function (e) {
         let {guildId: t} = e, {
                 progress: n,
                 errors: s,
@@ -83,7 +83,7 @@ let C = {
             error: null == s ? void 0 : s.interests
         });
     },
-    [g.Wy.DESCRIPTION]: function (e) {
+    [p.Wy.DESCRIPTION]: function (e) {
         let {guildId: t} = e, {
                 progress: n,
                 errors: s,
@@ -96,7 +96,7 @@ let C = {
             errors: s
         });
     },
-    [g.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
+    [p.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
         let {guildId: t} = e, {
                 progress: n,
                 errors: s,
@@ -112,7 +112,7 @@ let C = {
             furthestStep: n.furthestStep
         });
     },
-    [g.Wy.CUSTOMIZE_BANNER]: function (e) {
+    [p.Wy.CUSTOMIZE_BANNER]: function (e) {
         let {guildId: t} = e, {
                 progress: n,
                 handleClanUpdate: s
@@ -123,7 +123,7 @@ let C = {
             guildId: t
         });
     },
-    [g.Wy.MEMBER_APPLICATION]: function (e) {
+    [p.Wy.MEMBER_APPLICATION]: function (e) {
         let {guildId: t} = e, {errors: n} = S(t);
         return (0, i.jsx)(E.Z, {
             guildId: t,

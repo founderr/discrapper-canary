@@ -16,8 +16,8 @@ function E() {
     let I = a().some(o.Z.lastDeviceConnected, e => l.Z.isCertified(o.Z.inputDevices[e.displayName]) || l.Z.isCertified(o.Z.outputDevices[e.displayName]));
     if ((t === d.w5 && o.Z.lastInputSystemDevice.justChanged || s === d.w5 && o.Z.lastOutputSystemDevice.justChanged) && !I)
         return;
-    let m = a().first(Object.keys(o.Z.lastDeviceConnected)), p = null != m && '' !== m ? o.Z.lastDeviceConnected[m] : null;
-    null != p && (o.Z.initialized && null != m && (l.Z.isCertified(o.Z.inputDevices[m]) ? e = l.Z.getCertifiedDevice(o.Z.inputDevices[m]) : l.Z.isCertified(o.Z.outputDevices[m]) && (e = l.Z.getCertifiedDevice(o.Z.outputDevices[m]))), _ = !0, (0, r.openModalLazy)(async () => {
+    let m = a().first(Object.keys(o.Z.lastDeviceConnected)), g = null != m && '' !== m ? o.Z.lastDeviceConnected[m] : null;
+    null != g && (o.Z.initialized && null != m && (l.Z.isCertified(o.Z.inputDevices[m]) ? e = l.Z.getCertifiedDevice(o.Z.inputDevices[m]) : l.Z.isCertified(o.Z.outputDevices[m]) && (e = l.Z.getCertifiedDevice(o.Z.outputDevices[m]))), _ = !0, (0, r.openModalLazy)(async () => {
         let {default: t} = await n.e('83536').then(n.bind(n, 43991));
         return n => {
             let {
@@ -25,7 +25,7 @@ function E() {
                 onClose: a
             } = n;
             return (0, i.jsx)(t, {
-                device: p,
+                device: g,
                 certifiedDeviceMetadata: e,
                 transitionState: s,
                 onClose: () => (_ = !1, a())

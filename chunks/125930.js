@@ -1,11 +1,11 @@
 n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(378720), c = n(285952), d = n(424218), u = n(823379), _ = n(358085), E = n(843445), h = n(981631), I = n(689938), m = n(723951);
-let p = {
+let g = {
     [h.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
     [h.TaA.MACOS]: _.PlatformTypes.OSX,
     [h.TaA.LINUX]: _.PlatformTypes.LINUX
 };
-class g extends s.PureComponent {
+class p extends s.PureComponent {
     render() {
         let {
                 active: e,
@@ -76,7 +76,7 @@ class S extends s.PureComponent {
             className: m.tabs,
             children: [
                 (0, i.jsx)('div', { className: m.separator }),
-                s.map(t => (0, i.jsx)(g, {
+                s.map(t => (0, i.jsx)(p, {
                     active: t === n,
                     onClick: () => this.handleSelectOperatingSystem(t),
                     pageSize: e,
@@ -159,7 +159,7 @@ class S extends s.PureComponent {
         }) : t[n] = i;
         let s = (0, _.getPlatform)(), a = Object.keys(e.systemRequirements), r = a[0];
         for (let e of a)
-            p[e] === s && (r = e);
+            g[e] === s && (r = e);
         this.state = { selectedOperatingSystem: r };
     }
 }

@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), E = n(889711), h = n(931240), I = n(970606), m = n(963202), p = n(650461), g = n(432632), T = n(35313), S = n(284019), C = n(672775), N = n(601463), f = n(192565), A = n(641037), Z = n(689938), L = n(414868);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(607070), _ = n(207796), E = n(889711), h = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(432632), T = n(35313), S = n(284019), C = n(672775), N = n(601463), f = n(192565), A = n(641037), Z = n(689938), L = n(414868);
 let v = {
     mass: 1,
     tension: 600,
@@ -14,18 +14,18 @@ function O(e) {
     let {
             guildId: t,
             onClose: n
-        } = e, a = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), O = (0, p.Wg)(), {
+        } = e, a = (0, c.e7)([u.Z], () => u.Z.useReducedMotion), O = (0, g.Wg)(), {
             progress: R,
             errors: x,
             submitting: P
-        } = (0, c.cj)([p.ZP], () => {
+        } = (0, c.cj)([g.ZP], () => {
             var e, n, i, s;
             return {
-                progress: null !== (s = null === (e = p.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : O,
-                errors: null === (n = p.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
-                submitting: null === (i = p.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
+                progress: null !== (s = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== s ? s : O,
+                errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
+                submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
-        }), b = (0, g.N)(t, 'ClanSetupModal'), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
+        }), b = (0, p.N)(t, 'ClanSetupModal'), M = s.useMemo(() => (0, A.G)(x), [x]), [D, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
             opacity: G,
             config: v,
             onStart: () => B(!0),

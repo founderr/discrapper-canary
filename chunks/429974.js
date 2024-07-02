@@ -2,10 +2,10 @@ var i = n(735250);
 n(470079);
 var s = n(481060), a = n(570140), r = n(317770), l = n(603113), o = n(812206), c = n(158776), d = n(699516), u = n(594174), _ = n(626135), E = n(621853), h = n(981631), I = n(616922);
 let m = null;
-async function p(e) {
-    var t, a, r, p;
+async function g(e) {
+    var t, a, r, g;
     let {
-            userId: g,
+            userId: p,
             section: T,
             subsection: S,
             guildId: C = h.ME,
@@ -13,10 +13,10 @@ async function p(e) {
             friendToken: f,
             analyticsLocation: A,
             ...Z
-        } = e, L = u.default.getUser(g);
+        } = e, L = u.default.getUser(p);
     if (null == L)
         return;
-    let v = E.Z.getUserProfile(g), O = c.Z.getPrimaryActivity(g), R = c.Z.getStatus(g), x = c.Z.isMobileOnline(g), {
+    let v = E.Z.getUserProfile(p), O = c.Z.getPrimaryActivity(p), R = c.Z.getStatus(p), x = c.Z.isMobileOnline(p), {
             party: P,
             assets: b,
             application_id: M
@@ -38,12 +38,12 @@ async function p(e) {
         type: 'Profile Modal',
         guild_id: C !== h.ME ? C : null,
         channel_id: N,
-        other_user_id: g,
+        other_user_id: p,
         application_id: null !== (a = null == O ? void 0 : O.application_id) && void 0 !== a ? a : null,
         application_name: null == O ? void 0 : O.name,
         sku_id: null !== (r = null == D ? void 0 : D.primarySkuId) && void 0 !== r ? r : null,
-        is_friend: d.Z.isFriend(g),
-        has_images: !!(null !== (p = null == b ? void 0 : b.large_image) && void 0 !== p ? p : null == b ? void 0 : b.small_image),
+        is_friend: d.Z.isFriend(p),
+        has_images: !!(null !== (g = null == b ? void 0 : b.large_image) && void 0 !== g ? g : null == b ? void 0 : b.small_image),
         party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
         party_id: null == P ? void 0 : P.id,
         party_platform: (0, I.Ps)(null == P ? void 0 : P.id) ? h.ABu.SPOTIFY : null,
@@ -54,15 +54,15 @@ async function p(e) {
         ...null == A ? null : (0, _.expandLocation)(A)
     });
 }
-function g() {
+function p() {
     null != m && (0, s.closeModal)(m), m = null;
 }
 class T extends r.Z {
     _initialize() {
-        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', p), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', g);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', p);
     }
     _terminate() {
-        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', p), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', g);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', p);
     }
 }
 t.Z = new T();

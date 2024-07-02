@@ -22,14 +22,14 @@ t.Z = {
             let m = r.Z.getApplication(l);
             if (!(0, c.yE)(null !== (t = null == m ? void 0 : m.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED_FIRST_PARTY))
                 throw new d.Z({ errorCode: I.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let p = (0, a.U)(l), g = {
+            let g = (0, a.U)(l), p = {
                     activity_application_id: l,
                     activity_channel_type: _.type,
                     activity_guild_id: h,
-                    activity_user_session_id: null == p ? void 0 : p.activityUserSessionId
+                    activity_user_session_id: null == g ? void 0 : g.activityUserSessionId
                 };
             o.default.track(i, {
-                ...g,
+                ...p,
                 ...s
             });
         }

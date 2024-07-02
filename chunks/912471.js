@@ -4,7 +4,7 @@ n.d(t, {
     }
 }), n(411104);
 var i = n(433517), s = n(570140), a = n(188471), r = n(581567), l = n(594190), o = n(19780), c = n(626135), d = n(70956), u = n(848479), _ = n(960048), E = n(844889), h = n(981631);
-let I = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP', m = null, p = null, g = null, T = !1;
+let I = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP', m = null, g = null, p = null, T = !1;
 async function S() {
     if (T)
         return;
@@ -13,7 +13,7 @@ async function S() {
     if (!T)
         return;
     let t = Date.now(), n = 15 * d.Z.Millis.MINUTE + e - t;
-    n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }), e > t && (n = 0), _.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }), C(!1), p = setTimeout(() => {
+    n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }), e > t && (n = 0), _.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }), C(!1), g = setTimeout(() => {
         N(), m = setInterval(() => {
             N();
         }, 15 * d.Z.Millis.MINUTE);
@@ -21,7 +21,7 @@ async function S() {
 }
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    null != p && (clearTimeout(p), p = null), null != m && (clearInterval(m), m = null), null != g && e && (_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(g), g = null);
+    null != g && (clearTimeout(g), g = null), null != m && (clearInterval(m), m = null), null != p && e && (_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(p), p = null);
 }
 async function N() {
     let e = Date.now(), t = await (0, E.Gg)(), n = Date.now();

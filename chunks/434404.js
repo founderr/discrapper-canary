@@ -32,7 +32,7 @@ let A = new s.Z('GuildSettingsActionCreators'), N = {
                 n.e('75291'),
                 n.e('13296'),
                 n.e('1187'),
-                n.e('24958'),
+                n.e('23629'),
                 n.e('92557'),
                 n.e('36439'),
                 n.e('32966')

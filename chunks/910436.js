@@ -5,13 +5,13 @@ n.d(t, {
 }), n(653041), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(287734), a = n(872810), r = n(122810), l = n(841784), o = n(503438), c = n(802856), d = n(420660), u = n(566078), _ = n(23404), E = n(769654), h = n(81063), I = n(761282), m = n(358924), p = n(868854), g = n(817915), T = n(981631);
+var s = n(287734), a = n(872810), r = n(122810), l = n(841784), o = n(503438), c = n(802856), d = n(420660), u = n(566078), _ = n(23404), E = n(769654), h = n(81063), I = n(761282), m = n(358924), g = n(868854), p = n(817915), T = n(981631);
 function S(e) {
     let {
             party: t,
             onChannelContextMenu: n,
             quest: S
-        } = e, C = (0, p.L)(), {
+        } = e, C = (0, g.L)(), {
             voiceChannels: N,
             currentActivities: f,
             partiedMembers: A,
@@ -77,7 +77,7 @@ function S(e) {
             }
         }, 'application-stream-'.concat(t.ownerId)));
     }), f.forEach((e, t) => {
-        var n, s, a, E, I, p, C, Z, v;
+        var n, s, a, E, I, g, C, Z, v;
         let {
             activity: R,
             game: x,
@@ -88,7 +88,7 @@ function S(e) {
             return null;
         if (f.length > 1 && R.type === T.IIU.PLAYING && !(0, r.Z)(R) && null != x)
             O((0, i.jsx)(m.Z.GameSection, {
-                icon: x.getIconURL(g.Z),
+                icon: x.getIconURL(p.Z),
                 name: x.name,
                 partySize: {
                     knownSize: P.length,
@@ -129,7 +129,7 @@ function S(e) {
                 },
                 getAssetImage: h.getAssetImage,
                 members: P
-            }, 'spotify-'.concat(null !== (p = R.session_id) && void 0 !== p ? p : t, '-').concat(b.id))) : (null != R.assets || (0, r.Z)(R)) && R.type === T.IIU.LISTENING ? O((0, i.jsx)(m.Z.RichPresenceSection, {
+            }, 'spotify-'.concat(null !== (g = R.session_id) && void 0 !== g ? g : t, '-').concat(b.id))) : (null != R.assets || (0, r.Z)(R)) && R.type === T.IIU.LISTENING ? O((0, i.jsx)(m.Z.RichPresenceSection, {
                 activity: R,
                 getAssetImage: h.getAssetImage
             }, 'rich-presence-'.concat(null !== (C = R.session_id) && void 0 !== C ? C : t, '-').concat(b.id))) : (0, c.Z)(R) && O((0, i.jsx)(m.Z.XboxSection, { title: x.name }, 'xbox-'.concat(null !== (Z = R.session_id) && void 0 !== Z ? Z : t)));

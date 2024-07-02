@@ -1,4 +1,4 @@
-var i = n(735250), s = n(470079), a = n(481060), r = n(442837), l = n(212093), o = n(100527), c = n(570938), d = n(677277), u = n(285865), _ = n(702428), E = n(709158), h = n(683301), I = n(360048), m = n(296386), p = n(150192), g = n(889010), T = n(488905), S = n(731455), C = n(689938), N = n(953310);
+var i = n(735250), s = n(470079), a = n(481060), r = n(442837), l = n(212093), o = n(100527), c = n(570938), d = n(677277), u = n(285865), _ = n(702428), E = n(709158), h = n(683301), I = n(360048), m = n(296386), g = n(150192), p = n(889010), T = n(488905), S = n(731455), C = n(689938), N = n(953310);
 let f = e => {
     switch (e) {
     case S.Gj.Activity:
@@ -22,7 +22,7 @@ t.Z = function () {
         } = (0, r.cj)([h.ZP], () => ({
             currentCategoryId: h.ZP.getCurrentCategoryId(),
             isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
-        })), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), A = (0, r.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), Z = null == A ? void 0 : A.map(e => ({
+        })), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), A = (0, r.e7)([g.Z], () => g.Z.getClanDiscoveryCategories(), [], g.j), Z = null == A ? void 0 : A.map(e => ({
             ...e,
             icon: f(e.categoryId)
         })), L = e => {
@@ -50,7 +50,7 @@ t.Z = function () {
                 selectedClassName: N.selectedCategoryItem,
                 innerClassName: N.itemInner
             }, 'clan-discovery-home'),
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 categories: Z,
                 handleCategorySelect: L,
                 currentCategoryId: e,

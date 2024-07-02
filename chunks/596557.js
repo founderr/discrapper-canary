@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(735250), s = n(470079), a = n(704215), r = n(481060), l = n(785697), o = n(626135), c = n(700785), d = n(645041), u = n(981631), _ = n(921944), E = n(647086), h = n(135899);
 function I(e) {
     var t;
-    let I = (0, l.SE)(e), m = h.$X.some(t => (null == e ? void 0 : e.id) !== E._ && c.oz(t, e)), p = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES, g = (0, d.FT)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds), T = I && (m || p) && !g, S = s.useCallback(() => {
+    let I = (0, l.SE)(e), m = h.$X.some(t => (null == e ? void 0 : e.id) !== E._ && c.oz(t, e)), g = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES, p = (0, d.FT)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds), T = I && (m || g) && !p, S = s.useCallback(() => {
             var t;
             (0, d.Qd)(a.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS);
         }, [e]), C = s.useRef(!1);
@@ -18,7 +18,7 @@ function I(e) {
                 return n => (0, i.jsx)(t, {
                     guild: e,
                     canEveryoneModerate: m,
-                    isDefaultNotificationsAllMessages: p,
+                    isDefaultNotificationsAllMessages: g,
                     ...n
                 });
             }, { onCloseCallback: S }), o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
@@ -30,7 +30,7 @@ function I(e) {
         m,
         e,
         S,
-        p,
+        g,
         T
     ]);
 }

@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(325432), o = n(391690), c = n(714759), d = n(285952), u = n(546591), _ = n(424218), E = n(358085), h = n(998502), I = n(689938), m = n(145537), p = n(331651);
-function g(e, t, n) {
+var i = n(735250), s = n(470079), a = n(442837), r = n(481060), l = n(325432), o = n(391690), c = n(714759), d = n(285952), u = n(546591), _ = n(424218), E = n(358085), h = n(998502), I = n(689938), m = n(145537), g = n(331651);
+function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -98,7 +98,7 @@ class T extends s.PureComponent {
                             }),
                             (0, i.jsx)(r.FormItem, {
                                 title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
-                                className: p.marginTop20,
+                                className: g.marginTop20,
                                 children: (0, i.jsx)(r.TextInput, {
                                     disabled: !0,
                                     value: e
@@ -154,10 +154,10 @@ class T extends s.PureComponent {
         return this.props.editingPath === this.props.path ? this.renderEditing() : this.renderViewing();
     }
     constructor(...e) {
-        super(...e), g(this, 'state', {
+        super(...e), p(this, 'state', {
             label: void 0,
             isDefault: null
-        }), g(this, 'handleStartEditing', () => {
+        }), p(this, 'handleStartEditing', () => {
             let {
                 path: e,
                 label: t,
@@ -168,13 +168,13 @@ class T extends s.PureComponent {
                 label: t,
                 isDefault: n
             });
-        }), g(this, 'handleStopEditing', () => {
+        }), p(this, 'handleStopEditing', () => {
             let {onToggleEditing: e} = this.props;
             e(null), this.setState({
                 label: void 0,
                 isDefault: null
             });
-        }), g(this, 'handleRemoveLocation', () => {
+        }), p(this, 'handleRemoveLocation', () => {
             (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
                 ...e,
                 header: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
@@ -188,14 +188,14 @@ class T extends s.PureComponent {
                     children: I.Z.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
                 })
             }));
-        }), g(this, 'handleSaveChanges', () => {
+        }), p(this, 'handleSaveChanges', () => {
             (0, l.Tb)(this.props.path, {
                 label: null != this.state.label ? this.state.label : this.props.label,
                 isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
             }), this.handleStopEditing();
-        }), g(this, 'handleLabelChange', e => {
+        }), p(this, 'handleLabelChange', e => {
             this.setState({ label: e });
-        }), g(this, 'handleToggleDefault', () => {
+        }), p(this, 'handleToggleDefault', () => {
             this.setState({ isDefault: !this.state.isDefault });
         });
     }
@@ -245,12 +245,12 @@ class S extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), g(this, 'state', { editingPath: null }), g(this, 'handleAddInstallationLocation', () => {
+        super(...e), p(this, 'state', { editingPath: null }), p(this, 'handleAddInstallationLocation', () => {
             h.ZP.showOpenDialog(['openDirectory']).then(e => {
                 if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0])
                     (0, l.RY)(e[0]);
             });
-        }), g(this, 'handleToggleEditing', e => {
+        }), p(this, 'handleToggleEditing', e => {
             this.setState({ editingPath: e });
         });
     }

@@ -91,7 +91,7 @@ function _(e) {
             })
         });
     }
-    let p = l.map((e, n) => {
+    let g = l.map((e, n) => {
             let {
                     playingMembers: s,
                     game: r,
@@ -111,15 +111,15 @@ function _(e) {
                     sourceAnalyticsLocations: E
                 })
             }, n);
-        }), g = h.map(e => e.id);
+        }), p = h.map(e => e.id);
     return [
-        ...p,
+        ...g,
         (0, i.jsx)(a.MenuGroup, {
             label: ''.concat(d.Z.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, ' - ').concat(h.length),
             children: u({
                 priorityMembers: t.filter(e => {
                     let {user: t} = e;
-                    return g.includes(t.id);
+                    return p.includes(t.id);
                 }),
                 otherMembers: h.filter(e => !c.has(e.id)),
                 totalMembers: h.length,

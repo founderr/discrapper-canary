@@ -1,5 +1,5 @@
 n(47120);
-var i = n(392711), s = n.n(i), a = n(243814), r = n(447543), l = n(287734), o = n(703656), c = n(131704), d = n(592125), u = n(430824), _ = n(496675), E = n(944486), h = n(979651), I = n(934415), m = n(996106), p = n(914946), g = n(452426), T = n(561205), S = n(186901), C = n(981631);
+var i = n(392711), s = n.n(i), a = n(243814), r = n(447543), l = n(287734), o = n(703656), c = n(131704), d = n(592125), u = n(430824), _ = n(496675), E = n(944486), h = n(979651), I = n(934415), m = n(996106), g = n(914946), p = n(452426), T = n(561205), S = n(186901), C = n(981631);
 t.Z = {
     [C.Etm.GET_CHANNEL]: {
         scope: {
@@ -20,7 +20,7 @@ t.Z = {
                 if (!e.includes(a.x.RPC) && !e.includes(a.x.DM_CHANNELS_READ))
                     throw new m.Z({ errorCode: C.lTL.INVALID_PERMISSIONS }, 'Invalid scope');
             }
-            return (0, p.T5)(i, (0, p.zM)(i, n.application.id, n.authorization.scopes));
+            return (0, g.T5)(i, (0, g.zM)(i, n.application.id, n.authorization.scopes));
         }
     },
     [C.Etm.GET_CHANNELS]: {
@@ -65,7 +65,7 @@ t.Z = {
     },
     [C.Etm.SELECT_VOICE_CHANNEL]: {
         scope: a.x.RPC,
-        validation: e => (0, g.Z)(e).required().keys({
+        validation: e => (0, p.Z)(e).required().keys({
             channel_id: e.string().allow(null),
             timeout: e.number().min(0).max(60),
             force: e.boolean(),
@@ -84,8 +84,8 @@ t.Z = {
             } = e;
             if (!i)
                 return l.default.selectVoiceChannel(null), null;
-            let g = E.Z.getVoiceChannelId();
-            if (null != g && g !== i && !1 === a)
+            let p = E.Z.getVoiceChannelId();
+            if (null != p && p !== i && !1 === a)
                 throw new m.Z({ errorCode: C.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t.storeWait(n, () => d.Z.getChannel(i), s).catch(() => {
                 throw new m.Z({ errorCode: C.lTL.SELECT_CHANNEL_TIMED_OUT }, 'Request to select voice channel timed out.');
@@ -96,7 +96,7 @@ t.Z = {
                     throw new m.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Channel is not a voice channel');
                 return Promise.all([
                     Promise.resolve(e),
-                    (0, p.T5)(e, (0, p.zM)(e, n.application.id, n.authorization.scopes))
+                    (0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))
                 ]);
             }).then(e => {
                 let [t, n] = e;
@@ -119,12 +119,12 @@ t.Z = {
         },
         handler(e) {
             let {socket: t} = e, n = E.Z.getVoiceChannelId(), i = null != n ? d.Z.getChannel(n) : null;
-            return null != i ? (0, p.T5)(i, (0, p.zM)(i, t.application.id, t.authorization.scopes)) : null;
+            return null != i ? (0, g.T5)(i, (0, g.zM)(i, t.application.id, t.authorization.scopes)) : null;
         }
     },
     [C.Etm.SELECT_TEXT_CHANNEL]: {
         scope: a.x.RPC,
-        validation: e => (0, g.Z)(e).required().keys({
+        validation: e => (0, p.Z)(e).required().keys({
             channel_id: e.string().allow(null),
             timeout: e.number().min(0).max(60)
         }),
@@ -146,7 +146,7 @@ t.Z = {
                     throw new m.Z({ errorCode: C.lTL.INVALID_CHANNEL }, 'Channel is not a text channel');
                 return Promise.all([
                     Promise.resolve(e),
-                    (0, p.T5)(e, (0, p.zM)(e, n.application.id, n.authorization.scopes))
+                    (0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))
                 ]);
             }).then(e => {
                 let [t, n] = e;

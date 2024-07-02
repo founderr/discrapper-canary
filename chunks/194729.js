@@ -1,5 +1,5 @@
 n(390547), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(664751), d = n(748780), u = n(873546), _ = n(442837), E = n(481060), h = n(570140), I = n(212093), m = n(827837), p = n(785570), g = n(100527), T = n(963202), S = n(252618), C = n(440190), N = n(5955), f = n(121711), A = n(709158), Z = n(703656), L = n(108427), v = n(706454), O = n(210887), R = n(480294), x = n(683301), P = n(430824), b = n(230307), M = n(502568), D = n(900849), y = n(879484), j = n(117496), U = n(296386), G = n(150192), w = n(769727), k = n(584885), B = n(59222), H = n(749436), V = n(26580), F = n(731455), Y = n(981631), W = n(689938), z = n(461455), K = n(368179), q = n(52518);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(664751), d = n(748780), u = n(873546), _ = n(442837), E = n(481060), h = n(570140), I = n(212093), m = n(827837), g = n(785570), p = n(100527), T = n(963202), S = n(252618), C = n(440190), N = n(5955), f = n(121711), A = n(709158), Z = n(703656), L = n(108427), v = n(706454), O = n(210887), R = n(480294), x = n(683301), P = n(430824), b = n(230307), M = n(502568), D = n(900849), y = n(879484), j = n(117496), U = n(296386), G = n(150192), w = n(769727), k = n(584885), B = n(59222), H = n(749436), V = n(26580), F = n(731455), Y = n(981631), W = n(689938), z = n(461455), K = n(368179), q = n(52518);
 function Q(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -22,7 +22,7 @@ class X extends s.PureComponent {
             mostRecentQuery: o
         } = this.props;
         if ((0, m.N)(), (0, U.le)(), null == x.ZP.getSearchIndex() && (0, I.Ue)(), h.Z.wait(() => {
-                (0, p.M)(Y.x8Z.SERVER_DISCOVERY_BADGE);
+                (0, g.M)(Y.x8Z.SERVER_DISCOVERY_BADGE);
             }), !i && 0 === o.length && D.Zt({
                 loadId: this.loadId,
                 gamesYouPlayGuilds: s.guilds,
@@ -396,6 +396,6 @@ t.Z = function (e) {
     let {searchRoute: t} = e, {guilds: n} = (0, T.C3)({
             location: 'guild_discovery',
             includeConverted: !0
-        }), s = n.length > 0, {clanDiscoveryEnabled: a} = (0, T.nk)('guild_discovery'), r = (0, _.e7)([x.ZP], () => x.ZP.getCurrentCategoryId()), l = (0, _.e7)([x.ZP], () => x.ZP.getIsReady()), o = (0, A.Z)(g.Z.QUEST_HOME_PAGE);
+        }), s = n.length > 0, {clanDiscoveryEnabled: a} = (0, T.nk)('guild_discovery'), r = (0, _.e7)([x.ZP], () => x.ZP.getCurrentCategoryId()), l = (0, _.e7)([x.ZP], () => x.ZP.getIsReady()), o = (0, A.Z)(p.Z.QUEST_HOME_PAGE);
     return (s || a) && (!l || r === F.Gj.Clans) ? (0, i.jsx)(w.Z, {}) : o && r === F.Gj.Quests ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)($, { searchRoute: t });
 };

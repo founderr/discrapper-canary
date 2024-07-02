@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(920906), r = n(143927), l = n(442837), o = n(607070), c = n(950279), d = n(741595), u = n(754961), _ = n(363915), E = n(359380), h = n(207796), I = n(316553), m = n(689938), p = n(843198);
-let g = {
+var i = n(735250), s = n(470079), a = n(920906), r = n(143927), l = n(442837), o = n(607070), c = n(950279), d = n(741595), u = n(754961), _ = n(363915), E = n(359380), h = n(207796), I = n(316553), m = n(689938), g = n(843198);
+let p = {
     mass: 1,
     tension: 600,
     friction: 60
@@ -76,7 +76,7 @@ t.Z = s.memo(function (e) {
             ref: c,
             from: { opacity: 0 },
             to: { opacity: 1 },
-            config: g
+            config: p
         }), y = (0, a.useSpring)({
             ref: d,
             from: {
@@ -87,7 +87,7 @@ t.Z = s.memo(function (e) {
                 opacity: 1,
                 transform: 'translateY(0px)'
             },
-            config: g
+            config: p
         }), j = (0, a.useSpring)({
             ref: E,
             from: {
@@ -98,7 +98,7 @@ t.Z = s.memo(function (e) {
                 opacity: 1,
                 transform: 'translateY(0px)'
             },
-            config: g
+            config: p
         });
     (0, a.useChain)([
         c,
@@ -120,11 +120,11 @@ t.Z = s.memo(function (e) {
             }
         }, [t]);
     return (0, i.jsxs)(a.animated.div, {
-        className: p.container,
+        className: g.container,
         style: D,
         children: [
             (0, i.jsx)(a.animated.div, {
-                className: p.sequencer,
+                className: g.sequencer,
                 style: y,
                 children: (0, i.jsx)(_.Z, {
                     currentStep: f,
@@ -134,7 +134,7 @@ t.Z = s.memo(function (e) {
                 })
             }),
             (0, i.jsxs)(a.animated.div, {
-                className: p.footer,
+                className: g.footer,
                 style: j,
                 children: [
                     (0, i.jsx)(u.T, {
@@ -144,7 +144,7 @@ t.Z = s.memo(function (e) {
                         onStepClick: R
                     }),
                     (0, i.jsx)(u.i, {
-                        className: p.footerButtons,
+                        className: g.footerButtons,
                         isBackDisabled: !1,
                         isNextDisabled: b,
                         onNextClick: P,

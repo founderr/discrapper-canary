@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(143927), c = n(442837), d = n(481060), u = n(749210), _ = n(607070), E = n(100527), h = n(931240), I = n(970606), m = n(963202), p = n(650461), g = n(353093), T = n(603839), S = n(430824), C = n(725568), N = n(231467), f = n(207796), A = n(316553), Z = n(273254), L = n(559469), v = n(308083), O = n(689938), R = n(605767), x = n(345480), P = n(236613);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(143927), c = n(442837), d = n(481060), u = n(749210), _ = n(607070), E = n(100527), h = n(931240), I = n(970606), m = n(963202), g = n(650461), p = n(353093), T = n(603839), S = n(430824), C = n(725568), N = n(231467), f = n(207796), A = n(316553), Z = n(273254), L = n(559469), v = n(308083), O = n(689938), R = n(605767), x = n(345480), P = n(236613);
 let b = {
     mass: 1,
     tension: 600,
@@ -63,9 +63,9 @@ function y(e) {
             label: e.name
         })), [a]), m = s.useCallback(() => {
             (0, f.fH)(f.v0.DISCOVERY);
-        }, []), p = s.useCallback(() => {
+        }, []), g = s.useCallback(() => {
             (0, f.fH)(f.v0.GET_STARTED), E(f.o2.USER_ONBOARDING);
-        }, [E]), g = a.length > 1;
+        }, [E]), p = a.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u ? (0, i.jsxs)(i.Fragment, {
@@ -115,7 +115,7 @@ function y(e) {
             (0, i.jsxs)('div', {
                 className: R.upsellButton,
                 children: [
-                    g && (0, i.jsx)(d.SearchableSelect, {
+                    p && (0, i.jsx)(d.SearchableSelect, {
                         className: R.upsellSelect,
                         value: t,
                         options: I,
@@ -125,7 +125,7 @@ function y(e) {
                         look: d.ButtonLooks.FILLED,
                         size: d.ButtonSizes.LARGE,
                         color: d.ButtonColors.BRAND,
-                        className: r()(R.reserveButton, { [R.buttonWithSelect]: g }),
+                        className: r()(R.reserveButton, { [R.buttonWithSelect]: p }),
                         onClick: l,
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',
@@ -133,7 +133,7 @@ function y(e) {
                             children: c
                         })
                     }),
-                    g && _ && (0, i.jsx)('div', {
+                    p && _ && (0, i.jsx)('div', {
                         className: R.spacer,
                         children: '\xB7'
                     }),
@@ -141,7 +141,7 @@ function y(e) {
                         look: d.ButtonLooks.OUTLINED,
                         color: d.ButtonColors.PRIMARY,
                         className: R.browseButton,
-                        onClick: p,
+                        onClick: g,
                         children: O.Z.Messages.CLAN_DISCOVERY_UPSELL_BROWSE
                     })
                 ]
@@ -167,7 +167,7 @@ t.Z = s.memo(function (e) {
             selectedGame: a,
             isBrowseButtonVisible: r
         } = e, o = 0 === t.length, [x, P] = s.useState(() => {
-            let e = new Set(p.ZP.getGuildIds());
+            let e = new Set(g.ZP.getGuildIds());
             for (let n of t)
                 if (e.has(n.id))
                     return n.id;
@@ -182,7 +182,7 @@ t.Z = s.memo(function (e) {
         o,
         x
     ]);
-    let D = (0, c.e7)([S.Z], () => S.Z.getGuild(x)), j = (0, c.e7)([p.ZP], () => null != x ? p.ZP.getStateForGuild(x).progress : null), U = (0, A.J)({ selectedGame: a }), {defaultGameId: G} = (0, m.St)({
+    let D = (0, c.e7)([S.Z], () => S.Z.getGuild(x)), j = (0, c.e7)([g.ZP], () => null != x ? g.ZP.getStateForGuild(x).progress : null), U = (0, A.J)({ selectedGame: a }), {defaultGameId: G} = (0, m.St)({
             guild: D,
             location: 'ClanDiscoveryAdminUpsell',
             includeConverted: !1
@@ -309,7 +309,7 @@ t.Z = s.memo(function (e) {
                                     children: (0, i.jsx)(N.xV, {
                                         clan: B,
                                         className: R.clanCardCenter,
-                                        bannerUrl: (0, g.pY)(H[4].id, H[4].bannerHash)
+                                        bannerUrl: (0, p.pY)(H[4].id, H[4].bannerHash)
                                     })
                                 })
                             })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 });
 var i = n(735250), s = n(470079), a = n(481060), r = n(212093), l = n(703656), o = n(769654), c = n(430824), d = n(626135), u = n(768581), _ = n(125631), E = n(981631), h = n(689938), I = n(387259);
@@ -29,7 +29,7 @@ function m(e, t, n) {
         ]
     }, t);
 }
-function p() {
+function g() {
     let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(E.oNc.HUB)), t = e => {
             d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, o.X)(e);
         };

@@ -26,7 +26,7 @@ function r(e) {
         }, [
             r,
             n
-        ]), p = i.useCallback(e => n(e), [n]), g = i.useMemo(() => {
+        ]), g = i.useCallback(e => n(e), [n]), p = i.useMemo(() => {
             switch (r) {
             case a.Wy.GAMES:
                 return 0 === l.size;
@@ -53,16 +53,16 @@ function r(e) {
             u.length
         ]), T = 0 === r;
     return i.useMemo(() => ({
-        onStepClick: p,
+        onStepClick: g,
         onNextClick: I,
         onBackClick: m,
-        isNextDisabled: g,
+        isNextDisabled: p,
         isBackDisabled: T
     }), [
         T,
-        g,
+        p,
         m,
         I,
-        p
+        g
     ]);
 }

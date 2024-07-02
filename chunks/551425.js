@@ -1,8 +1,8 @@
 var i = s(735250);
 s(470079);
-var n = s(979554), l = s(442837), a = s(481060), r = s(1585), o = s(125988), d = s(876917), u = s(594174), c = s(597688), h = s(5975);
-let p = a.AvatarSizes.SIZE_152, f = (0, r.y9)(p), m = e => {
-        let {item: t} = e, s = (0, l.e7)([u.default], () => u.default.getCurrentUser()), {
+var n = s(979554), a = s(442837), l = s(481060), r = s(1585), o = s(125988), d = s(876917), u = s(594174), c = s(597688), h = s(5975);
+let p = l.AvatarSizes.SIZE_152, f = (0, r.y9)(p), m = e => {
+        let {item: t} = e, s = (0, a.e7)([u.default], () => u.default.getCurrentUser()), {
                 avatarDecorationSrc: n,
                 avatarPlaceholderSrc: r,
                 eventHandlers: d
@@ -13,7 +13,7 @@ let p = a.AvatarSizes.SIZE_152, f = (0, r.y9)(p), m = e => {
             });
         return (0, i.jsx)('div', {
             className: h.avatarDecorationPreview,
-            children: (0, i.jsx)(a.Avatar, {
+            children: (0, i.jsx)(l.Avatar, {
                 ...d,
                 'aria-label': t.label,
                 src: r,
@@ -32,11 +32,11 @@ let p = a.AvatarSizes.SIZE_152, f = (0, r.y9)(p), m = e => {
         });
     };
 t.Z = e => {
-    let {giftCode: t} = e, s = (0, l.e7)([c.Z], () => c.Z.getProduct(t.skuId)), a = null == s ? void 0 : s.items[0];
+    let {giftCode: t} = e, s = (0, a.e7)([c.Z], () => c.Z.getProduct(t.skuId)), l = null == s ? void 0 : s.items[0];
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (null == a ? void 0 : a.type) === n.Z.AVATAR_DECORATION && (0, i.jsx)(m, { item: a }),
-            (null == a ? void 0 : a.type) === n.Z.PROFILE_EFFECT && (0, i.jsx)(g, { item: a })
+            (null == l ? void 0 : l.type) === n.Z.AVATAR_DECORATION && (0, i.jsx)(m, { item: l }),
+            (null == l ? void 0 : l.type) === n.Z.PROFILE_EFFECT && (0, i.jsx)(g, { item: l })
         ]
     });
 };

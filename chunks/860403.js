@@ -13,8 +13,8 @@ function I(e) {
             var e, n;
             return null !== (n = null === (e = o.ZP.getDiscoverableGuilds()[t]) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : h;
         }), m = (0, a.e7)([o.ZP], () => o.ZP.getLoadId()), {
-            handleViewGuild: p,
-            onGuildCardSeen: g
+            handleViewGuild: g,
+            onGuildCardSeen: p
         } = (0, u.g)(t, m), T = (0, l.ZP)();
     return s.useEffect(() => {
         (0, r.K5)(t);
@@ -28,9 +28,9 @@ function I(e) {
                 className: E.servers,
                 children: I.map((e, t) => (0, i.jsx)(c.Z, {
                     guild: e,
-                    onView: e => p(e, t),
+                    onView: e => g(e, t),
                     theme: T,
-                    onGuildCardSeen: g
+                    onGuildCardSeen: p
                 }, e.id))
             })
         ]

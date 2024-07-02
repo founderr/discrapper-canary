@@ -12,7 +12,7 @@ function h(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let I = {}, m = I, p = !1, g = {}, T = {}, S = {}, C = {
+let I = {}, m = I, g = !1, p = {}, T = {}, S = {}, C = {
         id: null,
         justChanged: !1
     }, N = {
@@ -44,13 +44,13 @@ class L extends (i = r.ZP.DeviceSettingsStore) {
         return m;
     }
     get initialized() {
-        return p;
+        return g;
     }
     get lastDeviceConnected() {
         return S;
     }
     get inputDevices() {
-        return g;
+        return p;
     }
     get lastInputSystemDevice() {
         return C;
@@ -82,16 +82,16 @@ h(L, 'displayName', 'ConnectedDeviceStore'), h(L, 'persistKey', 'ConnectedDevice
                     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                     n !== N.id && (N.justChanged = !0), N.id = n;
                 }
-            }), !p) {
-            g = i, T = s, p = !0;
+            }), !g) {
+            p = i, T = s, g = !0;
             return;
         }
-        let r = Object.keys(g), l = Object.keys(i), o = Object.keys(T), c = Object.keys(s), d = a().difference(r, l), u = a().difference(o, c);
+        let r = Object.keys(p), l = Object.keys(i), o = Object.keys(T), c = Object.keys(s), d = a().difference(r, l), u = a().difference(o, c);
         return d.length > 0 || u.length > 0 ? S = {} : (a().difference(l, r).forEach(e => {
             S[e] = Z(S[e], e, _.QyF.INPUT);
         }), a().difference(c, o).forEach(e => {
             S[e] = Z(S[e], e, _.QyF.OUTPUT);
-        })), !(a().isEqual(r, l) && a().isEqual(o, c)) && (g = i, T = s, !0);
+        })), !(a().isEqual(r, l) && a().isEqual(o, c)) && (p = i, T = s, !0);
     },
     CONNECTED_DEVICE_SET: function (e) {
         let {
@@ -101,7 +101,7 @@ h(L, 'displayName', 'ConnectedDeviceStore'), h(L, 'persistKey', 'ConnectedDevice
         } = e;
         !function (e, t, n) {
             if (t === _.aVf.INPUT || t === _.aVf.INPUT_AND_OUTPUT) {
-                let t = g[e];
+                let t = p[e];
                 null != t && l.Z.wait(() => o.Z.setInputDevice(t, n));
             }
             if (t === _.aVf.OUTPUT || t === _.aVf.INPUT_AND_OUTPUT) {

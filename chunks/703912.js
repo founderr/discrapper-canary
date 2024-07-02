@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     }
 }), n(789020), n(47120);
-var i = n(664751), s = n(373793), a = n(243814), r = n(149765), l = n(544891), o = n(45792), c = n(433517), d = n(570140), u = n(979200), _ = n(489863), E = n(166148), h = n(307643), I = n(973616), m = n(594174), p = n(630388), g = n(700785), T = n(996106), S = n(186901), C = n(981631);
+var i = n(664751), s = n(373793), a = n(243814), r = n(149765), l = n(544891), o = n(45792), c = n(433517), d = n(570140), u = n(979200), _ = n(489863), E = n(166148), h = n(307643), I = n(973616), m = n(594174), g = n(630388), p = n(700785), T = n(996106), S = n(186901), C = n(981631);
 let N = 'CachedTokens';
 async function f(e, t, n) {
     var i;
@@ -31,7 +31,7 @@ async function f(e, t, n) {
     let y = [];
     if ('string' == typeof O ? y = O.split(' ').filter(e => e.length > 0) : Array.isArray(O) && (y = O), null == m.default.getCurrentUser())
         throw new T.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let j = I.Z.createFromServer(await (0, h.UM)(S)), U = null != j && (0, p.yE)(j.flags, C.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[s.Y.USER_INSTALL]) != null;
+    let j = I.Z.createFromServer(await (0, h.UM)(S)), U = null != j && (0, g.yE)(j.flags, C.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[s.Y.USER_INSTALL]) != null;
     l = null == D ? U ? s.Y.USER_INSTALL : s.Y.GUILD_INSTALL : Number(D);
     try {
         o = await (0, _.Ww)({
@@ -76,7 +76,7 @@ async function f(e, t, n) {
             throw new T.Z({ errorCode: C.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat(e.message || 'Unknown Error'));
         }
     null == n || n(o.application, P);
-    let G = g.Hn;
+    let G = p.Hn;
     try {
         G = r.vB(null != R ? R : 0);
     } catch (e) {

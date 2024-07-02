@@ -1,9 +1,9 @@
 var i, s, a = n(735250);
 n(470079);
-var r = n(756647), l = n(481060), o = n(570140), c = n(355467), d = n(899742), u = n(457330), _ = n(533307), E = n(447543), h = n(962220), I = n(703656), m = n(314897), p = n(594174), g = n(626135), T = n(585483), S = n(591759), C = n(998502), N = n(996106), f = n(186901), A = n(981631);
+var r = n(756647), l = n(481060), o = n(570140), c = n(355467), d = n(899742), u = n(457330), _ = n(533307), E = n(447543), h = n(962220), I = n(703656), m = n(314897), g = n(594174), p = n(626135), T = n(585483), S = n(591759), C = n(998502), N = n(996106), f = n(186901), A = n(981631);
 function Z(e, t) {
     if (null != e)
-        g.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        p.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
@@ -37,7 +37,7 @@ function Z(e, t) {
             let {
                 args: {code: t}
             } = e;
-            if (null == p.default.getCurrentUser())
+            if (null == g.default.getCurrentUser())
                 return;
             let {guildTemplate: i} = await h.Z.resolveGuildTemplate(t);
             if (null == i)
@@ -67,7 +67,7 @@ function Z(e, t) {
                 o.Z.wait(() => {
                     _.Z.resolveGiftCode(t, !0, !0).then(i => {
                         let {giftCode: s} = i;
-                        C.ZP.focus(), g.default.track(A.rMx.OPEN_MODAL, {
+                        C.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
                             type: 'gift_accept',
                             location: A.SaU
                         }), (0, l.openModalLazy)(async () => {

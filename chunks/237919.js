@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(570140), d = n(287259), u = n(819640), _ = n(490983), E = n(799777), h = n(5967), I = n(346329), m = n(981631), p = n(689938), g = n(518494);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(570140), d = n(287259), u = n(819640), _ = n(490983), E = n(799777), h = n(5967), I = n(346329), m = n(981631), g = n(689938), p = n(518494);
 function T(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -39,11 +39,11 @@ class S extends s.Component {
         let {filterQuery: e} = this.props, {focused: t} = this.state;
         return (0, i.jsx)('div', {
             className: r()({
-                [g.libraryFilter]: !0,
-                [g.focused]: t
+                [p.libraryFilter]: !0,
+                [p.focused]: t
             }),
             children: (0, i.jsx)(o.SearchBar, {
-                className: g.searchBar,
+                className: p.searchBar,
                 ref: this.setRef,
                 onChange: d.JZ,
                 onFocus: () => this.setState({ focused: !0 }),
@@ -54,7 +54,7 @@ class S extends s.Component {
                 },
                 maxLength: 100,
                 query: e,
-                placeholder: p.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+                placeholder: g.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
             })
         });
     }

@@ -24,8 +24,8 @@ function h(e) {
     let {
             header: I,
             body: m,
-            imgSrc: p,
-            imgStyle: g
+            imgSrc: g,
+            imgStyle: p
         } = E(h.drop, h.config.streamLengthRequirement), T = () => {
             t(d.L.DISMISS);
         };
@@ -33,9 +33,9 @@ function h(e) {
         className: _.container,
         children: [
             (0, i.jsx)('img', {
-                src: p,
+                src: g,
                 alt: '',
-                className: g
+                className: p
             }),
             (0, i.jsx)(a.Clickable, {
                 className: _.__invalid_buttonClose,

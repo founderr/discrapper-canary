@@ -1,6 +1,6 @@
 n(47120);
 var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(481060), o = n(100527), c = n(484459), d = n(103575), u = n(366966), _ = n(409216), E = n(51144), h = n(981631), I = n(689938), m = n(659342);
-function p(e, t, n) {
+function g(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -8,7 +8,7 @@ function p(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-let g = {
+let p = {
     [h.AzA.NOW_PLAYING]: {
         single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
             user1: e.username,
@@ -51,7 +51,7 @@ let g = {
 };
 class T extends s.PureComponent {
     renderDescription(e, t) {
-        let n = g[e];
+        let n = p[e];
         return 1 === t.length ? n.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : n.other(t.length);
     }
     renderActivityDiscordTag(e) {
@@ -100,7 +100,7 @@ class T extends s.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), p(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
+        super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
             className: m.tooltip,
             children: [
                 (0, i.jsx)('div', { children: E.ZP.getUserTag(e) }),
@@ -111,7 +111,7 @@ class T extends s.PureComponent {
                     location: u.ZP.Locations.ACTIVITY_FEED
                 })
             ]
-        })), p(this, 'renderPlayer', (e, t, n, s) => {
+        })), g(this, 'renderPlayer', (e, t, n, s) => {
             if (null == e)
                 return null;
             let a = this.props.reason.userInfo.find(t => t.user === e);
@@ -137,7 +137,7 @@ class T extends s.PureComponent {
                     })
                 })
             }, e.id);
-        }), p(this, 'renderPlayerOverflow', (e, t, n) => (0, i.jsx)('div', {
+        }), g(this, 'renderPlayerOverflow', (e, t, n) => (0, i.jsx)('div', {
             className: m.playerOverflow,
             children: e
         }, n));

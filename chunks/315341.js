@@ -10,7 +10,7 @@ function I(e, t) {
 function m(e, t, n) {
     return !!c.qc.hasHiddenHotspot(t) && I(e, n);
 }
-let p = [
+let g = [
     {
         version: 2,
         run(e) {
@@ -205,4 +205,4 @@ let p = [
         }
     }
 ];
-t.Z = p;
+t.Z = g;

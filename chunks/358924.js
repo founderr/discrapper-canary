@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(438139), E = n(2052), h = n(726542), I = n(638880), m = n(655922), p = n(122810), g = n(833664), T = n(503438), S = n(420660), C = n(74433), N = n(952561), f = n(513202), A = n(906732), Z = n(812206), L = n(933557), v = n(382182), O = n(871118), R = n(849171), x = n(314897), P = n(592125), b = n(594174), M = n(368874), D = n(366695), y = n(366966), j = n(446753), U = n(395361), G = n(639351), w = n(368666), k = n(81063), B = n(823379), H = n(51144), V = n(599706), F = n(981631), Y = n(689938), W = n(301661);
+var i, s, a = n(735250), r = n(470079), l = n(120356), o = n.n(l), c = n(442837), d = n(692547), u = n(481060), _ = n(438139), E = n(2052), h = n(726542), I = n(638880), m = n(655922), g = n(122810), p = n(833664), T = n(503438), S = n(420660), C = n(74433), N = n(952561), f = n(513202), A = n(906732), Z = n(812206), L = n(933557), v = n(382182), O = n(871118), R = n(849171), x = n(314897), P = n(592125), b = n(594174), M = n(368874), D = n(366695), y = n(366966), j = n(446753), U = n(395361), G = n(639351), w = n(368666), k = n(81063), B = n(823379), H = n(51144), V = n(599706), F = n(981631), Y = n(689938), W = n(301661);
 let z = {
         SMALL: 64,
         LARGE: 160
@@ -42,7 +42,7 @@ class $ extends r.Component {
     renderTimePlayed() {
         let e;
         let {activity: t} = this.props, {timestamps: n} = t;
-        return null == n || !(0, g.Z)(t) || (0, T.Z)(t) ? null : Q(e = (0, p.Z)(t) ? (0, a.jsx)(X, { timestamps: n }) : (0, a.jsx)(y.ZP, {
+        return null == n || !(0, p.Z)(t) || (0, T.Z)(t) ? null : Q(e = (0, g.Z)(t) ? (0, a.jsx)(X, { timestamps: n }) : (0, a.jsx)(y.ZP, {
             start: n.start,
             end: n.end,
             location: y.ZP.Locations.USER_ACTIVITY,
@@ -513,20 +513,20 @@ en.Header = et, en.Body = e => {
     let h = (0, c.Wu)([
             b.default,
             x.default
-        ], () => Array.from(s).map(e => x.default.getId() === e ? null : b.default.getUser(e)).filter(B.lm)), m = (0, E.O)(), {analyticsLocations: p} = (0, A.ZP)();
+        ], () => Array.from(s).map(e => x.default.getId() === e ? null : b.default.getUser(e)).filter(B.lm)), m = (0, E.O)(), {analyticsLocations: g} = (0, A.ZP)();
     if (null == _)
         return null;
-    let g = Z.Z.getApplication(_);
-    if (null == g)
+    let p = Z.Z.getApplication(_);
+    if (null == p)
         return null;
-    let T = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0, S = (0, k.getAssetImage)(g.id, o, 300);
+    let T = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0, S = (0, k.getAssetImage)(p.id, o, 300);
     return (0, a.jsxs)(J, {
         children: [
             (0, a.jsxs)('div', {
                 className: W.embeddedActivityTopRow,
                 children: [
                     (0, a.jsx)(D.Z, {
-                        game: g,
+                        game: p,
                         size: D.Z.Sizes.XSMALL,
                         className: W.embeddedActivityIcon
                     }),
@@ -534,7 +534,7 @@ en.Header = et, en.Body = e => {
                         className: W.embeddedActivityName,
                         children: (0, a.jsx)(u.Text, {
                             variant: 'text-sm/semibold',
-                            children: g.name
+                            children: p.name
                         })
                     }),
                     null != T ? (0, a.jsx)('div', {
@@ -552,7 +552,7 @@ en.Header = et, en.Body = e => {
                 children: [
                     null != S ? (0, a.jsx)('img', {
                         src: S,
-                        alt: g.name,
+                        alt: p.name,
                         className: W.embeddedActivityImage
                     }) : null,
                     (0, a.jsxs)('div', {
@@ -574,7 +574,7 @@ en.Header = et, en.Body = e => {
                                             activityChannelId: n.id,
                                             locationObject: m.location,
                                             embeddedActivitiesManager: f.Z,
-                                            analyticsLocations: p
+                                            analyticsLocations: g
                                         });
                                     },
                                     children: Y.Z.Messages.JOIN

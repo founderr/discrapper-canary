@@ -11,9 +11,9 @@ function h(e) {
             channel: h
         } = e, I = (0, c.K)(), m = s.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(_.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, a.ToastType.FAILURE));
-        }, []), p = s.useCallback(() => {
-            l.Z.closeChannelSidebar(o.uZ);
         }, []), g = s.useCallback(() => {
+            l.Z.closeChannelSidebar(o.uZ);
+        }, []), p = s.useCallback(() => {
             l.Z.closeChannelSidebar(o.uZ), I && (0, r.Kh)(h.id);
         }, [
             h.id,
@@ -28,8 +28,8 @@ function h(e) {
             isOptimisticRejected: Z
         } = (0, d.m)({
             user: n,
-            onAcceptSuccess: g,
-            onRejectSuccess: p,
+            onAcceptSuccess: p,
+            onRejectSuccess: g,
             onError: m
         }), L = C || N || f || A || Z;
     return (0, i.jsxs)('div', {

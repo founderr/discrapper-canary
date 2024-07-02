@@ -1,17 +1,17 @@
 t.d(n, {
     A: function () {
-        return a;
+        return C;
     }
 });
 var o = t(735250);
 t(470079);
 var i = t(212598), s = t(927923), r = t(689938), l = t(283554), c = t(124248);
-function a(e) {
+function C(e) {
     let {
             platformType: n,
             isWaitingForConnection: t,
-            onWaitingForConnection: a,
-            expectedCallbackState: C,
+            onWaitingForConnection: C,
+            expectedCallbackState: a,
             onAuthToken: d,
             onError: u,
             onClose: _
@@ -29,8 +29,8 @@ function a(e) {
     return (0, o.jsx)(i.t, {
         platformType: n,
         isWaitingForConnection: t,
-        onWaitingForConnection: a,
-        expectedCallbackState: C,
+        onWaitingForConnection: C,
+        expectedCallbackState: a,
         onAuthToken: d,
         onError: u,
         onClose: _,

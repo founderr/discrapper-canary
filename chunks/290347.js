@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(607070), d = n(605236), u = n(524444), _ = n(529815), E = n(250496), h = n(153124), I = n(810090), m = n(626135), p = n(565216), g = n(981631), T = n(921944), S = n(437738);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(442837), o = n(481060), c = n(607070), d = n(605236), u = n(524444), _ = n(529815), E = n(250496), h = n(153124), I = n(810090), m = n(626135), g = n(565216), p = n(981631), T = n(921944), S = n(437738);
 let C = e => {
         let {
             tagText: t,
@@ -87,10 +87,10 @@ function f(e) {
     ]), s.useEffect(() => () => {
         if ('video' === a.type || 'embed' === a.type) {
             let [e, t] = J();
-            m.default.track(g.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+            m.default.track(p.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                 change_log_id: x,
                 seconds_played: Math.round(e / 1000)
-            }), m.default.track(g.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+            }), m.default.track(p.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                 change_log_id: x,
                 seconds_unmuted: Math.round(t / 1000)
             });
@@ -101,8 +101,8 @@ function f(e) {
     ]), s.useEffect(() => {
         null != f && (0, d.kk)(f);
         let e = Date.now();
-        return m.default.track(g.rMx.CHANGE_LOG_OPENED, { change_log_id: x }), () => {
-            m.default.track(g.rMx.CHANGE_LOG_CLOSED, {
+        return m.default.track(p.rMx.CHANGE_LOG_OPENED, { change_log_id: x }), () => {
+            m.default.track(p.rMx.CHANGE_LOG_CLOSED, {
                 change_log_id: x,
                 seconds_open: Math.round((Date.now() - e) / 1000)
             }), null != f && (0, d.EW)(f, { dismissAction: T.L.DISMISS });
@@ -119,7 +119,7 @@ function f(e) {
                 className: S.closeButton,
                 onClick: b
             }),
-            (0, i.jsx)(p.Z, { className: S.splash }),
+            (0, i.jsx)(g.Z, { className: S.splash }),
             null == A ? void 0 : A(),
             (0, i.jsxs)(o.ModalContent, {
                 className: S.content,
@@ -139,7 +139,7 @@ function f(e) {
                         src: a.src,
                         poster: a.poster,
                         onPlay: e => {
-                            m.default.track(g.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: x }), G(Date.now()), F(!0), W(e.currentTarget.muted);
+                            m.default.track(p.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: x }), G(Date.now()), F(!0), W(e.currentTarget.muted);
                         },
                         onEnded: e => {
                             J(), W(e.currentTarget.muted), F(!1);
@@ -163,9 +163,9 @@ function f(e) {
                         renderVideoComponent: u.lV,
                         renderImageComponent: u.Yi,
                         renderLinkComponent: u.iT,
-                        renderForwardComponent: g.VqG,
+                        renderForwardComponent: p.VqG,
                         onPlay: () => {
-                            m.default.track(g.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: x });
+                            m.default.track(p.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: x });
                         }
                     }) : 'image' === a.type ? (0, i.jsx)('img', {
                         alt: '',

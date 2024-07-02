@@ -76,17 +76,17 @@ class u extends (i = a.PureComponent) {
                 m.addColorStop(0, 'rgba('.concat(e, ', ').concat(t, ', ').concat(n, ', 0)'));
             }
             m.addColorStop(1, this.fillColor), E.fillStyle = m;
-            let p = s.length >= l ? l : s.length;
+            let g = s.length >= l ? l : s.length;
             E.setTransform(1, 0, 0, -1, 0, i.height), E.clearRect(0, 0, i.width, i.height), E.translate(0, 0.5 * E.lineWidth);
-            let g = Math.floor(i.width / (p - 3)), T = 0.5 * g;
-            E.translate(g - g * _, 0), E.beginPath();
-            let S = -g;
+            let p = Math.floor(i.width / (g - 3)), T = 0.5 * p;
+            E.translate(p - p * _, 0), E.beginPath();
+            let S = -p;
             s.forEach((e, i) => {
                 t = {
                     x: S,
                     y: I * e / h
-                }, 0 === i ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, S += g;
-            }), E.stroke(), E.lineTo(S - g, 0), E.lineTo(0, 0), E.fill(), d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+                }, 0 === i ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, S += p;
+            }), E.stroke(), E.lineTo(S - p, 0), E.lineTo(0, 0), E.fill(), d && _ < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
         });
     }
 }

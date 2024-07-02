@@ -8,7 +8,7 @@ function m(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class p extends s.Component {
+class g extends s.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, c.e)('channel_store_listing');
     }
@@ -54,4 +54,4 @@ t.Z = (0, o.Z)(r.ZP.connectStores([d.Z], e => {
         inputSkuId: n
     } = e;
     return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };
-})(p));
+})(g));

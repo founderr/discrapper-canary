@@ -20,7 +20,7 @@ function m(e) {
         }), d = null != s ? s : c;
     if (null == d || !_.al.has(d))
         return null;
-    let m = null != n, p = m ? d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+    let m = null != n, g = m ? d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
     return (0, i.jsxs)('div', {
         className: a()(h.root, m ? h.connecting : h.connected),
         children: [
@@ -28,7 +28,7 @@ function m(e) {
             (0, i.jsx)(l.Text, {
                 color: m ? 'header-primary' : 'always-white',
                 variant: 'text-xs/medium',
-                children: p
+                children: g
             })
         ]
     });

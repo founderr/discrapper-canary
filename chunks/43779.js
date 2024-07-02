@@ -8,7 +8,7 @@ function I(e) {
     let {
             quest: t,
             questContent: n
-        } = e, I = c.r.build(t.config).defaultReward.messages.name, m = (0, r.Rf)(t), p = m.percentComplete > 0, g = (0, o.pG)({
+        } = e, I = c.r.build(t.config).defaultReward.messages.name, m = (0, r.Rf)(t), g = m.percentComplete > 0, p = (0, o.pG)({
             quest: t,
             useV2Variants: !0,
             taskDetails: m
@@ -25,7 +25,7 @@ function I(e) {
             (0, i.jsxs)('div', {
                 className: h.rewardDescriptionContainer,
                 children: [
-                    p ? (0, i.jsx)('div', {
+                    g ? (0, i.jsx)('div', {
                         className: h.progressWrapper,
                         children: (0, i.jsx)(d.Z, {
                             quest: t,
@@ -57,11 +57,11 @@ function I(e) {
                                     children: E.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: S })
                                 })
                             }),
-                            null != g ? (0, i.jsx)(a.Text, {
+                            null != p ? (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
                                 className: h.description,
-                                children: g
+                                children: p
                             }) : null
                         ]
                     })

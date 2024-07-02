@@ -8,7 +8,7 @@ function g(e, t, n) {
         writable: !0
     }) : e[t] = n, e;
 }
-class b extends (s = o.Component) {
+class x extends (s = o.Component) {
     render() {
         return (0, r.jsxs)('div', {
             className: f.streamerModeEnabled,
@@ -28,4 +28,4 @@ class b extends (s = o.Component) {
         });
     }
 }
-g(b, 'defaultProps', { disableButton: !1 }), t.Z = b;
+g(x, 'defaultProps', { disableButton: !1 }), t.Z = x;

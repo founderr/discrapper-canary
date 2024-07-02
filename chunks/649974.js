@@ -1,12 +1,12 @@
 var i, s, a, r, l = n(442837), o = n(570140), c = n(656063), d = n(814443), u = n(158776), _ = n(594174), E = n(981631);
 let h = !1, I = {}, m = {};
-function p(e) {
+function g(e) {
     let t = !1;
     return e.forEach(e => {
         t = !1 !== T(e) || t;
     }), t;
 }
-function g(e) {
+function p(e) {
     let t = m[e];
     if (null == t)
         return !1;
@@ -22,16 +22,16 @@ function T(e) {
         return !1;
     let i = n.filter(e => e.type !== E.IIU.CUSTOM_STATUS);
     if (0 === i.length)
-        return g(t.id);
+        return p(t.id);
     let s = !1;
     return i.forEach(e => {
         (function (e, t) {
             var n, i, s, a;
             let r = (0, c.Z)(e);
             if (null == r)
-                return g(t.id);
+                return p(t.id);
             let l = m[t.id];
-            null != l && l.gameId !== r && g(t.id);
+            null != l && l.gameId !== r && p(t.id);
             let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(), d = {
                     userId: t.id,
                     activity: e,
@@ -102,8 +102,8 @@ a = 'NowPlayingStore', (s = 'displayName') in (i = C) ? Object.defineProperty(i,
                 presences: n
             } = e, i = !1;
         return t.forEach(e => {
-            p(e.presences) && (i = !0);
-        }), p(n) && (i = !0), i;
+            g(e.presences) && (i = !0);
+        }), g(n) && (i = !0), i;
     },
     LOGOUT: function () {
         I = {}, m = {};
@@ -114,6 +114,6 @@ a = 'NowPlayingStore', (s = 'displayName') in (i = C) ? Object.defineProperty(i,
     },
     PRESENCES_REPLACE: function (e) {
         let {presences: t} = e;
-        return p(t);
+        return g(t);
     }
 });

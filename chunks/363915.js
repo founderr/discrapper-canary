@@ -22,8 +22,8 @@ function _(e) {
             direction: h,
             cleanUp: I,
             children: m
-        } = e, p = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-    let g = (0, a.useSpring)((t = E, n = h, s = I, _ = p, t === l.TransitionStates.MOUNTED ? {
+        } = e, g = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
+    let p = (0, a.useSpring)((t = E, n = h, s = I, _ = g, t === l.TransitionStates.MOUNTED ? {
         from: {
             opacity: 0,
             transform: 'translateY(40px) translateX(0px)'
@@ -63,7 +63,7 @@ function _(e) {
         }
     }));
     return (0, i.jsx)(a.animated.div, {
-        style: g,
+        style: p,
         className: c.step,
         children: (0, i.jsx)(l.ScrollerThin, {
             className: c.scroller,

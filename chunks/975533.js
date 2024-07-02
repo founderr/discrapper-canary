@@ -1,4 +1,4 @@
-var i = n(570140), s = n(846027), a = n(13245), r = n(287734), l = n(872810), o = n(223245), c = n(317770), d = n(924557), u = n(39604), _ = n(569545), E = n(722835), h = n(703656), I = n(641015), m = n(183584), p = n(199902), g = n(131951), T = n(246946), S = n(808506), C = n(237997), N = n(626135), f = n(554174), A = n(981631), Z = n(65154);
+var i = n(570140), s = n(846027), a = n(13245), r = n(287734), l = n(872810), o = n(223245), c = n(317770), d = n(924557), u = n(39604), _ = n(569545), E = n(722835), h = n(703656), I = n(641015), m = n(183584), g = n(199902), p = n(131951), T = n(246946), S = n(808506), C = n(237997), N = n(626135), f = n(554174), A = n(981631), Z = n(65154);
 let L = {
     [A.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {
@@ -12,7 +12,7 @@ let L = {
     },
     [A.kg4.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            g.Z.getMode(t.context) === A.pM4.PUSH_TO_TALK && (L[A.kg4.PUSH_TO_TALK].isPressed = e, g.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context));
+            p.Z.getMode(t.context) === A.pM4.PUSH_TO_TALK && (L[A.kg4.PUSH_TO_TALK].isPressed = e, p.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context));
         },
         keyEvents: {
             keyup: !0,
@@ -22,7 +22,7 @@ let L = {
     },
     [A.kg4.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e) {
-            g.Z.getMode() === A.pM4.PUSH_TO_TALK && (L[A.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e, g.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), Z.Yn.DEFAULT));
+            p.Z.getMode() === A.pM4.PUSH_TO_TALK && (L[A.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e, p.Z.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), Z.Yn.DEFAULT));
         },
         keyEvents: {
             keyup: !0,
@@ -32,7 +32,7 @@ let L = {
     },
     [A.kg4.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            if (!(g.Z.getMode() !== A.pM4.VOICE_ACTIVITY || g.Z.isSelfDeaf()))
+            if (!(p.Z.getMode() !== A.pM4.VOICE_ACTIVITY || p.Z.isSelfDeaf()))
                 L[A.kg4.PUSH_TO_MUTE].isPressed = e, s.Z.setTemporarySelfMute(e);
         },
         keyEvents: {
@@ -59,7 +59,7 @@ let L = {
     },
     [A.kg4.TOGGLE_VOICE_MODE]: {
         onTrigger() {
-            let e = g.Z.getMode() === A.pM4.PUSH_TO_TALK ? A.pM4.VOICE_ACTIVITY : A.pM4.PUSH_TO_TALK;
+            let e = p.Z.getMode() === A.pM4.PUSH_TO_TALK ? A.pM4.VOICE_ACTIVITY : A.pM4.PUSH_TO_TALK;
             s.Z.setMode(e);
         },
         keyEvents: {
@@ -100,7 +100,7 @@ let L = {
     },
     [A.kg4.TOGGLE_GO_LIVE_STREAMING]: {
         onTrigger() {
-            let e = p.Z.getCurrentUserActiveStream();
+            let e = g.Z.getCurrentUserActiveStream();
             if (null != e)
                 return (0, l.g)((0, _.V9)(e));
             (0, E.Z)();

@@ -1,5 +1,5 @@
 n(653041);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(481060), _ = n(205355), E = n(607070), h = n(38618), I = n(197344), m = n(474873), p = n(706454), g = n(215427), T = n(820254), S = n(838949), C = n(358085), N = n(557177), f = n(998502), A = n(981631), Z = n(689938), L = n(76410);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(392711), o = n.n(l), c = n(442837), d = n(433517), u = n(481060), _ = n(205355), E = n(607070), h = n(38618), I = n(197344), m = n(474873), g = n(706454), p = n(215427), T = n(820254), S = n(838949), C = n(358085), N = n(557177), f = n(998502), A = n(981631), Z = n(689938), L = n(76410);
 function v(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -239,7 +239,7 @@ class O extends s.PureComponent {
                     }, t)
                 })
             ];
-            return p.default.locale.startsWith('en-') && e.push(Z.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
+            return g.default.locale.startsWith('en-') && e.push(Z.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
         }()), v(this, '_eventLoadingText', function () {
             let e = I.Z.getLoadingTips();
             if (null != e && e.length > 0)
@@ -264,13 +264,13 @@ class O extends s.PureComponent {
 }
 t.Z = c.ZP.connectStores([
     h.Z,
-    g.Z,
+    p.Z,
     m.Z,
     E.Z
 ], () => ({
     isTryingToConnect: h.Z.isTryingToConnect(),
     connected: h.Z.isConnected(),
-    incident: g.Z.getIncident(),
+    incident: p.Z.getIncident(),
     soundpack: m.Z.getSoundpack(),
     reducedMotion: E.Z.useReducedMotion
 }))(e => {

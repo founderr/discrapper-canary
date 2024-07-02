@@ -1,6 +1,6 @@
 n(653041);
-var i, s = n(392711), a = n.n(s), r = n(442837), l = n(570140), o = n(194359), c = n(81825), d = n(5254), u = n(199902), _ = n(271383), E = n(430824), h = n(158776), I = n(699516), m = n(594174), p = n(981631);
-function g(e, t, n) {
+var i, s = n(392711), a = n.n(s), r = n(442837), l = n(570140), o = n(194359), c = n(81825), d = n(5254), u = n(199902), _ = n(271383), E = n(430824), h = n(158776), I = n(699516), m = n(594174), g = n(981631);
+function p(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
         enumerable: !0,
@@ -41,7 +41,7 @@ class N extends c.Z {
         ];
     }
     constructor(e) {
-        super(), g(this, 'key', void 0), g(this, 'type', void 0), g(this, 'status', void 0), g(this, 'isMobile', void 0), g(this, 'activities', void 0), g(this, 'applicationStream', void 0), g(this, 'user', void 0), g(this, 'usernameLower', void 0), g(this, 'mutualGuildsLength', void 0), g(this, 'mutualGuilds', void 0), g(this, 'nickname', void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname;
+        super(), p(this, 'key', void 0), p(this, 'type', void 0), p(this, 'status', void 0), p(this, 'isMobile', void 0), p(this, 'activities', void 0), p(this, 'applicationStream', void 0), p(this, 'user', void 0), p(this, 'usernameLower', void 0), p(this, 'mutualGuildsLength', void 0), p(this, 'mutualGuilds', void 0), p(this, 'nickname', void 0), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname;
     }
 }
 class f {
@@ -89,46 +89,46 @@ class f {
             return !0;
         }).filter(t => {
             switch (e) {
-            case p.pJs.ONLINE:
-                return t.type === p.OGo.FRIEND && t.status !== p.Skl.OFFLINE;
-            case p.pJs.PENDING:
-                return t.type === p.OGo.PENDING_INCOMING || t.type === p.OGo.PENDING_OUTGOING;
-            case p.pJs.SUGGESTIONS:
+            case g.pJs.ONLINE:
+                return t.type === g.OGo.FRIEND && t.status !== g.Skl.OFFLINE;
+            case g.pJs.PENDING:
+                return t.type === g.OGo.PENDING_INCOMING || t.type === g.OGo.PENDING_OUTGOING;
+            case g.pJs.SUGGESTIONS:
                 return 99 === t.type;
-            case p.pJs.BLOCKED:
-                return t.type === p.OGo.BLOCKED;
-            case p.pJs.ALL:
+            case g.pJs.BLOCKED:
+                return t.type === g.OGo.BLOCKED;
+            case g.pJs.ALL:
             default:
-                return t.type === p.OGo.FRIEND;
+                return t.type === g.OGo.FRIEND;
             }
         }).sortBy(e => e.comparator).value();
     }
     getRelationshipCounts() {
         let e = {
-            [p.OGo.FRIEND]: 0,
-            [p.OGo.PENDING_INCOMING]: 0,
-            [p.OGo.PENDING_OUTGOING]: 0,
+            [g.OGo.FRIEND]: 0,
+            [g.OGo.PENDING_INCOMING]: 0,
+            [g.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [p.OGo.BLOCKED]: 0
+            [g.OGo.BLOCKED]: 0
         };
         return this._rows.forEach(t => {
             null != t.user && null != e[t.type] && e[t.type]++;
         }), e;
     }
     constructor(e = []) {
-        g(this, '_rows', void 0), this._rows = e;
+        p(this, '_rows', void 0), this._rows = e;
     }
 }
-let A = !0, Z = !1, L = p.pJs.ONLINE, v = new f(), O = !0, R = !1;
+let A = !0, Z = !1, L = g.pJs.ONLINE, v = new f(), O = !0, R = !1;
 function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || L !== p.pJs.ONLINE && L !== p.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
+    A && (e || L !== g.pJs.ONLINE && L !== g.pJs.ADD_FRIEND) && !Z && (A = !1, Z = !0, o.Z.fetchRelationships());
 }
 function P() {
     if (A = !0, O ? Z = !1 : x(), v = v.reset(), R)
         return;
     let e = v.getRelationshipCounts();
-    L = 0 === e[p.OGo.FRIEND] ? 0 !== e[p.OGo.PENDING_INCOMING] ? p.pJs.PENDING : p.pJs.ADD_FRIEND : p.pJs.ONLINE;
+    L = 0 === e[g.OGo.FRIEND] ? 0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND : g.pJs.ONLINE;
 }
 function b() {
     v = O ? new f() : v.reset();
@@ -154,7 +154,7 @@ class D extends (i = r.ZP.Store) {
         };
     }
 }
-g(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
+p(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
     CONNECTION_OPEN: function () {
         P();
     },
@@ -173,7 +173,7 @@ g(D, 'displayName', 'FriendsStore'), t.ZP = new D(l.Z, {
     },
     DRAWER_SELECT_TAB: function (e) {
         let {tab: t} = e;
-        return O = t !== p.cII.FRIENDS, b(), !O;
+        return O = t !== g.cII.FRIENDS, b(), !O;
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
         L = e.section, R = !0;

@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(593473), o = n(442837), c = n(481060), d = n(749210), u = n(558381), _ = n(666743), E = n(41776), h = n(703656), I = n(769654), m = n(601964), p = n(430824), g = n(378720), T = n(285952), S = n(346656), C = n(843445), N = n(981631), f = n(689938), A = n(654075);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(593473), o = n(442837), c = n(481060), d = n(749210), u = n(558381), _ = n(666743), E = n(41776), h = n(703656), I = n(769654), m = n(601964), g = n(430824), p = n(378720), T = n(285952), S = n(346656), C = n(843445), N = n(981631), f = n(689938), A = n(654075);
 function Z(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -57,7 +57,7 @@ class L extends s.PureComponent {
         })) : s && t && (u = f.Z.Messages.JOIN_GUILD) : (u = f.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
             className: r()(l, o === C.b.SMALL ? A.inviteSmall : A.inviteLarge),
             children: [
-                (0, i.jsx)(g.Z, { children: f.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD }),
+                (0, i.jsx)(p.Z, { children: f.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD }),
                 (0, i.jsxs)('div', {
                     className: A.content,
                     children: [
@@ -123,12 +123,12 @@ class L extends s.PureComponent {
     }
 }
 t.Z = (0, _.Z)(o.ZP.connectStores([
-    p.Z,
+    g.Z,
     E.Z
 ], e => {
     let {guild: t} = e, n = E.Z.isLurking(t.id);
     return {
-        isInGuild: null != p.Z.getGuild(t.id) && !n,
+        isInGuild: null != g.Z.getGuild(t.id) && !n,
         isLurking: n
     };
 })(L));

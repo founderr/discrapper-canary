@@ -2,8 +2,8 @@ n(653041), n(47120), n(724458);
 var i, s, a, r, l = n(392711), o = n.n(l), c = n(442837), d = n(570140), u = n(592125);
 n(914010);
 var _ = n(709054), E = n(176505);
-let h = {}, I = {}, m = {}, p = {};
-function g(e) {
+let h = {}, I = {}, m = {}, g = {};
+function p(e) {
     let t = I[e];
     if (null == t)
         return;
@@ -19,7 +19,7 @@ function g(e) {
 function T(e, t, n, i) {
     h[e].add(t);
     let s = m[t];
-    (null == s || s + 300000 > Date.now()) && g(t), null == I[t] && (I[t] = []), I[t].push({
+    (null == s || s + 300000 > Date.now()) && p(t), null == I[t] && (I[t] = []), I[t].push({
         id: n,
         userId: i
     });
@@ -30,7 +30,7 @@ function S(e) {
 }
 class C extends (i = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
-        return p[e];
+        return g[e];
     }
     getActiveChannelIds(e) {
         return h[e];
@@ -40,7 +40,7 @@ class C extends (i = c.ZP.Store) {
     }
     shouldFetch(e) {
         var t;
-        return null == h[e] && !(null === (t = p[e]) || void 0 === t ? void 0 : t.loading);
+        return null == h[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
     }
 }
 r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.defineProperty(s, a, {
@@ -61,7 +61,7 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
             return !1;
         i.forEach(e => {
             var t;
-            g(e), (null === (t = I[e]) || void 0 === t ? void 0 : t.length) === 0 && delete I[e];
+            p(e), (null === (t = I[e]) || void 0 === t ? void 0 : t.length) === 0 && delete I[e];
         });
         let s = o().chain(Array.from(i)).filter(e => e in I).sortBy(e => {
             var t, n;
@@ -95,7 +95,7 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
     THREAD_DELETE: S,
     ACTIVE_CHANNELS_FETCH_START: function (e) {
         let {guildId: t} = e;
-        p[t] = {
+        g[t] = {
             loading: !0,
             error: null,
             fetchedAt: Date.now()
@@ -106,7 +106,7 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
             guildId: t,
             channels: n
         } = e;
-        p[t] = {
+        g[t] = {
             loading: !1,
             error: null,
             fetchedAt: Date.now()
@@ -125,7 +125,7 @@ r = 'ActiveChannelsStore', (a = 'displayName') in (s = C) ? Object.definePropert
             guildId: t,
             error: n
         } = e;
-        p[t] = {
+        g[t] = {
             loading: !1,
             error: n,
             fetchedAt: null

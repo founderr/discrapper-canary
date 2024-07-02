@@ -1,11 +1,11 @@
 n(47120);
 var i = n(735250), s = n(470079), a = n(920906), r = n(143927), l = n(442837), o = n(481060), c = n(607070), d = n(950279), u = n(741595), _ = n(359380), E = n(480222), h = n(207796), I = n(316553), m = n(689938);
-let p = {
+let g = {
         mass: 1,
         tension: 280,
         friction: 20,
         clamp: !0
-    }, g = {
+    }, p = {
         [h.v0.PLAYSTYLE]: function () {
             let [e, t] = s.useState(h.GN.getState().selectedPlaystyle), n = s.useCallback(() => {
                     null != e && h.GN.getState().setSelectedPlaystyle(e);
@@ -58,12 +58,12 @@ function T(e) {
             state: n,
             cleanUp: r
         } = e, d = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), u = s.useMemo(() => {
-            let e = g[t];
+            let e = p[t];
             return null == e ? null : (0, i.jsx)(e, {});
         }, [t]), _ = (0, a.useSpring)({
             from: { opacity: 0 },
             to: { opacity: n === o.TransitionStates.YEETED ? 0 : 1 },
-            config: p,
+            config: g,
             immediate: d,
             onRest: () => {
                 n === o.TransitionStates.YEETED && r();
@@ -85,7 +85,7 @@ function C(e, t, n, s) {
     }, e);
 }
 t.Z = s.memo(function (e) {
-    let {mode: t} = e, n = s.useMemo(() => null != g[t] ? [t] : [], [t]);
+    let {mode: t} = e, n = s.useMemo(() => null != p[t] ? [t] : [], [t]);
     return (0, i.jsx)(o.TransitionGroup, {
         items: n,
         renderItem: C,

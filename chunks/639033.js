@@ -25,8 +25,8 @@ class E extends r.Z {
             let m = o.Z.getChannel(I);
             if (!(null == m ? void 0 : m.isGuildStageVoice()))
                 return;
-            let p = (0, d.gf)(h) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-            if (null != m && p) {
+            let g = (0, d.gf)(h) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+            if (null != m && g) {
                 if ((0, s.hasModalOpen)(_))
                     return;
                 (0, s.openModalLazy)(async () => {

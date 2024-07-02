@@ -6,7 +6,7 @@ n.d(t, {
         return s;
     }
 });
-var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), E = n(906732), h = n(592125), I = n(810090), m = n(626135), p = n(981631), g = n(921944), T = n(689938), S = n(372064);
+var i, s, a = n(735250), r = n(470079), l = n(442837), o = n(481060), c = n(40851), d = n(566620), u = n(403404), _ = n(100527), E = n(906732), h = n(592125), I = n(810090), m = n(626135), g = n(981631), p = n(921944), T = n(689938), S = n(372064);
 (i = s || (s = {})).BOOSTING = 'BOOSTING', i.NITRO = 'NITRO', i.BASH_OUT = 'BASH_OUT', i.GAME_NIGHT = 'GAME_NIGHT';
 let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4', N = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png', f = e => {
         let {
@@ -89,9 +89,9 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 }
             }(i), {analyticsLocations: b} = (0, E.ZP)(s);
         r.useEffect(() => {
-            m.default.track(p.rMx.TOOLTIP_VIEWED, { type: f });
+            m.default.track(g.rMx.TOOLTIP_VIEWED, { type: f });
         }, [f]);
-        let M = (0, c.bp)() === p.IlC.POPOUT, D = (0, l.e7)([h.Z], () => h.Z.getChannel(t), [t]);
+        let M = (0, c.bp)() === g.IlC.POPOUT, D = (0, l.e7)([h.Z], () => h.Z.getChannel(t), [t]);
         return (0, a.jsx)(E.Gt, {
             value: b,
             children: (0, a.jsx)('div', {
@@ -144,22 +144,22 @@ let C = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                     (0, a.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND,
                                         onClick: () => {
-                                            n(g.L.UNKNOWN);
+                                            n(p.L.UNKNOWN);
                                         },
                                         children: Z
                                     }),
                                     (0, a.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
                                         onClick: null != P ? P : () => {
-                                            if (n(g.L.UNKNOWN), null != D)
+                                            if (n(p.L.UNKNOWN), null != D)
                                                 (0, u.Z)({
                                                     channel: D.isGuildVoice() ? D : void 0,
                                                     guildId: D.guild_id,
                                                     locationObject: {
-                                                        page: p.ZY5.GUILD_CHANNEL,
-                                                        section: p.jXE.GUILD_CHANNEL_LIST,
-                                                        object: p.qAy.ACTIVITIES_COACH_MARK,
-                                                        objectType: p.Qqv.ACTIVITY
+                                                        page: g.ZY5.GUILD_CHANNEL,
+                                                        section: g.jXE.GUILD_CHANNEL_LIST,
+                                                        object: g.qAy.ACTIVITIES_COACH_MARK,
+                                                        objectType: g.Qqv.ACTIVITY
                                                     },
                                                     openInPopout: M,
                                                     analyticsLocations: b,

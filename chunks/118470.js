@@ -15,8 +15,8 @@ function h(e) {
         }, [I]);
     if (0 === m.length)
         return null;
-    let p = '';
-    return p = 1 === m.length ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({ a: m[0].name }) : 2 === m.length ? _.Z.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+    let g = '';
+    return g = 1 === m.length ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({ a: m[0].name }) : 2 === m.length ? _.Z.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
         a: m[0].name,
         b: m[1].name
     }) : 3 === m.length ? _.Z.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
@@ -26,7 +26,7 @@ function h(e) {
     }) : _.Z.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, i.jsx)(l.Z, {
         guild: t,
         onDismissed: h,
-        message: p,
+        message: g,
         type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
         image: E,
         onClick: () => {

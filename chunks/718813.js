@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(653041);
-var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(748780), c = n(442837), d = n(215569), u = n(481060), _ = n(37234), E = n(134616), h = n(714338), I = n(663993), m = n(210887), p = n(819640), g = n(725568), T = n(585483), S = n(792125), C = n(981631), N = n(153144);
+var i, s = n(735250), a = n(470079), r = n(120356), l = n.n(r), o = n(748780), c = n(442837), d = n(215569), u = n(481060), _ = n(37234), E = n(134616), h = n(714338), I = n(663993), m = n(210887), g = n(819640), p = n(725568), T = n(585483), S = n(792125), C = n(981631), N = n(153144);
 function f(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -263,7 +263,7 @@ class D extends a.PureComponent {
     }
 }
 function y(e) {
-    let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? C.BRd.DARK : void 0, n = (0, c.e7)([p.Z], () => p.Z.getLayers()), i = (0, g.QP)(e => e.fullScreenLayers.length > 0);
+    let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? C.BRd.DARK : void 0, n = (0, c.e7)([g.Z], () => g.Z.getLayers()), i = (0, p.QP)(e => e.fullScreenLayers.length > 0);
     return (0, s.jsx)(D, {
         ...e,
         sidebarTheme: t,

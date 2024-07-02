@@ -1,11 +1,11 @@
 n(47120);
 var i = n(735250);
 n(470079);
-var s = n(243814), a = n(481060), r = n(846027), l = n(872810), o = n(594190), c = n(989941), d = n(173507), u = n(199902), _ = n(131951), E = n(449224), h = n(358085), I = n(452426), m = n(736045), p = n(186901), g = n(981631);
+var s = n(243814), a = n(481060), r = n(846027), l = n(872810), o = n(594190), c = n(989941), d = n(173507), u = n(199902), _ = n(131951), E = n(449224), h = n(358085), I = n(452426), m = n(736045), g = n(186901), p = n(981631);
 t.Z = {
-    [g.Etm.TOGGLE_VIDEO]: {
+    [p.Etm.TOGGLE_VIDEO]: {
         scope: {
-            [p.Gp.ALL]: [
+            [g.Gp.ALL]: [
                 s.x.RPC,
                 s.x.RPC_VIDEO_WRITE
             ]
@@ -13,12 +13,12 @@ t.Z = {
         handler() {
             let e = _.Z.isVideoEnabled();
             if (null != (0, m.Z)())
-                e ? r.Z.setVideoEnabled(!1) : (0, d.Z)(() => r.Z.setVideoEnabled(!0), g.IlC.APP);
+                e ? r.Z.setVideoEnabled(!1) : (0, d.Z)(() => r.Z.setVideoEnabled(!0), p.IlC.APP);
         }
     },
-    [g.Etm.TOGGLE_SCREENSHARE]: {
+    [p.Etm.TOGGLE_SCREENSHARE]: {
         scope: {
-            [p.Gp.ALL]: [
+            [g.Gp.ALL]: [
                 s.x.RPC,
                 s.x.RPC_SCREENSHARE_WRITE
             ]
@@ -37,7 +37,7 @@ t.Z = {
                     return t => (0, i.jsx)(e, {
                         ...t,
                         guildId: _.guild_id,
-                        analyticsLocation: g.Sbl.ACTIVITY_RPC
+                        analyticsLocation: p.Sbl.ACTIVITY_RPC
                     });
                 });
         }

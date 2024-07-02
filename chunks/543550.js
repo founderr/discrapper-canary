@@ -6,7 +6,7 @@ n.d(t, {
         return Z;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(143927), c = n(597312), d = n(481060), u = n(393238), _ = n(410030), E = n(963202), h = n(353093), I = n(702646), m = n(207796), p = n(497189), g = n(304231), T = n(895068), S = n(490610), C = n(981631), N = n(689938), f = n(698829);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(920906), o = n(143927), c = n(597312), d = n(481060), u = n(393238), _ = n(410030), E = n(963202), h = n(353093), I = n(702646), m = n(207796), g = n(497189), p = n(304231), T = n(895068), S = n(490610), C = n(981631), N = n(689938), f = n(698829);
 let A = (e, t) => {
     switch (e) {
     case m.hz.GENSHIN:
@@ -19,7 +19,7 @@ function Z() {
     let e = (0, m.GN)(e => e.game, o.Z), t = (0, m.GN)(e => e.userUpsellScreen, o.Z), n = (0, m.GN)(e => e.setUserUpsellScreen, o.Z), {
             ref: a,
             width: c
-        } = (0, u.Z)(), [E, h] = s.useState(0), p = (0, l.useSpring)({
+        } = (0, u.Z)(), [E, h] = s.useState(0), g = (0, l.useSpring)({
             from: { scrollHeight: 0 },
             to: { scrollHeight: E }
         }), S = (0, _.ZP)(), N = s.useMemo(() => A(e, S), [
@@ -52,14 +52,14 @@ function Z() {
                             className: f.toolbarBackground,
                             style: {
                                 width: c,
-                                opacity: p.scrollHeight.to([
+                                opacity: g.scrollHeight.to([
                                     100,
                                     364
                                 ], [
                                     0,
                                     1
                                 ]),
-                                borderBottom: p.scrollHeight.to([
+                                borderBottom: g.scrollHeight.to([
                                     100,
                                     364
                                 ], [
@@ -77,7 +77,7 @@ function Z() {
                         (0, i.jsxs)(l.animated.div, {
                             className: f.backgroundImageContainer,
                             style: {
-                                opacity: p.scrollHeight.to([
+                                opacity: g.scrollHeight.to([
                                     100,
                                     364
                                 ], [
@@ -112,7 +112,7 @@ function Z() {
                     (0, i.jsx)('div', { className: f.backgroundImageBlur }),
                     (0, i.jsx)('div', {
                         className: f.backgroundImageContent,
-                        children: (0, i.jsx)(g.Z, {
+                        children: (0, i.jsx)(p.Z, {
                             selectedGame: e,
                             setScreen: n
                         })
@@ -142,7 +142,7 @@ function L() {
                         (0, i.jsx)('div', { className: f.backgroundImageBlur }),
                         (0, i.jsx)('div', {
                             className: f.backgroundImageContent,
-                            children: (0, i.jsx)(p.Z, {
+                            children: (0, i.jsx)(g.Z, {
                                 isBrowseButtonVisible: I,
                                 selectedGame: t,
                                 eligibleGuilds: l,

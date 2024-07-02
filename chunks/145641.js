@@ -13,12 +13,12 @@ t.Z = function (e) {
                 return null;
             let r = a[s];
             return null == r ? null : n(r);
-        }, I = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = s.useRef(null), p = s.useCallback(() => new Promise(e => {
+        }, I = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = s.useRef(null), g = s.useCallback(() => new Promise(e => {
             let t = m.current;
             if (null == t)
                 return e();
             t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
-        }), []), g = s.useCallback(() => new Promise(e => {
+        }), []), p = s.useCallback(() => new Promise(e => {
             let t = m.current;
             if (null == t)
                 return e();
@@ -33,8 +33,8 @@ t.Z = function (e) {
         }, []), S = (0, a.ZP)({
             id: 'people-list',
             isEnabled: I,
-            scrollToStart: p,
-            scrollToEnd: g,
+            scrollToStart: g,
+            scrollToEnd: p,
             setFocus: T
         });
     return (0, i.jsx)(r.bG, {

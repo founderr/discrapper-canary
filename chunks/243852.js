@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a, r, l, o = n(442837), c = n(433517), d = n(846519), u = n(570140), _ = n(278323), E = n(581567), h = n(594190), I = n(581883), m = n(70956), p = n(780570), g = n(314897), T = n(77498), S = n(283595), C = n(19780), N = n(944486), f = n(981631);
+var i, s, a, r, l, o = n(442837), c = n(433517), d = n(846519), u = n(570140), _ = n(278323), E = n(581567), h = n(594190), I = n(581883), m = n(70956), g = n(780570), p = n(314897), T = n(77498), S = n(283595), C = n(19780), N = n(944486), f = n(981631);
 let A = 'ActivityTrackingStore', Z = 30 * m.Z.Millis.MINUTE, L = 5 * m.Z.Millis.MINUTE, v = null !== (i = c.K.get(A)) && void 0 !== i ? i : {}, O = {}, R = !1;
 function x(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -10,7 +10,7 @@ function x(e) {
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], n = Date.now(), i = null != e.updatedAt ? n - e.updatedAt : 0;
     i > Z + L && (i = 0);
-    let s = (0, p.OT)(e.applicationId, S.Z), a = N.Z.getVoiceChannelId(), r = g.default.getSessionId(), l = C.Z.getMediaSessionId();
+    let s = (0, g.OT)(e.applicationId, S.Z), a = N.Z.getVoiceChannelId(), r = p.default.getSessionId(), l = C.Z.getMediaSessionId();
     _.Z.updateActivity({
         applicationId: e.applicationId,
         distributor: e.isDiscordApplication ? f.GQo.DISCORD : e.distributor,

@@ -3,19 +3,19 @@ n.d(t, {
         return ea;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(143927), o = n(91192), c = n(873546), d = n(442837), u = n(704215), _ = n(952265), E = n(481060), h = n(493683), I = n(348600), m = n(257968), p = n(367907), g = n(770471), T = n(158631), S = n(143614), C = n(463119), N = n(377171), f = n(243778), A = n(922409), Z = n(899740), L = n(28476), v = n(880257), O = n(631885), R = n(457396), x = n(51596), P = n(905423), b = n(155409), M = n(210887), D = n(695346), y = n(283595), j = n(699516), U = n(923834), G = n(55563), w = n(774343), k = n(517802), B = n(436088), H = n(814225), V = n(515753), F = n(831218), Y = n(339149), W = n(981631), z = n(689938), K = n(422009);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(143927), o = n(91192), c = n(873546), d = n(442837), u = n(704215), _ = n(952265), E = n(481060), h = n(493683), I = n(348600), m = n(257968), g = n(367907), p = n(770471), T = n(158631), S = n(143614), C = n(463119), N = n(377171), f = n(243778), A = n(922409), Z = n(899740), L = n(28476), v = n(880257), O = n(631885), R = n(457396), x = n(51596), P = n(905423), b = n(155409), M = n(210887), D = n(695346), y = n(283595), j = n(699516), U = n(923834), G = n(55563), w = n(774343), k = n(517802), B = n(436088), H = n(814225), V = n(515753), F = n(831218), Y = n(339149), W = n(981631), z = n(689938), K = n(422009);
 let q = e => {
         let {
                 selected: t,
                 ...n
-            } = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, S.Z)(), {canViewBroadcasts: l} = g.Z.useExperiment({ location: 'friends_tab_no_track' }), c = (0, T.ZP)();
+            } = e, s = (0, o.JA)('friends'), a = (0, d.e7)([j.Z], () => j.Z.getPendingCount()), r = (0, S.Z)(), {canViewBroadcasts: l} = p.Z.useExperiment({ location: 'friends_tab_no_track' }), c = (0, T.ZP)();
         return (0, i.jsxs)(V.Qj, {
             selected: t,
             route: W.Z5c.FRIENDS,
             icon: E.FriendsIcon,
             text: z.Z.Messages.FRIENDS,
             onClick: () => {
-                p.ZP.trackWithMetadata(W.rMx.BROADCAST_LIST_VISITED, {
+                g.ZP.trackWithMetadata(W.rMx.BROADCAST_LIST_VISITED, {
                     num_active_broadcasts: r.length,
                     friends_tab_clicked: !0,
                     is_broadcasting: c

@@ -21,14 +21,14 @@ t.Z = function (e) {
         }, [a]);
     if (null == a)
         return null;
-    let p = 'url('.concat(a.backgroundAssetUrl, ') black top / cover no-repeat');
+    let g = 'url('.concat(a.backgroundAssetUrl, ') black top / cover no-repeat');
     return (0, i.jsx)(l.ThemeContextProvider, {
         theme: _.BRd.DARK,
         children: (0, i.jsx)('div', {
             className: r()(h.container, I),
             children: (0, i.jsxs)('div', {
                 className: h.card,
-                style: { background: p },
+                style: { background: g },
                 children: [
                     (0, i.jsxs)('div', {
                         className: h.eyebrow,

@@ -3,8 +3,8 @@ n.d(t, {
         return f;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(194359), u = n(153124), _ = n(657682), E = n(981631), h = n(420212), I = n(689938), m = n(804025), p = n(331651);
-let g = {
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(512722), o = n.n(l), c = n(481060), d = n(194359), u = n(153124), _ = n(657682), E = n(981631), h = n(420212), I = n(689938), m = n(804025), g = n(331651);
+let p = {
         canSend: !1,
         hint: null,
         success: null,
@@ -13,15 +13,15 @@ let g = {
 function N(e, t) {
     switch (t.type) {
     case 'RESET':
-        return g;
+        return p;
     case 'SUCCESS':
         return {
-            ...g,
+            ...p,
             success: t.text
         };
     case 'HINT':
         return {
-            ...g,
+            ...p,
             canSend: !0,
             hint: t.text
         };
@@ -34,7 +34,7 @@ function N(e, t) {
     }
 }
 function f() {
-    let e = s.createRef(), t = s.createRef(), [n, a] = s.useReducer(N, g), {
+    let e = s.createRef(), t = s.createRef(), [n, a] = s.useReducer(N, p), {
             canSend: l,
             hint: u,
             success: f,
@@ -144,13 +144,13 @@ function f() {
                 role: 'alert',
                 id: C,
                 type: c.FormText.Types.ERROR,
-                className: p.marginTop8,
+                className: g.marginTop8,
                 children: A
             }),
             null != f && (0, i.jsx)(c.FormText, {
                 role: 'status',
                 type: c.FormText.Types.SUCCESS,
-                className: p.marginTop8,
+                className: g.marginTop8,
                 children: f
             })
         ]

@@ -3,12 +3,12 @@ n.d(t, {
         return b;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), E = n(410030), h = n(607070), I = n(100527), m = n(906732), p = n(821982), g = n(377171), T = n(633302), S = n(153066), C = n(335131), N = n(141594), f = n(302800), A = n(981631), Z = n(689938), L = n(120053);
+var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(91192), o = n(442837), c = n(780384), d = n(481060), u = n(596454), _ = n(515753), E = n(410030), h = n(607070), I = n(100527), m = n(906732), g = n(821982), p = n(377171), T = n(633302), S = n(153066), C = n(335131), N = n(141594), f = n(302800), A = n(981631), Z = n(689938), L = n(120053);
 let v = e => {
         let {color: t} = e;
         return (0, i.jsx)(d.TextBadge, {
             className: L.newBadge,
-            color: null != t ? t : g.Z.STATUS_DANGER_BACKGROUND,
+            color: null != t ? t : p.Z.STATUS_DANGER_BACKGROUND,
             text: Z.Z.Messages.NEW
         });
     }, O = e => {
@@ -19,7 +19,7 @@ let v = e => {
                 onMouseLeave: r,
                 children: o,
                 ...c
-            } = e, u = (0, l.JA)('shop'), E = I.Z.HOME_PAGE_SHOP_TAB, {analyticsLocations: h} = (0, m.ZP)(E), p = s.useCallback(() => (0, C.mK)({
+            } = e, u = (0, l.JA)('shop'), E = I.Z.HOME_PAGE_SHOP_TAB, {analyticsLocations: h} = (0, m.ZP)(E), g = s.useCallback(() => (0, C.mK)({
                 openInLayer: !1,
                 analyticsSource: E,
                 analyticsLocations: h
@@ -37,14 +37,14 @@ let v = e => {
             ...c,
             onMouseEnter: a,
             onMouseLeave: r,
-            onClick: p,
+            onClick: g,
             children: o
         });
     }, R = s.memo(function (e) {
         let {
                 displayOptions: t,
                 assetId: n
-            } = e, s = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), a = null != n ? (0, p.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+            } = e, s = (0, o.e7)([h.Z], () => h.Z.useReducedMotion), a = null != n ? (0, g.Z)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
         return (0, i.jsxs)('div', {
             className: L.shopMarketingTooltipContent,
             children: [
@@ -81,7 +81,7 @@ let v = e => {
                 displayOptions: a
             } = e, [l, o] = s.useState(0), [u, _] = s.useState(!1), h = (0, E.ZP)(), I = a.entrypointDecorationAssets, m = s.useCallback(e => {
                 o(e => (e + 1) % a.assetIds.length), _(!0), null == e || e();
-            }, [a.assetIds]), p = s.useCallback(e => {
+            }, [a.assetIds]), g = s.useCallback(e => {
                 _(!1), null == e || e();
             }, []);
         return (0, i.jsx)(d.Tooltip, {
@@ -101,7 +101,7 @@ let v = e => {
                 locationState: n,
                 ...e,
                 onMouseEnter: () => m(e.onMouseEnter),
-                onMouseLeave: () => p(e.onMouseLeave),
+                onMouseLeave: () => g(e.onMouseLeave),
                 children: [
                     null != I && (0, i.jsx)('img', {
                         src: (0, c.wj)(h) ? I.srcDark : I.srcLight,

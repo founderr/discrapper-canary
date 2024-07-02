@@ -10,7 +10,7 @@ t.Z = function (e) {
             animate: E,
             gradientStopColor: h,
             getHistoricalTotalBytes: I
-        } = e, m = (0, r.Sl)(_).hex, p = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
+        } = e, m = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
     return (0, i.jsx)(c.Z, {
         getHistoricalTotalBytes: I,
         children: (e, t, r) => {
@@ -42,7 +42,7 @@ t.Z = function (e) {
                                 className: u.sparkChart,
                                 updateInterval: t,
                                 color: m,
-                                gradientStopColor: p,
+                                gradientStopColor: g,
                                 numUpdatesToShow: r,
                                 animate: E,
                                 pixelWidth: 600,

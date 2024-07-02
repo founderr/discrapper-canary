@@ -1,9 +1,9 @@
 n(47120), n(411104), n(789020);
 var i = n(735250);
 n(470079);
-var s = n(243814), a = n(45792), r = n(481060), l = n(278323), o = n(988298), c = n(224706), d = n(45114), u = n(479531), _ = n(40851), E = n(566620), h = n(596223), I = n(838195), m = n(928518), p = n(592125), g = n(293273), T = n(885110), S = n(451478), C = n(630388), N = n(823379), f = n(591759), A = n(228488), Z = n(996106), L = n(914946), v = n(452426), O = n(561205), R = n(600027), x = n(852926), P = n(186901), b = n(981631);
+var s = n(243814), a = n(45792), r = n(481060), l = n(278323), o = n(988298), c = n(224706), d = n(45114), u = n(479531), _ = n(40851), E = n(566620), h = n(596223), I = n(838195), m = n(928518), g = n(592125), p = n(293273), T = n(885110), S = n(451478), C = n(630388), N = n(823379), f = n(591759), A = n(228488), Z = n(996106), L = n(914946), v = n(452426), O = n(561205), R = n(600027), x = n(852926), P = n(186901), b = n(981631);
 async function M(e, t, n, i) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '', a = g.Z.getApplicationActivity(t);
+    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '', a = p.Z.getApplicationActivity(t);
     if (null == a || null == a.secrets || !(0, L.t9)(i, a.party, a.secrets))
         throw new Z.Z({ errorCode: b.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
     let r = (0, h.Z)(a, T.Z);
@@ -52,7 +52,7 @@ t.Z = {
         handler(e) {
             let {
                     args: {user_id: t}
-                } = e, n = p.Z.getDMFromUserId(t);
+                } = e, n = g.Z.getDMFromUserId(t);
             null != n && (0, d.In)(n, !0, !0);
         }
     },

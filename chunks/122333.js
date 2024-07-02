@@ -2,7 +2,7 @@ let i;
 n(47120);
 var s = n(735250);
 n(470079);
-var a = n(481060), r = n(570140), l = n(317770), o = n(622822), c = n(391650), d = n(305325), u = n(341298), _ = n(390885), E = n(524329), h = n(995532), I = n(486472), m = n(430824), p = n(914010), g = n(594174), T = n(823379), S = n(358085), C = n(929809), N = n(179645), f = n(701476), A = n(785997), Z = n(981631), L = n(188785), v = n(630724);
+var a = n(481060), r = n(570140), l = n(317770), o = n(622822), c = n(391650), d = n(305325), u = n(341298), _ = n(390885), E = n(524329), h = n(995532), I = n(486472), m = n(430824), g = n(914010), p = n(594174), T = n(823379), S = n(358085), C = n(929809), N = n(179645), f = n(701476), A = n(785997), Z = n(981631), L = n(188785), v = n(630724);
 function O() {
     null != i && (0, a.closeModal)(i);
 }
@@ -28,7 +28,7 @@ class R extends l.Z {
         case f.M5.MARKETING_UNCLAIMED:
             _.Z.flowStart(v.MK.ORGANIC_MARKETING, v.EW.NUF_STARTED);
         }
-        let l = !1, O = p.Z.getGuildId();
+        let l = !1, O = g.Z.getGuildId();
         if (r === f.M5.INVITE_UNCLAIMED) {
             let e = m.Z.getGuild(O);
             (null == e ? void 0 : e.hasVerificationGate()) && (l = !0, (0, E.RM)(e.id));
@@ -95,7 +95,7 @@ class R extends l.Z {
                 open: e => c.j(S.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !l && null != g.default.getCurrentUser() && !(null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !L.a && !(0, u.g)('new_user_manager');
+                    return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !L.a && !(0, u.g)('new_user_manager');
                 }
             },
             {
@@ -103,7 +103,7 @@ class R extends l.Z {
                 open: e => (0, d.hk)(O, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return l && !(null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !L.a;
+                    return l && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !L.a;
                 }
             },
             {

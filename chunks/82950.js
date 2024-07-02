@@ -8,8 +8,8 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             type: d,
             imageMarginX: u,
             imageMarginTop: m,
-            trackingSource: p,
-            undismissable: g,
+            trackingSource: g,
+            undismissable: p,
             onDismissed: T,
             onClick: S,
             cta: C,
@@ -30,7 +30,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
             size: l.Button.Sizes.SMALL,
             onClick: () => {
                 null != d && c.default.track(_.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                    source: p,
+                    source: g,
                     guild_id: t.id,
                     notice_type: d
                 }), null == S || S();
@@ -43,7 +43,7 @@ let I = r().debounce(o.ZP.trackWithMetadata, 500), m = e => {
         return (0, i.jsxs)('div', {
             className: h.channelNotice,
             children: [
-                !0 === g ? null : (0, i.jsx)(l.Clickable, {
+                !0 === p ? null : (0, i.jsx)(l.Clickable, {
                     onClick: () => {
                         o.ZP.trackWithMetadata(_.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == T || T();
                     },
