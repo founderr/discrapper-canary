@@ -153,7 +153,8 @@ function ti() {
     return (0, ee.isMac)() && ev.supports(ep.AN.SCREEN_CAPTURE_KIT) && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, eE.C7);
 }
 function ta() {
-    return G.Z.supportsSimulcast();
+    var e;
+    return (null === (e = es.Z.getChannel(eq)) || void 0 === e ? void 0 : e.type) !== e_.d4z.GUILD_STAGE_VOICE && G.Z.supportsSimulcast();
 }
 let to = new class {
     start() {
