@@ -60,7 +60,7 @@ function I(e, t, n, r, i) {
         guildId: e,
         channelId: t,
         messageId: n
-    }))), m(c.Z5c.CHANNEL(e, t, n), null != i ? i : null, r);
+    }))), m(c.Z5c.CHANNEL(e, t, n), i, r);
 }
 function T() {
     return null != i && u.Hb.has(i);
