@@ -21,7 +21,7 @@ let _ = {
             })
         ]
     }, 'symbol');
-class g extends l.PureComponent {
+class m extends l.PureComponent {
     componentDidMount() {
         this.setState({ animating: !0 }), this._renderSecondaryTimeout = setTimeout(() => {
             this.setState({ renderSecondary: !0 });
@@ -137,7 +137,7 @@ class g extends l.PureComponent {
         });
     }
 }
-let m = 240;
+let g = 240;
 class C extends l.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
@@ -163,7 +163,7 @@ class C extends l.PureComponent {
             return this._timeouts.push(n), n;
         }), p(this, 'removeExplosion', e => {
             let t = this.children, n = t.findIndex(t => {
-                    if (t.type !== g)
+                    if (t.type !== m)
                         return !1;
                     let n = t.props;
                     return null != n.componentId && n.componentId === e;
@@ -173,18 +173,18 @@ class C extends l.PureComponent {
             let e = this.children, t = window.innerWidth / 2 >> 0, n = window.innerHeight / 2 >> 0;
             if (this.state.explosions < 8) {
                 let l = 'expl-'.concat(this.state.explosions);
-                e.push((0, i.jsx)(g, {
+                e.push((0, i.jsx)(m, {
                     componentId: l,
                     top: o().random(n - 100, n + 100, !1),
                     left: o().random(t - 200, t + 200, !1),
                     onAnimationComplete: this.removeExplosion
-                }, l)), this.setTimeout(this.createExplosion, m), this.setState({ explosions: this.state.explosions + 1 });
+                }, l)), this.setTimeout(this.createExplosion, g), this.setState({ explosions: this.state.explosions + 1 });
             } else
                 this.setTimeout(this.addSymbol, 750);
         }), p(this, 'addSymbol', () => {
             this.children = [(0, i.jsx)(f, {}, 'symbol')], this.forceUpdate(), this.setTimeout(this.delayedClose, 3000);
         }), p(this, 'delayedClose', () => {
-            this.props.onClose();
+            this.props.handleDemonClose();
         });
     }
 }

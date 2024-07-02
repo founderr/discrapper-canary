@@ -2,6 +2,8 @@ e.exports = {
     keyboardShortcutsModal: 'keyboardShortcutsModal_ad95dc',
     noBackground: 'noBackground_ad95dc',
     noShadow: 'noShadow_ad95dc',
+    backdrop: 'backdrop_ad95dc',
+    show: 'show_ad95dc',
     modalTitle: 'modalTitle_ad95dc',
     content: 'content_ad95dc',
     modalSubtitle: 'modalSubtitle_ad95dc',
