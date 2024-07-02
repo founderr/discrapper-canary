@@ -1,22 +1,19 @@
 n.d(t, {
     NX: function () {
-        return E;
-    },
-    WS: function () {
         return _;
     },
-    l5: function () {
+    WS: function () {
         return d;
     },
-    qB: function () {
-        return f;
+    l5: function () {
+        return c;
     },
-    vp: function () {
-        return h;
+    qB: function () {
+        return E;
     }
 });
-var r = n(106351), i = n(442837), a = n(818083), o = n(592125), s = n(496675), l = n(944486), u = n(231338);
-let c = (0, a.B)({
+var r = n(106351), i = n(442837), a = n(818083), o = n(592125), s = n(496675), l = n(231338);
+let u = (0, a.B)({
     kind: 'user',
     id: '2023-08_activities_in_text',
     label: 'Activities in Text User',
@@ -49,7 +46,7 @@ let c = (0, a.B)({
         }
     ]
 });
-function d(e) {
+function c(e) {
     var t;
     if (null == e || void 0 === e)
         return !1;
@@ -62,60 +59,39 @@ function d(e) {
         r.d.DM
     ].includes(t);
 }
-function _(e, t, n) {
+function d(e, t, n) {
     if (null == e)
         return !1;
-    let r = d(e), i = s.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, e), a = i && s.Z.can(u.Pl.SEND_MESSAGES | u.Pl.USE_APPLICATION_COMMANDS, e);
+    let r = c(e), i = s.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, e), a = i && s.Z.can(l.Pl.SEND_MESSAGES | l.Pl.USE_APPLICATION_COMMANDS, e);
     if ((null == e ? void 0 : e.guild_id) != null)
         return t ? a && r : i && r;
-    return t ? c.getCurrentConfig({ location: n }, { autoTrackExposure: !0 }).activitiesInTextEnabled && r : r;
+    return t ? u.getCurrentConfig({ location: n }, { autoTrackExposure: !0 }).activitiesInTextEnabled && r : r;
 }
-function E(e, t, n) {
+function _(e, t, n) {
     let {
             isActivitiesInTextEnabledForChannelType: r,
             channelGuildId: a,
-            hasPermission: l
+            hasPermission: d
         } = (0, i.cj)([
             o.Z,
             s.Z
         ], () => {
-            let n = o.Z.getChannel(e), r = s.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, n), i = r && s.Z.can(u.Pl.SEND_MESSAGES | u.Pl.USE_APPLICATION_COMMANDS, n);
+            let n = o.Z.getChannel(e), r = s.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, n), i = r && s.Z.can(l.Pl.SEND_MESSAGES | l.Pl.USE_APPLICATION_COMMANDS, n);
             return {
-                isActivitiesInTextEnabledForChannelType: d(n),
+                isActivitiesInTextEnabledForChannelType: c(n),
                 channelGuildId: null == n ? void 0 : n.guild_id,
                 hasPermission: t ? i : r
             };
-        }), _ = null != a, E = c.useExperiment({ location: n }, {
+        }), _ = null != a, E = u.useExperiment({ location: n }, {
             autoTrackExposure: !_,
             disable: _
         });
-    return _ ? l && r : t ? E.activitiesInTextEnabled && r : r;
+    return _ ? d && r : t ? E.activitiesInTextEnabled && r : r;
 }
-function f(e, t) {
-    let n = (0, i.e7)([o.Z], () => o.Z.getChannel(e)), r = (0, i.e7)([s.Z], () => s.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, n)), a = d(n), l = null == n ? void 0 : n.guild_id, _ = null != l, E = c.useExperiment({ location: t }, {
+function E(e, t) {
+    let n = (0, i.e7)([o.Z], () => o.Z.getChannel(e)), r = (0, i.e7)([s.Z], () => s.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, n)), a = c(n), d = null == n ? void 0 : n.guild_id, _ = null != d, E = u.useExperiment({ location: t }, {
             autoTrackExposure: !_,
             disable: _
         });
     return _ ? r && a : E.showInOmniButtonMenu && a;
-}
-function h(e, t) {
-    let {
-            hasGuildId: n,
-            isGuildVoiceChannel: a,
-            isInPrivateVoiceCall: s
-        } = (0, i.cj)([
-            o.Z,
-            l.Z
-        ], () => {
-            let t = o.Z.getChannel(e), n = (null == t ? void 0 : t.guild_id) !== void 0 && (null == t ? void 0 : t.guild_id) !== null, i = (null == t ? void 0 : t.type) === r.d.GUILD_VOICE;
-            return {
-                hasGuildId: n,
-                isGuildVoiceChannel: i,
-                isInPrivateVoiceCall: (null == t ? void 0 : t.isPrivate()) && l.Z.getVoiceChannelId() === e
-            };
-        }), u = c.useExperiment({ location: t }, {
-            autoTrackExposure: !n,
-            disable: n
-        }), d = s && u.activitiesInTextEnabled;
-    return a || d;
 }

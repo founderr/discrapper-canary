@@ -10,7 +10,5 @@ e.exports = {
     poster: 'poster_f09e45',
     posterClickable: 'posterClickable_f09e45',
     posterBackground: 'posterBackground_f09e45',
-    posterTextParent: 'posterTextParent_f09e45',
-    posterText: 'posterText_f09e45',
     posterDivider: 'posterDivider_f09e45'
 };
