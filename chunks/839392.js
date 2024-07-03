@@ -1,21 +1,21 @@
-var n, t, s, i, r = a(442837), o = a(570140);
+var n, t, r, l, i = s(442837), E = s(570140);
 let c = {};
-class d extends (i = r.ZP.Store) {
+class _ extends (l = i.ZP.Store) {
     getSimilarGames(e) {
         return c[e];
     }
 }
-s = 'GameProfileStore', (t = 'displayName') in (n = d) ? Object.defineProperty(n, t, {
-    value: s,
+r = 'GameProfileStore', (t = 'displayName') in (n = _) ? Object.defineProperty(n, t, {
+    value: r,
     enumerable: !0,
     configurable: !0,
     writable: !0
-}) : n[t] = s, l.Z = new d(o.Z, {
+}) : n[t] = r, a.Z = new _(E.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
         let {
-            applicationId: l,
-            games: a
+            applicationId: a,
+            games: s
         } = e;
-        c[l] = a;
+        c[a] = s;
     }
 });
