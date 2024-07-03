@@ -14,6 +14,10 @@ let a = {
         'PLAY_ON_XBOX',
         'STREAM_ON_DESKTOP'
     ]),
+    DESKTOP: new Set([
+        'PLAY_ON_DESKTOP',
+        'STREAM_ON_DESKTOP'
+    ]),
     CONSOLE: new Set([
         'PLAY_ON_PLAYSTATION',
         'PLAY_ON_XBOX'
