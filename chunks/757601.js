@@ -5,6 +5,7 @@ e.exports = {
     closeButton: 'closeButton_f95964',
     video: 'video_f95964',
     content: 'content_f95964',
+    subHeader: 'subHeader_f95964',
     bodyText: 'bodyText_f95964',
     featureCardGroup: 'featureCardGroup_f95964',
     wideStyle: 'wideStyle_f95964',

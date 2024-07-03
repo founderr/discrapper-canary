@@ -30,16 +30,19 @@ function g(e) {
         }), v = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
             className: I.termsApplyAnchor,
             href: d.Z.getArticleURL(g.helpArticleId),
-            children: (0, i.jsx)(r.Heading, {
-                variant: 'heading-md/normal',
-                className: I.termsApplyBodyText,
-                children: E.Z.Messages.BOGO_TERMS_APPLY
-            })
+            children: E.Z.Messages.BOGO_TERMS_APPLY
         }) : void 0, O = {
             type: 'video',
             src: f ? g.heroArtVideoLinkLightTheme : g.videoLink
         };
-    ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
+    null != g.heroArtVideoSubtitles && (O.subtitles = g.heroArtVideoSubtitles.map(e => {
+        var t;
+        return {
+            locale: e.locale,
+            src: e.link,
+            isDefault: null !== (t = e.isDefault) && void 0 !== t && t
+        };
+    })), ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) && (O = {
         type: 'image',
         src: f ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
     });
@@ -54,6 +57,7 @@ function g(e) {
         modalTopExtra: x,
         subHeader: g.subheader,
         subHeaderExtra: v,
+        body: g.body,
         heroArt: O,
         featureCards: g.featureCards.map(e => ({
             header: e.header,
