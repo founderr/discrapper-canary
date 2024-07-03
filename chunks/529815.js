@@ -6,7 +6,7 @@ n.d(t, {
         return V;
     }
 }), n(47120), n(653041);
-var l, r = n(735250), i = n(470079), a = n(120356), o = n.n(a), d = n(481060), s = n(169525), u = n(785992), m = n(585483), h = n(55935), c = n(408433), p = n(956664), b = n(156054), g = n(250496), f = n(817929), x = n(351093), v = n(261922), y = n(68588), C = n(268642), _ = n(259773), w = n(941797), I = n(278297), E = n(52824), j = n(592256), S = n(981631), T = n(689938), N = n(530790), M = n(756693), A = n(738779);
+var l, r = n(735250), i = n(470079), a = n(120356), o = n.n(a), d = n(481060), s = n(169525), u = n(785992), m = n(585483), h = n(55935), c = n(408433), p = n(956664), b = n(156054), g = n(250496), f = n(817929), x = n(351093), v = n(261922), y = n(68588), C = n(268642), _ = n(259773), w = n(941797), I = n(278297), E = n(52824), j = n(592256), S = n(981631), T = n(689938), N = n(756693), M = n(153521), A = n(738779);
 function k(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -36,7 +36,7 @@ function F(e) {
             volume: I,
             onPlay: j,
             onPause: T,
-            onEnded: N,
+            onEnded: M,
             onControlsHide: A,
             onControlsShow: k,
             onVolumeChange: F,
@@ -70,7 +70,7 @@ function F(e) {
     let K = (0, E.q)(d);
     if (null != s && null != s.proxyURL)
         return (0, r.jsx)('div', {
-            className: o()(M.embedVideo, t),
+            className: o()(N.embedVideo, t),
             children: f({
                 poster: K,
                 src: s.proxyURL,
@@ -80,7 +80,7 @@ function F(e) {
                 height: q,
                 responsive: c,
                 autoPlay: C,
-                onEnded: N,
+                onEnded: M,
                 naturalWidth: s.width,
                 naturalHeight: s.height,
                 onVolumeChange: F,
@@ -126,7 +126,7 @@ function F(e) {
             className: t,
             style: d,
             children: (0, r.jsx)('div', {
-                className: o()(M.embedVideo, n),
+                className: o()(N.embedVideo, n),
                 style: m,
                 children: (0, r.jsx)(g.ZP, {
                     provider: u,
@@ -141,7 +141,7 @@ function F(e) {
         });
     }
     return (0, r.jsxs)('div', {
-        className: o()(M.embedVideo, t),
+        className: o()(N.embedVideo, t),
         style: c ? { maxWidth: U } : {
             width: U,
             height: q
@@ -154,17 +154,17 @@ function F(e) {
                 maxWidth: U,
                 maxHeight: q,
                 responsive: c,
-                containerClassName: M.embedVideoImageComponent,
-                imageClassName: M.embedVideoImageComponentInner,
+                containerClassName: N.embedVideoImageComponent,
+                imageClassName: N.embedVideoImageComponentInner,
                 placeholder: R,
                 placeholderVersion: B,
                 onClick: y && null != s ? Z : null,
                 renderForwardComponent: v
             }),
             (0, r.jsx)('div', {
-                className: M.embedVideoActions,
+                className: N.embedVideoActions,
                 children: (0, r.jsx)('div', {
-                    className: M.centerContent,
+                    className: N.centerContent,
                     children: y ? (0, r.jsx)(_.Z, {
                         onPlay: null != s ? Z : null,
                         externalURL: V,
@@ -197,7 +197,7 @@ function L(e) {
         placeholderVersion: v
     } = e;
     return (0, r.jsx)(x.Z, {
-        className: o()(M.embedVideo, t),
+        className: o()(N.embedVideo, t),
         original: n,
         poster: (0, E.q)(d),
         src: (0, E.q)(s),
@@ -228,9 +228,9 @@ class V extends (l = i.PureComponent) {
                 channelId: i
             } = this.props;
         return null == t ? null : (0, r.jsx)('div', {
-            className: o()(M.embedProvider, M.embedMargin),
+            className: o()(N.embedProvider, N.embedMargin),
             children: null != t.url ? n({
-                className: M.embedLink,
+                className: N.embedLink,
                 href: t.url,
                 tabIndex: e ? 0 : -1,
                 children: t.name,
@@ -249,15 +249,15 @@ class V extends (l = i.PureComponent) {
                 channelId: i
             } = this.props;
         return null == t ? null : (0, r.jsxs)('div', {
-            className: o()(M.embedAuthor, M.embedMargin),
+            className: o()(N.embedAuthor, N.embedMargin),
             children: [
                 null != t.iconProxyURL ? (0, r.jsx)('img', {
                     alt: '',
-                    className: M.embedAuthorIcon,
+                    className: N.embedAuthorIcon,
                     src: t.iconProxyURL
                 }) : null,
                 null != t.url ? n({
-                    className: M.embedAuthorNameLink,
+                    className: N.embedAuthorNameLink,
                     href: t.url,
                     tabIndex: e ? 0 : -1,
                     children: t.name,
@@ -266,7 +266,7 @@ class V extends (l = i.PureComponent) {
                     messageId: l,
                     channelId: i
                 }) : (0, r.jsx)('span', {
-                    className: M.embedAuthorName,
+                    className: N.embedAuthorName,
                     children: t.name
                 })
             ]
@@ -284,9 +284,9 @@ class V extends (l = i.PureComponent) {
                 url: s
             } = t;
         return null == d ? null : (0, r.jsx)('div', {
-            className: o()(M.embedTitle, M.embedMargin),
+            className: o()(N.embedTitle, N.embedMargin),
             children: null != s ? n({
-                className: M.embedTitleLink,
+                className: N.embedTitleLink,
                 href: s,
                 tabIndex: e ? 0 : -1,
                 children: l(t, d),
@@ -303,7 +303,7 @@ class V extends (l = i.PureComponent) {
                 renderDescription: t
             } = this.props, {rawDescription: n} = e;
         return null == n ? null : (0, r.jsx)('div', {
-            className: o()(M.embedDescription, M.embedMargin),
+            className: o()(N.embedDescription, N.embedMargin),
             children: t(e, n, !1)
         });
     }
@@ -320,7 +320,7 @@ class V extends (l = i.PureComponent) {
             children: r => {
                 let {disableAnimations: d} = r;
                 return i({
-                    containerClassName: M.embedThumbnail,
+                    containerClassName: N.embedThumbnail,
                     src: (0, E.q)(t),
                     original: t.url,
                     width: t.width,
@@ -350,13 +350,13 @@ class V extends (l = i.PureComponent) {
                 this.props.renderDescription(e, i, !0)
             ]), (3 === l.length || !a) && (n.push(l), l = null);
         }), null != l && n.push(l), (0, r.jsx)('div', {
-            className: M.embedFields,
+            className: N.embedFields,
             children: n.map((e, t) => {
                 let {length: n} = e;
                 return e.map((e, l) => {
                     let [i, a] = e;
                     return (0, r.jsxs)('div', {
-                        className: M.embedField,
+                        className: N.embedField,
                         style: {
                             gridColumn: function (e, t) {
                                 let n = 12 / t, l = e * n;
@@ -365,11 +365,11 @@ class V extends (l = i.PureComponent) {
                         },
                         children: [
                             (0, r.jsx)('div', {
-                                className: M.embedFieldName,
+                                className: N.embedFieldName,
                                 children: i
                             }),
                             (0, r.jsx)('div', {
-                                className: M.embedFieldValue,
+                                className: N.embedFieldValue,
                                 children: a
                             })
                         ]
@@ -393,18 +393,18 @@ class V extends (l = i.PureComponent) {
             allImages: n.images
         }));
         return null == i && null == a && null == o && null == d ? null : (0, r.jsxs)('div', {
-            className: M.embedGalleryImagesWrapper,
+            className: N.embedGalleryImagesWrapper,
             style: { height: l },
             children: [
                 (0, r.jsxs)('div', {
-                    className: M.embedGallerySide,
+                    className: N.embedGallerySide,
                     children: [
                         i,
                         null != d && o
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: M.embedGallerySide,
+                    className: N.embedGallerySide,
                     children: [
                         a,
                         null == d && null != o && o,
@@ -439,12 +439,12 @@ class V extends (l = i.PureComponent) {
                 animated: !1
             }), f = {
                 containerClassName: o()(s, {
-                    [M.embedMedia]: !l,
-                    [M.embedImage]: !l,
-                    [M.galleryImage]: l
+                    [N.embedMedia]: !l,
+                    [N.embedImage]: !l,
+                    [N.galleryImage]: l
                 }),
-                imageContainerClassName: l ? M.galleryImageContainer : void 0,
-                imageClassName: l ? M.embedGalleryImageElement : void 0,
+                imageContainerClassName: l ? N.galleryImageContainer : void 0,
+                imageClassName: l ? N.embedGalleryImageElement : void 0,
                 src: (0, E.q)(n),
                 alt: i,
                 responsive: !0,
@@ -506,7 +506,7 @@ class V extends (l = i.PureComponent) {
                 children: e => {
                     let {disableAnimations: o} = e;
                     return (0, r.jsx)(L, {
-                        className: M.embedMedia,
+                        className: N.embedMedia,
                         href: l,
                         thumbnail: i,
                         video: a,
@@ -525,7 +525,7 @@ class V extends (l = i.PureComponent) {
                 }
             });
         return (0, r.jsx)(F, {
-            className: M.embedMedia,
+            className: N.embedMedia,
             href: l,
             allowFullScreen: h,
             thumbnail: i,
@@ -559,19 +559,19 @@ class V extends (l = i.PureComponent) {
         if (null != e) {
             let n = null != e.iconProxyURL && '' !== e.iconProxyURL ? e.iconProxyURL : e.iconURL;
             return (0, r.jsxs)('div', {
-                className: o()(M.embedFooter, M.embedMargin),
+                className: o()(N.embedFooter, N.embedMargin),
                 children: [
                     null != n ? (0, r.jsx)('img', {
                         alt: '',
-                        className: M.embedFooterIcon,
+                        className: N.embedFooterIcon,
                         src: n
                     }) : null,
                     (0, r.jsxs)('span', {
-                        className: M.embedFooterText,
+                        className: N.embedFooterText,
                         children: [
                             e.text,
                             null != e.text && null != t ? (0, r.jsx)('span', {
-                                className: M.embedFooterSeparator,
+                                className: N.embedFooterSeparator,
                                 children: '\u2022'
                             }) : null,
                             null != t ? (0, h.Y4)(t) : null
@@ -582,9 +582,9 @@ class V extends (l = i.PureComponent) {
         }
         if (null != t)
             return (0, r.jsx)('div', {
-                className: o()(M.embedFooter, M.embedMargin),
+                className: o()(N.embedFooter, N.embedMargin),
                 children: (0, r.jsx)('span', {
-                    className: M.embedFooterText,
+                    className: N.embedFooterText,
                     children: (0, h.Y4)(t)
                 })
             });
@@ -693,7 +693,7 @@ class V extends (l = i.PureComponent) {
     renderSuppressButton(e) {
         return (0, r.jsx)(d.Clickable, {
             focusProps: { offset: { bottom: 4 } },
-            className: M.embedSuppressButton,
+            className: N.embedSuppressButton,
             onClick: e,
             'aria-label': T.Z.Messages.SUPPRESS_ALL_EMBEDS,
             children: (0, r.jsx)(d.CloseSmallIcon, {
@@ -765,7 +765,7 @@ class V extends (l = i.PureComponent) {
             onToggleObscurity: this.onToggleObscurity,
             isSingleMosaicItem: !0,
             containerStyles: this.getSpoilerStyles(!0),
-            obscurityControlClassName: o()({ [M.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown }),
+            obscurityControlClassName: o()({ [N.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown }),
             children: this.renderInlineMediaEmbed
         }) : this.renderInlineMediaEmbed() : null != n ? (0, r.jsx)(y.Z, {
             type: y.Z.Types.EMBED,
@@ -794,14 +794,14 @@ class V extends (l = i.PureComponent) {
                 } = t.props, i = t.getMaxWidth(!0);
             return (0, r.jsx)('div', {
                 'aria-hidden': e,
-                className: o()(M.inlineMediaEmbed, l, {
-                    [M.spoilerAttachment]: n === s.wk.SPOILER,
-                    [M.hiddenExplicitAttachment]: null != n && [
+                className: o()(N.inlineMediaEmbed, l, {
+                    [N.spoilerAttachment]: n === s.wk.SPOILER,
+                    [N.hiddenExplicitAttachment]: null != n && [
                         s.wk.EXPLICIT_CONTENT,
                         s.wk.POTENTIAL_EXPLICIT_CONTENT
                     ].includes(n),
-                    [M.isHidden]: e,
-                    [M.justifyAuto]: t.usesJustifiedAutoStyle(),
+                    [N.isHidden]: e,
+                    [N.justifyAuto]: t.usesJustifiedAutoStyle(),
                     [A.embedFlexGrow]: null != i
                 }),
                 style: { maxWidth: i },
@@ -823,14 +823,14 @@ class V extends (l = i.PureComponent) {
                     footer: b
                 } = t.renderAll();
             return (0, r.jsx)('article', {
-                className: o()(n, A.embedFlexGrow, M.embedFull, N.markup, {
-                    [M.isHidden]: e,
-                    [M.spoilerEmbed]: i === s.wk.SPOILER,
-                    [M.hiddenExplicitEmbed]: null != i && [
+                className: o()(n, A.embedFlexGrow, N.embedFull, M.markup, {
+                    [N.isHidden]: e,
+                    [N.spoilerEmbed]: i === s.wk.SPOILER,
+                    [N.hiddenExplicitEmbed]: null != i && [
                         s.wk.EXPLICIT_CONTENT,
                         s.wk.POTENTIAL_EXPLICIT_CONTENT
                     ].includes(i),
-                    [M.justifyAuto]: t.usesJustifiedAutoStyle()
+                    [N.justifyAuto]: t.usesJustifiedAutoStyle()
                 }),
                 'aria-hidden': e,
                 style: {
@@ -838,11 +838,11 @@ class V extends (l = i.PureComponent) {
                     maxWidth: t.getMaxWidth(!1)
                 },
                 children: (0, r.jsx)('div', {
-                    className: M.gridContainer,
+                    className: N.gridContainer,
                     children: (0, r.jsxs)('div', {
                         className: o()({
-                            [M.grid]: !0,
-                            [M.hasThumbnail]: null != c
+                            [N.grid]: !0,
+                            [N.hasThumbnail]: null != c
                         }),
                         children: [
                             null != l ? t.renderSuppressButton(l) : null,

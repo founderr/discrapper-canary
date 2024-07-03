@@ -1,73 +1,73 @@
-n.r(i), n.d(i, {
+a.r(i), a.d(i, {
     default: function () {
         return E;
     }
 });
-var a = n(735250), r = n(470079), o = n(481060), s = n(197115), t = n(921813), l = n(318661), c = n(721987), u = n(153124), d = n(626135), v = n(981631), f = n(486324), m = n(474936), p = n(689938), I = n(423883);
+var n = a(735250), o = a(470079), r = a(481060), s = a(197115), t = a(921813), l = a(318661), c = a(721987), u = a(153124), d = a(626135), v = a(981631), f = a(486324), m = a(474936), p = a(689938), I = a(423883);
 function E(e) {
     let {
             user: i,
-            guildId: n,
+            guildId: a,
             transitionState: E,
             imageSrc: A,
             uploadType: _,
-            onSubscribe: h,
-            onClose: T
-        } = e, Z = (0, u.Dt)(), x = (0, l.ZP)(i.id, n), {
-            primaryColor: P,
+            onSubscribe: T,
+            onClose: h
+        } = e, P = (0, u.Dt)(), Z = (0, l.ZP)(i.id, a), {
+            primaryColor: x,
             secondaryColor: N
         } = (0, c.Z)({
             user: i,
-            displayProfile: x,
+            displayProfile: Z,
             pendingAvatar: _ === f.pC.AVATAR ? A : void 0,
             isPreview: !0
         });
-    return r.useEffect(() => {
+    return o.useEffect(() => {
         d.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, { type: m.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL });
-    }, []), (0, a.jsxs)(o.ModalRoot, {
+    }, []), (0, n.jsxs)(r.ModalRoot, {
         className: I.modalRoot,
         transitionState: E,
-        size: o.ModalSize.SMALL,
-        'aria-labelledby': Z,
+        size: r.ModalSize.SMALL,
+        'aria-labelledby': P,
         hideShadow: !0,
         children: [
-            (0, a.jsx)(t.Z, {
+            (0, n.jsx)(t.Z, {
                 user: i,
                 canUsePremiumCustomization: !0,
                 disabledInputs: !0,
                 pendingAvatar: _ === f.pC.AVATAR ? A : void 0,
                 pendingBanner: _ === f.pC.BANNER ? A : void 0,
                 pendingThemeColors: [
-                    P,
+                    x,
                     N
                 ]
             }),
-            (0, a.jsxs)('div', {
+            (0, n.jsxs)('div', {
                 className: I.upsellSection,
                 children: [
-                    (0, a.jsx)(o.Text, {
+                    (0, n.jsx)(r.Text, {
                         className: I.joinText,
                         variant: 'text-sm/normal',
                         children: _ === f.pC.AVATAR ? p.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : p.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
                     }),
-                    (0, a.jsx)(s.Z, {
+                    (0, n.jsx)(s.Z, {
                         buttonText: p.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
                         subscriptionTier: m.Si.TIER_2,
                         className: I.premiumSubscribeButton,
-                        size: o.Button.Sizes.SMALL,
+                        size: r.Button.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: v.jXE.SETTINGS_EDIT_PROFILE,
                             object: v.qAy.BUTTON_CTA
                         },
                         onSubscribeModalClose: e => {
-                            e && (null == h || h(), T());
+                            e && (null == T || T(), h());
                         }
                     }),
-                    (0, a.jsx)(o.Button, {
-                        onClick: T,
-                        size: o.Button.Sizes.SMALL,
-                        color: o.Button.Colors.PRIMARY,
-                        look: o.Button.Looks.FILLED,
+                    (0, n.jsx)(r.Button, {
+                        onClick: h,
+                        size: r.Button.Sizes.SMALL,
+                        color: r.Button.Colors.PRIMARY,
+                        look: r.Button.Looks.FILLED,
                         children: p.Z.Messages.PREMIUM_PREVIEW_EXIT
                     })
                 ]

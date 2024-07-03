@@ -1,5 +1,5 @@
 n(47120);
-var a = n(735250), s = n(470079), r = n(120356), l = n.n(r), i = n(683860), o = n(442837), c = n(692547), d = n(481060), u = n(738619), m = n(841762), h = n(25610), _ = n(406432), g = n(169525), x = n(255269), C = n(524444), f = n(695346), p = n(433355), T = n(592125), I = n(496675), E = n(113039), N = n(456269), b = n(109590), v = n(368844), S = n(73315), M = n(404616), A = n(510060), j = n(983200), R = n(196255), O = n(858543), Z = n(482062), L = n(883728), P = n(710352), w = n(981631), y = n(689938), D = n(12894);
+var a = n(735250), s = n(470079), r = n(120356), l = n.n(r), i = n(683860), o = n(442837), c = n(692547), d = n(481060), u = n(738619), m = n(841762), h = n(25610), _ = n(406432), g = n(169525), x = n(255269), C = n(930282), f = n(524444), p = n(695346), T = n(433355), I = n(592125), E = n(496675), N = n(456269), b = n(109590), v = n(368844), S = n(73315), M = n(404616), A = n(510060), j = n(983200), R = n(196255), O = n(858543), Z = n(482062), L = n(883728), P = n(710352), w = n(981631), y = n(689938), D = n(12894);
 function F(e) {
     let {
             id: t,
@@ -11,7 +11,7 @@ function F(e) {
             gridCoords: _,
             gridSectionBoundaries: g,
             observePostVisibilityAnalytics: C
-        } = e, E = (0, o.e7)([T.Z], () => T.Z.getChannel(n.parent_id)), S = n.id, j = s.useRef(null), F = (0, o.e7)([p.ZP], () => p.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id), {
+        } = e, f = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)), S = n.id, j = s.useRef(null), F = (0, o.e7)([T.ZP], () => T.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id), {
             firstMessage: k,
             loaded: H
         } = (0, b.cl)(n), {firstMedia: G} = (0, N.mX)({
@@ -35,7 +35,7 @@ function F(e) {
         C,
         S
     ]);
-    let J = (0, o.e7)([I.Z], () => I.Z.can(w.Plq.MANAGE_MESSAGES, n)), Q = f.QK.useSetting(), $ = f.cC.useSetting(), ee = (0, x.Z)($, J), et = (0, v.aU)(k, E, !1), [en, ea] = (0, A.rI)(h.width - 2 * A.LT), es = (0, N.xw)(n, i.z.CREATION_DATE, P.R6.POSTED_DURATION_AGO), er = (0, M.NN)(n), el = (null == k ? void 0 : k.blocked) || null == (null != u ? u : G), {
+    let J = (0, o.e7)([E.Z], () => E.Z.can(w.Plq.MANAGE_MESSAGES, n)), Q = p.QK.useSetting(), $ = p.cC.useSetting(), ee = (0, x.Z)($, J), et = (0, v.aU)(k, f, !1), [en, ea] = (0, A.rI)(h.width - 2 * A.LT), es = (0, N.xw)(n, i.z.CREATION_DATE, P.R6.POSTED_DURATION_AGO), er = (0, M.NN)(n), el = (null == k ? void 0 : k.blocked) || null == (null != u ? u : G), {
             onFocus: ei,
             ...eo
         } = (0, Z.nX)({
@@ -225,7 +225,7 @@ t.Z = s.memo(function (e) {
             gridCoords: c,
             gridSectionBoundaries: d,
             observePostVisibilityAnalytics: u
-        } = e, m = (0, o.e7)([T.Z], () => T.Z.getChannel(n));
+        } = e, m = (0, o.e7)([I.Z], () => I.Z.getChannel(n));
     return null == m ? null : (0, a.jsx)(F, {
         id: t,
         channel: m,
@@ -239,7 +239,7 @@ t.Z = s.memo(function (e) {
     });
 });
 let k = e => e.preventDefault(), H = s.memo(function (e) {
-        return (0, a.jsx)(a.Fragment, { children: (0, C.Yi)(e) });
+        return (0, a.jsx)(a.Fragment, { children: (0, f.Yi)(e) });
     }), B = s.memo(function (e) {
         let {
                 mediaAttachments: t,
@@ -411,7 +411,7 @@ function z(e) {
                             color: o ? 'header-secondary' : 'text-muted',
                             children: y.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
                         }),
-                        r && null != n && (0, a.jsx)(E.ZP, {
+                        r && null != n && (0, a.jsx)(C.ZP, {
                             message: n,
                             content: m,
                             className: g

@@ -665,7 +665,7 @@ e = 0, r = function () {
             }
         });
     });
-    var t5 = {
+    var t6 = {
             aliceblue: '#f0f8ff',
             antiquewhite: '#faebd7',
             aqua: '#00ffff',
@@ -821,24 +821,24 @@ e = 0, r = function () {
             whitesmoke: '#f5f5f5',
             yellow: '#ffff00',
             yellowgreen: '#9acd32'
-        }, t6 = o.type;
+        }, t5 = o.type;
     R.prototype.name = function () {
-        for (var t = J(this._rgb, 'rgb'), e = 0, r = Object.keys(t5); e < r.length; e += 1) {
+        for (var t = J(this._rgb, 'rgb'), e = 0, r = Object.keys(t6); e < r.length; e += 1) {
             var n = r[e];
-            if (t5[n] === t)
+            if (t6[n] === t)
                 return n.toLowerCase();
         }
         return t;
     }, E.format.named = function (t) {
-        if (t5[t = t.toLowerCase()])
-            return te(t5[t]);
+        if (t6[t = t.toLowerCase()])
+            return te(t6[t]);
         throw Error('unknown color name: ' + t);
     }, E.autodetect.push({
         p: 5,
         test: function (t) {
             for (var e = [], r = arguments.length - 1; r-- > 0;)
                 e[r] = arguments[r + 1];
-            if (!e.length && 'string' === t6(t) && t5[t.toLowerCase()])
+            if (!e.length && 'string' === t5(t) && t6[t.toLowerCase()])
                 return 'named';
         }
     });
@@ -1488,7 +1488,7 @@ e = 0, r = function () {
     })), eJ.burn = eQ(e0(function (t, e) {
         return 255 * (1 - (1 - e / 255) / (t / 255));
     }));
-    for (var e1 = o.type, e2 = o.clip_rgb, e3 = o.TWOPI, e5 = Math.pow, e6 = Math.sin, e4 = Math.cos, e8 = Math.floor, e7 = Math.random, e9 = Math.log, rt = Math.pow, re = Math.floor, rr = Math.abs, rn = function (t, e) {
+    for (var e1 = o.type, e2 = o.clip_rgb, e3 = o.TWOPI, e6 = Math.pow, e5 = Math.sin, e4 = Math.cos, e8 = Math.floor, e7 = Math.random, e9 = Math.log, rt = Math.pow, re = Math.floor, rr = Math.abs, rn = function (t, e) {
                 void 0 === e && (e = null);
                 var r = {
                     min: Number.MAX_VALUE,
@@ -2064,7 +2064,7 @@ e = 0, r = function () {
             _
         ]);
         var o = function (o) {
-            var E = e3 * ((t + 120) / 360 + e * o), s = e5(_[0] + a * o, n), c = (0 !== i ? r[0] + o * i : r) * s * (1 - s) / 2, I = e4(E), R = e6(E);
+            var E = e3 * ((t + 120) / 360 + e * o), s = e6(_[0] + a * o, n), c = (0 !== i ? r[0] + o * i : r) * s * (1 - s) / 2, I = e4(E), R = e5(E);
             return u(e2([
                 255 * (s + c * (-0.14861 * I + 1.78277 * R)),
                 255 * (s + c * (-0.29227 * I - 0.90649 * R)),
@@ -2139,5 +2139,5 @@ e = 0, r = function () {
                 '#fff'
             ]).mode('rgb');
         }
-    }, u.colors = t5, u.brewer = rN, u;
+    }, u.colors = t6, u.brewer = rN, u;
 }, t.exports = r();

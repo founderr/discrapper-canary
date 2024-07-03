@@ -17,9 +17,9 @@ function _(e) {
         } = e, {
             components: m,
             applicationIconURL: p,
-            applicationName: b,
-            submissionState: I,
-            error: h,
+            applicationName: I,
+            submissionState: h,
+            error: b,
             validators: C,
             onSubmit: g
         } = (0, c.X9)(e, o);
@@ -36,7 +36,7 @@ function _(e) {
                         (0, t.jsx)(i.Avatar, {
                             src: p,
                             size: i.AvatarSizes.SIZE_24,
-                            'aria-label': b,
+                            'aria-label': I,
                             className: f.applicationIcon
                         }),
                         (0, t.jsx)(r.Z, {
@@ -52,15 +52,15 @@ function _(e) {
                 }),
                 (0, t.jsxs)(i.ModalContent, {
                     children: [
-                        null != h && '' !== h ? (0, t.jsx)(a.Z, {
+                        null != b && '' !== b ? (0, t.jsx)(a.Z, {
                             messageType: a.Q.ERROR,
                             className: f.submissionWarning,
-                            children: h
+                            children: b
                         }) : null,
                         (0, t.jsx)(a.Z, {
                             messageType: a.Q.WARNING,
                             className: f.submissionWarning,
-                            children: u.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: b })
+                            children: u.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: I })
                         }),
                         (0, t.jsx)(i.FormSection, {
                             children: (0, t.jsx)(l.Il, {
@@ -77,7 +77,7 @@ function _(e) {
                             type: 'submit',
                             color: i.Button.Colors.BRAND,
                             size: i.Button.Sizes.MEDIUM,
-                            submitting: I === d.i.IN_FLIGHT,
+                            submitting: h === d.i.IN_FLIGHT,
                             children: u.Z.Messages.SUBMIT
                         }),
                         (0, t.jsx)(i.Button, {

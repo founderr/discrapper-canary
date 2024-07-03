@@ -6,11 +6,11 @@ n.d(t, {
         return R;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(570140), h = n(475179), p = n(904245), m = n(372900), _ = n(905405), f = n(937889), E = n(739566), C = n(378233), g = n(419922), I = n(375954), x = n(699516), T = n(512665), N = n(768581), v = n(70956), S = n(823379), Z = n(792125), A = n(981631), M = n(768760), b = n(858359);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(392711), o = n(920906), c = n(442837), d = n(481060), u = n(570140), h = n(475179), p = n(904245), m = n(372900), _ = n(905405), f = n(937889), E = n(739566), C = n(267128), g = n(378233), I = n(419922), x = n(375954), T = n(699516), N = n(768581), v = n(70956), S = n(823379), Z = n(792125), A = n(981631), M = n(217702), b = n(858359);
 let R = 10 * v.Z.Millis.SECOND;
 function j(e) {
     var t;
-    let {message: n} = e, s = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, I] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
+    let {message: n} = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, E.Uj)(n), o = a.useContext(m.Z), [u, x] = a.useState(!1), v = (0, _.p)(), S = a.useCallback(e => {
             if ('A' !== e.target.nodeName)
                 h.Z.updateChatOpen(n.channel_id, !0), p.Z.jumpToMessage({
                     channelId: n.channel_id,
@@ -28,11 +28,11 @@ function j(e) {
             renderedContent: R,
             trailingIcon: j,
             leadingIcon: L
-        } = (0, T.f)(n, Z, s, b.messageContent, {
+        } = (0, C.f)(n, Z, s, b.messageContent, {
             trailingIconClass: b.messageContentTrailingIcon,
             leadingIconClass: b.messageContentLeadingIcon,
             iconSize: M.WW
-        }), P = (0, C.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(g.ZP, {
+        }), P = (0, g.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(I.ZP, {
             className: b.sticker,
             size: 128,
             sticker: e,
@@ -41,10 +41,10 @@ function j(e) {
     return (0, i.jsxs)(d.Clickable, {
         className: b.toast,
         onMouseEnter: () => {
-            I(!0);
+            x(!0);
         },
         onMouseLeave: () => {
-            I(!1);
+            x(!1);
         },
         onClick: S,
         children: [
@@ -116,7 +116,7 @@ function L(e) {
             let f = null !== (t = p.current) && void 0 !== t ? t : r;
             return {
                 toastsHidden: d,
-                toastMessages: (0, c.Wu)([I.Z], () => f.map(e => I.Z.getMessage(n, e)), [
+                toastMessages: (0, c.Wu)([x.Z], () => f.map(e => x.Z.getMessage(n, e)), [
                     n,
                     f
                 ]).filter(S.lm)

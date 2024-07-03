@@ -1,170 +1,170 @@
-i.d(n, {
+n.d(t, {
     L9: function () {
-        return L;
+        return R;
     },
     ZK: function () {
-        return M;
+        return O;
     },
     d4: function () {
-        return A;
+        return x;
     },
     dS: function () {
-        return y;
+        return C;
     },
     jY: function () {
-        return g;
+        return A;
     },
     q7: function () {
-        return v;
+        return S;
     },
     vZ: function () {
-        return S;
+        return g;
     }
-}), i(789020);
-var t = i(735250), o = i(470079), a = i(442837), r = i(993365), l = i(981729), c = i(481060), s = i(543651), d = i(394779), u = i(519320), f = i(592125), _ = i(52824), m = i(630388), I = i(591759), b = i(850908), h = i(524444), p = i(981631), C = i(689938), E = i(736984);
-function y(e) {
-    let n = e.item.originalItem;
+}), n(789020);
+var i = n(735250), a = n(470079), s = n(442837), l = n(993365), r = n(981729), o = n(481060), c = n(543651), d = n(394779), u = n(519320), _ = n(592125), E = n(52824), m = n(630388), I = n(591759), T = n(850908), h = n(524444), N = n(981631), p = n(689938), f = n(736984);
+function C(e) {
+    let t = e.item.originalItem;
     return (0, h.Yi)({
         ...e,
-        alt: n.description,
-        src: (0, _.q)({
-            proxyURL: n.proxy_url,
-            url: n.url
+        alt: t.description,
+        src: (0, E.q)({
+            proxyURL: t.proxy_url,
+            url: t.url
         }),
-        original: n.url,
-        placeholder: n.placeholder,
-        placeholderVersion: n.placeholder_version,
+        original: t.url,
+        placeholder: t.placeholder,
+        placeholderVersion: t.placeholder_version,
         renderForwardComponent: (0, d.s)(e.message, {
             type: 'attachment',
-            attachmentId: n.id
+            attachmentId: t.id
         })
-    });
-}
-function S(e) {
-    let n = e.item.originalItem, i = o.useCallback(() => {
-            var e;
-            return (0, m.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, p.J0y.IS_CLIP) ? (0, t.jsxs)(l.DY, {
-                text: C.Z.Messages.CLIPS_BETA_TAG_HOVER,
-                className: E.clipPill,
-                children: [
-                    (0, t.jsx)(c.ClipsIcon, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    }),
-                    (0, t.jsx)(r.x, {
-                        variant: 'text-xs/semibold',
-                        color: 'always-white',
-                        children: C.Z.Messages.CLIP_TAG
-                    })
-                ]
-            }) : null;
-        }, [n]), a = I.Z.toURLSafe(n.proxy_url);
-    return null == a ? null : (a.searchParams.append('format', 'jpeg'), (0, h.lV)({
-        ...e,
-        alt: n.description,
-        poster: a.toString(),
-        fileSize: n.size,
-        fileName: (0, b.Z)(n),
-        src: n.url,
-        placeholder: n.placeholder,
-        placeholderVersion: n.placeholder_version,
-        renderOverlayContent: i,
-        renderForwardComponent: (0, d.s)(e.message, {
-            type: 'attachment',
-            attachmentId: n.id
-        })
-    }));
-}
-function v(e) {
-    let n = e.item.originalItem;
-    return (0, h.hX)({
-        ...e,
-        fileSize: n.size,
-        fileName: (0, b.Z)(n),
-        src: n.url
     });
 }
 function g(e) {
-    let {
-            message: n,
-            item: i
-        } = e, t = i.originalItem, a = o.useCallback((e, i, o) => {
-            var a;
-            (0, u.tb)(n.id, null !== (a = t.duration_secs) && void 0 !== a ? a : null, i, n.author.id);
-        }, [
-            n,
-            t.duration_secs
-        ]), r = o.useCallback((e, i) => {
-            var o;
-            (0, u.EW)(n.id, null !== (o = t.duration_secs) && void 0 !== o ? o : null, e, n.author.id, i);
-        }, [
-            n,
-            t.duration_secs
-        ]), l = o.useCallback(e => {
-            var i;
-            (0, u.Np)(n.id, null !== (i = null == e ? void 0 : e.message) && void 0 !== i ? i : null);
-        }, [n]);
-    return (0, h.wj)({
+    let t = e.item.originalItem, n = a.useCallback(() => {
+            var e;
+            return (0, m.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(r.DY, {
+                text: p.Z.Messages.CLIPS_BETA_TAG_HOVER,
+                className: f.clipPill,
+                children: [
+                    (0, i.jsx)(o.ClipsIcon, {
+                        size: 'xs',
+                        color: 'currentColor'
+                    }),
+                    (0, i.jsx)(l.x, {
+                        variant: 'text-xs/semibold',
+                        color: 'always-white',
+                        children: p.Z.Messages.CLIP_TAG
+                    })
+                ]
+            }) : null;
+        }, [t]), s = I.Z.toURLSafe(t.proxy_url);
+    return null == s ? null : (s.searchParams.append('format', 'jpeg'), (0, h.lV)({
+        ...e,
+        alt: t.description,
+        poster: s.toString(),
+        fileSize: t.size,
+        fileName: (0, T.Z)(t),
+        src: t.url,
+        placeholder: t.placeholder,
+        placeholderVersion: t.placeholder_version,
+        renderOverlayContent: n,
+        renderForwardComponent: (0, d.s)(e.message, {
+            type: 'attachment',
+            attachmentId: t.id
+        })
+    }));
+}
+function S(e) {
+    let t = e.item.originalItem;
+    return (0, h.hX)({
         ...e,
         fileSize: t.size,
-        fileName: (0, b.Z)(t),
-        src: t.url,
-        durationSecs: t.duration_secs,
-        waveform: t.waveform,
-        onPlay: a,
-        onPause: r,
-        onError: l
+        fileName: (0, T.Z)(t),
+        src: t.url
     });
 }
 function A(e) {
-    let n = e.item.originalItem;
+    let {
+            message: t,
+            item: n
+        } = e, i = n.originalItem, s = a.useCallback((e, n, a) => {
+            var s;
+            (0, u.tb)(t.id, null !== (s = i.duration_secs) && void 0 !== s ? s : null, n, t.author.id);
+        }, [
+            t,
+            i.duration_secs
+        ]), l = a.useCallback((e, n) => {
+            var a;
+            (0, u.EW)(t.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, e, t.author.id, n);
+        }, [
+            t,
+            i.duration_secs
+        ]), r = a.useCallback(e => {
+            var n;
+            (0, u.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
+        }, [t]);
+    return (0, h.wj)({
+        ...e,
+        fileSize: i.size,
+        fileName: (0, T.Z)(i),
+        src: i.url,
+        durationSecs: i.duration_secs,
+        waveform: i.waveform,
+        onPlay: s,
+        onPause: l,
+        onError: r
+    });
+}
+function x(e) {
+    let t = e.item.originalItem;
     return (0, h.xi)({
         ...e,
-        url: n.url,
-        fileName: (0, b.Z)(n),
-        fileSize: n.size,
-        contentType: n.content_type
+        url: t.url,
+        fileName: (0, T.Z)(t),
+        fileSize: t.size,
+        contentType: t.content_type
     });
 }
-function M(e) {
-    let n = e.item.originalItem;
+function O(e) {
+    let t = e.item.originalItem;
     return (0, h.ur)({
         ...e,
-        url: n.url,
-        fileName: (0, b.Z)(n),
-        fileSize: n.size
+        url: t.url,
+        fileName: (0, T.Z)(t),
+        fileSize: t.size
     });
 }
-function L(e) {
+function R(e) {
     if ('CLIP' === e.item.type)
-        return (0, t.jsx)(x, {
+        return (0, i.jsx)(M, {
             attachment: e.item.originalItem,
             message: e.message
         });
     return null;
 }
-function x(e) {
-    var n;
+function M(e) {
+    var t;
     let {
-            attachment: i,
-            message: o
-        } = e, r = o.channel_id, l = (0, a.e7)([f.Z], () => {
+            attachment: n,
+            message: a
+        } = e, l = a.channel_id, r = (0, s.e7)([_.Z], () => {
             var e;
-            return null === (e = f.Z.getBasicChannel(r)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = _.Z.getBasicChannel(l)) || void 0 === e ? void 0 : e.guild_id;
         }), {
-            clip_created_at: c,
+            clip_created_at: o,
             clip_participants: d,
             title: u,
-            application: _
-        } = i;
-    return (0, t.jsx)(s.Z, {
-        createdAt: null != c ? Date.parse(c) : void 0,
-        participantIds: null !== (n = null == d ? void 0 : d.map(e => {
-            let {id: n} = e;
-            return n;
-        })) && void 0 !== n ? n : [],
-        applicationId: null == _ ? void 0 : _.id,
+            application: E
+        } = n;
+    return (0, i.jsx)(c.Z, {
+        createdAt: null != o ? Date.parse(o) : void 0,
+        participantIds: null !== (t = null == d ? void 0 : d.map(e => {
+            let {id: t} = e;
+            return t;
+        })) && void 0 !== t ? t : [],
+        applicationId: null == E ? void 0 : E.id,
         title: u,
-        guildId: l
+        guildId: r
     });
 }

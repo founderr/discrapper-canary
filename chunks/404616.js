@@ -21,7 +21,7 @@ n.d(t, {
         return eu;
     }
 }), n(47120);
-var i = n(735250), s = n(470079), o = n(120356), a = n.n(o), l = n(512722), r = n.n(l), c = n(913527), u = n.n(c), d = n(91192), h = n(442837), m = n(692547), p = n(481060), g = n(738619), f = n(393238), T = n(963374), _ = n(406432), v = n(169525), b = n(566006), E = n(255269), I = n(937889), x = n(443877), C = n(524444), R = n(287151), S = n(695346), N = n(433355), O = n(592125), Z = n(496675), j = n(699516), M = n(451478), A = n(18732), y = n(68588), P = n(512665), L = n(602623), w = n(55935), U = n(109434), k = n(456269), B = n(109590), D = n(660189), F = n(208970), V = n(73315), H = n(470623), G = n(196255), W = n(858543), z = n(265641), K = n(627896), Y = n(883728), J = n(981631), q = n(768760), X = n(689938), $ = n(346473), Q = n(530790);
+var i = n(735250), s = n(470079), o = n(120356), a = n.n(o), l = n(512722), r = n.n(l), c = n(913527), u = n.n(c), d = n(91192), h = n(442837), m = n(692547), p = n(481060), g = n(738619), f = n(393238), T = n(963374), _ = n(406432), v = n(169525), b = n(566006), E = n(255269), I = n(937889), x = n(443877), C = n(524444), R = n(287151), S = n(267128), N = n(695346), O = n(433355), Z = n(592125), j = n(496675), M = n(699516), A = n(451478), y = n(18732), P = n(68588), L = n(602623), w = n(55935), U = n(109434), k = n(456269), B = n(109590), D = n(660189), F = n(208970), V = n(73315), H = n(470623), G = n(196255), W = n(858543), z = n(265641), K = n(627896), Y = n(883728), J = n(981631), q = n(217702), X = n(689938), $ = n(346473), Q = n(153521);
 let ee = 72, et = 72;
 t.ZP = s.memo(function (e) {
     let {
@@ -42,9 +42,9 @@ t.ZP = s.memo(function (e) {
             let {
                     threadId: t,
                     overrideMedia: n
-                } = e, i = (0, h.e7)([O.Z], () => O.Z.getChannel(t));
+                } = e, i = (0, h.e7)([Z.Z], () => Z.Z.getChannel(t));
             r()(null != i, 'the thread should not be null here, a store must have missed an update');
-            let s = (0, h.e7)([N.ZP], () => N.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id), {firstMessage: o} = (0, B.cl)(i), {
+            let s = (0, h.e7)([O.ZP], () => O.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id), {firstMessage: o} = (0, B.cl)(i), {
                     content: a,
                     firstMedia: l
                 } = (0, k.mX)({ firstMessage: o }), {messageCountText: c} = (0, k.nP)(i);
@@ -84,7 +84,7 @@ t.ZP = s.memo(function (e) {
             goToThread: n,
             channel: m
         }), {
-            role: Z,
+            role: N,
             onFocus: j,
             ...M
         } = (0, d.JA)(t), {
@@ -225,7 +225,7 @@ let es = s.memo(function (e) {
             content: s,
             hasMediaAttachment: o,
             hasUnreads: l
-        } = e, r = (0, h.e7)([j.Z], () => null != t && j.Z.isBlockedForMessage(t)), c = (0, h.e7)([D.Z], () => D.Z.isLoading(n.id)), u = (0, h.e7)([Z.Z], () => Z.Z.can(J.Plq.MANAGE_MESSAGES, n)), d = S.cC.useSetting(), m = null;
+        } = e, r = (0, h.e7)([M.Z], () => null != t && M.Z.isBlockedForMessage(t)), c = (0, h.e7)([D.Z], () => D.Z.isLoading(n.id)), u = (0, h.e7)([j.Z], () => j.Z.can(J.Plq.MANAGE_MESSAGES, n)), d = N.cC.useSetting(), m = null;
     if (r)
         m = (0, i.jsx)(p.Text, {
             className: $.blockedMessage,
@@ -240,7 +240,7 @@ let es = s.memo(function (e) {
         } = null == t ? {
             contentPlaceholder: null,
             renderedContent: null
-        } : (0, P.f)(t, s, r, a()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
+        } : (0, S.f)(t, s, r, a()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
             leadingIconClass: $.messageContentLeadingIcon,
             trailingIconClass: $.messageContentTrailingIcon,
             iconSize: q.WW
@@ -257,7 +257,7 @@ let es = s.memo(function (e) {
             children: null == t ? c ? null : X.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED : e
         });
     }
-    return (0, i.jsxs)(y.a.Provider, {
+    return (0, i.jsxs)(P.a.Provider, {
         value: (0, E.Z)(d, u),
         children: [
             !r && (0, i.jsx)(G.Z, {
@@ -344,7 +344,7 @@ function ea(e) {
                     height: n
                 })
             }),
-            'number' == typeof o ? (0, i.jsx)(A.Z, {
+            'number' == typeof o ? (0, i.jsx)(y.Z, {
                 value: o,
                 digitWidth: 9,
                 className: $.messageCountText
@@ -369,7 +369,7 @@ function el(e) {
     let {
             firstMessage: t,
             channel: n
-        } = e, s = (0, h.e7)([O.Z], () => O.Z.getChannel(n.parent_id)), o = (0, k.Bs)(s), {
+        } = e, s = (0, h.e7)([Z.Z], () => Z.Z.getChannel(n.parent_id)), o = (0, k.Bs)(s), {
             disableReactionCreates: a,
             isLurking: l,
             isPendingMember: r
@@ -452,7 +452,7 @@ function ed(e) {
     let t, n, {
             channel: s,
             firstMedia: o
-        } = e, l = (0, h.e7)([M.Z], () => M.Z.isFocused()), r = (0, _.d$)(o.src), c = S.QK.useSetting(), [u, d] = (0, v.hL)({
+        } = e, l = (0, h.e7)([A.Z], () => A.Z.isFocused()), r = (0, _.d$)(o.src), c = N.QK.useSetting(), [u, d] = (0, v.hL)({
             media: o,
             channel: s
         }), m = (0, v.MC)(d), {

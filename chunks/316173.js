@@ -32,7 +32,7 @@ t.Z = () => {
         className: r()(h.devBanner, h.staging),
         children: [
             (0, i.jsx)(_.Z, { className: h.icon }),
-            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '307265' }),
+            E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '307330' }),
             (0, i.jsx)(g, {})
         ]
     }) : null;

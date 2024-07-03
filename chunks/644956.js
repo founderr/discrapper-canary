@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(735250);
 n(470079);
-var i = n(120356), a = n.n(i), o = n(392711), s = n.n(o), l = n(866442), u = n(442837), c = n(481060), d = n(239091), _ = n(276264), E = n(607070), f = n(100527), h = n(906732), p = n(818083), m = n(480608), I = n(124072), T = n(484459), g = n(103575), S = n(592125), A = n(271383), N = n(430824), v = n(594174), O = n(285952), R = n(151827), C = n(689938), y = n(549805), D = n(530790);
+var i = n(120356), a = n.n(i), o = n(392711), s = n.n(o), l = n(866442), u = n(442837), c = n(481060), d = n(239091), _ = n(276264), E = n(607070), f = n(100527), h = n(906732), p = n(818083), m = n(480608), I = n(124072), T = n(484459), g = n(103575), S = n(592125), A = n(271383), N = n(430824), v = n(594174), O = n(285952), R = n(151827), C = n(689938), y = n(153521), D = n(549805);
 let L = (0, p.B)({
     kind: 'user',
     id: '2021-07_role_popout',
@@ -27,13 +27,13 @@ function b(e) {
             children: M,
             inlinePreview: P = !1
         } = e, {analyticsLocations: U} = (0, h.ZP)(f.Z.ROLE_MENTION), w = (0, u.e7)([E.Z], () => E.Z.roleStyle), x = null != t && 0 !== t && !P, G = x && 'dot' === w, k = e => (0, r.jsxs)(I.Z, {
-            className: a()(D.roleMention),
+            className: a()(y.roleMention),
             color: 'username' === w && x ? t : null,
             ...e,
             children: [
                 G && (0, r.jsx)(c.RoleDot, {
                     color: (0, l.Rf)(t),
-                    className: y.roleDot,
+                    className: D.roleDot,
                     background: !1,
                     tooltip: !1
                 }),
@@ -105,13 +105,13 @@ function b(e) {
                         }, i.id);
                     }).value();
                 return (0, r.jsx)(O.Z, {
-                    className: D.rolePopout,
+                    className: y.rolePopout,
                     ...e,
                     children: (0, r.jsxs)(c.Scroller, {
-                        className: D.roleScroller,
+                        className: y.roleScroller,
                         children: [
                             (0, r.jsx)(R.Z, {
-                                className: D.roleHeader,
+                                className: y.roleHeader,
                                 'aria-label': C.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                     title: u.name,
                                     count: E.length

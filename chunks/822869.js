@@ -1,33 +1,33 @@
-i.d(n, {
+n.d(t, {
     Lb: function () {
-        return a;
+        return s;
     },
     gP: function () {
-        return l;
+        return r;
     },
     sF: function () {
-        return r;
+        return l;
     }
 });
-var t = i(626135), o = i(981631);
-function a(e, n, i) {
-    t.default.track(o.rMx.FORWARD_MESSAGE_STARTED, {
+var i = n(626135), a = n(981631);
+function s(e, t, n) {
+    i.default.track(a.rMx.FORWARD_MESSAGE_STARTED, {
         channel_id: e,
-        message_id: n,
-        source: i
+        message_id: t,
+        source: n
     });
 }
-function r(e, n) {
-    t.default.track(o.rMx.FORWARD_MESSAGE_CANCELLED, {
+function l(e, t) {
+    i.default.track(a.rMx.FORWARD_MESSAGE_CANCELLED, {
         channel_id: e,
-        message_id: n
+        message_id: t
     });
 }
-function l(e, n, i, a) {
-    t.default.track(o.rMx.FORWARD_MESSAGE_SENT, {
+function r(e, t, n, s) {
+    i.default.track(a.rMx.FORWARD_MESSAGE_SENT, {
         channel_id: e,
-        message_id: n,
-        has_error: i,
-        num_destinations: a
+        message_id: t,
+        has_error: n,
+        num_destinations: s
     });
 }

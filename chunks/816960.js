@@ -3,7 +3,7 @@ t.r(s), t.d(s, {
         return M;
     }
 });
-var a = t(735250), n = t(470079), o = t(286379), i = t(399606), d = t(481060), c = t(92114), r = t(797614), l = t(9156), _ = t(132338), N = t(621600), E = t(359119), R = t(473092), u = t(222914), T = t(134612), A = t(981631), m = t(689938), x = t(777632);
+var a = t(735250), n = t(470079), o = t(286379), i = t(399606), d = t(481060), c = t(92114), r = t(661824), l = t(797614), _ = t(9156), N = t(621600), E = t(359119), R = t(473092), u = t(222914), T = t(134612), A = t(981631), m = t(689938), x = t(777632);
 function M(e) {
     let {
             transitionState: s,
@@ -21,13 +21,13 @@ function M(e) {
             warningId: h,
             senderId: g,
             warningType: E.pj.STRANGER_DANGER
-        }), r.Z.increment({ name: o.V.SAFETY_WARNING_MODAL_VIEW });
+        }), l.Z.increment({ name: o.V.SAFETY_WARNING_MODAL_VIEW });
     }, [
         S,
         h,
         g
     ]);
-    let G = (0, i.e7)([l.ZP], () => l.ZP.isChannelMuted(null, S));
+    let G = (0, i.e7)([_.ZP], () => _.ZP.isChannelMuted(null, S));
     return (0, a.jsx)(d.ModalRoot, {
         transitionState: s,
         children: (0, a.jsxs)(d.Scroller, {
@@ -142,7 +142,7 @@ function M(e) {
                                                 })
                                             ]
                                         }),
-                                        (0, a.jsx)(_.Z, {}),
+                                        (0, a.jsx)(r.Z, {}),
                                         (0, a.jsxs)('div', {
                                             className: x.safetyAction,
                                             children: [

@@ -1773,10 +1773,10 @@ class t3 {
         }), this.pendingCanvasMutations.delete(t);
     }
 }
-function t5(t) {
+function t6(t) {
     return Object.assign(Object.assign({}, t), { timestamp: Date.now() });
 }
-let t6 = {
+let t5 = {
     map: {},
     getId: t => t && t.__sn ? t.__sn.id : -1,
     getNode(t) {
@@ -1890,14 +1890,14 @@ function t4(t = {}) {
         }
     };
     let k = t => {
-            a(t5({
+            a(t6({
                 type: N.IncrementalSnapshot,
                 data: Object.assign({ source: d.Mutation }, t)
             }));
-        }, V = t => a(t5({
+        }, V = t => a(t6({
             type: N.IncrementalSnapshot,
             data: Object.assign({ source: d.Scroll }, t)
-        })), x = t => a(t5({
+        })), x = t => a(t6({
             type: N.IncrementalSnapshot,
             data: Object.assign({ source: d.CanvasMutation }, t)
         })), F = new tX({ mutationCb: k }), W = new t3({
@@ -1907,7 +1907,7 @@ function t4(t = {}) {
             blockClass: o,
             blockSelector: E,
             unblockSelector: s,
-            mirror: t6
+            mirror: t5
         }), X = new tj({
             mutationCb: k,
             scrollCb: V,
@@ -1933,11 +1933,11 @@ function t4(t = {}) {
                 iframeManager: F,
                 canvasManager: W
             },
-            mirror: t6
+            mirror: t5
         });
     i = (t = !1) => {
         var e, r, n, _;
-        a(t5({
+        a(t6({
             type: N.Meta,
             data: {
                 href: window.location.href,
@@ -2053,7 +2053,7 @@ function t4(t = {}) {
         });
         if (!i)
             return console.warn('Failed to snapshot the document');
-        t6.map = c, a(t5({
+        t5.map = c, a(t6({
             type: N.FullSnapshot,
             data: {
                 node: i,
@@ -2067,7 +2067,7 @@ function t4(t = {}) {
     try {
         let t = [];
         t.push(tu('DOMContentLoaded', () => {
-            a(t5({
+            a(t6({
                 type: N.DomContentLoaded,
                 data: {}
             }));
@@ -2077,40 +2077,40 @@ function t4(t = {}) {
             return tb(tx)({
                 onMutation: B,
                 mutationCb: k,
-                mousemoveCb: (t, e) => a(t5({
+                mousemoveCb: (t, e) => a(t6({
                     type: N.IncrementalSnapshot,
                     data: {
                         source: e,
                         positions: t
                     }
                 })),
-                mouseInteractionCb: t => a(t5({
+                mouseInteractionCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.MouseInteraction }, t)
                 })),
                 scrollCb: V,
-                viewportResizeCb: t => a(t5({
+                viewportResizeCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.ViewportResize }, t)
                 })),
-                inputCb: t => a(t5({
+                inputCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.Input }, t)
                 })),
-                mediaInteractionCb: t => a(t5({
+                mediaInteractionCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.MediaInteraction }, t)
                 })),
-                styleSheetRuleCb: t => a(t5({
+                styleSheetRuleCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.StyleSheetRule }, t)
                 })),
-                styleDeclarationCb: t => a(t5({
+                styleDeclarationCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.StyleDeclaration }, t)
                 })),
                 canvasMutationCb: x,
-                fontCb: t => a(t5({
+                fontCb: t => a(t6({
                     type: N.IncrementalSnapshot,
                     data: Object.assign({ source: d.Font }, t)
                 })),
@@ -2136,14 +2136,14 @@ function t4(t = {}) {
                 blockSelector: E,
                 unblockSelector: s,
                 slimDOMOptions: H,
-                mirror: t6,
+                mirror: t5,
                 iframeManager: F,
                 shadowDomManager: X,
                 canvasManager: W,
                 plugins: (null === (e = null == b ? void 0 : b.filter(t => t.observer)) || void 0 === e ? void 0 : e.map(t => ({
                     observer: t.observer,
                     options: t.options,
-                    callback: e => a(t5({
+                    callback: e => a(t6({
                         type: N.Plugin,
                         data: {
                             plugin: t.name,
@@ -2164,7 +2164,7 @@ function t4(t = {}) {
             i(), t.push(e(document));
         };
         return 'interactive' === document.readyState || 'complete' === document.readyState ? r() : t.push(tu('load', () => {
-            a(t5({
+            a(t6({
                 type: N.Load,
                 data: {}
             })), r();
@@ -2181,7 +2181,7 @@ function t8(t) {
 t4.addCustomEvent = (t, e) => {
     if (!a)
         throw Error('please add custom event after start recording');
-    a(t5({
+    a(t6({
         type: N.Custom,
         data: {
             tag: t,
@@ -2194,7 +2194,7 @@ t4.addCustomEvent = (t, e) => {
     if (!i)
         throw Error('please take full snapshot after start recording');
     i(t);
-}, t4.mirror = t6;
+}, t4.mirror = t5;
 function t7(t, e) {
     if ('sentry.transaction' !== e.category)
         [
@@ -3515,7 +3515,7 @@ class e3 extends Error {
         super(`Transport returned status code ${ t }`);
     }
 }
-async function e5(t, e = {
+async function e6(t, e = {
     count: 0,
     interval: 5000
 }) {
@@ -3540,7 +3540,7 @@ async function e5(t, e = {
             return e.interval *= ++e.count, new Promise((r, n) => {
                 setTimeout(async () => {
                     try {
-                        await e5(t, e), r(!0);
+                        await e6(t, e), r(!0);
                     } catch (t) {
                         n(t);
                     }
@@ -3548,7 +3548,7 @@ async function e5(t, e = {
             });
         }
 }
-let e6 = '__THROTTLED';
+let e5 = '__THROTTLED';
 class e4 {
     __init() {
         this.eventBuffer = null;
@@ -3626,7 +3626,7 @@ class e4 {
                 let r = Math.floor(Date.now() / 1000);
                 if (_(r), a() >= 300) {
                     let t = i;
-                    return i = !0, t ? '__SKIPPED' : e6;
+                    return i = !0, t ? '__SKIPPED' : e5;
                 }
                 i = !1;
                 let o = n.get(r) || 0;
@@ -3843,7 +3843,7 @@ class e4 {
     }
     throttledAddEvent(t, e) {
         let r = this._throttledAddEvent(t, e);
-        if (r === e6) {
+        if (r === e5) {
             let t = e_({ category: 'replay.throttled' });
             this.addUpdate(() => {
                 ef(this, {
@@ -4254,7 +4254,7 @@ class e4 {
             try {
                 this._updateInitialTimestampFromEventBuffer();
                 let t = await this.eventBuffer.finish(), e = this.session.id, r = this._popEventContext(), n = this.session.segmentId++;
-                this._maybeSaveSession(), await e5({
+                this._maybeSaveSession(), await e6({
                     replayId: e,
                     recordingData: t,
                     segmentId: n,

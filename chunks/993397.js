@@ -1,5 +1,5 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(481060), o = n(998951), c = n(702346), d = n(534469), u = n(511010), h = n(981631), p = n(689938), m = n(985359), _ = n(848509);
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(481060), o = n(702346), c = n(492593), d = n(534469), u = n(511010), h = n(981631), p = n(689938), m = n(985359), _ = n(848509);
 function f(e) {
     let {
         expanded: t,
@@ -8,10 +8,10 @@ function f(e) {
         compact: s,
         collapsedReason: l
     } = e;
-    return (0, i.jsx)(o.Z, {
+    return (0, i.jsx)(c.Z, {
         compact: s,
         role: 'group',
-        childrenMessageContent: (0, i.jsx)(c.Z, {
+        childrenMessageContent: (0, i.jsx)(o.Z, {
             compact: s,
             className: m.blockedSystemMessage,
             iconNode: (0, i.jsx)(r.CloseSmallIcon, {

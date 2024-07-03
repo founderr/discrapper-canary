@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     }
 });
-var i = n(735250), a = n(470079), s = n(442837), l = n(25209), r = n(39154), o = n(35125), c = n(905405), d = n(628238), u = n(499401), h = n(693912), p = n(869765), m = n(699516), _ = n(512665), f = n(352736), E = n(937889), C = n(739566), g = n(507418), I = n(348238), x = n(981631), T = n(689938);
+var i = n(735250), a = n(470079), s = n(442837), l = n(25209), r = n(39154), o = n(35125), c = n(905405), d = n(628238), u = n(499401), h = n(693912), p = n(869765), m = n(699516), _ = n(352736), f = n(937889), E = n(739566), C = n(267128), g = n(507418), I = n(348238), x = n(981631), T = n(689938);
 let N = a.memo(function (e) {
     var t;
     let {
@@ -14,13 +14,13 @@ let N = a.memo(function (e) {
             referencedUsernameProfile: Z,
             referencedAvatarProfile: A,
             setPopout: M
-        } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, C.Uj)(b), j = (0, c.p)(), L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+        } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
             if (null == b)
                 return null;
             let e = (0, r.Z)(b);
             if (e.type === x.uaV.USER_JOIN) {
-                let t = f.Z.getWelcomeMessageKind(v.guild_id);
-                return (0, l.Rp)(f.Z.getSystemMessageUserJoin(e.id, t).astFormat({
+                let t = _.Z.getWelcomeMessageKind(v.guild_id);
+                return (0, l.Rp)(_.Z.getSystemMessageUserJoin(e.id, t).astFormat({
                     username: null != R ? R.nick : e.author.username,
                     usernameHook: e => e
                 }));
@@ -64,7 +64,7 @@ let N = a.memo(function (e) {
                         allowHeading: L,
                         allowList: L
                     };
-                return (0, E.ZP)(e, n).content;
+                return (0, f.ZP)(e, n).content;
             }
             return null;
         }, [
@@ -76,8 +76,8 @@ let N = a.memo(function (e) {
         ]), O = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
             referencedUsernameProfile: !1,
             referencedAvatarProfile: !1
-        }), [M]), B = (0, C.Uj)(n);
-    return (0, i.jsx)(_.Z, {
+        }), [M]), B = (0, E.Uj)(n);
+    return (0, i.jsx)(C.Z, {
         repliedAuthor: R,
         baseMessage: n,
         channel: v,

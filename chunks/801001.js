@@ -3,18 +3,18 @@ t.r(n), t.d(n, {
         return M;
     }
 }), t(47120);
-var s = t(735250), o = t(470079), i = t(392711), l = t.n(i), a = t(442837), r = t(481060), d = t(706371), c = t(563115), u = t(984933), m = t(430824), N = t(153124), _ = t(132338), O = t(823379), h = t(402148), I = t(570961), v = t(208665), E = t(460117), x = t(290511), j = t(689938), R = t(748731);
+var s = t(735250), o = t(470079), i = t(392711), l = t.n(i), a = t(442837), r = t(481060), d = t(706371), c = t(563115), u = t(661824), m = t(984933), N = t(430824), _ = t(153124), O = t(823379), h = t(402148), I = t(570961), v = t(208665), E = t(460117), x = t(290511), j = t(689938), R = t(748731);
 function M(e) {
     let {
             transitionState: n,
             onClose: t,
             onSave: i,
-            onDelete: m,
+            onDelete: N,
             option: O,
             guild: h,
             prompt: M,
             index: T
-        } = e, g = (0, N.Dt)(), p = (0, a.e7)([u.ZP], () => u.ZP.getDefaultChannel(h.id)), [B, A] = o.useState(() => {
+        } = e, g = (0, _.Dt)(), p = (0, a.e7)([m.ZP], () => m.ZP.getDefaultChannel(h.id)), [B, A] = o.useState(() => {
             var e;
             return null !== (e = null == O ? void 0 : O.emoji) && void 0 !== e ? e : null;
         }), [C, L] = o.useState(() => {
@@ -77,7 +77,7 @@ function M(e) {
                         onChange: e => f(e),
                         maxLength: x.NO
                     }),
-                    (0, s.jsx)(_.Z, { className: R.divider }),
+                    (0, s.jsx)(u.Z, { className: R.divider }),
                     (0, s.jsx)(r.Heading, {
                         className: R.rolesHeader,
                         variant: 'heading-md/semibold',
@@ -105,7 +105,7 @@ function M(e) {
                         guild: h,
                         roleIds: H
                     }),
-                    (0, s.jsx)(_.Z, { className: R.divider }),
+                    (0, s.jsx)(u.Z, { className: R.divider }),
                     (0, s.jsxs)('div', {
                         className: R.emojiQuestionContainer,
                         children: [
@@ -143,7 +143,7 @@ function M(e) {
                                 look: r.Button.Looks.LINK,
                                 color: r.Button.Colors.RED,
                                 onClick: () => {
-                                    m(), t();
+                                    N(), t();
                                 },
                                 children: j.Z.Messages.REMOVE
                             })
@@ -190,7 +190,7 @@ function P(e) {
     let {
             guild: n,
             roleIds: t
-        } = e, o = (0, a.e7)([m.Z], () => m.Z.getRoles(n.id)), i = Array.from(t).map(e => o[e]).filter(O.lm).find(h.F);
+        } = e, o = (0, a.e7)([N.Z], () => N.Z.getRoles(n.id)), i = Array.from(t).map(e => o[e]).filter(O.lm).find(h.F);
     return null == i ? null : (0, s.jsx)('div', {
         className: R.notice,
         children: (0, s.jsxs)('div', {

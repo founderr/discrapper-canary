@@ -1,12 +1,12 @@
-i.d(n, {
+n.d(t, {
     q: function () {
-        return t;
+        return l;
     }
 });
-function t(e) {
+function l(e) {
     let {
-        proxyURL: n,
-        url: i
+        proxyURL: t,
+        url: n
     } = e;
-    return null != n && '' !== n ? n : i;
+    return null != t && '' !== t ? t : n;
 }

@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     }
 });
-var i = n(735250), a = n(470079), s = n(793030), l = n(442837), r = n(902704), o = n(692547), c = n(481060), d = n(356264), u = n(628238), _ = n(25015), E = n(438075), m = n(695346), I = n(592125), T = n(906467), h = n(430824), N = n(496675), p = n(699516), f = n(594174), C = n(113039), g = n(100604), S = n(694784), A = n(39154), x = n(689938), O = n(309243);
+var i = n(735250), a = n(470079), s = n(793030), l = n(442837), r = n(902704), o = n(692547), c = n(481060), d = n(356264), u = n(628238), _ = n(930282), E = n(25015), m = n(438075), I = n(695346), T = n(592125), h = n(906467), N = n(430824), p = n(496675), f = n(699516), C = n(594174), g = n(100604), S = n(694784), A = n(39154), x = n(689938), O = n(309243);
 function R() {
     return (0, i.jsxs)('div', {
         className: O.headerContainer,
@@ -32,13 +32,13 @@ function M(e) {
             n,
             u
         ]), E = (0, l.e7)([
-            I.Z,
-            f.default,
+            T.Z,
+            C.default,
+            f.Z,
             p.Z,
             N.Z,
-            h.Z,
             d.Z
-        ], () => _.getForwardInfo(I.Z, f.default, p.Z, N.Z, h.Z, d.Z).footerInfo, [_], r.Z), m = a.useCallback(() => {
+        ], () => _.getForwardInfo(T.Z, C.default, f.Z, p.Z, N.Z, d.Z).footerInfo, [_], r.Z), m = a.useCallback(() => {
             (0, S.Z)(t);
         }, [t]);
     return null == E ? null : (0, i.jsxs)(c.Clickable, {
@@ -72,19 +72,19 @@ function v(e) {
         } = e, o = a.useMemo(() => (0, A.Z)(n, s), [
             n,
             s
-        ]), c = m.RS.useSetting(), d = m.NA.useSetting(), h = (0, l.e7)([T.Z], () => T.Z.isDeveloper), N = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-            content: p,
-            hasSpoilerEmbeds: f
-        } = (0, _.Z)(o, {
+        ]), c = I.RS.useSetting(), d = I.NA.useSetting(), N = (0, l.e7)([h.Z], () => h.Z.isDeveloper), p = (0, u.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+            content: f,
+            hasSpoilerEmbeds: C
+        } = (0, E.Z)(o, {
             hideSimpleEmbedContent: c && d,
             isInteracting: !1,
             formatInline: !1,
-            allowList: N,
-            allowHeading: N,
+            allowList: p,
+            allowHeading: p,
             allowLinks: !0,
-            allowDevLinks: h,
+            allowDevLinks: N,
             previewLinkTarget: !0
-        }), g = (0, l.e7)([I.Z], () => I.Z.getChannel(n.channel_id)), S = m.jU.useSetting();
+        }), g = (0, l.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), S = I.jU.useSetting();
     return null == g ? null : (0, i.jsxs)('div', {
         className: O.container,
         children: [
@@ -93,17 +93,17 @@ function v(e) {
                 className: O.content,
                 children: [
                     (0, i.jsx)(R, {}),
-                    (0, i.jsx)(C.ZP, {
+                    (0, i.jsx)(_.ZP, {
                         message: o,
-                        content: p
+                        content: f
                     }),
-                    (0, E.Z)({
+                    (0, m.Z)({
                         channelMessageProps: {
                             message: o,
                             channel: g,
                             compact: S
                         },
-                        hasSpoilerEmbeds: f,
+                        hasSpoilerEmbeds: C,
                         isInteracting: !1,
                         isMessageSnapshot: !0
                     }),

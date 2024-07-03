@@ -1,30 +1,30 @@
 i.d(n, {
     Z: function () {
-        return c;
+        return l;
     }
 });
-var t = i(735250), o = i(470079), a = i(778947), r = i(901461);
-let l = o.memo(a.ZP);
-function c(e) {
+var t = i(735250), o = i(470079), a = i(901461), c = i(464891);
+let r = o.memo(c.ZP);
+function l(e) {
     let {
         message: n,
         channel: i,
         author: o,
-        compact: a,
-        animateAvatar: c,
+        compact: c,
+        animateAvatar: l,
         guildId: s,
         isGroupStart: d = !0,
         roleIcon: u,
-        hideTimestamp: f
+        hideTimestamp: _
     } = e;
-    return !(0, r.Z)(n) && (d || a) ? (0, t.jsx)(l, {
+    return !(0, a.Z)(n) && (d || c) ? (0, t.jsx)(r, {
         message: n,
         channel: i,
         author: o,
         guildId: s,
-        compact: a,
-        animate: c,
+        compact: c,
+        animate: l,
         roleIcon: u,
-        hideTimestamp: f
+        hideTimestamp: _
     }) : void 0;
 }

@@ -126,9 +126,9 @@ let h = e => {
             onClick: () => {
                 (0, o.openModalLazy)(async () => {
                     let {default: e} = await Promise.all([
-                        n.e('58286'),
+                        n.e('46097'),
                         n.e('18831'),
-                        n.e('97997')
+                        n.e('55642')
                     ]).then(n.bind(n, 41164));
                     return t => (0, i.jsx)(e, {
                         classificationId: s,
