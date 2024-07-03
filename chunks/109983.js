@@ -1,21 +1,21 @@
 s.d(t, {
     Z: function () {
-        return o;
+        return i;
     }
 });
 var a = s(735250);
 s(470079);
-var n = s(481060), l = s(22101), i = s(216019);
-function o(e) {
+var n = s(481060), l = s(22101), o = s(216019);
+function i(e) {
     let {
         icon: t,
         message: s,
-        onClick: o,
+        onClick: i,
         autoFocus: r
     } = e;
     return (0, a.jsxs)('button', {
         className: l.container,
-        onClick: o,
+        onClick: i,
         autoFocus: r,
         children: [
             (0, a.jsx)('img', {
@@ -31,7 +31,7 @@ function o(e) {
             (0, a.jsx)('img', {
                 className: l.arrow,
                 alt: '',
-                src: i
+                src: o
             })
         ]
     });

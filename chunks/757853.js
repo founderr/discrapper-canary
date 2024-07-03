@@ -3,7 +3,7 @@ n.d(t, {
         return F;
     }
 });
-var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(913527), c = n.n(r), o = n(91192), u = n(442837), d = n(481060), _ = n(700582), h = n(724757), E = n(212819), f = n(933557), S = n(266076), g = n(448486), I = n(987509), A = n(592125), p = n(430824), m = n(158776), b = n(306680), C = n(699516), L = n(594174), N = n(104175), T = n(55935), Z = n(823379), y = n(51144), x = n(784384), v = n(490897), R = n(803519);
+var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(913527), c = n.n(r), o = n(91192), u = n(442837), d = n(481060), _ = n(700582), E = n(724757), h = n(212819), f = n(933557), S = n(266076), g = n(448486), I = n(987509), A = n(592125), p = n(430824), m = n(158776), b = n(306680), C = n(699516), L = n(594174), N = n(104175), T = n(55935), Z = n(823379), y = n(51144), x = n(784384), v = n(490897), R = n(803519);
 function M(e) {
     let {
             destination: t,
@@ -13,8 +13,8 @@ function M(e) {
             selected: c,
             disabled: u,
             onPressDestination: _,
-            'aria-setsize': h,
-            'aria-posinset': E
+            'aria-setsize': E,
+            'aria-posinset': h
         } = e, f = a.useCallback(() => {
             null == _ || _(t);
         }, [
@@ -25,8 +25,8 @@ function M(e) {
         className: s()(R.destinationRow, { [R.disabled]: u }),
         onClick: u ? void 0 : f,
         'aria-selected': c,
-        'aria-setsize': h,
-        'aria-posinset': E,
+        'aria-setsize': E,
+        'aria-posinset': h,
         ...S,
         children: [
             (0, l.jsxs)('div', {
@@ -66,7 +66,7 @@ function M(e) {
         ]
     });
 }
-function P(e) {
+function D(e) {
     let {
             user: t,
             subLabel: n,
@@ -84,7 +84,7 @@ function P(e) {
         subLabel: null != n ? n : s
     });
 }
-function D(e) {
+function P(e) {
     let {
             channel: t,
             subLabel: n,
@@ -182,35 +182,35 @@ function F(e) {
                 type: o,
                 record: u
             } = t[s];
-            if (o === E.h8.HEADER)
+            if (o === h.h8.HEADER)
                 return;
-            let d = o === E.h8.USER ? {
+            let d = o === h.h8.USER ? {
                     type: 'user',
                     id: u.id
                 } : {
                     type: 'channel',
                     id: u.id
-                }, _ = (0, I.hC)(d), h = (0, x.H)(n, i, u), f = S.includes(_), g = {
+                }, _ = (0, I.hC)(d), E = (0, x.H)(n, i, u), f = S.includes(_), g = {
                     key: _,
                     destination: d,
-                    subLabel: null != h ? h.label : void 0,
-                    disabled: c && !f || null != h,
+                    subLabel: null != E ? E.label : void 0,
+                    disabled: c && !f || null != E,
                     selected: f,
                     onPressDestination: r,
                     'aria-posinset': s + 1,
                     'aria-setsize': t.length
                 };
-            if (o === E.h8.USER)
-                return (0, l.jsx)(P, {
+            if (o === h.h8.USER)
+                return (0, l.jsx)(D, {
                     user: u,
                     ...g
                 });
-            if (o === E.h8.GROUP_DM)
-                return (0, l.jsx)(D, {
+            if (o === h.h8.GROUP_DM)
+                return (0, l.jsx)(P, {
                     channel: u,
                     ...g
                 });
-            if (o === E.h8.TEXT_CHANNEL || o === E.h8.VOICE_CHANNEL)
+            if (o === h.h8.TEXT_CHANNEL || o === h.h8.VOICE_CHANNEL)
                 return (0, l.jsx)(O, {
                     channel: u,
                     ...g
@@ -224,7 +224,7 @@ function F(e) {
             i,
             t,
             S
-        ]), A = a.useRef(null), p = (0, h.Z)('forward-modal', A);
+        ]), A = a.useRef(null), p = (0, E.Z)('forward-modal', A);
     return (0, l.jsx)(o.bG, {
         navigator: p,
         children: (0, l.jsx)(o.SJ, {

@@ -3,7 +3,7 @@ n.d(t, {
         return eo;
     }
 }), n(757143), n(47120), n(627341);
-var s, r = n(735250), i = n(470079), a = n(120356), l = n.n(a), o = n(593473), c = n(278074), u = n(990547), d = n(442837), h = n(846519), _ = n(481060), E = n(893776), g = n(899370), p = n(224841), f = n(13430), I = n(213609), m = n(882037), N = n(201207), T = n(481230), x = n(388905), A = n(853268), C = n(639946), S = n(616952), v = n(792766), O = n(692483), Z = n(100159), R = n(473855), b = n(726745), D = n(929809), L = n(541692), M = n(986197), P = n(135200), j = n(219496), y = n(794099), G = n(807369), B = n(180529), U = n(108427), k = n(314897), F = n(480294), w = n(896797), H = n(626135), V = n(585483), z = n(70956), K = n(624138), W = n(481153), Y = n(588705), q = n(163671), J = n(981631), X = n(355142), Q = n(188785), $ = n(701476), ee = n(801461), et = n(689938), en = n(666157), es = n(549856);
+var s, r = n(735250), i = n(470079), a = n(120356), l = n.n(a), o = n(593473), c = n(278074), u = n(990547), d = n(442837), h = n(846519), _ = n(481060), E = n(893776), g = n(899370), p = n(224841), f = n(13430), I = n(213609), m = n(882037), N = n(201207), T = n(481230), x = n(388905), A = n(853268), C = n(639946), S = n(616952), O = n(792766), v = n(692483), Z = n(100159), R = n(473855), b = n(726745), D = n(929809), L = n(541692), M = n(986197), P = n(135200), j = n(219496), y = n(794099), G = n(807369), B = n(180529), U = n(108427), k = n(314897), F = n(480294), w = n(896797), H = n(626135), V = n(585483), z = n(70956), K = n(624138), W = n(481153), Y = n(588705), q = n(163671), J = n(981631), X = n(355142), Q = n(188785), $ = n(701476), ee = n(801461), et = n(689938), en = n(666157), es = n(549856);
 function er(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -99,7 +99,7 @@ class el extends (s = i.PureComponent) {
                 onRegister: c,
                 usernameSuggestion: u,
                 isMobileWebInviteRegistration: d
-            } = this.props, h = null != a ? a.code : null, _ = null != o ? o.skuId : null, E = m.MD.getState(), g = (0, K.Ew)(u) ? null : t === u, p = Q.a ? await (0, O.K)(t) : t, f = Q.a ? await (0, O.K)(n) : n;
+            } = this.props, h = null != a ? a.code : null, _ = null != o ? o.skuId : null, E = m.MD.getState(), g = (0, K.Ew)(u) ? null : t === u, p = Q.a ? await (0, v.K)(t) : t, f = Q.a ? await (0, v.K)(n) : n;
         V.S.dispatch(J.CkL.WAVE_EMPHASIZE);
         try {
             d || null == a ? await (0, T.R$)({
@@ -218,7 +218,7 @@ class el extends (s = i.PureComponent) {
     }
     renderInviteHeader() {
         let {invite: e} = this.props;
-        return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, r.jsx)(v.Z, {
+        return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, r.jsx)(O.Z, {
             stageInstance: e.stage_instance,
             guild: e.guild
         }) : (null == e ? void 0 : e.guild_scheduled_event) != null ? (0, r.jsx)(C.r, {
@@ -320,7 +320,7 @@ class el extends (s = i.PureComponent) {
                 }),
                 null != e && l ? (0, r.jsx)(x.ZP, {
                     className: es.marginTop20,
-                    children: (0, r.jsx)(v.y, {
+                    children: (0, r.jsx)(O.y, {
                         guild: e.guild,
                         onlineCount: e.approximate_presence_count
                     })
@@ -358,8 +358,8 @@ class el extends (s = i.PureComponent) {
                 authBoxClassName: A,
                 apiErrors: {
                     email: C,
-                    username: v,
-                    global_name: O,
+                    username: O,
+                    global_name: v,
                     password: Z,
                     date_of_birth: R
                 } = {},
@@ -408,7 +408,7 @@ class el extends (s = i.PureComponent) {
                         name: 'global_name',
                         value: a,
                         onChange: e => this.setState({ globalName: e }),
-                        error: ea(O),
+                        error: ea(v),
                         maxLength: ee.hy,
                         setRef: e => {
                             this.globalNameRef = e;
@@ -442,7 +442,7 @@ class el extends (s = i.PureComponent) {
                                         usernameClientError: 0 === e.length ? et.Z.Messages.REQUIRED : null
                                     });
                                 },
-                                error: null != E ? E : ea(v),
+                                error: null != E ? E : ea(O),
                                 setRef: e => {
                                     this.usernameRef = e;
                                 },

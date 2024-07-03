@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     },
     JI: function () {
-        return v;
+        return O;
     },
     UM: function () {
         return D;
@@ -39,10 +39,10 @@ let m = 100, N = e => {
         var t;
         let n = N(e);
         return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > m;
-    }, S = e => e.state === g.r2o.ACCEPTED, v = e => {
+    }, S = e => e.state === g.r2o.ACCEPTED, O = e => {
         let {guild_scheduled_event: t} = e;
         return null != t || !1;
-    }, O = e => !v(e) && (!!A(e) || null != e.inviter && !S(e) && !C(e)), Z = e => {
+    }, v = e => !O(e) && (!!A(e) || null != e.inviter && !S(e) && !C(e)), Z = e => {
         let {
             guild: t,
             user: n,
@@ -77,7 +77,7 @@ function R(e) {
             textClassName: r,
             className: i
         } = e, l = N(n);
-    return null == l || O(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ ? null : (0, s.jsx)(o.EJ, {
+    return null == l || v(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ ? null : (0, s.jsx)(o.EJ, {
         className: a()(I.activityCount, i),
         online: l.onlineCount,
         total: l.memberCount,
@@ -89,7 +89,7 @@ function b(e) {
     let {
             invite: t,
             showBigUserIcon: n
-        } = e, i = r.useMemo(() => n ? null : T(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : O(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null, [
+        } = e, i = r.useMemo(() => n ? null : T(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : v(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null, [
             t,
             n
         ]), a = f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
@@ -97,7 +97,7 @@ function b(e) {
         var c, u;
         a = (null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null && (null === (u = t.inviter) || void 0 === u ? void 0 : u.username) != null ? f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({ username: t.inviter.username }) : f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM;
     } else
-        T(t) && null != t.target_user ? a = f.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: t.target_user.username }) : S(t) ? a = f.Z.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : O(t) && null != t.inviter && (a = f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({ username: _.ZP.getFormattedName(t.inviter) }));
+        T(t) && null != t.target_user ? a = f.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: t.target_user.username }) : S(t) ? a = f.Z.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : v(t) && null != t.inviter && (a = f.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({ username: _.ZP.getFormattedName(t.inviter) }));
     return (0, s.jsxs)('div', {
         className: I.inviteJoinContainer,
         children: [

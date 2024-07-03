@@ -1,15 +1,15 @@
 n.d(t, {
     s: function () {
-        return h;
+        return E;
     }
 }), n(47120);
 var l = n(470079), a = n(442837), i = n(38618), s = n(51596), r = n(516373), c = n(314897), o = n(580005), u = n(987509), d = n(601565), _ = n(41837);
-function h(e) {
+function E(e) {
     let {
             searchText: t,
             targetDestination: n,
-            selectedDestinations: h,
-            originDestination: E,
+            selectedDestinations: E,
+            originDestination: h,
             includeMissingDMs: f = !1
         } = e, S = (0, a.e7)([c.default], () => c.default.getId()), g = l.useMemo(() => ({
             searchOptions: {
@@ -31,7 +31,7 @@ function h(e) {
                 queryMode: a,
                 resultTypes: l
             };
-        }(t), [t]), {queryMode: b} = m, [C, L] = l.useState(null != h ? h : []);
+        }(t), [t]), {queryMode: b} = m, [C, L] = l.useState(null != E ? E : []);
     l.useLayoutEffect(() => {
         let {
             query: e,
@@ -40,7 +40,7 @@ function h(e) {
         I({
             query: e,
             resultTypes: t
-        }), L(null != h ? h : []);
+        }), L(null != E ? E : []);
     }, [
         I,
         m
@@ -52,9 +52,9 @@ function h(e) {
         queryMode: b,
         targetDestination: n,
         frequentChannels: N,
-        selectedDestinations: h,
+        selectedDestinations: E,
         pinnedDestinations: C,
-        originDestination: E,
+        originDestination: h,
         includeMissingDMs: f,
         isConnected: T
     }), [
@@ -63,9 +63,9 @@ function h(e) {
         b,
         n,
         N,
-        h,
-        C,
         E,
+        C,
+        h,
         f,
         T
     ]);

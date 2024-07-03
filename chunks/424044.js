@@ -2,7 +2,7 @@ n(47120);
 var s = n(735250), r = n(470079), i = n(442837), a = n(481060), l = n(893776), o = n(232567), c = n(129293), u = n(388905), d = n(353926), h = n(185625), _ = n(551549), E = n(108427), g = n(314897), p = n(981631), f = n(689938), I = n(549856);
 i.ZP.initialize();
 t.Z = e => {
-    let {location: t} = e, n = (0, i.e7)([g.default], () => g.default.isAuthenticated()), m = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments), N = (0, _.oK)('RSL - Landing Page'), [T, x] = r.useState(!1), [A, C] = r.useState(f.Z.Messages.AUTHORIZING), [S, v] = r.useState(!0), O = e => {
+    let {location: t} = e, n = (0, i.e7)([g.default], () => g.default.isAuthenticated()), m = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments), N = (0, _.oK)('RSL - Landing Page'), [T, x] = r.useState(!1), [A, C] = r.useState(f.Z.Messages.AUTHORIZING), [S, O] = r.useState(!0), v = e => {
             switch (e) {
             case p.evJ.INVALID_FORM_BODY:
             case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -22,7 +22,7 @@ t.Z = e => {
             }
         };
     return r.useEffect(() => {
-        n ? (v(!0), o.k({ withAnalyticsToken: !0 }).then(() => v(!1)).catch(() => v(!1))) : v(!1);
+        n ? (O(!0), o.k({ withAnalyticsToken: !0 }).then(() => O(!1)).catch(() => O(!1))) : O(!1);
     }, [n]), r.useEffect(() => {
         !m && !N && l.Z.getExperiments();
     }, [
@@ -33,9 +33,9 @@ t.Z = e => {
             var t, n;
             try {
                 let n = null != e ? await (0, h.hs)(e) : void 0;
-                null != n ? C(f.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : O(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                null != n ? C(f.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : v(null === (t = n.body) || void 0 === t ? void 0 : t.code);
             } catch (e) {
-                O(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                v(null === (n = e.body) || void 0 === n ? void 0 : n.code);
             } finally {
                 x(!1);
             }

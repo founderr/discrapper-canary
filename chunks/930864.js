@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
         return C;
     }
 }), n(47120);
-var l = n(735250), a = n(470079), i = n(442837), s = n(481060), r = n(359110), c = n(987509), o = n(72214), u = n(592125), d = n(375954), _ = n(934415), h = n(572004), E = n(823379), f = n(859155), S = n(822869), g = n(757853), I = n(912332), A = n(819727), p = n(689938), m = n(803519), b = n(621054);
+var l = n(735250), a = n(470079), i = n(442837), s = n(481060), r = n(359110), c = n(987509), o = n(72214), u = n(592125), d = n(375954), _ = n(934415), E = n(572004), h = n(823379), f = n(859155), S = n(822869), g = n(757853), I = n(912332), A = n(819727), p = n(689938), m = n(803519), b = n(621054);
 function C(e) {
     let {
             channelId: t,
@@ -13,7 +13,7 @@ function C(e) {
             onClose: N,
             onRequestSent: T,
             ...Z
-        } = e, [y, x] = a.useState(''), v = a.useMemo(() => (0, c.dL)(t), [t]), [R, M] = a.useState(C), [P, D] = a.useState(!1), O = R.length, F = O >= A.G, G = (0, i.e7)([d.Z], () => d.Z.getMessage(t, n), [
+        } = e, [y, x] = a.useState(''), v = a.useMemo(() => (0, c.dL)(t), [t]), [R, M] = a.useState(C), [D, P] = a.useState(!1), O = R.length, F = O >= A.G, G = (0, i.e7)([d.Z], () => d.Z.getMessage(t, n), [
             t,
             n
         ]), U = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), j = (0, o.s)({
@@ -33,7 +33,7 @@ function C(e) {
             if (null == l)
                 return;
             let a = (0, _.wR)(l, t, n);
-            (0, s.showToast)((0, s.createToast)(p.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, h.JG)(a);
+            (0, s.showToast)((0, s.createToast)(p.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, E.JG)(a);
         }, [
             t,
             n
@@ -69,8 +69,8 @@ function C(e) {
                 (0, s.showToast)((0, s.createToast)(p.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
                 return;
             }
-            D(!0);
-            let l = (await Promise.all(R.map(c.qx))).filter(E.lm);
+            P(!0);
+            let l = (await Promise.all(R.map(c.qx))).filter(h.lm);
             (0, I.mc)(), null == T || T(), 1 === l.length && (0, r.Kh)(l[0]);
             let a = await f.Z.sendForwards(e, l, L);
             if (a.every(e => {
@@ -169,7 +169,7 @@ function C(e) {
                 className: m.footer,
                 children: [
                     (0, l.jsx)(s.Button, {
-                        submitting: P,
+                        submitting: D,
                         disabled: 0 === O,
                         onClick: W,
                         children: K

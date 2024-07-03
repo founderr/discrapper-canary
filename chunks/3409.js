@@ -9,7 +9,7 @@ t.d(a, {
         return eN;
     }
 }), t(47120), t(411104);
-var n = t(735250), r = t(470079), s = t(160612), l = t(512722), o = t.n(l), i = t(442837), c = t(481060), u = t(570140), d = t(355467), E = t(873115), _ = t(976255), p = t(801937), m = t(282164), A = t(738342), N = t(915271), h = t(228666), T = t(723484), I = t(122192), S = t(581813), C = t(870630), b = t(710845), P = t(598), R = t(409813), f = t(51499), y = t(586585), M = t(614277), g = t(189877), O = t(35248), L = t(698708), v = t(351402), D = t(975060), x = t(505649), Z = t(853872), Y = t(882712), w = t(358085), U = t(622999), B = t(176919), H = t(185139), k = t(559725), j = t(850228), F = t(231338), W = t(689938), G = t(939769), V = t(492124);
+var n = t(735250), r = t(470079), s = t(160612), l = t(512722), o = t.n(l), i = t(442837), c = t(481060), u = t(570140), d = t(355467), E = t(873115), _ = t(976255), p = t(801937), m = t(282164), A = t(738342), N = t(915271), h = t(228666), T = t(723484), I = t(122192), S = t(581813), C = t(870630), b = t(710845), P = t(598), R = t(409813), f = t(51499), y = t(586585), M = t(614277), g = t(189877), O = t(35248), L = t(698708), v = t(351402), D = t(975060), x = t(505649), Z = t(853872), Y = t(882712), w = t(358085), U = t(622999), B = t(176919), H = t(185139), j = t(559725), k = t(850228), F = t(231338), W = t(689938), G = t(939769), V = t(492124);
 let Q = new b.Z('AddPaymentStep.tsx'), K = [R.h8.PAYMENT_TYPE], z = [
         R.h8.PAYMENT_TYPE,
         R.h8.CREDIT_CARD_INFORMATION,
@@ -115,7 +115,7 @@ function ec() {
 function eu() {
     return (0, n.jsx)('div', {
         className: G.body,
-        children: (0, n.jsx)(j.Z, {})
+        children: (0, n.jsx)(k.Z, {})
     });
 }
 function ed() {
@@ -215,7 +215,7 @@ function eN(e) {
             hideBreadcrumbs: w = !1,
             usePaymentModalStep: U = !1,
             isEligibleForTrial: B = !1,
-            allowDesktopRedirectPurchase: j = !1
+            allowDesktopRedirectPurchase: k = !1
         } = e, er = {
             steps: [
                 ...N,
@@ -314,8 +314,8 @@ function eN(e) {
         setIsSubmittingCurrentStep: eU,
         hasRedirectURL: eB,
         setHasRedirectURL: eH,
-        braintreeEmail: ek,
-        braintreeNonce: ej,
+        braintreeEmail: ej,
+        braintreeNonce: ek,
         venmoUsername: eF,
         adyenPaymentData: eW,
         isAuthenticating: eG,
@@ -330,7 +330,7 @@ function eN(e) {
         var a;
         eO(e.id), a = e, (0, c.showToast)((0, c.createToast)(W.Z.Messages.PAYMENT_SOURCE_ADD_SUCCESS_TOAST, c.ToastType.SUCCESS, { position: c.ToastPosition.BOTTOM })), I(eb, a), eg(m, !1);
     }
-    let e$ = j && (0, g.q1)().enabled;
+    let e$ = k && (0, g.q1)().enabled;
     switch (eb) {
     case R.h8.PAYMENT_TYPE:
         a = (0, n.jsx)(el, {
@@ -552,7 +552,7 @@ function eN(e) {
         });
         break;
     case R.h8.PAYPAL_INFORMATION:
-        let e8 = 0 !== ek.length && null != ej;
+        let e8 = 0 !== ej.length && null != ek;
         a = (0, n.jsx)(ei, {}), t = (0, n.jsx)(em, {
             onBack: () => eg(R.h8.PAYMENT_TYPE),
             primaryCTA: y.Z.CTAType.CONTINUE,
@@ -561,7 +561,7 @@ function eN(e) {
         });
         break;
     case R.h8.VENMO_INFORMATION:
-        let e2 = 0 !== eF.length && null != ej;
+        let e2 = 0 !== eF.length && null != ek;
         a = (0, n.jsx)(ec, {}), t = (0, n.jsx)(em, {
             onBack: () => eg(R.h8.PAYMENT_TYPE),
             primaryCTA: y.Z.CTAType.CONTINUE,
@@ -578,7 +578,7 @@ function eN(e) {
             onBack: () => eg(R.h8.PAYMENT_TYPE),
             primaryCTA: y.Z.CTAType.CONTINUE,
             primaryText: e4 ? W.Z.Messages.NEXT : W.Z.Messages.PAYMENT_SOURCE_CONNECT_TO_CASH_APP_PAY,
-            onPrimary: () => e4 ? eg(R.h8.ADDRESS) : (0, k.cp)()
+            onPrimary: () => e4 ? eg(R.h8.ADDRESS) : (0, j.cp)()
         });
         break;
     case R.h8.ADDRESS:
@@ -596,8 +596,8 @@ function eN(e) {
             case F.He.VENMO:
             case F.He.PAYPAL:
                 try {
-                    o()(null != ej, 'Missing braintreeNonce');
-                    let e = await (0, d.lP)(ej, eY.info, Y);
+                    o()(null != ek, 'Missing braintreeNonce');
+                    let e = await (0, d.lP)(ek, eY.info, Y);
                     eJ(e);
                 } catch {
                 }
@@ -781,7 +781,7 @@ function eh(e) {
         hasFetchedPaymentSources: Z.Z.hasFetchedPaymentSources
     }));
     r.useEffect(() => {
-        (0, E.eI)(), (0, k.eI)(), !n && (0, d.tZ)();
+        (0, E.eI)(), (0, j.eI)(), !n && (0, d.tZ)();
     }, []);
     let [s, l] = r.useState(a);
     null != a && null == s && l(a);
@@ -813,7 +813,7 @@ function eh(e) {
             u.Z.unsubscribe('BRAINTREE_TOKENIZE_PAYPAL_SUCCESS', e), (0, _.fw)();
         };
     }, []);
-    let [L, v] = r.useState(!1), [w, U] = r.useState(!1), [H, j] = r.useState(null), F = r.useRef(null), W = (0, i.e7)([x.Z], () => x.Z.isAwaitingAuthentication), [G, V] = (0, i.Wu)([Y.Z], () => [
+    let [L, v] = r.useState(!1), [w, U] = r.useState(!1), [H, k] = r.useState(null), F = r.useRef(null), W = (0, i.e7)([x.Z], () => x.Z.isAwaitingAuthentication), [G, V] = (0, i.Wu)([Y.Z], () => [
             Y.Z.purchaseTokenAuthState,
             Y.Z.purchaseTokenHash
         ]);
@@ -841,7 +841,7 @@ function eh(e) {
         paymentError: null != g ? g : f,
         paymentAuthenticationState: O ? B.wr.PENDING : null != g ? B.wr.ERROR : B.wr.NONE,
         purchaseError: H,
-        setPurchaseError: j,
+        setPurchaseError: k,
         purchaseErrorBlockRef: F,
         isAuthenticating: W,
         purchaseTokenAuthState: G,

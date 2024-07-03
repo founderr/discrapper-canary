@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     dL: function () {
-        return E;
+        return h;
     },
     hC: function () {
         return f;
@@ -12,11 +12,11 @@ n.d(t, {
         return S;
     }
 }), n(47120), n(653041);
-var l = n(392711), a = n(493683), i = n(212819), s = n(938078), r = n(823385), c = n(592125), o = n(496675), u = n(594174), d = n(823379), _ = n(41837), h = n(981631);
+var l = n(392711), a = n(493683), i = n(212819), s = n(938078), r = n(823385), c = n(592125), o = n(496675), u = n(594174), d = n(823379), _ = n(41837), E = n(981631);
 n(689938);
-function E(e) {
+function h(e) {
     let t = c.Z.getChannel(e);
-    return (null == t ? void 0 : t.type) === h.d4z.DM ? {
+    return (null == t ? void 0 : t.type) === E.d4z.DM ? {
         type: 'user',
         id: t.recipients[0]
     } : {
@@ -72,7 +72,7 @@ function I(e, t) {
 function A(e, t) {
     return e.filter(e => {
         var n, l;
-        return (0, d.lm)(e) && (e.type === i.h8.HEADER || (0, _.o)(e) && (n = e, l = t, n.type === i.h8.USER ? l || null != c.Z.getDMChannelFromUserId(n.record.id) : n.type === i.h8.GROUP_DM || n.record.type !== h.d4z.GUILD_FORUM && n.record.type !== h.d4z.GUILD_MEDIA && o.Z.can(h.Plq.VIEW_CHANNEL, n.record) && o.Z.can(h.Plq.SEND_MESSAGES, n.record)));
+        return (0, d.lm)(e) && (e.type === i.h8.HEADER || (0, _.o)(e) && (n = e, l = t, n.type === i.h8.USER ? l || null != c.Z.getDMChannelFromUserId(n.record.id) : n.type === i.h8.GROUP_DM || n.record.type !== E.d4z.GUILD_FORUM && n.record.type !== E.d4z.GUILD_MEDIA && o.Z.can(E.Plq.VIEW_CHANNEL, n.record) && o.Z.can(E.Plq.SEND_MESSAGES, n.record)));
     });
 }
 function p(e) {
@@ -89,8 +89,8 @@ function p(e) {
     } = e;
     if (n)
         return I(A(t, _));
-    let h = null != u && u.length > 0 ? u.map(e => g(e)) : [], E = r.Z.getChannelHistory(), f = E.length > 0 ? E.map(e => (0, s.Z)(e)) : [], S = i.length > 0 ? i.map(e => (0, s.Z)(e.id)) : [], p = A([
-            ...h,
+    let E = null != u && u.length > 0 ? u.map(e => g(e)) : [], h = r.Z.getChannelHistory(), f = h.length > 0 ? h.map(e => (0, s.Z)(e)) : [], S = i.length > 0 ? i.map(e => (0, s.Z)(e.id)) : [], p = A([
+            ...E,
             null != c ? g(c) : null,
             ...f,
             ...S

@@ -1,5 +1,5 @@
 var l = n(735250), a = n(470079), i = n(120356), s = n.n(i), r = n(974674), c = n(438784), o = n(481060), u = n(806519), d = n(525049), _ = n(345390);
-let h = {}, E = 1 / 4;
+let E = {}, h = 1 / 4;
 function f(e) {
     let {
         height: t,
@@ -17,7 +17,7 @@ function f(e) {
         },
         children: (0, l.jsx)(c.b, {
             className: _.dots,
-            dotRadius: t * E
+            dotRadius: t * h
         })
     });
 }
@@ -111,7 +111,7 @@ t.Z = function (e) {
     var t, n, i;
     let {
             backSrc: c,
-            frontSrc: E,
+            frontSrc: h,
             size: f,
             isTyping: A,
             status: p,
@@ -126,7 +126,7 @@ t.Z = function (e) {
         } = a.useMemo(() => {
             var e;
             let t = ''.concat(L, '-').concat(A);
-            return null !== (e = h[t]) && void 0 !== e ? e : function (e, t, n) {
+            return null !== (e = E[t]) && void 0 !== e ? e : function (e, t, n) {
                 let l = o.AvatarSizeSpecs[e], a = l.size / (d.z3 + d.o), i = a * d.z3, s = a * d.o, c = {
                         statusCoords: (0, r.Vq)(l, o.StatusTypes.ONLINE, !1, t),
                         frontAvatarSizePx: i,
@@ -134,7 +134,7 @@ t.Z = function (e) {
                         frontAvatarOffsetPx: s,
                         frontAvatarCenter: s + i / 2
                     };
-                return h[n] = c, c;
+                return E[n] = c, c;
             }(f, A, t);
         }, [
             L,
@@ -170,7 +170,7 @@ t.Z = function (e) {
                             left: T
                         },
                         children: (0, l.jsx)(g, {
-                            src: E,
+                            src: h,
                             size: Z,
                             isTyping: A,
                             status: p

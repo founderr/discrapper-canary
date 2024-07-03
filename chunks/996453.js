@@ -6,7 +6,7 @@ s.d(t, {
         return f;
     }
 }), s(47120);
-var a = s(735250), n = s(470079), l = s(120356), i = s.n(l), o = s(481060), r = s(749210), c = s(820160), d = s(594174), u = s(285952), m = s(153124), C = s(892880), _ = s(458879), x = s(981631), E = s(689938), I = s(671567);
+var a = s(735250), n = s(470079), l = s(120356), o = s.n(l), i = s(481060), r = s(749210), c = s(820160), d = s(594174), u = s(285952), m = s(153124), C = s(892880), _ = s(458879), x = s(981631), E = s(689938), I = s(671567);
 function L(e) {
     var t;
     let {
@@ -14,51 +14,51 @@ function L(e) {
             onClose: l,
             onBack: L,
             onHubGuildInfoSet: f,
-            onGuildCreated: h,
-            isSlideReady: T,
+            onGuildCreated: T,
+            isSlideReady: h,
             hasFooter: g = !0,
             isCommunity: N = !1
-        } = e, [M, B] = n.useState(C.Z.getGuildNameSuggestion()), [p, Z] = n.useState(null), [j, S] = n.useState(!1), [b, U] = n.useState(null), R = !!(null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, m.Dt)(), O = n.useRef(null);
+        } = e, [B, M] = n.useState(C.Z.getGuildNameSuggestion()), [p, Z] = n.useState(null), [b, j] = n.useState(!1), [S, U] = n.useState(null), R = !!(null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, m.Dt)(), O = n.useRef(null);
     n.useEffect(() => {
         var e;
-        T && (null === (e = O.current) || void 0 === e || e.focus());
-    }, [T]);
+        h && (null === (e = O.current) || void 0 === e || e.focus());
+    }, [h]);
     let v = n.useCallback(async e => {
             if (e.preventDefault(), null != s) {
-                S(!0), U(null);
+                j(!0), U(null);
                 try {
                     if (null != f)
-                        f(M, p);
+                        f(B, p);
                     else {
-                        let e = await _.Z.createGuildFromTemplate(M, p, s, N, A);
-                        r.Z.transitionToGuildSync(e.id), null == h || h(e.id);
+                        let e = await _.Z.createGuildFromTemplate(B, p, s, N, A);
+                        r.Z.transitionToGuildSync(e.id), null == T || T(e.id);
                     }
                 } catch (e) {
                     U(e);
                 }
-                S(!1);
+                j(!1);
             }
         }, [
             s,
             f,
-            M,
+            B,
             p,
             N,
             A,
-            h
+            T
         ]), G = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
+                (0, a.jsx)(i.Button, {
+                    color: i.Button.Colors.BRAND,
                     onClick: v,
-                    disabled: 0 === M.length,
-                    submitting: j,
+                    disabled: 0 === B.length,
+                    submitting: b,
                     children: null != f ? E.Z.Messages.NEXT : E.Z.Messages.CREATE
                 }),
-                (0, a.jsx)(o.Button, {
+                (0, a.jsx)(i.Button, {
                     className: I.backButton,
-                    look: o.Button.Looks.BLANK,
-                    size: o.Button.Sizes.MIN,
+                    look: i.Button.Looks.BLANK,
+                    size: i.Button.Sizes.MIN,
                     onClick: L,
                     children: E.Z.Messages.BACK
                 })
@@ -67,29 +67,29 @@ function L(e) {
     return {
         content: (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsxs)(o.ModalHeader, {
+                (0, a.jsxs)(i.ModalHeader, {
                     direction: u.Z.Direction.VERTICAL,
                     className: I.header,
                     separator: !1,
                     children: [
-                        (0, a.jsx)(o.Heading, {
-                            className: i()(I.title),
+                        (0, a.jsx)(i.Heading, {
+                            className: o()(I.title),
                             variant: 'heading-xl/semibold',
                             children: E.Z.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, a.jsx)(i.Text, {
                             className: I.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             children: E.Z.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
                         }),
-                        null != l && (0, a.jsx)(o.ModalCloseButton, {
+                        null != l && (0, a.jsx)(i.ModalCloseButton, {
                             className: I.closeButton,
                             onClick: l
                         })
                     ]
                 }),
-                (0, a.jsxs)(o.ModalContent, {
+                (0, a.jsxs)(i.ModalContent, {
                     className: I.createGuild,
                     children: [
                         (0, a.jsx)('div', {
@@ -102,37 +102,37 @@ function L(e) {
                         (0, a.jsxs)('form', {
                             onSubmit: v,
                             children: [
-                                (0, a.jsxs)(o.FormItem, {
+                                (0, a.jsxs)(i.FormItem, {
                                     className: I.nameInput,
-                                    error: null == b ? void 0 : b.getFirstFieldErrorMessage('name'),
+                                    error: null == S ? void 0 : S.getFirstFieldErrorMessage('name'),
                                     children: [
-                                        (0, a.jsx)(o.FormTitle, {
+                                        (0, a.jsx)(i.FormTitle, {
                                             tag: 'label',
                                             htmlFor: H,
                                             children: E.Z.Messages.FORM_LABEL_SERVER_NAME
                                         }),
-                                        (0, a.jsx)(o.TextInput, {
+                                        (0, a.jsx)(i.TextInput, {
                                             type: 'text',
-                                            value: M,
+                                            value: B,
                                             maxLength: 100,
-                                            onChange: B,
+                                            onChange: M,
                                             inputRef: O,
                                             id: H
                                         })
                                     ]
                                 }),
-                                R && (0, a.jsx)(o.FormSwitch, {
+                                R && (0, a.jsx)(i.FormSwitch, {
                                     hideBorder: !0,
                                     value: A,
                                     onChange: e => D(e),
                                     note: E.Z.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
                                     className: I.formItemSpaced,
-                                    children: (0, a.jsx)(o.FormTitle, {
+                                    children: (0, a.jsx)(i.FormTitle, {
                                         tag: 'label',
                                         children: 'Staff Only'
                                     })
                                 }),
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     className: I.guidelines,
@@ -140,14 +140,14 @@ function L(e) {
                                 })
                             ]
                         }),
-                        null == b || b.hasFieldErrors() ? null : (0, a.jsx)(o.Text, {
+                        null == S || S.hasFieldErrors() ? null : (0, a.jsx)(i.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-danger',
-                            children: b.message
+                            children: S.message
                         })
                     ]
                 }),
-                g && (0, a.jsx)(o.ModalFooter, {
+                g && (0, a.jsx)(i.ModalFooter, {
                     justify: u.Z.Justify.BETWEEN,
                     children: G
                 })

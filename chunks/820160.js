@@ -5,7 +5,7 @@ s.d(t, {
 });
 var a = s(735250);
 s(470079);
-var n = s(481060), l = s(813197), i = s(689938), o = s(372290);
+var n = s(481060), l = s(813197), o = s(689938), i = s(372290);
 function r(e) {
     let {
         icon: t,
@@ -14,11 +14,11 @@ function r(e) {
     return (0, a.jsx)(n.FocusRing, {
         within: !0,
         children: (0, a.jsxs)('div', {
-            className: o.iconContainer,
+            className: i.iconContainer,
             children: [
                 null != t ? (0, a.jsx)('img', {
                     alt: 'Your icon',
-                    className: o.filledIcon,
+                    className: i.filledIcon,
                     src: t
                 }) : (0, a.jsxs)('svg', {
                     width: '80',
@@ -60,7 +60,7 @@ function r(e) {
                     onChange: s,
                     multiple: !1,
                     tabIndex: 0,
-                    'aria-label': i.Z.Messages.GUILD_CREATE_UPLOAD_ICON_BUTTON_TEXT
+                    'aria-label': o.Z.Messages.GUILD_CREATE_UPLOAD_ICON_BUTTON_TEXT
                 })
             ]
         })

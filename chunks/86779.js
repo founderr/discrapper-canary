@@ -6,7 +6,7 @@ let S = new Set([
         'nonce_missing',
         'nonce_expired',
         'handoff_exchange'
-    ]), v = new Set(['deep_link_failed']), O = () => {
+    ]), O = new Set(['deep_link_failed']), v = () => {
         d.K.remove(x), d.K.remove(A);
     };
 t.Z = () => {
@@ -35,7 +35,7 @@ t.Z = () => {
     if ('null' === n && null === I && R('deep_link_failed'), null != n && 'null' !== n && null == b && null === I && R('nonce_missing'), a.useEffect(() => {
             if (null != b) {
                 let e = d.K.get(A);
-                (null == e || Date.now() >= e) && (R('nonce_expired'), O());
+                (null == e || Date.now() >= e) && (R('nonce_expired'), v());
             }
         }, [
             b,
@@ -58,7 +58,7 @@ t.Z = () => {
             }).catch(() => {
                 R('handoff_exchange');
             }).finally(() => {
-                O();
+                v();
             });
         }, [
             n,
@@ -77,12 +77,12 @@ t.Z = () => {
                     g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2
                 ]
             });
-        if (v.has(I))
+        if (O.has(I))
             return g.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
         if (S.has(I))
             return g.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN;
     })();
-    return null != I && v.has(I) ? (0, i.jsx)('div', {
+    return null != I && O.has(I) ? (0, i.jsx)('div', {
         className: T.errorContainer,
         children: (0, i.jsx)(h.Text, {
             color: 'interactive-normal',

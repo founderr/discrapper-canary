@@ -20,8 +20,8 @@ t.Z = function (e) {
     var t, n, l;
     let {
         className: i,
-        iconClassName: h,
-        size: E,
+        iconClassName: E,
+        size: h,
         channel: f,
         guild: S,
         locked: g,
@@ -29,7 +29,7 @@ t.Z = function (e) {
     } = e;
     if (null == S)
         return null;
-    let A = S.getIconURL(48), p = _[E], m = d[E], b = (0, c.KS)(f, S, {
+    let A = S.getIconURL(48), p = _[h], m = d[h], b = (0, c.KS)(f, S, {
             locked: g,
             hasActiveThreads: I
         });
@@ -61,7 +61,7 @@ t.Z = function (e) {
                 })
             }),
             (0, a.jsx)(b, {
-                className: s()(u.icon, u.iconWithGuildIcon, h),
+                className: s()(u.icon, u.iconWithGuildIcon, E),
                 color: 'currentColor'
             })
         ]

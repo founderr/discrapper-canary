@@ -1,19 +1,19 @@
 n(47120);
 var s = n(735250), r = n(470079), i = n(120356), a = n.n(i), l = n(442837), o = n(481060), c = n(144114), u = n(742458), d = n(541692), h = n(952802), _ = n(388905), E = n(815660), g = n(689938), p = n(483085), f = n(549856);
 t.Z = () => {
-    let [e, t] = r.useState(''), [i, I] = r.useState(''), [m, N] = r.useState(!1), [T, x] = r.useState(!1), [A, C] = r.useState(null), [S, v] = r.useState(null), O = (0, l.e7)([d.Z], () => d.Z.getCountryCode()), Z = O.code.split(' ')[0], R = async () => {
+    let [e, t] = r.useState(''), [i, I] = r.useState(''), [m, N] = r.useState(!1), [T, x] = r.useState(!1), [A, C] = r.useState(null), [S, O] = r.useState(null), v = (0, l.e7)([d.Z], () => d.Z.getCountryCode()), Z = v.code.split(' ')[0], R = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                v(e.body.message);
+                O(e.body.message);
             }
         }, b = async () => {
             N(!0);
             try {
                 let {token: t} = await c.Z.verifyPhone(Z + e, i);
-                C(null), v(null), x(!0), c.Z.validatePhoneForSupport(t);
+                C(null), O(null), x(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (C(null), v(e.body.message)) : (C(e.body.phone), v(e.body.code));
+                e.body.message ? (C(null), O(e.body.message)) : (C(e.body.phone), O(e.body.code));
             } finally {
                 N(!1);
             }
@@ -45,7 +45,7 @@ t.Z = () => {
                 children: [
                     (0, s.jsx)(h.Z, {
                         label: g.Z.Messages.FORM_LABEL_PHONE_NUMBER,
-                        alpha2: O.alpha2,
+                        alpha2: v.alpha2,
                         countryCode: Z,
                         value: e,
                         autoComplete: 'off',

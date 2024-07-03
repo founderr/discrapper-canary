@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     }
 }), n(411104), n(47120);
-var s, r, i, a, l = n(735250), o = n(470079), c = n(615231), u = n(261470), d = n(399606), h = n(544891), _ = n(481060), E = n(893776), g = n(99690), p = n(937154), f = n(388905), I = n(710845), m = n(314897), N = n(277390), T = n(585483), x = n(358085), A = n(172517), C = n(51144), S = n(998502), v = n(981631), O = n(231338), Z = n(689938), R = n(648520), b = n(549856);
+var s, r, i, a, l = n(735250), o = n(470079), c = n(615231), u = n(261470), d = n(399606), h = n(544891), _ = n(481060), E = n(893776), g = n(99690), p = n(937154), f = n(388905), I = n(710845), m = n(314897), N = n(277390), T = n(585483), x = n(358085), A = n(172517), C = n(51144), S = n(998502), O = n(981631), v = n(231338), Z = n(689938), R = n(648520), b = n(549856);
 (i = s || (s = {}))[i.INITIALIZING = 0] = 'INITIALIZING', i[i.PENDING_REMOTE_INIT = 1] = 'PENDING_REMOTE_INIT', i[i.PENDING_FINISH = 2] = 'PENDING_FINISH', i[i.PENDING_TICKET = 3] = 'PENDING_TICKET', i[i.PENDING_LOGIN = 4] = 'PENDING_LOGIN', i[i.FINISH = 5] = 'FINISH', (a = r || (r = {}))[a.QR_CODE = 0] = 'QR_CODE', a[a.CONFIRM = 1] = 'CONFIRM';
 let D = n(515695), L = new I.Z('LoginQRSocket');
 function M(e) {
@@ -81,7 +81,7 @@ function j(e) {
                     color: _.ButtonColors.LINK,
                     disabled: i,
                     onClick: () => function (e) {
-                        let t = x.isPlatformEmbedded && S.ZP.supportsFeature(v.eRX.WEBAUTHN) ? S.ZP.webAuthnAuthenticate : e => {
+                        let t = x.isPlatformEmbedded && S.ZP.supportsFeature(O.eRX.WEBAUTHN) ? S.ZP.webAuthnAuthenticate : e => {
                             let t = (0, c.wz)(JSON.parse(e));
                             return (0, c.U2)(t).then(e => JSON.stringify(e));
                         };
@@ -105,7 +105,7 @@ function j(e) {
                         user: e,
                         size: _.AvatarSizes.SIZE_120,
                         isMobile: !0,
-                        status: O.Sk.ONLINE
+                        status: v.Sk.ONLINE
                     }),
                     (0, l.jsx)(f.Dx, {
                         className: b.marginBottom8,
@@ -186,7 +186,7 @@ function y(e) {
                             return;
                         }
                     case 'pending_remote_init': {
-                            h.succeed(), T.S.dispatch(v.CkL.WAVE_EMPHASIZE);
+                            h.succeed(), T.S.dispatch(O.CkL.WAVE_EMPHASIZE);
                             let e = await (0, A.Pk)(p());
                             if (e !== s.fingerprint)
                                 throw Error('bad fingerprint '.concat(e, ' !== ').concat(s.fingerprint));
@@ -205,7 +205,7 @@ function y(e) {
                             return;
                         }
                     case 'pending_ticket': {
-                            T.S.dispatch(v.CkL.WAVE_EMPHASIZE), i('remote auth handshake started, awaiting ticket/cancel.');
+                            T.S.dispatch(O.CkL.WAVE_EMPHASIZE), i('remote auth handshake started, awaiting ticket/cancel.');
                             let e = s.encrypted_user_payload;
                             a({
                                 step: 3,
@@ -214,7 +214,7 @@ function y(e) {
                             return;
                         }
                     case 'pending_finish': {
-                            T.S.dispatch(v.CkL.WAVE_EMPHASIZE), i('remote auth handshake started, awaiting finish/cancel.');
+                            T.S.dispatch(O.CkL.WAVE_EMPHASIZE), i('remote auth handshake started, awaiting finish/cancel.');
                             let e = s.encrypted_user_payload;
                             a({
                                 step: 2,
@@ -223,7 +223,7 @@ function y(e) {
                             return;
                         }
                     case 'finish': {
-                            T.S.dispatch(v.CkL.WAVE_EMPHASIZE), i('remote auth handshake finished.');
+                            T.S.dispatch(O.CkL.WAVE_EMPHASIZE), i('remote auth handshake finished.');
                             let t = s.encrypted_token;
                             a({ step: 5 }), e(await (0, A.FW)(p(), t));
                             return;
@@ -282,7 +282,7 @@ function y(e) {
         }(r.step);
     return o.useEffect(() => {
         4 === r.step && null != r.ticket && h.tn.post({
-            url: v.ANM.REMOTE_AUTH_LOGIN,
+            url: O.ANM.REMOTE_AUTH_LOGIN,
             body: { ticket: r.ticket },
             oldFormErrors: !0
         }).then(async e => {

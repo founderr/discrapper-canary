@@ -1,17 +1,17 @@
 n.r(t), n.d(t, {
     CollectiblesCollectedModalInner: function () {
-        return j;
+        return P;
     }
 }), n(47120), n(627341);
-var r = n(735250), a = n(470079), o = n(887024), l = n(512722), i = n.n(l), s = n(278074), c = n(979554), d = n(399606), u = n(481060), f = n(37234), p = n(607070), g = n(100527), v = n(906732), C = n(1585), E = n(125988), b = n(300284), h = n(876917), m = n(642619), y = n(594174), A = n(884697), T = n(890249), x = n(318028), L = n(635552), N = n(328456), _ = n(624377), I = n(530618), Z = n(141011), S = n(372654), O = n(216541), R = n(302800), w = n(215023), k = n(689938), B = n(533400), M = n(660097);
-let j = e => {
+var r = n(735250), a = n(470079), o = n(887024), l = n(512722), i = n.n(l), s = n(278074), c = n(979554), d = n(399606), u = n(481060), f = n(37234), p = n(607070), g = n(100527), v = n(906732), C = n(1585), E = n(125988), b = n(300284), h = n(876917), m = n(642619), y = n(594174), A = n(884697), T = n(890249), x = n(318028), L = n(635552), N = n(328456), _ = n(624377), I = n(530618), Z = n(141011), S = n(372654), O = n(216541), R = n(302800), k = n(215023), w = n(689938), B = n(533400), M = n(660097);
+let P = e => {
     var t, n;
     let {
             product: o,
             onClose: l,
             confettiTarget: R,
-            confettiCanvas: j,
-            hideConfetti: P = !1,
+            confettiCanvas: P,
+            hideConfetti: j = !1,
             analyticsLocations: D
         } = e, {confettiColors: F} = (0, _.Z)(o.styles), U = (0, d.e7)([y.default], () => {
             let e = y.default.getCurrentUser();
@@ -67,7 +67,7 @@ let j = e => {
                         children: [
                             (0, r.jsx)(Z.Z, {
                                 asset: er ? void 0 : ea,
-                                addGradient: null === (t = w.Ve[o.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
+                                addGradient: null === (t = k.Ve[o.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
                                 size: (0, S.ML)(880),
                                 className: B.decorationBanner,
                                 blur: !0
@@ -104,11 +104,11 @@ let j = e => {
                                 children: [
                                     (0, r.jsx)(u.Heading, {
                                         variant: 'heading-lg/bold',
-                                        children: k.Z.Messages.COLLECTIBLES_YOU_COLLECTED.format({ itemName: o.name })
+                                        children: w.Z.Messages.COLLECTIBLES_YOU_COLLECTED.format({ itemName: o.name })
                                     }),
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-sm/normal',
-                                        children: (0, s.EQ)(null == o ? void 0 : o.type).with(c.Z.BUNDLE, () => k.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(c.Z.PROFILE_EFFECT, () => k.Z.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => k.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
+                                        children: (0, s.EQ)(null == o ? void 0 : o.type).with(c.Z.BUNDLE, () => w.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE).with(c.Z.PROFILE_EFFECT, () => w.Z.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION).otherwise(() => w.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION)
                                     })
                                 ]
                             }),
@@ -118,17 +118,17 @@ let j = e => {
                                     (0, r.jsx)(u.Button, {
                                         color: ee ? u.ButtonColors.PRIMARY : u.ButtonColors.BRAND,
                                         onClick: Q,
-                                        children: k.Z.Messages.USER_SETTINGS_EDIT_USER_PROFILE
+                                        children: w.Z.Messages.USER_SETTINGS_EDIT_USER_PROFILE
                                     }),
                                     ee ? (0, r.jsx)(u.Button, {
                                         onClick: q,
                                         submitting: J,
-                                        children: k.Z.Messages.COLLECTIBLES_USE_NOW
+                                        children: w.Z.Messages.COLLECTIBLES_USE_NOW
                                     }) : null
                                 ]
                             }) : (0, r.jsx)(u.Button, {
                                 onClick: Q,
-                                children: k.Z.Messages.COLLECTIBLES_USE_NOW
+                                children: w.Z.Messages.COLLECTIBLES_USE_NOW
                             })
                         ]
                     }),
@@ -139,9 +139,9 @@ let j = e => {
                     })
                 ]
             }),
-            !P && !H && (0, r.jsx)(I.Z, {
+            !j && !H && (0, r.jsx)(I.Z, {
                 confettiTarget: null != R ? R : G.current,
-                confettiCanvas: j,
+                confettiCanvas: P,
                 sprites: (0, S.vK)(o.categorySkuId),
                 colors: null == F ? void 0 : F.map(e => e.toHexString())
             })
@@ -177,7 +177,7 @@ t.default = e => {
                     }),
                     (0, r.jsx)(u.ModalContent, {
                         className: B.modalContent,
-                        children: (0, r.jsx)(j, {
+                        children: (0, r.jsx)(P, {
                             product: n,
                             onClose: l,
                             confettiCanvas: c,

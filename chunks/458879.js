@@ -1,8 +1,8 @@
-var a = s(990547), n = s(881052), l = s(573261), i = s(981631);
-async function o(e, t, s, o, r) {
+var a = s(990547), n = s(881052), l = s(573261), o = s(981631);
+async function i(e, t, s, i, r) {
     try {
         return (await l.Z.post({
-            url: i.ANM.GUILDS,
+            url: o.ANM.GUILDS,
             body: {
                 name: e,
                 icon: t,
@@ -16,7 +16,7 @@ async function o(e, t, s, o, r) {
                 event: a.NetworkActionNames.GUILD_CREATE,
                 properties: {
                     template_name: s.id,
-                    is_community_intent: o
+                    is_community_intent: i
                 }
             }
         })).body;
@@ -24,4 +24,4 @@ async function o(e, t, s, o, r) {
         throw new n.Hx(e);
     }
 }
-t.Z = { createGuildFromTemplate: o };
+t.Z = { createGuildFromTemplate: i };

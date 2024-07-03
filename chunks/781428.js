@@ -3,7 +3,7 @@ n.d(t, {
         return Y;
     }
 });
-var s, r = n(735250), i = n(470079), a = n(615231), l = n(120356), o = n.n(l), c = n(593473), u = n(873546), d = n(442837), h = n(481060), _ = n(570140), E = n(893776), g = n(899742), p = n(579806), f = n(743142), I = n(388905), m = n(379760), N = n(100159), T = n(473855), x = n(124860), A = n(86779), C = n(726745), S = n(913583), v = n(144114), O = n(541692), Z = n(952802), R = n(108427), b = n(365007), D = n(314897), L = n(117240), M = n(896797), P = n(285952), j = n(626135), y = n(585483), G = n(358085), B = n(481153), U = n(588705), k = n(494526), F = n(163671), w = n(981631), H = n(58346), V = n(689938), z = n(513810), K = n(549856);
+var s, r = n(735250), i = n(470079), a = n(615231), l = n(120356), o = n.n(l), c = n(593473), u = n(873546), d = n(442837), h = n(481060), _ = n(570140), E = n(893776), g = n(899742), p = n(579806), f = n(743142), I = n(388905), m = n(379760), N = n(100159), T = n(473855), x = n(124860), A = n(86779), C = n(726745), S = n(913583), O = n(144114), v = n(541692), Z = n(952802), R = n(108427), b = n(365007), D = n(314897), L = n(117240), M = n(896797), P = n(285952), j = n(626135), y = n(585483), G = n(358085), B = n(481153), U = n(588705), k = n(494526), F = n(163671), w = n(981631), H = n(58346), V = n(689938), z = n(513810), K = n(549856);
 function W(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -584,7 +584,7 @@ class q extends (s = i.PureComponent) {
                     undelete: n
                 } = this.state, s = this.getFullLogin();
             try {
-                let {token: r} = await v.Z.verifyPhone(s, e, !1);
+                let {token: r} = await O.Z.verifyPhone(s, e, !1);
                 await E.Z.authorizeIPAddress(r), E.Z.login({
                     login: s,
                     password: t,
@@ -599,7 +599,7 @@ class q extends (s = i.PureComponent) {
             let {transitionTo: t} = this.props;
             this.setState({ phoneVerifyError: null });
             try {
-                let {token: n} = await v.Z.verifyPhone(this.getFullLogin(), e, !1);
+                let {token: n} = await O.Z.verifyPhone(this.getFullLogin(), e, !1);
                 t(w.Z5c.RESET, {
                     search: (0, c.stringify)({
                         token: n,
@@ -640,7 +640,7 @@ class q extends (s = i.PureComponent) {
             } catch {
             }
         }), W(this, 'handleResendCode', () => {
-            v.Z.resendCode(this.getFullLogin());
+            O.Z.resendCode(this.getFullLogin());
         }), W(this, 'handleReset', e => {
             null != e && e.preventDefault(), E.Z.loginReset(), this.setState({
                 password: '',
@@ -689,7 +689,7 @@ t.Z = function (e) {
         M.Z,
         D.default,
         C.Z,
-        O.Z
+        v.Z
     ], () => ({
         authenticated: D.default.isAuthenticated(),
         handoffAvailable: L.Z.isHandoffAvailable(),
@@ -701,7 +701,7 @@ t.Z = function (e) {
         maskedPhone: D.default.getMaskedPhone(),
         errors: D.default.getErrors(),
         defaultRoute: M.Z.defaultRoute,
-        country: O.Z.getCountryCode(),
+        country: v.Z.getCountryCode(),
         hasLoggedInAccounts: C.Z.getHasLoggedInAccounts()
     }));
     return (0, r.jsx)(q, {

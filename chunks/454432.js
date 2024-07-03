@@ -1,15 +1,15 @@
 s(47120), s(653041);
-var a = s(470079), n = s(442837), l = s(430824), i = s(496675), o = s(771845), r = s(99325), c = s(273387), d = s(981631);
+var a = s(470079), n = s(442837), l = s(430824), o = s(496675), i = s(771845), r = s(99325), c = s(273387), d = s(981631);
 t.Z = (e, t) => {
     let [s, u] = a.useState(!1), m = (0, n.e7)([c.Z], () => c.Z.getAdminGuildEntryIds(t)), C = (0, n.Wu)([
-            o.ZP,
+            i.ZP,
             l.Z,
-            i.Z
+            o.Z
         ], () => {
-            let t = o.ZP.getFlattenedGuildIds(), s = [];
+            let t = i.ZP.getFlattenedGuildIds(), s = [];
             return t.forEach(t => {
                 let a = l.Z.getGuild(t);
-                null != a && i.Z.can(d.Plq.ADMINISTRATOR, a) && a.id !== e && s.push(a);
+                null != a && o.Z.can(d.Plq.ADMINISTRATOR, a) && a.id !== e && s.push(a);
             }), s;
         }, [e]), _ = a.useCallback(async () => {
             u(!0), await r._Q(t, C.map(e => e.id)), u(!1);

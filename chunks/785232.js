@@ -9,7 +9,7 @@ t.Z = function (e) {
             isTyping: o,
             className: u,
             ...d
-        } = e, _ = i.AvatarSizeSpecs[n], h = (0, a.Wu)([s.default], () => t.slice(0, 2).map(e => {
+        } = e, _ = i.AvatarSizeSpecs[n], E = (0, a.Wu)([s.default], () => t.slice(0, 2).map(e => {
             let t = s.default.getUser(e);
             if (null != t)
                 return t.getAvatarURL(void 0, _.size, !1);
@@ -20,8 +20,8 @@ t.Z = function (e) {
     return (0, l.jsx)(r.Z, {
         'aria-label': d['aria-label'],
         'aria-hidden': d['aria-hidden'],
-        backSrc: h[0],
-        frontSrc: h[1],
+        backSrc: E[0],
+        frontSrc: E[1],
         size: n,
         status: c,
         isTyping: null != o && o,

@@ -3,13 +3,13 @@ t.d(n, {
         return y;
     }
 }), t(47120), t(653041), t(536091);
-var l = t(735250), a = t(470079), i = t(120356), r = t.n(i), s = t(442837), o = t(704215), c = t(692547), d = t(481060), u = t(239091), h = t(605236), m = t(66999), _ = t(549631), f = t(473403), C = t(454585), p = t(22082), x = t(703656), g = t(6025), N = t(922482), I = t(601070), b = t(514342), E = t(216306), Z = t(163), v = t(753540), j = t(70297), T = t(981631), S = t(176505), R = t(689938), A = t(770167);
+var l = t(735250), a = t(470079), i = t(120356), r = t.n(i), s = t(442837), o = t(704215), c = t(692547), d = t(481060), u = t(239091), h = t(605236), m = t(66999), _ = t(549631), f = t(473403), C = t(454585), p = t(22082), x = t(703656), g = t(6025), N = t(922482), I = t(601070), b = t(514342), E = t(216306), Z = t(163), v = t(753540), T = t(70297), j = t(981631), S = t(176505), R = t(689938), A = t(770167);
 let O = new Set([
-        T.d4z.GUILD_FORUM,
-        T.d4z.GUILD_MEDIA
+        j.d4z.GUILD_FORUM,
+        j.d4z.GUILD_MEDIA
     ]), B = new Set([
-        T.d4z.GUILD_VOICE,
-        T.d4z.GUILD_STAGE_VOICE
+        j.d4z.GUILD_VOICE,
+        j.d4z.GUILD_STAGE_VOICE
     ]);
 function L(e) {
     let {
@@ -78,7 +78,7 @@ let M = a.memo(function () {
                 isFirstChannel: o,
                 isLastChannel: h,
                 onChannelClick: Z,
-                tooltipDirection: j = 'right'
+                tooltipDirection: T = 'right'
             } = e, {isSubscriptionGated: L} = (0, m.Z)(n.id), P = (0, v.Mf)(i.id, n.id, a.id), y = (0, v.t4)(i.id, n.id, a.id), k = (0, v.EH)(i.id, a.id), H = (0, s.e7)([I.Z], () => I.Z.getActiveThreadCount(i.id, n.id)), D = (0, s.e7)([p.Z], () => p.Z.shouldIndicateNewChannel(i.id, n.id)), U = e => {
                 if (!y)
                     return e.stopPropagation(), Z(i.id, n.id, a.id), !0;
@@ -108,7 +108,7 @@ let M = a.memo(function () {
                 });
             }, G = function (e, n) {
                 let t = [];
-                return T.TPd.GUILD_THREADS_ONLY.has(e.type) && n >= 1 && t.push((0, l.jsx)(d.Text, {
+                return j.TPd.GUILD_THREADS_ONLY.has(e.type) && n >= 1 && t.push((0, l.jsx)(d.Text, {
                     variant: 'text-xs/normal',
                     className: A.channelSubtitle,
                     children: R.Z.Messages.ACTIVE_FORUM_POST_COUNT.format({ count: n })
@@ -138,7 +138,7 @@ let M = a.memo(function () {
                 (0, l.jsx)(d.Tooltip, {
                     text: k,
                     delay: 500,
-                    position: j,
+                    position: T,
                     children: e => (0, l.jsxs)(d.Clickable, {
                         className: r()(A.channelRow, {
                             [A.firstChannel]: o,
@@ -242,7 +242,7 @@ function y(e) {
                 row: i
             } = e;
             if (0 === a && -1 === m)
-                return (0, l.jsx)(j.Z, { guild: t });
+                return (0, l.jsx)(T.Z, { guild: t });
             let r = n._categories[a + m], s = n[r.channel.id][i];
             return null == s ? null : (0, l.jsx)(P, {
                 category: r.channel,
@@ -259,7 +259,7 @@ function y(e) {
             m,
             c,
             u
-        ]), C = (0, j.q)(t.id), p = (0, E.tn)(t.id, n, 64, C);
+        ]), C = (0, T.q)(t.id), p = (0, E.tn)(t.id, n, 64, C);
     return (0, l.jsx)(d.ListAuto, {
         className: i,
         innerClassName: r()(s, A.scrollerInner),

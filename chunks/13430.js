@@ -70,7 +70,7 @@ let m = r.forwardRef(function (e, t) {
             month: A,
             setMonth: C,
             year: S,
-            setYear: v
+            setYear: O
         } = function (e) {
             let t = null, n = null, s = null;
             null != e && (t = e.date(), n = e.month() + 1, s = e.year());
@@ -83,19 +83,19 @@ let m = r.forwardRef(function (e, t) {
                 year: c,
                 setYear: u
             };
-        }(n), O = r.useMemo(() => null != T && null != A && null != S ? o()(''.concat(T, '/').concat(A, '/').concat(S), 'DD/MM/YYYY') : null, [
+        }(n), v = r.useMemo(() => null != T && null != A && null != S ? o()(''.concat(T, '/').concat(A, '/').concat(S), 'DD/MM/YYYY') : null, [
             T,
             A,
             S
         ]);
     r.useEffect(() => {
-        l((null == O ? void 0 : O.isValid()) ? O : null);
+        l((null == v ? void 0 : v.isValid()) ? v : null);
     }, [
-        O,
+        v,
         l
     ]);
     let Z = p;
-    null != O && !O.isValid() && (Z = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
+    null != v && !v.isValid() && (Z = d.Z.Messages.AGE_GATE_INVALID_BIRTHDAY);
     let R = function () {
             let e = new Date().getFullYear(), t = r.useRef(Array.from(Array(150).keys()).map(t => ({
                     value: e - t - 3,
@@ -199,7 +199,7 @@ let m = r.forwardRef(function (e, t) {
                 key: 'year',
                 input: (0, s.jsx)(f, {
                     options: R,
-                    selectOption: v,
+                    selectOption: O,
                     children: (0, s.jsx)(u.Z, {
                         ref: P,
                         className: h.__invalid_inputYear,
@@ -213,7 +213,7 @@ let m = r.forwardRef(function (e, t) {
                         value: S,
                         onChange: t => {
                             let {value: n} = t;
-                            v(n), D(e + 1);
+                            O(n), D(e + 1);
                         },
                         maxMenuHeight: 215
                     })

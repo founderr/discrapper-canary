@@ -3,13 +3,13 @@ s.d(t, {
         return r;
     }
 });
-var a = s(43236), n = s(103714), l = s(940328), i = s(888395), o = s(389028);
+var a = s(43236), n = s(103714), l = s(940328), o = s(888395), i = s(389028);
 let r = {
     CREATE: l,
     HUB_SCHOOL_CLUB: s(142390),
-    HUB_STUDY: i,
+    HUB_STUDY: o,
     HUB_CLASS: s(425506),
-    HUB_SOCIAL: o,
+    HUB_SOCIAL: i,
     HUB_MAJOR: n,
     HUB_DORM: a
 };

@@ -1,5 +1,5 @@
 n.r(t), n(47120);
-var s = n(735250), r = n(470079), i = n(593473), a = n(990547), l = n(873546), o = n(442837), c = n(570140), u = n(893776), d = n(533307), h = n(447543), _ = n(126399), E = n(765717), g = n(267394), p = n(761305), f = n(698177), I = n(353926), m = n(409059), N = n(962220), T = n(637776), x = n(264229), A = n(677760), C = n(314897), S = n(82142), v = n(701190), O = n(626135), Z = n(81063), R = n(449934), b = n(768581), D = n(625054), L = n(645499), M = n(320830), P = n(721751), j = n(718182), y = n(223543), G = n(73906), B = n(299852), U = n(39514), k = n(236446), F = n(9325), w = n(344295), H = n(781428), V = n(209411), z = n(649156), K = n(423527), W = n(424044), Y = n(479495), q = n(881317), J = n(886806), X = n(981631), Q = n(188785);
+var s = n(735250), r = n(470079), i = n(593473), a = n(990547), l = n(873546), o = n(442837), c = n(570140), u = n(893776), d = n(533307), h = n(447543), _ = n(126399), E = n(765717), g = n(267394), p = n(761305), f = n(698177), I = n(353926), m = n(409059), N = n(962220), T = n(637776), x = n(264229), A = n(677760), C = n(314897), S = n(82142), O = n(701190), v = n(626135), Z = n(81063), R = n(449934), b = n(768581), D = n(625054), L = n(645499), M = n(320830), P = n(721751), j = n(718182), y = n(223543), G = n(73906), B = n(299852), U = n(39514), k = n(236446), F = n(9325), w = n(344295), H = n(781428), V = n(209411), z = n(649156), K = n(423527), W = n(424044), Y = n(479495), q = n(881317), J = n(886806), X = n(981631), Q = n(188785);
 n(179645);
 o.ZP.initialize();
 let $ = (0, M.Z)(H.Z), ee = (0, M.Z)(V.Z), et = (0, M.Z)(w.Z), en = (0, M.Z)(k.Z), es = (0, M.Z)(U.Z), er = (0, M.Z)(A.Z), ei = (0, M.Z)(K.Z), ea = (0, M.Z)(j.Z), el = (0, M.Z)(y.Z), eo = (0, M.Z)(J.Z), ec = (0, M.Z)(f.Z), eu = (0, M.Z)(Y.Z), ed = (0, M.Z)(B.Z), eh = (0, M.Z)(p.Z), e_ = (0, M.Z)(T.Z), eE = (0, M.Z)(G.Z), eg = (0, M.Z)(z.Z), ep = (0, M.Z)(q.Z), ef = (0, M.Z)(W.Z);
@@ -35,7 +35,7 @@ class eI extends r.PureComponent {
             hasLoadedExperiments: t,
             isAuthenticated: n
         } = this.props;
-        null != e && (!t && n && u.Z.getExperiments(!0), O.default.track(X.rMx.INVITE_OPENED, {
+        null != e && (!t && n && u.Z.getExperiments(!0), v.default.track(X.rMx.INVITE_OPENED, {
             invite_code: (0, x.jX)(e),
             load_time: D.Z.getTimeSinceNavigationStart()
         }, { flush: !0 })), (t || Q.a) && this.resolveInvite(), this.resolveGiftCode(), this.resolveGuildTemplate(), _.Z.initialize();
@@ -68,7 +68,7 @@ class eI extends r.PureComponent {
     resolveGuildTemplate() {
         let {guildTemplateCode: e} = this.props;
         if (null != e)
-            O.default.track(X.rMx.GUILD_TEMPLATE_OPENED, {
+            v.default.track(X.rMx.GUILD_TEMPLATE_OPENED, {
                 guild_template_code: e,
                 load_time: D.Z.getTimeSinceNavigationStart()
             }, { flush: !0 }), N.Z.resolveGuildTemplate(e), N.Z.openNativeAppModal(e);
@@ -257,7 +257,7 @@ class eI extends r.PureComponent {
 }
 t.default = o.ZP.connectStores([
     C.default,
-    v.Z,
+    O.Z,
     S.Z,
     I.Z,
     m.Z
@@ -273,7 +273,7 @@ t.default = o.ZP.connectStores([
         giftCode: c,
         guildTemplateCode: u,
         gift: null != c ? S.Z.get(c) : null,
-        invite: null != o ? v.Z.getInvite(o) : null,
+        invite: null != o ? O.Z.getInvite(o) : null,
         guildTemplate: null != u ? m.Z.getGuildTemplate(u) : null,
         hasLoadedExperiments: I.Z.hasLoadedExperiments
     };

@@ -1,5 +1,5 @@
 n(47120), n(411104);
-var s, r, i = n(735250), a = n(470079), l = n(120356), o = n.n(l), c = n(442837), u = n(570140), d = n(893776), h = n(533307), _ = n(978085), E = n(232567), g = n(388905), p = n(362762), f = n(108427), I = n(314897), m = n(896797), N = n(82142), T = n(283595), x = n(55563), A = n(669079), C = n(63063), S = n(51144), v = n(481153), O = n(781428), Z = n(423527), R = n(981631), b = n(689938), D = n(549856);
+var s, r, i = n(735250), a = n(470079), l = n(120356), o = n.n(l), c = n(442837), u = n(570140), d = n(893776), h = n(533307), _ = n(978085), E = n(232567), g = n(388905), p = n(362762), f = n(108427), I = n(314897), m = n(896797), N = n(82142), T = n(283595), x = n(55563), A = n(669079), C = n(63063), S = n(51144), O = n(481153), v = n(781428), Z = n(423527), R = n(981631), b = n(689938), D = n(549856);
 function L(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
         value: n,
@@ -136,7 +136,7 @@ class M extends a.PureComponent {
         let n = this.getErrorMessage(e);
         return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(v.Z, { giftCode: e }),
+                (0, i.jsx)(O.Z, { giftCode: e }),
                 (0, i.jsx)(g.zx, {
                     disabled: null != n,
                     className: D.marginTop40,
@@ -183,7 +183,7 @@ class M extends a.PureComponent {
                 let e = this.state.currentUser;
                 return c || null == e ? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e);
             }
-            return 'login' === this.getMode() ? (0, i.jsx)(O.Z, {
+            return 'login' === this.getMode() ? (0, i.jsx)(v.Z, {
                 giftCodeSKU: t,
                 giftCode: s,
                 transitionTo: l,

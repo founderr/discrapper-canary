@@ -178,16 +178,16 @@ class f extends (r = l.Component) {
                 filterOption: A,
                 closeMenuOnSelect: C = !0,
                 ...S
-            } = this.props, v = { ...S };
-        null != g && (v.autoFocus = g), null != f && (v.isDisabled = f), null != I && (v.isClearable = I), null != m && (v.isSearchable = m);
-        let O = { IndicatorSeparator: () => null };
-        null != i && (O.Option = e => (0, a.jsx)(u.wx.Option, {
+            } = this.props, O = { ...S };
+        null != g && (O.autoFocus = g), null != f && (O.isDisabled = f), null != I && (O.isClearable = I), null != m && (O.isSearchable = m);
+        let v = { IndicatorSeparator: () => null };
+        null != i && (v.Option = e => (0, a.jsx)(u.wx.Option, {
             ...e,
             children: i(e.data)
-        })), null != r && (O.SingleValue = e => (0, a.jsx)(u.wx.SingleValue, {
+        })), null != r && (v.SingleValue = e => (0, a.jsx)(u.wx.SingleValue, {
             ...e,
             children: r(e.data)
-        })), null != l && (O.MultiValue = e => l(e.data));
+        })), null != l && (v.MultiValue = e => l(e.data));
         if (T && Array.isArray(h)) {
             let t = {};
             o.forEach(e => {
@@ -203,11 +203,11 @@ class f extends (r = l.Component) {
                 ref: this._containerRef,
                 children: [
                     (0, a.jsx)(u.ZP, {
-                        ...v,
+                        ...O,
                         className: n,
                         ref: this._selectRef,
                         isMulti: T,
-                        components: O,
+                        components: v,
                         options: o,
                         styles: null != N ? N : p,
                         onFocus: this.handleFocus,

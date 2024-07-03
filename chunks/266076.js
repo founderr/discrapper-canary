@@ -8,22 +8,22 @@ t.Z = a.memo(function (e) {
             isTyping: u,
             status: d,
             className: _,
-            animated: h = !1,
-            ...E
+            animated: E = !1,
+            ...h
         } = e, {isFacepileEnabled: f} = r.Z.useExperiment({ location: o }, { autoTrackExposure: !0 });
     return t.recipients.length >= 2 && f && null == t.icon ? (0, l.jsx)(c.Z, {
-        'aria-label': E['aria-label'],
-        'aria-hidden': E['aria-hidden'],
+        'aria-label': h['aria-label'],
+        'aria-hidden': h['aria-hidden'],
         className: _,
         recipients: t.recipients,
         size: null != a ? a : n,
         isTyping: u,
         status: d
     }) : (0, l.jsx)(i.Avatar, {
-        'aria-hidden': E['aria-hidden'],
-        'aria-label': E['aria-label'],
+        'aria-hidden': h['aria-hidden'],
+        'aria-label': h['aria-label'],
         className: _,
         size: n,
-        src: (0, s.x)(t, 80, h)
+        src: (0, s.x)(t, 80, E)
     });
 });

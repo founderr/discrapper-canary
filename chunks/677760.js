@@ -3,10 +3,10 @@ n.d(t, {
         return P;
     }
 }), n(47120);
-var s, r, i = n(735250), a = n(470079), l = n(920906), o = n(442837), c = n(481060), u = n(447543), d = n(587444), h = n(393238), _ = n(388905), E = n(108427), g = n(314897), p = n(701190), f = n(626135), I = n(768581), m = n(823379), N = n(264229), T = n(230224), x = n(617730), A = n(258356), C = n(981631), S = n(689938), v = n(946285);
-function O() {
+var s, r, i = n(735250), a = n(470079), l = n(920906), o = n(442837), c = n(481060), u = n(447543), d = n(587444), h = n(393238), _ = n(388905), E = n(108427), g = n(314897), p = n(701190), f = n(626135), I = n(768581), m = n(823379), N = n(264229), T = n(230224), x = n(617730), A = n(258356), C = n(981631), S = n(689938), O = n(946285);
+function v() {
     return (0, i.jsx)('div', {
-        className: v.centerFlex,
+        className: O.centerFlex,
         children: (0, i.jsx)(c.Spinner, {})
     });
 }
@@ -72,11 +72,11 @@ function b(e) {
         c,
         u
     ]), (0, i.jsxs)(l.animated.div, {
-        className: v.inviteCard,
+        className: O.inviteCard,
         style: g,
         children: [
             (0, i.jsx)(l.animated.div, {
-                className: v.inviteChildContainer,
+                className: O.inviteChildContainer,
                 style: g,
                 children: (0, i.jsx)('section', {
                     ref: _,
@@ -101,7 +101,7 @@ function D(e) {
     };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 0,
-        innerStyle: () => v.guildInfoInner,
+        innerStyle: () => O.guildInfoInner,
         ...e,
         children: e => n(e)
     });
@@ -109,7 +109,7 @@ function D(e) {
 function L(e) {
     let {invite: t} = e, n = n => {
             if (null == t)
-                return (0, i.jsx)(O, {});
+                return (0, i.jsx)(v, {});
             switch (n) {
             case 1:
                 return (0, i.jsx)(x.Z, {
@@ -122,12 +122,12 @@ function L(e) {
                     invite: t
                 });
             default:
-                return (0, i.jsx)(O, {});
+                return (0, i.jsx)(v, {});
             }
         }, s = {
-            1: v.inviteCardInner,
-            2: v.inviteCardInnerError,
-            0: v.inviteCardInnerLoading
+            1: O.inviteCardInner,
+            2: O.inviteCardInnerError,
+            0: O.inviteCardInnerLoading
         };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 200,
@@ -150,9 +150,9 @@ function M(e) {
     }
     return (0, i.jsxs)(_.ZP, {
         theme: C.BRd.DARK,
-        className: v.splashBackground,
+        className: O.splashBackground,
         style: r,
-        contentClassName: v.centerAuthBoxContent,
+        contentClassName: O.centerAuthBoxContent,
         children: [
             (0, i.jsx)(L, {
                 ...e,
