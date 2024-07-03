@@ -90,6 +90,9 @@ class g extends (r = i.ZP.PersistedStore) {
     hasAnyUnexpiredOffer() {
         return Object.values(f.userTrialOffers).some(e => null == e.expires_at || Date.parse(e.expires_at) > Date.now());
     }
+    hasAnyUnexpiredDiscountOffer() {
+        return Object.values(f.userDiscountOffers).some(e => null == e.expires_at || Date.parse(e.expires_at) > Date.now());
+    }
     getReferrer(e) {
         var t;
         return null == e ? null : null === (t = f.userTrialOffers[e]) || void 0 === t ? void 0 : t.referrer;
