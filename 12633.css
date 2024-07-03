@@ -33301,13 +33301,11 @@ h3.improved_f017d0:after {
     border-bottom-right-radius: 100px
 }
 
-.button_bba79b:hover,
-.button_bba79b:focus-within {
+.button_bba79b:hover {
     background: var(--background-modifier-hover)
 }
 
-.button_bba79b:hover .icon_bba79b,
-.button_bba79b:focus-within .icon_bba79b {
+.button_bba79b:hover .icon_bba79b {
     fill: var(--interactive-hover)
 }
 
@@ -33359,8 +33357,7 @@ h3.improved_f017d0:after {
     --custom-status-bubble-overlay-color: 0 0 0
 }
 
-.background_d0a252.editable_d0a252:hover,
-.background_d0a252.editable_d0a252:focus-within {
+.background_d0a252.editable_d0a252:hover {
     --custom-status-bubble-background: linear-gradient(rgb(var(--custom-status-bubble-overlay-color) / 0.05),
             rgb(var(--custom-status-bubble-overlay-color) / 0.05)),
         var(--custom-status-bubble-background-color)
@@ -33534,13 +33531,11 @@ h3.improved_f017d0:after {
     position: absolute
 }
 
-.statusBubbleOuter_d0a252:hover .addStatusPrompt_d0a252,
-.statusBubbleOuter_d0a252:focus-within .addStatusPrompt_d0a252 {
+.statusBubbleOuter_d0a252:hover .addStatusPrompt_d0a252 {
     color: var(--text-normal)
 }
 
-.statusBubbleOuter_d0a252:hover .addStatusIconColor_d0a252,
-.statusBubbleOuter_d0a252:focus-within .addStatusIconColor_d0a252 {
+.statusBubbleOuter_d0a252:hover .addStatusIconColor_d0a252 {
     fill: var(--text-normal)
 }
 
