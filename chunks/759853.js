@@ -1,5 +1,5 @@
 n(47120);
-var s = n(735250), o = n(470079), r = n(887024), a = n(920906), i = n(442837), l = n(110924), c = n(607070), d = n(819640), u = n(569379), p = n(675654), x = n(267925), m = n(197857);
+var s = n(735250), o = n(470079), r = n(887024), a = n(920906), l = n(442837), i = n(110924), c = n(607070), d = n(819640), u = n(569379), p = n(675654), x = n(267925), m = n(197857);
 let g = ['#51BC9D'];
 t.Z = e => {
     var t;
@@ -8,25 +8,25 @@ t.Z = e => {
             progressBarRef: C,
             isExpanded: f
         } = e, {
-            completionSpring: h,
-            startCompletionAnimation: _
-        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, i.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), v = (0, i.e7)([d.Z], () => d.Z.hasLayers()), j = (0, l.Z)(v), [A, B] = o.useState(null), [b, R] = o.useState(null), O = o.useRef(new r.qA({
+            completionSpring: _,
+            startCompletionAnimation: h
+        } = (0, u.GX)(), E = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), v = (0, l.e7)([d.Z], () => d.Z.hasLayers()), A = (0, i.Z)(v), [j, B] = o.useState(null), [b, O] = o.useState(null), R = o.useRef(new r.qA({
             gravity: 0,
             wind: 0
-        })), y = (0, r.uR)(A, b), I = o.useCallback(() => {
+        })), I = (0, r.uR)(j, b), y = o.useCallback(() => {
             if (T)
                 return;
             let e = C.current, t = N.current;
-            if (null != t && null != e && y.isReady) {
+            if (null != t && null != e && I.isReady) {
                 var n, s, o, r;
                 let {
                         x: a,
-                        y: i
+                        y: l
                     } = e.getBoundingClientRect(), {
-                        x: l,
+                        x: i,
                         y: c
                     } = t.getBoundingClientRect();
-                y.createMultipleConfetti((n = a - l, s = i - c, o = e.clientHeight, r = e.clientWidth, {
+                I.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
                     ...p.We,
                     position: {
                         type: 'static-random',
@@ -69,36 +69,36 @@ t.Z = e => {
         }, [
             C,
             N,
-            y,
+            I,
             T
-        ]), M = (0, l.Z)(f);
+        ]), M = (0, i.Z)(f);
     return (o.useEffect(() => {
-        E && f && !M && (_(), I());
+        E && f && !M && (h(), y());
     }, [
         f,
         E,
-        _,
-        I,
+        h,
+        y,
         M
     ]), o.useEffect(() => {
-        E && !v && j && setTimeout(() => {
-            _(), I();
+        E && !v && A && setTimeout(() => {
+            h(), y();
         }, 200);
     }, [
         E,
-        j,
+        A,
         v,
-        _,
-        I
+        h,
+        y
     ]), o.useEffect(() => {
-        if (!!y.isReady)
-            !S.current && E && (_(), I()), S.current = E;
+        if (!!I.isReady)
+            !S.current && E && (h(), y()), S.current = E;
     }, [
         E,
         S,
-        I,
-        _,
-        y
+        y,
+        h,
+        I
     ]), T) ? null : (0, s.jsxs)('div', {
         className: x.wrapper,
         'aria-hidden': 'true',
@@ -106,15 +106,15 @@ t.Z = e => {
         children: [
             (0, s.jsx)(a.animated.div, {
                 className: x.background,
-                style: { opacity: h }
+                style: { opacity: _ }
             }),
             (0, s.jsx)(r.O_, {
                 ref: B,
                 className: x.confetti,
-                environment: O.current
+                environment: R.current
             }),
             (0, s.jsx)(r.Ji, {
-                ref: R,
+                ref: O,
                 sprites: [m],
                 colors: g,
                 spriteWidth: p.Ko,

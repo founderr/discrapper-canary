@@ -3,30 +3,30 @@ t.Z = o.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: o,
-            size: i = 42,
-            strokeWidth: l = 3,
+            size: l = 42,
+            strokeWidth: i = 3,
             glowBlur: c = 0.4,
             children: d
-        } = e, u = (0, r.EK)(n, o > 0), p = i / 2, x = i / 2 - l / 2, m = 2 * Math.PI * x, g = m - o * m, C = {
+        } = e, u = (0, r.EK)(n, o > 0), p = l / 2, x = l / 2 - i / 2, m = 2 * Math.PI * x, g = m - o * m, C = {
             strokeDasharray: ''.concat(m, ' ').concat(m),
             strokeDashoffset: g
         }, f = {
             strokeDasharray: ''.concat(m, ' ').concat(m),
             strokeDashoffset: -o * m
-        }, h = { boxShadow: '0 0 30px 0px '.concat(u.glow) };
+        }, _ = { boxShadow: '0 0 30px 0px '.concat(u.glow) };
     return (0, s.jsxs)('div', {
         className: a.outer,
         ref: t,
         children: [
             (0, s.jsx)('div', {
                 className: a.inner,
-                style: h,
+                style: _,
                 children: d
             }),
             (0, s.jsxs)('svg', {
                 className: a.progressBar,
-                height: i,
-                width: i,
+                height: l,
+                width: l,
                 children: [
                     (0, s.jsxs)('defs', {
                         children: [
@@ -68,7 +68,7 @@ t.Z = o.forwardRef((e, t) => {
                     }),
                     (0, s.jsx)('circle', {
                         className: a.progress,
-                        strokeWidth: l,
+                        strokeWidth: i,
                         fill: 'transparent',
                         r: x,
                         cx: p,
@@ -78,7 +78,7 @@ t.Z = o.forwardRef((e, t) => {
                     }),
                     (0, s.jsx)('circle', {
                         className: a.progress,
-                        strokeWidth: l,
+                        strokeWidth: i,
                         fill: 'transparent',
                         r: x,
                         cx: p,

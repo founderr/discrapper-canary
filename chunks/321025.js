@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return i;
     }
 });
-var s = n(735250), o = n(470079), r = n(920906), a = n(130653), i = n(613087);
-function l(e) {
+var s = n(735250), o = n(470079), r = n(920906), a = n(130653), l = n(613087);
+function i(e) {
     let {
             expansionSpring: t,
             isExpanded: n
         } = e, {
-            animatedComponentProps: l,
+            animatedComponentProps: i,
             recalculateAnimationPositions: c
-        } = o.useContext(i.B$), d = o.useContext(a.T);
+        } = o.useContext(l.B$), d = o.useContext(a.T);
     return o.useEffect(() => {
         c();
     }, [
@@ -26,13 +26,13 @@ function l(e) {
             width: '100%',
             height: '100%'
         },
-        children: l.map(e => {
+        children: i.map(e => {
             let {
                 id: n,
                 collapsedLeft: o,
                 expandedLeft: a,
-                collapsedTop: i,
-                expandedTop: l,
+                collapsedTop: l,
+                expandedTop: i,
                 collapsedRight: c,
                 expandedRight: u
             } = e;
@@ -47,8 +47,8 @@ function l(e) {
                             1
                         ],
                         output: [
-                            i,
-                            l
+                            l,
+                            i
                         ]
                     }),
                     right: Math.min(c, u),
