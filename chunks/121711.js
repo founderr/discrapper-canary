@@ -1,65 +1,57 @@
-n(47120);
-var i = n(735250), s = n(470079), a = n(120356), r = n.n(a), l = n(948789), o = n(481060), c = n(100527), d = n(252618), u = n(624383), _ = n(984370), h = n(63063), E = n(792125), I = n(113434), m = n(709158), g = n(710914), p = n(77608), T = n(981631), S = n(689938), f = n(852595);
+var i = n(735250), s = n(470079), a = n(948789), r = n(481060), l = n(100527), o = n(252618), c = n(51448), d = n(164427), u = n(624383), _ = n(742916), h = n(63063), E = n(113434), I = n(709158), m = n(710914), g = n(452081), p = n(981631), T = n(689938), S = n(852595);
 t.Z = function (e) {
-    let {} = e, t = (0, m.Z)(c.Z.QUEST_HOME_PAGE), [n, a] = s.useState(I.W6.UNCLAIMED), {quests: C} = (0, I.bA)(n);
+    let {} = e, t = (0, I.Z)(l.Z.QUEST_HOME_PAGE), {
+            tabs: n,
+            selectedTab: f,
+            onSelectTab: C
+        } = (0, g.z)(), N = s.useRef(new _.m()), {quests: A} = (0, E.bA)(f.id);
     s.useEffect(() => {
-        !t && (0, l.uL)(T.Z5c.FRIENDS);
+        !t && (0, a.uL)(p.Z5c.FRIENDS);
     }, [t]), s.useEffect(() => {
     }, []);
-    let N = s.useCallback(() => {
-        window.open(h.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
+    let Z = s.useCallback(() => {
+        window.open(h.Z.getArticleURL(p.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, d.Tt)({ location: S.Z.Messages.QUESTS });
-    let A = (0, E.Q)('dark');
-    return t ? (0, i.jsxs)('div', {
-        className: f.container,
+    return ((0, o.Tt)({ location: T.Z.Messages.QUESTS }), t) ? (0, i.jsxs)('div', {
+        className: S.container,
         children: [
-            (0, i.jsxs)(_.Z, {
-                toolbar: !0,
-                transparent: !0,
-                className: r()(A, f.headerBar),
-                children: [
-                    (0, i.jsx)(_.Z.Icon, {
-                        icon: o.QuestsIcon,
-                        'aria-hidden': !0,
-                        color: 'white',
-                        className: f.questIcon
-                    }),
-                    (0, i.jsx)(p.Z, {
-                        setSelectedFilter: a,
-                        selectedFilter: n
-                    })
-                ]
+            (0, i.jsx)(c.f, {
+                icon: (0, i.jsx)(r.QuestsIcon, {}),
+                title: T.Z.Messages.QUESTS,
+                tabs: n,
+                selectedTab: f,
+                onTabSelect: C,
+                showSearch: !1,
+                scrollManager: N
             }),
-            (0, i.jsxs)(o.ScrollerNone, {
-                className: f.scroller,
-                fade: !0,
+            (0, i.jsxs)(d.J, {
+                scrollManager: N,
                 children: [
                     (0, i.jsx)(u.c, {
-                        title: S.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                        description: S.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                        eyebrow: S.Z.Messages.QUESTS_HOME_HERO_EYEBROW,
+                        title: T.Z.Messages.QUESTS_HOME_HERO_TITLE,
+                        description: T.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+                        eyebrow: T.Z.Messages.QUESTS_HOME_HERO_EYEBROW,
                         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/generic-hero-background.png',
-                        button: (0, i.jsxs)(o.Button, {
+                        button: (0, i.jsxs)(r.Button, {
                             size: 'medium',
-                            className: f.button,
-                            onClick: N,
-                            innerClassName: f.innerButton,
+                            className: S.button,
+                            onClick: Z,
+                            innerClassName: S.innerButton,
                             children: [
-                                (0, i.jsx)(o.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'always-white',
-                                    className: f.externalLinkText,
-                                    children: S.Z.Messages.LEARN_MORE
+                                    className: S.externalLinkText,
+                                    children: T.Z.Messages.LEARN_MORE
                                 }),
-                                (0, i.jsx)(o.LinkExternalSmallIcon, {
-                                    className: f.icon,
+                                (0, i.jsx)(r.LinkExternalSmallIcon, {
+                                    className: S.icon,
                                     color: 'var(--white-500)'
                                 })
                             ]
                         })
                     }),
-                    (0, i.jsx)(g.Z, { quests: C })
+                    (0, i.jsx)(m.Z, { quests: A })
                 ]
             })
         ]

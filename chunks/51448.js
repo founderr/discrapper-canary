@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     }
 });
-var i = n(735250), s = n(470079), a = n(920906), r = n(481060), l = n(689938), o = n(479882);
+var i = n(735250), s = n(470079), a = n(338545), r = n(481060), l = n(689938), o = n(479882);
 function c(e) {
     var t;
     let {
@@ -16,9 +16,10 @@ function c(e) {
             onSearch: E,
             onSearchClear: I,
             onSearchSubmit: m,
-            scrollManager: g
-        } = e, p = l.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: c }), T = s.useCallback(e => {
-            'Enter' === e.key && m(h);
+            scrollManager: g,
+            showSearch: p = !0
+        } = e, T = l.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: c }), S = s.useCallback(e => {
+            'Enter' === e.key && (null == m || m(null != h ? h : ''));
         }, [
             m,
             h
@@ -55,16 +56,16 @@ function c(e) {
                         children: e.label
                     }, e.id))
                 }),
-                (0, i.jsx)('div', {
+                p && null != E ? (0, i.jsx)('div', {
                     className: o.search,
                     children: (0, i.jsx)(r.SearchBar, {
-                        placeholder: p,
-                        query: h,
+                        placeholder: T,
+                        query: null != h ? h : '',
                         onChange: E,
                         onClear: I,
-                        onKeyDown: T
+                        onKeyDown: S
                     })
-                })
+                }) : null
             ]
         })
     });

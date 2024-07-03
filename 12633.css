@@ -19977,7 +19977,7 @@ span.clanTag_a31c43 {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border-radius: var(--radius-sm)var(--radius-sm)0 0
+    overflow: hidden
 }
 
 .userProfileInner_c69a7b:before {
@@ -20363,7 +20363,8 @@ span.clanTag_a31c43 {
 
 .header_b07019 {
     z-index: 2;
-    min-height: calc(45px + var(--custom-user-banner-height-bite-size))
+    min-height: calc(45px + var(--custom-user-banner-height-bite-size));
+    flex-shrink: 0
 }
 
 .custom-profile-theme .header_b07019 {
