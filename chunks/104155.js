@@ -1,26 +1,26 @@
 t.d(n, {
     I: function () {
-        return Z;
+        return I;
     },
     Z: function () {
-        return v;
+        return b;
     }
 }), t(47120);
-var l = t(735250), a = t(470079), i = t(120356), r = t.n(i), s = t(442837), o = t(481060), c = t(325708), d = t(213557), u = t(433355), h = t(324067), m = t(984933), _ = t(430824), f = t(496675), C = t(626135), p = t(216306), x = t(775028), g = t(981631), N = t(176505), I = t(689938), b = t(364693), E = t(489919);
-function Z(e) {
+var l = t(735250), a = t(470079), i = t(442837), r = t(481060), s = t(325708), o = t(213557), c = t(433355), d = t(324067), u = t(984933), h = t(430824), m = t(496675), _ = t(626135), f = t(216306), C = t(775028), p = t(981631), x = t(176505), g = t(689938), N = t(364693);
+function I(e) {
     let {channelId: n} = e;
-    return (0, l.jsx)(c.Z, {
-        sidebarType: c.y.ThreadSidebar,
+    return (0, l.jsx)(s.Z, {
+        sidebarType: s.y.ThreadSidebar,
         maxWidth: 600,
-        children: (0, l.jsx)(d.Z, {
+        children: (0, l.jsx)(o.Z, {
             channelId: n,
-            baseChannelId: N.oC.CHANNEL_BROWSER
+            baseChannelId: x.oC.CHANNEL_BROWSER
         })
     });
 }
-function v(e) {
-    let {guildId: n} = e, [i, c] = a.useState(''), d = (0, s.e7)([_.Z], () => _.Z.getGuild(n)), Z = (0, s.e7)([m.ZP], () => m.ZP.getChannels(n)), v = (0, s.e7)([h.Z], () => h.Z.getCategories(n)), j = (0, p.Fo)(n, v, Z, i), T = (0, s.e7)([f.Z], () => f.Z.canWithPartialContext(g.Plq.MANAGE_CHANNELS, { guildId: n })), S = (0, s.e7)([u.ZP], () => null != u.ZP.getCurrentSidebarChannelId(N.oC.CHANNEL_BROWSER)), R = a.useCallback(() => c(''), [c]), A = a.useCallback(() => {
-            (0, o.openModalLazy)(async () => {
+function b(e) {
+    let {guildId: n} = e, [s, o] = a.useState(''), I = (0, i.e7)([h.Z], () => h.Z.getGuild(n)), b = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)), E = (0, i.e7)([d.Z], () => d.Z.getCategories(n)), Z = (0, f.Fo)(n, E, b, s), v = (0, i.e7)([m.Z], () => m.Z.canWithPartialContext(p.Plq.MANAGE_CHANNELS, { guildId: n })), T = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)), j = a.useCallback(() => o(''), [o]), S = a.useCallback(() => {
+            (0, r.openModalLazy)(async () => {
                 let {default: e} = await Promise.all([
                     t.e('45094'),
                     t.e('33574')
@@ -32,49 +32,44 @@ function v(e) {
                 });
             });
         }, [n]);
-    return null == d ? null : (0, l.jsx)(l.Fragment, {
-        children: (0, l.jsx)('div', {
-            className: r()(E.chat, b.container),
-            children: (0, l.jsxs)('div', {
-                className: r()(b.pageBody),
+    return null == I ? null : (0, l.jsxs)('div', {
+        className: N.pageBody,
+        children: [
+            (0, l.jsxs)('div', {
+                className: N.header,
                 children: [
-                    (0, l.jsxs)('div', {
-                        className: b.header,
-                        children: [
-                            (0, l.jsx)(o.SearchBar, {
-                                className: b.search,
-                                size: o.SearchBar.Sizes.MEDIUM,
-                                query: i,
-                                onChange: e => {
-                                    '' === i && '' !== e && C.default.track(g.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), c(e.toLowerCase());
-                                },
-                                onClear: R,
-                                placeholder: I.Z.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
-                            }),
-                            T ? (0, l.jsxs)(o.Button, {
-                                className: b.createButton,
-                                innerClassName: b.createButtonInner,
-                                onClick: A,
-                                children: [
-                                    (0, l.jsx)(o.PlusSmallIcon, {
-                                        size: 'sm',
-                                        color: 'currentColor',
-                                        className: b.createIcon
-                                    }),
-                                    I.Z.Messages.CREATE
-                                ]
-                            }) : null
-                        ]
+                    (0, l.jsx)(r.SearchBar, {
+                        className: N.search,
+                        size: r.SearchBar.Sizes.MEDIUM,
+                        query: s,
+                        onChange: e => {
+                            '' === s && '' !== e && _.default.track(p.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), o(e.toLowerCase());
+                        },
+                        onClear: j,
+                        placeholder: g.Z.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
                     }),
-                    (0, l.jsx)(x.Z, {
-                        className: b.browser,
-                        channels: Z,
-                        categories: j,
-                        guild: d,
-                        hasSidebar: S
-                    })
+                    v ? (0, l.jsxs)(r.Button, {
+                        className: N.createButton,
+                        innerClassName: N.createButtonInner,
+                        onClick: S,
+                        children: [
+                            (0, l.jsx)(r.PlusSmallIcon, {
+                                size: 'sm',
+                                color: 'currentColor',
+                                className: N.createIcon
+                            }),
+                            g.Z.Messages.CREATE
+                        ]
+                    }) : null
                 ]
+            }),
+            (0, l.jsx)(C.Z, {
+                className: N.browser,
+                channels: b,
+                categories: Z,
+                guild: I,
+                hasSidebar: T
             })
-        })
+        ]
     });
 }

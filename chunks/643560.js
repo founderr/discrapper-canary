@@ -9,36 +9,34 @@ function h(e) {
             entry: t,
             onSelect: h,
             closePopout: p,
-            forceLightTheme: m,
-            hideEditButton: _ = !1
+            hideEditButton: m = !1
         } = e, {
-            isEntryAdmin: f,
-            canEdit: E,
-            canRemove: C
-        } = (0, d.Z)(t), g = (0, r.Z)({
+            isEntryAdmin: _,
+            canEdit: f,
+            canRemove: E
+        } = (0, d.Z)(t), C = (0, r.Z)({
             id: t.guildId,
             label: u.Z.Messages.COPY_ID_GUILD,
             onSuccess: p
         });
     a.useEffect(() => {
-        !E && !C && null == g && (0, l.Zy)();
+        !f && !E && null == C && (0, l.Zy)();
     });
-    let I = () => {
+    let g = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function x() {
+    function I() {
         (0, l.Zy)(), null == p || p();
     }
     return (0, i.jsxs)(s.Menu, {
-        className: m ? 'theme-light' : null,
         navId: 'guild-entry-context',
-        onClose: x,
+        onClose: I,
         'aria-label': u.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
         onSelect: h,
         children: [
             (0, i.jsxs)(s.MenuGroup, {
                 children: [
-                    E && !_ ? (0, i.jsx)(s.MenuItem, {
+                    f && !m ? (0, i.jsx)(s.MenuItem, {
                         id: 'update-entry',
                         label: u.Z.Messages.HUB_ENTRY_UPDATE,
                         action: function () {
@@ -48,10 +46,10 @@ function h(e) {
                                     ...n,
                                     entry: t
                                 });
-                            }), x();
+                            }), I();
                         }
                     }) : null,
-                    C ? (0, i.jsx)(s.MenuItem, {
+                    E ? (0, i.jsx)(s.MenuItem, {
                         id: 'remove-from-hub',
                         label: u.Z.Messages.HUB_ENTRY_REMOVE,
                         action: function () {
@@ -59,22 +57,22 @@ function h(e) {
                                 header: u.Z.Messages.HUB_ENTRY_REMOVE,
                                 confirmText: u.Z.Messages.REMOVE,
                                 cancelText: u.Z.Messages.CANCEL,
-                                onConfirm: I,
+                                onConfirm: g,
                                 ...e,
                                 children: (0, i.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     children: u.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({ guildName: t.name })
                                 })
-                            })), x();
+                            })), I();
                         },
                         color: 'danger'
                     }) : null,
-                    f ? null : (0, i.jsx)(i.Fragment, {
+                    _ ? null : (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(s.MenuItem, {
                             id: 'report-server-listing',
                             label: u.Z.Messages.REPORT_SERVER_NO_NAME,
                             action: function () {
-                                null != t && ((0, o.sq)(t), x());
+                                null != t && ((0, o.sq)(t), I());
                             },
                             icon: s.FlagIcon,
                             color: 'danger'
@@ -82,7 +80,7 @@ function h(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(s.MenuGroup, { children: g })
+            (0, i.jsx)(s.MenuGroup, { children: C })
         ]
     });
 }

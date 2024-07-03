@@ -1,9 +1,9 @@
 s.d(t, {
     Z: function () {
-        return T;
+        return h;
     }
 }), s(47120);
-var a, n, l = s(735250), i = s(470079), o = s(120356), r = s.n(o), c = s(442837), d = s(481060), u = s(285952), m = s(346656), C = s(273387), _ = s(16853), x = s(689938), E = s(467969), I = s(36705), L = s(216019);
+var a, n, l = s(735250), o = s(470079), i = s(120356), r = s.n(i), c = s(442837), d = s(481060), u = s(285952), m = s(346656), C = s(273387), _ = s(16853), x = s(689938), E = s(467969), I = s(36705), L = s(216019);
 function f(e) {
     let {
         guild: t,
@@ -31,7 +31,7 @@ function f(e) {
         ]
     });
 }
-function h(e) {
+function T(e) {
     let {
             directoryChannelId: t,
             guild: s
@@ -51,7 +51,6 @@ function h(e) {
             }),
             (0, l.jsx)(_.Z, {
                 entry: a,
-                forceLightTheme: !0,
                 children: e => (0, l.jsx)(d.MoreHorizontalIcon, {
                     size: 'md',
                     color: 'currentColor',
@@ -62,17 +61,17 @@ function h(e) {
         ]
     });
 }
-function T(e) {
+function h(e) {
     let t, {
             directoryChannelId: s,
             onClose: a,
             onGuildChosen: n,
-            handleChooseCreate: o,
+            handleChooseCreate: i,
             directoryGuildName: c,
             availableGuilds: m,
             addedGuilds: C,
             loading: _
-        } = e, [L, T] = i.useState(0);
+        } = e, [L, h] = o.useState(0);
     return t = _ ? (0, l.jsx)('div', {
         className: E.emptyContainer,
         children: (0, l.jsx)(d.Spinner, {})
@@ -109,7 +108,7 @@ function T(e) {
                 children: x.Z.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
             })
         ]
-    }) : C.map(e => (0, l.jsx)(h, {
+    }) : C.map(e => (0, l.jsx)(T, {
         directoryChannelId: s,
         guild: e
     }, e.id)), (0, l.jsxs)(l.Fragment, {
@@ -137,7 +136,7 @@ function T(e) {
                     (0, l.jsxs)(d.TabBar, {
                         className: E.tabBar,
                         selectedItem: L,
-                        onItemSelect: T,
+                        onItemSelect: h,
                         type: 'top',
                         look: 'brand',
                         children: [
@@ -171,7 +170,7 @@ function T(e) {
                     (0, l.jsx)(d.Button, {
                         className: E.footerButton,
                         color: d.Button.Colors.PRIMARY,
-                        onClick: o,
+                        onClick: i,
                         children: x.Z.Messages.HUB_CREATE_GUILD_CTA
                     })
                 ]

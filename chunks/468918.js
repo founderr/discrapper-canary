@@ -15,5 +15,6 @@ e.exports = {
     searchSubtitle: 'searchSubtitle_a3a4ce',
     guildList: 'guildList_a3a4ce',
     footer: 'footer_a3a4ce',
-    footerImage: 'footerImage_a3a4ce'
+    footerImage: 'footerImage_a3a4ce',
+    sidebarContainer: 'sidebarContainer_a3a4ce'
 };

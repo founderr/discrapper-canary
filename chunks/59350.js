@@ -3,7 +3,7 @@ t.d(n, {
         return el;
     }
 }), t(47120);
-var l = t(735250), a = t(470079), i = t(120356), r = t.n(i), s = t(392711), o = t.n(s), c = t(920906), d = t(866442), u = t(442837), h = t(692547), m = t(780384), _ = t(481060), f = t(45114), C = t(131388), p = t(410030), x = t(1585), g = t(125988), N = t(44315), I = t(160404), b = t(240991), E = t(703656), Z = t(484459), v = t(318661), j = t(252532), T = t(271383), S = t(430824), R = t(306680), A = t(594174), O = t(823379), B = t(51144), L = t(998502), M = t(549817), w = t(745752), P = t(45966), y = t(637853), k = t(905204), H = t(968644), D = t(521941), U = t(614328), W = t(104265), G = t(588632), F = t(290511), z = t(981631), V = t(176505), q = t(490897), Y = t(689938), X = t(680917), Q = t(489919), K = t(153521);
+var l = t(735250), a = t(470079), i = t(120356), r = t.n(i), s = t(392711), o = t.n(s), c = t(920906), d = t(866442), u = t(442837), h = t(692547), m = t(780384), _ = t(481060), f = t(45114), C = t(131388), p = t(410030), x = t(1585), g = t(125988), N = t(44315), I = t(160404), b = t(240991), E = t(703656), Z = t(484459), v = t(318661), T = t(252532), j = t(271383), S = t(430824), R = t(306680), A = t(594174), O = t(823379), B = t(51144), L = t(998502), M = t(549817), w = t(745752), P = t(45966), y = t(637853), k = t(905204), H = t(968644), D = t(521941), U = t(614328), W = t(104265), G = t(588632), F = t(290511), z = t(981631), V = t(176505), q = t(490897), Y = t(689938), X = t(680917), Q = t(489919), K = t(153521);
 let J = _.AvatarSizes.SIZE_80, $ = 'required';
 function ee(e) {
     var n;
@@ -14,7 +14,7 @@ function ee(e) {
             avatarSrc: s,
             eventHandlers: c,
             isAvatarAnimating: h
-        } = (0, j.w)({
+        } = (0, T.w)({
             user: i,
             guildId: t.id,
             size: 120
@@ -22,7 +22,7 @@ function ee(e) {
             user: i,
             size: (0, x.y9)(J),
             onlyAnimateOnHover: !h
-        }), f = (0, u.e7)([T.ZP], () => T.ZP.getSelfMember(t.id)), C = (0, u.Wu)([T.ZP], () => T.ZP.getMemberRoleWithPendingUpdates(t.id, i.id)), p = (0, u.e7)([S.Z], () => S.Z.getRoles(t.id)), N = o()(C).filter(e => p.hasOwnProperty(e)).map(e => p[e]).orderBy('position', 'desc').value(), I = (0, v.ZP)(i.id, t.id);
+        }), f = (0, u.e7)([j.ZP], () => j.ZP.getSelfMember(t.id)), C = (0, u.Wu)([j.ZP], () => j.ZP.getMemberRoleWithPendingUpdates(t.id, i.id)), p = (0, u.e7)([S.Z], () => S.Z.getRoles(t.id)), N = o()(C).filter(e => p.hasOwnProperty(e)).map(e => p[e]).orderBy('position', 'desc').value(), I = (0, v.ZP)(i.id, t.id);
     a.useEffect(() => {
         (0, Z.Z)(i.id, i.getAvatarURL(t.id, (0, _.getAvatarSize)(J)), { guildId: t.id });
     }, []);
@@ -126,7 +126,7 @@ function en(e) {
         }), v = t.options.map(e => ({
             value: e.id,
             ...e
-        })), j = t.options.filter(e => x.includes(e.id)).map(e => e.id);
+        })), T = t.options.filter(e => x.includes(e.id)).map(e => e.id);
     return (0, l.jsx)(l.Fragment, {
         children: (0, l.jsxs)(c.animated.div, {
             className: X.prompt,
@@ -151,7 +151,7 @@ function en(e) {
                 }),
                 (0, l.jsx)(G.Z, {
                     options: v,
-                    value: j,
+                    value: T,
                     onChange: e => {
                         let n = e.find(e => !x.includes(e.id)), l = e.map(e => e.id);
                         if (null != n)
@@ -291,7 +291,7 @@ function el(e) {
                 };
         }
     }, [null == s ? void 0 : s.id]);
-    let j = a.useCallback(e => {
+    let T = a.useCallback(e => {
         if (null == s)
             return null;
         switch (e.type) {
@@ -314,33 +314,30 @@ function el(e) {
     if (0 === x.length) {
         let e = (0, N.Lq)(i ? z.Ilk.PRIMARY_300 : z.Ilk.PRIMARY_500), n = (0, N.Lq)(i ? z.Ilk.PRIMARY_700 : z.Ilk.PRIMARY_230);
         return (0, l.jsx)('div', {
-            className: Q.chat,
-            children: (0, l.jsx)('div', {
-                className: r()(Q.content, X.emptyPage),
-                children: (0, l.jsxs)('div', {
-                    className: X.emptyContainer,
-                    children: [
-                        (0, l.jsx)(U.Z, {
-                            className: X.emptyIcon,
-                            foregroundColor: e,
-                            backgroundColor: n
-                        }),
-                        (0, l.jsx)(_.Heading, {
-                            className: X.emptyHeader,
-                            variant: 'heading-md/semibold',
-                            children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_HEADER
-                        }),
-                        (0, l.jsx)(_.Text, {
-                            variant: 'text-sm/medium',
-                            children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_SUBHEADER.format({ onBrowseChannels: d })
-                        })
-                    ]
-                })
+            className: r()(Q.content, X.emptyPage),
+            children: (0, l.jsxs)('div', {
+                className: X.emptyContainer,
+                children: [
+                    (0, l.jsx)(U.Z, {
+                        className: X.emptyIcon,
+                        foregroundColor: e,
+                        backgroundColor: n
+                    }),
+                    (0, l.jsx)(_.Heading, {
+                        className: X.emptyHeader,
+                        variant: 'heading-md/semibold',
+                        children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_HEADER
+                    }),
+                    (0, l.jsx)(_.Text, {
+                        variant: 'text-sm/medium',
+                        children: Y.Z.Messages.CUSTOMIZE_COMMUNITY_EMPTY_SUBHEADER.format({ onBrowseChannels: d })
+                    })
+                ]
             })
         });
     }
     return (0, l.jsx)('div', {
-        className: r()(Q.chat, X.scrollerContainer),
+        className: X.scrollerContainer,
         children: (0, l.jsxs)(_.AdvancedScroller, {
             className: X.scroller,
             fade: !0,
@@ -357,8 +354,8 @@ function el(e) {
                                         children: Y.Z.Messages.ONBOARDING_PROMPT_ANSWERS_NEW.format({ count: g.length + Z })
                                     })
                                 }),
-                                g.map(j),
-                                b.map(j),
+                                g.map(T),
+                                b.map(T),
                                 (0, l.jsx)('div', { className: X.sectionSeparator })
                             ]
                         }),
@@ -378,7 +375,7 @@ function el(e) {
                                         })
                                     ]
                                 }),
-                                v.map(j)
+                                v.map(T)
                             ]
                         })
                     ]

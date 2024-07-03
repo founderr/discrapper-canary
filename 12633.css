@@ -10365,7 +10365,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     font-size: 18px;
     padding-right: 16px;
     border-radius: 3px;
-    border: 1px solid transparent
+    border: 1px solid transparent;
+    background-color: var(--background-tertiary)
 }
 
 .searchBox_d83b4d:focus,
@@ -10433,7 +10434,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .theme-light .searchBox_d83b4d {
-    background-color: var(--white-500);
     box-shadow: 0 2px 5px 0 hsl(var(--black-500-hsl)/.2)
 }
 
@@ -10454,7 +10454,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .theme-dark .searchBox_d83b4d {
-    background-color: var(--primary-500);
     box-shadow: 0 2px 5px 0 hsl(var(--black-500-hsl)/.2)
 }
 
@@ -45970,7 +45969,7 @@ html,
 
 body,
 .appMount_ea7e65 {
-    background: var(--bg-overlay-app-frame, var(--background-tertiary));
+    background: var(--bg-overlay-2, var(--background-secondary));
     text-rendering: optimizeLegibility
 }
 

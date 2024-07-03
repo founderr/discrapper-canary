@@ -5,6 +5,5 @@ e.exports = {
     createButton: 'createButton_c2efea',
     createButtonInner: 'createButtonInner_c2efea',
     createIcon: 'createIcon_c2efea',
-    browser: 'browser_c2efea',
-    container: 'container_c2efea'
+    browser: 'browser_c2efea'
 };

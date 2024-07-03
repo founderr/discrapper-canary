@@ -3,7 +3,7 @@ s.d(t, {
         return u;
     }
 }), s(47120);
-var a = s(735250), n = s(470079), l = s(481060), i = s(479531), o = s(285952), r = s(486527), c = s(689938), d = s(671567);
+var a = s(735250), n = s(470079), l = s(481060), o = s(479531), i = s(285952), r = s(486527), c = s(689938), d = s(671567);
 function u(e) {
     let {
             directoryChannelId: t,
@@ -14,19 +14,19 @@ function u(e) {
             onSubmit: _,
             onClose: x,
             onBack: E
-        } = e, [I, L] = n.useState(!1), [f, h] = n.useState(null), T = async () => {
+        } = e, [I, L] = n.useState(!1), [f, T] = n.useState(null), h = async () => {
             L(!0);
             try {
                 await _();
             } catch (e) {
-                h(new i.Z(e));
+                T(new o.Z(e));
             }
             L(!1);
         };
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)(l.ModalHeader, {
-                direction: o.Z.Direction.VERTICAL,
+                direction: i.Z.Direction.VERTICAL,
                 className: d.header,
                 separator: !1,
                 children: [
@@ -70,23 +70,23 @@ function u(e) {
                             clearable: !1,
                             value: m,
                             onChange: C,
-                            maxVisibleItems: 4,
-                            popoutClassName: 'theme-light'
+                            maxVisibleItems: 4
                         })
                     })
                 ]
             }),
             (0, a.jsxs)(l.ModalFooter, {
-                justify: o.Z.Justify.BETWEEN,
+                justify: i.Z.Justify.BETWEEN,
                 children: [
                     (0, a.jsx)(l.Button, {
                         color: l.Button.Colors.BRAND,
-                        onClick: T,
+                        onClick: h,
                         submitting: I,
                         disabled: '' === s || m === r.AR.UNCATEGORIZED,
                         children: c.Z.Messages.HUB_ADD_SERVER_CTA
                     }),
                     (0, a.jsx)(l.Button, {
+                        className: d.backButton,
                         look: l.Button.Looks.BLANK,
                         size: l.Button.Sizes.MIN,
                         onClick: E,

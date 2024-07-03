@@ -4,15 +4,14 @@ var a = n(481060), s = n(643560);
 t.Z = e => {
     let {
         entry: t,
-        forceLightTheme: n,
-        hideEditButton: l,
-        children: r,
-        onRequestOpen: o,
-        onRequestClose: c
+        hideEditButton: n,
+        children: l,
+        onRequestOpen: r,
+        onRequestClose: o
     } = e;
     return (0, i.jsx)(a.Popout, {
-        onRequestOpen: o,
-        onRequestClose: c,
+        onRequestOpen: r,
+        onRequestClose: o,
         animation: a.Popout.Animation.NONE,
         position: 'bottom',
         spacing: 4,
@@ -22,10 +21,9 @@ t.Z = e => {
             return (0, i.jsx)(s.default, {
                 entry: t,
                 closePopout: a,
-                forceLightTheme: n,
-                hideEditButton: l
+                hideEditButton: n
             });
         },
-        children: r
+        children: l
     });
 };
