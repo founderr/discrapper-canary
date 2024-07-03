@@ -1,59 +1,59 @@
 var i = n(735250);
 n(470079);
-var s = n(442837), a = n(481060), r = n(212093), l = n(100527), o = n(963202), c = n(677277), d = n(285865), u = n(702428), _ = n(709158), E = n(683301), h = n(150192), I = n(889010), m = n(488905), g = n(347137), p = n(731455), T = n(689938);
-let S = e => {
+var s = n(948789), a = n(442837), r = n(481060), l = n(212093), o = n(100527), c = n(963202), d = n(677277), u = n(285865), _ = n(918701), h = n(702428), E = n(709158), I = n(683301), m = n(150192), g = n(889010), p = n(488905), T = n(347137), S = n(731455), f = n(981631), C = n(689938);
+let N = e => {
         switch (e) {
-        case p.Gj.Activity:
-            return p.fW.Activity;
-        case p.Gj.Music:
-            return p.fW.Music;
-        case p.Gj.Television:
-            return p.fW.Television;
-        case p.Gj.Science:
-            return p.fW.Science;
-        case p.Gj.Education:
-            return p.fW.Education;
+        case S.Gj.Activity:
+            return S.fW.Activity;
+        case S.Gj.Music:
+            return S.fW.Music;
+        case S.Gj.Television:
+            return S.fW.Television;
+        case S.Gj.Science:
+            return S.fW.Science;
+        case S.Gj.Education:
+            return S.fW.Education;
         default:
-            return p.fW.Discover;
+            return S.fW.Discover;
         }
-    }, C = () => {
+    }, A = () => {
         let {
                 currentCategoryId: e,
                 isViewingSearchResults: t
-            } = (0, s.cj)([E.ZP], () => ({
-                currentCategoryId: E.ZP.getCurrentCategoryId(),
-                isViewingSearchResults: E.ZP.getMostRecentQuery().length > 0
-            })), n = (0, _.Z)(l.Z.QUEST_HOME_PAGE), o = (0, s.e7)([h.Z], () => h.Z.getDiscoveryCategories(), [], h.j), g = null == o ? void 0 : o.map(e => ({
+            } = (0, a.cj)([I.ZP], () => ({
+                currentCategoryId: I.ZP.getCurrentCategoryId(),
+                isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
+            })), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), c = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), T = null == c ? void 0 : c.map(e => ({
                 ...e,
-                icon: S(e.categoryId)
-            })), C = e => {
-                (0, r.uY)(e, !0), d.Z.closeSidebar(), t && (0, r.AQ)();
+                icon: N(e.categoryId)
+            })), A = e => {
+                (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)(), (0, _.OG)() && e !== S.Gj.Quests && (0, s.uL)(f.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === S.Gj.Quests && (0, s.uL)(f.Z5c.QUEST_HOME);
             };
-        return (0, i.jsxs)(a.Scroller, {
+        return (0, i.jsxs)(r.Scroller, {
             children: [
-                (0, i.jsx)(m.V, { text: T.Z.Messages.DISCOVER }),
-                (0, i.jsx)(I.Z, {
-                    categories: g,
-                    handleCategorySelect: C,
+                (0, i.jsx)(p.V, { text: C.Z.Messages.DISCOVER }),
+                (0, i.jsx)(g.Z, {
+                    categories: T,
+                    handleCategorySelect: A,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
-                (0, i.jsx)(c.Z, {
-                    handleCategorySelect: C,
+                (0, i.jsx)(d.Z, {
+                    handleCategorySelect: A,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
-                n && (0, i.jsx)(u.Z, {
-                    onClick: () => C(p.Gj.Quests),
-                    isSelected: e === p.Gj.Quests
+                n && (0, i.jsx)(h.Z, {
+                    onClick: () => A(S.Gj.Quests),
+                    isSelected: e === S.Gj.Quests
                 })
             ]
         });
     };
 t.Z = function () {
-    let {guilds: e} = (0, o.C3)({
+    let {guilds: e} = (0, c.C3)({
             location: 'guild_discovery_sidebar',
             includeConverted: !0
-        }), t = e.length > 0, {clanDiscoveryEnabled: n} = (0, o.nk)('guild_discovery_sidebar');
-    return t || n ? (0, i.jsx)(g.Z, {}) : (0, i.jsx)(C, {});
+        }), t = e.length > 0, {clanDiscoveryEnabled: n} = (0, c.nk)('guild_discovery_sidebar');
+    return t || n ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(A, {});
 };

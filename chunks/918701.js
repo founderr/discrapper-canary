@@ -39,6 +39,9 @@ n.d(t, {
     Nj: function () {
         return ed;
     },
+    OG: function () {
+        return eM;
+    },
     Qe: function () {
         return D;
     },
@@ -649,4 +652,7 @@ function eb(e, t) {
         questContentPosition: t.position,
         questContentCTA: t.ctaContent
     }), d.Z.open(R.oAB.CONNECTIONS);
+}
+function eM() {
+    return window.location.pathname.startsWith(R.Z5c.QUEST_HOME);
 }

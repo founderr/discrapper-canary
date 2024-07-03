@@ -1,5 +1,8 @@
 n.d(t, {
-    S: function () {
+    Sv: function () {
+        return r;
+    },
+    Y$: function () {
         return l;
     }
 });
@@ -39,6 +42,10 @@ let i = (0, n(818083).B)({
     ]
 });
 function l(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return i.useExperiment({ location: e }, { autoTrackExposure: t }).discoverButtonTakeoverEnabled;
+}
+function r(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return i.getCurrentConfig({ location: e }, { autoTrackExposure: t }).discoverButtonTakeoverEnabled;
 }

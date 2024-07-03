@@ -1,41 +1,41 @@
-var i = n(735250), s = n(470079), a = n(481060), r = n(442837), l = n(212093), o = n(100527), c = n(570938), d = n(677277), u = n(285865), _ = n(702428), E = n(709158), h = n(683301), I = n(360048), m = n(296386), g = n(150192), p = n(889010), T = n(488905), S = n(731455), C = n(689938), f = n(885181);
-let N = e => {
+var i = n(735250), s = n(470079), a = n(948789), r = n(481060), l = n(442837), o = n(212093), c = n(100527), d = n(570938), u = n(677277), _ = n(285865), h = n(918701), E = n(702428), I = n(709158), m = n(683301), g = n(360048), p = n(296386), T = n(150192), S = n(889010), f = n(488905), C = n(731455), N = n(981631), A = n(689938), Z = n(885181);
+let L = e => {
     switch (e) {
-    case S.Gj.Activity:
-        return S.fW.Activity;
-    case S.Gj.Music:
-        return S.fW.Music;
-    case S.Gj.Television:
-        return S.fW.Television;
-    case S.Gj.Science:
-        return S.fW.Science;
-    case S.Gj.Education:
-        return S.fW.Education;
+    case C.Gj.Activity:
+        return C.fW.Activity;
+    case C.Gj.Music:
+        return C.fW.Music;
+    case C.Gj.Television:
+        return C.fW.Television;
+    case C.Gj.Science:
+        return C.fW.Science;
+    case C.Gj.Education:
+        return C.fW.Education;
     default:
-        return S.fW.Server;
+        return C.fW.Server;
     }
 };
 t.Z = function () {
     let {
             currentCategoryId: e,
             isViewingSearchResults: t
-        } = (0, r.cj)([h.ZP], () => ({
-            currentCategoryId: h.ZP.getCurrentCategoryId(),
-            isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
-        })), n = (0, E.Z)(o.Z.QUEST_HOME_PAGE), A = (0, r.e7)([g.Z], () => g.Z.getClanDiscoveryCategories(), [], g.j), Z = null == A ? void 0 : A.map(e => ({
+        } = (0, l.cj)([m.ZP], () => ({
+            currentCategoryId: m.ZP.getCurrentCategoryId(),
+            isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
+        })), n = (0, I.Z)(c.Z.QUEST_HOME_PAGE), v = (0, l.e7)([T.Z], () => T.Z.getClanDiscoveryCategories(), [], T.j), O = null == v ? void 0 : v.map(e => ({
             ...e,
-            icon: N(e.categoryId)
-        })), L = e => {
-            (0, l.uY)(e, !0), u.Z.closeSidebar(), t && (0, l.AQ)();
+            icon: L(e.categoryId)
+        })), R = e => {
+            (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== C.Gj.Quests && (0, a.uL)(N.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === C.Gj.Quests && (0, a.uL)(N.Z5c.QUEST_HOME);
         };
     return s.useEffect(() => {
-        (0, m.le)(!1, !0);
-    }, [e]), (0, i.jsxs)(a.Scroller, {
+        (0, p.le)(!1, !0);
+    }, [e]), (0, i.jsxs)(r.Scroller, {
         children: [
-            (0, i.jsx)(T.V, { text: C.Z.Messages.DISCOVER }),
-            (0, i.jsx)(I.Z, {
-                avatar: (0, i.jsx)(c.Z, {}),
-                name: C.Z.Messages.CLANS,
+            (0, i.jsx)(f.V, { text: A.Z.Messages.DISCOVER }),
+            (0, i.jsx)(g.Z, {
+                avatar: (0, i.jsx)(d.Z, {}),
+                name: A.Z.Messages.CLANS,
                 focusProps: {
                     offset: {
                         right: 4,
@@ -43,27 +43,27 @@ t.Z = function () {
                         bottom: 1
                     }
                 },
-                onClick: () => L(S.Gj.Clans),
+                onClick: () => R(C.Gj.Clans),
                 wrapContent: !0,
-                selected: e === S.Gj.Clans,
-                className: f.categoryItem,
-                selectedClassName: f.selectedCategoryItem,
-                innerClassName: f.itemInner
+                selected: e === C.Gj.Clans,
+                className: Z.categoryItem,
+                selectedClassName: Z.selectedCategoryItem,
+                innerClassName: Z.itemInner
             }, 'clan-discovery-home'),
-            (0, i.jsx)(p.Z, {
-                categories: Z,
-                handleCategorySelect: L,
+            (0, i.jsx)(S.Z, {
+                categories: O,
+                handleCategorySelect: R,
                 currentCategoryId: e,
                 shouldDisplaySelectedCategory: !t
             }),
-            (0, i.jsx)(d.Z, {
-                handleCategorySelect: L,
+            (0, i.jsx)(u.Z, {
+                handleCategorySelect: R,
                 currentCategoryId: e,
                 shouldDisplaySelectedCategory: !t
             }),
-            n && (0, i.jsx)(_.Z, {
-                onClick: () => L(S.Gj.Quests),
-                isSelected: e === S.Gj.Quests
+            n && (0, i.jsx)(E.Z, {
+                onClick: () => R(C.Gj.Quests),
+                isSelected: e === C.Gj.Quests
             })
         ]
     });

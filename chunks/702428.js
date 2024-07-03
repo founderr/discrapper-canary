@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
 });
 var i = n(735250);
 n(470079);
-var s = n(481060), a = n(100527), r = n(360048), l = n(709158), o = n(689938), c = n(139510);
-function d(e) {
+var s = n(120356), a = n.n(s), r = n(481060), l = n(100527), o = n(360048), c = n(709158), d = n(689938), u = n(139510);
+function _(e) {
     let {
         isSelected: t,
         onClick: n
     } = e;
-    return (0, l.Z)(a.Z.QUEST_HOME_PAGE) ? (0, i.jsx)(r.Z, {
-        avatar: (0, i.jsx)(s.QuestsIcon, {}),
-        name: o.Z.Messages.QUESTS,
+    return (0, c.Z)(l.Z.QUEST_HOME_PAGE) ? (0, i.jsx)(o.Z, {
+        avatar: (0, i.jsx)(r.QuestsIcon, { className: a()({ [u.iconSelected]: t }) }),
+        name: d.Z.Messages.QUESTS,
         focusProps: {
             offset: {
                 right: 4,
@@ -24,8 +24,8 @@ function d(e) {
         onClick: n,
         wrapContent: !0,
         selected: t,
-        className: c.categoryItem,
-        selectedClassName: c.selectedCategoryItem,
-        innerClassName: c.itemInner
+        className: u.categoryItem,
+        selectedClassName: u.selectedCategoryItem,
+        innerClassName: u.itemInner
     }, 'quest-home') : null;
 }
