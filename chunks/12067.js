@@ -5,9 +5,9 @@ n.d(l, {
 });
 var t = n(735250);
 n(470079);
-var i = n(442837), r = n(169525), a = n(611170), s = n(128854), u = n(592125), o = n(52824), d = n(310043), c = n(69750), m = n(592256), p = n(823379), f = n(970184), v = n(981631);
+var i = n(442837), r = n(169525), a = n(611170), s = n(128854), u = n(884182), o = n(546432), d = n(592125), c = n(52824), m = n(592256), p = n(823379), f = n(970184), v = n(981631);
 function E(e) {
-    let {message: l} = (0, f.CJ)(), n = (0, i.e7)([u.Z], () => u.Z.getChannel(null == l ? void 0 : l.channel_id)), {
+    let {message: l} = (0, f.CJ)(), n = (0, i.e7)([d.Z], () => d.Z.getChannel(null == l ? void 0 : l.channel_id)), {
             shouldHideMediaOptions: E,
             shouldRedactExplicitContent: N,
             gifAutoPlay: h,
@@ -32,7 +32,7 @@ function E(e) {
                 item: {
                     uniqueId: n.proxyUrl,
                     originalItem: e,
-                    type: (0, c.pU)(n, !0),
+                    type: (0, o.pU)(n, !0),
                     downloadUrl: n.url,
                     height: n.height,
                     width: n.width,
@@ -53,11 +53,11 @@ function E(e) {
                 },
                 canRemoveItem: !1,
                 onRemoveItem: v.dG4
-            }, r = (0, o.q)({
+            }, r = (0, c.q)({
                 proxyURL: n.proxyUrl,
                 url: n.url
             });
         return r in S && (i.onClick = S[r]), i;
     });
-    return (0, t.jsx)('div', { children: (0, t.jsx)(d.Z, { items: T }) });
+    return (0, t.jsx)('div', { children: (0, t.jsx)(u.Z, { items: T }) });
 }

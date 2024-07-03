@@ -3,9 +3,8 @@ n.d(t, {
         return G;
     }
 }), n(47120);
-var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(302454), l = n(481060), u = n(794295), c = n(663993), d = n(339085), _ = n(779699), E = n(359875), f = n(124072), h = n(695503), p = n(628692), m = n(590956), I = n(703656), T = n(430824), g = n(68588), S = n(572004), A = n(900849), N = n(746878), v = n(285063), O = n(943362), R = n(551452), C = n(69626), y = n(142990), D = n(532901), L = n(981631), b = n(176505), M = n(689938), P = n(986095);
+var r = n(735250), i = n(470079), a = n(120356), o = n.n(a), s = n(302454), l = n(481060), u = n(794295), c = n(663993), d = n(339085), _ = n(779699), E = n(359875), f = n(124072), h = n(695503), p = n(628692), m = n(590956), I = n(703656), T = n(430824), g = n(68588), S = n(572004), A = n(900849), N = n(746878), v = n(285063), O = n(943362), R = n(551452), C = n(69626), y = n(142990), D = n(532901), L = n(981631), b = n(176505), M = n(689938), P = n(153521), U = n(986095);
 n(630209);
-var U = n(530790);
 function w(e) {
     let {text: t} = e, [n, a] = i.useState(!1);
     return (0, r.jsx)(l.Clickable, {
@@ -28,9 +27,9 @@ function w(e) {
 let x = {
     blockQuote: {
         react: (e, t, n) => (0, r.jsxs)('div', {
-            className: U.blockquoteContainer,
+            className: P.blockquoteContainer,
             children: [
-                (0, r.jsx)('div', { className: U.blockquoteDivider }),
+                (0, r.jsx)('div', { className: P.blockquoteDivider }),
                 (0, r.jsx)('blockquote', { children: t(e.content, n) })
             ]
         }, n.key)
@@ -52,15 +51,15 @@ let x = {
     codeBlock: {
         react(e, t, i) {
             let a = () => (0, r.jsx)('code', {
-                className: o()(P.scrollbarGhostHairline, 'hljs'),
+                className: o()(U.scrollbarGhostHairline, 'hljs'),
                 children: (0, N.S)(e, t, i)
             });
             return (0, r.jsx)('pre', {
                 children: (0, r.jsxs)('div', {
-                    className: U.codeContainer,
+                    className: P.codeContainer,
                     children: [
                         S.wS ? (0, r.jsx)('div', {
-                            className: U.codeActions,
+                            className: P.codeActions,
                             children: (0, r.jsx)(w, { text: e.content })
                         }) : null,
                         (0, r.jsx)(c.GI, {
@@ -73,7 +72,7 @@ let x = {
                                 {
                                     let n = t.highlight(e.lang, e.content, !0);
                                     return null == n ? a() : (0, r.jsx)('code', {
-                                        className: o()(P.scrollbarGhostHairline, 'hljs', n.language),
+                                        className: o()(U.scrollbarGhostHairline, 'hljs', n.language),
                                         dangerouslySetInnerHTML: { __html: n.value }
                                     });
                                 }
@@ -161,7 +160,7 @@ let x = {
             let r = e.ordered ? 'ol' : 'ul', i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, s.reactElement)(r, ''.concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? U.inlineFormat : null,
+                className: n.formatInline ? P.inlineFormat : null,
                 style: { '--totalCharacters': i },
                 children: e.items.map((e, r) => {
                     let i = (0, s.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), { children: t(e, n) });
@@ -175,7 +174,7 @@ let x = {
             let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, s.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? U.inlineFormat : null
+                className: n.formatInline ? P.inlineFormat : null
             });
         }
     },
@@ -198,7 +197,7 @@ let x = {
     subtext: {
         react: (e, t, n) => (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
             children: t(e.content, n),
-            className: n.formatInline ? U.inlineFormat : null
+            className: n.formatInline ? P.inlineFormat : null
         })
     }
 };
