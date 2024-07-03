@@ -25108,6 +25108,10 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     padding-left: 8px
 }
 
+.newlyAddedHighlightContainer_fbfedd .emojiListRow_fbfedd {
+    padding-left: 0
+}
+
 .topEmojiSectionContainer_fbfedd {
     display: flex;
     flex-direction: row;
@@ -33206,6 +33210,16 @@ h3.improved_f017d0:after {
     gap: 6px
 }
 
+.biteSizeIconButton_dc0b43 {
+    height: 38px;
+    width: 38px;
+    border-radius: 3px
+}
+
+.biteSizeButton_dc0b43 {
+    height: 38px
+}
+
 .engagementExpButton_dc0b43 {
     display: flex;
     flex: 1;
@@ -33225,17 +33239,6 @@ h3.improved_f017d0:after {
 .engagementExpButton_dc0b43:disabled,
 .engagementExpButton_dc0b43[aria-disabled=true] {
     opacity: .5
-}
-
-.engagementExpButtonInner_dc0b43 {
-    display: flex;
-    align-items: center;
-    gap: 4px
-}
-
-.iconButton_dc0b43 {
-    max-width: var(--custom-button-button-sm-height);
-    height: var(--custom-button-button-sm-height)
 }
 
 .popover_bba79b {

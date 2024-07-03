@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     xY: function () {
-        return h;
+        return p;
     }
 }), n(47120), n(411104), n(653041);
 var i, s, a = n(230367), r = n(320215), l = n(240773), o = n(495852);
@@ -152,7 +152,205 @@ class u extends o.C {
     }
 }
 let _ = new u();
-class E extends o.C {
+class h extends o.C {
+    create(e) {
+        let t = {
+            heroArtLocalizedVideoLinksDarkTheme: {},
+            heroArtLocalizedVideoLinksLightTheme: {},
+            heroArtVideoSubtitleLinks: {}
+        };
+        return globalThis.Object.defineProperty(t, l.C, {
+            enumerable: !1,
+            value: this
+        }), void 0 !== e && (0, r.l)(this, t, e), t;
+    }
+    internalBinaryRead(e, t, n, i) {
+        let s = null != i ? i : this.create(), r = e.pos + t;
+        for (; e.pos < r;) {
+            let [t, i] = e.tag();
+            switch (t) {
+            case 1:
+                this.binaryReadMap1(s.heroArtLocalizedVideoLinksDarkTheme, e, n);
+                break;
+            case 2:
+                this.binaryReadMap2(s.heroArtLocalizedVideoLinksLightTheme, e, n);
+                break;
+            case 3:
+                this.binaryReadMap3(s.heroArtVideoSubtitleLinks, e, n);
+                break;
+            default:
+                let r = n.readUnknownField;
+                if ('throw' === r)
+                    throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let l = e.skip(i);
+                !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+            }
+        }
+        return s;
+    }
+    binaryReadMap1(e, t, n) {
+        let i = t.uint32(), s = t.pos + i, a, r;
+        for (; t.pos < s;) {
+            let [e, n] = t.tag();
+            switch (e) {
+            case 1:
+                a = t.string();
+                break;
+            case 2:
+                r = t.string();
+                break;
+            default:
+                throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_dark_theme');
+            }
+        }
+        e[null != a ? a : ''] = null != r ? r : '';
+    }
+    binaryReadMap2(e, t, n) {
+        let i = t.uint32(), s = t.pos + i, a, r;
+        for (; t.pos < s;) {
+            let [e, n] = t.tag();
+            switch (e) {
+            case 1:
+                a = t.string();
+                break;
+            case 2:
+                r = t.string();
+                break;
+            default:
+                throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_light_theme');
+            }
+        }
+        e[null != a ? a : ''] = null != r ? r : '';
+    }
+    binaryReadMap3(e, t, n) {
+        let i = t.uint32(), s = t.pos + i, a, r;
+        for (; t.pos < s;) {
+            let [e, n] = t.tag();
+            switch (e) {
+            case 1:
+                a = t.string();
+                break;
+            case 2:
+                r = t.string();
+                break;
+            default:
+                throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_video_subtitle_links');
+            }
+        }
+        e[null != a ? a : ''] = null != r ? r : '';
+    }
+    internalBinaryWrite(e, t, n) {
+        for (let n of Object.keys(e.heroArtLocalizedVideoLinksDarkTheme))
+            t.tag(1, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksDarkTheme[n]).join();
+        for (let n of Object.keys(e.heroArtLocalizedVideoLinksLightTheme))
+            t.tag(2, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksLightTheme[n]).join();
+        for (let n of Object.keys(e.heroArtVideoSubtitleLinks))
+            t.tag(3, a.TD.LengthDelimited).fork().tag(1, a.TD.LengthDelimited).string(n).tag(2, a.TD.LengthDelimited).string(e.heroArtVideoSubtitleLinks[n]).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super('discord_protos.premium_marketing.v1.Variant1Storage', [
+            {
+                no: 1,
+                name: 'hero_art_localized_video_links_dark_theme',
+                kind: 'map',
+                K: 9,
+                V: {
+                    kind: 'scalar',
+                    T: 9
+                }
+            },
+            {
+                no: 2,
+                name: 'hero_art_localized_video_links_light_theme',
+                kind: 'map',
+                K: 9,
+                V: {
+                    kind: 'scalar',
+                    T: 9
+                }
+            },
+            {
+                no: 3,
+                name: 'hero_art_video_subtitle_links',
+                kind: 'map',
+                K: 9,
+                V: {
+                    kind: 'scalar',
+                    T: 9
+                }
+            }
+        ]);
+    }
+}
+let E = new h();
+class I extends o.C {
+    create(e) {
+        let t = {
+            link: '',
+            locale: '',
+            isDefault: !1
+        };
+        return globalThis.Object.defineProperty(t, l.C, {
+            enumerable: !1,
+            value: this
+        }), void 0 !== e && (0, r.l)(this, t, e), t;
+    }
+    internalBinaryRead(e, t, n, i) {
+        let s = null != i ? i : this.create(), r = e.pos + t;
+        for (; e.pos < r;) {
+            let [t, i] = e.tag();
+            switch (t) {
+            case 1:
+                s.link = e.string();
+                break;
+            case 2:
+                s.locale = e.string();
+                break;
+            case 3:
+                s.isDefault = e.bool();
+                break;
+            default:
+                let r = n.readUnknownField;
+                if ('throw' === r)
+                    throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let l = e.skip(i);
+                !1 !== r && (!0 === r ? a.z.onRead : r)(this.typeName, s, t, i, l);
+            }
+        }
+        return s;
+    }
+    internalBinaryWrite(e, t, n) {
+        '' !== e.link && t.tag(1, a.TD.LengthDelimited).string(e.link), '' !== e.locale && t.tag(2, a.TD.LengthDelimited).string(e.locale), !1 !== e.isDefault && t.tag(3, a.TD.Varint).bool(e.isDefault);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super('discord_protos.premium_marketing.v1.Subtitle', [
+            {
+                no: 1,
+                name: 'link',
+                kind: 'scalar',
+                T: 9
+            },
+            {
+                no: 2,
+                name: 'locale',
+                kind: 'scalar',
+                T: 9
+            },
+            {
+                no: 3,
+                name: 'is_default',
+                kind: 'scalar',
+                T: 8
+            }
+        ]);
+    }
+}
+let m = new I();
+class g extends o.C {
     create(e) {
         let t = {
             header: '',
@@ -164,7 +362,9 @@ class E extends o.C {
             heroArtVideoLinkLightTheme: '',
             heroArtImageLinkDarkTheme: '',
             heroArtImageLinkLightTheme: '',
-            modalTopPill: ''
+            modalTopPill: '',
+            body: '',
+            heroArtVideoSubtitles: []
         };
         return globalThis.Object.defineProperty(t, l.C, {
             enumerable: !1,
@@ -209,6 +409,15 @@ class E extends o.C {
             case 11:
                 s.modalTopPill = e.string();
                 break;
+            case 12:
+                s.body = e.string();
+                break;
+            case 13:
+                s.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
+                break;
+            case 14:
+                s.storage = E.internalBinaryRead(e, e.uint32(), n, s.storage);
+                break;
             default:
                 let r = n.readUnknownField;
                 if ('throw' === r)
@@ -223,7 +432,10 @@ class E extends o.C {
         '' !== e.header && t.tag(1, a.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, a.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, a.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, a.TD.LengthDelimited).string(e.helpArticleId);
         for (let i = 0; i < e.featureCards.length; i++)
             d.internalBinaryWrite(e.featureCards[i], t.tag(5, a.TD.LengthDelimited).fork(), n).join();
-        e.button && _.internalBinaryWrite(e.button, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, a.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, a.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, a.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, a.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, a.TD.LengthDelimited).string(e.modalTopPill);
+        e.button && _.internalBinaryWrite(e.button, t.tag(6, a.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, a.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, a.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, a.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, a.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, a.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, a.TD.LengthDelimited).string(e.body);
+        for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
+            m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, a.TD.LengthDelimited).fork(), n).join();
+        e.storage && E.internalBinaryWrite(e.storage, t.tag(14, a.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? a.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -295,8 +507,27 @@ class E extends o.C {
                 name: 'modal_top_pill',
                 kind: 'scalar',
                 T: 9
+            },
+            {
+                no: 12,
+                name: 'body',
+                kind: 'scalar',
+                T: 9
+            },
+            {
+                no: 13,
+                name: 'hero_art_video_subtitles',
+                kind: 'message',
+                repeat: 1,
+                T: () => m
+            },
+            {
+                no: 14,
+                name: 'storage',
+                kind: 'message',
+                T: () => E
             }
         ]);
     }
 }
-let h = new E();
+let p = new g();

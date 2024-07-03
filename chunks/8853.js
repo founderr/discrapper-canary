@@ -6,7 +6,10 @@ n.d(t, {
 var i = n(230367), s = n(320215), a = n(240773), r = n(495852), l = n(740111);
 class o extends r.C {
     create(e) {
-        let t = { properties: { oneofKind: void 0 } };
+        let t = {
+            properties: { oneofKind: void 0 },
+            contentIdentifier: ''
+        };
         return globalThis.Object.defineProperty(t, a.C, {
             enumerable: !1,
             value: this
@@ -29,6 +32,9 @@ class o extends r.C {
                     announcementModalVariant1: l.xY.internalBinaryRead(e, e.uint32(), n, a.properties.announcementModalVariant1)
                 };
                 break;
+            case 3:
+                a.contentIdentifier = e.string();
+                break;
             default:
                 let r = n.readUnknownField;
                 if ('throw' === r)
@@ -40,7 +46,7 @@ class o extends r.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        'placeholder' === e.properties.oneofKind && t.tag(1, i.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && l.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, i.TD.LengthDelimited).fork(), n).join();
+        'placeholder' === e.properties.oneofKind && t.tag(1, i.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && l.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, i.TD.LengthDelimited).fork(), n).join(), '' !== e.contentIdentifier && t.tag(3, i.TD.LengthDelimited).string(e.contentIdentifier);
         let s = n.writeUnknownFields;
         return !1 !== s && (!0 == s ? i.z.onWrite : s)(this.typeName, e, t), t;
     }
@@ -59,6 +65,12 @@ class o extends r.C {
                 kind: 'message',
                 oneof: 'properties',
                 T: () => l.xY
+            },
+            {
+                no: 3,
+                name: 'content_identifier',
+                kind: 'scalar',
+                T: 9
             }
         ]);
     }
