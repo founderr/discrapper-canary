@@ -24,7 +24,7 @@ function u(e) {
         };
     return (0, r.jsx)(s.TooltipContainer, {
         text: n,
-        'aria-label': f['aria-label'],
+        'aria-label': !1,
         delay: u,
         className: d,
         tooltipClassName: c,
@@ -36,6 +36,7 @@ function u(e) {
             look: o.zx.Looks.FILLED,
             size: 'text' === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
             grow: 'text' === t,
+            'aria-label': n,
             ...f,
             children: [
                 null != i && (0, r.jsx)(i, {

@@ -98,13 +98,10 @@ function y(e) {
             [v.biteSize]: h === S.y0.BITE_SIZE,
             [v.fullSize]: h === S.y0.FULL_SIZE,
             [v.panel]: h === S.y0.PANEL
-        }, ed = o()(v.background, { [v.editable]: X }), e_ = o()(v.statusBubbleOuter, ec, {
+        }, ed = o()(v.background, { [v.editable]: X }), e_ = o()({
             [v.statusBubbleShape]: !H && Z || !$,
-            [v.statusBubbleSingleLineWithTextShape]: $ && H || Q,
-            [v.statusBubbleOuterAddStatusCursor]: Q
-        }), eE = o()(v.statusBubble, {
-            [v.statusBubbleShape]: !H && Z || !$,
-            [v.statusBubbleSingleLineWithTextShape]: $ && H || Q,
+            [v.statusBubbleSingleLineWithTextShape]: $ && H || Q
+        }), eE = o()(v.statusBubbleOuter, ec, e_, { [v.statusBubbleOuterAddStatusCursor]: Q }), ef = o()(v.statusBubble, e_, {
             [v.statusBubbleEmojiOnlyPadding]: Y,
             [v.statusBubbleWithTextPadding]: H || Q,
             [v.statusBubbleWithTextMinWidth]: H,
@@ -117,9 +114,9 @@ function y(e) {
                 (0, r.jsx)('div', {
                     className: o()(v.invisibleContainer, ec),
                     children: (0, r.jsx)('div', {
-                        className: e_,
+                        className: eE,
                         children: (0, r.jsxs)('span', {
-                            className: eE,
+                            className: ef,
                             children: [
                                 Q && eu(),
                                 q && (0, r.jsxs)('div', {
@@ -142,40 +139,40 @@ function y(e) {
                         })
                     })
                 }),
-                (0, r.jsxs)('div', {
+                (0, r.jsxs)(c.ClickableContainer, {
                     className: o()(v.visibleContainer, ec, ed),
+                    'aria-label': Q ? N.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL : N.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
+                        emoji: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : '',
+                        status: F
+                    }),
+                    focusProps: { ringClassName: e_ },
+                    onClick: Q ? () => {
+                        L({ action: 'PRESS_ADD_CUSTOM_STATUS' }), null == y || y(), (0, c.openModalLazy)(async () => {
+                            let {default: e} = await n.e('51714').then(n.bind(n, 211065));
+                            return t => (0, r.jsx)(e, {
+                                ...t,
+                                sourceAnalyticsLocations: D
+                            });
+                        });
+                    } : void 0,
                     onFocus: () => {
                         er(!0), eo(!0);
                     },
                     onBlur: e => {
                         !e.currentTarget.contains(e.relatedTarget) && (er(!1), eo(!1));
                     },
-                    onMouseEnter: () => {
+                    onMouseOver: () => {
                         L({ action: 'HOVER_CUSTOM_STATUS' }), er(!0), eo(!0);
                     },
                     onMouseLeave: () => {
                         er(!1), eo(!1);
                     },
                     children: [
-                        (0, r.jsx)(c.Clickable, {
-                            className: e_,
-                            onClick: Q ? () => {
-                                L({ action: 'PRESS_ADD_CUSTOM_STATUS' }), null == y || y(), (0, c.openModalLazy)(async () => {
-                                    let {default: e} = await n.e('51714').then(n.bind(n, 211065));
-                                    return t => (0, r.jsx)(e, {
-                                        ...t,
-                                        sourceAnalyticsLocations: D
-                                    });
-                                });
-                            } : void 0,
-                            'aria-label': Q ? N.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL : N.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
-                                emoji: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : '',
-                                status: F
-                            }),
+                        (0, r.jsx)('div', {
+                            className: eE,
                             children: (0, r.jsxs)('span', {
-                                className: eE,
+                                className: ef,
                                 children: [
-                                    Q && eu(),
                                     q && (() => {
                                         let e = o()(v.content, {
                                             [v.clamp]: P,
@@ -190,7 +187,8 @@ function y(e) {
                                                 el()
                                             ]
                                         });
-                                    })()
+                                    })(),
+                                    Q && eu()
                                 ]
                             })
                         }),

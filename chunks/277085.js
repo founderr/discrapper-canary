@@ -32,6 +32,7 @@ function p(e) {
                 text: E.Z.Messages.EDIT,
                 shouldShow: t,
                 delay: g,
+                'aria-label': !1,
                 children: (0, r.jsx)(d.zx, {
                     className: a()(f.button, f.left),
                     'aria-label': E.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_A11Y_LABEL,
@@ -48,6 +49,7 @@ function p(e) {
                 text: E.Z.Messages.CLEAR,
                 shouldShow: t,
                 delay: g,
+                'aria-label': !1,
                 children: (0, r.jsx)(d.zx, {
                     className: a()(f.button, f.right),
                     'aria-label': E.Z.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS_A11Y_LABEL,
