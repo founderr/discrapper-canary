@@ -33299,14 +33299,12 @@ h3.improved_f017d0:after {
 
 .button_bba79b.left_bba79b {
     padding-left: 6px;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px
+    border-radius: 100px 6px 6px 100px
 }
 
 .button_bba79b.right_bba79b {
     padding-right: 6px;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px
+    border-radius: 6px 100px 100px 6px
 }
 
 .button_bba79b:hover {

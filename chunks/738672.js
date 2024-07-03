@@ -1,44 +1,44 @@
 n.d(t, {
     h: function () {
-        return d;
+        return u;
     }
 }), n(47120);
-var i = n(735250), a = n(470079), s = n(481060), l = n(570140), r = n(909820), o = n(937995), c = n(618158);
-function d(e) {
+var i = n(735250), a = n(470079), s = n(442837), l = n(481060), r = n(909820), o = n(740492), c = n(937995), d = n(618158);
+function u(e) {
     let {
             buttonRef: t,
             dismissed: n,
-            onDismiss: d,
-            renderComponent: u
-        } = e, h = a.useContext(o.h9), [p, m] = a.useState(''), [_, f] = a.useState(!1);
-    function E(e) {
-        var t;
-        let {settings: n} = e, i = n.callHeaderHeight;
-        m(null !== (t = null == i ? void 0 : i.toString()) && void 0 !== t ? t : ''), f(void 0 !== i && i < 300);
-    }
-    a.useEffect(() => (l.Z.subscribe('UNSYNCED_USER_SETTINGS_UPDATE', E), () => {
-        l.Z.unsubscribe('UNSYNCED_USER_SETTINGS_UPDATE', E);
-    }), []);
+            onDismiss: u,
+            renderComponent: h
+        } = e, p = a.useContext(c.h9), [m, _] = a.useState(''), [f, E] = a.useState(!1), C = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight), g = a.createRef(), I = a.useRef(0);
+    a.useEffect(() => {
+        var e, t;
+        _(String(I.current)), E(void 0 !== C && C < (null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), I.current += 1;
+    }, [
+        C,
+        g
+    ]);
     let {
-        preventIdle: C,
-        allowIdle: g
-    } = (0, c.Y)('popup');
+        preventIdle: x,
+        allowIdle: T
+    } = (0, d.Y)('popup');
     return (null == t ? void 0 : t.current) == null ? null : (0, i.jsx)(r.ZP, {
-        children: (0, i.jsx)(s.ReferencePositionLayer, {
+        children: (0, i.jsx)(l.ReferencePositionLayer, {
             targetRef: t,
             position: 'top',
             align: 'center',
             spacing: 0,
             nudgeAlignIntoViewport: !1,
-            positionKey: p,
+            positionKey: m,
             children: () => (0, i.jsx)('div', {
-                onMouseOver: C,
-                onFocus: C,
-                onBlur: g,
-                onMouseLeave: g,
-                children: u({
-                    hidden: _ || h || n,
-                    onDismiss: d
+                ref: g,
+                onMouseOver: x,
+                onFocus: x,
+                onBlur: T,
+                onMouseLeave: T,
+                children: h({
+                    hidden: f || p || n,
+                    onDismiss: u
                 })
             })
         })
