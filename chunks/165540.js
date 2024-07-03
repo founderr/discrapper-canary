@@ -1,31 +1,32 @@
 n(47120);
-var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(149765), o = n(442837), c = n(481060), d = n(499254), u = n(424602), h = n(541099), p = n(827498), m = n(663924), _ = n(998698), f = n(665906), E = n(271383), C = n(496675), g = n(594174), I = n(981631), x = n(314734), T = n(689938), N = n(979030);
-let v = a.forwardRef(function (e, t) {
-    let [n, s] = a.useState(!1), r = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup()), u = a.useCallback(() => {
+var i = n(735250), a = n(470079), s = n(120356), l = n.n(s), r = n(149765), o = n(442837), c = n(481060), d = n(499254), u = n(424602), h = n(541099), p = n(827498), m = n(663924), _ = n(998698), f = n(665906), E = n(271383), C = n(496675), g = n(594174), I = n(583027), x = n(981631), T = n(314734), N = n(689938), v = n(979030);
+let S = a.forwardRef(function (e, t) {
+    let [n, s] = a.useState(!1), r = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup()), u = (0, I.w)(), m = a.useCallback(() => {
             r ? d.y(p.ti.DISMISSED) : d._(p._b.TEXT);
-        }, [r]), m = () => {
+        }, [r]), _ = () => {
             s(!0);
-        }, _ = () => {
+        }, f = () => {
             s(!1);
         };
     return (0, i.jsx)(c.Tooltip, {
-        text: T.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
+        text: N.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
         children: e => (0, i.jsx)('div', {
-            ref: t,
             ...e,
-            className: x.t4,
+            className: l()(v.buttonContainer, T.t4),
+            ref: t,
+            style: { transform: 'translateY(calc(100% - '.concat(u, 'px)') },
             children: (0, i.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,
                 size: c.Button.Sizes.NONE,
                 tabIndex: 0,
-                className: N.button,
-                onClick: u,
-                onMouseEnter: m,
-                onMouseOver: m,
-                onMouseLeave: _,
-                onFocus: m,
-                onBlur: _,
-                'aria-label': T.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
+                className: v.button,
+                onClick: m,
+                onMouseEnter: _,
+                onMouseOver: _,
+                onMouseLeave: f,
+                onFocus: _,
+                onBlur: f,
+                'aria-label': N.Z.Messages.APP_LAUNCHER_USE_APP_TOOLTIP,
                 focusProps: {
                     offset: {
                         top: 4,
@@ -34,8 +35,8 @@ let v = a.forwardRef(function (e, t) {
                         right: -4
                     }
                 },
-                innerClassName: N.buttonContents,
-                children: (0, i.jsx)(c.AppsIcon, { className: l()(n ? N.iconHovered : N.iconUnhovered) })
+                innerClassName: v.buttonContents,
+                children: (0, i.jsx)(c.AppsIcon, { className: l()(n ? v.iconHovered : v.iconUnhovered) })
             })
         })
     });
@@ -54,7 +55,7 @@ t.Z = a.memo(a.forwardRef(function (e) {
                     return null !== (t = null != n && null != i ? null === (e = E.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
                 }), {messagesDisabled: a} = (0, o.cj)([C.Z], () => {
                     var n, a;
-                    let s = e.isPrivate(), l = C.Z.computePermissions(e), o = r.e$(l, I.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, I.Plq.CREATE_PRIVATE_THREADS), c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, I.Plq.SEND_MESSAGES)), d = (0, f.xl)(e);
+                    let s = e.isPrivate(), l = C.Z.computePermissions(e), o = r.e$(l, x.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, x.Plq.CREATE_PRIVATE_THREADS), c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, x.Plq.SEND_MESSAGES)), d = (0, f.xl)(e);
                     return { messagesDisabled: i || !s && !c || d };
                 }, [
                     e,
@@ -68,9 +69,9 @@ t.Z = a.memo(a.forwardRef(function (e) {
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? _.Z.getActiveCommand(t.id) : null };
         }), d = u.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled, p = (0, o.e7)([h.Z], () => h.Z.shouldShowPopup(), []);
     return d && null == c && !l ? (0, i.jsxs)('div', {
-        className: N.channelAppLauncher,
+        className: v.channelAppLauncher,
         children: [
-            (0, i.jsx)(v, { ref: s }),
+            (0, i.jsx)(S, { ref: s }),
             p ? (0, i.jsx)(m.Z, {
                 positionTargetRef: s,
                 channel: t
