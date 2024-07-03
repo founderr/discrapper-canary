@@ -37,7 +37,7 @@ function I(e) {
             text: m.Z.Messages.FRIENDS,
             ...e
         })
-    }) : O === p.OGo.PENDING_INCOMING ? g && I === h.y0.FULL_SIZE ? null : (I === h.y0.PANEL ? S : g || T) ? (0, r.jsx)(f.Z, {
+    }) : O === p.OGo.PENDING_INCOMING ? I === h.y0.FULL_SIZE ? null : (I === h.y0.PANEL ? S : g || T) ? (0, r.jsx)(f.Z, {
         variant: 'banner',
         icon: a.UserClockIcon,
         text: m.Z.Messages.FRIENDS_SECTION_PENDING,
@@ -68,7 +68,7 @@ function I(e) {
                 }
             })
         ]
-    }) : O === p.OGo.PENDING_OUTGOING ? T && I === h.y0.FULL_SIZE ? null : (0, r.jsx)(f.Z, {
+    }) : O === p.OGo.PENDING_OUTGOING ? I === h.y0.FULL_SIZE ? null : (0, r.jsx)(f.Z, {
         variant: 'banner',
         icon: a.UserClockIcon,
         text: m.Z.Messages.FRIENDS_SECTION_PENDING,

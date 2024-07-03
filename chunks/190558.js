@@ -15,7 +15,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -42,7 +42,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -80,11 +80,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -133,19 +133,19 @@ let {Themes: n} = r(15202).V, _ = {
         ANDROID_RIPPLE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.07
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.12
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.07
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.07
             }
         },
@@ -207,7 +207,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -363,7 +363,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -378,11 +378,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -412,7 +412,7 @@ let {Themes: n} = r(15202).V, _ = {
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 0.09
+                opacity: 1
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -502,11 +502,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -531,11 +531,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -623,11 +623,11 @@ let {Themes: n} = r(15202).V, _ = {
         BG_BACKDROP: {
             category: 'background',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.MIDNIGHT]: {
@@ -635,7 +635,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.75
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             },
             gradient: {
@@ -656,11 +656,11 @@ let {Themes: n} = r(15202).V, _ = {
         BG_BACKDROP_NO_OPACITY: {
             category: 'background',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -668,7 +668,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             }
         },
@@ -679,11 +679,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -712,7 +712,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -741,7 +741,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -872,7 +872,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -930,7 +930,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -955,19 +955,19 @@ let {Themes: n} = r(15202).V, _ = {
         BLACK: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             }
         },
@@ -1012,11 +1012,11 @@ let {Themes: n} = r(15202).V, _ = {
         BORDER_FAINT: {
             category: 'border',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.03
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.04
             },
             [n.MIDNIGHT]: {
@@ -1031,11 +1031,11 @@ let {Themes: n} = r(15202).V, _ = {
         BORDER_STRONG: {
             category: 'border',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.16
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.16
             },
             [n.MIDNIGHT]: {
@@ -1050,11 +1050,11 @@ let {Themes: n} = r(15202).V, _ = {
         BORDER_SUBTLE: {
             category: 'border',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.08
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
@@ -1073,7 +1073,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.6
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.6
             },
             [n.MIDNIGHT]: {
@@ -1183,19 +1183,19 @@ let {Themes: n} = r(15202).V, _ = {
         BUTTON_OUTLINE_BRAND_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             }
         },
@@ -1297,76 +1297,76 @@ let {Themes: n} = r(15202).V, _ = {
         BUTTON_OUTLINE_BRAND_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_BRAND_TEXT_ACTIVE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_BRAND_TEXT_HOVER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_DANGER_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             }
         },
@@ -1468,76 +1468,76 @@ let {Themes: n} = r(15202).V, _ = {
         BUTTON_OUTLINE_DANGER_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_DANGER_TEXT_ACTIVE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_DANGER_TEXT_HOVER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_POSITIVE_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             }
         },
@@ -1639,76 +1639,76 @@ let {Themes: n} = r(15202).V, _ = {
         BUTTON_OUTLINE_POSITIVE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_POSITIVE_TEXT_ACTIVE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_POSITIVE_TEXT_HOVER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_PRIMARY_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0
             }
         },
@@ -1810,57 +1810,57 @@ let {Themes: n} = r(15202).V, _ = {
         BUTTON_OUTLINE_PRIMARY_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_PRIMARY_TEXT_ACTIVE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         BUTTON_OUTLINE_PRIMARY_TEXT_HOVER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -2019,38 +2019,38 @@ let {Themes: n} = r(15202).V, _ = {
         CARD_GRADIENT_BG: {
             category: 'background',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.4
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.4
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.4
             }
         },
         CARD_GRADIENT_PRESSED_BG: {
             category: 'background',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.5
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.5
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.5
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.5
             }
         },
@@ -2061,7 +2061,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -2119,7 +2119,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -2253,11 +2253,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -2276,7 +2276,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -2317,7 +2317,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -2351,19 +2351,19 @@ let {Themes: n} = r(15202).V, _ = {
         CHAT_SWIPE_TO_REPLY_GRADIENT_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.4
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             }
         },
@@ -2374,7 +2374,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -2408,95 +2408,95 @@ let {Themes: n} = r(15202).V, _ = {
         CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.85
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.85
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.85
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.85
             }
         },
         CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             }
         },
         CONTENT_INVENTORY_OVERLAY_UI_MOD: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             }
         },
         CONTENT_INVENTORY_OVERLAY_UI_MOD_BG: {
             category: 'background',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.1
             }
         },
         CONTEXT_MENU_BACKDROP_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             }
         },
@@ -2697,7 +2697,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -2712,7 +2712,7 @@ let {Themes: n} = r(15202).V, _ = {
         DEPRECATED_QUICKSWITCHER_INPUT_PLACEHOLDER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.3
             },
             [n.LIGHT]: {
@@ -2720,11 +2720,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.3
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.3
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.3
             }
         },
@@ -2769,7 +2769,7 @@ let {Themes: n} = r(15202).V, _ = {
         DEPRECATED_TEXT_INPUT_BORDER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.3
             },
             [n.LIGHT]: {
@@ -2777,11 +2777,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.3
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.3
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.3
             }
         },
@@ -2849,7 +2849,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.5
             },
             [n.LIGHT]: {
-                raw: 'WHITE_200',
+                raw: 'WHITE',
                 opacity: 0.5
             },
             [n.MIDNIGHT]: {
@@ -2864,11 +2864,11 @@ let {Themes: n} = r(15202).V, _ = {
         DIVIDER_STRONG: {
             category: 'border',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.16
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.16
             },
             [n.MIDNIGHT]: {
@@ -2883,11 +2883,11 @@ let {Themes: n} = r(15202).V, _ = {
         DIVIDER_SUBTLE: {
             category: 'border',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.08
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
@@ -2987,7 +2987,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -3073,7 +3073,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -3088,11 +3088,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -3107,7 +3107,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -3294,19 +3294,19 @@ let {Themes: n} = r(15202).V, _ = {
             category: 'generic',
             [n.DARK]: {
                 raw: 'TRANSPARENT',
-                opacity: 0
+                opacity: 0.01
             },
             [n.LIGHT]: {
                 raw: 'TRANSPARENT',
-                opacity: 0
+                opacity: 0.01
             },
             [n.MIDNIGHT]: {
                 raw: 'TRANSPARENT',
-                opacity: 0
+                opacity: 0.01
             },
             [n.DARKER]: {
                 raw: 'TRANSPARENT',
-                opacity: 0
+                opacity: 0.01
             }
         },
         INFO_BOX_BACKGROUND: {
@@ -3369,19 +3369,19 @@ let {Themes: n} = r(15202).V, _ = {
         INFO_DANGER_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -3426,19 +3426,19 @@ let {Themes: n} = r(15202).V, _ = {
         INFO_HELP_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -3483,19 +3483,19 @@ let {Themes: n} = r(15202).V, _ = {
         INFO_POSITIVE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -3540,19 +3540,19 @@ let {Themes: n} = r(15202).V, _ = {
         INFO_WARNING_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -3563,12 +3563,12 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 0.09
+                opacity: 1
             },
             [n.DARKER]: {
                 raw: 'PLUM_24',
@@ -3588,11 +3588,11 @@ let {Themes: n} = r(15202).V, _ = {
         INPUT_FOCUSED_BORDER: {
             category: 'background',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.16
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.16
             },
             [n.MIDNIGHT]: {
@@ -3626,7 +3626,7 @@ let {Themes: n} = r(15202).V, _ = {
         INTERACTIVE_ACTIVE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
@@ -3731,19 +3731,19 @@ let {Themes: n} = r(15202).V, _ = {
         LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.025
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.25
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.025
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.025
             }
         },
@@ -3769,19 +3769,19 @@ let {Themes: n} = r(15202).V, _ = {
         LEGACY_BLUR_FALLBACK_ULTRA_THIN: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.95
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.95
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.95
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.95
             }
         },
@@ -3807,7 +3807,7 @@ let {Themes: n} = r(15202).V, _ = {
         LOGO_PRIMARY: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
@@ -3815,11 +3815,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -3868,7 +3868,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -3902,7 +3902,7 @@ let {Themes: n} = r(15202).V, _ = {
         NAVIGATOR_HEADER_TINT: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
@@ -3910,11 +3910,11 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -3925,7 +3925,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -3973,7 +3973,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -4045,19 +4045,19 @@ let {Themes: n} = r(15202).V, _ = {
         PROFILE_GRADIENT_CARD_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.7
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.7
             }
         },
@@ -4083,76 +4083,76 @@ let {Themes: n} = r(15202).V, _ = {
         PROFILE_GRADIENT_NOTE_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.3
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.3
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.3
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.3
             }
         },
         PROFILE_GRADIENT_OVERLAY: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.6
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.6
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.6
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.6
             }
         },
         PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.8
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.8
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.8
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.8
             }
         },
         PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.16
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.16
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.16
             }
         },
@@ -4163,7 +4163,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.5
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.5
             },
             [n.MIDNIGHT]: {
@@ -4178,7 +4178,7 @@ let {Themes: n} = r(15202).V, _ = {
         PROFILE_GRADIENT_ROLE_PILL_BORDER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.2
             },
             [n.LIGHT]: {
@@ -4186,30 +4186,30 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.2
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.2
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.2
             }
         },
         PROFILE_GRADIENT_SECTION_BOX: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.45
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.45
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.45
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.45
             }
         },
@@ -4220,7 +4220,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -4283,7 +4283,7 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_ACTIVITY_CARD_BORDER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.02
             },
             [n.LIGHT]: {
@@ -4320,7 +4320,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'PRIMARY_630',
+                raw: 'PLUM_17',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -4369,19 +4369,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_ACTIVE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4426,19 +4426,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_DANGER_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4483,95 +4483,95 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_DESTRUCTIVE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         REDESIGN_BUTTON_OVERLAY_ALPHA_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             }
         },
         REDESIGN_BUTTON_OVERLAY_ALPHA_PRESSED_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             }
         },
         REDESIGN_BUTTON_OVERLAY_ALPHA_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
         REDESIGN_BUTTON_OVERLAY_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4654,19 +4654,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_POSITIVE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4730,19 +4730,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BORDER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4787,19 +4787,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4920,19 +4920,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_PRIMARY_OVERLAY_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -4996,19 +4996,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_PRIMARY_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -5019,7 +5019,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -5044,11 +5044,11 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_SECONDARY_BORDER: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 0.08
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
@@ -5073,57 +5073,57 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.54
             }
         },
         REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.64
             }
         },
         REDESIGN_BUTTON_SECONDARY_OVERLAY_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -5163,7 +5163,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.04
             },
             [n.MIDNIGHT]: {
@@ -5268,12 +5268,12 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 0.09
+                opacity: 1
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -5297,7 +5297,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.16
             },
             [n.MIDNIGHT]: {
@@ -5440,12 +5440,12 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_23_ALPHA',
-                opacity: 0.09
+                opacity: 1
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -5455,19 +5455,19 @@ let {Themes: n} = r(15202).V, _ = {
         REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0.08
             }
         },
@@ -5478,7 +5478,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -5535,7 +5535,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -5702,19 +5702,19 @@ let {Themes: n} = r(15202).V, _ = {
         SCROLLBAR_THIN_TRACK: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0
             },
             [n.LIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 0
             }
         },
@@ -5763,7 +5763,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -5826,19 +5826,19 @@ let {Themes: n} = r(15202).V, _ = {
         STATUS_DANGER_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -5959,19 +5959,19 @@ let {Themes: n} = r(15202).V, _ = {
         STATUS_POSITIVE_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -6035,19 +6035,19 @@ let {Themes: n} = r(15202).V, _ = {
         STATUS_WARNING_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             }
         },
@@ -6362,7 +6362,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -6399,7 +6399,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BLACK_500',
+                raw: 'BLACK',
                 opacity: 1
             },
             [n.DARKER]: {
@@ -6428,7 +6428,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 0.5
             },
             [n.LIGHT]: {
-                raw: 'WHITE_200',
+                raw: 'WHITE',
                 opacity: 0.5
             },
             [n.MIDNIGHT]: {
@@ -6481,19 +6481,19 @@ let {Themes: n} = r(15202).V, _ = {
         WHITE: {
             category: 'generic',
             [n.DARK]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             }
         },
@@ -6504,7 +6504,7 @@ let {Themes: n} = r(15202).V, _ = {
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'WHITE_500',
+                raw: 'WHITE',
                 opacity: 1
             },
             [n.MIDNIGHT]: {

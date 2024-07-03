@@ -8,12 +8,12 @@ var n, _, a = r(691324);
     'action-sheet-gradient-bg': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_130,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'activity-card-background': [
         a.I.PRIMARY_700,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_700,
         a.I.PRIMARY_700
     ],
@@ -25,8 +25,8 @@ var n, _, a = r(691324);
     ],
     'alert-bg': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'android-navigation-bar-background': [
@@ -42,10 +42,10 @@ var n, _, a = r(691324);
         a.I.PLUM_24
     ],
     'android-ripple': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'autocomplete-bg': [
         a.I.PRIMARY_630,
@@ -61,7 +61,7 @@ var n, _, a = r(691324);
     ],
     'background-floating': [
         a.I.PRIMARY_800,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_23,
         a.I.PLUM_18
     ],
@@ -110,13 +110,13 @@ var n, _, a = r(691324);
     'background-mobile-primary': [
         a.I.PRIMARY_600,
         a.I.PRIMARY_100,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'background-mobile-secondary': [
         a.I.PRIMARY_630,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'background-modifier-accent': [
@@ -151,14 +151,14 @@ var n, _, a = r(691324);
     ],
     'background-nested-floating': [
         a.I.PRIMARY_630,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_22
     ],
     'background-primary': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'background-secondary': [
@@ -180,33 +180,33 @@ var n, _, a = r(691324);
         a.I.PLUM_16
     ],
     'bg-backdrop': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
+        a.I.BLACK,
+        a.I.BLACK,
         a.I.PLUM_19,
-        a.I.BLACK_500
+        a.I.BLACK
     ],
     'bg-backdrop-no-opacity': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
+        a.I.BLACK,
+        a.I.BLACK,
         a.I.PLUM_19,
-        a.I.BLACK_500
+        a.I.BLACK
     ],
     'bg-base-primary': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'bg-base-secondary': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_130,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'bg-base-tertiary': [
         a.I.PRIMARY_660,
         a.I.PRIMARY_160,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_23
     ],
     'bg-brand': [
@@ -235,7 +235,7 @@ var n, _, a = r(691324);
     ],
     'bg-surface-overlay': [
         a.I.PRIMARY_800,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_19,
         a.I.PLUM_17
     ],
@@ -247,15 +247,15 @@ var n, _, a = r(691324);
     ],
     'bg-surface-raised': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_23,
         a.I.PLUM_18
     ],
     black: [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'blur-fallback': [
         a.I.PRIMARY_700,
@@ -270,26 +270,26 @@ var n, _, a = r(691324);
         a.I.PLUM_18
     ],
     'border-faint': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
     'border-strong': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
     'border-subtle': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
     'bug-reporter-modal-submitting-background': [
         a.I.PRIMARY_800,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_23,
         a.I.PLUM_23
     ],
@@ -324,10 +324,10 @@ var n, _, a = r(691324);
         a.I.RED_500
     ],
     'button-outline-brand-background': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-brand-background-active': [
         a.I.BRAND_560,
@@ -360,28 +360,28 @@ var n, _, a = r(691324);
         a.I.BRAND_500
     ],
     'button-outline-brand-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-brand-text-active': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-brand-text-hover': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-danger-background': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-danger-background-active': [
         a.I.RED_460,
@@ -414,28 +414,28 @@ var n, _, a = r(691324);
         a.I.RED_430
     ],
     'button-outline-danger-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-danger-text-active': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-danger-text-hover': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-positive-background': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-positive-background-active': [
         a.I.GREEN_530,
@@ -468,28 +468,28 @@ var n, _, a = r(691324);
         a.I.GREEN_430
     ],
     'button-outline-positive-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-positive-text-active': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-positive-text-hover': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-primary-background': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-primary-background-active': [
         a.I.PRIMARY_430,
@@ -522,22 +522,22 @@ var n, _, a = r(691324);
         a.I.PLUM_13
     ],
     'button-outline-primary-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-primary-text-active': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-outline-primary-text-hover': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'button-positive-background': [
         a.I.GREEN_430,
@@ -588,20 +588,20 @@ var n, _, a = r(691324);
         a.I.PLUM_11
     ],
     'card-gradient-bg': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'card-gradient-pressed-bg': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'card-primary-bg': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_23,
         a.I.PLUM_18
     ],
@@ -613,7 +613,7 @@ var n, _, a = r(691324);
     ],
     'card-secondary-bg': [
         a.I.PRIMARY_630,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_25,
         a.I.PLUM_19
     ],
@@ -649,14 +649,14 @@ var n, _, a = r(691324);
     ],
     'chat-background': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_16
     ],
     'chat-banner-bg': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_130,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'chat-border': [
@@ -667,7 +667,7 @@ var n, _, a = r(691324);
     ],
     'chat-input-container-background': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_16,
         a.I.PLUM_16
     ],
@@ -678,14 +678,14 @@ var n, _, a = r(691324);
         a.I.PLUM_22
     ],
     'chat-swipe-to-reply-gradient-background': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'coachmark-bg': [
         a.I.PRIMARY_800,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_19,
         a.I.PLUM_17
     ],
@@ -696,34 +696,34 @@ var n, _, a = r(691324);
         a.I.PLUM_6
     ],
     'content-inventory-overlay-text-primary': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'content-inventory-overlay-text-secondary': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'content-inventory-overlay-ui-mod': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'content-inventory-overlay-ui-mod-bg': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'context-menu-backdrop-background': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'control-brand-foreground': [
         a.I.BRAND_360,
@@ -787,15 +787,15 @@ var n, _, a = r(691324);
     ],
     'deprecated-quickswitcher-input-background': [
         a.I.PRIMARY_400,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_400,
         a.I.PRIMARY_400
     ],
     'deprecated-quickswitcher-input-placeholder': [
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'deprecated-store-bg': [
         a.I.PRIMARY_600,
@@ -810,10 +810,10 @@ var n, _, a = r(691324);
         a.I.PRIMARY_700
     ],
     'deprecated-text-input-border': [
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PRIMARY_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'deprecated-text-input-border-disabled': [
         a.I.PRIMARY_700,
@@ -835,19 +835,19 @@ var n, _, a = r(691324);
     ],
     'display-banner-overflow-background': [
         a.I.PRIMARY_700,
-        a.I.WHITE_200,
+        a.I.WHITE,
         a.I.PLUM_20,
         a.I.PLUM_20
     ],
     'divider-strong': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
     'divider-subtle': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
@@ -872,7 +872,7 @@ var n, _, a = r(691324);
     'expression-picker-bg': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_130,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'focus-primary': [
@@ -896,18 +896,18 @@ var n, _, a = r(691324);
     'guild-icon-inactive-bg': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_130,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'guild-icon-inactive-nested-bg': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'guild-notifications-bottom-sheet-pill-background': [
         a.I.PRIMARY_700,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_700,
         a.I.PRIMARY_700
     ],
@@ -990,10 +990,10 @@ var n, _, a = r(691324);
         a.I.RED_400
     ],
     'info-danger-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'info-help-background': [
         a.I.BLUE_345,
@@ -1008,10 +1008,10 @@ var n, _, a = r(691324);
         a.I.BLUE_345
     ],
     'info-help-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'info-positive-background': [
         a.I.GREEN_360,
@@ -1026,10 +1026,10 @@ var n, _, a = r(691324);
         a.I.GREEN_360
     ],
     'info-positive-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'info-warning-background': [
         a.I.YELLOW_300,
@@ -1044,20 +1044,20 @@ var n, _, a = r(691324);
         a.I.YELLOW_300
     ],
     'info-warning-text': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'input-background': [
         a.I.PRIMARY_700,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_23_ALPHA,
         a.I.PLUM_24
     ],
     'input-focused-border': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
@@ -1068,7 +1068,7 @@ var n, _, a = r(691324);
         a.I.PLUM_10
     ],
     'interactive-active': [
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_860,
         a.I.PLUM_3,
         a.I.PLUM_1
@@ -1098,10 +1098,10 @@ var n, _, a = r(691324);
         a.I.PRIMARY_660
     ],
     'legacy-android-blur-overlay-ultra-thin': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'legacy-blur-fallback-default': [
         a.I.PRIMARY_660,
@@ -1110,10 +1110,10 @@ var n, _, a = r(691324);
         a.I.PRIMARY_660
     ],
     'legacy-blur-fallback-ultra-thin': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'live-stage-tile-border': [
         a.I.PRIMARY_500,
@@ -1122,10 +1122,10 @@ var n, _, a = r(691324);
         a.I.PLUM_13
     ],
     'logo-primary': [
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.BRAND_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'mention-background': [
         a.I.BRAND_500,
@@ -1141,7 +1141,7 @@ var n, _, a = r(691324);
     ],
     'modal-background': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_16,
         a.I.PLUM_16
     ],
@@ -1152,14 +1152,14 @@ var n, _, a = r(691324);
         a.I.PLUM_17
     ],
     'navigator-header-tint': [
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'panel-bg': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_24,
         a.I.PLUM_20
     ],
@@ -1171,7 +1171,7 @@ var n, _, a = r(691324);
     ],
     'polls-normal-image-background': [
         a.I.PRIMARY_660,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_660,
         a.I.PRIMARY_660
     ],
@@ -1194,10 +1194,10 @@ var n, _, a = r(691324);
         a.I.PREMIUM_NITRO_PINK_LIGHT
     ],
     'profile-gradient-card-background': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'profile-gradient-message-input-border': [
         a.I.PRIMARY_500,
@@ -1206,50 +1206,50 @@ var n, _, a = r(691324);
         a.I.PRIMARY_500
     ],
     'profile-gradient-note-background': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'profile-gradient-overlay': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'profile-gradient-overlay-synced-with-user-theme': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'profile-gradient-profile-body-background-hover': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'profile-gradient-role-pill-background': [
         a.I.PRIMARY_660,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_660,
         a.I.PRIMARY_660
     ],
     'profile-gradient-role-pill-border': [
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_660,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'profile-gradient-section-box': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'redesign-activity-card-background': [
         a.I.PRIMARY_560,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_560,
         a.I.PRIMARY_560
     ],
@@ -1266,7 +1266,7 @@ var n, _, a = r(691324);
         a.I.PLUM_10
     ],
     'redesign-activity-card-border': [
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_400,
         a.I.PLUM_11,
         a.I.PLUM_11
@@ -1274,7 +1274,7 @@ var n, _, a = r(691324);
     'redesign-activity-card-overflow-background': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_230,
-        a.I.PRIMARY_630,
+        a.I.PLUM_17,
         a.I.PLUM_17
     ],
     'redesign-button-active-background': [
@@ -1290,10 +1290,10 @@ var n, _, a = r(691324);
         a.I.GREEN_460
     ],
     'redesign-button-active-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-danger-background': [
         a.I.RED_430,
@@ -1308,10 +1308,10 @@ var n, _, a = r(691324);
         a.I.RED_460
     ],
     'redesign-button-danger-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-destructive-background': [
         a.I.RED_430,
@@ -1326,34 +1326,34 @@ var n, _, a = r(691324);
         a.I.RED_460
     ],
     'redesign-button-destructive-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-overlay-alpha-background': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'redesign-button-overlay-alpha-pressed-background': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'redesign-button-overlay-alpha-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-overlay-background': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-overlay-pressed-background': [
         a.I.PRIMARY_230,
@@ -1380,10 +1380,10 @@ var n, _, a = r(691324);
         a.I.GREEN_460
     ],
     'redesign-button-positive-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-primary-alt-background': [
         a.I.BRAND_500,
@@ -1404,10 +1404,10 @@ var n, _, a = r(691324);
         a.I.BRAND_530
     ],
     'redesign-button-primary-alt-on-blurple-border': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-primary-alt-on-blurple-pressed-background': [
         a.I.BRAND_530,
@@ -1422,10 +1422,10 @@ var n, _, a = r(691324);
         a.I.BRAND_360
     ],
     'redesign-button-primary-alt-on-blurple-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-primary-alt-pressed-background': [
         a.I.BRAND_700,
@@ -1464,10 +1464,10 @@ var n, _, a = r(691324);
         a.I.BRAND_530
     ],
     'redesign-button-primary-overlay-background': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-primary-overlay-pressed-background': [
         a.I.PRIMARY_230,
@@ -1488,40 +1488,40 @@ var n, _, a = r(691324);
         a.I.BRAND_560
     ],
     'redesign-button-primary-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-secondary-background': [
         a.I.PRIMARY_460,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_17,
         a.I.PLUM_15
     ],
     'redesign-button-secondary-border': [
-        a.I.WHITE_500,
-        a.I.BLACK_500,
+        a.I.WHITE,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
     'redesign-button-secondary-overlay-background': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'redesign-button-secondary-overlay-pressed-background': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'redesign-button-secondary-overlay-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'redesign-button-secondary-pressed-background': [
         a.I.PRIMARY_500,
@@ -1531,7 +1531,7 @@ var n, _, a = r(691324);
     ],
     'redesign-button-secondary-pressed-border': [
         a.I.TRANSPARENT,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
@@ -1561,13 +1561,13 @@ var n, _, a = r(691324);
     ],
     'redesign-button-tertiary-background': [
         a.I.PRIMARY_660,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_23_ALPHA,
         a.I.PLUM_11
     ],
     'redesign-button-tertiary-pressed-background': [
         a.I.PRIMARY_560,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_11,
         a.I.PLUM_11
     ],
@@ -1609,19 +1609,19 @@ var n, _, a = r(691324);
     ],
     'redesign-chat-input-background': [
         a.I.PRIMARY_700,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_23_ALPHA,
         a.I.PLUM_11
     ],
     'redesign-image-button-pressed-background': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'redesign-input-control-active-bg': [
         a.I.PRIMARY_645,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_17,
         a.I.PLUM_16
     ],
@@ -1639,7 +1639,7 @@ var n, _, a = r(691324);
     ],
     'redesign-only-background-default': [
         a.I.PRIMARY_600,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PRIMARY_600,
         a.I.PRIMARY_600
     ],
@@ -1692,10 +1692,10 @@ var n, _, a = r(691324);
         a.I.PLUM_21
     ],
     'scrollbar-thin-track': [
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'spoiler-hidden-background': [
         a.I.PRIMARY_700,
@@ -1711,7 +1711,7 @@ var n, _, a = r(691324);
     ],
     'stage-card-pill-bg': [
         a.I.PRIMARY_630,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_25,
         a.I.PLUM_19
     ],
@@ -1728,10 +1728,10 @@ var n, _, a = r(691324);
         a.I.RED_430
     ],
     'status-danger-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'status-dnd': [
         a.I.RED_400,
@@ -1770,10 +1770,10 @@ var n, _, a = r(691324);
         a.I.GREEN_430
     ],
     'status-positive-text': [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'status-speaking': [
         a.I.GREEN_360,
@@ -1794,10 +1794,10 @@ var n, _, a = r(691324);
         a.I.YELLOW_300
     ],
     'status-warning-text': [
-        a.I.BLACK_500,
-        a.I.WHITE_500,
-        a.I.BLACK_500,
-        a.I.BLACK_500
+        a.I.BLACK,
+        a.I.WHITE,
+        a.I.BLACK,
+        a.I.BLACK
     ],
     'text-brand': [
         a.I.BRAND_360,
@@ -1897,19 +1897,19 @@ var n, _, a = r(691324);
     ],
     'toast-bg': [
         a.I.PRIMARY_800,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_19,
         a.I.PLUM_17
     ],
     'typing-indicator-bg': [
         a.I.PRIMARY_630,
         a.I.PRIMARY_130,
-        a.I.BLACK_500,
+        a.I.BLACK,
         a.I.PLUM_20
     ],
     'user-profile-header-overflow-background': [
         a.I.PRIMARY_700,
-        a.I.WHITE_200,
+        a.I.WHITE,
         a.I.PLUM_20,
         a.I.PLUM_20
     ],
@@ -1926,14 +1926,14 @@ var n, _, a = r(691324);
         a.I.PRIMARY_700
     ],
     white: [
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500,
-        a.I.WHITE_500
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE,
+        a.I.WHITE
     ],
     'you-bar-bg': [
         a.I.PRIMARY_800,
-        a.I.WHITE_500,
+        a.I.WHITE,
         a.I.PLUM_19,
         a.I.PLUM_17
     ]
