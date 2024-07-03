@@ -1,43 +1,43 @@
 i.d(n, {
     Z: function () {
-        return T;
+        return M;
     }
 }), i(47120);
 var t = i(735250);
 i(470079);
-var o = i(442837), s = i(974674), l = i(696826), a = i(420660), r = i(233440), c = i(314897), d = i(158776), u = i(699516), I = i(998502), E = i(332390), _ = i(877485), f = i(505737), Z = i(204197), m = i(78675), S = i(438163), v = i(652853), x = i(900687), h = i(228168), N = i(182294), g = i(602091), C = i(231338), p = i(505451);
-let R = I.ZP.getEnableHardwareAcceleration() ? s.Xo : s.qE;
-function T(e) {
+var o = i(442837), s = i(974674), l = i(696826), a = i(420660), r = i(233440), c = i(314897), d = i(158776), u = i(699516), I = i(998502), E = i(751009), _ = i(332390), f = i(877485), Z = i(505737), m = i(204197), S = i(78675), v = i(438163), x = i(652853), h = i(900687), N = i(228168), g = i(182294), C = i(602091), p = i(231338), R = i(505451);
+let T = I.ZP.getEnableHardwareAcceleration() ? s.Xo : s.qE;
+function M(e) {
     let {
             user: n,
             displayProfile: i,
             activity: s,
             guildId: I,
-            channelId: T,
-            transitionState: M,
-            viewProfileItem: j,
-            onClose: A
-        } = e, {theme: P} = (0, v.z)(), U = (0, f.Z)(n.id, I), {
-            avatarSrc: L,
-            eventHandlers: O,
-            avatarDecorationSrc: b
-        } = (0, Z.Z)({
+            channelId: M,
+            transitionState: j,
+            viewProfileItem: A,
+            onClose: P
+        } = e, {theme: U} = (0, x.z)(), L = (0, Z.Z)(n.id, I), {
+            avatarSrc: O,
+            eventHandlers: b,
+            avatarDecorationSrc: y
+        } = (0, m.Z)({
             user: n,
             guildId: null == i ? void 0 : i.guildId,
-            size: N.EF.SIZE_120
-        }), {
-            originalFriendingEnabled: y,
-            improvedFriendingEnabled: D
-        } = (0, _.V)({ location: 'SimplifiedUserProfileModalHeader' }), {
-            persistentCallCtaEnabled: B,
-            activeInviteToCallCtaEnabled: F
-        } = (0, E.l)({ location: 'SimplifiedUserProfileModalHeader' }), G = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), k = (0, o.e7)([c.default], () => c.default.getId() === n.id), [w, Y] = (0, o.Wu)([d.Z], () => {
+            size: g.EF.SIZE_120
+        }), {profileStatusEditEnabled: D} = (0, E.K)({ location: 'SimplifiedUserProfileModalHeader' }), {
+            originalFriendingEnabled: B,
+            improvedFriendingEnabled: F
+        } = (0, f.V)({ location: 'SimplifiedUserProfileModalHeader' }), {
+            persistentCallCtaEnabled: G,
+            activeInviteToCallCtaEnabled: k
+        } = (0, _.l)({ location: 'SimplifiedUserProfileModalHeader' }), w = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(n.id)), Y = (0, o.e7)([c.default], () => c.default.getId() === n.id), [V, H] = (0, o.Wu)([d.Z], () => {
             let e = d.Z.isMobileOnline(n.id);
-            return (0, r.W)(n, T) ? [
-                C.Sk.UNKNOWN,
+            return (0, r.W)(n, M) ? [
+                p.Sk.UNKNOWN,
                 e
             ] : (0, a.Z)(s) ? [
-                C.Sk.STREAMING,
+                p.Sk.STREAMING,
                 e
             ] : [
                 d.Z.getStatus(n.id),
@@ -46,48 +46,49 @@ function T(e) {
         });
     return (0, t.jsxs)('header', {
         children: [
-            (0, t.jsx)(m.Z, {
+            (0, t.jsx)(S.Z, {
                 user: n,
                 displayProfile: i,
-                profileType: h.y0.FULL_SIZE,
+                profileType: N.y0.FULL_SIZE,
                 hasProfileEffect: (null == i ? void 0 : i.profileEffectId) != null
             }),
             (0, t.jsxs)('div', {
-                className: p.headerInner,
+                className: R.headerInner,
                 children: [
                     (0, t.jsx)('div', {
-                        ...O,
-                        children: (0, t.jsx)(R, {
-                            src: L,
-                            avatarDecoration: b,
-                            size: N.EF.SIZE_120,
-                            className: p.avatar,
-                            status: w,
-                            statusBackdropColor: (0, l.QF)(P),
+                        ...b,
+                        children: (0, t.jsx)(T, {
+                            src: O,
+                            avatarDecoration: y,
+                            size: g.EF.SIZE_120,
+                            className: R.avatar,
+                            status: V,
+                            statusBackdropColor: (0, l.QF)(U),
                             'aria-label': n.username,
-                            isMobile: Y,
+                            isMobile: H,
                             statusTooltip: !0,
-                            statusTooltipDelay: h.vB
+                            statusTooltipDelay: N.vB
                         })
                     }),
-                    (0, t.jsx)(x.Z, {
+                    (0, t.jsx)(h.Z, {
                         user: n,
-                        isCurrentUser: k,
+                        isCurrentUser: Y,
                         guildId: I,
-                        canDM: U,
-                        relationshipType: G,
-                        originalFriendingEnabled: y,
-                        improvedFriendingEnabled: D,
-                        persistentCallCtaEnabled: B,
-                        activeInviteToCallCtaEnabled: F,
-                        viewProfileItem: j,
-                        onClose: A
+                        canDM: L,
+                        relationshipType: w,
+                        originalFriendingEnabled: B,
+                        improvedFriendingEnabled: F,
+                        persistentCallCtaEnabled: G,
+                        activeInviteToCallCtaEnabled: k,
+                        viewProfileItem: A,
+                        onClose: P
                     }),
-                    (0, t.jsx)(S.Z, {
+                    (0, t.jsx)(v.Z, {
                         user: n,
-                        profileType: h.y0.FULL_SIZE,
-                        hasEntered: M === g.Dv.ENTERED,
-                        onClose: A
+                        profileType: N.y0.FULL_SIZE,
+                        editEnabled: D,
+                        hasEntered: j === C.Dv.ENTERED,
+                        onClose: P
                     })
                 ]
             })

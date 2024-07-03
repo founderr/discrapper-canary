@@ -12,8 +12,9 @@ function u(e) {
         displayProfile: n,
         guildId: u,
         channelId: c,
-        onOpenProfile: d,
-        onClose: _
+        statusEditEnabled: d,
+        onOpenProfile: _,
+        onClose: E
     } = e;
     return (0, r.jsxs)('header', {
         className: l.header,
@@ -30,12 +31,13 @@ function u(e) {
                 displayProfile: n,
                 guildId: u,
                 channelId: c,
-                onOpenProfile: d
+                onOpenProfile: _
             }),
             (0, r.jsx)(a.Z, {
                 user: t,
                 profileType: s.y0.BITE_SIZE,
-                onClose: _
+                editEnabled: d,
+                onClose: E
             })
         ]
     });

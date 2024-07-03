@@ -217,7 +217,7 @@ function ee(e) {
                 userId: t.id,
                 ...e
             });
-        }, {modifyStatusEnabled: ec} = (0, N.K)({ location: 'AccountProfilePopout' }), ed = (0, C.Z)({ analyticsLocations: et }), eu = (0, T.p)(), e_ = es === z.Skl.DND, eE = (0, Y.g)(), eh = (0, m.o)(null != ei ? ei : void 0, Q.menuItemFocused), eI = (0, g.Z)({
+        }, {accountPopoutStatusEditEnabled: ec} = (0, N.K)({ location: 'AccountProfilePopout' }), ed = (0, C.Z)({ analyticsLocations: et }), eu = (0, T.p)(), e_ = es === z.Skl.DND, eE = (0, Y.g)(), eh = (0, m.o)(null != ei ? ei : void 0, Q.menuItemFocused), eI = (0, g.Z)({
             id: t.id,
             label: q.Z.Messages.COPY_ID_USER,
             showIconFirst: !0,
@@ -244,6 +244,7 @@ function ee(e) {
                         (0, i.jsx)(j.Z, {
                             user: t,
                             displayProfile: F,
+                            statusEditEnabled: ec,
                             onOpenProfile: B ? void 0 : eo,
                             onClose: n
                         }),
