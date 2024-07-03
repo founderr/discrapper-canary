@@ -95,7 +95,8 @@ function R(e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsxs)('div', {
+                            (0, r.jsxs)(a.Scroller, {
+                                fade: !0,
                                 className: O.body,
                                 children: [
                                     (0, r.jsx)(I.Z, {
